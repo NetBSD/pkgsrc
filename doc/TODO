@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4419 2006/01/13 18:13:26 wiz Exp $
+$NetBSD: TODO,v 1.4420 2006/01/13 18:13:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1242,8 +1242,6 @@ Suggested package updates
 	o vnc2swf-0.8.1
 	o vobcopy-0.5.16
 	o vp-1.6
-	o vsftpd-2.0.1 [pkg/26811]
-	o vsftpd-2.0.4
 	o w32api-3.2
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
