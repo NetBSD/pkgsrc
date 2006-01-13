@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12494 2006/01/13 21:23:00 tonio Exp $
+$NetBSD: CHANGES,v 1.12495 2006/01/13 21:25:03 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -275,3 +275,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/ucarp to 1.1 [wiz 2006-01-13]
 	Updated lang/perl5 to 5.8.7nb7 [jlam 2006-01-13]
 	Updated databases/abook to 0.5.5 [tonio 2006-01-13]
+	Updated audio/solfege to 3.0.5nb1 [schmonz 2006-01-13]
