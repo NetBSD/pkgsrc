@@ -1,23 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2002/12/22 19:39:27 jmmv Exp $
+$NetBSD: patch-ab,v 1.1.20.1 2006/01/13 00:54:38 salo Exp $
 
---- Makefile.in.orig	Sun Nov 15 04:53:52 1998
+--- Makefile.in.orig	2005-02-13 15:20:12.000000000 +0100
 +++ Makefile.in
-@@ -21,7 +21,8 @@ VPATH		= @srcdir@
- prefix		= @prefix@
- exec_prefix	= @exec_prefix@
- bindir		= @bindir@
--sysconfdir	= @sysconfdir@
-+realsysconfdir	= @sysconfdir@
+@@ -155,7 +155,7 @@ prefix = @prefix@
+ program_transform_name = @program_transform_name@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+-sysconfdir = @sysconfdir@
 +sysconfdir	= @datadir@/examples/ytalk
- mandir		= @mandir@
- manext		= 1
- 
-@@ -31,7 +32,7 @@ CPPFLAGS	= @CPPFLAGS@
- INCLUDES	= @XINCS@
- LIBS		= @LIBS@ @XLIBS@
- LDFLAGS		= @LDFLAGS@
--DEFS		= @DEFS@ -DSYSTEM_YTALKRC=\"$(sysconfdir)/ytalkrc\"
-+DEFS		= @DEFS@ -DSYSTEM_YTALKRC=\"$(realsysconfdir)/ytalkrc\"
- 
- COMPILE = $(CC) $(INCLUDES) $(CPPFLAGS) $(DEFS) $(CFLAGS)
- LINK	= $(CC) $(CFLAGS) $(LDFLAGS) -o $@
+ target_alias = @target_alias@
+ confdir = $(sysconfdir)
+ conf_DATA = ytalkrc

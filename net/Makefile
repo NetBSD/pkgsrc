@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.592 2005/12/01 17:27:57 adrianp Exp $
+# $NetBSD: Makefile,v 1.592.2.1 2006/01/13 00:54:38 salo Exp $
 #
 
 COMMENT=	Networking tools
@@ -456,7 +456,6 @@ SUBDIR+=	yafc
 SUBDIR+=	yale-tftpd
 SUBDIR+=	yaz
 SUBDIR+=	ytalk
-SUBDIR+=	ytalk-x11
 SUBDIR+=	ywho
 SUBDIR+=	zebra
 
