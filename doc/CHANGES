@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12488 2006/01/13 13:04:55 tonio Exp $
+$NetBSD: CHANGES,v 1.12489 2006/01/13 18:13:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -266,3 +266,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated editors/ce-doc to 4.6 [schmonz 2006-01-13]
 	Updated graphics/gimp24 to 2.3.6 [adam 2006-01-13]
 	Updated chat/bitlbee to 1.0 [tonio 2006-01-13]
+	Updated net/vsftpd to 2.0.4 [wiz 2006-01-13]
