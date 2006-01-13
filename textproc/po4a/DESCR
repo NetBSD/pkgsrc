@@ -1,0 +1,9 @@
+The po4a (po for anything) project goal is to ease translations (and
+more interestingly, the maintenance of translations) using gettext
+tools on areas where they were not expected like documentation.
+
+In po4a each documentation format is handled by a module. For now,
+there exist modules for the pod format (in which the perl documentation
+is written), the good old man pages, and the documentation of the
+kernel compilation options.  Some other modules are underway, like
+for sgml, xml, or texinfo.
