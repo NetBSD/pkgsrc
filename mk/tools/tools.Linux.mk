@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.27 2005/11/08 03:36:13 tv Exp $
+# $NetBSD: tools.Linux.mk,v 1.27.2.1 2006/01/13 01:01:00 salo Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -72,6 +72,9 @@ TOOLS_PLATFORM.grep?=		/usr/bin/grep
 TOOLS_PLATFORM.gsed?=		/bin/sed
 .elif exists(/usr/bin/sed)
 TOOLS_PLATFORM.gsed?=		/usr/bin/sed
+.endif
+.if exists(/usr/bin/soelim)
+TOOLS_PLATFORM.gsoelim?=	/usr/bin/soelim
 .endif
 TOOLS_PLATFORM.gtar?=		/bin/tar
 .if exists(/bin/gunzip)
