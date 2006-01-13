@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.1 2006/01/13 17:58:25 wiz Exp $
+
+--- src/gth-exif-utils.h.orig	2005-09-21 07:56:17.000000000 +0000
++++ src/gth-exif-utils.h
+@@ -28,10 +28,10 @@
+ 
+ #ifdef HAVE_LIBEXIF
+ 
+-#include <exif-data.h>
+-#include <exif-content.h>
+-#include <exif-entry.h>
+-#include <exif-utils.h>
++#include <libexif/exif-data.h>
++#include <libexif/exif-content.h>
++#include <libexif/exif-entry.h>
++#include <libexif/exif-utils.h>
+ 
+ 
+ typedef enum { /*< skip >*/

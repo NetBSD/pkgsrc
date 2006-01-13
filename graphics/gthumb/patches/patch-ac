@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1 2006/01/13 17:58:25 wiz Exp $
+
+--- src/gth-exif-data-viewer.c.orig	2005-09-21 07:56:17.000000000 +0000
++++ src/gth-exif-data-viewer.c
+@@ -34,9 +34,9 @@
+ #include "image-viewer.h"
+ 
+ #ifdef HAVE_LIBEXIF
+-#include <exif-data.h>
+-#include <exif-content.h>
+-#include <exif-entry.h>
++#include <libexif/exif-data.h>
++#include <libexif/exif-content.h>
++#include <libexif/exif-entry.h>
+ #endif /* HAVE_LIBEXIF */
+ 
+ 
