@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.35 2006/01/13 01:01:39 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.36 2006/01/13 15:22:32 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -71,3 +71,5 @@ Pullup ticket 1022 - requested by Thomas Klausner
 security update for ytalk
 Pullup ticket 1019 - requested by Johnny C. Lam
 bugfixes for the tools framework
+Pullup ticket 1024 - requested by Antoine Reilles
+security update for bitlbee
