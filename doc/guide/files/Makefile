@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/08 13:59:30 dillo Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/13 17:42:33 reed Exp $
 
 WEB_PREFIX?=	${.CURDIR}/../htdocs
 
@@ -24,6 +24,7 @@ SRCS+=	plist.xml
 SRCS+=	pkginstall.xml
 SRCS+=	submit.xml
 SRCS+=	using.xml
+SRCS+=	tools.xml
 
 # entities
 SRCS+=	chapters.ent
