@@ -1,14 +1,10 @@
-# $NetBSD: Makefile,v 1.112 2006/01/13 16:48:11 jlam Exp $
+# $NetBSD: Makefile,v 1.113 2006/01/13 19:15:11 jlam Exp $
 
-PERL5_VERS=	5.8.7
-CATEGORIES=	lang devel perl5
-EXTRACT_SUFX=	.tar.bz2
-WRKSRC=		${WRKDIR}/${DISTNAME}
-
-DISTNAME=	perl-${PERL5_VERS}
-PKGNAME=	perl-${PERL5_VERS}
+DISTNAME=	perl-5.8.7
 PKGREVISION=	6
+CATEGORIES=	lang devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jlam@pkgsrc.org
 HOMEPAGE=	http://www.perl.org/
