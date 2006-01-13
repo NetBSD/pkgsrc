@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/13 18:15:09 wiz Exp $
+
+SHA1 (SGMLSpm-1.03ii.tar.gz) = 1ff07104fd70a1d1bf05f3523b94413049c1fc95
+RMD160 (SGMLSpm-1.03ii.tar.gz) = 919963150640d4c1a2a52439cd0d985c52c71bb3
+Size (SGMLSpm-1.03ii.tar.gz) = 93250 bytes
+SHA1 (patch-aa) = 9a74041bb810b5172521cf4bab32f601942f2468
