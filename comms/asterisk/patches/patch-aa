@@ -1,115 +1,188 @@
-$NetBSD: patch-aa,v 1.5 2006/01/02 16:02:10 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2006/01/13 20:32:38 riz Exp $
 
---- Makefile.orig	2005-04-26 14:30:23.000000000 +0000
+--- Makefile.orig	2005-12-05 06:47:51.000000000 +0000
 +++ Makefile
-@@ -42,7 +42,11 @@ MPG123TARG=linux
+@@ -106,31 +106,32 @@ BUSYDETECT+= #-DBUSYDETECT_TONEONLY
+ BUSYDETECT+= #-DBUSYDETECT_COMPARE_TONE_AND_SILENCE
+ 
+ ifneq ($(OSARCH),SunOS)
+-  ASTLIBDIR=$(INSTALL_PREFIX)/usr/lib/asterisk
+-  ASTVARLIBDIR=$(INSTALL_PREFIX)/var/lib/asterisk
+-  ASTETCDIR=$(INSTALL_PREFIX)/etc/asterisk
+-  ASTSPOOLDIR=$(INSTALL_PREFIX)/var/spool/asterisk
+-  ASTLOGDIR=$(INSTALL_PREFIX)/var/log/asterisk
+-  ASTHEADERDIR=$(INSTALL_PREFIX)/usr/include/asterisk
+-  ASTCONFPATH=$(ASTETCDIR)/asterisk.conf
+-  ASTBINDIR=$(INSTALL_PREFIX)/usr/bin
+-  ASTSBINDIR=$(INSTALL_PREFIX)/usr/sbin
+-  ASTVARRUNDIR=$(INSTALL_PREFIX)/var/run
+-  ASTMANDIR=$(INSTALL_PREFIX)/usr/share/man
++ASTLIBDIR = /usr/pkg/lib/asterisk
++ASTVARLIBDIR = /usr/pkg/libdata/asterisk
++ASTETCDIR = /usr/pkg/etc/asterisk
++ASTSPOOLDIR = /var/spool/asterisk
++ASTLOGDIR = /var/log/asterisk
++ASTHEADERDIR = /usr/pkg/include/asterisk
++ASTCONFPATH = /usr/pkg/etc/asterisk/asterisk.conf
++ASTBINDIR = /usr/pkg/bin
++ASTSBINDIR = /usr/pkg/sbin
++ASTVARRUNDIR = /var/run
++ASTMANDIR = /usr/pkg/man
++  ASTEXAMPLEDIR?=${PREFIX}/share/examples/asterisk
+   MODULES_DIR=$(ASTLIBDIR)/modules
+   AGI_DIR=$(ASTVARLIBDIR)/agi-bin
+ else
+-  ASTLIBDIR=$(INSTALL_PREFIX)/opt/asterisk/lib
+-  ASTVARLIBDIR=$(INSTALL_PREFIX)/var/opt/asterisk/lib
+-  ASTETCDIR=$(INSTALL_PREFIX)/etc/opt/asterisk
+-  ASTSPOOLDIR=$(INSTALL_PREFIX)/var/opt/asterisk/spool
+-  ASTLOGDIR=$(INSTALL_PREFIX)/var/opt/asterisk/log
+-  ASTHEADERDIR=$(INSTALL_PREFIX)/opt/asterisk/usr/include/asterisk
+-  ASTCONFPATH=$(ASTETCDIR)/asterisk.conf
+-  ASTBINDIR=$(INSTALL_PREFIX)/opt/asterisk/usr/bin
+-  ASTSBINDIR=$(INSTALL_PREFIX)/opt/asterisk/usr/sbin
+-  ASTVARRUNDIR=$(INSTALL_PREFIX)/var/opt/asterisk/run
+-  ASTMANDIR=$(INSTALL_PREFIX)/opt/asterisk/usr/share/man
++ASTLIBDIR = /usr/pkg/lib/asterisk
++ASTVARLIBDIR = /usr/pkg/libdata/asterisk
++ASTETCDIR = /usr/pkg/etc/asterisk
++ASTSPOOLDIR = /var/spool/asterisk
++ASTLOGDIR = /var/log/asterisk
++ASTHEADERDIR = /usr/pkg/include/asterisk
++ASTCONFPATH = /usr/pkg/etc/asterisk/asterisk.conf
++ASTBINDIR = /usr/pkg/bin
++ASTSBINDIR = /usr/pkg/sbin
++ASTVARRUNDIR = /var/run
++ASTMANDIR = /usr/pkg/man
+   MODULES_DIR=$(ASTLIBDIR)/modules
+   AGI_DIR=$(ASTVARLIBDIR)/agi-bin
+ endif
+@@ -223,7 +224,7 @@ ASTCFLAGS+=$(OPTIMIZE)
+ ASTOBJ=-o asterisk
+ 
+ ifeq ($(findstring BSD,$(OSARCH)),BSD)
+-  PROC=$(shell uname -m)
++  PROC=$(shell uname -p)
+   ASTCFLAGS+=-I$(CROSS_COMPILE_TARGET)/usr/local/include -L$(CROSS_COMPILE_TARGET)/usr/local/lib
  endif
  
- ifeq ($(findstring BSD,${OSARCH}),BSD)
--PROC=$(shell uname -m)
-+PROC=$(shell uname -p)
+@@ -254,24 +255,24 @@ ifeq ($(OSARCH),FreeBSD)
+ 
+   # XXX FreeBSD paths
+   PREFIX?=/usr/local
+-  ASTLIBDIR=$(INSTALL_PREFIX)$(PREFIX)/lib/asterisk
+-  ASTVARLIBDIR=$(INSTALL_PREFIX)$(PREFIX)/share/asterisk
+-  ASTETCDIR=$(INSTALL_PREFIX)$(PREFIX)/etc/asterisk
+-  ASTSPOOLDIR=$(INSTALL_PREFIX)/var/spool/asterisk
+-  ASTLOGDIR=$(INSTALL_PREFIX)/var/log/asterisk
+-  ASTHEADERDIR=$(INSTALL_PREFIX)$(PREFIX)/include/asterisk
+-  ASTCONFPATH=$(ASTETCDIR)/asterisk.conf
+-  ASTBINDIR=$(INSTALL_PREFIX)$(PREFIX)/bin
+-  ASTSBINDIR=$(INSTALL_PREFIX)$(PREFIX)/sbin
+-  ASTVARRUNDIR=$(INSTALL_PREFIX)/var/run
+-  ASTMANDIR=$(INSTALL_PREFIX)$(PREFIX)/man
++ASTLIBDIR = /usr/pkg/lib/asterisk
++ASTVARLIBDIR = /usr/pkg/libdata/asterisk
++ASTETCDIR = /usr/pkg/etc/asterisk
++ASTSPOOLDIR = /var/spool/asterisk
++ASTLOGDIR = /var/log/asterisk
++ASTHEADERDIR = /usr/pkg/include/asterisk
++ASTCONFPATH = /usr/pkg/etc/asterisk/asterisk.conf
++ASTBINDIR = /usr/pkg/bin
++ASTSBINDIR = /usr/pkg/sbin
++ASTVARRUNDIR = /var/run
++ASTMANDIR = /usr/pkg/man
+   # XXX end FreeBSD paths
+ 
+ endif # FreeBSD
+ 
+ ifeq ($(OSARCH),NetBSD)
+   ASTCFLAGS+=-pthread
+-  INCLUDE+=-I$(CROSS_COMPILE_TARGET)/usr/pkg/include
++  INCLUDE+=-I${PREFIX}/include
+   MPG123TARG=netbsd
+ endif
+ 
+@@ -290,7 +291,7 @@ ifeq ($(findstring CYGWIN,$(OSARCH)),CYG
+   ASTOBJ=-shared -o asterisk.dll -Wl,--out-implib=libasterisk.dll.a -Wl,--export-all-symbols
+   ASTLINK=
+   LIBS+=-lpthread -lncurses -lm -lresolv
+-  ASTSBINDIR=$(MODULES_DIR)
++ASTSBINDIR = /usr/pkg/sbin
+   PROC=$(shell uname -m)
+ endif
+ 
+@@ -367,7 +368,8 @@ ifeq ($(OSARCH),Darwin)
+   AUDIO_LIBS=-framework CoreAudio
+   ASTLINK=-Wl,-dynamic
+   SOLINK=-dynamic -bundle -undefined suppress -force_flat_namespace
+-  OBJS+= poll.o
++  OBJS+=dlfcn.o
++  OBJS+=$(shell if [ -e /usr/include/sys/poll.h ]; then echo -n "" ; else echo poll.o; fi)
+   ASTCFLAGS+=-DPOLLCOMPAT
+ else
+ #These are used for all but Darwin
+@@ -379,8 +381,12 @@ ifeq ($(OSARCH),FreeBSD)
+   LIBS+=-lcrypto
+ endif
+ 
++ifeq ($(OSARCH),DragonFly)
++  LIBS+=-lcrypto -pthread
 +endif
 +
-+ifeq (${OSARCH},DragonFly)
-+PROC=$(shell uname -p)
+ ifeq ($(OSARCH),NetBSD)
+-  LIBS+=-lpthread -lcrypto -lm -L$(CROSS_COMPILE_TARGET)/usr/pkg/lib -lncurses
++  LIBS+=-lpthread -lcrypto -lm -L${PREFIX}/lib -R${PREFIX}/lib -lncurses
  endif
  
- # Pentium Pro Optimize
-@@ -122,6 +122,7 @@ ASTBINDIR=$(INSTALL_PREFIX)/usr/bin
- ASTSBINDIR=$(INSTALL_PREFIX)/usr/sbin
- ASTVARRUNDIR=$(INSTALL_PREFIX)/var/run
- ASTMANDIR=$(INSTALL_PREFIX)/usr/share/man
-+ASTEXAMPLEDIR=${PREFIX}/share/examples/asterisk
- 
- MODULES_DIR=$(ASTLIBDIR)/modules
- AGI_DIR=$(ASTVARLIBDIR)/agi-bin
-@@ -148,7 +153,7 @@ endif # FreeBSD
- 
- ifeq (${OSARCH},NetBSD)
- CFLAGS+=-pthread
--INCLUDE+=-I/usr/local/include -I/usr/pkg/include
-+INCLUDE+=-I${PREFIX}/include
- MPG123TARG=netbsd
- endif
- 
-@@ -159,8 +164,11 @@ endif
- #Uncomment this to use the older DSP routines
- #CFLAGS+=-DOLD_DSP_ROUTINES
- 
--CFLAGS+=$(shell if [ -f /usr/include/linux/zaptel.h ]; then echo "-DZAPTEL_OPTIMIZATIONS"; fi)
--CFLAGS+=$(shell if [ -f /usr/local/include/zaptel.h ]; then echo "-DZAPTEL_OPTIMIZATIONS"; fi)
-+#CFLAGS+=$(shell if [ -f /usr/include/linux/zaptel.h ]; then echo "-DZAPTEL_OPTIMIZATIONS"; fi)
-+#CFLAGS+=$(shell if [ -f /usr/local/include/zaptel.h ]; then echo "-DZAPTEL_OPTIMIZATIONS"; fi)
-+ifdef ASTERISK_USE_ZAPTEL
-+CFLAGS+=-DZAPTEL_OPTIMIZATIONS
-+endif
- 
- LIBEDIT=editline/libedit.a
- 
-@@ -200,7 +208,10 @@ ifeq (${OSARCH},FreeBSD)
- LIBS+=-lcrypto
- endif
- ifeq (${OSARCH},NetBSD)
--LIBS+=-lpthread -lcrypto -lm -L/usr/local/lib -L/usr/pkg/lib -lncurses
-+LIBS+=-lpthread -lcrypto -lm -L${PREFIX}/lib -R${PREFIX}/lib -lncurses
-+endif
-+ifeq (${OSARCH},DragonFly)
-+LIBS+=-pthread -lcrypto -lm -L${PREFIX}/lib -R${PREFIX}/lib -lncurses
- endif
- ifeq (${OSARCH},OpenBSD)
- LIBS=-lcrypto -lpthread -lm -lncurses
-@@ -214,7 +225,8 @@ OBJS=io.o sched.o logger.o frame.o loade
- 	astmm.o enum.o srv.o dns.o aescrypt.o aestab.o aeskey.o \
- 	utils.o 
- ifeq (${OSARCH},Darwin)
--OBJS+=poll.o dlfcn.o
-+OBJS+=dlfcn.o
-+OBJS+=$(shell if [ -e /usr/include/sys/poll.h ]; then echo -n "" ; else echo poll.o; fi)
- ASTLINK=-Wl,-dynamic
- SOLINK=-dynamic -bundle -undefined suppress -force_flat_namespace
- else
-@@ -450,29 +462,29 @@ install: all datafiles bininstall
+ ifeq ($(OSARCH),OpenBSD)
+@@ -718,31 +724,31 @@ install: all datafiles bininstall
  upgrade: all bininstall
  
- adsi: all
+ adsi:
 -	mkdir -p $(DESTDIR)$(ASTETCDIR)
 +	mkdir -p $(DESTDIR)$(ASTEXAMPLEDIR)
  	for x in configs/*.adsi; do \
--		if ! [ -f $(DESTDIR)$(ASTETCDIRX)/$$x ]; then \
--			install -m 644 $$x $(DESTDIR)$(ASTETCDIR)/`basename $$x` ; \
+-		if [ ! -f $(DESTDIR)$(ASTETCDIRX)/$$x ]; then \
+-			$(INSTALL) -m 644 $$x $(DESTDIR)$(ASTETCDIR)/`basename $$x` ; \
 +		if ! [ -f $(DESTDIR)$(ASTEXAMPLEDIR)/$$x ]; then \
-+			install -m 644 $$x $(DESTDIR)$(ASTEXAMPLEDIR)/`basename $$x` ; \
++			$(INSTALL) -m 644 $$x $(DESTDIR)$(ASTEXAMPLEDIR)/`basename $$x` ; \
  		fi ; \
  	done
  
- samples: all datafiles adsi
+ samples: adsi
 -	mkdir -p $(DESTDIR)$(ASTETCDIR)
 +	mkdir -p $(DESTDIR)$(ASTEXAMPLEDIR)
  	for x in configs/*.sample; do \
 -		if [ -f $(DESTDIR)$(ASTETCDIR)/`basename $$x .sample` ]; then \
--			mv -f $(DESTDIR)$(ASTETCDIR)/`basename $$x .sample` $(DESTDIR)$(ASTETCDIR)/`basename $$x .sample`.old ; \
 +		if [ -f $(DESTDIR)$(ASTEXAMPLEDIR)/`basename $$x .sample` ]; then \
-+			mv -f $(DESTDIR)$(ASTEXAMPLEDIR)/`basename $$x .sample` $(DESTDIR)$(ASTEXAMPLEDIR)/`basename $$x .sample`.old ; \
+ 			if [ "$(OVERWRITE)" = "y" ]; then \
+-				if cmp -s $(DESTDIR)$(ASTETCDIR)/`basename $$x .sample` $$x ; then \
++				if cmp -s $(DESTDIR)$(ASTEXAMPLEDIR)/`basename $$x .sample` $$x ; then \
+ 					echo "Config file $$x is unchanged"; \
+ 					continue; \
+ 				fi ; \
+-				mv -f $(DESTDIR)$(ASTETCDIR)/`basename $$x .sample` $(DESTDIR)$(ASTETCDIR)/`basename $$x .sample`.old ; \
++				mv -f $(DESTDIR)$(ASTEXAMPLEDIR)/`basename $$x .sample` $(DESTDIR)$(ASTEXAMPLEDIR)/`basename $$x .sample`.old ; \
+ 			else \
+ 				echo "Skipping config file $$x"; \
+ 				continue; \
+ 			fi ;\
  		fi ; \
--		install -m 644 $$x $(DESTDIR)$(ASTETCDIR)/`basename $$x .sample` ;\
-+		install -m 644 $$x $(DESTDIR)$(ASTEXAMPLEDIR)/`basename $$x .sample` ;\
+-		$(INSTALL) -m 644 $$x $(DESTDIR)$(ASTETCDIR)/`basename $$x .sample` ;\
++		$(INSTALL) -m 644 $$x $(DESTDIR)$(ASTEXAMPLEDIR)/`basename $$x .sample` ;\
  	done
--	echo "[directories]" > $(DESTDIR)$(ASTETCDIR)/asterisk.conf
--	echo "astetcdir => $(ASTETCDIR)" >> $(DESTDIR)$(ASTETCDIR)/asterisk.conf
--	echo "astmoddir => $(MODULES_DIR)" >> $(DESTDIR)$(ASTETCDIR)/asterisk.conf
--	echo "astvarlibdir => $(ASTVARLIBDIR)" >> $(DESTDIR)$(ASTETCDIR)/asterisk.conf
--	echo "astagidir => $(AGI_DIR)" >> $(DESTDIR)$(ASTETCDIR)/asterisk.conf
--	echo "astspooldir => $(ASTSPOOLDIR)" >> $(DESTDIR)$(ASTETCDIR)/asterisk.conf
--	echo "astrundir => $(ASTVARRUNDIR)" >> $(DESTDIR)$(ASTETCDIR)/asterisk.conf
--	echo "astlogdir => $(ASTLOGDIR)" >> $(DESTDIR)$(ASTETCDIR)/asterisk.conf
-+	echo "[directories]" > $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf
-+	echo "astetcdir => $(ASTETCDIR)" >> $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf
-+	echo "astmoddir => $(MODULES_DIR)" >> $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf
-+	echo "astvarlibdir => $(ASTVARLIBDIR)" >> $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf
-+	echo "astagidir => $(AGI_DIR)" >> $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf
-+	echo "astspooldir => $(ASTSPOOLDIR)" >> $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf
-+	echo "astrundir => $(ASTVARRUNDIR)" >> $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf
-+	echo "astlogdir => $(ASTLOGDIR)" >> $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf
- 	for x in sounds/demo-*; do \
- 		if grep -q "^%`basename $$x`%" sounds.txt; then \
- 			install -m 644 $$x $(DESTDIR)$(ASTVARLIBDIR)/sounds ; \
+-	if [ "$(OVERWRITE)" = "y" ] || [ ! -f $(DESTDIR)$(ASTCONFPATH) ]; then \
++	if [ "$(OVERWRITE)" = "y" ] || [ ! -f $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf ]; then \
+ 		( \
+ 		echo "[directories]" ; \
+ 		echo "astetcdir => $(ASTETCDIR)" ; \
+@@ -759,7 +765,7 @@ samples: adsi
+ 		echo ";astctlowner = root" ; \
+ 		echo ";astctlgroup = apache" ; \
+ 		echo ";astctl = asterisk.ctl" ; \
+-		) > $(DESTDIR)$(ASTCONFPATH) ; \
++		) > $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf ; \
+ 	else \
+ 		echo "Skipping asterisk.conf creation"; \
+ 	fi
