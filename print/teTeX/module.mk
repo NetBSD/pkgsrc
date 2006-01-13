@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.10 2006/01/10 13:25:01 tonio Exp $
+# $NetBSD: module.mk,v 1.11 2006/01/13 17:56:43 wiz Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # install TeX packages.  It takes care of rebuilding the ls-R database
@@ -32,10 +32,12 @@ DEINSTALL_EXTRA_TMPL+=	../../print/teTeX/files/texmf.tmpl
 PRINT_PLIST_AWK+=	/^(@dirrm )?${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}(\/ls-R)?$$/ \
 			{ next; }
 
-# do not use tex.buildlink3.mk when the only accepted version is teTeX1, to
+# do not use tex.buildlink3.mk when the only accepted version is teTeX1 or teTeX2, to
 # allow bulk build to create packages
-.if defined(TEX_ACCEPTED) && (${TEX_ACCEPTED} == "teTeX1")
+.if defined(TEX_ACCEPTED) && ${TEX_ACCEPTED} == "teTeX1"
 .include "../../print/teTeX1-bin/buildlink3.mk"
+.elif defined(TEX_ACCEPTED) && ${TEX_ACCEPTED} == "teTeX2"
+.include "../../print/teTeX-bin/buildlink3.mk"
 .else
 .include "../../mk/tex.buildlink3.mk"
 .endif
