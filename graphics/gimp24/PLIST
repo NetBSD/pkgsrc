@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/25 11:31:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/01/13 10:27:18 adam Exp $
 bin/gimp-2.3
 bin/gimp-console-2.3
 bin/gimp-remote-2.3
@@ -12,6 +12,7 @@ include/gimp-2.0/libgimp/gimpbrushes_pdb.h
 include/gimp-2.0/libgimp/gimpbrushmenu.h
 include/gimp-2.0/libgimp/gimpbrushselect.h
 include/gimp-2.0/libgimp/gimpbrushselect_pdb.h
+include/gimp-2.0/libgimp/gimpbuffer_pdb.h
 include/gimp-2.0/libgimp/gimpchannel.h
 include/gimp-2.0/libgimp/gimpchannel_pdb.h
 include/gimp-2.0/libgimp/gimpcolor_pdb.h
@@ -42,6 +43,7 @@ include/gimp-2.0/libgimp/gimpgradients.h
 include/gimp-2.0/libgimp/gimpgradients_pdb.h
 include/gimp-2.0/libgimp/gimpgradientselect.h
 include/gimp-2.0/libgimp/gimpgradientselect_pdb.h
+include/gimp-2.0/libgimp/gimpgrid_pdb.h
 include/gimp-2.0/libgimp/gimpguides_pdb.h
 include/gimp-2.0/libgimp/gimphelp_pdb.h
 include/gimp-2.0/libgimp/gimpimage.h
@@ -394,6 +396,7 @@ share/doc/html/${PKGNAME}/libgimp/GimpFontSelectButton.html
 share/doc/html/${PKGNAME}/libgimp/GimpImageComboBox.html
 share/doc/html/${PKGNAME}/libgimp/GimpProcBrowserDialog.html
 share/doc/html/${PKGNAME}/libgimp/GimpProgressBar.html
+share/doc/html/${PKGNAME}/libgimp/GimpZoomPreview.html
 share/doc/html/${PKGNAME}/libgimp/gimpdefinitions.html
 share/doc/html/${PKGNAME}/libgimp/home.png
 share/doc/html/${PKGNAME}/libgimp/index.html
@@ -410,6 +413,7 @@ share/doc/html/${PKGNAME}/libgimp/libgimp-gimpbrush.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimpbrushes.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimpbrushmenu.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimpbrushselect.html
+share/doc/html/${PKGNAME}/libgimp/libgimp-gimpbuffer.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimpchannel.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimpcolor.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimpcontext.html
@@ -430,6 +434,7 @@ share/doc/html/${PKGNAME}/libgimp/libgimp-gimpgradient.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimpgradientmenu.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimpgradients.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimpgradientselect.html
+share/doc/html/${PKGNAME}/libgimp/libgimp-gimpgrid.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimpguides.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimphelp.html
 share/doc/html/${PKGNAME}/libgimp/libgimp-gimpimage.html
@@ -486,12 +491,10 @@ share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimplimits.html
 share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimpmemsize.html
 share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimpparasite.html
 share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimpparasiteio.html
-share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimpprotocol.html
 share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimpsignal.html
 share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimpunit.html
 share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimputils.html
 share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimpversion.html
-share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimpwire.html
 share/doc/html/${PKGNAME}/libgimpbase/libgimpbase.devhelp
 share/doc/html/${PKGNAME}/libgimpbase/libgimpbase.html
 share/doc/html/${PKGNAME}/libgimpbase/right.png
@@ -1239,6 +1242,7 @@ share/gimp/2.0/images/wilber-devel-icon.png
 share/gimp/2.0/images/wilber-icon.png
 share/gimp/2.0/images/wilber-tips.png
 share/gimp/2.0/images/wilber-wizard.png
+share/gimp/2.0/menus/brush-editor-menu.xml
 share/gimp/2.0/menus/brushes-menu.xml
 share/gimp/2.0/menus/buffers-menu.xml
 share/gimp/2.0/menus/channels-menu.xml
@@ -1299,6 +1303,7 @@ share/gimp/2.0/palettes/Plasma.gpl
 share/gimp/2.0/palettes/Reds.gpl
 share/gimp/2.0/palettes/Reds_And_Purples.gpl
 share/gimp/2.0/palettes/Royal.gpl
+share/gimp/2.0/palettes/Tango.gpl
 share/gimp/2.0/palettes/Topographic.gpl
 share/gimp/2.0/palettes/Visibone.gpl
 share/gimp/2.0/palettes/Visibone_2.gpl
@@ -1994,6 +1999,11 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gimp20-script-fu.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gimp20-std-plug-ins.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gimp20-tips.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gimp20.mo
+${PKGLOCALEDIR}/locale/tt/LC_MESSAGES/gimp20-libgimp.mo
+${PKGLOCALEDIR}/locale/tt/LC_MESSAGES/gimp20-script-fu.mo
+${PKGLOCALEDIR}/locale/tt/LC_MESSAGES/gimp20-std-plug-ins.mo
+${PKGLOCALEDIR}/locale/tt/LC_MESSAGES/gimp20-tips.mo
+${PKGLOCALEDIR}/locale/tt/LC_MESSAGES/gimp20.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gimp20-libgimp.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gimp20-script-fu.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gimp20-std-plug-ins.mo

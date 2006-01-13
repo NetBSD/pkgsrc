@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2005/12/31 12:32:37 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/01/13 10:27:18 adam Exp $
 
-DISTNAME=	gimp-2.3.4
-PKGREVISION=	2
+DISTNAME=	gimp-2.3.6
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v2.3/ \
 		ftp://ftp.cs.umn.edu/pub/gimp/v2.3/ \
@@ -31,9 +30,8 @@ PKGCONFIG_OVERRIDE+=	gimpui-2.0.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILTIN.fontconfig=		    no
-BUILDLINK_DEPENDS.fontconfig+=	    fontconfig>=2.2.0
-
+USE_BUILTIN.fontconfig=		no
+BUILDLINK_DEPENDS.fontconfig+=	fontconfig>=2.2.0
 BUILDLINK_DEPENDS.lcms+=	lcms>=1.12
 
 GNU_CONFIGURE=		yes
