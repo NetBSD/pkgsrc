@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/27 09:11:05 wulf Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/14 13:55:28 wulf Exp $
 bin/qbrew
 share/doc/qbrew/en/primer-design.html
 share/doc/qbrew/en/primer-equipment.html
@@ -31,6 +31,7 @@ share/qbrew/paleale.qbrew
 share/qbrew/qbrew.png
 share/qbrew/qbrew.svg
 share/qbrew/qbrewdata
+share/qbrew/splash.png
 share/qbrew/stout.qbrew
 @dirrm share/doc/qbrew/en
 @dirrm share/doc/qbrew
