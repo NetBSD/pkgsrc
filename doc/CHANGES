@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12502 2006/01/14 08:35:17 taca Exp $
+$NetBSD: CHANGES,v 1.12503 2006/01/14 10:50:48 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -282,3 +282,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/daemontools to 0.76nb1 [schmonz 2006-01-14]
 	Updated textproc/libxml2 to 2.6.23 [recht 2006-01-14]
 	Updated mail/nullmailer to 1.02 [schmonz 2006-01-14]
+	Updated devel/boaconstructor to 0.4.4 [wulf 2006-01-14]
