@@ -1,23 +1,29 @@
-# $NetBSD: Makefile,v 1.13 2005/12/05 20:50:58 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2006/01/14 23:07:26 wiz Exp $
 #
 
-DISTNAME=		m2crypto-0.12
-PKGNAME=		${PYPKGPREFIX}-m2crypto-0.12
-PKGREVISION=		2
+DISTNAME=		m2crypto-0.13
+PKGNAME=		${PYPKGPREFIX}-${DISTNAME}.1
 CATEGORIES=		security python
 MASTER_SITES=		http://sandbox.rulemaker.net/ngps/Dist/
 EXTRACT_SUFX=		.zip
+
+PATCH_SITES=		${MASTER_SITES}
+PATCHFILES=		0.13p1.patch 
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://sandbox.rulemaker.net/ngps/m2/
 COMMENT=		Crypto and SSL toolkit for Python
 
 PYDISTUTILSPKG=			yes
-PYTHON_VERSIONS_ACCEPTED=	23 22 21
+PYTHON_VERSIONS_ACCEPTED=	24 23 22 21
 
-BUILDLINK_DEPENDS.openssl+=	openssl>=0.9.7b
+# constness is very different between openssl versions,
+# it seems, and 0.9.7i is the version which currently is
+# in pkgsrc and against which I fixed m2crypto to compile.
+# -- wiz 20060115
+BUILDLINK_DEPENDS.openssl+=	openssl-0.9.7i
 
 .include "../../lang/python/extension.mk"
-.include "../../devel/swig-build/buildlink3.mk"
+.include "../../devel/swig/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

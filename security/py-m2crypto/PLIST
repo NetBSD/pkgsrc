@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/14 16:43:55 recht Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/01/14 23:07:26 wiz Exp $
 ${PYSITELIB}/M2Crypto/ASN1.py
 ${PYSITELIB}/M2Crypto/ASN1.pyc
 ${PYSITELIB}/M2Crypto/ASN1.pyo
@@ -87,6 +87,9 @@ ${PYSITELIB}/M2Crypto/__init__.py
 ${PYSITELIB}/M2Crypto/__init__.pyc
 ${PYSITELIB}/M2Crypto/__init__.pyo
 ${PYSITELIB}/M2Crypto/__m2crypto.so
+${PYSITELIB}/M2Crypto/_version.py
+${PYSITELIB}/M2Crypto/_version.pyc
+${PYSITELIB}/M2Crypto/_version.pyo
 ${PYSITELIB}/M2Crypto/callback.py
 ${PYSITELIB}/M2Crypto/callback.pyc
 ${PYSITELIB}/M2Crypto/callback.pyo
