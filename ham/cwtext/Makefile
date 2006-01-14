@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2005/08/14 07:42:12 wulf Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/14 12:39:06 wulf Exp $
 
-DISTNAME=	cwtext-0.94
+DISTNAME=	cwtext-0.95
 CATEGORIES=	ham
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cwtext/}
 
