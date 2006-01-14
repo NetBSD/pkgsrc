@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4429 2006/01/14 22:32:44 jmmv Exp $
+$NetBSD: TODO,v 1.4430 2006/01/14 23:08:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1022,7 +1022,6 @@ Suggested package updates
 	o py-gtk2-2.8.4
 	o py-kenosis-0.96
 	o py-logging-0.4.9.6
-	o py-m2crypto-0.13
 	o py-mad-0.5.4
 	o py-metakit-2.4.9.4
 	o py-mysqldb-1.1.7
