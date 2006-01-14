@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12501 2006/01/14 08:21:14 schmonz Exp $
+$NetBSD: CHANGES,v 1.12502 2006/01/14 08:35:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -277,7 +277,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/abook to 0.5.5 [tonio 2006-01-13]
 	Updated audio/solfege to 3.0.5nb1 [schmonz 2006-01-13]
 	Updated mail/dbmail to 2.0.7 [schmonz 2006-01-13]
-	Updated print/auxtex to 11.82 [tonio 2006-01-13]
+	Updated print/auctex to 11.82 [tonio 2006-01-13]
 	Updated shells/rssh to 2.3.2 [seb 2006-01-14]
 	Updated sysutils/daemontools to 0.76nb1 [schmonz 2006-01-14]
 	Updated textproc/libxml2 to 2.6.23 [recht 2006-01-14]
