@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2006/01/05 10:08:59 ghen Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/14 13:55:28 wulf Exp $
 
-DISTNAME=	qbrew-0.3.4
+DISTNAME=	qbrew-0.3.5
 CATEGORIES=	misc
 MASTER_SITES=	http://www.usermode.org/code/
 
@@ -12,10 +12,6 @@ USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
-.include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
-# XXX Please verify whether qt3-tools is really needed at run-time.
-# If it is, then remove this comment.  If it is not, then remove
-# this comment and the line below, and bump PKGREVISION.
-BUILDLINK_DEPMETHOD.qt3-tools=	full
+.include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
