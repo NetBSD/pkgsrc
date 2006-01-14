@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1.2.2 2006/01/14 02:43:42 salo Exp $
+
+--- main.c.in.orig	2006-01-03 17:25:05.000000000 +0000
++++ main.c.in
+@@ -195,7 +195,7 @@ char **build_shell_args( struct passwd u
+ 		 * build_arg_vector() in the chroot helper instead...
+                  */
+ 
+-		if ( !(argvec = (char **)malloc(6 * sizeof (char *))) ){
++		if ( !(argvec = (char **)malloc(4 * sizeof (char *))) ){
+ 			log_set_priority(LOG_ERR);
+ 			log_msg("OOM error in build_shell_args() (fatal)");
+ 			exit(1);
+@@ -226,9 +226,9 @@ char **build_shell_args( struct passwd u
+ 		/* change the command to run to the chroot helper */
+ 		*cmd = PATH_CHROOT_HELPER;
+ 
+-		/* set up buffer to log command line ('"' + ' ' + '\0' = 9) */
+-		len = strlen(cmdline) +  strlen(argvec[2]) + 
+-			strlen(PATH_CHROOT_HELPER) + 9;
++		/* set up buffer to log command line (argvec[1] + '"' + ' ' + '\0' = 6) */
++		len = strlen(cmdline) +
++			strlen(PATH_CHROOT_HELPER) + 6;
+ 		if ( !(temp = (char *)malloc(len)) ){
+ 			log_set_priority(LOG_ERR);
+ 			log_msg("OOM error in build_shell_args() (fatal)");
