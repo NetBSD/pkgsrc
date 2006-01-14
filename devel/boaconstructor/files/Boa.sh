@@ -1,3 +1,3 @@
 #!/bin/sh
 
-exec @PYTHONBIN@ @PREFIX@/share/boa-constructor-0.2.3/Boa.py
+exec @PYTHONBIN@ @PREFIX@/share/boa-constructor-@VERSION@/Boa.py
