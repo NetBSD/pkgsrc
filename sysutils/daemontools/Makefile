@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2006/01/13 18:01:52 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2006/01/14 07:00:30 schmonz Exp $
 
 DISTNAME=		daemontools-0.76
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://cr.yp.to/daemontools/ ftp://cr.yp.to/daemontools/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
@@ -19,23 +20,11 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 WRKSRC=			${WRKDIR}/admin/${DISTNAME}
 DJB_SLASHPACKAGE=	YES
 
-SAMPLERC=		svscan.sh.sample
-SERVICEDIR?=		${VARBASE}/spool/service
 CMDDIR=			${WRKSRC}/command
 
-PLIST_SUBST+=		SERVICEDIR=${SERVICEDIR:Q}
-DEINSTALL_FILE=		${WRKDIR}/.DEINSTALL
-
-INSTALLATION_DIRS=	bin man man/man8 share/examples/daemontools
+INSTALLATION_DIRS=	bin man man/man8
 
 SUBST_FILES.djbware+=	src/error.h
-
-post-build:
-	${SED}	-e "s,@@PREFIX@@,${PREFIX},"				\
-		-e "s,@@SERVICEDIR@@,${SERVICEDIR},g"			\
-		${FILESDIR}/${SAMPLERC} > ${WRKDIR}/${SAMPLERC}
-	${SED}	"s,@@SERVICEDIR@@,${SERVICEDIR},g"			\
-		${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
 
 do-install:
 	(while read cmd; do \
@@ -47,10 +36,6 @@ do-install:
 	done) < ${WRKSRC}/package/commands
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/daemontools
-	${INSTALL_DATA} ${WRKDIR}/${SAMPLERC}				\
-		${PREFIX}/share/examples/daemontools
-	${INSTALL_DATA_DIR} ${SERVICEDIR}
 	cd ${WRKDIR}/*-man; for i in 8; do		 		\
 	for j in *.$$i; do ${INSTALL_MAN} $$j ${PREFIX}/man/man$$i; done \
 	done
