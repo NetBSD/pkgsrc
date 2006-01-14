@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12498 2006/01/14 00:53:18 seb Exp $
+$NetBSD: CHANGES,v 1.12499 2006/01/14 07:13:00 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -279,3 +279,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/dbmail to 2.0.7 [schmonz 2006-01-13]
 	Updated print/auxtex to 11.82 [tonio 2006-01-13]
 	Updated shells/rssh to 2.3.2 [seb 2006-01-14]
+	Updated sysutils/daemontools to 0.76nb1 [schmonz 2006-01-14]
