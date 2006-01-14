@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/05/02 17:50:05 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/01/14 07:00:30 schmonz Exp $
 bin/envdir
 bin/envuidgid
 bin/fghack
@@ -33,5 +33,3 @@ man/man8/svscanboot.8
 man/man8/svstat.8
 man/man8/tai64n.8
 man/man8/tai64nlocal.8
-share/examples/daemontools/svscan.sh.sample
-@dirrm share/examples/daemontools
