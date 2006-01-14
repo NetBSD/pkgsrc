@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.471 2006/01/13 00:42:08 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.472 2006/01/14 01:48:08 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2009,6 +2009,9 @@ sub checkline_mk_shellword($$$) {
 
 			} else {
 				$line->log_warning("Possibly misquoted make variable ${varname} in " . user_statename->[$state] . ".");
+				if ($state == SWST_PLAIN && !defined($mod)) {
+					$line->replace("\${${varname}}", "\${${varname}:Q}");
+				}
 			}
 
 		} elsif ($state == SWST_PLAIN) {
@@ -3429,7 +3432,7 @@ sub checkfile_package_Makefile($$$) {
 
 sub checkfile_patch($) {
 	my ($fname) = @_;
-	my ($lines, $files_in_patch, $patch_state, $line_type, $dellines);
+	my ($lines, $files_in_patch, $patch_state, $line_type, $dellines, $current_file);
 
 	log_info($fname, NO_LINE_NUMBER, "[checkfile_patch]");
 
@@ -3462,8 +3465,9 @@ sub checkfile_patch($) {
 			$line->log_warning("Please use unified diffs (diff -u) for patches.");
 			$line_type = "*";
 
-		} elsif (index($text, "+++ ") == 0) {
+		} elsif ($text =~ qr"^\+\+\+ (\S+)") {
 			$line_type = "+";
+			$current_file = $1;
 
 		} elsif ($dellines > 0 && $text =~ qr"^(?:-|\s)") {
 			$line_type = "";
@@ -3506,6 +3510,20 @@ sub checkfile_patch($) {
 		if ($text =~ qr"^\+") {
 			checkline_cpp_macro_names($line, substr($text, 1));
 			checkline_spellcheck($line);
+
+			# XXX: This check is not as accurate as the similar one in
+			# checkline_mk_shelltext().
+			if (defined($current_file) && $current_file =~ qr"Makefile") {
+				my ($rest) = (substr($text, 1));
+
+				while ($rest =~ s/^${regex_shellword}//) {
+					my ($shellword) = ($1);
+
+					if ($shellword =~ qr"^/" && $shellword ne "/dev/null") {
+						$line->log_warning("Found absolute pathname: ${shellword}");
+					}
+				}
+			}
 		}
 	}
 
