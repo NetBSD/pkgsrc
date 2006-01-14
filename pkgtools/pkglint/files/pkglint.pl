@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.472 2006/01/14 01:48:08 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.473 2006/01/14 11:44:04 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1815,17 +1815,20 @@ sub checkline_rcsid($$) {
 
 sub checkline_relative_path($$) {
 	my ($line, $path) = @_;
+	my ($res_path);
 
 	if (!$is_wip && $path =~ qr"/wip/") {
 		$line->log_error("A pkgsrc package must not depend on any outside package.");
 	}
-	$path = resolve_relative_path($path, true);
-	if ($path =~ regex_unresolved) {
+	$res_path = resolve_relative_path($path, true);
+	if ($res_path =~ regex_unresolved) {
 		$line->log_info("Unresolved path: \"${path}\".");
-	} elsif (!-e "${current_dir}/${path}") {
-		$line->log_error("\"${path}\" does not exist.");
+	} elsif (!-e "${current_dir}/${res_path}") {
+		$line->log_error("\"${res_path}\" does not exist.");
 	} elsif ($path =~ qr"^\.\./\.\./([^/]+)/([^/]+)(.*)") {
 		my ($cat, $pkg, $rest) = ($1, $2, $3);
+	} elsif ($path =~ qr"^\.\./\.\./mk/") {
+		# There need not be two directory levels for mk/ files.
 	} elsif ($path =~ qr"^\.\.") {
 		$line->log_warning("Invalid relative path \"${path}\".");
 	}
