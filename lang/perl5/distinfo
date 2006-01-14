@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.30.2.1 2005/12/30 13:40:15 seb Exp $
+$NetBSD: distinfo,v 1.30.2.2 2006/01/14 16:38:49 salo Exp $
 
 SHA1 (perl-5.8.7.tar.bz2) = c9477c6fe76b200033694bdc555a0276523d4228
 RMD160 (perl-5.8.7.tar.bz2) = 110c286d73fd89e25da8ea394e763f209a76d283
 Size (perl-5.8.7.tar.bz2) = 9839086 bytes
+SHA1 (Sys-Syslog-0.13.tar.gz) = 172a5aed0a3fe30b1b3e1b4def504248791862b3
+RMD160 (Sys-Syslog-0.13.tar.gz) = 3105071ac2652f651d6ced467564aaadaab77d84
+Size (Sys-Syslog-0.13.tar.gz) = 16894 bytes
+SHA1 (sprintf-5.8.7.patch) = 3327901033010a595d97a28fef6d1a144951f342
+RMD160 (sprintf-5.8.7.patch) = 25c81b3441491996efbf4b036c37f8d537dd9131
+Size (sprintf-5.8.7.patch) = 9332 bytes
 SHA1 (patch-aa) = 965df39b13e67783e851838cf51b34bb248642e8
 SHA1 (patch-ae) = 044ac094cd475a16483552aa6f1bde03bd11f592
 SHA1 (patch-ah) = 7847562d35cd4834a45139b6a8cfe766aa45fa0a
