@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4424 2006/01/13 23:01:13 tonio Exp $
+$NetBSD: TODO,v 1.4425 2006/01/14 07:52:48 recht Exp $
 
 Suggested new packages
 ======================
@@ -708,7 +708,6 @@ Suggested package updates
 	o libtcl-nothread-8.4.9
 	o libtool-1.5.22
 	o libwpd-0.8.3
-	o libxml2-2.6.23
 	o licq-core-1.3.0
 	o lilypond-2.6.3
 	o linuxsms-0.77
