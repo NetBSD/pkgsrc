@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4425 2006/01/14 07:52:48 recht Exp $
+$NetBSD: TODO,v 1.4426 2006/01/14 10:52:36 wulf Exp $
 
 Suggested new packages
 ======================
@@ -394,7 +394,6 @@ Suggested package updates
 	o blindmine-0.3 [pkg/32504]
 	o blur6ex-0.3.462
 	o bmon-2.1.0
-	o boaconstructor-0.4.4
 	o bochs-2.2.5
 	o bogofilter-1.0.1
 	o boolean-6.8
