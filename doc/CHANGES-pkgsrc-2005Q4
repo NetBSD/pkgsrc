@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.37 2006/01/14 02:44:31 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.38 2006/01/14 16:39:56 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -75,3 +75,5 @@ Pullup ticket 1024 - requested by Antoine Reilles
 security update for bitlbee
 Pullup ticket 1027 - requested by Stoned Elipot
 security update for rssh
+Pullup ticket 1026 - requested by Johnny C. Lam
+security fix for perl5
