@@ -1,4 +1,4 @@
-# $$etBSD$
+# $NetBSD: print-plist.mk,v 1.3 2006/01/14 00:58:37 seb Exp $
 
 ###
 ### Automatic PLIST generation
