@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4427 2006/01/14 12:19:39 wulf Exp $
+$NetBSD: TODO,v 1.4428 2006/01/14 20:09:05 ben Exp $
 
 Suggested new packages
 ======================
@@ -763,7 +763,6 @@ Suggested package updates
 	o mpop-0.8.3 [pkg/32511]
 	o mrproject-0.9.1
 	o mserv-devel-0.41
-	o msmtp-1.4.5
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.8.4
