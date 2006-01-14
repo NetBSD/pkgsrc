@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/22 21:06:07 agc Exp $
+$NetBSD: distinfo,v 1.3 2006/01/14 12:06:48 wulf Exp $
 
-SHA1 (tlf-0.9.20.tar.gz) = 27d81be391caf162d79425bb1cb6dbeb9598aee4
-RMD160 (tlf-0.9.20.tar.gz) = 7256928aba87e556415cba530bde4570bbfe63c0
-Size (tlf-0.9.20.tar.gz) = 357207 bytes
+SHA1 (tlf-0.9.27.tar.gz) = c573e2e5699f84753ef9ae606d8b709d373f0216
+RMD160 (tlf-0.9.27.tar.gz) = 8d4bce98f7f4c6993542d23fce4a6abc11a2a5d6
+Size (tlf-0.9.27.tar.gz) = 388997 bytes
