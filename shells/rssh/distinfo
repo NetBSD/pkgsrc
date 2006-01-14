@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1.6.1 2005/12/29 00:31:19 salo Exp $
+$NetBSD: distinfo,v 1.1.1.1.6.2 2006/01/14 02:43:41 salo Exp $
 
-SHA1 (rssh-2.3.0.tar.gz) = 1791d2634fe8d6d1a2c4fef8008c3d4a8f538fdd
-RMD160 (rssh-2.3.0.tar.gz) = 4a90dce9825389e5c660b8ce84b1969cbb13f06a
-Size (rssh-2.3.0.tar.gz) = 113701 bytes
+SHA1 (rssh-2.3.2.tar.gz) = bc7154f50dec1e46cb76b3e1c00e2b1179e50d3d
+RMD160 (rssh-2.3.2.tar.gz) = bcdf7d111042bbf296d624943e3350d5273676ed
+Size (rssh-2.3.2.tar.gz) = 113959 bytes
 SHA1 (patch-aa) = 0424bd8d705c8981cdd9076ba9a1d5eb59a192f3
+SHA1 (patch-ab) = 4ea3ca63d199e6fbfbc2e1db97f95700c203b593
