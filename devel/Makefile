@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.710 2006/01/12 17:36:31 wiz Exp $
+# $NetBSD: Makefile,v 1.711 2006/01/14 23:10:47 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -605,9 +605,6 @@ SUBDIR+=	subversion
 SUBDIR+=	subversion-base
 SUBDIR+=	svk
 SUBDIR+=	swig
-SUBDIR+=	swig-build
-SUBDIR+=	swig-perl
-SUBDIR+=	swig-python
 SUBDIR+=	syncdir
 SUBDIR+=	sysexits
 SUBDIR+=	tavrasm
