@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2006/01/01 17:02:21 ben Exp $
+# $NetBSD: Makefile,v 1.14 2006/01/14 20:08:20 ben Exp $
 
-DISTNAME=	msmtp-1.4.4
+DISTNAME=	msmtp-1.4.5
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=msmtp/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,8 +10,14 @@ HOMEPAGE=	http://msmtp.sourceforge.net/
 COMMENT=	SMTP plugin for MUAs
 
 GNU_CONFIGURE=		yes
+USE_PKGINSTALL=		yes
+USE_TOOLS+=		pkg-config
+
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 EGDIR=		${PREFIX}/share/examples/msmtp
+CONF_FILES=	${EGDIR}/msmtprc-user.example \
+		${PKG_SYSCONFDIR}/msmtprc
 
 INFO_FILES=	msmtp.info
 
@@ -24,7 +30,6 @@ CPPFLAGS+=	-D__WINSOCK
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/msmtprc-system.example ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/msmtprc-user.example ${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
