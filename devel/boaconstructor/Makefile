@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:45 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/14 10:48:13 wulf Exp $
 #
 
-DISTNAME=		boa-constructor-0.2.3.src
-PKGNAME=		boaconstructor-0.2.3
-PKGREVISION=		2
+VERSION=		0.4.4
+DISTNAME=		boa-constructor-${VERSION}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=boa-constructor/}
 EXTRACT_SUFX=		.zip
@@ -12,15 +11,18 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://boa-constructor.sourceforge.net/
 COMMENT=		Python IDE
 
-WRKSRC=		${WRKDIR}/boa-constructor-0.2.3
 EXTRACT_CMD_OPTS.zip=	-aqo
-PYTHON_VERSIONS_ACCEPTED=	23
+PYTHON_VERSIONS_ACCEPTED=	23 24
 
-BOADIR=	${PREFIX}/share/boa-constructor-0.2.3
+BOADIR=	${PREFIX}/share/boa-constructor-${VERSION}
+
 SEDSUBST=	-e "s|@PYTHONBIN@|${PYTHONBIN}|"
 SEDSUBST+=	-e "s|@PREFIX@|${PREFIX}|"
+SEDSUBST+=	-e "s|@VERSION@|${VERSION}|"
 
 INSTALLATION_DIRS=	bin
+
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 do-build:
 	${SED} ${SEDSUBST} <${FILESDIR}/Boa.sh >${WRKDIR}/Boa
