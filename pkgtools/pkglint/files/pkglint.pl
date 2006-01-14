@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.473 2006/01/14 11:44:04 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.474 2006/01/14 11:56:09 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3372,6 +3372,7 @@ sub checkfile_package_Makefile($$$) {
 
 	if (!exists($makevar->{"PLIST_SRC"})
 	    && !exists($makevar->{"NO_PKG_REGISTER"})
+	    && defined($pkgdir)
 	    && !-f "${current_dir}/$pkgdir/PLIST"
 	    && !-f "${current_dir}/$pkgdir/PLIST.common") {
 		log_warning($fname, NO_LINE_NUMBER, "Neither PLIST nor PLIST.common exist, and PLIST_SRC and NO_PKG_REGISTER are unset. Are you sure PLIST handling is ok?");
@@ -4019,7 +4020,7 @@ sub checkitem($) {
 	}
 
 	# Initialize global variables.
-	$pkgdir			= ".";
+	$pkgdir			= undef;
 	$filesdir		= "files";
 	$patchdir		= "patches";
 	$distinfo_file		= "distinfo";
