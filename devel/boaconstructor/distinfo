@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:10 agc Exp $
+$NetBSD: distinfo,v 1.3 2006/01/14 10:48:13 wulf Exp $
 
-SHA1 (boa-constructor-0.2.3.src.zip) = 0b7ff7c9bd133b1905b6febee038efb05b5d9f2c
-RMD160 (boa-constructor-0.2.3.src.zip) = b9d35805c5597460a3437294c3fe83f15e46f7e1
-Size (boa-constructor-0.2.3.src.zip) = 2464276 bytes
+SHA1 (boa-constructor-0.4.4.zip) = ace5421a63181f0ea087e73c1c65176e37f74d8a
+RMD160 (boa-constructor-0.4.4.zip) = a44da2f0e1b0e361a3e15b2857233333b2fa3984
+Size (boa-constructor-0.4.4.zip) = 10090826 bytes
