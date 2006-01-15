@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-install,v 1.5 2003/05/01 09:40:01 jmmv Exp $
+# $NetBSD: pre-install,v 1.6 2006/01/15 18:10:23 joerg Exp $
 
 cd ${WRKSRC}
 cd dist
@@ -10,13 +10,13 @@ done
 #
 # XXX kludge
 #
-cd NetB*
+cd ${OPSYS}*
 ${BSD_INSTALL_DATA} lib/libldap.a ${PREFIX}/lib/libldap.a
 ${BSD_INSTALL_DATA} lib/liblber.a ${PREFIX}/lib/liblber.a
-${BSD_INSTALL_DATA} bin/libldap.so.1.0 ${PREFIX}/lib/libldap.so.1.0
+${BSD_INSTALL_LIB} bin/libldap.so.1.0 ${PREFIX}/lib/libldap.so.1.0
 ${LN} -sf libldap.so.1.0 ${PREFIX}/lib/libldap.so.1
 ${LN} -sf libldap.so.1.0 ${PREFIX}/lib/libldap.so
-${BSD_INSTALL_DATA} bin/liblber.so.1.0 ${PREFIX}/lib/liblber.so.1.0
+${BSD_INSTALL_LIB} bin/liblber.so.1.0 ${PREFIX}/lib/liblber.so.1.0
 ${LN} -sf liblber.so.1.0 ${PREFIX}/lib/liblber.so.1
 ${LN} -sf liblber.so.1.0 ${PREFIX}/lib/liblber.so
 ${BSD_INSTALL_DATA_DIR} ${EGDIR}
