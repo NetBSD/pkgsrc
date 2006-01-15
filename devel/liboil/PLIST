@@ -1,0 +1,51 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/15 19:51:56 jmmv Exp $
+include/liboil-0.3/liboil/liboil.h
+include/liboil-0.3/liboil/liboilclasses.h
+include/liboil-0.3/liboil/liboilcpu.h
+include/liboil-0.3/liboil/liboildebug.h
+include/liboil-0.3/liboil/liboilfuncs.h
+include/liboil-0.3/liboil/liboilfunction.h
+include/liboil-0.3/liboil/liboilgcc.h
+include/liboil-0.3/liboil/liboilinternal.h
+include/liboil-0.3/liboil/liboilparameter.h
+include/liboil-0.3/liboil/liboilprofile.h
+include/liboil-0.3/liboil/liboilprototype.h
+include/liboil-0.3/liboil/liboilrandom.h
+include/liboil-0.3/liboil/liboiltest.h
+include/liboil-0.3/liboil/liboiltypes.h
+lib/liboil-0.3.la
+lib/pkgconfig/liboil-0.3.pc
+share/doc/liboil/ch01.html
+share/doc/liboil/ch02.html
+share/doc/liboil/home.png
+share/doc/liboil/index.html
+share/doc/liboil/index.sgml
+share/doc/liboil/left.png
+share/doc/liboil/liboil-liboilclass-unstable.html
+share/doc/liboil/liboil-liboilcpu.html
+share/doc/liboil/liboil-liboildebug.html
+share/doc/liboil/liboil-liboilfuncs-conv.html
+share/doc/liboil/liboil-liboilfuncs-copy.html
+share/doc/liboil/liboil-liboilfuncs-dct.html
+share/doc/liboil/liboil-liboilfuncs-doc.html
+share/doc/liboil/liboil-liboilfuncs-math.html
+share/doc/liboil/liboil-liboilfuncs-math8x8.html
+share/doc/liboil/liboil-liboilfuncs-pixel.html
+share/doc/liboil/liboil-liboilimpl-unstable.html
+share/doc/liboil/liboil-liboilinit-unstable.html
+share/doc/liboil/liboil-liboilinit.html
+share/doc/liboil/liboil-liboiljunk.html
+share/doc/liboil/liboil-liboilmacros.html
+share/doc/liboil/liboil-liboilparameter.html
+share/doc/liboil/liboil-liboilprofile.html
+share/doc/liboil/liboil-liboilprototype.html
+share/doc/liboil/liboil-liboilrandom.html
+share/doc/liboil/liboil-liboiltest.html
+share/doc/liboil/liboil-liboiltypes.html
+share/doc/liboil/liboil.devhelp
+share/doc/liboil/right.png
+share/doc/liboil/style.css
+share/doc/liboil/up.png
+@dirrm share/doc/liboil
+@dirrm include/liboil-0.3/liboil
+@dirrm include/liboil-0.3

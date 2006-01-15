@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/15 19:51:56 jmmv Exp $
+
+SHA1 (liboil-0.3.6.tar.gz) = 43cfdfeace05006bfeaacc30f1feeece657595a2
+RMD160 (liboil-0.3.6.tar.gz) = f86830c0c9101e8fbe22879f930fb61d23b0139a
+Size (liboil-0.3.6.tar.gz) = 714947 bytes
