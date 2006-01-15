@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12536 2006/01/15 22:34:13 minskim Exp $
+$NetBSD: CHANGES,v 1.12537 2006/01/15 23:05:47 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -320,3 +320,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/dvipdfmx to 0.0.0.20050831 [minskim 2006-01-15]
 	Updated security/uvscan to 4.40 [heinz 2006-01-15]
 	Updated fonts/tex-unttf to 1.0.1.20051219 [minskim 2006-01-15]
+	Updated print/tex-dhucs to 2.60.20051222 [minskim 2006-01-15]
