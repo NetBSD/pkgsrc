@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.712 2006/01/15 00:23:41 wiz Exp $
+# $NetBSD: Makefile,v 1.713 2006/01/15 02:19:11 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -280,6 +280,7 @@ SUBDIR+=	m4
 SUBDIR+=	maketool
 SUBDIR+=	mantis
 SUBDIR+=	memcached
+SUBDIR+=	mercurial
 SUBDIR+=	mk-files
 SUBDIR+=	mkcmd
 SUBDIR+=	monotone
