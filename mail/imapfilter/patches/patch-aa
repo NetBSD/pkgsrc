@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2004/05/23 20:52:09 seb Exp $
+$NetBSD: patch-aa,v 1.6 2006/01/15 14:28:07 seb Exp $
 
---- Makefile.orig	2004-05-22 23:31:09.000000000 +0000
+--- Makefile.orig	2005-11-10 23:21:55.000000000 +0000
 +++ Makefile
 @@ -1,18 +1,11 @@
 -DESTDIR = /usr/local
@@ -16,13 +16,13 @@ $NetBSD: patch-aa,v 1.5 2004/05/23 20:52:09 seb Exp $
 +DESTDIR = $(PREFIX)
 +BINDIR = $(PREFIX)/bin
 +SHAREDIR = $(PREFIX)/share/imapfilter
-+MANDIR = $(PREFIX)/man
++MANDIR = $(PREFIX)/$(PKGMANDIR)
  
  DEFS = -DMAKEFILE_SHAREDIR='"$(SHAREDIR)"'
  
 -CFLAGS = $(MYCFLAGS) $(DEFS) $(INCDIRS)
 -LDFLAGS = $(MYLDFLAGS) $(LIBDIRS)
-+CFLAGS+=	$(DEFS)
++CFLAGS+= $(DEFS)
  
  LIBS = -lm -llua -llualib -lssl -lcrypto
  
@@ -34,8 +34,8 @@ $NetBSD: patch-aa,v 1.5 2004/05/23 20:52:09 seb Exp $
 +	$(CC) -o $(BIN) $(LDFLAGS) $(CFLAGS) $(OBJ) $(LIBS)
  
  $(OBJ): imapfilter.h
- buffer.o imap.o imapfilter.o request.o response.o: buffer.h
-@@ -41,17 +34,15 @@ auth.o cert.o imap.o imapfilter.o log.o 
+ buffer.o imap.o imapfilter.o namespace.o request.o response.o: buffer.h
+@@ -42,19 +35,15 @@ auth.o cert.o imap.o imapfilter.o log.o 
  imapfilter.o: version.h
  
  install: $(BIN)
@@ -47,9 +47,11 @@ $NetBSD: patch-aa,v 1.5 2004/05/23 20:52:09 seb Exp $
 -	cp -f $(AUXILIARY_LUA) $(SHAREDIR) && \
 -		chmod 0644 $(SHAREDIR)/$(AUXILIARY_LUA)
 -	if test ! -d $(MANDIR)/man1; then mkdir -p $(MANDIR)/man1; fi
--	cp -f $(MAN_BIN) $(MANDIR)/man1 && chmod 0644 $(MANDIR)/man1/$(MAN_BIN)
+-	cp -f $(MAN_BIN) $(MANDIR)/man1 && \
+-		chmod 0644 $(MANDIR)/man1/$(MAN_BIN)
 -	if test ! -d $(MANDIR)/man5; then mkdir -p $(MANDIR)/man5; fi
--	cp -f $(MAN_CONFIG) $(MANDIR)/man5 && chmod 0644 $(MANDIR)/man5/$(MAN_CONFIG)
+-	cp -f $(MAN_CONFIG) $(MANDIR)/man5 && \
+-		chmod 0644 $(MANDIR)/man5/$(MAN_CONFIG)
 +	$(BSD_INSTALL_PROGRAM_DIR) $(BINDIR)
 +	$(BSD_INSTALL_PROGRAM) $(BIN) $(BINDIR)/$(BIN)
 +	$(BSD_INSTALL_DATA_DIR) $(SHAREDIR)
