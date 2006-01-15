@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4432 2006/01/15 00:47:26 wiz Exp $
+$NetBSD: TODO,v 1.4433 2006/01/15 01:43:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1129,7 +1129,6 @@ Suggested package updates
 	o sml-nj-110.57
 	o smlnj-110.51 [pkgsrc-wip]
 	o smlnj-110.54
-	o snd-7.18
 	o snes9x-1.43
 	o socat-1.4.3.0
 	o sope-4.5.5
