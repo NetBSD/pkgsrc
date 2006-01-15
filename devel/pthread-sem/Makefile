@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/01/10 13:42:29 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/15 11:56:54 wiz Exp $
 #
 
 DISTNAME=	pthread-sem-1.0
@@ -10,6 +10,7 @@ MAINTAINER=	rh@NetBSD.org
 COMMENT=	Semaphore implementation for (PTH) pthreads
 
 PTHREAD_OPTS+=	require
+USE_LIBTOOL=	yes
 
 post-extract:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
