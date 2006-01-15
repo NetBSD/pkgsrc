@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/12/09 15:38:54 uebayasi Exp $
+# $NetBSD: Makefile,v 1.33 2006/01/15 07:55:28 uebayasi Exp $
 #
 
 DISTNAME=	Gauche-0.8.6
@@ -24,6 +24,7 @@ SUBST_SED.lgdbm=	-e 's|"-lgdbm"|"${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gdbm}/
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-slib=${PREFIX}/share/slib
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
+CONFIGURE_ARGS+=	--enable-multibyte=utf-8
 CONFIGURE_ARGS+=	--enable-threads=none	# must match w/ boehm-gc
 CONFIGURE_ENV+=		AS="${CC} -x assembler-with-cpp -c"
 
