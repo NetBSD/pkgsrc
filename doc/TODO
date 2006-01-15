@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4430 2006/01/14 23:08:21 wiz Exp $
+$NetBSD: TODO,v 1.4431 2006/01/15 00:24:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -508,6 +508,7 @@ Suggested package updates
 	o etach-1.4.1
 	o eukleides-1.0.3
 	o euler-1.61
+	o evilwm-0.99.20
 	o exim-4.60
 	o exmh-2.7.2
 	o f2c-20031025
@@ -1086,6 +1087,7 @@ Suggested package updates
 	o rt3-3.4.4
 	o rtcw-1.41.3
 	o ruby-cmd-0.8.0
+	o rxvt-unicode-7.0
 	o sablecc-3.2
 	o sablevm-1.11.3 [pkg/30022]
 	o sablevm-1.12
@@ -1129,7 +1131,7 @@ Suggested package updates
 	o sml-nj-110.57
 	o smlnj-110.51 [pkgsrc-wip]
 	o smlnj-110.54
-	o snd-7.17
+	o snd-7.18
 	o snes9x-1.43
 	o socat-1.4.3.0
 	o sope-4.5.5
@@ -1240,6 +1242,7 @@ Suggested package updates
 	o winbind-3.0.13
 	o wine-0.9.5
 	o wmctrl-1.07
+	o wmii-2.5.1 [pkg/32522]
 	o wmweather-2.4.3
 	o wv-1.2.0
 	o www6to4-1.6
