@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12528 2006/01/15 16:38:19 minskim Exp $
+$NetBSD: CHANGES,v 1.12529 2006/01/15 16:46:39 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -312,3 +312,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/ruby-gnome2-gtk to 0.14.1nb1 [minskim 2006-01-15]
 	Updated graphics/ruby-gnome2-gnomecanvas to 0.14.1nb1 [minskim 2006-01-15]
 	Added x11/ruby-gnome2-gnome version 0.14.1 [minskim 2006-01-15]
+	Added x11/ruby-gnome2-panelapplet version 0.14.1 [minskim 2006-01-15]
