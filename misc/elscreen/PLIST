@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/01 03:49:40 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/15 05:59:38 uebayasi Exp $
 ${EMACS_LISPPREFIX}/elscreen/elscreen.el
+share/doc/elscreen/README
+@dirrm share/doc/elscreen
 @dirrm ${EMACS_LISPPREFIX}/elscreen
