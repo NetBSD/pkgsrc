@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/11/03 22:30:35 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2006/01/15 19:50:45 joerg Exp $
 
 DISTNAME=	GMT3.4
 PKGNAME=	GMT-3.4
@@ -36,7 +36,7 @@ BUILD_TARGET=	all suppl
 INSTALL_TARGET= install-all
 
 post-extract:
-	${MV} -f ${WRKSRC}/www/gmt/doc/ps/ ${WRKSRC}
+	${MV} -f ${WRKSRC}/www/gmt/doc/ps ${WRKSRC}
 	${RM} -f ${WRKSRC}/examples/*.bat ${WRKSRC}/examples/*/*.bat
 	for f in ${WRKSRC}/examples/do_view.bash			\
 		${WRKSRC}/examples/do_view.csh; do			\
