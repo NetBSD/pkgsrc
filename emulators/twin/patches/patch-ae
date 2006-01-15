@@ -1,11 +1,14 @@
-$NetBSD: patch-ae,v 1.1.1.1 2001/05/15 09:46:37 agc Exp $
+$NetBSD: patch-ae,v 1.2 2006/01/15 19:20:59 joerg Exp $
 
 --- debugger/sig_context.h.orig	Sun May 13 03:01:07 2001
 +++ debugger/sig_context.h	Sun May 13 03:25:31 2001
-@@ -59,6 +59,20 @@
+@@ -57,7 +57,21 @@ enum {
  
- #if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__)
+ #endif  /* linux */
  
+-#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__)
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
++
 +enum {
 +    REG_GS = 0, REG_FS, REG_ES, REG_DS,
 +    REG_EDI, REG_ESI, REG_EBP,
@@ -19,7 +22,24 @@ $NetBSD: patch-ae,v 1.1.1.1 2001/05/15 09:46:37 agc Exp $
 +    REG_DI, REG_SI,
 +    REG_FL
 +};
-+
+ 
  #include <signal.h>
  typedef struct sigcontext SIGCONTEXT;
+@@ -120,7 +134,7 @@ typedef struct _CONTEXT		/* Note 1 */
  
+ 
+ #if defined(linux) || defined(__NetBSD__) || defined(__FreeBSD__) \
+- || defined(__OpenBSD__)
++ || defined(__OpenBSD__) || defined(__DragonFly__)
+ 
+ #define EAX_sig(context)     ((context)->sc_eax)
+ #define EBX_sig(context)     ((context)->sc_ebx)
+@@ -143,7 +157,7 @@ typedef struct _CONTEXT		/* Note 1 */
+ #define TRAP_sig(context)    ((context)->sc_trapno)
+ #endif
+                             
+-#ifndef __FreeBSD__         
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
+ #define EFL_sig(context)     ((context)->sc_eflags)
+ #else                       
+ #define EFL_sig(context)     ((context)->sc_efl)
