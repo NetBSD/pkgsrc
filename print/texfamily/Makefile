@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/01/08 14:00:12 tonio Exp $
+# $NetBSD: Makefile,v 1.21 2006/01/15 19:28:32 wiz Exp $
 
 DISTNAME=	TeXfamily-1.2.1
 PKGREVISION=	5
@@ -29,7 +29,6 @@ COMMENT=	TeXfamily (pTeX, JTeX, MuLTeX) - executables
 
 #TEX_ACCEPTED=	teTeX1 # teTeX2 teTeX3
 DEPENDS+=	TeXfamily-share>=1.2.1nb3:../../print/texfamily-share
-DEPENDS+=	ja-vflib-lib-[0-9]*:../../print/ja-vflib-lib
 
 DIST_SUBDIR=	TeXfamily
 TETEX_DIR=	${PKGSRCDIR}/print/teTeX1-bin/${WRKDIR:T}/teTeX-1.0
@@ -169,5 +168,7 @@ post-install:
 pre-clean:
 	cd ../../print/teTeX1-bin && ${MAKE} clean
 
+.include "../../graphics/freetype-lib/buildlink3.mk"
+.include "../../print/ja-vflib-lib/buildlink3.mk"
 .include "../../print/teTeX1-bin/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
