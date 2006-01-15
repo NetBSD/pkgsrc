@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4433 2006/01/15 01:43:52 wiz Exp $
+$NetBSD: TODO,v 1.4434 2006/01/15 01:50:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -715,7 +715,6 @@ Suggested package updates
 	o lucy-1.19p
 	o lwp-2.1
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
-	o mDNSResponder-107.5
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
 	o mailman-2.1.7

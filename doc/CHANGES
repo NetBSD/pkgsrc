@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12514 2006/01/15 01:43:52 wiz Exp $
+$NetBSD: CHANGES,v 1.12515 2006/01/15 01:50:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -297,3 +297,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/p5-MailTools to 1.71 [wiz 2006-01-15]
 	Updated misc/dialog to 1.0.20060101 [wiz 2006-01-15]
 	Updated audio/snd to 7.18 [wiz 2006-01-15]
+	Updated net/mDNSResponder to 107.5 [wiz 2006-01-15]
