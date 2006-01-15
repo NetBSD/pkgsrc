@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2002/06/15 09:29:16 shell Exp $
+$NetBSD: patch-af,v 1.2 2006/01/15 13:56:10 rxg Exp $
 
 --- ImmModules/TL-1/Makefile.in.orig	Wed Jun  7 13:49:56 2000
 +++ ImmModules/TL-1/Makefile.in
@@ -48,7 +48,7 @@ $NetBSD: patch-af,v 1.1.1.1 2002/06/15 09:29:16 shell Exp $
 -	cp -f gb/*.tab $(prefix)/lib/unicon2/gb
 -	cp -f gbk/*.tab $(prefix)/lib/unicon2/gbk
 -	cp -f xcin-25/*.tab $(prefix)/lib/unicon2/big5
-+	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(PROG:.a=.la) $(prefix)/lib/unicon
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(PROG:.a=.la) $(prefix)/lib/unicon
 +	$(BSD_INSTALL_DATA) *.bin $(prefix)/lib/unicon
 +	$(BSD_INSTALL_DATA_DIR) $(prefix)/lib/unicon/gb
 +	$(BSD_INSTALL_DATA) gb/*.tab $(prefix)/lib/unicon/gb
