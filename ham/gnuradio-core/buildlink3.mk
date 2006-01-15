@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/12/11 11:16:35 wulf Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/01/15 11:24:52 kristerw Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNURADIO_CORE_BUILDLINK3_MK:=	${GNURADIO_CORE_BUILDLINK3_MK}+
@@ -17,7 +17,7 @@ BUILDLINK_PKGSRCDIR.gnuradio-core?=	../../ham/gnuradio-core
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/cppunit/buildlink3.mk"
-.include "../../devel/swig13/buildlink3.mk"
+.include "../../devel/swig/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
