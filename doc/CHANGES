@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12520 2006/01/15 12:33:55 abs Exp $
+$NetBSD: CHANGES,v 1.12521 2006/01/15 13:09:29 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -303,3 +303,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/perl5 to 5.8.7nb8 [jlam 2006-01-15]
 	Updated security/sudo to 1.6.8pl12nb1 [adrianp 2006-01-15]
 	Updated pkgtools/pkg_chk to 1.66 [abs 2006-01-15]
+	Added ham/gpredict version 0.5.2 [wulf 2006-01-15]
