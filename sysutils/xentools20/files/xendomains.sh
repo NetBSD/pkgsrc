@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: xendomains.sh,v 1.1 2005/11/08 00:47:35 jlam Exp $
+# $NetBSD: xendomains.sh,v 1.2 2006/01/15 01:56:48 xtraeme Exp $
 #
 # PROVIDE: xendomains
 # REQUIRE: xend
@@ -35,10 +35,16 @@ start_cmd="xendomains_start"
 stop_cmd="xendomains_stop"
 list_cmd="xendomains_list"
 extra_commands="list"
+privcmd_path="@PROCPATH@/xen/privcmd"
 
 xendomains_start()
 {
 	[ -n "$xendomains" ] || return
+
+	if [ ! -f ${privcmd_path} ]; then
+		echo "${name}: Cannot find ${privcmd_path}!"
+		exit 1
+	fi
 
 	echo "Starting xen domains."
 	for domain in $xendomains; do
