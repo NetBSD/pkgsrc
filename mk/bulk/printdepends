@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: printdepends,v 1.22 2005/12/31 02:06:10 minskim Exp $
+# $NetBSD: printdepends,v 1.23 2006/01/15 23:33:23 rillig Exp $
 #
 
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -125,7 +125,7 @@ esac
 
 case ${PKGLIST} in
 "")	# List of all packages, from pkgsrc/*/Makefile
-	list=`${GREP} '^[[:space:]]*'SUBDIR */Makefile | ${GREP} -v regress/ | ${SED} 's,/Makefile.*=[[:space:]]*,/,'`
+	list=`${GREP} '^SUBDIR+=' */Makefile | ${GREP} -v '^regress/' | ${SED} -e 's,/Makefile:SUBDIR+=[[:space:]]*,/,' -e 's,#.*,,'`
 	;;
 *)	list="${PKGLIST}"
 	;;
