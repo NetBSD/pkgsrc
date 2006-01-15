@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.25 2006/01/12 21:17:16 joerg Exp $
+# $Id: pkg_chk.sh,v 1.26 2006/01/15 12:32:56 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -149,7 +149,7 @@ extract_pkg_vars()
 extract_variables()
     {
     extract_mk_var PKGSRCDIR /usr/pkgsrc
-    if [ ! -d $PKGSRCDIR -a ! $opt_b ] ; then
+    if [ ! -d $PKGSRCDIR -a -z "$opt_b" ] ; then
 	fatal "Unable to locate PKGSRCDIR ($PKGSRCDIR)"
     fi
     extract_mk_var PKG_DBDIR /var/db/pkg
