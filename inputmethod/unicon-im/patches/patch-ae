@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2002/06/15 09:29:15 shell Exp $
+$NetBSD: patch-ae,v 1.2 2006/01/15 13:56:10 rxg Exp $
 
 --- ImmModules/CCE/Makefile.in.orig	Mon May 22 17:21:42 2000
 +++ ImmModules/CCE/Makefile.in
@@ -48,8 +48,8 @@ $NetBSD: patch-ae,v 1.1.1.1 2002/06/15 09:29:15 shell Exp $
  install:
 -	mkdir -p $(prefix)/lib/unicon2
 -	cp *.so $(prefix)/lib/unicon2
-+	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(HZ_PROG:.a=.la) $(prefix)/lib/unicon
-+	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(PY_PROG:.a=.la) $(prefix)/lib/unicon
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(HZ_PROG:.a=.la) $(prefix)/lib/unicon
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $(PY_PROG:.a=.la) $(prefix)/lib/unicon
  clean:
  	rm -f *.o core a.out *.bak test *.so
  
