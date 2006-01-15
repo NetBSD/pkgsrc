@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12518 2006/01/15 07:40:42 jlam Exp $
+$NetBSD: CHANGES,v 1.12519 2006/01/15 11:33:35 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -301,3 +301,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/mercurial version 0.7 [wiz 2006-01-15]
 	Updated misc/elscreen to 1.4.3 [uebayasi 2006-01-15]
 	Updated lang/perl5 to 5.8.7nb8 [jlam 2006-01-15]
+	Updated security/sudo to 1.6.8pl12nb1 [adrianp 2006-01-15]
