@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/08/10 20:56:18 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/01/15 12:14:16 wiz Exp $
 
 DISTNAME=	libexif-gtk-0.3.5
 PKGREVISION=	1
@@ -15,6 +15,13 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libexif-gtk/libexif-gtk.pc.in
+
+# for libexif-0.6.13
+SUBST_CLASSES+=			libexif-update
+SUBST_STAGE.libexif-update=	pre-configure
+SUBST_MESSAGE.libexif-update=	Fix configure script checks for libexif-0.6.13
+SUBST_FILES.libexif-update=	configure
+SUBST_SED.libexif-update=	s,exif-m,libexif/exif-m,g
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
