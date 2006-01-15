@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12537 2006/01/15 23:05:47 minskim Exp $
+$NetBSD: CHANGES,v 1.12538 2006/01/15 23:30:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -321,3 +321,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/uvscan to 4.40 [heinz 2006-01-15]
 	Updated fonts/tex-unttf to 1.0.1.20051219 [minskim 2006-01-15]
 	Updated print/tex-dhucs to 2.60.20051222 [minskim 2006-01-15]
+	Updated games/liquidwar to 5.6.3 [wiz 2006-01-15]
