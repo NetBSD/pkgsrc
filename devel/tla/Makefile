@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/12/05 23:55:06 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2006/01/15 17:17:52 joerg Exp $
 #
 
 DISTNAME=	tla-1.3.3
@@ -32,6 +32,14 @@ DOCDIR=	${PREFIX}/share/doc/tla
 
 post-extract:
 	${MKDIR} ${WRKSRC}
+
+pre-configure:
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/../build-tools/gnu/
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/../build-tools/gnu/
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/../expat/conftools/
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/../expat/conftools/
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/../libneon/
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/../libneon/
 
 post-install:
 	# Install arch documentation.
