@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4437 2006/01/15 15:59:06 wiz Exp $
+$NetBSD: TODO,v 1.4438 2006/01/15 17:10:52 minskim Exp $
 
 Suggested new packages
 ======================
@@ -962,7 +962,6 @@ Suggested package updates
 	o pear-SOAP-0.9.1
 	o pfqueue-0.5.0
 	o pfstat-1.8
-	o pgpool-2.6.3
 	o phoon-20050629
 	o photopc-3.05
 	o php-5.1.2
