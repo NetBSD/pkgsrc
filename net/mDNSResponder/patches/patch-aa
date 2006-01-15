@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2006/01/06 17:39:17 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2006/01/15 01:46:55 wiz Exp $
 
---- mDNSPosix/Makefile.orig	2005-02-02 02:25:21.000000000 +0000
+--- mDNSPosix/Makefile.orig	2006-01-06 02:06:17.000000000 +0100
 +++ mDNSPosix/Makefile
-@@ -221,7 +221,7 @@ RM = rm
- LN = ln -s -f
- CFLAGS_COMMON = -I. -I$(COREDIR) -I$(SHAREDDIR) -W -Wall -DPID_FILE=\"/var/run/mdnsd.pid\" -DMDNS_UDS_SERVERPATH=\"/var/run/mdnsd\"
- LIBFLAGS =
--DNSEXT_FLAGS = -D_REENTRANT -g -Wall -lpthread
-+DNSEXT_FLAGS = -D_REENTRANT -g -Wall ${COMPILER_RPATH_FLAG}${PTHREADBASE}/lib ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
- LDSUFFIX = so
- JAVACFLAGS_OS = -fPIC -shared -ldns_sd
+@@ -643,7 +643,7 @@ $(BUILDDIR)/mDNSNetMonitor:          $(S
+ 	$(CC) $+ -o $@ $(LIBFLAGS)
+ 
+ $(BUILDDIR)/dnsextd:                 $(SPECIALOBJ) $(OBJDIR)/dnsextd.c.threadsafe.o
+-	$(CC) $+ -o $@ $(LIBFLAGS) -lpthread
++	$(CC) $+ -o $@ $(LIBFLAGS) ${COMPILER_RPATH_FLAG}${PTHREADBASE}/lib ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+ 
+ #############################################################################
  
