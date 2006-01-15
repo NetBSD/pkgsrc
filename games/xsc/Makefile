@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/06/16 06:57:56 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/15 16:56:26 christos Exp $
 #
 
 DISTNAME=		xsc-1.5
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		http://www.panix.com/~mbh/xsc/
 
