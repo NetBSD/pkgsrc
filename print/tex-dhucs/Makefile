@@ -1,22 +1,20 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/29 22:37:39 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/15 23:05:32 minskim Exp $
 
-DISTNAME=	dhucs-2.60cvs-20051117
+DISTNAME=	dhucs-2.60cvs-20051222
 PKGNAME=	tex-${DISTNAME:S/cvs-/./}
 CATEGORIES=	print
-MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/dhucs/current/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} tex-unttf-dhucs-20051115.tar.bz2
+MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/hangul-ucs/current/
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} fonts-unttf-20051219.tar.gz
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://faq.ktug.or.kr/faq/DHUcs
 COMMENT=	LaTeX package to typeset Korean documents (UTF-8)
 
 DEPENDS+=	tex-ucs>=20041710nb2:../../print/tex-ucs
-DEPENDS+=	tex-unttf>=1.0.1.20051115:../../fonts/tex-unttf
+DEPENDS+=	tex-unttf>=1.0.1.20051219:../../fonts/tex-unttf
 
-SITES_tex-unttf-dhucs-20051115.tar.bz2= \
-	http://home.bawi.org/~minskim/distfiles/
-
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+SITES_tex-unttf-dhucs-20051219.tar.bz2= \
+	http://ftp.ktug.or.kr/KTUG/hangul-ucs/fonts/
 
 WRKSRC=		${WRKDIR}/dhucs
 NO_BUILD=	yes
@@ -37,7 +35,8 @@ do-install:
 	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs/contrib
 	${INSTALL_DATA} ${WRKSRC}/tex-latex-dhucs/contrib/*.* \
 		${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs/contrib
-	extract_file=${_DISTDIR:Q}/tex-unttf-dhucs-20051115.tar.bz2; \
-	cd ${PKG_LOCALTEXMFPREFIX}/tex; ${EXTRACT_CMD.tar.bz2}
+	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs/unttf
+	${INSTALL_DATA} ${WRKDIR}/fonts-unttf/tex/latex/dhucs/unttf/*.* \
+		${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs/unttf/
 
 .include "../../mk/bsd.pkg.mk"
