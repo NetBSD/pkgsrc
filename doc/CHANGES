@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12531 2006/01/15 17:10:19 minskim Exp $
+$NetBSD: CHANGES,v 1.12532 2006/01/15 19:11:02 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -315,3 +315,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added x11/ruby-gnome2-panelapplet version 0.14.1 [minskim 2006-01-15]
 	Added meta-pkgs/ruby-gnome2 version 0.14.1 [minskim 2006-01-15]
 	Updated databases/pgpool to 2.7 [minskim 2006-01-15]
+	Updates net/tor to 0.1.0.16 [jschauma 2006-01-15]
