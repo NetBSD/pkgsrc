@@ -18,10 +18,14 @@ SED="@SED@"
 
 progname=`${BASENAME} $0`
 
-while getopts vf: arg; do
+while getopts vhf: arg; do
 	case $arg in
 	v)	verbose=1 ;;
 	f)	dat_tar="${OPTARG}" ;;
+	h)
+		echo "Usage: $0 [-h] [-f <datfile>] [-v]"
+		exit 0
+		;;
 	esac
 done
 
@@ -39,7 +43,7 @@ if [ -n "$dat_tar" ]; then
 	if ! (${GTAR} -x -C ${TMPDIR} -f $dat_tar pkgdesc.ini >/dev/null); then
 		${ECHO} "$progname: unable to extract pkgdesc.ini"
 		${RM} -rf ${TMPDIR}
-		exit 1  
+		exit 2  
 	fi
 	curver=`${AWK} -F= '/Version/ { print $2; exit }' ${TMPDIR}/pkgdesc.ini | ${SED} -e 's/^.*\([0-9][0-9][0-9][0-9]\).*$/\1/'`
 else
@@ -47,7 +51,7 @@ else
 	if ! (cd ${TMPDIR}; ftp ${DAT_SITE}update.ini >/dev/null); then
 		${ECHO} "$progname: unable to fetch ${DAT_SITE}update.ini"
 		${RM} -rf ${TMPDIR}
-		exit 1  
+		exit 3  
 	fi
 	curver=`${AWK} -F= '/DATVersion/ { print $2; exit }' ${TMPDIR}/update.ini | ${SED} -e 's/^.*\([0-9][0-9][0-9][0-9]\).*$/\1/'`
 fi
@@ -59,7 +63,7 @@ else
 fi
 
 if [ $curver -le $oldver ]; then
-	if [ -z "$verbose" ]; then
+	if [ -n "$verbose" ]; then
 		${ECHO} "$progname: VirusScan DAT files are current ($oldver)"
 	fi
 else
@@ -70,7 +74,7 @@ else
 		else
 			${ECHO} "$progname: unable to fetch $dat_tar"
 			${RM} -rf ${TMPDIR}
-			exit 1  
+			exit 4  
 		fi
 	fi
 
