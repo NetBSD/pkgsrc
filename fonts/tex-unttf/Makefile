@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/29 22:28:28 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/15 22:33:09 minskim Exp $
 #
 
-DISTNAME=	tex-unttf-20051115
-PKGNAME=	${DISTNAME:S/unttf-/unttf-1.0.1./}
+DISTNAME=	fonts-unttf-20051219
+PKGNAME=	${DISTNAME:S/fonts-unttf-/tex-unttf-1.0.1./}
 CATEGORIES=	fonts
-MASTER_SITES=	http://home.bawi.org/~minskim/distfiles/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/hangul-ucs/fonts/
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://faq.ktug.or.kr/faq/DHUcs
@@ -15,9 +14,8 @@ DEPENDS+=	ttf2pk>=1.3.1:../../fonts/ttf2pk
 DEPENDS+=	un-core-ttf>=1.0:../../fonts/un-core-ttf
 DEPENDS+=	un-extra-ttf>=1.0.1:../../fonts/un-extra-ttf
 
-EXTRACT_ONLY=	# empty
+WRKSRC=		${WRKDIR}/fonts-unttf
 NO_CONFIGURE=	yes
-NO_BUILD=	yes
 
 TEX_FONTMAPS=		unttf-pdftex.map
 DVIPDFMX_FONTMAPS=	cid-unttf.map
@@ -28,9 +26,11 @@ DVIPDFMX_FONTMAPS=	cid-unttf.map
 SYSTTFDIR=	${LOCALBASE}/lib/X11/fonts/TTF
 TEXTTFDIR=	${PKG_LOCALTEXMFPREFIX}/fonts/truetype/unttf
 
+do-build:
+	${FIND} ${WRKSRC} -name CVS | ${XARGS} ${RM} -rf
+
 do-install:
-	extract_file=${_DISTDIR:Q}/${DISTNAME}${EXTRACT_SUFX}; \
-	cd ${PKG_LOCALTEXMFPREFIX}/fonts; ${EXTRACT_CMD${EXTRACT_SUFX}}
+	cd ${WRKSRC}/fonts; ${PAX} -rw . ${PKG_LOCALTEXMFPREFIX}/fonts/
 	${INSTALL_DATA_DIR} ${TEXTTFDIR}/unbt
 	${LN} -sf ${SYSTTFDIR}/UnBatang.ttf ${TEXTTFDIR}/unbt/
 	${LN} -sf ${SYSTTFDIR}/UnBatangBold.ttf ${TEXTTFDIR}/unbt/
