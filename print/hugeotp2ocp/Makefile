@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/17 22:27:05 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/15 17:01:53 minskim Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:S/tetex-src/hugeotp2ocp/}
@@ -19,6 +19,7 @@ USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--without-texinfo
 CONFIGURE_ARGS+=	--without-dialog
+CONFIGURE_ARGS+=	--without-xdvik
 CONFIGURE_ARGS+=	--disable-multiplatform
 
 TEX_ACCEPTED=	teTeX3
