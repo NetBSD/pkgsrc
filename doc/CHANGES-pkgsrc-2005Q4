@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.38 2006/01/14 16:39:56 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.39 2006/01/15 08:24:07 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -77,3 +77,5 @@ Pullup ticket 1027 - requested by Stoned Elipot
 security update for rssh
 Pullup ticket 1026 - requested by Johnny C. Lam
 security fix for perl5
+Pullup ticket 1031 - requested by Johnny C. Lam
+fix binary compatibility with previous versions of perl-5.8.x
