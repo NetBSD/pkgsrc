@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.423 2006/01/08 03:50:28 minskim Exp $
+# $NetBSD: Makefile,v 1.424 2006/01/15 16:38:19 minskim Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -217,6 +217,7 @@ SUBDIR+=	qwt
 SUBDIR+=	randrext
 SUBDIR+=	renderext
 SUBDIR+=	rep-gtk
+SUBDIR+=	ruby-gnome2-gnome
 SUBDIR+=	ruby-gnome2-gtk
 SUBDIR+=	ruby-gtk
 SUBDIR+=	ruby-tk
