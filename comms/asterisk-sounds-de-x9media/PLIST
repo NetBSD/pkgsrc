@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/12/07 12:21:05 mjl Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/01/15 14:14:25 mjl Exp $
 libdata/asterisk/sounds/de/agent-alreadyon.gsm
 libdata/asterisk/sounds/de/agent-incorrect.gsm
 libdata/asterisk/sounds/de/agent-loggedoff.gsm
@@ -77,6 +77,8 @@ libdata/asterisk/sounds/de/vm-Cust4.gsm
 libdata/asterisk/sounds/de/vm-Cust5.gsm
 libdata/asterisk/sounds/de/vm-Family.gsm
 libdata/asterisk/sounds/de/vm-Friends.gsm
+libdata/asterisk/sounds/de/vm-INBOX.gsm
+libdata/asterisk/sounds/de/vm-Old.gsm
 libdata/asterisk/sounds/de/vm-Work.gsm
 libdata/asterisk/sounds/de/vm-advopts.gsm
 libdata/asterisk/sounds/de/vm-and.gsm
@@ -95,7 +97,6 @@ libdata/asterisk/sounds/de/vm-from-phonenumber.gsm
 libdata/asterisk/sounds/de/vm-from.gsm
 libdata/asterisk/sounds/de/vm-goodbye.gsm
 libdata/asterisk/sounds/de/vm-helpexit.gsm
-libdata/asterisk/sounds/de/vm-inbox.gsm
 libdata/asterisk/sounds/de/vm-incorrect-mailbox.gsm
 libdata/asterisk/sounds/de/vm-incorrect.gsm
 libdata/asterisk/sounds/de/vm-instructions.gsm
@@ -119,7 +120,6 @@ libdata/asterisk/sounds/de/vm-nobox.gsm
 libdata/asterisk/sounds/de/vm-nomore.gsm
 libdata/asterisk/sounds/de/vm-nonumber.gsm
 libdata/asterisk/sounds/de/vm-num-i-have.gsm
-libdata/asterisk/sounds/de/vm-old.gsm
 libdata/asterisk/sounds/de/vm-onefor.gsm
 libdata/asterisk/sounds/de/vm-options.gsm
 libdata/asterisk/sounds/de/vm-opts.gsm
@@ -162,9 +162,9 @@ libdata/asterisk/sounds/de/vm-whichbox.gsm
 libdata/asterisk/sounds/de/vm-youhave.gsm
 libdata/asterisk/sounds/de/x9media-ivr-demo.gsm
 libdata/asterisk/sounds/de/x9media-line-under-construction.gsm
-libdata/asterisk/sounds/de/x9media-teaser 1.gsm
-libdata/asterisk/sounds/de/x9media-teaser 2.gsm
+libdata/asterisk/sounds/de/x9media-service.gsm
 libdata/asterisk/sounds/de/x9media-webteaser.gsm
+libdata/asterisk/sounds/de/x9media-welcome.gsm
 libdata/asterisk/sounds/digits/de/0.gsm
 libdata/asterisk/sounds/digits/de/1.gsm
 libdata/asterisk/sounds/digits/de/10.gsm

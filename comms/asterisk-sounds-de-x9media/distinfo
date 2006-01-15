@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/12/07 12:21:05 mjl Exp $
+$NetBSD: distinfo,v 1.3 2006/01/15 14:14:25 mjl Exp $
 
-SHA1 (rita-voicefiles-ger-v2.tgz) = 543055e115585d865eb9c1be512301c26c7f8b44
-RMD160 (rita-voicefiles-ger-v2.tgz) = e0154081706d538b7b83e6b93dfc8fd651e883cc
-Size (rita-voicefiles-ger-v2.tgz) = 1401584 bytes
+SHA1 (rita-voicefiles-ger-v3.tgz) = 5573c7a3fc4da7b9d3935085d4162e20f6b703e6
+RMD160 (rita-voicefiles-ger-v3.tgz) = 78d255230e35300b9ca4c07df0c230869298d405
+Size (rita-voicefiles-ger-v3.tgz) = 1403533 bytes
