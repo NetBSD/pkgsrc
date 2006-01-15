@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2005/08/16 12:35:49 wulf Exp $
+$NetBSD: distinfo,v 1.9 2006/01/15 14:04:25 wulf Exp $
 
-SHA1 (xlog-1.2.2.tar.gz) = ed97c7f57a6f5e02a13a9764a057e338fd8df11b
-RMD160 (xlog-1.2.2.tar.gz) = fc005bc05efa62110e09b3d218d7b084860f42ca
-Size (xlog-1.2.2.tar.gz) = 798514 bytes
+SHA1 (xlog-1.3.tar.gz) = 933cb28d19441491215e9b2ea025e7074e155b9f
+RMD160 (xlog-1.3.tar.gz) = 7b652490e168a100074111dd3080646ae7bc2b7f
+Size (xlog-1.3.tar.gz) = 789189 bytes
