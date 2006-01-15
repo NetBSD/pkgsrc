@@ -1,0 +1,16 @@
+bazaar-ng is a distributed/decentralized version control system.
+
+Features include:
+ * simple to use
+ * runs on Unix and Windows
+ * branches can be hosted on an http server with no special software
+ * full directory versioning including tracking subdirectories,
+   file renames, symlinks and execute-bits
+ * friendly interface that should be familiar to users of cvs,
+   svn or other systems
+ * Python interface for extending and embedding, including a
+   plugin interface
+ * strong integrity protection, including gpg-signing
+ * vibrant and active community
+
+For usage instructions run "bzr help".
