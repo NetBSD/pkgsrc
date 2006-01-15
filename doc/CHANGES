@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12516 2006/01/15 02:19:30 wiz Exp $
+$NetBSD: CHANGES,v 1.12517 2006/01/15 06:01:57 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -299,3 +299,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/snd to 7.18 [wiz 2006-01-15]
 	Updated net/mDNSResponder to 107.5 [wiz 2006-01-15]
 	Added devel/mercurial version 0.7 [wiz 2006-01-15]
+	Updated misc/elscreen to 1.4.3 [uebayasi 2006-01-15]
