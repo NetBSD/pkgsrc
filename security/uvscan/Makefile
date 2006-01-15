@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2006/01/06 16:44:04 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2006/01/15 22:27:27 heinz Exp $
 
-DISTNAME=		vlnx424e
-PKGNAME=		uvscan-4.24.1
-PKGREVISION=		1
+DISTNAME=		vlnx440e
+PKGNAME=		uvscan-4.40
 CATEGORIES=		security
-MASTER_SITES=		http://download.nai.com/products/evaluation/virusscan/english/cmdline/linux/version_4.24/intel/
+MASTER_SITES=		http://download.nai.com/products/evaluation/virusscan/english/cmdline/linux/v4.40/
 EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -24,6 +23,7 @@ CHECK_SHLIBS=		NO
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
+NO_CONFIGURE=		yes
 LICENSE=		uvscan-license
 RESTRICTED=		"restrictive 30 day evaluation license"
 NO_BIN_ON_FTP=		${RESTRICTED}
@@ -32,7 +32,7 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
 DOCDIR=			${PREFIX}/share/doc/uvscan
-DATDIR=			${PREFIX}/share/uvscan
+EGDATDIR=		${PREFIX}/share/examples/uvscan
 UVSCANDIR=		${PREFIX}/libexec/uvscan
 DATFILES=		clean.dat internet.dat names.dat scan.dat pkgdesc.ini
 
@@ -41,10 +41,10 @@ DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 FILES_SUBST+=		UVSCANDIR=${UVSCANDIR:Q}
 FILES_SUBST+=		DATFILES=${DATFILES:Q}
 
-CONF_FILES=		${DATDIR}/clean.dat ${UVSCANDIR}/clean.dat
-CONF_FILES+=		${DATDIR}/names.dat ${UVSCANDIR}/names.dat
-CONF_FILES+=		${DATDIR}/scan.dat ${UVSCANDIR}/scan.dat
-OWN_DIRS=		${UVSCANDIR}
+CONF_FILES=		${EGDATDIR}/clean.dat ${UVSCANDIR}/clean.dat
+CONF_FILES+=		${EGDATDIR}/names.dat ${UVSCANDIR}/names.dat
+CONF_FILES+=		${EGDATDIR}/scan.dat ${UVSCANDIR}/scan.dat
+REQD_DIRS=		${UVSCANDIR}
 
 INSTALLATION_DIRS=	bin man/man1 sbin
 
@@ -68,8 +68,6 @@ post-extract:
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/update_dat ${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/uvscan.1 ${PREFIX}/man/man1
-
-	${INSTALL_PROGRAM_DIR} ${UVSCANDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/uvscan ${UVSCANDIR}
 	${RM} -f ${PREFIX}/bin/uvscan
 	${LN} -sf ../${UVSCANDIR:S/${PREFIX}\///}/uvscan ${PREFIX}/bin/uvscan
@@ -85,14 +83,14 @@ do-install:
 	for file in license.dat messages.dat; do			\
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${UVSCANDIR};	\
 	done
-	${INSTALL_DATA_DIR} ${DATDIR}
+	${INSTALL_DATA_DIR} ${EGDATDIR}
 	for file in ${DATFILES}; do					\
 		if [ -f ${WRKSRC}/$${file} ]; then			\
-			${INSTALL_DATA} ${WRKSRC}/$${file} ${DATDIR};	\
+			${INSTALL_DATA} ${WRKSRC}/$${file} ${EGDATDIR};	\
 		fi;							\
 	done
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	for file in contact.txt license.txt ; do			\
+	for file in contact.txt e4400upg.pdf license.txt ; do		\
 		${INSTALL_DATA} ${WRKSRC}/$${file} ${DOCDIR};		\
 	done
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/12/03 20:19:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/01/15 22:27:27 heinz Exp $
 bin/uvscan
 emul/linux/usr/local/lib/liblnxfv.so
 emul/linux/usr/local/lib/liblnxfv.so.4
@@ -10,9 +10,11 @@ libexec/uvscan/messages.dat
 man/man1/uvscan.1
 sbin/update_dat
 share/doc/uvscan/contact.txt
+share/doc/uvscan/e4400upg.pdf
 share/doc/uvscan/license.txt
-share/uvscan/clean.dat
-share/uvscan/names.dat
-share/uvscan/scan.dat
+share/examples/uvscan/clean.dat
+share/examples/uvscan/names.dat
+share/examples/uvscan/scan.dat
+@dirrm emul/linux/usr/local/lib
 @dirrm share/doc/uvscan
-@dirrm share/uvscan
+@dirrm share/examples/uvscan
