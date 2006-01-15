@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/15 13:05:39 wulf Exp $
+
+SHA1 (gpredict-0.5.2.tar.gz) = 2a01bc1efa36fae136852dd09871db56f7942650
+RMD160 (gpredict-0.5.2.tar.gz) = 2e27d3e699579e535095522809ac7f5561cf8b25
+Size (gpredict-0.5.2.tar.gz) = 823943 bytes
+SHA1 (patch-aa) = 9aded47f0a909d1677d31ef75c3f3c91606335b0
