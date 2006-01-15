@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.474 2006/01/14 11:56:09 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.475 2006/01/15 01:35:55 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -118,6 +118,7 @@ BEGIN {
 		print_summary_and_exit set_verbosity get_verbosity
 		set_explain set_gcc_output_format
 		get_show_source_flag set_show_source_flag
+		get_klickibunti_flag set_klickibunti_flag
 	);
 	import PkgLint::Util qw(
 		false true
@@ -141,6 +142,7 @@ my $errors		= 0;
 my $warnings		= 0;
 my $verbosity		= 0;
 my $gcc_output_format	= false;
+my $klickibunti_flag	= false;
 my $explain_flag	= false;
 my $show_source_flag	= false;
 my $frequency		= {};	# Frequencies of the messages.
@@ -238,10 +240,6 @@ sub explain($$@) {
 sub print_summary_and_exit($) {
 	my ($quiet) = @_;
 
-	if ($show_source_flag) {
-		print("\n");
-	}
-
 	if (!$quiet) {
 		if ($errors != 0 || $warnings != 0) {
 			if ($verbosity >= 1) {
@@ -271,6 +269,13 @@ sub set_explain() {
 }
 sub set_gcc_output_format() {
 	$gcc_output_format = true;
+}
+
+sub get_klickibunti_flag() {
+	return $klickibunti_flag;
+}
+sub set_klickibunti_flag() {
+	$klickibunti_flag = true;
 }
 
 sub get_show_source_flag() {
@@ -339,7 +344,7 @@ sub is_changed($) {
 }
 
 # Only for PkgLint::String support
-sub substr($$$$) {
+sub substring($$$$) {
 	my ($self, $line, $start, $end) = @_;
 	my ($text, $physlines);
 
@@ -350,7 +355,6 @@ sub show_source($$) {
 	my ($self, $out) = @_;
 
 	if (PkgLint::Logging::get_show_source_flag()) {
-		print $out ("\n");
 		foreach my $line (@{$self->physlines}) {
 			print $out ("> " . $line->[1]);
 		}
@@ -450,9 +454,16 @@ package PkgLint::String;
 # which it has been read. This makes it possible for diagnostics to be
 # marked at character level instead of logical line level.
 #
-# A String itself consists of zero or more Parts, which, when concatenated,
-# form the text of the String. A Part is either a literal string or an
-# array of the form [$line, $startcol, $endcol].
+# Implementation notes:
+#
+# A String consists of three components:
+# * a reference to a logical line,
+# * a list of Parts, which, when concatenated, form the text of the String.
+#   A Part is either a literal string or an array of the form [$lineno,
+#   $startcol, $endcol], which is used as a reference into the physical
+#   lines array (without and local additions) of the logical line.
+# * a list of highlighting intervals, which are used in the
+#   show_highlighted() method to mark up certain parts of the string.
 #==========================================================================
 
 BEGIN {
@@ -463,10 +474,17 @@ BEGIN {
 
 use constant LINE	=> 0;
 use constant PARTS	=> 1;
+use constant MARKUPS	=> 2;
 
-use constant P_LINE	=> 0;
+# The structure fields of a Part of a String
+use constant P_LINENO	=> 0;
 use constant P_STARTCOL	=> 1;
 use constant P_ENDCOL	=> 2;
+
+# The structure fields of a MarkupPoint of a String
+use constant MP_LINENO	=> 0;
+use constant MP_COLNO	=> 1;
+use constant MP_TEXT	=> 2;
 
 sub new($$@) {
 	my ($class, $line, @parts) = @_;
@@ -491,13 +509,13 @@ sub text($) {
 		if (ref($part) eq "") {
 			$text .= $part;
 		} else {
-			$text .= $self->line->subtext($part->[P_LINE], $part->[P_STARTCOL], $part->[P_ENDCOL]);
+			$text .= $self->line->substring($part->[P_LINENO], $part->[P_STARTCOL], $part->[P_ENDCOL]);
 		}
 	}
 	return $text;
 }
 
-sub substr($$$) {
+sub substring($$$) {
 	my ($self, $from, $len) = @_;
 	my (@nparts, $skip, $take, $physlines);
 
@@ -525,7 +543,7 @@ sub substr($$$) {
 			my ($toline, $tocol, $tolen, $line, $linelen, $col);
 			my ($start, $end);
 
-			$line = $part->[P_LINE];
+			$line = $part->[P_LINENO];
 			$col = $part->[P_STARTCOL];
 			$tocol = $part->[P_ENDCOL];
 
@@ -569,6 +587,66 @@ sub compress($) {
 	$self->[PARTS] = \@nparts;
 
 	# TODO: Merge adjacent parts
+}
+
+sub highlight($$$$) {
+	my ($self, $lineno, $startcol, $endcol) = @_;
+
+	push(@{$self->[MARKUPS]}, [$lineno, $startcol, $endcol]);
+}
+
+sub show_highlighted($$) {
+	my ($self) = @_;
+	my ($physlines, @points, $curpoint, $maxpoint, $text, $physline, $col);
+
+	return unless (PkgLint::Logging::get_show_source_flag() && PkgLint::Logging::get_klickibunti_flag());
+
+	foreach my $m (@{$self->[MARKUPS]}) {
+		push(@points, [$m->[P_LINENO], $m->[P_STARTCOL], "\x1B[33m\x1B[1m"]);
+		push(@points, [$m->[P_LINENO], $m->[P_ENDCOL], "\x1B[0m"]);
+	}
+
+	@points = sort {
+		$a->[MP_LINENO] <=> $b->[MP_LINENO]
+		|| $a->[MP_COLNO] <=> $b->[MP_COLNO];
+	} (@points);
+
+	$physlines = $self->line->[PkgLint::Line::PHYSLINES];
+	$curpoint = 0;
+	$maxpoint = $#points + 1;
+	foreach my $lineno (0..$#{$physlines}) {
+		while ($curpoint < $maxpoint && $points[$curpoint]->[MP_LINENO] < $lineno) {
+			$curpoint++;
+		}
+
+		$text = "";
+		$col = 0;
+		$physline = $physlines->[$lineno];
+		while ($curpoint < $maxpoint && $points[$curpoint]->[MP_LINENO] == $lineno) {
+			$text .= substr($physline->[1], $col, $points[$curpoint]->[MP_COLNO] - $col);
+			$text .= $points[$curpoint]->[MP_TEXT];
+			$col = $points[$curpoint]->[MP_COLNO];
+			$curpoint++;
+		}
+		$text .= substr($physline->[1], $col);
+		print("> $text");
+	}
+}
+
+# TODO: Rewrite the code of log_warning to be shorter. After that is
+# done, add the other log_* methods.
+
+sub log_warning($$) {
+	my ($self, $msg) = @_;
+
+	if (PkgLint::Logging::get_show_source_flag()) {
+		if (PkgLint::Logging::get_klickibunti_flag()) {
+			$self->show_highlighted();
+		} else {
+			$self->line->show_source(*STDOUT);
+		}
+	}
+	PkgLint::Logging::log_warning($self->line->[PkgLint::Line::FILE], $self->line->[PkgLint::Line::LINES], $msg);
 }
 
 #== End of PkgLint::String ================================================
@@ -941,6 +1019,7 @@ my (%warnings) = (
 my $opt_autofix		= false;
 my $opt_dumpmakefile	= false;
 my $opt_import		= false;
+my $opt_klickibunti	= false;	# experimental
 my $opt_quiet		= false;
 my $opt_recursive	= false;
 my $opt_rcsidstring	= "NetBSD";
@@ -999,7 +1078,12 @@ my (@options) = (
 	  "verbose|v",
 	  sub {
 		PkgLint::Logging::set_verbosity(PkgLint::Logging::get_verbosity() + 1);
-	  } ]
+	  } ],
+	[ "--klickibunti", "Enable colored and precise diagnostics",
+	  "klickibunti",
+	  sub {
+		PkgLint::Logging::set_klickibunti_flag();
+	  } ],
 );
 
 #
@@ -1607,6 +1691,17 @@ sub strip_mk_comment($) {
 	$text =~ s/(^|[^\\])#.*/$1/;
 	$text =~ s/\\#/#/g;
 	return $text;
+}
+
+sub strings_to_lines($) {
+	my ($strings) = @_;
+	my ($retval);
+
+	$retval = [];
+	foreach my $s (@{$strings}) {
+		push(@{$retval}, $s->line);
+	}
+	return $retval;
 }
 
 #
@@ -3436,26 +3531,27 @@ sub checkfile_package_Makefile($$$) {
 
 sub checkfile_patch($) {
 	my ($fname) = @_;
-	my ($lines, $files_in_patch, $patch_state, $line_type, $dellines, $current_file);
+	my ($strings, $files_in_patch, $patch_state, $line_type, $dellines, $current_file);
 
 	log_info($fname, NO_LINE_NUMBER, "[checkfile_patch]");
 
 	checkperms($fname);
-	if (!($lines = load_file($fname))) {
+	if (!($strings = PkgLint::FileUtil::load_strings($fname, false))) {
 		log_error($fname, NO_LINE_NUMBER, "Could not be read.");
 		return;
 	}
-	if (@{$lines} == 0) {
+	if (@{$strings} == 0) {
 		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
 		return;
 	}
-	checkline_rcsid($lines->[0], "");
+	checkline_rcsid($strings->[0]->line, "");
 
 	$files_in_patch = 0;
 	$patch_state = "";
 	$dellines = 0;
 
-	foreach my $line (@{$lines}) {
+	foreach my $s (@{$strings}) {
+		my $line = $s->line;
 		my $text = $line->text;
 
 		if ($text =~ qr"^@@ -\d+,(\d+) \+\d+,\d+ @@") {
@@ -3466,7 +3562,8 @@ sub checkfile_patch($) {
 			$line_type = "-";
 
 		} elsif (index($text, "*** ") == 0 && $text !~ qr"^\*\*\* \d+(?:,\d+|) \*\*\*\*$") {
-			$line->log_warning("Please use unified diffs (diff -u) for patches.");
+			$s->highlight(0, 0, 3);
+			$s->log_warning("Please use unified diffs (diff -u) for patches.");
 			$line_type = "*";
 
 		} elsif ($text =~ qr"^\+\+\+ (\S+)") {
@@ -3532,13 +3629,13 @@ sub checkfile_patch($) {
 	}
 
 	if ($files_in_patch > 1) {
-		log_warning($lines->[0]->file, NO_LINE_NUMBER, "Contains patches for $files_in_patch files, should be only one.");
+		log_warning($fname, NO_LINE_NUMBER, "Contains patches for $files_in_patch files, should be only one.");
 
 	} elsif ($files_in_patch == 0) {
-		log_error($lines->[0]->file, NO_LINE_NUMBER, "Contains no patch.");
+		log_error($fname, NO_LINE_NUMBER, "Contains no patch.");
 	}
 
-	checklines_trailing_empty_lines($lines);
+	checklines_trailing_empty_lines(strings_to_lines($strings));
 }
 
 sub checkfile_PLIST($) {
