@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4434 2006/01/15 01:50:07 wiz Exp $
+$NetBSD: TODO,v 1.4435 2006/01/15 12:30:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -386,6 +386,7 @@ Suggested package updates
 	o bind-8.4.7
 	o bind-9.3.2
 	o bioperl-1.5.0
+	o bitlbee-1.0.1
 	o bittorrent-4.2.2
 	o bittorrent-gui-4.2.2
 	o blackbox-0.70
@@ -488,7 +489,7 @@ Suggested package updates
 	o eclipse-3.1.1
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o efax-gtk-3.0.7
+	o efax-gtk-3.0.8
 	o egtk-0.3.6.2
 	o electricfence-2.4.16
 	o elf-0.5.4p1
@@ -706,6 +707,7 @@ Suggested package updates
 	o libtool-1.5.22
 	o libwpd-0.8.3
 	o licq-core-1.3.0
+	o lighttpd-1.4.9
 	o lilypond-2.6.3
 	o linuxsms-0.77
 	o liquidwar-5.6.3
@@ -1182,7 +1184,7 @@ Suggested package updates
 	o tinyproxy-1.7.0
 	o tk-8.4.12
 	o tk83-8.3.5
-	o tkcvs-8.0
+	o tkcvs-8.0.1
 	o tkdiff-4.1.1
 	o tkgate-1.8.6
 	o tkhylafax-3.2
