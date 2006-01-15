@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.109.2.3 2006/01/14 16:38:49 salo Exp $
+# $NetBSD: Makefile,v 1.109.2.4 2006/01/15 08:23:41 seb Exp $
 
 DISTNAME=	perl-5.8.7
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
 EXTRACT_SUFX=	.tar.bz2
@@ -33,16 +33,17 @@ CONFLICTS=	perl-base-[0-9]* perl-thread-[0-9]*			\
 # Determine the Perl API version from the patchlevel.h file from the
 # source distribution.
 #
-PERL5_API_VERS?=	unknown
-.if exists(${WRKSRC}/patchlevel.h)
 PERL5_API_VERS_cmd=							\
-	${AWK} '/\#define[ 	]*PERL_API_REVISION/ { R = $$3 }	\
-		/\#define[ 	]*PERL_API_VERSION/ { r = "."$$3 }	\
-		/\#define[ 	]*PERL_API_SUBVERSION/ { s = "."$$3 }	\
-		END { printf "%s%s%s\n", R, r, s }'			\
-		${WRKSRC}/patchlevel.h
+	if ${TEST} -f ${WRKSRC}/patchlevel.h; then			\
+		${AWK} '/\#define[ 	]*PERL_API_REVISION/ { R = $$3 }\
+			/\#define[ 	]*PERL_API_VERSION/ { r = "."$$3 } \
+			/\#define[ 	]*PERL_API_SUBVERSION/ { s = "."$$3 } \
+			END { printf "%s%s%s\n", R, r, s }'		\
+			${WRKSRC}/patchlevel.h;				\
+	else								\
+		${ECHO} "unknown";					\
+	fi
 PERL5_API_VERS=		${PERL5_API_VERS_cmd:sh}
-.endif
 
 PERL5_PREFIX=		${PREFIX}
 PERL5_VENDORPREFIX=	${PERL5_PREFIX}
