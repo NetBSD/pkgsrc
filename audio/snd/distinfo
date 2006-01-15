@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2005/11/23 22:39:12 wiz Exp $
+$NetBSD: distinfo,v 1.11 2006/01/15 01:42:53 wiz Exp $
 
-SHA1 (snd-7.15.tar.gz) = 17d092df3e85c2eed7b17d1c8ebcadfc8db6f272
-RMD160 (snd-7.15.tar.gz) = c28a2a1c19ca404b47061644d42700bc6bdf6396
-Size (snd-7.15.tar.gz) = 6546108 bytes
+SHA1 (snd-7.18.tar.gz) = d6bc1ac752ed146116e4cf36cb6d199f6c61475a
+RMD160 (snd-7.18.tar.gz) = f3619a63034ee0b0ce9acf1d0a19f7de0599abe0
+Size (snd-7.18.tar.gz) = 6672637 bytes
