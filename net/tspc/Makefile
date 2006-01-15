@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/29 06:22:04 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/01/15 11:36:50 kristerw Exp $
 
 DISTNAME=		tspc-2.1.1-src
 PKGNAME=		${DISTNAME:S/-src//}
@@ -17,7 +17,9 @@ ONLY_FOR_PLATFORM+=	Linux-*-*
 ONLY_FOR_PLATFORM+=	Darwin-*-*
 ONLY_FOR_PLATFORM+=	SunOS-*-*
 
-.if "${OPSYS}" == "SunOS"
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
 TARGET=			solaris
 .else
 TARGET=			${LOWER_OPSYS}
