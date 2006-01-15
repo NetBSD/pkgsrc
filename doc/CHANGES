@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12519 2006/01/15 11:33:35 adrianp Exp $
+$NetBSD: CHANGES,v 1.12520 2006/01/15 12:33:55 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -302,3 +302,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/elscreen to 1.4.3 [uebayasi 2006-01-15]
 	Updated lang/perl5 to 5.8.7nb8 [jlam 2006-01-15]
 	Updated security/sudo to 1.6.8pl12nb1 [adrianp 2006-01-15]
+	Updated pkgtools/pkg_chk to 1.66 [abs 2006-01-15]
