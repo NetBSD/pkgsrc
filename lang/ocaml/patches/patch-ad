@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.6 2005/11/29 07:02:47 joerg Exp $
+$NetBSD: patch-ad,v 1.7 2006/01/16 09:41:48 adam Exp $
 
---- byterun/sys.c.orig	2005-11-29 06:21:52.000000000 +0000
+--- byterun/sys.c.orig	2005-11-09 16:58:03.000000000 +0100
 +++ byterun/sys.c
-@@ -47,10 +47,6 @@
+@@ -51,10 +51,6 @@
  #include "stacks.h"
  #include "sys.h"
  

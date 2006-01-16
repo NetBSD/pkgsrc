@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/06/20 07:41:49 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/01/16 09:41:48 adam Exp $
 bin/camlp4
 bin/camlp4o
 bin/camlp4r
@@ -16,6 +16,7 @@ bin/ocamlprof
 bin/ocamlrun
 bin/ocamlyacc
 bin/ocpp
+lib/ocaml/Makefile.config
 lib/ocaml/addlabels
 lib/ocaml/arg.cmi
 lib/ocaml/arg.ml
@@ -54,6 +55,9 @@ lib/ocaml/caml/printexc.h
 lib/ocaml/caml/signals.h
 lib/ocaml/camlheader
 lib/ocaml/camlheader_ur
+lib/ocaml/camlinternalMod.cmi
+lib/ocaml/camlinternalMod.ml
+lib/ocaml/camlinternalMod.mli
 lib/ocaml/camlinternalOO.cmi
 lib/ocaml/camlinternalOO.ml
 lib/ocaml/camlinternalOO.mli
@@ -379,6 +383,7 @@ man/man3/Bigarray.Array3.3o
 man/man3/Bigarray.Genarray.3o
 man/man3/Buffer.3o
 man/man3/Callback.3o
+man/man3/CamlinternalMod.3o
 man/man3/CamlinternalOO.3o
 man/man3/Char.3o
 man/man3/Complex.3o
