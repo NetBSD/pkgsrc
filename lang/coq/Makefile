@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2005/05/22 20:08:09 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/01/16 14:34:34 tonio Exp $
 #
 
 DISTNAME=	coq-8.0pl2
+PKGREVISION=	1
 CATEGORIES=	lang math
 MASTER_SITES=	ftp://ftp.inria.fr/INRIA/coq/V8.0pl2/
 
@@ -16,7 +17,7 @@ CONFIGURE_ARGS+=	-emacslib ${PREFIX}/share/emacs/site-lisp
 CONFIGURE_ARGS+=	-reals all
 BUILD_TARGET=		world
 
-BUILDLINK_DEPENDS.ocaml+=       ocaml>=3.06
+BUILDLINK_DEPENDS.ocaml+=       ocaml>=3.09
 
 .include "../../mk/bsd.prefs.mk"
 
