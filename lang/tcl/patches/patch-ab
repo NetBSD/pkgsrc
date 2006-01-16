@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.31 2005/09/21 14:49:08 joerg Exp $
+$NetBSD: patch-ab,v 1.32 2006/01/16 14:47:35 adam Exp $
 
---- configure.orig	2005-06-29 16:40:33.000000000 +0000
-+++ configure
-@@ -2191,12 +2191,13 @@ fi
+--- unix/configure.orig	2005-12-06 17:03:33.000000000 +0100
++++ unix/configure
+@@ -2542,12 +2542,13 @@ fi
      # Step 3: set configuration options based on system name and version.
  
      do64bit_ok=no
@@ -17,7 +17,7 @@ $NetBSD: patch-ab,v 1.31 2005/09/21 14:49:08 joerg Exp $
      CFLAGS_DEBUG=-g
      CFLAGS_OPTIMIZE=-O
      if test "$GCC" = "yes" ; then
-@@ -2606,6 +2607,21 @@ fi
+@@ -2962,6 +2963,21 @@ fi
  		LD_LIBRARY_PATH_VAR="SHLIB_PATH"
  	    fi
  	    ;;
@@ -39,7 +39,7 @@ $NetBSD: patch-ab,v 1.31 2005/09/21 14:49:08 joerg Exp $
  	IRIX-4.*)
  	    SHLIB_CFLAGS="-G 0"
  	    SHLIB_SUFFIX=".a"
-@@ -2834,6 +2850,9 @@ fi
+@@ -3202,6 +3218,9 @@ fi
  	    LD_SEARCH_FLAGS=""
  	    ;;
  	NetBSD-*|FreeBSD-[1-2].*)
@@ -49,7 +49,7 @@ $NetBSD: patch-ab,v 1.31 2005/09/21 14:49:08 joerg Exp $
  	    # Not available on all versions:  check for include file.
  	    ac_safe=`echo "dlfcn.h" | sed 'y%./+-%__p_%'`
  echo $ac_n "checking for dlfcn.h""... $ac_c" 1>&6
-@@ -2866,13 +2885,11 @@ if eval "test \"`echo '$ac_cv_header_'$a
+@@ -3234,13 +3253,11 @@ if eval "test \"`echo '$ac_cv_header_'$a
    
  		# NetBSD/SPARC needs -fPIC, -fpic will not do.
  		SHLIB_CFLAGS="-fPIC"
@@ -61,9 +61,9 @@ $NetBSD: patch-ab,v 1.31 2005/09/21 14:49:08 joerg Exp $
  		CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
 -		LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
  		echo $ac_n "checking for ELF""... $ac_c" 1>&6
- echo "configure:2878: checking for ELF" >&5
+ echo "configure:3246: checking for ELF" >&5
  		cat > conftest.$ac_ext <<EOF
-@@ -2887,11 +2904,20 @@ EOF
+@@ -3255,11 +3272,20 @@ EOF
  if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
    egrep "yes" >/dev/null 2>&1; then
    rm -rf conftest*
@@ -86,7 +86,7 @@ $NetBSD: patch-ab,v 1.31 2005/09/21 14:49:08 joerg Exp $
  		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1.0'
  		
  fi
-@@ -2980,7 +3006,7 @@ rm -f conftest*
+@@ -3348,7 +3374,7 @@ rm -f conftest*
  	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
  	    TCL_LIB_VERSIONS_OK=nodots
  	    ;;
@@ -95,7 +95,7 @@ $NetBSD: patch-ab,v 1.31 2005/09/21 14:49:08 joerg Exp $
  	    # FreeBSD 3.* and greater have ELF.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="ld -Bshareable -x"
-@@ -3820,16 +3846,16 @@ fi
+@@ -4301,16 +4327,16 @@ fi
      fi
  
      if test "$SHARED_LIB_SUFFIX" = "" ; then
@@ -116,7 +116,7 @@ $NetBSD: patch-ab,v 1.31 2005/09/21 14:49:08 joerg Exp $
      else
          LIB_SUFFIX=${UNSHARED_LIB_SUFFIX}
  
-@@ -7756,7 +7782,7 @@ else
+@@ -7785,7 +7811,7 @@ else
              TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`\${TCL_DBGX}"
          fi
          TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
@@ -125,7 +125,7 @@ $NetBSD: patch-ab,v 1.31 2005/09/21 14:49:08 joerg Exp $
      else
          TCL_BUILD_EXP_FILE="lib.exp"
          eval "TCL_EXP_FILE=libtcl${TCL_EXPORT_FILE_SUFFIX}"
-@@ -7787,13 +7813,21 @@ VERSION=${TCL_VERSION}
+@@ -7816,13 +7842,21 @@ VERSION=${TCL_VERSION}
  #--------------------------------------------------------------------
  
  if test "$FRAMEWORK_BUILD" = "1" ; then
@@ -147,6 +147,6 @@ $NetBSD: patch-ab,v 1.31 2005/09/21 14:49:08 joerg Exp $
 +    fi
 +done
 +
- #--------------------------------------------------------------------
- #       The statements below define various symbols relating to Tcl
- #       stub support.
+ # If a system share directory like /usr/local/share already exists, then add
+ # it to the package search path.
+ 

@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.1 2005/08/02 22:37:18 seb Exp $
+$NetBSD: patch-aj,v 1.2 2006/01/16 14:47:35 adam Exp $
 
---- ../tests/pkgMkIndex.test.orig	2003-07-24 08:23:39.000000000 +0000
-+++ ../tests/pkgMkIndex.test
+--- tests/pkgMkIndex.test.orig	2003-07-24 08:23:39.000000000 +0000
++++ tests/pkgMkIndex.test
 @@ -559,7 +559,7 @@ removeFile [file join pkg circ2.tcl]
  removeFile [file join pkg circ3.tcl]
  
