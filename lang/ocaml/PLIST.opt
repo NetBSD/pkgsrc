@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opt,v 1.10 2005/06/20 07:41:49 jlam Exp $
+@comment $NetBSD: PLIST.opt,v 1.11 2006/01/16 09:41:48 adam Exp $
 bin/camlp4o.opt
 bin/camlp4r.opt
 bin/ocamlc.opt
@@ -18,6 +18,7 @@ lib/ocaml/bigarray.cmx
 lib/ocaml/bigarray.cmxa
 lib/ocaml/buffer.cmx
 lib/ocaml/callback.cmx
+lib/ocaml/camlinternalMod.cmx
 lib/ocaml/camlinternalOO.cmx
 lib/ocaml/camlp4/argl.cmx
 lib/ocaml/camlp4/argl.o
@@ -147,7 +148,6 @@ lib/ocaml/str.cmxa
 lib/ocaml/stream.cmx
 lib/ocaml/string.cmx
 lib/ocaml/stringLabels.cmx
-lib/ocaml/string_misc.cmx
 lib/ocaml/sys.cmx
 lib/ocaml/threads/condition.cmx
 lib/ocaml/threads/event.cmx
