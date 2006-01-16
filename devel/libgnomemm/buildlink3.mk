@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/12/31 12:32:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/01/16 22:41:46 adam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOMEMM_BUILDLINK3_MK:=	${LIBGNOMEMM_BUILDLINK3_MK}+
@@ -19,4 +19,4 @@ BUILDLINK_PKGSRCDIR.libgnomemm?=	../../devel/libgnomemm
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
