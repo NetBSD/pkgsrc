@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.39 2005/12/05 22:07:08 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.40 2006/01/16 23:35:29 wiz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -757,7 +757,7 @@ _UNWRAP_SED?=		# empty
 
 SUBST_CLASSES+=		unwrap
 SUBST_STAGE.unwrap=	post-build
-SUBST_MESSAGE.unwrap=	"Unwrapping files-to-be-installed."
+SUBST_MESSAGE.unwrap=	Unwrapping files-to-be-installed.
 SUBST_FILES.unwrap=	${_UNWRAP_FILES}
 SUBST_SED.unwrap=	${_UNWRAP_SED}
 .if defined(WRAPPER_DEBUG) && !empty(WRAPPER_DEBUG:M[yY][eE][sS])
