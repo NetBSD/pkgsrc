@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1.1.1 2006/01/16 13:01:16 rxg Exp $
+
+--- scripts/Makefile.orig	2005-03-06 12:51:03.000000000 +0800
++++ scripts/Makefile
+@@ -5,9 +5,6 @@ SCRIPTS=gcin-user-setup gcin-utf8-setup 
+ all:	$(SCRIPTS)
+ 
+ install:
+-	if [ $(prefix) = /usr/local ]; then \
+-	   sh modify-XIM; \
+-	fi
+ 	install -d $(GCIN_SCRIPT_DIR_i)
+ 	install -m 755 $(SCRIPTS) $(GCIN_SCRIPT_DIR_i)
+ clean:

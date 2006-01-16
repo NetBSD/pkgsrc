@@ -1,0 +1,32 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/01/16 13:01:16 rxg Exp $
+
+--- gtk-im/Makefile.orig	2005-09-14 00:29:56.000000000 +0800
++++ gtk-im/Makefile
+@@ -13,23 +13,18 @@ CFLAGS += -DNEW_GTK_IM=1
+ endif
+ 
+ .c.o:
+-	$(CC) -c -fpic $(CFLAGS) -o $@ $<
++	$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) -o $@ $<
+ 
+-im-gcin.so:     $(OBJS) ../im-client/libgcin-im-client.so
+-	$(CC) -shared $(OBJS) -L../im-client -lgcin-im-client -o $@ $(LDFLAGS)
++im-gcin.la:     $(OBJS) ../im-client/libgcin-im-client.la
++	$(LIBTOOL) --mode=link $(CC) $(OBJS:.o=.lo) ../im-client/libgcin-im-client.la -o $@ $(LDFLAGS) -rpath $(IMMODULES) -module -avoid-version
+ 	rm -f core.*
+ 
+ clean:
+ 	rm -f *.o *.so *~ core.* .depend
+ 
+ install:
+-	if [ $(prefix) = /usr/local ]; then \
+-		install -d $(IMMODULES_LOCAL); \
+-		install -m 755 im-gcin.so $(IMMODULES_LOCAL); \
+-	else \
+ 		install -d $(IMMODULES); \
+-		install -m 755 im-gcin.so $(IMMODULES); \
+-	fi
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) im-gcin.la $(IMMODULES)
+ 
+ .depend:
+ 	$(CC) $(CFLAGS) -MM *.c > $@
