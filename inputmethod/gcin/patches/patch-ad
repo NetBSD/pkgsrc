@@ -1,0 +1,33 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/01/16 13:01:16 rxg Exp $
+
+--- im-client/Makefile.orig	2005-05-09 12:23:22.000000000 +0800
++++ im-client/Makefile
+@@ -6,23 +6,18 @@ CFLAGS= $(WALL) $(OPTFLAGS) -I. -I.. -I.
+         -DCLIENT_LIB=1 -DGCIN_BIN_DIR=\"$(GCIN_BIN_DIR)\" \
+         -DDEBUG="0$(GCIN_DEBUG)" -DGCIN_TABLE_DIR=\"$(GCIN_TABLE_DIR)\" \
+         -DFREEBSD=$(FREEBSD)
+-OBJS = gcin-im-client.o im-addr.o gcin-conf.o util.o gcin-crypt.o
++OBJS = gcin-im-client.o ../im-srv/im-addr.o ../gcin-conf.o ../util.o gcin-crypt.o
+ 
+ .c.o:
+-	$(CC) -c -fpic $(CFLAGS) -o $@ $<
++	$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) -o $@ $<
+ 
+-libgcin-im-client.so:   $(OBJS)
+-	$(CC) -shared $(OBJS) -o $@
++libgcin-im-client.la:   $(OBJS)
++	$(LIBTOOL) --mode=link $(CC) $(OBJS:.o=.lo) -o $@ -rpath $(libdir) -version-info 1:1
+ 	$(MAKE) -C ../gtk-im
+ 
+ install:
+ 	install -d $(libdir)
+-	install -m 755 libgcin-im-client.so $(libdir)
+-	if [ $(prefix) = /usr/local ]; then \
+-	  grep /usr/local/lib /etc/ld.so.conf > /dev/null 2>&1 || \
+-	  echo /usr/local/lib >> /etc/ld.so.conf; \
+-	  PATH=/sbin:/usr/sbin:$(PATH); ldconfig; \
+-	fi; \
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) libgcin-im-client.la $(libdir)
+ 	install -d $(includedir); \
+ 	install -m 444 gcin-im-client.h $(includedir)
+ 

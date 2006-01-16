@@ -1,0 +1,41 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/01/16 13:01:16 rxg Exp $
+
+--- Makefile.orig	2005-10-16 10:19:45.000000000 +0800
++++ Makefile
+@@ -36,8 +36,8 @@ endif
+ 
+ im-srv = im-srv/im-srv.a
+ 
+-.c.E:
+-	$(CC) $(CFLAGS) -E -o $@ $<
++.c.o:
++	$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) -o $@ $<
+ 
+ PROGS=gcin tsd2a tsa2d phoa2d phod2a tslearn gcin-setup gcin2tab juyin-learn sim2trad
+ PROGS_CV=kbmcv
+@@ -96,24 +96,16 @@ ibin:
+ 
+ install:
+ 	install -d $(datadir)/icons
+-	install gcin.png $(datadir)/icons
++	install -m 644 gcin.png $(datadir)/icons
+ 	install -d $(GCIN_ICON_DIR_i)
+ 	install -m 644 icons/* $(GCIN_ICON_DIR_i)
+ 	install -d $(bindir)
+ 	$(MAKE) -C data install
+ 	$(MAKE) -C im-client install
+ 	$(MAKE) -C gtk-im install
+-	if [ $(QT_IM) = 'Y' ]; then $(MAKE) -C qt-im install; fi
+-	if [ $(prefix) = /usr/local ]; then \
+-	   install -m 644 gcin.png /usr/share/icons; \
+-	   install -d $(DOC_DIR); \
+-	   install -m 644 README Changelog $(DOC_DIR); \
+-	   install $(PROGS) $(bindir); \
+-	else \
+ 	   install -d $(DOC_DIR_i); \
+ 	   install -m 644 README Changelog $(DOC_DIR_i); \
+ 	   install -s $(PROGS) $(bindir); \
+-	fi
+ 	$(MAKE) -C scripts install
+ 	$(MAKE) -C menu install
+ 	$(MAKE) -C man install
