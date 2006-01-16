@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/05 20:49:50 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2006/01/16 13:44:53 rxg Exp $
 
 DISTNAME=	xamp-0.8-10
 PKGNAME=	xamp-0.8.10
@@ -9,7 +9,7 @@ MASTER_SITES=	http://andrej.co.ru/~andrej/programs/xamp/ \
 EXTRACT_SUFX=	.tgz
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${SKIN_DATA}
 
-MAINTAINER=	rxg@ms25.url.com.tw
+MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://andrej.co.ru/~andrej/programs/xamp/
 COMMENT=	Version of amp (stands for `Audio Mpeg Player') plus a Qt GUI
 
