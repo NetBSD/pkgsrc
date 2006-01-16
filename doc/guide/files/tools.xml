@@ -1,4 +1,4 @@
-<!-- $NetBSD: tools.xml,v 1.1 2006/01/13 17:42:33 reed Exp $ -->
+<!-- $NetBSD: tools.xml,v 1.2 2006/01/16 00:29:23 rillig Exp $ -->
 
 <chapter id="tools">
 <title>Tools needed for building or running</title>
@@ -100,7 +100,8 @@ something that's come up frequently enough to make it worthwhile to do.
 When improving or porting pkgsrc to a new platform, have a look
 at (or create) the corresponding platform specific make file fragment under
 <filename>pkgsrc/mk/tools/tools.${OPSYS}.mk</filename> which defines
-the name of the common tools. For example:
+the name of the common tools. For example:</para>
+
 <programlisting>
 .if exists(/usr/bin/bzcat)
 TOOLS_PLATFORM.bzcat?=          /usr/bin/bzcat
