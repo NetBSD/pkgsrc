@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2005/12/29 06:21:51 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2006/01/16 00:45:13 rillig Exp $
 
 DISTNAME=		mimedefang-2.54
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://www.mimedefang.org/static/
 
@@ -17,6 +18,8 @@ DEPENDS+=		p5-MIME-Base64>=2.11:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-MIME-tools>=5.411.1:../../mail/p5-MIME-tools
 DEPENDS+=		spamassassin>=2.31:../../mail/spamassassin
 
+.include "../../mk/bsd.prefs.mk"
+
 USE_TOOLS+=		perl:run
 GNU_CONFIGURE=		YES
 PKG_SYSCONFSUBDIR?=	mimedefang
@@ -29,6 +32,9 @@ DEFANG_GROUP?=		defang
 
 PKG_GROUPS=		${DEFANG_GROUP}
 PKG_USERS=		${DEFANG_USER}:${DEFANG_GROUP}
+
+BUILD_DEFS+=		PKG_SYSCONFSUBDIR DEFANG_SPOOLDIR
+BUILD_DEFS+=		DEFANG_USER DEFANG_GROUP
 
 EGDIR=			${PREFIX}/share/examples/mimedefang
 SHAREDIR=		${PREFIX}/share/mimedefang
@@ -50,6 +56,7 @@ CONFIGURE_ARGS+=	--with-milterinc=${BUILDLINK_PREFIX.libmilter}/include
 CONFIGURE_ARGS+=	--with-milterlib=${BUILDLINK_PREFIX.libmilter}/lib
 CONFIGURE_ARGS+=	--with-spooldir=${DEFANG_SPOOLDIR:Q}
 CONFIGURE_ARGS+=	--with-quarantinedir=${DEFANG_SPOOLDIR:Q}
+CONFIGURE_ARGS+=	--with-user=${DEFANG_USER:Q}
 # CONFIGURE_ARGS+=	--disable-anti-virus
 #	list the paths where they _would_ be installed, so they
 #	can be found at runtime. -- they have to be listed
