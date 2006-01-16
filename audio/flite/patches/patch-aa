@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/16 14:18:42 xtraeme Exp $
+
+--- Makefile.orig	2005-11-01 14:40:45.000000000 +0100
++++ Makefile	2006-01-16 15:15:36.000000000 +0100
+@@ -48,6 +48,7 @@
+ FILES = Makefile README ACKNOWLEDGEMENTS COPYING $(CONFIG)
+ DIST_CLEAN = config.cache config.log config.status \
+ 		config/config config/system.mak FileList
++DOCDIR=	$(PREFIX)/share/doc/flite
+ 
+ HOST_ONLY_DIRS = tools main
+ ALL = $(BUILD_DIRS)
+@@ -105,13 +106,14 @@
+ 
+ install:
+ 	@echo Installing 
+-	mkdir -p $(INSTALLBINDIR)
+-	mkdir -p $(INSTALLLIBDIR)
+-	mkdir -p $(INSTALLINCDIR)
+-	$(INSTALL) -m 644 include/*.h $(INSTALLINCDIR)
+-	@ $(MAKE) -C lib --no-print-directory install
+-	$(INSTALL) -m 755 bin/flite $(INSTALLBINDIR)
+-	$(INSTALL) -m 755 bin/flite_time $(INSTALLBINDIR)
++	$(BSD_INSTALL_PROGRAM_DIR) $(INSTALLBINDIR)
++	$(BSD_INSTALL_DATA_DIR) $(INSTALLLIBDIR)
++	$(BSD_INSTALL_DATA_DIR) $(INSTALLINCDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DOCDIR)
++	$(BSD_INSTALL_DATA) include/*.h $(INSTALLINCDIR)
++	$(BSD_INSTALL_PROGRAM) bin/flite $(INSTALLBINDIR)
++	$(BSD_INSTALL_PROGRAM) bin/flite_time $(INSTALLBINDIR)
++	$(BSD_INSTALL_DATA) README $(DOCDIR)
+ 
+ time-stamp :
+ 	@ echo $(PROJECT_NAME) >.time-stamp
