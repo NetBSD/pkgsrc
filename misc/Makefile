@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.251 2005/12/17 20:19:49 wiz Exp $
+# $NetBSD: Makefile,v 1.252 2006/01/16 13:20:12 rxg Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -76,6 +76,7 @@ SUBDIR+=	gone
 SUBDIR+=	gperiodic
 SUBDIR+=	granulate
 SUBDIR+=	gxmame
+SUBDIR+=	hanzim
 SUBDIR+=	heyu
 SUBDIR+=	ibutton-pdkit
 SUBDIR+=	iselect
