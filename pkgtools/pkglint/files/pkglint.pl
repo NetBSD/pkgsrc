@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.475 2006/01/15 01:35:55 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.476 2006/01/16 01:37:39 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1142,6 +1142,7 @@ my $patchdir;			# PATCHDIR from the package Makefile
 my $distinfo_file;		# DISTINFO_FILE from the package Makefile
 my $pkgname;			# PKGNAME from the package Makefile
 my $hack_php_patches;		# Ignore non-existing patches in distinfo
+my $seen_bsd_prefs_mk;		# Has bsd.prefs.mk already been included?
 
 my $makevar;			# Table of variables and values
 my $seen_Makefile_common;	# Does the package have any .includes?
@@ -2885,6 +2886,15 @@ sub checkline_mk_varassign($$$$$) {
 	my ($line, $varname, $op, $value, $comment) = @_;
 	my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
 
+	if ($op eq "?=" && defined($seen_bsd_prefs_mk) && !$seen_bsd_prefs_mk) {
+		if ($varbase eq "BUILDLINK_PKGSRCDIR"
+		    || $varbase eq "BUILDLINK_RECOMMENDED") {
+			# FIXME: What about these ones? They occur quite often.
+		} else {
+			$opt_warn_extra and $line->log_warning("Please include \"../../mk/bsd.prefs.mk\" before using \"?=\".");
+		}
+	}
+
 	checkline_mk_vartype($line, $varname, $op, $value, $comment);
 
 	if (!$is_internal && $varname =~ qr"^_") {
@@ -3150,6 +3160,10 @@ sub checklines_mk($) {
 					"the common parts and put them into a Makefile.common. After",
 					"that, both this one and the other package should include the",
 					"Makefile.common.");
+			}
+
+			if ($includefile eq "../../mk/bsd.prefs.mk") {
+				$seen_bsd_prefs_mk = true;
 			}
 
 		} elsif ($text =~ qr"^\.\s*(if|ifdef|ifndef|else|elif|endif|for|endfor|undef)(?:\s+([^\s#][^#]*?))?\s*(?:#.*)?$") {
@@ -4052,6 +4066,7 @@ sub checkdir_package() {
 
 	# Initialize global variables
 	$makevar = {};
+	$seen_bsd_prefs_mk = false;
 
 	# we need to handle the Makefile first to get some variables
 	if (!load_package_Makefile("${current_dir}/Makefile", \$whole, \$lines)) {
@@ -4125,6 +4140,7 @@ sub checkitem($) {
 	$seen_Makefile_common	= undef;
 	$pkgname		= undef;
 	$hack_php_patches	= false;
+	$seen_bsd_prefs_mk	= undef;
 
 	$current_dir = $is_dir ? $item : dirname($item);
 	my $abs_current_dir = Cwd::abs_path($current_dir);
