@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4442 2006/01/16 14:26:24 adam Exp $
+$NetBSD: TODO,v 1.4443 2006/01/16 14:50:31 adam Exp $
 
 Suggested new packages
 ======================
@@ -1165,7 +1165,6 @@ Suggested package updates
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.1
 	o sysinfo-4.2.2
-	o tcl-8.4.12
 	o tcl-postgresql74-7.4.9
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
@@ -1184,7 +1183,6 @@ Suggested package updates
 	o thunderbird-gtk1-1.5
 	o tidy-20051006
 	o tinyproxy-1.7.0
-	o tk-8.4.12
 	o tk83-8.3.5
 	o tkcvs-8.0.1
 	o tkdiff-4.1.1
