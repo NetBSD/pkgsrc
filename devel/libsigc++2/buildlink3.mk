@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:30 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/01/16 09:52:19 adam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSIGC++_BUILDLINK3_MK:=	${LIBSIGC++_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_RECOMMENDED.libsigcxx+=	libsigc++2>=2.0.3nb1
 BUILDLINK_PKGSRCDIR.libsigcxx?=	../../devel/libsigc++2
 .endif	# LIBSIGC++_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
