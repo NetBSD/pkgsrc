@@ -1,20 +1,20 @@
-$NetBSD: patch-ac,v 1.1 2005/10/18 15:31:58 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2006/01/16 23:03:20 xtraeme Exp $
 
---- growisofs.c.orig	2004-08-25 01:02:29.000000000 +0200
-+++ growisofs.c
-@@ -331,7 +331,7 @@
- #ifndef _GNU_SOURCE
- #define _GNU_SOURCE
- #endif
+--- growisofs.c.orig	2006-01-16 23:50:34.000000000 +0100
++++ growisofs.c	2006-01-16 23:51:29.000000000 +0100
+@@ -358,7 +358,7 @@
+ # ifndef _GNU_SOURCE
+ #  define _GNU_SOURCE
+ # endif
 -#elif defined(__OpenBSD__) || defined(__NetBSD__) || defined(__FreeBSD__)
 +#elif defined(__OpenBSD__) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
- #define off64_t  off_t
- #define stat64   stat
- #define fstat64  fstat
-@@ -735,7 +735,7 @@ char *setup_fds (char *device)
+ # define off64_t	off_t
+ # define stat64		stat
+ # define fstat64	fstat
+@@ -804,7 +804,7 @@
      goto open_rw;
  }
- 
+ 
 -#elif defined(__FreeBSD__)
 +#elif defined(__FreeBSD__) || defined(__DragonFly__)
  
