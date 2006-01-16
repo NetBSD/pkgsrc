@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2005/10/17 09:25:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/01/16 14:24:53 adam Exp $
 bin/efax-gtk
 man/man1/efax-gtk.1
 share/applications/efax-gtk.desktop
 share/examples/efax-gtkrc
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/efax-gtk.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/efax-gtk.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/efax-gtk.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/efax-gtk.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/efax-gtk.mo
