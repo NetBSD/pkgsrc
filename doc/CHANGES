@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12549 2006/01/16 14:50:30 adam Exp $
+$NetBSD: CHANGES,v 1.12550 2006/01/16 15:18:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -335,3 +335,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/coq to 8.0pl2nb1 [tonio 2006-01-16]
 	Updated lang/tcl to 8.4.12 [adam 2006-01-16]
 	Updated x11/tk to 8.4.12 [adam 2006-01-16]
+	Updated graphics/netpbm to 10.31 [adam 2006-01-16]
