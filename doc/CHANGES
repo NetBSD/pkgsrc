@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12540 2006/01/16 09:43:01 adam Exp $
+$NetBSD: CHANGES,v 1.12541 2006/01/16 09:53:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -324,3 +324,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated games/liquidwar to 5.6.3 [wiz 2006-01-15]
 	Updated mail/mimedefang to 2.54nb1 [rillig 2006-01-16]
 	Updated lang/ocaml to 3.09.1 [adam 2006-01-16]
+	Updated devel/libsigc++2 to 2.0.17 [adam 2006-01-16]
