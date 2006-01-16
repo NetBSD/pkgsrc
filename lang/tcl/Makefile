@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2005/12/05 20:50:28 rillig Exp $
+# $NetBSD: Makefile,v 1.57 2006/01/16 14:47:35 adam Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
-PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -16,10 +15,12 @@ CONFLICTS+=		tclman80-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-WRKSRC=			${WRKDIR}/${DISTNAME:C/-src//}/unix
+WRKSRC=			${WRKDIR}/tcl${TCL_VERSION}
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+CONFIGURE_DIRS=		unix
+BUILD_DIRS=		${CONFIGURE_DIRS}
 MAKE_ENV+=		TOUCH=${TOUCH:Q}
 
 INSTALL_TARGET=		install
@@ -51,23 +52,22 @@ CONFIGURE_ENV+=		TCL_PACKAGE_PATH="${VIEWBASE}/lib/tcl"
 CONFIGURE_ARGS+=	--enable-64bit
 .endif
 
-post-build:
-	${SED} 								\
-		-e "s|${WRKSRC}|${PREFIX}/lib|"				\
-		-e "s|${WRKDIR}/${DISTNAME:C/-src//}|${PREFIX}/include/tcl|"	\
-		${WRKSRC}/tclConfig.sh > ${WRKSRC}/tclConfig.sh.tmp &&	\
-		${MV} ${WRKSRC}/tclConfig.sh.tmp ${WRKSRC}/tclConfig.sh
+SUBST_CLASSES+=		tcl-config
+SUBST_STAGE.tcl-config=	post-build
+SUBST_FILES.tcl-config=	unix/tclConfig.sh
+SUBST_SED.tcl-config+=	-e "s|${WRKSRC}/unix|${PREFIX}/lib|"
+SUBST_SED.tcl-config+=	-e "s|${WRKSRC}|${PREFIX}/include/tcl|"
 
 post-install:
 	cd ${PREFIX}/bin && ${LN} -s tclsh8.4 tclsh
 	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl
 	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl/unix
 	${INSTALL_DATA_DIR} ${PREFIX}/include/tcl/generic
-	${INSTALL_DATA} ${WRKSRC}/tclUnixPort.h ${PREFIX}/include/tcl/unix
+	${INSTALL_DATA} ${WRKSRC}/unix/tclUnixPort.h ${PREFIX}/include/tcl/unix
 .for f in	regex.h tcl.h tclCompile.h tclDecls.h tclIO.h		\
 		tclInitScript.h tclInt.h tclIntDecls.h tclIntPlatDecls.h\
 		tclMath.h tclPlatDecls.h tclPort.h tclRegexp.h
-	${INSTALL_DATA} ${WRKSRC}/../generic/${f} ${PREFIX}/include/tcl/generic
+	${INSTALL_DATA} ${WRKSRC}/generic/${f} ${PREFIX}/include/tcl/generic
 .endfor
 	${INSTALL_LIB_DIR} ${PREFIX}/lib/tcl
 
