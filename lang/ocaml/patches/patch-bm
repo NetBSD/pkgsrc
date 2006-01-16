@@ -1,6 +1,6 @@
-$NetBSD: patch-bm,v 1.2 2005/03/24 11:32:50 adam Exp $
+$NetBSD: patch-bm,v 1.3 2006/01/16 09:41:48 adam Exp $
 
---- otherlibs/num/Makefile.orig	2003-10-24 09:17:31.000000000 +0000
+--- otherlibs/num/Makefile.orig	2005-01-21 15:15:44.000000000 +0100
 +++ otherlibs/num/Makefile
 @@ -19,7 +19,7 @@ include ../../config/Makefile
  
@@ -9,8 +9,8 @@ $NetBSD: patch-bm,v 1.2 2005/03/24 11:32:50 adam Exp $
 -CFLAGS=-O -I../../byterun $(BYTECCCOMPOPTS) $(SHAREDCCCOMPOPTS) \
 +CFLAGS+=-I../../byterun $(BYTECCCOMPOPTS) $(SHAREDCCCOMPOPTS) \
            -DBNG_ARCH_$(BNG_ARCH) -DBNG_ASM_LEVEL=$(BNG_ASM_LEVEL)
- CAMLC=../../ocamlcomp.sh -w s
- CAMLOPT=../../ocamlcompopt.sh -w s
+ CAMLC=../../ocamlcomp.sh
+ CAMLOPT=../../ocamlcompopt.sh
 @@ -49,13 +49,13 @@ libnums.a: $(COBJS)
  $(CAMLOBJS:.cmo=.cmx): ../../ocamlopt
  
