@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12538 2006/01/15 23:30:00 wiz Exp $
+$NetBSD: CHANGES,v 1.12539 2006/01/16 00:45:52 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -322,3 +322,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated fonts/tex-unttf to 1.0.1.20051219 [minskim 2006-01-15]
 	Updated print/tex-dhucs to 2.60.20051222 [minskim 2006-01-15]
 	Updated games/liquidwar to 5.6.3 [wiz 2006-01-15]
+	Updated mail/mimedefang to 2.54nb1 [rillig 2006-01-16]
