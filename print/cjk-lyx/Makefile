@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/11/11 18:50:24 tonio Exp $
+# $NetBSD: Makefile,v 1.19 2006/01/16 13:49:59 rxg Exp $
 
 DISTNAME=	lyx-${LYX_VERS}
 PKGNAME=	cjk-${DISTNAME}
@@ -12,7 +12,7 @@ PATCH_SITES=	ftp://stone.phys.pusan.ac.kr/pub/CJK-LyX/
 PATCHFILES=	CJK-LyX-${LYX_VERS}-patch
 PATCH_DIST_ARGS=-d ${WRKSRC}/.. --forward --quiet -p0
 
-MAINTAINER=	rxg@ms25.url.com.tw
+MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://cellular.phys.pusan.ac.kr/cjk.html
 COMMENT=	Multibyte version of LyX
 
