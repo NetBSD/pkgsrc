@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.8 2005/10/19 09:30:09 adam Exp $
+$NetBSD: patch-ah,v 1.9 2006/01/16 15:17:02 adam Exp $
 
---- converter/other/cameratopam/camera.c.orig	2005-09-17 21:51:41.000000000 +0000
+--- converter/other/cameratopam/camera.c.orig	2005-12-03 19:06:50.000000000 +0100
 +++ converter/other/cameratopam/camera.c
-@@ -23,6 +23,10 @@
+@@ -25,6 +25,10 @@
  
  #include "camera.h"
  
