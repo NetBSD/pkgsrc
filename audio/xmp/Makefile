@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/12/29 06:21:32 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/01/16 13:46:05 rxg Exp $
 
 DISTNAME=	xmp-2.0.4
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmp/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rxg@ms25.url.com.tw
+MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://xmp.sourceforge.net/
 COMMENT=	Player for many different Amiga and PC module formats
 
