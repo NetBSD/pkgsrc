@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/16 13:01:16 rxg Exp $
+
+SHA1 (gcin-1.1.5.tar.bz2) = c8a0d306c3865aa139f2450c553d0511c93089be
+RMD160 (gcin-1.1.5.tar.bz2) = e611a9986fd6eab945a5763bccb09744db9af1d5
+Size (gcin-1.1.5.tar.bz2) = 1375846 bytes
+SHA1 (patch-aa) = ba3cbaad9cd300f5a7dedff7f67e409a7fbcbe28
+SHA1 (patch-ab) = ae3098ed94f821a471161fe0299e0dcc4df0119b
+SHA1 (patch-ac) = 45c8bf6d7fe855f92ed7aa15064d0d58070fa588
+SHA1 (patch-ad) = 524d38ae0b6c21f1e934920027051adad0626b1e
+SHA1 (patch-ae) = 0c77825091b8895cf535fa26cf3380aafdcd3c4b
+SHA1 (patch-af) = e66965a840e67afe007c4ddaa55cba572cf49e6f
+SHA1 (patch-ag) = d3e16fd690f132bd687ceda2d13041e447147f6e
