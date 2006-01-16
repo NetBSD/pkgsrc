@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.297 2005/12/30 14:10:00 ghen Exp $
+# $NetBSD: Makefile,v 1.298 2006/01/16 14:19:38 xtraeme Exp $
 #
 
 COMMENT=	Audio tools
@@ -73,6 +73,7 @@ SUBDIR+=	festvox-us3
 SUBDIR+=	flac
 SUBDIR+=	flac123
 SUBDIR+=	flac2mp3
+SUBDIR+=	flite
 SUBDIR+=	fluidsynth
 SUBDIR+=	freepats
 SUBDIR+=	freezetag
