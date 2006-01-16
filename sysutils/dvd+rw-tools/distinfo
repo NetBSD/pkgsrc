@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2005/10/18 15:31:57 joerg Exp $
+$NetBSD: distinfo,v 1.11 2006/01/16 23:03:20 xtraeme Exp $
 
-SHA1 (dvd+rw-tools-5.21.4.10.8.tar.gz) = 319a4529db3748f595aa9dc8f2e54564bb32a0e3
-RMD160 (dvd+rw-tools-5.21.4.10.8.tar.gz) = 638f67ddfc24f89a4c2bc2abced652e679f4400f
-Size (dvd+rw-tools-5.21.4.10.8.tar.gz) = 107045 bytes
+SHA1 (dvd+rw-tools-6.0.tar.gz) = 964bae317a047cb8a7f311333b3cec5266f417e6
+RMD160 (dvd+rw-tools-6.0.tar.gz) = f4762e342b910867655f20858be8945ae7054f0b
+Size (dvd+rw-tools-6.0.tar.gz) = 118804 bytes
 SHA1 (patch-aa) = 36de21da2761352c6cf60498a4165ee7040bac2e
-SHA1 (patch-ab) = cf6a5fd0b052c5e37661d28ba044a1e989f916f3
-SHA1 (patch-ac) = 9062f5711a0fcfd3a60bcecfe50cae7293e1c225
+SHA1 (patch-ab) = be12126876c90a9b72a2c0720b07b3c20f10fb35
+SHA1 (patch-ac) = 58dd1273d655fbe97e3cc878e921c47b8e412cad
