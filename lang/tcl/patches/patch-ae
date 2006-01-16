@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.7 2005/07/19 11:11:58 adam Exp $
+$NetBSD: patch-ae,v 1.8 2006/01/16 14:47:35 adam Exp $
 
---- configure.in.orig	2005-06-29 16:40:33.000000000 +0000
-+++ configure.in
-@@ -520,7 +520,7 @@ else
+--- unix/configure.in.orig	2005-12-06 17:03:33.000000000 +0100
++++ unix/configure.in
+@@ -539,7 +539,7 @@ else
              TCL_LIB_FLAG="-ltcl`echo ${TCL_VERSION} | tr -d .`\${TCL_DBGX}"
          fi
          TCL_BUILD_LIB_SPEC="-L`pwd` ${TCL_LIB_FLAG}"
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.7 2005/07/19 11:11:58 adam Exp $
      else
          TCL_BUILD_EXP_FILE="lib.exp"
          eval "TCL_EXP_FILE=libtcl${TCL_EXPORT_FILE_SUFFIX}"
-@@ -551,13 +551,21 @@ VERSION=${TCL_VERSION}
+@@ -570,13 +570,21 @@ VERSION=${TCL_VERSION}
  #--------------------------------------------------------------------
  
  if test "$FRAMEWORK_BUILD" = "1" ; then
@@ -19,10 +19,10 @@ $NetBSD: patch-ae,v 1.7 2005/07/19 11:11:58 adam Exp $
 +    TCL_PACKAGE_PATH_ADD="~/Library/Tcl /Library/Tcl /Network/Library/Tcl /System/Library/Tcl ~/Library/Frameworks /Library/Frameworks /Network/Library/Frameworks /System/Library/Frameworks"
  elif test "$prefix" != "$exec_prefix"; then
 -    TCL_PACKAGE_PATH="${libdir} ${prefix}/lib"
-+    TCL_PACKAGE_PATH="${libdir}/tcl ${prefix}/lib"
++    TCL_PACKAGE_PATH_ADD="${libdir}/tcl ${prefix}/lib"
  else
 -    TCL_PACKAGE_PATH="${prefix}/lib"
-+    TCL_PACKAGE_PATH="${prefix}/lib/tcl"
++    TCL_PACKAGE_PATH_ADD="${prefix}/lib/tcl"
  fi
  
 +for dir in ${TCL_PACKAGE_PATH_ADD}; do
@@ -33,6 +33,6 @@ $NetBSD: patch-ae,v 1.7 2005/07/19 11:11:58 adam Exp $
 +    fi
 +done
 +
- #--------------------------------------------------------------------
- #       The statements below define various symbols relating to Tcl
- #       stub support.
+ # If a system share directory like /usr/local/share already exists, then add
+ # it to the package search path.
+ 
