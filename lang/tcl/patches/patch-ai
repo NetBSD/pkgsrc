@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.1 2005/08/02 22:37:18 seb Exp $
+$NetBSD: patch-ai,v 1.2 2006/01/16 14:47:35 adam Exp $
 
---- ../tests/load.test.orig	2004-09-14 17:02:56.000000000 +0000
-+++ ../tests/load.test
+--- tests/load.test.orig	2004-09-14 17:02:56.000000000 +0000
++++ tests/load.test
 @@ -28,7 +28,7 @@ if {$tcl_platform(platform) == "macintos
  
  # Tests require the existence of one of the DLLs in the dltest directory.

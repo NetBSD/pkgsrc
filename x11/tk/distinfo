@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.25 2005/11/03 23:09:24 rillig Exp $
+$NetBSD: distinfo,v 1.26 2006/01/16 14:48:34 adam Exp $
 
-SHA1 (tk8.4.11-src.tar.gz) = c05dec9163e6f75787aa2825122d424fc1a1edb6
-RMD160 (tk8.4.11-src.tar.gz) = 71b42c0f0ae5067c23d61a2d852a53fb3c546e2f
-Size (tk8.4.11-src.tar.gz) = 3236334 bytes
-SHA1 (patch-aa) = 7bcdb2cb46599f4aceaf1af9c8415ded45e7c2fd
-SHA1 (patch-ab) = 245a3b852e77fe3ac2870852510eaee1a5210ad1
-SHA1 (patch-ac) = 515869cc0c258aef07d0db090770f20be6d2f06a
-SHA1 (patch-ad) = 3565400245f583fd6a74aedaae27b7491952a0c9
+SHA1 (tk8.4.12-src.tar.gz) = 05e8a82fc4ab9f825b8e7b8cbc917ea9ba31ed5d
+RMD160 (tk8.4.12-src.tar.gz) = b50e4da0bc3914e6339fc537761d550ddcf22330
+Size (tk8.4.12-src.tar.gz) = 3245547 bytes
+SHA1 (patch-aa) = cdb66101f4b87cb2c967f2777f8e7af9c82079cd
+SHA1 (patch-ab) = bab49f0cbf043f7a88351ee0f8f2f7b2584c91d4
+SHA1 (patch-ac) = 24c56d9660e8f6e644d4cc72909befd7eafa9a32
+SHA1 (patch-ad) = f6ea4c2fde0a916f252c30bbc2117a4af8a9f442
 SHA1 (patch-ae) = 2815cb827ee15cbdd979d4866b8a3bcdf453cc54
