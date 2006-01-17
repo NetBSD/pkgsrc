@@ -1,13 +1,10 @@
-$NetBSD: patch-al,v 1.4 2006/01/03 18:16:10 joerg Exp $
+$NetBSD: patch-al,v 1.5 2006/01/17 21:23:01 kristerw Exp $
 
 --- fep_util.c.orig	1988-12-28 07:24:01.000000000 -0500
 +++ fep_util.c	2005-12-10 16:59:27.000000000 -0500
-@@ -6,4 +6,4 @@
+@@ -6 +6 @@
 -#endif lint
 +#endif /* lint */
- 
- #ifndef MKARGDEBUG
- 
 @@ -178,9 +178,9 @@
  {
      return (d1 > d2 ? d1 : d2);

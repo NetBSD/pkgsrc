@@ -1,13 +1,11 @@
-$NetBSD: patch-aj,v 1.8 2006/01/03 19:28:00 joerg Exp $
+$NetBSD: patch-aj,v 1.9 2006/01/17 21:23:01 kristerw Exp $
 
 --- fep_main.c.orig	1993-06-10 02:53:06.000000000 +0000
 +++ fep_main.c	2006-01-03 18:13:49.000000000 +0000
-@@ -6,15 +6,24 @@
+@@ -6 +6 @@
 -#endif lint
 +#endif /* lint */
- 
- #include <stdio.h>
- #include <signal.h>
+@@ -10,11 +10,20 @@
  #include <sys/types.h>
  #include <sys/stat.h>
  #include <sys/ioctl.h>
