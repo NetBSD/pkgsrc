@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.20 2006/01/05 22:19:42 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.21 2006/01/17 23:52:17 dmcmahill Exp $
 #
 # Copyright (c) 2002, 2003, 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -265,13 +265,31 @@ END {
 		printf("Reading vulnerability file \"%s\"\n which was updated %s\n",
 		       vfile, vuldate);
 		i = 1;
+		vul_major = 0;
+		vul_minor = 0;
+		vul_teeny = 0;
 		while((getline < vfile) > 0) {
+			if( $0 ~ /#FORMAT/ ) {
+			  split($2, vul_format, ".");
+			  vul_major = vul_format[1];
+			  vul_minor = vul_format[2];
+			  vul_teeny = vul_format[3];
+			}
 			if ($0 !~ /^\#/) {
 				vulpkg[i] = $1;
-				vultype[i] = $2;
+			 	j = match($2, /,/);
+				vultype[i] = substr($2, j+1);
+				vulid[i] = substr($2, 1, j-1);
 				vulref[i] = $3;
 				i = i + 1;
 			}
+		}
+		if( (vul_major != 1) ||
+		    (vul_minor != 0) ||
+		    (vul_teeny != 1) ) {
+			printf("Version %d.%d.%d of the vulnerability file is out of sync with",
+				vul_major, vul_minor, vul_teeny);
+			printf("the genreadme.awk script\n");
 		}
 		printf("   Loaded %d vulnerabilities\n", i - 1);
 		close(vfile);
@@ -371,10 +389,8 @@ END {
 					gsub(/</, "\\\\\\&lt;", printurl);
 					gsub(/>/, "\\\\\\&gt;", printurl);
 					if (vulpkg[i] ~ "^" pkgbase"[-<>=]+[0-9]") {
-						vul =  sprintf("%s<LI><STRONG> %s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG></LI>\n",
-							  vul, nm,
-							  vultype[i],
-							  url, printurl);
+						vul =  sprintf("%s<LI><STRONG>%s has a <a href=\"%s\">%s</a> vulnerability</STRONG></LI>\n",
+							  vul, nm, url, vultype[i]);
 					}
 					i = i + 1;
 				}
