@@ -1,29 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2006/01/12 18:36:22 joerg Exp $
+$NetBSD: patch-ac,v 1.6 2006/01/17 07:35:55 adam Exp $
 
---- target.make.orig	2005-09-19 03:37:15.000000000 +0000
+--- target.make.orig	2005-12-06 11:54:03.000000000 +0100
 +++ target.make
-@@ -674,9 +674,9 @@ endif
- 
- ####################################################
- #
--# NetBSD
-+# NetBSD a.out
- #
--ifeq ($(findstring netbsd, $(GNUSTEP_TARGET_OS)), netbsd)
-+ifeq (@object_fmt@,netbsd-a.out)
- # This is disabled temporarily, because I don't know exactly how
- # to link shared libs. Everything seems to link correctly now but
- # constructor functions in the shared lib failed to get called
-@@ -708,7 +708,7 @@ endif
- #
- # NetBSD ELF
- #
--ifeq ($(findstring netbsdelf, $(GNUSTEP_TARGET_OS)), netbsdelf)
-+ifeq (@object_fmt@,netbsd-ELF)
- HAVE_SHARED_LIBS    = yes
- SHARED_LD_POSTFLAGS = -Wl,-R/usr/pkg/lib -L/usr/pkg/lib
- SHARED_LIB_LINK_CMD = \
-@@ -739,6 +739,39 @@ endif
+@@ -711,6 +711,39 @@ endif
  
  ####################################################
  #
