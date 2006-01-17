@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2005/07/29 12:59:50 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/01/17 07:42:41 adam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNUSTEP_BACK_BUILDLINK3_MK:=	${GNUSTEP_BACK_BUILDLINK3_MK}+
@@ -22,4 +22,4 @@ BUILDLINK_PKGSRCDIR.gnustep-back?=	../../x11/gnustep-back
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../x11/gnustep-gui/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
