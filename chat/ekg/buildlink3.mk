@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2005/08/05 13:07:32 salo Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2006/01/17 20:49:13 adam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EKG_BUILDLINK3_MK:=	${EKG_BUILDLINK3_MK}+
@@ -22,4 +22,4 @@ BUILDLINK_PKGSRCDIR.ekg?=	../../chat/ekg
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
