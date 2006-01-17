@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.110 2006/01/05 23:18:27 joerg Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.111 2006/01/17 22:35:13 jdc Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -250,7 +250,7 @@ bulk-cache:
 	${AWK} '/^index/ {print $$2 " " $$3 " "}' ${BULK_DBFILE} > ${INDEXFILE}
 .endif
 	@${BULK_MSG} "Sorting build order."
-	${TSORT} ${DEPENDSTREEFILE} > ${ORDERFILE}
+	cd ${BULKFILESDIR} && ${TSORT} ${DEPENDSTREEFILE} > ${ORDERFILE}
 	@${BULK_MSG} "Generating up and down dependency files."
 	${LOCALBASE}/bin/perl ${PKGSRCDIR}/mk/bulk/tflat ${SUPPORTSFILE} ${DEPENDSFILE} < ${DEPENDSTREEFILE}
 
