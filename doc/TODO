@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4446 2006/01/17 21:48:45 veego Exp $
+$NetBSD: TODO,v 1.4447 2006/01/17 21:51:29 adam Exp $
 
 Suggested new packages
 ======================
@@ -372,7 +372,6 @@ Suggested package updates
 	o ast-ksh-20040229
 	o asterisk-1.2.0
 	o astyle-1.15.3
-	o audacity-1.2.4
 	o autogen-5.7.3
 	o avcheck-0.91
 	o avidemux-2.1.0
