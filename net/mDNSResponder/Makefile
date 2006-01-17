@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/01/15 01:46:55 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/17 12:44:33 tron Exp $
 
 DISTNAME=	mDNSResponder-107.5
 CATEGORIES=	net
@@ -44,6 +44,16 @@ BINARY=		mDNSClientPosix mDNSIdentify mDNSNetMonitor \
 SBINARY=	mdnsd dnsextd
 
 INSTALLATION_DIRS=	bin include lib sbin
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-3.99.[1-7]*) || \
+    !empty(MACHINE_PLATFORM:MNetBSD-3.[0-9][._]*) || \
+    !empty(MACHINE_PLATFORM:MNetBSD-[0-2]*)
+.include "../../devel/librfuncs/buildlink3.mk"
+
+MAKE_ENV+=	EXTRA_LIBS=-Wl,-R${BUILDLINK_PREFIX.librfuncs:Q}/lib\ ${BUILDLINK_LDFLAGS.librfuncs:Q}
+.else
+MAKE_ENV+=	EXTRA_LIBS=
+.endif
 
 do-install:
 	for i in ${BINARY}; do \

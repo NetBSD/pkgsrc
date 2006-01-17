@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2006/01/15 01:46:55 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2006/01/17 12:44:33 tron Exp $
 
---- mDNSPosix/Makefile.orig	2006-01-06 02:06:17.000000000 +0100
-+++ mDNSPosix/Makefile
-@@ -643,7 +643,7 @@ $(BUILDDIR)/mDNSNetMonitor:          $(S
+--- mDNSPosix/Makefile.orig	2006-01-06 01:06:17.000000000 +0000
++++ mDNSPosix/Makefile	2006-01-17 11:30:40.000000000 +0000
+@@ -643,7 +643,7 @@
  	$(CC) $+ -o $@ $(LIBFLAGS)
  
  $(BUILDDIR)/dnsextd:                 $(SPECIALOBJ) $(OBJDIR)/dnsextd.c.threadsafe.o
 -	$(CC) $+ -o $@ $(LIBFLAGS) -lpthread
-+	$(CC) $+ -o $@ $(LIBFLAGS) ${COMPILER_RPATH_FLAG}${PTHREADBASE}/lib ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
++	$(CC) $+ -o $@ $(LIBFLAGS) ${COMPILER_RPATH_FLAG}${PTHREADBASE}/lib ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} ${EXTRA_LIBS}
  
  #############################################################################
  
