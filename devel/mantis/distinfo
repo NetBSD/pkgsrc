@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2005/12/21 06:13:26 adrianp Exp $
+$NetBSD: distinfo,v 1.6 2006/01/17 13:31:14 adrianp Exp $
 
-SHA1 (mantis-1.0.0rc4.tar.gz) = e875599e71ea7ac8b240dd39436e83fe5b2aeef7
-RMD160 (mantis-1.0.0rc4.tar.gz) = 55ab3f5c215c6dc8ba698ea0747b3dd44337d1f3
-Size (mantis-1.0.0rc4.tar.gz) = 1451665 bytes
+SHA1 (mantis-1.0.0rc5.tar.gz) = 2e5fb40a696d134a23f73c18935e5c8aecf9248b
+RMD160 (mantis-1.0.0rc5.tar.gz) = baa96e7774753403e6bcd803274258e32a9607b8
+Size (mantis-1.0.0rc5.tar.gz) = 1452263 bytes
