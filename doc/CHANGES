@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12559 2006/01/17 21:48:45 veego Exp $
+$NetBSD: CHANGES,v 1.12560 2006/01/17 21:51:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -352,3 +352,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/ekg to 1.6nb3 [adam 2006-01-17]
 	Updated chat/irssi to 0.8.10 [veego 2006-01-17]
 	Updated chat/irssi-icb to 0.14nb7 [veego 2006-01-17]
+	Updated audio/audacity to 1.2.4b [adam 2006-01-17]
