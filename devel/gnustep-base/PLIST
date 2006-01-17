@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/09/30 23:13:57 rh Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/01/17 07:38:34 adam Exp $
 bin/openapp
 share/GNUstep/System/Library/Bundles/SSL.bundle/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/SSL.bundle/SSL
@@ -10,6 +10,7 @@ share/GNUstep/System/Library/DTDs/gsdoc-1_0_0.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-1_0_1.dtd
 share/GNUstep/System/Library/DTDs/gsdoc-1_0_1.rnc
 share/GNUstep/System/Library/DTDs/gsdoc-1_0_2.dtd
+share/GNUstep/System/Library/DTDs/gsdoc-1_0_3.dtd
 share/GNUstep/System/Library/DTDs/plist-0_9.dtd
 share/GNUstep/System/Library/Documentation/man/man1/autogsdoc.1
 share/GNUstep/System/Library/Documentation/man/man1/cvtenc.1
@@ -106,8 +107,6 @@ share/GNUstep/System/Library/Headers/GNUstepBase/GSLocale.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSLock.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSMime.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSObjCRuntime.h
-share/GNUstep/System/Library/Headers/GNUstepBase/GSRunLoopCtxt.h
-share/GNUstep/System/Library/Headers/GNUstepBase/GSRunLoopWatcher.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSUnion.h
 share/GNUstep/System/Library/Headers/GNUstepBase/GSXML.h
 share/GNUstep/System/Library/Headers/GNUstepBase/Unicode.h
@@ -132,8 +131,6 @@ share/GNUstep/System/Library/Headers/gnustep/base/GSLocale.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSLock.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSMime.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSObjCRuntime.h
-share/GNUstep/System/Library/Headers/gnustep/base/GSRunLoopCtxt.h
-share/GNUstep/System/Library/Headers/gnustep/base/GSRunLoopWatcher.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSUnion.h
 share/GNUstep/System/Library/Headers/gnustep/base/GSXML.h
 share/GNUstep/System/Library/Headers/gnustep/base/Unicode.h

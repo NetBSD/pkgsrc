@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2005/07/29 12:58:37 adam Exp $
+$NetBSD: patch-aa,v 1.9 2006/01/17 07:38:34 adam Exp $
 
---- configure.orig	2005-03-18 09:42:53.000000000 +0000
+--- configure.orig	2005-12-06 06:50:25.000000000 +0100
 +++ configure
-@@ -2728,12 +2728,12 @@ echo $ECHO_N "checking the Objective-C r
+@@ -2948,12 +2948,12 @@ echo $ECHO_N "checking the Objective-C r
  if test "$OBJC_RUNTIME_LIB" = "nx" -o "$OBJC_RUNTIME_LIB" = "apple"; then
    echo "$as_me:$LINENO: result: NeXT" >&5
  echo "${ECHO_T}NeXT" >&6
@@ -17,12 +17,12 @@ $NetBSD: patch-aa,v 1.8 2005/07/29 12:58:37 adam Exp $
    OBJCFLAGS="-fgnu-runtime"
  fi
  
-@@ -2757,7 +2757,7 @@ fi
+@@ -2977,7 +2977,7 @@ fi
  # $GNUSTEP_HDIR are used before the standard ones
  #
- CPPFLAGS="$CPPFLAGS -I$GNUSTEP_HDIR"
--LDFLAGS="$LDFLAGS -L$GNUSTEP_LDIR/$LIBRARY_COMBO -L$GNUSTEP_LDIR"
-+LDFLAGS="$LDFLAGS -L$GNUSTEP_LDIR/$LIBRARY_COMBO -Wl,-R$GNUSTEP_LDIR/$LIBRARY_COMBO -L$GNUSTEP_LDIR -Wl,-R$GNUSTEP_LDIR"
+ INCLUDE_FLAGS="$INCLUDE_FLAGS -I$GNUSTEP_HDIR"
+-LDIR_FLAGS="$LDIR_FLAGS -L$GNUSTEP_LDIR/$LIBRARY_COMBO -L$GNUSTEP_LDIR"
++LDIR_FLAGS="$LDIR_FLAGS -L$GNUSTEP_LDIR/$LIBRARY_COMBO -Wl,-R$GNUSTEP_LDIR/$LIBRARY_COMBO -L$GNUSTEP_LDIR -Wl,-R$GNUSTEP_LDIR"
  
  #--------------------------------------------------------------------
  # Check if Objective-C is installed
