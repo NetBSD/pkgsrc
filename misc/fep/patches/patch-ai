@@ -1,17 +1,17 @@
-$NetBSD: patch-ai,v 1.5 2006/01/03 18:16:10 joerg Exp $
+$NetBSD: patch-ai,v 1.6 2006/01/17 21:23:01 kristerw Exp $
 
 --- fep_hist.c.orig	1988-11-25 06:45:42.000000000 -0500
 +++ fep_hist.c	2005-12-10 16:59:27.000000000 -0500
-@@ -6,6 +6,8 @@
+@@ -6 +6 @@
 -#endif lint
 +#endif /* lint */
+@@ -7,4 +7,6 @@
  
  #include <stdio.h>
 +#include <stdlib.h>
 +#include <unistd.h>
  #include <ctype.h>
  #include "fep_defs.h"
- #include "fep_glob.h"
 @@ -255,7 +257,7 @@
  
  	default:
