@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.476 2006/01/16 01:37:39 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.477 2006/01/17 23:01:17 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2174,6 +2174,13 @@ sub checkline_mk_shellword($$$) {
 			if ($rest =~ s/^\`//) {
 				$state = SWST_PLAIN;
 			} elsif ($rest =~ s/^[^\\\"\'\`\$]+//) {
+			} elsif ($rest =~ s/^'//) {
+				$state = SWST_BACKT_SQUOT;
+			} elsif ($rest =~ s/^"//) {
+				$state = SWST_BACKT_DQUOT;
+			} elsif ($rest =~ s/^\\[\\\$\`]//) {
+			} elsif ($rest =~ s/^\\//) {
+				$line->log_warning("Backslashes should be doubled inside backticks.");
 			} elsif ($rest =~ s/^\$\$\{([0-9A-Za-z_]+)\}//
 			    || $rest =~ s/^\$\$([0-9A-Za-z_]+)//) {
 				my ($shvarname) = ($1);
@@ -2181,6 +2188,23 @@ sub checkline_mk_shellword($$$) {
 					$line->log_warning("Unquoted shell variable \$${shvarname}.");
 				}
 
+			} else {
+				last;
+			}
+
+		} elsif ($state == SWST_BACKT_SQUOT) {
+			if ($rest =~ s/^'//) {
+				$state = SWST_BACKT;
+			} elsif ($rest =~ s/^\\[\\\`\$]//) {
+			} elsif ($rest =~ s/^[^\\]+//) {
+			} else {
+				last;
+			}
+
+		} elsif ($state == SWST_BACKT_DQUOT) {
+			if ($rest =~ s/^"//) {
+				$state = SWST_BACKT;
+			} elsif ($rest =~ s/^[^\\\"\'\`\$]+//) {
 			} else {
 				last;
 			}
