@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/01/17 23:13:44 tron Exp $
+# $NetBSD: Makefile,v 1.16 2006/01/17 23:41:49 tron Exp $
 
 DISTNAME=	mDNSResponder-107.5
 CATEGORIES=	net
@@ -46,7 +46,8 @@ SBINARY=	mdnsd dnsextd
 INSTALLATION_DIRS=	bin include lib sbin
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-3.99.[1-7]-*) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-3.[0-9][._-]*) || \
+    !empty(MACHINE_PLATFORM:MNetBSD-3.[0-9]-*) || \
+    !empty(MACHINE_PLATFORM:MNetBSD-3.[0-9][._]*) || \
     !empty(MACHINE_PLATFORM:MNetBSD-[0-2]*)
 .include "../../devel/librfuncs/buildlink3.mk"
 
