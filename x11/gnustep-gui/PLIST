@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/07/29 12:59:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/01/17 07:40:02 adam Exp $
 share/GNUstep/System/Library/Bundles/GSPrinting/GSLPR.bundle/GSLPR
 share/GNUstep/System/Library/Bundles/GSPrinting/GSLPR.bundle/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/GSPrinting/GSLPR.bundle/stamp.make
@@ -367,6 +367,7 @@ share/GNUstep/System/Library/PostScript/GSProlog.ps
 share/GNUstep/System/Library/PostScript/PPD/English.lproj/Generic-PostScript_Printer-Postscript.ppd
 share/GNUstep/System/Library/Services/GSspell.service/GSspell
 share/GNUstep/System/Library/Services/GSspell.service/Resources/Info-gnustep.plist
+share/GNUstep/System/Tools/gclose
 share/GNUstep/System/Tools/gopen
 share/GNUstep/System/Tools/make_services
 share/GNUstep/System/Tools/set_show_service
