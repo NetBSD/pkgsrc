@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12556 2006/01/17 13:32:11 adrianp Exp $
+$NetBSD: CHANGES,v 1.12557 2006/01/17 15:53:57 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -346,3 +346,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated editors/abiword-plugins to 2.4.2 [adam 2006-01-17]
 	Updated devel/ProjectCenter to 0.4.3 [adam 2006-01-17]
 	Updated devel/mantis to 1.0.0rc5 [adrianp 2006-01-17]
+	Updated sysutils/bacula to 1.38.4 [ghen 2006-01-17]
+	Updated sysutils/bacula-clientonly to 1.38.4 [ghen 2006-01-17]
+	Updated sysutils/bacula-doc to 1.38.4 [ghen 2006-01-17]
