@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2006/01/12 18:36:22 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2006/01/17 07:35:55 adam Exp $
 
-DISTNAME=	gnustep-make-1.11.1
-PKGREVISION=	1
+DISTNAME=	gnustep-make-1.11.2
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
@@ -11,16 +10,16 @@ COMMENT=	GNUstep makefile package
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-CONFIGURE_ENV+=	INSTALL_PROGRAM=${INSTALL_SCRIPT:Q}
+GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_SCRIPT:Q}
 
 .include "../../mk/x11.buildlink3.mk"
 .include "gnustep.mk"
 
-post-patch:
-	${CP} ${WRKSRC}/target.make ${WRKSRC}/target.make.bak
-	${SED}  -e 's;/usr/pkg;${LOCALBASE};g' \
-		-e 's;@object_fmt@;${LOWER_OPSYS}-${OBJECT_FMT};g' \
-		${WRKSRC}/target.make.bak > ${WRKSRC}/target.make
+SUBST_CLASSES+=		target
+SUBST_STAGE.target=	post-patch
+SUBST_FILES.target=	target.make
+SUBST_SED.target+=	-e 's|/usr/pkg|${LOCALBASE}|g'
 
 post-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/share/GNUstep/Local/Applications
