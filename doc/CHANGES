@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12553 2006/01/17 07:47:52 adam Exp $
+$NetBSD: CHANGES,v 1.12554 2006/01/17 08:09:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -342,3 +342,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/gnustep-base to 1.11.2 [adam 2006-01-17]
 	Updated x11/gnustep-gui to 0.10.2 [adam 2006-01-17]
 	Updated x11/gnustep-back to 0.10.2 [adam 2006-01-17]
+	Updated editors/abiword to 2.4.2 [adam 2006-01-17]
+	Updated editors/abiword-plugins to 2.4.2 [adam 2006-01-17]
