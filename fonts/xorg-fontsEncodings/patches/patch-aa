@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2005/05/23 20:53:28 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/18 23:53:05 xtraeme Exp $
 
---- config/cf/Imake.cf.orig	2004-08-12 06:14:01.000000000 +0900
-+++ config/cf/Imake.cf	2004-11-09 03:52:53.000000000 +0900
+--- config/cf/Imake.cf.orig	2005-12-06 11:10:24.000000000 +0100
++++ config/cf/Imake.cf	2005-12-06 11:10:43.000000000 +0100
 @@ -246,6 +246,10 @@
  #   define PpcArchitecture
  #   undef __powerpc__
@@ -13,28 +13,3 @@ $NetBSD: patch-aa,v 1.1 2005/05/23 20:53:28 xtraeme Exp $
  #endif /* NetBSD */
  
  /* Systems based on kernel of NetBSD */
-@@ -253,7 +257,23 @@
- #define KNetBSDArchitecture
- #endif
- 
--#ifdef __FreeBSD__
-+#ifdef __DragonFly__
-+# define MacroIncludeFile <DragonFly.cf>
-+# define MacroFile DragonFly.cf
-+# undef __DragonFly__
-+# define FreeBSDArchitecture
-+# define KFreeBSDArchitecture
-+# ifdef __i386__
-+#  define i386BsdArchitecture
-+#  define i386Architecture
-+#  undef i386
-+# endif
-+# ifdef __amd64__
-+#  define AMD64Architecture
-+#  undef __amd64__
-+#  undef __x86_64__
-+# endif
-+#elif defined __FreeBSD__
- # define MacroIncludeFile <FreeBSD.cf>
- # define MacroFile FreeBSD.cf
- # undef __FreeBSD__

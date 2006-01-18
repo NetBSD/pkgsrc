@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2005/12/29 06:22:26 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/01/18 23:53:06 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-clients-${XORG_VER}
-PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG}
 DISTFILES=	X11R${XORG_VER}-src1.tar.gz \
@@ -13,6 +12,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.x.org/
 COMMENT=	X.org client programs and related files
 
+USE_PKGINSTALL=		yes
 DISTINFO_FILE=		${.CURDIR}/../../x11/xorg-libs/distinfo
 PATCHDIR=		${.CURDIR}/../../x11/xorg-libs/patches
 
@@ -20,7 +20,7 @@ XBUILD_DIRS=		lib/xtrans lib/lbxutil programs fonts/util
 XINSTALL_DIRS=		programs fonts/util
 XINSTALL_MAN_DIRS=	programs
 
-# XXX todo: define build's VarDirectory to pkgsrc's VARBASE
+# XXX TODO: define build's VarDirectory to pkgsrc's VARBASE
 OWN_DIRS=               ${VARBASE}/lib/xdm
 OWN_DIRS_PERMS+=        ${VARBASE}/lib/xdm/authdir \
 	${ROOT_USER} ${ROOT_GROUP} 0700
@@ -52,9 +52,6 @@ post-wrapper:
 post-configure:
 	@${MKDIR} ${WRKSRC}/exports/lib
 	@${CP} -p ${X11ROOT}/lib/lib* ${WRKSRC}/exports/lib
-
-post-install:
-	@${CHMOD} a+r ${X11ROOT}/bin/xterm
 
 .include "../../mk/bsd.prefs.mk"
 
