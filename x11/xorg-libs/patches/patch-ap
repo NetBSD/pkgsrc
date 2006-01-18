@@ -1,12 +1,15 @@
-$NetBSD: patch-ap,v 1.3 2004/10/20 14:33:30 reed Exp $
+$NetBSD: patch-ap,v 1.4 2006/01/18 23:53:06 xtraeme Exp $
 
---- programs/xdm/config/xdm-conf.cpp.orig	2004-04-23 12:54:43.000000000 -0700
-+++ programs/xdm/config/xdm-conf.cpp
-@@ -11,6 +11,7 @@ DisplayManager.keyFile:		XDMDIR/xdm-keys
- DisplayManager.servers:		XDMDIR/Xservers
- DisplayManager.accessFile:	XDMDIR/Xaccess
- DisplayManager.willing:		SU nobody -c XDMDIR/Xwilling
-+DisplayManager.authDir		XDMAUTHDIR
- ! All displays should use authorization, but we cannot be sure
- ! X terminals may not be configured that way, so they will require
- ! individual resource settings.
+--- config/cf/Imake.cf.orig	2005-12-06 11:10:24.000000000 +0100
++++ config/cf/Imake.cf	2005-12-06 11:10:43.000000000 +0100
+@@ -246,6 +246,10 @@
+ #   define PpcArchitecture
+ #   undef __powerpc__
+ # endif
++# ifdef __x86_64__
++#  define AMD64Architecture
++#  undef __x86_64__
++# endif
+ #endif /* NetBSD */
+ 
+ /* Systems based on kernel of NetBSD */

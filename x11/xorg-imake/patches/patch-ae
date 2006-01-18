@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 2004/07/29 04:49:52 xtraeme Exp $
+$NetBSD: patch-ae,v 1.2 2006/01/18 23:53:06 xtraeme Exp $
 
---- config/cf/linux.cf.in.orig	2004-03-03 07:44:42.000000000 +0000
-+++ config/cf/linux.cf.in	2004-03-03 07:46:51.000000000 +0000
-@@ -549,15 +549,15 @@
+--- config/cf/linux.cf.in.orig	2005-12-06 11:06:50.000000000 +0100
++++ config/cf/linux.cf.in	2005-12-06 11:09:08.000000000 +0100
+@@ -609,10 +609,10 @@
  #  if defined (i386Architecture) && ((GccMajorVersion >3) \
     || ((GccMajorVersion == 3) &&  (GccMinorVersion >= 1)))
  #   ifndef CcCmd
@@ -10,8 +10,12 @@ $NetBSD: patch-ae,v 1.1.1.1 2004/07/29 04:49:52 xtraeme Exp $
 +#    define CcCmd		@@PKGSRC_CC@@
  #   endif
  #   ifndef CplusplusCmd
--#    define CplusplusCmd		c++ -m32
+-#    define CplusplusCmd	c++ -m32
 +#    define CplusplusCmd	@@PKGSRC_CXX@@
+ #   endif
+ #  endif
+ #  if defined (Ppc64Architecture)
+@@ -624,8 +624,8 @@
  #   endif
  #  endif
  #  ifndef CcCmd
@@ -22,7 +26,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2004/07/29 04:49:52 xtraeme Exp $
  #  endif
  #  ifndef AsCmd
  #   define AsCmd		CcCmd -c -x assembler
-@@ -721,7 +721,6 @@
+@@ -779,7 +779,6 @@
  #define YaccCmd			bison -y
  #define LexCmd			flex -l
  #define HasFlex			YES
@@ -30,7 +34,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2004/07/29 04:49:52 xtraeme Exp $
  #define PreProcessCmd		CcCmd -E
  #define PostIncDir		DefaultGccIncludeDir
  #define LdCombineFlags		-r
-@@ -791,7 +790,7 @@
+@@ -853,7 +852,7 @@
  
  #ifdef i386Architecture
  # ifndef OptimizedCDebugFlags
