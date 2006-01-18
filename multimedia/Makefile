@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2006/01/11 18:36:53 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2006/01/18 12:44:00 jmmv Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -19,14 +19,14 @@ SUBDIR+=	gmencoder
 SUBDIR+=	gmplayer
 SUBDIR+=	gnome2-media
 SUBDIR+=	gopchop
-SUBDIR+=	gst-plugins
-SUBDIR+=	gst-plugins-dvdnav
-SUBDIR+=	gst-plugins-dvdread
-SUBDIR+=	gst-plugins-mpeg2dec
-SUBDIR+=	gst-plugins-ogg
-SUBDIR+=	gst-plugins-theora
-SUBDIR+=	gst-plugins-xvid
-SUBDIR+=	gstreamer
+SUBDIR+=	gst-plugins0.8
+SUBDIR+=	gst-plugins0.8-dvdnav
+SUBDIR+=	gst-plugins0.8-dvdread
+SUBDIR+=	gst-plugins0.8-mpeg2dec
+SUBDIR+=	gst-plugins0.8-ogg
+SUBDIR+=	gst-plugins0.8-theora
+SUBDIR+=	gst-plugins0.8-xvid
+SUBDIR+=	gstreamer0.8
 SUBDIR+=	gxine
 SUBDIR+=	kdemultimedia3
 SUBDIR+=	kmplayer
