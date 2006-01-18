@@ -1,10 +1,10 @@
-/* $NetBSD: host.def,v 1.12 2005/10/05 00:31:23 reed Exp $ */
+/* $NetBSD: host.def,v 1.13 2006/01/18 23:53:06 xtraeme Exp $ */
 
 #define ProjectRoot @PREFIX@
 #define BuildHtmlManPages NO
 
 /* Workaround */
-#define XorgVersion 682
+#define XorgVersion 690
 
 #define MakeCmd @MAKE@
 
@@ -65,7 +65,9 @@
 
 #define DriverManSuffix @KERNMAN_SUFFIX@
 #define MiscManSuffix @MISCMAN_SUFFIX@
+#ifndef NetBSDArchitecture
 #define FileManSuffix @FILEMAN_SUFFIX@
+#endif
 #define MiscManDir @PREFIX@/@MISCMAN_DIR@
 #define DriverManDir @PREFIX@/@KERNMAN_DIR@
 #define FileManDir @PREFIX@/@FILEMAN_DIR@
