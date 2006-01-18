@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2006/01/13 07:51:42 rillig Exp $
+$NetBSD: patch-ac,v 1.2 2006/01/18 23:24:12 rillig Exp $
 
 From the maintainers via private mail. It fixes the special handling of
 malloc(), which had been confusing to me. Fixed in CVS.
@@ -8,9 +8,9 @@ Index: src/analyze.c
 RCS file: /cvsroot/cqual/cqual/src/analyze.c,v
 retrieving revision 1.373
 diff -u -r1.373 analyze.c
---- src/analyze.c	12 Sep 2005 14:55:48 -0000	1.373
-+++ src/analyze.c	13 Jan 2006 05:36:38 -0000
-@@ -2342,13 +2342,16 @@
+--- src/analyze.c.orig	2003-12-12 16:06:30.000000000 +0100
++++ src/analyze.c	2006-01-16 14:57:37.428011800 +0100
+@@ -2273,13 +2273,16 @@ static einfo analyze_expression(expressi
        fqt = points_to_qtype(f_info.qt);
        args = arg_qtypes(fqt);
  

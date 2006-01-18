@@ -1,0 +1,66 @@
+$NetBSD: patch-bb,v 1.1 2006/01/18 23:24:12 rillig Exp $
+
+SunPro says: void functions cannot return a value.
+
+--- src/common-analyze.c.orig	2003-09-27 23:35:48.000000000 +0200
++++ src/common-analyze.c	2006-01-16 14:41:27.006921000 +0100
+@@ -36,11 +36,11 @@ effect global_effect = NULL; /* Effect c
+ 				       of every function */
+ effect global_env = NULL;    /* Locations bound in global scope */
+ 
+-inline void mk_effect_leq_global_env(effect e) 
++void mk_effect_leq_global_env(effect e) 
+ { 
+   mkleq_effect(e, global_env); 
+ }
+-inline void mk_effect_leq_global_effect(effect e) 
++void mk_effect_leq_global_effect(effect e) 
+ { 
+   mkleq_effect(e, global_effect); 
+ }
+@@ -492,21 +492,30 @@ void mkNonConst_aggregate(location loc, 
+  *                                                                        *
+  **************************************************************************/
+ 
+-inline einfo mkeinfo(qtype qt, effect eff, bool ismalloc)
++einfo mkeinfo(qtype qt, effect eff, bool ismalloc)
+ {
+-  struct einfo result = {qt: qt, eff: eff, ismalloc: ismalloc};
++  struct einfo result;
++
++  result.qt = qt;
++  result.eff = eff;
++  result.ismalloc = ismalloc;
+   return result;
+ }
+ 
+-inline sinfo mksinfo(effect eff)
++sinfo mksinfo(effect eff)
+ {
+-  struct sinfo result = {eff: eff};
++  struct sinfo result;
++
++  result.eff = eff;
+   return result;
+ }
+ 
+-inline dinfo mkdinfo(effect eff, effect alocs)
++dinfo mkdinfo(effect eff, effect alocs)
+ {
+-  struct dinfo result = {eff: eff, alocs: alocs};
++  struct dinfo result;
++
++  result.eff = eff;
++  result.alocs = alocs;
+   return result;
+ }
+ 
+@@ -550,7 +559,7 @@ struct operator operators[] =
+     {0, 0, NULL}};
+ 
+ /* Given an operator function name, return its signature */
+-inline operator find_op_name(const char *name)
++operator find_op_name(const char *name)
+ {
+   int i;
+ 
