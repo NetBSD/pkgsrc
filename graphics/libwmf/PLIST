@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2004/09/22 08:09:36 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/01/18 22:04:58 adam Exp $
 bin/libwmf-config
 bin/libwmf-fontmap
 bin/wmf2eps
@@ -174,6 +174,7 @@ share/doc/html/libwmf/html/src_2ipa_2x_2font_8h.html
 share/doc/html/libwmf/html/src_2ipa_2xgd_2font_8h.html
 share/doc/html/libwmf/html/src_2player_2color_8h.html
 share/doc/html/libwmf/html/stream_8c.html
+share/doc/html/libwmf/html/structWmfContext.html
 share/doc/html/libwmf/html/struct__wmfAPI.html
 share/doc/html/libwmf/html/struct__wmfAPI__Options.html
 share/doc/html/libwmf/html/struct__wmfAttributeStore.html
@@ -237,7 +238,6 @@ share/doc/html/libwmf/html/struct__wmf__svg__t.html
 share/doc/html/libwmf/html/struct__wmf__svg__t_1_1__wmf__svg__image.html
 share/doc/html/libwmf/html/struct__wmf__template__t.html
 share/doc/html/libwmf/html/struct__wmf__x__t.html
-share/doc/html/libwmf/html/structWmfContext.html
 share/doc/html/libwmf/html/svg_2bmp_8h.html
 share/doc/html/libwmf/html/svg_2device_8h.html
 share/doc/html/libwmf/html/svg_2draw_8h.html

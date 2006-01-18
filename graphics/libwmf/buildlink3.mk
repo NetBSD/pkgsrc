@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2005/02/05 01:19:38 jklos Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/01/18 22:04:58 adam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBWMF_BUILDLINK3_MK:=	${LIBWMF_BUILDLINK3_MK}+
@@ -22,4 +22,4 @@ BUILDLINK_PKGSRCDIR.libwmf?=	../../graphics/libwmf
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2005/06/01 18:02:57 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.56 2006/01/18 22:04:58 adam Exp $
 
-DISTNAME=	libwmf-0.2.8.3
-PKGREVISION=	3
+DISTNAME=	libwmf-0.2.8.4
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wvware/}
 
@@ -12,20 +10,20 @@ COMMENT=	Library for reading and converting WMF (Windows Meta Files)
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-GNU_CONFIGURE=		YES
-USE_LIBTOOL=		YES
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-gd
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/libwmf
 
 post-install:
 	${RMDIR} ${PREFIX}/include/libwmf/gd
 
-.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-#.include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
