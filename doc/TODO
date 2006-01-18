@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4449 2006/01/18 21:37:57 adrianp Exp $
+$NetBSD: TODO,v 1.4450 2006/01/18 22:15:38 adam Exp $
 
 Suggested new packages
 ======================
@@ -1238,7 +1238,6 @@ Suggested package updates
 	o wmctrl-1.07
 	o wmii-2.5.1 [pkg/32522]
 	o wmweather-2.4.3
-	o wv-1.2.0
 	o www6to4-1.6
 	o x11vnc-0.7.3
 	o x2vnc-1.6.1
