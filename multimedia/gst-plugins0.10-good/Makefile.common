@@ -1,0 +1,33 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2006/01/18 15:42:27 jmmv Exp $
+#
+
+GST_PLUGINS0.10_TYPE=	good
+
+# Disable all drivers and features by default.
+.for driver in	aalib \
+		aalibtest \
+		cairo \
+		dv1394 \
+		esd \
+		esdtest \
+		flac \
+		gconf \
+		gconftool \
+		jpeg \
+		ladspa \
+		libcaca \
+		libdv \
+		libpng \
+		oss \
+		shout2 \
+		shout2test \
+		speex \
+		sunaudio \
+		zlib
+CONFIGURE_ARGS+=	--disable-${driver}
+.endfor
+
+.include "../../multimedia/gst-plugins0.10-base/plugins.mk"
+
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
