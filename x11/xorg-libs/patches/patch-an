@@ -1,107 +1,16 @@
-$NetBSD: patch-an,v 1.3 2004/10/20 14:33:30 reed Exp $
+$NetBSD: patch-an,v 1.4 2006/01/18 23:53:06 xtraeme Exp $
 
---- programs/xdm/xdm.man.orig	2004-07-26 15:56:33.000000000 -0700
-+++ programs/xdm/xdm.man
-@@ -164,7 +164,7 @@ as resources.
- Names the configuration file, which specifies resources to control
- the behavior of
- .I xdm.
--.I __projectroot__/lib/X11/xdm/xdm-config
-+.I XDMDIR/xdm-config
- is the default.
- See the section \fBConfiguration File\fP.
- .IP "\fB\-nodaemon\fP"
-@@ -306,7 +306,7 @@ uses the \fIlockf\fP library call, while
- This names a directory under which
- .I xdm
- stores authorization files while initializing the session.  The
--default value is \fI __projectroot__/lib/X11/xdm.\fP
-+default value is \fI\&XDMAUTHDIR\fP.
- Can be overridden for specific displays by
- DisplayManager.\fIDISPLAY\fP.authFile.
- .IP \fBDisplayManager.autoRescan\fP
-@@ -374,7 +374,7 @@ algorithm is used instead.
- .IP \fBDisplayManager.greeterLib\fP
- On systems that support a dynamically-loadable greeter library, the
- name of the library.  The default is
--\fI __projectroot__/lib/X11/xdm/libXdmGreet.so\fP.
-+\fI\&GREETERLIBPATH\fP.
- .IP \fBDisplayManager.choiceTimeout\fP
- Number of seconds to wait for display to respond after user has
- selected a host from the chooser.  If the display sends an XDMCP
-@@ -406,7 +406,7 @@ section
- which describes the various
- resources that are appropriate to place in this file.
- There is no default value for this resource, but
--\fI __projectroot__/lib/X11/xdm/Xresources\fP
-+\fI\&XDMDIR/Xresources\fP
- is the conventional name.
- .IP "\fBDisplayManager.\fP\fIDISPLAY\fP\fB.chooser\fP"
- Specifies the program run to offer a host menu for Indirect queries
-@@ -599,7 +599,7 @@ variable XAUTHORITY at the created file.
- First, the
- .I xdm
- configuration file should be set up.
--Make a directory (usually \fI __projectroot__/lib/X11/xdm\fP) to contain all
-+Make a directory (usually \fI\&XDMDIR\fP) to contain all
- of the relevant files.
- .LP
- Here is a reasonable configuration file, which could be
-@@ -608,12 +608,12 @@ named \fIxdm-config\fP:
+--- programs/Xserver/hw/xfree86/loader/Imakefile.orig	2004-08-13 12:39:57.000000000 +0900
++++ programs/Xserver/hw/xfree86/loader/Imakefile	2005-02-21 10:38:49.000000000 +0900
+@@ -40,6 +40,11 @@
+ ARCHDEFINES = -DDoMMAPedMerge -DMmapPageAlign
+ #endif
  
- .ta .5i 4i
++#if defined(NetBSDArchitecture) && defined(AMD64Architecture) && \
++    defined(PassHintToMMAP)
++ARCHDEFINES = -DUseMMAP -DPassHintToMMAP
++#endif
++
+ DEFINES = $(DBMALLOCDEFINE) $(DLOPENDEFINES) $(OS_DEFINES) $(COMPAT_DEFINES) \
+ 	  $(SHM_DEFINES) $(FONTCACHE_DEFINES) $(ARCHDEFINES)
  
--	DisplayManager.servers:	__projectroot__/lib/X11/xdm/Xservers
-+	DisplayManager.servers:	XDMDIR/Xservers
- 	DisplayManager.errorLogFile:	XDMLOGDIR/xdm.log
--	DisplayManager*resources:	__projectroot__/lib/X11/xdm/Xresources
--	DisplayManager*startup:	__projectroot__/lib/X11/xdm/Xstartup
--	DisplayManager*session:	__projectroot__/lib/X11/xdm/Xsession
--	DisplayManager.pidFile:	__projectroot__/lib/X11/xdm/xdm-pid
-+	DisplayManager*resources:	XDMDIR/Xresources
-+	DisplayManager*startup:	XDMDIR/Xstartup
-+	DisplayManager*session:	XDMDIR/Xsession
-+	DisplayManager.pidFile:	XDMPIDDIR/xdm-pid
- 	DisplayManager._0.authorize:	true
- 	DisplayManager*authorize:	false
- 
-@@ -1123,8 +1123,8 @@ Here is a sample \fIXstartup\fP script:
- 		xmessage\0\-file /etc/nologin\0\-timeout 30\0\-center
- 		exit 1
- 	fi
--	sessreg\0\-a\0\-l $DISPLAY\0\-x __projectroot__/lib/xdm/Xservers $LOGNAME
--	__projectroot__/lib/xdm/GiveConsole
-+	sessreg\0\-a\0\-l $DISPLAY\0\-x XDMDIR/Xservers $LOGNAME
-+	XDMDIR/GiveConsole
- 	exit 0
- .fi
- .SH "SESSION PROGRAM"
-@@ -1237,8 +1237,8 @@ A sample \fIXreset\fP script:
- \&	#
- \&	# This program is run as root after the session ends
- \&	#
--	sessreg\0\-d\0\-l $DISPLAY\0\-x __projectroot__/lib/xdm/Xservers $LOGNAME
--	__projectroot__/lib/xdm/TakeConsole
-+	sessreg\0\-d\0\-l $DISPLAY\0\-x XDMDIR/Xservers $LOGNAME
-+	XDMDIR/TakeConsole
- 	exit 0
- .fi
- .SH "CONTROLLING THE SERVER"
-@@ -1341,7 +1341,7 @@ interested in
- .I xinit.
- .SH FILES
- .TP 20
--.I __projectroot__/lib/X11/xdm/xdm-config
-+.I XDMDIR/xdm-config
- the default configuration file
- .TP 20
- .I $HOME/.Xauthority
-@@ -1359,7 +1359,7 @@ the default server
- .I __projectroot__/bin/xterm
- the default session program and failsafe client
- .TP 20
--.I __projectroot__/lib/X11/xdm/A<display>\-<suffix>
-+.I XDMAUTHDIR/authdir/authfiles/A<display>\-<suffix>
- the default place for authorization files
- .TP 20
- .I /tmp/K5C<display>

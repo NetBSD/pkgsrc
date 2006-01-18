@@ -1,13 +1,13 @@
-$NetBSD: patch-av,v 1.2 2005/04/15 21:33:27 hira Exp $
+$NetBSD: patch-av,v 1.3 2006/01/18 23:53:06 xtraeme Exp $
 
---- config/cf/xorg.cf.orig	2005-01-24 12:11:42.000000000 +0900
-+++ config/cf/xorg.cf	2005-04-15 23:01:03.000000000 +0900
-@@ -1294,6 +1294,8 @@
- #ifndef BuildScanpci
- # if SystemV || SystemV4 || \
-     (defined(LinuxArchitecture) && !defined(Mc68020Architecture)) || \
-+    (defined(NetBSDArchitecture) && \
-+    (defined(AMD64Architecture) || defined(PpcArchitecture))) || \
-     defined(i386BsdArchitecture) || defined(LynxOSArchitecture) || \
-     defined(OS2Architecture) || defined(GNUMachArchitecture)
- #   define BuildScanpci		YES
+--- programs/Xserver/hw/xfree86/os-support/xf86_OSlib.h.orig	2006-01-06 17:17:03.000000000 +0000
++++ programs/Xserver/hw/xfree86/os-support/xf86_OSlib.h
+@@ -445,7 +445,7 @@ extern int errno;
+ /* Kernel of *BSD                                                         */
+ /**************************************************************************/
+ #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || \
+- defined(__NetBSD__) || defined(__OpenBSD__) || defined(__bsdi__)
++ defined(__NetBSD__) || defined(__OpenBSD__) || defined(__bsdi__) || defined(__DragonFly__)
+ 
+ # include <sys/param.h>
+ # if defined(__FreeBSD_version) && !defined(__FreeBSD_kernel_version)
