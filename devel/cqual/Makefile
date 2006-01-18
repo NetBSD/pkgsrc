@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/01/15 21:55:14 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/18 23:24:12 rillig Exp $
 #
 
 DISTNAME=		cqual-0.991
@@ -17,6 +17,13 @@ USE_TOOLS+=		gmake perl:run
 REPLACE_PERL+=		bin/*
 
 INSTALLATION_DIRS=	share/doc/cqual share/examples/cqual
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS" && ${OS_VERSION} == "5.8"
+pre-build:
+	${ECHO} "/* empty dummy header */" > ${BUILDLINK_DIR:Q}/include/stdint.h
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC:Q}/doc/user-guide.pdf ${PREFIX:Q}/share/doc/cqual/
