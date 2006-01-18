@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.330 2006/01/18 12:44:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.331 2006/01/18 15:47:00 jmmv Exp $
 #
 
 COMMENT=	System utilities
@@ -96,6 +96,7 @@ SUBDIR+=	gnometoaster
 SUBDIR+=	gpart
 SUBDIR+=	grub
 SUBDIR+=	grun
+SUBDIR+=	gst-plugins0.10-gnomevfs
 SUBDIR+=	gst-plugins0.8-gnomevfs
 SUBDIR+=	gtk-send-pr
 SUBDIR+=	gworkspace
