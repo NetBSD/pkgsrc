@@ -1,16 +1,16 @@
-$NetBSD: patch-aj,v 1.1 2005/07/19 17:49:33 drochner Exp $
+$NetBSD: patch-aj,v 1.2 2006/01/18 21:00:45 reed Exp $
 
---- src/support/Makefile.in.orig	2005-07-18 18:00:23.000000000 +0200
-+++ src/support/Makefile.in
-@@ -651,12 +651,11 @@ package.lo: ../config.h \
+--- src/support/Makefile.in.orig	2006-01-16 06:51:45.000000000 -0800
++++ src/support/Makefile.in	2006-01-17 10:47:16.000000000 -0800
+@@ -626,12 +626,11 @@
  	$(top_srcdir)/src/BoostFormat.h $(top_srcdir)/src/debug.h \
  	$(top_srcdir)/src/gettext.h $(top_srcdir)/src/Lsstream.h \
  	$(top_srcdir)/src/LString.h
 -	$(CXXCOMPILE) \
 +	$(LTCXXCOMPILE) \
- 		-DLYX_DIR=\"$(pkgdatadir)\" \
- 		-DTOP_SRCDIR=\"$(top_srcdir)\" \
- 		-DLOCALEDIR=\"$(localedir)\" \
+ 		-DLYX_DIR=\"$(LYX_ABS_INSTALLED_DATADIR)\" \
+ 		-DTOP_SRCDIR=\"$(LYX_ABS_TOP_SRCDIR)\" \
+ 		-DLOCALEDIR=\"$(LYX_ABS_INSTALLED_LOCALEDIR)\" \
 -		-c $(top_srcdir)/src/support/package.C && \
 -	echo "timestamp" > $@
 +		-c $(top_srcdir)/src/support/package.C
