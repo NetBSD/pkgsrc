@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_path,v 1.1 2006/01/18 18:03:08 jlam Exp $
+# $NetBSD: pkg_path,v 1.2 2006/01/18 18:21:56 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -43,14 +43,22 @@
 #	pkg_path -- canonicalize directories into "package paths"
 #
 # SYNOPSIS
-#	pkg_path dir ...
+#	pkg_path [-s pkgsrcdir] dir ...
+#
+# OPTIONS
+#	The following command line arguments are supported.
+#
+#	-s pkgsrcdir	Use the specified directory as the path to the
+#			pkgsrc directory tree.  By default, this is the
+#			value stored in the PKGSRCDIR environment variable.
 #
 # DESCRIPTION
 #	pkg_path canonicalizes the specified directories into package
 #	paths are are relative to the pkgsrc directory tree, and prints
-#	each of them to standard output on a new line.  Directories
-#	that are not valid package directories or are not found are
-#	skipped during processing.
+#	each of them to standard output on a new line.  The specified
+#	directories are taken to be relative to the current directory or
+#	are otherwise absolute paths.  Directories that are not valid
+#	package directories or are not found are skipped during processing.
 #
 # ENVIRONMENT
 #	PKGSRCDIR	This is the location of the pkgsrc directory tree,
@@ -65,10 +73,28 @@
 
 self="${0##*/}"
 
+usage() {
+	${ECHO} 1>&2 "usage: $self [-s pkgsrcdir] dir ..."
+}
+
+# Process optional arguments
+while ${TEST} $# -gt 0; do
+	case "$1" in
+	-s)	PKGSRCDIR=$2; shift 2 ;;
+	--)	shift; break ;;
+	-*)	${ECHO} 1>&2 "$self: unknown option -- ${1#-}"
+		usage
+		exit 1
+		;;
+	*)	break ;;
+	esac
+done
+
+# Process required arguments
 startdir=`${PWD_CMD}`
 while ${TEST} $# -gt 0; do
 	dir="$1"; shift
-	case $dir in
+	case "$dir" in
 	${PKGSRCDIR}/*)	;;
 	/*)	 ${ECHO} 1>&2 "$self: \`\`$dir'' not a valid package directory"
 		continue
