@@ -1,0 +1,7 @@
+bin/gst-feedback @PREFIX@/bin/gst-feedback-0.10
+bin/gst-inspect @PREFIX@/bin/gst-inspect-0.10
+bin/gst-launch @PREFIX@/bin/gst-launch-0.10
+bin/gst-md5sum @PREFIX@/bin/gst-md5sum-0.10
+bin/gst-typefind @PREFIX@/bin/gst-typefind-0.10
+bin/gst-xmlinspect @PREFIX@/bin/gst-xmlinspect-0.10
+bin/gst-xmllaunch @PREFIX@/bin/gst-xmllaunch-0.10
