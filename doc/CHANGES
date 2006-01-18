@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12563 2006/01/18 12:44:00 jmmv Exp $
+$NetBSD: CHANGES,v 1.12564 2006/01/18 13:14:29 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -375,3 +375,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Renamed multimedia/gst-plugins-theora to multimedia/gst-plugins0.8-theora [jmmv 2006-01-18]
 	Renamed multimedia/gst-plugins-xvid to multimedia/gst-plugins0.8-xvid [jmmv 2006-01-18]
 	Renamed sysutils/gst-plugins-gnomevfs to sysutils/gst-plugins0.8-gnomevfs [jmmv 2006-01-18]
+	Updated sysutils/radmind to 1.5.1 [joerg 2006-01-18]
