@@ -1,0 +1,32 @@
+$NetBSD: patch-bi,v 1.1 2006/01/18 23:24:12 rillig Exp $
+
+SunPro says: void functions cannot return a value.
+
+--- src/poly-quals.c.orig	2003-12-10 19:31:03.000000000 +0100
++++ src/poly-quals.c	2006-01-16 14:45:40.906477400 +0100
+@@ -2833,13 +2833,13 @@ static void _traverse_error_path_edges(q
+ void traverse_error_path_edges(qual q, bool expand_summaries, bool nonerrors,
+ 			       edge_traverse_fn f, void *arg)
+ {
+-  return _traverse_error_path_edges (q, FALSE, expand_summaries, nonerrors, f, arg);
++  _traverse_error_path_edges (q, FALSE, expand_summaries, nonerrors, f, arg);
+ }
+ 
+ void cs_traverse_error_path_edges(qual q, bool expand_summaries, bool nonerrors,
+ 				  edge_traverse_fn f, void *arg)
+ {
+-  return _traverse_error_path_edges (q, TRUE, expand_summaries, nonerrors, f, arg);
++  _traverse_error_path_edges (q, TRUE, expand_summaries, nonerrors, f, arg);
+ }
+ 
+ /**************************************************************************
+@@ -3016,7 +3016,8 @@ static void _dn_dfs (FILE* f, region scr
+   if (root->link)
+     {
+       add_graph_edge (f, root, ecr_qual (root), "+", TRUE);
+-      return _dn_dfs (f, scratch, ecr_qual (root), depth, printed_edges);
++      _dn_dfs (f, scratch, ecr_qual (root), depth, printed_edges);
++      return;
+     }
+ 
+   scan_qual_edge_hashset (e, qess, root->u.var.lb)
