@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/01/18 15:41:03 jmmv Exp $
+
+--- tests/Makefile.in.orig	2005-12-23 16:28:21.000000000 +0100
++++ tests/Makefile.in
+@@ -371,10 +371,12 @@ target_alias = @target_alias@
+ @BUILD_EXAMPLES_TRUE@SUBDIRS_EXAMPLES = examples
+ @HAVE_CHECK_FALSE@SUBDIRS_CHECK = 
+ @HAVE_CHECK_TRUE@SUBDIRS_CHECK = check
++@USE_X_FALSE@SUBDIRS_ICLES = 
++@USE_X_TRUE@SUBDIRS_ICLES = icles
+ SUBDIRS = \
+ 	$(SUBDIRS_CHECK)	\
+ 	$(SUBDIRS_EXAMPLES)	\
+-	icles
++	$(SUBDIRS_ICLES)
+ 
+ DIST_SUBDIRS = \
+ 	check			\

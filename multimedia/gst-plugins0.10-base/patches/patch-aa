@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/18 15:41:03 jmmv Exp $
+
+--- configure.orig	2005-12-23 16:28:26.000000000 +0100
++++ configure
+@@ -22618,8 +22618,8 @@ echo "$as_me: *** These plugins will not
+     GST_PLUGINS_NO="\tcdparanoia\n$GST_PLUGINS_NO"
+   fi
+ 
+-  { echo "$as_me:$LINENO: cdparanoiasrc not stable yet" >&5
+-echo "$as_me: cdparanoiasrc not stable yet" >&not building;}
++  { echo "$as_me:$LINENO: cdparanoiasrc not stable yet, not building" >&5
++echo "$as_me: cdparanoiasrc not stable yet, not building" >&5;}
+ 
+ fi
+ 
