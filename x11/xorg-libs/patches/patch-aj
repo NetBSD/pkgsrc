@@ -1,13 +1,56 @@
-$NetBSD: patch-aj,v 1.2 2004/09/21 17:38:53 xtraeme Exp $
+$NetBSD: patch-aj,v 1.3 2006/01/18 23:53:06 xtraeme Exp $
 
---- programs/x11perf/Imakefile.orig	2004-09-10 09:44:07.000000000 +0200
-+++ programs/x11perf/Imakefile	2004-09-10 09:44:19.000000000 +0200
-@@ -12,7 +12,7 @@
- #if HasShm
-         SHMDEFS = -DMITSHM
+--- programs/xdm/Imakefile.orig	2005-12-06 12:35:11.000000000 +0100
++++ programs/xdm/Imakefile	2005-12-06 12:38:07.000000000 +0100
+@@ -107,7 +107,7 @@ PWD_DEFINES = -DUSESHADOW -DSHADOWSUITE
  #endif
--#if BuildRenderLibrary
-+#if 0
-     XRENDERDEFS = -DXRENDER
-     XRENDERDEPS = $(DEPXRENDERLIB)
-     XRENDERLIBS = $(XRENDERLIB)
+ #endif
+ 
+-#if !defined(i386IscArchitecture) && !defined(i386ScoArchitecture) && !defined(LinuxArchitecture) && !defined(NTOArchitecture) && !defined(SGIArchitecture) && !defined(AIXArchitecture)
++#if !defined(i386IscArchitecture) && !defined(i386ScoArchitecture) && !defined(LinuxArchitecture) && !defined(NTOArchitecture) && !defined(SGIArchitecture) && !defined(AIXArchitecture) && !defined(DragonFlyArchitecture)
+ SYS_LIBRARIES3 = -lresolv
+ #endif
+ #if SystemV || defined(SequentArchitecture)
+@@ -208,6 +208,13 @@ LIFREQ_FLAGS = -Xa
+ #endif
+ #endif
+ 
++XDMLOGDIR = $(LOGDIRECTORY)
++#ifdef VarRunDirectory
++XDMPIDDIR = $(VARRUNDIR)
++#else
++XDMPIDDIR = $(XDMDIR)
++#endif
++
+   SYS_LIBRARIES = $(SYS_LIBRARIES1) $(SYS_LIBRARIES2) $(SYS_LIBRARIES3)
+ 
+    XDMCONFIGDIR = XdmConfigurationSubdirectory
+@@ -265,7 +272,8 @@ LOCAL_LIBRARIES = $(GREETLIBS) $(XMULIB)
+ #endif
+        PROGRAMS = ProgramTargetName(xdm) ProgramTargetName(xdmshell) ProgramTargetName(sessreg) $(CHOOSER) $(XDM_SHADOW)
+ 
+-    CHOOSERPATH = $(XDMDIR)/chooser
++    CHOOSERPATH = $(BINDIR)/chooser
++ GREETERLIBPATH = $(USRLIBDIR)/libXdmGreet.so
+  OSMAJORVERSION = OSMajorVersion
+  OSMINORVERSION = OSMinorVersion
+    CONN_DEFINES = $(CONNECTION_FLAGS)
+@@ -282,7 +290,8 @@ LOCAL_LIBRARIES = $(GREETLIBS) $(XMULIB)
+    EXTRAMANDEFS = $(RANDOM_DEFINES) -DCHOOSERPATH=$(CHOOSERPATH) \
+ 		-DXDMLOGDIR=$(XDMLOGDIR) -DXDMPIDDIR=$(XDMPIDDIR) \
+ 		-DXDMDIR=$(XDMDIR) -DBINDIR=$(BINDIR) \
+-
++		-DGREETERLIBPATH=$(GREETERLIBPATH) \
++		-DXDMAUTHDIR=$(XDMVARDIR)
+ 
+ XCOMM
+ XCOMM Special definitions for compiling default resources; these parameters
+@@ -331,7 +340,7 @@ SpecialCObjectRule(daemon,$(ICONFIGFILES
+ #if BuildChooser
+ SpecialCObjectRule(chooser, $(ICONFIGFILES), $(SOCK_DEFINES) $(LIFREQ_FLAGS))
+ NormalProgramTarget(chooser,$(OBJS3),$(DEPLIBS3),$(LIBS3),NullParameter)
+-InstallProgram(chooser,$(XDMDIR))
++InstallProgram(chooser,$(BINDIR))
+ InstallAppDefaults(Chooser)
+ #endif
+ #if BuildBoth

@@ -1,4 +1,13 @@
-@comment $NetBSD: PLIST,v 1.7 2005/04/15 15:31:14 hira Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/01/18 23:53:06 xtraeme Exp $
+share/examples/xorg/xdm/GiveConsole
+share/examples/xorg/xdm/TakeConsole
+share/examples/xorg/xdm/Xaccess
+share/examples/xorg/xdm/Xresources
+share/examples/xorg/xdm/Xservers
+share/examples/xorg/xdm/Xsession
+share/examples/xorg/xdm/Xsetup_0
+share/examples/xorg/xdm/Xwilling
+share/examples/xorg/xdm/xdm-config
 ${X11ROOT_PREFIX}/bin/Xmark
 ${X11ROOT_PREFIX}/bin/appres
 ${X11ROOT_PREFIX}/bin/atobm
@@ -9,7 +18,7 @@ ${X11ROOT_PREFIX}/bin/bitmap
 ${X11ROOT_PREFIX}/bin/bmtoa
 ${X11ROOT_PREFIX}/bin/chooser
 ${X11ROOT_PREFIX}/bin/cxpm
-${DGA}${X11ROOT_PREFIX}/bin/dga
+${X11ROOT_PREFIX}/bin/dga
 ${X11ROOT_PREFIX}/bin/dpsexec
 ${X11ROOT_PREFIX}/bin/dpsinfo
 ${X11ROOT_PREFIX}/bin/editres
@@ -28,7 +37,6 @@ ${X11ROOT_PREFIX}/bin/mkfontdir
 ${X11ROOT_PREFIX}/bin/mkfontscale
 ${X11ROOT_PREFIX}/bin/oclock
 ${X11ROOT_PREFIX}/bin/proxymngr
-${X11ROOT_PREFIX}/bin/resize
 ${X11ROOT_PREFIX}/bin/rstart
 ${X11ROOT_PREFIX}/bin/rstartd
 ${X11ROOT_PREFIX}/bin/sessreg
@@ -41,7 +49,6 @@ ${X11ROOT_PREFIX}/bin/sxpm
 ${X11ROOT_PREFIX}/bin/texteroids
 ${X11ROOT_PREFIX}/bin/twm
 ${X11ROOT_PREFIX}/bin/ucs2any
-${X11ROOT_PREFIX}/bin/uxterm
 ${X11ROOT_PREFIX}/bin/viewres
 ${X11ROOT_PREFIX}/bin/x11perf
 ${X11ROOT_PREFIX}/bin/x11perfcomp
@@ -54,8 +61,10 @@ ${X11ROOT_PREFIX}/bin/xcmsdb
 ${X11ROOT_PREFIX}/bin/xconsole
 ${X11ROOT_PREFIX}/bin/xcursorgen
 ${X11ROOT_PREFIX}/bin/xcutsel
+${X11ROOT_PREFIX}/bin/xdbedizzy
 ${X11ROOT_PREFIX}/bin/xditview
 ${X11ROOT_PREFIX}/bin/xdm
+${X11ROOT_PREFIX}/bin/xdpr
 ${X11ROOT_PREFIX}/bin/xdpyinfo
 ${X11ROOT_PREFIX}/bin/xdriinfo
 ${X11ROOT_PREFIX}/bin/xedit
@@ -89,7 +98,13 @@ ${X11ROOT_PREFIX}/bin/xmh
 ${X11ROOT_PREFIX}/bin/xmodmap
 ${X11ROOT_PREFIX}/bin/xmore
 ${X11ROOT_PREFIX}/bin/xon
+${X11ROOT_PREFIX}/bin/xphelloworld
+${X11ROOT_PREFIX}/bin/xplsprinters
+${X11ROOT_PREFIX}/bin/xpr
+${X11ROOT_PREFIX}/bin/xprehashprinterlist
 ${X11ROOT_PREFIX}/bin/xprop
+${X11ROOT_PREFIX}/bin/xpsimplehelloworld
+${X11ROOT_PREFIX}/bin/xpxthelloworld
 ${X11ROOT_PREFIX}/bin/xrandr
 ${X11ROOT_PREFIX}/bin/xrdb
 ${X11ROOT_PREFIX}/bin/xrefresh
@@ -99,7 +114,6 @@ ${X11ROOT_PREFIX}/bin/xsetpointer
 ${X11ROOT_PREFIX}/bin/xsetroot
 ${X11ROOT_PREFIX}/bin/xsm
 ${X11ROOT_PREFIX}/bin/xstdcmap
-${X11ROOT_PREFIX}/bin/xterm
 ${X11ROOT_PREFIX}/bin/xtrapchar
 ${X11ROOT_PREFIX}/bin/xtrapin
 ${X11ROOT_PREFIX}/bin/xtrapinfo
@@ -112,11 +126,6 @@ ${X11ROOT_PREFIX}/bin/xvinfo
 ${X11ROOT_PREFIX}/bin/xwd
 ${X11ROOT_PREFIX}/bin/xwininfo
 ${X11ROOT_PREFIX}/bin/xwud
-${X11ROOT_PREFIX}/bin/xphelloworld
-${X11ROOT_PREFIX}/bin/xplsprinters
-${X11ROOT_PREFIX}/bin/xprehashprinterlist
-${X11ROOT_PREFIX}/bin/xpsimplehelloworld
-${X11ROOT_PREFIX}/bin/xpxthelloworld
 ${X11ROOT_PREFIX}/include/X11/PM/PM.h
 ${X11ROOT_PREFIX}/include/X11/PM/PMproto.h
 ${X11ROOT_PREFIX}/include/X11/bitmaps/Dashes
@@ -145,7 +154,6 @@ ${X11ROOT_PREFIX}/lib/X11/app-defaults/Chooser
 ${X11ROOT_PREFIX}/lib/X11/app-defaults/Clock-color
 ${X11ROOT_PREFIX}/lib/X11/app-defaults/Editres
 ${X11ROOT_PREFIX}/lib/X11/app-defaults/Editres-color
-${X11ROOT_PREFIX}/lib/X11/app-defaults/UXTerm
 ${X11ROOT_PREFIX}/lib/X11/app-defaults/Viewres
 ${X11ROOT_PREFIX}/lib/X11/app-defaults/XCalc
 ${X11ROOT_PREFIX}/lib/X11/app-defaults/XCalc-color
@@ -159,8 +167,6 @@ ${X11ROOT_PREFIX}/lib/X11/app-defaults/XLogo
 ${X11ROOT_PREFIX}/lib/X11/app-defaults/XLogo-color
 ${X11ROOT_PREFIX}/lib/X11/app-defaults/XMore
 ${X11ROOT_PREFIX}/lib/X11/app-defaults/XSm
-${X11ROOT_PREFIX}/lib/X11/app-defaults/XTerm
-${X11ROOT_PREFIX}/lib/X11/app-defaults/XTerm-color
 ${X11ROOT_PREFIX}/lib/X11/app-defaults/Xditview
 ${X11ROOT_PREFIX}/lib/X11/app-defaults/Xditview-chrtr
 ${X11ROOT_PREFIX}/lib/X11/app-defaults/Xedit
@@ -173,8 +179,6 @@ ${X11ROOT_PREFIX}/lib/X11/app-defaults/Xmessage
 ${X11ROOT_PREFIX}/lib/X11/app-defaults/Xmessage-color
 ${X11ROOT_PREFIX}/lib/X11/app-defaults/Xmh
 ${X11ROOT_PREFIX}/lib/X11/app-defaults/Xvidtune
-${X11ROOT_PREFIX}/lib/X11/etc/xterm.termcap
-${X11ROOT_PREFIX}/lib/X11/etc/xterm.terminfo
 ${X11ROOT_PREFIX}/lib/X11/fonts/util/map-ISO8859-1
 ${X11ROOT_PREFIX}/lib/X11/fonts/util/map-ISO8859-10
 ${X11ROOT_PREFIX}/lib/X11/fonts/util/map-ISO8859-11
@@ -393,11 +397,12 @@ ${X11ROOT_PREFIX}/lib/X11/xkb/compat/accessx
 ${X11ROOT_PREFIX}/lib/X11/xkb/compat/basic
 ${X11ROOT_PREFIX}/lib/X11/xkb/compat/complete
 ${X11ROOT_PREFIX}/lib/X11/xkb/compat/default
-${X11ROOT_PREFIX}/lib/X11/xkb/compat/group_led
 ${X11ROOT_PREFIX}/lib/X11/xkb/compat/iso9995
 ${X11ROOT_PREFIX}/lib/X11/xkb/compat/japan
 ${X11ROOT_PREFIX}/lib/X11/xkb/compat/keypad
-${X11ROOT_PREFIX}/lib/X11/xkb/compat/leds
+${X11ROOT_PREFIX}/lib/X11/xkb/compat/ledcaps
+${X11ROOT_PREFIX}/lib/X11/xkb/compat/lednum
+${X11ROOT_PREFIX}/lib/X11/xkb/compat/ledscroll
 ${X11ROOT_PREFIX}/lib/X11/xkb/compat/misc
 ${X11ROOT_PREFIX}/lib/X11/xkb/compat/mousekeys
 ${X11ROOT_PREFIX}/lib/X11/xkb/compat/norepeat
@@ -503,13 +508,13 @@ ${X11ROOT_PREFIX}/lib/X11/xkb/rules/sgi.lst
 ${X11ROOT_PREFIX}/lib/X11/xkb/rules/sun
 ${X11ROOT_PREFIX}/lib/X11/xkb/rules/sun.lst
 ${X11ROOT_PREFIX}/lib/X11/xkb/rules/xfree86
+${X11ROOT_PREFIX}/lib/X11/xkb/rules/xfree86-it.lst
 ${X11ROOT_PREFIX}/lib/X11/xkb/rules/xfree86.lst
+${X11ROOT_PREFIX}/lib/X11/xkb/rules/xfree86.xml
 ${X11ROOT_PREFIX}/lib/X11/xkb/rules/xorg
 ${X11ROOT_PREFIX}/lib/X11/xkb/rules/xorg-it.lst
 ${X11ROOT_PREFIX}/lib/X11/xkb/rules/xorg.lst
 ${X11ROOT_PREFIX}/lib/X11/xkb/rules/xorg.xml
-${X11ROOT_PREFIX}/lib/X11/xkb/rules/xfree86-it.lst
-${X11ROOT_PREFIX}/lib/X11/xkb/rules/xfree86.xml
 ${X11ROOT_PREFIX}/lib/X11/xkb/semantics/basic
 ${X11ROOT_PREFIX}/lib/X11/xkb/semantics/complete
 ${X11ROOT_PREFIX}/lib/X11/xkb/semantics/default
@@ -530,6 +535,7 @@ ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/bs
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/by
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/ca
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/ca_enhanced
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/capslock
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/compose
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/ctrl
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/cz
@@ -548,7 +554,9 @@ ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/ee
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/el
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/en_US
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/es
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/eurosign
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/fi
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/fo
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/fr
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/fr_CH
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/fujitsu/jp
@@ -610,83 +618,69 @@ ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/ogham
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/ori
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/al
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/am
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/ar
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/ara
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/az
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/ba
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/bd
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/be
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/ben
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/bg
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/br
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/bt
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/by
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/ca
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/ch
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/cz
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/cz_qwerty
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/de
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/dev
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/dk
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/dvorak
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/dz
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/ee
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/el
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/en_US
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/es
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/fi
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/fo
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/fr
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/fr-latin9
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/gb
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/ge_la
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/ge_ru
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/guj
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/gur
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/ge
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/gr
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/hr
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/hu
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/ie
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/il
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/il_phonetic
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/in
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/ir
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/is
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/it
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/iu
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/kan
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/jp
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/kg
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/la
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/latam
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/latin
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/lo
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/lk
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/lt
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/lv
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/mk
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/ml
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/mao
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/mkd
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/mm
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/mn
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/mt
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/mt_us
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/nl
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/no
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/ogham
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/ori
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/pc
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/pk
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/pl
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/pl2
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/pt
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/ro
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/ru
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/sapmi
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/se
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/se_FI
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/se_NO
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/se_SE
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/si
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/sk
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/sk_qwerty
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/sr
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/syr
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/syr_phonetic
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/tel
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/srp
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/sy
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/th
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/th_pat
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/th_tis
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/tj
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/tml
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/tr
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/ua
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/us
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/us_intl
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/uz
-${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/yu
+${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc/vn
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pc104
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pl
 ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/pl2
@@ -752,7 +746,7 @@ ${X11ROOT_PREFIX}/${MAN_DIR}/beforelight.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/bitmap.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/bmtoa.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/cxpm.${MAN_SUFFIX}
-${DGA}${X11ROOT_PREFIX}/${MAN_DIR}/dga.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/dga.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/dpsexec.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/dpsinfo.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/editres.${MAN_SUFFIX}
@@ -771,8 +765,6 @@ ${X11ROOT_PREFIX}/${MAN_DIR}/mkfontdir.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/mkfontscale.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/oclock.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/proxymngr.${MAN_SUFFIX}
-${X11ROOT_PREFIX}/${MAN_DIR}/resize.${MAN_SUFFIX}
-${X11ROOT_PREFIX}/${MAN_DIR}/rstart.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/rstartd.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/sessreg.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/setxkbmap.${MAN_SUFFIX}
@@ -795,9 +787,12 @@ ${X11ROOT_PREFIX}/${MAN_DIR}/xcmsdb.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xconsole.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xcursorgen.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xcutsel.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/xdbedizzy.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xditview.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xdm.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/xdpr.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xdpyinfo.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/xdriinfo.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xedit.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xev.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xeyes.${MAN_SUFFIX}
@@ -824,8 +819,15 @@ ${X11ROOT_PREFIX}/${MAN_DIR}/xman.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xmessage.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xmh.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xmodmap.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/xmore.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xon.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/xphelloworld.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/xplsprinters.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/xpr.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/xprehashprinterlist.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xprop.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/xpsimplehelloworld.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/xpxthelloworld.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xrandr.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xrdb.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xrefresh.${MAN_SUFFIX}
@@ -835,7 +837,6 @@ ${X11ROOT_PREFIX}/${MAN_DIR}/xsetpointer.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xsetroot.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xsm.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xstdcmap.${MAN_SUFFIX}
-${X11ROOT_PREFIX}/${MAN_DIR}/xterm.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xtrap.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xtrapchar.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xtrapin.${MAN_SUFFIX}
@@ -849,24 +850,7 @@ ${X11ROOT_PREFIX}/${MAN_DIR}/xvinfo.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xwd.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xwininfo.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/xwud.${MAN_SUFFIX}
-${X11ROOT_PREFIX}/${MAN_DIR}/xmore.${MAN_SUFFIX}
-${X11ROOT_PREFIX}/${MAN_DIR}/xdriinfo.${MAN_SUFFIX}
-${X11ROOT_PREFIX}/${MAN_DIR}/xphelloworld.${MAN_SUFFIX}
-${X11ROOT_PREFIX}/${MAN_DIR}/xplsprinters.${MAN_SUFFIX}
-${X11ROOT_PREFIX}/${MAN_DIR}/xprehashprinterlist.${MAN_SUFFIX}
-${X11ROOT_PREFIX}/${MAN_DIR}/xpsimplehelloworld.${MAN_SUFFIX}
-${X11ROOT_PREFIX}/${MAN_DIR}/xpxthelloworld.${MAN_SUFFIX}
-share/examples/xorg/xdm/GiveConsole
-share/examples/xorg/xdm/TakeConsole
-share/examples/xorg/xdm/Xaccess
-share/examples/xorg/xdm/Xresources
-share/examples/xorg/xdm/Xservers
-share/examples/xorg/xdm/Xsession
-share/examples/xorg/xdm/Xsetup_0
-share/examples/xorg/xdm/Xwilling
-share/examples/xorg/xdm/xdm-config
-@dirrm share/examples/xorg/xdm
-@dirrm share/examples/xorg
+@dirrm ${X11ROOT_PREFIX}/${MAN_DIR}
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xsm
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xkb/types
 @dirrm ${X11ROOT_PREFIX}/lib/X11/xkb/symbols/xfree68
@@ -917,5 +901,6 @@ share/examples/xorg/xdm/xdm-config
 @dirrm ${X11ROOT_PREFIX}/lib/X11/icons/default
 @dirrm ${X11ROOT_PREFIX}/lib/X11/icons
 @dirrm ${X11ROOT_PREFIX}/lib/X11/fonts/util
+@dirrm ${X11ROOT_PREFIX}/lib/X11/fonts
+@dirrm ${X11ROOT_PREFIX}/include/X11/pixmaps
 @dirrm ${X11ROOT_PREFIX}/include/X11/PM
-@unexec ${RMDIR} %D/${X11ROOT_PREFIX}/include/X11/pixmaps 2>/dev/null || ${TRUE}

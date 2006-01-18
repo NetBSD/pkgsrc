@@ -1,4 +1,4 @@
-/* $NetBSD: host.def,v 1.3 2005/04/15 15:26:48 hira Exp $ */
+/* $NetBSD: host.def,v 1.4 2006/01/18 23:53:06 xtraeme Exp $ */
 
 #define ProjectRoot @PREFIX@
 
@@ -34,6 +34,9 @@
 #define	BuildCyrillicFonts NO
 #define	BuildLatin2Fonts NO
 #define	BuildPlugin NO
+#define	BuildDPSLibrary	YES
+#define BuildDPSTkLibrary	YES
+
 #define DebuggableLibraries NO
 #define StandardIncludes -I@BLNK@/include
 
@@ -55,6 +58,11 @@
 #  ifndef BuildThreadStubLibrary
 #	define BuildThreadStubLibrary YES
 #  endif
+#endif
+
+#ifdef NetBSDArchitecture
+#define GlxDriverUsesMesa	YES
+#define GlxBuiltInXMesa		NO
 #endif
 
 #define BuildRenderLibrary NO

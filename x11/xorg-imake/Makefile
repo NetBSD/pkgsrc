@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2005/12/08 09:52:17 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2006/01/18 23:53:06 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-imake-${XORG_VER}
-PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG}
 DISTFILES=	X11R${XORG_VER}-src1.tar.gz X11R${XORG_VER}-src3.tar.gz
@@ -33,11 +32,10 @@ PLIST_SUBST+=	LNDIR=
 
 post-extract:
 	@${TOUCH} ${WRKSRC}/config/cf/date.def
-	@${CP} ${PKGSRCDIR}/x11/xorg-libs/files/DragonFly.cf \
-		${WRKSRC}/config/cf/
 .for F in ${SYSTEMS}
 	@${MV} ${WRKSRC}/config/cf/${F}.cf  ${WRKSRC}/config/cf/${F}.cf.in
 .endfor
+.undef F
 	@${SED} -e "s|CONFIGDIRSPEC|-I${X11ROOT}/lib/X11/config|" \
 		${WRKSRC}/config/util/xmkmf.cpp > \
 		${WRKSRC}/config/util/xmkmf.cpp.orig
@@ -53,10 +51,11 @@ pre-configure:
 		-e "s|@@DARWIN_USE_QUARTZ@@|${DARWIN_USE_QUARTZ}|g"	\
 		${WRKSRC}/config/cf/${F}.cf.in > ${WRKSRC}/config/cf/${F}.cf
 .endfor
+.undef F
 	@( \
 	${ECHO} "#define XORG_VERSION_MAJOR  6";	\
-	${ECHO} "#define XORG_VERSION_MINOR  8";	\
-	${ECHO} "#define XORG_VERSION_PATCH  2";	\
+	${ECHO} "#define XORG_VERSION_MINOR  9";	\
+	${ECHO} "#define XORG_VERSION_PATCH  0";	\
 	${ECHO} "#define XORG_VERSION_SNAP   0";	\
 	) > ${WRKSRC}/config/cf/version.def
 

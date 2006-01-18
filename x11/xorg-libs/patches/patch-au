@@ -1,16 +1,16 @@
-$NetBSD: patch-au,v 1.1 2004/11/15 11:15:48 hira Exp $
+$NetBSD: patch-au,v 1.2 2006/01/18 23:53:06 xtraeme Exp $
 
---- programs/Xserver/hw/xfree86/os-support/bsd/i386_video.c.orig	2004-11-03 17:35:09.000000000 +0900
-+++ programs/Xserver/hw/xfree86/os-support/bsd/i386_video.c	2004-11-03 17:33:04.000000000 +0900
-@@ -44,6 +44,11 @@
- #include <machine/mtrr.h>
- #include <machine/sysarch.h>
- #include <sys/queue.h>
-+#ifdef __x86_64__
-+#define i386_set_mtrr x86_64_set_mtrr
-+#define i386_get_mtrr x86_64_get_mtrr
-+#define i386_iopl x86_64_iopl
+--- config/cf/Imake.tmpl.orig	2006-01-06 16:13:36.000000000 +0000
++++ config/cf/Imake.tmpl
+@@ -1965,7 +1965,11 @@ MODLDCOMBINEFLAGS = ModuleLdCombineFlags
+      SHLIBLDFLAGS = SharedLibraryLoadFlags $(SHLIBGLOBALSFLAGS)
+ #if HasGcc
+          NOSTDLIB = -nostdlib
++#if defined(DragonFlyArchitecture)
++     POSTNOSTDLIB = `${CC} -print-file-name=libgcc.a` -Wl,-Bdynamic
++#else
+      POSTNOSTDLIB = -Wl,-Bstatic -lgcc -Wl,-Bdynamic
 +#endif
- #endif
- 
- #if defined(__OpenBSD__) && defined(__amd64__)
+ #elif HasIntelC
+          NOSTDLIB = -nostdlib
+      POSTNOSTDLIB =

@@ -1,13 +1,16 @@
-$NetBSD: patch-aq,v 1.3 2005/03/22 09:49:14 adam Exp $
+$NetBSD: patch-aq,v 1.4 2006/01/18 23:53:06 xtraeme Exp $
 
---- programs/Xserver/GL/apple/Imakefile.orig	Mon Mar 14 23:25:00 2005
-+++ programs/Xserver/GL/apple/Imakefile
-@@ -36,7 +36,7 @@ LinkSourceFile(compsize.c,$(LIBSRC)/GL/g
-                 -I$(SERVERSRC)/GL/glx -I$(SERVERSRC)/hw/darwin/quartz/cr \
-                 -I$(SERVERSRC)/hw/darwin/quartz $(GL_INCLUDES) \
-                 -I$(MESASRCDIR)/include -I$(MESASRCDIR)/src/mesa/glapi \
--                -I$(XF86OSSRC)
-+                -I$(XF86OSSRC) -I$(DRMSRCDIR)/shared
+--- programs/Xserver/hw/xfree86/os-support/bsd/i386_video.c.orig	2004-11-03 17:35:09.000000000 +0900
++++ programs/Xserver/hw/xfree86/os-support/bsd/i386_video.c	2004-11-03 17:33:04.000000000 +0900
+@@ -44,6 +44,11 @@
+ #include <machine/mtrr.h>
+ #include <machine/sysarch.h>
+ #include <sys/queue.h>
++#ifdef __x86_64__
++#define i386_set_mtrr x86_64_set_mtrr
++#define i386_get_mtrr x86_64_get_mtrr
++#define i386_iopl x86_64_iopl
++#endif
+ #endif
  
-       DEFINES = $(GLX_DEFINES)
- 
+ #if defined(__OpenBSD__) && defined(__amd64__)

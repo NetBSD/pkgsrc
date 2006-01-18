@@ -1,40 +1,13 @@
-$NetBSD: patch-aw,v 1.1 2004/11/15 11:15:49 hira Exp $
+$NetBSD: patch-aw,v 1.2 2006/01/18 23:53:06 xtraeme Exp $
 
---- config/cf/Imake.cf.orig	2004-08-12 06:14:01.000000000 +0900
-+++ config/cf/Imake.cf	2004-11-09 03:52:53.000000000 +0900
-@@ -246,6 +246,10 @@
- #   define PpcArchitecture
- #   undef __powerpc__
+--- programs/Xserver/hw/xfree86/os-support/bsd/Imakefile.orig	2006-01-06 17:29:53.000000000 +0000
++++ programs/Xserver/hw/xfree86/os-support/bsd/Imakefile
+@@ -47,7 +47,7 @@ SHARED_CFLAGS = PositionIndependentCFlag
+   IOPERM_SRC = ioperm_noop.c
+   IOPERM_OBJ = ioperm_noop.o
  # endif
-+# ifdef __x86_64__
-+#  define AMD64Architecture
-+#  undef __x86_64__
-+# endif
- #endif /* NetBSD */
- 
- /* Systems based on kernel of NetBSD */
-@@ -253,7 +257,23 @@
- #define KNetBSDArchitecture
- #endif
- 
--#ifdef __FreeBSD__
-+#ifdef __DragonFly__
-+# define MacroIncludeFile <DragonFly.cf>
-+# define MacroFile DragonFly.cf
-+# undef __DragonFly__
-+# define FreeBSDArchitecture
-+# define KFreeBSDArchitecture
-+# ifdef __i386__
-+#  define i386BsdArchitecture
-+#  define i386Architecture
-+#  undef i386
-+# endif
-+# ifdef __amd64__
-+#  define AMD64Architecture
-+#  undef __amd64__
-+#  undef __x86_64__
-+# endif
-+#elif defined __FreeBSD__
- # define MacroIncludeFile <FreeBSD.cf>
- # define MacroFile FreeBSD.cf
- # undef __FreeBSD__
+-#elif defined(KFreeBSDArchitecture)
++#elif defined(KFreeBSDArchitecture) || defined(DragonFlyArchitecture)
+ # if defined(i386Architecture) || defined(AMD64Architecture)
+   IOPERMDEFINES = -DUSE_DEV_IO
+ # elif defined(AlphaBsdArchitecture)

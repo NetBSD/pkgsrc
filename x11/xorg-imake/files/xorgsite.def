@@ -1,5 +1,5 @@
 /*
- * $NetBSD: xorgsite.def,v 1.1.1.1 2004/07/29 04:49:52 xtraeme Exp $
+ * $NetBSD: xorgsite.def,v 1.2 2006/01/18 23:53:06 xtraeme Exp $
  *
  * X.org packages for pkgsrc system 
  *  
@@ -23,3 +23,5 @@
 #define HasXdmAuth YES
 #define BuildXF86Setup NO
 #define NothingOutsideProjectRoot YES
+
+#define	BuildDPSLibrary	YES

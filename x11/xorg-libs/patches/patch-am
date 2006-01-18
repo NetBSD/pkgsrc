@@ -1,59 +1,13 @@
-$NetBSD: patch-am,v 1.3 2004/10/20 14:33:30 reed Exp $
+$NetBSD: patch-am,v 1.4 2006/01/18 23:53:06 xtraeme Exp $
 
---- programs/xdm/Imakefile.orig	2004-07-26 15:56:33.000000000 -0700
-+++ programs/xdm/Imakefile
-@@ -195,6 +195,13 @@ LIFREQ_FLAGS = -Xa
- #endif
- #endif
+--- programs/Xserver/GL/apple/Imakefile.orig	Mon Mar 14 23:25:00 2005
++++ programs/Xserver/GL/apple/Imakefile
+@@ -36,7 +36,7 @@ LinkSourceFile(compsize.c,$(LIBSRC)/GL/g
+                 -I$(SERVERSRC)/GL/glx -I$(SERVERSRC)/hw/darwin/quartz/cr \
+                 -I$(SERVERSRC)/hw/darwin/quartz $(GL_INCLUDES) \
+                 -I$(MESASRCDIR)/include -I$(MESASRCDIR)/src/mesa/glapi \
+-                -I$(XF86OSSRC)
++                -I$(XF86OSSRC) -I$(DRMSRCDIR)/shared
  
-+XDMLOGDIR = $(LOGDIRECTORY)
-+#ifdef VarRunDirectory
-+XDMPIDDIR = $(VARRUNDIR)
-+#else
-+XDMPIDDIR = $(XDMDIR)
-+#endif
-+
-   SYS_LIBRARIES = $(SYS_LIBRARIES1) $(SYS_LIBRARIES2) $(SYS_LIBRARIES3)
+       DEFINES = $(GLX_DEFINES)
  
-    XDMCONFIGDIR = XdmConfigurationSubdirectory
-@@ -252,7 +259,8 @@ LOCAL_LIBRARIES = $(GREETLIBS) $(XMULIB)
- #endif
-        PROGRAMS = ProgramTargetName(xdm) ProgramTargetName(xdmshell) ProgramTargetName(sessreg) $(CHOOSER) $(XDM_SHADOW)
- 
--    CHOOSERPATH = $(XDMDIR)/chooser
-+    CHOOSERPATH = $(BINDIR)/chooser
-+ GREETERLIBPATH = $(USRLIBDIR)/libXdmGreet.so
-  OSMAJORVERSION = OSMajorVersion
-  OSMINORVERSION = OSMinorVersion
-    CONN_DEFINES = $(CONNECTION_FLAGS)
-@@ -267,6 +275,10 @@ LOCAL_LIBRARIES = $(GREETLIBS) $(XMULIB)
- 		$(XPM_DEFINES) $(XINERAMA_DEFINES) $(PROCTITLE_DEFINES) \
- 		$(IFADDRS_DEFINES) $(IPV6_DEFINES) $(MKSTEMP_DEFINES)
-    EXTRAMANDEFS = $(RANDOM_DEFINES) -DCHOOSERPATH=$(CHOOSERPATH) \
-+		-DGREETERLIBPATH=$(GREETERLIBPATH) \
-+		-DXDMDIR=$(XDMDIR) \
-+		-DXDMAUTHDIR=$(XDMVARDIR) \
-+		-DXDMPIDDIR=$(XDMPIDDIR) \
- 		-DXDMLOGDIR=$(XDMLOGDIR)
- 
- XCOMM
-@@ -290,8 +302,8 @@ RES_DEFINES = '-DDEF_SERVER_LINE=":0 loc
- 		  '-DDEF_FAILSAFE_CLIENT="$(BINDIR)/xterm"' \
- 		  '-DDEF_XDM_CONFIG="$(XDMDIR)/xdm-config"' \
- 		  '-DDEF_CHOOSER="$(CHOOSERPATH)"' \
--		  '-DDEF_AUTH_DIR="$(XDMDIR)"' \
--		  '-DDEF_GREETER_LIB="$(XDMDIR)/libXdmGreet.so"'
-+		  '-DDEF_AUTH_DIR="$(XDMVARDIR)"' \
-+		  '-DDEF_GREETER_LIB="$(GREETERLIBPATH)"'
- 
- ComplexProgramTarget_1(xdm,$(LOCAL_LIBRARIES),NullParameter)
- #ifdef LinkConfDirectory
-@@ -316,7 +328,7 @@ SpecialCObjectRule(daemon,$(ICONFIGFILES
- #if BuildChooser
- SpecialCObjectRule(chooser, $(ICONFIGFILES), $(SOCK_DEFINES) $(LIFREQ_FLAGS))
- NormalProgramTarget(chooser,$(OBJS3),$(DEPLIBS3),$(LIBS3),NullParameter)
--InstallProgram(chooser,$(XDMDIR))
-+InstallProgram(chooser,$(BINDIR))
- InstallAppDefaults(Chooser)
- #endif
- #if BuildBoth

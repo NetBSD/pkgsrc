@@ -1,4 +1,4 @@
-/* $NetBSD: host.def,v 1.6 2005/04/15 15:31:14 hira Exp $ */
+/* $NetBSD: host.def,v 1.7 2006/01/18 23:53:06 xtraeme Exp $ */
 
 #define ProjectRoot @PREFIX@
 #define BuildHtmlManPages NO
@@ -18,23 +18,27 @@
 
 #define NothingOutsideProjectRoot YES
 #define InstallFSConfig NO
-#define	BuildServer NO
-#define	BuildFontServer NO
-#define	BuildFonts NO
-#define	Build75DpiFonts NO
-#define	Build100DpiFonts NO
-#define	BuildSpeedoFonts NO
-#define	BuildType1Fonts NO
-#define	BuildCIDFonts NO
-#define	BuildCyrillicFonts NO
-#define	BuildLatin2Fonts NO
-#define	BuildPlugin NO
 #define	LibHeaders NO
 #define	LibInstall NO
 #define	ForceNormalLib NO
 #define	ModInstall NO 
 #define	XTrueTypeInstallCConvHeaders NO
-#define BuildXcursorgen YES
+
+#define	BuildServer		NO
+#define	BuildFontServer		NO
+#define BuildFonts		NO
+#define Build75DpiFonts		NO
+#define Build100DpiFonts	NO
+#define BuildSpeedoFonts	NO
+#define BuildType1Fonts		NO
+#define BuildCIDFonts		NO
+#define BuildCyrillicFonts	NO
+#define BuildLatin2Fonts	NO
+#define BuildPlugin		NO
+#define BuildXcursorgen		YES
+#define	BuildXterm		NO
+#define	BuildDPSClients		YES /* dpsinfo, texteroids, etc */
+#define BuildDPSLibraries	YES /* makepsres */
 
 #ifndef LinuxArchitecture
 #define HasShadowPasswd NO
