@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1790 2006/01/18 19:12:54 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1791 2006/01/18 20:18:04 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1394,88 +1394,6 @@ do-fetch:
 .    endif # INTERACTIVE_STAGE == fetch
 .  endif # !empty(_ALLFILES)
 .endif
-
-# show both build and run depends directories (non-recursively)
-.PHONY: show-depends-dirs
-.if !target(show-depends-dirs)
-_ALL_DEPENDS=		${DEPENDS} ${BUILD_DEPENDS}
-show-depends-dirs:
-	@set -e;							\
-	dlist="";							\
-	depends=${_ALL_DEPENDS:C/^[^:]*://:O:u:Q};			\
-	for reldir in $$depends; do					\
-		case $$reldir in					\
-			../../*/*) ;;					\
-			*)	${ECHO} "[show-depends-dirs] warning: invalid dependency \"$$reldir\". Check DEPENDS and BUILD_DEPENDS." 1>&2; \
-				continue;;				\
-		esac;							\
-		WD=`cd "$$reldir" && ${PWD_CMD}`;			\
-		d=`dirname $$WD`;					\
-		absdir=`basename $$d`/`basename $$WD`;			\
-		dlist="$$dlist $$absdir";				\
-	done;								\
-	${ECHO} $$dlist
-.endif
-
-# Show all build and run depends, reverse-breadth first, with options.
-.if make(show-all-depends-dirs) || make(show-all-depends-dirs-excl)
-
-# "awk" macro to recurse over the dependencies efficiently, never running in
-# the same same directory twice. You may set the following options via "-v":
-#
-#	NonSelf = 1	to not print own directory;
-#	RootsOnly = 1	to print only root directories (i.e. directories
-#			of packages with no dependencies), including possibly
-#			own directory
-#
-_RECURSE_DEPENDS_DIRS=							\
-	function append_dirs(dir) {					\
-		command = "cd ../../" dir " && ${MAKE} show-depends-dirs"; \
-		command | getline tmp_dirs;				\
-		close(command);						\
-		if (tmp_dirs ~ /^$$/)					\
-			root_dirs[p++] = dir;				\
-		for (i = 1; i <= split(tmp_dirs, tmp_r); i++)		\
-			if (!(tmp_r[i] in hash_all_dirs)) {		\
-				all_dirs[n++] = tmp_r[i];		\
-				hash_all_dirs[tmp_r[i]] = 1		\
-			}						\
-	}								\
-	BEGIN {								\
-		command = "${PWD_CMD}";					\
-		command | getline start_dir;				\
-		close(command);						\
-		i = split(start_dir, tmp_r, /\//);			\
-		all_dirs[n++] = tmp_r[i-1] "/" tmp_r[i];		\
-		for (; m < n; )						\
-			append_dirs(all_dirs[m++]);			\
-		if (RootsOnly) {					\
-			printf("%s", root_dirs[--p]);			\
-			for (; p > 0; )					\
-				printf(" %s", root_dirs[--p])		\
-		}							\
-		else {							\
-			if (m > NonSelf)				\
-				printf("%s", all_dirs[--m]);		\
-			for (; m > NonSelf; )				\
-				printf(" %s", all_dirs[--m])		\
-		}							\
-		print							\
-	}
-
-.PHONY: show-all-depends-dirs
-.if make(show-all-depends-dirs)
-show-all-depends-dirs:
-	@${AWK} '${_RECURSE_DEPENDS_DIRS}'
-.endif
-
-.PHONY: show-all-depends-dirs-excl
-.if make(show-all-depends-dirs-excl)
-show-all-depends-dirs-excl:
-	@${AWK} -v NonSelf=1 '${_RECURSE_DEPENDS_DIRS}'
-.endif
-
-.endif # make(show-{all-depends-dirs{,-excl}})
 
 .PHONY: show-distfiles
 .if !target(show-distfiles)
