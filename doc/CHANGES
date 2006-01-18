@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12562 2006/01/18 11:40:24 mjl Exp $
+$NetBSD: CHANGES,v 1.12563 2006/01/18 12:44:00 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -355,3 +355,23 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/audacity to 1.2.4b [adam 2006-01-17]
 	Updated graphics/tuxpaint to 0.9.14nb6 [adrianp 2006-01-17]
 	Updated comms/asterisk to 1.2.2 [mjl 2006-01-18]
+	Renamed multimedia/gstreamer to multimedia/gstreamer0.8 [jmmv 2006-01-18]
+	Renamed multimedia/gst-plugins to multimedia/gst-plugins0.8 [jmmv 2006-01-18]
+	Renamed audio/gst-plugins-artsd to audio/gst-plugins0.8-artsd [jmmv 2006-01-18]
+	Renamed audio/gst-plugins-cdparanoia to audio/gst-plugins0.8-cdparanoia [jmmv 2006-01-18]
+	Renamed audio/gst-plugins-esound to audio/gst-plugins0.8-esound [jmmv 2006-01-18]
+	Renamed audio/gst-plugins-faad to audio/gst-plugins0.8-faad [jmmv 2006-01-18]
+	Renamed audio/gst-plugins-flac to audio/gst-plugins0.8-flac [jmmv 2006-01-18]
+	Renamed audio/gst-plugins-lame to audio/gst-plugins0.8-lame [jmmv 2006-01-18]
+	Renamed audio/gst-plugins-mad to audio/gst-plugins0.8-mad [jmmv 2006-01-18]
+	Renamed audio/gst-plugins-oss to audio/gst-plugins0.8-oss [jmmv 2006-01-18]
+	Renamed audio/gst-plugins-vorbis to audio/gst-plugins0.8-vorbis [jmmv 2006-01-18]
+	Renamed graphics/gst-plugins-opengl to graphics/gst-plugins0.8-opengl [jmmv 2006-01-18]
+	Renamed graphics/gst-plugins-png to graphics/gst-plugins0.8-png [jmmv 2006-01-18]
+	Renamed multimedia/gst-plugins-dvdnav to multimedia/gst-plugins0.8-dvdnav [jmmv 2006-01-18]
+	Renamed multimedia/gst-plugins-dvdread to multimedia/gst-plugins0.8-dvdread [jmmv 2006-01-18]
+	Renamed multimedia/gst-plugins-mpeg2dec to multimedia/gst-plugins0.8-mpeg2dec [jmmv 2006-01-18]
+	Renamed multimedia/gst-plugins-ogg to multimedia/gst-plugins0.8-ogg [jmmv 2006-01-18]
+	Renamed multimedia/gst-plugins-theora to multimedia/gst-plugins0.8-theora [jmmv 2006-01-18]
+	Renamed multimedia/gst-plugins-xvid to multimedia/gst-plugins0.8-xvid [jmmv 2006-01-18]
+	Renamed sysutils/gst-plugins-gnomevfs to sysutils/gst-plugins0.8-gnomevfs [jmmv 2006-01-18]
