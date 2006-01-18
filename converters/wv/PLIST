@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:09:21 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/01/18 22:13:59 adam Exp $
 bin/wvAbw
 bin/wvCleanLatex
 bin/wvConvert
@@ -15,8 +15,6 @@ bin/wvText
 bin/wvVersion
 bin/wvWare
 bin/wvWml
-include/wv/libole2/ms-ole-summary.h
-include/wv/libole2/ms-ole.h
 include/wv/wv.h
 lib/libwv.la
 lib/pkgconfig/wv-1.0.pc
@@ -485,5 +483,4 @@ share/wv/wvXml.xml
 @dirrm share/wv/wingdingfont
 @dirrm share/wv/patterns
 @dirrm share/wv
-@dirrm include/wv/libole2
 @dirrm include/wv
