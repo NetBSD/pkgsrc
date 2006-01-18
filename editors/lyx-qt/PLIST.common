@@ -1,13 +1,16 @@
-@comment $NetBSD: PLIST.common,v 1.8 2005/12/28 02:04:00 reed Exp $
+@comment $NetBSD: PLIST.common,v 1.9 2006/01/18 21:00:45 reed Exp $
 bin/lyx
 bin/noweb2lyx
 bin/reLyX
+man/man1/lyx.1
+man/man1/reLyX.1
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/lyx.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/lyx.mo
@@ -18,8 +21,6 @@ ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/lyx.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/lyx.mo
-man/man1/lyx.1
-man/man1/reLyX.1
 share/lyx/CREDITS
 share/lyx/bind/aqua.bind
 share/lyx/bind/broadway.bind
@@ -137,6 +138,7 @@ share/lyx/examples/chessgame.lyx
 share/lyx/examples/currency.lyx
 share/lyx/examples/cv.lyx
 share/lyx/examples/da_splash.lyx
+share/lyx/examples/de_Minipage.lyx
 share/lyx/examples/de_beispiel_gelyxt.lyx
 share/lyx/examples/de_beispiel_roh.lyx
 share/lyx/examples/de_splash.lyx
@@ -846,18 +848,36 @@ share/lyx/layouts/svjog.layout
 share/lyx/layouts/svjour.inc
 share/lyx/layouts/svprobth.layout
 share/lyx/lyx2lyx/LyX.py
+share/lyx/lyx2lyx/LyX.pyc
+share/lyx/lyx2lyx/error.pyc
 share/lyx/lyx2lyx/lyx2lyx
 share/lyx/lyx2lyx/lyx_0_12.py
+share/lyx/lyx2lyx/lyx_0_12.pyc
 share/lyx/lyx2lyx/lyx_1_0_0.py
+share/lyx/lyx2lyx/lyx_1_0_0.pyc
 share/lyx/lyx2lyx/lyx_1_0_1.py
+share/lyx/lyx2lyx/lyx_1_0_1.pyc
 share/lyx/lyx2lyx/lyx_1_1_4.py
+share/lyx/lyx2lyx/lyx_1_1_4.pyc
 share/lyx/lyx2lyx/lyx_1_1_5.py
+share/lyx/lyx2lyx/lyx_1_1_5.pyc
 share/lyx/lyx2lyx/lyx_1_1_6.py
+share/lyx/lyx2lyx/lyx_1_1_6.pyc
 share/lyx/lyx2lyx/lyx_1_1_6fix3.py
+share/lyx/lyx2lyx/lyx_1_1_6fix3.pyc
 share/lyx/lyx2lyx/lyx_1_2.py
+share/lyx/lyx2lyx/lyx_1_2.pyc
 share/lyx/lyx2lyx/lyx_1_3.py
+share/lyx/lyx2lyx/lyx_1_3.pyc
 share/lyx/lyx2lyx/lyx_1_4.py
+share/lyx/lyx2lyx/lyx_1_4.pyc
+share/lyx/lyx2lyx/lyxconvert_215.pyc
+share/lyx/lyx2lyx/lyxconvert_216.pyc
+share/lyx/lyx2lyx/lyxconvert_217.pyc
+share/lyx/lyx2lyx/lyxconvert_218.pyc
+share/lyx/lyx2lyx/lyxconvert_220.pyc
 share/lyx/lyx2lyx/parser_tools.py
+share/lyx/lyx2lyx/parser_tools.pyc
 share/lyx/lyx2lyx/profiling.py
 share/lyx/lyxrc.defaults
 share/lyx/lyxrc.example
@@ -925,7 +945,7 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/hollywood.cls
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/lyxchess.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/lyxskak.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/revtex.cls
-@dirrm ${PKG_TEXMFPREFIX}/tex/latex/lyx
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx
 @dirrm share/lyx/xfonts
 @dirrm share/lyx/ui
 @dirrm share/lyx/templates
