@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.2 2006/01/13 20:32:38 riz Exp $
+$NetBSD: patch-ad,v 1.3 2006/01/18 11:39:54 mjl Exp $
 
---- channels/Makefile.orig	2005-11-29 19:24:39.000000000 +0100
-+++ channels/Makefile	2005-12-25 13:13:12.000000000 +0100
+--- channels/Makefile.orig	2005-12-15 11:52:30.000000000 +0100
++++ channels/Makefile	2006-01-18 12:13:57.000000000 +0100
 @@ -22,12 +22,13 @@
  endif
  
@@ -17,7 +17,7 @@ $NetBSD: patch-ad,v 1.2 2006/01/13 20:32:38 riz Exp $
  endif
  
  ifeq (${OSARCH},Linux)
-@@ -73,40 +74,40 @@
+@@ -73,41 +74,41 @@
    SOLINK+=-lrt
  endif
  
@@ -31,6 +31,7 @@ $NetBSD: patch-ad,v 1.2 2006/01/13 20:32:38 riz Exp $
 -
 -ifneq ($(wildcard misdn/chan_misdn_lib.a),)
 -  CHANNEL_LIBS+=chan_misdn.so
+-  CFLAGS+=-Imisdn 
 -endif
 +# ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/include/linux/ixjuser.h)$(wildcard $(CROSS_COMPILE_TARGET)/usr/local/include/ixjuser.h),)
 +#   CHANNEL_LIBS+=chan_phone.so
@@ -42,6 +43,7 @@ $NetBSD: patch-ad,v 1.2 2006/01/13 20:32:38 riz Exp $
 +
 +# ifneq ($(wildcard misdn/chan_misdn_lib.a),)
 +#   CHANNEL_LIBS+=chan_misdn.so
++#   CFLAGS+=-Imisdn 
 +# endif
  
  CFLAGS+=-Wno-missing-prototypes -Wno-missing-declarations
@@ -86,7 +88,7 @@ $NetBSD: patch-ad,v 1.2 2006/01/13 20:32:38 riz Exp $
  
  ifndef WITHOUT_ZAPTEL
  ifneq ($(wildcard $(CROSS_COMPILE_TARGET)/usr/include/linux/zaptel.h)$(wildcard $(CROSS_COMPILE_TARGET)/usr/local/include/zaptel.h)$(wildcard $(CROSS_COMPILE_TARGET)/usr/pkg/include/zaptel.h),)
-@@ -121,10 +122,10 @@
+@@ -122,10 +123,10 @@
  endif
  endif # WITHOUT_ZAPTEL
  
@@ -101,7 +103,7 @@ $NetBSD: patch-ad,v 1.2 2006/01/13 20:32:38 riz Exp $
  
  CFLAGS+=-DCRYPTO
  
-@@ -136,9 +137,9 @@
+@@ -137,9 +138,9 @@
  
  ZAPDIR=/usr/lib
  
@@ -114,7 +116,7 @@ $NetBSD: patch-ad,v 1.2 2006/01/13 20:32:38 riz Exp $
  
  ifndef OPENH323DIR
    OPENH323DIR=$(HOME)/openh323
-@@ -163,13 +164,13 @@
+@@ -164,13 +165,13 @@
    include .depend
  endif
  
