@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2005/02/17 15:31:34 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2006/01/18 13:11:56 joerg Exp $
 
---- ra.sh.orig	2005-02-10 19:17:57.000000000 +0100
+--- ra.sh.orig	2005-12-07 21:10:01.000000000 +0100
 +++ ra.sh
-@@ -23,7 +23,7 @@
+@@ -24,7 +24,7 @@ KFILE="_RADMIND_COMMANDFILE"
  SERVER="_RADMIND_HOST"
  TLSLEVEL="_RADMIND_AUTHLEVEL"
  EDITOR=${EDITOR:-vi}
@@ -11,7 +11,16 @@ $NetBSD: patch-ab,v 1.2 2005/02/17 15:31:34 wiz Exp $
  FSDIFFROOT="."
  FLAG="_RADMIND_DIR/client/.RadmindRunning"
  CHECKEDOUT="_RADMIND_DIR/client/.CheckedOut"
-@@ -49,14 +49,6 @@ fi
+@@ -34,7 +34,7 @@ VERSION=_RADMIND_VERSION
+ PREAPPLY="_RADMIND_PREAPPLY"
+ POSTAPPLY="_RADMIND_POSTAPPLY"
+ 
+-PATH=/usr/local/bin:/usr/bin:/bin; export PATH
++PATH=_LOCALBASE/bin:/usr/bin:/bin; export PATH
+ RETRY=10
+ 
+ MKTEMP="_RADMIND_MKTEMP"
+@@ -50,14 +50,6 @@ fi
  LTMP="${TMPDIR}/lapply.out"
  FTMP="${TMPDIR}/fsdiff.out"
  
@@ -26,3 +35,21 @@ $NetBSD: patch-ab,v 1.2 2005/02/17 15:31:34 wiz Exp $
  Yn() {
      echo -n "$*" "[Yn] "
      read ans
+@@ -88,7 +80,7 @@ cleanup() {
+ 
+ dopreapply() {
+     if [ -d ${PREAPPLY} ]; then
+-	SCRIPTS=`find ${PREAPPLY} -perm +u+x \! -type d | sort`
++	SCRIPTS=`find ${PREAPPLY} -perm -u+x \! -type d | sort`
+ 	if [ ${SCRIPTS} ]; then
+ 	    for script in ${SCRIPTS}; do
+ 		${script} "$1"
+@@ -99,7 +91,7 @@ dopreapply() {
+ 
+ dopostapply() {
+     if [ -d ${POSTAPPLY} ]; then
+-	SCRIPTS=`find ${POSTAPPLY} -perm +u+x \! -type d | sort`
++	SCRIPTS=`find ${POSTAPPLY} -perm -u+x \! -type d | sort`
+ 	if [ ${SCRIPTS} ]; then
+ 	    for script in ${SCRIPTS}; do
+ 		${script} "$1"
