@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2006/01/15 04:49:46 minskim Exp $
+# $NetBSD: Makefile.common,v 1.13 2006/01/18 12:55:55 jmmv Exp $
 #
 
 DISTNAME=	totem-1.3.0
@@ -33,8 +33,6 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.totem
 .include "../../mk/bsd.options.mk"
 
 BUILDLINK_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.10.0
-BUILDLINK_DEPENDS.gstreamer+=		gstreamer>=0.8.4.1
-BUILDLINK_DEPENDS.gst-plugins+=		gstreamer>=0.8.4.1
 
 .include "../../audio/musicbrainz/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"

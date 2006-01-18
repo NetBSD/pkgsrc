@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2006/01/06 15:10:06 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2006/01/18 12:55:55 jmmv Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 COMMENT=	Multimedia tools for the KDE integrated X11 desktop
 
@@ -31,8 +31,8 @@ PKG_SUPPORTED_OPTIONS=	gstreamer oss
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgstreamer)
-.include "../../multimedia/gstreamer/buildlink3.mk"
-.include "../../multimedia/gst-plugins/buildlink3.mk"
+.include "../../multimedia/gstreamer0.8/buildlink3.mk"
+.include "../../multimedia/gst-plugins0.8/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Moss)

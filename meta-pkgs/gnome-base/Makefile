@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2006/01/06 15:10:05 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2006/01/18 12:55:55 jmmv Exp $
 
 DISTNAME=	gnome-base-2.12.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -64,8 +64,8 @@ DEPENDS+=	gnome-menus>=2.12.0:../../sysutils/gnome-menus
 DEPENDS+=	eel2>=2.12.1:../../devel/eel2
 DEPENDS+=	nautilus>=2.12.1:../../sysutils/nautilus
 DEPENDS+=	metacity>=2.12.1:../../wm/metacity
-DEPENDS+=	gstreamer>=0.8.11:../../multimedia/gstreamer
-DEPENDS+=	gst-plugins>=0.8.11:../../multimedia/gst-plugins
+DEPENDS+=	gstreamer0.8>=0.8.11:../../multimedia/gstreamer0.8
+DEPENDS+=	gst-plugins0.8>=0.8.11:../../multimedia/gst-plugins0.8
 DEPENDS+=	gnome2-control-center>=2.12.1:../../x11/gnome2-control-center
 DEPENDS+=	evolution-data-server>=1.4.1:../../mail/evolution-data-server
 DEPENDS+=	gnome-panel>=2.12.1:../../x11/gnome-panel

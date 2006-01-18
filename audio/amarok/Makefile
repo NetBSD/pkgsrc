@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2006/01/06 15:10:01 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2006/01/18 12:55:55 jmmv Exp $
 
 DISTNAME=		amarok-1.3.7
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		audio kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amarok/}
 EXTRACT_SUFX=		.tar.bz2
@@ -23,8 +23,6 @@ CONFIGURE_ARGS+=	--without-arts	# disable aRts engine
 
 LIBS+=			${LIBOSSAUDIO}
 
-BUILDLINK_DEPENDS.gst-plugins+=	gst-plugins>=0.8.6
-BUILDLINK_DEPENDS.gstreamer+=	gstreamer>=0.8.6
 BUILDLINK_DEPENDS.kdebase+=	kdebase>=3.3.0
 BUILDLINK_DEPENDS.kdelibs+=	kdelibs>=3.3.0
 BUILDLINK_DEPENDS.taglib+=	taglib>=1.4
@@ -35,8 +33,8 @@ BUILDLINK_DEPENDS.taglib+=	taglib>=1.4
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
-.include "../../multimedia/gst-plugins/buildlink3.mk"
-.include "../../multimedia/gstreamer/buildlink3.mk"
+.include "../../multimedia/gst-plugins0.8/buildlink3.mk"
+.include "../../multimedia/gstreamer0.8/buildlink3.mk"
 .include "../../multimedia/kdemultimedia3/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
