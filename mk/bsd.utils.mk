@@ -1,4 +1,4 @@
-# $NetBSD: bsd.utils.mk,v 1.3 2006/01/18 18:03:08 jlam Exp $
+# $NetBSD: bsd.utils.mk,v 1.4 2006/01/18 20:18:04 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines utility
 # and otherwise miscellaneous variables and targets.
@@ -25,8 +25,8 @@ _PKG_PATHS_CMD=								\
 		PWD_CMD=${TOOLS_PWD_CMD:Q} TEST=${TOOLS_TEST:Q}		\
 	${SH} ${.CURDIR}/../../mk/scripts/pkg_path
 
-.PHONY: show-depends-pkgpaths
-show-depends-pkgpaths:
+.PHONY: show-depends-dirs show-depends-pkgpaths
+show-depends-dirs show-depends-pkgpaths:
 	@${_PKG_PATHS_CMD} ${_ALL_DEPENDS_PKGSRCDIRS:O:u}
 
 # _DEPENDS_WALK_CMD holds the command (sans arguments) to walk the
@@ -38,3 +38,17 @@ _DEPENDS_WALK_CMD=							\
 		MAKEFLAGS=${_DEPENDS_WALK_MAKEFLAGS:Q}			\
 		PKGSRCDIR=${PKGSRCDIR:Q} TEST=${TOOLS_TEST:Q}		\
 	${AWK} -f ${.CURDIR}/../../mk/scripts/depends-depth-first.awk --
+
+# show-all-depends-dirs prints a list of every dependency, implied and
+# direct", of the current package, and includes the current package.
+#
+.PHONY: show-all-depends-dirs
+show-all-depends-dirs:
+	@(${_DEPENDS_WALK_CMD} -r ${PKGPATH})
+
+# show-all-depends-dirs-excl prints a list of every dependency, implied and
+# direct", of the current package.
+#
+.PHONY: show-all-depends-dirs-excl
+show-all-depends-dirs-excl:
+	@(${_DEPENDS_WALK_CMD} ${PKGPATH})
