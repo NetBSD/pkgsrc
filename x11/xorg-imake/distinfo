@@ -1,21 +1,17 @@
-$NetBSD: distinfo,v 1.16 2005/10/16 16:28:27 hira Exp $
+$NetBSD: distinfo,v 1.17 2006/01/18 23:53:06 xtraeme Exp $
 
-SHA1 (X11R6.8.2-src1.tar.gz) = 23c60680274062a1db17f646a8388149309dc45c
-RMD160 (X11R6.8.2-src1.tar.gz) = bb170d7a11416c3d9bd1d23d461ba4cea9b1b2c8
-Size (X11R6.8.2-src1.tar.gz) = 32373802 bytes
-SHA1 (X11R6.8.2-src3.tar.gz) = de1569856b8023c58fc92bd0b3c8406214451fce
-RMD160 (X11R6.8.2-src3.tar.gz) = d3c90401ba81dfeea843373d0d0d386962b636a6
-Size (X11R6.8.2-src3.tar.gz) = 10379299 bytes
+SHA1 (X11R6.9.0-src1.tar.gz) = a6c077ed8fdeee5fe1956a427c4cb0bc266e1bef
+RMD160 (X11R6.9.0-src1.tar.gz) = d12270a4f41a3ceee4bfd5da22d387a3aa707df8
+Size (X11R6.9.0-src1.tar.gz) = 33460996 bytes
+SHA1 (X11R6.9.0-src3.tar.gz) = 0c8a0d6f9471ec022e12e2688d1991c985a1efb2
+RMD160 (X11R6.9.0-src3.tar.gz) = 1a2d1855f7b204012627a6c6bf0eaf5245fff414
+Size (X11R6.9.0-src3.tar.gz) = 10872474 bytes
 SHA1 (patch-aa) = f8d35ceb67df85ca04d9567d66bf99c5d292d322
 SHA1 (patch-ab) = ae90c06b50d5d8b84054cc66beec0d0e3049d0aa
-SHA1 (patch-ac) = 9849c826bb5b25dce8b52fb689672dd485daa34d
+SHA1 (patch-ac) = 682191f790eddb94917c486ec63818756fee8e8e
 SHA1 (patch-ad) = 7843332769ee47bc8a52a9adb1047b1a637af71b
-SHA1 (patch-ae) = a06752ee9f55e64a407fac6fbde3547fd096c71d
-SHA1 (patch-af) = 178d556fa11818420cd685308cf179ee5f6f7dac
-SHA1 (patch-ag) = 4545d9fd50c2a7b6f5a04da330784eaf9a5373ad
-SHA1 (patch-ah) = 4500a20f369f186c90cb7b0b02cb1ba49e552b34
+SHA1 (patch-ae) = f6bff42193905fd3158b3de52bf925b5fb5f002a
+SHA1 (patch-ag) = 79d826e9d8d4a05f250378814d47f0383ab2eafe
+SHA1 (patch-ah) = 4d4e00a8f9e226323975596070a8fb3f59c34b4d
 SHA1 (patch-ai) = eb3853e360dd5e05ca5978791734bcba5541b162
-SHA1 (patch-aj) = 58594b376a62a584c0bc7f056e512fe8700d558e
-SHA1 (patch-ak) = c7e83c91d5192b5bd9e40c5b3ae3501900487a9f
-SHA1 (patch-al) = 14701767d5719cb2a47d2b828e69cffc1a6063bc
-SHA1 (patch-am) = 3686fea856a19acd3631c07f3ebfc9d2df1f12ec
+SHA1 (patch-aj) = 1343c744c3fde364b0407f24e09d0b11d5dcb8c4

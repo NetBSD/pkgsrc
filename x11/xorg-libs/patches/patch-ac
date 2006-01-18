@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.6 2005/03/21 10:06:15 adam Exp $
+$NetBSD: patch-ac,v 1.7 2006/01/18 23:53:06 xtraeme Exp $
 
---- config/cf/NetBSD.cf.in.orig	2004-08-15 09:03:36.000000000 +0900
-+++ config/cf/NetBSD.cf.in	2005-03-20 03:57:25.000000000 +0900
-@@ -123,7 +123,7 @@
- # define ThreadedX		YES
- # define HasThreadSafeAPI	YES
- # define ThreadsLibraries	-lpthread
--# define LibraryMTDefines	-DUSE_NBSD_THREADLIB
-+# define LibraryMTDefines	@@NETBSD_THREADLIB@@
+--- config/cf/NetBSD.cf.in.orig	2005-12-06 10:56:30.000000000 +0100
++++ config/cf/NetBSD.cf.in	2005-12-06 11:01:02.000000000 +0100
+@@ -126,7 +126,7 @@
+ # if ((OSMajorVersion == 2 && OSMinorVersion == 99 && OSTeenyVersion < 11) || \
+       (OSMajorVersion == 2 && OSMinorVersion < 99) || \
+       (OSMajorVersion < 2))
+-#  define LibraryMTDefines	-DUSE_NBSD_THREADLIB
++#  define LibraryMTDefines	@@NETBSD_THREADLIB@@
+ # endif
  # define SystemMTDefines	-D_REENTRANT
  # define MTSafeAPIDefines	-DXUSE_MTSAFE_API -DXNO_MTSAFE_PWDAPI
- #else 
-@@ -146,7 +146,7 @@
+@@ -150,7 +150,7 @@
  #define MkdirHierCmd		mkdir -p
  
  #undef CcCmd
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.6 2005/03/21 10:06:15 adam Exp $
  #ifndef DefaultCCOptions
  #if defined(UseInstalled)
  #define DefaultCCOptions 	/**/
-@@ -162,7 +162,7 @@
+@@ -166,7 +166,7 @@
  #endif
  #endif
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ac,v 1.6 2005/03/21 10:06:15 adam Exp $
  #define StandardCppOptions	-traditional
  #define StandardCppDefines	/**/
  #define PreProcessCmd   	CcCmd -E
-@@ -191,7 +191,7 @@
+@@ -195,7 +195,7 @@
   * Disabled for NetBSD/vax until I figure out the scheme. --CS 
   */
  #if ((OSMajorVersion > 0) && defined(i386Architecture)) || \
@@ -38,86 +38,18 @@ $NetBSD: patch-ac,v 1.6 2005/03/21 10:06:15 adam Exp $
  #  ifndef DoLoadableServer
  #  define DoLoadableServer	YES
  #  endif
-@@ -211,13 +211,7 @@
- #define HasWeakSymbols		UseElfFormat 
- 
- #ifdef i386Architecture
--# ifndef DefaultGcc2i386Opt
--#  if OSMajorVersion > 1 || (OSMajorVersion == 1 && OSMinorVersion > 2)
--    /* The GCC strength-reduce bug is fixed for NetBSD 1.3 and later */
--#   define DefaultGcc2i386Opt -O2 GccAliasingArgs
--#  endif
--# endif
--# define OptimizedCDebugFlags 	DefaultGcc2i386Opt
-+# define OptimizedCDebugFlags 	@@PKGSRC_CFLAGS@@
- # if OSMajorVersion < 1
- #  define ServerOSDefines	XFree86ServerOSDefines -DXNO_SYSCONF
- # else
-@@ -227,7 +221,7 @@
- #  define ServerExtraSysLibs	-li386
- # endif
- #else
--# define OptimizedCDebugFlags 	-O2
-+# define OptimizedCDebugFlags 	@@PKGSRC_CFLAGS@@
- # if defined(SparcArchitecture)
- #  define ServerOSDefines 	-DDDXOSINIT
- # elif defined(AlphaArchitecture)
-@@ -236,11 +230,17 @@
- #   define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME
- # elif defined(PpcArchitecture)
- #  define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME -DDDXOSINIT
-+# elif defined(AMD64Architecture)
-+#  undef OptimizedCDebugFlags
-+#  define OptimizedCDebugFlags -O2
-+#  define ServerOSDefines 	XFree86ServerOSDefines
- # else
- #  define ServerOSDefines 	/**/
- # endif
- # if defined(AlphaArchitecture)
- #  define ServerExtraSysLibs	-lalpha
-+# elif defined(AMD64Architecture)
-+#  define ServerExtraSysLibs   -lx86_64
- # else
- #  define ServerExtraSysLibs	/**/
- # endif
-@@ -280,10 +280,25 @@
- #  ifndef XFree86ConsoleDefines
- #    define XFree86ConsoleDefines	-DWSCONS_SUPPORT
- #  endif
-+#elif defined(AMD64Architecture)
-+# define ServerExtraDefines    GccGasOption XFree86ServerDefines -D_XSERVER64
-+#  ifndef XFree86ConsoleDefines
-+#    define XFree86ConsoleDefines -DWSCONS_SUPPORT -DPCVT_SUPPORT
-+#  endif
- #else
- #  define ServerExtraDefines GccGasOption
- #endif
- 
-+
-+#if defined(AMD64Architecture) && \
-+     ((OSMajorVersion < 2) || \
-+      (OSMajorVersion == 2 && OSMinorVersion < 99) || \
-+      (OSMajorVersion == 2 && OSMinorVersion == 99 && OSTeenyVersion < 16))
-+#ifndef PassHintToMMAP
-+#define PassHintToMMAP
-+#endif
-+#endif
-+
- #define StandardDefines	-DCSRG_BASED
- /* Citrus mb locale were added in 1.5P */
- #if ((OSMajorVersion > 1) || \
-@@ -400,6 +415,10 @@
+@@ -404,6 +404,10 @@
  # endif /* MTRRBuiltin */
  #endif /* i386Architecture */
  
 +#if defined(AMD64Architecture)
-+# define HasMTRRBuiltin		YES
++# define HasMTRRBuiltin                YES
 +#endif
 +
  /*
   * agpgart support (NetBSD 1.5Y and up)
   */
-@@ -588,7 +607,7 @@
+@@ -590,7 +594,7 @@
  # define BuildXInputLib          YES
  #endif
  

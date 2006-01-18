@@ -1,41 +1,13 @@
-$NetBSD: patch-ay,v 1.2 2005/03/01 19:00:11 xtraeme Exp $
+$NetBSD: patch-ay,v 1.3 2006/01/18 23:53:06 xtraeme Exp $
 
---- programs/Xserver/hw/xfree86/loader/elfloader.c.orig	2005-03-01 16:52:41.000000000 +0000
-+++ programs/Xserver/hw/xfree86/loader/elfloader.c	2005-03-01 16:53:55.000000000 +0000
-@@ -922,7 +922,7 @@
- 	    ErrorF("ELFCreateGOT() Unable to reallocate memory!!!!\n");
- 	    return FALSE;
- 	}
--#   if defined(linux) || defined(__OpenBSD__) || defined(sun)
-+#   if defined(linux) || defined(__OpenBSD__) || defined(sun) || defined(__NetBSD__)
- 	{
- 	    unsigned long page_size = getpagesize();
- 	    unsigned long round;
-@@ -1097,7 +1097,7 @@
- 	ErrorF("ELFCreatePLT() Unable to allocate memory!!!!\n");
- 	return;
-     }
--#   if defined(linux) || defined(__OpenBSD__) || defined(sun)
-+#   if defined(linux) || defined(__OpenBSD__) || defined(sun) || defined(__NetBSD__)
-     {
- 	unsigned long page_size = getpagesize();
- 	unsigned long round;
-@@ -2775,7 +2775,8 @@
- 	elffile->lsection[j].size = SecSize(i);
- 	elffile->lsection[j].flags = flags;
- 	switch (SecType(i)) {
--#if defined(linux) || defined(__OpenBSD__) || defined(sun)
-+
-+#if defined(linux) || defined(__OpenBSD__) || defined(sun) || defined(__NetBSD__)
- 	case SHT_PROGBITS:
- 	    {
- 		unsigned long page_size = getpagesize();
-@@ -2979,7 +2980,7 @@
- 	ErrorF("Unable to allocate ELF sections\n");
- 	return NULL;
-     }
--#  if defined(linux) || defined(__OpenBSD__) || defined(sun)
-+#  if defined(linux) || defined(__OpenBSD__) || defined(sun) || defined(__NetBSD__)
-     {
- 	unsigned long page_size = getpagesize();
- 	unsigned long round;
+--- programs/Xserver/hw/xfree86/os-support/Imakefile.orig	2006-01-06 17:31:16.000000000 +0000
++++ programs/Xserver/hw/xfree86/os-support/Imakefile
+@@ -67,7 +67,7 @@ OS_SUBDIR = lynxos
+ #endif
+ 
+ #if defined(KFreeBSDArchitecture) || defined(NetBSDArchitecture) || \
+-    defined(OpenBSDArchitecture)
++    defined(OpenBSDArchitecture) || defined(DragonFlyArchitecture)
+ OS_SUBDIR = bsd
+ #endif
+ 

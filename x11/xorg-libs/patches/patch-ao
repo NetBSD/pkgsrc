@@ -1,60 +1,13 @@
-$NetBSD: patch-ao,v 1.3 2004/10/20 14:33:30 reed Exp $
+$NetBSD: patch-ao,v 1.4 2006/01/18 23:53:06 xtraeme Exp $
 
---- programs/xdm/config/Imakefile.orig	2004-07-26 23:24:47.000000000 -0700
-+++ programs/xdm/config/Imakefile
-@@ -23,9 +23,9 @@ DEFAULTVT=vt7
- # define XdmbwPixmap XVendorStdFilePrefix-bw.xpm
- #endif
- 
--CHOOSERPATH = $(XDMDIR)/chooser
-+CHOOSERPATH = $(BINDIR)/chooser
- 
--XPM_DEFINES=-DXPM -DBITMAPDIR=$(XDMDIR)/pixmaps -DXDM_PIXMAP=XdmPixmap\ @@\
-+XPM_DEFINES=-DXPM -DBITMAPDIR=$(INCDIR)/X11/pixmaps -DXDM_PIXMAP=XdmPixmap\ @@\
- 	-DXDM_BWPIXMAP=XdmbwPixmap
- 
- XDMLOGDIR = $(LOGDIRECTORY)
-@@ -42,21 +42,22 @@ SU = su
- #endif
- 
- CppFileTarget(Xservers.ws,Xserv.ws.cpp,-DBINDIR=$(BINDIR) -DDEFAULTVT=$(DEFAULTVT),NullParameter)
--CppFileTarget(xdm-config,xdm-conf.cpp,-DXDMDIR=$(XDMDIR) -DXDMLOGDIR=$(XDMLOGDIR) -DXDMPIDDIR=$(XDMPIDDIR) -DSU=$(SU) -DCHOOSERPATH=$(CHOOSERPATH),NullParameter)
-+CppFileTarget(xdm-config,xdm-conf.cpp,-DXDMDIR=$(XDMDIR) -DXDMAUTHDIR=$(XDMVARDIR) -DXDMLOGDIR=$(XDMLOGDIR) -DXDMPIDDIR=$(XDMPIDDIR) -DSU=$(SU) -DCHOOSERPATH=$(CHOOSERPATH),NullParameter)
- CppFileTarget(Xresources,Xres.cpp,$(XPM_DEFINES),NullParameter)
- 
- LinkFile(Xservers,Xservers.$(SERVERSTYPE))
- 
- #if InstallXdmConfig
--InstallNonExecFile(xdm-config,$(XDMDIR))
--InstallNonExecFile(Xresources,$(XDMDIR))
--InstallNonExecFile(Xservers,$(XDMDIR))
--InstallNonExecFile(Xaccess,$(XDMDIR))
--InstallNamedProg(Xsession,Xsession,$(XDMDIR))
--InstallNamedProg(GiveConsole,GiveConsole,$(XDMDIR))
--InstallNamedProg(TakeConsole,TakeConsole,$(XDMDIR))
--InstallNamedProg(Xsetup_0,Xsetup_0,$(XDMDIR))
--InstallNamedProg(Xwilling,Xwilling,$(XDMDIR))
-+XDMEGDIR = XdmEgDir
-+InstallNonExecFile(xdm-config,$(XDMEGDIR))
-+InstallNonExecFile(Xresources,$(XDMEGDIR))
-+InstallNonExecFile(Xservers,$(XDMEGDIR))
-+InstallNonExecFile(Xaccess,$(XDMEGDIR))
-+InstallNamedProg(Xsession,Xsession,$(XDMEGDIR))
-+InstallNamedProg(GiveConsole,GiveConsole,$(XDMEGDIR))
-+InstallNamedProg(TakeConsole,TakeConsole,$(XDMEGDIR))
-+InstallNamedProg(Xsetup_0,Xsetup_0,$(XDMEGDIR))
-+InstallNamedProg(Xwilling,Xwilling,$(XDMEGDIR))
- #else
- InstallNonExecFileNoClobber(xdm-config,$(XDMDIR))
- InstallNonExecFileNoClobber(Xresources,$(XDMDIR))
-@@ -70,8 +71,8 @@ InstallNamedProgNoClobber(Xwilling,Xwill
- #endif
- 
- #if InstallXdmConfig
--InstallNonExecFile(XdmPixmap,$(XDMDIR)/pixmaps)
--InstallNonExecFile(XdmbwPixmap,$(XDMDIR)/pixmaps)
-+InstallNonExecFile(XdmPixmap,$(INCDIR)/X11/pixmaps)
-+InstallNonExecFile(XdmbwPixmap,$(INCDIR)/X11/pixmaps)
- #else
- InstallNonExecFileNoClobber(XdmPixmap,$(XDMDIR)/pixmaps)
- InstallNonExecFileNoClobber(XdmbwPixmap,$(XDMDIR)/pixmaps)
+--- config/cf/xorg.cf.orig	2005-12-06 12:40:11.000000000 +0100
++++ config/cf/xorg.cf	2005-12-06 12:40:59.000000000 +0100
+@@ -1285,6 +1285,8 @@
+ #ifndef BuildScanpci
+ # if SystemV || SystemV4 || \
+     (defined(LinuxArchitecture) && !defined(Mc68020Architecture)) || \
++    (defined(NetBSDArchitecture) && \
++    (defined(AMD64Architecture) || defined(PpcArchitecture))) || \
+     defined(i386BsdArchitecture) || defined(LynxOSArchitecture) || \
+     defined(OS2Architecture) || defined(GNUMachArchitecture) || \
+     (defined(KFreeBSDArchitecture) && defined(i386Architecture))

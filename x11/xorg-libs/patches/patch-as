@@ -1,52 +1,12 @@
-$NetBSD: patch-as,v 1.2 2005/02/21 16:45:40 hira Exp $
+$NetBSD: patch-as,v 1.3 2006/01/18 23:53:06 xtraeme Exp $
 
---- programs/Xserver/hw/xfree86/loader/loader.c.orig	2004-08-30 06:06:00.000000000 +0900
-+++ programs/Xserver/hw/xfree86/loader/loader.c	2005-02-21 10:39:41.000000000 +0900
-@@ -472,6 +472,13 @@
- #ifdef UseMMAP
-     unsigned long ret;
+--- lib/GL/dri/drm/Imakefile.orig	2006-01-06 13:44:51.000000000 +0000
++++ lib/GL/dri/drm/Imakefile
+@@ -34,6 +35,7 @@ OS_SUBDIR3 = shared-core
  
-+# if defined(__NetBSD__) && defined(__amd64__) && defined(PassHintToMMAP)
-+#  define LOADER_MMAP_AREA_SIZE (256*1024*1024)
-+#  define LOADER_MMAP_AREA_START ((2U*1024*1024*1024) - LOADER_MMAP_AREA_SIZE)
-+    static char *mm_addr = (char *)LOADER_MMAP_AREA_START;
-+# else
-+    char *mm_addr = NULL;
-+# endif
- # ifdef MmapPageAlign
-     unsigned long pagesize;
-     unsigned long new_size;
-@@ -494,21 +501,31 @@
-     if ((new_off_bias + size) > new_size)
- 	new_size += pagesize;
-     ret = (unsigned long)mmap(0, new_size, MMAP_PROT, MAP_PRIVATE
--#  ifdef __amd64__
-+#  if defined(__amd64__) && !defined(PassHintToMMAP)
- 			      | MAP_32BIT
- #  endif
- 			      , fd, new_off);
-     if (ret == -1)
- 	FatalError("mmap() failed: %s\n", strerror(errno));
-+
-+#  if defined(__amd64__) && defined(__NetBSD__) && defined(PassHintToMMAP)
-+    mm_addr += new_size:
-+#  endif
-+
-     return (void *)(ret + new_off_bias);
- # else
-     ret = (unsigned long)mmap(0, size, MMAP_PROT, MAP_PRIVATE
--#  ifdef __amd64__
-+#  if defined(__amd64__) && !defined(PassHintToMMAP)
- 			      | MAP_32BIT
- #  endif
- 			      , fd, offset + offsetbias);
-     if (ret == -1)
- 	FatalError("mmap() failed: %s\n", strerror(errno));
-+
-+#  if defined(__amd64__) && defined(__NetBSD__) && defined(PassHintToMMAP)
-+    mm_addr += (size + 4095) & ~4095;
-+#  endif
-+
-     return (void *)ret;
- # endif
- #else
+ LIBDRM_DIR = ../../../../extras/drm/libdrm
+ 
++LinkSourceFile(xf86drm.h,$(LIBDRM_DIR))
+ LinkSourceFile(xf86drm.c,$(LIBDRM_DIR))
+ 
+ LinkSourceFile(xf86drmHash.c,$(LIBDRM_DIR))

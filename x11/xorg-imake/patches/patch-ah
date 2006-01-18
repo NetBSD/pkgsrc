@@ -1,41 +1,51 @@
-$NetBSD: patch-ah,v 1.3 2005/06/07 02:43:26 xtraeme Exp $
+$NetBSD: patch-ah,v 1.4 2006/01/18 23:53:06 xtraeme Exp $
 
---- config/cf/Imake.cf.orig	2004-08-12 06:14:01.000000000 +0900
-+++ config/cf/Imake.cf	2004-11-09 20:01:31.000000000 +0900
-@@ -246,6 +246,10 @@
- #   define PpcArchitecture
- #   undef __powerpc__
- # endif
-+# ifdef __x86_64__
-+#  define AMD64Architecture
-+#  undef __x86_64__
-+# endif
- #endif /* NetBSD */
- 
- /* Systems based on kernel of NetBSD */
-@@ -253,7 +257,24 @@
- #define KNetBSDArchitecture
+--- config/cf/darwin.cf.in.orig	2005-12-06 11:18:05.000000000 +0100
++++ config/cf/darwin.cf.in	2005-12-06 11:20:10.000000000 +0100
+@@ -97,7 +97,7 @@
+  * Turn off to build on raw Darwin systems.
+  */
+ #ifndef DarwinQuartzSupport
+-# define DarwinQuartzSupport    YES
++# define DarwinQuartzSupport    @@DARWIN_USE_QUARTZ@@
  #endif
  
--#ifdef __FreeBSD__
-+#ifdef __DragonFly__
-+# define MacroIncludeFile <DragonFly.cf>
-+# define MacroFile DragonFly.cf
-+# undef __DragonFly__
-+# define DragonFlyArchitecture
-+# define FreeBSDArchitecture
-+# define KFreeBSDArchitecture
-+# ifdef __i386__
-+#  define i386BsdArchitecture
-+#  define i386Architecture
-+#  undef i386
-+# endif
-+# ifdef __amd64__
-+#  define AMD64Architecture
-+#  undef __amd64__
-+#  undef __x86_64__
-+# endif
-+#elif defined __FreeBSD__
- # define MacroIncludeFile <FreeBSD.cf>
- # define MacroFile FreeBSD.cf
- # undef __FreeBSD__
+ #if DarwinQuartzSupport
+@@ -170,7 +170,7 @@
+  * so we use the 3.1-based version in this case.
+  */
+ #if (GccMajorVersion == 3) && (GccMinorVersion == 3)
+-# define CppCmd                 /usr/bin/cpp3
++# define CppCmd                 /usr/bin/cpp
+ #else
+ # define CppCmd                 /usr/bin/cpp
+ #endif
+@@ -184,8 +184,8 @@
+ #endif
+ 
+ /* we have a gcc compatible compiler, but its not called gcc */
+-#define CcCmd                   /usr/bin/cc
+-#define CplusplusCmd            /usr/bin/c++
++#define CcCmd                   @@PKGSRC_CC@@
++#define CplusplusCmd            @@PKGSRC_CXX@@
+ 
+ /* default flags to pass to cc */
+ #ifndef DefaultCCOptions
+@@ -213,7 +213,7 @@
+ #ifdef PpcDarwinArchitecture
+ # define DarwinMachineDefines   -D__powerpc__
+ # if HasGcc3
+-#  define OptimizedCDebugFlags  -Os
++#  define OptimizedCDebugFlags  @@PKGSRC_CFLAGS@@
+ # else
+ #  define OptimizedCDebugFlags  -O2
+ # endif
+@@ -223,7 +223,7 @@
+ #ifdef i386DarwinArchitecture
+ # define DarwinMachineDefines   -D__i386__
+ # if HasGcc3
+-#  define OptimizedCDebugFlags  -Os
++#  define OptimizedCDebugFlags  @@PKGSRC_CFLAGS@@
+ # else
+ #  define OptimizedCDebugFlags  -O2 -fno-strength-reduce
+ # endif

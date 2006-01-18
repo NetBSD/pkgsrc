@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/03/02 02:07:31 hira Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/01/18 23:53:06 xtraeme Exp $
 ${X11ROOT_PREFIX}/bin/ccmakedep
 ${X11ROOT_PREFIX}/bin/cleanlinks
 ${X11ROOT_PREFIX}/bin/gccmakedep
@@ -76,6 +76,9 @@ ${X11ROOT_PREFIX}/lib/X11/config/luna.cf
 ${X11ROOT_PREFIX}/lib/X11/config/lynx.cf
 ${X11ROOT_PREFIX}/lib/X11/config/macII.cf
 ${X11ROOT_PREFIX}/lib/X11/config/mach.cf
+${X11ROOT_PREFIX}/lib/X11/config/mingw.cf
+${X11ROOT_PREFIX}/lib/X11/config/mingw.rules
+${X11ROOT_PREFIX}/lib/X11/config/mingw.tmpl
 ${X11ROOT_PREFIX}/lib/X11/config/minix.cf
 ${X11ROOT_PREFIX}/lib/X11/config/moto.cf
 ${X11ROOT_PREFIX}/lib/X11/config/ncr.cf

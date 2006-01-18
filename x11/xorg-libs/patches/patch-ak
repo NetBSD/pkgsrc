@@ -1,19 +1,63 @@
-$NetBSD: patch-ak,v 1.3 2005/01/25 17:49:57 xtraeme Exp $
+$NetBSD: patch-ak,v 1.4 2006/01/18 23:53:06 xtraeme Exp $
 
---- programs/Xserver/hw/xfree86/xf86cfg/Imakefile.orig	2005-01-21 19:27:21.000000000 +0000
-+++ programs/Xserver/hw/xfree86/xf86cfg/Imakefile	2005-01-21 19:41:06.000000000 +0000
-@@ -127,10 +127,11 @@
- DLLIB = DlLibrary
+--- programs/xdm/config/Imakefile.orig	2006-01-02 10:57:27.000000000 +0100
++++ programs/xdm/config/Imakefile	2006-01-02 10:59:46.000000000 +0100
+@@ -23,9 +23,9 @@
+ # define XdmbwPixmap XVendorStdFilePrefix-bw.xpm
  #endif
  
--LOCAL_LIBRARIES = $(XKBUILIB) $(XKBFILELIB) -lxf86config $(XXF86MISCLIB) \
--		  $(XXF86VMLIB) $(XAWLIB) $(XMULIB) $(XTOOLLIB) \
-+LOCAL_LIBRARIES = -lxf86config $(XXF86MISCLIB) \
-+		  $(XXF86VMLIB) -lXaw $(XMULIB) $(XTOOLLIB) \
- 		  $(XPMLIB) $(EXTRAXAWCLIENTLIBS) $(LOADERLIB) $(DLLIB) \
--		  $(XLIB) $(CURSESLIB) RegexLibrary -lm
-+		  $(XLIB) $(CURSESLIB) RegexLibrary -lm \
-+		  $(XKBUILIB) $(XKBFILELIB)
+-CHOOSERPATH = $(XDMDIR)/chooser
++CHOOSERPATH = $(BINDIR)/chooser
  
- NormalProgramTarget($(PROG),$(OBJS),,$(LOCAL_LIBRARIES),)
- InstallProgramWithFlags($(PROG),$(BINDIR),NullParameter)
+-XPM_DEFINES=-DXPM -DBITMAPDIR=$(XDMDIR)/pixmaps -DXDM_PIXMAP=XdmPixmap\ @@\
++XPM_DEFINES=-DXPM -DBITMAPDIR=$(INCDIR)/X11/pixmaps -DXDM_PIXMAP=XdmPixmap\ @@\
+ 	-DXDM_BWPIXMAP=XdmbwPixmap
+ 
+ XDMLOGDIR = $(LOGDIRECTORY)
+@@ -48,24 +48,23 @@
+ #endif
+ 
+ CppFileTarget(Xservers.ws,Xserv.ws.cpp,-DBINDIR=$(BINDIR) -DDEFAULTVT=$(DEFAULTVT) -DSHELL_CMD=$(SHELL_CMD),NullParameter)
+-CppFileTarget(xdm-config,xdm-conf.cpp,-DXDMDIR=$(XDMDIR) -DXDMLOGDIR=$(XDMLOGDIR) -DXDMPIDDIR=$(XDMPIDDIR) -DSU=$(SU) -DCHOOSERPATH=$(CHOOSERPATH) $(XPM_DEFINES),NullParameter)
++CppFileTarget(xdm-config,xdm-conf.cpp,-DXDMDIR=$(XDMDIR) -DXDMAUTHDIR=$(XDMVARDIR) -DXDMLOGDIR=$(XDMLOGDIR) -DXDMPIDDIR=$(XDMPIDDIR) -DSU=$(SU) -DCHOOSERPATH=$(CHOOSERPATH) $(XPM_DEFINES),NullParameter)
+ CppFileTarget(Xresources,Xres.cpp,$(XPM_DEFINES),NullParameter)
+ CppFileTarget(Xsession,Xsession.cpp,-DBINDIR=$(BINDIR) -DDEFAULTVT=$(DEFAULTVT) -DSHELL_CMD=$(SHELL_CMD),NullParameter)
+ 
+ LinkFile(Xservers,Xservers.$(SERVERSTYPE))
+ 
+ #if InstallXdmConfig
+-InstallNonExecFile(xdm-config,$(XDMDIR))
+-InstallNonExecFile(Xresources,$(XDMDIR))
+-InstallNonExecFile(Xservers,$(XDMDIR))
+-InstallNonExecFile(Xaccess,$(XDMDIR))
+-InstallNamedProg(Xsession,Xsession,$(XDMDIR))
+-InstallNamedProg(GiveConsole,GiveConsole,$(XDMDIR))
+-InstallNamedProg(TakeConsole,TakeConsole,$(XDMDIR))
+-InstallNamedProg(Xsetup_0,Xsetup_0,$(XDMDIR))
+-InstallNamedProg(Xstartup,Xstartup,$(XDMDIR))
+-InstallNamedProg(Xreset,Xreset,$(XDMDIR))
+-InstallNamedProg(Xwilling,Xwilling,$(XDMDIR))
++XDMEGDIR = XdmEgDir
++InstallNonExecFile(xdm-config,$(XDMEGDIR))
++InstallNonExecFile(Xresources,$(XDMEGDIR))
++InstallNonExecFile(Xservers,$(XDMEGDIR))
++InstallNonExecFile(Xaccess,$(XDMEGDIR))
++InstallNamedProg(Xsession,Xsession,$(XDMEGDIR))
++InstallNamedProg(GiveConsole,GiveConsole,$(XDMEGDIR))
++InstallNamedProg(TakeConsole,TakeConsole,$(XDMEGDIR))
++InstallNamedProg(Xsetup_0,Xsetup_0,$(XDMEGDIR))
++InstallNamedProg(Xwilling,Xwilling,$(XDMEGDIR))
+ #else
+ InstallNonExecFileNoClobber(xdm-config,$(XDMDIR))
+ InstallNonExecFileNoClobber(Xresources,$(XDMDIR))
+@@ -81,8 +80,8 @@
+ #endif
+ 
+ #if InstallXdmConfig
+-InstallNonExecFile(XdmPixmap,$(XDMDIR)/pixmaps)
+-InstallNonExecFile(XdmbwPixmap,$(XDMDIR)/pixmaps)
++InstallNonExecFile(XdmPixmap,$(INCDIR)/X11/pixmaps)
++InstallNonExecFile(XdmbwPixmap,$(INCDIR)/X11/pixmaps)
+ #else
+ InstallNonExecFileNoClobber(XdmPixmap,$(XDMDIR)/pixmaps)
+ InstallNonExecFileNoClobber(XdmbwPixmap,$(XDMDIR)/pixmaps)

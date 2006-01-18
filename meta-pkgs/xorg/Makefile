@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2005/12/05 20:50:37 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/18 23:53:06 xtraeme Exp $
 
 DISTNAME=	# empty
 PKGNAME=	xorg-${XORG_VER}
-PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG}
 DISTFILES=	# empty
@@ -11,7 +10,7 @@ MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.x.org/
 COMMENT=	X.org meta-package
 
-DEPENDS+=	xorg-imake>=${XORG_VER}:../../x11/xorg-imake
+DEPENDS=	xorg-imake>=${XORG_VER}:../../x11/xorg-imake
 DEPENDS+=	xorg-libs>=${XORG_VER}:../../x11/xorg-libs
 DEPENDS+=	xorg-server>=${XORG_VER}:../../x11/xorg-server
 DEPENDS+=	xorg-clients>=${XORG_VER}:../../x11/xorg-clients
@@ -22,7 +21,7 @@ DEPENDS+=	xorg-fontsMisc>=${XORG_VER}:../../fonts/xorg-fontsMisc
 DEPENDS+=	xorg-fontsCyrillic>=${XORG_VER}:../../fonts/xorg-fontsCyrillic
 DEPENDS+=	xorg-fontsTruetype>=${XORG_VER}:../../fonts/xorg-fontsTruetype
 DEPENDS+=	xorg-fontsType1>=${XORG_VER}:../../fonts/xorg-fontsType1
-DEPENDS+=	xorg-docs>=${XORG_VER}nb1:../../misc/xorg-docs
+DEPENDS+=	xorg-docs>=${XORG_VER}:../../misc/xorg-docs
 
 NO_BUILD=		yes
 NO_CHECKSUM=		yes

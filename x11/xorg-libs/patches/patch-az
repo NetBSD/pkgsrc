@@ -1,22 +1,13 @@
-$NetBSD: patch-az,v 1.1 2005/04/14 21:35:51 xtraeme Exp $
+$NetBSD: patch-az,v 1.2 2006/01/18 23:53:06 xtraeme Exp $
 
---- programs/Xserver/hw/xfree86/drivers/ati/radeon_driver.c.orig
-+++ programs/Xserver/hw/xfree86/drivers/ati/radeon_driver.c
-@@ -5748,7 +5748,7 @@ static void RADEONSave(ScrnInfoPtr pScrn
- 	 */
- 	vgaHWSave(pScrn, &hwp->SavedReg, VGA_SR_MODE); /* Save mode only */
- #else
--	vgaHWSave(pScrn, &hwp->SavedReg, VGA_SR_MODE | VGA_SR_FONTS); /* Save mode
-+	vgaHWSave(pScrn, &hwp->SavedReg, VGA_SR_ALL); /* Save mode
- 						       * & fonts & cmap
- 						       */
- #endif
-@@ -5818,7 +5818,7 @@ static void RADEONRestore(ScrnInfoPtr pS
- 	 */
- 	vgaHWRestore(pScrn, &hwp->SavedReg, VGA_SR_MODE );
- #else
--	vgaHWRestore(pScrn, &hwp->SavedReg, VGA_SR_MODE | VGA_SR_FONTS );
-+	vgaHWRestore(pScrn, &hwp->SavedReg, VGA_SR_ALL );
- #endif
- 	vgaHWLock(hwp);
-     } else {
+--- programs/xinit/startx.cpp.orig	2006-01-13 18:26:13.000000000 +0100
++++ programs/xinit/startx.cpp
+@@ -208,7 +208,7 @@ add $displayname . $mcookie
+ EOF
+ 	removelist="$displayname $removelist"
+     else
+-        dummy=$((dummy+1));
++        dummy=$(($dummy + 1));
+         XAUTH -q -f $xserverauthfile << EOF
+ add :$dummy . $authcookie
+ EOF

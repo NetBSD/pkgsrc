@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/10/16 16:56:22 tonio Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/01/18 23:53:06 xtraeme Exp $
 ${X11ROOT_PREFIX}/include/DPS/ColorSB.h
 ${X11ROOT_PREFIX}/include/DPS/ColorSBP.h
 ${X11ROOT_PREFIX}/include/DPS/DPSScrollW.h
@@ -39,14 +39,33 @@ ${X11ROOT_PREFIX}/include/GL/glxmd.h
 ${X11ROOT_PREFIX}/include/GL/glxproto.h
 ${X11ROOT_PREFIX}/include/GL/glxtokens.h
 ${X11ROOT_PREFIX}/include/GL/osmesa.h
+${X11ROOT_PREFIX}/include/X11/CallbackI.h
+${X11ROOT_PREFIX}/include/X11/ConvertI.h
+${X11ROOT_PREFIX}/include/X11/CreateI.h
 ${X11ROOT_PREFIX}/include/X11/Composite.h
 ${X11ROOT_PREFIX}/include/X11/CompositeP.h
 ${X11ROOT_PREFIX}/include/X11/ConstrainP.h
 ${X11ROOT_PREFIX}/include/X11/Constraint.h
 ${X11ROOT_PREFIX}/include/X11/Core.h
 ${X11ROOT_PREFIX}/include/X11/CoreP.h
+${X11ROOT_PREFIX}/include/X11/EventI.h
 ${X11ROOT_PREFIX}/include/X11/DECkeysym.h
 ${X11ROOT_PREFIX}/include/X11/HPkeysym.h
+${X11ROOT_PREFIX}/include/X11/HookObjI.h
+${X11ROOT_PREFIX}/include/X11/ImUtil.h
+${X11ROOT_PREFIX}/include/X11/InitialI.h
+${X11ROOT_PREFIX}/include/X11/IntrinsicI.h
+${X11ROOT_PREFIX}/include/X11/PassivGraI.h
+${X11ROOT_PREFIX}/include/X11/ResourceI.h
+${X11ROOT_PREFIX}/include/X11/SelectionI.h
+${X11ROOT_PREFIX}/include/X11/ShellI.h
+${X11ROOT_PREFIX}/include/X11/ThreadsI.h
+${X11ROOT_PREFIX}/include/X11/TranslateI.h
+${X11ROOT_PREFIX}/include/X11/VarargsI.h
+${X11ROOT_PREFIX}/include/X11/XlibConf.h
+${X11ROOT_PREFIX}/include/X11/Xregion.h
+${X11ROOT_PREFIX}/include/X11/misc.h
+${X11ROOT_PREFIX}/include/X11/os.h
 ${X11ROOT_PREFIX}/include/X11/ICE/ICE.h
 ${X11ROOT_PREFIX}/include/X11/ICE/ICEconn.h
 ${X11ROOT_PREFIX}/include/X11/ICE/ICElib.h
@@ -344,6 +363,7 @@ ${X11ROOT_PREFIX}/include/X11/extensions/shapestr.h
 ${X11ROOT_PREFIX}/include/X11/extensions/shmstr.h
 ${X11ROOT_PREFIX}/include/X11/extensions/sync.h
 ${X11ROOT_PREFIX}/include/X11/extensions/syncstr.h
+${X11ROOT_PREFIX}/include/X11/extensions/vldXvMC.h
 ${X11ROOT_PREFIX}/include/X11/extensions/xcmiscstr.h
 ${X11ROOT_PREFIX}/include/X11/extensions/xevieplaceholder.h
 ${X11ROOT_PREFIX}/include/X11/extensions/xf86bigfont.h
@@ -368,8 +388,23 @@ ${X11ROOT_PREFIX}/include/X11/extensions/xtrapproto.h
 ${X11ROOT_PREFIX}/include/X11/fonts/FS.h
 ${X11ROOT_PREFIX}/include/X11/fonts/FSlib.h
 ${X11ROOT_PREFIX}/include/X11/fonts/FSproto.h
+${X11ROOT_PREFIX}/include/X11/fonts/bdfint.h
+${X11ROOT_PREFIX}/include/X11/fonts/bitmap.h
+${X11ROOT_PREFIX}/include/X11/fonts/bufio.h
+${X11ROOT_PREFIX}/include/X11/fonts/fntfil.h
+${X11ROOT_PREFIX}/include/X11/fonts/fntfilio.h
+${X11ROOT_PREFIX}/include/X11/fonts/fntfilst.h
+${X11ROOT_PREFIX}/include/X11/fonts/font.h
+${X11ROOT_PREFIX}/include/X11/fonts/fontencc.h
+${X11ROOT_PREFIX}/include/X11/fonts/fontmisc.h
+${X11ROOT_PREFIX}/include/X11/fonts/fontmod.h
+${X11ROOT_PREFIX}/include/X11/fonts/fontshow.h
+${X11ROOT_PREFIX}/include/X11/fonts/fontstruct.h
+${X11ROOT_PREFIX}/include/X11/fonts/fontutil.h
+${X11ROOT_PREFIX}/include/X11/fonts/fontxlfd.h
 ${X11ROOT_PREFIX}/include/X11/fonts/fontenc.h
 ${X11ROOT_PREFIX}/include/X11/fonts/fsmasks.h
+${X11ROOT_PREFIX}/include/X11/fonts/pcf.h
 ${X11ROOT_PREFIX}/include/X11/keysym.h
 ${X11ROOT_PREFIX}/include/X11/keysymdef.h
 ${X11ROOT_PREFIX}/include/X11/xpm.h
@@ -495,6 +530,42 @@ ${X11ROOT_PREFIX}/${LIBMAN_DIR}/XScreenSaverUnregister.${LIBMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${LIBMAN_DIR}/XScreenSaverUnsetAttributes.${LIBMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${LIBMAN_DIR}/Xaw.${LIBMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${LIBMAN_DIR}/Xss.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86Misc.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86MiscGetKbdSettings.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86MiscGetMouseSettings.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86MiscGetSaver.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86MiscQueryExtension.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86MiscQueryVersion.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86MiscSetKbdSettings.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86MiscSetMouseSettings.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86MiscSetSaver.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidMode.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeDeleteModeLine.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeGetAllModeLines.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeGetDotClocks.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeGetGamma.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeGetGammaRamp.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeGetGammaRampSize.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeGetModeLine.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeGetMonitor.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeGetPermissions.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeGetViewPort.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeLockModeSwitch.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeModModeLine.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeQueryExtension.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeQueryVersion.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeSetClientVersion.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeSetGamma.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeSetGammaRamp.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeSetViewPort.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeSwitchMode.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeSwitchToMode.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XF86VidModeValidateModeLine.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XevieEnd.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XevieQueryVersion.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XevieSelectInput.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XevieSendEvent.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/${LIBMAN_DIR}/XevieStart.${LIBMAN_SUFFIX}
 @comment begin Darwin
 ${DARWIN_QUARTZ}${X11ROOT_PREFIX}/include/X11/extensions/applewm.h
 ${DARWIN_QUARTZ}${X11ROOT_PREFIX}/include/X11/extensions/applewmstr.h
@@ -660,6 +731,8 @@ ${X11ROOT_PREFIX}/lib/libxkbui.dylib
 ${DARWIN_QUARTZ}${X11ROOT_PREFIX}/man/man3/AppleWM.3
 @comment end Darwin
 @comment begin DragonFly
+${X11ROOT_PREFIX}/include/X11/extensions/dmxext.h
+${X11ROOT_PREFIX}/include/X11/extensions/dmxproto.h
 ${X11ROOT_PREFIX}/lib/libFS.a
 ${X11ROOT_PREFIX}/lib/libFS.so
 ${X11ROOT_PREFIX}/lib/libFS.so.6
@@ -691,11 +764,14 @@ ${X11ROOT_PREFIX}/lib/libXTrap.a
 ${X11ROOT_PREFIX}/lib/libXTrap.so
 ${X11ROOT_PREFIX}/lib/libXTrap.so.6
 ${X11ROOT_PREFIX}/lib/libXau.a
+${X11ROOT_PREFIX}/lib/libXau.so
+${X11ROOT_PREFIX}/lib/libXau.so.6
 ${X11ROOT_PREFIX}/lib/libXaw.a
 ${X11ROOT_PREFIX}/lib/libXaw.so
-${X11ROOT_PREFIX}/lib/libXaw.so.6
-${X11ROOT_PREFIX}/lib/libXaw.so.7
+${X11ROOT_PREFIX}/lib/libXaw.so.8
 ${X11ROOT_PREFIX}/lib/libXdmcp.a
+${X11ROOT_PREFIX}/lib/libXdmcp.so
+${X11ROOT_PREFIX}/lib/libXdmcp.so.6
 ${X11ROOT_PREFIX}/lib/libXext.a
 ${X11ROOT_PREFIX}/lib/libXext.so
 ${X11ROOT_PREFIX}/lib/libXext.so.6
@@ -750,6 +826,7 @@ ${X11ROOT_PREFIX}/lib/libdps.so.1
 ${X11ROOT_PREFIX}/lib/libdpstk.a
 ${X11ROOT_PREFIX}/lib/libdpstk.so
 ${X11ROOT_PREFIX}/lib/libdpstk.so.1
+${X11ROOT_PREFIX}/lib/libdmx.a
 ${X11ROOT_PREFIX}/lib/libfntstubs.a
 ${X11ROOT_PREFIX}/lib/libfontenc.a
 ${X11ROOT_PREFIX}/lib/libfontenc.so
@@ -757,9 +834,6 @@ ${X11ROOT_PREFIX}/lib/libfontenc.so.1
 ${X11ROOT_PREFIX}/lib/liboldX.a
 ${X11ROOT_PREFIX}/lib/liboldX.so
 ${X11ROOT_PREFIX}/lib/liboldX.so.6
-${X11ROOT_PREFIX}/lib/libpsres.a
-${X11ROOT_PREFIX}/lib/libpsres.so
-${X11ROOT_PREFIX}/lib/libpsres.so.1
 ${X11ROOT_PREFIX}/lib/libxf86config.a
 ${X11ROOT_PREFIX}/lib/libxkbfile.a
 ${X11ROOT_PREFIX}/lib/libxkbfile.so
@@ -884,9 +958,6 @@ ${X11ROOT_PREFIX}/lib/libfontenc.so.1
 ${X11ROOT_PREFIX}/lib/liboldX.a
 ${X11ROOT_PREFIX}/lib/liboldX.so
 ${X11ROOT_PREFIX}/lib/liboldX.so.6
-${X11ROOT_PREFIX}/lib/libpsres.a
-${X11ROOT_PREFIX}/lib/libpsres.so
-${X11ROOT_PREFIX}/lib/libpsres.so.1
 ${X11ROOT_PREFIX}/lib/libxf86config.a
 ${X11ROOT_PREFIX}/lib/libxkbfile.a
 ${X11ROOT_PREFIX}/lib/libxkbfile.so
@@ -1034,10 +1105,6 @@ ${X11ROOT_PREFIX}/lib/libfontenc.so
 ${X11ROOT_PREFIX}/lib/libfontenc.so.1
 ${X11ROOT_PREFIX}/lib/libfontenc.so.1.0
 ${X11ROOT_PREFIX}/lib/liboldX.a
-${X11ROOT_PREFIX}/lib/libpsres.a
-${X11ROOT_PREFIX}/lib/libpsres.so
-${X11ROOT_PREFIX}/lib/libpsres.so.1
-${X11ROOT_PREFIX}/lib/libpsres.so.1.0
 ${X11ROOT_PREFIX}/lib/libxf86config.a
 ${X11ROOT_PREFIX}/lib/libxkbfile.so
 ${X11ROOT_PREFIX}/lib/libxkbfile.so.1
@@ -1066,7 +1133,7 @@ ${X11ROOT_PREFIX}/lib/libGLw.so.1.0
 ${X11ROOT_PREFIX}/lib/libICE.a
 ${X11ROOT_PREFIX}/lib/libICE.so
 ${X11ROOT_PREFIX}/lib/libICE.so.6
-${X11ROOT_PREFIX}/lib/libICE.so.6.3
+${X11ROOT_PREFIX}/lib/libICE.so.6.4
 ${X11ROOT_PREFIX}/lib/libOSMesa.a
 ${X11ROOT_PREFIX}/lib/libOSMesa.so
 ${X11ROOT_PREFIX}/lib/libOSMesa.so.4
@@ -1088,6 +1155,9 @@ ${X11ROOT_PREFIX}/lib/libXTrap.so
 ${X11ROOT_PREFIX}/lib/libXTrap.so.6
 ${X11ROOT_PREFIX}/lib/libXTrap.so.6.4
 ${X11ROOT_PREFIX}/lib/libXau.a
+${X11ROOT_PREFIX}/lib/libXau.so
+${X11ROOT_PREFIX}/lib/libXau.so.6
+${X11ROOT_PREFIX}/lib/libXau.so.6.0
 ${X11ROOT_PREFIX}/lib/libXaw.a
 ${X11ROOT_PREFIX}/lib/libXaw.so
 ${X11ROOT_PREFIX}/lib/libXaw.so.6
@@ -1115,6 +1185,9 @@ ${X11ROOT_PREFIX}/lib/libXfixes.so.3.0
 ${X11ROOT_PREFIX}/lib/libXprintAppUtil.a
 ${X11ROOT_PREFIX}/lib/libXprintUtil.a
 ${X11ROOT_PREFIX}/lib/libXdmcp.a
+${X11ROOT_PREFIX}/lib/libXdmcp.so
+${X11ROOT_PREFIX}/lib/libXdmcp.so.6
+${X11ROOT_PREFIX}/lib/libXdmcp.so.6.0
 ${X11ROOT_PREFIX}/lib/libXext.a
 ${X11ROOT_PREFIX}/lib/libXext.so
 ${X11ROOT_PREFIX}/lib/libXext.so.6
@@ -1196,10 +1269,6 @@ ${X11ROOT_PREFIX}/lib/liboldX.a
 ${X11ROOT_PREFIX}/lib/liboldX.so
 ${X11ROOT_PREFIX}/lib/liboldX.so.6
 ${X11ROOT_PREFIX}/lib/liboldX.so.6.0
-${X11ROOT_PREFIX}/lib/libpsres.a
-${X11ROOT_PREFIX}/lib/libpsres.so
-${X11ROOT_PREFIX}/lib/libpsres.so.1
-${X11ROOT_PREFIX}/lib/libpsres.so.1.0
 ${X11ROOT_PREFIX}/lib/libxf86config.a
 ${X11ROOT_PREFIX}/lib/libxkbfile.a
 ${X11ROOT_PREFIX}/lib/libxkbfile.so
@@ -1278,8 +1347,6 @@ ${X11ROOT_PREFIX}/lib/libfontenc.a
 ${X11ROOT_PREFIX}/lib/libfontenc.so.3.0
 ${X11ROOT_PREFIX}/lib/liboldX.a
 ${X11ROOT_PREFIX}/lib/liboldX.so.8.0
-${X11ROOT_PREFIX}/lib/libpsres.a
-${X11ROOT_PREFIX}/lib/libpsres.so.3.0
 ${X11ROOT_PREFIX}/lib/libxf86config.a
 ${X11ROOT_PREFIX}/lib/libxkbfile.a
 ${X11ROOT_PREFIX}/lib/libxkbfile.so.2.0
@@ -1375,21 +1442,32 @@ ${X11ROOT_PREFIX}/lib/X11/locale/tscii-0/XI18N_OBJS
 ${X11ROOT_PREFIX}/lib/X11/locale/vi_VN.tcvn/XI18N_OBJS
 ${X11ROOT_PREFIX}/lib/X11/locale/vi_VN.viscii/XI18N_OBJS
 ${X11ROOT_PREFIX}/lib/X11/locale/zh_CN.UTF-8/XI18N_OBJS
+${X11ROOT_PREFIX}/lib/X11/locale/zh_CN.gb18030/XI18N_OBJS
+${X11ROOT_PREFIX}/lib/X11/locale/zh_CN.gb18030/XLC_LOCALE
+${X11ROOT_PREFIX}/lib/X11/locale/zh_CN.gb18030/Compose
 ${X11ROOT_PREFIX}/lib/X11/locale/zh_CN.gbk/XI18N_OBJS
 ${X11ROOT_PREFIX}/lib/X11/locale/zh_CN/XI18N_OBJS
+${X11ROOT_PREFIX}/lib/X11/locale/zh_HK.UTF-8/XI18N_OBJS
+${X11ROOT_PREFIX}/lib/X11/locale/zh_HK.UTF-8/XLC_LOCALE
+${X11ROOT_PREFIX}/lib/X11/locale/zh_HK.big5/XI18N_OBJS
+${X11ROOT_PREFIX}/lib/X11/locale/zh_HK.big5/Compose
 ${X11ROOT_PREFIX}/lib/X11/locale/zh_HK.big5hkscs/XI18N_OBJS
+${X11ROOT_PREFIX}/lib/X11/locale/zh_HK.big5hkscs/Compose
 ${X11ROOT_PREFIX}/lib/X11/locale/zh_TW.UTF-8/XI18N_OBJS
 ${X11ROOT_PREFIX}/lib/X11/locale/zh_TW.big5/XI18N_OBJS
 ${X11ROOT_PREFIX}/lib/X11/locale/zh_TW/XI18N_OBJS
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/lib/common
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/lib
 @comment end i18n
+@dirrm ${X11ROOT_PREFIX}/${LIBMAN_DIR}
 @dirrm ${X11ROOT_PREFIX}/lib/pkgconfig
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_TW.big5
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_TW.UTF-8
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_TW
+@dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_HK.UTF-8
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_HK.big5hkscs
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_HK.big5
+@dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_CN.gb18030
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_CN.gbk
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_CN.UTF-8
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_CN
@@ -1448,5 +1526,5 @@ ${X11ROOT_PREFIX}/lib/X11/locale/zh_TW/XI18N_OBJS
 @dirrm ${X11ROOT_PREFIX}/include/X11/Xaw
 @dirrm ${X11ROOT_PREFIX}/include/X11/SM
 @dirrm ${X11ROOT_PREFIX}/include/X11/ICE
-@dirrm ${X11ROOT_PREFIX}/include/GL
 @dirrm ${X11ROOT_PREFIX}/include/DPS
+@dirrm ${X11ROOT_PREFIX}/include/GL

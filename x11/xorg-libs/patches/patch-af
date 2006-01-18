@@ -1,55 +1,31 @@
-$NetBSD: patch-af,v 1.4 2005/03/22 14:00:25 adam Exp $
+$NetBSD: patch-af,v 1.5 2006/01/18 23:53:06 xtraeme Exp $
 
---- config/cf/darwin.cf.in.orig	Wed Dec 15 05:53:05 2004
-+++ config/cf/darwin.cf.in
-@@ -88,7 +88,7 @@ XCOMM operating system:  OSName (OSMajor
-  * Turn off to build on raw Darwin systems.
-  */
- #ifndef DarwinQuartzSupport
--# define DarwinQuartzSupport    YES
-+# define DarwinQuartzSupport    @@DARWIN_USE_QUARTZ@@
- #endif
- 
- #if DarwinQuartzSupport
-@@ -161,10 +161,10 @@ XCOMM operating system:  OSName (OSMajor
-  * so we use the 3.1-based version.
-  */
- #if OSMajorVersion >= 7
--# define CppCmd                 /usr/bin/cpp3
-+# define CppCmd                 /usr/bin/cpp -xassembler-with-cpp
- # define StandardCppOptions     -traditional -D__GNUC__
+--- programs/Xserver/hw/xfree86/drivers/ati/radeon_driver.c.orig	2006-01-02 13:23:48.000000000 +0100
++++ programs/Xserver/hw/xfree86/drivers/ati/radeon_driver.c	2006-01-02 13:24:23.000000000 +0100
+@@ -6750,7 +6750,7 @@
+            vgaHWSave(pScrn, &hwp->SavedReg, VGA_SR_MODE); /* Save mode only */
+ # else
+            /* Save mode * & fonts & cmap */
+-           vgaHWSave(pScrn, &hwp->SavedReg, VGA_SR_MODE | VGA_SR_FONTS);
++           vgaHWSave(pScrn, &hwp->SavedReg, VGA_SR_ALL);
+ # endif
+            vgaHWLock(hwp);
+        }
+@@ -6826,7 +6826,7 @@
+             */
+            vgaHWRestore(pScrn, &hwp->SavedReg, VGA_SR_MODE );
+ # else
+-           vgaHWRestore(pScrn, &hwp->SavedReg, VGA_SR_MODE | VGA_SR_FONTS );
++           vgaHWRestore(pScrn, &hwp->SavedReg, VGA_SR_ALL );
+ # endif
+            vgaHWLock(hwp);
+         } else {
+@@ -6841,7 +6841,7 @@
+ #if defined(__powerpc__)
+                vgaHWRestore(pScrn0, &hwp0->SavedReg, VGA_SR_MODE);
  #else
--# define CppCmd                 /usr/bin/cpp
-+# define CppCmd                 /usr/bin/cpp -xassembler-with-cpp
+-               vgaHWRestore(pScrn0, &hwp0->SavedReg, VGA_SR_MODE | VGA_SR_FONTS );
++               vgaHWRestore(pScrn0, &hwp0->SavedReg, VGA_SR_ALL );
  #endif
- #if HasGcc3
- # define RawCppCmd              CppCmd -undef
-@@ -173,8 +173,8 @@ XCOMM operating system:  OSName (OSMajor
- #endif
- 
- /* we have a gcc compatible compiler, but its not called gcc */
--#define CcCmd                   /usr/bin/cc
--#define CplusplusCmd            /usr/bin/c++
-+#define CcCmd                   @@PKGSRC_CC@@
-+#define CplusplusCmd            @@PKGSRC_CXX@@
- 
- /* default flags to pass to cc */
- #ifndef DefaultCCOptions
-@@ -202,7 +202,7 @@ XCOMM operating system:  OSName (OSMajor
- #ifdef PpcDarwinArchitecture
- # define DarwinMachineDefines   -D__powerpc__
- # if HasGcc3
--#  define OptimizedCDebugFlags  -Os
-+#  define OptimizedCDebugFlags  @@PKGSRC_CFLAGS@@
- # else
- #  define OptimizedCDebugFlags  -O2
- # endif
-@@ -212,7 +212,7 @@ XCOMM operating system:  OSName (OSMajor
- #ifdef i386DarwinArchitecture
- # define DarwinMachineDefines   -D__i386__
- # if HasGcc3
--#  define OptimizedCDebugFlags  -Os
-+#  define OptimizedCDebugFlags  @@PKGSRC_CFLAGS@@
- # else
- #  define OptimizedCDebugFlags  -O2 -fno-strength-reduce
- # endif
+                vgaHWLock(hwp0);
+            }
