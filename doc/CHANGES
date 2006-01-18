@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12570 2006/01/18 22:15:37 adam Exp $
+$NetBSD: CHANGES,v 1.12571 2006/01/18 22:54:52 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -389,3 +389,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/ike-scan to 1.8 [adrianp 2006-01-18]
 	Updated graphics/libwmf to 0.2.8.4 [adam 2006-01-18]
 	Updated converters/wv to 1.2.0 [adam 2006-01-18]
+	Added devel/libwhisker2 version 2.3 [adrianp 2006-01-18]
