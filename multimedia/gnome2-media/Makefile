@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2005/12/31 12:32:42 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2006/01/18 12:55:55 jmmv Exp $
 
 DISTNAME=		gnome-media-2.12.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.12/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,9 +11,9 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Set of audio/multimedia applications for GNOME2
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		gst-plugins-cdparanoia>=0.8.8:../../audio/gst-plugins-cdparanoia
-DEPENDS+=		gst-plugins-esound>=0.8.8:../../audio/gst-plugins-esound
-DEPENDS+=		gst-plugins-oss>=0.8.8:../../audio/gst-plugins-oss
+DEPENDS+=		gst-plugins0.8-cdparanoia>=0.8.8:../../audio/gst-plugins0.8-cdparanoia
+DEPENDS+=		gst-plugins0.8-esound>=0.8.8:../../audio/gst-plugins0.8-esound
+DEPENDS+=		gst-plugins0.8-oss>=0.8.8:../../audio/gst-plugins0.8-oss
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
@@ -45,8 +45,8 @@ GCONF2_SCHEMAS+=	gnome-sound-recorder.schemas
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
-.include "../../multimedia/gst-plugins/buildlink3.mk"
-.include "../../multimedia/gstreamer/buildlink3.mk"
+.include "../../multimedia/gst-plugins0.8/buildlink3.mk"
+.include "../../multimedia/gstreamer0.8/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
