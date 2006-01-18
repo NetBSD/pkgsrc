@@ -1,4 +1,4 @@
-# $NetBSD: bsd.utils.mk,v 1.1 2006/01/18 00:10:07 jlam Exp $
+# $NetBSD: bsd.utils.mk,v 1.2 2006/01/18 03:58:19 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines utility
 # and otherwise miscellaneous variables and targets.
@@ -25,10 +25,12 @@ show-depends-pkgpaths:
 	@${ECHO} ${_deppath_}
 .endfor
 
-# _DEPENDS_DEPTH_FIRST_CMD holds the command (sans arguments) to traverse
-# the dependency graph for a package.
+# _DEPENDS_WALK_CMD holds the command (sans arguments) to walk the
+# dependency graph for a package.
 #
-_DEPENDS_DEPTH_FIRST_CMD=						\
+_DEPENDS_WALK_MAKEFLAGS?=	${MAKEFLAGS}
+_DEPENDS_WALK_CMD=							\
 	${SETENV} ECHO=${TOOLS_ECHO:Q} MAKE=${MAKE:Q}			\
+		MAKEFLAGS=${_DEPENDS_WALK_MAKEFLAGS:Q}			\
 		PKGSRCDIR=${PKGSRCDIR:Q} TEST=${TOOLS_TEST:Q}		\
 	${AWK} -f ${.CURDIR}/../../mk/scripts/depends-depth-first.awk --
