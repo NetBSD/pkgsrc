@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/26 11:39:14 jmmv Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/18 21:03:26 joerg Exp $
 
---- configure.orig	2003-04-12 19:43:47.000000000 +0200
+--- configure.orig	2005-09-30 12:10:03.000000000 +0200
 +++ configure
-@@ -6071,10 +6071,7 @@ echo "${ECHO_T}$x11conf" >&6
+@@ -3077,7 +3077,7 @@ case "`uname -s`" in
+ 	Linux)
+ 		FOUND_OS="linux"
+ 		;;
+-	OpenBSD | FreeBSD | NetBSD)
++	OpenBSD | FreeBSD | NetBSD | DragonFly)
+ 		# *BSD has important stuff (from ports)
+ 		# in /usr/local ...
+ 		CFLAGS="$CFLAGS -I/usr/local/include -L/usr/local/lib"
+@@ -6822,10 +6822,7 @@ echo "${ECHO_T}$x11conf" >&6
  
  echo "$as_me:$LINENO: checking for X11 app-defaults directory" >&5
  echo $ECHO_N "checking for X11 app-defaults directory... $ECHO_C" >&6
