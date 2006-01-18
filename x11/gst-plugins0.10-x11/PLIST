@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/18 15:48:19 jmmv Exp $
+lib/gstreamer-0.10/libgstximagesink.la
+lib/gstreamer-0.10/libgstxvimagesink.la
+@comment in gstreamer0.10: @dirrm lib/gstreamer-0.10
