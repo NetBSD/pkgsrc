@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4447 2006/01/17 21:51:29 adam Exp $
+$NetBSD: TODO,v 1.4448 2006/01/18 15:52:34 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -587,8 +587,6 @@ Suggested package updates
 	o gsed-4.1.4
 	o gsharutils-4.6
 	o gss-0.0.16
-	o gst-plugins-0.10.1 [jmmv]
-	o gstreamer-0.10.1 [jmmv]
 	o gtetrinet-0.7.9
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
