@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2005/12/31 12:32:49 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2006/01/18 12:55:56 jmmv Exp $
 #
 
 DISTNAME=	control-center-2.12.1
 PKGNAME=	gnome2-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.12/}
 EXTRACT_SUFX=	.tar.bz2
@@ -56,7 +56,7 @@ BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../multimedia/gst-plugins/buildlink3.mk"
+.include "../../multimedia/gst-plugins0.8/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-menus/buildlink3.mk"

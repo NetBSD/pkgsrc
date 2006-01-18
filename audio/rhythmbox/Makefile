@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2005/12/31 12:32:32 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2006/01/18 12:55:55 jmmv Exp $
 #
 
 DISTNAME=	rhythmbox-0.8.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/0.8/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,13 +12,10 @@ HOMEPAGE=	http://www.rhythmbox.org/
 COMMENT=	Music management application for GNOME
 
 BUILD_USES_MSGFMT=	YES
-DEPENDS+=		gst-plugins-esound>=0.8.1:../../audio/gst-plugins-esound
-DEPENDS+=		gst-plugins-gnomevfs>=0.8.1:../../sysutils/gst-plugins-gnomevfs
-DEPENDS+=		gst-plugins-mad>=0.8.1:../../audio/gst-plugins-mad
-DEPENDS+=		gst-plugins-vorbis>=0.8.1:../../audio/gst-plugins-vorbis
-
-BUILDLINK_DEPENDS.gstreamer+=	gstreamer>=0.8.1
-BUILDLINK_DEPENDS.gst-plugins+=	gst-plugins>=0.8.1
+DEPENDS+=		gst-plugins0.8-esound>=0.8.1:../../audio/gst-plugins0.8-esound
+DEPENDS+=		gst-plugins0.8-gnomevfs>=0.8.1:../../sysutils/gst-plugins0.8-gnomevfs
+DEPENDS+=		gst-plugins0.8-mad>=0.8.1:../../audio/gst-plugins0.8-mad
+DEPENDS+=		gst-plugins0.8-vorbis>=0.8.1:../../audio/gst-plugins0.8-vorbis
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
@@ -38,8 +35,8 @@ GCONF2_SCHEMAS=		rhythmbox.schemas
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../multimedia/gstreamer/buildlink3.mk"
-.include "../../multimedia/gst-plugins/buildlink3.mk"
+.include "../../multimedia/gstreamer0.8/buildlink3.mk"
+.include "../../multimedia/gst-plugins0.8/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
