@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: depends-depth-first.awk,v 1.2 2006/01/18 03:58:19 jlam Exp $
+# $NetBSD: depends-depth-first.awk,v 1.3 2006/01/18 17:43:08 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -82,7 +82,6 @@
 #			value stored in the PKGSRCDIR environment variable.
 #
 # ENVIRONMENT
-#
 #	MAKEFLAGS	This contains the shell environment in the format
 #			required by make(1) that is passed to the process
 #			that outputs a package's dependencies.
