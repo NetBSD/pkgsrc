@@ -1,0 +1,24 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2006/01/18 15:41:03 jmmv Exp $
+#
+
+GST_PLUGINS0.10_TYPE=	base
+
+# Disable all drivers and features by default.
+.for driver in	alsa \
+		freetypetest \
+		gnome_vfs \
+		gst_v4l \
+		libvisual \
+		ogg \
+		oggtest \
+		pango \
+		theora \
+		vorbis \
+		vorbistest \
+		x \
+		xshm \
+		xvideo
+CONFIGURE_ARGS+=	--disable-${driver}
+.endfor
+
+.include "plugins.mk"
