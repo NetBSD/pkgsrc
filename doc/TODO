@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4450 2006/01/18 22:15:38 adam Exp $
+$NetBSD: TODO,v 1.4451 2006/01/18 23:44:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -306,6 +306,7 @@ Suggested package updates
 =========================
 
 	o 0verkill-0.16
+	o 9base-1 [pkg/32561]
 	o Cenon-3.71
 	o Chinput-3.0.1
 	o DatLib-2.15
@@ -326,6 +327,7 @@ Suggested package updates
 	o YoSucker-73
 	o aap-0.144
 	o acpi-iasl-20040715
+	o acroread7-7.0.5
 	o adocman-0.13
 	o adtool-1.3
 	o advancecomp-1.15
@@ -339,6 +341,7 @@ Suggested package updates
 	o aliados-0.2.0
 	o allegro-4.2.0
 	o amanda-*-2.4.5p1
+	o amarok-1.3.8
 	o amavis-0.3.12
 	o amule-2.1.0
 	o anjuta-2.0.1
@@ -424,8 +427,8 @@ Suggested package updates
 	o chrony-1.21
 	o cint-5.16
 	o cjk-lyx-1.3.3
-	o classpath-0.19
-	o classpath-gui-0.19
+	o classpath-0.20
+	o classpath-gui-0.20
 	o clisp-2.35 (also see PR misc/31094)
 	o clisp-2.37
 	o cmake-2.2.3
@@ -435,6 +438,7 @@ Suggested package updates
 	o compface-1.5.2
 	o conglomerate-0.9.1
 	o conserver-8.1.13
+	o cook-2.26
 	o coreutils-5.93
 	o cqcam-0.91
 	o crafty-19.5
@@ -451,7 +455,7 @@ Suggested package updates
 	o cweb-3.64a
 	o cxref-1.6a
 	o cy-login-1.5.28
-	o cygwin_lib-1.5.18.1
+	o cygwin_lib-1.5.19
 	o cyrus-sasl-2.1.22
 	o cyrus-sasl2-2.1.22
 	o dact-0.8.37
@@ -511,6 +515,7 @@ Suggested package updates
 	o evilwm-0.99.20
 	o exim-4.60
 	o exmh-2.7.2
+	o expat-2.0.0
 	o f2c-20031025
 	o faces-1.7.7
 	o fd-2.07b
@@ -521,6 +526,7 @@ Suggested package updates
 	o findutils-4.2.27
 	o flac123-0.0.9
 	o flashplayer-0.4.13
+	o fltk-1.1.7
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
@@ -587,6 +593,7 @@ Suggested package updates
 	o gsed-4.1.4
 	o gsharutils-4.6
 	o gss-0.0.16
+	o gstreamer-0.10.2
 	o gtetrinet-0.7.9
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
@@ -702,6 +709,7 @@ Suggested package updates
 	o libtool-1.5.22
 	o libwpd-0.8.3
 	o licq-core-1.3.0
+	o liferea-1.0.1
 	o lighttpd-1.4.9
 	o lilypond-2.6.3
 	o linuxsms-0.77
@@ -790,7 +798,7 @@ Suggested package updates
 	o nss_ldap-243
 	o nulib2-210
 	o nut-11.1
-	o obexftp-0.10.6
+	o obexftp-0.18
 	o objc-3.2.7
 	o odbc-postgresql-8.0.4
 	o offlineimap-4.0.11
@@ -1130,6 +1138,7 @@ Suggested package updates
 	o smlnj-110.54
 	o snes9x-1.43
 	o socat-1.4.3.0
+	o solfege-3.0.6
 	o sope-4.5.5
 	o source-highlight-2.3 [pkg/32325]
 	o sox-12.17.9
@@ -1153,7 +1162,7 @@ Suggested package updates
 	o sun-jre14-2.10
 	o suse_base-10.0
 	o svk-1.06
-	o sweep-0.8.4
+	o sweep-0.9.0
 	o swfdec-0.3.5
 	o swi-prolog-5.5.33
 	o swish-e-2.4.3
@@ -1204,7 +1213,7 @@ Suggested package updates
 	o tuxpaint-0.9.15
 	o tuxpaint-stamps-20051125
 	o twelf-1.5
-	o txt2html-2.43
+	o txt2html-2.44
 	o txt2man-1.4.8
 	o ubs-0.20
 	o ucblogo-5.5
@@ -1267,8 +1276,10 @@ Suggested package updates
 	o xlog-1.3
 	o xm7-303
 	o xmahjongg-3.7
+	o xmame-0.103
 	o xmbdfed-4.6
 	o xmcd-3.3.0
+	o xmess-0.103
 	o xmlsec1-1.2.9
 	o xmms-alarm-0.3.7
 	o xmms-crossfade-1.3.10
