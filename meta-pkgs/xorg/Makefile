@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2006/01/18 23:53:06 xtraeme Exp $
+# $NetBSD: Makefile,v 1.9 2006/01/19 19:26:43 ghen Exp $
 
 DISTNAME=	# empty
 PKGNAME=	xorg-${XORG_VER}
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG}
 DISTFILES=	# empty
@@ -14,6 +15,7 @@ DEPENDS=	xorg-imake>=${XORG_VER}:../../x11/xorg-imake
 DEPENDS+=	xorg-libs>=${XORG_VER}:../../x11/xorg-libs
 DEPENDS+=	xorg-server>=${XORG_VER}:../../x11/xorg-server
 DEPENDS+=	xorg-clients>=${XORG_VER}:../../x11/xorg-clients
+DEPENDS+=	xterm-[0-9]*:../../x11/xterm
 DEPENDS+=	xorg-fontsEncodings>=${XORG_VER}:../../fonts/xorg-fontsEncodings
 DEPENDS+=	xorg-fonts100dpi>=${XORG_VER}:../../fonts/xorg-fonts100dpi
 DEPENDS+=	xorg-fonts75dpi>=${XORG_VER}:../../fonts/xorg-fonts75dpi
