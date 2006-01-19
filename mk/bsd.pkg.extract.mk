@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.13 2005/10/12 15:18:59 rillig Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.14 2006/01/19 19:35:25 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -32,8 +32,15 @@
 #
 # The following targets are defined by bsd.pkg.extract.mk:
 #
+#    extract is the target that is invoked by the user to perform
+#	extraction.
+#
 #    do-extract is the target that causes the actual extraction of
-#	the distfiles to occur during the "extract" phase.
+#	the distfiles to occur during the "extract" phase.  This target
+#	may be overridden in a package Makefile.
+#
+#    {pre,post}-extract are the targets that are invoked before and after
+#	do-extract, and may be overridden in a package Makefile.
 #
 
 EXTRACT_ONLY?=		${DISTFILES}
@@ -181,4 +188,65 @@ do-extract: ${WRKDIR}
 	extract_file="${_DISTDIR}/${__file__}";	export extract_file;	\
 	cd ${WRKDIR}; ${EXTRACT_CMD}
 .  endfor
+.endif
+
+_EXTRACT_COOKIE=	${WRKDIR}/.extract_done
+
+_EXTRACT_TARGETS+=	checksum
+_EXTRACT_TARGETS+=	${WRKDIR}
+_EXTRACT_TARGETS+=	${PKG_DB_TMPDIR}
+_EXTRACT_TARGETS+=	acquire-extract-lock
+_EXTRACT_TARGETS+=	${_EXTRACT_COOKIE}
+_EXTRACT_TARGETS+=	release-extract-lock
+
+.ORDER: ${_EXTRACT_TARGETS}
+
+.PHONY: extract
+extract: ${_EXTRACT_TARGETS}
+
+.PHONY: acquire-extract-lock release-extract-lock
+acquire-extract-lock:
+	${_ACQUIRE_LOCK}
+release-extract-lock:
+	${_RELEASE_LOCK}
+
+${_EXTRACT_COOKIE}:
+.if ${INTERACTIVE_STAGE:Mextract} == "extract" && defined(BATCH)
+	@${ECHO} "*** The extract stage of this package requires user interaction"
+	@${ECHO} "*** Please extract manually with \"cd ${PKGDIR} && ${MAKE} extract\""
+	@${TOUCH} ${_INTERACTIVE_COOKIE}
+	@${FALSE}
+.else
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-extract DEPENDS_TARGET=${DEPENDS_TARGET:Q} PKG_PHASE=extract
+.endif
+
+_REAL_EXTRACT_TARGETS+=	extract-message
+_REAL_EXTRACT_TARGETS+=	extract-vars
+_REAL_EXTRACT_TARGETS+=	install-depends
+_REAL_EXTRACT_TARGETS+=	pre-extract
+_REAL_EXTRACT_TARGETS+=	do-extract
+_REAL_EXTRACT_TARGETS+=	post-extract
+_REAL_EXTRACT_TARGETS+=	extract-cookie
+
+.ORDER: ${_REAL_EXTRACT_TARGETS}
+
+.PHONY: extract-message
+extract-message:
+	@${ECHO_MSG} "${_PKGSRC_IN}> Extracting for ${PKGNAME}"
+
+.PHONY: extract-cookie
+extract-cookie:
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${_EXTRACT_COOKIE}
+
+.PHONY: real-extract
+real-extract: ${_REAL_EXTRACT_TARGETS}
+
+.PHONY: pre-extract post-extract
+.if !target(pre-extract)
+pre-extract:
+	@${DO_NADA}
+.endif
+.if !target(post-extract)
+post-extract:
+	@${DO_NADA}
 .endif

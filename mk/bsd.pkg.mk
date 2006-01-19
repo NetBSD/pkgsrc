@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1792 2006/01/19 16:11:10 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1793 2006/01/19 19:35:25 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -389,7 +389,6 @@ CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN_CMD:sh}
 .  endif
 .endif
 
-_EXTRACT_COOKIE=	${WRKDIR}/.extract_done
 _TOOLS_COOKIE=		${WRKDIR}/.tools_done
 _WRAPPER_COOKIE=	${WRKDIR}/.wrapper_done
 _PATCH_COOKIE=		${WRKDIR}/.patch_done
@@ -2454,11 +2453,9 @@ show-shlib-type:
 .endif
 .endif # !_USE_PLIST_MODULE
 
-.PHONY: acquire-extract-lock acquire-patch-lock acquire-tools-lock
+.PHONY: acquire-patch-lock acquire-tools-lock
 .PHONY: acquire-wrapper-lock acquire-configure-lock acquire-build-lock
 .PHONY: acquire-install-lock acquire-package-lock
-acquire-extract-lock:
-	${_ACQUIRE_LOCK}
 acquire-patch-lock:
 	${_ACQUIRE_LOCK}
 acquire-tools-lock:
@@ -2474,11 +2471,9 @@ acquire-install-lock:
 acquire-package-lock:
 	${_ACQUIRE_LOCK}
 
-.PHONY: release-extract-lock release-patch-lock release-tools-lock
+.PHONY: release-patch-lock release-tools-lock
 .PHONY: release-wrapper-lock release-configure-lock release-build-lock
 .PHONY: release-install-lock release-package-lock
-release-extract-lock:
-	${_RELEASE_LOCK}
 release-patch-lock:
 	${_RELEASE_LOCK}
 release-tools-lock:
@@ -2507,11 +2502,6 @@ release-package-lock:
 .if !target(fetch)
 fetch:
 	@cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-fetch PKG_PHASE=fetch
-.endif
-
-.PHONY: extract
-.if !target(extract)
-extract: checksum ${WRKDIR} ${PKG_DB_TMPDIR} acquire-extract-lock ${_EXTRACT_COOKIE} release-extract-lock
 .endif
 
 .PHONY: patch
@@ -2562,16 +2552,6 @@ replace: ${_PKGSRC_BUILD_TARGETS} real-replace
 .PHONY: undo-replace
 .if !target(undo-replace)
 undo-replace: real-undo-replace
-.endif
-
-${_EXTRACT_COOKIE}:
-.if ${INTERACTIVE_STAGE:Mextract} == "extract" && defined(BATCH)
-	@${ECHO} "*** The extract stage of this package requires user interaction"
-	@${ECHO} "*** Please extract manually with \"cd ${PKGDIR} && ${MAKE} extract\""
-	@${TOUCH} ${_INTERACTIVE_COOKIE}
-	@${FALSE}
-.else
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-extract DEPENDS_TARGET=${DEPENDS_TARGET:Q} PKG_PHASE=extract
 .endif
 
 ${_PATCH_COOKIE}:
@@ -2653,10 +2633,8 @@ ${_INSTALL_COOKIE}:
 ${_PACKAGE_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-package PKG_PHASE=package
 
-.PHONY: extract-message patch-message tools-message wrapper-message
+.PHONY: patch-message tools-message wrapper-message
 .PHONY: configure-message build-message test-message
-extract-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Extracting for ${PKGNAME}"
 patch-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Patching for ${PKGNAME}"
 tools-message:
@@ -2670,10 +2648,8 @@ build-message:
 test-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Testing for ${PKGNAME}"
 
-.PHONY: extract-cookie patch-cookie tools-cookie wrapper-cookie
+.PHONY: patch-cookie tools-cookie wrapper-cookie
 .PHONY: configure-cookie build-cookie test-cookie
-extract-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${_EXTRACT_COOKIE}
 patch-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG}${_GENERATE_PATCH_COOKIE}
 tools-cookie:
@@ -2688,8 +2664,6 @@ test-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${_TEST_COOKIE}
 
 .ORDER: pre-fetch do-fetch post-fetch
-.ORDER: extract-message extract-vars install-depends pre-extract do-extract post-extract extract-cookie
-.ORDER: patch-message patch-vars pre-patch do-patch post-patch patch-cookie
 .ORDER: tools-message tools-vars pre-tools do-tools post-tools tools-cookie
 .ORDER: wrapper-message wrapper-vars pre-wrapper do-wrapper post-wrapper wrapper-cookie
 .ORDER: configure-message configure-vars pre-configure pre-configure-override do-configure post-configure configure-cookie
@@ -2699,12 +2673,11 @@ test-cookie:
 # Please note that the order of the following targets is important, and
 # should not be modified (.ORDER is not recognised by make(1) in a serial
 # make i.e. without -j n)
-.PHONY: real-fetch real-extract real-patch
+.PHONY: real-fetch real-patch
 .PHONY: real-tools real-wrapper
 .PHONY: real-configure real-build real-test real-install real-package
 .PHONY: real-replace real-undo-replace
 real-fetch: pre-fetch do-fetch post-fetch
-real-extract: extract-message extract-vars install-depends pre-extract do-extract post-extract extract-cookie
 real-patch: patch-message patch-vars pre-patch do-patch post-patch patch-cookie
 real-tools: tools-message tools-vars pre-tools do-tools post-tools tools-cookie
 real-wrapper: wrapper-message wrapper-vars pre-wrapper do-wrapper post-wrapper wrapper-cookie
@@ -2783,7 +2756,7 @@ do-su-undo-replace:
 
 # Empty pre-* and post-* targets
 
-.for name in fetch extract patch tools wrapper configure build test install-script install package
+.for name in fetch patch tools wrapper configure build test install-script install package
 
 .  if !target(pre-${name})
 pre-${name}:
