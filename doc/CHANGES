@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12578 2006/01/19 21:44:10 wiz Exp $
+$NetBSD: CHANGES,v 1.12579 2006/01/19 21:45:39 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -402,3 +402,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xterm to 208 [joerg 2006-01-19]
 	Updated emulators/DatLib to 2.15 [wiz 2006-01-19]
 	Updated emulators/DatUtil to 2.27 [wiz 2006-01-19]
+	Updated meta-pkgs/xorg to 6.9.0nb1 [ghen 2006-01-19]
