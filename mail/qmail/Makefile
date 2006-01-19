@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/01/13 20:53:56 schmonz Exp $
+# $NetBSD: Makefile,v 1.44 2006/01/19 01:18:30 joerg Exp $
 #
 
 DISTNAME=		netqmail-1.05
@@ -87,14 +87,18 @@ SUBST_MESSAGE.logging=	"Setting QUEUE_EXTRA."
 
 SUBST_FILES.djbware+=	cdb_seek.c dns.c
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/README.pkgsrc
+SUBST_SED.paths+=	-e 's,@PKGNAME@,${PKGNAME},g'
+SUBST_SED.paths+=	-e 's,@PKG_INFO@,${PKG_INFO},g'
+SUBST_SED.paths+=	-e 's,@GREP@,${GREP},g'
+SUBST_STAGE.paths=	post-patch
+
 post-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}extract_file=${PKGNAME_NOREV}.tar.gz;\
 	export extract_file; cd ${WRKSRC}; ${EXTRACT_CMD};		\
 	${MV} ${PKGNAME_NOREV} ..; ${MV} ${DISTNAME}.patch ..
-
-post-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/README.pkgsrc            \
-		> ${WRKDIR}/README.pkgsrc
+	${CP} ${FILESDIR}/README.pkgsrc ${WRKDIR}/README.pkgsrc
 
 post-install:
 	# qmail's installer sets strange permissions; set them back
