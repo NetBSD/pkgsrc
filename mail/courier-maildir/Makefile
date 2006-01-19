@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/01/03 05:33:11 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/01/19 02:14:13 joerg Exp $
 
 DISTNAME=	courier-0.52.2
 PKGNAME=	${DISTNAME:S/-/-maildir-/}
@@ -48,9 +48,18 @@ CONF_FILES_PERMS=	${EGDIR}/sharedindexupdate			\
 			${PKG_SYSCONFDIR}/sharedindexupdate		\
 			${ROOT_USER} ${ROOT_GROUP} 0755
 
-post-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/sharedindexupdate.sh	\
-		> ${WRKDIR}/sharedindexupdate.sh
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/sharedindexupdate.sh
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,@MKDIR@,${MKDIR},g'
+SUBST_SED.paths+=	-e 's,@RM@,${RM},g'
+SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
+SUBST_SED.paths+=	-e 's,@TEST@,${TEST},g'
+SUBST_STAGE.paths=	post-patch
+
+post-extract:
+	${CP} ${FILESDIR}/sharedindexupdate.sh ${WRKDIR}/sharedindexupdate.sh
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
