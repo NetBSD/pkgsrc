@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/06/16 06:57:51 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/01/19 18:13:38 joerg Exp $
 #
 
 DISTNAME=		xm71010s
@@ -34,4 +34,5 @@ post-extract:
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/vm/xm7 ${PREFIX}/bin
 
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
