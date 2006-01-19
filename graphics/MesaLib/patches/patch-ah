@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.2 2005/07/12 21:40:35 kristerw Exp $
+$NetBSD: patch-ah,v 1.3 2006/01/19 12:53:17 adam Exp $
 
---- configs/default.orig	2004-10-25 17:21:49.000000000 +0000
+--- configs/default.orig	2005-10-25 01:35:14.000000000 +0200
 +++ configs/default
 @@ -14,10 +14,6 @@ MESA_TINY=1
  DRM_SOURCE_PATH=$(TOP)/../drm
@@ -13,7 +13,7 @@ $NetBSD: patch-ah,v 1.2 2005/07/12 21:40:35 kristerw Exp $
  GLU_CFLAGS = 
  
  # Misc tools and flags
-@@ -52,7 +48,7 @@ GLW_SOURCES = GLwDrawA.c
+@@ -56,7 +52,7 @@ GLW_SOURCES = GLwDrawA.c
  
  # Directories
  LIB_DIR = $(TOP)/lib
@@ -22,12 +22,12 @@ $NetBSD: patch-ah,v 1.2 2005/07/12 21:40:35 kristerw Exp $
  SRC_DIRS = mesa glu glut/glx glw
  GLU_DIRS = sgi
  DRIVER_DIRS = x11 osmesa
-@@ -60,7 +56,7 @@ PROGRAM_DIRS = demos redbook samples xde
- 
+@@ -66,7 +62,7 @@ PROGRAM_DIRS = demos redbook samples xde
  
  # Library/program dependencies
--GL_LIB_DEPS = -lX11 -lXext -lm -lpthread
-+GL_LIB_DEPS = -lX11 -lXext -lm ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+ EXTRA_LIB_PATH ?=
+-GL_LIB_DEPS = $(EXTRA_LIB_PATH) -lX11 -lXext -lm -lpthread
++GL_LIB_DEPS = $(EXTRA_LIB_PATH) -lX11 -lXext -lm ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
  OSMESA_LIB_DEPS = -L$(LIB_DIR) -l$(GL_LIB)
  GLU_LIB_DEPS = -L$(LIB_DIR) -l$(GL_LIB) -lm
- GLUT_LIB_DEPS = -L$(LIB_DIR) -l$(GLU_LIB) -l$(GL_LIB) -lX11 -lXmu -lXt -lXi -lm
+ GLUT_LIB_DEPS = -L$(LIB_DIR) -l$(GLU_LIB) -l$(GL_LIB) $(EXTRA_LIB_PATH) -lX11 -lXmu -lXt -lXi -lm
