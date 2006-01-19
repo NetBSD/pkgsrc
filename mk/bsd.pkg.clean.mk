@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.clean.mk,v 1.2 2006/01/19 16:19:37 jlam Exp $
+# $NetBSD: bsd.pkg.clean.mk,v 1.3 2006/01/19 16:24:51 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "clean" phase.
@@ -61,7 +61,7 @@ do-clean:
 		fi;							\
         fi
 .  if defined(WRKOBJDIR)
-        -${_PKG_SILENT}${_PKG_DEBUG}					\
+	-${_PKG_SILENT}${_PKG_DEBUG}					\
 	${RMDIR} ${BUILD_DIR} 2>/dev/null;				\
 	${RM} -f ${WRKDIR_BASENAME}
 .  endif
