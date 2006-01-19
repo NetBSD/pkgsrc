@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4451 2006/01/18 23:44:37 wiz Exp $
+$NetBSD: TODO,v 1.4452 2006/01/19 04:26:43 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1138,7 +1138,6 @@ Suggested package updates
 	o smlnj-110.54
 	o snes9x-1.43
 	o socat-1.4.3.0
-	o solfege-3.0.6
 	o sope-4.5.5
 	o source-highlight-2.3 [pkg/32325]
 	o sox-12.17.9
