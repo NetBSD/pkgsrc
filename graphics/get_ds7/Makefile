@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/08/06 06:19:19 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/01/19 23:00:24 jlam Exp $
 #
 
 DISTNAME=	get_ds7_1.2.4
@@ -15,7 +15,6 @@ COMMENT=	Read pictures from a FUJIFILM DS-7(DS series) digital camera
 USE_TOOLS+=	perl:run
 
 WRKSRC=		${WRKDIR}/ds-7_1.2.4
-DECOMPRESS_CMD=	${CAT}
 
 PERL5_CONFIGURE=	no
 NO_BUILD=		yes
