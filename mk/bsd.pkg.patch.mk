@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.patch.mk,v 1.20 2005/09/28 10:09:33 rillig Exp $
+# $NetBSD: bsd.pkg.patch.mk,v 1.21 2006/01/19 20:32:17 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
@@ -56,8 +56,15 @@
 #
 # The following targets are defined by bsd.pkg.patch.mk:
 #
+#    patch is the target that is invoked by the user to perform the
+#	"patch" action.
+#
 #    do-patch is the target that causes the actual patching of the
-#	extracted sources to occur during the "patch" phase.
+#	extracted sources to occur during the "patch" phase.  This
+#	target may be overridden in a package Makefile.
+#
+#    {pre,post}-patch are the targets that are invoked before and after
+#	do-patch, and may be overridden in a package Makefile.
 #
 
 .if (defined(PATCHFILES) && !empty(PATCHFILES)) || \
@@ -270,4 +277,56 @@ do-pkgsrc-patch:
 		done;							\
 		${_PKGSRC_PATCH_FAIL};					\
 	fi
+.endif
+
+_PATCH_COOKIE=		${WRKDIR}/.patch_done
+
+_PATCH_TARGETS+=	extract
+_PATCH_TARGETS+=	acquire-patch-lock
+_PATCH_TARGETS+=	${_PATCH_COOKIE}
+_PATCH_TARGETS+=	release-patch-lock
+
+.ORDER: ${_PATCH_TARGETS}
+
+.PHONY: patch
+patch: ${_PATCH_TARGETS}
+
+.PHONY: acquire-patch-lock release-patch-lock
+acquire-patch-lock:
+	${_ACQUIRE_LOCK}
+release-patch-lock:
+	${_RELEASE_LOCK}
+
+${_PATCH_COOKIE}:
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-patch PKG_PHASE=patch
+
+_REAL_PATCH_TARGETS+=	patch-message
+_REAL_PATCH_TARGETS+=	patch-vars
+_REAL_PATCH_TARGETS+=	pre-patch
+_REAL_PATCH_TARGETS+=	do-patch
+_REAL_PATCH_TARGETS+=	post-patch
+_REAL_PATCH_TARGETS+=	patch-cookie
+
+.ORDER: ${_REAL_PATCH_TARGETS}
+
+.PHONY: patch-message
+patch-message:
+	@${ECHO_MSG} "${_PKGSRC_IN}> Patching for ${PKGNAME}"
+
+.PHONY: patch-cookie
+patch-cookie:
+	${_PKG_SILENT}${_PKG_DEBUG}${_GENERATE_PATCH_COOKIE}
+
+.PHONY: real-patch
+
+real-patch: ${_REAL_PATCH_TARGETS}
+
+.PHONY: pre-patch post-patch
+.if !target(pre-patch)
+pre-patch:
+	@${DO_NADA}
+.endif
+.if !target(post-patch)
+post-patch:
+	@${DO_NADA}
 .endif
