@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/01/19 11:23:44 tron Exp $
+# $NetBSD: Makefile,v 1.37 2006/01/19 14:51:38 tron Exp $
 
 DISTNAME=		elm2.5.8
 PKGNAME=		elm-2.5.8
@@ -18,14 +18,20 @@ HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-d
 
+.include "../../mk/bsd.prefs.mk"
+
+.if (${OPSYS} == Darwin)
+LIBC=			/usr/lib/libSystem.dylib
+.else
+LIBC=			/usr/lib/libc.so
+.endif
+
 pre-configure:
 	${CP} ${FILESDIR}/config.sh ${WRKSRC}/config.sh.orig
 	${SED} -e 's:PREFIX:${PREFIX}:g' \
-		${WRKSRC}/config.sh.orig > ${WRKSRC}/config.sh.tmp
-	${SED} -e 's:LOCALBASE:${LOCALBASE}:g' \
-		${WRKSRC}/config.sh.tmp > ${WRKSRC}/config.sh.tmp2
-	${SED} -e 's:@CC@:${CC}:g' \
-		${WRKSRC}/config.sh.tmp2 > ${WRKSRC}/config.sh
+	  -e 's:LOCALBASE:${LOCALBASE}:g' \
+	  -e 's:LIBC:${LIBC}:g' \
+	  ${WRKSRC}/config.sh.orig > ${WRKSRC}/config.sh
 	${MV} ${WRKSRC}/nls/LANGS ${WRKSRC}/nls/LANGS.tmpl
 	${SED} -e 's:__PREFIX:'${PREFIX}':g' < ${WRKSRC}/nls/LANGS.tmpl > ${WRKSRC}/nls/LANGS
 
