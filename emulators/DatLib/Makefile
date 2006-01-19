@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/01/01 19:35:18 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/01/19 21:42:46 wiz Exp $
 #
 
-DISTNAME=		datlib213
-PKGNAME=		DatLib-2.13
+DISTNAME=		datlib215
+PKGNAME=		DatLib-2.15
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.logiqx.com/Tools/DatLib/
 EXTRACT_SUFX=		.zip
@@ -31,7 +31,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/src/misc/*.h ${PREFIX}/include/DatLib/misc
 	${INSTALL_LIB} ${WRKSRC}/obj/libdatlib.a ${PREFIX}/lib/libdatlib.a
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/DatLib
-	${INSTALL_DATA} ${WRKSRC}/datlib.txt ${PREFIX}/share/doc/DatLib
+	${INSTALL_DATA} ${WRKSRC}/*.txt ${PREFIX}/share/doc/DatLib
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
