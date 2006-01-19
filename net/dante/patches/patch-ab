@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2006/01/12 23:37:31 joerg Exp $
+$NetBSD: patch-ab,v 1.7 2006/01/19 18:53:00 joerg Exp $
 
---- configure.orig	2005-07-14 11:22:39.000000000 +0000
+--- configure.orig	2005-07-14 13:22:39.000000000 +0200
 +++ configure
 @@ -19864,7 +19864,6 @@ else
  echo "${ECHO_T}no" >&6
@@ -24,15 +24,23 @@ $NetBSD: patch-ab,v 1.6 2006/01/12 23:37:31 joerg Exp $
  );
  int
  main ()
-@@ -25352,7 +25356,11 @@ cat >>confdefs.h <<_ACEOF
+@@ -25351,9 +25355,18 @@ cat >>confdefs.h <<_ACEOF
+ #define HAVE_PROT_GETHOSTBYADDR_1 const char *
  _ACEOF
  
- cat >>confdefs.h <<_ACEOF
-+#if defined(__DragonFly__)
+-cat >>confdefs.h <<_ACEOF
++case "$host_os" in
++dragonfly*)
++	cat >>confdefs.h <<_ACEOF
  #define HAVE_PROT_GETHOSTBYADDR_2 int
-+#else
-+#define HAVE_PROT_GETHOSTBYADDR_2 socklen_t
-+#endif
  _ACEOF
++;;
++*)
++	cat >>confdefs.h <<_ACEOF
++#define HAVE_PROT_GETHOSTBYADDR_2 socklen_t
++_ACEOF
++;;
++esac
  
  cat >>confdefs.h <<_ACEOF
+ #define HAVE_PROT_GETHOSTBYADDR_3 int
