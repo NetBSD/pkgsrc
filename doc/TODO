@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4453 2006/01/19 12:56:11 adam Exp $
+$NetBSD: TODO,v 1.4454 2006/01/19 17:48:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -565,7 +565,9 @@ Suggested package updates
 	o glabels-2.0.4
 	o glade2-2.12.1
 	o gld-1.6
+	o glib-2.8.6
 	o gliv-1.9.4
+	o glpk-4.9
 	o gmime-2.1.17 [pkg/32487]
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -1159,7 +1161,7 @@ Suggested package updates
 	o suse_base-10.0
 	o svk-1.06
 	o sweep-0.9.0
-	o swfdec-0.3.5
+	o swfdec-0.3.6
 	o swi-prolog-5.5.33
 	o swish-e-2.4.3
 	o sylpheed-claws-1.0.5
