@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/29 06:21:59 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/01/19 01:46:56 joerg Exp $
 #
 
 DISTNAME=		hf6to4-1.3
@@ -18,13 +18,20 @@ NOT_FOR_PLATFORM+=	Interix-*-* # no IPv6 support or ifconfig command
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
 CONF_FILES+=	${PREFIX}/share/examples/hf6to4/hf6to4.conf ${PKG_SYSCONFDIR}/hf6to4.conf
 
 INSTALLATION_DIRS=	man/man8 sbin
 
-do-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/hf6to4 > ${WRKSRC}/hf6to4
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	hf6to4
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
+SUBST_STAGE.paths=	post-patch
+
+post-extract:
+	${CP} ${FILESDIR}/hf6to4 ${WRKSRC}/hf6to4
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/hf6to4

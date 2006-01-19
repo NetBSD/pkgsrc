@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@SH@
 #
-# $NetBSD: hf6to4,v 1.4 2005/05/30 22:49:43 hubertf Exp $
+# $NetBSD: hf6to4,v 1.5 2006/01/19 01:46:56 joerg Exp $
 #
 # Copyright (c) 2000-2005 Hubert Feyrer <hubert@feyrer.de>
 # All rights reserved.
@@ -36,7 +36,7 @@
 # hf6to4 - Setup 6to4 IPv6, for NetBSD (and others)
 #
 
-etcdir="/usr/pkg/etc";
+etcdir="@PKG_SYSCONFDIR@";
 
 not=false
 verbose=false
