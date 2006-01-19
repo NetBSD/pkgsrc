@@ -1,16 +1,18 @@
-$NetBSD: patch-aa,v 1.6 2005/09/18 13:51:09 taca Exp $
+$NetBSD: patch-aa,v 1.7 2006/01/19 23:58:28 joerg Exp $
 
---- Makefile.orig	2005-09-06 14:59:53.000000000 +0900
+--- Makefile.orig	2005-09-06 05:59:53.000000000 +0000
 +++ Makefile
-@@ -21,6 +21,7 @@ CC_linux = gcc -pthread
+@@ -20,7 +20,9 @@ CC_win32 = gcc -mno-cygwin
+ CC_linux = gcc -pthread
  CC_linux64 = $(CC_linux) -m64
  CC_solaris = gcc
++CC_dragonfly = cc
  CC_freebsd = gcc -pthread
 +CC_netbsd = cc
  CC_tru64 = cc
  CC_irix = cc -n32 -woff 1110
  CC_hpux = cc -Ae +DAportable
-@@ -31,7 +32,7 @@ CC = $(CC_$(OS))
+@@ -31,7 +33,7 @@ CC = $(CC_$(OS))
  # Optimise/debug compilation
  
  #OPTIM = -Wall -g
@@ -19,7 +21,7 @@ $NetBSD: patch-aa,v 1.6 2005/09/18 13:51:09 taca Exp $
  
  # Location of gmp include and library
  #
-@@ -46,19 +47,19 @@ OPTIM = -Wall -O3
+@@ -46,19 +48,19 @@ OPTIM = -Wall -O3
  # BFINC = /usr/include/openssl
  # BFLIB = -lcrypto
  
@@ -45,7 +47,7 @@ $NetBSD: patch-aa,v 1.6 2005/09/18 13:51:09 taca Exp $
  
  #
  # Tools needed for Perl "POD"-format documentation conversion.
-@@ -74,9 +75,9 @@ POD2MAN = $(PERL) -S pod2man$(BAT_$(OS))
+@@ -74,9 +76,9 @@ POD2MAN = $(PERL) -S pod2man$(BAT_$(OS))
  
  # Installation directories for the Linux/Solaris/*NIX World
  
@@ -57,7 +59,7 @@ $NetBSD: patch-aa,v 1.6 2005/09/18 13:51:09 taca Exp $
  MANDIR = $(ROOTDIR)/man/man1
  
  # This is a BSD-style install
-@@ -87,6 +88,7 @@ INSTALL_linux = install -c
+@@ -87,6 +89,7 @@ INSTALL_linux = install -c
  INSTALL_linux64 = $(INSTALL_linux)
  INSTALL_solaris = /usr/ucb/install -c
  INSTALL_freebsd = install -c
@@ -65,10 +67,11 @@ $NetBSD: patch-aa,v 1.6 2005/09/18 13:51:09 taca Exp $
  INSTALL_tru64 = installbsd -c
  INSTALL_irix = install -c
  INSTALL_hpux = install -c
-@@ -148,12 +150,13 @@ DEFINES_linux = -DHAVE_PTHREADS
+@@ -148,12 +151,14 @@ DEFINES_linux = -DHAVE_PTHREADS
  DEFINES_linux64 = $(DEFINES_linux)
  DEFINES_solaris = -D_REENTRANT -DHAVE_PTHREADS
  DEFINES_freebsd = -DHAVE_PTHREADS -DBUGGY_FORK_WITH_THREADS
++DEFINES_dragonfly = -DHAVE_PTHREADS -DBUGGY_FORK_WITH_THREADS
 +DEFINES_netbsd =
  DEFINES_tru64 = -D_REENTRANT -DHAVE_PTHREADS
  DEFINES_irix = -D_REENTRANT -DHAVE_PTHREADS -Dinline=
@@ -80,15 +83,16 @@ $NetBSD: patch-aa,v 1.6 2005/09/18 13:51:09 taca Exp $
  
  # Suffix for executables
  
-@@ -167,6 +170,7 @@ OSLIBS_linux = -lpthread
+@@ -167,6 +172,8 @@ OSLIBS_linux = -lpthread
  OSLIBS_linux64 = $(OSLIBS_linux)
  OSLIBS_solaris = -lsocket -lnsl -lthread
  OSLIBS_freebsd =
++OSLIBS_dragonfly = -lcrypto -lbz2 -lz
 +OSLIBS_netbsd = -lcrypto -lbz2 -lz
  OSLIBS_tru64 = -lpthread
  OSLIBS_irix = -lpthread
  OSLIBS_hpux = -lpthread -lnsl
-@@ -186,9 +190,10 @@ SERVICEOBJ = $(SERVICEOBJ_$(OS))
+@@ -186,9 +193,10 @@ SERVICEOBJ = $(SERVICEOBJ_$(OS))
  #### You REALLY shouldn't have to modify anything beyond here ...
  ####
  
@@ -101,7 +105,7 @@ $NetBSD: patch-aa,v 1.6 2005/09/18 13:51:09 taca Exp $
  
  OBJS = zebedee.o sha_func.o huge.o $(GETOPTOBJ) $(SERVICEOBJ)
  
-@@ -196,17 +201,17 @@ ZBDFILES = server.zbd vncviewer.zbd vncs
+@@ -196,17 +204,17 @@ ZBDFILES = server.zbd vncviewer.zbd vncs
  	client1.key client2.key clients.id
  
  TXTFILES = README.txt LICENCE.txt GPL2.txt CHANGES.txt NOTICE.txt \
@@ -122,7 +126,7 @@ $NetBSD: patch-aa,v 1.6 2005/09/18 13:51:09 taca Exp $
  
  huge.o : huge.h
  
-@@ -236,12 +241,12 @@ ftpgw.tcl.html : ftpgw.tcl.pod
+@@ -236,12 +244,12 @@ ftpgw.tcl.html : ftpgw.tcl.pod
  
  install : precheck zebedee$(EXE) zebedee.1 ftpgw.tcl.1 $(ZBDFILES) $(TXTFILES)
  	-mkdir -p $(BINDIR) $(MANDIR) $(ZBDDIR)
