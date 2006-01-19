@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12575 2006/01/19 12:56:11 adam Exp $
+$NetBSD: CHANGES,v 1.12576 2006/01/19 17:56:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -398,3 +398,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/MesaLib to 6.4.1 [adam 2006-01-19]
 	Updated graphics/glu to 6.4.1 [adam 2006-01-19]
 	Updated graphics/glut to 6.4.1 [adam 2006-01-19]
+	Updated devel/glib2 to 2.8.6 [wiz 2006-01-19]
