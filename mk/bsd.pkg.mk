@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1791 2006/01/18 20:18:04 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1792 2006/01/19 16:11:10 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -59,7 +59,6 @@ build-defs-message: ${WRKDIR}
 ############################################################################
 
 CHECK_SHLIBS?=		YES	# run check-shlibs after install
-CLEANDEPENDS?=		NO
 DEINSTALLDEPENDS?=	NO	# add -R to pkg_delete
 MKCRYPTO?=		YES	# build crypto packages by default
 NOCLEAN?=		NO	# don't clean up after update
@@ -829,6 +828,9 @@ USE_TOOLS+=	gzip
 
 # Check
 .include "../../mk/bsd.pkg.check.mk"
+
+# Clean
+.include "../../mk/bsd.pkg.clean.mk"
 
 # Tools
 .include "../../mk/tools/bsd.tools.mk"
@@ -3090,59 +3092,11 @@ mirror-distfiles:
 
 # Cleaning up
 
-.PHONY: pre-clean
-.if !target(pre-clean)
-pre-clean:
-	@${DO_NADA}
-.endif
-
-.PHONY: clean
-.if !target(clean)
-clean: pre-clean
-.  if (${CLEANDEPENDS} != "NO") && (!empty(BUILD_DEPENDS) || !empty(DEPENDS))
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} clean-depends
-.  endif
-	@${ECHO_MSG} "${_PKGSRC_IN}> Cleaning for ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -d ${WRKDIR} ]; then					\
-		if [ -w ${WRKDIR} ]; then				\
-			${RM} -rf ${WRKDIR};				\
-		else							\
-			${ECHO_MSG} "${_PKGSRC_IN}> ${WRKDIR} not writable, skipping"; \
-		fi;							\
-	fi
-.  if defined(WRKOBJDIR)
-	-${_PKG_SILENT}${_PKG_DEBUG}					\
-	${RMDIR} ${BUILD_DIR} 2>/dev/null;				\
-	${RM} -f ${WRKDIR_BASENAME}
-.  endif
-.endif
-
-
-.PHONY: clean-depends
-.if !target(clean-depends)
-clean-depends:
-.  if !empty(BUILD_DEPENDS) || !empty(DEPENDS)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	for i in `${MAKE} ${MAKEFLAGS} show-all-depends-dirs-excl`; do 	\
-		cd ${.CURDIR}/../../$$i &&				\
-		${MAKE} ${MAKEFLAGS} CLEANDEPENDS=NO clean;		\
-	done
-.  endif
-.endif
-
 .PHONY: pre-distclean
 .if !target(pre-distclean)
 pre-distclean:
 	@${DO_NADA}
 .endif
-
-
-.PHONY: cleandir
-.if !target(cleandir)
-cleandir: clean
-.endif
-
 
 .PHONY: distclean
 .if !target(distclean)
