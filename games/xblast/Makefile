@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/01/12 23:49:58 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2006/01/19 18:14:49 joerg Exp $
 #
 
 DISTNAME=		xblast-2.6.beta-sound
@@ -33,4 +33,5 @@ post-build:
 post-install:
 	${RM} ${PREFIX}/${IMAKE_MAN_DIR}/xbsndsrv.${IMAKE_MAN_SUFFIX}
 
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
