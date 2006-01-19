@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2006/01/01 19:35:18 wiz Exp $
+$NetBSD: distinfo,v 1.11 2006/01/19 21:42:46 wiz Exp $
 
-SHA1 (datlib213.zip) = 4de1b93e46403bf22178d2589d12b5673d5844f7
-RMD160 (datlib213.zip) = 9e35cb8bc7b23ea740a507e23a99ee454707791e
-Size (datlib213.zip) = 85880 bytes
+SHA1 (datlib215.zip) = 3ced57deacf7380ef9a3f57f7450339aee9fc900
+RMD160 (datlib215.zip) = 55d3eb18ffaefa48d4e6d8547b8b9ccbafb1e5d6
+Size (datlib215.zip) = 89283 bytes
 SHA1 (patch-aa) = c589d437d71f9342cb15b1b0e731169b274bd6b0
 SHA1 (patch-ab) = e01959114bafc63ae29fcde587b507f67e1c69b2
 SHA1 (patch-ac) = 55d7c856fc86aa40e625bcbde401b2c66b1d5b0c
