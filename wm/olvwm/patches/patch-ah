@@ -1,8 +1,16 @@
-$NetBSD: patch-ah,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
+$NetBSD: patch-ah,v 1.2 2006/01/19 23:15:59 joerg Exp $
 
---- virtual.c.orig	Sat Jan  8 00:36:29 2000
-+++ virtual.c	Sat Jan  8 00:37:54 2000
-@@ -69,6 +69,9 @@
+--- virtual.c.orig	2000-03-02 21:41:11.000000000 +0000
++++ virtual.c
+@@ -4,6 +4,7 @@
+  */
+ 
+ #include <sys/types.h>
++#include <limits.h>
+ #include <stdio.h>
+ #include <string.h>
+ #include <dirent.h>
+@@ -69,6 +70,9 @@ extern Button	*MakeUpLeftButton(),*MakeL
  
  extern char	*ExpandPath();
  
@@ -12,7 +20,21 @@ $NetBSD: patch-ah,v 1.1.1.1 2000/12/12 02:03:48 wiz Exp $
  /*
   * Semantic action associated with each of the buttons above.  These must
   * be in the same order as the button array; it would be better if the Button
-@@ -2108,7 +2111,9 @@
+@@ -1982,8 +1986,13 @@ struct _menu	*menu;
+ DIR	*dir;
+ struct dirent	*ent;
+ Button	*b;
++#if defined(NAME_MAX)
++char	s[NAME_MAX], dirname[MAXPATHLEN - NAME_MAX], *newname, *ExpandPath();
++char	pattern[NAME_MAX];
++#else
+ char	s[MAXNAMLEN], dirname[MAXPATHLEN - MAXNAMLEN], *newname, *ExpandPath();
+ char	pattern[MAXNAMLEN];
++#endif
+ extern int AppMenuFunc();
+ MenuCache	*menuCache;
+ int		slot;
+@@ -2108,7 +2117,9 @@ int val;
      }
  }
  
