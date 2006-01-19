@@ -1,21 +1,31 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/07/13 14:52:39 adam Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/19 11:18:41 adam Exp $
 
---- /dev/null	2005-07-13 16:20:21.000000000 +0000
+--- /dev/null	2006-01-19 12:14:22.000000000 +0100
 +++ Makefile
-@@ -0,0 +1,16 @@
-+OBJS = optipng.o opngio.o opngreduc.o cbitset.o osys.o
+@@ -0,0 +1,26 @@
++OBJS=	optipng.o opngio.o opngreduc.o cbitset.o osys.o \
++	pngxread.o pngxrbmp.o pngxrgif.o pngxrpnm.o \
++	gifread.o pnmerror.o pnmread.o pnmwrite.o
++
++CPPFLAGS=	-I${PREFIX}/include -Ilib/pngxtern -Isrc
 +
 +all: $(OBJS)
-+	$(CC) -o optipng $(LDFLAGS) $(OBJS) -lz -lpng
++	$(CC) -o optipng $(LDFLAGS) $(OBJS) -lm -lz -lpng
 +
-+.c.o:
-+	$(CC) -c $(CFLAGS) -I${PREFIX}/include $*.c
++optipng.o:   src/optipng.c   src/opng.h src/osys.h src/cbitset.h src/cexcept.h
++opngio.o:    src/opngio.c    src/opng.h
++opngreduc.o: src/opngreduc.c src/opng.h
++cbitset.o:   src/cbitset.c   src/cbitset.h
++osys.o:      src/osys.c      src/osys.h
 +
-+optipng.o  : optipng.c   opng.h osys.h cbitset.h cexcept.h
-+opngio.o   : opngio.c    opng.h
-+opngreduc.o: opngreduc.c opng.h
-+cbitset.o  : cbitset.c   cbitset.h
-+osys.o     : osys.c      osys.h
++gifread.o:   lib/pngxtern/gif/gifread.c		lib/pngxtern/gif/gifread.h
++pnmerror.o:  lib/pngxtern/pnm/pnmerror.c	lib/pngxtern/pnm/pnmio.h
++pnmread.o:   lib/pngxtern/pnm/pnmread.c		lib/pngxtern/pnm/pnmio.h
++pnmwrite.o:  lib/pngxtern/pnm/pnmwrite.c	lib/pngxtern/pnm/pnmio.h
++pngxread.o:  lib/pngxtern/pngxread.c		lib/pngxtern/pngxtern.h
++pngxrbmp.o:  lib/pngxtern/pngxrbmp.c		lib/pngxtern/pngxtern.h 
++pngxrgif.o:  lib/pngxtern/pngxrgif.c		lib/pngxtern/pngxtern.h 
++pngxrpnm.o:  lib/pngxtern/pngxrpnm.c		lib/pngxtern/pngxtern.h 
 +
 +install:
 +	${BSD_INSTALL_PROGRAM} optipng ${PREFIX}/bin
