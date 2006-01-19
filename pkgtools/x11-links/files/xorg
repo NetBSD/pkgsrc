@@ -1,4 +1,4 @@
-# $NetBSD: xorg,v 1.1 2005/07/25 20:54:00 reed Exp $
+# $NetBSD: xorg,v 1.2 2006/01/19 01:05:24 reed Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported Xorg (and some XFree) distributions, minus the set of files
@@ -156,6 +156,7 @@ include/X11/Xft/XftFreetype.h
 include/X11/Xfuncproto.h
 include/X11/Xfuncs.h
 include/X11/Xlib.h
+include/X11/XlibConf.h
 include/X11/Xlibint.h
 include/X11/Xlocale.h
 include/X11/Xmd.h
