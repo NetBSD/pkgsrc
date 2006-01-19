@@ -1,4 +1,4 @@
-# $NetBSD: bsd.utils.mk,v 1.4 2006/01/18 20:18:04 jlam Exp $
+# $NetBSD: bsd.utils.mk,v 1.5 2006/01/19 00:40:00 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines utility
 # and otherwise miscellaneous variables and targets.
@@ -44,11 +44,11 @@ _DEPENDS_WALK_CMD=							\
 #
 .PHONY: show-all-depends-dirs
 show-all-depends-dirs:
-	@(${_DEPENDS_WALK_CMD} -r ${PKGPATH})
+	@${_DEPENDS_WALK_CMD} -r ${PKGPATH}
 
 # show-all-depends-dirs-excl prints a list of every dependency, implied and
 # direct", of the current package.
 #
 .PHONY: show-all-depends-dirs-excl
 show-all-depends-dirs-excl:
-	@(${_DEPENDS_WALK_CMD} ${PKGPATH})
+	@${_DEPENDS_WALK_CMD} ${PKGPATH}
