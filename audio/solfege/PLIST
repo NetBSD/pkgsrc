@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/01/13 23:34:53 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/01/19 01:23:36 schmonz Exp $
 bin/lessonfile_editor
 bin/solfege
 man/man1/lessonfile_editor.1
@@ -448,6 +448,7 @@ share/solfege/src/identifybpm.py
 share/solfege/src/idtone.py
 share/solfege/src/inputwidgets.py
 share/solfege/src/instrumentselector.py
+share/solfege/src/languages.py
 share/solfege/src/learning_tree_editor.py
 share/solfege/src/lessonfile.py
 share/solfege/src/lessonfile_editor_main.py
