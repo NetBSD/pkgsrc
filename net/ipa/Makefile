@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/29 06:21:59 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/01/19 01:51:48 joerg Exp $
 #
 
 DISTNAME=	ipa-1.3.6
@@ -39,12 +39,11 @@ RCD_SCRIPT_SRC.ipa=	${FILESDIR}/ipa.sh
 RCD_SCRIPT_SRC.ipa=	${FILESDIR}/ipa.generic
 .endif
 
-post-patch:
-	@cd ${WRKSRC}/man &&					\
-	for f in ipa.5 ipa.8 ipa.conf.5 ipastat.8; do		\
-		${MV} $${f} $${f}.orig;				\
-		${SED} ${FILES_SUBST_SED} $${f}.orig > $${f};	\
-	done
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	man/ipa.5 man/ipa.8 man/ipa.conf.5 man/ipastat.8
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_STAGE.paths=	post-patch
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ipa
