@@ -1,14 +1,16 @@
-$NetBSD: distinfo,v 1.13 2005/02/24 08:45:02 agc Exp $
+$NetBSD: distinfo,v 1.14 2006/01/19 12:53:17 adam Exp $
 
-SHA1 (Mesa-6.2.1/MesaLib-6.2.1.tar.bz2) = 7c4fb46ae17b066e85e90592ace496ac6b36c189
-RMD160 (Mesa-6.2.1/MesaLib-6.2.1.tar.bz2) = cfc5e8db61289c017ff20dd6b4c6db5c7b66855b
-Size (Mesa-6.2.1/MesaLib-6.2.1.tar.bz2) = 1627520 bytes
-SHA1 (Mesa-6.2.1/MesaDemos-6.2.1.tar.bz2) = f8da791e365eec633a70c4b5a76d96d27838e20b
-RMD160 (Mesa-6.2.1/MesaDemos-6.2.1.tar.bz2) = 62b3ebc47e822c4704b69c9888e74bae12a1391b
-Size (Mesa-6.2.1/MesaDemos-6.2.1.tar.bz2) = 1004511 bytes
+SHA1 (Mesa-6.4.1/MesaLib-6.4.1.tar.bz2) = efb70276ccd9cd13dbd7d5e581213a5ca3e4ef25
+RMD160 (Mesa-6.4.1/MesaLib-6.4.1.tar.bz2) = e3a54d6442fa5d6e446bb0b6704bd22c31fb4927
+Size (Mesa-6.4.1/MesaLib-6.4.1.tar.bz2) = 2913887 bytes
+SHA1 (Mesa-6.4.1/MesaGLUT-6.4.1.tar.bz2) = b28f0dcee182604646e0e7d6aaaea25d816bacce
+RMD160 (Mesa-6.4.1/MesaGLUT-6.4.1.tar.bz2) = a09583b05c551852f5b4bc9688bca8a713c5f3bc
+Size (Mesa-6.4.1/MesaGLUT-6.4.1.tar.bz2) = 270793 bytes
+SHA1 (Mesa-6.4.1/MesaDemos-6.4.1.tar.bz2) = ae7a13ed55dfac9dde13464df0c4ac98ac6f7669
+RMD160 (Mesa-6.4.1/MesaDemos-6.4.1.tar.bz2) = 3cff02a195e2aa558d3b5dbbfe15e03ee280df62
+Size (Mesa-6.4.1/MesaDemos-6.4.1.tar.bz2) = 819391 bytes
 SHA1 (patch-aa) = 4be9b5fadff758d3bcaea22abc5a61e89ccadbe0
 SHA1 (patch-ab) = 50050f26563f739a54173ab75b2d24b4ca4529f4
-SHA1 (patch-ac) = 3640b405d9402b6a8e96a257813f116f5502740b
-SHA1 (patch-ad) = 41a417d37ad82a99a3b1e7ef4c54f052947a8a1b
+SHA1 (patch-ac) = ebaaf755d35bd7f82fe93cff9bb98abee6bbf415
 SHA1 (patch-af) = a66af6ebab7569d85693a9fa58b2d8f9b35149c1
-SHA1 (patch-ah) = 8ccfd1734accf9ed3920d42e9208eef5a9d233cf
+SHA1 (patch-ah) = 02f1c4ac8a41999454cbebe5d91167fafc7f554e

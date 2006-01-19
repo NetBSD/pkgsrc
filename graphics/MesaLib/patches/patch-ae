@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.6 2005/06/05 15:39:06 minskim Exp $
+$NetBSD: patch-ae,v 1.7 2006/01/19 12:53:17 adam Exp $
 
---- src/glw/Makefile.orig	2004-06-25 17:51:39.000000000 -0500
+--- src/glw/Makefile.orig	2005-07-26 07:55:56.000000000 +0200
 +++ src/glw/Makefile
 @@ -17,7 +17,7 @@ OBJECTS = $(GLW_SOURCES:.c=.o)
  ##### RULES #####
@@ -11,17 +11,18 @@ $NetBSD: patch-ae,v 1.6 2005/06/05 15:39:06 minskim Exp $
  
  
  
-@@ -33,9 +33,10 @@ clean:
+@@ -33,10 +33,10 @@ clean:
  
  # Make the library
  $(LIB_DIR)/$(GLW_LIB_NAME): $(OBJECTS)
--	CC=$(CC) CXX=$(CXX) $(TOP)/bin/mklib -o $(GLW_LIB) -major $(MAJOR) -minor $(MINOR) \
--		-patch $(TINY) $(MKLIB_OPTIONS) -install $(LIB_DIR) \
+-	$(TOP)/bin/mklib -o $(GLW_LIB) -linker '$(CC)' \
+-		-major $(MAJOR) -minor $(MINOR) -patch $(TINY) \
+-		$(MKLIB_OPTIONS) -install $(LIB_DIR) \
 -		$(GLW_LIB_DEPS) $(OBJECTS)
-+	${LIBTOOL} --mode=link ${CC} -o ${GLW_LIB_NAME:.so=.la} ${OBJECTS:.o=.lo} \
-+		-rpath ${PREFIX}/lib -version-info ${MAJOR}:${MINOR} \
-+		-L${X11BASE}/lib ${GLW_LIB_DEPS:M-l*:S|-lGL|libGL.la}} \
-+		-R ${X11BASE}/lib
++	${LIBTOOL} --mode=link ${CC} -o ${GLW_LIB_NAME:.so=.la} \
++		${OBJECTS:.o=.lo} -rpath ${PREFIX}/lib \
++		-version-info ${MAJOR}:${MINOR} -L${X11BASE}/lib \
++		${GLW_LIB_DEPS:S|-lGL|../mesa/libGL.la|} -Wl,-R${X11BASE}/lib
  
  
  #

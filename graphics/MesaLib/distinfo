@@ -1,18 +1,21 @@
-$NetBSD: distinfo,v 1.32 2005/11/08 16:41:30 tv Exp $
+$NetBSD: distinfo,v 1.33 2006/01/19 12:53:17 adam Exp $
 
-SHA1 (Mesa-6.2.1/MesaLib-6.2.1.tar.bz2) = 7c4fb46ae17b066e85e90592ace496ac6b36c189
-RMD160 (Mesa-6.2.1/MesaLib-6.2.1.tar.bz2) = cfc5e8db61289c017ff20dd6b4c6db5c7b66855b
-Size (Mesa-6.2.1/MesaLib-6.2.1.tar.bz2) = 1627520 bytes
-SHA1 (Mesa-6.2.1/MesaDemos-6.2.1.tar.bz2) = f8da791e365eec633a70c4b5a76d96d27838e20b
-RMD160 (Mesa-6.2.1/MesaDemos-6.2.1.tar.bz2) = 62b3ebc47e822c4704b69c9888e74bae12a1391b
-Size (Mesa-6.2.1/MesaDemos-6.2.1.tar.bz2) = 1004511 bytes
+SHA1 (Mesa-6.4.1/MesaLib-6.4.1.tar.bz2) = efb70276ccd9cd13dbd7d5e581213a5ca3e4ef25
+RMD160 (Mesa-6.4.1/MesaLib-6.4.1.tar.bz2) = e3a54d6442fa5d6e446bb0b6704bd22c31fb4927
+Size (Mesa-6.4.1/MesaLib-6.4.1.tar.bz2) = 2913887 bytes
+SHA1 (Mesa-6.4.1/MesaGLUT-6.4.1.tar.bz2) = b28f0dcee182604646e0e7d6aaaea25d816bacce
+RMD160 (Mesa-6.4.1/MesaGLUT-6.4.1.tar.bz2) = a09583b05c551852f5b4bc9688bca8a713c5f3bc
+Size (Mesa-6.4.1/MesaGLUT-6.4.1.tar.bz2) = 270793 bytes
+SHA1 (Mesa-6.4.1/MesaDemos-6.4.1.tar.bz2) = ae7a13ed55dfac9dde13464df0c4ac98ac6f7669
+RMD160 (Mesa-6.4.1/MesaDemos-6.4.1.tar.bz2) = 3cff02a195e2aa558d3b5dbbfe15e03ee280df62
+Size (Mesa-6.4.1/MesaDemos-6.4.1.tar.bz2) = 819391 bytes
 SHA1 (patch-aa) = 90457ea124a42150e3a37b48e1e0691597668606
 SHA1 (patch-ab) = c257a57d4570576f160e9a4c029384718402c1bd
-SHA1 (patch-ac) = 1791e47aa5a0e9d86002cf4c76dc66338e235fac
-SHA1 (patch-ad) = 297981dfd609dab0b213ac75324e07c2364a2b27
-SHA1 (patch-ae) = a92133c77b1b958dcfe9b37ddc317d6ff31157d0
-SHA1 (patch-af) = 8f77d0a0e7c63de6bcc44a653767ccd04107c98c
-SHA1 (patch-ag) = 3d05125b389c26b04884775f3f631247faa8a716
-SHA1 (patch-ah) = 0c0a4d18531d2bc9ea1be83e89f373be5609f0e7
+SHA1 (patch-ac) = a12c3538907aaa63184371037c0f70924861fbe4
+SHA1 (patch-ad) = e926180243a180bc80b0332f2bcacc14b7c1f13b
+SHA1 (patch-ae) = c7dd8f4b9db5241acdd0f850162b8b4116cd93bd
+SHA1 (patch-af) = 323ceab5653127cf233e66311a947c6718edb14c
+SHA1 (patch-ag) = 722234c02093e0d3b10659fa83bb14c7f2e7a8ac
+SHA1 (patch-ah) = b9ee33c497b8abe2af004a4f13219a19f413f30e
 SHA1 (patch-ai) = 3c5e4cc1e054514111d50c1d01257f4647b14558
-SHA1 (patch-aj) = 8282697af31605d07176943d7cf7e8f413e212de
+SHA1 (patch-aj) = a805947e1aaf73a798fd3a8c6e39bf1bd62afc3a

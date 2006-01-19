@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.2 2004/10/26 13:57:47 adam Exp $
+$NetBSD: patch-ah,v 1.3 2006/01/19 12:53:17 adam Exp $
 
---- configs/default.orig	2004-10-25 17:21:49.000000000 +0000
+--- configs/default.orig	2005-10-25 01:35:14.000000000 +0200
 +++ configs/default
-@@ -14,10 +14,6 @@ MESA_TINY=0
+@@ -14,10 +14,6 @@ MESA_TINY=1
  DRM_SOURCE_PATH=$(TOP)/../drm
  
  # Compiler and flags
@@ -13,7 +13,7 @@ $NetBSD: patch-ah,v 1.2 2004/10/26 13:57:47 adam Exp $
  GLU_CFLAGS = 
  
  # Misc tools and flags
-@@ -52,7 +48,7 @@ GLW_SOURCES = GLwDrawA.c
+@@ -56,7 +52,7 @@ GLW_SOURCES = GLwDrawA.c
  
  # Directories
  LIB_DIR = $(TOP)/lib
