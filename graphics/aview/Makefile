@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/29 06:21:42 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/01/19 01:40:55 joerg Exp $
 #
 
 DISTNAME=	aview-1.3.0rc1
@@ -21,15 +21,15 @@ USE_LIBTOOL=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${MACHINE_ARCH} == "i386")
-FILES_SUBST+= BIN_PROGRAMS="aview aaflip"
-.else
-FILES_SUBST+= BIN_PROGRAMS="aview"
-.endif
+SUBST_CLASSES+=		programs
+SUBST_FILES.programs=	Makefile.in
+SUBST_STAGE.programs=	post-patch
 
-pre-configure:
-	@${SED} ${FILES_SUBST_SED} ${WRKSRC}/Makefile.in > ${WRKDIR}/Makefile.in
-	@${MV} ${WRKDIR}/Makefile.in ${WRKSRC}/
+.if (${MACHINE_ARCH} == "i386")
+SUBST_SED.programs+=	-e 's,@BIN_PROGRAMS@,aview aaflip,g'
+.else
+SUBST_SED.programs+=	-e 's,@BIN_PROGRAMS@,aview,g'
+.endif
 
 post-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
