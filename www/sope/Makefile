@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/01/06 15:10:07 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/19 22:15:58 joerg Exp $
 #
 
 DISTNAME=		sope-4.5.4-nevermind-r878
@@ -23,11 +23,18 @@ CONFIGURE_ARGS+=	--disable-debug
 CONFIG_SHELL=		${PREFIX}/bin/bash
 MAKE_ENV+=		ADDITIONAL_OBJCFLAGS="-Wno-import"
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${CONFIGURE_SCRIPT}
+SUBST_SED.paths+=	-e 's,/usr/local,${PREFIX},g'
+SUBST_STAGE.paths=	pre-configure
+
 pre-configure:
-	cd ${WRKSRC}						&&	\
-	${CP} ${CONFIGURE_SCRIPT} ${CONFIGURE_SCRIPT}.bak	&&	\
-	${SED} < ${CONFIGURE_SCRIPT}.bak > ${CONFIGURE_SCRIPT}		\
-		-e 's|/usr/local|${PREFIX}|g'
+	for f in ${WRKSRC}/*/config.guess ${WRKSRC}/*/*/config.guess; do \
+	    ${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess $$f; \
+	done
+	for f in ${WRKSRC}/*/config.sub ${WRKSRC}/*/*/config.sub; do \
+	    ${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub $$f; \
+	done
 
 post-configure:
 	cd ${WRKSRC}/sope-core/NGStreams			&&	\
