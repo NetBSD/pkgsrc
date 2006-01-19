@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/01/10 12:39:04 ghen Exp $
+# $NetBSD: Makefile,v 1.42 2006/01/19 02:31:12 joerg Exp $
 
 DISTNAME=		dovecot-0.99.14
 PKGREVISION=		2
@@ -35,12 +35,10 @@ CONF_FILES=	${EGDIR}/dovecot.conf.default ${PKG_SYSCONFDIR}/dovecot.conf
 INSTALLATION_DIRS=	libexec/dovecot sbin share/doc/dovecot		\
 			share/examples/dovecot
 
-post-configure:
-	@cd ${WRKSRC};							\
-	for i in dovecot-example.conf; do				\
-		${SED} ${FILES_SUBST_SED} $$i > $$i.new;		\
-		${MV} -f $$i.new $$i;					\
-	done
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	dovecot-example.conf
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_STAGE.paths=	post-patch
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
