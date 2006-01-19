@@ -1,12 +1,12 @@
 # /bin/sh
 #
-# $NetBSD: shlib-type,v 1.1 2006/01/12 23:43:57 jlam Exp $
+# $NetBSD: shlib-type,v 1.2 2006/01/19 17:24:44 jlam Exp $
 #
 # This code is derived from software contributed to The NetBSD Foundation
 # by Alistair Crooks.
 #
 # This script returns the the library format for the platform.  If the
-# library format is "ELF/a.out", then a small program is cmopiled to
+# library format is "ELF/a.out", then a small program is compiled to
 # determine the correct object format (either ELF or a.out).
 #
 
