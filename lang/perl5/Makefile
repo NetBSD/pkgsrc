@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2006/01/15 07:40:30 jlam Exp $
+# $NetBSD: Makefile,v 1.116 2006/01/19 02:09:09 joerg Exp $
 
 DISTNAME=	perl-5.8.7
 PKGREVISION=	8
@@ -251,10 +251,17 @@ SUBST_FILES.dirmode=	installhtml installman installperl		\
 			lib/ExtUtils/Install.pm
 SUBST_SED.dirmode=	-e "s/755/${PKGDIRMODE}/g;/umask(/d"
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/perllink
+SUBST_SED.paths+=	-e 's,@PERL5@,${PERL5},g'
+SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
+SUBST_STAGE.paths=	post-patch
+
 # Replace the base Sys-Syslog module with the fixed version.
 post-extract:
 	${RM} -fr ${WRKSRC}/ext/Sys/Syslog
 	${CP} -r ${WRKDIR}/${SYS_SYSLOG} ${WRKSRC}/ext/Sys/Syslog
+	${CP} ${FILESDIR}/perllink.in ${WRKDIR}/perllink
 
 # It's tough to guess which hints file will be used, so add our modifications
 # to all of them:
@@ -320,10 +327,6 @@ PERL5_PACKLIST=		.packlist
 FILES_SUBST+=		PERL5_COMMENT=\#
 FILES_SUBST+=		PERL5_PACKLIST=
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
-
-post-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/perllink.in		\
-		> ${WRKDIR}/perllink
 
 post-install: perl5-post-install
 
