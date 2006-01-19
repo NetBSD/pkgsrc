@@ -1,8 +1,16 @@
-$NetBSD: patch-ad,v 1.1.1.1 2002/08/20 00:39:55 fredb Exp $
+$NetBSD: patch-ad,v 1.2 2006/01/19 22:44:27 joerg Exp $
 
 --- src/www-con.c.orig	Fri Dec  8 09:20:47 2000
 +++ src/www-con.c
-@@ -31,6 +31,7 @@
+@@ -15,6 +15,7 @@
+ #include <dirent.h>
+ #include <sys/time.h>
+ #include <assert.h>
++#include <errno.h>
+ 
+ 
+ /* From seanm@storm.ca  Fri Dec  8 04:44:43 2000 */
+@@ -31,14 +32,13 @@
  
  #if defined(NETBSD) || defined(FreeBSD)
  #include <sys/filio.h>
@@ -10,7 +18,15 @@ $NetBSD: patch-ad,v 1.1.1.1 2002/08/20 00:39:55 fredb Exp $
  #endif
  
  #ifndef FD_SETSIZE
-@@ -225,8 +226,11 @@
+ #define FD_SETSIZE 256
+ #endif
+ 
+-extern int errno;
+-
+ #include "../libnut/mosaic-types.h"
+ #include "../libnut/system.h"
+ #include "../libhtmlw/HTML.h"
+@@ -225,8 +225,11 @@ static enum InIpV HTParseInet (SockA4 *s
  	}
  /* manage only non numeric adresses for IPV6 */
  /* RFC 2133 */
@@ -23,7 +39,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2002/08/20 00:39:55 fredb Exp $
  
  	if (phost) {			/* try IPV6 */
  #ifdef DEBUG_IPV6
-@@ -270,9 +274,12 @@
+@@ -270,9 +273,12 @@ static enum InIpV HTParseInet (SockA4 *s
  			if (cached4_host && (strcmp (cached4_host, host) == 0)){
  				memcpy(&sin4->sin_addr, cached4_phost_h_addr, cached4_phost_h_length);
  			} else {
