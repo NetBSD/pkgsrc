@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/07 06:47:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/19 04:41:09 schmonz Exp $
 #
 
 DISTNAME=		tinycdb_0.75
@@ -20,6 +20,6 @@ SUBST_FILES.paths=	Makefile
 SUBST_SED.paths=	-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_SED.paths+=	-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'
 SUBST_SED.paths+=	-e 's|@PKGMANDIR@|${PKGMANDIR}|g'
-SUBST_MESSAGE.paths=	"Configuring pkgsrc paths."
+SUBST_MESSAGE.paths=	Configuring pkgsrc paths.
 
 .include "../../mk/bsd.pkg.mk"
