@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/07/13 14:52:39 adam Exp $
+$NetBSD: patch-ab,v 1.2 2006/01/19 11:18:41 adam Exp $
 
---- opng.h.orig	2005-07-13 16:41:40.000000000 +0000
-+++ opng.h
-@@ -33,9 +33,6 @@
- 
+--- src/opng.h.orig	2006-01-19 08:59:26.000000000 +0100
++++ src/opng.h
+@@ -34,9 +34,6 @@
  #include "png.h"
+ #include "pngxtern.h"
  
 -#if !(PNG_LIBPNG_BUILD_TYPE & PNG_LIBPNG_BUILD_PRIVATE)
--#error This program requires the BUNDLED libpng version 1.0.x-optipng
+-#error This program requires the BUNDLED libpng version 1.2.x-optipng
 -#endif
  
  
