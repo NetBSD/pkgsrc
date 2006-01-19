@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2006/01/13 23:34:53 schmonz Exp $
+$NetBSD: distinfo,v 1.4 2006/01/19 01:23:36 schmonz Exp $
 
-SHA1 (solfege-3.0.5.tar.gz) = 9d9449239749cfc25d0cef95f75a9935597e5c79
-RMD160 (solfege-3.0.5.tar.gz) = ef4ac68c0aa7783f5253817b0537208aa2698e9f
-Size (solfege-3.0.5.tar.gz) = 831996 bytes
+SHA1 (solfege-3.0.6.tar.gz) = 86282293adbcfd62ce86e7b0c3418cc3e78dec34
+RMD160 (solfege-3.0.6.tar.gz) = c32df8008e1385e0746a0532abb122b1b2fb374e
+Size (solfege-3.0.6.tar.gz) = 848784 bytes
 SHA1 (patch-aa) = aed03ee233649212f28bd928742fedd8bdb41ded

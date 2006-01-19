@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/01/13 23:34:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/19 01:23:36 schmonz Exp $
 #
 
-DISTNAME=		solfege-3.0.5
-PKGREVISION=		1
+DISTNAME=		solfege-3.0.6
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=solfege/}
 
@@ -23,8 +22,8 @@ PYTHON_VERSIONS_ACCEPTED=	24 23
 PYTHON_PATCH_SCRIPTS=	*.py *.py.in */*.py */*.py.in
 
 EGDIR=			${PREFIX}/share/examples/solfege
-CONF_FILES=		${EGDIR}/${PKGBASE}/solfege ${PKG_SYSCONFDIR}/solfege
-INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
+CONF_FILES+=		${EGDIR}/${PKGBASE}/solfege ${PKG_SYSCONFDIR}/solfege
+INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
 
 INSTALLATION_DIRS=	${EGDIR}
 
