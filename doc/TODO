@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4452 2006/01/19 04:26:43 schmonz Exp $
+$NetBSD: TODO,v 1.4453 2006/01/19 12:56:11 adam Exp $
 
 Suggested new packages
 ======================
@@ -315,9 +315,6 @@ Suggested package updates
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
 	o GridSim-3.3
-	o Mesa-6.4.1
-	o MesaDemos-6.4.1
-	o MesaLib-6.4.1
 	o PAM-0.80
 	o REminiscence-0.1.8
 	o SmartEiffel-2.1

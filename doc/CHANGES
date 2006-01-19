@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12574 2006/01/19 11:20:18 adam Exp $
+$NetBSD: CHANGES,v 1.12575 2006/01/19 12:56:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -393,3 +393,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated meta-pkgs/xorg to 6.9.0 [xtraeme 2006-01-18]
 	Updated audio/solfege to 3.0.6 [schmonz 2006-01-19]
 	Updated graphics/optipng to 0.5 [adam 2006-01-19]
+	Updated graphics/Mesa to 6.4.1 [adam 2006-01-19]
+	Updated graphics/MesaDemos to 6.4.1 [adam 2006-01-19]
+	Updated graphics/MesaLib to 6.4.1 [adam 2006-01-19]
+	Updated graphics/glu to 6.4.1 [adam 2006-01-19]
+	Updated graphics/glut to 6.4.1 [adam 2006-01-19]
