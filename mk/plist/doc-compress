@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: doc-compress,v 1.2 2006/01/13 20:03:26 jlam Exp $
+# $NetBSD: doc-compress,v 1.3 2006/01/19 17:22:26 jlam Exp $
 #
 # This script is derived from software contributed to The NetBSD Foundation
 # by Alistair Crooks.
@@ -9,6 +9,40 @@
 # It handles symlinks by recreating the symlinks to point to the
 # compressed or uncompressed targets.
 #
+
+######################################################################
+#
+# NAME
+#	doc-compress -- handle compression of PLIST entries
+#
+# SYNOPSIS
+#	doc-compress [-v] [-z] prefix
+#
+# DESCRIPTION
+#	doc-compress handles compression of files passed in via standard
+#	input.  The file paths must be relative to the specified prefix.
+#	doc-compress handles symlinks to compressed files intelligently by
+#	symlinking to the compressed target if compression is desired, and
+#	similarly for decompression.
+#
+# OPTIONS
+#	The following command line arguments are supported.
+#
+#	-v	Output the action taken for each file (compressing,
+#		decompressing, or symlinking) to standard output.
+#
+#	-z	Compress the files.  By default, the files are decompressed.
+#
+# ENVIRONMENT
+#	MANZ	This variable controls the default action taken.  If "yes",
+#		then this is equivalent to specifying the "-z" option.
+#
+#	PKG_VERBOSE
+#		This controls the default verbosity of the output.  If
+#		non-empty, then this is equivalent to specifying the "-v"
+#		option.
+#
+######################################################################
 
 : ${ECHO=echo}
 : ${EXPR=expr}
@@ -25,15 +59,17 @@ usage() {
 	${ECHO} 1>&2 "usage: $self [-v] [-z] prefix"
 }
 
+compress=no
+verbose=no
+prefix=/nonexistent
+
 case "$MANZ" in
 [yY][eE][sS])	compress=yes ;;
-*)		compress=no ;;
 esac
 case "$PKG_VERBOSE" in
-"")		verbose=no ;;
-*)		verbose=yes ;;
+"")	;;
+*)	verbose=yes ;;
 esac
-prefix=/nonexistent
 
 # Process optional arguments
 while ${TEST} $# -gt 0; do
