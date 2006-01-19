@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2006/01/01 19:36:34 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/01/19 21:43:08 wiz Exp $
 #
 
-DISTNAME=		dutil225
-PKGNAME=		DatUtil-2.25
+DISTNAME=		dutil227
+PKGNAME=		DatUtil-2.27
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.logiqx.com/Tools/DatUtil/
 EXTRACT_SUFX=		.zip
@@ -19,7 +19,7 @@ EXTRACT_CMD_OPTS.zip=	-Laaqo
 
 INSTALLATION_DIRS=	bin
 
-BUILDLINK_DEPENDS.DatLib+=	DatLib>=2.13
+BUILDLINK_DEPENDS.DatLib+=	DatLib>=2.15
 
 post-extract:
 	${MKDIR} ${WRKSRC}/obj
@@ -27,7 +27,7 @@ post-extract:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/datutil ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/DatUtil
-	${INSTALL_DATA} ${WRKSRC}/datutil.txt ${PREFIX}/share/doc/DatUtil
+	${INSTALL_DATA} ${WRKSRC}/*.txt ${PREFIX}/share/doc/DatUtil
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../emulators/DatLib/buildlink3.mk"
