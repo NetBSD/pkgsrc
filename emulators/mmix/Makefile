@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/01/19 15:50:05 tonio Exp $
+# $NetBSD: Makefile,v 1.19 2006/01/19 19:59:33 tonio Exp $
 
 DISTNAME=	mmix-20030622
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www-cs-faculty.stanford.edu/~knuth/programs/
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www-cs-faculty.stanford.edu/~knuth/mmix.html
 COMMENT=	Simulators for Knuth's MMIX RISC architecture
-
-BROKEN_IN=	pkgsrc-2005Q4
 
 TEX_DEPMETHOD=	build
 TEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
