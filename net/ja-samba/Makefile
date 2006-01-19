@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/12/29 06:21:59 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2006/01/19 01:36:25 joerg Exp $
 
 DISTNAME=		samba-${SAMBA_VERSION}-ja-${JA_VERSION}
 PKGNAME=		ja-samba-${SAMBA_VERSION}.${JA_PKG_VERSION}
@@ -150,6 +150,13 @@ FILES_SUBST+=	PWD_MKDB=${PWD_MKDB:Q}
 
 REPLACE_PERL=		script/findsmb.in
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/adduser.sh ${WRKDIR}/deluser.sh
+SUBST_SED.paths+=	-e 's,@AWK@,${AWK},g' -e 's,@CAT@,${CAT},g'
+SUBST_SED.paths+=	-e 's,@MKTEMP@,${MKTEMP},g' -e 's,@RM@,${RM},g'
+SUBST_SED.paths+=	-e 's,@PWD_MKDB@,${PWD_MKDB},g' -e 's,@SH@,${SH},g'
+SUBST_STAGE.paths=	post-patch
+
 # Remove irrelevant files for this package.
 post-extract:
 	${FIND} ${WRKDIR}/${DISTNAME} -name ".cvsignore" -print |	\
@@ -162,10 +169,8 @@ post-extract:
 	${RM} -r ${WRKDIR}/${DISTNAME}/examples/libsmbclient
 	${RM} -r ${WRKDIR}/${DISTNAME}/examples/smbchartool
 	${RM} -r ${WRKDIR}/${DISTNAME}/examples/svr4-startup
-
-post-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/adduser.sh > ${WRKDIR}/adduser.sh
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/deluser.sh > ${WRKDIR}/deluser.sh
+	${CP} ${FILESDIR}/adduser.sh ${WRKDIR}/adduser.sh
+	${CP} ${FILESDIR}/deluser.sh ${WRKDIR}/deluser.sh
 
 post-install:
 	-cd ${PREFIX}/lib && ${LN} -s libsmbclient.so libsmbclient.so.0
