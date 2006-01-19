@@ -1,51 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2004/10/26 13:57:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/01/19 12:53:17 adam Exp $
 share/examples/${PKGNAME}/beos/GLInfo.cpp
 share/examples/${PKGNAME}/beos/demo.cpp
 share/examples/${PKGNAME}/beos/sample.cpp
 share/examples/${PKGNAME}/demos/README
-share/examples/${PKGNAME}/demos/Windows/all.dsp
-share/examples/${PKGNAME}/demos/Windows/bounce.dsp
-share/examples/${PKGNAME}/demos/Windows/clearspd.dsp
-share/examples/${PKGNAME}/demos/Windows/cubemap.dsp
-share/examples/${PKGNAME}/demos/Windows/demos.dsw
-share/examples/${PKGNAME}/demos/Windows/drawpix.dsp
-share/examples/${PKGNAME}/demos/Windows/fire.dsp
-share/examples/${PKGNAME}/demos/Windows/gears.dsp
-share/examples/${PKGNAME}/demos/Windows/geartrain.dsp
-share/examples/${PKGNAME}/demos/Windows/glinfo.dsp
-share/examples/${PKGNAME}/demos/Windows/gloss.dsp
-share/examples/${PKGNAME}/demos/Windows/gltestperf.dsp
-share/examples/${PKGNAME}/demos/Windows/glutfx.dsp
-share/examples/${PKGNAME}/demos/Windows/ipers.dsp
-share/examples/${PKGNAME}/demos/Windows/isosurf.dsp
-share/examples/${PKGNAME}/demos/Windows/loadbias.dsp
-share/examples/${PKGNAME}/demos/Windows/morph3d.dsp
-share/examples/${PKGNAME}/demos/Windows/multiarb.dsp
-share/examples/${PKGNAME}/demos/Windows/occlude.dsp
-share/examples/${PKGNAME}/demos/Windows/osdemo.dsp
-share/examples/${PKGNAME}/demos/Windows/paltex.dsp
-share/examples/${PKGNAME}/demos/Windows/pixeltex.dsp
-share/examples/${PKGNAME}/demos/Windows/pointblast.dsp
-share/examples/${PKGNAME}/demos/Windows/rain.dsp
-share/examples/${PKGNAME}/demos/Windows/ray.dsp
-share/examples/${PKGNAME}/demos/Windows/readpix.dsp
-share/examples/${PKGNAME}/demos/Windows/reflect.dsp
-share/examples/${PKGNAME}/demos/Windows/renormal.dsp
-share/examples/${PKGNAME}/demos/Windows/shadowtex.dsp
-share/examples/${PKGNAME}/demos/Windows/spectex.dsp
-share/examples/${PKGNAME}/demos/Windows/spriteblast.dsp
-share/examples/${PKGNAME}/demos/Windows/stex3d.dsp
-share/examples/${PKGNAME}/demos/Windows/teapot.dsp
-share/examples/${PKGNAME}/demos/Windows/terrain.dsp
-share/examples/${PKGNAME}/demos/Windows/tessdemo.dsp
-share/examples/${PKGNAME}/demos/Windows/texcyl.dsp
-share/examples/${PKGNAME}/demos/Windows/texdown.dsp
-share/examples/${PKGNAME}/demos/Windows/texenv.dsp
-share/examples/${PKGNAME}/demos/Windows/texobj.dsp
-share/examples/${PKGNAME}/demos/Windows/trispd.dsp
-share/examples/${PKGNAME}/demos/Windows/tunnel.dsp
-share/examples/${PKGNAME}/demos/Windows/tunnel2.dsp
-share/examples/${PKGNAME}/demos/Windows/winpos.dsp
 share/examples/${PKGNAME}/demos/arbfplight
 share/examples/${PKGNAME}/demos/arbfplight.c
 share/examples/${PKGNAME}/demos/arbocclude
@@ -93,10 +50,6 @@ share/examples/${PKGNAME}/demos/multiarb
 share/examples/${PKGNAME}/demos/multiarb.c
 share/examples/${PKGNAME}/demos/occlude
 share/examples/${PKGNAME}/demos/occlude.c
-share/examples/${PKGNAME}/demos/osdemo
-share/examples/${PKGNAME}/demos/osdemo.c
-share/examples/${PKGNAME}/demos/osdemo16.c
-share/examples/${PKGNAME}/demos/osdemo32.c
 share/examples/${PKGNAME}/demos/paltex
 share/examples/${PKGNAME}/demos/paltex.c
 share/examples/${PKGNAME}/demos/particles.cxx
@@ -118,6 +71,8 @@ share/examples/${PKGNAME}/demos/renormal
 share/examples/${PKGNAME}/demos/renormal.c
 share/examples/${PKGNAME}/demos/shadowtex
 share/examples/${PKGNAME}/demos/shadowtex.c
+share/examples/${PKGNAME}/demos/showbuffer.c
+share/examples/${PKGNAME}/demos/showbuffer.h
 share/examples/${PKGNAME}/demos/spectex
 share/examples/${PKGNAME}/demos/spectex.c
 share/examples/${PKGNAME}/demos/spriteblast
@@ -153,12 +108,16 @@ share/examples/${PKGNAME}/ggi/gears.c
 share/examples/${PKGNAME}/ggi/gears2.c
 share/examples/${PKGNAME}/images/bw.rgb
 share/examples/${PKGNAME}/images/girl.rgb
+share/examples/${PKGNAME}/images/girl2.rgb
 share/examples/${PKGNAME}/images/reflect.rgb
 share/examples/${PKGNAME}/images/s128.rgb
 share/examples/${PKGNAME}/images/tile.rgb
 share/examples/${PKGNAME}/images/tree2.rgba
 share/examples/${PKGNAME}/images/tree3.rgb
 share/examples/${PKGNAME}/images/wrs_logo.rgb
+share/examples/${PKGNAME}/osdemos/osdemo.c
+share/examples/${PKGNAME}/osdemos/osdemo16.c
+share/examples/${PKGNAME}/osdemos/osdemo32.c
 share/examples/${PKGNAME}/redbook/README
 share/examples/${PKGNAME}/redbook/aaindex
 share/examples/${PKGNAME}/redbook/aaindex.c
@@ -328,6 +287,8 @@ share/examples/${PKGNAME}/samples/prim
 share/examples/${PKGNAME}/samples/prim.c
 share/examples/${PKGNAME}/samples/quad
 share/examples/${PKGNAME}/samples/quad.c
+share/examples/${PKGNAME}/samples/readtex.c
+share/examples/${PKGNAME}/samples/readtex.h
 share/examples/${PKGNAME}/samples/rgbtoppm.c
 share/examples/${PKGNAME}/samples/select
 share/examples/${PKGNAME}/samples/select.c
@@ -383,10 +344,14 @@ share/examples/${PKGNAME}/windml/wrs_logo.bmp
 share/examples/${PKGNAME}/xdemos/descrip.mms
 share/examples/${PKGNAME}/xdemos/glthreads
 share/examples/${PKGNAME}/xdemos/glthreads.c
+share/examples/${PKGNAME}/xdemos/glwdemo.c
+share/examples/${PKGNAME}/xdemos/glxcontexts
+share/examples/${PKGNAME}/xdemos/glxcontexts.c
 share/examples/${PKGNAME}/xdemos/glxdemo
 share/examples/${PKGNAME}/xdemos/glxdemo.c
 share/examples/${PKGNAME}/xdemos/glxgears
 share/examples/${PKGNAME}/xdemos/glxgears.c
+share/examples/${PKGNAME}/xdemos/glxgears_fbconfig
 share/examples/${PKGNAME}/xdemos/glxgears_fbconfig.c
 share/examples/${PKGNAME}/xdemos/glxheads
 share/examples/${PKGNAME}/xdemos/glxheads.c
@@ -403,6 +368,8 @@ share/examples/${PKGNAME}/xdemos/manywin.c
 share/examples/${PKGNAME}/xdemos/offset
 share/examples/${PKGNAME}/xdemos/offset.c
 share/examples/${PKGNAME}/xdemos/opencloseopen.c
+share/examples/${PKGNAME}/xdemos/overlay
+share/examples/${PKGNAME}/xdemos/overlay.c
 share/examples/${PKGNAME}/xdemos/pbdemo
 share/examples/${PKGNAME}/xdemos/pbdemo.c
 share/examples/${PKGNAME}/xdemos/pbinfo
@@ -423,14 +390,16 @@ share/examples/${PKGNAME}/xdemos/xrotfontdemo
 share/examples/${PKGNAME}/xdemos/xrotfontdemo.c
 share/examples/${PKGNAME}/xdemos/xuserotfont.c
 share/examples/${PKGNAME}/xdemos/xuserotfont.h
+share/examples/${PKGNAME}/xdemos/yuvrect_client
+share/examples/${PKGNAME}/xdemos/yuvrect_client.c
 @dirrm share/examples/${PKGNAME}/xdemos
 @dirrm share/examples/${PKGNAME}/windml
 @dirrm share/examples/${PKGNAME}/util
 @dirrm share/examples/${PKGNAME}/samples
 @dirrm share/examples/${PKGNAME}/redbook
+@dirrm share/examples/${PKGNAME}/osdemos
 @dirrm share/examples/${PKGNAME}/images
 @dirrm share/examples/${PKGNAME}/ggi
-@dirrm share/examples/${PKGNAME}/demos/Windows
 @dirrm share/examples/${PKGNAME}/demos
 @dirrm share/examples/${PKGNAME}/beos
 @dirrm share/examples/${PKGNAME}

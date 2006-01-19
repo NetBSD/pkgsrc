@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.7 2005/06/07 14:31:48 minskim Exp $
+$NetBSD: patch-ag,v 1.8 2006/01/19 12:53:17 adam Exp $
 
---- src/glut/glx/Makefile.orig	2004-12-05 12:00:20.000000000 -0600
+--- src/glut/glx/Makefile.orig	2005-07-26 07:55:56.000000000 +0200
 +++ src/glut/glx/Makefile
 @@ -79,6 +79,7 @@ OBJECTS = $(SOURCES:.c=.o)
  ##### RULES #####
@@ -14,14 +14,14 @@ $NetBSD: patch-ag,v 1.7 2005/06/07 14:31:48 minskim Exp $
  
  # Make the library
  $(LIB_DIR)/$(GLUT_LIB_NAME): depend $(OBJECTS)
--	CC=$(CC) CXX=$(CXX) $(TOP)/bin/mklib -o $(GLUT_LIB) \
--		-major $(GLUT_MAJOR) -minor $(GLUT_MINOR) \
--		-patch $(GLUT_TINY) $(MKLIB_OPTIONS) -install $(LIB_DIR) \
+-	$(TOP)/bin/mklib -o $(GLUT_LIB) -linker '$(CC)' \
+-		-major $(GLUT_MAJOR) -minor $(GLUT_MINOR) -patch $(GLUT_TINY) \
+-		$(MKLIB_OPTIONS) -install $(LIB_DIR) \
 -		$(GLUT_LIB_DEPS) $(OBJECTS)
-+	${LIBTOOL} --mode=link ${CC} -o ${GLUT_LIB_NAME:.so=.la} ${OBJECTS:.o=.lo} \
-+		-rpath ${PREFIX}/lib \
++	${LIBTOOL} --mode=link ${CC} -o ${GLUT_LIB_NAME:.so=.la} \
++		${OBJECTS:.o=.lo} -rpath ${PREFIX}/lib \
 +		-version-info ${GLUT_MAJOR}:${GLUT_MINOR} \
-+		-L${X11BASE}/lib ${GLUT_LIB_DEPS:M-l*} -R${X11BASE}/lib
++		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib ${GLUT_LIB_DEPS}
  
  
  clean:

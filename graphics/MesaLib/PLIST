@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.14 2004/09/22 08:09:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/01/19 12:53:17 adam Exp $
 include/GL/gl.h
 include/GL/gl_mangle.h
 include/GL/glext.h
 include/GL/glx.h
-include/GL/glxext.h
 include/GL/glx_mangle.h
+include/GL/glxext.h
 include/GL/osmesa.h
 include/GL/xmesa.h
 include/GL/xmesa_x.h
