@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1 2006/01/19 23:53:54 joerg Exp $
+
+--- svr-tcpfwd.c.orig	2006-01-19 23:47:43.000000000 +0000
++++ svr-tcpfwd.c
+@@ -80,7 +80,11 @@ void recv_msg_global_request_remotetcp()
+ 	reqname = buf_getstring(ses.payload, &namelen);
+ 	wantreply = buf_getbool(ses.payload);
+ 
++#if defined(NAME_MAX)
++	if (namelen > NAME_MAX) {
++#else
+ 	if (namelen > MAXNAMLEN) {
++#endif
+ 		TRACE(("name len is wrong: %d", namelen))
+ 		goto out;
+ 	}
