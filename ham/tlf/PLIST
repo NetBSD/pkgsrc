@@ -1,5 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/24 23:39:03 wulf Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/20 13:09:59 rillig Exp $
+bin/soundlog
+bin/tlf
+man/man1/tlf.1
+share/tlf/arrlsections
+share/tlf/callmaster
+share/tlf/cty.dat
 share/tlf/doc/README
+share/tlf/ea_sections
+share/tlf/logcfg.dat
+share/tlf/paccmults
 share/tlf/rules/arrldx_dx
 share/tlf/rules/arrldx_usa
 share/tlf/rules/arrlfd
@@ -16,17 +25,8 @@ share/tlf/rules/spdx_sp
 share/tlf/rules/ssa_mt
 share/tlf/rules/template
 share/tlf/rules/wpx
-share/tlf/callmaster
-share/tlf/cty.dat
-share/tlf/logcfg.dat
-share/tlf/arrlsections
-share/tlf/ea_sections
-share/tlf/paccmults
 share/tlf/spdxmults
 share/tlf/ssamults
-bin/tlf
-bin/soundlog
-man/man1/tlf.1
-@dirrm share/tlf/doc
 @dirrm share/tlf/rules
+@dirrm share/tlf/doc
 @dirrm share/tlf
