@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.14 2005/10/10 08:32:23 adam Exp $
+$NetBSD: patch-af,v 1.15 2006/01/20 14:58:18 adam Exp $
 
---- dlls/ntdll/signal_i386.c.orig	2005-09-27 09:36:15.000000000 +0000
+--- dlls/ntdll/signal_i386.c.orig	2006-01-19 15:14:04.000000000 +0100
 +++ dlls/ntdll/signal_i386.c
 @@ -204,7 +204,7 @@ typedef struct trapframe SIGCONTEXT;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.14 2005/10/10 08:32:23 adam Exp $
  
  typedef struct sigcontext SIGCONTEXT;
  
-@@ -325,7 +325,40 @@ typedef ucontext_t SIGCONTEXT;
+@@ -328,7 +328,45 @@ typedef ucontext_t SIGCONTEXT;
  
  #endif /* __APPLE__ */
  
@@ -21,10 +21,7 @@ $NetBSD: patch-af,v 1.14 2005/10/10 08:32:23 adam Exp $
 +# include <sys/types.h>
 +# include <signal.h>
 +
-+typedef struct __ucontext SIGCONTEXT;
-+
-+#define HANDLER_DEF(name) void name( int __signal, int code, SIGCONTEXT *__context )
-+#define HANDLER_CONTEXT __context
++typedef ucontext_t SIGCONTEXT;
 +
 +#define EAX_sig(context)     ((context)->uc_mcontext.__gregs[_REG_EAX])
 +#define EBX_sig(context)     ((context)->uc_mcontext.__gregs[_REG_EBX])
@@ -44,7 +41,15 @@ $NetBSD: patch-af,v 1.14 2005/10/10 08:32:23 adam Exp $
 +#define EFL_sig(context)     ((context)->uc_mcontext.__gregs[_REG_EFL])
 +
 +#define EIP_sig(context)     (*((unsigned long*)&(context)->uc_mcontext.__gregs[_REG_EIP]))
-+#define ESP_sig(context)     (*((unsigned long*)&(context)->uc_mcontext.__gregs[_REG_EIP]))
++#define ESP_sig(context)     (*((unsigned long*)&(context)->uc_mcontext.__gregs[_REG_ESP]))
++
++#define TRAP_sig(context)    ((context)->uc_mcontext.__gregs[_REG_TRAPNO])
++#define ERROR_sig(context)   ((context)->uc_mcontext.__gregs[_REG_ERR])
++
++#define FAULT_ADDRESS        (__siginfo->si_addr)
++
++#define HANDLER_DEF(name) void name( int __signal, siginfo_t *__siginfo, SIGCONTEXT *__context )
++#define HANDLER_CONTEXT (__context)
 +
 +#endif	/* NetBSD */
 +
