@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/01/14 08:20:20 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2006/01/20 23:38:47 joerg Exp $
 
 DISTNAME=		nullmailer-1.02
 CATEGORIES=		mail
@@ -51,13 +51,16 @@ SPECIAL_PERMS+=		${VARBASE}/spool/nullmailer/trigger		\
 INSTALL_EXTRA_TMPL+=	${PKGDIR}/INSTALL
 DEINSTALL_EXTRA_TMPL+=	${PKGDIR}/DEINSTALL
 
-post-configure:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mailer.conf	>	\
-		${WRKDIR}/mailer.conf
-	@cd ${WRKSRC}/doc; for i in nullmailer-send nullmailer-queue; do\
-		${SED} ${FILES_SUBST_SED} $${i}.8 > $${i}.8.new;	\
-		${MV} -f $${i}.8.new $${i}.8;				\
-	done
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/mailer.conf
+SUBST_FILES.paths+=	doc/nullmailer-send.8 doc/nullmailer-queue.8
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@VARBASE@,${VARBASE},g'
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_STAGE.paths=	post-patch
+
+post-extract:
+	${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nullmailer
