@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.57 2006/01/20 12:35:51 rillig Exp $
+# $NetBSD: makevars.map,v 1.58 2006/01/20 13:03:10 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -43,7 +43,7 @@ BDB_ACCEPTED		List of { db1 db2 db3 db4 }
 BDB_DEFAULT		Userdefined
 BDB_LIBS		Readonly
 BDB_TYPE		Readonly
-BROKEN_GETTEXT_DETECTION	Yes
+BROKEN_GETTEXT_DETECTION	YesNo
 BROKEN_IN		List of { pkgsrc-2005Q4 }
 BUILDLINK_DEPENDS	List!+ of Dependency
 BUILDLINK_DEPMETHOD	BuildlinkDepmethod
