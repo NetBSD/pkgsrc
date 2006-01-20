@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/05/22 20:08:30 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/20 20:45:42 joerg Exp $
 #
 
 DISTNAME=		pinentry-0.7.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/pinentry/
 
@@ -14,6 +14,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 
 INFO_FILES=		pinentry.info
+
+USE_X11BASE=		yes
 
 # XXX This usage of bsd.options.mk is wrong and has to be fixed.  The
 # package has to be splitted into different packages, such as pinentry-gtk
