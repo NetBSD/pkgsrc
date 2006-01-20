@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2005/08/16 15:35:51 adam Exp $
+$NetBSD: distinfo,v 1.19 2006/01/20 22:37:05 adam Exp $
 
-SHA1 (rocksndiamonds-3.1.1.tar.gz) = c350316f74f036404352bd3925c73c1c10260a2c
-RMD160 (rocksndiamonds-3.1.1.tar.gz) = cd589eb8ec8819a562f08b8aed7d5201a531df77
-Size (rocksndiamonds-3.1.1.tar.gz) = 3122766 bytes
+SHA1 (rocksndiamonds-3.1.2.tar.gz) = 842cb743bfede966deb05e0ec5f39b877b28438f
+RMD160 (rocksndiamonds-3.1.2.tar.gz) = 0b4658ec3c8d345b745c4eb350c4d4253172cce7
+Size (rocksndiamonds-3.1.2.tar.gz) = 3120830 bytes
 SHA1 (patch-aa) = 824bf9ef3ee1335a8a412d4cfd3bbf7ea13d3f46
 SHA1 (patch-ab) = 7bcd534d22c2ffef4ca0f32e772cd108ed18ecf3
 SHA1 (patch-ac) = 9cbf5ff897cae129455081c941d7ae355b525d1b
