@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2006/01/05 23:29:05 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2006/01/20 15:09:01 jmmv Exp $
 #
 
-DISTNAME=	nautilus-cd-burner-2.12.1
-PKGREVISION=	3
+DISTNAME=	nautilus-cd-burner-2.12.2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/nautilus-cd-burner/2.12/}
 EXTRACT_SUFX=	.tar.bz2
@@ -25,6 +24,8 @@ PKGCONFIG_OVERRIDE=	libnautilus-burn.pc.in
 
 CONFIGURE_ARGS+=	--disable-hal
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+INSTALL_MAKE_FLAGS+=	modulesconfdir=${PREFIX}/share/examples/nautilus-cd-burner/gnome-vfs-2.0/modules
+INSTALL_MAKE_FLAGS+=	schemadir=${GCONF2_SCHEMAS_DIR}
 
 CPPFLAGS+=		-D__unix__
 
