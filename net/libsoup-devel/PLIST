@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/08/26 16:27:55 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/01/20 13:29:54 jmmv Exp $
 include/libsoup-2.2/libsoup/soup-address.h
 include/libsoup-2.2/libsoup/soup-connection.h
 include/libsoup-2.2/libsoup/soup-date.h
@@ -42,6 +42,7 @@ share/doc/libsoup/ch01.html
 share/doc/libsoup/home.png
 share/doc/libsoup/index.html
 share/doc/libsoup/index.sgml
+share/doc/libsoup/ix01.html
 share/doc/libsoup/left.png
 share/doc/libsoup/libsoup-soup-dns.html
 share/doc/libsoup/libsoup-soup-ssl.html
