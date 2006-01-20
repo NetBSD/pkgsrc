@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/11/17 18:38:33 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/20 23:41:29 jlam Exp $
 #
 
 DISTNAME=		rbuild27
@@ -15,7 +15,7 @@ USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}
 MAKEFILE=		makefile
 BUILD_TARGET=		rombuild
-EXTRACT_CMD_OPTS.zip=	-Laaqo
+EXTRACT_OPTS_ZIP=	-Laaqo
 INSTALLATION_DIRS=	bin
 
 post-extract:

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.14 2006/01/19 19:35:25 jlam Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.15 2006/01/20 23:41:30 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -126,18 +126,17 @@ EXTRACT_ELEMENTS?=	# empty
 
 DOWNLOADED_DISTFILE=	$${extract_file}
 
-EXTRACT_CMD.zip?=	${UNZIP} ${EXTRACT_CMD_OPTS.zip} $${extract_file}
-EXTRACT_CMD_OPTS.zip?=	-Laqo
-EXTRACT_CMD.lha?=	${LHA} ${EXTRACT_CMD_OPTS.lha} $${extract_file}
-EXTRACT_CMD_OPTS.lha?=	xq
+EXTRACT_CMD.zip?=	${UNZIP} ${EXTRACT_OPTS_ZIP} $${extract_file}
+EXTRACT_OPTS_ZIP?=	-Laqo
+EXTRACT_CMD.lha?=	${LHA} ${EXTRACT_OPTS_LHA} $${extract_file}
+EXTRACT_OPTS_LHA?=	xq
 EXTRACT_CMD.lzh?=	${EXTRACT_CMD.lha}
-EXTRACT_CMD_OPTS.lzh?=	${EXTRACT_CMD_OPTS.lha}
-EXTRACT_CMD.zoo?=	${UNZOO} ${EXTRACT_CMD_OPTS.zoo} $${extract_file}
-EXTRACT_CMD_OPTS.zoo?=	-x
-EXTRACT_CMD.rar?=	${UNRAR} ${EXTRACT_CMD_OPTS.rar} $${extract_file}
-EXTRACT_CMD_OPTS.rar?=	x -inul
+EXTRACT_CMD.zoo?=	${UNZOO} ${EXTRACT_OPTS_ZOO} $${extract_file}
+EXTRACT_OPTS_ZOO?=	-x
+EXTRACT_CMD.rar?=	${UNRAR} ${EXTRACT_OPTS_RAR} $${extract_file}
+EXTRACT_OPTS_RAR?=	x -inul
 EXTRACT_ENV.bin?=	# empty
-EXTRACT_CMD.bin?=	${ECHO} yes | ${SETENV} ${EXTRACT_ENV.bin} $${extract_file} ${EXTRACT_CMD_OPTS.bin} >/dev/null
+EXTRACT_CMD.bin?=	${ECHO} yes | ${SETENV} ${EXTRACT_ENV.bin} $${extract_file} ${EXTRACT_OPTS_BIN} >/dev/null
 
 .for __suffix__ in .gz .bz2 .Z
 EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} > `${BASENAME} $${extract_file} ${__suffix__}`
@@ -158,11 +157,11 @@ _DFLT_EXTRACT_CMD?=	${DECOMPRESS_CMD} $${extract_file} | ${PAX} -O -r ${EXTRACT_
 .for __suffix__ in ${_EXTRACT_SUFFIXES}
 .  if !defined(EXTRACT_CMD${__suffix__})
 .    if !empty(EXTRACT_USING:Mgtar)
-EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${GTAR} ${EXTRACT_CMD_OPTS${__suffix__}} -xf - ${EXTRACT_ELEMENTS}
+EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${GTAR} ${EXTRACT_OPTS_TAR} -xf - ${EXTRACT_ELEMENTS}
 .    elif !empty(EXTRACT_USING:Mnbtar)
-EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${TAR} ${EXTRACT_CMD_OPTS${__suffix__}} -xf - ${EXTRACT_ELEMENTS}
+EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${TAR} ${EXTRACT_OPTS_TAR} -xf - ${EXTRACT_ELEMENTS}
 .    else
-EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${PAX} ${EXTRACT_CMD_OPTS${__suffix__}} -O -r ${EXTRACT_ELEMENTS}
+EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${PAX} ${EXTRACT_OPTS_PAX} -O -r ${EXTRACT_ELEMENTS}
 .    endif
 .  endif
 .endfor

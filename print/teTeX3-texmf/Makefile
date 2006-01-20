@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/11/09 15:31:30 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/20 23:41:30 jlam Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
@@ -24,9 +24,9 @@ USE_TOOLS+=	patch
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(EXTRACT_USING:M*tar)
-EXTRACT_CMD_OPTS${EXTRACT_SUFX}=	-X ${FILESDIR}/exclude -p
+EXTRACT_OPTS_TAR=	-X ${FILESDIR}/exclude -p
 .elif !empty(EXTRACT_USING:Mpax)
-EXTRACT_CMD_OPTS${EXTRACT_SUFX}=	-c `${CAT} ${FILESDIR}/exclude`
+EXTRACT_OPTS_PAX=	-c `${CAT} ${FILESDIR}/exclude`
 .endif
 
 do-install:

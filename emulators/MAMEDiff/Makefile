@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/01/11 18:55:16 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/20 23:41:29 jlam Exp $
 #
 
 DISTNAME=		mdiff224
@@ -15,7 +15,7 @@ USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}
 MAKEFILE=		makefile
 BUILD_TARGET=		mamediff
-EXTRACT_CMD_OPTS.zip=	-Laaqo
+EXTRACT_OPTS_ZIP=	-Laaqo
 INSTALLATION_DIRS=	bin
 
 BUILDLINK_DEPENDS.DatLib+=	DatLib>=2.13
