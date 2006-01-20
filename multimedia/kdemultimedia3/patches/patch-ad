@@ -1,8 +1,26 @@
-$NetBSD: patch-ad,v 1.2 2005/09/06 08:10:59 abs Exp $
+$NetBSD: patch-ad,v 1.3 2006/01/20 03:51:25 joerg Exp $
 
---- kscd/libwm/plat_freebsd.c.orig	2003-05-05 22:19:39.000000000 +1000
-+++ kscd/libwm/plat_freebsd.c	2004-05-04 19:17:17.000000000 +1000
-@@ -380,6 +380,14 @@
+--- kscd/libwm/plat_freebsd.c.orig	2005-10-05 13:22:14.000000000 +0000
++++ kscd/libwm/plat_freebsd.c
+@@ -30,7 +30,7 @@
+  *
+  */
+ 
+-#if defined(__FreeBSD__) || defined(__FreeBSD) || defined(__NetBSD__) || defined (__NetBSD)
++#if defined(__FreeBSD__) || defined(__FreeBSD) || defined(__NetBSD__) || defined (__NetBSD) || defined(__DragonFly__)
+ 
+ #include <errno.h>
+ #include <stdio.h>
+@@ -61,7 +61,7 @@
+ #else
+ # define LEFT_PORT 0
+ # define RIGHT_PORT 1
+-# if __FreeBSD_version < 300000
++# if defined(__FreeBSD_version) && __FreeBSD_version < 300000
+ #  include <scsi.h>
+ # endif
+ #endif
+@@ -378,6 +378,14 @@ gen_stop( struct wm_drive *d)
    return (ioctl(d->fd, CDIOCSTOP));
  } /* gen_stop() */
  
@@ -17,7 +35,7 @@ $NetBSD: patch-ad,v 1.2 2005/09/06 08:10:59 abs Exp $
  /*----------------------------------------*
   * Eject the current CD, if there is one.
   *----------------------------------------*/
-@@ -388,14 +396,22 @@
+@@ -386,14 +394,22 @@ gen_eject( struct wm_drive *d )
  {
    /* On some systems, we can check to see if the CD is mounted. */
    struct stat	stbuf;
