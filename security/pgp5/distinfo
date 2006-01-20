@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 13:10:11 agc Exp $
+$NetBSD: distinfo,v 1.8 2006/01/20 00:37:45 joerg Exp $
 
 SHA1 (pgp50i-unix-src.tar.gz) = b740afe0bf557deedb53604274997cb2bbecac33
 RMD160 (pgp50i-unix-src.tar.gz) = 8400bef0e3a4452e1c89373c070a11dce71572f4
@@ -15,6 +15,7 @@ SHA1 (patch-ai) = abaf43318b95d608693022144b565f7172a9bcfb
 SHA1 (patch-aj) = 0ac8a7d056fb025bf2a516ac2a09edbabe718da7
 SHA1 (patch-ak) = 8d6ce1cef0981243b696395d6179fb9d11a005a5
 SHA1 (patch-al) = a1e384466d0d401a2cf3c08d41838d15500f262a
+SHA1 (patch-am) = 4f36d9e86c0d9f78b7465d7affc7c44b46656067
 SHA1 (patch-ba) = 614fdf50d63f1912bf472d1900212663a88e3b8b
 SHA1 (patch-bb) = 801310f6d79473867ab61f39007726d7d0996b92
 SHA1 (patch-bc) = 68dcf639c83a3d814000e4cc6bc319c232fca8f8
