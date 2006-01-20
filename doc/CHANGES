@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12586 2006/01/20 14:59:48 adam Exp $
+$NetBSD: CHANGES,v 1.12587 2006/01/20 15:01:36 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -410,3 +410,30 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated fonts/fontforge to 20060114 [adam 2006-01-20]
 	Updated pkgtools/pkglint to 4.54 [rillig 2006-01-20]
 	Updated emulators/wine to 0.9.6 [adam 2006-01-20]
+	Updated textproc/gnome-doc-utils to 0.4.4 [jmmv 2006-01-20]
+	Updated sysutils/gnome-vfs2 to 2.12.2 [jmmv 2006-01-20]
+	Updated net/gnome-vfs2-smb to 2.12.2 [jmmv 2006-01-20]
+	Updated audio/gnome-vfs2-cdda to 2.12.2 [jmmv 2006-01-20]
+	Updated graphics/librsvg2 to 2.12.7 [jmmv 2006-01-20]
+	Updated net/libsoup-devel to 2.2.7 [jmmv 2006-01-20]
+	Updated devel/libwnck to 2.12.2 [jmmv 2006-01-20]
+	Updated devel/gail to 1.8.8 [jmmv 2006-01-20]
+	Updated x11/gtk2-engines to 2.6.6 [jmmv 2006-01-20]
+	Updated devel/eel2 to 2.12.2 [jmmv 2006-01-20]
+	Updated wm/metacity to 2.12.2 [jmmv 2006-01-20]
+	Updated x11/gnome-panel to 2.12.2 [jmmv 2006-01-20]
+	Updated x11/gnome2-applets to 2.12.2 [jmmv 2006-01-20]
+	Updated graphics/gnome-backgrounds to 2.12.2 [jmmv 2006-01-20]
+	Updated devel/libgail-gnome to 1.1.2 [jmmv 2006-01-20]
+	Updated x11/gdm to 2.8.0.7 [jmmv 2006-01-20]
+	Updated www/epiphany to 1.8.3 [jmmv 2006-01-20]
+	Updated misc/yelp to 2.12.2 [jmmv 2006-01-20]
+	Updated audio/gnome-speech to 0.3.9 [jmmv 2006-01-20]
+	Updated archivers/file-roller to 2.12.2 [jmmv 2006-01-20]
+	Updated x11/gnome-mag to 0.12.2 [jmmv 2006-01-20]
+	Updated games/gnome2-games to 2.12.2 [jmmv 2006-01-20]
+	Updated sysutils/nautilus-cd-burner to 2.12.2 [jmmv 2006-01-20]
+	Updated misc/gnome2-utils to 2.12.2 [jmmv 2006-01-20]
+	Updated meta-pkgs/gnome-devel to 2.12.2 [jmmv 2006-01-20]
+	Updated meta-pkgs/gnome-base to 2.12.2 [jmmv 2006-01-20]
+	Updated meta-pkgs/gnome to 2.12.2 [jmmv 2006-01-20]
