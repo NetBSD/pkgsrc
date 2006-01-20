@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/09 10:10:08 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/20 23:46:47 jlam Exp $
 #
 
-PKGNAME=	${DISTFILES:C/_/-/}
 DISTNAME=	pdfjam_1.20
+PKGNAME=	${DISTNAME:C/_/-/}
 CATEGORIES=	print
 MASTER_SITES=	http://www.warwick.ac.uk/go/pdfjam/
 EXTRACT_SUFX=	.tgz
