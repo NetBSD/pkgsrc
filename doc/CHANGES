@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12587 2006/01/20 15:01:36 jmmv Exp $
+$NetBSD: CHANGES,v 1.12588 2006/01/20 20:40:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -437,3 +437,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated meta-pkgs/gnome-devel to 2.12.2 [jmmv 2006-01-20]
 	Updated meta-pkgs/gnome-base to 2.12.2 [jmmv 2006-01-20]
 	Updated meta-pkgs/gnome to 2.12.2 [jmmv 2006-01-20]
+	Updated devel/boost-build to 1.33.1 [jmmv 2006-01-20]
+	Updated devel/boost-docs to 1.33.1 [jmmv 2006-01-20]
+	Updated devel/boost-headers to 1.33.1 [jmmv 2006-01-20]
+	Updated devel/boost-libs to 1.33.1 [jmmv 2006-01-20]
+	Updated devel/boost-python to 1.33.1 [jmmv 2006-01-20]
+	Updated meta-pkgs/boost to 1.33.1 [jmmv 2006-01-20]

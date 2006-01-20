@@ -1,13 +1,11 @@
-$NetBSD: distinfo,v 1.5 2006/01/12 22:48:46 joerg Exp $
+$NetBSD: distinfo,v 1.6 2006/01/20 20:40:19 jmmv Exp $
 
-SHA1 (boost_1_33_0.tar.bz2) = be68cb1401ef4dbf8509685df0466429712a9d49
-RMD160 (boost_1_33_0.tar.bz2) = e500524198780f89d041f4a539b8926bc3d6a0a6
-Size (boost_1_33_0.tar.bz2) = 11356417 bytes
-SHA1 (patch-aa) = 11391fd1bf1afbec16464b6aca91fbbb4af0c1a0
+SHA1 (boost_1_33_1.tar.bz2) = 22682f75ff0d1ea548688e78c8cca83d599ca576
+RMD160 (boost_1_33_1.tar.bz2) = 3d5999d321b558f74d786bec52ee1b1fcd7e7152
+Size (boost_1_33_1.tar.bz2) = 11507161 bytes
+SHA1 (patch-aa) = 957dad8d5993f0d28b399eedb2d0ae14ecfebc4c
 SHA1 (patch-ab) = 197c51ac67d74923d02f8a9746b5d2e0f7b84736
 SHA1 (patch-ac) = 453d4107df03e96e66cbdbebceebdfcbed2710c1
 SHA1 (patch-ad) = f5ab062abdb23b0586d08aad843debf4d6162c87
-SHA1 (patch-ae) = c3242b8aa9a90c5659be5b22fa170310fe987e40
-SHA1 (patch-af) = e5a1fcd03b011b03064c5137e469d91b19cb9fe7
-SHA1 (patch-ag) = 296e28f361a9fd28bf9ca03733fe75206d405a1d
+SHA1 (patch-af) = 64a6fa2be7a526a0a3e6f47d5f703d7253a51615
 SHA1 (patch-ah) = e16c08bb0f63e63ae082e9d83c588e3adcf9cb3b

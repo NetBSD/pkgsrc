@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.5 2005/08/12 20:58:45 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.6 2006/01/20 20:40:19 jmmv Exp $
 #
 
 BOOST_PACKAGE?=		undefined
 BOOST_COMMENT?=		undefined
 
-BOOST_VERSION=		1.33.0
+BOOST_VERSION=		1.33.1
 BOOST_SHORT_VERSION=	1_33
 
 DISTNAME=		boost_${BOOST_VERSION:S/./_/g}
