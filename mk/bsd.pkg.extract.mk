@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.15 2006/01/20 23:41:30 jlam Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.16 2006/01/20 23:55:02 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -135,8 +135,8 @@ EXTRACT_CMD.zoo?=	${UNZOO} ${EXTRACT_OPTS_ZOO} $${extract_file}
 EXTRACT_OPTS_ZOO?=	-x
 EXTRACT_CMD.rar?=	${UNRAR} ${EXTRACT_OPTS_RAR} $${extract_file}
 EXTRACT_OPTS_RAR?=	x -inul
-EXTRACT_ENV.bin?=	# empty
-EXTRACT_CMD.bin?=	${ECHO} yes | ${SETENV} ${EXTRACT_ENV.bin} $${extract_file} ${EXTRACT_OPTS_BIN} >/dev/null
+EXTRACT_ENV?=		# empty
+EXTRACT_CMD.bin?=	${ECHO} yes | ${SETENV} ${EXTRACT_ENV} $${extract_file} ${EXTRACT_OPTS_BIN} >/dev/null
 
 .for __suffix__ in .gz .bz2 .Z
 EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} > `${BASENAME} $${extract_file} ${__suffix__}`
