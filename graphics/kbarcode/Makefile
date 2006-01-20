@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/27 13:54:58 seb Exp $
+# $NetBSD: Makefile,v 1.9 2006/01/20 22:25:45 joerg Exp $
 
 DISTNAME=		kbarcode-1.8.1
 PKGREVISION=	2
@@ -12,6 +12,7 @@ COMMENT=		KDE barcode and label printing application
 USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake gs:run
 USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 DEPENDS+=	barcode-[0-9]*:../../graphics/barcode
