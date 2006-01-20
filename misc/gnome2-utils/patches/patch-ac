@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.3 2006/01/20 03:16:14 joerg Exp $
+
+--- gnome-screenshot/screenshot-save.c.orig	2006-01-20 02:52:06.000000000 +0000
++++ gnome-screenshot/screenshot-save.c
+@@ -12,8 +12,6 @@ static char *tmp_filename = NULL;
+ static SaveFunction save_callback = NULL;
+ static gpointer save_user_data = NULL;
+ 
+-extern int errno;
+-
+ 
+ 
+ /* Strategy for saving:
