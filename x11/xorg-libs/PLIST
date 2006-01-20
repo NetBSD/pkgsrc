@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/01/18 23:53:06 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/01/20 23:13:32 reed Exp $
 ${X11ROOT_PREFIX}/include/DPS/ColorSB.h
 ${X11ROOT_PREFIX}/include/DPS/ColorSBP.h
 ${X11ROOT_PREFIX}/include/DPS/DPSScrollW.h
@@ -40,51 +40,47 @@ ${X11ROOT_PREFIX}/include/GL/glxproto.h
 ${X11ROOT_PREFIX}/include/GL/glxtokens.h
 ${X11ROOT_PREFIX}/include/GL/osmesa.h
 ${X11ROOT_PREFIX}/include/X11/CallbackI.h
-${X11ROOT_PREFIX}/include/X11/ConvertI.h
-${X11ROOT_PREFIX}/include/X11/CreateI.h
 ${X11ROOT_PREFIX}/include/X11/Composite.h
 ${X11ROOT_PREFIX}/include/X11/CompositeP.h
 ${X11ROOT_PREFIX}/include/X11/ConstrainP.h
 ${X11ROOT_PREFIX}/include/X11/Constraint.h
+${X11ROOT_PREFIX}/include/X11/ConvertI.h
 ${X11ROOT_PREFIX}/include/X11/Core.h
 ${X11ROOT_PREFIX}/include/X11/CoreP.h
-${X11ROOT_PREFIX}/include/X11/EventI.h
+${X11ROOT_PREFIX}/include/X11/CreateI.h
 ${X11ROOT_PREFIX}/include/X11/DECkeysym.h
+${X11ROOT_PREFIX}/include/X11/EventI.h
 ${X11ROOT_PREFIX}/include/X11/HPkeysym.h
 ${X11ROOT_PREFIX}/include/X11/HookObjI.h
-${X11ROOT_PREFIX}/include/X11/ImUtil.h
-${X11ROOT_PREFIX}/include/X11/InitialI.h
-${X11ROOT_PREFIX}/include/X11/IntrinsicI.h
-${X11ROOT_PREFIX}/include/X11/PassivGraI.h
-${X11ROOT_PREFIX}/include/X11/ResourceI.h
-${X11ROOT_PREFIX}/include/X11/SelectionI.h
-${X11ROOT_PREFIX}/include/X11/ShellI.h
-${X11ROOT_PREFIX}/include/X11/ThreadsI.h
-${X11ROOT_PREFIX}/include/X11/TranslateI.h
-${X11ROOT_PREFIX}/include/X11/VarargsI.h
-${X11ROOT_PREFIX}/include/X11/XlibConf.h
-${X11ROOT_PREFIX}/include/X11/Xregion.h
-${X11ROOT_PREFIX}/include/X11/misc.h
-${X11ROOT_PREFIX}/include/X11/os.h
 ${X11ROOT_PREFIX}/include/X11/ICE/ICE.h
 ${X11ROOT_PREFIX}/include/X11/ICE/ICEconn.h
 ${X11ROOT_PREFIX}/include/X11/ICE/ICElib.h
 ${X11ROOT_PREFIX}/include/X11/ICE/ICEmsg.h
 ${X11ROOT_PREFIX}/include/X11/ICE/ICEproto.h
 ${X11ROOT_PREFIX}/include/X11/ICE/ICEutil.h
+${X11ROOT_PREFIX}/include/X11/ImUtil.h
+${X11ROOT_PREFIX}/include/X11/InitialI.h
 ${X11ROOT_PREFIX}/include/X11/Intrinsic.h
+${X11ROOT_PREFIX}/include/X11/IntrinsicI.h
 ${X11ROOT_PREFIX}/include/X11/IntrinsicP.h
 ${X11ROOT_PREFIX}/include/X11/Object.h
 ${X11ROOT_PREFIX}/include/X11/ObjectP.h
+${X11ROOT_PREFIX}/include/X11/PassivGraI.h
 ${X11ROOT_PREFIX}/include/X11/RectObj.h
 ${X11ROOT_PREFIX}/include/X11/RectObjP.h
+${X11ROOT_PREFIX}/include/X11/ResourceI.h
 ${X11ROOT_PREFIX}/include/X11/SM/SM.h
 ${X11ROOT_PREFIX}/include/X11/SM/SMlib.h
 ${X11ROOT_PREFIX}/include/X11/SM/SMproto.h
+${X11ROOT_PREFIX}/include/X11/SelectionI.h
 ${X11ROOT_PREFIX}/include/X11/Shell.h
+${X11ROOT_PREFIX}/include/X11/ShellI.h
 ${X11ROOT_PREFIX}/include/X11/ShellP.h
 ${X11ROOT_PREFIX}/include/X11/StringDefs.h
 ${X11ROOT_PREFIX}/include/X11/Sunkeysym.h
+${X11ROOT_PREFIX}/include/X11/ThreadsI.h
+${X11ROOT_PREFIX}/include/X11/TranslateI.h
+${X11ROOT_PREFIX}/include/X11/VarargsI.h
 ${X11ROOT_PREFIX}/include/X11/Vendor.h
 ${X11ROOT_PREFIX}/include/X11/VendorP.h
 ${X11ROOT_PREFIX}/include/X11/X.h
@@ -175,6 +171,7 @@ ${X11ROOT_PREFIX}/include/X11/Xdmcp.h
 ${X11ROOT_PREFIX}/include/X11/Xfuncproto.h
 ${X11ROOT_PREFIX}/include/X11/Xfuncs.h
 ${X11ROOT_PREFIX}/include/X11/Xlib.h
+${X11ROOT_PREFIX}/include/X11/XlibConf.h
 ${X11ROOT_PREFIX}/include/X11/Xlibint.h
 ${X11ROOT_PREFIX}/include/X11/Xlocale.h
 ${X11ROOT_PREFIX}/include/X11/Xmd.h
@@ -208,6 +205,7 @@ ${X11ROOT_PREFIX}/include/X11/XprintAppUtil/xpapputil.h
 ${X11ROOT_PREFIX}/include/X11/XprintUtil/xprintutil.h
 ${X11ROOT_PREFIX}/include/X11/Xproto.h
 ${X11ROOT_PREFIX}/include/X11/Xprotostr.h
+${X11ROOT_PREFIX}/include/X11/Xregion.h
 ${X11ROOT_PREFIX}/include/X11/Xresource.h
 ${X11ROOT_PREFIX}/include/X11/Xthreads.h
 ${X11ROOT_PREFIX}/include/X11/Xutil.h
@@ -395,6 +393,7 @@ ${X11ROOT_PREFIX}/include/X11/fonts/fntfil.h
 ${X11ROOT_PREFIX}/include/X11/fonts/fntfilio.h
 ${X11ROOT_PREFIX}/include/X11/fonts/fntfilst.h
 ${X11ROOT_PREFIX}/include/X11/fonts/font.h
+${X11ROOT_PREFIX}/include/X11/fonts/fontenc.h
 ${X11ROOT_PREFIX}/include/X11/fonts/fontencc.h
 ${X11ROOT_PREFIX}/include/X11/fonts/fontmisc.h
 ${X11ROOT_PREFIX}/include/X11/fonts/fontmod.h
@@ -402,21 +401,15 @@ ${X11ROOT_PREFIX}/include/X11/fonts/fontshow.h
 ${X11ROOT_PREFIX}/include/X11/fonts/fontstruct.h
 ${X11ROOT_PREFIX}/include/X11/fonts/fontutil.h
 ${X11ROOT_PREFIX}/include/X11/fonts/fontxlfd.h
-${X11ROOT_PREFIX}/include/X11/fonts/fontenc.h
 ${X11ROOT_PREFIX}/include/X11/fonts/fsmasks.h
 ${X11ROOT_PREFIX}/include/X11/fonts/pcf.h
 ${X11ROOT_PREFIX}/include/X11/keysym.h
 ${X11ROOT_PREFIX}/include/X11/keysymdef.h
+${X11ROOT_PREFIX}/include/X11/misc.h
+${X11ROOT_PREFIX}/include/X11/os.h
 ${X11ROOT_PREFIX}/include/X11/xpm.h
 ${X11ROOT_PREFIX}/include/xf86Optrec.h
 ${X11ROOT_PREFIX}/include/xf86Parser.h
-${X11ROOT_PREFIX}/lib/pkgconfig/render.pc
-${X11ROOT_PREFIX}/lib/pkgconfig/xcomposite.pc
-${X11ROOT_PREFIX}/lib/pkgconfig/xdamage.pc
-${X11ROOT_PREFIX}/lib/pkgconfig/xevie.pc
-${X11ROOT_PREFIX}/lib/pkgconfig/xfixes.pc
-${X11ROOT_PREFIX}/lib/pkgconfig/fixesext.pc
-${X11ROOT_PREFIX}/lib/pkgconfig/compositeext.pc
 ${X11ROOT_PREFIX}/lib/X11/XErrorDB
 ${X11ROOT_PREFIX}/lib/X11/XKeysymDB
 ${X11ROOT_PREFIX}/lib/X11/Xcms.txt
@@ -566,6 +559,13 @@ ${X11ROOT_PREFIX}/${LIBMAN_DIR}/XevieQueryVersion.${LIBMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${LIBMAN_DIR}/XevieSelectInput.${LIBMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${LIBMAN_DIR}/XevieSendEvent.${LIBMAN_SUFFIX}
 ${X11ROOT_PREFIX}/${LIBMAN_DIR}/XevieStart.${LIBMAN_SUFFIX}
+${X11ROOT_PREFIX}/lib/pkgconfig/render.pc
+${X11ROOT_PREFIX}/lib/pkgconfig/xcomposite.pc
+${X11ROOT_PREFIX}/lib/pkgconfig/xdamage.pc
+${X11ROOT_PREFIX}/lib/pkgconfig/xevie.pc
+${X11ROOT_PREFIX}/lib/pkgconfig/xfixes.pc
+${X11ROOT_PREFIX}/lib/pkgconfig/fixesext.pc
+${X11ROOT_PREFIX}/lib/pkgconfig/compositeext.pc
 @comment begin Darwin
 ${DARWIN_QUARTZ}${X11ROOT_PREFIX}/include/X11/extensions/applewm.h
 ${DARWIN_QUARTZ}${X11ROOT_PREFIX}/include/X11/extensions/applewmstr.h
@@ -1464,20 +1464,20 @@ ${X11ROOT_PREFIX}/lib/X11/locale/zh_TW/XI18N_OBJS
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_TW.big5
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_TW.UTF-8
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_TW
-@dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_HK.UTF-8
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_HK.big5hkscs
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_HK.big5
-@dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_CN.gb18030
+@dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_HK.UTF-8
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_CN.gbk
+@dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_CN.gb18030
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_CN.UTF-8
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/zh_CN
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/vi_VN.viscii
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/vi_VN.tcvn
-@dirrm ${X11ROOT_PREFIX}/lib/X11/locale/pt_BR.UTF-8
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/tscii-0
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/th_TH.UTF-8
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/th_TH
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/tatar-cyr
+@dirrm ${X11ROOT_PREFIX}/lib/X11/locale/pt_BR.UTF-8
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/nokhchi-1
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/mulelao-1
 @dirrm ${X11ROOT_PREFIX}/lib/X11/locale/microsoft-cp1256
@@ -1520,8 +1520,8 @@ ${X11ROOT_PREFIX}/lib/X11/locale/zh_TW/XI18N_OBJS
 @dirrm ${X11ROOT_PREFIX}/include/X11/fonts
 @dirrm ${X11ROOT_PREFIX}/include/X11/extensions
 @dirrm ${X11ROOT_PREFIX}/include/X11/bitmaps
-@dirrm ${X11ROOT_PREFIX}/include/X11/XprintAppUtil
 @dirrm ${X11ROOT_PREFIX}/include/X11/XprintUtil
+@dirrm ${X11ROOT_PREFIX}/include/X11/XprintAppUtil
 @dirrm ${X11ROOT_PREFIX}/include/X11/Xmu
 @dirrm ${X11ROOT_PREFIX}/include/X11/Xaw
 @dirrm ${X11ROOT_PREFIX}/include/X11/SM
