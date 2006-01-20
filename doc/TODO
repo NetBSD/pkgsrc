@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4461 2006/01/20 21:15:09 adam Exp $
+$NetBSD: TODO,v 1.4462 2006/01/20 22:07:28 adam Exp $
 
 Suggested new packages
 ======================
@@ -338,7 +338,6 @@ Suggested package updates
 	o amanda-*-2.4.5p1
 	o amarok-1.3.8
 	o amavis-0.3.12
-	o amule-2.1.0
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.74
 	o ap-Embperl-1.3.6
