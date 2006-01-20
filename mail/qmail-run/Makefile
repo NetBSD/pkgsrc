@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/29 06:21:53 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/01/20 23:47:42 joerg Exp $
 #
 
 DISTNAME=		qmail-run-20050415
@@ -18,6 +18,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}
 NO_CHECKSUM=		yes
+NO_BUILD=		yes
 
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 FILES_SUBST+=		QMAIL_QUEUE_EXTRA=${QMAIL_QUEUE_EXTRA:Q}
@@ -39,17 +40,28 @@ PKG_SYSCONFDIR.qmail-run!= ${PKG_INFO} -Q PKG_SYSCONFDIR ${INSTALLED_QMAIL}
 .  endif
 .endif
 
-do-build:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/README.pkgsrc		\
-		> ${WRKDIR}/README.pkgsrc
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mailer.conf		\
-		> ${WRKDIR}/mailer.conf
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/qmail-procmail.sh	\
-		> ${WRKDIR}/qmail-procmail
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/qmail-qfilter-queue.sh	\
-		> ${WRKDIR}/qmail-qfilter-queue
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/qmail-qread-client.sh	\
-		> ${WRKDIR}/qmail-qread-client
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/mailer.conf  ${WRKDIR}/qmail-procmail
+SUBST_FILES.paths+=	${WRKDIR}/qmail-qfilter-queue
+SUBST_FILES.paths+=	${WRKDIR}/qmail-qread-client
+SUBST_SED.paths+=	-e 's,@LOCALBASE@,${LOCALBASE},g'
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,@ECHO@,${ECHO},g'
+SUBST_SED.paths+=	-e 's,@SORT@,${SORT},g'
+SUBST_SED.paths+=	-e 's,@CAT@,${CAT},g'
+SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
+SUBST_SED.paths+=	-e 's,@SED@,${SED},g'
+SUBST_SED.paths+=	-e 's,@PKGNAME@,${PKGNAME},g'
+SUBST_STAGE.paths=	post-patch
+
+post-extract:
+	for f in README.pkgsrc mailer.conf; do				\
+	    ${CP} ${FILESDIR}/$$f ${WRKDIR}/$$f;			\
+	done
+	for f in qmail-procmail qmail-qfilter-queue qmail-qread-client; do \
+	    ${CP} ${FILESDIR}/$$f.sh ${WRKDIR}/$$f;			\
+	done
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/qmail-procmail ${PREFIX}/bin
