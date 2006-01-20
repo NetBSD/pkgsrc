@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/01/08 19:38:54 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2006/01/20 23:09:42 joerg Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	5
@@ -63,17 +63,25 @@ MAKE_ENV+=		DBMLIB=${DBMLIB:Q}
 MAKE_ENV+=		LOOKUP_INCLUDE=${LOOKUP_INCLUDE:Q}
 MAKE_ENV+=		LOOKUP_LIBS=${LOOKUP_LIBS:Q}
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	Local/Makefile.pkgsrc
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=	-e 's,@GZIP_CMD@,${GZIP_CMD},g'
+SUBST_SED.paths+=	-e 's,@GZCAT@,${GZCAT},g'
+SUBST_SED.paths+=	-e 's,@PERL5@,${PERL5},g'
+SUBST_STAGE.paths=	post-patch
+
 post-extract:
 	${CP} ${FILESDIR}/Makefile-DragonFly ${FILESDIR}/os.h-DragonFly \
 		${WRKSRC}/OS/
 
 pre-patch:
 	${MKDIR} ${WRKSRC}/Local
-	${CP} ${WRKSRC}/src/EDITME ${WRKSRC}/Local/Makefile.netbsd
+	${CP} ${WRKSRC}/src/EDITME ${WRKSRC}/Local/Makefile.pkgsrc
 
 pre-configure:
-	@${SED} ${FILES_SUBST_SED} ${WRKSRC}/Local/Makefile.netbsd \
-		> ${WRKSRC}/Local/Makefile
+	${CP} ${WRKSRC}/Local/Makefile.pkgsrc ${WRKSRC}/Local/Makefile
 	@for f in ${WRKSRC}/OS/Makefile-*; do \
 		${SED} -e 's/^CFLAGS.*/& $$(CPPFLAGS)/' \
 		-e '/^DBMLIB/d' $$f > $$f.subst; \
