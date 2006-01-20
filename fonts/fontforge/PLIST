@@ -1,19 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2005/06/30 14:36:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/01/20 12:11:22 adam Exp $
 bin/fontforge
-bin/pfaedit
-bin/sfddiff
 lib/libgdraw.la
 lib/libgunicode.la
 lib/pkgconfig/fontforge.pc
 man/man1/fontforge.1
 man/man1/sfddiff.1
-share/fontforge/pfaedit-de.ui
-share/fontforge/pfaedit-en.ui
-share/fontforge/pfaedit-es.ui
-share/fontforge/pfaedit-fr.ui
-share/fontforge/pfaedit-gr.ui
-share/fontforge/pfaedit-it.ui
-share/fontforge/pfaedit-ja.ui
-share/fontforge/pfaedit-ru.ui
-share/fontforge/pfaedit-zh.ui
-@dirrm share/fontforge
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/FontForge.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/FontForge.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/FontForge.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/FontForge.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/FontForge.mo
