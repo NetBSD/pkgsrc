@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/12/29 06:21:50 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/01/20 23:33:24 joerg Exp $
 
 DISTNAME=	mailman-2.1.6
 PKGREVISION=	1
@@ -34,10 +34,6 @@ MAILMAN_CGIEXT?=	.cgi
 
 MESSAGE_SUBST+=		EXECDIR=${EXECDIR}
 MESSAGE_SUBST+=		MAILMAN_USER=${MAILMAN_USER}
-FILES_SUBST+=		EXECDIR=${EXECDIR:Q}
-FILES_SUBST+=		MAILMAN_USER=${MAILMAN_USER:Q}
-FILES_SUBST+=		MAILMAN_GROUP=${MAILMAN_GROUP:Q}
-FILES_SUBST+=		MAILMAN_DATADIR=${MAILMAN_DATADIR:Q}
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 PLIST_SUBST+=		MAILMAN_CGIEXT=${MAILMAN_CGIEXT:S/none//}
 
@@ -96,9 +92,16 @@ BUILD_DEFS+=		MAILMAN_CGIEXT
 
 BROKEN_GETTEXT_DETECTION=	no
 
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/mailman.conf.dist
+SUBST_SED.paths+=	-e 's,@EXECDIR@,${EXECDIR},g'
+SUBST_SED.paths+=	-e 's,@MAILMAN_DATADIR@,${MAILMAN_DATADIR},g'
+SUBST_STAGE.paths=	post-patch
+
+post-extract:
+	${CP} ${FILESDIR}/mailman.conf.dist ${WRKDIR}/mailman.conf.dist
+
 post-patch:
-	@${SED} ${FILES_SUBST_SED} ${FILESDIR}/mailman.conf.dist \
-		>${WRKDIR}/mailman.conf.dist
 	${RM} -f ${WRKSRC}/[A-Z]*.orig
 
 pre-install:
