@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.4 2006/01/20 22:26:12 jlam Exp $
+# $NetBSD: extract,v 1.5 2006/01/20 23:58:49 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -67,9 +67,10 @@
 #			ability.
 #
 # ENVIRONMENT
+#	EXTRACT_OPTS_BIN
 #	EXTRACT_OPTS_LHA
-#	EXTRACT_OPTS_RAR
 #	EXTRACT_OPTS_PAX
+#	EXTRACT_OPTS_RAR
 #	EXTRACT_OPTS_TAR
 #	EXTRACT_OPTS_ZIP
 #	EXTRACT_OPTS_ZOO
@@ -208,6 +209,10 @@ case "$distfile" in
 *.rar)
 	: ${EXTRACT_OPTS_RAR=-inul}
 	${UNRAR} -x ${EXTRACT_OPTS_RAR} "$distfile" "$@"
+	;;
+
+*.bin)
+	${ECHO} yes | "$distfile" ${EXTRACT_OPTS_BIN} >/dev/null
 	;;
 
 *)
