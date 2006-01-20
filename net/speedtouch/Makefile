@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/12/29 06:22:04 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/01/20 23:41:30 jlam Exp $
 
 DISTNAME=		speedtouch-1.3.1
 PKGREVISION=		3
@@ -13,7 +13,7 @@ DISTFILES=		${DISTNAME}.tar.bz2
 FIRMWARE_SRCS=		SpeedTouch330_firmware_3012.zip
 SITES_${FIRMWARE_SRCS}=	http://www.speedtouch.com/download/drivers/USB/
 DISTFILES+=		${FIRMWARE_SRCS}
-EXTRACT_CMD_OPTS.zip=	-Laqo -d ${WRKDIR}/firmware
+EXTRACT_OPTS_ZIP=	-Laqo -d ${WRKDIR}/firmware
 
 LICENSE=		speedtouch-firmware-license
 
