@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/01/20 20:45:42 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/01/20 21:02:51 joerg Exp $
 #
 
 DISTNAME=		pinentry-0.7.1
@@ -14,8 +14,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 
 INFO_FILES=		pinentry.info
-
-USE_X11BASE=		yes
 
 # XXX This usage of bsd.options.mk is wrong and has to be fixed.  The
 # package has to be splitted into different packages, such as pinentry-gtk
@@ -46,4 +44,5 @@ BUILDLINK_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
 .include "../../security/libksba/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
