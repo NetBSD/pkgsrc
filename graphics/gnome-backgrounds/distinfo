@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/10/12 21:58:12 jmmv Exp $
+$NetBSD: distinfo,v 1.5 2006/01/20 13:32:35 jmmv Exp $
 
-SHA1 (gnome-backgrounds-2.12.1.tar.bz2) = 4824af6f9bfaffaaf98d1f34842ffccaa2adaa99
-RMD160 (gnome-backgrounds-2.12.1.tar.bz2) = bab939c9489ccf95915b31c23c0db46f777cdb7f
-Size (gnome-backgrounds-2.12.1.tar.bz2) = 1756483 bytes
+SHA1 (gnome-backgrounds-2.12.2.tar.bz2) = 029a6c11e9b30e710d990235b8a85c857b368022
+RMD160 (gnome-backgrounds-2.12.2.tar.bz2) = 47ff39d71b40219d76f55e076a1a3b3f63041265
+Size (gnome-backgrounds-2.12.2.tar.bz2) = 1782630 bytes
