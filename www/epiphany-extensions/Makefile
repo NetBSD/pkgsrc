@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/12/31 12:32:47 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/01/20 16:15:54 jmmv Exp $
 #
 
 DISTNAME=	epiphany-extensions-1.8.1
@@ -7,7 +7,7 @@ CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany-extensions/1.8/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/epiphany/extensions.html
 COMMENT=	Extensions for the Epiphany web browser
 
