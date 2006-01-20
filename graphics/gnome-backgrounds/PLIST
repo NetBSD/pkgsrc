@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/10/12 21:58:12 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/01/20 13:32:35 jmmv Exp $
 share/gnome-background-properties/gnome-branded.xml
 share/gnome-background-properties/gnome-tiles.xml
 share/gnome-background-properties/gnome-translucent.xml
@@ -29,6 +29,7 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/ky/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gnome-backgrounds.mo
