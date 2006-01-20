@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/01/08 14:00:12 tonio Exp $
+# $NetBSD: Makefile,v 1.22 2006/01/20 14:20:59 tonio Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
@@ -27,7 +27,7 @@ DEPENDS+=	ja-ptex-share>=2.1:../../print/ja-ptex-share
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
-TEX_ACCEPTED=		teTeX2
+.include "../../print/teTeX-bin/buildlink3.mk"
 .include "../../print/teTeX-bin/Makefile.common"
 
 PTEX_VERS=		3.1.2
@@ -113,5 +113,4 @@ do-install:
 pre-clean:
 	cd ../../print/teTeX-bin && ${MAKE} clean
 
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
