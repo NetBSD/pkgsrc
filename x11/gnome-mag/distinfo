@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.14 2005/08/21 11:33:05 jmmv Exp $
+$NetBSD: distinfo,v 1.15 2006/01/20 13:46:46 jmmv Exp $
 
-SHA1 (gnome-mag-0.12.1.tar.bz2) = 6026d6114fc9dbe0a1ca14567064aaadf80146ad
-RMD160 (gnome-mag-0.12.1.tar.bz2) = 2e45b4c97bbd6755da9246d007fcc46499d3b36d
-Size (gnome-mag-0.12.1.tar.bz2) = 332086 bytes
+SHA1 (gnome-mag-0.12.2.tar.bz2) = 53f0963df8523954a54304edb35b2c293275cd44
+RMD160 (gnome-mag-0.12.2.tar.bz2) = 0a055de640905e0c86a80f4c86ea0a66fc70fd46
+Size (gnome-mag-0.12.2.tar.bz2) = 333911 bytes
 SHA1 (patch-aa) = 20ad89bfabb3f0804a5d18ad0d2004d27202e277
-SHA1 (patch-ab) = a228bbc32eadbed51a84961874c56ae2c23ffd86
