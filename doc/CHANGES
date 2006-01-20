@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12590 2006/01/20 21:15:08 adam Exp $
+$NetBSD: CHANGES,v 1.12591 2006/01/20 22:07:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -445,3 +445,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated meta-pkgs/boost to 1.33.1 [jmmv 2006-01-20]
 	Updated security/pinentry to 0.7.1nb2 [joerg 2006-01-20]
 	Updated security/gnutls to 1.3.3 [adam 2006-01-20]
+	Updated net/amule to 2.1.0 [adam 2006-01-20]
