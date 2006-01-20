@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/19 04:48:28 minskim Exp $
+$NetBSD: distinfo,v 1.2 2006/01/20 01:52:46 joerg Exp $
 
 SHA1 (xfmedia-0.9.1.tar.bz2) = 92eff43fb180b07039d243d1cc720aed0e4163ad
 RMD160 (xfmedia-0.9.1.tar.bz2) = 71576ca7b58eb32bffb2fdaa8bcc75c4fb78f794
 Size (xfmedia-0.9.1.tar.bz2) = 806692 bytes
 SHA1 (patch-aa) = faf57dee99db3f228d89bae17cd40879881a5198
+SHA1 (patch-ab) = f9cab8f90bb8f50758a5e3a11c3579ba374937af
