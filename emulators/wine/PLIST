@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2005/10/26 08:32:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2006/01/20 14:58:17 adam Exp $
 bin/function_grep.pl
 bin/msiexec
 bin/notepad
@@ -122,6 +122,7 @@ include/wine/windows/dciman.h
 include/wine/windows/dde.h
 include/wine/windows/ddeml.h
 include/wine/windows/ddk/cfgmgr32.h
+include/wine/windows/ddk/ntddser.h
 include/wine/windows/ddk/wdm.h
 include/wine/windows/ddk/winsplp.h
 include/wine/windows/ddraw.h
@@ -157,10 +158,12 @@ include/wine/windows/dpaddr.h
 include/wine/windows/dplay.h
 include/wine/windows/dplay8.h
 include/wine/windows/dplobby.h
+include/wine/windows/dplobby8.h
 include/wine/windows/dsconf.h
 include/wine/windows/dsdriver.h
 include/wine/windows/dshow.h
 include/wine/windows/dsound.h
+include/wine/windows/dsrole.h
 include/wine/windows/dxdiag.h
 include/wine/windows/dxerr8.h
 include/wine/windows/dxerr9.h
@@ -340,6 +343,7 @@ include/wine/windows/unknwn.h
 include/wine/windows/unknwn.idl
 include/wine/windows/urlmon.h
 include/wine/windows/urlmon.idl
+include/wine/windows/usp10.h
 include/wine/windows/uuids.h
 include/wine/windows/uxtheme.h
 include/wine/windows/ver.h
@@ -455,7 +459,9 @@ lib/wine/dpnhpast.dll.so
 lib/wine/dsound.dll.so
 lib/wine/dswave.dll.so
 lib/wine/dxdiagn.dll.so
+lib/wine/eject.exe.so
 lib/wine/expand.exe.so
+lib/wine/explorer.exe.so
 lib/wine/gdi.exe.so
 lib/wine/gdi32.dll.so
 lib/wine/glu32.dll.so
@@ -671,6 +677,7 @@ lib/wine/rsabase.dll.so
 lib/wine/rsaenh.dll.so
 lib/wine/rundll32.exe.so
 lib/wine/secur32.dll.so
+lib/wine/security.dll.so
 lib/wine/sensapi.dll.so
 lib/wine/serialui.dll.so
 lib/wine/setupapi.dll.so
@@ -681,7 +688,7 @@ lib/wine/shell32.dll.so
 lib/wine/shfolder.dll.so
 lib/wine/shlwapi.dll.so
 lib/wine/snmpapi.dll.so
-lib/wine/sound.dll.so
+lib/wine/sound.drv.so
 lib/wine/start.exe.so
 lib/wine/stdole2.tlb.so
 lib/wine/stdole32.tlb.so
@@ -741,7 +748,6 @@ lib/wine/winepath.exe.so
 lib/wine/wineps.drv.so
 lib/wine/wineps16.drv.so
 lib/wine/winetest.exe.so
-lib/wine/winetty.drv.so
 lib/wine/winevdm.exe.so
 lib/wine/winex11.drv.so
 lib/wine/wing.dll.so
