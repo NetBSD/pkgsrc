@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2005/10/20 00:43:32 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2006/01/20 21:14:04 adam Exp $
 
---- doc/Makefile.in.orig	2005-10-07 13:26:30.000000000 +0200
+--- doc/Makefile.in.orig	2006-01-12 18:13:50.000000000 +0100
 +++ doc/Makefile.in
-@@ -387,7 +387,7 @@ gnutls.dvi: gnutls.texi $(srcdir)/versio
+@@ -413,7 +413,7 @@ gnutls.dvi: gnutls.texi $(srcdir)/versio
  gnutls.pdf: gnutls.texi $(srcdir)/version.texi $(gnutls_TEXINFOS)
  gnutls.html: gnutls.texi $(srcdir)/version.texi $(gnutls_TEXINFOS)
  $(srcdir)/version.texi:  $(srcdir)/stamp-vti
