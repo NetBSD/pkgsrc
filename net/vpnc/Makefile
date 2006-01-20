@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2006/01/03 21:48:17 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/20 11:29:52 hubertf Exp $
 #
 
 DISTNAME=		vpnc-0.3.3
 CATEGORIES=		net security
 MASTER_SITES=		http://www.unix-ag.uni-kl.de/~massar/vpnc/
 
-MAINTAINER=		hubertf@NetBSD.org
+MAINTAINER=		hubertf@NetBSD.org,j+pkgsrc@salmi.ch
 HOMEPAGE=		http://www.unix-ag.uni-kl.de/~massar/vpnc/
 COMMENT=		Client for Cisco3000 VPN Concentrator
 
