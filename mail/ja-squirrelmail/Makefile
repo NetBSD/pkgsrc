@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/29 06:21:50 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/01/20 23:57:26 joerg Exp $
 
 DISTNAME=	squirrelmail-1.4.5
 PKGNAME=	ja-${DISTNAME}
@@ -51,31 +51,28 @@ OWN_DIRS=		${DATADIR}
 OWN_DIRS_PERMS=		${ATTACHMENTS_DIR} ${ROOT_USER} ${APACHE_GROUP} 730
 OWN_DIRS_PERMS+=	${USER_PREFS_DIR} ${APACHE_USER} ${APACHE_GROUP} 755
 
-pre-configure:
-	cd ${WRKSRC};							\
-	for file in config/config_default.php; do			\
-		${SED}	-e "s|@ATTACHMENTS_DIR@|${ATTACHMENTS_DIR}|g"	\
-			-e "s|@USER_PREFS_DIR@|${USER_PREFS_DIR}|g"	\
-			$${file} > $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
-	done;								\
-	cd ${WRKSRC};							\
-	${FIND} . \( -name "*.orig*" -o -name ".cvsignore" \) -print	\
-		| ${XARGS} ${RM} -f
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKDIR}/squirrelmail.conf.dist config/config_default.php
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e 's,@ATTACHMENTS_DIR@,${ATTACHMENTS_DIR},g'
+SUBST_SED.paths+=	-e 's,@USER_PREFS_DIR@,${USER_PREFS_DIR},g'
+SUBST_SED.paths+=	-e 's,@SMDIRDIR@,${SMDIR},g'
+SUBST_STAGE.paths=	post-patch
 
-pre-install:
-	@${SED}	${FILES_SUBST_SED} ${FILESDIR}/squirrelmail.conf.dist	\
-		> ${WRKDIR}/squirrelmail.conf.dist
+post-extract:
+	${CP} ${FILESDIR}/squirrelmail.conf.dist ${WRKDIR}/squirrelmail.conf.dist
+
+pre-configure:
+	${FIND} ${WRKSRC} \( -name "*.orig*" -o -name ".cvsignore" \) -exec ${RM} -f {} \;
 
 do-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${SMDIR}
-	cd ${WRKDIR}; ${INSTALL_DATA} squirrelmail.conf.dist		\
-		${EGDIR}/squirrelmail.conf
+	${INSTALL_DATA} ${WRKDIR}/squirrelmail.conf.dist ${EGDIR}/squirrelmail.conf
 	${CP} -R ${WRKSRC}/* ${SMDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${SMDIR}
-	${FIND} ${SMDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${SMDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
+	${FIND} ${SMDIR} -type d -print -exec ${CHMOD} ${PKGDIRMODE} {} \;
+	${FIND} ${SMDIR} -type f -print -exec ${CHMOD} ${SHAREMODE} {} \;
 	${CHMOD} a+x ${SMDIR}/config/conf.pl
 	${INSTALL_DATA} ${WRKSRC}/data/index.php ${USER_PREFS_DIR}/
 	${INSTALL_DATA} ${WRKSRC}/data/.htaccess ${USER_PREFS_DIR}/
