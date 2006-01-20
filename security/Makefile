@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.258 2006/01/03 21:10:39 adrianp Exp $
+# $NetBSD: Makefile,v 1.259 2006/01/20 20:39:06 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -149,6 +149,7 @@ SUBDIR+=	p5-Crypt-RSA
 SUBDIR+=	p5-Crypt-RandPasswd
 SUBDIR+=	p5-Crypt-Random
 SUBDIR+=	p5-Crypt-Rijndael
+SUBDIR+=	p5-Crypt-SSLeay
 SUBDIR+=	p5-Crypt-SmbHash
 SUBDIR+=	p5-Crypt-Twofish
 SUBDIR+=	p5-Digest
@@ -169,7 +170,6 @@ SUBDIR+=	p5-Net-DNS-SEC
 SUBDIR+=	p5-Net-SSH
 SUBDIR+=	p5-Net-SSLeay
 SUBDIR+=	p5-SHA
-SUBDIR+=	p5-SSLeay
 SUBDIR+=	p5-Tie-EncryptedHash
 SUBDIR+=	pakemon
 SUBDIR+=	pam-dbm
