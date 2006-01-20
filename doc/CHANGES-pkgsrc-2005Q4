@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.40 2006/01/15 15:05:50 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.41 2006/01/20 23:00:48 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -81,3 +81,5 @@ Pullup ticket 1031 - requested by Johnny C. Lam
 fix binary compatibility with previous versions of perl-5.8.x
 Pullup ticket 1032 - requested by Adrian Portelli
 security update for sudo
+Pullup ticket 1039 - requested by Mark Davies
+sync x11/kdelibs3 with HEAD, including a security fix
