@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2004/05/07 17:47:32 abs Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/20 23:09:42 joerg Exp $
 
---- Local/Makefile.netbsd.orig	Fri May  7 18:36:39 2004
-+++ Local/Makefile.netbsd
+--- Local/Makefile.pkgsrc.orig	Fri May  7 18:36:39 2004
++++ Local/Makefile.pkgsrc
 @@ -78,7 +78,7 @@
  # CHGRP_COMMAND=/usr/bin/chgrp
  # MV_COMMAND=/bin/mv
  # RM_COMMAND=/bin/rm
 -# PERL_COMMAND=/usr/bin/perl
-+PERL_COMMAND=@PREFIX@/bin/perl
++PERL_COMMAND=@PERL5@
  
  
  # The following macro can be used to change the command for building a library
