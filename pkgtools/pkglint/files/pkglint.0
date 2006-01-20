@@ -37,6 +37,13 @@ DDEESSCCRRIIPPTTIIOONN
            --WW{{[[nnoo--]]wwaarrnn,,......}}   Enable or disable specific warnings.  For a
                                list of warnings, see below.
 
+           --dd|----ddeebbuugg          Enable warnings for parsing errors and other
+                               things that haven't been completed yet.  This
+                               option is separated from the `-W' options
+                               because the diagnostics are too hard to under-
+                               stand without detailed knowledge of pkglint's
+                               source code.
+
            --ee|----eexxppllaaiinn        Print further explanations for diagnostics.
                                Sometimes the reasons for diagnostics are not
                                obvious and need further explanation.
@@ -103,9 +110,6 @@ DDEESSCCRRIIPPTTIIOONN
 
            [[nnoo--]]aabbssnnaammee        Warn if a file contains an absolute pathname.
 
-           [[nnoo--]]ddeebbuugg          Enable some warnings that are only useful for
-                               debugging pkglint itself.
-
            [[nnoo--]]ddiirreeccttccmmdd      Warn if a system command name is used instead
                                of a variable (e.g. sed instead of ${SED}).
 
@@ -125,8 +129,12 @@ DDEESSCCRRIIPPTTIIOONN
 
            [[nnoo--]]ssppaaccee          Emit notes for inconsistent use of white-space.
 
-           [[nnoo--]]ttyyppeess          Warn for some Makefile variables if their
+           [[nnoo--]]ttyyppeess          Warn for some _M_a_k_e_f_i_l_e variables if their
                                assigned values do not match their type.
+
+           [[nnoo--]]vvaarroorrddeerr       Warn if the variables in a package _M_a_k_e_f_i_l_es
+                               are not ordered in the way it is described the
+                               pkgsrc guide.
 
      OOtthheerr aarrgguummeennttss
 
@@ -173,4 +181,4 @@ BBUUGGSS
      If you don't understand the messages, feel free to ask on the
      <tech-pkg@NetBSD.org> mailing list.
 
-NetBSD 3.0                     January 12, 2006                     NetBSD 3.0
+pkgsrc                         January 20, 2006                         pkgsrc

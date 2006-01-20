@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.477 2006/01/17 23:01:17 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.478 2006/01/20 13:33:37 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -996,7 +996,6 @@ my (%checks) = (
 );
 
 my $opt_warn_absname	= true;
-my $opt_warn_debug	= false;
 my $opt_warn_directcmd	= true;
 my $opt_warn_extra	= false;
 my $opt_warn_order	= true;
@@ -1004,9 +1003,9 @@ my $opt_warn_plist_sort	= false;
 my $opt_warn_quoting	= false;
 my $opt_warn_space	= false;
 my $opt_warn_types	= true;
+my $opt_warn_varorder	= false;
 my (%warnings) = (
 	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
-	"debug"		=> [\$opt_warn_debug, "enable some warnings that are useful for debugging pkglint"],
 	"directcmd"	=> [\$opt_warn_directcmd, "warn about use of direct command names instead of Make variables"],
 	"extra"		=> [\$opt_warn_extra, "enable some extra warnings"],
 	"order"		=> [\$opt_warn_order, "warn if Makefile entries are unordered"],
@@ -1014,9 +1013,11 @@ my (%warnings) = (
 	"quoting"	=> [\$opt_warn_quoting, "warn about quoting issues"],
 	"space"		=> [\$opt_warn_space, "warn about inconsistent use of white-space"],
 	"types"		=> [\$opt_warn_types, "do some simple type checking in Makefiles"],
+	"varorder"	=> [\$opt_warn_varorder, "warn about the ordering of variables"],
 );
 
 my $opt_autofix		= false;
+my $opt_debug		= false;
 my $opt_dumpmakefile	= false;
 my $opt_import		= false;
 my $opt_klickibunti	= false;	# experimental
@@ -1049,6 +1050,8 @@ my (@options) = (
 		my ($opt, $val) = @_;
 		parse_multioption($val, \%warnings);
 	  } ],
+	[ "-d|--debug", "Print additional warnings that are mostly of use to pkglint's author",
+	  "debug|d", \$opt_debug ],
 	[ "-e|--explain", "Explain the diagnostics or give further help",
 	  "explain|e", sub {
 		PkgLint::Logging::set_explain();
@@ -1351,8 +1354,7 @@ sub get_vartypes_map() {
 		log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
 	}
 
-# TODO: Enable when the time is ripe.
-if (false) {
+if ($opt_warn_varorder) {
 	# Additionally, scan mk/defaults/mk.conf for variable
 	# definitions. All these variables are reserved for the user and
 	# must not be set within packages.
@@ -2020,7 +2022,7 @@ sub checkline_mk_text($$) {
 	checkline_trailing_whitespace($line);
 
 	if ($text =~ qr"\$\{WRKSRC\}/\.\./") {
-		$line->log_error("Using \"\${WRKSRC}/..\" is conceptually wrong. Use a combination of WRKSRC, CONFIGURE_DIRS and BUILD_DIRS instead.");
+		$line->log_warning("Using \"\${WRKSRC}/..\" is conceptually wrong. Please use a combination of WRKSRC, CONFIGURE_DIRS and BUILD_DIRS instead.");
 	}
 
 	$rest = $text;
@@ -2045,8 +2047,10 @@ sub checkline_mk_shellword($$$) {
 	my ($line, $shellword, $check_quoting) = @_;
 	my ($rest, $state);
 
-	if ($shellword =~ qr"^\$\{${regex_varname}(?::.+)?\}$") {
-		# TODO: Check whether the variable needs quoting or not.
+	if ($shellword =~ qr"^\$\{(${regex_varname})(:.+)?\}$") {
+		my ($varname, $mod) = ($1, $2);
+
+		$opt_debug and $line->log_warning("Not sure whether the variable ${varname} needs quoting.");
 		return;
 	}
 
@@ -2214,7 +2218,7 @@ sub checkline_mk_shellword($$$) {
 		}
 	}
 	if ($rest ne "") {
-		$opt_warn_debug && $line->log_error("[checkline_mk_shellword] " . statename->[$state] . ": rest=${rest}");
+		$opt_debug && $line->log_error("[checkline_mk_shellword] " . statename->[$state] . ": rest=${rest}");
 	}
 }
 
@@ -2381,7 +2385,7 @@ sub checkline_mk_shelltext($$) {
 	}
 
 	if ($rest ne "") {
-		$opt_warn_debug && $line->log_error("[checkline_mk_shelltext] " . scst_statename->[$state] . ": rest=${rest}");
+		$opt_debug && $line->log_error("[checkline_mk_shelltext] " . scst_statename->[$state] . ": rest=${rest}");
 	}
 }
 
@@ -2402,7 +2406,7 @@ sub checkline_mk_vartype_basic($$$$$$) {
 	}
 
 	if ($type eq "AwkCommand") {
-		$opt_warn_debug and $line->log_warning("Unchecked AWK command: ${value}");
+		$opt_debug and $line->log_warning("Unchecked AWK command: ${value}");
 
 	} elsif ($type eq "BuildlinkDepmethod") {
 		if ($value ne $value_novar) {
@@ -2418,7 +2422,7 @@ sub checkline_mk_vartype_basic($$$$$$) {
 		}
 
 	} elsif ($type eq "BuildlinkPackages") {
-		if ($value !~ qr"^(?:\$\{BUILDLINK_PACKAGES:N[-0-9A-Z_a-z]+\}|[-0-9A-Z_a-z]+)$") {
+		if ($value !~ qr"^(?:\$\{BUILDLINK_PACKAGES:N[+\-.0-9A-Z_a-z]+\}|[+\-.0-9A-Z_a-z]+)$") {
 			$line->log_warning("Invalid value for ${varname}.");
 		}
 
@@ -2466,16 +2470,15 @@ sub checkline_mk_vartype_basic($$$$$$) {
 		} elsif ($value =~ qr"^-[DU]([0-9A-Z_a-z]+)") {
 			my ($macname) = ($1);
 
-			# TODO: Check for invalid macro names.
+			$opt_debug and $line->log_warning("Unknown macro ${macname} in ${varname}.");
 
 		} elsif ($value =~ qr"^-I(.*)") {
 			my ($dirname) = ($1);
 
-			# TODO: Check for invalid directory names.
+			$opt_debug and $line->log_warning("Unknown directory ${dirname} in ${varname}.");
 
 		} elsif ($value =~ qr"^-[OWfgm]") {
-			# TODO: Discuss which compiler flags should be allowed
-			# to be set by the package author.
+			$opt_debug and $line->log_warning("Undiscussed compiler flag ${value} in ${varname}.");
 
 		} elsif ($value =~ qr"^-.*") {
 			$line->log_warning("Unknown compiler flag \"${value}\".");
@@ -2779,7 +2782,7 @@ sub checkline_mk_vartype_basic($$$$$$) {
 		}
 
 	} elsif ($type eq "WrkdirSubdirectory") {
-		# TODO: check for ${WRKDIR}/${DISTNAME}/foo
+		$opt_debug and $line->log_warning("Unchecked subdirectory \"${value}\" of \${WRKSRC}.");
 
 	} elsif ($type eq "WrksrcSubdirectory") {
 		if ($value =~ qr"^(\$\{WRKSRC\})(?:/(.*))?") {
@@ -2856,8 +2859,8 @@ sub checkline_mk_vartype($$$$$) {
 				: ($varname =~ qr"_GROUP$") ? "UserGroupName"
 				: ($varname =~ qr"_ENV$") ? "List+ of ShellWord"
 				: ($varname =~ qr"_CMD$") ? "ShellCommand"
-				: ($varname =~ qr"_ARGS$") ? "List+ of ShellWord"
-				: ($varname =~ qr"_FLAGS$") ? "List+ of ShellWord"
+				: ($varname =~ qr"_ARGS$") ? "List of ShellWord"
+				: ($varname =~ qr"_FLAGS$") ? "List of ShellWord"
 				: $type;
 			if (defined($type)) {
 				$line->log_info("The guessed type of ${varname} is \"${type}\".");
@@ -2866,9 +2869,12 @@ sub checkline_mk_vartype($$$$$) {
 
 		if (!defined($type)) {
 			if ($varname !~ qr"_MK$") {
-				$opt_warn_debug and $line->log_warning("[checkline_mk_vartype] Unchecked variable ${varname}.");
+				$opt_debug and $line->log_warning("[checkline_mk_vartype] Unchecked variable ${varname}.");
 			}
 			checkline_mk_text($line, $value);
+
+		} elsif ($op eq "!=") {
+			$opt_debug and $line->log_info("Use of !=: ${value}");
 
 		} elsif ($type =~ qr"^List(!?)(\+?)(?: of (.*))?$") {
 			my ($internal_list, $append_only, $element_type) = ($1 eq "!", $2 eq "+", $3);
@@ -2898,7 +2904,7 @@ sub checkline_mk_vartype($$$$$) {
 			}
 
 			if ($rest !~ qr"^\s*$") {
-				$opt_warn_debug and $line->log_warning("Invalid shell word \"${value}\" at the end.");
+				$opt_debug and $line->log_warning("Invalid shell word \"${value}\" at the end.");
 			}
 
 		} else {
@@ -3206,7 +3212,7 @@ sub checklines_mk($) {
 				}
 
 			} elsif ($directive eq "if" || $directive eq "elif") {
-				# TODO
+				$opt_debug and $line->log_warning("Unchecked conditional \"${args}\".");
 
 			} elsif ($directive eq "ifdef" || $directive eq "ifndef") {
 				if ($args =~ qr"\s") {
@@ -3834,7 +3840,7 @@ sub checkfile($) {
 	} elsif ($basename =~ qr"^PLIST") {
 		$opt_check_PLIST and checkfile_PLIST($fname);
 
-	} elsif ($basename eq "TODO") {
+	} elsif ($basename eq "TODO" || $basename eq "README") {
 		# Ok
 
 	} elsif (!-T $fname) {
