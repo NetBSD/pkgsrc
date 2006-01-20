@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.2 2006/01/20 20:00:15 jlam Exp $
+# $NetBSD: extract,v 1.3 2006/01/20 20:00:44 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -159,29 +159,36 @@ case "$distfile" in
 		exit 1
 	esac
 	;;
+
 *.shar.gz|*.shar.bz2|*.shar.Z|*.shar)
 	$decompress_cat "$distfile" | ${SH}
 	;;
+
 *.zip)
 	: ${EXTRACT_OPTS_ZOO=-Laqo}
 	${TEST} "$exclude" = "no" || exclude_flag="-x"
 	${UNZIP} ${EXTRACT_OPTS_ZOO} "$distfile" $exclude_flag "$@"
 	;;
+
 *.lha|*.lzh)
 	: ${EXTRACT_OPTS_LHA=q}
 	${LHA} x$extract_options "$distfile" "$@"
 	;;
+
 *.Z|*.bz2|*.gz)
 	target="${distfile##*/}"; target="${target%.*}"
 	$decompress_cat "$distfile" > "$target"
 	;;
+
 *.zoo)
 	${UNZOO} -x ${EXTRACT_OPTS_ZOO} "$distfile" "$@"
 	;;
+
 *.rar)
 	: ${EXTRACT_OPTS_RAR=-inul}
 	${UNRAR} -x ${EXTRACT_OPTS_RAR} "$distfile" "$@"
 	;;
+
 *)
 	${ECHO} 1>&2 "$self: unable to extract: $1"
 	exit 1
