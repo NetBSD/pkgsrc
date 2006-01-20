@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/11/29 14:27:46 adam Exp $
+# $NetBSD: Makefile,v 1.17 2006/01/20 12:11:21 adam Exp $
 
 DISTNAME=	fontforge_full-${VERSION}
 PKGNAME=	fontforge-${VERSION}
@@ -10,8 +10,9 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://fontforge.sourceforge.net/
 COMMENT=	Postscript font editor
 
-VERSION=	20051028
+VERSION=	20060114
 
+USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
