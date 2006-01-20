@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2005/12/29 06:21:41 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2006/01/20 22:37:05 adam Exp $
 
-DISTNAME=	rocksndiamonds-3.1.1
-PKGREVISION=	1
+DISTNAME=	rocksndiamonds-3.1.2
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.artsoft.org/RELEASES/unix/rocksndiamonds/
 
@@ -12,8 +11,8 @@ COMMENT=	Game like Boulder Dash, Emerald Mine, or Sokoban (X11 build)
 USE_TOOLS+=		gmake
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man6
- 
-PLIST_SRC=	${WRKDIR}/PLIST ../rocksndiamonds/PLIST
+
+PLIST_SRC=	${WRKDIR}/PLIST PLIST
 PLIST_SUBST+=	SCORE_PATH=${SCORE_PATH:Q}
 PLIST_SUBST+=	ROCK_INSTALL_DIR="${INSTALL} -d -o ${RND_USER} -g ${RND_GROUP} -m 775"
 
@@ -27,12 +26,6 @@ RND_GROUP=	games
       ${MACHINE} == "shark" )
 MAKE_ENV+=	HAVE_JOYSTICK=1
 .endif
-
-#.if ${OPSYS} == "SunOS"
-#BUILD_TARGET=	solaris
-#.else
-#BUILD_TARGET=	x11
-#.endif
 
 .include "options.mk"
 
