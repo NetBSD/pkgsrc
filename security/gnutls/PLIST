@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2005/12/31 00:02:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/01/20 21:14:04 adam Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -274,6 +274,7 @@ man/man3/gnutls_session_get_client_random.3
 man/man3/gnutls_session_get_data.3
 man/man3/gnutls_session_get_data2.3
 man/man3/gnutls_session_get_id.3
+man/man3/gnutls_session_get_master_secret.3
 man/man3/gnutls_session_get_ptr.3
 man/man3/gnutls_session_get_server_random.3
 man/man3/gnutls_session_is_resumed.3
