@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/31 12:32:47 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2006/01/20 16:15:54 jmmv Exp $
 #
 
 DISTNAME=	drivel-2.0.2
@@ -7,7 +7,7 @@ CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=drivel/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.dropline.net/drivel/
 COMMENT=	LiveJournal client for the GNOME Desktop
 
