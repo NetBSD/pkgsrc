@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.52 2005/12/25 16:52:20 heinz Exp $
+# $NetBSD: bsd.sites.mk,v 1.53 2006/01/20 13:50:57 rxg Exp $
 #
 # Default MASTER_SITES
 
@@ -111,6 +111,11 @@ MASTER_SITE_SOURCEFORGE+=	\
 #	ftp://ftp2.sourceforge.net/pub/sourceforge/
 #	ftp://ftp.tuwien.ac.at/linux/sourceforge/
 #	http://sf.gds.tuwien.ac.at/
+
+MASTER_SITE_SOURCEFORGE_JP+=	\
+	http://prdownloads.sourceforge.jp/ \
+	http://osdn.dl.sourceforge.jp/ \
+	http://keihanna.dl.sourceforge.jp/
 
 MASTER_SITE_SUSE+=	\
 	ftp://rpmfind.net/linux/SuSE-Linux/${MACHINE_ARCH}/update/${SUSE_VERSION}/ \
