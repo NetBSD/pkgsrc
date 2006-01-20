@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/01/14 10:48:13 wulf Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/20 23:41:29 jlam Exp $
 #
 
 VERSION=		0.4.4
@@ -11,7 +11,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://boa-constructor.sourceforge.net/
 COMMENT=		Python IDE
 
-EXTRACT_CMD_OPTS.zip=	-aqo
+EXTRACT_OPTS_ZIP=	-aqo
 PYTHON_VERSIONS_ACCEPTED=	23 24
 
 BOADIR=	${PREFIX}/share/boa-constructor-${VERSION}

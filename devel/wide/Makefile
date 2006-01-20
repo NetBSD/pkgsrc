@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/02/20 12:52:39 grant Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/20 23:41:29 jlam Exp $
 #
 
 DISTNAME=		wide
@@ -13,7 +13,7 @@ COMMENT=		IDE for the While programming language
 
 NO_BUILD=		yes
 WRKSRC=			${WRKDIR}/WIDE
-EXTRACT_CMD_OPTS.zip=	-aqo
+EXTRACT_OPTS_ZIP=	-aqo
 
 LICENSE=		eclipse-license
 
