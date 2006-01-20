@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.4 2005/09/05 10:45:19 dogcow Exp $
+$NetBSD: patch-aa,v 1.5 2006/01/20 22:06:32 adam Exp $
 
---- /tmp/configure.orig	2005-09-05 03:12:12.000000000 -0700
-+++ configure	2005-09-05 03:05:31.000000000 -0700
-@@ -7711,6 +7711,7 @@ if test x$autopoint_version != x; then
- else
+--- configure.orig	2006-01-02 00:00:38.000000000 +0100
++++ configure
+@@ -7003,6 +7003,7 @@ else
  	result="no"
  fi
+ 
 +result="yes"
  HAVE_GETTEXT=$result
+ 
  echo "$as_me:$LINENO: result: $result ($autopoint_version)" >&5
- echo "${ECHO_T}$result ($autopoint_version)" >&6
