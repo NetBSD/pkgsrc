@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.56 2006/01/13 00:59:39 rillig Exp $
+# $NetBSD: makevars.map,v 1.57 2006/01/20 12:35:51 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -64,7 +64,7 @@ BUILD_ENV		List+ of ShellWord
 BUILD_TARGET		List of Identifier
 BUILD_USES_MSGFMT	Yes
 BUILTIN_PKG		Identifier
-BUILTIN_FIND_FILES_VAR	Varname
+BUILTIN_FIND_FILES_VAR	List of Varname
 BUILTIN_FIND_FILES	List of Pathname
 BUILTIN_FIND_GREP	List
 BUILTIN_X11_TYPE	Readonly
