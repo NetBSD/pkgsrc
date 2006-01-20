@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/01/06 15:10:06 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2006/01/20 22:44:50 joerg Exp $
 #
 
 DISTNAME=	dctc-0.85.4
@@ -14,8 +14,15 @@ COMMENT=	Direct Connect clone (Direct Connect Text Client)
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-manual-db-detect
 USE_TOOLS+=		gmake perl:run
+USE_LIBTOOL=		YES
 
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.db4}/include/db4
+
+SUBST_CLASSES+=		inethack
+SUBST_FILES.inethack=	src/dc_manage.c src/dc_manage_master.c
+SUBST_FILES.inethack+=	src/main.c src/main_master.c src/var.h
+SUBST_SED.inethack+=	-e 's,\(G_.*LOCK.*(\)inet_ntoa,\1my_inet_ntoa,g'
+SUBST_STAGE.inethack=	post-patch
 
 post-configure:
 	@${TOUCH} ${WRKSRC}/stamp-h.in ${WRKSRC}/config.h.in
