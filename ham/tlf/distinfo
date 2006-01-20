@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2006/01/14 12:06:48 wulf Exp $
+$NetBSD: distinfo,v 1.4 2006/01/20 13:09:59 rillig Exp $
 
 SHA1 (tlf-0.9.27.tar.gz) = c573e2e5699f84753ef9ae606d8b709d373f0216
 RMD160 (tlf-0.9.27.tar.gz) = 8d4bce98f7f4c6993542d23fce4a6abc11a2a5d6
 Size (tlf-0.9.27.tar.gz) = 388997 bytes
+SHA1 (patch-aa) = 0587a3f36bf0a6620c70a5d3290d6d5384c8c092
