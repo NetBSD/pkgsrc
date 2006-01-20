@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.95 2006/01/06 15:10:03 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2006/01/20 14:58:17 adam Exp $
 
-DISTNAME=	wine-0.9
-PKGREVISION=	1
+DISTNAME=	wine-0.9.6
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wine/} \
 		http://ibiblio.org/pub/linux/system/emulators/wine/
@@ -16,22 +15,22 @@ BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD-*-i386 Linux-*-i386 SunOS-*-i386 Darwin-*-i386
 
-WRKSRC=		 	${WRKDIR}/${DISTNAME:S/W/w/}
+WRKSRC=			${WRKDIR}/${DISTNAME:S/W/w/}
 USE_LIBTOOL=		yes
 USE_NCURSES=		yes
 USE_TOOLS+=		bison gmake mktemp
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-debug
+#CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-trace
 UNLIMIT_RESOURCES=	datasize
 
-REPLACE_PERL=		tools/winemaker tools/winedump/function_grep.pl
+REPLACE_PERL+=		tools/winemaker tools/winedump/function_grep.pl
 
 # The Wine configure script has problems locating the libraries in the
 # buildlink directory, so prepend all of the LDFLAGS necessary to link
 # against the libraries.
 #
-CONFIGURE_ENV+=		X_LIBS=${LDFLAGS:M*:Q}
+CONFIGURE_ENV+=		X_LIBS="${LDFLAGS:M*:Q}"
 CONFIGURE_ENV+=		CFLAGS="${CFLAGS} -DDEVOSSAUDIO=\"${DEVOSSAUDIO}\""
 LIBS+=			${LDFLAGS}
 
