@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.20 2005/12/05 20:51:20 rillig Exp $
+# $NetBSD: Makefile.common,v 1.21 2006/01/20 16:15:54 jmmv Exp $
 
 DISTNAME=	xosd-2.2.12
 CATEGORIES=	x11
 MASTER_SITES=	http://www.ignavus.net/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ignavus.net/software.html
 
 DISTINFO_FILE=		${.CURDIR}/../../x11/xosd/distinfo

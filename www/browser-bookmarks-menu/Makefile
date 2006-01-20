@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/31 12:32:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/20 16:15:54 jmmv Exp $
 #
 
 DISTNAME=	browser-bookmarks-menu-0.3
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=browserbookapp/}
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://browserbookapp.sourceforge.net/
 COMMENT=	Easy access to web bookmarks through a GNOME Panel Applet
 

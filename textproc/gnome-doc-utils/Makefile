@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/01/20 13:28:22 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/20 16:15:54 jmmv Exp $
 #
 
 DISTNAME=	gnome-doc-utils-0.4.4
@@ -6,7 +6,7 @@ CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-doc-utils/0.4/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Documentation utilities for the GNOME project
 
