@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2005/12/11 09:40:39 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2006/01/20 07:38:12 adam Exp $
 
-DISTNAME=	atari800-1.3.6
-PKGREVISION=	1
+DISTNAME=	atari800-2.0.1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=atari800/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} xf25.zip
@@ -10,7 +9,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://atari800.sourceforge.net/
 COMMENT=	Atari 800, 800XL, 130XE and 5200 emulator
 
-RESTRICTED=		"copyrighted ROM images"
+RESTRICTED=		copyrighted ROM images
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
