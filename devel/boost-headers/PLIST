@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/08/12 20:58:45 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/01/20 20:40:19 jmmv Exp $
 include/boost/algorithm/minmax.hpp
 include/boost/algorithm/minmax_element.hpp
 include/boost/algorithm/string.hpp
@@ -388,6 +388,7 @@ include/boost/detail/indirect_traits.hpp
 include/boost/detail/interlocked.hpp
 include/boost/detail/is_function_ref_tester.hpp
 include/boost/detail/is_incrementable.hpp
+include/boost/detail/is_xxx.hpp
 include/boost/detail/iterator.hpp
 include/boost/detail/lightweight_mutex.hpp
 include/boost/detail/lightweight_test.hpp
@@ -2629,6 +2630,7 @@ include/boost/serialization/deque.hpp
 include/boost/serialization/detail/shared_count_132.hpp
 include/boost/serialization/detail/shared_ptr_132.hpp
 include/boost/serialization/detail/shared_ptr_nmt_132.hpp
+include/boost/serialization/detail/stack_constructor.hpp
 include/boost/serialization/export.hpp
 include/boost/serialization/extended_type_info.hpp
 include/boost/serialization/extended_type_info_no_rtti.hpp
@@ -2661,6 +2663,7 @@ include/boost/serialization/variant.hpp
 include/boost/serialization/vector.hpp
 include/boost/serialization/version.hpp
 include/boost/serialization/void_cast.hpp
+include/boost/serialization/void_cast_fwd.hpp
 include/boost/serialization/weak_ptr.hpp
 include/boost/shared_array.hpp
 include/boost/shared_container_iterator.hpp
@@ -2893,6 +2896,7 @@ include/boost/spirit/fusion/sequence/less_equal.hpp
 include/boost/spirit/fusion/sequence/limits.hpp
 include/boost/spirit/fusion/sequence/make_tuple.hpp
 include/boost/spirit/fusion/sequence/not_equal_to.hpp
+include/boost/spirit/fusion/sequence/prepend_view.hpp
 include/boost/spirit/fusion/sequence/range.hpp
 include/boost/spirit/fusion/sequence/single_view.hpp
 include/boost/spirit/fusion/sequence/size.hpp
@@ -3100,13 +3104,11 @@ include/boost/thread/condition.hpp
 include/boost/thread/detail/config.hpp
 include/boost/thread/detail/force_cast.hpp
 include/boost/thread/detail/lock.hpp
-include/boost/thread/detail/read_write_lock.hpp
 include/boost/thread/detail/singleton.hpp
 include/boost/thread/detail/tss_hooks.hpp
 include/boost/thread/exceptions.hpp
 include/boost/thread/mutex.hpp
 include/boost/thread/once.hpp
-include/boost/thread/read_write_mutex.hpp
 include/boost/thread/recursive_mutex.hpp
 include/boost/thread/thread.hpp
 include/boost/thread/tss.hpp
