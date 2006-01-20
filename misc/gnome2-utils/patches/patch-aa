@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.3 2006/01/20 03:16:14 joerg Exp $
+
+--- logview/logrtns.c.orig	2005-06-14 22:11:16.000000000 +0000
++++ logview/logrtns.c
+@@ -613,7 +613,7 @@ ReadLogStats (Log *log, gchar **buffer_l
+ 	   if (IsLeapYear (curmark->year - lastyear + thisyear))
+ 		   curmark->time += 24 * 60 * 60;		/*  Add one day */
+ 	   
+-#if defined(__NetBSD__) || defined(__FreeBSD__)
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
+ 	   curmark->time += correction - tmptm->tm_gmtoff;
+ #else
+ 	   curmark->time += correction - timezone;
+@@ -637,7 +637,7 @@ ReadLogStats (Log *log, gchar **buffer_l
+    if (IsLeapYear (thisyear))
+ 	   log->lstats.enddate += 24 * 60 * 60;	/*  Add one day */
+    
+-#if defined(__NetBSD__) || defined(__FreeBSD__)
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
+    log->lstats.enddate += correction - tmptm->tm_gmtoff;
+ #else
+    log->lstats.enddate += correction - timezone;
+@@ -648,7 +648,7 @@ ReadLogStats (Log *log, gchar **buffer_l
+    if (IsLeapYear (thisyear - lastyear))
+ 	   log->lstats.startdate += 24 * 60 * 60;	/*  Add one day */
+ 
+-#if defined(__NetBSD__) || defined(__FreeBSD__)
++#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
+    log->lstats.startdate += correction - tmptm->tm_gmtoff;
+ #else
+    log->lstats.startdate += correction - timezone;
