@@ -1,8 +1,12 @@
-# $NetBSD: Makefile,v 1.96 2005/12/11 10:53:54 markd Exp $
+# $NetBSD: Makefile,v 1.96.2.1 2006/01/20 22:59:47 seb Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
+PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
+
+PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/
+PATCHFILES=	post-3.4.3-kdelibs-kjs.diff
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
