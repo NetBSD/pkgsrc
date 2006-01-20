@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:51:45 agc Exp $
+$NetBSD: distinfo,v 1.4 2006/01/20 01:36:17 joerg Exp $
 
 SHA1 (TeXfamily/texfam-1.2.tar.gz) = 510ef7048c1353a75d84d548738e8e2a94d83be9
 RMD160 (TeXfamily/texfam-1.2.tar.gz) = 951aebdcf9e5d77e82b2bfb3ba5c8067e0bf8555
@@ -37,7 +37,7 @@ SHA1 (patch-aa) = 03e327921d44ffb12f6ce8547553935fb0273f1c
 SHA1 (patch-ab) = c6c2ed23121e14e9e123bfb6298743cfbd34f959
 SHA1 (patch-ac) = eeb266e3fc5a6b646ffc498c08107a9dd76c6660
 SHA1 (patch-ad) = 3292baba0f31f191c13a12dd3cd39e8bd2e091f7
-SHA1 (patch-ae) = 644182534b6001d167b45b25378c33873563ef61
+SHA1 (patch-ae) = 3b69db73f45e8cc2742769c40707d2d34ce7ecca
 SHA1 (patch-af) = 999a897d77004503253e7f443e9108d969a4ad11
 SHA1 (patch-ag) = fcd691409227e6025ffc52c23df5a82ab23bf0c3
 SHA1 (patch-ah) = 08b0d94c7347693da7fe024eb0ab81916a598529

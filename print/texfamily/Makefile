@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/01/15 19:28:32 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2006/01/20 01:36:17 joerg Exp $
 
 DISTNAME=	TeXfamily-1.2.1
 PKGREVISION=	5
@@ -31,7 +31,12 @@ COMMENT=	TeXfamily (pTeX, JTeX, MuLTeX) - executables
 DEPENDS+=	TeXfamily-share>=1.2.1nb3:../../print/texfamily-share
 
 DIST_SUBDIR=	TeXfamily
-TETEX_DIR=	${PKGSRCDIR}/print/teTeX1-bin/${WRKDIR:T}/teTeX-1.0
+
+PKGSRCDIR.teTeX1=		${.CURDIR}/../../print/teTeX1-bin
+WRKSRC.teTeX1_cmd=		\
+	cd ${PKGSRCDIR.teTeX1} && ${MAKE} show-var VARNAME=WRKSRC
+
+TETEX_DIR=	${WRKSRC.teTeX1_cmd:sh}
 WRKSRC=		${TETEX_DIR}
 EXTRACT_ONLY=	# none
 

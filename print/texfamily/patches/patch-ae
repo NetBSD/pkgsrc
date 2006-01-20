@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2002/05/31 12:59:56 seb Exp $
+$NetBSD: patch-ae,v 1.2 2006/01/20 01:36:18 joerg Exp $
 
 --- texk/dvi2ps-3.2j/Makefile.orig	Mon Sep 11 18:16:11 2000
 +++ texk/dvi2ps-3.2j/Makefile
@@ -44,7 +44,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2002/05/31 12:59:56 seb Exp $
 +#CC=gcc
  #
 -CCFLAGS = -g -O -DPOSIX
-+CCFLAGS = -O2 -DPOSIX
++CCFLAGS = -O2 -DPOSIX -DANSI
  #CCFLAGS = -O		# SUNOS 4.X etc ...
  #CCFLAGS = -O -DPOSIX	# NetBSD FreeBSD (gcc 2.X), Linux
  #CCFLAGS = -O -DMSDOS -DPOSIX	# DJGCC (gcc 2.X)
