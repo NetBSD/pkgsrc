@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2006/01/06 15:10:08 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2006/01/20 03:44:09 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 PKGREVISION=	2
@@ -80,7 +80,7 @@ CONFIGURE_ENV+=		RUN_KAPPFINDER=no
 PLIST_SRC+=		${PKGDIR}/PLIST
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kdebase
-PKG_SUPPORTED_OPTIONS=	sasl samba debug
+PKG_SUPPORTED_OPTIONS=	sasl samba debug pam
 PKG_SUGGESTED_OPTIONS=	sasl
 
 .include "../../mk/bsd.options.mk"
@@ -104,6 +104,11 @@ CXX+=			-ggdb
 CONFIGURE_ARGS+=	--enable-debug=full
 CONFIGURE_ENV+=		INSTALL_STRIP_FLAG=
 INSTALL_UNSTRIPPED=	yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mpam)
+.  include "../../mk/pam.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-pam
 .endif
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
