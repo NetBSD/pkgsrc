@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/08/12 20:58:45 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/01/20 20:40:19 jmmv Exp $
 share/doc/boost/boost.css
 share/doc/boost/boost.png
 share/doc/boost/google_logo_40wht.png
@@ -697,12 +697,6 @@ share/doc/boost/libs/graph/example/property-map-traits-eg.cpp
 share/doc/boost/libs/graph/example/property_iterator.cpp
 share/doc/boost/libs/graph/example/push-relabel-eg.cpp
 share/doc/boost/libs/graph/example/put-get-helper-eg.cpp
-share/doc/boost/libs/graph/example/python/biconnected_components.dot
-share/doc/boost/libs/graph/example/python/biconnected_components.py
-share/doc/boost/libs/graph/example/python/breadth_first_search.py
-share/doc/boost/libs/graph/example/python/disconnected.dot
-share/doc/boost/libs/graph/example/python/mst.dot
-share/doc/boost/libs/graph/example/python/vis.py
 share/doc/boost/libs/graph/example/quick-tour.cpp
 share/doc/boost/libs/graph/example/quick_tour.cpp
 share/doc/boost/libs/graph/example/quick_tour.expected
@@ -764,46 +758,6 @@ share/doc/boost/libs/graph/src/graphviz_graph_parser.cpp
 share/doc/boost/libs/graph/src/graphviz_graph_parser.hpp
 share/doc/boost/libs/graph/src/graphviz_lex.ll
 share/doc/boost/libs/graph/src/graphviz_parser.yy
-share/doc/boost/libs/graph/src/python/basic_graph.cpp
-share/doc/boost/libs/graph/src/python/basic_graph.hpp
-share/doc/boost/libs/graph/src/python/bellman_ford_events.hpp
-share/doc/boost/libs/graph/src/python/bellman_ford_shortest_paths.cpp
-share/doc/boost/libs/graph/src/python/betweenness_centrality.cpp
-share/doc/boost/libs/graph/src/python/bfs_events.hpp
-share/doc/boost/libs/graph/src/python/biconnected_components.cpp
-share/doc/boost/libs/graph/src/python/breadth_first_search.cpp
-share/doc/boost/libs/graph/src/python/circle_layout.cpp
-share/doc/boost/libs/graph/src/python/connected_components.cpp
-share/doc/boost/libs/graph/src/python/cuthill_mckee_ordering.cpp
-share/doc/boost/libs/graph/src/python/dag_shortest_paths.cpp
-share/doc/boost/libs/graph/src/python/depth_first_search.cpp
-share/doc/boost/libs/graph/src/python/dfs_events.hpp
-share/doc/boost/libs/graph/src/python/digraph.cpp
-share/doc/boost/libs/graph/src/python/digraph.hpp
-share/doc/boost/libs/graph/src/python/dijkstra_events.hpp
-share/doc/boost/libs/graph/src/python/dijkstra_shortest_paths.cpp
-share/doc/boost/libs/graph/src/python/dijkstra_visitor.hpp
-share/doc/boost/libs/graph/src/python/fruchterman_reingold.cpp
-share/doc/boost/libs/graph/src/python/generators.hpp
-share/doc/boost/libs/graph/src/python/graph.cpp
-share/doc/boost/libs/graph/src/python/graph.hpp
-share/doc/boost/libs/graph/src/python/graphviz.cpp
-share/doc/boost/libs/graph/src/python/incremental_components.cpp
-share/doc/boost/libs/graph/src/python/isomorphism.cpp
-share/doc/boost/libs/graph/src/python/kamada_kawai_spring_layout.cpp
-share/doc/boost/libs/graph/src/python/king_ordering.cpp
-share/doc/boost/libs/graph/src/python/kruskal_min_spanning_tree.cpp
-share/doc/boost/libs/graph/src/python/module.cpp
-share/doc/boost/libs/graph/src/python/page_rank.cpp
-share/doc/boost/libs/graph/src/python/pickle.cpp
-share/doc/boost/libs/graph/src/python/point2d.hpp
-share/doc/boost/libs/graph/src/python/prim_minimum_spanning_tree.cpp
-share/doc/boost/libs/graph/src/python/queue.hpp
-share/doc/boost/libs/graph/src/python/sequential_vertex_coloring.cpp
-share/doc/boost/libs/graph/src/python/strong_components.cpp
-share/doc/boost/libs/graph/src/python/topological_sort.cpp
-share/doc/boost/libs/graph/src/python/transitive_closure.cpp
-share/doc/boost/libs/graph/src/python/visitor.hpp
 share/doc/boost/libs/graph/src/read_graphviz_spirit.cpp
 share/doc/boost/libs/graph/src/yystype.h
 share/doc/boost/libs/index.html
@@ -859,7 +813,6 @@ share/doc/boost/libs/iostreams/doc/concepts/filter.html
 share/doc/boost/libs/iostreams/doc/concepts/flushable.html
 share/doc/boost/libs/iostreams/doc/concepts/input_filter.html
 share/doc/boost/libs/iostreams/doc/concepts/localizable.html
-share/doc/boost/libs/iostreams/doc/concepts/multi-character.html
 share/doc/boost/libs/iostreams/doc/concepts/multi_character.html
 share/doc/boost/libs/iostreams/doc/concepts/optimally_buffered.html
 share/doc/boost/libs/iostreams/doc/concepts/output_filter.html
@@ -928,6 +881,7 @@ share/doc/boost/libs/iostreams/doc/portability.html
 share/doc/boost/libs/iostreams/doc/quick_reference.html
 share/doc/boost/libs/iostreams/doc/rationale.html
 share/doc/boost/libs/iostreams/doc/reference.html
+share/doc/boost/libs/iostreams/doc/theme/boost_small.png
 share/doc/boost/libs/iostreams/doc/theme/iostreams.css
 share/doc/boost/libs/iostreams/doc/theme/wedge.gif
 share/doc/boost/libs/iostreams/doc/tree/tree.css
@@ -2582,7 +2536,7 @@ share/doc/boost/libs/property_map/vector_property_map.html
 share/doc/boost/libs/ptr_container/doc/Jamfile.v2
 share/doc/boost/libs/ptr_container/doc/associative_ptr_container.html
 share/doc/boost/libs/ptr_container/doc/associative_ptr_container.rst
-share/doc/boost/libs/ptr_container/doc/cboost.gif
+share/doc/boost/libs/ptr_container/doc/boost.png
 share/doc/boost/libs/ptr_container/doc/comp.sh
 share/doc/boost/libs/ptr_container/doc/comp_all.sh
 share/doc/boost/libs/ptr_container/doc/comp_assoc_ptr_container.sh
@@ -2967,6 +2921,7 @@ share/doc/boost/libs/random/statistic_tests.cpp
 share/doc/boost/libs/random/statistic_tests.hpp
 share/doc/boost/libs/random/wg21-proposal.html
 share/doc/boost/libs/range/doc/boost_range.html
+share/doc/boost/libs/range/doc/example.cpp
 share/doc/boost/libs/range/doc/examples.html
 share/doc/boost/libs/range/doc/faq.html
 share/doc/boost/libs/range/doc/headers.html
@@ -3130,6 +3085,7 @@ share/doc/boost/libs/serialization/doc/overview.html
 share/doc/boost/libs/serialization/doc/pimpl.html
 share/doc/boost/libs/serialization/doc/plus.gif
 share/doc/boost/libs/serialization/doc/rationale.html
+share/doc/boost/libs/serialization/doc/reference.html
 share/doc/boost/libs/serialization/doc/release.html
 share/doc/boost/libs/serialization/doc/serialization.html
 share/doc/boost/libs/serialization/doc/shared_ptr.html
@@ -3861,7 +3817,6 @@ share/doc/boost/libs/thread/doc/mutex-ref.xml
 share/doc/boost/libs/thread/doc/once-ref.xml
 share/doc/boost/libs/thread/doc/overview.xml
 share/doc/boost/libs/thread/doc/rationale.xml
-share/doc/boost/libs/thread/doc/read_write_mutex-ref.xml
 share/doc/boost/libs/thread/doc/recursive_mutex-ref.xml
 share/doc/boost/libs/thread/doc/reference.xml
 share/doc/boost/libs/thread/doc/release_notes.xml
@@ -3922,7 +3877,6 @@ share/doc/boost/libs/thread/src/mac/thread_cleanup.hpp
 share/doc/boost/libs/thread/src/mutex.cpp
 share/doc/boost/libs/thread/src/mutex.inl
 share/doc/boost/libs/thread/src/once.cpp
-share/doc/boost/libs/thread/src/read_write_mutex.cpp
 share/doc/boost/libs/thread/src/recursive_mutex.cpp
 share/doc/boost/libs/thread/src/thread.cpp
 share/doc/boost/libs/thread/src/timeconv.inl
@@ -4015,6 +3969,7 @@ share/doc/boost/libs/utility/shared_iterator_example1.cpp
 share/doc/boost/libs/utility/shared_iterator_example2.cpp
 share/doc/boost/libs/utility/shared_iterator_example3.cpp
 share/doc/boost/libs/utility/shared_iterator_test.cpp
+share/doc/boost/libs/utility/sublibs
 share/doc/boost/libs/utility/throw_exception.html
 share/doc/boost/libs/utility/utility.htm
 share/doc/boost/libs/utility/value_init.htm
@@ -4460,9 +4415,7 @@ share/doc/boost/rst.css
 @dirrm share/doc/boost/libs/io
 @dirrm share/doc/boost/libs/integer/doc
 @dirrm share/doc/boost/libs/integer
-@dirrm share/doc/boost/libs/graph/src/python
 @dirrm share/doc/boost/libs/graph/src
-@dirrm share/doc/boost/libs/graph/example/python
 @dirrm share/doc/boost/libs/graph/example/figs
 @dirrm share/doc/boost/libs/graph/example
 @dirrm share/doc/boost/libs/graph/doc/figs
