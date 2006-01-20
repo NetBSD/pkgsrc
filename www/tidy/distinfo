@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2005/10/04 18:00:49 wiz Exp $
+$NetBSD: distinfo,v 1.11 2006/01/20 12:09:21 jmmv Exp $
 
 SHA1 (tidy_src_050921.tgz) = 4a53aa129e2575004dcbaf0cf4c5c3f1637723b0
 RMD160 (tidy_src_050921.tgz) = 958f532245412e3f8ac5bdd56edc5693cadf4b5b
@@ -8,4 +8,4 @@ RMD160 (tidy_docs_050705.tgz) = 49b8c2eaf87a0291b1bef6479cf1eeda6b720f52
 Size (tidy_docs_050705.tgz) = 150359 bytes
 SHA1 (patch-aa) = e27b9b82ee47b9b54004c4a4a5bccba944847040
 SHA1 (patch-ab) = b243b9021f922e123b18a79566923a57d904b0d3
-SHA1 (patch-ac) = acc5e591182217a8cb7555c02e6954b7ceb60987
+SHA1 (patch-ac) = 89276af68ee4d18f0f5710a939845ed2314992eb
