@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/01/20 16:15:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2006/01/20 20:38:09 wiz Exp $
 #
 
 DISTNAME=	adocman-0.10
@@ -11,7 +11,7 @@ HOMEPAGE=	http://sitedocs.sourceforge.net/
 COMMENT=	DocManager operation automation tool
 
 DEPENDS+=	p5-Term-ReadKey>=2.21:../../devel/p5-Term-ReadKey
-DEPENDS+=	p5-Crypt-SSLeay>=0.47:../../security/p5-SSLeay
+DEPENDS+=	p5-Crypt-SSLeay>=0.47:../../security/p5-Crypt-SSLeay
 
 NO_BUILD=		yes
 PERL5_CONFIGURE=	no
