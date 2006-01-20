@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.35 2006/01/12 21:50:43 wiz Exp $
+.\"	$NetBSD: pkglint.1,v 1.36 2006/01/20 13:33:37 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -7,7 +7,7 @@
 .\" Roland Illig <roland.illig@gmx.de>, 2004, 2005.
 .\" Roland Illig <rillig@NetBSD.org>, 2005.
 .\"
-.Dd January 12, 2006
+.Dd January 20, 2006
 .Dt PKGLINT 1
 .Sh NAME
 .Nm pkglint
@@ -59,6 +59,13 @@ version number and exit.
 .It Fl W{[no-]warn,...}
 Enable or disable specific warnings.
 For a list of warnings, see below.
+.It Fl d Ns | Ns Fl -debug
+Enable warnings for parsing errors and other things that haven't been
+completed yet.
+This option is separated from the
+.Ql -W
+options because the diagnostics are too hard to understand without
+detailed knowledge of pkglint's source code.
 .It Fl e Ns | Ns Fl -explain
 Print further explanations for diagnostics.
 Sometimes the reasons for diagnostics are not obvious and need further
@@ -125,8 +132,6 @@ Enable all warnings.
 Disable all warnings.
 .It Cm [no-]absname
 Warn if a file contains an absolute pathname.
-.It Cm [no-]debug
-Enable some warnings that are only useful for debugging pkglint itself.
 .It Cm [no-]directcmd
 Warn if a system command name is used instead of a variable (e.g. sed
 instead of ${SED}).
@@ -144,8 +149,14 @@ and shell variables themselves.
 .It Cm [no-]space
 Emit notes for inconsistent use of white-space.
 .It Cm [no-]types
-Warn for some Makefile variables if their assigned values do not match
+Warn for some
+.Pa Makefile
+variables if their assigned values do not match
 their type.
+.It Cm [no-]varorder
+Warn if the variables in a package
+.Pa Makefile Ns
+s are not ordered in the way it is described the pkgsrc guide.
 .El
 .Pp
 .\" =======================================================================
