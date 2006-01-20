@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.3 2006/01/20 20:00:44 jlam Exp $
+# $NetBSD: extract,v 1.4 2006/01/20 22:26:12 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -43,20 +43,23 @@
 #	extract -- extract distfile, regardless of format
 #
 # SYNOPSIS
-#	extract [-t tarprog] [-x] distfile [file ...]
+#	extract [-t tarprog] [-X excludefile | -x] distfile [file ...]
 #
 # DESCRIPTION
 #	extract will unpack the contents of the named distfile into the
 #	current working directory.  If any optional files are specified
 #	then only they will be extracted from the distfile, provided that
-#	the underlying tool supports this ability.  If the -x option is
-#	specified, then the optional files are excluded from extraction
-#	instead.
+#	the underlying tool supports this ability.
 #
 # OPTIONS
 #	-t tarprog	This specifies the tool to use to extract tar/ustar
 #			archives, and may be either "tar" or "pax", or the
 #			full path to the program.
+#
+#	-X excludefile	excludefile is a list of file patterns to exclude
+#			from extraction.  If the -X option is specified
+#			then any optional files listed on the command line
+#			are ignored.
 #
 #	-x		This causes the optional files listed on the
 #			command line to be excluded from extraction,
@@ -92,11 +95,12 @@
 self="${0##*/}"
 
 usage() {
-	${ECHO} 1>&2 "usage: $self [-t tarprog] [-x] distfile [file ...]"
+	${ECHO} 1>&2 "usage: $self [-t tarprog] [-X excludefile | -x] distfile [file ...]"
 }
 
 decompress_cat="${CAT}"
 exclude=no
+exclude_file=
 exclude_flag=
 extract_using=tar
 
@@ -104,6 +108,7 @@ extract_using=tar
 while ${TEST} $# -gt 0; do
 	case "$1" in
 	-t)	extract_using="$2"; shift 2 ;;
+	-X)	exclude_file="$2"; shift 2 ;;
 	-x)	exclude=yes; shift ;;
 	--)	shift; break ;;
 	-*)	${ECHO} 1>&2 "$self: unknown option -- ${1#-}"
@@ -119,6 +124,11 @@ case "$extract_using" in
 *tar)		tarprog="${TAR}" ;;
 *pax)		tarprog="${PAX}" ;;
 esac
+
+if ${TEST} -n "$exclude_file" -a ! -f "$exclude_file"; then
+	${ECHO} 1>&2 "$self: exclude file missing: $exclude_file"
+	exit 1
+fi
 
 # Process required arguments
 ${TEST} $# -gt 0 || { usage; exit 1; }
@@ -142,6 +152,10 @@ case "$distfile" in
 		/*)	paxprog="$extract_using" ;;
 		*)	paxprog="${PAX}" ;;
 		esac
+		if ${TEST} -n "$exclude_file"; then
+			exclude=yes
+			set -- dummy `${CAT} "$exclude_file"`; shift
+		fi
 		${TEST} "$exclude" = no || exclude_flag="-c"
 		$decompress_cat "$distfile" |
 			$paxprog ${EXTRACT_OPTS_PAX} $exclude_flag -O -r "$@"
@@ -151,8 +165,12 @@ case "$distfile" in
 		/*)	tarprog="$extract_using" ;;
 		*)	tarprog="${TAR}" ;;
 		esac
+		if ${TEST} -n "$exclude_file"; then
+			exclude_flag="-X $exclude_file"
+			set -- dummy; shift
+		fi
 		$decompress_cat "$distfile" |
-			$tarprog ${EXTRACT_OPTS_TAR} -xf - "$@"
+			$tarprog ${EXTRACT_OPTS_TAR} $exclude_flag -xf - "$@"
 		;;
 	*)
 		${ECHO} 1>&2 "$self: unknown tar program: $extract_using"
@@ -167,6 +185,9 @@ case "$distfile" in
 *.zip)
 	: ${EXTRACT_OPTS_ZOO=-Laqo}
 	${TEST} "$exclude" = "no" || exclude_flag="-x"
+	if ${TEST} -n "$exclude_file"; then
+		set -- dummy `${CAT} "$exclude_file"`; shift
+	fi
 	${UNZIP} ${EXTRACT_OPTS_ZOO} "$distfile" $exclude_flag "$@"
 	;;
 
