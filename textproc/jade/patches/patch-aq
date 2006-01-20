@@ -1,7 +1,7 @@
-$NetBSD: patch-aq,v 1.1 2003/09/21 20:03:54 tron Exp $
+$NetBSD: patch-aq,v 1.2 2006/01/20 11:36:18 jmmv Exp $
 
---- include/config.h.orig	Fri Jun 14 12:58:51 2002
-+++ include/config.h	Fri Jun 14 13:01:00 2002
+--- include/config.h.orig	2006-01-20 00:09:04.000000000 +0100
++++ include/config.h
 @@ -31,6 +31,10 @@
  #define SP_ANSI_LIB
  #define SP_NO_STD_NAMESPACE
@@ -13,3 +13,22 @@ $NetBSD: patch-aq,v 1.1 2003/09/21 20:03:54 tron Exp $
  #endif
  
  #endif /* __GNUG__ */
+@@ -40,7 +44,7 @@
+ #define SP_STAT_BLKSIZE
+ #endif
+ 
+-#if (defined __MACH__) && (! defined __GNU__)
++#if (defined __MACH__) && (! defined __GNU__) && (!defined __Darwin__) && (! defined __APPLE__)
+ #define SP_MUTEX_MACH
+ #endif
+ 
+@@ -297,4 +301,9 @@
+ #define SP_NAMESPACE_SCOPE
+ #endif
+ 
++#if defined(__APPLE__) || defined(__Darwin__)
++#define SP_DEFINE_TEMPLATES
++#define SP_MANUAL_INST
++#endif
++
+ #endif /* not config_INCLUDED */
