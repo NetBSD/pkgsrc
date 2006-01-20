@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.5 2005/12/29 06:21:56 jlam Exp $
+# $NetBSD: Makefile.common,v 1.6 2006/01/20 16:15:53 jmmv Exp $
 #
 
 DISTNAME=		swfdec-0.2.2
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=swfdec/}
 
-MAINTAINER=		jmmv@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://swfdec.sourceforge.net/
 COMMENT=		Library for rendering Flash(R) animations and games
 

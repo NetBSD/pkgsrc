@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/12/05 20:49:52 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2006/01/20 16:15:52 jmmv Exp $
 #
 
 DISTNAME=	tkgate-1.6i
@@ -7,7 +7,7 @@ CATEGORIES=	cad
 MASTER_SITES=	ftp://gadoid.ices.cmu.edu/pub/tkgate/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.tkgate.org/
 COMMENT=	Tcl/Tk based digital circuit editor and simulator
 

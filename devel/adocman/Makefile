@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:02 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/20 16:15:52 jmmv Exp $
 #
 
 DISTNAME=	adocman-0.10
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sitedocs/}
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://sitedocs.sourceforge.net/
 COMMENT=	DocManager operation automation tool
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/01/18 12:55:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.30 2006/01/20 16:15:52 jmmv Exp $
 #
 
 DISTNAME=	rhythmbox-0.8.8
@@ -7,7 +7,7 @@ CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/0.8/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.rhythmbox.org/
 COMMENT=	Music management application for GNOME
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2005/08/04 10:22:21 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/20 16:15:53 jmmv Exp $
 #
 
 DISTNAME=	tsocks-1.8beta5
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tsocks/}
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://tsocks.sourceforge.net/
 COMMENT=	Transparent SOCKS proxying library
 
