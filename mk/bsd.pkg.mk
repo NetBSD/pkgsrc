@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1794 2006/01/19 20:32:17 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1795 2006/01/20 20:17:07 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -92,36 +92,6 @@ PKGNAME?=		${DISTNAME}
 PKGNAME_NOREV=		${PKGNAME}
 .endif
 
-.if !defined(_USE_PLIST_MODULE)
-##### PLIST
-
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-PLIST_TYPE?=		dynamic
-.endif
-PLIST_TYPE?=		static
-
-.if !defined(PLIST_SRC)
-.  if exists(${PKGDIR}/PLIST.common)
-PLIST_SRC+=		${PKGDIR}/PLIST.common
-.  endif
-.  if exists(${PKGDIR}/PLIST.${OPSYS})
-PLIST_SRC+=		${PKGDIR}/PLIST.${OPSYS}
-.  endif
-.  if exists(${PKGDIR}/PLIST.${MACHINE_ARCH:C/i[3-6]86/i386/g})
-PLIST_SRC+=		${PKGDIR}/PLIST.${MACHINE_ARCH:C/i[3-6]86/i386/g}
-.  endif
-.  if exists(${PKGDIR}/PLIST.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g})
-PLIST_SRC+=		${PKGDIR}/PLIST.${OPSYS}-${MACHINE_ARCH:C/i[3-6]86/i386/g}
-.  endif
-.  if exists(${PKGDIR}/PLIST)
-PLIST_SRC+=		${PKGDIR}/PLIST
-.  endif
-.  if exists(${PKGDIR}/PLIST.common_end)
-PLIST_SRC+=		${PKGDIR}/PLIST.common_end
-.  endif
-.endif # !PLIST_SRC
-.endif # !_USE_PLIST_MODULE
-
 ##### Others
 
 _DISTDIR?=		${DISTDIR}/${DIST_SUBDIR}
@@ -174,9 +144,6 @@ PKG_DB_TMPDIR=		${WRKDIR}/.pkgdb
 DDIR=			${WRKDIR}/.DDIR
 DESCR=			${PKG_DB_TMPDIR}/+DESC
 DLIST=			${WRKDIR}/.DLIST
-.if !defined(_USE_PLIST_MODULE)
-PLIST=			${WRKDIR}/.PLIST
-.endif # !_USE_PLIST_MODULE
 
 # Files to create for versioning and build information
 BUILD_VERSION_FILE=	${PKG_DB_TMPDIR}/+BUILD_VERSION
@@ -212,16 +179,6 @@ PKG_FAIL_REASON+=	"PKG_INSTALLATION_TYPE must be \`\`pkgviews'' or \`\`overwrite
 .if empty(PKG_INSTALLATION_TYPES:M${PKG_INSTALLATION_TYPE})
 PKG_FAIL_REASON+=	"This package doesn't support PKG_INSTALLATION_TYPE=${PKG_INSTALLATION_TYPE}."
 .endif
-
-.if !defined(_USE_PLIST_MODULE)
-.if (${PLIST_TYPE} != "dynamic") && (${PLIST_TYPE} != "static")
-PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`dynamic'' or \`\`static''."
-.endif
-
-.if (${PKG_INSTALLATION_TYPE} == "overwrite") && (${PLIST_TYPE} != "static")
-PKG_FAIL_REASON+=	"PLIST_TYPE must be \`\`static'' for \`\`overwrite'' packages."
-.endif
-.endif # !_USE_PLIST_MODULE
 
 # Check that we are using up-to-date pkg_* tools with this file.
 .if !defined(NO_PKGTOOLS_REQD_CHECK)
@@ -356,24 +313,6 @@ BUILD_DEFS+=            PKG_OPTIONS
 PKG_FAIL_REASON+=	"DEPOT_SUBDIR may not be empty."
 .endif
 
-.if !defined(_USE_PLIST_MODULE)
-.if ${PKG_INSTALLATION_TYPE} == "pkgviews"
-#
-# _PLIST_IGNORE_FILES basically mirrors the list of ignored files found
-# in pkg_views(1).  It's used by the dynamic PLIST generator to skip
-# adding the named files to the PLIST.
-#
-_PLIST_IGNORE_FILES=	+*			# package metadata files
-_PLIST_IGNORE_FILES+=	info/dir
-.if defined(INFO_DIR) && empty(INFO_DIR:Minfo)
-_PLIST_IGNORE_FILES+=	${INFO_DIR}/dir
-.endif
-_PLIST_IGNORE_FILES+=	*[~\#] *.OLD *.orig *,v # scratch config files
-_PLIST_IGNORE_FILES+=	${PLIST_IGNORE_FILES}
-.endif
-BUILD_DEFS+=		_PLIST_IGNORE_FILES
-.endif # !_USE_PLIST_MODULE
-
 # Automatically increase process limit where necessary for building.
 _ULIMIT_CMD=		${UNLIMIT_RESOURCES:@_lim_@${ULIMIT_CMD_${_lim_}};@}
 
@@ -476,36 +415,6 @@ SCRIPTS_ENV+=	${INSTALL_MACROS}
 .if defined(FORCE_PACKAGE)
 .  undef NO_PACKAGE
 .endif
-
-.if !defined(_USE_PLIST_MODULE)
-# Set PLIST_SUBST to substitute "${variable}" to "value" in PLIST
-PLIST_SUBST+=	OPSYS=${OPSYS:Q}					\
-		OS_VERSION=${OS_VERSION:Q}				\
-		MACHINE_ARCH=${MACHINE_ARCH:Q}				\
-		MACHINE_GNU_ARCH=${MACHINE_GNU_ARCH:Q}			\
-		MACHINE_GNU_PLATFORM=${MACHINE_GNU_PLATFORM:Q}		\
-		LN=${LN:Q}						\
-		LOWER_VENDOR=${LOWER_VENDOR:Q}				\
-		LOWER_OPSYS=${LOWER_OPSYS:Q}				\
-		LOWER_OS_VERSION=${LOWER_OS_VERSION:Q}			\
-		PKGBASE=${PKGBASE:Q}					\
-		PKGNAME=${PKGNAME_NOREV:Q}				\
-		PKGLOCALEDIR=${PKGLOCALEDIR:Q}				\
-		PKGVERSION=${PKGVERSION:C/nb[0-9]*$//}			\
-		LOCALBASE=${LOCALBASE:Q}				\
-		VIEWBASE=${VIEWBASE:Q}					\
-		X11BASE=${X11BASE:Q}					\
-		X11PREFIX=${X11PREFIX:Q}				\
-		SVR4_PKGNAME=${SVR4_PKGNAME:Q}				\
-		CHGRP=${CHGRP:Q}					\
-		CHMOD=${CHMOD:Q}					\
-		CHOWN=${CHOWN:Q}					\
-		MKDIR=${MKDIR:Q}					\
-		RMDIR=${RMDIR:Q}					\
-		RM=${RM:Q}						\
-		TRUE=${TRUE:Q}						\
-		PKGMANDIR=${PKGMANDIR:Q}
-.endif # !_USE_PLIST_MODULE
 
 # Handle alternatives
 #
@@ -715,11 +624,6 @@ PKG_SYSCONFBASEDIR=	${PKG_SYSCONFBASE}
       !empty(PKG_SYSCONFBASE:M${PREFIX}/*)
 PKG_SYSCONFDEPOTBASE=	# empty
 PKG_SYSCONFBASEDIR=	${PKG_SYSCONFBASE}
-.    if !defined(_USE_PLIST_MODULE)
-.    if !empty(CONF_DEPENDS)
-_PLIST_IGNORE_FILES+=	${PKG_SYSCONFDIR:S,^${PREFIX}/,,}
-.    endif
-.    endif # !_USE_PLIST_MODULE
 .  else
 PKG_SYSCONFDEPOTBASE=	${PKG_SYSCONFBASE}/${DEPOT_SUBDIR}
 PKG_SYSCONFBASEDIR=	${PKG_SYSCONFDEPOTBASE}/${PKGNAME}
@@ -1919,7 +1823,6 @@ delete-package:
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PKGFILE}
 .endif
 
-.if defined(_USE_PLIST_MODULE)
 _PLIST_REGEXP.info=	\
 	^${INFO_DIR}/[^/]*\.info(-[0-9]+)?(\.gz)$$
 _PLIST_REGEXP.man=	\
@@ -1937,7 +1840,6 @@ _DOC_COMPRESS=								\
 		RM=${TOOLS_RM:Q}					\
 		TEST=${TOOLS_TEST:Q}					\
 	${SH} ${.CURDIR}/../../mk/plist/doc-compress ${PREFIX:Q}
-.endif # _USE_PLIST_MODULE
 
 .PHONY: real-su-install
 real-su-install: ${MESSAGE}
@@ -2043,66 +1945,14 @@ real-su-install: ${MESSAGE}
 		# listed in the PLIST.					\
 		#
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} ${PLIST}
-.if defined(_USE_PLIST_MODULE)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO_MSG} "${_PKGSRC_IN}> [Automatic manual page handling]";	\
 	${CAT} ${PLIST} | ${GREP} -v "^@" |				\
 	${EGREP} ${_PLIST_REGEXP.man:Q} | ${_DOC_COMPRESS}
-.else # !_USE_PLIST_MODULE
-	${_PKG_SILENT}${_PKG_DEBUG}newmanpages=`${EGREP} -h		\
-		'^([^@/]*/)*man/([^/]*/)?(man[1-9ln]/.*\.[1-9ln]|cat[1-9ln]/.*\.[0-9])(\.gz)?$$' \
-		${PLIST} 2>/dev/null || ${TRUE}`;			\
-	if [ "${_MANCOMPRESSED}" = "yes" -a "${_MANZ}" != "yes" ]; then	\
-		${ECHO_MSG} "${_PKGSRC_IN}> [Automatic manual page handling]";	\
-		${ECHO_MSG} "${_PKGSRC_IN}> Decompressing manual pages for ${PKGNAME}";	\
-		for manpage in $$newmanpages; do			\
-			manpage=`${ECHO} $$manpage | ${SED} -e 's|^man/|${PKGMANDIR}/|' -e 's|\.gz$$||'`; \
-			if [ -h ${PREFIX}/$$manpage.gz ]; then		\
-				set - `${LS} -l ${PREFIX}/$$manpage.gz | ${SED} -e 's|\.gz$$||'`; \
-				shift `expr $$# - 1`;			\
-				${RM} -f ${PREFIX}/$$manpage;		\
-				${LN} -s $${1} ${PREFIX}/$$manpage;	\
-				${RM} ${PREFIX}/$$manpage.gz;		\
-			else						\
-				${GUNZIP_CMD} ${PREFIX}/$$manpage.gz;	\
-			fi;						\
-			if [ X"${PKG_VERBOSE}" != X"" ]; then		\
-				${ECHO_MSG} "$$manpage";		\
-			fi;						\
-		done;							\
-	fi;								\
-	if [ "${_MANCOMPRESSED}" != "yes" -a "${_MANZ}" = "yes" ]; then	\
-		${ECHO_MSG} "${_PKGSRC_IN}> [Automatic manual page handling]";	\
-		${ECHO_MSG} "${_PKGSRC_IN}> Compressing manual pages for ${PKGNAME}"; \
-		for manpage in $$newmanpages; do			\
-			manpage=`${ECHO} $$manpage | ${SED} -e 's|\.gz$$||'`; \
-			if [ -h ${PREFIX}/$$manpage ]; then		\
-				set - `${LS} -l ${PREFIX}/$$manpage`;	\
-				shift `expr $$# - 1`;			\
-				${RM} -f ${PREFIX}/$$manpage.gz; 	\
-				${LN} -s $${1}.gz ${PREFIX}/$$manpage.gz; \
-				${RM} ${PREFIX}/$$manpage;		\
-			else						\
-				${GZIP_CMD} ${PREFIX}/$$manpage;	\
-			fi;						\
-			if [ X"${PKG_VERBOSE}" != X"" ]; then		\
-				${ECHO_MSG} "$$manpage";		\
-			fi;						\
-		done;							\
-	fi
-.endif # _USE_PLIST_MODULE
 .if empty(CHECK_FILES:M[nN][oO])
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} check-files-post
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install-script
-.if !defined(_USE_PLIST_MODULE)
-.if ${_DO_SHLIB_CHECKS} == "yes"
-.  if ${PKG_INSTALLATION_TYPE} == "overwrite"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${MAKE} ${MAKEFLAGS} do-shlib-handling SHLIB_PLIST_MODE=0
-.  endif
-.endif
-.endif # !_USE_PLIST_MODULE
 .if defined(MESSAGE)
 	@${ECHO_MSG} "${_PKGSRC_IN}> Please note the following:"
 	@${ECHO_MSG} ""
@@ -2135,250 +1985,6 @@ real-su-install: ${MESSAGE}
 .if empty(CHECK_INTERPRETER:M[nN][oO])
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} check-interpreter
 .endif
-
-
-.if !defined(_USE_PLIST_MODULE)
-# Do handling of shared libs for two cases:
-#
-# SHLIB_PLIST_MODE=1: when first called via the ${PLIST} target,
-#                     update the PLIST to contain ELF symlink, run
-#                     ldconfig on a.out,  etc. (used when called via
-#                     the ${PLIST} target). Will update ${PLIST}.
-# SHLIB_PLIST_MODE=0: when called via the real-su-install target,
-#                     actually generate symlinks for ELF, run ldconfig
-#                     for a.out, etc. Will not modify ${PLIST}.
-#
-# XXX This target could need some cleanup after it was ripped out of
-#     real-su-install
-#
-_AOUT_AWK = \
-	BEGIN { linkc = 1 }			\
-	/^@/ { lines[NR] = $$0; next }		\
-	function libtool_release(lib) {		\
-		if (gsub("-[^-]+\\.so\\.", ".so.", lib)) { \
-			if (system("${TEST} -h ${PREFIX}/" lib) == 0) { \
-				rels[NR] = lib; \
-			}			\
-		}				\
-	}					\
-	/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { \
-		libtool_release($$0);		\
-		lines[NR] = $$0;		\
-		sub("\\.[0-9]+$$", "");		\
-		links[linkc++] = $$0;		\
-		sub("\\.[0-9]+$$", "");		\
-		links[linkc++] = $$0;		\
-		sub("\\.[0-9]+$$", "");		\
-		links[linkc++] = $$0;		\
-		if (sub("-[^-]+\\.so$$", ".so")) { \
-			links[linkc++] = $$0;	\
-		}				\
-		next				\
-	}					\
-	/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+$$/ {	\
-		libtool_release($$0);		\
-		lines[NR] = $$0;		\
-		sub("\\.[0-9]+$$", "");		\
-		links[linkc++] = $$0;		\
-		sub("\\.[0-9]+$$", "");		\
-		links[linkc++] = $$0;		\
-		if (sub("-[^-]+\\.so$$", ".so")) { \
-			links[linkc++] = $$0;	\
-		}				\
-		next				\
-	}					\
-	{ lines[NR] = $$0 }			\
-	END {					\
-		for (i = 0 ; i <= linkc ; i++)	\
-			for (j = 1 ; j < NR ; j++) \
-				if (lines[j] == links[i]) \
-					lines[j] = "@comment " lines[j]; \
-		if (${SHLIB_PLIST_MODE}) 	\
-			for (i = 1 ; i <= NR ; i++) { \
-				print lines[i]; \
-				if (rels[i] != "") \
-					print rels[i]; \
-			}			\
-	}
-
-_DYLIB_AWK= \
-	/^@/ { lines[NR] = $$0; next }		\
-		function libtool_release(lib) {		\
-		if (gsub("\\.so\\.", ".", lib) || gsub("\\.so$$", "", lib)) { \
-			lib = lib ".dylib"; \
-			if (system("${TEST} -h ${PREFIX}/" lib) == 0) { \
-				rels[NR] = lib; \
-			}			\
-		}				\
-	}					\
-	/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { \
-		libtool_release($$0);		\
-		lines[NR] = $$0;		\
-		links[linkc++] = $$0;		\
-		sub("\\.[0-9]+$$", "");		\
-		links[linkc++] = $$0;		\
-		sub("\\.[0-9]+$$", "");		\
-		links[linkc++] = $$0;		\
-		sub("\\.[0-9]+$$", "");		\
-		links[linkc++] = $$0;		\
-		if (sub("-[^-]+\\.so$$", ".so")) { \
-			links[linkc++] = $$0;	\
-		}				\
-		next				\
-	}					\
-	/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+$$/ {	\
-		libtool_release($$0);		\
-		lines[NR] = $$0;		\
-		links[linkc++] = $$0;		\
-		sub("\\.[0-9]+$$", "");		\
-		links[linkc++] = $$0;		\
-		sub("\\.[0-9]+$$", "");		\
-		links[linkc++] = $$0;		\
-		if (sub("-[^-]+\\.so$$", ".so")) { \
-			links[linkc++] = $$0;	\
-		}				\
-		next				\
-	}					\
-	/.*\/lib[^\/]+\.so\.[0-9]+$$/ {		\
-		libtool_release($$0);		\
-		lines[NR] = $$0;		\
-		links[linkc++] = $$0;		\
-		sub("\\.[0-9]+$$", "");		\
-		links[linkc++] = $$0;		\
-		if (sub("-[^-]+\\.so$$", ".so")) { \
-			links[linkc++] = $$0;	\
-		}				\
-		next				\
-	}					\
-	/.*\/lib[^\/]+\.so$$/ {			\
-		lines[NR] = $$0;		\
-		if (system("${TEST} -f ${PREFIX}/" $$0) == 0) { \
-			next;			\
-		}				\
-		libtool_release($$0);		\
-		links[linkc++] = $$0;		\
-		if (sub("-[^-]+\\.so$$", ".so")) { \
-			links[linkc++] = $$0;	\
-		}				\
-		next				\
-	}					\
-	{ lines[NR] = $$0 }			\
-	END {					\
-		for (i = 0 ; i <= linkc ; i++)	\
-			for (j = 1 ; j <= NR ; j++) \
-				if (lines[j] == links[i]) \
-					lines[j] = "@comment " lines[j]; \
-		if (${SHLIB_PLIST_MODE}) 	\
-			for (i = 1 ; i <= NR ; i++) { \
-				print lines[i]; \
-				if (rels[i] != "") { \
-					print rels[i]; \
-					cmd = "${LS} -l ${PREFIX}/" rels[i]; \
-					cmd | getline tgt; \
-					close(cmd); \
-					gsub(".* ", "", tgt); \
-					if (tgts[tgt] == "") { \
-						tgts[tgt] = tgt; \
-						if (index(tgt, "/") == 1) \
-							print tgt; \
-						else { \
-							prefix=""; \
-							if (match(rels[i], ".*/") != 0) \
-								prefix=substr(rels[i],1,RLENGTH); \
-							print prefix tgt; \
-						} \
-					}	\
-				}		\
-			}			\
-	}
-
-# Turn lib*.so.*, lib*.so into lib*.so.  Drop duplicates.
-_AIXLIB_AWK= \
-	/^@/ { lines[NR] = $$0; next }		\
-	/.*\/lib[^\/]+\.so(\.[0-9]+)*$$/ {	\
-		sub("(\\.[0-9]+)*$$", "");	\
-		sub("\\.so$$", ".so");       	\
-		lines[NR] = $$0;     		\
-		next				\
-	}					\
-	{ lines[NR] = $$0 }			\
-	END {					\
-		nlibs = 0;			\
-		for (i = 1; i <= NR; i++) {	\
-			for (j = 0; j < nlibs; j++) { \
-				if (libs[j] == lines[i]) \
-					break;	\
-			}			\
-			if (j >= nlibs)		\
-				print lines[i];	\
-			if (match(lines[i], ".*/lib[^/]+\\.a$$")) { \
-				libs[nlibs] = lines[i]; \
-				nlibs++;	\
-			}			\
-		}				\
-	}
-
-.PHONY: do-shlib-handling
-do-shlib-handling:
-.if ${SHLIB_HANDLING} == "YES"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	sos=`${EGREP} -h '^.*/lib[^/]+\.so$$' ${PLIST} || ${TRUE}`;	\
-	if [ "$$sos" != "" ]; then					\
-		shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;	\
-		if [ "${SHLIB_PLIST_MODE}" = "0" ]; then 		\
-			${ECHO_MSG} "${_PKGSRC_IN}> [Automatic $$shlib_type shared object handling]"; \
-		fi;  							\
-		case "$$shlib_type" in					\
-		ELF) 	;;						\
-		aixlib) ;;						\
-		"a.out") 						\
-			${AWK} '${_AOUT_AWK}' <${PLIST} >${PLIST}.tmp ;	\
-			if [ "${SHLIB_PLIST_MODE}" = "1" ]; then	\
-				${MV} ${PLIST}.tmp ${PLIST};		\
-			else 						\
-				${RM} ${PLIST}.tmp ;			\
-			fi ; 						\
-			cnt=`${EGREP} -c '^@exec[ 	]*${LDCONFIG}$$' ${PLIST} || ${TRUE}`; \
-			if [ "${SHLIB_PLIST_MODE}" = "1" ]; then 	\
-				if [ $$cnt -eq 0 ]; then		\
-					${ECHO} "@exec ${LDCONFIG}" >> ${PLIST}; \
-					${ECHO} "@unexec ${LDCONFIG}" >> ${PLIST}; \
-				fi					\
-			fi;						\
-			if [ "${SHLIB_PLIST_MODE}" = "0" ]; then	\
-				if [ "${PKG_VERBOSE}" != "" ]; then	\
-					${ECHO_MSG} "$$sos";		\
-					${ECHO_MSG} "Running ${LDCONFIG}"; \
-				fi;					\
-				${LDCONFIG} || ${TRUE};			\
-			fi						\
-			;;						\
-		"dylib")						\
-			${AWK} '${_DYLIB_AWK}' <${PLIST} >${PLIST}.tmp && \
-			if [ "${SHLIB_PLIST_MODE}" = "1" ]; then	\
-				${MV} ${PLIST}.tmp ${PLIST};		\
-			else						\
-				${RM} ${PLIST}.tmp ;			\
-			fi ;						\
-			;;						\
-		"*")							\
-			if [ "${SHLIB_PLIST_MODE}" = "0" ]; then 	\
-				${ECHO_MSG} "No shared libraries for ${MACHINE_ARCH}"; \
-			fi ; 						\
-			if [ "${SHLIB_PLIST_MODE}" = "1" ]; then	\
-				for so in $$sos; do			\
-					if [ X"${PKG_VERBOSE}" != X"" ]; then \
-						${ECHO_MSG} >&2 "Ignoring $$so"; \
-					fi;				\
-					${SED} -e "s;^$$so$$;@comment No shared objects - &;" \
-						${PLIST} >${PLIST}.tmp && ${MV} ${PLIST}.tmp ${PLIST};	\
-				done;					\
-			fi ;						\
-			;;						\
-		esac;							\
-	fi
-.endif # SHLIB_HANDLING == "YES"
-.endif !_USE_PLIST_MODULE
 
 # Check if all binaries and shlibs find their needed libs
 # Must be run after "make install", so that files are installed, and
@@ -2420,37 +2026,6 @@ check-shlibs:
 		exit 1;							\
 	fi
 .endif # NO_PKG_REGISTER
-
-.if !defined(_USE_PLIST_MODULE)
-.if !target(show-shlib-type)
-# Show the shared lib type being built: one of ELF, a.out, dylib, or none
-.PHONY: show-shlib-type
-show-shlib-type:
-.  if empty(USE_LANGUAGES)
-	@${ECHO} "none"
-.  elif ${_OPSYS_SHLIB_TYPE} == "ELF/a.out"
-	@cd ${WRKDIR} &&						\
-	sotype=none;							\
-	if [ "X${MKPIC}" != "Xno" -a "X${NOPIC}" = "X" ]; then		\
-		${ECHO} "int main() { return(0); }" > a.$$$$.c;		\
-		${SETENV} PATH=${PATH:Q}				\
-		${CC} ${CFLAGS} a.$$$$.c -o a.$$$$.out;			\
-		case `${FILE_CMD} a.$$$$.out` in			\
-		*ELF*dynamically*)					\
-			sotype=ELF ;;					\
-		*shared*library*)					\
-			sotype="a.out" ;;				\
-		*dynamically*)						\
-			sotype="a.out" ;;				\
-		esac;							\
-	fi;								\
-	${ECHO} "$$sotype";						\
-	${RM} -f a.$$$$.c a.$$$$.out
-.  else
-	@${ECHO} ${_OPSYS_SHLIB_TYPE}
-.  endif   # USE_LANGUAGES
-.endif
-.endif # !_USE_PLIST_MODULE
 
 .PHONY: acquire-tools-lock
 .PHONY: acquire-wrapper-lock acquire-configure-lock acquire-build-lock
@@ -3859,182 +3434,6 @@ print-pkg-size-depends:
 		${ECHO} "0";						\
 	fi
 
-.if !defined(_USE_PLIST_MODULE)
-###
-### Automatic PLIST generation
-###  - files & symlinks first
-###  - @dirrm statements last
-###  - empty directories are handled properly
-###  - dirs from mtree files are excluded
-###  - substitute for platform or package specifics substrings
-###
-### Usage:
-###  - make install
-###  - make print-PLIST | brain >PLIST
-###
-
-_PRINT_PLIST_AWK_SUBST={						\
-	gsub(/${OPSYS}/, "$${OPSYS}");					\
-	gsub(/${OS_VERSION:S/./\./g}/, "$${OS_VERSION}");		\
-	gsub(/${MACHINE_GNU_PLATFORM}/, "$${MACHINE_GNU_PLATFORM}");	\
-	gsub(/${MACHINE_ARCH}/, "$${MACHINE_ARCH}");			\
-	gsub(/${MACHINE_GNU_ARCH}/, "$${MACHINE_GNU_ARCH}");
-.if !empty(LOWER_VENDOR)
-_PRINT_PLIST_AWK_SUBST+=	gsub(/${LOWER_VENDOR}/, "$${LOWER_VENDOR}");
-.endif
-_PRINT_PLIST_AWK_SUBST+=						\
-	gsub(/${LOWER_OS_VERSION:S/./\./g}/, "$${LOWER_OS_VERSION}");	\
-	gsub(/${LOWER_OPSYS}/, "$${LOWER_OPSYS}");			\
-	gsub(/${PKGNAME_NOREV}/, "$${PKGNAME}");			\
-	gsub(/${PKGVERSION:S/./\./g:C/nb[0-9]*$$//}/, "$${PKGVERSION}");\
-	gsub(/${PKGLOCALEDIR}\/locale/, "$${PKGLOCALEDIR}/locale");	\
-	gsub("^${PKGMANDIR}\/", "man/");				\
-}
-
-_PRINT_PLIST_AWK_IGNORE=	($$0 ~ /emul\/linux\/proc/)
-_PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^info\/dir$$/)
-.if defined(INFO_DIR) && empty(INFO_DIR:Minfo)
-_PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^${INFO_DIR:S|/|\\/|g}\/dir$$/)
-.endif
-.if !empty(INFO_FILES)
-.  for _f_ in ${INFO_FILES}
-_PRINT_PLIST_AWK_IGNORE+=      || ($$0 ~ /^${INFO_DIR:S|/|\\/|g}\/${_f_:S|+|\+|g}(-[0-9]+)?(\.gz)?$$/)
-.  endfor
-.endif
-
-# Common (system) directories not to generate @dirrm statements for
-# Reads MTREE_FILE and generate awk statements that will
-# sort out which directories NOT to include into the PLIST @dirrm list
-.if make(print-PLIST)
-_PRINT_PLIST_COMMON_DIRS!= 	${AWK} 'BEGIN  {			\
-			i=0; 						\
-			stack[i]="${PREFIX}" ; 				\
-			cwd=""; 					\
-		} 							\
-		! ( /^\// || /^\#/ || /^$$/ ) { 			\
-			if ( $$1 == ".." ){ 				\
-				i=i-1;					\
-				cwd = stack[i];				\
-			} else if ( $$1 == "." ){ 			\
-			} else {					\
-				stack[i] = cwd ;			\
-				if ( i == 0 ){ 				\
-					cwd = $$1 ; 			\
-				} else {				\
-					cwd = cwd "\\/" $$1 ; 	\
-				} 					\
-				print "/^" cwd "$$$$/ { next; }";	\
-				i=i+1 ; 				\
-			} 						\
-		} 							\
-		END { print "{ print $$$$0; }"; }			\
-	' <${MTREE_FILE}
-.endif
-
-
-# scan $PREFIX for any files/dirs modified since the package was extracted
-# will emit "@exec mkdir"-statements for empty directories
-# XXX will fail for data files that were copied using tar (e.g. emacs)!
-# XXX should check $LOCALBASE and $X11BASE, and add @cwd statements
-
-_PRINT_PLIST_FILES_CMD=	\
-	${FIND} ${PREFIX}/. -xdev -newer ${_EXTRACT_COOKIE} \! -type d -print
-_PRINT_PLIST_DIRS_CMD=	\
-	${FIND} ${PREFIX}/. -xdev -newer ${_EXTRACT_COOKIE} -type d -print
-_PRINT_LA_LIBNAMES=	${SETENV} ECHO=${ECHO:Q} GREP=${GREP:Q} SORT=${SORT:Q} \
-			${SH} ${.CURDIR}/../../mk/scripts/print-la-libnames
-
-.if !empty(LIBTOOLIZE_PLIST:M[yY][eE][sS])
-_PRINT_PLIST_LIBTOOLIZE_FILTER?=					\
-	(								\
-	  if ${TEST} -d ${WRKDIR}; then					\
-	  	tmpdir="${WRKDIR}";					\
-	  else								\
-	  	tmpdir="$${TMPDIR-/tmp}";				\
-	  fi;								\
-	  fileslist="$$tmpdir/print.plist.files.$$$$";			\
-	  libslist="$$tmpdir/print.plist.libs.$$$$";			\
-	  while read file; do						\
-		case $$file in						\
-		*.la)							\
-			${_PRINT_LA_LIBNAMES} $$file >> $$libslist;	\
-			;;						\
-		esac;							\
-		${ECHO} "$$file";					\
-	  done > $$fileslist;						\
-	  if ${TEST} -f "$$libslist"; then				\
-	  	${GREP} -hvxF "`${SORT} -u $$libslist`" "$$fileslist";	\
-	  else								\
-	  	${CAT} "$$fileslist";					\
-	  fi;								\
-	  ${RM} -f "$$fileslist" "$$libslist";				\
-	)
-.else
-_PRINT_PLIST_LIBTOOLIZE_FILTER?=	${CAT}
-.endif
-
-.PHONY: print-PLIST
-.if !target(print-PLIST)
-print-PLIST:
-	${_PKG_SILENT}${_PKG_DEBUG}\
-	${ECHO} '@comment $$'NetBSD'$$'
-	${_PKG_SILENT}${_PKG_DEBUG}\
-	shlib_type=`${MAKE} ${MAKEFLAGS} show-shlib-type`;		\
-	case $$shlib_type in 						\
-	"a.out")	genlinks=1 ;;					\
-	*)		genlinks=0 ;;					\
-	esac;								\
-	${_PRINT_PLIST_FILES_CMD}					\
-	 | ${_PRINT_PLIST_LIBTOOLIZE_FILTER}				\
-	 | ${SORT}							\
-	 | ${AWK} '							\
-		{ sub("${PREFIX}/\\./", ""); }				\
-		${_PRINT_PLIST_AWK_IGNORE} { next; } 			\
-		${_PRINT_PLIST_AWK_SUBST}				\
-		/^@/ { print $$0; next }				\
-		/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+\.[0-9]+$$/ { 	\
-			print $$0;					\
-			sub("\\.[0-9]+$$", "");				\
-			if ('$$genlinks') print $$0;			\
-			sub("\\.[0-9]+$$", "");				\
-			if ('$$genlinks') print $$0;			\
-			sub("\\.[0-9]+$$", "");				\
-			if ('$$genlinks') print $$0;			\
-			next;						\
-		}							\
-		/.*\/lib[^\/]+\.so\.[0-9]+\.[0-9]+$$/ { 		\
-			print $$0;					\
-			sub("\\.[0-9]+$$", "");				\
-			if ('$$genlinks') print $$0;			\
-			sub("\\.[0-9]+$$", "");				\
-			if ('$$genlinks') print $$0;			\
-			next;						\
-		}							\
-		${PRINT_PLIST_AWK}					\
-		{ print $$0; }'
-	${_PKG_SILENT}${_PKG_DEBUG}\
-	for i in `${_PRINT_PLIST_DIRS_CMD}				\
-			| ${SORT} -r					\
-			| ${AWK} '					\
-				/emul\/linux\/proc/ { next; }		\
-				/${PREFIX:S|/|\\/|g}\/\.$$/ { next; }	\
-				{ sub("${PREFIX}/\\\\./", ""); }	\
-				{ sub("^${PKGMANDIR}/", "man/"); }	\
-				${_PRINT_PLIST_COMMON_DIRS}'` ;		\
-	do								\
-		if [ `${LS} -la ${PREFIX}/$$i | ${WC} -l` = 3 ]; then	\
-			${ECHO} @exec \$${MKDIR} %D/$$i | ${AWK} '	\
-			${PRINT_PLIST_AWK}				\
-			{ print $$0; }' ;				\
-		fi ;							\
-		${ECHO} @dirrm $$i | ${AWK} '				\
-			${PRINT_PLIST_AWK}				\
-			{ print $$0; }' ;				\
-	done								\
-	| ${AWK} '${_PRINT_PLIST_AWK_SUBST} { print $$0; }'
-.endif # target(print-PLIST)
-.endif # !_USE_PLIST_MODULE
-
 # By default, all packages attempt to link into the views.
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 BUILD_VIEWS?=	yes
@@ -4347,186 +3746,6 @@ depend:
 tags:
 .endif
 
-.if !defined(_USE_PLIST_MODULE)
-# generate ${PLIST} from ${PLIST_SRC} by:
-# - substituting for PLIST_SUBST entries
-# - fixing list of man-pages according to PKGMANDIR, MANZ, MANINSTALL.
-# - adding symlinks for shared libs (ELF) or ldconfig calls (a.out).
-
-# plist awk pattern-action statement to convert man/ to ${PKGMANDIR}/
-_PLIST_AWK_PKGMANDIR=							\
-/^([^\/]*\/)*man\/([^\/]*\/)?(man[1-9ln]\/.*[1-9ln]|cat[1-9ln]\/.*[0-9])$$/ { \
-	sub("^man/", "${PKGMANDIR}/");					\
-}									\
-/^@dirrm man\// {							\
-	sub(" man/", " ${PKGMANDIR}/");					\
-}
-
-# plist awk pattern-action statement to handle MANINSTALL
-_PLIST_AWK_MANINSTALL=							\
-{									\
-	if (!"${MANINSTALL:Mmaninstall}" &&				\
-		match($$0, "^([^/]*/)*man/([^/]*/)?man[1-9ln]") ) {	\
-			next;						\
-	}								\
-	if (!"${MANINSTALL:Mcatinstall}" &&				\
-		match($$0, "^([^/]*/)*man/([^/]*/)?cat[1-9ln]") ) {	\
-			next;						\
-	}								\
-}
-
-# plist awk pattern-action statement to strip '.gz' from man
-# entries
-_PLIST_AWK_STRIP_MANZ=							\
-/^([^\/]*\/)*man\/([^\/]*\/)?(man[1-9ln]\/.*[1-9ln]|cat[1-9ln]\/.*[0-9])\.gz$$/ { \
-	$$0 = substr($$0, 1, length($$0) - 3);				\
-}
-
-# plist awk pattern-action statement to add '.gz' to man entries
-_PLIST_AWK_ADD_MANZ=							\
-/^([^\/]*\/)*man\/([^\/]*\/)?(man[1-9ln]\/.*[1-9ln]|cat[1-9ln]\/.*[0-9])$$/ { \
-	$$0 = $$0 ".gz";						\
-}
-
-# plist awk pattern-action statement to handle PLIST_SUBST substitutions
-# BEWARE: the awk script quote is closed and reopened around the
-# string argument of gsub() calls so historic quoting semantic of
-# PLIST_SUBST is preserved.
-# XXX `_str_quote_{start,end}_' is a gross hack to work around weird word
-# splitting.
-_PLIST_AWK_SUBST= { ${PLIST_SUBST:S|=|\\}/,_str_quote_start_|:S|$|_str_quote_end_);|:S|^|gsub(/\\\$\\{|:S|_str_quote_start_|"'|g:S|_str_quote_end_|'"|g} }
-
-# plist awk pattern-action statement to rewrite "imake installed" catman pages
-# as plain manpages.
-_PLIST_AWK_IMAKE_MAN=							\
-/^([^\/]*\/)*man\/([^\/]*\/)?cat[1-9ln]\/.*0$$/ {			\
-	n = match($$0, "/cat[1-9ln]");					\
-	sect = sprintf(".%s", substr($$0, n + 4, 1));			\
-	sub("/cat", "/man");						\
-	sub("\\.0$$", sect);						\
-}
-
-# plist awk pattern-action statement to handle info files:
-# generate list of files matching
-# ${PREFIX}/${INFO_DIR}/filename(-[0-9]+)?(.gz)?
-# for `filename' being each word of INFO_FILES in turn.
-# Notes:
-# - first the filenames matching ${PREFIX}/${INFO_DIR}/filename*
-# are generated with ls then they are filtered by the exact pattern.
-# - ${PREFIX}/${INFO_DIR}/filename is single quoted and single quote
-# escaped
-# XXX When all info file entries will be removed from PLIST files
-# the non-BEGIN pattern-action statements generated below will be retired.
-_PLIST_AWK_INFO=
-.if ${PLIST_TYPE} == "static"
-.  if !empty(INFO_FILES)
-.    for _f_ in ${INFO_FILES}
-_PLIST_AWK_INFO+=							\
-BEGIN {									\
-	cmd="${_f_}"; gsub("'\''", "\\'\''", cmd);			\
-	sub("^", "${LS} '\''${PREFIX}/${INFO_DIR}/", cmd);		\
-	sub("$$", "'\''*", cmd);					\
-	while ((cmd | getline l) > 0) {					\
-		if (match(l, ".*/${_f_:S|+|\\\+|g}(-[0-9]+)?(\\.gz)?$$")) { \
-			sub("^${PREFIX}/", "", l);			\
-			print l;					\
-		}							\
-	}								\
-	close(cmd);							\
-}									\
-/^${INFO_DIR:S|/|\\/|g}\/${_f_}(-[0-9]+)?$$/ { next; }
-.    endfor
-.  endif
-.endif
-
-# plist awk pattern-action statement to expand libtool archives into
-# shared and/or static libraries.
-#
-.if ${PLIST_TYPE} == "dynamic"
-_PLIST_AWK_LIBTOOL?=	# empty
-.elif empty(LIBTOOLIZE_PLIST:M[yY][eE][sS])
-BROKEN+=		"USE_LIBTOOL requires LIBTOOLIZE_PLIST=yes for proper PLIST generation"
-.else
-_PLIST_AWK_LIBTOOL?=							\
-/^[^@].*\.la$$/ {							\
-	system("cd ${PREFIX} && ${_PRINT_LA_LIBNAMES} " $$0)		\
-}
-.endif
-
-# _PLIST_AWK_SCRIPT hold the complete awk script for plist target.
-#
-_PLIST_AWK_SCRIPT=	'
-# Do the substitutions
-# See comments above about _PLIST_AWK_SUBST: it contains single quotes!
-# So _PLIST_AWK_SCRIPT is intended to be single quoted.
-_PLIST_AWK_SCRIPT+=	${_PLIST_AWK_SUBST}
-# Generated entries for info files
-.if !empty(INFO_FILES)
-_PLIST_AWK_SCRIPT+=	${_PLIST_AWK_INFO}
-.endif
-# Change path to man directory if using custom PKGMANDIR
-_PLIST_AWK_SCRIPT+=	${_PLIST_AWK_PKGMANDIR}
-# Expand libtool archives
-_PLIST_AWK_SCRIPT+=	${_PLIST_AWK_LIBTOOL}
-# Strip the '.gz' suffixes on man entries
-_PLIST_AWK_SCRIPT+=	${_PLIST_AWK_STRIP_MANZ}
-# Deal with MANINSTALL and man entries
-_PLIST_AWK_SCRIPT+=	${_PLIST_AWK_MANINSTALL}
-# Deal with "imake installed" catman pages
-.if (defined(USE_IMAKE) || !empty(USE_TOOLS:Mimake)) && ${_PREFORMATTED_MAN_DIR} == "man"
-_PLIST_AWK_SCRIPT+=	${_PLIST_AWK_IMAKE_MAN}
-.endif
-# Add '.gz' suffixes on man entries if needed
-.if !empty(_MANZ:M[yY][eE][sS])
-_PLIST_AWK_SCRIPT+=	${_PLIST_AWK_ADD_MANZ}
-.endif
-# Print the entry
-_PLIST_AWK_SCRIPT+=	{ print $$0; }
-#
-_PLIST_AWK_SCRIPT+=	'
-
-# GENERATE_PLIST is a sequence of commands, terminating in a semicolon,
-#	that outputs contents for a PLIST to stdout and is appended to
-#	the contents of ${PLIST_SRC}.
-#
-GENERATE_PLIST?=	${TRUE};
-.if ${PLIST_TYPE} == "dynamic"
-_PLIST_IGNORE_CMD=							\
-	( while read i; do						\
-		ignore=no;						\
-		for p in ${_PLIST_IGNORE_FILES}; do			\
-	  		case "$$i" in					\
-			$$p)	ignore=yes; break ;;			\
-			esac;						\
-		done;							\
-		[ "$$ignore" = "yes" ] || ${ECHO} "$$i";		\
-	  done )
-_GENERATE_PLIST=							\
-	${FIND} ${PREFIX} \! -type d -print | ${SORT} |			\
-		${SED} -e "s|^${PREFIX}/||" | 				\
-		${_PLIST_IGNORE_CMD};					\
-	${FIND} ${PREFIX} -type d -print | ${SORT} -r |			\
-		${GREP} -v "^${PREFIX}$$" |				\
-		${_PLIST_IGNORE_CMD} |					\
-		${SED} -e "s|^${PREFIX}/|@unexec ${RMDIR} -p %D/|"	\
-		       -e "s,$$, 2>/dev/null || ${TRUE},";
-.else
-_GENERATE_PLIST=	${CAT} ${PLIST_SRC}; ${GENERATE_PLIST}
-.endif
-
-.PHONY: plist
-plist: ${PLIST}
-.if ${PLIST_TYPE} == "static"
-${PLIST}: ${PLIST_SRC}
-.endif
-${PLIST}:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	{ ${_GENERATE_PLIST} } | ${AWK} ${_PLIST_AWK_SCRIPT}		\
-		> ${PLIST}; 						\
-	  ${MAKE} ${MAKEFLAGS} do-shlib-handling			\
-		SHLIB_PLIST_MODE=1
-.endif # !_USE_PLIST_MODULE
-
 # generate ${MESSAGE} from ${MESSAGE_SRC} by substituting
 # for MESSAGE_SUBST entries
 
@@ -4559,9 +3778,7 @@ ${DESCR}: ${DESCR_SRC}
 	${ECHO} '${HOMEPAGE}'	>>${DESCR}
 .endif
 
-.if defined(_USE_PLIST_MODULE)
 .include "../../mk/plist/bsd.plist.mk"
-.endif # _USE_PLIST_MODULE
 
 .include "../../mk/bsd.utils.mk"
 
