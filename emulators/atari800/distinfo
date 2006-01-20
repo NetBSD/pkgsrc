@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.11 2005/05/17 15:08:57 adam Exp $
+$NetBSD: distinfo,v 1.12 2006/01/20 07:38:12 adam Exp $
 
-SHA1 (atari800-1.3.6.tar.gz) = 60a33ac3a57b31e5614d34e8eb1ece354c7f1bc4
-RMD160 (atari800-1.3.6.tar.gz) = 943b5ab6beae25228c85f728462c8e8f68ce5027
-Size (atari800-1.3.6.tar.gz) = 1012231 bytes
+SHA1 (atari800-2.0.1.tar.gz) = ba4202e01092ee656548e083e6092e450fa3372f
+RMD160 (atari800-2.0.1.tar.gz) = 42b5f94dfe396cb8d62b7e4fe83958c385e14b4e
+Size (atari800-2.0.1.tar.gz) = 939745 bytes
 SHA1 (xf25.zip) = e65923fd3a4845c1c72d1677db0fda969187eb42
 RMD160 (xf25.zip) = e3960898223dd4d1b9a9cc5cfb1251bd726ea5a7
 Size (xf25.zip) = 188942 bytes
-SHA1 (patch-aa) = cf2122ef21bb8a8e27f9aa723ed11f16630bfbef
-SHA1 (patch-ab) = 15b45d358ce200bb13d8ed35eed97dd7745e4b51
+SHA1 (patch-aa) = 6b610bab5957474e0eb63ec67f04c6cc3bc5287c
+SHA1 (patch-ab) = 685a706cd9062543f8716a360052422925af4f6f
 SHA1 (patch-ac) = 1815c2f531a8bdba6e12d5cf062206e8eb2740d9
-SHA1 (patch-ad) = f5046d850bc3a6f0da044fd7cca78938d715a8bb
