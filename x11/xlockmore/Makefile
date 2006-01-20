@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.69 2006/01/09 21:18:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.70 2006/01/20 13:15:45 tron Exp $
 
 .include "Makefile.common"
+
+PKG_REVISION=	1
 
 COMMENT=	Like the XLock session-locker/screensaver, but with more
 
