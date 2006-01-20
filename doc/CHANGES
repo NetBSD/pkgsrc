@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12581 2006/01/19 23:24:41 markd Exp $
+$NetBSD: CHANGES,v 1.12582 2006/01/20 07:40:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -405,3 +405,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated meta-pkgs/xorg to 6.9.0nb1 [ghen 2006-01-19]
 	Updated finance/p5-Finance-Quote to 1.11 [wiz 2006-01-19]
 	Updated x11/kdelibs3 to 3.5.0nb2 [markd 2006-01-19]
+	Updated emulators/atari800 to 2.0.1 [adam 2006-01-20]
