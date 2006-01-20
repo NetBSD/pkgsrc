@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4459 2006/01/20 14:59:48 adam Exp $
+$NetBSD: TODO,v 1.4460 2006/01/20 19:59:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -726,7 +726,7 @@ Suggested package updates
 	o mantis-0.19.2
 	o mapserver-4.2.5
 	o maradns-1.2.01
-	o mathomatic-12.5.5
+	o mathomatic-12.5.6
 	o md-whois-4.7.8
 	o mdd-20050318
 	o mdf2iso-0.3.0
@@ -743,6 +743,8 @@ Suggested package updates
 	o minivmac-2.6.1
 	o mjpegtools-1.8.0
 	o mknmz-wwwoffle-0.7.2
+	o mldonkey-2.7.3
+	o mldonkey-gui-2.7.3
 	o mlview-0.9.0
 	o mmix-20050922
 	o moc-2.3.3
@@ -1086,7 +1088,7 @@ Suggested package updates
 	o rt3-3.4.5
 	o rtcw-1.41.3
 	o ruby-cmd-0.8.0
-	o rxvt-unicode-7.0
+	o rxvt-unicode-7.1
 	o sablecc-3.2
 	o sablevm-1.11.3 [pkg/30022]
 	o sablevm-1.12
@@ -1161,6 +1163,7 @@ Suggested package updates
 	o swish-e-2.4.3
 	o sylpheed-claws-1.0.5
 	o sylpheed-claws-ghostscript-viewer-0.8
+	o sylpheed-devel-2.2.0beta5
 	o sympa-5.1
 	o sysinfo-4.2.2
 	o tcl-postgresql74-7.4.9
