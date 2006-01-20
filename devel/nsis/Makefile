@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/01/04 22:36:24 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/20 23:41:29 jlam Exp $
 #
 
 DISTNAME=	nsis-${NSIS_VER}
@@ -19,7 +19,7 @@ NSIS_SRC=	${DISTNAME:=-src}
 NSIS_VER=	2.12
 WRKSRC=		${WRKDIR}/${NSIS_SRC}
 NO_CONFIGURE=	yes
-EXTRACT_CMD_OPTS.zip=	-qo
+EXTRACT_OPTS_ZIP=	-qo
 
 EVAL_PREFIX+=	SCONS_PREFIX=scons
 SCONS_BIN=	${SCONS_PREFIX}/bin/scons
