@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.11 2004/06/20 21:25:46 jmmv Exp $
+$NetBSD: patch-af,v 1.12 2006/01/20 13:33:19 jmmv Exp $
 
 http://bugzilla.gnome.org/show_bug.cgi?id=142338
 
---- vicious-extensions/ve-misc.c.orig	2004-05-28 21:23:01.000000000 +0200
+--- vicious-extensions/ve-misc.c.orig	2005-11-22 21:23:27.000000000 +0100
 +++ vicious-extensions/ve-misc.c
-@@ -342,110 +342,6 @@ ve_locale_exists (const char *loc)
+@@ -345,120 +345,6 @@ ve_locale_exists (const char *loc)
  	return ret;
  }
  
@@ -66,7 +66,12 @@ http://bugzilla.gnome.org/show_bug.cgi?id=142338
 -#if defined (HAVE_SETENV)
 -	unsetenv (name);
 -#else
+-
+-#ifdef HAVE__NSGETENVIRON
+-#define environ (*_NSGetEnviron())
+-#else
 -	extern char **environ;
+-#endif
 -	int i, len;
 -
 -	if (environ == NULL)
@@ -106,7 +111,12 @@ http://bugzilla.gnome.org/show_bug.cgi?id=142338
 -#ifdef HAVE_CLEARENV
 -	clearenv ();
 -#else
+-
+-#ifdef HAVE__NSGETENVIRON
+-#define environ (*_NSGetEnviron())
+-#else
 -	extern char **environ;
+-#endif
 -	if (environ != NULL)
 -		environ[0] = NULL;
 -#endif
