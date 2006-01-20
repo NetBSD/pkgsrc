@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4457 2006/01/19 21:52:52 wiz Exp $
+$NetBSD: TODO,v 1.4458 2006/01/20 11:23:28 adam Exp $
 
 Suggested new packages
 ======================
@@ -606,7 +606,6 @@ Suggested package updates
 	o hackbot-2.21
 	o hashcash-1.18
 	o haskell-mode-1.45
-	o hatari-0.80
 	o hercules-3.02
 	o hobbitmon-4.0.4 [pkg/30484]
 	o hot-babe-0.2.2
