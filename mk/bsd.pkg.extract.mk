@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.17 2006/01/21 18:55:10 jlam Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.18 2006/01/21 19:39:22 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -14,21 +14,25 @@
 #
 #    EXTRACT_CMD is a shell command list that extracts the contents of
 #	an archive named by the variable ${DOWNLOADED_DISTFILE} to the
-#	current working directory.  The default is the "extract" script.
+#	current working directory.  The default is ${EXTRACT_CMD_DEFAULT}.
+#
+#    EXTRACT_CMD_DEFAULT uses the "extract" script to unpack archives.  The
+#	precise manner in which extraction occurs may be tweaked by setting
+#	EXTRACT_OPTS, EXTRACT_USING and EXTRACT_ELEMENTS.
 #
 #    EXTRACT_OPTS is a list of options to pass to the "extract" script
-#	when using the default EXTRACT_CMD.  See the comments at the head
-#	of the "extract" script for a definitive list of the available
+#	when using EXTRACT_CMD_DEFAULT.  See the comments at the head of
+#	the "extract" script for a definitive list of the available
 #	options.  The default list is empty.
 #
 #    EXTRACT_USING specifies the tool used to extract tar/ustar-format
-#	archives.  The possible values are "gtar", "nbtar", and "pax".
-#	By default, we use the "nbtar" tool (NetBSD's pax-as-tar).
+#	archives when using EXTRACT_CMD_DEFAULT.  The possible values are
+#	"gtar", "nbtar", and "pax".  By default, we use the "nbtar" tool
+#	(pkgsrc's pax-as-tar).
 #
-#    EXTRACT_ELEMENTS is a list of files within the distfile to extract.
-#	This variable only takes effect for distfiles that are tarballs.
-#	By default, this is empty, which causes all files within the
-#	tarball to be extracted.
+#    EXTRACT_ELEMENTS is a list of files within the distfile to extract
+#	when using EXTRACT_CMD_DEFAULT.  By default, this is empty, which
+#	causes all files within the archive to be extracted.
 #
 # The following are read-only variables that may be used within a package
 #	Makefile:
@@ -136,10 +140,13 @@ EXTRACT_OPTS+=	${TOOLS_TAR:D	-t ${TOOLS_TAR}}
 EXTRACT_OPTS+=	${TOOLS_PAX:D	-t ${TOOLS_PAX}}
 .endif
 
-EXTRACT_CMD?=	${SETENV} ${_EXTRACT_ENV}				\
-		${.CURDIR}/../../mk/scripts/extract			\
-			${EXTRACT_OPTS}					\
-			${DOWNLOADED_DISTFILE} ${EXTRACT_ELEMENTS}
+EXTRACT_CMD_DEFAULT=							\
+	${SETENV} ${_EXTRACT_ENV}					\
+	${.CURDIR}/../../mk/scripts/extract				\
+		${EXTRACT_OPTS}						\
+		${DOWNLOADED_DISTFILE} ${EXTRACT_ELEMENTS}
+
+EXTRACT_CMD?=	${EXTRACT_CMD_DEFAULT}
 
 DOWNLOADED_DISTFILE=	$${extract_file}
 
