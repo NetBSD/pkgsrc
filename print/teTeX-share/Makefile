@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/01/20 23:41:30 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2006/01/21 18:57:42 jlam Exp $
 #
 
 DISTNAME=	tetex-texmf-2.0.2
@@ -24,25 +24,20 @@ EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-USE_TOOLS+=		patch
-
-.include "../../mk/bsd.prefs.mk"
+USE_TOOLS+=	patch
 
 # Don't extract the files listed in ${FILESDIR}/exclude, and preserve
 # permissions.
 #
-.if !empty(EXTRACT_USING:M*tar)
-EXTRACT_OPTS_TAR=	-X ${FILESDIR}/exclude -p
-.elif !empty(EXTRACT_USING:Mpax)
-EXTRACT_OPTS_PAX=	-c `${CAT} ${FILESDIR}/exclude`
-.endif
+EXTRACT_OPTS=		-X ${FILESDIR}/exclude
+EXTRACT_OPTS_TAR=	-p
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf
 	distfiles=${DISTFILES:Q};					\
 	for i in $$distfiles; do					\
 		extract_file=${_DISTDIR:Q}"/$$i";			\
-		cd ${PREFIX}/share/texmf; ${EXTRACT_CMD${EXTRACT_SUFX}}; \
+		cd ${PREFIX}/share/texmf; ${EXTRACT_CMD};		\
 	done
 	cd ${PREFIX}/share/texmf/dvipdfm/config && \
 	${PATCH} ${_PATCH_BACKUP_ARG} .orig < ${FILESDIR}/dvipdfm-config.diff && \

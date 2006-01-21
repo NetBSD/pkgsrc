@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:26 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/01/21 18:57:41 jlam Exp $
 #
 
 DISTNAME=	check_cluster
@@ -15,7 +15,6 @@ COMMENT=	Host and service cluster plugin for NetSaint
 DEPENDS+=	netsaint-base-[0-9]*:../../net/netsaint-base
 
 WRKSRC=		${WRKDIR}
-EXTRACT_CMD=	${CP} ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ${WRKSRC}
 
 INSTALLATION_DIRS=	libexec/netsaint
 
