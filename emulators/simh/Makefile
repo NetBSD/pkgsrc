@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/06/16 06:57:51 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/01/21 18:57:40 jlam Exp $
 #
 
 DISTNAME=	simhv33-0
@@ -14,8 +14,8 @@ COMMENT=	Bob Supnik's historical computer simulator
 
 BUILDLINK_DEPENDS.libpcap+=	libpcap>=0.6
 
-EXTRACT_CMD=	unzip -aoq ${DOWNLOADED_DISTFILE}
-WRKSRC=		${WRKDIR}
+EXTRACT_OPTS_ZIP=	-aoq
+WRKSRC=			${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
 

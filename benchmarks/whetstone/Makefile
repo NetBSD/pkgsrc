@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/07/30 15:50:38 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2006/01/21 18:57:40 jlam Exp $
 
 DISTNAME=		whetstone
 PKGNAME=		whetstone-1.2
@@ -11,7 +11,6 @@ COMMENT=		Benchmark for processors that gives you a MIPS rating
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-EXTRACT_CMD=		${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
 WRKSRC=			${WRKDIR}
 
 INSTALLATION_DIRS=	bin

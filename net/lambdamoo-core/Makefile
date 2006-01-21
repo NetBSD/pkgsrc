@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/15 18:27:52 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/01/21 18:57:41 jlam Exp $
 
 DISTNAME=	LambdaCore-12Apr99.db
 PKGNAME=	lambdamoo-core-990412
@@ -11,14 +11,9 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ccs.neu.edu/home/eostrom/muds/lambdamoo.html
 COMMENT=	Generic core classes for lambdamoo
 
-EXTRACT_CMD=	:
 USE_TOOLS+=	gunzip
 
 WRKSRC=		${WRKDIR}
-
-post-extract:
-	${CP} ${DISTDIR}/${DISTFILES} ${WRKSRC}
-	${GUNZIP_CMD} ${WRKSRC}/${DISTFILES}
 
 do-build:
 

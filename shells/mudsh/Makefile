@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/07/16 19:10:40 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/21 18:57:42 jlam Exp $
 #
 
 DISTNAME=	mudsh
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.xirium.com/tech/mud-shell/index.html
 COMMENT=	M.U.D. game-like shell
 
 WRKSRC=		${WRKDIR}
-EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
 USE_TOOLS+=	perl:run
 
 INSTALLATION_DIRS=	bin

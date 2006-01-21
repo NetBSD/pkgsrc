@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2004/07/30 15:50:38 minskim Exp $
+# $NetBSD: Makefile,v 1.16 2006/01/21 18:57:40 jlam Exp $
 
 DISTNAME=		paranoia
 PKGNAME=		paranoia-960101
@@ -8,8 +8,6 @@ EXTRACT_SUFX=		.c
 
 MAINTAINER=		root@garbled.net
 COMMENT=		Highly paranoid test of IEEE 754 conformance
-
-EXTRACT_CMD=		${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
