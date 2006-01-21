@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.5 2006/01/20 23:58:49 jlam Exp $
+# $NetBSD: extract,v 1.6 2006/01/21 05:24:36 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -43,15 +43,20 @@
 #	extract -- extract distfile, regardless of format
 #
 # SYNOPSIS
-#	extract [-t tarprog] [-X excludefile | -x] distfile [file ...]
+#	extract [options] distfile [file ...]
 #
 # DESCRIPTION
 #	extract will unpack the contents of the named distfile into the
-#	current working directory.  If any optional files are specified
-#	then only they will be extracted from the distfile, provided that
-#	the underlying tool supports this ability.
+#	current working directory.  If any optional files are specified then
+#	only they will be extracted from the distfile, provided that the
+#	underlying tool supports this ability.  If the distfile's file
+#	extension doesn't match any known archive format's, then the
+#	distfile is simply copied into the current working directory.
 #
 # OPTIONS
+#	-f format	Force interpretation of the distfile's archive
+#			format to be the specified format.
+#
 #	-t tarprog	This specifies the tool to use to extract tar/ustar
 #			archives, and may be either "tar" or "pax", or the
 #			full path to the program.
@@ -82,6 +87,7 @@
 
 : ${BZCAT:=bzcat}
 : ${CAT:=cat}
+: ${CP:=cp}
 : ${ECHO:=echo}
 : ${GZCAT:=gzcat}
 : ${LHA:=lha}
@@ -96,7 +102,7 @@
 self="${0##*/}"
 
 usage() {
-	${ECHO} 1>&2 "usage: $self [-t tarprog] [-X excludefile | -x] distfile [file ...]"
+	${ECHO} 1>&2 "usage: $self [-f format] [-t tarprog] [-X excludefile | -x] distfile [file ...]"
 }
 
 decompress_cat="${CAT}"
@@ -104,10 +110,12 @@ exclude=no
 exclude_file=
 exclude_flag=
 extract_using=tar
+format=
 
 # Process optional arguments
 while ${TEST} $# -gt 0; do
 	case "$1" in
+	-f)	format="$2"; shift 2 ;;
 	-t)	extract_using="$2"; shift 2 ;;
 	-X)	exclude_file="$2"; shift 2 ;;
 	-x)	exclude=yes; shift ;;
@@ -147,6 +155,22 @@ esac
 #
 case "$distfile" in
 *.tar.gz|*.tgz|*_tar.gz|*.tar.bz2|*.tbz|*.tbz2|*.tar.Z|*.tar)
+		_format=tar ;;
+*.shar.gz|*.shar.bz2|*.shar.Z|*.shar|*.shr.gz|*.shr.bz2|*.shr.Z|*.shr)
+		_format=shar ;;
+*.zip)		_format=zip ;;
+*.lha|*.lzh)	_format=lha ;;
+*.Z|*.bz2|*.gz)	_format=compressed ;;
+*.zoo)		_format=zoo ;;
+*.rar)		_format=rar ;;
+*.bin)		_format=jre-bin ;;
+*)		_format=none ;;
+esac
+
+${TEST} -n "$format" || format="$_format"
+
+case "$format" in
+tar)
 	case "$extract_using" in
 	*pax)
 		case "$extract_using" in
@@ -179,11 +203,11 @@ case "$distfile" in
 	esac
 	;;
 
-*.shar.gz|*.shar.bz2|*.shar.Z|*.shar)
+shar)
 	$decompress_cat "$distfile" | ${SH}
 	;;
 
-*.zip)
+zip)
 	: ${EXTRACT_OPTS_ZOO=-Laqo}
 	${TEST} "$exclude" = "no" || exclude_flag="-x"
 	if ${TEST} -n "$exclude_file"; then
@@ -192,31 +216,31 @@ case "$distfile" in
 	${UNZIP} ${EXTRACT_OPTS_ZOO} "$distfile" $exclude_flag "$@"
 	;;
 
-*.lha|*.lzh)
+lha)
 	: ${EXTRACT_OPTS_LHA=q}
 	${LHA} x$extract_options "$distfile" "$@"
 	;;
 
-*.Z|*.bz2|*.gz)
+compressed)
 	target="${distfile##*/}"; target="${target%.*}"
 	$decompress_cat "$distfile" > "$target"
 	;;
 
-*.zoo)
+zoo)
 	${UNZOO} -x ${EXTRACT_OPTS_ZOO} "$distfile" "$@"
 	;;
 
-*.rar)
+rar)
 	: ${EXTRACT_OPTS_RAR=-inul}
 	${UNRAR} -x ${EXTRACT_OPTS_RAR} "$distfile" "$@"
 	;;
 
-*.bin)
+jre-bin)
 	${ECHO} yes | "$distfile" ${EXTRACT_OPTS_BIN} >/dev/null
 	;;
 
-*)
-	${ECHO} 1>&2 "$self: unable to extract: $1"
-	exit 1
+none)
+	# By default, copy the distfile over to the current working directory.
+	${CP} "$distfile" .
 	;;
 esac
