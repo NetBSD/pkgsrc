@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/12/29 07:04:27 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/21 11:57:22 rxg Exp $
 
 DISTNAME=		sazanami-${SAZANAMI_VERS}
 PKGNAME=		ja-sazanami-ttf-${SAZANAMI_VERS}
 CATEGORIES=		fonts japanese
-MASTER_SITES=		http://downloads.sourceforge.jp/efont/10087/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE_JP:=efont/10087/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		yamajun@ofug.net

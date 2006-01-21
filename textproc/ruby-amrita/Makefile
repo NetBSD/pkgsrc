@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2006/01/03 14:25:50 taca Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/21 12:04:49 rxg Exp $
 
 DISTNAME=	amrita-1.0.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	textproc ruby www
-MASTER_SITES=	http://osdn.dl.sourceforge.jp/amrita/10939/ \
-		http://keihanna.dl.sourceforge.jp/amrita/10939/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=amrita/10939/}
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://amrita.sourceforge.jp/
