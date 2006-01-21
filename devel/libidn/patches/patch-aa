@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2004/05/26 14:55:21 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/21 23:15:49 adam Exp $
 
---- src/Makefile.in.orig	2004-05-24 10:31:38.000000000 +0200
+--- src/Makefile.in.orig	2006-01-20 13:36:25.000000000 +0100
 +++ src/Makefile.in
-@@ -512,7 +512,7 @@ info: info-am
+@@ -530,7 +530,7 @@ info: info-am
  
  info-am:
  
