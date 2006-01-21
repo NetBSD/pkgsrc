@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/01/18 23:53:06 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/01/21 04:13:07 hira Exp $
 share/examples/xorg/xdm/GiveConsole
 share/examples/xorg/xdm/TakeConsole
 share/examples/xorg/xdm/Xaccess
@@ -765,6 +765,7 @@ ${X11ROOT_PREFIX}/${MAN_DIR}/mkfontdir.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/mkfontscale.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/oclock.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/proxymngr.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/rstart.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/rstartd.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/sessreg.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/setxkbmap.${MAN_SUFFIX}
