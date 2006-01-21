@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.6 2006/01/21 05:24:36 jlam Exp $
+# $NetBSD: extract,v 1.7 2006/01/21 14:23:08 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -213,7 +213,8 @@ zip)
 	if ${TEST} -n "$exclude_file"; then
 		set -- dummy `${CAT} "$exclude_file"`; shift
 	fi
-	${UNZIP} ${EXTRACT_OPTS_ZOO} "$distfile" $exclude_flag "$@"
+	echo ${UNZIP} ${EXTRACT_OPTS_ZOO} "$distfile" $exclude_flag "$@"
+	${UNZIP} ${EXTRACT_OPTS_ZIP} "$distfile" $exclude_flag "$@"
 	;;
 
 lha)
