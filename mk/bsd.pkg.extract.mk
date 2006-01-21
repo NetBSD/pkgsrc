@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.18 2006/01/21 19:39:22 jlam Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.19 2006/01/21 21:32:51 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -181,7 +181,7 @@ release-extract-lock:
 	${_RELEASE_LOCK}
 
 ${_EXTRACT_COOKIE}:
-.if ${INTERACTIVE_STAGE:Mextract} == "extract" && defined(BATCH)
+.if !empty(INTERACTIVE_STAGE:Mextract) && defined(BATCH)
 	@${ECHO} "*** The extract stage of this package requires user interaction"
 	@${ECHO} "*** Please extract manually with \"cd ${PKGDIR} && ${MAKE} extract\""
 	@${TOUCH} ${_INTERACTIVE_COOKIE}
