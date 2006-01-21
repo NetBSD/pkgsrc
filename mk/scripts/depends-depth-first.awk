@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: depends-depth-first.awk,v 1.3 2006/01/18 17:43:08 jlam Exp $
+# $NetBSD: depends-depth-first.awk,v 1.4 2006/01/21 21:46:24 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -257,7 +257,7 @@ function visit(pkgpath,		cmd, dir) {
 # top(stack)
 # push(stack, element)
 # pop(stack)
-#	The well-known functions associated with a FIFO.
+#	The well-known functions associated with a LIFO.
 #
 ######################################################################
 function empty(stack) {
