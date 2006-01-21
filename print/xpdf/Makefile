@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/01/12 13:56:12 ghen Exp $
+# $NetBSD: Makefile,v 1.50 2006/01/21 22:31:58 dillo Exp $
 
 DISTNAME=	xpdf-3.01
 PKGNAME=	${DISTNAME}pl1
@@ -12,7 +12,7 @@ PATCH_SITES=		${MASTER_SITES}
 PATCHFILES=		xpdf-3.01pl1.patch
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=	dillo@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
 COMMENT=	Display tool for PDF files
 
