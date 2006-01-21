@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: depends-depth-first.awk,v 1.4 2006/01/21 21:46:24 jlam Exp $
+# $NetBSD: depends-depth-first.awk,v 1.5 2006/01/21 22:16:13 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -221,10 +221,14 @@ function main(		cmd, depends_pkgpath, dir, pkgpath) {
 		while (cmd | getline depends_pkgpath) {
 			if (status[depends_pkgpath] == "") {
 				status[depends_pkgpath] = "pushed"
-				push(dir_stack, depends_pkgpath)
+				push(tmp_stack, depends_pkgpath)
 			}
 		}
 		close(cmd)
+		while (!empty(tmp_stack)) {
+			push(dir_stack, top(tmp_stack))
+			pop(tmp_stack)
+		}
 	}
 	exit 0
 }
