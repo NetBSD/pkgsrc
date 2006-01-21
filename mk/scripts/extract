@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.13 2006/01/21 18:21:08 jlam Exp $
+# $NetBSD: extract,v 1.14 2006/01/21 19:26:09 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -51,7 +51,10 @@
 #	only they will be extracted from the distfile, provided that the
 #	underlying tool supports this ability.  If the distfile's file
 #	extension doesn't match any known archive format's, then the
-#	distfile is simply copied into the current working directory.
+#	distfile is simply copied into the current working directory.  If
+#	"-" is given as the distfile, then standard input is used as the
+#	contents of the archive, provided that the underlying tool supports
+#	this ability.
 #
 # OPTIONS
 #	-d dir		Extract the files into the specified dir instead
@@ -131,7 +134,7 @@ while ${TEST} $# -gt 0; do
 	-X)	exclude_file="$2"; shift 2 ;;
 	-x)	exclude=yes; shift ;;
 	--)	shift; break ;;
-	-*)	${ECHO} 1>&2 "$self: unknown option -- ${1#-}"
+	-?*)	${ECHO} 1>&2 "$self: unknown option -- ${1#-}"
 		usage
 		exit 1
 		;;
@@ -159,6 +162,7 @@ case "$distfile" in
 *.gz|*.tgz|*.z)		decompress_cat="${GZCAT}" ;;
 *.bz2|*.tbz|*.tbz2)	decompress_cat="${BZCAT}" ;;
 *.Z)			decompress_cat="${GZCAT}" ;;
+-)			decompress_cat="${CAT}" ;;
 esac
 
 # Derive the format of the archive based on the file extension.
@@ -177,6 +181,15 @@ case "$distfile" in
 *)		_format=none ;;
 esac
 ${TEST} -n "$format" || format="$_format"
+
+case "$format" in
+tar|shar)	;;
+*)		if ${TEST} "$distfile" = "-"; then
+			${ECHO} 1>&2 "$self: archive format cannot be given on standard input -- $format"
+			exit 1
+		fi
+		;;
+esac
 
 ${TEST} -d "$extract_dir" || ${MKDIR} -p "$extract_dir"
 cd "$extract_dir"
