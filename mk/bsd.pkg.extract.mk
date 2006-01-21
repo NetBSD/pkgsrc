@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.16 2006/01/20 23:55:02 jlam Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.17 2006/01/21 18:55:10 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -13,13 +13,13 @@
 #	extracted.  The default suffix is ".tar.gz".
 #
 #    EXTRACT_CMD is a shell command list that extracts the contents of
-#	an archive named by the shell variable "extract_file" based on
-#	the extension of the archive.  The extensions understood by
-#	EXTRACT_CMD are listed in _EXTRACT_SUFFIXES.
+#	an archive named by the variable ${DOWNLOADED_DISTFILE} to the
+#	current working directory.  The default is the "extract" script.
 #
-#    EXTRACT_CMD.<sufx> is a shell command list that extracts the
-#	contents of an archive named by the shell variable "extract_file"
-#	that ends in <sufx>.
+#    EXTRACT_OPTS is a list of options to pass to the "extract" script
+#	when using the default EXTRACT_CMD.  See the comments at the head
+#	of the "extract" script for a definitive list of the available
+#	options.  The default list is empty.
 #
 #    EXTRACT_USING specifies the tool used to extract tar/ustar-format
 #	archives.  The possible values are "gtar", "nbtar", and "pax".
@@ -29,6 +29,15 @@
 #	This variable only takes effect for distfiles that are tarballs.
 #	By default, this is empty, which causes all files within the
 #	tarball to be extracted.
+#
+# The following are read-only variables that may be used within a package
+#	Makefile:
+#
+#    DOWNLOADED_DISTFILE represents the path to the distfile that is
+#	currently being extracted, and may be used in custom EXTRACT_CMD
+#	overrides, e.g.
+#
+#	    EXTRACT_CMD= ${TAIL} +25 ${DOWNLOADED_DISTFILE} > foo.pl
 #
 # The following targets are defined by bsd.pkg.extract.mk:
 #
@@ -46,16 +55,12 @@
 EXTRACT_ONLY?=		${DISTFILES}
 EXTRACT_SUFX?=		.tar.gz
 EXTRACT_USING?=		nbtar
+EXTRACT_ELEMENTS?=	# empty
 
-_EXTRACT_SUFFIXES=	.tar.gz .tgz .tar.bz2 .tbz .tbz2 .tar.Z .tar _tar.gz
-_EXTRACT_SUFFIXES+=	.shar.gz .shar.bz2 .shar.Z .shar
-_EXTRACT_SUFFIXES+=	.zip
-_EXTRACT_SUFFIXES+=	.lha .lzh
-_EXTRACT_SUFFIXES+=	.Z .bz2 .gz
-_EXTRACT_SUFFIXES+=	.zoo
-_EXTRACT_SUFFIXES+=	.bin
-_EXTRACT_SUFFIXES+=	.rar
-
+###
+### Discover which tools we need based on the file extensions of the
+### distfiles.
+###
 _EXTRACT_PATTERNS=	${EXTRACT_ONLY} ${EXTRACT_SUFX}
 
 .if !empty(_EXTRACT_PATTERNS:M*.tar) || \
@@ -64,7 +69,6 @@ _EXTRACT_PATTERNS=	${EXTRACT_ONLY} ${EXTRACT_SUFX}
     !empty(_EXTRACT_PATTERNS:M*.tbz2) || \
     !empty(_EXTRACT_PATTERNS:M*.tgz) || \
     !empty(_EXTRACT_PATTERNS:M*_tar.gz)
-
 .  if !empty(EXTRACT_USING:Mgtar)
 USE_TOOLS+=	gtar
 .  elif !empty(EXTRACT_USING:Mnbtar)
@@ -97,95 +101,55 @@ USE_TOOLS+=	unzoo
 USE_TOOLS+=	unrar
 .endif
 
-DECOMPRESS_CMD.tar.gz?=		${GZCAT}
-DECOMPRESS_CMD.tgz?=		${DECOMPRESS_CMD.tar.gz}
-DECOMPRESS_CMD.tar.bz2?=	${BZCAT}
-DECOMPRESS_CMD.tbz?=		${DECOMPRESS_CMD.tar.bz2}
-DECOMPRESS_CMD.tbz2?=		${DECOMPRESS_CMD.tar.bz2}
-DECOMPRESS_CMD.tar.Z?=		${GZCAT}
-DECOMPRESS_CMD.tar?=		${CAT}
-
-DECOMPRESS_CMD.shar.gz?=	${GZCAT}
-DECOMPRESS_CMD.shar.bz2?=	${BZCAT}
-DECOMPRESS_CMD.shar.Z?=		${GZCAT}
-DECOMPRESS_CMD.shar?=		${CAT}
-
-DECOMPRESS_CMD.Z?=		${GZCAT}
-DECOMPRESS_CMD.bz2?=		${BZCAT}
-DECOMPRESS_CMD.gz?=		${GZCAT}
-
-DECOMPRESS_CMD?=		${GZCAT}
-.for __suffix__ in ${_EXTRACT_SUFFIXES}
-.  if !defined(DECOMPRESS_CMD${__suffix__})
-DECOMPRESS_CMD${__suffix__}?=	${DECOMPRESS_CMD}
-.  endif
-.endfor
-
-# If this is empty, then everything gets extracted.
-EXTRACT_ELEMENTS?=	# empty
-
-DOWNLOADED_DISTFILE=	$${extract_file}
-
-EXTRACT_CMD.zip?=	${UNZIP} ${EXTRACT_OPTS_ZIP} $${extract_file}
-EXTRACT_OPTS_ZIP?=	-Laqo
-EXTRACT_CMD.lha?=	${LHA} ${EXTRACT_OPTS_LHA} $${extract_file}
-EXTRACT_OPTS_LHA?=	xq
-EXTRACT_CMD.lzh?=	${EXTRACT_CMD.lha}
-EXTRACT_CMD.zoo?=	${UNZOO} ${EXTRACT_OPTS_ZOO} $${extract_file}
-EXTRACT_OPTS_ZOO?=	-x
-EXTRACT_CMD.rar?=	${UNRAR} ${EXTRACT_OPTS_RAR} $${extract_file}
-EXTRACT_OPTS_RAR?=	x -inul
-EXTRACT_ENV?=		# empty
-EXTRACT_CMD.bin?=	${ECHO} yes | ${SETENV} ${EXTRACT_ENV} $${extract_file} ${EXTRACT_OPTS_BIN} >/dev/null
-
-.for __suffix__ in .gz .bz2 .Z
-EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} > `${BASENAME} $${extract_file} ${__suffix__}`
-.endfor
-
-.for __suffix__ in .shar.gz .shar.bz2 .shar.Z .shar
-EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${SH}
-.endfor
+###
+### Build the default extraction command
+###
+_EXTRACT_ENV+=	${EXTRACT_OPTS_BIN:D	EXTRACT_OPTS_BIN=${EXTRACT_OPTS_BIN:Q}}
+_EXTRACT_ENV+=	${EXTRACT_OPTS_LHA:D	EXTRACT_OPTS_LHA=${EXTRACT_OPTS_LHA:Q}}
+_EXTRACT_ENV+=	${EXTRACT_OPTS_PAX:D	EXTRACT_OPTS_PAX=${EXTRACT_OPTS_PAX:Q}}
+_EXTRACT_ENV+=	${EXTRACT_OPTS_RAR:D	EXTRACT_OPTS_RAR=${EXTRACT_OPTS_RAR:Q}}
+_EXTRACT_ENV+=	${EXTRACT_OPTS_TAR:D	EXTRACT_OPTS_TAR=${EXTRACT_OPTS_TAR:Q}}
+_EXTRACT_ENV+=	${EXTRACT_OPTS_ZIP:D	EXTRACT_OPTS_ZIP=${EXTRACT_OPTS_ZIP:Q}}
+_EXTRACT_ENV+=	${EXTRACT_OPTS_ZOO:D	EXTRACT_OPTS_ZOO=${EXTRACT_OPTS_ZOO:Q}}
+_EXTRACT_ENV+=	${TOOLS_BZCAT:D		BZCAT=${TOOLS_BZCAT:Q}}
+_EXTRACT_ENV+=	${TOOLS_CAT:D		CAT=${TOOLS_CAT:Q}}
+_EXTRACT_ENV+=	${TOOLS_CP:D		CP=${TOOLS_CP:Q}}
+_EXTRACT_ENV+=	${TOOLS_ECHO:D		ECHO=${TOOLS_ECHO:Q}}
+_EXTRACT_ENV+=	${TOOLS_GZCAT:D		GZCAT=${TOOLS_GZCAT:Q}}
+_EXTRACT_ENV+=	${TOOLS_LHA:D		LHA=${TOOLS_LHA:Q}}
+_EXTRACT_ENV+=	${TOOLS_MKDIR:D		MKDIR=${TOOLS_MKDIR:Q}}
+_EXTRACT_ENV+=	${TOOLS_RM:D		RM=${TOOLS_RM:Q}}
+_EXTRACT_ENV+=	${TOOLS_PAX:D		PAX=${TOOLS_PAX:Q}}
+_EXTRACT_ENV+=	${TOOLS_SH:D		SH=${TOOLS_SH:Q}}
+_EXTRACT_ENV+=	${TOOLS_TAR:D		TAR=${TOOLS_TAR:Q}}
+_EXTRACT_ENV+=	${TOOLS_TEST:D		TEST=${TOOLS_TEST:Q}}
+_EXTRACT_ENV+=	${TOOLS_UNRAR:D		UNRAR=${TOOLS_UNRAR:Q}}
+_EXTRACT_ENV+=	${TOOLS_UNZIP_CMD:D	UNZIP_CMD=${TOOLS_UNZIP_CMD:Q}}
+_EXTRACT_ENV+=	${TOOLS_UNZOO:D		UNZOO=${TOOLS_UNZOO:Q}}
+_EXTRACT_ENV+=	${EXTRACT_ENV}
 
 .if !empty(EXTRACT_USING:Mgtar)
-_DFLT_EXTRACT_CMD?=	${DECOMPRESS_CMD} $${extract_file} | ${GTAR} -xf - ${EXTRACT_ELEMENTS}
+EXTRACT_OPTS+=	${TOOLS_GTAR:D	-t ${TOOLS_GTAR}}
 .elif !empty(EXTRACT_USING:Mnbtar)
-_DFLT_EXTRACT_CMD?=	${DECOMPRESS_CMD} $${extract_file} | ${TAR} -xf - ${EXTRACT_ELEMENTS}
+EXTRACT_OPTS+=	${TOOLS_TAR:D	-t ${TOOLS_TAR}}
 .else
-_DFLT_EXTRACT_CMD?=	${DECOMPRESS_CMD} $${extract_file} | ${PAX} -O -r ${EXTRACT_ELEMENTS}
+EXTRACT_OPTS+=	${TOOLS_PAX:D	-t ${TOOLS_PAX}}
 .endif
 
-.for __suffix__ in ${_EXTRACT_SUFFIXES}
-.  if !defined(EXTRACT_CMD${__suffix__})
-.    if !empty(EXTRACT_USING:Mgtar)
-EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${GTAR} ${EXTRACT_OPTS_TAR} -xf - ${EXTRACT_ELEMENTS}
-.    elif !empty(EXTRACT_USING:Mnbtar)
-EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${TAR} ${EXTRACT_OPTS_TAR} -xf - ${EXTRACT_ELEMENTS}
-.    else
-EXTRACT_CMD${__suffix__}?=	${DECOMPRESS_CMD${__suffix__}} $${extract_file} | ${PAX} ${EXTRACT_OPTS_PAX} -O -r ${EXTRACT_ELEMENTS}
-.    endif
-.  endif
-.endfor
+EXTRACT_CMD?=	${SETENV} ${_EXTRACT_ENV}				\
+		${.CURDIR}/../../mk/scripts/extract			\
+			${EXTRACT_OPTS}					\
+			${DOWNLOADED_DISTFILE} ${EXTRACT_ELEMENTS}
 
-# _SHELL_EXTRACT is a "subroutine" for extracting an archive.  It extracts
-# the contents of archive named by the shell variable "extract_file" based
-# on the file extension of the archive.
-#
-_SHELL_EXTRACT=		case $${extract_file} in
-.for __suffix__ in ${_EXTRACT_SUFFIXES}
-_SHELL_EXTRACT+=	*${__suffix__})	${EXTRACT_CMD${__suffix__}} ;;
-.endfor
-_SHELL_EXTRACT+=	*)		${_DFLT_EXTRACT_CMD} ;;
-_SHELL_EXTRACT+=	esac
-
-EXTRACT_CMD?=		${_SHELL_EXTRACT}
+DOWNLOADED_DISTFILE=	$${extract_file}
 
 .PHONY: do-extract
 .if !target(do-extract)
 do-extract: ${WRKDIR}
 .  for __file__ in ${EXTRACT_ONLY}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	extract_file="${_DISTDIR}/${__file__}";	export extract_file;	\
-	cd ${WRKDIR}; ${EXTRACT_CMD}
+	extract_file=${_DISTDIR:Q}/${__file__:Q}; export extract_file;	\
+	cd ${WRKDIR} && ${EXTRACT_CMD}
 .  endfor
 .endif
 
