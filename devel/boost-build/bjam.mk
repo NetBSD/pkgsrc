@@ -1,4 +1,4 @@
-# $NetBSD: bjam.mk,v 1.4 2006/01/21 10:12:40 jmmv Exp $
+# $NetBSD: bjam.mk,v 1.5 2006/01/21 16:10:54 jmmv Exp $
 #
 
 .include "../../devel/boost-build/buildlink3.mk"
@@ -25,13 +25,6 @@ BJAM_CMD=		${SETENV} ${MAKE_ENV} ${BJAM} ${BJAM_ARGS}
 
 bjam-build:
 	@cd ${WRKSRC} && ${BJAM_CMD} stage
-.if ${OPSYS} == "Darwin"
-	@cd ${WRKSRC}/stage/lib && \
-	for f in *-mt.dylib; do \
-	    ${LN} -s $${f} \
-	        `${ECHO} $${f} | ${SED} 's|.dylib|.${BOOST_VERSION}.dylib|'`; \
-	done
-.endif
 
 bjam-install:
 	@cd ${WRKSRC} && ${BJAM_CMD} install
