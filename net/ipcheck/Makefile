@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/06/17 03:50:25 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/21 18:57:41 jlam Exp $
 #
 
 DISTNAME=	ipcheck.217
@@ -13,7 +13,7 @@ COMMENT=	Python client for the dyndns service
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_SUFX=	#none
-EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}/ipcheck.py
+EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ipcheck.py
 NO_BUILD=	yes
 
 PYTHON_PATCH_SCRIPTS=	ipcheck.py

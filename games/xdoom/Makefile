@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2005/12/05 20:50:18 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2006/01/21 18:57:41 jlam Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
@@ -16,9 +16,10 @@ BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
 LICENSE=	xdoom-license
 
+EXTRACT_ONLY=		doomsrc.zip
+EXTRACT_OPTX_ZIP=	-qo
+
 WRKSRC=		${WRKDIR}
-EXTRACT_ONLY=	doomsrc.zip
-EXTRACT_CMD=	unzip -qo ${DISTDIR}/${EXTRACT_ONLY}
 USE_X11BASE=	yes
 USE_TOOLS+=	gmake gunzip
 MAKE_ENV+=	X11BASE=${X11BASE:Q} INSTALL_PREFIX=${PREFIX:Q}

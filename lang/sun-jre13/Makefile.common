@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2005/12/12 14:43:25 joerg Exp $
+# $NetBSD: Makefile.common,v 1.27 2006/01/21 18:57:41 jlam Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 CATEGORIES=	lang java
@@ -8,8 +8,6 @@ MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://java.sun.com/
 DOWNLOAD=	http://java.sun.com/j2se/1.3/download.html
 ARCHIVE=        http://java.sun.com/products/archive/index.html
-
-EXTRACT_CMD=	${ECHO} yes | ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} >/dev/null
 
 LICENSE=	jdk13-license
 RESTRICTED=	"Redistribution of repackaged binaries not permitted"

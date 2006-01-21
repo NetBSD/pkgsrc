@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/07/15 20:14:03 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/21 18:57:40 jlam Exp $
 
 DISTNAME=	flac2mp3
 PKGNAME=	flac2mp3-20041223
@@ -12,8 +12,6 @@ COMMENT=	Script to convert flac to mp3
 
 DEPENDS+=	lame-[0-9]*:../../audio/lame
 DEPENDS+=	p5-MP3-Info-[0-9]*:../../audio/p5-MP3-Info
-
-EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKSRC}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

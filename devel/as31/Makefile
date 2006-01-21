@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/11/01 04:16:58 tv Exp $
+# $NetBSD: Makefile,v 1.11 2006/01/21 18:57:40 jlam Exp $
 
 DISTNAME=	asm.8051
 PKGNAME=	as31-19900126
@@ -12,7 +12,7 @@ MAINTAINER=	bjh21@NetBSD.org
 COMMENT=	8031/8051 assembler
 
 WRKSRC=		${WRKDIR}
-EXTRACT_CMD=	${DECOMPRESS_CMD} ${DOWNLOADED_DISTFILE} | \
+EXTRACT_CMD=	${GZCAT} ${DOWNLOADED_DISTFILE} | \
 		${SED} '1,/^.! \/bin\/sh/d' | ${SH}
 MAKEFILE=	makefile
 BUILD_TARGET=	as31

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/08/28 04:25:29 uebayasi Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/21 18:57:40 jlam Exp $
 #
 
 DISTNAME=		matlab.el
@@ -15,7 +15,6 @@ HOMEPAGE=		http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objec
 COMMENT=		Matlab mode for Emacs
 
 WRKSRC=			${WRKDIR}
-EXTRACT_CMD=		${CP} ${DOWNLOADED_DISTFILE} ${WRKDIR}
 DIST_SUBDIR=		${BASEPKGNAME}
 
 .include "../../mk/emacs.mk"

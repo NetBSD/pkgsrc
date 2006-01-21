@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/03/24 21:12:50 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/21 18:57:40 jlam Exp $
 
 DISTNAME=	makeself-1.5.3
 CATEGORIES=	archivers
@@ -11,7 +11,6 @@ COMMENT=	Neat script to make self-extracting archives
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKDIR}
 NO_BUILD=	yes
 
 INSTALLATION_DIRS=	bin

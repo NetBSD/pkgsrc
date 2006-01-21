@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/07/15 18:27:53 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/21 18:57:42 jlam Exp $
 #
 
 DISTNAME=	cpuburn_1_4
@@ -13,7 +13,6 @@ HOMEPAGE=	http://pages.sbcglobal.net/redelm/
 COMMENT=	CPU load testing utilities for Pentium pro and later
 
 ONLY_FOR_PLATFORM= *-*-i[3456]86
-EXTRACT_CMD=	${GZCAT} ${DOWNLOADED_DISTFILE} | ${GTAR} -xf -
 
 USE_TOOLS+=	gtar
 

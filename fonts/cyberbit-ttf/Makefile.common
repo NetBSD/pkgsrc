@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2005/12/29 07:04:27 jlam Exp $
+# $NetBSD: Makefile.common,v 1.15 2006/01/21 18:57:41 jlam Exp $
 #
 
 DISTNAME=	# empty
@@ -23,8 +23,8 @@ NO_BIN_ON_FTP=  ${RESTRICTED}
 
 DIST_SUBDIR=	cyberbit-ttf
 
-EXTRACT_CMD=	${LOCALBASE}/bin/unzip -Laq $${extract_file}
-EXTRACT_ONLY=	${FONT_FILE}
+EXTRACT_ONLY=		${FONT_FILE}
+EXTRACT_OPTS_ZIP=	-Laq
 
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES
