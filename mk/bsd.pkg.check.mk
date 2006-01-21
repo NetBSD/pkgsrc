@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.26 2006/01/21 10:04:44 rillig Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.27 2006/01/21 10:13:25 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the various install-time "check"
@@ -450,7 +450,7 @@ check-interpreter:
 		"") continue;						\
 		esac;							\
 		if ${TEST} ! -f "$$interp"; then			\
-			if ${TEST} -x "$$interp"; then			\
+			if ${TEST} -x "$$file"; then			\
 				${ECHO} "[bsd.pkg.check.mk] ERROR: The interpreter \"$$interp\" of \"$$file\" does not exist." 1>&2; \
 				exitcode=1;				\
 			else						\
