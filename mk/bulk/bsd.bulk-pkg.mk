@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.112 2006/01/21 11:29:31 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.113 2006/01/21 15:44:23 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -218,6 +218,7 @@ PKG_FAIL_REASON+=	"${PKGNAME} is marked as broken by the bulk build administrato
 # Note:  we have to install the BULK_PREREQ packages _before_
 # extracting the depends tree because some packages like
 # xpkgwedge only become DEPENDS if it is installed
+.PHONY: bulk-cache
 bulk-cache:
 	@${BULK_MSG} "Installing BULK_PREREQ packages"
 .for __prereq in ${BULK_PREREQ} lang/perl5
@@ -229,15 +230,15 @@ bulk-cache:
 	@${ECHO} "This file is unused for a full pkgsrc bulk build" >> ${BULK_DBFILE}
 	@${ECHO} "It is only used for a SPECIFIC_PKGS bulk build" >> ${BULK_DBFILE}
 	@${BULK_MSG} "Building complete pkgsrc dependency tree (this may take a while)."
-	cd ${PKGSRCDIR} && ${SETENV} BMAKE=${MAKE} ${SH} mk/bulk/printdepends ${BROKENFILE:Q} ${BULKFILESDIR:Q} > ${DEPENDSTREEFILE:Q}
+	cd ${PKGSRCDIR} && ${SETENV} BMAKE=${MAKE:Q} ${SH} mk/bulk/printdepends ${BROKENFILE:Q} ${BULKFILESDIR:Q} > ${DEPENDSTREEFILE:Q}
 	@${BULK_MSG} "Generating package name <=> package directory cross reference file"
 	@${BULK_MSG_CONT} "(this may take a while)."
-	cd ${PKGSRCDIR} && ${SETENV} BMAKE=${MAKE} ${SH} mk/bulk/printindex ${BROKENFILE:Q} ${BULKFILESDIR:Q} > ${INDEXFILE:Q}
+	cd ${PKGSRCDIR} && ${SETENV} BMAKE=${MAKE:Q} ${SH} mk/bulk/printindex ${BROKENFILE:Q} ${BULKFILESDIR:Q} > ${INDEXFILE:Q}
 .else
 	@${BULK_MSG} "Extracting database for SPECIFIC_PKGS subset of pkgsrc"
 	@${BULK_MSG_CONT} "along with their dependencies"
 .  for __tmp__ in ${SUBDIR} ${BULK_PREREQ} lang/perl5 pkgtools/pkglint
-	cd ${PKGSRCDIR}/${__tmp__} && ${SETENV} BMAKE=${MAKE} AWK=${AWK} EXPR=${EXPR} ${SH} ../../mk/scripts/mkdatabase -a -f ${BULK_DBFILE}
+	cd ${PKGSRCDIR}/${__tmp__} && ${SETENV} BMAKE=${MAKE:Q} AWK=${AWK:Q} EXPR=${EXPR:Q} ${SH} ../../mk/scripts/mkdatabase -a -f ${BULK_DBFILE:Q}
 .  endfor
 	@${BULK_MSG} "Extracting dependency tree file"
 	${AWK} '/^(build_)?depends/ {pkgs[$$2] = 1; cat=$$2; sub(/\/.*/, "", cat); \
@@ -262,6 +263,7 @@ bulk-cache:
 # USE_TOOLS=perl (which may be undesirable for package building)
 
 # remove the bulk cache files
+.PHONY: clean-bulk-cache
 clean-bulk-cache:
 	${RM} -f ${BULK_DBFILE} \
 		${DEPENDSTREEFILE} \
@@ -272,6 +274,7 @@ clean-bulk-cache:
 
 # check if the $REF file is uptodate, i.e. is newer than any of
 # the pkg files; prints "1" if upto date, "0" if not.
+.PHONY: bulk-check-uptodate
 bulk-check-uptodate:
 	@uptodate=1; \
 	if [ -f "${REF}" ]; then \
@@ -317,6 +320,7 @@ bulk-check-uptodate:
 
 # rebuild binpkg if any of the pkg files is newer than the binary archive
 # set DO to ":" to not actually do anything (debugging, ...)
+.PHONY: bulk-package
 bulk-package:
 	@${_BULK_MKDIR} ${_BULK_PKGLOGDIR:Q}
 	@if [ -f ${_BROKENFILE:Q} ]; then \
@@ -372,7 +376,7 @@ bulk-package:
 		${DO} ${MAKE} clean;\
 		if [ "${PRECLEAN}" = "yes" ]; then \
 			${BULK_MSG} "Removing installed packages which are not needed to build ${PKGNAME}" ; \
-			for pkgname in `${PKG_INFO} -e \*` ; \
+			for pkgname in `${PKG_INFO} -e \\*` ; \
 			do \
 				if [ "${USE_BULK_CACHE}" = "yes" ]; then \
 					pkgdir=`${AWK} '$$2 == "'"$$pkgname"'" {print $$1}' ${INDEXFILE}`; \
@@ -392,9 +396,9 @@ bulk-package:
 									;; \
 								* ) \
 									${ECHO_MSG} ${PKG_DELETE} -r $$pkgname ; \
-									${DO}       ${PKG_DELETE} -r $$pkgname || true ; \
+									${DO}       ${PKG_DELETE} -r $$pkgname || ${TRUE}; \
 									if ${PKG_INFO} -qe $$pkgname ; then \
-										${DO}       ${PKG_DELETE} -f $$pkgname || true ; \
+										${DO}       ${PKG_DELETE} -f $$pkgname || ${TRUE}; \
 									fi ;\
 									;; \
 							esac ; \
@@ -403,9 +407,9 @@ bulk-package:
 				else \
 					${SHCOMMENT} "Remove all pkgs" ; \
 					${ECHO_MSG} ${PKG_DELETE} -r $$pkgname ; \
-					${DO}       ${PKG_DELETE} -r $$pkgname || true ; \
+					${DO}       ${PKG_DELETE} -r $$pkgname || ${TRUE}; \
 					if ${PKG_INFO} -qe $$pkgname ; then \
-						${DO}       ${PKG_DELETE} -f $$pkgname || true ; \
+						${DO}       ${PKG_DELETE} -f $$pkgname || ${TRUE}; \
 					fi ;\
 				fi ;\
 			done ; \
@@ -513,7 +517,7 @@ bulk-package:
 	fi
 	@if [ ! -f ${PKGFILE} ]; then \
 		${BULK_MSG} "Build for ${PKGNAME} was not successful, aborting." | ${TEE} -a ${_BROKENFILE:Q} ; \
-		false; \
+		exit 1; \
 	else \
 		${RM} -f ${_BUILDLOG:Q} ;\
 	fi
@@ -526,6 +530,7 @@ bulk-package:
 # else revert to the old recompiling.
 # Don't rely upon pkg_add to snarf in depending pkgs as they may have
 # been modified and need rebuilding.
+.PHONY: bulk-install
 bulk-install:
 	@if [ `${MAKE} bulk-check-uptodate REF=${PKGFILE}` = 1 ]; then \
 		if ${PKG_INFO} -qe ${PKGNAME} ; then :; \
