@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/01/04 15:29:41 ghen Exp $
+# $NetBSD: Makefile,v 1.13 2006/01/21 20:40:00 tron Exp $
 
 PKGNAME=		openoffice-bin-2.0.1
 CATEGORIES=		misc
@@ -104,5 +104,4 @@ do-install:
 	${LN} -sf ../openoffice.org${OO_VER}/program/${i} ${PREFIX}/bin/${i}
 .endfor
 
-.include "../../misc/rpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
