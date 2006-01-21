@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12602 2006/01/21 20:46:54 tron Exp $
+$NetBSD: CHANGES,v 1.12603 2006/01/21 22:40:25 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -458,3 +458,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/mailman to 2.1.7nb1 [bouyer 2006-01-21]
 	Updated misc/rpm to 2.5.4nb4 [tron 2006-01-21]
 	Updated pkgtools/rpm2pkg to 2.1.1 [tron 2006-01-21]
+	Updated mail/sylpheed-devel to 2.2.0beta5 [xtraeme 2006-01-21]
