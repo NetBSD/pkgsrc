@@ -1,4 +1,4 @@
-# $NetBSD: bjam.mk,v 1.3 2006/01/21 09:02:16 jmmv Exp $
+# $NetBSD: bjam.mk,v 1.4 2006/01/21 10:12:40 jmmv Exp $
 #
 
 .include "../../devel/boost-build/buildlink3.mk"
@@ -12,6 +12,9 @@ BJAM_ARGS+=		--layout=system
 BJAM_ARGS+=		--prefix=${PREFIX}
 BJAM_ARGS+=		-sBUILD=${BJAM_BUILD:Q}
 BJAM_ARGS+=		-sTOOLS=${BOOST_TOOLSET}
+.if ${OPSYS} == "Darwin"
+BJAM_ARGS+=		-sTARGET_LIBDIR=${PREFIX}/lib
+.endif
 .if defined(BOOST_DEBUG) && !empty(BOOST_DEBUG:M[Yy][Ee][Ss])
 BJAM_BUILD+=		debug
 .endif
