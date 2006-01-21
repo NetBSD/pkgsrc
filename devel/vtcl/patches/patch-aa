@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/21 08:12:03 agc Exp $
+--- configure.orig	2003-08-12 07:11:14.000000000 +0100
++++ configure	2006-01-07 10:38:02.000000000 +0000
+@@ -58,11 +58,16 @@
+ cd `dirname $0`
+ VTCL_HOME=`pwd`
+ 
++if [ "$1" = "--libdir" -a -n "$2" ]; then
++	libdir="$2"
++else
++	libdir="$VTCL_HOME"
++fi
+ cat > $VTCL_HOME/vtcl << EOF
+ #!/bin/sh
+ 
+ PATH_TO_WISH=$WISH
+-VTCL_HOME=$VTCL_HOME
++VTCL_HOME=$libdir
+ 
+ export PATH_TO_WISH
+ export VTCL_HOME
