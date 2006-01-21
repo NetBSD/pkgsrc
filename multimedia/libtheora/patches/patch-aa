@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.2 2005/10/12 21:59:42 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2006/01/21 14:14:53 rillig Exp $
 
 --- configure.orig	2005-08-20 20:44:13.000000000 +0200
-+++ configure
++++ configure	2006-01-21 15:13:32.000000000 +0100
+@@ -19322,7 +19322,7 @@ CFLAGS="$CFLAGS $cflags_save"
+ LDFLAGS="$LDFLAGS $ldflags_save"
+ 
+ case "$target_os" in
+-	linux* | solaris* )
++	linux*)
+ 		SHLIB_VERSION_ARG="-Wl,--version-script=Version_script"
+ 		;;
+ 	*)
 @@ -20102,6 +20102,8 @@ fi
  HAVE_SDL=no
  
