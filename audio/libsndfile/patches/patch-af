@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.4 2005/09/30 13:26:02 adam Exp $
+$NetBSD: patch-af,v 1.5 2006/01/21 23:04:08 adam Exp $
 
---- src/ms_adpcm.c.orig	2005-09-04 00:11:39.000000000 +0000
+--- src/ms_adpcm.c.orig	2005-10-28 17:42:36.000000000 +0200
 +++ src/ms_adpcm.c
-@@ -44,7 +44,7 @@ typedef struct
+@@ -45,7 +45,7 @@ typedef struct
  	short			*samples ;
  	unsigned char	*block ;
  #if HAVE_FLEXIBLE_ARRAY
