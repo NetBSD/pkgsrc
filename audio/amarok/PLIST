@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/12/12 13:58:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/01/21 23:49:57 wiz Exp $
 bin/amarok
 bin/amarok_libvisual
 bin/amarok_xmmswrapper2
@@ -11,10 +11,7 @@ share/applications/kde/amarok.desktop
 share/doc/kde/HTML/da/amarok/advanced.docbook
 share/doc/kde/HTML/da/amarok/common
 share/doc/kde/HTML/da/amarok/config.docbook
-share/doc/kde/HTML/da/amarok/develop.docbook
 share/doc/kde/HTML/da/amarok/faq.docbook
-share/doc/kde/HTML/da/amarok/feature_guide.docbook
-share/doc/kde/HTML/da/amarok/hidden.docbook
 share/doc/kde/HTML/da/amarok/index.cache.bz2
 share/doc/kde/HTML/da/amarok/index.docbook
 share/doc/kde/HTML/da/amarok/quick.docbook
