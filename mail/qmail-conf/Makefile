@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2005/08/19 03:55:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.24.4.1 2006/01/21 05:40:01 salo Exp $
 #
 
 DISTNAME=		qmail-conf-0.60
@@ -20,6 +20,8 @@ SITES_djbdns-1.05.tar.gz=	http://cr.yp.to/djbdns/ ftp://cr.yp.to/djbdns/
 
 DJB_RESTRICTED=		NO
 DJB_CONFIG_CMDS=	${ECHO} ${LOCALBASE} > ${WRKSRC}/conf-ucspi-tcp
+
+SUBST_FILES.djbware+=	../djbdns-1.05/error.h
 
 pre-build:
 	cd ${WRKSRC} && ${MAKE} -f Makefile.ini djbdns="../djbdns-1.05"
