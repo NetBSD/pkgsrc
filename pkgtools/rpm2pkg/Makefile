@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2005/12/05 20:50:51 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2006/01/21 20:46:29 tron Exp $
 
-DISTNAME=	rpm2pkg-2.1
-PKGREVISION=	1
+DISTNAME=	rpm2pkg-2.1.1
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
