@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.43 2006/01/21 05:42:48 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.44 2006/01/21 16:44:38 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -87,3 +87,5 @@ Pullup ticket 1041 - requested by Joerg Sonnenberger
 SUBST fix for qmail-conf
 Pullup ticket 1033 - requested by Ignatios Souvatzis
 portability fix for phoon
+Pullup ticket 1044 - requested by Matthias Scheler
+security fix for apache2
