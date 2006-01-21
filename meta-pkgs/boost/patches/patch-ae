@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.3 2006/01/21 09:02:16 jmmv Exp $
+
+--- tools/build/v1/darwin-tools.jam.orig	2006-01-21 00:05:33.000000000 +0100
++++ tools/build/v1/darwin-tools.jam
+@@ -149,6 +149,7 @@ if -bind_at_load in $(.LINKFLAGS)
+     .LINKFLAGS = [ difference $(.LINKFLAGS) : -bind_at_load ] ;
+ }
+ flags darwin LINKFLAGS : $(.LINKFLAGS) ;
++flags darwin LINKFLAGS : -flat_namespace -undefined suppress ;
+ 
+ 
+ #### Link ####
