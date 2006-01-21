@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.43 2006/01/08 23:00:00 jlam Exp $
+# $NetBSD: defaults.mk,v 1.44 2006/01/21 14:40:31 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -129,7 +129,7 @@ _TOOLS_VARNAME.tr=		TR
 _TOOLS_VARNAME.true=		TRUE
 _TOOLS_VARNAME.tsort=		TSORT
 _TOOLS_VARNAME.unrar=		UNRAR
-_TOOLS_VARNAME.unzip=		UNZIP
+_TOOLS_VARNAME.unzip=		UNZIP_CMD
 _TOOLS_VARNAME.unzoo=		UNZOO
 _TOOLS_VARNAME.wc=		WC
 _TOOLS_VARNAME.wish=		WISH
