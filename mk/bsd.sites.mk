@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.53 2006/01/20 13:50:57 rxg Exp $
+# $NetBSD: bsd.sites.mk,v 1.54 2006/01/21 11:49:57 rxg Exp $
 #
 # Default MASTER_SITES
 
@@ -114,6 +114,7 @@ MASTER_SITE_SOURCEFORGE+=	\
 
 MASTER_SITE_SOURCEFORGE_JP+=	\
 	http://prdownloads.sourceforge.jp/ \
+	http://downloads.sourceforge.jp/ \
 	http://osdn.dl.sourceforge.jp/ \
 	http://keihanna.dl.sourceforge.jp/
 
