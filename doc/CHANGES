@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12605 2006/01/21 23:16:35 adam Exp $
+$NetBSD: CHANGES,v 1.12606 2006/01/21 23:31:43 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -461,3 +461,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/sylpheed-devel to 2.2.0beta5 [xtraeme 2006-01-21]
 	Updated audio/libsndfile to 1.0.13 [adam 2006-01-22]
 	Updated devel/libidn to 0.6.1 [adam 2006-01-22]
+	Updated math/mathomatic to 12.5.5 [minskim 2006-01-21]
