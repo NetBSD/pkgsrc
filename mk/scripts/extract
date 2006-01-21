@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.9 2006/01/21 15:33:05 jlam Exp $
+# $NetBSD: extract,v 1.10 2006/01/21 16:40:19 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -54,6 +54,11 @@
 #	distfile is simply copied into the current working directory.
 #
 # OPTIONS
+#	-d dir		Extract the files into the specified dir instead
+#			of the current working directory.  If the directory
+#			doesn't exist, then it is created along with any
+#			intermediate directories using the current umask.
+#
 #	-f format	Force interpretation of the distfile's archive
 #			format to be the specified format.
 #
@@ -91,6 +96,7 @@
 : ${ECHO:=echo}
 : ${GZCAT:=gzcat}
 : ${LHA:=lha}
+: ${MKDIR:=mkdir}
 : ${PAX:=pax}
 : ${SH:=sh}
 : ${TAR:=tar}
@@ -102,19 +108,21 @@
 self="${0##*/}"
 
 usage() {
-	${ECHO} 1>&2 "usage: $self [-f format] [-t tarprog] [-X excludefile | -x] distfile [file ...]"
+	${ECHO} 1>&2 "usage: $self [-d dir] [-f format] [-t tarprog] [-X excludefile | -x] distfile [file ...]"
 }
 
 decompress_cat="${CAT}"
 exclude=no
 exclude_file=
 exclude_flag=
+extract_dir=.
 extract_using=tar
 format=
 
 # Process optional arguments
 while ${TEST} $# -gt 0; do
 	case "$1" in
+	-d)	extract_dir="$2"; shift 2 ;;
 	-f)	format="$2"; shift 2 ;;
 	-t)	extract_using="$2"; shift 2 ;;
 	-X)	exclude_file="$2"; shift 2 ;;
@@ -165,6 +173,9 @@ case "$distfile" in
 *)		_format=none ;;
 esac
 ${TEST} -n "$format" || format="$_format"
+
+${TEST} -d "$extract_dir" || ${MKDIR} -p "$extract_dir"
+cd "$extract_dir"
 
 # Use the correct tool and extraction procedure to perform the extraction
 # based on the archive format.
