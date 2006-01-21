@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@SH@
 #
-#	$NetBSD: exim_newaliases,v 1.1.1.1 2003/12/04 04:24:51 grant Exp $
+#	$NetBSD: exim_newaliases,v 1.2 2006/01/21 00:22:58 joerg Exp $
 #
 if [ -f /etc/mail/aliases ]; then
 	ALIASDIR=/etc/mail
