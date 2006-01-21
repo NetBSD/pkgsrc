@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2006/01/04 23:59:40 reed Exp $
+# $NetBSD: Makefile,v 1.9 2006/01/21 11:55:14 rxg Exp $
 #
 
 DISTNAME=	kazehakase-0.3.3
 CATEGORIES=	www
-MASTER_SITES=	http://prdownloads.sourceforge.jp/kazehakase/17700/
-MASTER_SITES+=	http://osdn.dl.sourceforge.jp/kazehakase/17700/
-MASTER_SITES+=	http://keihanna.dl.sourceforge.jp/kazehakase/17700/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=kazehakase/17700/}
 
 MAINTAINER=	lems@gmx.net
 HOMEPAGE=	http://kazehakase.sourceforge.jp/

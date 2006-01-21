@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.3 2005/09/05 15:00:09 taya Exp $
+# $NetBSD: Makefile.common,v 1.4 2006/01/21 12:00:20 rxg Exp $
 
 ANTHY_VERSION=	6700b
 DISTNAME=	anthy-${ANTHY_VERSION}
 CATEGORIES=	inputmethod
-MASTER_SITES=	http://downloads.sourceforge.jp/anthy/15414/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=anthy/15414/}
 DISTFILES=	${DISTNAME}.tar.gz
 
 DISTINFO_FILE=	${.CURDIR}/../../inputmethod/anthy/distinfo
