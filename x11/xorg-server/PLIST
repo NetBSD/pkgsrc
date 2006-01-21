@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2006/01/18 23:53:06 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/01/21 04:08:23 hira Exp $
 ${X11ROOT_PREFIX}/bin/X
 ${X11ROOT_PREFIX}/bin/Xnest
 ${X11ROOT_PREFIX}/bin/Xprt
 ${X11ROOT_PREFIX}/bin/Xvfb
+${X11ROOT_PREFIX}/lib/X11/xorg.conf.eg
 ${X11ROOT_PREFIX}/lib/X11/xserver/C/print/Xprinters
 ${X11ROOT_PREFIX}/lib/X11/xserver/C/print/attributes/document
 ${X11ROOT_PREFIX}/lib/X11/xserver/C/print/attributes/job
@@ -1165,6 +1166,8 @@ ${X11ROOT_PREFIX}/lib/X11/doc/README.SiS
 ${X11ROOT_PREFIX}/lib/X11/doc/README.Solaris
 ${X11ROOT_PREFIX}/lib/X11/doc/README.XKB-Config
 ${X11ROOT_PREFIX}/lib/X11/doc/README.XKB-Enhancing
+${X11ROOT_PREFIX}/lib/X11/doc/README.apm
+${X11ROOT_PREFIX}/lib/X11/doc/README.ati
 ${X11ROOT_PREFIX}/lib/X11/doc/README.chips
 ${X11ROOT_PREFIX}/lib/X11/doc/README.cyrix
 ${X11ROOT_PREFIX}/lib/X11/doc/README.dps
