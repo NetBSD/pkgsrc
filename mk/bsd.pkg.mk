@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1796 2006/01/21 10:10:42 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1797 2006/01/21 21:32:51 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1269,7 +1269,7 @@ do-fetch:
 .  if !empty(_ALLFILES)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TEST} -d ${_DISTDIR} || ${MKDIR} ${_DISTDIR}
-.    if ${INTERACTIVE_STAGE:Mfetch} == "fetch" && defined(BATCH)
+.    if !empty(INTERACTIVE_STAGE:Mfetch) && defined(BATCH)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${MAKE} ${MAKEFLAGS} batch-check-distfiles
 .    else
@@ -2147,7 +2147,7 @@ PKG_ERROR_MSG.configure+=						\
 	"     * It may be removed in the next branch unless fixed."
 .endif
 ${_CONFIGURE_COOKIE}:
-.if ${INTERACTIVE_STAGE:Mconfigure} == "configure" && defined(BATCH)
+.if !empty(INTERACTIVE_STAGE:Mconfigure) && defined(BATCH)
 	@${ECHO} "*** The configuration stage of this package requires user interaction"
 	@${ECHO} "*** Please configure manually with \"cd ${PKGDIR} && ${MAKE} configure\""
 	@${TOUCH} ${_INTERACTIVE_COOKIE}
@@ -2170,7 +2170,7 @@ PKG_ERROR_MSG.build+=							\
 	"     * It may be removed in the next branch unless fixed."
 .endif
 ${_BUILD_COOKIE}:
-.if ${INTERACTIVE_STAGE:Mbuild} == "build" && defined(BATCH)
+.if !empty(INTERACTIVE_STAGE:Mbuild) && defined(BATCH)
 	@${ECHO} "*** The build stage of this package requires user interaction"
 	@${ECHO} "*** Please build manually with \"cd ${PKGDIR} && ${MAKE} build\""
 	@${TOUCH} ${_INTERACTIVE_COOKIE}
@@ -2183,7 +2183,7 @@ ${_TEST_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-test PKG_PHASE=test
 
 ${_INSTALL_COOKIE}:
-.if ${INTERACTIVE_STAGE:Minstall} == "install" && defined(BATCH)
+.if !empty(INTERACTIVE_STAGE:Minstall) && defined(BATCH)
 	@${ECHO} "*** The installation stage of this package requires user interaction"
 	@${ECHO} "*** Please install manually with \"cd ${PKGDIR} && ${MAKE} install\""
 	@${TOUCH} ${_INTERACTIVE_COOKIE}
