@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4463 2006/01/20 22:38:02 adam Exp $
+$NetBSD: TODO,v 1.4464 2006/01/21 11:51:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -687,6 +687,7 @@ Suggested package updates
 	o libggimisc-2.1.2
 	o libgii-1.0.0
 	o libhydrogen-0.9.2
+	o libidn-0.6.1
 	o liblive-2005.10.05
 	o libmatheval-1.1.2
 	o libmilter-8.13.5
@@ -772,6 +773,7 @@ Suggested package updates
 	o nawk-20041222
 	o ncftp2-2.8.2
 	o ncview-1.92e
+	o neon-0.25.5
 	o nessus-0.2.5
 	o nessus-core-2.3.1
 	o net-snmp-5.2.2
