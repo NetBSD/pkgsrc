@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/29 06:22:23 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/01/21 18:57:42 jlam Exp $
 
 PKGNAME=	jakarta-tomcat5-${TOMCAT_VERSION}
 DISTNAME=	jakarta-tomcat-${TOMCAT_VERSION}
@@ -23,11 +23,12 @@ CATALINA_DIR=	Catalina/localhost
 EGDIR=		${TOMCAT_LIB}/share/examples/jakarta-tomcat
 EGDIR2=		${EGDIR}/${CATALINA_DIR}
 
-USE_TOOLS+=	gunzip tar
+.include "../../mk/bsd.prefs.mk"
 
-# Work around a horrible interaction with the gzip in NetBSD 2.0 (at least RC4)
-# If gzip is used in a pipeline the tarfile fails to extract. PR bin/27228
-EXTRACT_CMD=	${CP} ${DOWNLOADED_DISTFILE} ${WRKDIR}/tar.gz && ${GUNZIP_CMD} ${WRKDIR}/tar.gz && ${TAR} xf ${WRKDIR}/tar
+# Work around a bug in NetBSD 2.0's pax-as-tar (bin/27228)
+.if !empty(MACHINE_PLATFORM:MNetBSD-2.0*)
+EXTRACT_USING=	gtar
+.endif
 
 PKG_SYSCONFDIR.jakarta-tomcat5= ${TOMCAT_LIB}/conf
 MAKE_DIRS=	${PKG_SYSCONFDIR.jakarta-tomcat5}/${CATALINA_DIR}
