@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.8 2006/01/21 14:31:56 jlam Exp $
+# $NetBSD: extract,v 1.9 2006/01/21 15:33:05 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -150,9 +150,7 @@ case "$distfile" in
 *.Z)			decompress_cat="${GZCAT}" ;;
 esac
 
-# Main extraction section -- this maps the suffix on the specified distfile
-# the correct tool and extraction procedure to perform the extraction.
-#
+# Derive the format of the archive based on the file extension.
 case "$distfile" in
 *.tar.gz|*.tgz|*_tar.gz|*.tar.bz2|*.tbz|*.tbz2|*.tar.Z|*.tar)
 		_format=tar ;;
@@ -166,9 +164,11 @@ case "$distfile" in
 *.bin)		_format=jre-bin ;;
 *)		_format=none ;;
 esac
-
 ${TEST} -n "$format" || format="$_format"
 
+# Use the correct tool and extraction procedure to perform the extraction
+# based on the archive format.
+#
 case "$format" in
 tar)
 	case "$extract_using" in
@@ -242,5 +242,10 @@ jre-bin)
 none)
 	# By default, copy the distfile over to the current working directory.
 	${CP} "$distfile" .
+	;;
+
+*)
+	${ECHO} 1>&2 "$self: archive format not recognized -- $format"
+	exit 1
 	;;
 esac
