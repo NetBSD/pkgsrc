@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12599 2006/01/21 13:09:15 rillig Exp $
+$NetBSD: CHANGES,v 1.12600 2006/01/21 16:16:27 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -455,3 +455,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/p5-UNIVERSAL-require version 0.10 [rillig 2006-01-21]
 	Updated www/apache2 to 2.0.55nb5 [tron 2006-01-21]
 	Updated www/ap2-auth-pgsql to 2.0.3 [rillig 2006-01-21]
+	Updated mail/mailman to 2.1.7nb1 [bouyer 2006-01-21]
