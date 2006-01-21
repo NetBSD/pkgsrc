@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2005/12/29 06:21:55 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2006/01/21 20:42:39 tron Exp $
 
 DISTNAME=	rpm-2.5.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.rpm.org/pub/rpm/dist/rpm-2.5.x/
 
@@ -30,11 +30,18 @@ CONFIGURE_ENV+=		varprefix=${RPM_DB_PREFIX:Q}
 RPMDIR=			${RPM_DB_PREFIX}/lib/rpm
 FILES_SUBST+=		RPMDIR=${RPMDIR:Q}
 
+.include "../../mk/bsd.prefs.mk"
+
 post-configure:
 	cd ${WRKSRC}/po && ${MV} cz.po cs.po
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/rpm
+
+.if defined(RANLIB)
+post-install:
+	$(RANLIB) ${PREFIX}/lib/librpm.a
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
