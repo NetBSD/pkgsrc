@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/03/02 22:17:03 kristerw Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/21 18:57:41 jlam Exp $
 
 DISTNAME=	lambdamoo-doc-1.8.0p6
 CATEGORIES=	net
@@ -11,13 +11,10 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.ccs.neu.edu/home/eostrom/muds/lambdamoo.html
 COMMENT=	Documentation for lambdamoo
 
-EXTRACT_CMD=	:
+EXTRACT_ONLY=	ProgrammersManual.texinfo
 
 WRKSRC=		${WRKDIR}
 USE_MAKEINFO=	yes
-
-post-extract:
-	${CP} ${DISTDIR}/ProgrammersManual.texinfo ${WRKSRC}
 
 do-build:
 	makeinfo --no-split --no-headers \

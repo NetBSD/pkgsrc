@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/01/19 18:13:38 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/01/21 18:57:41 jlam Exp $
 #
 
 DISTNAME=		xm71010s
@@ -18,8 +18,7 @@ RESTRICTED+=		no-commercial-use
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
-# convert CRLF to LF
-EXTRACT_CMD=		lha xqt ${DOWNLOADED_DISTFILE}
+EXTRACT_OPTS_LHA=	qt	# convert CRLF to LF
 
 WRKSRC=			${WRKDIR}/vm
 NO_CONFIGURE=		yes
