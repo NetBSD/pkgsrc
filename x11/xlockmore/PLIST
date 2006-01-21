@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2006/01/20 13:15:45 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/01/21 05:05:15 tron Exp $
+${LITE}bin/xglock
 bin/xlock
 lib/X11/app-defaults/XLock
 lib/X11/xlock/sounds/complete.au
