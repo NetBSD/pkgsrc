@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.89 2005/12/15 11:29:00 tron Exp $
+# $NetBSD: Makefile,v 1.89.2.1 2006/01/21 16:44:05 snj Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	apache-${APACHE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	5
 CATEGORIES=	www
 
 HOMEPAGE=	http://httpd.apache.org/
@@ -87,6 +87,15 @@ OWN_DIRS= 		${VARBASE}/log/httpd
 OWN_DIRS+=		${VARBASE}/db/httpd
 OWN_DIRS_PERMS+=	${VARBASE}/db/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
 FIX_PERMS=		apachectl apxs dbmmanage envvars-std mkcert
+
+# Fix paths in the apache manpages.
+SUBST_CLASSES+=		man
+SUBST_STAGE.man=	post-patch
+SUBST_FILES.man=	docs/man/*.1 docs/man/*.8
+SUBST_SED.man=		-e 's,/usr/local/etc/apache,${PKG_SYSCONFDIR},'
+SUBST_SED.man+=		-e 's,/path/to/apache/etc,${PKG_SYSCONFDIR},'
+SUBST_SED.man+=		-e 's,/usr/local/apache2,${PREFIX}/share/httpd/htdocs,'
+SUBST_SED.man+=		-e 's,/usr/web,${PREFIX}/share/httpd/htdocs,'
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
