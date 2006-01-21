@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.41 2006/01/20 23:00:48 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.42 2006/01/21 05:40:31 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -83,3 +83,5 @@ Pullup ticket 1032 - requested by Adrian Portelli
 security update for sudo
 Pullup ticket 1039 - requested by Mark Davies
 sync x11/kdelibs3 with HEAD, including a security fix
+Pullup ticket 1041 - requested by Joerg Sonnenberger
+SUBST fix for qmail-conf
