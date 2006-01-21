@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.10 2006/01/21 16:40:19 jlam Exp $
+# $NetBSD: extract,v 1.11 2006/01/21 16:48:10 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -153,7 +153,7 @@ distfile="$1"; shift
 
 # Set the command to decompress the file and write the contents to stdout.
 case "$distfile" in
-*.gz|*.tgz)		decompress_cat="${GZCAT}" ;;
+*.gz|*.tgz|*.z)		decompress_cat="${GZCAT}" ;;
 *.bz2|*.tbz|*.tbz2)	decompress_cat="${BZCAT}" ;;
 *.Z)			decompress_cat="${GZCAT}" ;;
 esac
@@ -166,7 +166,8 @@ case "$distfile" in
 		_format=shar ;;
 *.zip)		_format=zip ;;
 *.lha|*.lzh)	_format=lha ;;
-*.Z|*.bz2|*.gz)	_format=compressed ;;
+*.Z|*.bz2|*.gz|*.z)
+		_format=compressed ;;
 *.zoo)		_format=zoo ;;
 *.rar)		_format=rar ;;
 *.bin)		_format=jre-bin ;;
