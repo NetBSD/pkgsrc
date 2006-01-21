@@ -1,24 +1,23 @@
-# $NetBSD: Makefile,v 1.24 2005/12/07 17:49:02 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.25 2006/01/21 23:15:48 adam Exp $
 
-DISTNAME=		libidn-0.6.0
-CATEGORIES=		devel
-MASTER_SITES=		ftp://alpha.gnu.org/pub/gnu/libidn/ \
-			http://josefsson.org/libidn/releases/
+DISTNAME=	libidn-0.6.1
+CATEGORIES=	devel
+MASTER_SITES=	ftp://alpha.gnu.org/pub/gnu/libidn/ \
+		http://josefsson.org/libidn/releases/
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.gnu.org/software/libidn/
-COMMENT=		Internationalized Domain Names command line tool
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.gnu.org/software/libidn/
+COMMENT=	Internationalized Domain Names command line tool
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-GNU_CONFIGURE=		yes
-TEST_TARGET=		check
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=    libidn.pc.in
+PKGCONFIG_OVERRIDE+=	libidn.pc.in
+TEST_TARGET=		check
 
 INFO_FILES=		libidn.info
 
