@@ -1,4 +1,4 @@
-# $NetBSD: post-build-conf,v 1.10 2006/01/07 22:27:56 rillig Exp $
+# $NetBSD: post-build-conf,v 1.11 2006/01/21 11:29:33 rillig Exp $
 #
 
 # This file is included after the build.conf file by the "build" and
@@ -39,7 +39,9 @@ show_config_vars() {
 	pbc_section "Building the packages" \
 		PKGLIST NICE_LEVEL
 	pbc_section "Generating the report" \
-		ADMIN ADMINSIG FTPHOST FTP
+		ADMIN ADMINSIG \
+		REPORTS_URL REPORTS_DIR \
+		REPORT_BASEDIR REPORT_HTML_FILE REPORT_TXT_FILE
 	pbc_section "Uploading binary packages" \
 		UPDATE_VULNERABILITY_LIST PRUNEPACKAGES MKSUMS SIGN_AS \
 		RSYNC_DST RSYNC_OPTS
@@ -51,7 +53,7 @@ export_config_vars() {
 	export PRUNEDISTFILES ftp_proxy http_proxy
 	export PKGLIST NICE_LEVEL ADMIN ADMINSIG
 	export UPDATE_VULNERABILITY_LIST PRUNEPACKAGES MKSUMS SIGN_AS
-	export RSYNC_DST RSYNC_OPTS FTPHOST FTP
+	export RSYNC_DST RSYNC_OPTS
 	case ${MAKECONF+set} in
 	"set")	export MAKECONF;;
 	esac
@@ -154,6 +156,20 @@ pbc_checkdefined() {
 
 # usage: check_config_vars
 check_config_vars() {
+
+	# Handle legacy variables FTP, FTPHOST, FTPURL, REPORT.
+	# Can be removed after 2006Q2.
+	case ${FTP+set},${REPORTS_DIR+set} in
+	set,set)
+		pbc_die "FTP and REPORTS_DIR must not be set both.";;
+	set,)
+		REPORTS_URL="${FTPHOST}"`dirname "${FTPURL}"`
+		REPORTS_DIR=`dirname "$FTP"`
+		REPORT_BASEDIR=`basename "${FTP}"`
+		REPORT_HTML_FILE=`basename "${REPORT}"`
+		REPORT_TXT_FILE="report.txt";;
+	esac
+
 	# section "System information"
 	pbc_checknonempty osrev
 	pbc_checknonempty arch
@@ -184,8 +200,12 @@ check_config_vars() {
 	# section "Generating the report"
 	# no checks for ADMIN
 	# no checks for ADMINSIG
-	# no checks for FTPHOST
-	# no checks for FTP
+	pbc_checkurl REPORTS_URL
+	pbc_checkpathname REPORTS_DIR
+	pbc_checkbasename REPORT_BASEDIR
+	pbc_checkbasename REPORT_HTML_FILE
+	pbc_checkbasename REPORT_TXT_FILE
+
 
 	# section "Uploading binary packages"
 	pbc_checkyesno UPDATE_VULNERABILITY_LIST
