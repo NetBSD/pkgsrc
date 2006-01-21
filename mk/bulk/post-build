@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: post-build,v 1.62 2005/12/03 13:39:04 rillig Exp $
+# $NetBSD: post-build,v 1.63 2006/01/21 11:29:32 rillig Exp $
 #
 # Collect stuff after a pkg bulk build
 #
@@ -41,6 +41,23 @@ sub my_system (@) {
 	return system(@_);
 }
 
+sub readfirstline($) {
+	my ($fname) = @_;
+	my ($contents);
+
+	open(F, "<", $fname)
+	or pb_die($fname, "Cannot be read: $!");
+
+	defined($contents = <F>)
+	or pb_die($fname, "Must not be empty.");
+	chomp($contents);
+
+	close(F)
+	or pb_die($fname, "Cannot be closed: $!");
+
+	return $contents;
+}
+
 #
 # Load configuration variables from the bulk.conf file, which is a shell
 # script.
@@ -59,7 +76,16 @@ sub get_build_conf_vars(@) {
 	my ($is_set, $value);
 
 	foreach my $varname (@varnames) {
-		open(CMD, ". '$BULK_BUILD_CONF'; echo \"\${${varname}+set}\"; echo \"\${${varname}-}\" |")
+		my $cmd = join("\n", (
+			#"set -eu",		# TODO: Should be enabled soon
+			". '${BULK_BUILD_CONF}'",
+			". mk/bulk/post-build-conf",
+			"check_config_vars",
+			"echo \"\${${varname}+set}\"",
+			"echo \"\${${varname}-}\""
+		));
+		
+		open(CMD, "${cmd} |")
 			or pb_die($BULK_BUILD_CONF, "Could not evaluate configuration file.");
 
 		chomp($is_set = <CMD>);
@@ -91,15 +117,17 @@ sub get_build_conf_vars(@) {
 
 get_build_conf_vars(
 	'ADMINSIG',		# "-Your Name"
-	'FTPURL',		# "pub/NetBSD/pkgstat/`date +%Y%m%d.%H%M`"
-	'FTP',			# "/disk1/ftp/${FTPURL}"
-	'FTPHOST',		# ftp://ftp.machi.ne/
-	'REPORT',		# "broken.html"
+	'REPORTS_URL',		# "ftp://ftp.example.com/pub/pkgsrc/misc/pkgstat"
+	'REPORTS_DIR',		# "$HOME/bulk-logs"
+# REPORT_BASEDIR often depends on a timestamp, which has been saved at
+# the beginning of the bulk build in the BULK_BUILD_ID_FILE. It will be
+# retrieved later.
+	'REPORT_HTML_FILE',	# "report.html"
+	'REPORT_TXT_FILE',	# "report.txt"
 	'USR_PKGSRC',		# "/usr/pkgsrc"
 	'osrev',		# `uname -r`
 );
 
-my $reportf = basename($vars{REPORT});
 
 my $os = `uname -s`;
 chomp $os;
@@ -151,6 +179,7 @@ get_mk_conf_vars(qw(
 	SUPPORTSFILE
 	X11BASE
 	PKG_TOOLS_BIN
+	BULK_BUILD_ID_FILE
 ));
 
 my $bulk_dbfile_base = basename($vars{BULK_DBFILE});
@@ -159,6 +188,17 @@ my $dependsfile_base = basename($vars{DEPENDSFILE});
 my $supportsfile_base = basename($vars{SUPPORTSFILE});
 my $indexfile_base = basename($vars{INDEXFILE});
 my $orderfile_base = basename($vars{ORDERFILE});
+
+my $reports_url = $vars{"REPORTS_URL"};
+my $reports_dir = $vars{"REPORTS_DIR"};
+my $report_basedir = readfirstline($vars{"BULK_BUILD_ID_FILE"});
+my $report_html_file = $vars{"REPORT_HTML_FILE"};
+my $report_txt_file = $vars{"REPORT_TXT_FILE"};
+
+my $report_url = "${reports_url}/${report_basedir}";
+my $report_dir = "${reports_dir}/${report_basedir}";
+my $report_html_path = "${report_dir}/${report_html_file}";
+my $report_txt_path = "${report_dir}/${report_txt_file}";
 
 my $startdate = (stat($vars{STARTFILE}))[9];
 my $enddate = '';
@@ -187,31 +227,27 @@ sub print_report_header() {
 	print("--------------------------------------------------------------\n");
 }
 
-my_system("mkdir", "-p", "--", $vars{FTP});
+my_system("mkdir", "-p", "--", $report_dir);
 
 # Copy over the output from the build process
 chdir($vars{"BULKFILESDIR"}) or pb_die($vars{"BULKFILESDIR"}, "Cannot change directory.");
-my_system("find . -name $vars{BROKENFILE} -print -o -name $vars{BROKENWRKLOG} -print | $vars{PAX} -r -w -X $vars{FTP}");
+my_system("find . -name $vars{BROKENFILE} -print -o -name $vars{BROKENWRKLOG} -print | $vars{PAX} -r -w -X ${report_dir}");
 
 # Copy over the cache files used during the build
 foreach my $f qw(BULK_DBFILE DEPENDSTREEFILE DEPENDSFILE SUPPORTSFILE INDEXFILE ORDERFILE) {
 	if (-f $vars{$f}) {
-		my_system("cp", "--", $vars{$f}, $vars{FTP});
+		my_system("cp", "--", $vars{$f}, $report_dir);
 	}
 }
 
-chdir($vars{FTP}) or pb_die($vars{"FTP"}, "Cannot change directory.");
+chdir($report_dir) or pb_die($report_dir, "Cannot change directory.");
 writeReport();
 
 #
 # Adjust "last" symlink
 #
-{
-	my ($base, $dir) = ($vars{FTP} =~ m|^(.*)/([^/]*)$|);
-
-	unlink("$base/last");
-	symlink($dir, "$base/last");
-}
+unlink("${reports_dir}/last");
+symlink($report_basedir, "${reports_dir}/last");
 
 #
 # Generate leftovers-$vars{MACHINE_ARCH}.html: files not deleted
@@ -219,7 +255,7 @@ writeReport();
 # and linked from leftovers-$vars{MACHINE_ARCH}.html
 #
 {
-	chdir($vars{FTP});
+	chdir($report_dir) or pb_die($report_dir, "Cannot change directory.");
 	my_system("mkdir", "-p", "leftovers-$vars{MACHINE_ARCH}");
 
 	# Find files since last build:
@@ -270,7 +306,7 @@ writeReport();
 EOOUT
 	foreach (@leftovers) {
 		chomp;
-		print OUT "<a href=\"$vars{FTPHOST}/$vars{FTPURL}/leftovers-$vars{MACHINE_ARCH}$_\">$_</a>\n";
+		print OUT "<a href=\"${report_url}/leftovers-$vars{MACHINE_ARCH}$_\">$_</a>\n";
 	}
 	print OUT <<EOOUT2;
 </pre>
@@ -369,11 +405,11 @@ EOF
 Packages not listed here resulted in a binary package. The build
 report, including logs of failed/not-packaged is available from:
 
-$vars{FTPHOST}/$vars{FTPURL}/$reportf
+${report_url}/${report_html_file}
 EOF
 	}
 
-	open(HTML, ">$vars{REPORT}") or die "Can't write $vars{REPORT}: $!\n";
+	open(HTML, ">", $report_html_path) or die "Can't write ${report_html_path}: $!";
 	print HTML <<EOHTML;
 <html>
 <head>

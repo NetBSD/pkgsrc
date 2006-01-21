@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.91 2005/12/05 10:19:14 rillig Exp $
+# $NetBSD: build,v 1.92 2006/01/21 11:29:32 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -48,8 +48,7 @@ The following options are supported:
 	one.
 
    -e | --no-email
-	Don't send email when the bulk build is finished, it will put
-	the results into a file (FTP/pkgsrc-results.txt).
+	Don't send email when the bulk build is finished.
 
    -h | --help
 	Displays this message.
@@ -279,6 +278,7 @@ load_pkgsrc_var INDEXFILE
 load_pkgsrc_var ORDERFILE
 load_pkgsrc_var STARTFILE
 load_pkgsrc_var SUPPORTSFILE
+load_pkgsrc_var BULK_BUILD_ID_FILE
 
 load_pkgsrc_var BUILDLOG
 load_pkgsrc_var BROKENFILE
@@ -305,6 +305,15 @@ main_buildlog="${BULKFILESDIR}/${BUILDLOG}"
 if [ "${BULKFILESDIR}" != "${pkgsrc_dir}" ]; then
 	${MKDIR} "${BULKFILESDIR}"
 fi
+
+#
+# Save the bulk build ID in a file, as it most often contains a time
+# stamp.
+#
+case $restart in
+no)	echo "${REPORT_BASEDIR}" > "${BULK_BUILD_ID_FILE}" \
+	|| die "Could not save the bulk build ID in ${BULK_BUILD_ID_FILE}.";;
+esac
 
 #
 # Install prerequisite packages.
@@ -417,18 +426,22 @@ done
 # Generate the post-build report.
 #
 echo "build> Generating the bulk build report..."
-BUILDDATE=`date +%Y-%m-%d`
-mkdir -p "${FTP}"
+
+bulk_build_id=`cat "${BULK_BUILD_ID_FILE}"` \
+|| die "Could not read the bulk build ID from ${BULK_BUILD_ID_FILE}."
+
+report_dir="${REPORTS_DIR}/${bulk_build_id}"
+${MKDIR} "${report_dir}"
 ( cd "${pkgsrc_dir}" \
   && ${PERL5} mk/bulk/post-build \
-     > ${FTP}/pkgsrc-results-${BUILDDATE}.txt
+     > "${report_dir}/${REPORT_TXT_FILE}"
 ) || die "Could not write the results file."
 
 #
 # Notify the ADMIN of the finished build.
 #
 case $noemail in
-no)	cat "${FTP}/pkgsrc-results-${BUILDDATE}.txt" \
+no)	cat "${report_dir}/${REPORT_TXT_FILE}" \
 	| ${MAIL_CMD} -s "pkgsrc ${OPSYS} ${OS_VERSION}/${MACHINE_ARCH} bulk build results $BUILDDATE" "$ADMIN"
 esac
 
