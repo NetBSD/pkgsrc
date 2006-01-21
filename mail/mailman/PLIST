@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/06/01 23:25:07 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/01/21 16:14:24 bouyer Exp $
 lib/mailman/Mailman/Archiver/Archiver.py
 lib/mailman/Mailman/Archiver/Archiver.pyc
 lib/mailman/Mailman/Archiver/HyperArch.py
@@ -380,6 +380,8 @@ lib/mailman/messages/hr/LC_MESSAGES/mailman.po
 lib/mailman/messages/hu/LC_MESSAGES/mailman.mo
 lib/mailman/messages/hu/LC_MESSAGES/mailman.po
 lib/mailman/messages/hu/README.hu
+lib/mailman/messages/ia/LC_MESSAGES/mailman.mo
+lib/mailman/messages/ia/LC_MESSAGES/mailman.po
 lib/mailman/messages/it/LC_MESSAGES/mailman.mo
 lib/mailman/messages/it/LC_MESSAGES/mailman.po
 lib/mailman/messages/it/README.it
@@ -1077,6 +1079,50 @@ lib/mailman/templates/hu/unsub.txt
 lib/mailman/templates/hu/unsubauth.txt
 lib/mailman/templates/hu/userpass.txt
 lib/mailman/templates/hu/verify.txt
+lib/mailman/templates/ia/admindbdetails.html
+lib/mailman/templates/ia/admindbpreamble.html
+lib/mailman/templates/ia/admindbsummary.html
+lib/mailman/templates/ia/admlogin.html
+lib/mailman/templates/ia/archidxentry.html
+lib/mailman/templates/ia/archidxfoot.html
+lib/mailman/templates/ia/archidxhead.html
+lib/mailman/templates/ia/archlistend.html
+lib/mailman/templates/ia/archliststart.html
+lib/mailman/templates/ia/archtoc.html
+lib/mailman/templates/ia/archtocentry.html
+lib/mailman/templates/ia/archtocnombox.html
+lib/mailman/templates/ia/article.html
+lib/mailman/templates/ia/emptyarchive.html
+lib/mailman/templates/ia/headfoot.html
+lib/mailman/templates/ia/listinfo.html
+lib/mailman/templates/ia/options.html
+lib/mailman/templates/ia/private.html
+lib/mailman/templates/ia/roster.html
+lib/mailman/templates/ia/subscribe.html
+lib/mailman/templates/ia/adminsubscribeack.txt
+lib/mailman/templates/ia/adminunsubscribeack.txt
+lib/mailman/templates/ia/approve.txt
+lib/mailman/templates/ia/bounce.txt
+lib/mailman/templates/ia/checkdbs.txt
+lib/mailman/templates/ia/convert.txt
+lib/mailman/templates/ia/cronpass.txt
+lib/mailman/templates/ia/disabled.txt
+lib/mailman/templates/ia/help.txt
+lib/mailman/templates/ia/invite.txt
+lib/mailman/templates/ia/masthead.txt
+lib/mailman/templates/ia/newlist.txt
+lib/mailman/templates/ia/nomoretoday.txt
+lib/mailman/templates/ia/postack.txt
+lib/mailman/templates/ia/postauth.txt
+lib/mailman/templates/ia/postheld.txt
+lib/mailman/templates/ia/probe.txt
+lib/mailman/templates/ia/refuse.txt
+lib/mailman/templates/ia/subauth.txt
+lib/mailman/templates/ia/subscribeack.txt
+lib/mailman/templates/ia/unsub.txt
+lib/mailman/templates/ia/unsubauth.txt
+lib/mailman/templates/ia/userpass.txt
+lib/mailman/templates/ia/verify.txt
 lib/mailman/templates/it/admindbdetails.html
 lib/mailman/templates/it/admindbpreamble.html
 lib/mailman/templates/it/admindbsummary.html
@@ -1910,6 +1956,7 @@ share/examples/rc.d/mailman
 @dirrm lib/mailman/templates/ko
 @dirrm lib/mailman/templates/ja
 @dirrm lib/mailman/templates/it
+@dirrm lib/mailman/templates/ia
 @dirrm lib/mailman/templates/hu
 @dirrm lib/mailman/templates/hr
 @dirrm lib/mailman/templates/fr
@@ -1975,6 +2022,8 @@ share/examples/rc.d/mailman
 @dirrm lib/mailman/messages/ja
 @dirrm lib/mailman/messages/it/LC_MESSAGES
 @dirrm lib/mailman/messages/it
+@dirrm lib/mailman/messages/ia/LC_MESSAGES
+@dirrm lib/mailman/messages/ia
 @dirrm lib/mailman/messages/hu/LC_MESSAGES
 @dirrm lib/mailman/messages/hu
 @dirrm lib/mailman/messages/hr/LC_MESSAGES

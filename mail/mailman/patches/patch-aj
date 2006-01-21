@@ -1,0 +1,17 @@
+$NetBSD: patch-aj,v 1.1 2006/01/21 16:14:24 bouyer Exp $
+
+Fix for http://secunia.com/advisories/18449/. Adapted from
+Adapted from
+http://security.ubuntu.com/ubunt...mailman_2.1.5-8ubuntu2.1.diff.gz
+
+--- Mailman/Handlers/Scrubber.py.orig	Sat Jan 21 15:49:01 2006
++++ Mailman/Handlers/Scrubber.py	Sat Jan 21 15:50:36 2006
+@@ -143,7 +143,7 @@
+                      }.get(parts[3], 0)
+             day = int(parts[4])
+             year = int(parts[6])
+-        except (IndexError, ValueError):
++        except (OverflowError, IndexError, ValueError):
+             # Best we can do I think
+             month = day = year = 0
+         datedir = '%04d%02d%02d' % (year, month, day)
