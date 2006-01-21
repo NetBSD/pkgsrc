@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12600 2006/01/21 16:16:27 bouyer Exp $
+$NetBSD: CHANGES,v 1.12601 2006/01/21 20:44:08 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -456,3 +456,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/apache2 to 2.0.55nb5 [tron 2006-01-21]
 	Updated www/ap2-auth-pgsql to 2.0.3 [rillig 2006-01-21]
 	Updated mail/mailman to 2.1.7nb1 [bouyer 2006-01-21]
+	Updated misc/rpm to 2.5.4nb4 [tron 2006-01-21]
+	Updated misc/rpm to 2.5.4nb4 [tron 2006-01-21]
