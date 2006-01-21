@@ -1,4 +1,4 @@
-# $NetBSD: build.conf-example,v 1.32 2005/12/03 01:00:37 rillig Exp $
+# $NetBSD: build.conf-example,v 1.33 2006/01/21 11:29:32 rillig Exp $
 #
 # This is an example configuration file for pkgsrc bulk builds.
 # Actually it's a shell script that is sourced in by the pre-build,
@@ -61,11 +61,22 @@ ADMIN="you@some.whe.re"
 # Who the report is signed by
 ADMINSIG="-Your Name"
 
-# Some paths for output files and paths to log files
-FTPx=`date +%Y%m%d.%H%M`
-FTPURL="pub/NetBSD/pkgstat/${FTPx}"		# relative to ~ftp !
-FTP="/home/ftp/${FTPURL}"			# absolute base path
-FTPHOST="ftp://ftp.machi.ne"			# host for broken.html
+# The directory where the final reports are collected.
+#REPORTS_DIR="$HOME/bulk-logs"
+REPORTS_DIR="/home/ftp/pub/NetBSD/pkgstat"
+
+# The URL where the final reports will be available.
+REPORTS_URL="ftp://localhost/pub/NetBSD/pkgstat"
+
+# The basename of the directory of the current bulk build. This
+# directory will be created under ${REPORTS_DIR}. After uploading the
+# report, it will also be available under ${REPORTS_URL}.
+REPORT_BASEDIR=`date +%Y%m%d.%H%M`
+
+# The basenames of the the two report files, which will both be created
+# in ${REPORTS_DIR}/${REPORT_BASEDIR}.
+REPORT_HTML_FILE="report.html"
+REPORT_TXT_FILE="report.txt"
 
 #
 # Uploading binary packages
@@ -88,10 +99,3 @@ MKSUMS=yes
 # Destination for packages and rsync options 
 RSYNC_DST=ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/i386
 RSYNC_OPTS='-e ssh'
-
-###########################################################################
-### No changes should be needed below this line !!!
-###########################################################################
-
-# Name of the (generated) HTML file which lists all broken pkgs
-REPORT="$FTP/broken.html"
