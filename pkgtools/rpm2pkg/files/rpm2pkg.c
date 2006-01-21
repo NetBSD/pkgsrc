@@ -1,4 +1,4 @@
-/*	$NetBSD: rpm2pkg.c,v 1.5 2004/05/27 10:28:00 tron Exp $	*/
+/*	$NetBSD: rpm2pkg.c,v 1.6 2006/01/21 20:46:29 tron Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -261,8 +261,8 @@ InsertPListEntry(PListEntry **Tree,char *Name)
 	PListEntry *Node;
 
 	while ((Node = *Tree) != NULL) {
-		Tree = &((strcmp(Name, Node->pe_Name) <0) ?
-		    Node->pe_Left : Node->pe_Right);
+		Tree = (strcmp(Name, Node->pe_Name) <0) ?
+		    &Node->pe_Left : &Node->pe_Right;
 	}
 
 	if ((Node = calloc(1, sizeof (PListEntry) + strlen(Name))) == NULL) {
