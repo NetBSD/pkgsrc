@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1795 2006/01/20 20:17:07 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1796 2006/01/21 10:10:42 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -1491,7 +1491,7 @@ _CONFIGURE_PREREQ+=		subst-pkglocaledir
 .  if empty(USE_PKGLOCALEDIR:M[nN][oO])
 SUBST_CLASSES+=			pkglocaledir
 .  endif
-SUBST_MESSAGE.pkglocaledir=	"Fixing locale directory references."
+SUBST_MESSAGE.pkglocaledir=	Fixing locale directory references.
 SUBST_FILES.pkglocaledir=	${_REPLACE_LOCALEDIR}
 SUBST_SED.pkglocaledir=		\
 	-e 's|^\(localedir[ 	:]*=\).*|\1 ${_PKGLOCALEDIR}|'		\
@@ -1620,7 +1620,7 @@ _CONFIGURE_POSTREQ+=		subst-pkgconfig
 SUBST_STAGE.pkgconfig=		${PKGCONFIG_OVERRIDE_STAGE}
 .  endif
 SUBST_CLASSES+=			pkgconfig
-SUBST_MESSAGE.pkgconfig=	"Adding rpaths to pkgconfig files."
+SUBST_MESSAGE.pkgconfig=	Adding rpaths to pkgconfig files.
 SUBST_FILES.pkgconfig=		${PKGCONFIG_OVERRIDE:S/^${WRKSRC}\///}
 SUBST_SED.pkgconfig=		${PKGCONFIG_OVERRIDE_SED}
 .endif

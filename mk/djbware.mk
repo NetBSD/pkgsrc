@@ -1,4 +1,4 @@
-# $NetBSD: djbware.mk,v 1.14 2006/01/11 09:26:52 schmonz Exp $
+# $NetBSD: djbware.mk,v 1.15 2006/01/21 10:10:42 rillig Exp $
 #
 # Makefile fragment for packages with djb-style build machinery
 #
@@ -98,7 +98,7 @@ SUBST_CLASSES+=		djbware
 SUBST_STAGE.djbware=	do-configure
 SUBST_FILES.djbware+=	error.h
 SUBST_SED.djbware=	-e 's|^extern\ int\ errno\;|\#include \<errno.h\>|'
-SUBST_MESSAGE.djbware=	"Correcting definition of errno."
+SUBST_MESSAGE.djbware=	Correcting definition of errno.
 .endif
 
 .endif	# DJBWARE_MK
