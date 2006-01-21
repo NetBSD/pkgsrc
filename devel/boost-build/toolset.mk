@@ -1,8 +1,10 @@
-# $NetBSD: toolset.mk,v 1.1 2005/02/26 22:48:35 jmmv Exp $
+# $NetBSD: toolset.mk,v 1.2 2006/01/21 09:02:16 jmmv Exp $
 
 .include "../../mk/compiler.mk"
 
-.if !empty(PKGSRC_COMPILER:Mgcc)
+.if ${OPSYS} == "Darwin"
+BOOST_TOOLSET=		darwin
+.elif !empty(PKGSRC_COMPILER:Mgcc)
 BOOST_TOOLSET=		gcc
 .elif !empty(PKGSRC_COMPILER:Mmipspro*)
 BOOST_TOOLSET=		mipspro
