@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4473 2006/01/22 13:55:43 wiz Exp $
+$NetBSD: TODO,v 1.4474 2006/01/22 16:46:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -507,7 +507,6 @@ Suggested package updates
 	o evince-0.5.0
 	o exim-4.60
 	o exmh-2.7.2
-	o expat-2.0.0
 	o f2c-20031025
 	o faces-1.7.7
 	o fd-2.07b
