@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.48 2006/01/22 19:36:29 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.49 2006/01/22 20:20:51 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -97,3 +97,5 @@ Pullup ticket 1048 - requested by Adrian Portelli
 security update for hylafax
 Pullup ticket 1049 - requested by Adrian Portelli
 security update for adodb
+Pullup ticket 1050 - requested by Adrian Portelli
+security update for mantis
