@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2006/01/05 16:36:38 joerg Exp $
+$NetBSD: patch-ab,v 1.8 2006/01/22 00:11:27 adam Exp $
 
---- configure.orig	2005-07-19 19:52:02.000000000 +0000
+--- configure.orig	2005-10-02 14:06:30.000000000 +0200
 +++ configure
-@@ -4259,13 +4259,13 @@ done
+@@ -4281,13 +4281,13 @@ done
  ##################
  
  
@@ -19,7 +19,7 @@ $NetBSD: patch-ab,v 1.7 2006/01/05 16:36:38 joerg Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -4326,8 +4326,8 @@ echo "${ECHO_T}$ac_cv_lib_pthread_pthrea
+@@ -4348,8 +4348,8 @@ echo "${ECHO_T}$ac_cv_lib_pthread_pthrea
  if test $ac_cv_lib_pthread_pthread_create = yes; then
  
  		PTHREAD_CPPFLAGS=
@@ -30,7 +30,7 @@ $NetBSD: patch-ab,v 1.7 2006/01/05 16:36:38 joerg Exp $
  
  else
  
-@@ -9494,12 +9494,12 @@ echo "$as_me: error: libgadu.h not found
+@@ -9549,12 +9549,12 @@ echo "$as_me: error: libgadu.h not found
  fi
  rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
  
@@ -45,7 +45,7 @@ $NetBSD: patch-ab,v 1.7 2006/01/05 16:36:38 joerg Exp $
  	cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -9858,7 +9858,11 @@ echo "$as_me: error: $mod download faile
+@@ -9919,7 +9919,11 @@ echo "$as_me: error: $mod download faile
  	echo "$as_me:$LINENO: checking if lib$lib is in system directories" >&5
  echo $ECHO_N "checking if lib$lib is in system directories... $ECHO_C" >&6
  	save_CFLAGS="$CFLAGS"
@@ -57,7 +57,7 @@ $NetBSD: patch-ab,v 1.7 2006/01/05 16:36:38 joerg Exp $
  	cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -9992,7 +9996,7 @@ fi
+@@ -10053,7 +10057,7 @@ fi
  rm -f conftest.err conftest.$ac_objext \
        conftest$ac_exeext conftest.$ac_ext
   \
