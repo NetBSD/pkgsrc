@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/01/21 22:31:58 dillo Exp $
+# $NetBSD: Makefile,v 1.51 2006/01/22 22:01:11 ghen Exp $
 
 DISTNAME=	xpdf-3.01
 PKGNAME=	${DISTNAME}pl1
@@ -39,7 +39,7 @@ CONF_FILES=		${EGDIR}/xpdfrc ${PKG_SYSCONFDIR}/xpdfrc
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	doc/pdffonts.1 doc/pdfimages.1 doc/pdfinfo.1
-SUBST_FILES.paths+=	doc/pdftopnm.1 doc/pdftops.1 doc/pdftotext.1
+SUBST_FILES.paths+=	doc/pdftoppm.1 doc/pdftops.1 doc/pdftotext.1
 SUBST_FILES.paths+=	doc/sample-xpdfrc doc/xpdf.1 doc/xpdfrc.5
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
