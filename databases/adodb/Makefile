@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/06/04 21:48:40 adrianp Exp $
+# $NetBSD: Makefile,v 1.3.6.1 2006/01/22 19:33:54 salo Exp $
 #
 
-DISTNAME=	adodb463
-PKGNAME=	adodb-4.63
+DISTNAME=	adodb470
+PKGNAME=	adodb-4.70
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=adodb/}
 EXTRACT_SUFX=	.tgz
