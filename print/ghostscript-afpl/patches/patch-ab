@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/08/12 19:20:20 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2006/01/22 08:18:49 adam Exp $
 
---- src/unixinst.mak.orig	Thu Apr 18 18:10:40 2002
+--- src/unixinst.mak.orig	2005-06-29 16:21:27.000000000 +0200
 +++ src/unixinst.mak
-@@ -133,7 +133,7 @@ install-man: $(PSMANDIR)/gs.1
+@@ -152,7 +152,7 @@ install-man: $(PSMANDIR)/gs.1
  			  ln -s ps2pdf.$(man1ext) $$f.$(man1ext) ) ;\
  	      done ;\
  	    fi ;\
--	    if ( test -f $$man1dir/ps2ps.$(man1ext) ) ;\
+-	    if ( test -f $$man1dir/ps2lp.$(man1ext) ) ;\
 +	    if ( test -f $$man1dir/gslp.$(man1ext) ) ;\
  	      then for f in $(MAN1_LINKS_GSLP) ;\
  	        do ( cd $$man1dir; rm -f $$f.$(man1ext) ;\

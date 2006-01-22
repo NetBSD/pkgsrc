@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/12 19:20:20 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/22 08:18:49 adam Exp $
 bin/bdftops
 bin/dumphint
 bin/dvipdf
@@ -76,6 +76,9 @@ share/doc/html/ghostscript/Changes.htm
 share/doc/html/ghostscript/Commprod.htm
 share/doc/html/ghostscript/Copying.htm
 share/doc/html/ghostscript/DLL.htm
+share/doc/html/ghostscript/Deprecated.htm
+share/doc/html/ghostscript/Details.htm
+share/doc/html/ghostscript/Details8.htm
 share/doc/html/ghostscript/Develop.htm
 share/doc/html/ghostscript/Devices.htm
 share/doc/html/ghostscript/Drivers.htm
@@ -88,9 +91,12 @@ share/doc/html/ghostscript/History3.htm
 share/doc/html/ghostscript/History4.htm
 share/doc/html/ghostscript/History5.htm
 share/doc/html/ghostscript/History6.htm
+share/doc/html/ghostscript/History7.htm
+share/doc/html/ghostscript/History8.htm
 share/doc/html/ghostscript/Htmstyle.htm
 share/doc/html/ghostscript/Humor.htm
 share/doc/html/ghostscript/Install.htm
+share/doc/html/ghostscript/Issues.htm
 share/doc/html/ghostscript/Language.htm
 share/doc/html/ghostscript/Lib.htm
 share/doc/html/ghostscript/Maintain.htm
@@ -107,12 +113,14 @@ share/doc/html/ghostscript/README
 share/doc/html/ghostscript/Readme.htm
 share/doc/html/ghostscript/Release.htm
 share/doc/html/ghostscript/Source.htm
+share/doc/html/ghostscript/Testing.htm
 share/doc/html/ghostscript/Unix-lpr.htm
 share/doc/html/ghostscript/Use.htm
 share/doc/html/ghostscript/Xfonts.htm
 share/doc/html/ghostscript/gs.css
 share/doc/html/ghostscript/index.html
 share/examples/ghostscript/alphabet.ps
+share/examples/ghostscript/annots.pdf
 share/examples/ghostscript/chess.ps
 share/examples/ghostscript/colorcir.ps
 share/examples/ghostscript/doretree.ps
@@ -507,5 +515,6 @@ share/ghostscript/${PKGVERSION}/lib/zeroline.ps
 @dirrm share/ghostscript/${PKGVERSION}/Resource/CMap
 @dirrm share/ghostscript/${PKGVERSION}/Resource
 @dirrm share/ghostscript/${PKGVERSION}
+@dirrm share/ghostscript
 @dirrm share/examples/ghostscript
 @dirrm share/doc/html/ghostscript
