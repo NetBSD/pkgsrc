@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4478 2006/01/22 20:47:51 wiz Exp $
+$NetBSD: TODO,v 1.4479 2006/01/22 20:50:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -880,7 +880,6 @@ Suggested package updates
 	o p5-Mac-Macbinary-0.06
 	o p5-Mail-Mbox-MessageParser-1.4001
 	o p5-Mail-Sendmail-0.79
-	o p5-MailTools-1.73
 	o p5-Math-Bezier-0.02
 	o p5-Math-FFT-1.28
 	o p5-Math-MatrixReal-1.9
