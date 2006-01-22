@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2005/12/05 20:50:46 rillig Exp $
+$NetBSD: patch-ac,v 1.4 2006/01/22 01:31:43 joerg Exp $
 
 --- dissipate2/siputil.cpp.orig	2005-06-21 12:14:49.000000000 +0100
 +++ dissipate2/siputil.cpp	2005-11-24 16:47:03.000000000 +0000
@@ -6,7 +6,7 @@ $NetBSD: patch-ac,v 1.3 2005/12/05 20:50:46 rillig Exp $
  #include <sys/time.h>
  #include <sys/errno.h>
  #include <sys/ioctl.h>
-+#if defined (__FreeBSD__) || defined(__NetBSD__)
++#if defined (__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
 +#include <ifaddrs.h>
 +#endif
  #include <net/if_arp.h>
@@ -63,7 +63,7 @@ $NetBSD: patch-ac,v 1.3 2005/12/05 20:50:46 rillig Exp $
  {
 -	int sock, err, if_count, i, j = 0;
 +	int if_count, i, j = 0;
-+#if !(defined(__FreeBSD__) || defined(__NetBSD__))
++#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__))
 +        int sock, err;
  	struct ifconf netconf;
  	char buffer[32*MAX_IF];
@@ -73,7 +73,7 @@ $NetBSD: patch-ac,v 1.3 2005/12/05 20:50:46 rillig Exp $
 +	char if_name[MAX_IF][21];
 +	char if_addr[MAX_IF][21];
  	char *default_ifName;
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
 +        struct ifaddrs *ifp, *oifp;
 +        
 +        if(getifaddrs(&ifp) < 0 )
@@ -95,7 +95,7 @@ $NetBSD: patch-ac,v 1.3 2005/12/05 20:50:46 rillig Exp $
 +        }
 +        if (oifp != NULL) freeifaddrs(oifp);
 +
-+#else /* not FreeBSD or NetBSD */
++#else /* not FreeBSD or NetBSD or DragonFly */
  	netconf.ifc_len = 32 * MAX_IF;
  	netconf.ifc_buf = buffer;
  	sock=socket( PF_INET, SOCK_DGRAM, 0 );
@@ -107,7 +107,7 @@ $NetBSD: patch-ac,v 1.3 2005/12/05 20:50:46 rillig Exp $
  	printf( "Found %i interfaces.\n", if_count );
  
  //#test
-+#if !(defined(__FreeBSD__) || defined(__NetBSD__))
++#if !(defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__))
  	if ( if_count == 1 ) {
  		strncpy( if_name[j], netconf.ifc_req[0].ifr_name, 20 );
  		strncpy( if_addr[j], inet_ntoa(((struct sockaddr_in*)(&netconf.ifc_req[0].ifr_addr))->sin_addr), 20 );
@@ -115,7 +115,7 @@ $NetBSD: patch-ac,v 1.3 2005/12/05 20:50:46 rillig Exp $
  			}
  		}
  	}
-+#endif /* not FreeBSD or NetBSD */
++#endif /* not FreeBSD or NetBSD or DragonFly */
 +
  	if( j == 1 ) {
  		dissipate_our_fqdn = strdup( if_addr[0] );

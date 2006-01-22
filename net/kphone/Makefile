@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/05 20:50:46 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/01/22 01:31:43 joerg Exp $
 
 DISTNAME=		kphone-4.2
 CATEGORIES=		net comms
@@ -38,6 +38,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/icons/*.png ${PREFIX}/share/kphone/icons
 
 .include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
