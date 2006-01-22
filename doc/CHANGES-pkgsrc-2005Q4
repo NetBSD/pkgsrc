@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.47 2006/01/22 19:25:49 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.48 2006/01/22 19:36:29 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -95,3 +95,5 @@ Pullup ticket 1043 - requested by Roland Illig
 security update for ap2-auth-pgsql
 Pullup ticket 1048 - requested by Adrian Portelli
 security update for hylafax
+Pullup ticket 1049 - requested by Adrian Portelli
+security update for adodb
