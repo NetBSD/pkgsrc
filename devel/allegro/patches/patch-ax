@@ -1,8 +1,8 @@
-$NetBSD: patch-ax,v 1.1 2005/09/11 14:17:44 wiz Exp $
+$NetBSD: patch-ax,v 1.2 2006/01/22 13:55:20 wiz Exp $
 
---- src/unix/usystem.c.orig	2005-09-08 11:51:43.000000000 +0900
-+++ src/unix/usystem.c	2005-09-08 11:53:54.000000000 +0900
-@@ -130,6 +130,7 @@
+--- src/unix/usystem.c.orig	2005-09-04 18:00:17.000000000 +0200
++++ src/unix/usystem.c
+@@ -130,6 +130,7 @@ int _unix_find_resource(char *dest, AL_C
     }
  
     /* if it is a .dat, look in /usr/share/ and /usr/local/share/ */
@@ -10,7 +10,7 @@ $NetBSD: patch-ax,v 1.1 2005/09/11 14:17:44 wiz Exp $
     if (ustricmp(get_extension(resource), uconvert_ascii("dat", tmp)) == 0) {
        ustrzcpy(buf, sizeof(buf), uconvert_ascii("/usr/share/allegro/", tmp));
        ustrzcat(buf, sizeof(buf), resource);
-@@ -137,6 +138,12 @@
+@@ -137,6 +138,12 @@ int _unix_find_resource(char *dest, AL_C
  	 ustrzcpy(dest, size, buf);
  	 return 0;
        }
@@ -23,15 +23,3 @@ $NetBSD: patch-ax,v 1.1 2005/09/11 14:17:44 wiz Exp $
        ustrzcpy(buf, sizeof(buf), uconvert_ascii("/usr/local/share/allegro/", tmp));
        ustrzcat(buf, sizeof(buf), resource);
        if (exists(buf)) {
-@@ -376,7 +376,11 @@
-    
-    /* Last resort: try using the output of the ps command to at least find */
-    /* the name of the file if not the full path */
-+#ifdef __NetBSD__
-+   uszprintf (linkname, sizeof(linkname), "ps -p %d", pid);
-+#else
-    uszprintf (linkname, sizeof(linkname), "ps -f -p %d", pid);
-+#endif
-    do_uconvert (linkname, U_CURRENT, filename, U_ASCII, size);
-    pipe = popen(filename, "r");
-    if (pipe) {

@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2005/05/23 12:05:31 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2006/01/22 13:55:20 wiz Exp $
 
---- configure.orig	2005-01-24 18:46:54.000000000 +0100
+--- configure.orig	2005-11-06 10:54:00.000000000 +0100
 +++ configure
-@@ -10111,9 +10111,7 @@ if test -n "GCC"; then
+@@ -11368,9 +11368,7 @@ if test -n "$GCC"; then
    fi
    ALLEGRO_PROFILE_CFLAGS="$CFLAGS -pg $TARGET_ARCH -O2 -funroll-loops -ffast-math $WFLAGS"
    if test "X$allegro_cv_support_fomit_frame_pointer" = "Xyes"; then
