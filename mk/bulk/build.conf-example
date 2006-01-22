@@ -1,4 +1,4 @@
-# $NetBSD: build.conf-example,v 1.33 2006/01/21 11:29:32 rillig Exp $
+# $NetBSD: build.conf-example,v 1.34 2006/01/22 21:36:28 rillig Exp $
 #
 # This is an example configuration file for pkgsrc bulk builds.
 # Actually it's a shell script that is sourced in by the pre-build,
@@ -9,13 +9,13 @@
 # System information
 #
 
-# The OS release this bulk build is happening on
+# The OS release this bulk build is happening on.
 osrev=`uname -r`
 
-# The machine architecture this is happening on
+# The machine architecture this is happening on.
 arch=`uname -m`
 
-# Where our pkgsrc is located
+# Where our pkgsrc is located.
 USR_PKGSRC="/usr/pkgsrc"
 
 # An absolute pathname to your mk.conf file.
@@ -27,8 +27,8 @@ USR_PKGSRC="/usr/pkgsrc"
 # Getting distfiles
 #
 
-# prune distfiles to remove those which are out of date
-# can be set to 'yes' or 'no'.
+# Prune distfiles to remove those which are out of date.
+# Can be set to 'yes' or 'no'.
 PRUNEDISTFILES=no
 
 # Proxies (optional):
@@ -47,18 +47,18 @@ PRUNEDISTFILES=no
 # Nice level for builds
 NICE_LEVEL="nice -n 20"
 
-# whether to cache the lintpkgsrc database for PRUNE* or uploading
-# can be set to 'yes' or 'no'.
+# Whether to cache the lintpkgsrc database for PRUNE* or uploading.
+# Can be set to 'yes' or 'no'.
 LINTPKGSRC_CACHE=no
 
 #
 # Generating the report
 #
 
-# Where build will mail the report
+# Where build will mail the report.
 ADMIN="you@some.whe.re"
 
-# Who the report is signed by
+# Who the report is signed by.
 ADMINSIG="-Your Name"
 
 # The directory where the final reports are collected.
@@ -83,19 +83,19 @@ REPORT_TXT_FILE="report.txt"
 #
 
 # Update vulnerability database before uploading.
-# can be set to 'yes' or 'no'.
+# Can be set to 'yes' or 'no'.
 UPDATE_VULNERABILITY_LIST=yes
 
-# prune binary packages to remove those which are out of date
-# can be set to 'yes' or 'no'.
+# Prune binary packages to remove those which are out of date.
+# Can be set to 'yes' or 'no'.
 PRUNEPACKAGES=yes
 
-# Whether or not to create checksum files
+# Whether or not to create checksum files.
 MKSUMS=yes
 
-# If you want to PGP sign the checksum files, set and correct
+# If you want to PGP sign the checksum files, set and correct.
 #SIGN_AS=username@NetBSD.org
 
-# Destination for packages and rsync options 
+# Destination for packages and rsync options.
 RSYNC_DST=ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/i386
 RSYNC_OPTS='-e ssh'
