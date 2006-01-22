@@ -1,8 +1,8 @@
-$NetBSD: patch-ay,v 1.1 2005/09/11 14:17:44 wiz Exp $
+$NetBSD: patch-ay,v 1.2 2006/01/22 13:55:20 wiz Exp $
 
---- src/unix/umodules.c.orig	2005-09-08 11:48:35.000000000 +0900
-+++ src/unix/umodules.c	2005-09-08 11:53:04.000000000 +0900
-@@ -43,7 +43,10 @@
+--- src/unix/umodules.c.orig	2005-09-04 18:00:17.000000000 +0200
++++ src/unix/umodules.c
+@@ -44,7 +44,10 @@ static MODULE *module_list = NULL;
  /* where to look for modules.lst */
  static char *module_path[] =
  {
