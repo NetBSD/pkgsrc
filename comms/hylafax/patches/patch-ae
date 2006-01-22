@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.11 2006/01/04 22:36:50 wiz Exp $
+$NetBSD: patch-ae,v 1.12 2006/01/22 14:06:02 adrianp Exp $
 
---- configure.orig	2005-08-08 19:38:08.000000000 +0000
+--- configure.orig	2005-12-16 22:40:30.000000000 +0000
 +++ configure
 @@ -37,23 +37,23 @@
  #
@@ -11,14 +11,15 @@ $NetBSD: patch-ae,v 1.11 2006/01/04 22:36:50 wiz Exp $
 -DIR_LIBDATA=/usr/local/lib/fax
 -DIR_LIB=/usr/local/lib
 -DIR_LIBEXEC=$DIR_SBIN
+-DIR_SPOOL=/var/spool/hylafax
+-DIR_HTML=/var/httpd/htdocs/hylafax
+-DIR_CGI=/var/httpd/cgi-bin
 +DIR_BIN=${PREFIX}/bin
 +DIR_SBIN=${PREFIX}/sbin
 +DIR_LIBDATA=${PREFIX}/libdata/hylafax
 +DIR_LIB=${PREFIX}/lib
 +DIR_LIBEXEC=${PREFIX}/libexec
- DIR_SPOOL=/var/spool/hylafax
--DIR_HTML=/var/httpd/htdocs/hylafax
--DIR_CGI=/var/httpd/cgi-bin
++DIR_SPOOL=${VARBASE}/spool/hylafax
 +DIR_HTML=${PREFIX}/http/htdocs/hylafax
 +DIR_CGI=${PREFIX}/http/cgi-bin
  PATH_DPSRIP=$DIR_LIBEXEC/ps2fax.exe
@@ -58,7 +59,7 @@ $NetBSD: patch-ae,v 1.11 2006/01/04 22:36:50 wiz Exp $
  FAXD=
  LIBFAXSERVER='libfaxserver.${DSO}'
  LIBUTIL='${UTIL}/libfaxutil.${DSO}'
-@@ -222,6 +221,7 @@ PKG_EMAIL
+@@ -224,6 +223,7 @@ PKG_EMAIL
  PKG_VENDOR
  PORT
  PORTFUNCS
@@ -66,7 +67,7 @@ $NetBSD: patch-ae,v 1.11 2006/01/04 22:36:50 wiz Exp $
  PROTOTYPES
  PSPACKAGE	PS
  PWDCMD
-@@ -288,7 +288,7 @@ test -d /usr/bsd && PATH=$PATH:/usr/bsd	
+@@ -290,7 +290,7 @@ test -d /usr/bsd && PATH=$PATH:/usr/bsd	
  test -d /usr/ucb && PATH=$PATH:/usr/ucb			# Sun and others
  test -d /usr/contrib/bin && PATH=$PATH:/usr/contrib/bin	# BSDi
  test -d /usr/5bin && PATH=/usr/5bin:$PATH:/usr/etc	# Sun and others
@@ -75,16 +76,16 @@ $NetBSD: patch-ae,v 1.11 2006/01/04 22:36:50 wiz Exp $
  PATH=$PATH:$OPATH
  
  POSIXLY_CORRECT=1; export POSIXLY_CORRECT		# disable GNU extensions
-@@ -2399,7 +2399,7 @@ EOF
+@@ -2418,7 +2418,7 @@ EOF
  	if [ ${header_ver} -ge 19960307 ]; then
- 	    if [ "${lib_ver}" = "3.4" ]; then
- 		tiff_runlen_t="uint16"
--	    elif [ "${lib_ver}" = "3.5" -o "${lib_ver}" = "3.6" -o "${lib_ver}" = "3.7" ]; then
-+	    elif [ "${lib_ver}" = "3.5" -o "${lib_ver}" = "3.6" -o "${lib_ver}" = "3.7"  -o "${lib_ver}" = "3.8" ]; then
- 		tiff_runlen_t="uint32"
- 	    fi
+ 	    case ${lib_ver} in
+ 		3.4)		tiff_runlen_t="uint16" ;;
+-		3.[567])	tiff_runlen_t="uint32" ;;
++		3.[5678])	tiff_runlen_t="uint32" ;;
+ 	    esac
  	fi
-@@ -3127,13 +3127,7 @@ main()
+     else
+@@ -3145,13 +3145,7 @@ main()
          printf("old include files: version %u\n", ZLIB_VERSION);
          exit(-1);
      }
@@ -98,16 +99,16 @@ $NetBSD: patch-ae,v 1.11 2006/01/04 22:36:50 wiz Exp $
  }
  EOF
  capture cat t.c
-@@ -3195,7 +3189,7 @@ Note "Checking TIFF support."
+@@ -3213,7 +3207,7 @@ Note "Checking TIFF support."
  # Location of TIFF binaries
  #
  if [ -z "$TIFFBIN" ]; then
 -    DIRS="/usr/local/bin /usr/contrib/bin /usr/gnu/bin /usr/bin"
-+    DIRS="${PREFIX}/bin /usr/local/bin /usr/gnu/bin /usr/bin"
++    DIRS="${PREFIX}/bin /usr/local/bin /usr/contrib/bin /usr/gnu/bin /usr/bin"
      for i in $DIRS; do
          test -x $i/tiff2ps && { TIFFBIN=$i; break; }
      done
-@@ -3818,7 +3812,7 @@ fi
+@@ -3836,7 +3830,7 @@ fi
  if [ -z "$PATH_VGETTY" ]; then
      PATH_VGETTY=`findApp vgetty /usr/libexec:/sbin:$PATH` 
      if [ -z "$PATH_VGETTY" ]; then
@@ -116,7 +117,7 @@ $NetBSD: patch-ae,v 1.11 2006/01/04 22:36:50 wiz Exp $
  	Note "WARNING, no vgetty program found to handle a voice call, using $PATH_VGETTY."
      else
  	Note "Looks like $PATH_VGETTY is the program to exec for a voice call."
-@@ -3831,7 +3825,7 @@ fi
+@@ -3849,7 +3843,7 @@ fi
  if [ -z "$PATH_EGETTY" ]; then
      PATH_EGETTY=`findApp egetty /usr/libexec:/sbin:$PATH` 
      if [ -z "$PATH_EGETTY" ]; then
@@ -125,7 +126,7 @@ $NetBSD: patch-ae,v 1.11 2006/01/04 22:36:50 wiz Exp $
  	Note "WARNING, no egetty program found, using $PATH_EGETTY."
      else
  	Note "Looks like $PATH_EGETTY is the program to exec for an extern call."
-@@ -3902,6 +3896,7 @@ PickRIP()
+@@ -3920,6 +3914,7 @@ PickRIP()
  {
      if [ -z "$PATH_GSRIP" ]; then
  	GSLOCS="
@@ -133,7 +134,7 @@ $NetBSD: patch-ae,v 1.11 2006/01/04 22:36:50 wiz Exp $
  	    /usr/local/bin/gs
  	    /usr/contrib/bin/gs
  	    /usr/gnu/bin/gs
-@@ -3949,7 +3944,7 @@ fax software to operate correctly.  See 
+@@ -3967,7 +3962,7 @@ fax software to operate correctly.  See 
  on building Ghostscript with the necessary TIFF driver.
  
  EOF
@@ -142,7 +143,7 @@ $NetBSD: patch-ae,v 1.11 2006/01/04 22:36:50 wiz Exp $
  	PATH_GSRIP=$PATH_PSRIP
      fi
  }
-@@ -4016,9 +4011,9 @@ if [ -z "$PATH_AFM" ]; then
+@@ -4034,9 +4029,9 @@ if [ -z "$PATH_AFM" ]; then
      else
          DIR_AFMS="
  	    /usr/lib/afm
@@ -151,11 +152,11 @@ $NetBSD: patch-ae,v 1.11 2006/01/04 22:36:50 wiz Exp $
 -	    /usr/local/lib/ghostscript/fonts
 +	    ${PREFIX}/lib/afm
 +	    ${PREFIX}/share/ghostscript/fonts
-+	    ${PREFIX}/lib/ghostscript/fonts
++ 	    ${PREFIX}/lib/ghostscript/fonts
  	    /usr/share/ghostscript/fonts
  	    /usr/gnu/lib/ghostscript/fonts
  	    /opt/gnu/lib/ghostscript/fonts
-@@ -4038,7 +4033,7 @@ if [ -z "$PATH_AFM" ]; then
+@@ -4056,7 +4051,7 @@ if [ -z "$PATH_AFM" ]; then
  fi
  if [ -z "$PATH_AFM" ]; then
      # put it where ghostscript normally puts things
@@ -164,15 +165,16 @@ $NetBSD: patch-ae,v 1.11 2006/01/04 22:36:50 wiz Exp $
      Note "WARNING, could not locate a directory with font metric information,"
      Note "guessing that font metric information goes in $PATH_AFM."
  else
-@@ -4057,6 +4052,7 @@ fi
+@@ -4075,7 +4070,7 @@ fi
  #
  if [ -z "$DIR_MAN" ]; then
      MANPATH="
+-	$MANPATH
 +	${PREFIX}/man
- 	$MANPATH
  	/usr/local/man
  	/usr/contrib/man
-@@ -4066,7 +4062,7 @@ if [ -z "$DIR_MAN" ]; then
+ 	/usr/catman/local
+@@ -4084,7 +4079,7 @@ if [ -z "$DIR_MAN" ]; then
      for i in $MANPATH; do
  	test -d $i && { DIR_MAN=$i; break; }
      done
