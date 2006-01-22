@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.37 2005/12/03 10:57:49 kristerw Exp $
+$NetBSD: patch-aa,v 1.38 2006/01/22 18:37:13 kristerw Exp $
 
---- makefile.unix.orig	2005-12-01 01:03:10.000000000 +0100
-+++ makefile.unix	2005-12-01 01:05:33.000000000 +0100
+--- makefile.unix.orig	2006-01-22 11:08:05.000000000 +0100
++++ makefile.unix	2006-01-22 11:11:39.000000000 +0100
 @@ -33,7 +33,7 @@
  ###########################################################################
  
@@ -33,12 +33,42 @@ $NetBSD: patch-aa,v 1.37 2005/12/03 10:57:49 kristerw Exp $
  ###########################################################################
  
  # GCC on x86
--CFLAGS = -O2 -Wall -Wno-unused
-+# CFLAGS = -O2 -Wall -Wno-unused
+-CFLAGS = -O2
++# CFLAGS = -O2
  
  # GCC on x86 with some optimizations
- # CFLAGS = -O2 -Wall -Wno-unused -mtune=i686 -fomit-frame-pointer \
-@@ -552,7 +552,7 @@
+ # CFLAGS = -O2 -mtune=i686 -fomit-frame-pointer -fstrength-reduce -ffast-math
+@@ -183,16 +183,16 @@
+   #########################################################################
+   
+   # Check for C89 + GNU extensions compliance.
+-  CFLAGS += -std=gnu89
++  # CFLAGS += -std=gnu89
+ 
+   # Show all warnings.
+-  CFLAGS += -Wall
++  # CFLAGS += -Wall
+ 
+   # Don't warn about unused variables.
+-  CFLAGS += -Wno-unused
++  # CFLAGS += -Wno-unused
+ 
+   # Warn about declarations after statements.
+-  CFLAGS += -Wdeclaration-after-statement
++  # CFLAGS += -Wdeclaration-after-statement
+ 
+   # Don't warn about code that might break strict aliasing rules. 
+   # CFLAGS += -Wno-strict-aliasing
+@@ -328,7 +328,7 @@
+ ifeq ($(CC),icc)
+ 
+   # Optimizations for the Intel compiler.
+-  CFLAGS    = -O3 -rcd -Xa -ipo -ipo_obj
++  # CFLAGS    = -O3 -rcd -Xa -ipo -ipo_obj
+ 
+ else
+ ifeq ($(CC),sun-forte)
+@@ -551,7 +551,7 @@
  ###########################################################################
  
  # i386, GNU asm
@@ -47,7 +77,7 @@ $NetBSD: patch-aa,v 1.37 2005/12/03 10:57:49 kristerw Exp $
  
  # i386, no asm -- needed for the Intel C++ compiler, which does not fully
  # understand GCC's inline assembly syntax, though you may still enable 
-@@ -590,7 +590,7 @@
+@@ -589,7 +589,7 @@
  ###########################################################################
  
  # Linux 
@@ -56,7 +86,7 @@ $NetBSD: patch-aa,v 1.37 2005/12/03 10:57:49 kristerw Exp $
  
  # FreeBSD
  # ARCH  = freebsd
-@@ -733,7 +733,7 @@
+@@ -732,7 +732,7 @@
  X11_MITSHM = 1
  
  # Use Xv extension for hardware scaling.
@@ -65,7 +95,7 @@ $NetBSD: patch-aa,v 1.37 2005/12/03 10:57:49 kristerw Exp $
  
  # Enable XFree86 DGA.  This also causes "make install" to set the suid bit 
  # on the executable.
-@@ -757,8 +757,8 @@
+@@ -756,8 +756,8 @@
  # X11LIB		= -L/usr/lib/X11
  
  # Standard location for XFree86
