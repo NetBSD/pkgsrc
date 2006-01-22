@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.19 2006/01/12 11:22:40 rillig Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.20 2006/01/22 21:56:13 rillig Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -128,12 +128,14 @@
 
 	<itemizedlist>
 
-	<listitem><para><varname>CHECK_FILES</varname> can be set to
+	<listitem><para><varname>CHECK_FILES</varname>
+	(<filename>pkgsrc/mk/bsd.pkg.check.mk</filename>) can be set to
 	<quote>yes</quote> to check that the installed set of files
 	matches the <filename>PLIST</filename>.</para></listitem>
 
-	<listitem><para><varname>CHECK_INTERPRETER</varname> can be set
-	to <quote>yes</quote> to check that the installed
+	<listitem><para><varname>CHECK_INTERPRETER</varname>
+	(<filename>pkgsrc/mk/bsd.pkg.check.mk</filename>) can be set to
+	<quote>yes</quote> to check that the installed
 	<quote>#!</quote>-scripts will find their
 	interpreter.</para></listitem>
 
@@ -432,13 +434,6 @@
 	<step>
 	  <para>Adjust <filename>mk/bulk/build.conf</filename> to suit your needs.</para>
 	</step>
-
-	<step>
-	  <para>If you have set <varname>CVS_USER</varname> in
-	    <filename>build.conf</filename>, make sure that 
-	    account exists and can do a <command>cvs ${CVS_FLAGS}
-	    update</command> properly!</para> 
-	</step>
       </procedure>
 
       <para>When the chroot sandbox is set up, you can start
@@ -513,15 +508,13 @@
         file, i.e. adjust it to something like one of the following:
       </para>
 
-      <screen>RSYNC_DST=$CVS_USER@ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch/upload </screen>
+      <screen>RSYNC_DST=ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch/upload </screen>
 
-      <para>
-        Please use appropriate values for "pkgsrc-200xQy",
-        "NetBSD-a.b.c" and "arch" here. If your login on
-        ftp.NetBSD.org is different from <varname>CVS_USER</varname>,
-        write your login directly into the variable, e.g. my local
-        account is "feyrer", but for my login "hubertf", I use:
-      </para>
+	<para>Please use appropriate values for "pkgsrc-200xQy",
+        "NetBSD-a.b.c" and "arch" here. If your login on ftp.NetBSD.org
+	is different from your local login, write your login directly
+	into the variable, e.g. my local account is "feyrer", but for my
+	login "hubertf", I use:</para>
 
       <screen>RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch/upload </screen>
 
