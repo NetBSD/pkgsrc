@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4470 2006/01/22 00:44:26 wiz Exp $
+$NetBSD: TODO,v 1.4471 2006/01/22 11:12:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -519,7 +519,6 @@ Suggested package updates
 	o findutils-4.2.27
 	o flac123-0.0.9
 	o flashplayer-0.4.13
-	o fltk-1.1.7
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
