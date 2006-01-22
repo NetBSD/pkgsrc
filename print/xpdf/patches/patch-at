@@ -1,28 +1,101 @@
-$NetBSD: patch-at,v 1.1 2005/12/18 20:05:32 dillo Exp $
+$NetBSD: patch-at,v 1.2 2006/01/22 23:13:33 tron Exp $
 
---- xpdf/Stream.cc.orig	2005-12-15 22:53:25.000000000 -0500
-+++ xpdf/Stream.cc
-@@ -2919,11 +2919,7 @@ GBool DCTStream::readBaselineSOF() {
-   width = read16();
-   numComps = str->getChar();
-   if (numComps <= 0 || numComps > 4) {
+--- xpdf/Stream.cc.orig	2006-01-22 23:03:34.000000000 +0000
++++ xpdf/Stream.cc	2006-01-22 23:03:00.000000000 +0000
+@@ -15,6 +15,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <stddef.h>
++#include <limits.h>
+ #ifndef WIN32
+ #include <unistd.h>
+ #endif
+@@ -401,8 +402,6 @@
+ 
+ StreamPredictor::StreamPredictor(Stream *strA, int predictorA,
+ 				 int widthA, int nCompsA, int nBitsA) {
+-  int totalBits;
+-
+   str = strA;
+   predictor = predictorA;
+   width = widthA;
+@@ -411,15 +410,17 @@
+   predLine = NULL;
+   ok = gFalse;
+ 
++  if (width <= 0 || nComps <= 0 || nBits <= 0 ||
++      nComps >= INT_MAX/nBits ||
++      width >= INT_MAX/nComps/nBits) {
++    return;
++  }
+   nVals = width * nComps;
+-  totalBits = nVals * nBits;
+-  if (totalBits == 0 ||
+-      (totalBits / nBits) / nComps != width ||
+-      totalBits + 7 < 0) {
++  if (nVals * nBits + 7 <= 0) {
+     return;
+   }
+   pixBytes = (nComps * nBits + 7) >> 3;
+-  rowBytes = ((totalBits + 7) >> 3) + pixBytes;
++  rowBytes = ((nVals * nBits + 7) >> 3) + pixBytes;
+   if (rowBytes < 0) {
+     return;
+   }
+@@ -1275,7 +1276,7 @@
+   endOfLine = endOfLineA;
+   byteAlign = byteAlignA;
+   columns = columnsA;
+-  if (columns < 1) {
++  if (columns + 3 < 1 || columns + 4 < 1 || columns < 1) {
+     columns = 1;
+   }
+   rows = rowsA;
+@@ -2922,10 +2923,6 @@
+     error(getPos(), "Bad number of components in DCT stream", prec);
+     return gFalse;
+   }
+-  if (numComps <= 0 || numComps > 4) {
 -    error(getPos(), "Bad number of components in DCT stream", prec);
 -    return gFalse;
 -  }
--  if (numComps <= 0 || numComps > 4) {
--    error(getPos(), "Bad number of components in DCT stream", prec);
-+    error(getPos(), "Bad number of components %d in DCT stream", numComps);
-     return gFalse;
-   }
    if (prec != 8) {
-@@ -2952,6 +2948,10 @@ GBool DCTStream::readProgressiveSOF() {
+     error(getPos(), "Bad DCT precision %d", prec);
+     return gFalse;
+@@ -2952,6 +2949,10 @@
    height = read16();
    width = read16();
    numComps = str->getChar();
 +  if (numComps <= 0 || numComps > 4) {
-+    error(getPos(), "Bad number of components %d in DCT stream", numComps);
++    error(getPos(), "Bad number of components in DCT stream", prec);
 +    return gFalse;
 +  }
    if (prec != 8) {
      error(getPos(), "Bad DCT precision %d", prec);
      return gFalse;
+@@ -2974,6 +2975,10 @@
+ 
+   length = read16() - 2;
+   scanInfo.numComps = str->getChar();
++  if (scanInfo.numComps <= 0 || scanInfo.numComps > 4) {
++    error(getPos(), "Bad number of components in DCT stream");
++    return gFalse;
++  }
+   --length;
+   if (length != 2 * scanInfo.numComps + 3) {
+     error(getPos(), "Bad DCT scan info block");
+@@ -3058,12 +3063,12 @@
+   while (length > 0) {
+     index = str->getChar();
+     --length;
+-    if ((index & 0x0f) >= 4) {
++    if ((index & ~0x10) >= 4 || (index & ~0x10) < 0) {
+       error(getPos(), "Bad DCT Huffman table");
+       return gFalse;
+     }
+     if (index & 0x10) {
+-      index &= 0x0f;
++      index &= 0x03;
+       if (index >= numACHuffTables)
+ 	numACHuffTables = index+1;
+       tbl = &acHuffTables[index];
