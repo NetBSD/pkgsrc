@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.8 2005/03/19 15:26:18 ben Exp $
+$NetBSD: patch-ac,v 1.9 2006/01/22 11:11:34 wiz Exp $
 
---- configure.orig	2004-11-23 12:35:43.000000000 -0800
+--- configure.orig	2006-01-18 02:30:52.000000000 +0000
 +++ configure
-@@ -855,6 +855,8 @@ Optional Features:
+@@ -856,6 +856,8 @@ Optional Features:
    --enable-debug          turn on debugging default=no
    --enable-gl             turn on OpenGL support default=yes
    --enable-shared         turn on shared libraries default=no
@@ -10,8 +10,8 @@ $NetBSD: patch-ac,v 1.8 2005/03/19 15:26:18 ben Exp $
 +                          turn on building with libtool [default=no]
    --enable-threads        enable multi-threading support
    --enable-quartz         use Quartz instead of Quickdraw (default=no)
-   --enable-localjpeg      use local JPEG library, default=auto
-@@ -1377,7 +1379,22 @@ if test "${enable_shared+set}" = set; th
+   --disable-largefile     omit support for large files
+@@ -1412,7 +1414,22 @@ if test "${enable_shared+set}" = set; th
    enableval="$enable_shared"
  
  fi;
@@ -35,10 +35,12 @@ $NetBSD: patch-ac,v 1.8 2005/03/19 15:26:18 ben Exp $
      PICFLAG=1
      SHAREDSUFFIX=""
      FLUID="fluid-shared"
-@@ -1478,6 +1495,20 @@ else
-     LINKSHARED="-L../lib -lfltk_images -lfltk_forms -lfltk"
+@@ -1524,8 +1541,20 @@ else
+     LINKSHARED="../lib/libfltk_images.a ../lib/libfltk_forms.a ../lib/libfltk.a"
  fi
  
+-
+-
 +if test "x$LIBTOOL" != "x"; then
 +    LINKFLTK="../src/libfltk.la"
 +    if test "x$LINKFLTKGL" != "x"; then
@@ -56,7 +58,7 @@ $NetBSD: patch-ac,v 1.8 2005/03/19 15:26:18 ben Exp $
  
  
  
-@@ -9148,23 +9179,8 @@ esac
+@@ -11073,26 +11102,9 @@ esac
  
  
  
@@ -65,37 +67,32 @@ $NetBSD: patch-ac,v 1.8 2005/03/19 15:26:18 ben Exp $
 -	# *BSD
 -	CAT1EXT=0
 -	CAT3EXT=0
+-	CAT6EXT=0
 -	;;
 -    IRIX*)
 -	# SGI IRIX
 -	CAT1EXT=z
 -	CAT3EXT=z
+-	CAT6EXT=z
 -	;;
 -    *)
 -	# All others
 -	CAT1EXT=1
 -	CAT3EXT=3
+-	CAT6EXT=3
 -	;;
 -esac
 +CAT1EXT=1
 +CAT3EXT=3
++CAT6EXT=6
  
  
  
-@@ -9230,7 +9246,7 @@ echo "${ECHO_T}yes" >&6
- 	    ;;
-     esac
- 
--    CXX="$CC"
-+#    CXX="$CC"
- 
-     # Show all standard warnings + unused variables, conversion errors,
-     # and inlining problems when compiling...
-@@ -10120,6 +10136,7 @@ s,@GLLIBNAME@,$GLLIBNAME,;t t
+@@ -12034,6 +12048,7 @@ s,@GLLIBNAME@,$GLLIBNAME,;t t
  s,@IMGLIBNAME@,$IMGLIBNAME,;t t
  s,@LIBEXT@,$LIBEXT,;t t
  s,@LIBNAME@,$LIBNAME,;t t
 +s,@LIBTOOL@,$LIBTOOL,;t t
  s,@LINKFLTK@,$LINKFLTK,;t t
+ s,@LINKFLTKFORMS@,$LINKFLTKFORMS,;t t
  s,@LINKFLTKGL@,$LINKFLTKGL,;t t
- s,@LINKFLTKIMG@,$LINKFLTKIMG,;t t
