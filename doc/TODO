@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4475 2006/01/22 18:43:02 kristerw Exp $
+$NetBSD: TODO,v 1.4476 2006/01/22 19:44:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -313,6 +313,7 @@ Suggested package updates
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
 	o GridSim-3.3
+	o ImageMagick-6.2.6.0
 	o PAM-0.80
 	o REminiscence-0.1.8
 	o SmartEiffel-2.1
@@ -584,7 +585,9 @@ Suggested package updates
 	o gsed-4.1.4
 	o gsharutils-4.6
 	o gss-0.0.16
+	o gst-plugins0.10-base-0.10.2
 	o gstreamer-0.10.2
+	o gstreamer0.10-0.10.2
 	o gtetrinet-0.7.9
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
@@ -851,12 +854,14 @@ Suggested package updates
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
 	o p5-Digest-Hashcash-0.03
+	o p5-Digest-SHA1-2.11
 	o p5-Exception-Class-1.23
 	o p5-ExtUtils-Depends-0.205
 	o p5-ExtUtils-F77-1.14
 	o p5-ExtUtils-PkgConfig-1.07
 	o p5-ExtUtils-XSBuilder-0.27
 	o p5-File-DirSync-1.12
+	o p5-File-Slurp-9999.11
 	o p5-FileHandle-Unget-0.16.2.1
 	o p5-Font-TTF-0.35
 	o p5-Graph-0.20105
@@ -877,6 +882,7 @@ Suggested package updates
 	o p5-Mac-Macbinary-0.06
 	o p5-Mail-Mbox-MessageParser-1.4001
 	o p5-Mail-Sendmail-0.79
+	o p5-MailTools-1.73
 	o p5-Math-Bezier-0.02
 	o p5-Math-FFT-1.28
 	o p5-Math-MatrixReal-1.9
@@ -951,6 +957,7 @@ Suggested package updates
 	o phoon-20050629
 	o photopc-3.05
 	o php-4.4.2
+	o php4-4.4.2
 	o php5-5.1.2
 	o phpldapadmin-0.9.7
 	o phpmyadmin-2.7.0pl2
