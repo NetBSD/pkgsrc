@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2005/12/21 06:13:26 adrianp Exp $
+# $NetBSD: Makefile,v 1.12.2.1 2006/01/22 20:20:28 salo Exp $
 
-DISTNAME=	mantis-1.0.0rc4
+DISTNAME=	mantis-1.0.0rc5
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
 
@@ -28,7 +28,7 @@ DEPENDS+=	php-jpgraph-[0-9]*:../../graphics/php-jpgraph
 APACHE_USER?=	www
 
 BUILD_DEFS+=	APACHE_USER
-MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 MANTIS_HOME=	${PREFIX}/share/mantis
 EGDIR=		${PREFIX}/share/examples/mantis
