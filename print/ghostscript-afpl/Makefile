@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2005/11/27 17:04:18 adrianp Exp $
-#
+# $NetBSD: Makefile,v 1.6 2006/01/22 08:18:49 adam Exp $
 
-DISTNAME=		ghostscript-8.51
-PKGNAME=		ghostscript-afpl-8.51
-PKGREVISION=		1
-CATEGORIES=		print
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ghostscript/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	ghostscript-8.53
+PKGNAME=	ghostscript-afpl-8.53
+#PKGREVISION=	1
+CATEGORIES=	print
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://ghostscript.sourceforge.net/
-COMMENT=		Postscript interpreter
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://ghostscript.sourceforge.net/
+COMMENT=	Postscript interpreter
 
 CONFLICTS+=		ghostscript{,-nox11}-[0-9]*
 CONFLICTS+=		ghostscript-esp{,-nox11}-[0-9]*
