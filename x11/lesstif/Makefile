@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2005/12/05 20:51:18 rillig Exp $
+# $NetBSD: Makefile,v 1.84 2006/01/22 00:48:02 joerg Exp $
 
 DISTNAME=	lesstif-0.94.4
 CATEGORIES=	x11
@@ -41,6 +41,9 @@ FILES_SUBST+=		RMDIR=${RMDIR:Q}
 FILES_SUBST+=		TRUE=${TRUE:Q}
 FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
+
 post-extract:
 	cd ${WRKSRC}/lib/config; ${MV} -f host.def LessTif.def
 
@@ -63,13 +66,6 @@ post-patch:
 			Makefile.in.presubst > Makefile.in;		\
 		${RM} -f Makefile.in.presubst;				\
 	done
-
-pre-install:
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
-
-post-install:
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../x11/Xrender/buildlink3.mk"
