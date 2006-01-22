@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12623 2006/01/22 20:50:47 wiz Exp $
+$NetBSD: CHANGES,v 1.12624 2006/01/22 21:54:10 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -481,3 +481,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-Test-Pod to 1.22nb1 [wiz 2006-01-22]
 	Updated devel/p5-File-Slurp to 9999.11 [wiz 2006-01-22]
 	Updated mail/p5-MailTools to 1.73 [wiz 2006-01-22]
+	Updated devel/kscope to 1.3.3 [markd 2006-01-22]
