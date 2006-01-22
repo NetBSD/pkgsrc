@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/01/09 19:30:09 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/01/22 22:16:25 schwarz Exp $
 
 DISTNAME=		doc++-3.4.10
 PKGREVISION=	1
@@ -12,6 +12,7 @@ COMMENT=		Documentation system for C, C++ and Java
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
 BUILD_USES_MSGFMT=	yes
 
 #post-extract:
