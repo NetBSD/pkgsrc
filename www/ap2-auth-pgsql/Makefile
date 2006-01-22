@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8.2.1 2006/01/22 17:45:07 salo Exp $
+# $NetBSD: Makefile,v 1.8.2.2 2006/01/22 21:14:26 salo Exp $
 
 DISTNAME=		mod_auth_pgsql-2.0.3
-PKGNAME=		${DISTNAME:S/^mod-/ap2/:S/_/-/g}
+PKGNAME=		ap2-auth-pgsql-2.0.3
 CATEGORIES=		www databases
 MASTER_SITES=		http://www.giuseppetanzilli.it/mod_auth_pgsql2/dist/
 
