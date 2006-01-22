@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/01/13 18:15:09 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/22 20:59:32 wiz Exp $
 
 --- Makefile.orig	1995-12-05 12:26:11.000000000 +0000
 +++ Makefile
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/01/13 18:15:09 wiz Exp $
  MODULEDIR = ${PERL5DIR}/SGMLS
  
  # Where do you want to put sgmlspl specifications?
-@@ -29,7 +29,7 @@ SPECDIR = ${PERL5DIR}
+@@ -29,14 +29,14 @@ SPECDIR = ${PERL5DIR}
  # do you intend to put it?  'make html' will create two
  # subdirectories, ${HTMLDIR}/SGMLSpm and ${HTMLDIR}/sgmlspl, and place
  # its files there.
@@ -28,6 +28,14 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/01/13 18:15:09 wiz Exp $
  
  
  #
+ # End of user options.
+ #
+ 
+-HTML_SOURCES = DOC/HTML/SGMLSpm/ DOC/HTML/sgmlspl/
++HTML_SOURCES = DOC/HTML/SGMLSpm DOC/HTML/sgmlspl
+ 
+ FILES =	${BINDIR}/sgmlspl \
+ 	${PERL5DIR}/SGMLS.pm \
 @@ -44,7 +44,7 @@ FILES =	${BINDIR}/sgmlspl \
  	${MODULEDIR}/Refs.pm \
  	${SPECDIR}/skel.pl
