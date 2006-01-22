@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/29 06:22:06 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/01/22 00:57:02 joerg Exp $
 
 DISTNAME=	LPRng-3.8.28
 PKGNAME=	LPRng-core-3.8.28
@@ -43,8 +43,8 @@ FILTER_PATH=		${FILTER_DIR}:/sbin:/usr/sbin:/bin:/usr/bin:${PREFIX}/sbin:${PREFI
 MAKE_ENV+=		POSTINSTALL="NO"
 
 EXAMPLESDIR=	 	${PREFIX}/share/examples/LPRng
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
-INSTALL_FILE=		${WRKDIR}/INSTALL
+DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
+INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 RCD_SCRIPTS=		LPRng
 
 FILES_SUBST+=		CAT=${CAT:Q}
@@ -72,8 +72,6 @@ post-configure:
 pre-install:
 	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
 		< ${FILESDIR}/LPRng.sh > ${WRKDIR}/LPRng.sh
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
-	${SED} ${FILES_SUBST_SED} ${PKGDIR}/INSTALL > ${INSTALL_FILE}
 
 post-install:
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
@@ -81,6 +79,5 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/$${file} \
 			${EXAMPLESDIR}/$${file}.example; \
 	done
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
