@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.478 2006/01/20 13:33:37 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.479 2006/01/22 23:35:04 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2107,7 +2107,7 @@ sub checkline_mk_shellword($$$) {
 			if (!$opt_warn_quoting) {
 				# Skip the following checks.
 
-			} elsif ($state == SWST_PLAIN && defined($mod) && $mod eq ":Q") {
+			} elsif ($state == SWST_PLAIN && defined($mod) && $mod =~ qr":Q$") {
 				# Fine.
 
 			} else {
@@ -3540,6 +3540,11 @@ sub checkfile_package_Makefile($$$) {
 		if (!exists($makevar->{"DYNAMIC_MASTER_SITES"})) {
 			log_warning($fname, NO_LINE_NUMBER, "Neither MASTER_SITES nor DYNAMIC_MASTER_SITES found.");
 		}
+	}
+
+	if (exists($makevar->{"REPLACE_PERL"}) && exists($makevar->{"NO_CONFIGURE"})) {
+		$makevar->{"REPLACE_PERL"}->log_warning("REPLACE_PERL is ignored when ...");
+		$makevar->{"NO_CONFIGURE"}->log_warning("... NO_CONFIGURE is set.");
 	}
 
 	# check DISTFILES and related items.
