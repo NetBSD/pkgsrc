@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4472 2006/01/22 11:18:52 wiz Exp $
+$NetBSD: TODO,v 1.4473 2006/01/22 13:55:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -334,7 +334,6 @@ Suggested package updates
 	o alee-ttf-6.3 [pkg/32505]
 	o algae-4.3.6
 	o aliados-0.2.0
-	o allegro-4.2.0
 	o amanda-*-2.4.5p1
 	o amavis-0.3.12
 	o anjuta-2.0.1
