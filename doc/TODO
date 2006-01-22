@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4469 2006/01/22 00:24:55 wiz Exp $
+$NetBSD: TODO,v 1.4470 2006/01/22 00:44:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -828,7 +828,6 @@ Suggested package updates
 	o p5-CDDB-1.16
 	o p5-CGI-Application-4.04.02
 	o p5-CGI-Minimal-1.24
-	o p5-Class-Autouse-1.24
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Loader-2.03
 	o p5-Compress-Bzip2-2.09
