@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:01:48 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/22 02:37:12 joerg Exp $
 bin/xmailwatcher
-man/man1/xmailwatcher.1
+${IMAKE_MAN_DIR}/xmailwatcher.${IMAKE_MAN_SUFFIX}
