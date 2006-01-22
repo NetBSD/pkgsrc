@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/01/08 14:00:12 tonio Exp $
+# $NetBSD: Makefile,v 1.16 2006/01/22 08:45:05 hira Exp $
 
 DISTNAME=	ptex-texmf-2.1
 PKGNAME=	ja-ptex-share-2.1
@@ -32,11 +32,11 @@ do-install:
 	${INSTALL_DATA_DIR} ${TEXMFLOCAL}
 	cd ${TEXMFLOCAL};						\
 		extract_file=${_DISTDIR:Q}/${DISTNAME:Q}${EXTRACT_SUFX}; \
-		${EXTRACT_CMD${EXTRACT_SUFX}}
+		${EXTRACT_CMD}
 	cd ${TEXMFLOCAL}/fonts;						\
 	for f in jis nmin-ngoth standard morisawa; do			\
 		extract_file=${_DISTDIR:Q}/$$f${EXTRACT_SUFX};		\
-		${EXTRACT_CMD${EXTRACT_SUFX}};				\
+		${EXTRACT_CMD}						\
 		${MV} ${TEXMFLOCAL}/fonts/$$f/tfm ${TEXMFLOCAL}/fonts/tfm/$$f; \
 		${MV} ${TEXMFLOCAL}/fonts/$$f/vf ${TEXMFLOCAL}/fonts/vf/$$f; \
 	done
