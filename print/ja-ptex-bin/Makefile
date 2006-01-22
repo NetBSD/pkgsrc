@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/01/20 14:20:59 tonio Exp $
+# $NetBSD: Makefile,v 1.23 2006/01/22 08:45:05 hira Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
@@ -62,16 +62,16 @@ pre-extract:
 post-extract:
 	cd ${WRKDIR_};							\
 		extract_file=${_DISTDIR:Q}/${DF_TETEX_BIN:Q};		\
-		${EXTRACT_CMD${EXTRACT_SUFX}}
+		${EXTRACT_CMD}
 	cd ${WRKSRC}/texk/web2c;					\
 		extract_file=${_DISTDIR:Q}/${DISTNAME:Q}${EXTRACT_SUFX}; \
-		${EXTRACT_CMD${EXTRACT_SUFX}}
+		${EXTRACT_CMD}
 	cd ${WRKSRC}/texk;						\
 		extract_file=${_DISTDIR:Q}/${DF_DVIPSK_PATCH:Q};	\
-		${EXTRACT_CMD${EXTRACT_SUFX}}
+		${EXTRACT_CMD}
 	cd ${WRKSRC}/texk;						\
 		extract_file=${_DISTDIR:Q}/${DF_MENDEXK:Q};		\
-		${EXTRACT_CMD${EXTRACT_SUFX}}
+		${EXTRACT_CMD}
 	${SED} -e "s|\$$TEXMF/ptex/plain/||" \
 	${LOCALBASE}/share/texmf.local/ptex/plain/base/ptex.tex > \
 		${WRKSRC_PTEX}/ptex.tex
