@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2005/12/05 20:49:53 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/01/22 00:11:27 adam Exp $
 
-DISTNAME=	kadu-0.4.1
+DISTNAME=	kadu-0.4.3
 CATEGORIES=	chat
 MASTER_SITES=	http://www.kadu.net/download/stable/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,17 +9,13 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.kadu.net/
 COMMENT=	Chat client for Gadu-Gadu network (Poland)
 
+WRKSRC=			${WRKDIR}/kadu
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-existing-libgadu=${BUILDLINK_PREFIX.ekg}
 CONFIGURE_ENV+=		X11BASE=${X11BASE:Q}
 LIBS+=			${LIBOSSAUDIO}
-WRKSRC=			${WRKDIR}/kadu
-
-# pure hack
-post-configure:
-	cd ${WRKSRC}; ${TOUCH} Makefile
 
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../chat/ekg/buildlink3.mk"
