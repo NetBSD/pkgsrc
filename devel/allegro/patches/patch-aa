@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2005/05/23 12:05:31 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2006/01/22 13:55:20 wiz Exp $
 
---- makefile.in.orig	2004-12-02 02:02:14.000000000 +0100
+--- makefile.in.orig	2005-09-10 22:17:51.000000000 +0200
 +++ makefile.in
-@@ -480,17 +480,7 @@ install-lib: lib modules
+@@ -481,17 +481,7 @@ install-lib: lib modules
  	fi
  	$(mkinstalldirs) $(DESTDIR)$(bindir)
  	@echo Installing allegro-config to $(DESTDIR)$(bindir)
