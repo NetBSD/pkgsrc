@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2005/12/29 06:21:34 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2006/01/22 14:06:02 adrianp Exp $
 
-VERS=		4.2.2
+VERS=		4.2.5
 DISTNAME=	hylafax-${VERS}
 CATEGORIES=	comms
 MASTER_SITES_BETA=	ftp://ftp.hylafax.org/source/BETA/
