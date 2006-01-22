@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4471 2006/01/22 11:12:04 wiz Exp $
+$NetBSD: TODO,v 1.4472 2006/01/22 11:18:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -701,7 +701,6 @@ Suggested package updates
 	o libtool-1.5.22
 	o libwpd-0.8.3
 	o licq-core-1.3.0
-	o liferea-1.0.1
 	o lighttpd-1.4.9
 	o lilypond-2.6.3
 	o linuxsms-0.77
