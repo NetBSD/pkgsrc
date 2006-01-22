@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/01/22 09:12:52 hira Exp $
+# $NetBSD: Makefile,v 1.18 2006/01/22 15:47:40 tonio Exp $
 
 DISTNAME=	ptex-texmf-2.1
 PKGNAME=	ja-ptex-share-2.1
@@ -18,7 +18,8 @@ MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.ascii.co.jp/pb/ptex/
 COMMENT=	Library files for pTeX
 
-TEX_ACCEPTED=	teTeX2
+#TEX_ACCEPTED=	teTeX2
+.include "../../print/teTeX-bin/buildlink3.mk"
 
 WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		teTeX
@@ -41,5 +42,4 @@ do-install:
 		${MV} ${TEXMFLOCAL}/fonts/$$f/vf ${TEXMFLOCAL}/fonts/vf/$$f; \
 	done
 
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
