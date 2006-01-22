@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.44 2006/01/21 16:44:38 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.45 2006/01/22 17:20:05 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -89,3 +89,5 @@ Pullup ticket 1033 - requested by Ignatios Souvatzis
 portability fix for phoon
 Pullup ticket 1044 - requested by Matthias Scheler
 security fix for apache2
+Pullup ticket 1045 - requested by Manuel Bouyer
+security update for mailman
