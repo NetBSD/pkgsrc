@@ -1,4 +1,4 @@
-# $NetBSD: plist-subst.awk,v 1.1 2006/01/12 23:43:57 jlam Exp $
+# $NetBSD: plist-subst.awk,v 1.2 2006/01/22 16:54:13 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -52,7 +52,6 @@ BEGIN {
 		regexp = "\\${" var "}"
 		substitute[regexp] = value
 	}
-	delete vars
 }
 
 ###

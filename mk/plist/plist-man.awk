@@ -1,4 +1,4 @@
-# $NetBSD: plist-man.awk,v 1.1 2006/01/12 23:43:57 jlam Exp $
+# $NetBSD: plist-man.awk,v 1.2 2006/01/22 16:54:13 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -89,7 +89,6 @@ BEGIN {
 	section = substr(components[n-1], 4, 1)
 	sub("[0-9ln]$", section, components[n])
 	$0 = join(components, 1, n, "/")
-	delete components
 }
 (IMAKE_MANINSTALL == "maninstall") && \
 /^@dirrm ([^\/]*\/)+cat[1-9ln]/ {
@@ -107,7 +106,6 @@ BEGIN {
 	section = "0"
 	sub("[0-9ln]$", section, components[n])
 	$0 = join(components, 1, n, "/")
-	delete components
 }
 (IMAKE_MANINSTALL == "catinstall") && \
 /^@dirrm ([^\/]*\/)+man[1-9ln]/ {
