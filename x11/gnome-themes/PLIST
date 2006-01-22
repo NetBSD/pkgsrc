@@ -1,5 +1,122 @@
-@comment $NetBSD: PLIST,v 1.14 2005/10/12 21:57:05 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/01/22 04:13:33 joerg Exp $
 share/icons/Crux/index.theme
+share/icons/Crux/12x12/filesystems/gnome-fs-directory.png
+share/icons/Crux/12x12/filesystems/gnome-fs-regular.png
+share/icons/Crux/192x192/filesystems/gnome-fs-directory.png
+share/icons/Crux/192x192/filesystems/gnome-fs-regular.png
+share/icons/Crux/24x24/filesystems/gnome-fs-directory.png
+share/icons/Crux/24x24/filesystems/gnome-fs-regular.png
+share/icons/Crux/36x36/filesystems/gnome-fs-directory.png
+share/icons/Crux/36x36/filesystems/gnome-fs-regular.png
+share/icons/Crux/48x48/emblems/emblem-nowrite.png
+share/icons/Crux/48x48/filesystems/gnome-fs-directory.png
+share/icons/Crux/48x48/filesystems/gnome-fs-regular.png
+share/icons/Crux/72x72/emblems/emblem-nowrite.png
+share/icons/Crux/72x72/filesystems/gnome-fs-directory.png
+share/icons/Crux/72x72/filesystems/gnome-fs-regular.png
+share/icons/Crux/96x96/emblems/emblem-nowrite.png
+share/icons/Crux/96x96/filesystems/gnome-fs-directory.png
+share/icons/Crux/96x96/filesystems/gnome-fs-regular.png
+share/icons/Flat-Blue/12x12/emblems/emblem-symbolic-link.png
+share/icons/Flat-Blue/12x12/filesystems/gnome-fs-directory-accept.png
+share/icons/Flat-Blue/12x12/filesystems/gnome-fs-directory.png
+share/icons/Flat-Blue/12x12/filesystems/gnome-fs-regular.png
+share/icons/Flat-Blue/192x192/filesystems/gnome-fs-trash-empty.png
+share/icons/Flat-Blue/192x192/filesystems/gnome-fs-trash-full.png
+share/icons/Flat-Blue/20x20/filesystems/gnome-fs-bookmark-missing.png
+share/icons/Flat-Blue/20x20/filesystems/gnome-fs-bookmark.png
+share/icons/Flat-Blue/24x24/emblems/emblem-symbolic-link.png
+share/icons/Flat-Blue/24x24/filesystems/gnome-fs-directory-accept.png
+share/icons/Flat-Blue/24x24/filesystems/gnome-fs-directory.png
+share/icons/Flat-Blue/24x24/filesystems/gnome-fs-regular.png
+share/icons/Flat-Blue/36x36/emblems/emblem-symbolic-link.png
+share/icons/Flat-Blue/36x36/filesystems/gnome-fs-directory-accept.png
+share/icons/Flat-Blue/36x36/filesystems/gnome-fs-directory.png
+share/icons/Flat-Blue/36x36/filesystems/gnome-fs-regular.png
+share/icons/Flat-Blue/48x48/devices/gnome-dev-broken-image.png
+share/icons/Flat-Blue/48x48/devices/gnome-dev-spreadsheet.png
+share/icons/Flat-Blue/48x48/devices/gnome-dev-stalled.png
+share/icons/Flat-Blue/48x48/devices/gnome-dev-symlink.png
+share/icons/Flat-Blue/48x48/emblems/emblem-art.png
+share/icons/Flat-Blue/48x48/emblems/emblem-broken-link.png
+share/icons/Flat-Blue/48x48/emblems/emblem-camera.png
+share/icons/Flat-Blue/48x48/emblems/emblem-documents.png
+share/icons/Flat-Blue/48x48/emblems/emblem-generic.png
+share/icons/Flat-Blue/48x48/emblems/emblem-mail.png
+share/icons/Flat-Blue/48x48/emblems/emblem-multimedia.png
+share/icons/Flat-Blue/48x48/emblems/emblem-package.png
+share/icons/Flat-Blue/48x48/emblems/emblem-pictures.png
+share/icons/Flat-Blue/48x48/emblems/emblem-sound.png
+share/icons/Flat-Blue/48x48/emblems/emblem-symbolic-link.png
+share/icons/Flat-Blue/48x48/emblems/emblem-trash.png
+share/icons/Flat-Blue/48x48/emblems/emblem-web.png
+share/icons/Flat-Blue/48x48/filesystems/gnome-fs-bookmark-missing.png
+share/icons/Flat-Blue/48x48/filesystems/gnome-fs-bookmark.png
+share/icons/Flat-Blue/48x48/filesystems/gnome-fs-directory-accept.png
+share/icons/Flat-Blue/48x48/filesystems/gnome-fs-directory.png
+share/icons/Flat-Blue/48x48/filesystems/gnome-fs-home.png
+share/icons/Flat-Blue/48x48/filesystems/gnome-fs-loading.png
+share/icons/Flat-Blue/48x48/filesystems/gnome-fs-regular.png
+share/icons/Flat-Blue/48x48/filesystems/gnome-fs-trash-empty.png
+share/icons/Flat-Blue/48x48/filesystems/gnome-fs-trash-full.png
+share/icons/Flat-Blue/72x72/devices/gnome-dev-search.png
+share/icons/Flat-Blue/72x72/filesystems/gnome-fs-directory-accept.png
+share/icons/Flat-Blue/72x72/filesystems/gnome-fs-directory.png
+share/icons/Flat-Blue/72x72/filesystems/gnome-fs-regular.png
+share/icons/Flat-Blue/72x72/filesystems/gnome-fs-web.png
+share/icons/Flat-Blue/96x96/filesystems/gnome-fs-directory-accept.png
+share/icons/Flat-Blue/96x96/filesystems/gnome-fs-directory.png
+share/icons/Flat-Blue/96x96/filesystems/gnome-fs-regular.png
+share/icons/Flat-Blue/index.theme
+share/icons/Flat-Blue/scalable/emblems/emblem-OK.svg
+share/icons/Flat-Blue/scalable/emblems/emblem-certified.svg
+share/icons/Flat-Blue/scalable/emblems/emblem-cool.svg
+share/icons/Flat-Blue/scalable/emblems/emblem-danger.svg
+share/icons/Flat-Blue/scalable/emblems/emblem-distinguished.svg
+share/icons/Flat-Blue/scalable/emblems/emblem-draft.svg
+share/icons/Flat-Blue/scalable/emblems/emblem-favorite.svg
+share/icons/Flat-Blue/scalable/emblems/emblem-important.svg
+share/icons/Flat-Blue/scalable/emblems/emblem-new.svg
+share/icons/Flat-Blue/scalable/emblems/emblem-noread.svg
+share/icons/Flat-Blue/scalable/emblems/emblem-nowrite.svg
+share/icons/Flat-Blue/scalable/emblems/emblem-ohno.svg
+share/icons/Flat-Blue/scalable/emblems/emblem-personal.svg
+share/icons/Flat-Blue/scalable/emblems/emblem-special.svg
+share/icons/Flat-Blue/scalable/emblems/emblem-urgent.svg
+share/icons/Sandy/12x12/filesystems/gnome-fs-directory-accept.png
+share/icons/Sandy/12x12/filesystems/gnome-fs-directory.png
+share/icons/Sandy/24x24/filesystems/gnome-fs-directory-accept.png
+share/icons/Sandy/24x24/filesystems/gnome-fs-directory.png
+share/icons/Sandy/36x36/filesystems/gnome-fs-directory-accept.png
+share/icons/Sandy/36x36/filesystems/gnome-fs-directory.png
+share/icons/Sandy/48x48/filesystems/gnome-fs-directory-accept.png
+share/icons/Sandy/48x48/filesystems/gnome-fs-directory.png
+share/icons/Sandy/72x72/filesystems/gnome-fs-directory-accept.png
+share/icons/Sandy/72x72/filesystems/gnome-fs-directory.png
+share/icons/Sandy/96x96/filesystems/gnome-fs-directory-accept.png
+share/icons/Sandy/96x96/filesystems/gnome-fs-directory.png
+share/icons/Sandy/index.theme
+share/icons/Smokey-Blue/48x48/emblems/emblem-nowrite.png
+share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-directory.png
+share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-nfs.png
+share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-empty-accept.png
+share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-empty.png
+share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-full-accept.png
+share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-full.png
+share/icons/Smokey-Blue/72x72/filesystems/gnome-fs-directory.png
+share/icons/Smokey-Blue/96x96/filesystems/gnome-fs-directory.png
+share/icons/Smokey-Blue/index.theme
+share/icons/Smokey-Red/48x48/emblems/emblem-nowrite.png
+share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-empty-accept.png
+share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-empty.png
+share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-full-accept.png
+share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-full.png
+share/icons/Smokey-Red/64x64/filesystems/gnome-fs-directory.icon
+share/icons/Smokey-Red/64x64/filesystems/gnome-fs-directory.png
+share/icons/Smokey-Red/64x64/filesystems/gnome-fs-nfs.png
+share/icons/Smokey-Red/72x72/filesystems/gnome-fs-directory.png
+share/icons/Smokey-Red/96x96/filesystems/gnome-fs-directory.png
+share/icons/Smokey-Red/index.theme
 share/icons/HighContrast/index.theme
 share/icons/HighContrastInverse/index.theme
 share/icons/HighContrastLargePrint/48x48/apps/JUSimageIcon.png
@@ -1820,224 +1937,103 @@ share/themes/Traditional/index.theme
 @comment in theme-dirs: @dirrm share/themes/Crux
 @dirrm share/themes/Clearlooks/metacity-1
 @comment in theme-dirs: @dirrm share/themes/Clearlooks
-@dirrm share/icons/Smokey-Red/index.theme
-@dirrm share/icons/Smokey-Red/96x96/filesystems/gnome-fs-directory.png
+@dirrm share/icons/HighContrastLargePrint/48x48/apps
+@dirrm share/icons/HighContrastLargePrint/48x48/devices
+@dirrm share/icons/HighContrastLargePrint/48x48/emblems
+@dirrm share/icons/HighContrastLargePrint/48x48/filesystems
+@dirrm share/icons/HighContrastLargePrint/48x48/mimetypes
+@dirrm share/icons/HighContrastLargePrintInverse/48x48/apps
+@dirrm share/icons/HighContrastLargePrintInverse/48x48/devices
+@dirrm share/icons/HighContrastLargePrintInverse/48x48/emblems
+@dirrm share/icons/HighContrastLargePrintInverse/48x48/filesystems
+@dirrm share/icons/HighContrastLargePrintInverse/48x48/mimetypes
+@dirrm share/icons/LowContrastLargePrint/48x48/apps
+@dirrm share/icons/LowContrastLargePrint/48x48/devices
+@dirrm share/icons/LowContrastLargePrint/48x48/emblems
+@dirrm share/icons/LowContrastLargePrint/48x48/filesystems
+@dirrm share/icons/LowContrastLargePrint/48x48/mimetypes
 @dirrm share/icons/Smokey-Red/96x96/filesystems
 @dirrm share/icons/Smokey-Red/96x96
-@dirrm share/icons/Smokey-Red/72x72/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Smokey-Red/72x72/filesystems
 @dirrm share/icons/Smokey-Red/72x72
-@dirrm share/icons/Smokey-Red/64x64/filesystems/gnome-fs-nfs.png
-@dirrm share/icons/Smokey-Red/64x64/filesystems/gnome-fs-directory.png
-@dirrm share/icons/Smokey-Red/64x64/filesystems/gnome-fs-directory.icon
 @dirrm share/icons/Smokey-Red/64x64/filesystems
 @dirrm share/icons/Smokey-Red/64x64
-@dirrm share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-full.png
-@dirrm share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-full-accept.png
-@dirrm share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-empty.png
-@dirrm share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-empty-accept.png
 @dirrm share/icons/Smokey-Red/48x48/filesystems
-@dirrm share/icons/Smokey-Red/48x48/emblems/emblem-nowrite.png
 @dirrm share/icons/Smokey-Red/48x48/emblems
 @dirrm share/icons/Smokey-Red/48x48
 @dirrm share/icons/Smokey-Red
-@dirrm share/icons/Smokey-Blue/index.theme
-@dirrm share/icons/Smokey-Blue/96x96/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Smokey-Blue/96x96/filesystems
 @dirrm share/icons/Smokey-Blue/96x96
-@dirrm share/icons/Smokey-Blue/72x72/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Smokey-Blue/72x72/filesystems
 @dirrm share/icons/Smokey-Blue/72x72
-@dirrm share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-full.png
-@dirrm share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-full-accept.png
-@dirrm share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-empty.png
-@dirrm share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-empty-accept.png
-@dirrm share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-nfs.png
-@dirrm share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Smokey-Blue/64x64/filesystems
 @dirrm share/icons/Smokey-Blue/64x64
-@dirrm share/icons/Smokey-Blue/48x48/emblems/emblem-nowrite.png
 @dirrm share/icons/Smokey-Blue/48x48/emblems
 @dirrm share/icons/Smokey-Blue/48x48
 @dirrm share/icons/Smokey-Blue
-@dirrm share/icons/Sandy/index.theme
-@dirrm share/icons/Sandy/96x96/filesystems/gnome-fs-directory.png
-@dirrm share/icons/Sandy/96x96/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Sandy/96x96/filesystems
 @dirrm share/icons/Sandy/96x96
-@dirrm share/icons/Sandy/72x72/filesystems/gnome-fs-directory.png
-@dirrm share/icons/Sandy/72x72/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Sandy/72x72/filesystems
 @dirrm share/icons/Sandy/72x72
-@dirrm share/icons/Sandy/48x48/filesystems/gnome-fs-directory.png
-@dirrm share/icons/Sandy/48x48/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Sandy/48x48/filesystems
 @dirrm share/icons/Sandy/48x48
-@dirrm share/icons/Sandy/36x36/filesystems/gnome-fs-directory.png
-@dirrm share/icons/Sandy/36x36/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Sandy/36x36/filesystems
 @dirrm share/icons/Sandy/36x36
-@dirrm share/icons/Sandy/24x24/filesystems/gnome-fs-directory.png
-@dirrm share/icons/Sandy/24x24/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Sandy/24x24/filesystems
 @dirrm share/icons/Sandy/24x24
-@dirrm share/icons/Sandy/12x12/filesystems/gnome-fs-directory.png
-@dirrm share/icons/Sandy/12x12/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Sandy/12x12/filesystems
 @dirrm share/icons/Sandy/12x12
 @dirrm share/icons/Sandy
-@dirrm share/icons/LowContrastLargePrint/48x48/mimetypes
-@dirrm share/icons/LowContrastLargePrint/48x48/filesystems
-@dirrm share/icons/LowContrastLargePrint/48x48/emblems
-@dirrm share/icons/LowContrastLargePrint/48x48/devices
-@dirrm share/icons/LowContrastLargePrint/48x48/apps
 @dirrm share/icons/LowContrastLargePrint/48x48
 @dirrm share/icons/LowContrastLargePrint
 @dirrm share/icons/LowContrast
 @dirrm share/icons/LargePrint
-@dirrm share/icons/HighContrastLargePrintInverse/48x48/mimetypes
-@dirrm share/icons/HighContrastLargePrintInverse/48x48/filesystems
-@dirrm share/icons/HighContrastLargePrintInverse/48x48/emblems
-@dirrm share/icons/HighContrastLargePrintInverse/48x48/devices
-@dirrm share/icons/HighContrastLargePrintInverse/48x48/apps
 @dirrm share/icons/HighContrastLargePrintInverse/48x48
 @dirrm share/icons/HighContrastLargePrintInverse
-@dirrm share/icons/HighContrastLargePrint/48x48/mimetypes
-@dirrm share/icons/HighContrastLargePrint/48x48/filesystems
-@dirrm share/icons/HighContrastLargePrint/48x48/emblems
-@dirrm share/icons/HighContrastLargePrint/48x48/devices
-@dirrm share/icons/HighContrastLargePrint/48x48/apps
 @dirrm share/icons/HighContrastLargePrint/48x48
 @dirrm share/icons/HighContrastLargePrint
 @dirrm share/icons/HighContrastInverse
 @dirrm share/icons/HighContrast
-@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-urgent.svg
-@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-special.svg
-@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-personal.svg
-@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-ohno.svg
-@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-nowrite.svg
-@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-noread.svg
-@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-new.svg
-@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-important.svg
-@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-favorite.svg
-@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-draft.svg
-@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-distinguished.svg
-@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-danger.svg
-@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-cool.svg
-@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-certified.svg
-@dirrm share/icons/Flat-Blue/scalable/emblems/emblem-OK.svg
 @dirrm share/icons/Flat-Blue/scalable/emblems
 @dirrm share/icons/Flat-Blue/scalable
-@dirrm share/icons/Flat-Blue/index.theme
-@dirrm share/icons/Flat-Blue/96x96/filesystems/gnome-fs-regular.png
-@dirrm share/icons/Flat-Blue/96x96/filesystems/gnome-fs-directory.png
-@dirrm share/icons/Flat-Blue/96x96/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Flat-Blue/96x96/filesystems
 @dirrm share/icons/Flat-Blue/96x96
-@dirrm share/icons/Flat-Blue/72x72/filesystems/gnome-fs-web.png
-@dirrm share/icons/Flat-Blue/72x72/filesystems/gnome-fs-regular.png
-@dirrm share/icons/Flat-Blue/72x72/filesystems/gnome-fs-directory.png
-@dirrm share/icons/Flat-Blue/72x72/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Flat-Blue/72x72/filesystems
-@dirrm share/icons/Flat-Blue/72x72/devices/gnome-dev-search.png
 @dirrm share/icons/Flat-Blue/72x72/devices
 @dirrm share/icons/Flat-Blue/72x72
-@dirrm share/icons/Flat-Blue/48x48/filesystems/gnome-fs-trash-full.png
-@dirrm share/icons/Flat-Blue/48x48/filesystems/gnome-fs-trash-empty.png
-@dirrm share/icons/Flat-Blue/48x48/filesystems/gnome-fs-regular.png
-@dirrm share/icons/Flat-Blue/48x48/filesystems/gnome-fs-loading.png
-@dirrm share/icons/Flat-Blue/48x48/filesystems/gnome-fs-home.png
-@dirrm share/icons/Flat-Blue/48x48/filesystems/gnome-fs-directory.png
-@dirrm share/icons/Flat-Blue/48x48/filesystems/gnome-fs-directory-accept.png
-@dirrm share/icons/Flat-Blue/48x48/filesystems/gnome-fs-bookmark.png
-@dirrm share/icons/Flat-Blue/48x48/filesystems/gnome-fs-bookmark-missing.png
 @dirrm share/icons/Flat-Blue/48x48/filesystems
-@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-web.png
-@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-trash.png
-@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-symbolic-link.png
-@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-sound.png
-@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-pictures.png
-@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-package.png
-@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-multimedia.png
-@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-mail.png
-@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-generic.png
-@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-documents.png
-@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-camera.png
-@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-broken-link.png
-@dirrm share/icons/Flat-Blue/48x48/emblems/emblem-art.png
 @dirrm share/icons/Flat-Blue/48x48/emblems
-@dirrm share/icons/Flat-Blue/48x48/devices/gnome-dev-symlink.png
-@dirrm share/icons/Flat-Blue/48x48/devices/gnome-dev-stalled.png
-@dirrm share/icons/Flat-Blue/48x48/devices/gnome-dev-spreadsheet.png
-@dirrm share/icons/Flat-Blue/48x48/devices/gnome-dev-broken-image.png
 @dirrm share/icons/Flat-Blue/48x48/devices
 @dirrm share/icons/Flat-Blue/48x48
-@dirrm share/icons/Flat-Blue/36x36/filesystems/gnome-fs-regular.png
-@dirrm share/icons/Flat-Blue/36x36/filesystems/gnome-fs-directory.png
-@dirrm share/icons/Flat-Blue/36x36/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Flat-Blue/36x36/filesystems
-@dirrm share/icons/Flat-Blue/36x36/emblems/emblem-symbolic-link.png
 @dirrm share/icons/Flat-Blue/36x36/emblems
 @dirrm share/icons/Flat-Blue/36x36
-@dirrm share/icons/Flat-Blue/24x24/filesystems/gnome-fs-regular.png
-@dirrm share/icons/Flat-Blue/24x24/filesystems/gnome-fs-directory.png
-@dirrm share/icons/Flat-Blue/24x24/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Flat-Blue/24x24/filesystems
-@dirrm share/icons/Flat-Blue/24x24/emblems/emblem-symbolic-link.png
 @dirrm share/icons/Flat-Blue/24x24/emblems
 @dirrm share/icons/Flat-Blue/24x24
-@dirrm share/icons/Flat-Blue/20x20/filesystems/gnome-fs-bookmark.png
-@dirrm share/icons/Flat-Blue/20x20/filesystems/gnome-fs-bookmark-missing.png
 @dirrm share/icons/Flat-Blue/20x20/filesystems
 @dirrm share/icons/Flat-Blue/20x20
-@dirrm share/icons/Flat-Blue/192x192/filesystems/gnome-fs-trash-full.png
-@dirrm share/icons/Flat-Blue/192x192/filesystems/gnome-fs-trash-empty.png
 @dirrm share/icons/Flat-Blue/192x192/filesystems
 @dirrm share/icons/Flat-Blue/192x192
-@dirrm share/icons/Flat-Blue/12x12/filesystems/gnome-fs-regular.png
-@dirrm share/icons/Flat-Blue/12x12/filesystems/gnome-fs-directory.png
-@dirrm share/icons/Flat-Blue/12x12/filesystems/gnome-fs-directory-accept.png
 @dirrm share/icons/Flat-Blue/12x12/filesystems
-@dirrm share/icons/Flat-Blue/12x12/emblems/emblem-symbolic-link.png
 @dirrm share/icons/Flat-Blue/12x12/emblems
 @dirrm share/icons/Flat-Blue/12x12
 @dirrm share/icons/Flat-Blue
-@dirrm share/icons/Crux/96x96/filesystems/gnome-fs-regular.png
-@dirrm share/icons/Crux/96x96/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Crux/96x96/filesystems
-@dirrm share/icons/Crux/96x96/emblems/emblem-nowrite.png
 @dirrm share/icons/Crux/96x96/emblems
 @dirrm share/icons/Crux/96x96
-@dirrm share/icons/Crux/72x72/filesystems/gnome-fs-regular.png
-@dirrm share/icons/Crux/72x72/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Crux/72x72/filesystems
-@dirrm share/icons/Crux/72x72/emblems/emblem-nowrite.png
 @dirrm share/icons/Crux/72x72/emblems
 @dirrm share/icons/Crux/72x72
-@dirrm share/icons/Crux/48x48/filesystems/gnome-fs-regular.png
-@dirrm share/icons/Crux/48x48/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Crux/48x48/filesystems
-@dirrm share/icons/Crux/48x48/emblems/emblem-nowrite.png
 @dirrm share/icons/Crux/48x48/emblems
 @dirrm share/icons/Crux/48x48
-@dirrm share/icons/Crux/36x36/filesystems/gnome-fs-regular.png
-@dirrm share/icons/Crux/36x36/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Crux/36x36/filesystems
 @dirrm share/icons/Crux/36x36
-@dirrm share/icons/Crux/24x24/filesystems/gnome-fs-regular.png
-@dirrm share/icons/Crux/24x24/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Crux/24x24/filesystems
 @dirrm share/icons/Crux/24x24
-@dirrm share/icons/Crux/20x20/filesystems/gnome-fs-regular.png
-@dirrm share/icons/Crux/20x20/filesystems/gnome-fs-directory.png
-@dirrm share/icons/Crux/20x20/filesystems
-@dirrm share/icons/Crux/20x20
-@dirrm share/icons/Crux/192x192/filesystems/gnome-fs-regular.png
-@dirrm share/icons/Crux/192x192/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Crux/192x192/filesystems
 @dirrm share/icons/Crux/192x192
-@dirrm share/icons/Crux/12x12/filesystems/gnome-fs-regular.png
-@dirrm share/icons/Crux/12x12/filesystems/gnome-fs-directory.png
 @dirrm share/icons/Crux/12x12/filesystems
 @dirrm share/icons/Crux/12x12
 @dirrm share/icons/Crux
