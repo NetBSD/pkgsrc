@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2006/01/20 16:15:54 jmmv Exp $
+# $NetBSD: Makefile,v 1.34 2006/01/22 22:20:26 rillig Exp $
 #
 
 DISTNAME=	docbook-xsl-1.69.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +15,9 @@ DEPENDS+=	docbook-xml>=4.2:../../textproc/docbook-xml
 
 USE_LANGUAGES=	# empty
 NO_BUILD=	YES
-NO_CONFIGURE=	YES
+
+USE_TOOLS+=	perl:run
+REPLACE_PERL+=	fo/pdf2index
 
 DOCDIR=		${PREFIX}/share/doc/docbook-xsl
 EGDIR=		${PREFIX}/share/examples/docbook-xsl
