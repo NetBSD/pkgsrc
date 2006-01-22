@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2005/03/04 16:04:59 reinoud Exp $
+$NetBSD: MESSAGE,v 1.2 2006/01/22 22:27:22 reinoud Exp $
 
 Due to oddities in the blender package, running `blender' will soft-link
 the global blender directory to your home directory as ~/.blender to run
@@ -7,7 +7,7 @@ properly with all scripts attached.
 
 Customisation can be done individually by copying the directory ~/.blender
 points to to your own homedirectory :
-	rm ~/.blender
+	rm -rf ~/.blender
 	cp -R ${PREFIX}/share/blender ~/.blender
 
 and customise/add your own stuff like scripts etc. in it.
