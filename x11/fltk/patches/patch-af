@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.6 2004/10/21 08:29:45 adam Exp $
+$NetBSD: patch-af,v 1.7 2006/01/22 11:11:34 wiz Exp $
 
---- makeinclude.in.orig	2004-10-18 20:22:21.000000000 +0000
+--- makeinclude.in.orig	2006-01-15 18:36:16.000000000 +0000
 +++ makeinclude.in
-@@ -46,8 +46,8 @@ SHELL		= /bin/sh
+@@ -49,8 +49,8 @@ SHELL		= /bin/sh
  STRIP		= strip
  
  # compiler names:
@@ -13,7 +13,7 @@ $NetBSD: patch-af,v 1.6 2004/10/21 08:29:45 adam Exp $
  MAKEDEPEND	= @MAKEDEPEND@
  
  # flags for C++ compiler:
-@@ -57,6 +57,7 @@ CXXFLAGS	= $(OPTIM) @CPPFLAGS@ @CXXFLAGS
+@@ -60,6 +60,7 @@ CXXFLAGS	= $(OPTIM) @LARGEFILE@ @CPPFLAG
  
  # program to make the archive:
  LIBNAME		= @LIBNAME@
@@ -21,17 +21,17 @@ $NetBSD: patch-af,v 1.6 2004/10/21 08:29:45 adam Exp $
  FLLIBNAME	= @FLLIBNAME@
  GLLIBNAME	= @GLLIBNAME@
  IMGLIBNAME	= @IMGLIBNAME@
-@@ -70,7 +71,8 @@ IMGDSONAME	= @IMGDSONAME@
- DSOCOMMAND	= @DSOCOMMAND@
+@@ -74,7 +75,8 @@ DSOCOMMAND	= @DSOCOMMAND@
  
  # libraries to link with:
+ AUDIOLIBS	= @AUDIOLIBS@
 -LDLIBS		= @LDFLAGS@ @LIBS@
 +#LDLIBS		= @LDFLAGS@ @LIBS@
 +LDLIBS		= $(GLDLIBS)
  GLDLIBS		= @LDFLAGS@ @GLLIB@ @LIBS@
- LINKFLTK	= -L../lib @LINKFLTK@
- LINKFLTKGL	= -L../lib @LINKFLTKGL@
-@@ -82,6 +84,12 @@ IMAGELIBS	= @IMAGELIBS@
+ LINKFLTK	= @LINKFLTK@
+ LINKFLTKGL	= @LINKFLTKGL@
+@@ -86,6 +88,12 @@ IMAGELIBS	= -L../lib @IMAGELIBS@
  # image libraries to build...
  IMAGEDIRS	= @JPEG@ @ZLIB@ @PNG@
  
@@ -44,3 +44,21 @@ $NetBSD: patch-af,v 1.6 2004/10/21 08:29:45 adam Exp $
  # The extension to use for executables...
  EXEEXT		= @EXEEXT@
  
+@@ -114,7 +122,7 @@ UNINSTALL_DESKTOP = @UNINSTALL_DESKTOP@
+ .SILENT:
+ 
+ # Build commands and filename extensions...
+-.SUFFIXES:	.0 .1 .3 .c .cxx .h .fl .man .o .z $(EXEEXT)
++.SUFFIXES:	.0 .1 .3 .6 .c .cxx .h .fl .man .o .z $(EXEEXT)
+ 
+ .o$(EXEEXT):
+ 	echo Linking $@...
+@@ -129,7 +137,7 @@ UNINSTALL_DESKTOP = @UNINSTALL_DESKTOP@
+ 	echo Compiling $<...
+ 	$(CXX) -I.. @PNGINC@ @JPEGINC@ @ZLIBINC@ $(CXXFLAGS) -c $<
+ 
+-.man.0 .man.1 .man.3:
++.man.0 .man.1 .man.3 .man.6:
+ 	echo Formatting $<...
+ 	rm -f $@
+ 	$(NROFF) -man $< >$@

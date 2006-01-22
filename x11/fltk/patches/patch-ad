@@ -1,14 +1,14 @@
-$NetBSD: patch-ad,v 1.7 2004/10/21 08:29:45 adam Exp $
+$NetBSD: patch-ad,v 1.8 2006/01/22 11:11:34 wiz Exp $
 
---- documentation/Makefile.orig	2004-10-18 20:22:22.000000000 +0000
+--- documentation/Makefile.orig	2006-01-15 19:36:16.000000000 +0100
 +++ documentation/Makefile
-@@ -227,24 +227,24 @@ docdir = $(datadir)/doc/fltk
+@@ -229,24 +229,24 @@ depend:
  install: $(MANPAGES)
  	echo "Installing documentation files in $(DESTDIR)$(docdir)..."
  	-$(MKDIR) $(DESTDIR)$(docdir)
--	$(CP) $(HTMLFILES) *.gif *.jpg index.html $(DESTDIR)$(docdir)
-+	$(INSTALL_DATA) $(HTMLFILES) *.gif *.jpg index.html $(DESTDIR)$(docdir)
- 	$(CHMOD) 644 $(DESTDIR)$(docdir)/*
+-	$(CP) $(HTMLFILES) $(IMAGEFILES) index.html $(DESTDIR)$(docdir)
++	$(INSTALL_DATA) $(HTMLFILES) $(IMAGEFILES) index.html $(DESTDIR)$(docdir)
+ 	$(CHMOD) 644 $(DESTDIR)$(docdir)/*.*
  	echo "Installing man pages in $(DESTDIR)$(mandir)..."
  	-$(MKDIR) $(DESTDIR)$(mandir)/cat1
 -	$(CP) fluid.$(CAT1EXT) $(DESTDIR)$(mandir)/cat1
@@ -33,4 +33,4 @@ $NetBSD: patch-ad,v 1.7 2004/10/21 08:29:45 adam Exp $
 +	$(INSTALL_MAN) fltk.man $(DESTDIR)$(mandir)/man3/fltk.3
  	$(CHMOD) 644 $(DESTDIR)$(mandir)/man3/fltk.3
  
- 
+ install-linux install-osx:
