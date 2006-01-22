@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12609 2006/01/22 00:13:40 adam Exp $
+$NetBSD: CHANGES,v 1.12610 2006/01/22 00:24:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -465,3 +465,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/amarok to 1.3.8 [wiz 2006-01-22]
 	Updated graphics/xsane to 0.99 [wiz 2006-01-22]
 	Updated chat/kadu to 0.4.3 [adam 2006-01-22]
+	Updated net/mldonkey to 2.7.3 [wiz 2006-01-22]
+	Updated net/mldonkey-gui to 2.7.3 [wiz 2006-01-22]
