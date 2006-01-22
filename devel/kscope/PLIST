@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/25 12:19:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/22 21:52:42 markd Exp $
 bin/kscope
+share/doc/kde/HTML/en/kscope/autocomp_dlg.png
 share/doc/kde/HTML/en/kscope/call_tree.png
 share/doc/kde/HTML/en/kscope/common
 share/doc/kde/HTML/en/kscope/frontend.png
@@ -11,13 +12,19 @@ share/doc/kde/HTML/en/kscope/project_files.png
 share/doc/kde/HTML/en/kscope/project_new.png
 share/doc/kde/HTML/en/kscope/project_open.png
 share/doc/kde/HTML/en/kscope/query_dlg.png
-share/kde/applnk/Utilities/kscope.desktop
+share/doc/kde/HTML/en/kscope/query_filter.png
+share/kde/applnk/Development/kscope.desktop
+share/kde/apps/kscope/kscope_config
 share/kde/apps/kscope/kscopeui.rc
+share/kde/apps/kscope/pics/call_graph.png
+share/kde/apps/kscope/pics/called_tree.png
+share/kde/apps/kscope/pics/calling_tree.png
 share/kde/apps/kscope/pics/file_ro.png
 share/kde/apps/kscope/pics/file_rw.png
 share/kde/apps/kscope/pics/file_save.png
 share/kde/apps/kscope/pics/query_locked.png
 share/kde/apps/kscope/pics/query_unlocked.png
+share/kde/apps/kscope/pics/tab_list.png
 share/kde/config/kscoperc
 share/kde/icons/hicolor/16x16/apps/kscope.png
 share/kde/icons/hicolor/32x32/apps/kscope.png
