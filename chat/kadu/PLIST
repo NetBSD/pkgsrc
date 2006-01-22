@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/04/21 08:56:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/01/22 00:11:27 adam Exp $
 bin/kadu
 bin/kadu-config
 bin/kadu-mozilla
@@ -56,6 +56,7 @@ include/kadu/updates.h
 include/kadu/userbox.h
 include/kadu/userinfo.h
 include/kadu/userlist.h
+share/applnk/Internet/kadu.desktop
 share/kadu/AUTHORS
 share/kadu/COPYING
 share/kadu/ChangeLog
@@ -554,6 +555,11 @@ share/kadu/translations/qt_en.qm
 share/kadu/translations/qt_fr.qm
 share/kadu/translations/qt_it.qm
 share/kadu/translations/qt_pl.qm
+share/pixmaps/kadu-16.png
+share/pixmaps/kadu-22.png
+share/pixmaps/kadu-24.png
+share/pixmaps/kadu-48.png
+share/pixmaps/kadu.png
 @dirrm share/kadu/translations
 @dirrm share/kadu/themes/sounds/default
 @dirrm share/kadu/themes/sounds
