@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4488 2006/01/23 20:21:06 wiz Exp $
+$NetBSD: TODO,v 1.4489 2006/01/23 20:54:28 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1205,7 +1205,6 @@ Suggested package updates
 	o ucblogo-5.5
 	o ucl-1.03
 	o unix2dos-1.3
-	o unixodbc-2.2.11
 	o userppp-030706
 	o valgrind-3.0.1
 	o vba-1.7.2
