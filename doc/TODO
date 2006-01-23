@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4480 2006/01/22 21:54:10 markd Exp $
+$NetBSD: TODO,v 1.4481 2006/01/23 03:21:31 epg Exp $
 
 Suggested new packages
 ======================
@@ -769,7 +769,6 @@ Suggested package updates
 	o nawk-20041222
 	o ncftp2-2.8.2
 	o ncview-1.92e
-	o neon-0.25.5
 	o nessus-0.2.5
 	o nessus-core-2.3.1
 	o net-snmp-5.2.2
