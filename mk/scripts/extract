@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.14 2006/01/21 19:26:09 jlam Exp $
+# $NetBSD: extract,v 1.15 2006/01/23 17:52:02 wiz Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -171,7 +171,7 @@ case "$distfile" in
 		_format=tar ;;
 *.shar.gz|*.shar.bz2|*.shar.Z|*.shar|*.shr.gz|*.shr.bz2|*.shr.Z|*.shr)
 		_format=shar ;;
-*.zip)		_format=zip ;;
+*.zip|*.ZIP)	_format=zip ;;
 *.lha|*.lzh)	_format=lha ;;
 *.Z|*.bz2|*.gz|*.z)
 		_format=compressed ;;
