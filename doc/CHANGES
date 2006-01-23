@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12633 2006/01/23 17:05:53 xtraeme Exp $
+$NetBSD: CHANGES,v 1.12634 2006/01/23 18:54:59 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -492,3 +492,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/antiword to 0.37nb1 [salo 2006-01-23]
 	Updated graphics/flphoto to 1.2nb1 [joerg 2006-01-23]
 	Updated chat/psi to 0.10 [xtraeme 2006-01-23]
+	Updated databases/myodbc to 3.51.12 [xtraeme 2006-01-23]
