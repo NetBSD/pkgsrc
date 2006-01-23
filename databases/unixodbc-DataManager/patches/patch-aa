@@ -1,13 +1,29 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/11/06 04:10:12 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/23 20:50:47 xtraeme Exp $
 
---- DataManager/Makefile.in.orig	Sat Oct 20 13:54:10 2001
-+++ DataManager/Makefile.in
-@@ -187,7 +187,7 @@
+--- DataManager/Makefile.in.orig	2005-02-07 11:36:35.000000000 +0100
++++ DataManager/Makefile.in	2006-01-23 21:33:57.000000000 +0100
+@@ -206,13 +206,10 @@
+ @QT_TRUE@	@QT_LDFLAGS@ \
+ @QT_TRUE@	@USER_LDFLAGS@ \
+ @QT_TRUE@	@LIB_QT@ \
+-@QT_TRUE@	../odbcinst/libodbcinst.la \
+-@QT_TRUE@	../DriverManager/libodbc.la 
++@QT_TRUE@	-lodbc \
  
- @QT_TRUE@INCLUDES = -I../include @QT_INCLUDES@
  
--@QT_TRUE@DataManager_LDADD = @X_LDFLAGS@ 	@QT_LDFLAGS@ 	@USER_LDFLAGS@ 	@LIB_QT@ 	../odbcinst/libodbcinst.la 	../DriverManager/libodbc.la 
-+@QT_TRUE@DataManager_LDADD = $(X_LDFLAGS) 	$(QT_LDFLAGS) 	$(USER_LDFLAGS) 	$(LIB_QT) 	-lodbcinst 	-lodbc $(PTH_LIBS) $(LIBLTDL)
+ @QT_TRUE@DataManager_DEPENDANCIES = \
+-@QT_TRUE@    ../odbcinst/libodbcinst.la \
+-@QT_TRUE@	../DriverManager/libodbc.la 
  
- @QT_TRUE@DataManager_DEPENDANCIES =     ../odbcinst/libodbcinst.la 	../DriverManager/libodbc.la 
+ 
+ @QT_TRUE@DataManager_SOURCES = \
+@@ -314,8 +311,7 @@
+ @QT_TRUE@	mclassISQL.$(OBJEXT) mclassConnectionFrame.$(OBJEXT) \
+ @QT_TRUE@	mclassBrowseFrame.$(OBJEXT) mclassBrowse.$(OBJEXT)
+ DataManager_OBJECTS = $(am_DataManager_OBJECTS)
+-@QT_TRUE@DataManager_DEPENDENCIES = ../odbcinst/libodbcinst.la \
+-@QT_TRUE@	../DriverManager/libodbc.la
++@QT_TRUE@DataManager_DEPENDENCIES = 
+ @QT_FALSE@DataManager_DEPENDENCIES =
+ DataManager_LDFLAGS =
  

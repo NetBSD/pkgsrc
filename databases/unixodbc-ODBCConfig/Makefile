@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2005/12/05 23:55:05 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/01/23 20:50:47 xtraeme Exp $
 
 PKGNAME=		unixodbc-ODBCConfig-${ODBC_BASE_VERS}
-PKGREVISION=		4
 COMMENT=		GUI tool for unixODBC driver configuration
 
 .include "../../databases/unixodbc/Makefile.common"
@@ -16,8 +15,6 @@ CONFIGURE_ENV+=		UIC="${QTDIR}/bin/uic"
 CONFIGURE_ENV+=		USER_LDFLAGS=${LDFLAGS:M*:Q}
 CONFIGURE_ENV+=		ac_cv_have_x=${_AC_CV_HAVE_X:Q}
 CONFIGURE_ENV+=		ac_cv_have_qt=${_AC_CV_HAVE_QT:Q}
-
-MAKE_FLAGS+=		ODBCConfig_DEPENDENCIES=""
 
 _EXTRA_INCLUDES?=	${LOCALBASE}/include:${X11BASE}/include
 _EXTRA_LIBS?=		${LOCALBASE}/lib:${X11BASE}/lib
