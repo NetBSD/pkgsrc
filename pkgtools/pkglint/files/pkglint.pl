@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.479 2006/01/22 23:35:04 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.480 2006/01/23 00:04:50 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1354,7 +1354,8 @@ sub get_vartypes_map() {
 		log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
 	}
 
-if ($opt_warn_varorder) {
+# TODO: Enable when the time is ripe.
+if (false) {
 	# Additionally, scan mk/defaults/mk.conf for variable
 	# definitions. All these variables are reserved for the user and
 	# must not be set within packages.
@@ -1756,7 +1757,10 @@ sub readmakefile($$$$) {
 				$line->explain(expl_relative_dirs);
 			}
 			if ($includefile =~ qr"(?:^|/)Makefile.common$"
-			    || ($includefile =~ qr"^(?:\.\./(?:\.\./[^/]+/)?[^/]+/)?([^/]+)$" && $1 ne "buildlink3.mk")) {
+			    || ($includefile =~ qr"^(?:\.\./(\.\./[^/]+/)?[^/]+/)?([^/]+)$"
+			    	&& (!defined($1) || $1 ne "../mk")
+				&& $2 ne "buildlink3.mk")) {
+				$line->log_debug("including ${includefile} sets seen_Makefile_common.");
 				$seen_Makefile_common = true;
 			}
 			if ($includefile =~ qr"/mk/") {
@@ -3004,8 +3008,7 @@ sub checklines_trailing_empty_lines($) {
 sub checklines_package_Makefile_varorder($) {
 	my ($lines) = @_;
 
-	# Disabled, as I don't like the current ordering scheme.
-	return;
+	return unless $opt_warn_varorder;
 
 # TODO: Add support for optional sections with non-optional variables.
 
@@ -4102,6 +4105,7 @@ sub checkdir_package() {
 	# Initialize global variables
 	$makevar = {};
 	$seen_bsd_prefs_mk = false;
+	$seen_Makefile_common = false;
 
 	# we need to handle the Makefile first to get some variables
 	if (!load_package_Makefile("${current_dir}/Makefile", \$whole, \$lines)) {
