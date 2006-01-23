@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4482 2006/01/23 07:04:29 recht Exp $
+$NetBSD: TODO,v 1.4483 2006/01/23 17:05:54 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -990,7 +990,6 @@ Suggested package updates
 	o proj-4.4.9
 	o projclock-0.9
 	o proxsmtp-1.2.1
-	o psi-0.10 [pkg/32509]
 	o psmisc-21.9
 	o pstoedit-3.42
 	o pstree-2.27
