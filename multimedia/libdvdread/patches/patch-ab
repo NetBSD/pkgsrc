@@ -1,40 +1,13 @@
-$NetBSD: patch-ab,v 1.3 2005/05/25 17:11:52 drochner Exp $
+$NetBSD: patch-ab,v 1.4 2006/01/23 22:09:26 wiz Exp $
 
---- dvdread/dvd_reader.c.orig	2003-02-13 23:31:21.000000000 +0100
+--- dvdread/dvd_reader.c.orig	2006-01-22 16:45:29.000000000 +0100
 +++ dvdread/dvd_reader.c
-@@ -32,7 +32,7 @@
+@@ -33,7 +33,7 @@
  #include <limits.h>
  #include <dirent.h>
   
--#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__bsdi__)|| defined(__DARWIN__)
-+#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__bsdi__)|| defined(__DARWIN__) || defined(__DragonFly__)
+-#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__bsdi__) || defined(__DARWIN__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__bsdi__) || defined(__DARWIN__) || defined(__DragonFly__)
  #define SYS_BSD 1
  #endif
  
-@@ -282,7 +282,7 @@ static char *bsd_block2char( const char 
-     char *new_path;
- 
-     /* If it doesn't start with "/dev/" or does start with "/dev/r" exit */ 
--    if( !strncmp( path, "/dev/",  5 ) || strncmp( path, "/dev/r", 6 ) ) 
-+    if( strncmp( path, "/dev/",  5 ) || !strncmp( path, "/dev/r", 6 ) ) 
-       return (char *) strdup( path );
- 
-     /* Replace "/dev/" with "/dev/r" */
-@@ -915,7 +915,7 @@ ssize_t DVDReadBlocks( dvd_file_t *dvd_f
-     return (ssize_t)ret;
- }
- 
--int32_t DVDFileSeek( dvd_file_t *dvd_file, int32_t offset )
-+int32_t DVDFileSeek( dvd_file_t *dvd_file, int offset )
- {
-     /* Check arguments. */
-     if( dvd_file == NULL || offset < 0 )
-@@ -1033,7 +1033,7 @@ int DVDISOVolumeInfo( dvd_reader_t *dvd,
- 
-   /* Check arguments. */
-   if( dvd == NULL )
--    return 0;
-+    return -1;
-   
-   if( dvd->dev == NULL ) {
-     /* No block access, so no ISO... */
