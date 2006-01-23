@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4494 2006/01/23 22:11:12 wiz Exp $
+$NetBSD: TODO,v 1.4495 2006/01/23 22:47:33 recht Exp $
 
 Suggested new packages
 ======================
@@ -1029,7 +1029,6 @@ Suggested package updates
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
 	o qcad-2.0.4.0 [pkgsrc-wip]
-	o qstat-2.0 [pkg/32605]
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-docs-2.3.2
