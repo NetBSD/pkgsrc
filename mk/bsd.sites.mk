@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.54 2006/01/21 11:49:57 rxg Exp $
+# $NetBSD: bsd.sites.mk,v 1.55 2006/01/23 17:57:47 xtraeme Exp $
 #
 # Default MASTER_SITES
 
@@ -168,6 +168,31 @@ MASTER_SITE_APACHE+=    \
 	ftp://apache.secsup.org/pub/apache/dist/ \
 	ftp://sunsite.tus.ac.jp/pub/archives/www/apache/ \
 	ftp://ftp.mirrorservice.org/sites/ftp.apache.org/
+
+MASTER_SITE_MYSQL+=	\
+	ftp://ftp.easynet.be/mysql/Downloads/	\
+	ftp://ftp.fi.muni.cz/pub/mysql/Downloads/	\
+	http://mysql.mirrors.cybercity.dk/Downloads/	\
+	ftp://ftp.fh-wolfenbuettel.de/pub/database/mysql/Downloads/	\
+	ftp://ftp.gwdg.de/pub/misc/mysql/Downloads/	\
+	http://netmirror.org/mirror/mysql.com/Downloads/	\
+	ftp://netmirror.org/mysql.com/Downloads/	\
+	http://mirrors.ntua.gr/MySQL/Downloads/		\
+	ftp://ftp.ntua.gr/pub/databases/mysql/Downloads/	\
+	http://mysql.sote.hu/Downloads/	\
+	ftp://ftp.rhnet.is/pub/mysql/Downloads/	\
+	ftp://mirror.widexs.nl/pub/mysql/Downloads/	\
+	ftp://mirror.etf.bg.ac.yu/mysql/Downloads/	\
+	ftp://mirror.switch.ch/mirror/mysql/Downloads/	\
+	http://mysql.dp.ua/Downloads/	\
+	http://mysql.mirrored.ca/Downloads/	\
+	ftp://mirror.services.wisc.edu/mirrors/mysql/Downloads/	\
+	ftp://ftp.orst.edu/pub/mysql/Downloads/	\
+	http://mysql.mirrors.pair.com/Downloads/	\
+	ftp://mysql.bannerlandia.com.ar/mirrors/mysql/Downloads/	\
+	ftp://ftp.linorg.usp.br/mysql/Downloads/	\
+	ftp://ftp.cbn.net.id/mirror/mysql/Downloads/	\
+	http://download.softagency.net/MySQL/Downloads/
 
 MASTER_SITE_DEBIAN+= \
 	http://ftp.debian.org/debian/ \
