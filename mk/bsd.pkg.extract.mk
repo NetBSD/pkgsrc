@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.19 2006/01/21 21:32:51 jlam Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.20 2006/01/23 14:19:08 rillig Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -142,7 +142,7 @@ EXTRACT_OPTS+=	${TOOLS_PAX:D	-t ${TOOLS_PAX}}
 
 EXTRACT_CMD_DEFAULT=							\
 	${SETENV} ${_EXTRACT_ENV}					\
-	${.CURDIR}/../../mk/scripts/extract				\
+	${SH} ${.CURDIR}/../../mk/scripts/extract			\
 		${EXTRACT_OPTS}						\
 		${DOWNLOADED_DISTFILE} ${EXTRACT_ELEMENTS}
 
