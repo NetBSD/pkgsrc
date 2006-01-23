@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4493 2006/01/23 21:50:17 wiz Exp $
+$NetBSD: TODO,v 1.4494 2006/01/23 22:11:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -679,7 +679,6 @@ Suggested package updates
 	o leafpad-0.8.6
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
-	o libdvdread-0.9.5
 	o libesmtp-1.0.4
 	o libextractor-0.5.9
 	o libflash-0.4.13
