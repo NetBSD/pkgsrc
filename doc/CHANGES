@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12639 2006/01/23 21:49:32 wiz Exp $
+$NetBSD: CHANGES,v 1.12640 2006/01/23 22:11:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -500,3 +500,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-Params-Validate to 0.79 [wiz 2006-01-23]
 	Updated devel/p5-Exception-Class to 1.23 [wiz 2006-01-23]
 	Updated misc/dialog to 1.0.20060119 [wiz 2006-01-23]
+	Updated multimedia/libdvdread to 0.9.5 [wiz 2006-01-23]
