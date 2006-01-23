@@ -1,34 +1,33 @@
-# $NetBSD: Makefile,v 1.12 2006/01/08 18:35:08 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2006/01/23 18:53:45 xtraeme Exp $
 #
 
-DISTNAME=		MyODBC-2.50.36
-PKGNAME=		myodbc-2.50.36
-PKGREVISION=		2
-CATEGORIES=		databases
-MASTER_SITES=		http://www.mysql.com/Downloads/MyODBC/
+DISTNAME=	mysql-connector-odbc-3.51.12
+PKGNAME=	${DISTNAME:S/mysql-connector-odbc/myodbc/}
+CATEGORIES=	databases
+MASTER_SITES=	${MASTER_SITE_MYSQL:=MyODBC3/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
-HOMEPAGE=		http://www.mysql.com/
-COMMENT=		ODBC driver (server side) for MySQL
+MAINTAINER=	tech-pkg@NetBSD.org
+HOMEPAGE=	http://www.mysql.com/
+COMMENT=	ODBC driver (server side) for MySQL
 
-GNU_CONFIGURE=		yes
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake
 
-CONFIGURE_ARGS+=	--with-mysql-libs=${BUILDLINK_PREFIX.mysql-client}/lib/mysql
-CONFIGURE_ARGS+=	--with-mysql-includes=${BUILDLINK_PREFIX.mysql-client}/include/mysql
-CONFIGURE_ARGS+=	--with-iodbc=${BUILDLINK_PREFIX.iodbc}
-CONFIGURE_ARGS+=	--with-odbc-ini=${BUILDLINK_PREFIX.iodbc}/etc/odbc.ini
+CONFIGURE_ARGS+=	--with-mysql-path=${BUILDLINK_PREFIX.mysql-client}
+CONFIGURE_ARGS+=	--disable-gui
+CONFIGURE_ARGS+=	--disable-myodbc3i
+CONFIGURE_ARGS+=	--without-samples
+CONFIGURE_ARGS+=	--disable-test
 
-USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-
-USE_TOOLS+=		gmake
-
-.include "../../databases/iodbc/buildlink3.mk"
-.include "../../mk/mysql.buildlink3.mk"
+INSTALLATION_DIRS=	share/doc/myodbc
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/myodbc
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/myodbc
-	${INSTALL_DATA} ${WRKSRC}/README-WIN32 ${PREFIX}/share/doc/myodbc
+	${INSTALL_DATA} ${WRKSRC}/README* ${PREFIX}/share/doc/myodbc
 
+.include "options.mk"
+.include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
