@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/12/05 20:49:56 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2006/01/23 00:06:39 rillig Exp $
 
 DISTNAME=		cross-${TARGET_ARCH}-3.2
 CROSS_DISTFILES=
@@ -39,22 +39,22 @@ CC_FOR_TARGET=		${GCC_WRKSRC}/${TARGET_ARCH}/gcc/xgcc \
 		-I${WRKSRC}/include -L${WRKSRC}/lib
 CXX_FOR_TARGET=		${CC_FOR_TARGET}
 GCC_MAKE_FLAGS=		\
-			CC_FOR_TARGET="${CC_FOR_TARGET}" \
-			GCC_FOR_TARGET="${CC_FOR_TARGET}" \
-			CXX_FOR_TARGET="${CXX_FOR_TARGET}" \
-			AS_FOR_TARGET="${AS_FOR_TARGET}" \
-			AR_FOR_TARGET="${AR_FOR_TARGET}" \
-			NM_FOR_TARGET="${NM_FOR_TARGET}" \
-			RANLIB_FOR_TARGET="${RANLIB_FOR_TARGET}" \
-			LD_FOR_TARGET="${LD_FOR_TARGET}" \
+			CC_FOR_TARGET=${CC_FOR_TARGET:Q} \
+			GCC_FOR_TARGET=${CC_FOR_TARGET:Q} \
+			CXX_FOR_TARGET=${CXX_FOR_TARGET:Q} \
+			AS_FOR_TARGET=${AS_FOR_TARGET:Q} \
+			AR_FOR_TARGET=${AR_FOR_TARGET:Q} \
+			NM_FOR_TARGET=${NM_FOR_TARGET:Q} \
+			RANLIB_FOR_TARGET=${RANLIB_FOR_TARGET:Q} \
+			LD_FOR_TARGET=${LD_FOR_TARGET:Q} \
 			LANGUAGES="c c++" \
 			INSTALL="${INSTALL} -c -o ${BINOWN} -g ${BINGRP}" \
-			INSTALL_PROGRAM="${INSTALL_PROGRAM}"
-TARGET_CONFIGURE_ENV=	CC="${CC_FOR_TARGET}" \
-			AR="${AR_FOR_TARGET}" \
-			AS="${AS_FOR_TARGET}" \
-			RANLIB="${RANLIB_FOR_TARGET}" \
-			LD="${LD_FOR_TARGET}" \
+			INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}
+TARGET_CONFIGURE_ENV=	CC=${CC_FOR_TARGET:Q} \
+			AR=${AR_FOR_TARGET:Q} \
+			AS=${AS_FOR_TARGET:Q} \
+			RANLIB=${RANLIB_FOR_TARGET:Q} \
+			LD=${LD_FOR_TARGET:Q} \
 			DLLTOOL="${BINUTILS_WRKSRC}/binutils/dlltool" \
 			WINDRES="${BINUTILS_WRKSRC}/binutils/windres"
 
@@ -66,11 +66,11 @@ post-extract:
 do-configure: bu-configure gcc-configure
 bu-configure:
 	cd ${BINUTILS_WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./configure \
-		--prefix=${PREFIX} --target=${TARGET_ARCH} --disable-nls
+		--prefix=${PREFIX:Q} --target=${TARGET_ARCH:Q} --disable-nls
 gcc-configure:
 	${MKDIR} ${GCC_WRKSRC}/${TARGET_ARCH}
 	cd ${GCC_WRKSRC}/${TARGET_ARCH} && ${SETENV} ${CONFIGURE_ENV} ../configure \
-		--prefix=${PREFIX} --target=${TARGET_ARCH} \
+		--prefix=${PREFIX:Q} --target=${TARGET_ARCH:Q} \
 		--with-gnu-as --with-gnu-ld --disable-multilib --disable-nls \
 		--enable-sjlj-exceptions \
 		--with-gxx-include-dir=${TARGET_DIR}/include/c++/${GCC_VERSION}
