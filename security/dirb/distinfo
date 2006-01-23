@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/14 00:44:03 minskim Exp $
+$NetBSD: distinfo,v 1.2 2006/01/23 07:51:47 recht Exp $
 
-SHA1 (dirb18.tar.gz) = 63183b6a91ff1a0ce2cd412f8207f904fa5f6305
-RMD160 (dirb18.tar.gz) = db7881ad70301ab4c47bed815ac6cae3d113ffba
-Size (dirb18.tar.gz) = 219860 bytes
+SHA1 (dirb19.tar.gz) = 5b80f6700805ba02226d1cf0cf0505693762ca89
+RMD160 (dirb19.tar.gz) = 0b4a7f7efced1057b58f7a314dc43c7d89d60810
+Size (dirb19.tar.gz) = 223149 bytes
