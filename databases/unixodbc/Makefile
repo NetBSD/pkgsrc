@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2006/01/06 18:36:52 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/01/23 20:50:47 xtraeme Exp $
 
 PKGNAME=		unixodbc-${ODBC_BASE_VERS}
-PKGREVISION=		5
 COMMENT=		ODBC 2.x/3.x driver manager
 
 CONFLICTS+=		iodbc-[0-9]*
@@ -16,24 +15,23 @@ FILES_SUBST+=		UNIXODBC_DRIVERS_DIR=${UNIXODBC_DRIVERS_DIR:Q}
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
-CONF_FILES=		${EGDIR}/odbcinst.ini ${PKG_SYSCONFDIR}/odbcinst.ini
-CONF_FILES+=		/dev/null ${PKG_SYSCONFDIR}/odbc.ini
+CONF_FILES=		${EGDIR}/odbc.ini ${PKG_SYSCONFDIR}/odbc.ini
 OWN_DIRS=		${PKG_SYSCONFDIR}/ODBCDataSources
 
 post-patch: fix-driver-installation
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	${WRKDIR}/odbcinst.ini
+SUBST_FILES.paths=	${WRKDIR}/odbc.ini
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@UNIXODBC_DRIVERS_DIR@,${UNIXODBC_DRIVERS_DIR},g'
 SUBST_STAGE.paths=	post-patch
 
 post-extract:
-	${CP} ${FILESDIR}/odbcinst.ini.in ${WRKDIR}/odbcinst.ini
+	${CP} ${FILESDIR}/odbcinst.ini.in ${WRKDIR}/odbc.ini
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKDIR}/odbcinst.ini ${EGDIR}/odbcinst.ini
+	${INSTALL_DATA} ${WRKDIR}/odbc.ini ${EGDIR}/odbc.ini
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
