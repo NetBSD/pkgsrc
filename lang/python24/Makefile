@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2005/12/10 14:36:46 recht Exp $
+# $NetBSD: Makefile,v 1.19 2006/01/23 08:00:02 recht Exp $
 #
 
 DISTNAME=	Python-2.4.2
 PKGNAME=	python24-2.4.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang python
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.4.2/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,8 +16,8 @@ COMMENT=	Interpreted, interactive, object-oriented programming language
 
 CONFLICTS+=	python-[0-9]*
 
-USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-threads
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	OPT=${CFLAGS:M*:Q}
 
@@ -27,12 +27,12 @@ PTHREAD_OPTS+=	require
 CONFIGURE_ARGS+=	--with-pth
 .endif
 
+.include "../../mk/bsd.prefs.mk"
+
 # fdatasync()
 LIBS.SunOS+=		-lrt
 
 PY_VER_SUFFIX=		2.4
-
-.include "../../mk/bsd.prefs.mk"
 
 PLIST_SRC=	${.CURDIR}/../../lang/python24/PLIST.common
 .if exists(${.CURDIR}/../../lang/python24/PLIST.${OPSYS})
@@ -114,6 +114,15 @@ INSTALL_TARGET=	altinstall
 post-extract:
 	${MV} ${WRKSRC}/Lib/smtpd.py ${WRKSRC}/Lib/smtpd${PY_VER_SUFFIX}.py
 	${MV} ${WRKSRC}/Tools/scripts/pydoc ${WRKSRC}/Tools/scripts/pydoc${PY_VER_SUFFIX}
+
+.if ${OPSYS} == "Darwin"
+post-build:
+	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} libpython2.4.2.dylib)
+
+post-install:
+	${LN} -fs ${PREFIX}/lib/libpython2.4.2.dylib	\
+		${PREFIX}/lib/libpython2.4.dylib
+.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
