@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12636 2006/01/23 20:54:28 xtraeme Exp $
+$NetBSD: CHANGES,v 1.12637 2006/01/23 21:40:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -497,3 +497,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/unixodbc to 2.2.11 [xtraeme 2006-01-23]
 	Updated databases/unixodbc-DataManager to 2.2.11 [xtraeme 2006-01-23]
 	Updated databases/unixodbc-ODBCConfig to 2.2.11 [xtraeme 2006-01-23]
+	Updated devel/p5-Params-Validate to 0.79 [wiz 2006-01-23]
