@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12641 2006/01/23 22:47:34 recht Exp $
+$NetBSD: CHANGES,v 1.12642 2006/01/23 22:56:07 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -502,3 +502,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/dialog to 1.0.20060119 [wiz 2006-01-23]
 	Updated multimedia/libdvdread to 0.9.5 [wiz 2006-01-23]
 	Updated games/qstat to 2.10 [recht 2006-01-23]
+	Updated x11/xorg-server to 6.9.0nb2 [joerg 2006-01-23]
