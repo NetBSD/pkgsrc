@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2006/01/23 16:14:25 joerg Exp $
+
+--- src/plugins/Makefile.in.orig	2006-01-03 10:16:08.000000000 +0000
++++ src/plugins/Makefile.in
+@@ -610,7 +610,7 @@ libextractor_deb_la_SOURCES = \
+ 
+ libextractor_deb_la_LDFLAGS = \
+   $(top_builddir)/src/main/libextractor.la \
+-  $(PLUGINFLAGS) -lz -lpthread
++  $(PLUGINFLAGS) -lz ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+ 
+ libextractor_riff_la_SOURCES = \
+   riffextractor.c 
