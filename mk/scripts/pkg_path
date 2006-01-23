@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_path,v 1.2 2006/01/18 18:21:56 jlam Exp $
+# $NetBSD: pkg_path,v 1.3 2006/01/23 18:38:27 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -77,6 +77,8 @@ usage() {
 	${ECHO} 1>&2 "usage: $self [-s pkgsrcdir] dir ..."
 }
 
+exitcode=0
+
 # Process optional arguments
 while ${TEST} $# -gt 0; do
 	case "$1" in
@@ -97,11 +99,13 @@ while ${TEST} $# -gt 0; do
 	case "$dir" in
 	${PKGSRCDIR}/*)	;;
 	/*)	 ${ECHO} 1>&2 "$self: \`\`$dir'' not a valid package directory"
+		exitcode=1
 		continue
 		;;
 	esac
 	if ${TEST} ! -d "$startdir/$dir"; then
 		${ECHO} 1>&2 "$self: \`\`$dir'' not found"
+		exitcode=1
 		continue
 	fi
 	pkgpath=`cd $startdir/$dir && ${PWD_CMD}`
@@ -109,4 +113,4 @@ while ${TEST} $# -gt 0; do
 	${ECHO} "$pkgpath"
 done
 
-exit 0
+exit $exitcode
