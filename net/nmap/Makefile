@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/12/08 21:59:17 salo Exp $
+# $NetBSD: Makefile,v 1.47 2006/01/23 15:19:24 rillig Exp $
 #
 
 DISTNAME=	nmap-3.95
@@ -27,6 +27,13 @@ CONFIGURE_ARGS+=	--without-nmapfe
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
 MAKE_ENV+=	CPPFLAGS=""
+.endif
+
+# The SunPro C++ compiler does not understand __FUNCTION__, as well as
+# __func__. So __FILE__ is the nearest replacement.
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Msunpro)
+CFLAGS.SunOS+=	-D__FUNCTION__=__FILE__
 .endif
 
 .include "../../devel/pcre/buildlink3.mk"
