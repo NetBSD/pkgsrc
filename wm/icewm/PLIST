@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/01/06 20:49:20 rillig Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/01/23 11:12:50 ghen Exp $
 bin/icehelp
 bin/icesh
 bin/icewm
@@ -107,8 +107,10 @@ share/icewm/mailbox/unreadmail.xpm
 share/icewm/menu
 share/icewm/preferences
 share/icewm/taskbar/bsd-daemon.xpm
+share/icewm/taskbar/collapse.xpm
 share/icewm/taskbar/debian.xpm
 share/icewm/taskbar/desktop.xpm
+share/icewm/taskbar/expand.xpm
 share/icewm/taskbar/icewm.xpm
 share/icewm/taskbar/linux.xpm
 share/icewm/taskbar/linux1.xpm
