@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4484 2006/01/23 17:52:53 wiz Exp $
+$NetBSD: TODO,v 1.4485 2006/01/23 18:36:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -507,7 +507,6 @@ Suggested package updates
 	o eukleides-1.0.3
 	o euler-1.61
 	o evilwm-0.99.20
-	o evince-0.5.0
 	o exim-4.60
 	o exmh-2.7.2
 	o f2c-20031025
@@ -977,7 +976,6 @@ Suggested package updates
 	o pnet-0.7.2 [pkg/31950]
 	o pnetC-0.7.2 [pkg/31950]
 	o pnetlib-0.7.2 [pkg/31950]
-	o poppler-0.5.0
 	o poppy-4.01
 	o poptop-1.3.0
 	o posh-0.4.3
