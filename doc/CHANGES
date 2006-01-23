@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12629 2006/01/23 11:14:35 ghen Exp $
+$NetBSD: CHANGES,v 1.12630 2006/01/23 12:06:19 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -488,3 +488,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/python24 to 2.4.2nb3 [recht 2006-01-23]
 	Updated wm/icewm to 1.2.23nb1 [ghen 2006-01-23]
 	Updated wm/icewm-imlib to 1.2.23nb1 [ghen 2006-01-23]
+	Updated devel/p5-Test-Cmd to 1.05 [wulf 2006-01-23]
