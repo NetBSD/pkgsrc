@@ -1,4 +1,4 @@
-# $NetBSD: bsd.utils.mk,v 1.5 2006/01/19 00:40:00 jlam Exp $
+# $NetBSD: bsd.utils.mk,v 1.6 2006/01/23 15:01:39 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines utility
 # and otherwise miscellaneous variables and targets.
@@ -10,11 +10,11 @@
 #
 DEPENDS_TYPE?=  all
 .if !empty(DEPENDS_TYPE:Mbuild) || !empty(DEPENDS_TYPE:Mall)
-_ALL_DEPENDS_PKGSRCDIRS+=	${BUILD_DEPENDS:C/^[^:]*://}
+_ALL_DEPENDS+=	${BUILD_DEPENDS}
 .endif
 .if !empty(DEPENDS_TYPE:Minstall) || !empty(DEPENDS_TYPE:Mpackage) || \
     !empty(DEPENDS_TYPE:Mall)
-_ALL_DEPENDS_PKGSRCDIRS+=	${DEPENDS:C/^[^:]*://}
+_ALL_DEPENDS+=	${DEPENDS}
 .endif
 
 # _PKG_PATHS_CMD canonicalizes package paths so that they're relative to
@@ -27,7 +27,7 @@ _PKG_PATHS_CMD=								\
 
 .PHONY: show-depends-dirs show-depends-pkgpaths
 show-depends-dirs show-depends-pkgpaths:
-	@${_PKG_PATHS_CMD} ${_ALL_DEPENDS_PKGSRCDIRS:O:u}
+	@${_PKG_PATHS_CMD} ${_ALL_DEPENDS:C/^[^:]*://:O:u}
 
 # _DEPENDS_WALK_CMD holds the command (sans arguments) to walk the
 # dependency graph for a package.
