@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12638 2006/01/23 21:45:04 wiz Exp $
+$NetBSD: CHANGES,v 1.12639 2006/01/23 21:49:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -499,3 +499,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/unixodbc-ODBCConfig to 2.2.11 [xtraeme 2006-01-23]
 	Updated devel/p5-Params-Validate to 0.79 [wiz 2006-01-23]
 	Updated devel/p5-Exception-Class to 1.23 [wiz 2006-01-23]
+	Updated misc/dialog to 1.0.20060119 [wiz 2006-01-23]
