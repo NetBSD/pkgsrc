@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4485 2006/01/23 18:36:08 wiz Exp $
+$NetBSD: TODO,v 1.4486 2006/01/23 18:55:00 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1395,7 +1395,7 @@ Suggested cleanups in pkgsrc
 	  audio/audacity, audio/wsoundserver, benchmarks/benchfft,
 	  cad/geda, cad/gnetlist, cad/gsymcheck, chat/gale,
 	  chat/icqlib, converters/recode, databases/iodbc,
-	  databases/myodbc, databases/tcl-gdbm, devel/eel, devel/glib,
+	  databases/tcl-gdbm, devel/eel, devel/glib,
 	  devel/libdockapp, devel/libproplist, devel/libsmi,
 	  devel/libstroke, devel/xdelta, editors/cooledit,
 	  games/xpuyopuyo, graphics/GUIlib,
