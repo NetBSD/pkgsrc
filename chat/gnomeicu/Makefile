@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/01/06 15:10:01 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2006/01/23 22:59:54 joerg Exp $
 
 DISTNAME=	gnomeicu-0.99.5
 PKGREVISION=	2
@@ -16,6 +16,7 @@ USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 BUILD_USES_MSGFMT=	YES
+BROKEN_GETTEXT_DETECTION=	YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${EGDIR:Q}
 
