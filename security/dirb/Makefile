@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2005/10/20 16:29:18 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/23 07:51:47 recht Exp $
 #
 
-DISTNAME=	dirb18
-PKGNAME=	dirb-1.8
+PKGNAME=	dirb-1.9
+DISTNAME=	dirb19
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dirb/}
 
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://dirb.sourceforge.net/
 COMMENT=	Web Content Scanner
+
+WRKSRC=${WRKDIR}/dirb
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
