@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2005/12/05 23:55:24 rillig Exp $
+# $NetBSD: Makefile,v 1.113 2006/01/23 17:08:46 joerg Exp $
 
 DISTNAME=		gnome-libs-1.4.2
 PKGREVISION=		4
@@ -11,6 +11,7 @@ COMMENT=		Libraries for the GNU Network Object Model Environment
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+BROKEN_GETTEXT_DETECTION=	YES
 BUILD_USES_MSGFMT=	YES
 
 USE_DIRS+=		gnome1-1.5
