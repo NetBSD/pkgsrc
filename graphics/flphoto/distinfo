@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/12/06 18:53:31 joerg Exp $
+$NetBSD: distinfo,v 1.4 2006/01/23 17:00:05 joerg Exp $
 
 SHA1 (flphoto-1.2-source.tar.bz2) = 634cdbf80690b96009fb1c2952f0dff3733710ba
 RMD160 (flphoto-1.2-source.tar.bz2) = 1a9d574182a1f21f44493fa5e6f39d58c0d6c2a1
 Size (flphoto-1.2-source.tar.bz2) = 501459 bytes
 SHA1 (patch-aa) = 0a47885db0284d770c10db8d1dcc3c315df85dbc
+SHA1 (patch-ab) = 7f811ac03c9495dfdc7c3c84b3a3b30647371353
