@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/10/05 13:29:50 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/23 23:08:47 wiz Exp $
 
 .include	"../../inputmethod/anthy/Makefile.common"
 
@@ -30,20 +30,22 @@ SITES_2ch.t+=	http://omaemona.sourceforge.net/packages/Zisyo/
 .endif
 
 .if !empty(PKG_OPTIONS:Mokinawa_dict)
-DISTFILES+=			okinawa-20050607.t
-SITES_okinawa-20050607.t+=	http://www.ofug.net/~yamajun/files/
+OKIDIC_VERSION=			okinawa-20051104
+DISTFILES+=			${OKIDIC_VERSION}.tar.gz
+EXTRACT_ONLY+=			${OKIDIC_VERSION}.tar.gz
+SITES_${OKIDIC_VERSION}.tar.gz+=	http://www.ofug.net/~yamajun/files/
 .endif
 
 post-patch:
 .if !empty(PKG_OPTIONS:M2ch_dict)
 	${CP} ${DISTDIR}/2ch.t ${WRKSRC}/mkanthydic
-	@printf '/^EXTRA_DICS\ns/$$/ 2ch.t/\nwq\n' | \
-		ed -s ${WRKSRC}/mkanthydic/Makefile.in
+	@${PRINTF} "/read @top_srcdir@\\\\/mkanthydic\\\\/placename.t\na\nread @top_srcdir@/mkanthydic/2ch.t\n.\nw\n" | \
+	ed -s ${WRKSRC}/mkanthydic/dict.args.in
 .endif
 .if !empty(PKG_OPTIONS:Mokinawa_dict)
-	${CP} ${DISTDIR}/okinawa-20050607.t ${WRKSRC}/mkanthydic
-	@printf '/^EXTRA_DICS\ns/$$/ okinawa-20050607.t/\nwq\n' | \
-		ed -s ${WRKSRC}/mkanthydic/Makefile.in
+	${CP} ${WRKDIR}/${OKIDIC_VERSION}/okinawa.t ${WRKSRC}/mkanthydic
+	@${PRINTF} "/read @top_srcdir@\\\\/mkanthydic\\\\/placename.t\na\nread @top_srcdir@/mkanthydic/okinawa.t\n.\nw\n" | \
+	ed -s ${WRKSRC}/mkanthydic/dict.args.in
 .endif
 
 post-install:
@@ -52,5 +54,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/ELISP ${PREFIX}/share/doc/anthy
 	${INSTALL_DATA} ${WRKSRC}/doc/GUIDE.english ${PREFIX}/share/doc/anthy
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/anthy
+	${INSTALL_DATA} ${WRKSRC}/README.en ${PREFIX}/share/doc/anthy
 
 .include "../../mk/bsd.pkg.mk"

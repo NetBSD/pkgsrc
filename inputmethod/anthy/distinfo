@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.7 2005/09/05 15:00:09 taya Exp $
+$NetBSD: distinfo,v 1.8 2006/01/23 23:08:47 wiz Exp $
 
-SHA1 (anthy-6700b.tar.gz) = 19e53a9c41497ef2949e23851999ed72fd211e83
-RMD160 (anthy-6700b.tar.gz) = 02815a1ec441b46e75cf34c1effb2a967b0b8331
-Size (anthy-6700b.tar.gz) = 2218622 bytes
+SHA1 (anthy-7100b.tar.gz) = c7aad6ea0e6dc462be3926052a538b88ac2e4aee
+RMD160 (anthy-7100b.tar.gz) = 62de300bf50f727672f63109fd409b7cbdbb5572
+Size (anthy-7100b.tar.gz) = 3359606 bytes
 SHA1 (2ch.t) = 2160d7b0079e2c1a14093da968f34e7f8dbc07c2
 RMD160 (2ch.t) = b05902485829eebb4e09c554f095275f5278dd8b
 Size (2ch.t) = 142157 bytes
-SHA1 (okinawa-20050607.t) = 50f9524e5f11240cbc486c32eb86fcc1a3075e6f
-RMD160 (okinawa-20050607.t) = 6ee9adeaddb0c62c6a4741761d14932603ee7a81
-Size (okinawa-20050607.t) = 150145 bytes
+SHA1 (okinawa-20051104.tar.gz) = cb42ef43b36680661cd90cb39c1ccde13ec0a115
+RMD160 (okinawa-20051104.tar.gz) = 6abaea3d0508d376d09628b483a609f32bf694eb
+Size (okinawa-20051104.tar.gz) = 52191 bytes
 SHA1 (patch-aa) = 79816563a3d1ff853bc1edcbfee7e22ae2e26991
