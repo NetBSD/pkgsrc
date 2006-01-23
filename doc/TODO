@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4486 2006/01/23 18:55:00 xtraeme Exp $
+$NetBSD: TODO,v 1.4487 2006/01/23 20:18:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -841,7 +841,6 @@ Suggested package updates
 	o p5-Crypt-Random-1.25
 	o p5-DBD-Oracle-1.16
 	o p5-DBD-Sybase-1.07
-	o p5-DBD-mysql-3.0002
 	o p5-DBD-postgresql-1.32
 	o p5-DBIx-ContextualFetch-1.03
 	o p5-Data-FormValidator-4.02
