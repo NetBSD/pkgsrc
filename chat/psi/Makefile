@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2006/01/05 10:08:58 ghen Exp $
+# $NetBSD: Makefile,v 1.32 2006/01/23 17:05:02 xtraeme Exp $
 
-PSI_VERSION=	0.9.3
+PSI_VERSION=	0.10
 DISTNAME=	psi-${PSI_VERSION}
-PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +20,7 @@ COMMENT=	PSI Jabber Client
 DEPENDS+=	qca-tls>=1.0:../../security/qca-tls
 
 USE_TOOLS+=	gmake
+USE_LANGUAGES+=	c++
 USE_LIBTOOL=	yes
 HAS_CONFIGURE=	yes
 
@@ -36,10 +36,10 @@ LANG_FILES=	psi_zh.qm psi_nl.qm psi_sk.qm psi_fr.qm psi_cs.qm	\
 		psi_es.qm psi_ru.qm psi_vi.qm
 
 .for l in ${LANG_FILES}
-SITES_${l}=	http://psi.affinix.com/?version=${PSI_VERSION}&file=
+SITES_${l}=	http://psi-im.org/download?page=download&version=${PSI_VERSION}&lang_id=
 .endfor
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/psi share/doc/psi
 
 # XXX the psiwidgets.so symlink is somewhat ugly, but without that
 # uic doesn't find the built plug-in and generates sources without
@@ -54,24 +54,26 @@ post-configure:
 	${MV} ${WRKSRC}/Makefile.new ${WRKSRC}/Makefile
 	cd ${WRKSRC}/libpsi/psiwidgets && ( ${SETENV} ${CONFIGURE_ENV}	\
 		${QTDIR}/bin/qmake psiwidgets.pro -o Makefile; \
-		${SED} -e 's,-rpath.*$$,-rpath "${QTDIR}/lib",' < Makefile > Makefile.new; \
+		${SED} -e 's,-rpath.*$$,-rpath "${QTDIR}/lib",' \
+			< Makefile > Makefile.new; \
 		${MV} Makefile.new Makefile; \
 		${LN} -s .libs/libpsiwidgets.so psiwidgets.so; \
 	)
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/psi
-	cd ${WRKSRC} && \
-	${CP} -f -pR iconsets sound certs README COPYING ${PREFIX}/share/psi/
-	for f in ${LANG_FILES}; do \
-		${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$$f \
-			 ${PREFIX}/share/psi/; \
-	done
+.for f in iconsets sound certs
+	${INSTALL_DATA_DIR} ${PREFIX}/share/psi/${f}
+	cd ${WRKSRC}/${f} && ${PAX} -rwppm . ${PREFIX}/share/psi/${f}
+.endfor
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/psi
+.for f in ${LANG_FILES}
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${f} ${PREFIX}/share/psi
+.endfor
 	${INSTALL_PROGRAM} ${WRKSRC}/psi ${PREFIX}/bin/psi
 
-.include "../../x11/qt3-libs/buildlink3.mk"
-.include "../../x11/qt3-tools/buildlink3.mk"
+.include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/qca/buildlink3.mk"
-.include "../../devel/libidn/buildlink3.mk"
+.include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
