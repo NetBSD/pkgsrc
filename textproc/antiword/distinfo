@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.16 2005/11/14 23:04:13 wiz Exp $
+$NetBSD: distinfo,v 1.17 2006/01/23 14:23:56 salo Exp $
 
 SHA1 (antiword-0.37.tar.gz) = 4364f7f99cb2d37f7d1d5bc14a335ccc0c67292e
 RMD160 (antiword-0.37.tar.gz) = 506ca4a7a7fa9fd4574092798a7fffacd9a3a0a0
 Size (antiword-0.37.tar.gz) = 317884 bytes
 SHA1 (patch-aa) = 27cd582ced9822bbaefddd73d2fe2ba6c904ae1f
+SHA1 (patch-ab) = 554f2f2d9dfdc06a5cd8869488043b62fb32108d
