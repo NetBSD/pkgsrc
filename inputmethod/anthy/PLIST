@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/03/03 15:34:08 taya Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/01/23 23:08:47 wiz Exp $
 bin/anthy-agent
 bin/anthy-dic-tool
 etc/anthy-conf
@@ -9,24 +9,16 @@ lib/libanthy.la
 lib/libanthydic.la
 lib/libanthyinput.la
 lib/pkgconfig/anthy.pc
-share/anthy/a.depword
-share/anthy/ajv.depword
+share/anthy/anthy.dep
 share/anthy/anthy.dic
-share/anthy/av.depword
-share/anthy/conjugate.depword
-share/anthy/conjugate.table
 share/anthy/dic-tool-usage.txt
-share/anthy/fix.depword
-share/anthy/indepword.txt
-share/anthy/master.depword
-share/anthy/noun-variant.depword
-share/anthy/noun.depword
 share/anthy/typetab
-share/anthy/v.depword
+share/anthy/zipcode.t
 share/doc/anthy/DICUTIL
 share/doc/anthy/ELISP
 share/doc/anthy/GUIDE.english
 share/doc/anthy/README
+share/doc/anthy/README.en
 @dirrm share/doc/anthy
 @dirrm share/anthy
 @dirrm include/anthy
