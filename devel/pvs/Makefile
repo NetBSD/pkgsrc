@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/11/11 18:50:24 tonio Exp $
+# $NetBSD: Makefile,v 1.24 2006/01/23 16:50:55 joerg Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
@@ -36,6 +36,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=  	${RESTRICTED}
 
 ONLY_FOR_PLATFORM=	NetBSD-1.6*-* NetBSD-[2-9]*-* Linux-*-* SunOS-*-*
+ONLY_FOR_PLATFORM+=	DragonFly-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
