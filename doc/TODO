@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4483 2006/01/23 17:05:54 xtraeme Exp $
+$NetBSD: TODO,v 1.4484 2006/01/23 17:52:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -339,6 +339,7 @@ Suggested package updates
 	o amavis-0.3.12
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.74
+	o anthy-7100b [pkg/32091]
 	o ap-Embperl-1.3.6
 	o ap-auth-mysql-4.3.9
 	o ap-auth-pam-1.1.1
@@ -361,7 +362,7 @@ Suggested package updates
 	o arj-3.10.22
 	o arnold-20040104
 	o asapm-3.1
-	o asc-1.16.2
+	o asc-1.16.3
 	o aspell-danish-1.4.49
 	o aspell-faroese-0.2.24
 	o aspell-ukrainian-1.1
@@ -465,6 +466,7 @@ Suggested package updates
 	o devIL-1.6.7
 	o devhelp-0.10
 	o devtodo-0.1.19
+	o dialog-1.0.20060119
 	o diffstat-1.41
 	o digikam-0.8.0
 	o dirac-0.5.4
@@ -680,6 +682,7 @@ Suggested package updates
 	o leafpad-0.8.6
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
+	o libdvdread-0.9.5
 	o libesmtp-1.0.4
 	o libextractor-0.5.9
 	o libflash-0.4.13
@@ -721,7 +724,7 @@ Suggested package updates
 	o manedit-0.6.1
 	o mantis-0.19.2
 	o mapserver-4.2.5
-	o maradns-1.2.01
+	o maradns-1.2.03.1
 	o mathomatic-12.5.6
 	o md-whois-4.7.8
 	o mdd-20050318
@@ -800,7 +803,7 @@ Suggested package updates
 	o openal-0.0.8
 	o opencobol-0.31
 	o openh323-1.17.2
-	o openldap-2.3.17
+	o openldap-2.3.18
 	o openoffice-2.0.1
 	o openpam-20050616
 	o openssl-0.9.8a
@@ -908,7 +911,6 @@ Suggested package updates
 	o p5-Set-Scalar-1.20
 	o p5-String-Approx-3.25
 	o p5-Template-Extract-0.40
-	o p5-Test-Cmd-1.05
 	o p5-Test-Harness-2.46
 	o p5-Text-Balanced-1.95
 	o p5-Text-BibTeX-0.34
@@ -1052,7 +1054,7 @@ Suggested package updates
 	o rayshade-4.0.6
 	o rblcheck-1.5
 	o rc-1.7.1
-	o rdiff-backup-1.0.3
+	o rdiff-backup-1.0.4
 	o rdp-1.6
 	o regionset-0.2
 	o remind-3.00.23
@@ -1080,7 +1082,7 @@ Suggested package updates
 	o rt3-3.4.5
 	o rtcw-1.41.3
 	o ruby-cmd-0.8.0
-	o rxvt-unicode-7.1
+	o rxvt-unicode-7.2
 	o sablecc-3.2
 	o sablevm-1.11.3 [pkg/30022]
 	o sablevm-1.12
