@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4489 2006/01/23 20:54:28 xtraeme Exp $
+$NetBSD: TODO,v 1.4490 2006/01/23 21:40:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -897,7 +897,6 @@ Suggested package updates
 	o p5-Net-TFTP-0.16
 	o p5-Net-Z3950-0.46
 	o p5-PV-1.5
-	o p5-Params-Validate-0.79
 	o p5-PerlIO-via-symlink-0.03
 	o p5-Pod-POM-0.15
 	o p5-PostScript-MailLabels-2.21
