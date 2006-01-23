@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4487 2006/01/23 20:18:29 wiz Exp $
+$NetBSD: TODO,v 1.4488 2006/01/23 20:21:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1034,6 +1034,7 @@ Suggested package updates
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
 	o qcad-2.0.4.0 [pkgsrc-wip]
+	o qstat-2.0 [pkg/32605]
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-docs-2.3.2
@@ -1073,10 +1074,9 @@ Suggested package updates
 	o rpc2-1.28
 	o rpm-4.1
 	o rsnapshot-1.2.3
-	o rt-3.4.4
-	o rt-mysql-3.4.1
-	o rt-pgsql-3.4.1
-	o rt3-3.4.5
+	o rt-3.4.5
+	o rt-mysql-3.4.5
+	o rt-pgsql-3.4.5
 	o rtcw-1.41.3
 	o ruby-cmd-0.8.0
 	o rxvt-unicode-7.2
