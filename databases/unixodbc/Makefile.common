@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2005/12/05 23:55:05 rillig Exp $
+# $NetBSD: Makefile.common,v 1.20 2006/01/23 20:50:47 xtraeme Exp $
 
 DISTNAME=	unixODBC-${ODBC_DIST_VERS}
 CATEGORIES=	databases
@@ -12,7 +12,7 @@ HOMEPAGE?=	http://www.unixodbc.org/
 # ODBC_DIST_VERS	version number on the php distfile
 # ODBC_BASE_VERS	pkgsrc-mangled version number (convert pl -> .)
 #
-ODBC_DIST_VERS=		2.0.11
+ODBC_DIST_VERS=		2.2.11
 ODBC_BASE_VERS=		${ODBC_DIST_VERS}
 
 USE_LIBTOOL=		YES
@@ -28,8 +28,6 @@ PTHREAD_OPTS+=		require
 # shared library.  The sources define all the relevant symbols (yywrap), so
 # libfl.a isn't needed.
 #
-MAKE_FLAGS+=		LIBLTDL="-lltdl"
-MAKE_FLAGS+=		INCLTDL="-I${BUILDLINK_PREFIX.ltdl}/include"
 MAKE_FLAGS+=		LEXLIB=""
 MAKE_ENV+=		AM_MAKEFLAGS=${MAKE_FLAGS:Q}
 
