@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/05 02:57:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/23 16:24:09 joerg Exp $
 #
 
 DISTNAME=		serialmail-0.75
@@ -19,6 +19,8 @@ USE_TOOLS+=		nroff
 # pkgsrc directories, and to avoid overwriting the "setlock" binary
 # provided by sysutils/daemontools.
 DJB_RESTRICTED=		YES
+
+SUBST_FILES.djbware+=	leapsecs_read.c
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
