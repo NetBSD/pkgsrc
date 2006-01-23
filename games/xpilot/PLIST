@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2003/02/26 04:07:50 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/01/23 16:46:20 joerg Exp $
 bin/xp-mapedit
 bin/xp-replay
 bin/xpilot
 bin/xpilots
-${IMAKE_MAN_SOURCE_PATH}6/xp-mapedit.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_SOURCE_PATH}6/xp-replay.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_SOURCE_PATH}6/xpilot.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_SOURCE_PATH}6/xpilots.${IMAKE_MANNEWSUFFIX}
+${IMAKE_GAMEMAN_DIR}/xp-mapedit.${IMAKE_GAMEMAN_SUFFIX}
+${IMAKE_GAMEMAN_DIR}/xp-replay.${IMAKE_GAMEMAN_SUFFIX}
+${IMAKE_GAMEMAN_DIR}/xpilot.${IMAKE_GAMEMAN_SUFFIX}
+${IMAKE_GAMEMAN_DIR}/xpilots.${IMAKE_GAMEMAN_SUFFIX}
 share/xpilot/defaults
 share/xpilot/maps/CAMD.xp
 share/xpilot/maps/blood-music2.xp
