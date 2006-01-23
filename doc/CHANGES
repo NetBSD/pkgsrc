@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12642 2006/01/23 22:56:07 joerg Exp $
+$NetBSD: CHANGES,v 1.12643 2006/01/23 23:09:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -503,3 +503,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/libdvdread to 0.9.5 [wiz 2006-01-23]
 	Updated games/qstat to 2.10 [recht 2006-01-23]
 	Updated x11/xorg-server to 6.9.0nb2 [joerg 2006-01-23]
+	Updated inputmethod/anthy to 7100b [wiz 2006-01-23]
