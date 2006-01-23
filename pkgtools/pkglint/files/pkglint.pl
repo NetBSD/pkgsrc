@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.480 2006/01/23 00:04:50 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.481 2006/01/23 01:51:46 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3352,7 +3352,12 @@ sub checkfile_DESCR($) {
 
 sub checkfile_distinfo($) {
 	my ($fname) = @_;
-	my ($lines, %in_distinfo, %sums);
+	my ($lines, %in_distinfo, $current_file, $state);
+
+	use constant DIS_start	=> 0;
+	use constant DIS_SHA1	=> 0;	# same as DIS_start
+	use constant DIS_RMD160	=> 1;
+	use constant DIS_Size	=> 2;
 
 	log_info($fname, NO_LINE_NUMBER, "[checkfile_distinfo]");
 
@@ -3373,15 +3378,64 @@ sub checkfile_distinfo($) {
 		$lines->[1]->explain("This is merely for aesthetical purposes.");
 	}
 
+	$current_file = undef;
+	$state = DIS_start;
 	foreach my $line (@{$lines}[2..$#{$lines}]) {
-		if ($line->text !~ /^(MD5|SHA1|RMD160|Size) \(([^)]+)\) = (.*)(?: bytes)?$/) {
+		if ($line->text !~ qr"^(\w+) \(([^)]+)\) = (.*)(?: bytes)?$") {
 			$line->log_error("Unknown line type.");
 			next;
 		}
-
 		my ($alg, $file, $sum) = ($1, $2, $3);
+		my $is_patch = (($file =~ qr"^patch-[A-Za-z0-9]+$") ? true : false);
 
-		if ($file =~ /^patch-[A-Za-z0-9]+$/) {
+		if ($alg eq "MD5") {
+			$line->log_warning("MD5 checksums are deprecated.");
+			$line->explain(
+				"Run \"".conf_make." makedistinfo\" to regenerate the distinfo file.");
+			next;
+		}
+
+		if ($state == DIS_SHA1) {
+			if ($alg eq "SHA1") {
+				$state = ($is_patch ? DIS_start : DIS_RMD160);
+				$current_file = $file;
+			} else {
+				$line->log_warning("Expected an SHA1 checksum.");
+			}
+
+		} elsif ($state == DIS_RMD160) {
+			$state = DIS_start;
+			if ($alg eq "RMD160") {
+				if ($file eq $current_file) {
+					$state = DIS_Size;
+				} else {
+					$line->log_warning("Expected an RMD160 checksum for ${current_file}, not for ${file}.");
+				}
+			} else {
+				if ($file eq $current_file) {
+					# This is an error because this really should be fixed.
+					$line->log_error("Expected an RMD160 checksum, not ${alg} for ${file}.");
+				} else {
+					$line->log_warning("Expected an RMD160 checksum for ${current_file}, not ${alg} for ${file}.");
+				}
+			}
+
+		} elsif ($state == DIS_Size) {
+			$state = DIS_start;
+			if ($alg eq "Size") {
+				if ($file ne $current_file) {
+					$line->log_warning("Expected a Size checksum for ${current_file}, not for ${file}.");
+				}
+			} else {
+				if ($file eq $current_file) {
+					$line->log_warning("Expected a Size checksum, not ${alg} for ${file}.");
+				} else {
+					$line->log_warning("Expected a Size checksum for ${current_file}, not ${alg} for ${file}.");
+				}
+			}
+		}
+
+		if ($is_patch) {
 			if (open(PATCH, "< ${current_dir}/${patchdir}/${file}")) {
 				my $data = "";
 				foreach my $patchline (<PATCH>) {
@@ -3398,19 +3452,10 @@ sub checkfile_distinfo($) {
 					"All patches that are mentioned in a distinfo file should actually exist.",
 					"What's the use of a checksum if there is no file to check?");
 			}
-		} else {
-			$sums{$alg}->{$file} = $line;
 		}
 		$in_distinfo{$file} = true;
 	}
 	checklines_trailing_empty_lines($lines);
-
-	# Check for distfiles that have SHA1, but not RMD160 checksums
-	foreach my $sha1_file (sort(keys(%{$sums{"SHA1"}}))) {
-		if (!exists($sums{"RMD160"}->{$sha1_file})) {
-			$sums{"SHA1"}->{$sha1_file}->log_error("RMD160 checksum missing for \"${sha1_file}\".");
-		}
-	}
 
 	foreach my $patch (<${current_dir}/$patchdir/patch-*>) {
 		$patch = basename($patch);
