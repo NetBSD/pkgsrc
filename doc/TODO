@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4481 2006/01/23 03:21:31 epg Exp $
+$NetBSD: TODO,v 1.4482 2006/01/23 07:04:29 recht Exp $
 
 Suggested new packages
 ======================
@@ -1218,6 +1218,7 @@ Suggested package updates
 	o vlc-0.8.1 [needs ffmpeg prerelease/snapshot]
 	o vlc-0.8.4
 	o vmware-module-3.2.2
+	o vmware-5.5
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vnc2swf-0.8.1
 	o vobcopy-0.5.16
