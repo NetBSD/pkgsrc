@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.51 2006/01/22 21:14:45 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.52 2006/01/23 10:36:19 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -103,3 +103,5 @@ Pullup ticket 1051 - requested by Klaus Klein
 security update for ap-auth-ldap
 Pullup ticket 1052 - requested by Roland Illig
 PKGNAME fix for ap2-auth-pgsql
+Pullup ticket 1053 - requested by Matthias Scheler
+security fix for xpdf
