@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/13 05:30:11 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/23 18:37:18 jlam Exp $
 #
 
 DISTNAME=	chemarrow
@@ -18,7 +18,7 @@ NO_BUILD=	yes
 .include "../../print/teTeX/module.mk"
 
 post-extract:
-	@(cd ${WRKSRC}/type1 && ${EXTRACT_CMD.zip} arrow.PC.zip)
+	@cd ${WRKSRC}/type1 && ${UNZIP_CMD} -Laqo arrow.PC.zip
 
 do-install:
 	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/source/chemarrow
