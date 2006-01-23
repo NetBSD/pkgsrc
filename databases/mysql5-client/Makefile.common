@@ -1,10 +1,8 @@
-# $NetBSD: Makefile.common,v 1.5 2006/01/09 16:25:01 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.6 2006/01/23 17:57:47 xtraeme Exp $
 
 DISTNAME=		mysql-5.0.18
 CATEGORIES=		databases
-MASTER_SITES=		http://mirrors.sunsite.dk/mysql/Downloads/MySQL-5.0/ \
-			ftp://sunsite.dk/mirrors/mysql/Downloads/MySQL-5.0/ \
-			ftp://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/MySQL-5.0/
+MASTER_SITES=		${MASTER_SITE_MYSQL:=MySQL-5.0/}
 
 MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://www.mysql.com/
