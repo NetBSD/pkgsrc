@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.20 2006/01/23 14:19:08 rillig Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.21 2006/01/23 14:43:50 rillig Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -119,7 +119,7 @@ _EXTRACT_ENV+=	${TOOLS_BZCAT:D		BZCAT=${TOOLS_BZCAT:Q}}
 _EXTRACT_ENV+=	${TOOLS_CAT:D		CAT=${TOOLS_CAT:Q}}
 _EXTRACT_ENV+=	${TOOLS_CP:D		CP=${TOOLS_CP:Q}}
 _EXTRACT_ENV+=	${TOOLS_ECHO:D		ECHO=${TOOLS_ECHO:Q}}
-_EXTRACT_ENV+=	${TOOLS_GZCAT:D		GZCAT=${TOOLS_GZCAT:Q}}
+_EXTRACT_ENV+=	${TOOLS_CMDLINE.gzcat:D	GZCAT=${TOOLS_CMDLINE.gzcat:Q}}
 _EXTRACT_ENV+=	${TOOLS_LHA:D		LHA=${TOOLS_LHA:Q}}
 _EXTRACT_ENV+=	${TOOLS_MKDIR:D		MKDIR=${TOOLS_MKDIR:Q}}
 _EXTRACT_ENV+=	${TOOLS_RM:D		RM=${TOOLS_RM:Q}}
