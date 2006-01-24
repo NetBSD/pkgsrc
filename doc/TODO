@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4500 2006/01/24 07:34:00 wiz Exp $
+$NetBSD: TODO,v 1.4501 2006/01/24 10:03:29 tonio Exp $
 
 Suggested new packages
 ======================
@@ -381,7 +381,6 @@ Suggested package updates
 	o bind-8.4.7
 	o bind-9.3.2
 	o bioperl-1.5.0
-	o bitlbee-1.0.1
 	o bittorrent-4.2.2
 	o bittorrent-gui-4.2.2
 	o blackbox-0.70
