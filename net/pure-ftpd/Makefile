@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/01/08 18:35:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.17 2006/01/24 22:46:48 ghen Exp $
 
 DISTNAME=	pure-ftpd-1.0.20
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/		\
 		ftp://ftp2.fr.pureftpd.org/pub/mirrors/ftp.fr.pureftpd.org/pub/pure-ftpd/releases/ \
@@ -37,6 +37,7 @@ post-install:
 		${INSTALL_DATA} README README.Authentication-Modules	 \
 				README.Configuration-File README.Contrib \
 				README.TLS README.Virtual-Users		 \
+				README.MySQL README.PGSQL README.LDAP	 \
 			${PREFIX}/share/doc/pure-ftpd
 
 .include "../../mk/bsd.pkg.mk"
