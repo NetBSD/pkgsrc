@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2005/12/29 06:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.66 2006/01/24 07:32:04 wiz Exp $
 #
 
 DISTNAME=		pango-1.10.2
+PKGREVISION=		1
 CATEGORIES=		devel fonts
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.8/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.8/ \

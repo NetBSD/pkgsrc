@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2005/06/01 18:03:00 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/01/24 07:32:20 wiz Exp $
 
 DISTNAME=	WMMail.app-0.64
 PKGNAME=	wmmail-0.64
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail x11 windowmaker
 MASTER_SITES=	http://www.eecg.utoronto.ca/~chanb/WMMail.app/
 

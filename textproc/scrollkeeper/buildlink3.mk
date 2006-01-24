@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/10/03 00:18:21 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/01/24 07:32:39 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SCROLLKEEPER_BUILDLINK3_MK:=	${SCROLLKEEPER_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	scrollkeeper
 
 .if !empty(SCROLLKEEPER_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.scrollkeeper+=	scrollkeeper>=0.3.12nb2
-BUILDLINK_RECOMMENDED.scrollkeeper+=	scrollkeeper>=0.3.14nb5
+BUILDLINK_RECOMMENDED.scrollkeeper+=	scrollkeeper>=0.3.14nb7
 BUILDLINK_PKGSRCDIR.scrollkeeper?=	../../textproc/scrollkeeper
 .endif	# SCROLLKEEPER_BUILDLINK3_MK
 
