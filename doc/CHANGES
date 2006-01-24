@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12655 2006/01/24 20:04:04 tonio Exp $
+$NetBSD: CHANGES,v 1.12656 2006/01/24 20:24:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -516,3 +516,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/mydns-mysql to 1.1.0 [ghen 2006-01-24]
 	Updated databases/adodb to 4.71 [adrianp 2006-01-24]
 	Updated databases/lbdb to 0.31.1 [tonio 2006-01-24]
+	Added emulators/e-uae version 0.8.28 [adam 2006-01-24]
