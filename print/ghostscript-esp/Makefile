@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/29 06:22:07 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/01/24 15:28:30 ben Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 PKGNAME=	ghostscript-esp-${GS_VERS}
@@ -31,7 +31,6 @@ DEPENDS+=	ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-cups
 CONFIGURE_ARGS+=	--with-ijs
 CONFIGURE_ARGS+=	--without-omni
 CONFIGURE_ARGS+=	--with-drivers=ALL
@@ -65,18 +64,12 @@ CFLAGS+=		-DHAVE_MKSTEMP=1
 
 REPLACE_PERL=		lib/fixmswrd.pl
 
-CUPS_CONFDIR?=		${PKG_SYSCONFBASEDIR}/cups
-CUPS_EGDIR=		${PREFIX}/share/examples/cups
-CUPS_MODEL_DIR=		${PREFIX}/share/cups/model
 DOCDIR=			${PREFIX}/share/doc/ghostscript
 
 PLIST_SUBST+=		GS_VERS=${BASEGS_VERS:Q}
 
-CONF_FILES=	${CUPS_EGDIR}/pstoraster.convs ${CUPS_CONFDIR}/pstoraster.convs
-
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../print/cups/buildlink3.mk"
 .include "../../print/gimp-print-lib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
@@ -85,18 +78,6 @@ post-extract:
 	${MKDIR} ${WRKSRC}/obj
 	${RM} -f ${WRKSRC}/jpeg
 	${LN} -s ${JPEG_WRKSRC} ${WRKSRC}/jpeg
-
-post-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/cups/filter
-	${INSTALL_SCRIPT} ${WRKSRC}/pstoraster/pstopxl			\
-		${PREFIX}/libexec/cups/filter
-	${INSTALL_SCRIPT} ${WRKSRC}/pstoraster/pstoraster		\
-		${PREFIX}/libexec/cups/filter
-	${INSTALL_DATA_DIR} ${CUPS_MODEL_DIR}
-	${INSTALL_DATA} ${WRKSRC}/pstoraster/pxlcolor.ppd ${CUPS_MODEL_DIR}
-	${INSTALL_DATA} ${WRKSRC}/pstoraster/pxlmono.ppd ${CUPS_MODEL_DIR}
-	${INSTALL_DATA_DIR} ${CUPS_EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/pstoraster/pstoraster.convs ${CUPS_EGDIR}
 
 SUBST_CLASSES+=         ps2epsi-sh
 SUBST_MESSAGE.ps2epsi-sh=   "Fixing ps2epsi shell."
