@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2005/07/14 20:49:49 adrianp Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/01/24 22:16:55 adam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 NET_SNMP_BUILDLINK3_MK:=	${NET_SNMP_BUILDLINK3_MK}+
@@ -18,4 +18,4 @@ BUILDLINK_PKGSRCDIR.net-snmp?=	../../net/net-snmp
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
