@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2006/01/20 13:33:19 jmmv Exp $
+$NetBSD: distinfo,v 1.32 2006/01/24 19:43:50 jmmv Exp $
 
 SHA1 (gdm-2.8.0.7.tar.bz2) = 8643faefc7151f38021a83c7986f08e3a4e2d1b6
 RMD160 (gdm-2.8.0.7.tar.bz2) = 1c75d83e1a0f94ec1b927491a0409ea86e12a51f
@@ -10,6 +10,7 @@ SHA1 (Daemon.png) = e77a42c644beecd66c4b95c0ae68c08c728a4e6d
 RMD160 (Daemon.png) = eb317dc7ac501ee03aac1276856eee14674e3da7
 Size (Daemon.png) = 15725 bytes
 SHA1 (patch-aa) = 649f62f21f55822afb17753cacda9a4bc8873595
+SHA1 (patch-ab) = 527a77fd79ba47d897bd4693d0ce7c0eae08081e
 SHA1 (patch-ac) = bcb4656d9467737d62b69a1dd3f3750d5607fef3
 SHA1 (patch-ad) = 4f4c4395ba6de7235069fe7ff9877381e9bc997a
 SHA1 (patch-ae) = 01288c3cff79f957fb616feeb81234e7fb7210ba

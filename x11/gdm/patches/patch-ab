@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.11 2006/01/24 19:43:50 jmmv Exp $
+
+--- po/fa.po.orig	2005-11-02 17:59:32.000000000 +0100
++++ po/fa.po
+@@ -1444,7 +1444,6 @@ msgstr "%s: Failed executing: %s"
+ msgid ""
+ "\n"
+ "Incorrect username or password.  Letters must be typed in the correct case."
+-
+ msgstr ""
+ "\n"
+ "نام کاربر یا گذرواژه درست نیست.  بزرگی و کوچکی حروف باید رعایت شود."
