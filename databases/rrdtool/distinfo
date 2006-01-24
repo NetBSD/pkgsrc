@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.14 2005/07/30 06:53:15 wulf Exp $
+$NetBSD: distinfo,v 1.15 2006/01/24 22:22:16 adam Exp $
 
-SHA1 (rrdtool-1.2.11.tar.gz) = 2aa33cbc857318679db03c0b8b42dc1ab18e4d4f
-RMD160 (rrdtool-1.2.11.tar.gz) = f294c3dd0e8597d0be23e2aa317774bd626695a6
-Size (rrdtool-1.2.11.tar.gz) = 1003339 bytes
-SHA1 (patch-aj) = d6f7ab6ac0e13ae3da0b04e1402f19b9d3b7c5e5
-SHA1 (patch-al) = b703252461e8ac8f4e7d422404fbd3c6f30c3032
+SHA1 (rrdtool-1.2.12.tar.gz) = bb7ea99635c34465829a74a09572bed6fee2b2f2
+RMD160 (rrdtool-1.2.12.tar.gz) = 253e0baff589f5fc7986e99e69dfc540713510e2
+Size (rrdtool-1.2.12.tar.gz) = 1022309 bytes
+SHA1 (patch-aj) = bcbf425ead5d65e309076a1169ec1281c3595050
+SHA1 (patch-al) = 655f6a504c1b593130ff79af4a3245aa3c18481b
 SHA1 (patch-ap) = 8960b74dbaafdd9f37a5bbffc97f04fbe2ad9eca
-SHA1 (patch-as) = a3320a652f09b6f818903fcec997d3d559d36fa0
+SHA1 (patch-as) = 61f0cae2944301e112c8d8f956559e80c57dfbb2
 SHA1 (patch-av) = 2e2a626c8bbc78671ff7e834cb229f4a1b0c35c3
-SHA1 (patch-aw) = 39e942734bc3ce56323f816996210513b08f325b
-SHA1 (patch-ay) = 30f2e1b3d7c720900da2168eb6874b1dcf6697f1
+SHA1 (patch-aw) = ac47919940bc0ed46cdcb92c1f5cae0270610180
+SHA1 (patch-ay) = 6826d5e89af4f7b1c8b820d3e35a84aae36f2cac
