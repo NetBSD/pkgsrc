@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4497 2006/01/24 00:51:07 xtraeme Exp $
+$NetBSD: TODO,v 1.4498 2006/01/24 04:07:58 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -511,7 +511,6 @@ Suggested package updates
 	o fd-2.07b
 	o fdgw-20040609
 	o fetchmail-6.3.1
-	o ffmpeg-devel-0.4.9pre1 [wip/ffmpeg-devel, xtraeme]
 	o fhist-1.14
 	o file-4.15
 	o findutils-4.2.27
