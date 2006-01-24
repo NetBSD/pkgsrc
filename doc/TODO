@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4501 2006/01/24 10:03:29 tonio Exp $
+$NetBSD: TODO,v 1.4502 2006/01/24 19:53:43 tonio Exp $
 
 Suggested new packages
 ======================
@@ -501,7 +501,7 @@ Suggested package updates
 	o etach-1.4.1
 	o eukleides-1.0.3
 	o euler-1.61
-	o evilwm-0.99.20
+	o evilwm-0.99.21
 	o exim-4.60
 	o exmh-2.7.2
 	o f2c-20031025
