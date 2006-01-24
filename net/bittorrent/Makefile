@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2005/09/30 14:05:38 adam Exp $
+# $NetBSD: Makefile,v 1.33 2006/01/24 14:03:39 joerg Exp $
 
 .include "Makefile.common"
 
@@ -7,6 +7,7 @@ PKGNAME=	${DISTNAME:S/BitT/bitt/}
 PYDISTUTILSPKG=	yes
 
 CONFLICTS+=	bittornado-[0-9]*
+CONFLICTS+=	BitTornado-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
