@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.13 2005/11/04 16:50:34 rillig Exp $
+# $NetBSD: extension.mk,v 1.14 2006/01/24 07:25:35 recht Exp $
 
 # derive a python version from the package name if possible
 # optionally handled quoted package names
@@ -34,8 +34,4 @@ do-install:
 
 .if defined(PY_PATCHPLIST)
 PLIST_SUBST+=	PYINC=${PYINC} PYSITELIB=${PYSITELIB}
-.endif
-
-.if ${OPSYS} == "Darwin"
-LDFLAGS+=	-lpython
 .endif
