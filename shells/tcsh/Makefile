@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2005/12/29 06:22:13 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2006/01/24 20:42:49 rillig Exp $
 #
 
 DISTNAME=	tcsh-6.14.00
@@ -36,14 +36,15 @@ PKG_SHELL?=	bin/tcsh
 
 post-install:
 	@${ECHO} "Installing message catalogues"
-	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	@if [ -f ${WRKSRC}/tcsh.C.cat ];				\
+	@${CP} ${PKGDIR:Q}/PLIST ${PLIST_SRC:Q}
+	@set -e;							\
+	if [ -f ${WRKSRC:Q}/tcsh.C.cat ];				\
 	then								\
-	    [ -d ${PREFIX}/${NLSDIR}/C ] ||				\
-		${INSTALL_DATA_DIR} ${PREFIX}/${NLSDIR}/C;		\
-	    ${INSTALL_DATA} ${WRKSRC}/tcsh.C.cat 			\
-		${PREFIX}/${NLSDIR}/C/tcsh.cat;				\
-	    ${ECHO} ${NLSDIR}/C/tcsh.cat >> ${PLIST_SRC};		\
+	    [ -d ${PREFIX:Q}/${NLSDIR:Q}/C ] ||				\
+		${INSTALL_DATA_DIR} ${PREFIX:Q}/${NLSDIR:Q}/C;		\
+	    ${INSTALL_DATA} ${WRKSRC:Q}/tcsh.C.cat 			\
+		${PREFIX}/${NLSDIR:Q}/C/tcsh.cat;			\
+	    ${ECHO} ${NLSDIR:Q}/C/tcsh.cat >> ${PLIST_SRC:Q};		\
 	    for i in 							\
 		et:ISO_8859-15:et:EE					\
 		finnish:ISO_8859-1:fi:FI				\
@@ -58,17 +59,17 @@ post-install:
 		ukrainian:KOI8-U:uk:UA					\
 		;							\
 	    do								\
-		OIFS="${IFS}";						\
-		IFS=":${IFS}";						\
+		OIFS="$${IFS}";						\
+		IFS=":$${IFS}";						\
 		set -- $$i;						\
-		IFS="${OIFS}";						\
+		IFS="$${OIFS}";						\
 		l=$$1; shift;						\
 		s=$$1; shift;						\
 		c=$$1; shift;						\
 		o=;							\
 		while [ $$# -gt 0 ];					\
 		do							\
-		    d=${NLSDIR}/$${c}_$$1.$${s};			\
+		    d=${NLSDIR:Q}/$${c}_$$1.$${s};			\
 		    [ -d ${PREFIX}/$$d ] ||				\
 			${INSTALL_DATA_DIR} ${PREFIX}/$$d;		\
 		    if [ -z "$$o" ];					\
