@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2006/01/07 12:54:15 wulf Exp $
-#
+# $NetBSD: Makefile,v 1.44 2006/01/24 22:22:16 adam Exp $
 
-DISTNAME=	rrdtool-1.2.11
-PKGREVISION=	2
+DISTNAME=	rrdtool-1.2.12
 CATEGORIES=	databases graphics net
 MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/pub/
 
@@ -24,8 +22,8 @@ CONFIGURE_ARGS+=	--with-perl-options=${MAKE_PARAMS:Q}
 CONFIGURE_ARGS+=	--disable-tcl
 CONFIGURE_ARGS+=	--disable-python
 
-PERL5_CONFIGURE=	NO
-PERL5_PACKLIST+= 	auto/RRDp/.packlist
+PERL5_CONFIGURE=	no
+PERL5_PACKLIST+=	auto/RRDp/.packlist
 PERL5_PACKLIST+=	auto/RRDs/.packlist
 
 # rrdtool explicitly forbids any use of -ffast-math
