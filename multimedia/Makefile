@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2006/01/18 15:43:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.82 2006/01/24 02:28:49 xtraeme Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -30,6 +30,7 @@ SUBDIR+=	gst-plugins0.8-theora
 SUBDIR+=	gst-plugins0.8-xvid
 SUBDIR+=	gstreamer0.10
 SUBDIR+=	gstreamer0.8
+SUBDIR+=	gtranscode
 SUBDIR+=	gxine
 SUBDIR+=	kdemultimedia3
 SUBDIR+=	kmplayer
