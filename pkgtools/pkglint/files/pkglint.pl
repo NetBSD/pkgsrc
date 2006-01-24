@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.482 2006/01/24 20:07:54 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.483 2006/01/24 20:26:11 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1102,6 +1102,7 @@ use constant regex_shellcmd	=> qr"^\t(.*)$";
 use constant regex_unresolved	=> qr"\$\{";
 use constant regex_validchars	=> qr"[\011\040-\176]";
 use constant regex_varassign	=> qr"^([-*+A-Z_a-z0-9.\${}\[]+?)\s*(=|\?=|\+=|:=|!=)\s*((?:\\#|[^#])*?)(?:\s*(#.*))?$";
+use constant regex_sh_varassign	=> qr"^([A-Z_a-z][0-9A-Z_a-z]*)=";
 
 # This "constant" is often used in contexts where interpolation comes
 # handy, so it is a variable. Nevertheless it is not modified. Of course
@@ -2275,7 +2276,7 @@ sub checkline_mk_shelltext($$) {
 
 		$line->log_debug("[" . scst_statename->[$state] . "] shellword=${shellword}");
 
-		checkline_mk_shellword($line, $shellword, ($state != SCST_CASE && $state != SCST_FOR));
+		checkline_mk_shellword($line, $shellword, ($state != SCST_CASE && $state != SCST_FOR && !($state == SCST_START && $shellword =~ regex_sh_varassign)));
 
 		#
 		# Actions associated with the current state
@@ -2354,6 +2355,7 @@ sub checkline_mk_shelltext($$) {
 				: ($shellword =~ qr"^(?:then|else|do)$") ? SCST_START
 				: ($shellword eq "case") ? SCST_CASE
 				: ($shellword eq "for") ? SCST_FOR
+				: ($shellword =~ sh_regex_varassign) ? SCST_START
 				: SCST_CONT)
 			: ($state == SCST_MKDIR) ? SCST_MKDIR
 			: ($state == SCST_INSTALL && $shellword eq "-d") ? SCST_INSTALL_D
