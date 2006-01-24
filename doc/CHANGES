@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12649 2006/01/24 07:01:30 schmonz Exp $
+$NetBSD: CHANGES,v 1.12650 2006/01/24 07:33:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -510,3 +510,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added multimedia/ffmpeg-devel version 0.4.9pre1 [xtraeme 2006-01-24]
 	Updated multimedia/transcode to 1.0.2 [xtraeme 2006-01-24]
 	Updated textproc/py-feedparser to 4.1 [schmonz 2006-01-24]
+	Updated games/asc to 1.16.3.0 [wiz 2006-01-24]
