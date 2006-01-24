@@ -1,0 +1,76 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/24 03:47:44 xtraeme Exp $
+bin/dvdstyler
+share/doc/dvdstyler/AUTHORS
+share/doc/dvdstyler/COPYING
+share/doc/dvdstyler/ChangeLog
+share/doc/dvdstyler/INSTALL
+share/doc/dvdstyler/README
+share/dvdstyler/backgrounds/01_autobahn.jpg
+share/dvdstyler/backgrounds/02_bi_domrep.jpg
+share/dvdstyler/backgrounds/03_creta.jpg
+share/dvdstyler/backgrounds/04_kiel_kanal.jpg
+share/dvdstyler/backgrounds/10_turbulence_blue.jpg
+share/dvdstyler/backgrounds/11_turbulence_green.jpg
+share/dvdstyler/backgrounds/15_bordes_blue.jpg
+share/dvdstyler/backgrounds/16_bordes_green.jpg
+share/dvdstyler/backgrounds/20_blue.jpg
+share/dvdstyler/backgrounds/21_steel.jpg
+share/dvdstyler/backgrounds/22_gold.jpg
+share/dvdstyler/backgrounds/23_lava.jpg
+share/dvdstyler/backgrounds/30_brushed_aluminiun.jpg
+share/dvdstyler/backgrounds/31_texture_border.jpg
+share/dvdstyler/buttons/arrow-down.xml
+share/dvdstyler/buttons/arrow-left.xml
+share/dvdstyler/buttons/arrow-next.xml
+share/dvdstyler/buttons/arrow-right.xml
+share/dvdstyler/buttons/arrow-up.xml
+share/dvdstyler/buttons/arrow2-down.xml
+share/dvdstyler/buttons/arrow2-left.xml
+share/dvdstyler/buttons/arrow2-right.xml
+share/dvdstyler/buttons/arrow2-up.xml
+share/dvdstyler/buttons/buttons.lst
+share/dvdstyler/buttons/cancel.xml
+share/dvdstyler/buttons/ellipse.xml
+share/dvdstyler/buttons/frame.xml
+share/dvdstyler/buttons/ok.xml
+share/dvdstyler/buttons/text.xml
+share/dvdstyler/data/silence.mp2
+share/dvdstyler/objects/frame.xml
+share/dvdstyler/objects/image.xml
+share/dvdstyler/objects/rectangle.xml
+share/dvdstyler/objects/text.xml
+share/dvdstyler/rc/dvdstyler.png
+share/dvdstyler/rc/files.png
+share/dvdstyler/rc/folder1.png
+share/dvdstyler/rc/folder2.png
+share/dvdstyler/rc/logo.png
+share/dvdstyler/rc/logo_big.png
+share/dvdstyler/rc/minus.png
+share/dvdstyler/rc/move.cur
+share/dvdstyler/rc/nesw.cur
+share/dvdstyler/rc/new.png
+share/dvdstyler/rc/nwse.cur
+share/dvdstyler/rc/open.png
+share/dvdstyler/rc/plus.png
+share/dvdstyler/rc/run.png
+share/dvdstyler/rc/save.png
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/dvdstyler.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/dvdstyler.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/dvdstyler.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/dvdstyler.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/dvdstyler.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/dvdstyler.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/dvdstyler.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/dvdstyler.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/dvdstyler.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/dvdstyler.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/dvdstyler.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/dvdstyler.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/dvdstyler.mo
+@dirrm share/dvdstyler/rc
+@dirrm share/dvdstyler/objects
+@dirrm share/dvdstyler/data
+@dirrm share/dvdstyler/buttons
+@dirrm share/dvdstyler/backgrounds
+@dirrm share/dvdstyler
+@dirrm share/doc/dvdstyler
