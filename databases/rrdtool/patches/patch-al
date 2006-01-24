@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.6 2005/07/30 06:53:15 wulf Exp $
+$NetBSD: patch-al,v 1.7 2006/01/24 22:22:16 adam Exp $
 
---- examples/Makefile.in.orig	2005-07-25 23:44:50.000000000 +0930
-+++ examples/Makefile.in	2005-07-31 01:05:26.000000000 +0930
-@@ -217,7 +217,7 @@
+--- examples/Makefile.in.orig	2005-12-18 21:32:12.000000000 +0100
++++ examples/Makefile.in
+@@ -215,7 +215,7 @@ target_vendor = @target_vendor@
  EXTRA_DIST = cgi-demo.cgi.in piped-demo.pl.in shared-demo.pl.in \
  	stripes.pl.in bigtops.pl.in minmax.pl.in 4charts.pl.in
  
