@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12651 2006/01/24 10:03:29 tonio Exp $
+$NetBSD: CHANGES,v 1.12652 2006/01/24 10:42:55 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -512,3 +512,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/py-feedparser to 4.1 [schmonz 2006-01-24]
 	Updated games/asc to 1.16.3.0 [wiz 2006-01-24]
 	Updated chat/bitlbee to 1.0.1 [tonio 2006-01-24]
+	Updated net/mydns-pgsql to 1.1.0 [ghen 2006-01-24]
+	Updated net/mydns-mysql to 1.1.0 [ghen 2006-01-24]
