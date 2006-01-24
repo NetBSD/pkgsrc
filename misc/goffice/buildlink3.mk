@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/12/17 20:18:52 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/01/24 07:32:23 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GOFFICE_BUILDLINK3_MK:=	${GOFFICE_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	goffice
 
 .if !empty(GOFFICE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.goffice+=	goffice>=0.1.2
+BUILDLINK_RECOMMENDED.goffice?=	goffice>=0.1.2nb1
 BUILDLINK_PKGSRCDIR.goffice?=	../../misc/goffice
 .endif	# GOFFICE_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/05/17 21:32:34 seb Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/01/24 07:32:38 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PYXML_BUILDLINK3_MK:=	${PYXML_BUILDLINK3_MK}+
@@ -14,6 +14,7 @@ BUILDLINK_PACKAGES+=	pyxml
 
 .if !empty(PYXML_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.pyxml+=	${PYPKGPREFIX}-xml>=0.8.3nb1
+BUILDLINK_RECOMMENDED.pyxml?=	${PYPKGPREFIX}-xml>=0.8.4nb1
 BUILDLINK_PKGSRCDIR.pyxml?=	../../textproc/py-xml
 .endif	# PYXML_BUILDLINK3_MK
 

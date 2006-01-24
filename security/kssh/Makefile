@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2006/01/06 15:10:07 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2006/01/24 07:32:33 wiz Exp $
 #
 
 DISTNAME=	kssh-0.7
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	security kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kssh/}
 

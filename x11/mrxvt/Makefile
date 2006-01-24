@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/12/29 06:22:26 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/24 07:32:58 wiz Exp $
 #
 
 DISTNAME=	mrxvt-0.4.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=materm/}
 

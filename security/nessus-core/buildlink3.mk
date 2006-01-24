@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2005/02/21 10:09:07 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/01/24 07:32:33 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 NESSUS_CORE_BUILDLINK3_MK:=	${NESSUS_CORE_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	nessus-core
 
 .if !empty(NESSUS_CORE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.nessus-core+=		nessus-core>=2.2.3
+BUILDLINK_RECOMMENDED.nessus-core?=	nessus-core>=2.2.4
 BUILDLINK_PKGSRCDIR.nessus-core?=	../../security/nessus-core
 .endif	# NESSUS_CORE_BUILDLINK3_MK
 

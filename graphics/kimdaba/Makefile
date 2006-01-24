@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/21 17:10:03 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/24 07:32:15 wiz Exp $
 #
 
 DISTNAME=		kimdaba-2.1
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		http://ktown.kde.org/kimdaba/download/
 

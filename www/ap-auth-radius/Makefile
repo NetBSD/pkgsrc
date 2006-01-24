@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:47:50 tv Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/24 07:32:41 wiz Exp $
 #
 
 DISTNAME=	mod_auth_radius-1.5.7
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/
 EXTRACT_SUFX=	.tar
