@@ -1,8 +1,17 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/07/18 19:59:14 martin Exp $
+$NetBSD: patch-ad,v 1.2 2006/01/24 19:01:45 joerg Exp $
 
 --- src/pgp.c.orig	Tue Jun 19 19:03:47 2001
 +++ src/pgp.c	Wed Jul 18 19:22:05 2001
-@@ -161,7 +161,7 @@
+@@ -19,8 +19,6 @@ DEBUG_VAR(Debug,__FILE__,"pgp");
+ #include <errno.h>
+ #include "menu.h"
+ 
+-extern int errno;
+-
+ /* the column in which the userid begins in the 'pgp -kv' command output */
+ #define PGP2_USERID_OFFSET 30
+ #define PGP5_USERID_OFFSET 5
+@@ -161,7 +159,7 @@ static int GetPGPKey (name, target, targ
  		char *path;
  	    case pgp2:	
  		
@@ -11,7 +20,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/07/18 19:59:14 martin Exp $
  		      pgp2_path,"+verbose=0", "+language=en", "-kv", c, 
  		      (char *)0);
  		tmp = errno;
-@@ -169,14 +169,14 @@
+@@ -169,14 +167,14 @@ static int GetPGPKey (name, target, targ
  		break;
  	    case pgp5:
  		path = elm_message(FRM("%s/pgpk"),pgp5_dir);
