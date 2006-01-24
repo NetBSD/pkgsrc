@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2005/12/29 06:22:09 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2006/01/24 18:55:21 wiz Exp $
 
 DISTNAME=	heimdal-0.7.1
 PKGREVISION=	2
@@ -10,6 +10,7 @@ MAINTAINER=	lha@NetBSD.org
 HOMEPAGE=	http://www.pdc.kth.se/heimdal/
 COMMENT=	Kerberos 5 implementation
 
+CONFLICTS+=	arla-[0-9]*
 CONFLICTS+=	mit-krb5-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
