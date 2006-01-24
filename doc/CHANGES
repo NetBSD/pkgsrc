@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12648 2006/01/24 05:34:27 xtraeme Exp $
+$NetBSD: CHANGES,v 1.12649 2006/01/24 07:01:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -509,3 +509,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added multimedia/dvdstyler version 1.5beta4 [xtraeme 2006-01-24]
 	Added multimedia/ffmpeg-devel version 0.4.9pre1 [xtraeme 2006-01-24]
 	Updated multimedia/transcode to 1.0.2 [xtraeme 2006-01-24]
+	Updated textproc/py-feedparser to 4.1 [schmonz 2006-01-24]
