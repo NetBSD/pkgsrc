@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/01/20 23:41:29 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/24 07:32:04 wiz Exp $
 #
 
 DISTNAME=	nsis-${NSIS_VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nsis/}
 EXTRACT_SUFX=	.zip .tar.bz2

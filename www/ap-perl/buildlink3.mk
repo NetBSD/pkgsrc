@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2005/08/06 06:19:35 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/01/24 07:32:42 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 AP_PERL_BUILDLINK3_MK:=	${AP_PERL_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	ap-perl
 
 .if !empty(AP_PERL_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.ap-perl+=	ap-perl>=1.29nb3
+BUILDLINK_RECOMMENDED.ap-perl?=	ap-perl>=1.29nb4
 BUILDLINK_PKGSRCDIR.ap-perl?=	../../www/ap-perl
 
 BUILDLINK_FILES.ap-perl+=	lib/httpd/mod_perl.*

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/10/03 00:18:26 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/01/24 07:32:49 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NEON_BUILDLINK3_MK:=	${NEON_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	neon
 
 .if !empty(NEON_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.neon+=	neon>=0.24.4
-BUILDLINK_RECOMMENDED.neon+=	neon>=0.24.7nb1
+BUILDLINK_RECOMMENDED.neon+=	neon>=0.25.5nb1
 BUILDLINK_PKGSRCDIR.neon?=	../../www/neon
 .endif	# NEON_BUILDLINK3_MK
 

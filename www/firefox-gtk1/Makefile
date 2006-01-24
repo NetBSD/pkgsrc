@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2005/12/23 00:29:57 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/24 07:32:48 wiz Exp $
 
-PKGREVISION=	1
+PKGREVISION=	2
 MOZILLA=	firefox-gtk1
 COMMENT=	Lightweight gecko-based web browser built with GTK+-1.x
 
