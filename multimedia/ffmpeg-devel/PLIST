@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/24 04:00:37 xtraeme Exp $
+bin/ffmpeg
+bin/ffserver
+include/ffmpeg/avcodec.h
+include/ffmpeg/avformat.h
+include/ffmpeg/avio.h
+include/ffmpeg/common.h
+include/ffmpeg/libpostproc/postprocess.h
+include/ffmpeg/rational.h
+include/ffmpeg/rtp.h
+include/ffmpeg/rtsp.h
+include/ffmpeg/rtspcodes.h
+lib/libavcodec.la
+lib/libavformat.la
+share/doc/ffmpeg/README
+share/doc/ffmpeg/TODO
+share/doc/ffmpeg/apiexample.c
+share/doc/ffmpeg/ffmpeg_powerpc_performance_evaluation_howto.txt
+share/doc/ffmpeg/optimization.txt
+share/examples/ffmpeg/ffserver.conf
+@dirrm share/examples/ffmpeg
+@dirrm share/doc/ffmpeg
+@dirrm include/ffmpeg/libpostproc
+@dirrm include/ffmpeg

@@ -1,0 +1,41 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/01/24 04:00:37 xtraeme Exp $
+
+--- libavcodec/Makefile.orig	2003-09-28 17:26:39.000000000 +0200
++++ libavcodec/Makefile
+@@ -145,6 +145,9 @@ SLIB= $(SLIBPREF)avcodec$(SLIBSUF)
+ endif
+ TESTS= imgresample-test dct-test motion-test fft-test
+ 
++install: all
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(LIB:.a=.la) $(prefix)/lib
++
+ all: $(LIB) $(SLIB)
+ 
+ amrlibs:
+@@ -154,8 +157,8 @@ tests: apiexample cpuid_test $(TESTS)
+ 
+ $(LIB): $(OBJS) $(AMRLIBS)
+ 	rm -f $@
+-	$(AR) rc $@ $(OBJS) $(AMREXTRALIBS)
+-	$(RANLIB) $@
++	$(LIBTOOL) --mode=link $(CC) -o $(LIB:.a=.la) $(OBJS:.o=.lo) -rpath $(prefix)/lib $(EXTRALIBS) $(AMREXTRALIBS)
++
+ 
+ $(SLIB): $(OBJS)
+ ifeq ($(CONFIG_WIN32),yes)
+@@ -171,13 +174,10 @@ libpostproc/libpostproc.a:
+ 	$(MAKE) -C libpostproc
+ 
+ %.o: %.c
+-	$(CC) $(CFLAGS) -c -o $@ $< 
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c -o $@ $< 
+ 
+ %.o: %.S
+-	$(CC) $(CFLAGS) -c -o $@ $<
+-
+-depend: $(SRCS)
+-	$(CC) -MM $(CFLAGS) $^ 1>.depend
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c -o $@ $<
+ 
+ dep:	depend
+ 
