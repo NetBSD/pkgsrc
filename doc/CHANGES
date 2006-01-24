@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12660 2006/01/24 22:46:05 rillig Exp $
+$NetBSD: CHANGES,v 1.12661 2006/01/24 22:47:49 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -521,3 +521,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/net-snmp to 5.3.0.1 [adam 2006-01-24]
 	Updated databases/rrdtool to 1.2.12 [adam 2006-01-24]
 	Updated devel/ode to 0.5 [rillig 2006-01-24]
+	Updated net/pure-ftpd to 1.0.20nb3 [ghen 2006-01-24]
