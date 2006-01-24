@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4499 2006/01/24 05:34:27 xtraeme Exp $
+$NetBSD: TODO,v 1.4500 2006/01/24 07:34:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -361,7 +361,6 @@ Suggested package updates
 	o arj-3.10.22
 	o arnold-20040104
 	o asapm-3.1
-	o asc-1.16.3
 	o aspell-danish-1.4.49
 	o aspell-faroese-0.2.24
 	o aspell-ukrainian-1.1
