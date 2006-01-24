@@ -1,0 +1,14 @@
+--- Makefile.orig	2006-01-24 11:51:58.000000000 -0800
++++ Makefile	2006-01-24 11:52:30.000000000 -0800
+@@ -14,9 +14,9 @@
+ BINDIR=		$(PREFIX)/sbin
+ 
+ .if (${OPSYS} == "NetBSD")
+-MANDIR=		$(PREFIX)/man
++MANDIR?=		$(PREFIX)/man
+ .else
+-MANDIR=		$(PREFIX)/man/man
++MANDIR?=		$(PREFIX)/man/man
+ .endif
+ MAN=		dtcps.8 dtcpc.8 dtcpauth.8
+ 
