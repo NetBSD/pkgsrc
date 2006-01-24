@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2006/01/24 22:27:07 joerg Exp $
+
+--- box.c.orig	2006-01-24 22:12:35.000000000 +0000
++++ box.c
+@@ -4297,6 +4297,8 @@ void begruessung(short unr)
+   wlnuser(unr, hs);
+ #ifdef __NetBSD__
+   sprintf(w, "dpbox (NetBSD) v%s%s", dp_vnr, dp_vnr_sub);
++#elif defined(__DragonFly__)
++  sprintf(w, "dpbox (DragonFly) v%s%s", dp_vnr, dp_vnr_sub);
+ #else
+   #ifdef __linux__
+   sprintf(w, "dpbox (Linux) v%s%s", dp_vnr, dp_vnr_sub);

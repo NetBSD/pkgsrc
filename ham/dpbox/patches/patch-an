@@ -1,0 +1,19 @@
+$NetBSD: patch-an,v 1.1 2006/01/24 22:27:07 joerg Exp $
+
+--- box_sys.c.orig	2006-01-24 22:02:52.000000000 +0000
++++ box_sys.c
+@@ -1679,6 +1679,14 @@ void show_version(short unr, boolean ext
+     wlnuser(unr, "NetBSD porting : (c) 1999 Berndt Josef Wulf, VK5ABN");
+ #define __dp_version_ok
+ #endif
++#ifdef __DragonFly__
++    sprintf(hs, "dpbox (DragonFly) v%s%s %s", dp_vnr, dp_vnr_sub, dp_date);
++    wuser(unr, hs);
++    wlnuser(unr, " (c) 1990-2000 Joachim Schurig, DL8HBS");
++    wlnuser(unr, "Linux porting  : (c) 1994-1997 Mark Wahl, DL4YBG");
++    wlnuser(unr, "NetBSD porting : (c) 1999 Berndt Josef Wulf, VK5ABN");
++#define __dp_version_ok
++#endif
+ #ifndef __dp_version_ok
+     sprintf(hs, "dpbox v%s%s %s", dp_vnr, dp_vnr_sub, dp_date);
+     wuser(unr, hs);

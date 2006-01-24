@@ -1,8 +1,26 @@
-$NetBSD: patch-ac,v 1.1 2000/09/25 16:21:01 wulf Exp $
+$NetBSD: patch-ac,v 1.2 2006/01/24 22:27:07 joerg Exp $
 
---- filesys.h.orig	Sun Sep 24 12:46:31 2000
-+++ filesys.h	Sun Sep 24 07:41:32 2000
-@@ -177,7 +177,7 @@
+--- filesys.h.orig	2000-04-27 12:48:56.000000000 +0000
++++ filesys.h
+@@ -71,7 +71,7 @@ extern void mktemp(char *name);
+ 
+ 
+ 
+-#if defined(__linux__) || defined(__NetBSD__)
++#if defined(__linux__) || defined(__NetBSD__) || defined(__DragonFly__)
+ 
+ /* simply copied that widespread file access code of former dpbox code  */
+ /* in this single file. Not a real change to previous versions of the   */
+@@ -79,7 +79,7 @@ extern void mktemp(char *name);
+ /* localisation of the dpbox code from Atari to Linux                   */
+ 
+ #include <sys/stat.h>
+-#ifndef __NetBSD__
++#if !defined(__NetBSD__) && !defined(__DragonFly__)
+ #include <sys/vfs.h>
+ #endif
+ 
+@@ -177,7 +177,7 @@ extern long sfwrite(short handle, long c
  extern void sfclose_x(short *handle, boolean delete_it);
  extern void sfdelfile(char *name);
  extern void sfdispfilelist(short x, dispfilelistproc outproc);
