@@ -1,11 +1,20 @@
-$NetBSD: distinfo,v 1.8 2005/09/06 08:10:58 abs Exp $
+$NetBSD: distinfo,v 1.9 2006/01/24 22:27:07 joerg Exp $
 
 SHA1 (dpbox-60000.tar.gz) = 73a55785f499324f57736c7fb3cc0bd1001facd3
 RMD160 (dpbox-60000.tar.gz) = 05a14f7601b531fcdd0bc0252d171eed3bfafb7f
 Size (dpbox-60000.tar.gz) = 957010 bytes
 SHA1 (patch-aa) = 8235aa600edffd952c1d932c0ee8011ba0896d08
 SHA1 (patch-ab) = abeee7b86844c8937792ef09a938caf232574fb3
-SHA1 (patch-ac) = faa4e5b32a31283e0ed7ed9730c026ccd5efffb4
+SHA1 (patch-ac) = f81ea8e6441bd3bf95d8d60660cf9b407895a070
 SHA1 (patch-ad) = 589a69328b5959f81b86739a6e3c32f6d1d71ffe
-SHA1 (patch-ae) = 9c8ac68bb2102f19d2dea85dbe18197c7ad2b864
-SHA1 (patch-af) = 8c6745b43447aba7373366b9327dd316b1494ddf
+SHA1 (patch-ae) = 82c22fd343ab353012c822d84d39c8018b285f83
+SHA1 (patch-af) = a875f03b78a1afb444fa9301e24b5718f0f285cc
+SHA1 (patch-ag) = d193fc0245b35f1f897886352ad4c3a6ec5cd438
+SHA1 (patch-ah) = 6501eb257f10c4907d875a14d134bfb5fe6736f1
+SHA1 (patch-ai) = 9d96b644d0b29a6bfc787202d2c42223570b1ee5
+SHA1 (patch-ak) = 387c0f79590f37329439ba5990e165577855a054
+SHA1 (patch-al) = 79b6a63442336b8824763a95512b87f90550aaff
+SHA1 (patch-am) = 510dbc978691543bba8da95be33cc3ba3f2c18fe
+SHA1 (patch-an) = 8b01dcb543e179437dcea32d377af8b06a287cbd
+SHA1 (patch-ao) = b83ff4a2158755c3231bba79496501f7268e4403
+SHA1 (patch-ap) = f4bdfc134803f280dfebef013d09d291f0a19e6e
