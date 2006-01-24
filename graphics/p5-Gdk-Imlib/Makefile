@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2005/08/06 06:19:21 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/24 07:32:16 wiz Exp $
 #
 
 .include "../../x11/p5-gtk/Makefile.common"
 
 PKGNAME=	p5-Gdk-Imlib-${GTKPERL_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	adrianp@NetBSD.org
 COMMENT=	Perl bindings for Imlib

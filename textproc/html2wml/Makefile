@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/09/28 20:52:27 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/24 07:32:37 wiz Exp $
 
 DISTNAME=	html2wml-0.4.8r2
 PKGNAME=	html2wml-0.4.8.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc converters
 MASTER_SITES=	http://maddingue.free.fr/techie/download/Html2Wml/
 

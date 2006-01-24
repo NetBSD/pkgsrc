@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2005/11/11 18:50:25 tonio Exp $
+# $NetBSD: Makefile,v 1.11 2006/01/24 07:32:49 wiz Exp $
 
 DISTNAME=		Template-Extract-0.25
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 SVR4_PKGNAME=		p5tex
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Template/}

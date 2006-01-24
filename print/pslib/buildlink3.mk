@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/08/19 16:05:03 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/01/24 07:32:32 wiz Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.9.
 # XXX After this file has been verified as correct, the comment lines
@@ -22,6 +22,7 @@ BUILDLINK_PACKAGES+=	pslib
 
 .if !empty(PSLIB_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.pslib+=	pslib>=0.2.6
+BUILDLINK_RECOMMENDED.pslib?=	pslib>=0.2.6nb2
 BUILDLINK_PKGSRCDIR.pslib?=	../../print/pslib
 .endif	# PSLIB_BUILDLINK3_MK
 

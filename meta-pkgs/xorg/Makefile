@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2006/01/19 19:26:43 ghen Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/24 07:32:22 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	xorg-${XORG_VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG}
 DISTFILES=	# empty
