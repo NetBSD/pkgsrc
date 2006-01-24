@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:22 agc Exp $
+$NetBSD: distinfo,v 1.3 2006/01/24 22:45:33 rillig Exp $
 
-SHA1 (ode-0.039.tgz) = c3ed55fa81d3d95458fa233f7e64f6c7ab0f556d
-RMD160 (ode-0.039.tgz) = 767cc6c4aeba18b8b5522abddab46fa09ae9ae81
-Size (ode-0.039.tgz) = 1114315 bytes
+SHA1 (ode-0.5.tgz) = f13756f1192d24101b6d1a3c14feb43efbf0b281
+RMD160 (ode-0.5.tgz) = 3410a842731c1bb24f306f4d23509533664321aa
+Size (ode-0.5.tgz) = 1710720 bytes
