@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/24 02:27:44 xtraeme Exp $
+bin/gtranscode
