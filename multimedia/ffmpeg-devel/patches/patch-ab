@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/01/24 04:00:37 xtraeme Exp $
+
+--- ffserver.c.orig	2003-09-28 17:26:39.000000000 +0200
++++ ffserver.c
+@@ -4488,7 +4488,7 @@ static void show_help(void)
+            "\n"
+            "-L            : print the LICENSE\n"
+            "-h            : this help\n"
+-           "-f configfile : use configfile instead of /etc/ffserver.conf\n"
++           "-f configfile : use configfile instead of " FFSERVER_CONF "\n"
+            );
+ }
+ 
+@@ -4546,7 +4546,7 @@ int main(int argc, char **argv)
+ 
+     av_register_all();
+ 
+-    config_filename = "/etc/ffserver.conf";
++    config_filename = FFSERVER_CONF;
+ 
+     my_program_name = argv[0];
+     my_program_dir = getcwd(0, 0);

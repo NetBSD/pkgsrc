@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/24 04:00:37 xtraeme Exp $
+
+SHA1 (ffmpeg-0.4.9-pre1.tar.gz) = aad00445137520bec19e56bcb042e75a10c53bb3
+RMD160 (ffmpeg-0.4.9-pre1.tar.gz) = fd682846f97ada32951af7844e185c42783189a4
+Size (ffmpeg-0.4.9-pre1.tar.gz) = 1611332 bytes
+SHA1 (patch-aa) = 012e6330303c023884e8d9ab44d1d265c1e765f4
+SHA1 (patch-ab) = f596db3c555ab772eae2da5b8144c23fb4f2eaa0
+SHA1 (patch-ac) = 2e7aa9021ddfe46cda35a9399e59f63848610d83
+SHA1 (patch-ad) = 95eea8ef74a270a0c60243eff740aa3346efaaaf
+SHA1 (patch-ae) = 7223978301c95de96d19610afb332f10764c4de0
+SHA1 (patch-ag) = 69656d16d44d3321bdf9b790e6263db1529d2c99
