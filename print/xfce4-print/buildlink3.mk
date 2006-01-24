@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2005/12/01 18:21:52 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/01/24 07:32:32 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_PRINT_BUILDLINK3_MK:=	${XFCE4_PRINT_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-print
 
 .if !empty(XFCE4_PRINT_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.xfce4-print+=	xfce4-print>=4.2.3
+BUILDLINK_RECOMMENDED.xfce4-print?=	xfce4-print>=4.2.3nb1
 BUILDLINK_PKGSRCDIR.xfce4-print?=	../../print/xfce4-print
 .endif	# XFCE4_PRINT_BUILDLINK3_MK
 

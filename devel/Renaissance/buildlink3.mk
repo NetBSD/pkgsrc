@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/09/24 01:56:54 rh Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/01/24 07:32:00 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 RENAISSANCE_BUILDLINK3_MK:=	${RENAISSANCE_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	Renaissance
 
 .if !empty(RENAISSANCE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.Renaissance+=		Renaissance>=0.7.0
-BUILDLINK_RECOMMENDED.Renaissance+=	Renaissance>=0.8.0nb1
+BUILDLINK_RECOMMENDED.Renaissance+=	Renaissance>=0.8.0nb3
 BUILDLINK_PKGSRCDIR.Renaissance?=	../../devel/Renaissance
 .endif	# RENAISSANCE_BUILDLINK3_MK
 

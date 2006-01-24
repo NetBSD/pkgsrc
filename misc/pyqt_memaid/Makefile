@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2006/01/09 20:47:36 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/24 07:32:26 wiz Exp $
 #
 
 DISTNAME=		pyqt_memaid_0.2.4
 PKGNAME=		${DISTNAME:S/d_/d-/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=memaid/}
 EXTRACT_SUFX=		.tgz

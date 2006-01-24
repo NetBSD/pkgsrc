@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2006/01/05 23:14:35 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/24 07:32:38 wiz Exp $
 #
 
 DISTNAME=		elementtree-1.2.6-20050316
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/-20050316//}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		textproc
 MASTER_SITES=		http://effbot.org/downloads/
 

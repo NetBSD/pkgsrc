@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2005/12/05 20:51:20 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2006/01/24 07:33:02 wiz Exp $
 #
 
 DISTNAME=	xpad-1.12
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xpad/}
 EXTRACT_SUFX=	.tar.bz2
