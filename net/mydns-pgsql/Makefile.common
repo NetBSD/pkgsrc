@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.5 2005/12/13 12:15:16 ghen Exp $
+# $NetBSD: Makefile.common,v 1.5.2.1 2006/01/24 12:07:53 salo Exp $
 
-DISTNAME=	mydns-1.0.0
+DISTNAME=	mydns-1.1.0
 CATEGORIES=	net
 MASTER_SITES=	http://mydns.bboy.net/download/
 EXTRACT_SUFX=	.tar.bz2
