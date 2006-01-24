@@ -1,0 +1,7 @@
+--- sys/tryclockgettime.c.orig	2006-01-24 20:56:01.000000000 +0000
++++ sys/tryclockgettime.c	2006-01-24 20:55:51.000000000 +0000
+@@ -2,3 +2,4 @@
++#include <sys/time.h>
+ #include <time.h>
+ 
+ int main(void)
