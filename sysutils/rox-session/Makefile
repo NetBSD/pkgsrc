@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2005/12/31 12:32:46 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2006/01/24 07:32:35 wiz Exp $
 #
 
 DISTNAME=	ROX-Session-0.1.14
 PKGNAME=	rox-session-0.1.14
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rox/}
 EXTRACT_SUFX=	.tgz

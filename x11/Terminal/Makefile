@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/15 18:47:39 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/24 07:32:50 wiz Exp $
 #
 
 DISTNAME=		Terminal-0.2.4
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		http://download.berlios.de/xfce-goodies/
 EXTRACT_SUFX=		.tar.bz2

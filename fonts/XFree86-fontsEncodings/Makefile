@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2005/12/05 20:50:13 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2006/01/24 07:32:07 wiz Exp $
 
 DISTNAME=	XFree86-${XF_VER}-src-4
 PKGNAME=	XFree86-fontsEncodings-${XF_VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_XFREE}
 EXTRACT_SUFX=	.tgz

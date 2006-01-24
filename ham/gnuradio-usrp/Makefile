@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/12/11 11:41:23 wulf Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/24 07:32:18 wiz Exp $
 
 VERSION=	0.6
 DISTNAME=	gr-usrp-${VERSION}
 PKGNAME=	gnuradio-usrp-${VERSION}
+PKGREVISION=	1
 WRKSRC=		${WRKDIR}/${DISTNAME}
 COMMENT=	USRP bindings for GNU Radio
 

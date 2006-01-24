@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2005/11/08 15:40:28 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2006/01/24 07:32:51 wiz Exp $
 #
 
 DISTNAME=		gdkxft-1.5
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gdkxft/}
 

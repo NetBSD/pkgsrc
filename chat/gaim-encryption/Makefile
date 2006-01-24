@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/09/22 12:33:53 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/24 07:31:57 wiz Exp $
 
 DISTNAME=	gaim-encryption-2.38
+PKGREVISION=	1
 CATEGORIES=	chat security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim-encryption/}
 

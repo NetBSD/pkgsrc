@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:37 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2006/01/24 07:32:20 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	XFree86-${XF_VER}
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XFREE}
 DISTFILES=	# empty

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/01/18 22:13:59 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/01/24 07:31:59 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 WV_BUILDLINK3_MK:=	${WV_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	wv
 
 .if !empty(WV_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.wv+=		wv>=1.0.0
-BUILDLINK_RECOMMENDED.wv+=	wv>=1.0.2nb1
+BUILDLINK_RECOMMENDED.wv+=	wv>=1.2.0nb1
 BUILDLINK_PKGSRCDIR.wv?=	../../converters/wv
 .endif	# WV_BUILDLINK3_MK
 

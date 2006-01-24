@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/01/06 15:10:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/01/24 07:32:58 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LABLGTK2_BUILDLINK3_MK:=	${LABLGTK2_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	lablgtk2
 
 .if !empty(LABLGTK2_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.lablgtk2+=	lablgtk2>=2.6.0nb3
+BUILDLINK_RECOMMENDED.lablgtk2?=	lablgtk2>=2.6.0nb4
 BUILDLINK_PKGSRCDIR.lablgtk2?=	../../x11/lablgtk2
 .endif	# LABLGTK2_BUILDLINK3_MK
 

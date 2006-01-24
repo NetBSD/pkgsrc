@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:44:57 tv Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/24 07:31:55 wiz Exp $
 #
 
 DISTNAME=	trm-0.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.musicbrainz.org/pub/musicbrainz/
 

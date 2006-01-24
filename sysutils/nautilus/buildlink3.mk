@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2005/12/31 12:32:45 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2006/01/24 07:32:35 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 NAUTILUS_BUILDLINK3_MK:=	${NAUTILUS_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	nautilus
 
 .if !empty(NAUTILUS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.nautilus+=	nautilus>=2.12.1nb1
-BUILDLINK_RECOMMENDED.nautilus?=	nautilus>=2.12.1nb2
+BUILDLINK_RECOMMENDED.nautilus?=	nautilus>=2.12.2nb1
 BUILDLINK_PKGSRCDIR.nautilus?=	../../sysutils/nautilus
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/nautilus$$/ \

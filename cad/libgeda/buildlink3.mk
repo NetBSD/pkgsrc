@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2005/08/23 00:02:20 dmcmahill Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/01/24 07:31:57 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBGEDA_BUILDLINK3_MK:=	${LIBGEDA_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libgeda
 
 .if !empty(LIBGEDA_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libgeda+=	libgeda-20050820
+BUILDLINK_RECOMMENDED.libgeda?=	libgeda>=20050820
 BUILDLINK_PKGSRCDIR.libgeda?=	../../cad/libgeda
 .endif	# LIBGEDA_BUILDLINK3_MK
 

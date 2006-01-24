@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/06/17 03:50:40 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/24 07:32:43 wiz Exp $
 #
 
 DISTNAME=		bw_mod-0.6
 PKGNAME=		${DISTNAME:S/bw_mod/ap2-bw/}
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://ivn.cl/apache/
 EXTRACT_SUFX=		.tgz

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2005/09/28 20:52:28 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2006/01/24 07:32:58 wiz Exp $
 
 DISTNAME=	multi-gnome-terminal-1.6.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	gnome x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=multignometerm/}
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/14 18:29:39 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/24 07:32:32 wiz Exp $
 #
 
 DISTNAME=	modsecurity-1.8.7
 PKGNAME=	ap-modsecurity-1.8.7
+PKGREVISION=	1
 CATEGORIES=	www security
 MASTER_SITES=	http://www.modsecurity.org/download/
 

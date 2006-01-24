@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2005/12/28 08:32:28 garbled Exp $
+# $NetBSD: Makefile,v 1.30 2006/01/24 07:32:01 wiz Exp $
 #
 
 DISTNAME=	coconut-0.3.0
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	devel
 MASTER_SITES=	http://www.asahi-net.or.jp/~em7t-hmd/coconut/		\
 		${MASTER_SITE_SOURCEFORGE:=coconut-lib/}

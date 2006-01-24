@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2006/01/15 16:52:08 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/24 07:32:21 wiz Exp $
 #
 
 PKGNAME=	ruby-gnome2-${VERSION}
 COMMENT=	Set of Ruby language bindings for GNOME2
 DISTFILES=	# empty
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs gnome
 
 DEPENDS+=	ruby-gnome2-atk>=${VERSION}:../../devel/ruby-gnome2-atk

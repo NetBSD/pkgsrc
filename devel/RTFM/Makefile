@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/06/16 06:57:44 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/24 07:32:00 wiz Exp $
 #
 
 DISTNAME=	RTFM-2.0.4
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.102 2006/01/20 03:44:09 markd Exp $
+# $NetBSD: Makefile,v 1.103 2006/01/24 07:32:57 wiz Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 

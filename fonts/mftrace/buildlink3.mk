@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/11/26 20:31:21 kristerw Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/01/24 07:32:07 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MFTRACE_BUILDLINK3_MK:=	${MFTRACE_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	mftrace
 
 .if !empty(MFTRACE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.mftrace+=	mftrace>=1.0.19
+BUILDLINK_RECOMMENDED.mftrace?=	mftrace>=1.1.1nb2
 BUILDLINK_PKGSRCDIR.mftrace?=	../../fonts/mftrace
 .endif	# MFTRACE_BUILDLINK3_MK
 

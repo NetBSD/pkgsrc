@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/10/02 16:07:30 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/24 07:32:00 wiz Exp $
 
 DISTNAME=	ExmanIDE-0.9.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://kldp.net/download.php/715/
 
