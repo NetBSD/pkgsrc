@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12658 2006/01/24 22:18:21 adam Exp $
+$NetBSD: CHANGES,v 1.12659 2006/01/24 22:23:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -519,3 +519,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added emulators/e-uae version 0.8.28 [adam 2006-01-24]
 	Updated print/teTeX3-bin to 3.0nb6 [tron 2006-01-24]
 	Updated net/net-snmp to 5.3.0.1 [adam 2006-01-24]
+	Updated databases/rrdtool to 1.2.12 [adam 2006-01-24]
