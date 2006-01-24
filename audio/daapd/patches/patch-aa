@@ -1,16 +1,17 @@
-$NetBSD: patch-aa,v 1.10 2006/01/12 16:45:37 joerg Exp $
+$NetBSD: patch-aa,v 1.11 2006/01/24 15:18:38 tonio Exp $
 
---- makefile.orig	2005-01-04 23:18:48.000000000 +0000
+--- makefile.orig	2005-01-05 00:18:48.000000000 +0100
 +++ makefile
-@@ -1,6 +1,6 @@
+@@ -1,29 +1,29 @@
  # configure daapd here
  
 -HOWL_ENABLE = 0
 +HOWL_ENABLE = 1
  ZLIB_ENABLE = 1
- MPEG4_ENABLE = 0
+-MPEG4_ENABLE = 0
++MPEG4_ENABLE = $(WITH_FAAD)
  
-@@ -8,22 +8,22 @@ MPEG4_ENABLE = 0
+ 
  # no need to touch anything below this line
  # -----------------------------------------
  
