@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2005/08/10 20:56:12 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2006/01/24 07:31:56 wiz Exp $
 #
 
 DISTNAME=		geda-gschem-${PKGVERSION}
 PKGNAME=		gschem-${PKGVERSION}
+PKGREVISION=		1
 CATEGORIES=		cad
 
 MAINTAINER=		dmcmahill@NetBSD.org

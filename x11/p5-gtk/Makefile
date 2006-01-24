@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2005/08/06 06:19:41 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2006/01/24 07:32:58 wiz Exp $
 #
 
 .include "Makefile.common"
 
 PKGNAME=		p5-gtk-${GTKPERL_VERSION}
-PKGREVISION=		3
+PKGREVISION=		4
 SVR4_PKGNAME=		p5gtk
 
 MAINTAINER=		root@garbled.net

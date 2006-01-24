@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/07/22 21:31:33 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/01/24 07:32:03 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGLADEMM_BUILDLINK3_MK:=	${LIBGLADEMM_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libglademm
 
 .if !empty(LIBGLADEMM_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libglademm+=	libglademm>=2.6.0
+BUILDLINK_RECOMMENDED.libglademm?=	libglademm>=2.6.1nb1
 BUILDLINK_PKGSRCDIR.libglademm?=	../../devel/libglademm
 .endif	# LIBGLADEMM_BUILDLINK3_MK
 

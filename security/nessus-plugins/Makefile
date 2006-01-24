@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2005/12/05 23:55:18 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2006/01/24 07:32:33 wiz Exp $
 
 .include	"../../security/nessus/Makefile.common"
 
 DISTNAME=	nessus-plugins-GPL-${VERS}
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	nessus-plugins-${VERS}
 
 COMMENT=	Plugins for the Nessus Network Security Scanner

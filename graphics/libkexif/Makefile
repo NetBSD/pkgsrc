@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2005/12/27 13:54:58 seb Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/24 07:32:16 wiz Exp $
 
 DISTNAME=	libkexif-0.2.2
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2

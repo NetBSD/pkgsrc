@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2005/10/02 13:06:37 hira Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2006/01/24 07:32:53 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GTK2_BUILDLINK3_MK:=	${GTK2_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gtk2
 
 .if !empty(GTK2_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gtk2+=	gtk2+>=2.4.0
-BUILDLINK_RECOMMENDED.gtk2+=	gtk2+>=2.8.4
+BUILDLINK_RECOMMENDED.gtk2+=	gtk2+>=2.8.10nb1
 BUILDLINK_PKGSRCDIR.gtk2?=	../../x11/gtk2
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/gtk-2.0$$/ { next; }

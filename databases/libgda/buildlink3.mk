@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/10/03 00:13:18 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/01/24 07:31:59 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBGDA_BUILDLINK3_MK:=	${LIBGDA_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libgda
 
 .if !empty(LIBGDA_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libgda+=	libgda>=1.0.3
-BUILDLINK_RECOMMENDED.libgda+=	libgda>=1.0.4nb2
+BUILDLINK_RECOMMENDED.libgda+=	libgda>=1.2.2nb2
 BUILDLINK_PKGSRCDIR.libgda?=	../../databases/libgda
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/libgda\/providers$$/ \

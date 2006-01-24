@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:50 tv Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/24 07:32:42 wiz Exp $
 #
 
 DISTNAME=	mod_auth_script-alpha1.3
 PKGNAME=	ap-auth-script-1.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mod-auth-script/}
 

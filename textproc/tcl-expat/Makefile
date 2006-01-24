@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/04/05 10:48:34 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/24 07:32:39 wiz Exp $
 #
 
 DISTNAME=	TclExpat-1.1
 PKGNAME=	tcl-expat-1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc www tcl
 MASTER_SITES=	http://www.zveno.com/in-tclxml/
 

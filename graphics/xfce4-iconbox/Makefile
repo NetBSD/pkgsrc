@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2005/11/09 07:09:04 martti Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/24 07:32:17 wiz Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-iconbox-${XFCE4_VERSION}
+PKGREVISION=	1
 CATEGORIES=	graphics
 COMMENT=	Xfce icon displayer
 

@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2005/03/22 10:55:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/24 07:32:33 wiz Exp $
 #
 
 DBUS_INTERFACE=	glib
 DBUS_DIRS=	dbus glib tools
 
 .include "../../sysutils/dbus/Makefile.common"
+PKGREVISION=	1
 
 # We can't install from within the 'dbus' nor 'tools' directory automatically
 # because we'd get a lot of other stuff installed (overriding files in the

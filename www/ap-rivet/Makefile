@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/01/13 00:36:29 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/24 07:32:42 wiz Exp $
 
 DISTNAME=	rivet_0.4.0-1
 PKGNAME=	ap-rivet-0.4.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=tcl/rivet/}
 

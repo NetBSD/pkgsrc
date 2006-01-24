@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2005/12/05 20:50:18 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2006/01/24 07:32:09 wiz Exp $
 #
 
 DISTNAME=	xarchon-0.60
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games x11
 MASTER_SITES=	http://xarchon.seul.org/ \
 		ftp://xarchon.seul.org/pub/xarchon/

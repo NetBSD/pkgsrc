@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2006/01/05 10:08:59 ghen Exp $
+# $NetBSD: Makefile,v 1.32 2006/01/24 07:32:32 wiz Exp $
 
 DISTNAME=	scribus-1.2.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	http://www.scribus.org.uk/downloads/1.2.3/
 EXTRACT_SUFX=	.tar.bz2

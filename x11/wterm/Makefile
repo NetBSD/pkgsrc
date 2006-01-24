@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2005/04/11 21:48:14 tv Exp $
+# $NetBSD: Makefile,v 1.29 2006/01/24 07:33:00 wiz Exp $
 
 DISTNAME=	wterm-6.2.9
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11 windowmaker
 MASTER_SITES=	http://largo.windowmaker.org/files/
 EXTRACT_SUFX=	.tar.bz2

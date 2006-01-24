@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2005/11/09 06:42:58 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/01/24 07:32:17 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_ICONBOX_BUILDLINK3_MK:=	${XFCE4_ICONBOX_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-iconbox
 
 .if !empty(XFCE4_ICONBOX_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.xfce4-iconbox+=	xfce4-iconbox>=4.2.3
+BUILDLINK_RECOMMENDED.xfce4-iconbox?=	xfce4-iconbox>=4.2.3nb1
 BUILDLINK_PKGSRCDIR.xfce4-iconbox?=	../../graphics/xfce4-iconbox
 .endif	# XFCE4_ICONBOX_BUILDLINK3_MK
 

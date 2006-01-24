@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2005/12/11 18:06:22 salo Exp $
+# $NetBSD: Makefile,v 1.18 2006/01/24 07:32:28 wiz Exp $
 #
 
 .include "../../multimedia/mkvtoolnix/Makefile.dist"
 PKGNAME=        ${DISTNAME:S/mkvtoolnix/mmg/}
+PKGREVISION=	1
 
 MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://www.bunkus.org/videotools/mkvtoolnix/doc/mkvmerge-gui.html

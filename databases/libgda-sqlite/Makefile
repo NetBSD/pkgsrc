@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2005/04/18 18:25:41 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/24 07:31:59 wiz Exp $
 #
 
 LIBGDA_PROVIDER=	sqlite
 
 .include "../../databases/libgda/Makefile.common"
+PKGREVISION=		1
 
 CONFIGURE_ARGS+=	--with-sqlite=${BUILDLINK_PREFIX.sqlite3}
 

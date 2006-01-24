@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2005/12/01 18:16:50 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/01/24 07:32:31 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOMEPRINT_BUILDLINK3_MK:=	${LIBGNOMEPRINT_BUILDLINK3_MK}+
@@ -14,7 +14,7 @@ BUILDLINK_PACKAGES+=	libgnomeprint
 
 .if !empty(LIBGNOMEPRINT_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libgnomeprint+=	libgnomeprint>=2.8.0
-BUILDLINK_RECOMMENDED.libgnomeprint+=	libgnomeprint>=2.8.0nb1
+BUILDLINK_RECOMMENDED.libgnomeprint+=	libgnomeprint>=2.12.1nb1
 BUILDLINK_PKGSRCDIR.libgnomeprint?=	../../print/libgnomeprint
 .endif	# LIBGNOMEPRINT_BUILDLINK3_MK
 

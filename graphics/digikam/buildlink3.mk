@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2005/10/18 09:44:09 seb Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/01/24 07:32:11 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DIGIKAM_BUILDLINK3_MK:=	${DIGIKAM_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	digikam
 
 .if !empty(DIGIKAM_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.digikam+=	digikam>=0.7.4
+BUILDLINK_RECOMMENDED.digikam?=	digikam>=0.7.4nb1
 BUILDLINK_PKGSRCDIR.digikam?=	../../graphics/digikam
 .endif	# DIGIKAM_BUILDLINK3_MK
 

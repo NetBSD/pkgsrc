@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2005/11/09 07:09:04 martti Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/24 07:32:17 wiz Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 XFCE4_VERSION=	0.0.4
 
 DISTNAME=	xfce4-artwork-${XFCE4_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.berlios.de/xfce-goodies/
 COMMENT=	Xfce artwork

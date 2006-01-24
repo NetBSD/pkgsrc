@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2005/12/05 20:51:19 rillig Exp $
+# $NetBSD: Makefile,v 1.39 2006/01/24 07:33:00 wiz Exp $
 
 .include "../../mk/bsd.prefs.mk"
 # XXX: hack - work round an ICE with GCC 3.3 on sparc
@@ -9,6 +9,7 @@ GCC_REQD+=              3.4
 .include "../../x11/qt3-libs/Makefile.common"
 
 PKGNAME=		qt3-tools-${QTVERSION}
+PKGREVISION=		1
 COMMENT=		QT GUI (WYSIWYG) builder and other tools
 
 CONFIGURE_ARGS+=	-I${QTDIR}/include \

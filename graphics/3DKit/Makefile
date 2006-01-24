@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/12/11 09:40:44 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/01/24 07:32:10 wiz Exp $
 #
 
 .include "../../graphics/3DKit/Makefile.common"
-PKGREVISION=	7
+PKGREVISION=	8
 
 DISTFILES=	DevManual.pdf
 
