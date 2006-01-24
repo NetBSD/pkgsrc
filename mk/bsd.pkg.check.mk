@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.27 2006/01/21 10:13:25 rillig Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.28 2006/01/24 22:17:12 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the various install-time "check"
@@ -422,9 +422,11 @@ check-wrkref:
 # CHECK_INTERPRETER_SKIP is a list of shell globs.  Installed files that
 # match these globs are skipped when running the check-interpreter target.
 #
+CHECK_INTERPRETER_SKIP?=	# empty
+
 _CHECK_INTERP_SKIP_FILTER=	case $$file in
-.for _pattern_ in ${CHECK_INTERPRETER_SKIP:U}
-_CHECK_INTERP_SKIP_FILTER+=	${_pattern_}) continue ;;
+.for _pattern_ in ${CHECK_INTERPRETER_SKIP}
+_CHECK_INTERP_SKIP_FILTER+=	${PREFIX:Q}/${_pattern_}|${_pattern_}) continue ;;
 .endfor
 _CHECK_INTERP_SKIP_FILTER+=	*) ;;
 _CHECK_INTERP_SKIP_FILTER+=	esac
