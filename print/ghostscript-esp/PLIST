@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/11/21 06:17:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/01/24 15:28:30 ben Exp $
 bin/bdftops
 bin/dvipdf
 bin/eps2eps
@@ -29,8 +29,8 @@ bin/ps2ps
 bin/pv.sh
 bin/unix-lpr.sh
 bin/wftopfa
-libexec/cups/filter/pstopxl
-libexec/cups/filter/pstoraster
+${CUPS}libexec/cups/filter/pstopxl
+${CUPS}libexec/cups/filter/pstoraster
 man/de/man1/dvipdf.1
 man/de/man1/eps2eps.1
 man/de/man1/font2c.1
@@ -69,8 +69,8 @@ man/man1/ps2pdf13.1
 man/man1/ps2pdfwr.1
 man/man1/ps2ps.1
 man/man1/wftopfa.1
-share/cups/model/pxlcolor.ppd
-share/cups/model/pxlmono.ppd
+${CUPS}share/cups/model/pxlcolor.ppd
+${CUPS}share/cups/model/pxlmono.ppd
 share/doc/ghostscript/API.htm
 share/doc/ghostscript/Bug-form.htm
 share/doc/ghostscript/Bug-info.htm
@@ -113,7 +113,7 @@ share/doc/ghostscript/Use.htm
 share/doc/ghostscript/Xfonts.htm
 share/doc/ghostscript/gs.css
 share/doc/ghostscript/index.html
-share/examples/cups/pstoraster.convs
+${CUPS}share/examples/cups/pstoraster.convs
 share/examples/ghostscript/alphabet.ps
 share/examples/ghostscript/colorcir.ps
 share/examples/ghostscript/doretree.ps
