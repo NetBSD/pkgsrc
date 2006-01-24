@@ -1,0 +1,30 @@
+$NetBSD: patch-ag,v 1.1 2006/01/24 22:27:07 joerg Exp $
+
+--- tools.c.orig	2000-04-27 12:48:55.000000000 +0000
++++ tools.c
+@@ -72,12 +72,14 @@ char conv_umlaut_to_local(char code)
+ 
+ void conv_string_from_local(char *s)
+ {
+-  while (*s) *s++ = conv_umlaut_from_local(*s);
++  for (; *s; ++s)
++    *s = conv_umlaut_from_local(*s);
+ }
+ 
+ void conv_string_to_local(char *s)
+ {
+-  while (*s) *s++ = conv_umlaut_to_local(*s);
++  for (; *s; ++s)
++    *s = conv_umlaut_to_local(*s);
+ }
+ 
+ boolean conv_file_umlaut(boolean to_local, char *fname)
+@@ -168,7 +170,7 @@ short call_prg(char *prog, char *par, ch
+ #ifdef __macos__
+   return (status);
+ #endif
+-#if defined(__linux__) || defined(__NetBSD__)
++#if defined(__linux__) || defined(__NetBSD__) || defined(__DragonFly__)
+   return (statusconvert(status));
+ #endif
+ }
