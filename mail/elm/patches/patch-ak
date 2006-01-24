@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.1 2006/01/24 22:47:13 joerg Exp $
+
+--- hdrs/mcprtlib.h.orig	2006-01-24 21:26:45.000000000 +0000
++++ hdrs/mcprtlib.h
+@@ -145,7 +145,7 @@ typedef struct {
+     for (i = 0; i < typeCnt; ++i) {					      \
+ 	switch (typeList[i].type) {					      \
+ 	  case MCShortType:						      \
+-	    typeList[i].u.shortV = va_arg(vl, short);			      \
++	    typeList[i].u.shortV = va_arg(vl, int);			      \
+ 	    break;							      \
+ 	  case MCLongType:						      \
+ 	    typeList[i].u.longV = va_arg(vl, long);			      \
+@@ -159,7 +159,7 @@ typedef struct {
+ 	    break;							      \
+ #endif*/								      \
+ 	  case MCFloatType:						      \
+-	    typeList[i].u.floatV = va_arg(vl, float);			      \
++	    typeList[i].u.floatV = va_arg(vl, double);			      \
+ 	    break;							      \
+ 	  case MCStringType:						      \
+ 	    typeList[i].u.charPV = va_arg(vl, char *);			      \
