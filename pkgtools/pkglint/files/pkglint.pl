@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.483 2006/01/24 20:26:11 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.484 2006/01/24 20:41:07 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2251,6 +2251,7 @@ sub checkline_mk_shelltext($$) {
 	use constant SCST_FOR		=> 16;
 	use constant SCST_FOR_IN	=> 17;
 	use constant SCST_FOR_CONT	=> 18;
+	use constant SCST_SET_CONT	=> 19;
 
 	use constant scst_statename => [
 		"SCST_START", "SCST_CONT", "SCST_INSTALL", "SCST_INSTALL_D",
@@ -2258,7 +2259,7 @@ sub checkline_mk_shelltext($$) {
 		"SCST_SED_E", "SCST_SET", "SCST_COND_CONT", "SCST_CASE",
 		"SCST_CASE_IN", "SCST_CASE_LABEL", "SCST_CASE_LABEL_CONT",
 		"SCST_CASE_PAREN", "SCST_FOR", "SCST_FOR_IN",
-		"SCST_FOR_CONT",
+		"SCST_FOR_CONT", "SCST_SET_CONT",
 	];
 
 	if ($text =~ qr"^\@*-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)") {
@@ -2276,7 +2277,11 @@ sub checkline_mk_shelltext($$) {
 
 		$line->log_debug("[" . scst_statename->[$state] . "] shellword=${shellword}");
 
-		checkline_mk_shellword($line, $shellword, ($state != SCST_CASE && $state != SCST_FOR && !($state == SCST_START && $shellword =~ regex_sh_varassign)));
+		checkline_mk_shellword($line, $shellword, (
+		       $state != SCST_CASE
+		    && $state != SCST_FOR
+		    && $state != SCST_SET_CONT
+		    && ($state != SCST_START || $shellword !~ regex_sh_varassign)));
 
 		#
 		# Actions associated with the current state
@@ -2355,7 +2360,7 @@ sub checkline_mk_shelltext($$) {
 				: ($shellword =~ qr"^(?:then|else|do)$") ? SCST_START
 				: ($shellword eq "case") ? SCST_CASE
 				: ($shellword eq "for") ? SCST_FOR
-				: ($shellword =~ sh_regex_varassign) ? SCST_START
+				: ($shellword =~ regex_sh_varassign) ? SCST_START
 				: SCST_CONT)
 			: ($state == SCST_MKDIR) ? SCST_MKDIR
 			: ($state == SCST_INSTALL && $shellword eq "-d") ? SCST_INSTALL_D
@@ -2372,7 +2377,8 @@ sub checkline_mk_shelltext($$) {
 				: ($shellword =~ qr"^-") ? SCST_SED
 				: SCST_CONT)
 			: ($state == SCST_SED_E) ? SCST_SED
-			: ($state == SCST_SET) ? SCST_CONT
+			: ($state == SCST_SET) ? SCST_SET_CONT
+			: ($state == SCST_SET_CONT) ? SCST_SET_CONT
 			: ($state == SCST_CASE) ? SCST_CASE_IN
 			: ($state == SCST_CASE_IN && $shellword eq "in") ? SCST_CASE_LABEL
 			: ($state == SCST_CASE_LABEL && $shellword eq "esac") ? SCST_CONT
