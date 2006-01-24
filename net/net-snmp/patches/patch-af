@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.4 2005/03/30 12:10:58 adam Exp $
+$NetBSD: patch-af,v 1.5 2006/01/24 22:16:55 adam Exp $
 
---- configure.orig	2005-01-25 01:00:12.000000000 +0000
+--- configure.orig	2006-01-14 02:51:51.000000000 +0100
 +++ configure
-@@ -16597,6 +16597,53 @@ fi
+@@ -15503,6 +15503,53 @@ fi
  
  fi
  

@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.2 2005/03/30 12:10:58 adam Exp $
+$NetBSD: patch-aj,v 1.3 2006/01/24 22:16:55 adam Exp $
 
---- net-snmp-config.in.orig	2005-03-30 13:48:27.000000000 +0000
+--- net-snmp-config.in.orig	2005-11-15 17:37:58.000000000 +0100
 +++ net-snmp-config.in
 @@ -34,7 +34,7 @@ libdir=@libdir@
  NSC_LDFLAGS="@LDFLAGS@"
@@ -8,6 +8,6 @@ $NetBSD: patch-aj,v 1.2 2005/03/30 12:10:58 adam Exp $
  NSC_LIBDIR=-L${libdir}
 -NSC_LIBS="@LIBS@ @WRAPLIBS@"
 +NSC_LIBS="@LIBS@"
- NSC_AGENTLIBS="@AGENTLIBS@ @WRAPLIBS@"
+ NSC_AGENTLIBS="@AGENTLIBS@ @WRAPLIBS@ @PERLLDOPTS@"
  NSC_PREFIX=$prefix
  NSC_EXEC_PREFIX=$exec_prefix

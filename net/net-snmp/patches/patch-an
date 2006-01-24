@@ -1,27 +1,28 @@
-$NetBSD: patch-an,v 1.2 2005/08/01 11:56:54 wiz Exp $
---- agent/mibgroup/mibII/route_write.c.orig	2005-07-30 22:18:06.000000000 +1000
-+++ agent/mibgroup/mibII/route_write.c	2005-07-30 22:18:28.000000000 +1000
-@@ -102,7 +102,7 @@
+$NetBSD: patch-an,v 1.3 2006/01/24 22:16:55 adam Exp $
+
+--- agent/mibgroup/mibII/route_write.c.orig	2005-09-16 19:00:23.000000000 +0200
++++ agent/mibgroup/mibII/route_write.c
+@@ -97,7 +97,7 @@
  int
  addRoute(u_long dstip, u_long gwip, u_long iff, u_short flags)
  {
--#ifndef dynix
-+#if !(defined dynix || defined darwin)
+-#if defined SIOCADDRT && !defined(irix6)
++#if defined SIOCADDRT && !defined(irix6) && !defined(darwin)
      struct sockaddr_in dst;
      struct sockaddr_in gateway;
      int             s, rc;
-@@ -141,6 +141,55 @@
+@@ -132,6 +132,54 @@ addRoute(u_long dstip, u_long gwip, u_lo
+     if (rc < 0)
+         snmp_log_perror("ioctl");
      return rc;
- #endif
- 
 +#elif defined darwin
 +    size_t sa_in_size = sizeof(struct sockaddr_in);
-+    int	s, rc;
++    int        s, rc;
 +    struct sockaddr_in dst;
 +    struct sockaddr_in gateway;
 +    struct {
-+        struct	rt_msghdr hdr;
-+        char	space[512];
++        struct rt_msghdr hdr;
++        char   space[512];
 +    } rtmsg;
 +
 +    s = socket(PF_ROUTE, SOCK_RAW, 0);
@@ -49,44 +50,43 @@ $NetBSD: patch-an,v 1.2 2005/08/01 11:56:54 wiz Exp $
 +    rtmsg.hdr.rtm_version = RTM_VERSION;
 +    rtmsg.hdr.rtm_addrs = RTA_DST | RTA_GATEWAY;
 +    rtmsg.hdr.rtm_flags = RTF_GATEWAY;
-+	
++       
 +    bcopy((char *)&dst, rtmsg.space, sa_in_size);
 +    bcopy((char *)&gateway, (rtmsg.space+sa_in_size), sa_in_size);
-+	
++       
 +    rc = sizeof(struct rt_msghdr) + sa_in_size + sa_in_size;
 +    rtmsg.hdr.rtm_msglen = rc;
-+	
++       
 +    if ((rc = write(s, (char *)&rtmsg, rc)) < 0) {
 +        snmp_log_perror("writing to routing socket");
 +        return -1;
 +    }
 +
 +    return (rc);
-+
- #else                           /* dynix */
-     /*
-      *  Throws up the following errors:
-@@ -166,7 +215,7 @@
+ 
+ #else                           /* SIOCADDRT */
+     return -1;
+@@ -143,7 +191,7 @@ addRoute(u_long dstip, u_long gwip, u_lo
  int
  delRoute(u_long dstip, u_long gwip, u_long iff, u_short flags)
  {
--#ifndef dynix
-+#if !(defined dynix || defined darwin)
+-#if defined SIOCDELRT && !defined(irix6)
++#if defined SIOCDELRT && !defined(irix6) && !defined(darwin)
  
      struct sockaddr_in dst;
      struct sockaddr_in gateway;
-@@ -205,6 +254,56 @@
+@@ -178,6 +226,56 @@ delRoute(u_long dstip, u_long gwip, u_lo
+     close(s);
      return rc;
- #endif
  
 +#elif defined darwin
 +    size_t sa_in_size = sizeof(struct sockaddr_in);
-+    int	s, rc;
++    int        s, rc;
 +    struct sockaddr_in dst;
 +    struct sockaddr_in gateway;
 +    struct {
-+        struct	rt_msghdr hdr;
-+        char	space[512];
++        struct rt_msghdr hdr;
++        char   space[512];
 +    } rtmsg;
 +
 +    s = socket(PF_ROUTE, SOCK_RAW, 0);
@@ -129,6 +129,6 @@ $NetBSD: patch-an,v 1.2 2005/08/01 11:56:54 wiz Exp $
 +
 +    return rc;
 +
- #else                           /* dynix */
-     /*
-      * See 'addRoute' for the list of errors.
+ #else                           /* SIOCDELRT */
+     return 0;
+ #endif
