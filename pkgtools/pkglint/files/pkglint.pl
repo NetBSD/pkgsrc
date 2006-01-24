@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.481 2006/01/23 01:51:46 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.482 2006/01/24 20:07:54 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2463,6 +2463,9 @@ sub checkline_mk_vartype_basic($$$$$$) {
 
 			if ($macval =~ qr"^\\\"(?:\$\{[A-Z0-9_]+:Q\}|[^\$])*\\\"") {
 				# Everything's fine.
+
+			} elsif ($macval =~ qr"^\"\\\"(?:\$\{[A-Z0-9_]+\}|[^\$])*\\\"\"") {
+				$opt_debug and $line->log_warning("Not the best style for CPP macros, but accepted.");
 
 			} elsif ($macval =~ regex_unresolved && $macval =~ qr"[\"']") {
 				$line->log_warning("Unusual macro value ${macval}.");
