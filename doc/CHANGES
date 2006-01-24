@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12646 2006/01/24 03:48:37 xtraeme Exp $
+$NetBSD: CHANGES,v 1.12647 2006/01/24 04:01:38 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -507,3 +507,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added multimedia/gtranscode version 0.3 [xtraeme 2006-01-24]
 	Added graphics/wxsvg version 1.0beta5 [xtraeme 2006-01-24]
 	Added multimedia/dvdstyler version 1.5beta4 [xtraeme 2006-01-24]
+	Added multimedia/ffmpeg-devel version 0.4.9pre1 [xtraeme 2006-01-24]
