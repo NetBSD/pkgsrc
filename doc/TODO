@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4502 2006/01/24 19:53:43 tonio Exp $
+$NetBSD: TODO,v 1.4503 2006/01/24 20:04:04 tonio Exp $
 
 Suggested new packages
 ======================
@@ -669,7 +669,6 @@ Suggested package updates
 	o kth-krb4-1.2.2
 	o latd-1.21
 	o lavaps-2.7
-	o lbdb-0.31.1
 	o lcab-1.0b11
 	o lcc-4.2
 	o leafnode-1.11.4
