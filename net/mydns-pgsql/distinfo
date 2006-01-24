@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/29 16:56:15 minskim Exp $
+$NetBSD: distinfo,v 1.2 2006/01/24 10:42:10 ghen Exp $
 
-SHA1 (mydns-1.0.0.tar.bz2) = 6a19977f8c6411ed142a5cc635c1cd53e0afc69c
-RMD160 (mydns-1.0.0.tar.bz2) = a83d790faf3e1a90fcae70e8f1900432ed5e15cf
-Size (mydns-1.0.0.tar.bz2) = 545441 bytes
+SHA1 (mydns-1.1.0.tar.bz2) = 71979409bf46e38b443ee940a6ecb0e42464bc0b
+RMD160 (mydns-1.1.0.tar.bz2) = ffd7c5d42d5e004e06562d4fb497cc515f31fed9
+Size (mydns-1.1.0.tar.bz2) = 573261 bytes
 SHA1 (patch-aa) = 76fc8010ef86169460735ec7012a7885b8d76924

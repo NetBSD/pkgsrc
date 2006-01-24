@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2006/01/24 09:10:50 ghen Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/24 10:42:10 ghen Exp $
 
 PKGNAME=		${DISTNAME:S/-/-mysql-/}
-PKGREVISION=		2
 COMMENT=		MySQL-based DNS server
 
 CONFLICTS=		mydns-pgsql-[0-9]*
