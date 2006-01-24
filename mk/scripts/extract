@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.15 2006/01/23 17:52:02 wiz Exp $
+# $NetBSD: extract,v 1.16 2006/01/24 15:26:06 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -146,6 +146,7 @@ case "$extract_using" in
 /*tar|/*pax)	tarprog="$extract_using" ;;
 *tar)		tarprog="${TAR}" ;;
 *pax)		tarprog="${PAX}" ;;
+*)		tarprog="${TAR}" ;;
 esac
 
 if ${TEST} -n "$exclude_file" -a ! -f "$exclude_file"; then
@@ -162,7 +163,7 @@ case "$distfile" in
 *.gz|*.tgz|*.z)		decompress_cat="${GZCAT}" ;;
 *.bz2|*.tbz|*.tbz2)	decompress_cat="${BZCAT}" ;;
 *.Z)			decompress_cat="${GZCAT}" ;;
--)			decompress_cat="${CAT}" ;;
+*)			decompress_cat="${CAT}" ;;
 esac
 
 # Derive the format of the archive based on the file extension.
