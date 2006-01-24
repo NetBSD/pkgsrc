@@ -1,8 +1,49 @@
-$NetBSD: patch-aa,v 1.1 2004/05/23 23:35:12 kristerw Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/24 19:08:09 joerg Exp $
 
---- newmail.c.orig	2004-05-24 01:29:15.000000000 +0200
-+++ newmail.c	2004-05-24 01:32:01.000000000 +0200
-@@ -148,19 +148,19 @@
+--- newmail.c.orig	1999-10-14 04:49:42.000000000 +0000
++++ newmail.c
+@@ -28,6 +28,22 @@
+ static void usage();
+ static void version();
+ 
++#ifdef DT_REG
++#define DIRENT_IS_REG(x) ((x) == DT_REG)
++#elif defined(DTTOIF)
++#define DIRENT_IS_REG(x) (S_ISREG(DTTOIF((x))))
++#else
++#error "Neither DT_REG nor DTTOIF is defined."
++#endif
++
++#ifdef DT_DIR
++#define DIRENT_IS_DIR(x) ((x) == DT_DIR)
++#elif defined(DTTOIF)
++#define DIRENT_IS_DIR(x) (S_ISDIR(DTTOIF((x))))
++#else
++#error "Neither DT_REG nor DTTOIF is defined."
++#endif
++
+ unsigned char	no_mail_message,
+ 				individual_messages,
+ 				use_exit_val;
+@@ -98,7 +114,7 @@ int main(int argc, char *argv[]) {
+ 					continue;
+ 				}
+ 				/* see if its a regular file */
+-				if (S_ISREG(DTTOIF(curr_file->d_type))) {
++				if (DIRENT_IS_REG(curr_file->d_type)) {
+ 					/* stat it for check_mailbox */
+ 					if (stat(curr_file->d_name, &file_info) == -1) {
+ 						err(EX_NOINPUT, "couldn't stat %s/%s", argv[ui], curr_file->d_name);
+@@ -106,7 +122,7 @@ int main(int argc, char *argv[]) {
+ 					check_mailbox(curr_file->d_name, &file_info, &found_mail);
+ 				} else if (warn_non_regular) {
+ 					/* just check its not a directory before warning */
+-					if (! S_ISDIR(DTTOIF(curr_file->d_type))) {
++					if (! DIRENT_IS_DIR(curr_file->d_type)) {
+ 						warnx("Found %s/%s: Not a regular file", argv[ui], curr_file->d_name);
+ 					}
+ 				} /* end of is dirent a regular file */
+@@ -148,19 +164,19 @@ void check_mailbox(const char *const fn,
  
  static void usage() {
  
