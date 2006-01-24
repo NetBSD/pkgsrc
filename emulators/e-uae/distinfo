@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/24 20:21:46 adam Exp $
+
+SHA1 (e-uae-0.8.28.tar.bz2) = 11e647ed64420f85893ac77c072e268b650ae183
+RMD160 (e-uae-0.8.28.tar.bz2) = 7e9fa21fa14b0ca3a32a28ccb236b9d7628a7f69
+Size (e-uae-0.8.28.tar.bz2) = 1148790 bytes
+SHA1 (patch-ab) = dfce48dafb163b91c7252da14088e67b3e13bb6c
