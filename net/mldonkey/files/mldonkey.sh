@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mldonkey.sh,v 1.3 2004/12/25 19:13:34 jmmv Exp $
+# $NetBSD: mldonkey.sh,v 1.4 2006/01/24 15:21:22 jmmv Exp $
 #
 # KEYWORD: shutdown
 # PROVIDE: mldonkey
@@ -27,6 +27,7 @@ mldonkey_start() {
 	else
 		@ECHO@ " ${name}"
 	fi
+	ulimit -n `ulimit -H -n`
 	@SU@ -l ${mldonkey_user} \
 	     -c "${command} ${mldonkey_flags} ${command_args}" &
 }
