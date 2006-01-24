@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12644 2006/01/24 02:28:49 xtraeme Exp $
+$NetBSD: CHANGES,v 1.12645 2006/01/24 03:43:42 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -505,3 +505,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xorg-server to 6.9.0nb2 [joerg 2006-01-23]
 	Updated inputmethod/anthy to 7100b [wiz 2006-01-23]
 	Added multimedia/gtranscode version 0.3 [xtraeme 2006-01-24]
+	Added graphics/wxsvg version 1.0beta5 [xtraeme 2006-01-24]
