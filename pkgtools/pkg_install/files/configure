@@ -5991,6 +5991,16 @@ _ACEOF
 
 
 
+case $host in
+*-*-dragonfly*)
+
+cat >>confdefs.h <<\_ACEOF
+#define NUMERIC_VERSION_ONLY 1
+_ACEOF
+
+	;;
+esac
+
 
 
 
