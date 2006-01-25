@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2005/08/06 21:22:24 tron Exp $
+$NetBSD: patch-ac,v 1.5 2006/01/25 02:12:10 joerg Exp $
 
---- globals.h.orig	1992-08-30 20:04:27.000000000 +0100
-+++ globals.h	2005-08-06 22:21:30.000000000 +0100
-@@ -8,6 +8,12 @@
+--- globals.h.orig	1992-08-30 19:04:27.000000000 +0000
++++ globals.h
+@@ -8,6 +8,12 @@ Please read the file COPYRIGHT for furth
  */
  
  #include "patchlevel.h"
@@ -15,7 +15,7 @@ $NetBSD: patch-ac,v 1.4 2005/08/06 21:22:24 tron Exp $
  
  /* globals for socket */
  
-@@ -22,9 +28,16 @@
+@@ -22,9 +28,16 @@ Please read the file COPYRIGHT for furth
  #define A(args) ()
  #endif
  
@@ -32,7 +32,16 @@ $NetBSD: patch-ac,v 1.4 2005/08/06 21:22:24 tron Exp $
  void catchsig A((int sig)) ;
  void usage A((void)) ;
  int do_read_write A((int from, int to)) ;
-@@ -49,4 +62,7 @@
+@@ -37,8 +50,6 @@ void add_crs A((char *from, char *to, in
+ void strip_crs A((char *from, char *to, int *sizep)) ;
+ void background A((void)) ;
+ 
+-extern int errno ;
+-
+ /* global variables */
+ extern int serverflag ;
+ extern int loopflag ;
+@@ -49,4 +60,7 @@ extern int quitflag ;
  extern int crlfflag ;
  extern int active_socket ;
  extern char *progname ;

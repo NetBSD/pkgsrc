@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.7 2005/10/04 16:12:28 tron Exp $
+$NetBSD: distinfo,v 1.8 2006/01/25 02:12:10 joerg Exp $
 
 SHA1 (socket-1.1.tar.gz) = 1ada9bc6d949c303734030b3a34e2d6f0544d1db
 RMD160 (socket-1.1.tar.gz) = 9a697cbdc807223f48229caa3349cba216b5ffc0
 Size (socket-1.1.tar.gz) = 14426 bytes
 SHA1 (patch-aa) = 83b6f15cc92b6bfbed03ea5d91b56cb329957241
 SHA1 (patch-ab) = a57ef3243601007113f07493201804a6050f3182
-SHA1 (patch-ac) = 8fd665125b26aadc16ddbebcd165b2759391234b
+SHA1 (patch-ac) = 73d6cabae5eec437edf39ee1cbb8ceea8cbb9f1e
 SHA1 (patch-ad) = 034f34565952f94b4e12cf78f0bb9b5612091e4d
 SHA1 (patch-ae) = 97bbe5066b8bf00fe45df1c1088768400abf102e
 SHA1 (patch-af) = b40a7bbd22a6773816eb0e52403d67317979451d
 SHA1 (patch-ag) = e106aac5b193a43ab208b648deadf173a78a6d6d
-SHA1 (patch-ah) = 03a996a5d1a40cf573882b842d94d24b226f74ca
-SHA1 (patch-ai) = d91f586ff0e109b1b453671550e20c6f80fd9778
+SHA1 (patch-ah) = 232f359d1c6256266d1dff9c98891ce591ebc13b
+SHA1 (patch-ai) = 855c15e6b25ec96e740933be0310366afbce4ec8
