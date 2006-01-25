@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 15:59:12 agc Exp $
+$NetBSD: distinfo,v 1.7 2006/01/25 04:49:45 uebayasi Exp $
 
 SHA1 (navi2ch-1.7.5.tar.gz) = 68b01a035301e076c91cc19b507c9180f87293ed
 RMD160 (navi2ch-1.7.5.tar.gz) = 2c4520ae8058ec2cc5073ba9c27f2cae829cb3bc
 Size (navi2ch-1.7.5.tar.gz) = 357379 bytes
+SHA1 (patch-aa) = 86e27c59b9b29a2e3f662bc66d09841b18843576
