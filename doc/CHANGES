@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12671 2006/01/25 16:03:50 joerg Exp $
+$NetBSD: CHANGES,v 1.12672 2006/01/25 17:38:52 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -543,3 +543,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated cad/verilog-current to 20060124 [dmcmahill 2006-01-25]
 	Updated devel/mkcmd to 8.14nb2 [joerg 2006-01-25]
 	Updated sysutils/cdrtools to 2.01nb1 [joerg 2006-01-25]
+	Updated mail/isync to 1.0.1nb3 [tonio 2006-01-25]
