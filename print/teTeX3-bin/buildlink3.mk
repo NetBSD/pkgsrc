@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/11/14 21:57:00 tonio Exp $
+# $NetBSD: buildlink3.mk,v 1.2.2.1 2006/01/25 12:45:20 salo Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 TETEX_BIN_BUILDLINK3_MK:=	${TETEX_BIN_BUILDLINK3_MK}+
@@ -17,5 +17,17 @@ BUILDLINK_PKGSRCDIR.teTeX-bin?=	../../print/teTeX3-bin
 
 TEX=etex
 PDFTEX=pdfetex
+#PKG_TEXMFPREFIX=	${PREFIX}/share/texmf-dist
+PKG_TEXMFPREFIX=	${PREFIX}/share/texmf
+#PKG_LOCALTEXMFPREFIX=	${PREFIX}/share/texmf-local
+PKG_LOCALTEXMFPREFIX=	${PREFIX}/share/texmf
+PLIST_SUBST+=	PKG_TEXMFPREFIX=${PKG_TEXMFPREFIX:C|^${PREFIX}/||}
+PLIST_SUBST+=	PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX:C|^${PREFIX}/||}
+
+PRINT_PLIST_AWK+=	/^@dirrm ${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}(\/bibtex(\/bib|\/bst)?|\/tex(\/latex)?)?$$/ \
+			{ next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}/ \
+			{ gsub(/${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}/, "$${PKG_LOCALTEXMFPREFIX}"); \
+			print; next; }
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
