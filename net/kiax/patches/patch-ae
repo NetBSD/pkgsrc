@@ -1,0 +1,32 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/01/25 00:00:03 reinoud Exp $
+
+--- lib/libiax2/src/iax.c.orig	2005-04-13 19:30:39.000000000 +0200
++++ lib/libiax2/src/iax.c
+@@ -55,9 +55,11 @@ void gettimeofday(struct timeval *tv, st
+ #ifndef MACOSX
+ #include <malloc.h>
+ #ifndef SOLARIS
++#if !defined(__NetBSD__) && !defined(__FreeBSD__)
+ #include <error.h>
+ #endif
+ #endif
++#endif
+ 
+ #endif
+ 
+@@ -87,11 +89,15 @@ void gettimeofday(struct timeval *tv, st
+ #else
+ #ifdef SOLARIS
+ #define IAX_SOCKOPTS MSG_DONTWAIT
++#else
++#ifdef __NetBSD__
++#define IAX_SOCKOPTS MSG_DONTWAIT
+ #else  /* Linux and others */
+ #define IAX_SOCKOPTS MSG_DONTWAIT | MSG_NOSIGNAL
+ #endif
+ #endif
+ #endif
++#endif
+ 
+ 
+ #ifdef SNOM_HACK

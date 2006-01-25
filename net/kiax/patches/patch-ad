@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/01/25 00:00:03 reinoud Exp $
+
+--- lib/libiax2/src/iax-client.h.orig	2005-04-05 23:53:41.000000000 +0200
++++ lib/libiax2/src/iax-client.h
+@@ -19,7 +19,8 @@
+ #pragma warning(disable:4200)
+ #endif
+ 
+-#ifndef LINUX
++#if defined(LINUX) || defined(__FreeBSD__) || defined(__NetBSD__)
++#else
+ #define socklen_t int
+ #endif
+ 

@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/01/25 00:00:03 reinoud Exp $
+
+--- lib/portmixer/px_unix_oss/px_unix_oss.c.orig	2005-04-05 23:53:41.000000000 +0200
++++ lib/portmixer/px_unix_oss/px_unix_oss.c
+@@ -38,8 +38,12 @@
+ #ifdef __linux__
+ #include <linux/soundcard.h>
+ #else
++#if defined(__FreeBSD__) || defined(__NetBSD__)
++#include <sys/soundcard.h>
++#else
+ #include <machine/soundcard.h> /* JH20010905 */
+ #endif
++#endif
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
