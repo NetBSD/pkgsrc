@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4513 2006/01/25 20:43:07 minskim Exp $
+$NetBSD: TODO,v 1.4514 2006/01/25 21:27:45 minskim Exp $
 
 Suggested new packages
 ======================
@@ -332,7 +332,6 @@ Suggested package updates
 	o afterstep-2.2.0
 	o album-3.10
 	o ald-0.1.6 [pkg/26552]
-	o alee-ttf-6.3 [pkg/32505]
 	o algae-4.3.6
 	o aliados-0.2.0
 	o amanda-*-2.4.5p1
