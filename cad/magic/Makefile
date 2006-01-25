@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/01/06 18:14:06 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/01/25 22:21:09 joerg Exp $
 #
 
 DISTNAME=	magic-7.1
@@ -11,6 +11,7 @@ HOMEPAGE=	http://vlsi.cornell.edu/magic/
 COMMENT=	Integrated circuit layout system
 
 USE_TOOLS+=	gmake
+USE_GNU_READLINE=	# uses rl_*_completion_function
 MAKE_ENV+=	MAGIC_HOME=${PREFIX:Q}
 
 .include "../../mk/endian.mk"
