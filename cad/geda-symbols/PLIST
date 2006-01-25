@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/08/23 00:02:20 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/01/25 01:51:34 dmcmahill Exp $
 share/doc/geda-doc/nc.pdf
 share/gEDA/sym/4000/4000-1.sym
 share/gEDA/sym/4000/4000-2.sym
@@ -298,6 +298,7 @@ share/gEDA/sym/74/74259-1.sym
 share/gEDA/sym/74/74265-1.sym
 share/gEDA/sym/74/74265-2.sym
 share/gEDA/sym/74/74266-1.sym
+share/gEDA/sym/74/74299-1.sym
 share/gEDA/sym/74/7427-1.sym
 share/gEDA/sym/74/74273-1.sym
 share/gEDA/sym/74/74280-1.sym
@@ -506,6 +507,7 @@ share/gEDA/sym/analog/glow-lamp-1.sym
 share/gEDA/sym/analog/inamp-1.sym
 share/gEDA/sym/analog/inductor-1.sym
 share/gEDA/sym/analog/inductor-dot-1.sym
+share/gEDA/sym/analog/jj-1.sym
 share/gEDA/sym/analog/led-1.sym
 share/gEDA/sym/analog/leddual-1.sym
 share/gEDA/sym/analog/leddual-2.sym
@@ -996,10 +998,12 @@ share/gEDA/sym/maxim/max1209-1.sym
 share/gEDA/sym/maxim/max1211-1.sym
 share/gEDA/sym/maxim/max122-1.sym
 share/gEDA/sym/maxim/max12527-1.sym
+share/gEDA/sym/maxim/max12528-1.sym
 share/gEDA/sym/maxim/max12553-1.sym
 share/gEDA/sym/maxim/max12554-1.sym
 share/gEDA/sym/maxim/max12555-1.sym
 share/gEDA/sym/maxim/max12557-1.sym
+share/gEDA/sym/maxim/max12558-1.sym
 share/gEDA/sym/maxim/max135-1.sym
 share/gEDA/sym/maxim/max1407-1.sym
 share/gEDA/sym/maxim/max147-1.sym
@@ -1344,6 +1348,7 @@ share/gEDA/sym/spice/gnucap-model-1.sym
 share/gEDA/sym/spice/gnucap-npn-1.sym
 share/gEDA/sym/spice/gnucap-options-1.sym
 share/gEDA/sym/spice/idc-1.sym
+share/gEDA/sym/spice/kmutual-1.sym
 share/gEDA/sym/spice/nullor-1.sym
 share/gEDA/sym/spice/spice-directive-1.sym
 share/gEDA/sym/spice/spice-include-1.sym
