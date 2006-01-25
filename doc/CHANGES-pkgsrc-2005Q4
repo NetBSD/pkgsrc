@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.53 2006/01/24 12:08:26 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.54 2006/01/25 05:45:28 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -107,3 +107,7 @@ Pullup ticket 1053 - requested by Matthias Scheler
 security fix for xpdf
 Pullup ticket 1057 - requested by Geert Hendrickx
 security update for mydns
+Pullup ticket 1054 - requested by Lubomir Sedlacik
+security update for pine (and update of pico)
+Pullup ticket 1055 - requested by Lubomir Sedlacik
+security fix for antiword
