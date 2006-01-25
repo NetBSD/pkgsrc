@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/01/11 03:16:23 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/01/25 01:51:34 dmcmahill Exp $
 bin/gnetlist
 bin/mk_verilog_syms
 bin/sch2eaglepos.sh
@@ -35,6 +35,7 @@ share/gEDA/scheme/gnet-partslist-common.scm
 share/gEDA/scheme/gnet-partslist1.scm
 share/gEDA/scheme/gnet-partslist2.scm
 share/gEDA/scheme/gnet-partslist3.scm
+share/gEDA/scheme/gnet-pcbpins.scm
 share/gEDA/scheme/gnet-protelII.scm
 share/gEDA/scheme/gnet-redac.scm
 share/gEDA/scheme/gnet-spice-sdb.scm
