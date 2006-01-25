@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/25 00:00:03 reinoud Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/25 16:39:13 xtraeme Exp $
 #
 
 DISTNAME=		kiax-0.8.4
@@ -18,7 +18,7 @@ do-configure:
 	(cd ${WRKSRC} && ${QTDIR}/bin/qmake -o Makefile qkiax.pro)
 	(cd ${WRKSRC}/src && ${QTDIR}/bin/qmake -o Makefile src.pro)
 
-LDFLAGS+=	-lossaudio
+LIBS+=			${LIBOSSAUDIO}
 
 # Fix hardcoded paths
 SUBST_CLASSES+=		path
@@ -29,4 +29,5 @@ SUBST_SED.path=		-e 's:/usr/local:${PREFIX}:g'
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
+.include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
