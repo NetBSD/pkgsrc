@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2006/01/25 19:48:39 wiz Exp $
+
+--- src/fdpass.C.orig	2006-01-22 17:08:42.000000000 +0000
++++ src/fdpass.C
+@@ -28,6 +28,7 @@
+ #include <sys/uio.h>
+ #include <sys/types.h>
+ #include <sys/socket.h>
++#include <stddef.h>
+ 
+ #include "libptytty.h"
+ 
