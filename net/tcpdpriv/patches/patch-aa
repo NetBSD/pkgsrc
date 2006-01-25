@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/06 03:43:16 itojun Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/25 17:22:54 joerg Exp $
 
---- tcpdpriv.c-	Tue Mar  6 12:39:07 2001
-+++ tcpdpriv.c	Tue Mar  6 12:39:12 2001
+--- tcpdpriv.c.orig	2000-04-18 07:59:19.000000000 +0000
++++ tcpdpriv.c
 @@ -90,7 +90,7 @@
  #include <arpa/nameser.h>
  #endif
@@ -11,3 +11,21 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/06 03:43:16 itojun Exp $
  #include <net/slcompress.h>
  #if	!defined(osf1)
  #include <net/slip.h>
+@@ -2759,7 +2759,7 @@ usage(char *cmd)
+ int
+ main(int argc, char *argv[], char *envp[])
+ {
+-    void bpf_dump(FILE *output, struct bpf_program *, int);
++    void my_bpf_dump(FILE *output, struct bpf_program *, int);
+     char *copy_argv(register char **argv);
+     char *read_infile(char *fname);
+     char *rfile, *wfile;
+@@ -2903,7 +2903,7 @@ main(int argc, char *argv[], char *envp[
+ 
+     /* dump? */
+     if (dflag) {
+-	bpf_dump(stderr, &fcode, dflag);
++	my_bpf_dump(stderr, &fcode, dflag);
+ 	exit(0);
+     }
+ 
