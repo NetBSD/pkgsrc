@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2006/01/24 07:32:27 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2006/01/25 08:09:12 xtraeme Exp $
 
-DISTNAME=	mjpegtools-1.6.2
-PKGREVISION=	8
+DISTNAME=	mjpegtools-1.8.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mjpeg/}
 
@@ -13,14 +12,16 @@ DEPENDS+=		toolame>=02l:../../audio/toolame
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
 USE_TOOLS+=		gmake
-USE_TOOLS+=		bash:run
+USE_TOOLS+=		bash:run pkg-config
 
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	libtool
 PKGCONFIG_OVERRIDE=	mjpegtools.pc.in
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-libquicktime
 CONFIGURE_ARGS+=	--enable-large-file
+CONFIGURE_ARGS+=	--enable-simd
 CONFIGURE_ARGS+=	--with-lame-includes=${BUILDLINK_PREFIX.lame}
 
 .include "options.mk"
@@ -36,8 +37,8 @@ INFO_FILES=		mjpeg-howto.info
 
 .include "../../audio/lame/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 # GTK+ support is disabled to avoid a dependency on GTK+ when building GNOME2.
 # This only disables the "glav" program.  If you really need it, please add an
 # external package for it.
