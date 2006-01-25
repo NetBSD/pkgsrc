@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12677 2006/01/25 20:31:52 wiz Exp $
+$NetBSD: CHANGES,v 1.12678 2006/01/25 20:43:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -550,3 +550,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/gst-plugins0.10-base to 0.10.2 [wiz 2006-01-25]
 	Updated multimedia/xine-lib to 1.0.3anb4 [tron 2006-01-25]
 	Updated devel/bzr to 0.7 [wiz 2006-01-25]
+	Updated math/mathomatic to 12.5.6 [minskim 2006-01-25]
