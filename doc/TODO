@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4506 2006/01/25 08:12:08 xtraeme Exp $
+$NetBSD: TODO,v 1.4507 2006/01/25 11:50:40 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -916,8 +916,6 @@ Suggested package updates
 	o p5-XML-Xerces-2.5.0
 	o p5-XML-XUpdate-LibXML-0.5.0
 	o p5-XML-Xerces-2.6.0.2
-	o p5-glib2-1.100
-	o p5-gtk2-1.110
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.42
