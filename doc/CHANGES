@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12674 2006/01/25 19:50:55 wiz Exp $
+$NetBSD: CHANGES,v 1.12675 2006/01/25 19:53:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -546,3 +546,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/isync to 1.0.1nb3 [tonio 2006-01-25]
 	Updated x11/rxvt-unicode to 7.2 [wiz 2006-01-25]
 	Updated finance/p5-Finance-Quote to 1.11nb1 [wiz 2006-01-25]
+	Updated multimedia/gstreamer0.10 to 0.10.2 [wiz 2006-01-25]
+	Updated multimedia/gst-plugins0.10-base to 0.10.2 [wiz 2006-01-25]
