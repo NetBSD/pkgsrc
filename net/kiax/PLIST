@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/25 00:00:03 reinoud Exp $
+bin/kiax
+share/kiax/icons/contact.png
+share/kiax/icons/dial.png
+share/kiax/icons/failed.png
+share/kiax/icons/hangup.png
+share/kiax/icons/hold.png
+share/kiax/icons/incoming.png
+share/kiax/icons/missed.png
+share/kiax/icons/outgoing.png
+share/kiax/icons/resume.png
+@dirrm share/kiax/icons
+@dirrm share/kiax
