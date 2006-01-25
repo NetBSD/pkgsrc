@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2006/01/24 05:33:21 xtraeme Exp $
+# $NetBSD: options.mk,v 1.2 2006/01/25 08:53:34 xtraeme Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.transcode
 PKG_SUPPORTED_OPTIONS=	a52 freetype2 mjpegtools mpeg3 lzo libxml2
-PKG_SUPPORTED_OPTIONS+=	libdv gtk imagemagick
+PKG_SUPPORTED_OPTIONS+=	dv gtk imagemagick
 
 PKG_SUGGESTED_OPTIONS=	a52 freetype2 mjpegtools mpeg3 libxml2 imagemagick
 
@@ -65,12 +65,12 @@ PLIST_SUBST+=		LIBXML2='@comment '
 CONFIGURE_ARGS+=	--disable-libxml2
 .endif
 
-.if !empty(PKG_OPTIONS:Mlibdv)
-CONFIGURE_ARGS+=	LIBDV=
+.if !empty(PKG_OPTIONS:Mdv)
+PLIST_SUBST+=	DV=
 .  include "../../multimedia/libdv/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-libdv
 .else
-CONFIGURE_ARGS+=	LIBDV='@comment '
+PLIST_SUBST+=	DV='@comment '
 CONFIGURE_ARGS+=	--disable-libdv
 .endif
 
