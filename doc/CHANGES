@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12665 2006/01/25 05:11:11 xtraeme Exp $
+$NetBSD: CHANGES,v 1.12666 2006/01/25 08:12:08 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -535,3 +535,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated cad/libgeda to 20060123 [dmcmahill 2006-01-24]
 	Updated chat/navi2ch to 1.7.5nb1 [uebayasi 2006-01-25]
 	Updated pkgtools/url2pkg to 1.33 [xtraeme 2006-01-25]
+	Updated multimedia/mjpegtools to 1.8.0 [xtraeme 2006-01-25]
+	Updated multimedia/mplex to 1.8.0 [xtraeme 2006-01-25]
