@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: url2pkg,v 1.36 2006/01/05 17:42:24 xtraeme Exp $
+# $NetBSD: url2pkg,v 1.37 2006/01/25 05:10:00 xtraeme Exp $
 #
 # url2pkg
 # (c) 1999-2002 Hubert Feyrer <hubert@feyrer.de>
@@ -186,7 +186,7 @@ echo "Fixing up Makefile."
 		echo "USE_LIBTOOL=		$USE_LIBTOOL"
 	fi
 
-	if [ -n $PKGCONFIGS ]; then
+	if [ "${PKGCONFIGS}" != "" ]; then
 		echo "USE_TOOLS+=		pkg-config"
 	fi
 
