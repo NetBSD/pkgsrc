@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/01/18 15:41:03 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2006/01/25 19:52:47 wiz Exp $
 
-SHA1 (gst-plugins-base-0.10.1.tar.bz2) = 5b25d8550eec8521089e0380669a4437fe6fac34
-RMD160 (gst-plugins-base-0.10.1.tar.bz2) = 86a3d3fe4849edf7db192e3a7716ef9620887a5b
-Size (gst-plugins-base-0.10.1.tar.bz2) = 1013776 bytes
-SHA1 (patch-aa) = fdf2af49fdc90eaa21177a80cc2f7ad00e68842c
+SHA1 (gst-plugins-base-0.10.2.tar.bz2) = e9b5b3943b58dfeaeda290206a59cffbf74d0c74
+RMD160 (gst-plugins-base-0.10.2.tar.bz2) = c3259792839d7277c2e8a8d6b34545cf845e2e19
+Size (gst-plugins-base-0.10.2.tar.bz2) = 1038764 bytes
 SHA1 (patch-ab) = 94492cdfab49737e419b39c11b65d76f9bee2e3b
