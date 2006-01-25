@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2006/01/24 02:09:38 riz Exp $
+# $NetBSD: Makefile,v 1.17 2006/01/25 17:48:43 riz Exp $
 
-DISTNAME=	asterisk-1.2.2
+DISTNAME=	asterisk-1.2.3
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://ftp.digium.com/pub/asterisk/ \
 		http://ftp.digium.com/pub/asterisk/old-releases
@@ -77,7 +77,7 @@ MAKE_FLAGS+=   INSTALL_PREFIX=${PREFIX}
 	iaxprov.conf indications.conf logger.conf manager.conf 		\
 	meetme.conf mgcp.conf modem.conf modules.conf musiconhold.conf 	\
 	osp.conf oss.conf phone.conf privacy.conf queues.conf		\
-	res_config_odbc.conf res_odbc.conf rpt.conf rtp.conf sip.conf 	\
+	res_odbc.conf rpt.conf rtp.conf sip.conf 			\
 	skinny.conf voicemail.conf vpb.conf zapata.conf asterisk.adsi 	\
 	telcordia-1.adsi
 CONF_FILES+= 	${ASTEXAMPLEDIR}/${_file_} ${ASTETCDIR}/${_file_}
