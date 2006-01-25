@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 2006/01/25 16:03:00 joerg Exp $
+
+--- mkisofs/defaults.h.orig	2006-01-25 15:55:08.000000000 +0000
++++ mkisofs/defaults.h
+@@ -67,6 +67,10 @@
+ #define	SYSTEM_ID_DEFAULT	"FreeBSD"
+ #endif
+ 
++#ifdef __DragonFly__
++#define	SYSTEM_ID_DEFAULT	"DragonFly"
++#endif
++
+ #ifdef __NetBSD__
+ #define	SYSTEM_ID_DEFAULT	"NetBSD"
+ #endif
