@@ -159,7 +159,6 @@ metarefresh
 mex			Enable matlab mex support (Linux and Solaris only).
 mhash	
 milter	
-mjpegtools-cmov		Enable CMOV support (i386 only).
 mlib			Enable usage of medialib (SunOS only).
 mmx			Enable MMX support (i386 only).
 modperl	
