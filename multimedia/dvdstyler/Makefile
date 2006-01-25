@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/24 03:47:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/25 08:10:08 xtraeme Exp $
 #
 
 DISTNAME=	DVDStyler-1.5b4
 PKGNAME=	dvdstyler-1.5beta4
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvdstyler/}
 
