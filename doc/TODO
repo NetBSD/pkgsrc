@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4507 2006/01/25 11:50:40 xtraeme Exp $
+$NetBSD: TODO,v 1.4508 2006/01/25 19:34:28 ben Exp $
 
 Suggested new packages
 ======================
@@ -1417,8 +1417,3 @@ Suggested cleanups in pkgsrc
 
 	o Convert packages to use generic install scripts where possible
 	  (for example, mail/majordomo).
-
-	o Make ghostscript-esp cups dependency optional, for those who
-	  wish to use drivers which are removed from -gnu and -afpl, but
-	  do not wish to use cups.
-	  http://www.linuxprinting.org/pipermail/brother-list/2002q2/000339.html
