@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/01/24 07:33:00 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/25 19:48:39 wiz Exp $
 #
 
-DISTNAME=		rxvt-unicode-6.3
-PKGREVISION=		1
+DISTNAME=		rxvt-unicode-7.2
 CATEGORIES=		x11
 MASTER_SITES=		http://dist.schmorp.de/rxvt-unicode/
 EXTRACT_SUFX=		.tar.bz2
@@ -13,7 +12,7 @@ COMMENT=		rxvt clone supporting Xft fonts and Unicode
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c++
-USE_TOOLS+=		gmake perl pkg-config
+USE_TOOLS+=		pkg-config
 
 CONFIGURE_ARGS+=	--enable-transparency	\
 			--enable-menubar	\
@@ -22,7 +21,12 @@ CONFIGURE_ARGS+=	--enable-transparency	\
 			--with-term=rxvt	\
 			--enable-24bit
 
+post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rxvt-unicode
+	${INSTALL_DATA} ${WRKSRC}/README.FAQ ${PREFIX}/share/doc/rxvt-unicode
+
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
