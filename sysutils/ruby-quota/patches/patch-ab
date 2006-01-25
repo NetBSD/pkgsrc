@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2004/12/15 13:23:12 taca Exp $
+$NetBSD: patch-ab,v 1.3 2006/01/25 15:48:50 joerg Exp $
 
 --- quota.c.orig	2002-03-30 23:59:12.000000000 +0900
 +++ quota.c
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.2 2004/12/15 13:23:12 taca Exp $
    char *path;
    int is_gid;
    uid_t uid;
-+#if defined(HAVE_SYS_STATVFS_H)
++#if defined(HAVE_SYS_STATVFS_H) && !defined(__DragonFly__)
 +  struct statvfs *buff;
 +#else
    struct statfs *buff;
