@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:14:05 agc Exp $
+$NetBSD: distinfo,v 1.4 2006/01/25 17:22:54 joerg Exp $
 
 SHA1 (tcpd-tools-0.8.tar.gz) = fe2abe15bbf9062833af9bec3745c751a8aa06df
 RMD160 (tcpd-tools-0.8.tar.gz) = 876842cbb37ca65d4b955718abd5ef5c14810dee
 Size (tcpd-tools-0.8.tar.gz) = 468856 bytes
-SHA1 (patch-aa) = 646ef4c578b5ede84f80e27b4226806c9f02c861
+SHA1 (patch-aa) = be90f2b82ef4512eb85be99b8055843964cba24a
+SHA1 (patch-ab) = 6ca6c40f9f1e6c8c1ac00a41e49f2d5df59953f0
