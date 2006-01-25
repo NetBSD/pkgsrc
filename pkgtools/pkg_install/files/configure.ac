@@ -130,6 +130,12 @@ AC_CHECK_SIZEOF(int)
 AC_CHECK_SIZEOF(long)
 AC_CHECK_SIZEOF(long long)
 
+case $host in
+*-*-dragonfly*)
+	AC_DEFINE([NUMERIC_VERSION_ONLY], [1], [Defined when to retain only the numeric OS version])
+	;;
+esac
+
 AH_BOTTOM(
 #if !HAVE_VFORK
 # define vfork fork
