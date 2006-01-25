@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.484 2006/01/24 20:41:07 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.485 2006/01/25 00:23:48 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1786,6 +1786,7 @@ sub readmakefile($$$$) {
 			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
 
 			if ($op ne "?=" || !exists($makevar->{$varname})) {
+				$opt_debug and $line->log_debug("varassign(${varname}, ${op}, ${value})");
 				$makevar->{$varname} = $line;
 			}
 			$contents .= $text . "\n";
@@ -3562,7 +3563,6 @@ sub checkfile_mk($) {
 
 sub checkfile_package_Makefile($$$) {
 	my ($fname, $whole, $lines) = @_;
-	my ($distname, $distfiles);
 
 	log_info($fname, NO_LINE_NUMBER, "[checkfile_package_Makefile]");
 
@@ -3606,17 +3606,18 @@ sub checkfile_package_Makefile($$$) {
 		$makevar->{"NO_CONFIGURE"}->log_warning("... NO_CONFIGURE is set.");
 	}
 
-	# check DISTFILES and related items.
-	$distname     = expand_variable($whole, "DISTNAME");
-	$pkgname      = expand_variable($whole, "PKGNAME");
-	$distfiles    = expand_variable($whole, "DISTFILES");
+	my $distname_line = $makevar->{"DISTNAME"};
+	my $pkgname_line = $makevar->{"PKGNAME"};
+
+	my $distname = (defined($distname_line) && $distname_line->text =~ regex_varassign) ? $3 : undef;
+	$pkgname = (defined($pkgname_line) && $pkgname_line->text =~ regex_varassign) ? $3 : undef;
 
 	if (defined($pkgname) && defined($distname) && ($pkgname eq $distname || $pkgname eq "\${DISTNAME}")) {
-		log_note($fname, NO_LINE_NUMBER, "PKGNAME is \${DISTNAME} by default. You don't need to define PKGNAME.");
+		$pkgname_line->log_note("PKGNAME is \${DISTNAME} by default. You don't need to define PKGNAME.");
 	}
 
 	if (!defined($pkgname) && defined($distname) && $distname !~ regex_unresolved && $distname !~ regex_pkgname) {
-		log_warning($fname, NO_LINE_NUMBER, "As DISTNAME ist not a valid package name, please define the PKGNAME explicitly.");
+		$distname_line->log_warning("As DISTNAME ist not a valid package name, please define the PKGNAME explicitly.");
 	}
 
 	if (!defined($pkgname)) {
