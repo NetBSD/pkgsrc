@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.324 2006/01/20 13:46:04 rillig Exp $
+# $NetBSD: Makefile,v 1.325 2006/01/25 22:04:26 rillig Exp $
 #
 
 DISTNAME=	pkglint-4.54
@@ -41,6 +41,13 @@ SUBST_SED.pkglint+=	-e 's|@PERL@|${PERL5}|g'
 SUBST_SED.pkglint+=	-e 's|@DATADIR@|${PREFIX}/share/pkglint|g'
 
 .include "../../mk/bsd.prefs.mk"
+
+# Note: This target is only intended for use by the pkglint author.
+.PHONY: quick-install
+quick-install:
+	${RM} -rf ${WRKSRC:Q}
+	${MKDIR} ${WRKSRC:Q}
+	${MAKE} do-extract subst-pkglint do-install
 
 do-extract:
 	cd ${FILESDIR:Q} && ${CP} lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl pkglint.0 pkglint.1 pkglint.pl plist-clash.pl ${WRKSRC:Q}
