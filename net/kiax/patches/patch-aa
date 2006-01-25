@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/25 00:00:03 reinoud Exp $
+
+--- lib/Makefile.orig	2005-04-05 23:53:41.000000000 +0200
++++ lib/Makefile
+@@ -160,6 +160,12 @@ OBJS_LINUX=\
+ 	portaudio/pa_unix_oss/pa_unix_oss.o \
+ 	portaudio/pa_unix_oss/pa_unix.o 
+ 
++OBJS_NETBSD=\
++	unixfuncs.o \
++	portmixer/px_unix_oss/px_unix_oss.o \
++	portaudio/pa_unix_oss/pa_unix_oss.o \
++	portaudio/pa_unix_oss/pa_unix.o 
++
+ OBJS_SOLARIS=\
+ 	unixfuncs.o \
+ 	portmixer/px_solaris/px_solaris.o \
+@@ -203,6 +209,9 @@ else
+ ifneq (,$(findstring SunOS,$(shell uname)))
+ OSTYPE=SOLARIS
+ else
++ifneq (,$(findstring NetBSD,$(shell uname)))
++OSTYPE=NETBSD
++else
+ $(warning OSTYPE cannot be detected, assuming Linux)
+ OSTYPE=LINUX
+ endif
+@@ -210,6 +219,7 @@ endif
+ endif
+ endif
+ endif
++endif
+ 
+ # Setup platform-specific stuff based on gleaning
+ ifeq ($(OSTYPE),WIN32)
+@@ -226,6 +236,13 @@ DYNCFLAGS=-fPIC
+ DYNLIB=libiaxclient.so
+ endif
+ 
++ifeq ($(OSTYPE),NETBSD)
++OBJS:= $(OBJS) $(OBJS_NETBSD) 
++DYNCFLAGS=-fPIC
++DYNLIB=libiaxclient.so
++DYNLDFLAGS= -lossaudio
++endif
++
+ ifeq ($(OSTYPE),SOLARIS)
+ OBJS:= $(OBJS) $(OBJS_SOLARIS) 
+ CFLAGS:= $(CFLAGS) -DALIGN32 
