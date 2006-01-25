@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2005/04/24 09:31:54 adrianp Exp $
+$NetBSD: patch-af,v 1.2 2006/01/25 17:35:49 tonio Exp $
 
---- src/drv_imap.c.orig	2005-03-05 22:00:48.000000000 +0100
-+++ src/drv_imap.c	2005-03-05 22:01:01.000000000 +0100
-@@ -41,6 +41,7 @@
+--- src/drv_imap.c.orig	2005-03-28 12:41:04.000000000 +0200
++++ src/drv_imap.c	2006-01-25 18:25:48.000000000 +0100
+@@ -40,6 +40,7 @@
  #include <netinet/tcp.h>
  #include <arpa/inet.h>
  #include <netdb.h>
@@ -10,3 +10,12 @@ $NetBSD: patch-af,v 1.1 2005/04/24 09:31:54 adrianp Exp $
  #if HAVE_LIBSSL
  # include <openssl/ssl.h>
  # include <openssl/err.h>
+@@ -1001,7 +1002,7 @@ get_cmd_result( imap_store_t *ctx, struc
+ 				if (!strcmp( "NO", arg )) {
+ 					if (cmdp->cb.create && cmd && (cmdp->cb.trycreate || !memcmp( cmd, "[TRYCREATE]", 11 ))) { /* SELECT, APPEND or UID COPY */
+ 						p = strchr( cmdp->cmd, '"' );
+-						if (!issue_imap_cmd( ctx, 0, "CREATE \"%.*s\"", strchr( p + 1, '"' ) - p + 1, p )) {
++						if (!issue_imap_cmd( ctx, 0, "CREATE %.*s", strchr( p + 1, '"' ) - p + 1, p )) {
+ 							resp = RESP_BAD;
+ 							goto normal;
+ 						}
