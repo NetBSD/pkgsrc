@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2006/01/25 16:03:00 joerg Exp $
+
+--- cdda2wav/interface.c.orig	2006-01-25 15:51:29.000000000 +0000
++++ cdda2wav/interface.c
+@@ -439,12 +439,12 @@ static void Check_interface_for_device( 
+ #endif
+ #endif
+        break;
+-#if defined (__linux__) || defined (__FreeBSD__)
++#if defined (__linux__) || defined (__FreeBSD__) || defined(__DragonFly__)
+ #if defined (__linux__)
+     case SCSI_CDROM_MAJOR:     /* scsi cd */
+     default:			/* for example ATAPI cds */
+ #else
+-#if defined (__FreeBSD__)
++#if defined (__FreeBSD__) || defined(__DragonFly__)
+     case 117:
+ 	if (!S_ISCHR(statstruct->st_mode)) {
+ 	    fprintf(stderr, "%s is not a char device\n",pdev_name);
