@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2006/01/24 07:32:45 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2006/01/25 18:08:33 tron Exp $
 
 .include "Makefile.common"
 
@@ -13,7 +13,7 @@ CONFLICTS=	apache-*ssl-[0-9]* apache-[0-9]* apache6-[0-9]*
 
 BUILD_DEFS+=	USE_INET6
 
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		perl:run pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-layout=NetBSD
