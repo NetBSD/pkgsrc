@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/12/05 20:49:54 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/01/25 18:41:14 riz Exp $
 #
 
-VER=			1.0.9
+VER=			1.2.1
 DISTNAME=		asterisk-sounds-${VER}
 PKGNAME=		asterisk-sounds-extra-${VER}
 CATEGORIES=		comms
