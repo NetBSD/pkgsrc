@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/18 15:35:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/25 19:51:19 wiz Exp $
 #
 
-DISTNAME=		gstreamer-0.10.1
+DISTNAME=		gstreamer-0.10.2
 PKGNAME=		${DISTNAME:S/gstreamer/gstreamer0.10/}
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		http://gstreamer.freedesktop.org/src/gstreamer/
@@ -47,7 +47,6 @@ BUILDLINK_DEPENDS.glib2+=	glib2>=2.4.0nb1
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
-.include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
