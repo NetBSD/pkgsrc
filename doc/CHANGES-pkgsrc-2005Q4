@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.55 2006/01/25 11:28:24 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.56 2006/01/25 12:45:47 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -113,3 +113,5 @@ Pullup ticket 1055 - requested by Lubomir Sedlacik
 security fix for antiword
 Pullup ticket 1058 - requested by Adrian Portelli
 security update for adodb
+Pullup ticket 1059 - requested by Matthias Scheler
+security fixes for teTeX3-bin
