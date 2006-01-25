@@ -1,7 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/01/25 08:09:12 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/01/25 08:18:18 xtraeme Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 MJPEGTOOLS_BUILDLINK3_MK:=	${MJPEGTOOLS_BUILDLINK3_MK}+
+
+.include "../../mk/bsd.prefs.mk"
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	mjpegtools
@@ -21,10 +23,9 @@ BUILDLINK_PKGSRCDIR.mjpegtools?=	../../multimedia/mjpegtools
 
 .if !defined(PKG_BUILD_OPTIONS.mjpegtools)
 PKG_BUILD_OPTIONS.mjpegtools!=			\
-	cd ${BUILDLINK_PKGSRCDIR.apr} &&	\
+	cd ${BUILDLINK_PKGSRCDIR.mjpegtools} &&	\
 	${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
-MAKEFLAGS+=	PKG_BUILD_OPTIONS.mjpegtools=	\
-			${PKG_BUILD_OPTIONS.mjpegtools:Q}
+MAKEFLAGS+=	PKG_BUILD_OPTIONS.mjpegtools=${PKG_BUILD_OPTIONS.mjpegtools:Q}
 .endif
 MAKEVARS+=      PKG_BUILD_OPTIONS.mjpegtools
 
