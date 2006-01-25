@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12675 2006/01/25 19:53:59 wiz Exp $
+$NetBSD: CHANGES,v 1.12676 2006/01/25 20:06:52 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -548,3 +548,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated finance/p5-Finance-Quote to 1.11nb1 [wiz 2006-01-25]
 	Updated multimedia/gstreamer0.10 to 0.10.2 [wiz 2006-01-25]
 	Updated multimedia/gst-plugins0.10-base to 0.10.2 [wiz 2006-01-25]
+	Updated multimedia/xine-lib to 1.0.3anb4 [tron 2006-01-25]
