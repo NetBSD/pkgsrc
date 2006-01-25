@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2006/01/06 15:10:05 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/01/25 17:35:49 tonio Exp $
 #
 
 DISTNAME=	isync-1.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=isync/}
 
