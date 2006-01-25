@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1.1.1 2006/01/25 00:00:03 reinoud Exp $
+$NetBSD: patch-ag,v 1.2 2006/01/25 15:04:30 reinoud Exp $
 
 --- lib/portaudio/pa_unix_oss/pa_unix.c.orig	2005-04-05 23:53:41.000000000 +0200
 +++ lib/portaudio/pa_unix_oss/pa_unix.c
@@ -6,9 +6,8 @@ $NetBSD: patch-ag,v 1.1.1.1 2006/01/25 00:00:03 reinoud Exp $
      maxPri = sched_get_priority_max(SCHEDULER_POLICY);
      if( schp.sched_priority > maxPri ) schp.sched_priority = maxPri;
  
--    if (sched_setscheduler(0, SCHEDULER_POLICY, &schp) != 0)
 +#ifndef __NetBSD__
-+    if (sched_setscheduler(0, SCHEDULER_POLICY, &schp) != ENOSYS)
+     if (sched_setscheduler(0, SCHEDULER_POLICY, &schp) != 0)
      {
          ERR_RPT(("PaHost_WatchDogProc: cannot set watch dog priority!\n"));
          goto killAudio;
@@ -17,16 +16,14 @@ $NetBSD: patch-ag,v 1.1.1.1 2006/01/25 00:00:03 reinoud Exp $
  
      /* Compare watchdog time with audio and canary thread times. */
      /* Sleep for a while or until thread cancelled. */
-@@ -465,7 +467,8 @@ static PaError PaHost_WatchDogProc( PaHo
+@@ -465,6 +467,7 @@ static PaError PaHost_WatchDogProc( PaHo
  lowerAudio:
      {
          struct sched_param    schat = { 0 };
--        if( sched_setscheduler(pahsc->pahsc_AudioThreadPID, SCHED_OTHER, &schat) != 0)
 +#ifndef __NetBSD__
-+        if( sched_setscheduler(pahsc->pahsc_AudioThreadPID, SCHED_OTHER, &schat) != ENOSYS)
+         if( sched_setscheduler(pahsc->pahsc_AudioThreadPID, SCHED_OTHER, &schat) != 0)
          {
              ERR_RPT(("PaHost_WatchDogProc: failed to lower audio priority. errno = %d\n", errno ));
-             /* Fall through into killing audio thread. */
 @@ -475,6 +478,9 @@ lowerAudio:
              ERR_RPT(("PaHost_WatchDogProc: lowered audio priority to prevent hogging of CPU.\n"));
              goto cleanup;
