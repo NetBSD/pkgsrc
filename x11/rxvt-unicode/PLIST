@@ -1,8 +1,28 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/14 00:32:53 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/25 19:48:39 wiz Exp $
 bin/urxvt
 bin/urxvtc
 bin/urxvtd
+lib/urxvt/perl/automove-background
+lib/urxvt/perl/block-graphics-to-ascii
+lib/urxvt/perl/digital-clock
+lib/urxvt/perl/example-refresh-hooks
+lib/urxvt/perl/mark-urls
+lib/urxvt/perl/option-popup
+lib/urxvt/perl/readline
+lib/urxvt/perl/searchable-scrollback
+lib/urxvt/perl/selection
+lib/urxvt/perl/selection-autotransform
+lib/urxvt/perl/selection-pastebin
+lib/urxvt/perl/selection-popup
+lib/urxvt/perl/tabbed
+lib/urxvt/perl/urxvt-popup
+lib/urxvt/urxvt.pm
 man/man1/urxvt.1
 man/man1/urxvtc.1
 man/man1/urxvtd.1
+man/man3/urxvtperl.3
 man/man7/urxvt.7
+share/doc/rxvt-unicode/README.FAQ
+@dirrm share/doc/rxvt-unicode
+@dirrm lib/urxvt/perl
+@dirrm lib/urxvt
