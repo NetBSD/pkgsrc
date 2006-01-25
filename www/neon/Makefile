@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/01/24 07:32:49 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2006/01/25 20:14:27 epg Exp $
 
 DISTNAME=		neon-0.25.5
 PKGREVISION=		1
@@ -12,6 +12,7 @@ COMMENT=		HTTP and WebDAV client library
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE=	neon.pc.in
 
 GNU_CONFIGURE=		yes
