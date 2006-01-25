@@ -1,12 +1,14 @@
-# $NetBSD: options.mk,v 1.1 2005/06/07 21:23:04 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2006/01/25 08:09:12 xtraeme Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mjpegtools
-PKG_SUPPORTED_OPTIONS=	mjpegtools-cmov
+PKG_SUPPORTED_OPTIONS=	dv
+PKG_SUGGESTED_OPTIONS=	dv
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mmjpegtools-cmov)
-CONFIGURE_ARGS+=	--enable-cmov-extension
+.if !empty(PKG_OPTIONS:Mdv)
+.  include "../../multimedia/libdv/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-libdv
 .else
-CONFIGURE_ARGS+=	--disable-cmov-extension
+CONFIGURE_ARGS+=	--disable-libdv
 .endif
