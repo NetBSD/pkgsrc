@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2005/05/13 13:25:55 salo Exp $
+$NetBSD: distinfo,v 1.7 2006/01/25 17:48:54 joerg Exp $
 
 SHA1 (maradns-1.0.28.tar.bz2) = 3f691dc293dba83569ece6e372ac2fd22b8ddd5c
 RMD160 (maradns-1.0.28.tar.bz2) = 8a72bf66e05dc9509e6567d953808de8e42cfa00
@@ -13,3 +13,4 @@ SHA1 (patch-ag) = 08e706dd2847ba4b1104664d320cc969f8432e6a
 SHA1 (patch-ah) = 727d35feb4861746800be5d61610a1c24cd87cc4
 SHA1 (patch-ai) = 626d6a29e1f0286efd2b2b6acd25fbfcfde42272
 SHA1 (patch-aj) = c8c93bc419c8dd337fcdd45451e85138a5d020d3
+SHA1 (patch-ak) = 7f0b5417e07c6945c24fb3105208031b45e70f1d
