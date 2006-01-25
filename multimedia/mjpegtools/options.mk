@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2006/01/25 10:01:36 xtraeme Exp $
+# $NetBSD: options.mk,v 1.4 2006/01/25 10:07:39 xtraeme Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mjpegtools
 PKG_SUPPORTED_OPTIONS=	dv mjpegtools-simd
@@ -13,7 +13,7 @@ CONFIGURE_ARGS+=	--enable-libdv
 CONFIGURE_ARGS+=	--disable-libdv
 .endif
 
-.if !empty(PKG_OPTIONS.mjpegtools-simd)
+.if !empty(PKG_OPTIONS:Mmjpegtools-simd)
 CONFIGURE_ARGS+=	--enable-simd-accel
 .else
 CONFIGURE_ARGS+=	--disable-simd-accel
