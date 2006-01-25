@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2006/01/18 15:42:27 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/01/25 19:53:16 wiz Exp $
 #
 
 GST_PLUGINS0.10_TYPE=	good
@@ -26,6 +26,8 @@ GST_PLUGINS0.10_TYPE=	good
 		zlib
 CONFIGURE_ARGS+=	--disable-${driver}
 .endfor
+
+DISTNAME=	gst-plugins-${GST_PLUGINS0.10_TYPE}-0.10.1
 
 .include "../../multimedia/gst-plugins0.10-base/plugins.mk"
 
