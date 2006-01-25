@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.48 2005/05/22 20:28:47 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2006/01/25 12:11:00 dmcmahill Exp $
 #
 
 DISTNAME=	verilog-${SNAPDATE}
 PKGNAME=	verilog-current-${SNAPDATE}
 CATEGORIES=	cad
-MASTER_SITES=	ftp://icarus.com/pub/eda/verilog/snapshots/pre-0.8/
+MASTER_SITES=	ftp://icarus.com/pub/eda/verilog/snapshots/
 
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://icarus.com/eda/verilog/index.html
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES=        overwrite pkgviews
 
 CONFLICTS+=	verilog-[0-9]*
 
-SNAPDATE=		20041004
+SNAPDATE=		20060124
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		bison gmake lex
 CONFIGURE_ARGS+=	--without-ipal
