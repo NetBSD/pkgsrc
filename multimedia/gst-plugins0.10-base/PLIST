@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/18 15:41:03 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/25 19:52:47 wiz Exp $
 bin/gst-visualise-0.10
 include/gstreamer-0.10/gst/audio/audio.h
 include/gstreamer-0.10/gst/audio/gstaudioclock.h
@@ -8,8 +8,10 @@ include/gstreamer-0.10/gst/audio/gstaudiosrc.h
 include/gstreamer-0.10/gst/audio/gstbaseaudiosink.h
 include/gstreamer-0.10/gst/audio/gstbaseaudiosrc.h
 include/gstreamer-0.10/gst/audio/gstringbuffer.h
+include/gstreamer-0.10/gst/audio/mixerutils.h
 include/gstreamer-0.10/gst/audio/multichannel-enumtypes.h
 include/gstreamer-0.10/gst/audio/multichannel.h
+include/gstreamer-0.10/gst/cdda/gstcddabasesrc.h
 include/gstreamer-0.10/gst/floatcast/floatcast.h
 include/gstreamer-0.10/gst/interfaces/colorbalance.h
 include/gstreamer-0.10/gst/interfaces/colorbalancechannel.h
@@ -50,6 +52,7 @@ lib/gstreamer-0.10/libgstvideoscale.la
 lib/gstreamer-0.10/libgstvideotestsrc.la
 lib/gstreamer-0.10/libgstvolume.la
 lib/libgstaudio-0.10.la
+lib/libgstcdda-0.10.la
 lib/libgstinterfaces-0.10.la
 lib/libgstnetbuffer-0.10.la
 lib/libgstriff-0.10.la
@@ -57,7 +60,7 @@ lib/libgstrtp-0.10.la
 lib/libgsttag-0.10.la
 lib/libgstvideo-0.10.la
 lib/pkgconfig/gstreamer-plugins-base-0.10.pc
-man/man1/gst-visualise-${PKGVERSION}
+man/man1/gst-visualise-0.10.1
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/gst-plugins-base-0.10.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gst-plugins-base-0.10.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gst-plugins-base-0.10.mo
@@ -80,5 +83,6 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gst-plugins-base-0.10.mo
 @dirrm include/gstreamer-0.10/gst/netbuffer
 @dirrm include/gstreamer-0.10/gst/interfaces
 @dirrm include/gstreamer-0.10/gst/floatcast
+@dirrm include/gstreamer-0.10/gst/cdda
 @dirrm include/gstreamer-0.10/gst/audio
 @comment in gstreamer0.10: @dirrm include/gstreamer-0.10/gst

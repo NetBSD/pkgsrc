@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2006/01/18 15:41:03 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/01/25 19:52:47 wiz Exp $
 #
 
 GST_PLUGINS0.10_TYPE=	base
 
 # Disable all drivers and features by default.
 .for driver in	alsa \
+		cdparanoia \
 		freetypetest \
 		gnome_vfs \
 		gst_v4l \
