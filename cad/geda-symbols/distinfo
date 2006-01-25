@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2005/08/23 00:02:20 dmcmahill Exp $
+$NetBSD: distinfo,v 1.14 2006/01/25 01:51:34 dmcmahill Exp $
 
-SHA1 (geda/geda-symbols-20050820.tar.gz) = fc1d7c2b16c9f7cc1c3463e3d8437701b190f7e7
-RMD160 (geda/geda-symbols-20050820.tar.gz) = 29533c2f0ab87f309d46056bee43431fca2bea77
-Size (geda/geda-symbols-20050820.tar.gz) = 663249 bytes
+SHA1 (geda/geda-symbols-20060123.tar.gz) = d64dc77b238b3b0f0f20cb3575f8bf08f3d8bc96
+RMD160 (geda/geda-symbols-20060123.tar.gz) = 476b45bc94dc94c9f53b85cb99113c24eb7d58d9
+Size (geda/geda-symbols-20060123.tar.gz) = 677354 bytes
