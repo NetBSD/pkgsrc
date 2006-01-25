@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1.1.1 2006/01/25 00:00:03 reinoud Exp $
+$NetBSD: patch-ah,v 1.2 2006/01/25 15:04:30 reinoud Exp $
 
 --- lib/unixfuncs.c.orig	2005-04-05 23:53:41.000000000 +0200
 +++ lib/unixfuncs.c
@@ -23,9 +23,8 @@ $NetBSD: patch-ah,v 1.1.1.1 2006/01/25 00:00:03 reinoud Exp $
      maxPri = sched_get_priority_max(SCHEDULER_POLICY);
      if( schp.sched_priority > maxPri ) schp.sched_priority = maxPri;
  
--    if (pthread_setschedparam(pthread_self(), SCHEDULER_POLICY, &schp) != 0)
 +#ifndef __NetBSD__
-+    if (pthread_setschedparam(pthread_self(), SCHEDULER_POLICY, &schp) != ENOSYS)
+     if (pthread_setschedparam(pthread_self(), SCHEDULER_POLICY, &schp) != 0)
      {
          ERR_RPT("WatchDogProc: cannot set watch dog priority!\n");
          goto killAudio;
@@ -34,18 +33,14 @@ $NetBSD: patch-ah,v 1.1.1.1 2006/01/25 00:00:03 reinoud Exp $
  
      DBUG("prioboost: WatchDog priority set to level %d!\n", schp.sched_priority);        
  
-@@ -237,9 +249,10 @@ static int WatchDogProc( prioboost   *b 
+@@ -237,6 +249,7 @@ static int WatchDogProc( prioboost   *b 
      return 0;
  
  lowerAudio:
 +#ifndef __NetBSD__
      {
          struct sched_param    schat = { 0 };
--        if( pthread_setschedparam(b->ThreadID, SCHED_OTHER, &schat) != 0)
-+        if( pthread_setschedparam(b->ThreadID, SCHED_OTHER, &schat) != ENOSYS)
-         {
-             ERR_RPT("WatchDogProc: failed to lower audio priority. errno = %d\n", errno );
-             /* Fall through into killing audio thread. */
+         if( pthread_setschedparam(b->ThreadID, SCHED_OTHER, &schat) != 0)
 @@ -250,6 +263,9 @@ lowerAudio:
              goto cleanup;
          }
