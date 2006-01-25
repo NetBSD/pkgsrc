@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12662 2006/01/25 00:01:58 reinoud Exp $
+$NetBSD: CHANGES,v 1.12663 2006/01/25 01:53:41 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -523,4 +523,13 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/ode to 0.5 [rillig 2006-01-24]
 	Updated net/pure-ftpd to 1.0.20nb3 [ghen 2006-01-24]
 	Added net/kiax version 0.8.4 [reinoud 2006-01-24]
-
+	Updated cad/gattrib to 20060123 [dmcmahill 2006-01-24]
+	Updated cad/geda to 20060123 [dmcmahill 2006-01-24]
+	Updated cad/geda-docs to 20060123 [dmcmahill 2006-01-24]
+	Updated cad/geda-examples to 20060123 [dmcmahill 2006-01-24]
+	Updated cad/geda-symbols to 20060123 [dmcmahill 2006-01-24]
+	Updated cad/geda-utils to 20060123 [dmcmahill 2006-01-24]
+	Updated cad/gnetlist to 20060123 [dmcmahill 2006-01-24]
+	Updated cad/gschem to 20060123 [dmcmahill 2006-01-24]
+	Updated cad/gsymcheck to 20060123 [dmcmahill 2006-01-24]
+	Updated cad/libgeda to 20060123 [dmcmahill 2006-01-24]
