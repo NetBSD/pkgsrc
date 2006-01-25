@@ -1,0 +1,58 @@
+$NetBSD: patch-ab,v 1.1 2006/01/25 16:03:00 joerg Exp $
+
+--- cdda2wav/ioctl.c.orig	2006-01-25 15:52:17.000000000 +0000
++++ cdda2wav/ioctl.c
+@@ -156,7 +156,7 @@ static unsigned ReadToc_cooked ( x )
+ 	    fprintf( stderr, "can't get TocEntry #%d lba (error %d).\n", i+1, err );
+ 	    exit( MEDIA_ERROR );
+ 	}
+-#ifdef	__FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ 	entry[i].cdte_addr.lba = be32_to_cpu(entry[i].cdte_addr.lba);
+ #endif
+     }
+@@ -168,7 +168,7 @@ static unsigned ReadToc_cooked ( x )
+ 	fprintf( stderr, "can't get TocEntry LEADOUT lba (error %d).\n", err );
+ 	exit( MEDIA_ERROR );
+     }
+-#ifdef	__FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+     entry[i].cdte_addr.lba = be32_to_cpu(entry[i].cdte_addr.lba);
+ #endif
+ 
+@@ -196,7 +196,7 @@ static void trash_cache_cooked(p, lSecto
+ {
+       /* trash the cache */
+ 
+-#if	defined __FreeBSD__
++#if	defined(__FreeBSD__) || defined(__DragonFly__)
+       static struct cdrom_read_audio arg2;
+ 
+       arg2.address.lba = find_an_off_sector(lSector, SectorBurstVal);
+@@ -266,7 +266,7 @@ static int ReadCdRom_cooked (x, p, lSect
+   static int nothing_read = 1;
+ 
+ /* read 2352 bytes audio data */
+-#if	defined __FreeBSD__
++#if	defined(__FreeBSD__) || defined(__DragonFly__)
+   arg.address.lba = lSector;
+   arg.addr_format = CDROM_LBA;
+   arg.nframes = SectorBurstVal;
+@@ -395,7 +395,7 @@ static subq_chnl *ReadSubQ_cooked ( x, s
+ {
+     struct cdrom_subchnl sub_ch;
+ 
+-#if	defined __FreeBSD__
++#if	defined(__FreeBSD__) || defined(__DragonFly__)
+     struct cd_sub_channel_info sub_ch_info;
+ 
+     if (x && x->verbose) {
+@@ -433,7 +433,7 @@ static subq_chnl *ReadSubQ_cooked ( x, s
+           return NULL;
+       }
+       case GET_POSITIONDATA:
+-#if	defined __FreeBSD__
++#if	defined(_FreeBSD__) || defined(__DragonFly__)
+       sub_ch.data_format = CD_CURRENT_POSITION;
+ #endif
+ #if defined (__linux__)
