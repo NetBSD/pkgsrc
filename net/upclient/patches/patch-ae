@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2003/07/02 18:22:43 jmmv Exp $
+$NetBSD: patch-ae,v 1.2 2006/01/25 17:00:25 joerg Exp $
 
---- src/Makefile.orig	2001-06-17 00:48:35.000000000 +0200
+--- src/Makefile.orig	2001-06-16 22:48:35.000000000 +0000
 +++ src/Makefile
-@@ -36,10 +36,10 @@ nothing-specified:
+@@ -36,10 +36,17 @@ nothing-specified:
  	@echo ""
  
  bsd:
@@ -12,6 +12,13 @@ $NetBSD: patch-ae,v 1.1 2003/07/02 18:22:43 jmmv Exp $
 +		LDFLAGS='$(LDFLAGS) -lkvm' \
  		OBJECTS='stats-bsd.c $(STDOPTS)' \
 -		CFLAGS='-DPLATFORM_BSD -DCONFIGFILE=\"$(CONFIGFILE)\"' \
++		CFLAGS='$(CFLAGS) -DPLATFORM_BSD -DCONFIGFILE=\"$(CONFIGFILE)\"' \
++		upclient
++
++dragonfly:
++	$(MAKE) \
++		LDFLAGS='$(LDFLAGS) -lkinfo' \
++		OBJECTS='stats-bsd.c $(STDOPTS)' \
 +		CFLAGS='$(CFLAGS) -DPLATFORM_BSD -DCONFIGFILE=\"$(CONFIGFILE)\"' \
  		upclient
  
