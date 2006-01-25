@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2005/11/20 18:22:50 minskim Exp $
+# $NetBSD: Makefile.common,v 1.4 2006/01/25 20:50:42 minskim Exp $
 
 DISTNAME=	uhc-fonts-1.0
 CATEGORIES=	fonts
@@ -23,7 +23,7 @@ do-install:
 		${PKG_LOCALTEXMFPREFIX}/fonts/map/hlatex/
 .for f in ${UHC_FONTS}
 	extract_file=${_DISTDIR:Q}/${f}; \
-	cd ${PKG_LOCALTEXMFPREFIX}/fonts; ${EXTRACT_CMD.tar.gz}
+	cd ${PKG_LOCALTEXMFPREFIX}/fonts; ${EXTRACT_CMD}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
