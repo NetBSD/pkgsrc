@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/01/25 08:09:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.24 2006/01/25 10:01:36 xtraeme Exp $
 
 DISTNAME=	mjpegtools-1.8.0
 CATEGORIES=	multimedia
@@ -21,7 +21,6 @@ PKGCONFIG_OVERRIDE=	mjpegtools.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-libquicktime
 CONFIGURE_ARGS+=	--enable-large-file
-CONFIGURE_ARGS+=	--enable-simd
 CONFIGURE_ARGS+=	--with-lame-includes=${BUILDLINK_PREFIX.lame}
 
 .include "options.mk"
