@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/01/24 05:33:21 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/01/25 08:26:29 xtraeme Exp $
 bin/avifix
 bin/aviindex
 bin/avimerge
@@ -46,7 +46,7 @@ lib/transcode/export_xvid.so
 lib/transcode/export_xvid2.la
 lib/transcode/export_xvid3.la
 lib/transcode/export_xvid4.la
-lib/transcode/export_yuv4mpeg.la
+${MJPEGTOOLS}lib/transcode/export_yuv4mpeg.la
 lib/transcode/filter_29to23.la
 lib/transcode/filter_32detect.la
 lib/transcode/filter_32drop.la
@@ -95,7 +95,7 @@ lib/transcode/filter_smartbob.la
 lib/transcode/filter_smartdeinter.la
 lib/transcode/filter_smartyuv.la
 lib/transcode/filter_smooth.la
-${MJPEGTOOLS}lib/transcode/filter_subtitler.la
+${MPEG3}lib/transcode/filter_subtitler.la
 lib/transcode/filter_tc_audio.la
 lib/transcode/filter_tc_video.la
 lib/transcode/filter_test.la
@@ -118,6 +118,8 @@ lib/transcode/import_dvd.la
 lib/transcode/import_ffbin.la
 lib/transcode/import_ffmpeg.la
 lib/transcode/import_fraps.la
+${IMAGEMAGICK}lib/transcode/import_im.la
+${IMAGEMAGICK}lib/transcode/import_imlist.la
 lib/transcode/import_lav.la
 lib/transcode/import_mp3.la
 lib/transcode/import_mpeg2.la
