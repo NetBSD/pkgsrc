@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.2 2005/03/15 20:24:30 rillig Exp $
+$NetBSD: patch-ae,v 1.3 2006/01/26 21:43:51 adam Exp $
 
---- libntfs/device.c.orig	Sat Sep  4 12:16:32 2004
-+++ libntfs/device.c	Sat Mar 12 10:14:34 2005
-@@ -37,6 +37,8 @@
+--- libntfs/device.c.orig	2005-09-28 15:46:04.000000000 +0200
++++ libntfs/device.c
+@@ -55,6 +55,8 @@
  #	include <linux/hdreg.h>
  #endif
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.2 2005/03/15 20:24:30 rillig Exp $
  #include "types.h"
  #include "mst.h"
  #include "debug.h"
-@@ -52,6 +54,10 @@
+@@ -70,6 +72,10 @@
  #define HDIO_GETGEO	0x0301	/* Get device geometry. */
  #endif
  
@@ -22,13 +22,10 @@ $NetBSD: patch-ae,v 1.2 2005/03/15 20:24:30 rillig Exp $
  /**
   * ntfs_device_alloc - allocate an ntfs device structure and pre-initialize it
   * name:	name of the device (must be present)
-@@ -498,6 +504,23 @@ s64 ntfs_device_size_get(struct ntfs_dev
- 					(unsigned long)this_floppy.size,
- 					(unsigned long)this_floppy.size);
- 			return (s64)this_floppy.size * 512 / block_size;
-+		}
-+	}
-+#endif
+@@ -519,6 +525,23 @@ s64 ntfs_device_size_get(struct ntfs_dev
+ 		}
+ 	}
+ #endif
 +#ifdef DIOCGPART
 +	{
 +		struct stat st;
@@ -43,6 +40,9 @@ $NetBSD: patch-ae,v 1.2 2005/03/15 20:24:30 rillig Exp $
 +						secsize, psize, psize);
 +				return psize * secsize / block_size;
 +			}
- 		}
- 	}
- #endif
++		}
++	}
++#endif
+ 	/*
+ 	 * We couldn't figure it out by using a specialized ioctl,
+ 	 * so do binary search to find the size of the device.
