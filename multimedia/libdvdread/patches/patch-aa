@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2006/01/26 16:23:12 xtraeme Exp $
+
+--- dvdread/ifo_types.h.orig	2006-01-26 17:15:53.000000000 +0100
++++ dvdread/ifo_types.h	2006-01-26 17:16:08.000000000 +0100
+@@ -28,6 +28,8 @@
+ #error "Must include <inttypes.h> or <stdint.h> before any libdvdread header."
+ #endif
+ #else
++#include <inttypes.h>
++#include <stdint.h>
+ #if !defined(UINT8_MAX) || !defined(UINT16_MAX) || !defined(INT32_MAX)
+ #error "Must include <inttypes.h> or <stdint.h> before any libdvdread header."
+ #endif
