@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/26 23:02:32 xtraeme Exp $
+bin/raggle
+share/doc/raggle/default_config.rb
+share/doc/raggle/ChangeLog
+share/doc/raggle/COPYING
+share/doc/raggle/BUGS
+share/doc/raggle/AUTHORS
+share/doc/raggle/theme_documentation.txt
+share/doc/raggle/pauls_feeds.opml.gz
+share/doc/raggle/README
+@dirrm share/doc/raggle
+share/raggle/extras/feed_dump.rb
+share/raggle/extras/feed_sizes.rb
+share/raggle/extras/rss_dir_list.rb
+share/raggle/extras/rss_grab.rb
+share/raggle/extras/test_html_renderer.rb
+@dirrm share/raggle/extras
+share/raggle/themes/cyan.yaml
+share/raggle/themes/default.yaml
+share/raggle/themes/minidesc.yaml
+share/raggle/themes/mono.yaml
+share/raggle/themes/pane.yaml
+share/raggle/themes/vert.yaml
+@dirrm share/raggle/themes
+@dirrm share/raggle
+man/man1/raggle.1
