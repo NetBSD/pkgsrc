@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.325 2006/01/25 22:04:26 rillig Exp $
+# $NetBSD: Makefile,v 1.326 2006/01/26 16:20:45 rillig Exp $
 #
 
 DISTNAME=	pkglint-4.54
@@ -47,7 +47,7 @@ SUBST_SED.pkglint+=	-e 's|@DATADIR@|${PREFIX}/share/pkglint|g'
 quick-install:
 	${RM} -rf ${WRKSRC:Q}
 	${MKDIR} ${WRKSRC:Q}
-	${MAKE} do-extract subst-pkglint do-install
+	${MAKE} do-extract subst-pkglint do-install post-install
 
 do-extract:
 	cd ${FILESDIR:Q} && ${CP} lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl pkglint.0 pkglint.1 pkglint.pl plist-clash.pl ${WRKSRC:Q}
