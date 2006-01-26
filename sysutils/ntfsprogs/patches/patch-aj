@@ -1,12 +1,10 @@
-$NetBSD: patch-aj,v 1.1 2005/03/15 20:24:30 rillig Exp $
+$NetBSD: patch-aj,v 1.2 2006/01/26 21:43:51 adam Exp $
 
-Needed for ENOTSUP on NetBSD-1.6.2.
-
---- libntfs/volume.c.orig	Sat Sep  4 12:16:32 2004
-+++ libntfs/volume.c	Sat Mar 12 10:15:07 2005
-@@ -30,6 +30,8 @@
- #include <sys/stat.h>
+--- libntfs/volume.c.orig	2005-10-10 14:47:06.000000000 +0200
++++ libntfs/volume.c
+@@ -47,6 +47,8 @@
  #include <limits.h>
+ #endif
  
 +#include "compat.h"
 +
