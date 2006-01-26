@@ -1,12 +1,10 @@
-$NetBSD: patch-ai,v 1.1 2005/03/15 20:24:30 rillig Exp $
+$NetBSD: patch-ai,v 1.2 2006/01/26 21:43:51 adam Exp $
 
-Needed for ENOTSUP on NetBSD-1.6.2.
-
---- libntfs/attrlist.c.orig	Sat Sep  4 12:16:32 2004
-+++ libntfs/attrlist.c	Sat Mar 12 10:14:41 2005
-@@ -24,6 +24,8 @@
- 
+--- libntfs/attrlist.c.orig	2005-09-28 15:41:31.000000000 +0200
++++ libntfs/attrlist.c
+@@ -30,6 +30,8 @@
  #include <errno.h>
+ #endif
  
 +#include "compat.h"
 +
