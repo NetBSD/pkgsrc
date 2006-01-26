@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.485 2006/01/25 00:23:48 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.486 2006/01/26 23:05:49 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -43,7 +43,7 @@ BEGIN {
 	use Exporter;
 	use vars qw(@ISA @EXPORT_OK);
 	@ISA = qw(Exporter);
-	@EXPORT_OK = qw(array_to_hash false print_table true);
+	@EXPORT_OK = qw(array_to_hash false match print_table true);
 }
 
 use constant false	=> 0;
@@ -84,6 +84,22 @@ sub array_to_hash(@) {
 		$result->{$arg} = 1;
 	}
 	return $result;
+}
+
+sub match($$) {
+	my ($s, $re) = @_;
+	my ($m);
+
+
+	if ($s !~ $re) {
+		return false;
+	}
+
+	$m = [];
+	foreach my $i (0 .. $#+) {
+		push(@{$m}, [$-[0], $+[0]]);
+	}
+	return $m;
 }
 
 #== End of PkgLint::Util ==================================================
