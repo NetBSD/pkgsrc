@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.5 2005/11/04 21:46:12 dbj Exp $
+$NetBSD: distinfo,v 1.6 2006/01/26 21:43:51 adam Exp $
 
-SHA1 (ntfsprogs-1.9.4.tar.gz) = 1250e161f2ee7182bf6e473d4589b5139e3fda8a
-RMD160 (ntfsprogs-1.9.4.tar.gz) = cdeeb8629d5c68a8af23d06adaf56bec62a282e6
-Size (ntfsprogs-1.9.4.tar.gz) = 701154 bytes
-SHA1 (patch-aa) = 1e63d62190b3d2ca78d96c9ba2398232c656a5dc
-SHA1 (patch-ab) = 6d571d962e702d776792c84a81bdaf8e7b8357e4
-SHA1 (patch-ac) = 3ebaa59a289c4085cfec2e27b7e94ce95ff9e74d
-SHA1 (patch-ad) = 576f8505b95965e0c49ec7e63516b49edd5f5679
-SHA1 (patch-ae) = a72389126cda4a7c4cfb46760afdf7e14c94ece3
-SHA1 (patch-af) = 119938eefd0f2f942ca160e8520a91dc2eb6dd13
-SHA1 (patch-ag) = 79883013e1ee78c7d8901601badbe9f1857dab65
+SHA1 (ntfsprogs-1.12.1.tar.gz) = 111e323234d395e57b8250e623ab40e1c2f22756
+RMD160 (ntfsprogs-1.12.1.tar.gz) = 4197df10e943d129b5324dbbcaac4fa9e1e19e5a
+Size (ntfsprogs-1.12.1.tar.gz) = 801124 bytes
+SHA1 (patch-aa) = f1c8899120e50082ecbcb150886fd3e0b5cf4ccb
+SHA1 (patch-ab) = 1ca19ac57b37db532ae3e55443eaa8fdd1fc9443
+SHA1 (patch-ac) = 82eefe0dfc6a92dcd422248d0798b21b548e84ae
+SHA1 (patch-ad) = b56115b7a536eade1a0e5e6404cc2166865fc02e
+SHA1 (patch-ae) = 58cd1998510bdfa99454fcccfa23c715e598d367
+SHA1 (patch-af) = c8cbc8a7a825fa98c3467f1de5d97e07447ddeb0
+SHA1 (patch-ag) = 4da5b589cc260bcbaabdbc695ce4716dbadded15
 SHA1 (patch-ah) = b6da89fc9b5bbc83fa503dd887f3f2ec493ad7c7
-SHA1 (patch-ai) = aa2784d6c859d7cb1136808cd0750c45c026928a
-SHA1 (patch-aj) = d1e401cf378267d241b4842c02fba91ad6528fce
-SHA1 (patch-ak) = 9920e5c08242af2b09e46858be2fffedde7b7c7a
-SHA1 (patch-al) = 6d7ca94fba1972afcd4ebbee12a6ece057f2c45b
+SHA1 (patch-ai) = b6a018460eb4d6c49a32052caae360fae61a7d41
+SHA1 (patch-aj) = a607fa5dd4e0b7d0075089bf35306560e5a2fe05
+SHA1 (patch-ak) = e3c7c4fd68e804f896e529635774c426368cb396
+SHA1 (patch-al) = d6a5ef4f3daaf7d237bd95c4fde445784181b0f0
