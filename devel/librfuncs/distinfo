@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2005/02/23 22:24:19 agc Exp $
+$NetBSD: distinfo,v 1.9 2006/01/26 18:47:06 shannonjr Exp $
 
-SHA1 (librfuncs-1.0.6.tar.bz2) = f08d225e7edf277c9aebe73e72bee8f65b4f3799
-RMD160 (librfuncs-1.0.6.tar.bz2) = 3c25a912596b53eb8a50599cc9083fd31a522873
-Size (librfuncs-1.0.6.tar.bz2) = 471184 bytes
+SHA1 (librfuncs-1.0.7.tar.bz2) = af25987e33b7cee65ff159ca3767827c490b8cb3
+RMD160 (librfuncs-1.0.7.tar.bz2) = fbe3716ca424ed28380645c107dd14d7523d6289
+Size (librfuncs-1.0.7.tar.bz2) = 485448 bytes
