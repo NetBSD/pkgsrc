@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/01/24 07:32:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/01/26 20:38:18 adam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 IMAGEMAGICK_BUILDLINK3_MK:=	${IMAGEMAGICK_BUILDLINK3_MK}+
@@ -23,4 +23,4 @@ BUILDLINK_PKGSRCDIR.ImageMagick?=	../../graphics/ImageMagick
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
