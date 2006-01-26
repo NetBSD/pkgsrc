@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/09/22 16:48:34 reed Exp $
+# $NetBSD: Makefile,v 1.21 2006/01/26 18:19:03 reed Exp $
 #
 
 DISTNAME=       tar-1.15.1
@@ -19,7 +19,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-INSTALLATION_DIRS=	${INFODIR}
+INSTALLATION_DIRS=	${INFO_DIR}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/tar.info ${PREFIX}/${INFO_DIR}
