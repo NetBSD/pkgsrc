@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4514 2006/01/25 21:27:45 minskim Exp $
+$NetBSD: TODO,v 1.4515 2006/01/26 03:27:08 minskim Exp $
 
 Suggested new packages
 ======================
@@ -384,7 +384,6 @@ Suggested package updates
 	o bittorrent-gui-4.2.2
 	o blackbox-0.70
 	o blender-2.40
-	o blindmine-0.3 [pkg/32504]
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bochs-2.2.5
