@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/20 21:23:52 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/26 03:26:12 minskim Exp $
 bin/blindmine
+share/blindmine/blindmine.py
+share/blindmine/blindmine.pyc
+share/blindmine/blindmine.pyo
 share/blindmine/data/-1.wav
-share/blindmine/data/-2.wav
 share/blindmine/data/0.wav
 share/blindmine/data/1.wav
 share/blindmine/data/10.wav
+share/blindmine/data/100.wav
+share/blindmine/data/1000.wav
 share/blindmine/data/2.wav
 share/blindmine/data/3.wav
 share/blindmine/data/4.wav
@@ -16,11 +20,12 @@ share/blindmine/data/9.wav
 share/blindmine/data/bad.wav
 share/blindmine/data/comma.wav
 share/blindmine/data/current_position.wav
-share/blindmine/data/developer.wav
+share/blindmine/data/elapsed_time.wav
 share/blindmine/data/flag2.xpm
+share/blindmine/data/flagged.wav
+share/blindmine/data/howto.ogg
 share/blindmine/data/howto.wav
 share/blindmine/data/invalid.wav
-share/blindmine/data/marked.wav
 share/blindmine/data/mine.wav
 share/blindmine/data/mine2.xpm
 share/blindmine/data/n0.wav
@@ -44,20 +49,28 @@ share/blindmine/data/number_of_flag.wav
 share/blindmine/data/number_of_mines.wav
 share/blindmine/data/object.wav
 share/blindmine/data/open.wav
-share/blindmine/data/opening.wav
+share/blindmine/data/opening.ogg
 share/blindmine/data/openmany.wav
 share/blindmine/data/out.wav
+share/blindmine/data/second.wav
 share/blindmine/data/sweep.wav
+share/blindmine/data/toolongtime.wav
 share/blindmine/data/underconstruction.wav
 share/blindmine/data/unflagged.wav
 share/blindmine/data/unknown.wav
 share/blindmine/data/won.wav
-share/blindmine/pysweeper.py
-share/blindmine/pysweeper.pyc
-share/blindmine/pysweeper.pyo
+share/blindmine/game.py
+share/blindmine/game.pyc
+share/blindmine/game.pyo
 share/blindmine/sdl_ui.py
 share/blindmine/sdl_ui.pyc
 share/blindmine/sdl_ui.pyo
+share/blindmine/setup1.py
+share/blindmine/setup1.pyc
+share/blindmine/setup1.pyo
+share/blindmine/util.py
+share/blindmine/util.pyc
+share/blindmine/util.pyo
 share/doc/blindmine/howto.txt
 @dirrm share/doc/blindmine
 @dirrm share/blindmine/data

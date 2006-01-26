@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/07/20 21:23:52 minskim Exp $
+$NetBSD: distinfo,v 1.2 2006/01/26 03:26:12 minskim Exp $
 
-SHA1 (blindmine-0.01.zip) = d375f43a1cb91880bebcf9f8d8024281307665a0
-RMD160 (blindmine-0.01.zip) = 409b77a45eb681d9c5db2d990f7422c8ac4133a0
-Size (blindmine-0.01.zip) = 8792104 bytes
+SHA1 (blindmine-0.3-src.zip) = 4a026ec1e0e03c44e0980504dac49ae83fbfb9fb
+RMD160 (blindmine-0.3-src.zip) = a50a2e2d67ebe6ffbd7e08be432fa46f65f23f6c
+Size (blindmine-0.3-src.zip) = 4907878 bytes
