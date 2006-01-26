@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/26 23:02:32 xtraeme Exp $
+
+--- Makefile	2003-09-01 19:07:31.000000000 +0100
++++ Makefile.new	2004-02-11 17:02:12.000000000 +0000
+@@ -1,6 +1,5 @@
+-PREFIX=/usr/local
+ BINDIR=${PREFIX}/bin
+-MANDIR=${PREFIX}/share/man/man1
++MANDIR=${PREFIX}/man/man1
+ DOCDIR=${PREFIX}/share/doc/raggle
+ DATADIR=${PREFIX}/share/raggle
+ DATA=themes extras
