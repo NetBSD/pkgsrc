@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4516 2006/01/26 04:50:55 ben Exp $
+$NetBSD: TODO,v 1.4517 2006/01/26 06:43:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -537,7 +537,6 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdsreader-0.3.2
 	o gettext-0.14.5
-	o gfract-0.32
 	o ggiterm-0.7.1
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
