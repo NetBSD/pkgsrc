@@ -1,10 +1,10 @@
-$NetBSD: gitrc.cons25.patch,v 1.2 1998/08/07 11:10:20 agc Exp $
+$NetBSD: patch-ad,v 1.1 2006/01/26 17:58:18 reed Exp $
 
---- .gitrc.cons25.orig	Sat Jun 15 17:00:30 1996
-+++ .gitrc.cons25	Sat Jun 15 17:05:28 1996
+--- term/.gitrc.cons25.orig	2006-01-26 09:32:11.000000000 -0800
++++ term/.gitrc.cons25	2006-01-26 09:33:17.000000000 -0800
 @@ -24,7 +24,7 @@
+ 
  [Setup]
- TempDirectory		= /tmp
  AnsiColors		= ON	# empty means OFF
 -UseLastScreenChar	= OFF	# use the last character on the screen
 +UseLastScreenChar	= ON	# use the last character on the screen
