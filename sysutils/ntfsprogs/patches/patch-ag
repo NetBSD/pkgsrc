@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
+$NetBSD: patch-ag,v 1.2 2006/01/26 21:43:51 adam Exp $
 
---- ntfsprogs/ntfsresize.c.orig	Sat Sep  4 06:16:32 2004
+--- ntfsprogs/ntfsresize.c.orig	2005-10-07 15:57:31.000000000 +0200
 +++ ntfsprogs/ntfsresize.c
-@@ -483,12 +483,9 @@ static int parse_options(int argc, char 
+@@ -527,12 +527,9 @@ static int parse_options(int argc, char 
  		}
  	}
  
