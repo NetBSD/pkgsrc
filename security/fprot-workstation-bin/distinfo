@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.16 2005/11/21 02:06:50 ben Exp $
+$NetBSD: distinfo,v 1.17 2006/01/26 04:48:26 ben Exp $
 
-SHA1 (fp-netbsd-ws-4.6.2/fp-netbsd-ws-4.6.2.tar.gz) = f01959fa26d0e79593e13d50ba40600237371519
-RMD160 (fp-netbsd-ws-4.6.2/fp-netbsd-ws-4.6.2.tar.gz) = c0a62124eaf5bd5c4f50647d4f922309e10511ec
-Size (fp-netbsd-ws-4.6.2/fp-netbsd-ws-4.6.2.tar.gz) = 3898981 bytes
-SHA1 (fp-linux-ws-4.6.2/fp-linux-ws-4.6.2.tar.gz) = a67755267691625153281ce731fa9153df87b6f1
-RMD160 (fp-linux-ws-4.6.2/fp-linux-ws-4.6.2.tar.gz) = 04c96d6b05d934526c64dc4bebe311986ab82e28
-Size (fp-linux-ws-4.6.2/fp-linux-ws-4.6.2.tar.gz) = 3859252 bytes
-SHA1 (fp-solaris-sparc-ws-4.6.2/fp-solaris-sparc-ws-4.6.2.tar.gz) = c29b28a1135b5d015a4f6a17371793247d7d8637
-RMD160 (fp-solaris-sparc-ws-4.6.2/fp-solaris-sparc-ws-4.6.2.tar.gz) = 2456bcdf702411031986ced37c8bb722673fa4c7
-Size (fp-solaris-sparc-ws-4.6.2/fp-solaris-sparc-ws-4.6.2.tar.gz) = 3985324 bytes
-SHA1 (patch-aa) = cdb8bbf4d73d308191cd3d21a269e09f36e192fb
+SHA1 (fp-netbsd-ws-4.6.5/fp-netbsd-ws-4.6.5.tar.gz) = 86dab4853b905b9e151f5f0d339de2add62c7026
+RMD160 (fp-netbsd-ws-4.6.5/fp-netbsd-ws-4.6.5.tar.gz) = 1a44328606a17c271f98aa80e474dd81188f55bd
+Size (fp-netbsd-ws-4.6.5/fp-netbsd-ws-4.6.5.tar.gz) = 4109359 bytes
+SHA1 (fp-solaris-ws-4.6.5/fp-solaris-sparc-ws-4.6.5.tar.gz) = 4b08b86a073354eba7b51c063fa2190f4948c02b
+RMD160 (fp-solaris-ws-4.6.5/fp-solaris-sparc-ws-4.6.5.tar.gz) = 3588a5c7f7a33a5f4016ccc458d02241be9fb1f9
+Size (fp-solaris-ws-4.6.5/fp-netbsd-ws-4.6.5.tar.gz) = 4948999 bytes
+SHA1 (fp-linux-ws-4.6.5/fp-linux-ws-4.6.5.tar.gz) = b361b86cc91414ae2cf982874f16bd9941f1b887
+RMD160 (fp-linux-ws-4.6.5/fp-linux-ws-4.6.5.tar.gz) = d901ca28c28f110d447462a571ff020755339bd3
+Size (fp-linux-ws-4.6.5/fp-linux-ws-4.6.5.tar.gz) = 4079883 bytes
+SHA1 (patch-aa) = df60e04a2194bd9c84df08fcc524144f5e198ba0
