@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12683 2006/01/26 04:50:55 ben Exp $
+$NetBSD: CHANGES,v 1.12684 2006/01/26 06:43:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -556,3 +556,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/p5-Net-Pcap to 0.11 [hiramatsu 2006-01-26]
 	Updated games/blindmine to 0.3 [minskim 2006-01-26]
 	Updated security/fprot-workstation-bin to 4.6.5 [ben 2006-01-26]
+	Updated graphics/gfract to 0.32 [wiz 2006-01-26]
