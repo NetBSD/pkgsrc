@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/01/24 07:32:16 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2006/01/26 23:06:16 adam Exp $
 #
 
 DISTNAME=	librsvg-2.12.7
@@ -14,10 +14,10 @@ COMMENT=	SVG library for GNOME2
 
 CONFLICTS+=	librsvg2-gtk-[0-9]*
 
-GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1
-USE_LIBTOOL=		YES
+USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE=	librsvg-2.0.pc.in
 
@@ -29,19 +29,9 @@ CONFIGURE_ARGS+=	--with-tags=
 CFLAGS.Darwin+=		-flat_namespace -undefined suppress
 LDFLAGS.Darwin+=	-lfreetype -lfontconfig
 
-GTK2_LOADERS=		YES
+GTK2_LOADERS=		yes
 
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
-.include "../../devel/popt/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/libart2/buildlink3.mk"
-.include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
-.include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/libcroco/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtk2/modules.mk"
 .include "../../mk/bsd.pkg.mk"
