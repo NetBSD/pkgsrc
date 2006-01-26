@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/01/24 07:31:59 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/01/26 22:14:50 adam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 WV_BUILDLINK3_MK:=	${WV_BUILDLINK3_MK}+
@@ -19,9 +19,7 @@ BUILDLINK_PKGSRCDIR.wv?=	../../converters/wv
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/libgsf/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
