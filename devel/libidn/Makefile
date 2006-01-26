@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/01/21 23:15:48 adam Exp $
+# $NetBSD: Makefile,v 1.26 2006/01/26 15:33:30 rillig Exp $
 
 DISTNAME=	libidn-0.6.1
 CATEGORIES=	devel
@@ -13,7 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config perl:build
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	libidn.pc.in
