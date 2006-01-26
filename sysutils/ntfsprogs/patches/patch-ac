@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
+$NetBSD: patch-ac,v 1.2 2006/01/26 21:43:51 adam Exp $
 
---- libntfs/attrib.c.orig	Sat Sep  4 06:16:32 2004
+--- libntfs/attrib.c.orig	2005-09-30 21:17:02.000000000 +0200
 +++ libntfs/attrib.c
-@@ -709,7 +709,7 @@ map_rl:
+@@ -739,7 +739,7 @@ map_rl:
   */
  s64 ntfs_attr_pread(ntfs_attr *na, const s64 pos, s64 count, void *b)
  {
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
  	ntfs_volume *vol;
  	runlist_element *rl;
  
-@@ -737,6 +737,7 @@ s64 ntfs_attr_pread(ntfs_attr *na, const
+@@ -767,6 +767,7 @@ s64 ntfs_attr_pread(ntfs_attr *na, const
  	}
  	if (!count)
  		return 0;
@@ -19,7 +19,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
  	/* Truncate reads beyond end of attribute. */
  	if (pos + count > na->data_size) {
  		if (pos >= na->data_size)
-@@ -818,7 +819,7 @@ res_err_out:
+@@ -858,7 +859,7 @@ res_err_out:
  			continue;
  		}
  		/* It is a real lcn, read it into @dst. */
@@ -27,9 +27,9 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
 +		to_read = min(origcount, (rl->length << vol->cluster_size_bits) -
  				ofs);
  retry:
- 		Dprintf("%s(): Reading 0x%llx bytes from vcn 0x%llx, lcn 0x%llx, "
-@@ -826,6 +827,12 @@ retry:
- 				rl->vcn, rl->lcn, ofs);
+ 		Dprintf("%s(): Reading 0x%llx bytes from vcn 0x%llx, "
+@@ -866,6 +867,12 @@ retry:
+ 				to_read, rl->vcn, rl->lcn, ofs);
  		br = ntfs_pread(vol->dev, (rl->lcn << vol->cluster_size_bits) +
  				ofs, to_read, b);
 +		/* Zero any overage that we may have read */

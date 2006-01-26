@@ -1,12 +1,10 @@
-$NetBSD: patch-ak,v 1.1 2005/03/15 20:24:30 rillig Exp $
+$NetBSD: patch-ak,v 1.2 2006/01/26 21:43:51 adam Exp $
 
-Needed for ENOTSUP on NetBSD-1.6.2.
-
---- libntfs/win32_io.c.orig	Sat Sep  4 12:16:32 2004
-+++ libntfs/win32_io.c	Sat Mar 12 10:15:23 2005
-@@ -32,6 +32,8 @@
- #include <errno.h>
+--- libntfs/win32_io.c.orig	2005-10-10 09:55:22.000000000 +0200
++++ libntfs/win32_io.c
+@@ -42,6 +42,8 @@
  #include <fcntl.h>
+ #endif
  
 +#include "compat.h"
 +

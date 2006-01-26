@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
+$NetBSD: patch-ad,v 1.2 2006/01/26 21:43:51 adam Exp $
 
---- libntfs/debug.c.orig	Sat Sep  4 06:16:32 2004
+--- libntfs/debug.c.orig	2004-09-09 09:54:06.000000000 +0200
 +++ libntfs/debug.c
 @@ -25,18 +25,20 @@
  #include "attrib.h"
@@ -27,7 +27,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
   *
   * It is more convenient to use Sprintf instead of the above code and perhaps
   * more importantly, Sprintf makes it much easier to turn it into a "do
-@@ -48,41 +50,61 @@
+@@ -48,18 +50,22 @@ void __Sprintf(const int silent, const c
  	int eo;
  	va_list ap;
  
@@ -49,11 +49,49 @@ $NetBSD: patch-ad,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
 +#ifdef HAVE_STRING_H
 +#include <string.h>
 +#endif
-+
 +/* Debug output to ntfs_err_out.  To get it run ./configure --enable-debug. */
  
- void __Dprintf(const char *fmt, ...)
+ void __ntfs_error(const char *function, const char *fmt, ...)
  {
+@@ -68,13 +74,16 @@ void __ntfs_error(const char *function, 
+ 	va_list args;
+ 	char err_buf[1024];
+ 
++	if (!ntfs_err_out)
++		return;
+ 	if (function)
+ 		flen = strlen(function);
+ 	va_start(args, fmt);
+-	vsnprintf(err_buf, sizeof(err_buf), fmt, args);
++	vsnprintf(ntfs_err_out, sizeof(err_buf), fmt, args);
+ 	va_end(args);
+-	fprintf(stderr, "NTFS error: %s(): %s\n", flen ? function : "",
++	fprintf(ntfs_err_out, "NTFS error: %s(): %s\n", flen ? function : "",
+ 			err_buf);
++	fflush(ntfs_err_out);
+ 	errno = eo;
+ }
+ 
+@@ -86,13 +95,16 @@ void __ntfs_debug (const char *file, int
+ 	va_list args;
+ 	char err_buf[1024];
+ 
++	if (!ntfs_err_out)
++		return;
+ 	if (function)
+ 		flen = strlen(function);
+ 	va_start(args, fmt);
+-	vsnprintf(err_buf, sizeof(err_buf), fmt, args);
++	vsnprintf(ntfs_err_out, sizeof(err_buf), fmt, args);
+ 	va_end(args);
+-	fprintf(stderr, "NTFS DEBUG (%s, %d): %s(): %s\n", file, line,
++	fprintf(ntfs_err_out, "NTFS DEBUG (%s, %d): %s(): %s\n", file, line,
+ 			flen ? function : "", err_buf);
++	fflush(ntfs_err_out);
+ 	errno = eo;
+ }
+ 
+@@ -101,16 +113,23 @@ void __Dprintf(const char *fmt, ...)
  	int eo = errno;
  	va_list ap;
  
@@ -75,22 +113,6 @@ $NetBSD: patch-ad,v 1.1.1.1 2004/10/05 12:39:38 agc Exp $
 +	if (!ntfs_err_out)
 +		return;
 +	fprintf(ntfs_err_out, "%s\n", s);
-+	fflush(ntfs_err_out);
- 	errno = eo;
- }
- 
- void __Dperror(const char *s)
- {
- 	int eo = errno;
--	perror(s);
-+
-+	if (!ntfs_err_out)
-+		return;
-+	if (s && s[0]) {
-+		fprintf(ntfs_err_out, "%s: %s\n", s, strerror(eo));
-+	} else {
-+		fprintf(ntfs_err_out, "%s\n", strerror(eo));
-+	}
 +	fflush(ntfs_err_out);
  	errno = eo;
  }
