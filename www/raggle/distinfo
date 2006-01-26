@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/26 23:02:32 xtraeme Exp $
+
+SHA1 (raggle-0.4.4.tar.gz) = ac16328b46eaec7a732f429ee667513f0b52f277
+RMD160 (raggle-0.4.4.tar.gz) = 43b9353bb192185310eceecdedc00449fbeb0fe3
+Size (raggle-0.4.4.tar.gz) = 279758 bytes
+SHA1 (patch-aa) = 3ccf9e37f537bff697b94974b84ce9c781c2d035
