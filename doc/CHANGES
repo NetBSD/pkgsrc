@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12688 2006/01/26 20:39:34 adam Exp $
+$NetBSD: CHANGES,v 1.12689 2006/01/26 20:59:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -561,3 +561,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/git to 4.3.20 [reed 2006-01-26]
 	Updated devel/librfuncs to 1.0.7 [shannonjr 2006-01-26]
 	Updated graphics/ImageMagick to 6.2.6.0 [adam 2006-01-26]
+	Updated devel/Gorm to 1.0.4 [adam 2006-01-26]
