@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12686 2006/01/26 17:59:35 reed Exp $
+$NetBSD: CHANGES,v 1.12687 2006/01/26 18:48:48 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -559,3 +559,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/gfract to 0.32 [wiz 2006-01-26]
 	Updated sysutils/acpi-iasl to 20060113 [kochi 2006-01-26]
 	Updated misc/git to 4.3.20 [reed 2006-01-26]
+	Updated devel/librfuncs to 1.0.7 [shannonjr 2006-01-26]
