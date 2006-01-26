@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12680 2006/01/26 01:06:03 xtraeme Exp $
+$NetBSD: CHANGES,v 1.12681 2006/01/26 02:00:15 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -553,3 +553,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/mathomatic to 12.5.6 [minskim 2006-01-25]
 	Updated fonts/alee-ttf to 6.3 [minskim 2006-01-25]
 	Updated mail/sylpheed-devel to 2.2.0beta6 [xtraeme 2006-01-26]
+	Updated net/p5-Net-Pcap to 0.11 [hiramatsu 2006-01-26]
