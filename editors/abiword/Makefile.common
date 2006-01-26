@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2006/01/17 08:07:38 adam Exp $
+# $NetBSD: Makefile.common,v 1.29 2006/01/26 23:23:08 adam Exp $
 
 # Be sure to update PLIST and distinfo for editors/abiword-plugins when updating
 ABIWORD_VERSION=	2.4.2
@@ -19,19 +19,12 @@ USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=        --with-libpng=${BUILDLINK_PREFIX.png}
+CONFIGURE_ARGS+=	--with-libpng=${BUILDLINK_PREFIX.png}
 
 .include "../../converters/fribidi/buildlink3.mk"
-.include "../../devel/libglade2/buildlink3.mk"
+.include "../../converters/wv/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../fonts/Xft2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
-.include "../../graphics/libwmf/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
