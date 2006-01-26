@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2005/11/29 08:51:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.44 2006/01/26 20:38:18 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -26,6 +26,7 @@ include/Magick++/Pixels.h
 include/Magick++/STL.h
 include/Magick++/TypeMetric.h
 include/magick/ImageMagick.h
+include/magick/MagickCore.h
 include/magick/PreRvIcccm.h
 include/magick/animate.h
 include/magick/annotate.h
@@ -42,9 +43,7 @@ include/magick/compare.h
 include/magick/composite.h
 include/magick/compress.h
 include/magick/configure.h
-include/magick/conjure.h
 include/magick/constitute.h
-include/magick/convert.h
 include/magick/decorate.h
 include/magick/delegate.h
 include/magick/deprecate.h
@@ -59,7 +58,6 @@ include/magick/geometry.h
 include/magick/hashmap.h
 include/magick/identify.h
 include/magick/image.h
-include/magick/import.h
 include/magick/list.h
 include/magick/locale_.h
 include/magick/log.h
@@ -70,7 +68,6 @@ include/magick/magick.h
 include/magick/memory_.h
 include/magick/methods.h
 include/magick/module.h
-include/magick/mogrify.h
 include/magick/monitor.h
 include/magick/montage.h
 include/magick/option.h
@@ -99,14 +96,27 @@ include/magick/type.h
 include/magick/utility.h
 include/magick/version.h
 include/magick/widget.h
+include/magick/xml-tree.h
 include/magick/xwindow.h
+include/wand/MagickWand.h
+include/wand/animate.h
+include/wand/compare.h
+include/wand/composite.h
+include/wand/conjure.h
+include/wand/convert.h
+include/wand/display.h
 include/wand/drawing-wand.h
+include/wand/identify.h
+include/wand/import.h
 include/wand/magick-attribute.h
 include/wand/magick-image.h
 include/wand/magick-wand.h
 include/wand/magick_wand.h
+include/wand/mogrify.h
+include/wand/montage.h
 include/wand/pixel-iterator.h
 include/wand/pixel-wand.h
+include/wand/wand-config.h
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/colors.xml
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/configure.xml
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/delegates.xml
