@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/27 19:47:21 xtraeme Exp $
+
+--- config.mk.orig	2003-11-15 01:10:55.000000000 +0100
++++ config.mk	2006-01-27 20:42:30.000000000 +0100
+@@ -96,10 +96,26 @@
+ ifeq ($(OS_ARCH),Darwin)
+ OS_CONFIG      := Darwin
+ else
++ifeq ($(OS_ARCH), NetBSD)
++OS_CONFIG	:= pkgsrc
++else
++ifeq ($(OS_ARCH), FreeBSD)
++OS_CONFIG	:= pkgsrc
++else
++ifeq ($(OS_ARCH), DragonFlyBSD)
++OS_CONFIG	:= pkgsrc
++else
++ifeq ($(OS_ARCH), OpenBSD)
++OS_CONFIG	:= pkgsrc
++else
+ OS_CONFIG       := $(OS_ARCH)$(OS_OBJTYPE)$(OS_RELEASE)
+ endif
+ endif
+ endif
++endif
++endif
++endif
++endif
+ 
+ ASFLAGS         =
+ DEFINES         =
