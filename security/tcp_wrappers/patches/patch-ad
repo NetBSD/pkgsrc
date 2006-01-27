@@ -1,19 +1,21 @@
-$NetBSD: patch-ad,v 1.1 2004/03/21 19:49:05 bouyer Exp $
+$NetBSD: patch-ad,v 1.2 2006/01/27 17:33:55 joerg Exp $
 
---- percent_m.c.orig	Thu Feb  5 11:40:42 2004
-+++ percent_m.c	Thu Feb  5 11:44:20 2004
-@@ -13,10 +13,6 @@
+--- percent_m.c.orig	1994-12-28 16:42:37.000000000 +0000
++++ percent_m.c
+@@ -12,12 +12,6 @@ static char sccsid[] = "@(#) percent_m.c
+ #include <errno.h>
  #include <string.h>
  
- extern int errno;
+-extern int errno;
 -#ifndef SYS_ERRLIST_DEFINED
 -extern char *sys_errlist[];
 -extern int sys_nerr;
 -#endif
- 
+-
  #include "mystdarg.h"
  
-@@ -29,11 +25,7 @@
+ char   *percent_m(obuf, ibuf)
+@@ -29,11 +23,7 @@ char   *ibuf;
  
      while (*bp = *cp)
  	if (*cp == '%' && cp[1] == 'm') {
