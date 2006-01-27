@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.489 2006/01/27 00:55:08 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.490 2006/01/27 00:56:26 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -153,7 +153,7 @@ use constant LL_DEBUG		=> 5;
 
 use constant traditional_type	=> ["FATAL", "ERROR", "WARN", "OK", "NOTE", "DEBUG"];
 use constant gcc_type		=> ["fatal", "error", "warning", "info", "note", "debug"];
-	
+
 my $errors		= 0;
 my $warnings		= 0;
 my $verbosity		= 0;
@@ -1804,7 +1804,7 @@ sub readmakefile($$$$) {
 			}
 			if ($includefile =~ qr"(?:^|/)Makefile.common$"
 			    || ($includefile =~ qr"^(?:\.\./(\.\./[^/]+/)?[^/]+/)?([^/]+)$"
-			    	&& (!defined($1) || $1 ne "../mk")
+				&& (!defined($1) || $1 ne "../mk")
 				&& $2 ne "buildlink3.mk")) {
 				$line->log_debug("including ${includefile} sets seen_Makefile_common.");
 				$seen_Makefile_common = true;
