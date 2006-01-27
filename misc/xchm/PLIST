@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2005/09/05 15:10:44 minskim Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/01/27 23:21:17 minskim Exp $
 bin/xchm
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xchm.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xchm.mo
@@ -11,6 +12,7 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xchm.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xchm.mo
 share/pixmaps/xchm-128.xpm
