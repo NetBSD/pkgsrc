@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2002/09/02 23:12:24 seb Exp $
+$NetBSD: patch-aa,v 1.3 2006/01/27 01:18:19 minskim Exp $
 
---- Makefile.in.orig	Thu Nov  2 01:45:59 2000
+--- Makefile.in.orig	2005-10-13 23:45:28.000000000 -0700
 +++ Makefile.in
 @@ -5,6 +5,7 @@
  #
@@ -61,7 +61,7 @@ $NetBSD: patch-aa,v 1.2 2002/09/02 23:12:24 seb Exp $
  
  #
  # compile otcl.c and link it into a library archive
-@@ -89,36 +89,25 @@ owish: otkAppInit.c libotcl.a
+@@ -89,19 +89,8 @@ owish: otkAppInit.c libotcl.a
  
  libotcl.a: otcl.c
  	rm -f libotcl.a otcl.o
@@ -78,35 +78,29 @@ $NetBSD: patch-aa,v 1.2 2002/09/02 23:12:24 seb Exp $
 -	rm -f libotcl$(SHLIB_SUFFIX) otcl.o so_locations
 -	$(CC) -c $(CFLAGS) $(DEFINES) $(SHLIB_CFLAGS) $(INCLUDES) otcl.c
 -	$(SHLIB_LD) -o libotcl$(SHLIB_SUFFIX) otcl.o
-+	${LIBTOOL} --mode=compile $(CC) -c $(CPPFLAGS) $(CFLAGS) $(DEFINES) $(INCLUDES) otcl.c
++	${LIBTOOL} --mode=compile $(CC) -c $(CFLAGS) $(DEFINES) $(INCLUDES) otcl.c
 +	${LIBTOOL} --mode=link ${CC} -o ${.TARGET:.a=.la} otcl.lo -rpath ${PREFIX}/lib -version-info 0:0
  
  test: otclsh owish
  	./otclsh lib/test.tcl
- 	./owish lib/test.tcl
+@@ -114,12 +103,10 @@ dirs:
+ 		fi;\
+ 	done
  
--install: owish otclsh libotcl.a libotcl$(SHLIB_SUFFIX) otcl.h
+-install: owish otclsh libotcl.a libotcl$(SHLIB_SUFFIX) otcl.h dirs
 -	$(INSTALL) owish $(INST_OWISH)
 -	$(INSTALL) otclsh $(INST_OTCLSH)
 -	$(INSTALL) libotcl.a $(INST_OLIB)
+-	$(RANLIB)  $(INST_OLIB)/libotcl.a
 -	$(INSTALL) libotcl$(SHLIB_SUFFIX) $(INST_OLIBSH)
-+install: owish otclsh libotcl.a otcl.h
++install: owish otclsh libotcl.a otcl.h dirs
 +	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} libotcl.la ${PREFIX}/lib
 +	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} owish $(INST_OWISH)
 +	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} otclsh $(INST_OTCLSH)
- 	$(INSTALL) otcl.h $(INST_OINC)
+ 	$(INSTALL) -m 644 otcl.h $(INST_OINC)
  
  clean:
--	rm -f owish otclsh libotcl.a libotcl$(SHLIB_SUFFIX) \
-+	rm -f owish otclsh libotcl.la \
- 	otcl.o otkAppInit.o otclAppInit.o \
- 	config.status config.log config.cache \
- 	core so_locations *.core Makefile
-+	rm -rf .libs
- 
- # To be compatible with ns/nam
- distclean: clean
-@@ -146,7 +135,7 @@ srctar:
+@@ -154,7 +141,7 @@ srctar:
  
  depend: $(CFILES)
  	@echo Making dependencies for $(srcdir){$(CFILES)}
