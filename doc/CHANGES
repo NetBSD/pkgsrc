@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12699 2006/01/27 19:48:53 xtraeme Exp $
+$NetBSD: CHANGES,v 1.12700 2006/01/27 20:30:06 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -574,3 +574,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-gettext to 1.05nb1 [joerg 2006-01-27]
 	Updated lang/coq to 8.0pl3 [tonio 2006-01-27]
 	Added lang/spidermonkey version 1.5 [xtraeme 2006-01-27]
+	Updated multimedia/avidemux to 2.1.1 [xtraeme 2006-01-27]
