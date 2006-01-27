@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2006/01/27 01:18:19 minskim Exp $
+
+--- configure.orig	2005-10-13 23:46:24.000000000 -0700
++++ configure
+@@ -4128,7 +4128,7 @@ TCL_TCL_PLACES="../lib/tcl$TCL_HI_VERS \
+                 $x_includes \
+                 /usr/contrib/include \
+                 /usr/include"
+-TCL_H_PLACES_D="$d/generic \
++TCL_H_PLACES_D="$d/include/tcl/generic \
+ 		$d/unix \
+ 		$d/include/tcl$TCL_HI_VERS \
+ 		$d/include/tcl$TCL_VERS \
+@@ -6478,6 +6478,8 @@ do
+ _ACEOF
+ cat >>$CONFIG_STATUS <<\_ACEOF
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++    # Avoid regenerating for rechecks on pkgsrc
++    exit 0
+     ac_cs_recheck=: ;;
+   --version | --vers* | -V )
+     echo "$ac_cs_version"; exit 0 ;;
