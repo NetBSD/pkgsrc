@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/12/05 20:50:51 rillig Exp $
+# $NetBSD: Makefile,v 1.41 2006/01/27 16:34:36 joerg Exp $
 
 DISTNAME=	pvm3.4.5
 PKGNAME=	pvm-3.4.5
@@ -37,6 +37,9 @@ PVM_DIR=		${PREFIX}/pvm3
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${PVM_DIR}/lib/${PVM_ARCH}
 
 .include "../../mk/x11.buildlink3.mk"
+
+post-extract:
+	${CP} ${FILESDIR}/DRAGONFLY.m4 ${FILESDIR}/DRAGONFLY.def ${WRKSRC}/conf
 
 post-build:
 	${CP} ${WRKSRC}/examples/${PVM_ARCH}/.libs/* \
