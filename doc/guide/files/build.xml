@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.21 2006/01/13 17:55:27 reed Exp $ -->
+<!-- $NetBSD: build.xml,v 1.22 2006/01/27 04:06:25 rillig Exp $ -->
 
 <chapter id="build">
 <title>The build process</title>
@@ -403,12 +403,28 @@ of <varname>MAKEFILE</varname> is <quote>Makefile</quote>, and
 
 	<para>Once the build stage has completed, the final step is to
 	install the software in public directories, so users can access
-	the programs and files.  As in the build-target,
-	<varname>MAKE_PROGRAM</varname> is invoked on
-	<varname>MAKEFILE</varname> here, but with the
-	<varname>INSTALL_TARGET</varname> instead, the latter defaulting
-	to <quote>install</quote> (plus <quote>install.man</quote>, if
-	<varname>USE_IMAKE</varname> is set).</para>
+	the programs and files.</para>
+
+	<para>In the <emphasis>install</emphasis> phase, a rough
+	equivalent of the following code is executed. Additionally,
+	before and after this code, much magic is performed to do
+	consistency checks, registering the package, and so on.</para>
+
+<programlisting>
+    .for d in ${INSTALL_DIRS}
+            cd ${WRKSRC} && cd ${d} && env ${MAKE_ENV} \
+                ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
+                    -f ${MAKEFILE} ${BUILD_TARGET}
+    .endfor
+</programlisting>
+
+	<para>The variable's meanings are analogous to the ones in the
+	<emphasis>build</emphasis> phase.
+	<varname>INSTALL_DIRS</varname> defaults to
+	<varname>BUILD_DIRS</varname>. <varname>INSTALL_TARGET</varname>
+	is <quote>install</quote> by default, plus
+	<quote>install.man</quote> if <varname>USE_IMAKE</varname> is
+	defined.</para>
 
 	<para>In the <emphasis>install</emphasis> phase, the following
 	variables are useful. They are all variations of the
@@ -418,10 +434,6 @@ of <varname>MAKEFILE</varname> is <quote>Makefile</quote>, and
 	intended use, are:</para>
 
 	<variablelist>
-<!-- template:
-	<varlistentry><term><varname></varname></term>
-		<listitem><para></para></listitem></varlistentry>
--->
 	<varlistentry><term><varname>INSTALL_PROGRAM_DIR</varname></term>
 		<listitem><para>directories that contain binaries</para></listitem></varlistentry>
 	<varlistentry><term><varname>INSTALL_SCRIPT_DIR</varname></term>
@@ -447,6 +459,24 @@ of <varname>MAKEFILE</varname> is <quote>Makefile</quote>, and
 	<varlistentry><term><varname>INSTALL_MAN</varname></term>
 		<listitem><para>man pages</para></listitem></varlistentry>
 	</variablelist>
+
+	<para>Some other variables are:</para>
+
+	<variablelist>
+	<varlistentry><term><varname>INSTALLATION_DIRS</varname></term>
+		<listitem><para>A list of directories relative to
+		<varname>PREFIX</varname> that are created by pkgsrc at
+		the beginning of the <emphasis>install</emphasis> phase. If
+		this variable is set,
+		<varname>NO_MTREE</varname>=<quote>yes</quote> is
+		assumed, which means that the package claims to create
+		all needed directories itself before installing files to
+		it. Therefore this variable should only be set in
+		<filename>Makefile</filename>s that are under control of
+		the package's author.</para></listitem></varlistentry>
+	</variablelist>
+
+
 </sect1>
 
 <sect1 id="build.package">
