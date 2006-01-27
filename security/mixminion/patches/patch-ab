@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/12/27 22:58:57 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2006/01/27 17:13:56 joerg Exp $
 
 --- setup.py.orig	2004-05-10 19:36:22.000000000 +0200
 +++ setup.py
@@ -12,7 +12,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/12/27 22:58:57 wiz Exp $
  EXTRA_CFLAGS = []
  if sys.platform != 'win32':
      EXTRA_CFLAGS += [ '-Wno-strict-prototypes' ]
-@@ -534,6 +537,28 @@ elif sys.platform != 'win32':
+@@ -534,6 +537,30 @@ elif sys.platform != 'win32':
  else:
      EXTRA = {}
  
@@ -22,7 +22,9 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/12/27 22:58:57 wiz Exp $
 +          ('man/man8', ['etc/mixminiond.8'])]}
 +
 +orig_opts = sysconfig.get_config_vars('OPT')
-+if orig_opts == ['-DNDEBUG -O2 -I/usr/pkg/include -I/usr/include']:
++if orig_opts == ['-DNDEBUG -O2 -I@PREFIX@/include -I/usr/include']:
++    sysconfig._config_vars['OPT'] = '-DNDEBUG -O2'
++elif orig_opts == ['-DNDEBUG -O2 -I/usr/include -I@PREFIX@/include']:
 +    sysconfig._config_vars['OPT'] = '-DNDEBUG -O2'
 +elif orig_opts == ['-DNDEBUG -O2 -I/usr/include']:
 +    sysconfig._config_vars['OPT'] = '-DNDEBUG -O2'
