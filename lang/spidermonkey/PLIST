@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/27 19:47:21 xtraeme Exp $
+bin/js
+include/jsapi.h
+include/jsautocfg.h
+include/jscompat.h
+include/jslong.h
+include/jsosdep.h
+include/jsotypes.h
+include/jspubtd.h
+include/jstypes.h
+lib/libjs.so
