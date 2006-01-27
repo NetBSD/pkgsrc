@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.486 2006/01/26 23:05:49 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.487 2006/01/27 00:07:07 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -302,6 +302,62 @@ sub set_show_source_flag() {
 }
 
 #== End of PkgLint::Logging ===============================================
+
+#==========================================================================
+# A File is a structure containing the contents of a file:
+#	name:	string			The name of the file.
+#	lines:	array of string		The physical lines in the file.
+#==========================================================================
+package PkgLint::File;
+
+use constant NAME	=> 0;
+use constant LINES	=> 1;
+
+sub new($$$) {
+	my ($class, $name, $lines) = @_;
+	my $self = [$name, $lines];
+	bless($self, $class);
+	return $self;
+}
+
+sub name($)		{ return shift(@_)->[NAME]; }
+sub lines($)		{ return shift(@_)->[LINES]; }
+
+sub load($$) {
+	my ($self, $fname) = @_;
+	my ($lines);
+
+	$lines = [];
+	open(F, "<", $fname) or return undef;
+	while (defined(my $line = <F>)) {
+		push(@{$lines}, $line);
+	}
+	close(F) or return undef;
+
+	$self->[NAME] = $fname;
+	$self->[LINES] = $lines;
+	return $self;
+}
+
+#==========================================================================
+# A Location is a structure containing a location in a file:
+#	lineno:	int			The line number in the file
+#	colno:	int			The column number in the file
+#==========================================================================
+package PkgLint::Location;
+
+use constant LINENO	=> 0;
+use constant COLNO	=> 1;
+
+sub new($$$$) {
+	my ($class, $lineno, $colno) = @_;
+	my ($self) = ([$lineno, $colno]);
+	bless($self, $class);
+	return $self;
+}
+
+sub lineno($)		{ return shift(@_)->[LINENO]; }
+sub colno($)		{ return shift(@_)->[COLNO]; }
 
 package PkgLint::Line;
 #==========================================================================
