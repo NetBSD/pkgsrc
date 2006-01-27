@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4524 2006/01/27 20:30:06 xtraeme Exp $
+$NetBSD: TODO,v 1.4525 2006/01/27 22:34:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -641,6 +641,7 @@ Suggested package updates
 	o jftpgw-0.13.5
 	o jgrasp-183
 	o jigdo-0.7.2
+	o john-1.7
 	o jove-4.16.0.69
 	o jpegpixi-1.1.1
 	o jpilot-0.99.8
@@ -1276,7 +1277,7 @@ Suggested package updates
 	o ysm-2.9.7
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.2.10
+	o zile-2.2.11
 	o zircon-1.18.256
 	o zope-2.9.0
 	o zope25-AbracadabraObject-2.0.0
