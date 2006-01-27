@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/01/06 06:23:55 reed Exp $
+# $NetBSD: Makefile,v 1.35 2006/01/27 16:41:44 joerg Exp $
 #
 
 DISTNAME=		enscript-1.6.3
@@ -13,6 +13,7 @@ COMMENT=		ASCII-to-PostScript filter
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
+BROKEN_GETTEXT_DETECTION=	yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 INFO_FILES=		enscript.info
