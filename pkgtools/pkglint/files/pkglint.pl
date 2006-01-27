@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.490 2006/01/27 00:56:26 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.491 2006/01/27 02:25:52 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -374,8 +374,8 @@ use constant BEFORE	=> 5;
 use constant AFTER	=> 6;
 
 sub new($$$$) {
-	my ($class, $file, $lines, $text, $physlines) = @_;
-	my ($self) = ([$file, $lines, $text, $physlines, false, [], []]);
+	my ($class, $fname, $lines, $text, $physlines) = @_;
+	my ($self) = ([$fname, $lines, $text, $physlines, false, [], []]);
 	bless($self, $class);
 	return $self;
 }
