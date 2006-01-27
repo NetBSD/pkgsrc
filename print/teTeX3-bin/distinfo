@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2006/01/24 21:51:36 tron Exp $
+$NetBSD: distinfo,v 1.5 2006/01/27 23:13:54 tonio Exp $
 
 SHA1 (teTeX/tetex-src-3.0.tar.gz) = 7637789f7f4929694aed1b89820f5bad4753e8fc
 RMD160 (teTeX/tetex-src-3.0.tar.gz) = 15a139f5f36993e4ed3583260e175cfb13ce7bcc
@@ -16,3 +16,5 @@ SHA1 (patch-aj) = e9e62bdb9f956f0f8a9dc4fe9988309b7c6aa767
 SHA1 (patch-ak) = ba06c10c1151173e04f3a6cc44d44a89f1933bb8
 SHA1 (patch-al) = e1fc74bd6ea05176dfac4e99958f0e1281b89b3b
 SHA1 (patch-ap) = 0ca7341b416842fbc00a935d6cfdb0531c4169ba
+SHA1 (patch-aq) = 4cd35bfbd559c4aed53826af45fb4b8985527004
+SHA1 (patch-ar) = c171e42d0104b69e47a085f625455f16ba14d6c1
