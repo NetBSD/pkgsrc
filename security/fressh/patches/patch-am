@@ -1,0 +1,12 @@
+$NetBSD: patch-am,v 1.1 2006/01/27 18:08:10 joerg Exp $
+
+--- crypto/ssh_crypto_openssl.c.orig	2006-01-27 17:53:03.000000000 +0000
++++ crypto/ssh_crypto_openssl.c
+@@ -46,6 +46,7 @@
+ #include <string.h>
+ 
+ #include <openssl/rand.h>
++#include <openssl/sha.h>
+ 
+ #include <openssl/opensslv.h>
+ 
