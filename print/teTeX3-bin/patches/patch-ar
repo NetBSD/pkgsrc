@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1 2006/01/27 23:13:54 tonio Exp $
+
+--- texk/web2c/Makefile.in.orig	Sun Feb  6 11:56:56 2005
++++ texk/web2c/Makefile.in
+@@ -600,7 +600,7 @@ tex-check: trip tex.fmt
+ 	TEXMFCNF=../kpathsea \
+ 	  ./tex --mltex --progname=initex --ini $(srcdir)/tests/mltextst
+ 	-./tex </dev/null
+-	-PATH=`pwd`:$(kpathsea_dir):$(kpathsea_srcdir):$$PATH \
++	-PATH="`pwd`:$(kpathsea_dir):$(kpathsea_srcdir):$$PATH" \
+ 	  WEB2C=$(kpathsea_srcdir) TMPDIR=.. \
+ 	  ./tex --progname=tex '\nonstopmode\font\foo=nonesuch\end'
+ clean:: tex-clean
