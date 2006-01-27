@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2005/12/05 20:50:47 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2006/01/27 02:31:43 minskim Exp $
 
-DISTNAME=	ns-src-2.28
+DISTNAME=	ns-src-2.29
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	net
 MASTER_SITES=	http://www.isi.edu/nsnam/dist/
@@ -37,12 +37,13 @@ INSTALLATION_DIRS=	bin man/man1
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
-# Remove a left over executable in the source tarball.
-post-extract:
-	${_PKG_SILENT}${_PKG_DEBUG}			\
-	${RM} ${WRKSRC}/indep-utils/cmu-scen-gen/setdest/calcdest
-
 post-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/indep-utils/cmu-scen-gen/setdest/calcdest ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/indep-utils/webtrace-conv/dec/dec-tr-stat ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/indep-utils/webtrace-conv/epa/epa-tr-stat ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/indep-utils/webtrace-conv/nlanr/nlanr-tr-stat ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/indep-utils/cmu-scen-gen/setdest/setdest ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/indep-utils/webtrace-conv/ucb/ucb-tr-stat ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ns
 	${INSTALL_DATA} ${WRKSRC}/CHANGES.html ${PREFIX}/share/doc/ns
 
