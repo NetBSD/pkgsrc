@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4523 2006/01/27 19:24:51 tonio Exp $
+$NetBSD: TODO,v 1.4524 2006/01/27 20:30:06 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -366,7 +366,6 @@ Suggested package updates
 	o astyle-1.15.3
 	o autogen-5.7.3
 	o avcheck-0.91
-	o avidemux-2.1.0
 	o avl-2.0.1
 	o avr-libc-1.4.1
 	o baci-20040415
