@@ -1,16 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2004/09/22 08:09:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/01/27 01:18:19 minskim Exp $
 bin/otclsh
 bin/owish
 include/otcl.h
 lib/libotcl.la
-share/doc/html/tcl/otcl/CHANGES.html
-share/doc/html/tcl/otcl/autoload.html
-share/doc/html/tcl/otcl/capi.html
-share/doc/html/tcl/otcl/class.html
-share/doc/html/tcl/otcl/object.html
-share/doc/html/tcl/otcl/tutorial.html
+share/doc/tcl/otcl/CHANGES.html
+share/doc/tcl/otcl/autoload.html
+share/doc/tcl/otcl/capi.html
+share/doc/tcl/otcl/class.html
+share/doc/tcl/otcl/object.html
+share/doc/tcl/otcl/tutorial.html
 share/doc/tcl/otcl/otcl-paper.ps.gz
 @dirrm share/doc/tcl/otcl
 @unexec ${RMDIR} %D/share/doc/tcl 2>/dev/null || ${TRUE}
-@dirrm share/doc/html/tcl/otcl
-@unexec ${RMDIR} %D/share/doc/html/tcl 2>/dev/null || ${TRUE}
