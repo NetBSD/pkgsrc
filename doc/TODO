@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4522 2006/01/26 23:08:51 wiz Exp $
+$NetBSD: TODO,v 1.4523 2006/01/27 19:24:51 tonio Exp $
 
 Suggested new packages
 ======================
@@ -425,7 +425,6 @@ Suggested package updates
 	o conglomerate-0.9.1
 	o conserver-8.1.13
 	o cook-2.26
-	o coq-8.0pl3
 	o coreutils-5.93
 	o cqcam-0.91
 	o crafty-19.5
