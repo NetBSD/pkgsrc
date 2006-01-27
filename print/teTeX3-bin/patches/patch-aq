@@ -1,0 +1,57 @@
+$NetBSD: patch-aq,v 1.1 2006/01/27 23:13:54 tonio Exp $
+
+--- Makefile.in.orig	Sun Jan 30 00:12:25 2005
++++ Makefile.in
+@@ -51,7 +51,7 @@ default: all
+ install: all 
+ 	for dir in $(INSTDIRS); do \
+ 	   echo making $@ in $$dir; \
+-	     (cd $$dir && PATH=$(scriptdir):$(bindir):$(PATH) \
++	     (cd $$dir && PATH="$(scriptdir):$(bindir):$(PATH)" \
+                 $(MAKE) $@) || exit 1; \
+ 	done
+ 	if test -d $(texmf) && test -f $(srcdir)/release-tetex-src.txt; then \
+@@ -64,29 +64,29 @@ install: all 
+ 	  cd texk/web2c/omegafonts; $(MAKE) install-links
+ 	$(srcdir)/selfautofix "$(bindir)" "$(texmf)/web2c"
+ 	- if test -f $(scriptdir)/mktexlsr; then \
+-	  TEXMFMAIN=$(texmf) PATH=$(scriptdir):$(bindir):$(PATH) \
++	  TEXMFMAIN=$(texmf) PATH="$(scriptdir):$(bindir):$(PATH)" \
+ 	    $(scriptdir)/mktexlsr; \
+ 	else :; fi
+ 	- if test -f $(scriptdir)/fmtutil-sys; then \
+-	  TEXMFMAIN=$(texmf) PATH=$(scriptdir):$(bindir):$(PATH) \
++	  TEXMFMAIN=$(texmf) PATH="$(scriptdir):$(bindir):$(PATH)" \
+ 	    $(scriptdir)/fmtutil-sys --all; \
+ 	else :; fi
+ 	- if test -f $(scriptdir)/texlinks; then \
+-	  TEXMFMAIN=$(texmf) PATH=$(scriptdir):$(bindir):$(PATH) \
++	  TEXMFMAIN=$(texmf) PATH="$(scriptdir):$(bindir):$(PATH)" \
+ 	    $(scriptdir)/texlinks; \
+ 	else :; fi
+ 	- if test -f $(scriptdir)/updmap-sys \
+-	  && TEXMFMAIN=$(texmf) PATH=$(scriptdir):$(bindir):$(PATH) \
++	  && TEXMFMAIN=$(texmf) PATH="$(scriptdir):$(bindir):$(PATH)" \
+ 	       $(scriptdir)/kpsewhich --format='web2c files' updmap.cfg >/dev/null; \
+ 	then \
+-	  TEXMFMAIN=$(texmf) PATH=$(scriptdir):$(bindir):$(PATH) \
++	  TEXMFMAIN=$(texmf) PATH="$(scriptdir):$(bindir):$(PATH)" \
+ 	    $(scriptdir)/updmap-sys; \
+ 	else :; fi
+ 
+ install-exec:
+ 	for dir in $(INSTDIRS); do \
+ 	   echo making $@ in $$dir; \
+-	   (cd $$dir && PATH=$(scriptdir):$(bindir):$(PATH) \
++	   (cd $$dir && PATH="$(scriptdir):$(bindir):$(PATH)" \
+               $(MAKE) $@) || exit 1; \
+ 	done
+ @FMU@
+@@ -95,7 +95,7 @@ install-exec:
+ 	test -f texk/web2c/omegafonts/omfonts && \
+ 	  cd texk/web2c/omegafonts; $(MAKE) install-links
+ 	- if test -f $(scriptdir)/texlinks; then \
+-	  TEXMFMAIN=$(texmf) PATH=$(scriptdir):$(bindir):$(PATH) \
++	  TEXMFMAIN=$(texmf) PATH="$(scriptdir):$(bindir):$(PATH)" \
+ 	    $(scriptdir)/texlinks; \
+ 	else :; fi
