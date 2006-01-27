@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2005/12/19 11:34:46 markd Exp $
-${PYSITELIB}/_rpy2020.so
+@comment $NetBSD: PLIST,v 1.6 2006/01/27 21:50:41 markd Exp $
+${PYSITELIB}/_rpy2021.so
 ${PYSITELIB}/rpy.py
 ${PYSITELIB}/rpy.pyc
 ${PYSITELIB}/rpy.pyo
