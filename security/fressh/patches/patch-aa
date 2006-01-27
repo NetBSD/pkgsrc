@@ -1,11 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/02/12 16:15:14 agc Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/27 18:08:10 joerg Exp $
 
-Get rid of hard-coded PREFIX definition - it gets passed through the environment
-in pkgsrc.
-
---- Makefile	2001/02/12 15:48:04	1.1
-+++ Makefile	2001/02/12 15:48:21
-@@ -44,7 +44,6 @@
+--- Makefile.orig	2001-02-11 04:01:50.000000000 +0000
++++ Makefile
+@@ -44,7 +44,6 @@ LIBS+= -lutil -lcrypt -lz ${IDEA_LIB} -l
  
  INSTALL=install
  INSTALL_FLAGS=-c -r -m 755 -o bin -g bin
@@ -13,3 +10,20 @@ in pkgsrc.
  FRE=fre
  
  HDRS = options.h ssh_buffer.h ssh_channel.h ssh_client.h ssh_defines.h	\
+@@ -154,11 +153,11 @@ libdep::
+ 	(cd lib ; make depend)
+ 
+ install: sshd
+-	${INSTALL} ${INSTALL_FLAGS} sshd ${PREFIX}/sbin/${FRE}sshd
+-	${INSTALL} ${INSTALL_FLAGS} ssh-keygen ${PREFIX}/bin/${FRE}ssh-keygen
+-	${INSTALL} ${INSTALL_FLAGS} ssh ${PREFIX}/bin/${FRE}ssh
+-	${INSTALL} ${INSTALL_FLAGS} ssh-agent ${PREFIX}/bin/${FRE}ssh-agent
+-	${INSTALL} ${INSTALL_FLAGS} ssh-add ${PREFIX}/bin/${FRE}ssh-add
++	${BSD_INSTALL_PROGRAM} sshd ${PREFIX}/sbin/${FRE}sshd
++	${BSD_INSTALL_PROGRAM} ssh-keygen ${PREFIX}/bin/${FRE}ssh-keygen
++	${BSD_INSTALL_PROGRAM} ssh ${PREFIX}/bin/${FRE}ssh
++	${BSD_INSTALL_PROGRAM} ssh-agent ${PREFIX}/bin/${FRE}ssh-agent
++	${BSD_INSTALL_PROGRAM} ssh-add ${PREFIX}/bin/${FRE}ssh-add
+ 
+ clean: ${LIBCLEAN}
+ 	rm -f *.o crypto/*.o transport/*.o a.out sshd ssh-keygen ssh \
