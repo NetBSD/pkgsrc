@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:47:13 tv Exp $
+# $NetBSD: Makefile,v 1.5 2006/01/27 17:13:56 joerg Exp $
 #
 
 DISTNAME=		Mixminion-0.0.7.1
@@ -18,6 +18,11 @@ PYTHON_VERSIONS_ACCEPTED=       23 22 21
 PYDISTUTILSPKG=			YES
 
 TEST_TARGET=			test
+
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	setup.py
+SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_STAGE.paths=	post-patch
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
