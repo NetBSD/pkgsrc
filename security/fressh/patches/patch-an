@@ -1,0 +1,12 @@
+$NetBSD: patch-an,v 1.1 2006/01/27 18:08:10 joerg Exp $
+
+--- ssh_logging.c.orig	2006-01-27 17:56:05.000000000 +0000
++++ ssh_logging.c
+@@ -47,6 +47,7 @@
+ #include <string.h>
+ #include <time.h>
+ #include <sys/types.h>
++#include <sys/time.h>
+ #include <unistd.h>
+ 
+ #include "options.h"
