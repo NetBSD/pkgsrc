@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12697 2006/01/27 19:22:40 joerg Exp $
+$NetBSD: CHANGES,v 1.12698 2006/01/27 19:24:51 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -572,3 +572,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/tcl-tclcl to 1.17 [minskim 2006-01-27]
 	Updated net/ns to 2.29 [minskim 2006-01-27]
 	Updated devel/p5-gettext to 1.05nb1 [joerg 2006-01-27]
+	Updated lang/coq to 8.0pl3 [tonio 2006-01-27]
