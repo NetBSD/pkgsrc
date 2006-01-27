@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.488 2006/01/27 00:48:57 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.489 2006/01/27 00:55:08 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -273,33 +273,14 @@ sub print_summary_and_exit($) {
 	exit($errors != 0);
 }
 
-sub get_verbosity() {
-	return $verbosity;
-}
-sub set_verbosity($) {
-	($verbosity) = @_;
-}
-
-sub set_explain() {
-	$explain_flag = true;
-}
-sub set_gcc_output_format() {
-	$gcc_output_format = true;
-}
-
-sub get_klickibunti_flag() {
-	return $klickibunti_flag;
-}
-sub set_klickibunti_flag() {
-	$klickibunti_flag = true;
-}
-
-sub get_show_source_flag() {
-	return $show_source_flag;
-}
-sub set_show_source_flag() {
-	$show_source_flag = true;
-}
+sub get_verbosity()		{ return $verbosity; }
+sub set_verbosity($)		{ ($verbosity) = @_; }
+sub set_explain()		{ $explain_flag = true; }
+sub set_gcc_output_format()	{ $gcc_output_format = true; }
+sub get_klickibunti_flag()	{ return $klickibunti_flag; }
+sub set_klickibunti_flag()	{ $klickibunti_flag = true; }
+sub get_show_source_flag()	{ return $show_source_flag; }
+sub set_show_source_flag()	{ $show_source_flag = true; }
 
 #== End of PkgLint::Logging ===============================================
 
@@ -398,21 +379,16 @@ sub new($$$$) {
 	bless($self, $class);
 	return $self;
 }
-sub fname($) {
-	return shift(@_)->[FNAME];
-}
-sub lines($) {
-	return shift(@_)->[LINES];
-}
-sub text($) {
-	return shift(@_)->[TEXT];
-}
+
+sub fname($)		{ return shift(@_)->[FNAME]; }
+sub lines($)		{ return shift(@_)->[LINES]; }
+sub text($)		{ return shift(@_)->[TEXT]; }
+# Note: physlines is _not_ a usual getter method.
+sub is_changed($)	{ return shift(@_)->[CHANGED]; }
+
 sub physlines($) {
 	my ($self) = @_;
 	return [@{$self->[BEFORE]}, @{$self->[PHYSLINES]}, @{$self->[AFTER]}];
-}
-sub is_changed($) {
-	return shift(@_)->[CHANGED];
 }
 
 # Only for PkgLint::String support
@@ -565,12 +541,9 @@ sub new($$@) {
 	$self->compress();
 	return $self;
 }
-sub line($) {
-	return shift(@_)->[LINE];
-}
-sub parts($) {
-	return shift(@_)->[PARTS];
-}
+
+sub line($)		{ return shift(@_)->[LINE]; }
+sub parts($)		{ return shift(@_)->[PARTS]; }
 
 sub text($) {
 	my ($self) = @_;
