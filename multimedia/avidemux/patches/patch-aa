@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.3 2006/01/27 20:28:56 xtraeme Exp $
+
+--- avidemux/ADM_audiodevice/ADM_deviceoss.cpp.orig	2006-01-27 21:17:12.000000000 +0100
++++ avidemux/ADM_audiodevice/ADM_deviceoss.cpp	2006-01-27 21:17:39.000000000 +0100
+@@ -28,7 +28,8 @@
+ 
+ #if defined(ADM_BSD_FAMILY) && !defined(__FreeBSD__)
+ 	#include <soundcard.h>
+-	const char *dsp = DEVOSSAUDIO;;
++	const char *dsp = DEVOSSAUDIO;
++	const char *device_mixer = "/dev/mixer";
+ 
+ #else
+ 	#include <sys/soundcard.h>
