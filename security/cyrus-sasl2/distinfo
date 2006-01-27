@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2005/05/21 01:44:10 rh Exp $
+$NetBSD: distinfo,v 1.27 2006/01/27 17:48:22 joerg Exp $
 
 SHA1 (cyrus-sasl-2.1.20.tar.gz) = d1eec5644c4e87edb95fa5ab8bf124cfdf277eb6
 RMD160 (cyrus-sasl-2.1.20.tar.gz) = 45f8d9e91e5ba4840f57d2f0526b8f41f90bbb8c
@@ -18,3 +18,4 @@ SHA1 (patch-ap) = 3c1f4e554fd49772d2f8f279af3b571eca3a7076
 SHA1 (patch-aq) = 7e4375f0bc8c5b346d050a269fd2eea87f0aaf7c
 SHA1 (patch-ar) = f03a9bddfeb7aeb8af19c2bde315a630ce03f331
 SHA1 (patch-as) = c8cebac879afda69b282f5c334ffb2c8b5eee6cd
+SHA1 (patch-at) = cf35ac66873a5bc18216e13a1240019da99563ca
