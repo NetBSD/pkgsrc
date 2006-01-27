@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.487 2006/01/27 00:07:07 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.488 2006/01/27 00:48:57 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -164,17 +164,17 @@ my $show_source_flag	= false;
 my $frequency		= {};	# Frequencies of the messages.
 
 sub log_message($$$$) {
-	my ($level, $file, $lineno, $message) = @_;
+	my ($level, $fname, $lineno, $message) = @_;
 	my ($text, $sep);
 
-	if (defined($file)) {
+	if (defined($fname)) {
 		# strip "." path components
-		$file =~ s,^(?:\./)+,,;
-		$file =~ s,/(?:\./)+,/,g;
-		$file =~ s,/+,/,g;
+		$fname =~ s,^(?:\./)+,,;
+		$fname =~ s,/(?:\./)+,/,g;
+		$fname =~ s,/+,/,g;
 
 		# strip intermediate "../.." path components
-		while ($file =~ s,/[^.][^/]*/[^.][^/]*/\.\./\.\./,/,) {
+		while ($fname =~ s,/[^.][^/]*/[^.][^/]*/\.\./\.\./,/,) {
 		}
 	}
 
@@ -184,10 +184,10 @@ sub log_message($$$$) {
 		$text .= "${sep}" . traditional_type->[$level] . ":";
 		$sep = " ";
 	}
-	if (defined($file)) {
+	if (defined($fname)) {
 		$text .= defined($lineno)
-		    ? "${sep}${file}:${lineno}"
-		    : "${sep}${file}";
+		    ? "${sep}${fname}:${lineno}"
+		    : "${sep}${fname}";
 		$sep = ": ";
 	}
 	if ($gcc_output_format) {
@@ -211,40 +211,40 @@ sub log_message($$$$) {
 }
 
 sub log_fatal($$$) {
-	my ($file, $lineno, $msg) = @_;
-	log_message(LL_FATAL, $file, $lineno, $msg);
+	my ($fname, $lineno, $msg) = @_;
+	log_message(LL_FATAL, $fname, $lineno, $msg);
 	exit(1);
 }
 
 sub log_error($$$) {
-	my ($file, $lineno, $msg) = @_;
-	log_message(LL_ERROR, $file, $lineno, $msg);
+	my ($fname, $lineno, $msg) = @_;
+	log_message(LL_ERROR, $fname, $lineno, $msg);
 	$errors++;
 }
 sub log_warning($$$) {
-	my ($file, $lineno, $msg) = @_;
-	log_message(LL_WARNING, $file, $lineno, $msg);
+	my ($fname, $lineno, $msg) = @_;
+	log_message(LL_WARNING, $fname, $lineno, $msg);
 	$warnings++;
 }
 sub log_note($$$) {
-	my ($file, $lineno, $msg) = @_;
-	log_message(LL_NOTE, $file, $lineno, $msg);
+	my ($fname, $lineno, $msg) = @_;
+	log_message(LL_NOTE, $fname, $lineno, $msg);
 }
 sub log_info($$$) {
-	my ($file, $lineno, $msg) = @_;
+	my ($fname, $lineno, $msg) = @_;
 	if ($verbosity >= 1) {
-		log_message(LL_INFO, $file, $lineno, $msg);
+		log_message(LL_INFO, $fname, $lineno, $msg);
 	}
 }
 sub log_debug($$$) {
-	my ($file, $lineno, $msg) = @_;
+	my ($fname, $lineno, $msg) = @_;
 	if ($verbosity >= 2) {
-		log_message(LL_DEBUG, $file, $lineno, $msg);
+		log_message(LL_DEBUG, $fname, $lineno, $msg);
 	}
 }
 
 sub explain($$@) {
-	my ($file, $lines, @texts) = @_;
+	my ($fname, $lines, @texts) = @_;
 
 	if ($explain_flag) {
 		foreach my $text (@texts) {
@@ -384,7 +384,7 @@ BEGIN {
 	);
 }
 
-use constant FILE	=> 0;
+use constant FNAME	=> 0;
 use constant LINES	=> 1;
 use constant TEXT	=> 2;
 use constant PHYSLINES	=> 3;
@@ -398,8 +398,8 @@ sub new($$$$) {
 	bless($self, $class);
 	return $self;
 }
-sub file($) {
-	return shift(@_)->[FILE];
+sub fname($) {
+	return shift(@_)->[FNAME];
 }
 sub lines($) {
 	return shift(@_)->[LINES];
@@ -436,45 +436,45 @@ sub show_source($$) {
 sub log_fatal($$) {
 	my ($self, $text) = @_;
 	$self->show_source(*STDERR);
-	PkgLint::Logging::log_fatal($self->[FILE], $self->[LINES], $text);
+	PkgLint::Logging::log_fatal($self->fname, $self->[LINES], $text);
 }
 sub log_error($$) {
 	my ($self, $text) = @_;
 	$self->show_source(*STDOUT);
-	PkgLint::Logging::log_error($self->[FILE], $self->[LINES], $text);
+	PkgLint::Logging::log_error($self->fname, $self->[LINES], $text);
 }
 sub log_warning($$) {
 	my ($self, $text) = @_;
 	$self->show_source(*STDOUT);
-	PkgLint::Logging::log_warning($self->[FILE], $self->[LINES], $text);
+	PkgLint::Logging::log_warning($self->fname, $self->[LINES], $text);
 }
 sub log_note($$) {
 	my ($self, $text) = @_;
 	$self->show_source(*STDOUT);
-	PkgLint::Logging::log_note($self->[FILE], $self->[LINES], $text);
+	PkgLint::Logging::log_note($self->fname, $self->[LINES], $text);
 }
 sub log_info($$) {
 	my ($self, $text) = @_;
 	if (PkgLint::Logging::get_verbosity() >= 1) {
 		$self->show_source(*STDOUT);
 	}
-	PkgLint::Logging::log_info($self->[FILE], $self->[LINES], $text);
+	PkgLint::Logging::log_info($self->fname, $self->[LINES], $text);
 }
 sub log_debug($$) {
 	my ($self, $text) = @_;
 	if (PkgLint::Logging::get_verbosity() >= 2) {
 		$self->show_source(*STDOUT);
 	}
-	PkgLint::Logging::log_debug($self->[FILE], $self->[LINES], $text);
+	PkgLint::Logging::log_debug($self->fname, $self->[LINES], $text);
 }
 sub explain($@) {
 	my ($self, @texts) = @_;
-	PkgLint::Logging::explain($self->[FILE], $self->[LINES], @texts);
+	PkgLint::Logging::explain($self->fname, $self->[LINES], @texts);
 }
 
 sub to_string($) {
 	my ($self) = @_;
-	return $self->[FILE] . ":" . $self->[LINES] . ": " . $self->[TEXT];
+	return $self->fname . ":" . $self->[LINES] . ": " . $self->[TEXT];
 }
 
 sub prepend_before($$) {
@@ -718,7 +718,7 @@ sub log_warning($$) {
 			$self->line->show_source(*STDOUT);
 		}
 	}
-	PkgLint::Logging::log_warning($self->line->[PkgLint::Line::FILE], $self->line->[PkgLint::Line::LINES], $msg);
+	PkgLint::Logging::log_warning($self->line->fname, $self->line->lines, $msg);
 }
 
 #== End of PkgLint::String ================================================
@@ -947,9 +947,9 @@ sub save_autofix_changes($) {
 
 	foreach my $line (@{$lines}) {
 		if ($line->is_changed) {
-			$changed{$line->file}++;
+			$changed{$line->fname}++;
 		}
-		push(@{$physlines{$line->file}}, @{$line->physlines});
+		push(@{$physlines{$line->fname}}, @{$line->physlines});
 	}
 
 	foreach my $fname (sort(keys(%changed))) {
@@ -1584,8 +1584,8 @@ sub load_tool_names() {
 
 	$tools = {};
 	$vartools = {};
-	foreach my $file (qw(autoconf automake defaults ldconfig make replace rpcgen texinfo)) {
-		my $fname = "${current_dir}/${pkgsrcdir}/mk/tools/${file}.mk";
+	foreach my $basename (qw(autoconf automake defaults ldconfig make replace rpcgen texinfo)) {
+		my $fname = "${current_dir}/${pkgsrcdir}/mk/tools/${basename}.mk";
 		my $lines = load_lines($fname, true);
 
 		if (!$lines) {
@@ -1787,11 +1787,11 @@ sub strings_to_lines($) {
 
 sub readmakefile($$$$);
 sub readmakefile($$$$) {
-	my ($file, $main_lines, $all_lines, $seen_Makefile_include) = @_;
+	my ($fname, $main_lines, $all_lines, $seen_Makefile_include) = @_;
 	my $contents = "";
 	my ($includefile, $dirname, $lines, $is_main_Makefile);
 
-	$lines = load_lines($file, true);
+	$lines = load_lines($fname, true);
 	if (!$lines) {
 		return false;
 	}
@@ -1811,7 +1811,7 @@ sub readmakefile($$$$) {
 		if ($text =~ qr"^\.\s*include\s+\"(.*)\"$") {
 			$includefile = resolve_relative_path($1, true);
 			if ($includefile =~ regex_unresolved) {
-				if ($file !~ qr"/mk/") {
+				if ($fname !~ qr"/mk/") {
 					$line->log_note("Skipping include file \"${includefile}\". This may result in false warnings.");
 				}
 
@@ -1840,7 +1840,7 @@ sub readmakefile($$$$) {
 				# skip these files
 				$contents .= $text . "\n";
 			} else {
-				$dirname = dirname($file);
+				$dirname = dirname($fname);
 				# Only look in the directory relative to the
 				# current file and in the current working directory.
 				# We don't have an include dir list, like make(1) does.
@@ -2736,7 +2736,7 @@ sub checkline_mk_vartype_basic($$$$$$) {
 		if ($value !~ qr"^\d+$") {
 			$line->log_warning("\"${value}\" is not a valid Integer.");
 		}
-		if ($line->file !~ qr"(?:^|/)Makefile$") {
+		if ($line->fname !~ qr"(?:^|/)Makefile$") {
 			$line->log_error("${varname} must not be set outside the package Makefile.");
 		}
 
@@ -3436,7 +3436,7 @@ sub checkfile_DESCR($) {
 
 sub checkfile_distinfo($) {
 	my ($fname) = @_;
-	my ($lines, %in_distinfo, $current_file, $state);
+	my ($lines, %in_distinfo, $current_fname, $state);
 
 	use constant DIS_start	=> 0;
 	use constant DIS_SHA1	=> 0;	# same as DIS_start
@@ -3462,15 +3462,15 @@ sub checkfile_distinfo($) {
 		$lines->[1]->explain("This is merely for aesthetical purposes.");
 	}
 
-	$current_file = undef;
+	$current_fname = undef;
 	$state = DIS_start;
 	foreach my $line (@{$lines}[2..$#{$lines}]) {
 		if ($line->text !~ qr"^(\w+) \(([^)]+)\) = (.*)(?: bytes)?$") {
 			$line->log_error("Unknown line type.");
 			next;
 		}
-		my ($alg, $file, $sum) = ($1, $2, $3);
-		my $is_patch = (($file =~ qr"^patch-[A-Za-z0-9]+$") ? true : false);
+		my ($alg, $chksum_fname, $sum) = ($1, $2, $3);
+		my $is_patch = (($chksum_fname =~ qr"^patch-[A-Za-z0-9]+$") ? true : false);
 
 		if ($alg eq "MD5") {
 			$line->log_warning("MD5 checksums are deprecated.");
@@ -3482,7 +3482,7 @@ sub checkfile_distinfo($) {
 		if ($state == DIS_SHA1) {
 			if ($alg eq "SHA1") {
 				$state = ($is_patch ? DIS_start : DIS_RMD160);
-				$current_file = $file;
+				$current_fname = $chksum_fname;
 			} else {
 				$line->log_warning("Expected an SHA1 checksum.");
 			}
@@ -3490,37 +3490,37 @@ sub checkfile_distinfo($) {
 		} elsif ($state == DIS_RMD160) {
 			$state = DIS_start;
 			if ($alg eq "RMD160") {
-				if ($file eq $current_file) {
+				if ($chksum_fname eq $current_fname) {
 					$state = DIS_Size;
 				} else {
-					$line->log_warning("Expected an RMD160 checksum for ${current_file}, not for ${file}.");
+					$line->log_warning("Expected an RMD160 checksum for ${current_fname}, not for ${chksum_fname}.");
 				}
 			} else {
-				if ($file eq $current_file) {
+				if ($chksum_fname eq $current_fname) {
 					# This is an error because this really should be fixed.
-					$line->log_error("Expected an RMD160 checksum, not ${alg} for ${file}.");
+					$line->log_error("Expected an RMD160 checksum, not ${alg} for ${chksum_fname}.");
 				} else {
-					$line->log_warning("Expected an RMD160 checksum for ${current_file}, not ${alg} for ${file}.");
+					$line->log_warning("Expected an RMD160 checksum for ${current_fname}, not ${alg} for ${chksum_fname}.");
 				}
 			}
 
 		} elsif ($state == DIS_Size) {
 			$state = DIS_start;
 			if ($alg eq "Size") {
-				if ($file ne $current_file) {
-					$line->log_warning("Expected a Size checksum for ${current_file}, not for ${file}.");
+				if ($chksum_fname ne $current_fname) {
+					$line->log_warning("Expected a Size checksum for ${current_fname}, not for ${chksum_fname}.");
 				}
 			} else {
-				if ($file eq $current_file) {
-					$line->log_warning("Expected a Size checksum, not ${alg} for ${file}.");
+				if ($chksum_fname eq $current_fname) {
+					$line->log_warning("Expected a Size checksum, not ${alg} for ${chksum_fname}.");
 				} else {
-					$line->log_warning("Expected a Size checksum for ${current_file}, not ${alg} for ${file}.");
+					$line->log_warning("Expected a Size checksum for ${current_fname}, not ${alg} for ${chksum_fname}.");
 				}
 			}
 		}
 
 		if ($is_patch) {
-			if (open(PATCH, "< ${current_dir}/${patchdir}/${file}")) {
+			if (open(PATCH, "< ${current_dir}/${patchdir}/${chksum_fname}")) {
 				my $data = "";
 				foreach my $patchline (<PATCH>) {
 					$data .= $patchline unless $patchline =~ qr"\$NetBSD";
@@ -3528,16 +3528,16 @@ sub checkfile_distinfo($) {
 				close(PATCH);
 				my $chksum = Digest::SHA1::sha1_hex($data);
 				if ($sum ne $chksum) {
-					$line->log_error("${alg} checksum of $file differs (expected ${sum}, got ${chksum}). Rerun '".conf_make." makepatchsum'.");
+					$line->log_error("${alg} checksum of ${chksum_fname} differs (expected ${sum}, got ${chksum}). Rerun '".conf_make." makepatchsum'.");
 				}
 			} elsif (!$hack_php_patches) {
-				$line->log_warning("$file does not exist.");
+				$line->log_warning("${chksum_fname} does not exist.");
 				$line->explain(
 					"All patches that are mentioned in a distinfo file should actually exist.",
 					"What's the use of a checksum if there is no file to check?");
 			}
 		}
-		$in_distinfo{$file} = true;
+		$in_distinfo{$chksum_fname} = true;
 	}
 	checklines_trailing_empty_lines($lines);
 
@@ -3712,7 +3712,7 @@ sub checkfile_package_Makefile($$$) {
 
 sub checkfile_patch($) {
 	my ($fname) = @_;
-	my ($strings, $files_in_patch, $patch_state, $line_type, $dellines, $current_file);
+	my ($strings, $files_in_patch, $patch_state, $line_type, $dellines, $current_fname);
 
 	log_info($fname, NO_LINE_NUMBER, "[checkfile_patch]");
 
@@ -3749,7 +3749,7 @@ sub checkfile_patch($) {
 
 		} elsif ($text =~ qr"^\+\+\+ (\S+)") {
 			$line_type = "+";
-			$current_file = $1;
+			$current_fname = $1;
 
 		} elsif ($dellines > 0 && $text =~ qr"^(?:-|\s)") {
 			$line_type = "";
@@ -3795,7 +3795,7 @@ sub checkfile_patch($) {
 
 			# XXX: This check is not as accurate as the similar one in
 			# checkline_mk_shelltext().
-			if (defined($current_file) && $current_file =~ qr"Makefile") {
+			if (defined($current_fname) && $current_fname =~ qr"Makefile") {
 				my ($rest) = (substr($text, 1));
 
 				while ($rest =~ s/^${regex_shellword}//) {
