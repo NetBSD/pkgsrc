@@ -1,8 +1,16 @@
-$NetBSD: patch-ax,v 1.5 2004/11/12 10:45:45 adam Exp $
+$NetBSD: patch-ax,v 1.6 2006/01/27 16:34:36 joerg Exp $
 
 --- lib/pvmgetarch.orig	2004-02-03 20:12:05.000000000 +0000
 +++ lib/pvmgetarch
-@@ -143,17 +143,27 @@ if [ "$ARCH" = UNKNOWN ]; then
+@@ -78,6 +78,7 @@ if [ -f /bin/uname -o -f /usr/bin/uname 
+ 	Linux,m68k )            ARCH=LINUXATARI ;;
+ 	BSD/OS,i[3456]86 )      ARCH=BSD386 ;;
+ 	FreeBSD,i[3456]86 )     ARCH=FREEBSD ;;
++	DragonFly,i[3456]86 )   ARCH=DRAGONFLY ;;
+ 	FreeBSD,alpha )         ARCH=FREEBSD ;;
+ 	SUPER-UX,SX-3 )         ARCH=SX3 ;;
+ 	uts,* )                 ARCH=UTS2 ;;
+@@ -143,17 +144,27 @@ if [ "$ARCH" = UNKNOWN ]; then
  		# sun3)   ARCH=NETBSDSUN3 ;;  --> NETBSDM68K
  		case "`/usr/bin/uname -p`" in
  		alpha)   ARCH=NETBSDALPHA ;;
