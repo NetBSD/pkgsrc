@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.226 2005/12/31 22:46:21 markd Exp $
+# $NetBSD: Makefile,v 1.227 2006/01/27 19:48:53 xtraeme Exp $
 #
 
 COMMENT=	Programming languages
@@ -141,6 +141,7 @@ SUBDIR+=	smalleiffel
 SUBDIR+=	smalltalk
 SUBDIR+=	smlnj
 SUBDIR+=	snobol
+SUBDIR+=	spidermonkey
 SUBDIR+=	squeak
 SUBDIR+=	sr
 SUBDIR+=	sr-examples
