@@ -1,0 +1,19 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/01/28 02:42:06 rxg Exp $
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+LIBCHEWING_BUILDLINK3_MK:=	${LIBCHEWING_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	libchewing
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibchewing}
+BUILDLINK_PACKAGES+=	libchewing
+
+.if !empty(LIBCHEWING_BUILDLINK3_MK:M+)
+BUILDLINK_DEPENDS.libchewing+=		libchewing>=0.2.7
+BUILDLINK_RECOMMENDED.libchewing+=	libchewing>=0.2.7
+BUILDLINK_PKGSRCDIR.libchewing?=	../../inputmethod/libchewing
+.endif	# LIBCHEWING_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}

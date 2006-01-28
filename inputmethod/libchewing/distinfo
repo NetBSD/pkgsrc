@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/28 02:42:06 rxg Exp $
+
+SHA1 (libchewing-0.2.7.tar.gz) = 7adcf9d24d3a16af9e580cc41dcd217adef56c8a
+RMD160 (libchewing-0.2.7.tar.gz) = e1b82f093de6d00ff78c8d940489498611ac6ba3
+Size (libchewing-0.2.7.tar.gz) = 1758321 bytes
