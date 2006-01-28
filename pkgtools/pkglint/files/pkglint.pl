@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.493 2006/01/28 11:18:17 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.494 2006/01/28 11:19:07 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1344,6 +1344,12 @@ sub parse_command_line() {
 # Caching subroutines.
 #
 
+# The get_regex_plurals() function returns a regular expression that
+# matches for all make(1) variable names that are considered lists
+# of something.
+#
+# Rationale:
+#
 # The pkglint author thinks that variables containing lists of things
 # should have a name indicating some plural form. Sadly, there are other
 # reasons like backwards compatibility and other developer's
