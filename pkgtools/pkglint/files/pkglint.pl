@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.492 2006/01/28 11:11:49 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.493 2006/01/28 11:18:17 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -43,11 +43,27 @@ BEGIN {
 	use Exporter;
 	use vars qw(@ISA @EXPORT_OK);
 	@ISA = qw(Exporter);
-	@EXPORT_OK = qw(array_to_hash false print_table true);
+	@EXPORT_OK = qw(
+		false true
+		min max
+		array_to_hash print_table
+	);
 }
 
 use constant false	=> 0;
 use constant true	=> 1;
+
+sub min($$) {
+	my ($a, $b) = @_;
+
+	return ($a < $b) ? $a : $b;
+}
+
+sub max($$) {
+	my ($a, $b) = @_;
+
+	return ($a > $b) ? $a : $b;
+}
 
 # Prints the C<$table> on the C<$out> stream. The C<$table> shall be an
 # array of rows, each row shall be an array of cells, and each cell shall
@@ -539,6 +555,7 @@ package PkgLint::String;
 BEGIN {
 	import PkgLint::Util qw(
 		false true
+		min max
 	);
 }
 
@@ -596,37 +613,33 @@ sub substring($$$) {
 		if (ref($part) eq "") {
 			my $p = "";
 
-			while ($skip > 0 && $part ne "") {
-				$skip--;
-				$part = substr($part, 1);
-			}
-			while ($take > 0 && $part ne "") {
-				$take--;
-				$p .= substr($part, 0, 1);
-				$part = substr($part, 1);
-			}
+			my $nskipped = min($skip, strlen($part));
+			$skip -= $nskipped;
+			$part = substr($part, $nskipped);
+
+			my $ntaken = min($take, strlen($part));
+			$take -= $ntaken;
+			$p .= substr($part, 0, $ntaken);
+			$part = substr($part, $ntaken);
+
 			push(@nparts, $p);
 		} else {
-			my ($toline, $tocol, $tolen, $line, $linelen, $col);
-			my ($start, $end);
+			my $line = $part->[P_LINENO];
+			my $col = $part->[P_STARTCOL];
+			my $tocol = $part->[P_ENDCOL];
+			my $linelen = length($physlines->[$line]->[1]);
 
-			$line = $part->[P_LINENO];
-			$col = $part->[P_STARTCOL];
-			$tocol = $part->[P_ENDCOL];
+			my $nskipped = max(0, min($skip, min($tocol - $col, $linelen - $col)));
+			$skip -= $nskipped;
+			$col += $nskipped;
 
-			$linelen = length($physlines->[$line]->[1]);
-			while ($skip > 0 && $col < $tocol) {
-				last if ($col == $linelen);
-				$skip--;
-				$col++;
-			}
-			$start = $col;
-			while ($take > 0 && $col < $tocol) {
-				last if ($col == $linelen);
-				$take--;
-				$col++;
-			}
-			$end = $col;
+			my $start = $col;
+
+			my $ntaken = max(0, min($take, min($tocol - $col, $linelen - $col)));
+			$take -= $ntaken;
+			$col += $ntaken;
+
+			my $end = $col;
 			push(@nparts, [$line, $start, $end]);
 		}
 	}
