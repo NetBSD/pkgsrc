@@ -1,0 +1,34 @@
+$NetBSD: patch-ac,v 1.12 2006/01/28 02:36:55 salo Exp $
+
+Security fix for CVE-2006-0082, from Debian.
+
+--- magick/blob.c.orig	2006-01-19 00:30:32.000000000 +0100
++++ magick/blob.c	2006-01-28 02:29:06.000000000 +0100
+@@ -1913,25 +1913,8 @@
+       /*
+         Form filename for multi-part images.
+       */
+-      (void) CopyMagickString(filename,image->filename,MaxTextExtent);
+-      for (p=strchr(filename,'%'); p != (char *) NULL; p=strchr(p+1,'%'))
+-      {
+-        char
+-          *q;
+-
+-        q=p+1;
+-        if (*q == '0')
+-          (void) strtol(q,&q,10);
+-        if ((*q == '%') || (*q == 'd') || (*q == 'o') || (*q == 'x'))
+-          {
+-            char
+-              format[MaxTextExtent];
+-
+-            (void) CopyMagickString(format,p,MaxTextExtent);
+-            (void) FormatMagickString(p,MaxTextExtent,format,image->scene);
+-            break;
+-          }
+-      }
++      (void) FormatMagickStringNumeric(filename,MaxTextExtent,image->filename,
++        image->scene);
+       if (image_info->adjoin == MagickFalse)
+         if ((image->previous != (Image *) NULL) ||
+             (GetNextImageInList(image) != (Image *) NULL))

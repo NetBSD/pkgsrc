@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.16 2006/01/28 02:36:55 salo Exp $
+
+Security fix for CVE-2006-0082, from Debian.
+
+--- wand/animate.c.orig	2006-01-13 05:49:46.000000000 +0100
++++ wand/animate.c	2006-01-28 02:24:20.000000000 +0100
+@@ -410,7 +410,7 @@
+               /*
+                 Form filename for multi-part images.
+               */
+-              (void) FormatMagickString(filename,MaxTextExtent,
++              (void) FormatMagickStringNumeric(filename,MaxTextExtent,
+                 image_info->filename,scene);
+               if (LocaleCompare(filename,image_info->filename) == 0)
+                 (void) FormatMagickString(filename,MaxTextExtent,"%s[%lu]",
