@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2005/12/11 19:11:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.44 2006/01/28 23:06:37 wiz Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
@@ -1004,6 +1004,8 @@ ${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/gtk20-properties.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gtk20.mo
 share/themes/Default/gtk-2.0-key/gtkrc
