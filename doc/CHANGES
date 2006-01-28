@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12703 2006/01/28 02:47:23 rxg Exp $
+$NetBSD: CHANGES,v 1.12704 2006/01/28 05:47:13 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -578,3 +578,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/xchm to 1.3 [minskim 2006-01-27]
 	Updated graphics/ImageMagick to 6.2.6.0nb1 [salo 2006-01-28]
 	Added inputmethod/libchewing version 0.2.7 [rxg 2006-01-28]
+	Updated print/latex-mk to 1.5 [dmcmahill 2006-01-28]
