@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/11/13 17:51:40 heinz Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/28 18:28:22 heinz Exp $
 
 --- auction.c.orig	Wed Oct 19 13:37:59 2005
 +++ auction.c
-@@ -1189,7 +1189,7 @@ ebayLogin(auctionInfo *aip)
+@@ -28,6 +28,7 @@
+ #include "buffer.h"
+ #include "http.h"
+ #include <ctype.h>
++#include <curl/curl.h>
+ #include <limits.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+@@ -1189,7 +1190,7 @@ ebayLogin(auctionInfo *aip)
  	char *url, *logUrl;
  	pageInfo_t *pp;
  	int ret = 0;
@@ -11,7 +19,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/11/13 17:51:40 heinz Exp $
  
  	if (!(mp = httpGet(LOGIN_1_URL, NULL)))
  		return httpError(aip);
-@@ -1198,11 +1198,18 @@ ebayLogin(auctionInfo *aip)
+@@ -1198,11 +1199,18 @@ ebayLogin(auctionInfo *aip)
  
  	urlLen = sizeof(LOGIN_2_URL) + strlen(options.username);
  	password = getPassword();
