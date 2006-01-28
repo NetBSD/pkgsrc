@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.pkg.dist,v 1.8 2005/12/11 12:49:41 markd Exp $
+# $NetBSD: IRIX.pkg.dist,v 1.9 2006/01/28 22:55:16 wiz Exp $
 #
 
 /set type=dir uname=root gname=sys mode=0755
@@ -1092,6 +1092,10 @@
                 ..
             ..
             zh_CN.GB2312
+                LC_MESSAGES
+                ..
+            ..
+            zh_HK
                 LC_MESSAGES
                 ..
             ..
