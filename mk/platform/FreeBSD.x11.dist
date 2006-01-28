@@ -1,4 +1,4 @@
-#     $NetBSD: FreeBSD.x11.dist,v 1.1 2005/06/23 18:41:57 jlam Exp $
+#     $NetBSD: FreeBSD.x11.dist,v 1.2 2006/01/28 22:55:16 wiz Exp $
 #     FreeBSD Id: BSD.x11.dist,v 1.2 1997/06/10 07:55:10 asami Exp
 #
 
@@ -647,6 +647,10 @@
                 ..
             ..
             zh_CN.GB2312
+                LC_MESSAGES
+                ..
+            ..
+            zh_HK
                 LC_MESSAGES
                 ..
             ..
