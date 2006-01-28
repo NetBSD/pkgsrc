@@ -1,6 +1,13 @@
-$NetBSD: distinfo,v 1.57 2006/01/26 20:38:18 adam Exp $
+$NetBSD: distinfo,v 1.58 2006/01/28 02:36:55 salo Exp $
 
 SHA1 (ImageMagick-6.2.6-0.tar.bz2) = 0cf67149e806053a63fdaec70de913a9fd72aaf9
 RMD160 (ImageMagick-6.2.6-0.tar.bz2) = 34d8ea5408439c536ac2c791c7ad2fafa1424671
 Size (ImageMagick-6.2.6-0.tar.bz2) = 5139235 bytes
 SHA1 (patch-aa) = b5002ca0bd553c27a23f3ea9835e5b6c738f4f8d
+SHA1 (patch-ab) = 8b6e1c08d3e48dd76f8b4ae98297f6ab78017313
+SHA1 (patch-ac) = 0fed1246c6d36ba8549a60c859cbed2e213f8ec7
+SHA1 (patch-ad) = a98725b948b5c58c509d5d0c623831e2d3a452cb
+SHA1 (patch-ae) = a3134b37c2830b7ea094a1e10c1847e596a7c78c
+SHA1 (patch-af) = db1af7fa7f143cd4fa45a83310f209e928959ae6
+SHA1 (patch-ag) = 732bcd06b712d2bdae5b05845be98603d2b75282
+SHA1 (patch-ah) = b240858ffb307f89cdfca402ce02b6d299f1b984

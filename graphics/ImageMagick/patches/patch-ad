@@ -1,0 +1,51 @@
+$NetBSD: patch-ad,v 1.9 2006/01/28 02:36:55 salo Exp $
+
+Security fixes for CVE-2006-0082 and #345595, from Debian.
+
+--- wand/display.c.orig	2006-01-13 05:49:46.000000000 +0100
++++ wand/display.c	2006-01-28 02:35:54.000000000 +0100
+@@ -315,10 +315,7 @@
+   image_number=0;
+   last_image=0;
+   last_scene=0;
+-  image_marker=(unsigned long *)
+-    AcquireMagickMemory((argc+1)*sizeof(*image_marker));
+-  for (i=0; i <= argc; i++)
+-    image_marker[i]=(unsigned long) argc;
++  image_marker=(unsigned long *) NULL;
+   option=(char *) NULL;
+   pend=MagickFalse;
+   resource_database=(XrmDatabase) NULL;
+@@ -326,9 +323,6 @@
+   server_name=(char *) NULL;
+   state=0;
+   status=MagickTrue;
+-  if (image_marker == (unsigned long *) NULL)
+-    ThrowDisplayException(ResourceLimitError,"MemoryAllocationFailed",
+-      strerror(errno));
+   /*
+     Check for server name specified on the command line.
+   */
+@@ -337,6 +331,13 @@
+   if (status == MagickFalse)
+     ThrowDisplayException(ResourceLimitError,"MemoryAllocationFailed",
+       strerror(errno));
++  image_marker=(unsigned long *)
++    AcquireMagickMemory((argc+1)*sizeof(*image_marker));
++  for (i=0; i <= argc; i++)
++    image_marker[i]=(unsigned long) argc;
++  if (image_marker == (unsigned long *) NULL)
++    ThrowDisplayException(ResourceLimitError,"MemoryAllocationFailed",
++      strerror(errno));
+   for (i=1; i < (long) argc; i++)
+   {
+     /*
+@@ -461,7 +462,7 @@
+               /*
+                 Form filename for multi-part images.
+               */
+-              (void) FormatMagickString(filename,MaxTextExtent,
++              (void) FormatMagickStringNumeric(filename,MaxTextExtent,
+                 image_info->filename,scene);
+               if (LocaleCompare(filename,image_info->filename) == 0)
+                 (void) FormatMagickString(filename,MaxTextExtent,"%s.%lu",
