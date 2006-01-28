@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.494 2006/01/28 11:19:07 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.495 2006/01/28 12:24:20 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -366,11 +366,13 @@ sub text($$) {
 	my $end = $self->[ENDS]->[$n];
 	return $self->string->substring($start, $end - $start)->text;
 }
+
 sub range($$) {
 	my ($self, $n) = @_;
 
 	return ($self->[STARTS]->[$n], $self->[ENDS]->[$n]);
 }
+
 sub highlight($$) {
 	my ($self, $n) = @_;
 
@@ -608,7 +610,7 @@ sub substring($$$) {
 	$physlines = $self->[LINE]->[PkgLint::Line::PHYSLINES];
 
 	$skip = $from;
-	$take = $len;
+	$take = defined($len) ? $len : 0x7fff_ffff;
 	foreach my $part (@{$self->[PARTS]}) {
 		if (ref($part) eq "") {
 			my $p = "";
@@ -659,6 +661,25 @@ sub match($$) {
 	my @starts = @-;
 	my @ends = @+;
 	return PkgLint::Match->new($self, \@starts, \@ends);
+}
+
+sub match_all($$) {
+	my ($self, $re) = @_;
+	my ($mm, $rest, $lastpos);
+
+	$mm = [];
+	$rest = $self->text;
+	$lastpos = 0;
+	pos(undef);
+	while ($rest =~ m/$re/gc) {
+		my @starts = @-;
+		my @ends = @+;
+
+		$lastpos = $ends[0];
+
+		push(@{$mm}, PkgLint::Match->new($self, \@starts, \@ends));
+	}
+	return ($mm, substr($rest, $lastpos));
 }
 
 sub compress($) {
@@ -1210,6 +1231,7 @@ my $regex_shellword		=  qr"\s*(
 	|	\`[^\`]*\`		# backticks string
 	|	\\.			# any escaped character
 	|	\$\{[^{}]+\}		# make(1) variable
+	|	\$\([^()]+\)		# make(1) variable, $(...)
 	|	\$\$[0-9A-Z_a-z]+	# shell variable
 	|	\$\$\{[0-9A-Z_a-z]+\}	# shell variable in braces
 	|	\$\$\(			# POSIX-style backticks replacement
@@ -2207,9 +2229,12 @@ sub checkline_mk_shellword($$$) {
 	$state = SWST_PLAIN;
 	while ($rest ne "") {
 
+		$opt_debug and $line->log_error("[checkline_mk_shellword] " . statename->[$state] . " ${rest}");
+
 		# make variables have the same syntax, no matter in which
 		# state we are currently.
-		if ($rest =~ s/^\$\{(${regex_varname})(:[^\{]+)?\}//) {
+		if ($rest =~ s/^\$\{(${regex_varname})(:[^\{]+)?\}//
+		||  $rest =~ s/^\$\((${regex_varname})(:[^\)]+)?\)//) {
 			my ($varname, $mod) = ($1, $2);
 
 			if (!$opt_warn_quoting) {
@@ -2262,7 +2287,7 @@ sub checkline_mk_shellword($$$) {
 		} elsif ($state == SWST_DQUOT) {
 			if ($rest =~ s/^\"//) {
 				$state = SWST_PLAIN;
-			} elsif ($rest =~ s/^[^\$"\\\`]//) {
+			} elsif ($rest =~ s/^[^\$"\\\`]+//) {
 			} elsif ($rest =~ s/^\\(?:[\\\"\`]|\$\$)//) {
 			} elsif ($rest =~ s/^\$\$\{([0-9A-Za-z_]+)\}//
 			    || $rest =~ s/^\$\$([0-9A-Z_a-z]+|[!#?\@])//) {
@@ -3828,13 +3853,13 @@ sub checkfile_patch($) {
 			# XXX: This check is not as accurate as the similar one in
 			# checkline_mk_shelltext().
 			if (defined($current_fname) && $current_fname =~ qr"Makefile") {
-				my ($rest) = (substr($text, 1));
+				my ($mm, $rest) = $s->match_all($regex_shellword);
 
-				while ($rest =~ s/^${regex_shellword}//) {
-					my ($shellword) = ($1);
-
+				foreach my $m (@{$mm}) {
+					my $shellword = $m->text(1);
 					if ($shellword =~ qr"^/" && $shellword ne "/dev/null") {
-						$line->log_warning("Found absolute pathname: ${shellword}");
+						$m->highlight(1);
+						$s->log_warning("Found absolute pathname: ${shellword}");
 					}
 				}
 			}
