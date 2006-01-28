@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.491 2006/01/27 02:25:52 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.492 2006/01/28 11:11:49 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -43,7 +43,7 @@ BEGIN {
 	use Exporter;
 	use vars qw(@ISA @EXPORT_OK);
 	@ISA = qw(Exporter);
-	@EXPORT_OK = qw(array_to_hash false match print_table true);
+	@EXPORT_OK = qw(array_to_hash false print_table true);
 }
 
 use constant false	=> 0;
@@ -84,22 +84,6 @@ sub array_to_hash(@) {
 		$result->{$arg} = 1;
 	}
 	return $result;
-}
-
-sub match($$) {
-	my ($s, $re) = @_;
-	my ($m);
-
-
-	if ($s !~ $re) {
-		return false;
-	}
-
-	$m = [];
-	foreach my $i (0 .. $#+) {
-		push(@{$m}, [$-[0], $+[0]]);
-	}
-	return $m;
 }
 
 #== End of PkgLint::Util ==================================================
@@ -340,7 +324,43 @@ sub new($$$$) {
 sub lineno($)		{ return shift(@_)->[LINENO]; }
 sub colno($)		{ return shift(@_)->[COLNO]; }
 
-package PkgLint::Line;
+#==========================================================================
+# A Match is the result of applying a regular expression to a String. It
+# can return the range and the text of the captured groups.
+#==========================================================================
+package PkgLint::Match;
+
+use constant STRING	=> 0;
+use constant STARTS	=> 1;
+use constant ENDS	=> 2;
+
+sub new($$) {
+	my ($class, $string, $starts, $ends) = @_;
+	my ($self) = ([$string, $starts, $ends]);
+	bless($self, $class);
+	return $self;
+}
+
+sub string($)		{ return shift(@_)->[STRING]; }
+
+sub text($$) {
+	my ($self, $n) = @_;
+
+	my $start = $self->[STARTS]->[$n];
+	my $end = $self->[ENDS]->[$n];
+	return $self->string->substring($start, $end - $start)->text;
+}
+sub range($$) {
+	my ($self, $n) = @_;
+
+	return ($self->[STARTS]->[$n], $self->[ENDS]->[$n]);
+}
+sub highlight($$) {
+	my ($self, $n) = @_;
+
+	$self->string->highlight(0, $self->[STARTS]->[$n], $self->[ENDS]->[$n]);
+}
+
 #==========================================================================
 # When files are read in by pkglint, they are interpreted in terms of
 # lines. For Makefiles, line continuations are handled properly, allowing
@@ -359,6 +379,8 @@ package PkgLint::Line;
 # the logical line (the C<text>) untouched. These methods are used in the
 # --autofix mode.
 #==========================================================================
+package PkgLint::Line;
+
 BEGIN {
 	import PkgLint::Util qw(
 		false true
@@ -554,7 +576,7 @@ sub text($) {
 		if (ref($part) eq "") {
 			$text .= $part;
 		} else {
-			$text .= $self->line->substring($part->[P_LINENO], $part->[P_STARTCOL], $part->[P_ENDCOL]);
+			$text .= $self->line->substring($part->[P_LINENO], $part->[P_STARTCOL], $part->[P_ENDCOL] - $part->[P_STARTCOL]);
 		}
 	}
 	return $text;
@@ -611,6 +633,21 @@ sub substring($$$) {
 	return PkgLint::String->new($self->[LINE], @nparts);
 }
 
+sub match($$) {
+	my ($self, $re) = @_;
+	my ($m);
+
+	if ($self->text !~ $re) {
+		return false;
+	}
+
+	# @- and @+ are very special arrays, so we better copy them
+	# before doing anything with them.
+	my @starts = @-;
+	my @ends = @+;
+	return PkgLint::Match->new($self, \@starts, \@ends);
+}
+
 sub compress($) {
 	my ($self) = @_;
 	my ($parts, @nparts);
@@ -634,6 +671,7 @@ sub compress($) {
 	# TODO: Merge adjacent parts
 }
 
+# FIXME: lineno should not be needed here.
 sub highlight($$$$) {
 	my ($self, $lineno, $startcol, $endcol) = @_;
 
@@ -3752,13 +3790,15 @@ sub checkfile_patch($) {
 			$patch_state = $line_type;
 		}
 
-		if ($text =~ qr".\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$opt_rcsidstring)[:\$]") {
-			my ($tag) = ($1);
+		if (my $m = $s->match(qr".(\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$opt_rcsidstring)(?::[^\$]*|\$))")) {
+			my ($tag) = ($m->text(2));
+
+			$m->highlight(1);
 			if ($line->text =~ qr"^(\@\@.*?\@\@)") {
-				$line->log_warning("Patches should not contain RCS tags.");
+				$s->log_warning("Patches should not contain RCS tags.");
 				$line->set_text($1);
 			} else {
-				$line->log_warning("Possible RCS tag \"\$${tag}\$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".");
+				$s->log_warning("Possible RCS tag \"\$${tag}\$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".");
 			}
 		}
 
