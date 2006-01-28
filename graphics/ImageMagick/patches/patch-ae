@@ -1,0 +1,34 @@
+$NetBSD: patch-ae,v 1.6 2006/01/28 02:36:55 salo Exp $
+
+Security fix for CVE-2006-0082, from Debian.
+
+--- magick/image.c.orig	2006-01-17 17:20:54.000000000 +0100
++++ magick/image.c	2006-01-28 02:42:54.000000000 +0100
+@@ -2780,25 +2780,8 @@
+       /*
+         Rectify multi-image file support.
+       */
+-      (void) CopyMagickString(filename,image_info->filename,MaxTextExtent);
+-      for (p=strchr(filename,'%'); p != (char *) NULL; p=strchr(p+1,'%'))
+-      {
+-        char
+-          *q;
+-
+-        q=(char *) p+1;
+-        if (*q == '0')
+-          (void) strtol(q,&q,10);
+-        if ((*q == '%') || (*q == 'd') || (*q == 'o') || (*q == 'x'))
+-          {
+-            char
+-              format[MaxTextExtent];
+-
+-            (void) CopyMagickString(format,p,MaxTextExtent);
+-            (void) FormatMagickString(p,MaxTextExtent,format,image_info->scene);
+-            break;
+-          }
+-      }
++      (void) FormatMagickStringNumeric(filename,MaxTextExtent,
++        image_info->filename,image_info->scene);
+       if ((LocaleCompare(filename,image_info->filename) != 0) &&
+           (strchr(filename,'%') == (char *) NULL))
+         image_info->adjoin=MagickFalse;

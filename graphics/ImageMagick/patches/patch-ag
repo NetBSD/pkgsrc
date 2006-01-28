@@ -1,0 +1,82 @@
+$NetBSD: patch-ag,v 1.4 2006/01/28 02:36:55 salo Exp $
+
+Security fix for CVE-2006-0082, from Debian.
+
+--- magick/string.c.orig	2006-01-08 23:49:09.000000000 +0100
++++ magick/string.c	2006-01-28 02:54:01.000000000 +0100
+@@ -971,6 +971,75 @@
+ %                                                                             %
+ %                                                                             %
+ %                                                                             %
++%  F o r m a t M a g i c k S t r i n g N u m e r i c                          %
++%                                                                             %
++%                                                                             %
++%                                                                             %
++%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
++%
++%  Method FormatMagickStringNumeric formats output for a single numeric
++%  argument. It takes into account that the format string given might be
++%  untrusted user input, and returns the length of the formatted string.
++%
++%  The format of the FormatMagickStringNumeric method is:
++%
++%      long FormatMagickStringNumeric(char *string,const size_t length,
++%                                     const char *format,int value)
++%
++%  A description of each parameter follows.
++%
++%   o string:  FormatMagickStringNumeric() returns the formatted string in this
++%     character buffer.
++%
++%   o length: The maximum length of the string.
++%
++%   o  format:  A string describing the format to use to write the numeric
++%      argument. Only the first numeric format identifier is replaced.
++%
++%   o  value:  Numeric value to substitute into format string.
++%
++%
++*/
++MagickExport long FormatMagickStringNumeric(char *string,const size_t length,const char *format,int value)
++{
++  char
++    *p;
++
++  (void) CopyMagickString(string, format, length);
++
++  for (p=strchr(format,'%'); p != (char *) NULL; p=strchr(p+1,'%'))
++  {
++    char
++      *q;
++
++    q=(char *) p+1;
++    if (*q == '0')
++      (void) strtol(q,&q,10);
++    if ((*q == '%') || (*q == 'd') || (*q == 'o') || (*q == 'x'))
++    {
++      char
++        c;
++
++      q++;
++      c=*q;
++      *q='\0';
++      (void) snprintf(string+(p-format),length-(p-format),p,value);
++      *q=c;
++      (void) ConcatenateMagickString(string,q,length);
++      if (*(q-1) == '%')
++        p++;
++      else
++        break;
++    }
++  }
++  return (long)strlen(string);
++}
++
++/*
++%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
++%                                                                             %
++%                                                                             %
++%                                                                             %
+ %  F o r m a t M a g i c k S t r i n g                                        %
+ %                                                                             %
+ %                                                                             %

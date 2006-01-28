@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.6 2006/01/28 02:36:55 salo Exp $
+
+Security fix for CVE-2006-0082, from Debian.
+
+--- wand/montage.c.orig	2006-01-13 05:49:46.000000000 +0100
++++ wand/montage.c	2006-01-28 02:51:49.000000000 +0100
+@@ -340,7 +340,7 @@
+               /*
+                 Form filename for multi-part images.
+               */
+-              (void) FormatMagickString(filename,MaxTextExtent,
++              (void) FormatMagickStringNumeric(filename,MaxTextExtent,
+                 image_info->filename,scene);
+               if (LocaleCompare(filename,image_info->filename) == 0)
+                 (void) FormatMagickString(filename,MaxTextExtent,"%s.%lu",
