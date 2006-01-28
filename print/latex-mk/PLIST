@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/10/05 01:48:40 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/01/28 05:46:02 dmcmahill Exp $
 bin/ieee-copyout
 bin/latex-mk
 share/latex-mk/dated_draft.ps
@@ -19,6 +19,8 @@ share/latex-mk/latex-mk.pdf
 share/latex-mk/latex-mk.ps
 share/latex-mk/latex.gmk
 share/latex-mk/latex.mk
+share/latex-mk/latex.subdir.gmk
+share/latex-mk/latex.subdir.mk
 share/latex-mk/lgrind.gmk
 share/latex-mk/lgrind.mk
 share/latex-mk/tgif.gmk
