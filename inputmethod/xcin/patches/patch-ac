@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2005/06/26 16:45:57 rxg Exp $
+$NetBSD: patch-ac,v 1.3 2006/01/28 03:03:11 rxg Exp $
 
---- configure.orig	Tue Nov 27 22:21:17 2001
+--- configure.orig	2001-11-27 22:21:17.000000000 +0800
 +++ configure
-@@ -7666,7 +7666,7 @@
+@@ -7666,7 +7666,7 @@ found=n 
  fi
  done
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.2 2005/06/26 16:45:57 rxg Exp $
  	echo $ac_n "checking for gettext in -lintl""... $ac_c" 1>&6
  echo "configure:7672: checking for gettext in -lintl" >&5
  ac_lib_var=`echo intl'_'gettext | sed 'y%./+-%__p_%'`
-@@ -8619,7 +8619,7 @@
+@@ -8619,7 +8619,7 @@ sed 's/%@/@@/; s/@%/@@/; s/%g\$/@g/; /@g
  $ac_vpsub
  $extrasub
  s%@SHELL@%$SHELL%g
@@ -20,12 +20,11 @@ $NetBSD: patch-ac,v 1.2 2005/06/26 16:45:57 rxg Exp $
  s%@CPPFLAGS@%$CPPFLAGS%g
  s%@CXXFLAGS@%$CXXFLAGS%g
  s%@FFLAGS@%$FFLAGS%g
-@@ -8759,7 +8759,7 @@
- 	cin/gb/Makefile \
- 	etc/Makefile \
- 	po/Makefile \
--	doc/man/Makefile"}
-+	man/Makefile"}
- EOF
- cat >> $CONFIG_STATUS <<\EOF
- for ac_file in .. $CONFIG_FILES; do if test "x$ac_file" != x..; then
+@@ -8751,6 +8751,7 @@ CONFIG_FILES=\${CONFIG_FILES-"Makefile:s
+ 	src/Cinput/zh_hex/Makefile \
+ 	src/Cinput/gen_inp/Makefile \
+ 	src/Cinput/bimsphone/Makefile \
++	src/Cinput/chewing/Makefile \
+ 	src/util/Makefile \
+ 	src/util/cin2tab/Makefile \
+ 	src/util/testprog/Makefile \
