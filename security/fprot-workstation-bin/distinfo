@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.18 2006/01/26 14:32:33 ben Exp $
+$NetBSD: distinfo,v 1.19 2006/01/28 00:19:56 ben Exp $
 
 SHA1 (fp-netbsd-ws-4.6.5/fp-netbsd-ws-4.6.5.tar.gz) = 86dab4853b905b9e151f5f0d339de2add62c7026
 RMD160 (fp-netbsd-ws-4.6.5/fp-netbsd-ws-4.6.5.tar.gz) = 1a44328606a17c271f98aa80e474dd81188f55bd
 Size (fp-netbsd-ws-4.6.5/fp-netbsd-ws-4.6.5.tar.gz) = 4109359 bytes
 SHA1 (fp-solaris-ws-4.6.5/fp-solaris-sparc-ws-4.6.5.tar.gz) = 4b08b86a073354eba7b51c063fa2190f4948c02b
 RMD160 (fp-solaris-sparc-ws-4.6.5/fp-solaris-sparc-ws-4.6.5.tar.gz) = 3588a5c7f7a33a5f4016ccc458d02241be9fb1f9
-Size (fp-solaris-sparc-ws-4.6.5/fp-netbsd-ws-4.6.5.tar.gz) = 4948999 bytes
+Size (fp-solaris-sparc-ws-4.6.5/fp-solaris-sparc-ws-4.6.5.tar.gz) = 4948999 bytes
 SHA1 (fp-linux-ws-4.6.5/fp-linux-ws-4.6.5.tar.gz) = b361b86cc91414ae2cf982874f16bd9941f1b887
 RMD160 (fp-linux-ws-4.6.5/fp-linux-ws-4.6.5.tar.gz) = d901ca28c28f110d447462a571ff020755339bd3
 Size (fp-linux-ws-4.6.5/fp-linux-ws-4.6.5.tar.gz) = 4079883 bytes
