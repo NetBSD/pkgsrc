@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4526 2006/01/27 23:21:59 minskim Exp $
+$NetBSD: TODO,v 1.4527 2006/01/28 23:21:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -662,7 +662,7 @@ Suggested package updates
 	o lcab-1.0b11
 	o lcc-4.2
 	o leafnode-1.11.4
-	o leafpad-0.8.6
+	o leafpad-0.8.7
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
 	o libesmtp-1.0.4
