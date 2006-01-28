@@ -1,9 +1,12 @@
-$NetBSD: distinfo,v 1.3 2005/06/26 16:45:57 rxg Exp $
+$NetBSD: distinfo,v 1.4 2006/01/28 03:03:11 rxg Exp $
 
 SHA1 (xcin-2.5.3.pre2.tar.gz) = 27e4c47e09c44e92e3a3afc9e08134e1485f6795
 RMD160 (xcin-2.5.3.pre2.tar.gz) = f1fb83d1e21a0f5dbb80c5eafdaa6c7f313ea865
 Size (xcin-2.5.3.pre2.tar.gz) = 1433915 bytes
-SHA1 (patch-aa) = f192f038e048d7118ea7969b12e424b5ba9903a9
-SHA1 (patch-ab) = 36c4c9e5ec17a45db62fc08c2d07cc0a9ff72ae2
-SHA1 (patch-ac) = 1ce8c3dce665dec10db563847edfbf79ce3e5d52
-SHA1 (patch-ad) = c39bea80e15a1283e42855ea8ed25cddf8522b56
+SHA1 (patch-aa) = f08a273843fd6dc50f71c815f0cd9c8c8c0cdc40
+SHA1 (patch-ac) = a1bccd9d946d287eedf26bba4aebb89be8ee7e70
+SHA1 (patch-ad) = 6e59d32f5e3f8f06f8b4bcbb32e221678db74018
+SHA1 (patch-ae) = 13985687af55de0a6727150d41d2d6333d103689
+SHA1 (patch-af) = 23dde43647de72fb6492a51016379db88f37cdd2
+SHA1 (patch-ag) = fdb0f067f6b58648bbff7f8e0afc8cdb2703af81
+SHA1 (patch-ah) = 0bc13a5e03157cc788228162d7f212d5741c29bf
