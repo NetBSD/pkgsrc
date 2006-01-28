@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.58 2006/01/27 23:32:12 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.59 2006/01/28 23:40:34 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -119,3 +119,5 @@ Pullup ticket 1065 - requested by Matthias Scheler
 security fix for xine-lib
 Pullup ticket 1062 - requested Julio M. Merino Vidal
 raise runtime limits for mldonkey
+Pullup ticket 1070 - requested by Lubomir Sedlacik
+sync graphics/ImageMagick with HEAD including security fixes
