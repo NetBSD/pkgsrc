@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/01/25 08:09:12 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/01/29 04:25:58 ben Exp $
 bin/anytovcd.sh
 bin/jpeg2yuv
 bin/lav2avi.sh
@@ -15,6 +15,7 @@ bin/mjpeg_simd_helper
 bin/mp2enc
 bin/mpeg2enc
 bin/mpegtranscode
+bin/mplex
 bin/multiblend.flt
 bin/pgmtoy4m
 bin/png2yuv
@@ -97,6 +98,7 @@ man/man1/lavtrans.1
 man/man1/mjpegtools.1
 man/man1/mp2enc.1
 man/man1/mpeg2enc.1
+man/man1/mplex.1
 man/man1/pgmtoy4m.1
 man/man1/png2yuv.1
 man/man1/pnmtoy4m.1
