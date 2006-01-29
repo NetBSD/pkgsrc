@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12718 2006/01/29 17:12:16 adam Exp $
+$NetBSD: CHANGES,v 1.12719 2006/01/29 17:42:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -603,3 +603,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/nessus to 2.2.6 [adam 2006-01-29]
 	Updated security/libnasl to 2.2.6 [adam 2006-01-29]
 	Updated net/gtk-gnutella to 0.96 [adam 2006-01-29]
+	Updated graphics/p5-Image-Info to 1.17 [wiz 2006-01-29]
