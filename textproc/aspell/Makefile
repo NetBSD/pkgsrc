@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/01/06 14:51:19 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2006/01/29 22:02:45 wiz Exp $
 #
 
 DISTNAME=		aspell-0.60.4
@@ -25,9 +25,21 @@ CONFIGURE_ARGS+=	--enable-curses=ncurses
 CONFIGURE_ARGS+=	--enable-pkgdatadir=${PREFIX}/share/aspell
 CONFIGURE_ARGS+=	--enable-dict-dir=${PREFIX}/lib/aspell
 
-# configure fails to detect dlopen() on NetBSD.  Disable dynamic
-# loading of filters until it is fixed.
+# Loadable filter currently don't work on NetBSD, see
+# https://sourceforge.net/tracker/?func=detail&atid=100245&aid=1336865&group_id=245
+# Disable dynamic loading of filters until it is fixed.
+PKG_OPTIONS_VAR=	PKG_OPTIONS.aspell
+#PKG_SUPPORTED_OPTIONS=	aspell-loadable-filters
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Maspell-loadable-filters)
+CONFIGURE_ARGS+=	--disable-compile-in-filters
+PLIST_SUBST+=		FILTER=""
+.else
 CONFIGURE_ARGS+=	--enable-compile-in-filters
+PLIST_SUBST+=		FILTER="@comment "
+.endif
 
 REPLACE_PERL=		scripts/aspell-import
 
