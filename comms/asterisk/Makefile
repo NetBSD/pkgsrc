@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2006/01/25 17:48:43 riz Exp $
+# $NetBSD: Makefile,v 1.18 2006/01/29 01:21:45 rillig Exp $
 
 DISTNAME=	asterisk-1.2.3
+PKGREVISION=	1
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://ftp.digium.com/pub/asterisk/ \
 		http://ftp.digium.com/pub/asterisk/old-releases
@@ -9,7 +10,8 @@ MAINTAINER=	riz@NetBSD.org
 HOMEPAGE=	http://www.asterisk.org/
 COMMENT=	The Asterisk Software PBX
 
-USE_TOOLS+= 		bison gmake
+USE_TOOLS+= 		bison gmake perl:run
+REPLACE_PERL+=		agi/agi-test.agi
 
 # MANCOMPRESSED= 		yes
 
@@ -23,37 +25,37 @@ INSTALL_TARGET= 	install samples
 
 # Various path settings for Asterisk
 PKG_SYSCONFSUBDIR?=	asterisk
-ASTLIBDIR?=${PREFIX}/lib/asterisk
-ASTVARLIBDIR?=${PREFIX}/libdata/asterisk
-ASTETCDIR?=${PKG_SYSCONFDIR}
-ASTSPOOLDIR?=${VARBASE}/spool/asterisk
-ASTLOGDIR?=${VARBASE}/log/asterisk
-ASTHEADERDIR?=${PREFIX}/include/asterisk
-ASTCONFPATH?=${ASTETCDIR}/asterisk.conf
-ASTBINDIR?=${PREFIX}/bin
-ASTSBINDIR?=${PREFIX}/sbin
-ASTVARRUNDIR?=${VARBASE}/run
-ASTMANDIR?=${PREFIX}/man
-ASTEXAMPLEDIR?=${PREFIX}/share/examples/asterisk
+ASTLIBDIR?=		${PREFIX}/lib/asterisk
+ASTVARLIBDIR?=		${PREFIX}/libdata/asterisk
+ASTETCDIR?=		${PKG_SYSCONFDIR}
+ASTSPOOLDIR?=		${VARBASE}/spool/asterisk
+ASTLOGDIR?=		${VARBASE}/log/asterisk
+ASTHEADERDIR?=		${PREFIX}/include/asterisk
+ASTCONFPATH?=		${ASTETCDIR}/asterisk.conf
+ASTBINDIR?=		${PREFIX}/bin
+ASTSBINDIR?=		${PREFIX}/sbin
+ASTVARRUNDIR?=		${VARBASE}/run
+ASTMANDIR?=		${PREFIX}/man
+ASTEXAMPLEDIR?=		${PREFIX}/share/examples/asterisk
 
 # Override default paths in Makefile
 SUBST_CLASSES+= 	asterisk
 SUBST_STAGE.asterisk= 	pre-configure
 SUBST_FILES.asterisk=	Makefile configs/musiconhold.conf.sample
 SUBST_SED.asterisk= 	\
-	-e "s|/var/lib/asterisk|${ASTVARLIBDIR}|"		\
-	-e "s|^ *\(ASTLIBDIR\)=.*|\1 = ${ASTLIBDIR}|"		\
-	-e "s|^ *\(ASTVARLIBDIR\)=.*|\1 = ${ASTVARLIBDIR}|"	\
-	-e "s|^ *\(ASTETCDIR\)=.*|\1 = ${ASTETCDIR}|"		\
-	-e "s|^ *\(ASTSPOOLDIR\)=.*|\1 = ${ASTSPOOLDIR}|"		\
-	-e "s|^ *\(ASTLOGDIR\)=.*|\1 = ${ASTLOGDIR}|"		\
-	-e "s|^ *\(ASTHEADERDIR\)=.*|\1 = ${ASTHEADERDIR}|"	\
-	-e "s|^ *\(ASTCONFPATH\)=.*|\1 = ${ASTCONFPATH}|"		\
-	-e "s|^ *\(ASTBINDIR\)=.*|\1 = ${ASTBINDIR}|"		\
-	-e "s|^ *\(ASTSBINDIR\)=.*|\1 = ${ASTSBINDIR}|"		\
-	-e "s|^ *\(ASTVARRUNDIR\)=.*|\1 = ${ASTVARRUNDIR}|"	\
-	-e "s|^ *\(ASTMANDIR\)=.*|\1 = ${ASTMANDIR}|"		\
-	-e "s|^ *\(ASTEXAMPLEDIR\)=.*|\1 = ${ASTEXAMPLEDIR}|"
+	-e 's|/var/lib/asterisk|${ASTVARLIBDIR}|'		\
+	-e 's|^ *\(ASTLIBDIR\)=.*|\1 = ${ASTLIBDIR}|'		\
+	-e 's|^ *\(ASTVARLIBDIR\)=.*|\1 = ${ASTVARLIBDIR}|'	\
+	-e 's|^ *\(ASTETCDIR\)=.*|\1 = ${ASTETCDIR}|'		\
+	-e 's|^ *\(ASTSPOOLDIR\)=.*|\1 = ${ASTSPOOLDIR}|'	\
+	-e 's|^ *\(ASTLOGDIR\)=.*|\1 = ${ASTLOGDIR}|'		\
+	-e 's|^ *\(ASTHEADERDIR\)=.*|\1 = ${ASTHEADERDIR}|'	\
+	-e 's|^ *\(ASTCONFPATH\)=.*|\1 = ${ASTCONFPATH}|'	\
+	-e 's|^ *\(ASTBINDIR\)=.*|\1 = ${ASTBINDIR}|'		\
+	-e 's|^ *\(ASTSBINDIR\)=.*|\1 = ${ASTSBINDIR}|'		\
+	-e 's|^ *\(ASTVARRUNDIR\)=.*|\1 = ${ASTVARRUNDIR}|'	\
+	-e 's|^ *\(ASTMANDIR\)=.*|\1 = ${ASTMANDIR}|'		\
+	-e 's|^ *\(ASTEXAMPLEDIR\)=.*|\1 = ${ASTEXAMPLEDIR}|'
 
 .include "options.mk"
 
@@ -63,14 +65,15 @@ OWN_DIRS+= 		${ASTSPOOLDIR} ${ASTLOGDIR} ${ASTVARRUNDIR}
 OWN_DIRS+=		${ASTLOGDIR}/cdr-csv
 
 CONF_FILES=		# empty
-.for _file_ in asterisk.conf extensions.conf
-CONF_FILES+=	${ASTEXAMPLEDIR}/${_file_} ${ASTETCDIR}/${_file_}
+.for f in asterisk.conf extensions.conf
+CONF_FILES+=	${ASTEXAMPLEDIR:Q}/${f:Q} ${ASTETCDIR:Q}/${f:Q}
 .endfor
 
-MAKE_FLAGS+=   INSTALL_PREFIX=${PREFIX}
- 
+MAKE_ENV+=		VARBASE=${VARBASE:Q}
+MAKE_FLAGS+=		INSTALL_PREFIX=${PREFIX:Q}
+
 # if we put all the files in $CONF_FILES, the message is _way_ too long.
-.for _file_ in adsi.conf adtranvofr.conf agents.conf alarmreceiver.conf \
+.for f in adsi.conf adtranvofr.conf agents.conf alarmreceiver.conf	\
 	alsa.conf cdr_manager.conf cdr_odbc.conf 			\
 	cdr_pgsql.conf cdr_tds.conf enum.conf extconfig.conf 		\
 	features.conf festival.conf iax.conf 				\
@@ -80,7 +83,7 @@ MAKE_FLAGS+=   INSTALL_PREFIX=${PREFIX}
 	res_odbc.conf rpt.conf rtp.conf sip.conf 			\
 	skinny.conf voicemail.conf vpb.conf zapata.conf asterisk.adsi 	\
 	telcordia-1.adsi
-CONF_FILES+= 	${ASTEXAMPLEDIR}/${_file_} ${ASTETCDIR}/${_file_}
+CONF_FILES+= 	${ASTEXAMPLEDIR:Q}/${f:Q} ${ASTETCDIR:Q}/${f:Q}
 .endfor
 
 PTHREAD_OPTS+=	require native
