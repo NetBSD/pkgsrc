@@ -1,0 +1,51 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/01/29 15:56:42 shannonjr Exp $
+
+--- Makefile.in.orig	2005-11-24 04:46:25.000000000 -0700
++++ Makefile.in
+@@ -600,33 +600,33 @@ uninstall-info: uninstall-info-recursive
+ 
+ 
+ install-data-local:
+-	$(INSTALL) -m 700 -d $(DESTDIR)$(metadata_dir)
+-	@if test -f $(DESTDIR)$(configdir)/prelude-lml.conf; then         					\
++	$(INSTALL) -m 700 -d $(metadata_dir)
++	@if test -f $(configdir)/prelude-lml.conf; then         					\
+ 		echo "********************************************************************************"; 	\
+                 echo;                                                                                    	\
+-                echo "$(DESTDIR)$(configdir)/prelude-lml.conf already exist...";				\
+-                echo "Installing default configuration in $(DESTDIR)$(configdir)/prelude-lml.conf-dist";        \
++                echo "$(configdir)/prelude-lml.conf already exist...";				\
++                echo "Installing default configuration in $(configdir)/prelude-lml.conf-dist";        \
+                 echo;                                                                                    	\
+                 echo "********************************************************************************"; 	\
+-		$(INSTALL) -m 600 $(top_srcdir)/prelude-lml.conf $(DESTDIR)$(configdir)/prelude-lml.conf-dist;  \
++		$(INSTALL) -m 600 $(top_srcdir)/prelude-lml.conf $(configdir)/prelude-lml.conf-dist;  \
+         else                                                                                             	\
+-                $(INSTALL) -m 600 $(top_srcdir)/prelude-lml.conf $(DESTDIR)$(configdir)/;                       \
++                $(INSTALL) -m 600 $(top_srcdir)/prelude-lml.conf $(configdir)/;                       \
+         fi
+-	@if test -f $(DESTDIR)$(configdir)/plugins.rules; then         					\
++	@if test -f $(configdir)/plugins.rules; then         					\
+ 		echo "********************************************************************************"; 	\
+                 echo;                                                                                    	\
+-                echo "$(DESTDIR)$(configdir)/plugins.rules already exist...";					\
+-                echo "Installing default configuration in $(DESTDIR)$(configdir)/plugins.rules-dist";	        \
++                echo "$(configdir)/plugins.rules already exist...";					\
++                echo "Installing default configuration in $(configdir)/plugins.rules-dist";	        \
+                 echo;                                                                                    	\
+                 echo "********************************************************************************"; 	\
+-		$(INSTALL) -m 600 $(top_srcdir)/plugins.rules $(DESTDIR)$(configdir)/plugins.rules-dist;	\
++		$(INSTALL) -m 600 $(top_srcdir)/plugins.rules $(configdir)/plugins.rules-dist;	\
+         else                                                                                             	\
+-		$(INSTALL) -m 600 $(top_srcdir)/plugins.rules $(DESTDIR)$(configdir)/;				\
++		$(INSTALL) -m 600 $(top_srcdir)/plugins.rules $(configdir)/;				\
+         fi
+ 
+ uninstall-local:
+-	rm -f $(DESTDIR)$(configdir)/prelude-lml.conf;	\
+-	rm -f $(DESTDIR)$(configdir)/plugin.rules;
++	rm -f $(configdir)/prelude-lml.conf;	\
++	rm -f $(configdir)/plugin.rules;
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

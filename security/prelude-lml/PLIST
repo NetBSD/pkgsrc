@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/29 15:56:42 shannonjr Exp $
+bin/prelude-lml
+include/prelude-lml/prelude-lml.h
+lib/prelude-lml/debug.la
+lib/prelude-lml/pcre.la
+sbin/run-prelude-lml
+share/examples/rc.d/preludelml
+@dirrm lib/prelude-lml
+@dirrm include/prelude-lml
