@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/11/25 19:59:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/01/29 17:48:11 wiz Exp $
 bin/micq
 man/de/man1/micq.1
 man/de/man5/micqrc.5
@@ -29,6 +29,7 @@ man/uk/man1/micq.1
 man/uk/man7/micq.7
 share/micq/C.i18n
 share/micq/bg.i18n
+share/micq/cs.i18n
 share/micq/de.i18n
 share/micq/de_CH.i18n
 share/micq/en.i18n
@@ -70,4 +71,5 @@ share/micq/zh_CN.i18n
 @unexec ${RMDIR} %D/man/pt_BR/man1 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/pt_BR 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/it/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/it 2>/dev/null || ${TRUE}
 @dirrm share/micq
