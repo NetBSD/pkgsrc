@@ -1,6 +1,6 @@
-$NetBSD: patch-ap,v 1.7 2005/03/01 15:36:48 wiz Exp $
+$NetBSD: patch-ap,v 1.8 2006/01/29 02:40:40 wiz Exp $
 
---- src/main.c.orig	2005-02-03 15:50:51.000000000 +0100
+--- src/main.c.orig	2005-09-05 20:04:38.000000000 +0200
 +++ src/main.c
 @@ -46,6 +46,7 @@ int really_quiet = 0;
  int quiet = 0;
@@ -18,7 +18,7 @@ $NetBSD: patch-ap,v 1.7 2005/03/01 15:36:48 wiz Exp $
  
  char *CurDir;
  
-@@ -244,6 +246,7 @@ static const char *const opt_usage[] =
+@@ -243,6 +245,7 @@ static const char *const opt_usage[] =
      "    -r           Make checked-out files read-only.\n",
      "    -w           Make checked-out files read-write (default).\n",
      "    -n           Do not execute anything that will change the disk.\n",
@@ -26,7 +26,7 @@ $NetBSD: patch-ap,v 1.7 2005/03/01 15:36:48 wiz Exp $
      "    -t           Show trace of program execution -- try with -n.\n",
      "    -v           CVS version and copyright.\n",
      "    -T tmpdir    Use 'tmpdir' for temporary files.\n",
-@@ -402,7 +405,7 @@ main (argc, argv)
+@@ -401,7 +404,7 @@ main (argc, argv)
      int help = 0;		/* Has the user asked for help?  This
  				   lets us support the `cvs -H cmd'
  				   convention to give help for cmd. */
@@ -35,7 +35,7 @@ $NetBSD: patch-ap,v 1.7 2005/03/01 15:36:48 wiz Exp $
      static struct option long_options[] =
      {
          {"help", 0, NULL, 'H'},
-@@ -526,6 +529,11 @@ main (argc, argv)
+@@ -525,6 +528,11 @@ main (argc, argv)
  		break;
  	    case 'n':
  		noexec = 1;
