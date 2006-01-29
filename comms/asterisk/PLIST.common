@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.4 2006/01/13 20:32:38 riz Exp $
+@comment $NetBSD: PLIST.common,v 1.5 2006/01/29 01:30:20 rillig Exp $
 include/asterisk/acl.h
 include/asterisk/adsi.h
 include/asterisk/aes.h
@@ -564,8 +564,8 @@ man/man8/safe_asterisk.8
 sbin/asterisk
 sbin/astgenkey
 sbin/autosupport
-sbin/safe_asterisk
 sbin/rasterisk
+sbin/safe_asterisk
 sbin/stereorize
 sbin/streamplayer
 share/examples/asterisk/adsi.conf
