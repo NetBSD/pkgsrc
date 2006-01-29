@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2005/12/29 06:22:12 jlam Exp $
+# $NetBSD: Makefile.common,v 1.18 2006/01/29 01:59:35 rillig Exp $
 
 DISTNAME=	ast-ksh-${ASTKSH_VERSION}
 PKGNAME=	ast-ksh-${ASTKSH_VERSION:S/-//g}
@@ -11,12 +11,12 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.kornshell.com/
 COMMENT=	Official AT&T release of KornShell 93
 
-NOT_FOR_PLATFORM= Interix-*-* # taking nearly a day to build and crash!
+NOT_FOR_PLATFORM=	Interix-*-* # taking nearly a day to build and crash!
 
 CONFLICTS=	static-ast-ksh-[0-9]*
 KSH93_MAKEFLAGS=
 
-RESTRICTED=	"Terms for redistribution are not yet clear."
+RESTRICTED=	Terms for redistribution are not yet clear.
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_CDROM=${RESTRICTED}
@@ -43,21 +43,22 @@ INSTALLATION_DIRS=	bin man/man1
 # XXX Note that 'make' here is not an executable command name, but a target
 # name which the ./bin/package script uses.
 do-build:
-	@cd ${WRKSRC}; \
-		${SETENV} SHELL=${PDKSH} \
-			${PDKSH} ./bin/package make ${KSH93_MAKEFLAGS}
+	@cd ${WRKSRC:Q} && \
+		${SETENV} SHELL=${PDKSH:Q} \
+			${PDKSH:Q} ./bin/package make ${KSH93_MAKEFLAGS}
 
 do-install:
-	@arch=`${WRKSRC}/bin/package host`; \
-		${INSTALL_PROGRAM} ${WRKSRC}/arch/$${arch}/bin/ksh \
-			${PREFIX}/bin/ksh93; \
-		${INSTALL_MAN} ${WRKSRC}/arch/$${arch}/man/man1/sh.1 \
-			${PREFIX}/man/man1/ksh93.1
+	@set -e;							\
+	arch=`${WRKSRC:Q}/bin/package host`;				\
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/arch/"$${arch}"/bin/ksh		\
+		${PREFIX:Q}/bin/ksh93;					\
+	${INSTALL_MAN} ${WRKSRC:Q}/arch/"$${arch}"/man/man1/sh.1	\
+		${PREFIX:Q}/man/man1/ksh93.1
 
 # Part of regression test
 do-test:
-	@cd ${WRKSRC}/src/cmd/ksh93/tests && \
-		${SETENV} SHELL=${PREFIX}/bin/ksh93 ${PREFIX}/bin/ksh93 shtests
+	@cd ${WRKSRC:Q}/src/cmd/ksh93/tests && \
+		${SETENV} SHELL=${PREFIX:Q}/bin/ksh93 ${PREFIX:Q}/bin/ksh93 shtests
 # XXX Their 'test' target needs nmake (Korn's another tool)
 #	@cd ${WRKSRC}; \
 #		${SETENV} SHELL=${PDKSH} ${PDKSH} ./bin/package test
