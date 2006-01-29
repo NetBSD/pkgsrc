@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/29 20:20:51 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/29 20:21:57 adrianp Exp $
 
 .include "../../net/snort/Makefile.common"
 
@@ -17,8 +17,8 @@ PATCHDIR=	${PKGDIR}/patches
 DISTINFO_FILE=	${PKGDIR}/distinfo
 
 CONFIGURE_ARGS+=	--enable-prelude
-CONFIGURE_ARGS+=	--localstatedir=/var/run
-CONFIGURE_ARGS+=	--sharedstatedir=/var/run
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/run
+CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE}/run
 
 .include "../../security/libprelude/buildlink3.mk"
 .include "../../security/libpreludedb/buildlink3.mk"
