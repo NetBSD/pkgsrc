@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/29 16:50:58 shannonjr Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/29 20:20:51 adrianp Exp $
 
 .include "../../net/snort/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-prelude-/}
 PKGREVISION=	2
 
-COMMENT=	Network Intrusion Detection System (with MySQL support)
+COMMENT=	Network Intrusion Detection System (with Prelude support)
 
 CONFLICTS+=	snort-[0-9]*
 CONFLICTS+=	snort-pgsql-[0-9]*
