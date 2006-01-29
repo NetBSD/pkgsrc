@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12706 2006/01/28 23:07:13 wiz Exp $
+$NetBSD: CHANGES,v 1.12707 2006/01/29 00:12:22 agc Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -581,3 +581,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/latex-mk to 1.5 [dmcmahill 2006-01-28]
 	Added misc/autocue version 20060128 [agc 2006-01-28]
 	Updated x11/gtk2 to 2.8.11 [wiz 2006-01-28]
+	Updated misc/autocue to 20060129 [agc 2006-01-29]
