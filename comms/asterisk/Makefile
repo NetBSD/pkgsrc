@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/01/29 01:21:45 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2006/01/29 01:30:20 rillig Exp $
 
 DISTNAME=	asterisk-1.2.3
 PKGREVISION=	1
@@ -10,12 +10,14 @@ MAINTAINER=	riz@NetBSD.org
 HOMEPAGE=	http://www.asterisk.org/
 COMMENT=	The Asterisk Software PBX
 
-USE_TOOLS+= 		bison gmake perl:run
+.include "../../mk/bsd.prefs.mk"
+
+USE_TOOLS+=		bison gmake perl:run
 REPLACE_PERL+=		agi/agi-test.agi
 
 # MANCOMPRESSED= 		yes
 
-INSTALL_TARGET= 	install samples
+INSTALL_TARGET=		install samples
 
 # Running as non-root will come later
 #ASTERISK_USER?= 	asterisk
@@ -39,10 +41,10 @@ ASTMANDIR?=		${PREFIX}/man
 ASTEXAMPLEDIR?=		${PREFIX}/share/examples/asterisk
 
 # Override default paths in Makefile
-SUBST_CLASSES+= 	asterisk
-SUBST_STAGE.asterisk= 	pre-configure
+SUBST_CLASSES+=		asterisk
+SUBST_STAGE.asterisk=	pre-configure
 SUBST_FILES.asterisk=	Makefile configs/musiconhold.conf.sample
-SUBST_SED.asterisk= 	\
+SUBST_SED.asterisk=	\
 	-e 's|/var/lib/asterisk|${ASTVARLIBDIR}|'		\
 	-e 's|^ *\(ASTLIBDIR\)=.*|\1 = ${ASTLIBDIR}|'		\
 	-e 's|^ *\(ASTVARLIBDIR\)=.*|\1 = ${ASTVARLIBDIR}|'	\
@@ -59,9 +61,9 @@ SUBST_SED.asterisk= 	\
 
 .include "options.mk"
 
-USE_PKGINSTALL= 	yes
-RCD_SCRIPTS= 		asterisk
-OWN_DIRS+= 		${ASTSPOOLDIR} ${ASTLOGDIR} ${ASTVARRUNDIR}
+USE_PKGINSTALL=		yes
+RCD_SCRIPTS=		asterisk
+OWN_DIRS+=		${ASTSPOOLDIR} ${ASTLOGDIR} ${ASTVARRUNDIR}
 OWN_DIRS+=		${ASTLOGDIR}/cdr-csv
 
 CONF_FILES=		# empty
@@ -83,14 +85,14 @@ MAKE_FLAGS+=		INSTALL_PREFIX=${PREFIX:Q}
 	res_odbc.conf rpt.conf rtp.conf sip.conf 			\
 	skinny.conf voicemail.conf vpb.conf zapata.conf asterisk.adsi 	\
 	telcordia-1.adsi
-CONF_FILES+= 	${ASTEXAMPLEDIR:Q}/${f:Q} ${ASTETCDIR:Q}/${f:Q}
+CONF_FILES+=		${ASTEXAMPLEDIR:Q}/${f:Q} ${ASTETCDIR:Q}/${f:Q}
 .endfor
 
 PTHREAD_OPTS+=	require native
 
 .if (${OPSYS} == "Darwin" && exists(/usr/include/sys/poll.h))
 post-patch:
-	${ECHO} "#include <sys/poll.h>" > ${WRKSRC}/include/asterisk/poll-compat.h
+	${ECHO} "#include <sys/poll.h>" > ${WRKSRC:Q}/include/asterisk/poll-compat.h
 .endif
 
 .include "../../devel/ncurses/buildlink3.mk"
