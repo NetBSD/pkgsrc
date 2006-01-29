@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2005/04/04 09:32:45 adam Exp $
+$NetBSD: distinfo,v 1.20 2006/01/29 17:05:54 adam Exp $
 
-SHA1 (libnasl-2.2.4.tar.gz) = 711da77a13d13cf9c0f9f1f1dde51b4610995c84
-RMD160 (libnasl-2.2.4.tar.gz) = 50f1145393c0bb681d639a3ed01ae58a3e68345f
-Size (libnasl-2.2.4.tar.gz) = 361551 bytes
+SHA1 (libnasl-2.2.6.tar.gz) = 323475d7c11b045abd93f8adad3e7ca7ca05ed0a
+RMD160 (libnasl-2.2.6.tar.gz) = 0c179b3a7d87fe61c8729c4e854b83ab2839031f
+Size (libnasl-2.2.6.tar.gz) = 364643 bytes
 SHA1 (patch-aa) = dd13fb7ddaf21f313e392e76138bbb66c7bdfbcb
