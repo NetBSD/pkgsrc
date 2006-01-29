@@ -1,0 +1,80 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/29 15:54:04 shannonjr Exp $
+
+--- prelude-adduser/prelude-adduser.c.orig	2005-06-26 05:41:44.000000000 -0600
++++ prelude-adduser/prelude-adduser.c
+@@ -43,6 +43,8 @@
+ #include <gnutls/x509.h>
+ #include <gnutls/extra.h>
+ 
++#include <fts.h>
++
+ #include "common.h"
+ #include "config-engine.h"
+ #include "prelude-error.h"
+@@ -886,6 +888,66 @@ static int del_cb(const char *filename, 
+ }
+ 
+ 
++int
++ftw(const char *path, int (*fn)(const char *, const struct stat *, int),
++    int nfds)
++{
++	char * const paths[2] = { (char *)path, NULL };
++	FTSENT *cur;
++	FTS *ftsp;
++	int error = 0, fnflag, sverrno;
++
++	/* XXX - nfds is currently unused */
++	if (nfds < 1 || nfds > OPEN_MAX) {
++		errno = EINVAL;
++		return (-1);
++	}
++
++	ftsp = fts_open(paths, FTS_LOGICAL | FTS_COMFOLLOW | FTS_NOCHDIR, NULL);
++	if (ftsp == NULL)
++		return (-1);
++	while ((cur = fts_read(ftsp)) != NULL) {
++		switch (cur->fts_info) {
++		case FTS_D:
++			fnflag = FTW_D;
++			break;
++		case FTS_DNR:
++			fnflag = FTW_DNR;
++			break;
++		case FTS_DP:
++			/* we only visit in preorder */
++			continue;
++		case FTS_F:
++		case FTS_DEFAULT:
++			fnflag = FTW_F;
++			break;
++		case FTS_NS:
++		case FTS_NSOK:
++		case FTS_SLNONE:
++			fnflag = FTW_NS;
++			break;
++		case FTS_SL:
++			fnflag = FTW_SL;
++			break;
++		case FTS_DC:
++			errno = ELOOP;
++			/* FALLTHROUGH */
++		default:
++			error = -1;
++			goto done;
++		}
++		error = fn(cur->fts_path, cur->fts_statp, fnflag);
++		if (error != 0)
++			break;
++	}
++done:
++	sverrno = errno;
++	if (fts_close(ftsp) != 0 && error == 0)
++		error = -1;
++	else
++		errno = sverrno;
++	return (error);
++}
+ 
+ static void delete_dir(const char *dirname)
+ {
