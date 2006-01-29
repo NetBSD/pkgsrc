@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2005/04/04 09:32:25 adam Exp $
+$NetBSD: distinfo,v 1.23 2006/01/29 17:05:54 adam Exp $
 
-SHA1 (nessus-libraries-2.2.4.tar.gz) = b3d0bd94ccc34361b2962f2098d87c27dcdd697b
-RMD160 (nessus-libraries-2.2.4.tar.gz) = ce2e479e05854b546aa15d285a45268d8e78ae58
-Size (nessus-libraries-2.2.4.tar.gz) = 424258 bytes
+SHA1 (nessus-libraries-2.2.6.tar.gz) = 7552cb5c48ace2e38537d8b58a1c7968172399cc
+RMD160 (nessus-libraries-2.2.6.tar.gz) = 6fd4b60515fa17657a015a3a31d380ee5d2c23ba
+Size (nessus-libraries-2.2.6.tar.gz) = 426911 bytes
 SHA1 (patch-aa) = c525abf1ccfe4c3921609b91e335fa19b0bcab87
 SHA1 (patch-ab) = 982846ca823fb9f83b2d670f61f78b3b61f6d704
 SHA1 (patch-ac) = ec174bd6ddb7303f53a5e474451ad0f306575682
