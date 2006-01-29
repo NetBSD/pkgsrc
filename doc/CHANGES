@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12714 2006/01/29 10:04:01 seb Exp $
+$NetBSD: CHANGES,v 1.12715 2006/01/29 16:13:27 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -590,3 +590,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/mjpegtools to 1.8.0nb1 [ben 2006-01-29]
 	Removed multimedia/mplex [ben 2006-01-29]
 	Added net/dnsdoctor version 1.0.0 [seb 2006-01-29]
+	Added security/libprelude version 0.9.3 [shannonjr 2006-01-29]
+	Added security/libpreludedb version 0.9.2 [shannonjr 2006-01-29]
+	Added security/prelude-manager version 0.9.1 [shannonjr 2006-01-29]
+	Added security/prelude-lml version 0.9.1 [shannonjr 2006-01-29]
+	Added security/py-prewikka version 0.9.3 [shannonjr 2006-01-29]
+	Added devel/py-cheetah 0.9.18 [shannonjr 2006-01-29]
