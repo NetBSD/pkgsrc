@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/01/25 12:11:00 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.50 2006/01/29 13:53:51 dmcmahill Exp $
 #
 
 DISTNAME=	verilog-${SNAPDATE}
@@ -13,6 +13,9 @@ COMMENT=	Verilog simulation and synthesis tool (development snapshot version)
 PKG_INSTALLATION_TYPES=        overwrite pkgviews
 
 CONFLICTS+=	verilog-[0-9]*
+
+GCC_REQD+=	3.0
+USE_LANGUAGES=	c c++
 
 SNAPDATE=		20060124
 GNU_CONFIGURE=		yes
