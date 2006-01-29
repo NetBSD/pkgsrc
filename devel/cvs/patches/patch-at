@@ -1,8 +1,8 @@
-$NetBSD: patch-at,v 1.12 2005/03/01 15:36:48 wiz Exp $
+$NetBSD: patch-at,v 1.13 2006/01/29 02:40:40 wiz Exp $
 
---- src/logmsg.c.orig	2005-01-31 23:13:45.000000000 +0100
+--- src/logmsg.c.orig	2005-09-04 02:26:42.000000000 +0200
 +++ src/logmsg.c
-@@ -231,6 +231,8 @@ do_editor (dir, messagep, repository, ch
+@@ -227,6 +227,8 @@ do_editor (dir, messagep, repository, ch
  	    (*messagep)[strlen (*messagep) - 1] != '\n')
  	    (void) fprintf (fp, "\n");
      }
@@ -11,7 +11,7 @@ $NetBSD: patch-at,v 1.12 2005/03/01 15:36:48 wiz Exp $
  
      if (repository != NULL)
  	/* tack templates on if necessary */
-@@ -307,7 +309,7 @@ do_editor (dir, messagep, repository, ch
+@@ -298,7 +300,7 @@ do_editor (dir, messagep, repository, ch
      run_setup (editinfo_editor ? editinfo_editor : Editor);
      run_arg (fname);
      if ((retcode = run_exec (RUN_TTY, RUN_TTY, RUN_TTY,
@@ -20,7 +20,7 @@ $NetBSD: patch-at,v 1.12 2005/03/01 15:36:48 wiz Exp $
  	error (editinfo_editor ? 1 : 0, retcode == -1 ? errno : 0,
  	       editinfo_editor ? "Logfile verification failed" :
  	       "warning: editor session failed");
-@@ -690,6 +692,15 @@ title_proc (p, closure)
+@@ -679,6 +681,15 @@ title_proc (p, closure)
  				  strlen (str_list) + strlen (p->key) + 5);
  		    (void) strcat (str_list, p->key);
  		    break;

@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.10 2005/04/19 12:39:18 wiz Exp $
+$NetBSD: patch-ae,v 1.11 2006/01/29 02:40:40 wiz Exp $
 
---- src/rcs.c.orig	2005-03-17 17:33:47.000000000 +0100
+--- src/rcs.c.orig	2005-09-26 16:31:36.000000000 +0200
 +++ src/rcs.c
 @@ -3534,7 +3534,7 @@ struct rcs_keyword
      size_t len;
@@ -49,7 +49,7 @@ $NetBSD: patch-ae,v 1.10 2005/04/19 12:39:18 wiz Exp $
  		{
  		    const char *path;
  		    int free_path;
-@@ -4446,7 +4454,7 @@ RCS_checkout (rcs, workfile, rev, nameta
+@@ -4462,7 +4470,7 @@ RCS_checkout (rcs, workfile, rev, nameta
  	if (info != NULL)
  	{
  	    /* If the size of `devtype' changes, fix the sscanf call also */

@@ -1,13 +1,13 @@
-$NetBSD: patch-an,v 1.7 2004/09/09 22:26:17 wiz Exp $
+$NetBSD: patch-an,v 1.8 2006/01/29 02:40:40 wiz Exp $
 
---- src/history.c.orig	2004-06-09 16:34:54.000000000 +0200
+--- src/history.c.orig	2005-08-02 22:46:57.000000000 +0200
 +++ src/history.c
-@@ -750,7 +750,7 @@ history_write (type, update_dir, revs, n
+@@ -760,7 +760,7 @@ history_write (type, update_dir, revs, n
      if (trace)
  	fprintf (stderr, "%s-> fopen(%s,a)\n",
  		 CLIENT_SERVER_STR, fname);
 -    if (noexec)
 +    if (nolock)
  	goto out;
-     fd = CVS_OPEN (fname, O_WRONLY | O_APPEND | OPEN_BINARY, 0666);
-     if (fd < 0)
+ 
+     if (!history_lock (current_parsed_root->directory))

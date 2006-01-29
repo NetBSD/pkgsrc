@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.10 2005/03/01 15:36:48 wiz Exp $
+$NetBSD: patch-ac,v 1.11 2006/01/29 02:40:40 wiz Exp $
 
---- src/Makefile.in.orig	2005-02-01 00:11:15.000000000 +0100
+--- src/Makefile.in.orig	2005-09-28 05:32:23.000000000 +0200
 +++ src/Makefile.in
-@@ -88,7 +88,7 @@ am_cvs_OBJECTS = add.$(OBJEXT) admin.$(O
+@@ -86,7 +86,7 @@ am_cvs_OBJECTS = add.$(OBJEXT) admin.$(O
  	version.$(OBJEXT) vers_ts.$(OBJEXT) watch.$(OBJEXT) \
  	wrapper.$(OBJEXT) zlib.$(OBJEXT)
  cvs_OBJECTS = $(am_cvs_OBJECTS)
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.10 2005/03/01 15:36:48 wiz Exp $
  binSCRIPT_INSTALL = $(INSTALL_SCRIPT)
  SCRIPTS = $(bin_SCRIPTS)
  DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
-@@ -201,7 +201,7 @@ target_alias = @target_alias@
+@@ -199,7 +199,7 @@ target_alias = @target_alias@
  # some namespace hackery going on that maybe shouldn't be.  Long term fix is to
  # try and remove naming ocnflicts and fix Automake to allow particular includes
  # to be attached only to particular object files.  Short term fix is either or.
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.10 2005/03/01 15:36:48 wiz Exp $
  bin_SCRIPTS = cvsbug
  
  # The cvs executable
-@@ -280,7 +280,7 @@ cvs_SOURCES = \
+@@ -278,7 +278,7 @@ cvs_SOURCES = \
  cvs_LDADD = \
  	../diff/libdiff.a \
  	../lib/libcvs.a \
