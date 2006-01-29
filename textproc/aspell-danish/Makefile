@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:47:32 tv Exp $
+# $NetBSD: Makefile,v 1.11 2006/01/29 01:42:27 wiz Exp $
 #
 
-DISTNAME=	aspell5-da-1.4.42-1
-PKGNAME=	${DISTNAME:C/5-da-(.*)-(.*)$/-danish-\1.\2/}
+DISTNAME=	aspell-da-1.4.52
+PKGNAME=	${DISTNAME:C/-da-/-danish-/}
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/da/}
+MASTER_SITES=	http://da.speling.org/filer/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://aspell.net/
+HOMEPAGE=	http://da.speling.org/
 COMMENT=	Danish language support for aspell
 
-HAS_CONFIGURE=	YES
+USE_TOOLS+=	perl
+REPLACE_PERL=	unsq
 
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
