@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4534 2006/01/29 17:42:26 wiz Exp $
+$NetBSD: TODO,v 1.4535 2006/01/29 18:12:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -454,7 +454,6 @@ Suggested package updates
 	o devIL-1.6.7
 	o devhelp-0.10
 	o devtodo-0.1.19
-	o dialog-1.0.20060126
 	o diffstat-1.41
 	o digikam-0.8.0
 	o dirac-0.5.4
@@ -715,7 +714,6 @@ Suggested package updates
 	o metakit-2.4.9.4
 	o mftrace-1.1.17
 	o mgetty-1.1.33
-	o micq-0.5.1
 	o micro_httpd-20050629
 	o milter-regex-1.6
 	o mimedefang-2.55
@@ -875,7 +873,6 @@ Suggested package updates
 	o p5-Net-TFTP-0.16
 	o p5-Net-Z3950-0.46
 	o p5-PV-1.5
-	o p5-Params-Validate-0.80
 	o p5-PerlIO-via-symlink-0.03
 	o p5-Pod-POM-0.15
 	o p5-PostScript-MailLabels-2.21

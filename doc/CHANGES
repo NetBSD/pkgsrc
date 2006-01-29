@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12720 2006/01/29 18:08:00 rxg Exp $
+$NetBSD: CHANGES,v 1.12721 2006/01/29 18:12:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -615,3 +615,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/rox-lib version 2.0.2nb2 [rxg 2006-01-29]
 	Added misc/rox-memo version 1.9.5 [rxg 2006-01-29]
 	Added x11/rox-wallpaper version 2.0 [rxg 2006-01-29]
+	Updated chat/micq to 0.5.1 [wiz 2006-01-29]
+	Updated devel/p5-Params-Validate to 0.80 [wiz 2006-01-29]
+	Updated misc/dialog to 1.0.20060126 [wiz 2006-01-29]
