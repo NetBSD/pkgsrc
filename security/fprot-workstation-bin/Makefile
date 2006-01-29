@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2005/11/21 02:06:50 ben Exp $
+# $NetBSD: Makefile,v 1.23.2.1 2006/01/29 17:04:26 salo Exp $
 #
 
 DISTNAME=		#defined
-PKGNAME=		fprot-workstation-bin-4.6.2
+PKGNAME=		fprot-workstation-bin-4.6.5
 CATEGORIES=		security
 
 MAINTAINER=		ben@NetBSD.org
