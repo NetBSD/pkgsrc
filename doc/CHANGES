@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12709 2006/01/29 01:52:23 gavan Exp $
+$NetBSD: CHANGES,v 1.12710 2006/01/29 01:59:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -584,3 +584,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/autocue to 20060129 [agc 2006-01-29]
 	Updated textproc/aspell-danish to 1.4.52 [wiz 2006-01-29]
 	Updated print/hpijs to 2.1.4 [gavan 2006-01-29]
+	Updated textproc/aspell-faroese to 0.2.24 [wiz 2006-01-29]
