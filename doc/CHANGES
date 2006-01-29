@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12716 2006/01/29 16:54:47 shannonjr Exp $
+$NetBSD: CHANGES,v 1.12717 2006/01/29 17:08:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -597,3 +597,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Added security/py-prewikka version 0.9.3 [shannonjr 2006-01-29]
 	Added devel/py-cheetah 0.9.18 [shannonjr 2006-01-29]
 	Added net/snort-prelude [shannonjr 2006-01-29]
+	Updated security/nessus-libraries to 2.2.6 [adam 2006-01-29]
+	Updated security/nessus-core to 2.2.6 [adam 2006-01-29]
+	Updated security/nessus-plugins to 2.2.6 [adam 2006-01-29]
+	Updated security/nessus to 2.2.6 [adam 2006-01-29]
+	Updated security/libnasl to 2.2.6 [adam 2006-01-29]
