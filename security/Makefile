@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.259 2006/01/20 20:39:06 wiz Exp $
+# $NetBSD: Makefile,v 1.260 2006/01/29 16:04:22 shannonjr Exp $
 #
 
 COMMENT=	Security tools
@@ -97,6 +97,8 @@ SUBDIR+=	libksba
 SUBDIR+=	libksba04
 SUBDIR+=	libmcrypt
 SUBDIR+=	libnasl
+SUBDIR+=	libprelude
+SUBDIR+=	libpreludedb
 SUBDIR+=	libssh
 SUBDIR+=	libtasn1
 SUBDIR+=	libtcpa
@@ -186,6 +188,8 @@ SUBDIR+=	pinentry
 SUBDIR+=	pinepgp
 SUBDIR+=	pks
 SUBDIR+=	portsentry
+SUBDIR+=	prelude-lml
+SUBDIR+=	prelude-manager
 SUBDIR+=	priv
 SUBDIR+=	prngd
 SUBDIR+=	pscan
@@ -199,6 +203,7 @@ SUBDIR+=	py-gnupg
 SUBDIR+=	py-gnutls
 SUBDIR+=	py-m2crypto
 SUBDIR+=	py-mcrypt
+SUBDIR+=	py-prewikka
 SUBDIR+=	pyca
 SUBDIR+=	qca
 SUBDIR+=	qca-tls
