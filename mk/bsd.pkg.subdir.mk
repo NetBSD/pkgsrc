@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.60 2005/11/14 04:44:25 rillig Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.61 2006/01/29 01:39:01 dmcmahill Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -93,6 +93,7 @@ ${SUBDIR}::
 		check-vulnerable \
 		${PKG_MISC_TARGETS}
 .if !target(__target)
+.PHONY: ${__target}
 ${__target}: _SUBDIRUSE
 .endif
 .endfor
