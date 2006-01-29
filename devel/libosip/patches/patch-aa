@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2004/07/18 20:28:23 kristerw Exp $
+$NetBSD: patch-aa,v 1.2 2006/01/29 22:29:01 schwarz Exp $
 
---- src/osip2/port_sema.c.orig	Sun Jul 18 21:08:34 2004
-+++ src/osip2/port_sema.c	Sun Jul 18 21:09:32 2004
-@@ -133,7 +133,6 @@
+--- src/osip2/port_sema.c.orig	Sat Jan 28 19:57:17 2006
++++ src/osip2/port_sema.c	Sat Jan 28 19:58:11 2006
+@@ -147,7 +147,6 @@
  struct osip_sem *
  osip_sem_init (unsigned int value)
  {
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.1 2004/07/18 20:28:23 kristerw Exp $
    int i;
    osip_sem_t *sem = (osip_sem_t *) osip_malloc (sizeof (osip_sem_t));
  
-@@ -144,8 +143,7 @@
+@@ -161,8 +160,7 @@
        osip_free (sem);
        return NULL;
      }
@@ -20,12 +20,13 @@ $NetBSD: patch-aa,v 1.1 2004/07/18 20:28:23 kristerw Exp $
    if (i != 0)
      {
        perror ("semctl error");
-@@ -158,12 +156,10 @@
+@@ -175,13 +173,11 @@
  int
  osip_sem_destroy (struct osip_sem *_sem)
  {
 -  union semun val;
    osip_sem_t *sem = (osip_sem_t *) _sem;
+ 
    if (sem == NULL)
      return 0;
 -  val.val = 0;
