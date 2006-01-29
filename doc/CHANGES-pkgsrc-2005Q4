@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.59 2006/01/28 23:40:34 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.60 2006/01/29 17:06:14 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -121,3 +121,5 @@ Pullup ticket 1062 - requested Julio M. Merino Vidal
 raise runtime limits for mldonkey
 Pullup ticket 1070 - requested by Lubomir Sedlacik
 sync graphics/ImageMagick with HEAD including security fixes
+Pullup ticket 1067 - requested by Ben Collver
+fprot-workstation-bin update
