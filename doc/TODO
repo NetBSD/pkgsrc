@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4532 2006/01/29 16:06:22 wiz Exp $
+$NetBSD: TODO,v 1.4533 2006/01/29 17:08:16 adam Exp $
 
 Suggested new packages
 ======================
@@ -752,8 +752,6 @@ Suggested package updates
 	o nawk-20041222
 	o ncftp2-2.8.2
 	o ncview-1.92e
-	o nessus-0.2.5
-	o nessus-core-2.3.1
 	o netatalk1-1.6.4
 	o netcdf-4.0.0a
 	o netperf-2.4.0
