@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/01/24 07:32:35 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2006/01/29 14:14:40 rxg Exp $
 #
 
 DISTNAME=	rox-2.4
@@ -22,7 +22,7 @@ GNU_CONFIGURE=		yes
 INSTALLATION_DIRS=	libexec/rox share/Choices share/rox/ROX-Filer
 
 SUBST_CLASSES+=		path
-SUBST_MESSAGE.path=	"Fixing hardcoded paths."
+SUBST_MESSAGE.path=	Fixing hardcoded paths.
 SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	ROX-Filer/AppRun
 SUBST_FILES.path+=	ROX-Filer/src/choices.c
@@ -31,7 +31,7 @@ SUBST_FILES.path+=	ROX-Filer/src/xdgmime.c
 SUBST_SED.path=		-e 's,/usr/local,${PREFIX},g'
 
 SUBST_CLASSES+=		bin
-SUBST_MESSAGE.bin=	"Fixing binary path."
+SUBST_MESSAGE.bin=	Fixing binary path.
 SUBST_STAGE.bin=	post-patch
 SUBST_FILES.bin=	ROX-Filer/AppRun
 SUBST_SED.bin=		-e 's,BIN="$$APP_DIR,BIN="${PREFIX}/libexec/rox,g'
