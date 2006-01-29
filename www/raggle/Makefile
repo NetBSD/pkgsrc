@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/26 23:02:32 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/29 02:38:50 xtraeme Exp $
 
 DISTNAME=	raggle-0.4.4
 CATEGORIES=	www
@@ -8,7 +8,7 @@ MAINTAINER=	rasputnik@hellooperator.net
 HOMEPAGE=	http://www.raggle.org/
 COMMENT=	Console-based screen(1)-aware RSS reader written in Ruby
 
-DEPENDS+=	${RUBY_PKGPREFIX}-ncurses>=0.8:../../wip/ruby-ncurses
+DEPENDS+=	${RUBY_PKGPREFIX}-ncurses>=0.8:../../devel/ruby-ncurses
 
 .include "../../lang/ruby/rubyversion.mk"
 
