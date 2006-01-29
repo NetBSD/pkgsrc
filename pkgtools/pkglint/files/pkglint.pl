@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.495 2006/01/28 12:24:20 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.496 2006/01/29 01:29:38 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2242,6 +2242,9 @@ sub checkline_mk_shellword($$$) {
 
 			} elsif ($state == SWST_PLAIN && defined($mod) && $mod =~ qr":Q$") {
 				# Fine.
+
+			} elsif ($state == SWST_SQUOT && $varname =~ qr"(?:DIRS?|FILES?|PATH|^PREFIX|^LOCALBASE|^PKGNAME)$") {
+				# Fine, too.
 
 			} else {
 				$line->log_warning("Possibly misquoted make variable ${varname} in " . user_statename->[$state] . ".");
