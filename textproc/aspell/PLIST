@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/01/06 14:51:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/01/29 22:02:45 wiz Exp $
 bin/aspell
 bin/aspell-import
 bin/precat
@@ -12,13 +12,19 @@ include/aspell.h
 include/pspell/pspell.h
 lib/aspell/ccpp.amf
 lib/aspell/comment.amf
+${FILTER}lib/aspell/context-filter.la
+${FILTER}lib/aspell/email-filter.la
 lib/aspell/email.amf
 lib/aspell/html.amf
 lib/aspell/none.amf
+${FILTER}lib/aspell/nroff-filter.la
 lib/aspell/nroff.amf
 lib/aspell/perl.amf
+${FILTER}lib/aspell/sgml-filter.la
 lib/aspell/sgml.amf
+${FILTER}lib/aspell/tex-filter.la
 lib/aspell/tex.amf
+${FILTER}lib/aspell/texinfo-filter.la
 lib/aspell/texinfo.amf
 lib/aspell/url.amf
 lib/libaspell.la
@@ -29,6 +35,7 @@ man/man1/prezip-bin.1
 man/man1/pspell-config.1
 man/man1/run-with-aspell.1
 man/man1/word-list-compress.1
+${FILTER}share/aspell/context-filter.info
 share/aspell/cp1250.cmap
 share/aspell/cp1250.cset
 share/aspell/cp1251.cmap
@@ -48,6 +55,8 @@ share/aspell/cp1257.cset
 share/aspell/cp1258.cmap
 share/aspell/cp1258.cset
 share/aspell/dvorak.kbd
+${FILTER}share/aspell/email-filter.info
+${FILTER}share/aspell/html-filter.info
 share/aspell/iso-8859-1.cmap
 share/aspell/iso-8859-1.cset
 share/aspell/iso-8859-10.cmap
@@ -83,9 +92,13 @@ share/aspell/koi8-r.cmap
 share/aspell/koi8-r.cset
 share/aspell/koi8-u.cmap
 share/aspell/koi8-u.cset
+${FILTER}share/aspell/nroff-filter.info
+${FILTER}share/aspell/sgml-filter.info
 share/aspell/spell
 share/aspell/split.kbd
 share/aspell/standard.kbd
+${FILTER}share/aspell/tex-filter.info
+${FILTER}share/aspell/texinfo-filter.info
 @dirrm share/aspell
 @dirrm lib/aspell
 @dirrm include/pspell
