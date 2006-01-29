@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2005/12/05 23:55:23 rillig Exp $
+# $NetBSD: Makefile,v 1.65 2006/01/29 16:57:31 schwarz Exp $
 
 DISTNAME=		w3c-libwww-5.4.0
 PKGNAME=		libwww-5.4.0
@@ -22,7 +22,7 @@ USE_TOOLS+=		gmake perl
 USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-zlib --with-regex --without-x
+CONFIGURE_ARGS+=	--with-zlib --without-x
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 
 # Avoid an ICE in gcc2 on sparc64
@@ -41,6 +41,11 @@ pre-configure:
 	${TOUCH} `${FIND} ${WRKSRC} -name Makefile.in -print`
 
 .include "../../mk/bsd.prefs.mk"
+
+.if empty(LOWER_OPSYS:Mirix5*)
+# IRIX 5 does not have libregex
+CONFIGURE_ARGS+=        --with-regex
+.endif
 
 .if ${OPSYS} == "SunOS"
 # Solaris has a /usr/lib/libmd5 which seems to be enouth, and
