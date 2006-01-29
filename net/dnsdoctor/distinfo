@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/29 10:00:07 seb Exp $
+
+SHA1 (dnsdoctor-1.0.0.tgz) = b2859fa531659868ee404d0ce936cbe30c1f4a82
+RMD160 (dnsdoctor-1.0.0.tgz) = 2640542abea6eccd660b9b1529a399946f5ebdd2
+Size (dnsdoctor-1.0.0.tgz) = 328119 bytes
+SHA1 (patch-aa) = 493ae7976c03dc613144e7f412e2911057b01525
