@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/01/29 14:14:40 rxg Exp $
+# $NetBSD: Makefile,v 1.33 2006/01/29 18:07:50 rillig Exp $
 #
 
 DISTNAME=	rox-2.4
@@ -41,23 +41,23 @@ CONFIGURE_DIRS=		ROX-Filer/src
 CONFIGURE_SCRIPT=	configure.tmp
 
 post-patch:
-	${MV} ${WRKSRC}/ROX-Filer/src/configure ${WRKSRC}/ROX-Filer/src/${CONFIGURE_SCRIPT}
+	${MV} ${WRKSRC:Q}/ROX-Filer/src/configure ${WRKSRC:Q}/ROX-Filer/src/${CONFIGURE_SCRIPT:Q}
 
 post-build:
-	@${ECHO} "#!/bin/sh" >> ${WRKDIR}/rox
-	@${ECHO} "${PREFIX}/share/rox/ROX-Filer/AppRun \"$$""@\"" >> ${WRKDIR}/rox
+	@${ECHO} "#!/bin/sh" >> ${WRKDIR:Q}/rox
+	@${ECHO} ${PREFIX:Q}"/share/rox/ROX-Filer/AppRun \"\$$@\"" >> ${WRKDIR:Q}/rox
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ROX-Filer/ROX-Filer ${PREFIX}/libexec/rox
-	cd ${WRKSRC}/Choices && ${PAX} -rw . ${PREFIX}/share/Choices
-	cd ${WRKSRC}/ROX-Filer && ${PAX} -rw	\
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/ROX-Filer/ROX-Filer ${PREFIX:Q}/libexec/rox
+	cd ${WRKSRC:Q}/Choices && ${PAX} -rw . ${PREFIX:Q}/share/Choices
+	cd ${WRKSRC:Q}/ROX-Filer && ${PAX} -rw	\
 		-s ',^\./ROX-Filer$$,,' -s ',^\./ROX-Filer/.*,,'	\
 		-s ',^\./ROX-Filer.dbg$$,,' -s ',^\./ROX-Filer.dbg/.*,,'\
 		-s ',^\./src$$,,' -s ',^\./src/.*,,'	\
-		. ${PREFIX}/share/rox/ROX-Filer
-	${INSTALL_MAN} ${WRKSRC}/rox.1 ${PREFIX}/man/man1
-	${INSTALL_DATA} ${WRKSRC}/rox.xml ${PREFIX}/share/mime/packages
-	${INSTALL_SCRIPT} ${WRKDIR}/rox ${PREFIX}/bin
+		. ${PREFIX:Q}/share/rox/ROX-Filer
+	${INSTALL_MAN} ${WRKSRC:Q}/rox.1 ${PREFIX:Q}/man/man1
+	${INSTALL_DATA} ${WRKSRC:Q}/rox.xml ${PREFIX:Q}/share/mime/packages
+	${INSTALL_SCRIPT} ${WRKDIR:Q}/rox ${PREFIX:Q}/bin
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
