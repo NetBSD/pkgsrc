@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4533 2006/01/29 17:08:16 adam Exp $
+$NetBSD: TODO,v 1.4534 2006/01/29 17:42:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -847,7 +847,6 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Heap-0.71
 	o p5-Ima-DBI-0.34
-	o p5-Image-Info-1.17
 	o p5-Jcode-2.03
 	o p5-Lingua-EN-Inflect-1.89
 	o p5-Locale-Codes-2.07
