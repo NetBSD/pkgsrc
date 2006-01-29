@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12721 2006/01/29 18:12:59 wiz Exp $
+$NetBSD: CHANGES,v 1.12722 2006/01/29 19:31:44 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -618,3 +618,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/micq to 0.5.1 [wiz 2006-01-29]
 	Updated devel/p5-Params-Validate to 0.80 [wiz 2006-01-29]
 	Updated misc/dialog to 1.0.20060126 [wiz 2006-01-29]
+	Updated biology/mummer to 3.18 [schwarz 2006-01-29]
