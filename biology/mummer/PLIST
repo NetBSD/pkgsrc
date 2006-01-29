@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/05 15:24:54 cube Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/01/29 19:31:43 schwarz Exp $
 bin/annotate
 bin/combineMUMs
+bin/delta-filter
 bin/gaps
 bin/mgaps
 bin/mummer
@@ -11,18 +12,72 @@ bin/prepro
 bin/repeat-match
 bin/show-aligns
 bin/show-coords
+bin/show-snps
 bin/show-tiling
-share/doc/html/mummer/covplot.gif
-share/doc/html/mummer/dotplot.gif
-share/doc/html/mummer/email.jpg
-share/doc/html/mummer/gaps.gif
+share/doc/html/mummer/MUMmer.pdf
+share/doc/html/mummer/MUMmer2.pdf
+share/doc/html/mummer/MUMmer3.pdf
+share/doc/html/mummer/XFiles.pdf
+share/doc/html/mummer/applications.html
+share/doc/html/mummer/compare.html
 share/doc/html/mummer/index.html
-share/doc/html/mummer/manual_logo.gif
-share/doc/html/mummer/mgaps.gif
-share/doc/html/mummer/nuc_proex.gif
-share/doc/html/mummer/nucex.gif
-share/doc/html/mummer/osi.gif
-share/doc/html/mummer/pro_proex.gif
+share/doc/html/mummer/logo.gif
+share/doc/html/mummer/mummer-help.gif
+share/doc/html/mummer/mummer-users.gif
+share/doc/html/mummer/examples/dotplot.gif
+share/doc/html/mummer/examples/examples_logo.gif
+share/doc/html/mummer/examples/index.html
+share/doc/html/mummer/examples/mapplot.gif
+share/doc/html/mummer/examples/mapview_fig.jpg
+share/doc/html/mummer/examples/mummer_ps.jpg
+share/doc/html/mummer/examples/data/B_anthracis_Mslice.fasta
+share/doc/html/mummer/examples/data/B_anthracis_contigs.fasta
+share/doc/html/mummer/examples/data/D_melanogaster_2Rslice.cds
+share/doc/html/mummer/examples/data/D_melanogaster_2Rslice.fasta
+share/doc/html/mummer/examples/data/D_melanogaster_2Rslice.utr
+share/doc/html/mummer/examples/data/D_pseudoobscura_contigs.fasta
+share/doc/html/mummer/examples/data/H_pylori26695_Bslice.fasta
+share/doc/html/mummer/examples/data/H_pylori26695_Eslice.fasta
+share/doc/html/mummer/examples/data/H_pyloriJ99_Bslice.fasta
+share/doc/html/mummer/examples/data/H_pyloriJ99_Eslice.fasta
+share/doc/html/mummer/examples/data/README
+share/doc/html/mummer/examples/data/mapview_0.fig
+share/doc/html/mummer/examples/data/mapview_0.pdf
+share/doc/html/mummer/examples/data/mummer.fplot
+share/doc/html/mummer/examples/data/mummer.gp
+share/doc/html/mummer/examples/data/mummer.mums
+share/doc/html/mummer/examples/data/mummer.ps
+share/doc/html/mummer/examples/data/mummer.rplot
+share/doc/html/mummer/examples/data/mummer1.align
+share/doc/html/mummer/examples/data/mummer1.errorsgaps
+share/doc/html/mummer/examples/data/mummer1.gaps
+share/doc/html/mummer/examples/data/mummer1.out
+share/doc/html/mummer/examples/data/mummer3.align
+share/doc/html/mummer/examples/data/mummer3.errorsgaps
+share/doc/html/mummer/examples/data/mummer3.gaps
+share/doc/html/mummer/examples/data/mummer3.out
+share/doc/html/mummer/examples/data/nucmer.cluster
+share/doc/html/mummer/examples/data/nucmer.coords
+share/doc/html/mummer/examples/data/nucmer.delta
+share/doc/html/mummer/examples/data/nucmer.snps
+share/doc/html/mummer/examples/data/nucmer.tiling
+share/doc/html/mummer/examples/data/promer.aligns
+share/doc/html/mummer/examples/data/promer.cluster
+share/doc/html/mummer/examples/data/promer.coords
+share/doc/html/mummer/examples/data/promer.delta
+share/doc/html/mummer/manual/covplot.gif
+share/doc/html/mummer/manual/dotplot.gif
+share/doc/html/mummer/manual/gaps.gif
+share/doc/html/mummer/manual/index.html
+share/doc/html/mummer/manual/manual_logo.gif
+share/doc/html/mummer/manual/mgaps.gif
+share/doc/html/mummer/manual/multiplota.gif
+share/doc/html/mummer/manual/multiplotb.gif
+share/doc/html/mummer/manual/nuc_proex.gif
+share/doc/html/mummer/manual/nucex.gif
+share/doc/html/mummer/manual/osi.gif
+share/doc/html/mummer/manual/pro_proex.gif
+share/doc/mummer/mapview.README
 share/doc/mummer/maxmat3man.tex
 share/doc/mummer/maxmat3src.pdf
 share/doc/mummer/nucmer.README
@@ -32,6 +87,7 @@ share/doc/mummer/run-mummer1.README
 share/doc/mummer/run-mummer3.README
 share/doc/mummer/skaff.sty
 share/mummer/exact-tandems
+share/mummer/mapview
 share/mummer/mummerplot
 share/mummer/nucmer
 share/mummer/nucmer2xfig
@@ -41,3 +97,6 @@ share/mummer/run-mummer3
 @dirrm share/mummer
 @dirrm share/doc/mummer
 @dirrm share/doc/html/mummer
+@dirrm share/doc/html/mummer/manual
+@dirrm share/doc/html/mummer/examples
+@dirrm share/doc/html/mummer/examples/data
