@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12722 2006/01/29 19:31:44 schwarz Exp $
+$NetBSD: CHANGES,v 1.12723 2006/01/29 21:37:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -619,3 +619,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-Params-Validate to 0.80 [wiz 2006-01-29]
 	Updated misc/dialog to 1.0.20060126 [wiz 2006-01-29]
 	Updated biology/mummer to 3.18 [schwarz 2006-01-29]
+	Removed security/gnustep-ssl [adam 2006-01-29]
+	Updated meta-pkgs/gnustep to 1.11.2 [adam 2006-01-29]
