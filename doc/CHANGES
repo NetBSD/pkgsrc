@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12713 2006/01/29 04:28:06 ben Exp $
+$NetBSD: CHANGES,v 1.12714 2006/01/29 10:04:01 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -589,3 +589,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/cvs to 1.11.21 [wiz 2006-01-29]
 	Updated multimedia/mjpegtools to 1.8.0nb1 [ben 2006-01-29]
 	Removed multimedia/mplex [ben 2006-01-29]
+	Added net/dnsdoctor version 1.0.0 [seb 2006-01-29]
