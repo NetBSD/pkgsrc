@@ -1,4 +1,4 @@
-/* $NetBSD: autocue.c,v 1.1.1.1 2006/01/28 20:47:22 agc Exp $ */
+/* $NetBSD: autocue.c,v 1.2 2006/01/29 00:11:15 agc Exp $ */
 
 /*
  * Copyright © 2006 Alistair Crooks.  All rights reserved.
@@ -32,7 +32,7 @@
 #ifndef lint
 __COPYRIGHT("@(#) Copyright © 2006 \
 	        The NetBSD Foundation, Inc.  All rights reserved.");
-__RCSID("$NetBSD: autocue.c,v 1.1.1.1 2006/01/28 20:47:22 agc Exp $");
+__RCSID("$NetBSD: autocue.c,v 1.2 2006/01/29 00:11:15 agc Exp $");
 #endif
 
 #include <err.h>
@@ -51,7 +51,7 @@ enum {
 
 	SlowDenom = 3,
 	MediumDenom = 7,
-	FastDenom = 10
+	FastDenom = 12
 };
 
 static int	speed;
@@ -79,7 +79,7 @@ static void
 showbuffer(char *buf, int cc, int maxcut)
 {
 	static int	cut;
-	char		cmd[BUFSIZ];
+	char		cmd[BUFSIZ * 20];
 	FILE		*pp;
 	int		s;
 
@@ -88,7 +88,7 @@ showbuffer(char *buf, int cc, int maxcut)
 		errx(EXIT_FAILURE, "can't open pipe to xcb");
 	}
 	buf[cc] = 0x0;
-	(void) fprintf(pp, "%s", buf);
+	(void) fprintf(pp, "%s                    - \n", buf);
 	(void) pclose(pp);
 	s = cc / speed;
 	printf("%.20s...\nBuffer contents are in cut buffer %d, sleeping %d secs\a\n", buf, cut, s);
