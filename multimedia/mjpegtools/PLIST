@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/01/29 04:25:58 ben Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/01/30 08:44:25 xtraeme Exp $
 bin/anytovcd.sh
 bin/jpeg2yuv
 bin/lav2avi.sh
@@ -80,12 +80,28 @@ include/mjpegtools/mpeg2enc/synchrolib.h
 include/mjpegtools/mpeg2enc/syntaxconsts.h
 include/mjpegtools/mpegconsts.h
 include/mjpegtools/mpegtimecode.h
+include/mjpegtools/mplex/audiostrm.hpp
+include/mjpegtools/mplex/aunit.hpp
+include/mjpegtools/mplex/aunitbuffer.hpp
+include/mjpegtools/mplex/bits.hpp
+include/mjpegtools/mplex/decodebufmodel.hpp
+include/mjpegtools/mplex/inputstrm.hpp
+include/mjpegtools/mplex/interact.hpp
+include/mjpegtools/mplex/mplexconsts.hpp
+include/mjpegtools/mplex/multiplexor.hpp
+include/mjpegtools/mplex/outputstrm.hpp
+include/mjpegtools/mplex/padstrm.hpp
+include/mjpegtools/mplex/stillsstream.hpp
+include/mjpegtools/mplex/stream_params.hpp
+include/mjpegtools/mplex/systems.hpp
+include/mjpegtools/mplex/videostrm.hpp
 include/mjpegtools/yuv4mpeg.h
 lib/liblavfile.la
 lib/liblavjpeg.la
 lib/liblavplay.la
 lib/libmjpegutils.la
 lib/libmpeg2encpp.la
+lib/libmplex2.la
 lib/pkgconfig/mjpegtools.pc
 man/man1/jpeg2yuv.1
 man/man1/lav2mpeg.1
@@ -118,5 +134,6 @@ man/man1/yuvplay.1
 man/man1/yuvscaler.1
 man/man1/yuvycsnoise.1
 man/man5/yuv4mpeg.5
+@dirrm include/mjpegtools/mplex
 @dirrm include/mjpegtools/mpeg2enc
 @dirrm include/mjpegtools
