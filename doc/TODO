@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4537 2006/01/30 17:22:09 wiz Exp $
+$NetBSD: TODO,v 1.4538 2006/01/30 18:12:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -381,7 +381,7 @@ Suggested package updates
 	o blender-2.40
 	o blur6ex-0.3.462
 	o bmon-2.1.0
-	o bochs-2.2.5
+	o bochs-2.2.6
 	o bogofilter-1.0.1
 	o boolean-6.8
 	o boson-0.11
