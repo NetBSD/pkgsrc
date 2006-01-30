@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12733 2006/01/30 17:22:09 wiz Exp $
+$NetBSD: CHANGES,v 1.12734 2006/01/30 18:07:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -632,3 +632,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/p5-LWP-Authen-Wsse 0.05 [kleink 2006-01-30]
 	Added textproc/p5-XML-Atom 0.16 [kleink 2006-01-30]
 	Updated graphics/xsane to 0.99.1 [wiz 2006-01-30]
+	Updated net/vsftpd to 2.0.4nb1 [wiz 2006-01-30]
