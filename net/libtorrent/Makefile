@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2006/01/12 20:32:04 adam Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/30 00:52:28 tron Exp $
 
-DISTNAME=	libtorrent-0.7.6
+DISTNAME=	libtorrent-0.8.3
 CATEGORIES=	net
 MASTER_SITES=	http://libtorrent.rakshasa.no/downloads/
 
@@ -14,6 +14,14 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 GCC_REQD+=		3.3
+
+.include "../../mk/compiler.mk"
+
+# See http://libtorrent.rakshasa.no/ticket/96
+.if !empty(CC_VERSION:Mgcc-4.*)
+CXXFLAGS+=	-fpermissive -fno-strength-reduce -fno-thread-jumps \
+		-fno-inline -fforce-addr
+.endif
 
 .include "../../devel/libsigc++2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
