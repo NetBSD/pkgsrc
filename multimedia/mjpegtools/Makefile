@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2006/01/29 04:25:58 ben Exp $
+# $NetBSD: Makefile,v 1.26 2006/01/30 08:44:25 xtraeme Exp $
 
 DISTNAME=	mjpegtools-1.8.0
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mjpeg/}
 
@@ -8,7 +9,6 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mjpeg.sourceforge.net/
 COMMENT=	Programs for compressing video streams
 
-PKGREVISION=		1
 CONFLICTS+=		mplex-[0-9]*
 DEPENDS+=		toolame>=02l:../../audio/toolame
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
@@ -17,7 +17,7 @@ USE_TOOLS+=		gmake
 USE_TOOLS+=		bash:run pkg-config
 
 USE_LIBTOOL=		yes
-SHLIBTOOL_OVERRIDE=	libtool
+SHLIBTOOL_OVERRIDE+=	libtool
 PKGCONFIG_OVERRIDE=	mjpegtools.pc.in
 
 GNU_CONFIGURE=		yes
