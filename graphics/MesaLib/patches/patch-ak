@@ -1,10 +1,10 @@
-$NetBSD: patch-ak,v 1.1 2006/01/26 15:16:16 rillig Exp $
+$NetBSD: patch-ak,v 1.2 2006/01/30 08:54:55 rillig Exp $
 
 Declarations inside of macros are evil. Even more if they are not preceded
 by an additional opening brace.
 
---- src/mesa/swrast/s_triangle.c.orig	2006-01-23 21:27:28.000000000 +0100
-+++ src/mesa/swrast/s_triangle.c	2006-01-23 21:27:06.000000000 +0100
+--- src/mesa/swrast/s_triangle.c.orig	2005-06-30 15:42:10.000000000 +0200
++++ src/mesa/swrast/s_triangle.c	2006-01-30 09:53:24.000000000 +0100
 @@ -163,6 +163,7 @@ _swrast_culltriangle( GLcontext *ctx,
     }
  
@@ -19,6 +19,24 @@ by an additional opening brace.
     }									\
 -   rb->PutRowRGB(ctx, rb, span.end, span.x, span.y, span.array->rgb, NULL);
 +   rb->PutRowRGB(ctx, rb, span.end, span.x, span.y, span.array->rgb, NULL); \
++}
+ 
+ #include "s_tritemp.h"
+ 
+@@ -214,6 +216,7 @@ _swrast_culltriangle( GLcontext *ctx,
+    }
+ 
+ #define RENDER_SPAN( span )						\
++{									\
+    GLuint i;				    				\
+    span.intTex[0] -= FIXED_HALF; /* off-by-one error? */		\
+    span.intTex[1] -= FIXED_HALF;					\
+@@ -238,7 +241,8 @@ _swrast_culltriangle( GLcontext *ctx,
+       span.z += span.zStep;						\
+    }									\
+    rb->PutRowRGB(ctx, rb, span.end, span.x, span.y,			\
+-                 span.array->rgb, span.array->mask);
++                 span.array->rgb, span.array->mask);			\
 +}
  
  #include "s_tritemp.h"
