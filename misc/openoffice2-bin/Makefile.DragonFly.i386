@@ -1,0 +1,7 @@
+# $NetBSD: Makefile.DragonFly.i386,v 1.1 2006/01/30 17:24:49 joerg Exp $
+
+DEPENDS+=               suse_compat>=7.3:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=               suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
+DEPENDS+=               suse_freetype2>=2.0:../../emulators/${SUSE_DIR_PREFIX}_freetype2
+
+.include "../../emulators/suse_linux/Makefile.application"
