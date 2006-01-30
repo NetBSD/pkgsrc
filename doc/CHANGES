@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12731 2006/01/30 09:35:39 rillig Exp $
+$NetBSD: CHANGES,v 1.12732 2006/01/30 13:28:11 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -629,3 +629,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/pcmanfm version 0.1.8.9 [xtraeme 2006-01-30]
 	Updated math/fftw to 3.1 [adam 2006-01-30]
 	Updated pkgtools/pkglint to 4.55 [rillig 2006-01-30]
+	Added www/p5-LWP-Authen-Wsse 0.05 [kleink 2006-01-30]
+	Added textproc/p5-XML-Atom 0.16 [kleink 2006-01-30]
