@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2006/01/12 20:53:50 adam Exp $
+# $NetBSD: Makefile,v 1.108 2006/01/30 07:56:07 hiramatsu Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -39,6 +39,8 @@ BUILD_TARGET=	sgi
 .  endif
 .elif ${OPSYS} == "OSF1"
 BUILD_TARGET=	osf
+.elif ${OPSYS} == "OpenBSD"
+BUILD_TARGET=   bso
 .else
 BUILD_TARGET=	neb
 .endif
