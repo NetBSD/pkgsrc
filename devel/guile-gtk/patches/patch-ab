@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.3 2006/01/30 19:04:12 joerg Exp $
+
+--- guile-gtk.c.orig	2006-01-30 18:57:35.000000000 +0000
++++ guile-gtk.c
+@@ -1932,13 +1932,13 @@ sgtk_scm2arg (GtkArg *a, SCM obj, SCM pr
+       GTK_VALUE_INT(*a) = scm_num2long (obj, (long)SCM_ARG1, "scm->gtk");
+       break;
+     case GTK_TYPE_UINT:
+-      GTK_VALUE_UINT(*a) = scm_num2ulong (obj, (ulong)SCM_ARG1, "scm->gtk");
++      GTK_VALUE_UINT(*a) = scm_num2ulong (obj, (unsigned long)SCM_ARG1, "scm->gtk");
+       break;
+     case GTK_TYPE_LONG:
+       GTK_VALUE_LONG(*a) = scm_num2long (obj, (long)SCM_ARG1, "scm->gtk");
+       break;
+     case GTK_TYPE_ULONG:
+-      GTK_VALUE_ULONG(*a) = scm_num2ulong (obj, (ulong)SCM_ARG1, "scm->gtk");
++      GTK_VALUE_ULONG(*a) = scm_num2ulong (obj, (unsigned long)SCM_ARG1, "scm->gtk");
+       break;
+     case GTK_TYPE_FLOAT:
+       GTK_VALUE_FLOAT(*a) = sgtk_scm2float (obj);
