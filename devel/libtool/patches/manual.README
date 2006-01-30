@@ -1,4 +1,17 @@
-$NetBSD: manual.README,v 1.7 2005/03/22 15:12:08 tv Exp $
+$NetBSD: manual.README,v 1.8 2006/01/30 22:19:56 tv Exp $
+
+************************************************************************
+**** WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING ***
+
+Currently (as of libtool 1.5.22), libtool requires "autoconf 2.59c", a
+pre-release build of Autoconf.  The instructions below should still be
+followed, but Autoconf must be built from its CVS sources of at least
+"-D2005/12/01".  Ensure that PATH is set appropriately to include that
+version's install directory first.  Once autoconf 2.60 is released and
+pkgsrc is updated to use it, this hack will no longer be required.
+
+**** WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING ***
+************************************************************************
 
 The "manual-*" patch files are used to maintain the pkgsrc version of
 libtool.  These files contain patches for the .m4 files in libtool which are
@@ -21,10 +34,10 @@ cat /usr/pkgsrc/devel/libtool/patches/manual-* | patch -s
 cp -f configure configure.orig
 cp -f libltdl/configure libltdl/configure.orig
 ./configure
-make ./configure
+aclocal && make ./configure
 pkgdiff configure >/usr/pkgsrc/devel/libtool/patches/patch-ab
 cp -f acinclude.m4 libltdl/
-(cd libltdl && make ./configure)
+(cd libltdl && aclocal && make ./configure)
 pkgdiff libltdl/configure >/usr/pkgsrc/devel/libtool/patches/patch-ad
 cd /usr/pkgsrc/devel/libtool
 make makepatchsum
@@ -35,4 +48,4 @@ make makepatchsum
 
 =====
 
-- tv@duh.org, 4 Oct 2004
+- tv@duh.org, 30 Jan 2006
