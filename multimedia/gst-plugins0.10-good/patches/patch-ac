@@ -1,0 +1,25 @@
+$NetBSD: patch-ac,v 1.1 2006/01/30 21:20:42 rillig Exp $
+
+Keywords: c90
+
+--- gst/udp/gstdynudpsink.c.orig	2006-01-10 15:01:57.000000000 +0100
++++ gst/udp/gstdynudpsink.c	2006-01-30 21:35:15.000000000 +0100
+@@ -187,6 +187,8 @@ gst_dynudpsink_render (GstBaseSink * bsi
+   guint8 *data;
+   GstNetBuffer *netbuf;
+   struct sockaddr_in theiraddr;
++  guint16 destport;
++  guint32 destaddr;
+ 
+   memset (&theiraddr, 0, sizeof (theiraddr));
+ 
+@@ -203,9 +205,6 @@ gst_dynudpsink_render (GstBaseSink * bsi
+   data = GST_BUFFER_DATA (netbuf);
+ 
+   GST_DEBUG ("about to send %d bytes", size);
+-  guint16 destport;
+-  guint32 destaddr;
+-
+   // let's get the address from the netbuffer
+   gst_netaddress_get_ip4_address (&netbuf->to, &destaddr, &destport);
+ 
