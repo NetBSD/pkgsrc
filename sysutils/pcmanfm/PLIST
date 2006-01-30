@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/30 06:39:05 xtraeme Exp $
+bin/pcmanfm
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/pcmanfm.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/pcmanfm.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/pcmanfm.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/pcmanfm.mo
