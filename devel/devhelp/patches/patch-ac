@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2006/01/30 19:21:41 joerg Exp $
+
+--- src/dh-parser.c.orig	2006-01-30 19:11:10.000000000 +0000
++++ src/dh-parser.c
+@@ -37,8 +37,6 @@
+ #define DH_PARSER(o) ((DhParser *) o)
+ #define BYTES_PER_READ 4096
+ 
+-extern int errno;
+-
+ typedef struct { 
+ 	GMarkupParser       *m_parser;
+ 	GMarkupParseContext *context;
