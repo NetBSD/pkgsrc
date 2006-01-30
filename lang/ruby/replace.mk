@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.3 2005/12/05 20:50:27 rillig Exp $
+# $NetBSD: replace.mk,v 1.4 2006/01/30 16:30:05 taca Exp $
 #
 
 .if !defined(_RUBY_REPLACE_MK)
@@ -13,7 +13,7 @@ REPLACE_FILE_PAT?=	*.rb
 .if defined(REPLACE_RUBY)
 REPLACE_INTERPRETER+=	${RUBY_NAME}
 
-_REPLACE.${RUBY_NAME}.old=	.*/ruby
+_REPLACE.${RUBY_NAME}.old=	.*ruby
 _REPLACE.${RUBY_NAME}.new=	${RUBY}
 _REPLACE_FILES.${RUBY_NAME}=	${REPLACE_RUBY}
 
