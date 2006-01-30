@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/01/29 18:18:01 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/01/30 10:52:07 rxg Exp $
 #
 
 DISTNAME=	OroboROX-0.9.7.9
@@ -20,7 +20,6 @@ DIST_SUBDIR=	rox
 PLATFORM=	${OPSYS}-${MACHINE_ARCH}
 
 USE_TOOLS+=		autoconf pkg-config
-USE_X11=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-xft --with-platform=${PLATFORM:Q}
 
