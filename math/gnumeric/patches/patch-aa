@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.18 2005/12/17 20:49:45 wiz Exp $
+$NetBSD: patch-aa,v 1.19 2006/01/30 18:36:21 joerg Exp $
 
 --- src/tools/solver/lp_solve/lp_solve.c.orig	2005-08-25 19:28:28.000000000 +0200
 +++ src/tools/solver/lp_solve/lp_solve.c
-@@ -15891,10 +15891,10 @@ static double timeNow(void)
+@@ -7,6 +7,7 @@
+ #include <stdlib.h>
+ #include <errno.h>
+ #include <time.h>
++#include <sys/time.h>
+ #include <sys/timeb.h>
+ 
+ #define LoadInverseLib FALSE
+@@ -15891,10 +15892,10 @@ static double timeNow(void)
  #elif defined CLOCKTIME
    return((double)clock()/CLOCKS_PER_SEC /* CLK_TCK */);
  #else
