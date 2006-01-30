@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.64 2005/05/22 05:35:32 jlam Exp $
+# $NetBSD: Makefile.common,v 1.65 2006/01/30 22:19:56 tv Exp $
 
 ###########################################################################
 ###########################################################################
@@ -23,7 +23,7 @@
 ###########################################################################
 ###########################################################################
 
-DISTNAME=	libtool-1.5.18
+DISTNAME=	libtool-1.5.22
 CATEGORIES=	devel pkgtools
 MASTER_SITES=	${MASTER_SITE_GNU:=libtool/}
 
@@ -37,7 +37,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=	yes
 
 DISTINFO_FILE=	${.CURDIR}/../libtool/distinfo
-FILESDIR=	${.CURDIR}/../libtool/files
 PATCHDIR=	${.CURDIR}/../libtool/patches
 
 AUTOMAKE_OVERRIDE=	NO
@@ -57,6 +56,7 @@ CONFIGURE_ENV+=		lt_cv_path_SED=${SED:Q}
 
 # The configure script doesn't seem to be working out the need for -p
 # or -B, so tell it
+#
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=		lt_cv_path_NM="nm -p"
 .elif ${OPSYS} == "IRIX" || ${OPSYS} == "OSF1"
