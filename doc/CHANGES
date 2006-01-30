@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12725 2006/01/30 00:09:48 minskim Exp $
+$NetBSD: CHANGES,v 1.12726 2006/01/30 00:57:50 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -623,3 +623,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated meta-pkgs/gnustep to 1.11.2 [adam 2006-01-29]
 	Updated devel/libosip to 2.2.2 [schwarz 2006-01-29]
 	Updated devel/tcl-tclcl to 1.17nb1 [minskim 2006-01-30]
+	Updated net/libtorrent to 0.8.3 [tron 2006-01-30]
