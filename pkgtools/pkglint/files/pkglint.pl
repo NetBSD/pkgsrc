@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.496 2006/01/29 01:29:38 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.497 2006/01/30 01:26:04 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1236,6 +1236,7 @@ my $regex_shellword		=  qr"\s*(
 	|	\$\$\{[0-9A-Z_a-z]+\}	# shell variable in braces
 	|	\$\$\(			# POSIX-style backticks replacement
 	|	[^\(\)'\"\\\s;&\|<>\#\`\$] # non-special character
+	|	\$\{[^\s\"'`]+		# HACK: nested make(1) variables
 	)+ | ;;? | &&? | \|\|? | \( | \) | <<? | >>? | \#.*)"sx;
 my $regex_varname		= qr"[-*+.0-9A-Z_a-z{}\[]+";
 
@@ -2229,7 +2230,7 @@ sub checkline_mk_shellword($$$) {
 	$state = SWST_PLAIN;
 	while ($rest ne "") {
 
-		$opt_debug and $line->log_error("[checkline_mk_shellword] " . statename->[$state] . " ${rest}");
+		$opt_debug and $line->log_debug("[checkline_mk_shellword] " . statename->[$state] . " ${rest}");
 
 		# make variables have the same syntax, no matter in which
 		# state we are currently.
@@ -3706,7 +3707,7 @@ sub checkfile_package_Makefile($$$) {
 		log_warning($fname, NO_LINE_NUMBER, "Neither PLIST nor PLIST.common exist, and PLIST_SRC and NO_PKG_REGISTER are unset. Are you sure PLIST handling is ok?");
 	}
 
-	if (exists($makevar->{"NO_CHECKSUM"})) {
+	if (exists($makevar->{"NO_CHECKSUM"}) && is_emptydir("${current_dir}/${patchdir}")) {
 		if (-f "${current_dir}/${distinfo_file}") {
 			log_warning("${current_dir}/${distinfo_file}", NO_LINE_NUMBER, "This file should not exist if NO_CHECKSUM is set.");
 		}
