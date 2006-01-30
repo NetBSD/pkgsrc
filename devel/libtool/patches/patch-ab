@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
+$NetBSD: patch-ab,v 1.56 2006/01/30 22:19:56 tv Exp $
 
---- configure.orig	2005-11-09 12:32:46.000000000 -0500
+--- configure.orig	2006-01-30 17:05:54.000000000 -0500
 +++ configure
-@@ -322,11 +322,11 @@ else
+@@ -76,7 +76,6 @@ if test "x$as_myself" = x; then
+   as_myself=$0
+ fi
+ if test ! -f "$as_myself"; then
+-  # FIXME: next line outputs $as_me, which is still unset.
+   { echo "$as_me: error: cannot find myself; rerun with an absolute file name" >&2
+    { (exit 1); exit 1; }; }
+ fi
+@@ -589,11 +588,11 @@ else
  
    if test "X$echo" = Xecho; then
      # We didn't find a better echo, so look for alternatives.
@@ -16,187 +24,80 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
      elif (test -f /bin/ksh || test -f /bin/ksh$ac_exeext) &&
  	 test "X$CONFIG_SHELL" != X/bin/ksh; then
        # If we have ksh, try running configure again with it.
-@@ -1156,7 +1156,7 @@ esac
-     else
-       echo "$as_me: WARNING: no configuration information is in $ac_dir" >&2
-     fi
--    cd "$ac_popdir"
-+    cd $ac_popdir
-   done
+@@ -1918,8 +1917,7 @@ esac
+ ## ------------------------ ##
+ ## Automake Initialisation. ##
+ ## ------------------------ ##
+-am__api_version='1.9a'
+-
++am__api_version="1.9"
+ ac_aux_dir=
+ for ac_dir in $srcdir $srcdir/.. $srcdir/../..; do
+   if test -f $ac_dir/install-sh; then
+@@ -2096,30 +2094,26 @@ echo "$as_me: WARNING: \`missing' script
  fi
  
-@@ -2592,7 +2592,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -2650,7 +2651,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -2766,7 +2768,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -2820,7 +2823,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -2865,7 +2869,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -2909,7 +2914,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -3562,7 +3568,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_cxx_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_cxx_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -3620,7 +3627,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_cxx_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_cxx_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -3691,7 +3699,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_cxx_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_cxx_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -3735,7 +3744,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_cxx_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_cxx_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -4030,7 +4040,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_f77_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_f77_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -4079,7 +4090,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_f77_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_f77_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -4522,6 +4534,10 @@ hpux10.20* | hpux11*)
-   esac
-   ;;
+ if mkdir -p --version . >/dev/null 2>&1 && test ! -d ./--version; then
+-  # We used to define $(mkdir_p) as `mkdir -p -- .', in order to
++  # We used to keeping the `.' as first argument, in order to
+   # allow $(mkdir_p) to be used without argument.  As in
+   #   $(mkdir_p) $(somedir)
+-  # where $(somedir) is conditionally defined.  However we don't do
+-  # that anymore.
+-  #  1. before we restricted the check to GNU mkdir, `mkdir -p .' was
+-  #     reported to fail in read-only directories.  The system where this
+-  #     happened has been forgotten.
+-  #  2. in practice we call $(mkdir_p) on directories such as
+-  #       $(mkdir_p) "$(DESTDIR)$(somedir)"
+-  #     and we don't want to create $(DESTDIR) if $(somedir) is empty.
+-  #     To support the latter case, we have to write
+-  #       test -z "$(somedir)" || $(mkdir_p) "$(DESTDIR)$(somedir)"
+-  #     so $(mkdir_p) always has an argument.
+-  #     We will have better chances of detecting a missing test if
+-  #     $(mkdir_p) complains about missing arguments.
+-  #  3. $(mkdir_p) is named after `mkdir -p' and we don't expect this
+-  #     to accept no argument.
+-  #  4. having something like `mkdir .' in the output is unsightly.
++  # where $(somedir) is conditionally defined.  However this is wrong
++  # for two reasons:
++  #  1. if the package is installed by a user who cannot write `.'
++  #     make install will fail,
++  #  2. the above comment should most certainly read
++  #     $(mkdir_p) $(DESTDIR)$(somedir)
++  #     so it does not work when $(somedir) is undefined and
++  #     $(DESTDIR) is not.
++  #  To support the latter case, we have to write
++  #     test -z "$(somedir)" || $(mkdir_p) $(DESTDIR)$(somedir),
++  #  so the `.' trick is pointless.
+   mkdir_p='mkdir -p --'
+ else
+   # On NextStep and OpenStep, the `mkdir' command does not
+   # recognize any option.  It will interpret all options as
+-  # directories to create.
++  # directories to create, and then abort because `.' already
++  # exists.
+   for d in ./-p ./--version;
+   do
+     test -d $d && rmdir $d
+@@ -2260,7 +2254,7 @@ AUTOHEADER=${AUTOHEADER-"${am_missing_ru
  
-+interix3*)
-+  lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so|\.a)$'
-+  ;;
-+
- irix5* | irix6* | nonstopux*)
-   case $LD in
-   *-32|*"-32 ") libmagic=32-bit;;
-@@ -4771,7 +4787,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -5322,7 +5339,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -5492,7 +5510,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -5559,7 +5578,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -5674,12 +5694,7 @@ fi
+ MAKEINFO=${MAKEINFO-"${am_missing_run}makeinfo"}
+ 
+-install_sh=${install_sh-"\$(SHELL) $am_aux_dir/install-sh"}
++install_sh=${install_sh-"$am_aux_dir/install-sh"}
+ 
+ # Installed binaries are usually stripped using `strip' when the user
+ # run `make install-strip'.  However `strip' might not be the right
+@@ -2360,7 +2354,7 @@ else
+ fi
+ 
+ fi
+-INSTALL_STRIP_PROGRAM="\$(install_sh) -c -s"
++INSTALL_STRIP_PROGRAM="\${SHELL} \$(install_sh) -c -s"
+ 
+ # We need awk for the "check" target.  The system "awk" is bad on
+ # some platforms.
+@@ -6599,12 +6593,7 @@ fi
  
  done
  
@@ -205,12 +106,12 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
 -if test -n "$CXX" && ( test "X$CXX" != "Xno" &&
 -    ( (test "X$CXX" = "Xg++" && `g++ -v >/dev/null 2>&1` ) ||
 -    (test "X$CXX" != "Xg++"))) ; then
--  ac_ext=cc
-+ac_ext=cc
+-  ac_ext=cpp
++ac_ext=cpp
  ac_cpp='$CXXCPP $CPPFLAGS'
  ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext >&5'
  ac_link='$CXX -o conftest$ac_exeext $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
-@@ -5909,8 +5924,6 @@ ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS 
+@@ -6838,8 +6827,6 @@ ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS 
  ac_link='$CXX -o conftest$ac_exeext $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
  ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
  
@@ -219,7 +120,7 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
  
  
  
-@@ -6936,9 +6949,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -7866,9 +7853,11 @@ echo $ECHO_N "checking for $compiler opt
        ;;
  
      darwin* | rhapsody*)
@@ -231,93 +132,17 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
 +      lt_prog_compiler_static=''
        ;;
  
-     msdosdjgpp*)
-@@ -6967,6 +6982,11 @@ echo $ECHO_N "checking for $compiler opt
-       esac
-       ;;
- 
-+    interix3*)
-+      # Interix 3.0-3.5 -fPIC option generates borked code.
-+      # (Instead, shlibs are relocated at runtime.)
-+      ;;
-+
-     *)
-       lt_prog_compiler_pic='-fPIC'
-       ;;
-@@ -7435,6 +7455,21 @@ EOF
-       fi
-       ;;
- 
-+    interix3*)
-+      # Oy, what a hack.
-+      # Because shlibs are not compiled -fPIC due to broken code, we must
-+      # choose an --image-base.  Otherwise, 0x10000000 will be chosen for
-+      # all libraries, leading to runtime relocations -- slow and very
-+      # memory consuming.  To do this, we pick a random 256KB-aligned
-+      # start address between 0x50000000 and 0x6ffc0000 at link time.
-+      archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      archive_expsym_cmds='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      export_dynamic_flag_spec='${wl}-E'
-+      hardcode_direct=yes
-+      hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
-+      hardcode_shlibpath_var=no
-+      ;;
-+
-     netbsd*)
-       if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
- 	archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -7622,7 +7657,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -7682,7 +7718,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -7798,7 +7835,7 @@ if test -z "$aix_libpath"; then aix_libp
+     interix3*)
+@@ -8828,7 +8817,7 @@ if test -z "$aix_libpath"; then aix_libp
           archive_cmds='$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring'
           module_cmds='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
-           # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin ld's
+           # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin lds
 -         archive_expsym_cmds='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}$rpath/$soname $verstring~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
 +         archive_expsym_cmds='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            module_expsym_cmds='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
         *)
-@@ -7913,6 +7950,21 @@ if test -z "$aix_libpath"; then aix_libp
-       fi
-       ;;
- 
-+    interix3*)
-+      # Oy, what a hack.
-+      # Because shlibs are not compiled -fPIC due to broken code, we must
-+      # choose an --image-base.  Otherwise, 0x10000000 will be chosen for
-+      # all libraries, leading to runtime relocations -- slow and very
-+      # memory consuming.  To do this, we pick a random 256KB-aligned
-+      # start address between 0x50000000 and 0x6ffc0000 at link time.
-+      archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      archive_expsym_cmds='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      export_dynamic_flag_spec='${wl}-E'
-+      hardcode_direct=yes
-+      hardcode_libdir_flag_spec='${wl}-rpath,$libdir'
-+      hardcode_shlibpath_var=no
-+      ;;
-+
-     irix5* | irix6* | nonstopux*)
-       if test "$GCC" = yes; then
- 	archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
-@@ -8316,6 +8368,7 @@ beos*)
+@@ -9358,6 +9347,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -325,10 +150,10 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -8433,15 +8486,16 @@ freebsd* | dragonfly*)
-   # DragonFly does not have aout.  When/if they implement a new
-   # versioning mechanism, adjust this.
-   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
+@@ -9483,15 +9473,16 @@ freebsd* | dragonfly*)
+     *) objformat=elf ;;
+     esac
+   fi
 -  version_type=freebsd-$objformat
 -  case $version_type in
 -    freebsd-elf*)
@@ -348,22 +173,7 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
        need_version=yes
        ;;
    esac
-@@ -8517,15 +8571,22 @@ hpux9* | hpux10* | hpux11*)
-   postinstall_cmds='chmod 555 $lib'
-   ;;
- 
-+interix3*)
-+  version_type=linux
-+  need_lib_prefix=no
-+  need_version=no
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-+  soname_spec='${libname}${release}${shared_ext}$major'
-+  dynamic_linker='Interix 3.x ld.so'
-+  shlibpath_var=LD_LIBRARY_PATH
-+  shlibpath_overrides_runpath=no
-+  hardcode_into_libs=yes
-+  ;;
-+
+@@ -9587,12 +9578,7 @@ interix3*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -377,7 +187,7 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -8602,11 +8663,11 @@ knetbsd*-gnu)
+@@ -9669,11 +9655,11 @@ knetbsd*-gnu)
    ;;
  
  netbsd*)
@@ -391,15 +201,16 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
-@@ -8637,14 +8698,14 @@ nto-qnx*)
+@@ -9704,7 +9690,7 @@ nto-qnx*)
    ;;
  
  openbsd*)
 -  version_type=sunos
 +  version_type=linux
+   sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-   case $host_os in
+@@ -9712,7 +9698,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*) need_version=yes ;;
      *)                         need_version=no  ;;
    esac
@@ -408,77 +219,7 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -8892,7 +8953,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -8995,7 +9057,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -9060,7 +9123,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -9153,7 +9217,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -9218,7 +9283,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -9284,7 +9350,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -9350,7 +9417,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -10203,9 +10271,7 @@ echo "$as_me: error: tag name \"$tagname
+@@ -11304,9 +11290,7 @@ echo "$as_me: error: tag name \"$tagname
  
        case $tagname in
        CXX)
@@ -486,60 +227,19 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
 -	    ( (test "X$CXX" = "Xg++" && `g++ -v >/dev/null 2>&1` ) ||
 -	    (test "X$CXX" != "Xg++"))) ; then
 +        if test -n "$CXX" && test "X$CXX" != "Xno"; then
- 	  ac_ext=cc
+ 	  ac_ext=cpp
  ac_cpp='$CXXCPP $CPPFLAGS'
  ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext >&5'
-@@ -10592,7 +10658,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_cxx_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_cxx_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -10653,7 +10720,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_cxx_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_cxx_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -10781,7 +10849,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -11903,7 +11887,7 @@ if test -z "$aix_libpath"; then aix_libp
            archive_cmds_CXX='$CC -qmkshrobj ${wl}-single_module $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring'
            module_cmds_CXX='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
-           # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin ld's
+           # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin lds
 -          archive_expsym_cmds_CXX='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC -qmkshrobj ${wl}-single_module $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}$rpath/$soname $verstring~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
 +          archive_expsym_cmds_CXX='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC -qmkshrobj ${wl}-single_module $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            module_expsym_cmds_CXX='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
         *)
-@@ -10939,6 +11007,20 @@ if test -z "$aix_libpath"; then aix_libp
- 	;;
-     esac
-     ;;
-+  interix3*)
-+    # Oy, what a hack.
-+    # Because shlibs are not compiled -fPIC due to broken code, we must
-+    # choose an --image-base.  Otherwise, 0x10000000 will be chosen for
-+    # all libraries, leading to runtime relocations -- slow and very
-+    # memory consuming.  To do this, we pick a random 256KB-aligned
-+    # start address between 0x50000000 and 0x6ffc0000 at link time.
-+    archive_cmds_CXX='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+    archive_expsym_cmds_CXX='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+    export_dynamic_flag_spec_CXX='${wl}-E'
-+    hardcode_direct_CXX=yes
-+    hardcode_libdir_flag_spec_CXX='${wl}-rpath,$libdir'
-+    hardcode_shlibpath_var_CXX=no
-+    ;;
-   irix5* | irix6*)
-     case $cc_basename in
-       CC*)
-@@ -11069,14 +11151,29 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -12200,14 +12184,29 @@ if test -z "$aix_libpath"; then aix_libp
      ;;
    netbsd*)
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
@@ -571,29 +271,20 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
      ;;
    openbsd2*)
      # C++ shared libraries are fairly broken
-@@ -11463,6 +11560,21 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
-     esac
-   done
+@@ -12643,6 +12642,12 @@ interix3*)
+   postdeps_CXX=
+   ;;
  
-+  case "$host_os" in
-+  netbsd*)
-+    if test -n "$cpprt0_file"; then
-+      predep_objects_CXX=`eval echo $predep_objects_CXX | sed -e 's:/usr/lib/c++rt0.o:$cpprt0_file:'`
-+    fi
-+    ;;
-+  interix3*)
-+    # Interix installs completely hosed .la files for C++, so rather than
-+    # hack all around it, let's just trust "g++" to DTRT.
-+    predep_objects_CXX=
-+    postdep_objects_CXX=
-+    postdeps_CXX=
-+    ;;
-+  esac
++netbsd*)
++  if test -n "$cpprt0_file"; then
++    predep_objects_CXX=`eval echo $predep_objects_CXX | sed -e 's:/usr/lib/c++rt0.o:$cpprt0_file:'`
++  fi
++  ;;
 +
-   # Clean up.
-   rm -f a.out a.exe
- else
-@@ -11510,9 +11622,11 @@ echo $ECHO_N "checking for $compiler opt
+ solaris*)
+   case $cc_basename in
+   CC*)
+@@ -12695,9 +12700,11 @@ echo $ECHO_N "checking for $compiler opt
        lt_prog_compiler_pic_CXX='-DDLL_EXPORT'
        ;;
      darwin* | rhapsody*)
@@ -606,27 +297,7 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -11534,6 +11648,10 @@ echo $ECHO_N "checking for $compiler opt
- 	;;
-       esac
-       ;;
-+    interix3*)
-+      # Interix 3.0-3.5 -fPIC option generates borked code.
-+      # (Instead, shlibs are relocated at runtime.)
-+      ;;
-     *)
-       lt_prog_compiler_pic_CXX='-fPIC'
-       ;;
-@@ -11608,6 +11726,8 @@ echo $ECHO_N "checking for $compiler opt
- 	    ;;
- 	esac
- 	;;
-+      interix3*)
-+	;;
-       irix5* | irix6* | nonstopux*)
- 	case $cc_basename in
- 	  CC*)
-@@ -12088,6 +12208,7 @@ beos*)
+@@ -13317,6 +13324,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -634,10 +305,10 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -12205,15 +12326,16 @@ freebsd* | dragonfly*)
-   # DragonFly does not have aout.  When/if they implement a new
-   # versioning mechanism, adjust this.
-   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
+@@ -13442,15 +13450,16 @@ freebsd* | dragonfly*)
+     *) objformat=elf ;;
+     esac
+   fi
 -  version_type=freebsd-$objformat
 -  case $version_type in
 -    freebsd-elf*)
@@ -657,22 +328,7 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
        need_version=yes
        ;;
    esac
-@@ -12289,15 +12411,22 @@ hpux9* | hpux10* | hpux11*)
-   postinstall_cmds='chmod 555 $lib'
-   ;;
- 
-+interix3*)
-+  version_type=linux
-+  need_lib_prefix=no
-+  need_version=no
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-+  soname_spec='${libname}${release}${shared_ext}$major'
-+  dynamic_linker='Interix 3.x ld.so'
-+  shlibpath_var=LD_LIBRARY_PATH
-+  shlibpath_overrides_runpath=no
-+  hardcode_into_libs=yes
-+  ;;
-+
+@@ -13546,12 +13555,7 @@ interix3*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -686,7 +342,7 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -12374,11 +12503,11 @@ knetbsd*-gnu)
+@@ -13628,11 +13632,11 @@ knetbsd*-gnu)
    ;;
  
  netbsd*)
@@ -700,15 +356,16 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
-@@ -12409,14 +12538,14 @@ nto-qnx*)
+@@ -13663,7 +13667,7 @@ nto-qnx*)
    ;;
  
  openbsd*)
 -  version_type=sunos
 +  version_type=linux
+   sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-   case $host_os in
+@@ -13671,7 +13675,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*) need_version=yes ;;
      *)                         need_version=no  ;;
    esac
@@ -717,77 +374,7 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -12664,7 +12793,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_cxx_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_cxx_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -12767,7 +12897,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_cxx_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_cxx_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -12832,7 +12963,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_cxx_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_cxx_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -12925,7 +13057,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_cxx_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_cxx_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -12990,7 +13123,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_cxx_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_cxx_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -13056,7 +13190,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_cxx_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_cxx_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -13122,7 +13257,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_cxx_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_cxx_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -13984,9 +14120,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -14436,9 +14440,11 @@ echo $ECHO_N "checking for $compiler opt
        ;;
  
      darwin* | rhapsody*)
@@ -799,93 +386,17 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
 +      lt_prog_compiler_static_F77=''
        ;;
  
-     msdosdjgpp*)
-@@ -14015,6 +14153,11 @@ echo $ECHO_N "checking for $compiler opt
-       esac
-       ;;
- 
-+    interix3*)
-+      # Interix 3.0-3.5 -fPIC option generates borked code.
-+      # (Instead, shlibs are relocated at runtime.)
-+      ;;
-+
-     *)
-       lt_prog_compiler_pic_F77='-fPIC'
-       ;;
-@@ -14483,6 +14626,21 @@ EOF
-       fi
-       ;;
- 
-+    interix3*)
-+      # Oy, what a hack.
-+      # Because shlibs are not compiled -fPIC due to broken code, we must
-+      # choose an --image-base.  Otherwise, 0x10000000 will be chosen for
-+      # all libraries, leading to runtime relocations -- slow and very
-+      # memory consuming.  To do this, we pick a random 256KB-aligned
-+      # start address between 0x50000000 and 0x6ffc0000 at link time.
-+      archive_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      archive_expsym_cmds_F77='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      export_dynamic_flag_spec_F77='${wl}-E'
-+      hardcode_direct_F77=yes
-+      hardcode_libdir_flag_spec_F77='${wl}-rpath,$libdir'
-+      hardcode_shlibpath_var_F77=no
-+      ;;
-+
-     netbsd*)
-       if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
- 	archive_cmds_F77='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -14660,7 +14818,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_f77_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_f77_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -14710,7 +14869,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_f77_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_f77_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -14826,7 +14986,7 @@ if test -z "$aix_libpath"; then aix_libp
+     interix3*)
+@@ -15378,7 +15384,7 @@ if test -z "$aix_libpath"; then aix_libp
           archive_cmds_F77='$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring'
           module_cmds_F77='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
-           # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin ld's
+           # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin lds
 -         archive_expsym_cmds_F77='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}$rpath/$soname $verstring~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
 +         archive_expsym_cmds_F77='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            module_expsym_cmds_F77='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
         *)
-@@ -14941,6 +15101,21 @@ if test -z "$aix_libpath"; then aix_libp
-       fi
-       ;;
- 
-+    interix3*)
-+      # Oy, what a hack.
-+      # Because shlibs are not compiled -fPIC due to broken code, we must
-+      # choose an --image-base.  Otherwise, 0x10000000 will be chosen for
-+      # all libraries, leading to runtime relocations -- slow and very
-+      # memory consuming.  To do this, we pick a random 256KB-aligned
-+      # start address between 0x50000000 and 0x6ffc0000 at link time.
-+      archive_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      archive_expsym_cmds_F77='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      export_dynamic_flag_spec_F77='${wl}-E'
-+      hardcode_direct_F77=yes
-+      hardcode_libdir_flag_spec_F77='${wl}-rpath,$libdir'
-+      hardcode_shlibpath_var_F77=no
-+      ;;
-+
-     irix5* | irix6* | nonstopux*)
-       if test "$GCC" = yes; then
- 	archive_cmds_F77='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
-@@ -15344,6 +15519,7 @@ beos*)
+@@ -15908,6 +15914,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -893,10 +404,10 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -15461,15 +15637,16 @@ freebsd* | dragonfly*)
-   # DragonFly does not have aout.  When/if they implement a new
-   # versioning mechanism, adjust this.
-   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
+@@ -16033,15 +16040,16 @@ freebsd* | dragonfly*)
+     *) objformat=elf ;;
+     esac
+   fi
 -  version_type=freebsd-$objformat
 -  case $version_type in
 -    freebsd-elf*)
@@ -916,22 +427,7 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
        need_version=yes
        ;;
    esac
-@@ -15545,15 +15722,22 @@ hpux9* | hpux10* | hpux11*)
-   postinstall_cmds='chmod 555 $lib'
-   ;;
- 
-+interix3*)
-+  version_type=linux
-+  need_lib_prefix=no
-+  need_version=no
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-+  soname_spec='${libname}${release}${shared_ext}$major'
-+  dynamic_linker='Interix 3.x ld.so'
-+  shlibpath_var=LD_LIBRARY_PATH
-+  shlibpath_overrides_runpath=no
-+  hardcode_into_libs=yes
-+  ;;
-+
+@@ -16137,12 +16145,7 @@ interix3*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -945,7 +441,7 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -15630,11 +15814,11 @@ knetbsd*-gnu)
+@@ -16219,11 +16222,11 @@ knetbsd*-gnu)
    ;;
  
  netbsd*)
@@ -959,15 +455,16 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
-@@ -15665,14 +15849,14 @@ nto-qnx*)
+@@ -16254,7 +16257,7 @@ nto-qnx*)
    ;;
  
  openbsd*)
 -  version_type=sunos
 +  version_type=linux
+   sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-   case $host_os in
+@@ -16262,7 +16265,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*) need_version=yes ;;
      *)                         need_version=no  ;;
    esac
@@ -976,7 +473,7 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -16432,9 +16616,11 @@ echo $ECHO_N "checking for $compiler opt
+@@ -17018,9 +17021,11 @@ echo $ECHO_N "checking for $compiler opt
        ;;
  
      darwin* | rhapsody*)
@@ -988,93 +485,17 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
 +      lt_prog_compiler_static_GCJ=''
        ;;
  
-     msdosdjgpp*)
-@@ -16463,6 +16649,11 @@ echo $ECHO_N "checking for $compiler opt
-       esac
-       ;;
- 
-+    interix3*)
-+      # Interix 3.0-3.5 -fPIC option generates borked code.
-+      # (Instead, shlibs are relocated at runtime.)
-+      ;;
-+
-     *)
-       lt_prog_compiler_pic_GCJ='-fPIC'
-       ;;
-@@ -16931,6 +17122,21 @@ EOF
-       fi
-       ;;
- 
-+    interix3*)
-+      # Oy, what a hack.
-+      # Because shlibs are not compiled -fPIC due to broken code, we must
-+      # choose an --image-base.  Otherwise, 0x10000000 will be chosen for
-+      # all libraries, leading to runtime relocations -- slow and very
-+      # memory consuming.  To do this, we pick a random 256KB-aligned
-+      # start address between 0x50000000 and 0x6ffc0000 at link time.
-+      archive_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      archive_expsym_cmds_GCJ='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      export_dynamic_flag_spec_GCJ='${wl}-E'
-+      hardcode_direct_GCJ=yes
-+      hardcode_libdir_flag_spec_GCJ='${wl}-rpath,$libdir'
-+      hardcode_shlibpath_var_GCJ=no
-+      ;;
-+
-     netbsd*)
-       if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
- 	archive_cmds_GCJ='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -17118,7 +17324,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -17178,7 +17385,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -17294,7 +17502,7 @@ if test -z "$aix_libpath"; then aix_libp
+     interix3*)
+@@ -17980,7 +17985,7 @@ if test -z "$aix_libpath"; then aix_libp
           archive_cmds_GCJ='$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring'
           module_cmds_GCJ='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
-           # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin ld's
+           # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin lds
 -         archive_expsym_cmds_GCJ='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}$rpath/$soname $verstring~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
 +         archive_expsym_cmds_GCJ='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            module_expsym_cmds_GCJ='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
         *)
-@@ -17409,6 +17617,21 @@ if test -z "$aix_libpath"; then aix_libp
-       fi
-       ;;
- 
-+    interix3*)
-+      # Oy, what a hack.
-+      # Because shlibs are not compiled -fPIC due to broken code, we must
-+      # choose an --image-base.  Otherwise, 0x10000000 will be chosen for
-+      # all libraries, leading to runtime relocations -- slow and very
-+      # memory consuming.  To do this, we pick a random 256KB-aligned
-+      # start address between 0x50000000 and 0x6ffc0000 at link time.
-+      archive_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      archive_expsym_cmds_GCJ='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      export_dynamic_flag_spec_GCJ='${wl}-E'
-+      hardcode_direct_GCJ=yes
-+      hardcode_libdir_flag_spec_GCJ='${wl}-rpath,$libdir'
-+      hardcode_shlibpath_var_GCJ=no
-+      ;;
-+
-     irix5* | irix6* | nonstopux*)
-       if test "$GCC" = yes; then
- 	archive_cmds_GCJ='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
-@@ -17812,6 +18035,7 @@ beos*)
+@@ -18510,6 +18515,7 @@ beos*)
  bsdi[45]*)
    version_type=linux
    need_version=no
@@ -1082,10 +503,10 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -17929,15 +18153,16 @@ freebsd* | dragonfly*)
-   # DragonFly does not have aout.  When/if they implement a new
-   # versioning mechanism, adjust this.
-   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
+@@ -18635,15 +18641,16 @@ freebsd* | dragonfly*)
+     *) objformat=elf ;;
+     esac
+   fi
 -  version_type=freebsd-$objformat
 -  case $version_type in
 -    freebsd-elf*)
@@ -1105,22 +526,7 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
        need_version=yes
        ;;
    esac
-@@ -18013,15 +18238,22 @@ hpux9* | hpux10* | hpux11*)
-   postinstall_cmds='chmod 555 $lib'
-   ;;
- 
-+interix3*)
-+  version_type=linux
-+  need_lib_prefix=no
-+  need_version=no
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-+  soname_spec='${libname}${release}${shared_ext}$major'
-+  dynamic_linker='Interix 3.x ld.so'
-+  shlibpath_var=LD_LIBRARY_PATH
-+  shlibpath_overrides_runpath=no
-+  hardcode_into_libs=yes
-+  ;;
-+
+@@ -18739,12 +18746,7 @@ interix3*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -1134,7 +540,7 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -18098,11 +18330,11 @@ knetbsd*-gnu)
+@@ -18821,11 +18823,11 @@ knetbsd*-gnu)
    ;;
  
  netbsd*)
@@ -1148,15 +554,16 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
-@@ -18133,14 +18365,14 @@ nto-qnx*)
+@@ -18856,7 +18858,7 @@ nto-qnx*)
    ;;
  
  openbsd*)
 -  version_type=sunos
 +  version_type=linux
+   sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-   case $host_os in
+@@ -18864,7 +18866,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*) need_version=yes ;;
      *)                         need_version=no  ;;
    esac
@@ -1165,107 +572,11 @@ $NetBSD: patch-ab,v 1.55 2005/11/09 18:05:56 tv Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -18388,7 +18620,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -18491,7 +18724,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -18556,7 +18790,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -18649,7 +18884,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -18714,7 +18950,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -18780,7 +19017,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -18846,7 +19084,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   cat conftest.err >&5
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"			 || test ! -s conftest.err'
-+	 { ac_try='test -z "$ac_c_werror_flag"
-+			 || test ! -s conftest.err'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-@@ -21039,6 +21278,11 @@ esac
-   *) ac_INSTALL=$ac_top_builddir$INSTALL ;;
-   esac
- 
-+  if test x"$ac_file" != x-; then
-+    { echo "$as_me:$LINENO: creating $ac_file" >&5
-+echo "$as_me: creating $ac_file" >&6;}
-+    rm -f "$ac_file"
-+  fi
-   # Let's still pretend it is `configure' which instantiates (i.e., don't
-   # use $as_me), people would be surprised to read:
-   #    /* config.h.  Generated by config.status.  */
-@@ -21077,12 +21321,6 @@ echo "$as_me: error: cannot find input f
- 	 fi;;
-       esac
-     done` || { (exit 1); exit 1; }
--
--  if test x"$ac_file" != x-; then
--    { echo "$as_me:$LINENO: creating $ac_file" >&5
--echo "$as_me: creating $ac_file" >&6;}
--    rm -f "$ac_file"
--  fi
- _ACEOF
- cat >>$CONFIG_STATUS <<_ACEOF
-   sed "$ac_vpsub
-@@ -21517,7 +21755,7 @@ echo "$as_me: error: $ac_sub_configure f
-    { (exit 1); exit 1; }; }
-     fi
- 
--    cd "$ac_popdir"
-+    cd $ac_popdir
-   done
+@@ -20250,7 +20252,6 @@ if test "x$as_myself" = x; then
+   as_myself=$0
  fi
- 
+ if test ! -f "$as_myself"; then
+-  # FIXME: next line outputs $as_me, which is still unset.
+   { echo "$as_me: error: cannot find myself; rerun with an absolute file name" >&2
+    { (exit 1); exit 1; }; }
+ fi

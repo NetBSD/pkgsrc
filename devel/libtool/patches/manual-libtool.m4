@@ -1,8 +1,8 @@
-$NetBSD: manual-libtool.m4,v 1.17 2005/11/09 18:05:56 tv Exp $
+$NetBSD: manual-libtool.m4,v 1.18 2006/01/30 22:19:56 tv Exp $
 
---- libtool.m4.orig	2005-05-15 09:41:23.000000000 -0400
+--- libtool.m4.orig	2005-12-18 16:53:17.000000000 -0500
 +++ libtool.m4
-@@ -388,11 +388,11 @@ else
+@@ -392,11 +392,11 @@ else
  
    if test "X$echo" = Xecho; then
      # We didn't find a better echo, so look for alternatives.
@@ -16,7 +16,7 @@ $NetBSD: manual-libtool.m4,v 1.17 2005/11/09 18:05:56 tv Exp $
      elif (test -f /bin/ksh || test -f /bin/ksh$ac_exeext) &&
  	 test "X$CONFIG_SHELL" != X/bin/ksh; then
        # If we have ksh, try running configure again with it.
-@@ -1250,6 +1250,7 @@ beos*)
+@@ -1289,6 +1289,7 @@ beos*)
  bsdi[[45]]*)
    version_type=linux
    need_version=no
@@ -24,10 +24,10 @@ $NetBSD: manual-libtool.m4,v 1.17 2005/11/09 18:05:56 tv Exp $
    library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major $libname${shared_ext}'
    soname_spec='${libname}${release}${shared_ext}$major'
    finish_cmds='PATH="\$PATH:/sbin" ldconfig $libdir'
-@@ -1367,15 +1368,16 @@ freebsd* | dragonfly*)
-   # DragonFly does not have aout.  When/if they implement a new
-   # versioning mechanism, adjust this.
-   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
+@@ -1414,15 +1415,16 @@ freebsd* | dragonfly*)
+     *) objformat=elf ;;
+     esac
+   fi
 -  version_type=freebsd-$objformat
 -  case $version_type in
 -    freebsd-elf*)
@@ -42,27 +42,12 @@ $NetBSD: manual-libtool.m4,v 1.17 2005/11/09 18:05:56 tv Exp $
        ;;
 -    freebsd-*)
 -      library_names_spec='${libname}${release}${shared_ext}$versuffix $libname${shared_ext}$versuffix'
-+    *)  
++    *)
 +      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${shared_ext}$versuffix2'
        need_version=yes
        ;;
    esac
-@@ -1451,15 +1453,22 @@ hpux9* | hpux10* | hpux11*)
-   postinstall_cmds='chmod 555 $lib'
-   ;;
- 
-+interix3*)
-+  version_type=linux
-+  need_lib_prefix=no
-+  need_version=no
-+  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-+  soname_spec='${libname}${release}${shared_ext}$major'
-+  dynamic_linker='Interix 3.x ld.so'
-+  shlibpath_var=LD_LIBRARY_PATH
-+  shlibpath_overrides_runpath=no
-+  hardcode_into_libs=yes
-+  ;;
-+
+@@ -1518,12 +1520,7 @@ interix3*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
      nonstopux*) version_type=nonstopux ;;
@@ -76,7 +61,7 @@ $NetBSD: manual-libtool.m4,v 1.17 2005/11/09 18:05:56 tv Exp $
    esac
    need_lib_prefix=no
    need_version=no
-@@ -1536,11 +1545,11 @@ knetbsd*-gnu)
+@@ -1600,11 +1597,11 @@ knetbsd*-gnu)
    ;;
  
  netbsd*)
@@ -90,15 +75,16 @@ $NetBSD: manual-libtool.m4,v 1.17 2005/11/09 18:05:56 tv Exp $
      finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
      dynamic_linker='NetBSD (a.out) ld.so'
    else
-@@ -1571,14 +1580,14 @@ nto-qnx*)
+@@ -1635,7 +1632,7 @@ nto-qnx*)
    ;;
  
  openbsd*)
 -  version_type=sunos
 +  version_type=linux
+   sys_lib_dlsearch_path_spec="/usr/lib"
    need_lib_prefix=no
    # Some older versions of OpenBSD (3.3 at least) *do* need versioned libs.
-   case $host_os in
+@@ -1643,7 +1640,7 @@ openbsd*)
      openbsd3.3 | openbsd3.3.*) need_version=yes ;;
      *)                         need_version=no  ;;
    esac
@@ -107,7 +93,7 @@ $NetBSD: manual-libtool.m4,v 1.17 2005/11/09 18:05:56 tv Exp $
    finish_cmds='PATH="\$PATH:/sbin" ldconfig -m $libdir'
    shlibpath_var=LD_LIBRARY_PATH
    if test -z "`echo __ELF__ | $CC -E - | grep __ELF__`" || test "$host_os-$host_cpu" = "openbsd2.8-powerpc"; then
-@@ -1743,9 +1752,7 @@ if test -f "$ltmain" && test -n "$tagnam
+@@ -1832,9 +1829,7 @@ if test -f "$ltmain" && test -n "$tagnam
  
        case $tagname in
        CXX)
@@ -118,18 +104,7 @@ $NetBSD: manual-libtool.m4,v 1.17 2005/11/09 18:05:56 tv Exp $
  	  AC_LIBTOOL_LANG_CXX_CONFIG
  	else
  	  tagname=""
-@@ -2253,6 +2260,10 @@ hpux10.20* | hpux11*)
-   esac
-   ;;
- 
-+interix3*)
-+  lt_cv_deplibs_check_method='match_pattern /lib[[^/]]+(\.so|\.a)$'
-+  ;;
-+
- irix5* | irix6* | nonstopux*)
-   case $LD in
-   *-32|*"-32 ") libmagic=32-bit;;
-@@ -2480,22 +2491,10 @@ AC_DEFUN([AC_LIBTOOL_CXX],
+@@ -2580,22 +2575,10 @@ AC_DEFUN([AC_LIBTOOL_CXX],
  # ---------------
  AC_DEFUN([_LT_AC_LANG_CXX],
  [AC_REQUIRE([AC_PROG_CXX])
@@ -139,7 +114,7 @@ $NetBSD: manual-libtool.m4,v 1.17 2005/11/09 18:05:56 tv Exp $
  ])# _LT_AC_LANG_CXX
  
 -# _LT_AC_PROG_CXXCPP
--# ---------------
+-# ------------------
 -AC_DEFUN([_LT_AC_PROG_CXXCPP],
 -[
 -AC_REQUIRE([AC_PROG_CXX])
@@ -153,7 +128,7 @@ $NetBSD: manual-libtool.m4,v 1.17 2005/11/09 18:05:56 tv Exp $
  # AC_LIBTOOL_F77
  # --------------
  # enable support for Fortran 77 libraries
-@@ -2663,7 +2662,7 @@ AC_DEFUN([AC_LIBTOOL_LANG_CXX_CONFIG], [
+@@ -2732,7 +2715,7 @@ AC_DEFUN([AC_LIBTOOL_LANG_CXX_CONFIG], [
  AC_DEFUN([_LT_AC_LANG_CXX_CONFIG],
  [AC_LANG_PUSH(C++)
  AC_REQUIRE([AC_PROG_CXX])
@@ -162,37 +137,16 @@ $NetBSD: manual-libtool.m4,v 1.17 2005/11/09 18:05:56 tv Exp $
  
  _LT_AC_TAGVAR(archive_cmds_need_lc, $1)=no
  _LT_AC_TAGVAR(allow_undefined_flag, $1)=
-@@ -2999,7 +2998,7 @@ case $host_os in
+@@ -3080,7 +3063,7 @@ case $host_os in
            _LT_AC_TAGVAR(archive_cmds, $1)='$CC -qmkshrobj ${wl}-single_module $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring'
            _LT_AC_TAGVAR(module_cmds, $1)='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
-           # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin ld's
+           # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin lds
 -          _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC -qmkshrobj ${wl}-single_module $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}$rpath/$soname $verstring~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
 +          _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC -qmkshrobj ${wl}-single_module $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            _LT_AC_TAGVAR(module_expsym_cmds, $1)='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
         *)
-@@ -3157,6 +3156,20 @@ case $host_os in
- 	;;
-     esac
-     ;;
-+  interix3*)
-+    # Oy, what a hack.
-+    # Because shlibs are not compiled -fPIC due to broken code, we must
-+    # choose an --image-base.  Otherwise, 0x10000000 will be chosen for
-+    # all libraries, leading to runtime relocations -- slow and very
-+    # memory consuming.  To do this, we pick a random 256KB-aligned
-+    # start address between 0x50000000 and 0x6ffc0000 at link time.
-+    _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+    _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+    _LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}-E'
-+    _LT_AC_TAGVAR(hardcode_direct, $1)=yes
-+    _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath,$libdir'
-+    _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
-+    ;;
-   irix5* | irix6*)
-     case $cc_basename in
-       CC*)
-@@ -3287,14 +3300,29 @@ case $host_os in
+@@ -3377,14 +3360,29 @@ case $host_os in
      ;;
    netbsd*)
      if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
@@ -224,29 +178,20 @@ $NetBSD: manual-libtool.m4,v 1.17 2005/11/09 18:05:56 tv Exp $
      ;;
    openbsd2*)
      # C++ shared libraries are fairly broken
-@@ -3734,6 +3762,21 @@ if AC_TRY_EVAL(ac_compile); then
-     esac
-   done
+@@ -3872,6 +3870,12 @@ interix3*)
+   _LT_AC_TAGVAR(postdeps,$1)=
+   ;;
  
-+  case "$host_os" in
-+  netbsd*)
-+    if test -n "$cpprt0_file"; then
-+      predep_objects_CXX=`eval echo $predep_objects_CXX | sed -e 's:/usr/lib/c++rt0.o:$cpprt0_file:'`
-+    fi
-+    ;;
-+  interix3*)
-+    # Interix installs completely hosed .la files for C++, so rather than
-+    # hack all around it, let's just trust "g++" to DTRT.
-+    predep_objects_CXX=
-+    postdep_objects_CXX=
-+    postdeps_CXX=
-+    ;;
-+  esac
++netbsd*)
++  if test -n "$cpprt0_file"; then
++    _LT_AC_TAGVAR(predep_objects,$1)=`eval echo $_LT_AC_TAGVAR(predep_objects,$1) | sed -e 's:/usr/lib/c++rt0.o:$cpprt0_file:'`
++  fi
++  ;;
 +
-   # Clean up.
-   rm -f a.out a.exe
- else
-@@ -4698,9 +4741,11 @@ AC_MSG_CHECKING([for $compiler option to
+ solaris*)
+   case $cc_basename in
+   CC*)
+@@ -4847,9 +4851,11 @@ AC_MSG_CHECKING([for $compiler option to
        _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-DDLL_EXPORT'
        ;;
      darwin* | rhapsody*)
@@ -259,27 +204,7 @@ $NetBSD: manual-libtool.m4,v 1.17 2005/11/09 18:05:56 tv Exp $
        ;;
      *djgpp*)
        # DJGPP does not support shared libraries at all
-@@ -4722,6 +4767,10 @@ AC_MSG_CHECKING([for $compiler option to
- 	;;
-       esac
-       ;;
-+    interix3*)
-+      # Interix 3.0-3.5 -fPIC option generates borked code.
-+      # (Instead, shlibs are relocated at runtime.)
-+      ;;
-     *)
-       _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
-       ;;
-@@ -4796,6 +4845,8 @@ AC_MSG_CHECKING([for $compiler option to
- 	    ;;
- 	esac
- 	;;
-+      interix3*)
-+	;;
-       irix5* | irix6* | nonstopux*)
- 	case $cc_basename in
- 	  CC*)
-@@ -4967,9 +5018,11 @@ AC_MSG_CHECKING([for $compiler option to
+@@ -5122,9 +5128,11 @@ AC_MSG_CHECKING([for $compiler option to
        ;;
  
      darwin* | rhapsody*)
@@ -291,69 +216,13 @@ $NetBSD: manual-libtool.m4,v 1.17 2005/11/09 18:05:56 tv Exp $
 +      _LT_AC_TAGVAR(lt_prog_compiler_static, $1)=''
        ;;
  
-     msdosdjgpp*)
-@@ -4998,6 +5051,11 @@ AC_MSG_CHECKING([for $compiler option to
-       esac
-       ;;
- 
-+    interix3*)
-+      # Interix 3.0-3.5 -fPIC option generates borked code.
-+      # (Instead, shlibs are relocated at runtime.)
-+      ;;
-+
-     *)
-       _LT_AC_TAGVAR(lt_prog_compiler_pic, $1)='-fPIC'
-       ;;
-@@ -5370,6 +5428,21 @@ EOF
-       fi
-       ;;
- 
-+    interix3*)
-+      # Oy, what a hack.
-+      # Because shlibs are not compiled -fPIC due to broken code, we must
-+      # choose an --image-base.  Otherwise, 0x10000000 will be chosen for
-+      # all libraries, leading to runtime relocations -- slow and very
-+      # memory consuming.  To do this, we pick a random 256KB-aligned
-+      # start address between 0x50000000 and 0x6ffc0000 at link time.
-+      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      _LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}-E'
-+      _LT_AC_TAGVAR(hardcode_direct, $1)=yes
-+      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath,$libdir'
-+      _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
-+      ;;
-+
-     netbsd*)
-       if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
- 	_LT_AC_TAGVAR(archive_cmds, $1)='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
-@@ -5633,7 +5706,7 @@ EOF
+     interix3*)
+@@ -5850,7 +5858,7 @@ _LT_EOF
           _LT_AC_TAGVAR(archive_cmds, $1)='$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring'
           _LT_AC_TAGVAR(module_cmds, $1)='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs$compiler_flags'
-           # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin ld's
+           # Don't fix this by using the ld -exported_symbols_list flag, it doesn't exist in older darwin lds
 -         _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}$rpath/$soname $verstring~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
 +         _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC -qmkshrobj $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags ${wl}-install_name ${wl}`echo $rpath/$soname` $verstring~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            _LT_AC_TAGVAR(module_expsym_cmds, $1)='sed -e "s,#.*,," -e "s,^[    ]*,," -e "s,^\(..*\),_&," < $export_symbols > $output_objdir/${libname}-symbols.expsym~$CC $allow_undefined_flag  -o $lib -bundle $libobjs $deplibs$compiler_flags~nmedit -s $output_objdir/${libname}-symbols.expsym ${lib}'
            ;;
         *)
-@@ -5748,6 +5821,21 @@ EOF
-       fi
-       ;;
- 
-+    interix3*)
-+      # Oy, what a hack.
-+      # Because shlibs are not compiled -fPIC due to broken code, we must
-+      # choose an --image-base.  Otherwise, 0x10000000 will be chosen for
-+      # all libraries, leading to runtime relocations -- slow and very
-+      # memory consuming.  To do this, we pick a random 256KB-aligned
-+      # start address between 0x50000000 and 0x6ffc0000 at link time.
-+      _LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      _LT_AC_TAGVAR(archive_expsym_cmds, $1)='sed s,^,_, $export_symbols >$output_objdir/$soname.exp && $CC -shared $libobjs $deplibs $compiler_flags ${wl}-h,$soname ${wl}--retain-symbols-file $wl$output_objdir/$soname.exp ${wl}--image-base,$(($RANDOM %4096/2*262144+1342177280)) -o $lib'
-+      _LT_AC_TAGVAR(export_dynamic_flag_spec, $1)='${wl}-E'
-+      _LT_AC_TAGVAR(hardcode_direct, $1)=yes
-+      _LT_AC_TAGVAR(hardcode_libdir_flag_spec, $1)='${wl}-rpath,$libdir'
-+      _LT_AC_TAGVAR(hardcode_shlibpath_var, $1)=no
-+      ;;
-+
-     irix5* | irix6* | nonstopux*)
-       if test "$GCC" = yes; then
- 	_LT_AC_TAGVAR(archive_cmds, $1)='$CC -shared $libobjs $deplibs $compiler_flags ${wl}-soname ${wl}$soname `test -n "$verstring" && echo ${wl}-set_version ${wl}$verstring` ${wl}-update_registry ${wl}${output_objdir}/so_locations -o $lib'
