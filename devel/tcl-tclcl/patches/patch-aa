@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2006/01/27 01:34:38 minskim Exp $
+$NetBSD: patch-aa,v 1.6 2006/01/30 00:09:10 minskim Exp $
 
 --- Makefile.in.orig	2005-10-02 14:26:19.000000000 -0700
 +++ Makefile.in
@@ -61,7 +61,7 @@ $NetBSD: patch-aa,v 1.5 2006/01/27 01:34:38 minskim Exp $
 -	$(INSTALL) tcl2c++ @prefix@/bin
 -	$(INSTALL) $(LIB_TCLCL) @prefix@/lib
 -	$(RANLIB)  @prefix@/lib/$(LIB_TCLCL)
-+	for f in *.h ; do \
++	for f in idlecallback.h iohandler.h rate-variable.h tclcl-config.h tclcl-mappings.h tclcl.h timer.h tracedvar.h; do \
 +		${INSTALL_DATA} $$f ${PREFIX}/include; \
 +	done
 +	${INSTALL_PROGRAM} tcl2c++ ${PREFIX}/bin
