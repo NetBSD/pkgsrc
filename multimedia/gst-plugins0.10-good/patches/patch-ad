@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.1 2006/01/30 21:20:42 rillig Exp $
+
+Keywords: c90
+
+--- gst/udp/gstmultiudpsink.c.orig	2006-01-10 15:01:57.000000000 +0100
++++ gst/udp/gstmultiudpsink.c	2006-01-30 21:34:54.000000000 +0100
+@@ -462,10 +462,10 @@ gst_multiudpsink_get_stats (GstMultiUDPS
+   find = g_list_find_custom (sink->clients, &udpclient,
+       (GCompareFunc) client_compare);
+   if (find) {
+-    client = (GstUDPClient *) find->data;
+-
+     GValue value = { 0 };
+ 
++    client = (GstUDPClient *) find->data;
++
+     /* Result is a value array of (bytes_sent, packets_sent, 
+      * connect_time, disconnect_time), all as uint64 */
+     result = g_value_array_new (4);
