@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2006/01/12 20:41:37 adam Exp $
+# $NetBSD: Makefile,v 1.6 2006/01/30 00:52:28 tron Exp $
 
-DISTNAME=	rtorrent-0.3.6
+DISTNAME=	rtorrent-0.4.3
 CATEGORIES=	net
 MASTER_SITES=	http://libtorrent.rakshasa.no/downloads/
 
@@ -13,6 +13,20 @@ USE_NCURSES=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 GCC_REQD+=		3.3
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(OPSYS:M*BSD) || ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly"
+MESSAGE_SRC=	${PKGDIR}/MESSAGE.BSD
+.endif
+
+.include "../../mk/compiler.mk"
+
+# See http://libtorrent.rakshasa.no/ticket/96
+.if !empty(CC_VERSION:Mgcc-4.*)
+CXXFLAGS+=	-fpermissive -fno-strength-reduce -fno-thread-jumps \
+		-fno-inline -fforce-addr
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/rtorrent
