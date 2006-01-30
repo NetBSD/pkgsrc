@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2006/01/27 01:34:38 minskim Exp $
+$NetBSD: distinfo,v 1.8 2006/01/30 00:09:10 minskim Exp $
 
 SHA1 (tclcl-1.17.tar.gz) = 3b263e86c17d7e456926f981d5df0e381e217de3
 RMD160 (tclcl-1.17.tar.gz) = c2741cee05616f4b45e605e93896407592188855
 Size (tclcl-1.17.tar.gz) = 157001 bytes
-SHA1 (patch-aa) = e469776c4dafc49eb1846a489a3ccfa227180c4e
+SHA1 (patch-aa) = ad3327a2176745c103d55610015aa4d165ae78f6
 SHA1 (patch-ab) = 8df79a3911c55aa21eaa9d4a2cbb7f82dc9870a1
 SHA1 (patch-ac) = 53848b364da6953b1d0a0aa7cb609692ea53427c
