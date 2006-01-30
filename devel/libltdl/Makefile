@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/11/26 09:39:30 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/30 22:19:57 tv Exp $
 #
 
 .include "../../devel/libtool/Makefile.common"
@@ -13,7 +13,6 @@ CONFLICTS+=	libtool<=1.3.5nb11 libtool-base<=1.5.10nb4
 USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=--enable-libltdl-install
-CONFIGURE_DIRS=	${WRKSRC}/libltdl
 BUILD_DIRS=	${WRKSRC}/libltdl
 
 .include "../../mk/dlopen.buildlink3.mk"
