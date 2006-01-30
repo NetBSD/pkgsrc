@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/01/21 20:40:00 tron Exp $
+# $NetBSD: Makefile,v 1.14 2006/01/30 17:24:49 joerg Exp $
 
 PKGNAME=		openoffice-bin-2.0.1
 CATEGORIES=		misc
@@ -28,7 +28,7 @@ CONFLICTS+=		openoffice2-bin-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
 
 ONLY_FOR_PLATFORM=	NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
-ONLY_FOR_PLATFORM+=	Linux-*-i[3-6]86
+ONLY_FOR_PLATFORM+=	Linux-*-i[3-6]86 DragonFly-*-i386
 
 TEMP?=			${WRKSRC}
 CHECK_SHLIBS=		no
@@ -56,6 +56,11 @@ WRKSRC=		${WRKDIR}/OOA680_m1_native_packed-1_en-US.8990/packages
 DISTNAME=	OOo_2.0.1_LinuxIntel_install
 WRKSRC=		${WRKDIR}/OOA680_m1_native_packed-1_en-US.8990/RPMS
 .  endif
+.endif
+
+.if ${OPSYS} == "DragonFly"
+DISTNAME=	OOo_2.0.1_LinuxIntel_install
+WRKSRC=		${WRKDIR}/OOA680_m1_native_packed-1_en-US.8990/RPMS
 .endif
 
 .if ${OPSYS} == "Linux"
