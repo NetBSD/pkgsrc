@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12730 2006/01/30 09:25:58 adam Exp $
+$NetBSD: CHANGES,v 1.12731 2006/01/30 09:35:39 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -628,3 +628,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/rox to 2.4.1 [rxg 2006-01-30]
 	Added sysutils/pcmanfm version 0.1.8.9 [xtraeme 2006-01-30]
 	Updated math/fftw to 3.1 [adam 2006-01-30]
+	Updated pkgtools/pkglint to 4.55 [rillig 2006-01-30]
