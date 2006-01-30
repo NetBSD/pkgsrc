@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2006/01/30 19:21:41 joerg Exp $
+
+--- libegg/toolbar/eggtoolbar.c.orig	2006-01-30 19:07:59.000000000 +0000
++++ libegg/toolbar/eggtoolbar.c
+@@ -2570,7 +2570,7 @@ egg_toolbar_insert_widget (EggToolbar *t
+ 
+ GtkWidget*
+ egg_toolbar_append_element (EggToolbar          *toolbar,
+-			    GtkToolbarChildType  type,
++			    EggToolbarChildType  type,
+ 			    GtkWidget           *widget,
+ 			    const char          *text,
+ 			    const char          *tooltip_text,
+@@ -2587,7 +2587,7 @@ egg_toolbar_append_element (EggToolbar  
+ 
+ GtkWidget *
+ egg_toolbar_prepend_element (EggToolbar          *toolbar,
+-			     GtkToolbarChildType  type,
++			     EggToolbarChildType  type,
+ 			     GtkWidget           *widget,
+ 			     const char          *text,
+ 			     const char          *tooltip_text,
