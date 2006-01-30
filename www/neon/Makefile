@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/01/25 20:14:27 epg Exp $
+# $NetBSD: Makefile,v 1.35 2006/01/30 23:20:31 epg Exp $
 
 DISTNAME=		neon-0.25.5
 PKGREVISION=		1
@@ -16,6 +16,7 @@ USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE=	neon.pc.in
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--without-gssapi
 CONFIGURE_ARGS+=	--with-ssl=yes
 CONFIGURE_ARGS+=	--with-expat
 CONFIGURE_ARGS+=	--enable-shared
