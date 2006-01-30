@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 2006/01/30 21:20:42 rillig Exp $
+
+Keywords: c90
+
+--- gst/rtp/gstrtpmp4vdepay.c.orig	2006-01-10 15:01:57.000000000 +0100
++++ gst/rtp/gstrtpmp4vdepay.c	2006-01-30 21:34:26.000000000 +0100
+@@ -132,13 +132,12 @@ gst_rtp_mp4v_depay_setcaps (GstBaseRTPDe
+   GstRtpMP4VDepay *rtpmp4vdepay;
+   GstCaps *srccaps;
+   const gchar *str;
++  gint clock_rate = 90000;      // default
+ 
+   rtpmp4vdepay = GST_RTP_MP4V_DEPAY (depayload);
+ 
+   structure = gst_caps_get_structure (caps, 0);
+ 
+-  gint clock_rate = 90000;      // default
+-
+   if (gst_structure_has_field (structure, "clock-rate")) {
+     gst_structure_get_int (structure, "clock-rate", &clock_rate);
+   }
