@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.92 2006/01/21 11:29:32 rillig Exp $
+# $NetBSD: build,v 1.93 2006/01/30 20:06:51 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -442,7 +442,7 @@ ${MKDIR} "${report_dir}"
 #
 case $noemail in
 no)	cat "${report_dir}/${REPORT_TXT_FILE}" \
-	| ${MAIL_CMD} -s "pkgsrc ${OPSYS} ${OS_VERSION}/${MACHINE_ARCH} bulk build results $BUILDDATE" "$ADMIN"
+	| ${MAIL_CMD} -s "pkgsrc ${OPSYS} ${OS_VERSION}/${MACHINE_ARCH} bulk build results ${bulk_build_id}" "$ADMIN"
 esac
 
 # Done!
