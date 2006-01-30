@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/25 16:39:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2006/01/30 22:36:01 wiz Exp $
 #
 
 DISTNAME=		kiax-0.8.4
@@ -10,6 +10,7 @@ MAINTAINER=		reinoud@NetBSD.org
 HOMEPAGE=		http://www.kiax.org/
 COMMENT=		Open internet telephony system
 
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 HAS_CONFIGURE=		yes
