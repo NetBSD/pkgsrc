@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.34 2005/05/18 11:57:12 adam Exp $
+$NetBSD: patch-aa,v 1.35 2006/01/30 22:19:56 tv Exp $
 
---- Makefile.in.orig	Mon May 16 11:33:40 2005
+--- Makefile.in.orig	2005-12-18 17:13:48.000000000 -0500
 +++ Makefile.in
-@@ -211,7 +211,7 @@ subdirs = @subdirs@
- sysconfdir = @sysconfdir@
- target_alias = @target_alias@
+@@ -220,7 +220,7 @@ target_alias = @target_alias@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
  AUTOMAKE_OPTIONS = 1.3e gnu
 -BUILD_SUBDIRS = . libltdl doc tests
 +BUILD_SUBDIRS = . libltdl tests
