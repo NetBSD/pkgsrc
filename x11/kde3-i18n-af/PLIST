@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/12/11 12:36:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/01/31 23:08:47 markd Exp $
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/alsaplayerui.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/amor.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/appletproxy.mo
@@ -54,6 +54,7 @@ ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/katetextfilter.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/katexmltools.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/katomic.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kaudiocreator.mo
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kay.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kbabel.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kbackgammon.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kbattleship.mo
@@ -104,6 +105,7 @@ ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kcmlaunch.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kcmlayout.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kcmlilo.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kcmlocale.mo
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kcmmedia.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kcmnic.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kcmnotify.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kcmperformance.mo
@@ -200,6 +202,7 @@ ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kio_finger.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kio_fish.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kio_floppy.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kio_help.mo
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kio_home.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kio_imap4.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kio_lan.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kio_ldap.mo
@@ -216,6 +219,8 @@ ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kio_sftp.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kio_smb.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kio_smtp.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kio_system.mo
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kio_tar.mo
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kio_thumbnail.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kio_trash.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kioexec.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kiten.mo
@@ -297,6 +302,7 @@ ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/ksplashthemes.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kstars.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kstart.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kstartperf.mo
+${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kstyle_highcontrast_config.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kstyle_keramik_config.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/kstyle_plastik_config.mo
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/ksync.mo
