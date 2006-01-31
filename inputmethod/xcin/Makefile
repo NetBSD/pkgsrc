@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/01/28 03:03:11 rxg Exp $
+# $NetBSD: Makefile,v 1.19 2006/01/31 11:59:02 rxg Exp $
 #
 
 DISTNAME=	xcin-2.5.3.pre2
@@ -10,6 +10,8 @@ MASTER_SITES=	ftp://xcin.linux.org.tw/pub/xcin/xcin/devel/
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://xcin.linux.org.tw/
 COMMENT=	Chinese XIM server
+
+BUILD_USES_MSGFMT=	yes
 
 WRKSRC=			${WRKDIR}/xcin
 USE_PKGLOCALEDIR=	yes
