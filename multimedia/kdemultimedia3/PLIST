@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/01/04 22:35:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2006/01/31 22:33:02 markd Exp $
 bin/artsbuilder
 bin/artscontrol
 bin/juk
@@ -495,6 +495,7 @@ share/doc/kde/HTML/en/kscd/kscd3.png
 share/doc/kde/HTML/en/kscd/kscd5.png
 share/doc/kde/HTML/en/kscd/kscd6.png
 share/doc/kde/HTML/en/kscd/kscd9.png
+share/doc/kde/HTML/en/kscd/kscdannounc.png
 share/doc/kde/HTML/en/noatun/common
 share/doc/kde/HTML/en/noatun/index.cache.bz2
 share/doc/kde/HTML/en/noatun/index.docbook
