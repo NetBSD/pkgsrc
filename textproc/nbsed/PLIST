@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/08/27 03:45:08 jlam Exp $
-bin/nbsed
-man/cat1/nbsed.0
-man/man1/nbsed.1

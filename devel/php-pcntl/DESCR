@@ -1,8 +1,0 @@
-PHP is a programming language designed to be embedded into web pages.
-This module provides support for Process Control functions.
-
-Process Control support in PHP implements the Unix style of process
-creation, program execution, signal handling and process termination.
-Process Control should not be enabled within a webserver environment
-and unexpected results may happen if any Process Control functions
-are used within a webserver environment.

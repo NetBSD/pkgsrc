@@ -1,6 +1,0 @@
-The beta of xmove 2.0.  2.0 adds support for 16 and 24 bit displays,
-not to mention several bug fixes.
-
-xmove is a pseudoserver (aka proxy server) which allows you to
-dynamically move an X application between servers, and screens within
-a server.

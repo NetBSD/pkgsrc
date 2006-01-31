@@ -1,5 +1,0 @@
-This package is GNU GREP.
-
-Grep searches the named input files (or standard input if no files are
-named, or the file name - is given) for lines containing a match to
-the given pattern. By default, grep prints the matching lines.

@@ -1,3 +1,0 @@
-  DACT is a compression tool designed to compress a file dynamically,
-choosing the algorithm that works best per block of input data to produce
-an overall smaller output file.

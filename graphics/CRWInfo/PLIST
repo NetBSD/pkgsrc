@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/14 16:02:09 jmmv Exp $
-bin/crwinfo
-share/doc/crwinfo/README
-@dirrm share/doc/crwinfo

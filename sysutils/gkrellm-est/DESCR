@@ -1,7 +1,0 @@
-gkrellm-est is a GKrellM plugin that displays the current frequency of the
-processor, and allows the user to change it by clicking the label, either
-with left button (to increase it) or with the right one (to decrease it).
-
-It only works on NetBSD and with EST (Enhanced Speedstep Technology)
-processors, such as the Centrino.  A driver for this was introduced in
-NetBSD-current on April, 30th, 2004.

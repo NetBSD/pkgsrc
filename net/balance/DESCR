@@ -1,4 +1,0 @@
-Balance is a successful load balancing solution being a simple but
-powerful generic tcp proxy with round robin load balancing and
-failover mechanisms.  Its behaviour can be controlled at runtime using
-a simple command line syntax.

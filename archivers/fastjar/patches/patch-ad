@@ -1,9 +1,0 @@
-$NetBSD: patch-ad,v 1.3 2005/10/31 04:32:10 minskim Exp $
-
---- jartool.c.orig	2001-01-11 00:38:15.000000000 -0800
-+++ jartool.c
-@@ -171,4 +171,2 @@ static char rcsid[] = "$Id: jartool.c,v 
- 
--extern int errno;
--
- void usage(char*);

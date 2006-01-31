@@ -1,8 +1,0 @@
-Class::Factory:Util contains methods that are useful for factory
-classes.
-
-When this module is loaded, it creates a method in its caller
-named subclasses().  This method returns a list of the available
-subclasses for the package.  It does this by looking in the
-library directory containing the caller, and finding any modules
-in its immediate subdirectories.

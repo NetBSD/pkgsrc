@@ -1,7 +1,0 @@
-This  Perl5 module  is  designed as  a  help  for  managing (ranges
-of) IP addresses. It includes efficient implementations for most
-common tasks done  to subnets or  ranges of  IP addresses,  namely
-verifying  if an address is within a subnet, comparing, looping,
-splitting subnets into longer prefixes, compacting addresses to
-the shortest prefixes, etc. Both IPv4 and IPv6 addresses are
-supported.

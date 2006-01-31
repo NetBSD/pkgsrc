@@ -1,9 +1,0 @@
-ht is a file viewer, editor and analyzer for text, binary, and (especially)
-executable files.  It recognizes the most common executable formats, like
-COFF, ELF, LE, MZ, NE, PE32, PE64 and Java .class files, and can disassemble
-them.
-
-It can also find branch sources and destinations recursively, find procedure
-entries, creates labels based on this information, create xref information,
-interactively analyse unexplored code, create/rename/delete labels and
-create/edit comments.

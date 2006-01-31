@@ -1,3 +1,0 @@
-FISG is an IRC statistics generator that is meant to be, well, fast.  It
-handles large log files much more efficiently than PISG, and doesn't require
-perl.

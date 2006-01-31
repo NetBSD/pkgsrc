@@ -1,5 +1,0 @@
-ggiterm is a terminal emulator for the GGI graphics library. It
-uses freetype to display internationalized and (depending on the
-color depth) antialiased text. It is also backward compatible with
-the wide- spread DEC vt100 terminal, but features nifty additions
-to the old standard, like colors.

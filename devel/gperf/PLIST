@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2004/02/15 22:18:26 seb Exp $
-bin/gperf
-man/man1/gperf.1

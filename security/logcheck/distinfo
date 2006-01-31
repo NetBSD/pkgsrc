@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 13:10:08 agc Exp $
-
-SHA1 (logcheck-1.1.1.tar.gz) = 18f89f0dacfe9ff31076c006d58e1bcfedaa7f22
-RMD160 (logcheck-1.1.1.tar.gz) = 1865f598b4bf32af466d4aec5e0803249a61c442
-Size (logcheck-1.1.1.tar.gz) = 30267 bytes
-SHA1 (patch-aa) = 692e07b102925cad20e4e3e1ccea498d1aac72d5
-SHA1 (patch-ab) = 8392ffb3aea380869ed8ba33e58af3301708da41

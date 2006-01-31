@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/04/07 13:43:15 ben Exp $
-
-SHA1 (libmatchbox-1.6.tar.gz) = 1a473949fccb9009d2ef6977138b6a8e05a1f770
-RMD160 (libmatchbox-1.6.tar.gz) = 13dc0816b58184e2fd898f787bdeafc781aede0d
-Size (libmatchbox-1.6.tar.gz) = 393371 bytes
-SHA1 (patch-aa) = 43720a2e1929e88d903c6784ff96f501302919fa

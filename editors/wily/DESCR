@@ -1,4 +1,0 @@
-This software is a UTF-8 aware clone of the Plan9 editor and working
-environment Acme.  Most of the work is done by using mouse clicks, and
-by mouse "chording", where two buttons are pressed at the same time.
-A 3-button mouse is thus needed.

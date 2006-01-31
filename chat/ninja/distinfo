@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 15:59:13 agc Exp $
-
-SHA1 (ninja-1.5.8.1.tar.gz) = f2a9a0173799e1eab2bd6c738e0792342692956d
-RMD160 (ninja-1.5.8.1.tar.gz) = a8189f4d8ab035a528723cf102cd2e719c72a24b
-Size (ninja-1.5.8.1.tar.gz) = 651142 bytes

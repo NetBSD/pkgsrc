@@ -1,3 +1,0 @@
-This package provides a GNOME Panel Applet that displays a drop-down
-menu showing your browser bookmarks.  The bookmarks list is read from
-the browser pointed by the 'http' URL handler in your GNOME Desktop.

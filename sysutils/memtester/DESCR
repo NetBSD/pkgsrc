@@ -1,7 +1,0 @@
-memtest is a utility for testing the memory subsystem in a computer
-to determine if it is faulty. The original source was by Simon
-Kirby <sim@stormix.com>. Charles Cazabon has by this time completely
-rewritten the original source, and added many additional tests to
-help catch borderline memory. He also rewrote the original tests
-(which catch mainly memory bits which are stuck permanently high
-or low) so that they run approximately an order of magnitude faster.

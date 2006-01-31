@@ -1,8 +1,0 @@
-mldonkey is a client to access the eDonkey network, a peer-to-peer network
-particularly efficient for big files thanks to a multi-sources download
-protocol.  It is written in Objective-Caml, and comes with its own GTK GUI,
-an HTTP interface and a telnet interface.  It works on most UNIX platforms.
-
-This package provides the GTK GUI interface, but not the core.  You will
-have to install it (using the mldonkey package) in the same machine or
-another one.

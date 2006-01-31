@@ -1,8 +1,0 @@
-$NetBSD: patch-ab,v 1.4 2004/07/19 13:18:31 wiz Exp $
-
---- htmllint.caller.orig	2004-07-19 15:07:03.000000000 +0200
-+++ htmllint.caller
-@@ -0,0 +1,3 @@
-+#!/bin/sh
-+
-+@PREFIX@/share/httpd/htdocs/htmllint/htmllint $*

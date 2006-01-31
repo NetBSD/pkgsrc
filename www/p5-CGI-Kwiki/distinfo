@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:35 wiz Exp $
-
-SHA1 (CGI-Kwiki-0.18.tar.gz) = 1c2fc5b172f6ef9b0f4fe45f10c7033c57fa4d0c
-RMD160 (CGI-Kwiki-0.18.tar.gz) = 83c18c79eb93ead2614fcd9b533aeb17bc1a1d6f
-Size (CGI-Kwiki-0.18.tar.gz) = 76855 bytes
-SHA1 (patch-aa) = 19d182028f5747b0bf9948aa7be3209cb73107cf
-SHA1 (patch-ab) = e96fba2836405db07f2999b84c0ea43ec818ac99
-SHA1 (patch-ac) = 94dc4ebe05ec75625196c5476ace108826a5e762
-SHA1 (patch-ad) = ff33b19f8824b57cfbef3d8184fabb7b812c9a91

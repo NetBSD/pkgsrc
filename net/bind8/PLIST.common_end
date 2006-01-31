@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST.common_end,v 1.1 2003/07/31 23:58:48 seb Exp $
-@dirrm share/doc/html/bind8
-@dirrm share/doc/bind8
-@dirrm include/bind/sys
-@dirrm include/bind/isc
-@dirrm include/bind/arpa
-@dirrm include/bind

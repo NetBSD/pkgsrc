@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 20:39:49 agc Exp $
-
-SHA1 (mserv-0.39a.tar.gz) = cb101fe7e4aca8b5fd950eec408938a2b3bf1a1b
-RMD160 (mserv-0.39a.tar.gz) = 5afd2e4573594a7a8526148a61b6b49adce6aa62
-Size (mserv-0.39a.tar.gz) = 333570 bytes
-SHA1 (patch-aa) = 167417f1d0cd15bea6dbef46a3a0e0841d41fa4c
-SHA1 (patch-ab) = f6692d59b1da163a273639347cd53ee7c56ec64b
-SHA1 (patch-ac) = 47ac4716cbba0ff3f2acde1b896e56c309abe102

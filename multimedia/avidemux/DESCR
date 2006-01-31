@@ -1,5 +1,0 @@
-Avidemux is a graphical tool to edit video.  It can open several file
-formats, and various audio and video codecs.  Video can be edited,
-cut, appended, filtered (resize/crop/denoise), and re-encoded. Output
-file formats include Avi, MPEG1/2, MPEG2PS, OGM, and raw stripped audio
-or video.

@@ -1,4 +1,0 @@
-This package provides a program and library to download and upload waypoints,
-routes, and tracks to and from your GPS device. Upload and download is
-possible via the GARMIN interface. Current position obtainable via the NMEA
-Interface, supported by most GPS devices.

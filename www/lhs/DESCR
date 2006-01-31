@@ -1,5 +1,0 @@
-lhs is a beta version of very simple http server.  Only static files
-are supported - CGI, PHP and SSI are not allowed.  However, there is
-support for both IPv6 and SSL.  By default it will listen on ports
-8000 and 8001 and read files from ${PREFIX}/share/httpd/htdocs and
-will not change uid for other unless you use the -u option.

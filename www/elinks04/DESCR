@@ -1,5 +1,0 @@
-ELinks is an advanced and well-established text-mode web (HTTP/FTP/..) browser
-with a wide range of additional features and extensibility by the possibility
-to plug in own scripts in Lua language. This project aims to provide
-feature-rich version of Links, with more open patches/features inclusion
-policy. This OpenSource project is covered by the GNU General Public License.

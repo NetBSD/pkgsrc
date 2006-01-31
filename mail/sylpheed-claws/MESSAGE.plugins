@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.plugins,v 1.2 2005/03/06 16:45:47 chris Exp $
-
-To use ${PKGNAME}, you must manually load the plugin
-through Configuration/Plugins.
-
-===========================================================================

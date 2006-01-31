@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/05 12:49:19 wiz Exp $
-bin/gf2pbm
-bin/mftrace
-man/man1/mftrace.1
-${PYSITELIB}/afm.py
-${PYSITELIB}/afm.pyc
-${PYSITELIB}/tfm.py
-${PYSITELIB}/tfm.pyc

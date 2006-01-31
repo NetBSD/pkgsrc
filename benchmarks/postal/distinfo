@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/03/14 15:02:14 rillig Exp $
-
-SHA1 (postal-0.62.tgz) = 6379ac223964921963389c8c600a1ba4b24a6ab3
-RMD160 (postal-0.62.tgz) = 694800444ff33c7c64c5b7915ef5438fdb3605f3
-Size (postal-0.62.tgz) = 84506 bytes
-SHA1 (patch-aa) = ec272095d02d2b8cde4e1f798ac8bfb3212d7874
-SHA1 (patch-ab) = 3a14324d2203fc2f6e0e8028f937906c7d95e7e0

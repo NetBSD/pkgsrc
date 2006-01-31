@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 16:05:31 agc Exp $
-
-SHA1 (tkhylafax-3.1.tar.gz) = d26dae62369c1421fbfd27785c0af0a1a4f174d1
-RMD160 (tkhylafax-3.1.tar.gz) = d89207bfa630ae09866be8a73039f05c62251c3f
-Size (tkhylafax-3.1.tar.gz) = 26696 bytes
-SHA1 (patch-aa) = 52ec8fc2fcd0b065c1623878962bfe8404335ceb
-SHA1 (patch-ab) = 5e0603062d97086fd0df469eb838c8f6342839c6

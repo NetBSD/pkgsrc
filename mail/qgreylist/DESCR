@@ -1,4 +1,0 @@
-qgreylist is a 'lite' version of greylisting. It greylists only by
-source IP address, mainly because it's written as a wrapper for
-qmail-smtpd so has no other information available. For home and
-small office use this works nearly as well.

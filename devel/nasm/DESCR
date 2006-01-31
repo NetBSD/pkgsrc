@@ -1,5 +1,0 @@
-The Netwide Assembler, NASM, is an 80x86 assembler designed for portability
-and modularity.  It supports a range of object file formats, including Linux
-a.out and ELF, NetBSD/FreeBSD, COFF, Microsoft 16-bit OBJ and Win32.  It will
-also output plain binary files.  Its syntax is designed to be simple and easy
-to understand, similar to Intel's but less complex.

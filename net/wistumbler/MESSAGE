@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2003/05/11 02:38:31 salo Exp $
-
-Please take care not to remove the card for the interface you are watching
-with wistumbler(1) -- the process will go into a busy loop and consume all
-available CPU time.  It can be killed without problems, though.
-
-===========================================================================

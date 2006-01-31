@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/09/07 20:17:46 bouyer Exp $
-
-SHA1 (gpsim-20050905.tar.gz) = 46e7d0d69695961aca4324d8d3267181bd641081
-RMD160 (gpsim-20050905.tar.gz) = 1b717f0e51440c4e2db72a4bdfb90d2e8d5e4a3d
-Size (gpsim-20050905.tar.gz) = 2027957 bytes
-SHA1 (patch-aa) = f7d1c04b216ecabaf3071f92c97c7436a54f1e87

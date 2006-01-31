@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/11/29 17:27:07 kim Exp $
-bin/normalize
-bin/normalize-mp3
-bin/normalize-ogg
-man/man1/normalize-mp3.1
-man/man1/normalize.1
-${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/normalize.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/normalize.mo

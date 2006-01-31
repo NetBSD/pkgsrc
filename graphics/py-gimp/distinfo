@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 08:45:12 agc Exp $
-
-SHA1 (pygimp-1.2.tar.gz) = cadeb4530d40438ea909e71403523a2b849491ad
-RMD160 (pygimp-1.2.tar.gz) = 2519469df17f2cb064c522c796af2a535c1fc439
-Size (pygimp-1.2.tar.gz) = 191775 bytes

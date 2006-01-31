@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/23 19:59:53 minskim Exp $
-
-SHA1 (teg-0.11.1.tar.gz) = dce0e76d3e45390c04bb2fac6f21693d467e48ad
-RMD160 (teg-0.11.1.tar.gz) = 77ca993f3b38309d5f255a709aa0064b11e2139a
-Size (teg-0.11.1.tar.gz) = 3805983 bytes
-SHA1 (patch-aa) = 8df1d95a0634d0683a55948947103ad300c8013e

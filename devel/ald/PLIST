@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/23 16:03:10 rillig Exp $
-bin/ald
-man/man8/ald.8
-share/doc/ald/ChangeLog
-share/doc/ald/INSTALL
-share/doc/ald/README
-@dirrm share/doc/ald

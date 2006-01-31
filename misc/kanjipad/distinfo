@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 11:02:53 agc Exp $
-
-SHA1 (kanjipad-2.0.0.tar.gz) = 477daae975996ee105ca401fb8083b636fd6d25c
-RMD160 (kanjipad-2.0.0.tar.gz) = 1fa3b86180929574109143b3936f7ce71b298c56
-Size (kanjipad-2.0.0.tar.gz) = 75930 bytes
-SHA1 (patch-aa) = 7064a80a06ea5e2129f609e73ad914941c245684

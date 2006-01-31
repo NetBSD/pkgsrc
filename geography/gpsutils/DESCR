@@ -1,3 +1,0 @@
-The gpsutils package covers some small applications to capture and convert
-data from a Garmin GPS receiver. These are based on a included more general
-GPS library (in C).

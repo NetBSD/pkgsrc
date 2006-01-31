@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/09 14:35:39 jschauma Exp $
-bin/bbmail
-man/man1/bbmail.1
-share/bbtools/bbmail.bb
-@unexec ${RMDIR} %D/share/bbtools 2>/dev/null || ${TRUE}

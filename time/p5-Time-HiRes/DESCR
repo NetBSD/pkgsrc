@@ -1,3 +1,0 @@
-Implement usleep, ualarm, setitimer/getitimer and gettimeofday for Perl,
-as well as wrappers to implement time, sleep, and alarm that know about
-non-integral seconds.

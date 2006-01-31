@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/08/08 00:10:21 dillo Exp $
-
-SHA1 (REminiscence-0.1.6.tar.bz2) = 228284531638c1c928e681b1ccaf7ee6f2187b1f
-RMD160 (REminiscence-0.1.6.tar.bz2) = cec5bd010149d5c1e33d730106db34f46db1555f
-Size (REminiscence-0.1.6.tar.bz2) = 67820 bytes
-SHA1 (patch-aa) = 65d9951e4c37a811b37bc51155d1d2cbc067d3d4

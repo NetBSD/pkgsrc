@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.end,v 1.1 2005/03/17 23:17:06 wiz Exp $
-@unexec ${RMDIR} %D/share/mc 2>/dev/null || ${TRUE}

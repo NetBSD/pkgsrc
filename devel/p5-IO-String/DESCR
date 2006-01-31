@@ -1,4 +1,0 @@
-IO::String is an IO::File (and IO::Handle) compatible class that
-read or write data from in-core strings.  It is really just a
-simplification of Eryq's IO-stringy modules.  As such IO::String
-is a replacement for IO::Scalar.

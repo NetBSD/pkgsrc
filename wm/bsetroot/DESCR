@@ -1,4 +1,0 @@
-This package includes two tools, bsetbg and bsetroot, used by the Blackbox
-windowmanager to set the root window's properties.  Blackbox shares code
-with the Openbox and Hackedbox window managers, which also utilize these
-tools, allowing these window managers to share some themes as well.

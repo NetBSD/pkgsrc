@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 08:45:03 agc Exp $
-
-SHA1 (autotrace-0.31.1.tar.gz) = 679e4912528030b86f23db5b99e60f8e7df883fd
-RMD160 (autotrace-0.31.1.tar.gz) = 9d008c6c519da7e006cb83ae6012f4d9e4e8b0ba
-Size (autotrace-0.31.1.tar.gz) = 362718 bytes

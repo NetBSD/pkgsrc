@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.15 2005/04/05 09:27:17 wiz Exp $
-
-SHA1 (cvsweb-3.0.5.tar.gz) = 520c1bd1f295663665b4ab85843f3b321ff804ea
-RMD160 (cvsweb-3.0.5.tar.gz) = cb15a893c6f7fc2ca6892c612523cd96f8d3c2f0
-Size (cvsweb-3.0.5.tar.gz) = 72199 bytes

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/10/12 21:52:30 jmmv Exp $
-
-SHA1 (gnome-menus-2.12.0.tar.bz2) = bc6012c52c27fcd0506742cde93c00e00bf545fe
-RMD160 (gnome-menus-2.12.0.tar.bz2) = 72caca74259e2cb7ab212f314933354c9bee6a31
-Size (gnome-menus-2.12.0.tar.bz2) = 393280 bytes
-SHA1 (patch-aa) = 8dd7584a5ff414960cac661643fdfa734338d3a7

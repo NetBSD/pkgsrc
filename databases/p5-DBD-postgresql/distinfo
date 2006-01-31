@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.16 2005/04/08 14:35:31 jwise Exp $
-
-SHA1 (DBD-Pg-1.41.tar.gz) = 19bee3f504cc79118f8085e8b46b03ffe4168590
-RMD160 (DBD-Pg-1.41.tar.gz) = da6810212b3c0ad5ef08163c052c9c8c939a2e71
-Size (DBD-Pg-1.41.tar.gz) = 118975 bytes

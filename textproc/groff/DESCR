@@ -1,3 +1,0 @@
-GNU groff document formatting system.
-Includes implementations of troff, pic, eqn, tbl, refer, and some
-macro packages and drivers (for ps, tex, dvi, lj4, html, and tty).

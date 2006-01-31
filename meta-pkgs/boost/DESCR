@@ -1,4 +1,0 @@
-Boost is a set of free, peer-reviewed, C++ libraries.  The emphasis is on
-portable libraries which work well with the ISO C++ Standard Library.
-
-This is a meta package that depends on all other components of Boost.

@@ -1,5 +1,0 @@
-GnuPG 1.9 is the future version of GnuPG; it is based on the gnupg-1.3
-code and the previous newpg package.  It will eventually lead to a
-GnuPG 2.0 release. This pagkage provides several utilities that are used
-by mail clients, such as Kmail and Balsa, to provide OpenPGP/MIME
-and SMIME support.

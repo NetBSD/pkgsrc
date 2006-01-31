@@ -1,9 +1,0 @@
-$NetBSD: patch-co,v 1.1 2001/12/28 14:58:06 tron Exp $
-
---- olwm/wcstocts.c.orig	Tue Jun 29 07:12:00 1993
-+++ olwm/wcstocts.c	Fri Dec 28 15:55:43 2001
-@@ -1,4 +1,3 @@
--#ident  "@(#)wcstocts.c	1.3    93/06/28 SMI"
-  
- /*
-  *      (c) Copyright 1989 Sun Microsystems, Inc.

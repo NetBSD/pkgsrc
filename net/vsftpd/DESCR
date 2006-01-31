@@ -1,8 +1,0 @@
-vsftpd is an FTP server, or daemon.  The "vs" stands for Very Secure.
-Obviously this is not a guarantee, but a reflection that I have written
-the entire codebase with security in mind, and carefully designed the program
-to be resilient to attack.
-
-Recent evidence suggests that vsftpd is also extremely fast (and this is
-before any explicit performance tuning!)  In tests against wu-ftpd, vsftpd
-was always faster, supporting over twice as many users in some tests.

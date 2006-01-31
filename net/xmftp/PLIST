@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/21 10:47:31 rh Exp $
-bin/xmftp
-share/doc/xmftp/BUGS
-share/doc/xmftp/CHANGES
-share/doc/xmftp/FAQ
-@dirrm share/doc/xmftp

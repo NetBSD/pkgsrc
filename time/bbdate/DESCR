@@ -1,5 +1,0 @@
-This tool displays the date in an decorated window, simulating the
-look of the Blackbox toolbar (Blackbox is a Windowmanager for X11).
-To copy this look a great deal of the code is taken from Blackbox.
-
-You can find blackbox in pkgsrc/wm/blackbox.

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/07/24 18:24:45 kristerw Exp $
-
-SHA1 (sl-3.03p5/sl.tar) = 57e18b4333e05be67faff58c42a06fcbc231def9
-RMD160 (sl-3.03p5/sl.tar) = 8bf03c727cafeb8873377a1bfd17c3ff8bd6dd29
-Size (sl-3.03p5/sl.tar) = 20480 bytes
-SHA1 (sl-3.03p5/sl5.patch) = b8be0db3a026ea4192557dbd9c5662521bdd3a29
-RMD160 (sl-3.03p5/sl5.patch) = 19829a2bb3fc7f4b702d6a9224c0e9c1d45ab594
-Size (sl-3.03p5/sl5.patch) = 32549 bytes
-SHA1 (patch-aa) = 60d53ea5afc1e2064bf2981beb72adbef8c1fe20

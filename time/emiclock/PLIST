@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/03 03:23:23 jschauma Exp $
-bin/emiclock
-lib/X11/EmiClock/myu.au
-lib/X11/app-defaults/EmiClock
-lib/X11/ja_JP.eucJP/app-defaults/EmiClock
-${IMAKE_MAN_DIR}/emiclock.${IMAKE_MANNEWSUFFIX}
-@dirrm lib/X11/EmiClock

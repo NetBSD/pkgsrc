@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/08/26 08:32:13 adam Exp $
-
-SHA1 (tcptrace-6.6.7.tar.gz) = ae4d10a0829c57f2eda17e63f593e558f52b7f24
-RMD160 (tcptrace-6.6.7.tar.gz) = 1dd0f373f766322343ffad59d0655eba4c6682e0
-Size (tcptrace-6.6.7.tar.gz) = 3773308 bytes
-SHA1 (patch-aa) = c2ff30c18659f803160fbb0567acdffbbd1b4b60

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 12:06:54 agc Exp $
-
-SHA1 (djbfft-0.76.tar.gz) = df9d258a75183c10592d937ee2d2befc01a8a0f6
-RMD160 (djbfft-0.76.tar.gz) = 46de3a7ed5d6ca4b245d02a12d969702e57f7381
-Size (djbfft-0.76.tar.gz) = 80092 bytes
-SHA1 (patch-aa) = e148c738090c75576d79e1b5359ada19ccf850ac
-SHA1 (patch-ab) = 7aff0e24fd1caf182c9d825f596aaeaf8260ff23
-SHA1 (patch-ac) = 971cfac6454bba698966c574c50b55088d40a400

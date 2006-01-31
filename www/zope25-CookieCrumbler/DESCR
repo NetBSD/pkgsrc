@@ -1,7 +1,0 @@
-CookieCrumbler lets you set up cookie-based authentication even
-when your user folder does not support cookies.  Zope 2.3.x or
-above is required.
-
-Just add a CookieCrumbler instance to the folder where your
-acl_users is located.  You can optionally add the login_form,
-logged_in, and logged_out DTMLMethods at the same time.

@@ -1,7 +1,0 @@
-XOSD is a simple library to display shaped text on your X display,
-like a TV On Screen Display.  Aside from the library, this package
-contains a simple example program that can display system logs
-overlayed on your desktop.
-
-The XOSD library requires an X Window System compiled with threading
-support to work properly, particularly the Xlib library.

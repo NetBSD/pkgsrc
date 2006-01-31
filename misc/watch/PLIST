@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:29:54 zuntum Exp $
-bin/watch
-man/cat1/watch.0
-man/man1/watch.1

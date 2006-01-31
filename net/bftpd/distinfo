@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:13:42 agc Exp $
-
-SHA1 (bftpd-1.0.24.tar.gz) = 4a047778e9435fc9221d02c1093f040186bb88d7
-RMD160 (bftpd-1.0.24.tar.gz) = 6eb162a5d692c5df2811c24fd07d40193e77d095
-Size (bftpd-1.0.24.tar.gz) = 75995 bytes
-SHA1 (patch-aa) = e8114ee69380fcf1d765abe8fadfba2b2d4ee248
-SHA1 (patch-ab) = faef48266dd0fb7b095738207be2b26ee34e9359

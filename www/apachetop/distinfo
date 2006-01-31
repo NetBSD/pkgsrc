@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/10/06 11:26:18 sketch Exp $
-
-SHA1 (apachetop-0.12.5.tar.gz) = b41d3c68478e3cd378988834f32ce9a33975c67e
-RMD160 (apachetop-0.12.5.tar.gz) = a46fb8e850d6d98ce38aaa97fb2ea62553091ded
-Size (apachetop-0.12.5.tar.gz) = 126967 bytes
-SHA1 (patch-aa) = eae05f08dc87ba367256d632e8b95d186955e4dc

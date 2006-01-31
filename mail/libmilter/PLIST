@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/23 13:03:31 markd Exp $
-include/libmilter/mfapi.h
-include/libmilter/mfdef.h
-lib/libmilter.a
-@dirrm include/libmilter

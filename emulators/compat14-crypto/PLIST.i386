@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.i386,v 1.1.1.1 2002/08/13 03:15:24 jdarrow Exp $
-${COMPAT_LIBDIR}/libi386.so.0.2
-${COMPAT_LIBDIR}/libkeycap.so.0.0

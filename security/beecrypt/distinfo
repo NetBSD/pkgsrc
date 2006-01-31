@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 13:10:05 agc Exp $
-
-SHA1 (beecrypt-4.1.1.tar.gz) = 5731fd4c6f960a5e9474f1f87611f88667cf98da
-RMD160 (beecrypt-4.1.1.tar.gz) = f284c702ef7b0fe703a669c7a18f0a89eaaa6f93
-Size (beecrypt-4.1.1.tar.gz) = 774424 bytes

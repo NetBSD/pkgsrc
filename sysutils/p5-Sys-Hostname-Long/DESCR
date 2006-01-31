@@ -1,2 +1,0 @@
-This Perl module tries to determine the full host name in a portable way
-on multiple operating systems (mac, windows, unix*).

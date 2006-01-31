@@ -1,3 +1,0 @@
-Psify converts files to POSTSCRIPT format for printing on
-a POSTSCRIPT printer.  Psify will work with any ASCII file,
-but is meant for printing C, CLU and ARGUS programs.

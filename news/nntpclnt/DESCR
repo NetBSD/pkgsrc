@@ -1,4 +1,0 @@
-`nntpclnt' is the reference implementation of the NNTP client routines.
-Included in this package is the commonly-used `inews' posting program and
-a library useful to link to programs that simplifies NNTP implementation
-throughout a system.

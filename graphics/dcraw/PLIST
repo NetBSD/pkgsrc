@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/20 13:43:28 drochner Exp $
-bin/dcraw
-man/man1/dcraw.1

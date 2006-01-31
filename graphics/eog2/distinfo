@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.17 2005/10/14 21:52:14 jmmv Exp $
-
-SHA1 (eog-2.12.1.tar.bz2) = 48b1df3b064dc75da9a83e74d87ecb3129c4120f
-RMD160 (eog-2.12.1.tar.bz2) = 6c1a4b3ad4ced2b62973c84d773f4ee3620caf95
-Size (eog-2.12.1.tar.bz2) = 799227 bytes
-SHA1 (patch-aa) = b28deb8fdf3b876e0812f2fdaf4db3b98aa99a1b
-SHA1 (patch-ab) = d59b28e78e66406c624968d72cece1ca60a68684

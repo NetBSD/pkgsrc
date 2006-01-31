@@ -1,2 +1,0 @@
-WeakRef allows two Perl datastructures to refer to one another but
-still allow Perl 5 garbage collection to occur at the proper time.

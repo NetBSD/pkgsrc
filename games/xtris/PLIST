@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/08 22:34:54 rillig Exp $
-bin/xtbot
-bin/xtris
-bin/xtserv
-man/man6/xtbot.6
-man/man6/xtris.6
-man/man6/xtserv.6

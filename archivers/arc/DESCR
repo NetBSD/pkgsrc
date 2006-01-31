@@ -1,6 +1,0 @@
-This is the ARC File Archive Utility.  ARC is used to create and
-maintain file archives.  It can automatically compress the files
-being archived. It provides repeated-character compression, dynamic
-Lempel-Zev (LZW) compression, or no compression. ARC was originally
-written in 1985. This package also includes marc for merging ARC
-archives.

@@ -1,6 +1,0 @@
-The goal of the Subversion project is to build a version control system that
-is a compelling replacement for CVS in the open source community. The software
-is released under an Apache/BSD-style open source license.
-
-This is a meta-package.  It installs no files, but it depends on all
-the Subversion components.

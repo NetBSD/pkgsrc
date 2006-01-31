@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/10/16 12:24:06 jmmv Exp $
-
-SHA1 (poppler-0.4.2.tar.gz) = fa1dec65f0df87f9348441563593915344caf9be
-RMD160 (poppler-0.4.2.tar.gz) = e81a8d900c4f3ca51b09ebec8f0ca62b0165d3a3
-Size (poppler-0.4.2.tar.gz) = 777935 bytes

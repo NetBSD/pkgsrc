@@ -1,5 +1,0 @@
-DASM is a highly evolved cross-assembler for 6502, 6803 and 68HC11
-processors.  It is very popular for hacking/cross-developing on old
-6502-based video game systems from Atari, Nintendo, etc.  DASM
-processes output from the Distella Atari ROM disassembler without
-modification.

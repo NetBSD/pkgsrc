@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 16:33:08 agc Exp $
-
-SHA1 (perl-5.6.1.tar.gz) = c718b38685f90d51a9a6b1b008de0d7d198c0744
-RMD160 (perl-5.6.1.tar.gz) = 4062e3d43e7a860197ff73ab5083ddb2e5909cde
-Size (perl-5.6.1.tar.gz) = 5983695 bytes
-SHA1 (patch-aa) = 5b7442096389bade6baed05fac4c5f5ff698a9d0

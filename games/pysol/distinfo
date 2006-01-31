@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 23:12:01 agc Exp $
-
-SHA1 (pysol-4.81.tar.bz2) = 91b441fa25e18c7fcfaae1ad9aac23962524c94c
-RMD160 (pysol-4.81.tar.bz2) = b69cd35f4b6347307e510bb9cd2b2fe03a122bdb
-Size (pysol-4.81.tar.bz2) = 3379257 bytes
-SHA1 (pysol-cardsets-4.40.tar.bz2) = a8cbb2bb559d05883277e1d1b8f774784b968dfe
-RMD160 (pysol-cardsets-4.40.tar.bz2) = 6bc56ad23f59e0cbd40c493b11ec040533a9741b
-Size (pysol-cardsets-4.40.tar.bz2) = 17260953 bytes

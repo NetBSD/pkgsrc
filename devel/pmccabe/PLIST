@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/24 11:19:00 agc Exp $
-bin/codechanges
-bin/decomment
-bin/pmccabe
-bin/vifn
-man/man1/codechanges.1
-man/man1/decomment.1
-man/man1/pmccabe.1
-man/man1/vifn.1

@@ -1,3 +1,0 @@
-DVDview is a software only MPEG-1/2 video decoder. A special feature of the
-decoder is its ability to superimpose additional information to the video
-sequence like motion vectors or quantizer scales. It runs on any UNIX system.

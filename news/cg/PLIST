@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/08/25 21:50:27 jlam Exp $
-bin/cg
-man/man1/cg.1

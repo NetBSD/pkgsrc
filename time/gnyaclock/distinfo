@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 19:14:54 wiz Exp $
-
-SHA1 (gnya.shar) = 8d5ba47445bc28eb1cf5019d1e1cd0fd38b025c5
-RMD160 (gnya.shar) = f23bf47732b51ea03fbe4cabc13d20bcc9848247
-Size (gnya.shar) = 46266 bytes
-SHA1 (patch-aa) = 886cb708df64f04d4a13b24ca584c3480a5c835f
-SHA1 (patch-ab) = 6c79cb5d3d7eff42e0f5418c061feefac1672524

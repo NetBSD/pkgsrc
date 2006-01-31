@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 17:36:24 wiz Exp $
-
-SHA1 (xnodecor.c) = 612c75dfc5f2bf2b4fb245ae8f724c0c591ce469
-RMD160 (xnodecor.c) = 7b1bf96eb7f736a03e5dec25b89a2e216f9879d5
-Size (xnodecor.c) = 3838 bytes
-SHA1 (patch-aa) = 8c8077214bae1a72db099cffdffc18c15d1c3390

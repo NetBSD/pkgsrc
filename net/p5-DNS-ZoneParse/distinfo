@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:13:58 agc Exp $
-
-SHA1 (DNS-ZoneParse-0.95.tar.gz) = afcc0455b69de77f65663fa72af7b5616677ca94
-RMD160 (DNS-ZoneParse-0.95.tar.gz) = 120e01b6da7e90a321b0dee707a3a645c112151c
-Size (DNS-ZoneParse-0.95.tar.gz) = 9162 bytes

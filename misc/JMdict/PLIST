@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/07 17:49:45 wiz Exp $
-share/doc/JMdict/jmdict_proj_desc.html
-share/JMdict/JMdict.dtd
-share/JMdict/JMdict
-@dirrm share/JMdict
-@dirrm share/doc/JMdict

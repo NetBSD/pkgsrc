@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:14:02 agc Exp $
-
-SHA1 (GeoIP-Python-1.2.0.tar.gz) = ac9b253403fb4db2fdc8fd4c578af837e4f3c8fa
-RMD160 (GeoIP-Python-1.2.0.tar.gz) = f630459070e48ecfe7d0520f120bca9ab2d89075
-Size (GeoIP-Python-1.2.0.tar.gz) = 9622 bytes

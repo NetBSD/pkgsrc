@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/05/25 12:45:17 wiz Exp $
-
-SHA1 (libffm.0.28.tar.gz) = 3733409106df3fdb184fa07a881031c1bca94084
-RMD160 (libffm.0.28.tar.gz) = fccc2ba6c0a8d740cc1bf831ee28fa0572cd9484
-Size (libffm.0.28.tar.gz) = 35428 bytes

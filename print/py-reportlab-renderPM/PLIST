@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/28 15:08:50 drochner Exp $
-${PYSITELIB}/_renderPM.so

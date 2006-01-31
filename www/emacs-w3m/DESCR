@@ -1,5 +1,0 @@
-Emacs-w3m, a simple interface program of w3m, which works on Emacs.
-
-w3m itself is a good program for WWW. Emacs-w3m provides an interface of w3m
-on Emacs so that users can use Emacs's editing environment for WWW access.
-This benefits multibyte language users.

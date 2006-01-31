@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/04 17:20:47 taca Exp $
-${RUBY_SITELIBDIR}/fcgi.rb
-${RUBY_SITEARCHLIBDIR}/fcgi.${RUBY_DLEXT}
-${RUBY_DOCDIR}/fcgi/README
-${RUBY_DOCDIR}/fcgi/README.signals
-@dirrm ${RUBY_DOCDIR}/fcgi

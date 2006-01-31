@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2004/08/13 03:22:23 minskim Exp $
-lib/X11/fonts/TTF/batang.ttf
-lib/X11/fonts/TTF/dotum.ttf
-lib/X11/fonts/TTF/gulim.ttf
-lib/X11/fonts/TTF/hline.ttf
-share/doc/baekmuk-ttf/COPYRIGHT
-share/doc/baekmuk-ttf/COPYRIGHT.ks
-@dirrm share/doc/baekmuk-ttf

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2005/04/05 10:41:28 wiz Exp $
-bin/vbetest
-include/lrmi.h
-include/vbe.h
-lib/liblrmi.a
-lib/liblrmi.so

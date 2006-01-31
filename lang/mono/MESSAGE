@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.3 2005/03/27 10:25:51 recht Exp $
-
-If you intent to use the System.Drawing or Windows.Forms then you have to
-install graphics/libgdiplus as well.
-
-===========================================================================

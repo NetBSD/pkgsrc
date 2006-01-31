@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 12:13:46 agc Exp $
-
-SHA1 (fping-2.4b2_to.tar.gz) = 9318f2ec4b389cd74ca32f561fea95f9528f16a3
-RMD160 (fping-2.4b2_to.tar.gz) = 643af0593e42a78534026498adc544bf21afe4fd
-Size (fping-2.4b2_to.tar.gz) = 60968 bytes
-SHA1 (patch-aa) = df15ec2bd474636c0950b465f918791657b7f5d8

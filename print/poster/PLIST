@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/20 01:16:21 jschauma Exp $
-bin/poster
-man/man1/poster.1

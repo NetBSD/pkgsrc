@@ -1,4 +1,0 @@
-GPUTILS is a collection of tools for the Microchip (TM) PIC microcontrollers.
-It includes gpasm, gplink, and gplib. It's distributed under the terms of
-the GNU Public License. See the gnupic page (http://www.gnupic.org/) for
-other GNU PIC tools such as gpsim, a gputils compatible simulator.

@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/08/06 06:24:31 jlam Exp $
-
-Please see the PL/Perl section of the PostgreSQL Programmer's Guide
-(databases/postgresql-docs) for information on programming with
-${PKGNAME}.
-===========================================================================

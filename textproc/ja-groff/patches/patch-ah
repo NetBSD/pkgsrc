@@ -1,9 +1,0 @@
-$NetBSD: patch-ah,v 1.1.1.1 2002/05/31 13:00:40 seb Exp $
---- devlatin1/DESC.proto.orig	Wed Jul 29 22:32:26 1992
-+++ devlatin1/DESC.proto	Mon May 31 14:39:13 1999
-@@ -5,4 +5,4 @@
- sizes 10 0
- fonts 4 R I B BI
- tcommand
--postpro grotty
-+postpro jgrotty

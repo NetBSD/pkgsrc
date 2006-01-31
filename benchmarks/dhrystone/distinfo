@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/22 21:16:36 agc Exp $
-
-SHA1 (dhry2.1.tar.Z) = 7b99b90dc191aac1b08fbfc256ffc0fc650ab373
-RMD160 (dhry2.1.tar.Z) = f4fe0e2bbeacab3e4ce800ac9befef2ff1b47013
-Size (dhry2.1.tar.Z) = 32681 bytes
-SHA1 (patch-aa) = f43b8165845ff6670160d8458cc2c6a2b779f628

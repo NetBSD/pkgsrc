@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/11/24 17:23:40 magick Exp $
-bin/nxtvepg
-man/man1/nxtvepg.1
-lib/X11/app-defaults/Nxtvepg

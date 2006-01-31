@@ -1,5 +1,0 @@
-Python XmlTools is a set of high level tools to help using XML in
-python. It relies heavily on PyXml and 4Suite to access XML
-resources. Right now it features two pyGTK widgets: XmlTree and
-XmlEditor, which can respectively display and edit an XML document in
-a graphical fashion. Both widgets are used in the NARVAL project.

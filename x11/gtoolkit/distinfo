@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/09/22 01:10:55 minskim Exp $
-
-SHA1 (gtoolkit-0.9.5.tar.gz) = 8e1acfec076637983dd2875ce124c0001a4a9077
-RMD160 (gtoolkit-0.9.5.tar.gz) = be597546cebc9ee9bdd4f4fc6c48e97ad8705652
-Size (gtoolkit-0.9.5.tar.gz) = 385203 bytes
-SHA1 (patch-aa) = 60b3a30cfa621e236e61bbbf3a09d99d715388f1
-SHA1 (patch-ab) = 0f481852dca3da71cec150825664daea09e7b832
-SHA1 (patch-ac) = 5e2be3ad68e91f1956dea025ad5faf6191f036c1

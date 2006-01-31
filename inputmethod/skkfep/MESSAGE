@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:20 wiz Exp $
-
-    To use skkfep, the dictionary server (skkserv) is almost
-required.  Use "skkserv" pkg, or, if you have another machine
-running skkserv, put the hostname in ${LOCALBASE}/etc/skk.conf
-file, and skkfep will connect to the host.
-
-===========================================================================

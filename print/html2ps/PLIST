@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/07/08 19:23:28 hubertf Exp $
-bin/html2ps
-man/man1/html2ps.1
-man/man5/html2psrc.5
-lib/html2ps/html2ps.html
-lib/html2ps/html2psrc
-lib/html2ps/sample.rc
-@dirrm lib/html2ps

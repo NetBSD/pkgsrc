@@ -1,3 +1,0 @@
-Classpath is a free (open source) implementation of the Java runtime
-libraries.  This package provides the GTK+ peer required to use the
-AWT and Swing libraries that come with classpath.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/11/03 20:41:43 rillig Exp $
-
-SHA1 (john-1.6.tar.gz) = b49d371496b8ba5e439665b83190b1e4d4640bea
-RMD160 (john-1.6.tar.gz) = 5a34e7f57b190313cc0773e996f6eed74f28d160
-Size (john-1.6.tar.gz) = 497341 bytes
-SHA1 (patch-aa) = 3a99923611742807ca7258bd880244b9a252b0ff

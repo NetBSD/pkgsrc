@@ -1,7 +1,0 @@
-The goal of LibGIIGIC is to provide a single easy to use, but yet
-powerful API for (re)binding any kind of action to all possible
-input devices through LibGII at runtime.
-
-You likely know this feature from modern computer games, where you
-can say which key (= input source) is used to shoot (= action) with
-your shotgun.

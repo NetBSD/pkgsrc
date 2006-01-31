@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:18 zuntum Exp $
-bin/echoping
-man/man1/echoping.1

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 11:02:57 agc Exp $
-
-SHA1 (par-v1.1.tar.gz) = acba4cdfb8a89b1542cd9ba6494d0d3461e609a1
-RMD160 (par-v1.1.tar.gz) = 20daa6460898ae3cfb5553c829bec45329e5ad7d
-Size (par-v1.1.tar.gz) = 40959 bytes
-SHA1 (patch-aa) = ca6ac3dfc740e02b1831b47852616e90e331b8ac
-SHA1 (patch-ab) = a6ee18373febeaf9cf1dbda0cd0ca76b383788c0
-SHA1 (patch-ac) = ec4675bbfa9a0808e665d7aa2c22c3f96ae43ea1
-SHA1 (patch-ad) = 6d8738eabb517a59f4057bcf2d385d25f39c20e2

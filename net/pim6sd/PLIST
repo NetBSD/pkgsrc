@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/04/03 05:37:00 itojun Exp $
-man/cat5/pim6sd.conf.0
-man/cat8/pim6sd.0
-man/man1/pim6stat.1
-man/man5/pim6sd.conf.5
-man/man8/pim6sd.8
-sbin/pim6sd
-sbin/pim6stat

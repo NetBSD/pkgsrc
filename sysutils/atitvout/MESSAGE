@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2004/12/18 13:18:13 xtraeme Exp $
-
- Try running the ${PREFIX}/share/doc/atitvout/test.sh program to find
- out if this program works with your video card.  It will cycle
- through all available settings with pauses.
-
-===========================================================================

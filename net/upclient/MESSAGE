@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.6 2004/01/19 00:02:43 jklos Exp $
-
-Register your server at http://uptimes.hostingwired.com/ then edit
-${PKG_SYSCONFDIR}/upclient.conf to add your assigned AuthKey.
-
-===========================================================================

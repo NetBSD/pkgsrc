@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1 2005/06/04 10:41:42 jmmv Exp $
-
-SHA1 (swfdec-0.2.2.tar.gz) = f3cbc3fec455117d554d37ac4dda1d99fb592661
-RMD160 (swfdec-0.2.2.tar.gz) = e44e1d5890fd1b8e6b73fa0ed5d645dbb6203c88
-Size (swfdec-0.2.2.tar.gz) = 332280 bytes
-SHA1 (patch-aa) = ae2cd8ffb34d09c709378cc3b45510cb5d738305
-SHA1 (patch-ab) = 2a2a6b335ddb0ebce2aee38eb004d4b6e26f19b7
-SHA1 (patch-ac) = 96a9a5275e297088f326b729fde3feef79b323aa

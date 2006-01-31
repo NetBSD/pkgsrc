@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 12:14:02 agc Exp $
-
-SHA1 (ZSI-1.5.0.tar.gz) = 53a0f02962fd9417103fd4a1d14515d2479108d1
-RMD160 (ZSI-1.5.0.tar.gz) = 0b16f3af63f35fff88ccf40b31e46d51c9e03ef0
-Size (ZSI-1.5.0.tar.gz) = 365962 bytes
-SHA1 (patch-aa) = 030157c727a75304c76691742a7d1813b925c4ab

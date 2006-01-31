@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/08/04 10:40:38 adam Exp $
-
-SHA1 (zoom-1.0.3.tar.gz) = 1a171aaae1f9eaffb4a6c9aee2c32e26c4c3a081
-RMD160 (zoom-1.0.3.tar.gz) = e40b7c7848299ae7e5005c138ea329e523f7cade
-Size (zoom-1.0.3.tar.gz) = 1186847 bytes
-SHA1 (patch-aa) = 3e38ab601ff5f0ec423991c91d5107b4775644b7

@@ -1,7 +1,0 @@
-This is a package of Sun's Java Development Kit, done by Simon Gerraty
-and others, and is in turn based upon the FreeBSD port.
-
-The Java Development Kit is a development environment for writing
-applets and applications that conform to the Java Core API.
-Its compiler and other tools are run from a shell and have no GUI
-interface.

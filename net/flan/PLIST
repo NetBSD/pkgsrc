@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/24 11:59:02 agc Exp $
-bin/flan
-lib/java/flan/crimson.jar
-lib/java/flan/flan.jar
-lib/java/flan/xalan2.jar
-lib/java/flan/xmlcode.jar
-@dirrm lib/java/flan

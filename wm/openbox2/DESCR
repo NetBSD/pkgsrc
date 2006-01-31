@@ -1,9 +1,0 @@
-Openbox is a window manager for the X11 windowing system.  It
-currently runs on a large list of platforms.  It was originally
-based on Blackbox and currently remains very similar, even using
-Blackbox styles (with available extensions) for its themeing and
-is written entirely in C++ and maintains no dependencies on any
-libraries other than X11.
-
-This is the older 2.x version of openbox; for the current version
-look in the ``openbox'' package.

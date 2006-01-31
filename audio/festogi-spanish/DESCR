@@ -1,8 +1,0 @@
-Festival Spanish (Mexican) language support routines (in scheme)
-from ogi.edu
-
-OGIspanish is an extension to the Festival TTS system
-(http://www.cstr.ed.ac.uk/projects/festival).  This version of
-OGIspanish has been designed to work with Festival version 1.4.0
-released June 1999.  It provides Mexican Spanish voices created by OGI
-staff and Alejandro Barbosa from UDLA, Puebla, Mexico.

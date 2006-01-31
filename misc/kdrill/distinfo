@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 11:02:54 agc Exp $
-
-SHA1 (kdrill5.11.6.tar.gz) = 8ce3594c81f717a4fd1488a952b0a05111679cd0
-RMD160 (kdrill5.11.6.tar.gz) = a2c81fe9490f549940a4eea793af37b56dd2b7e6
-Size (kdrill5.11.6.tar.gz) = 182956 bytes
-SHA1 (patch-aa) = 42fc93ca33c380cc947a526c97cb887c2e778ebb

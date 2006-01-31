@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/11/01 03:52:50 dmcmahill Exp $
-
-To use, you will need to add something like the following to your
-.scilab file in your home directory:
-
-  exec ${PREFIX}/libexec/scilab-${SCIVERSION}/${WCALC_DIR}/load_wcalc.sce;
-
-===========================================================================

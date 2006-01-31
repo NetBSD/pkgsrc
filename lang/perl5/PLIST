@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2005/08/06 06:18:45 jlam Exp $
-bin/perllink
-man/man1/perllink.1

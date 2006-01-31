@@ -1,9 +1,0 @@
-The UtiLisp32 is a new implementation of UtiLisp for Unix system.
-The original UtiLisp  (University of Tokyo Interactive LISt Processor)
-system  was  designed  for  highly  interactive programming and
-debugging of sophisticated programs on mainframes.
-
-The new UtiLisp system is a transportation of the original UtiLisp.
-UtiLisp32 is for Unix 4.2 bsd machines whose CPU's have 32 bit address bus.
-It is now available on MC68010, MC68020 and Vaxen.
-This new UtiLisp is called "Unix UtiLisp" or simply "UtiLisp".

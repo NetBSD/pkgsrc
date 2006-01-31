@@ -1,3 +1,0 @@
-gnatsperl is a collection of perl modules providing a perl interface to the
-gnatsd daemon (GNU gnats issue tracking system). It is intended to allow
-developers to more easily create tie-in applications to gnats.

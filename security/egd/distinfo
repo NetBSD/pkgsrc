@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 13:10:05 agc Exp $
-
-SHA1 (egd-0.8.tar.gz) = 9316b05796f0447094132c8647e36e6ce97b6ad3
-RMD160 (egd-0.8.tar.gz) = bc2aa236aae64865ae0968df5234a00150b9aa2e
-Size (egd-0.8.tar.gz) = 34976 bytes

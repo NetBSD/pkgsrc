@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:58 zuntum Exp $
-bin/cvslock
-man/man1/cvslock.1

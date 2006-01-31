@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2004/09/22 08:09:55 jlam Exp $
-bin/rapper
-bin/raptor-config
-include/raptor.h
-lib/libraptor.la
-lib/pkgconfig/raptor.pc
-man/man1/rapper.1
-man/man1/raptor-config.1
-man/man3/libraptor.3

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/05 22:07:10 rh Exp $
-bin/http_load
-man/man1/http_load.1

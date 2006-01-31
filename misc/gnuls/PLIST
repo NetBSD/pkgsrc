@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/11 23:00:52 jmmv Exp $
-bin/${GNU_PROGRAM_PREFIX}dircolors
-bin/${GNU_PROGRAM_PREFIX}ls
-man/man1/${GNU_PROGRAM_PREFIX}dircolors.1
-man/man1/${GNU_PROGRAM_PREFIX}ls.1

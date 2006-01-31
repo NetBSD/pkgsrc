@@ -1,9 +1,0 @@
-XF86Setup is a new program to aid in the configuration of the XFree86
-servers. It is unlike previous programs (such as ConfigXF86 and
-xf86config) in that it is specifically designed to do as much as
-possible while in graphics mode.
-
-XF86Setup requires that both the VGA16 and card-appropriate servers be
-installed. Furthermore, the servers must include the XKEYBOARD,
-XFree86-VidModeExtension, and XFree86-Misc extensions. If the dialog
-program is installed, it will be used, but is not required.

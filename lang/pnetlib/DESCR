@@ -1,4 +1,0 @@
-This distribution contains an implementation of the C# library, for use
-with .NET-capable runtime engines and applications.  Originally designed
-for DotGNU Portable.NET, this library can be used by other .NET development
-effort also.

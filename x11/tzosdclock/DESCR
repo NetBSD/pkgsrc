@@ -1,4 +1,0 @@
-This is an OSD desktop clock with support for multiple timezones
-through the same mechanism as tzwatch (~/.tzlist).  It can be run with
-or without the config file in single or multiple timezone modes.  See
-`tzosdclock -h`.

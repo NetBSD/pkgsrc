@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:10:10 agc Exp $
-
-SHA1 (Crypt-RandPasswd-0.02.tar.gz) = f086d8931ee883172ddbd73debe9df03bfea9e23
-RMD160 (Crypt-RandPasswd-0.02.tar.gz) = 98e52cc5cbe4b7d73f8216b73afcfba1a1cd87e9
-Size (Crypt-RandPasswd-0.02.tar.gz) = 17044 bytes

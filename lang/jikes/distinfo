@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.12 2005/02/24 09:03:08 agc Exp $
-
-SHA1 (jikes-1.22.tar.bz2) = 55bc20b609827e132e047d6c89084d4981905e11
-RMD160 (jikes-1.22.tar.bz2) = 47f76eb4aa04ad73f8ff5abbf5a399e0b5b6728d
-Size (jikes-1.22.tar.bz2) = 616655 bytes
-SHA1 (patch-aa) = 5b9271b45eaa2126e866bfee8d7e7789518ed27f
-SHA1 (patch-ab) = f5234321a55354b37c34efe7ba99af468e5b4963

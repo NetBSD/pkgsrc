@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/08/19 14:35:28 salo Exp $
-
-SHA1 (AdbeRdr701_linux_enu.tar.gz) = ab2c83ff58f1e71d29051c95ce745c0bafb77dea
-RMD160 (AdbeRdr701_linux_enu.tar.gz) = 809bd29984e3d67bac51ce93cf2ce22f43c1b331
-Size (AdbeRdr701_linux_enu.tar.gz) = 39476166 bytes
-SHA1 (patch-aa) = ba20e9e2e8b7670d11466a9586774fd8c5e6bb6b

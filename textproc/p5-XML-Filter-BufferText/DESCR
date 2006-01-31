@@ -1,5 +1,0 @@
-This Perl 5 module is a very simple filter for XML parsers.  One
-common cause of grief (and programmer error) is that XML parsers
-aren't required to provide character events in one chunk. They can,
-but are not forced to, and most don't. This filter does the trivial
-but often-repeated task of putting all characters into a single event.

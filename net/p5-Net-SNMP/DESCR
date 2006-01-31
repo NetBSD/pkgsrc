@@ -1,4 +1,0 @@
-Perl 5 module for SNMP queries.
-
-This is different from the p5-SNMP package in that it does not
-require UCS-SNMP to be installed.

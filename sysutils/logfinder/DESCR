@@ -1,7 +1,0 @@
-Many system administrators don't know exactly what logs they have until they
-have looked into the question. Often, logging was enabled by defaults -- or by
-previous system administrators -- and so your systems may be keeping logs you
-never intended. logfinder is a tool created as a simple means of locating
-files that might be logs on an existing system. logfinder uses regular
-expressions to find local files with "log-like" contents; you can customize
-those expressions if necessary to meet your needs.

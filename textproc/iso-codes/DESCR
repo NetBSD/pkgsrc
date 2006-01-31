@@ -1,7 +1,0 @@
-iso-codes provides the list of the country, language and currency names in
-one place, rather than repeated in many third-party programs.  This was
-originally done to centralize this data in Debian systems.
-
-The aim of iso-codes is to create a single "gettext" domain "iso-639" which
-contains the translations of language names, and one "iso-3166" listing the
-translations of country names.

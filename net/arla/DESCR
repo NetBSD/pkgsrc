@@ -1,8 +1,0 @@
-Arla provides a free implementation of AFS. It includes:
-
-o A cache manager (arlad) that works both in user-level mode and with
-  the kernel module.
-
-o Some simple programs (amon, fs, klog, tokens, vos, udebug, and pts).
-
-o An experimental AFS server called milko.

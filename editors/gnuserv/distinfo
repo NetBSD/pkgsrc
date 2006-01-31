@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 17:15:10 agc Exp $
-
-SHA1 (gnuserv-3.12.7.tar.gz) = 5f5fd98b068fd1b221d32a0760c9914455e197b5
-RMD160 (gnuserv-3.12.7.tar.gz) = 2fd5a28fb86cc05c26da50cab8d9ee036f2e2d00
-Size (gnuserv-3.12.7.tar.gz) = 93709 bytes
-SHA1 (patch-aa) = f10c267b84290265df2a757454b0548bf8383889

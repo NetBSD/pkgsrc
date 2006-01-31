@@ -1,6 +1,0 @@
-This perl module allows validation and manipulation of International
-Standard Book Numbers (ISBNs).
-
-It allows for the calculation/validation of the checksum, extraction
-of country and publisher codes, and conversion to/from European
-Article Numbers (EANs).

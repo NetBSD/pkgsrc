@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 11:02:52 agc Exp $
-
-SHA1 (gkrellflynn-0.8.tar.gz) = 8fc8ab477572ca8a858d19d5903f9a2b7c3b2d31
-RMD160 (gkrellflynn-0.8.tar.gz) = f35eeacd8121bd52c53a5610199211f7c34c790c
-Size (gkrellflynn-0.8.tar.gz) = 26722 bytes
-SHA1 (patch-aa) = e7274faa1982713925aa5c68e34170997cb9d613

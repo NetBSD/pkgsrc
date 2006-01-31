@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.13 2005/10/28 05:29:54 martti Exp $
-
-SHA1 (keychain-2.6.1.tar.bz2) = 5d34d448a676f4910c549b1fe5c116f9ffc38ede
-RMD160 (keychain-2.6.1.tar.bz2) = b84a9abf38d66b8ff9d145d02ffe281b0abbefcb
-Size (keychain-2.6.1.tar.bz2) = 30421 bytes

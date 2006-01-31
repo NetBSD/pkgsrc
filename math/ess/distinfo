@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 12:06:54 agc Exp $
-
-SHA1 (ess-5.1.24.tar.gz) = ffa5855a681309691f69ba2a1a023b71d227f444
-RMD160 (ess-5.1.24.tar.gz) = fba89db7992dd006430846fe12c63d5ef9394862
-Size (ess-5.1.24.tar.gz) = 1039537 bytes
-SHA1 (patch-aa) = b7579dc393eae40ca73fd6d60bada6daef316121
-SHA1 (patch-ab) = 6dc37139be5fe23f8c7b6a84eec9610cd4f347b6

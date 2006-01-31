@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 16:33:07 agc Exp $
-
-SHA1 (DBIx-ContextualFetch-1.01.tar.gz) = 89263b07fa36c568e40660e5a80e6777e03b7002
-RMD160 (DBIx-ContextualFetch-1.01.tar.gz) = aee2161cf535e98f1a78ff8a3185262005d56be1
-Size (DBIx-ContextualFetch-1.01.tar.gz) = 3594 bytes

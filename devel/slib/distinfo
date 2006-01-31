@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2005/10/26 09:19:19 adam Exp $
-
-SHA1 (slib3a2.tar.gz) = 200821f6991e7a78c244d15492eb5e7229255cd0
-RMD160 (slib3a2.tar.gz) = a58445e0b98e67e8dd0daff9362194244497a3ef
-Size (slib3a2.tar.gz) = 846350 bytes
-SHA1 (patch-aa) = f12fbd3ec8607f40604529a2aae637ae1f866650

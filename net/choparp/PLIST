@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:54:59 zuntum Exp $
-sbin/choparp
-man/man8/choparp.8
-man/cat8/choparp.0

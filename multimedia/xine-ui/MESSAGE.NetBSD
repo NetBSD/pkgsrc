@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.1 2005/03/15 15:46:40 wiz Exp $
-
-You may need to increase the value of SHMMAXPGS in your kernel
-configuration to use ${PKGBASE}, e.g.
-
-	options SHMMAXPGS=32768
-
-===========================================================================

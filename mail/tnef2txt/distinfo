@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 09:59:30 agc Exp $
-
-SHA1 (tnef2txt-1.4.tar.gz) = 012c86f5c3812c38ff1a79efa4f0c4468e92eb78
-RMD160 (tnef2txt-1.4.tar.gz) = b5d244ac79ee404b2feb0eed9507c606c2bfd401
-Size (tnef2txt-1.4.tar.gz) = 36568 bytes
-SHA1 (patch-aa) = 166a353bd13a4231c77816a1231a95ef21f22d4d

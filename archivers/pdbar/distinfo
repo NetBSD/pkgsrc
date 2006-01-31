@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 14:45:25 agc Exp $
-
-SHA1 (prc.tgz) = 9fa21fdb6d5dc94cad187012e70043e3f5080d7d
-RMD160 (prc.tgz) = d4cb7f769581c04bc1a3ecf0711310c777b9cbe3
-Size (prc.tgz) = 62143 bytes
-SHA1 (patch-aa) = d2b5c320c39d5cee0169c3be01f72b7fca499939
-SHA1 (patch-ab) = 9acd9a21cd5d584c5e04df366945884ab3afa382

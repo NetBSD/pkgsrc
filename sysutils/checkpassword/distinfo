@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:40:51 agc Exp $
-
-SHA1 (checkpassword-0.90.tar.gz) = 6c591a541a2d69c2112dbad35b0f0ccab0978d85
-RMD160 (checkpassword-0.90.tar.gz) = ed86f95a13f41fb2369374c6f8656a7d76f8cc6f
-Size (checkpassword-0.90.tar.gz) = 15631 bytes

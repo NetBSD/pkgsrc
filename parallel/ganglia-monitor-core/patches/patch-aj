@@ -1,9 +1,0 @@
-$NetBSD: patch-aj,v 1.1 2005/02/10 02:33:53 jschauma Exp $
-
---- /dev/null	2005-02-07 22:12:34.000000000 -0500
-+++ srclib/libmetrics/netbsd/Makefile.am	2005-02-07 22:17:51.000000000 -0500
-@@ -0,0 +1,4 @@
-+AM_CFLAGS=-I.. -I$(top_builddir)/lib
-+
-+noinst_LTLIBRARIES     = libmetric25.la
-+libmetric25_la_SOURCES = metrics.c 

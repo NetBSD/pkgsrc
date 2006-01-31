@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/09/22 04:30:41 minskim Exp $
-
-SHA1 (xhippo-3.3.tar.gz) = 15fb21a9027110f1f7b8e17dc33be6c28a67c601
-RMD160 (xhippo-3.3.tar.gz) = 4023286bc843c15b1527fec49cda65a48a763af5
-Size (xhippo-3.3.tar.gz) = 417111 bytes
-SHA1 (patch-aa) = 1be473dacdfb78561da8b9a90cd3c9e7570143b7

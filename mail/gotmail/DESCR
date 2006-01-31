@@ -1,4 +1,0 @@
-Gotmail is a script to download mail from hotmail.com without user
-interaction.  It's probably best run from a cron job.  It can delete
-messages, download only-new messages, mark messages read (or not),
-forward to procmail, forward to another address, or send through SMTP.

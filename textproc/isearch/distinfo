@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 14:48:42 agc Exp $
-
-SHA1 (Isearch-1.47.01.tar.gz) = 86761d6055fdd7b954b7ac9d9fd3d0084d758e3f
-RMD160 (Isearch-1.47.01.tar.gz) = 2e7f4c21d8a2d3cb194823a881ee7315f88de66c
-Size (Isearch-1.47.01.tar.gz) = 484760 bytes
-SHA1 (patch-aa) = 5c8291a92f84cc47131e45586879cf986e6a5c4d
-SHA1 (patch-ab) = 1bdf80b2a355ac17ff090c7ae25d231bea5ab017
-SHA1 (patch-ac) = 232ef20b661a9e5fd32814da256a59c7146b7b69

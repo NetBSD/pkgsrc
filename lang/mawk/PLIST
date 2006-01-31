@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:24:08 zuntum Exp $
-bin/mawk
-man/man1/mawk.1

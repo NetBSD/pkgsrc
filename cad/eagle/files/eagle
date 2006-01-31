@@ -1,5 +1,0 @@
-#!/bin/sh
-#
-#	$NetBSD: eagle,v 1.1.1.1 2000/10/15 12:17:26 rh Exp $
-#
-cd @@PREFIX@@/eagle && bin/eagle $*

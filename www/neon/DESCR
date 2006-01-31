@@ -1,4 +1,0 @@
-neon is an HTTP and WebDAV client library.  It provides lower-level
-interfaces which directly implement new HTTP methods, and higher-level
-interfaces so that you don't have to worry about the lower-level
-stuff.

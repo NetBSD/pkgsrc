@@ -1,8 +1,0 @@
-Text::Tabs performs the same job that the unix expand(1) and unexpand(1)
-commands do: adding or removing tabs from a document.
-
-Text::Wrap::wrap() will reformat lines into paragraphs.  All it does is
-break up long lines, it will not join short lines together.
-
-Text::Fill::fill() will reformat blocks of text into paragraphs.  It
-uses Text::Wrap::wrap() to do the work

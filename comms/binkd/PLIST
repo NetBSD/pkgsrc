@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2004/11/29 00:58:08 tv Exp $
-man/man8/binkd.8
-sbin/binkd
-sbin/${PKGNAME}
-share/examples/binkd/binkd.conf
-@dirrm share/examples/binkd

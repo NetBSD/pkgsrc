@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:31 agc Exp $
-
-SHA1 (py-kqueue-2.0.tar.gz) = 9b526dba2fcd8e91bae1faac603344e604cf1352
-RMD160 (py-kqueue-2.0.tar.gz) = e066c4859b954a062edf1e251ccf00fb52d24a1a
-Size (py-kqueue-2.0.tar.gz) = 8911 bytes
-SHA1 (patch-aa) = e0cd667ce451164f61465f4c17eb9a7b67c98c9e

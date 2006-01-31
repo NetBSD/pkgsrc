@@ -1,2 +1,0 @@
-TclExpat is a tcl XML parser based on expat. The goal of this parser
-is to be "plug-compatible" with TclXML.

@@ -1,2 +1,0 @@
-#!/bin/sh
-@LOCALBASE@/bin/stratagus -d @PREFIX@/share/bos/data

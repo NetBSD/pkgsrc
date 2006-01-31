@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:14:02 agc Exp $
-
-SHA1 (kenosis-0.941.tar.gz) = ef2e344564fcc6270cf363773a21eef8919f7b7d
-RMD160 (kenosis-0.941.tar.gz) = 4d87f6421dba7fd1b93d376c025e45061145e3de
-Size (kenosis-0.941.tar.gz) = 111099 bytes
-SHA1 (patch-aa) = e3f5661c8fd13caff9aba6d801c63390e05511bd

@@ -1,4 +1,0 @@
-The BigInteger extension module gives access to Eric Young's bignum
-library. This provides a faster alternative to the Math::BigInt
-library. The basic object in this library is a BigInteger. It is used
-to hold a single large integer.

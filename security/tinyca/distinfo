@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/28 22:01:22 adrianp Exp $
-
-SHA1 (tinyca-0.6.8.tar.gz) = f12d2068d1e02f613ab25659d959c17e6090a444
-RMD160 (tinyca-0.6.8.tar.gz) = c53caa6bf6ad5b34d386a52365a193d609d9de5b
-Size (tinyca-0.6.8.tar.gz) = 176530 bytes

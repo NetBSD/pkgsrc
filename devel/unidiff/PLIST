@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:13 zuntum Exp $
-bin/unify
-bin/unipatch
-man/man1/unify.1

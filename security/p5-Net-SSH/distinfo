@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/13 20:14:18 seb Exp $
-
-SHA1 (Net-SSH-Perl-1.29.tar.gz) = 862ff574d5cdf7f8200d19bd931e2ea1ede56a1f
-RMD160 (Net-SSH-Perl-1.29.tar.gz) = 3be32ceeb64bb217952c8f785538b58e86f445a6
-Size (Net-SSH-Perl-1.29.tar.gz) = 94309 bytes
-SHA1 (patch-aa) = 718adcedca009725d834be3307a45e4169f7eb29

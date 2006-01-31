@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 09:59:30 agc Exp $
-
-SHA1 (WMMail.app-0.64.tar.gz) = 3077ab562fd97f7fee1505330eca60f9645ee6a9
-RMD160 (WMMail.app-0.64.tar.gz) = 9f8c7c3efce8de43785d2c7a6fa9286dec9fb6fe
-Size (WMMail.app-0.64.tar.gz) = 147305 bytes
-SHA1 (patch-aa) = afeaff242ccf423a1e2ca3368941b6230185878e
-SHA1 (patch-ac) = 565d442850f7b406fad588dd5e045b465a40fbab
-SHA1 (patch-ad) = 13251a2ab4a656cf1452dc785d98e39b39aa7c94

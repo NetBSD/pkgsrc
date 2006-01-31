@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 20:39:49 agc Exp $
-
-SHA1 (moss-0.1.13.tar.gz) = 238919100168cee55c8405b808d05de0e0658082
-RMD160 (moss-0.1.13.tar.gz) = fb6067ddf5fb404bc846c760c64c679a93ae308e
-Size (moss-0.1.13.tar.gz) = 43581 bytes
-SHA1 (patch-aa) = 31b252c52e4e0010064a1a9dca38dcd53d407d9e

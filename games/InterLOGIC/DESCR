@@ -1,8 +1,0 @@
-The game InterLOGIC is based on the old Amiga logic game "Balls".
-The object of the game is to move balls of different colors through
-a maze, connecting them with other balls of the same color. Two or
-more connected balls of the same color will disappear. The aim of
-the game is to clean the whole maze in this way.  The balls are
-connected if they are right next to each other horizontally or
-vertically, but not diagonally.  The current release contains 30
-mind-breaking levels for you to solve.

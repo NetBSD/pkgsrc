@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:26 jlam Exp $
-include/libole2-2.0/libole2/libole2.h
-include/libole2-2.0/libole2/ms-ole-summary.h
-include/libole2-2.0/libole2/ms-ole-vba.h
-include/libole2-2.0/libole2/ms-ole.h
-lib/libgnome2ole2.la
-lib/pkgconfig/libole2-2.0.pc
-@dirrm include/libole2-2.0/libole2
-@dirrm include/libole2-2.0

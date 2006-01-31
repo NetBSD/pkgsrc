@@ -1,2 +1,0 @@
-Schedule::Cron::Events takes a crontab-style line and finds out
-when events will occur.

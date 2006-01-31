@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2005/08/11 15:33:08 adam Exp $
-bin/zile
-man/man1/zile.1
-share/zile/AUTODOC
-share/zile/FAQ
-share/zile/HELP
-share/zile/TUTORIAL
-share/zile/dotzile.sample
-@dirrm share/zile

@@ -1,8 +1,0 @@
-vilearn is an online vi tutorial comprised of 5 tutorials for the vi-impaired.
-
-vilearn presets a menu for available tutorials for vi. There are
-five short tutorials, each a text file intended to be edited with
-vi.
-
-Each user edits their own copy of the tutorial, saved in the
-directory VILEARN, in the current directory.

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/03/29 17:02:31 jmmv Exp $
-bin/posh
-man/man1/posh.1
-share/doc/posh/changelog
-@dirrm share/doc/posh

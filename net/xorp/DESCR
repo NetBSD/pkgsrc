@@ -1,7 +1,0 @@
-Xorp (pronounced z-o-r-p) is an open router software platform being
-developed primarily at the International Computer Science Institute
-in Berkeley.  The goal is to produce a complete set of router
-software that is stable enough and fully featured enough for
-production use, initially on edge routers, but also due to our
-focus on extensibility, to be an excellent platform for Internet
-research.

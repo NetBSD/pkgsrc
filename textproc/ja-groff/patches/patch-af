@@ -1,9 +1,0 @@
-$NetBSD: patch-af,v 1.1.1.1 2002/05/31 13:00:40 seb Exp $
---- devascii/DESC.proto.orig	Wed Jul 29 22:32:04 1992
-+++ devascii/DESC.proto	Mon May 31 14:38:42 1999
-@@ -5,4 +5,4 @@
- sizes 10 0
- fonts 4 R I B BI
- tcommand
--postpro grotty
-+postpro jgrotty

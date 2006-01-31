@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 12:13:45 agc Exp $
-
-SHA1 (echoping-5.2.0.tar.gz) = 21b0a92aa1760aca4c2249f0199d94f5c46e0360
-RMD160 (echoping-5.2.0.tar.gz) = dcf65162034ec295a7b7d993d166d8ef70a1be79
-Size (echoping-5.2.0.tar.gz) = 120911 bytes
