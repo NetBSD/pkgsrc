@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/12/11 11:34:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/01/31 22:39:29 markd Exp $
 bin/apmount
 bin/blinken
 bin/celestrongps
@@ -244,7 +244,6 @@ share/doc/kde/HTML/en/kmplot/ksys3.png
 share/doc/kde/HTML/en/kmplot/lo32-app-kmplot.png
 share/doc/kde/HTML/en/kmplot/main.png
 share/doc/kde/HTML/en/kmplot/man-kmplot.1.docbook
-share/doc/kde/HTML/en/kmplot/menu.docbook
 share/doc/kde/HTML/en/kmplot/namesdlg.png
 share/doc/kde/HTML/en/kmplot/reference.docbook
 share/doc/kde/HTML/en/kmplot/scaledlg.png
