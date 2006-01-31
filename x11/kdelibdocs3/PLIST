@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2005/12/11 11:06:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.21 2006/01/31 22:27:20 markd Exp $
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/arts.tag
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/annotated.html
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/artsmessage_8cc-source.html
@@ -5393,6 +5393,9 @@ share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLLinkElement.png
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLMapElement-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLMapElement.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLMapElement.png
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLMappedNameCollection-members.html
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLMappedNameCollection.html
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLMappedNameCollection.png
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLMenuElement-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLMenuElement.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classDOM_1_1HTMLMenuElement.png
@@ -5768,8 +5771,6 @@ share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1MozillaSidebarExten
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1MutationEventConstructor-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1MutationEventConstructor.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1MutationEventConstructor.png
-share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1NamedTagLengthDeterminer-members.html
-share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1NamedTagLengthDeterminer.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1Navigator-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1Navigator.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1NodeConstructor-members.html
@@ -6170,8 +6171,6 @@ share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/structDOM_1_1ParseString-member
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/structDOM_1_1ParseString.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/structDOM_1_1Value-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/structDOM_1_1Value.html
-share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/structKJS_1_1NamedTagLengthDeterminer_1_1TagLength-members.html
-share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/structKJS_1_1NamedTagLengthDeterminer_1_1TagLength.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/structkhtml_1_1CSSStyleSelector_1_1Encodedurl-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/structkhtml_1_1CSSStyleSelector_1_1Encodedurl.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/structkhtml_1_1CSSStyleSelector_1_1SelectorCache-members.html
