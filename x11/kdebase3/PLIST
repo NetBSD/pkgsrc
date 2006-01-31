@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2005/12/11 11:01:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.39 2006/01/31 22:25:32 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -237,7 +237,7 @@ lib/kde3/kgreet_classic.la
 lib/kde3/kgreet_winbind.la
 lib/kde3/khelpcenter.la
 lib/kde3/khotkeys.la
-lib/kde3/khotkeys_shared_arts.la
+lib/kde3/khotkeys_arts.la
 lib/kde3/kicker.la
 lib/kde3/kickermenu_find.la
 lib/kde3/kickermenu_kdeprint.la
@@ -860,6 +860,7 @@ share/doc/kde/HTML/en/khelpcenter/userguide/kmouth2.png
 share/doc/kde/HTML/en/khelpcenter/userguide/kmouth3.png
 share/doc/kde/HTML/en/khelpcenter/userguide/knode-identity.png
 share/doc/kde/HTML/en/khelpcenter/userguide/knode-mail-account.png
+share/doc/kde/HTML/en/khelpcenter/userguide/knode-news-account.png
 share/doc/kde/HTML/en/khelpcenter/userguide/knode-start.png
 share/doc/kde/HTML/en/khelpcenter/userguide/konq-sidebar.png
 share/doc/kde/HTML/en/khelpcenter/userguide/konq-simple.png
@@ -2614,6 +2615,7 @@ share/kde/icons/crystalsvg/32x32/apps/pan.png
 share/kde/icons/crystalsvg/32x32/apps/penguin.png
 share/kde/icons/crystalsvg/32x32/apps/personal.png
 share/kde/icons/crystalsvg/32x32/apps/phppg.png
+share/kde/icons/crystalsvg/32x32/apps/pinguin.png
 share/kde/icons/crystalsvg/32x32/apps/plan.png
 share/kde/icons/crystalsvg/32x32/apps/planner.png
 share/kde/icons/crystalsvg/32x32/apps/proxy.png
