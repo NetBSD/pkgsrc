@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/01/31 03:35:25 minskim Exp $
+
+SHA1 (skf_1.93.9.tar.gz) = 123d87047c0c749f1624df1c8fded59d599615ae
+RMD160 (skf_1.93.9.tar.gz) = 9d2bdf1831049c1b4a95fe428807494fd320b311
+Size (skf_1.93.9.tar.gz) = 616093 bytes
+SHA1 (patch-aa) = 5687814bd2b306a4807ee0cafd45b650bec8a2ef
