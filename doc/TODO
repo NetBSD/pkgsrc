@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4541 2006/01/31 16:28:12 abs Exp $
+$NetBSD: TODO,v 1.4542 2006/01/31 17:25:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -377,7 +377,7 @@ Suggested package updates
 	o bittorrent-4.2.2
 	o bittorrent-gui-4.2.2
 	o blackbox-0.70
-	o blender-2.40
+	o blender-2.41
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bochs-2.2.6
@@ -402,7 +402,7 @@ Suggested package updates
 	o cfengine2-2.1.17
 	o cfengine2-doc-2.1.14
 	o cfitsio-2.510
-	o cgdb-0.5.3
+	o cgdb-6.0
 	o cgicc-3.2.3
 	o checkbot-1.77
 	o chemtool-1.6.6
@@ -447,6 +447,7 @@ Suggested package updates
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
+	o defendguin-0.0.11
 	o dejavu-ttf-1.15 [pkg/31941]
 	o dejavu-ttf-2.2
 	o denemo-0.7.2a
@@ -492,6 +493,7 @@ Suggested package updates
 	o etach-1.4.1
 	o eukleides-1.0.3
 	o euler-1.61
+	o evilwm-0.99.22
 	o exim-4.60
 	o exmh-2.7.2
 	o f2c-20031025
@@ -732,13 +734,14 @@ Suggested package updates
 	o moz-bin-flash-7.0r25 [pkgsrc-wip]
 	o moz-bin-plugger-5.1.3
 	o moz-flash-0.4.13
-	o mp3blaster-3.2.1
+	o mp3blaster-3.2.2
 	o mpage-2.5.4
 	o mpfr-2.2.0
 	o mpich-1.2.7
 	o mplayer-plugin-firefox-3.17
 	o mpop-0.8.3 [pkg/32511]
 	o mrproject-0.9.1
+	o mrtg-2.13.1
 	o mserv-devel-0.41
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
@@ -963,6 +966,7 @@ Suggested package updates
 	o potrace-1.7
 	o pptp-1.6.0 [pkg/26842]
 	o prayer-1.0.15
+	o prelude-manager-0.9.2
 	o proj-4.4.9
 	o projclock-0.9
 	o proxsmtp-1.2.1
@@ -1071,6 +1075,7 @@ Suggested package updates
 	o scilab-3.1
 	o scribus-1.2.4.1
 	o scrollz-1.9.5
+	o scummvm-0.8.1
 	o sdig-0.40
 	o semantic-1.4.4
 	o sendfile-20010424
@@ -1103,6 +1108,7 @@ Suggested package updates
 	o source-highlight-2.3 [pkg/32325]
 	o sox-12.17.9
 	o spamass-milter-1.0
+	o spamprobe-1.4a
 	o spim-7.2.1
 	o sqlite3-3.2.8
 	o sqlitemanager-1.1.3
@@ -1121,11 +1127,11 @@ Suggested package updates
 	o sun-jre14-2.10
 	o suse_base-10.0
 	o svk-1.06
-	o sweep-0.9.0
+	o sweep-0.9.1
 	o swfdec-0.3.6
 	o swi-prolog-5.5.33
 	o swish-e-2.4.3
-	o sylpheed-claws-1.0.5
+	o sylpheed-claws-2.0.0
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.1
 	o sysinfo-4.2.2
