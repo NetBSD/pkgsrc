@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.28 2005/07/21 16:25:06 wiz Exp $
+#	$NetBSD: createbuildlink,v 1.29 2006/01/31 03:35:35 rillig Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,7 +39,7 @@
 # Create an initial buildlink3.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.28 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.29 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 spacesintab=8
 makefile=Makefile
@@ -192,7 +192,7 @@ done
 
 sed -f $sedrules <<EOF
 
-BUILDLINK_DEPTH:=     \${BUILDLINK_DEPTH:S/+\$//}
+BUILDLINK_DEPTH:=${gap}\${BUILDLINK_DEPTH:S/+\$//}
 EOF
 
 rm -f $sedrules
