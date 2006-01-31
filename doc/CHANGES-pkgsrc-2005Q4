@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.61 2006/01/31 19:17:49 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.62 2006/01/31 19:21:44 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -125,3 +125,5 @@ Pullup ticket 1067 - requested by Ben Collver
 fprot-workstation-bin update
 Pullup ticket 1064 - requested by Joerg Sonnenberger
 install fixes for gnome-themes
+Pullup ticket 1075 - requested by Takahiro Kambe
+REPLACE_RUBY pattern fix for ruby packages
