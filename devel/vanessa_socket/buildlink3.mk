@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:34 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/01/31 20:42:19 tv Exp $
 #
 # This file was created automatically using createbuildlink-3.5.
 
@@ -13,8 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nvanessa_socket}
 BUILDLINK_PACKAGES+=	vanessa_socket
 
 .if !empty(VANESSA_SOCKET_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.vanessa_socket+=	vanessa_socket>=0.0.7
-BUILDLINK_RECOMMENDED.vanessa_socket+=	vanessa_socket>=0.0.7nb1
+BUILDLINK_DEPENDS.vanessa_socket+=	vanessa_socket>=0.0.7nb2
 BUILDLINK_PKGSRCDIR.vanessa_socket?=	../../devel/vanessa_socket
 .endif	# VANESSA_SOCKET_BUILDLINK3_MK
 
