@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2006/01/20 03:51:25 joerg Exp $
+$NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
 
---- configure.orig	2005-11-26 07:14:02.000000000 +0000
+--- configure.orig	2006-01-21 06:48:39.000000000 +1300
 +++ configure
 @@ -28679,34 +28679,15 @@ if test $kde_qtver = 1; then
     kde_qt_dirs="$QTDIR /usr/lib/qt"
@@ -162,7 +162,16 @@ $NetBSD: patch-aa,v 1.8 2006/01/20 03:51:25 joerg Exp $
  _ACEOF
  if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
    (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
-@@ -37888,7 +37848,7 @@ if test "${ac_cv_lib_FLAC_FLAC__seekable
+@@ -35251,7 +35211,7 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ 
+-    #include <cdda_interface.h>
++    #include <cdparanoia/cdda_interface.h>
+ 
+ int
+ main ()
+@@ -38039,7 +37999,7 @@ if test "${ac_cv_lib_FLAC_FLAC__seekable
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -171,7 +180,7 @@ $NetBSD: patch-aa,v 1.8 2006/01/20 03:51:25 joerg Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -40058,8 +40018,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -40209,8 +40169,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -197,7 +206,7 @@ $NetBSD: patch-aa,v 1.8 2006/01/20 03:51:25 joerg Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -40122,7 +40097,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -40273,7 +40248,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -220,7 +229,7 @@ $NetBSD: patch-aa,v 1.8 2006/01/20 03:51:25 joerg Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -40186,7 +40176,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -40337,7 +40327,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -243,7 +252,7 @@ $NetBSD: patch-aa,v 1.8 2006/01/20 03:51:25 joerg Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -40258,6 +40263,9 @@ case "$OS_TYPE" in
+@@ -40409,6 +40414,9 @@ case "$OS_TYPE" in
    SunOS)
      kde_mpeglib_compiles=yes
      ;;
@@ -253,7 +262,7 @@ $NetBSD: patch-aa,v 1.8 2006/01/20 03:51:25 joerg Exp $
    *)
      echo "$as_me:$LINENO: result: *** We disable mpeglib for this platform ***" >&5
  echo "${ECHO_T}*** We disable mpeglib for this platform ***" >&6
-@@ -40267,33 +40275,14 @@ esac
+@@ -40418,33 +40426,14 @@ esac
  
  
  
@@ -291,7 +300,7 @@ $NetBSD: patch-aa,v 1.8 2006/01/20 03:51:25 joerg Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -40338,31 +40327,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -40489,31 +40478,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -330,7 +339,7 @@ $NetBSD: patch-aa,v 1.8 2006/01/20 03:51:25 joerg Exp $
      echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
  echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
  if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
-@@ -40415,6 +40396,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -40566,6 +40547,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
    ac_cv_lib_pthread_pthread_create=yes
@@ -338,7 +347,7 @@ $NetBSD: patch-aa,v 1.8 2006/01/20 03:51:25 joerg Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -40427,10 +40409,6 @@ LIBS=$ac_check_lib_save_LIBS
+@@ -40578,10 +40560,6 @@ LIBS=$ac_check_lib_save_LIBS
  fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
  echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6
@@ -349,7 +358,7 @@ $NetBSD: patch-aa,v 1.8 2006/01/20 03:51:25 joerg Exp $
    fi
  
      if test -z "$LIBPTHREAD" ; then
-@@ -40492,10 +40470,6 @@ rm -f conftest.err conftest.$ac_objext \
+@@ -40643,10 +40621,6 @@ rm -f conftest.err conftest.$ac_objext \
      LIBS=$kde_safe_libs
    fi
  
@@ -360,7 +369,7 @@ $NetBSD: patch-aa,v 1.8 2006/01/20 03:51:25 joerg Exp $
  
  
  case "$OS_TYPE" in
-@@ -40517,7 +40491,7 @@ _ACEOF
+@@ -40668,7 +40642,7 @@ _ACEOF
  
      ;;
  
@@ -369,7 +378,7 @@ $NetBSD: patch-aa,v 1.8 2006/01/20 03:51:25 joerg Exp $
      OS_TYPE="BSD"
  
  cat >>confdefs.h <<\_ACEOF
-@@ -44966,11 +44940,6 @@ cat >>$CONFIG_STATUS <<\_ACEOF
+@@ -45117,11 +45093,6 @@ cat >>$CONFIG_STATUS <<\_ACEOF
  
  { (exit 0); exit 0; }
  _ACEOF
