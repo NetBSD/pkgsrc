@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12746 2006/01/31 21:08:31 adam Exp $
+$NetBSD: CHANGES,v 1.12747 2006/01/31 21:09:30 tv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -651,3 +651,10 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/p5-Kwiki-Edit-RequireUserName 0.02 [jschauma 2006-01-31]
 	Added www/p5-Kwiki-Users-Remote 0.04 [jschauma 2006-01-31]
 	Updated graphics/cinepaint to 0.20.2 [adam 2006-01-31]
+	Added mail/perdition version 1.17 [tv 2006-01-31]
+	Added mail/perdition-bdb version 1.17 [tv 2006-01-31]
+	Added mail/perdition-gdbm version 1.17 [tv 2006-01-31]
+	Added mail/perdition-ldap version 1.17 [tv 2006-01-31]
+	Added mail/perdition-mysql version 1.17 [tv 2006-01-31]
+	Added mail/perdition-odbc version 1.17 [tv 2006-01-31]
+	Added mail/perdition-postgresql version 1.17 [tv 2006-01-31]
