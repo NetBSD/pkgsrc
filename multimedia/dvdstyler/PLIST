@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/24 03:47:44 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/31 02:57:18 xtraeme Exp $
 bin/dvdstyler
 share/doc/dvdstyler/AUTHORS
 share/doc/dvdstyler/COPYING
