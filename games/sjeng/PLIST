@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:55:38 zuntum Exp $
-bin/sjeng
-lib/sjeng/bug.opn
-lib/sjeng/losers.opn
-lib/sjeng/suicide.opn
-share/doc/sjeng/README
-@dirrm share/doc/sjeng
-@dirrm lib/sjeng

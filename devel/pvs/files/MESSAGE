@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2005/09/02 02:27:11 jschauma Exp $
-
-	The PVS Specification and Verification System requires a kernel
-	built with 'COMPAT_LINUX' and 'PROCFS' enabled.
-
-===========================================================================

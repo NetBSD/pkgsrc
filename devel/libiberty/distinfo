@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:18 agc Exp $
-
-SHA1 (libiberty-1.0.tar.gz) = e0ad9a4ae0e1d2be67a14d03e7e8840ab01dc2d5
-RMD160 (libiberty-1.0.tar.gz) = 9d4d77f43baefe06052d2465fd19d49c29c5d859
-Size (libiberty-1.0.tar.gz) = 1210416 bytes
-SHA1 (patch-aa) = b3bd46fe9fd48206ae62f2462ae5f192a6848239

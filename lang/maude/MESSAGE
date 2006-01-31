@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2003/12/31 01:20:35 kristerw Exp $
-
-In order for the maude binary to find the .maude files you should set
-the environment variable MAUDE_LIB to point to ${PREFIX}/share/maude.
-
-===========================================================================

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/02 20:34:02 reed Exp $
-libexec/mldonkey/mlnet
-share/examples/rc.d/mldonkey
-@unexec ${RMDIR} %D/libexec/mldonkey >/dev/null 2>&1 || ${TRUE}

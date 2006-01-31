@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 18:49:21 agc Exp $
-
-SHA1 (uips-1.0/uips.c) = ef0acd30549d815a997cf1a7501c072e061fc79a
-RMD160 (uips-1.0/uips.c) = a6e0eeb26cb7be532d8f3d783a76b29417ce6ded
-Size (uips-1.0/uips.c) = 12410 bytes
-SHA1 (uips-1.0/uips.txt) = b9da81d6a2242bb2fd2a0bd20aa26669b106b326
-RMD160 (uips-1.0/uips.txt) = af412775db71779107d1d787c38bb4ca033e48d9
-Size (uips-1.0/uips.txt) = 1833 bytes

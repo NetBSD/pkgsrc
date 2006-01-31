@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.13 2004/09/22 08:09:52 jlam Exp $
-bin/gpgme-config
-include/gpgme.h
-lib/libgpgme-pthread.la
-lib/libgpgme.la
-share/aclocal/gpgme.m4

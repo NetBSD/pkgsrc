@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/03 16:18:54 reed Exp $
-man/man1/mhtpasswd.1
-man/man8/mini_httpd.8
-sbin/mhtpasswd
-sbin/mini_httpd

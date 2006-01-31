@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.SunOS,v 1.2 2003/05/06 18:38:32 grant Exp $
-
-You will need to stop Solaris volume management before using
-${PKGNAME_NOREV}:
-
-	/etc/init.d/volmgt stop
-
-===========================================================================

@@ -1,4 +1,0 @@
-TLS (aka SSL) Channel - can be layered on any bi-directional Tcl_Channel.
-
-Both client and server-side sockets are possible, and this code should work
-on any platform as it uses a generic mechanism for layering on SSL and Tcl.

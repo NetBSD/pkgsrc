@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/10/25 13:23:52 wiz Exp $
-
-SHA1 (gettext-1.05.tar.gz) = 705f519ad61b4a8c522d8aaf98425e0bd21709f2
-RMD160 (gettext-1.05.tar.gz) = 767adfce05b8fe77ddd7d3814951822746cf6e4b
-Size (gettext-1.05.tar.gz) = 7693 bytes

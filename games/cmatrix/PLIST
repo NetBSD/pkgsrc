@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/07 18:03:10 xtraeme Exp $
-bin/cmatrix
-man/man1/cmatrix.1
-share/cmatrix/mtx.pcf
-@dirrm share/cmatrix

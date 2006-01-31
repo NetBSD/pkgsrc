@@ -1,4 +1,0 @@
-HPIJS implements a IJS server for IJS clients such as GNU Ghostscript,
-and provides printing support for more than 150 printer models, including
-DeskJet, OfficeJet, PhotoSmart, Business InkJet, and some LaserJet
-models.

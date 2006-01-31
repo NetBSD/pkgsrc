@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/04/05 10:48:57 wiz Exp $
-lib/tcl/TclExpat-1.1/pkgIndex.tcl
-lib/tcl/TclExpat-1.1/tclexpat.so
-share/doc/tcl/TclExpat/README
-@dirrm share/doc/tcl/TclExpat
-@dirrm lib/tcl/TclExpat-1.1

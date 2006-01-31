@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 16:33:09 agc Exp $
-
-SHA1 (pytable-0.8.3a.tar.gz) = 30d672c607a680d7e95e00654e067d5018a75383
-RMD160 (pytable-0.8.3a.tar.gz) = 2ed69364ffae0a5cf44e1d0cccaf1bc74f199f5a
-Size (pytable-0.8.3a.tar.gz) = 76541 bytes

@@ -1,6 +1,0 @@
-Test::Unit - a unit testing interface for Perl
-
-Test::Unit is the procedural style interface to a sophisticated
-unit testing framework for Perl that is derived from the JUnit
-testing framework for Java by Kent Beck and Erich Gamma. An
-object-oriented interface is also available in this package.

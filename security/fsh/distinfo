@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/03/20 12:51:54 fredb Exp $
-
-SHA1 (fsh-1.2.tar.gz) = c2f1e923076d368fbb5504dcd1d33c74024b0d1b
-RMD160 (fsh-1.2.tar.gz) = 41f20e5a4001851d2cadc6909b72a17a270acfd2
-Size (fsh-1.2.tar.gz) = 152374 bytes
-SHA1 (patch-aa) = 369d409cf63c77780f15234e22103762a036cc0f

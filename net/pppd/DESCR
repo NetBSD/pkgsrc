@@ -1,6 +1,0 @@
-The PPP Daemon is the userland part of the Point-to-Point Protocol.  It works
-in combination with a dedicated kernel network interface usually named ppp.
-PPP is a very extensible protocol and pppd supports a large number of options,
-including compression (through various algorithms), cryptography (Microsoft's
-MPPE) and authentication (PAP, CHAP, Microsoft CHAP), provided the kernel has
-the relevant back-ends in some cases.

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2005/11/04 07:20:32 gendalia Exp $
-
-SHA1 (openafs-1.4.0-src.tar.bz2) = 09839a6bc71da3902f591c4f4f3c27cb63168195
-RMD160 (openafs-1.4.0-src.tar.bz2) = 96cac36c5f0e0891b8a77506003d9bda448dce23
-Size (openafs-1.4.0-src.tar.bz2) = 11268368 bytes
-SHA1 (patch-aa) = a24cc0d97a0045e44dadbcb195a55c50dfc2d308
-SHA1 (patch-ab) = 21dcf87c03c04db8a4723f11fbf61ccc813db9dc

@@ -1,4 +1,0 @@
-This is a plug-in for GIMP 2.0 for loading of digital camera
-raw format files. It uses Dave Coffin's "dcraw" utility for conversion
-and interpolation of the data stored in the raw file. The rest of the
-color manipulations are done inside the plug-in in the 16bit color space.

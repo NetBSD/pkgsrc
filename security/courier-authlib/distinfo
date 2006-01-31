@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/08/11 00:03:16 jlam Exp $
-
-SHA1 (courier-authlib-0.57.tar.bz2) = dd68cf4ff7f73ce472206c88dc19a0fd93128f63
-RMD160 (courier-authlib-0.57.tar.bz2) = b11e2f39b2af38c1487b81bb89c4925723627c9f
-Size (courier-authlib-0.57.tar.bz2) = 2006138 bytes
-SHA1 (patch-aa) = 2775ced0c6454c15baecf640461484ceccc8eef1
-SHA1 (patch-ab) = 0108a05af5da6dcdb3463a2aeb592264ca914898
-SHA1 (patch-ac) = 2e67a598f39f54de901079c63b9078521b5a5937

@@ -1,9 +1,0 @@
-Librapi is part of the SynCE project.
-
-The RAPI library is an open source implementation that works like
-RAPI.DLL, available on Microsoft operating systems. The library
-makes it possible to make remote calls to a computer running Pocket
-PC.
-
-In order to use librapi, a daemon that the Pocket PC client connects
-to must be running on the computer using librapi.

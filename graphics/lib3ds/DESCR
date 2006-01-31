@@ -1,7 +1,0 @@
-The 3D Studio File Format Library is an overall software library for managing
-3D-Studio Release 3 and 4 .3DS files.  It is a free alternative to Autodesk's
-3DS File Toolkit for managing 3DS files.  Its main goal is to simplify the
-creation of 3DS import and export filters.
-
-This project is not related in any form to Autodesk.  The library is based on
-unofficial information about the 3DS format found on the web.

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/21 17:17:08 drochner Exp $
-bin/exifgrep
-bin/exifprobe
-man/man1/exifgrep.1
-man/man1/exifprobe.1

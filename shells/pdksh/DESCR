@@ -1,5 +1,0 @@
-PD-ksh is a mostly complete AT&T ksh look-alike.  Work is mostly
-finished to make it fully compatible with both POSIX and AT&T ksh
-(when the two don't conflict). Since pdksh is free and compiles
-and runs on most common unix systems, it is very useful in creating
-a consistent user interface across multiple machines.

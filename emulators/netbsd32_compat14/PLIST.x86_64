@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.x86_64,v 1.1 2005/02/21 21:08:50 veego Exp $
-${COMPAT_LIBDIR}/libi386.so.0.2
-${COMPAT_LIBDIR}/libkeycap.so.0.0

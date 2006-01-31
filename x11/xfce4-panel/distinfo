@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.13 2005/11/09 06:42:59 martti Exp $
-
-SHA1 (xfce4-panel-4.2.3.tar.gz) = d42a9e3c66b49c8fd4dcb15cd0b8776a60dd43c3
-RMD160 (xfce4-panel-4.2.3.tar.gz) = 05a7c450d4ef964ac0e39107a8f891ab307649b2
-Size (xfce4-panel-4.2.3.tar.gz) = 1395852 bytes
-SHA1 (patch-aa) = 80188922f6282ffa109c639727ed86678221e36b

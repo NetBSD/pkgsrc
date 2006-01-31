@@ -1,7 +1,0 @@
-pslib is a C-library for generating PostScript files with little
-effort. It offers an easy way of generating PostScript text
-and graphics. Its text function are very sophisticated and support
-kerning, ligatures and some basic formatting. Hypertext functions
-are supported through pdfmarks which makes pslib in combination
-with ghostscript a viable alternative for libraries creating
-PDF.

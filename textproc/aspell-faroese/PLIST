@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/24 03:07:34 wiz Exp $
-lib/aspell/faroese.alias
-lib/aspell/fo.multi
-lib/aspell/fo.rws
-lib/aspell/føroyskt.alias
-share/aspell/fo.dat
-share/aspell/fo_phonet.dat

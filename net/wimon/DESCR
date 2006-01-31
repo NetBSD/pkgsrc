@@ -1,3 +1,0 @@
-wimon is a curses tool that shows a real-time graph of your wireless
-connection status. It is based on Bill Paul's wiconfig.
-It runs on NetBSD, FreeBSD and OpenBSD.

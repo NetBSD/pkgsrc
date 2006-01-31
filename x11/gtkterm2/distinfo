@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 17:36:12 wiz Exp $
-
-SHA1 (gtkterm2-0.2.3.tar.gz) = 4ab57570ba62efc4d972b100250b59b3d22715b9
-RMD160 (gtkterm2-0.2.3.tar.gz) = 113ac4af4a7c21f32d2ca96f81457936f0caa24d
-Size (gtkterm2-0.2.3.tar.gz) = 258589 bytes
-SHA1 (patch-aa) = fd1bbe9e6aeb879e5bd875083b3a466d6986b633

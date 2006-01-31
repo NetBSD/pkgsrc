@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/11/04 19:52:30 rillig Exp $
-
-SHA1 (clit18src.zip) = 0fa9aead468bd8640c49374d46d78d2a3e79489f
-RMD160 (clit18src.zip) = 6104a7d951ed60ea73705e401be8b55633ea2d47
-Size (clit18src.zip) = 135120 bytes
-SHA1 (patch-aa) = 60edfb550d157298aba38e39706681b44c663ef9

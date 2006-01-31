@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:41 wiz Exp $
-
-SHA1 (zope/LocalFS-1-0-0.tgz) = a4bdf98cf6b5bfc0e0d0071923ba255afe372cc6
-RMD160 (zope/LocalFS-1-0-0.tgz) = 8a0267f8f190dbc81622ccdcbc32f0e0c753f314
-Size (zope/LocalFS-1-0-0.tgz) = 46990 bytes

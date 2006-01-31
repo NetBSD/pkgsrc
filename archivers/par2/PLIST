@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/29 19:36:07 tv Exp $
-bin/par2
-bin/par2create
-bin/par2repair
-bin/par2verify

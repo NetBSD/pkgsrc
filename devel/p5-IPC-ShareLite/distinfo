@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/03/22 07:37:05 schmonz Exp $
-
-SHA1 (IPC-ShareLite-0.09.tar.gz) = b0784071521341a8173e4e5240af67545f5241cb
-RMD160 (IPC-ShareLite-0.09.tar.gz) = 46871b44fb8b29d80af14e3ede295b73e14f6354
-Size (IPC-ShareLite-0.09.tar.gz) = 36779 bytes
-SHA1 (patch-aa) = 1b0a2c1f53522985bc4b85d425a1eec4f6a4996a
-SHA1 (patch-ab) = 6fe72624e3e15dd2d8dae0ac53987d562c440fa4

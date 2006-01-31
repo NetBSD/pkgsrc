@@ -1,6 +1,0 @@
-PTimeTracker is a small Qt-based program that helps you keep track
-of the time spent on projects. The time in minutes spent on the
-active project is displayed on the icon and title bar and therefore
-viewable even when the program is minimised. A detailed report is
-available on total hours worked on different projects. This report
-displays the amount of time spent on each of the projects per day.

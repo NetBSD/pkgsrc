@@ -1,5 +1,0 @@
-libgnomeui is the library that provides basic GNOME2 graphic widgets.
-These libraries require, therefore, to link against a GUI library
-(GTK 2).
-
-This package is part of the GNOME 2 Development Platform.

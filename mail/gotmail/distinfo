@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/31 20:34:19 minskim Exp $
-
-SHA1 (gotmail-0.8.6.tar.gz) = 880a4a91115fd8c5e6a33e05eab1e3f43fbfb587
-RMD160 (gotmail-0.8.6.tar.gz) = d9c3afd568a3d19bf50f6128d9293f7bb4780f9f
-Size (gotmail-0.8.6.tar.gz) = 35212 bytes

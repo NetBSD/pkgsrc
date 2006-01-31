@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/17 11:52:29 grant Exp $
-bin/sipcalc
-man/man1/sipcalc.1

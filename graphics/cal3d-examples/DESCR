@@ -1,7 +1,0 @@
-A demo of Cal3d library.
-
-Cal3d is a skeletal based 3d character animation library written in C++ in
-a platform-/graphic API-independent way. Originally designed to be used in a
-3d client for Worldforge, it evolved into a stand-alone product which can be
-used in many different kinds of projects. Check out the Cal3d FAQ for more
-detailed info.

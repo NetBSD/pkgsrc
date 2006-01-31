@@ -1,7 +1,0 @@
-XBase module provides access to XBase (dBase, Fox*) dbf files.  It also
-handles memo files (dbt, fpt) and to certain extend index files (ndx, ntx,
-mdx, idx and cdx).  The DBD::XBase is a database driver for DBI and provides
-simple SQL interface to reading and writing the database files.  So this
-package offers two ways of accessing your beloved data in dbf files: XBase.pm
-and DBD::XBase.  It is recommend using DBD::XBase and only resort to XBase.pm
-if you need something special which is not supported by the DBI interface.

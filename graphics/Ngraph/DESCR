@@ -1,7 +1,0 @@
-Ngraph is a software drawing scientific graphs for students, researchers,
-and engineers. Ngraph makes a graph from data files written in a general
-ASCII format. Fitting by a n-th polynomial, user-defined functionals is
-available. Furthermore, masking invalid data, evaluation of plotted data
-points, a transformation by a mathematical expression are also available.
-Ngraph will assist making a scientific graph for the purpose of your
-presentation, and also analysing data.

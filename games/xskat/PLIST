@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/26 04:07:50 jschauma Exp $
-bin/xskat
-${IMAKE_MAN_DIR}/xskat.${IMAKE_MANNEWSUFFIX}
-${IMAKE_MAN_DIR}/xskat-de.${IMAKE_MANNEWSUFFIX}

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:13:51 agc Exp $
-
-SHA1 (ProgrammersManual.texinfo) = c6c0e2174f9c6fb6312189140993dc33c7c6907f
-RMD160 (ProgrammersManual.texinfo) = e861fd05a9b14156184ccf7476702d5d2b22d88b
-Size (ProgrammersManual.texinfo) = 251661 bytes
-SHA1 (HelpSystem-02Jun93.txt) = 9c38be2e5ecf2d0f33428c6e3735425a2d022960
-RMD160 (HelpSystem-02Jun93.txt) = 0a117d9e5ef22f1f80989315f64a8849cd09b259
-Size (HelpSystem-02Jun93.txt) = 364908 bytes
-SHA1 (patch-aa) = cca086713513a23f58f35d46e94b4fecf72258cb

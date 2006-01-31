@@ -1,5 +1,0 @@
-# $NetBSD: Makefile.version,v 1.31 2005/09/06 17:35:17 jlam Exp $
-
-.if !defined(SVNVER)
-SVNVER=                1.2.3
-.endif

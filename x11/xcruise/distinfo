@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/07/20 17:21:27 kristerw Exp $
-
-SHA1 (xcruise-0.24.tar.gz) = 45cf0e44c37add64a69ef2cbc859d19988f02c56
-RMD160 (xcruise-0.24.tar.gz) = 2f62c7996f3e2d14a320fa595feb3040af3f8f48
-Size (xcruise-0.24.tar.gz) = 25621 bytes
-SHA1 (patch-aa) = 4f084c5cf8dae9700f2cd8f0b30b27f54f64c05f

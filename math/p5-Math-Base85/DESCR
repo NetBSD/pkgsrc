@@ -1,2 +1,0 @@
-This module handles numbers in base 85, via strings and Math::BigInt.
-For more information, read the module or rfc1924.txt.

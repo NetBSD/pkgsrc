@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:29:47 zuntum Exp $
-bin/ttyplay
-bin/ttyrec
-man/man1/ttyplay.1
-man/man1/ttyrec.1

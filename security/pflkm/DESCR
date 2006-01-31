@@ -1,9 +1,0 @@
-Packet Filter (from here on referred to as PF) is OpenBSD's system for
-filtering TCP/IP traffic and doing Network Address Translation. PF is also
-capable of normalizing and conditioning TCP/IP traffic.
-
-PF was originally developed by Daniel Hartmeier and is now maintained and
-developed by Daniel and the rest of the OpenBSD team.
-
-This package includes a complete port (LKM and userland utilities) from
-OpenBSD 3.7 to NetBSD 2.0.

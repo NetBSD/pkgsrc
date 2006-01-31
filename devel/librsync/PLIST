@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2004/11/25 14:25:22 adam Exp $
-bin/rdiff
-include/librsync-config.h
-include/librsync.h
-lib/librsync.la
-man/man1/rdiff.1
-man/man3/librsync.3

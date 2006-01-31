@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.9 2005/08/26 13:59:21 grant Exp $
-
-SHA1 (gperiodic-2.0.8.tar.gz) = b9d41c02ee8724b799280c7493aa2bb15a2d5cea
-RMD160 (gperiodic-2.0.8.tar.gz) = e799208c2233fbc9530c8e0b6a34fbcdba97931f
-Size (gperiodic-2.0.8.tar.gz) = 125402 bytes
-SHA1 (patch-aa) = 6292e54cacd3e00972e720b4da155663dc067664
-SHA1 (patch-ab) = 6f79492b0ce20681288323c8b113f6240a649bb2
-SHA1 (patch-ac) = b46b521544d4dff146e8b71e66ac8811b6b8525f
-SHA1 (patch-ad) = 0ec076c13f652737459c2b1bf680338c5da52016

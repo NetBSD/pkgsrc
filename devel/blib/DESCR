@@ -1,7 +1,0 @@
-blib library contains code that you will find useful if you want to create
-any kind of software related to Blinkenlights.
-
-There is a code to read and write the old-style BLM movie format as well
-as code to handle GIF files and the new Blinkenlights Markup Language.
-Both sides of the Blinkenlights network protocol are implemented so that
-you don't have to care about the details.

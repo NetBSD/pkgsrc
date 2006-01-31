@@ -1,8 +1,0 @@
-Spiceprm was written in the course of moving my engineering activities
-to the Linux operating system.  My previous MSDOS spice package
-permitted passing parameters to subcircuits.  The raw Berkely Spice
-doesn't.   Anyone used to this feature knows the frustration of trying
-to use a simulator without it.  This script is the result of my
-desperation.  It translates a circuit file containing parameterized
-subcircuits with math expressions into another circuit file meeting raw
-spice requirements.  You then run spice on the translated output file.

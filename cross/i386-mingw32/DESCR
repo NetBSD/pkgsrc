@@ -1,5 +1,0 @@
-MinGW is a collection of header files and import libraries that allow
-one to use GCC and produce native Windows32 programs that do not rely
-on any 3rd-party DLLs.
-
-http://www.mingw.org/

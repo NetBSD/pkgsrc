@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST.solaris-sparc,v 1.1 2001/11/01 02:24:37 zuntum Exp $
-lib/netscape/${BINNAME}-${NS_VERS}/dynfonts/libTrueDoc.so
-lib/netscape/${BINNAME}-${NS_VERS}/libjsd.so
-lib/netscape/${BINNAME}-${NS_VERS}/plugins/libnullplugin.so
-lib/netscape/${BINNAME}-${NS_VERS}/talkback/master.ini
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/dynfonts
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/talkback

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/05/25 13:13:55 wiz Exp $
-
-SHA1 (pear/Net_Socket-1.0.2.tgz) = 6ac32b557b2b9ae179d2800b7e7749dd108bc482
-RMD160 (pear/Net_Socket-1.0.2.tgz) = 477a4d605bbb4c3652fd11da7e8e9e82ea9998b5
-Size (pear/Net_Socket-1.0.2.tgz) = 3706 bytes

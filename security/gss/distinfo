@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 13:10:06 agc Exp $
-
-SHA1 (gss-0.0.15.tar.gz) = 7bdb4d92b58c9c5ec4f0a564e704bf3cdcb91e29
-RMD160 (gss-0.0.15.tar.gz) = ba9067a932f5e4ade82b448e613b046c6ab862b4
-Size (gss-0.0.15.tar.gz) = 1383440 bytes

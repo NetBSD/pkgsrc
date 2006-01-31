@@ -1,4 +1,0 @@
-# $NetBSD: site.config.m4-v6-not-solaris,v 1.2 2004/08/30 20:16:28 adrianp Exp $
-
-# enable IPv6 - not Solaris
-APPENDDEF(`confENVDEF', `-DNEEDSGETIPNODE')

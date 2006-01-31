@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 22:24:10 agc Exp $
-
-SHA1 (automake-1.4-p6.tar.gz) = 330c75c98e6dcdf21cbb63cf94ced8ea564b9438
-RMD160 (automake-1.4-p6.tar.gz) = ae40b2200eec95b601ebc65bc3cc916bb2a54066
-Size (automake-1.4-p6.tar.gz) = 375060 bytes
-SHA1 (patch-aa) = e5e7f073a777be92f419173c9cc84dc42325a3a1
-SHA1 (patch-ab) = 1cd201197633853626ddc46c7ba9722c5eaf7b0e

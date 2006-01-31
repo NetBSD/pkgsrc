@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:10:09 agc Exp $
-
-SHA1 (Crypt-DES_EDE3-0.01.tar.gz) = 537759b72af2529466cebf2b1b168f7e43d482ab
-RMD160 (Crypt-DES_EDE3-0.01.tar.gz) = fce2367ded3dc20fc274afa2dfbddc2a7d2237e9
-Size (Crypt-DES_EDE3-0.01.tar.gz) = 2328 bytes

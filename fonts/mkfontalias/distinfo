@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 19:18:28 agc Exp $
-
-SHA1 (mkfontalias.py) = 455a7ac5b355d2ac6606f94ffa5cffa5af9385c1
-RMD160 (mkfontalias.py) = e9c0618964b274f244eda9f4c2cacc205146184e
-Size (mkfontalias.py) = 3571 bytes
-SHA1 (patch-aa) = c1ea1fd0cd708f84e63b4039c1986b93086dd0b5

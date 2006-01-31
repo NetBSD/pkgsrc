@@ -1,4 +1,0 @@
-APC is the Alternative PHP Cache, which provides a way of boosting the
-performance of PHP on heavily-loaded sites by allowing scripts to be cached
-in a compiled state, so that the overhead of parsing and compiling can be
-almost completely eliminated.

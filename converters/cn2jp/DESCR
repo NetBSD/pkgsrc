@@ -1,9 +1,0 @@
-cn2jp -- library for code translation between Chinese and Japanese
-including Chinese {GB,Big5,HZ} and Japanese (EUC-Jis/Shift-Jis/Jis)
-
-b2j	translate Big5 to Jis/EUC-Jis/Shift-Jis/Kuten
-g2j	translate GB to Jis/EUC-Jis/Shift-Jis/Kuten
-j2b	translate any Jis to Big5
-g2b	translate GB to Big5
-j2g	translate any Jis to GB
-b2g	translate Big5 to GB

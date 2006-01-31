@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 16:33:07 agc Exp $
-
-SHA1 (DBD-XBase-0.241.tar.gz) = 4098ee28cacadaaf047d93fa7c161a93f4875a8e
-RMD160 (DBD-XBase-0.241.tar.gz) = ea24f40a93c9a8d24ec91478f300c0622b4560e6
-Size (DBD-XBase-0.241.tar.gz) = 111824 bytes

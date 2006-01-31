@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 13:40:58 agc Exp $
-
-SHA1 (tpb-0.6.1.tar.gz) = 096e00055a6cb56e98af850415b30dfce028442c
-RMD160 (tpb-0.6.1.tar.gz) = 2dcceb513fb2091a258a841fb9b8c4ac1136bce0
-Size (tpb-0.6.1.tar.gz) = 193520 bytes
-SHA1 (patch-aa) = 9bef74177f7754bea5f38df6de113eef8fec905d
-SHA1 (patch-ab) = a1e1d328f1fff84c3c10bcbfa093399c6d9917d6
-SHA1 (patch-ac) = f7089dea19846fccf90065eda210029080f1abb2

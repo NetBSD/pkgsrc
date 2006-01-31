@@ -1,9 +1,0 @@
-Not Quite C is a simple language with a C like syntax that can be used
-to program Lego's RCX programmable brick (from the Mindstorms set). If
-you are just getting started with programming, then graphical
-environments such as the Mindstorms RIS software or Robolab are
-probably better choices. If, however, you're a C programmer and prefer
-typing a few lines to drag and drop icon programming, then NQC may be
-perfect for you.
-
-NQC is free software released under the Mozilla Public License (MPL).

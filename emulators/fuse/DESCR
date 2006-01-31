@@ -1,8 +1,0 @@
-Fuse is the Free Unix Spectrum Emulator.
-* Working 48K/128K/+2/+2A Speccy emulation, running at true Speccy speed on any
-computer you're likely to try it on.
-* Support for loading from .tzx files.
-* Sound (on system supporting the Open Sound System or BSD/Solaris).
-* Kempston joystick emulation.
-* Emulation of the various printer you could attach to the Spectrum.
-* Very basic support for RZX files.

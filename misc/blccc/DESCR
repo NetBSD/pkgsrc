@@ -1,7 +1,0 @@
-This is a rewrite of the master control program for Blinkenlights.
-The first implementation used to be a GTK+ application that allowed
-previewing of movies and run-time modification of the playlist using
-a graphical user interface.  The need for a way to control
-the Blinkenlights remotely arose, so this new implementation runs as
-a daemon controllable via telnet connections.  This software was used
-for the Blinkenlights installation at the end of September 2001.

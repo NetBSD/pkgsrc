@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/04/01 03:32:07 kim Exp $
-
-SHA1 (nntpclnt-1.6.1.tar.gz) = df24e9083185680d85bdc016e9e4ba54f4071f80
-RMD160 (nntpclnt-1.6.1.tar.gz) = b3d8ec94d74cc1a0f88264756b89c91fabde0750
-Size (nntpclnt-1.6.1.tar.gz) = 34369 bytes
-SHA1 (patch-aa) = e4c947e9acdd6f814437409e475b819588c444fa
-SHA1 (patch-ab) = 594f068acbc6794cc4e22c77d3474ea7673a4f87
-SHA1 (patch-ac) = ed067e2f2c6c22e32ca388dc6f990aa720d762aa
-SHA1 (patch-ad) = 1b648dcaba5625326e17ecdce90622a02e207f17

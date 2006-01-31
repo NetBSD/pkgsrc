@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:58:09 zuntum Exp $
-bin/xworm
-share/xworm/xworm.font
-share/xworm/xworm.grid
-share/xworm/xworm.raw
-@dirrm share/xworm

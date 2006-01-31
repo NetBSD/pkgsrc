@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:10:12 agc Exp $
-
-SHA1 (pycrack-0.01.tar.gz) = 44b318795cb74f5a06896d9d7d64322e9164438b
-RMD160 (pycrack-0.01.tar.gz) = cfad834cd9f65cceeb5174901bac67800b8cf46b
-Size (pycrack-0.01.tar.gz) = 9195 bytes
-SHA1 (patch-aa) = c380953b710db0f0eeb26f54f2ded55e36014719

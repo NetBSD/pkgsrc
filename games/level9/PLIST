@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/24 23:04:09 dillo Exp $
-bin/level9
-share/doc/level9/level9.txt
-@dirrm share/doc/level9

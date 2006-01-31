@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.16 2005/08/08 01:52:22 xtraeme Exp $
-
-SHA1 (clamsmtp-1.5.tar.gz) = 01880b3f1b9aad84c4db5632ff1c4afaafe5a606
-RMD160 (clamsmtp-1.5.tar.gz) = 459d975c4501a63d485e22d98654073ef7eaf768
-Size (clamsmtp-1.5.tar.gz) = 148067 bytes

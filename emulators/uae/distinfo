@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.13 2005/10/14 22:15:49 kristerw Exp $
-
-SHA1 (uae-0.8.25.tar.gz) = 41b7a70cf672d3cc516bd3856a051459a95a6517
-RMD160 (uae-0.8.25.tar.gz) = 6990dc7aaf43c8bda0d7b86e6d0ae164209d1eb1
-Size (uae-0.8.25.tar.gz) = 970727 bytes
-SHA1 (patch-aa) = c185427ad9042e0e81ec4990c0ae4b5e6977a74e
-SHA1 (patch-ab) = 4dc5d66008a9c056c7a93f74d25c4778d4f1b6cb
-SHA1 (patch-ac) = 1176273248965a36a022399e83ab53cf0c065b9f

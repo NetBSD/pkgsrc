@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2004/02/10 12:51:51 grant Exp $
-lib/${MOZ_NAME}/plugins/flashplayer.xpt
-lib/${MOZ_NAME}/plugins/libflashplayer.so

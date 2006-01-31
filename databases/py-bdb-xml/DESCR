@@ -1,5 +1,0 @@
-This module is built using SWIG (http://www.swig.org) to produce a
-Python module that maps to the Berkeley DB XML C++ API fairly closely.
-At present, separate documentation for the Python API is not provided.
-Refer to the C++ API documentation and the Python examples for more
-information, or contact Sleepycat Support (support@sleepycat.com).

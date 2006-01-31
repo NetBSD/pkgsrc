@@ -1,8 +1,0 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/29 23:15:36 jtb Exp $
-
---- /dev/null
-+++ objdir/Makefile
-@@ -0,0 +1,3 @@
-+SUBDIR+= liblua liblualib lua luac
-+
-+.include <bsd.subdir.mk>

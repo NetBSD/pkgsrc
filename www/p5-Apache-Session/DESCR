@@ -1,4 +1,0 @@
-These modules provide persistent storage for arbitrary data, in arbitrary
-backing stores.  The details of interacting with the backing store are
-abstracted to make all backing stores behave alike.  The programmer simply
-interacts with a tied hash.

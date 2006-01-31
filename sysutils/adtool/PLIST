@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/30 21:11:56 minskim Exp $
-bin/adtool
-man/man1/adtool.1
-share/examples/adtool/adtool.cfg.dist
-@dirrm share/examples/adtool

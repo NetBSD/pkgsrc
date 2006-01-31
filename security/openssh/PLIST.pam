@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.pam,v 1.1 2002/02/05 04:17:32 jlam Exp $
-share/examples/openssh/sshd.pam

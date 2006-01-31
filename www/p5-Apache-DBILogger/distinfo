@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:34 wiz Exp $
-
-SHA1 (Apache-DBILogger-0.93.tar.gz) = babb633545529e25010e47bbc2f0cfdeaf716ad8
-RMD160 (Apache-DBILogger-0.93.tar.gz) = 646532f6ed6fdb4088627132a27679fb81cae245
-Size (Apache-DBILogger-0.93.tar.gz) = 9702 bytes

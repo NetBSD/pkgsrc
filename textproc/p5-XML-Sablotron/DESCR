@@ -1,4 +1,0 @@
-This perl module is encapsulation of the XSLT processor called
-Sablotron (textproc/sablotron).  If you don't know what is XSLT, look
-at http://www.w3.org/ site.  If you don't know what is Sablotron, look
-at http://www.gingerall.com/.

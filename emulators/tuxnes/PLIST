@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/19 20:29:37 wiz Exp $
-bin/tuxnes
-bin/romfixer
-share/doc/tuxnes/AUTHORS
-share/doc/tuxnes/BUGS
-share/doc/tuxnes/COPYING
-share/doc/tuxnes/README
-share/doc/tuxnes/THANKS
-@dirrm share/doc/tuxnes
