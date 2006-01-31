@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.47 2006/01/24 07:32:30 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2006/01/31 22:30:45 markd Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
-PKGREVISION=	2
 CATEGORIES=	net
 COMMENT=	Network modules for the KDE integrated X11 desktop
 
 CONFLICTS=	kopete-[0-9]*
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
+
+DEPENDS+=		qca-tls>=1.0:../../security/qca-tls
 
 USE_DIRS+=		xdg-1.1
 PTHREAD_OPTS+=		require
