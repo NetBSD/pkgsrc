@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12744 2006/01/31 18:56:00 jschauma Exp $
+$NetBSD: CHANGES,v 1.12745 2006/01/31 20:14:26 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -649,3 +649,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/prelude-lml to 0.9.2 [shannonjr 2006-01-31]
 	Updated security/prelude-manager to 0.9.2 [shannonjr 2006-01-31]
 	Added www/p5-Kwiki-Edit-RequireUserName 0.02 [jschauma 2006-01-31]
+	Added www/p5-Kwiki-Users-Remote 0.04 [jschauma 2006-01-31]
