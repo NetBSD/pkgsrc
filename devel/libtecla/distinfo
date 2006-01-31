@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 22:24:20 agc Exp $
-
-SHA1 (libtecla-1.6.1.tar.gz) = 99c82990e7a41050211e4a449e50e20ee511c284
-RMD160 (libtecla-1.6.1.tar.gz) = 024f05583dc78bee1a686054799ce32c86890484
-Size (libtecla-1.6.1.tar.gz) = 518995 bytes

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 23:12:00 agc Exp $
-
-SHA1 (lgeneral-1.1.1.tar.gz) = 37ce2f59ec4654893fa864a7582981683e389df8
-RMD160 (lgeneral-1.1.1.tar.gz) = f4ca361e8b3d180e0fb7136f86cc6412a82974fb
-Size (lgeneral-1.1.1.tar.gz) = 588698 bytes
-SHA1 (patch-aa) = ae6f56a9efb5024e5160d2b05aba73d26cecd16b
-SHA1 (patch-ab) = 118eaa7e52e793eed9e2518f373d400dff4f9d51

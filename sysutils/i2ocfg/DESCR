@@ -1,3 +1,0 @@
-i2ocfg is an I2O configuraion dialog gateway for NetBSD. This means that it
-lets you access the built-in HTML configuration utility found on some I2O
-adapters, provided that you've got a web server and a browser.

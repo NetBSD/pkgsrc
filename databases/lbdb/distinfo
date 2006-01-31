@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/09/10 11:26:47 tonio Exp $
-
-SHA1 (lbdb_0.30.tar.gz) = d137c11857ea23e9689e0f93d876ec107a7b8467
-RMD160 (lbdb_0.30.tar.gz) = 289c2a9395523bac08bc36510894b14fb3b18057
-Size (lbdb_0.30.tar.gz) = 104620 bytes
-SHA1 (patch-aa) = 22fe204b0a72e6565fd20e812be1ca84550689b3
-SHA1 (patch-ab) = d7f28838c8501f0c9631be949b3dbc8141170ec4

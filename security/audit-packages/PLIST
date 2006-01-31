@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/06/12 06:59:30 wiz Exp $
-man/cat8/audit-packages.0
-man/cat8/download-vulnerability-list.0
-man/man8/audit-packages.8
-man/man8/download-vulnerability-list.8
-sbin/audit-packages
-sbin/download-vulnerability-list

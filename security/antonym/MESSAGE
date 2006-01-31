@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2004/05/07 12:05:10 cjep Exp $
-
-Though antonym supports --ctype=gpg, GnuPG is not properly supported in this
-version of antonym (gpg >= 1.3.4 is required, and the nymserver must support
-OpenPGP).  As a result, for now, the default implementation used is pgp2.
-===========================================================================

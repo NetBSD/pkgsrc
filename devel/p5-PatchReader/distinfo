@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:28 agc Exp $
-
-SHA1 (PatchReader-0.9.5.tar.gz) = bec457b4cc4fd14a1d7019f78085fb64ee88f936
-RMD160 (PatchReader-0.9.5.tar.gz) = 8094ad1a4735fcf7294b1867bd4729c00d84798d
-Size (PatchReader-0.9.5.tar.gz) = 9037 bytes

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:16:51 zuntum Exp $
-bin/idea_spd
-bin/ideatest
-include/idea.h
-lib/libidea.a

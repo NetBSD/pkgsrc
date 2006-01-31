@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 18:49:21 agc Exp $
-
-SHA1 (VMware-2.0.4-1142.tar.gz) = 3c1ae31a366b46d787817054685a4cf6c0606afd
-RMD160 (VMware-2.0.4-1142.tar.gz) = d42a69939b83c51be07562a7789a9add1f05f6b9
-Size (VMware-2.0.4-1142.tar.gz) = 6533427 bytes

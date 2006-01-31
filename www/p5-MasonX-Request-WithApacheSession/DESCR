@@ -1,3 +1,0 @@
-This module takes advantage of the new flexibility in Mason 1.09_01
-and newer to integrate an Apache::Session session directly into
-Mason's Request object.

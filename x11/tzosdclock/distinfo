@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/28 02:46:19 minskim Exp $
-
-SHA1 (tzosdclock_1.0.2.tar.gz) = 9df6a54ad5a230a51c7680940b7699bd83d6897e
-RMD160 (tzosdclock_1.0.2.tar.gz) = 19327151cf6606b8bc8747d64189fafe0f630d32
-Size (tzosdclock_1.0.2.tar.gz) = 181015 bytes
-SHA1 (patch-aa) = 427685ce8bc6c70ab26f12b1f77c617711fa5934

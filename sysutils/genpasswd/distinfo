@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 13:40:53 agc Exp $
-
-SHA1 (genpasswd-1.5.tar.gz) = 0bac3278085b91d80ea35c5d0520333d9226f41a
-RMD160 (genpasswd-1.5.tar.gz) = 2add119a36db70f16e66cbc5bc4be96a57f5bb28
-Size (genpasswd-1.5.tar.gz) = 2724 bytes

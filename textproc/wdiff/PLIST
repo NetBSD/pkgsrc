@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2005/10/08 19:06:25 reed Exp $
-bin/wdiff
-man/man1/wdiff.1
-share/doc/wdiff/README
-@dirrm share/doc/wdiff

@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2002/07/15 09:01:42 wiz Exp $
-
-	With XFree86-4.x.x, you probably need to start xboing with
-	the -usedefcmap option to get it to work.
-
-===========================================================================

@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/07/02 09:03:02 jmmv Exp $
-
-bitlbee needs to be started from inetd(8) for now.  Add the following line
-to its configuration file (/etc/inetd.conf):
-
-	6667 stream tcp nowait bitlbee ${PREFIX}/sbin/bitlbee bitlbee
-
-===========================================================================

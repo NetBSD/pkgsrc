@@ -1,6 +1,0 @@
-VIPEC is an network analyser for electrical networks. It takes a
-texted based description of an electrical network, and performs a
-simulation of the circuit response in the frequency domain. Output is
-in the form of 2-port parameters, and can be plotted on in a grid and
-Smithchart format. VIPEC supports various lumped circuit elements, as
-well as elements like transmission lines and 2-port data files.

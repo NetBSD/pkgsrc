@@ -1,9 +1,0 @@
-   GNU `nano' is a small and friendly text editor.  Besides basic text
-editing, `nano' offers many extra features like an interactive search
-and replace, goto line number, auto-indentation, feature toggles,
-internationalization support, and filename tab completion.
-
-   The original goal for `nano' was a complete bug-for-bug compatible
-emulation of Pico, but consistency is now a slightly higher priority.
-
-   Nano does not have the restrictive license problems of Pico.

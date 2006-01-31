@@ -1,9 +1,0 @@
-#! @SH@
-# $NetBSD: pkg_tarup_all,v 1.5 2004/10/13 23:18:35 xtraeme Exp $
-
-PREFIX=${PREFIX:-@PREFIX@}
-
-PATH=${PREFIX}/sbin:${PREFIX}/bin:/sbin:/bin:/usr/sbin:/usr/bin:@PKG_TOOLS_BIN@
-export PATH
-
-${PREFIX}/bin/pkg_tarup -a "$@"

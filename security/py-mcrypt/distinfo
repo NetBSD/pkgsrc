@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2005/05/20 18:10:54 augustss Exp $
-
-SHA1 (python-mcrypt-1.1.tar.gz) = a6bed6ef183ed042a1261e8da1edb462deadc891
-RMD160 (python-mcrypt-1.1.tar.gz) = eb02c61e4ea11836716c442c24078da56cf4d1c1
-Size (python-mcrypt-1.1.tar.gz) = 22708 bytes

@@ -1,5 +1,0 @@
-ODEPACK is a collection of Fortran solvers for the initial value
-problem for ordinary differential equation (ODE) systems.  It
-currently includes six solvers, suitable for both stiff and nonstiff
-systems, and includes solvers for systems given in linearly implicit
-form as well as solvers for systems given in explicit form.

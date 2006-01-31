@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/17 12:19:54 adrianp Exp $
-bin/hydra
-bin/pw-inspector

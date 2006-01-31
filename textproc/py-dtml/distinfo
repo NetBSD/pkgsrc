@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:48:48 agc Exp $
-
-SHA1 (python/Zope-2.2.2-src.tgz) = 16a1a4525e078c7b62120311443075dcadae6df5
-RMD160 (python/Zope-2.2.2-src.tgz) = 3990a9fe292c66280cb32522fcbdd7cb516aa1bc
-Size (python/Zope-2.2.2-src.tgz) = 1575270 bytes

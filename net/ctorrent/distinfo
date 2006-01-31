@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/11/07 21:32:27 tv Exp $
-
-SHA1 (ctorrent-1.3.4.tar.bz2) = bf1ea430513dc6de48de5ac429cdac57ceab738d
-RMD160 (ctorrent-1.3.4.tar.bz2) = 0cf6a89e8e29a1c3fad087e1c666941c6ecd73b9
-Size (ctorrent-1.3.4.tar.bz2) = 87333 bytes
-SHA1 (patch-aa) = e20e81beba3a3a98ce27c36e4542edb0a9ea1d04
-SHA1 (patch-ab) = cfa80ca0d3f030837334ac9cc27c437dfd9adbf6
-SHA1 (patch-ac) = 40396b3d538cb37219ddd1bfe207f294e70b5ed1
-SHA1 (patch-ad) = 8e270120390e8bd64a5ac0ee6b9ea6da69aab5dd

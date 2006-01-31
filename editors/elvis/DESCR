@@ -1,8 +1,0 @@
-Elvis - written by Steve Kirkendall is a very powerful vi/ex clone providing
-a remarkable number of bells and whistles like:
-
-	* Syntax Highlighting.
-	* Multiple files in multiple windows.
-	* Browse modes for LaTeX (rather experimental), HTML and MAN pages.
-	* Networking support (http and ftp).
-	* GUI frontends for some of its platforms.

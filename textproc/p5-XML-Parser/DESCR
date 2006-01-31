@@ -1,3 +1,0 @@
-This module provides ways to parse XML documents. It is built on top of
-XML::Parser::Expat, which is a lower level interface to James Clark's
-expat library.

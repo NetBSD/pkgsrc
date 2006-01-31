@@ -1,6 +1,0 @@
-The `recode' library converts files between character sets and usages.
-It recognises or produces more than 300 different character sets and
-transliterates files between almost any pair.  When exact transliteration
-are not possible, it gets rid of offending characters or falls back
-on approximations.  The `recode' program is a handy front-end to
-the library.

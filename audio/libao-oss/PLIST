@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2005/05/20 19:20:56 jmmv Exp $
-lib/ao/plugins-2/liboss.la
-@comment in libao: @dirrm lib/ao/plugins-2

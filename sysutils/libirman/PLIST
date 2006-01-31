@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2002/06/14 20:38:40 abs Exp $
-bin/irman_func
-bin/irman_io
-bin/irman_name
-bin/workmanir
-lib/libirman.a
-sbin/lirmand
-share/doc/libirman.README
-share/examples/irman.conf

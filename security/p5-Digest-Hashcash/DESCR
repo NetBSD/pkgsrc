@@ -1,8 +1,0 @@
-The Digest::Hashcash Perl module calculates n-bit partial hash
-collisions on chosen texts.
-The idea of using partial hashes is that they can be made arbitrarily
-expensive to compute (by choosing the desired number of bits of
-collision), and yet can be verified instantly. This can be used as the
-basis for an e-cash system measured in burnt CPU cycles. Such cash
-systems can be used to throttle systematic abuses of un-metered internet
-resources.

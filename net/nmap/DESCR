@@ -1,7 +1,0 @@
-Nmap ("Network Mapper") is a free open source utility for network exploration
-or security auditing.  It was designed to rapidly scan large networks,
-although it works fine against single hosts.  Nmap uses raw IP packets in
-novel ways to determine what hosts are available on the network, what services
-(application name and version) they are offering, what operating system (and
-OS version) they are running, what type of packet filters/firewalls are in
-use, and dozens of other characteristics.

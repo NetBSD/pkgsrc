@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:54 jlam Exp $
-bin/chasen
-bin/chasen-config
-include/chasen.h
-lib/libchasen.la
-sbin/makeda
-sbin/makemat
-@dirrm share/chasen/dic
-@dirrm share/chasen

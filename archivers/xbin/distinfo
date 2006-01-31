@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/10/03 11:23:42 joerg Exp $
-
-SHA1 (xbinunix.c) = 20db911814c29c5f236d5dc2a27fe25c7a5f61fb
-RMD160 (xbinunix.c) = 92a2daccb405c95e7a1b00f4162009f3c4245631
-Size (xbinunix.c) = 18563 bytes
-SHA1 (xbin.man) = 2e223e6a02a2436f29c586fa711ee5ad3bbf591d
-RMD160 (xbin.man) = d01696da1c79f1693161417c6a8ced87b5b11c12
-Size (xbin.man) = 3277 bytes
-SHA1 (patch-aa) = 688b15f04eb783aa007383383d7614460ffb5083

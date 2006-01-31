@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:00 reed Exp $
-sbin/postgrey
-${DOCDIR}/COPYING
-${DOCDIR}/Changes
-${DOCDIR}/README
-${EGDIR}/postgrey_whitelist_clients
-${EGDIR}/postgrey_whitelist_recipients
-share/examples/rc.d/postgrey

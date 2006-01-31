@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2004/12/31 12:36:44 kristerw Exp $
-bin/euk2edit
-bin/euk2eps
-bin/eukleides
-man/man1/euk2edit.1
-man/man1/euk2eps.1
-man/man1/eukleides.1

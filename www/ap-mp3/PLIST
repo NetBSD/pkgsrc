@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/02/25 03:00:49 grant Exp $
-lib/httpd/mod_mp3.so
-share/httpd/htdocs/manual/mod/mod_mp3/faq.html
-@dirrm share/httpd/htdocs/manual/mod/mod_mp3

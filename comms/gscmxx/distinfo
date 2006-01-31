@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 16:05:29 agc Exp $
-
-SHA1 (gscmxx-0.4.1.tar.gz) = 61d9783d4afe754fb25a6430c8481095371b1c52
-RMD160 (gscmxx-0.4.1.tar.gz) = 986bf0611fb2a458ed2791d96f1c10ca945772bb
-Size (gscmxx-0.4.1.tar.gz) = 191106 bytes
-SHA1 (patch-aa) = 620455eda4f78b28c55dbdefa5cb672cfaa67566

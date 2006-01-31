@@ -1,5 +1,0 @@
-This is the user process PPP package as found in FreeBSD and OpenBSD.
-Normally, PPP is implemented as a part of the kernel (e.g., as managed by
-pppd(8)) and it's thus somewhat hard to debug and/or modify its behaviour.
-However, in this implementation PPP is done as a user process with the help
-of the tunnel device driver (tun).

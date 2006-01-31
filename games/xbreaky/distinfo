@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 23:12:04 agc Exp $
-
-SHA1 (xbreaky-0.0.5.tar.gz) = 3601bf1fb6fe2a3c04d3aed749f1f9e15500e11c
-RMD160 (xbreaky-0.0.5.tar.gz) = 4e4f8c5a819111ef0c4103dc1ff99dcc2a4c7853
-Size (xbreaky-0.0.5.tar.gz) = 31136 bytes
-SHA1 (patch-aa) = 0cefbc96bf9a015d8573c0e78972421da05efd4a
-SHA1 (patch-ab) = 0ea22ce8cad38cecd615a0f8fe11de948426601c
-SHA1 (patch-ac) = 11a19443637b09a00ea02496a698c880aba9c9d0

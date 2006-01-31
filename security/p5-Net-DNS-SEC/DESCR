@@ -1,6 +1,0 @@
-This Perl module implements DNS Resource Record types that are relevant
-for DNSSEC operations. The implementation is based on: RFC 2535, RFC
-2931 and  the latest draft-ietf-dnsext-delegation-signer-0.xy.txt.
-
-The DNSSEC protocol is a moving target. Follow the IETF DNSEXT working
-group if you are interested in the protocol developments.

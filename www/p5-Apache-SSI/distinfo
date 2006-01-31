@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:35 wiz Exp $
-
-SHA1 (Apache-SSI-2.16.tar.gz) = a6e133fea2352ec364d68e0f2c67309c8a49524d
-RMD160 (Apache-SSI-2.16.tar.gz) = abdc495ac42e4855f03adada37d95114a660c0a7
-Size (Apache-SSI-2.16.tar.gz) = 24483 bytes
-SHA1 (patch-aa) = b526801d502ebb6bda48b03d41a5b74f7c5b0051

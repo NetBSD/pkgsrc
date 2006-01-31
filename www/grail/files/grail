@@ -1,4 +1,0 @@
-#! /bin/sh
-# $NetBSD: grail,v 1.2 2002/01/29 19:25:54 drochner Exp $
-exec @PYTHONBIN@ \
-	@PREFIX@/@GRAILDIR@/grail.pyc ${1+"$@"}

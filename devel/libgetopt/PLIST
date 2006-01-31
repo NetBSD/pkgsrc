@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2005/05/25 11:37:56 wiz Exp $
-include/getopt.h
-lib/libgetopt.la
-man/man3/getopt_long.3

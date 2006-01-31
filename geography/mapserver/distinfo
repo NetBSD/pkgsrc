@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/22 21:08:32 agc Exp $
-
-SHA1 (mapserver-4.0.tar.gz) = 1007771932e43f97d868862fdc3a7ad3ab3d9880
-RMD160 (mapserver-4.0.tar.gz) = fb543646b5aee6ca381c3e8dd4ebb86c3723bd60
-Size (mapserver-4.0.tar.gz) = 857870 bytes
-SHA1 (patch-aa) = be9ec2335e608f52804287c5731e2adf597d86e4

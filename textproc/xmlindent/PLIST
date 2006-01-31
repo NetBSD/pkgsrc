@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/01 05:29:57 xtraeme Exp $
-bin/xmlindent
-man/man1/xmlindent.1

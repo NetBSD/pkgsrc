@@ -1,8 +1,0 @@
-rlpr is a package that makes it possible (or at the very least, easier),
-to print files on remote sites to your local printer.  The rlpr
-package includes BSD-compatible replacements for `lpr', `lpq', and
-`lprm', whose functionality is a superset of their BSD counterparts.
-In other words, with the rlpr package, you can do everything you can
-do with the BSD printing commands, and more.  The programs contained
-within the rlpr package are all GPL'd, and are more lightweight,
-cleaner and more secure than their BSD counterparts.

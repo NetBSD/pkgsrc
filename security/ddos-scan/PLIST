@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:16:37 zuntum Exp $
-sbin/dds
-share/doc/dds

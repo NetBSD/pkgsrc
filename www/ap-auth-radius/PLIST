@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/11 15:44:30 manu Exp $
-lib/httpd/mod_auth_radius.so
-share/example/mod_auth_radius/README
-share/example/mod_auth_radius/htaccess
-share/example/mod_auth_radius/httpd.conf

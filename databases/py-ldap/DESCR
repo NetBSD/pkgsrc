@@ -1,4 +1,0 @@
-Provide an LDAP client API for Python in the spirit of RFC1823.
-
-* C wrapper module around OpenLDAP
-* an object-oriented API for X.500 directories

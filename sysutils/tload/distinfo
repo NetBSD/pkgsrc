@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 13:40:58 agc Exp $
-
-SHA1 (procps-2.0.6.tar.gz) = 8006cbc096922c53d340cdfe1e8dd9504cd2e203
-RMD160 (procps-2.0.6.tar.gz) = 3cb7866428111f2aae2e9a7228cca53de76154e2
-Size (procps-2.0.6.tar.gz) = 188674 bytes
-SHA1 (patch-aa) = c626a4811317358d2a1c90d55cdcbbbc8e541cc2

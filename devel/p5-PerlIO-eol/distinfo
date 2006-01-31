@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:28 agc Exp $
-
-SHA1 (PerlIO-eol-0.13.tar.gz) = 12bd9530df522807ed623ca3be5541e49b6ecf43
-RMD160 (PerlIO-eol-0.13.tar.gz) = 5ec972f4885759fdf4248a5dd4a1480bab861fb9
-Size (PerlIO-eol-0.13.tar.gz) = 14429 bytes

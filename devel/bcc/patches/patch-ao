@@ -1,9 +1,0 @@
-$NetBSD: patch-ao,v 1.1 2001/10/25 20:40:07 agc Exp $
-
---- /dev/null	Thu Oct 25 21:25:38 2001
-+++ Makefile	Thu Oct 25 21:25:39 2001
-@@ -0,0 +1,4 @@
-+
-+SUBDIR = ld as bcc-cc1 bcc
-+
-+.include <bsd.subdir.mk>

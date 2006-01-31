@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/10/15 23:07:21 tonio Exp $
-
-SHA1 (elk-3.99.6.tar.gz) = 10fb17ab7e06a34ad3067be323482091fa79d398
-RMD160 (elk-3.99.6.tar.gz) = f7e7861bae4e996b4eac2f6d3c004f5631b73e38
-Size (elk-3.99.6.tar.gz) = 847811 bytes
-SHA1 (patch-aa) = 8eafcd683ad0a87003d3727a6a37e321ef92b0a4
-SHA1 (patch-ab) = e28bb6c96d315dfb3010036e3bc40b0e50b3b2b2

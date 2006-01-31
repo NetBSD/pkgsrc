@@ -1,3 +1,0 @@
-Borges is a port of Seaside2 from Smalltalk to Ruby.  It is a web
-application framework that uses Continuations to keep track of a user's
-state.

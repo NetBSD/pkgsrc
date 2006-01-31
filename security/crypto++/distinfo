@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/03/19 16:48:21 wiz Exp $
-
-SHA1 (cryptopp521.zip) = 4b84311d1cbde04df5d88b5375d29c2e35ccb89c
-RMD160 (cryptopp521.zip) = 7c4d3cf702a1cf38f2a19cb5cebf170dabc23a35
-Size (cryptopp521.zip) = 1010937 bytes
-SHA1 (patch-aa) = 85d1f8323e8d0f32ebb7a3070ecbb01ae3908f00
-SHA1 (patch-ab) = 16b27d0566a162e8412db9d4f0186cc15f4c9980

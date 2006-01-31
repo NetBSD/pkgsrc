@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/11/04 11:22:24 rillig Exp $
-
-SHA1 (gnustep-base-1.10.1.tar.gz) = 2835e23fe5627dc59028409acca288bbd9f8f524
-RMD160 (gnustep-base-1.10.1.tar.gz) = f445d222d33db292de3a77d26366645bd1cf1a62
-Size (gnustep-base-1.10.1.tar.gz) = 1909988 bytes
-SHA1 (patch-aa) = 96cb92d28086344df9bbfe2ce60f07856152b8db

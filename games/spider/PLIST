@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/24 17:23:36 jschauma Exp $
-bin/spider
-man/cat1/spider.0
-share/doc/spider/doc.intro
-share/doc/spider/doc.rules
-share/doc/spider/doc.controls
-share/doc/spider/doc.examples
-share/doc/spider/doc.misc
-share/doc/spider/doc.summary

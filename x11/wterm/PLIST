@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:11:51 zuntum Exp $
-bin/wterm
-man/man1/wterm.1
-share/WindowMaker/Icons/wterm.tiff
-share/WindowMaker/Icons/wtermthai.tiff

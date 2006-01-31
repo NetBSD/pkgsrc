@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:00 wiz Exp $
-
-It is not necessary to build both the tty and X11 versions of angband,
-as the X11 version supports both environments.
-
-===========================================================================

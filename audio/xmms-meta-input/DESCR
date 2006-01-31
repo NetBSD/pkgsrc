@@ -1,8 +1,0 @@
-This plugin allows you to write XMMS plugins as Unix programs. You write
-a program that understands the very simple commands on its command line
-and outputs raw sound on its standard output and you're done with it.
-
-What's good (and in fact the purpose of this plugin) is that you can
-write input plugins for XMMS in C shell or Bash! Of course, you won't
-be able to do much number crunching in a shell script, but you can use
-it to run other programs to do the actual playing.

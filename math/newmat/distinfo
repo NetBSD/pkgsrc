@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/04/16 02:12:48 wiz Exp $
-
-SHA1 (newmat10B/newmat10.tar.gz) = a80babb555b9d105026ac74a73c77a72df04ff46
-RMD160 (newmat10B/newmat10.tar.gz) = fdcab03b5be8b7d771d9d375184f9430cffec611
-Size (newmat10B/newmat10.tar.gz) = 204619 bytes
-SHA1 (patch-aa) = 6b8a51ad193d68defef00aa817ca2d9e9b3505cd

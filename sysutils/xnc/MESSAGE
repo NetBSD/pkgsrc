@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:38 wiz Exp $
-
- Each user who wants to use xnc should first execute xncsetup
- from X11 to configure his/her own profile.
-
-===========================================================================

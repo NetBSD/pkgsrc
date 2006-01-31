@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/10/21 14:57:02 drochner Exp $
-
-SHA1 (numarray-1.3.3.tar.gz) = 020e495c3623dacffcc1e1f8463435cc1b256ec5
-RMD160 (numarray-1.3.3.tar.gz) = 6e6c2e7315aaabd9d4b5fed025d88630c5d36f7a
-Size (numarray-1.3.3.tar.gz) = 1210535 bytes

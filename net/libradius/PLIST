@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/10/20 22:51:37 manu Exp $
-lib/libradius.a
-include/radlib.h
-man/man3/libradius.3
-man/man5/radius.conf.5

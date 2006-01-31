@@ -1,5 +1,0 @@
-SIP Express Router (ser) is a high-performance, configurable, free
-SIP ( RFC3261 ) server . It can act as registrar, proxy or redirect
-server. SER features an application-server interface, presence
-support, SMS gateway, SIMPLE2Jabber gateway, RADIUS/syslog accounting
-and authorization, server status monitoring, FCP security, etc.

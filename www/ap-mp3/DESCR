@@ -1,6 +1,0 @@
-mod_mp3 turns the Apache Web server into an MP3 or Ogg streaming
-server. It can play from a list of files, either in order or randomly.
-It can also be used to cache MP3s into memory and have the server
-operate entirely from memory. It has an XML-RPC interface for you to
-write interfaces around and supports retrieving information via
-XML/RSS.

@@ -1,3 +1,0 @@
-gkrellm-multiping is a GKrellM plugin that repeatedly pings a list of hosts
-and show their respective status. Optionally it can displays the average
-round-trip time value for each host.

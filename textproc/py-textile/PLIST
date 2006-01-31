@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/28 23:22:43 minskim Exp $
-${PYSITELIB}/textile.py
-${PYSITELIB}/textile.pyc
-${PYSITELIB}/textile.pyo

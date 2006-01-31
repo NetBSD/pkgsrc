@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 23:11:58 agc Exp $
-
-SHA1 (gemdropx-0.9.tar.gz) = be639c7a468f223ca2a183ee2d0a0d4ca1530981
-RMD160 (gemdropx-0.9.tar.gz) = d4f16850c6eaca3ed405246e1176a38e8afdc921
-Size (gemdropx-0.9.tar.gz) = 903036 bytes
-SHA1 (patch-ab) = 114b9dbe1d58dc2dfb3dec3b2d15c9806b5f3fae

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/09/22 03:57:51 minskim Exp $
-
-SHA1 (gtodo-applet-0.1.tar.gz) = c214e1d1527121d14492cd8c37c63b64b182970e
-RMD160 (gtodo-applet-0.1.tar.gz) = ff22c1f091955bf2a3fb91797d76121306415f83
-Size (gtodo-applet-0.1.tar.gz) = 303635 bytes
-SHA1 (patch-aa) = be4d6466e463a5abbe51a9c40e1aae3aefc81014
-SHA1 (patch-ab) = 33dabe60d8b0cc7a415922c260e04a4831c94d7f

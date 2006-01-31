@@ -1,4 +1,0 @@
-This is the Matlab frontend for the Wcalc transmission
-line analysis/synthesis calculator.  You will need a working
-matlab installed on your system.  In addition, currently
-only a native (non-emulation) matlab is supported.

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:34:03 reed Exp $
-man/man5/ntpd.conf.5
-man/man8/ntpd.8
-sbin/ntpd
-share/examples/openntpd/ntpd.conf
-share/examples/rc.d/openntpd
-@dirrm share/examples/openntpd

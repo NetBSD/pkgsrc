@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/04 11:48:30 recht Exp $
-${PYSITELIB}/libxslt.py
-${PYSITELIB}/libxslt.pyc
-${PYSITELIB}/libxslt.pyo
-${PYSITELIB}/libxsltmod.so

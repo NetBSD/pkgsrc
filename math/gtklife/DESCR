@@ -1,3 +1,0 @@
-Conway's Life program for *nix.
-Speed is comparable to the venerable XLife, and in some cases faster.
-However, GtkLife also has a modern and friendly user interface.

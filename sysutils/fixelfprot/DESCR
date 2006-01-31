@@ -1,2 +1,0 @@
-Fix up the permission bits for the program load section containing the
-.got section of a PPC ELF binary.

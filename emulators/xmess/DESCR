@@ -1,8 +1,0 @@
-X-MESS is the X11 port of the MESS game console emulator.
-
-MESS is a virtual machine emulator; it includes emulators for the CPUs,
-sound and video chips used in game consoles, as well as special purpose
-PALs and detailed information about the memory layout of each machine.
-
-To play games in X-MESS you must have a copy of the original game,
-extracted from a cartridge, floppy or tape image.

@@ -1,3 +1,0 @@
-Open2300 reads data and controls a Weather Station 23xx.
-It contains tools to sample data and write it as XML, a MySQL
-database, or embed it dynamically into a web page.

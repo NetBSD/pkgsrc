@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.suexec,v 1.1 2001/11/01 02:22:55 zuntum Exp $
-sbin/suexec
-man/man8/suexec.8

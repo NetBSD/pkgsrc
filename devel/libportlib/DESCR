@@ -1,3 +1,0 @@
-This library provides a consistent interface across systems to
-operations that tend to vary in ugly ways for different UNIX systems,
-such as file locking and directory reading.

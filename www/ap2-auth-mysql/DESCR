@@ -1,2 +1,0 @@
-mod_auth_mysql will allow you to use a MySQL database to authenticate users
-with the Apache 2 HTTP server.

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:33 zuntum Exp $
-bin/zsnes
-man/man1/zsnes.1

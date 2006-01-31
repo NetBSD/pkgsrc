@@ -1,5 +1,0 @@
-AppleRecords is a pure Java DAAP client, meaning it can stream songs
-from DAAP servers, including Apple iTunes 4 and 4.5 for Windows and
-Mac OS X.  It should run on most operating systems that have a modern
-Java Runtime Environment, including Linux, Solaris, Mac OS X, and
-Windows.

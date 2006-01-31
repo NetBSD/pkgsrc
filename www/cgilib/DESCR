@@ -1,7 +1,0 @@
-The Common Gateway Interface is a way to create dynamic web pages.  It
-defines rules for interaction between a program and the web server while
-the server talks to the client.  cgilib provides a C library CGI routines:
-
-	cgiDebug, cgiFree, cgiFreeList, cgiGetCookie, cgiGetCookies,
-	cgiGetValue, cgiGetVariables, cgiHeader, cgiInit, cgiRedirect,
-	cgiSetHeader, cgiSetType

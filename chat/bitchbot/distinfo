@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 15:59:10 agc Exp $
-
-SHA1 (bitchbot-1.0.2.tar.gz) = 8fee2b908bed9ae1f552a2e8b7c0576ed0e8af20
-RMD160 (bitchbot-1.0.2.tar.gz) = 5977af6c80f8054b9f303860c472229ceb438465
-Size (bitchbot-1.0.2.tar.gz) = 34325 bytes
-SHA1 (patch-aa) = 1d53d75ba42b3eb27a34db8b56ed0f22d5cf057a
-SHA1 (patch-ab) = 819d0394a622306ff70836edabf6ab5280b29532

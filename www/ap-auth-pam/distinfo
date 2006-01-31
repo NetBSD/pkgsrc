@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:08:27 wiz Exp $
-
-SHA1 (mod_auth_pam-1.0a.tar.gz) = a3c29d10690101cf1bd9ce1c262fdbe8c12cc0b3
-RMD160 (mod_auth_pam-1.0a.tar.gz) = 8e6aa2cf7d41da00b92c27a2ec9f9e4dedff8285
-Size (mod_auth_pam-1.0a.tar.gz) = 8765 bytes
-SHA1 (patch-aa) = 7470a6a196bd8fd1d44d723fd647ad6f3b9a5784

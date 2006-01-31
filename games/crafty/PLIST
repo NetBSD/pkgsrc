@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/12 05:48:15 jlam Exp $
-bin/crafty
-lib/crafty/books.bin
-share/doc/crafty/read.me
-share/doc/crafty/crafty.faq
-@unexec ${RMDIR} -p %D/share/doc/crafty 2>/dev/null || ${TRUE}
-@dirrm lib/crafty

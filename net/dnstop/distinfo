@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.10 2005/03/28 02:01:50 wiz Exp $
-
-SHA1 (dnstop-20050203.tar.gz) = 59c66f683fe17c59c03a93c6373386e58754e450
-RMD160 (dnstop-20050203.tar.gz) = de1811f4ecef1f853627f40e02bb747f4ec0919c
-Size (dnstop-20050203.tar.gz) = 11086 bytes
