@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.432 2006/01/31 18:53:12 jschauma Exp $
+# $NetBSD: Makefile,v 1.433 2006/01/31 20:13:10 jschauma Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -233,6 +233,7 @@ SUBDIR+=	p5-Kwiki-Scode
 SUBDIR+=	p5-Kwiki-Search
 SUBDIR+=	p5-Kwiki-UserName
 SUBDIR+=	p5-Kwiki-UserPreferences
+SUBDIR+=	p5-Kwiki-Users-Remote
 SUBDIR+=	p5-LWP-Authen-Wsse
 SUBDIR+=	p5-MasonX-Request-WithApacheSession
 SUBDIR+=	p5-SVN-Web
