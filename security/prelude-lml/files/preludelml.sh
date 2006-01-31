@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: preludelml.sh,v 1.2 2006/01/31 10:46:31 shannonjr Exp $
+# $NetBSD: preludelml.sh,v 1.3 2006/01/31 18:25:43 shannonjr Exp $
 #
 
 # PROVIDE: preludelml
@@ -9,6 +9,7 @@
 $_rc_subr_loaded . /etc/rc.subr
 
 name="preludelml"
+procname="@PREFIX@/bin/prelude-lml"
 rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/prelude-lml/prelude-lml.conf"
 start_precmd="preludelml_precommand"
