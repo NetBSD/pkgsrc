@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2005/12/11 12:36:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/01/31 23:08:47 markd Exp $
 share/doc/kde/HTML/ca/common/1.png
 share/doc/kde/HTML/ca/common/10.png
 share/doc/kde/HTML/ca/common/2.png
@@ -61,6 +61,16 @@ share/doc/kde/HTML/ca/common/x11-license.html
 share/doc/kde/HTML/ca/common/xml.dcl
 share/doc/kde/HTML/ca/kappfinder/man-kappfinder.1.docbook
 share/doc/kde/HTML/ca/kapptemplate/man-kapptemplate.1.docbook
+share/doc/kde/HTML/ca/kate-plugins/common
+share/doc/kde/HTML/ca/kate-plugins/filetemplates.docbook
+share/doc/kde/HTML/ca/kate-plugins/htmltools.docbook
+share/doc/kde/HTML/ca/kate-plugins/index.cache.bz2
+share/doc/kde/HTML/ca/kate-plugins/index.docbook
+share/doc/kde/HTML/ca/kate-plugins/insertcommand.docbook
+share/doc/kde/HTML/ca/kate-plugins/openheader.docbook
+share/doc/kde/HTML/ca/kate-plugins/textfilter.docbook
+share/doc/kde/HTML/ca/kate-plugins/xmlcheck.docbook
+share/doc/kde/HTML/ca/kate-plugins/xmltools.docbook
 share/doc/kde/HTML/ca/kate/advanced.docbook
 share/doc/kde/HTML/ca/kate/common
 share/doc/kde/HTML/ca/kate/configuring.docbook
@@ -389,6 +399,11 @@ share/doc/kde/HTML/ca/khelpcenter/visualdict/index.cache.bz2
 share/doc/kde/HTML/ca/khelpcenter/visualdict/index.docbook
 share/doc/kde/HTML/ca/khelpcenter/welcome.docbook
 share/doc/kde/HTML/ca/khelpcenter/whatiskde.docbook
+share/doc/kde/HTML/ca/kicker-applets/common
+share/doc/kde/HTML/ca/kicker-applets/index.cache.bz2
+share/doc/kde/HTML/ca/kicker-applets/index.docbook
+share/doc/kde/HTML/ca/kicker-applets/kolourpicker.docbook
+share/doc/kde/HTML/ca/kicker-applets/ktimemon.docbook
 share/doc/kde/HTML/ca/kicker/common
 share/doc/kde/HTML/ca/kicker/index.cache.bz2
 share/doc/kde/HTML/ca/kicker/index.docbook
@@ -452,6 +467,9 @@ share/doc/kde/HTML/ca/klickety/index.docbook
 share/doc/kde/HTML/ca/klipper/common
 share/doc/kde/HTML/ca/klipper/index.cache.bz2
 share/doc/kde/HTML/ca/klipper/index.docbook
+share/doc/kde/HTML/ca/kmag/common
+share/doc/kde/HTML/ca/kmag/index.cache.bz2
+share/doc/kde/HTML/ca/kmag/index.docbook
 share/doc/kde/HTML/ca/kmag/man-kmag.1.docbook
 share/doc/kde/HTML/ca/kmail/common
 share/doc/kde/HTML/ca/kmail/configure.docbook
@@ -473,7 +491,13 @@ share/doc/kde/HTML/ca/kmessedwords/index.docbook
 share/doc/kde/HTML/ca/kmoon/common
 share/doc/kde/HTML/ca/kmoon/index.cache.bz2
 share/doc/kde/HTML/ca/kmoon/index.docbook
+share/doc/kde/HTML/ca/kmousetool/common
+share/doc/kde/HTML/ca/kmousetool/index.cache.bz2
+share/doc/kde/HTML/ca/kmousetool/index.docbook
 share/doc/kde/HTML/ca/kmousetool/man-kmousetool.1.docbook
+share/doc/kde/HTML/ca/kmouth/common
+share/doc/kde/HTML/ca/kmouth/index.cache.bz2
+share/doc/kde/HTML/ca/kmouth/index.docbook
 share/doc/kde/HTML/ca/kmouth/man-kmouth.1.docbook
 share/doc/kde/HTML/ca/kompare/common
 share/doc/kde/HTML/ca/kompare/index.cache.bz2
@@ -646,6 +670,9 @@ share/doc/kde/HTML/ca/ktimer/index.docbook
 share/doc/kde/HTML/ca/ktouch/common
 share/doc/kde/HTML/ca/ktouch/index.cache.bz2
 share/doc/kde/HTML/ca/ktouch/index.docbook
+share/doc/kde/HTML/ca/kttsd/common
+share/doc/kde/HTML/ca/kttsd/index.cache.bz2
+share/doc/kde/HTML/ca/kttsd/index.docbook
 share/doc/kde/HTML/ca/kturtle/glossary.docbook
 share/doc/kde/HTML/ca/kuser/common
 share/doc/kde/HTML/ca/kuser/index.cache.bz2
@@ -1075,6 +1102,7 @@ ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/konnector_qtopia.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/konnector_remote.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/konqsidebar_delicious.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/konqsidebar_mediaplayer.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/konqsidebar_metabar.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/konqsidebar_news.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/konqueror.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/konquest.mo
@@ -1282,6 +1310,7 @@ ${PKGLOCALEDIR}/locale/ca/flag.png
 @dirrm share/doc/kde/HTML/ca/kwallet
 @dirrm share/doc/kde/HTML/ca/kuser
 @dirrm share/doc/kde/HTML/ca/kturtle
+@dirrm share/doc/kde/HTML/ca/kttsd
 @dirrm share/doc/kde/HTML/ca/ktouch
 @dirrm share/doc/kde/HTML/ca/ktimer
 @dirrm share/doc/kde/HTML/ca/ksysv
@@ -1327,6 +1356,7 @@ ${PKGLOCALEDIR}/locale/ca/flag.png
 @dirrm share/doc/kde/HTML/ca/kioslave
 @dirrm share/doc/kde/HTML/ca/kinfocenter/blockdevices
 @dirrm share/doc/kde/HTML/ca/kinfocenter
+@dirrm share/doc/kde/HTML/ca/kicker-applets
 @dirrm share/doc/kde/HTML/ca/kicker
 @dirrm share/doc/kde/HTML/ca/khelpcenter/visualdict
 @dirrm share/doc/kde/HTML/ca/khelpcenter/userguide
@@ -1403,6 +1433,7 @@ ${PKGLOCALEDIR}/locale/ca/flag.png
 @dirrm share/doc/kde/HTML/ca/kbruch
 @dirrm share/doc/kde/HTML/ca/kbabel
 @dirrm share/doc/kde/HTML/ca/katomic
+@dirrm share/doc/kde/HTML/ca/kate-plugins
 @dirrm share/doc/kde/HTML/ca/kate
 @dirrm share/doc/kde/HTML/ca/kapptemplate
 @dirrm share/doc/kde/HTML/ca/kappfinder

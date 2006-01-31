@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/12/11 12:36:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/01/31 23:08:55 markd Exp $
 share/doc/kde/HTML/zh_CN/common/1.png
 share/doc/kde/HTML/zh_CN/common/10.png
 share/doc/kde/HTML/zh_CN/common/2.png
@@ -384,7 +384,6 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kmathapplet.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kmcop.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kmenuapplet.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kmenuedit.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kmessedwords.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kmid.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kmilo_delli8k.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kmilo_generic.mo
@@ -420,6 +419,7 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/konnector_qtopia.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/konnector_remote.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/konqsidebar_delicious.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/konqsidebar_mediaplayer.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/konqsidebar_metabar.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/konqsidebar_news.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/konqueror.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/konquest.mo
