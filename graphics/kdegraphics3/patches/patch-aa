@@ -1,13 +1,16 @@
-$NetBSD: patch-aa,v 1.9 2005/12/11 13:00:12 markd Exp $
+$NetBSD: patch-aa,v 1.10 2006/01/31 22:47:11 markd Exp $
 
---- kpovmodeler/pmshell.cpp	2005/07/26 18:54:59	438982
-+++ kpovmodeler/pmshell.cpp	2005/11/26 15:25:33	483453
-@@ -641,7 +641,7 @@
- 
- bool PMShell::overwriteURL( const KURL& u )
- {
--   int query = KMessageBox::Yes;
-+   int query = KMessageBox::Continue;
- 
-    if( u.isLocalFile( ) )
-    {
+--- kpdf/part.cpp.orig	2006-01-20 05:38:22.000000000 +1300
++++ kpdf/part.cpp
+@@ -697,6 +697,11 @@ void Part::slotSaveFileAs()
+     KURL saveURL = KFileDialog::getSaveURL( url().isLocalFile() ? url().url() : url().fileName(), QString::null, widget() );
+     if ( saveURL.isValid() && !saveURL.isEmpty() )
+     {
++	if (saveURL == url())
++	{
++		KMessageBox::information( widget(), i18n("You are trying to overwrite \"%1\" with itself. This is not allowed. Please save it in another location.").arg(saveURL.filename()) );
++		return;
++	}
+         if ( KIO::NetAccess::exists( saveURL, false, widget() ) )
+         {
+             if (KMessageBox::warningContinueCancel( widget(), i18n("A file named \"%1\" already exists. Are you sure you want to overwrite it?").arg(saveURL.filename()), QString::null, i18n("Overwrite")) != KMessageBox::Continue)
