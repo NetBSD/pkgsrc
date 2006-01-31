@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2006/01/31 21:07:30 tv Exp $
+
+--- makebdb/Makefile.in.orig	2005-06-22 02:32:35.000000000 -0400
++++ makebdb/Makefile.in
+@@ -144,10 +144,10 @@ EXTRA_DIST = makebdb.1
+ makebdb_SOURCES =          makebdb.c         options.c         options.h
+ 
+ 
+-makebdb_LDADD = -L../libjain -L../libjain/.libs/ -ljain -ldb -lpopt @dmalloc_lib@
++makebdb_LDADD = -L$(prefix)/lib -ljain -ldb -lpopt @dmalloc_lib@
+ 
+ 
+-INCLUDES = -I$(top_srcdir)/libjain
++INCLUDES = -I$(prefix)/include
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+ CONFIG_CLEAN_FILES = 

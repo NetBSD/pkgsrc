@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2006/01/31 21:07:30 tv Exp $
+
+SHA1 (perdition-1.17.tar.gz) = 5e04f172db4a7ee2af5b7a28c19c231f955243fc
+RMD160 (perdition-1.17.tar.gz) = cc3c4679390132ece6858eca6483ffddead568e4
+Size (perdition-1.17.tar.gz) = 552149 bytes
+SHA1 (patch-aa) = 17c6bf55f77187cad59f779e6fbcd85d6921eab1
+SHA1 (patch-ab) = f6500f5ab60e2c7f53673fdd9f8b4b72cac5e6e8
