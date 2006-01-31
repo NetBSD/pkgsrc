@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2006/01/24 07:31:54 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/01/31 22:58:45 rillig Exp $
 #
 
 DISTNAME=	gtkpod-0.94.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkpod/}
 
@@ -16,7 +16,9 @@ GNU_CONFIGURE=		yes
 
 USE_LIBTOOL=	yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config perl:run
+
+REPLACE_PERL+=		scripts/mab2vcard
 
 BUILDLINK_DEPENDS.gtk2+=	gtk2+>=2.4.0
 
