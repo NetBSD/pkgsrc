@@ -1,0 +1,43 @@
+$NetBSD: patch-am,v 1.1 2006/01/31 21:44:31 kristerw Exp $
+
+Declarations inside of macros are evil. Even more if they are not preceded
+by an additional opening brace.
+
+--- src/mesa/drivers/osmesa/osmesa.c.orig	Tue Jan 31 22:33:21 2006
++++ src/mesa/drivers/osmesa/osmesa.c	Tue Jan 31 22:34:10 2006
+@@ -471,7 +471,7 @@
+ #define INTERP_ALPHA 1
+ #define SETUP_CODE \
+    const OSMesaContext osmesa = OSMESA_CONTEXT(ctx);
+-#define RENDER_SPAN( span )					\
++#define RENDER_SPAN( span ) {					\
+    GLuint i;							\
+    GLchan *img = PIXELADDR4(span.x, span.y); 			\
+    for (i = 0; i < span.end; i++, img += 4) {			\
+@@ -487,7 +487,7 @@
+       span.blue += span.blueStep;				\
+       span.alpha += span.alphaStep;				\
+       span.z += span.zStep;					\
+-   }
++   } }
+ #ifdef WIN32
+ #include "..\swrast\s_tritemp.h"
+ #else
+@@ -508,7 +508,7 @@
+    PACK_RGBA((GLchan *) &pixel, v2->color[0], v2->color[1],	\
+                                 v2->color[2], v2->color[3]);
+ 
+-#define RENDER_SPAN( span )				\
++#define RENDER_SPAN( span ) {				\
+    GLuint i;						\
+    GLuint *img = (GLuint *) PIXELADDR4(span.x, span.y);	\
+    for (i = 0; i < span.end; i++) {			\
+@@ -518,7 +518,7 @@
+          zRow[i] = z;					\
+       }							\
+       span.z += span.zStep;				\
+-   }
++   } }
+ #ifdef WIN32
+ #include "..\swrast\s_tritemp.h"
+ #else
