@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2005/12/11 11:31:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.20 2006/01/31 22:41:11 markd Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -619,28 +619,6 @@ share/kde/emoticons/RedOnes/sunglasses.png
 share/kde/emoticons/RedOnes/tongue.png
 share/kde/emoticons/RedOnes/unhappy.png
 share/kde/emoticons/RedOnes/wink.png
-share/kde/emoticons/Yazoo-Smileys-16/angry.png
-share/kde/emoticons/Yazoo-Smileys-16/big_smile.png
-share/kde/emoticons/Yazoo-Smileys-16/confused.png
-share/kde/emoticons/Yazoo-Smileys-16/cool.png
-share/kde/emoticons/Yazoo-Smileys-16/emoticons.xml
-share/kde/emoticons/Yazoo-Smileys-16/lol.png
-share/kde/emoticons/Yazoo-Smileys-16/ooooh.png
-share/kde/emoticons/Yazoo-Smileys-16/sad.png
-share/kde/emoticons/Yazoo-Smileys-16/smile.png
-share/kde/emoticons/Yazoo-Smileys-16/tongue_out.png
-share/kde/emoticons/Yazoo-Smileys-16/wink.png
-share/kde/emoticons/Yazoo-Smileys-22/angry.png
-share/kde/emoticons/Yazoo-Smileys-22/big_smile.png
-share/kde/emoticons/Yazoo-Smileys-22/confused.png
-share/kde/emoticons/Yazoo-Smileys-22/cool.png
-share/kde/emoticons/Yazoo-Smileys-22/emoticons.xml
-share/kde/emoticons/Yazoo-Smileys-22/lol.png
-share/kde/emoticons/Yazoo-Smileys-22/ooooh.png
-share/kde/emoticons/Yazoo-Smileys-22/sad.png
-share/kde/emoticons/Yazoo-Smileys-22/smile.png
-share/kde/emoticons/Yazoo-Smileys-22/tongue_out.png
-share/kde/emoticons/Yazoo-Smileys-22/wink.png
 share/kde/emoticons/ccmathteam.com/biggrin.png
 share/kde/emoticons/ccmathteam.com/confused.png
 share/kde/emoticons/ccmathteam.com/cry.png
@@ -1485,6 +1463,20 @@ share/kde/icons/Locolor/32x32/mimetypes/vcalendar.png
 share/kde/icons/Locolor/32x32/mimetypes/vcard.png
 share/kde/icons/Locolor/32x32/mimetypes/video.png
 share/kde/icons/Locolor/index.theme
+share/kde/icons/hicolor/16x16/actions/show_side_panel.png
+share/kde/icons/hicolor/16x16/actions/view_fit_width.png
+share/kde/icons/hicolor/16x16/actions/view_fit_window.png
+share/kde/icons/hicolor/16x16/apps/kmenu.png
+share/kde/icons/hicolor/22x22/actions/show_side_panel.png
+share/kde/icons/hicolor/22x22/actions/view_fit_width.png
+share/kde/icons/hicolor/22x22/actions/view_fit_window.png
+share/kde/icons/hicolor/22x22/apps/kmenu.png
+share/kde/icons/hicolor/32x32/actions/show_side_panel.png
+share/kde/icons/hicolor/32x32/actions/view_fit_width.png
+share/kde/icons/hicolor/32x32/actions/view_fit_window.png
+share/kde/icons/hicolor/32x32/apps/kmenu.png
+share/kde/icons/hicolor/48x48/apps/kmenu.png
+share/kde/icons/hicolor/scalable/apps/kmenu.svgz
 share/kde/icons/ikons/16x16/actions/1day.png
 share/kde/icons/ikons/16x16/actions/1downarrow.png
 share/kde/icons/ikons/16x16/actions/1leftarrow.png
@@ -2402,7 +2394,6 @@ share/kde/icons/kdeclassic/16x16/actions/series.png
 share/kde/icons/kdeclassic/16x16/actions/servicenew_kdevelop.png
 share/kde/icons/kdeclassic/16x16/actions/share.png
 share/kde/icons/kdeclassic/16x16/actions/shear.png
-share/kde/icons/kdeclassic/16x16/actions/show_side_panel.png
 share/kde/icons/kdeclassic/16x16/actions/show_table_column.png
 share/kde/icons/kdeclassic/16x16/actions/show_table_row.png
 share/kde/icons/kdeclassic/16x16/actions/signature.png
@@ -2471,9 +2462,6 @@ share/kde/icons/kdeclassic/16x16/actions/vertical_text.png
 share/kde/icons/kdeclassic/16x16/actions/view_bottom.png
 share/kde/icons/kdeclassic/16x16/actions/view_choose.png
 share/kde/icons/kdeclassic/16x16/actions/view_detailed.png
-share/kde/icons/kdeclassic/16x16/actions/view_fit_height.png
-share/kde/icons/kdeclassic/16x16/actions/view_fit_width.png
-share/kde/icons/kdeclassic/16x16/actions/view_fit_window.png
 share/kde/icons/kdeclassic/16x16/actions/view_icon.png
 share/kde/icons/kdeclassic/16x16/actions/view_left_right.png
 share/kde/icons/kdeclassic/16x16/actions/view_multicolumn.png
@@ -3530,7 +3518,6 @@ share/kde/icons/kdeclassic/22x22/actions/shadowR.png
 share/kde/icons/kdeclassic/22x22/actions/shadowRB.png
 share/kde/icons/kdeclassic/22x22/actions/shadowRU.png
 share/kde/icons/kdeclassic/22x22/actions/shadowU.png
-share/kde/icons/kdeclassic/22x22/actions/show_side_panel.png
 share/kde/icons/kdeclassic/22x22/actions/show_table_column.png
 share/kde/icons/kdeclassic/22x22/actions/show_table_row.png
 share/kde/icons/kdeclassic/22x22/actions/showmenu.png
@@ -3606,9 +3593,6 @@ share/kde/icons/kdeclassic/22x22/actions/vertical_text.png
 share/kde/icons/kdeclassic/22x22/actions/view_bottom.png
 share/kde/icons/kdeclassic/22x22/actions/view_choose.png
 share/kde/icons/kdeclassic/22x22/actions/view_detailed.png
-share/kde/icons/kdeclassic/22x22/actions/view_fit_height.png
-share/kde/icons/kdeclassic/22x22/actions/view_fit_width.png
-share/kde/icons/kdeclassic/22x22/actions/view_fit_window.png
 share/kde/icons/kdeclassic/22x22/actions/view_icon.png
 share/kde/icons/kdeclassic/22x22/actions/view_left_right.png
 share/kde/icons/kdeclassic/22x22/actions/view_multicolumn.png
@@ -3858,7 +3842,6 @@ share/kde/icons/kdeclassic/32x32/actions/rsub.png
 share/kde/icons/kdeclassic/32x32/actions/rsup.png
 share/kde/icons/kdeclassic/32x32/actions/run.png
 share/kde/icons/kdeclassic/32x32/actions/share.png
-share/kde/icons/kdeclassic/32x32/actions/show_side_panel.png
 share/kde/icons/kdeclassic/32x32/actions/signature.png
 share/kde/icons/kdeclassic/32x32/actions/sort_az.png
 share/kde/icons/kdeclassic/32x32/actions/spellcheck.png
@@ -3888,9 +3871,6 @@ share/kde/icons/kdeclassic/32x32/actions/up.png
 share/kde/icons/kdeclassic/32x32/actions/view_bottom.png
 share/kde/icons/kdeclassic/32x32/actions/view_choose.png
 share/kde/icons/kdeclassic/32x32/actions/view_detailed.png
-share/kde/icons/kdeclassic/32x32/actions/view_fit_height.png
-share/kde/icons/kdeclassic/32x32/actions/view_fit_width.png
-share/kde/icons/kdeclassic/32x32/actions/view_fit_window.png
 share/kde/icons/kdeclassic/32x32/actions/view_icon.png
 share/kde/icons/kdeclassic/32x32/actions/view_left_right.png
 share/kde/icons/kdeclassic/32x32/actions/view_multicolumn.png
@@ -8005,6 +7985,14 @@ share/kde/wallpapers/vegetative_fog.jpg
 @dirrm share/kde/icons/ikons/16x16/actions
 @dirrm share/kde/icons/ikons/16x16
 @dirrm share/kde/icons/ikons
+@comment in kde: @dirrm share/kde/icons/hicolor/scalable/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/actions
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/actions
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/actions
 @dirrm share/kde/icons/Locolor/32x32/mimetypes
 @dirrm share/kde/icons/Locolor/32x32/filesystems
 @dirrm share/kde/icons/Locolor/32x32/devices
@@ -8023,8 +8011,6 @@ share/kde/wallpapers/vegetative_fog.jpg
 @dirrm share/kde/emoticons/phpBB
 @dirrm share/kde/emoticons/greggman.com
 @dirrm share/kde/emoticons/ccmathteam.com
-@dirrm share/kde/emoticons/Yazoo-Smileys-22
-@dirrm share/kde/emoticons/Yazoo-Smileys-16
 @dirrm share/kde/emoticons/RedOnes
 @dirrm share/kde/emoticons/Plain
 @dirrm share/kde/emoticons/KMess-Violet
