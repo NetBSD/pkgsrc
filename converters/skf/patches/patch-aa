@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/01/31 03:35:25 minskim Exp $
+
+--- Makefile.in.orig	2005-12-11 19:16:14.000000000 +0900
++++ Makefile.in
+@@ -47,7 +47,7 @@ DOCDIR		= $(datadir)/doc/@PACKAGE@
+ LSFMANDIR	= $(datadir)/man
+ MANCJDIR	= $(LSFMANDIR)/ja
+ MANDIR		= $(mandir)/man1
+-JMANDIR		= $(mandir)/ja/man1
++JMANDIR		= $(mandir)/ja_JP.EUC/man1
+ LOCALEDIR	= @localedir@
+ LOCALEJDIR	= @localedir@/ja/LC_MESSAGES
+ #GETTEXT_LIB	      = -lintl
+@@ -166,7 +166,7 @@ DEP_FILES =  .deps/skf.P
+ #
+ # commands
+ #
+-MSGFMT		= /usr/bin/msgfmt
++MSGFMT		= @MSGFMT@
+ #SED		= ${SKFSED}
+ SED		= @SKFSED@
+ MKDIR           = mkdir
