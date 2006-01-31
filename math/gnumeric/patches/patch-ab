@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.10 2006/01/31 20:32:07 wiz Exp $
+
+--- configure.orig	2005-11-14 07:17:50.000000000 +0100
++++ configure
+@@ -21926,7 +21926,6 @@ gnumeric_reqs="
+ 	gmodule-2.0		>= 2.6.0
+ 	libgsf-1		>= 1.13.2
+ 	libgoffice-1		>= 0.1.2
+-	libgoffice-1		 < 0.2.0
+ 	libxml-2.0		>= 2.4.12
+ 	pango			>= 1.8.1
+ 	pangoft2		>= 1.8.1
