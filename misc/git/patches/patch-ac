@@ -1,22 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2003/08/03 00:12:31 seb Exp $
+$NetBSD: patch-ac,v 1.2 2006/01/31 20:29:40 reed Exp $
 
---- html/Makefile.in.orig	1998-03-14 21:31:20.000000000 +0000
-+++ html/Makefile.in
-@@ -32,7 +32,7 @@ srcdir		= @srcdir@
- VPATH		= @srcdir@
+--- doc/Makefile.in.orig	2006-01-26 09:24:53.000000000 -0800
++++ doc/Makefile.in	2006-01-26 09:25:44.000000000 -0800
+@@ -81,7 +81,7 @@
  
- prefix		= @prefix@
--htmldir		= $(prefix)/lib/git/html
-+htmldir		= $(prefix)/share/doc/html/git
+ info_TEXINFOS = git.texinfo
+ man_MANS = git.1 gitaction.1 gitkeys.1 gitmount.1 gitrgrep.1 gitunpack.1
+-htmldir = $(prefix)/doc/git-$(VERSION)
++htmldir = $(prefix)/share/doc/git
+ html_DATA = git.html
+ EXTRA_DIST = git.1 gitaction.1 gitkeys.1 gitmount.1 gitrgrep.1 gitunpack.1 	     git.html
  
- SHELL		= /bin/sh
- TEXI2HTML	= @TEXI2HTML@
-@@ -55,7 +55,7 @@ git_toc.html: $(srcdir)/../info/git.texi
- 
- install-strip: install
- 
--install: all install-only
-+install: all install-dirs install-only
- 
- install-only:
- 	for i in git_*.html;\
