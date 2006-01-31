@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12739 2006/01/31 03:37:17 minskim Exp $
+$NetBSD: CHANGES,v 1.12740 2006/01/31 11:45:35 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -641,3 +641,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added games/billardgl version 1.75 [rillig 2006-01-31]
 	Updated pkgtools/createbuildlink to 3.10 [rillig 2006-01-31]
 	Added converters/skf version 1.93.9 [minskim 2006-01-31]
+	Updated x11/xterm to 208nb1 [joerg 2006-01-31]
