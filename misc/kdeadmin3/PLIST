@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/12/11 11:28:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/01/31 22:42:33 markd Exp $
 bin/kcron
 bin/kpackage
 bin/kuser
@@ -92,8 +92,8 @@ share/kde/apps/knetworkconf/pixmaps/mandrake.png
 share/kde/apps/knetworkconf/pixmaps/openna.png
 share/kde/apps/knetworkconf/pixmaps/pld.png
 share/kde/apps/knetworkconf/pixmaps/redhat.png
+share/kde/apps/knetworkconf/pixmaps/rpath.png
 share/kde/apps/knetworkconf/pixmaps/slackware.png
-share/kde/apps/knetworkconf/pixmaps/specifix.png
 share/kde/apps/knetworkconf/pixmaps/suse.png
 share/kde/apps/knetworkconf/pixmaps/turbolinux.png
 share/kde/apps/knetworkconf/pixmaps/vine.png
