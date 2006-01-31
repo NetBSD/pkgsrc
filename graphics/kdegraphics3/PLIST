@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2005/12/11 13:00:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.26 2006/01/31 22:47:11 markd Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -307,6 +307,7 @@ share/doc/kde/HTML/en/kghostview/index.docbook
 share/doc/kde/HTML/en/kiconedit/common
 share/doc/kde/HTML/en/kiconedit/index.cache.bz2
 share/doc/kde/HTML/en/kiconedit/index.docbook
+share/doc/kde/HTML/en/kiconedit/kiconedit-configuration.png
 share/doc/kde/HTML/en/kolourpaint/brush_shapes.png
 share/doc/kde/HTML/en/kolourpaint/color_box.png
 share/doc/kde/HTML/en/kolourpaint/common
@@ -327,6 +328,7 @@ share/doc/kde/HTML/en/kolourpaint/image_skew.png
 share/doc/kde/HTML/en/kolourpaint/image_soften_sharpen.png
 share/doc/kde/HTML/en/kolourpaint/index.cache.bz2
 share/doc/kde/HTML/en/kolourpaint/index.docbook
+share/doc/kde/HTML/en/kolourpaint/kolourpaint-main.png
 share/doc/kde/HTML/en/kolourpaint/line_width.png
 share/doc/kde/HTML/en/kolourpaint/lines_30_45_deg.png
 share/doc/kde/HTML/en/kolourpaint/lines_30_deg.png
@@ -357,6 +359,7 @@ share/doc/kde/HTML/en/kolourpaint/tool_rounded_rectangle.png
 share/doc/kde/HTML/en/kolourpaint/tool_selections.png
 share/doc/kde/HTML/en/kolourpaint/tool_spraycan.png
 share/doc/kde/HTML/en/kolourpaint/tool_text.png
+share/doc/kde/HTML/en/kolourpaint/view_thumbnails.png
 share/doc/kde/HTML/en/kooka/common
 share/doc/kde/HTML/en/kooka/index.cache.bz2
 share/doc/kde/HTML/en/kooka/index.docbook
@@ -370,6 +373,7 @@ share/doc/kde/HTML/en/kooka/toolbar.png
 share/doc/kde/HTML/en/kooka/toolbar1.png
 share/doc/kde/HTML/en/kooka/toolbar2.png
 share/doc/kde/HTML/en/kpdf/common
+share/doc/kde/HTML/en/kpdf/configure.png
 share/doc/kde/HTML/en/kpdf/index.cache.bz2
 share/doc/kde/HTML/en/kpdf/index.docbook
 share/doc/kde/HTML/en/kpovmodeler/cameraview.png
@@ -439,6 +443,8 @@ share/doc/kde/HTML/en/kuickshow/screenshot.png
 share/doc/kde/HTML/en/kview/common
 share/doc/kde/HTML/en/kview/index.cache.bz2
 share/doc/kde/HTML/en/kview/index.docbook
+share/doc/kde/HTML/en/kview/kview-application-configuration.png
+share/doc/kde/HTML/en/kview/kview-viewer-configuration.png
 share/kde/applnk/Graphics/kruler.desktop
 share/kde/apps/djvumultipage.rc
 share/kde/apps/kcoloredit/kcoloreditui.rc
