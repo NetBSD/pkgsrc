@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4543 2006/01/31 19:19:59 wiz Exp $
+$NetBSD: TODO,v 1.4544 2006/01/31 21:19:48 adam Exp $
 
 Suggested new packages
 ======================
@@ -1073,7 +1073,6 @@ Suggested package updates
 	o scilab-3.1
 	o scribus-1.2.4.1
 	o scrollz-1.9.5
-	o scummvm-0.8.1
 	o sdig-0.40
 	o semantic-1.4.4
 	o sendfile-20010424
