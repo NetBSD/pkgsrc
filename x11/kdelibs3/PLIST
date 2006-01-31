@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2005/12/24 03:32:22 markd Exp $
+@comment $NetBSD: PLIST,v 1.30 2006/01/31 22:20:41 markd Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -1319,6 +1319,7 @@ share/kde/apps/ksgmltools2/customization/af/entities/underArtisticLicense.docboo
 share/kde/apps/ksgmltools2/customization/af/entities/underBSDLicense.docbook
 share/kde/apps/ksgmltools2/customization/af/entities/underFDL.docbook
 share/kde/apps/ksgmltools2/customization/af/entities/underGPL.docbook
+share/kde/apps/ksgmltools2/customization/da/entities/underLGPL.docbook
 share/kde/apps/ksgmltools2/customization/af/entities/underX11License.docbook
 share/kde/apps/ksgmltools2/customization/af/entities/update-doc.docbook
 share/kde/apps/ksgmltools2/customization/af/lang.entities
@@ -4150,10 +4151,12 @@ share/kde/icons/crystalsvg/48x48/actions/lock.png
 share/kde/icons/crystalsvg/48x48/actions/mail_new.png
 share/kde/icons/crystalsvg/48x48/actions/mail_post_to.png
 share/kde/icons/crystalsvg/48x48/actions/misc.png
+share/kde/icons/crystalsvg/48x48/actions/next.png
 share/kde/icons/crystalsvg/48x48/actions/player_playlist.png
 share/kde/icons/crystalsvg/48x48/actions/presence_away.png
 share/kde/icons/crystalsvg/48x48/actions/presence_offline.png
 share/kde/icons/crystalsvg/48x48/actions/presence_online.png
+share/kde/icons/crystalsvg/48x48/actions/previous.png
 share/kde/icons/crystalsvg/48x48/actions/reload.png
 share/kde/icons/crystalsvg/48x48/actions/reload_all_tabs.png
 share/kde/icons/crystalsvg/48x48/actions/reload_page.png
@@ -4772,6 +4775,7 @@ share/kde/mimelnk/application/fits.desktop
 share/kde/mimelnk/application/illustrator.desktop
 share/kde/mimelnk/application/java.desktop
 share/kde/mimelnk/application/mathml+xml.desktop
+share/kde/mimelnk/application/mbox.desktop
 share/kde/mimelnk/application/msexcel.desktop
 share/kde/mimelnk/application/mspowerpoint.desktop
 share/kde/mimelnk/application/msword.desktop
@@ -4792,6 +4796,7 @@ share/kde/mimelnk/application/smil.desktop
 share/kde/mimelnk/application/vnd.mozilla.xul+xml.desktop
 share/kde/mimelnk/application/vnd.ms-asf.desktop
 share/kde/mimelnk/application/vnd.ms-excel.desktop
+share/kde/mimelnk/application/vnd.ms-powerpoint.desktop
 share/kde/mimelnk/application/vnd.ms-word.desktop
 share/kde/mimelnk/application/vnd.oasis.opendocument.chart.desktop
 share/kde/mimelnk/application/vnd.oasis.opendocument.formula.desktop
@@ -4987,6 +4992,7 @@ share/kde/mimelnk/image/tiff.desktop
 share/kde/mimelnk/image/wmf.desktop
 share/kde/mimelnk/image/x-bmp.desktop
 share/kde/mimelnk/image/x-dds.desktop
+share/kde/mimelnk/image/x-djvu-2.desktop
 share/kde/mimelnk/image/x-djvu.desktop
 share/kde/mimelnk/image/x-eps.desktop
 share/kde/mimelnk/image/x-exr.desktop
