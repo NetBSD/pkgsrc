@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/01/30 23:20:31 epg Exp $
+# $NetBSD: Makefile,v 1.36 2006/01/31 04:15:29 epg Exp $
 
 DISTNAME=		neon-0.25.5
 PKGREVISION=		1
@@ -16,12 +16,13 @@ USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE=	neon.pc.in
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--without-gssapi
 CONFIGURE_ARGS+=	--with-ssl=yes
 CONFIGURE_ARGS+=	--with-expat
 CONFIGURE_ARGS+=	--enable-shared
 
 TEST_TARGET=		check
+
+.include "options.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
