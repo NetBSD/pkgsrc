@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/12/11 12:36:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/01/31 23:08:48 markd Exp $
 share/doc/kde/HTML/en_GB/cervisia/common
 share/doc/kde/HTML/en_GB/cervisia/index.cache.bz2
 share/doc/kde/HTML/en_GB/cervisia/index.docbook
@@ -688,6 +688,7 @@ ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kaccess.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kaddressbook.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kalarm.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kalzium.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kanagram.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kandy.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/kappfinder.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/karm.mo
@@ -1004,6 +1005,7 @@ ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/konnector_qtopia.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/konnector_remote.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/konqsidebar_delicious.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/konqsidebar_mediaplayer.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/konqsidebar_metabar.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/konqsidebar_news.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/konqueror.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/konquest.mo
@@ -1133,6 +1135,7 @@ ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/libkaddrbk_geo_xxport.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/libkaddrbk_gmx_xxport.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/libkcal.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/libkcddb.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/libkdeedu.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/libkdegames.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/libkdepim.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/libkfaximgage.mo

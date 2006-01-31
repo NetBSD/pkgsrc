@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2005/12/11 12:36:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/01/31 23:08:48 markd Exp $
 share/doc/kde/HTML/fr/KRegExpEditor/common
 share/doc/kde/HTML/fr/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/fr/KRegExpEditor/index.docbook
@@ -1930,6 +1930,7 @@ ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/konnector_qtopia.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/konnector_remote.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/konqsidebar_delicious.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/konqsidebar_mediaplayer.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/konqsidebar_metabar.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/konqsidebar_news.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/konqueror.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/konquest.mo

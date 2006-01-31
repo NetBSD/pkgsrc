@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2005/12/11 12:36:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/01/31 23:08:47 markd Exp $
 share/doc/kde/HTML/cs/common/1.png
 share/doc/kde/HTML/cs/common/10.png
 share/doc/kde/HTML/cs/common/2.png
@@ -602,6 +602,7 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/konnector_qtopia.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/konnector_remote.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/konqsidebar_delicious.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/konqsidebar_mediaplayer.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/konqsidebar_metabar.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/konqsidebar_news.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/konqueror.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/konquest.mo
@@ -750,6 +751,7 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libkcddb.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libkdeedu.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libkdegames.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libkdepim.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libkfaximgage.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libkholidays.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libkicker.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libkickermenu_kdeprint.mo

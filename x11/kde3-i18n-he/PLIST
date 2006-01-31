@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2005/12/11 12:36:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/01/31 23:08:49 markd Exp $
 share/doc/kde/HTML/he/common/1.png
 share/doc/kde/HTML/he/common/10.png
 share/doc/kde/HTML/he/common/2.png
@@ -115,6 +115,7 @@ ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kaccess.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kaddressbook.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kalarm.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kalzium.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kanagram.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kandy.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kappfinder.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/karm.mo
@@ -253,6 +254,7 @@ ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kfile_au.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kfile_avi.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kfile_bmp.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kfile_cpp.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kfile_dds.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kfile_deb.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kfile_desktop.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kfile_diff.mo
@@ -307,6 +309,7 @@ ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kget.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kghostview.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kgpg.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kgreet_classic.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/khangman.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/khelpcenter.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/khexedit.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/khotkeys.mo
@@ -421,6 +424,7 @@ ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/krdc.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kreadconfig.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/krec.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kregexpeditor.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kres_birthday.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kres_bugzilla.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kreversi.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/krfb.mo
@@ -442,7 +446,6 @@ ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/ksokoban.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kspaceduel.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/ksplash.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/ksplashthemes.mo
-${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kstars.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kstart.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kstartperf.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kstyle_keramik_config.mo
@@ -495,8 +498,10 @@ ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kxsconfig.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/libkaddrbk_geo_xxport.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/libkcal.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/libkcddb.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/libkdeedu.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/libkdegames.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/libkdepim.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/libkholidays.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/libkicker.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/libkickermenu_kdeprint.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/libkickermenu_konsole.mo

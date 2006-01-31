@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/12/11 12:36:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/01/31 23:08:55 markd Exp $
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/akregator.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/appletproxy.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/ark.mo
@@ -10,6 +10,7 @@ ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/drkonqi.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/extensionproxy.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/filetypes.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/htmlsearch.mo
+${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/irkick.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/joystick.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/juk.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kabc_dir.mo
@@ -24,6 +25,8 @@ ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kasbarextension.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kate.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/katepart.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kay.mo
+${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kcharselect.mo
+${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kcharselectapplet.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kcm_kviewcanvasconfig.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kcm_kviewpluginsconfig.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kcm_kviewviewerpluginsconfig.mo
@@ -54,6 +57,7 @@ ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kcmkonq.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kcmkonqhtml.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kcmkonsole.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kcmkurifilt.mo
+${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kcmkvaio.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kcmkwindecoration.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kcmkwinrules.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kcmkwm.mo
@@ -106,6 +110,7 @@ ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kfile_tiff.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kfile_xbm.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kfileaudiopreview.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kfindpart.mo
+${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kfloppy.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kfmclient.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kfontinst.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kghostview.mo
@@ -159,6 +164,8 @@ ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/korn.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kpager.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kpersonalizer.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kpilot.mo
+${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kppp.mo
+${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kppplogview.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kprinter.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/krandr.mo
 ${PKGLOCALEDIR}/locale/uz/LC_MESSAGES/kreadconfig.mo

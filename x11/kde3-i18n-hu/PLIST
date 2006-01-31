@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/12/11 12:36:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/01/31 23:08:49 markd Exp $
 share/doc/kde/HTML/hu/amor/common
 share/doc/kde/HTML/hu/amor/index.cache.bz2
 share/doc/kde/HTML/hu/amor/index.docbook
@@ -630,6 +630,7 @@ ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kedit.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/keduca.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kenolaba.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kfax.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kfaxview.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kfifteenapplet.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kfile_au.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kfile_avi.mo
@@ -801,6 +802,7 @@ ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/konnector_qtopia.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/konnector_remote.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/konqsidebar_delicious.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/konqsidebar_mediaplayer.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/konqsidebar_metabar.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/konqsidebar_news.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/konqueror.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/konquest.mo
@@ -831,13 +833,16 @@ ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/krdc.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kreadconfig.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/krec.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kregexpeditor.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kres_birthday.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kres_blogging.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kres_bugzilla.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kres_exchange.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kres_featureplan.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kres_groupware.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kres_groupwise.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kres_kolab.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kres_remote.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kres_tvanytime.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kres_xmlrpc.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kreversi.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/krfb.mo
@@ -930,6 +935,7 @@ ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libkcddb.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libkdeedu.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libkdegames.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libkdepim.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libkfaximgage.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libkholidays.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libkicker.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/libkickermenu_kdeprint.mo
@@ -973,6 +979,7 @@ ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/rellinks.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/searchbarplugin.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/secpolicy.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/spy.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/superkaramba.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/synaescope.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/timezones.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/tippecanoe.mo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/12/11 12:36:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/01/31 23:08:48 markd Exp $
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/akregator.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/akregator_konqplugin.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/alsaplayerui.mo
@@ -370,6 +370,7 @@ ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/konnector_qtopia.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/konnector_remote.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/konqsidebar_delicious.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/konqsidebar_mediaplayer.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/konqsidebar_metabar.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/konqsidebar_news.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/konqueror.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/konquest.mo

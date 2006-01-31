@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/12/11 12:36:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/01/31 23:08:50 markd Exp $
 share/kde/apps/khangman/data/nb/animals.kvtml
 share/kde/apps/khangman/data/nb/easy.kvtml
 share/kde/apps/khangman/data/nb/hard.kvtml
@@ -16,6 +16,7 @@ ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/artscontrol.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/artsmodules.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/atlantik.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/atlantikdesigner.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/audiocd_encoder_lame.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/audiocd_encoder_vorbis.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/audiorename_plugin.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/autorefresh.mo
@@ -193,6 +194,7 @@ ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kdgantt.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kdialog.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kdict.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kdictapplet.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kdjview.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kdmconfig.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kdmgreet.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kdvi.mo
@@ -200,6 +202,7 @@ ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kedit.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/keduca.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kenolaba.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kfax.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kfaxview.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kfifteenapplet.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kfile_au.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kfile_avi.mo
@@ -226,6 +229,7 @@ ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kfile_m3u.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kfile_mhtml.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kfile_mp3.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kfile_mpc.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kfile_mpeg.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kfile_ogg.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kfile_palm.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kfile_pcx.mo
@@ -258,6 +262,7 @@ ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kfontinst.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kfouleggs.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kgamma.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kgantt.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kgeography.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kget.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kghostview.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kgoldrunner.mo
@@ -284,6 +289,7 @@ ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kio_groupwise.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kio_help.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kio_home.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kio_imap4.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kio_jabberdisco.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kio_lan.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kio_ldap.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kio_mac.mo
@@ -497,6 +503,7 @@ ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libkcddb.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libkdeedu.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libkdegames.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libkdepim.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libkfaximgage.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libkholidays.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libkicker.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libkickermenu_kdeprint.mo
@@ -540,6 +547,7 @@ ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/rellinks.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/searchbarplugin.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/secpolicy.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/spy.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/superkaramba.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/synaescope.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/timezones.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/tippecanoe.mo
