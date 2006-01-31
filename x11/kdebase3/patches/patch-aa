@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.15 2005/11/08 18:25:44 joerg Exp $
+$NetBSD: patch-aa,v 1.16 2006/01/31 22:25:34 markd Exp $
 
---- configure.orig	2005-11-06 18:05:17.000000000 +0100
+--- configure.orig	2006-01-21 20:13:16.000000000 +1300
 +++ configure
-@@ -30769,7 +30769,7 @@ if { (eval echo "$as_me:$LINENO: \"$kde_
+@@ -30884,7 +30884,7 @@ if { (eval echo "$as_me:$LINENO: \"$kde_
  	# if you're trying to debug this check and think it's incorrect,
  	# better check your installation. The check _is_ correct - your
  	# installation is not.
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.15 2005/11/08 18:25:44 joerg Exp $
  		kde_cv_uic_plugins=yes
  	fi
  fi
-@@ -42502,6 +42502,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -42634,6 +42634,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
  
                    ac_cv_have_dpms="-lXdpms"
  
@@ -35,17 +35,16 @@ $NetBSD: patch-aa,v 1.15 2005/11/08 18:25:44 joerg Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -45346,6 +45363,9 @@ case "$host" in
-   *-*-freebsd*)
+@@ -45486,7 +45503,7 @@ fi
+ 
+ 
+ case "$host" in
+-  *-*-linux*|*-*-freebsd*|*-*-kfreebsd*-gnu)
++  *-*-linux*|*-*-freebsd*|*-*-netbsd*|*-*-kfreebsd*-gnu)
  	FOUND_USBVIEW=yes
  	;;
-+  *-*-netbsd*)
-+	FOUND_USBVIEW=yes
-+	;;
  esac
- 
- 
-@@ -46730,7 +46750,7 @@ acimake:
+@@ -46925,7 +46942,7 @@ acimake:
  
  EOF
      if $XMKMF >&5 2>&1 && test -f Makefile; then
@@ -54,7 +53,7 @@ $NetBSD: patch-aa,v 1.15 2005/11/08 18:25:44 joerg Exp $
  	kde_cv_defines_imake_version=$imkv
      else
          echo "$as_me:$LINENO: result: failed" >&5
-@@ -53339,6 +53359,7 @@ case "$host" in
+@@ -54341,6 +54358,7 @@ case "$host" in
    *-*-osf*) ksysguardd_compile=yes; UNAME='Tru64' ;;
    *-*-irix*) ksysguardd_compile=yes; UNAME='Irix' ;;
    *-*-openbsd*) ksysguardd_compile=yes; UNAME='OpenBSD' ;;
@@ -62,7 +61,7 @@ $NetBSD: patch-aa,v 1.15 2005/11/08 18:25:44 joerg Exp $
    *) ksysguardd_compile=no; UNAME='' ;;
  esac
  
-@@ -53367,7 +53388,7 @@ fi
+@@ -54369,7 +54387,7 @@ fi
  
  
  
@@ -71,7 +70,7 @@ $NetBSD: patch-aa,v 1.15 2005/11/08 18:25:44 joerg Exp $
    include_ksysguardd_freebsd_TRUE=
    include_ksysguardd_freebsd_FALSE='#'
  else
-@@ -53523,6 +53544,7 @@ fi
+@@ -54704,6 +54722,7 @@ fi
  case "$UNAME" in
  	Linux) LIBHOSTS="$LIBSENSORS" ;;
  	FreeBSD) LIBHOSTS="$LIBSENSORS -lkvm" ;;
