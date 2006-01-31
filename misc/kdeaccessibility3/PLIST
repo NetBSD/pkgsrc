@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/12/11 11:23:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/01/31 22:44:58 markd Exp $
 bin/kmag
 bin/kmousetool
 bin/kmouth
@@ -277,6 +277,7 @@ share/kde/apps/kttsd/kcmkttsd_testmessage.desktop
 share/kde/apps/kttsd/sbd/polish_festival_sbdrc
 share/kde/apps/kttsd/sbd/standard_sbdrc
 share/kde/apps/kttsd/stringreplacer/abbreviations.xml
+share/kde/apps/kttsd/stringreplacer/chat-de.xml
 share/kde/apps/kttsd/stringreplacer/chat.xml
 share/kde/apps/kttsd/stringreplacer/emoticons.xml
 share/kde/apps/kttsd/stringreplacer/festival_unspeakable_chars.xml
