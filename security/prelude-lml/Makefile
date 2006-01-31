@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/29 15:56:42 shannonjr Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/31 10:46:31 shannonjr Exp $
 #
 
-DISTNAME=		prelude-lml-0.9.1
+DISTNAME=		prelude-lml-0.9.2
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.org/download/releases/
 
@@ -25,11 +25,13 @@ CONFIGURE_ARGS+=        --localstatedir=${VARBASE:Q}
 RCD_SCRIPTS=		preludelml
 PRELUDE_USER?=		_prelude
 PRELUDE_GROUP?=		_prelude
+PRELUDE_LML_PID_DIR=	${VARBASE:Q}/run/prelude-lml
 PRELUDE_HOME=		${VARBASE:Q}/prelude-lml
 PKG_USERS=	${PRELUDE_USER}:${PRELUDE_GROUP}::Prelude\ IDS:${PRELUDE_HOME}:${NOLOGIN}
 PKG_GROUPS=	${PRELUDE_GROUP}
 FILES_SUBST+=	PRELUDE_LML_PID_DIR=${PRELUDE_LML_PID_DIR:Q}
 FILES_SUBST+=	PRELUDE_USER=${PRELUDE_USER:Q}
+FILES_SUBST+=	PRELUDE_GROUP=${PRELUDE_GROUP:Q}
 
 SUBST_CLASSES+=         code
 SUBST_STAGE.code=       post-patch
