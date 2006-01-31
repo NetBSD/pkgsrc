@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/12/11 11:47:44 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/01/31 22:53:48 markd Exp $
 bin/atlantik
 bin/kasteroids
 bin/katomic
@@ -190,12 +190,24 @@ share/doc/kde/HTML/en/kjumpingcube/index.docbook
 share/doc/kde/HTML/en/klickety/common
 share/doc/kde/HTML/en/klickety/index.cache.bz2
 share/doc/kde/HTML/en/klickety/index.docbook
+share/doc/kde/HTML/en/klickety/screenshot.png
 share/doc/kde/HTML/en/klines/common
 share/doc/kde/HTML/en/klines/index.cache.bz2
 share/doc/kde/HTML/en/klines/index.docbook
+share/doc/kde/HTML/en/kmahjongg/background.png
+share/doc/kde/HTML/en/kmahjongg/boardeditor.png
 share/doc/kde/HTML/en/kmahjongg/common
+share/doc/kde/HTML/en/kmahjongg/config.png
+share/doc/kde/HTML/en/kmahjongg/gamescreen.png
+share/doc/kde/HTML/en/kmahjongg/highscore.png
 share/doc/kde/HTML/en/kmahjongg/index.cache.bz2
 share/doc/kde/HTML/en/kmahjongg/index.docbook
+share/doc/kde/HTML/en/kmahjongg/layout.png
+share/doc/kde/HTML/en/kmahjongg/numbered.png
+share/doc/kde/HTML/en/kmahjongg/shortcuts.png
+share/doc/kde/HTML/en/kmahjongg/showremoved.png
+share/doc/kde/HTML/en/kmahjongg/theme.png
+share/doc/kde/HTML/en/kmahjongg/tileset.png
 share/doc/kde/HTML/en/kmines/common
 share/doc/kde/HTML/en/kmines/index.cache.bz2
 share/doc/kde/HTML/en/kmines/index.docbook
@@ -224,6 +236,7 @@ share/doc/kde/HTML/en/kpoker/kpoker2.png
 share/doc/kde/HTML/en/kreversi/common
 share/doc/kde/HTML/en/kreversi/index.cache.bz2
 share/doc/kde/HTML/en/kreversi/index.docbook
+share/doc/kde/HTML/en/kreversi/kreversi-configuration.png
 share/doc/kde/HTML/en/kreversi/kreversi1.png
 share/doc/kde/HTML/en/ksame/common
 share/doc/kde/HTML/en/ksame/index.cache.bz2
@@ -231,6 +244,7 @@ share/doc/kde/HTML/en/ksame/index.docbook
 share/doc/kde/HTML/en/kshisen/common
 share/doc/kde/HTML/en/kshisen/index.cache.bz2
 share/doc/kde/HTML/en/kshisen/index.docbook
+share/doc/kde/HTML/en/kshisen/kshisen-configuration.png
 share/doc/kde/HTML/en/kshisen/score-formula.png
 share/doc/kde/HTML/en/kshisen/score-formula.tex
 share/doc/kde/HTML/en/ksirtet/common
@@ -272,6 +286,7 @@ share/doc/kde/HTML/en/ktuberling/menu-game.png
 share/doc/kde/HTML/en/ktuberling/menu-help.png
 share/doc/kde/HTML/en/ktuberling/menu-playground.png
 share/doc/kde/HTML/en/ktuberling/menu-raw.png
+share/doc/kde/HTML/en/ktuberling/menu-settings.png
 share/doc/kde/HTML/en/ktuberling/menu-speech.png
 share/doc/kde/HTML/en/ktuberling/technical-reference.docbook
 share/doc/kde/HTML/en/ktuberling/toolbar.png
