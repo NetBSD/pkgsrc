@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2006/01/16 23:03:20 xtraeme Exp $
+$NetBSD: patch-ab,v 1.3 2006/01/31 19:01:28 xtraeme Exp $
 
---- Makefile.m4.orig	2006-01-16 23:49:16.000000000 +0100
-+++ Makefile.m4	2006-01-16 23:49:53.000000000 +0100
+--- Makefile.m4.orig	2006-01-16 11:23:53.000000000 +0100
++++ Makefile.m4	2006-01-31 19:12:25.000000000 +0100
 @@ -14,6 +14,7 @@
  ifelse(OS,NetBSD,[define([OS],[BSD])CXXFLAGS+=-D__unix])
  ifelse(OS,OpenBSD,[define([OS],[BSD])])
