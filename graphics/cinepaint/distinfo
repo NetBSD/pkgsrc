@@ -1,21 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/07/04 19:57:01 drochner Exp $
+$NetBSD: distinfo,v 1.6 2006/01/31 21:06:56 adam Exp $
 
-SHA1 (cinepaint-0.19-1.tar.gz) = fb8a04d9a4dd0959a75a4b9c9a927e1ca2c0700f
-RMD160 (cinepaint-0.19-1.tar.gz) = 71337ea41ecec71fed8827c4aed0dcc3176910eb
-Size (cinepaint-0.19-1.tar.gz) = 7317730 bytes
+SHA1 (cinepaint-0.20-2.tar.gz) = 67ef64c1708553fc50f28c622d016e6388df079b
+RMD160 (cinepaint-0.20-2.tar.gz) = 637396d43db8e6bd00d6b28fc754315be8db2d9c
+Size (cinepaint-0.20-2.tar.gz) = 7550210 bytes
 SHA1 (patch-aa) = 2259896756f3371589b4a83655e4c118d0247302
 SHA1 (patch-ab) = 1e03ffb0deab12b229f2604083bd3515a80747ac
-SHA1 (patch-ac) = 106b4569e627692566abc1f2d2175df01ae76fea
-SHA1 (patch-ad) = 4d36cc56b32a04fdcc4428a778ff8d88435fea3a
-SHA1 (patch-ae) = 188e453a0a2b5fdf7ce3ec7db889d08071a57bd3
-SHA1 (patch-af) = 313f9fe908217de89ba9b02bd98cb28761d188ba
-SHA1 (patch-ag) = 25dff8ba05f414d4dde3356dfc71624f6fdb8a60
-SHA1 (patch-ah) = b2f750fa1adf9c09af13e8b0fa172be90e7802d4
-SHA1 (patch-ai) = e7979dec50e3402927a5442cb69e5771b03362db
-SHA1 (patch-aj) = 06ca475fdb0ea0e49e89c91cdb164d001a6a1937
-SHA1 (patch-ak) = e63c101cdc372ec8680ccf22bae99099fdb641af
-SHA1 (patch-al) = 2e456b752b363191c0f6ddcff9904b434ddf81ea
-SHA1 (patch-am) = 9bdb163ddc08bb526be842a3c3ef719426dc257f
-SHA1 (patch-an) = 8ef057f80c9586e26e66a28e8b402147e6d98faa
-SHA1 (patch-ao) = 564d69b66582f3db696063b64f329d78b4f4836f
-SHA1 (patch-ap) = 04dd321313b21acc76f84cc62cb6c6e28306f6f1
