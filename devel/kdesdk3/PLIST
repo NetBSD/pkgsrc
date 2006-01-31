@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2005/12/11 11:52:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.21 2006/01/31 22:58:40 markd Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/catalogmanager
@@ -221,6 +221,18 @@ share/doc/kde/HTML/en/kbabel/nexterror.png
 share/doc/kde/HTML/en/kbabel/nextfuzzy.png
 share/doc/kde/HTML/en/kbabel/nextfuzzyuntrans.png
 share/doc/kde/HTML/en/kbabel/nextuntranslated.png
+share/doc/kde/HTML/en/kbabel/pref_diff.png
+share/doc/kde/HTML/en/kbabel/pref_edit_appearance.png
+share/doc/kde/HTML/en/kbabel/pref_edit_general.png
+share/doc/kde/HTML/en/kbabel/pref_fonts.png
+share/doc/kde/HTML/en/kbabel/pref_proj_catman.png
+share/doc/kde/HTML/en/kbabel/pref_proj_diff.png
+share/doc/kde/HTML/en/kbabel/pref_proj_file_commands.png
+share/doc/kde/HTML/en/kbabel/pref_proj_folder_commands.png
+share/doc/kde/HTML/en/kbabel/pref_proj_source.png
+share/doc/kde/HTML/en/kbabel/pref_search.png
+share/doc/kde/HTML/en/kbabel/pref_wizard_page1.png
+share/doc/kde/HTML/en/kbabel/pref_wizard_page2.png
 share/doc/kde/HTML/en/kbabel/preferences.docbook
 share/doc/kde/HTML/en/kbabel/preverror.png
 share/doc/kde/HTML/en/kbabel/prevfuzzy.png
