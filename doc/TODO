@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4539 2006/01/30 21:03:15 wiz Exp $
+$NetBSD: TODO,v 1.4540 2006/01/31 13:20:13 rxg Exp $
 
 Suggested new packages
 ======================
@@ -1042,7 +1042,6 @@ Suggested package updates
 	o root-tail-1.2
 	o rosegarden4-1.0 [replacing audio/rosegarden|pkgsrc-wip]
 	o rox-session-0.1.25
-	o rox-wrappers-1.0.3
 	o roxirc-2.0
 	o rp-l2tp-0.4
 	o rp-pppoe-3.7
