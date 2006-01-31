@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/29 17:20:03 rxg Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/31 04:15:13 rxg Exp $
 #
 
 DISTNAME=	rox-lib-2.0.2
@@ -12,7 +12,7 @@ HOMEPAGE=	http://rox.sourceforge.net/desktop/node/46
 COMMENT=	Shared code for ROX applications
 
 DEPENDS+=	rox>=2.2.0:../../sysutils/rox
-DEPENDS+=	${PYPKGPREFIX}-expat-0nb2:../../textproc/py-expat
+DEPENDS+=	${PYPKGPREFIX}-expat>=0nb2:../../textproc/py-expat
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Lib2
 DIST_SUBDIR=	rox
