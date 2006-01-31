@@ -1,4 +1,3 @@
-#define PRELUDE_MANAGER_USER "@PRELUDE_USER@"
 #define PRELUDE_MANAGER_PATH "@PREFIX@/bin/prelude-manager"
 #define MAXMAXFD 256
 
@@ -32,27 +31,6 @@ void error_sys(char *str)
 
 }
 
-
-int obtainUIDandGID(const char *name, uid_t *pw_uid, gid_t *pw_gid)
-{
-    /* Obtain UID and GID from passwd entry identified by name */
-    struct passwd *pw_entry;
-    char msg[100];
-
-    if ((pw_entry = getpwnam(name)) == NULL)
-    {
-        snprintf(msg, sizeof(msg), "failed to get password entry for %s", name);
-        error_sys(msg);
-        return FALSE;
-    }
-    else
-    {
-        *pw_uid = pw_entry->pw_uid;
-        *pw_gid = pw_entry->pw_gid;
-        return TRUE;
-
-    }
-}
 
 static int
 fdlim_get(int hard)
@@ -99,13 +77,6 @@ int main (int argc, char **argv )
         error_sys("arg buffer too small");
         exit(-1);
     }
-    /*
-        if (getpid() != 0)
-        {
-            error_sys("must be called by root");
-            exit(-1);
-        }
-    */
 
     /* fork child that will become prelude-manager */
     if ((pid = fork()) < 0)
@@ -129,28 +100,6 @@ int main (int argc, char **argv )
 
             /* Clear out file creation mask */
             umask(0);
-
-            if (!obtainUIDandGID(PRELUDE_MANAGER_USER, &UID, &GID))
-                exit(-1);
-
-            /* Drop privileges immediately */
-            if (setgid(GID) < 0)
-            {
-                /* It is VERY important to check return
-                   value and not continue if setgid fails
-                */
-                error_sys ("setgid failed");
-                exit (-1);
-            }
-
-            if (setuid(UID) < 0)
-            {
-                /* It is VERY important to check return
-                   value and not continue if setuid fails
-                */
-                error_sys ("setuid failed");
-                exit (-1);
-            }
 
             /* Increase limit on number of open file descriptors if necessary */
             maxfd = fdlim_get(1);
