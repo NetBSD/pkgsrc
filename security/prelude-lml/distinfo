@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/01/29 15:56:42 shannonjr Exp $
+$NetBSD: distinfo,v 1.2 2006/01/31 10:46:31 shannonjr Exp $
 
-SHA1 (prelude-lml-0.9.1.tar.gz) = 2d3cb99256c84813e4fe4f17c5f5b6e8609d4bcd
-RMD160 (prelude-lml-0.9.1.tar.gz) = a48e849a3cfbaa32cd7e238e0b17a3dc5d6c9114
-Size (prelude-lml-0.9.1.tar.gz) = 515291 bytes
+SHA1 (prelude-lml-0.9.2.tar.gz) = 6cfc6c3450933d7d7f443b7d93b73f8007e4fc3a
+RMD160 (prelude-lml-0.9.2.tar.gz) = 01212f252f9909ec6d70f59d27560358f375422f
+Size (prelude-lml-0.9.2.tar.gz) = 534405 bytes
 SHA1 (patch-aa) = 6ed3c426d1b18ff748a3777527fbf0046caaf97f
 SHA1 (patch-ab) = df8bb7777d1938a167e4d27bf5a140e6d55e536b
