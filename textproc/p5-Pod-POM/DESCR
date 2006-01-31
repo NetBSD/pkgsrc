@@ -1,3 +1,0 @@
-This module converts POD documents into an object model format, known as
-Pod Object Model (POM).  It builds a hierarchy of nodes, which represent
-elements within each of the documents.

@@ -1,5 +1,0 @@
-This module generates a variety of random numbers. Capabilities of wide
-interest include the generation of:
-. uniform numbers between 0 and 1 (or user chosen boundaries)
-. random integers between user specified bounds
-. random permutations of a list (shuffle a deck of cards)

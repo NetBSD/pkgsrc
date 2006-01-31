@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/07 11:28:27 martti Exp $
-
-SHA1 (Curses-UI-POE-0.02801.tar.gz) = 978ca7d1e9fbffd721194c365dabc8967f85f858
-RMD160 (Curses-UI-POE-0.02801.tar.gz) = 28ece2a74210f656017c98cde1797f40bf655362
-Size (Curses-UI-POE-0.02801.tar.gz) = 25706 bytes

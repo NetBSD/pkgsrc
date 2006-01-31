@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/22 16:09:54 adam Exp $
-bin/dict
-bin/dictl
-man/man1/dict.1
-man/man1/dictl.1

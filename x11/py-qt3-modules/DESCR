@@ -1,3 +1,0 @@
-PyQT is a set of Python bindings for the Qt toolkit. This package
-provides the following Python modules for the Qt toolkit: qtxml,
-qtui, qttable, qtsql, qtnetwork, qtgl, and qtcanvas.

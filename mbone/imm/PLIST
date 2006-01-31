@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/04/05 11:50:14 wiz Exp $
-bin/imm
-bin/immserv
-bin/mdpsniff
-bin/mnm

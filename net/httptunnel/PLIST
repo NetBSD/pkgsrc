@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:38 zuntum Exp $
-bin/htc
-bin/hts
-man/man1/hts.1
-man/man1/htc.1

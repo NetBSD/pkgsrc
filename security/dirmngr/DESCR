@@ -1,4 +1,0 @@
-DirMngr is a server for managing and downloading certificate revocation
-lists (CRLs) for X.509 certificates and for downloading the certificates
-themselves.  DirMngr also handles OCSP requests as an alternative to CRLs.
-DirMngr is usually invoked by gpgsm and in general not used directly.

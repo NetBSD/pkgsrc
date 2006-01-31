@@ -1,6 +1,0 @@
-Xmcd is a full-featured CD Player utility package including xmcd, a CD
-Player for the X window system using the Motif graphical user interface;
-and cda, a command-line driven, text mode CD Player which also features
-a curses-based, screen-oriented mode.  Both utilities transform your
-CD-ROM, CD-R or CD-RW drive into a stereo CD player, allowing you to play
-audio CDs on your computer.

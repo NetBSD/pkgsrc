@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/28 12:53:53 wiz Exp $
-
-SHA1 (libdnet-1.10.tar.gz) = 1dd9594adb5a3af121960abd6960bcedfc815f37
-RMD160 (libdnet-1.10.tar.gz) = 167cf841b3fdd061ec8d6a56d53c341678ee5a9e
-Size (libdnet-1.10.tar.gz) = 419752 bytes

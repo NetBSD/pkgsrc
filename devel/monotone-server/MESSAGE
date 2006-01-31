@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/01/12 12:52:50 jmmv Exp $
-
-You should now run 'monotone-server-init' to finish installation _before_
-enabling the server.  Then, follow the on-screen instructions.
-
-===========================================================================

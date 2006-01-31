@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/04/22 19:50:48 wiz Exp $
-lkm/lzs.o
-man/cat8/pppd.0
-man/man8/pppd.8
-sbin/pppd
-@dirrm lkm

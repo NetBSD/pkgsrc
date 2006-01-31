@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:19 jlam Exp $
-lib/xmms/Visualization/libmadspin.la
-share/xmms/madspin/star1.bmp
-share/xmms/madspin/star2.bmp
-@dirrm share/xmms/madspin

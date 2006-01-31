@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/10/04 21:40:19 reed Exp $
-
-SHA1 (biblook.tar.gz) = 2bb056b806db4518c07e245fc86097c12938443b
-RMD160 (biblook.tar.gz) = 116f8209e7f36d98a770b1fd911ce9a985dc2b45
-Size (biblook.tar.gz) = 44691 bytes
-SHA1 (patch-aa) = 0a4555904c32474998336803d6bd805d3dd1d5cb
-SHA1 (patch-ab) = 7063e2d7b92a45b1f055ca201fe1d6b11bfec7bc
-SHA1 (patch-ac) = 4d6ae0e4301a184b40c777712ee91ea739d7fbfe

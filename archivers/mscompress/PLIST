@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:24:34 zuntum Exp $
-bin/mscompress
-bin/msexpand
-man/man1/mscompress.1
-man/man1/msexpand.1

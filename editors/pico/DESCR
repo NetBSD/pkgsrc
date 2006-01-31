@@ -1,9 +1,0 @@
-Pico is a simple text editor with limited searching, block cut and
-paste, and spell checking features.
-
-The pico package provides libpico, the library used by the Pine
-email client for its display and text editing capabilities.
-
-This also includes pilot(1), which is a simple, console-based,
-display-oriented file system navigator.  Pilot provides basic file
-manipulation commands.

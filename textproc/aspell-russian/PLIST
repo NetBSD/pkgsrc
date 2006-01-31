@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/24 03:13:38 wiz Exp $
-lib/aspell/ru-ye.multi
-lib/aspell/ru-ye.rws
-lib/aspell/ru-yeyo.multi
-lib/aspell/ru-yo.multi
-lib/aspell/ru-yo.rws
-lib/aspell/ru.multi
-share/aspell/ru.dat
-share/aspell/ru_affix.dat

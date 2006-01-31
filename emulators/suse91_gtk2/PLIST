@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2005/01/22 12:35:26 jdolecek Exp $
-${EMULSUBDIR}/etc/opt/gnome/gtk-2.0/gtk.immodules
-${EMULSUBDIR}/etc/opt/gnome/gtk-2.0/gdk-pixbuf.loaders
-${EMULSUBDIR}/etc/opt/gnome/pango/pango.modules

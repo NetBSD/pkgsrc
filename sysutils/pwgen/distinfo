@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/10/16 12:59:14 jdolecek Exp $
-
-SHA1 (pwgen-2.04.tar.gz) = 968aabedd6dc984deb925d4f88252fa34cf8d9e6
-RMD160 (pwgen-2.04.tar.gz) = 600a782ec2ecdf2e8b2eba4d7b35442b5fbfaee3
-Size (pwgen-2.04.tar.gz) = 47276 bytes

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/04/19 15:12:38 wiz Exp $
-lib/${BROWSER}/plugins/mplayerplug-in.so
-lib/${BROWSER}/plugins/mplayerplug-in.xpt
-share/examples/mplayer-plugin-${BROWSER}/mplayerplug-in.conf
-share/examples/mplayer-plugin-${BROWSER}/mplayerplug-in.types
-@dirrm share/examples/mplayer-plugin-${BROWSER}

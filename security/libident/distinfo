@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 13:10:07 agc Exp $
-
-SHA1 (libident-0.22.tar.gz) = cf70a9600880085c333d4e8623ece8056a196cc6
-RMD160 (libident-0.22.tar.gz) = ebbd3d3de7f1c22c6c8c620722c1ba25a4f5b4eb
-Size (libident-0.22.tar.gz) = 10716 bytes
-SHA1 (patch-aa) = c50abad31f43c0761794f3bdb1dcf606b4be28be

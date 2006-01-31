@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/02/23 20:39:49 agc Exp $
-
-SHA1 (Mixer.app-1.8.0.tar.gz) = 68b644e2b13fe4a89461cf28ab6aebbcaedc0552
-RMD160 (Mixer.app-1.8.0.tar.gz) = ae29a9b6c4a3d37d48f5e2b936ac62b81cc02c52
-Size (Mixer.app-1.8.0.tar.gz) = 37884 bytes
-SHA1 (patch-aa) = 4bbc4735d3d2075f2e890cdbd6ff48d70c8cc7a5
-SHA1 (patch-ab) = 9ca9690364e4e42c64b227f58f913848d5f980a4

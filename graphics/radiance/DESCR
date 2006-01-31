@@ -1,6 +1,0 @@
-Radiance is a physically based rendering package written largely by Greg Ward,
-initially at LBNL, EPFL, then SGI, now running Anyhere Software. It is a
-physically-based, image-generating, backward raytracer with very a powerful
-rendering engine. It is used worldwide for lighting analysis and can generate
-accurate values for radiance/luminance (W/sr.m^2,cd/m^2) and
-irradiance/illuminance (W/m,Lux).

@@ -1,9 +1,0 @@
-dxpc is an X protocol compressor designed to improve the
-speed of X11 applications run over low-bandwidth links
-(such as dialup PPP connections).
-
-dxpc consists of two processes:
-1. a Client Proxy that runs on the "remote" machine (the machine where
-   the X clients are running)
-2. a Server Proxy that runs on the "local" machine (the machine where
-   the X server is running)

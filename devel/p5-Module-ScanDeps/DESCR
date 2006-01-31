@@ -1,2 +1,0 @@
-The Perl 5 module Module::ScanDeps allows to recursively scan Perl code for
-dependencies.

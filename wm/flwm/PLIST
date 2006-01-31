@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:59:12 zuntum Exp $
-bin/flwm
-man/man1/flwm.1

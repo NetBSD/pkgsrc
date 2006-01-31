@@ -1,8 +1,0 @@
-dmassage - dmesg parser
-
-This tool parses the dmesg of your *BSD system, and can do three things
-with that information:
-
-- to make the kernel boot faster
-- to reduce kernel size
-- to show all devices in a tree-like hierarchy

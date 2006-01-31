@@ -1,6 +1,0 @@
-This package, libXcursor, provides the client-side cursor loading
-library for X.  This cursor management library is a simple library
-designed to help locate and load cursors (from files or memory).
-
-This is part of the X Libraries and Protocol Headers Project hosted
-at freedesktop.org.

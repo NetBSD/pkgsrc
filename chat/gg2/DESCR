@@ -1,4 +1,0 @@
-GNU Gadu is an instant messanger application, designed to work with IM
-protocols popular in Poland (but not only). This is a plugin based
-application, even GUI (which uses GTK+) is a plugin. Currently we support:
-Gadu-Gadu, Tlen.pl, Jabber.

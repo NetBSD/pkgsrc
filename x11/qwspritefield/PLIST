@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:10:07 jlam Exp $
-lib/libQwSpriteField.la
-qt1/include/Pix.h
-qt1/include/QwCluster.h
-qt1/include/QwPublicList.h
-qt1/include/QwSpriteField.h

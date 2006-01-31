@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:09 zuntum Exp $
-include/trio.h
-include/triop.h
-lib/libtrio.a
-man/man3/strio.3
-man/man3/trio_printf.3
-man/man3/trio_register.3
-man/man3/trio_scanf.3

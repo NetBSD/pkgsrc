@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/07 23:47:06 snj Exp $
-bin/wmusic
-share/doc/wmusic/COPYING
-share/doc/wmusic/README
-@dirrm share/doc/wmusic

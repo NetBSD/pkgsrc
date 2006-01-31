@@ -1,4 +1,0 @@
-This is a simple terminal mode program for configuring the directories
-in the X font server's path. It is mostly intended to be used
-`internally' by RPM when packages with fonts are added or removed, but
-it may be useful as a stand-alone utility in some instances.

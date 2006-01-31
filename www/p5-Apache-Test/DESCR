@@ -1,8 +1,0 @@
-Apache::Test is a test toolkit for testing an Apache server with any
-configuration. It works with Apache 1.3 and Apache 2.0 and any of its
-modules, including mod_perl 1.0 and 2.0. It was originally developed
-for testing mod_perl 2.0.
-
-For an extensive documentation see the tutorial:
-
-  http://perl.apache.org/docs/general/testing/testing.html

@@ -1,4 +1,0 @@
-PHP is a programming language designed to be embedded into web pages.
-This extension allows one to extract information from files with a EXIF
-header within a PHP script. Usually, digital camera will produce JPEG
-or other image files with an EXIF header.

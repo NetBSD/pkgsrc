@@ -1,7 +1,0 @@
-"Pcal" Version 4.7
-
-This is a new release of "Pcal", the PostScript calendar program.  The major
-new features are the "-H" flag for generating output in HTML table form,
-expansion of "%y" in the "include" filename into the last two digits of
-every applicable year in "year all" mode, and the addition of build-time
-support for A4 size paper.

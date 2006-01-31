@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:13:50 agc Exp $
-
-SHA1 (ish-v0.2.tar.gz) = 2d5d16cdd8c097220ee885bedbefb7f41115e6b2
-RMD160 (ish-v0.2.tar.gz) = 8582e044914f1d68ee7c2257d3be8cb8e8db2999
-Size (ish-v0.2.tar.gz) = 6531 bytes
-SHA1 (patch-aa) = 5a2a8782188874431a7ab03ea09aa60c266d2669

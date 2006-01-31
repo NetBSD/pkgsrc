@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/27 15:35:57 wiz Exp $
-bin/uips
-share/doc/uips/uips.txt
-@dirrm share/doc/uips

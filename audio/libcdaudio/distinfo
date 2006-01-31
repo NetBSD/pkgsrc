@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.12 2005/09/06 08:10:57 abs Exp $
-
-SHA1 (libcdaudio-0.99.12.tar.gz) = 1862d3f387634a216faa867164d840b6f5552294
-RMD160 (libcdaudio-0.99.12.tar.gz) = 57f7446db6c65c968eb58a9404652718d6517b74
-Size (libcdaudio-0.99.12.tar.gz) = 357150 bytes
-SHA1 (patch-aa) = f7cf7d430917e6860fb43529cb349d358890f7a4
-SHA1 (patch-ab) = 9df8c234de3cb5a6b262fae093e430e471afa1f0
-SHA1 (patch-ac) = 073ceed3794fbd889b0efec49cd2dfe63c7fda07

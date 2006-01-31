@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2004/05/24 11:27:22 uebayasi Exp $
-bin/priv
-man/man1/priv.1

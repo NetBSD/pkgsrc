@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 18:49:19 agc Exp $
-
-SHA1 (minivmac-0.1.7.src.tgz) = 761b56ec9d4dbc2a3b200dd40a9c44b93913e308
-RMD160 (minivmac-0.1.7.src.tgz) = 132ddc014d74f0c60be5357f69f4528f0c86db97
-Size (minivmac-0.1.7.src.tgz) = 93155 bytes
-SHA1 (patch-aa) = c1f992d7277edb53c88d6b973cfe1046c5633434

@@ -1,3 +1,0 @@
-# $NetBSD: Makefile.version,v 1.2 2005/07/19 11:11:58 adam Exp $
-
-TCL_VERSION=8.4.11

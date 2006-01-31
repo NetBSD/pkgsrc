@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/10/29 23:45:02 epg Exp $
-
-SHA1 (fvwm-2.5.14.tar.bz2) = 096ac3b0ac077ec8c6a91f234eac70878f56c501
-RMD160 (fvwm-2.5.14.tar.bz2) = 1b9f9093071cfbf5d1ed8be66018fc6add045d8a
-Size (fvwm-2.5.14.tar.bz2) = 1977058 bytes
-SHA1 (patch-aa) = 4786fed07aadb0cebe72dcaae847232f1b7f8818

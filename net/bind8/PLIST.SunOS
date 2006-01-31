@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.SunOS,v 1.1 2003/07/31 23:58:48 seb Exp $
-include/bind/sys/bitypes.h
-include/bind/sys/cdefs.h

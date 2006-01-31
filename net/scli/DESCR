@@ -1,9 +1,0 @@
-The scli package was written to address the need for small and efficient
-command line utilities to monitor and configure network devices and
-host systems. The scli package is based on the SNMP management
-protocol.
-
-To summarize, the slogan for this little package is:
-
-  "After more than 10 years of SNMP, I felt it is time for really
-   useful command line SNMP monitoring and configuration tools. ;-)"

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/10/25 17:21:47 perry Exp $
-
-SHA1 (ttt-1.8.1.tar.gz) = 4ed6ed74e4f304459ee546d2e614f1dadb0baada
-RMD160 (ttt-1.8.1.tar.gz) = 9ca229376f6403f9a2b38edb94f0bb56af66bbea
-Size (ttt-1.8.1.tar.gz) = 135067 bytes
-SHA1 (patch-aa) = 5ad41dc8079a2ffcfe80e710b28f4ad75a75ce68

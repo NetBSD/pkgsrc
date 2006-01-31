@@ -1,8 +1,0 @@
-msudir allows enabled users to easily manage 'setuid' scripts and
-binaries.  A directory containing scripts or other executables is
-created inside the basedir for each destination user. Any user is
-then able to invoke the script 'bar' in the directory 'fu' via
-'msudir fu/bar'. The script will be run under the uid and primary
-gid of the destination user. Some effort is taken to sanitise the
-arguments and environment, but msudir should not be used without
-an understanding of the security implication.

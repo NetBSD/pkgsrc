@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2004/12/24 03:08:39 wiz Exp $
-lib/aspell/ga.multi
-lib/aspell/ga.rws
-lib/aspell/gaeilge.alias
-lib/aspell/irish.alias
-share/aspell/ga.dat
-share/aspell/ga_phonet.dat

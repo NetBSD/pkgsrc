@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/04/03 01:06:56 epg Exp $
-
-SHA1 (String-Format-1.13.tar.gz) = ac59ccea597adcff6423824c78342f5f3ef5deac
-RMD160 (String-Format-1.13.tar.gz) = 793d65a721a56ecd823a3a2c18e07b9883cf1d5c
-Size (String-Format-1.13.tar.gz) = 6643 bytes

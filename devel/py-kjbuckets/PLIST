@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/24 13:29:59 drochner Exp $
-${PYSITELIB}/kjbuckets.so
-share/doc/${PYPKGPREFIX}-kjbuckets/kjbuckets.txt
-@dirrm share/doc/${PYPKGPREFIX}-kjbuckets

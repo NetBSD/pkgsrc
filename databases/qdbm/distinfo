@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/10/29 15:33:35 minskim Exp $
-
-SHA1 (qdbm-1.8.33.tar.gz) = cac04ceb3b10b024cd3d34af4984643247e54141
-RMD160 (qdbm-1.8.33.tar.gz) = 28f74519675ed711132e8d0556b0520c56abef4c
-Size (qdbm-1.8.33.tar.gz) = 863217 bytes
-SHA1 (patch-aa) = bc1a7c486e47c3137108fad4304c000d26a907f9

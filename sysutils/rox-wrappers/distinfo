@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:40:57 agc Exp $
-
-SHA1 (rox/Wrappers-1.0.2.tgz) = 2178bcc56eebb54b3033bf690b187c7cc0cd49d2
-RMD160 (rox/Wrappers-1.0.2.tgz) = 2b6d8e955aaae448b53c33bed5a5a4992ed1a818
-Size (rox/Wrappers-1.0.2.tgz) = 68517 bytes
-SHA1 (patch-aa) = 78b70a1bab2b3778ac6fbd16eaea8d58e36e4df8

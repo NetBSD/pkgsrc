@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 14:08:39 wiz Exp $
-
-SHA1 (w3-4.0pre.47.tar.gz) = 51cce63a0507fc5dd3486674c678f24067d6611d
-RMD160 (w3-4.0pre.47.tar.gz) = 4d7f7ada9704299b61c2b8925fc651cfa2c7d90f
-Size (w3-4.0pre.47.tar.gz) = 503062 bytes
-SHA1 (patch-aa) = 3b02015ed680630dbceb0e20e2f24850893beabd
-SHA1 (patch-ab) = 1a805be496d385152388ae9b00ad2ffa9f8fdb53
-SHA1 (patch-ac) = 7edc0023e3ad88a126a6ea39955e246da6101f76

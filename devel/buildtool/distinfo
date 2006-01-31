@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.14 2005/02/23 22:24:10 agc Exp $
-
-SHA1 (buildtool-0.16.tar.gz) = 27dd75f0977d6f87992b080ce778b76e5d3ba154
-RMD160 (buildtool-0.16.tar.gz) = def741ca5e78e67106dd858bbfabc0e2d490eef6
-Size (buildtool-0.16.tar.gz) = 194576 bytes

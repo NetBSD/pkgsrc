@@ -1,5 +1,0 @@
-ftp.proxy is a proxy server for a subset of the file transfer protocol
-described in RFC 959.  It forwards traffic between a client and a
-server without looking too much if both hosts do real FTP.  The FTP
-server can be either given on the command line or supplied by the
-client.

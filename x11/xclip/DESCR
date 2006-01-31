@@ -1,5 +1,0 @@
-xclip provides an interface to X selections ("the clipboard") from
-the command line. It can read data from standard input or a file and
-place it in an X selection for pasting into other X applications.
-xclip can also print an X selection to standard output, which can then
-be redirected to a file or another program.

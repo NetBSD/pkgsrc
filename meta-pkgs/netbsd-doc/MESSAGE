@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.3 2003/05/06 17:41:57 jmmv Exp $
-
-You will also need a HTML-viewer to view the produced results
-from the SGML->HTML conversion. Please install either lynx,
-links or netscape or any other web browser of your choice
-manually.
-
-===========================================================================

@@ -1,7 +1,0 @@
-The XFIXES Extension is designed to provide the minimal server-side
-support necessary to eliminate problems caused by workarounds needed
-by X applications due to various shortcomings in the core X window
-system.
-
-This is part of the freedesktop.org X Libraries and Protocol Headers
-Project.

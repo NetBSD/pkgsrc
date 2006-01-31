@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 16:12:33 agc Exp $
-
-SHA1 (ack139.tar.gz) = d9ae53238176d46c303a48e736c5bafa9743250c
-RMD160 (ack139.tar.gz) = 859af65bb4e4d3e1bc42840b23d571510f095d18
-Size (ack139.tar.gz) = 16292 bytes
-SHA1 (patch-aa) = 4840bef577a42cd4cd1a387f7261f42f9887055f

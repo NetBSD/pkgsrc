@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2004/09/22 08:09:22 jlam Exp $
-bin/edb-config
-bin/edb_ed
-bin/edb_gtk_ed
-include/Edb.h
-lib/libedb.la

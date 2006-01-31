@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:48:41 agc Exp $
-
-SHA1 (dictionary-1.8.2.tar.gz) = 43b9ec12c08856f3a7ab0a105c077352ec0dcad5
-RMD160 (dictionary-1.8.2.tar.gz) = 574bbc307fba177abc9264bc4fd1020845e108af
-Size (dictionary-1.8.2.tar.gz) = 32451 bytes

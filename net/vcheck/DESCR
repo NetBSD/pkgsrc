@@ -1,3 +1,0 @@
-Vcheck is a tool for checking for latest versions of programs at
-HTTP and FTP locations given a list of URLs and (Perl-style) regular
-expressions to match, and to optionally download them automatically.

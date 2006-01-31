@@ -1,4 +1,0 @@
-The files in this archive are example systrace policy files, which can
-be used to raise the security levels of your computer by using the
-systrace(1) utility. These example policies can be used as a base for
-custom policies, or as learning material.

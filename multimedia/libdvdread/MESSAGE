@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/01/28 14:29:01 recht Exp $
-
-Because of the unclear legal status of libdvdcss, it is not automatically
-installed as part of ${PKGBASE}. It is however needed to play encrypted
-DVDs. If you want to play encrypted DVDs, simply install it yourself.
-
-===========================================================================

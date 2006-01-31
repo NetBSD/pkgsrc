@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/30 17:34:45 cjep Exp $
-bin/bsdiff
-bin/bspatch
-man/man1/bsdiff.1
-man/man1/bspatch.1

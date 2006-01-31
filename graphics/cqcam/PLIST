@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/07/10 22:18:23 wiz Exp $
-bin/cqcam
-bin/xcqcam
-bin/webcam
-man/man1/cqcam.1
-man/man1/webcam.1
-man/man1/xcqcam.1

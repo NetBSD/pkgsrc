@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/23 20:10:57 rillig Exp $
-bin/quobdump
-bin/quobprint
-include/quantum.h
-lib/libquantum.la

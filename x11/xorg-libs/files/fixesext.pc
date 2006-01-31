@@ -1,9 +1,0 @@
-prefix=@X11BASE@
-exec_prefix=${prefix}
-libdir=${exec_prefix}/lib
-includedir=${prefix}/include
-
-Name: FixesExt
-Description: X Fixes extension headers
-Version: 2.0.1
-Cflags: -I${includedir} -I@LOCALBASE@/include  -I@LOCALBASE@/include/freetype2

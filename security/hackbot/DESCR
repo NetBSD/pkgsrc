@@ -1,5 +1,0 @@
-Hackbot is a vulnerability scanner that started as a joke at first, but now
-it has become a serious project. Hackbot scans over 300 CGI's, scans for
-banners of several services, does unicode checks, checks for open relays,
-outsmarts Cisco PIX MailGuard, can do ripe checkup, spamcop db checkup, X
-connect test and lots more.

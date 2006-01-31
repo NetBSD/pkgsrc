@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 08:45:07 agc Exp $
-
-SHA1 (igmt_v1.2.tar.gz) = b0b5f77de8551756c8dece6cdbc974bfda0d0860
-RMD160 (igmt_v1.2.tar.gz) = 43a387f06ca9800f472380a61778121fa1e4e103
-Size (igmt_v1.2.tar.gz) = 1837311 bytes
-SHA1 (patch-aa) = b40ce475b8833bf0c03dc97e84f5768cd9bab5d8
-SHA1 (patch-ab) = d83c7bb69562848afc5dd1f14dcf0a19c0a4e8ac
-SHA1 (patch-ac) = 9208e64cb9373f3dd9c515cfff3ba949ee989ae7

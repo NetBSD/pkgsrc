@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:51:46 agc Exp $
-
-SHA1 (yup-r1-rel.tgz) = f3b81abd6c70a3bf9fd0b35af8eb2fa75d83778c
-RMD160 (yup-r1-rel.tgz) = 6125f3969a7d09b4bcc1d37df6bacb545264438e
-Size (yup-r1-rel.tgz) = 89529 bytes
-SHA1 (patch-aa) = bbc3e7f463c6376c85aead6698af42840debe4a4

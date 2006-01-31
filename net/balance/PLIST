@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/28 20:46:26 minskim Exp $
-man/man1/balance.1
-sbin/balance

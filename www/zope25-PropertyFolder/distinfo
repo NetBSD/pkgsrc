@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 14:08:41 wiz Exp $
-
-SHA1 (zope/PropertyFolder-1.3.3.tar.gz) = 151ec6499e554818ba862c4b9be4dbaa260a272b
-RMD160 (zope/PropertyFolder-1.3.3.tar.gz) = 5876e87daa4c5afa6b509379a8e4afcadf271e3d
-Size (zope/PropertyFolder-1.3.3.tar.gz) = 14869 bytes

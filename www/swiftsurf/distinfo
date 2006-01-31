@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:39 wiz Exp $
-
-SHA1 (swiftsurf-1.2.5.tar.gz) = bf58a2afcbb8d9ee4cbeb9b8a6ebe00ab6f3d9c8
-RMD160 (swiftsurf-1.2.5.tar.gz) = 243c9c05352e83b5f7b64a8398ea1373e7f8dc59
-Size (swiftsurf-1.2.5.tar.gz) = 31950 bytes
-SHA1 (patch-aa) = 7882d5c8542e8ebab40100462ecfaaf3f282f5a2

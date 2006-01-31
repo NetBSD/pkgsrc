@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:42 jlam Exp $
-include/fftw.h
-include/rfftw.h
-lib/libfftw.la
-lib/librfftw.la

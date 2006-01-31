@@ -1,7 +1,0 @@
-The ZNavigator product was designed to simplify the construction
-of navigation bars. It was written to make navbar management
-easy for inexperienced contents managers, and provide some nifty features.
-Many of the features and their usage are demonstrated in the navigator_demo
-package, in the demo/ directory (see the INSTALL document for information
-on how to intall the demos). The ZNavigator and NavItem also have online help
-tabs.

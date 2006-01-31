@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 19:14:56 wiz Exp $
-
-SHA1 (xdkcal-0.9d.tar.gz) = 8ac5a63170b90d77f22569eecb5592177c06365e
-RMD160 (xdkcal-0.9d.tar.gz) = c7ef546ec7e4d11260aa75563c449e29a3bfa35d
-Size (xdkcal-0.9d.tar.gz) = 48533 bytes
-SHA1 (patch-aa) = d497a13d636b54ad779ad1aceb2a3e97a3ac5b61

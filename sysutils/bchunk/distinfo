@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 13:40:51 agc Exp $
-
-SHA1 (bchunk-1.1.1.tar.gz) = a3d25cf8a53e2b4f1793f44b53569ffe587a6a2b
-RMD160 (bchunk-1.1.1.tar.gz) = 0b7b9d38aabc3c571ead38396ab17c4598d8e7b2
-Size (bchunk-1.1.1.tar.gz) = 14633 bytes
-SHA1 (patch-aa) = 26373282c599914ec869775802d209d6c1cc73a9
-SHA1 (patch-ab) = ae144230a5f7b62bc166e3f7ab1e20702d3a2129

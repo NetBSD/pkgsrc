@@ -1,8 +1,0 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/04/22 09:58:59 kei Exp $
-
---- netmaj1.c.orig	Wed Jul 31 17:06:08 1996
-+++ netmaj1.c
-@@ -23,2 +23,3 @@
- #include <signal.h>
-+#include <unistd.h>
- #include "pai.h"

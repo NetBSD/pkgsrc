@@ -1,4 +1,0 @@
-This tool examines the qmail configuration to see if any common errors exist.
-
-usage: qmail-lint [-v]
-	-v -- print an explanation of the reports the first time one is printed.

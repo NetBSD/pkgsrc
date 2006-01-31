@@ -1,8 +1,0 @@
-JpGraph is an OO class library for PHP 4.3.x and later. JpGraph
-makes it easy to draw both "quick and dirty" graphs with a minimum
-of code and complex professional looking graphs which require a
-very fine grain of control. The library assigns context sensitive
-default values for most parameters which helps minimize the learning
-curve.
-
-JpGraph uses only GD, no other PHP extensions are necessary.

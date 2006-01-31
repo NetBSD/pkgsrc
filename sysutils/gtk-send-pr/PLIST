@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/13 18:09:37 xtraeme Exp $
-bin/gtk-send-pr
-man/man1/gtk-send-pr.1

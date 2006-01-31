@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 09:59:22 agc Exp $
-
-SHA1 (hypermail-2.1.8.tar.gz) = acb357832c52c91e43f58d13e20c0599440d3df9
-RMD160 (hypermail-2.1.8.tar.gz) = 377bab9c7028cb684be1bfcbed70ae2ba777255c
-Size (hypermail-2.1.8.tar.gz) = 1238173 bytes
-SHA1 (patch-aa) = c67e4a22cddee828d2c2039f1e4ca2a667ce48b8
-SHA1 (patch-ac) = 0b173d255d0b6b4024ece4ce7fc4ea85ce6c2322
-SHA1 (patch-ad) = ec9220c81d8f8831ac66b1f9d4979523e631ddeb
-SHA1 (patch-ae) = 4e0f1054ead76f8cbff4eaceac926ff664c6a7ff

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/10 17:08:13 wiz Exp $
-bin/tcpflow
-man/man1/tcpflow.1

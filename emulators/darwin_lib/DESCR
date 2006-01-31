@@ -1,5 +1,0 @@
-These libraries are part of the Darwin compatibility option for
-NetBSD/powerpc and NetBSD/i386.
-
-The kernel options `EXEC_MACHO', `COMPAT_MACH' and `COMPAT_DARWIN'
-must be in your kernel config file for this to work.

@@ -1,4 +1,0 @@
-This is the source code for the C++ class library pcre++.
-pcre++ is a wrapper class around the pcre library (Perl
-Compatible Regular Expressions), which is available on
-http://www.pcre.org/.

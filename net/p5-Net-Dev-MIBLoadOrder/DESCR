@@ -1,4 +1,0 @@
-This perl5 module provides function that will scan a list of files
-and/or directories to find MIB files. Then parse each MIB file for
-the information required to determine a MIB Load Order for a Network
-Management System.

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 16:12:35 agc Exp $
-
-SHA1 (unix2dos-1.2.tar.gz) = dac757c1686340058edd1c8a3e9c800dc01aff0b
-RMD160 (unix2dos-1.2.tar.gz) = ac388882d9070c90782892509a9140cc70a954c2
-Size (unix2dos-1.2.tar.gz) = 1848 bytes

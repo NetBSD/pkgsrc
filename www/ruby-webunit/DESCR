@@ -1,3 +1,0 @@
-WebUnit is Ruby API for testing html/cgi without browser, and is
-ideally suited for automated unit testing of web sites when combined
-with a Ruby unit test framework such as RubyUnit.

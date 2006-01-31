@@ -1,3 +1,0 @@
-pclock is a simple analog clock program designed to run under Window Maker
-window manager (also runs fine on any other window manager which supports
-dock apps, such as PWM).  Any 64x64 pixmap may be used as a background.

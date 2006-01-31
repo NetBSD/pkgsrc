@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:48:42 agc Exp $
-
-SHA1 (html2wml-0.4.8r2.tar.gz) = 4e0e2a5f4a62497f3af4127d9d63d99daea1cfa7
-RMD160 (html2wml-0.4.8r2.tar.gz) = 1c96ee85f0803297f6c69df0297875070c144dc7
-Size (html2wml-0.4.8r2.tar.gz) = 84959 bytes
-SHA1 (patch-aa) = 3a355140c8e16871b53d98cc05a0bdf1698cce7b

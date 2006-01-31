@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:16 jlam Exp $
-include/mad.h
-lib/libmad.la
-lib/pkgconfig/mad.pc

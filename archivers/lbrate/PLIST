@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/07/28 00:03:15 minskim Exp $
-bin/lbrate
-man/man1/lbrate.1
-share/doc/lbrate/COPYING
-share/doc/lbrate/ChangeLog
-share/doc/lbrate/README
-share/doc/lbrate/TODO
-@dirrm share/doc/lbrate

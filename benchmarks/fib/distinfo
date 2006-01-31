@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/22 21:16:36 agc Exp $
-
-SHA1 (fib.c) = d5eec6bc68c9cbe5e013ab62bcb7b2b5be55eb17
-RMD160 (fib.c) = 915b249676f9a7d5c1ab7bfe16360c23964d25c3
-Size (fib.c) = 11045 bytes

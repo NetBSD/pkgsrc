@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/29 01:05:17 minskim Exp $
-
-SHA1 (chksniff-0.2.tar.gz) = 008a63e429dc0c12c0ba760e6476623ca99ad85a
-RMD160 (chksniff-0.2.tar.gz) = ad7475a9c8acc5d527e2abe28b352c1375c6bb11
-Size (chksniff-0.2.tar.gz) = 28419 bytes
-SHA1 (patch-aa) = a91144e2178475c2424ce84dbdae4c7e7faacff0

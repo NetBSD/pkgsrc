@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/08/16 15:33:01 drochner Exp $
-bin/nagi
-lib/nagi/font_16x16.nbf
-lib/nagi/font_4x8.nbf
-lib/nagi/font_8x8.nbf
-lib/nagi/nagi
-lib/nagi/nagi.ini
-lib/nagi/standard.ini
-@dirrm lib/nagi

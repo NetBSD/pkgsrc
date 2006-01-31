@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/10/07 16:38:41 joerg Exp $
-
-SHA1 (yodl-1.31.18.tar.gz) = 16f041cf8851027f96e5af82d0ac4f85a425553a
-RMD160 (yodl-1.31.18.tar.gz) = 71e42d72368a5850de89353880050feb026c58e0
-Size (yodl-1.31.18.tar.gz) = 320053 bytes
-SHA1 (patch-aa) = ecb2e2f61d43e69b685b2821d9601e82cb0647ca
-SHA1 (patch-ab) = 70ccc5bab03a079935507d59a0e2f4a93b27a4ab
-SHA1 (patch-ac) = bfee8fcf774dcc4f1f16eb4e65da426a00d2c012

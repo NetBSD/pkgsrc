@@ -1,7 +1,0 @@
-SqWebMail is a web CGI client for sending and receiving E-mail using
-maildir mailboxes.  It is very lightweight -- it reads mail directly
-from maildirs.  It also contains a web-based calendar application.
-
-This package differs from a vanilla SqWebMail installation in that
-the files are installed at locations that more closely correspond to
-a Courier installation.

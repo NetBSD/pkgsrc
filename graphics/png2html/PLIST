@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:17 zuntum Exp $
-bin/png2html
-share/doc/png2html/COPYING
-share/doc/png2html/CHANGES
-share/doc/png2html/README
-@dirrm share/doc/png2html

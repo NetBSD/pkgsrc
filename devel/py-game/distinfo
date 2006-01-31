@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/10/12 14:52:52 drochner Exp $
-
-SHA1 (pygame-1.7.1release.tar.gz) = cf6940e3ec4f48930ef8e4600c6decfa13ebbbea
-RMD160 (pygame-1.7.1release.tar.gz) = 2cb7a60f3f57468958d452f8daf4cf81063e1955
-Size (pygame-1.7.1release.tar.gz) = 1279697 bytes
-SHA1 (patch-ac) = 9cd95899639ad489e3083677e20ac761a2263f97

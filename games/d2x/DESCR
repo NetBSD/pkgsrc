@@ -1,9 +1,0 @@
-Descent 2 for DOS, Windows, and Unix (Linux, Solaris, Mac OS X, etc).
-
-Supported features include: Graphics, Sound, OpenGL, Joystick, Mouse,
-CD audio, Networking.
-
-Unsupported features: Serial.
-
-A few of the new features in 0.2.0: Movies, Bigendian support,
-Shareware data file support, and Descent 1 data file support.

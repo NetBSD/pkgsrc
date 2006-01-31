@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/04/18 15:59:38 schmonz Exp $
-
-SHA1 (pymsgauth-2.1.0.tar.gz) = fe6c60022529ce2444db3423f84d44e457ae61bb
-RMD160 (pymsgauth-2.1.0.tar.gz) = 0a5d7d6be65d9623647a3dfe014cb89a2c213183
-Size (pymsgauth-2.1.0.tar.gz) = 17915 bytes

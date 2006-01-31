@@ -1,6 +1,0 @@
-The Metasploit Framework is an advanced open-source platform for developing,
-testing, and using exploit code. This release includes 18 exploits and 27
-payloads; many of these exploits are either the only ones publicly available
-or just much more reliable than anything else out there. The Framework will
-run on any modern system that has a working Perl interpreter, the Windows
-installer includes a slimmed-down version of the Cygwin environment.

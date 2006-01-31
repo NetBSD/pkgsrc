@@ -1,4 +1,0 @@
-By passing arguments to "use Class::MakeMethods ..." statements, you can
-select from a library of hundreds of common types of methods, which are
-dynamically installed as subroutines in your module, simplifying the
-code for your class.

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/07 15:12:59 ben Exp $
-bin/upx
-share/doc/upx/upx.doc
-share/doc/upx/upx.html

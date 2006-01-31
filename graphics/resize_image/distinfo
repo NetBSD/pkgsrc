@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 08:45:13 agc Exp $
-
-SHA1 (resize_image-0.6.tar.gz) = e26f53db67de09bc641caf1ced4742a97be0c4a4
-RMD160 (resize_image-0.6.tar.gz) = 42d2ab8813835d51aa984546cb5f2c003e01f667
-Size (resize_image-0.6.tar.gz) = 87249 bytes
-SHA1 (patch-aa) = b72497572209b10eba9e4a2becbfb53661031092
-SHA1 (patch-ab) = 1ef571f47e79a018dfa73d5996265059edd746d1
-SHA1 (patch-ac) = 98b9d32e7d6ba96244a27288a9b36b3a7d41fbd1

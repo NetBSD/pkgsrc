@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/13 20:41:51 wiz Exp $
-include/libmimedir.h
-lib/libmimedir.la

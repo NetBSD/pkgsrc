@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/03 13:40:19 rillig Exp $
-bin/an
-man/man6/an.6

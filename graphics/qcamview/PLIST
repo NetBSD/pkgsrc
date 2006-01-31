@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/11 14:04:06 hamajima Exp $
-bin/qcamshot
-bin/qcamview
-man/cat1/qcamshot.0
-man/cat1/qcamview.0
-man/man1/qcamshot.1
-man/man1/qcamview.1

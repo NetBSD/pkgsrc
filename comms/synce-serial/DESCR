@@ -1,8 +1,0 @@
-Synce-serial is part of the SynCE project.
-
-This module contains helper scripts for setting up a serial connection
-for use with SynCE. They are basically wrappers around pppd:
-
-synce-serial-config  - Use this to select serial port and IP adresses
-synce-serial-start   - Use this to start connection
-synce-serial-abort   - Use this to abort a connection

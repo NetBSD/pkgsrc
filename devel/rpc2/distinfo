@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.10 2005/08/15 01:20:23 xtraeme Exp $
-
-SHA1 (rpc2-1.27.tar.gz) = fb637c81d89a6557f39c93a652d946dbd2b0e71f
-RMD160 (rpc2-1.27.tar.gz) = 053892150e7f9dd9d085db6abff08c3ba9f8d2f2
-Size (rpc2-1.27.tar.gz) = 560477 bytes

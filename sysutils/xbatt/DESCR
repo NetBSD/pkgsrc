@@ -1,4 +1,0 @@
-xbatt is an X11 client which displays the battery status of your
-notebook computer equipped with APM (Advanced Power Management)
-BIOS.  The status displayed consists of the remaining battery life,
-the AC line status, and the charging status.

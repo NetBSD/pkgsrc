@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/03 18:20:40 hubertf Exp $
-bin/chkfontpath
-man/man8/chkfontpath.8

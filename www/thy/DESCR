@@ -1,8 +1,0 @@
-Thy was designed to be as fast and lightweight as possible. For
-speed, she uses sendfile(), and does not fork.
-
-Among the features are name-based virtual hosts, userdir and
-directory index support; Range, If-Modified-Since, keep-alive,
-on-the-fly compression and of course, CGI, IPv6 and TLS support.
-
-Thy does not require (but can use) a configuration file to run.

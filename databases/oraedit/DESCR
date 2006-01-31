@@ -1,7 +1,0 @@
-oraedit is simple wrapper for editing Oracle stored functions,
-procedures, packages, types and views. Requires only Oracle sqlplus
-binary, or rsh/ssh connection to computer with one. Any local editor
-can be used with oraedit, including vim or pico.
-
-Documentation is currently not present, but hopefully the configuration
-and usage is reasoably straighforward.

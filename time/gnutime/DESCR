@@ -1,6 +1,0 @@
-The time utility executes and measures the CPU, time, and memory
-resources used, such as pagefaults, swaps, memory, and user, system,
-and real time used by a process.
-
-GNU time can format the output in arbitrary ways by using a
-printf-style format string to include various resource measurements.

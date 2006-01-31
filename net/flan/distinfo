@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:13:46 agc Exp $
-
-SHA1 (Flan.tar.gz) = 7f6eaf55abd6f4318db2e7bdca2c6ae65fbbd355
-RMD160 (Flan.tar.gz) = ebb0fdd4873f42d85d5c306db1a2549e4bbff281
-Size (Flan.tar.gz) = 990458 bytes
-SHA1 (patch-aa) = dc5d016fe8bb77259f1fb20bad400d8da05b61d6

@@ -1,3 +1,0 @@
-The milter-regex plugin can be used with the milter API of sendmail(8) to
-filter mails using regular expressions matching SMTP envelope parameters
-and mail headers and body.

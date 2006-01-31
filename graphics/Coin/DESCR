@@ -1,4 +1,0 @@
-Coin is an implementation of the Open Inventor API, fully backwards
-compatible with SGI Open Inventor v2.1, and incorporating many new
-features. Coin is portable across Win32, Linux, SGI IRIX, Mac OS X,
-HP-UX, Sun Solaris, IBM AIX, and other platforms (like NetBSD :-).

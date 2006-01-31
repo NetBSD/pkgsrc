@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.6 2004/02/15 13:14:25 lukem Exp $
-
- Various changes occurred in version 1.4.
- If upgrading from a prior version, refer to
- ${NUT_DOCDIR}/UPGRADING for more information.
-
-===========================================================================

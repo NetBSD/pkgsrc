@@ -1,5 +1,0 @@
-Gtodo is a to-do list manager written for use with the GNOME desktop.
-It tries to follow the HIG and GNOME policies as well as possible.
-
-This package provides an applet for this application, to be integrated
-within the GNOME's panel.

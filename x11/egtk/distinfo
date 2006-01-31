@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 17:36:10 wiz Exp $
-
-SHA1 (eGTK_0.3.4.tar.gz) = 1c65de29945d7c87229fb859a01501972bb11c0e
-RMD160 (eGTK_0.3.4.tar.gz) = df6855818377501791139ac421008168ae1cb7ef
-Size (eGTK_0.3.4.tar.gz) = 277631 bytes
-SHA1 (patch-aa) = 33a882df75c297b7dadc28fc33c3da0b4de523b9
-SHA1 (patch-ab) = 145e74f4e349474535e0a564b33204bf06e85bd8

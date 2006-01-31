@@ -1,7 +1,0 @@
-Ical is a Tk-based calendar program for X11 with the following features:
-	* Calendar items can be created, edited and deleted easily.
-	* Items can be made to repeat in various ways.
-	* Ical will post reminders for upcoming appointments.
-	* Ical can print and list item occurrences.
-	* An ical calendar can include other calendars.
-	* Ical calendars can be shared by different users.

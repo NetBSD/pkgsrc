@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:13:59 agc Exp $
-
-SHA1 (SNMP-MIB-Compiler-0.06.tar.gz) = 048266a7fe68a53116b89255bea9adc0af545adc
-RMD160 (SNMP-MIB-Compiler-0.06.tar.gz) = 3a38892ece1acc5caa460d492abaebc47cca3942
-Size (SNMP-MIB-Compiler-0.06.tar.gz) = 236438 bytes

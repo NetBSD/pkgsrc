@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 08:45:12 agc Exp $
-
-SHA1 (png2html-1.1.tar.gz) = de8b5ae25ab2b0a27bec9f4bbd219aab5fbd1352
-RMD160 (png2html-1.1.tar.gz) = 2eee9de03730c3fbae4f2a76251a580c97e6a03f
-Size (png2html-1.1.tar.gz) = 9572 bytes
-SHA1 (patch-aa) = ce0a3d530a122aaea8fdc5696a00afa32fcb18dc

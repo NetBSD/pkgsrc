@@ -1,3 +1,0 @@
-Mail::Milter is a set of modules useful to mail filter writers who are
-using the Sendmail::Milter and/or Sendmail::PMilter APIs to interface
-directly to the SMTP transaction.

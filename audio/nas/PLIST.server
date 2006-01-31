@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST.server,v 1.1 2005/06/04 23:43:51 markd Exp $
-bin/nasd
-${IMAKE_MAN_DIR}/nasd.${IMAKE_MANNEWSUFFIX}
-${IMAKE_FILEMAN_DIR}/nasd.conf.${IMAKE_FILEMAN_SUFFIX}
-share/examples/nas/nasd.conf.eg
-@dirrm share/examples/nas

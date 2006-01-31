@@ -1,5 +1,0 @@
-OfflineIMAP is  a  tool  to   simplify   your   e-mail  reading.
-It synchronizes remote IMAP folders and local Maildir folders. It is fast
-flexible and safe. It is also useful if you want to use a mail reader that
-does not have IMAP support, has poor IMAP support, or does not provide
-disconnected operation.

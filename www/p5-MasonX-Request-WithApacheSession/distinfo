@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:37 wiz Exp $
-
-SHA1 (MasonX-Request-WithApacheSession-0.30.tar.gz) = 303bb4d361cc374713eef85cd1197b558bd8524b
-RMD160 (MasonX-Request-WithApacheSession-0.30.tar.gz) = a4489c9339af3680f7afe11a6ba13ea5c2352555
-Size (MasonX-Request-WithApacheSession-0.30.tar.gz) = 11027 bytes

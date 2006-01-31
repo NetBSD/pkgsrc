@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.15 2005/10/16 12:12:01 jmmv Exp $
-
-SHA1 (gnopernicus-0.11.7.tar.bz2) = 1e8cb6a8c9b4ed900fe033ba4fd6a2568d22e742
-RMD160 (gnopernicus-0.11.7.tar.bz2) = ab6246174377d78abd85f2b2b982cb68a906effc
-Size (gnopernicus-0.11.7.tar.bz2) = 2183962 bytes
-SHA1 (patch-ab) = d17ba1a57ad795f018bd224444c987b9e0c57b16
-SHA1 (patch-ac) = 29fbb4e5c0a71d86f288cdbf21320775abbc104f
-SHA1 (patch-ad) = 606a16934f173a10897d3297b099342244169d24

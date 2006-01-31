@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:14:02 agc Exp $
-
-SHA1 (adns-python-1.0.0.tar.gz) = 2b31d754eda70c58cb224b8cc1d07243bb3e67b3
-RMD160 (adns-python-1.0.0.tar.gz) = f82dad10a232ef74e3477bcb1aa72fee0efd0e56
-Size (adns-python-1.0.0.tar.gz) = 17432 bytes

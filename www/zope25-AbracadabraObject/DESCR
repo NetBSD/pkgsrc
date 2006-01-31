@@ -1,9 +1,0 @@
-The "Abracadabra Object"-Product allows you to add pre-configured ZOPE-objects
-to your folders through the Zope-Management-Interface with only one click and
-run scripts on them. This is extremely useful if you use the
-Zope-Management-Interface as a content-management-system. Abracadbra Object
-allows you even to use the Zope-Management-Interface as a comfortable GUI for
-little database applications. **Please note**: Download and install the
-"PropertyObject":http://www.zope.org/Members/mjablonski/PropertyObject.
-AbracadabraObject and PropertyObject allow you to develop comfortable
-database applications in just a few minutes.

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/07/23 18:47:43 wiz Exp $
-bin/mlgui
-libexec/mldonkey/mlchat
-libexec/mldonkey/mlgui
-libexec/mldonkey/mlguistarter
-libexec/mldonkey/mlim
-libexec/mldonkey/mlnet+gui

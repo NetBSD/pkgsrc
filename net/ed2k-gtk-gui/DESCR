@@ -1,4 +1,0 @@
-ed2k-gtk-gui is a graphical frontend (GUI) that allows you to control
-an eDonkey2000 command line client (core) running on the local machine
-or on a remote host.  It is based on the GTK+ toolkit and the gnet
-library.

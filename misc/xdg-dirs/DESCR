@@ -1,3 +1,0 @@
-xdg-dirs installs a set of shared directories used by freedesktop.org XDG
-based systems (kde 3.2 and gnome 2.4).  It is useful to simplify PLIST
-handling in other packages.

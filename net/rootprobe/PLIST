@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/15 00:11:36 itojun Exp $
-bin/rootprobe
-bin/cctldprobe

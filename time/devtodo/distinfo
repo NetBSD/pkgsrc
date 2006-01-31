@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.9 2005/06/01 02:40:43 snj Exp $
-
-SHA1 (devtodo-0.1.18.tar.gz) = 2ce713ed9bf9b6f17de9faa15566bd12cc273eb5
-RMD160 (devtodo-0.1.18.tar.gz) = c6ba5829f4c8b41d77c582fe1f0350174a164b65
-Size (devtodo-0.1.18.tar.gz) = 432858 bytes
-SHA1 (patch-aa) = 3a3d0acf6bd102e73fe6f280f4d62d950ce66183
-SHA1 (patch-ab) = 32844dec69a473020103c9fd3425c60042dadf35
-SHA1 (patch-ae) = 5f5ffb9571e73656eecdd3cb6cf72e26c193847e

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.11 2005/02/27 22:49:43 wiz Exp $
-
-SHA1 (mtr-0.69.tar.gz) = 3fd0fa148b349d1966e0d79af0ffb84ecc7bed4b
-RMD160 (mtr-0.69.tar.gz) = e95e0f27253d8d94587b429cbb65311035e93c2e
-Size (mtr-0.69.tar.gz) = 183216 bytes
-SHA1 (patch-aa) = 5eb4ab7bfa02095c2b7a110426dd4aa5738f0a2c
-SHA1 (patch-ab) = 25e8711a7736d2772a17e6b6dda962d95e294c86

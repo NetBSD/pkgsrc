@@ -1,5 +1,0 @@
-TrafShow continuously displays information regarding packet traffic on
-the configured network interface that matches the boolean expression
-passed on the command line.  It periodically sorts and updates this
-information. TrafShow may be useful for locating suspicious network
-traffic on the network.

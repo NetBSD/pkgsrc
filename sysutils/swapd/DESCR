@@ -1,4 +1,0 @@
-"Swapd" is a daemon that watches free memory and manages swap files. If free
-memory drops too low, additional swap files are created. Additionally, if there
-is too much free memory, swap files are deactivated and disk space may be
-reclaimed.

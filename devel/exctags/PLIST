@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2001/11/13 15:23:24 seb Exp $
-bin/exctags
-bin/exetags
-include/readtags.h
-lib/readtags.o
-man/man1/exctags.1
-man/man1/exetags.1

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.10 2005/04/20 13:10:06 adam Exp $
-
-SHA1 (psiconv-0.9.7.tar.gz) = 226f95280ac40ca6642d4283b0d75492f1b8cb70
-RMD160 (psiconv-0.9.7.tar.gz) = aed8ad1308f1f51a5dec02d0b98288f314c6d623
-Size (psiconv-0.9.7.tar.gz) = 497802 bytes
-SHA1 (patch-aa) = be7330996b18ce78cf8983e4f18bd6313289c864

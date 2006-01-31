@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/22 21:28:55 agc Exp $
-
-SHA1 (glimmer213.tar.gz) = 772752c3c1543066e4c156e5ec0a2e4f0a24c688
-RMD160 (glimmer213.tar.gz) = 1667d04bc66f373d5df395e16b79b07814d3ea2c
-Size (glimmer213.tar.gz) = 79858 bytes
-SHA1 (patch-aa) = ceb45f887c32e91bd96b9d2c8dae39c9cc6fc658
-SHA1 (patch-ab) = e2afaa9ff8e0d4a2647a77bbf7e1ba4012d53061

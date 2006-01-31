@@ -1,9 +1,0 @@
-CLN - Class Library for Numbers is a C++ library providing the following
-features:
-* Rich set of number classes
-* Elementary, logical, transcendental functions
-* C++ as implementation language brings efficiency, type safety,
-  and algebraic syntax
-* Memory efficiency
-* Speed efficiency
-* Interoperability

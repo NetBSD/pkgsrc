@@ -1,5 +1,0 @@
-Classic Unix fork() bomber. Includes CPU hanger, memory allocator,
-memory toucher and zombie dance team. You can test how will your
-computer behave under heavy CPU, process, memory load.
-
-Forkbomb is also useful as realloc() benchmark.

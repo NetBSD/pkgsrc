@@ -1,9 +1,0 @@
-$NetBSD: patch-ag,v 1.3 2004/12/23 12:56:04 markd Exp $
-
---- kaudiocreator/kaudiocreator-meta.upd.orig	2004-10-03 20:42:35.000000000 +1300
-+++ kaudiocreator/kaudiocreator-meta.upd
-@@ -1,3 +1,3 @@
- Id=3
- File=kaudiocreatorrc
--Script=upgrade-kaudiocreator-metadata.sh,bash
-+Script=upgrade-kaudiocreator-metadata.sh,sh

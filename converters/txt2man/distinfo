@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 16:12:35 agc Exp $
-
-SHA1 (txt2man-1.4.2.tar.gz) = 8ca190af51ef4f935ddb2e9ced92ce6d0f264e47
-RMD160 (txt2man-1.4.2.tar.gz) = 32cd5e428868642ccdb9185fb7a7ca717f2c4687
-Size (txt2man-1.4.2.tar.gz) = 10425 bytes

@@ -1,4 +1,0 @@
-msu grants passwordless access to accounts specified in msu.conf.
-It can be used as a login shell to provide multiple users with
-access to a single account, each with their own 'login' and
-'password', or as convenient access to a shared account.

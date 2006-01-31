@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/18 14:05:07 wiz Exp $
-bin/mp3splt
-bin/oggsplt
-man/man1/mp3splt.1

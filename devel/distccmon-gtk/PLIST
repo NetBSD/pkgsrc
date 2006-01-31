@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/10 09:55:16 jmmv Exp $
-bin/distccmon-gtk
-share/distcc/distccmon-gtk-icon.png
-share/distcc/distccmon-gtk.desktop
-@comment in distcc: @dirrm share/distcc

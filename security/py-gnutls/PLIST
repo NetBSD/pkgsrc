@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/10 19:32:26 minskim Exp $
-${PYSITELIB}/gnutls.so
-@comment in python: @dirrm ${PYSITELIB}

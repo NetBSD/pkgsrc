@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 15:59:13 agc Exp $
-
-SHA1 (icb.2.1.4.tar.Z) = a1f250305f0bd17e1f15e9a249785c5d41b2f0ec
-RMD160 (icb.2.1.4.tar.Z) = 61c0208103841ef4c6b0a97566621ccf88f4adf5
-Size (icb.2.1.4.tar.Z) = 41512 bytes
-SHA1 (patch-aa) = 2f5f59af731cba12f8ad087caa1b2a705786443a
-SHA1 (patch-ab) = 8cb035e6ed873c64558239a412fa2a873ea7bb43
-SHA1 (patch-ac) = 9b46cae6ace011570bddf664b9c900c0b2bd7c05

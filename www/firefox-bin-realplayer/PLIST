@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2004/02/10 12:58:19 grant Exp $
-@exec ${LN} -s %D/lib/netscape/plugins/rpnp.so %D/lib/firefox-linux/plugins/rpnp.so
-lib/firefox-linux/plugins/rpnp.so

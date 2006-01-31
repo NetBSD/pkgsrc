@@ -1,5 +1,0 @@
-xml2doc is an xml files processor tool, that allows you to write
-documents in a simple XML way and then output then in various
-formats (pdf,html,txt,manpage,...). In first term is intended to
-be a lightweight version of DocBook, but smaller (20KB against
-100MB), faster, easy to learn, and very flexible.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 13:40:55 agc Exp $
-
-SHA1 (mencvcd-0.3/mencvcd) = a3ace9d50e0722946286b8704b800ccbce86233b
-RMD160 (mencvcd-0.3/mencvcd) = 3785524bf26a9c7630a08a29b246d209c0b19d3c
-Size (mencvcd-0.3/mencvcd) = 13038 bytes
-SHA1 (patch-aa) = 445903a8a90e86ff45b891cd2769c8602ff261ee

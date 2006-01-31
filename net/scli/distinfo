@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:14:03 agc Exp $
-
-SHA1 (scli-0.2.12.tar.gz) = 0fbe9bcd08632aa21065daa247e0ef91741cb79e
-RMD160 (scli-0.2.12.tar.gz) = db41af5d879db4b4bbb56279a65b0e84b3c7d7e7
-Size (scli-0.2.12.tar.gz) = 645131 bytes
-SHA1 (patch-aa) = 3f45fd85d2486a7b8cacb44105c006fbb4f7cf1d
-SHA1 (patch-ab) = 16872e3eadf2c1041d09532ad5cff9075ad8116d
-SHA1 (patch-ac) = a40ee36859be67463544e7aaa4f8d5258a40f38e

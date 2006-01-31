@@ -1,3 +1,0 @@
-COALESCE fits the model which has a single population of constant size, and
-estimates 4Nu, where N is the effective population size and u is the neutral
-mutation rate per site.

@@ -1,3 +1,0 @@
-The program "connect" provided by this package allows to open a TCP connection
-using a SOCKS4/5 or HTTP proxy server. It is e.g. useful as proxy command
-for Secure Shell clients to connect from a host behind a non-routing firewall.

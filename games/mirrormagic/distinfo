@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 23:12:00 agc Exp $
-
-SHA1 (mirrormagic-2.0.2.tar.gz) = bce7fbf163d5177f59ba4f516b06a3ebb7cc3927
-RMD160 (mirrormagic-2.0.2.tar.gz) = 57de928f2b37575886ddb5cbafcababf9de765dc
-Size (mirrormagic-2.0.2.tar.gz) = 1168098 bytes
-SHA1 (patch-aa) = ec4613d70482da6f240fefe57f6c61f745d01125
-SHA1 (patch-ab) = abc9e8b8ed66225b50a398e287d94dfa1b728365

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 16:33:05 agc Exp $
-
-SHA1 (cdb-0.75.tar.gz) = 555749be5b2617e29e44b5326a2536813d62c248
-RMD160 (cdb-0.75.tar.gz) = d52288ee6df58fdc5a79efc16693cd5e305f9c65
-Size (cdb-0.75.tar.gz) = 54162 bytes
-SHA1 (patch-aa) = 7e7a4e20ca36c3e773c729c0f0d751ac6340ccda

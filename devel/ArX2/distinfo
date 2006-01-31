@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/07/26 22:35:54 recht Exp $
-
-SHA1 (ArX-2.2.3.tar.gz) = e10c8c699c3768bef1d6dc3345f3fd42e851962e
-RMD160 (ArX-2.2.3.tar.gz) = 87dbcc607fbdb64a2658d8a4454a577731d43a14
-Size (ArX-2.2.3.tar.gz) = 13402310 bytes
-SHA1 (patch-aa) = dbd26f2c93ee76655a5f024dd5319e0b462bc797

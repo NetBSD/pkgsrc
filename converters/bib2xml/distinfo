@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/09/27 12:25:35 tonio Exp $
-
-SHA1 (bib2xml-10062002.tar.gz) = f7b0c1a2f2bbba84162cd2df674bd9edf9aeaa4f
-RMD160 (bib2xml-10062002.tar.gz) = 660ba7550c4ef6b44c7c933c511d15c2b984bcc1
-Size (bib2xml-10062002.tar.gz) = 302900 bytes
-SHA1 (patch-aa) = e7a4266d7320b6654d3efeccdf9e31b5ec0340e6

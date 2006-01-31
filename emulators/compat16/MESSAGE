@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/12/14 04:17:18 grant Exp $
-
-You will need the option COMPAT_16 in your kernel configuration to make
-use of NetBSD 1.6 binaries.
-
-===========================================================================

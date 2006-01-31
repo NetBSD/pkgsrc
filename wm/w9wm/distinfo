@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/07/20 17:51:52 kristerw Exp $
-
-SHA1 (w9wm-0.4.2.tar.gz) = a42eaea2b284b4343f5a4ee2f1aec9e9a3ca5c37
-RMD160 (w9wm-0.4.2.tar.gz) = 7dc18c438a4ae04413c80e2d79c74e8d699f1701
-Size (w9wm-0.4.2.tar.gz) = 24505 bytes
-SHA1 (patch-aa) = eeebe51f8cb7752570bd08fc28209c63eff483af

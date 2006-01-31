@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:41 wiz Exp $
-
-SHA1 (zope/RenderableCharts-0.6.tar.gz) = c083a94f29f6bc91b1f1cfca3bbd6cac4a39b254
-RMD160 (zope/RenderableCharts-0.6.tar.gz) = f85e89c7c14f756ea4c8b37a93930e671ff694cd
-Size (zope/RenderableCharts-0.6.tar.gz) = 69451 bytes

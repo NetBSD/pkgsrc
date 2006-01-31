@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:42 wiz Exp $
-
-SHA1 (zope/colorz10b2.zip) = ea97c970a90f32fea007a937bd3bb00ad3ae1614
-RMD160 (zope/colorz10b2.zip) = a3dbbf3e938ffb686ad552adbd6a51c80e47a426
-Size (zope/colorz10b2.zip) = 17424 bytes
-SHA1 (patch-aa) = 47fda7a9ed310dbc8640dabd7ce7983a132f2de9

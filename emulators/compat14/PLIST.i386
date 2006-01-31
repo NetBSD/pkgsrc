@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.i386,v 1.1 2001/10/31 23:56:39 zuntum Exp $
-${COMPAT_LIBDIR}/libi386.so.0.2
-${COMPAT_LIBDIR}/libkeycap.so.0.0
