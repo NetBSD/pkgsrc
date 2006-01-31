@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2005/12/11 12:36:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/01/31 23:08:50 markd Exp $
 share/kde/apps/khangman/data/nn/animals.kvtml
 share/kde/apps/khangman/data/nn/easy.kvtml
 share/kde/apps/khangman/data/nn/hard.kvtml
@@ -44,6 +44,7 @@ ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kaboodle.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kaccess.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kaddressbook.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kalarm.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kalzium.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kandy.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kappfinder.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/karm.mo
@@ -70,6 +71,7 @@ ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kbackgammon.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kbattleship.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kblackbox.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kbounce.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kbruch.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kcalc.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kcharselect.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kcharselectapplet.mo
@@ -220,6 +222,7 @@ ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kfontinst.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kfouleggs.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kgamma.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kgantt.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kgeography.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kget.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kghostview.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kgreet_classic.mo
@@ -232,6 +235,7 @@ ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/khtmlkttsd.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/khtmlsettingsplugin.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kicker.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kiconedit.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kig.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kinetd.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kio.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kio_audiocd.mo
@@ -399,6 +403,7 @@ ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kwin4.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kwin_clients.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kwin_lib.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kwireless.mo
+${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kwordquiz.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kworldclock.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kwriteconfig.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/kxkb.mo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2005/12/11 12:36:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/01/31 23:08:53 markd Exp $
 share/doc/kde/HTML/ru/KRegExpEditor/common
 share/doc/kde/HTML/ru/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/ru/KRegExpEditor/index.docbook
@@ -823,6 +823,9 @@ share/doc/kde/HTML/ru/kmplot/using.docbook
 share/doc/kde/HTML/ru/knetattach/common
 share/doc/kde/HTML/ru/knetattach/index.cache.bz2
 share/doc/kde/HTML/ru/knetattach/index.docbook
+share/doc/kde/HTML/ru/knetworkconf/common
+share/doc/kde/HTML/ru/knetworkconf/index.cache.bz2
+share/doc/kde/HTML/ru/knetworkconf/index.docbook
 share/doc/kde/HTML/ru/knewsticker/common
 share/doc/kde/HTML/ru/knewsticker/index.cache.bz2
 share/doc/kde/HTML/ru/knewsticker/index.docbook
@@ -1950,6 +1953,7 @@ ${PKGLOCALEDIR}/locale/ru/flag.png
 @dirrm share/doc/kde/HTML/ru/knotes
 @dirrm share/doc/kde/HTML/ru/knode
 @dirrm share/doc/kde/HTML/ru/knewsticker
+@dirrm share/doc/kde/HTML/ru/knetworkconf
 @dirrm share/doc/kde/HTML/ru/knetattach
 @dirrm share/doc/kde/HTML/ru/kmplot
 @dirrm share/doc/kde/HTML/ru/kmouth

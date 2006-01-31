@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2005/12/11 12:36:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/01/31 23:08:55 markd Exp $
 share/doc/kde/HTML/uk/common/1.png
 share/doc/kde/HTML/uk/common/10.png
 share/doc/kde/HTML/uk/common/2.png
@@ -93,6 +93,7 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/audiocd_encoder_vorbis.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/audiorename_plugin.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/autorefresh.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/babelfish.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/blinken.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/cervisia.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/charlatanui.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/clockapplet.mo
@@ -439,6 +440,7 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/konnector_qtopia.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/konnector_remote.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/konqsidebar_delicious.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/konqsidebar_mediaplayer.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/konqsidebar_metabar.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/konqsidebar_news.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/konqueror.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/konquest.mo
@@ -524,6 +526,7 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/ktimemon.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/ktimer.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/ktip.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/ktnef.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/ktouch.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/ktron.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kttsd.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/ktuberling.mo
@@ -618,6 +621,7 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/tippecanoe.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/trashapplet.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/tyler.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/uachangerplugin.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/umbrello.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/useraccount.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/validatorsplugin.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/wakeup.mo
