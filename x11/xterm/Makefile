@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2006/01/19 20:23:33 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/01/31 11:44:53 joerg Exp $
 
 DISTNAME=	xterm-208
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://invisible-island.net/xterm/
 EXTRACT_SUFX=	.tgz
@@ -20,6 +21,10 @@ CONFIGURE_ARGS+= --enable-wide-chars
 .endif
 
 .include "options.mk"
+
+.if ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+= --with-setuid
+.endif
 
 .if ${OPSYS} == "SunOS"
 INSTALL_FILE=	${WRKDIR}/INSTALL
