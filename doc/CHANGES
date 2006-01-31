@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12736 2006/01/30 22:20:19 tv Exp $
+$NetBSD: CHANGES,v 1.12737 2006/01/31 02:47:34 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -638,3 +638,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/libtool-info to 1.5.22 [tv 2006-01-30]
 	Updated devel/libltdl to 1.5.22 [tv 2006-01-30]
 	Updated devel/libtool to 1.5.22 [tv 2006-01-30]
+	Added games/billardgl version 1.75 [rillig 2006-01-31]
