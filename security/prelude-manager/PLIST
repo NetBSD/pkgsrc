@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/29 15:57:49 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/01/31 17:54:10 shannonjr Exp $
 bin/prelude-manager
 include/prelude-manager/prelude-manager.h
 lib/prelude-manager/filters/idmef-criteria.la
-lib/prelude-manager/reports/db.la
 lib/prelude-manager/reports/debug.la
 lib/prelude-manager/reports/relaying.la
 lib/prelude-manager/reports/textmod.la

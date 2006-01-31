@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/29 15:57:49 shannonjr Exp $
+# $NetBSD: Makefile,v 1.2 2006/01/31 17:54:10 shannonjr Exp $
 #
 
-DISTNAME=		prelude-manager-0.9.1
+DISTNAME=		prelude-manager-0.9.2
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.org/download/releases/
 
@@ -17,6 +17,7 @@ GNU_CONFIGURE=		yes
 USE_GNU_TOOLS+=		make
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--with-libpreludedb-prefix=${BUILDLINK_PREFIX.libpreludedb}
 RCD_SCRIPTS=		preludemanager
 PRELUDE_MANAGER_PID_DIR=	${VARBASE}/run/prelude-manager
 PRELUDE_USER?=		_prelude
@@ -26,6 +27,7 @@ PKG_USERS=      ${PRELUDE_USER}:${PRELUDE_GROUP}::Prelude\ IDS\ manager:${PRELUD
 PKG_GROUPS=     ${PRELUDE_GROUP}
 FILES_SUBST+=	PRELUDE_MANAGER_PID_DIR=${PRELUDE_MANAGER_PID_DIR:Q}
 FILES_SUBST+=   PRELUDE_USER=${PRELUDE_USER:Q}
+FILES_SUBST+=   PRELUDE_GROUP=${PRELUDE_USER:Q}
 
 SUBST_CLASSES+=         code
 SUBST_STAGE.code=       post-patch
