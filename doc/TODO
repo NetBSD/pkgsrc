@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4540 2006/01/31 13:20:13 rxg Exp $
+$NetBSD: TODO,v 1.4541 2006/01/31 16:28:12 abs Exp $
 
 Suggested new packages
 ======================
@@ -342,7 +342,6 @@ Suggested package updates
 	o ap-auth-pam-1.1.1
 	o ap-auth-script-1.6
 	o ap-dtcl-1.0.0
-	o ap-jk-1.2.13
 	o ap-layout-4.0.1a
 	o ap-mp3-0.40
 	o ap-python-3.1.4
