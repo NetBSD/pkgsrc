@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.431 2006/01/30 13:16:47 kleink Exp $
+# $NetBSD: Makefile,v 1.432 2006/01/31 18:53:12 jschauma Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -219,6 +219,7 @@ SUBDIR+=	p5-HTTPD-User-Manage
 SUBDIR+=	p5-Kwiki
 SUBDIR+=	p5-Kwiki-Archive-Rcs
 SUBDIR+=	p5-Kwiki-BreadCrumbs
+SUBDIR+=	p5-Kwiki-Edit-RequireUserName
 SUBDIR+=	p5-Kwiki-Favorites
 SUBDIR+=	p5-Kwiki-HtmlBlocks
 SUBDIR+=	p5-Kwiki-Icons-Gnome
