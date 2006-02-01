@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2006/02/01 20:39:11 joerg Exp $
+
+--- libdnet-stripped/configure.orig	2006-02-01 19:38:08.000000000 +0000
++++ libdnet-stripped/configure
+@@ -22707,7 +22707,7 @@ esac
+ elif test "$ac_cv_header_net_if_tun_h" = yes ; then
+ 	if test "$ac_cv_header_stropts_h" = yes ; then
+            case "$host_os" in
+-           *kfreebsd*)
++           *kfreebsd* | *dragonfly*)
+                case $LIBOBJS in
+     "tun-bsd.$ac_objext"   | \
+   *" tun-bsd.$ac_objext"   | \

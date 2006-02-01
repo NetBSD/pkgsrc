@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.4 2004/11/26 09:24:21 adam Exp $
+$NetBSD: patch-af,v 1.5 2006/02/01 20:39:11 joerg Exp $
 
---- nmapfe/configure.orig	2004-10-07 21:59:48.000000000 +0000
+--- nmapfe/configure.orig	2005-12-30 04:18:16.000000000 +0000
 +++ nmapfe/configure
 @@ -9,6 +9,8 @@
  ## M4sh Initialization.  ##
@@ -11,3 +11,12 @@ $NetBSD: patch-af,v 1.4 2004/11/26 09:24:21 adam Exp $
  # Be Bourne compatible
  if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then
    emulate sh
+@@ -2715,7 +2717,7 @@ _ACEOF
+   # libpcap doesn't even LOOK at
+                                      # the timeout you give it under Linux
+     ;;
+-  *-freebsd* | *-kfreebsd*-gnu)
++  *-freebsd* | *-kfreebsd*-gnu | *-dragonfly*)
+     cat >>confdefs.h <<\_ACEOF
+ #define FREEBSD 1
+ _ACEOF
