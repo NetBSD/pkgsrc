@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12759 2006/02/01 16:42:08 salo Exp $
+$NetBSD: CHANGES,v 1.12760 2006/02/01 17:38:23 tv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -756,3 +756,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/libungif to 4.1.4 [wiz 2006-02-01]
 	Updated www/paros to 3.2.9 [salo 2006-02-01]
 	Updated net/lftp to 3.4.0 [salo 2006-02-01]
+	Updated converters/cbmconvert to 2.1.2 [tv 2006-02-01]
