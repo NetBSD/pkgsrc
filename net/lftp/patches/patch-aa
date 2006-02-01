@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2005/12/04 22:12:07 salo Exp $
+$NetBSD: patch-aa,v 1.9 2006/02/01 16:41:32 salo Exp $
 
---- src/Makefile.in.orig	2005-12-01 12:45:18.000000000 +0100
-+++ src/Makefile.in	2005-12-04 22:12:02.000000000 +0100
-@@ -304,7 +304,7 @@
+--- src/Makefile.in.orig	2005-12-31 12:13:40.000000000 +0100
++++ src/Makefile.in	2006-02-01 17:20:39.000000000 +0100
+@@ -364,7 +364,7 @@
  localedir = $(datadir)/locale
  pkgverlibdir = $(pkglibdir)/$(VERSION)
  bin_SCRIPTS = lftpget
@@ -11,12 +11,12 @@ $NetBSD: patch-aa,v 1.8 2005/12/04 22:12:07 salo Exp $
  noinst_SCRIPTS = ftpget
  EXTRA_DIST = $(pkgdata_SCRIPTS) $(bin_SCRIPTS) $(noinst_SCRIPTS) \
  	example1.cc example2.cc
-@@ -793,7 +793,7 @@
- check: check-am
- all-am: Makefile $(LTLIBRARIES) $(PROGRAMS) $(SCRIPTS)
+@@ -881,7 +881,7 @@
+ install-binPROGRAMS: install-libLTLIBRARIES
+ 
  installdirs:
--	for dir in "$(DESTDIR)$(pkgverlibdir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(pkgdatadir)"; do \
-+	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(pkgdatadir)"; do \
+-	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(pkgverlibdir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(pkgdatadir)"; do \
++	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(pkgdatadir)"; do \
  	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
  	done
  install: install-am
