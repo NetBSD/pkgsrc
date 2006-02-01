@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
+
+--- libk3b/tools/k3biso9660.h.orig	2005-12-16 02:09:00.000000000 +1300
++++ libk3b/tools/k3biso9660.h
+@@ -18,6 +18,9 @@
+ #define _K3B_ISO9660_H_
+ 
+ #include <sys/stat.h>
++#ifdef __NetBSD__
++#define stat64 stat
++#endif
+ #include <sys/types.h>
+ 
+ #include <qdatetime.h>

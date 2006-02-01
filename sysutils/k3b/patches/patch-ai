@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
+
+--- libk3bdevice/k3bdevice.h.orig	2005-12-16 02:08:38.000000000 +1300
++++ libk3bdevice/k3bdevice.h
+@@ -784,7 +784,7 @@ namespace K3bDevice
+       friend class DeviceManager;
+     };
+ 
+-#ifdef Q_OS_LINUX
++#if defined(Q_OS_LINUX) || defined(Q_OS_NETBSD)
+   /**
+    * This should always be used to open a device since it
+    * uses the resmgr

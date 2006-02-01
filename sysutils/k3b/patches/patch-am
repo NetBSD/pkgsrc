@@ -1,0 +1,14 @@
+$NetBSD: patch-am,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
+
+--- libk3bdevice/k3bscsicommand.h.orig	2005-12-16 02:08:38.000000000 +1300
++++ libk3bdevice/k3bscsicommand.h
+@@ -108,6 +108,9 @@ namespace K3bDevice
+ 		     void* = 0,
+ 		     size_t len = 0 );
+ 
++      bool eject ( bool open );
++      bool traylock ( bool on );
++
+     private:
+       static QString senseKeyToString( int key );
+       void debugError( int command, int errorCode, int senseKey, int asc, int ascq );
