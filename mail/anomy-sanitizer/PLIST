@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.6 2004/12/29 18:45:49 kim Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/02/01 00:57:39 kim Exp $
 lib/anomy-sanitizer/bin/Anomy/HTMLCleaner.pm
 lib/anomy-sanitizer/bin/Anomy/Log.pm
 lib/anomy-sanitizer/bin/Anomy/MIMEStream.pm
 lib/anomy-sanitizer/bin/Anomy/Sanitizer.pm
 lib/anomy-sanitizer/bin/Anomy/Sanitizer/FProt.pm
+lib/anomy-sanitizer/bin/Anomy/Sanitizer/FileTypes.pm
 lib/anomy-sanitizer/bin/Anomy/Sanitizer/MacroScanner.pm
 lib/anomy-sanitizer/bin/Anomy/Sanitizer/Scoring.pm
+lib/anomy-sanitizer/bin/mailblogger.pl
 lib/anomy-sanitizer/bin/sanitizer.pl
 lib/anomy-sanitizer/bin/simplify.pl
 @dirrm lib/anomy-sanitizer/bin/Anomy/Sanitizer
