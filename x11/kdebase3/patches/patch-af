@@ -1,7 +1,16 @@
-$NetBSD: patch-af,v 1.6 2005/03/23 21:44:37 markd Exp $
+$NetBSD: patch-af,v 1.7 2006/02/01 12:36:25 markd Exp $
 
---- kcontrol/info/info_netbsd.cpp.orig	2005-02-04 12:18:52.000000000 +1300
+--- kcontrol/info/info_netbsd.cpp.orig	2005-09-10 20:25:05.000000000 +1200
 +++ kcontrol/info/info_netbsd.cpp
+@@ -123,7 +123,7 @@ static bool GetDmesgInfo(QListView *lBox
+ 	}
+ 
+ 	QListViewItem *olditem = NULL;
+-	while(!(s = t->readLine().local8Bit()).isEmpty()) {
++	while(!(s = t->readLine().local8Bit()).isNull()) {
+ 		if (!seencpu) {
+ 			if (s.contains("cpu"))
+ 				seencpu = true;
 @@ -265,9 +265,11 @@ bool GetInfo_SCSI (QListView *lbox)
  bool GetInfo_Partitions (QListView *lbox)
  {
