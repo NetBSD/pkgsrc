@@ -1,0 +1,40 @@
+$NetBSD: patch-ao,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
+
+--- libk3bdevice/k3bscsicommand_linux.cpp.orig	2005-12-16 02:08:38.000000000 +1300
++++ libk3bdevice/k3bscsicommand_linux.cpp
+@@ -100,3 +100,35 @@ int K3bDevice::ScsiCommand::transport( T
+   else
+     return 0;
+ }
++
++bool K3bDevice::ScsiCommand::eject ( bool b )
++{
++  d->cmd.cmd[0] = MMC_START_STOP_UNIT;
++
++  if ( b ) {
++    // Since all other eject methods I saw also start the unit before ejecting
++    // we do it also although I don't know why...
++    d->cmd.cmd[4] = 0x1;      // Start unit
++    transport();
++
++    d->cmd.cmd[4] = 0x2;    // LoEj = 1, Start = 0
++  }
++  else
++    d->cmd.cmd[4] = 0x3;    // LoEj = 1, Start = 1
++    
++  return !transport();
++
++}
++
++bool K3bDevice::ScsiCommand::traylock ( bool on )
++{
++  d->cmd.cmd[0] = MMC_PREVENT_ALLOW_MEDIUM_REMOVAL;
++  if( on )
++    d->cmd.cmd[4] = 0x01;
++  int r = transport();
++
++  if( r )
++    kdDebug() << "(K3bDevice::Device) MMC ALLOW MEDIA REMOVAL failed." << endl;
++
++  return ( r == 0 );
++}

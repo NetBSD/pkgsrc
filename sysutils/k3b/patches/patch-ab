@@ -1,0 +1,116 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
+
+--- libk3bdevice/k3bdevice.cpp.orig	2005-12-16 02:08:38.000000000 +1300
++++ libk3bdevice/k3bdevice.cpp
+@@ -63,6 +63,10 @@ typedef unsigned char u8;
+ #define CD_FRAMESIZE_RAW 2352
+ #endif
+ 
++// #ifdef Q_OS_NETBSD
++// #include <sys/scsiio.h>
++// #endif
++
+ #ifdef HAVE_RESMGR
+ extern "C" {
+ #include <resmgr.h>
+@@ -100,7 +104,7 @@ const char* K3bDevice::Device::cdrdao_dr
+   };
+ 
+ 
+-#ifdef Q_OS_LINUX
++#if defined(Q_OS_LINUX) || defined(Q_OS_NETBSD)
+ int K3bDevice::openDevice( const char* name, bool write )
+ {
+   int fd = -1;
+@@ -143,6 +147,9 @@ public:
+ #ifdef Q_OS_LINUX
+       deviceFd(-1),
+ #endif
++#ifdef Q_OS_NETBSD
++      deviceFd(-1),
++#endif
+ #ifdef Q_OS_FREEBSD
+       cam(0),
+ #endif
+@@ -157,6 +164,9 @@ public:
+ #ifdef Q_OS_LINUX
+   int deviceFd;
+ #endif
++#ifdef Q_OS_NETBSD
++  int deviceFd;
++#endif
+ #ifdef Q_OS_FREEBSD
+   struct cam_device *cam;
+ #endif
+@@ -1466,15 +1482,7 @@ bool K3bDevice::Device::fixupToc( K3bDev
+ bool K3bDevice::Device::block( bool b ) const
+ {
+   ScsiCommand cmd( this );
+-  cmd[0] = MMC_PREVENT_ALLOW_MEDIUM_REMOVAL;
+-  if( b )
+-    cmd[4] = 0x01;
+-  int r = cmd.transport();
+-
+-  if( r )
+-    kdDebug() << "(K3bDevice::Device) MMC ALLOW MEDIA REMOVAL failed." << endl;
+-
+-  return ( r == 0 );
++  return cmd.traylock( b );
+ }
+ 
+ bool K3bDevice::Device::rewritable() const
+@@ -1497,25 +1505,14 @@ bool K3bDevice::Device::rewritable() con
+ bool K3bDevice::Device::eject() const
+ {
+   ScsiCommand cmd( this );
+-  cmd[0] = MMC_START_STOP_UNIT;
+-
+-  // Since all other eject methods I saw also start the unit before ejecting
+-  // we do it also although I don't know why...
+-  cmd[4] = 0x1;      // Start unit
+-  cmd.transport();
+-
+-  cmd[4] = 0x2;    // LoEj = 1, Start = 0
+-
+-  return !cmd.transport();
++  return cmd.eject( true );
+ }
+ 
+ 
+ bool K3bDevice::Device::load() const
+ {
+   ScsiCommand cmd( this );
+-  cmd[0] = MMC_START_STOP_UNIT;
+-  cmd[4] = 0x3;    // LoEj = 1, Start = 1
+-  return !cmd.transport();
++  return !cmd.eject( false );
+ }
+ 
+ 
+@@ -1557,7 +1554,7 @@ bool K3bDevice::Device::open( bool write
+   }
+   return (d->cam != 0);
+ #endif
+-#ifdef Q_OS_LINUX
++#if defined(Q_OS_LINUX) || defined(Q_OS_NETBSD)
+   if( d->deviceFd == -1 )
+     d->deviceFd = openDevice( QFile::encodeName(devicename()), write );
+ 
+@@ -1574,7 +1571,7 @@ void K3bDevice::Device::close() const
+     d->cam = 0;
+   }
+ #endif
+-#ifdef Q_OS_LINUX
++#if defined(Q_OS_LINUX) || defined(Q_OS_NETBSD)
+   if( d->deviceFd != -1 ) {
+     ::close( d->deviceFd );
+     d->deviceFd = -1;
+@@ -1588,7 +1585,7 @@ bool K3bDevice::Device::isOpen() const
+ #ifdef Q_OS_FREEBSD
+   return d->cam;
+ #endif
+-#ifdef Q_OS_LINUX
++#if defined(Q_OS_LINUX) || defined(Q_OS_NETBSD)
+   return ( d->deviceFd != -1 );
+ #endif
+ }
