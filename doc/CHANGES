@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12756 2006/02/01 01:46:10 mjl Exp $
+$NetBSD: CHANGES,v 1.12757 2006/02/01 07:10:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -753,3 +753,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/k3b version 0.12.10 [markd 2006-02-01]
 	Updated mail/anomy-sanitizer to 1.76 [kim 2006-02-01]
 	Updated comms/asterisk to 1.2.4 [mjl 2006-02-01]
+	Updated graphics/libungif to 4.1.4 [wiz 2006-02-01]
