@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/01/24 07:32:18 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/01 03:03:51 rxg Exp $
 #
 
 DISTNAME=		gcin-1.1.5
@@ -17,8 +17,8 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--x11base=${X11BASE:Q}
 CONFIGURE_ARGS+=	--use_xim=Y
 CONFIGURE_ARGS+=	--new_gtk_im=Y
-USE_TOOLS+=		gmake
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config gmake
+GTK2_IMMODULES=		yes
 
 REPLACE_INTERPRETER+=	sh
 _REPLACE.sh.old=	/bin/bash
