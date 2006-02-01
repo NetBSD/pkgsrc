@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
+
+--- configure.in.orig	2005-12-16 02:26:31.000000000 +1300
++++ configure.in
+@@ -186,6 +186,10 @@ dnl - check the byte order -
+ dnl this will define WORDS_BIGENDIAN or do nothing
+ AC_C_BIGENDIAN()
+ 
++AC_CHECK_HEADERS(sys/statfs.h sys/statvfs.h)
++
++AC_CHECK_FUNCS(statfs statvfs)
++
+ dnl === Ogg Vorbis Test - Begin ===
+ AC_ARG_WITH(
+ 	oggvorbis, 

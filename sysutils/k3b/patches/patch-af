@@ -1,0 +1,141 @@
+$NetBSD: patch-af,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
+
+--- /dev/null	2006-01-31 00:47:43.000000000 +1300
++++ libk3bdevice/k3bscsicommand_netbsd.cpp	2006-01-31 00:08:25.000000000 +1300
+@@ -0,0 +1,136 @@
++/*
++ *
++ */
++
++#include "k3bscsicommand.h"
++#include "k3bdevice.h"
++
++#include <kdebug.h>
++
++#include <sys/ioctl.h>
++#include <sys/scsiio.h>
++#include <sys/cdio.h>
++#include <sys/dkio.h>
++
++#include <unistd.h>
++#include <sys/types.h>
++
++
++class K3bDevice::ScsiCommand::Private
++{
++public:
++  struct scsireq cmd;
++};
++
++
++void K3bDevice::ScsiCommand::clear()
++{
++  ::memset( &d->cmd, 0, sizeof(struct scsireq ) );
++}
++
++
++unsigned char& K3bDevice::ScsiCommand::operator[]( size_t i )
++{
++  return d->cmd.cmd[i];
++}
++
++
++int K3bDevice::ScsiCommand::transport( TransportDirection dir,
++				       void* data,
++				       size_t len )
++{
++  bool needToClose = false;
++  if( m_device ) {
++    if( !m_device->isOpen() ) {
++      needToClose = true;
++    }
++    m_device->open( dir == TR_DIR_WRITE );
++    m_deviceHandle = m_device->handle();
++  }
++
++  if( m_deviceHandle == -1 )
++    return -1;
++
++  d->cmd.cmdlen = 12;
++  d->cmd.timeout = 10000;
++  d->cmd.databuf = (caddr_t) data;
++  d->cmd.datalen = len;
++  //  d->cmd.datalen_used = len;
++  d->cmd.senselen = SENSEBUFLEN;
++  switch (dir)
++  {
++    case TR_DIR_READ:
++      d->cmd.flags = SCCMD_READ;
++      break;
++    case TR_DIR_WRITE:
++      d->cmd.flags = SCCMD_WRITE;
++      break;
++    default:
++      d->cmd.flags = SCCMD_READ;
++      break;
++  }
++
++  int i = ::ioctl( m_deviceHandle, SCIOCCOMMAND, &d->cmd );
++
++  if( needToClose )
++    m_device->close();
++
++  if( i || (d->cmd.retsts != SCCMD_OK)) {
++    debugError( d->cmd.cmd[0],
++		d->cmd.retsts,
++		d->cmd.sense[2],
++		d->cmd.sense[12],
++		d->cmd.sense[13] );
++
++     return 1;
++  }
++  else
++    return 0;
++}
++
++bool K3bDevice::ScsiCommand::eject ( bool open )
++{
++  unsigned long request = open ? DIOCEJECT : CDIOCCLOSE;
++  int arg = 0;
++  bool needToClose = false;
++  if( m_device ) {
++    if( !m_device->isOpen() ) {
++      needToClose = true;
++    }
++    m_device->open( false );
++    m_deviceHandle = m_device->handle();
++  }
++
++  if( m_deviceHandle == -1 )
++    return false;
++
++  int i = ::ioctl( m_deviceHandle, request, &arg );
++
++  if( needToClose )
++    m_device->close();
++
++  return i >= 0;
++}
++
++bool K3bDevice::ScsiCommand::traylock ( bool on )
++{
++  int arg = on ? 1 : 0;
++  bool needToClose = false;
++  if( m_device ) {
++    if( !m_device->isOpen() ) {
++      needToClose = true;
++    }
++    m_device->open( false );
++    m_deviceHandle = m_device->handle();
++  }
++
++  if( m_deviceHandle == -1 )
++    return false;
++
++  int i = ::ioctl( m_deviceHandle, DIOCLOCK, &arg );
++
++  if( needToClose )
++    m_device->close();
++
++  return i >= 0;
++}

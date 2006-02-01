@@ -1,0 +1,14 @@
+$NetBSD: patch-al,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
+
+--- libk3b/projects/datacd/k3bisoimager.cpp.orig	2005-12-16 02:09:02.000000000 +1300
++++ libk3b/projects/datacd/k3bisoimager.cpp
+@@ -42,6 +42,9 @@
+ #include <string.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#ifdef __NetBSD__
++#define stat64 stat
++#endif
+ #include <unistd.h>
+ #include <utime.h>
+ 
