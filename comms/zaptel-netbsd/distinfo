@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/04/08 03:03:42 riz Exp $
+$NetBSD: distinfo,v 1.2 2006/02/01 00:10:53 riz Exp $
 
-SHA1 (zaptel-netbsd-20050404.tar.bz2) = 71f09b49a808ded0ac62558c2ccdb36969c5553f
-RMD160 (zaptel-netbsd-20050404.tar.bz2) = d10398a74a8b00299db08fb06ac767145667a674
-Size (zaptel-netbsd-20050404.tar.bz2) = 114012 bytes
+SHA1 (zaptel-netbsd-20060127.tar.bz2) = c4417c74beb43ec023a0118ea0e4f29bc6bce999
+RMD160 (zaptel-netbsd-20060127.tar.bz2) = 6676580715ac09bb380dcdc8886c79180d493535
+Size (zaptel-netbsd-20060127.tar.bz2) = 161209 bytes
