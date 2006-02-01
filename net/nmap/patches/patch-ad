@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.9 2004/11/26 09:24:21 adam Exp $
+$NetBSD: patch-ad,v 1.10 2006/02/01 20:39:11 joerg Exp $
 
---- nbase/configure.orig	2004-10-16 05:03:55.000000000 +0000
+--- nbase/configure.orig	2006-01-25 07:50:35.000000000 +0000
 +++ nbase/configure
 @@ -9,6 +9,8 @@
  ## M4sh Initialization.  ##
@@ -11,7 +11,16 @@ $NetBSD: patch-ad,v 1.9 2004/11/26 09:24:21 adam Exp $
  # Be Bourne compatible
  if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then
    emulate sh
-@@ -7074,7 +7076,7 @@ if test "${ac_cv_lib_ssl_SSL_new+set}" =
+@@ -2561,7 +2563,7 @@ _ACEOF
+   # libpcap doesn't even LOOK at
+                                      # the timeout you give it under Linux
+     ;;
+-  *-freebsd* | *-kfreebsd*-gnu)
++  *-freebsd* | *-kfreebsd*-gnu | *-dragonfly*)
+     cat >>confdefs.h <<\_ACEOF
+ #define FREEBSD 1
+ _ACEOF
+@@ -7081,7 +7083,7 @@ if test "${ac_cv_lib_ssl_SSL_new+set}" =
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -20,7 +29,7 @@ $NetBSD: patch-ad,v 1.9 2004/11/26 09:24:21 adam Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -7137,7 +7139,7 @@ if test $ac_cv_lib_ssl_SSL_new = yes; th
+@@ -7144,7 +7146,7 @@ if test $ac_cv_lib_ssl_SSL_new = yes; th
  #define HAVE_LIBSSL 1
  _ACEOF
  
