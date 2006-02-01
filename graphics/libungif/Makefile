@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2005/12/05 20:50:21 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2006/02/01 07:10:03 wiz Exp $
 
-DISTNAME=	libungif-4.1.3
-PKGREVISION=	3
+DISTNAME=	libungif-4.1.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libungif/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,17 +13,15 @@ CONFLICTS=	giflib-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-
 GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ENV+=		ac_cv_lib_X11_main=no
 
 DOCDIR=			${PREFIX}/share/doc/libungif
 HTMLDIR=		${PREFIX}/share/doc/html/libungif
 
-REPLACE_PERL=		util/gifburst
+REPLACE_PERL+=		util/gifburst
 
 post-patch:
 	@${RM} ${WRKSRC}/doc/gif2x11.html
