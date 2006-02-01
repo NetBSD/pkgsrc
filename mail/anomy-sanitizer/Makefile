@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2005/09/28 20:52:23 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2006/02/01 00:57:39 kim Exp $
 #
 
-DISTNAME=	anomy-sanitizer-1.69
+DISTNAME=	anomy-sanitizer-1.76
 CATEGORIES=	mail
 MASTER_SITES=	http://mailtools.anomy.net/dist/
 
@@ -27,7 +27,7 @@ INSTALLATION_DIRS=	sbin
 
 do-build:
 	cd ${WRKSRC} && ( \
-	    for i in sanitizer simplify; do \
+	    for i in mailblogger sanitizer simplify; do \
 		( \
 		    cd bin && ${MV} -f $$i.pl $$i.pl.orig && \
 		    ${SED} 's;/usr/bin/perl;${PERL5};' $$i.pl.orig > $$i.pl; \
@@ -39,6 +39,7 @@ do-build:
 		    ${ECHO} 'exec $${ANOMY}/bin/'$$i'.pl "$$@"'; \
 		) > $$i; \
 	    done; \
+	    [ -d contrib/.tmp ] && ${RMDIR} contrib/.tmp; \
 	)
 
 do-install:
@@ -59,6 +60,7 @@ do-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${ANOMYDOC}
 	${INSTALL_DATA_DIR} ${ANOMYLIB}
 	${INSTALL_DATA_DIR} ${ANOMYLIB}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/mailblogger.pl ${ANOMYLIB}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/sanitizer.pl ${ANOMYLIB}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/simplify.pl ${ANOMYLIB}/bin
 	cd ${WRKSRC}/bin && ${PAX} -rw -s',.*\.orig$$,,' Anomy ${ANOMYLIB}/bin
