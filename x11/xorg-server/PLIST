@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/01/21 04:08:23 hira Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/02/01 20:21:59 joerg Exp $
 ${X11ROOT_PREFIX}/bin/X
 ${X11ROOT_PREFIX}/bin/Xnest
 ${X11ROOT_PREFIX}/bin/Xprt
@@ -1126,9 +1126,9 @@ ${X11ROOT_PREFIX}/lib/modules/multimedia/msp3430_drv.so
 ${X11ROOT_PREFIX}/lib/modules/multimedia/tda8425_drv.so
 ${X11ROOT_PREFIX}/lib/modules/multimedia/tda9850_drv.so
 ${X11ROOT_PREFIX}/lib/modules/multimedia/tda9885_drv.so
-${X11ROOT_PREFIX}/lib/modules/multimedia/theatre200_drv.so
-${X11ROOT_PREFIX}/lib/modules/multimedia/theatre_detect_drv.so
-${X11ROOT_PREFIX}/lib/modules/multimedia/theatre_drv.so
+${CARDDRIVER.xorg-server-ati}${X11ROOT_PREFIX}/lib/modules/multimedia/theatre200_drv.so
+${CARDDRIVER.xorg-server-ati}${X11ROOT_PREFIX}/lib/modules/multimedia/theatre_detect_drv.so
+${CARDDRIVER.xorg-server-ati}${X11ROOT_PREFIX}/lib/modules/multimedia/theatre_drv.so
 ${X11ROOT_PREFIX}/lib/modules/multimedia/uda1380_drv.so
 ${X11ROOT_PREFIX}/lib/modules/libafb.so
 ${X11ROOT_PREFIX}/lib/modules/libcfb.so
