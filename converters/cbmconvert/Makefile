@@ -1,23 +1,21 @@
-# $NetBSD: Makefile,v 1.14 2005/12/05 20:49:55 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/02/01 17:38:01 tv Exp $
 
-DISTNAME=		cbmconvert-2.0.5
+DISTNAME=		cbmconvert-2.1.2
 CATEGORIES=		converters archivers
-MASTER_SITES=		ftp://ftp.funet.fi/pub/cbm/crossplatform/converters/unix/
+MASTER_SITES=		ftp://ftp.zimmers.net/pub/cbm/crossplatform/converters/unix/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Converts files to and from various C64/C128/CBM formats
 
-BUILD_TARGET=		unix
+MAKEFILE=		Makefile.unix
 MAKE_FLAGS+=		CFLAGS=${CFLAGS:M*:Q}
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/cbmconvert
 
 do-install:
 .for f in cbmconvert disk2zip zip2disk
 	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/${f}.1 ${PREFIX}/${PKGMANDIR}/man1/
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cbmconvert
-.for f in README README.html
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/cbmconvert/
-.endfor
+	${INSTALL_DATA} ${WRKSRC}/cbmconvert.html ${PREFIX}/share/doc/cbmconvert/
 
 .include "../../mk/bsd.pkg.mk"
