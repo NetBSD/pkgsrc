@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12754 2006/02/01 00:55:33 markd Exp $
+$NetBSD: CHANGES,v 1.12755 2006/02/01 00:59:53 kim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -751,3 +751,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/kdevelop to 3.3.1 [markd 2006-01-31]
 	Updated devel/kdbg to 2.0.3 [markd 2006-02-01]
 	Added sysutils/k3b version 0.12.10 [markd 2006-02-01]
+	Updated mail/anomy-sanitizer to 1.76 [kim 2006-02-01]
