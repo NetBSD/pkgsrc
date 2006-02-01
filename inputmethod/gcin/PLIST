@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/16 13:01:16 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/01 02:42:13 rxg Exp $
 bin/gcin
 bin/gcin-setup
 bin/gcin2tab
@@ -54,11 +54,13 @@ share/icons/gcin.png
 share/icons/gcin/pin-fixed24.png
 share/icons/gcin/pin-float16.png
 @dirrm share/icons/gcin
-@dirrm share/icons
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/gcin/table
 @dirrm share/gcin/script
 @dirrm share/gcin
 @dirrm share/doc/${PKGNAME}
-@dirrm share/control-center-2.0/capplets
+@comment in gnome2-dirs: @dirrm share/control-center-2.0/capplets
+@comment in gnome2-dirs: @dirrm share/control-center-2.0
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/menu
-@dirrm lib/gtk-2.0/immodules
+@comment in gtk2: @dirrm lib/gtk-2.0/immodules
