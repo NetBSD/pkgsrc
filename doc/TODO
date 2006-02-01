@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4547 2006/02/01 00:55:33 markd Exp $
+$NetBSD: TODO,v 1.4548 2006/02/01 07:10:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1364,7 +1364,7 @@ Suggested cleanups in pkgsrc
 	  games/xpuyopuyo, graphics/GUIlib,
 	  graphics/SDL_image, graphics/aqsis, graphics/fnlib,
 	  graphics/freetype-lib, graphics/gphoto, graphics/librsvg,
-	  graphics/libungif, graphics/plotutils-nox11, graphics/plotutils,
+	  graphics/plotutils-nox11, graphics/plotutils,
 	  graphics/py-gimp, graphics/scigraphica, lang/cim, lang/gb,
 	  lang/japhar, lang/vslisp,
 	  net/ja-samba, net/samba2, print/LPRng-core, print/ja-vflib-lib,
