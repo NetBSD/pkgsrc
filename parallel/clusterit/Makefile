@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2005/12/29 21:01:40 garbled Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/01 19:26:47 garbled Exp $
 
-DISTNAME=		clusterit-2.3.1
+DISTNAME=		clusterit-2.4
 CATEGORIES=		parallel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clusterit/}
 
