@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.kde3,v 1.30 2006/01/31 22:15:13 markd Exp $
+# $NetBSD: Makefile.kde3,v 1.31 2006/02/02 09:13:02 markd Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE3-distributed packages (they all share common configure and build
@@ -21,8 +21,8 @@ MASTER_SITES_KDE=	ftp://ftp.kde.org/pub/kde/stable/${_KDE_DISTVER}/src/ \
 		http://www.t.ring.gr.jp/archives/X/kde/stable/${_KDE_DISTVER}/src/ \
 		ftp://ftp.kddlabs.co.jp/pub/X/kde/stable/${_KDE_DISTVER}/src/ \
 		ftp://ftp.de.kde.org/pub/kde/stable/${_KDE_DISTVER}/src/ \
-		ftp://public.planetmirror.com.au/pub/kde/stable/${_KDE_DISTVER}/src/ \
-		http://public.planetmirror.com.au/pub/kde/stable/${_KDE_DISTVER}/src/
+		ftp://ftp.planetmirror.com.au/pub/kde/stable/${_KDE_DISTVER}/src/ \
+		http://ftp.planetmirror.com.au/pub/kde/stable/${_KDE_DISTVER}/src/
 MASTER_SITES?=	${MASTER_SITES_KDE}
 EXTRACT_SUFX?=	.tar.bz2
 
