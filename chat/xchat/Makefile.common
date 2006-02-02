@@ -1,7 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2005/09/12 12:56:41 tron Exp $
-#
-# Please do not merge this file into "Makefile" because it is used by
-# packages in "pkgsrc-wip".
+# $NetBSD: Makefile.common,v 1.46 2006/02/02 21:08:11 tron Exp $
 
 DISTNAME=	xchat-2.4.5
 CATEGORIES=	chat gnome
