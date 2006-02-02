@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.16 2006/01/24 15:26:06 jlam Exp $
+# $NetBSD: extract,v 1.17 2006/02/02 14:28:17 joerg Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -272,7 +272,7 @@ zoo)
 
 rar)
 	: ${EXTRACT_OPTS_RAR=-inul}
-	${UNRAR} -x ${EXTRACT_OPTS_RAR} "$distfile" "$@"
+	${UNRAR} x ${EXTRACT_OPTS_RAR} "$distfile" "$@"
 	;;
 
 jre-bin)
