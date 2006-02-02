@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.39 2006/01/06 17:24:38 rillig Exp $
+$NetBSD: TODO,v 1.40 2006/02/02 17:41:57 joerg Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
@@ -22,3 +22,5 @@ include the name of an example package where a warning should occur.
   even more precise diagnostics
 * check wether CONFIG* override match, e.g. CONFIGURE_DIRS most likely
   needs matching CNOFIG_GUESS_OVERRIDE and CONFIG_SUB_OVERRIDE as well
+* warn about BUILD_USES_MSGFMT and related defines being used when
+  devel/gettext-lib/buildlink3.mk is not explicitly included?
