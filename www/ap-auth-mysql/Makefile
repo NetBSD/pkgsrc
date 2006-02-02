@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/01/24 07:32:41 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/02/02 05:00:02 ben Exp $
 #
 
 DISTNAME=		libapache-mod-auth-mysql_4.3.1
@@ -21,15 +21,30 @@ LDFLAGS+=		-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql	\
 			-lmysqlclient					\
 			${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 
+.include "../../mk/apache.mk"
+
+.if ${PKG_APACHE} == "apache13"
+CONFIGURE_ARGS+=	--enable-apache13 --disable-apache2
+.else
+CONFIGURE_ARGS+=	--disable-apache13 --enable-apache2
+.endif
+
 APACHE_MODULE=		YES
 APACHE_MODULE_NAME=	mod_auth_mysql.so
 
-post-install:
+do-install:
+	if [ -f ${WRKSRC}/.libs/${PKG_APACHE}_mod_auth_mysql.so ]; then	\
+		${INSTALL_DATA} \
+			${WRKSRC}/.libs/${PKG_APACHE}_mod_auth_mysql.so \
+			${PREFIX}/lib/httpd/mod_auth_mysql.so;   \
+	elif [ -f ${WRKSRC}/libs/${PKG_APACHE}_mod_auth_mysql.so ]; then \
+		${INSTALL_DATA} \
+			${WRKSRC}/libs/${PKG_APACHE}_mod_auth_mysql.so  \
+			${PREFIX}/lib/httpd/mod_auth_mysql.so;   \
+	fi
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_auth_mysql
 	${INSTALL_DATA} ${WRKSRC}/DIRECTIVES ${PREFIX}/share/doc/mod_auth_mysql
 	${INSTALL_DATA} ${WRKSRC}/USAGE ${PREFIX}/share/doc/mod_auth_mysql
 
 .include "../../mk/mysql.buildlink3.mk"
-.include "../../mk/apache.mk"
-.include "../../www/apache/module.mk"
 .include "../../mk/bsd.pkg.mk"
