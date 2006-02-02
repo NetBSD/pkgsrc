@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2005/01/25 14:50:39 jschauma Exp $
+$NetBSD: patch-ab,v 1.2 2006/02/02 05:51:14 ben Exp $
 
---- ../pr/include/md/_netbsd.h.orig	2003-09-12 02:24:53.000000000 +0900
-+++ ../pr/include/md/_netbsd.h	2004-06-10 23:07:02.000000000 +0900
-@@ -44,16 +44,26 @@
+--- ../pr/include/md/_netbsd.h.orig	Wed Feb  1 19:41:54 2006
++++ ../pr/include/md/_netbsd.h	Wed Feb  1 19:44:48 2006
+@@ -44,6 +44,8 @@
  #define _PR_SI_ARCHITECTURE "x86"
  #elif defined(__alpha__)
  #define _PR_SI_ARCHITECTURE "alpha"
@@ -11,62 +11,3 @@ $NetBSD: patch-ab,v 1.1 2005/01/25 14:50:39 jschauma Exp $
  #elif defined(__m68k__)
  #define _PR_SI_ARCHITECTURE "m68k"
  #elif defined(__powerpc__)
- #define _PR_SI_ARCHITECTURE "powerpc"
-+#elif defined(__sparc_v9__)
-+#define _PR_SI_ARCHITECTURE "sparc64"
- #elif defined(__sparc__)
- #define _PR_SI_ARCHITECTURE "sparc"
- #elif defined(__mips__)
- #define _PR_SI_ARCHITECTURE "mips"
- #elif defined(__arm32__)
- #define _PR_SI_ARCHITECTURE "arm32"
-+#elif defined(__ARMEL__)
-+#define _PR_SI_ARCHITECTURE "armel"
-+#elif defined(__ARMEL__)
-+#define _PR_SI_ARCHITECTURE "armeb"
-+#elif defined(__arm__)
-+#define _PR_SI_ARCHITECTURE "arm"
- #endif
- 
- #if defined(__ELF__)
-@@ -86,6 +96,12 @@
- #define _PR_INET6_PROBE
- #endif
- 
-+#if __NetBSD_Version__ >= 106370000
-+/* NetBSD 1.6ZK */
-+#define _PR_HAVE_GETPROTO_R
-+#define _PR_HAVE_GETPROTO_R_INT
-+#endif
-+
- #define USE_SETJMP
- 
- #ifndef _PR_PTHREADS
-@@ -108,7 +124,17 @@
- }
- #define	_MD_GET_SP(_thread)	CONTEXT(_thread)[2]
- #endif
--#ifdef __sparc__
-+#ifdef __sparc_v9__
-+#define _MD_INIT_CONTEXT(_thread, _sp, _main, status)                  \
-+{                                                                      \
-+    sigsetjmp(CONTEXT(_thread), 1);                                    \
-+    CONTEXT(_thread)[1] = (unsigned char*) ((_sp) - 176 - 0x7ff);      \
-+    CONTEXT(_thread)[2] = (long) _main;                                \
-+    CONTEXT(_thread)[3] = (long) _main + 4;                            \
-+    *status = PR_TRUE;                                                 \
-+}
-+#define        _MD_GET_SP(_thread)     (CONTEXT(_thread)[2]+0x7ff)
-+#elif defined(__sparc__)
- #define _MD_INIT_CONTEXT(_thread, _sp, _main, status)			\
- {									\
-     sigsetjmp(CONTEXT(_thread), 1);					\
-@@ -150,7 +176,7 @@
- }
- #define	_MD_GET_SP(_thread)	CONTEXT(_thread)[32]
- #endif
--#ifdef __arm32__
-+#ifdef __arm__
- #define _MD_INIT_CONTEXT(_thread, _sp, _main, status)			\
- {									\
-     sigsetjmp(CONTEXT(_thread), 1);					\
