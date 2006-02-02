@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12764 2006/02/02 12:10:56 salo Exp $
+$NetBSD: CHANGES,v 1.12765 2006/02/02 17:02:59 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -761,3 +761,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xorg-server to 6.9.0nb4 [joerg 2006-02-01]
 	Updated devel/nspr to 4.6.1 [ben 2006-02-01]
 	Updated mail/p5-Mail-Audit to 1.21nb2 [salo 2006-02-02]
+	Updated graphics/netpbm to 10.31nb1 [joerg 2006-02-02]
