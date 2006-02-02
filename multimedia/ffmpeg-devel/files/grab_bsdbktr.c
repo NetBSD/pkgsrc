@@ -24,7 +24,22 @@
  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 #include "avformat.h"
+#if defined __DragonFly__
+#include <dev/video/meteor/ioctl_meteor.h>
+#include <dev/video/bktr/ioctl_bt848.h>
+#else
+#if defined __FreeBSD__
+#if __FreeBSD__ >= 502100
+#include <dev/bktr/ioctl_meteor.h>
+#include <dev/bktr/ioctl_bt848.h>
+#else
+#include <machine/ioctl_meteor.h>
+#include <machine/ioctl_bt848.h>
+#endif
+#else
 #include <dev/ic/bt8xx.h>
+#endif
+#endif
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/ioctl.h>
