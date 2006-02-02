@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2005/12/05 20:50:05 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/02/02 05:51:14 ben Exp $
 
-DISTNAME=		nspr-4.4.1
-PKGREVISION=		2
+DISTNAME=		nspr-4.6.1
 CATEGORIES=		devel
-MASTER_SITES?=		${MASTER_SIZE_MOZILLA:=nspr/releases/v4.4.1/src}
+MASTER_SITES?=		${MASTER_SITE_MOZILLA:S/mozilla\//nspr\//g:=v4.6.1/src/}
 
 MAINTAINER=		mjl@luckie.org.nz
 HOMEPAGE=		http://www.mozilla.org/projects/nspr/index.html
