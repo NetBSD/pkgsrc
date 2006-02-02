@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.497 2006/01/30 01:26:04 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.498 2006/02/02 20:50:02 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3065,6 +3065,7 @@ sub checkline_mk_varassign($$$$$) {
 
 	if ($op eq "?=" && defined($seen_bsd_prefs_mk) && !$seen_bsd_prefs_mk) {
 		if ($varbase eq "BUILDLINK_PKGSRCDIR"
+		    || $varbase eq "BUILDLINK_DEPMETHOD"
 		    || $varbase eq "BUILDLINK_RECOMMENDED") {
 			# FIXME: What about these ones? They occur quite often.
 		} else {
@@ -3856,7 +3857,7 @@ sub checkfile_patch($) {
 
 			# XXX: This check is not as accurate as the similar one in
 			# checkline_mk_shelltext().
-			if (defined($current_fname) && $current_fname =~ qr"Makefile") {
+			if (defined($current_fname) && $current_fname =~ qr"(?:^|/)Makefile(?:\.in|)") {
 				my ($mm, $rest) = $s->match_all($regex_shellword);
 
 				foreach my $m (@{$mm}) {
