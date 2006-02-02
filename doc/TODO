@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4548 2006/02/01 07:10:59 wiz Exp $
+$NetBSD: TODO,v 1.4549 2006/02/02 15:17:46 ghen Exp $
 
 Suggested new packages
 ======================
@@ -100,9 +100,13 @@ Suggested new packages
 	http://player.helixcommunity.org/2004/downloads/
 	RealNetwork's open source audio/video player
 
-	Sunbird
+	Sunbird [ghen]
 	http://www.mozilla.org/projects/calendar/sunbird.html
 	Stand-alone calendaring application
+
+	SeaMonkey [ghen, pkgsrc-wip]
+	http://www.mozilla.org/projects/seamonkey/
+	Community-based project to continue the Mozilla Suite
 
 	Attal: Lords of Doom
 	http://www.attal-thegame.org/
@@ -1138,8 +1142,8 @@ Suggested package updates
 	o ted-2.17
 	o tet3-3.6b
 	o tfmxplay-1.1.6
-	o thunderbird-1.5
-	o thunderbird-gtk1-1.5
+	o thunderbird-1.5 [ghen]
+	o thunderbird-gtk1-1.5 [ghen]
 	o tidy-20051006
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
