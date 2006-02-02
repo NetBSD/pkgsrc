@@ -1,4 +1,4 @@
-/*	$NetBSD: ar_subs.c,v 1.8 2005/12/01 03:00:01 minskim Exp $	*/
+/*	$NetBSD: ar_subs.c,v 1.9 2006/02/02 19:28:25 christos Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -48,7 +48,7 @@
 #if 0
 static char sccsid[] = "@(#)ar_subs.c	8.2 (Berkeley) 4/18/94";
 #else
-__RCSID("$NetBSD: ar_subs.c,v 1.8 2005/12/01 03:00:01 minskim Exp $");
+__RCSID("$NetBSD: ar_subs.c,v 1.9 2006/02/02 19:28:25 christos Exp $");
 #endif
 #endif /* not lint */
 
@@ -177,6 +177,8 @@ domkdir(const char *fname, mode_t mode)
 	case EISDIR:
 		return 0;
 	case EEXIST:
+	case EACCES:
+	case ENOSYS:	/* Grr Solaris */
 		error = errno;
 		if (stat(fname, &sb) != -1 && S_ISDIR(sb.st_mode))
 			return 0;
