@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1797 2006/01/21 21:32:51 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1798 2006/02/02 21:15:46 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -1522,6 +1522,8 @@ replace-interpreter:
 			    ${CHMOD} a+x $${f}.new;			\
 		    fi;							\
 		    ${MV} -f $${f}.new $${f};				\
+	    else							\
+		${ECHO_MSG} "[bsd.pkg.mk:replace-interpreter] WARNING: Skipping non-existent file \"$$f\"." 1>&2; \
 	    fi;								\
 	done
 .    endfor
