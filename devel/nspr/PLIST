@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/10/16 11:15:10 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/02/02 05:51:14 ben Exp $
 bin/nspr-config
 include/nspr/md/_aix.h
 include/nspr/md/_aix32.cfg
@@ -50,11 +50,12 @@ include/nspr/md/_reliantunix.cfg
 include/nspr/md/_reliantunix.h
 include/nspr/md/_rhapsody.cfg
 include/nspr/md/_rhapsody.h
+include/nspr/md/_riscos.cfg
+include/nspr/md/_riscos.h
 include/nspr/md/_scoos.cfg
 include/nspr/md/_scoos.h
+include/nspr/md/_solaris.cfg
 include/nspr/md/_solaris.h
-include/nspr/md/_solaris32.cfg
-include/nspr/md/_solaris64.cfg
 include/nspr/md/_sony.cfg
 include/nspr/md/_sony.h
 include/nspr/md/_sunos4.cfg
