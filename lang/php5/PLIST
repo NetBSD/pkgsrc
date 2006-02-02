@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2005/12/03 18:53:57 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/02/02 20:31:17 rillig Exp $
 bin/pear
+bin/peardev
+bin/pecl
 bin/php
 bin/php-config
 bin/phpize
