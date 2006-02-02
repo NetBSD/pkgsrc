@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.6 2006/01/20 22:44:50 joerg Exp $
+$NetBSD: patch-af,v 1.7 2006/02/02 20:53:44 rillig Exp $
 
 --- src/sema.c.orig	2006-01-20 22:04:29.000000000 +0000
 +++ src/sema.c
-@@ -42,7 +42,7 @@ $Id: sema.c,v 1.14 2003/06/24 07:05:17 e
+@@ -42,7 +42,7 @@
  #include "sema.h"
  
  #if !(defined(BSD) && (BSD >= 199103))
