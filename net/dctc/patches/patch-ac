@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.7 2006/01/20 22:44:50 joerg Exp $
+$NetBSD: patch-ac,v 1.8 2006/02/02 20:53:44 rillig Exp $
 
 --- src/keyboard_master.c.orig	Sun Jun 22 10:40:35 2003
 +++ src/keyboard_master.c
-@@ -39,8 +39,7 @@ $Id: keyboard_master.c,v 1.1 2003/06/22 
+@@ -39,8 +39,7 @@
  #include <openssl/md4.h>
  #include <glib.h>
  
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.7 2006/01/20 22:44:50 joerg Exp $
         /* union semun is defined by including <sys/sem.h> */
         #else
         /* according to X/OPEN we have to define it ourselves */
-@@ -51,7 +50,6 @@ $Id: keyboard_master.c,v 1.1 2003/06/22 
+@@ -51,7 +50,6 @@
                 struct seminfo *__buf;      /* buffer for IPC_INFO */
         };
         #endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/01/20 22:44:50 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2006/02/02 20:53:44 rillig Exp $
 #
 
 DISTNAME=	dctc-0.85.4
@@ -25,11 +25,11 @@ SUBST_SED.inethack+=	-e 's,\(G_.*LOCK.*(\)inet_ntoa,\1my_inet_ntoa,g'
 SUBST_STAGE.inethack=	post-patch
 
 post-configure:
-	@${TOUCH} ${WRKSRC}/stamp-h.in ${WRKSRC}/config.h.in
-	@${TOUCH} ${WRKSRC}/config.status ${WRKSRC}/stamp-h
-	@${ECHO} '#ifndef MSG_NOSIGNAL' >> ${WRKSRC}/config.h
-	@${ECHO} '# define MSG_NOSIGNAL 0' >> ${WRKSRC}/config.h
-	@${ECHO} '#endif' >> ${WRKSRC}/config.h
+	@${TOUCH} ${WRKSRC:Q}/stamp-h.in ${WRKSRC:Q}/config.h.in
+	@${TOUCH} ${WRKSRC:Q}/config.status ${WRKSRC:Q}/stamp-h
+	@${ECHO} '#ifndef MSG_NOSIGNAL' >> ${WRKSRC:Q}/config.h
+	@${ECHO} '# define MSG_NOSIGNAL 0' >> ${WRKSRC:Q}/config.h
+	@${ECHO} '#endif' >> ${WRKSRC:Q}/config.h
 
 .include "../../databases/db4/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
