@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/01/24 04:00:37 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2006/02/02 08:18:04 joerg Exp $
 
 --- configure.orig	2004-11-28 16:56:25.000000000 +0100
 +++ configure
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/01/24 04:00:37 xtraeme Exp $
  extralibs="$extralibs -lsocket -lnsl"
  ;;
 -FreeBSD)
-+FreeBSD|NetBSD)
++FreeBSD|NetBSD|DragonFly)
  v4l="no"
  audio_oss="yes"
  dv1394="no"
