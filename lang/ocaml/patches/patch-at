@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.8 2006/01/16 09:41:48 adam Exp $
+$NetBSD: patch-at,v 1.9 2006/02/02 20:47:26 rillig Exp $
 
 --- configure.orig	2006-01-04 10:26:42.000000000 +0100
 +++ configure
@@ -7,7 +7,7 @@ $NetBSD: patch-at,v 1.8 2006/01/16 09:41:48 adam Exp $
  if test $withsharedlibs = "yes"; then
    case "$host" in
 -    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*)
-+    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-dragonfly*)
++    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-netbsd*|*-*-dragonfly*)
        sharedcccompopts="-fPIC"
        mksharedlib="$bytecc -shared -o"
        bytecclinkopts="$bytecclinkopts -Wl,-E"
