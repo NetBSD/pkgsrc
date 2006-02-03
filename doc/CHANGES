@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12777 2006/02/03 20:35:50 xtraeme Exp $
+$NetBSD: CHANGES,v 1.12778 2006/02/03 20:59:42 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -784,3 +784,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/ja-squirrelmail to 1.4.5nb4 [martti 2006-02-03]
 	Updated textproc/p5-Data-FormValidator to 4.12 [abs 2006-02-03]
 	Updated www/firefox-bin to 1.5.0.1 [xtraeme 2006-02-03]
+	Added sysutils/ir-account version 0.1 [gdt 2006-02-03]
