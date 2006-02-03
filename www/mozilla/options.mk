@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2006/02/02 14:03:49 ghen Exp $
+# $NetBSD: options.mk,v 1.3 2006/02/03 07:57:57 ghen Exp $
 
 PKG_OPTIONS_VAR		= PKG_OPTIONS.gecko
 PKG_SUPPORTED_OPTIONS	= debug
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+= --disable-debug
 # See http://www.mozilla.org/foundation/trademarks/
 .if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
 CONFIGURE_ARGS+=	--enable-official-branding
-RESTRICTED=		"Cannot redistribute builds with Official Branding at this moment, we need permission of The Mozilla Foundation for this."
+RESTRICTED=		Cannot redistribute builds with Official Branding at this moment, we need permission of The Mozilla Foundation for this.
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 .endif
