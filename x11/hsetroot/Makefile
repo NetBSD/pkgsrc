@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2005/06/01 18:03:29 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/03 00:58:25 wiz Exp $
 #
 
 DISTNAME=	hsetroot-1.0.2
 CATEGORIES=	x11
 MASTER_SITES=	http://thegraveyard.org/files/
 
-MAINTAINER=	lems@gmx.net
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://thegraveyard.org/hsetroot.php
 COMMENT=	Allows you to compose wallpapers for X
 
