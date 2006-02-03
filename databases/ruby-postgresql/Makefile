@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2006/01/03 15:07:29 taca Exp $
+# $NetBSD: Makefile,v 1.27 2006/02/03 04:43:47 taca Exp $
 
 DISTNAME=		ruby-postgres-${VERSION}
 PKGNAME=		${RUBY_PKGPREFIX}-postgresql-${VERSION}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		databases ruby
 MASTER_SITES=		http://raa.ruby-lang.org/cache/postgres/ \
 			http://ruby.scripting.ca/postgres/archive/ \

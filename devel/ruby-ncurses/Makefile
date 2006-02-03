@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/26 23:00:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/03 04:43:47 taca Exp $
 
 DISTNAME=	ncurses-ruby-1.0
 PKGNAME=	${DISTNAME:S/ncurses-ruby/${RUBY_PKGPREFIX}-ncurses/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.berlios.de/ncurses-ruby/
 EXTRACT_SUFX=	.tar.bz2
