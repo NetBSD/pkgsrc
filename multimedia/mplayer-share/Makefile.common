@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2005/12/05 23:55:13 rillig Exp $
+# $NetBSD: Makefile.common,v 1.27 2006/02/03 00:39:55 wiz Exp $
 
 MPLAYER_DIST_VERSION=	1.0pre7
 
@@ -29,9 +29,9 @@ HOMEPAGE?=		http://www.mplayerhq.hu/
 PATCHDIR=		${.CURDIR}/../../multimedia/mplayer-share/patches
 DISTINFO_FILE=		${.CURDIR}/../../multimedia/mplayer-share/distinfo
 
-NO_BIN_ON_CDROM=	"a dependency is restricted"
-NO_BIN_ON_FTP=		"a dependency is restricted"
-NO_SRC_ON_FTP=		"prohibited by USAs DMCA"
+NO_BIN_ON_CDROM=	a dependency is restricted
+NO_BIN_ON_FTP=		a dependency is restricted
+NO_SRC_ON_FTP=		prohibited by USAs DMCA
 
 USE_TOOLS+=		gmake
 HAS_CONFIGURE=		YES
