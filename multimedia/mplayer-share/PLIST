@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/04/18 17:49:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/02/03 00:39:55 wiz Exp $
 man/man1/mplayer.1
 share/mplayer/DOCS/HTML/cs/amiga.html
 share/mplayer/DOCS/HTML/cs/aspect.html
@@ -721,84 +721,7 @@ share/mplayer/DOCS/zh/sound.html
 share/mplayer/DOCS/zh/users_against_developers.html
 share/mplayer/DOCS/zh/video.html
 share/mplayer/codecs.conf
-share/mplayer/font
-share/mplayer/fonts/README-arial-cp1250
-share/mplayer/fonts/README-arial-iso-8859-1
-share/mplayer/fonts/README-arial-iso-8859-2
-share/mplayer/fonts/font-arial-14-cp1250/cp1250-a.raw
-share/mplayer/fonts/font-arial-14-cp1250/cp1250-b.raw
-share/mplayer/fonts/font-arial-14-cp1250/font.desc
-share/mplayer/fonts/font-arial-14-cp1250/osd-mplayer-a.raw
-share/mplayer/fonts/font-arial-14-cp1250/osd-mplayer-b.raw
-share/mplayer/fonts/font-arial-14-iso-8859-1/font.desc
-share/mplayer/fonts/font-arial-14-iso-8859-1/iso-8859-1-a.raw
-share/mplayer/fonts/font-arial-14-iso-8859-1/iso-8859-1-b.raw
-share/mplayer/fonts/font-arial-14-iso-8859-1/osd-mplayer-a.raw
-share/mplayer/fonts/font-arial-14-iso-8859-1/osd-mplayer-b.raw
-share/mplayer/fonts/font-arial-14-iso-8859-2/font.desc
-share/mplayer/fonts/font-arial-14-iso-8859-2/iso-8859-2-a.raw
-share/mplayer/fonts/font-arial-14-iso-8859-2/iso-8859-2-b.raw
-share/mplayer/fonts/font-arial-14-iso-8859-2/osd-mplayer-a.raw
-share/mplayer/fonts/font-arial-14-iso-8859-2/osd-mplayer-b.raw
-share/mplayer/fonts/font-arial-18-cp1250/cp1250-a.raw
-share/mplayer/fonts/font-arial-18-cp1250/cp1250-b.raw
-share/mplayer/fonts/font-arial-18-cp1250/font.desc
-share/mplayer/fonts/font-arial-18-cp1250/osd-mplayer-a.raw
-share/mplayer/fonts/font-arial-18-cp1250/osd-mplayer-b.raw
-share/mplayer/fonts/font-arial-18-iso-8859-1/font.desc
-share/mplayer/fonts/font-arial-18-iso-8859-1/iso-8859-1-a.raw
-share/mplayer/fonts/font-arial-18-iso-8859-1/iso-8859-1-b.raw
-share/mplayer/fonts/font-arial-18-iso-8859-1/osd-mplayer-a.raw
-share/mplayer/fonts/font-arial-18-iso-8859-1/osd-mplayer-b.raw
-share/mplayer/fonts/font-arial-18-iso-8859-2/font.desc
-share/mplayer/fonts/font-arial-18-iso-8859-2/iso-8859-2-a.raw
-share/mplayer/fonts/font-arial-18-iso-8859-2/iso-8859-2-b.raw
-share/mplayer/fonts/font-arial-18-iso-8859-2/osd-mplayer-a.raw
-share/mplayer/fonts/font-arial-18-iso-8859-2/osd-mplayer-b.raw
-share/mplayer/fonts/font-arial-24-cp1250/cp1250-a.raw
-share/mplayer/fonts/font-arial-24-cp1250/cp1250-b.raw
-share/mplayer/fonts/font-arial-24-cp1250/font.desc
-share/mplayer/fonts/font-arial-24-cp1250/osd-mplayer-a.raw
-share/mplayer/fonts/font-arial-24-cp1250/osd-mplayer-b.raw
-share/mplayer/fonts/font-arial-24-iso-8859-1/font.desc
-share/mplayer/fonts/font-arial-24-iso-8859-1/iso-8859-1-a.raw
-share/mplayer/fonts/font-arial-24-iso-8859-1/iso-8859-1-b.raw
-share/mplayer/fonts/font-arial-24-iso-8859-1/osd-mplayer-a.raw
-share/mplayer/fonts/font-arial-24-iso-8859-1/osd-mplayer-b.raw
-share/mplayer/fonts/font-arial-24-iso-8859-2/font.desc
-share/mplayer/fonts/font-arial-24-iso-8859-2/iso-8859-2-a.raw
-share/mplayer/fonts/font-arial-24-iso-8859-2/iso-8859-2-b.raw
-share/mplayer/fonts/font-arial-24-iso-8859-2/osd-mplayer-a.raw
-share/mplayer/fonts/font-arial-24-iso-8859-2/osd-mplayer-b.raw
-share/mplayer/fonts/font-arial-28-cp1250/cp1250-a.raw
-share/mplayer/fonts/font-arial-28-cp1250/cp1250-b.raw
-share/mplayer/fonts/font-arial-28-cp1250/font.desc
-share/mplayer/fonts/font-arial-28-cp1250/osd-mplayer-a.raw
-share/mplayer/fonts/font-arial-28-cp1250/osd-mplayer-b.raw
-share/mplayer/fonts/font-arial-28-iso-8859-1/font.desc
-share/mplayer/fonts/font-arial-28-iso-8859-1/iso-8859-1-a.raw
-share/mplayer/fonts/font-arial-28-iso-8859-1/iso-8859-1-b.raw
-share/mplayer/fonts/font-arial-28-iso-8859-1/osd-mplayer-a.raw
-share/mplayer/fonts/font-arial-28-iso-8859-1/osd-mplayer-b.raw
-share/mplayer/fonts/font-arial-28-iso-8859-2/font.desc
-share/mplayer/fonts/font-arial-28-iso-8859-2/iso-8859-2-a.raw
-share/mplayer/fonts/font-arial-28-iso-8859-2/iso-8859-2-b.raw
-share/mplayer/fonts/font-arial-28-iso-8859-2/osd-mplayer-a.raw
-share/mplayer/fonts/font-arial-28-iso-8859-2/osd-mplayer-b.raw
 share/mplayer/input.conf
-@dirrm share/mplayer/fonts/font-arial-28-iso-8859-2
-@dirrm share/mplayer/fonts/font-arial-28-iso-8859-1
-@dirrm share/mplayer/fonts/font-arial-28-cp1250
-@dirrm share/mplayer/fonts/font-arial-24-iso-8859-2
-@dirrm share/mplayer/fonts/font-arial-24-iso-8859-1
-@dirrm share/mplayer/fonts/font-arial-24-cp1250
-@dirrm share/mplayer/fonts/font-arial-18-iso-8859-2
-@dirrm share/mplayer/fonts/font-arial-18-iso-8859-1
-@dirrm share/mplayer/fonts/font-arial-18-cp1250
-@dirrm share/mplayer/fonts/font-arial-14-iso-8859-2
-@dirrm share/mplayer/fonts/font-arial-14-iso-8859-1
-@dirrm share/mplayer/fonts/font-arial-14-cp1250
-@dirrm share/mplayer/fonts
 @dirrm share/mplayer/DOCS/zh
 @dirrm share/mplayer/DOCS/xml/xsl
 @dirrm share/mplayer/DOCS/xml/ru
@@ -833,4 +756,4 @@ share/mplayer/input.conf
 @dirrm share/mplayer/DOCS/HTML/cs
 @dirrm share/mplayer/DOCS/HTML
 @dirrm share/mplayer/DOCS
-@dirrm share/mplayer
+@comment in mplayer-fonts: @dirrm share/mplayer
