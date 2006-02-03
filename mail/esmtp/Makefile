@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/29 06:21:48 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/03 00:58:25 wiz Exp $
 #
 
 DISTNAME=	esmtp-0.5.1
@@ -7,7 +7,7 @@ PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=esmtp/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	lems@gmx.net
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://esmtp.sourceforge.net/
 COMMENT=	Relay-only Mail Transfer Agent with sendmail-compatible syntax
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/01/24 07:31:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/03 00:58:25 wiz Exp $
 #
 
 DISTNAME=	glurp-0.11.6
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=glurp/}
 
-MAINTAINER=	lems@gmx.net
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.musicpd.org/glurp.shtml
 COMMENT=	Graphical GTK+2-based client for musicpd
 
