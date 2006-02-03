@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.17 2006/02/02 14:28:17 joerg Exp $
+# $NetBSD: extract,v 1.18 2006/02/03 11:22:12 joerg Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -168,7 +168,7 @@ esac
 
 # Derive the format of the archive based on the file extension.
 case "$distfile" in
-*.tar.gz|*.tgz|*_tar.gz|*.tar.bz2|*.tbz|*.tbz2|*.tar.Z|*.tar)
+*.tar.gz|*.tgz|*_tar.gz|*.tar.bz2|*.tbz|*.tbz2|*.tar.Z|*.tar.z|*.tar)
 		_format=tar ;;
 *.shar.gz|*.shar.bz2|*.shar.Z|*.shar|*.shr.gz|*.shr.bz2|*.shr.Z|*.shr)
 		_format=shar ;;
