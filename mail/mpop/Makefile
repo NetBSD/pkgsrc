@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/12/29 06:21:51 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/03 00:58:25 wiz Exp $
 #
 
 DISTNAME=	mpop-0.8.2
@@ -7,7 +7,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpop/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	lems@gmx.net
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://mpop.sourceforge.net/
 COMMENT=	Small, fast and portable POP3 client
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2005/10/11 19:16:33 reed Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/03 00:58:25 wiz Exp $
 #
 
 DISTNAME=		numlockx-1.1
 CATEGORIES=		x11
 MASTER_SITES=		http://ktown.kde.org/~seli/numlockx/
 
-MAINTAINER=		lems@gmx.net
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://ktown.kde.org/~seli/numlockx/
 COMMENT=		Allows you to start X with numlock turned on
 
