@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/03 04:43:47 taca Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/03 15:18:59 taca Exp $
 
 DISTNAME=	ncurses-ruby-1.0
 PKGNAME=	${DISTNAME:S/ncurses-ruby/${RUBY_PKGPREFIX}-ncurses/}
@@ -12,18 +12,18 @@ HOMEPAGE=	http://ncurses-ruby.berlios.de/
 COMMENT=	Ruby interface to ncurses
 
 USE_RUBY_EXTCONF=	yes
-USE_NCURSES=		# mouse functions 
+USE_NCURSES=		# mouse functions
 
 EXAMPLES=		example.rb hello_ncurses.rb rain.rb read_line.rb \
 			tclock.rb test_scanw.rb
 .for f in ${EXAMPLES}
-REPLACE_RUBY+=		sample/$f
+REPLACE_RUBY+=		sample/${f}
 .endfor
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/ncurses
 .for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/examples/$f ${RUBY_EXAMPLESDIR}/ncurses
+	${INSTALL_DATA} ${WRKSRC}/examples/${f} ${RUBY_EXAMPLESDIR}/ncurses
 .endfor
 
 .include "../../devel/ncurses/buildlink3.mk"
