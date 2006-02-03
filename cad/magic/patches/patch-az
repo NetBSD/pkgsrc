@@ -1,8 +1,8 @@
-$NetBSD: patch-az,v 1.1 2006/01/13 18:46:06 joerg Exp $
+$NetBSD: patch-az,v 1.2 2006/02/03 02:19:42 rillig Exp $
 
 --- textio/txInput.c.orig	2006-01-13 18:28:21.000000000 +0000
 +++ textio/txInput.c
-@@ -26,9 +26,7 @@ static char rcsid[]="$Header: /ufs/repos
+@@ -26,9 +26,7 @@
  #include <unistd.h>
  #include <ctype.h>
  #include <dirent.h>

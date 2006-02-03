@@ -1,8 +1,8 @@
-$NetBSD: patch-ar,v 1.1 2006/01/06 18:14:06 joerg Exp $
+$NetBSD: patch-ar,v 1.2 2006/02/03 02:19:42 rillig Exp $
 
 --- database/DBio.c.orig	2005-12-20 16:39:18.000000000 +0000
 +++ database/DBio.c
-@@ -46,7 +46,6 @@ static char rcsid[] = "$Header: /ufs/rep
+@@ -46,7 +46,6 @@
  #include "utils/malloc.h"
  #include "signals/signals.h"
  

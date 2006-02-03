@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2006/01/13 18:46:06 joerg Exp $
+$NetBSD: distinfo,v 1.10 2006/02/03 02:19:42 rillig Exp $
 
 SHA1 (magic-7.1.tar.gz) = 176eb4c6a0ff33c6e265e61360c02da4f454f101
 RMD160 (magic-7.1.tar.gz) = 7ab03ba23243817b168254f8c6f7a50d8ea2a4db
@@ -11,8 +11,8 @@ SHA1 (patch-ae) = 27555db8f06d1f8a7a6f002e7dfccf14a4db2765
 SHA1 (patch-af) = 415c0252b38dab9460697e2b3d87af83518ea980
 SHA1 (patch-ag) = b8dcf69daab42dfd24bdb2038733f88f269cc7dc
 SHA1 (patch-ah) = 31654bb19cf41bbd07d8ecd3d8b5c529684638a2
-SHA1 (patch-ai) = 8c79ca61705f1ae02019fc964ac64a9a72c314f2
-SHA1 (patch-aj) = d86b45ec676b2acd1631a18635f3e989b3f87f34
+SHA1 (patch-ai) = 2957ca1596b267d4476ab38893c23c8f14b2660d
+SHA1 (patch-aj) = bc04ec87ba55efc44438e240a07c16e9f029ba9d
 SHA1 (patch-ak) = 18c5a23f334c9878160c104d12be4f4e71da6d59
 SHA1 (patch-al) = 1ef7780a48da86d690b9cf8a31bd9dc416087a09
 SHA1 (patch-am) = c4e695c370db01775b321970a327ea0851fdf437
@@ -20,12 +20,12 @@ SHA1 (patch-an) = 83e9e5242b483f398962a6237551b860749e70f0
 SHA1 (patch-ao) = 747c18b5e997d652054d17acbdb1fee0748d77a8
 SHA1 (patch-ap) = b2b9e1c45dbefd1d93205bcc15ea713c38181598
 SHA1 (patch-aq) = 8ca051b61a8d79988838be4c1bc4dca3eed6bcaa
-SHA1 (patch-ar) = 898b58351cc567e184b128da0ad669744859bebf
-SHA1 (patch-as) = 2b574c0f2c81a3fd0c7982f84dad5bdbdbd0811b
+SHA1 (patch-ar) = 1d9b4c63dd6156fc02dfcbdd946ecca3d44847f2
+SHA1 (patch-as) = 5ddeac5797f34b6e951241e4d891efd0aea5f15d
 SHA1 (patch-at) = 6caeb2a9c455792b4ec0930b199df4880f42ce47
-SHA1 (patch-au) = a21eee3003b818f7d097eb9c7d87882d2c66283d
-SHA1 (patch-av) = 14422e1d0d714762c95890d850b149223d157944
+SHA1 (patch-au) = 37f6106787f363e1d40b8feb8c2b1912dd987c71
+SHA1 (patch-av) = 5c5bc8a5add515ab2d9d55bbf96b5c23e1a178a6
 SHA1 (patch-aw) = 557bf1993732183b6738ec12539736ebd9aaa900
 SHA1 (patch-ax) = 8bc1938b4435d7724a666ad283c0aef93abdabf1
-SHA1 (patch-ay) = b31fee8531d37d07a0e3eab89b6526508c7e7199
-SHA1 (patch-az) = cc7a6cf8edd61f5f553be4fd390ca28d63dc89fd
+SHA1 (patch-ay) = 8555fe87e07468bdefd0b1e6c0855d9d0572f843
+SHA1 (patch-az) = 59373bad51817333b3c82b0a35e34e39dc60ea21

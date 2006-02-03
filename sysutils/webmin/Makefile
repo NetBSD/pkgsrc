@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/12/29 06:22:18 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/02/03 02:04:27 rillig Exp $
 
 DISTNAME=	webmin-1.170-minimal
 PKGNAME=	${DISTNAME:S/-minimal$//}
@@ -17,7 +17,7 @@ USE_LANGUAGES=	# empty
 NO_BUILD=	yes
 
 USE_TOOLS+=	perl:run
-REPLACE_PERL=	*.cgi */*.cgi *.pl */*.pl
+REPLACE_PERL+=	*.cgi */*.cgi *.pl */*.pl
 
 WEBMIN_DIR=		${PREFIX}/${WEBMIN_SUBDIR}
 WEBMIN_SUBDIR=		share/webmin
@@ -26,22 +26,22 @@ WEBMIN_LOGDIR?=		${VARBASE}/log/webmin
 FILES_SUBST+=		WEBMIN_DIR=${WEBMIN_DIR:Q}
 FILES_SUBST+=		WEBMIN_ETCDIR=${WEBMIN_ETCDIR:Q}
 FILES_SUBST+=		WEBMIN_LOGDIR=${WEBMIN_LOGDIR:Q}
-MESSAGE_SUBST+=		WEBMIN_DIR=${WEBMIN_DIR}
+MESSAGE_SUBST+=		WEBMIN_DIR=${WEBMIN_DIR:Q}
 
 DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
 RCD_SCRIPTS=		webmin
 OWN_DIRS=		${WEBMIN_LOGDIR}
 
 # Dynamically generate the Webmin PLIST from the installed files.
-WEBMIN_PLIST_FILES= \
+WEBMIN_PLIST_FILES_CMD= \
 	( cd ${PREFIX}; ${FIND} ${WEBMIN_SUBDIR} \! -type d -print )	\
 	| ${SORT} -u
-WEBMIN_PLIST_DIRS= \
+WEBMIN_PLIST_DIRS_CMD= \
 	( cd ${PREFIX}; ${FIND} ${WEBMIN_SUBDIR} -type d -print )	\
 	| ${SED} -e "s,^,@unexec ${RMDIR} -p %D/,"			\
-		 -e "s,$$, 2>/dev/null || ${TRUE},"			\
+		 -e "s,\$$, 2>/dev/null || ${TRUE},"			\
 	| ${SORT} -ur
-GENERATE_PLIST+=	${WEBMIN_PLIST_FILES}; ${WEBMIN_PLIST_DIRS};
+GENERATE_PLIST+=	${WEBMIN_PLIST_FILES_CMD}; ${WEBMIN_PLIST_DIRS_CMD};
 
 do-configure:
 	for file in ${WRKSRC}/setup.sh; do				\

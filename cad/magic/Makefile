@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/01/25 22:21:09 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/02/03 02:19:42 rillig Exp $
 #
 
 DISTNAME=	magic-7.1
@@ -10,7 +10,7 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://vlsi.cornell.edu/magic/
 COMMENT=	Integrated circuit layout system
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake printf
 USE_GNU_READLINE=	# uses rl_*_completion_function
 MAKE_ENV+=	MAGIC_HOME=${PREFIX:Q}
 
@@ -24,7 +24,7 @@ CPPFLAGS+=	-DIS_LITTLE_ENDIAN
 .include "../../mk/x11.buildlink3.mk"
 
 post-patch:
-	cd ${WRKSRC} && for f in `${FIND} . -type f -exec ${GREP} -l CAD_HOME {} /dev/null \;` ; do \
+	cd ${WRKSRC} && for f in `${FIND} . -type f -exec ${GREP} -l CAD_HOME {} /dev/null \\;` ; do \
 		${ECHO} "Replacing CAD_HOME in $$f" ; \
 		${MV} -f $$f $$f.bak ; ${SED} 's;CAD_HOME;MAGIC_HOME;g' $$f.bak > $$f ; \
 		${RM} $$f.bak ; \
@@ -32,7 +32,7 @@ post-patch:
 	${CHMOD} 755 ${WRKSRC}/scripts/config
 
 do-configure:
-	cd ${WRKSRC} && printf "1\n2\n6\n\n\n\n\n\n\n\n\n\n\n" | \
+	cd ${WRKSRC} && ${PRINTF} '1\n2\n6\n\n\n\n\n\n\n\n\n\n\n' | \
 		${SETENV} ${MAKE_ENV} ./scripts/config
 
 .include "../../devel/readline/buildlink3.mk"
