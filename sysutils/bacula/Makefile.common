@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2006/01/17 15:52:52 ghen Exp $
+# $NetBSD: Makefile.common,v 1.26 2006/02/03 08:18:45 ghen Exp $
 
 DISTNAME=		bacula-1.38.4
 CATEGORIES=		sysutils
@@ -19,8 +19,6 @@ BACULA_SD_USER?=	bacula-sd
 PKG_SYSCONFSUBDIR?=	bacula
 BACULA_PIDDIR?=		${VARBASE}/run
 BACULA_WORKINGDIR?=	${VARBASE}/spool/bacula
-
-OWN_DIRS_PERMS+=	${BACULA_WORKINGDIR} root ${BACULA_GROUP} 770
 
 FILES_SUBST+=		BACULA_ETCDIR=${PKG_SYSCONFDIR:Q}
 FILES_SUBST+=		BACULA_PIDDIR=${BACULA_PIDDIR:Q}
@@ -46,44 +44,15 @@ CONFIGURE_ARGS+=	--with-working-dir=${BACULA_WORKINGDIR:Q}
 CONFIGURE_ARGS+=	--with-pid-dir=${BACULA_PIDDIR:Q}
 CONFIGURE_ARGS+=	--with-readline=${PREFIX}/include/readline
 
-PKG_GROUPS=		${BACULA_GROUP}
-
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--enable-smartalloc
-.endif
-
-# keep these three blocks here as they are common to bacula and bacula-clientonly
-#
-# optional gnome-console
-.if !empty(PKG_OPTIONS:Mgnome-console)
-.include "../../devel/libgnomeui/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-gnome
-PLIST_SRC+=		${.CURDIR}/../../sysutils/bacula/PLIST.gnome-console
-.endif
-
-# optional wx-console
-.if !empty(PKG_OPTIONS:Mwx-console)
-.include "../../x11/wxGTK/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-wx-console
-PLIST_SRC+=		${.CURDIR}/../../sysutils/bacula/PLIST.wx-console
-.endif
-
-# optional tray-monitor
-.if !empty(PKG_OPTIONS:Mtray-monitor)
-.include "../../x11/gtk2/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-tray-monitor
-PLIST_SRC+=		${.CURDIR}/../../sysutils/bacula/PLIST.tray-monitor
 .endif
 
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
 
 EXAMPLESDIR=		${PREFIX}/share/examples/bacula
-CONF_FILES+=		${EXAMPLESDIR}/bacula-fd.conf ${PKG_SYSCONFDIR}/bacula-fd.conf
-CONF_FILES+=		${EXAMPLESDIR}/bconsole.conf ${PKG_SYSCONFDIR}/bconsole.conf
-
-PLIST_SRC+=		${.CURDIR}/../../sysutils/bacula/PLIST.common_end
 
 pre-install:
 	${INSTALL_DATA_DIR} ${EXAMPLESDIR}

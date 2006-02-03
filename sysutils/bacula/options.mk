@@ -1,10 +1,8 @@
-# $NetBSD: options.mk,v 1.8 2005/12/08 01:04:44 wiz Exp $
+# $NetBSD: options.mk,v 1.9 2006/02/03 08:18:45 ghen Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.bacula
 PKG_OPTIONS_REQUIRED_GROUPS=	database
 PKG_OPTIONS_GROUP.database=	catalog-sqlite catalog-sqlite3 catalog-pgsql catalog-mysql
-# keep this line in sync with sysutils/bacula-clientonly/options.mk:
-PKG_SUPPORTED_OPTIONS=		gnome-console wx-console tray-monitor
 PKG_SUGGESTED_OPTIONS=		catalog-sqlite
 
 .include "../../mk/bsd.options.mk"

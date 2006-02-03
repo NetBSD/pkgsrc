@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/01/24 14:53:40 ghen Exp $
+# $NetBSD: Makefile,v 1.15 2006/02/03 08:18:45 ghen Exp $
 
 CONFLICTS+=		bacula-client-[0-9]*
 
@@ -16,14 +16,21 @@ CONFIGURE_ARGS+=	--with-sd-user=${BACULA_SD_USER:Q} --with-sd-group=${BACULA_GRO
 
 BUILD_DEFS+=		BACULA_DIR_USER BACULA_SD_USER BACULA_GROUP
 
+OWN_DIRS_PERMS+=	${BACULA_WORKINGDIR} ${ROOT_USER} ${BACULA_GROUP} 770
+
 PKG_USERS=		${BACULA_DIR_USER}:${BACULA_GROUP}
 PKG_USERS+=		${BACULA_SD_USER}:${BACULA_GROUP}
+PKG_GROUPS=		${BACULA_GROUP}
 
+CONF_FILES+=		${EXAMPLESDIR}/bacula-fd.conf ${PKG_SYSCONFDIR}/bacula-fd.conf
+CONF_FILES+=		${EXAMPLESDIR}/bconsole.conf ${PKG_SYSCONFDIR}/bconsole.conf
 CONF_FILES+=		${EXAMPLESDIR}/bacula-dir.conf ${PKG_SYSCONFDIR}/bacula-dir.conf
 CONF_FILES+=		${EXAMPLESDIR}/bacula-sd.conf ${PKG_SYSCONFDIR}/bacula-sd.conf
 
 RCD_SCRIPTS=		bacula bacula-dir bacula-sd bacula-fd
 
 .include "Makefile.common"
+
+PLIST_SRC+=		PLIST.common_end
 
 .include "../../mk/bsd.pkg.mk"
