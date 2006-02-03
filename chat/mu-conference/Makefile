@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/29 06:21:33 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/03 02:24:07 rillig Exp $
 #
 
 DISTNAME=		mu-conference-0.6.0
@@ -19,8 +19,10 @@ XMLCONFIG=		${WRKDIR}/${DISTNAME}/muc-jcr.xml
 
 USE_TOOLS+=		gmake pkg-config
 
-PKG_SYSCONFSUBDIR=      jabberd
-RCD_SCRIPTS=            muc
+PKG_SYSCONFSUBDIR=	jabberd
+RCD_SCRIPTS=		muc
+
+.include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=		JABBERD_USER JABBERD_LOGDIR JABBERD_PIDDIR
 JABBERD_USER?=		jabberd
@@ -29,29 +31,29 @@ FILES_SUBST+=		JABBERD_PIDDIR=${JABBERD_PIDDIR:Q}
 FILES_SUBST+=		JABBERD_USER=${JABBERD_USER:Q}
 
 EGDIR=			${PREFIX}/share/examples/jabberd
-CONF_FILES+=		${EGDIR}/muc-jcr.xml ${PKG_SYSCONFDIR}/muc-jcr.xml
+CONF_FILES+=		${EGDIR:Q}/muc-jcr.xml ${PKG_SYSCONFDIR:Q}/muc-jcr.xml
 
 INSTALLATION_DIRS=	bin
 
 post-extract:
-	@${MV} ${XMLCONFIG} ${XMLCONFIG}.in
+	@${MV} ${XMLCONFIG:Q} ${XMLCONFIG:Q}.in
 
 pre-configure:
-	@${SED}	-e "s|\(<logdir>\)[^<]*|\1${JABBERD_LOGDIR}|g" \
-		-e "s|\(<pidfile>\).|\1${JABBERD_PIDDIR}|g" \
-		-e "s|\(<spool>\).|\1${JABBERD_SPOOLDIR}|g" \
-		${XMLCONFIG}.in > ${XMLCONFIG}
+	@${SED}	-e 's|\(<logdir>\)[^<]*|\1${JABBERD_LOGDIR}|g' \
+		-e 's|\(<pidfile>\).|\1${JABBERD_PIDDIR}|g' \
+		-e 's|\(<spool>\).|\1${JABBERD_SPOOLDIR}|g' \
+		${XMLCONFIG:Q}.in > ${XMLCONFIG:Q}
 
 pre-build:
-	cd ${WRKDIR} ; ${PAX} -rw -pe ${DISTNAME} ${WRKSRC}
+	cd ${WRKDIR:Q} && ${PAX} -rw -pe ${DISTNAME:Q} ${WRKSRC:Q}
 
 post-build:
-	${CP} ${WRKSRC}/src/main.c ${WRKSRC}/src/jcomp.mk ${SUBWRKSRC}
-	cd ${SUBWRKSRC} ; ${SETENV} ${MAKE_ENV} ${GMAKE} -f jcomp.mk
+	${CP} ${WRKSRC:Q}/src/main.c ${WRKSRC:Q}/src/jcomp.mk ${SUBWRKSRC:Q}
+	cd ${SUBWRKSRC:Q} && ${SETENV} ${MAKE_ENV} ${GMAKE} -f jcomp.mk
 
 do-install:
-	${INSTALL_PROGRAM} ${SUBWRKSRC}/mu-conference ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}/muc-jcr.xml ${EGDIR}
+	${INSTALL_PROGRAM} ${SUBWRKSRC:Q}/mu-conference ${PREFIX:Q}/bin
+	${INSTALL_DATA} ${WRKSRC:Q}/${DISTNAME:Q}/muc-jcr.xml ${EGDIR:Q}
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
