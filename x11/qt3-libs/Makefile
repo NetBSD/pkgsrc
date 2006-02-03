@@ -1,4 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2006/01/24 07:33:00 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2006/02/03 10:08:14 abs Exp $
+
+PKGNAME=		qt3-libs-${QTVERSION}
+PKGREVISION=		2
+MAINTAINER=		adam@NetBSD.org
+COMMENT=		C++ X GUI toolkit
 
 LIBQT=			${WRKSRC}/lib/libqt-mt.la
 
@@ -9,11 +14,6 @@ GCC_REQD+=		3.4
 .endif
 
 .include "../../x11/qt3-libs/Makefile.common"
-
-PKGNAME=		qt3-libs-${QTVERSION}
-PKGREVISION=		2
-MAINTAINER=		adam@NetBSD.org
-COMMENT=		C++ X GUI toolkit
 
 BUILD_TARGET=		sub-plugins
 
