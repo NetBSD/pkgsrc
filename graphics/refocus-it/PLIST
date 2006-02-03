@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/16 11:52:43 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/03 13:55:58 rillig Exp $
 bin/refocus-it
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/refocus-it.mo
