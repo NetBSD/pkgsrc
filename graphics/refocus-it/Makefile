@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/01/24 07:32:17 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/03 11:28:23 joerg Exp $
 #
 
 DISTNAME=		refocus-it-2.0.0
@@ -13,6 +13,7 @@ COMMENT=		Refocus images
 GNU_CONFIGURE=		yes
 #just build the command line tool
 CONFIGURE_ARGS+=	--without-gimp
+BROKEN_GETTEXT_DETECTION=	yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
