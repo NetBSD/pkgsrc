@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12775 2006/02/03 10:27:04 martti Exp $
+$NetBSD: CHANGES,v 1.12776 2006/02/03 17:34:48 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -782,3 +782,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/grub to 0.97nb4 [jmmv 2006-02-03]
 	Updated mail/squirrelmail to 1.4.5nb4 [martti 2006-02-03]
 	Updated mail/ja-squirrelmail to 1.4.5nb4 [martti 2006-02-03]
+	Updated testproc/p5-Data-FormValidator to 4.12 [abs 2006-02-03]
