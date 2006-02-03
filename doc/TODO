@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4549 2006/02/02 15:17:46 ghen Exp $
+$NetBSD: TODO,v 1.4550 2006/02/03 00:17:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -372,8 +372,8 @@ Suggested package updates
 	o bind-8.4.7
 	o bind-9.3.2
 	o bioperl-1.5.0
-	o bittorrent-4.2.2
-	o bittorrent-gui-4.2.2
+	o bittorrent-4.4.0
+	o bittorrent-gui-4.4.0
 	o blackbox-0.70
 	o blender-2.41
 	o blur6ex-0.3.462
@@ -397,6 +397,7 @@ Suggested package updates
 	o ccd2iso-0.2
 	o cdl3-1.2.6
 	o cdrdao-1.2.1
+	o cdrtools-ossdvd-2.01.01a05
 	o cfengine2-2.1.17
 	o cfengine2-doc-2.1.14
 	o cfitsio-2.510
@@ -478,6 +479,7 @@ Suggested package updates
 	o elf-0.5.4p1
 	o elfsh-0.65rc1
 	o elinks-0.10.6 [pkg/31441]
+	o elinks-0.11.1
 	o elm-me-2.4pl122f
 	o elscreen-1.3.3
 	o emacs-w3m-1.4.4
@@ -523,10 +525,12 @@ Suggested package updates
 	o gcc-3.3.6
 	o gcc-4.0.2
 	o gcdmaster-1.2.1
+	o gcin-1.1.6
 	o gcombust-0.1.55
 	o gcpio-2.6
 	o gdb6-6.3.0
 	o gdsreader-0.3.2
+	o getmail-4.5.0
 	o gettext-0.14.5
 	o ggiterm-0.7.1
 	o gifsicle-1.44
@@ -682,7 +686,7 @@ Suggested package updates
 	o libtcl-nothread-8.4.9
 	o libwpd-0.8.3
 	o licq-core-1.3.0
-	o liferea-1.0.2
+	o liferea-1.0.3
 	o lighttpd-1.4.9
 	o lilypond-2.6.3
 	o linuxsms-0.77
@@ -695,7 +699,7 @@ Suggested package updates
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
 	o mailman-2.1.7
-	o mailscanner-4.49
+	o mailscanner-4.50
 	o makeself-2.1.4
 	o maketool-0.8.4
 	o makeztxt-1.60
@@ -996,7 +1000,8 @@ Suggested package updates
 	o py-pexpect-0.99999b
 	o py-pyrex-0.9.3.1
 	o py-soappy-0.11.6
-	o py-sqlite-2.1.0 [www/trac needs 1.x]
+	o py-sqlite-1.1.7
+	o py-sqlite-2.1.3 [www/trac needs 1.x]
 	o py-sybase-0.37
 	o py-textile-2.0.10
 	o py-twisted-2.0.0 
@@ -1051,7 +1056,8 @@ Suggested package updates
 	o rtcw-1.41.3
 	o ruby-RMagick-1.10.0 [pkg/32663]
 	o ruby-cmd-0.8.0
-	o rxvt-unicode-7.4
+	o rudiments-0.29
+	o rxvt-unicode-7.5
 	o sablecc-3.2
 	o sablevm-1.11.3 [pkg/30022]
 	o sablevm-1.12
@@ -1103,7 +1109,7 @@ Suggested package updates
 	o spamass-milter-1.0
 	o spamprobe-1.4a
 	o spim-7.2.1
-	o sqlite3-3.2.8
+	o sqlite3-3.3.3
 	o sqlitemanager-1.1.3
 	o sqlrelay-0.35
 	o srp_client-1.7.5 [jlam]
@@ -1126,6 +1132,7 @@ Suggested package updates
 	o swish-e-2.4.3
 	o sylpheed-claws-2.0.0
 	o sylpheed-claws-ghostscript-viewer-0.8
+	o sylpheed-devel-2.2.0beta7
 	o sympa-5.1
 	o sysinfo-4.2.2
 	o tcl-postgresql74-7.4.9
@@ -1147,8 +1154,8 @@ Suggested package updates
 	o tidy-20051006
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
-	o tkcvs-8.0.1
-	o tkdiff-4.1.1
+	o tkcvs-8.0.2
+	o tkdiff-4.1.2
 	o tkgate-1.8.6
 	o tkhylafax-3.2
 	o tkman-2.2
@@ -1194,7 +1201,7 @@ Suggested package updates
 	o wap-utils-1.4.1
 	o wcalc-2.1.2
 	o wdm-1.28
-	o webmin-1.250
+	o webmin-1.260
 	o weechat-0.1.6
 	o weewm-0.01
 	o winbind-3.0.13
@@ -1251,7 +1258,7 @@ Suggested package updates
 	o xnap-2.5r3
 	o xorg-7.0
 	o xorp-1.1
-	o xpad-2.9
+	o xpad-2.11
 	o xpp-1.5
 	o xpuyopuyo-0.9.5
 	o xrmap-2.33
@@ -1270,7 +1277,7 @@ Suggested package updates
 	o ysm-2.9.7
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.2.11
+	o zile-2.2.12
 	o zircon-1.18.256
 	o zope-2.9.0
 	o zope25-AbracadabraObject-2.0.0
