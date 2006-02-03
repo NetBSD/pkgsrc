@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.1 2006/01/06 18:14:06 joerg Exp $
+$NetBSD: patch-as,v 1.2 2006/02/03 02:19:42 rillig Exp $
 
 --- drc/DRCmain.c.orig	2005-12-20 16:40:25.000000000 +0000
 +++ drc/DRCmain.c
-@@ -35,8 +35,6 @@ static char rcsid[] = "$Header: /ufs/rep
+@@ -35,8 +35,6 @@
  #include "drc/drc.h"
  #include "undo/undo.h"
  

@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.2 2006/01/06 18:14:06 joerg Exp $
+$NetBSD: patch-ai,v 1.3 2006/02/03 02:19:42 rillig Exp $
 
 --- extflat/EFread.c.orig	2001-01-12 22:12:35.000000000 +0000
 +++ extflat/EFread.c
-@@ -24,7 +24,7 @@ static char rcsid[] = "$Header: /ufs/rep
+@@ -24,7 +24,7 @@
  #include <stdio.h>
  #include <ctype.h>
  #include <stdlib.h>
@@ -11,7 +11,7 @@ $NetBSD: patch-ai,v 1.2 2006/01/06 18:14:06 joerg Exp $
  #include "misc/magic.h"
  #include "utils/geometry.h"
  #include "utils/hash.h"
-@@ -33,6 +33,9 @@ static char rcsid[] = "$Header: /ufs/rep
+@@ -33,6 +33,9 @@
  #include "extflat/EFint.h"
  #include "misc/paths.h"
  
