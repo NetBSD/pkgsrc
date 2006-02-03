@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12770 2006/02/03 00:47:32 wiz Exp $
+$NetBSD: CHANGES,v 1.12771 2006/02/03 04:46:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -767,3 +767,11 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/p5-YAML to 0.57  [abs 2006-02-02]
 	Added fonts/mplayer-fonts version 20030714 [wiz 2006-02-03]
 	Updated multimedia/mplayer-share to 1.0rc7nb2 [wiz 2006-02-03]
+	Updated databases/ruby-postgresql to 0.7.1nb6 [taca 2006-02-03]
+	Updated devel/newfile to 1.0.14nb3 [taca 2006-02-03]
+	Updated devel/ruby-ncurses to 1.0nb1 [taca 2006-02-03]
+	Updated graphics/x11rec to 0.3nb2 [taca 2006-02-03]
+	Updated net/ruby-icmp to 0.2.2nb2 [taca 2006-02-03]
+	Updated sysutils/pdumpfs to 1.3nb1 [taca 2006-02-03]
+	Updated textproc/ruby-rdtool to 0.6.18nb1 [taca 2006-02-03]
+	Updated www/raggle to 0.4.4nb1 [taca 2006-02-03]
