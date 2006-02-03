@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/03 04:43:47 taca Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/03 15:19:48 taca Exp $
 
 DISTNAME=	raggle-0.4.4
 PKGREVISION=	1
@@ -10,12 +10,6 @@ HOMEPAGE=	http://www.raggle.org/
 COMMENT=	Console-based screen(1)-aware RSS reader written in Ruby
 
 DEPENDS+=	${RUBY_PKGPREFIX}-ncurses>=0.8:../../devel/ruby-ncurses
-
-.include "../../lang/ruby/rubyversion.mk"
-
-.if ${RUBY_VER} == "16"
-DEPENDS+=	${RUBY_PKGPREFIX}-rexml>=2.4.0:../../textproc/ruby-rexml
-.endif
 
 NO_BUILD=	yes
 
