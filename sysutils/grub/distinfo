@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.18 2005/11/12 06:35:24 jlam Exp $
+$NetBSD: distinfo,v 1.19 2006/02/03 09:59:32 jmmv Exp $
 
 SHA1 (grub-0.97.tar.gz) = 2580626c4579bd99336d3af4482c346c95dac4fb
 RMD160 (grub-0.97.tar.gz) = 7fb5674edf0c950bd38e94f85ff1e2909aa741f0
 Size (grub-0.97.tar.gz) = 971783 bytes
-SHA1 (patch-ac) = c2c657af9b4ed15991d642a1359cb65d61662df6
+SHA1 (patch-ac) = dc7774a09ca88f6696e0680a7be39df56244eedc
 SHA1 (patch-ad) = 613e915a015ad22c9bd5712d416e12b1b81fdb93
 SHA1 (patch-ae) = 96d8283e90ceb3e887ba0ada05619858c52bc144
 SHA1 (patch-ai) = 60088cf6786a364da37e19fbb5df4c6fd7641016
