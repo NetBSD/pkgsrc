@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2006/01/20 23:57:26 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2006/02/03 10:26:44 martti Exp $
 
 DISTNAME=	squirrelmail-1.4.5
 PKGNAME=	ja-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
 EXTRACT_SUFX=	.tar.bz2
@@ -56,7 +56,7 @@ SUBST_FILES.paths=	${WRKDIR}/squirrelmail.conf.dist config/config_default.php
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@ATTACHMENTS_DIR@,${ATTACHMENTS_DIR},g'
 SUBST_SED.paths+=	-e 's,@USER_PREFS_DIR@,${USER_PREFS_DIR},g'
-SUBST_SED.paths+=	-e 's,@SMDIRDIR@,${SMDIR},g'
+SUBST_SED.paths+=	-e 's,@SMDIR@,${SMDIR},g'
 SUBST_STAGE.paths=	post-patch
 
 post-extract:
