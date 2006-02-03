@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4553 2006/02/03 17:34:49 abs Exp $
+$NetBSD: TODO,v 1.4554 2006/02/03 20:35:51 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -506,7 +506,6 @@ Suggested package updates
 	o findutils-4.2.27
 	o firefox-1.5.0.1 [ghen]
 	o firefox-gtk1-1.5.0.1 [ghen]
-	o firefox-bin-1.5.0.1
 	o flac123-0.0.9
 	o flashplayer-0.4.13
 	o fmsx-3.0
