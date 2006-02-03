@@ -1,33 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2005/10/02 11:23:08 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/03 00:39:55 wiz Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	mplayer-share-${MPLAYER_PKG_VERSION}
-PKGREVISION=	1
-COMMENT=	Documentation and fonts used by mplayer and gmplayer
+PKGREVISION=	2
+COMMENT=	Documentation used by mplayer and gmplayer
+
+DEPENDS+=	mplayer-fonts-[0-9]*:../../fonts/mplayer-fonts
 
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
-
-MP_FONTS=	font-arial-iso-8859-1.tar.bz2 \
-		font-arial-iso-8859-2.tar.bz2 \
-		font-arial-cp1250.tar.bz2
-FONT_DIRS=	font-arial-cp1250 font-arial-iso-8859-1 font-arial-iso-8859-2
-
-.for font in ${MP_FONTS}
-SITES_${font}=	http://ftp5.mplayerhq.hu/mplayer/releases/fonts/ \
-		http://www4.mplayerhq.hu/MPlayer/releases/fonts/ \
-		ftp://ftp2.mplayerhq.hu/MPlayer/releases/fonts/ \
-		ftp://ftp1.mplayerhq.hu/MPlayer/releases/fonts \
-		ftp://ftp5.mplayerhq.hu/mplayer/releases/fonts/ \
-		http://www1.mplayerhq.hu/MPlayer/releases/fonts/ \
-		http://www2.mplayerhq.hu/MPlayer/releases/fonts/
-.endfor
-
-DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=	${MP_FONTS}
-
-.include "../../mk/bsd.prefs.mk"
 
 INSTALLATION_DIRS=	man/man1
 
@@ -35,7 +17,6 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/DOCS/man/en/mplayer.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer/DOCS
-	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer/fonts
 	${INSTALL_DATA} ${WRKSRC}/etc/codecs.conf ${PREFIX}/share/mplayer
 	${INSTALL_DATA} ${WRKSRC}/etc/input.conf ${PREFIX}/share/mplayer
 	(cd ${WRKSRC}/DOCS && \
@@ -44,11 +25,5 @@ do-install:
      		${PKGDIRMODE} \{\} \;
 	${FIND} ${PREFIX}/share/mplayer/DOCS -type f -exec ${CHMOD} \
   		${SHAREMODE} \{\} \;
-	for D in ${FONT_DIRS}; do \
-		(cd ${WRKDIR}/$$D && \
-			${PAX} -rwpppm * ${PREFIX}/share/mplayer/fonts); \
-	done
-	${LN} -s ${PREFIX}/share/mplayer/fonts/font-arial-18-iso-8859-1 \
-		${PREFIX}/share/mplayer/font
 
 .include "../../mk/bsd.pkg.mk"
