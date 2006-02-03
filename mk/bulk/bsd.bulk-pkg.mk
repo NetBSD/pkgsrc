@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.113 2006/01/21 15:44:23 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.114 2006/02/03 20:47:06 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -346,12 +346,8 @@ bulk-package:
 		installed=0; \
 	fi ; \
 	if [ $$uptodate = 1 ]; then \
-		( if [ $$installed = 1 ]; then \
-			${BULK_MSG} "Package ${PKGNAME} is up-to-date, and still installed" ; \
-		else \
-			${BULK_MSG} "Nothing to be done." ; \
-		fi \
-		) 2>&1 | ${TEE} -a ${_BUILDLOG:Q}; \
+		{ ${BULK_MSG} "Nothing to be done for ${PKGNAME}." ; \
+		} 2>&1 | ${TEE} -a ${_BUILDLOG:Q}; \
 	else \
 		( if [ $$installed = 1 ]; then \
 			${BULK_MSG} "Removing outdated (installed) package ${PKGNAME} first." ; \
