@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/01/24 07:32:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/03 04:43:47 taca Exp $
 #
 
 DISTNAME=	x11rec-0.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://namazu.org/~satoru/x11rec/
 
