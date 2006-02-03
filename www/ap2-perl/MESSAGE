@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2005/09/04 22:36:18 wiz Exp $
+$NetBSD: MESSAGE,v 1.5 2006/02/03 01:04:59 wiz Exp $
 
 In order to enable mod_perl in your Apache installation, you need to add
 the following to your httpd.conf file:
@@ -8,7 +8,7 @@ the following to your httpd.conf file:
 
 To enable the mod_perl-1.0 compatibility API, you will also need:
 
-	PerlModule Apache::compat
+	PerlModule Apache2::compat
 
 Please also refer to the documentation in:
 
