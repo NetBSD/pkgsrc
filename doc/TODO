@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4561 2006/02/04 14:18:01 wiz Exp $
+$NetBSD: TODO,v 1.4562 2006/02/04 17:06:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -552,7 +552,6 @@ Suggested package updates
 	o gnocatan-0.8.1.30
 	o gnome-mag-0.12.3
 	o gnome-pilot-2.0.13
-	o gnumeric-1.6.2
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
@@ -712,7 +711,6 @@ Suggested package updates
 	o memcached-1.1.12 [pkg/30289]
 	o memcached-1.2
 	o memtest86-3.2
-	o mergeant-0.62
 	o metakit-2.4.9.4
 	o mftrace-1.1.17
 	o mgetty-1.1.33
