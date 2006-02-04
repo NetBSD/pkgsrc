@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/02/04 23:39:50 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/04 23:47:56 rillig Exp $
 #
 
 DISTNAME=	cs113ins
@@ -12,15 +12,17 @@ HOMEPAGE=	http://cardboard.nu/downloads/
 COMMENT=	Project and resource management software implemented in Java/Swing
 
 USE_X11BASE=	yes
-DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
 RESTRICTED=	"License prohibits redistribution on CDROM"
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar unzip
 
-EXTRACT_CMD=	cd ${WRKDIR} && unzip -x ${DOWNLOADED_DISTFILE}
+EXTRACT_CMD=	cd ${WRKDIR} && {					\
+			${UNZIP_CMD} -x ${DOWNLOADED_DISTFILE}		\
+			|| ${TEST} -f InstallerData/Installer.zip;	\
+		}
 WRKSRC=		${WRKDIR}
 
 CSFILES=	cs/images/Logo2.gif \
@@ -34,7 +36,7 @@ CSFILES=	cs/images/Logo2.gif \
 INSTALLATION_DIRS=	bin
 
 post-extract:
-	cd ${WRKDIR} && unzip -x InstallerData/Installer.zip
+	cd ${WRKDIR} && ${UNZIP_CMD} -x InstallerData/Installer.zip
 
 do-build:
 	${SED} -e s,@PREFIX@,${PREFIX},g < ${FILESDIR}/csched.sh > ${WRKDIR}/csched.tmp
