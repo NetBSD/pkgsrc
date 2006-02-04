@@ -1,8 +1,25 @@
-$NetBSD: patch-aa,v 1.6 2006/01/17 12:44:33 tron Exp $
+$NetBSD: patch-aa,v 1.7 2006/02/04 21:02:31 markd Exp $
 
---- mDNSPosix/Makefile.orig	2006-01-06 01:06:17.000000000 +0000
-+++ mDNSPosix/Makefile	2006-01-17 11:30:40.000000000 +0000
-@@ -643,7 +643,7 @@
+--- mDNSPosix/Makefile.orig	2006-01-06 14:06:17.000000000 +1300
++++ mDNSPosix/Makefile
+@@ -281,6 +281,7 @@ CFLAGS_OS = -DNOT_HAVE_DAEMON -DNOT_HAVE
+ CC = gcc
+ LD = gcc -shared
+ LIBFLAGS = -lsocket -lnsl -lresolv
++SYSTEMLIBS = -lsocket -lnsl
+ JAVACFLAGS_OS += -I$(JDK)/include/solaris
+ ifneq ($(DEBUG),1)
+ STRIP = strip
+@@ -450,7 +451,7 @@ Clients: setup libdns_sd ../Clients/buil
+ 	@echo "Clients done"
+ 
+ ../Clients/build/dns-sd:
+-	@$(MAKE) -C ../Clients
++	@$(MAKE) -C ../Clients SYSTEMLIBS="$(SYSTEMLIBS)"
+ 
+ # nss_mdns target builds the Name Service Switch module
+ nss_mdns: setup $(BUILDDIR)/$(NSSLIBFILE)
+@@ -643,7 +644,7 @@ $(BUILDDIR)/mDNSNetMonitor:          $(S
  	$(CC) $+ -o $@ $(LIBFLAGS)
  
  $(BUILDDIR)/dnsextd:                 $(SPECIALOBJ) $(OBJDIR)/dnsextd.c.threadsafe.o
