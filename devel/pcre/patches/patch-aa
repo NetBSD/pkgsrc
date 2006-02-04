@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2005/10/31 20:33:24 tv Exp $
+$NetBSD: patch-aa,v 1.9 2006/02/04 17:13:49 wiz Exp $
 
---- Makefile.in.orig	2005-09-12 04:45:39.000000000 -0400
+--- Makefile.in.orig	2006-02-02 12:04:11.000000000 +0100
 +++ Makefile.in
-@@ -105,7 +105,7 @@ LTCOMPILE = $(LIBTOOL) --mode=compile $(
+@@ -106,7 +106,7 @@ LTCOMPILE = $(LIBTOOL) --mode=compile $(
  LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) -c $(CXXFLAGS) -I. -I$(top_srcdir) $(NEWLINE) $(LINK_SIZE) $(MATCH_LIMIT) $(NO_RECURSE) $(EBCDIC)
  @ON_WINDOWS@LINK = $(CC) $(LDFLAGS) -I. -I$(top_srcdir) -L.libs
  @NOT_ON_WINDOWS@LINK = $(LIBTOOL) --mode=link $(CC) $(CFLAGS) $(LDFLAGS) -I. -I$(top_srcdir)
@@ -10,4 +10,4 @@ $NetBSD: patch-aa,v 1.8 2005/10/31 20:33:24 tv Exp $
 +LINKLIB = $(LIBTOOL) --mode=link --tag=CC $(CC) -export-symbols-regex '^[^_]' $(LDFLAGS) -I. -I$(top_srcdir)
  LINK_FOR_BUILD = $(LIBTOOL) --mode=link $(CC_FOR_BUILD) $(CFLAGS_FOR_BUILD) $(LDFLAGS_FOR_BUILD) -I. -I$(top_srcdir)
  @ON_WINDOWS@CXXLINK = $(CXX) $(LDFLAGS) -I. -I$(top_srcdir) -L.libs
- @NOT_ON_WINDOWS@CXXLINK = $(LIBTOOL) --mode=link $(CXX) $(LDFLAGS) -I. -I$(top_srcdir)
+ @NOT_ON_WINDOWS@CXXLINK = $(LIBTOOL) --mode=link $(CXX) $(LDFLAGS) $(CXXLDFLAGS) -I. -I$(top_srcdir)
