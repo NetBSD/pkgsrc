@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12779 2006/02/04 00:41:43 wiz Exp $
+$NetBSD: CHANGES,v 1.12780 2006/02/04 02:19:14 ben Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -787,3 +787,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/ir-account version 0.1 [gdt 2006-02-03]
 	Removed security/ssh2-nox11 [wiz 2006-02-04]
 	Updated www/elinks to 0.11.1 [wiz 2006-02-04]
+	Updated textproc/p5-PDF-API2 to 0.51 [ben 2006-02-04]
