@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.114 2006/02/03 20:47:06 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.115 2006/02/04 01:08:25 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -71,6 +71,11 @@ USE_BULK_TIMESTAMPS?=	yes
 # to build this package
 PRECLEAN?=	yes
 
+# Sometimes it's useful to not only keep the build logs from broken
+# packages, but also the ones from packages that worked.
+# This feature is still experimental.
+KEEP_BUILDLOGS?=	no
+
 # If OBJHOSTNAME is set, use first component of hostname in cache and log files
 # If OBJMACHINE is set, use ${MACHINE_ARCH} in the cache and log files
 .if defined(OBJHOSTNAME)
@@ -87,6 +92,10 @@ BULK_ID?=
 #
 # Package-specific files
 #
+
+# If the package has been built successfully, and if KEEP_BUILDLOGS is
+# set to "yes", the build log is saved in this file.
+BUILD_SUCCEEDED_FILE?=	.build_succeeded${BULK_ID}
 
 # This file exists to mark a package as broken
 BROKENFILE?=	.broken${BULK_ID}.html
@@ -191,6 +200,7 @@ _BROKENFILE=		${_BULK_PKGLOGDIR}/${BROKENFILE}
 _BROKENWRKLOG=		${_BULK_PKGLOGDIR}/${BROKENWRKLOG}
 _BUILDLOG=		${_BULK_PKGLOGDIR}/${BUILDLOG}
 _FORCEBROKENFILE=	${_BULK_PKGLOGDIR}/${FORCEBROKENFILE}
+_BUILD_SUCCEEDED_FILE=	${_BULK_PKGLOGDIR}/${BUILD_SUCCEEDED_FILE}
 
 # Only create directories if ${PKGSRCDIR} != ${BULKFILESDIR}
 .if ${PKGSRCDIR} != ${BULKFILESDIR}
@@ -438,7 +448,12 @@ bulk-package:
 		${DO}     ( ${MAKE} package 2>&1 ); \
 		) 2>&1 | ${TEE} -a ${_BUILDLOG:Q} ; \
 		if [ -f ${PKGFILE} ]; then \
-			${RM} ${_BUILDLOG:Q} ; \
+			case ${KEEP_BUILDLOGS} in			\
+			yes)	${MV} ${_BUILDLOG:Q} ${_BUILD_SUCCEEDED_FILE:Q}; \
+				;;					\
+			no)	${RM} ${_BUILDLOG:Q};			\
+				;;					\
+			esac;						\
 		else \
 			${MV} ${_BUILDLOG:Q} ${_BROKENFILE:Q} ;\
 			if [ -f "${WRKLOG}" ]; then \
@@ -515,7 +530,13 @@ bulk-package:
 		${BULK_MSG} "Build for ${PKGNAME} was not successful, aborting." | ${TEE} -a ${_BROKENFILE:Q} ; \
 		exit 1; \
 	else \
-		${RM} -f ${_BUILDLOG:Q} ;\
+		case ${KEEP_BUILDLOGS} in				\
+		yes)	${TEST} ! -f ${_BUILDLOG:Q}			\
+			|| ${MV} ${_BUILDLOG:Q} ${_BUILD_SUCCEEDED_FILE:Q}; \
+			;;						\
+		no)	${RM} -f ${_BUILDLOG:Q};			\
+			;;						\
+		esac;							\
 	fi
 .if ${BULKFILESDIR} != ${PKGSRCDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
