@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2006/02/04 17:19:54 joerg Exp $
+
+--- libaegis/getpw_cache.c.orig	2006-01-05 17:42:08.000000000 +0000
++++ libaegis/getpw_cache.c
+@@ -49,8 +49,8 @@ passwd_null(void)
+ #ifndef SOURCE_FORGE_HACK
+ 	result->pw_name = 0;
+ 	result->pw_passwd = 0;
+-	result->pw_uid = (__uid_t)-1;
+-	result->pw_gid = (__gid_t)-1;
++	result->pw_uid = (uid_t)-1;
++	result->pw_gid = (gid_t)-1;
+ 	result->pw_gecos = 0;
+ #ifdef HAVE_pw_comment
+ 	result->pw_comment = 0;
