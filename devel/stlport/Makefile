@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/12/05 20:50:08 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2006/02/04 15:27:16 rillig Exp $
 
 DISTNAME=	STLport-4.6
 PKGNAME=	stlport-4.6
@@ -15,7 +15,7 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
 NO_CONFIGURE=	yes
-BUILD_DIRS=	${WRKSRC}/src
+BUILD_DIRS=	src
 
 MAKE_ENV+=	CXXFLAGS=${CXXFLAGS:M*:Q}
 MAKEFILE=	gcc-libtool.mak
@@ -24,31 +24,36 @@ PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
 LDFLAGS+=		${PTHREAD_LIBS}
 
-INCDIR=		${PREFIX}/include/stlport
 LIBDIR=		${PREFIX}/lib
 HTMLDIR=	${PREFIX}/share/doc/html/stlport
 
 INSTALLATION_DIRS=	include lib
 
 pre-install:
-	cd ${WRKSRC}/stlport && ${RM} -rf BC50 config/new_compiler old_hp
-	${FIND} ${WRKSRC}/stlport -name "*.orig" -print | ${XARGS} ${RM} -f
+	cd ${WRKSRC:Q}/stlport && ${RM} -rf BC50 config/new_compiler old_hp
 
 do-install:
-	cd ${WRKSRC} && ${PAX} -rw stlport ${PREFIX}/include
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INCDIR}
-	${CHMOD} -R ${SHAREMODE} ${INCDIR}
-	${CHMOD} -R a+X ${INCDIR}
+	set -e;								\
+	cd ${WRKSRC:Q};							\
+	${FIND} stlport -type d -print					\
+	| while read d; do						\
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/include/"$$d";			\
+	done;								\
+	${FIND} stlport -type f ! -name "*.orig" -print			\
+	| while read f; do						\
+	${INSTALL_DATA} "$$f" ${PREFIX:Q}/include/"$$f";		\
+	done
+	set -e;								\
 	for lib in							\
 		libstlport_gcc.la					\
 		libstlport_gcc_stldebug.la;				\
 	do								\
-		${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/lib/$${lib} ${LIBDIR}; \
+		${LIBTOOL} ${INSTALL_LIB} ${WRKSRC:Q}/lib/"$$lib" ${LIBDIR:Q}; \
 	done
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	${INSTALL_DATA_DIR} ${HTMLDIR}/images
-	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.css *.html ${HTMLDIR}
-	cd ${WRKSRC}/doc; ${INSTALL_DATA} images/* ${HTMLDIR}/images
+	${INSTALL_DATA_DIR} ${HTMLDIR:Q}
+	${INSTALL_DATA_DIR} ${HTMLDIR:Q}/images
+	cd ${WRKSRC:Q}/doc && ${INSTALL_DATA} *.css *.html ${HTMLDIR:Q}
+	cd ${WRKSRC:Q}/doc && ${INSTALL_DATA} images/* ${HTMLDIR:Q}/images
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
