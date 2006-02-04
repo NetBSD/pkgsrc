@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/01/17 23:41:49 tron Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/04 21:02:31 markd Exp $
 
 DISTNAME=	mDNSResponder-107.5
 CATEGORIES=	net
@@ -48,7 +48,8 @@ INSTALLATION_DIRS=	bin include lib sbin
 .if !empty(MACHINE_PLATFORM:MNetBSD-3.99.[1-7]-*) || \
     !empty(MACHINE_PLATFORM:MNetBSD-3.[0-9]-*) || \
     !empty(MACHINE_PLATFORM:MNetBSD-3.[0-9][._]*) || \
-    !empty(MACHINE_PLATFORM:MNetBSD-[0-2]*)
+    !empty(MACHINE_PLATFORM:MNetBSD-[0-2]*) || \
+    !empty(MACHINE_PLATFORM:MSunOS-5.[0-9]-*)
 .include "../../devel/librfuncs/buildlink3.mk"
 
 MAKE_ENV+=	EXTRA_LIBS=-Wl,-R${BUILDLINK_PREFIX.librfuncs:Q}/lib\ ${BUILDLINK_LDFLAGS.librfuncs:Q}
