@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12786 2006/02/04 11:56:51 markd Exp $
+$NetBSD: CHANGES,v 1.12787 2006/02/04 12:05:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -794,3 +794,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/rxvt-unicode to 7.5 [wiz 2006-02-04]
 	Updated graphics/librsvg2 to 2.12.7nb2 [hira 2006-02-04]
 	Updated math/glpk to 4.9 [markd 2006-02-04]
+	Updated sysutils/cdrtools-ossdvd to 2.01.1.36 [wiz 2006-02-04]
