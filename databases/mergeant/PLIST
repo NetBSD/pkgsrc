@@ -1,206 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2005/02/24 19:18:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/02/04 17:03:30 wiz Exp $
 bin/mergeant
-bin/mg-db-browser
-bin/mg-test-dyn
-bin/mg-test-graph
-bin/mg-test-grapher
-bin/mg-test-handlers
-bin/mg-test-selector
-bin/mg-test-sqlquery
-bin/mg-test1
-bin/mg-test2
-bin/mg-test3
-bin/mg-verify-file
-include/libmergeant/graph/mg-canvas-cursor.h
-include/libmergeant/graph/mg-canvas-db-relations.h
-include/libmergeant/graph/mg-canvas-entity.h
-include/libmergeant/graph/mg-canvas-field.h
-include/libmergeant/graph/mg-canvas-fkconstraint.h
-include/libmergeant/graph/mg-canvas-item.h
-include/libmergeant/graph/mg-canvas-text.h
-include/libmergeant/graph/mg-canvas-tip.h
-include/libmergeant/graph/mg-canvas.h
-include/libmergeant/graph/mg-graph-item.h
-include/libmergeant/graph/mg-graph.h
-include/libmergeant/handlers/mg-data-cell-renderer-boolean.h
-include/libmergeant/handlers/mg-data-cell-renderer-combo.h
-include/libmergeant/handlers/mg-data-cell-renderer-info.h
-include/libmergeant/handlers/mg-data-cell-renderer-textual.h
-include/libmergeant/handlers/mg-entry-boolean.h
-include/libmergeant/handlers/mg-entry-combo.h
-include/libmergeant/handlers/mg-entry-none.h
-include/libmergeant/handlers/mg-entry-shell.h
-include/libmergeant/handlers/mg-entry-string.h
-include/libmergeant/handlers/mg-entry-time.h
-include/libmergeant/handlers/mg-entry-wrapper.h
-include/libmergeant/handlers/mg-handler-boolean.h
-include/libmergeant/handlers/mg-handler-none.h
-include/libmergeant/handlers/mg-handler-numerical.h
-include/libmergeant/handlers/mg-handler-string.h
-include/libmergeant/handlers/mg-handler-time.h
-include/libmergeant/libmergeant.h
-include/libmergeant/marshal.h
-include/libmergeant/mg-base.h
-include/libmergeant/mg-condition.h
-include/libmergeant/mg-conf.h
-include/libmergeant/mg-context.h
-include/libmergeant/mg-custom-layout.h
-include/libmergeant/mg-data-entry.h
-include/libmergeant/mg-data-handler.h
-include/libmergeant/mg-database.h
-include/libmergeant/mg-db-constraint.h
-include/libmergeant/mg-db-field.h
-include/libmergeant/mg-db-table.h
-include/libmergeant/mg-dbms-update-viewer.h
-include/libmergeant/mg-defs.h
-include/libmergeant/mg-entity.h
-include/libmergeant/mg-enums.h
-include/libmergeant/mg-field.h
-include/libmergeant/mg-form.h
-include/libmergeant/mg-graphviz.h
-include/libmergeant/mg-join.h
-include/libmergeant/mg-parameter.h
-include/libmergeant/mg-qf-all.h
-include/libmergeant/mg-qf-field.h
-include/libmergeant/mg-qf-func.h
-include/libmergeant/mg-qf-value.h
-include/libmergeant/mg-qfield.h
-include/libmergeant/mg-query.h
-include/libmergeant/mg-ref-base.h
-include/libmergeant/mg-referer.h
-include/libmergeant/mg-renderer.h
-include/libmergeant/mg-result-set.h
-include/libmergeant/mg-selector-private.h
-include/libmergeant/mg-selector.h
-include/libmergeant/mg-server-aggregate.h
-include/libmergeant/mg-server-data-type.h
-include/libmergeant/mg-server-function.h
-include/libmergeant/mg-server.h
-include/libmergeant/mg-target.h
-include/libmergeant/mg-util.h
-include/libmergeant/mg-work-core.h
-include/libmergeant/mg-work-form.h
-include/libmergeant/mg-work-grid.h
-include/libmergeant/mg-work-layout.h
-include/libmergeant/mg-work-matrix.h
-include/libmergeant/mg-work-widget.h
-include/libmergeant/mg-xml-storage.h
-include/libmergeant/missing.h
-include/libmergeant/sel-aggregates.h
-include/libmergeant/sel-data-types.h
-include/libmergeant/sel-forms.h
-include/libmergeant/sel-functions.h
-include/libmergeant/sel-graphs.h
-include/libmergeant/sel-onequery.h
-include/libmergeant/sel-onetable.h
-include/libmergeant/sel-onetarget.h
-include/libmergeant/sel-queries.h
-include/libmergeant/sel-tables.h
-include/libmergeant/utility.h
 lib/bonobo/servers/GNOME_Mergeant.server
-lib/libmergeant-2.la
-lib/libmergeant_graph-2.la
-lib/libmergeant_handlers-2.la
-lib/pkgconfig/libmergeant.pc
 share/application-registry/mergeant.applications
 share/applications/mergeant.desktop
-share/doc/html/libmergeant/MgBase.html
-share/doc/html/libmergeant/MgCanvas.html
-share/doc/html/libmergeant/MgCanvasCursor.html
-share/doc/html/libmergeant/MgCanvasDbRelations.html
-share/doc/html/libmergeant/MgCanvasEntity.html
-share/doc/html/libmergeant/MgCanvasField.html
-share/doc/html/libmergeant/MgCanvasItem.html
-share/doc/html/libmergeant/MgCanvasText.html
-share/doc/html/libmergeant/MgCanvasTip.html
-share/doc/html/libmergeant/MgCondition.html
-share/doc/html/libmergeant/MgConf.html
-share/doc/html/libmergeant/MgContext.html
-share/doc/html/libmergeant/MgCustomLayout.html
-share/doc/html/libmergeant/MgDataCellRendererBoolean.html
-share/doc/html/libmergeant/MgDataCellRendererInfo.html
-share/doc/html/libmergeant/MgDataCellRendererTextual.html
-share/doc/html/libmergeant/MgDataEntry.html
-share/doc/html/libmergeant/MgDataHandler.html
-share/doc/html/libmergeant/MgDatabase.html
-share/doc/html/libmergeant/MgDbConstraint.html
-share/doc/html/libmergeant/MgDbField.html
-share/doc/html/libmergeant/MgDbTable.html
-share/doc/html/libmergeant/MgDbmsUpdateViewer.html
-share/doc/html/libmergeant/MgEntity.html
-share/doc/html/libmergeant/MgEntryBoolean.html
-share/doc/html/libmergeant/MgEntryCidr.html
-share/doc/html/libmergeant/MgEntryCombo.html
-share/doc/html/libmergeant/MgEntryNone.html
-share/doc/html/libmergeant/MgEntryPassmd5.html
-share/doc/html/libmergeant/MgEntryShell.html
-share/doc/html/libmergeant/MgEntryString.html
-share/doc/html/libmergeant/MgEntryTime.html
-share/doc/html/libmergeant/MgEntryWrapper.html
-share/doc/html/libmergeant/MgField.html
-share/doc/html/libmergeant/MgForm.html
-share/doc/html/libmergeant/MgGraph.html
-share/doc/html/libmergeant/MgGraphItem.html
-share/doc/html/libmergeant/MgGraphviz.html
-share/doc/html/libmergeant/MgHandlerBoolean.html
-share/doc/html/libmergeant/MgHandlerCidr.html
-share/doc/html/libmergeant/MgHandlerNone.html
-share/doc/html/libmergeant/MgHandlerNumerical.html
-share/doc/html/libmergeant/MgHandlerPassmd5.html
-share/doc/html/libmergeant/MgHandlerString.html
-share/doc/html/libmergeant/MgHandlerText.html
-share/doc/html/libmergeant/MgHandlerTime.html
-share/doc/html/libmergeant/MgJoin.html
-share/doc/html/libmergeant/MgParameter.html
-share/doc/html/libmergeant/MgQfAll.html
-share/doc/html/libmergeant/MgQfField.html
-share/doc/html/libmergeant/MgQfFunc.html
-share/doc/html/libmergeant/MgQfValue.html
-share/doc/html/libmergeant/MgQfield.html
-share/doc/html/libmergeant/MgQuery.html
-share/doc/html/libmergeant/MgRefBase.html
-share/doc/html/libmergeant/MgReferer.html
-share/doc/html/libmergeant/MgRenderer.html
-share/doc/html/libmergeant/MgResultSet.html
-share/doc/html/libmergeant/MgSelector.html
-share/doc/html/libmergeant/MgServer.html
-share/doc/html/libmergeant/MgServerAggregate.html
-share/doc/html/libmergeant/MgServerDataType.html
-share/doc/html/libmergeant/MgServerFunction.html
-share/doc/html/libmergeant/MgTarget.html
-share/doc/html/libmergeant/MgWorkCore.html
-share/doc/html/libmergeant/MgWorkForm.html
-share/doc/html/libmergeant/MgWorkGrid.html
-share/doc/html/libmergeant/MgWorkLayout.html
-share/doc/html/libmergeant/MgWorkMatrix.html
-share/doc/html/libmergeant/MgWorkWidget.html
-share/doc/html/libmergeant/MgXmlStorage.html
-share/doc/html/libmergeant/ch01.html
-share/doc/html/libmergeant/ch02.html
-share/doc/html/libmergeant/ch03.html
-share/doc/html/libmergeant/ch04.html
-share/doc/html/libmergeant/ch04s02.html
-share/doc/html/libmergeant/ch05.html
-share/doc/html/libmergeant/ch06.html
-share/doc/html/libmergeant/ch07.html
-share/doc/html/libmergeant/ch08.html
-share/doc/html/libmergeant/ch08s02.html
-share/doc/html/libmergeant/ch09.html
-share/doc/html/libmergeant/ch09s02.html
-share/doc/html/libmergeant/ch09s03.html
-share/doc/html/libmergeant/ch10.html
-share/doc/html/libmergeant/ch11.html
-share/doc/html/libmergeant/ch12.html
-share/doc/html/libmergeant/example_bad.png
-share/doc/html/libmergeant/example_result.png
-share/doc/html/libmergeant/home.png
-share/doc/html/libmergeant/index.html
-share/doc/html/libmergeant/index.sgml
-share/doc/html/libmergeant/left.png
-share/doc/html/libmergeant/libmergeant.devhelp
-share/doc/html/libmergeant/query01.png
-share/doc/html/libmergeant/right.png
-share/doc/html/libmergeant/up.png
 share/gnome/help/mergeant/C/book1.html
 share/gnome/help/mergeant/C/c13.html
 share/gnome/help/mergeant/C/c47.html
@@ -209,6 +11,8 @@ share/gnome/help/mergeant/C/c76.html
 share/gnome/help/mergeant/C/c8.html
 share/gnome/help/mergeant/C/c84.html
 share/gnome/help/mergeant/C/c94.html
+share/gnome/help/mergeant/C/docbook.css
+share/gnome/help/mergeant/C/docbook.css
 share/gnome/help/mergeant/C/images/datasources.png
 share/gnome/help/mergeant/C/images/dba_properties.png
 share/gnome/help/mergeant/C/images/workspace-data-types.png
@@ -231,6 +35,8 @@ share/gnome/help/mergeant/C/stylesheet-images/warning.gif
 share/gnome/help/mergeant/C/topic.dat
 share/gnome/help/mergeant/C/x19.html
 share/gnome/help/mergeant/C/x40.html
+share/mime-info/mergeant.keys
+share/mime-info/mergeant.mime
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/mergeant.mo
@@ -245,15 +51,27 @@ ${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/mergeant.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/mergeant.mo
@@ -261,14 +79,6 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/mergeant.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/mergeant.mo
-share/mergeant/dtd/libmergeant.dtd
-share/mergeant/plugins/libmergeant_handler_cidr.la
-share/mergeant/plugins/libmergeant_handler_passmd5.la
-share/mergeant/plugins/libmergeant_handler_text.la
-share/mergeant/ui/mergeant.xml
-share/mime-info/mergeant.keys
-share/mime-info/mergeant.mime
-share/omf/libmergeant/libmergeant-C.omf
 share/omf/mergeant/mergeant-C.omf
 share/pixmaps/document-icons/gnome-application-x-mergeant.png
 share/pixmaps/mergeant/mergeant.png
@@ -290,19 +100,13 @@ share/pixmaps/mergeant/query-view-view_16x16.png
 @dirrm share/pixmaps/document-icons
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/mergeant
-@dirrm share/omf/libmergeant
 @comment in scrollkeeper: @dirrm share/omf
 @comment in xdg-dirs: @dirrm share/mime-info
-@dirrm share/mergeant/ui
-@dirrm share/mergeant/plugins
-@dirrm share/mergeant/dtd
 @dirrm share/gnome/help/mergeant/C/stylesheet-images
 @dirrm share/gnome/help/mergeant/C/images
 @dirrm share/gnome/help/mergeant/C
-@dirrm share/doc/html/libmergeant
+@dirrm share/gnome/help/mergeant
+@comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in xdg-dirs: @dirrm share/applications
 @comment in xdg-dirs: @dirrm share/application-registry
 @comment in libbonobo: @dirrm lib/bonobo/servers
-@dirrm include/libmergeant/handlers
-@dirrm include/libmergeant/graph
-@dirrm include/libmergeant

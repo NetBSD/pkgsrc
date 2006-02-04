@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2006/01/24 07:31:59 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2006/02/04 17:03:30 wiz Exp $
 #
 
-DISTNAME=		mergeant-0.52
-PKGREVISION=		2
+DISTNAME=		mergeant-0.62
 CATEGORIES=		databases gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/mergeant/0.52/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/mergeant/0.62/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -27,6 +26,7 @@ USE_LIBTOOL=		YES
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
