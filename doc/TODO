@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4562 2006/02/04 17:06:15 wiz Exp $
+$NetBSD: TODO,v 1.4563 2006/02/04 17:14:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -913,7 +913,6 @@ Suggested package updates
 	o pcal-4.8
 	o pchar-1.5
 	o pciutils-2.2.0
-	o pcre-6.5
 	o pdmenu-1.2.87
 	o pear-Date-1.4.4
 	o pear-HTML_Common-1.2.2
