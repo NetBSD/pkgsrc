@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/07/15 18:27:53 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/02/04 23:39:50 rillig Exp $
 #
 
 DISTNAME=	cs113ins
@@ -20,7 +20,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 USE_TOOLS+=	gtar
 
-EXTRACT_CMD=	(cd ${WRKDIR} && unzip -x ${DOWNLOADED_DISTFILE}) || ${TRUE}
+EXTRACT_CMD=	cd ${WRKDIR} && unzip -x ${DOWNLOADED_DISTFILE}
 WRKSRC=		${WRKDIR}
 
 CSFILES=	cs/images/Logo2.gif \
@@ -34,7 +34,7 @@ CSFILES=	cs/images/Logo2.gif \
 INSTALLATION_DIRS=	bin
 
 post-extract:
-	(cd ${WRKDIR} && unzip -x InstallerData/Installer.zip) || ${TRUE}
+	cd ${WRKDIR} && unzip -x InstallerData/Installer.zip
 
 do-build:
 	${SED} -e s,@PREFIX@,${PREFIX},g < ${FILESDIR}/csched.sh > ${WRKDIR}/csched.tmp
