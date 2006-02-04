@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3 2006/02/04 21:02:31 markd Exp $
+
+--- Clients/Makefile.orig	2006-02-03 23:36:07.253466000 +1300
++++ Clients/Makefile
+@@ -56,7 +56,7 @@
+ ifneq "$(wildcard /usr/lib/libSystem.dylib)" ""
+ LIBS =
+ else
+-LIBS = -L../mDNSPosix/build/prod/ -ldns_sd
++LIBS = -L../mDNSPosix/build/prod/ -ldns_sd $(SYSTEMLIBS)
+ endif
+ 
+ targets: build/dns-sd
