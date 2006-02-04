@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.498 2006/02/02 20:50:02 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.499 2006/02/04 03:37:08 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1212,6 +1212,7 @@ my (@options) = (
 
 use constant regex_gnu_configure_volatile_vars
 				=> qr"^(?:CFLAGS||CPPFLAGS|CXXFLAGS|FFLAGS|LDFLAGS|LIBS)$";
+use constant regex_mk_cond	=> qr"^\.\s*(if|ifdef|ifndef|else|elif|endif|for|endfor|undef)(?:\s+([^\s#][^#]*?))?\s*(?:#.*)?$";
 use constant regex_mk_dependency=> qr"^([^\s:]+(?:\s*[^\s:]+)*):\s*([^#]*?)(?:\s*#.*)?$";
 use constant regex_mk_include	=> qr"^\.\s*s?include\s+\"([^\"]+)\"(?:\s*#.*)?$";
 use constant regex_pkgname	=> qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
@@ -1632,11 +1633,15 @@ sub get_pkg_options() {
 
 my $load_tool_names_tools = undef;
 my $load_tool_names_vartools = undef;
+my $load_tool_names_varname_to_toolname = undef;
+my $load_tool_names_predefined_vartools = undef;
 sub load_tool_names() {
-	my ($tools, $vartools);
+	my ($tools, $vartools, $predefined_vartools, $varname_to_toolname);
 
 	$tools = {};
 	$vartools = {};
+	$predefined_vartools = {};
+	$varname_to_toolname = {};
 	foreach my $basename (qw(autoconf automake defaults ldconfig make replace rpcgen texinfo)) {
 		my $fname = "${current_dir}/${pkgsrcdir}/mk/tools/${basename}.mk";
 		my $lines = load_lines($fname, true);
@@ -1654,6 +1659,7 @@ sub load_tool_names() {
 				} elsif ($varname =~ qr"^(?:_TOOLS_VARNAME)\.([-\w.]+)$") {
 					$tools->{$1} = true;
 					$vartools->{$1} = $value;
+					$varname_to_toolname->{$value} = $1;
 
 				} elsif ($varname =~ qr"^(?:TOOLS_PATH|_TOOLS_DEPMETHOD)\.([-\w.]+|\[)$") {
 					$tools->{$1} = true;
@@ -1666,11 +1672,54 @@ sub load_tool_names() {
 			}
 		}
 	}
+
+	foreach my $basename ("bsd.pkg.mk") {
+		my $fname = "${current_dir}/${pkgsrcdir}/mk/${basename}";
+		my $lines = load_lines($fname, true);
+		my $cond_depth = 0;
+
+		if (!$lines) {
+			log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
+		}
+
+		foreach my $line (@{$lines}) {
+			my $text = $line->text;
+
+			if ($text =~ regex_varassign) {
+				my ($varname, undef, $value, undef) = ($1, $2, $3, $4);
+
+				if ($varname eq "USE_TOOLS") {
+					$line->log_debug("[cond_depth=${cond_depth}] $value");
+					if ($cond_depth == 0) {
+						foreach my $tool (split(qr"\s+", $value)) {
+							if ($tool !~ regex_unresolved && exists($vartools->{$tool})) {
+								$predefined_vartools->{$tool} = true;
+							}
+						}
+					}
+				}
+
+			} elsif ($text =~ regex_mk_cond) {
+				my ($cond, $args, undef) = ($1, $2, $3);
+
+				if ($cond =~ qr"^(?:if|ifdef|ifndef|for)$") {
+					$cond_depth++;
+				} elsif ($cond =~ qr"^(?:endif|endfor)$") {
+					$cond_depth--;
+				}
+			}
+		}
+	}
+
 	log_debug(NO_FILE, NO_LINE_NUMBER, "Known tools: ".join(" ", sort(keys(%{$tools}))));
 	log_debug(NO_FILE, NO_LINE_NUMBER, "Known vartools: ".join(" ", sort(keys(%{$vartools}))));
+	log_debug(NO_FILE, NO_LINE_NUMBER, "Predefined vartools: " . join(" ", sort(keys(%{$predefined_vartools}))));
+	log_debug(NO_FILE, NO_LINE_NUMBER, "Known varnames: " . join(" ", sort(keys(%{$varname_to_toolname}))));
 
 	$load_tool_names_tools = $tools;
 	$load_tool_names_vartools = $vartools;
+	$load_tool_names_predefined_vartools = $predefined_vartools;
+	$load_tool_names_varname_to_toolname = $varname_to_toolname;
 }
 
 sub get_tool_names() {
@@ -1687,6 +1736,20 @@ sub get_vartool_names() {
 		load_tool_names();
 	}
 	return $load_tool_names_vartools;
+}
+
+sub get_predefined_vartool_names() {
+	if (!defined($load_tool_names_predefined_vartools)) {
+		load_tool_names();
+	}
+	return $load_tool_names_predefined_vartools;
+}
+
+sub get_varname_to_toolname() {
+	if (!defined($load_tool_names_varname_to_toolname)) {
+		load_tool_names();
+	}
+	return $load_tool_names_varname_to_toolname;
 }
 
 #
@@ -2422,6 +2485,11 @@ sub checkline_mk_shelltext($$) {
 
 		if ($state == SCST_START && exists($vartools->{$shellword})) {
 			$line->log_warning("Possible direct use of tool \"${shellword}\". Please use \$\{$vartools->{$shellword}\} instead.");
+			if (!exists(get_predefined_vartool_names->{$shellword})) {
+				my $toolvarname = get_vartool_names->{$shellword};
+				my $toolname = get_varname_to_toolname->{$toolvarname};
+				$line->log_warning("Additionally, you should add USE_TOOLS+=${toolname} before this line.");
+			}
 		}
 
 		if (($state != SCST_PAX_S && $state != SCST_SED_E && $state != SCST_CASE_LABEL) && $shellword =~ qr"^/" && $shellword ne "/dev/null") {
@@ -3343,7 +3411,7 @@ sub checklines_mk($) {
 				$seen_bsd_prefs_mk = true;
 			}
 
-		} elsif ($text =~ qr"^\.\s*(if|ifdef|ifndef|else|elif|endif|for|endfor|undef)(?:\s+([^\s#][^#]*?))?\s*(?:#.*)?$") {
+		} elsif ($text =~ regex_mk_cond) {
 			my ($directive, $args) = ($1, $2);
 
 			use constant regex_directives_with_args => qr"^(?:if|ifdef|ifndef|elif|for|undef)$";
