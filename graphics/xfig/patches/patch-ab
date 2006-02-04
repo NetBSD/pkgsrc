@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.11 2005/11/12 16:08:21 itohy Exp $
+$NetBSD: patch-ab,v 1.12 2006/02/04 13:17:51 markd Exp $
 
---- Imakefile.orig	Tue Apr 27 05:24:41 2004
-+++ Imakefile	Sat Nov 12 19:58:54 2005
-@@ -45,6 +45,7 @@
+--- Imakefile.orig	2004-04-27 08:24:41.000000000 +1200
++++ Imakefile
+@@ -45,6 +45,7 @@ XCOMM different tree than the "correct" 
  XCOMM purpose of DESTDIR is to test an install process by installing in a benign area.
  
  XCOMM XAPPLOADDIR = /home/user/xfig
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.11 2005/11/12 16:08:21 itohy Exp $
  
  XCOMM Uncomment the following definition for XAW3D if you want to use
  XCOMM the 3d Athena Widget Set (highly recommended!)
-@@ -58,21 +59,24 @@
+@@ -58,21 +59,24 @@ XCOMM #define XAW3D1_5E
  
  #ifdef XAW3D1_5E
      DUSEXAW3D = -DXAW3D -DXAW3D1_5E
@@ -42,7 +42,7 @@ $NetBSD: patch-ab,v 1.11 2005/11/12 16:08:21 itohy Exp $
  ZLIBDIR = $(USRLIBDIR)
  
  XCOMM If don't want JPEG support, comment out the #define USEJPEG line
-@@ -92,8 +96,8 @@
+@@ -92,8 +96,8 @@ XCOMM You must have version 5b or newer 
  
  #ifdef USEJPEG
  #ifdef USEINSTALLEDJPEG
@@ -53,7 +53,7 @@ $NetBSD: patch-ab,v 1.11 2005/11/12 16:08:21 itohy Exp $
  #else
  JPEGLIBDIR = ../jpeg
  JPEGINC = -I$(JPEGLIBDIR)
-@@ -115,8 +119,8 @@
+@@ -115,8 +119,8 @@ XCOMM Change XPMINC if necessary to poin
  #define USEXPM_ICON
  
  #ifdef USEXPM
@@ -64,7 +64,7 @@ $NetBSD: patch-ab,v 1.11 2005/11/12 16:08:21 itohy Exp $
  #endif
  
  XCOMM Uncomment the following definiton if you want to use the small icons
-@@ -157,7 +161,7 @@
+@@ -157,7 +161,7 @@ XCOMM uncomment the following line if yo
  XCOMM inline functions. With the "INLINE" keyword, you should notice that
  XCOMM the display will be a bit faster in complex figures
  
@@ -73,7 +73,7 @@ $NetBSD: patch-ab,v 1.11 2005/11/12 16:08:21 itohy Exp $
  
  XCOMM use (and change) the following if you want the multi-key data base file
  XCOMM somewhere other than the standard X11 library directory
-@@ -169,7 +173,7 @@
+@@ -169,7 +173,7 @@ XFIGLIBDIR = $(LIBDIR)/xfig
  
  XCOMM XFIGDOCDIR tells where the html and pdf documentation should go
  XCOMM XFIGDOCDIR = $(DOCDIR)/xfig
@@ -82,7 +82,7 @@ $NetBSD: patch-ab,v 1.11 2005/11/12 16:08:21 itohy Exp $
  
  XCOMM MANDIR tells where the standard man pages should go (no need to change it
  XCOMM if you want the man pages installed in the standard place on your system
-@@ -229,7 +233,7 @@
+@@ -229,7 +233,7 @@ INSTDATFLAGS = -m 0644
  #ifdef USEJPEG
  
  #ifdef USEINSTALLEDJPEG
@@ -91,7 +91,7 @@ $NetBSD: patch-ab,v 1.11 2005/11/12 16:08:21 itohy Exp $
  #else
  JPEGCONF = configure
  JPEGLIB = $(JPEGLIBDIR)/libjpeg.a
-@@ -266,7 +270,7 @@
+@@ -266,7 +270,7 @@ InstallManPageLong(file,dest,file)
  DUSESMALLICONS = -DUSE_SMALL_ICONS
  #endif /* USESMALLICONS */
  
@@ -100,7 +100,7 @@ $NetBSD: patch-ab,v 1.11 2005/11/12 16:08:21 itohy Exp $
  
  #ifdef USEJPEG
  DUSEJPEG = -DUSE_JPEG
-@@ -276,7 +280,7 @@
+@@ -276,7 +280,7 @@ READJPEGO = f_readjpg.o
  
  #ifdef USEXPM
  DUSEXPM = -DUSE_XPM
@@ -109,7 +109,7 @@ $NetBSD: patch-ab,v 1.11 2005/11/12 16:08:21 itohy Exp $
  READXPMS = f_readxpm.c
  READXPMO = f_readxpm.o
  #ifdef USEXPM_ICON
-@@ -411,6 +415,8 @@
+@@ -411,6 +415,8 @@ install.html::
  install.rhtml::
  	@(cd Doc ; \
  	echo Copying pdf and html files to $(DESTDIR)$(XFIGDOCDIR) ; \
@@ -118,3 +118,21 @@ $NetBSD: patch-ab,v 1.11 2005/11/12 16:08:21 itohy Exp $
  	$(INSTALL) -m 644 -c xfig_man.html $(DESTDIR)$(XFIGDOCDIR) ; \
  	$(INSTALL) -m 644 -c xfig_ref_en.pdf $(DESTDIR)$(XFIGDOCDIR) ; \
  	$(INSTALL) -m 644 -c xfig-howto.pdf $(DESTDIR)$(XFIGDOCDIR) ; \
+@@ -469,13 +475,13 @@ install.libs::
+ 						else (set -x; $(MKDIRHIER) $(DESTDIR)$(OBJLIBDIR)/$$d/$$f/$$dd/$$l ); fi ; \
+ 					    (cd $$l ; \
+ 						for m in * ; do \
+-						    $(INSTALL) -m 644 -c $$m $(DESTDIR)$(OBJLIBDIR)/$$d/$$f/$$dd/$$l ; \
++						    $(INSTALL) -m 644 -c ./$$m $(DESTDIR)$(OBJLIBDIR)/$$d/$$f/$$dd/$$l ; \
+ 						done ) ) ; \
+-					else ( $(INSTALL) -m 644 -c $$l $(DESTDIR)$(OBJLIBDIR)/$$d/$$f/$$dd ) ; fi ; \
++					else ( $(INSTALL) -m 644 -c ./$$l $(DESTDIR)$(OBJLIBDIR)/$$d/$$f/$$dd ) ; fi ; \
+ 				done) ) ; \
+-			    else ( $(INSTALL) -m 644 -c $$dd $(DESTDIR)$(OBJLIBDIR)/$$d/$$f ) ; fi ; \
++			    else ( $(INSTALL) -m 644 -c ./$$dd $(DESTDIR)$(OBJLIBDIR)/$$d/$$f ) ; fi ; \
+ 			done) ); \
+-		else ($(INSTALL) -m 644 -c $$f $(DESTDIR)$(OBJLIBDIR)/$$d ) ; fi ; \
++		else ($(INSTALL) -m 644 -c ./$$f $(DESTDIR)$(OBJLIBDIR)/$$d ) ; fi ; \
+ 	    done ) ; \
+ 	done ; ) ; \
+ 	else echo No Object Libraries to install ; \
