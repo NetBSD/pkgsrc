@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4563 2006/02/04 17:14:10 wiz Exp $
+$NetBSD: TODO,v 1.4564 2006/02/04 22:55:42 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -435,7 +435,6 @@ Suggested package updates
 	o cy-login-1.5.28
 	o cygwin_lib-1.5.19
 	o cyrus-sasl-2.1.22
-	o cyrus-sasl2-2.1.22
 	o dact-0.8.37
 	o dante-1.1.18
 	o dap-2.1.5
