@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4555 2006/02/04 00:30:11 wiz Exp $
+$NetBSD: TODO,v 1.4556 2006/02/04 00:41:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -478,8 +478,6 @@ Suggested package updates
 	o electricfence-2.4.16
 	o elf-0.5.4p1
 	o elfsh-0.65rc1
-	o elinks-0.10.6 [pkg/31441]
-	o elinks-0.11.1
 	o elm-me-2.4pl122f
 	o elscreen-1.3.3
 	o emacs-w3m-1.4.4
