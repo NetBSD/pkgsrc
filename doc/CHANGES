@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12781 2006/02/04 02:20:28 schmonz Exp $
+$NetBSD: CHANGES,v 1.12782 2006/02/04 07:16:24 hira Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -789,3 +789,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/elinks to 0.11.1 [wiz 2006-02-04]
 	Updated textproc/p5-PDF-API2 to 0.51 [ben 2006-02-04]
 	Updated mail/getmail to 4.5.1 [schmonz 2006-02-04]
+	Updated net/lftp to 3.4.0nb1 [hira 2006-02-04]
