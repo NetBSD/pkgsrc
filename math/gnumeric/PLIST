@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2005/12/17 20:49:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2006/02/04 17:03:52 wiz Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -41,6 +41,11 @@ lib/gnumeric/${PKGVERSION}/plugins/fn-stat/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/fn-stat/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/fn-string/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/fn-string/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/gdaif/gdaif.la
+lib/gnumeric/${PKGVERSION}/plugins/gdaif/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/gnome-db/gnomedb.la
+lib/gnumeric/${PKGVERSION}/plugins/gnome-db/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/gnome-db/ui.xml
 lib/gnumeric/${PKGVERSION}/plugins/html/html.la
 lib/gnumeric/${PKGVERSION}/plugins/html/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/lotus/lotus.la
@@ -53,6 +58,10 @@ lib/gnumeric/${PKGVERSION}/plugins/oleo/oleo.la
 lib/gnumeric/${PKGVERSION}/plugins/oleo/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/openoffice/openoffice.la
 lib/gnumeric/${PKGVERSION}/plugins/openoffice/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/perl-func/perl_func.pl
+lib/gnumeric/${PKGVERSION}/plugins/perl-func/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/perl-loader/perl_loader.la
+lib/gnumeric/${PKGVERSION}/plugins/perl-loader/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/plan_perfect/plan_perfect.la
 lib/gnumeric/${PKGVERSION}/plugins/plan_perfect/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/qpro/plugin.xml
@@ -700,6 +709,7 @@ share/pixmaps/win32-gnumeric.ico
 @comment in scrollkeeper: @dirrm share/omf
 @comment in xdg-dirs: @dirrm share/mime-info
 @dirrm share/mc/templates
+@unexec ${RMDIR} %D/share/mc 2>/dev/null || ${TRUE}
 @dirrm share/gnumeric/${PKGVERSION}/templates
 @dirrm share/gnumeric/${PKGVERSION}/idl
 @dirrm share/gnumeric/${PKGVERSION}/glade
@@ -724,12 +734,16 @@ share/pixmaps/win32-gnumeric.ico
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/sample_datasource
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/qpro
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/plan_perfect
+@dirrm lib/gnumeric/${PKGVERSION}/plugins/perl-loader
+@dirrm lib/gnumeric/${PKGVERSION}/plugins/perl-func
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/openoffice
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/oleo
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/numtheory
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/mps
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/lotus
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/html
+@dirrm lib/gnumeric/${PKGVERSION}/plugins/gnome-db
+@dirrm lib/gnumeric/${PKGVERSION}/plugins/gdaif
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-string
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-stat
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-random
