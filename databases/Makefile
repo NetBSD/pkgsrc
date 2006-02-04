@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.201 2006/01/12 13:55:40 rillig Exp $
+# $NetBSD: Makefile,v 1.202 2006/02/04 17:02:58 wiz Exp $
 #
 
 COMMENT=	Databases
@@ -36,7 +36,6 @@ SUBDIR+=	krecipes
 SUBDIR+=	lbdb
 SUBDIR+=	libgda
 SUBDIR+=	libgda-postgres
-SUBDIR+=	libgda-sqlite
 SUBDIR+=	libgnomedb
 SUBDIR+=	libpqxx
 SUBDIR+=	libpqxx-doc
