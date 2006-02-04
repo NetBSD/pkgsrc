@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4557 2006/02/04 02:20:28 schmonz Exp $
+$NetBSD: TODO,v 1.4558 2006/02/04 11:13:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1060,7 +1060,6 @@ Suggested package updates
 	o ruby-RMagick-1.10.0 [pkg/32663]
 	o ruby-cmd-0.8.0
 	o rudiments-0.29
-	o rxvt-unicode-7.5
 	o sablecc-3.2
 	o sablevm-1.11.3 [pkg/30022]
 	o sablevm-1.12
