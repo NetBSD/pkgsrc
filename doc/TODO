@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4558 2006/02/04 11:13:35 wiz Exp $
+$NetBSD: TODO,v 1.4559 2006/02/04 11:56:51 markd Exp $
 
 Suggested new packages
 ======================
@@ -547,7 +547,6 @@ Suggested package updates
 	o gld-1.6
 	o glibmm-2.8.4
 	o gliv-1.9.4
-	o glpk-4.9
 	o gmime-2.1.17 [pkg/32487]
 	o gnet1-1.1.9
 	o gnetman-20050429
