@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/25 19:48:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/02/04 11:12:55 wiz Exp $
 bin/urxvt
 bin/urxvtc
 bin/urxvtd
@@ -9,6 +9,7 @@ lib/urxvt/perl/example-refresh-hooks
 lib/urxvt/perl/mark-urls
 lib/urxvt/perl/option-popup
 lib/urxvt/perl/readline
+lib/urxvt/perl/remote-clipboard
 lib/urxvt/perl/searchable-scrollback
 lib/urxvt/perl/selection
 lib/urxvt/perl/selection-autotransform
@@ -16,6 +17,7 @@ lib/urxvt/perl/selection-pastebin
 lib/urxvt/perl/selection-popup
 lib/urxvt/perl/tabbed
 lib/urxvt/perl/urxvt-popup
+lib/urxvt/perl/xim-onthespot
 lib/urxvt/urxvt.pm
 man/man1/urxvt.1
 man/man1/urxvtc.1
