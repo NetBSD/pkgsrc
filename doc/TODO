@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4554 2006/02/03 20:35:51 xtraeme Exp $
+$NetBSD: TODO,v 1.4555 2006/02/04 00:30:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -581,6 +581,7 @@ Suggested package updates
 	o gtk-systrace-20030623
 	o gtk2-engines-2.6.7
 	o gtkam-0.1.13
+	o gtkmm-2.8.3
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
@@ -709,7 +710,7 @@ Suggested package updates
 	o manedit-0.6.1
 	o mantis-0.19.2
 	o mapserver-4.2.5
-	o maradns-1.2.03.1
+	o maradns-1.2.03.2
 	o md-whois-4.7.8
 	o mdd-20050318
 	o mdf2iso-0.3.0
@@ -789,7 +790,9 @@ Suggested package updates
 	o openldap-2.3.19
 	o openoffice-2.0.1
 	o openpam-20050616
+	o openssh-4.3
 	o openssl-0.9.8a
+	o openttd-0.4.5
 	o oroborus-2.0.15
 	o osh-050219
 	o oss-3.99.3d
@@ -926,7 +929,8 @@ Suggested package updates
 	o pear-Net_SMTP-1.2.7
 	o pear-Net_Socket-1.0.6
 	o pear-SOAP-0.9.1
-	o pfqueue-0.5.0
+	o perl-5.8.8
+	o pfqueue-0.5.2
 	o pfstat-1.8
 	o phoon-20050629
 	o photopc-3.05
@@ -1067,6 +1071,7 @@ Suggested package updates
 	o sablevm-classpath-1.12
 	o sablevm-classpath-gui-1.11.3 [pkg/30022?]
 	o sablevm-classpath-gui-1.12
+	o samba-3.0.21b
 	o same-1.8 [don't update; same-1.3 is small and nice]
 	o sather-1.2.2
 	o sawfish-1.3
@@ -1207,6 +1212,7 @@ Suggested package updates
 	o weechat-0.1.6
 	o weewm-0.01
 	o winbind-3.0.13
+	o wine-0.9.7
 	o wmctrl-1.07
 	o wmii-2.5.1 [pkg/32522]
 	o wmweather-2.4.3
