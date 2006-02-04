@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/01/10 22:26:32 adrianp Exp $
+# $NetBSD: Makefile,v 1.28 2006/02/04 15:22:06 adrianp Exp $
 
 DISTNAME=	ircd-hybrid-7.2.0
 EXTRACT_SUFX=	.tgz
@@ -43,7 +43,7 @@ PKG_USERS=		${IRCD_HYBRID_IRC_USER}:${IRCD_HYBRID_IRC_GROUP}::ircd-hybrid\ User:
 PKG_GROUPS=		${IRCD_HYBRID_IRC_GROUP}
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	etc/example.conf etc/example.efnet.conf \
 			etc/example.conf.quick doc/ircd.8
@@ -54,7 +54,7 @@ SUBST_SED.paths=	-e "s|/usr/local/ircd/etc|${PKG_SYSCONFDIR}|g" \
 			-e "s|/var/log|${VARBASE}/log/ircd-hybrid/logs|g"
 
 SUBST_CLASSES+=		bpaths
-SUBST_MESSAGE.bpaths=	"Fixing hardcoded build paths."
+SUBST_MESSAGE.bpaths=	Fixing hardcoded build paths.
 SUBST_STAGE.bpaths=	post-configure
 SUBST_FILES.bpaths=	include/defaults.h
 SUBST_SED.bpaths=	-e "s|etc|etc/ircd-hybrid|g" \
