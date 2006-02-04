@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12791 2006/02/04 17:00:06 joerg Exp $
+$NetBSD: CHANGES,v 1.12792 2006/02/04 17:06:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -799,4 +799,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/glade2-gnome to 2.10.0nb3 [wiz 2006-02-04]
 	Updated devel/cpuflags to 0.97 [abs 2006-02-04]
 	Add devel/gettext-asprintf [joerg 2006-02-04]
-
+	Updated databases/libgda to 1.9.100 [wiz 2006-02-04]
+	Updated databases/libgda-postgres to 1.9.100 [wiz 2006-02-04]
+	Removed databases/libgda-sqlite [wiz 2006-02-04]
+	Updated databases/libgnomedb to 1.9.100 [wiz 2006-02-04]
+	Updated databases/mergeant to 0.62 [wiz 2006-02-04]
+	Updated math/gnumeric to 1.6.2 [wiz 2006-02-04]
