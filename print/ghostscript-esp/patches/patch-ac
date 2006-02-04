@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.2 2005/11/21 06:17:58 jlam Exp $
+$NetBSD: patch-ac,v 1.3 2006/02/04 22:12:23 markd Exp $
 
---- src/unixinst.mak.orig	2005-09-22 13:03:45.000000000 -0400
+--- src/unixinst.mak.orig	2005-09-23 05:03:45.000000000 +1200
 +++ src/unixinst.mak
 @@ -147,7 +147,7 @@ install-man: $(PSMANDIR)/gs.1
  			  ln -s ps2pdf.$(man1ext) $$f.$(man1ext) ) ;\
@@ -16,7 +16,8 @@ $NetBSD: patch-ac,v 1.2 2005/11/21 06:17:58 jlam Exp $
  
  install-shared: $(GS_SHARED_OBJS)
 -	-mkdir -p $(gssharedir)
-+	$(SH) -c 'echo $(GS_SHARED_OBJS) | while read obj ; do \
-+	    test -z $$obj || mkdir -p $(gssharedir); break; done'
  	$(SH) -c 'echo $(GS_SHARED_OBJS) | while read obj ; do \
- 	    test -z $$obj || $(INSTALL_PROGRAM) $$obj $(gssharedir)/; done'
+-	    test -z $$obj || $(INSTALL_PROGRAM) $$obj $(gssharedir)/; done'
++	    test -z "$$obj" || mkdir -p $(gssharedir); break; done'
++	$(SH) -c 'echo $(GS_SHARED_OBJS) | while read obj ; do \
++	    test -z "$$obj" || $(INSTALL_PROGRAM) $$obj $(gssharedir)/; done'
