@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4560 2006/02/04 12:05:50 wiz Exp $
+$NetBSD: TODO,v 1.4561 2006/02/04 14:18:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -915,6 +915,7 @@ Suggested package updates
 	o pcal-4.8
 	o pchar-1.5
 	o pciutils-2.2.0
+	o pcre-6.5
 	o pdmenu-1.2.87
 	o pear-Date-1.4.4
 	o pear-HTML_Common-1.2.2
@@ -990,7 +991,7 @@ Suggested package updates
 	o py-TTFQuery-1.0.0
 	o py-ZODB-3.2.9
 	o py-bdb-xml-2.1.8
-	o py-checker-0.8.15
+	o py-checker-0.8.17
 	o py-gnutls-0.2.1
 	o py-gtk2-2.8.4
 	o py-kenosis-0.96
