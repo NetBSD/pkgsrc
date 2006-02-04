@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.36 2005/12/29 06:21:35 jlam Exp $
+# $NetBSD: Makefile.common,v 1.37 2006/02/04 17:02:45 wiz Exp $
 #
 
-DISTNAME=		libgda-1.2.2
+DISTNAME=		libgda-1.9.100
 CATEGORIES=		databases gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgda/1.2/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgda/1.9/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
-CONFIGURE_ARGS+=	--with-html-dir="${PREFIX}/share/doc"
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX:Q}/share/doc
 CONFIGURE_ARGS+=	--without-ldap
 CONFIGURE_ARGS+=	--without-mysql
 
@@ -28,12 +28,11 @@ CONFIGURE_ARGS+=	--without-mysql
 PKGNAME=		${DISTNAME:S/libgda-/libgda-${LIBGDA_PROVIDER}-/}
 COMMENT+=		- ${LIBGDA_PROVIDER} provider
 
-BUILD_DIRS=		${WRKSRC}/providers/${LIBGDA_PROVIDER}
-INSTALL_DIRS=		${WRKSRC}/providers/${LIBGDA_PROVIDER}
+BUILD_DIRS=		providers/${LIBGDA_PROVIDER}
 
 SUBST_CLASSES+=		libs
 SUBST_STAGE.libs=	pre-configure
-SUBST_MESSAGE.libs=	"Fixing references to installed libraries."
+SUBST_MESSAGE.libs=	Fixing references to installed libraries.
 SUBST_FILES.libs=	providers/${LIBGDA_PROVIDER}/Makefile.in
 SUBST_SED.libs+=	-e 's|$$(top_builddir)/libgda/libgda-2.la|${BUILDLINK_PREFIX.libgda}/lib/libgda-2.la|'
 

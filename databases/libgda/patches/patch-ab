@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2005/02/24 19:17:10 drochner Exp $
+$NetBSD: patch-ab,v 1.7 2006/02/04 17:02:45 wiz Exp $
 
---- data/Makefile.in.orig	2004-10-10 00:26:49.000000000 +0200
+--- data/Makefile.in.orig	2005-10-13 10:11:26.000000000 +0200
 +++ data/Makefile.in
-@@ -283,7 +283,7 @@ sysconfdir = @sysconfdir@
+@@ -313,7 +313,7 @@ sysconfdir = @sysconfdir@
  target_alias = @target_alias@
  
  # Default global configuration file
 -configdir = $(sysconfdir)/libgda
-+configdir = $(sysconfdir)/examples/libgda
- config_DATA = config
++configdir = $(datadir)/examples/libgda
+ config_DATA = config sales_test.db
  xmldir = $(datadir)/libgda/xml
  xml_DATA = gda-xml-query.dtd 	\
