@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.18 2006/02/03 11:22:12 joerg Exp $
+# $NetBSD: extract,v 1.19 2006/02/04 18:06:47 rillig Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -93,6 +93,9 @@
 #
 ######################################################################
 
+set -e		# exit on errors
+set -u		# treat undefined variables as errors
+
 : ${BZCAT:=bzcat}
 : ${CAT:=cat}
 : ${CP:=cp}
@@ -105,10 +108,11 @@
 : ${SH:=sh}
 : ${TAR:=tar}
 : ${TEST:=test}
-: ${TMPDIR:=/tmp}
 : ${UNRAR:=unrar}
-: ${UNZIP:=unzip}
+: ${UNZIP_CMD:=unzip}
 : ${UNZOO:=unzoo}
+
+: ${TMPDIR:=/tmp}
 
 self="${0##*/}"
 
@@ -116,8 +120,6 @@ usage() {
 	${ECHO} 1>&2 "usage: $self [-d dir] [-f format] [-t tarprog] [-X excludefile | -x] distfile [file ...]"
 }
 
-exitcode=0
-decompress_cat="${CAT}"
 exclude=no
 exclude_file=
 exclude_flag=
@@ -157,6 +159,14 @@ fi
 # Process required arguments
 ${TEST} $# -gt 0 || { usage; exit 1; }
 distfile="$1"; shift
+
+# Make distfile an absolute path, because we will change the current
+# directory soon.
+case "$distfile" in
+/*)	;;
+*)	distfile=`exec pwd`/"$distfile"
+	;;
+esac
 
 # Set the command to decompress the file and write the contents to stdout.
 case "$distfile" in
@@ -202,6 +212,7 @@ case "$format" in
 tar)
 	case "$extract_using" in
 	*pax)
+		: ${EXTRACT_OPTS_PAX=}
 		case "$extract_using" in
 		/*)	paxprog="$extract_using" ;;
 		*)	paxprog="${PAX}" ;;
@@ -212,9 +223,10 @@ tar)
 		fi
 		${TEST} "$exclude" = no || exclude_flag="-c"
 		$decompress_cat "$distfile" |
-			$paxprog ${EXTRACT_OPTS_PAX} $exclude_flag -O -r "$@"
+			$paxprog ${EXTRACT_OPTS_PAX} $exclude_flag -O -r ${1+"$@"}
 		;;
 	*tar)
+		: ${EXTRACT_OPTS_TAR=}
 		case "$extract_using" in
 		/*)	tarprog="$extract_using" ;;
 		*)	tarprog="${TAR}" ;;
@@ -223,7 +235,8 @@ tar)
 		if ${TEST} "$exclude" = "yes"; then
 			tmpfile="${TMPDIR}/$self.$$"
 			${RM} -f "$tmpfile"
-			for i in "$@"; do
+			trap "\${RM} -f \"\$tmpfile\"" 0
+			for i in ${1+"$@"}; do
 				${ECHO} "$i" >> "$tmpfile"
 			done
 			exclude_file="$tmpfile"
@@ -233,9 +246,7 @@ tar)
 			set -- dummy; shift
 		fi
 		$decompress_cat "$distfile" |
-			$tarprog ${EXTRACT_OPTS_TAR} $exclude_flag -xf - "$@"
-		exitcode=$?
-		${TEST} "$exclude" = "no" || ${RM} -f "$tmpfile"
+			$tarprog ${EXTRACT_OPTS_TAR} $exclude_flag -xf - ${1+"$@"}
 		;;
 	*)
 		${ECHO} 1>&2 "$self: unknown tar program: $extract_using"
@@ -253,12 +264,12 @@ zip)
 	if ${TEST} -n "$exclude_file"; then
 		set -- dummy `${CAT} "$exclude_file"`; shift
 	fi
-	${UNZIP} ${EXTRACT_OPTS_ZIP} "$distfile" $exclude_flag "$@"
+	${UNZIP_CMD} ${EXTRACT_OPTS_ZIP} "$distfile" $exclude_flag ${1+"$@"}
 	;;
 
 lha)
 	: ${EXTRACT_OPTS_LHA=q}
-	${LHA} x$extract_options "$distfile" "$@"
+	${LHA} x${EXTRACT_OPTS_LHA} "$distfile" ${1+"$@"}
 	;;
 
 compressed)
@@ -267,15 +278,17 @@ compressed)
 	;;
 
 zoo)
-	${UNZOO} -x ${EXTRACT_OPTS_ZOO} "$distfile" "$@"
+	: ${EXTRACT_OPTS_ZOO=}
+	${UNZOO} -x ${EXTRACT_OPTS_ZOO} "$distfile" ${1+"$@"}
 	;;
 
 rar)
 	: ${EXTRACT_OPTS_RAR=-inul}
-	${UNRAR} x ${EXTRACT_OPTS_RAR} "$distfile" "$@"
+	${UNRAR} x ${EXTRACT_OPTS_RAR} "$distfile" ${1+"$@"}
 	;;
 
 jre-bin)
+	: ${EXTRACT_OPTS_BIN=}
 	${ECHO} yes | "$distfile" ${EXTRACT_OPTS_BIN} >/dev/null
 	;;
 
@@ -290,4 +303,4 @@ none)
 	;;
 esac
 
-exit $exitcode
+exit 0
