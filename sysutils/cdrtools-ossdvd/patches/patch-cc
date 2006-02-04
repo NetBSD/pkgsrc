@@ -1,8 +1,8 @@
-$NetBSD: patch-cc,v 1.1.1.1 2003/12/17 16:09:07 wiz Exp $
+$NetBSD: patch-cc,v 1.2 2006/02/04 12:05:17 wiz Exp $
 
---- readcd/readcd.1.orig	Wed Dec 25 02:28:41 2002
+--- readcd/readcd.1.orig	2006-01-11 23:06:28.000000000 +0000
 +++ readcd/readcd.1
-@@ -186,7 +186,7 @@ If the argument to the
+@@ -183,7 +183,7 @@ If the argument to the
  .B dev=
  option does not contain the characters ',', '/', '@' or ':',
  it is interpreted as an label name that may be found in the file

@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.21 2005/12/27 18:44:54 reed Exp $
+# $NetBSD: Makefile,v 1.22 2006/02/04 12:05:17 wiz Exp $
 
-DISTNAME=	cdrtools-2.01.01a03
-PKGNAME=	cdrtools-ossdvd-2.01.1.35
+DISTNAME=	cdrtools-2.01.01a05
+PKGNAME=	cdrtools-ossdvd-2.01.1.36
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/
 EXTRACT_SUFX=	.tar.bz2
 
-PATCHFILES=	cdrtools-2.01.01a03-ossdvd.patch.bz2
+PATCHFILES=	cdrtools-2.01.01a05-ossdvd.patch.bz2
 PATCH_SITES=	ftp://ftp.crashrecovery.org/pub/linux/cdrtools/ \
 		http://crashrecovery.org/oss-dvd/
 PATCH_DIST_STRIP=	-p1
@@ -17,10 +17,12 @@ COMMENT=	Software for creating ISO9660 images and writing CDs/CD-RWs/DVDs
 
 CONFLICTS=	mkisofs-[0-9]* cdrecord-[0-9]* cdrtools-*
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 .include "../../mk/bsd.prefs.mk"
 
-WRKSRC=			${WRKDIR}/cdrtools-2.01.01
-USE_TOOLS+=		gmake tbl
+WRKSRC=		${WRKDIR}/cdrtools-2.01.01
+USE_TOOLS+=	gmake tbl
 
 .if ${LOCALBASE} != "/opt/schily"
 BUILDLINK_TRANSFORM+=	rmdir:/opt/schily
@@ -45,21 +47,18 @@ CDRECORD_CONF?=	${PKG_SYSCONFDIR}/cdrecord.conf
 
 .if ${CDRECORD_CONF} != "/etc/default/cdrecord"
 MESSAGE_SRC+=	MESSAGE.cdrecord.conf
-MESSAGE_SUBST+=	PKGNAME_NOREV=${PKGNAME_NOREV}
-MESSAGE_SUBST+=	CDRECORD_CONF=${CDRECORD_CONF}
+MESSAGE_SUBST+=	PKGNAME_NOREV=${PKGNAME_NOREV:Q}
+MESSAGE_SUBST+=	CDRECORD_CONF=${CDRECORD_CONF:Q}
 .endif
-
-CDRECORD_CONF_FILES=	cdrecord/defaults.c cdrecord/cdrecord.1
-CDRECORD_CONF_FILES+=	readcd/readcd.1
 
 INSTALLATION_DIRS=	bin man/man1 man/man8
 
-post-patch:
-	@cd ${WRKSRC}; for conf in ${CDRECORD_CONF_FILES}; do		\
-		${MV} ${WRKSRC}/$$conf ${WRKSRC}/$${conf}.old &&	\
-		${SED} -e 's|@CDRECORD_CONF@|${CDRECORD_CONF}|'	\
-			${WRKSRC}/$${conf}.old > ${WRKSRC}/$$conf;	\
-	done
+SUBST_CLASSES+=		fix
+SUBST_STAGE.fix=	post-patch
+SUBST_FILES.fix=	cdrecord/defaults.c cdrecord/cdrecord.1 \
+			readcd/readcd.1
+SUBST_SED.fix=		-e "s,@CDRECORD_CONF@,${CDRECORD_CONF},g"
+SUBST_MESSAGE.fix=	Fixing paths.
 
 do-configure:
 	cd ${WRKSRC}/RULES;						\
