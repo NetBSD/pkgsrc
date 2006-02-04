@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2005/03/06 21:27:13 kristerw Exp $
+$NetBSD: patch-aa,v 1.8 2006/02/04 17:03:16 wiz Exp $
 
---- libgnomedb/gnome-db-find-dialog.c.orig	Sat Mar  5 20:22:31 2005
-+++ libgnomedb/gnome-db-find-dialog.c	Sat Mar  5 20:23:05 2005
-@@ -216,11 +216,12 @@
+--- libgnomedb/gnome-db-find-dialog.c.orig	2005-04-13 18:26:30.000000000 +0200
++++ libgnomedb/gnome-db-find-dialog.c
+@@ -216,11 +216,12 @@ gnome_db_find_dialog_new (const gchar *t
  GtkWidget *
  gnome_db_find_dialog_new_with_model (const gchar *title, GdaDataModel *dm)
  {
