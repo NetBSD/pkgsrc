@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/12/17 16:09:07 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2006/02/04 12:05:17 wiz Exp $
 
---- include/btorder.h.orig	Sun Jun 15 23:41:22 2003
+--- include/btorder.h.orig	2003-06-15 21:41:22.000000000 +0000
 +++ include/btorder.h
-@@ -28,6 +28,9 @@
+@@ -27,6 +27,9 @@
  #include <sys/types.h>			/* try to load isa_defs.h on Solaris */
  #define	_INCL_SYS_TYPES_H
  #endif
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2003/12/17 16:09:07 wiz Exp $
  
  #ifndef _MCONFIG_H
  #include <mconfig.h>			/* load bit/byte-oder from xmconfig.h*/
-@@ -108,7 +111,7 @@ error  Only one of _BIT_FIELDS_LTOH or _
+@@ -107,7 +110,7 @@ error  Only one of _BIT_FIELDS_LTOH or _
  #	if defined(__ppc__) || defined(ppc) || defined(__ppc) || \
  	    defined(__PPC) || defined(powerpc) || defined(__powerpc__)
  
