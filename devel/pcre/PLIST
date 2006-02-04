@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/08/03 17:43:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/02/04 17:13:49 wiz Exp $
 bin/pcre-config
 bin/pcregrep
 bin/pcretest
@@ -6,6 +6,7 @@ include/pcre.h
 include/pcre_scanner.h
 include/pcre_stringpiece.h
 include/pcrecpp.h
+include/pcrecpparg.h
 include/pcreposix.h
 lib/libpcre.la
 lib/libpcrecpp.la
@@ -15,6 +16,7 @@ man/man1/pcregrep.1
 man/man1/pcretest.1
 man/man3/pcre.3
 man/man3/pcre_compile.3
+man/man3/pcre_compile2.3
 man/man3/pcre_config.3
 man/man3/pcre_copy_named_substring.3
 man/man3/pcre_copy_substring.3
@@ -38,7 +40,9 @@ man/man3/pcrecallout.3
 man/man3/pcrecompat.3
 man/man3/pcrecpp.3
 man/man3/pcrematching.3
+man/man3/pcrepartial.3
 man/man3/pcrepattern.3
 man/man3/pcreperform.3
 man/man3/pcreposix.3
+man/man3/pcreprecompile.3
 man/man3/pcresample.3
