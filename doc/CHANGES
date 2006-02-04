@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12793 2006/02/04 17:14:10 wiz Exp $
+$NetBSD: CHANGES,v 1.12794 2006/02/04 20:44:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -806,3 +806,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/mergeant to 0.62 [wiz 2006-02-04]
 	Updated math/gnumeric to 1.6.2 [wiz 2006-02-04]
 	Updated devel/pcre to 6.5 [wiz 2006-02-04]
+	Updated databases/mergeant to 0.62nb1 [wiz 2006-02-04]
