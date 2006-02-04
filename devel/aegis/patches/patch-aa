@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/02/04 17:19:54 joerg Exp $
+
+--- libaegis/getgr_cache.c.orig	2006-01-05 17:40:36.000000000 +0000
++++ libaegis/getgr_cache.c
+@@ -49,7 +49,7 @@ group_null(void)
+ #ifndef SOURCE_FORGE_HACK
+ 	result->gr_name = 0;
+ 	result->gr_passwd = 0;
+-	result->gr_gid = (__gid_t)-1;
++	result->gr_gid = (gid_t)-1;
+ 	result->gr_mem = 0;
+ #else
+ 	/*
