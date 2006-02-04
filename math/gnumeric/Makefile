@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.103 2006/01/30 21:02:52 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2006/02/04 17:03:51 wiz Exp $
 #
 
-DISTNAME=		gnumeric-1.6.1
-PKGREVISION=		3
+DISTNAME=		gnumeric-1.6.2
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -24,15 +23,11 @@ PYTHON_VERSIONS_ACCEPTED=	24 23
 GCONF2_SCHEMAS=		gnumeric-dialogs.schemas gnumeric-general.schemas \
 			gnumeric-plugins.schemas
 
-.include "../../x11/py-gtk2/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../databases/libgda/buildlink3.mk"
 .include "../../databases/libgnomedb/buildlink3.mk"
-BUILDLINK_DEPENDS.libgsf+=	libgsf>=1.12.2
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
@@ -44,6 +39,8 @@ BUILDLINK_DEPENDS.libgsf+=	libgsf>=1.12.2
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 # guile is currently not supported in gnumeric
 #.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../misc/goffice/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 BUILDLINK_DEPENDS.libgnomeprint+=	libgnomeprint>=2.8.2
@@ -53,5 +50,8 @@ BUILDLINK_DEPENDS.libgnomeprintui+=	libgnomeprintui>=2.8.2
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+# XXX: link test against libpython fails
+#.include "../../x11/py-gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
