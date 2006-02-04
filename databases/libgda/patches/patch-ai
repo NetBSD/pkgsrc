@@ -1,0 +1,22 @@
+$NetBSD: patch-ai,v 1.1 2006/02/04 17:02:45 wiz Exp $
+
+--- providers/postgres/Makefile.in.orig	2005-10-13 08:11:32.000000000 +0000
++++ providers/postgres/Makefile.in
+@@ -58,7 +58,7 @@ providerLTLIBRARIES_INSTALL = $(INSTALL)
+ LTLIBRARIES = $(provider_LTLIBRARIES)
+ am__DEPENDENCIES_1 =
+ libgda_postgres_la_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+-	$(top_builddir)/libgda/libgda-3.la $(am__DEPENDENCIES_1)
++	$(am__DEPENDENCIES_1)
+ am_libgda_postgres_la_OBJECTS = gda-postgres-provider.lo \
+ 	gda-postgres-recordset.lo gda-postgres-blob.lo libmain.lo \
+ 	utils.lo
+@@ -360,7 +360,7 @@ libgda_postgres_la_SOURCES = \
+ libgda_postgres_la_LDFLAGS = -export-dynamic -module -avoid-version
+ libgda_postgres_la_LIBADD = \
+ 	$(LIBGDA_LIBS) \
+-	$(top_builddir)/libgda/libgda-3.la \
++	-llibgda-3 \
+ 	$(POSTGRES_LIBS)
+ 
+ EXTRA_DIST = $(config_DATA)
