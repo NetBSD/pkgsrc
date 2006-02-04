@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1 2006/02/04 17:02:45 wiz Exp $
+$NetBSD: patch-ai,v 1.2 2006/02/04 17:16:46 wiz Exp $
 
 --- providers/postgres/Makefile.in.orig	2005-10-13 08:11:32.000000000 +0000
 +++ providers/postgres/Makefile.in
@@ -16,7 +16,7 @@ $NetBSD: patch-ai,v 1.1 2006/02/04 17:02:45 wiz Exp $
  libgda_postgres_la_LIBADD = \
  	$(LIBGDA_LIBS) \
 -	$(top_builddir)/libgda/libgda-3.la \
-+	-llibgda-3 \
++	-lgda-3 \
  	$(POSTGRES_LIBS)
  
  EXTRA_DIST = $(config_DATA)
