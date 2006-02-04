@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4559 2006/02/04 11:56:51 markd Exp $
+$NetBSD: TODO,v 1.4560 2006/02/04 12:05:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -397,7 +397,6 @@ Suggested package updates
 	o ccd2iso-0.2
 	o cdl3-1.2.6
 	o cdrdao-1.2.1
-	o cdrtools-ossdvd-2.01.01a05
 	o cfengine2-2.1.17
 	o cfengine2-doc-2.1.14
 	o cfitsio-2.510
