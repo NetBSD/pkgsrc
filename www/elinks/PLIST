@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/01/18 13:02:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/02/04 00:40:38 wiz Exp $
 bin/elinks
 @comment belongs to libiconv: lib/charset.alias
 man/man1/elinks.1
@@ -23,14 +23,15 @@ ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/elinks.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/elinks.mo
 ${PKGLOCALEDIR}/locale/locale.alias
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/elinks.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/elinks.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/elinks.mo
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/elinks.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/elinks.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/elinks.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/elinks.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/elinks.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/elinks.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/elinks.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/elinks.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/elinks.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/elinks.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/elinks.mo
