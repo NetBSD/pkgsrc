@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.62 2005/10/23 18:47:24 minskim Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.63 2006/02/04 15:08:33 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 AWK=awk
@@ -106,21 +106,25 @@ case $hw_machine_arch in
 
     mipseb|mipsel)
 	# cpu0 at mainbus0: QED R4600 Orion CPU (0x2020) Rev. 2.0 with ...
-	case "$(egrep '^cpu0 ' /var/run/dmesg.boot)" in
-	    *\ MIPS\ R2000\ *)	FLAGS="-march=r2000"	   ;;
-	    *\ MIPS\ R3000\ *)	FLAGS="-march=r3000"	   ;;
-	    *\ MIPS\ R3000A\ *) FLAGS="-march=r3000"	   ;;
-	    *\ Toshiba\ TX3912\ *)    FLAGS="-march=r3900"  ;;
-	    *\ Toshiba\ TX392[27]\ *) FLAGS="-march=r3900"  ;;
-	    *\ MIPS\ R4000\ *)	FLAGS="-mtune=r4000 -mips2" ;; # really mips3
-	    *\ MIPS\ R4400\ *)	FLAGS="-mtune=r4400 -mips2" ;; # really mips3
-	    *\ NEC\ VR4100\ *)	FLAGS="-mtune=r4100 -mips2" ;; # really mips3
-	    *\ NEC\ VR4300\ *)	FLAGS="-mtune=r4300 -mips2" ;; # really mips3
-	    *\ QED\ R4600\ *)	FLAGS="-mtune=r4600 -mips2" ;; # really mips3
-	    *\ MIPS\ R5000\ *)	FLAGS="-mtune=r5000 -mips2" ;; # really mips4
-	    *\ QED\ RM5200\ *)	FLAGS="-mtune=r5000 -mips2" ;; # really mips4
-	    *\ MIPS\ R6000\ *)	FLAGS="-mtune=r6000 -mips2" ;;
-	    *\ MIPS\ R8000\ *)	FLAGS="-mtune=r8000 -mips2" ;; # really mips4
+	case $hw_model in
+	    Infineon\ ADM5120)		FLAGS='-march=4kc' ;;
+	    *)
+	    case "$(egrep '^cpu0 ' /var/run/dmesg.boot)" in
+		*\ MIPS\ R2000\ *)	FLAGS="-march=r2000" ;;
+		*\ MIPS\ R3000\ *)	FLAGS="-march=r3000" ;;
+		*\ MIPS\ R3000A\ *)	FLAGS="-march=r3000" ;;
+		*\ Toshiba\ TX3912\ *)  FLAGS="-march=r3900" ;;
+		*\ Toshiba\ TX392[27]\ *) FLAGS="-march=r3900" ;;
+		*\ MIPS\ R4000\ *)	FLAGS="-mtune=r4000 -mips2" ;; # mips3
+		*\ MIPS\ R4400\ *)	FLAGS="-mtune=r4400 -mips2" ;; # mips3
+		*\ NEC\ VR4100\ *)	FLAGS="-mtune=r4100 -mips2" ;; # mips3
+		*\ NEC\ VR4300\ *)	FLAGS="-mtune=r4300 -mips2" ;; # mips3
+		*\ QED\ R4600\ *)	FLAGS="-mtune=r4600 -mips2" ;; # mips3
+		*\ MIPS\ R5000\ *)	FLAGS="-mtune=r5000 -mips2" ;; # mips4
+		*\ QED\ RM5200\ *)	FLAGS="-mtune=r5000 -mips2" ;; # mips4
+		*\ MIPS\ R6000\ *)	FLAGS="-mtune=r6000 -mips2" ;;
+		*\ MIPS\ R8000\ *)	FLAGS="-mtune=r8000 -mips2" ;; # mips4
+	    esac ;;
 	esac
 	;;
 
