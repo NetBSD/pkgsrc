@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/04/17 12:19:54 adrianp Exp $
+$NetBSD: patch-aa,v 1.2 2006/02/05 00:18:29 adrianp Exp $
 
---- Makefile.am.orig	2005-04-17 13:11:05.000000000 +0100
+--- Makefile.am.orig	2006-01-20 11:37:28.000000000 +0000
 +++ Makefile.am
-@@ -28,17 +28,11 @@ EXTRA_DIST = README README.arm README.pa
+@@ -31,17 +31,11 @@ EXTRA_DIST = README README.arm README.pa
               hydra-mod.h hydra.h crc32.h d3des.h md4.h
  
- all:	pw-inspector hydra xhydra
+ all:	pw-inspector hydra $(XHYDRA_SUPPORT) 
 -	@echo
 -	@echo Now type "make install"
  
  hydra:	$(OBJ)
- 	$(CC) $(OPTS) $(LIBS) -o $(BIN) $(OBJ) $(LIB) $(XLIBS) $(XLIBPATHS)
+ 	$(CC) $(OPTS) $(LIBS) -o $(BIN) $(OBJ) $(LIBS) $(XLIBS) $(XLIBPATHS)
 -	@echo
 -	@echo If men could get pregnant, abortion would be a sacrament
 -	@echo
