@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.67 2005/12/29 06:22:24 jlam Exp $
+# $NetBSD: Makefile.common,v 1.68 2006/02/05 14:43:59 ghen Exp $
 
 MOZ_DIST_VER?=	${MOZ_VER}
 DISTNAME?=	mozilla-${MOZ_DIST_VER}-source
 PKGNAME=	${MOZILLA}-${MOZ_VER}
 MASTER_SITES?=	${MASTER_SITE_MOZILLA:=mozilla${MOZ_DIST_VER}/source/}
-CATEGORIES=	www
+CATEGORIES?=	www
 
 MAINTAINER=	taya@NetBSD.org
 HOMEPAGE?=	http://www.mozilla.org/
