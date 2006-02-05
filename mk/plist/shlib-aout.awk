@@ -1,4 +1,4 @@
-# $NetBSD: shlib-aout.awk,v 1.1 2006/01/12 23:43:57 jlam Exp $
+# $NetBSD: shlib-aout.awk,v 1.2 2006/02/05 16:21:07 rillig Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -82,10 +82,10 @@ BEGIN {
 ###
 /.*\/lib[^\/]+\.so(\.[0-9]+)*$/ {
 	entries[++nentries] = $0
-	while (sub("\.[0-9]+$", "")) {
+	while (sub("\\.[0-9]+$", "")) {
 		symlinks[$0] = $0
 	}
-	if (sub("-[^-]+\.so$", ".so")) {
+	if (sub("-[^-]+\\.so$", ".so")) {
 		symlinks[$0] = $0
 	}
 	next
