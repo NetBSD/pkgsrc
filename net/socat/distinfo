@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/03/26 11:40:30 adrianp Exp $
+$NetBSD: distinfo,v 1.7 2006/02/05 00:33:34 adrianp Exp $
 
-SHA1 (socat-1.4.2.0.tar.gz) = 68302cc6d1bd3b58f5fc37fbd4aa969aef185241
-RMD160 (socat-1.4.2.0.tar.gz) = 6a0f0b6e1a714381a48451da877cf0693d8ca7f1
-Size (socat-1.4.2.0.tar.gz) = 331493 bytes
-SHA1 (patch-aa) = 80e88873bd80c98f8d9209c1b2204c8addb2bdb0
+SHA1 (socat-1.4.3.1.tar.gz) = 05d23aac70cfb8af280225752939d3d3f16236c9
+RMD160 (socat-1.4.3.1.tar.gz) = 83a2d447b001bb4f43ce66343b641834eea14e5c
+Size (socat-1.4.3.1.tar.gz) = 339694 bytes
+SHA1 (patch-aa) = 1d9f252348eff208fb05e27b12e6d0c5adcd30e6

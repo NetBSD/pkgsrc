@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:46:59 tv Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 00:33:34 adrianp Exp $
 
-DISTNAME=	socat-1.4.2.0
+DISTNAME=	socat-1.4.3.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.dest-unreach.org/socat/download/
 
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--disable-libwrap
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	socat.1
 SUBST_SED.paths=	-e 's,/usr/,${PREFIX}/,g'
