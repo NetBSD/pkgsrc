@@ -1,8 +1,8 @@
-$NetBSD: patch-de,v 1.1 2005/12/30 21:35:58 joerg Exp $
+$NetBSD: patch-de,v 1.2 2006/02/05 14:49:05 ghen Exp $
 
---- config/rules.mk.orig	2005-12-29 17:05:40.000000000 +0000
+--- config/rules.mk.orig	2006-02-02 13:20:06.000000000 +0100
 +++ config/rules.mk
-@@ -444,6 +444,12 @@ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
+@@ -447,6 +447,12 @@ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
  endif
  endif
  
