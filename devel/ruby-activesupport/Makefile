@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 14:06:22 taca Exp $
+# $NetBSD: Makefile,v 1.4.2.1 2006/02/05 16:41:55 salo Exp $
 
 DISTNAME=	activesupport-1.2.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -16,11 +16,12 @@ NO_CONFIGURE=	yes
 do-install:
 	${CP} -R ${WRKSRC}/lib/* ${RUBY_SITELIBDIR}
 	${CHOWN} -R ${LIBOWN}:${LIBGRP} ${RUBY_SITELIBDIR}/active_support*
-	${FIND} ${RUBY_SITELIBDIR}/active_support -type d -print |	\
-		${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${RUBY_SITELIBDIR}/active_support* -type f -print |	\
-		${XARGS} ${CHMOD} ${LIBMODE}
-	${INSTALL_DATA_DIR} ${WRKSRC}/CHANGELOG \
+	${FIND} ${RUBY_SITELIBDIR}/active_support -type d		\
+		-exec ${CHMOD} ${PKGDIRMODE} {} \;
+	${FIND} ${RUBY_SITELIBDIR}/active_support* -type f		\
+		-exec ${CHMOD} ${LIBMODE} {} \;
+	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/CHANGELOG \
 		${RUBY_DOCDIR}/CHANGELOG.activesupport
 
 .include "../../lang/ruby/modules.mk"
