@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/01/10 06:37:11 martti Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/02/05 12:43:15 martti Exp $
 bin/jalbum
 share/jalbum/JAlbum.jar
 share/jalbum/StartJAlbum.bat
@@ -234,6 +234,7 @@ share/jalbum/skins/BluPlusPlus/includes/header.inc
 share/jalbum/skins/BluPlusPlus/includes/help.inc
 share/jalbum/skins/BluPlusPlus/includes/html-header.inc
 share/jalbum/skins/BluPlusPlus/includes/index-bottom-navigation.inc
+share/jalbum/skins/BluPlusPlus/includes/index-remarks.inc
 share/jalbum/skins/BluPlusPlus/includes/index-top-navigation.inc
 share/jalbum/skins/BluPlusPlus/includes/index-topbar.inc
 share/jalbum/skins/BluPlusPlus/includes/setup-index.js
@@ -267,7 +268,6 @@ share/jalbum/skins/BluPlusPlus/plugins/Base.java
 share/jalbum/skins/BluPlusPlus/plugins/Common.class
 share/jalbum/skins/BluPlusPlus/plugins/Common.java
 share/jalbum/skins/BluPlusPlus/plugins/Compile.bat
-share/jalbum/skins/BluPlusPlus/plugins/Compile13.bat
 share/jalbum/skins/BluPlusPlus/plugins/Constants.class
 share/jalbum/skins/BluPlusPlus/plugins/Constants.java
 share/jalbum/skins/BluPlusPlus/plugins/DynamicComboBoxModel.class
@@ -560,6 +560,7 @@ share/jalbum/skins/BluPlusPlus/texts/texts_hr.properties
 share/jalbum/skins/BluPlusPlus/texts/texts_hu.properties
 share/jalbum/skins/BluPlusPlus/texts/texts_it.properties
 share/jalbum/skins/BluPlusPlus/texts/texts_nl.properties
+share/jalbum/skins/BluPlusPlus/texts/texts_nl.properties_old
 share/jalbum/skins/BluPlusPlus/texts/texts_no.properties
 share/jalbum/skins/BluPlusPlus/texts/texts_pl.properties
 share/jalbum/skins/BluPlusPlus/texts/texts_pl.properties_original
@@ -1224,10 +1225,12 @@ share/jalbum/skins/Chameleon/texts/texts_hu.properties
 share/jalbum/skins/Chameleon/texts/texts_it.properties
 share/jalbum/skins/Chameleon/texts/texts_nl.properties
 share/jalbum/skins/Chameleon/texts/texts_pl.properties
+share/jalbum/skins/Chameleon/texts/texts_pt.properties
 share/jalbum/skins/Chameleon/texts/texts_sk.properties
 share/jalbum/skins/Chameleon/texts/texts_sr.properties
 share/jalbum/skins/Chameleon/texts/texts_sr_latin.properties
 share/jalbum/skins/Chameleon/texts/texts_sv.properties
+share/jalbum/skins/Chameleon/texts/texts_uk.properties
 share/jalbum/skins/Colorful/defs.jap
 share/jalbum/skins/Colorful/index.htt
 share/jalbum/skins/Colorful/preview.jpg
@@ -2125,6 +2128,7 @@ share/jalbum/tools/Perform garbage collection.bsh
 share/jalbum/tools/Replace spaces with underscores.bsh
 share/jalbum/tools/Reset file date to camera date.bsh
 share/jalbum/tools/Sample tool.bsh
+share/jalbum/tools/Server mode.bsh
 share/jalbum/tools/Show supported file types.bsh
 @dirrm share/jalbum/help/images
 @dirrm share/jalbum/help
