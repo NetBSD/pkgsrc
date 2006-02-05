@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/01/06 15:08:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/02/05 00:12:54 wiz Exp $
 bin/berkeley_db4_svc
 bin/db4_archive
 bin/db4_checkpoint
@@ -192,7 +192,6 @@ share/doc/db4/api_c/mutex_set_tas_spins.html
 share/doc/db4/api_c/mutex_stat.html
 share/doc/db4/api_c/mutex_unlock.html
 share/doc/db4/api_c/object.html
-share/doc/db4/api_c/pindex.src
 share/doc/db4/api_c/rep_elect.html
 share/doc/db4/api_c/rep_limit.html
 share/doc/db4/api_c/rep_list.html
@@ -564,6 +563,7 @@ share/doc/db4/gsg/C/joins.html
 share/doc/db4/gsg/C/keyCreator.html
 share/doc/db4/gsg/C/preface.html
 share/doc/db4/gsg/C/readSecondary.html
+share/doc/db4/gsg/C/returns.html
 share/doc/db4/gsg/C/secondaryCursor.html
 share/doc/db4/gsg/C/secondaryDelete.html
 share/doc/db4/gsg/C/usingDbt.html
@@ -601,6 +601,7 @@ share/doc/db4/gsg/CXX/joins.html
 share/doc/db4/gsg/CXX/keyCreator.html
 share/doc/db4/gsg/CXX/preface.html
 share/doc/db4/gsg/CXX/readSecondary.html
+share/doc/db4/gsg/CXX/returns.html
 share/doc/db4/gsg/CXX/secondaryCursor.html
 share/doc/db4/gsg/CXX/secondaryDelete.html
 share/doc/db4/gsg/CXX/usingDbt.html
@@ -732,6 +733,7 @@ share/doc/db4/gsg_txn/JAVA/deadlock.jpg
 share/doc/db4/gsg_txn/JAVA/enabletxn.html
 share/doc/db4/gsg_txn/JAVA/envopen.html
 share/doc/db4/gsg_txn/JAVA/filemanagement.html
+share/doc/db4/gsg_txn/JAVA/gettingStarted.css
 share/doc/db4/gsg_txn/JAVA/hotfailover.html
 share/doc/db4/gsg_txn/JAVA/index.html
 share/doc/db4/gsg_txn/JAVA/inmem_txnexample_java.html
@@ -742,6 +744,7 @@ share/doc/db4/gsg_txn/JAVA/logconfig.html
 share/doc/db4/gsg_txn/JAVA/logfileremoval.html
 share/doc/db4/gsg_txn/JAVA/maxtxns.html
 share/doc/db4/gsg_txn/JAVA/nestedtxn.html
+share/doc/db4/gsg_txn/JAVA/perftune-intro.html
 share/doc/db4/gsg_txn/JAVA/preface.html
 share/doc/db4/gsg_txn/JAVA/readblock.jpg
 share/doc/db4/gsg_txn/JAVA/readmodifywrite.html
@@ -752,6 +755,7 @@ share/doc/db4/gsg_txn/JAVA/rwlocks1.jpg
 share/doc/db4/gsg_txn/JAVA/simplelock.jpg
 share/doc/db4/gsg_txn/JAVA/txn_ccursor.html
 share/doc/db4/gsg_txn/JAVA/txnconcurrency.html
+share/doc/db4/gsg_txn/JAVA/txncursor.html
 share/doc/db4/gsg_txn/JAVA/txnexample_java.html
 share/doc/db4/gsg_txn/JAVA/txnindices.html
 share/doc/db4/gsg_txn/JAVA/txnnowait.html
@@ -1176,7 +1180,6 @@ share/doc/db4/ref/build_win/intro.html
 share/doc/db4/ref/build_win/notes.html
 share/doc/db4/ref/build_win/small.html
 share/doc/db4/ref/build_win/test.html
-share/doc/db4/ref/build_win/unicode.html
 share/doc/db4/ref/cam/app.html
 share/doc/db4/ref/cam/fail.html
 share/doc/db4/ref/cam/intro.html
