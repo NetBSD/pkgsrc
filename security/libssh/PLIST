@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/17 11:34:16 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/05 00:27:16 adrianp Exp $
 include/libssh/config.h
 include/libssh/crypto.h
 include/libssh/libssh.h
+include/libssh/server.h
 include/libssh/sftp.h
 lib/libssh.so
-share/doc/libssh/API.txt
+share/doc/libssh/API.html
 share/doc/libssh/README
 @dirrm share/doc/libssh
 @dirrm include/libssh
