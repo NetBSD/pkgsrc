@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2006/02/05 13:23:14 shannonjr Exp $
+
+--- ./src/prelude-io.c.orig	2006-01-28 07:48:36.000000000 -0700
++++ ./src/prelude-io.c
+@@ -28,6 +28,9 @@
+ #include <stdlib.h>
+ #include <unistd.h>
+ #include <errno.h>
++#ifndef ENOTSUP
++# define ENOTSUP EINVAL
++#endif
+ #include <sys/poll.h>
+ #include <sys/ioctl.h>
+ #include <netinet/in.h>
