@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.42 2006/01/06 15:08:46 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2006/02/05 00:12:54 wiz Exp $
 
-DISTNAME=		db-4.4.16
+DISTNAME=		db-4.4.20
 PKGNAME=		${DISTNAME:S/db/db4/}
 CATEGORIES=		databases
 MASTER_SITES=		http://downloads.sleepycat.com/ \
 			ftp://ftp.sleepycat.com/releases/
+
+PATCHFILES=		patch.4.4.20.1 patch.4.4.20.2
+PATCH_SITES=		http://www.sleepycat.com/update/4.4.20/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.sleepycat.com/
