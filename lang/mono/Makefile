@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2006/01/24 07:32:18 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2006/02/05 23:09:46 joerg Exp $
 
 DISTNAME=	mono-1.1.12.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://go-mono.com/sources/mono-1.1/
 

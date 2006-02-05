@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/12/29 18:17:21 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:09:09 joerg Exp $
 
 DISTNAME=		kaname_k12_bdf
 PKGNAME=		ja-kaname-0.0.0.20030112
+PKGREVISION=		1
 CATEGORIES=		fonts x11 japanese
 MASTER_SITES=		${MASTER_SITE_LOCAL} # original site was closed.
 

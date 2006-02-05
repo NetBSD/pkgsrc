@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2005/05/22 20:07:39 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/05 23:08:13 joerg Exp $
 
 DISTNAME=	openal-20040816
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://math.smsu.edu/~erik/files/fbsd/ \
 		http://www.smluc.org/~erik/ \

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/06/23 23:50:25 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/05 23:08:51 joerg Exp $
 #
 
 DISTNAME=		ZopeInterface-3.0.1
 PKGNAME=		${PYPKGPREFIX}-ZopeInterface-3.0.1
+PKGREVISION=		1
 CATEGORIES=		devel python
 MASTER_SITES=		http://zope.org/Products/ZopeInterface/3.0.1final/
 EXTRACT_SUFX=		.tgz

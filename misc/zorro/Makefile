@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2005/06/17 03:50:23 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/02/05 23:10:14 joerg Exp $
 
 DISTNAME=	zorro-1.1p8
 PKGNAME=	zorro-1.1.8
+PKGREVISION=	1
 CATEGORIES=	misc tk
 MASTER_SITES=	ftp://ftp.neosoft.com/pub/tcl/sorted/apps/zorro-1.1p8/
 

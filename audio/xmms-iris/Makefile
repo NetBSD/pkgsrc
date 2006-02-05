@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2005/12/07 15:05:01 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/05 23:08:18 joerg Exp $
 #
 
 DISTNAME=	iris-0.11
 PKGNAME=	xmms-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	xmms audio
 MASTER_SITES=	http://cdelfosse.free.fr/xmms-iris/
 

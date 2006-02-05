@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2005/11/04 16:40:32 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:59 joerg Exp $
 #
 
 DISTNAME=		RAIDAdmin1.3.1archive
 PKGNAME=		xraidadmin-1.3.1
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://download.info.apple.com/Mac_OS_X/061-1325.20040706.bNhy4/
 

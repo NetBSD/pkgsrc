@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2005/09/28 17:09:43 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/02/05 23:09:43 joerg Exp $
 #
 
 DISTNAME=	libtabe-0.2.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chinese inputmethod
 MASTER_SITES=	ftp://xcin.linux.org.tw/pub/xcin/libtabe/devel/
 

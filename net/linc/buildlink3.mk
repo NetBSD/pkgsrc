@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:17:55 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:10:26 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LINC_BUILDLINK3_MK:=	${LINC_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	linc
 
 .if !empty(LINC_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.linc+=	linc>=1.1.1
-BUILDLINK_RECOMMENDED.linc+=	linc>=1.1.1nb2
+BUILDLINK_RECOMMENDED.linc+=	linc>=1.1.1nb3
 BUILDLINK_PKGSRCDIR.linc?=	../../net/linc
 .endif	# LINC_BUILDLINK3_MK
 

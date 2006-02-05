@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2005/06/17 03:50:44 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/05 23:11:39 joerg Exp $
 #
 
 DISTNAME=	keylaunch-1.3.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://www.kensden.pwp.blueyonder.co.uk/Oroborus/files/
 

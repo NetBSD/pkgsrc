@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/06/30 11:23:43 shannonjr Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:08:42 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FLORIST_BUILDLINK3_MK:=	${FLORIST_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	florist
 
 .if !empty(FLORIST_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.florist+=	florist>=3.15p
+BUILDLINK_RECOMMENDED.florist?=	florist>=3.15pnb2
 BUILDLINK_PKGSRCDIR.florist?=	../../devel/florist
 .endif	# FLORIST_BUILDLINK3_MK
 

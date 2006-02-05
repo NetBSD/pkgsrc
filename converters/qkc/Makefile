@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/03/24 21:12:52 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/05 23:08:29 joerg Exp $
 
 DISTNAME=	qkcc100
 PKGNAME=	qkc-1.0
+PKGREVISION=	1
 CATEGORIES=	japanese converters
 MASTER_SITES=	http://hp.vector.co.jp/authors/VA000501/
 EXTRACT_SUFX=	.zip

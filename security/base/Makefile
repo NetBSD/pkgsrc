@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/01/24 07:32:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/05 23:10:42 joerg Exp $
 #
 
 DISTNAME=	base-1.2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=secureideas/}
 
@@ -19,7 +19,7 @@ DEPENDS+=	pear-Log-[0-9]*:../../sysutils/pear-Log
 DEPENDS+=	pear-Numbers_Words-[0-9]*:../../math/pear-Numbers_Words
 DEPENDS+=	pear-Numbers_Roman-[0-9]*:../../math/pear-Numbers_Roman
 DEPENDS+=	pear-Image_Color-[0-9]*:../../graphics/pear-Image_Color
-DEPENDS+=	pear-Image_Graph-0.3.0dev4:../../graphics/pear-Image_Graph
+DEPENDS+=	pear-Image_Graph-0.3.0dev4nb1:../../graphics/pear-Image_Graph
 
 NO_BUILD=	YES
 USE_PKGINSTALL=	YES

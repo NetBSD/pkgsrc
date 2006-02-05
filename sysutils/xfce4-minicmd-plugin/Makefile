@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2006/01/24 07:32:36 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/05 23:10:58 joerg Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 XFCE4_VERSION=	0.3.0
 
 DISTNAME=	xfce4-minicmd-plugin-${XFCE4_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.berlios.de/xfce-goodies/
 COMMENT=	Xfce command plugin

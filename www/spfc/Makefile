@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2006/01/04 04:29:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.20 2006/02/05 23:11:29 joerg Exp $
 
 DISTNAME=	spfc-0.2.0
+PKGREVISION=	1
 CATEGORIES=	www java
 MASTER_SITES=	http://java.apache.org/spfc/dist/
 
@@ -11,7 +12,7 @@ COMMENT=	Apache.org's Server Page Foundation Classes
 BROKEN_IN=	pkgsrc-2005Q4
 
 # yes, this needs _exactly_ version 2.0
-DEPENDS+=	jsdk-2.0:../../www/jsdk20
+DEPENDS+=	jsdk-2.0nb1:../../www/jsdk20
 
 .include "../../mk/bsd.prefs.mk"
 

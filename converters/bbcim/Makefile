@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:43 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:08:28 joerg Exp $
 #
 
 DISTNAME=       bbcim095-5
 PKGNAME=        bbcim-0.95b5
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	http://www.nvg.ntnu.no/bbc/util/
 EXTRACT_SUFX=	.zip

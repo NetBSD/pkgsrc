@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2006/01/11 18:15:57 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/02/05 23:10:07 joerg Exp $
 #
 
 DISTNAME=	cuecat-0.2.1
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	ftp://opensource.lineo.com/drivers/ \
 		http://www.flyingbuttmonkeys.com/mirrors/oss.lineo.com/drivers/

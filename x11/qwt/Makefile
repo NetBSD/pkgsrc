@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2006/01/24 07:33:00 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2006/02/05 23:11:42 joerg Exp $
 
 DISTNAME=	qwt-0.3.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qwt/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2006/01/04 04:29:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.26 2006/02/05 23:08:42 joerg Exp $
 #
 
 DISTNAME=       gdb-5.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/12/17 05:20:22 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/05 23:10:35 joerg Exp $
 
 DISTNAME=	winsteng
 PKGNAME=	adobeps-win-1.0.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.adobe.com/pub/adobe/printerdrivers/win/1.x/
 EXTRACT_SUFX=	.exe

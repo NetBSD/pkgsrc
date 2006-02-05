@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2006/01/24 07:32:06 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:08:56 joerg Exp $
 #
 
 DISTNAME=	leafpad-0.8.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors gnome
 MASTER_SITES=	http://savannah.nongnu.org/download/leafpad/
 

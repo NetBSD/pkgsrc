@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/05/17 21:32:34 seb Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/02/05 23:10:03 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_NUMERIC_BUILDLINK3_MK:=	${PY_NUMERIC_BUILDLINK3_MK}+
@@ -14,6 +14,7 @@ BUILDLINK_PACKAGES+=	pynumeric
 
 .if !empty(PY_NUMERIC_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.pynumeric+=	${PYPKGPREFIX}-Numeric-[0-9]*
+BUILDLINK_RECOMMENDED.pynumeric?=	${PYPKGPREFIX}-Numeric>=23.7nb1
 BUILDLINK_PKGSRCDIR.pynumeric?=	../../math/py-Numeric
 .endif	# PY_NUMERIC_BUILDLINK3_MK
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2005/12/05 20:50:12 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2006/02/05 23:09:02 joerg Exp $
 
 DISTNAME=		s9xs139
 PKGNAME=		snes9x-1.39
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.snes9x.com/zips/
 EXTRACT_SUFX=		.zip

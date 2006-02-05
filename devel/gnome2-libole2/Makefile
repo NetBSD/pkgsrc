@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2005/08/10 20:56:15 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/02/05 23:08:43 joerg Exp $
 #
 
 DISTNAME=		libole2-2.2.8
 PKGNAME=		gnome2-${DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libole2/2.2/}
 EXTRACT_SUFX=		.tar.bz2
