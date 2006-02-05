@@ -1,15 +1,66 @@
-# $NetBSD: deprecated.map,v 1.24 2006/01/01 18:53:03 wiz Exp $
+# $NetBSD: deprecated.map,v 1.25 2006/02/05 00:05:39 rillig Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
-# what to do to make the warning disappear.
+# what to do to make the warning disappear. Lines should only be removed
+# if the explanation changes, in which case the new explanation should
+# be added to the current date.
 
-# The following entries can be removed after the 2006Q1 branch.
+# May 2005
+ALL_TARGET		Use BUILD_TARGET instead.
+DIGEST_FILE		Use DISTINFO_FILE instead.
+IGNORE			Use PKG_FAIL_REASON or PKG_SKIP_REASON instead.
+IS_INTERACTIVE		Use INTERACTIVE_STAGE instead.
+KERBEROS		Use the PKG_OPTIONS framework instead.
+LIB_DEPENDS		Use DEPENDS instead.
+MASTER_SITE_SUBDIR	Use some form of MASTER_SITES instead.
+MD5_FILE		Use DISTINFO_FILE instead.
+MIRROR_DISTFILE		Use NO_BIN_ON_FTP and/or NO_SRC_ON_FTP instead.
+NO_CDROM		Use NO_BIN_ON_CDROM and/or NO_SRC_ON_CDROM instead.
+NO_PATCH		You can just remove it.
+NO_WRKSUBDIR		Use WRKSRC=${WRKDIR} instead.
+PATCH_SITE_SUBDIR	Use some form of PATCHES_SITES instead.
+PATCH_SUM_FILE		Use DISTINFO_FILE instead.
+PKG_JVM			Use PKG_DEFAULT_JVM instead.
+USE_BUILDLINK2		You can just remove it.
+USE_BUILDLINK3		You can just remove it.
+USE_CANNA		Use the PKG_OPTIONS framework instead.
+USE_DB4			Use the PKG_OPTIONS framework instead.
+USE_ESOUND		Use the PKG_OPTIONS framework instead.
+USE_GIF			Use the PKG_OPTIONS framework instead.
+USE_GMAKE		Use USE_TOOLS+=gmake instead.
+USE_GNU_TOOLS		Use USE_TOOLS instead.
+USE_IDEA		Use the PKG_OPTIONS framework instead.
+USE_LIBCRACK		Use the PKG_OPTIONS framework instead.
+USE_MMX			Use the PKG_OPTIONS framework instead.
+USE_PKGLIBTOOL		Use USE_LIBTOOL instead.
+USE_SSL			Include "../../security/openssl/buildlink3.mk" instead.
+
+# July 2005
+USE_PERL5		Use USE_TOOLS+=perl or USE_TOOLS+=perl:run instead.
+
+# October 2005
+CONFLICT		Use CONFLICTS instead.
 NO_TOOLS		You can just remove it.
 NO_WRAPPER		You can just remove it.
-CONFLICT		Use CONFLICTS instead.
+
+# November 2005
+ALLFILES		Use CKSUMFILES instead.
 DEPENDS_TARGET		Use DEPENDS instead.
 FETCH_DEPENDS		Use DEPENDS instead.
 LIB_DEPENDS		Use DEPENDS instead.
 RUN_DEPENDS		Use DEPENDS instead.
-ALLFILES		Use CKSUMFILES instead.
+
+# December 2005
+USE_CUPS		Use the PKG_OPTIONS framework (option cups) instead.
+USE_I586		Use the PKG_OPTIONS framework (option i586) instead.
+USE_INN			Use the PKG_OPTIONS framework instead.
+USE_OPENLDAP		Use the PKG_OPTIONS framework (option openldap) instead.
+USE_OSS			Use the PKG_OPTIONS framework (option oss) instead.
+USE_RSAREF2		Use the PKG_OPTIONS framework (option rsaref) instead.
+USE_SASL		Use the PKG_OPTIONS framework (option sasl) instead.
+USE_SASL2		Use the PKG_OPTIONS framework (option sasl) instead.
+USE_SJ3			Use the PKG_OPTIONS framework (option sj3) instead.
+USE_SOCKS		Use the PKG_OPTIONS framework (socks4 and socks5 options) instead.
+USE_WNN4		Use the PKG_OPTIONS framework (option wnn4) instead.
+USE_XFACE		Use the PKG_OPTIONS framework instead.
