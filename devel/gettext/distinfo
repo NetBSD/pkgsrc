@@ -1,17 +1,15 @@
-$NetBSD: distinfo,v 1.12 2005/02/23 22:24:14 agc Exp $
+$NetBSD: distinfo,v 1.13 2006/02/05 22:45:53 joerg Exp $
 
-SHA1 (gettext-0.11.5.tar.gz) = 4d17534afac106bc0f2310a9fd77a291d433234b
-RMD160 (gettext-0.11.5.tar.gz) = 1de10790d1b8257717bc9c8a2a6fb451de5136c8
-Size (gettext-0.11.5.tar.gz) = 3724099 bytes
-SHA1 (patch-aa) = faa6d71599703d20ac7652637c83a0c713467a32
-SHA1 (patch-ab) = 6e9eec0ff3bbab05df5a6b513ee9f8d3b39ad385
-SHA1 (patch-ac) = 1703e08d31fb31b99f6496ef56f4c405f1baefab
-SHA1 (patch-ag) = ec7477b6d66dbbb6bc3169f700ced6b117a6db27
-SHA1 (patch-ah) = 3de0f7bdffb57352cbfc361729d463ed53b53886
-SHA1 (patch-aj) = 8c8cf6fcc6f23a54b5e20e1ab741d4a7d92a11a7
-SHA1 (patch-ak) = 6ba1e5c4180cfc76b3545551f18c16f2c1bdbb15
-SHA1 (patch-al) = de803407110c28b044aad8c122ff42181510a0e3
-SHA1 (patch-am) = 572a97eb3f0d805e27a3654eb4a4294433a51674
-SHA1 (patch-an) = 5bda0ba8f1e8a9c5d2c073b80caa253993111f1d
-SHA1 (patch-ao) = 9d2aea0904acc72951b1f449b65948ec0ecca1e7
-SHA1 (patch-ap) = 99153dcd56d937b15caf25d3f12aa958ea096825
+SHA1 (gettext-0.14.5.tar.gz) = 68737eee1a6427044eef901dc88e4144d371fb6b
+RMD160 (gettext-0.14.5.tar.gz) = d31c8e49671f00623ce1e6f73716a5abcd1c7ec2
+Size (gettext-0.14.5.tar.gz) = 7105715 bytes
+SHA1 (patch-aa) = da7ff06b28645b7c63ae9e49a29a8014f07dcec1
+SHA1 (patch-ab) = 91eb4e65d63747a19315a21c9274f6c44dddf38e
+SHA1 (patch-ad) = 53bf06d6073cd2ff4a09a688b1df3d294ef7ddb4
+SHA1 (patch-ae) = f2efed6024ef1aa3fb972c043e0900676659c766
+SHA1 (patch-ag) = 1979c71e9a65e85ca9bad63bb905b46d4e2a4046
+SHA1 (patch-ah) = a3a46efae0cb2b61344bcff7788765928a43c285
+SHA1 (patch-aj) = 5a28ee9299b5c0e7ba10621bf73b638cafdcfa7e
+SHA1 (patch-ak) = 3f2aa72291aae5e024a3bb833b46973221be3b95
+SHA1 (patch-al) = 2ed0cbf8e2e9a03ac3f8aaff447a07f578010472
+SHA1 (patch-an) = f99f345f9b23f72e4a462445bcce8281dd1e5308
