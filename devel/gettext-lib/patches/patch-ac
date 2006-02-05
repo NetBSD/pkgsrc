@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2004/12/18 14:28:04 grant Exp $
+$NetBSD: patch-ac,v 1.2 2006/02/05 22:45:54 joerg Exp $
 
---- intl/dcigettext.c.orig	2002-07-23 22:27:52.000000000 +1000
+--- intl/dcigettext.c.orig	2005-05-20 20:06:17.000000000 +0000
 +++ intl/dcigettext.c
-@@ -234,7 +234,9 @@ struct known_translation_t
+@@ -243,7 +243,9 @@ struct known_translation_t
  /* Root of the search tree with known translations.  We can use this
     only if the system provides the `tsearch' function family.  */
  #if defined HAVE_TSEARCH || defined _LIBC
