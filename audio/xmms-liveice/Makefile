@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2005/04/11 21:44:59 tv Exp $
+# $NetBSD: Makefile,v 1.11 2006/02/05 23:08:18 joerg Exp $
 #
 
 DISTNAME=	liveice-xmms
 PKGNAME=	xmms-liveice-1.0.0
-PKGREVISION=	         2
+PKGREVISION=	         3
 CATEGORIES=	audio
 MASTER_SITES=	http://star.arm.ac.uk/~spm/software/
 

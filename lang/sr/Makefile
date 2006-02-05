@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2005/06/17 04:49:47 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/05 23:09:52 joerg Exp $
 #
 
 DISTNAME=		sr233
 PKGNAME=		sr-2.3.3
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		lang parallel
 MASTER_SITES=		ftp://ftp.cs.arizona.edu/sr/
 EXTRACT_SUFX=		.tar.Z

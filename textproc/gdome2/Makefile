@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/12/05 20:51:03 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/05 23:11:02 joerg Exp $
 
 DISTNAME=	gdome2-0.8.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://gdome2.cs.unibo.it/tarball/
 

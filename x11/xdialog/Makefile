@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2005/06/01 18:03:32 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/02/05 23:11:46 joerg Exp $
 #
 
 DISTNAME=		Xdialog-2.1.1
 PKGNAME=		${DISTNAME:S/^X/x/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11 misc
 MASTER_SITES=		http://thgodef.nerim.net/xdialog/	\
 			http://thgodef.nerim.net/xdialog/archives/

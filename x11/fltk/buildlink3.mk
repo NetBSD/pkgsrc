@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2005/06/16 23:49:40 kristerw Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/02/05 23:11:32 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FLTK_BUILDLINK3_MK:=	${FLTK_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	fltk
 
 .if !empty(FLTK_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.fltk+=	fltk>=1.1.5rc1
-BUILDLINK_RECOMMENDED.fltk+=	fltk>=1.1.5rc1nb3
+BUILDLINK_RECOMMENDED.fltk+=	fltk>=1.1.7nb1
 BUILDLINK_PKGSRCDIR.fltk?=	../../x11/fltk
 BUILDLINK_FILES.fltk+=		include/Fl/*
 .endif	# FLTK_BUILDLINK3_MK

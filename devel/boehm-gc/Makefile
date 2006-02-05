@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2006/01/03 22:15:22 reed Exp $
+# $NetBSD: Makefile,v 1.53 2006/02/05 23:08:39 joerg Exp $
 
 DISTNAME=	gc6.6
 PKGNAME=	${DISTNAME:S/gc/boehm-gc-/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2006/01/15 18:31:50 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 23:08:42 joerg Exp $
 #
 
 DISTNAME=		fhist-1.13
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=		devel
 MASTER_SITES=		http://fhist.sourceforge.net/
 

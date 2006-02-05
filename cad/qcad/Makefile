@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2006/01/24 07:31:57 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2006/02/05 23:08:22 joerg Exp $
 
 DISTNAME=		qcad-1.5.4-src
 PKGNAME=		qcad-1.5.4
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=qcad/}
 

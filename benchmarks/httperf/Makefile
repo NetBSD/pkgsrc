@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2005/06/17 04:49:45 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/02/05 23:08:19 joerg Exp $
 #
 
 DISTNAME=	httperf-0.6
+PKGREVISION=	1
 CATEGORIES=	benchmarks www
 MASTER_SITES=	ftp://ftp.hpl.hp.com/pub/httperf/
 

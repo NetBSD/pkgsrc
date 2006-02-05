@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2006/01/29 17:05:54 adam Exp $
+# $NetBSD: Makefile,v 1.32 2006/02/05 23:10:45 joerg Exp $
 
 .include	"../../security/nessus/Makefile.common"
 
 DISTNAME=	nessus-${VERS}
+PKGREVISION=	1
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 

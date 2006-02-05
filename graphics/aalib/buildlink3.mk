@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2005/12/11 09:40:44 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/02/05 23:09:28 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 AALIB_BUILDLINK3_MK:=	${AALIB_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	aalib
 
 .if !empty(AALIB_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.aalib+=	aalib>=1.4.0.4
-BUILDLINK_RECOMMENDED.aalib+=	aalib>=1.4.0.4nb2
+BUILDLINK_RECOMMENDED.aalib+=	aalib>=1.4.0.5nb2
 BUILDLINK_PKGSRCDIR.aalib?=	../../graphics/aalib
 .endif	# AALIB_BUILDLINK3_MK
 

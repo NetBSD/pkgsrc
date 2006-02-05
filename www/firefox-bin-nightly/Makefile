@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2004/03/16 14:34:39 grant Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/05 23:11:21 joerg Exp $
 
 MOZILLA=	firefox
+PKGREVISION=	1
 
 HOMEPAGE=	http://www.mozilla.org/projects/firefox/
 COMMENT=	Lightweight gecko-based web browser (nightly binary pkg)

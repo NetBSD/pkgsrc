@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2005/06/01 18:02:52 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/02/05 23:09:23 joerg Exp $
 #
 
 DISTNAME=		Wormz-1.0b5
 PKGNAME=		wormz-1.0b5
+PKGREVISION=		1
 CATEGORIES=		games x11
 MASTER_SITES=		http://lide.punknet.cz/miri/
 

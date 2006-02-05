@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2005/12/05 20:50:07 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2006/02/05 23:08:53 joerg Exp $
 #
 
 DISTNAME=	semantic-1.4.2
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2005/10/15 16:37:21 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2006/02/05 23:11:31 joerg Exp $
 
 DISTNAME=	libXrender-0.9.0
 PKGNAME=	${DISTNAME:S/lib//}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xlibs.freedesktop.org/release/
 EXTRACT_SUFX=	.tar.bz2

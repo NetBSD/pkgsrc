@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2006/01/24 07:32:42 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2006/02/05 23:11:17 joerg Exp $
 
 DISTNAME=	mod_dtcl-0.11.6
 PKGNAME=	ap-dtcl-0.11.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://tcl.apache.org/mod_dtcl/download/
 

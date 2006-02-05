@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2005/12/12 19:57:52 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:11:40 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 OPENMOTIF_BUILDLINK3_MK:=	${OPENMOTIF_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	openmotif
 
 .if !empty(OPENMOTIF_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.openmotif+=	openmotif>=2.2.3
+BUILDLINK_RECOMMENDED.openmotif?=	openmotif>=2.2.3nb2
 BUILDLINK_PKGSRCDIR.openmotif?=	../../x11/openmotif
 .endif	# OPENMOTIF_BUILDLINK3_MK
 

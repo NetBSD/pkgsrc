@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/11/15 18:54:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:11:03 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBXML++2_BUILDLINK3_MK:=	${LIBXML++2_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libxml++2
 
 .if !empty(LIBXML++2_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libxml++2+=	libxml++2>=2.10.0
+BUILDLINK_RECOMMENDED.libxml++2?=	libxml++2>=2.10.0nb1
 BUILDLINK_PKGSRCDIR.libxml++2?=	../../textproc/libxml++2
 .endif	# LIBXML++2_BUILDLINK3_MK
 

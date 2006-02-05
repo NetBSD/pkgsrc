@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2005/04/11 21:47:45 tv Exp $
+# $NetBSD: Makefile,v 1.21 2006/02/05 23:11:10 joerg Exp $
 #
 
 DISTNAME=	egenix-mx-base-2.0.6
 PKGNAME=	${PYPKGPREFIX}-mxDateTime-2.0.6
+PKGREVISION=	1
 CATEGORIES=	time python
 MASTER_SITES=	http://www.egenix.com/files/python/
 

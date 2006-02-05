@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2005/06/01 18:02:40 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/05 23:08:19 joerg Exp $
 #
 
 DISTNAME=	synaesthesia-xmms-0.0.3-rc3
 PKGNAME=	xmms-synaesthesia-0.0.3rc3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio xmms
 MASTER_SITES=	http://staff.xmms.org/zinx/xmms/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/06/16 06:57:41 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:08:22 joerg Exp $
 #
 
 DISTNAME=	mpac-0.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	http://goemon.polito.it/ftp/pub/software/lethal/Elettronica/antenna/
 

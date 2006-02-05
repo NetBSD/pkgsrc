@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2005/12/29 06:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/02/05 23:08:54 joerg Exp $
 
 DISTNAME=	w32api-2.5-src
 PKGNAME=	w32api-2.5
 #PKGREVISION=	2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mingw/}
 DISTFILES+=	${DISTNAME}.tar.gz pe-crt-1.2.1.tar.gz

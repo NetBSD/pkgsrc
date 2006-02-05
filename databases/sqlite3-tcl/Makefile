@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/09/30 12:17:39 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/05 23:08:37 joerg Exp $
 
 .include "../../databases/sqlite3/Makefile.common"
 
 PKGNAME:=		${PKGNAME:S/-/-tcl-/}
+PKGREVISION=		1
 
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 
