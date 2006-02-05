@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/02/05 22:38:15 joerg Exp $
+
+--- gettext-tools/misc/Makefile.in.orig	2005-05-23 11:24:28.000000000 +0000
++++ gettext-tools/misc/Makefile.in
+@@ -569,7 +569,7 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-gettextsrcDATA install-lispLISP
++install-data-am: install-gettextsrcDATA
+ 
+ install-exec-am: install-binSCRIPTS
+ 
