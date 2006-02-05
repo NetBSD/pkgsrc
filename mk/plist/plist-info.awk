@@ -1,4 +1,4 @@
-# $NetBSD: plist-info.awk,v 1.1 2006/01/12 23:43:57 jlam Exp $
+# $NetBSD: plist-info.awk,v 1.2 2006/02/05 16:12:56 rillig Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -77,7 +77,7 @@ BEGIN {
 	sub("^info/", INFO_DIR "/")
 	cmd = TEST " -f " PREFIX "/" $0
 	if (system(cmd) == 0) {
-		sub("\.gz$", "")
+		sub("\\.gz$", "")
 		cmd = "cd " PREFIX " && " LS " -1 " $0 "*"
 		while (cmd | getline) {
 			#if ((MANZ ~ /[yY][eE][sS]/) && ($0 !~ /\.gz$/)) {
