@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12805 2006/02/05 15:35:32 adrianp Exp $
+$NetBSD: CHANGES,v 1.12806 2006/02/05 19:01:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -822,3 +822,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/thunderbird to 1.5 [ghen 2006-02-05]
 	Updated mail/thunderbird-gtk1 to 1.5 [ghen 2006-02-05]
 	Updated net/freeradius to 1.1.0 [adrianp  2006-02-05]
+	Updated chat/libtlen to 20041113 [adam 2006-02-05]
