@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2005/12/05 23:55:18 rillig Exp $
+# $NetBSD: Makefile.common,v 1.16.2.1 2006/02/05 22:22:37 salo Exp $
 #
 
 DISTNAME=	ssh-3.2.9.1
@@ -97,4 +97,3 @@ post-install:
 .endfor
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
