@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4571 2006/02/05 20:55:08 ghen Exp $
+$NetBSD: TODO,v 1.4572 2006/02/05 21:58:48 ghen Exp $
 
 Suggested new packages
 ======================
@@ -99,10 +99,6 @@ Suggested new packages
 	Helix Player
 	http://player.helixcommunity.org/2004/downloads/
 	RealNetwork's open source audio/video player
-
-	Sunbird [ghen]
-	http://www.mozilla.org/projects/calendar/sunbird.html
-	Stand-alone calendaring application
 
 	SeaMonkey [ghen, pkgsrc-wip]
 	http://www.mozilla.org/projects/seamonkey/
