@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.65 2006/02/05 21:52:47 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.66 2006/02/05 22:23:03 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -133,3 +133,5 @@ Pullup ticket 1086 - requested by Takahiro Kambe
 portability fix for ruby-activesupport
 Pullup ticket 1084 - requested by Joerg Sonnenberger
 netpbm bugfix
+Pullup ticket 1090 - requested by Thomas Klausner
+dependency fix for ssh2-nox11
