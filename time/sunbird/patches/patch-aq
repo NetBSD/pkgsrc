@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.1.1.1 2006/02/05 21:56:26 ghen Exp $
+
+--- directory/c-sdk/configure.in.orig	2006-02-02 16:57:57.000000000 +0100
++++ directory/c-sdk/configure.in
+@@ -54,7 +54,7 @@ USE_64=
+ USE_CPLUS=
+ USE_IPV6=
+ USE_MDUPDATE=
+-_OPTIMIZE_FLAGS=-O
++_OPTIMIZE_FLAGS=
+ _DEBUG_FLAGS=-g
+ MOZ_DEBUG=1
+ MOZ_OPTIMIZE=

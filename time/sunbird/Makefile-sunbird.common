@@ -1,0 +1,32 @@
+# $NetBSD: Makefile-sunbird.common,v 1.1.1.1 2006/02/05 21:56:20 ghen Exp $
+
+MOZILLA_BIN=		sunbird-bin
+MOZ_VER=		0.3a1
+EXTRACT_SUFX=		.tar.bz2
+DISTNAME=		${MOZILLA}-${MOZ_VER}-source
+CATEGORIES=		time
+MASTER_SITES=		http://ftp.mozilla.org/pub/mozilla.org/sunbird/new-directory/releases/${MOZ_VER}/source/
+MASTER_SITES+=		ftp://ftp.mozilla.org/pub/mozilla.org/sunbird/new-directory/releases/${MOZ_VER}/source/
+
+HOMEPAGE=		http://www.mozilla.org/projects/calendar/sunbird.html
+
+CONFIGURE_ENV+=		MOZ_SUNBIRD=1
+MAKE_ENV+=		MOZ_SUNBIRD=1
+
+DISTINFO_FILE=		${.CURDIR}/../../time/sunbird/distinfo
+PATCHDIR=		${.CURDIR}/../../time/sunbird/patches
+
+CONFIGURE_ARGS+=	--enable-application=calendar
+
+pre-install:
+	${CP} -r ${WRKSRC}/dist/bin/defaults/profile/extensions \
+							${WRKSRC}/dist/bin
+	${MV} ${WRKSRC}/dist/bin/extensions/installed-extensions.txt \
+		${WRKSRC}/dist/bin/extensions/installed-extensions-processed.txt
+
+post-install:
+	cd ${PREFIX}/lib/${MOZILLA} && \
+	${SETENV} LD_LIBRARY_PATH=. MOZILLA_FIVE_HOME=. HOME=${WRKSRC:Q} \
+		./${MOZILLA_BIN} -register
+
+.include "../../www/mozilla/Makefile.common"
