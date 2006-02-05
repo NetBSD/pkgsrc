@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/12/10 13:47:22 taya Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/02/05 14:46:31 ghen Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -738,6 +738,7 @@ include/${MOZILLA}/dom/nsIDOMChromeWindow.h
 include/${MOZILLA}/dom/nsIDOMClassInfo.h
 include/${MOZILLA}/dom/nsIDOMComment.h
 include/${MOZILLA}/dom/nsIDOMCompositionListener.h
+include/${MOZILLA}/dom/nsIDOMConstructor.h
 include/${MOZILLA}/dom/nsIDOMContextMenuListener.h
 include/${MOZILLA}/dom/nsIDOMCounter.h
 include/${MOZILLA}/dom/nsIDOMCrypto.h
@@ -2432,7 +2433,6 @@ include/${MOZILLA}/nss/swfortt.h
 include/${MOZILLA}/nss/watcomfx.h
 @comment end INCLUDE-PUBLIC
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
-@exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regchrome
 @unexec ${RM} %D/lib/${MOZILLA}/components/compreg.dat
 @unexec ${RM} %D/lib/${MOZILLA}/components/xpti.dat
 @comment begin DIRS
