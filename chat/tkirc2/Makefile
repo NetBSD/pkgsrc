@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:45:06 tv Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 23:08:26 joerg Exp $
 
 DISTNAME=	tkirc2.46
 PKGNAME=	tkirc2-2.46
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat x11
 MASTER_SITES=	ftp://ftp.netsplit.de/pub/tcltk/
 

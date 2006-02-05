@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2005/06/16 06:57:53 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/05 23:09:13 joerg Exp $
 
 DISTNAME=	civctp-demo-10251999
 PKGNAME=	civctp-demo-19991025
+PKGREVISION=	1
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.linuxgames.com/loki/demos/civctp/ \
 		ftp://download.linuxlords.com/pub/demos/civctp/ \

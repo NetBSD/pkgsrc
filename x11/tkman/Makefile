@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2005/06/01 18:03:32 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2006/02/05 23:11:44 joerg Exp $
 
 DISTNAME=		tkman
 PKGNAME=		tkman-2.1
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		ftp://tkman.sourceforge.net/pub/tkman/ \
 			http://tkman.sourceforge.net/

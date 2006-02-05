@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:47:13 tv Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/05 23:10:45 joerg Exp $
 
 DISTNAME=	mcrypt-2.6.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://mcrypt.hellug.gr/pub/mcrypt/ \
 		ftp://mcrypt.hellug.gr/pub/mcrypt/old/

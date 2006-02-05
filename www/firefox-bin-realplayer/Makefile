@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/07/20 10:23:59 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/05 23:11:21 joerg Exp $
 
 DISTNAME= 		firefox-bin-realplayer-1.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		www audio graphics
 MASTER_SITES=		# empty
 DISTFILES=		# empty

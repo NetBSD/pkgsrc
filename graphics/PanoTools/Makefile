@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2005/12/05 20:50:19 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/05 23:09:27 joerg Exp $
 #
 
 DISTNAME=		PanoTools
 PKGNAME=		${DISTNAME}-2.6b1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics java
 MASTER_SITES=		http://www.path.unimelb.edu.au/~dersch/
 

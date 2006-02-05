@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2006/01/06 15:10:01 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/05 23:08:30 joerg Exp $
 
 DISTNAME=	dbxml-1.2.1
 PKGNAME=	${DISTNAME:S/db/bdb-/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases
 MASTER_SITES=	http://www.sleepycat.com/update/snapshot/
 

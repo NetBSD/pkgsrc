@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2006/01/02 18:56:20 darcy Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/05 23:08:51 joerg Exp $
 #
 
 DISTNAME=	generate-2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	ftp://ftp.druid.net/pub/distrib/
 EXTRACT_SUFX=	.tgz

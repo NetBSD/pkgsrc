@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/12/05 20:50:52 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:35 joerg Exp $
 
 DISTNAME=		#
 PKGNAME=		cnprint-3.30b
+PKGREVISION=		1
 CATEGORIES=		print
 MASTER_SITES=		http://nba184.med.uth.tmc.edu:3006/~cai/software/cnp/ \
 			http://nba184.med.uth.tmc.edu:3006/~cai/software/cnp/metrics/ \

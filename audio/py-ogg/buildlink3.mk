@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2004/05/17 21:32:34 seb Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/02/05 23:08:13 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PY_OGG_BUILDLINK3_MK:=	${PY_OGG_BUILDLINK3_MK}+
@@ -14,6 +14,7 @@ BUILDLINK_PACKAGES+=	pyogg
 
 .if !empty(PY_OGG_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.pyogg+=	${PYPKGPREFIX}-ogg>=1.3
+BUILDLINK_RECOMMENDED.pyogg?=	${PYPKGPREFIX}-ogg>=1.3nb2
 BUILDLINK_PKGSRCDIR.pyogg?=	../../audio/py-ogg
 .endif	# PY_OGG_BUILDLINK3_MK
 

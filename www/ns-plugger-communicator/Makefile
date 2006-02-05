@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/11/06 22:11:26 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/05 23:11:26 joerg Exp $
 #
 
+PKGREVISION=	1
 COMMENT=	Streaming multimedia plugin for Netscape (communicator)
 
 BINNAME=	communicator

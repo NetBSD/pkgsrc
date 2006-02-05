@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2005/12/05 20:50:25 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2006/02/05 23:09:45 joerg Exp $
 
 DISTNAME=       	icon.v942src
 PKGNAME=		icon-9.4.2
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://www.cs.arizona.edu/icon/ftp/packages/unix/
 EXTRACT_SUFX=		.tgz

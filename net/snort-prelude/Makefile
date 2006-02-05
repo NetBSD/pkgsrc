@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2006/01/29 20:21:57 adrianp Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/05 23:10:31 joerg Exp $
 
 .include "../../net/snort/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-prelude-/}
-PKGREVISION=	2
+PKGREVISION=	3
 
 COMMENT=	Network Intrusion Detection System (with Prelude support)
 

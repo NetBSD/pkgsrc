@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/12/29 18:17:21 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:09:09 joerg Exp $
 
 DISTNAME=		elisat10
 PKGNAME=		ja-elisat-1.0
+PKGREVISION=		1
 CATEGORIES=		fonts x11 japanese
 MASTER_SITES=		http://www.tea.forus.or.jp/toshi/exhibition/
 

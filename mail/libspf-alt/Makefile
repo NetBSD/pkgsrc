@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2006/01/24 19:15:29 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/05 23:09:55 joerg Exp $
 
 DISTNAME=	libspf_alt-0.4.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	http://www.midwestcs.com/spf/libspf-alt/
 

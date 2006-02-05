@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/02/16 18:38:41 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:10:16 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBASSETML_BUILDLINK3_MK:=	${LIBASSETML_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libassetml
 
 .if !empty(LIBASSETML_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libassetml+=	libassetml>=1.2.1
+BUILDLINK_RECOMMENDED.libassetml?=	libassetml>=1.2.1nb1
 BUILDLINK_PKGSRCDIR.libassetml?=	../../multimedia/libassetml
 .endif	# LIBASSETML_BUILDLINK3_MK
 

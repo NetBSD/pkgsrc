@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/12/05 20:51:08 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 23:11:08 joerg Exp $
 
 DISTNAME=	dtd
 PKGNAME=	tei-4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.tei-c.org/P4X/DTD/
 EXTRACT_SUFX=	.zip

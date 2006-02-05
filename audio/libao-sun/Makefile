@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/10/23 19:05:34 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/05 23:08:10 joerg Exp $
 
 .include "../../audio/libao/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/libao/libao-sun/}
+PKGREVISION=	1
 
 COMMENT+=	(Sun audio plugin)
 

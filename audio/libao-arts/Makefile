@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2006/01/24 07:31:54 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/02/05 23:08:10 joerg Exp $
 
 .include "../../audio/libao/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/libao/libao-arts/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT+=	(arts plugin)
 

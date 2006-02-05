@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/12/28 19:38:36 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:09:10 joerg Exp $
 #
 
 DISTNAME=	jmk-x11-fonts-3.0
 PKGNAME=	jmk-fonts-3.0
+PKGREVISION=	1
 CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=X11/fonts/}
 

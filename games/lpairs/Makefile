@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2005/12/11 09:40:42 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/05 23:09:20 joerg Exp $
 
 DISTNAME=	lpairs-1.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lgames/}
 

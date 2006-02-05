@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/01/25 11:48:34 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/02/05 23:08:50 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 P5_GLIB2_BUILDLINK3_MK:=	${P5_GLIB2_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	p5-glib2
 
 .if !empty(P5_GLIB2_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.p5-glib2+=	p5-glib2>=1.103
+BUILDLINK_RECOMMENDED.p5-glib2?=	p5-glib2>=1.103nb1
 BUILDLINK_PKGSRCDIR.p5-glib2?=	../../devel/p5-glib2
 .endif	# P5_GLIB2_BUILDLINK3_MK
 

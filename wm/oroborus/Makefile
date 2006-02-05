@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2005/06/01 18:03:25 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/05 23:11:14 joerg Exp $
 #
 
 DISTNAME=	oroborus_2.0.12-1
 PKGNAME=	${DISTNAME:S/_/-/:C/-.$//}
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://www.oroborus.org/debian/dists/sid/main/source/x11/
 

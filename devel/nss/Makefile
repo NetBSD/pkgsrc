@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:06 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/05 23:08:49 joerg Exp $
 
 DISTNAME=		nss-3.9.2
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		security
 MASTER_SITES?=		ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_9_2_RTM/src/
 

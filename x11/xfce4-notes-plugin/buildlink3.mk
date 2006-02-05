@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/01/24 07:33:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/02/05 23:11:46 joerg Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 XFCE4_NOTES_PLUGIN_BUILDLINK3_MK:=	${XFCE4_NOTES_PLUGIN_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-notes-plugin
 
 .if !empty(XFCE4_NOTES_PLUGIN_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.xfce4-notes-plugin+=	xfce4-notes-plugin>=0.11.1
-BUILDLINK_RECOMMENDED.xfce4-notes-plugin?=	xfce4-notes-plugin>=0.11.1nb1
+BUILDLINK_RECOMMENDED.xfce4-notes-plugin?=	xfce4-notes-plugin>=0.11.1nb2
 BUILDLINK_PKGSRCDIR.xfce4-notes-plugin?=	../../x11/xfce4-notes-plugin
 .endif	# XFCE4_NOTES_PLUGIN_BUILDLINK3_MK
 

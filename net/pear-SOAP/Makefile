@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2005/05/07 16:51:01 jdolecek Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/05 23:10:29 joerg Exp $
 
 DISTNAME=	SOAP-0.8.1
+PKGREVISION=	1
 CATEGORIES+=	net
 
 MAINTAINER=	jdolecek@NetBSD.org

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2005/05/09 12:23:23 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:09:44 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EZM3_BUILDLINK3_MK:=	${EZM3_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_PACKAGES+=	ezm3
 .if !empty(EZM3_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.ezm3+=	ezm3>=1.1nb1
 BUILDLINK_DEPMETHOD.ezm3?=	build
+BUILDLINK_RECOMMENDED.ezm3?=	ezm3>=1.2nb1
 BUILDLINK_PKGSRCDIR.ezm3?=	../../lang/ezm3
 .endif	# EZM3_BUILDLINK3_MK
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2003/07/22 04:14:47 martti Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/05 23:11:30 joerg Exp $
 
 DISTNAME=	colorz10b2
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	zope25-colorz-1.0b2
 CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/maxm/productList/colorz/

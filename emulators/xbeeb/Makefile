@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2005/12/05 20:50:13 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/02/05 23:09:05 joerg Exp $
 #
 
 DISTNAME=	xbeeb-0.3.6
+PKGREVISION=	1
 CATEGORIES=	emulators x11
 MASTER_SITES=	ftp://ftp.netcom.net.uk/pub/Micros/BBC/Emulators/Xbeeb/
 # for 0.4.1

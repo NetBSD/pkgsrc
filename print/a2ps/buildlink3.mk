@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/10/08 11:25:30 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:10:35 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 A2PS_BUILDLINK3_MK:=	${A2PS_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	a2ps
 
 .if !empty(A2PS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.a2ps+=	a2ps>=4.13.0.2nb4
+BUILDLINK_RECOMMENDED.a2ps?=	a2ps>=4.13.0.2nb10
 BUILDLINK_PKGSRCDIR.a2ps?=	../../print/a2ps
 .endif	# A2PS_BUILDLINK3_MK
 

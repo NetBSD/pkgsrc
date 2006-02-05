@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/05/22 20:07:40 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/05 23:08:19 joerg Exp $
 #
 
 DISTNAME=	xmms-wma-1.0.4
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://mcmcc.bat.ru/xmms-wma/
 EXTRACT_SUFX=	.tar.bz2

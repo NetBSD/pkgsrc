@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:48:17 tv Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:11:49 joerg Exp $
 #
 
 DISTNAME=	xtoolwait-1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://www.hacom.nl/~richard/software/
 

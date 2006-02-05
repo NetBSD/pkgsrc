@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/07/16 01:19:27 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 23:11:47 joerg Exp $
 #
 
 DISTNAME=	xkbset-0.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://www.math.missouri.edu/~stephen/software/xkbset/
 

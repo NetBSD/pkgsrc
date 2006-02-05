@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:47:44 tv Exp $
+# $NetBSD: Makefile,v 1.15 2006/02/05 23:11:09 joerg Exp $
 #
 
 DISTNAME=	asclock-xlib-2.0.11
 PKGNAME=	asclock-xlib-2.0b11
+PKGREVISION=	1
 CATEGORIES=	x11 time
 MASTER_SITES=	${MASTER_SITE_LOCAL}	# www.asclock.org is no more
 

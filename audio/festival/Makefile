@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2005/12/05 20:49:47 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2006/02/05 23:08:06 joerg Exp $
 
 DISTNAME=	festival-1.95-beta
 PKGNAME=	festival-1.95beta
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://festvox.org/packed/festival/1.95/ \
 		ftp://cslu.cse.ogi.edu/pub/tts/

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/09/28 20:52:23 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 23:09:45 joerg Exp $
 
 DISTNAME=		langspec-2.0.html
 PKGNAME=		java-lang-spec-2.0
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.javasoft.com/docs/specs/
 EXTRACT_SUFX=		.zip

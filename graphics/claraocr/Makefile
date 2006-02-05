@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/07/16 19:10:39 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:09:28 joerg Exp $
 #
 
 DISTNAME=	clara-0.9.9
+PKGREVISION=	1
 CATEGORIES=	graphics textproc
 MASTER_SITES=	ftp://carroll.cac.psu.edu/pub/linux/distributions/mandrake-devel/projects/claraocr/ \
 		ftp://ftp.wtfo.com/pub/linux/Mandrake-devel/projects/claraocr/ \

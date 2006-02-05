@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/05/09 23:46:46 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:09:44 joerg Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 GCC3_ADA_BUILDLINK3_MK:=  ${GCC3_ADA_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_PACKAGES+=    gcc3-ada
 
 .if !empty(GCC3_ADA_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gcc3-ada+=      gcc3-ada>=3.3.3
+BUILDLINK_RECOMMENDED.gcc3-ada?=    gcc3-ada>=3.3.5nb1
 BUILDLINK_PKGSRCDIR.gcc3-ada?=    ../../lang/gcc3-ada
 BUILDLINK_ENV+= ADAC=${LOCALBASE}/gcc3/bin/gcc
 _GCC_ARCHDIR!=	${DIRNAME} `${LOCALBASE}/gcc3/bin/gcc --print-libgcc-file-name`

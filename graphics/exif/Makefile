@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2005/08/10 20:56:17 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/05 23:09:29 joerg Exp $
 #
 
 DISTNAME=	exif-0.6.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libexif/}
 

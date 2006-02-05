@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2004/05/25 13:40:54 grant Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/05 23:09:59 joerg Exp $
 
 MOZILLA=	thunderbird
+PKGREVISION=	1
 
 HOMEPAGE=	http://www.mozilla.org/projects/thunderbird/
 COMMENT=	Redesign of the Mozilla mail client (nightly binary pkg)

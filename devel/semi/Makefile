@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/09/17 16:41:23 uebayasi Exp $
+# $NetBSD: Makefile,v 1.21 2006/02/05 23:08:53 joerg Exp $
 #
 # TODO:
 # * Control ${WRKSRC}/SEMI-ELS explicitly, otherwise Emacs/XEmacs founds
@@ -7,7 +7,7 @@
 
 DISTNAME=	semi-1.14.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/semi/semi-1.14-for-flim-1.14/
 

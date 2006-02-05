@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/01/24 07:31:59 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/02/05 23:08:31 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_MIME_DATA_BUILDLINK3_MK:=	${GNOME_MIME_DATA_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gnome-mime-data
 
 .if !empty(GNOME_MIME_DATA_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gnome-mime-data+=	gnome-mime-data>=2.4.0
-BUILDLINK_RECOMMENDED.gnome-mime-data?=	gnome-mime-data>=2.4.2nb1
+BUILDLINK_RECOMMENDED.gnome-mime-data?=	gnome-mime-data>=2.4.2nb2
 BUILDLINK_PKGSRCDIR.gnome-mime-data?=	../../databases/gnome-mime-data
 
 # intltool-{extract,merge,update} are Perl scripts included in the sources

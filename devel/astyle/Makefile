@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2004/06/12 02:28:46 grant Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 23:08:39 joerg Exp $
 #
 
 DISTNAME=	astyle_1.13.6.1
 PKGNAME=	astyle-1.13.6.1
+PKGREVISION=	1
 CATEGORIES=	textproc devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=astyle/}
 EXTRACT_SUFX=	.zip

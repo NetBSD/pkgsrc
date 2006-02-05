@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2005/12/12 14:43:26 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/05 23:10:23 joerg Exp $
 #
 
 DISTNAME=	donkey
 PKGNAME=	edonkey2k-16.16.59
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.edonkey2000.com/files/
 EXTRACT_SUFX=	.gz

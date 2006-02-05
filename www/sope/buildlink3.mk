@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/01/06 15:10:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:11:28 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SOPE_BUILDLINK3_MK:=	${SOPE_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	sope
 
 .if !empty(SOPE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.sope+=	sope>=4.5.4nb2
+BUILDLINK_RECOMMENDED.sope?=	sope>=4.5.4nb3
 BUILDLINK_PKGSRCDIR.sope?=	../../www/sope
 .endif	# SOPE_BUILDLINK3_MK
 

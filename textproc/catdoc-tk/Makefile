@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2005/06/17 03:50:36 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/05 23:11:00 joerg Exp $
 #
 
 .include "../../textproc/catdoc/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/catdoc/catdoc-tk/}
+PKGREVISION=		1
 COMMENT+=		(Tk interface)
 
 DEPENDS+=		catdoc>=0.91.4nb1:../../textproc/catdoc

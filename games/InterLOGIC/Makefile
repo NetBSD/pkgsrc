@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2005/12/11 09:40:40 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/05 23:09:12 joerg Exp $
 #
 
 DISTNAME=		interLOGIC-src-0.30
 # authors' preferred casing
 PKGNAME=		InterLOGIC-0.30
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=interlogic/}
 

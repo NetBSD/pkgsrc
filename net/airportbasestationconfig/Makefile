@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2005/12/05 20:50:44 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2006/02/05 23:10:22 joerg Exp $
 
 DISTNAME=	configurator_152-128
 PKGNAME=	${BINNAME}-1.5.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.zip

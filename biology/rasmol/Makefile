@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2005/12/28 14:03:51 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2006/02/05 23:08:20 joerg Exp $
 
 DISTNAME=	RasMol_2.7.3
 PKGNAME=	rasmol-2.7.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	biology
 MASTER_SITES=	http://www.bernstein-plus-sons.com/software/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2005/05/08 17:48:06 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2006/02/05 23:11:01 joerg Exp $
 #
 
 DISTNAME=	docbook-website-2.6.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 

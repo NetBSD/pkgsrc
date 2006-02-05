@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2006/01/03 14:25:50 taca Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/05 23:08:53 joerg Exp $
 #
 
 DISTNAME=	rdtool-${RUBY_RD_VERSION}
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${RUBY_PKGPREFIX}-rd-mode-${RUBY_RD_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel ruby
 MASTER_SITES=	http://www.moonwolf.com/ruby/archive/
 

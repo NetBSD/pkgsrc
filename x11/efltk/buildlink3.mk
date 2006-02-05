@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/01/24 07:32:51 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:11:32 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EFLTK_BUILDLINK3_MK:=	${EFLTK_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	efltk
 
 .if !empty(EFLTK_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.efltk+=	efltk>=2.0.5nb1
-BUILDLINK_RECOMMENDED.efltk?=	efltk>=2.0.5nb3
+BUILDLINK_RECOMMENDED.efltk?=	efltk>=2.0.5nb4
 BUILDLINK_PKGSRCDIR.efltk?=	../../x11/efltk
 .endif	# EFLTK_BUILDLINK3_MK
 

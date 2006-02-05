@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:16 tv Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/05 23:08:37 joerg Exp $
 #
 
 DISTNAME=		SQLiteManager-1.0.4
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sqlitemanager/}
 

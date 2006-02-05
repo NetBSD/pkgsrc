@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2006/01/14 03:22:51 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/02/05 23:09:21 joerg Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	quake3arena-1.32b
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/quake3/linux/ \

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/01 03:52:11 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/05 23:08:20 joerg Exp $
 #
 
 .include "../../cad/wcalc/Makefile.common"
 PKGNAME=	cgi-${DISTNAME}
+PKGREVISION=	1
 
 COMMENT=	CGI Based Transmission Line Analysis/Synthesis Calculator
 

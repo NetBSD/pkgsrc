@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2005/02/20 15:06:17 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:08:11 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBVISUAL_BUILDLINK3_MK:=	${LIBVISUAL_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libvisual
 
 .if !empty(LIBVISUAL_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libvisual+=	libvisual>=0.2.0
+BUILDLINK_RECOMMENDED.libvisual?=	libvisual>=0.2.0nb1
 BUILDLINK_PKGSRCDIR.libvisual?=	../../audio/libvisual
 .endif	# LIBVISUAL_BUILDLINK3_MK
 

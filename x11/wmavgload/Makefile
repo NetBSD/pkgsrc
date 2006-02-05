@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:48:14 tv Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:11:44 joerg Exp $
 
 DISTNAME=	wmavgload-0.7.0
+PKGREVISION=	1
 CATEGORIES=	x11 windowmaker
 MASTER_SITES=	ftp://ftp.windowmaker.org/pub/contrib/srcs/utils/
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/10/23 18:12:24 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/05 23:08:04 joerg Exp $
 
 MODNAME=		zlib
+PKGREVISION=		1
 CATEGORIES+=		archivers
 COMMENT=		PHP extension for zlib compression
 

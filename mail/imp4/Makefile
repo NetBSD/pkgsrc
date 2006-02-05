@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2006/01/24 07:32:19 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/02/05 23:09:55 joerg Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.horde.org/pub/imp/tarballs/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/12/05 20:50:26 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/05 23:09:47 joerg Exp $
 
 DISTNAME=	pyfunge-0.2-beta1
 PKGNAME=	${PYPKGPREFIX}-funge-0.2beta1
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	http://kldp.net/download.php/1270/
 

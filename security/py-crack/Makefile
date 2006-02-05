@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/05/22 20:08:30 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/05 23:10:46 joerg Exp $
 #
 
 DISTNAME=	pycrack-0.01
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/py//}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	http://www.digitalevacuation.org/pycrack/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2005/12/11 09:41:07 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/02/05 23:09:05 joerg Exp $
 
 DISTNAME=		VisualBoyAdvance-src-1.6a
 PKGNAME=		vba-1.6.0.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vba/}
 EXTRACT_SUFX=		.zip

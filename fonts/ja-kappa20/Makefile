@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/12/29 06:21:40 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:09:09 joerg Exp $
 
 DISTNAME=		Kappa20-0.394
 PKGNAME=		ja-kappa20-0.394
+PKGREVISION=		1
 CATEGORIES=		fonts x11 japanese
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=		.tar.bz2

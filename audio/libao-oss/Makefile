@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/10/23 19:05:34 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/05 23:08:10 joerg Exp $
 
 .include "../../audio/libao/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/libao/libao-oss/}
+PKGREVISION=	1
 
 COMMENT+=	(OSS plugin)
 

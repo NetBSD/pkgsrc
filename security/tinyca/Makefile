@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2006/01/24 07:32:33 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/05 23:10:47 joerg Exp $
 
 DISTNAME=	tinyca-0.6.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://tinyca.sm-zone.net/
 

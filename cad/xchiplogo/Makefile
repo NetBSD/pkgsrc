@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2005/06/17 04:49:45 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/02/05 23:08:23 joerg Exp $
 #
 
 DISTNAME=	xchiplogo
 PKGNAME=	xchiplogo-19991222
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	cad
 MASTER_SITES=	http://www.eleceng.adelaide.edu.au/Personal/moini/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2005/06/01 18:02:42 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/02/05 23:08:36 joerg Exp $
 #
 
 DISTNAME=	quicklist-0.8.6
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	databases x11
 MASTER_SITES=	ftp://ftp.quicklist.org/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 18:03:32 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:11:47 joerg Exp $
 #
 
 DISTNAME=	xkbd-0.8.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://handhelds.org/~mallum/downloadables/xkbd/
 

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2005/06/17 03:50:36 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:10:58 joerg Exp $
 #
 
 .include "../../sysutils/mbmon/Makefile.common"
 
 PKGNAME=	xmbmon-205
+PKGREVISION=	1
 
 COMMENT=	X11-based motherboard monitoring utility
 

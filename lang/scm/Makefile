@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/10/25 09:39:30 adam Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/05 23:09:48 joerg Exp $
 #
 # Convert the version number as follows 2d2 -> 2.4.2, where the d is
 # changed to a 4, representing the 4th letter.
@@ -8,6 +8,7 @@
 
 DISTNAME=	scm5e1
 PKGNAME=	scm-5.5.1
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://swissnet.ai.mit.edu/ftpdir/scm/
 EXTRACT_SUFX=	.zip

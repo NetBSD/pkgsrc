@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/18 19:56:06 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/05 23:08:33 joerg Exp $
 
 DISTNAME=	DB-1.7.6
+PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	adrianp@NetBSD.org

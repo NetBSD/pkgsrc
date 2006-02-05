@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/02/01 00:10:53 riz Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/05 23:08:28 joerg Exp $
 #
 
 DISTNAME=		zaptel-netbsd-20060127
+PKGREVISION=		1
 CATEGORIES=		comms
 MASTER_SITES=		http://www.tastylime.net/netbsd/zaptel/
 EXTRACT_SUFX=		.tar.bz2

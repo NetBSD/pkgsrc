@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/04/18 16:20:25 jschauma Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/05 23:11:26 joerg Exp $
 
 DISTNAME= 		opera-acroread3-1.0
-PKGREVISION=		1
+PKGREVISION=		2
 
 MAINTAINER=		jschauma@NetBSD.org
 COMMENT=		Acrobat Reader 3 plugin for opera

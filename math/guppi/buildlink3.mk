@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/12/04 16:23:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/02/05 23:10:02 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GUPPI_BUILDLINK3_MK:=	${GUPPI_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	guppi
 
 .if !empty(GUPPI_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.guppi+=	guppi>=0.40.3nb13
+BUILDLINK_RECOMMENDED.guppi?=	guppi>=0.40.3nb15
 BUILDLINK_PKGSRCDIR.guppi?=	../../math/guppi
 .endif	# GUPPI_BUILDLINK3_MK
 

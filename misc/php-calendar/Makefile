@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:40 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/05 23:10:13 joerg Exp $
 
 MODNAME=		calendar
+PKGREVISION=		1
 CATEGORIES+=		misc
 COMMENT=		PHP extension for calendar conversion support
 

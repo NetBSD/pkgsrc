@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2006/01/21 18:57:41 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2006/02/05 23:09:24 joerg Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/source/
 MASTER_SITES+=	ftp://ftp.idsoftware.com/idstuff/doom/

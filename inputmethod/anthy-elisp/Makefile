@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/12/05 20:50:23 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/05 23:09:42 joerg Exp $
 
 .include	"../../inputmethod/anthy/Makefile.common"
 PKGNAME=	${EMACS_PKGNAME_PREFIX}anthy-elisp-${ANTHY_VERSION}
+PKGREVISION=	2
 CATEGORIES=	inputmethod editors
-PKGREVISION=	1
 
 MAINTAINER=	taya@NetBSD.org
 COMMENT=	Emacs lisp files for inputmethod/anthy

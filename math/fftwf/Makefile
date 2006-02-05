@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/10/02 12:06:42 wulf Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/05 23:10:01 joerg Exp $
 
 .if (${MACHINE_ARCH} == "powerpc")
 DISTNAME=		fftw-3.0.1-fma
@@ -6,6 +6,7 @@ DISTNAME=		fftw-3.0.1-fma
 DISTNAME=		fftw-3.0.1
 .endif
 PKGNAME=		fftwf-3.0.1
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		ftp://ftp.fftw.org/pub/fftw/ \
 			http://www.fftw.org/

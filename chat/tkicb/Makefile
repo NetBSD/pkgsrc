@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2005/04/11 21:45:06 tv Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/05 23:08:26 joerg Exp $
 #
 
 DISTNAME=	icb.2.1.4
 PKGNAME=	tkicb-2.1.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat x11
 MASTER_SITES=	ftp://shoshin.armory.com/pub/
 EXTRACT_SUFX=	.tar.Z

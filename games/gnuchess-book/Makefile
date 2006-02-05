@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/12/05 20:50:16 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/05 23:09:15 joerg Exp $
 #
 
 DISTNAME=		book_1.01.pgn
 PKGNAME=		${CHESS_ENGINE}-book-1.01
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_GNU:=chess/}
 EXTRACT_SUFX=		.gz

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/12/29 06:22:07 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/05 23:10:36 joerg Exp $
 
 .include "../../print/foomatic-filters/Makefile.common"
 
 DISTNAME=	foomatic-filters-cups-${FOOMATIC_FILTERS_VERSION}
+PKGREVISION=	1
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 

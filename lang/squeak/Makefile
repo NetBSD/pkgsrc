@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2005/06/01 20:08:00 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/02/05 23:09:51 joerg Exp $
 #
 
 DISTNAME=	Squeak-3.6-3
 PKGNAME=	squeak-3.6.3
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www-sor.inria.fr/~piumarta/squeak/unix/release/
 DISTFILES=	Squeak-3.6-3.src.tar.gz	Squeak-3.6-5429.image.tar.gz

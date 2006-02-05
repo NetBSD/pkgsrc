@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2006/01/15 18:10:23 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2006/02/05 23:08:44 joerg Exp $
 
 DISTNAME=	ldapsdk_12311998
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel databases
 MASTER_SITES=	ftp://ftp.mozilla.org/pub/directory/c-sdk/ldap/
 

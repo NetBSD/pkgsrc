@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:49 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/05 23:08:54 joerg Exp $
 #
 
 DISTNAME=	z80-asm-1.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://virtus.ath.cx/z80/
 

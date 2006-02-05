@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2006/01/17 20:49:13 adam Exp $
+# $NetBSD: Makefile,v 1.38 2006/02/05 23:08:23 joerg Exp $
 
 DISTNAME=	ekg-1.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	chat
 MASTER_SITES=	http://dev.null.pl/ekg/ \
 		http://dev.null.pl/ekg/stare/

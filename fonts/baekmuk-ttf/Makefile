@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2005/12/29 07:04:27 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/02/05 23:09:08 joerg Exp $
 
 DISTNAME=	baekmuk-ttf-2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts korean
 MASTER_SITES=	http://kldp.net/download.php/1429/
 

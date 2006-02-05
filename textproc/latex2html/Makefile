@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2005/12/29 13:01:20 is Exp $
+# $NetBSD: Makefile,v 1.28 2006/02/05 23:11:03 joerg Exp $
 
 DISTNAME=	latex2html-2002-2-1
 PKGNAME=	latex2html-2002.2.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc converters
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=support/latex2html/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/01/24 07:32:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:11:07 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SABLOTRON_BUILDLINK3_MK:=	${SABLOTRON_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	sablotron
 
 .if !empty(SABLOTRON_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.sablotron+=	sablotron>=1.0
-BUILDLINK_RECOMMENDED.sablotron+=	sablotron>=1.0.2nb1
+BUILDLINK_RECOMMENDED.sablotron+=	sablotron>=1.0.2nb2
 BUILDLINK_PKGSRCDIR.sablotron?=	../../textproc/sablotron
 .endif	# SABLOTRON_BUILDLINK3_MK
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2006/01/24 07:32:23 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2006/02/05 23:10:09 joerg Exp $
 
 DISTNAME=		gperiodic-2.0.8
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc x11
 MASTER_SITES=		http://www.acclab.helsinki.fi/~frantz/software/
 

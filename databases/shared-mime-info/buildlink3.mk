@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/01/24 07:32:00 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:08:37 joerg Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 SHARED_MIME_INFO_BUILDLINK3_MK:=	${SHARED_MIME_INFO_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	shared-mime-info
 
 .if !empty(SHARED_MIME_INFO_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.shared-mime-info+=	shared-mime-info>=0.15
-BUILDLINK_RECOMMENDED.shared-mime-info?=	shared-mime-info>=0.16nb1
+BUILDLINK_RECOMMENDED.shared-mime-info?=	shared-mime-info>=0.16nb2
 BUILDLINK_PKGSRCDIR.shared-mime-info?=	../../databases/shared-mime-info
 .endif	# SHARED_MIME_INFO_BUILDLINK3_MK
 

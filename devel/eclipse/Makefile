@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2005/12/05 20:50:03 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2006/02/05 23:08:41 joerg Exp $
 #
 
 DISTNAME=	${PKGNAME}
 PKGNAME=	eclipse-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel java
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/jschauma/
 EXTRACT_SUFX=	.zip

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/06/01 18:03:23 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/05 23:11:09 joerg Exp $
 #
 
 DISTNAME=	bbdate-0.2.4
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	http://bbtools.windsofstorm.net/sources/
 

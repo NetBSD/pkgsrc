@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/01/24 07:32:30 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/02/05 23:10:26 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 KDENETWORK_BUILDLINK3_MK:=	${KDENETWORK_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	kdenetwork
 
 .if !empty(KDENETWORK_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.kdenetwork+=	kdenetwork>=3.5.0nb1
-BUILDLINK_RECOMMENDED.kdenetwork?=	kdenetwork>=3.5.0nb2
+BUILDLINK_RECOMMENDED.kdenetwork?=	kdenetwork>=3.5.1nb1
 BUILDLINK_PKGSRCDIR.kdenetwork?=	../../net/kdenetwork3
 .endif	# KDENETWORK_BUILDLINK3_MK
 

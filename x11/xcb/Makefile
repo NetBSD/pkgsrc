@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/04/14 07:33:38 tron Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:11:45 joerg Exp $
 
 DISTNAME=	xcb-2.3i
 PKGNAME=	xcb-2.3.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://www.goof.com/pcg/marc/data/
 

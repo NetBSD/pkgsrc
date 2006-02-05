@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2005/12/20 20:55:08 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2006/02/05 23:11:48 joerg Exp $
 
 DISTNAME=	xneko
 PKGNAME=	xneko-4.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 games
 MASTER_SITES=	ftp://ftp.cdrom.com/pub/bsd-sources/4.4BSD-Lite/usr/src/games/
 

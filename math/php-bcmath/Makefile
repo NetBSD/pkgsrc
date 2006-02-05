@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/10/07 12:34:11 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/05 23:10:03 joerg Exp $
 
 MODNAME=		bcmath
+PKGREVISION=		1
 CATEGORIES+=		math
 COMMENT=		PHP extension for bc-style arbitrary precision math
 

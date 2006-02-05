@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2005/09/28 20:52:27 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/05 23:11:10 joerg Exp $
 #
 
 DISTNAME=       pclock0.7
 PKGNAME=	projclock-0.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time
 MASTER_SITES=   http://members.optushome.com.au/starters/pclock/
 EXTRACT_SUFX=	.tgz

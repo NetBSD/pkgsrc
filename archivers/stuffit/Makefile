@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2005/12/12 14:43:23 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/02/05 23:08:04 joerg Exp $
 
 DISTNAME=		stuffit520.611linux-i386
 PKGNAME=		stuffit-5.2.0.611
+PKGREVISION=		1
 CATEGORIES=		archivers
 MASTER_SITES=		http://www.allume.com/downloads/files/
 

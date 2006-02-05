@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2005/09/28 20:52:28 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2006/02/05 23:11:50 joerg Exp $
 
 DISTNAME=		xview3.2p1-X11R6
 PKGNAME=		xview-config-3.2.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 

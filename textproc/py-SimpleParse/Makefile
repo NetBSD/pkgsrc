@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:41 tv Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/05 23:11:06 joerg Exp $
 #
 
 DISTNAME=		SimpleParse-2.0.0
 PKGNAME=     		${PYPKGPREFIX}-SimpleParse-2.0.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		textproc python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=simpleparse/}
 EXTRACT_SUFX= 		.zip

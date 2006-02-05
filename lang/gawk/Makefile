@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2005/12/05 20:50:25 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2006/02/05 23:09:44 joerg Exp $
 #
 
 DISTNAME=	gawk-3.1.5
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gawk/}
 EXTRACT_SUFX=	.tar.bz2

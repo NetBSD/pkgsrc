@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2006/01/24 07:32:15 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2006/02/05 23:09:32 joerg Exp $
 
 DISTNAME=	graphviz-2.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
 

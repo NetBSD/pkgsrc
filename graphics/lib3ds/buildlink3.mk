@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/24 20:51:46 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:09:34 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIB3DS_BUILDLINK3_MK:=	${LIB3DS_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	lib3ds
 
 .if !empty(LIB3DS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.lib3ds+=	lib3ds>=1.2.0nb2
+BUILDLINK_RECOMMENDED.lib3ds?=	lib3ds>=1.2.0nb4
 BUILDLINK_PKGSRCDIR.lib3ds?=	../../graphics/lib3ds
 .endif	# LIB3DS_BUILDLINK3_MK
 

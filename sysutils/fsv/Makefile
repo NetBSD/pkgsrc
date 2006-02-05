@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/12/05 20:51:00 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:50 joerg Exp $
 #
 
 DISTNAME=	fsv-0.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fsv/}
 

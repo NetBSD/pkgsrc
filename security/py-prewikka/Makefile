@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/29 16:00:44 shannonjr Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/05 23:10:46 joerg Exp $
 #
 
 DISTNAME=		prewikka-0.9.3
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://prelude-ids.org/download/releases/
 

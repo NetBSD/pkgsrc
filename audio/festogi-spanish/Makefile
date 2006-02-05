@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2005/07/19 10:22:32 grant Exp $
+# $NetBSD: Makefile,v 1.15 2006/02/05 23:08:06 joerg Exp $
 
 DISTNAME=	OGIspanish-2.0.1
 PKGNAME=	festogi-spanish-2.0.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://cslu.cse.ogi.edu/pub/tts/
 

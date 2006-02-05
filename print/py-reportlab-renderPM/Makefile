@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:47:09 tv Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:39 joerg Exp $
 #
 
 DISTNAME=	renderPM-0-9
 PKGNAME=	${PYPKGPREFIX}-reportlab-renderPM-0.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print python
 MASTER_SITES=   http://www.reportlab.com/ftp/
 EXTRACT_SUFX=	.tgz

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/01/24 07:32:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:08:40 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CPPUNIT_BUILDLINK3_MK:=	${CPPUNIT_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	cppunit
 
 .if !empty(CPPUNIT_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.cppunit+=	cppunit>=1.10.2
-BUILDLINK_RECOMMENDED.cppunit?=	cppunit>=1.10.2nb4
+BUILDLINK_RECOMMENDED.cppunit?=	cppunit>=1.10.2nb5
 BUILDLINK_PKGSRCDIR.cppunit?=	../../devel/cppunit
 BUILDLINK_CPPFLAGS.cppunit+=	-I${BUILDLINK_PREFIX.cppunit}/include/cppunit
 .endif	# CPPUNIT_BUILDLINK3_MK

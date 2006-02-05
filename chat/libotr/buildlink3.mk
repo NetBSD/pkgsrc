@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2005/09/09 23:45:27 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:08:25 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBOTR_BUILDLINK3_MK:=	${LIBOTR_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libotr
 
 .if !empty(LIBOTR_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libotr+=	libotr>=2.0.1
+BUILDLINK_RECOMMENDED.libotr?=	libotr>=2.0.2nb1
 BUILDLINK_PKGSRCDIR.libotr?=	../../chat/libotr
 .endif	# LIBOTR_BUILDLINK3_MK
 

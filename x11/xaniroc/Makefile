@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/03/24 21:13:04 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:11:45 joerg Exp $
 
 DISTNAME=	xaniroc
 PKGNAME=	xaniroc-1.02
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.freebird.org/unixware/freebird/x11/utils/ \
 		ftp://netlab1.usu.edu/pub/mirror/freebird/x11/utils/

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/08/12 20:58:45 jmmv Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/05 23:10:05 joerg Exp $
 #
 
 BOOST_PACKAGE=	meta-pkg
 BOOST_COMMENT=	(meta package)
+PKGREVISION=	1
 
 .include "Makefile.common"
 

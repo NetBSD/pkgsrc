@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/10/08 22:06:46 hira Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/05 23:11:03 joerg Exp $
 
 DISTNAME=	groff-1.10
 PKGNAME=	ja-groff-0.99
+PKGREVISION=	1
 CATEGORIES=	japanese textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=groff/}
 

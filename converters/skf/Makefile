@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/31 03:35:25 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/05 23:08:29 joerg Exp $
 
 DISTNAME=	skf_1.93.9
 PKGNAME=	skf-1.93.9
+PKGREVISION=	1
 CATEGORIES=	japanese converters
 MASTER_SITES=	http://download.sourceforge.jp/skf/17934/
 

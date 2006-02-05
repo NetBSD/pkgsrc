@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:42 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/05 23:10:16 joerg Exp $
 #
 
 .include "Makefile.common"
 
 PKGNAME=	lib${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 COMMENT=	Open source Flash(tm) library
 
 USE_LIBTOOL=	yes

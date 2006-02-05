@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/01/06 15:10:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:10:43 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DIRMNGR_BUILDLINK3_MK:=	${DIRMNGR_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	dirmngr
 
 .if !empty(DIRMNGR_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.dirmngr+=	dirmngr>=0.9.3nb1
+BUILDLINK_RECOMMENDED.dirmngr?=	dirmngr>=0.9.3nb2
 BUILDLINK_PKGSRCDIR.dirmngr?=	../../security/dirmngr
 .endif	# DIRMNGR_BUILDLINK3_MK
 

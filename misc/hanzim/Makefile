@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/16 13:18:29 rxg Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/05 23:10:09 joerg Exp $
 #
 
 DISTNAME=	hanzim-1.3
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://kamares.ucsd.edu/~arobert/Files/Chinese/
 EXTRACT_SUFX=	.tgz

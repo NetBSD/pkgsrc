@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2006/01/24 07:32:36 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/02/05 23:10:58 joerg Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xffm-${XFCE4_VERSION}
 PKGNAME=	xfce4-fm-${XFCE4_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 COMMENT=	Xfce filemanager
 

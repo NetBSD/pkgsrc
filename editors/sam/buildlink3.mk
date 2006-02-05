@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/18 04:19:49 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:08:57 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SAM_BUILDLINK3_MK:=	${SAM_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	sam
 
 .if !empty(SAM_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.sam+=	sam>=4.3nb1
+BUILDLINK_RECOMMENDED.sam?=	sam>=4.3nb3
 BUILDLINK_PKGSRCDIR.sam?=	../../editors/sam
 BUILDLINK_DEPMETHOD.sam?=	build
 .endif	# SAM_BUILDLINK3_MK

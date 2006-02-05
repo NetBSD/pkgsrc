@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2004/11/22 22:24:47 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2006/02/05 23:09:45 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GCC3_OBJC_BUILDLINK3_MK:=	${GCC3_OBJC_BUILDLINK3_MK}+
@@ -19,6 +19,7 @@ GCC3_PKGMODIF=	_${GCC3_INSTALLTO_SUBPREFIX}
 .    endif
 .  endif
 BUILDLINK_DEPENDS.gcc3-objc+=	gcc3${GCC3_PKGMODIF}-objc>=${_GCC_REQD}
+BUILDLINK_RECOMMENDED.gcc3-objc?=	gcc3-objc>=3.3.5nb1
 BUILDLINK_PKGSRCDIR.gcc3-objc?=	../../lang/gcc3-objc
 BUILDLINK_LIBDIRS.gcc3-objc?=	\
 	lib ${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc3-objc}\///}

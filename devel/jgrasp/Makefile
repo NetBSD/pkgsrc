@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2005/11/04 18:35:33 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/02/05 23:08:44 joerg Exp $
 #
 
 DISTNAME=		jgrasp170
 PKGNAME=		jgrasp-1.7.0
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.eng.auburn.edu/pub/grasp/jgrasp/
 EXTRACT_SUFX=		.zip

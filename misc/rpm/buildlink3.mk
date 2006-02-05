@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/01/21 20:42:39 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/02/05 23:10:14 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 RPM_BUILDLINK3_MK:=	${RPM_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	rpm
 
 .if !empty(RPM_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.rpm+=	rpm>=2.5.4nb4
+BUILDLINK_RECOMMENDED.rpm?=	rpm>=2.5.4nb5
 BUILDLINK_PKGSRCDIR.rpm?=	../../misc/rpm
 BUILDLINK_DEPMETHOD.rpm?=	build
 

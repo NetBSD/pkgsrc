@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2004/10/03 00:14:50 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/02/05 23:09:30 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GD_BUILDLINK3_MK:=	${GD_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gd
 
 .if !empty(GD_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gd+=		gd>=2.0.15nb1
-BUILDLINK_RECOMMENDED.gd+=	gd>=2.0.28nb1
+BUILDLINK_RECOMMENDED.gd+=	gd>=2.0.33nb2
 BUILDLINK_PKGSRCDIR.gd?=	../../graphics/gd
 .endif	# GD_BUILDLINK3_MK
 

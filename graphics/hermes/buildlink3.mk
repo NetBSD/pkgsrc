@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/10/03 00:14:52 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:09:33 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HERMES_BUILDLINK3_MK:=	${HERMES_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	Hermes
 
 .if !empty(HERMES_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.Hermes+=	Hermes>=1.3.2
-BUILDLINK_RECOMMENDED.Hermes+=	Hermes>=1.3.3nb1
+BUILDLINK_RECOMMENDED.Hermes+=	Hermes>=1.3.3nb2
 BUILDLINK_PKGSRCDIR.Hermes?=	../../graphics/hermes
 .endif	# HERMES_BUILDLINK3_MK
 

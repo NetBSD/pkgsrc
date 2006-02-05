@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:48 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 23:08:53 joerg Exp $
 #
 
 DISTNAME=	sablecc-2.16.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sablecc/}
 

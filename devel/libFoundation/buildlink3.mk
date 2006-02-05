@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2005/12/05 20:50:05 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:08:44 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBFOUNDATION_BUILDLINK3_MK:=	${LIBFOUNDATION_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	libFoundation
 
 .if !empty(LIBFOUNDATION_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libFoundation+=	libFoundation>=1.0.72.107nb1
+BUILDLINK_RECOMMENDED.libFoundation?=	libFoundation>=1.0.72.107nb2
 BUILDLINK_PKGSRCDIR.libFoundation?=	../../devel/libFoundation
 
 PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Libraries$$/ { print "@comment in devel/libFoundation: " $$0; next; }

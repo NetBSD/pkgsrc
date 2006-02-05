@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2005/12/05 20:50:10 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2006/02/05 23:08:57 joerg Exp $
 
 DISTNAME=		sam
 PKGNAME=		sam-4.3
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		editors plan9
 MASTER_SITES=		ftp://ftp.ecf.toronto.edu/pub/plan9/matty/
 EXTRACT_SUFX=		.msg.gz
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.msg.gz
 MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Unix version of Rob Pike's editor for plan9
 
-DEPENDS+=		libXgFonts-1.0:../../fonts/Xg
+DEPENDS+=		libXgFonts-1.0nb1:../../fonts/Xg
 
 WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}

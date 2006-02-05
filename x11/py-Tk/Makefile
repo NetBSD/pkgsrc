@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2005/06/01 18:03:30 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2006/02/05 23:11:41 joerg Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-Tk-0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11 python
 
 MAINTAINER=	tsarna@NetBSD.org

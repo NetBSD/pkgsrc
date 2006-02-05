@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2005/06/16 06:57:48 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/05 23:08:54 joerg Exp $
 #
 
 DISTNAME=	tpasm1.0r
 PKGNAME=	tpasm-1.0r
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.ct0.com/pub/
 EXTRACT_SUFX=	.tgz

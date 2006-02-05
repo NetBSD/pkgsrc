@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2004/11/05 14:15:31 adam Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 23:11:14 joerg Exp $
 
 DISTNAME=	lwm-1.2.1
+PKGREVISION=	1
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://www.jfc.org.uk/files/lwm/
 

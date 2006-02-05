@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2005/06/17 03:50:45 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/02/05 23:11:48 joerg Exp $
 
 DISTNAME=	xpmicons-1.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://www.plig.org/xwinman/ \
 		ftp://ftp.cit.gu.edu.au/pub/AIcons/ \

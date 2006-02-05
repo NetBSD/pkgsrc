@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2006/02/03 09:59:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.40 2006/02/05 23:10:54 joerg Exp $
 #
 
 DISTNAME=	grub-0.97
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://alpha.gnu.org/gnu/grub/
 

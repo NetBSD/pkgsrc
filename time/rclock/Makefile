@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 18:03:24 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:11:10 joerg Exp $
 
 DISTNAME=		rxvt-2.6.0
 PKGNAME=		rclock-2.6.0
+PKGREVISION=		1
 CATEGORIES=		x11 time
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=utils/file/managers/mc/rxvt/}  \
 			ftp://ftp.nuclecu.unam.mx/linux/local/rxvt/  \

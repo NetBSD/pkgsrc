@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2005/07/15 18:27:54 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/02/05 23:11:13 joerg Exp $
 
 DISTNAME=	ethemes-0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://themes.org/pub/themes/e/
 DISTFILES=	${E_THEMES}

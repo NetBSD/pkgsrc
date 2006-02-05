@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2005/06/16 06:57:58 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2006/02/05 23:09:37 joerg Exp $
 
 DISTNAME=	pl231src
 PKGNAME=	ploticus-2.31pl4
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://ploticus.sourceforge.net/download/
 

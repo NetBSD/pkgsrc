@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2005/03/24 10:21:17 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/02/05 23:08:17 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XMMS_BUILDLINK3_MK:=	${XMMS_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	xmms
 
 .if !empty(XMMS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.xmms+=	xmms>=1.2.7nb10
+BUILDLINK_RECOMMENDED.xmms?=	xmms>=1.2.10nb6
 BUILDLINK_PKGSRCDIR.xmms?=	../../audio/xmms
 .endif	# XMMS_BUILDLINK3_MK
 

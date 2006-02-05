@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2004/11/22 22:24:47 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/02/05 23:09:45 joerg Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 GCC34_BUILDLINK3_MK:=  ${GCC34_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_PACKAGES+=    gcc34
 
 .if !empty(GCC34_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gcc34+=	gcc34>=${_GCC_REQD}
+BUILDLINK_RECOMMENDED.gcc34?=	gcc34>=3.4.5nb1
 BUILDLINK_PKGSRCDIR.gcc34?=	../../lang/gcc34
 .  if exists(${BUILDLINK_PREFIX.gcc34}/bin/gcc)
 _GNAT1!=${BUILDLINK_PREFIX.gcc34}/bin/gcc -print-prog-name=gnat1

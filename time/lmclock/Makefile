@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/03/23 22:32:04 is Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:11:10 joerg Exp $
 #
 
 DISTNAME=	lmclock-1.2
-PKGREVISION=	0
+PKGREVISION=	1
 CATEGORIES=	time x11
 MASTER_SITES=	http://pantransit.reptiles.org/prog/
 

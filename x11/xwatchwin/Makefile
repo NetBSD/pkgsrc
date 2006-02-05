@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/04/11 21:48:17 tv Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/05 23:11:50 joerg Exp $
 
 DISTNAME=	xwatchwin
 PKGNAME=	xwatchwin-1.1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	ftp://sunsite.uio.no/pub/X11/contrib/utilities/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2005/12/11 09:40:46 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2006/02/05 23:10:19 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XINE_LIB_BUILDLINK3_MK:=	${XINE_LIB_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES+=	xine-lib
 .if !empty(XINE_LIB_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.xine-lib+=	xine-lib>=1rc3c
 BUILDLINK_RECOMMENDED.xine-lib+=xine-lib>=1.0.3a
-BUILDLINK_RECOMMENDED.xine-lib?=	xine-lib>=1.0.3anb2
+BUILDLINK_RECOMMENDED.xine-lib?=	xine-lib>=1.0.3anb5
 BUILDLINK_PKGSRCDIR.xine-lib?=	../../multimedia/xine-lib
 .endif	# XINE_LIB_BUILDLINK3_MK
 

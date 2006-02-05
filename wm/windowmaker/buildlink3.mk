@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/01/24 07:32:40 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/02/05 23:11:15 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 WINDOWMAKER_BUILDLINK3_MK:=	${WINDOWMAKER_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	windowmaker
 
 .if !empty(WINDOWMAKER_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.windowmaker+=		windowmaker>=0.80.2nb3
-BUILDLINK_RECOMMENDED.windowmaker+=	windowmaker>=0.92.0nb4
+BUILDLINK_RECOMMENDED.windowmaker+=	windowmaker>=0.92.0nb5
 BUILDLINK_PKGSRCDIR.windowmaker?=	../../wm/windowmaker
 .endif	# WINDOWMAKER_BUILDLINK3_MK
 

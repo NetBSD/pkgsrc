@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2006/01/08 06:31:54 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/05 23:08:22 joerg Exp $
 #
 
 .include "../../cad/wcalc/Makefile.common"
 PKGNAME=	mex-${DISTNAME}
+PKGREVISION=	1
 
 COMMENT=	Matlab Based Transmission Line Analysis/Synthesis Calculator
 

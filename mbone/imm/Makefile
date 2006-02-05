@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2005/06/01 18:03:04 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/02/05 23:10:05 joerg Exp $
 
 DISTNAME=	imm36a1
 PKGNAME=	imm-3.6a1
+PKGREVISION=	1
 CATEGORIES=	mbone tk
 MASTER_SITES=	ftp://ftp.hawaii.edu/paccom/imm/
 EXTRACT_SUFX=	.tar.Z

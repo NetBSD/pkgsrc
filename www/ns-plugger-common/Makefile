@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2005/06/17 03:50:41 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/05 23:11:26 joerg Exp $
 
 DISTNAME=		plugger-4.0-linux-x86-glibc
 PKGNAME=		ns-${PLUGGERNAME}-${BINNAME}-${PLUGGERVERS}
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://fredrik.hubbe.net/plugger/
 

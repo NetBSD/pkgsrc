@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:35 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/05 23:10:56 joerg Exp $
 #
 
 DISTNAME=	tkcron-2.12
+PKGREVISION=	1
 CATEGORIES=	x11 tk
 MASTER_SITES=	ftp://ftp.neosoft.com/languages/tcl/alcatel/code/
 EXTRACT_SUFX=	.tcl.gz

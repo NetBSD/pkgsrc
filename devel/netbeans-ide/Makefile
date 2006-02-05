@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/11/04 18:38:36 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:08:49 joerg Exp $
 #
 
 DISTNAME=	NetBeansIDE-release351
 PKGNAME=	netbeans-ide-3.5.1
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://www.netbeans.org/download/release351/night/build200307252351/
 EXTRACT_SUFX=	.tar.bz2

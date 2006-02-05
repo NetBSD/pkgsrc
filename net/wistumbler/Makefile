@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2005/11/01 03:43:36 tv Exp $
+# $NetBSD: Makefile,v 1.20 2006/02/05 23:10:32 joerg Exp $
 
 DISTNAME=	wistumbler-20020816
 PKGNAME=	wistumbler-20020816.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://gongon.com/persons/iseki/wistumbler/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/05/26 08:58:43 agc Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/05 23:10:14 joerg Exp $
 
 DISTNAME=	postcodes
 PKGNAME=	postcodes-20040515
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.jibble.org/ukpostcodes/
 EXTRACT_SUFX=	.zip

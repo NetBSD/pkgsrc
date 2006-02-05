@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/27 03:43:53 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:08:51 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_CURSES_BUILDLINK3_MK:=	${PY_CURSES_BUILDLINK3_MK}+
@@ -14,6 +14,7 @@ BUILDLINK_PACKAGES+=	pycurses
 
 .if !empty(PY_CURSES_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.pycurses+=	${PYPKGPREFIX}-curses-[0-9]*
+BUILDLINK_RECOMMENDED.pycurses?=	${PYPKGPREFIX}-curses>=0nb4
 BUILDLINK_PKGSRCDIR.pycurses?=	../../devel/py-curses
 .endif	# PY_CURSES_BUILDLINK3_MK
 

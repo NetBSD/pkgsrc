@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2005/10/14 19:54:39 tonio Exp $
+# $NetBSD: Makefile,v 1.16 2006/02/05 23:09:46 joerg Exp $
 #
 
 DISTNAME=	Maude-2.1.1
 PKGNAME=	${DISTNAME:S/M/m/}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://maude.cs.uiuc.edu/download/ \
 		http://maude.cs.uiuc.edu/download/current/

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/10/23 22:00:46 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/05 23:11:15 joerg Exp $
 #
 
 DISTNAME=	weewm-0.0.2
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	http://www.weewm.org/download/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/06/01 18:02:58 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:09:40 joerg Exp $
 
 DISTNAME=	vcg.1.30.r3.17
 PKGNAME=	vcg-1.30
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.cs.uni-sb.de/pub/graphics/vcg/
 EXTRACT_SUFX=	.tgz

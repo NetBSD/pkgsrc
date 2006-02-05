@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2005/06/16 06:57:38 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/05 23:08:08 joerg Exp $
 #
 
 DISTNAME=		gogo239b
 PKGNAME=		gogo-2.39.1
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		http://homepage1.nifty.com/herumi/soft/gogo2/src/
 EXTRACT_SUFX=		.tgz

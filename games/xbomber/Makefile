@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2005/06/01 18:02:52 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/05 23:09:24 joerg Exp $
 #
 
 DISTNAME=	xbomber.0.8
 PKGNAME=	xbomber-0.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.sonic.net/pub/users/nbs/unix/x/xbomber/
 
