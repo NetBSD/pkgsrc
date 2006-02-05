@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2006/01/24 07:32:57 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2006/02/05 23:11:39 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDELIBS_BUILDLINK3_MK:=	${KDELIBS_BUILDLINK3_MK}+
@@ -14,7 +14,7 @@ BUILDLINK_PACKAGES+=	kdelibs
 
 .if !empty(KDELIBS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.kdelibs+=	kdelibs>=3.2.0
-BUILDLINK_RECOMMENDED.kdelibs?=	kdelibs>=3.5.0nb3
+BUILDLINK_RECOMMENDED.kdelibs?=	kdelibs>=3.5.1nb1
 BUILDLINK_PKGSRCDIR.kdelibs?=	../../x11/kdelibs3
 
 .include "../../x11/kdelibs3/dirs.mk"

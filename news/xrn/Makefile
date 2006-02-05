@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2005/06/17 04:49:47 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/05 23:10:34 joerg Exp $
 #
 
 DISTNAME=	9.01
 PKGNAME=	xrn-9.01
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	news x11
 MASTER_SITES=	ftp://sipb.mit.edu/pub/xrn/
 EXTRACT_SUFX=	.tgz

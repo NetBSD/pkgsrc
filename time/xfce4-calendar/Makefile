@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2006/01/24 07:32:39 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/05 23:11:11 joerg Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfcalendar-${XFCE4_VERSION}
 PKGNAME=	xfce4-calendar-${XFCE4_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time
 COMMENT=	Xfce calendar
 

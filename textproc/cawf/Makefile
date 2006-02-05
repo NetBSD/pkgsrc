@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:36 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:11:00 joerg Exp $
 #
 # Possible TODOs:
 # - set CH based on manual page section number, and real OS name
@@ -8,6 +8,7 @@
 
 DISTNAME=		cawf
 PKGNAME=		cawf-4.10
+PKGREVISION=		1
 CATEGORIES=		textproc
 MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/ \
 			http://www.tux.org/pub/sites/vic.cc.purdue.edu/

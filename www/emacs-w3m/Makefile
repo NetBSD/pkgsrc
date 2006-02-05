@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2006/01/04 04:29:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.16 2006/02/05 23:11:20 joerg Exp $
 
 DISTNAME=	emacs-w3m-1.3.3
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${HOMEPAGE}
 

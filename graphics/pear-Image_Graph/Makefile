@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/03 21:00:34 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/05 23:09:37 joerg Exp $
 
 DISTNAME=	Image_Graph-0.3.0dev4
+PKGREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	adrianp@NetBSD.org

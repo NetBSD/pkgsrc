@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2005/12/12 21:36:54 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/02/05 23:08:17 joerg Exp $
 
 DISTNAME=       xmmix-1.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=   http://www.ibiblio.org/tkan/download/xmmix/1.2.2/src/
 

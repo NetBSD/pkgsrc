@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/05/22 20:08:26 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/05 23:10:33 joerg Exp $
 #
 
 DISTNAME=		nget-0.27.1
+PKGREVISION=		1
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nget/}
 

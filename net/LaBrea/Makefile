@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2005/12/29 06:21:56 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/05 23:10:21 joerg Exp $
 #
 
 DISTNAME=	labrea-2.5-stable-1
 PKGNAME=	LaBrea-2.5
+PKGREVISION=	1
 CATEGORIES=	net security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=labrea/}
 

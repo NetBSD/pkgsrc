@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2005/12/05 20:51:05 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/02/05 23:11:03 joerg Exp $
 
 DISTNAME=	libpathan-1.2-2-src
 PKGNAME=	${DISTNAME:S/-2-src/.2/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://software.decisionsoft.com/software/pathan-1.2r2/
 

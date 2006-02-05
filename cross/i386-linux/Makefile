@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2006/02/02 19:17:44 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2006/02/05 23:08:30 joerg Exp $
 #
 
 DISTVERSION=		2.0.7.1
-PKGREVISION=		1
+PKGREVISION=		2
 DISTFILES=		${LINUXDEVEL_FILES}
 EXTRACT_ONLY=		# none of the RPM files
 MASTER_SITES=		# no known-good site; default to pkgsrc distfile mirrors

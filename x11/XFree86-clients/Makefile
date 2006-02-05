@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2006/01/24 07:32:50 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2006/02/05 23:11:30 joerg Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-clients-${XF_VER}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XFREE}
 DISTFILES=		XFree86-${XF_VER}-src-1.tgz XFree86-${XF_VER}-src-2.tgz \

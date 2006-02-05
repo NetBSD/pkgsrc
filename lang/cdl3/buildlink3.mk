@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2005/02/01 15:04:58 ben Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:09:43 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CDL3_BUILDLINK3_MK:=	${CDL3_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	cdl3
 
 .if !empty(CDL3_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.cdl3+=	cdl3>=1.2.5
+BUILDLINK_RECOMMENDED.cdl3?=	cdl3>=1.2.5nb1
 BUILDLINK_PKGSRCDIR.cdl3?=	../../lang/cdl3
 .endif	# CDL3_BUILDLINK3_MK
 

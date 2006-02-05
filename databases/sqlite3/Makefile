@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/04/14 05:45:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/05 23:08:37 joerg Exp $
 
 .include "Makefile.common"
+
+PKGREVISION=		1
 
 CONFIGURE_ARGS+=	--disable-tcl
 

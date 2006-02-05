@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2006/01/27 16:34:36 joerg Exp $
+# $NetBSD: Makefile,v 1.42 2006/02/05 23:10:34 joerg Exp $
 
 DISTNAME=	pvm3.4.5
 PKGNAME=	pvm-3.4.5
+PKGREVISION=	1
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.netlib.org/pvm3/
 EXTRACT_SUFX=	.tgz

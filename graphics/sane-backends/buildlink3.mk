@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2005/12/31 12:04:15 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:09:39 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SANE_BACKENDS_BUILDLINK3_MK:=	${SANE_BACKENDS_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	sane-backends
 
 .if !empty(SANE_BACKENDS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.sane-backends+=	sane-backends>=1.0.3
-BUILDLINK_RECOMMENDED.sane-backends+=	sane-backends>=1.0.14nb1
+BUILDLINK_RECOMMENDED.sane-backends+=	sane-backends>=1.0.17nb1
 BUILDLINK_PKGSRCDIR.sane-backends?=	../../graphics/sane-backends
 .endif	# SANE_BACKENDS_BUILDLINK3_MK
 

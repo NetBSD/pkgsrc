@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2005/04/11 21:46:29 tv Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:02 joerg Exp $
 #
 
 DISTNAME=	grpconst
 PKGNAME=	gp-grpconst-2.0
+PKGREVISION=	1
 SVR4_PKGNAME=	gpgct
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp-gap.dcs.st-and.ac.uk/pub/gap/gap4/share/

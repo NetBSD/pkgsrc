@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/12/29 06:21:54 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:10:07 joerg Exp $
 #
 
 DISTNAME=	${PKGNAME:S,-,_,}
 PKGNAME=	dpkg-1.10.24
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/dpkg/}
 

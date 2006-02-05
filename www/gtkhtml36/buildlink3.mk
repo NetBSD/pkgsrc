@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/01/24 07:32:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/02/05 23:11:24 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GTKHTML36_BUILDLINK3_MK:=	${GTKHTML36_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gtkhtml36
 
 .if !empty(GTKHTML36_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gtkhtml36+=	gtkhtml36>=3.6.0
-BUILDLINK_RECOMMENDED.gtkhtml36?=	gtkhtml36>=3.6.2nb2
+BUILDLINK_RECOMMENDED.gtkhtml36?=	gtkhtml36>=3.6.2nb3
 BUILDLINK_PKGSRCDIR.gtkhtml36?=	../../www/gtkhtml36
 .endif	# GTKHTML36_BUILDLINK3_MK
 

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2004/01/31 16:47:26 grant Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/05 23:11:26 joerg Exp $
 
 MOZILLA=	mozilla
+PKGREVISION=	1
 
 COMMENT=	Full featured gecko-based browser (nightly binary pkg)
 
