@@ -1,4 +1,4 @@
-# $NetBSD: plist-man.awk,v 1.2 2006/01/22 16:54:13 jlam Exp $
+# $NetBSD: plist-man.awk,v 1.3 2006/02/05 16:21:07 rillig Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -75,7 +75,7 @@ BEGIN {
 ###
 /^[^@]/ && \
 /^([^\/]*\/)+(man[1-9ln]\/[^\/]*\.[1-9ln]|cat[1-9ln]\/[^\/]*\.[0-9])\.gz$/ {
-	sub("\.gz$", "")
+	sub("\\.gz$", "")
 }
 
 ###

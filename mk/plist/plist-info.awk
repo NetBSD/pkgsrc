@@ -1,4 +1,4 @@
-# $NetBSD: plist-info.awk,v 1.2 2006/02/05 16:12:56 rillig Exp $
+# $NetBSD: plist-info.awk,v 1.3 2006/02/05 16:21:07 rillig Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -83,7 +83,7 @@ BEGIN {
 			#if ((MANZ ~ /[yY][eE][sS]/) && ($0 !~ /\.gz$/)) {
 			#	$0 = $0 ".gz"
 			#} else if ((MANZ !~ /[yY][eE][sS]/) && ($0 ~ /\.gz$/)) {
-			#	sub("\.gz$", "")
+			#	sub("\\.gz$", "")
 			#}
 			print_entry($0)
 		}
