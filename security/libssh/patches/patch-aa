@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2006/02/05 00:20:17 adrianp Exp $
+
+--- sample.c.orig	2005-03-04 19:54:59.000000000 +0000
++++ sample.c
+@@ -20,7 +20,12 @@ clients must be made or how a client sho
+ 
+ #include <sys/select.h>
+ #include <sys/time.h>
++#if defined(__NetBSD__)
++#include <sys/types.h>
++#include <util.h>		/* openpty() on NetBSD */
++#else
+ #include <pty.h>
++#endif
+ #include <signal.h>
+ #include <errno.h>
+ #include <libssh/libssh.h>
