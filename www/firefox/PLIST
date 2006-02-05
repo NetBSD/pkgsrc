@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2005/12/28 18:11:56 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.21 2006/02/05 14:46:31 ghen Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -756,6 +756,7 @@ include/${MOZILLA}/dom/nsIDOMChromeWindow.h
 include/${MOZILLA}/dom/nsIDOMClassInfo.h
 include/${MOZILLA}/dom/nsIDOMComment.h
 include/${MOZILLA}/dom/nsIDOMCompositionListener.h
+include/${MOZILLA}/dom/nsIDOMConstructor.h
 include/${MOZILLA}/dom/nsIDOMContextMenuListener.h
 include/${MOZILLA}/dom/nsIDOMCounter.h
 include/${MOZILLA}/dom/nsIDOMCrypto.h
