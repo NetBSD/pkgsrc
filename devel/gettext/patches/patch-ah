@@ -1,8 +1,28 @@
-$NetBSD: patch-ah,v 1.4 2003/12/05 18:15:49 erh Exp $
+$NetBSD: patch-ah,v 1.5 2006/02/05 22:45:54 joerg Exp $
 
---- src/Makefile.in.orig	2002-08-06 08:59:06.000000000 -0500
-+++ src/Makefile.in	2003-12-04 17:34:23.000000000 -0600
-@@ -248,7 +248,7 @@
+--- gettext-tools/src/Makefile.in.orig	2006-02-03 14:37:39.000000000 +0000
++++ gettext-tools/src/Makefile.in
+@@ -185,9 +185,7 @@ msggrep_DEPENDENCIES = $(am__DEPENDENCIE
+ am_msginit_OBJECTS = msginit-msginit.$(OBJEXT) \
+ 	msginit-plural-count.$(OBJEXT) msginit-localealias.$(OBJEXT)
+ msginit_OBJECTS = $(am_msginit_OBJECTS)
+-msginit_DEPENDENCIES =  \
+-	../intl/localename.@INTL_LIBTOOL_SUFFIX_PREFIX@o \
+-	libgettextsrc.la
++msginit_DEPENDENCIES = libgettextsrc.la
+ am_msgmerge_OBJECTS = msgmerge-msgmerge.$(OBJEXT) \
+ 	msgmerge-plural-count.$(OBJEXT)
+ msgmerge_OBJECTS = $(am_msgmerge_OBJECTS)
+@@ -449,7 +447,7 @@ install_sh = @install_sh@
+ libdir = @libdir@
+ libexecdir = @libexecdir@
+ lispdir = @lispdir@
+-localedir = $(datadir)/locale
++localedir = /usr/pkg/share/locale
+ localstatedir = @localstatedir@
+ mandir = @mandir@
+ mkdir_p = @mkdir_p@
+@@ -592,7 +590,7 @@ urlget_SOURCES = urlget.c
  # use iconv().
  libgettextsrc_la_LDFLAGS = \
    -release @VERSION@ \
@@ -10,39 +30,53 @@ $NetBSD: patch-ah,v 1.4 2003/12/05 18:15:49 erh Exp $
 +  ../lib/libgettextlib.la @LTLIBINTL@ @LTLIBICONV@ -lc
  
  
- # Link dependencies.
-@@ -267,9 +267,7 @@
- msgexec_LDADD = libgettextsrc.la
- msgfilter_LDADD = libgettextsrc.la
- msggrep_LDADD = libgettextsrc.la
--msginit_LDADD = ../intl/localealias.@INTL_LIBTOOL_SUFFIX_PREFIX@o \
--                ../intl/localename.@INTL_LIBTOOL_SUFFIX_PREFIX@o \
--                libgettextsrc.la
-+msginit_LDADD = libgettextsrc.la
+ # How to build libgettextpo.la.
+@@ -623,8 +621,7 @@ msgen_LDADD = libgettextsrc.la @INTL_MAC
+ msgexec_LDADD = libgettextsrc.la @INTL_MACOSX_LIBS@
+ msgfilter_LDADD = libgettextsrc.la @INTL_MACOSX_LIBS@
+ msggrep_LDADD = $(LIBGREP) libgettextsrc.la @INTL_MACOSX_LIBS@
+-msginit_LDADD = ../intl/localename.@INTL_LIBTOOL_SUFFIX_PREFIX@o \
+-                libgettextsrc.la @INTL_MACOSX_LIBS@
++msginit_LDADD = libgettextsrc.la @INTL_MACOSX_LIBS@
  
- msguniq_LDADD = libgettextsrc.la
+ msguniq_LDADD = libgettextsrc.la @INTL_MACOSX_LIBS@
  
-@@ -367,9 +365,7 @@
- msggrep_LDFLAGS =
- am_msginit_OBJECTS = msginit.$(OBJEXT)
- msginit_OBJECTS = $(am_msginit_OBJECTS)
--msginit_DEPENDENCIES = ../intl/localealias.@INTL_LIBTOOL_SUFFIX_PREFIX@o \
--	../intl/localename.@INTL_LIBTOOL_SUFFIX_PREFIX@o \
--	libgettextsrc.la
-+msginit_DEPENDENCIES = libgettextsrc.la
- msginit_LDFLAGS =
- am_msgmerge_OBJECTS = msgmerge.$(OBJEXT)
- msgmerge_OBJECTS = $(am_msgmerge_OBJECTS)
-@@ -731,9 +727,12 @@
+@@ -1349,7 +1346,7 @@ info-am:
+ 
+ install-data-am: install-data-local install-includeHEADERS
+ 
+-install-exec-am: install-binPROGRAMS install-exec-local \
++install-exec-am: install-binPROGRAMS \
+ 	install-libLTLIBRARIES
+ 
+ install-info: install-info-am
+@@ -1396,14 +1393,6 @@ uninstall-am: uninstall-binPROGRAMS unin
+ 	uninstall-info-am uninstall-libLTLIBRARIES uninstall-local
  
  
- # No need to install libgettextsrc.a.
-+# Unless we're on AIX, where .a's are shared libraries.
- install-exec-am: install-exec-clean
- install-exec-clean:
-+.if ${OPSYS} != "AIX"
- 	$(RM) $(DESTDIR)$(libdir)/libgettextsrc.a
-+.endif
- 
+-# No need to install libgettextsrc.a, except on AIX.
+-install-exec-local: install-libLTLIBRARIES install-exec-clean
+-install-exec-clean:
+-	case "@host_os@" in \
+-	  aix*) ;; \
+-	  *) $(RM) $(DESTDIR)$(libdir)/libgettextsrc.a ;; \
+-	esac
+-
  po-lex.o po-lex.lo: po-gram-gen2.h
  po-gram-gen2.h: po-gram-gen.h
+ 	$(SED) -e 's/yy/po_gram_/g' -e 's/extern /extern DLL_VARIABLE /' $(srcdir)/po-gram-gen.h > $@-tmp
+@@ -1507,12 +1496,12 @@ uninstall-csharp-yes: all-csharp-yes
+ 	$(RM) $(DESTDIR)$(pkglibdir)/msgunfmt.net.exe
+ uninstall-csharp-no:
+ 
+-install-data-local: install-tcl
++install-data-local:
+ install-tcl:
+ 	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)
+ 	$(INSTALL_DATA) $(srcdir)/msgunfmt.tcl $(DESTDIR)$(pkgdatadir)/msgunfmt.tcl
+ 
+-installdirs-local: installdirs-tcl
++installdirs-local:
+ installdirs-tcl:
+ 	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)
+ 

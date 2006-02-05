@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.5 2003/12/05 18:15:49 erh Exp $
+$NetBSD: patch-ag,v 1.6 2006/02/05 22:45:54 joerg Exp $
 
---- lib/Makefile.in.orig	2002-08-06 08:58:14.000000000 -0500
-+++ lib/Makefile.in	2003-12-04 17:16:55.000000000 -0600
-@@ -227,7 +227,7 @@
+--- gettext-tools/lib/Makefile.in.orig	2005-05-23 11:24:27.000000000 +0000
++++ gettext-tools/lib/Makefile.in
+@@ -455,7 +455,7 @@ libgettextlib_la_LIBADD = @LTLIBOBJS@
  # Need @LTLIBICONV@ because linebreak.c uses iconv().
  libgettextlib_la_LDFLAGS = \
    -release @VERSION@ \
@@ -10,17 +10,38 @@ $NetBSD: patch-ag,v 1.5 2003/12/05 18:15:49 erh Exp $
 +  @LTLIBINTL@ @LTLIBICONV@ -lc
  
  
+ # Extra files to be installed.
+@@ -683,7 +683,7 @@ check: $(BUILT_SOURCES)
+ 	$(MAKE) $(AM_MAKEFLAGS) check-am
+ all-am: Makefile $(LTLIBRARIES) $(DATA) $(HEADERS) all-local
+ installdirs:
+-	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(examplesbuildauxdir)" "$(DESTDIR)$(gettextsrcdir)"; do \
++	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(gettextsrcdir)"; do \
+ 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
+ 	done
+ install: $(BUILT_SOURCES)
+@@ -735,7 +735,7 @@ info: info-am
  
-@@ -517,9 +517,12 @@
+ info-am:
  
+-install-data-am: install-examplesbuildauxDATA install-gettextsrcDATA
++install-data-am:
  
- # No need to install libgettextlib.a.
-+# Unless we're on AIX, where .a's are shared libraries.
- install-exec-am: install-exec-clean
- install-exec-clean:
-+.if ${OPSYS} != "AIX"
- 	$(RM) $(DESTDIR)$(libdir)/libgettextlib.a
-+.endif
+ install-exec-am: install-exec-local install-libLTLIBRARIES
  
- all-local c-ctype.lo execute.lo javacomp.lo javaexec.lo pipe-bidi.lo pipe-in.lo pipe-out.lo progname.lo tmpdir.lo wait-process.lo xerror.lo: @STDBOOL_H@
- stdbool.h: stdbool.h.in
+@@ -781,15 +781,6 @@ uninstall-am: uninstall-examplesbuildaux
+ 	uninstall-gettextsrcDATA uninstall-info-am \
+ 	uninstall-libLTLIBRARIES uninstall-local
+ 
+-
+-# No need to install libgettextlib.a, except on AIX.
+-install-exec-local: install-libLTLIBRARIES install-exec-clean
+-install-exec-clean:
+-	case "@host_os@" in \
+-	  aix*) ;; \
+-	  *) $(RM) $(DESTDIR)$(libdir)/libgettextlib.a ;; \
+-	esac
+-
+ # The following is needed in order to create an <stdbool.h> when the system
+ # doesn't have one that works.
+ all-local $(libgettextlib_la_OBJECTS): @STDBOOL_H@

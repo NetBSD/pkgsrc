@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.10 2002/11/30 23:21:35 salo Exp $
+$NetBSD: patch-aa,v 1.11 2006/02/05 22:45:53 joerg Exp $
 
---- configure.orig	Tue Aug  6 15:57:16 2002
-+++ configure	Sun Sep  1 16:06:20 2002
-@@ -14293,10 +14293,6 @@
+--- gettext-runtime/configure.orig	2006-02-03 14:56:53.000000000 +0000
++++ gettext-runtime/configure
+@@ -31906,10 +31906,6 @@ echo "${ECHO_T}$gt_cv_func_gnugettext2_l
+ 
        if test "$nls_cv_use_gnu_gettext" = "yes"; then
-                 INTLOBJS="\$(GETTOBJS)"
-         BUILD_INCLUDED_LIBINTL=yes
+                 BUILD_INCLUDED_LIBINTL=yes
 -        USE_INCLUDED_LIBINTL=yes
 -        LIBINTL="\${top_builddir}/intl/libintl.la $LIBICONV"
 -        LTLIBINTL="\${top_builddir}/intl/libintl.la $LTLIBICONV"
 -        LIBS=`echo " $LIBS " | sed -e 's/ -lintl / /' -e 's/^ //' -e 's/ $//'`
        fi
  
-       if test "$gt_use_preinstalled_gnugettext" = "yes" \
+       CATOBJEXT=
