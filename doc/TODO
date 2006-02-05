@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4565 2006/02/05 00:22:16 adrianp Exp $
+$NetBSD: TODO,v 1.4566 2006/02/05 00:35:23 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -1098,7 +1098,6 @@ Suggested package updates
 	o smlnj-110.51 [pkgsrc-wip]
 	o smlnj-110.54
 	o snes9x-1.43
-	o socat-1.4.3.1
 	o sope-4.5.5
 	o source-highlight-2.3 [pkg/32325]
 	o sox-12.17.9
