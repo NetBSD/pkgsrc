@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.63 2006/02/04 11:28:51 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.64 2006/02/05 16:43:18 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -129,3 +129,5 @@ Pullup ticket 1075 - requested by Takahiro Kambe
 REPLACE_RUBY pattern fix for ruby packages
 Pullup ticket 1082 - requested by Lubomir Sedlacik
 security fix for mail/p5-Mail-Audit
+Pullup ticket 1086 - requested by Takahiro Kambe
+portability fix for ruby-activesupport
