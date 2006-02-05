@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12798 2006/02/05 00:22:15 adrianp Exp $
+$NetBSD: CHANGES,v 1.12799 2006/02/05 00:35:03 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -812,3 +812,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/db4 to 4.4.20 [wiz 2006-02-05]
 	Updated security/libssh to 0.11 [adrianp 2006-02-04]
 	Updated security/hydra to 5.2 [adrianp 2006-02-04]
+	Updated net/socat to 1.4.3.1 [adrianp 2006-02-04]
