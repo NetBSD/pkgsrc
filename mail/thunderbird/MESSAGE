@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2004/11/16 01:15:24 wiz Exp $
+$NetBSD: MESSAGE,v 1.3 2006/02/05 14:43:14 ghen Exp $
 
-If you have ever run another version of thunderbird or thunderbird-gtk2,
+If you have ever run another version of thunderbird or thunderbird-gtk1,
 you must remove compreg.dat under your thunderbird profile before
 you run thunderbird, e.g.
 	rm ~/.thunderbird/*/compreg.dat
