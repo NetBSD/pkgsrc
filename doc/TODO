@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4567 2006/02/05 12:55:47 martti Exp $
+$NetBSD: TODO,v 1.4568 2006/02/05 14:51:13 ghen Exp $
 
 Suggested new packages
 ======================
@@ -500,8 +500,7 @@ Suggested package updates
 	o fhist-1.14
 	o file-4.15
 	o findutils-4.2.27
-	o firefox-1.5.0.1 [ghen]
-	o firefox-gtk1-1.5.0.1 [ghen]
+	o firefox-bin-1.5.0.1
 	o flac123-0.0.9
 	o flashplayer-0.4.13
 	o fmsx-3.0
@@ -1143,8 +1142,6 @@ Suggested package updates
 	o ted-2.17
 	o tet3-3.6b
 	o tfmxplay-1.1.6
-	o thunderbird-1.5 [ghen]
-	o thunderbird-gtk1-1.5 [ghen]
 	o tidy-20051006
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
