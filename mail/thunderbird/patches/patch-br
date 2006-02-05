@@ -1,8 +1,8 @@
-$NetBSD: patch-br,v 1.5 2005/09/08 22:03:45 abs Exp $
+$NetBSD: patch-br,v 1.6 2006/02/05 14:49:05 ghen Exp $
 
---- nsprpub/pr/src/misc/prnetdb.c.orig	2004-04-28 22:00:17.000000000 +1000
+--- nsprpub/pr/src/misc/prnetdb.c.orig	2006-02-02 13:19:56.000000000 +0100
 +++ nsprpub/pr/src/misc/prnetdb.c
-@@ -2097,7 +2097,17 @@ PR_IMPLEMENT(PRAddrInfo *) PR_GetAddrInf
+@@ -2110,7 +2110,17 @@ PR_IMPLEMENT(PRAddrInfo *) PR_GetAddrInf
           */
          hints.ai_socktype = SOCK_STREAM;
  

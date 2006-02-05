@@ -1,9 +1,8 @@
-$NetBSD: patch-aq,v 1.2 2005/12/30 21:35:58 joerg Exp $
+$NetBSD: patch-aq,v 1.3 2006/02/05 14:49:05 ghen Exp $
 
-diff -ruN ../Orig/mozilla/directory/c-sdk/configure.in ./directory/c-sdk/configure.in
---- ../Orig/mozilla/directory/c-sdk/configure.in	2005-06-15 06:27:33.000000000 +0900
-+++ ./directory/c-sdk/configure.in	2005-12-04 19:07:54.000000000 +0900
-@@ -54,7 +54,7 @@
+--- directory/c-sdk/configure.in.orig	2006-02-02 13:29:07.000000000 +0100
++++ directory/c-sdk/configure.in
+@@ -54,7 +54,7 @@ USE_64=
  USE_CPLUS=
  USE_IPV6=
  USE_MDUPDATE=
@@ -12,7 +11,7 @@ diff -ruN ../Orig/mozilla/directory/c-sdk/configure.in ./directory/c-sdk/configu
  _DEBUG_FLAGS=-g
  MOZ_DEBUG=1
  MOZ_OPTIMIZE=
-@@ -907,7 +907,7 @@
+@@ -907,7 +907,7 @@ case "$target" in
      PR_MD_CSRCS=dgux.c
      ;;
  
@@ -21,7 +20,7 @@ diff -ruN ../Orig/mozilla/directory/c-sdk/configure.in ./directory/c-sdk/configu
      if test -z "$USE_NSPR_THREADS"; then
          USE_PTHREADS=1
      fi
-@@ -2061,7 +2061,7 @@
+@@ -2061,7 +2061,7 @@ if test -n "$USE_PTHREADS"; then
              _PTHREAD_LDFLAGS=
          fi
  	    ;;
@@ -30,7 +29,7 @@ diff -ruN ../Orig/mozilla/directory/c-sdk/configure.in ./directory/c-sdk/configu
  	    AC_DEFINE(_THREAD_SAFE)
  	    dnl -pthread links in -lc_r, so don't specify it explicitly.
  	    if test "$ac_cv_have_dash_pthread" = "yes"; then
-@@ -2114,7 +2114,7 @@
+@@ -2114,7 +2114,7 @@ case "$target" in
          AC_DEFINE(_PR_NEED_PTHREAD_INIT)
      fi
      ;;
