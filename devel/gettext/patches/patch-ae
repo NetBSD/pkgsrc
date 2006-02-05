@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2006/02/05 22:45:53 joerg Exp $
+$NetBSD: patch-ae,v 1.3 2006/02/05 22:45:53 joerg Exp $
 
---- gettext-runtime/configure.orig	2006-02-03 14:56:53.000000000 +0000
-+++ gettext-runtime/configure
-@@ -31906,10 +31906,6 @@ echo "${ECHO_T}$gt_cv_func_gnugettext2_l
+--- gettext-tools/configure.orig	2006-02-03 17:13:33.000000000 +0000
++++ gettext-tools/configure
+@@ -39057,10 +39057,6 @@ echo "${ECHO_T}$gt_cv_func_gnugettext2_l
  
        if test "$nls_cv_use_gnu_gettext" = "yes"; then
                  BUILD_INCLUDED_LIBINTL=yes
