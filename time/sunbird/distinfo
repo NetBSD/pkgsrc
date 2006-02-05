@@ -1,0 +1,37 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/02/05 21:56:20 ghen Exp $
+
+SHA1 (sunbird-0.3a1-source.tar.bz2) = 0c11d5b9f11eddb3072ec0340fa30ff2862bee15
+RMD160 (sunbird-0.3a1-source.tar.bz2) = 7989e01a41db13cc7bebd9e7e78f8ca003480361
+Size (sunbird-0.3a1-source.tar.bz2) = 34623798 bytes
+SHA1 (patch-aa) = b9c9f28e3c2d9ff5e3b982dda6d1332e2c025570
+SHA1 (patch-ab) = 432aeea9bc14494cff8561759c21b84f09ada1cc
+SHA1 (patch-ac) = 88487303abe37d4f70257f40e69f6142f51a07f8
+SHA1 (patch-ad) = efca5ab6ad16fbc7a16f20ca181b23add7dd6f78
+SHA1 (patch-ae) = 8e31ede283ba33528f825ab6dd794eb4e17b78d9
+SHA1 (patch-af) = 1d682936b1cf1d4cd063920ca4b24ba3f993525d
+SHA1 (patch-ah) = 6d39a2f657a91741fcfe30977510244d576a1406
+SHA1 (patch-ai) = 0480ece8f321243a374c1ab42f22245eb59a1a34
+SHA1 (patch-aj) = 279b54da26dae06118856ffbac3ed2fce793d3e9
+SHA1 (patch-ak) = 152e395269da7423e1eafa16f8850b3b9ed516fd
+SHA1 (patch-al) = 52680212e8bfc75b70dad9f76d816f13bd15a0fa
+SHA1 (patch-an) = ece4b8f63b40b7284fdde840c45310e791a4b3a9
+SHA1 (patch-ao) = c7859e18c9fbd583be11de5b87dcf638121913cb
+SHA1 (patch-ap) = 858afa263c319fe9aeb7fb0340febfa0dd49a1c5
+SHA1 (patch-aq) = 675d420e205b616171aec02095331461c3ceeab0
+SHA1 (patch-aw) = 65d44e92ece767ac56b8a9ffe4ab4eadf61c0cb7
+SHA1 (patch-ax) = 32fe96c29ad7f7baafe9d43756f75548fb9dd729
+SHA1 (patch-ba) = dc4b09d9be363345b4a0b15d49442686de8ac4fd
+SHA1 (patch-bb) = e9d6fb2fd23765963fa69685d40189c6a810db07
+SHA1 (patch-bm) = 99276d866a1b9ae108fcde5d198f80231fdffd2b
+SHA1 (patch-bo) = ac2051136cd2f06e634ded14182d26962831987b
+SHA1 (patch-bq) = c178922beb612f8ff659c909b8873bf6a0077916
+SHA1 (patch-br) = 62177554eb0146d55352abcdb15f415be6a36234
+SHA1 (patch-bs) = caeda4d4c0747119bb77cbd467792b8af8c063b3
+SHA1 (patch-bu) = 76e0f7b3789ecdfda0a92d969efaec82fa36d283
+SHA1 (patch-bv) = aa54e6552c9a25eb17a0aa9f500980853d076853
+SHA1 (patch-bw) = b000b8291c875708c51d0267497f4f234a9578e5
+SHA1 (patch-bx) = 2b9a948eac34cbfd345a885b395f6f6aa6526246
+SHA1 (patch-by) = f5c24241da2ea64ed55ae02422fd46d05470f0a1
+SHA1 (patch-bz) = 487538b422f62a0f06477f0bf3c8a95e108f91b6
+SHA1 (patch-ca) = 9a79c7f188652e1c7ae359d20cdab999e90c6647
+SHA1 (patch-cb) = 075dc07861343bfe4aee77c9295794eb88a91bfa

@@ -1,0 +1,7 @@
+The Sunbird Project is a redesign of the Calendar component. The goal is to
+produce a cross platform standalone calendar application based on Mozilla's
+XUL user interface language. At the moment the Sunbird name is a project
+name. It is not official and may change in the future.
+
+The intended user is someone who uses Mozilla Firefox and Mozilla
+Thunderbird and wants a calendar application based on Mozilla.
