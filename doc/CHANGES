@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12808 2006/02/05 20:39:30 wiz Exp $
+$NetBSD: CHANGES,v 1.12809 2006/02/05 21:57:36 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -825,3 +825,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/libtlen to 20041113 [adam 2006-02-05]
 	Updated www/bluefish to 1.0.5 [adam 2006-02-05]
 	Updated sysutils/cdbkup to 1.0nb5 [wiz 2006-02-05]
+	Added time/sunbird version 0.3a1 [ghen 2006-02-05]
