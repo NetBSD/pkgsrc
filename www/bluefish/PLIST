@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.14 2005/10/14 09:57:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/02/05 19:45:10 adam Exp $
 bin/bluefish
+man/man1/bluefish.1
 share/application-registry/bluefish.applications
-share/applications/bluefish.desktop
 share/applications/bluefish-project.desktop
+share/applications/bluefish.desktop
 @comment in sysutils/desktop-file-utils: share/applications/mimeinfo.cache
 share/bluefish/bluefish_splash.png
 share/bluefish/custom_menu.de.default
@@ -32,6 +33,7 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/bluefish.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/bluefish.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bluefish.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/bluefish.mo
+${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/bluefish.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/bluefish.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bluefish.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/bluefish.mo
@@ -42,6 +44,7 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/bluefish.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/bluefish.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/bluefish.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/bluefish.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/bluefish.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/bluefish.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/bluefish.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/bluefish.mo
