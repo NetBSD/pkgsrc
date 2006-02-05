@@ -1,8 +1,8 @@
-$NetBSD: patch-df,v 1.1 2005/12/30 21:35:58 joerg Exp $
+$NetBSD: patch-df,v 1.2 2006/02/05 14:49:05 ghen Exp $
 
---- config/config.mk.orig	2005-12-29 17:06:04.000000000 +0000
+--- config/config.mk.orig	2006-02-02 13:20:06.000000000 +0100
 +++ config/config.mk
-@@ -146,7 +146,7 @@ endif
+@@ -121,7 +121,7 @@ endif
  # but save the version to allow multiple versions of the same base
  # platform to be built in the same tree.
  #

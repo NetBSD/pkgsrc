@@ -1,8 +1,8 @@
-$NetBSD: patch-db,v 1.1 2005/12/30 21:35:58 joerg Exp $
+$NetBSD: patch-db,v 1.2 2006/02/05 14:49:05 ghen Exp $
 
---- js/src/Makefile.in.orig	2005-12-29 17:04:08.000000000 +0000
+--- js/src/Makefile.in.orig	2006-02-02 13:20:09.000000000 +0100
 +++ js/src/Makefile.in
-@@ -250,6 +250,9 @@ endif # WINNT
+@@ -256,6 +256,9 @@ endif # WINNT
  ifeq ($(OS_ARCH),FreeBSD)
  LDFLAGS		+= -pthread
  endif

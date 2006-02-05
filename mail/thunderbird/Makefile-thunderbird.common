@@ -1,32 +1,29 @@
-# $NetBSD: Makefile-thunderbird.common,v 1.8 2005/10/02 12:37:04 taya Exp $
+# $NetBSD: Makefile-thunderbird.common,v 1.9 2006/02/05 14:49:05 ghen Exp $
 
-MOZILLA_BIN=	thunderbird-bin
-MOZ_VER=	1.0.7
-EXTRACT_SUFX=	.tar.bz2
-DISTNAME=	thunderbird-${MOZ_VER}-source
-MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${MOZ_VER}/source/ \
-		ftp://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${MOZ_VER}/source/
+MOZILLA_BIN=		thunderbird-bin
+MOZ_VER=		1.5
+EXTRACT_SUFX=		.tar.bz2
+DISTNAME=		thunderbird-${MOZ_VER}-source
+CATEGORIES=		mail
+MASTER_SITES=		http://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${MOZ_VER}/source/
+MASTER_SITES+=		ftp://ftp.mozilla.org/pub/mozilla.org/thunderbird/releases/${MOZ_VER}/source/
 
-HOMEPAGE=	http://www.mozilla.org/projects/thunderbird/
+HOMEPAGE=		http://www.mozilla.org/projects/thunderbird/
 
-CONFIGURE_ENV+=	MOZ_THUNDERBIRD=1
-MAKE_ENV+=	MOZ_THUNDERBIRD=1
+CONFIGURE_ENV+=		MOZ_THUNDERBIRD=1
+MAKE_ENV+=		MOZ_THUNDERBIRD=1
 
-DISTINFO_FILE=	${.CURDIR}/../../mail/thunderbird/distinfo
-PATCHDIR=	${.CURDIR}/../../mail/thunderbird/patches
+DISTINFO_FILE=		${.CURDIR}/../../mail/thunderbird/distinfo
+PATCHDIR=		${.CURDIR}/../../mail/thunderbird/patches
+MESSAGE=		${.CURDIR}/../../mail/thunderbird/MESSAGE
 
+CONFIGURE_ARGS+=	--enable-application=mail
 CONFIGURE_ARGS+=	--enable-extensions=wallet,spellcheck,xmlextras
 CONFIGURE_ARGS+=	--enable-single-profile
 
-pre-install:
-	${CP} -r ${WRKSRC}/dist/bin/defaults/profile/extensions \
-							${WRKSRC}/dist/bin
-	${MV} ${WRKSRC}/dist/bin/extensions/installed-extensions.txt \
-		${WRKSRC}/dist/bin/extensions/installed-extensions-processed.txt
-
 post-install:
 	cd ${PREFIX}/lib/${MOZILLA} && \
-	${SETENV} LD_LIBRARY_PATH=. MOZILLA_FIVE_HOME=. HOME=${WRKSRC} \
+	${SETENV} LD_LIBRARY_PATH=. MOZILLA_FIVE_HOME=. HOME=${WRKSRC:Q} \
 		./${MOZILLA_BIN} -register
 
 .include "../../www/mozilla/Makefile.common"

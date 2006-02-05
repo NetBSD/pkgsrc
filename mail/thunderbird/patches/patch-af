@@ -1,17 +1,16 @@
-$NetBSD: patch-af,v 1.3 2004/06/24 23:09:55 taya Exp $
+$NetBSD: patch-af,v 1.4 2006/02/05 14:49:05 ghen Exp $
 
-diff -ru ../Orig/mozilla/security/nss/lib/freebl/unix_rand.c ./security/nss/lib/freebl/unix_rand.c
---- ../Orig/mozilla/security/nss/lib/freebl/unix_rand.c	2003-05-31 08:31:19.000000000 +0900
-+++ ./security/nss/lib/freebl/unix_rand.c	2004-06-15 23:55:49.000000000 +0900
-@@ -32,6 +32,7 @@
-  */
+--- security/nss/lib/freebl/unix_rand.c.orig	2006-02-02 13:19:58.000000000 +0100
++++ security/nss/lib/freebl/unix_rand.c
+@@ -35,6 +35,7 @@
+  * ***** END LICENSE BLOCK ***** */
  
  #include <stdio.h>
 +#include <fcntl.h>
  #include <string.h>
  #include <signal.h>
  #include <unistd.h>
-@@ -691,7 +692,11 @@
+@@ -694,7 +695,11 @@ safe_popen(char *cmd)
  	/* dup write-side of pipe to stderr and stdout */
  	if (p[1] != 1) dup2(p[1], 1);
  	if (p[1] != 2) dup2(p[1], 2);
@@ -21,6 +20,6 @@ diff -ru ../Orig/mozilla/security/nss/lib/freebl/unix_rand.c ./security/nss/lib/
 +	    dup2(fd, 0);
 +	    close(fd);
 +	}
- 	for (fd = getdtablesize(); --fd > 2; close(fd))
- 	    ;
- 
+         {
+             int ndesc = getdtablesize();
+             for (fd = PR_MIN(65536, ndesc); --fd > 2; close(fd));
