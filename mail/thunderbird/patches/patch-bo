@@ -1,9 +1,8 @@
-$NetBSD: patch-bo,v 1.5 2005/12/30 21:35:58 joerg Exp $
+$NetBSD: patch-bo,v 1.6 2006/02/05 14:49:05 ghen Exp $
 
-diff -ruN ../Orig/mozilla/nsprpub/configure.in ./nsprpub/configure.in
---- ../Orig/mozilla/nsprpub/configure.in	2005-09-16 07:37:52.000000000 +0900
-+++ ./nsprpub/configure.in	2005-12-04 19:17:56.000000000 +0900
-@@ -1045,6 +1045,34 @@
+--- nsprpub/configure.in.orig	2006-02-02 13:38:48.000000000 +0100
++++ nsprpub/configure.in
+@@ -1045,6 +1045,34 @@ case "$target" in
      DSO_LDOPTS='-shared -Wl,-soname -Wl,$(notdir $@)'
      MDCPUCFG_H=_freebsd.cfg
      PR_MD_CSRCS=freebsd.c
@@ -38,7 +37,7 @@ diff -ruN ../Orig/mozilla/nsprpub/configure.in ./nsprpub/configure.in
      ;;
  
  *-hpux*)
-@@ -1544,6 +1572,7 @@
+@@ -1544,6 +1572,7 @@ mips-nec-sysv*)
      AC_DEFINE(XP_UNIX)
      AC_DEFINE(NETBSD)
      AC_DEFINE(HAVE_BSD_FLOCK)
@@ -46,7 +45,7 @@ diff -ruN ../Orig/mozilla/nsprpub/configure.in ./nsprpub/configure.in
      USE_NSPR_THREADS=1
      MDCPUCFG_H=_netbsd.cfg
      PR_MD_CSRCS=netbsd.c
-@@ -2307,7 +2336,7 @@
+@@ -2307,7 +2336,7 @@ if test -n "$USE_PTHREADS"; then
  	if test -z "`egrep -i '(unrecognize|unknown)' conftest.out | grep pthread`" && test -z "`egrep -i '(error|incorrect)' conftest.out`" ; then
  	    ac_cv_have_dash_pthread=yes
  		case "$target_os" in
@@ -55,7 +54,7 @@ diff -ruN ../Orig/mozilla/nsprpub/configure.in ./nsprpub/configure.in
  # Freebsd doesn't use -pthread for compiles, it uses them for linking
              ;;
  	    *)
-@@ -2345,7 +2374,7 @@
+@@ -2345,7 +2374,7 @@ if test -n "$USE_PTHREADS"; then
              _PTHREAD_LDFLAGS=
          fi
  	    ;;
@@ -64,7 +63,7 @@ diff -ruN ../Orig/mozilla/nsprpub/configure.in ./nsprpub/configure.in
  	    AC_DEFINE(_REENTRANT)
  	    AC_DEFINE(_THREAD_SAFE)
  	    dnl -pthread links in -lc_r, so don't specify it explicitly.
-@@ -2426,7 +2455,7 @@
+@@ -2426,7 +2455,7 @@ case "$target" in
          AC_DEFINE(_PR_NEED_PTHREAD_INIT)
      fi
      ;;
