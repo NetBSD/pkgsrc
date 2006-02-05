@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.262 2006/02/04 00:33:17 wiz Exp $
+# $NetBSD: Makefile,v 1.263 2006/02/05 01:26:56 rillig Exp $
 #
 
 COMMENT=	Security tools
@@ -24,6 +24,7 @@ SUBDIR+=	base
 SUBDIR+=	bcrypt
 SUBDIR+=	beecrypt
 SUBDIR+=	bitstir
+SUBDIR+=	botan
 SUBDIR+=	cfs
 SUBDIR+=	chkrootkit
 SUBDIR+=	courier-authlib
