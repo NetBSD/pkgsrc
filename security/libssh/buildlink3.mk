@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/06/01 22:34:10 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 00:20:17 adrianp Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBSSH_BUILDLINK3_MK:=	${NETWIB_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibssh}
 BUILDLINK_PACKAGES+=	libssh
 
 .if !empty(LIBSSH_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libssh+=	libssh>=0.1
+BUILDLINK_DEPENDS.libssh+=	libssh>=0.11
 BUILDLINK_PKGSRCDIR.libssh?=	../../security/libssh
 .endif	# LIBSSH_BUILDLINK3_MK
 
