@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/02/05 22:25:01 wiz Exp $
+
+--- lib/ofx_preproc.cpp.orig	2006-01-02 11:57:37.000000000 -0500
++++ lib/ofx_preproc.cpp	2006-01-02 11:58:09.000000000 -0500
+@@ -204,7 +204,7 @@
+   string s_buffer;
+   char *filenames[3];
+   char tmp_filename[50];
+-  unsigned int pos;
++  string::size_type pos;
+   LibofxContext *libofx_context;
+ 
+   libofx_context=(LibofxContext*)ctx;
