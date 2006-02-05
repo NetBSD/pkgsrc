@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2006/01/05 23:29:05 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/05 20:39:05 wiz Exp $
 
 DISTNAME=		cdbkup-1.0
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdbkup/} \
 			ftp://batraq.anything3d.com/pub/cdbkup/cdbkup-1/ \
@@ -11,13 +11,13 @@ MAINTAINER=		mishka@terabyte.com.ua
 HOMEPAGE=		http://sourceforge.net/projects/cdbkup/
 COMMENT=		CD-R(W) backup/restore system
 
-DEPENDS+=		cdrtools>=1.10:../../sysutils/cdrtools
+DEPENDS+=		{cdrtools,cdrtools-ossdvd}>=1.10:../../sysutils/cdrtools
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		cat date gtar perl:run
 CONFIGURE_ENV+=		CAT=${TOOLS_CAT:Q}
 CONFIGURE_ENV+=		DATE=${TOOLS_DATE:Q}
-CONFIGURE_ENV+=		GNUTAR=${TOOLS_TAR:Q}
+CONFIGURE_ENV+=		GNUTAR=${TOOLS_GTAR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
