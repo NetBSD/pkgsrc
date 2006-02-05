@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2005/06/03 15:40:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/05 23:10:16 joerg Exp $
 
 .include "../../multimedia/libdv/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/-/-tools-/}
+PKGREVISION=		1
 
 COMMENT+=		(standalone tools)
 

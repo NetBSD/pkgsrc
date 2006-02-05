@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2005/06/17 03:50:44 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/02/05 23:11:45 joerg Exp $
 
 DISTNAME=		XBanner1.31
 PKGNAME=		xbanner-1.31
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		# empty
 

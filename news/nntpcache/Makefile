@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2005/12/01 20:10:41 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2006/02/05 23:10:33 joerg Exp $
 
 DISTNAME=		nntpcache-3.0.1
+PKGREVISION=		1
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.cs.tu-berlin.de/pub/net/news/nntpcache/ \
 			ftp://ftp.netlab.is.tsukuba.ac.jp/pub/network/news/nntpcache/

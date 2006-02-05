@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2005/08/06 06:19:33 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/05 23:11:04 joerg Exp $
 
 DISTNAME=		Text-Kakasi-1.05
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		2
 SVR4_PKGNAME=		p5tka
-PKGREVISION=		1
 CATEGORIES=		japanese textproc perl5
 MASTER_SITES=		http://www.daionet.gr.jp/~knok/kakasi/
 

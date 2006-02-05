@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2004/01/20 12:28:27 agc Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/05 23:11:44 joerg Exp $
 #
 
 DISTNAME=	unclutter-8
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
 EXTRACT_SUFX=	.tar.Z

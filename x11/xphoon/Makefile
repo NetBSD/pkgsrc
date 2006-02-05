@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2005/12/27 13:54:59 seb Exp $
+# $NetBSD: Makefile,v 1.21 2006/02/05 23:11:48 joerg Exp $
 #
 
 DISTNAME=	xphoon.tar
 PKGNAME=	xphoon-19910918
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.x.org/R5contrib/ \
 		${MASTER_SITE_XCONTRIB} \

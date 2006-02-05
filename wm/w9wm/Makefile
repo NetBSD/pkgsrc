@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/08/28 23:18:01 rumble Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/05 23:11:15 joerg Exp $
 
 DISTNAME=		w9wm-0.4.2
+PKGREVISION=		1
 CATEGORIES=		plan9 wm
 MASTER_SITES=		http://www.grassouille.org/code/w9wm/src/
 

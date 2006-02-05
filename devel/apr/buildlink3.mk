@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2006/01/24 07:32:00 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2006/02/05 23:08:39 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 APR_BUILDLINK3_MK:=	${APR_BUILDLINK3_MK}+
@@ -14,7 +14,7 @@ BUILDLINK_PACKAGES+=	apr
 
 .if !empty(APR_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.apr+=	apr>=0.9.5.2.0.51nb1
-BUILDLINK_RECOMMENDED.apr+=	apr>=0.9.7.2.0.55nb1
+BUILDLINK_RECOMMENDED.apr+=	apr>=0.9.7.2.0.55nb2
 BUILDLINK_PKGSRCDIR.apr?=	../../devel/apr
 
 WRAPPER_REORDER_CMDS+=	reorder:l:aprutil-0:crypt

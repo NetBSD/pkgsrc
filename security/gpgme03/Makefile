@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:47:12 tv Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:10:44 joerg Exp $
 #
 
 DISTNAME=	gpgme-0.3.16
 PKGNAME=	${DISTNAME:S/-/03-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/
 

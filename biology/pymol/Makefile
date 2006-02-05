@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/10/24 20:39:55 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/05 23:08:20 joerg Exp $
 
 DISTNAME=	pymol-0_98-src
 PKGNAME=	pymol-0.98
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pymol/}
 EXTRACT_SUFX=	.tgz

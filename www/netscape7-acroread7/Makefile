@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2005/04/18 16:19:54 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/05 23:11:26 joerg Exp $
 
 DISTNAME= 		netscape7-acroread7-1.0
+PKGREVISION=		1
 
 MAINTAINER=		jschauma@NetBSD.org
 COMMENT=		Acrobat Reader 7 plugin for netscape7

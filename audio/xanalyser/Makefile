@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/12/12 21:36:54 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/05 23:08:15 joerg Exp $
 #
 
 DISTNAME=	xanalyser-1.24
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.suse.com/pub/people/arvin/private/
 EXTRACT_SUFX=	.tar.bz2

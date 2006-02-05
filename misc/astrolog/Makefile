@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2006/01/21 18:57:41 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/02/05 23:10:06 joerg Exp $
 
 DISTNAME=       ast54unx
 PKGNAME=        astrolog-5.40
+PKGREVISION=     1
 CATEGORIES=     misc
 MASTER_SITES=   http://www.astrolog.org/ftp/ephem/ \
 		http://www.astrolog.org/ftp/ \

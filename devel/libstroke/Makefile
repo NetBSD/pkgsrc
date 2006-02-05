@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2005/12/05 20:50:05 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2006/02/05 23:08:45 joerg Exp $
 #
 
 DISTNAME=		libstroke-0.5.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://www.etla.net/libstroke/
 

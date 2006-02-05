@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2006/01/31 21:07:30 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:09:57 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PERDITION_BUILDLINK3_MK:=	${PERDITION_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	perdition
 
 .if !empty(PERDITION_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.perdition+=	perdition>=1.17
+BUILDLINK_RECOMMENDED.perdition?=	perdition>=1.17nb1
 BUILDLINK_PKGSRCDIR.perdition?=	../../mail/perdition
 .endif	# PERDITION_BUILDLINK3_MK
 

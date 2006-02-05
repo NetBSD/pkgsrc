@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2005/06/01 18:02:49 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/02/05 23:09:13 joerg Exp $
 
 DISTNAME=	craftcc35
 PKGNAME=	craft-3.5
+PKGREVISION=	1
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://set.gmd.de/pub/as/janus/craft/
 EXTRACT_SUFX=	.tar.Z

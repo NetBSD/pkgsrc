@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2006/01/05 23:42:32 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/05 23:11:24 joerg Exp $
 
 .include "../../www/iasp/Makefile.common"
 
 PKGNAME=	iasp-${IASP_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	Instant ASP: Java implementation of Active Server Pages
 
 USE_TOOLS+=	gtar

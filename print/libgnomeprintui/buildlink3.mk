@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/01/24 07:32:32 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/02/05 23:10:38 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOMEPRINTUI_BUILDLINK3_MK:=	${LIBGNOMEPRINTUI_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libgnomeprintui
 
 .if !empty(LIBGNOMEPRINTUI_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libgnomeprintui+=	libgnomeprintui>=2.8.0
-BUILDLINK_RECOMMENDED.libgnomeprintui+=	libgnomeprintui>=2.12.1nb1
+BUILDLINK_RECOMMENDED.libgnomeprintui+=	libgnomeprintui>=2.12.1nb2
 BUILDLINK_PKGSRCDIR.libgnomeprintui?=	../../print/libgnomeprintui
 .endif	# LIBGNOMEPRINTUI_BUILDLINK3_MK
 

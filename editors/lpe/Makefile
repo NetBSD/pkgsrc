@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/01/04 17:11:03 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/05 23:08:57 joerg Exp $
 #
 
 DISTNAME=	lpe-1.2.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.sasknow.com/pub/ \
 		ftp://ftp.twu.net/users/cdsmith/lpe/

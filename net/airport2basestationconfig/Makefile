@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 20:50:44 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:10:22 joerg Exp $
 
 DISTNAME=	configurator_201
 PKGNAME=	${BINNAME}-2.0.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.zip

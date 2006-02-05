@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.55 2005/05/22 20:07:53 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2006/02/05 23:08:45 joerg Exp $
 #
 
 DISTNAME=	slang-1.4.9
 PKGNAME=	lib${DISTNAME}
+PKGREVISION=	1
 SVR4_PKGNAME=	lslan
 PKGREVISION=	4
 CATEGORIES=	devel

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2005/12/29 06:21:51 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2006/02/05 23:09:56 joerg Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	mail
 MASTER_SITES=	http://ftp.funet.fi/pub/unix/mail/metamail/	\
 		ftp://ftp.research.telcordia.com/pub/nsb/

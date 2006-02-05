@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/01/24 07:32:59 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:11:41 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_QT2_SIP_BUILDLINK3_MK:=	${PY_QT2_SIP_BUILDLINK3_MK}+
@@ -14,7 +14,7 @@ BUILDLINK_PACKAGES+=	pyqt2sip
 
 .if !empty(PY_QT2_SIP_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.pyqt2sip+=	${PYPKGPREFIX}-qt2-sip-[0-9]*
-BUILDLINK_RECOMMENDED.pyqt2sip+=	${PYPKGPREFIX}-qt2-sip>=3.1nb2
+BUILDLINK_RECOMMENDED.pyqt2sip+=	${PYPKGPREFIX}-qt2-sip>=3.1nb3
 BUILDLINK_PKGSRCDIR.pyqt2sip?=	../../x11/py-qt2-sip
 .endif	# PY_QT2_SIP_BUILDLINK3_MK
 

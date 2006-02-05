@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2006/01/11 16:02:24 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:08:28 joerg Exp $
 
 DISTNAME=	cn2jp1.4b
 PKGNAME=	cn2jp-1.4b
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	converters
 MASTER_SITES=	http://w3.sys.es.osaka-u.ac.jp/~seke/software/cn2jp/
 

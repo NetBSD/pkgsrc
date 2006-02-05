@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:42 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/05 23:11:28 joerg Exp $
 
 DISTNAME=	tag104
 PKGNAME=	${RUBY_PKGPREFIX}-tag-1.0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www ruby
 MASTER_SITES=	http://www.moonwolf.com/ruby/archive/
 EXTRACT_SUFX=	.tar.bz2

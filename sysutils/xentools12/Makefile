@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/12/29 06:22:19 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:10:57 joerg Exp $
 #
 
 DISTNAME=		xeno-1.2-src-040418
 PKGNAME=		xentools12-040418
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/arch/xen/misc/
 EXTRACT_SUFX=		.tgz

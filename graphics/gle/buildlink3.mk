@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/10/03 00:14:51 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/02/05 23:09:31 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLE_BUILDLINK3_MK:=	${GLE_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gle
 
 .if !empty(GLE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gle+=		gle>=3.0.3
-BUILDLINK_RECOMMENDED.gle+=	gle>=3.1.0nb1
+BUILDLINK_RECOMMENDED.gle+=	gle>=3.1.0nb2
 BUILDLINK_PKGSRCDIR.gle?=	../../graphics/gle
 .endif	# GLE_BUILDLINK3_MK
 

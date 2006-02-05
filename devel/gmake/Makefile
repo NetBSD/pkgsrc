@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2005/12/05 23:55:06 rillig Exp $
+# $NetBSD: Makefile,v 1.63 2006/02/05 23:08:43 joerg Exp $
 
 DISTNAME=	make-3.80
 PKGNAME=	gmake-3.80
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=make/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2004/05/17 03:15:20 snj Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:11:45 joerg Exp $
 #
 
 DISTNAME=	xclip-0.08
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://people.debian.org/~kims/xclip/
 

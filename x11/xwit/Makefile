@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2005/12/27 13:54:59 seb Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 23:11:50 joerg Exp $
 #
 
 DISTNAME=	xwit-3.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
 

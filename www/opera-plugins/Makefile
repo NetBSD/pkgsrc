@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2005/10/31 22:56:52 tron Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:11:27 joerg Exp $
 
 DISTNAME=	opera-plugins-1.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	# empty
 DISTFILES=	# empty

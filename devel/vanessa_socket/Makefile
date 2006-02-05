@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/01/31 14:55:26 tv Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/05 23:08:54 joerg Exp $
 #
 
 DISTNAME=		vanessa_socket-0.0.7
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		http://www.vergenet.net/linux/vanessa/download/vanessa_socket/0.0.7/
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/07/27 16:21:16 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/05 23:08:35 joerg Exp $
 #
 
 DISTNAME=		IndexedCatalog-0.6.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		databases python
 MASTER_SITES=		http://async.com.br/projects/IndexedCatalog/dist/
 

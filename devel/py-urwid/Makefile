@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:45:37 tv Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/05 23:08:52 joerg Exp $
 
 DISTNAME=	urwid-0.8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://excess.org/urwid/
 

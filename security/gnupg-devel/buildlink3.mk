@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/04/23 12:38:05 shannonjr Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:10:43 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNUPG_DEVEL_BUILDLINK3_MK:=	${GNUPG_DEVEL_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gnupg-devel
 
 .if !empty(GNUPG_DEVEL_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gnupg-devel+=	gnupg-devel>=1.9.11
-BUILDLINK_RECOMMENDED.gnupg-devel+=	gnupg-devel>=1.9.16
+BUILDLINK_RECOMMENDED.gnupg-devel+=	gnupg-devel>=1.9.20nb1
 BUILDLINK_PKGSRCDIR.gnupg-devel?=	../../security/gnupg-devel
 .endif	# GNUPG_DEVEL_BUILDLINK3_MK
 BUILDLINK_PREFIX.gnupg-devel?=	${LOCALBASE}

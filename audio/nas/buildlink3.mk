@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/03/05 19:25:08 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/02/05 23:08:12 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NAS_BUILDLINK3_MK:=	${NAS_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	nas
 
 .if !empty(NAS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.nas+=		nas>=1.4.2
+BUILDLINK_RECOMMENDED.nas?=	nas>=1.7bnb2
 BUILDLINK_PKGSRCDIR.nas?=	../../audio/nas
 .endif	# NAS_BUILDLINK3_MK
 

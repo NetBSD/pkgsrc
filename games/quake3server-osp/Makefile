@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/05/02 23:02:06 reed Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/05 23:09:22 joerg Exp $
 
 DISTNAME=	osp-Quake3-1.03a_full
 PKGNAME=	quake3server-osp-1.03a
+PKGREVISION=	1
 CATEGORIES=	games net
 MASTER_SITES=	http://files.l33tgames.com/files/q3/mods/osp/ \
 		http://www.flatlands.ch/filebase/mods/left/

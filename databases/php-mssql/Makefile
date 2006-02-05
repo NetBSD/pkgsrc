@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2006/01/04 18:06:25 reed Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/05 23:08:33 joerg Exp $
 
 MODNAME=		mssql
 CATEGORIES+=		databases
 COMMENT=		PHP extension for MS SQL databases
-PKGREVISION=		1
+PKGREVISION=		2
 
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_DIR}
 

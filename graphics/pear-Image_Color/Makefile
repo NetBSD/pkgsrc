@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/03 20:59:10 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/05 23:09:37 joerg Exp $
 
 DISTNAME=	Image_Color-1.0.2
+PKGREVISION=	1
 CATEGORIES=	graphics
 
 MAINTAINER=	adrianp@NetBSD.org

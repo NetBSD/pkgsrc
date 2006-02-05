@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2006/01/24 07:32:38 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 23:11:07 joerg Exp $
 #
 
 DISTNAME=	xmlparser-0.6.8.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.yoshidam.net/
 

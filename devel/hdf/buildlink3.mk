@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/25 17:10:19 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:08:43 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HDF_BUILDLINK3_MK:=	${HDF_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	hdf
 
 .if !empty(HDF_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.hdf+=	hdf>=4.1r5
+BUILDLINK_RECOMMENDED.hdf?=	hdf>=4.2r1nb1
 BUILDLINK_PKGSRCDIR.hdf?=	../../devel/hdf
 .endif	# HDF_BUILDLINK3_MK
 

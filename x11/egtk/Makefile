@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2005/06/17 03:50:43 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/02/05 23:11:32 joerg Exp $
 #
 
 DISTNAME=	eGTK_0.3.4
 PKGNAME=	egtk-0.3.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 MASTER_SITES=	http://www.netlabs.net/hp/richieb/downloads/
 

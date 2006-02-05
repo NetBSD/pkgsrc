@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2005/12/29 06:22:11 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/02/05 23:10:47 joerg Exp $
 #
 
 DISTNAME=		skey-1.1.5
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		http://www.sparc.spb.su/solaris/skey/
 EXTRACT_SUFX=		.tar.bz2

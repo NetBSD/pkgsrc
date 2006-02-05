@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/01/27 01:18:19 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/05 23:09:52 joerg Exp $
 
 DISTNAME=	otcl-1.11
 PKGNAME=	tcl-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=otcl-tclcl/}
 

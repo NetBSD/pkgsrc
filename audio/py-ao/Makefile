@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2005/10/08 12:35:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/05 23:08:13 joerg Exp $
 #
 
 DISTNAME=		pyao-0.81
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		audio python
 MASTER_SITES=		http://vorbis.com/files/1.0.1/unix/py/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/01/24 07:32:43 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:11:18 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 AP2_PERL_BUILDLINK3_MK:=	${AP2_PERL_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	ap2-perl
 
 .if !empty(AP2_PERL_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.ap2-perl+=	ap2-perl>=2.0.1
-BUILDLINK_RECOMMENDED.ap2-perl?=	ap2-perl>=2.0.1nb1
+BUILDLINK_RECOMMENDED.ap2-perl?=	ap2-perl>=2.0.1nb2
 BUILDLINK_PKGSRCDIR.ap2-perl?=	../../www/ap2-perl
 .endif	# AP2_PERL_BUILDLINK3_MK
 

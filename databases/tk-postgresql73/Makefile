@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2005/12/05 23:55:05 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/05 23:08:38 joerg Exp $
 
 PKGNAME=		tk-postgresql73-${BASE_VERS}
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT=		Tk interface to PostgreSQL
 
 .include "../../databases/postgresql73/Makefile.common"

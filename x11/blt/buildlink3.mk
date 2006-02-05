@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2005/10/25 17:17:42 perry Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/02/05 23:11:31 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BLT_BUILDLINK3_MK:=	${BLT_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	blt
 
 .if !empty(BLT_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.blt+=		blt>=2.4z
+BUILDLINK_RECOMMENDED.blt?=	blt>=2.4znb2
 BUILDLINK_PKGSRCDIR.blt?=	../../x11/blt
 .endif	# BLT_BUILDLINK3_MK
 

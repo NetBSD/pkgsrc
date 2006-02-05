@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2005/08/06 14:07:07 salo Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/02/05 23:09:36 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NETPBM_BUILDLINK3_MK:=	${NETPBM_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	netpbm
 
 .if !empty(NETPBM_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.netpbm+=	netpbm>=10.11.6
-BUILDLINK_RECOMMENDED.netpbm+=	netpbm>=10.28
+BUILDLINK_RECOMMENDED.netpbm+=	netpbm>=10.31nb2
 BUILDLINK_PKGSRCDIR.netpbm?=	../../graphics/netpbm
 .endif	# NETPBM_BUILDLINK3_MK
 

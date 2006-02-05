@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/01/06 15:10:02 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:08:35 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_BSDDB3_BUILDLINK3_MK:=	${PY_BSDDB3_BUILDLINK3_MK}+
@@ -18,6 +18,7 @@ BUILDLINK_PACKAGES+=	py-bsddb3
 
 .if !empty(PY_BSDDB3_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.py-bsddb3+=	${PYPKGPREFIX}-bsddb3>=4.3.3nb1
+BUILDLINK_RECOMMENDED.py-bsddb3?=	${PYPKGPREFIX}-bsddb3>=4.3.3nb2
 BUILDLINK_PKGSRCDIR.py-bsddb3?=	../../databases/py-bsddb3
 .endif	# PY_BSDDB3_BUILDLINK3_MK
 

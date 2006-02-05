@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2005/12/05 23:55:16 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2006/02/05 23:10:42 joerg Exp $
 
 DISTNAME=	amavisd-${VERSION}
 PKGNAME=	amavis-perl-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security mail
 MASTER_SITES=	http://www.amavis.org/dist/perl/ \
 		${MASTER_SITE_SOURCEFORGE:=amavis/}

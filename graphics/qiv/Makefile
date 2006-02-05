@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2005/05/22 20:08:07 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/02/05 23:09:38 joerg Exp $
 
 DISTNAME=	qiv-2.0-src
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://www.klografx.net/qiv/download/
 EXTRACT_SUFX=	.tgz

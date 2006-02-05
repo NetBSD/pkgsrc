@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/04 19:52:30 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/05 23:11:00 joerg Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -7,6 +7,7 @@
 
 DISTNAME=		clit18src
 PKGNAME=		convertlit-1.8
+PKGREVISION=		1
 CATEGORIES=		textproc
 MASTER_SITES=		${CONVERTLIT_MASTER_SITES}
 EXTRACT_SUFX=		.zip

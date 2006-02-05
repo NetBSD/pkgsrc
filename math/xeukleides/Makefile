@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2005/05/22 20:08:14 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/02/05 23:10:04 joerg Exp $
 
 DISTNAME=	xeukleides.1.0.0
 PKGNAME=	xeukleides-1.0.0
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://perso.wanadoo.fr/obrecht/download/
 

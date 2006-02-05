@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2005/05/22 20:08:17 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/02/05 23:10:13 joerg Exp $
 
 DISTNAME=		proj-4.4.7
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc
 MASTER_SITES=		ftp://ftp.remotesensing.org/pub/proj/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} proj-nad27-1.1.tar.gz

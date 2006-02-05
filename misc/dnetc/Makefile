@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2005/12/29 06:21:54 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/02/05 23:10:07 joerg Exp $
 
 DISTNAME=	${DISTNAME_${OPSYS}_${MACHINE_ARCH}}
 PKGNAME=	dnetc-2.${DISTVER_${OPSYS}_${MACHINE_ARCH}}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://http.distributed.net/pub/dcti/current-client/
 

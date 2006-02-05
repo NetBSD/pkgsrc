@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/01/15 22:33:09 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/05 23:09:11 joerg Exp $
 #
 
 DISTNAME=	fonts-unttf-20051219
 PKGNAME=	${DISTNAME:S/fonts-unttf-/tex-unttf-1.0.1./}
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/hangul-ucs/fonts/
 

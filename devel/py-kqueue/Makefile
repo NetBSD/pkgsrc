@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2004/07/22 09:16:01 recht Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/05 23:08:51 joerg Exp $
 
 DISTNAME=	py-kqueue-2.0
 PKGNAME=	${PYPKGPREFIX}-kqueue-2.0
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/jdolecek/
 

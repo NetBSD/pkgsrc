@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/01/15 23:29:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/05 23:09:20 joerg Exp $
 #
 
 DISTNAME=	liquidwar-5.6.3
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://ufoot.hd.free.fr/pub/archive/ \
 		http://www.ufoot.org/archive/ \

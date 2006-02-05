@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/06/16 06:57:56 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/05 23:09:26 joerg Exp $
 #
 
 DISTNAME=		CIA_WDB2.jpd
 PKGNAME=		xrmap-data-0
+PKGREVISION=		1
 CATEGORIES=		geography
 MASTER_SITES=		http://frmas.free.fr/files/
 EXTRACT_SUFX=		.gz

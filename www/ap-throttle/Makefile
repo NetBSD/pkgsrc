@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2006/01/24 07:32:42 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/05 23:11:18 joerg Exp $
 
 DISTNAME=	mod_throttle312
 PKGNAME=	ap-throttle-3.1.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.snert.com/Software/mod_throttle/
 EXTRACT_SUFX=	.tgz

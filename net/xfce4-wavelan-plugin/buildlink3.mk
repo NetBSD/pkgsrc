@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/01/24 07:32:31 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/02/05 23:10:33 joerg Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 XFCE4_WAVELAN_PLUGIN_BUILDLINK3_MK:=	${XFCE4_WAVELAN_PLUGIN_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-wavelan-plugin
 
 .if !empty(XFCE4_WAVELAN_PLUGIN_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.xfce4-wavelan-plugin+=	xfce4-wavelan-plugin>=0.4.1nb1
-BUILDLINK_RECOMMENDED.xfce4-wavelan-plugin?=	xfce4-wavelan-plugin>=0.4.1nb2
+BUILDLINK_RECOMMENDED.xfce4-wavelan-plugin?=	xfce4-wavelan-plugin>=0.4.1nb3
 BUILDLINK_PKGSRCDIR.xfce4-wavelan-plugin?=	../../net/xfce4-wavelan-plugin
 .endif	# XFCE4_WAVELAN_PLUGIN_BUILDLINK3_MK
 

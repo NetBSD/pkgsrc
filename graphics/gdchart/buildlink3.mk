@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:14:50 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:09:30 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GDCHART_BUILDLINK3_MK:=	${GDCHART_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gdchart
 
 .if !empty(GDCHART_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gdchart+=	gdchart>=0.11.4nb1
-BUILDLINK_RECOMMENDED.gdchart+=	gdchart>=0.11.4nb3
+BUILDLINK_RECOMMENDED.gdchart+=	gdchart>=0.11.5nb1
 BUILDLINK_PKGSRCDIR.gdchart?=	../../graphics/gdchart
 .endif	# GDCHART_BUILDLINK3_MK
 

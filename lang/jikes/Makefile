@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2005/05/22 20:08:10 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2006/02/05 23:09:45 joerg Exp $
 #
 
 DISTNAME=	jikes-1.22
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang java
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jikes/}
 EXTRACT_SUFX=	.tar.bz2

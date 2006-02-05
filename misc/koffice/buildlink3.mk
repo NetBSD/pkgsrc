@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/01/24 07:32:24 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/02/05 23:10:10 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KOFFICE_BUILDLINK3_MK:=	${KOFFICE_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	koffice
 
 .if !empty(KOFFICE_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.koffice?=	koffice>=1.4.2nb5
-BUILDLINK_RECOMMENDED.koffice?=	koffice>=1.4.2nb7
+BUILDLINK_RECOMMENDED.koffice?=	koffice>=1.4.2nb8
 BUILDLINK_PKGSRCDIR.koffice?=	../../misc/koffice
 .endif	# KOFFICE_BUILDLINK3_MK
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/12/30 23:37:42 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/05 23:09:34 joerg Exp $
 
 DISTNAME=		jpegpixi-1.1.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.zero-based.org/software/jpegpixi/
 

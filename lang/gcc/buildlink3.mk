@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2004/11/22 22:24:46 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/02/05 23:09:44 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GCC_BUILDLINK3_MK:=	${GCC_BUILDLINK3_MK}+
@@ -14,6 +14,7 @@ BUILDLINK_PACKAGES+=	gcc
 
 .if !empty(GCC_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gcc+=		gcc>=${_GCC_REQD}
+BUILDLINK_RECOMMENDED.gcc?=	gcc>=2.95.3nb7
 BUILDLINK_PKGSRCDIR.gcc?=	../../lang/gcc
 BUILDLINK_LIBDIRS.gcc?=		\
 	${_GCC_PREFIX:S/^${BUILDLINK_PREFIX.gcc}\///}lib \

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2005/12/11 09:40:38 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2006/02/05 23:08:49 joerg Exp $
 #
 
 DISTNAME=	SDL_perl-1.19.2
 PKGNAME=	p5-SDL-1.19.2
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	devel perl5
 MASTER_SITES=	ftp://sdlperl.org/SDL_perl/
 

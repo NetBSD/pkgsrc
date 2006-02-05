@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2005/12/29 07:04:28 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/05 23:09:10 joerg Exp $
 
 DISTNAME=	jisx0212fonts-0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts x11 japanese
 MASTER_SITES=	ftp://ginkaku.kudpc.kyoto-u.ac.jp/fonts/ \
 		ftp://ftp.jp.NetBSD.org/pub/NetBSD-jp/tut-jp/fonts/ \

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2006/01/24 07:31:58 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2006/02/05 23:08:26 joerg Exp $
 
 MAINTAINER=		tron@NetBSD.org
 
 .include "Makefile.common"
 
-PKGREVISION=		2
+PKGREVISION=		3
 
 PATCH_SITES=           	${MASTER_SITES}/patches/
 PATCHFILES=		xc245-fix-te-notify.diff

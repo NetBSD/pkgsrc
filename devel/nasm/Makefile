@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2005/12/27 18:10:58 reed Exp $
+# $NetBSD: Makefile,v 1.26 2006/02/05 23:08:48 joerg Exp $
 
 DISTNAME=	nasm-0.98.39
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nasm/}
 EXTRACT_SUFX=	.tar.bz2

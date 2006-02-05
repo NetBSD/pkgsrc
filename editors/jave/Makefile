@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/30 10:51:48 martti Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/05 23:08:56 joerg Exp $
 
 DISTNAME=		jave_6.0_M7
 PKGNAME=		jave-6.0m7
+PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		http://www.jave.de/developer/ http://www.jave.de/figlet/
 DISTFILES=		jave_6.0_M7${EXTRACT_SUFX} figletfonts37${EXTRACT_SUFX}

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/07/27 16:21:17 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:08:51 joerg Exp $
 #
 
 DISTNAME=		TPG-2.1.6
+PKGREVISION=		1
 CATEGORIES=		devel python
 MASTER_SITES=		http://christophe.delord.free.fr/soft/tpg/
 

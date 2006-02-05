@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2005/12/29 06:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2006/02/05 23:08:49 joerg Exp $
 #
 
 DISTNAME=	${OPENCM_VERSION}-2-src
 PKGNAME=	${OPENCM_VERSION:C/alpha/rc/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.opencm.org/releases/
 EXTRACT_SUFX=	.tgz

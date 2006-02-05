@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2005/07/12 20:16:00 hubertf Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/05 23:10:57 joerg Exp $
 #
 
 DISTNAME=	xdu-3.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils x11
 MASTER_SITES=	http://sd.wareonearth.com/~phil/xdu/ \
 		ftp://ftp.arl.mil/pub/

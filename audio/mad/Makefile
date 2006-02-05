@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:44:54 tv Exp $
+# $NetBSD: Makefile,v 1.16 2006/02/05 23:08:11 joerg Exp $
 #
 
 DISTNAME=	mad-0.15.0b
+PKGREVISION=	1
 CATEGORIES=	audio meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty

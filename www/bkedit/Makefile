@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2005/12/05 23:55:22 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/05 23:11:19 joerg Exp $
 #
 
 DISTNAME=		bk_edit-0.6.23
 PKGNAME=		${DISTNAME:S/_//}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		www
 MASTER_SITES=		http://www.allesdurcheinander.de/nettools/bk_edit/
 

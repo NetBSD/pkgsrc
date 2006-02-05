@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2005/04/11 21:45:02 tv Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:08:22 joerg Exp $
 #
 
 DISTNAME=	myhdl-0.4.1
 PKGNAME=	${PYPKGPREFIX}-MyHDL-0.4.1
+PKGREVISION=	1
 CATEGORIES=	cad python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=myhdl/}
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2005/12/11 09:40:38 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/05 23:08:41 joerg Exp $
 #
 
 DISTNAME=	DevIL-1.6.6
 PKGNAME=	${DISTNAME:S/D/d/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openil/}
 

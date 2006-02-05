@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2005/12/05 20:50:45 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/05 23:10:23 joerg Exp $
 #
 
 DISTNAME=	driftnet-0.1.6
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net graphics
 MASTER_SITES=	http://www.ex-parrot.com/~chris/driftnet/
 

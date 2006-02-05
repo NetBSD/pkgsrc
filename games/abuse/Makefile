@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2005/12/05 20:50:15 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2006/02/05 23:09:12 joerg Exp $
 
 DISTNAME=		abuse_pd
 PKGNAME=		abuse-2.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games x11
 MASTER_SITES=		http://www.crack.com/games/abuse/
 DISTFILES=		${DISTNAME}.tgz abuse_data.tar.gz

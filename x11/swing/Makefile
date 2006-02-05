@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2005/06/17 03:50:44 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/02/05 23:11:43 joerg Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel x11 java
 MASTER_SITES=	# empty
 EXTRACT_SUFX=	.zip

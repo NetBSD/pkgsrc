@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2006/01/08 18:35:08 xtraeme Exp $
+# $NetBSD: Makefile,v 1.22 2006/02/05 23:08:37 joerg Exp $
 #
 
 DISTNAME=	mysql-ruby-2.7
 PKGNAME=	${RUBY_PKGPREFIX}-mysql-2.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases ruby
 MASTER_SITES=	http://tmtm.org/downloads/mysql/ruby/
 

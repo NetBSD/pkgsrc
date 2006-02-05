@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/12/29 06:21:52 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/05 23:09:57 joerg Exp $
 #
 
 DISTNAME=		pymsgauth-2.1.0
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/06/01 18:02:45 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/05 23:08:55 joerg Exp $
 #
 
 DISTNAME=	beaver-0.2.6
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	editors
 MASTER_SITES=	http://savannah.nongnu.org/download/beaver/
 

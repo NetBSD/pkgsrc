@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2005/12/05 20:50:18 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2006/02/05 23:09:25 joerg Exp $
 
 DISTNAME=		xpuyopuyo-0.9.1
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		games x11
 MASTER_SITES=		http://chaos2.org/xpuyopuyo/ \
 			http://lenin.dabney.caltech.edu./~justins/xpuyopuyo/

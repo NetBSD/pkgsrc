@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2005/06/01 18:03:20 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:37 joerg Exp $
 
 DISTNAME=	ja-ptex-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs print japanese
 MASTER_SITES=	# empty
 DISTFILES=	# empty

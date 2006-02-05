@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2006/01/15 22:27:27 heinz Exp $
+# $NetBSD: Makefile,v 1.34 2006/02/05 23:10:47 joerg Exp $
 
 DISTNAME=		vlnx440e
 PKGNAME=		uvscan-4.40
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://download.nai.com/products/evaluation/virusscan/english/cmdline/linux/v4.40/
 EXTRACT_SUFX=		.tar.Z

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2006/01/24 07:32:42 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/05 23:11:17 joerg Exp $
 #
 
 DISTNAME=	mod_layout-3.2
 PKGNAME=	${DISTNAME:C|mod_|ap-|}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.tangent.org/pub/apache/ \
 		http://software.tangent.org/download/

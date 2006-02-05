@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/05/09 23:46:04 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:08:43 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GOB2_BUILDLINK3_MK:=	${GOB2_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	gob2
 
 .if !empty(GOB2_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gob2+=	gob2>=2.0.10
+BUILDLINK_RECOMMENDED.gob2?=	gob2>=2.0.12nb1
 BUILDLINK_PKGSRCDIR.gob2?=	../../devel/gob2
 .endif	# GOB2_BUILDLINK3_MK
 

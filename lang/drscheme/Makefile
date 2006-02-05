@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2005/12/05 23:55:09 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2006/02/05 23:09:44 joerg Exp $
 #
 
 DISTNAME=		plt-${DRSCHEME_VERSION}-src-unix
 PKGNAME=		drscheme-${DRSCHEME_VERSION}
 DIST_SUBDIR=		${PKGNAME_NOREV:C/-[0-9]*//}/${PKGNAME_NOREV:C/.*-([0-9]*)/\1/}
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://download.plt-scheme.org/bundles/${DRSCHEME_VERSION}/plt/ 	\
 			http://download.plt-scheme.org/doc/${DRSCHEME_VERSION}/bundles/ 	\

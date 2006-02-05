@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2005/06/01 18:02:50 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:09:16 joerg Exp $
 #
 
 DISTNAME=	golddigC3.0
 PKGNAME=	golddig-3.0
+PKGREVISION=	1
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.NetBSD.org/~chuck/gz/
 

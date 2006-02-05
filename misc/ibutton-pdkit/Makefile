@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2005/06/17 03:50:21 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:09 joerg Exp $
 #
 
 DISTNAME=	ulinuxgnu
 PKGNAME=	ibutton-pdkit-2.00
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.dalsemi.com/pub/auto_id/public/
 EXTRACT_SUFX=	.zip

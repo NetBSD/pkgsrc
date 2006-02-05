@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/06/17 03:50:33 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/05 23:10:48 joerg Exp $
 #
 
 DISTNAME=	pacpidump
 PKGNAME=	acpidump-20020711
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://people.freebsd.org/~takawata/
 

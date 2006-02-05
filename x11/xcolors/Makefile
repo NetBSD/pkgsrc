@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2005/03/24 21:13:04 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/05 23:11:45 joerg Exp $
 
 DISTNAME=	xcolors
 PKGNAME=	xcolors-1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.tut.ac.jp/X11/X11R6/contrib/programs/
 

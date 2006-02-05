@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:47:18 tv Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:10:46 joerg Exp $
 
 DISTNAME=	cryptkit-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cryptkit/}
 

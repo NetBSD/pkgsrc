@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/01/24 07:32:40 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/05 23:11:14 joerg Exp $
 #
 
 DISTNAME=		matchbox-window-manager-0.9.5
 PKGNAME=		${DISTNAME:S/window-manager/wm/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		wm x11
 MASTER_SITES=		http://projects.o-hand.com/matchbox/sources/matchbox-window-manager/0.9/
 

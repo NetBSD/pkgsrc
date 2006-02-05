@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2005/06/16 06:57:57 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/05 23:09:26 joerg Exp $
 #
 
 DISTNAME=		pdfmaps-1.1
 PKGNAME=		xrmap-pdfmaps-1.1
+PKGREVISION=		1
 CATEGORIES=		geography
 MASTER_SITES=		ftp://ftp.ac-grenoble.fr/ge/geosciences/xrmap/data/
 

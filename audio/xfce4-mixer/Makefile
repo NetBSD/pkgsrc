@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2006/01/24 07:31:56 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/02/05 23:08:16 joerg Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-mixer-${XFCE4_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 COMMENT=	Xfce mixer plugin
 

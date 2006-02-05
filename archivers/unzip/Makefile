@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2005/12/27 20:40:10 reed Exp $
+# $NetBSD: Makefile,v 1.61 2006/02/05 23:08:05 joerg Exp $
 
 DISTNAME=	unzip552
 PKGNAME=	unzip-5.52
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/
 

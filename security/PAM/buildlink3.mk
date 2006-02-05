@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2005/01/14 05:10:37 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2006/02/05 23:10:42 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LINUX_PAM_BUILDLINK3_MK:=	${LINUX_PAM_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	linux-pam
 
 .if !empty(LINUX_PAM_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.linux-pam+=		PAM>=0.75
-BUILDLINK_RECOMMENDED.linux-pam+=	PAM>=0.77nb4
+BUILDLINK_RECOMMENDED.linux-pam+=	PAM>=0.77nb5
 BUILDLINK_PKGSRCDIR.linux-pam?=		../../security/PAM
 .endif	# LINUX_PAM_BUILDLINK3_MK
 

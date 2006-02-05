@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/09/28 20:52:26 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:10:47 joerg Exp $
 
 DISTNAME=	x11-ssh-askpass-1.0
 PKGNAME=	${DISTNAME:S/^x11-//}
+PKGREVISION=	1
 CATEGORIES=	security x11
 MASTER_SITES=	http://www.jmknoble.net/software/x11-ssh-askpass/
 

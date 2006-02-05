@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2006/01/21 20:42:39 tron Exp $
+# $NetBSD: Makefile,v 1.57 2006/02/05 23:10:14 joerg Exp $
 
 DISTNAME=	rpm-2.5.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.rpm.org/pub/rpm/dist/rpm-2.5.x/
 

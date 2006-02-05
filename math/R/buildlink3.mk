@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/27 21:26:08 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:09:59 joerg Exp $
 # XXX	BUILDLINK_DEPMETHOD.R?=	build
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
@@ -13,6 +13,7 @@ BUILDLINK_PACKAGES+=	R
 
 .if !empty(R_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.R+=	R>=1.7.0
+BUILDLINK_RECOMMENDED.R?=	R>=2.2.1nb2
 BUILDLINK_PKGSRCDIR.R?=	../../math/R
 .endif	# R_BUILDLINK3_MK
 

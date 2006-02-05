@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/07/01 14:44:43 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/05 23:08:22 joerg Exp $
 #
 
 DISTNAME=		SimPy-1.6
 PKGNAME=		${PYPKGPREFIX}-simpy-1.6
+PKGREVISION=		1
 CATEGORIES=		cad
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=simpy/}
 

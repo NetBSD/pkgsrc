@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:01 tv Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/05 23:08:20 joerg Exp $
 
 DISTNAME=		sewer
 PKGNAME=		sewer-2.6
+PKGREVISION=		1
 CATEGORIES=		biology
 MASTER_SITES=		ftp://iubio.bio.indiana.edu/molbio/analyze/
 EXTRACT_SUFX=		.zip

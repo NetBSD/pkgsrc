@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/05/22 20:08:24 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/05 23:10:24 joerg Exp $
 #
 
 DISTNAME=		ftplibpp-1.0.1
+PKGREVISION=		1
 CATEGORIES=		net devel
 MASTER_SITES=		http://home.arcor.de/breitscheid/ftplibpp/
 

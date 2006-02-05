@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/12/05 20:50:20 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:09:33 joerg Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 HICOLOR_ICON_THEME_BUILDLINK3_MK:=	${HICOLOR_ICON_THEME_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	hicolor-icon-theme
 
 .if !empty(HICOLOR_ICON_THEME_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.hicolor-icon-theme+=	hicolor-icon-theme>=0.4
+BUILDLINK_RECOMMENDED.hicolor-icon-theme+=	hicolor-icon-theme>=0.5nb1
 BUILDLINK_PKGSRCDIR.hicolor-icon-theme?=../../graphics/hicolor-icon-theme
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/01/24 07:32:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:09:27 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 RENDERKIT_BUILDLINK3_MK:=	${RENDERKIT_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	RenderKit
 
 .if !empty(RENDERKIT_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.RenderKit+=	RenderKit>=0.3.1r2nb3
-BUILDLINK_RECOMMENDED.RenderKit?=	RenderKit>=0.3.1r2nb8
+BUILDLINK_RECOMMENDED.RenderKit?=	RenderKit>=0.3.1r2nb9
 BUILDLINK_PKGSRCDIR.RenderKit?=	../../graphics/RenderKit
 .endif	# RENDERKIT_BUILDLINK3_MK
 

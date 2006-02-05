@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/10/12 21:22:08 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:11:02 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GDOME2_BUILDLINK3_MK:=	${GDOME2_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	gdome2
 
 .if !empty(GDOME2_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gdome2+=	gdome2>=0.8.1nb1
+BUILDLINK_RECOMMENDED.gdome2?=	gdome2>=0.8.1nb2
 BUILDLINK_PKGSRCDIR.gdome2?=	../../textproc/gdome2
 .endif	# GDOME2_BUILDLINK3_MK
 

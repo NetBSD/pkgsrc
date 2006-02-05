@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2006/01/24 07:32:41 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/05 23:11:16 joerg Exp $
 
 DISTNAME=	mod_auth_pam-1.0a
 PKGNAME=	ap-auth-pam-1.0a
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://pam.sourceforge.net/mod_auth_pam/dist/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2005/12/11 09:40:40 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/05 23:09:12 joerg Exp $
 
 DISTNAME=	KoboDeluxe-0.4pre8
 PKGNAME=	${DISTNAME:S/pre/rc/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	games
 MASTER_SITES=	http://olofson.net/kobodl/download/
 

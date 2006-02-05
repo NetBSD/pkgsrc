@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2005/07/16 19:10:40 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/02/05 23:11:03 joerg Exp $
 
 DISTNAME=	kdoc-2.0a54
 PKGNAME=	kdoc-3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc kde
 
 MASTER_SITES=	ftp://ftp.kde.org/pub/kde/stable/3.0/src/ \
