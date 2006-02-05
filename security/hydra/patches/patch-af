@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2006/01/20 00:55:35 joerg Exp $
+$NetBSD: patch-af,v 1.2 2006/02/05 00:18:29 adrianp Exp $
 
---- hydra.c.orig	2006-01-20 00:52:40.000000000 +0000
+--- hydra.c.orig	2006-01-20 11:39:15.000000000 +0000
 +++ hydra.c
-@@ -154,7 +154,6 @@ typedef struct {
+@@ -167,7 +167,6 @@ typedef struct {
  
  /* external vars */
  extern char HYDRA_EXIT[5];

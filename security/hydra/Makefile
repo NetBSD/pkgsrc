@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/12/05 23:55:17 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/05 00:18:29 adrianp Exp $
 #
 
 DISTNAME=	${PKGNAME}-src
-PKGNAME=	hydra-4.6
+PKGNAME=	hydra-5.2
 CATEGORIES=	security
 MASTER_SITES=	http://www.thc.org/releases/
 
@@ -14,7 +14,7 @@ COMMENT=	Login password cracker
 
 USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	YES
-BUILD_TARGET=	all ssl
+BUILD_TARGET=	all
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 LICENSE+=	hydra-license
@@ -25,14 +25,14 @@ SUBST_FILES.build=	Makefile.am configure hydra-gtk/src/main.c
 SUBST_SED.build=	-e "s|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g" \
 			-e "s|@PREFIX@|${PREFIX}|g" \
 			-e "s|uname|${UNAME}|g" \
-			-e "s|\./hydra|${PREFIX}/bin/hydra|g" \
+			-e "s|\\./hydra|${PREFIX}/bin/hydra|g" \
 			-e "s|LIBS=-lm|LIBS=-lm ${COMPILER_RPATH_FLAG}${PREFIX}/lib ${COMPILER_RPATH_FLAG}/usr/lib|g"
-SUBST_MESSAGE.build=	"Patching build files."
+SUBST_MESSAGE.build=	Patching build files.
 
 USE_OLD_DES_API=	YES
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
-BUILDLINK_DEPENDS.libssh+=	libssh-0.1
+BUILDLINK_DEPENDS.libssh+=	libssh-0.11
 
 INSTALLATION_DIRS=	bin
 
