@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2006/01/08 18:35:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.42 2006/02/05 15:34:08 adrianp Exp $
 
-DISTNAME=	freeradius-1.0.5
-PKGREVISION=	3
+DISTNAME=	freeradius-1.1.0
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 		ftp://ftp.Awfulhak.org/pub/radius/
@@ -45,14 +44,13 @@ CONFIGURE_ARGS+=	--without-rlm_sql_unixodbc
 
 SUBST_CLASSES+=		make
 SUBST_STAGE.make=	post-patch
-SUBST_FILES.make=	src/modules/rlm_ldap/Makefile.in \
-			src/modules/rlm_mschap/Makefile \
+SUBST_FILES.make=	src/modules/rlm_mschap/Makefile \
 			src/modules/rlm_sql/drivers/rlm_sql_postgresql/Makefile.in
 SUBST_SED.make= 	-e "s|RLM_LDFLAGS	=|RLM_LDFLAGS 	= \
 				-L../../../src/lib/.libs/ -lradius|g" \
 			-e "s|RLM_SQL_LIBS	=|RLM_SQL_LIBS	= \
 				-L${PREFIX}/lib|g"
-SUBST_MESSAGE.make=	"Fixing Makefiles."
+SUBST_MESSAGE.make=	Fixing Makefiles.
 
 .include "options.mk"
 
@@ -73,9 +71,9 @@ EGFILES=	acct_users attrs certs/demoCA/index.txt.old \
 		certs/root.pem clients clients.conf dictionary.in eap.conf \
 		experimental.conf hints huntgroups ldap.attrmap mssql.conf \
 		naslist naspasswd oraclesql.conf pgsql-voip.conf \
-		postgresql.conf preproxy_users proxy.conf radiusd.conf.in \
-		realms snmp.conf sql.conf users x99.conf x99passwd.sample \
-		radiusd.conf dictionary
+		postgresql.conf preproxy_users proxy.conf \
+		realms snmp.conf sql.conf users radiusd.conf dictionary \
+		otp.conf otppasswd.sample
 
 .for f in ${EGFILES}
 CONF_FILES+= 	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
@@ -83,6 +81,7 @@ CONF_FILES+= 	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../net/net-snmp/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
@@ -117,6 +116,7 @@ post-install:
 .for f in ${EGFILES}
 	${INSTALL_DATA} ${WRKSRC}/raddb/${f} ${EGDIR}/${f}
 .endfor
+	${INSTALL_SCRIPT} ${WRKSRC}/src/modules/rlm_perl/example.pl ${EGDIR}
 	@${MKDIR} ${PKG_SYSCONFDIR}/certs
 	@${MKDIR} ${PKG_SYSCONFDIR}/certs/demoCA
 	cd ${WRKSRC} && ${FIND} . -name .libs | ${XARGS} ${RM} -rf
