@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2006/01/09 22:00:25 tron Exp $
+# $NetBSD: Makefile,v 1.18 2006/02/05 23:08:12 joerg Exp $
 
 PKGNAME=	mpg123${TARGET_SUFFIX}-${MPG123_VERSION}
-PKGREVISION=	8
+PKGREVISION=	9
 COMMENT=	Command-line player for mpeg layer 1, 2 and 3 audio with NAS output
 
 MAINTAINER=	tech-pkg@NetBSD.org

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2006/01/24 07:32:29 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/02/05 23:10:22 joerg Exp $
 #
 
 .include "../../net/bittornado/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/Tornado/Tornado-gui/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT+=	(wxGTK GUI)
 

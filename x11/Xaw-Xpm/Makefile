@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2005/04/11 21:48:04 tv Exp $
+# $NetBSD: Makefile,v 1.23 2006/02/05 23:11:31 joerg Exp $
 #
 
 DISTNAME=		Xaw-XPM-1.1
 PKGNAME=		Xaw-Xpm-1.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=libs/X/}
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/26 17:11:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:10:13 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PROJ_BUILDLINK3_MK:=	${PROJ_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	proj
 
 .if !empty(PROJ_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.proj+=	proj>=4.4.7nb1
+BUILDLINK_RECOMMENDED.proj?=	proj>=4.4.7nb2
 BUILDLINK_PKGSRCDIR.proj?=	../../misc/proj
 .endif	# PROJ_BUILDLINK3_MK
 

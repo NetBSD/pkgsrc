@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2005/12/01 03:22:16 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/05 23:08:50 joerg Exp $
 
 DISTNAME=	ply-1.5
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://systems.cs.uchicago.edu/ply/
 

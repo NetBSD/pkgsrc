@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2005/07/15 18:27:51 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/05 23:09:43 joerg Exp $
 #
 
 DISTNAME=	b116
 PKGNAME=	brandybasic-1.0.16
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.argonet.co.uk/users/dave_daniels/
 EXTRACT_SUFX=	.tgz

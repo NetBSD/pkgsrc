@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/06/23 09:21:18 shannonjr Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:10:44 joerg Exp $
 #
 
 DISTNAME=		libassuan-0.6.10
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/alpha/libassuan/
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:46:31 tv Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/05 23:10:03 joerg Exp $
 #
 
 DISTNAME=	fpconst-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	http://www.analytics.washington.edu/~warnes/fpconst/
 

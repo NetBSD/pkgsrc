@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/01/24 07:32:32 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:10:38 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 POPPLER_QT_BUILDLINK3_MK:=	${POPPLER_QT_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	poppler-qt
 
 .if !empty(POPPLER_QT_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.poppler-qt+=	poppler-qt>=0.4.2
-BUILDLINK_RECOMMENDED.poppler-qt?=	poppler-qt>=0.4.4
+BUILDLINK_RECOMMENDED.poppler-qt?=	poppler-qt>=0.4.4nb2
 BUILDLINK_PKGSRCDIR.poppler-qt?=	../../print/poppler-qt
 .endif	# POPPLER_QT_BUILDLINK3_MK
 

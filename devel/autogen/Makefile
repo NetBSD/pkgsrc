@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2005/05/22 20:07:49 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/02/05 23:08:39 joerg Exp $
 
 DISTNAME=	autogen-5.6.4
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=autogen/}
 EXTRACT_SUFX=	.tar.bz2

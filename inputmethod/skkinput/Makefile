@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2006/01/21 12:02:57 rxg Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:09:43 joerg Exp $
 
 DISTNAME=	skkinput-2.06.3
+PKGREVISION=	1
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=skkinput2/1815/}
 

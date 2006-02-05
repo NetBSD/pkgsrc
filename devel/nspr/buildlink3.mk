@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2005/10/15 22:20:59 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:08:49 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NSPR_BUILDLINK3_MK:=	${NSPR_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	nspr
 
 .if !empty(NSPR_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.nspr+=	nspr>=4.4.1nb1
-BUILDLINK_RECOMMENDED.nspr+=	nspr>=4.4.1nb1
+BUILDLINK_RECOMMENDED.nspr+=	nspr>=4.6.1nb1
 BUILDLINK_PKGSRCDIR.nspr?=	../../devel/nspr
 
 BUILDLINK_FILES.nspr+=		lib/nspr/*

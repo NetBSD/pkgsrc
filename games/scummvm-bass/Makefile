@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/06/16 06:57:55 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/05 23:09:22 joerg Exp $
 #
 
 DISTNAME=		BASS-Floppy
 PKGNAME=		scummvm-bass-0
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		http://www.mixnmojo.com/bss/
 EXTRACT_SUFX=		.zip

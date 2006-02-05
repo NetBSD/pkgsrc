@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:45:39 tv Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/05 23:08:54 joerg Exp $
 #
 
 DISTNAME=	tkdiff
 PKGNAME=	${DISTNAME}-4.0.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tkdiff/}
 EXTRACT_SUFX=	.zip

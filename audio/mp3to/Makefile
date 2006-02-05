@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2005/07/19 10:22:34 grant Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/05 23:08:12 joerg Exp $
 
 DISTNAME=	mp3to
 PKGNAME=	${DISTNAME}-1.0.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.gz

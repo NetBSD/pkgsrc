@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2005/07/19 10:22:33 grant Exp $
+# $NetBSD: Makefile,v 1.18 2006/02/05 23:08:07 joerg Exp $
 
 DISTNAME=	voice_hvs_di-2.0
 PKGNAME=	festvox-hvs-2.0
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://cslu.cse.ogi.edu/pub/tts/
 

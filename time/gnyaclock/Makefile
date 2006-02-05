@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2005/06/17 03:50:38 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:11:09 joerg Exp $
 #
 
 DISTNAME=	gnya
 PKGNAME=	gnyaclock-20001218
+PKGREVISION=	1
 CATEGORIES=	time x11
 MASTER_SITES=	http://www2.is.titech.ac.jp/~sadayosi/lab/h-takasi/
 EXTRACT_SUFX=	.shar

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/01/24 07:32:52 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2006/02/05 23:11:33 joerg Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 GNOME2_CONTROL_CENTER_BUILDLINK3_MK:=	${GNOME2_CONTROL_CENTER_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gnome2-control-center
 
 .if !empty(GNOME2_CONTROL_CENTER_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gnome2-control-center+=	gnome2-control-center>=2.12.1nb1
-BUILDLINK_RECOMMENDED.gnome2-control-center?=	gnome2-control-center>=2.12.1nb4
+BUILDLINK_RECOMMENDED.gnome2-control-center?=	gnome2-control-center>=2.12.1nb5
 BUILDLINK_PKGSRCDIR.gnome2-control-center?=	../../x11/gnome2-control-center
 .endif	# GNOME2_CONTROL_CENTER_BUILDLINK3_MK
 

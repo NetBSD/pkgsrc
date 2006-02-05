@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:02 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:10:16 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBFLASH_BUILDLINK3_MK:=	${LIBFLASH_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libflash
 
 .if !empty(LIBFLASH_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libflash+=	libflash>=0.4.10nb4
-BUILDLINK_RECOMMENDED.libflash+=	libflash>=0.4.10nb5
+BUILDLINK_RECOMMENDED.libflash+=	libflash>=0.4.10nb6
 BUILDLINK_PKGSRCDIR.libflash?=	../../multimedia/libflash
 .endif	# LIBFLASH_BUILDLINK3_MK
 

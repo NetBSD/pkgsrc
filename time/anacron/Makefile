@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/12/29 06:22:20 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:11:08 joerg Exp $
 #
 
 DISTNAME=	anacron-2.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=anacron/}
 

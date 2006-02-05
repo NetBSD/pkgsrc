@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/05/22 20:07:52 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/05 23:08:44 joerg Exp $
 #
 
 DISTNAME=		libcfg+-0.6.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		http://platon.sk/upload/_projects/00003/
 

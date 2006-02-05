@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/11/14 21:50:42 veego Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/05 23:09:05 joerg Exp $
 
 DISTNAME=	VMware-2.0.4-1142
 PKGNAME=	vmware-2.0.4
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=   http://www4.vmware.com/software/ \
 		http://www.vmware.com/download1/software/ \

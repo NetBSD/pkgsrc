@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/10/03 00:13:00 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/02/05 23:10:12 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBCDIO_BUILDLINK3_MK:=	${LIBCDIO_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libcdio
 
 .if !empty(LIBCDIO_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libcdio+=	libcdio>=0.65
-BUILDLINK_RECOMMENDED.libcdio+=	libcdio>=0.68nb1
+BUILDLINK_RECOMMENDED.libcdio+=	libcdio>=0.76nb1
 BUILDLINK_PKGSRCDIR.libcdio?=	../../misc/libcdio
 .endif	# LIBCDIO_BUILDLINK3_MK
 

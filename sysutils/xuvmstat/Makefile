@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2005/09/13 12:43:48 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/02/05 23:10:59 joerg Exp $
 #
 
 DISTNAME=	${PKGNAME:S/-//}
 PKGNAME=	xuvmstat-20050909
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.NetBSD.org/~chuck/gz/
 

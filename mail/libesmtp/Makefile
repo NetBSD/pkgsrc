@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2005/05/22 20:08:12 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/02/05 23:09:55 joerg Exp $
 
 DISTNAME=	libesmtp-1.0.3r1
 PKGNAME=	${DISTNAME:S/r1//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail devel
 MASTER_SITES=	http://www.stafford.uklinux.net/libesmtp/ \
 		http://www.tobez.org/download/port-mirrors/mail/libesmtp/ \

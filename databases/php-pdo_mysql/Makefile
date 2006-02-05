@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2006/01/08 18:35:08 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/05 23:08:33 joerg Exp $
 
 PDO_DRIVER=		mysql
 PDO_COMMENT=		MySQL
 PDO_VERSION=		1.0.1
 
-PKGREVISION=		1
+PKGREVISION=		2
 
 .include "../../databases/php-pdo/module.mk"
 

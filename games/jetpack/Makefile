@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/03/24 21:12:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/05 23:09:16 joerg Exp $
 
 DISTNAME=	jetpack
 PKGNAME=	jetpack-1.0
+PKGREVISION=	1
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://qiclab.scn.rain.com/pub/games/
 EXTRACT_SUFX=	.tar.Z

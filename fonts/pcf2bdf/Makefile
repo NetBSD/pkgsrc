@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:52 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:09:10 joerg Exp $
 #
 
 DISTNAME=	pcf2bdf-1.04
+PKGREVISION=	1
 CATEGORIES=	fonts graphics x11
 MASTER_SITES=	http://www.tsg.ne.jp/GANA/S/pcf2bdf/
 EXTRACT_SUFX=	.tgz

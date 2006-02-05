@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2005/06/01 18:02:50 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/05 23:09:14 joerg Exp $
 #
 
 DISTNAME=	finalbattle.0.0
 PKGNAME=	finalbattle-0.0
+PKGREVISION=	1
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.sonic.net/pub/users/nbs/unix/x/finalbattle/
 
