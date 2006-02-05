@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/01/24 07:32:00 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/02/05 23:08:39 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 AT_SPI_BUILDLINK3_MK:=	${AT_SPI_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	at-spi
 
 .if !empty(AT_SPI_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.at-spi+=	at-spi>=1.6.0
-BUILDLINK_RECOMMENDED.at-spi+=	at-spi>=1.6.6nb1
+BUILDLINK_RECOMMENDED.at-spi+=	at-spi>=1.6.6nb2
 BUILDLINK_PKGSRCDIR.at-spi?=	../../devel/at-spi
 .endif	# AT_SPI_BUILDLINK3_MK
 

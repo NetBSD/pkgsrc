@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2006/01/24 07:32:10 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:09:28 joerg Exp $
 #
 
 DISTNAME=		cambevao-2.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics
 MASTER_SITES=		http://core.de/~coto/projects/cambevao/
 

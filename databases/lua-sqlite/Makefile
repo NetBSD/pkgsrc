@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2005/09/04 05:00:36 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/05 23:08:32 joerg Exp $
 #
 
 DISTNAME=	lsqlite_src
 PKGNAME=	lua-sqlite-20030228
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	http://lua-users.org/files/wiki_insecure/binary_modules/luasqlite/
 EXTRACT_SUFX=	.zip

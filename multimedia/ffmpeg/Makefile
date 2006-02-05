@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2005/12/29 06:21:56 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/02/05 23:10:15 joerg Exp $
 
 DISTNAME=	ffmpeg-0.4.8
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	multimedia net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ffmpeg/}
 

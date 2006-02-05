@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2005/10/23 15:45:43 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2006/02/05 23:08:49 joerg Exp $
 
 DISTNAME=		noweb-2.9a
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.cs.virginia.edu/pub/nr/
 EXTRACT_SUFX=		.tgz

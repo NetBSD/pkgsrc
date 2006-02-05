@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2006/01/24 07:32:42 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2006/02/05 23:11:17 joerg Exp $
 #
 
 DISTNAME=		mod_perl-1.29
 PKGNAME=		ap-perl-1.29
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Apache/} \
 			http://perl.apache.org/dist/

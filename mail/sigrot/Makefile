@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2005/06/16 06:58:08 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:09:58 joerg Exp $
 
 DISTNAME=	sigrot_1.2-1
 PKGNAME=	sigrot-1.2
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/sigrot/}
 

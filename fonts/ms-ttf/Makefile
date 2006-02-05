@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2005/12/29 07:04:28 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/05 23:09:10 joerg Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ms-ttf-20020306
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=corefonts/}
 DISTFILES=	andale32.exe webdin32.exe trebuc32.exe georgi32.exe \

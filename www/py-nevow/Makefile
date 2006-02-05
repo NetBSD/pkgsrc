@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/01/24 07:32:50 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/05 23:11:28 joerg Exp $
 #
 
 DISTNAME=		nevow-0.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		www python
 MASTER_SITES=		http://www.divmod.org/users/release/divmod/
 

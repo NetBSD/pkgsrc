@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2005/10/11 21:30:39 reed Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/05 23:08:13 joerg Exp $
 
 DISTNAME=	rsynth-2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	ftp://svr-ftp.eng.cam.ac.uk/pub/comp.speech/synthesis/ \
 		ftp://svr-ftp.eng.cam.ac.uk/pub/comp.speech/dictionaries/cmudict/

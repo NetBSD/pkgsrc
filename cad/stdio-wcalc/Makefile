@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/01/08 06:31:54 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/05 23:08:22 joerg Exp $
 #
 
 .include "../../cad/wcalc/Makefile.common"
 PKGNAME=	stdio-${DISTNAME}
+PKGREVISION=	1
 
 COMMENT=	Stdio Based Transmission Line Analysis/Synthesis Calculator
 

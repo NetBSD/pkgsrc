@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2005/12/05 20:51:11 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2006/02/05 23:11:20 joerg Exp $
 
 DISTNAME=	Cocoon-1.8.2
 PKGNAME=	cocoon-1.8.2
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://xml.apache.org/dist/cocoon/cocoon1/
 
@@ -15,7 +16,7 @@ COMMENT=	The Apache Project's XML/XSL based web publishing system
 # imported as -current packages.
 #
 DEPENDS+=	xalan-j-1.2:../../textproc/xalan-j
-DEPENDS+=	fop-0.15.0:../../textproc/fop
+DEPENDS+=	fop-0.15.0nb1:../../textproc/fop
 DEPENDS+=	jakarta-servletapi-[0-9]*:../../www/jakarta-servletapi
 
 # In addition to the above requirements, cocoon will build in support for the

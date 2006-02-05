@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2005/09/28 20:52:28 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/05 23:11:45 joerg Exp $
 #
 
 .include "../../x11/xbindkeys/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/xbindkeys/xbindkeys-tk/}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT+=	(Tk interface)
 
 DEPENDS+=	xbindkeys>=1.7.1:../../x11/xbindkeys

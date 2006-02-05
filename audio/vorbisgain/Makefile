@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/22 13:48:43 rpaulo Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/05 23:08:14 joerg Exp $
 
 DISTNAME=	vorbisgain-0.37
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://sjeng.org/ftp/vorbis/
 

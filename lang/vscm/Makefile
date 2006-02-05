@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2005/06/16 06:58:02 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/05 23:09:53 joerg Exp $
 
 DISTNAME=	vscmV0r4
 PKGNAME=	vscm-0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.cs.indiana.edu/pub/scheme-repository/imp/vscm/
 

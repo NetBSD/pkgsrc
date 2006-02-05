@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2004/10/03 00:18:03 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/02/05 23:10:34 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PVM_BUILDLINK3_MK:=	${PVM_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	pvm
 
 .if !empty(PVM_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.pvm+=		pvm>=3.4.3
-BUILDLINK_RECOMMENDED.pvm+=	pvm>=3.4.4nb1
+BUILDLINK_RECOMMENDED.pvm+=	pvm>=3.4.5nb1
 BUILDLINK_PKGSRCDIR.pvm?=	../../parallel/pvm3
 
 .  include "${BUILDLINK_PKGSRCDIR.pvm}/arch.mk"

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:48:15 tv Exp $
+# $NetBSD: Makefile,v 1.16 2006/02/05 23:11:47 joerg Exp $
 
 DISTNAME=	xless-1.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/} \
 		ftp://ftp.cs.berkeley.edu/ucb/people/dglo/xless/

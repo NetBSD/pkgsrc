@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2006/01/16 14:48:34 adam Exp $
+# $NetBSD: Makefile,v 1.54 2006/02/05 23:11:43 joerg Exp $
 
 DISTNAME=	tk${TK_VERSION}-src
 PKGNAME=	tk-${TK_VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11 lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 

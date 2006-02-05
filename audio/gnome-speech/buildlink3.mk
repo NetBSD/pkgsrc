@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/01/24 07:31:53 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/02/05 23:08:08 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_SPEECH_BUILDLINK3_MK:=	${GNOME_SPEECH_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gnome-speech
 
 .if !empty(GNOME_SPEECH_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.gnome-speech+=	gnome-speech>=0.3.2
-BUILDLINK_RECOMMENDED.gnome-speech+=	gnome-speech>=0.3.9nb1
+BUILDLINK_RECOMMENDED.gnome-speech+=	gnome-speech>=0.3.9nb2
 BUILDLINK_PKGSRCDIR.gnome-speech?=	../../audio/gnome-speech
 .endif	# GNOME_SPEECH_BUILDLINK3_MK
 

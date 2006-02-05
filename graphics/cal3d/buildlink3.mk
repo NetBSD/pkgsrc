@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2004/10/03 00:14:49 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/02/05 23:09:28 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CAL3D_BUILDLINK3_MK:=	${CAL3D_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	cal3d
 
 .if !empty(CAL3D_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.cal3d+=	cal3d>=0.9.1
-BUILDLINK_RECOMMENDED.cal3d+=	cal3d>=0.9.1nb1
+BUILDLINK_RECOMMENDED.cal3d+=	cal3d>=0.9.1nb2
 BUILDLINK_PKGSRCDIR.cal3d?=	../../graphics/cal3d
 .endif	# CAL3D_BUILDLINK3_MK
 

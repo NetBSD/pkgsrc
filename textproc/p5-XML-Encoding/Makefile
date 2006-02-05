@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2006/01/24 07:32:37 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:11:04 joerg Exp $
 
 DISTNAME=	XML-Encoding-1.01
 PKGNAME=	p5-${DISTNAME}
 #SVR4_PKGNAME=
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CO/COOPERCL/}
 

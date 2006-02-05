@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2005/12/06 14:14:24 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/05 23:08:43 joerg Exp $
 
 DISTNAME=	guile-lib-0.1.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.gna.org/guile-lib/
 
