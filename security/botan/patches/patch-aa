@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/02/05 01:25:12 rillig Exp $
+$NetBSD: patch-aa,v 1.2 2006/02/05 01:30:55 rillig Exp $
 
 --- configure.pl.orig	2006-01-01 02:02:28.000000000 +0100
 +++ configure.pl	2006-02-05 01:59:57.000000000 +0100
@@ -41,13 +41,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/02/05 01:25:12 rillig Exp $
  $__TAB__ done
  $__TAB__\@\$(INSTALL_CMD_DATA) \$(STATIC_LIB) \$(LIBDIR)
 -$__TAB__\@\$(INSTALL_CMD_EXEC) \$(CONFIG_SCRIPT) \$(BINDIR)
-+$__TAB__\@\${INSTALL_SCRIPT} \$(CONFIG_SCRIPT) \$(BINDIR)
++$__TAB__\@\${BSD_INSTALL_SCRIPT} \$(CONFIG_SCRIPT) \$(BINDIR)
  END_OF_INSTALL_SCRIPTS
  
     if($make_shared) {
        print $makefile <<END_OF_SYMLINKS;
 -$__TAB__\@\$(INSTALL_CMD_EXEC) \$(SHARED_LIB) \$(LIBDIR)
-+$__TAB__\@\${INSTALL_LIB} \$(SHARED_LIB) \$(LIBDIR)
++$__TAB__\@\${BSD_INSTALL_LIB} \$(SHARED_LIB) \$(LIBDIR)
  $__TAB__\$(CD) \$(LIBDIR); \$(LN) \$(SYMLINK0) \$(SYMLINK1)
  $__TAB__\$(CD) \$(LIBDIR); \$(LN) \$(SYMLINK1) \$(SYMLINK2)
  $__TAB__\$(CD) \$(LIBDIR); \$(LN) \$(SYMLINK2) \$(SYMLINK3)
