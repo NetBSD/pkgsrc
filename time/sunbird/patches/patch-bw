@@ -1,0 +1,63 @@
+$NetBSD: patch-bw,v 1.1.1.1 2006/02/05 21:56:26 ghen Exp $
+
+--- xpcom/reflect/xptcall/src/md/unix/xptcstubs_linux_alpha.cpp.orig	2006-02-02 16:57:57.000000000 +0100
++++ xpcom/reflect/xptcall/src/md/unix/xptcstubs_linux_alpha.cpp
+@@ -187,6 +187,50 @@ __asm__(
+  * nsresult nsXPTCStubBase::Stub##n()
+  *  Sets register $1 to "methodIndex" and jumps to SharedStub.
+  */
++#if defined(__GXX_ABI_VERSION) && __GXX_ABI_VERSION >= 100 /* G++ V3 ABI */
++#define STUB_ENTRY(n)					\
++__asm__(						\
++"#### Stub"#n" ####\n"					\
++".text\n"						\
++"	.align 5\n"					\
++"	.if "#n" < 10 \n"				\
++"	.globl _ZN14nsXPTCStubBase5Stub"#n"Ev\n"	\
++"	.ent _ZN14nsXPTCStubBase5Stub"#n"Ev\n"		\
++"_ZN14nsXPTCStubBase5Stub"#n"Ev:\n"			\
++"	.frame $30,0,$26,0\n"				\
++"	ldgp $29,0($27)\n"				\
++"$_ZN14nsXPTCStubBase5Stub"#n"Ev..ng:\n"		\
++"	.prologue 1\n"					\
++"	lda $1,"#n"\n"					\
++"	br $31,$SharedStub..ng\n"			\
++"	.end _ZN14nsXPTCStubBase5Stub"#n"Ev\n"		\
++"	.elseif  "#n" < 100 \n"				\
++"	.globl _ZN14nsXPTCStubBase6Stub"#n"Ev\n"	\
++"	.ent _ZN14nsXPTCStubBase6Stub"#n"Ev\n"		\
++"_ZN14nsXPTCStubBase6Stub"#n"Ev:\n"			\
++"	.frame $30,0,$26,0\n"				\
++"	ldgp $29,0($27)\n"				\
++"$_ZN14nsXPTCStubBase6Stub"#n"Ev..ng:\n"		\
++"	.prologue 1\n"					\
++"	lda $1,"#n"\n"					\
++"	br $31,$SharedStub..ng\n"			\
++"	.end _ZN14nsXPTCStubBase6Stub"#n"Ev\n"		\
++"	.elseif "#n" < 1000 \n"				\
++"	.globl _ZN14nsXPTCStubBase7Stub"#n"Ev\n"	\
++"	.ent _ZN14nsXPTCStubBase7Stub"#n"Ev\n"		\
++"_ZN14nsXPTCStubBase7Stub"#n"Ev:\n"			\
++"	.frame $30,0,$26,0\n"				\
++"	ldgp $29,0($27)\n"				\
++"$_ZN14nsXPTCStubBase7Stub"#n"Ev..ng:\n"		\
++"	.prologue 1\n"					\
++"	lda $1,"#n"\n"					\
++"	br $31,$SharedStub..ng\n"			\
++"	.end _ZN14nsXPTCStubBase7Stub"#n"Ev\n"		\
++"	.else\n"					\
++"	.err \"stub number "#n"> 1000 not yet supported\"\n" \
++"	.endif\n"					\
++    );
++#else /* G++2.95 ABI */
+ #define STUB_MANGLED_ENTRY(n, symbol) \
+     "#### Stub"#n" ####"      "\n\t" \
+     ".text"                   "\n\t" \
+@@ -216,6 +260,7 @@ __asm__( \
+     ".err \"Stub"#n" >= 1000 not yet supported.\""               "\n\t" \
+     ".endif" \
+     );
++#endif
+ 
+ #else /* not G++ V3 ABI */
+ 
