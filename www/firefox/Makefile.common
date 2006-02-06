@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2006/02/06 09:55:16 rillig Exp $
+# $NetBSD: Makefile.common,v 1.6 2006/02/06 09:57:56 rillig Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		mozilla-${MOZ_DIST_VER}-source
@@ -112,8 +112,10 @@ PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
 .if (${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc")
 PLIST_SUBST+=		SUNOSLIB=""
+SCRIPTS_ENV+=		SUNOSLIB=""
 .else
 PLIST_SUBST+=		SUNOSLIB="@comment "
+SCRIPTS_ENV+=		SUNOSLIB="@comment "
 .endif
 
 SCRIPTS_ENV+=		OBJECT_FMT=${OBJECT_FMT:Q}
@@ -131,7 +133,6 @@ SCRIPTS_ENV+=		SETENV=${SETENV:Q}
 SCRIPTS_ENV+=		MOZILLA=${MOZILLA:Q}
 SCRIPTS_ENV+=		MOZILLA_BIN=${MOZILLA_BIN:Q}
 SCRIPTS_ENV+=		SO_SUFFIX=${SO_SUFFIX:Q}
-SCRIPTS_ENV+=		SUNOSLIB=${SUNOSLIB:Q}
 
 PTHREAD_OPTS+=		native optional
 
