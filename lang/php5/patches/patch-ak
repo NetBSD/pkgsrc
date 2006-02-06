@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.1 2004/10/31 21:14:54 jdolecek Exp $
+$NetBSD: patch-ak,v 1.2 2006/02/06 06:39:59 martti Exp $
 
---- ext/imap/php_imap.c.orig	2004-08-12 21:32:18.000000000 +0200
-+++ ext/imap/php_imap.c	2004-10-31 21:11:57.000000000 +0100
-@@ -428,6 +428,11 @@
+--- ext/imap/php_imap.c.orig	2006-01-05 02:47:16.000000000 +0200
++++ ext/imap/php_imap.c	2006-02-05 15:37:19.000000000 +0200
+@@ -429,6 +429,11 @@
  
  	ZEND_INIT_MODULE_GLOBALS(imap, php_imap_init_globals, NULL)
  
@@ -14,7 +14,7 @@ $NetBSD: patch-ak,v 1.1 2004/10/31 21:14:54 jdolecek Exp $
  #ifndef PHP_WIN32
  	mail_link(&unixdriver);		/* link in the unix driver */
  	mail_link(&mhdriver);		/* link in the mh driver */
-@@ -443,6 +448,10 @@
+@@ -444,6 +449,10 @@
  	mail_link(&tenexdriver);	/* link in the tenex driver */
  	mail_link(&mtxdriver);		/* link in the mtx driver */
  	mail_link(&dummydriver);	/* link in the dummy driver */
