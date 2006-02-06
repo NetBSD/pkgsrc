@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:08:39 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/02/06 23:16:07 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SDL_TTF_BUILDLINK3_MK:=	${SDL_TTF_BUILDLINK3_MK}+
@@ -17,6 +17,7 @@ BUILDLINK_PKGSRCDIR.SDL_ttf?=	../../devel/SDL_ttf
 .endif	# SDL_TTF_BUILDLINK3_MK
 
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
