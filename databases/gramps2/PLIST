@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/09/08 17:55:52 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/02/06 15:35:47 drochner Exp $
 bin/gramps
 man/man1/gramps.1
 share/application-registry/gramps.applications
@@ -72,6 +72,8 @@ share/gramps/GrampsDBCallback.py
 share/gramps/GrampsDBCallback.pyo
 share/gramps/GrampsDbBase.py
 share/gramps/GrampsDbBase.pyo
+share/gramps/GrampsDisplay.py
+share/gramps/GrampsDisplay.pyo
 share/gramps/GrampsGEDDB.py
 share/gramps/GrampsGEDDB.pyo
 share/gramps/GrampsGconfKeys.py
@@ -86,8 +88,6 @@ share/gramps/GrampsMime.py
 share/gramps/GrampsMime.pyo
 share/gramps/GrampsXMLDB.py
 share/gramps/GrampsXMLDB.pyo
-share/gramps/GraphLayout.py
-share/gramps/GraphLayout.pyo
 share/gramps/ImageSelect.py
 share/gramps/ImageSelect.pyo
 share/gramps/ImgManip.py
@@ -110,6 +110,8 @@ share/gramps/NameEdit.py
 share/gramps/NameEdit.pyo
 share/gramps/NoteEdit.py
 share/gramps/NoteEdit.pyo
+share/gramps/Options.py
+share/gramps/Options.pyo
 share/gramps/PaperMenu.py
 share/gramps/PaperMenu.pyo
 share/gramps/PedView.py
@@ -172,14 +174,20 @@ share/gramps/TarFile.py
 share/gramps/TarFile.pyo
 share/gramps/TipOfDay.py
 share/gramps/TipOfDay.pyo
+share/gramps/Tool.py
+share/gramps/Tool.pyo
 share/gramps/TransTable.py
 share/gramps/TransTable.pyo
+share/gramps/TransUtils.py
+share/gramps/TransUtils.pyo
 share/gramps/TreeTips.py
 share/gramps/TreeTips.pyo
 share/gramps/UrlEdit.py
 share/gramps/UrlEdit.pyo
 share/gramps/Utils.py
 share/gramps/Utils.pyo
+share/gramps/WindowUtils.py
+share/gramps/WindowUtils.pyo
 share/gramps/Witness.py
 share/gramps/Witness.pyo
 share/gramps/WriteGedcom.py
@@ -221,8 +229,12 @@ share/gramps/dates/Date_fi.py
 share/gramps/dates/Date_fi.pyo
 share/gramps/dates/Date_fr.py
 share/gramps/dates/Date_fr.pyo
+share/gramps/dates/Date_nl.py
+share/gramps/dates/Date_nl.pyo
 share/gramps/dates/Date_ru.py
 share/gramps/dates/Date_ru.pyo
+share/gramps/dates/Date_sv.py
+share/gramps/dates/Date_sv.pyo
 share/gramps/docgen/AbiWord2Doc.py
 share/gramps/docgen/AbiWord2Doc.pyo
 share/gramps/docgen/AsciiDoc.py
@@ -262,6 +274,7 @@ share/gramps/gedcomimport.glade
 share/gramps/gnome/help/gramps/C/authors.xml
 share/gramps/gnome/help/gramps/C/bugs.xml
 share/gramps/gnome/help/gramps/C/cmdline.xml
+share/gramps/gnome/help/gramps/C/cmdplug.xml
 share/gramps/gnome/help/gramps/C/custom.xml
 share/gramps/gnome/help/gramps/C/faq.xml
 share/gramps/gnome/help/gramps/C/figures/bookreport.png
@@ -327,6 +340,7 @@ share/gramps/gnome/help/gramps/C/usage.xml
 share/gramps/gnome/help/gramps/fr/authors.xml
 share/gramps/gnome/help/gramps/fr/bugs.xml
 share/gramps/gnome/help/gramps/fr/cmdline.xml
+share/gramps/gnome/help/gramps/fr/cmdplug.xml
 share/gramps/gnome/help/gramps/fr/custom.xml
 share/gramps/gnome/help/gramps/fr/faq.xml
 share/gramps/gnome/help/gramps/fr/figures/bookreport.png
@@ -356,6 +370,7 @@ share/gramps/gnome/help/gramps/fr/figures/edit-rel.png
 share/gramps/gnome/help/gramps/fr/figures/edit-si.png
 share/gramps/gnome/help/gramps/fr/figures/edit-src.png
 share/gramps/gnome/help/gramps/fr/figures/edit-wi.png
+share/gramps/gnome/help/gramps/fr/figures/export-druid.png
 share/gramps/gnome/help/gramps/fr/figures/family-alt.png
 share/gramps/gnome/help/gramps/fr/figures/family.png
 share/gramps/gnome/help/gramps/fr/figures/find-people.png
@@ -372,6 +387,7 @@ share/gramps/gnome/help/gramps/fr/figures/missing-media.png
 share/gramps/gnome/help/gramps/fr/figures/noside-nofilt.png
 share/gramps/gnome/help/gramps/fr/figures/pedigree-anchor.png
 share/gramps/gnome/help/gramps/fr/figures/pedigree-child-cut.png
+share/gramps/gnome/help/gramps/fr/figures/pedigree-siblings-cut.png
 share/gramps/gnome/help/gramps/fr/figures/pedigree.png
 share/gramps/gnome/help/gramps/fr/figures/places.png
 share/gramps/gnome/help/gramps/fr/figures/prefs.png
@@ -387,6 +403,7 @@ share/gramps/gnome/help/gramps/fr/legal.xml
 share/gramps/gnome/help/gramps/fr/mainwin.xml
 share/gramps/gnome/help/gramps/fr/preface.xml
 share/gramps/gnome/help/gramps/fr/usage.xml
+share/gramps/gnome/help/gramps/gramps
 share/gramps/good.png
 share/gramps/gramps.glade
 share/gramps/gramps.png
@@ -397,8 +414,6 @@ share/gramps/gramps_main.pyo
 share/gramps/home.png
 share/gramps/latin_ansel.py
 share/gramps/latin_ansel.pyo
-share/gramps/latin_utf8.py
-share/gramps/latin_utf8.pyo
 share/gramps/logo.png
 share/gramps/media.png
 share/gramps/mergedata.glade
@@ -421,6 +436,8 @@ share/gramps/plugins/ChangeTypes.py
 share/gramps/plugins/ChangeTypes.pyo
 share/gramps/plugins/Check.py
 share/gramps/plugins/Check.pyo
+share/gramps/plugins/Checkpoint.py
+share/gramps/plugins/Checkpoint.pyo
 share/gramps/plugins/CountAncestors.py
 share/gramps/plugins/CountAncestors.pyo
 share/gramps/plugins/CustomBookText.py
@@ -509,6 +526,7 @@ share/gramps/plugins/book.glade
 share/gramps/plugins/cdexport.glade
 share/gramps/plugins/changenames.glade
 share/gramps/plugins/changetype.glade
+share/gramps/plugins/checkpoint.glade
 share/gramps/plugins/desbrowse.glade
 share/gramps/plugins/eval.glade
 share/gramps/plugins/eventcmp.glade
@@ -565,6 +583,7 @@ ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gramps.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gramps.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gramps.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gramps.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gramps.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gramps.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gramps.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gramps.mo
@@ -580,6 +599,7 @@ share/mime/packages/gramps.xml
 share/omf/gramps/gramps-manual-C.omf
 share/omf/gramps/gramps-manual-fr.omf
 @dirrm share/omf/gramps
+@comment in scrollkeeper: @dirrm share/omf
 @comment in shared-mime-info: @dirrm share/mime/packages
 @dirrm share/gramps/plugins
 @dirrm share/gramps/gnome/help/gramps/fr/figures
