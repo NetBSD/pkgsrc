@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/05 21:56:24 ghen Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/06 22:26:57 ghen Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -2282,7 +2282,6 @@ include/${MOZILLA}/nss/watcomfx.h
 @unexec ${RM} %D/lib/${MOZILLA}/components/compreg.dat
 @unexec ${RM} %D/lib/${MOZILLA}/components/xpti.dat
 @comment begin DIRS
-@dirrm public
 @dirrm lib/${MOZILLA}/updates/0
 @dirrm lib/${MOZILLA}/updates
 @dirrm lib/${MOZILLA}/res/throbber
