@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.499 2006/02/04 03:37:08 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.500 2006/02/06 09:46:42 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2484,12 +2484,14 @@ sub checkline_mk_shelltext($$) {
 		#
 
 		if ($state == SCST_START && exists($vartools->{$shellword})) {
-			$line->log_warning("Possible direct use of tool \"${shellword}\". Please use \$\{$vartools->{$shellword}\} instead.");
+			my $addition = "";
+
 			if (!exists(get_predefined_vartool_names->{$shellword})) {
 				my $toolvarname = get_vartool_names->{$shellword};
 				my $toolname = get_varname_to_toolname->{$toolvarname};
-				$line->log_warning("Additionally, you should add USE_TOOLS+=${toolname} before this line.");
+				$addition = " and add USE_TOOLS+=${toolname} before this line";
 			}
+			$line->log_warning("Possible direct use of tool \"${shellword}\". Please use \$\{$vartools->{$shellword}\} instead${addition}.");
 		}
 
 		if (($state != SCST_PAX_S && $state != SCST_SED_E && $state != SCST_CASE_LABEL) && $shellword =~ qr"^/" && $shellword ne "/dev/null") {
