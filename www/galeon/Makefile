@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.91 2006/02/05 23:11:22 joerg Exp $
+# $NetBSD: Makefile,v 1.92 2006/02/06 00:51:18 ghen Exp $
 #
 
-DISTNAME=	galeon-1.3.21
-PKGREVISION=	5
-CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=galeon/}
-EXTRACT_SUFX=	.tar.bz2
+DISTNAME=		galeon-1.3.21
+PKGREVISION=		5
+CATEGORIES=		www
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=galeon/}
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://galeon.sourceforge.net/
-COMMENT=	GNOME2 Web browser based on gecko
+MAINTAINER=		tech-pkg@NetBSD.org
+HOMEPAGE=		http://galeon.sourceforge.net/
+COMMENT=		GNOME2 Web browser based on gecko
 
-BROKEN_IN=	pkgsrc-2005Q4
+BROKEN_IN=		pkgsrc-2005Q4
 
 BUILD_USES_MSGFMT=	yes
 
@@ -22,10 +22,10 @@ USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-_MOZILLA_USE_GTK2=	# defined
+_MOZILLA_USE_GTK2=	# yes
 MOZILLA_USE_XFT=	YES
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.galeon
+PKG_OPTIONS_VAR=	PKG_OPTIONS.galeon
 .include "../../www/mozilla/gecko-options.mk"
 .include "../../mk/bsd.options.mk"
 
