@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4576 2006/02/06 20:33:13 sketch Exp $
+$NetBSD: TODO,v 1.4577 2006/02/06 22:46:52 ghen Exp $
 
 Suggested new packages
 ======================
@@ -295,6 +295,10 @@ Suggested new packages
 	GnomeMeeting
 	http://www.gnomemeeting.org/
 	GNOME H323 audio/video conferencing (a la NetMeeting)
+
+	Enigmail
+	http://enigmail.mozdev.org/
+	GnuPG extension for the Mozilla/Thunderbird mail client
 
 Suggested package updates
 =========================
