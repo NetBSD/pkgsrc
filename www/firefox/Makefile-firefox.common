@@ -1,21 +1,21 @@
-# $NetBSD: Makefile-firefox.common,v 1.26 2006/02/05 14:46:31 ghen Exp $
+# $NetBSD: Makefile-firefox.common,v 1.27 2006/02/06 00:37:54 ghen Exp $
 
-MOZILLA_BIN=	firefox-bin
-MOZ_VER=	1.5.0.1
-EXTRACT_SUFX=	.tar.bz2
+MOZILLA_BIN=		firefox-bin
+MOZ_VER=		1.5.0.1
+EXTRACT_SUFX=		.tar.bz2
 
-DISTNAME=	firefox-${MOZ_VER}-source
-DIST_SUBDIR=	firefox-${MOZ_VER}
+DISTNAME=		firefox-${MOZ_VER}-source
+DIST_SUBDIR=		firefox-${MOZ_VER}
 
-MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MOZ_VER}/source/ \
-		ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MOZ_VER}/source/ \
-		http://public.planetmirror.com.au/pub/firefox/releases/${MOZ_VER}/source/ \
-		ftp://public.planetmirror.com.au/pub/firefox/releases/${MOZ_VER}/source/
+MASTER_SITES=		http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MOZ_VER}/source/
+MASTER_SITES+=		ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${MOZ_VER}/source/
+MASTER_SITES+=		http://public.planetmirror.com.au/pub/firefox/releases/${MOZ_VER}/source/
+MASTER_SITES+=		ftp://public.planetmirror.com.au/pub/firefox/releases/${MOZ_VER}/source/
 
-HOMEPAGE=	http://www.mozilla.org/projects/firefox/
+HOMEPAGE=		http://www.mozilla.org/projects/firefox/
 
-DISTINFO_FILE=	${.CURDIR}/../../www/firefox/distinfo
-PATCHDIR=	${.CURDIR}/../../www/firefox/patches
+DISTINFO_FILE=		${.CURDIR}/../../www/firefox/distinfo
+PATCHDIR=		${.CURDIR}/../../www/firefox/patches
 
 CONFIGURE_ARGS+=	--enable-application=browser
 CONFIGURE_ARGS+=	--enable-single-profile
@@ -28,11 +28,10 @@ CONFIGURE_ARGS+=	--enable-extensions=${MOZILLA_EXTENSIONS:Q}
 CONFIGURE_ENV+=	ac_cv_visibility_pragma=no ac_cv_visibility_hidden=no
 
 USE_LANGUAGES+=		c++
-BUILD_SVG=		# defined
-BUILD_MATHML=		# defined
+BUILD_SVG=		# yes
+BUILD_MATHML=		# yes
 MESSAGE=		${.CURDIR}/../../www/firefox/MESSAGE
 
-# 
 .include "../../www/firefox/Makefile.common"
 
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../www/firefox/INSTALL

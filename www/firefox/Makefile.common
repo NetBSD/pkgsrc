@@ -1,22 +1,22 @@
-# $NetBSD: Makefile.common,v 1.2 2005/12/29 06:22:23 jlam Exp $
+# $NetBSD: Makefile.common,v 1.3 2006/02/06 00:37:54 ghen Exp $
 
-MOZ_DIST_VER?=	${MOZ_VER}
-DISTNAME?=	mozilla-${MOZ_DIST_VER}-source
-PKGNAME=	${MOZILLA}-${MOZ_VER}
-MASTER_SITES?=	${MASTER_SITE_MOZILLA:=mozilla${MOZ_DIST_VER}/source/}
-CATEGORIES=	www
+MOZ_DIST_VER?=		${MOZ_VER}
+DISTNAME?=		mozilla-${MOZ_DIST_VER}-source
+PKGNAME=		${MOZILLA}-${MOZ_VER}
+MASTER_SITES?=		${MASTER_SITE_MOZILLA:=mozilla${MOZ_DIST_VER}/source/}
+CATEGORIES=		www
 
-MAINTAINER=	taya@NetBSD.org
-HOMEPAGE?=	http://www.mozilla.org/
+MAINTAINER=		taya@NetBSD.org
+HOMEPAGE?=		http://www.mozilla.org/
 
-FILESDIR=	${.CURDIR}/../../www/mozilla/files
+FILESDIR=		${.CURDIR}/../../www/mozilla/files
 
-BUILD_DEPENDS+=	zip>=2.3:../../archivers/zip
+BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
 
-WRKSRC=		${WRKDIR}/mozilla
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	autoconf213 gmake perl pkg-config
-GNU_CONFIGURE=	yes
+WRKSRC=			${WRKDIR}/mozilla
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		autoconf213 gmake perl pkg-config
+GNU_CONFIGURE=		yes
 
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/../../www/mozilla/INSTALL
 
@@ -35,53 +35,53 @@ CONFIG_STATUS_OVERRIDE+=	directory/c-sdk/config.status
 PKGCONFIG_OVERRIDE_STAGE=	post-build
 PKGCONFIG_OVERRIDE=		build/unix/*.pc
 
-CONFIGURE_ARGS+= --disable-tests \
-		--disable-pedantic \
-		--with-system-jpeg=${BUILDLINK_PREFIX.jpeg} \
-		--with-system-png=${BUILDLINK_PREFIX.png} \
-		--enable-crypto
+CONFIGURE_ARGS+=	--disable-tests
+CONFIGURE_ARGS+=	--disable-pedantic
+CONFIGURE_ARGS+=	--with-system-jpeg=${BUILDLINK_PREFIX.jpeg}
+CONFIGURE_ARGS+=	--with-system-png=${BUILDLINK_PREFIX.png}
+CONFIGURE_ARGS+=	--enable-crypto
 
-SHAREMODE?=	644
-BUILD_TARGET=	# empty
+SHAREMODE?=		644
+BUILD_TARGET=		# empty
 
 UNLIMIT_RESOURCES=	datasize memorysize stacksize
 
-.include	"../../graphics/jpeg/buildlink3.mk"
-.include	"../../graphics/png/buildlink3.mk"
-.ifdef _MOZILLA_USE_GTK2
-.include	"../../net/libIDL/buildlink3.mk"
-.include	"../../x11/gtk2/buildlink3.mk"
-CONFIGURE_ARGS+= --enable-default-toolkit=gtk2 --disable-gnomevfs
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.if defined(_MOZILLA_USE_GTK2)
+.include "../../net/libIDL/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-default-toolkit=gtk2 --disable-gnomevfs
 .else
-.include	"../../graphics/freetype2/buildlink3.mk"
-.include	"../../graphics/gdk-pixbuf/buildlink3.mk"
-.include	"../../net/ORBit/buildlink3.mk"
-.include	"../../x11/gtk/buildlink3.mk"
-CONFIGURE_ARGS+= --enable-default-toolkit=gtk
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf/buildlink3.mk"
+.include "../../net/ORBit/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-default-toolkit=gtk
 .endif
 
 # NetBSD-*-m68k builds, but "regchrome" dumps core.
 NOT_FOR_PLATFORM=	NetBSD-1.4.*-* NetBSD-*-m68k
 
-MAKE_ENV+=	MOZILLA_PKG_NAME=${MOZILLA}
+MAKE_ENV+=		MOZILLA_PKG_NAME=${MOZILLA:Q}
 
-MOZ_LIBDIR=	${PREFIX}/lib/${MOZILLA}
-MAKE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
-CONFIGURE_ENV+=	LIBRUNPATH=${MOZ_LIBDIR}
-LDFLAGS+=	${COMPILER_RPATH_FLAG}${MOZ_LIBDIR}
+MOZ_LIBDIR=		${PREFIX}/lib/${MOZILLA}
+MAKE_ENV+=		LIBRUNPATH=${MOZ_LIBDIR:Q}
+CONFIGURE_ENV+=		LIBRUNPATH=${MOZ_LIBDIR:Q}
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${MOZ_LIBDIR}
 
-.ifdef BUILD_SVG
+.if defined(BUILD_SVG)
 CONFIGURE_ARGS+=	--enable-svg
 CONFIGURE_ARGS+=	--enable-svg-renderer=cairo
-.include	"../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-system-cairo
 .endif
 
-.ifdef BUILD_CALENDAR
+.if defined(BUILD_CALENDAR)
 CONFIGURE_ARGS+=	--enable-calendar
 .endif
 
-.ifdef BUILD_MATHML
+.if defined(BUILD_MATHML)
 CONFIGURE_ARGS+=	--enable-mathml
 .endif
 
@@ -92,52 +92,52 @@ CONFIGURE_ARGS+=	--enable-xinerama
 
 # avoid creating a .mozilla directory in the users home
 # directory
-SCRIPTS_ENV+=	HOME="${WRKDIR}"
+SCRIPTS_ENV+=		HOME="${WRKDIR:Q}"
 
-PLIST_SUBST+=	MOZILLA=${MOZILLA}
-PLIST_SUBST+=	MOZILLA_BIN=${MOZILLA_BIN}
-FILES_SUBST+=	MOZILLA=${MOZILLA}
-FILES_SUBST+=	MOZILLA_BIN=${MOZILLA_BIN}
+PLIST_SUBST+=		MOZILLA=${MOZILLA:Q}
+PLIST_SUBST+=		MOZILLA_BIN=${MOZILLA_BIN:Q}
+FILES_SUBST+=		MOZILLA=${MOZILLA:Q}
+FILES_SUBST+=		MOZILLA_BIN=${MOZILLA_BIN:Q}
 .if ${OBJECT_FMT} == "ELF"
-SO_SUFFIX=	so
-SCRIPTS_ENV+=	MOZ_INSTALL_LIB="${INSTALL_PROGRAM}"
+SO_SUFFIX=		so
+SCRIPTS_ENV+=		MOZ_INSTALL_LIB="${INSTALL_PROGRAM:Q}"
 .elif ${OBJECT_FMT} == "Mach-O"
-SO_SUFFIX=	dylib
-SCRIPTS_ENV+=	MOZ_INSTALL_LIB="${INSTALL_LIB}"
+SO_SUFFIX=		dylib
+SCRIPTS_ENV+=		MOZ_INSTALL_LIB="${INSTALL_LIB:Q}"
 .else
-SO_SUFFIX=	so.1.0
-SCRIPTS_ENV+=	MOZ_INSTALL_LIB="${INSTALL_PROGRAM}"
+SO_SUFFIX=		so.1.0
+SCRIPTS_ENV+=		MOZ_INSTALL_LIB="${INSTALL_PROGRAM:Q}"
 .endif
-PLIST_SUBST+=	SO_SUFFIX=${SO_SUFFIX}
+PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
 .if (${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc")
 SUNOSLIB=
 .else
-SUNOSLIB=	"@comment "
+SUNOSLIB=		"@comment "
 .endif
-PLIST_SUBST+=	SUNOSLIB=${SUNOSLIB}
+PLIST_SUBST+=		SUNOSLIB=${SUNOSLIB:Q}
 
-SCRIPTS_ENV+=	OBJECT_FMT=${OBJECT_FMT:Q}
-SCRIPTS_ENV+=	PLIST_SRC=${PLIST_SRC:Q}
-SCRIPTS_ENV+=	SED=${SED:Q}
-SCRIPTS_ENV+=	RM=${RM:Q}
-SCRIPTS_ENV+=	EGREP=${EGREP:Q}
-SCRIPTS_ENV+=	CHOWN=${CHOWN:Q}
-SCRIPTS_ENV+=	CHGRP=${CHGRP:Q}
-SCRIPTS_ENV+=	CHMOD=${CHMOD:Q}
-SCRIPTS_ENV+=	BINOWN=${BINOWN:Q}
-SCRIPTS_ENV+=	BINGRP=${BINGRP:Q}
-SCRIPTS_ENV+=	BINMODE=${BINMODE:Q}
-SCRIPTS_ENV+=	SETENV=${SETENV:Q}
-SCRIPTS_ENV+=   MOZILLA=${MOZILLA:Q}
-SCRIPTS_ENV+=   MOZILLA_BIN=${MOZILLA_BIN:Q}
-SCRIPTS_ENV+=	SO_SUFFIX=${SO_SUFFIX:Q}
-SCRIPTS_ENV+=	SUNOSLIB=${SUNOSLIB}
+SCRIPTS_ENV+=		OBJECT_FMT=${OBJECT_FMT:Q}
+SCRIPTS_ENV+=		PLIST_SRC=${PLIST_SRC:Q}
+SCRIPTS_ENV+=		SED=${SED:Q}
+SCRIPTS_ENV+=		RM=${RM:Q}
+SCRIPTS_ENV+=		EGREP=${EGREP:Q}
+SCRIPTS_ENV+=		CHOWN=${CHOWN:Q}
+SCRIPTS_ENV+=		CHGRP=${CHGRP:Q}
+SCRIPTS_ENV+=		CHMOD=${CHMOD:Q}
+SCRIPTS_ENV+=		BINOWN=${BINOWN:Q}
+SCRIPTS_ENV+=		BINGRP=${BINGRP:Q}
+SCRIPTS_ENV+=		BINMODE=${BINMODE:Q}
+SCRIPTS_ENV+=		SETENV=${SETENV:Q}
+SCRIPTS_ENV+=		MOZILLA=${MOZILLA:Q}
+SCRIPTS_ENV+=		MOZILLA_BIN=${MOZILLA_BIN:Q}
+SCRIPTS_ENV+=		SO_SUFFIX=${SO_SUFFIX:Q}
+SCRIPTS_ENV+=		SUNOSLIB=${SUNOSLIB:Q}
 
-PTHREAD_OPTS+=	native optional
+PTHREAD_OPTS+=		native optional
 
 .if (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "x86_64")
-GCC_REQD+=	3.4
+GCC_REQD+=		3.4
 .endif
 
 .include "../../mk/compiler.mk"
@@ -146,16 +146,16 @@ COPTS?=			-O2
 .endif
 CONFIGURE_ARGS+=	--enable-optimize=${COPTS:Q}
 
-XPTCFILES+=	xptcinvoke_asm_sparc64_netbsd.s xptcstubs_asm_sparc64_netbsd.s
-XPTCFILES+=	xptcinvoke_sparc64_netbsd.cpp xptcstubs_sparc64_netbsd.cpp
+XPTCFILES+=		xptcinvoke_asm_sparc64_netbsd.s xptcstubs_asm_sparc64_netbsd.s
+XPTCFILES+=		xptcinvoke_sparc64_netbsd.cpp xptcstubs_sparc64_netbsd.cpp
 
 .if ${OPSYS} == "Darwin"
 BUILDLINK_PASSTHRU_DIRS+=/Developer
 .endif
 
 post-extract:
-.for F in ${XPTCFILES}
-	${CP} ${FILESDIR}/${F} ${WRKSRC}/xpcom/reflect/xptcall/src/md/unix/${F}
+.for f in ${XPTCFILES}
+	${CP} ${FILESDIR}/${f} ${WRKSRC}/xpcom/reflect/xptcall/src/md/unix/${f}
 .endfor
 
 pre-configure:
@@ -175,9 +175,9 @@ do-install:
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
-CONFIGURE_ARGS+= --without-pthreads
+CONFIGURE_ARGS+=	 --without-pthreads
 .else
-CONFIGURE_ARGS+= --with-pthreads
+CONFIGURE_ARGS+=	 --with-pthreads
 .endif
 
 .if ${MOZILLA_USE_XFT} == "YES" && exists(${X11BASE}/include/X11/Xdefs.h)
@@ -187,11 +187,11 @@ CONFIGURE_ARGS+=	--enable-xft
 .endif
 
 # Fix for firefox* packages.
-SUBST_CLASSES=		pc
+SUBST_CLASSES+=		pc
 SUBST_STAGE.pc=		post-extract
 SUBST_FILES.pc=		build/unix/*.pc.in
 SUBST_SED.pc=		-e "s|%includedir%|${PREFIX}/include/${MOZILLA}|g" \
 			-e "s|%libdir%|${PREFIX}/lib/${MOZILLA}|g"
-SUBST_MESSAGE.pc=	"Fixing pkgconfig files."
+SUBST_MESSAGE.pc=	Fixing pkgconfig files.
 
 .include "../../www/mozilla/options.mk"
