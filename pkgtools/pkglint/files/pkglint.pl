@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.500 2006/02/06 09:46:42 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.501 2006/02/06 10:07:23 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2192,7 +2192,7 @@ sub checkline_cpp_macro_names($$) {
 		if (exists(good_macros->{$macro})) {
 			$line->log_debug("Found good macro \"${macro}\".");
 		} elsif (exists(bad_macros->{$macro})) {
-			$line->log_warning("The macro \"${macro}\" is unportable. Please use \"".bad_macros->{$macro}."\" instead.");
+			$line->log_warning("The macro \"${macro}\" is not portable enough. Please use \"".bad_macros->{$macro}."\" instead.");
 			$line->explain("See the pkgsrc guide, section \"CPP defines\" for details.");
 		} else {
 			$line->log_info("Found unknown macro \"${macro}\".");
@@ -2333,7 +2333,7 @@ sub checkline_mk_shellword($$$) {
 					$line->log_warning("Unquoted shell variable \"${shvarname}\".");
 				}
 			} elsif ($rest =~ s/\$\$\(/(/) {
-				$line->log_warning("Unportable subshell call via \$(...\).");
+				$line->log_warning("Invoking subshells via \$(...) is not portable enough.");
 				$line->explain(
 					"The Solaris /bin/sh does not know this way to execute a command in a",
 					"subshell. Please use backticks (\`...\`) as a replacement.");
