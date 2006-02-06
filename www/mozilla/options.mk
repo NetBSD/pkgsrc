@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.4 2006/02/05 21:15:26 ghen Exp $
+# $NetBSD: options.mk,v 1.5 2006/02/06 00:25:06 ghen Exp $
 
 PKG_OPTIONS_VAR		= PKG_OPTIONS.gecko
 PKG_SUPPORTED_OPTIONS	= debug
 
-.if( ${MOZILLA_BIN} == "firefox-bin" || ${MOZILLA_BIN} == "thunderbird-bin" )
+.if ( ${MOZILLA_BIN} == "firefox-bin" || ${MOZILLA_BIN} == "thunderbird-bin" )
 PKG_SUPPORTED_OPTIONS  += official-mozilla-branding
 .endif
 
@@ -12,7 +12,7 @@ PKG_SUPPORTED_OPTIONS  += official-mozilla-branding
 # this .if test looks backward, but the missing options disables debug,
 # so it is correct
 .if empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+= --disable-debug
+CONFIGURE_ARGS+=	--disable-debug
 .endif
 
 # Enable Official mozilla.org Branding for Firefox.
