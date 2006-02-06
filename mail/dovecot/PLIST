@@ -1,11 +1,25 @@
-@comment $NetBSD: PLIST,v 1.6 2005/05/02 20:33:59 reed Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/02/06 15:54:37 ghen Exp $
+lib/dovecot/imap/lib01_quota_plugin.so
+lib/dovecot/imap/lib01_zlib_plugin.la
+lib/dovecot/imap/lib02_imap_quota_plugin.la
+lib/dovecot/imap/lib02_trash_plugin.so
+lib/dovecot/lda/lib01_quota_plugin.so
+lib/dovecot/lda/lib02_trash_plugin.so
+lib/dovecot/lib01_quota_plugin.la
+lib/dovecot/lib02_trash_plugin.la
+libexec/dovecot/checkpassword-reply
+libexec/dovecot/dict
 libexec/dovecot/dovecot-auth
+libexec/dovecot/gdbhelper
 libexec/dovecot/imap
 libexec/dovecot/imap-login
 libexec/dovecot/pop3
 libexec/dovecot/pop3-login
+libexec/dovecot/rawlog
 sbin/dovecot
+sbin/dovecotpw
 share/doc/dovecot/USE-WIKI-INSTEAD
+share/doc/dovecot/auth-protocol.txt
 share/doc/dovecot/auth.txt
 share/doc/dovecot/configuration.txt
 share/doc/dovecot/design.txt
@@ -14,13 +28,16 @@ share/doc/dovecot/mail-storages.txt
 share/doc/dovecot/multiaccess.txt
 share/doc/dovecot/nfs.txt
 share/doc/dovecot/securecoding.txt
+share/doc/dovecot/variables.txt
 share/examples/dovecot/dovecot-ldap.conf
 share/examples/dovecot/dovecot-openssl.cnf
-share/examples/dovecot/dovecot-mysql.conf
-share/examples/dovecot/dovecot-pgsql.conf
+share/examples/dovecot/dovecot-sql.conf
 share/examples/dovecot/dovecot.conf.default
 share/examples/dovecot/mkcert.sh
 share/examples/rc.d/dovecot
 @dirrm share/examples/dovecot
 @dirrm share/doc/dovecot
 @dirrm libexec/dovecot
+@dirrm lib/dovecot/lda
+@dirrm lib/dovecot/imap
+@dirrm lib/dovecot

@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.42 2006/01/19 02:31:12 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2006/02/06 15:54:37 ghen Exp $
 
-DISTNAME=		dovecot-0.99.14
-PKGREVISION=		2
+DISTNAME=		dovecot-1.0.beta2
+PKGNAME=		${DISTNAME:S/.beta/b/}
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dovecot.org/releases/
 
-MAINTAINER=		xtraeme@NetBSD.org
+MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://www.dovecot.org/
 COMMENT=		Secure IMAP and POP3 server
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-WRKSRC=			${WRKDIR}/${DISTNAME:S/.1$//}
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
@@ -22,15 +21,15 @@ CONFIGURE_ARGS+=	--with-ssldir=${SSLCERTS:Q}
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-RCD_SCRIPTS=	dovecot
+RCD_SCRIPTS=		dovecot
 
-DOVECOT_USER?=	dovecot
-DOVECOT_GROUP?=	dovecot
-PKG_GROUPS=	${DOVECOT_GROUP}
-PKG_USERS=	${DOVECOT_USER}:${DOVECOT_GROUP}::Dovecot\ IMAP/POP3\ user
+DOVECOT_USER?=		dovecot
+DOVECOT_GROUP?=		dovecot
+PKG_GROUPS=		${DOVECOT_GROUP}
+PKG_USERS=		${DOVECOT_USER}:${DOVECOT_GROUP}::Dovecot\ IMAP/POP3\ user
 
-EGDIR=		${PREFIX}/share/examples/dovecot
-CONF_FILES=	${EGDIR}/dovecot.conf.default ${PKG_SYSCONFDIR}/dovecot.conf
+EGDIR=			${PREFIX}/share/examples/dovecot
+CONF_FILES=		${EGDIR}/dovecot.conf.default ${PKG_SYSCONFDIR}/dovecot.conf
 
 INSTALLATION_DIRS=	libexec/dovecot sbin share/doc/dovecot		\
 			share/examples/dovecot
