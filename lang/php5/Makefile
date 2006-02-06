@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2006/02/05 23:09:47 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2006/02/06 06:39:59 martti Exp $
 #
 
 PKGNAME=		php-${PHP_BASE_VERS}
-PKGREVISION=		4
+#PKGREVISION=		1
 CATEGORIES=		lang
 
 HOMEPAGE=		http://www.php.net/
