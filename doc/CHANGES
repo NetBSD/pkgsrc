@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12821 2006/02/06 18:33:12 adrianp Exp $
+$NetBSD: CHANGES,v 1.12822 2006/02/06 20:33:13 sketch Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -839,3 +839,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/dovecot to 1.0b2nb1 [ghen 2006-02-06]
 	Updated mail/sylpheed-devel to 2.2.0beta8 [xtraeme 2006-02-06]
 	Updated sysutils/libol to 0.3.17 [adrianp 2006-02-06]
+	Updated wm/evilwm to 0.99.22 [sketch 2006-02-06]
