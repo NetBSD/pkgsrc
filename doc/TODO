@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4573 2006/02/06 06:40:06 martti Exp $
+$NetBSD: TODO,v 1.4574 2006/02/06 17:43:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -355,7 +355,7 @@ Suggested package updates
 	o asapm-3.1
 	o ast-ksh-20040229
 	o astyle-1.15.3
-	o autogen-5.7.3
+	o autogen-5.8.3
 	o avcheck-0.91
 	o avl-2.0.1
 	o avr-libc-1.4.1
@@ -831,6 +831,7 @@ Suggested package updates
 	o p5-ExtUtils-PkgConfig-1.07
 	o p5-ExtUtils-XSBuilder-0.27
 	o p5-File-DirSync-1.12
+	o p5-File-MimeInfo-0.12
 	o p5-FileHandle-Unget-0.16.2.1
 	o p5-Font-TTF-0.35
 	o p5-Graph-0.20105
