@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.67 2006/02/05 23:16:19 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.68 2006/02/06 13:32:46 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -137,3 +137,5 @@ Pullup ticket 1090 - requested by Thomas Klausner
 dependency fix for ssh2-nox11
 Pullup ticket 1087 - requested by Takahiro Kambe
 bump PKGREVISION for packages affected by REPLACE_RUBY fix
+Pullup ticket 1091 - requested by Mark Davies
+security fix for kdegraphics3
