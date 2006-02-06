@@ -1,20 +1,24 @@
-# $NetBSD: options.mk,v 1.11 2006/02/06 15:54:37 ghen Exp $
+# $NetBSD: options.mk,v 1.12 2006/02/06 17:28:09 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	inet6 ldap mysql pam pgsql sasl ssl sqlite
+PKG_OPTIONS_OPTIONAL_GROUPS= ssl
+PKG_OPTIONS_GROUP.ssl=	gnutls ssl
 PKG_SUGGESTED_OPTIONS=	ssl
 
 .include "../../mk/bsd.options.mk"
 
 ###
-### Build with OpenSSL as the underlying crypto library.
+### Build with OpenSSL or GNU TLS as the underlying crypto library.
 ###
-# (gnutls is broken in dovecot 0.99.x)
 .if !empty(PKG_OPTIONS:Mssl)
-CONFIGURE_ARGS+=        --enable-ssl=openssl
+CONFIGURE_ARGS+=        --with-ssl=openssl
 .  include "../../security/openssl/buildlink3.mk"
+.elif !empty(PKG_OPTIONS:Mgnutls)
+CONFIGURE_ARGS+=	--with-ssl=gnutls
+.  include "../../security/gnutls/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--disable-ssl
+CONFIGURE_ARGS+=	--without-ssl
 .endif
 
 ###
@@ -39,6 +43,8 @@ CPPFLAGS+=		-I${BUILDLINK_DIR}/include/pgsql
 ###
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 ###
@@ -47,14 +53,6 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .if !empty(PKG_OPTIONS:Mldap)
 CONFIGURE_ARGS+=	--with-ldap
 .  include "../../databases/openldap/buildlink3.mk"
-.endif
-
-###
-### IMAP-AUTH via SASL.
-###
-.if !empty(PKG_OPTIONS:Msasl)
-CONFIGURE_ARGS+=	--with-cyrus-sasl2
-.  include "../../security/cyrus-sasl2/buildlink3.mk"
 .endif
 
 ###
