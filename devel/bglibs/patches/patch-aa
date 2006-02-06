@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.7 2006/02/06 19:12:24 joerg Exp $
+
 --- sys/tryclockgettime.c.orig	2006-01-24 20:56:01.000000000 +0000
 +++ sys/tryclockgettime.c	2006-01-24 20:55:51.000000000 +0000
 @@ -2,3 +2,4 @@
