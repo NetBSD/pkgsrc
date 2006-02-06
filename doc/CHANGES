@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12814 2006/02/06 06:40:05 martti Exp $
+$NetBSD: CHANGES,v 1.12815 2006/02/06 10:12:13 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -832,3 +832,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/gettext-m4 to 0.14.5 [joerg 2006-02-05]
 	Added devel/gettext-tools version 0.14.5 [joerg 2006-02-06]
 	Updated lang/php5 to 5.1.2 [martti 2006-02-06]
+	Updated pkgtools/pkglint to 4.56 [rillig 2006-02-06]
