@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12812 2006/02/05 23:23:08 joerg Exp $
+$NetBSD: CHANGES,v 1.12813 2006/02/06 00:57:02 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -830,4 +830,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/gettext to 0.14.5 [joerg 2006-02-05]
 	Updated devel/gettext-lib to 0.14.5 [joerg 2006-02-05]
 	Updated devel/gettext-m4 to 0.14.5 [joerg 2006-02-05]
-	Added devel/gettext-tools [joerg 2006-02-05]
+	Added devel/gettext-tools version 0.14.5 [joerg 2006-02-06]
