@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12818 2006/02/06 15:55:58 ghen Exp $
+$NetBSD: CHANGES,v 1.12819 2006/02/06 17:29:19 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -836,3 +836,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xcb to 2.4 [rpaulo 2006-02-06]
 	Updated pkgtools/pkg_chk to 1.76 [abs 2006-02-06]
 	Updated mail/dovecot to 1.0b2 [ghen 2006-02-06]
+	Updated mail/dovecot to 1.0b2nb1 [ghen 2006-02-06]
