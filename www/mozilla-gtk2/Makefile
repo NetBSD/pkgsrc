@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/02/06 00:25:06 ghen Exp $
+# $NetBSD: Makefile,v 1.35 2006/02/06 09:20:46 ghen Exp $
 
 MOZILLA=		mozilla-gtk2
 MOZILLA_BIN=		mozilla-bin
@@ -20,7 +20,7 @@ BUILD_SVG=		# yes
 BUILD_MATHML=		# yes
 BUILD_CALENDAR=		# yes
 
-_MOZILLA_USE_GTK2=	# yes
+MOZILLA_USE_GTK2=	# yes
 MOZILLA_USE_XFT=	YES
 
 .include "../../www/mozilla/Makefile.common"
