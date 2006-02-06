@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2005/04/13 17:30:28 salo Exp $
+$NetBSD: MESSAGE,v 1.5 2006/02/06 15:59:58 sketch Exp $
 
 To configure gld, the following steps should be completed:
 
@@ -12,10 +12,9 @@ Modify "PASSWORD" with your desired password.
 Now edit your postfix's main.cf configuration file, and add the following
 line:
 
-	smtpd_recipient_restrictions = \
-		check_policy_service inet:127.0.0.1:2525,
+	smtpd_recipient_restrictions = permit_mynetworks,
 		reject_unauth_destination,
-		permit_mynetworks
+		check_policy_service inet:127.0.0.1:2525
 
 Start gld via ${RCD_SCRIPTS_DIR}/gld start
 
