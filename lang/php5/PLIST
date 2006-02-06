@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/02/02 20:31:17 rillig Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/02/06 06:39:59 martti Exp $
 bin/pear
 bin/peardev
 bin/pecl
@@ -58,7 +58,6 @@ include/php/Zend/zend_objects_API.h
 include/php/Zend/zend_operators.h
 include/php/Zend/zend_ptr_stack.h
 include/php/Zend/zend_qsort.h
-include/php/Zend/zend_reflection_api.h
 include/php/Zend/zend_stack.h
 include/php/Zend/zend_static_allocator.h
 include/php/Zend/zend_stream.h
@@ -74,6 +73,18 @@ include/php/ext/date/lib/timelib.h
 include/php/ext/date/lib/timelib_config.h
 include/php/ext/date/lib/timelib_structs.h
 include/php/ext/date/php_date.h
+include/php/ext/hash/php_hash.h
+include/php/ext/hash/php_hash_adler32.h
+include/php/ext/hash/php_hash_crc32.h
+include/php/ext/hash/php_hash_gost.h
+include/php/ext/hash/php_hash_haval.h
+include/php/ext/hash/php_hash_md.h
+include/php/ext/hash/php_hash_ripemd.h
+include/php/ext/hash/php_hash_sha.h
+include/php/ext/hash/php_hash_snefru.h
+include/php/ext/hash/php_hash_tiger.h
+include/php/ext/hash/php_hash_types.h
+include/php/ext/hash/php_hash_whirlpool.h
 include/php/ext/libxml/php_libxml.h
 include/php/ext/pcre/pcrelib/internal.h
 include/php/ext/pcre/pcrelib/pcre.h
@@ -133,7 +144,6 @@ include/php/ext/standard/php_smart_str.h
 include/php/ext/standard/php_smart_str_public.h
 include/php/ext/standard/php_standard.h
 include/php/ext/standard/php_string.h
-include/php/ext/standard/php_sunfuncs.h
 include/php/ext/standard/php_type.h
 include/php/ext/standard/php_uuencode.h
 include/php/ext/standard/php_var.h
@@ -350,6 +360,8 @@ share/php/php.gif
 @dirrm lib/php/.registry/.channel.pecl.php.net
 @dirrm lib/php/.registry/.channel.__uri
 @dirrm lib/php/.registry
+@dirrm lib/php/.channels/.alias
+@dirrm lib/php/.channels
 @unexec ${RM} -rf %D/lib/php/Net
 @dirrm include/php/regex
 @dirrm include/php/main/streams
@@ -361,6 +373,7 @@ share/php/php.gif
 @dirrm include/php/ext/pcre/pcrelib
 @dirrm include/php/ext/pcre
 @dirrm include/php/ext/libxml
+@dirrm include/php/ext/hash
 @dirrm include/php/ext/date/lib
 @dirrm include/php/ext/date
 @dirrm include/php/ext
