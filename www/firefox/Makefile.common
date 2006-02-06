@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2006/02/06 09:20:46 ghen Exp $
+# $NetBSD: Makefile.common,v 1.5 2006/02/06 09:55:16 rillig Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		mozilla-${MOZ_DIST_VER}-source
@@ -111,11 +111,10 @@ SCRIPTS_ENV+=		MOZ_INSTALL_LIB="${INSTALL_PROGRAM:Q}"
 PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
 .if (${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc")
-SUNOSLIB=
+PLIST_SUBST+=		SUNOSLIB=""
 .else
-SUNOSLIB=		"@comment "
+PLIST_SUBST+=		SUNOSLIB="@comment "
 .endif
-PLIST_SUBST+=		SUNOSLIB=${SUNOSLIB:Q}
 
 SCRIPTS_ENV+=		OBJECT_FMT=${OBJECT_FMT:Q}
 SCRIPTS_ENV+=		PLIST_SRC=${PLIST_SRC:Q}
