@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.155 2006/02/05 23:11:25 joerg Exp $
+# $NetBSD: Makefile,v 1.156 2006/02/06 00:25:06 ghen Exp $
 
-MOZILLA=	mozilla
-MOZILLA_BIN=	mozilla-bin
-MOZ_VER=	1.7.12
-PKGREVISION=	3
-EXTRACT_SUFX=	.tar.bz2
+MOZILLA=		mozilla
+MOZILLA_BIN=		mozilla-bin
+MOZ_VER=		1.7.12
+PKGREVISION=		3
+EXTRACT_SUFX=		.tar.bz2
 
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
-#DISTFILES+=    mozilla-source-1.7.3-libart_lgpl.tar.bz2
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
+#DISTFILES+=		mozilla-source-1.7.3-libart_lgpl.tar.bz2
 #SITES_mozilla-source-1.7.3-libart_lgpl.tar.bz2=${MASTER_SITE_LOCAL}
 
-DIST_SUBDIR=	mozilla-1.7.12
+DIST_SUBDIR=		mozilla-1.7.12
 
-COMMENT=	Full featured gecko-based browser
+COMMENT=		Full featured gecko-based browser
 
-BUILD_SVG=	# defined
-BUILD_MATHML=	# defined
-BUILD_CALENDAR=	# defined
+BUILD_SVG=		# yes
+BUILD_MATHML=		# yes
+BUILD_CALENDAR=		# yes
 
 .include "../../www/mozilla/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
