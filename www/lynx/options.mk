@@ -1,8 +1,14 @@
-# $NetBSD: options.mk,v 1.6 2005/05/31 10:01:40 dillo Exp $
+# $NetBSD: options.mk,v 1.7 2006/02/06 19:37:49 tv Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lynx
-PKG_SUPPORTED_OPTIONS=	curses inet6 ncurses slang socks4 socks5
+PKG_SUPPORTED_OPTIONS=	inet6
 PKG_SUGGESTED_OPTIONS=	curses
+
+PKG_OPTIONS_OPTIONAL_GROUPS=	socksproxy
+PKG_OPTIONS_GROUP.socksproxy=	socks5 socks4
+
+PKG_OPTIONS_REQUIRED_GROUPS=	screen
+PKG_OPTIONS_GROUP.screen=	ncurses slang curses
 
 .include "../../mk/bsd.options.mk"
 
@@ -23,20 +29,19 @@ PKG_FAIL_REASON+=	"SOCKS may not be enabled together with the \"slang\"" \
 .if !empty(PKG_OPTIONS:Mslang)
 SCREENTYPE=		slang
 .  include "../../devel/libslang/buildlink3.mk"
-.elif !empty(PKG_OPTIONS:Mncurses)
+.endif
+.if !empty(PKG_OPTIONS:Mncurses)
 SCREENTYPE=		ncurses
 USE_NCURSES=		color
 .  include "../../devel/ncurses/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-color-style
-.elif !empty(PKG_OPTIONS:Mcurses)
+.endif
+.if !empty(PKG_OPTIONS:Mcurses)
 SCREENTYPE=		curses
 .  include "../../mk/curses.buildlink3.mk"
 .  if !empty(MACHINE_PLATFORM:MNetBSD-1.[56]*-i386)
 CONFIGURE_ARGS+=	--enable-color-style
 .  endif
-.else
-PKG_FAIL_REASON+=	"${PKG_OPTIONS_VAR} must contain one of" \
-			"\"slang\", \"ncurses\", or \"curses\"!"
 .endif
 
 ###
@@ -45,7 +50,8 @@ PKG_FAIL_REASON+=	"${PKG_OPTIONS_VAR} must contain one of" \
 .if !empty(PKG_OPTIONS:Msocks4)
 CONFIGURE_ARGS+= 	--with-socks
 .  include "../../net/socks4/buildlink3.mk"
-.elif !empty(PKG_OPTIONS:Msocks5)
+.endif
+.if !empty(PKG_OPTIONS:Msocks5)
 CONFIGURE_ARGS+= 	--with-socks5
 .  include "../../net/socks5/buildlink3.mk"
 .endif
