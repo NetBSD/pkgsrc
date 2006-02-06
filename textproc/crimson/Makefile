@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2006/02/05 23:11:00 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2006/02/06 14:09:22 tonio Exp $
 #
 # We use the binary distribution of crimson because otherwise we
 # have a bootstrap-loop between apache-ant and crimson, each of which
 # uses the other.
 
-DISTNAME=	${PKGNAME}-bin
-PKGNAME=	crimson-1.1.3
+DISTNAME=	crimson-1.1.3-bin
+PKGNAME=	${DISTNAME:S/-bin//}
 PKGREVISION=	1
 CATEGORIES=	textproc www
 MASTER_SITES=	http://xml.apache.org/dist/crimson/
