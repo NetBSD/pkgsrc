@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/02/05 23:09:56 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2006/02/06 14:29:23 tron Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
@@ -39,6 +39,14 @@ SUBST_SED.sys=		-e "s|PKG_SYSCONFDIR|\"${PKG_SYSCONFDIR}\"|g"
 
 post-patch:
 	${RM} -f ${WRKDIR}/mm2.7/src/bin/*.orig
+
+pre-configure:
+	if ${GREP} putenv /usr/include/stdlib.h >/dev/null;		\
+	then								\
+		cd ${WRKSRC}/metamail;					\
+		${MV} Makefile Makefile.pre-sed;			\
+		${SED} -e s/putenv.o//g Makefile.pre-sed >Makefile;	\
+	fi
 
 pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
