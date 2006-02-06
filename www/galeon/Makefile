@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2006/02/06 00:51:18 ghen Exp $
+# $NetBSD: Makefile,v 1.93 2006/02/06 09:20:46 ghen Exp $
 #
 
 DISTNAME=		galeon-1.3.21
@@ -22,7 +22,7 @@ USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-_MOZILLA_USE_GTK2=	# yes
+MOZILLA_USE_GTK2=	# yes
 MOZILLA_USE_XFT=	YES
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.galeon
