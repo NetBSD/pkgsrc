@@ -1,12 +1,12 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.26 2006/01/15 12:32:56 abs Exp $
+# $Id: pkg_chk.sh,v 1.27 2006/02/06 12:44:08 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
 # TODO: List top level packages installed but not in config
 
-PATH=/usr/sbin:/usr/bin:${PATH}
+PATH=${PATH}:/usr/sbin:/usr/bin
 
 SUMMARY_FILE=pkg_chk-summary
 
