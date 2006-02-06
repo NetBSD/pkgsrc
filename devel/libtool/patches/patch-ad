@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.28 2006/01/30 22:19:56 tv Exp $
+$NetBSD: patch-ad,v 1.29 2006/02/06 18:57:30 tv Exp $
 
---- libltdl/configure.orig	2006-01-30 17:05:54.000000000 -0500
+--- libltdl/configure.orig	2006-02-06 13:54:53.000000000 -0500
 +++ libltdl/configure
 @@ -76,7 +76,6 @@ if test "x$as_myself" = x; then
    as_myself=$0
@@ -173,6 +173,15 @@ $NetBSD: patch-ad,v 1.28 2006/01/30 22:19:56 tv Exp $
        need_version=yes
        ;;
    esac
+@@ -9382,7 +9373,7 @@ freebsd* | dragonfly*)
+     shlibpath_overrides_runpath=no
+     hardcode_into_libs=yes
+     ;;
+-  freebsd*) # from 4.6 on
++  *) # from 4.6 on, and DragonFly
+     shlibpath_overrides_runpath=yes
+     hardcode_into_libs=yes
+     ;;
 @@ -9460,12 +9451,7 @@ interix3*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
@@ -328,6 +337,15 @@ $NetBSD: patch-ad,v 1.28 2006/01/30 22:19:56 tv Exp $
        need_version=yes
        ;;
    esac
+@@ -13341,7 +13350,7 @@ freebsd* | dragonfly*)
+     shlibpath_overrides_runpath=no
+     hardcode_into_libs=yes
+     ;;
+-  freebsd*) # from 4.6 on
++  *) # from 4.6 on, and DragonFly
+     shlibpath_overrides_runpath=yes
+     hardcode_into_libs=yes
+     ;;
 @@ -13419,12 +13428,7 @@ interix3*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
@@ -427,6 +445,15 @@ $NetBSD: patch-ad,v 1.28 2006/01/30 22:19:56 tv Exp $
        need_version=yes
        ;;
    esac
+@@ -15932,7 +15940,7 @@ freebsd* | dragonfly*)
+     shlibpath_overrides_runpath=no
+     hardcode_into_libs=yes
+     ;;
+-  freebsd*) # from 4.6 on
++  *) # from 4.6 on, and DragonFly
+     shlibpath_overrides_runpath=yes
+     hardcode_into_libs=yes
+     ;;
 @@ -16010,12 +16018,7 @@ interix3*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
@@ -526,6 +553,15 @@ $NetBSD: patch-ad,v 1.28 2006/01/30 22:19:56 tv Exp $
        need_version=yes
        ;;
    esac
+@@ -18534,7 +18541,7 @@ freebsd* | dragonfly*)
+     shlibpath_overrides_runpath=no
+     hardcode_into_libs=yes
+     ;;
+-  freebsd*) # from 4.6 on
++  *) # from 4.6 on, and DragonFly
+     shlibpath_overrides_runpath=yes
+     hardcode_into_libs=yes
+     ;;
 @@ -18612,12 +18619,7 @@ interix3*)
  irix5* | irix6* | nonstopux*)
    case $host_os in

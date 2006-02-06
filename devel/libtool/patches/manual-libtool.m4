@@ -1,4 +1,4 @@
-$NetBSD: manual-libtool.m4,v 1.18 2006/01/30 22:19:56 tv Exp $
+$NetBSD: manual-libtool.m4,v 1.19 2006/02/06 18:57:30 tv Exp $
 
 --- libtool.m4.orig	2005-12-18 16:53:17.000000000 -0500
 +++ libtool.m4
@@ -47,6 +47,15 @@ $NetBSD: manual-libtool.m4,v 1.18 2006/01/30 22:19:56 tv Exp $
        need_version=yes
        ;;
    esac
+@@ -1440,7 +1442,7 @@ freebsd* | dragonfly*)
+     shlibpath_overrides_runpath=no
+     hardcode_into_libs=yes
+     ;;
+-  freebsd*) # from 4.6 on
++  *) # from 4.6 on, and DragonFly
+     shlibpath_overrides_runpath=yes
+     hardcode_into_libs=yes
+     ;;
 @@ -1518,12 +1520,7 @@ interix3*)
  irix5* | irix6* | nonstopux*)
    case $host_os in
