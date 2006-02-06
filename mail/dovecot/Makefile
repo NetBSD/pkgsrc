@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2006/02/06 15:54:37 ghen Exp $
+# $NetBSD: Makefile,v 1.44 2006/02/06 17:28:09 ghen Exp $
 
 DISTNAME=		dovecot-1.0.beta2
 PKGNAME=		${DISTNAME:S/.beta/b/}
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dovecot.org/releases/
 
@@ -37,7 +38,7 @@ INSTALLATION_DIRS=	libexec/dovecot sbin share/doc/dovecot		\
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	dovecot-example.conf
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
@@ -46,4 +47,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/dovecot-* ${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/doc/mkcert.sh ${EGDIR}
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
