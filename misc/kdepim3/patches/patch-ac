@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.11 2006/02/07 10:10:42 markd Exp $
+
+--- kpilot/lib/options.cc.orig	2005-09-10 20:24:40.000000000 +1200
++++ kpilot/lib/options.cc
+@@ -90,7 +90,9 @@ struct tm writeTm(const QDateTime &dt)
+   t.tm_wday = 0; // unimplemented
+   t.tm_yday = 0; // unimplemented
+   t.tm_isdst = 0; // unimplemented
++#ifndef Q_OS_SOLARIS
+   t.tm_zone = 0; // unimplemented
++#endif
+ 
+   t.tm_year = dt.date().year() - 1900;
+   t.tm_mon = dt.date().month() - 1;
