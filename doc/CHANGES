@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12831 2006/02/07 21:33:37 seb Exp $
+$NetBSD: CHANGES,v 1.12832 2006/02/07 22:07:54 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -849,3 +849,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/swish-e to 2.4.3 [kim 2006-02-07]
 	Updated devel/pango to 1.10.3 [wiz 2006-02-07]
 	Added www/p5-HTTP-Server-Simple version 0.17 [seb 2006-02-07]
+	Added devel/p5-Hook-LexWrap version 0.20 [seb 2006-02-07]
