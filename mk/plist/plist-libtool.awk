@@ -1,4 +1,4 @@
-# $NetBSD: plist-libtool.awk,v 1.1 2006/01/12 23:43:57 jlam Exp $
+# $NetBSD: plist-libtool.awk,v 1.2 2006/02/07 18:42:38 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -54,10 +54,10 @@
 ###
 
 BEGIN {
-	LIBTOOL_EXPAND = ENVIRON["LIBTOOL_EXPAND"]
-	LIBTOOLIZE_PLIST = ENVIRON["LIBTOOLIZE_PLIST"]
-	PREFIX = ENVIRON["PREFIX"]
-	TEST = ENVIRON["TEST"]
+	LIBTOOL_EXPAND = ENVIRON["LIBTOOL_EXPAND"] ? ENVIRON["LIBTOOL_EXPAND"] : "/usr/pkgsrc/mk/plist/libtool-expand"
+	LIBTOOLIZE_PLIST = ENVIRON["LIBTOOLIZE_PLIST"] ? ENVIRON["LIBTOOLIZE_PLIST"] : "yes"
+	PREFIX = ENVIRON["PREFIX"] ? ENVIRON["PREFIX"] : "/usr/pkg"
+	TEST = ENVIRON["TEST"] ? ENVIRON["TEST"] : "test"
 }
 
 ###
