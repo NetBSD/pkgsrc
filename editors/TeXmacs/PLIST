@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2005/11/10 21:12:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2006/02/07 22:41:26 ghen Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -6,8 +6,6 @@ libexec/TeXmacs/bin/maxima_detect
 libexec/TeXmacs/bin/maxima_filter
 libexec/TeXmacs/bin/realpath
 libexec/TeXmacs/bin/realpath.py
-libexec/TeXmacs/bin/reduce_filter
-libexec/TeXmacs/bin/reduce_setup
 libexec/TeXmacs/bin/texmacs.bin
 libexec/TeXmacs/bin/tm_axiom
 libexec/TeXmacs/bin/tm_dratex
@@ -1309,6 +1307,12 @@ share/TeXmacs/examples/plugins/mutator/progs/init-mutator.scm
 share/TeXmacs/examples/plugins/nested/Makefile
 share/TeXmacs/examples/plugins/nested/progs/init-nested.scm
 share/TeXmacs/examples/plugins/nested/src/nested.cpp
+share/TeXmacs/examples/plugins/pnambic/Makefile
+share/TeXmacs/examples/plugins/pnambic/progs/init-pnambic.scm
+share/TeXmacs/examples/plugins/pnambic/readme.tm
+share/TeXmacs/examples/plugins/pnambic/src/p_in.c
+share/TeXmacs/examples/plugins/pnambic/src/p_out.c
+share/TeXmacs/examples/plugins/pnambic/src/pnambic.c
 share/TeXmacs/examples/plugins/prompt/Makefile
 share/TeXmacs/examples/plugins/prompt/progs/init-prompt.scm
 share/TeXmacs/examples/plugins/prompt/src/prompt.cpp
@@ -1841,6 +1845,7 @@ share/TeXmacs/packages/section/section-seminar.ts
 share/TeXmacs/packages/standard/std-automatic.ts
 share/TeXmacs/packages/standard/std-counter.ts
 share/TeXmacs/packages/standard/std-fold.ts
+share/TeXmacs/packages/standard/std-graphics.ts
 share/TeXmacs/packages/standard/std-latex.ts
 share/TeXmacs/packages/standard/std-list.ts
 share/TeXmacs/packages/standard/std-markup.ts
@@ -1918,6 +1923,7 @@ share/TeXmacs/plugins/mupad/progs/mupad-input.scm
 share/TeXmacs/plugins/mupad/progs/mupad-menus.scm
 share/TeXmacs/plugins/mycas/examples/mycas.cpp
 share/TeXmacs/plugins/mycas/progs/init-mycas.scm
+share/TeXmacs/plugins/mycas/readme.tm
 share/TeXmacs/plugins/octave/doc/COPYING
 share/TeXmacs/plugins/octave/doc/README
 share/TeXmacs/plugins/octave/doc/TM_Octave_Doc.tm
@@ -2001,8 +2007,8 @@ share/TeXmacs/plugins/r/r/TeXmacs/latex/TeXmacsView.tex
 share/TeXmacs/plugins/r/r/TeXmacs/latex/v.tex
 share/TeXmacs/plugins/r/r/TeXmacs/man/TeXmacs.Rd
 share/TeXmacs/plugins/reduce/install/README
-share/TeXmacs/plugins/reduce/install/patch
 share/TeXmacs/plugins/reduce/install/reducerc
+share/TeXmacs/plugins/reduce/install/tmprint.red
 share/TeXmacs/plugins/reduce/progs/init-reduce.scm
 share/TeXmacs/plugins/reduce/progs/reduce-input.scm
 share/TeXmacs/plugins/reduce/progs/reduce-menus.scm
@@ -2446,6 +2452,11 @@ share/TeXmacs/texts/test/overview.tm
 @exec ${MKDIR} %D/share/TeXmacs/examples/plugins/prompt/bin
 @dirrm share/TeXmacs/examples/plugins/prompt/bin
 @dirrm share/TeXmacs/examples/plugins/prompt
+@dirrm share/TeXmacs/examples/plugins/pnambic/src
+@dirrm share/TeXmacs/examples/plugins/pnambic/progs
+@exec ${MKDIR} %D/share/TeXmacs/examples/plugins/pnambic/bin
+@dirrm share/TeXmacs/examples/plugins/pnambic/bin
+@dirrm share/TeXmacs/examples/plugins/pnambic
 @dirrm share/TeXmacs/examples/plugins/nested/src
 @dirrm share/TeXmacs/examples/plugins/nested/progs
 @exec ${MKDIR} %D/share/TeXmacs/examples/plugins/nested/bin
