@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.5 2005/12/03 17:24:28 jdolecek Exp $
+# $NetBSD: module.mk,v 1.6 2006/02/07 17:59:56 jdolecek Exp $
 
 # Items common for all PDO drivers
 
@@ -17,3 +17,6 @@ PKGNAME=		php-${PKGMODNAME}-${PHP_BASE_VERS}.${PECL_VERSION}
 CATEGORIES+=		databases
 MAINTAINER=		jdolecek@NetBSD.org
 COMMENT=		PHP PDO extension for ${PDO_COMMENT} databases
+
+# needed due to (broken?) PDO_* configure checks
+CONFIGURE_ENV+=		PHP_PDO_SHARED="1"
