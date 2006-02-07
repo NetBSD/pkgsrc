@@ -1,4 +1,4 @@
-# $NetBSD: plist-info.awk,v 1.4 2006/02/07 18:42:38 jlam Exp $
+# $NetBSD: plist-info.awk,v 1.5 2006/02/07 19:18:42 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -62,10 +62,10 @@ BEGIN {
 }
 
 ###
-### Ignore *.info-1, *.info-2, etc. files in the PLIST as we get the
-### list of installed *.info-[0-9]* files below.
+### Ignore *-1, *-2, etc. files in the PLIST as we get the list of
+### installed split files below.
 ###
-/^[^@]/ && /^info\/[^\/]*\.info-[0-9]+(\.gz)?$/ {
+/^[^@]/ && /^info\/[^\/]*(\.info)?-[0-9]+(\.gz)?$/ {
 	next
 }
 
@@ -73,13 +73,18 @@ BEGIN {
 ### For each info page entry, print all of the installed info sub-pages
 ### associated with that entry.
 ###
-/^[^@]/ && /^info\/[^\/]*\.info(\.gz)?$/ {
+/^[^@]/ && /^info\/[^\/]*(\.info)?(\.gz)?$/ {
 	sub("^info/", INFO_DIR "/")
 	cmd = TEST " -f " PREFIX "/" $0
 	if (system(cmd) == 0) {
 		sub("\\.gz$", "")
-		cmd = "cd " PREFIX " && " LS " -1 " $0 "*"
+		base = $0
+		cmd = "cd " PREFIX " && " LS " -1 " base "*"
 		while (cmd | getline) {
+			# Filter out unrelated info files
+			if ($0 !~ "^" base "(-[0-9]+)?(\.gz)?$") {
+				continue
+			}
 			#if ((MANZ ~ /[yY][eE][sS]/) && ($0 !~ /\.gz$/)) {
 			#	$0 = $0 ".gz"
 			#} else if ((MANZ !~ /[yY][eE][sS]/) && ($0 ~ /\.gz$/)) {
