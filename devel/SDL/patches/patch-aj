@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.23 2005/09/07 10:15:39 adam Exp $
+$NetBSD: patch-aj,v 1.24 2006/02/07 18:15:50 wiz Exp $
 
 --- configure.in.orig	2005-08-28 06:31:18.000000000 +0000
 +++ configure.in
@@ -45,31 +45,6 @@ $NetBSD: patch-aj,v 1.23 2005/09/07 10:15:39 adam Exp $
                    ;;
              esac
              AC_SUBST(NASMFLAGS)
-@@ -985,18 +987,18 @@ CheckAAlib()
- [  --enable-video-aalib    use AAlib video driver [default=no]],
-                   , enable_video_aalib=no)
-     if test x$enable_video = xyes -a x$enable_video_aalib = xyes; then
-+        AC_PATH_PROG(AALIB_CONFIG, aalib-config)
-         AC_MSG_CHECKING(for AAlib support)
-+        if test x$AALIB_CONFIG = x; then
-         video_aalib=no
--        AC_TRY_COMPILE([
--         #include <aalib.h>
--        ],[
--        ],[
-+	else
-+            AALIB_LIBS=`$AALIB_CONFIG --libs`
-         video_aalib=yes
--        ])
-+        fi
-         AC_MSG_RESULT($video_aalib)
-         if test x$video_aalib = xyes; then
-             CFLAGS="$CFLAGS -DENABLE_AALIB"
--            SYSTEM_LIBS="$SYSTEM_LIBS -laa"
-+            SYSTEM_LIBS="$SYSTEM_LIBS $AALIB_LIBS"
- 
-             VIDEO_SUBDIRS="$VIDEO_SUBDIRS aalib"
-             VIDEO_DRIVERS="$VIDEO_DRIVERS aalib/libvideo_aa.la"
 @@ -1202,12 +1204,13 @@ CheckPTH()
  [  --enable-pth            use GNU pth library for multi-threading [default=yes]],
                    , enable_pth=yes)
