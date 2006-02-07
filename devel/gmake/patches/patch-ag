@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2006/02/07 18:31:57 jlam Exp $
+
+--- Makefile.in.orig	2002-10-03 22:56:12.000000000 -0400
++++ Makefile.in
+@@ -209,7 +209,7 @@ inst_group = @KMEM_GROUP@
+ noinst_PROGRAMS = loadavg
+ loadavg_SOURCES = loadavg.c
+ loadavg_CFLAGS = -DTEST
+-loadavg_LDADD = @GETLOADAVG_LIBS@
++loadavg_LDADD = @GETLOADAVG_LIBS@ @LIBINTL@
+ 
+ # > check-regression
+ #
