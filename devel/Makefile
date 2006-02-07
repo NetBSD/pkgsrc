@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.722 2006/02/07 19:03:41 drochner Exp $
+# $NetBSD: Makefile,v 1.723 2006/02/07 22:07:27 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -399,6 +399,7 @@ SUBDIR+=	p5-Getopt-Simple
 SUBDIR+=	p5-Graph
 SUBDIR+=	p5-Hash-Case
 SUBDIR+=	p5-Heap
+SUBDIR+=	p5-Hook-LexWrap
 SUBDIR+=	p5-IO-All
 SUBDIR+=	p5-IO-Digest
 SUBDIR+=	p5-IO-LockedFile
