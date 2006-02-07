@@ -1,4 +1,4 @@
-# $NetBSD: plist-man.awk,v 1.4 2006/02/07 18:42:38 jlam Exp $
+# $NetBSD: plist-man.awk,v 1.5 2006/02/07 18:43:02 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -41,7 +41,7 @@
 ###
 ### Certain environment variables must be set prior to running this script:
 ###
-### IMAKE_INSTALL specifies how imake-using packages install man pages.
+### IMAKE_MANINSTALL specifies how imake-using packages install man pages.
 ###	Valid values are:
 ###
 ###	    no value	the package doesn't use imake
