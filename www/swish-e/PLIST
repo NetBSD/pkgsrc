@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.3 2004/09/22 08:09:57 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/02/07 13:22:53 kim Exp $
+bin/swish-config
 bin/swish-e
 bin/swish-filter-test
 include/swish-e.h
 lib/libswish-e.la
+lib/pkgconfig/swish-e.pc
 lib/swish-e/DirTree.pl
 lib/swish-e/perl/SWISH/DateRanges.pm
 lib/swish-e/perl/SWISH/DefaultHighlight.pm
 lib/swish-e/perl/SWISH/Filter.pm
+lib/swish-e/perl/SWISH/Filters/Doc2html.pm
 lib/swish-e/perl/SWISH/Filters/Doc2txt.pm
 lib/swish-e/perl/SWISH/Filters/ID3toHTML.pm
 lib/swish-e/perl/SWISH/Filters/Pdf2HTML.pm
@@ -90,8 +93,15 @@ share/doc/swish-e/html/split.pl
 share/doc/swish-e/html/style.css
 share/doc/swish-e/html/swish.conf
 share/doc/swish-e/html/swish.html
-share/swish-e/search.tt
 share/swish-e/swish.tmpl
+share/swish-e/swish.tt
+share/swish-e/templates/common_footer
+share/swish-e/templates/common_header
+share/swish-e/templates/markup.css
+share/swish-e/templates/page_layout
+share/swish-e/templates/search.tt
+share/swish-e/templates/style.css
+@dirrm share/swish-e/templates
 @dirrm share/swish-e
 @dirrm share/doc/swish-e/html/images
 @dirrm share/doc/swish-e/html
