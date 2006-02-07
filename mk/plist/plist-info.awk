@@ -1,4 +1,4 @@
-# $NetBSD: plist-info.awk,v 1.3 2006/02/05 16:21:07 rillig Exp $
+# $NetBSD: plist-info.awk,v 1.4 2006/02/07 18:42:38 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -54,11 +54,11 @@
 ###	the path to a "test" binary.
 ###
 BEGIN {
-	INFO_DIR = ENVIRON["INFO_DIR"]
-	LS = ENVIRON["LS"]
-	MANZ = ENVIRON["MANZ"]
-	PREFIX = ENVIRON["PREFIX"]
-	TEST = ENVIRON["TEST"]
+	INFO_DIR = ENVIRON["INFO_DIR"] ? ENVIRON["INFO_DIR"] : "info"
+	LS = ENVIRON["LS"] ? ENVIRON["LS"] : "ls"
+	MANZ = ENVIRON["MANZ"] ? ENVIRON["MANZ"] : "no"
+	PREFIX = ENVIRON["PREFIX"] ? ENVIRON["PREFIX"] : "/usr/pkg"
+	TEST = ENVIRON["TEST"] ? ENVIRON["TEST"] : "test"
 }
 
 ###
