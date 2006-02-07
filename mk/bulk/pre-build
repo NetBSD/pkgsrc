@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.57 2006/01/29 23:07:04 rillig Exp $
+# $NetBSD: pre-build,v 1.58 2006/02/07 21:34:48 rillig Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -111,7 +111,11 @@ PKG_TOOLS_BIN=`(cd "${PKGLINT_PKG_DIR}" && ${BMAKE} show-var VARNAME=PKG_TOOLS_B
 
 for dbdir in "${PKG_DBDIR}" "${DEPOTBASE}"; do
 	echo "pre-build> Removing all installed packages in ${dbdir}"
-	if cd "$dbdir" 1>/dev/null 2>&1; then
+
+	# The Solaris /bin/sh requires the following weird-looking code.
+	if (cd "$dbdir" 1>/dev/null 2>&1); then
+		cd "$dbdir"
+
 		for pkg in *
 		do
 			if ${PKG_TOOLS_BIN}/pkg_info -K "$dbdir" -qe "$pkg"; then
