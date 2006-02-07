@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.4 2005/01/05 12:05:19 adam Exp $
+$NetBSD: patch-as,v 1.5 2006/02/07 18:15:50 wiz Exp $
 
---- src/Makefile.in.orig	2004-12-13 09:03:05.000000000 +0000
+--- src/Makefile.in.orig	2005-08-28 08:31:37.000000000 +0200
 +++ src/Makefile.in
-@@ -304,7 +304,6 @@ lib_LTLIBRARIES = libSDL.la
+@@ -306,7 +306,6 @@ lib_LTLIBRARIES = libSDL.la
  libSDL_la_SOURCES = $(GENERAL_SRCS)
  libSDL_la_LDFLAGS = \
  	-no-undefined		\

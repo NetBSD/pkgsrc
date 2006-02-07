@@ -1,16 +1,8 @@
-$NetBSD: patch-al,v 1.6 2004/07/26 20:42:28 dillo Exp $
+$NetBSD: patch-al,v 1.7 2006/02/07 18:15:50 wiz Exp $
 
---- src/audio/openbsd/SDL_openbsdaudio.c.orig	2004-02-18 18:21:59.000000000 +0100
+--- src/audio/openbsd/SDL_openbsdaudio.c.orig	2004-01-04 17:49:15.000000000 +0100
 +++ src/audio/openbsd/SDL_openbsdaudio.c
-@@ -37,6 +37,7 @@
- #include <sys/stat.h>
- #include <sys/types.h>
- #include <sys/audioio.h>
-+#include <pthread.h>
- 
- #include "SDL_audio.h"
- #include "SDL_error.h"
-@@ -46,8 +47,12 @@
+@@ -46,8 +46,12 @@
  #include "SDL_audiodev_c.h"
  #include "SDL_openbsdaudio.h"
  
@@ -24,7 +16,7 @@ $NetBSD: patch-al,v 1.6 2004/07/26 20:42:28 dillo Exp $
  
  /* Open the audio device for playback, and don't block if busy */
  /* #define USE_BLOCKING_WRITES */
-@@ -132,7 +137,11 @@
+@@ -132,7 +136,11 @@ static SDL_AudioDevice
  }
  
  AudioBootStrap OPENBSD_AUDIO_bootstrap = {
@@ -36,7 +28,7 @@ $NetBSD: patch-al,v 1.6 2004/07/26 20:42:28 dillo Exp $
  	Audio_Available, Audio_CreateDevice
  };
  
-@@ -140,6 +149,7 @@
+@@ -140,6 +148,7 @@ AudioBootStrap OPENBSD_AUDIO_bootstrap =
  static void
  OBSD_WaitAudio(_THIS)
  {
@@ -44,7 +36,7 @@ $NetBSD: patch-al,v 1.6 2004/07/26 20:42:28 dillo Exp $
  	/* Check to see if the thread-parent process is still alive */
  	{ static int cnt = 0;
  		/* Note that this only works with thread implementations 
-@@ -151,6 +161,7 @@
+@@ -151,6 +160,7 @@ OBSD_WaitAudio(_THIS)
  			}
  		}
  	}
@@ -52,7 +44,7 @@ $NetBSD: patch-al,v 1.6 2004/07/26 20:42:28 dillo Exp $
  
  #ifndef USE_BLOCKING_WRITES /* Not necessary when using blocking writes */
  	/* See if we need to use timed audio synchronization */
-@@ -262,20 +273,20 @@
+@@ -262,20 +272,20 @@ OBSD_Status(_THIS)
  	return;
      }
  
@@ -87,7 +79,7 @@ $NetBSD: patch-al,v 1.6 2004/07/26 20:42:28 dillo Exp $
  ",
      info.play.buffer_size,
      info.play.sample_rate,
-@@ -290,13 +301,13 @@
+@@ -290,13 +300,13 @@ active		:   %s
      info.play.waiting ? "yes" : "no",
      info.play.active ? "yes": "no");
  
@@ -108,7 +100,7 @@ $NetBSD: patch-al,v 1.6 2004/07/26 20:42:28 dillo Exp $
  ",  
      info.monitor_gain,
      info.blocksize,
-@@ -388,6 +399,9 @@
+@@ -388,6 +398,9 @@ OBSD_OpenAudio(_THIS, SDL_AudioSpec *spe
      	spec->channels = 1;
      AUDIO_INITINFO(&info);
      info.play.sample_rate = spec->freq;
