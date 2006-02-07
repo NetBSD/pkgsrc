@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.71 2006/02/06 10:04:49 rillig Exp $
+# $NetBSD: Makefile.common,v 1.72 2006/02/07 09:07:19 rillig Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		mozilla-${MOZ_DIST_VER}-source
@@ -42,8 +42,8 @@ PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--disable-pedantic
-CONFIGURE_ARGS+=	--with-system-jpeg=${BUILDLINK_PREFIX.jpeg}
-CONFIGURE_ARGS+=	--with-system-png=${BUILDLINK_PREFIX.png}
+CONFIGURE_ARGS+=	--with-system-jpeg=${BUILDLINK_PREFIX.jpeg:Q}
+CONFIGURE_ARGS+=	--with-system-png=${BUILDLINK_PREFIX.png:Q}
 CONFIGURE_ARGS+=	--enable-crypto
 
 SHAREMODE?=		644
@@ -97,7 +97,7 @@ CONFIGURE_ARGS+=	--enable-xinerama
 
 # avoid creating a .mozilla directory in the users home
 # directory
-SCRIPTS_ENV+=		HOME="${WRKDIR:Q}"
+SCRIPTS_ENV+=		HOME=${WRKDIR:Q}
 
 PLIST_SUBST+=		MOZILLA=${MOZILLA:Q}
 PLIST_SUBST+=		MOZILLA_BIN=${MOZILLA_BIN:Q}
@@ -105,13 +105,13 @@ FILES_SUBST+=		MOZILLA=${MOZILLA:Q}
 FILES_SUBST+=		MOZILLA_BIN=${MOZILLA_BIN:Q}
 .if ${OBJECT_FMT} == "ELF"
 SO_SUFFIX=		so
-SCRIPTS_ENV+=		MOZ_INSTALL_LIB="${INSTALL_PROGRAM:Q}"
+SCRIPTS_ENV+=		MOZ_INSTALL_LIB=${INSTALL_PROGRAM:Q}
 .elif ${OBJECT_FMT} == "Mach-O"
 SO_SUFFIX=		dylib
-SCRIPTS_ENV+=		MOZ_INSTALL_LIB="${INSTALL_LIB:Q}"
+SCRIPTS_ENV+=		MOZ_INSTALL_LIB=${INSTALL_LIB:Q}
 .else
 SO_SUFFIX=		so.1.0
-SCRIPTS_ENV+=		MOZ_INSTALL_LIB="${INSTALL_PROGRAM:Q}"
+SCRIPTS_ENV+=		MOZ_INSTALL_LIB=${INSTALL_PROGRAM:Q}
 .endif
 PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
@@ -160,22 +160,22 @@ BUILDLINK_PASSTHRU_DIRS+=/Developer
 
 post-extract:
 .for f in ${XPTCFILES}
-	${CP} ${FILESDIR}/${f} ${WRKSRC}/xpcom/reflect/xptcall/src/md/unix/${f}
+	${CP} ${FILESDIR:Q}/${f:Q} ${WRKSRC:Q}/xpcom/reflect/xptcall/src/md/unix/${f:Q}
 .endfor
 
 pre-configure:
-	cd ${WRKSRC} && autoconf
-	cd ${WRKSRC}/nsprpub && autoconf
-	cd ${WRKSRC}/directory/c-sdk && autoconf
+	cd ${WRKSRC:Q} && autoconf
+	cd ${WRKSRC:Q}/nsprpub && autoconf
+	cd ${WRKSRC:Q}/directory/c-sdk && autoconf
 
 post-build:
 	${ECHO} skin,install,select,classic/1.0 >> \
-		${WRKSRC}/dist/bin/chrome/installed-chrome.txt
+		${WRKSRC:Q}/dist/bin/chrome/installed-chrome.txt
 	${ECHO} locale,install,select,en-US >> \
-		${WRKSRC}/dist/bin/chrome/installed-chrome.txt
+		${WRKSRC:Q}/dist/bin/chrome/installed-chrome.txt
 
 do-install:
-	${SETENV} ${SCRIPTS_ENV} ${SH} ${FILESDIR}/moz-install
+	${SETENV} ${SCRIPTS_ENV} ${SH} ${FILESDIR:Q}/moz-install
 
 .include "../../mk/pthread.buildlink3.mk"
 
@@ -195,8 +195,8 @@ CONFIGURE_ARGS+=	--enable-xft
 SUBST_CLASSES+=		pc
 SUBST_STAGE.pc=		post-extract
 SUBST_FILES.pc=		build/unix/*.pc.in
-SUBST_SED.pc=		-e "s|%includedir%|${PREFIX}/include/${MOZILLA}|g" \
-			-e "s|%libdir%|${PREFIX}/lib/${MOZILLA}|g"
+SUBST_SED.pc=		-e 's|%includedir%|${PREFIX}/include/${MOZILLA}|g'
+SUBST_SED.pc+=		-e 's|%libdir%|${PREFIX}/lib/${MOZILLA}|g'
 SUBST_MESSAGE.pc=	Fixing pkgconfig files.
 
 .include "../../www/mozilla/options.mk"
