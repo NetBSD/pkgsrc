@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2005/12/11 09:40:38 wiz Exp $
+# $NetBSD: Makefile.common,v 1.26 2006/02/07 18:16:18 wiz Exp $
 
 DISTNAME=	SDL-1.2.9
 CATEGORIES=	devel games
@@ -45,9 +45,9 @@ CONFIGURE_ENV+=		SYSTEM_LIBS=${LDFLAGS:M*:Q}
 # on Darwin if they exist.
 .if ${OPSYS} == "Darwin"
 COCOA_DIRS+=			/System /Library /Developer
-.  for _dir_ in ${COCOA_DIRS}
-.    if exists(${_dir_})
-BUILDLINK_PASSTHRU_DIRS+=	${_dir_}
+.  for dir in ${COCOA_DIRS}
+.    if exists(${dir})
+BUILDLINK_PASSTHRU_DIRS+=	${dir}
 .    endif
 .  endfor
 .endif
