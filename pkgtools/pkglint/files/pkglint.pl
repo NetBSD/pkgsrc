@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.502 2006/02/07 09:20:17 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.503 2006/02/07 09:49:09 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -163,6 +163,13 @@ my $explain_flag	= false;
 my $show_source_flag	= false;
 my $frequency		= {};	# Frequencies of the messages.
 
+sub strxvis($) {
+	my ($s) = @_;
+
+	$s =~ s/([^\x09\x20-\x7e])/"\\x" . unpack("H*", $1)/eg;
+	return $s;
+}
+
 sub log_message($$$$) {
 	my ($level, $fname, $lineno, $message) = @_;
 	my ($text, $sep);
@@ -195,7 +202,7 @@ sub log_message($$$$) {
 		$sep = " ";
 	}
 	if (defined($message)) {
-		$text .= "${sep}${message}";
+		$text .= $sep . strxvis($message);
 		$sep = "";
 
 		if ($level == LL_ERROR || $level == LL_WARNING) {
