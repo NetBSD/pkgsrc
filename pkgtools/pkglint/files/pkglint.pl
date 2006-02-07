@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.501 2006/02/06 10:07:23 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.502 2006/02/07 09:20:17 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2202,7 +2202,7 @@ sub checkline_cpp_macro_names($$) {
 
 sub checkline_mk_text($$) {
 	my ($line, $text) = @_;
-	my ($rest, $state, $vartools);
+	my ($rest, $state, $vartools, $depr_map);
 
 	if ($text =~ qr"^(?:[^#]*[^\$])?\$(\w+)") {
 		my ($varname) = ($1);
@@ -2220,11 +2220,17 @@ sub checkline_mk_text($$) {
 	}
 
 	$rest = $text;
-	while ($rest =~ s/(?:^|[^\$])\$\{([-A-Z0-9a-z_]+)(?::[^\}]+)?\}//) {
-		my ($varname) = ($1);
+	$depr_map = get_deprecated_map();
+	while ($rest =~ s/(?:^|[^\$])\$\{([-A-Z0-9a-z_]+)(\.[\-0-9A-Z_a-z]+)?(?::[^\}]+)?\}//) {
+		my ($varbase, $varext) = ($1, $2);
+		my $varname = $varbase . (defined($varext) ? $varext : "");
+		my $instead =
+		      (exists($depr_map->{$varname})) ? $depr_map->{$varname}
+		    : (exists($depr_map->{$varbase})) ? $depr_map->{$varbase}
+		    : undef;
 
-		if (exists(get_deprecated_map()->{$varname})) {
-			$line->log_warning("Use of ${varname} is deprecated. ".get_deprecated_map()->{$varname});
+		if (defined($instead)) {
+			$line->log_warning("Use of ${varname} is deprecated. ${instead}");
 		}
 	}
 
@@ -2301,16 +2307,19 @@ sub checkline_mk_shellword($$$) {
 		||  $rest =~ s/^\$\((${regex_varname})(:[^\)]+)?\)//) {
 			my ($varname, $mod) = ($1, $2);
 
-			if (!$opt_warn_quoting) {
-				# Skip the following checks.
-
-			} elsif ($state == SWST_PLAIN && defined($mod) && $mod =~ qr":Q$") {
+			if ($state == SWST_PLAIN && defined($mod) && $mod =~ qr":Q$") {
 				# Fine.
 
 			} elsif ($state == SWST_SQUOT && $varname =~ qr"(?:DIRS?|FILES?|PATH|^PREFIX|^LOCALBASE|^PKGNAME)$") {
 				# Fine, too.
 
-			} else {
+			} elsif ($state == SWST_DQUOT && defined($mod) && $mod =~ qr":Q$") {
+				$line->log_warning("Please don't use the :Q operator in double quotes.");
+				$line->explain(
+					"Either remove the :Q or the double quotes. In most cases, it is more",
+					"appropriate to remove the double quotes.");
+
+			} elsif ($opt_warn_quoting) {
 				$line->log_warning("Possibly misquoted make variable ${varname} in " . user_statename->[$state] . ".");
 				if ($state == SWST_PLAIN && !defined($mod)) {
 					$line->replace("\${${varname}}", "\${${varname}:Q}");
@@ -3143,6 +3152,7 @@ sub checkline_mk_varassign($$$$$) {
 		}
 	}
 
+	checkline_mk_text($line, $value);
 	checkline_mk_vartype($line, $varname, $op, $value, $comment);
 
 	if (!$is_internal && $varname =~ qr"^_") {
