@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/02/05 23:08:53 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2006/02/07 19:55:56 wiz Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 PKGREVISION=	2
@@ -31,7 +31,7 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=      contrib/cgi/tweak-log.cgi
 SUBST_SED.paths=        -e "s|/usr/local/bin/|${PREFIX}/bin|g"
-SUBST_MESSAGE.paths=    "Fixing hardcoded /usr/local/bin paths."
+SUBST_MESSAGE.paths=    Fixing hardcoded /usr/local/bin paths.
 
 # Suppress attempt to build the .info documentation.
 post-build:
@@ -53,6 +53,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/tools/hook-scripts/svnperms* \
 		${SVNEXAMPLES}/hook-scripts
 
+.PHONY: svn-build-outputs-hack
 # Use this target to update the build-outputs.mk hack for sub-packages.
 svn-build-outputs-hack:
 	cd ${WRKSRC} && ./gen-make.py --release --installed-libs libsvn_client,libsvn_delta,libsvn_diff,libsvn_fs,libsvn_ra,libsvn_repos,libsvn_subr,libsvn_wc
