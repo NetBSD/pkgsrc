@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4577 2006/02/06 22:46:52 ghen Exp $
+$NetBSD: TODO,v 1.4578 2006/02/07 17:55:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -554,6 +554,7 @@ Suggested package updates
 	o gob2-2.0.14
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gogo-3.11p1
+	o gpgme-1.1.0 [pkg/32761]
 	o gpsdrive-2.09
 	o gpsim-0.21.4
 	o gpsim-devel-20041104
@@ -675,6 +676,7 @@ Suggested package updates
 	o libnasl-2.3.1
 	o libntlm-0.3.9
 	o libpqxx-2.5.5
+	o libprelude-0.9.5
 	o libshout-2.2
 	o libsmi-0.4.3
 	o libtcl-nothread-8.4.9
@@ -907,6 +909,7 @@ Suggested package updates
 	o p5-xmltv-0.5.42
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
+	o pango-1.10.3
 	o pari-2.1.7
 	o patchutils-0.2.31
 	o pcal-4.8
