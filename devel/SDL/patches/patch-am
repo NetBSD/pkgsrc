@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
+$NetBSD: patch-am,v 1.19 2006/02/07 18:15:50 wiz Exp $
 
---- configure.orig	2005-08-28 06:32:11.000000000 +0000
+--- configure.orig	2005-08-28 08:32:11.000000000 +0200
 +++ configure
 @@ -463,7 +463,8 @@ ac_includes_default="\
  # include <unistd.h>
@@ -55,115 +55,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
                    ;;
              esac
  
-@@ -25684,63 +25687,58 @@ else
-   enable_video_aalib=no
- fi;
-     if test x$enable_video = xyes -a x$enable_video_aalib = xyes; then
--        echo "$as_me:$LINENO: checking for AAlib support" >&5
--echo $ECHO_N "checking for AAlib support... $ECHO_C" >&6
--        video_aalib=no
--        cat >conftest.$ac_ext <<_ACEOF
--/* confdefs.h.  */
--_ACEOF
--cat confdefs.h >>conftest.$ac_ext
--cat >>conftest.$ac_ext <<_ACEOF
--/* end confdefs.h.  */
--
--         #include <aalib.h>
--
--int
--main ()
--{
--
--
--  ;
--  return 0;
--}
--_ACEOF
--rm -f conftest.$ac_objext
--if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
--  (eval $ac_compile) 2>conftest.er1
--  ac_status=$?
--  grep -v '^ *+' conftest.er1 >conftest.err
--  rm -f conftest.er1
--  cat conftest.err >&5
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_c_werror_flag"
--			 || test ! -s conftest.err'
--  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
--  (eval $ac_try) 2>&5
--  ac_status=$?
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); }; } &&
--	 { ac_try='test -s conftest.$ac_objext'
--  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
--  (eval $ac_try) 2>&5
--  ac_status=$?
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); }; }; then
-+        # Extract the first word of "aalib-config", so it can be a program name with args.
-+set dummy aalib-config; ac_word=$2
-+echo "$as_me:$LINENO: checking for $ac_word" >&5
-+echo $ECHO_N "checking for $ac_word... $ECHO_C" >&6
-+if test "${ac_cv_path_AALIB_CONFIG+set}" = set; then
-+  echo $ECHO_N "(cached) $ECHO_C" >&6
-+else
-+  case $AALIB_CONFIG in
-+  [\\/]* | ?:[\\/]*)
-+  ac_cv_path_AALIB_CONFIG="$AALIB_CONFIG" # Let the user override the test with a path.
-+  ;;
-+  *)
-+  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
-+for as_dir in $PATH
-+do
-+  IFS=$as_save_IFS
-+  test -z "$as_dir" && as_dir=.
-+  for ac_exec_ext in '' $ac_executable_extensions; do
-+  if $as_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
-+    ac_cv_path_AALIB_CONFIG="$as_dir/$ac_word$ac_exec_ext"
-+    echo "$as_me:$LINENO: found $as_dir/$ac_word$ac_exec_ext" >&5
-+    break 2
-+  fi
-+done
-+done
- 
--        video_aalib=yes
-+  ;;
-+esac
-+fi
-+AALIB_CONFIG=$ac_cv_path_AALIB_CONFIG
- 
-+if test -n "$AALIB_CONFIG"; then
-+  echo "$as_me:$LINENO: result: $AALIB_CONFIG" >&5
-+echo "${ECHO_T}$AALIB_CONFIG" >&6
- else
--  echo "$as_me: failed program was:" >&5
--sed 's/^/| /' conftest.$ac_ext >&5
--
-+  echo "$as_me:$LINENO: result: no" >&5
-+echo "${ECHO_T}no" >&6
- fi
--rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
-+
-+        echo "$as_me:$LINENO: checking for AAlib support" >&5
-+echo $ECHO_N "checking for AAlib support... $ECHO_C" >&6
-+        if test x$AALIB_CONFIG = x; then
-+        video_aalib=no
-+	else
-+            AALIB_LIBS=`$AALIB_CONFIG --libs`
-+        video_aalib=yes
-+        fi
-         echo "$as_me:$LINENO: result: $video_aalib" >&5
- echo "${ECHO_T}$video_aalib" >&6
-         if test x$video_aalib = xyes; then
-             CFLAGS="$CFLAGS -DENABLE_AALIB"
--            SYSTEM_LIBS="$SYSTEM_LIBS -laa"
-+            SYSTEM_LIBS="$SYSTEM_LIBS $AALIB_LIBS"
- 
-             VIDEO_SUBDIRS="$VIDEO_SUBDIRS aalib"
-             VIDEO_DRIVERS="$VIDEO_DRIVERS aalib/libvideo_aa.la"
-@@ -26755,16 +26753,17 @@ else
+@@ -26755,16 +26758,17 @@ else
    enable_pth=yes
  fi;
      if test x$enable_threads = xyes -a x$enable_pth = xyes; then
@@ -186,7 +78,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
    ;;
    *)
    as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
-@@ -26774,32 +26773,32 @@ do
+@@ -26774,32 +26778,32 @@ do
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
    if $as_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
@@ -228,7 +120,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
              SDL_CFLAGS="$SDL_CFLAGS $PTH_CFLAGS"
              SDL_LIBS="$SDL_LIBS $PTH_LIBS"
              CFLAGS="$CFLAGS -DENABLE_PTH"
-@@ -26847,9 +26846,13 @@ fi;
+@@ -26847,9 +26851,13 @@ fi;
              pthread_cflags="-D_REENTRANT -D_THREAD_SAFE"
              pthread_lib="-pthread"
              ;;
@@ -244,7 +136,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
              ;;
          *-*-openbsd*)
              pthread_cflags="-D_REENTRANT"
-@@ -28677,93 +28680,21 @@ if test $ac_cv_lib_usbhid_hid_init = yes
+@@ -28677,93 +28685,21 @@ if test $ac_cv_lib_usbhid_hid_init = yes
    have_libusbhid=yes
  fi
  
@@ -346,7 +238,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -28771,7 +28702,7 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -28771,7 +28707,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -355,7 +247,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
-@@ -28807,15 +28738,15 @@ echo "$as_me:$LINENO: result: $ac_header
+@@ -28807,15 +28743,15 @@ echo "$as_me:$LINENO: result: $ac_header
  echo "${ECHO_T}$ac_header_compiler" >&6
  
  # Is the header present?
@@ -374,7 +266,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
  _ACEOF
  if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
    (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
-@@ -28849,25 +28780,25 @@ echo "${ECHO_T}$ac_header_preproc" >&6
+@@ -28849,25 +28785,25 @@ echo "${ECHO_T}$ac_header_preproc" >&6
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
    yes:no: )
@@ -416,7 +308,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
      (
        cat <<\_ASBOX
  ## ------------------------------------------ ##
-@@ -28878,34 +28809,34 @@ _ASBOX
+@@ -28878,34 +28814,34 @@ _ASBOX
        sed "s/^/$as_me: WARNING:     /" >&2
      ;;
  esac
@@ -467,7 +359,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -28913,7 +28844,7 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -28913,7 +28849,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -476,7 +368,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
-@@ -28949,15 +28880,15 @@ echo "$as_me:$LINENO: result: $ac_header
+@@ -28949,15 +28885,15 @@ echo "$as_me:$LINENO: result: $ac_header
  echo "${ECHO_T}$ac_header_compiler" >&6
  
  # Is the header present?
@@ -495,7 +387,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
  _ACEOF
  if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
    (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
-@@ -28991,25 +28922,25 @@ echo "${ECHO_T}$ac_header_preproc" >&6
+@@ -28991,25 +28927,25 @@ echo "${ECHO_T}$ac_header_preproc" >&6
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
    yes:no: )
@@ -537,7 +429,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
      (
        cat <<\_ASBOX
  ## ------------------------------------------ ##
-@@ -29020,34 +28951,112 @@ _ASBOX
+@@ -29020,34 +28956,112 @@ _ASBOX
        sed "s/^/$as_me: WARNING:     /" >&2
      ;;
  esac
@@ -579,7 +471,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
 +            echo "$as_me:$LINENO: checking for hid_init in -lusb" >&5
 +echo $ECHO_N "checking for hid_init in -lusb... $ECHO_C" >&6
 +if test "${ac_cv_lib_usb_hid_init+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
++  echo $ECHO_N "(cached) $ECHO_C" >&6
 +else
 +  ac_check_lib_save_LIBS=$LIBS
 +LIBS="-lusb  $LIBS"
@@ -633,9 +525,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
 +sed 's/^/| /' conftest.$ac_ext >&5
 +
 +ac_cv_lib_usb_hid_init=no
- fi
--echo "$as_me:$LINENO: result: $ac_cv_header_libusb_h" >&5
--echo "${ECHO_T}$ac_cv_header_libusb_h" >&6
++fi
 +rm -f conftest.err conftest.$ac_objext \
 +      conftest$ac_exeext conftest.$ac_ext
 +LIBS=$ac_check_lib_save_LIBS
@@ -653,8 +543,10 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
 +  echo "$as_me:$LINENO: checking for usb.h" >&5
 +echo $ECHO_N "checking for usb.h... $ECHO_C" >&6
 +if test "${ac_cv_header_usb_h+set}" = set; then
-+  echo $ECHO_N "(cached) $ECHO_C" >&6
-+fi
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ fi
+-echo "$as_me:$LINENO: result: $ac_cv_header_libusb_h" >&5
+-echo "${ECHO_T}$ac_cv_header_libusb_h" >&6
 +echo "$as_me:$LINENO: result: $ac_cv_header_usb_h" >&5
 +echo "${ECHO_T}$ac_cv_header_usb_h" >&6
  else
@@ -666,7 +558,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -29055,7 +29064,7 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -29055,7 +29069,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -675,7 +567,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
-@@ -29091,15 +29100,15 @@ echo "$as_me:$LINENO: result: $ac_header
+@@ -29091,15 +29105,15 @@ echo "$as_me:$LINENO: result: $ac_header
  echo "${ECHO_T}$ac_header_compiler" >&6
  
  # Is the header present?
@@ -694,7 +586,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
  _ACEOF
  if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
    (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
-@@ -29133,25 +29142,25 @@ echo "${ECHO_T}$ac_header_preproc" >&6
+@@ -29133,25 +29147,25 @@ echo "${ECHO_T}$ac_header_preproc" >&6
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
    yes:no: )
@@ -736,7 +628,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
      (
        cat <<\_ASBOX
  ## ------------------------------------------ ##
-@@ -29162,34 +29171,34 @@ _ASBOX
+@@ -29162,34 +29176,34 @@ _ASBOX
        sed "s/^/$as_me: WARNING:     /" >&2
      ;;
  esac
@@ -787,7 +679,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -29197,7 +29206,7 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -29197,7 +29211,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -796,7 +688,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
-@@ -29233,15 +29242,15 @@ echo "$as_me:$LINENO: result: $ac_header
+@@ -29233,15 +29247,15 @@ echo "$as_me:$LINENO: result: $ac_header
  echo "${ECHO_T}$ac_header_compiler" >&6
  
  # Is the header present?
@@ -815,7 +707,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
  _ACEOF
  if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
    (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
-@@ -29275,25 +29284,25 @@ echo "${ECHO_T}$ac_header_preproc" >&6
+@@ -29275,25 +29289,25 @@ echo "${ECHO_T}$ac_header_preproc" >&6
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
    yes:no: )
@@ -857,7 +749,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
      (
        cat <<\_ASBOX
  ## ------------------------------------------ ##
-@@ -29304,33 +29313,29 @@ _ASBOX
+@@ -29304,33 +29318,29 @@ _ASBOX
        sed "s/^/$as_me: WARNING:     /" >&2
      ;;
  esac
@@ -900,7 +792,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
          fi
  
          echo "$as_me:$LINENO: checking for usbhid" >&5
-@@ -29347,8 +29352,13 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -29347,8 +29357,13 @@ cat >>conftest.$ac_ext <<_ACEOF
            #if defined(HAVE_USB_H)
            #include <usb.h>
            #endif
@@ -914,7 +806,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
            #if defined(HAVE_USBHID_H)
            #include <usbhid.h>
            #elif defined(HAVE_LIBUSB_H)
-@@ -29418,8 +29428,13 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -29418,8 +29433,13 @@ cat >>conftest.$ac_ext <<_ACEOF
                #if defined(HAVE_USB_H)
                #include <usb.h>
                #endif
@@ -928,7 +820,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
                #if defined(HAVE_USBHID_H)
                #include <usbhid.h>
                #elif defined(HAVE_LIBUSB_H)
-@@ -29490,8 +29505,13 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -29490,8 +29510,13 @@ cat >>conftest.$ac_ext <<_ACEOF
                #if defined(HAVE_USB_H)
                #include <usb.h>
                #endif
@@ -942,7 +834,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
                #if defined(HAVE_USBHID_H)
                #include <usbhid.h>
                #elif defined(HAVE_LIBUSB_H)
-@@ -29554,6 +29574,70 @@ echo "${ECHO_T}$have_usbhid_new" >&6
+@@ -29554,6 +29579,70 @@ echo "${ECHO_T}$have_usbhid_new" >&6
      fi
  }
  
@@ -1013,7 +905,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
  CheckAltivec()
  {
      echo "$as_me:$LINENO: checking for GCC Altivec instruction support" >&5
-@@ -29948,7 +30032,7 @@ __EOF__
+@@ -29948,7 +30037,7 @@ __EOF__
  
          fi
          ;;
@@ -1022,7 +914,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
          ARCH=freebsd
          CheckDummyVideo
          CheckDiskAudio
-@@ -30014,17 +30098,19 @@ __EOF__
+@@ -30014,17 +30103,19 @@ __EOF__
          CheckESD
          CheckNAS
          CheckX11
@@ -1045,7 +937,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
          fi
          # Set up files for the cdrom library
          if test x$enable_cdrom = xyes; then
-@@ -30033,9 +30119,6 @@ __EOF__
+@@ -30033,9 +30124,6 @@ __EOF__
          fi
          # Set up files for the thread library
          if test x$enable_threads = xyes; then
@@ -1055,7 +947,7 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
              CopyUnixThreadSource
          fi
          # Set up files for the timer library
-@@ -31670,7 +31753,7 @@ fi
+@@ -31670,7 +31758,7 @@ fi
  # Set runtime shared library paths as needed
  
  if test "x$enable_rpath" = "xyes"; then
@@ -1064,11 +956,9 @@ $NetBSD: patch-am,v 1.18 2005/09/07 10:15:39 adam Exp $
      SDL_RLD_FLAGS="-Wl,-rpath,\${exec_prefix}/lib"
    fi
    if test $ARCH = solaris; then
-@@ -32817,8 +32900,9 @@ s,@X_EXTRA_LIBS@,$X_EXTRA_LIBS,;t t
- s,@PKG_CONFIG@,$PKG_CONFIG,;t t
+@@ -32818,7 +32906,7 @@ s,@PKG_CONFIG@,$PKG_CONFIG,;t t
  s,@DIRECTFB_CFLAGS@,$DIRECTFB_CFLAGS,;t t
  s,@DIRECTFB_LIBS@,$DIRECTFB_LIBS,;t t
-+s,@AALIB_CONFIG@,$AALIB_CONFIG,;t t
  s,@OSMESA_CONFIG@,$OSMESA_CONFIG,;t t
 -s,@PTH_CONFIG@,$PTH_CONFIG,;t t
 +s,@PTHREAD_CONFIG@,$PTHREAD_CONFIG,;t t
