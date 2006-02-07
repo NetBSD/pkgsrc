@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/02/05 23:11:49 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2006/02/07 22:37:38 tron Exp $
 
 DISTNAME=	xservers-3.3.6.5
 PKGREVISION=	1
@@ -16,7 +16,7 @@ NO_SRC_ON_FTP=	"already in MASTER_SITE_LOCAL"
 
 BUILD_TARGET=	World
 PLIST_SRC=	${WRKDIR}/PLIST
-USE_X11BASE=	YES
+USE_X11=	YES
 
 .if !defined(X11_RELEASE) && !defined(CHECK_X11)
 X11_RELEASE!=	${MAKE} CHECK_X11=YES print-x11-release
