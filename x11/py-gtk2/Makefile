@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2006/02/05 23:11:41 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2006/02/07 21:27:28 drochner Exp $
 #
 
-DISTNAME=	pygtk-2.8.2
+DISTNAME=	pygtk-2.8.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pygtk/gtk2/}
-PKGREVISION=	2
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygtk/2.8/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +15,7 @@ CONFLICTS=	${PYPKGPREFIX}-gtk<0.6.10
 
 PY_PATCHPLIST=	YES
 USE_LIBTOOL=	YES
-PKGCONFIG_OVERRIDE+=	pygtk-2.0.pc.in pygobject-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	pygtk-2.0.pc.in
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 USE_TOOLS+=	gmake pkg-config
@@ -27,6 +26,7 @@ PYTHON_VERSIONS_ACCEPTED=	24 23
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
+.include "../../devel/py-gobject/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
