@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/02/05 23:08:44 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2006/02/07 19:58:06 wiz Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 PKGREVISION=	1
@@ -67,7 +67,7 @@ PKG_SUPPORTED_OPTIONS=	svn
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Msvn)
-.include "../../devel/subversion/buildlink3.mk"
+.include "../../devel/subversion-base/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-svn-include="${BUILDLINK_PREFIX.subversion-base}/include"
 CONFIGURE_ARGS+=	--with-svn-lib="${BUILDLINK_PREFIX.subversion-base}/lib"
 PLIST_SUBST+=		HAVE_SVN=""
