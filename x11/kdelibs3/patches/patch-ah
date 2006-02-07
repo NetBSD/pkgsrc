@@ -1,0 +1,24 @@
+$NetBSD: patch-ah,v 1.8 2006/02/07 10:06:53 markd Exp $
+
+--- kdecore/ksycoca.cpp.orig	2006-01-20 06:06:18.000000000 +1300
++++ kdecore/ksycoca.cpp
+@@ -42,6 +42,10 @@
+ #include <sys/mman.h>
+ #endif
+ 
++#ifdef Q_OS_SOLARIS
++extern "C" int madvise(caddr_t, size_t, int);
++#endif
++
+ #ifndef MAP_FAILED
+ #define MAP_FAILED ((void *) -1)
+ #endif
+@@ -145,7 +149,7 @@ bool KSycoca::openDatabase( bool openDum
+      else
+      {
+ #ifdef HAVE_MADVISE
+-	(void) madvise((void*)m_sycoca_mmap, m_sycoca_size, MADV_WILLNEED);
++	(void) madvise((char*)m_sycoca_mmap, m_sycoca_size, MADV_WILLNEED);
+ #endif
+         QByteArray b_array;
+         b_array.setRawData(m_sycoca_mmap, m_sycoca_size);
