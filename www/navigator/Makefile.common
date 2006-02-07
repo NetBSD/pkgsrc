@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.79 2005/12/05 20:51:13 rillig Exp $
+# $NetBSD: Makefile.common,v 1.80 2006/02/07 22:33:44 tron Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -208,9 +208,9 @@ do-install:
        jsd10.jar ldap${LDAP_VERS}.jar resource.jar scd10.jar
 	${INSTALL_DATA} ${WRKSRC}/${file} ${MOZILLA_HOME}/java/classes
 .    endfor
-	cd ${MOZILLA_HOME} && ${DECOMPRESS_CMD} \
+	cd ${MOZILLA_HOME} && ${GZCAT} \
 		${WRKSRC}/nethelp-v${NS_VERS_SHORT}.nif | ${PAX} -r
-	cd ${MOZILLA_HOME} && ${DECOMPRESS_CMD} \
+	cd ${MOZILLA_HOME} && ${GZCAT} \
 		${WRKSRC}/netscape-v${NS_VERS_SHORT}.nif | ${PAX} -cr \
 		'*libflashplayer.so' '*ShockwaveFlash.class' '*dynMotif*' \
 		|| ${TRUE}
