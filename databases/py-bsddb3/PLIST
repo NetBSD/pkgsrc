@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/08/05 18:21:04 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/02/07 21:36:37 drochner Exp $
 ${PYSITELIB}/bsddb3/__init__.py
 ${PYSITELIB}/bsddb3/__init__.pyc
 ${PYSITELIB}/bsddb3/__init__.pyo
@@ -24,6 +24,9 @@ ${PYSITELIB}/bsddb3/dbutils.pyo
 ${PYSITELIB}/bsddb3/tests/__init__.py
 ${PYSITELIB}/bsddb3/tests/__init__.pyc
 ${PYSITELIB}/bsddb3/tests/__init__.pyo
+${PYSITELIB}/bsddb3/tests/test_1413192.py
+${PYSITELIB}/bsddb3/tests/test_1413192.pyc
+${PYSITELIB}/bsddb3/tests/test_1413192.pyo
 ${PYSITELIB}/bsddb3/tests/test_all.py
 ${PYSITELIB}/bsddb3/tests/test_all.pyc
 ${PYSITELIB}/bsddb3/tests/test_all.pyo
