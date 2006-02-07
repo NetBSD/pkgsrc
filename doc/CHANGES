@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12827 2006/02/07 11:44:34 abs Exp $
+$NetBSD: CHANGES,v 1.12828 2006/02/07 12:26:18 lha Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -845,3 +845,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/pcre to 6.6 [gavan 2006-02-07]
 	Updated comms/hylafax to 4.2.5nb2 [markd 2006-02-07]
 	Update www/p5-CGI-FormBuilder to 3.0202 [abs 2006-02-07]
+	Updated security/heimdal to 0.7.2 [lha 2006-02-07]
