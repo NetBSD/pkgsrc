@@ -1,8 +1,7 @@
-The goal of CGI::FormBuilder (FormBuilder) is to provide an easy way
-for you to generate and process CGI form-based applications. This
-module is designed to be smart in that it figures a lot of stuff out
-for you. As a result, FormBuilder gives you about a 4:1 ratio of the
-code it generates versus what you have to write.
+The goal of CGI::FormBuilder is to provide an easy way to generate and
+process CGI form-based applications. It is designed to be smart in that
+it figures a lot of stuff out for you. As a result, FormBuilder gives
+about a 4:1 ratio of the code it generates versus what you have to write.
 
 For example, if you have multiple values for a field, it sticks them
 in a radio, checkbox, or select group, depending on some factors. It
