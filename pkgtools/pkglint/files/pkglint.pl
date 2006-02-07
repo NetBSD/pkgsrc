@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.504 2006/02/07 21:44:39 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.505 2006/02/07 22:10:20 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2463,6 +2463,7 @@ sub checkline_mk_shelltext($$) {
 	use constant SCST_FOR_IN	=> 17;
 	use constant SCST_FOR_CONT	=> 18;
 	use constant SCST_SET_CONT	=> 19;
+	use constant SCST_COND		=> 20;
 
 	use constant scst_statename => [
 		"SCST_START", "SCST_CONT", "SCST_INSTALL", "SCST_INSTALL_D",
@@ -2470,7 +2471,7 @@ sub checkline_mk_shelltext($$) {
 		"SCST_SED_E", "SCST_SET", "SCST_COND_CONT", "SCST_CASE",
 		"SCST_CASE_IN", "SCST_CASE_LABEL", "SCST_CASE_LABEL_CONT",
 		"SCST_CASE_PAREN", "SCST_FOR", "SCST_FOR_IN",
-		"SCST_FOR_CONT", "SCST_SET_CONT",
+		"SCST_FOR_CONT", "SCST_SET_CONT", "SCST_COND",
 	];
 
 	if ($text =~ qr"^\@*-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)") {
@@ -2508,6 +2509,10 @@ sub checkline_mk_shelltext($$) {
 				$addition = " and add USE_TOOLS+=${toolname} before this line";
 			}
 			$line->log_warning("Possible direct use of tool \"${shellword}\". Please use \$\{$vartools->{$shellword}\} instead${addition}.");
+		}
+
+		if ($state == SCST_COND && $shellword eq "cd") {
+			$line->log_error("The Solaris /bin/sh cannot handle \"cd\" inside conditionals.");
 		}
 
 		if (($state != SCST_PAX_S && $state != SCST_SED_E && $state != SCST_CASE_LABEL) && $shellword =~ qr"^/" && $shellword ne "/dev/null") {
@@ -2574,7 +2579,7 @@ sub checkline_mk_shelltext($$) {
 				: ($shellword eq "\${PAX}") ? SCST_PAX
 				: ($shellword eq "\${SED}") ? SCST_SED
 				: ($shellword eq "set") ? SCST_SET
-				: ($shellword =~ qr"^(?:if|elif|while)$") ? SCST_COND_CONT
+				: ($shellword =~ qr"^(?:if|elif|while)$") ? SCST_COND
 				: ($shellword =~ qr"^(?:then|else|do)$") ? SCST_START
 				: ($shellword eq "case") ? SCST_CASE
 				: ($shellword eq "for") ? SCST_FOR
@@ -2604,6 +2609,7 @@ sub checkline_mk_shelltext($$) {
 			: ($state == SCST_CASE_LABEL_CONT && $shellword eq "|") ? SCST_CASE_LABEL
 			: ($state == SCST_CASE_LABEL_CONT && $shellword eq ")") ? SCST_START
 			: ($state == SCST_CONT) ? SCST_CONT
+			: ($state == SCST_COND) ? SCST_COND_CONT
 			: ($state == SCST_COND_CONT) ? SCST_COND_CONT
 			: ($state == SCST_FOR) ? SCST_FOR_IN
 			: ($state == SCST_FOR_IN && $shellword eq "in") ? SCST_FOR_CONT
