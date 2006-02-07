@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2005/10/25 11:18:52 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/02/07 13:28:08 drochner Exp $
 ${PYINC}/numarray/arraybase.h
+${PYINC}/numarray/arrayif.h
 ${PYINC}/numarray/arrayobject.h
 ${PYINC}/numarray/cfunc.h
 ${PYINC}/numarray/ieeespecial.h
@@ -45,6 +46,9 @@ ${PYSITELIB}/numarray/_ufuncall.pyo
 ${PYSITELIB}/numarray/array_persist.py
 ${PYSITELIB}/numarray/array_persist.pyc
 ${PYSITELIB}/numarray/array_persist.pyo
+${PYSITELIB}/numarray/array_protocol.py
+${PYSITELIB}/numarray/array_protocol.pyc
+${PYSITELIB}/numarray/array_protocol.pyo
 ${PYSITELIB}/numarray/arrayprint.py
 ${PYSITELIB}/numarray/arrayprint.pyc
 ${PYSITELIB}/numarray/arrayprint.pyo
