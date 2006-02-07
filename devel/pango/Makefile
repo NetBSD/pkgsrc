@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2006/02/05 23:08:50 joerg Exp $
+# $NetBSD: Makefile,v 1.68 2006/02/07 18:00:15 wiz Exp $
 #
 
-DISTNAME=		pango-1.10.2
-PKGREVISION=		2
+DISTNAME=		pango-1.10.3
 CATEGORIES=		devel fonts
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.8/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.8/ \
@@ -22,15 +21,15 @@ USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE=	pango-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	pango.pc.in
-PKGCONFIG_OVERRIDE+=	pangocairo.pc-uninstalled.in
+PKGCONFIG_OVERRIDE+=	pangocairo-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	pangocairo.pc.in
-PKGCONFIG_OVERRIDE+=	pangoft2.pc-uninstalled.in
+PKGCONFIG_OVERRIDE+=	pangoft2-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	pangoft2.pc.in
-PKGCONFIG_OVERRIDE+=	pangowin32.pc-uninstalled.in
+PKGCONFIG_OVERRIDE+=	pangowin32-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	pangowin32.pc.in
-PKGCONFIG_OVERRIDE+=	pangox.pc-uninstalled.in
+PKGCONFIG_OVERRIDE+=	pangox-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	pangox.pc.in
-PKGCONFIG_OVERRIDE+=	pangoxft.pc-uninstalled.in
+PKGCONFIG_OVERRIDE+=	pangoxft-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	pangoxft.pc.in
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
