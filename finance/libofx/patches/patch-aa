@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/02/05 22:25:01 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2006/02/08 16:21:51 joerg Exp $
 
---- lib/ofx_preproc.cpp.orig	2006-01-02 11:57:37.000000000 -0500
-+++ lib/ofx_preproc.cpp	2006-01-02 11:58:09.000000000 -0500
-@@ -204,7 +204,7 @@
+--- lib/ofx_preproc.cpp.orig	2004-09-02 00:39:51.000000000 +0000
++++ lib/ofx_preproc.cpp
+@@ -21,6 +21,7 @@
+ #include <fstream>
+ #include <stdlib.h>
+ #include <stdio.h>
++#include <unistd.h>
+ #include <string>
+ #include "ParserEventGeneratorKit.h"
+ #include "libofx.h"
+@@ -204,7 +205,7 @@ CFCT int libofx_proc_buffer(LibofxContex
    string s_buffer;
    char *filenames[3];
    char tmp_filename[50];
