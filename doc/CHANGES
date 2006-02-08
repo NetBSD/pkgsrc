@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12842 2006/02/08 15:14:07 seb Exp $
+$NetBSD: CHANGES,v 1.12843 2006/02/08 16:28:43 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -870,3 +870,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/exiv2 to 0.9.1 [drochner 2006-02-08]
 	Updated mail/dovecot to 1.0beta3 [ghen 2006-02-08]
 	Added devel/p5-Carp-Assert-More version 1.12 [seb 2006-02-08]
+	Updated devel/p5-Test-LongString to 0.09nb1 [seb 2006-02-08]
