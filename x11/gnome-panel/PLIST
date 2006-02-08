@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2005/10/23 17:44:41 minskim Exp $
+@comment $NetBSD: PLIST,v 1.24 2006/02/08 18:41:11 drochner Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/panel-test-applets
@@ -29,6 +29,7 @@ share/doc/panel-applet/left.png
 share/doc/panel-applet/multi-applets.html
 share/doc/panel-applet/panel-applet-Panel-Applet-GConf-Utilities.html
 share/doc/panel-applet/panel-applet.devhelp
+share/doc/panel-applet/panel-applet.devhelp2
 share/doc/panel-applet/panel-applet.html
 share/doc/panel-applet/panel-signals.html
 share/doc/panel-applet/right.png
@@ -321,6 +322,7 @@ ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-panel-2.0.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-panel-2.0.mo
 ${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/gnome-panel-2.0.mo
 share/omf/clock/clock-C.omf
