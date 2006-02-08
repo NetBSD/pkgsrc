@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/02/07 22:37:38 tron Exp $
+# $NetBSD: Makefile,v 1.29 2006/02/08 15:20:49 joerg Exp $
 
 DISTNAME=	xservers-3.3.6.5
 PKGREVISION=	1
@@ -16,15 +16,6 @@ NO_SRC_ON_FTP=	"already in MASTER_SITE_LOCAL"
 
 BUILD_TARGET=	World
 PLIST_SRC=	${WRKDIR}/PLIST
-USE_X11=	YES
-
-.if !defined(X11_RELEASE) && !defined(CHECK_X11)
-X11_RELEASE!=	${MAKE} CHECK_X11=YES print-x11-release
-MAKEFLAGS+=	X11_RELEASE=${X11_RELEASE:Q}
-.  if ${X11_RELEASE} == "6.3"
-PKG_SKIP_REASON+=	"${PKGNAME} is part of your X11 distribution"
-.  endif
-.endif
 
 X11_SUBDIR=	X11R6.3
 
@@ -44,11 +35,3 @@ post-install:
 	${AWK} '{print("@dirrm "$$1)}' >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
-
-print-x11-release:
-.if exists(${X11BASE}/lib/X11/config/X11.tmpl)
-	@${GREP} '^#define SharedXextRev' ${X11BASE}/lib/X11/config/X11.tmpl \
-	| ${AWK} '{print($$3)}'
-.else
-	@${ECHO} unknown
-.endif
