@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2006/02/08 15:50:20 joerg Exp $
+
+--- ncurses_wrap.c.orig	2006-02-07 17:28:43.000000000 +0000
++++ ncurses_wrap.c
+@@ -2362,7 +2362,7 @@ static VALUE rbncurs_wprintw(int argc, V
+ 
+ /* Debugging : use with libncurses_g.a */
+ #ifdef HAVE__TRACEF
+-static VALUE rbncurs_tracef(int argc, VALUE * argv, VALUE)
++static VALUE rbncurs_tracef(int argc, VALUE * argv, VALUE dummy)
+ {
+     if (argc < 1) {
+         rb_raise(rb_eArgError, "function needs at least 1 argument");
+@@ -2374,7 +2374,7 @@ static VALUE rbncurs_tracef(int argc, VA
+ }
+ #endif /* HAVE__TRACEF */
+ #ifdef HAVE__TRACEDUMP
+-static VALUE rbncurs_tracedump(VALUE dummy, VALUE rb_label, label rb_win)
++static VALUE rbncurs_tracedump(VALUE dummy, VALUE rb_label, VALUE rb_win)
+ {
+     _tracedump(STR2CSTR(rb_label), get_window(rb_win));
+ }
