@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.436 2006/02/07 23:29:16 seb Exp $
+# $NetBSD: Makefile,v 1.437 2006/02/08 17:07:22 seb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -244,6 +244,7 @@ SUBDIR+=	p5-SVN-Web
 SUBDIR+=	p5-Template-Extract
 SUBDIR+=	p5-Template-Generate
 SUBDIR+=	p5-Template-Toolkit
+SUBDIR+=	p5-Test-WWW-Mechanize
 SUBDIR+=	p5-URI
 SUBDIR+=	p5-VRML
 SUBDIR+=	p5-WWW-Amazon-Wishlist
