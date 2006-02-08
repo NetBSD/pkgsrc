@@ -1,12 +1,13 @@
-$NetBSD: patch-ag,v 1.1 2004/07/23 15:09:57 recht Exp $
+$NetBSD: patch-ag,v 1.2 2006/02/08 18:25:24 drochner Exp $
 
---- libbalsa/imap/imap-handle.c.orig	2004-07-08 22:40:45.000000000 +0200
-+++ libbalsa/imap/imap-handle.c	2004-07-23 12:41:46.000000000 +0200
-@@ -20,8 +20,12 @@
+--- libbalsa/imap/imap-handle.c.orig	2005-06-11 10:23:54.000000000 +0200
++++ libbalsa/imap/imap-handle.c
+@@ -20,9 +20,13 @@
  
- #define _POSIX_SOURCE 1
- #define _BSD_SOURCE   1
+ #define _POSIX_C_SOURCE 199506L
+ #define _XOPEN_SOURCE 500
 +#define _NETBSD_SOURCE 1
+ 
  #include <sys/types.h>
  #include <sys/socket.h>
 +#ifdef __NetBSD__
