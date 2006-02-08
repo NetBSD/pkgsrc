@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/02/05 23:09:39 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2006/02/08 16:58:29 joerg Exp $
 #
 
 DISTNAME=		tgif-4.1.44
@@ -14,9 +14,17 @@ USE_IMAKE=		yes
 
 PTHREAD_OPTS+=		require
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "DragonFly"
+OS_TEMPLATE=	${WRKSRC}/Tgif.tmpl-freebsd
+.else
+OS_TEMPLATE=	${WRKSRC}/Tgif.tmpl-${LOWER_OPSYS}
+.endif
+
 post-patch::
 	@${RM} -f ${WRKSRC}/Tgif.tmpl
-	@${CP} ${WRKSRC}/Tgif.tmpl-${LOWER_OPSYS} ${WRKSRC}/Tgif.tmpl
+	@${CP}  ${OS_TEMPLATE} ${WRKSRC}/Tgif.tmpl
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
