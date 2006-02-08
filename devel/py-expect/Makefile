@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/02/05 23:08:51 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/08 19:47:08 joerg Exp $
 #
 
 DISTNAME=	ExpectPy-1.9b1
@@ -30,6 +30,14 @@ post-install:
 .for f in ${EXAMPLESFILES}
 		${INSTALL_DATA} ${WRKSRC}/examples/${f} ${EXAMPLESDIR}
 .endfor
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "DragonFly"
+PTHREAD_AUTO_VARS=	yes
+
+.include "../../mk/pthread.buildlink3.mk"
+.endif
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../lang/tcl-expect/buildlink3.mk"
