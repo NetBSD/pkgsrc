@@ -1,9 +1,48 @@
-@comment $NetBSD: PLIST,v 1.6 2004/11/25 09:33:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/02/08 18:25:24 drochner Exp $
 bin/balsa
 bin/balsa-ab
 lib/bonobo/servers/GNOME_Balsa.server
 man/man1/balsa.1
 share/applications/balsa.desktop
+share/balsa/hicolor/16x16/apps/balsa-encrypted.png
+share/balsa/hicolor/16x16/apps/balsa-mark-all.png
+share/balsa/hicolor/16x16/apps/balsa-mbox-draft.png
+share/balsa/hicolor/16x16/apps/balsa-mbox-sent.png
+share/balsa/hicolor/16x16/apps/balsa-mbox-tray-empty.png
+share/balsa/hicolor/16x16/apps/balsa-mbox-tray-full.png
+share/balsa/hicolor/16x16/apps/balsa-next-flagged.png
+share/balsa/hicolor/16x16/apps/balsa-next-part.png
+share/balsa/hicolor/16x16/apps/balsa-next-unread.png
+share/balsa/hicolor/16x16/apps/balsa-next.png
+share/balsa/hicolor/16x16/apps/balsa-postpone.png
+share/balsa/hicolor/16x16/apps/balsa-previous-part.png
+share/balsa/hicolor/16x16/apps/balsa-previous.png
+share/balsa/hicolor/16x16/apps/balsa-reply-all.png
+share/balsa/hicolor/16x16/apps/balsa-signature-bad.png
+share/balsa/hicolor/16x16/apps/balsa-signature-good.png
+share/balsa/hicolor/16x16/apps/balsa-signature-notrust.png
+share/balsa/hicolor/16x16/apps/balsa-signature-unknown.png
+share/balsa/hicolor/22x22
+share/balsa/hicolor/24x24/apps/balsa-crypt-check.png
+share/balsa/hicolor/24x24/apps/balsa-encrypt.png
+share/balsa/hicolor/24x24/apps/balsa-encrypted.png
+share/balsa/hicolor/24x24/apps/balsa-mark-all.png
+share/balsa/hicolor/24x24/apps/balsa-marked-new.png
+share/balsa/hicolor/24x24/apps/balsa-next-flagged.png
+share/balsa/hicolor/24x24/apps/balsa-next-part.png
+share/balsa/hicolor/24x24/apps/balsa-next-unread.png
+share/balsa/hicolor/24x24/apps/balsa-next.png
+share/balsa/hicolor/24x24/apps/balsa-postpone.png
+share/balsa/hicolor/24x24/apps/balsa-preview.png
+share/balsa/hicolor/24x24/apps/balsa-previous-part.png
+share/balsa/hicolor/24x24/apps/balsa-previous.png
+share/balsa/hicolor/24x24/apps/balsa-reply-all.png
+share/balsa/hicolor/24x24/apps/balsa-sign.png
+share/balsa/hicolor/24x24/apps/balsa-signature-bad.png
+share/balsa/hicolor/24x24/apps/balsa-signature-good.png
+share/balsa/hicolor/24x24/apps/balsa-signature-notrust.png
+share/balsa/hicolor/24x24/apps/balsa-signature-unknown.png
+share/balsa/hicolor/24x24/apps/balsa-trash-empty.png
 share/balsa/pixmaps/attachment.png
 share/balsa/pixmaps/balsa-logo.png
 share/balsa/pixmaps/balsa-top.png
@@ -24,11 +63,24 @@ share/gnome/help/balsa/C/figures/example-alias.png
 share/gnome/help/balsa/C/figures/figuresdobaaddress-book-modify.png
 share/gnome/help/balsa/C/figures/main-window-toolbar.png
 share/gnome/help/balsa/C/figures/main-window.png
+share/gnome/help/balsa/C/figures/message-window.png
+share/gnome/help/balsa/C/figures/msg-part-select.png
 share/gnome/help/balsa/C/figures/newmsg-window-attachments.png
 share/gnome/help/balsa/C/figures/newmsg-window-toolbar.png
 share/gnome/help/balsa/C/figures/newmsg-window.png
 share/gnome/help/balsa/C/figures/preferences-window.png
 share/gnome/help/balsa/C/figures/spell-check.png
+share/icons/hicolor/48x48/mimetypes/gnome-mime-application-pgp-signature.png
+share/icons/hicolor/48x48/mimetypes/gnome-mime-application-pkcs7-mime.png
+share/icons/hicolor/48x48/mimetypes/gnome-mime-application-pkcs7-signature.png
+share/icons/hicolor/48x48/mimetypes/gnome-mime-application-x-pkcs7-signature.png
+share/icons/hicolor/48x48/mimetypes/gnome-mime-message-disposition-notification.png
+share/icons/hicolor/48x48/mimetypes/gnome-mime-message-external-body.png
+share/icons/hicolor/48x48/mimetypes/gnome-mime-message.png
+share/icons/hicolor/48x48/mimetypes/gnome-mime-multipart-alternative.png
+share/icons/hicolor/48x48/mimetypes/gnome-mime-multipart-encrypted.png
+share/icons/hicolor/48x48/mimetypes/gnome-mime-multipart-signed.png
+share/icons/hicolor/48x48/mimetypes/gnome-mime-multipart.png
 share/idl/Balsa.idl
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/balsa.mo
@@ -56,6 +108,8 @@ ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/balsa.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/balsa.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/balsa.mo
@@ -65,6 +119,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/balsa.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/balsa.mo
@@ -76,6 +131,7 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/balsa.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/balsa.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/balsa.mo
 share/omf/balsa/balsa-C.omf
 share/pixmaps/gnome-balsa2.png
@@ -87,12 +143,19 @@ share/sounds/balsa/startup.wav
 @dirrm share/omf/balsa
 @comment in scrollkeeper: @dirrm share/omf
 @comment in ORBit2: @dirrm share/idl
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/gnome/help/balsa/C/figures
 @dirrm share/gnome/help/balsa/C
 @dirrm share/gnome/help/balsa
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/examples/balsa
 @dirrm share/balsa/pixmaps
+@dirrm share/balsa/hicolor/24x24/apps
+@dirrm share/balsa/hicolor/24x24
+@dirrm share/balsa/hicolor/16x16/apps
+@dirrm share/balsa/hicolor/16x16
+@dirrm share/balsa/hicolor
 @dirrm share/balsa
 @comment in xdg-dirs: @dirrm share/applications
 @comment in libbonobo: @dirrm lib/bonobo/servers
