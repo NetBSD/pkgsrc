@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.5 2006/02/08 05:47:48 minskim Exp $
+
+May be removed when GNOME Bugzilla #330350 is resolved.
+
+--- file-chooser/sucky-desktop-item.c.orig	2005-07-11 13:04:12.000000000 -0700
++++ file-chooser/sucky-desktop-item.c
+@@ -67,7 +67,12 @@
+ 
+ #define sure_string(s) ((s)!=NULL?(s):"")
+ 
++#if defined(__APPLE__) && defined(HAVE_NSGETENVIRON) && defined(HAVE_CRT_EXTERNS_H)
++  #include <crt_externs.h>
++  #define environ (*_NSGetEnviron())
++#else
+ extern char **environ;
++#endif
+ 
+ struct _SuckyDesktopItem {
+ 	int refcount;
