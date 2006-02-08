@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2006/02/05 23:08:55 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/02/08 10:00:55 adam Exp $
 
 .include "../../editors/abiword/Makefile.common"
 
 PKGNAME=	abiword-plugins-${ABIWORD_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Plugins enhancing Abiword's capabilities
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/abiword-plugins
@@ -45,7 +45,9 @@ CONFIGURE_ARGS+=	--enable-urldict
 CONFIGURE_ARGS+=	--enable-wikipedia
 CONFIGURE_ARGS+=	--enable-wmf
 CONFIGURE_ARGS+=	--enable-wml
+CONFIGURE_ARGS+=	--enable-wordperfect
 CONFIGURE_ARGS+=	--enable-xhtml
 CONFIGURE_ARGS+=	--enable-xsl-fo
 
+.include "../../converters/libwpd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
