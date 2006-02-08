@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2006/01/26 23:23:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/02/08 10:00:56 adam Exp $
 lib/AbiWord-2.4/plugins/libAbiApplix.la
-lib/AbiWord-2.4/plugins/libAbiBabelfish.la
 lib/AbiWord-2.4/plugins/libAbiBMP.la
 lib/AbiWord-2.4/plugins/libAbiBZ2.la
+lib/AbiWord-2.4/plugins/libAbiBabelfish.la
 lib/AbiWord-2.4/plugins/libAbiCAPI.la
 lib/AbiWord-2.4/plugins/libAbiClarisWorks.la
 lib/AbiWord-2.4/plugins/libAbiCollab.la
@@ -13,8 +13,8 @@ lib/AbiWord-2.4/plugins/libAbiEML.la
 lib/AbiWord-2.4/plugins/libAbiFreeTranslation.la
 lib/AbiWord-2.4/plugins/libAbiGdict.la
 lib/AbiWord-2.4/plugins/libAbiGoogle.la
-lib/AbiWord-2.4/plugins/libAbiHancom.la
 lib/AbiWord-2.4/plugins/libAbiHRText.la
+lib/AbiWord-2.4/plugins/libAbiHancom.la
 lib/AbiWord-2.4/plugins/libAbiISCII.la
 lib/AbiWord-2.4/plugins/libAbiJPEG.la
 lib/AbiWord-2.4/plugins/libAbiKWord.la
@@ -31,6 +31,7 @@ lib/AbiWord-2.4/plugins/libAbiURLDict.la
 lib/AbiWord-2.4/plugins/libAbiWMF.la
 lib/AbiWord-2.4/plugins/libAbiWML.la
 lib/AbiWord-2.4/plugins/libAbiWikipedia.la
+lib/AbiWord-2.4/plugins/libAbiWordPerfect.la
 lib/AbiWord-2.4/plugins/libAbiXHTML.la
 lib/AbiWord-2.4/plugins/libAbiXSLFO.la
 @dirrm lib/AbiWord-2.4/plugins
