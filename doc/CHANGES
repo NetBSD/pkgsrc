@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12838 2006/02/08 10:00:26 shannonjr Exp $
+$NetBSD: CHANGES,v 1.12839 2006/02/08 10:04:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -856,3 +856,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/p5-Module-Refresh version 0.09 [seb 2006-02-08]
 	Updated converters/libwpd to 0.8.4 [adam 2006-02-08]
 	Updated security/libprelude to 0.9.5 [shannonjr 2006-02-08]
+	Updated editors/abiword-plugins to 2.4.2nb4 [adam 2006-02-08]
