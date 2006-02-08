@@ -1,12 +1,12 @@
-$NetBSD: patch-ah,v 1.1 2004/07/23 15:09:57 recht Exp $
+$NetBSD: patch-ah,v 1.2 2006/02/08 18:25:24 drochner Exp $
 
---- libbalsa/imap/imap-search.c.orig	2004-03-14 09:14:48.000000000 +0100
+--- libbalsa/imap/imap-search.c.orig	2005-06-22 22:08:59.000000000 +0200
 +++ libbalsa/imap/imap-search.c
-@@ -18,6 +18,7 @@
-  */
+@@ -19,6 +19,7 @@
  
- #define _POSIX_SOURCE 1
-+#define	_NETBSD_SOURCE         1
+ #define _POSIX_C_SOURCE 199506L
+ #define _XOPEN_SOURCE 500
++#define _NETBSD_SOURCE 1
+ 
  #include <string.h>
  #include <time.h>
- 
