@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/01/20 13:30:34 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/02/08 18:32:07 drochner Exp $
 include/libwnck-1.0/libwnck/application.h
 include/libwnck-1.0/libwnck/class-group.h
 include/libwnck-1.0/libwnck/libwnck.h
@@ -37,6 +37,7 @@ share/doc/libwnck/libwnck-window-menu.html
 share/doc/libwnck/libwnck-wnck-enum-types.html
 share/doc/libwnck/libwnck-xutils.html
 share/doc/libwnck/libwnck.devhelp
+share/doc/libwnck/libwnck.devhelp2
 share/doc/libwnck/right.png
 share/doc/libwnck/style.css
 share/doc/libwnck/up.png
@@ -113,6 +114,7 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libwnck.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/libwnck.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libwnck.mo
 @dirrm share/doc/libwnck
 @dirrm include/libwnck-1.0/libwnck
