@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4579 2006/02/07 18:00:41 wiz Exp $
+$NetBSD: TODO,v 1.4580 2006/02/08 09:44:26 adam Exp $
 
 Suggested new packages
 ======================
@@ -680,7 +680,6 @@ Suggested package updates
 	o libshout-2.2
 	o libsmi-0.4.3
 	o libtcl-nothread-8.4.9
-	o libwpd-0.8.3
 	o licq-core-1.3.0
 	o liferea-1.0.3
 	o lighttpd-1.4.9
