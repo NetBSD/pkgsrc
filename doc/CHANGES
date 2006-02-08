@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12841 2006/02/08 13:46:14 ghen Exp $
+$NetBSD: CHANGES,v 1.12842 2006/02/08 15:14:07 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -869,3 +869,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/intltool to 0.34.2 [drochner 2006-02-08]
 	Updated graphics/exiv2 to 0.9.1 [drochner 2006-02-08]
 	Updated mail/dovecot to 1.0beta3 [ghen 2006-02-08]
+	Added devel/p5-Carp-Assert-More version 1.12 [seb 2006-02-08]
