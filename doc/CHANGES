@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12834 2006/02/07 23:30:20 seb Exp $
+$NetBSD: CHANGES,v 1.12835 2006/02/08 03:27:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -852,3 +852,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/p5-Hook-LexWrap version 0.20 [seb 2006-02-07]
 	Updated editors/TeXmacs to 1.0.6 [ghen 2006-02-07]
 	Added www/p5-HTTP-Server-Simple-Mason version 0.09 [seb 2006-02-07]
+	Updated mail/getmail to 4.5.2 [schmonz 2006-02-08]
