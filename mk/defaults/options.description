@@ -143,6 +143,7 @@ libcrack
 libgcrypt	
 libnet10	
 libnet11	
+libofx			Enable OFX support.
 long-usernames	
 lookup	
 lprng-priv-ports	Connections must be made from privileged ports.
