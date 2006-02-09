@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/01/13 10:27:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/02/09 12:00:37 adam Exp $
 bin/gimp-2.3
 bin/gimp-console-2.3
 bin/gimp-remote-2.3
@@ -104,6 +104,7 @@ include/gimp-2.0/libgimpbase/gimpdatafiles.h
 include/gimp-2.0/libgimpbase/gimpenv.h
 include/gimp-2.0/libgimpbase/gimplimits.h
 include/gimp-2.0/libgimpbase/gimpmemsize.h
+include/gimp-2.0/libgimpbase/gimpparam.h
 include/gimp-2.0/libgimpbase/gimpparasite.h
 include/gimp-2.0/libgimpbase/gimpparasiteio.h
 include/gimp-2.0/libgimpbase/gimpsignal.h
@@ -268,6 +269,7 @@ lib/gimp/2.0/plug-ins/gih
 lib/gimp/2.0/plug-ins/gimpressionist
 lib/gimp/2.0/plug-ins/glasstile
 lib/gimp/2.0/plug-ins/glob
+lib/gimp/2.0/plug-ins/gnomeprint
 lib/gimp/2.0/plug-ins/gqbist
 lib/gimp/2.0/plug-ins/gradmap
 lib/gimp/2.0/plug-ins/grid
@@ -489,6 +491,7 @@ share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimpdatafiles.html
 share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimpenv.html
 share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimplimits.html
 share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimpmemsize.html
+share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimpparam.html
 share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimpparasite.html
 share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimpparasiteio.html
 share/doc/html/${PKGNAME}/libgimpbase/libgimpbase-gimpsignal.html
@@ -2075,7 +2078,7 @@ share/mime-info/gimp.keys
 @dirrm lib/gimp/2.0/interpreters
 @dirrm lib/gimp/2.0/environ
 @dirrm lib/gimp/2.0
-@dirrm lib/gimp
+@unexec ${RMDIR} %D/lib/gimp 2>/dev/null || ${TRUE}
 @dirrm include/gimp-2.0/libgimpwidgets
 @dirrm include/gimp-2.0/libgimpthumb
 @dirrm include/gimp-2.0/libgimpmodule
