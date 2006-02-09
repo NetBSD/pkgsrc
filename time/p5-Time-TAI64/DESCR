@@ -1,0 +1,2 @@
+This Module makes available to the user functions to convert TAI64 strings
+to unix timestamps suitable to make time calculations.
