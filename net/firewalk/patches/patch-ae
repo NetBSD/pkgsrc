@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 2006/02/09 22:34:13 minskim Exp $
+
+--- src/init.c.orig	2002-05-14 23:46:54.000000000 -0700
++++ src/init.c
+@@ -35,6 +35,9 @@
+ #if (HAVE_CONFIG_H)
+ #include "../include/config.h"
+ #endif
++#ifdef HAVE_NET_BPF_H
++#include <net/bpf.h>
++#endif
+ #include "../include/firewalk.h"
+ 
+ int
