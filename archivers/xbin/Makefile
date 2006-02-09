@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2005/10/03 11:23:42 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2006/02/09 18:20:58 rillig Exp $
 #
 
 DISTNAME=	${PRGNAME}unix
@@ -10,7 +10,7 @@ DISTFILES=	${DISTNAME}.c ${PRGNAME}.man
 MAINTAINER=	rh@NetBSD.org
 COMMENT=	Convert mailable BinHex format into binary
 
-RESTRICTED=	"May not be sold without permission"
+RESTRICTED=	May not be sold without permission.
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
@@ -34,15 +34,15 @@ INSTALLATION_DIRS=	bin man/cat1
 
 post-extract:
 .for dfile in ${DISTFILES}
-	${CP} ${DISTDIR}/${dfile} ${WRKSRC}
+	${CP} ${DISTDIR:Q}/${dfile:Q} ${WRKSRC:Q}
 .endfor
 
 do-build:
-	cd ${WRKSRC} && \
-	${CC} ${CFLAGS} -o ${PRGNAME} ${DISTNAME}.c ${LDFLAGS}
+	cd ${WRKSRC:Q} && \
+	${CC} ${CFLAGS} -o ${PRGNAME:Q} ${DISTNAME:Q}.c ${LDFLAGS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PRGNAME} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${PRGNAME}.man ${PREFIX}/man/cat1/${PRGNAME}.0
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/${PRGNAME:Q} ${PREFIX:Q}/bin
+	${INSTALL_MAN} ${WRKSRC:Q}/${PRGNAME:Q}.man ${PREFIX:Q}/man/cat1/${PRGNAME:Q}.0
 
 .include "../../mk/bsd.pkg.mk"
