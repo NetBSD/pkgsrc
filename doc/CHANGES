@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12848 2006/02/09 12:01:44 adam Exp $
+$NetBSD: CHANGES,v 1.12849 2006/02/09 12:29:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -876,3 +876,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Added time/p5-Time-TAI64 2.10 [kleink 2006-02-09]
 	Updated security/prelude-manager to 0.9.3 [shannonjr 2006-02-09]
 	Updated graphics/gimp24 to 2.3.7 [adam 2006-02-09]
+	Updated graphics/MesaLib to 6.4.2 [adam 2006-02-09]
+	Updated graphics/MesaDemos to 6.4.2 [adam 2006-02-09]
+	Updated graphics/glu to 6.4.2 [adam 2006-02-09]
+	Updated graphics/glut to 6.4.2 [adam 2006-02-09]
+	Updated graphics/Mesa to 6.4.2 [adam 2006-02-09]
