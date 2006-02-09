@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12845 2006/02/09 08:26:36 adam Exp $
+$NetBSD: CHANGES,v 1.12846 2006/02/09 10:43:28 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -873,3 +873,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-Test-LongString to 0.09nb1 [seb 2006-02-08]
 	Added www/p5-Test-WWW-Mechanize version 1.08 [seb 2006-02-08]
 	Updated games/scummvm to 0.8.2 [adam 2006-02-09]
+	Added time/p5-Time-TAI64 2.10 [kleink 2006-02-09]
