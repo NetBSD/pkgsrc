@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4581 2006/02/08 21:45:01 wiz Exp $
+$NetBSD: TODO,v 1.4582 2006/02/09 21:39:36 heinz Exp $
 
 Suggested new packages
 ======================
@@ -873,7 +873,6 @@ Suggested package updates
 	o p5-Msgcat-1.03
 	o p5-Net-AOLIM-1.5
 	o p5-Net-CIDR-0.15
-	o p5-Net-DNS-0.53 [heinz]
 	o p5-Net-Daemon-0.38
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
