@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/01/23 11:12:50 ghen Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/02/09 21:36:40 ghen Exp $
 bin/icehelp
 bin/icesh
 bin/icewm
@@ -350,8 +350,8 @@ ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/icewm.mo
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/icewm.mo
@@ -364,6 +364,7 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/icewm.mo
 ${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/icewm.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/icewm.mo
 @dirrm share/icewm/themes/yellowmotif
 @dirrm share/icewm/themes/win95
 @dirrm share/icewm/themes/warp4
