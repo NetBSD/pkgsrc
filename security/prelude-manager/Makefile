@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/02/05 23:10:46 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/09 11:01:57 shannonjr Exp $
 #
 
-DISTNAME=		prelude-manager-0.9.2
-PKGREVISION=		1
+DISTNAME=		prelude-manager-0.9.3
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.org/download/releases/
 
@@ -15,7 +14,7 @@ COMMENT=		Prelude IDS manager
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		make
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--with-libpreludedb-prefix=${BUILDLINK_PREFIX.libpreludedb}
