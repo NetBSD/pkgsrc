@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12854 2006/02/09 21:39:36 heinz Exp $
+$NetBSD: CHANGES,v 1.12855 2006/02/09 21:47:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -887,3 +887,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/p5-Net-DNS to 0.55 [heinz 2006-02-09]
 	Updated wm/icewm to 1.2.25 [ghen 2006-02-09]
 	Updated wm/icewm-imlib to 1.2.25 [ghen 2006-02-09]
+	Updated finance/kmymoney2 to 0.8nb4 [wiz 2006-02-09]
