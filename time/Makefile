@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/02/05 21:58:23 ghen Exp $
+# $NetBSD: Makefile,v 1.45 2006/02/09 10:42:34 kleink Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -41,6 +41,7 @@ SUBDIR+=	p5-Time
 SUBDIR+=	p5-Time-HiRes
 SUBDIR+=	p5-Time-Period
 SUBDIR+=	p5-Time-Piece
+SUBDIR+=	p5-Time-TAI64
 SUBDIR+=	p5-TimeDate
 SUBDIR+=	pcal
 SUBDIR+=	pclock
