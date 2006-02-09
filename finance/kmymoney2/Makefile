@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2006/02/05 23:09:06 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/02/09 21:46:47 wiz Exp $
 
 DISTNAME=	kmymoney2-0.8
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	finance kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kmymoney2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,16 +12,18 @@ COMMENT=	Personal finance manager for kde3
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
-USE_LIBTOOL=            YES
-GNU_CONFIGURE=          YES
-SHLIBTOOL_OVERRIDE=     libtool
+USE_LIBTOOL=		YES
+GNU_CONFIGURE=		YES
+SHLIBTOOL_OVERRIDE+=	libtool
+
+.include "options.mk"
 
 CONFIGURE_ARGS+=	--enable-mt
 
 # a fix for qt-3.3.5, please remove if qt-3.3.6 (or newer) solves the problem
 SUBST_CLASSES+=		hints
 SUBST_STAGE.hints=	post-patch
-SUBST_MESSAGE.hints=	"Fix includehints."
+SUBST_MESSAGE.hints=	Fix includehints.
 SUBST_FILES.hints=	kmymoney2/dialogs/*.ui kmymoney2/views/*.ui
 SUBST_FILTER_CMD.hints=	${GREP} -v includehint
 
