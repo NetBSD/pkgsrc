@@ -4,7 +4,8 @@ For details and examples, please read the Net::DNS documentation page
 ('perldoc Net::DNS')
 
 Features include a simple nameserver (Net::DNS::Nameserver), dynamic
-DNS updates, signed queries (TSIG), support for DNAME resource records.
+DNS updates, signed queries (TSIG), support for DNAME resource records
+and IPv6.
 
 The author invites feedback on Net::DNS, especially on new features
 like dynamic updates und TSIG.  If there's something you'd like to
