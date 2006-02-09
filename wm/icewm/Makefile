@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2006/02/05 23:11:13 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2006/02/09 21:36:40 ghen Exp $
 
 PKGNAME=		${DISTNAME}
-PKGREVISION=		3
 COMMENT=		Small, fast and light-weight window manager
 
 CONFLICTS+=		icewm-gnome-[0-9]* icewm-imlib-[0-9]*
