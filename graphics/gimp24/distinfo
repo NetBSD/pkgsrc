@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2006/01/13 10:27:18 adam Exp $
+$NetBSD: distinfo,v 1.3 2006/02/09 12:00:37 adam Exp $
 
-SHA1 (gimp-2.3.6.tar.bz2) = 7574f43c1dc5722ddb2eb153b4da4a6ca21f1803
-RMD160 (gimp-2.3.6.tar.bz2) = df9f13a48240fdf99ce3df3fec0cf12083794002
-Size (gimp-2.3.6.tar.bz2) = 14797176 bytes
-SHA1 (patch-aa) = 1905ce54a53c0ab27230c139fafc8322b33292d3
-SHA1 (patch-ab) = 0bcccb008e2f363d97c51572ed8ba0963bf5ebd7
-SHA1 (patch-ad) = 632c34e0fbeda69139b2b674d9c5ef80db40dcca
+SHA1 (gimp-2.3.7.tar.bz2) = 282e4dd1adc2c3fb9f7f3ed2b6773069350ca745
+RMD160 (gimp-2.3.7.tar.bz2) = 5703022bf58aff99092a1c20c60a98b630e0d186
+Size (gimp-2.3.7.tar.bz2) = 14864245 bytes
+SHA1 (patch-aa) = edb6cf2fb77c957396c7c1f9d7b6a29fbd645792
+SHA1 (patch-ab) = 6586752cd88d80acdad191cc630b7faf633e62ce
+SHA1 (patch-ad) = 24c141e55321d36b45e0e17712882185fc5f04ac
