@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2006/01/05 04:37:33 uebayasi Exp $
+# $NetBSD: Makefile,v 1.24 2006/02/09 10:58:20 drochner Exp $
 #
 
 DISTNAME=	dcraw
-PKGNAME=	dcraw-7.94
+PKGNAME=	dcraw-8.05
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.cybercom.net/~dcoffin/dcraw/
 DISTFILES=	dcraw.c dcraw.1
@@ -16,6 +16,19 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 LIBS+=		-lm -ljpeg
 
 INSTALLATION_DIRS=	bin man/man1
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.dcraw
+PKG_SUPPORTED_OPTIONS=	lcms
+PKG_SUGGESTED_OPTIONS=	lcms
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mlcms)
+LIBS+=		-llcms
+.include "../../graphics/lcms/buildlink3.mk"
+.else
+CFLAGS+=	-DNO_LCMS
+.endif
 
 do-extract:
 	(cd ${DISTDIR}/${DIST_SUBDIR} && ${CP} ${DISTFILES} ${WRKSRC})
