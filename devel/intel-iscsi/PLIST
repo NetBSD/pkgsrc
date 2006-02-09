@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/03 23:58:41 agc Exp $
-bin/ufsdisk
-bin/uramdisk
-bin/ufsdisk_mmap
-bin/usocktest
-bin/utest
-bin/ktest
-bin/uosd
