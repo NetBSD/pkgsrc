@@ -1,6 +1,6 @@
-# $Id: Makefile,v 1.6 2006/02/04 15:08:33 abs Exp $
+# $Id: Makefile,v 1.7 2006/02/09 13:45:04 abs Exp $
 
-VERSION=0.97
+VERSION=0.98
 
 PREFIX?=/usr/local
 OPSYS?=`uname`
