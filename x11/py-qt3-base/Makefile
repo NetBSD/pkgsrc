@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/02/05 23:11:41 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2006/02/10 10:45:02 drochner Exp $
 #
 
 .include "../../x11/py-qt3-base/Makefile.common"
@@ -26,8 +26,8 @@ SUBST_SED.pyversfx=	-e "s|@PYVERSSUFFIX@|${PYVERSSUFFIX}|g"
 .include "../../x11/py-qt3-sip/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
-# XXX Please verify whether qt3-tools is really needed at run-time.
-# If it is, then remove this comment.  If it is not, then remove
-# this comment and the line below, and bump PKGREVISION.
+# ${PYSITELIB}/qt.so depends on libqassistantclient.so
+#  which is part of qt3-tools, so we need a runtime dependency
+#  XXX split this pkg?
 BUILDLINK_DEPMETHOD.qt3-tools=	full
 .include "../../mk/bsd.pkg.mk"
