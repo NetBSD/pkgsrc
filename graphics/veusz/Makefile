@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:09:40 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/10 11:13:52 drochner Exp $
 #
 
-DISTNAME=		veusz-0.8
-PKGREVISION=		2
+DISTNAME=		veusz-0.9
 CATEGORIES=		graphics
 MASTER_SITES=		http://download.gna.org/veusz/
 
@@ -16,9 +15,5 @@ PYDISTUTILSPKG=		yes
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-qt3-base/buildlink3.mk"
 .include "../../x11/py-qt3-modules/buildlink3.mk"
-# XXX Please verify whether qt3-tools is really needed at run-time.
-# If it is, then remove this comment.  If it is not, then remove
-# this comment and the line below, and bump PKGREVISION.
-BUILDLINK_DEPMETHOD.qt3-tools=	full
 .include "../../math/py-numarray/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
