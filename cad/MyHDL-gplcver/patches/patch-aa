@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/02/10 16:40:02 drochner Exp $
+
+--- cosimulation/cver/makefile.lnx.orig	2006-02-10 17:20:16.000000000 +0100
++++ cosimulation/cver/makefile.lnx
+@@ -2,7 +2,7 @@
+ WARNS=-Wall
+ 
+ # change this path to point to the pli include files directory for cver
+-INCS=-I$(HOME)/gplcver-2.11a.src/pli_incs
++INCS=-I$(LOCALBASE)/lib/gplcver/pli_incs
+ # maybe want -O<something> and/or -g
+ CFLAGS= -fPIC -Wall -g $(INCS)
+ LFLAGS= -G -shared -export-dynamic
