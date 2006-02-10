@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2006/02/05 23:09:28 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2006/02/10 20:34:25 adam Exp $
 
-DISTNAME=	blender-2.37a
-PKGREVISION=	3
+DISTNAME=	blender-2.41
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.cs.umn.edu/pub/blender.org/source/ \
 		http://download.blender.org/source/
@@ -22,9 +21,10 @@ LDFLAGS+=		-lcrypto
 
 INSTALLATION_DIRS=	bin
 
+# remember to change the line number after an update
 post-patch:
 	${MV} ${WRKSRC}/SConstruct ${WRKSRC}/SConstruct.orig
-	${AWK} '{print} NR == 54 {print "env.Append(LINKFLAGS = \"-Wl,-R${X11BASE}/lib,-R${LOCALBASE}/lib\")"}' ${WRKSRC}/SConstruct.orig > ${WRKSRC}/SConstruct
+	${AWK} '{print} NR == 62 {print "env.Append(LINKFLAGS = \"-Wl,-R${X11BASE}/lib,-R${LOCALBASE}/lib\")"}' ${WRKSRC}/SConstruct.orig > ${WRKSRC}/SConstruct
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
@@ -46,8 +46,9 @@ do-install:
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
 .include "../../lang/python/pyversion.mk"

@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.3 2005/08/03 11:58:14 adam Exp $
+$NetBSD: patch-ae,v 1.4 2006/02/10 20:34:25 adam Exp $
 
---- SConstruct.orig	2005-05-29 19:14:21.000000000 +0000
+--- SConstruct.orig	2006-01-22 23:46:29.000000000 +0100
 +++ SConstruct
-@@ -34,7 +34,7 @@ else:
+@@ -38,7 +38,7 @@ else:
  	playername = 'blenderplayer$PROGSUFFIX'
  
  # Build directory.
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.3 2005/08/03 11:58:14 adam Exp $
  
  bs_config.parseOpts()
  
-@@ -53,7 +53,92 @@ sdl_env = Environment (ENV = os.environ)
+@@ -61,7 +61,102 @@ sdl_env = Environment (ENV = os.environ)
  freetype_env = Environment (ENV = os.environ)
  env = Environment (ENV = os.environ)
  
@@ -26,9 +26,11 @@ $NetBSD: patch-ae,v 1.3 2005/08/03 11:58:14 adam Exp $
 +	use_openal = 'false'
 +	use_fmod = 'false'
 +	use_quicktime = 'false'
-+	use_sumo = 'false'	# TODO
++	use_sumo = 'true'
 +	use_ode = 'false'
++	use_bullet = 'true'
 +	use_buildinfo = 'true'
++	use_fluidsim = 'true'
 +	build_blender_dynamic = 'true'
 +	build_blender_static = 'false'
 +	build_blender_player = 'false'
@@ -55,6 +57,10 @@ $NetBSD: patch-ae,v 1.3 2005/08/03 11:58:14 adam Exp $
 +	jpeg_lib = ['jpeg']
 +	jpeg_libpath = os.environ[ 'ADD_C_LIB_DIRS' ].split(",")
 +	jpeg_include = os.environ[ 'ADD_C_INCLUDE_DIRS' ].split(",")
++	# tiff library information
++	tiff_lib = ['tiff']
++	tiff_libpath = os.environ[ 'ADD_C_LIB_DIRS' ].split(",")
++	tiff_include = os.environ[ 'ADD_C_INCLUDE_DIRS' ].split(",")
 +	# OpenGL library information
 +	opengl_lib = ['GL', 'GLU']
 +	opengl_libpath = os.environ[ 'ADD_C_LIB_DIRS' ].split(",")
@@ -73,10 +79,14 @@ $NetBSD: patch-ae,v 1.3 2005/08/03 11:58:14 adam Exp $
 +	qhull_lib = []	   # TODO
 +	qhull_libpath = []  # TODO
 +	qhull_include = ['#extern/qhull/include']
++	# Bullet library information
++	bullet_lib = []
++	bullet_libpath = []
++	bullet_include = ['#extern/bullet','#extern/bullet/LinearMath','#extern/bullet/Bullet','#extern/bullet/BulletDynamics']
 +	# ODE library information
 +	ode_lib = ['ode']
-+	ode_libpath = ['#../lib/linux-glibc2.2.5-i386/ode/lib']
-+	ode_include = ['#../lib/linux-glibc2.2.5-i386/ode/include']
++	ode_libpath = os.environ[ 'ADD_C_LIB_DIRS' ].split(",")
++	ode_include = os.environ[ 'ADD_C_INCLUDE_DIRS' ].split(",")
 +	# Python library information
 +	python_lib = ['python%d.%d' % sys.version_info[0:2]]
 +	python_libpath = [sysconfig.get_python_lib (0, 1) + '/config']
@@ -104,13 +114,13 @@ $NetBSD: patch-ae,v 1.3 2005/08/03 11:58:14 adam Exp $
 +elif sys.platform == 'linux2' or sys.platform == 'linux-i386':
  	use_international = 'true'
  	use_gameengine = 'true'
- 	use_openal = 'false'
-@@ -600,7 +685,7 @@ elif sys.platform=='openbsd3':
+ 	use_openal = 'true'
+@@ -561,7 +656,7 @@ elif string.find (sys.platform, 'irix') 
  	use_openal = 'false'
  	use_fmod = 'false'
  	use_quicktime = 'false'
 -	use_sumo = 'false'
 +	use_sumo = 'true'
  	use_ode = 'false'
- 	use_buildinfo = 'true'
- 	build_blender_dynamic = 'true'
+ 	use_bullet = 'false'
+ 	use_buildinfo = 'false'
