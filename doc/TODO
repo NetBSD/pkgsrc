@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4583 2006/02/10 09:26:41 hiramatsu Exp $
+$NetBSD: TODO,v 1.4584 2006/02/10 17:08:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -469,6 +469,7 @@ Suggested package updates
 	o dvdrip-0.52.6
 	o dvipng-1.7 [http://sourceforge.net/projects/dvipng/]
 	o dx-4.3.3
+	o e16menuedit2-0.0.3
 	o e2fsprogs-1.38
 	o eagle-4.15
 	o ec-fonts-mftraced-1.0.12
@@ -484,6 +485,7 @@ Suggested package updates
 	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
 	o enchant-1.2.1
+	o enlightenment-0.16.8
 	o enscript-1.6.4
 	o epstool-3.08
 	o eric3-3.8.1
@@ -528,6 +530,7 @@ Suggested package updates
 	o gcpio-2.6
 	o gdb6-6.3.0
 	o gdsreader-0.3.2
+	o getmail-4.5.3
 	o gettext-0.14.5
 	o ggiterm-0.7.1
 	o gifsicle-1.44
@@ -651,6 +654,7 @@ Suggested package updates
 	o jwhois-3.2.3
 	o kajaani-kombat-0.7
 	o kapooka-0.3
+	o kazehakase-0.3.5
 	o kdrill-6.4
 	o kinput2-3.1
 	o kmess-1.3
@@ -683,12 +687,13 @@ Suggested package updates
 	o libnasl-2.3.1
 	o libntlm-0.3.9
 	o libpqxx-2.5.5
+	o libpreludedb-0.9.4
 	o libshout-2.2
 	o libsmi-0.4.3
 	o libtcl-nothread-8.4.9
 	o licq-core-1.3.0
 	o liferea-1.0.3
-	o lighttpd-1.4.9
+	o lighttpd-1.4.10
 	o lilypond-2.6.3
 	o linuxsms-0.77
 	o lmbench-2.5
@@ -789,7 +794,7 @@ Suggested package updates
 	o openldap-2.3.19
 	o openoffice-2.0.1
 	o openpam-20050616
-	o openssh-4.3
+	o openssh-4.3 [pkg/32780]
 	o openssl-0.9.8a
 	o openttd-0.4.5
 	o oroborus-2.0.15
@@ -916,6 +921,7 @@ Suggested package updates
 	o pam-smbpass-3.0.13
 	o pari-2.1.7
 	o patchutils-0.2.31
+	o pbzip2-0.9.6
 	o pcal-4.8
 	o pchar-1.5
 	o pciutils-2.2.0
@@ -1134,6 +1140,7 @@ Suggested package updates
 	o swish-e-2.4.3
 	o sylpheed-claws-2.0.0
 	o sylpheed-claws-ghostscript-viewer-0.8
+	o sylpheed-devel-2.2.0rc0
 	o sympa-5.1
 	o sysinfo-4.2.2
 	o tcl-postgresql74-7.4.9
@@ -1192,7 +1199,7 @@ Suggested package updates
 	o vmware-module-3.2.2
 	o vmware-5.5
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
-	o vnc2swf-0.8.1
+	o vnc2swf-0.8.2
 	o vobcopy-0.5.16
 	o vp-1.6
 	o w32api-3.2
@@ -1263,7 +1270,7 @@ Suggested package updates
 	o xpuyopuyo-0.9.5
 	o xrmap-2.33
 	o xrn-9.02
-	o xscreensaver-4.23
+	o xscreensaver-4.24
 	o xskat-4.0
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
