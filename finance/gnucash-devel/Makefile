@@ -1,0 +1,69 @@
+# $NetBSD: Makefile,v 1.1.1.1 2006/02/10 17:46:08 wiz Exp $
+#
+
+DISTNAME=		gnucash-1.9.0
+CATEGORIES=		finance
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
+
+MAINTAINER=		tech-pkg@NetBSD.org
+HOMEPAGE=		http://gnucash.sourceforge.net/
+COMMENT=		Personal or business finance management program (development version)
+
+DEPENDS+=		guile-www-[0-9]*:../../devel/guile-www
+
+USE_DIRS+=		gnome2-1.5 xdg-1.1
+USE_LIBTOOL=		yes
+USE_MAKEINFO=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake pkg-config
+GNU_CONFIGURE=		yes
+
+PKGCONFIG_OVERRIDE+=	lib/goffice-0.0.4/libgoffice-1.pc.in
+PKGCONFIG_OVERRIDE+=	lib/libgsf-1.12.3/libgsf-1.pc.in
+PKGCONFIG_OVERRIDE+=	lib/libgsf-1.12.3/libgsf-gnome-1.pc.in
+PKGCONFIG_OVERRIDE+=	lib/libgsf-1.12.3/libgsf-win32-1.pc.in
+
+CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
+MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
+
+GCONF2_SCHEMAS+=	apps_gnucash_history.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_dialog_commodities.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_dialog_common.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_dialog_print_checks.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_dialog_prices.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_warnings.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_dialog_reconcile.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_dialog_totd.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_general.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_window_pages_account_tree.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_window_pages_register.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_import_generic_matcher.schemas
+#GCONF2_SCHEMAS+=	apps_gnucash_dialog_hbci.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_dialog_business_common.schemas
+
+INFO_FILES=	gnucash-design.info
+
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/g-wrap/buildlink3.mk"
+.include "../../devel/libgsf/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+BUILDLINK_DEPENDS.pango+=	pango>=1.8.0
+.include "../../devel/pango/buildlink3.mk"
+.include "../../devel/popt/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../finance/libofx/buildlink3.mk"
+.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
+BUILDLINK_DEPENDS.goffice+=	goffice>=0.1.2
+.include "../../misc/goffice/buildlink3.mk"
+.include "../../print/libgnomeprint/buildlink3.mk"
+.include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+BUILDLINK_DEPENDS.gtk2+=	gtk2+>=2.6.0
+.include "../../www/gtkhtml38/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
