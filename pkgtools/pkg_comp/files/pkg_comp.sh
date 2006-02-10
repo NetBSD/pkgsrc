@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.27 2006/01/06 23:08:51 seb Exp $
+# $NetBSD: pkg_comp.sh,v 1.28 2006/02/10 23:36:12 salo Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -50,7 +50,8 @@ _TEMPLATE_VARS="DESTDIR ROOTSHELL COPYROOTCFG BUILD_TARGET DISTRIBDIR SETS \
                 REAL_PKGSRC_OPTS REAL_DISTFILES REAL_DISTFILES_OPTS \
                 REAL_PACKAGES REAL_PACKAGES_OPTS REAL_PKGVULNDIR \
                 NETBSD_RELEASE MOUNT_HOOKS UMOUNT_HOOKS SYNC_UMOUNT \
-                AUTO_TARGET AUTO_PACKAGES BUILD_PACKAGES REAL_CCACHE"
+                AUTO_TARGET AUTO_PACKAGES BUILD_PACKAGES REAL_CCACHE \
+                LIBKVER_STANDALONE_PREFIX"
 
 _BUILD_RESUME=
 
