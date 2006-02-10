@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.505 2006/02/07 22:10:20 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.506 2006/02/10 12:49:22 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2491,7 +2491,7 @@ sub checkline_mk_shelltext($$) {
 
 		checkline_mk_shellword($line, $shellword, (
 		       $state != SCST_CASE
-		    && $state != SCST_FOR
+		    && $state != SCST_FOR_CONT
 		    && $state != SCST_SET_CONT
 		    && ($state != SCST_START || $shellword !~ regex_sh_varassign)));
 
