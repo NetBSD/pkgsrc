@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/21 15:03:01 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/10 11:13:52 drochner Exp $
 bin/veusz
 bin/veusz_listen
 ${PYSITELIB}/veusz/VERSION
@@ -35,15 +35,25 @@ ${PYSITELIB}/veusz/document/commandinterface.pyo
 ${PYSITELIB}/veusz/document/commandinterpreter.py
 ${PYSITELIB}/veusz/document/commandinterpreter.pyc
 ${PYSITELIB}/veusz/document/commandinterpreter.pyo
+${PYSITELIB}/veusz/document/datasets.py
+${PYSITELIB}/veusz/document/datasets.pyc
+${PYSITELIB}/veusz/document/datasets.pyo
 ${PYSITELIB}/veusz/document/doc.py
 ${PYSITELIB}/veusz/document/doc.pyc
 ${PYSITELIB}/veusz/document/doc.pyo
+${PYSITELIB}/veusz/document/operations.py
+${PYSITELIB}/veusz/document/operations.pyc
+${PYSITELIB}/veusz/document/operations.pyo
 ${PYSITELIB}/veusz/document/simpleread.py
 ${PYSITELIB}/veusz/document/simpleread.pyc
 ${PYSITELIB}/veusz/document/simpleread.pyo
 ${PYSITELIB}/veusz/embed.py
 ${PYSITELIB}/veusz/embed.pyc
 ${PYSITELIB}/veusz/embed.pyo
+${PYSITELIB}/veusz/helpers/__init__.py
+${PYSITELIB}/veusz/helpers/__init__.pyc
+${PYSITELIB}/veusz/helpers/__init__.pyo
+${PYSITELIB}/veusz/helpers/_na_cntr.so
 ${PYSITELIB}/veusz/images/icon.png
 ${PYSITELIB}/veusz/images/logo.png
 ${PYSITELIB}/veusz/setting/__init__.py
@@ -106,6 +116,9 @@ ${PYSITELIB}/veusz/widgets/axisticks.pyo
 ${PYSITELIB}/veusz/widgets/containers.py
 ${PYSITELIB}/veusz/widgets/containers.pyc
 ${PYSITELIB}/veusz/widgets/containers.pyo
+${PYSITELIB}/veusz/widgets/contour.py
+${PYSITELIB}/veusz/widgets/contour.pyc
+${PYSITELIB}/veusz/widgets/contour.pyo
 ${PYSITELIB}/veusz/widgets/data/colormaps.dat
 ${PYSITELIB}/veusz/widgets/fit.py
 ${PYSITELIB}/veusz/widgets/fit.pyc
@@ -145,6 +158,7 @@ ${PYSITELIB}/veusz/windows/consolewindow.pyc
 ${PYSITELIB}/veusz/windows/consolewindow.pyo
 ${PYSITELIB}/veusz/windows/icons/README
 ${PYSITELIB}/veusz/windows/icons/button_axis.png
+${PYSITELIB}/veusz/windows/icons/button_contour.png
 ${PYSITELIB}/veusz/windows/icons/button_fit.png
 ${PYSITELIB}/veusz/windows/icons/button_function.png
 ${PYSITELIB}/veusz/windows/icons/button_graph.png
@@ -155,6 +169,7 @@ ${PYSITELIB}/veusz/windows/icons/button_label.png
 ${PYSITELIB}/veusz/windows/icons/button_page.png
 ${PYSITELIB}/veusz/windows/icons/button_xy.png
 ${PYSITELIB}/veusz/windows/icons/icon-rename.png
+${PYSITELIB}/veusz/windows/icons/pointer.png
 ${PYSITELIB}/veusz/windows/icons/stock-copy.png
 ${PYSITELIB}/veusz/windows/icons/stock-cut.png
 ${PYSITELIB}/veusz/windows/icons/stock-delete.png
@@ -181,6 +196,7 @@ ${PYSITELIB}/veusz/windows/icons/stock_previous-page.png
 ${PYSITELIB}/veusz/windows/icons/stock_zoom-page-height.png
 ${PYSITELIB}/veusz/windows/icons/stock_zoom-page-width.png
 ${PYSITELIB}/veusz/windows/icons/stock_zoom-page.png
+${PYSITELIB}/veusz/windows/icons/zoom_graph.png
 ${PYSITELIB}/veusz/windows/icons/zoom-options.png
 ${PYSITELIB}/veusz/windows/mainwindow.py
 ${PYSITELIB}/veusz/windows/mainwindow.pyc
@@ -201,6 +217,7 @@ ${PYSITELIB}/veusz/windows/treeeditwindow.pyo
 @dirrm ${PYSITELIB}/veusz/utils
 @dirrm ${PYSITELIB}/veusz/setting
 @dirrm ${PYSITELIB}/veusz/images
+@dirrm ${PYSITELIB}/veusz/helpers
 @dirrm ${PYSITELIB}/veusz/document
 @dirrm ${PYSITELIB}/veusz/dialogs
 @dirrm ${PYSITELIB}/veusz
