@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.115 2006/02/04 01:08:25 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.116 2006/02/10 10:41:58 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -69,7 +69,7 @@ USE_BULK_TIMESTAMPS?=	yes
 
 # Shall we remove any packages which are installed, but not required
 # to build this package
-PRECLEAN?=	yes
+PRECLEAN?=		yes
 
 # Sometimes it's useful to not only keep the build logs from broken
 # packages, but also the ones from packages that worked.
@@ -80,11 +80,11 @@ KEEP_BUILDLOGS?=	no
 # If OBJMACHINE is set, use ${MACHINE_ARCH} in the cache and log files
 .if defined(OBJHOSTNAME)
 .  if !defined(_HOSTNAME)
-_HOSTNAME!= ${UNAME} -n
+_HOSTNAME!=		${UNAME} -n
 .  endif
-BULK_ID?=	.${_HOSTNAME:C|\..*||}
+BULK_ID?=		.${_HOSTNAME:C|\..*||}
 .elif defined(OBJMACHINE)
-BULK_ID?=	.${MACHINE_ARCH}
+BULK_ID?=		.${MACHINE_ARCH}
 .else
 BULK_ID?=
 .endif
@@ -98,17 +98,17 @@ BULK_ID?=
 BUILD_SUCCEEDED_FILE?=	.build_succeeded${BULK_ID}
 
 # This file exists to mark a package as broken
-BROKENFILE?=	.broken${BULK_ID}.html
+BROKENFILE?=		.broken${BULK_ID}.html
 
 # This file is the work log for a broken package
-BROKENWRKLOG?=	.broken${BULK_ID}.work.txt
+BROKENWRKLOG?=		.broken${BULK_ID}.work.txt
 
 # This file is human-created to force a package to show up as broken
 # (it is never cleaned by the bulk build, and contains the broken reason)
-FORCEBROKENFILE?= .forcebroken
+FORCEBROKENFILE?=	.forcebroken
 
 # This file is where the log of the build goes
-BUILDLOG?=	.make${BULK_ID}
+BUILDLOG?=		.make${BULK_ID}
 
 #
 # Top level databases and log files
@@ -118,7 +118,7 @@ BUILDLOG?=	.make${BULK_ID}
 # bulk build are kept.
 # It defaults to ${PKGSRCDIR}, but may be better suited to another directory
 # if pkgsrc is on a remote (e.g., nfs) filesystem.
-BULKFILESDIR?=	${PKGSRCDIR}
+BULKFILESDIR?=		${PKGSRCDIR}
 
 # This is a top level file which lists the entire pkgsrc depends tree in the
 # format:
@@ -131,28 +131,28 @@ DEPENDSTREEFILE?=	${BULKFILESDIR}/.dependstree${BULK_ID}
 # format:
 # foo/bar depends on: devel/libfoo devel/libbar devel/baz .....
 # ie, to build foo/bar we need devel/libfoo devel/libbar devel/baz ... installed
-DEPENDSFILE?=	${BULKFILESDIR}/.depends${BULK_ID}
+DEPENDSFILE?=		${BULKFILESDIR}/.depends${BULK_ID}
 
 # This is a top level file which lists the entire pkgsrc depends tree in the
 # format:
 # devel/libfoo is depended upon by: foo/bar graphics/gtkfoo ...
 # ie, to build foo/bar we need devel/libfoo to be installed.
 #     to build graphics/gtkfoo we need devel/libfoo to be installed
-SUPPORTSFILE?=	${BULKFILESDIR}/.supports${BULK_ID}
+SUPPORTSFILE?=		${BULKFILESDIR}/.supports${BULK_ID}
 
 # This is a top level file which cross-references each package name and pkg
 # directory in the format:
 # devel/libfoo libfoo-1.3
-INDEXFILE?=	${BULKFILESDIR}/.index${BULK_ID}
+INDEXFILE?=		${BULKFILESDIR}/.index${BULK_ID}
 
 # File containing a list of all the packages in the correct order for a bulk
 # build.  The correct order is one where packages that are required by others
 # are built before the packages which require them.
-ORDERFILE?=	${BULKFILESDIR}/.order${BULK_ID}
+ORDERFILE?=		${BULKFILESDIR}/.order${BULK_ID}
 
 # File which is used as a timestamp for when the build started.  This is used
 # eventually for looking for leftover files (files not properly deinstalled)
-STARTFILE?=	${BULKFILESDIR}/.start${BULK_ID}
+STARTFILE?=		${BULKFILESDIR}/.start${BULK_ID}
 
 # This top level file saves the bulk build ID. As it most often has a time
 # stamp, it is only generated once and later retrieved from this file.
@@ -160,14 +160,14 @@ BULK_BUILD_ID_FILE?=	${BULKFILESDIR}/.bulk_build_id
 
 # File created and used by lintpkgsrc(8) to cache package metadata for
 # pruning and bulk-upload exclusions.
-LINTPKGSRC_DB?=	${BULKFILESDIR}/.lintpkgsrc.db${BULK_ID}
+LINTPKGSRC_DB?=		${BULKFILESDIR}/.lintpkgsrc.db${BULK_ID}
 
 # File which is used as a database for bulk builds in which SPECIFIC_PKGS is
 # defined.  This database is used to hold all the dependency and index
 # information for the specific packages as well as their dependencies.  In a
 # SPECIFIC_PKGS bulk build, this file is created and then used to create the
 # INDEXFILE and DEPENDSTREEFILE.
-BULK_DBFILE?=	${BULKFILESDIR}/.bulk_db${BULK_ID}
+BULK_DBFILE?=		${BULKFILESDIR}/.bulk_db${BULK_ID}
 
 # A list of pkgs which we should _never_ delete during a build.  The primary
 # use is for digest and also for xpkgwedge.  Add pkgtools/xpkgwedge in
@@ -176,8 +176,8 @@ BULK_PREREQ+=		pkgtools/digest
 
 # Commands for printing informational messages from the bulk build.
 # BULK_MSG_CONT is used for continuing a message started with BULK_MSG
-BULK_MSG?=	${ECHO_MSG} "BULK>"
-BULK_MSG_CONT?=	${ECHO_MSG} "     "
+BULK_MSG?=		${ECHO_MSG} "BULK>"
+BULK_MSG_CONT?=		${ECHO_MSG} "     "
 
 #
 # Private variables
@@ -190,7 +190,7 @@ _PRESERVE_WRKDIR?=	no
 # in several places we want to be able to use something like
 # foo/bar.baz++ in a regular expression but have it be interpreted
 # literally.  So, turn it into foo\/bar\.baz\+\+
-_ESCPKGPATH=	${PKGPATH:C@\/@\\/@g:C@\+@\\+@g:C@\.@\\.@g:Q}
+_ESCPKGPATH=		${PKGPATH:C@\/@\\/@g:C@\+@\\+@g:C@\.@\\.@g:Q}
 
 # The directory where package-specific log files are saved.
 _BULK_PKGLOGDIR=	${BULKFILESDIR}/${PKGPATH}
