@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2006/01/25 08:32:51 kent Exp $
+$NetBSD: distinfo,v 1.11 2006/02/10 13:52:18 kent Exp $
 
-SHA1 (peace-0.0.20060125.tar.gz) = 291e60209478a5df7e7b87d67e11eb196de8d7d8
-RMD160 (peace-0.0.20060125.tar.gz) = f6ddd4ca329e025c884fe1d689e40382a1216fc1
-Size (peace-0.0.20060125.tar.gz) = 580142 bytes
+SHA1 (peace-0.0.20060210.tar.gz) = 072d1b8b5f909db4e8fb28c0e8e86b0c09f48115
+RMD160 (peace-0.0.20060210.tar.gz) = 946d7d44caeea90c87e40b25e00e9381727acb0a
+Size (peace-0.0.20060210.tar.gz) = 582106 bytes
