@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/02/10 16:37:51 drochner Exp $
+
+SHA1 (gplcver-2.11a.src.tar.bz2) = 5b26b70282bb7c79f5dfa9d70f3cf0972ac03b3c
+RMD160 (gplcver-2.11a.src.tar.bz2) = 16bedab414af0cf4049394ea9f01ea2ebb4e3385
+Size (gplcver-2.11a.src.tar.bz2) = 1189439 bytes
+SHA1 (patch-aa) = f22f3ace0a6da4476151d81b4ac35cbe7efe7c12
+SHA1 (patch-ab) = 151ea8442c604c4de810c335c50db34281797fc8
+SHA1 (patch-ac) = 8c82e31f81d0e787a32d6217dc7704f55e10d150
