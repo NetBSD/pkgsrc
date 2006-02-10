@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2006/01/04 06:05:44 recht Exp $
+# $NetBSD: Makefile,v 1.33 2006/02/10 19:56:13 drochner Exp $
 
 DISTNAME=	hdf5-1.6.5
+PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.ncsa.uiuc.edu/HDF/HDF5/hdf5-1.6.4/src/ \
-		ftp://sunsite.doc.ic.ac.uk/packages/HDF/HDF5/hdf5-1.6.4/src/ \
-		http://www.go.dlr.de/fresh/unix/src/misc/
+MASTER_SITES=	ftp://ftp.ncsa.uiuc.edu/HDF/HDF5/hdf5-1.6.5/src/
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://hdf.ncsa.uiuc.edu/HDF5/
@@ -14,12 +13,16 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		tr
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
+#CONFIGURE_ARGS+= --disable-production --enable-debug
 
 # it appears that this file is informative only and is not actually
 # used by any installed tools
 CHECK_WRKREF_SKIP=	${PREFIX}/lib/libhdf5.settings
 
 .include "options.mk"
+
+post-extract:
+	${CP} ${WRKSRC}/config/freebsd ${WRKSRC}/config/netbsdelf
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/misc/h5cc ${PREFIX}/bin
