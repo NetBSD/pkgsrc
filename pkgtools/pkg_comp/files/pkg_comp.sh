@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.28 2006/02/10 23:36:12 salo Exp $
+# $NetBSD: pkg_comp.sh,v 1.29 2006/02/10 23:41:20 salo Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -49,9 +49,9 @@ _TEMPLATE_VARS="DESTDIR ROOTSHELL COPYROOTCFG BUILD_TARGET DISTRIBDIR SETS \
                 SETS_X11 REAL_SRC REAL_SRC_OPTS REAL_PKGSRC \
                 REAL_PKGSRC_OPTS REAL_DISTFILES REAL_DISTFILES_OPTS \
                 REAL_PACKAGES REAL_PACKAGES_OPTS REAL_PKGVULNDIR \
-                NETBSD_RELEASE MOUNT_HOOKS UMOUNT_HOOKS SYNC_UMOUNT \
-                AUTO_TARGET AUTO_PACKAGES BUILD_PACKAGES REAL_CCACHE \
-                LIBKVER_STANDALONE_PREFIX"
+                NETBSD_RELEASE MAKEROOT_HOOKS MOUNT_HOOKS UMOUNT_HOOKS \
+                SYNC_UMOUNT AUTO_TARGET AUTO_PACKAGES BUILD_PACKAGES \
+                REAL_CCACHE LIBKVER_STANDALONE_PREFIX"
 
 _BUILD_RESUME=
 
@@ -120,6 +120,7 @@ env_setdefaults()
     : ${REAL_PKGVULNDIR:=/usr/pkgsrc/distfiles}
     : ${NETBSD_RELEASE:=no}
     : ${LIBKVER_STANDALONE_PREFIX:=/libkver}
+    : ${MAKEROOT_HOOKS:=}
     : ${MOUNT_HOOKS:=}
     : ${UMOUNT_HOOKS:=}
     : ${SYNC_UMOUNT:=no}
@@ -280,9 +281,12 @@ fsmount()
 
     touch $fsstate
 
-    for h in ${MOUNT_HOOKS}; do
-        ${h} ${DESTDIR} mount
-    done
+    if [ -n "${MOUNT_HOOKS}" ]; then
+        echo "Executing mount hooks."
+        for h in ${MOUNT_HOOKS}; do
+            ${h} ${DESTDIR} mount
+        done
+    fi
 }
 
 # fsumount
@@ -306,9 +310,12 @@ fsumount()
         return
     fi
 
-    for h in ${UMOUNT_HOOKS}; do
-        ${h} ${DESTDIR} umount
-    done
+    if [ -n "${UMOUNT_HOOKS}" ]; then
+        echo "Executing umount hooks."
+        for h in ${UMOUNT_HOOKS}; do
+            ${h} ${DESTDIR} umount
+        done
+    fi
 
     fsfailed=no
 
@@ -530,6 +537,13 @@ makeroot()
     fi
 
     makeroot_x11
+
+    if [ -n "${MAKEROOT_HOOKS}" ]; then
+        echo "Executing makeroot hooks."
+        for h in ${MAKEROOT_HOOKS}; do
+            ${h} ${DESTDIR} makeroot
+        done
+    fi
 }
 
 # makeroot_mkconf
