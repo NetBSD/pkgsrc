@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:09:30 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/02/10 12:17:05 adam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GDCHART_BUILDLINK3_MK:=	${GDCHART_BUILDLINK3_MK}+
@@ -18,4 +18,4 @@ BUILDLINK_PKGSRCDIR.gdchart?=	../../graphics/gdchart
 
 .include "../../graphics/gd/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
