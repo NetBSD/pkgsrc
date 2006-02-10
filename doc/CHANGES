@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12857 2006/02/10 13:54:23 kent Exp $
+$NetBSD: CHANGES,v 1.12858 2006/02/10 17:51:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -890,3 +890,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated finance/kmymoney2 to 0.8nb4 [wiz 2006-02-09]
 	Updated databases/p5-Apache-DBI to 0.9901 [hiramatsu 2006-02-10]
 	Updated emulators/peace to 0.0.20060210 [kent 2006-02-10]
+	Added finance/gnucash-devel version 1.9.0 [wiz 2006-02-10]
