@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4584 2006/02/10 17:08:55 wiz Exp $
+$NetBSD: TODO,v 1.4585 2006/02/10 20:36:49 adam Exp $
 
 Suggested new packages
 ======================
@@ -376,7 +376,6 @@ Suggested package updates
 	o bittorrent-4.4.0
 	o bittorrent-gui-4.4.0
 	o blackbox-0.70
-	o blender-2.41
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bochs-2.2.6
