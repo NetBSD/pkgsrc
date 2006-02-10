@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.3 2005/02/09 12:29:10 markd Exp $
+$NetBSD: patch-aa,v 1.4 2006/02/10 20:05:12 drochner Exp $
 
---- setup.py.orig	2004-12-03 02:17:54.000000000 +1300
+--- setup.py.orig	2005-12-21 18:04:52.000000000 +0100
 +++ setup.py
-@@ -463,5 +463,5 @@ data.
-                                 runtime_library_dirs = rlib_dirs,
-                                 )],
+@@ -555,5 +555,5 @@ interactively save and retrieve large am
+                                 ),
+                       ],
        cmdclass = cmdclass,
 -      scripts = ['utils/ptdump', 'utils/ptrepack', 'utils/nctoh5'],
 +      scripts = ['utils/ptdump' + sys.version[0:3], 'utils/ptrepack' + sys.version[0:3], 'utils/nctoh5' + sys.version[0:3]],
