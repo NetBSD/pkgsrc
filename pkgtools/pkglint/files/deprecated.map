@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.27 2006/02/11 19:29:39 rillig Exp $
+# $NetBSD: deprecated.map,v 1.28 2006/02/11 19:49:58 rillig Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -48,7 +48,6 @@ NO_WRAPPER		You can just remove it.
 ALLFILES		Use CKSUMFILES instead.
 DEPENDS_TARGET		Use DEPENDS instead.
 FETCH_DEPENDS		Use DEPENDS instead.
-LIB_DEPENDS		Use DEPENDS instead.
 RUN_DEPENDS		Use DEPENDS instead.
 
 # December 2005
