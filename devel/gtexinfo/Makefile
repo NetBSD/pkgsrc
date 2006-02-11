@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2006/02/05 23:08:43 joerg Exp $
+# $NetBSD: Makefile,v 1.62 2006/02/11 01:07:54 joerg Exp $
 
 DISTNAME=		texinfo-4.8
 PKGNAME=		g${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel sysutils
 MASTER_SITES=		${MASTER_SITE_GNU:=texinfo/}
 EXTRACT_SUFX=		.tar.bz2
