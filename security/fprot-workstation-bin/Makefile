@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2006/02/05 23:10:43 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2006/02/11 20:11:01 ben Exp $
 #
 
 DISTNAME=		#defined
-PKGNAME=		fprot-workstation-bin-4.6.5
+PKGNAME=		fprot-workstation-bin-${FPVER}
 PKGREVISION=		1
 CATEGORIES=		security
 
-MAINTAINER=		ben@NetBSD.org
+MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.f-prot.com/products/home_use/bsd/
 COMMENT=		F-prot antivirus for home users
 
@@ -27,6 +27,7 @@ WRKSRC=			${WRKDIR}/f-prot
 NO_BUILD=		yes
 USE_TOOLS+=		perl:run
 
+FPVER=			4.6.6
 DATDIR=			${PREFIX}/share/fprot-workstation-bin
 DOCDIR=			${PREFIX}/share/doc/fprot-workstation-bin
 FPDIR=			${PREFIX}/libexec/fprot-workstation-bin
@@ -39,17 +40,17 @@ OWN_DIRS=               ${FPDIR}
 
 .if ${OPSYS} == "NetBSD"
 MASTER_SITES=		ftp://ftp.f-prot.com/pub/bsd/
-DISTNAME=		fp-netbsd-ws-${PKGVERSION}
+DISTNAME=		fp-netbsd-ws-${FPVER}
 .endif
 
 .if ${OPSYS} == "Linux"
 MASTER_SITES=		ftp://ftp.f-prot.com/pub/linux/
-DISTNAME=		fp-linux-ws-${PKGVERSION}
+DISTNAME=		fp-linux-ws-${FPVER}
 .endif
 
 .if ${OPSYS} == "SunOS"
 MASTER_SITES=		ftp://ftp.f-prot.com/pub/solaris/
-DISTNAME=		fp-solaris-sparc-ws-${PKGVERSION}
+DISTNAME=		fp-solaris-sparc-ws-${FPVER}
 .endif
 
 DIST_SUBDIR=		${DISTNAME}
