@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:08:19 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/11 11:15:45 rillig Exp $
 #
 
-DISTNAME=       bonnie++-1.03a
+DISTNAME=	bonnie++-1.03a
 PKGREVISION=	1
 CATEGORIES=	benchmarks
-MASTER_SITES=   http://www.coker.com.au/bonnie++/
+MASTER_SITES=	http://www.coker.com.au/bonnie++/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	root@garbled.net
@@ -15,16 +15,18 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake perl:run
-REPLACE_PERL=		bon_csv2txt.in bon_csv2html.in
+USE_TOOLS+=		gmake perl:run tee
+REPLACE_PERL+=		bon_csv2txt.in bon_csv2html.in
 
 INSTALLATION_DIRS=	bin man/man1 man/man8 sbin
 
+.PHONY: benchmark
 benchmark:
-	@cd ${WRKSRC}; ./bonnie++ -u ${ROOT_USER}:${ROOT_GROUP} | tee bonnie.out
+	cd ${WRKSRC} && ./bonnie++ -u ${ROOT_USER}:${ROOT_GROUP} | ${TEE} bonnie.out
 
+.PHONY: results
 results:
 	@${MKDIR} /tmp/benches/`domainname`
-	-@${CP} ${WRKSRC}/bonnie.out /tmp/benches/`domainname`/bonnie++.`uname`-`uname -m`-`uname -r`.`hostname`
+	-@${CP} ${WRKSRC:Q}/bonnie.out /tmp/benches/`domainname`/bonnie++.`uname`-`uname -m`-`uname -r`.`hostname`
 
 .include "../../mk/bsd.pkg.mk"
