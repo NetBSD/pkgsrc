@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.506 2006/02/10 12:49:22 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.507 2006/02/11 11:53:21 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2317,8 +2317,11 @@ sub checkline_mk_shellword($$$) {
 			if ($state == SWST_PLAIN && defined($mod) && $mod =~ qr":Q$") {
 				# Fine.
 
-			} elsif ($state == SWST_SQUOT && $varname =~ qr"(?:DIRS?|FILES?|PATH|^PREFIX|^LOCALBASE|^PKGNAME)$") {
+			} elsif ($state == SWST_SQUOT && $varname =~ qr"^(?:.*DIRS?|.*FILES?|.*PATH|PREFIX|LOCALBASE|PKGNAME)$") {
 				# Fine, too.
+
+			} elsif ($state == SWST_DQUOT && $varname =~ qr"^(?:PKGNAME)$") {
+				# Some variables may even be used in double quotes.
 
 			} elsif ($state == SWST_DQUOT && defined($mod) && $mod =~ qr":Q$") {
 				$line->log_warning("Please don't use the :Q operator in double quotes.");
