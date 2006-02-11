@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:11:05 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/11 02:17:46 rillig Exp $
 
 DISTNAME=	XML-Sablotron-0.98
 PKGNAME=	p5-${DISTNAME}
@@ -28,10 +28,10 @@ PERL5_PACKLIST=		auto/XML/Sablotron/.packlist
 post-patch:
 	@${MV} ${WRKSRC:Q}/Makefile.PL ${WRKSRC:Q}/Makefile.PL.orig
 	@${SED} \
-	-e 's|^\(my \$$expat_libpath = '\)\(';\)$$|\1${EXPATLIBPATH}\2|' \
-	-e 's|^\(my \$$expat_incpath = '\)\(';\)$$|\1${EXPATINCPATH}\2|' \
-	-e 's|^\(my \$$sablot_libpath = '\)\(';\)$$|\1${SABLOTLIBPATH}\2|' \
-	-e 's|^\(my \$$sablot_incpath = '\)\(';\)$$|\1${SABLOTINCPATH}\2|' \
+	-e 's|^\(my \$$expat_libpath = '\''\)\('\'';\)$$|\1${EXPATLIBPATH}\2|' \
+	-e 's|^\(my \$$expat_incpath = '\''\)\('\'';\)$$|\1${EXPATINCPATH}\2|' \
+	-e 's|^\(my \$$sablot_libpath = '\''\)\('\'';\)$$|\1${SABLOTLIBPATH}\2|' \
+	-e 's|^\(my \$$sablot_incpath = '\''\)\('\'';\)$$|\1${SABLOTINCPATH}\2|' \
 	${WRKSRC:Q}/Makefile.PL.orig > ${WRKSRC:Q}/Makefile.PL
 
 .include "../../mk/bsd.pkg.mk"
