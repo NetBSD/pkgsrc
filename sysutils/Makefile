@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.337 2006/02/11 14:58:23 rxg Exp $
+# $NetBSD: Makefile,v 1.338 2006/02/11 16:07:58 rxg Exp $
 #
 
 COMMENT=	System utilities
@@ -171,7 +171,6 @@ SUBDIR+=	rdiff-backup
 SUBDIR+=	rfstool
 SUBDIR+=	roller
 SUBDIR+=	rox
-SUBDIR+=	rox-session
 SUBDIR+=	rsnapshot
 SUBDIR+=	rtty
 SUBDIR+=	ruby-quota
