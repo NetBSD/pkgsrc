@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:09:00 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/11 15:36:16 rillig Exp $
 #
 
 DISTNAME=	dgen-sdl-1.23
@@ -19,19 +19,15 @@ GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--with-extra-opt
 
-SUBST_CLASSES+=		config
-SUBST_STAGE.config=	pre-configure
-SUBST_FILES.config=	configure
-SUBST_SED.config=	-e "s|\-mpentium||g"	    \
-			-e "s|\-march=pentium||g"   \
-			-e "s|\-fno-rtti||g"
-SUBST_MESSAGE.config=	"Removing outdated compilation flags."
+BUILDLINK_TRANSFORM+=	rm:-mpentium
+BUILDLINK_TRANSFORM+=	rm:-march=pentium
+BUILDLINK_TRANSFORM+=	rm:-fno-rtti
 
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc-3*)
-SUBST_SED.config+=	-e "s|\-malign-loops|\-falign-loops|g"
-SUBST_SED.config+=	-e "s|\-malign-jumps|\-falign-jumps|g"
-SUBST_SED.config+=	-e "s|\-malign-functions|\-falign-functions|g"
+BUILDLINK_TRANSFORM+=	'opt:-m\(align-loops.*\):-f\1'
+BUILDLINK_TRANSFORM+=	'opt:-m\(align-jumps.*\):-f\1'
+BUILDLINK_TRANSFORM+=	'opt:-m\(align-functions.*\):-f\1'
 .endif
 
 .include "../../devel/SDL/buildlink3.mk"
