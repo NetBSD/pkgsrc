@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.509 2006/02/11 12:47:05 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.510 2006/02/11 16:14:40 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1904,6 +1904,25 @@ sub strings_to_lines($) {
 	return $retval;
 }
 
+sub backtrace() {
+	my (@callers);
+
+	return unless $opt_debug;
+
+	my $n = 0;
+	while (my @info = caller($n)) {
+		push(@callers, [$info[2], $info[3]]);
+		$n++;
+	}
+
+	for (my $i = $#callers; $i >= 0; $i--) {
+		my $info = $callers[$i];
+		log_debug(NO_FILE, NO_LINE_NUMBER,
+		    sprintf("%sline %4d in %s", ("  " x ($n - 1 - $i)),
+		        $info->[0], $info->[1]));
+	}
+}
+
 #
 # Loading package-specific data from files.
 #
@@ -2091,6 +2110,7 @@ sub checkline_valid_characters_in_variable($$) {
 
 sub checkline_trailing_whitespace($) {
 	my ($line) = @_;
+
 	if ($line->text =~ /\s+$/) {
 		$line->log_note("Trailing white-space.");
 	}
@@ -2220,8 +2240,6 @@ sub checkline_mk_text($$) {
 		checkline_rcsid_regex($line, qr"#\s+", "# ");
 	}
 
-	checkline_trailing_whitespace($line);
-
 	if ($text =~ qr"\$\{WRKSRC\}/\.\./") {
 		$line->log_warning("Using \"\${WRKSRC}/..\" is conceptually wrong. Please use a combination of WRKSRC, CONFIGURE_DIRS and BUILD_DIRS instead.");
 	}
@@ -2320,7 +2338,7 @@ sub checkline_mk_shellword($$$) {
 			} elsif ($state == SWST_SQUOT && $varname =~ qr"^(?:.*DIRS?|.*FILES?|.*PATH|PREFIX|LOCALBASE|PKGNAME)$") {
 				# Fine, too.
 
-			} elsif ($state == SWST_DQUOT && $varname =~ qr"^(?:PKGNAME)$") {
+			} elsif ($state == SWST_DQUOT && $varname =~ qr"^(?:.*_VAR|PKGNAME)$") {
 				# Some variables may even be used in double quotes.
 
 			} elsif ($state == SWST_DQUOT && defined($mod) && $mod =~ qr":Q$") {
@@ -3113,7 +3131,6 @@ sub checkline_mk_vartype($$$$$) {
 			if ($varname !~ qr"_MK$") {
 				$opt_debug and $line->log_warning("[checkline_mk_vartype] Unchecked variable ${varname}.");
 			}
-			checkline_mk_text($line, $value);
 
 		} elsif ($op eq "!=") {
 			$opt_debug and $line->log_info("Use of !=: ${value}");
