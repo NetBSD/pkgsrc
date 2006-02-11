@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/11 13:06:43 rillig Exp $
+bin/pornview
+share/gnome/apps/Graphics/pornview.desktop
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/pornview.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/pornview.mo
+share/pixmaps/pornview.png
+share/pornview/scripts/helloworld
+@dirrm share/pornview/scripts
+@dirrm share/pornview
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in gnome2-dirs: @dirrm share/gnome/apps/Graphics
+@comment in gnome2-dirs: @dirrm share/gnome/apps
