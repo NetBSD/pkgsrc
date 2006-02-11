@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12867 2006/02/11 15:01:38 rxg Exp $
+$NetBSD: CHANGES,v 1.12868 2006/02/11 16:19:11 rxg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -913,3 +913,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added graphics/pornview-gtk2 version 0.2.0pre1 [rillig 2006-02-11]
 	Updated security/gpgme to 1.0.3nb2 [joerg 2006-02-11]
 	Added sysutils/py-dbus version 0.23.4nb2 [rxg 2006-02-11]
+	Removed sysutils/rox-session [rxg 2006-02-11]
+	Added x11/rox-session version 0.1.25 [rxg 2006-02-11]
