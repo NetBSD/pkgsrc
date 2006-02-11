@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2006/01/01 18:53:03 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2006/02/11 10:58:41 rillig Exp $
 
 _COMMONCARDDRIVERS=	xorg-server-apm xorg-server-ark xorg-server-ati \
 			xorg-server-chips xorg-server-cirrus \
@@ -21,7 +21,7 @@ _LINUXCARDDRIVERS=	xorg-server-fbdev xorg-server-v4l
 _ALLCARDDRIVERS=	${_COMMONCARDDRIVERS} ${_NOTX86_64CARDDRIVERS} \
 			${_LINUXCARDDRIVERS}
 
-_OSCARDDRIVERS=		# defined
+_OSCARDDRIVERS=		# none
 
 # Not tested with the other x86_64 platforms.
 .if empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
