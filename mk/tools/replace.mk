@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.156 2006/01/28 00:32:31 jlam Exp $
+# $NetBSD: replace.mk,v 1.157 2006/02/11 00:23:24 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -840,6 +840,27 @@ TOOLS_DEPENDS.${_t_}?=	diffutils>=2.8.1:../../devel/diffutils
 TOOLS_CREATE+=		${_t_}
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=diffutils
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${GNU_PROGRAM_PREFIX}${_t_}
+.    endif
+.  endif
+.endfor
+
+######################################################################
+
+# These tools are all supplied by the devel/gettext-tools package if there
+# is no native tool available.
+#
+_TOOLS.gettext-tools=		gettext msgfmt xgettext
+_TOOLS_DEP.gettext-tools=	gettext<0.14.5,gettext-tools>=0.14.5
+
+.for _t_ in ${_TOOLS.gettext-tools}
+.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
+.    if !empty(PKGPATH:Mdevel/gettext-tools)
+MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
+.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
+TOOLS_DEPENDS.${_t_}?=	{${_TOOLS_DEP.gettext-tools}}:../../devel/gettext-tools
+TOOLS_CREATE+=		${_t_}
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=${TOOLS_DEPENDS.${_t_}:C/:.*//}
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 .    endif
 .  endif
 .endfor
