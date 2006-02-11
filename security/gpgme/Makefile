@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2006/02/05 23:10:44 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2006/02/11 14:11:07 joerg Exp $
 #
 
 DISTNAME=	gpgme-1.0.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/ \
 		ftp://ftp.gnupg.org/gcrypt/alpha/gpgme/
@@ -16,6 +16,12 @@ DEPENDS+=		gnupg>=1.2.2:../../security/gnupg
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PTHREAD_OPTS+=		require
+
+SUBST_CLASSES+=		pthread
+SUBST_FILES.pthread=	gpgme/gpgme-config.in
+SUBST_SED.pthread+=	-e 's,@PTHREAD_LIBS@,${PTHREAD_LDFLAGS} ${PTHREAD_LIBS},g'
+SUBST_SED.pthread+=	-e 's,@PTHREAD_CFLAGS@,${PTHREAD_CFLAGS},g'
+SUBST_STAGE.pthread=	post-patch
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.gpgme
 PKG_SUPPORTED_OPTIONS=	gpgsm
