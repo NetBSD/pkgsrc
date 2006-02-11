@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2005/10/12 13:59:19 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2006/02/11 11:12:05 rillig Exp $
 
 DISTNAME=	unrarsrc-3.5.4
 PKGNAME=	${DISTNAME:S/src//}
@@ -18,7 +18,7 @@ USE_LANGUAGES=	c++
 MAKEFILE=	makefile.unix
 
 LICENSE=	unrar-license
-RESTRICTED=	"Do not modify. Do not charge a fee for redistribution."
+RESTRICTED=	Do not modify. Do not charge a fee for redistribution.
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
@@ -27,17 +27,17 @@ WRKSRC=		${WRKDIR}/unrar
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/unrar
-	cd ${WRKSRC} && ${INSTALL_PROGRAM} unrar ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/unrar
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} unrar ${PREFIX:Q}/bin
 	cd ${WRKSRC} && ${INSTALL_DATA} readme.txt license.txt	\
-		${PREFIX}/share/doc/unrar
+		${PREFIX:Q}/share/doc/unrar
 
 .include "../../mk/bsd.prefs.mk"
 
 # Don't set _LARGEFILE_SOURCE for platforms w/o ftello() and fseeko().
 #
-.for __glob__ in Interix-* NetBSD-1.5*
-.  if ${MACHINE_PLATFORM:M${__glob__}} != ""
+.for platform in Interix-* NetBSD-1.5*
+.  if ${MACHINE_PLATFORM:M${platform}} != ""
 .MAKEFLAGS+=	DEFINES=""
 .  endif
 .endfor
