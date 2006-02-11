@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4587 2006/02/11 10:05:13 cube Exp $
+$NetBSD: TODO,v 1.4588 2006/02/11 10:27:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -648,6 +648,7 @@ Suggested package updates
 	o jpegpixi-1.1.1
 	o jpilot-0.99.8
 	o jwhois-3.2.3
+	o k3b-0.12.11
 	o kajaani-kombat-0.7
 	o kapooka-0.3
 	o kazehakase-0.3.5
@@ -688,7 +689,7 @@ Suggested package updates
 	o libsmi-0.4.3
 	o libtcl-nothread-8.4.9
 	o licq-core-1.3.0
-	o liferea-1.0.3
+	o liferea-1.0.4
 	o lighttpd-1.4.10
 	o lilypond-2.6.3
 	o linuxsms-0.77
@@ -767,6 +768,7 @@ Suggested package updates
 	o newmail-1.0.2
 	o newmat-11
 	o ng-1.4.4
+	o nmap-4.01
 	o nmh-1.2.1
 	o nn-6.7.2
 	o ns-plugger-common-5.1.3
@@ -1062,6 +1064,7 @@ Suggested package updates
 	o ruby-RMagick-1.10.0 [pkg/32663]
 	o ruby-cmd-0.8.0
 	o rudiments-0.29
+	o rxvt-unicode-7.6
 	o sablecc-3.2
 	o sablevm-1.11.3 [pkg/30022]
 	o sablevm-1.12
