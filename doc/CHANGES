@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12865 2006/02/11 13:09:30 rillig Exp $
+$NetBSD: CHANGES,v 1.12866 2006/02/11 14:11:45 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -911,3 +911,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated wm/ion3-devel to 20060107 [cube 2006-02-11]
 	Added graphics/pornview version 0.2.0pre1 [rillig 2006-02-11]
 	Added graphics/pornview-gtk2 version 0.2.0pre1 [rillig 2006-02-11]
+	Updated security/gpgme to 1.0.3nb2 [joerg 2006-02-11]
