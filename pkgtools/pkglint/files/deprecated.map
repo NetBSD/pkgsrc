@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.26 2006/02/11 16:12:26 rillig Exp $
+# $NetBSD: deprecated.map,v 1.27 2006/02/11 19:29:39 rillig Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -67,3 +67,4 @@ USE_XFACE		Use the PKG_OPTIONS framework instead.
 
 # February 2006
 TOOLS_DEPMETHOD		Use the :build or :run modifiers in USE_TOOLS instead.
+MANDIR			Please use ${PREFIX}/${PKGMANDIR} instead.
