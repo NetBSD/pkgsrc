@@ -1,0 +1,80 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/11 16:12:25 rxg Exp $
+libexec/rox/ROX-Session
+share/rox/ROX-Session/.DirIcon
+share/rox/ROX-Session/AppInfo.xml
+share/rox/ROX-Session/AppRun
+share/rox/ROX-Session/AutoStart.py
+share/rox/ROX-Session/Help/COPYING
+share/rox/ROX-Session/Help/Changes
+share/rox/ROX-Session/Help/DBUS-API
+share/rox/ROX-Session/Help/Guide/.DirIcon
+share/rox/ROX-Session/Help/Guide/AppInfo.xml
+share/rox/ROX-Session/Help/Guide/AppRun
+share/rox/ROX-Session/Help/Guide/Guide.html
+share/rox/ROX-Session/Help/Guide/Tutorial.html
+share/rox/ROX-Session/Help/Guide/Tutorial2.html
+share/rox/ROX-Session/Help/Guide/applets.png
+share/rox/ROX-Session/Help/Guide/apps.png
+share/rox/ROX-Session/Help/Guide/archive.png
+share/rox/ROX-Session/Help/Guide/de/Anleitung.html
+share/rox/ROX-Session/Help/Guide/de/Leitfaden.html
+share/rox/ROX-Session/Help/Guide/de/apps.png
+share/rox/ROX-Session/Help/Guide/de/help.png
+share/rox/ROX-Session/Help/Guide/de/logout.png
+share/rox/ROX-Session/Help/Guide/de/mount.png
+share/rox/ROX-Session/Help/Guide/de/newdir.png
+share/rox/ROX-Session/Help/Guide/de/shortcut.png
+share/rox/ROX-Session/Help/Guide/edit.png
+share/rox/ROX-Session/Help/Guide/help.png
+share/rox/ROX-Session/Help/Guide/it/Guida.html
+share/rox/ROX-Session/Help/Guide/it/Tutorial.html
+share/rox/ROX-Session/Help/Guide/it/Tutorial2.html
+share/rox/ROX-Session/Help/Guide/it/applets.png
+share/rox/ROX-Session/Help/Guide/it/apps.png
+share/rox/ROX-Session/Help/Guide/it/archive.png
+share/rox/ROX-Session/Help/Guide/it/edit.png
+share/rox/ROX-Session/Help/Guide/it/help.png
+share/rox/ROX-Session/Help/Guide/it/logout.png
+share/rox/ROX-Session/Help/Guide/it/mount.png
+share/rox/ROX-Session/Help/Guide/it/newdir.png
+share/rox/ROX-Session/Help/Guide/it/panel1.png
+share/rox/ROX-Session/Help/Guide/it/runaction.png
+share/rox/ROX-Session/Help/Guide/it/save.png
+share/rox/ROX-Session/Help/Guide/it/shortcut.png
+share/rox/ROX-Session/Help/Guide/it/style.css
+share/rox/ROX-Session/Help/Guide/logout.png
+share/rox/ROX-Session/Help/Guide/mount.png
+share/rox/ROX-Session/Help/Guide/newdir.png
+share/rox/ROX-Session/Help/Guide/panel1.png
+share/rox/ROX-Session/Help/Guide/runaction.png
+share/rox/ROX-Session/Help/Guide/save.png
+share/rox/ROX-Session/Help/Guide/shortcut.png
+share/rox/ROX-Session/Help/Guide/style.css
+share/rox/ROX-Session/Help/README
+share/rox/ROX-Session/Login
+share/rox/ROX-Session/Messages/da.gmo
+share/rox/ROX-Session/Messages/de.gmo
+share/rox/ROX-Session/Messages/es.gmo
+share/rox/ROX-Session/Messages/fr.gmo
+share/rox/ROX-Session/Messages/it.gmo
+share/rox/ROX-Session/Messages/ja.gmo
+share/rox/ROX-Session/Messages/lt.gmo
+share/rox/ROX-Session/Messages/nl.gmo
+share/rox/ROX-Session/Messages/ru.gmo
+share/rox/ROX-Session/Options.xml
+share/rox/ROX-Session/RunROX
+share/rox/ROX-Session/SetupPanel
+share/rox/ROX-Session/Styles
+share/rox/ROX-Session/findrox.py
+share/rox/ROX-Session/images/rox-halt.png
+share/rox/ROX-Session/images/rox-suspend.png
+share/rox/ROX-Session/interactive.py
+share/rox/ROX-Session/logout.py
+share/rox/ROX-Session/setup.py
+@dirrm share/rox/ROX-Session/images
+@dirrm share/rox/ROX-Session/Messages
+@dirrm share/rox/ROX-Session/Help/Guide/it
+@dirrm share/rox/ROX-Session/Help/Guide/de
+@dirrm share/rox/ROX-Session/Help/Guide
+@dirrm share/rox/ROX-Session/Help
+@dirrm share/rox/ROX-Session
