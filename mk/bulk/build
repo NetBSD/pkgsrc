@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.93 2006/01/30 20:06:51 rillig Exp $
+# $NetBSD: build,v 1.94 2006/02/11 21:44:16 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -62,12 +62,10 @@ The following options are supported:
 	The only difference between this option and a regular bulk build
 	is that the packages are not actually built.
 
-   -r | --restart | --resume | restart
-	Restart a previously interrupted bulk build.  The last form of
-	this option is for backwards compatibility and may be removed in
-	future versions of this script.
+   -r | --resume
+	Resume a previously interrupted bulk build.
 
-	The --restart option may be combined with the --mirror_only
+	The --resume option may be combined with the --mirror_only
 	option.
 
    -s | --specific-pkgs
@@ -105,7 +103,7 @@ scriptdir=`cd "${scriptdir}" && pwd`
 #
 # Default values for command line options.
 #
-restart=no
+resume=no
 mirror_only=no
 target=bulk-package
 makeargs=""
@@ -133,8 +131,8 @@ while test $# -gt 0; do
 		target=mirror-distfiles
 		shift
 		;;
-	-r|--restart|--resume|restart)
-		restart=yes
+	-r|--resume|--restart|restart)
+		resume=yes
 		shift
 		;;
 	-s|--specific-pkgs)
@@ -229,7 +227,7 @@ echo "build> Checking if the pkgtools are up-to-date"
 #
 # Run the pre-build script if necessary.
 #
-case $restart in
+case $resume in
 yes)	echo "build> Resuming -- skipping pre-build script";;
 *)	# make veryveryclean :)
 	( cd "${pkgsrc_dir}" \
@@ -310,7 +308,7 @@ fi
 # Save the bulk build ID in a file, as it most often contains a time
 # stamp.
 #
-case $restart in
+case $resume in
 no)	echo "${REPORT_BASEDIR}" > "${BULK_BUILD_ID_FILE}" \
 	|| die "Could not save the bulk build ID in ${BULK_BUILD_ID_FILE}.";;
 esac
@@ -332,7 +330,7 @@ done
 #
 # Create the bulk cache files.
 #
-if [ "x$restart" != "xyes" ]; then
+if [ "x$resume" != "xyes" ]; then
 	( cd "${pkgsrc_dir}" \
 	  && env PKGLIST="${PKGLIST-}" ${BMAKE} bulk-cache $makeargs
 	) || die "Could not create the bulk build cache."
@@ -353,7 +351,7 @@ echo "build> Starting actual build using the order specified in $ORDERFILE..."
 # Loop over every package in the correct order.  Before building
 # each one, check to see if we've already processed this package
 # before.  This could happen if the build got interrupted and we
-# started it again with the 'restart' option.  This prevents us
+# started it again with the '-resume' option.  This prevents us
 # from having to do a potentially very large number of make's to
 # get back to where we let off.  After we build each package, add
 # it to the top level buildlog
