@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12876 2006/02/11 18:39:41 wiz Exp $
+$NetBSD: CHANGES,v 1.12877 2006/02/11 20:11:54 ben Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -922,3 +922,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated converters/convmv to 1.09 [heinz 2006-02-11]
 	Updated x11/gnome-desktop to 2.12.3 [wiz 2006-02-11]
 	Updated devel/libidn to 0.6.2 [wiz 2006-02-11]
+	Updated security/fprot-workstatoin-bin to 4.6.6 [ben 2006-02-11]
