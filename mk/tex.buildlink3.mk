@@ -1,4 +1,4 @@
-# $NetBSD: tex.buildlink3.mk,v 1.10 2006/01/22 16:45:30 tonio Exp $
+# $NetBSD: tex.buildlink3.mk,v 1.11 2006/02/11 03:00:11 ross Exp $
 #
 # A Makefile fragment for TeX and LaTeX packages
 #
@@ -124,7 +124,8 @@ _TEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX1}
 
 .if ${TEX_TYPE} == "none"
 PKG_FAIL_REASON=	\
-	"${_TEX_TYPE} is not an acceptable TeX version for ${PKGNAME}."
+	"${_TEX_TYPE} is not an acceptable (${TEX_ACCEPTED})\
+	    TeX version for ${PKGNAME}."
 .else
 PLIST_SUBST+=	TEX_TYPE=${TEX_TYPE:Q}
 .if (${TEX_DEPMETHOD} == "build")
