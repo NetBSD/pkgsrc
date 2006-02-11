@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.72 2006/02/11 17:28:12 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.73 2006/02/11 22:48:32 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -147,3 +147,5 @@ Pullup ticket 1115 - requested by Lubomir Sedlacik
 dependency fix for emulators/suse91_libpng
 Pullup ticket 1116 - requested by Lubomir Sedlacik
 update of www/firefox-bin including security fixes
+Pullup ticket 1079 - requested by Todd Vierling
+security fix for libtool-base
