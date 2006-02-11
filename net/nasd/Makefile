@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:10:27 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/11 14:22:46 joerg Exp $
 
-DISTNAME=		repackaged-${PKGNAME}
+DISTNAME=		repackaged-${PKGNAME_NOREV}
 PKGNAME=		nasd-1.3
 PKGREVISION=		1
 CATEGORIES=		net sysutils
