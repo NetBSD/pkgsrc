@@ -1,11 +1,15 @@
-$NetBSD: patch-al,v 1.1 2005/10/10 15:14:49 salo Exp $
+$NetBSD: patch-al,v 1.2 2006/02/11 01:04:19 joerg Exp $
 
-Security fix for CAN-2005-3011, from Ubuntu.
+Security fix for CAN-2005-3001.
 
 --- util/texindex.c.orig	2004-04-11 19:56:47.000000000 +0200
-+++ util/texindex.c	2005-10-10 16:46:44.000000000 +0200
-@@ -390,11 +390,12 @@
- maketempname (int count)
++++ util/texindex.c
+@@ -387,14 +387,15 @@ For more information about these matters
+ /* Return a name for temporary file COUNT. */
+ 
+ static char *
+-maketempname (int count)
++maketempname (int count, int can_exist)
  {
    static char *tempbase = NULL;
 +  char *tempname;
@@ -18,17 +22,55 @@ Security fix for CAN-2005-3011, from Ubuntu.
        tempbase = concat (tempdir, "txidxXXXXXX");
  
        fd = mkstemp (tempbase);
-@@ -403,7 +404,12 @@
+@@ -403,7 +404,14 @@ maketempname (int count)
      }
  
    sprintf (tempsuffix, ".%d", count);
 -  return concat (tempbase, tempsuffix);
 +  tempname = concat (tempbase, tempsuffix);
-+  fd = open (tempname, O_CREAT|O_EXCL|O_WRONLY, 0600);
-+  if (fd == -1)
-+    pfatal_with_name (tempname);
-+  close (fd);
++  if (!can_exist) {
++    fd = open (tempname, O_CREAT|O_EXCL|O_WRONLY, 0600);
++    if (fd == -1)
++      pfatal_with_name (tempname);
++    close (fd);
++  }
 +  return tempname;
  }
  
+ 
+@@ -415,7 +423,7 @@ flush_tempfiles (int to_count)
+   if (keep_tempfiles)
+     return;
+   while (last_deleted_tempcount < to_count)
+-    unlink (maketempname (++last_deleted_tempcount));
++    unlink (maketempname (++last_deleted_tempcount, 1));
+ }
+ 
+ 
+@@ -882,7 +890,7 @@ sort_offline (char *infile, off_t total,
+ 
+   for (i = 0; i < ntemps; i++)
+     {
+-      char *outname = maketempname (++tempcount);
++      char *outname = maketempname (++tempcount, 0);
+       FILE *ostream = fopen (outname, "w");
+       long tempsize = 0;
+ 
+@@ -930,7 +938,7 @@ fail:
+ 
+   for (i = 0; i < ntemps; i++)
+     {
+-      char *newtemp = maketempname (++tempcount);
++      char *newtemp = maketempname (++tempcount, 0);
+       sort_in_core (tempfiles[i], MAX_IN_CORE_SORT, newtemp);
+       if (!keep_tempfiles)
+         unlink (tempfiles[i]);
+@@ -1400,7 +1408,7 @@ merge_files (char **infiles, int nfiles,
+       int nf = MAX_DIRECT_MERGE;
+       if (i + 1 == ntemps)
+         nf = nfiles - i * MAX_DIRECT_MERGE;
+-      tempfiles[i] = maketempname (++tempcount);
++      tempfiles[i] = maketempname (++tempcount, 0);
+       value |= merge_direct (&infiles[i * MAX_DIRECT_MERGE], nf, tempfiles[i]);
+     }
  
