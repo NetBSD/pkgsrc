@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/02/11 16:12:25 rxg Exp $
+
+--- src/wm.c.orig	2006-01-30 13:25:57.000000000 +0800
++++ src/wm.c
+@@ -214,7 +214,7 @@ static void run_wm(void)
+  */
+ static const char *get_window_manager(void)
+ {
+-	const char *fallbacks[] = {"xfwm4", "sawfish", "sawmill", "enlightenment", "wmaker",
++	const char *fallbacks[] = {"oroborox", "xfwm4", "sawfish", "sawmill", "enlightenment", "wmaker",
+ 			    "icewm", "blackbox", "fluxbox", "metacity", "kwin", "kwm",
+ 			    "fvwm2", "fvwm", "4Dwm", "twm"};
+ 

@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/02/11 16:12:25 rxg Exp $
+
+--- src/dbus.c.orig	2005-11-20 16:43:11.000000000 +0800
++++ src/dbus.c
+@@ -356,14 +356,14 @@ void dbus_init(void)
+ 	gint stdout_pipe = -1;
+ 	gchar *argv[] = {"dbus-daemon-1", "--session", "--print-address", NULL};
+ 
+-	libdbus = dlopen("libdbus-1.so.0", RTLD_LAZY | RTLD_NOLOAD);
++	libdbus = dlopen("libdbus-1.so.0", RTLD_LAZY);
+ 	if (!libdbus)
+ 	{
+ 		g_warning(_("Failed to open libdbus-1.so.0. "
+ 			    "D-BUS support disabled."));
+ 		return;
+ 	}
+-	libdbus_glib = dlopen("libdbus-glib-1.so.0", RTLD_LAZY | RTLD_NOLOAD);
++	libdbus_glib = dlopen("libdbus-glib-1.so.0", RTLD_LAZY);
+ 	if (!libdbus_glib)
+ 	{
+ 		g_warning(_("Failed to open libdbus-glib-1.so.0. "
