@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12869 2006/02/11 16:49:13 rillig Exp $
+$NetBSD: CHANGES,v 1.12870 2006/02/11 16:52:05 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -916,3 +916,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed sysutils/rox-session [rxg 2006-02-11]
 	Added x11/rox-session version 0.1.25 [rxg 2006-02-11]
 	Added converters/kcc version 1.0 [rillig 2006-02-11]
+	Added devel/ja-trac version 0.9.3.1 [rillig 2006-02-11]
