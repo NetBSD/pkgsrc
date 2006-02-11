@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.24 2006/02/05 23:11:14 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2006/02/11 21:31:19 ben Exp $
 #
 
 DISTNAME=	qvwm-1.1.12
 PKGREVISION=	6
 CATEGORIES=	wm
-MASTER_SITES=	ftp://www.qvwm.org/pub/qvwm/
+MASTER_SITES=	ftp://ftp.yz.yamagata-u.ac.jp/pub/X11/wm/qvwm/qvwm/ \
+		ftp://ftp.chg.ru/pub/X11/windowmanagers/qvwm/
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://www.qvwm.org/
+HOMEPAGE=	http://www.csg.is.titech.ac.jp/~kourai/qvwm/
 COMMENT=	Windows 95/98/NT like window manager for X11
 
 GNU_CONFIGURE=	yes
