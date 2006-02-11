@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/02/05 23:09:02 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2006/02/11 14:46:16 rillig Exp $
 #
 
 DISTNAME=		qemu-0.8.0
@@ -19,17 +19,19 @@ HAS_CONFIGURE=		yes
 GCC_REQD+=		3.0
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
-CONFIGURE_ARGS+=	--interp-prefix=${PREFIX}/share/qemu
+CONFIGURE_ARGS+=	--interp-prefix=${PREFIX:Q}/share/qemu
 
-SUBST_CLASSES+=		snd smbd
+SUBST_CLASSES+=		snd
 SUBST_STAGE.snd=	post-patch
 SUBST_FILES.snd=	audio/ossaudio.c
-SUBST_SED.snd=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
-SUBST_MESSAGE.snd=	"Fixing hardcoded audio device."
+SUBST_SED.snd=		-e s,/dev/dsp,${DEVOSSAUDIO:Q},g
+SUBST_MESSAGE.snd=	Fixing hardcoded audio device.
+
+SUBST_CLASSES+=		smbd
 SUBST_STAGE.smbd=	post-patch
 SUBST_FILES.smbd=	vl.c
-SUBST_SED.smbd=		-e "s,/usr/sbin/smbd,${PREFIX}/sbin/smbd,g"
-SUBST_MESSAGE.smbd=	"Fixing hardcoded paths."
+SUBST_SED.smbd=		-e s,/usr/sbin/smbd,${PREFIX:Q}/sbin/smbd,g
+SUBST_MESSAGE.smbd=	Fixing hardcoded paths.
 
 # Remove -march/-mcpu from CFLAGS, otherwise it will fail
 # to build in the SSE code.
@@ -40,12 +42,12 @@ BUILDLINK_TRANSFORM+=	rm-optarg:-march rm-optarg:-mcpu
 # qemu cannot yet use gcc 4, see the faq/mailing lists
 # (hint: use gcc_select on darwin/macos to choose gcc 3.3 instead)
 .if !empty(CC_VERSION:Mgcc-4*)
-PKG_FAIL_REASON+=	"${PKGNAME} cannot use ${CC_VERSION}"
+PKG_FAIL_REASON+=	"${PKGNAME} cannot use "${CC_VERSION:Q}
 .endif
 
 post-install:
-	${INSTALL_DATA} ${FILESDIR}/Makefile.multinode-NetBSD \
-		${PREFIX}/share/doc/qemu
+	${INSTALL_DATA} ${FILESDIR:Q}/Makefile.multinode-NetBSD \
+		${PREFIX:Q}/share/doc/qemu
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
