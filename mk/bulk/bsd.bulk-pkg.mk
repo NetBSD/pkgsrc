@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.117 2006/02/10 12:21:16 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.118 2006/02/11 11:46:41 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -465,7 +465,7 @@ bulk-package:
 				${CP} ${WRKLOG:Q} ${_BROKENWRKLOG:Q}; \
 			fi; \
 			( \
-			if [ -f "${_BROKENWRKLOG:Q}" ]; then \
+			if [ -f ${_BROKENWRKLOG:Q} ]; then \
 				${ECHO} "<p>"; \
 				${ECHO} "Please view the <a href=\"../../${PKGPATH}/${BROKENWRKLOG}\">work log for ${PKGNAME}</a>"; \
 				${ECHO} "</p>"; \
