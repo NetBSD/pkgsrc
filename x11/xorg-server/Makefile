@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/02/10 12:59:47 tron Exp $
+# $NetBSD: Makefile,v 1.37 2006/02/11 10:58:41 rillig Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-server-${XORG_VER}
@@ -27,7 +27,7 @@ XINSTALL_MAN_DIRS=	programs/Xserver
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 XORG_PLIST_ENTRY=	${OPSYS}
 
-REPLACE_PERL=		exports/lib/modules/getconfig*
+REPLACE_PERL+=		exports/lib/modules/getconfig*
 
 SUBST_CLASSES+=		parser
 SUBST_STAGE.parser=	pre-install
@@ -35,14 +35,14 @@ SUBST_FILES.parser=	programs/Xserver/hw/xfree86/parser/Makefile
 SUBST_SED.parser=	-e '/$$(INSTALL).*lib$$(LIBNAME).a/ d'
 SUBST_SED.parser+=	-e '/$$(RANLIB).*lib$$(LIBNAME).a/ d'
 SUBST_SED.parser+=	-e 's|$$(INSTALL) $$(INSTALLFLAGS) $$(INSTINCFLAGS)|echo|'
-SUBST_MESSAGE.parser=	"Fixing parser Makefile."
+SUBST_MESSAGE.parser=	Fixing parser Makefile.
 
 SUBST_CLASSES+=		stubs
 SUBST_STAGE.stubs=	pre-install
 SUBST_FILES.stubs=	lib/font/stubs/Makefile
 SUBST_SED.stubs=	-e '/$$(INSTALL).*libfntstubs.a/ d'
 SUBST_SED.stubs+=	-e '/$$(RANLIB).*libfntstubs.a/ d'
-SUBST_MESSAGE.stubs=	"Fixing stubs Makefile."
+SUBST_MESSAGE.stubs=	Fixing stubs Makefile.
 
 .include "../../mk/bsd.prefs.mk"
 
