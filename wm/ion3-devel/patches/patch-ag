@@ -1,16 +1,16 @@
-$NetBSD: patch-ag,v 1.1.1.1 2004/10/04 20:50:57 cube Exp $
+$NetBSD: patch-ag,v 1.2 2006/02/11 10:03:48 cube Exp $
 
---- pwm/Makefile.orig	2004-09-06 20:28:36.000000000 +0200
+--- pwm/Makefile.orig	2005-05-02 16:55:27.000000000 +0200
 +++ pwm/Makefile
-@@ -18,6 +18,7 @@ LIBS += -lm
+@@ -18,6 +18,7 @@ INCLUDES += -I..
  LIBS += $(X11_LIBS) $(XINERAMA_LIBS)
- LIBS += $(LUA_LIBS)
- LIBS += $(DL_LIBS)
+ LIBS += $(LIBMAINLOOP_LIBS) $(LIBEXTL_LIBS) $(LIBTU_LIBS)
+ LIBS += $(LUA_LIBS) $(DL_LIBS)
 +LIBS += $(INTL_LIBS)
- EXT_OBJS += ../ioncore/ioncore.a ../luaextl/luaextl.a
- EXT_OBJS += ../libtu/libtu.a
+ LIBS += -lm
  
-@@ -26,7 +27,7 @@ DEFINES += -DETCDIR=\"$(ETCDIR)\" -DSHAR
+ EXT_OBJS += ../ioncore/ioncore.a
+@@ -27,7 +28,7 @@ DEFINES += -DETCDIR=\"$(ETCDIR)\" -DSHAR
  	   -DLCDIR=\"$(LCDIR)\" -DLOCALEDIR=\"$(LOCALEDIR)\"
  
  ifndef PWM_ETCDIR

@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2004/10/04 20:50:57 cube Exp $
+$NetBSD: patch-ad,v 1.2 2006/02/11 10:03:48 cube Exp $
 
---- ext_statusbar/ext_statusbar.lua.orig	2004-08-15 03:40:35.000000000 +0200
-+++ ext_statusbar/ext_statusbar.lua
-@@ -102,7 +102,7 @@ end
+--- mod_statusbar/ion-statusd/statusd_load.lua.orig	2005-05-02 16:55:27.000000000 +0200
++++ mod_statusbar/ion-statusd/statusd_load.lua
+@@ -39,7 +39,7 @@ end
  local function get_load_uptime()
      local f=io.popen('uptime', 'r')
      if not f then
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2004/10/04 20:50:57 cube Exp $
      end
      local s=f:read('*l')
      f:close()
-@@ -110,11 +110,30 @@ local function get_load_uptime()
+@@ -47,11 +47,30 @@ local function get_load_uptime()
      return (load or "")
  end
  
@@ -22,7 +22,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2004/10/04 20:50:57 cube Exp $
 +    end
 +    local s=f:read('*l')
 +    f:close()
-+    local st, en, load=string.find(s, '^(%d+%.%d+) %d+%.%d+ %d+%.%d+$')
++    local st, en, load=string.find(s, '^\{? ?(%d+%.%d+) %d+%.%d+ %d+%.%d+ ?\}?$')
 +    return (load or "")
 +end
 +
