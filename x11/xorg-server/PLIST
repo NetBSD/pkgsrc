@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/02/01 20:21:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/02/11 10:58:41 rillig Exp $
 ${X11ROOT_PREFIX}/bin/X
 ${X11ROOT_PREFIX}/bin/Xnest
 ${X11ROOT_PREFIX}/bin/Xprt
@@ -940,7 +940,6 @@ ${X11ROOT_PREFIX}/lib/X11/xserver/zu_ZA
 ${X11ROOT_PREFIX}/lib/X11/xserver/zu_ZA.iso88591
 ${X11ROOT_PREFIX}/lib/X11/xserver/zu_ZA.utf8
 ${X11ROOT_PREFIX}/lib/X11/xserver/zulu
-
 ${X11ROOT_PREFIX}/${MAN_DIR}/Xnest.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/Xorg.${MAN_SUFFIX}
 ${X11ROOT_PREFIX}/${MAN_DIR}/Xprt.${MAN_SUFFIX}
