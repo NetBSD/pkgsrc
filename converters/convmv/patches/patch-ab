@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/11/25 01:48:02 heinz Exp $
+$NetBSD: patch-ab,v 1.2 2006/02/11 17:24:17 heinz Exp $
 
---- suite/dotests.sh.orig	Sun Dec 14 05:56:54 2003
+--- suite/dotests.sh.orig	Fri Dec  9 17:11:46 2005
 +++ suite/dotests.sh
-@@ -1,63 +1,72 @@
+@@ -1,77 +1,86 @@
  #!/bin/sh
 -for d in `ls -d test*` ; do cd $d ; ls -R -g -G --time-style=+ >../out-$d ; cd .. ; done
 +
@@ -16,6 +16,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/11/25 01:48:02 heinz Exp $
 +
 +for d in `${CONVMV_LS} -d test*` ; do cd $d ; ${CONVMV_LS} -R -g -G --time-style=+ >../out-$d ; cd .. ; done
  #
+ echo smartness-test
  rm -rf test2
 -cp -a test test2
 +${CONVMV_CP} -a test test2
@@ -26,6 +27,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/11/25 01:48:02 heinz Exp $
  cd ..
  diff out-test out2 || { echo "smartness-test failed." ; exit 1; }
  #
+ echo double-utf8 test
  ../convmv -f iso8859-15 -t utf8 --notest -r --nosmart test2
  cd test2
 -ls -R -g -G --time-style=+ >../out2
@@ -42,6 +44,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/11/25 01:48:02 heinz Exp $
  pwd
  diff out-test out2 || { echo undo-double-utf8 test failed. ; exit 1; }
  #
+ echo utf8-to-iso8859-15-test
  rm -r test2
 -cp -a test test2
 +${CONVMV_CP} -a test test2
@@ -50,8 +53,20 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/11/25 01:48:02 heinz Exp $
 -ls -R -g -G --time-style=+ >../out2
 +${CONVMV_LS} -R -g -G --time-style=+ >../out2
  cd ..
- diff out-test-iso8859-15 out2 || { echo iso8859-15-test failed. ; exit 1; }
+ diff out-test-iso8859-15 out2 || { echo utf8-to-iso8859-15-test failed. ; exit 1; }
  #
+ echo iso8859-15-to-utf8-test
+ rm -r test2
+-cp -a test-iso8859-15 test2
++${CONVMV_CP} -a test-iso8859-15 test2
+ ../convmv -f iso8859-15 -t utf8 --notest -r test2
+ cd test2
+-ls -R -g -G --time-style=+ >../out2
++${CONVMV_LS} -R -g -G --time-style=+ >../out2
+ cd ..
+ diff out-test out2 || { echo iso8859-15-to-utf8-test failed. ; exit 1; }
+ #
+ echo nfc-test
  rm -r test2
 -cp -a test test2
 +${CONVMV_CP} -a test test2
@@ -69,6 +84,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/11/25 01:48:02 heinz Exp $
  cd ..
  diff out-test out2 || { echo nfc-test failed. ; exit 1; }
  #
+ echo escaped-test
  rm -r test2
 -cp -a test-escaped test2
 +${CONVMV_CP} -a test-escaped test2
