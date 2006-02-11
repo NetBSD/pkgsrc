@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.510 2006/02/11 16:14:40 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.511 2006/02/11 20:58:08 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2348,9 +2348,11 @@ sub checkline_mk_shellword($$$) {
 					"appropriate to remove the double quotes.");
 
 			} elsif ($opt_warn_quoting) {
-				$line->log_warning("Possibly misquoted make variable ${varname} in " . user_statename->[$state] . ".");
-				if ($state == SWST_PLAIN && !defined($mod)) {
+				if ($state == SWST_PLAIN) {
+					$line->log_warning("Please use \${${varname}:Q} instead of \${${varname}}.");
 					$line->replace("\${${varname}}", "\${${varname}:Q}");
+				} else {
+					$line->log_warning("Please use \${${varname}:Q} instead of \${${varname}} and make sure the variable appears outside of any quoting characters.");
 				}
 			}
 
