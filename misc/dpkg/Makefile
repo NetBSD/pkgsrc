@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:10:07 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/11 14:21:36 joerg Exp $
 #
 
-DISTNAME=	${PKGNAME:S,-,_,}
+DISTNAME=	${PKGNAME_NOREV:S,-,_,}
 PKGNAME=	dpkg-1.10.24
 PKGREVISION=	1
 CATEGORIES=	misc
