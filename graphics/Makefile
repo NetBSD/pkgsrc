@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.411 2006/01/24 03:43:42 xtraeme Exp $
+# $NetBSD: Makefile,v 1.412 2006/02/11 13:24:30 rillig Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -235,6 +235,8 @@ SUBDIR+=	plotutils-nox11
 SUBDIR+=	png
 SUBDIR+=	png2html
 SUBDIR+=	pngcrush
+SUBDIR+=	pornview
+SUBDIR+=	pornview-gtk2
 SUBDIR+=	potrace
 SUBDIR+=	povray
 SUBDIR+=	ppmtoxvpic
