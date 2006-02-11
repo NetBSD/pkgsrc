@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:11:13 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/02/11 10:03:48 cube Exp $
 #
 
-DISTNAME=	ion-3ds-20040906
+DISTNAME=	ion-3ds-20060107
 PKGNAME=	${DISTNAME:S/-3ds-/3-/}
-PKGREVISION=	2
 CATEGORIES=	wm x11
 MASTER_SITES=	http://modeemi.cs.tut.fi/~tuomov/ion/dl/
 
@@ -14,7 +13,6 @@ COMMENT=	Keyboard friendly tiling window manager
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=	gmake
-GNU_CONFIGURE=	YES
 USE_PKGLOCALEDIR=	YES
 BUILD_USES_MSGFMT=	YES
 
@@ -33,7 +31,8 @@ EGFILES=		cfg_bindings.lua cfg_dock.lua cfg_floatws.lua	\
 			look_clean.lua look_cleanios.lua		\
 			look_cleanviolet.lua look_dusky.lua		\
 			look_greyviolet.lua look_ios.lua		\
-			look_simpleblue.lua look_wheat2.lua
+			look_simpleblue.lua look_wheat2.lua		\
+			lookcommon_clean.lua lookcommon_emboss.lua
 .for f in ${EGFILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
@@ -42,9 +41,3 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .include "../../lang/lua/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
-# This is necessary because gettext's builtin.mk add stuff there,
-# and ion3's autoconf is rather broken in the way it auto-configures
-# itself for gettext.  Eventually ion3 should be fixed, but right now
-# it is not really possible.
-LIBS=			# none
