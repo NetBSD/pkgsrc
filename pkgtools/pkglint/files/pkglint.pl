@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.508 2006/02/11 11:55:19 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.509 2006/02/11 12:47:05 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2122,7 +2122,7 @@ sub checkline_relative_path($$) {
 	$res_path = resolve_relative_path($path, true);
 	if ($res_path =~ regex_unresolved) {
 		$line->log_info("Unresolved path: \"${path}\".");
-	} elsif (!-e "${current_dir}/${res_path}") {
+	} elsif (!-e ((($res_path =~ qr"^/") ? "" : "${current_dir}/") . $res_path)) {
 		$line->log_error("\"${res_path}\" does not exist.");
 	} elsif ($path =~ qr"^\.\./\.\./([^/]+)/([^/]+)(.*)") {
 		my ($cat, $pkg, $rest) = ($1, $2, $3);
