@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/02/11 16:51:57 rillig Exp $
+
+SHA1 (trac-0.9.3-ja-1.zip) = 39555f81f0d476e3feb5329ce12817af4f4dc3e3
+RMD160 (trac-0.9.3-ja-1.zip) = bfc84360c994fe84409cdf07d8582298b9454a37
+Size (trac-0.9.3-ja-1.zip) = 490438 bytes
+SHA1 (patch-aa) = 577475956c91ae995bbffb03ac5f8e8752912475
