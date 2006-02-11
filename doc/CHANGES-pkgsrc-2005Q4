@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.70 2006/02/09 10:34:26 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.71 2006/02/11 16:20:44 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -143,3 +143,5 @@ Pullup ticket 1106 - requested by Love Hornquist Astrand
 security update for heimdal
 Pullup ticket 1102 - requested by Geert Hendrickx
 security update for firefox and thunderbird
+Pullup ticket 1115 - requested by Lubomir Sedlacik
+dependency fix for emulators/suse91_libpng
