@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12874 2006/02/11 18:14:04 wiz Exp $
+$NetBSD: CHANGES,v 1.12875 2006/02/11 18:22:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -921,3 +921,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/ja-trac version 0.9.3.1 [rillig 2006-02-11]
 	Updated converters/convmv to 1.09 [heinz 2006-02-11]
 	Updated x11/gnome-desktop to 2.12.3 [wiz 2006-02-11]
+	Updated devel/libidn to 0.6.2 [wiz 2006-02-11]
