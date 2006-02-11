@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.507 2006/02/11 11:53:21 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.508 2006/02/11 11:55:19 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2570,7 +2570,7 @@ sub checkline_mk_shelltext($$) {
 		# State transition.
 		#
 
-		if ($state == SCST_SET && $shellword eq "-e") {
+		if ($state == SCST_SET && $shellword =~ qr"^-.*e") {
 			$set_e_mode = true;
 		}
 
