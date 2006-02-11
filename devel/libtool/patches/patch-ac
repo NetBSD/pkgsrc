@@ -1,8 +1,52 @@
-$NetBSD: patch-ac,v 1.20 2005/09/21 20:31:21 tv Exp $
+$NetBSD: patch-ac,v 1.20.4.1 2006/02/11 22:48:07 salo Exp $
 
 --- ltmain.sh.orig	2005-05-16 05:39:29.000000000 -0400
 +++ ltmain.sh
-@@ -188,6 +188,31 @@ func_win32_libid ()
+@@ -139,6 +139,43 @@ quote_scanset='[[~#^*{};<>?'"'"' 	]'
+ # Shell function definitions:
+ # This seems to be the best place for them
+ 
++# func_mktempdir [string]
++# Make a temporary directory that won't clash with other running
++# libtool processes, and avoids race conditions if possible.  If
++# given, STRING is the basename for that directory.
++func_mktempdir ()
++{
++    my_template="${TMPDIR-/tmp}/${1-$progname}"
++
++    if test "$run" = ":"; then
++      # Return a directory name, but don't create it in dry-run mode
++      my_tmpdir="${my_template}-$$"
++    else
++
++      # If mktemp works, use that first and foremost
++      my_tmpdir=`mktemp -d "${my_template}-XXXXXXXX" 2>/dev/null`
++
++      if test ! -d "$my_tmpdir"; then
++	# Failing that, at least try and use $RANDOM to avoid a race
++	my_tmpdir="${my_template}-${RANDOM-0}$$"
++
++	save_mktempdir_umask=`umask`
++	umask 0077
++	$mkdir "$my_tmpdir"
++	umask $save_mktempdir_umask
++      fi
++
++      # If we're not in dry-run mode, bomb out on failure
++      test -d "$my_tmpdir" || {
++        $echo "cannot create temporary directory \`$my_tmpdir'" 1>&2
++	exit $EXIT_FAILURE
++      }
++    fi
++
++    $echo "X$my_tmpdir" | $Xsed
++}
++
++
+ # func_win32_libid arg
+ # return the library type of file 'arg'
+ #
+@@ -188,6 +225,31 @@ func_win32_libid ()
  # arg is usually of the form 'gcc ...'
  func_infer_tag ()
  {
@@ -34,7 +78,7 @@ $NetBSD: patch-ac,v 1.20 2005/09/21 20:31:21 tv Exp $
      if test -n "$available_tags" && test -z "$tagname"; then
        CC_quoted=
        for arg in $CC; do
-@@ -228,6 +253,27 @@ func_infer_tag ()
+@@ -228,6 +290,27 @@ func_infer_tag ()
  	      break
  	      ;;
  	    esac
@@ -62,7 +106,7 @@ $NetBSD: patch-ac,v 1.20 2005/09/21 20:31:21 tv Exp $
  	  fi
  	done
  	# If $tagname still isn't set, then no tagged configuration
-@@ -512,7 +558,7 @@ if test -z "$show_help"; then
+@@ -512,7 +595,7 @@ if test -z "$show_help"; then
      $echo "*** Warning: inferring the mode of operation is deprecated." 1>&2
      $echo "*** Future versions of Libtool will require --mode=MODE be specified." 1>&2
      case $nonopt in
@@ -71,7 +115,7 @@ $NetBSD: patch-ac,v 1.20 2005/09/21 20:31:21 tv Exp $
        mode=link
        for arg
        do
-@@ -1313,6 +1359,13 @@ EOF
+@@ -1313,6 +1396,13 @@ EOF
  	    exit $EXIT_FAILURE
  	    ;;
  	  esac
@@ -85,7 +129,7 @@ $NetBSD: patch-ac,v 1.20 2005/09/21 20:31:21 tv Exp $
  	  if test "$prev" = rpath; then
  	    case "$rpath " in
  	    *" $arg "*) ;;
-@@ -1523,6 +1576,12 @@ EOF
+@@ -1523,6 +1613,12 @@ EOF
  	compiler_flags="$compiler_flags $arg"
  	compile_command="$compile_command $arg"
  	finalize_command="$finalize_command $arg"
@@ -98,7 +142,7 @@ $NetBSD: patch-ac,v 1.20 2005/09/21 20:31:21 tv Exp $
  	continue
  	;;
  
-@@ -2013,6 +2072,30 @@ EOF
+@@ -2013,6 +2109,30 @@ EOF
  	  else
  	    compiler_flags="$compiler_flags $deplib"
  	  fi
@@ -129,7 +173,7 @@ $NetBSD: patch-ac,v 1.20 2005/09/21 20:31:21 tv Exp $
  	  continue
  	  ;;
  	-l*)
-@@ -3153,6 +3236,7 @@ EOF
+@@ -3153,6 +3273,7 @@ EOF
  	# Calculate the version variables.
  	major=
  	versuffix=
@@ -137,7 +181,7 @@ $NetBSD: patch-ac,v 1.20 2005/09/21 20:31:21 tv Exp $
  	verstring=
  	case $version_type in
  	none) ;;
-@@ -3202,6 +3286,7 @@ EOF
+@@ -3202,6 +3323,7 @@ EOF
  	linux)
  	  major=.`expr $current - $age`
  	  versuffix="$major.$age.$revision"
@@ -145,7 +189,7 @@ $NetBSD: patch-ac,v 1.20 2005/09/21 20:31:21 tv Exp $
  	  ;;
  
  	osf)
-@@ -3264,6 +3349,7 @@ EOF
+@@ -3264,6 +3386,7 @@ EOF
  	if test "$avoid_version" = yes && test "$need_version" = no; then
  	  major=
  	  versuffix=
@@ -153,7 +197,7 @@ $NetBSD: patch-ac,v 1.20 2005/09/21 20:31:21 tv Exp $
  	  verstring=""
  	fi
  
-@@ -5462,8 +5548,16 @@ relink_command=\"$relink_command\""
+@@ -5462,8 +5585,16 @@ relink_command=\"$relink_command\""
        exit $EXIT_FAILURE
      fi
  
@@ -172,3 +216,23 @@ $NetBSD: patch-ac,v 1.20 2005/09/21 20:31:21 tv Exp $
  
      # Check to see that the destination is a directory.
      test -d "$dest" && isdir=yes
+@@ -5767,18 +5898,7 @@ relink_command=\"$relink_command\""
+ 	  outputname=
+ 	  if test "$fast_install" = no && test -n "$relink_command"; then
+ 	    if test "$finalize" = yes && test -z "$run"; then
+-	      tmpdir="/tmp"
+-	      test -n "$TMPDIR" && tmpdir="$TMPDIR"
+-	      tmpdir="$tmpdir/libtool-$$"
+-	      save_umask=`umask`
+-	      umask 0077
+-	      if $mkdir "$tmpdir"; then
+-	        umask $save_umask
+-	      else
+-	        umask $save_umask
+-		$echo "$modename: error: cannot create temporary directory \`$tmpdir'" 1>&2
+-		continue
+-	      fi
++	      tmpdir=`func_mktempdir`
+ 	      file=`$echo "X$file$stripped_ext" | $Xsed -e 's%^.*/%%'`
+ 	      outputname="$tmpdir/$file"
+ 	      # Replace the output file specification.
