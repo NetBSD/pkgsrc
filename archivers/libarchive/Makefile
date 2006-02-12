@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2005/10/13 21:34:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/12 15:24:14 xtraeme Exp $
 #
 
 DISTNAME=	libarchive-1.02.036
 CATEGORIES=	archivers
 MASTER_SITES=	http://people.freebsd.org/~kientzle/libarchive/src/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://people.freebsd.org/~kientzle/libarchive/src/
 COMMENT=	Library to read/create different archive formats
 

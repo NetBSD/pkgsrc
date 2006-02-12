@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/08 09:52:16 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/12 15:24:15 xtraeme Exp $
 
 DISTNAME=	XFree86-${XF_VER}-src-1
 PKGNAME=	XFree86-man-${XF_VER}
@@ -7,7 +7,7 @@ CATEGORIES=	misc x11
 MASTER_SITES=	${MASTER_SITE_XFREE}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	XFree86 Manuals
 

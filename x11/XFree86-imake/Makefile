@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/08 09:52:16 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/12 15:24:15 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	XFree86-imake-${XF_VER}
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XFREE}
 DISTFILES=	XFree86-${XF_VER}-src-1.tgz XFree86-${XF_VER}-src-3.tgz
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	Imake and other utilities from XFree86
 

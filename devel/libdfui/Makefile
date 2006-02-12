@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/04/11 21:45:26 tv Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/12 15:24:14 xtraeme Exp $
 #
 
 DISTNAME=	libdfui-3.0
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.bsdinstaller.org/distfiles/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.bsdinstaller.org/
 COMMENT=	LIBrary for DragonFly User Interfaces
 

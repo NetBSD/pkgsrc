@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:11:19 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/12 15:24:15 xtraeme Exp $
 #
 
 DISTNAME=	blur6ex-0.1.198
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.blursoft.com/releases/
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.blursoft.com/
 COMMENT=	Weblog and content framework
 
