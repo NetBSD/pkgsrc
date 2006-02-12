@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.7 2005/09/21 18:07:09 reed Exp $
+$NetBSD: patch-ao,v 1.8 2006/02/12 00:13:55 salo Exp $
 
---- session.c.orig	2005-08-31 11:59:49.000000000 -0500
-+++ session.c
-@@ -331,7 +331,7 @@
+--- session.c.orig	2005-12-23 21:59:12.000000000 -0600
++++ session.c	2006-02-08 21:07:01.000000000 -0600
+@@ -322,7 +322,7 @@
  				break;
  			}
  			debug("Received TCP/IP port forwarding request.");
@@ -11,7 +11,7 @@ $NetBSD: patch-ao,v 1.7 2005/09/21 18:07:09 reed Exp $
  			success = 1;
  			break;
  
-@@ -930,7 +930,7 @@
+@@ -921,7 +921,7 @@
  	if (tmpenv == NULL)
  		return;
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ao,v 1.7 2005/09/21 18:07:09 reed Exp $
  		var = child_get_env(tmpenv, "SUPATH");
  	else
  		var = child_get_env(tmpenv, "PATH");
-@@ -1036,7 +1036,7 @@
+@@ -1027,7 +1027,7 @@
  #  endif /* HAVE_ETC_DEFAULT_LOGIN */
  		if (path == NULL || *path == '\0') {
  			child_set_env(&env, &envsize, "PATH",
@@ -29,7 +29,7 @@ $NetBSD: patch-ao,v 1.7 2005/09/21 18:07:09 reed Exp $
  				SUPERUSER_PATH : _PATH_STDPATH);
  		}
  # endif /* HAVE_CYGWIN */
-@@ -1150,6 +1150,18 @@
+@@ -1141,6 +1141,18 @@
  		    strcmp(pw->pw_dir, "/") ? pw->pw_dir : "");
  		read_environment_file(&env, &envsize, buf);
  	}
@@ -48,7 +48,7 @@ $NetBSD: patch-ao,v 1.7 2005/09/21 18:07:09 reed Exp $
  	if (debug_flag) {
  		/* dump the environment */
  		fprintf(stderr, "Environment:\n");
-@@ -1260,9 +1272,9 @@
+@@ -1251,9 +1263,9 @@
  void
  do_setusercontext(struct passwd *pw)
  {
@@ -60,7 +60,7 @@ $NetBSD: patch-ao,v 1.7 2005/09/21 18:07:09 reed Exp $
  	{
  
  #ifdef HAVE_SETPCRED
-@@ -1304,11 +1316,13 @@
+@@ -1295,11 +1307,13 @@
  			perror("setgid");
  			exit(1);
  		}
@@ -74,7 +74,7 @@ $NetBSD: patch-ao,v 1.7 2005/09/21 18:07:09 reed Exp $
  		endgrent();
  #ifdef GSSAPI
  		if (options.gss_authentication) {
-@@ -2052,7 +2066,7 @@
+@@ -2045,7 +2059,7 @@
  		record_logout(s->pid, s->tty, s->pw->pw_name);
  
  	/* Release the pseudo-tty. */

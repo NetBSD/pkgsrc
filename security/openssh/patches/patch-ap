@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.6 2005/09/21 18:07:09 reed Exp $
+$NetBSD: patch-ap,v 1.7 2006/02/12 00:13:55 salo Exp $
 
---- ssh.c.orig	2005-08-12 07:10:56.000000000 -0500
-+++ ssh.c
-@@ -636,7 +636,7 @@
+--- ssh.c.orig	2005-12-30 23:33:37.000000000 -0600
++++ ssh.c	2006-02-08 21:07:24.000000000 -0600
+@@ -648,7 +648,7 @@
  	/* Open a connection to the remote host. */
  	if (ssh_connect(host, &hostaddr, options.port,
  	    options.address_family, options.connection_attempts,
