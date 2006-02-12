@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.40 2005/11/04 15:27:34 tv Exp $
+$NetBSD: patch-aa,v 1.41 2006/02/12 00:13:55 salo Exp $
 
---- configure.orig	2005-09-01 05:15:24.000000000 -0400
-+++ configure
-@@ -5481,6 +5481,36 @@ _ACEOF
+--- configure.orig	2006-02-01 05:33:51.000000000 -0600
++++ configure	2006-02-08 22:02:30.000000000 -0600
+@@ -5417,6 +5417,36 @@
  		;;
  	esac
  	;;
@@ -38,17 +38,17 @@ $NetBSD: patch-aa,v 1.40 2005/11/04 15:27:34 tv Exp $
 +       ;;
  *-*-irix5*)
  	PATH="$PATH:/usr/etc"
- 	cat >>confdefs.h <<\_ACEOF
-@@ -5706,7 +5736,7 @@ _ACEOF
- 		need_dash_r=1
- 	fi
+ 
+@@ -6233,7 +6263,7 @@
+ _ACEOF
+ 
  	;;
 -*-*-freebsd*)
 +*-*-freebsd*|*-*-dragonfly*)
  	check_for_libcrypt_later=1
- 	;;
- *-*-bsdi*)
-@@ -6554,6 +6584,9 @@ _ACEOF
+ 
+ cat >>confdefs.h <<\_ACEOF
+@@ -7269,6 +7299,9 @@
          ;;
  esac
  
@@ -58,7 +58,7 @@ $NetBSD: patch-aa,v 1.40 2005/11/04 15:27:34 tv Exp $
  # Allow user to specify flags
  
  # Check whether --with-cflags or --without-cflags was given.
-@@ -25360,12 +25393,19 @@ fi
+@@ -26694,14 +26727,21 @@
  rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_utmpx_location"; then
  	if test x"$system_utmpx_path" = x"no" ; then
@@ -72,16 +72,19 @@ $NetBSD: patch-aa,v 1.40 2005/11/04 15:27:34 tv Exp $
 +			cat >>confdefs.h <<\_ACEOF
  #define DISABLE_UTMPX 1
  _ACEOF
--
 +		fi
+ 
  	fi
 -else
+-
+-cat >>confdefs.h <<_ACEOF
 +fi
 +if test -n "$conf_utmpx_location"; then
- 	cat >>confdefs.h <<_ACEOF
++	cat >>confdefs.h <<_ACEOF
  #define CONF_UTMPX_FILE "$conf_utmpx_location"
  _ACEOF
-@@ -25434,12 +25474,20 @@ fi
+ 
+@@ -26769,14 +26809,20 @@
  rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
  if test -z "$conf_wtmpx_location"; then
  	if test x"$system_wtmpx_path" = x"no" ; then
@@ -95,16 +98,19 @@ $NetBSD: patch-aa,v 1.40 2005/11/04 15:27:34 tv Exp $
 +			cat >>confdefs.h <<\_ACEOF
  #define DISABLE_WTMPX 1
  _ACEOF
+-
 +		fi
- 
  	fi
 -else
+-
+-cat >>confdefs.h <<_ACEOF
 +fi
 +if test -n "$conf_wtmpx_location"; then
- 	cat >>confdefs.h <<_ACEOF
++	cat >>confdefs.h <<_ACEOF
  #define CONF_WTMPX_FILE "$conf_wtmpx_location"
  _ACEOF
-@@ -26665,7 +26713,7 @@ echo "OpenSSH has been configured with t
+ 
+@@ -28002,7 +28048,7 @@
  echo "                     User binaries: $B"
  echo "                   System binaries: $C"
  echo "               Configuration files: $D"

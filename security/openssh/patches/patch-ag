@@ -1,10 +1,10 @@
-$NetBSD: patch-ag,v 1.7 2005/09/21 18:07:09 reed Exp $
+$NetBSD: patch-ag,v 1.8 2006/02/12 00:13:55 salo Exp $
 
---- config.h.in.orig	2005-09-01 04:15:22.000000000 -0500
-+++ config.h.in
-@@ -113,6 +113,9 @@
- /* Define if you are on Cygwin */
- #undef HAVE_CYGWIN
+--- config.h.in.orig	2006-02-01 05:33:49.000000000 -0600
++++ config.h.in	2006-02-08 21:02:59.000000000 -0600
+@@ -32,6 +32,9 @@
+    */
+ #undef BROKEN_ONE_BYTE_DIRENT_D_NAME
  
 +/* Define if you are on Interix */
 +#undef HAVE_INTERIX
