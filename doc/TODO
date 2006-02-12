@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4594 2006/02/12 00:15:09 salo Exp $
+$NetBSD: TODO,v 1.4595 2006/02/12 00:23:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -788,6 +788,7 @@ Suggested package updates
 	o openldap-2.3.19
 	o openoffice-2.0.1
 	o openpam-20050616
+	o openssh-4.3p2
 	o openssl-0.9.8a
 	o openttd-0.4.5
 	o oroborus-2.0.15
