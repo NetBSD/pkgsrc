@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12884 2006/02/12 14:13:23 joerg Exp $
+$NetBSD: CHANGES,v 1.12885 2006/02/12 14:17:49 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -933,3 +933,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/p5-Crypt-IDEA to 1.06 [heinz 2006-02-12]
 	Added www/ja-trac version 0.9.3.1 [rillig 2006-02-12]
 	Updated multimedia/avidemux to 2.1.1nb2 [joerg 2006-02-12]
+	Added multimedia/x264-devel version 20060127 [joerg 2006-02-12]
