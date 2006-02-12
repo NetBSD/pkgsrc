@@ -1,17 +1,8 @@
-$NetBSD: patch-ab,v 1.10 2006/02/01 20:39:11 joerg Exp $
+$NetBSD: patch-ab,v 1.11 2006/02/12 17:24:23 salo Exp $
 
---- configure.orig	2005-12-31 01:13:10.000000000 +0000
-+++ configure
-@@ -3029,7 +3029,7 @@ _ACEOF
-   # libpcap doesn't even LOOK at
-                                      # the timeout you give it under Linux
-     ;;
--  *-freebsd* | *-kfreebsd*-gnu)
-+  *-freebsd* | *-kfreebsd*-gnu | *-dragonfly*)
-     cat >>confdefs.h <<\_ACEOF
- #define FREEBSD 1
- _ACEOF
-@@ -5765,10 +5765,6 @@ fi
+--- configure.orig	2006-02-02 03:18:42.000000000 +0100
++++ configure	2006-02-12 18:07:39.000000000 +0100
+@@ -5765,10 +5765,6 @@
  
  fi;
  
@@ -22,7 +13,7 @@ $NetBSD: patch-ab,v 1.10 2006/02/01 20:39:11 joerg Exp $
  if test $needs_cpp_precomp = yes; then
    CXXFLAGS="-no-cpp-precomp $CXXFLAGS"
  fi
-@@ -5802,6 +5798,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -5802,6 +5798,7 @@
  extern char pcap_version[];
  int main() {
    int major, minor;
