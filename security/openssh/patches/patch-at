@@ -1,8 +1,8 @@
-$NetBSD: patch-at,v 1.2 2005/09/21 18:07:09 reed Exp $
+$NetBSD: patch-at,v 1.3 2006/02/12 00:13:55 salo Exp $
 
---- servconf.c.orig	2005-08-12 07:11:37.000000000 -0500
-+++ servconf.c
-@@ -232,7 +232,11 @@
+--- servconf.c.orig	2005-12-13 02:33:20.000000000 -0600
++++ servconf.c	2006-02-08 21:07:59.000000000 -0600
+@@ -235,7 +235,11 @@
  
  	/* Turn privilege separation on by default */
  	if (use_privsep == -1)
