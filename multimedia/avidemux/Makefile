@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2006/02/05 23:10:14 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2006/02/12 14:12:54 joerg Exp $
 #
 
 DISTNAME=	avidemux-2.1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.berlios.de/avidemux/
 
@@ -55,6 +55,7 @@ post-configure:
 .include "../../lang/spidermonkey/buildlink3.mk"
 .include "../../multimedia/mjpegtools/buildlink3.mk"
 .include "../../multimedia/xvidcore/buildlink3.mk"
+.include "../../multimedia/x264-devel/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/ossaudio.buildlink3.mk"
