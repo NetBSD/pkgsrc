@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.511 2006/02/11 20:58:08 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.512 2006/02/12 12:10:13 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2244,6 +2244,12 @@ sub checkline_mk_text($$) {
 		$line->log_warning("Using \"\${WRKSRC}/..\" is conceptually wrong. Please use a combination of WRKSRC, CONFIGURE_DIRS and BUILD_DIRS instead.");
 	}
 
+	if ($text =~ qr"\b(-Wl,--rpath,|-Wl,-rpath-link,|-Wl,-rpath,|-Wl,-R)\b") {
+		$line->log_warning("Please use \${COMPILER_RPATH_FLAG} instead of $1.");
+	}
+	# Note: A simple -R is not detected, as the rate of false
+	# positives is too high.
+
 	$rest = $text;
 	$depr_map = get_deprecated_map();
 	while ($rest =~ s/(?:^|[^\$])\$\{([-A-Z0-9a-z_]+)(\.[\-0-9A-Z_a-z]+)?(?::[^\}]+)?\}//) {
@@ -2882,7 +2888,7 @@ sub checkline_mk_vartype_basic($$$$$$) {
 		}
 
 	} elsif ($type eq "Pathmask") {
-		if ($value_novar !~ qr"^[-0-9A-Za-z._~+%*?/]*$") {
+		if ($value_novar !~ qr"^[-0-9A-Za-z._~+%*?/\[\]]*$") {
 			$line->log_warning("\"${value}\" is not a valid pathname mask.");
 		}
 
