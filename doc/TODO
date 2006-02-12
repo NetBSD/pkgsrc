@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4596 2006/02/12 03:10:11 heinz Exp $
+$NetBSD: TODO,v 1.4597 2006/02/12 14:47:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -707,6 +707,7 @@ Suggested package updates
 	o mantis-0.19.2
 	o mapserver-4.2.5
 	o maradns-1.2.03.2
+	o mathomatic-12.5.8
 	o md-whois-4.7.8
 	o mdd-20050318
 	o mdf2iso-0.3.0
@@ -1023,6 +1024,7 @@ Suggested package updates
 	o qwt-0.4.0
 	o raine-0.43.2
 	o randread-0.2
+	o rapidsvn-0.9.1
 	o raptor-1.4.5
 	o rat-4.2.25
 	o rayshade-4.0.6
@@ -1046,7 +1048,7 @@ Suggested package updates
 	o rp-l2tp-0.4
 	o rp-pppoe-3.7
 	o rpc2-1.28
-	o rpm-4.1
+	o rpm-4.4.4
 	o rsnapshot-1.2.3
 	o rt-3.4.5
 	o rt-mysql-3.4.5
