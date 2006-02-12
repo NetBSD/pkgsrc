@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.14 2006/02/12 02:47:32 grant Exp $
+# $NetBSD: options.mk,v 1.15 2006/02/12 19:13:49 markd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
-PKG_SUPPORTED_OPTIONS=	inet6 kqueue ldap mysql pam pgsql sasl sqlite
+PKG_SUPPORTED_OPTIONS=	gssapi inet6 kqueue ldap mysql pam pgsql sasl sqlite
 PKG_OPTIONS_OPTIONAL_GROUPS= ssl
 PKG_OPTIONS_GROUP.ssl=	gnutls ssl
 PKG_SUGGESTED_OPTIONS=	ssl
@@ -81,4 +81,14 @@ CONFIGURE_ARGS+=	--with-sqlite
 .if !empty(PKG_OPTIONS:Mkqueue)
 CONFIGURE_ARGS+=	--with-ioloop=kqueue
 CONFIGURE_ARGS+=	--with-notify=kqueue
+.endif
+
+###
+### GSSAPI support.
+###
+.if !empty(PKG_OPTIONS:Mgssapi)
+CONFIGURE_ARGS+=	--with-gssapi
+.  include "../../mk/krb5.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-gssapi
 .endif
