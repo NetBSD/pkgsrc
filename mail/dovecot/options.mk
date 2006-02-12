@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.13 2006/02/09 09:09:28 ghen Exp $
+# $NetBSD: options.mk,v 1.14 2006/02/12 02:47:32 grant Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
-PKG_SUPPORTED_OPTIONS=	inet6 ldap mysql pam pgsql sasl sqlite
+PKG_SUPPORTED_OPTIONS=	inet6 kqueue ldap mysql pam pgsql sasl sqlite
 PKG_OPTIONS_OPTIONAL_GROUPS= ssl
 PKG_OPTIONS_GROUP.ssl=	gnutls ssl
 PKG_SUGGESTED_OPTIONS=	ssl
@@ -13,6 +13,8 @@ PKG_SUGGESTED_OPTIONS=	ssl
 ###
 .if !empty(PKG_OPTIONS:Mssl)
 CONFIGURE_ARGS+=        --with-ssl=openssl
+CONFIGURE_ENV+=		SSL_CFLAGS="-I${BUILDLINK_PREFIX.openssl}/include"
+CONFIGURE_ENV+=		SSL_LIBS="-lssl -lcrypto"
 .  include "../../security/openssl/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mgnutls)
 CONFIGURE_ARGS+=	--with-ssl=gnutls
@@ -71,4 +73,12 @@ CONFIGURE_ARGS+=	--without-pam
 .if !empty(PKG_OPTIONS:Msqlite)
 CONFIGURE_ARGS+=	--with-sqlite
 .  include "../../databases/sqlite3/buildlink3.mk"
+.endif
+
+###
+### kqueue support.
+###
+.if !empty(PKG_OPTIONS:Mkqueue)
+CONFIGURE_ARGS+=	--with-ioloop=kqueue
+CONFIGURE_ARGS+=	--with-notify=kqueue
 .endif
