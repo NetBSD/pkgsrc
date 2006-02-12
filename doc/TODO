@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4595 2006/02/12 00:23:23 wiz Exp $
+$NetBSD: TODO,v 1.4596 2006/02/12 03:10:11 heinz Exp $
 
 Suggested new packages
 ======================
@@ -817,12 +817,9 @@ Suggested package updates
 	o p5-Convert-ASN1-0.19
 	o p5-Convert-BER-1.3101
 	o p5-Convert-PEM-0.07
-	o p5-Crypt-CAST5_PP-1.03
-	o p5-Crypt-CBC-2.15
 	o p5-Crypt-CipherSaber-1.00
 	o p5-Crypt-DSA-0.13
 	o p5-Crypt-RSA-1.56
-	o p5-Crypt-Random-1.25
 	o p5-DBD-Oracle-1.16
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-postgresql-1.32
