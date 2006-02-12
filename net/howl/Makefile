@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/01/01 18:27:53 tron Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/12 05:26:39 rillig Exp $
 
 DISTNAME=		howl-1.0.0
 CATEGORIES=		net
@@ -15,7 +15,7 @@ PTHREAD_AUTO_VARS=	yes
 
 RCD_SCRIPTS=		howl
 PKG_GROUPS+=		${HOWL_GROUP}
-PKG_USERS+=		${HOWL_USER}:${HOWL_GROUP}::Zeroconf\ user
+PKG_USERS+=		${HOWL_USER:Q}:${HOWL_GROUP:Q}::Zeroconf\ user
 
 BUILD_DEFS+=		HOWL_GROUP HOWL_USER
 
