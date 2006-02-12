@@ -1,6 +1,6 @@
 #!@PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.109 2005/12/31 09:07:22 rillig Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.110 2006/02/12 18:35:59 rillig Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -268,6 +268,11 @@ sub check_prebuilt_packages
 	{
 	my($pkg, $ver);
 	($pkg, $ver) = ($1, $2);
+
+	# XXX: hack for python and ruby prefix support
+	$pkg =~ s/^py[0-9][0-9]pth-/py-/;
+	$pkg =~ s/^py[0-9][0-9]-/py-/;
+	$pkg =~ s/^ruby[0-9][0-9]-/ruby-/;
 
 	if ($opt{V} && $vuln{$pkg})
 	    {
@@ -569,10 +574,12 @@ sub list_installed_packages
 	{
 	my ($pkg);
 	$pkg = (split)[0];
+
 	# XXX: hack for python and ruby prefix support
-	$pkg =~ s/^py..pth-/py-/;
-	$pkg =~ s/^py..-/py-/;
-	$pkg =~ s/^ruby..-/ruby-/;
+	$pkg =~ s/^py[0-9][0-9]pth-/py-/;
+	$pkg =~ s/^py[0-9][0-9]-/py-/;
+	$pkg =~ s/^ruby[0-9][0-9]-/ruby-/;
+
 	push(@pkgs, $pkg);
 	}
     close(PKG_INFO);
