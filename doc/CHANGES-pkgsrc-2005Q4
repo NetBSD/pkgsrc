@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.74 2006/02/12 01:54:57 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.75 2006/02/12 02:19:41 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -151,3 +151,5 @@ Pullup ticket 1079 - requested by Todd Vierling
 security fix for libtool-base
 Pullup ticket 1118 - requested by Lubomir Sedlacik
 update security/openssh including security fix
+Pullup ticket 1119 - requested by Stoned Elipot
+security fix for gcpio
