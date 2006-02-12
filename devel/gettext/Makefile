@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2006/02/12 14:23:02 joerg Exp $
+# $NetBSD: Makefile,v 1.70 2006/02/12 16:37:30 joerg Exp $
 
 DISTNAME=		gettext-0.14.5
 CATEGORIES=		devel
@@ -38,9 +38,9 @@ do-install:
 	cd ${WRKSRC}/gettext-runtime && ${MAKE} install-gettextsrcDATA
 	cd ${WRKSRC}/gettext-tools/intl && ${MAKE} install-exec install-data
 	cd ${WRKSRC}/gettext-tools/po && ${MAKE} installdirs-data install-data
-	${INSTALL_DATA_DIR} ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/gettext-tools/man/autopoint.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/gettext-tools/man/gettextize.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/gettext-tools/man/autopoint.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/gettext-tools/man/gettextize.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gettext-asprintf/buildlink3.mk"
