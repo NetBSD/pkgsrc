@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4598 2006/02/12 17:27:23 salo Exp $
+$NetBSD: TODO,v 1.4599 2006/02/12 17:36:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -481,7 +481,7 @@ Suggested package updates
 	o elscreen-1.3.3
 	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
-	o enchant-1.2.1
+	o enchant-1.2.2
 	o enlightenment-0.16.8
 	o enscript-1.6.4
 	o epstool-3.08
@@ -550,6 +550,7 @@ Suggested package updates
 	o gnocatan-0.8.1.59
 	o gnome-backgrounds-2.12.3.1
 	o gnome-games-2.12.3
+	o gnome-icon-theme-2.14.0
 	o gnome-mag-0.12.3
 	o gnome-pilot-2.0.13
 	o gnome-spell-1.0.7
@@ -574,6 +575,9 @@ Suggested package updates
 	o gsed-4.1.4
 	o gsharutils-4.6
 	o gss-0.0.16
+	o gst-plugins0.10-base-0.10.3
+	o gst-plugins0.10-good-0.10.2
+	o gstreamer0.10-0.10.3
 	o gtetrinet-0.7.9
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
@@ -747,8 +751,8 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.8.4
 	o muse-0.9.1
-	o mysql4-client-4.1.6
-	o mysql4-server-4.1.6
+	o mysql4-client-4.1.18
+	o mysql4-server-4.1.18
 	o nagios-2.0 [replacing netsaint]
 	o nano-1.3.8
 	o nap-1.5.3
@@ -843,6 +847,7 @@ Suggested package updates
 	o p5-Font-TTF-0.35
 	o p5-Graph-0.20105
 	o p5-HTML-FillInForm-1.05
+	o p5-HTML-Parser-3.49
 	o p5-HTMLObject-2.26
 	o p5-HTTP-Cache-Transparent-0.6
 	o p5-HTTP-Request-Form-0.952
@@ -895,6 +900,7 @@ Suggested package updates
 	o p5-Tie-EncryptedHash-1.21
 	o p5-Time-HiRes-1.74
 	o p5-Time-Piece-2.00.01
+	o p5-Tree-Simple-1.16
 	o p5-WWW-Amazon-Wishlist-1.4
 	o p5-WWW-Mechanize-1.18
 	o p5-X11-Protocol-0.54
