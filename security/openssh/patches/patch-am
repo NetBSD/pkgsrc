@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.5 2005/09/21 18:07:09 reed Exp $
+$NetBSD: patch-am,v 1.6 2006/02/12 00:13:55 salo Exp $
 
---- auth2.c.orig	2005-07-17 02:26:44.000000000 -0500
-+++ auth2.c
-@@ -216,7 +216,7 @@
+--- auth2.c.orig	2005-09-23 21:43:51.000000000 -0500
++++ auth2.c	2006-02-08 21:05:04.000000000 -0600
+@@ -212,7 +212,7 @@
  		    authctxt->user);
  
  	/* Special handling for root */
