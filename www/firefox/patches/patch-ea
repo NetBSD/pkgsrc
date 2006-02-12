@@ -1,8 +1,8 @@
-$NetBSD: patch-dx,v 1.1 2006/02/05 14:46:31 ghen Exp $
+$NetBSD: patch-ea,v 1.1 2006/02/12 11:04:51 ghen Exp $
 
---- xpfe/components/history/src/nsGlobalHistory.cpp.orig	2006-02-02 20:55:17.000000000 +0100
-+++ xpfe/components/history/src/nsGlobalHistory.cpp
-@@ -1055,6 +1055,9 @@ nsGlobalHistory::SetPageTitle(nsIURI *aU
+--- toolkit/components/history/src/nsGlobalHistory.cpp.orig	2006-02-02 20:55:17.000000000 +0100
++++ toolkit/components/history/src/nsGlobalHistory.cpp
+@@ -1132,6 +1132,9 @@ nsGlobalHistory::SetPageTitle(nsIURI *aU
    rv = aURI->GetSpec(URISpec);
    NS_ENSURE_SUCCESS(rv, rv);
  
