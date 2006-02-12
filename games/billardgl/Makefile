@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/07 21:20:23 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/12 07:19:31 rillig Exp $
 #
 
 DISTNAME=	BillardGL-1.75
@@ -14,6 +14,7 @@ COMMENT=	3D Billard using OpenGL hardware acceleration
 BUILD_DIRS=	src
 USE_TOOLS+=	gmake imake
 MAKE_ENV+=	PAX=${PAX:Q}
+LDFLAGS+=	${X11_LDFLAGS}
 
 SUBST_CLASSES+=			billardgl
 SUBST_STAGE.billardgl=		do-configure
