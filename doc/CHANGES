@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12886 2006/02/12 17:27:22 salo Exp $
+$NetBSD: CHANGES,v 1.12887 2006/02/12 18:37:46 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -936,3 +936,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added multimedia/x264-devel version 20060127 [joerg 2006-02-12]
         Updated net/nmap to 4.01 [salo 2006-02-12]
         Updated net/nmapfe to 0.9.5nb26 [salo 2006-02-12]
+	Updated audio/moc to 2.4.0 [xtraeme 2006-02-12]
