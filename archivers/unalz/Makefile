@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/03 15:06:42 salo Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/12 05:10:36 rillig Exp $
 #
 
 DISTNAME=		unalz-0.53
@@ -13,11 +13,16 @@ COMMENT=		Alzip archive (.alz) extractor
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_TARGET=		posix-utf8
-NO_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 WRKSRC=			${WRKDIR}/unalz
 
 INSTALLATION_DIRS=	bin
+
+SUBST_CLASSES+=		d2u
+SUBST_STAGE.d2u=	pre-configure
+SUBST_FILES.d2u=	bzip2/*.[ch] zlib/*.[ch]
+SUBST_FILTER_CMD.d2u=	${TR} -d '\r'
+USE_TOOLS+=		tr
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
