@@ -1,4 +1,4 @@
-<!-- $NetBSD: debug.xml,v 1.2 2005/07/27 21:29:50 rpaulo Exp $ -->
+<!-- $NetBSD: debug.xml,v 1.3 2006/02/12 14:44:59 rillig Exp $ -->
 
 <chapter id="debug">
   <title>Debugging</title>
@@ -17,7 +17,7 @@
     <listitem>
       <para>Install <filename role="pkg">pkgtools/url2pkg</filename>,
         create a directory for a new package, change into it, then run
-        <command>url2pkg</command>:</para>  
+        <command>url2pkg</command>:</para>
 
       <screen>&cprompt; <userinput>mkdir /usr/pkgsrc/<replaceable>category</replaceable>/<replaceable>examplepkg</replaceable></userinput>
 &cprompt; <userinput>cd /usr/pkgsrc/<replaceable>category</replaceable>/<replaceable>examplepkg</replaceable></userinput>
@@ -40,7 +40,7 @@
     <listitem>
       <para>Add any dependencies glimpsed from documentation and the
 	configure step to the package's
-	<filename>Makefile</filename>.</para> 
+	<filename>Makefile</filename>.</para>
     </listitem>
 
     <listitem>
@@ -56,10 +56,10 @@
 
       <para>Doing as non-root user will ensure that no files are modified that
 	shouldn't be, especially during the build
-	phase. <command>mkpatches</command>, 
+	phase. <command>mkpatches</command>,
 	<command>patchdiff</command> and <command>pkgvi</command> are
 	from the <filename role="pkg">pkgtools/pkgdiff</filename>
-	package. </para>  
+	package. </para>
     </listitem>
 
     <listitem>
@@ -117,7 +117,7 @@
     </listitem>
 
     <listitem>
-      <para>Run <command>pkglint</command> from 
+      <para>Run <command>pkglint</command> from
         <filename role="pkg">pkgtools/pkglint</filename>,
 	and fix the problems it reports:</para>
 
