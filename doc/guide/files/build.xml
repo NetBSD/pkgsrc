@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.22 2006/01/27 04:06:25 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.23 2006/02/12 14:44:59 rillig Exp $ -->
 
 <chapter id="build">
 <title>The build process</title>
@@ -38,7 +38,7 @@ can be put into place on the system.</para>
       usually set to <varname>LOCALBASE</varname>
       (<filename>/usr/pkg</filename>), or <varname>CROSSBASE</varname>
       for pkgs in the <quote>cross</quote> category.  The value of
-      <varname>PREFIX</varname> needs to be put 
+      <varname>PREFIX</varname> needs to be put
       into the various places in the program's source where paths to
       these files are encoded.  See <xref
       linkend="components.patches"/> and <xref
@@ -91,8 +91,8 @@ can be put into place on the system.</para>
 	  its pkg <filename>Makefile</filename>, you need to look in
 	  <emphasis>both</emphasis> <filename>${X11BASE}</filename> and
 	  <filename>${LOCALBASE}</filename>. To force installation of
-	  all X11 packages in <varname>LOCALBASE</varname>, the 
-	  <filename role="pkg">pkgtools/xpkgwedge</filename> package 
+	  all X11 packages in <varname>LOCALBASE</varname>, the
+	  <filename role="pkg">pkgtools/xpkgwedge</filename> package
 	  is enabled by default.</para>
       </listitem>
 
@@ -136,12 +136,12 @@ can be put into place on the system.</para>
 	  to the first definition in
 	  the <varname>EVAL_PREFIX</varname> pair.</para>
       </listitem>
-      
+
       <listitem>
         <para>Within <filename>${PREFIX}</filename>, packages should
           install files according to &man.hier.7;, with the exception that
           manual pages go into <filename>${PREFIX}/man</filename>, not
-          <filename>${PREFIX}/share/man</filename>.</para> 
+          <filename>${PREFIX}/share/man</filename>.</para>
       </listitem>
     </itemizedlist>
   </sect1>
@@ -387,7 +387,7 @@ be changed by the package.</para>
 <quote>gmake</quote> if <varname>USE_TOOLS</varname> contains
 <quote>gmake</quote>, <quote>make</quote> otherwise. The default value
 of <varname>MAKEFILE</varname> is <quote>Makefile</quote>, and
-<varname>BUILD_TARGET</varname> defaults to <quote>all</quote>.</para> 
+<varname>BUILD_TARGET</varname> defaults to <quote>all</quote>.</para>
 
 </sect1>
 
@@ -500,7 +500,7 @@ of <varname>MAKEFILE</varname> is <quote>Makefile</quote>, and
 	    for the main target's name.  These targets are invoked before and
 	    after the main target is called, allowing extra configuration or
 	    installation steps be performed from a package's Makefile, for
-	    example, which a program's configure script 
+	    example, which a program's configure script
 	    or install target omitted.</para>
 	</listitem>
       </varlistentry>
@@ -703,9 +703,9 @@ of <varname>MAKEFILE</varname> is <quote>Makefile</quote>, and
 
 	<listitem>
 	  <para>This target generates a <filename>README.html</filename> file, which
-	    can be viewed using a browser such as 
+	    can be viewed using a browser such as
 	    <filename role="pkg">www/mozilla</filename> or
-	    <filename role="pkg">www/links</filename>. 
+	    <filename role="pkg">www/links</filename>.
 	    The generated files contain references to any
 	    packages which are in the <varname>PACKAGES</varname> directory on
 	    the local host. The generated files can be made to refer to URLs based on
