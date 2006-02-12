@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:17:53 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/02/12 05:26:39 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 HOWL_BUILDLINK3_MK:=		${HOWL_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_RECOMMENDED.howl+=	howl>=0.9.5nb1
 BUILDLINK_PKGSRCDIR.howl?=	../../net/howl
 .endif	# HOWL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
