@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4597 2006/02/12 14:47:17 wiz Exp $
+$NetBSD: TODO,v 1.4598 2006/02/12 17:27:23 salo Exp $
 
 Suggested new packages
 ======================
@@ -765,7 +765,6 @@ Suggested package updates
 	o newmail-1.0.2
 	o newmat-11
 	o ng-1.4.4
-	o nmap-4.01
 	o nmh-1.2.1
 	o nn-6.7.2
 	o ns-plugger-common-5.1.3
