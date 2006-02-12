@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.8 2005/10/23 11:25:58 rillig Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.9 2006/02/12 14:44:59 rillig Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -15,7 +15,7 @@ packages here:
 <para>precompiled binary packages</para>
 <para>
   Our policy is that we accept binaries only from pkgsrc developers to
-  guarantee that the packages don't contain any trojan horses etc. 
+  guarantee that the packages don't contain any trojan horses etc.
   This is not to annoy anyone but rather to protect our users!
   You're still free to put up your home-made binary packages and tell
   the world where to get them. NetBSD developers doing bulk builds and
@@ -85,7 +85,7 @@ packages here:
   This section is only of interest for pkgsrc developers with write
   access to the pkgsrc repository. Please remember that cvs
   imports files relative to the current working directory, and that
-  the pathname that you 
+  the pathname that you
   give the <command>cvs import</command> command is so that it knows where
   to place the files in the repository.  Newly created packages should be
   imported with a vendor tag of <quote>TNF</quote> and a release tag of
@@ -128,7 +128,7 @@ packages here:
 <itemizedlist>
 <listitem>
 <para>
-  A URL is volatile, and can change over time. It may go away completely 
+  A URL is volatile, and can change over time. It may go away completely
   or its information may be overwritten by newer information.
 </para>
 </listitem>

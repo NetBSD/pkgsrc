@@ -1,24 +1,24 @@
-<!-- $NetBSD: using.xml,v 1.15 2006/01/07 22:10:31 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.16 2006/02/12 14:44:59 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
   <title>Using pkgsrc</title>
 
   <sect1 id="getting-started">
     <title>Working with binary packages</title>
-    
+
     <para> This section describes how to find, retrieve and install a
       precompiled binary package that someone else already prepared
       for your type of machine. </para>
 
     <sect2 id="where-to-get-binary-packages">
       <title>Where to get binary packages</title>
-      
+
       <para> Precompiled packages are stored on ftp.NetBSD.org and its
         mirrors in the directory
         <filename>/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/</filename> for
 	anonymous FTP access.  <varname>OSVERSION</varname> is the &os;
 	version (<command>uname -r</command>), <varname>ARCH</varname>
-	is the architecture (<command>uname -p</command>). 
+	is the architecture (<command>uname -p</command>).
 	In that directory, there is a
         subdirectory for each category plus a subdirectory
         <filename>All</filename> which includes the actual binaries in
@@ -31,12 +31,12 @@
         distributions, only that the directory may be rooted somewhere
         else, probably somewhere below
         <filename>/cdrom</filename>. Please consult your CD-ROMs
-        documentation for the exact location. </para>  
+        documentation for the exact location. </para>
     </sect2>
 
     <sect2 id="how-to-use-binary-packages">
       <title>How to use binary packages</title>
-      
+
       <para> If you have the files on a CD-ROM or downloaded them to
         your hard disk, you can install them with the following command
         (be sure to <command>su</command> to root first):</para>
@@ -46,7 +46,7 @@
       <para> If you have FTP access and you don't want to download the
         packages via FTP prior to installation, you can do this
         automatically by giving <command>pkg_add</command> an FTP URL:
-        </para> 
+        </para>
 
       <screen><prompt>#</prompt> <userinput>pkg_add ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All/package.tgz</userinput></screen>
 
@@ -65,8 +65,8 @@
         moved, since removing them could cause missing dependencies. To
         use these packages, add the <filename>vulnerable</filename>
         directory to your <varname>PKG_PATH</varname>. However, you should run
-        <filename role="pkg">security/audit-packages</filename> regularly, 
-	especially after installing new packages, and verify that the 
+        <filename role="pkg">security/audit-packages</filename> regularly,
+	especially after installing new packages, and verify that the
 	vulnerabilities are acceptable for your configuration. An example
         <varname>PKG_PATH</varname> would be:
       <filename>ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/All;ftp://ftp.NetBSD.org/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/vulnerable</filename>
@@ -76,12 +76,12 @@
       <para>After you've installed packages, be sure to have
         <filename>/usr/pkg/bin</filename> and <filename>/usr/pkg/sbin</filename> in your
         <varname>PATH</varname> so you can actually start the just
-        installed program. </para> 
+        installed program. </para>
     </sect2>
 
     <sect2 id="a-word-of-warning">
       <title>A word of warning</title>
-    
+
       <para>Please pay very careful attention to the warnings
         expressed in the &man.pkg.add.1; manual page about the
         inherent dangers of installing binary packages which you did
@@ -100,7 +100,7 @@
 
   <sect1 id="building-packages-from-source">
     <title>Building packages from source</title>
-    
+
     <para> This assumes that the package is already in pkgsrc. If it
       is not, see <xref linkend="developers-guide"/> for instructions
       how to create your own packages.</para>
@@ -115,7 +115,7 @@
         distribution sets are required, too.</para>
       <!-- FIXME: what about installing x11/XFree86-*? -->
     </sect2>
-    
+
 
     <sect2 id="fetching-distfiles">
       <title>Fetching distfiles</title>
@@ -161,7 +161,7 @@
 
       <para>at the shell prompt to build the various components of the
         package, and</para>
-	
+
       <screen>&rprompt; <userinput>make install</userinput></screen>
 
       <para>to install the various components into the correct places
@@ -216,7 +216,7 @@
           <para>If you want to know the value of a certain &man.make.1; definition, then
             the <varname>VARNAME</varname> definition should be used, in conjunction
             with the show-var target. e.g. to show the expansion of the &man.make.1; variable
-            <varname>LOCALBASE</varname>:</para>  
+            <varname>LOCALBASE</varname>:</para>
 
           <screen>&cprompt; <userinput>make show-var VARNAME=LOCALBASE</userinput>
 /usr/pkg
@@ -248,7 +248,7 @@
         <filename>/usr/pkg</filename>, and that you should <emphasis>not</emphasis>
         install any if you use a non-standard <varname>LOCALBASE</varname>.</para>
     </sect2>
-    
+
     <sect2 id="selecting-the-compiler">
       <title>Selecting the compiler</title>
 
@@ -264,13 +264,13 @@
             <para> This is a list of values specifying the chain of
               compilers to invoke when building packages.  Valid values
               are: </para>
-            
+
 <!-- TODO: update this list after jlam's changes in May 2005 -->
             <itemizedlist>
               <listitem><para><varname>distcc</varname>:
                 distributed C/C++ (chainable)</para>
               </listitem>
-                
+
               <listitem><para><varname>ccache</varname>:
                 compiler cache (chainable)</para>
               </listitem>
@@ -294,15 +294,15 @@
 
             <para> The default is
               <quote><varname>gcc</varname></quote>.  You can use
-              <varname>ccache</varname> and/or 
+              <varname>ccache</varname> and/or
               <varname>distcc</varname> with an appropriate
-              <varname>PKGSRC_COMPILER</varname> setting, 
+              <varname>PKGSRC_COMPILER</varname> setting,
               e.g. <quote><varname>ccache gcc</varname></quote>.  This
-              variable should always be 
+              variable should always be
               terminated with a value for a real compiler.  </para>
 	  </listitem>
         </varlistentry>
-	
+
         <varlistentry>
           <term><varname>GCC_REQD</varname>:</term>
 <!--
