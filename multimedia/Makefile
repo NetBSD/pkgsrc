@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2006/01/29 17:03:12 xtraeme Exp $
+# $NetBSD: Makefile,v 1.86 2006/02/12 14:17:02 joerg Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -89,6 +89,7 @@ SUBDIR+=	transcode
 SUBDIR+=	vlc
 SUBDIR+=	vls
 SUBDIR+=	win32-codecs
+SUBDIR+=	x264-devel
 SUBDIR+=	xanim
 SUBDIR+=	xawtv
 SUBDIR+=	xfmedia
