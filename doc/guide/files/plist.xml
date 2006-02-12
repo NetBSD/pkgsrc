@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.10 2005/10/23 11:25:58 rillig Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.11 2006/02/12 14:44:59 rillig Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -25,10 +25,10 @@
     @comment &#36;NetBSD&#36;
 </programlisting>
   </sect1>
-    
+
   <sect1 id="automatic-plist-generation">
     <title>Semi-automatic <filename>PLIST</filename> generation</title>
-	    
+
     <para>You can use the <command>make print-PLIST</command> command
       to output a PLIST that matches any new files since the package
       was extracted.  See <xref linkend="build.helpful-targets"/> for
@@ -38,7 +38,7 @@
 
   <sect1 id="print-PLIST">
     <title>Tweaking output of <command>make print-PLIST</command></title>
-  
+
     <para> If you have used any of the *-dirs packages, as explained in
       <xref linkend="faq.common-dirs"/>, you may have noticed that
       <command>make print-PLIST</command> outputs a set of
@@ -47,30 +47,30 @@
       specific directories and files, so that the results of that
       command are very close to reality. This helps <emphasis>a
       lot</emphasis> during the update of packages. </para>
-  
+
     <para> The <varname>PRINT_PLIST_AWK</varname> variable takes a set
       of AWK patterns and actions that are used to filter the output of
       print-PLIST.  You can <emphasis>append</emphasis> any chunk of AWK
       scripting you like to it, but be careful with quoting. </para>
-  
+
     <para> For example, to get all files inside the
       <filename>libdata/foo</filename> directory removed from the
-      resulting PLIST:</para> 
-  
+      resulting PLIST:</para>
+
 <programlisting>
     PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
 </programlisting>
-  
+
     <para> And to get all the <varname>@dirrm</varname> lines referring
       to a specific (shared) directory converted to
-      <varname>@comment</varname>s: </para> 
-  
+      <varname>@comment</varname>s: </para>
+
 <programlisting>
     PRINT_PLIST_AWK+=       /^@dirrm share\/specific/ { print "@comment " $$0; next; }
 </programlisting>
   </sect1>
-    
-  
+
+
   <sect1 id="plist.misc">
     <title>Variable substitution in PLIST</title>
 
@@ -98,19 +98,19 @@
 
           <note>
             <title>Legacy note</title>
-  
+
             <para>There used to be a symbol
-              <quote><varname>$ARCH</varname></quote> that 
+              <quote><varname>$ARCH</varname></quote> that
               was replaced by the output of <command>uname
               -m</command>, but that's no longer supported and has
               been removed.</para>
           </note>
         </listitem>
       </varlistentry>
-  
+
       <varlistentry>
         <term><varname>${OPSYS}</varname>, <varname>${LOWER_OPSYS}</varname>, <varname>${OS_VERSION}</varname></term>
-  
+
         <listitem>
           <para>Some packages want to embed the OS name and version
             into some paths.  To do this, use these variables in the
@@ -152,7 +152,7 @@
     <para> For a complete list of values which are replaced by
       default, please look in <filename>bsd.pkg.mk</filename> (and
       search for <emphasis>PLIST_SUBST</emphasis>). </para>
-    
+
     <para> If you want to change other variables not listed above, you
       can add variables and their expansions to this variable in the
       following way, similar to <varname>MESSAGE_SUBST</varname> (see <xref
@@ -168,7 +168,7 @@
 
   <sect1 id="manpage-compression">
     <title>Man page compression</title>
-    
+
     <para>Man pages should be installed in compressed form if
       <varname>MANZ</varname> is set (in <filename>bsd.own.mk</filename>),
       and uncompressed otherwise. To handle this in the
@@ -180,7 +180,7 @@
       <filename>PLIST</filename> itself.</para>
   </sect1>
 
-  
+
   <sect1 id="using-PLIST_SRC">
     <title>Changing PLIST source with <varname>PLIST_SRC</varname></title>
 
@@ -194,7 +194,7 @@
 
   <sect1 id="platform-specific-plist">
     <title>Platform-specific and differing PLISTs</title>
-    
+
     <para>Some packages decide to install a different set of files based on
       the operating system being used. These differences can be
       automatically handled by using the following files:</para>
@@ -225,76 +225,76 @@
 
   <sect1 id="faq.common-dirs">
     <title>Sharing directories between packages</title>
-  
+
     <para> A <quote>shared directory</quote> is a directory where
       multiple (and unrelated) packages install files.  These
       directories are problematic because you have to add special tricks
       in the PLIST to conditionally remove them, or have some
       centralized package handle them. </para>
-  
+
     <para> Within pkgsrc, you'll find both approaches.  If a directory
       is shared by a few unrelated packages, it's often not worth to add
       an extra package to remove it.  Therefore, one simply does:
       </para>
-  
+
 <programlisting>
     @unexec ${RMDIR} %D/path/to/shared/directory 2>/dev/null || ${TRUE}
 </programlisting>
-  
+
     <para> in the PLISTs of all affected packages, instead of the
       regular "@dirrm" line. </para>
-  
+
     <para> However, if the directory is shared across many packages, two
       different solutions are available: </para>
-  
+
     <orderedlist>
       <listitem>
         <para> If the packages have a common dependency, the directory
           can be removed in that.  For example, see
-          <filename role="pkg">textproc/scrollkeeper</filename>, which 
-	  removes the shared directory 
+          <filename role="pkg">textproc/scrollkeeper</filename>, which
+	  removes the shared directory
 	  <filename>share/omf</filename>. </para>
       </listitem>
-  
+
       <listitem>
         <para> If the packages using the directory are not related at
           all (they have no common dependencies), a *-dirs package is
           used. </para>
       </listitem>
     </orderedlist>
-  
+
     <para> From now on, we'll discuss the second solution.  To get an
       idea of the *-dirs packages available, issue: </para>
-      
+
 <programlisting>
     &cprompt; cd .../pkgsrc
     &cprompt; ls -d */*-dirs
 </programlisting>
-  
+
     <para> Their use from other packages is very simple.  The
       <varname>USE_DIRS</varname> variable takes a list of package names
       (without the <quote>-dirs</quote> part) together with the required
       version number (always pick the latest one when writing new
       packages). </para>
-  
+
     <para> For example, if a package installs files under
       <filename>share/applications</filename>, it should have the
-      following line in it: 
+      following line in it:
       </para>
-  
+
 <programlisting>
     USE_DIRS+=      xdg-1.1
 </programlisting>
-  
+
     <para> After regenerating the PLIST using <command>make
       print-PLIST</command>, you should get the right (commented out)
-      lines. </para> 
-      
+      lines. </para>
+
     <para> Note that even if your package is using
       <filename>$X11BASE</filename>, it must not depend on the
       *-x11-dirs packages.  Just specify the name without that part and
       pkgsrc (in particular, <filename>mk/dirs.mk</filename>) will take
-      care of it. </para> 
+      care of it. </para>
   </sect1>
-  
+
 </chapter>
