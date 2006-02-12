@@ -1,11 +1,11 @@
-<!-- $NetBSD: components.xml,v 1.19 2005/12/04 17:22:24 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.20 2006/02/12 14:44:59 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
-  
+
   <para>  Whenever you're preparing a package, there are a number of
     files involved which are described in the following
-    sections. </para> 
+    sections. </para>
 
   <sect1 id="components.Makefile">
     <title><filename>Makefile</filename></title>
@@ -249,7 +249,7 @@
     checksums for all the patches found in the
     <filename>patches</filename> directory (see <xref
     linkend="components.patches"/>).</para>
-    
+
     <para>To regenerate the <filename>distinfo</filename> file, use the
     <command>make makedistinfo</command> or <command>make mdi</command>
     command.</para>
@@ -289,8 +289,8 @@
     <para>One important thing to mention is to pay attention that no RCS IDs
       get stored in the patch files, as these will cause problems when
       later checked into the &os; CVS tree. Use the
-      <command>pkgdiff</command> from the 
-      <filename role="pkg">pkgtools/pkgdiff</filename> package to avoid 
+      <command>pkgdiff</command> from the
+      <filename role="pkg">pkgtools/pkgdiff</filename> package to avoid
       these problems.</para>
 
     <para>For even more automation, we recommend using <command>mkpatches</command> from the same
@@ -313,8 +313,8 @@
 
     <para>Patch files that are distributed by the author or other
       maintainers can be listed in
-      <varname>$PATCHFILES</varname>. </para> 
-    
+      <varname>$PATCHFILES</varname>. </para>
+
     <para>If it is desired to store any patches that should not be committed into
       pkgsrc, they can be kept outside the pkgsrc tree in the
       <filename>$LOCALPATCHES</filename>
@@ -397,7 +397,7 @@
           <para>This file is displayed after installation of the package.
             Useful for things like legal notices on almost-free
             software and hints for updating config files after
-            installing modules for apache, PHP etc. 
+            installing modules for apache, PHP etc.
             Please note that you can modify variables in it easily by using
             <varname>MESSAGE_SUBST</varname> in the package's
             <filename>Makefile</filename>:</para>
@@ -433,7 +433,7 @@
     <para>If you have any files that you wish to be placed in the package prior
       to configuration or building, you could place these files here and use
       a <quote>${CP}</quote> command in the
-      <quote>pre-configure</quote> target to achieve 
+      <quote>pre-configure</quote> target to achieve
       this. Alternatively, you could simply diff the file against
       <filename>/dev/null</filename> and use the patch mechanism to manage
       the creation of this file.</para>

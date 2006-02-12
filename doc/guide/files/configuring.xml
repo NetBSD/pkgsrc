@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.10 2006/01/13 17:21:07 hubertf Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.11 2006/02/12 14:44:59 rillig Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -135,7 +135,7 @@
 		performing the automated security checks.  These IDs are listed in the
 		pkg-vulnerabilities file and are displayed by
 		<command>audit-packages</command> when
-		it finds a vulnerable package.  
+		it finds a vulnerable package.
 	  </para>
 	</listitem>
 	<listitem><para><varname>SKIP_AUDIT_PACKAGES</varname>:
@@ -191,7 +191,7 @@
 
     <screen>
 &uprompt; <command>grep "PKG.*OPTION" /etc/mk.conf</command>
-PKG_DEFAULT_OPTIONS=    -arts -dvdread -esound 
+PKG_DEFAULT_OPTIONS=    -arts -dvdread -esound
 PKG_OPTIONS.kdebase=    debug -sasl
 PKG_OPTIONS.apache=     suexec </screen>
 

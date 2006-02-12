@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.20 2006/01/22 21:56:13 rillig Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.21 2006/02/12 14:44:59 rillig Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -31,7 +31,7 @@
       it. Binary packages are created by default in
       <filename>/usr/pkgsrc/packages</filename>, in the form of a
       gzipped tar file. See <xref linkend="logs.package"/> for a
-      continuation of the above <filename 
+      continuation of the above <filename
       role="pkg">misc/figlet</filename> example.</para>
 
     <para>
@@ -148,7 +148,7 @@
 
 	<para>It is possible to configure the bulk build to perform
 	  certain site-specific tasks at the end of the pre-build
-	  stage.  If the file 
+	  stage.  If the file
 	  <filename>pre-build.local</filename> exists in
 	  <filename>/usr/pkgsrc/mk/bulk</filename>, it will be executed
 	  (as a &man.sh.1; script) at the end of the usual pre-build
@@ -196,10 +196,10 @@
 
       <para>Make sure you don't need any of the packages still
 	installed.
-      </para> 
+      </para>
 
       <warning>
-	<para>During the bulk build, <emphasis>all packages will be 
+	<para>During the bulk build, <emphasis>all packages will be
 	    removed!</emphasis></para>
       </warning>
 
@@ -212,7 +212,7 @@
 
       <para>If for some reason your last build didn't complete (power
 	failure, system panic, ...), you can continue it by
-	running:</para> 
+	running:</para>
 
       <screen>&rprompt; <userinput>sh mk/bulk/build restart</userinput></screen>
 
@@ -221,7 +221,7 @@
 	and find build logs in the directory specified by
 	<varname>FTP</varname> in the <filename>build.conf</filename>
 	file.
-      </para> 
+      </para>
     </sect2>
 
     <sect2 id="what-it-does">
@@ -279,7 +279,7 @@
         broken builds	to not waste time trying to rebuild them, and
         they can be used to debug	these broken package builds
         later.
-      </para> 
+      </para>
     </sect2>
 
     <sect2 id="disk-space-requirements">
@@ -315,7 +315,7 @@
         space. Afterwards, if the package is needed again, it will
         be installed via &man.pkg.add.1; instead of building again, so
         there are no cycles wasted by recompiling.
-      </para> 
+      </para>
     </sect2>
 
     <sect2 id="setting-up-a-sandbox">
@@ -327,7 +327,7 @@
         is the possibility of doing the package bulk build inside a
         chroot environment.
       </para>
-	
+
       <para>
         The first step is to set up a chroot sandbox,
 	e.g. <filename>/usr/sandbox</filename>.  This can be done by
@@ -343,7 +343,7 @@
         mounts to be activated using the <command>sandbox
         mount</command> command and deactivated using the
         <command>sandbox umount</command> command.
-      </para> 
+      </para>
 
       <para>
         To set up a sandbox environment by hand, after extracting all
@@ -367,7 +367,7 @@
 	</step>
 
 	<step>
-	  <para><filename>/etc/resolv.conf</filename> (for <filename 
+	  <para><filename>/etc/resolv.conf</filename> (for <filename
 	    role="pkg">security/smtpd</filename> and mail):</para>
 
 	  <screen>&rprompt; <userinput>cp /etc/resolv.conf /usr/sandbox/etc</userinput></screen>
@@ -380,14 +380,14 @@
 	</step>
 
 	<step>
-	  <para><filename>/etc/localtime</filename> (for <filename 
+	  <para><filename>/etc/localtime</filename> (for <filename
 	    role="pkg">security/smtpd</filename>):</para>
 
 	  <screen>&rprompt; <userinput>ln -sf /usr/share/zoneinfo/UTC /usr/sandbox/etc/localtime</userinput></screen>
 	</step>
 
 	<step>
-	  <para><filename>/usr/src</filename> (system sources, for <filename 
+	  <para><filename>/usr/src</filename> (system sources, for <filename
 	    role="pkg">sysutils/aperture</filename>,
 	    <filename role="pkg">net/ppp-mppe</filename>):</para>
 
@@ -416,7 +416,7 @@
 
           <para>Do not mount/link this to the copy of your pkgsrc tree
 	    you do development in, as this will likely cause problems!
-	    </para> 
+	    </para>
 	</step>
 
 	<step>
@@ -540,9 +540,9 @@
         (assuming that no keys should be present there usually):
       </para>
 
-      <screen>&rprompt; <userinput>chroot /usr/sandbox</userinput>        
-chroot-&rprompt; <userinput>rm $HOME/.ssh/id-dsa*</userinput>        
-chroot-&rprompt; <userinput>ssh-keygen -t dsa</userinput>        
+      <screen>&rprompt; <userinput>chroot /usr/sandbox</userinput>
+chroot-&rprompt; <userinput>rm $HOME/.ssh/id-dsa*</userinput>
+chroot-&rprompt; <userinput>ssh-keygen -t dsa</userinput>
 chroot-&rprompt; <userinput>cat $HOME/.ssh/id-dsa.pub</userinput> </screen>
 
       <para>
@@ -567,8 +567,8 @@ chroot-&rprompt; <userinput>cat $HOME/.ssh/id-dsa.pub</userinput> </screen>
         the upload:
       </para>
 
-      <screen>chroot-&rprompt; <userinput>exit</userinput>        
-&rprompt; <userinput>cd /usr/sandbox/usr/pkgsrc</userinput>        
+      <screen>chroot-&rprompt; <userinput>exit</userinput>
+&rprompt; <userinput>cd /usr/sandbox/usr/pkgsrc</userinput>
 &rprompt; <userinput>sh mk/bulk/do-sandbox-upload</userinput> </screen>
 
       <para>
@@ -590,7 +590,7 @@ Gdd:x! </screen>
         Use whatever is needed to remove the key you've entered
         before! Last, move the uploaded packages out of the
         <filename>upload</filename> directory to have them accessible
-        to everyone: 
+        to everyone:
       </para>
 
       <screen>nbftp% <userinput>cd /pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch</userinput>
@@ -607,10 +607,10 @@ nbftp% <userinput>chmod 755 .</userinput> </screen>
       After your pkgsrc bulk-build has completed, you may wish to
       create a CD-ROM set of the resulting binary packages to assist
       in installing packages on other machines.  The
-      <filename role="pkg">pkgtools/cdpack</filename> package provides 
-      a simple tool for creating the ISO 9660 images. 
-      <command>cdpack</command> arranges the packages on the CD-ROMs in a 
-      way that keeps all the dependencies for a given package on the same 
+      <filename role="pkg">pkgtools/cdpack</filename> package provides
+      a simple tool for creating the ISO 9660 images.
+      <command>cdpack</command> arranges the packages on the CD-ROMs in a
+      way that keeps all the dependencies for a given package on the same
       CD as that package.
     </para>
 

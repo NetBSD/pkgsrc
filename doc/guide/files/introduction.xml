@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.8 2005/10/17 06:07:38 hubertf Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.9 2006/02/12 14:44:59 rillig Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -22,26 +22,26 @@
       simple.</para>
 
     <para>pkgsrc currently contains several thousand packages,
-      including:</para> 
+      including:</para>
 
     <itemizedlist>
       <listitem>
-	<para><filename role="pkg">www/apache</filename> - The Apache 
+	<para><filename role="pkg">www/apache</filename> - The Apache
 	  web server</para>
       </listitem>
 
       <listitem>
-	<para><filename role="pkg">www/mozilla</filename> - The Mozilla 
+	<para><filename role="pkg">www/mozilla</filename> - The Mozilla
 	  web browser</para>
       </listitem>
 
       <listitem>
-	<para><filename role="pkg">meta-pkgs/gnome</filename> - The GNOME 
+	<para><filename role="pkg">meta-pkgs/gnome</filename> - The GNOME
 	  Desktop Environment</para>
       </listitem>
 
       <listitem>
-	<para><filename role="pkg">meta-pkgs/kde3</filename> - The K 
+	<para><filename role="pkg">meta-pkgs/kde3</filename> - The K
 	  Desktop Environment</para>
       </listitem>
     </itemizedlist>
@@ -153,7 +153,7 @@
 	  <para>A set of files and building instructions
 	    that describe what's necessary
 	    to build a certain piece of software using
-            pkgsrc. Packages are traditionally stored under 
+            pkgsrc. Packages are traditionally stored under
 	    <filename>/usr/pkgsrc</filename>.</para>
 	</listitem>
       </varlistentry>
@@ -192,7 +192,7 @@
 
 	<listitem>
 	  <para>This is the term used by FreeBSD and OpenBSD people
-	    for what we call a package. 
+	    for what we call a package.
 	    In &os; terminology, <quote>port</quote> refers to a different
 	    architecture.</para>
 	</listitem>
@@ -208,8 +208,8 @@
 	    machine architecture without the need to
 	    recompile. Packages are usually generated in
 	    <filename>/usr/pkgsrc/packages</filename>; there is also
-	    an archive on <ulink 
-	    url="ftp://ftp.NetBSD.org/pub/NetBSD/packages/">ftp.NetBSD.org</ulink>.</para> 
+	    an archive on <ulink
+	    url="ftp://ftp.NetBSD.org/pub/NetBSD/packages/">ftp.NetBSD.org</ulink>.</para>
 
 	  <para>Sometimes, this is referred to by the term <quote>package</quote> too,
 	    especially in the context of precompiled packages.</para>

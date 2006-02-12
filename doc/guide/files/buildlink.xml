@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.11 2005/10/23 11:25:58 rillig Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.12 2006/02/12 14:44:59 rillig Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -21,7 +21,7 @@
 	<varname>BUILDLINK_DIR</varname>. The wrapper scripts also make
         native compiler on some operating systems look like GCC, so that
         packages that expect GCC won't require modifications to build with
-        those native compilers.</para> 
+        those native compilers.</para>
     </listitem>
   </orderedlist>
 
@@ -29,7 +29,7 @@
     package may be built consistently despite what other software may be
     installed. Please note that the normal system header and library paths,
     e.g. <filename>/usr/include</filename>,
-    <filename>/usr/lib</filename>, etc., are always searched -- buildlink3 is 
+    <filename>/usr/lib</filename>, etc., are always searched -- buildlink3 is
     designed to insulate the package build from non-system-supplied
     software. </para>
 
@@ -48,19 +48,19 @@
           <filename>${WRKDIR}/.work.log</filename> to see if the
           wrappers are being invoked. </para>
       </listitem>
-      
+
       <listitem>
         <para> Don't override <varname>PREFIX</varname> from within
           the package Makefile, e.g. Java VMs, standalone shells,
           etc., because the code to symlink files into
           <filename>${BUILDLINK_DIR}</filename> looks for files
-          relative to <quote>pkg_info -qp <replaceable>pkgname</replaceable></quote>. 
+          relative to <quote>pkg_info -qp <replaceable>pkgname</replaceable></quote>.
 	  </para>
       </listitem>
-      
+
       <listitem>
         <para> Remember that <emphasis>only</emphasis> the
-          <filename>buildlink3.mk</filename> files that you list in a 
+          <filename>buildlink3.mk</filename> files that you list in a
           package's Makefile are added as dependencies for that package.
 	  </para>
       </listitem>
@@ -68,7 +68,7 @@
 
     <para> If a dependency on a particular package is required for its libraries and
       headers, then we replace: </para>
-      
+
 <programlisting>
     DEPENDS+=   foo>=1.1.0:../../category/foo
 </programlisting>
@@ -98,19 +98,19 @@
 	<para><filename>bdb.buildlink3.mk</filename> chooses either
           the native or a pkgsrc Berkeley DB implementation based on
           the values of <varname>BDB_ACCEPTED</varname> and
-          <varname>BDB_DEFAULT</varname>.</para>  
+          <varname>BDB_DEFAULT</varname>.</para>
       </listitem>
 
       <listitem>
 	<para><filename>curses.buildlink3.mk</filename>: If the system
           comes with neither Curses nor NCurses, this will take care
-	  to install the <filename 
-	    role="pkg">devel/ncurses</filename> package.</para>  
+	  to install the <filename
+	    role="pkg">devel/ncurses</filename> package.</para>
       </listitem>
 
       <listitem>
 	<para><filename>krb5.buildlink3.mk</filename> uses the value
-          of <varname>KRB5_ACCEPTED</varname> to choose between 
+          of <varname>KRB5_ACCEPTED</varname> to choose between
 	  adding a dependency on Heimdal or MIT-krb5 for packages that
           require a Kerberos 5 implementation.</para>
       </listitem>
@@ -118,7 +118,7 @@
       <listitem>
 	<para><filename>motif.buildlink3.mk</filename> checks
 	  for a system-provided
-	  Motif installation or adds a dependency on <filename 
+	  Motif installation or adds a dependency on <filename
 	    role="pkg">x11/lesstif</filename> or
 	  <filename role="pkg">x11/openmotif</filename>.</para>
       </listitem>
@@ -138,7 +138,7 @@
       <listitem>
 	<para><filename>pthread.buildlink3.mk</filename> uses the value of
 	  <varname>PTHREAD_OPTS</varname> and checks for native pthreads or adds
-	  a dependency on <filename 
+	  a dependency on <filename
 	    role="pkg">devel/pth</filename> as needed.</para>
       </listitem>
 
@@ -167,20 +167,20 @@
       headers and libraries that it needs in turn.</para>
 
     <para> To generate an initial <filename>buildlink3.mk</filename>
-      file for further editing, Rene Hexel's <filename 
+      file for further editing, Rene Hexel's <filename
         role="pkg">pkgtools/createbuildlink</filename>
       package is highly recommended.  For most packages, the following
       command will generate a good starting point for
       <filename>buildlink3.mk</filename> files:</para>
 
     <screen>&cprompt; <userinput>cd pkgsrc/<replaceable>category</replaceable>/<replaceable>pkgdir</replaceable>
-&cprompt; createbuildlink &gt;buildlink3.mk</userinput></screen> 
+&cprompt; createbuildlink &gt;buildlink3.mk</userinput></screen>
 
     <sect2 id="anatomy-of-bl3">
       <title>Anatomy of a buildlink3.mk file</title>
 
       <para>The following real-life example
-        <filename>buildlink3.mk</filename> is taken 
+        <filename>buildlink3.mk</filename> is taken
         from <filename>pkgsrc/graphics/tiff</filename>:</para>
 
 <programlisting>
@@ -245,27 +245,27 @@
             shared library or that had a major API change.
 	    </para>
 	</listitem>
-	
+
         <listitem>
 	  <para> <varname>BUILDLINK_PKGSRCDIR.<replaceable>pkg</replaceable></varname>
 	    is the location of the <replaceable>pkg</replaceable>
-	    pkgsrc directory.</para> 
+	    pkgsrc directory.</para>
 	</listitem>
-	
+
         <listitem>
 	  <para>
 	    <varname>BUILDLINK_DEPMETHOD.<replaceable>pkg</replaceable></varname>
 	    (not shown above) controls whether we use
-	    <varname>BUILD_DEPENDS</varname> or 
+	    <varname>BUILD_DEPENDS</varname> or
 	    <varname>DEPENDS</varname> to add the dependency on
-	    <replaceable>pkg</replaceable>. 
+	    <replaceable>pkg</replaceable>.
 	    The build dependency is selected by setting
 	    <varname>BUILDLINK_DEPMETHOD.<replaceable>pkg</replaceable></varname>
-	    to <quote>build</quote>.  By default, the 
+	    to <quote>build</quote>.  By default, the
 	    full dependency is used.
 	    </para>
 	</listitem>
-	
+
         <listitem>
 	  <para>
 	    <varname>BUILDLINK_INCDIRS.<replaceable>pkg</replaceable></varname>
@@ -277,7 +277,7 @@
 	    default to <quote>include</quote> and <quote>lib</quote>
 	    respectively. </para>
 	</listitem>
-	
+
         <listitem>
 	  <para>
 	    <varname>BUILDLINK_CPPFLAGS.<replaceable>pkg</replaceable></varname>
@@ -285,9 +285,9 @@
 	    to <varname>CPPFLAGS</varname>, which are passed on to the
 	    configure and build phases.  The <quote>-I</quote> option
 	    should be avoided and instead be handled using
-	    <varname>BUILDLINK_INCDIRS.<replaceable>pkg</replaceable></varname> as 
-	    above.</para> 
-	</listitem>	
+	    <varname>BUILDLINK_INCDIRS.<replaceable>pkg</replaceable></varname> as
+	    above.</para>
+	</listitem>
       </itemizedlist>
 
       <para> The following variables are all optionally defined within
@@ -302,25 +302,25 @@
 	    <varname>BUILDLINK_FILES.<replaceable>pkg</replaceable></varname>
 	    (not shown above) is a shell glob pattern relative to
 	    <filename>${BUILDLINK_PREFIX.<replaceable>pkg</replaceable>}</filename>
-	    to be symlinked into 
+	    to be symlinked into
 	    <filename>${BUILDLINK_DIR}</filename>,
-	    e.g. <filename>include/*.h</filename>. </para>  
-	</listitem> 
-	
+	    e.g. <filename>include/*.h</filename>. </para>
+	</listitem>
+
         <listitem>
 	  <para>
 	    <varname>BUILDLINK_FILES_CMD.<replaceable>pkg</replaceable></varname>
-	      (not shown above) is a shell pipeline that 
+	      (not shown above) is a shell pipeline that
 	      outputs to stdout a list of files relative to
 	      <filename>${BUILDLINK_PREFIX.<replaceable>pkg</replaceable>}</filename>.
-	      The resulting files are to be symlinked   
+	      The resulting files are to be symlinked
 	      into <filename>${BUILDLINK_DIR}</filename>.  By default,
-	      this takes the <filename>+CONTENTS</filename> of a 
+	      this takes the <filename>+CONTENTS</filename> of a
 	      <replaceable>pkg</replaceable> and filters it through
-	      <varname>${BUILDLINK_CONTENTS_FILTER.<replaceable>pkg</replaceable>}</varname>.  
+	      <varname>${BUILDLINK_CONTENTS_FILTER.<replaceable>pkg</replaceable>}</varname>.
 	    </para>
-	</listitem> 
-	
+	</listitem>
+
         <listitem>
 	  <para>
 	    <varname>BUILDLINK_CONTENTS_FILTER.<replaceable>pkg</replaceable></varname>
@@ -336,17 +336,17 @@
 	    it outputs any libtool archives in
 	    <filename>lib</filename> directories.
 	    </para>
-	</listitem> 
-	
+	</listitem>
+
         <listitem>
 	  <para>
 	    <varname>BUILDLINK_TRANSFORM.<replaceable>pkg</replaceable></varname>
 	    (not shown above) is a list of sed arguments used to
-	    transform the name of the source filename into a 
+	    transform the name of the source filename into a
 	    destination filename, e.g. <command>-e
-	    "s|/curses.h|/ncurses.h|g"</command>. 
+	    "s|/curses.h|/ncurses.h|g"</command>.
 	    </para>
-	</listitem> 
+	</listitem>
       </itemizedlist>
 
       <para> The last section includes any
@@ -355,10 +355,10 @@
 	    Including these <filename>buildlink3.mk</filename> files
 	    means that the headers and libraries for these
 	    dependencies are also symlinked into
-	    <filename>${BUILDLINK_DIR}</filename> 
+	    <filename>${BUILDLINK_DIR}</filename>
 	    whenever the <replaceable>pkg</replaceable>
-	    <filename>buildlink3.mk</filename> 
-	    file is included. 
+	    <filename>buildlink3.mk</filename>
+	    file is included.
 	    </para>
     </sect2>
 
@@ -420,7 +420,7 @@
       appropriate. </para>
 
     <para> The only requirements of a builtin.mk file for
-      <replaceable>pkg</replaceable> are: 
+      <replaceable>pkg</replaceable> are:
       </para>
 
     <orderedlist>
@@ -443,7 +443,7 @@
       <listitem>
         <para> It should be written to allow multiple inclusion.  This
           is <emphasis>very</emphasis> important and takes careful
-          attention to <filename>Makefile</filename> coding. 
+          attention to <filename>Makefile</filename> coding.
 	</para>
       </listitem>
     </orderedlist>
@@ -511,7 +511,7 @@
         system if it exists (if
         <varname>IS_BUILTIN.<replaceable>pkg</replaceable></varname>
         is <quote>yes</quote>).  This variable is only used internally
-        within the <filename>builtin.mk</filename> file. </para> 
+        within the <filename>builtin.mk</filename> file. </para>
 
       <para> The third section sets
         <varname>USE_BUILTIN.<replaceable>pkg</replaceable></varname>
@@ -543,9 +543,9 @@
         additional files to symlink into
         <filename>${BUILDLINK_DIR}</filename> (via
         <varname>BUILDLINK_FILES.<replaceable>pkg</replaceable></varname>).
-        </para> 
+        </para>
     </sect2>
-    
+
     <sect2 id="native-or-pkgsrc-preference">
       <title>Global preferences for native or pkgsrc software</title>
 
@@ -569,14 +569,14 @@
         <varname>PREFER_NATIVE</varname>.  For example, to require
         using pkgsrc versions of software for all but the most basic
         bits on a NetBSD system, you can set: </para>
-	
+
 <programlisting>
     PREFER_PKGSRC=  yes
     PREFER_NATIVE=  getopt skey tcp_wrappers
 </programlisting>
 
       <para> A package <emphasis>must</emphasis> have a
-        <filename>builtin.mk</filename> 
+        <filename>builtin.mk</filename>
         file to be listed in <varname>PREFER_NATIVE</varname>,
         otherwise it is simply ignored in that list.
 	</para>

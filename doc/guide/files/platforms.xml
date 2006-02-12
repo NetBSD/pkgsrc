@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.24 2005/12/05 18:04:39 rillig Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.25 2006/02/12 14:44:59 rillig Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -286,7 +286,7 @@
 	  </listitem>
 	</itemizedlist>
 
-      </sect3>      
+      </sect3>
       <sect3 id="platform.interix-notes">
 	<title>Important notes for using pkgsrc</title>
 
@@ -543,7 +543,7 @@
 	    <filename>/etc/mk.conf.example</filename> file
 	    when you use the bootstrap script. OpenBSD's make program uses
 	    <filename>/etc/mk.conf</filename>
-	    as well. You can work around this by enclosing all the pkgsrc-specific parts 
+	    as well. You can work around this by enclosing all the pkgsrc-specific parts
 	    of the file with:</para>
 
 <programlisting>
@@ -560,7 +560,7 @@
     <sect2 id="solaris">
       <title>Solaris</title>
 
-      <para>Solaris 2.6 through 9 are supported on both x86 and sparc. You will need a working C 
+      <para>Solaris 2.6 through 9 are supported on both x86 and sparc. You will need a working C
 	compiler. Both gcc 2.95.3 and Sun WorkShop 5 have been tested.</para>
 
       <para>The following packages are required on Solaris 8 for the bootstrap
@@ -598,7 +598,7 @@
 	  for building all packages.</para>
 
 	<para>It is recommended that an external gcc be used only for bootstrapping,
-	  then either build gcc from 
+	  then either build gcc from
 	  <filename role="pkg">lang/gcc</filename> or install a binary gcc
 	  package, then remove gcc used during bootstrapping.</para>
 
