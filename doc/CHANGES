@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12885 2006/02/12 14:17:49 joerg Exp $
+$NetBSD: CHANGES,v 1.12886 2006/02/12 17:27:22 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -934,3 +934,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/ja-trac version 0.9.3.1 [rillig 2006-02-12]
 	Updated multimedia/avidemux to 2.1.1nb2 [joerg 2006-02-12]
 	Added multimedia/x264-devel version 20060127 [joerg 2006-02-12]
+        Updated net/nmap to 4.01 [salo 2006-02-12]
+        Updated net/nmapfe to 0.9.5nb26 [salo 2006-02-12]
