@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/02/11 10:58:41 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2006/02/12 15:29:19 xtraeme Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-server-${XORG_VER}
@@ -9,7 +9,7 @@ DISTFILES=	X11R${XORG_VER}-src1.tar.gz \
 		X11R${XORG_VER}-src2.tar.gz \
 		X11R${XORG_VER}-src3.tar.gz
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.x.org/
 COMMENT=	X.org X server and related programs
 
