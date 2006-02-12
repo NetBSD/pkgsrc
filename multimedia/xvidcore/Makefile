@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/02/12 14:36:43 ghen Exp $
+# $NetBSD: Makefile,v 1.18 2006/02/12 15:49:49 joerg Exp $
 #
 
 DISTNAME=	xvidcore-1.1.0
@@ -11,8 +11,10 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.xvid.org/
 COMMENT=	ISO MPEG-4 compliant video codec
 
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+.if ${MACHINE_ARCH} == "i386"
 BUILD_DEPENDS+=	nasm>=0.98.34:../../devel/nasm
+.elif ${MACHINE_ARCH} == "x86_64"
+BUILD_DEPENDS+=	yasm>=0.4.0:../../devel/yasm
 .endif
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
