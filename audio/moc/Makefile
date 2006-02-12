@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:08:12 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/12 18:35:55 xtraeme Exp $
 
-DISTNAME=		moc-2.3.2
-PKGREVISION=		3
+DISTNAME=		moc-2.4.0
 CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.daper.net/pub/soft/moc/stable/
 EXTRACT_SUFX=		.tar.bz2
@@ -14,6 +13,7 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_NCURSES=		yes
+USE_TOOLS+=		pkg-config
 
 # We require ncurses because with curses arrow key navigation is buggy
 CONFIGURE_ARGS+=        --with-ncurses
