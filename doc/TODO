@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4600 2006/02/12 18:16:00 wiz Exp $
+$NetBSD: TODO,v 1.4601 2006/02/12 18:37:46 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -731,7 +731,6 @@ Suggested package updates
 	o mknmz-wwwoffle-0.7.2
 	o mlview-0.9.0
 	o mmix-20050922
-	o moc-2.3.3
 	o molden-4.4
 	o moscow_ml-2.01
 	o most-4.10.2
