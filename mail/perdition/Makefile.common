@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2006/01/31 21:07:30 tv Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/02/13 15:18:32 tv Exp $
 #
 
 PERDITION_VERSION=	1.17
@@ -16,7 +16,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKG_SYSCONFSUBDIR=	perdition
 
-CONFIGURE_ARGS+=	--localstatedir=/var/run
+CONFIGURE_ARGS+=	--localstatedir=/var
 
 EGDIR=			${PREFIX}/share/examples
 INSTALL_AM_MAKEFLAGS=	sysconfdir=${EGDIR}
