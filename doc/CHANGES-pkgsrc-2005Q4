@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.77 2006/02/13 11:06:55 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.78 2006/02/13 13:23:46 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -157,3 +157,5 @@ Pullup ticket 1121 - requested by Roland Illig
 MIPSpro build fix for gtar-base
 Pullup ticket 1124 - requested by Joerg Sonnenberger
 security fix for blender
+Pullup ticket 1126 - requested by Joerg Sonnenberger
+GCC 3.4 and newer build fix for taglib
