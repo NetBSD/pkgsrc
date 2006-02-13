@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2005/10/13 08:34:33 drochner Exp $
+$NetBSD: patch-aa,v 1.4 2006/02/13 19:18:00 wiz Exp $
 
---- Makefile.in.orig	2005-10-11 12:34:17.000000000 +0200
+--- Makefile.in.orig	2006-02-11 23:19:18.000000000 +0000
 +++ Makefile.in
-@@ -198,7 +198,7 @@ sharedstatedir = @sharedstatedir@
+@@ -197,7 +197,7 @@ sharedstatedir = @sharedstatedir@
  sysconfdir = @sysconfdir@
  target_alias = @target_alias@
  SUBDIRS = 12x12 16x16 24x24 32x32 36x36 48x48 72x72 96x96 192x192 scalable po
@@ -10,4 +10,4 @@ $NetBSD: patch-aa,v 1.3 2005/10/13 08:34:33 drochner Exp $
 +pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = gnome-icon-theme.pc
  THEME_IN_FILES = index.theme.in
- hicolor_dirs = \
+ icondir = $(datadir)/icons/gnome
