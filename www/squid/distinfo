@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.109 2005/12/30 14:37:38 joerg Exp $
+$NetBSD: distinfo,v 1.110 2006/02/13 15:07:17 taca Exp $
 
 SHA1 (squid-2.5.12/squid-2.5.STABLE12.tar.bz2) = 57a046ca0eda0f649d259c2c161dc95c81a5dc09
 RMD160 (squid-2.5.12/squid-2.5.STABLE12.tar.bz2) = 0b332612d90d74681e47505a2afbfb6c962807a4
@@ -6,6 +6,21 @@ Size (squid-2.5.12/squid-2.5.STABLE12.tar.bz2) = 1075111 bytes
 SHA1 (squid-2.5.12/squid-2.5.STABLE12-setenv.patch) = d59827280c5e1a73e659a1d127484e0901d34b48
 RMD160 (squid-2.5.12/squid-2.5.STABLE12-setenv.patch) = 8698afef7b19402baffd81cecd0dbe143c500556
 Size (squid-2.5.12/squid-2.5.STABLE12-setenv.patch) = 934 bytes
+SHA1 (squid-2.5.12/squid-2.5.STABLE12-SMB_BadFetch.patch) = 028199a2be0c9541dce99da84d7c0f0be3f055fa
+RMD160 (squid-2.5.12/squid-2.5.STABLE12-SMB_BadFetch.patch) = 4f4e017062afd27235949882ca336d857e72f866
+Size (squid-2.5.12/squid-2.5.STABLE12-SMB_BadFetch.patch) = 826 bytes
+SHA1 (squid-2.5.12/squid-2.5.STABLE12-wbinfo_group.patch) = 32d992c073ae87d42b4f2581f36dedd377c8ea2c
+RMD160 (squid-2.5.12/squid-2.5.STABLE12-wbinfo_group.patch) = 069ec50c312f12ba70d5b55d2cdd972a9fb37290
+Size (squid-2.5.12/squid-2.5.STABLE12-wbinfo_group.patch) = 1615 bytes
+SHA1 (squid-2.5.12/squid-2.5.STABLE12-asyncio_counters.patch) = aa7ce6ab0da73d9b2347b25d5a3601d4309362fb
+RMD160 (squid-2.5.12/squid-2.5.STABLE12-asyncio_counters.patch) = c91ee80c3d0da80f1424c00365964f645a6bfd34
+Size (squid-2.5.12/squid-2.5.STABLE12-asyncio_counters.patch) = 497 bytes
+SHA1 (squid-2.5.12/squid-2.5.STABLE12-prctl_args.patch) = a258589b6ca4b771c615a84069dde6ff84bdc4e0
+RMD160 (squid-2.5.12/squid-2.5.STABLE12-prctl_args.patch) = 5814f359fbefce41afad1f0a98b7b4b1eea312c5
+Size (squid-2.5.12/squid-2.5.STABLE12-prctl_args.patch) = 1657 bytes
+SHA1 (squid-2.5.12/squid-2.5.STABLE12-irix_timezone.patch) = c12c9ba7c7d2077ead828d4b884e6ddfe0ca3adf
+RMD160 (squid-2.5.12/squid-2.5.STABLE12-irix_timezone.patch) = b7e4f091faad235b4d961b861d725d3647cd6154
+Size (squid-2.5.12/squid-2.5.STABLE12-irix_timezone.patch) = 410 bytes
 SHA1 (patch-aa) = 25d47b8ab8618af2b1d2a40f1dc3630cdc14038c
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
