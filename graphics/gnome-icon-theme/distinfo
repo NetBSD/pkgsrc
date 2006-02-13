@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2005/10/13 08:34:32 drochner Exp $
+$NetBSD: distinfo,v 1.14 2006/02/13 19:18:00 wiz Exp $
 
-SHA1 (gnome-icon-theme-2.12.1.tar.bz2) = 08bc2c63752df5c797e795cfe50fc7493a350254
-RMD160 (gnome-icon-theme-2.12.1.tar.bz2) = 787c82eab6b09b70e17ded64655f1be3ac7d20f2
-Size (gnome-icon-theme-2.12.1.tar.bz2) = 3113824 bytes
-SHA1 (patch-aa) = 3bcfd10c8a3a1a9c8a3f070a064161fcf4570f87
+SHA1 (gnome-icon-theme-2.14.0.tar.bz2) = 30d7a69ffdf8a0410e5dfb5c08fe2794e95c66c6
+RMD160 (gnome-icon-theme-2.14.0.tar.bz2) = c1d1935bdad57be5ba8d5a71c4dbb9533a3856ff
+Size (gnome-icon-theme-2.14.0.tar.bz2) = 2945922 bytes
+SHA1 (patch-aa) = 47938347524fcfbbf43419547fbacb391ecefe07
