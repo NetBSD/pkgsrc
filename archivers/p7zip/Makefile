@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2006/02/05 23:08:04 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2006/02/13 18:45:32 adam Exp $
 
-DISTNAME=	p7zip_4.30_src_all
-PKGNAME=	p7zip-4.30
-PKGREVISION=	1
+DISTNAME=	p7zip_4.33_src_all
+PKGNAME=	p7zip-4.33
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=p7zip/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,7 +13,6 @@ COMMENT=	File archiver with high compression
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake
 MAKEFILE=		makefile
 NO_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
