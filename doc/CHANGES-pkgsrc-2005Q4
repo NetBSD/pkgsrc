@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.75 2006/02/12 02:19:41 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.76 2006/02/13 10:10:33 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -153,3 +153,5 @@ Pullup ticket 1118 - requested by Lubomir Sedlacik
 update security/openssh including security fix
 Pullup ticket 1119 - requested by Stoned Elipot
 security fix for gcpio
+Pullup ticket 1121 - requested by Roland Illig
+MIPSpro build fix for gtar-base
