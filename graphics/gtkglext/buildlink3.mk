@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/02/13 20:56:15 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/02/13 21:11:13 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GTKGLEXT_BUILDLINK3_MK:=	${GTKGLEXT_BUILDLINK3_MK}+
@@ -11,8 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngtkglext}
 BUILDLINK_PACKAGES+=	gtkglext
 
 .if !empty(GTKGLEXT_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.gtkglext+=	gtkglext>=0.7.1nb4
-BUILDLINK_RECOMMENDED.gtkglext+=	gtkglext>=1.0.6nb3
+BUILDLINK_DEPENDS.gtkglext+=	gtkglext>=1.2.0
 BUILDLINK_PKGSRCDIR.gtkglext?=	../../graphics/gtkglext
 .endif	# GTKGLEXT_BUILDLINK3_MK
 
