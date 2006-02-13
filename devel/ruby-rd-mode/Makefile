@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2006/02/05 23:08:53 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/02/13 15:16:34 taca Exp $
 #
 
 DISTNAME=	rdtool-${RUBY_RD_VERSION}
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${RUBY_PKGPREFIX}-rd-mode-${RUBY_RD_VERSION}
-PKGREVISION=	1
 CATEGORIES=	devel ruby
 MASTER_SITES=	http://www.moonwolf.com/ruby/archive/
 
@@ -13,6 +12,7 @@ COMMENT=	Editing mode for RD (Ruby Document Format)
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/utils
 EXTRACT_ELEMENTS=	${DISTNAME}/utils/rd-mode.el
+RUBY_RD_VERSION=	0.6.18
 RUBY_VERSION=		${RUBY18_VERSION}
 RUBY_NOVERSION=		yes
 NO_CONFIGURE=		yes
@@ -27,6 +27,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/rd-mode.elc ${EMACS_LISPPREFIX}/rd-mode
 
 .include "../../lang/ruby/rubyversion.mk"
-.include "../../textproc/ruby-rdtool/rdversion.mk"
 .include "../../mk/emacs.mk"
 .include "../../mk/bsd.pkg.mk"
