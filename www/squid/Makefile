@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.167 2005/12/29 06:22:24 jlam Exp $
+# $NetBSD: Makefile,v 1.168 2006/02/13 15:07:17 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE12
 PKGNAME=	squid-2.5.12
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -10,7 +10,12 @@ MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 EXTRACT_SUFX=	.tar.bz2
 
 PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-PATCHFILES=	squid-2.5.STABLE12-setenv.patch
+PATCHFILES=	squid-2.5.STABLE12-setenv.patch \
+		squid-2.5.STABLE12-SMB_BadFetch.patch \
+		squid-2.5.STABLE12-wbinfo_group.patch \
+		squid-2.5.STABLE12-asyncio_counters.patch \
+		squid-2.5.STABLE12-prctl_args.patch \
+		squid-2.5.STABLE12-irix_timezone.patch
 PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	taca@NetBSD.org
@@ -118,7 +123,7 @@ post-install:
 	done; 							\
 	${ECHO} "@dirrm share/squid/errors";			\
 	cd ${WRKSRC}/icons;					\
-	ls anthony-*.gif | ${SED} -e 's@^@share/squid/icons/@';	\
+	${LS} anthony-*.gif | ${SED} -e 's@^@share/squid/icons/@';	\
 	${ECHO} "@dirrm share/squid/icons";			\
 	${ECHO} "share/squid/mib.txt";				\
 	${ECHO} "@dirrm share/squid"				\
