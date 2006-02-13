@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.512 2006/02/12 12:10:13 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.513 2006/02/13 15:20:22 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3100,7 +3100,7 @@ sub checkline_mk_vartype_basic($$$$$$) {
 
 sub checkline_mk_vartype($$$$$) {
 	my ($line, $varname, $op, $value, $comment) = @_;
-	my ($vartypes);
+	my ($vartypes, $guessed);
 
 	return unless $opt_warn_types;
 
@@ -3116,6 +3116,7 @@ sub checkline_mk_vartype($$$$$) {
 			}
 		}
 
+		$guessed = false;
 		if (!defined($type)) {
 			# Guess the datatype of the variable based on
 			# naming conventions.
@@ -3133,11 +3134,12 @@ sub checkline_mk_vartype($$$$$) {
 			if (defined($type)) {
 				$line->log_info("The guessed type of ${varname} is \"${type}\".");
 			}
+			$guessed = true;
 		}
 
-		if (!defined($type)) {
+		if (!defined($type) || $guessed) {
 			if ($varname !~ qr"_MK$") {
-				$opt_debug and $line->log_warning("[checkline_mk_vartype] Unchecked variable ${varname}.");
+				$opt_debug and $line->log_warning("[checkline_mk_vartype] Untyped variable ${varname}.");
 			}
 
 		} elsif ($op eq "!=") {
