@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/11/10 14:50:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/02/13 20:56:15 adam Exp $
 include/gtkglext-1.0/gdk/gdkgl.h
 include/gtkglext-1.0/gdk/gdkglconfig.h
 include/gtkglext-1.0/gdk/gdkglcontext.h
@@ -16,12 +16,12 @@ include/gtkglext-1.0/gdk/gdkgltokens.h
 include/gtkglext-1.0/gdk/gdkgltypes.h
 include/gtkglext-1.0/gdk/gdkglversion.h
 include/gtkglext-1.0/gdk/gdkglwindow.h
-include/gtkglext-1.0/gdk/glext/glext.h
-include/gtkglext-1.0/gdk/glext/glxext.h
-include/gtkglext-1.0/gdk/glext/wglext.h
 include/gtkglext-1.0/gdk/glext/glext-extra.h
+include/gtkglext-1.0/gdk/glext/glext.h
 include/gtkglext-1.0/gdk/glext/glxext-extra.h
+include/gtkglext-1.0/gdk/glext/glxext.h
 include/gtkglext-1.0/gdk/glext/wglext-extra.h
+include/gtkglext-1.0/gdk/glext/wglext.h
 include/gtkglext-1.0/gdk/x11/gdkglglxext.h
 include/gtkglext-1.0/gdk/x11/gdkglx.h
 include/gtkglext-1.0/gtk/gtkgl.h
@@ -64,6 +64,7 @@ share/doc/html/gtkglext/index.html
 share/doc/html/gtkglext/index.sgml
 share/doc/html/gtkglext/left.png
 share/doc/html/gtkglext/right.png
+share/doc/html/gtkglext/style.css
 share/doc/html/gtkglext/up.png
 @dirrm share/doc/html/gtkglext
 @dirrm lib/gtkglext-1.0/include
