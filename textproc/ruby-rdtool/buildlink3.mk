@@ -1,8 +1,6 @@
-# $NetBSD: buildlink3.mk,v 1.4 2005/12/11 13:34:31 taca Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/02/13 15:23:28 taca Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-
-.include "rdversion.mk"
 
 RUBY_RDTOOL_BUILDLINK3_MK:=	${RUBY_RDTOOL_BUILDLINK3_MK}+
 
@@ -14,6 +12,14 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:N${RUBY_PKGPREFIX}-rdtool}
 BUILDLINK_PACKAGES+=	${RUBY_PKGPREFIX}-rdtool
 
 .if !empty(RUBY_RDTOOL_BUILDLINK3_MK:M+)
+
+RUBY_RD=		rd2
+RUBY_RD_VERSION =	0.6.18
+RUBY_RD_REQD=		0.6.14
+
+# create string for dependency list
+RUBY_RD_LIST=	${RUBY_VERSION_LIST:C/([1-9][0-9]*)/ruby&-rdtool/g}
+
 BUILDLINK_FILES.ruby18-rdtool+=		bin/rd2
 BUILDLINK_DEPMETHOD.ruby18-rdtool?=	build
 BUILDLINK_DEPENDS.ruby18-rdtool+=	{${RUBY_RD_LIST}}>=0.6.14
