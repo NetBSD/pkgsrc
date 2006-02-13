@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.514 2006/02/13 15:37:49 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.515 2006/02/13 17:50:40 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3138,10 +3138,12 @@ sub checkline_mk_vartype($$$$$) {
 			$guessed = true;
 		}
 
-		if (!defined($type) || $guessed) {
-			if ($varname !~ qr"_MK$") {
-				$opt_debug and $line->log_warning("[checkline_mk_vartype] Untyped variable ${varname}.");
-			}
+		if ((!defined($type) || $guessed) && $varname !~ qr"^_MK$") {
+			$opt_debug and $line->log_warning("[checkline_mk_vartype] Untyped variable ${varname}.");
+		}
+
+		if (!defined($type)) {
+			# Cannot check anything if the type is not known.
 
 		} elsif ($op eq "!=") {
 			$opt_debug and $line->log_info("Use of !=: ${value}");
