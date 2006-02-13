@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2006/01/21 00:22:58 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2006/02/13 23:20:32 joerg Exp $
 
 DISTNAME=	exim-3.36
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail net
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/email/exim/exim3/ \
 		http://public.planetmirror.com.au/pub/exim/exim3/
@@ -100,4 +100,5 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EGDIR}
 	${CP} ${FILESDIR}/exim.8 ${PREFIX}/man/man8/exim.8
 
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
