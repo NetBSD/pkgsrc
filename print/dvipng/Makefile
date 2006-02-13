@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2006/02/05 23:10:36 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2006/02/13 20:31:43 adam Exp $
 
-DISTNAME=	dvipng-1.0
-PKGREVISION=	4
+DISTNAME=	dvipng-1.7
 CATEGORIES=	textproc converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvipng/}
 
@@ -21,5 +20,4 @@ BUILDLINK_DEPENDS.freetype2?=	freetype2>=2.1.3
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/tex.buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
