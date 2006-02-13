@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2006/02/13 15:23:03 rillig Exp $
+# $NetBSD: options.mk,v 1.3 2006/02/13 15:32:31 rillig Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pornview
 PKG_SUPPORTED_OPTIONS=		exif gtk1
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--without-gtk2
 .  include "../../graphics/gdk-pixbuf/buildlink3.mk"
 .  include "../../x11/gtk/buildlink3.mk"
 .else
-CONFIURE_ARGS+=	--with-gtk2
+CONFIGURE_ARGS+=	--with-gtk2
 USE_TOOLS+=		pkg-config
 .  include "../../devel/glib2/buildlink3.mk"
 .  include "../../x11/gtk2/buildlink3.mk"
