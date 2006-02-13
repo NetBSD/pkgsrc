@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4606 2006/02/13 19:27:41 wiz Exp $
+$NetBSD: TODO,v 1.4607 2006/02/13 20:32:56 adam Exp $
 
 Suggested new packages
 ======================
@@ -463,7 +463,6 @@ Suggested package updates
 	o dvd+rw-tools-6.1
 	o dvdauthor-0.6.11
 	o dvdrip-0.52.6
-	o dvipng-1.7 [http://sourceforge.net/projects/dvipng/]
 	o dx-4.3.3
 	o e16menuedit2-0.0.3
 	o e2fsprogs-1.38

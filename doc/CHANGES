@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12896 2006/02/13 19:27:41 wiz Exp $
+$NetBSD: CHANGES,v 1.12897 2006/02/13 20:32:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -950,3 +950,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/gst-plugins0.10-base to 0.10.3 [wiz 2006-02-13]
 	Updated multimedia/gst-plugins0.10-good to 0.10.2 [wiz 2006-02-13]
 	Updated www/p5-HTML-Parser to 3.49 [wiz 2006-02-13]
+	Updated print/dvipng to 1.7 [adam 2006-02-13]
