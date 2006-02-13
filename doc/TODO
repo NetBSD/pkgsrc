@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4602 2006/02/13 19:14:26 wiz Exp $
+$NetBSD: TODO,v 1.4603 2006/02/13 19:17:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -511,6 +511,7 @@ Suggested package updates
 	o fortunes-de-0.20
 	o fox-1.4.27
 	o freeglut-2.4.0
+	o freesci-0.3.5
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o g2-0.50
@@ -556,6 +557,7 @@ Suggested package updates
 	o gnome-spell-1.0.7
 	o gnome-themes-2.12.3
 	o gnome2-control-center-2.12.3
+	o gnomeicu-0.99.9
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
@@ -741,10 +743,10 @@ Suggested package updates
 	o mpage-2.5.4
 	o mpfr-2.2.0
 	o mpich-1.2.7
-	o mplayer-plugin-firefox-3.17
+	o mplayer-plugin-firefox-3.21
 	o mpop-0.8.3 [pkg/32511]
 	o mrproject-0.9.1
-	o mrtg-2.13.1
+	o mrtg-2.13.2 [pkg/32811]
 	o mserv-devel-0.41
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
@@ -776,7 +778,7 @@ Suggested package updates
 	o nss-3.11
 	o nss_ldap-243
 	o nulib2-210
-	o nut-11.2
+	o nut-11.3
 	o obexftp-0.18
 	o objc-3.2.7
 	o odbc-postgresql-8.0.4
@@ -1048,6 +1050,7 @@ Suggested package updates
 	o root-5.04.00
 	o root-tail-1.2
 	o rosegarden4-1.0 [replacing audio/rosegarden|pkgsrc-wip]
+	o rox-session-0.27
 	o roxirc-2.0
 	o rp-l2tp-0.4
 	o rp-pppoe-3.7
@@ -1182,6 +1185,7 @@ Suggested package updates
 	o ucblogo-5.5
 	o ucl-1.03
 	o unix2dos-1.3
+	o ups-nut-2.0.3 [pkg/32820]
 	o userppp-030706
 	o valgrind-3.0.1
 	o vba-1.7.2
@@ -1274,7 +1278,7 @@ Suggested package updates
 	o yaz-2.1.8
 	o yencode-0.46
 	o yodl-2.01.02
-	o ysm-2.9.7
+	o ysm-2.9.8
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zile-2.2.12
