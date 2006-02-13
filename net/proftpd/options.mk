@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2005/11/25 17:20:10 martti Exp $
+# $NetBSD: options.mk,v 1.5 2006/02/13 09:16:05 martti Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.proftpd
@@ -20,7 +20,19 @@ MODULES:=	${MODULES}:mod_wrap
 .endif
 
 .if !empty(PKG_OPTIONS:Mquota)
-MODULES:=	${MODULES}:mod_quota
+MODULES:=	${MODULES}:mod_quotatab:mod_quotatab_file
+.endif
+
+.if !empty(PKG_OPTIONS:Mquota) && !empty(PKG_OPTIONS:Mmysql)
+MODULES:=	${MODULES}:mod_quotatab_sql
+.endif
+
+.if !empty(PKG_OPTIONS:Mquota) && !empty(PKG_OPTIONS:Mpgsql)
+MODULES:=	${MODULES}:mod_quotatab_sql
+.endif
+
+.if !empty(PKG_OPTIONS:Mquota) && !empty(PKG_OPTIONS:Mldap)
+MODULES:=	${MODULES}:mod_quotatab_ldap
 .endif
 
 .if !empty(PKG_OPTIONS:Mldap)
