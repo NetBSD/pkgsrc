@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.513 2006/02/13 15:20:22 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.514 2006/02/13 15:37:49 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1974,7 +1974,8 @@ sub readmakefile($$$$) {
 			if ($includefile =~ qr"(?:^|/)Makefile.common$"
 			    || ($includefile =~ qr"^(?:\.\./(\.\./[^/]+/)?[^/]+/)?([^/]+)$"
 				&& (!defined($1) || $1 ne "../mk")
-				&& $2 ne "buildlink3.mk")) {
+				&& $2 ne "buildlink3.mk"
+				&& $2 ne "options.mk")) {
 				$line->log_debug("including ${includefile} sets seen_Makefile_common.");
 				$seen_Makefile_common = true;
 			}
@@ -3348,6 +3349,8 @@ sub checklines_package_Makefile_varorder($) {
 	while ($lineno <= $#{$lines}) {
 		my $line = $lines->[$lineno];
 		my $text = $line->text;
+
+		$line->log_debug("[varorder] section ${sectindex} variable ${varindex}.");
 
 		if ($next_section) {
 			$next_section = false;
