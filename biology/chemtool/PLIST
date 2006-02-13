@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/08/26 11:53:32 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/02/13 19:20:54 adam Exp $
 bin/chemtool
 bin/cht
 man/man1/chemtool.1
@@ -30,6 +30,7 @@ share/examples/chemtool/indigo.cht
 share/examples/chemtool/kdo.cht
 share/examples/chemtool/krebs.cht
 share/examples/chemtool/labeltest
+share/examples/chemtool/labeltest.svg
 share/examples/chemtool/pagodan.cht
 share/examples/chemtool/penicillin_v.cht
 share/examples/chemtool/pteridin.cht
