@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.2.4.1 2006/02/13 16:07:08 salo Exp $
+
+Security fix for CVE-2005-4470 from Ubuntu.
+
+--- source/blender/blenloader/intern/readfile.c.orig	2006-02-13 15:30:40.000000000 +0100
++++ source/blender/blenloader/intern/readfile.c
+@@ -613,6 +613,9 @@ static BHeadN *get_bhead(FileData *fd)
+ 				}
+ 			}
+ 
++			// negative lengths would lead to wrong memory allocation
++			if (bhead.len < 0) fd->eof = 1;
++
+ 			// bhead now contains the (converted) bhead structure. Now read
+ 			// the associated data and put everything in a BHeadN (creative naming !)
+ 
