@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12887 2006/02/12 18:37:46 xtraeme Exp $
+$NetBSD: CHANGES,v 1.12888 2006/02/13 14:48:18 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -937,3 +937,5 @@ Changes to the packages collection and infrastructure in 2006:
         Updated net/nmap to 4.01 [salo 2006-02-12]
         Updated net/nmapfe to 0.9.5nb26 [salo 2006-02-12]
 	Updated audio/moc to 2.4.0 [xtraeme 2006-02-12]
+	Updated chat/libotr to 3.0.0 [salo 2006-02-13]
+	Updated chat/gaim-otr to 3.0.0 [salo 2006-02-13]
