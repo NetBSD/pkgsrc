@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/02/14 00:49:23 rillig Exp $
+
+SHA1 (btpd-0.8.tar.gz) = d440ceff94fc745f192b9ab371af7e0e436fb624
+RMD160 (btpd-0.8.tar.gz) = a11e3f984f82e89c596efbfb6c7ac947e2b4b80c
+Size (btpd-0.8.tar.gz) = 145435 bytes
