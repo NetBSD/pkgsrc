@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.263 2006/01/31 02:48:33 rillig Exp $
+# $NetBSD: Makefile,v 1.264 2006/02/14 20:41:51 rillig Exp $
 #
 
 COMMENT=	Games
@@ -196,6 +196,7 @@ SUBDIR+=	svb
 SUBDIR+=	tads
 SUBDIR+=	tanked
 SUBDIR+=	teg
+SUBDIR+=	tetrinetx
 SUBDIR+=	tileworld
 SUBDIR+=	tscp
 SUBDIR+=	tuxmath
