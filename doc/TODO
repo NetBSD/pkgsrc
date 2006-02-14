@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4612 2006/02/14 21:01:01 adam Exp $
+$NetBSD: TODO,v 1.4613 2006/02/14 21:41:52 adam Exp $
 
 Suggested new packages
 ======================
@@ -456,7 +456,6 @@ Suggested package updates
 	o dmidecode-2.8
 	o dnstop-20050405
 	o dnstracer-1.8
-	o dopewars-1.5.12
 	o doxygen-1.4.6
 	o dpkg-1.10.28
 	o dropbear-0.47
