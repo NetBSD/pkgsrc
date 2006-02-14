@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/01/16 14:24:21 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/02/14 22:05:44 adam Exp $
 bin/demo
 include/atkmm-1.6/atkmm.h
 include/atkmm-1.6/atkmm/action.h
@@ -1295,22 +1295,22 @@ share/doc/gtkmm-2.4/docs/reference/html/curve_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/deprecated.html
 share/doc/gtkmm-2.4/docs/reference/html/device_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/dialog_8h.html
-share/doc/gtkmm-2.4/docs/reference/html/dir__2Fhome_2Fmurrayc_2Fcvs_2Fgnome214_2Fgtkmm_2Fatk_2F.html
-share/doc/gtkmm-2.4/docs/reference/html/dir__2Fhome_2Fmurrayc_2Fcvs_2Fgnome214_2Fgtkmm_2Fatk_2F_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir__2Fhome_2Fmurrayc_2Fcvs_2Fgnome214_2Fgtkmm_2Fatk_2Fatkmm_2F.html
-share/doc/gtkmm-2.4/docs/reference/html/dir__2Fhome_2Fmurrayc_2Fcvs_2Fgnome214_2Fgtkmm_2Fatk_2Fatkmm_2F_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir__2Fhome_2Fmurrayc_2Fcvs_2Fgnome214_2Fgtkmm_2Fgdk_2F.html
-share/doc/gtkmm-2.4/docs/reference/html/dir__2Fhome_2Fmurrayc_2Fcvs_2Fgnome214_2Fgtkmm_2Fgdk_2F_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir__2Fhome_2Fmurrayc_2Fcvs_2Fgnome214_2Fgtkmm_2Fgdk_2Fgdkmm_2F.html
-share/doc/gtkmm-2.4/docs/reference/html/dir__2Fhome_2Fmurrayc_2Fcvs_2Fgnome214_2Fgtkmm_2Fgdk_2Fgdkmm_2F_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir__2Fhome_2Fmurrayc_2Fcvs_2Fgnome214_2Fgtkmm_2Fgtk_2F.html
-share/doc/gtkmm-2.4/docs/reference/html/dir__2Fhome_2Fmurrayc_2Fcvs_2Fgnome214_2Fgtkmm_2Fgtk_2F_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir__2Fhome_2Fmurrayc_2Fcvs_2Fgnome214_2Fgtkmm_2Fgtk_2Fgtkmm_2F.html
-share/doc/gtkmm-2.4/docs/reference/html/dir__2Fhome_2Fmurrayc_2Fcvs_2Fgnome214_2Fgtkmm_2Fgtk_2Fgtkmm_2F_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir__2Fhome_2Fmurrayc_2Fcvs_2Fgnome214_2Fgtkmm_2Fpango_2F.html
-share/doc/gtkmm-2.4/docs/reference/html/dir__2Fhome_2Fmurrayc_2Fcvs_2Fgnome214_2Fgtkmm_2Fpango_2F_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir__2Fhome_2Fmurrayc_2Fcvs_2Fgnome214_2Fgtkmm_2Fpango_2Fpangomm_2F.html
-share/doc/gtkmm-2.4/docs/reference/html/dir__2Fhome_2Fmurrayc_2Fcvs_2Fgnome214_2Fgtkmm_2Fpango_2Fpangomm_2F_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_000000.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_000000_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_000001.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_000001_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_000002.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_000002_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_000003.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_000003_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_000004.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_000004_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_000005.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_000005_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_000006.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_000006_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_000007.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_000007_dep.png
 share/doc/gtkmm-2.4/docs/reference/html/dirs.html
 share/doc/gtkmm-2.4/docs/reference/html/display_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/displaymanager_8h.html
@@ -1888,7 +1888,6 @@ share/doc/gtkmm-2.4/docs/reference/html/structPango_1_1LayoutLineTraits-members.
 share/doc/gtkmm-2.4/docs/reference/html/structPango_1_1LayoutLineTraits.html
 share/doc/gtkmm-2.4/docs/reference/html/style_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/tabarray_8h.html
-share/doc/gtkmm-2.4/docs/reference/html/tabs.css
 share/doc/gtkmm-2.4/docs/reference/html/targetentry_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/targetlist_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/tearoffmenuitem_8h.html
@@ -2075,6 +2074,15 @@ share/doc/gtkmm-2.4/docs/tutorial/html/ch22.html
 share/doc/gtkmm-2.4/docs/tutorial/html/ch22s02.html
 share/doc/gtkmm-2.4/docs/tutorial/html/ch23.html
 share/doc/gtkmm-2.4/docs/tutorial/html/index.html
+share/doc/gtkmm-2.4/docs/tutorial/icons/caution.png
+share/doc/gtkmm-2.4/docs/tutorial/icons/home.png
+share/doc/gtkmm-2.4/docs/tutorial/icons/important.png
+share/doc/gtkmm-2.4/docs/tutorial/icons/next.png
+share/doc/gtkmm-2.4/docs/tutorial/icons/note.png
+share/doc/gtkmm-2.4/docs/tutorial/icons/prev.png
+share/doc/gtkmm-2.4/docs/tutorial/icons/tip.png
+share/doc/gtkmm-2.4/docs/tutorial/icons/up.png
+share/doc/gtkmm-2.4/docs/tutorial/icons/warning.png
 share/doc/gtkmm-2.4/examples/arrow/arrow.cc
 share/doc/gtkmm-2.4/examples/arrow/direction.cc
 share/doc/gtkmm-2.4/examples/book/alignment/examplewindow.cc
@@ -2387,6 +2395,7 @@ share/doc/gtkmm-2.4/tests/main_with_options/main.cc
 @dirrm share/doc/gtkmm-2.4/examples/book
 @dirrm share/doc/gtkmm-2.4/examples/arrow
 @dirrm share/doc/gtkmm-2.4/examples
+@dirrm share/doc/gtkmm-2.4/docs/tutorial/icons
 @dirrm share/doc/gtkmm-2.4/docs/tutorial/html
 @dirrm share/doc/gtkmm-2.4/docs/tutorial/figures
 @dirrm share/doc/gtkmm-2.4/docs/tutorial
