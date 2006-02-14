@@ -66,8 +66,8 @@ alink="#0000FF">
         </div>
 
         <div xmlns="http://www.w3.org/TR/xhtml1/transitional">
-          <p xmlns="" class="pubdate">$NetBSD: pkgsrc.xml,v 1.10
-          2005/10/05 13:59:56 dillo Exp $</p>
+          <p xmlns="" class="pubdate">$NetBSD: pkgsrc.xml,v 1.11
+          2006/01/13 17:42:33 reed Exp $</p>
         </div>
 
         <div>
@@ -771,236 +771,255 @@ alink="#0000FF">
               </dl>
             </dd>
 
-            <dt><span class="chapter"><a href="#fixes">15. Making
+            <dt><span class="chapter"><a href="#tools">15. Tools
+            needed for building or running</a></span></dt>
+
+            <dd>
+              <dl>
+                <dt><span class="sect1"><a href=
+                "#pkgsrc-tools">15.1. Tools for pkgsrc
+                builds</a></span></dt>
+
+                <dt><span class="sect1"><a href=
+                "#package-tools">15.2. Tools needed by
+                packages</a></span></dt>
+
+                <dt><span class="sect1"><a href=
+                "#platform-tools">15.3. Tools provided by
+                platforms</a></span></dt>
+              </dl>
+            </dd>
+
+            <dt><span class="chapter"><a href="#fixes">16. Making
             your package work</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect1"><a href=
-                "#general-operation">15.1. General
+                "#general-operation">16.1. General
                 operation</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#pulling-vars-from-etc-mk.conf">15.1.1. How to
+                    "#pulling-vars-from-etc-mk.conf">16.1.1. How to
                     pull in variables from
                     /etc/mk.conf</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#where-to-install-documentation">15.1.2. Where
+                    "#where-to-install-documentation">16.1.2. Where
                     to install documentation</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#restricted-packages">15.1.3. Restricted
+                    "#restricted-packages">16.1.3. Restricted
                     packages</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#dependencies">15.1.4. Handling
+                    "#dependencies">16.1.4. Handling
                     dependencies</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#conflicts">15.1.5. Handling conflicts with
+                    "#conflicts">16.1.5. Handling conflicts with
                     other packages</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#not-building-packages">15.1.6. Packages that
+                    "#not-building-packages">16.1.6. Packages that
                     cannot or should not be built</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#undeletable-packages">15.1.7. Packages which
+                    "#undeletable-packages">16.1.7. Packages which
                     should not be deleted, once
                     installed</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#security-handling">15.1.8. Handling packages
+                    "#security-handling">16.1.8. Handling packages
                     with security problems</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#compiler-bugs">15.1.9. How to handle compiler
+                    "#compiler-bugs">16.1.9. How to handle compiler
                     bugs</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#bumping-pkgrevision">15.1.10. How to handle
+                    "#bumping-pkgrevision">16.1.10. How to handle
                     incrementing versions when fixing an existing
                     package</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#portability-of-packages">15.1.11. Portability
+                    "#portability-of-packages">16.1.11. Portability
                     of packages</a></span></dt>
                   </dl>
                 </dd>
 
                 <dt><span class="sect1"><a href=
-                "#downloading-issues">15.2. Possible downloading
+                "#downloading-issues">16.2. Possible downloading
                 issues</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#no-plain-download">15.2.1. Packages whose
+                    "#no-plain-download">16.2.1. Packages whose
                     distfiles aren't available for plain
                     downloading</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#modified-distfiles-same-name">15.2.2. How to
+                    "#modified-distfiles-same-name">16.2.2. How to
                     handle modified distfiles with the 'old'
                     name</a></span></dt>
                   </dl>
                 </dd>
 
                 <dt><span class="sect1"><a href=
-                "#configuration-gotchas">15.3. Configuration
+                "#configuration-gotchas">16.3. Configuration
                 gotchas</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#fixes.libtool">15.3.1. Shared libraries -
+                    "#fixes.libtool">16.3.1. Shared libraries -
                     libtool</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#using-libtool">15.3.2. Using libtool on GNU
+                    "#using-libtool">16.3.2. Using libtool on GNU
                     packages that already support
                     libtool</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#autoconf-automake">15.3.3. GNU
+                    "#autoconf-automake">16.3.3. GNU
                     Autoconf/Automake</a></span></dt>
                   </dl>
                 </dd>
 
                 <dt><span class="sect1"><a href=
-                "#fixes-build">15.4. Building the
+                "#fixes-build">16.4. Building the
                 package</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#cpp-defines">15.4.1. CPP
+                    "#cpp-defines">16.4.1. CPP
                     defines</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#cpp-list-examples">15.4.2. Examples of CPP
+                    "#cpp-list-examples">16.4.2. Examples of CPP
                     defines for some platforms</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#cpp-list">15.4.3. Getting a list of CPP
+                    "#cpp-list">16.4.3. Getting a list of CPP
                     defines</a></span></dt>
                   </dl>
                 </dd>
 
                 <dt><span class="sect1"><a href=
-                "#package-specific-actions">15.5. Package specific
+                "#package-specific-actions">16.5. Package specific
                 actions</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#user-interaction">15.5.1. User
+                    "#user-interaction">16.5.1. User
                     interaction</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#handling-licenses">15.5.2. Handling
+                    "#handling-licenses">16.5.2. Handling
                     licenses</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#installing-score-files">15.5.3. Installing
+                    "#installing-score-files">16.5.3. Installing
                     score files</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#perl-scripts">15.5.4. Packages containing
+                    "#perl-scripts">16.5.4. Packages containing
                     perl scripts</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#hardcoded-paths">15.5.5. Packages with
+                    "#hardcoded-paths">16.5.5. Packages with
                     hardcoded paths to other
                     interpreters</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#perl-modules">15.5.6. Packages installing
+                    "#perl-modules">16.5.6. Packages installing
                     perl modules</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#faq.info-files">15.5.7. Packages installing
+                    "#faq.info-files">16.5.7. Packages installing
                     info files</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#manpages">15.5.8. Packages installing man
+                    "#manpages">16.5.8. Packages installing man
                     pages</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#gconf2-data-files">15.5.9. Packages
+                    "#gconf2-data-files">16.5.9. Packages
                     installing GConf2 data files</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#scrollkeeper-data-files">15.5.10. Packages
+                    "#scrollkeeper-data-files">16.5.10. Packages
                     installing scrollkeeper data
                     files</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#x11-fonts">15.5.11. Packages installing X11
+                    "#x11-fonts">16.5.11. Packages installing X11
                     fonts</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#gtk2-modules">15.5.12. Packages installing
+                    "#gtk2-modules">16.5.12. Packages installing
                     GTK2 modules</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#sgml-xml-data">15.5.13. Packages installing
+                    "#sgml-xml-data">16.5.13. Packages installing
                     SGML or XML data</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#mime-database">15.5.14. Packages installing
+                    "#mime-database">16.5.14. Packages installing
                     extensions to the MIME database</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#intltool">15.5.15. Packages using
+                    "#intltool">16.5.15. Packages using
                     intltool</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#startup-scripts">15.5.16. Packages installing
+                    "#startup-scripts">16.5.16. Packages installing
                     startup scripts</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#tex-packages">15.5.17. Packages installing
+                    "#tex-packages">16.5.17. Packages installing
                     TeX modules</a></span></dt>
                   </dl>
                 </dd>
 
                 <dt><span class="sect1"><a href=
-                "#feedback-to-author">15.6. Feedback to the
+                "#feedback-to-author">16.6. Feedback to the
                 author</a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="chapter"><a href="#debug">16.
+            <dt><span class="chapter"><a href="#debug">17.
             Debugging</a></span></dt>
 
-            <dt><span class="chapter"><a href="#submit">17.
+            <dt><span class="chapter"><a href="#submit">18.
             Submitting and Committing</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect1"><a href=
-                "#submitting-your-package">17.1. Submitting your
+                "#submitting-your-package">18.1. Submitting your
                 packages</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#general-notes-for-changes">17.2. General notes
+                "#general-notes-for-changes">18.2. General notes
                 when adding, updating, or removing
                 packages</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#committing-importing">17.3. Committing: Importing
+                "#committing-importing">18.3. Committing: Importing
                 a package into CVS</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#updating-package">17.4. Updating a package to a
+                "#updating-package">18.4. Updating a package to a
                 newer version</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#moving-package">17.5. Moving a package in
+                "#moving-package">18.5. Moving a package in
                 pkgsrc</a></span></dt>
               </dl>
             </dd>
@@ -2943,6 +2962,36 @@ alink="#0000FF">
               "http://www.w3.org/TR/xhtml1/transitional" class=
               "filename">/usr/pkg/{bin,sbin}</code>.</p>
             </div>
+
+            <div class="sect3" lang="en">
+              <div class="titlepage">
+                <div>
+                  <div>
+                    <h4 class="title"><a name=
+                    "plat.sunos.problems"></a>3.2.7.3.&nbsp;Common
+                    problems</h4>
+                  </div>
+                </div>
+              </div>
+
+              <p>Sometimes, when using <span><strong class=
+              "command">libtool</strong></span>, <code xmlns=
+              "http://www.w3.org/TR/xhtml1/transitional" class=
+              "filename">/bin/ksh</code> crashes with a
+              segmentation fault. The workaround is to use another
+              shell for the configure scripts, for example by
+              installing <a xmlns=
+              "http://www.w3.org/TR/xhtml1/transitional" href=
+              "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/shells/bash/README.html"
+              target="_top"><code xmlns="" class=
+              "filename">shells/bash</code></a> and adding the
+              following line to your <code xmlns=
+              "http://www.w3.org/TR/xhtml1/transitional" class=
+              "filename">mk.conf</code>:</p>
+              <pre class="programlisting">
+    CONFIG_SHELL=   ${LOCALBASE}/bin/bash
+</pre>
+            </div>
           </div>
         </div>
       </div>
@@ -3854,7 +3903,7 @@ alink="#0000FF">
           <pre class="screen">
 <code class="prompt">$</code> <span><strong class=
 "command">grep "PKG.*OPTION" /etc/mk.conf</strong></span>
-PKG_DEFAULT_OPTIONS=    -arts -dvdread -esound 
+PKG_DEFAULT_OPTIONS=    -arts -dvdread -esound
 PKG_OPTIONS.kdebase=    debug -sasl
 PKG_OPTIONS.apache=     suexec 
 </pre>
@@ -4041,7 +4090,7 @@ PKG_OPTIONS.apache=     suexec
           "filename">misc/figlet</code></a> example.</p>
 
           <p>See <a href="#submit" title=
-          "Chapter&nbsp;17.&nbsp;Submitting and Committing">Chapter&nbsp;17,
+          "Chapter&nbsp;18.&nbsp;Submitting and Committing">Chapter&nbsp;18,
           <i>Submitting and Committing</i></a> for information on
           how to submit such a binary package.</p>
         </div>
@@ -4193,6 +4242,39 @@ PKG_OPTIONS.apache=     suexec
                     "varname">BULK_PREREQ</code>, which is a list
                     of packages that should be always available
                     while building other packages.</p>
+                  </li>
+                </ul>
+              </div>
+
+              <p>Some other options are scattered in the pkgsrc
+              infrastructure:</p>
+
+              <div class="itemizedlist">
+                <ul type="disc">
+                  <li>
+                    <p><code class="varname">CHECK_FILES</code>
+                    (<code xmlns=
+                    "http://www.w3.org/TR/xhtml1/transitional"
+                    class=
+                    "filename">pkgsrc/mk/bsd.pkg.check.mk</code>)
+                    can be set to &#8220;<span class=
+                    "quote">yes</span>&#8221; to check that the
+                    installed set of files matches the <code xmlns=
+                    "http://www.w3.org/TR/xhtml1/transitional"
+                    class="filename">PLIST</code>.</p>
+                  </li>
+
+                  <li>
+                    <p><code class=
+                    "varname">CHECK_INTERPRETER</code>
+                    (<code xmlns="http://www.w3.org/TR/xhtml1/transitional"
+                    class=
+                    "filename">pkgsrc/mk/bsd.pkg.check.mk</code>)
+                    can be set to &#8220;<span class=
+                    "quote">yes</span>&#8221; to check that the
+                    installed &#8220;<span class=
+                    "quote">#!</span>&#8221;-scripts will find
+                    their interpreter.</p>
                   </li>
                 </ul>
               </div>
@@ -4626,16 +4708,6 @@ PKG_OPTIONS.apache=     suexec
                   "filename">mk/bulk/build.conf</code> to suit your
                   needs.</p>
                 </li>
-
-                <li>
-                  <p>If you have set <code class=
-                  "varname">CVS_USER</code> in <code xmlns=
-                  "http://www.w3.org/TR/xhtml1/transitional" class=
-                  "filename">build.conf</code>, make sure that
-                  account exists and can do a <span><strong class=
-                  "command">cvs ${CVS_FLAGS} update</strong></span>
-                  properly!</p>
-                </li>
               </ol>
             </div>
 
@@ -4747,15 +4819,15 @@ PKG_OPTIONS.apache=     suexec
             class="filename">mk/bulk/build.conf</code> file, i.e.
             adjust it to something like one of the following:</p>
             <pre class="screen">
-RSYNC_DST=$CVS_USER@ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch/upload 
+RSYNC_DST=ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch/upload 
 </pre>
 
             <p>Please use appropriate values for "pkgsrc-200xQy",
             "NetBSD-a.b.c" and "arch" here. If your login on
-            ftp.NetBSD.org is different from <code class=
-            "varname">CVS_USER</code>, write your login directly
-            into the variable, e.g. my local account is "feyrer",
-            but for my login "hubertf", I use:</p>
+            ftp.NetBSD.org is different from your local login,
+            write your login directly into the variable, e.g. my
+            local account is "feyrer", but for my login "hubertf",
+            I use:</p>
             <pre class="screen">
 RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch/upload 
 </pre>
@@ -4786,11 +4858,11 @@ nbftp% <strong class=
             that no keys should be present there usually):</p>
             <pre class="screen">
 <code class="prompt">#</code> <strong class=
-"userinput"><code>chroot /usr/sandbox</code></strong>        
+"userinput"><code>chroot /usr/sandbox</code></strong>
 chroot-<code class="prompt">#</code> <strong class=
-"userinput"><code>rm $HOME/.ssh/id-dsa*</code></strong>        
+"userinput"><code>rm $HOME/.ssh/id-dsa*</code></strong>
 chroot-<code class="prompt">#</code> <strong class=
-"userinput"><code>ssh-keygen -t dsa</code></strong>        
+"userinput"><code>ssh-keygen -t dsa</code></strong>
 chroot-<code class="prompt">#</code> <strong class=
 "userinput"><code>cat $HOME/.ssh/id-dsa.pub</code></strong> 
 </pre>
@@ -4815,9 +4887,9 @@ chroot-<code class="prompt">#</code> <strong class=
             and start the upload:</p>
             <pre class="screen">
 chroot-<code class="prompt">#</code> <strong class=
-"userinput"><code>exit</code></strong>        
+"userinput"><code>exit</code></strong>
 <code class="prompt">#</code> <strong class=
-"userinput"><code>cd /usr/sandbox/usr/pkgsrc</code></strong>        
+"userinput"><code>cd /usr/sandbox/usr/pkgsrc</code></strong>
 <code class="prompt">#</code> <strong class=
 "userinput"><code>sh mk/bulk/do-sandbox-upload</code></strong> 
 </pre>
@@ -6263,235 +6335,253 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             </dl>
           </dd>
 
-          <dt><span class="chapter"><a href="#fixes">15. Making
+          <dt><span class="chapter"><a href="#tools">15. Tools
+          needed for building or running</a></span></dt>
+
+          <dd>
+            <dl>
+              <dt><span class="sect1"><a href="#pkgsrc-tools">15.1.
+              Tools for pkgsrc builds</a></span></dt>
+
+              <dt><span class="sect1"><a href=
+              "#package-tools">15.2. Tools needed by
+              packages</a></span></dt>
+
+              <dt><span class="sect1"><a href=
+              "#platform-tools">15.3. Tools provided by
+              platforms</a></span></dt>
+            </dl>
+          </dd>
+
+          <dt><span class="chapter"><a href="#fixes">16. Making
           your package work</a></span></dt>
 
           <dd>
             <dl>
               <dt><span class="sect1"><a href=
-              "#general-operation">15.1. General
+              "#general-operation">16.1. General
               operation</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#pulling-vars-from-etc-mk.conf">15.1.1. How to
+                  "#pulling-vars-from-etc-mk.conf">16.1.1. How to
                   pull in variables from
                   /etc/mk.conf</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#where-to-install-documentation">15.1.2. Where
+                  "#where-to-install-documentation">16.1.2. Where
                   to install documentation</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#restricted-packages">15.1.3. Restricted
+                  "#restricted-packages">16.1.3. Restricted
                   packages</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#dependencies">15.1.4. Handling
+                  "#dependencies">16.1.4. Handling
                   dependencies</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#conflicts">15.1.5. Handling conflicts with
+                  "#conflicts">16.1.5. Handling conflicts with
                   other packages</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#not-building-packages">15.1.6. Packages that
+                  "#not-building-packages">16.1.6. Packages that
                   cannot or should not be built</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#undeletable-packages">15.1.7. Packages which
+                  "#undeletable-packages">16.1.7. Packages which
                   should not be deleted, once
                   installed</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#security-handling">15.1.8. Handling packages
+                  "#security-handling">16.1.8. Handling packages
                   with security problems</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#compiler-bugs">15.1.9. How to handle compiler
+                  "#compiler-bugs">16.1.9. How to handle compiler
                   bugs</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#bumping-pkgrevision">15.1.10. How to handle
+                  "#bumping-pkgrevision">16.1.10. How to handle
                   incrementing versions when fixing an existing
                   package</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#portability-of-packages">15.1.11. Portability
+                  "#portability-of-packages">16.1.11. Portability
                   of packages</a></span></dt>
                 </dl>
               </dd>
 
               <dt><span class="sect1"><a href=
-              "#downloading-issues">15.2. Possible downloading
+              "#downloading-issues">16.2. Possible downloading
               issues</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#no-plain-download">15.2.1. Packages whose
+                  "#no-plain-download">16.2.1. Packages whose
                   distfiles aren't available for plain
                   downloading</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#modified-distfiles-same-name">15.2.2. How to
+                  "#modified-distfiles-same-name">16.2.2. How to
                   handle modified distfiles with the 'old'
                   name</a></span></dt>
                 </dl>
               </dd>
 
               <dt><span class="sect1"><a href=
-              "#configuration-gotchas">15.3. Configuration
+              "#configuration-gotchas">16.3. Configuration
               gotchas</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#fixes.libtool">15.3.1. Shared libraries -
+                  "#fixes.libtool">16.3.1. Shared libraries -
                   libtool</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#using-libtool">15.3.2. Using libtool on GNU
+                  "#using-libtool">16.3.2. Using libtool on GNU
                   packages that already support
                   libtool</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#autoconf-automake">15.3.3. GNU
+                  "#autoconf-automake">16.3.3. GNU
                   Autoconf/Automake</a></span></dt>
                 </dl>
               </dd>
 
-              <dt><span class="sect1"><a href="#fixes-build">15.4.
+              <dt><span class="sect1"><a href="#fixes-build">16.4.
               Building the package</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#cpp-defines">15.4.1. CPP
+                  "#cpp-defines">16.4.1. CPP
                   defines</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#cpp-list-examples">15.4.2. Examples of CPP
+                  "#cpp-list-examples">16.4.2. Examples of CPP
                   defines for some platforms</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#cpp-list">15.4.3. Getting a list of CPP
+                  "#cpp-list">16.4.3. Getting a list of CPP
                   defines</a></span></dt>
                 </dl>
               </dd>
 
               <dt><span class="sect1"><a href=
-              "#package-specific-actions">15.5. Package specific
+              "#package-specific-actions">16.5. Package specific
               actions</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#user-interaction">15.5.1. User
+                  "#user-interaction">16.5.1. User
                   interaction</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#handling-licenses">15.5.2. Handling
+                  "#handling-licenses">16.5.2. Handling
                   licenses</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#installing-score-files">15.5.3. Installing
+                  "#installing-score-files">16.5.3. Installing
                   score files</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#perl-scripts">15.5.4. Packages containing perl
+                  "#perl-scripts">16.5.4. Packages containing perl
                   scripts</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#hardcoded-paths">15.5.5. Packages with
+                  "#hardcoded-paths">16.5.5. Packages with
                   hardcoded paths to other
                   interpreters</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#perl-modules">15.5.6. Packages installing perl
+                  "#perl-modules">16.5.6. Packages installing perl
                   modules</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#faq.info-files">15.5.7. Packages installing
+                  "#faq.info-files">16.5.7. Packages installing
                   info files</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#manpages">15.5.8. Packages installing man
+                  "#manpages">16.5.8. Packages installing man
                   pages</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#gconf2-data-files">15.5.9. Packages installing
+                  "#gconf2-data-files">16.5.9. Packages installing
                   GConf2 data files</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#scrollkeeper-data-files">15.5.10. Packages
+                  "#scrollkeeper-data-files">16.5.10. Packages
                   installing scrollkeeper data
                   files</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#x11-fonts">15.5.11. Packages installing X11
+                  "#x11-fonts">16.5.11. Packages installing X11
                   fonts</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#gtk2-modules">15.5.12. Packages installing GTK2
+                  "#gtk2-modules">16.5.12. Packages installing GTK2
                   modules</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#sgml-xml-data">15.5.13. Packages installing
+                  "#sgml-xml-data">16.5.13. Packages installing
                   SGML or XML data</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#mime-database">15.5.14. Packages installing
+                  "#mime-database">16.5.14. Packages installing
                   extensions to the MIME database</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#intltool">15.5.15. Packages using
+                  "#intltool">16.5.15. Packages using
                   intltool</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#startup-scripts">15.5.16. Packages installing
+                  "#startup-scripts">16.5.16. Packages installing
                   startup scripts</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#tex-packages">15.5.17. Packages installing TeX
+                  "#tex-packages">16.5.17. Packages installing TeX
                   modules</a></span></dt>
                 </dl>
               </dd>
 
               <dt><span class="sect1"><a href=
-              "#feedback-to-author">15.6. Feedback to the
+              "#feedback-to-author">16.6. Feedback to the
               author</a></span></dt>
             </dl>
           </dd>
 
-          <dt><span class="chapter"><a href="#debug">16.
+          <dt><span class="chapter"><a href="#debug">17.
           Debugging</a></span></dt>
 
-          <dt><span class="chapter"><a href="#submit">17.
+          <dt><span class="chapter"><a href="#submit">18.
           Submitting and Committing</a></span></dt>
 
           <dd>
             <dl>
               <dt><span class="sect1"><a href=
-              "#submitting-your-package">17.1. Submitting your
+              "#submitting-your-package">18.1. Submitting your
               packages</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#general-notes-for-changes">17.2. General notes when
+              "#general-notes-for-changes">18.2. General notes when
               adding, updating, or removing
               packages</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#committing-importing">17.3. Committing: Importing a
+              "#committing-importing">18.3. Committing: Importing a
               package into CVS</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#updating-package">17.4. Updating a package to a
+              "#updating-package">18.4. Updating a package to a
               newer version</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#moving-package">17.5. Moving a package in
+              "#moving-package">18.5. Moving a package in
               pkgsrc</a></span></dt>
             </dl>
           </dd>
@@ -6860,7 +6950,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <li>
                 <p>If the package installs any info files, see
                 <a href="#faq.info-files" title=
-                "15.5.7.&nbsp;Packages installing info files">Section&nbsp;15.5.7,
+                "16.5.7.&nbsp;Packages installing info files">Section&nbsp;16.5.7,
                 &#8220;Packages installing info
                 files&#8221;</a>.</p>
               </li>
@@ -8862,7 +8952,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             In many cases, new versions of packages work just fine
             with older dependencies. See <a href="#dependencies"
             title=
-            "15.1.4.&nbsp;Handling dependencies">Section&nbsp;15.1.4,
+            "16.1.4.&nbsp;Handling dependencies">Section&nbsp;16.1.4,
             &#8220;Handling dependencies&#8221;</a> for more
             information about dependencies on other packages,
             including the <code class=
@@ -10416,7 +10506,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           "8.3.&nbsp;patches/*">Section&nbsp;8.3,
           &#8220;patches/*&#8221;</a> and <a href="#fixes.libtool"
           title=
-          "15.3.1.&nbsp;Shared libraries - libtool">Section&nbsp;15.3.1,
+          "16.3.1.&nbsp;Shared libraries - libtool">Section&nbsp;16.3.1,
           &#8220;Shared libraries - libtool&#8221;</a> for more
           details.</p>
 
@@ -10856,7 +10946,10 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             </div>
           </div>
 
-          <p>[TODO]</p>
+          <p>This is covered in <a href="#tools" title=
+          "Chapter&nbsp;15.&nbsp;Tools needed for building or running">
+          Chapter&nbsp;15, <i>Tools needed for building or
+          running</i></a>.</p>
         </div>
 
         <div class="sect1" lang="en">
@@ -11005,15 +11098,156 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
 
           <p>Once the build stage has completed, the final step is
           to install the software in public directories, so users
-          can access the programs and files. As in the
-          build-target, <code class="varname">$MAKE_PROGRAM</code>
-          is invoked on <code class="varname">$MAKEFILE</code>
-          here, but with the <code class=
-          "varname">$INSTALL_TARGET</code> instead, the latter
-          defaulting to &#8220;<span class=
-          "quote">install</span>&#8221; (plus &#8220;<span class=
-          "quote">install.man</span>&#8221;, if <code class=
-          "varname">USE_IMAKE</code> is set).</p>
+          can access the programs and files.</p>
+
+          <p>In the <span class="emphasis"><em>install</em></span>
+          phase, a rough equivalent of the following code is
+          executed. Additionally, before and after this code, much
+          magic is performed to do consistency checks, registering
+          the package, and so on.</p>
+          <pre class="programlisting">
+    .for d in ${INSTALL_DIRS}
+            cd ${WRKSRC} &amp;&amp; cd ${d} &amp;&amp; env ${MAKE_ENV} \
+                ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
+                    -f ${MAKEFILE} ${BUILD_TARGET}
+    .endfor
+</pre>
+
+          <p>The variable's meanings are analogous to the ones in
+          the <span class="emphasis"><em>build</em></span> phase.
+          <code class="varname">INSTALL_DIRS</code> defaults to
+          <code class="varname">BUILD_DIRS</code>. <code class=
+          "varname">INSTALL_TARGET</code> is &#8220;<span class=
+          "quote">install</span>&#8221; by default, plus
+          &#8220;<span class="quote">install.man</span>&#8221; if
+          <code class="varname">USE_IMAKE</code> is defined.</p>
+
+          <p>In the <span class="emphasis"><em>install</em></span>
+          phase, the following variables are useful. They are all
+          variations of the <a href=
+          "http://netbsd.gw.com/cgi-bin/man-cgi?install+1+NetBSD-current">
+          <span class="citerefentry"><span class=
+          "refentrytitle">install</span>(1)</span></a> command that
+          have the owner, group and permissions preset.
+          <code class="varname">INSTALL</code> is the plain install
+          command. The specialized variants, together with their
+          intended use, are:</p>
+
+          <div class="variablelist">
+            <dl>
+              <dt><span class="term"><code class=
+              "varname">INSTALL_PROGRAM_DIR</code></span></dt>
+
+              <dd>
+                <p>directories that contain binaries</p>
+              </dd>
+
+              <dt><span class="term"><code class=
+              "varname">INSTALL_SCRIPT_DIR</code></span></dt>
+
+              <dd>
+                <p>directories that contain scripts</p>
+              </dd>
+
+              <dt><span class="term"><code class=
+              "varname">INSTALL_LIB_DIR</code></span></dt>
+
+              <dd>
+                <p>directories that contain shared and static
+                libraries</p>
+              </dd>
+
+              <dt><span class="term"><code class=
+              "varname">INSTALL_DATA_DIR</code></span></dt>
+
+              <dd>
+                <p>directories that contain data files</p>
+              </dd>
+
+              <dt><span class="term"><code class=
+              "varname">INSTALL_MAN_DIR</code></span></dt>
+
+              <dd>
+                <p>directories that contain man pages</p>
+              </dd>
+
+              <dt><span class="term"><code class=
+              "varname">INSTALL_PROGRAM</code></span></dt>
+
+              <dd>
+                <p>binaries that can be stripped from debugging
+                symbols</p>
+              </dd>
+
+              <dt><span class="term"><code class=
+              "varname">INSTALL_SCRIPT</code></span></dt>
+
+              <dd>
+                <p>binaries that cannot be stripped</p>
+              </dd>
+
+              <dt><span class="term"><code class=
+              "varname">INSTALL_GAME</code></span></dt>
+
+              <dd>
+                <p>game binaries</p>
+              </dd>
+
+              <dt><span class="term"><code class=
+              "varname">INSTALL_LIB</code></span></dt>
+
+              <dd>
+                <p>shared and static libraries</p>
+              </dd>
+
+              <dt><span class="term"><code class=
+              "varname">INSTALL_DATA</code></span></dt>
+
+              <dd>
+                <p>data files</p>
+              </dd>
+
+              <dt><span class="term"><code class=
+              "varname">INSTALL_GAME_DATA</code></span></dt>
+
+              <dd>
+                <p>data files for games</p>
+              </dd>
+
+              <dt><span class="term"><code class=
+              "varname">INSTALL_MAN</code></span></dt>
+
+              <dd>
+                <p>man pages</p>
+              </dd>
+            </dl>
+          </div>
+
+          <p>Some other variables are:</p>
+
+          <div class="variablelist">
+            <dl>
+              <dt><span class="term"><code class=
+              "varname">INSTALLATION_DIRS</code></span></dt>
+
+              <dd>
+                <p>A list of directories relative to <code class=
+                "varname">PREFIX</code> that are created by pkgsrc
+                at the beginning of the <span class=
+                "emphasis"><em>install</em></span> phase. If this
+                variable is set, <code class=
+                "varname">NO_MTREE</code>=&#8220;<span class=
+                "quote">yes</span>&#8221; is assumed, which means
+                that the package claims to create all needed
+                directories itself before installing files to it.
+                Therefore this variable should only be set in
+                <code xmlns=
+                "http://www.w3.org/TR/xhtml1/transitional" class=
+                "filename">Makefile</code>s that are under control
+                of the package's author.</p>
+              </dd>
+            </dl>
+          </div>
         </div>
 
         <div class="sect1" lang="en">
@@ -11575,7 +11809,151 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           <div>
             <div>
               <h2 class="title"><a name=
-              "fixes"></a>Chapter&nbsp;15.&nbsp;Making your package
+              "tools"></a>Chapter&nbsp;15.&nbsp;Tools needed for
+              building or running</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="toc">
+          <p><b>Table of Contents</b></p>
+
+          <dl>
+            <dt><span class="sect1"><a href="#pkgsrc-tools">15.1.
+            Tools for pkgsrc builds</a></span></dt>
+
+            <dt><span class="sect1"><a href="#package-tools">15.2.
+            Tools needed by packages</a></span></dt>
+
+            <dt><span class="sect1"><a href="#platform-tools">15.3.
+            Tools provided by platforms</a></span></dt>
+          </dl>
+        </div>
+
+        <p>The <code class="varname">USE_TOOLS</code> definition is
+        used both internally by pkgsrc and also for individual
+        packages to define what commands are needed for building a
+        package (like <code class="varname">BUILD_DEPENDS</code>)
+        or for later run-time of an installed packaged (such as
+        <code class="varname">DEPENDS</code>). If the native system
+        provides an adequate tool, then in many cases, a pkgsrc
+        package will not be used.</p>
+
+        <p>When building a package, the replacement tools are made
+        available in a directory (as symlinks or wrapper scripts)
+        that is early in the executable search path. Just like the
+        buildlink system, this helps with consistent builds.</p>
+
+        <p>A tool may be needed to help build a specific package.
+        For example, perl, GNU make (gmake) or yacc may be
+        needed.</p>
+
+        <p>Also a tool may be needed, for example, because the
+        native system's supplied tool may be inefficient for
+        building a package with pkgsrc. For example, a package may
+        need GNU awk, bison (instead of yacc) or a better sed.</p>
+
+        <p>The tools used by a package can be listed by running
+        <span><strong class="command">make
+        show-tools</strong></span>.</p>
+
+        <div class="sect1" lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "pkgsrc-tools"></a>15.1.&nbsp;Tools for pkgsrc
+                builds</h2>
+              </div>
+            </div>
+          </div>
+
+          <p>The default set of tools used by pkgsrc is defined in
+          <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
+          class="filename">bsd.pkg.mk</code>. This includes
+          standard Unix tools, such as: <span><strong class=
+          "command">cat</strong></span>, <span><strong class=
+          "command">awk</strong></span>, <span><strong class=
+          "command">chmod</strong></span>, <span><strong class=
+          "command">test</strong></span>, and so on. These can be
+          seen by running: <span><strong class="command">make
+          show-var VARNAME=USE_TOOLS</strong></span>.</p>
+
+          <p>If a package needs a specific program to build then
+          the <code class="varname">USE_TOOLS</code> variable can
+          be used to define the tools needed.</p>
+        </div>
+
+        <div class="sect1" lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "package-tools"></a>15.2.&nbsp;Tools needed by
+                packages</h2>
+              </div>
+            </div>
+          </div>
+
+          <p>In the following examples, the :pkgsrc means to use
+          the pkgsrc version and not the native version for a build
+          dependency. And the :run means that it is used for a
+          run-time dependencies also (and becomes a DEPENDS). The
+          default is a build dependency which can be set with
+          :build. (So in this example, it is the same as
+          gmake:build and pkg-config:build.)</p>
+          <pre class="programlisting">
+USE_TOOLS+=     mktemp:pkgsrc
+USE_TOOLS+=     gmake perl:run pkg-config
+</pre>
+
+          <p>When using the tools framework, a <code class=
+          "varname">TOOLS_PATH.foo</code> variable is defined which
+          contains the full path to the appropriate tool. For
+          example, <code class="varname">TOOLS_PATH.bash</code>
+          could be &#8220;<span class=
+          "quote">/bin/bash</span>&#8221; on Linux systems.</p>
+
+          <p>If you always need a pkgsrc version of the tool at
+          run-time, then just use <code class=
+          "varname">DEPENDS</code> instead.</p>
+        </div>
+
+        <div class="sect1" lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "platform-tools"></a>15.3.&nbsp;Tools provided by
+                platforms</h2>
+              </div>
+            </div>
+          </div>
+
+          <p>When improving or porting pkgsrc to a new platform,
+          have a look at (or create) the corresponding platform
+          specific make file fragment under <code xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" class=
+          "filename">pkgsrc/mk/tools/tools.${OPSYS}.mk</code> which
+          defines the name of the common tools. For example:</p>
+          <pre class="programlisting">
+.if exists(/usr/bin/bzcat)
+TOOLS_PLATFORM.bzcat?=          /usr/bin/bzcat
+.elif exists(/usr/bin/bzip2)
+TOOLS_PLATFORM.bzcat?=          /usr/bin/bzip2 -cd
+.endif
+
+TOOLS_PLATFORM.true?=           true                    # shell builtin
+</pre>
+        </div>
+      </div>
+
+      <div class="chapter" lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title"><a name=
+              "fixes"></a>Chapter&nbsp;16.&nbsp;Making your package
               work</h2>
             </div>
           </div>
@@ -11586,192 +11964,192 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
 
           <dl>
             <dt><span class="sect1"><a href=
-            "#general-operation">15.1. General
+            "#general-operation">16.1. General
             operation</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#pulling-vars-from-etc-mk.conf">15.1.1. How to
+                "#pulling-vars-from-etc-mk.conf">16.1.1. How to
                 pull in variables from /etc/mk.conf</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#where-to-install-documentation">15.1.2. Where to
+                "#where-to-install-documentation">16.1.2. Where to
                 install documentation</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#restricted-packages">15.1.3. Restricted
+                "#restricted-packages">16.1.3. Restricted
                 packages</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#dependencies">15.1.4. Handling
+                "#dependencies">16.1.4. Handling
                 dependencies</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#conflicts">15.1.5. Handling conflicts with other
+                "#conflicts">16.1.5. Handling conflicts with other
                 packages</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#not-building-packages">15.1.6. Packages that
+                "#not-building-packages">16.1.6. Packages that
                 cannot or should not be built</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#undeletable-packages">15.1.7. Packages which
+                "#undeletable-packages">16.1.7. Packages which
                 should not be deleted, once
                 installed</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#security-handling">15.1.8. Handling packages with
+                "#security-handling">16.1.8. Handling packages with
                 security problems</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#compiler-bugs">15.1.9. How to handle compiler
+                "#compiler-bugs">16.1.9. How to handle compiler
                 bugs</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#bumping-pkgrevision">15.1.10. How to handle
+                "#bumping-pkgrevision">16.1.10. How to handle
                 incrementing versions when fixing an existing
                 package</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#portability-of-packages">15.1.11. Portability of
+                "#portability-of-packages">16.1.11. Portability of
                 packages</a></span></dt>
               </dl>
             </dd>
 
             <dt><span class="sect1"><a href=
-            "#downloading-issues">15.2. Possible downloading
+            "#downloading-issues">16.2. Possible downloading
             issues</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#no-plain-download">15.2.1. Packages whose
+                "#no-plain-download">16.2.1. Packages whose
                 distfiles aren't available for plain
                 downloading</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#modified-distfiles-same-name">15.2.2. How to
+                "#modified-distfiles-same-name">16.2.2. How to
                 handle modified distfiles with the 'old'
                 name</a></span></dt>
               </dl>
             </dd>
 
             <dt><span class="sect1"><a href=
-            "#configuration-gotchas">15.3. Configuration
+            "#configuration-gotchas">16.3. Configuration
             gotchas</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#fixes.libtool">15.3.1. Shared libraries -
+                "#fixes.libtool">16.3.1. Shared libraries -
                 libtool</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#using-libtool">15.3.2. Using libtool on GNU
+                "#using-libtool">16.3.2. Using libtool on GNU
                 packages that already support
                 libtool</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#autoconf-automake">15.3.3. GNU
+                "#autoconf-automake">16.3.3. GNU
                 Autoconf/Automake</a></span></dt>
               </dl>
             </dd>
 
-            <dt><span class="sect1"><a href="#fixes-build">15.4.
+            <dt><span class="sect1"><a href="#fixes-build">16.4.
             Building the package</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#cpp-defines">15.4.1. CPP defines</a></span></dt>
+                "#cpp-defines">16.4.1. CPP defines</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#cpp-list-examples">15.4.2. Examples of CPP
+                "#cpp-list-examples">16.4.2. Examples of CPP
                 defines for some platforms</a></span></dt>
 
-                <dt><span class="sect2"><a href="#cpp-list">15.4.3.
+                <dt><span class="sect2"><a href="#cpp-list">16.4.3.
                 Getting a list of CPP defines</a></span></dt>
               </dl>
             </dd>
 
             <dt><span class="sect1"><a href=
-            "#package-specific-actions">15.5. Package specific
+            "#package-specific-actions">16.5. Package specific
             actions</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#user-interaction">15.5.1. User
+                "#user-interaction">16.5.1. User
                 interaction</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#handling-licenses">15.5.2. Handling
+                "#handling-licenses">16.5.2. Handling
                 licenses</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#installing-score-files">15.5.3. Installing score
+                "#installing-score-files">16.5.3. Installing score
                 files</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#perl-scripts">15.5.4. Packages containing perl
+                "#perl-scripts">16.5.4. Packages containing perl
                 scripts</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#hardcoded-paths">15.5.5. Packages with hardcoded
+                "#hardcoded-paths">16.5.5. Packages with hardcoded
                 paths to other interpreters</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#perl-modules">15.5.6. Packages installing perl
+                "#perl-modules">16.5.6. Packages installing perl
                 modules</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#faq.info-files">15.5.7. Packages installing info
+                "#faq.info-files">16.5.7. Packages installing info
                 files</a></span></dt>
 
-                <dt><span class="sect2"><a href="#manpages">15.5.8.
+                <dt><span class="sect2"><a href="#manpages">16.5.8.
                 Packages installing man pages</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#gconf2-data-files">15.5.9. Packages installing
+                "#gconf2-data-files">16.5.9. Packages installing
                 GConf2 data files</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#scrollkeeper-data-files">15.5.10. Packages
+                "#scrollkeeper-data-files">16.5.10. Packages
                 installing scrollkeeper data files</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#x11-fonts">15.5.11. Packages installing X11
+                "#x11-fonts">16.5.11. Packages installing X11
                 fonts</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#gtk2-modules">15.5.12. Packages installing GTK2
+                "#gtk2-modules">16.5.12. Packages installing GTK2
                 modules</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#sgml-xml-data">15.5.13. Packages installing SGML
+                "#sgml-xml-data">16.5.13. Packages installing SGML
                 or XML data</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#mime-database">15.5.14. Packages installing
+                "#mime-database">16.5.14. Packages installing
                 extensions to the MIME database</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#intltool">15.5.15. Packages using
+                "#intltool">16.5.15. Packages using
                 intltool</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#startup-scripts">15.5.16. Packages installing
+                "#startup-scripts">16.5.16. Packages installing
                 startup scripts</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#tex-packages">15.5.17. Packages installing TeX
+                "#tex-packages">16.5.17. Packages installing TeX
                 modules</a></span></dt>
               </dl>
             </dd>
 
             <dt><span class="sect1"><a href=
-            "#feedback-to-author">15.6. Feedback to the
+            "#feedback-to-author">16.6. Feedback to the
             author</a></span></dt>
           </dl>
         </div>
@@ -11781,7 +12159,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "general-operation"></a>15.1.&nbsp;General
+                "general-operation"></a>16.1.&nbsp;General
                 operation</h2>
               </div>
             </div>
@@ -11792,7 +12170,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "pulling-vars-from-etc-mk.conf"></a>15.1.1.&nbsp;How
+                  "pulling-vars-from-etc-mk.conf"></a>16.1.1.&nbsp;How
                   to pull in variables from /etc/mk.conf</h3>
                 </div>
               </div>
@@ -11860,7 +12238,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "where-to-install-documentation"></a>15.1.2.&nbsp;Where
+                  "where-to-install-documentation"></a>16.1.2.&nbsp;Where
                   to install documentation</h3>
                 </div>
               </div>
@@ -11880,7 +12258,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "restricted-packages"></a>15.1.3.&nbsp;Restricted
+                  "restricted-packages"></a>16.1.3.&nbsp;Restricted
                   packages</h3>
                 </div>
               </div>
@@ -11959,7 +12337,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "dependencies"></a>15.1.4.&nbsp;Handling
+                  "dependencies"></a>16.1.4.&nbsp;Handling
                   dependencies</h3>
                 </div>
               </div>
@@ -12131,8 +12509,8 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                   vulnerabilities file as well as setting
                   <code class="varname">RECOMMENDED</code>, see
                   <a href="#security-handling" title=
-                  "15.1.8.&nbsp;Handling packages with security problems">
-                  Section&nbsp;15.1.8, &#8220;Handling packages
+                  "16.1.8.&nbsp;Handling packages with security problems">
+                  Section&nbsp;16.1.8, &#8220;Handling packages
                   with security problems&#8221;</a> for more
                   information.</p>
                 </li>
@@ -12214,7 +12592,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "conflicts"></a>15.1.5.&nbsp;Handling conflicts
+                  "conflicts"></a>16.1.5.&nbsp;Handling conflicts
                   with other packages</h3>
                 </div>
               </div>
@@ -12266,7 +12644,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "not-building-packages"></a>15.1.6.&nbsp;Packages
+                  "not-building-packages"></a>16.1.6.&nbsp;Packages
                   that cannot or should not be built</h3>
                 </div>
               </div>
@@ -12299,7 +12677,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "undeletable-packages"></a>15.1.7.&nbsp;Packages
+                  "undeletable-packages"></a>16.1.7.&nbsp;Packages
                   which should not be deleted, once installed</h3>
                 </div>
               </div>
@@ -12324,7 +12702,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "security-handling"></a>15.1.8.&nbsp;Handling
+                  "security-handling"></a>16.1.8.&nbsp;Handling
                   packages with security problems</h3>
                 </div>
               </div>
@@ -12363,7 +12741,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "compiler-bugs"></a>15.1.9.&nbsp;How to handle
+                  "compiler-bugs"></a>16.1.9.&nbsp;How to handle
                   compiler bugs</h3>
                 </div>
               </div>
@@ -12390,7 +12768,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "bumping-pkgrevision"></a>15.1.10.&nbsp;How to
+                  "bumping-pkgrevision"></a>16.1.10.&nbsp;How to
                   handle incrementing versions when fixing an
                   existing package</h3>
                 </div>
@@ -12431,7 +12809,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "portability-of-packages"></a>15.1.11.&nbsp;Portability
+                  "portability-of-packages"></a>16.1.11.&nbsp;Portability
                   of packages</h3>
                 </div>
               </div>
@@ -12448,7 +12826,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                 <div>
                   <div>
                     <h4 class="title"><a name=
-                    "install-scripts"></a>15.1.11.1.&nbsp;${INSTALL},
+                    "install-scripts"></a>16.1.11.1.&nbsp;${INSTALL},
                     ${INSTALL_DATA_DIR}, ...</h4>
                   </div>
                 </div>
@@ -12473,7 +12851,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "downloading-issues"></a>15.2.&nbsp;Possible
+                "downloading-issues"></a>16.2.&nbsp;Possible
                 downloading issues</h2>
               </div>
             </div>
@@ -12484,7 +12862,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "no-plain-download"></a>15.2.1.&nbsp;Packages
+                  "no-plain-download"></a>16.2.1.&nbsp;Packages
                   whose distfiles aren't available for plain
                   downloading</h3>
                 </div>
@@ -12558,7 +12936,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "modified-distfiles-same-name"></a>15.2.2.&nbsp;How
+                  "modified-distfiles-same-name"></a>16.2.2.&nbsp;How
                   to handle modified distfiles with the 'old'
                   name</h3>
                 </div>
@@ -12600,7 +12978,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "configuration-gotchas"></a>15.3.&nbsp;Configuration
+                "configuration-gotchas"></a>16.3.&nbsp;Configuration
                 gotchas</h2>
               </div>
             </div>
@@ -12611,7 +12989,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "fixes.libtool"></a>15.3.1.&nbsp;Shared libraries
+                  "fixes.libtool"></a>16.3.1.&nbsp;Shared libraries
                   - libtool</h3>
                 </div>
               </div>
@@ -12705,7 +13083,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
         this library implements.  In other words, the library implements
         all the interface numbers in the range from number `CURRENT -
         AGE' to `CURRENT'.
-       
+
     If two libraries have identical CURRENT and AGE numbers, then the
     dynamic linker chooses the library with the greater REVISION number.
 </pre>
@@ -12840,7 +13218,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "using-libtool"></a>15.3.2.&nbsp;Using libtool on
+                  "using-libtool"></a>16.3.2.&nbsp;Using libtool on
                   GNU packages that already support libtool</h3>
                 </div>
               </div>
@@ -12923,7 +13301,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "autoconf-automake"></a>15.3.3.&nbsp;GNU
+                  "autoconf-automake"></a>16.3.3.&nbsp;GNU
                   Autoconf/Automake</h3>
                 </div>
               </div>
@@ -12980,7 +13358,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "fixes-build"></a>15.4.&nbsp;Building the
+                "fixes-build"></a>16.4.&nbsp;Building the
                 package</h2>
               </div>
             </div>
@@ -12991,7 +13369,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "cpp-defines"></a>15.4.1.&nbsp;CPP defines</h3>
+                  "cpp-defines"></a>16.4.1.&nbsp;CPP defines</h3>
                 </div>
               </div>
             </div>
@@ -13026,7 +13404,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                 <div>
                   <div>
                     <h4 class="title"><a name=
-                    "fixes-build-cpp-opsys"></a>15.4.1.1.&nbsp;CPP
+                    "fixes-build-cpp-opsys"></a>16.4.1.1.&nbsp;CPP
                     defines for operating systems</h4>
                   </div>
                 </div>
@@ -13062,7 +13440,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                 <div>
                   <div>
                     <h4 class="title"><a name=
-                    "fixes-build-cpp-cpu"></a>15.4.1.2.&nbsp;CPP
+                    "fixes-build-cpp-cpu"></a>16.4.1.2.&nbsp;CPP
                     defines for CPUs</h4>
                   </div>
                 </div>
@@ -13079,7 +13457,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                 <div>
                   <div>
                     <h4 class="title"><a name=
-                    "fixes-build-cpp-compiler"></a>15.4.1.3.&nbsp;CPP
+                    "fixes-build-cpp-compiler"></a>16.4.1.3.&nbsp;CPP
                     defines for compilers</h4>
                   </div>
                 </div>
@@ -13096,7 +13474,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "cpp-list-examples"></a>15.4.2.&nbsp;Examples of
+                  "cpp-list-examples"></a>16.4.2.&nbsp;Examples of
                   CPP defines for some platforms</h3>
                 </div>
               </div>
@@ -13164,7 +13542,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "cpp-list"></a>15.4.3.&nbsp;Getting a list of CPP
+                  "cpp-list"></a>16.4.3.&nbsp;Getting a list of CPP
                   defines</h3>
                 </div>
               </div>
@@ -13189,7 +13567,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "package-specific-actions"></a>15.5.&nbsp;Package
+                "package-specific-actions"></a>16.5.&nbsp;Package
                 specific actions</h2>
               </div>
             </div>
@@ -13200,7 +13578,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "user-interaction"></a>15.5.1.&nbsp;User
+                  "user-interaction"></a>16.5.1.&nbsp;User
                   interaction</h3>
                 </div>
               </div>
@@ -13251,7 +13629,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "handling-licenses"></a>15.5.2.&nbsp;Handling
+                  "handling-licenses"></a>16.5.2.&nbsp;Handling
                   licenses</h3>
                 </div>
               </div>
@@ -13350,7 +13728,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "installing-score-files"></a>15.5.3.&nbsp;Installing
+                  "installing-score-files"></a>16.5.3.&nbsp;Installing
                   score files</h3>
                 </div>
               </div>
@@ -13389,7 +13767,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "perl-scripts"></a>15.5.4.&nbsp;Packages
+                  "perl-scripts"></a>16.5.4.&nbsp;Packages
                   containing perl scripts</h3>
                 </div>
               </div>
@@ -13408,7 +13786,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "hardcoded-paths"></a>15.5.5.&nbsp;Packages with
+                  "hardcoded-paths"></a>16.5.5.&nbsp;Packages with
                   hardcoded paths to other interpreters</h3>
                 </div>
               </div>
@@ -13437,7 +13815,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "perl-modules"></a>15.5.6.&nbsp;Packages
+                  "perl-modules"></a>16.5.6.&nbsp;Packages
                   installing perl modules</h3>
                 </div>
               </div>
@@ -13486,7 +13864,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "faq.info-files"></a>15.5.7.&nbsp;Packages
+                  "faq.info-files"></a>16.5.7.&nbsp;Packages
                   installing info files</h3>
                 </div>
               </div>
@@ -13590,7 +13968,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "manpages"></a>15.5.8.&nbsp;Packages installing
+                  "manpages"></a>16.5.8.&nbsp;Packages installing
                   man pages</h3>
                 </div>
               </div>
@@ -13658,7 +14036,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "gconf2-data-files"></a>15.5.9.&nbsp;Packages
+                  "gconf2-data-files"></a>16.5.9.&nbsp;Packages
                   installing GConf2 data files</h3>
                 </div>
               </div>
@@ -13747,7 +14125,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "scrollkeeper-data-files"></a>15.5.10.&nbsp;Packages
+                  "scrollkeeper-data-files"></a>16.5.10.&nbsp;Packages
                   installing scrollkeeper data files</h3>
                 </div>
               </div>
@@ -13797,7 +14175,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "x11-fonts"></a>15.5.11.&nbsp;Packages installing
+                  "x11-fonts"></a>16.5.11.&nbsp;Packages installing
                   X11 fonts</h3>
                 </div>
               </div>
@@ -13834,7 +14212,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "gtk2-modules"></a>15.5.12.&nbsp;Packages
+                  "gtk2-modules"></a>16.5.12.&nbsp;Packages
                   installing GTK2 modules</h3>
                 </div>
               </div>
@@ -13908,7 +14286,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "sgml-xml-data"></a>15.5.13.&nbsp;Packages
+                  "sgml-xml-data"></a>16.5.13.&nbsp;Packages
                   installing SGML or XML data</h3>
                 </div>
               </div>
@@ -13972,7 +14350,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "mime-database"></a>15.5.14.&nbsp;Packages
+                  "mime-database"></a>16.5.14.&nbsp;Packages
                   installing extensions to the MIME database</h3>
                 </div>
               </div>
@@ -14039,7 +14417,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "intltool"></a>15.5.15.&nbsp;Packages using
+                  "intltool"></a>16.5.15.&nbsp;Packages using
                   intltool</h3>
                 </div>
               </div>
@@ -14064,7 +14442,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "startup-scripts"></a>15.5.16.&nbsp;Packages
+                  "startup-scripts"></a>16.5.16.&nbsp;Packages
                   installing startup scripts</h3>
                 </div>
               </div>
@@ -14088,7 +14466,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "tex-packages"></a>15.5.17.&nbsp;Packages
+                  "tex-packages"></a>16.5.17.&nbsp;Packages
                   installing TeX modules</h3>
                 </div>
               </div>
@@ -14165,7 +14543,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "feedback-to-author"></a>15.6.&nbsp;Feedback to the
+                "feedback-to-author"></a>16.6.&nbsp;Feedback to the
                 author</h2>
               </div>
             </div>
@@ -14189,7 +14567,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           <div>
             <div>
               <h2 class="title"><a name=
-              "debug"></a>Chapter&nbsp;16.&nbsp;Debugging</h2>
+              "debug"></a>Chapter&nbsp;17.&nbsp;Debugging</h2>
             </div>
           </div>
         </div>
@@ -14393,7 +14771,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <li>
               <p>Submit (or commit, if you have cvs access); see
               <a href="#submit" title=
-              "Chapter&nbsp;17.&nbsp;Submitting and Committing">Chapter&nbsp;17,
+              "Chapter&nbsp;18.&nbsp;Submitting and Committing">Chapter&nbsp;18,
               <i>Submitting and Committing</i></a>.</p>
             </li>
           </ul>
@@ -14405,7 +14783,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           <div>
             <div>
               <h2 class="title"><a name=
-              "submit"></a>Chapter&nbsp;17.&nbsp;Submitting and
+              "submit"></a>Chapter&nbsp;18.&nbsp;Submitting and
               Committing</h2>
             </div>
           </div>
@@ -14416,22 +14794,22 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
 
           <dl>
             <dt><span class="sect1"><a href=
-            "#submitting-your-package">17.1. Submitting your
+            "#submitting-your-package">18.1. Submitting your
             packages</a></span></dt>
 
             <dt><span class="sect1"><a href=
-            "#general-notes-for-changes">17.2. General notes when
+            "#general-notes-for-changes">18.2. General notes when
             adding, updating, or removing packages</a></span></dt>
 
             <dt><span class="sect1"><a href=
-            "#committing-importing">17.3. Committing: Importing a
+            "#committing-importing">18.3. Committing: Importing a
             package into CVS</a></span></dt>
 
             <dt><span class="sect1"><a href=
-            "#updating-package">17.4. Updating a package to a newer
+            "#updating-package">18.4. Updating a package to a newer
             version</a></span></dt>
 
-            <dt><span class="sect1"><a href="#moving-package">17.5.
+            <dt><span class="sect1"><a href="#moving-package">18.5.
             Moving a package in pkgsrc</a></span></dt>
           </dl>
         </div>
@@ -14441,7 +14819,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "submitting-your-package"></a>17.1.&nbsp;Submitting
+                "submitting-your-package"></a>18.1.&nbsp;Submitting
                 your packages</h2>
               </div>
             </div>
@@ -14474,7 +14852,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
 
                 <p>First, check that your package is complete,
                 compiles and runs well; see <a href="#debug" title=
-                "Chapter&nbsp;16.&nbsp;Debugging">Chapter&nbsp;16,
+                "Chapter&nbsp;17.&nbsp;Debugging">Chapter&nbsp;17,
                 <i>Debugging</i></a> and the rest of this document.
                 Next, generate an uuencoded gzipped <a href=
                 "http://netbsd.gw.com/cgi-bin/man-cgi?tar+1+NetBSD-current">
@@ -14510,7 +14888,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "general-notes-for-changes"></a>17.2.&nbsp;General
+                "general-notes-for-changes"></a>18.2.&nbsp;General
                 notes when adding, updating, or removing
                 packages</h2>
               </div>
@@ -14563,7 +14941,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "committing-importing"></a>17.3.&nbsp;Committing:
+                "committing-importing"></a>18.3.&nbsp;Committing:
                 Importing a package into CVS</h2>
               </div>
             </div>
@@ -14612,7 +14990,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "updating-package"></a>17.4.&nbsp;Updating a
+                "updating-package"></a>18.4.&nbsp;Updating a
                 package to a newer version</h2>
               </div>
             </div>
@@ -14663,7 +15041,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "moving-package"></a>17.5.&nbsp;Moving a package in
+                "moving-package"></a>18.5.&nbsp;Moving a package in
                 pkgsrc</h2>
               </div>
             </div>
@@ -15002,7 +15380,7 @@ cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DH
 cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g closure.c
 cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g conflicts.c
 cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g derives.c
-cc -c -DXPFILE=\"/usr/pkg/share/bison.simple\"  -DXPFILE1=\"/usr/pkg/share/bison.hairy\" -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1  -g  ./files.c 
+cc -c -DXPFILE=\"/usr/pkg/share/bison.simple\"  -DXPFILE1=\"/usr/pkg/share/bison.hairy\" -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1  -g  ./files.c
 cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g getargs.c
 cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g gram.c
 cc -c -DSTDC_HEADERS=1 -DHAVE_STRING_H=1 -DHAVE_STDLIB_H=1 -DHAVE_MEMORY_H=1 -DHAVE_ALLOCA=1 -DHAVE_STRERROR=1 -I./../include  -g lalr.c
@@ -15109,8 +15487,8 @@ Connected to ftp.plig.net.
 331 Guest login ok, send your complete e-mail address as password.
 230-You are user #5 of 500 simultaneous users allowed.
 230-
-230-  ___ _             _ _                   
-230- |  _| |_ ___   ___| |_|___   ___ ___ ___ 
+230-  ___ _             _ _
+230- |  _| |_ ___   ___| |_|___   ___ ___ ___
 230- |  _|  _| . |_| . | | | . |_| . |  _| . |
 230- |_| |_| |  _|_|  _|_|_|_  |_|___|_| |_  |
 230-         |_|   |_|     |___|         |___|
@@ -15127,7 +15505,7 @@ Connected to ftp.plig.net.
 230-RSYNC: rsync://ftp.plig.org/   (max  30 connections)
 230-
 230-Please email comments, bug reports and requests for packages to be
-230-mirrored to ftp-admin@plig.org.   
+230-mirrored to ftp-admin@plig.org.
 230-
 230-
 230 Logged in anonymously.
@@ -15138,7 +15516,7 @@ Using binary mode to transfer files.
 250-"/pub/figlet" is new cwd.
 250-
 250-Welcome to the figlet archive at ftp.figlet.org
-250-    
+250-
 250-    ftp://ftp.figlet.org/pub/figlet/
 250-
 250-The official FIGlet web page is:
@@ -15146,7 +15524,7 @@ Using binary mode to transfer files.
 250-
 250-If you have questions, please mailto:info@figlet.org. If you want to
 250-contribute a font or something else, you can email us.
-250 
+250
 250 "/pub/figlet/program" is new cwd.
 250 "/pub/figlet/program/unix" is new cwd.
 local: figlet221.tar.gz remote: figlet221.tar.gz
@@ -15208,7 +15586,7 @@ cp figlet.6 /usr/pkg/man/man6
 ===&gt; Building binary package for figlet-2.2.1nb2
 Creating package /home/cvs/pkgsrc/packages/i386/All/figlet-2.2.1nb2.tgz
 Using SrcDir value of /usr/pkg
-Registering depends:.  
+Registering depends:.
 <code class="prompt">#</code>
 </pre>
       </div>
