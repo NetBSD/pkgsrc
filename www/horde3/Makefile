@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2006/02/05 23:11:24 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2006/02/14 23:04:57 seb Exp $
 
 DISTNAME=	horde-3.0.9
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.horde.org/pub/horde/tarballs/
 
@@ -59,6 +59,23 @@ CONF_FILES_PERMS+=	${HORDEDIR}/config/hooks.php.dist \
 			${HORDEDIR}/config/hooks.php \
 			${APACHE_USER} ${ROOT_GROUP} 0440
 
+# Empty directories installed by install target
+# that we need to create in the install script
+# to get the same layout from a binary package installation
+REQD_DIRS+=	share/horde/lib/data
+REQD_DIRS+=	share/horde/lib/XML/tests
+REQD_DIRS+=	share/horde/lib/XML/docs/examples
+REQD_DIRS+=	share/horde/lib/XML/docs
+REQD_DIRS+=	share/horde/lib/VFS/tests
+REQD_DIRS+=	share/horde/lib/Text/tests
+REQD_DIRS+=	share/horde/lib/Text/docs/examples
+REQD_DIRS+=	share/horde/lib/Text/docs
+REQD_DIRS+=	share/horde/lib/Horde/tests
+REQD_DIRS+=	share/horde/lib/Horde/docs/examples
+REQD_DIRS+=	share/horde/lib/Horde/docs
+REQD_DIRS+=	share/horde/lib/Horde/Text/tests
+REQD_DIRS+=	share/horde/lib/File/tests
+
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
 SUBST_FILES.files=	horde.conf.dist config/conf.xml config/conf.xml.dist \
@@ -93,7 +110,7 @@ do-install:
 .	endfor
 
 .	for d in ${PAXDIRS}
-		cd ${WRKSRC}/${d} && ${PAX} -rw . ${HORDEDIR}/${d}
+		cd ${WRKSRC}/${d} && ${PAX} -rwpam . ${HORDEDIR}/${d}
 .	endfor
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${HORDEDIR}/config
