@@ -1,0 +1,27 @@
+#!/bin/sh
+# $NetBSD: DEINSTALL,v 1.1.1.1 2006/02/14 17:03:54 rillig Exp $
+
+PKGNAME=$1
+STAGE=$2
+LIST="${PKG_PREFIX}/share/tetrinetx/game.log"
+
+case ${STAGE} in
+	DEINSTALL)
+		for to_trash in ${LIST}; do
+			if [ -d "${to_trash}" ]; then
+				rm -rf ${to_trash}/*
+			elif [ -f "${to_trash}" ]; then
+				rm ${to_trash}
+			fi
+		done
+		;;
+
+	POST-DEINSTALL)
+		;;
+
+	*)
+		echo "Unexpected argument: ${STAGE}"
+		exit 1
+		;;
+esac
+exit 0
