@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.4 2006/01/20 17:53:32 xtraeme Exp $
+$NetBSD: patch-aj,v 1.5 2006/02/14 15:54:55 joerg Exp $
 
 --- programs/xdm/Imakefile.orig	2005-12-06 12:35:11.000000000 +0100
 +++ programs/xdm/Imakefile	2005-12-06 12:38:07.000000000 +0100
@@ -45,6 +45,20 @@ $NetBSD: patch-aj,v 1.4 2006/01/20 17:53:32 xtraeme Exp $
  
  XCOMM
  XCOMM Special definitions for compiling default resources; these parameters
+@@ -298,11 +307,11 @@ DEF_SYSTEM_PATH = DefaultSystemPath	/* i
+ BOURNE_SHELL = DefaultSystemShell
+ RES_DEFINES = '-DDEF_SERVER_LINE=":0 local $(DEF_SERVER) :0"' \
+ 		  '-DXRDB_PROGRAM="$(BINDIR)/xrdb"' \
+-		  '-DDEF_SESSION="$(BINDIR)/xterm -ls"' \
++		  '-DDEF_SESSION="xterm -ls"' \
+ 		  '-DDEF_USER_PATH="$(DEF_USER_PATH)"' \
+ 		  '-DDEF_SYSTEM_PATH="$(DEF_SYSTEM_PATH)"' \
+ 		  '-DDEF_SYSTEM_SHELL="$(BOURNE_SHELL)"' \
+-		  '-DDEF_FAILSAFE_CLIENT="$(BINDIR)/xterm"' \
++		  '-DDEF_FAILSAFE_CLIENT="xterm"' \
+ 		  '-DDEF_XDM_CONFIG="$(XDMDIR)/xdm-config"' \
+ 		  '-DDEF_CHOOSER="$(CHOOSERPATH)"' \
+ 		  '-DDEF_AUTH_DIR="$(XDMDIR)"' \
 @@ -331,7 +340,7 @@ SpecialCObjectRule(daemon,$(ICONFIGFILES
  #if BuildChooser
  SpecialCObjectRule(chooser, $(ICONFIGFILES), $(SOCK_DEFINES) $(LIFREQ_FLAGS))
