@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/08/29 15:29:04 recht Exp $
+$NetBSD: patch-aa,v 1.2 2006/02/14 20:58:18 adam Exp $
 
---- main.c.orig	Thu Aug 26 23:31:21 2004
-+++ main.c	Thu Aug 26 23:35:52 2004
+--- main.c.orig	2006-02-14 01:38:23.000000000 +0100
++++ main.c
 @@ -18,6 +18,7 @@
  /* rzip compression - main program */
  
@@ -10,19 +10,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/08/29 15:29:04 recht Exp $
  
  static void usage(void)
  {
-@@ -138,9 +139,14 @@
- 			fatal("%s: unknown suffix\n", control->infile);
- 		}
- 		
--		control->outfile = strndup(control->infile, 
-+		control->outfile = malloc(strlen(control->infile) - 
-+					strlen(control->suffix) + 1);
-+		assert(control->outfile);
-+		strncpy(control->outfile, control->infile, 
- 					   strlen(control->infile) - 
- 					   strlen(control->suffix));
-+		*(control->outfile + strlen(control->infile) - 
-+				strlen(control->suffix)) = '\0';
- 	}
- 
- 	fd_in = open(control->infile,O_RDONLY);
