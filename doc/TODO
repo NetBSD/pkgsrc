@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4611 2006/02/14 18:46:38 schmonz Exp $
+$NetBSD: TODO,v 1.4612 2006/02/14 21:01:01 adam Exp $
 
 Suggested new packages
 ======================
@@ -542,7 +542,6 @@ Suggested package updates
 	o glabels-2.0.4
 	o glade2-2.12.1
 	o gld-1.6
-	o glibmm-2.8.4
 	o gliv-1.9.4
 	o gmime-2.1.17 [pkg/32487]
 	o gnet1-1.1.9
@@ -1059,7 +1058,6 @@ Suggested package updates
 	o ruby-cmd-0.8.0
 	o rudiments-0.29
 	o rxvt-unicode-7.6
-	o rzip-2.1
 	o sablecc-3.2
 	o sablevm-1.11.3 [pkg/30022]
 	o sablevm-1.12
@@ -1075,7 +1073,6 @@ Suggested package updates
 	o sbcl-0.9.5
 	o scew-0.4.0
 	o sch-3.8.3
-	o scilab-3.1
 	o scribus-1.2.4.1
 	o scrollz-1.9.5
 	o sdig-0.40
