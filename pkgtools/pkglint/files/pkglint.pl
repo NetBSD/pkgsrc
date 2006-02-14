@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.515 2006/02/13 17:50:40 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.516 2006/02/14 22:03:19 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1276,6 +1276,7 @@ my $hack_php_patches;		# Ignore non-existing patches in distinfo
 my $seen_bsd_prefs_mk;		# Has bsd.prefs.mk already been included?
 
 my $makevar;			# Table of variables and values
+my $varuse;			# Table of used variables
 my $seen_Makefile_common;	# Does the package have any .includes?
 
 my @todo_items;			# The list of directory entries that still need
@@ -1923,6 +1924,21 @@ sub backtrace() {
 	}
 }
 
+sub determine_used_variables($) {
+	my ($lines) = @_;
+	my ($rest);
+
+	foreach my $line (@{$lines}) {
+		$line->log_debug(".");
+		$rest = $line->text;
+		while ($rest =~ s/(?:\$\{|defined\(|empty\()([0-9.A-Z_a-z]+)[:})]//) {
+			my ($varname) = ($1);
+			$varuse->{$varname} = $line;
+			$line->log_debug("Variable ${varname} is used.");
+		}
+	}
+}	
+
 #
 # Loading package-specific data from files.
 #
@@ -2032,6 +2048,8 @@ sub load_package_Makefile($$$) {
 			print($line->to_string() . "\n");
 		}
 	}
+
+	determine_used_variables($all_lines);
 
 	# HACK
 	if ($whole =~ qr"\nPHPEXT_MK" && $whole !~ qr"\nUSE_PHP_EXT_PATCHES") {
@@ -3200,6 +3218,15 @@ sub checkline_mk_varassign($$$$$) {
 
 	checkline_mk_text($line, $value);
 	checkline_mk_vartype($line, $varname, $op, $value, $comment);
+
+	# If the variable is not used and is untyped, it may be a
+	# spelling mistake.
+	if (defined($varuse) && !exists($varuse->{$varname})) {
+		my $vt = get_vartypes_map();
+		if (!exists($vt->{$varname}) && !exists($vt->{$varbase})) {
+			$line->log_warning("[experimental] ${varname} is defined, but not used.");
+		}
+	}
 
 	if (!$is_internal && $varname =~ qr"^_") {
 		$line->log_warning("Variable names starting with an underscore are reserved for internal pkgsrc use.");
@@ -4427,6 +4454,7 @@ sub checkdir_package() {
 
 	# Initialize global variables
 	$makevar = {};
+	$varuse = {};
 	$seen_bsd_prefs_mk = false;
 	$seen_Makefile_common = false;
 
@@ -4449,6 +4477,16 @@ sub checkdir_package() {
 	}
 	$have_distinfo = false;
 	$have_patches = false;
+
+	# Determine the used variables before checking any of the
+	# Makefile fragments.
+	foreach my $fname (@files) {
+		if ($fname =~ qr"\.mk$"
+		&& (defined(my $lines = load_lines($fname, true)))) {
+			determine_used_variables($lines);
+		}
+	}
+
 	foreach my $fname (@files) {
 		if ($fname eq "${current_dir}/Makefile") {
 			$opt_check_Makefile and checkfile_package_Makefile($fname, $whole, $lines);
@@ -4499,6 +4537,7 @@ sub checkitem($) {
 	$patchdir		= "patches";
 	$distinfo_file		= "distinfo";
 	$makevar		= undef;
+	$varuse			= undef;
 	$seen_Makefile_common	= undef;
 	$pkgname		= undef;
 	$hack_php_patches	= false;
