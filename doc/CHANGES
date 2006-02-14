@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12909 2006/02/14 21:41:52 adam Exp $
+$NetBSD: CHANGES,v 1.12910 2006/02/14 21:53:18 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -937,6 +937,7 @@ Changes to the packages collection and infrastructure in 2006:
         Updated net/nmap to 4.01 [salo 2006-02-12]
         Updated net/nmapfe to 0.9.5nb26 [salo 2006-02-12]
 	Updated audio/moc to 2.4.0 [xtraeme 2006-02-12]
+	Updated security/p5-Tie-EncryptedHash to 1.21 [heinz 2006-02-12]
 	Updated chat/libotr to 3.0.0 [salo 2006-02-13]
 	Updated chat/gaim-otr to 3.0.0 [salo 2006-02-13]
 	Updated www/squid to 2.5.12nb4 [taca 2006-02-13]
@@ -964,3 +965,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated archivers/rzip to 2.1 [adam 2006-02-14]
 	Updated devel/glibmm to 2.8.4 [adam 2006-02-14]
 	Updated games/dopewars to 1.5.12 [adam 2006-02-14]
+	Added net/mbrowse version 0.3.1 [heinz 2006-02-14]
