@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/02/14 22:52:15 heinz Exp $
+# $NetBSD: Makefile,v 1.24 2006/02/14 23:03:25 heinz Exp $
 #
 
 DISTNAME=		Math-Pari-2.010703
@@ -17,7 +17,6 @@ COMMENT=		Perl5 interface to the pari math library
 GCC_REQD+=		2.95
 MAKE_ENV+=		MP_NOGNUPLOT=1
 PERL5_PACKLIST=		auto/Math/Pari/.packlist
-#TEST_TARGET=		# the tests need looking at
 
 # XXX: could be improved...
 PKGSRCDIR.pari=		${.CURDIR}/../../math/pari
