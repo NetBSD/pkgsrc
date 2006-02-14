@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2006/02/05 23:09:36 joerg Exp $
+# $NetBSD: Makefile,v 1.131 2006/02/14 21:57:44 adam Exp $
 
 DISTNAME=	netpbm-10.31
 PKGREVISION=	2
@@ -19,7 +19,7 @@ MAKE_ENV+=	INSTALL=${INSTALL:Q} STRIPFLAG=${_STRIPFLAG_INSTALL:Q} \
 		pkgdir=${STAGEDIR:Q}
 MAKEFILE=	GNUmakefile
 PLIST_SRC=	${WRKDIR}/PLIST_STAGE
-REPLACE_PERL=	editor/ppmfade editor/ppmshadow editor/pnmquant \
+REPLACE_PERL+=	editor/ppmfade editor/ppmshadow editor/pnmquant \
 		generator/ppmrainbow manweb editor/pnmflip editor/ppmquant
 STAGEDIR=	${WRKDIR}/staging
 
