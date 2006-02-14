@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:09:59 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/14 23:06:47 seb Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.horde.org/pub/turba/
 
@@ -63,6 +63,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${TURBADIR}
 	${INSTALL_DATA_DIR} ${TURBADIR}/config
+	${INSTALL_DATA} ${WRKSRC}/turba.conf.dist ${EGDIR}/turba.conf
 	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/INSTALL ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/LDAP ${DOCDIR}
@@ -74,7 +75,7 @@ do-install:
 .	endfor
 
 .	for d in ${PAXDIRS}
-		cd ${WRKSRC}/${d} && ${PAX} -rw . ${TURBADIR}/${d}
+		cd ${WRKSRC}/${d} && ${PAX} -rwpma . ${TURBADIR}/${d}
 .	endfor
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${TURBADIR}/config
