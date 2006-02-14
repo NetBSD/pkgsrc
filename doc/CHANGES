@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12905 2006/02/14 16:11:41 joerg Exp $
+$NetBSD: CHANGES,v 1.12906 2006/02/14 17:04:03 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -959,3 +959,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/p5-CGI-Application to 4.04 [hiramatsu 2006-02-14]
 	Updated x11/xorg-clients to 6.9.0nb4 [joerg 2006-02-14]
 	Updated x11/xorg-clients to 6.9.0nb5 [joerg 2006-02-14]
+	Added games/tetrinetx version 1.13.16 [rillig 2006-02-14]
