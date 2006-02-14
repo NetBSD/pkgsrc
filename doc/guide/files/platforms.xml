@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.26 2006/02/14 10:12:39 rillig Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.27 2006/02/14 17:10:15 rillig Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -611,11 +611,12 @@
 	<filename>/bin/ksh</filename> crashes with a segmentation fault.
 	The workaround is to use another shell for the configure
 	scripts, for example by installing <filename
-	role="pkg">shells/bash</filename> and adding the following line
+	role="pkg">shells/bash</filename> and adding the following lines
 	to your <filename>mk.conf</filename>:</para>
 
 <programlisting>
     CONFIG_SHELL=   ${LOCALBASE}/bin/bash
+    WRAPPER_SHELL=  ${LOCALBASE}/bin/bash
 </programlisting>
 
       </sect3>
