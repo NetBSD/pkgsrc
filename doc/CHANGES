@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12907 2006/02/14 18:46:38 schmonz Exp $
+$NetBSD: CHANGES,v 1.12908 2006/02/14 21:01:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -961,3 +961,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xorg-clients to 6.9.0nb5 [joerg 2006-02-14]
 	Added games/tetrinetx version 1.13.16 [rillig 2006-02-14]
 	Updated mail/getmail to 4.5.3 [schmonz 2006-02-14]
+	Updated archivers/rzip to 2.1 [adam 2006-02-14]
+	Updated devel/glibmm to 2.8.4 [adam 2006-02-14]
