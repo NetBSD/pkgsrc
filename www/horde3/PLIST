@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/11/25 20:59:15 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/02/14 23:04:57 seb Exp $
 share/doc/horde/CHANGES
 share/doc/horde/CODING_STANDARDS
 share/doc/horde/CONTRIBUTING
@@ -13,6 +13,7 @@ share/doc/horde/SECURITY
 share/doc/horde/TODO
 share/doc/horde/TRANSLATIONS
 share/doc/horde/UPGRADING
+share/examples/horde/horde.conf
 share/horde/admin/cmdshell.php
 share/horde/admin/datatree.php
 share/horde/admin/groups.php
@@ -62,8 +63,8 @@ share/horde/lib/Block/metar.php
 share/horde/lib/Block/moon.php
 share/horde/lib/Block/sunrise.php
 share/horde/lib/Block/time.php
-share/horde/lib/Block/weatherdotcom_strings.php
 share/horde/lib/Block/weatherdotcom.php
+share/horde/lib/Block/weatherdotcom_strings.php
 share/horde/lib/File/PDF.php
 share/horde/lib/File/PDF/fonts/courier.php
 share/horde/lib/File/PDF/fonts/helvetica.php
@@ -426,9 +427,9 @@ share/horde/lib/core.php
 share/horde/lib/prefs.php
 share/horde/lib/version.php
 share/horde/locale/ar_SY/LC_MESSAGES/horde.mo
-share/horde/locale/bs_BA/LC_MESSAGES/horde.mo
 share/horde/locale/bg_BG/LC_MESSAGES/horde.mo
 share/horde/locale/bg_BG/help.xml
+share/horde/locale/bs_BA/LC_MESSAGES/horde.mo
 share/horde/locale/ca_ES/LC_MESSAGES/horde.mo
 share/horde/locale/cs_CZ/LC_MESSAGES/horde.mo
 share/horde/locale/cs_CZ/help.xml
@@ -494,8 +495,8 @@ share/horde/locale/zh_TW/help.xml
 share/horde/login.php
 share/horde/po/README
 share/horde/po/ar_SY.po
-share/horde/po/bs_BA.po
 share/horde/po/bg_BG.po
+share/horde/po/bs_BA.po
 share/horde/po/ca_ES.po
 share/horde/po/cs_CZ.po
 share/horde/po/da_DK.po
@@ -535,7 +536,6 @@ share/horde/po/zh_TW.po
 share/horde/rpc.php
 share/horde/scripts/SCRIPTS
 share/horde/scripts/create-symlinks.php
-share/horde/scripts/sql/create.msde.sql
 share/horde/scripts/crond
 share/horde/scripts/get_login.php
 share/horde/scripts/http_login_refer.php
@@ -546,6 +546,7 @@ share/horde/scripts/set_perms.sh
 share/horde/scripts/setup.php
 share/horde/scripts/sql/README
 share/horde/scripts/sql/README.OCI8
+share/horde/scripts/sql/create.msde.sql
 share/horde/scripts/sql/create.mysql.sql
 share/horde/scripts/sql/create.oci8.sql
 share/horde/scripts/sql/create.pgsql.sql
@@ -1478,13 +1479,14 @@ share/horde/util/regex_test.php
 @dirrm share/horde/locale/cs_CZ
 @dirrm share/horde/locale/ca_ES/LC_MESSAGES
 @dirrm share/horde/locale/ca_ES
-@dirrm share/horde/locale/bg_BG/LC_MESSAGES
-@dirrm share/horde/locale/bg_BG
 @dirrm share/horde/locale/bs_BA/LC_MESSAGES
 @dirrm share/horde/locale/bs_BA
+@dirrm share/horde/locale/bg_BG/LC_MESSAGES
+@dirrm share/horde/locale/bg_BG
 @dirrm share/horde/locale/ar_SY/LC_MESSAGES
 @dirrm share/horde/locale/ar_SY
 @dirrm share/horde/locale
+@dirrm share/horde/lib/data
 @dirrm share/horde/lib/XML/tests
 @dirrm share/horde/lib/XML/docs/examples
 @dirrm share/horde/lib/XML/docs
@@ -1560,20 +1562,20 @@ share/horde/util/regex_test.php
 @dirrm share/horde/lib/Horde/Block
 @dirrm share/horde/lib/Horde/Auth
 @dirrm share/horde/lib/Horde
+@dirrm share/horde/lib/File/tests
 @dirrm share/horde/lib/File/PDF/fonts
 @dirrm share/horde/lib/File/PDF
-@dirrm share/horde/lib/File/tests
 @dirrm share/horde/lib/File
-@dirrm share/horde/lib/data
 @dirrm share/horde/lib/Block
 @dirrm share/horde/lib
 @dirrm share/horde/js
 @dirrm share/horde/config
+@dirrm share/horde/admin/setup
+@dirrm share/horde/admin/perms
 @dirrm share/horde/admin/locale/fi_FI
 @dirrm share/horde/admin/locale/en_US
 @dirrm share/horde/admin/locale
-@dirrm share/horde/admin/setup
-@dirrm share/horde/admin/perms
 @dirrm share/horde/admin
 @dirrm share/horde
+@dirrm share/examples/horde
 @dirrm share/doc/horde
