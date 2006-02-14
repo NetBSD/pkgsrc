@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12902 2006/02/14 00:49:32 rillig Exp $
+$NetBSD: CHANGES,v 1.12903 2006/02/14 01:18:15 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -956,3 +956,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/mathomatic to 12.5.8 [minskim 2006-02-13]
 	Updated www/adzap to 20060203 [simonb 2006-02-14]
 	Added net/btpd version 0.8 [rillig 2006-02-14]
+	Updated www/p5-CGI-Application to 4.04 [hiramatsu 2006-02-14]
