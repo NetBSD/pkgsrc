@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2006/01/11 21:24:09 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/02/14 22:52:15 heinz Exp $
 #
 
-DISTNAME=		Math-Pari-2.010501
+DISTNAME=		Math-Pari-2.010703
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		2
 SVR4_PKGNAME=		p5mpa
 CATEGORIES=		math perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Math/}
