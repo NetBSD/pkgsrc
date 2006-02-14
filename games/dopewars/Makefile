@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2006/02/05 23:09:14 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2006/02/14 21:40:44 adam Exp $
 
-DISTNAME=	dopewars-1.5.10
-PKGREVISION=	1
+DISTNAME=	dopewars-1.5.12
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dopewars/}
 
@@ -10,15 +9,11 @@ HOMEPAGE=	http://dopewars.sourceforge.net/
 COMMENT=	Make a fortune dealing drugs on the streets of New York
 
 USE_DIRS+=		xdg-1.1
-USE_LIBTOOL=		YES
-USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake
-
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--enable-ncurses
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake pkg-config
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-networking
-CONFIGURE_ARGS+=	--disable-gui-client
-CONFIGURE_ARGS+=	--disable-glib2
 CONFIGURE_ARGS+=	--without-esd
 CONFIGURE_ARGS+=	--without-sdl
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/games
@@ -26,8 +21,8 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/games
 INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-Z]-* NetBSD-1.6Z[A-K]*-*
 
+.include "options.mk"
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/glib/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
