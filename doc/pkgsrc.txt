@@ -14,7 +14,7 @@ The pkgsrc Developers
 
 Copyright (C) 1994-2005 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.10 2005/10/05 13:59:56 dillo Exp $
+$NetBSD: pkgsrc.xml,v 1.11 2006/01/13 17:42:33 reed Exp $
 
 Abstract
 
@@ -217,71 +217,77 @@ II. The pkgsrc developer's guide
         14.15. The package phase
         14.16. Other helpful targets
 
-    15. Making your package work
+    15. Tools needed for building or running
 
-        15.1. General operation
+        15.1. Tools for pkgsrc builds
+        15.2. Tools needed by packages
+        15.3. Tools provided by platforms
 
-            15.1.1. How to pull in variables from /etc/mk.conf
-            15.1.2. Where to install documentation
-            15.1.3. Restricted packages
-            15.1.4. Handling dependencies
-            15.1.5. Handling conflicts with other packages
-            15.1.6. Packages that cannot or should not be built
-            15.1.7. Packages which should not be deleted, once installed
-            15.1.8. Handling packages with security problems
-            15.1.9. How to handle compiler bugs
-            15.1.10. How to handle incrementing versions when fixing an
+    16. Making your package work
+
+        16.1. General operation
+
+            16.1.1. How to pull in variables from /etc/mk.conf
+            16.1.2. Where to install documentation
+            16.1.3. Restricted packages
+            16.1.4. Handling dependencies
+            16.1.5. Handling conflicts with other packages
+            16.1.6. Packages that cannot or should not be built
+            16.1.7. Packages which should not be deleted, once installed
+            16.1.8. Handling packages with security problems
+            16.1.9. How to handle compiler bugs
+            16.1.10. How to handle incrementing versions when fixing an
                 existing package
-            15.1.11. Portability of packages
+            16.1.11. Portability of packages
 
-        15.2. Possible downloading issues
+        16.2. Possible downloading issues
 
-            15.2.1. Packages whose distfiles aren't available for plain
+            16.2.1. Packages whose distfiles aren't available for plain
                 downloading
-            15.2.2. How to handle modified distfiles with the 'old' name
+            16.2.2. How to handle modified distfiles with the 'old' name
 
-        15.3. Configuration gotchas
+        16.3. Configuration gotchas
 
-            15.3.1. Shared libraries - libtool
-            15.3.2. Using libtool on GNU packages that already support libtool
-            15.3.3. GNU Autoconf/Automake
+            16.3.1. Shared libraries - libtool
+            16.3.2. Using libtool on GNU packages that already support libtool
+            16.3.3. GNU Autoconf/Automake
 
-        15.4. Building the package
+        16.4. Building the package
 
-            15.4.1. CPP defines
-            15.4.2. Examples of CPP defines for some platforms
-            15.4.3. Getting a list of CPP defines
+            16.4.1. CPP defines
+            16.4.2. Examples of CPP defines for some platforms
+            16.4.3. Getting a list of CPP defines
 
-        15.5. Package specific actions
+        16.5. Package specific actions
 
-            15.5.1. User interaction
-            15.5.2. Handling licenses
-            15.5.3. Installing score files
-            15.5.4. Packages containing perl scripts
-            15.5.5. Packages with hardcoded paths to other interpreters
-            15.5.6. Packages installing perl modules
-            15.5.7. Packages installing info files
-            15.5.8. Packages installing man pages
-            15.5.9. Packages installing GConf2 data files
-            15.5.10. Packages installing scrollkeeper data files
-            15.5.11. Packages installing X11 fonts
-            15.5.12. Packages installing GTK2 modules
-            15.5.13. Packages installing SGML or XML data
-            15.5.14. Packages installing extensions to the MIME database
-            15.5.15. Packages using intltool
-            15.5.16. Packages installing startup scripts
-            15.5.17. Packages installing TeX modules
+            16.5.1. User interaction
+            16.5.2. Handling licenses
+            16.5.3. Installing score files
+            16.5.4. Packages containing perl scripts
+            16.5.5. Packages with hardcoded paths to other interpreters
+            16.5.6. Packages installing perl modules
+            16.5.7. Packages installing info files
+            16.5.8. Packages installing man pages
+            16.5.9. Packages installing GConf2 data files
+            16.5.10. Packages installing scrollkeeper data files
+            16.5.11. Packages installing X11 fonts
+            16.5.12. Packages installing GTK2 modules
+            16.5.13. Packages installing SGML or XML data
+            16.5.14. Packages installing extensions to the MIME database
+            16.5.15. Packages using intltool
+            16.5.16. Packages installing startup scripts
+            16.5.17. Packages installing TeX modules
 
-        15.6. Feedback to the author
+        16.6. Feedback to the author
 
-    16. Debugging
-    17. Submitting and Committing
+    17. Debugging
+    18. Submitting and Committing
 
-        17.1. Submitting your packages
-        17.2. General notes when adding, updating, or removing packages
-        17.3. Committing: Importing a package into CVS
-        17.4. Updating a package to a newer version
-        17.5. Moving a package in pkgsrc
+        18.1. Submitting your packages
+        18.2. General notes when adding, updating, or removing packages
+        18.3. Committing: Importing a package into CVS
+        18.4. Updating a package to a newer version
+        18.5. Moving a package in pkgsrc
 
 A. A simple example package: bison
 
@@ -1073,6 +1079,14 @@ Whichever compiler you use, please ensure the compiler tools and your $prefix
 are in your PATH. This includes /usr/ccs/{bin,lib} and e.g. /usr/pkg/
 {bin,sbin}.
 
+3.2.7.3. Common problems
+
+Sometimes, when using libtool, /bin/ksh crashes with a segmentation fault. The
+workaround is to use another shell for the configure scripts, for example by
+installing shells/bash and adding the following line to your mk.conf:
+
+    CONFIG_SHELL=   ${LOCALBASE}/bin/bash
+
 Chapter 4. Using pkgsrc
 
 Table of Contents
@@ -1489,7 +1503,7 @@ manipulate it. Binary packages are created by default in /usr/pkgsrc/packages,
 in the form of a gzipped tar file. See Section B.2, "Packaging figlet" for a
 continuation of the above misc/figlet example.
 
-See Chapter 17, Submitting and Committing for information on how to submit such
+See Chapter 18, Submitting and Committing for information on how to submit such
 a binary package.
 
 6.2. Settings for creation of binary packages
@@ -1548,6 +1562,14 @@ briefly described here.
 
   * Another important variable is BULK_PREREQ, which is a list of packages that
     should be always available while building other packages.
+
+Some other options are scattered in the pkgsrc infrastructure:
+
+  * CHECK_FILES (pkgsrc/mk/bsd.pkg.check.mk) can be set to "yes" to check that
+    the installed set of files matches the PLIST.
+
+  * CHECK_INTERPRETER (pkgsrc/mk/bsd.pkg.check.mk) can be set to "yes" to check
+    that the installed "#!"-scripts will find their interpreter.
 
 6.3.1.3. pre-build.local
 
@@ -1714,9 +1736,6 @@ src/etc, be sure the following items are present and properly configured:
 
 12. Adjust mk/bulk/build.conf to suit your needs.
 
-13. If you have set CVS_USER in build.conf, make sure that account exists and
-    can do a cvs ${CVS_FLAGS} update properly!
-
 When the chroot sandbox is set up, you can start the build with the following
 steps:
 
@@ -1767,12 +1786,12 @@ everything.
 Then, make sure that you have RSYNC_DST set properly in your mk/bulk/build.conf
 file, i.e. adjust it to something like one of the following:
 
-RSYNC_DST=$CVS_USER@ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch/upload
+RSYNC_DST=ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch/upload
 
 Please use appropriate values for "pkgsrc-200xQy", "NetBSD-a.b.c" and "arch"
-here. If your login on ftp.NetBSD.org is different from CVS_USER, write your
-login directly into the variable, e.g. my local account is "feyrer", but for my
-login "hubertf", I use:
+here. If your login on ftp.NetBSD.org is different from your local login, write
+your login directly into the variable, e.g. my local account is "feyrer", but
+for my login "hubertf", I use:
 
 RSYNC_DST=hubertf@ftp.NetBSD.org:/pub/NetBSD/packages/pkgsrc-200xQy/NetBSD-a.b.c/arch/upload
 
@@ -2287,70 +2306,76 @@ Table of Contents
     14.15. The package phase
     14.16. Other helpful targets
 
-15. Making your package work
+15. Tools needed for building or running
 
-    15.1. General operation
+    15.1. Tools for pkgsrc builds
+    15.2. Tools needed by packages
+    15.3. Tools provided by platforms
 
-        15.1.1. How to pull in variables from /etc/mk.conf
-        15.1.2. Where to install documentation
-        15.1.3. Restricted packages
-        15.1.4. Handling dependencies
-        15.1.5. Handling conflicts with other packages
-        15.1.6. Packages that cannot or should not be built
-        15.1.7. Packages which should not be deleted, once installed
-        15.1.8. Handling packages with security problems
-        15.1.9. How to handle compiler bugs
-        15.1.10. How to handle incrementing versions when fixing an existing
+16. Making your package work
+
+    16.1. General operation
+
+        16.1.1. How to pull in variables from /etc/mk.conf
+        16.1.2. Where to install documentation
+        16.1.3. Restricted packages
+        16.1.4. Handling dependencies
+        16.1.5. Handling conflicts with other packages
+        16.1.6. Packages that cannot or should not be built
+        16.1.7. Packages which should not be deleted, once installed
+        16.1.8. Handling packages with security problems
+        16.1.9. How to handle compiler bugs
+        16.1.10. How to handle incrementing versions when fixing an existing
             package
-        15.1.11. Portability of packages
+        16.1.11. Portability of packages
 
-    15.2. Possible downloading issues
+    16.2. Possible downloading issues
 
-        15.2.1. Packages whose distfiles aren't available for plain downloading
-        15.2.2. How to handle modified distfiles with the 'old' name
+        16.2.1. Packages whose distfiles aren't available for plain downloading
+        16.2.2. How to handle modified distfiles with the 'old' name
 
-    15.3. Configuration gotchas
+    16.3. Configuration gotchas
 
-        15.3.1. Shared libraries - libtool
-        15.3.2. Using libtool on GNU packages that already support libtool
-        15.3.3. GNU Autoconf/Automake
+        16.3.1. Shared libraries - libtool
+        16.3.2. Using libtool on GNU packages that already support libtool
+        16.3.3. GNU Autoconf/Automake
 
-    15.4. Building the package
+    16.4. Building the package
 
-        15.4.1. CPP defines
-        15.4.2. Examples of CPP defines for some platforms
-        15.4.3. Getting a list of CPP defines
+        16.4.1. CPP defines
+        16.4.2. Examples of CPP defines for some platforms
+        16.4.3. Getting a list of CPP defines
 
-    15.5. Package specific actions
+    16.5. Package specific actions
 
-        15.5.1. User interaction
-        15.5.2. Handling licenses
-        15.5.3. Installing score files
-        15.5.4. Packages containing perl scripts
-        15.5.5. Packages with hardcoded paths to other interpreters
-        15.5.6. Packages installing perl modules
-        15.5.7. Packages installing info files
-        15.5.8. Packages installing man pages
-        15.5.9. Packages installing GConf2 data files
-        15.5.10. Packages installing scrollkeeper data files
-        15.5.11. Packages installing X11 fonts
-        15.5.12. Packages installing GTK2 modules
-        15.5.13. Packages installing SGML or XML data
-        15.5.14. Packages installing extensions to the MIME database
-        15.5.15. Packages using intltool
-        15.5.16. Packages installing startup scripts
-        15.5.17. Packages installing TeX modules
+        16.5.1. User interaction
+        16.5.2. Handling licenses
+        16.5.3. Installing score files
+        16.5.4. Packages containing perl scripts
+        16.5.5. Packages with hardcoded paths to other interpreters
+        16.5.6. Packages installing perl modules
+        16.5.7. Packages installing info files
+        16.5.8. Packages installing man pages
+        16.5.9. Packages installing GConf2 data files
+        16.5.10. Packages installing scrollkeeper data files
+        16.5.11. Packages installing X11 fonts
+        16.5.12. Packages installing GTK2 modules
+        16.5.13. Packages installing SGML or XML data
+        16.5.14. Packages installing extensions to the MIME database
+        16.5.15. Packages using intltool
+        16.5.16. Packages installing startup scripts
+        16.5.17. Packages installing TeX modules
 
-    15.6. Feedback to the author
+    16.6. Feedback to the author
 
-16. Debugging
-17. Submitting and Committing
+17. Debugging
+18. Submitting and Committing
 
-    17.1. Submitting your packages
-    17.2. General notes when adding, updating, or removing packages
-    17.3. Committing: Importing a package into CVS
-    17.4. Updating a package to a newer version
-    17.5. Moving a package in pkgsrc
+    18.1. Submitting your packages
+    18.2. General notes when adding, updating, or removing packages
+    18.3. Committing: Importing a package into CVS
+    18.4. Updating a package to a newer version
+    18.5. Moving a package in pkgsrc
 
 Chapter 8. Package components - files, directories and contents
 
@@ -2515,7 +2540,7 @@ Please pay attention to the following gotchas:
 
   * Replace /usr/local with "${PREFIX}" in all files (see patches, below).
 
-  * If the package installs any info files, see Section 15.5.7, "Packages
+  * If the package installs any info files, see Section 16.5.7, "Packages
     installing info files".
 
 8.2. distinfo
@@ -3297,7 +3322,7 @@ settle for an older one which will not contain the necessary shared libraries.
 Please take careful consideration before adjusting BUILDLINK_DEPENDS.pkg as we
 don't want to cause unneeded package deletions and rebuilds. In many cases, new
 versions of packages work just fine with older dependencies. See
-Section 15.1.4, "Handling dependencies" for more information about dependencies
+Section 16.1.4, "Handling dependencies" for more information about dependencies
 on other packages, including the BUILDLINK_RECOMMENDED and RECOMMENDED
 definitions.
 
@@ -3940,7 +3965,7 @@ The automatic variable PREFIX indicates where all files of the final program
 shall be installed. It is usually set to LOCALBASE (/usr/pkg), or CROSSBASE for
 pkgs in the "cross" category. The value of PREFIX needs to be put into the
 various places in the program's source where paths to these files are encoded.
-See Section 8.3, "patches/*" and Section 15.3.1, "Shared libraries - libtool"
+See Section 8.3, "patches/*" and Section 16.3.1, "Shared libraries - libtool"
 for more details.
 
 When choosing which of these variables to use, follow the following rules:
@@ -4110,7 +4135,7 @@ end up being applied in the wrong place, and cause severe harm there.
 
 14.9. The tools phase
 
-[TODO]
+This is covered in Chapter 15, Tools needed for building or running.
 
 14.10. The wrapper phase
 
@@ -4170,10 +4195,85 @@ defaults to "all".
 14.14. The install phase
 
 Once the build stage has completed, the final step is to install the software
-in public directories, so users can access the programs and files. As in the
-build-target, $MAKE_PROGRAM is invoked on $MAKEFILE here, but with the
-$INSTALL_TARGET instead, the latter defaulting to "install" (plus
-"install.man", if USE_IMAKE is set).
+in public directories, so users can access the programs and files.
+
+In the install phase, a rough equivalent of the following code is executed.
+Additionally, before and after this code, much magic is performed to do
+consistency checks, registering the package, and so on.
+
+    .for d in ${INSTALL_DIRS}
+            cd ${WRKSRC} && cd ${d} && env ${MAKE_ENV} \
+                ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
+                    -f ${MAKEFILE} ${BUILD_TARGET}
+    .endfor
+
+The variable's meanings are analogous to the ones in the build phase.
+INSTALL_DIRS defaults to BUILD_DIRS. INSTALL_TARGET is "install" by default,
+plus "install.man" if USE_IMAKE is defined.
+
+In the install phase, the following variables are useful. They are all
+variations of the install(1) command that have the owner, group and permissions
+preset. INSTALL is the plain install command. The specialized variants,
+together with their intended use, are:
+
+INSTALL_PROGRAM_DIR
+
+    directories that contain binaries
+
+INSTALL_SCRIPT_DIR
+
+    directories that contain scripts
+
+INSTALL_LIB_DIR
+
+    directories that contain shared and static libraries
+
+INSTALL_DATA_DIR
+
+    directories that contain data files
+
+INSTALL_MAN_DIR
+
+    directories that contain man pages
+
+INSTALL_PROGRAM
+
+    binaries that can be stripped from debugging symbols
+
+INSTALL_SCRIPT
+
+    binaries that cannot be stripped
+
+INSTALL_GAME
+
+    game binaries
+
+INSTALL_LIB
+
+    shared and static libraries
+
+INSTALL_DATA
+
+    data files
+
+INSTALL_GAME_DATA
+
+    data files for games
+
+INSTALL_MAN
+
+    man pages
+
+Some other variables are:
+
+INSTALLATION_DIRS
+
+    A list of directories relative to PREFIX that are created by pkgsrc at the
+    beginning of the install phase. If this variable is set, NO_MTREE="yes" is
+    assumed, which means that the package claims to create all needed
+    directories itself before installing files to it. Therefore this variable
+    should only be set in Makefiles that are under control of the package's
+    author.
 
 14.15. The package phase
 
@@ -4415,67 +4515,135 @@ bulk-install
 
     Beware that this target may deinstall all packages installed on a system!
 
-Chapter 15. Making your package work
+Chapter 15. Tools needed for building or running
 
 Table of Contents
 
-15.1. General operation
+15.1. Tools for pkgsrc builds
+15.2. Tools needed by packages
+15.3. Tools provided by platforms
 
-    15.1.1. How to pull in variables from /etc/mk.conf
-    15.1.2. Where to install documentation
-    15.1.3. Restricted packages
-    15.1.4. Handling dependencies
-    15.1.5. Handling conflicts with other packages
-    15.1.6. Packages that cannot or should not be built
-    15.1.7. Packages which should not be deleted, once installed
-    15.1.8. Handling packages with security problems
-    15.1.9. How to handle compiler bugs
-    15.1.10. How to handle incrementing versions when fixing an existing
+The USE_TOOLS definition is used both internally by pkgsrc and also for
+individual packages to define what commands are needed for building a package
+(like BUILD_DEPENDS) or for later run-time of an installed packaged (such as
+DEPENDS). If the native system provides an adequate tool, then in many cases, a
+pkgsrc package will not be used.
+
+When building a package, the replacement tools are made available in a
+directory (as symlinks or wrapper scripts) that is early in the executable
+search path. Just like the buildlink system, this helps with consistent builds.
+
+A tool may be needed to help build a specific package. For example, perl, GNU
+make (gmake) or yacc may be needed.
+
+Also a tool may be needed, for example, because the native system's supplied
+tool may be inefficient for building a package with pkgsrc. For example, a
+package may need GNU awk, bison (instead of yacc) or a better sed.
+
+The tools used by a package can be listed by running make show-tools.
+
+15.1. Tools for pkgsrc builds
+
+The default set of tools used by pkgsrc is defined in bsd.pkg.mk. This includes
+standard Unix tools, such as: cat, awk, chmod, test, and so on. These can be
+seen by running: make show-var VARNAME=USE_TOOLS.
+
+If a package needs a specific program to build then the USE_TOOLS variable can
+be used to define the tools needed.
+
+15.2. Tools needed by packages
+
+In the following examples, the :pkgsrc means to use the pkgsrc version and not
+the native version for a build dependency. And the :run means that it is used
+for a run-time dependencies also (and becomes a DEPENDS). The default is a
+build dependency which can be set with :build. (So in this example, it is the
+same as gmake:build and pkg-config:build.)
+
+USE_TOOLS+=     mktemp:pkgsrc
+USE_TOOLS+=     gmake perl:run pkg-config
+
+When using the tools framework, a TOOLS_PATH.foo variable is defined which
+contains the full path to the appropriate tool. For example, TOOLS_PATH.bash
+could be "/bin/bash" on Linux systems.
+
+If you always need a pkgsrc version of the tool at run-time, then just use
+DEPENDS instead.
+
+15.3. Tools provided by platforms
+
+When improving or porting pkgsrc to a new platform, have a look at (or create)
+the corresponding platform specific make file fragment under pkgsrc/mk/tools/
+tools.${OPSYS}.mk which defines the name of the common tools. For example:
+
+.if exists(/usr/bin/bzcat)
+TOOLS_PLATFORM.bzcat?=          /usr/bin/bzcat
+.elif exists(/usr/bin/bzip2)
+TOOLS_PLATFORM.bzcat?=          /usr/bin/bzip2 -cd
+.endif
+
+TOOLS_PLATFORM.true?=           true                    # shell builtin
+
+Chapter 16. Making your package work
+
+Table of Contents
+
+16.1. General operation
+
+    16.1.1. How to pull in variables from /etc/mk.conf
+    16.1.2. Where to install documentation
+    16.1.3. Restricted packages
+    16.1.4. Handling dependencies
+    16.1.5. Handling conflicts with other packages
+    16.1.6. Packages that cannot or should not be built
+    16.1.7. Packages which should not be deleted, once installed
+    16.1.8. Handling packages with security problems
+    16.1.9. How to handle compiler bugs
+    16.1.10. How to handle incrementing versions when fixing an existing
         package
-    15.1.11. Portability of packages
+    16.1.11. Portability of packages
 
-15.2. Possible downloading issues
+16.2. Possible downloading issues
 
-    15.2.1. Packages whose distfiles aren't available for plain downloading
-    15.2.2. How to handle modified distfiles with the 'old' name
+    16.2.1. Packages whose distfiles aren't available for plain downloading
+    16.2.2. How to handle modified distfiles with the 'old' name
 
-15.3. Configuration gotchas
+16.3. Configuration gotchas
 
-    15.3.1. Shared libraries - libtool
-    15.3.2. Using libtool on GNU packages that already support libtool
-    15.3.3. GNU Autoconf/Automake
+    16.3.1. Shared libraries - libtool
+    16.3.2. Using libtool on GNU packages that already support libtool
+    16.3.3. GNU Autoconf/Automake
 
-15.4. Building the package
+16.4. Building the package
 
-    15.4.1. CPP defines
-    15.4.2. Examples of CPP defines for some platforms
-    15.4.3. Getting a list of CPP defines
+    16.4.1. CPP defines
+    16.4.2. Examples of CPP defines for some platforms
+    16.4.3. Getting a list of CPP defines
 
-15.5. Package specific actions
+16.5. Package specific actions
 
-    15.5.1. User interaction
-    15.5.2. Handling licenses
-    15.5.3. Installing score files
-    15.5.4. Packages containing perl scripts
-    15.5.5. Packages with hardcoded paths to other interpreters
-    15.5.6. Packages installing perl modules
-    15.5.7. Packages installing info files
-    15.5.8. Packages installing man pages
-    15.5.9. Packages installing GConf2 data files
-    15.5.10. Packages installing scrollkeeper data files
-    15.5.11. Packages installing X11 fonts
-    15.5.12. Packages installing GTK2 modules
-    15.5.13. Packages installing SGML or XML data
-    15.5.14. Packages installing extensions to the MIME database
-    15.5.15. Packages using intltool
-    15.5.16. Packages installing startup scripts
-    15.5.17. Packages installing TeX modules
+    16.5.1. User interaction
+    16.5.2. Handling licenses
+    16.5.3. Installing score files
+    16.5.4. Packages containing perl scripts
+    16.5.5. Packages with hardcoded paths to other interpreters
+    16.5.6. Packages installing perl modules
+    16.5.7. Packages installing info files
+    16.5.8. Packages installing man pages
+    16.5.9. Packages installing GConf2 data files
+    16.5.10. Packages installing scrollkeeper data files
+    16.5.11. Packages installing X11 fonts
+    16.5.12. Packages installing GTK2 modules
+    16.5.13. Packages installing SGML or XML data
+    16.5.14. Packages installing extensions to the MIME database
+    16.5.15. Packages using intltool
+    16.5.16. Packages installing startup scripts
+    16.5.17. Packages installing TeX modules
 
-15.6. Feedback to the author
+16.6. Feedback to the author
 
-15.1. General operation
+16.1. General operation
 
-15.1.1. How to pull in variables from /etc/mk.conf
+16.1.1. How to pull in variables from /etc/mk.conf
 
 The problem with package-defined variables that can be overridden via MAKECONF
 or /etc/mk.conf is that make(1) expands a variable as it is used, but evaluates
@@ -4503,13 +4671,13 @@ Using CFLAGS= (i.e. without the "+") may lead to problems with packages that
 need to add their own flags. Also, you may want to take a look at the devel/
 cpuflags package if you're interested in optimization for the current CPU.
 
-15.1.2. Where to install documentation
+16.1.2. Where to install documentation
 
 Documentation should be installed into ${PREFIX}/share/doc/${PKGBASE} or $
 {PREFIX}/share/doc/${PKGNAME} (the latter includes the version number of the
 package).
 
-15.1.3. Restricted packages
+16.1.3. Restricted packages
 
 Some licenses restrict how software may be re-distributed. In order to satisfy
 these restrictions, the package system defines five make variables that can be
@@ -4548,7 +4716,7 @@ Please note that the use of NO_PACKAGE, IGNORE, NO_CDROM, or other generic make
 variables to denote restrictions is deprecated, because they unconditionally
 prevent users from generating binary packages!
 
-15.1.4. Handling dependencies
+16.1.4. Handling dependencies
 
 Your package may depend on some other package being present - and there are
 various ways of expressing this dependency. pkgsrc supports the BUILD_DEPENDS
@@ -4637,7 +4805,7 @@ version numbers recognized by pkg_info(1).
     systems that may have different versions of binary packages installed.
 
     For security fixes, please update the package vulnerabilities file as well
-    as setting RECOMMENDED, see Section 15.1.8, "Handling packages with
+    as setting RECOMMENDED, see Section 16.1.8, "Handling packages with
     security problems" for more information.
 
  4. If your package needs some executable to be able to run correctly and if
@@ -4672,7 +4840,7 @@ gettext package. The latter adds a build dependency on either an installed
 version of an older gettext package, or if it isn't, installs the devel/
 gettext-m4 package.
 
-15.1.5. Handling conflicts with other packages
+16.1.5. Handling conflicts with other packages
 
 Your package may conflict with other packages a user might already have
 installed on his system, e.g. if your package installs the same set of files
@@ -4694,7 +4862,7 @@ Packages will automatically conflict with other packages with the name prefix
 and a different version string. "Xaw3d-1.5" e.g. will automatically conflict
 with the older version "Xaw3d-1.3".
 
-15.1.6. Packages that cannot or should not be built
+16.1.6. Packages that cannot or should not be built
 
 There are several reasons why a package might be instructed to not build under
 certain circumstances. If the package builds and runs on most platforms, the
@@ -4708,7 +4876,7 @@ functionality already provided by the system), set PKG_SKIP_REASON to a
 descriptive message. If the package should fail because some preconditions are
 not met, set PKG_FAIL_REASON to a descriptive message.
 
-15.1.7. Packages which should not be deleted, once installed
+16.1.7. Packages which should not be deleted, once installed
 
 To ensure that a package may not be deleted, once it has been installed, the
 PKG_PRESERVE definition should be set in the package Makefile. This will be
@@ -4716,7 +4884,7 @@ carried into any binary package that is made from this pkgsrc entry. A
 "preserved" package will not be deleted using pkg_delete(1) unless the "-f"
 option is used.
 
-15.1.8. Handling packages with security problems
+16.1.8. Handling packages with security problems
 
 When a vulnerability is found, this should be noted in localsrc/security/
 advisories/pkg-vulnerabilities, and after committing that file, use make upload
@@ -4734,7 +4902,7 @@ submit a pullup request!
 Binary packages already on ftp.NetBSD.org will be handled semi-automatically by
 a weekly cron job.
 
-15.1.9. How to handle compiler bugs
+16.1.9. How to handle compiler bugs
 
 Some source files trigger bugs in the compiler, based on combinations of
 compiler version and architecture and almost always relation to optimisation
@@ -4745,7 +4913,7 @@ Typically, a workaround involves testing the MACHINE_ARCH and compiler version,
 disabling optimisation for that file/MACHINE_ARCH/compiler combination, and
 documenting it in pkgsrc/doc/HACKS. See that file for a number of examples!
 
-15.1.10. How to handle incrementing versions when fixing an existing package
+16.1.10. How to handle incrementing versions when fixing an existing package
 
 When making fixes to an existing package it can be useful to change the version
 number in PKGNAME. To avoid conflicting with future versions by the original
@@ -4763,14 +4931,14 @@ like:
 
     DISTNAME=       foo-17.43
 
-15.1.11. Portability of packages
+16.1.11. Portability of packages
 
 One appealing feature of pkgsrc is that it runs on many different platforms. As
 a result, it is important to ensure, where possible, that packages in pkgsrc
 are portable. There are some particular details you should pay attention to
 while working on pkgsrc.
 
-15.1.11.1. ${INSTALL}, ${INSTALL_DATA_DIR}, ...
+16.1.11.1. ${INSTALL}, ${INSTALL_DATA_DIR}, ...
 
 The BSD-compatible install supplied with some operating systems will not
 perform more than one operation at a time. As such, you should call "${INSTALL}
@@ -4779,9 +4947,9 @@ perform more than one operation at a time. As such, you should call "${INSTALL}
     ${INSTALL_DATA_DIR} ${PREFIX}/dir1
     ${INSTALL_DATA_DIR} ${PREFIX}/dir2
 
-15.2. Possible downloading issues
+16.2. Possible downloading issues
 
-15.2.1. Packages whose distfiles aren't available for plain downloading
+16.2.1. Packages whose distfiles aren't available for plain downloading
 
 If you need to download from a dynamic URL you can set DYNAMIC_MASTER_SITES and
 a make fetch will call files/getsite.sh with the name of each file to download
@@ -4797,7 +4965,7 @@ packages use this: cad/simian, devel/ipv6socket, emulators/vmware-module, fonts
 /acroread-jpnfont, multimedia/realplayer, sysutils/storage-manager, www/
 ap-aolserver, www/openacs. Try to be consistent with them.
 
-15.2.2. How to handle modified distfiles with the 'old' name
+16.2.2. How to handle modified distfiles with the 'old' name
 
 Sometimes authors of a software package make some modifications after the
 software was released, and they put up a new distfile without changing the
@@ -4814,9 +4982,9 @@ filenames. Furthermore, a mail to the package's authors seems appropriate
 telling them that changing distfiles after releases without changing the file
 names is not good practice.
 
-15.3. Configuration gotchas
+16.3. Configuration gotchas
 
-15.3.1. Shared libraries - libtool
+16.3.1. Shared libraries - libtool
 
 pkgsrc supports many different machines, with different object formats like
 a.out and ELF, and varying abilities to do shared library and dynamic loading
@@ -4911,7 +5079,7 @@ Here's how to use libtool in a pkg in seven simple steps:
  7. In your PLIST, include only the .la file (this is a change from previous
     behaviour).
 
-15.3.2. Using libtool on GNU packages that already support libtool
+16.3.2. Using libtool on GNU packages that already support libtool
 
 Add USE_LIBTOOL=yes to the package Makefile. This will override the package's
 own libtool in most cases. For older libtool using packages, libtool is made by
@@ -4945,7 +5113,7 @@ in some circumstances. Some of the more common errors are:
     The function lt_dlinit() should be called and the macro
     LTDL_SET_PRELOADED_SYMBOLS included in executables.
 
-15.3.3. GNU Autoconf/Automake
+16.3.3. GNU Autoconf/Automake
 
 If a package needs GNU autoconf or automake to be executed to regenerate the
 configure script and Makefile.in makefile templates, then they should be
@@ -4983,9 +5151,9 @@ automake sequence. This is prevented by touching various files in the configure
 stage. If this causes problems with your package you can set AUTOMAKE_OVERRIDE=
 NO in the package Makefile.
 
-15.4. Building the package
+16.4. Building the package
 
-15.4.1. CPP defines
+16.4.1. CPP defines
 
 Sometimes you need to compile different code depending on the target platform.
 The C preprocessor has a set of predefined macros that can be queried by using
@@ -5002,7 +5170,7 @@ and compiler has its own macro. For example, if the macros __GNUC__, __i386__
 and __NetBSD__ are all defined, you know that you are using NetBSD on an i386
 compatible CPU, and your compiler is GCC.
 
-15.4.1.1. CPP defines for operating systems
+16.4.1.1. CPP defines for operating systems
 
 To distinguish between 4.4 BSD-derived systems and the rest of the world, you
 should use the following code.
@@ -5024,18 +5192,18 @@ If this distinction is not fine enough, you can also use the following defines.
     OpenBSD     __OpenBSD__
     Solaris     sun, __sun
 
-15.4.1.2. CPP defines for CPUs
+16.4.1.2. CPP defines for CPUs
 
     i386        i386, __i386, __i386__
     MIPS        __mips
     SPARC       sparc, __sparc
 
-15.4.1.3. CPP defines for compilers
+16.4.1.3. CPP defines for compilers
 
     GCC         __GNUC__ (major version), __GNUC_MINOR__
     SunPro      __SUNPRO_C (0x570 for version 5.7)
 
-15.4.2. Examples of CPP defines for some platforms
+16.4.2. Examples of CPP defines for some platforms
 
 The list of the CPP identification macros for hardware and operating system may
 depend on the compiler that is used. The following list contains some examples
@@ -5065,7 +5233,7 @@ SunPro 5.7 + Solaris 8 + SPARC
 
     __SVR4, __sparc, __sun, __unix, sparc, sun, unix.
 
-15.4.3. Getting a list of CPP defines
+16.4.3. Getting a list of CPP defines
 
 If your system uses the GNU C Compiler, you can get a list of symbols that are
 defined by default, e.g. to identify the platform, with the following command:
@@ -5076,9 +5244,9 @@ On other systems you may get the list by using the system's syscall trace
 utility (ktrace, truss, strace) to have a look which arguments are passed to
 the actual compiler.
 
-15.5. Package specific actions
+16.5. Package specific actions
 
-15.5.1. User interaction
+16.5.1. User interaction
 
 Occasionally, packages require interaction from the user, and this can be in a
 number of ways:
@@ -5101,7 +5269,7 @@ Multiple interactive stages can be specified:
 
     INTERACTIVE_STAGE=      configure install
 
-15.5.2. Handling licenses
+16.5.2. Handling licenses
 
 A package may be covered by a license which the user has or has not agreed to
 accept. For these cases, pkgsrc contains a mechanism to note that a package is
@@ -5156,7 +5324,7 @@ license text for another package. In particular, this can be inappropriate when
 e.g. one accepts a particular license to indicate to pkgsrc that a fee has been
 paid.
 
-15.5.3. Installing score files
+16.5.3. Installing score files
 
 Certain packages, most of them in the games category, install a score file that
 allows all users on the system to record their highscores. In order for this to
@@ -5171,13 +5339,13 @@ SETGIDGAME=YES will set all the other variables accordingly.
 A package should therefor never hard code file ownership or access permissions
 but rely on INSTALL_GAME and INSTALL_GAME_DATA to set these correctly.
 
-15.5.4. Packages containing perl scripts
+16.5.4. Packages containing perl scripts
 
 If your package contains interpreted perl scripts, set REPLACE_PERL to ensure
 that the proper interpreter path is set. REPLACE_PERL should contain a list of
 scripts, relative to WRKSRC, that you want adjusted.
 
-15.5.5. Packages with hardcoded paths to other interpreters
+16.5.5. Packages with hardcoded paths to other interpreters
 
 Your package may also contain scripts with hardcoded paths to other
 interpreters besides (or as well as) perl. To correct the full pathname to the
@@ -5190,7 +5358,7 @@ script interpreter, you need to set the following definitions in your Makefile
     _REPLACE_FILES.tcl=     # list of tcl scripts which need to be fixed,
                             # relative to ${WRKSRC}, just as in REPLACE_PERL
 
-15.5.6. Packages installing perl modules
+16.5.6. Packages installing perl modules
 
 Makefiles of packages providing perl5 modules should include the Makefile
 fragment ../../lang/perl5/module.mk. It provides a do-configure target for the
@@ -5210,7 +5378,7 @@ three locations in which perl5 modules may be installed, and may be used by
 perl5 packages that don't have a packlist. These three variables are also
 substituted for in the PLIST.
 
-15.5.7. Packages installing info files
+16.5.7. Packages installing info files
 
 Some packages install info files or use the "makeinfo" or "install-info"
 commands. Each of the info files:
@@ -5249,7 +5417,7 @@ message. The script overriding makeinfo logs a message and according to the
 value of USE_MAKEINFO and TEXINFO_REQD either run the appropriate makeinfo
 command or exit on error.
 
-15.5.8. Packages installing man pages
+16.5.8. Packages installing man pages
 
 Many packages install manual pages. The man pages are installed under ${PREFIX}
 /${PKGMANDIR} which is /usr/pkg/man by default. PKGMANDIR defaults to "man".
@@ -5275,7 +5443,7 @@ use of --mandir, you can set GNU_CONFIGURE_MANDIR as needed.
 See Section 10.5, "Man page compression" for information on installation of
 compressed manual pages.
 
-15.5.9. Packages installing GConf2 data files
+16.5.9. Packages installing GConf2 data files
 
 If a package installs .schemas or .entries files, used by GConf2, you need to
 take some extra steps to make sure they get registered in the database:
@@ -5302,7 +5470,7 @@ take some extra steps to make sure they get registered in the database:
     .entries files installed by the package, if any. Names must not contain any
     directories in them.
 
-15.5.10. Packages installing scrollkeeper data files
+16.5.10. Packages installing scrollkeeper data files
 
 If a package installs .omf files, used by scrollkeeper, you need to take some
 extra steps to make sure they get registered in the database:
@@ -5318,7 +5486,7 @@ extra steps to make sure they get registered in the database:
  3. Remove the share/omf directory from the PLIST. It will be handled by
     scrollkeeper.
 
-15.5.11. Packages installing X11 fonts
+16.5.11. Packages installing X11 fonts
 
 If a package installs font files, you will need to rebuild the fonts database
 in the directory where they get installed at installation and deinstallation
@@ -5332,7 +5500,7 @@ Note that you should not create new directories for fonts; instead use the
 standard ones to avoid that the user needs to manually configure his X server
 to find them.
 
-15.5.12. Packages installing GTK2 modules
+16.5.12. Packages installing GTK2 modules
 
 If a package installs GTK2 immodules or loaders, you need to take some extra
 steps to get them registered in the GTK2 database properly:
@@ -5355,7 +5523,7 @@ steps to get them registered in the GTK2 database properly:
  5. Check the PLIST and remove any entries under the libdata/gtk-2.0 directory,
     as they will be handled automatically.
 
-15.5.13. Packages installing SGML or XML data
+16.5.13. Packages installing SGML or XML data
 
 If a package installs SGML or XML data files that need to be registered in
 system-wide catalogs (like DTDs, sub-catalogs, etc.), you need to take some
@@ -5381,7 +5549,7 @@ extra steps:
     (specifically, arguments recognized by the 'add' action). Note that you
     will normally not use this variable.
 
-15.5.14. Packages installing extensions to the MIME database
+16.5.14. Packages installing extensions to the MIME database
 
 If a package provides extensions to the MIME database by installing .xml files
 inside ${PREFIX}/share/mime/packages, you need to take some extra steps to
@@ -5402,7 +5570,7 @@ ensure that the database is kept consistent with respect to these new files:
  3. Remove any share/mime/* directories from the PLIST. They will be handled by
     the shared-mime-info package.
 
-15.5.15. Packages using intltool
+16.5.15. Packages using intltool
 
 If a package uses intltool during its build, include the ../../textproc/
 intltool/buildlink3.mk file, which forces it to use the intltool package
@@ -5412,7 +5580,7 @@ This tracks intltool's build-time dependencies and uses the latest available
 version; this way, the package benefits of any bug fixes that may have appeared
 since it was released.
 
-15.5.16. Packages installing startup scripts
+16.5.16. Packages installing startup scripts
 
 If a package contains a rc.d script, it won't be copied into the startup
 directory by default, but you can enable it, by adding the option
@@ -5420,7 +5588,7 @@ PKG_RCD_SCRIPTS=YES in /etc/mk.conf. This option will copy the scripts into /
 etc/rc.d when a package is installed, and it will automatically remove the
 scripts when the package is deinstalled.
 
-15.5.17. Packages installing TeX modules
+16.5.17. Packages installing TeX modules
 
 If a package installs TeX packages into the texmf tree, the ls-R database of
 the tree needs to be updated.
@@ -5446,7 +5614,7 @@ into PKG_LOCALTEXMFPREFIX, not PKG_TEXMFPREFIX.
  3. Make sure that none of ls-R databases are included in PLIST, as they will
     be removed only by the teTeX-bin package.
 
-15.6. Feedback to the author
+16.6. Feedback to the author
 
 If you have found any bugs in the package you make available, if you had to do
 special steps to make it run under NetBSD or if you enhanced the software in
@@ -5457,7 +5625,7 @@ win from your efforts.
 
 Support the idea of free software!
 
-Chapter 16. Debugging
+Chapter 17. Debugging
 
 To check out all the gotchas when building a package, here are the steps that I
 do in order to get a package working. Please note this is basically the same as
@@ -5536,20 +5704,20 @@ what was explained in the previous sections, only with some debugging aids.
 
     # pkglint
 
-  * Submit (or commit, if you have cvs access); see Chapter 17, Submitting and
+  * Submit (or commit, if you have cvs access); see Chapter 18, Submitting and
     Committing.
 
-Chapter 17. Submitting and Committing
+Chapter 18. Submitting and Committing
 
 Table of Contents
 
-17.1. Submitting your packages
-17.2. General notes when adding, updating, or removing packages
-17.3. Committing: Importing a package into CVS
-17.4. Updating a package to a newer version
-17.5. Moving a package in pkgsrc
+18.1. Submitting your packages
+18.2. General notes when adding, updating, or removing packages
+18.3. Committing: Importing a package into CVS
+18.4. Updating a package to a newer version
+18.5. Moving a package in pkgsrc
 
-17.1. Submitting your packages
+18.1. Submitting your packages
 
 You have to separate between binary and "normal" (source) packages here:
 
@@ -5565,7 +5733,7 @@ You have to separate between binary and "normal" (source) packages here:
   * packages
 
     First, check that your package is complete, compiles and runs well; see
-    Chapter 16, Debugging and the rest of this document. Next, generate an
+    Chapter 17, Debugging and the rest of this document. Next, generate an
     uuencoded gzipped tar(1) archive, preferably with all files in a single
     directory. Finally, send-pr with category "pkg", a synopsis which includes
     the package name and version number, a short description of your package
@@ -5579,7 +5747,7 @@ You have to separate between binary and "normal" (source) packages here:
     work-in-progress"); see the homepage at http://pkgsrc-wip.sourceforge.net/
     for details.
 
-17.2. General notes when adding, updating, or removing packages
+18.2. General notes when adding, updating, or removing packages
 
 Please note all package additions, updates, moves, and removals in pkgsrc/doc/
 CHANGES. It's very important to keep this file up to date and conforming to the
@@ -5598,7 +5766,7 @@ or package moves or removals, set the CTYPE variable on the command line to
 if your local login name is not the same as your NetBSD login name. Don't
 forget to commit the changes to pkgsrc/doc/CHANGES!
 
-17.3. Committing: Importing a package into CVS
+18.3. Committing: Importing a package into CVS
 
 This section is only of interest for pkgsrc developers with write access to the
 pkgsrc repository. Please remember that cvs imports files relative to the
@@ -5620,7 +5788,7 @@ so people reading the mailing lists know what the package is/does.
 For new packages, "cvs import" is preferred to "cvs add" because the former
 gets everything with a single command, and provides a consistent tag.
 
-17.4. Updating a package to a newer version
+18.4. Updating a package to a newer version
 
 Please always put a concise, appropriate and relevant summary of the changes
 between old and new versions into the commit log when updating a package. There
@@ -5645,7 +5813,7 @@ which pkgsrc is used. Please use your judgement about what should go into
 pkgsrc, and bear in mind that stability is to be preferred above new and
 possibly untested features.
 
-17.5. Moving a package in pkgsrc
+18.5. Moving a package in pkgsrc
 
  1. Make a copy of the directory somewhere else.
 
