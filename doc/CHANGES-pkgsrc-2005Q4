@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.81 2006/02/14 15:04:32 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.82 2006/02/14 15:35:54 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -165,3 +165,5 @@ Pullup ticket 1129 - requested by Min Sik Kim
 distfile update for db4
 Pullup ticket 1130 - requested by Joerg Sonnenberger
 security fix for exim3
+Pullup ticket 1131 - requested by Simon Burge
+security update for adzap
