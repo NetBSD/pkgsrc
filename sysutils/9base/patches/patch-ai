@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.2 2005/12/06 18:50:36 rillig Exp $
+$NetBSD: patch-ai,v 1.3 2006/02/14 16:26:38 yyamano Exp $
 
---- sed/Makefile.orig	2005-11-14 10:22:40.000000000 +0000
+--- sed/Makefile.orig	2005-11-14 19:22:40.000000000 +0900
 +++ sed/Makefile
 @@ -13,12 +13,10 @@ all: ${TARG}
  	echo built ${TARG}
@@ -19,3 +19,9 @@ $NetBSD: patch-ai,v 1.2 2005/12/06 18:50:36 rillig Exp $
  
  uninstall:
  	rm -f ${DESTDIR}${PREFIX}/bin/${TARG}
+@@ -33,4 +31,4 @@ clean:
+ 
+ ${TARG}: ${OFILES}
+ 	@echo LD ${TARG}
+-	@${CC} ${LDFLAGS} -static -o ${TARG} ${OFILES} -L${PREFIX}/lib -L../lib9 -l9
++	@${CC} ${LDFLAGS} -o ${TARG} ${OFILES} -L${PREFIX}/lib -L../lib9 -l9
