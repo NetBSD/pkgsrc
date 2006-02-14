@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4613 2006/02/14 21:41:52 adam Exp $
+$NetBSD: TODO,v 1.4614 2006/02/14 22:07:20 adam Exp $
 
 Suggested new packages
 ======================
@@ -579,7 +579,6 @@ Suggested package updates
 	o gtk-systrace-20030623
 	o gtk2-engines-2.6.7
 	o gtkam-0.1.13
-	o gtkmm-2.8.3
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
