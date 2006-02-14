@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.25 2006/02/12 14:44:59 rillig Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.26 2006/02/14 10:12:39 rillig Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -12,42 +12,15 @@
       the following operating systems:</para>
 
     <itemizedlist>
-      <listitem>
-	<para>Darwin (Mac OS X)</para>
-      </listitem>
-
-      <listitem>
-	<para>DragonFlyBSD</para>
-      </listitem>
-
-      <listitem>
-	<para>FreeBSD</para>
-      </listitem>
-
-      <listitem>
-	<para>Interix (Windows 2000, XP, 2003)</para>
-      </listitem>
-
-      <listitem>
-	<para>IRIX</para>
-      </listitem>
-
-      <listitem>
-	<para>Linux</para>
-      </listitem>
-
-      <listitem>
-	<para>OpenBSD</para>
-      </listitem>
-
-      <listitem>
-	<para>Solaris</para>
-      </listitem>
-
-      <listitem>
-	<para>Tru64 (Digital UNIX/OSF1)</para>
-      </listitem>
-
+      <listitem><para>Darwin (Mac OS X)</para></listitem>
+      <listitem><para>DragonFlyBSD</para></listitem>
+      <listitem><para>FreeBSD</para></listitem>
+      <listitem><para>Interix (Windows 2000, XP, 2003)</para></listitem>
+      <listitem><para>IRIX</para></listitem>
+      <listitem><para>Linux</para></listitem>
+      <listitem><para>OpenBSD</para></listitem>
+      <listitem><para>Solaris</para></listitem>
+      <listitem><para>Tru64 (Digital UNIX/OSF1)</para></listitem>
     </itemizedlist>
 
     <para>Support for other platforms is under development.</para>
@@ -560,32 +533,19 @@
     <sect2 id="solaris">
       <title>Solaris</title>
 
-      <para>Solaris 2.6 through 9 are supported on both x86 and sparc. You will need a working C
-	compiler. Both gcc 2.95.3 and Sun WorkShop 5 have been tested.</para>
+      <para>Solaris 2.6 through 9 are supported on both x86 and sparc.
+        You will need a working C compiler. Both gcc 2.95.3 and
+        Sun WorkShop 5 have been tested.</para>
 
       <para>The following packages are required on Solaris 8 for the bootstrap
 	process and to build packages.</para>
 
       <itemizedlist>
-	<listitem>
-	  <para>SUNWsprot</para>
-	</listitem>
-
-	<listitem>
-	  <para>SUNWarc</para>
-	</listitem>
-
-	<listitem>
-	  <para>SUNWbtool</para>
-	</listitem>
-
-	<listitem>
-	  <para>SUNWtoo</para>
-	</listitem>
-
-	<listitem>
-	  <para>SUNWlibm</para>
-	</listitem>
+	<listitem><para>SUNWsprot</para></listitem>
+	<listitem><para>SUNWarc</para></listitem>
+	<listitem><para>SUNWbtool</para></listitem>
+	<listitem><para>SUNWtoo</para></listitem>
+	<listitem><para>SUNWlibm</para></listitem>
       </itemizedlist>
 
       <para>Please note the use of GNU binutils on Solaris is
@@ -613,21 +573,14 @@
 	  5.0)</para>
 
 	<itemizedlist>
-	  <listitem>
-	    <para>SPROcc - Sun WorkShop Compiler C 5.0</para>
-	  </listitem>
-
-	  <listitem>
-	    <para>SPROcpl - Sun WorkShop Compiler C++ 5.0</para>
-	  </listitem>
-
-	  <listitem>
-	    <para>SPROild - Sun WorkShop Incremental Linker</para>
-	  </listitem>
-
-	  <listitem>
-	    <para>SPROlang - Sun WorkShop Compilers common components</para>
-	  </listitem>
+	  <listitem><para>SPROcc
+		- Sun WorkShop Compiler C 5.0</para></listitem>
+	  <listitem><para>SPROcpl
+		- Sun WorkShop Compiler C++ 5.0</para></listitem>
+	  <listitem><para>SPROild
+		- Sun WorkShop Incremental Linker</para></listitem>
+	  <listitem><para>SPROlang
+		- Sun WorkShop Compilers common components</para></listitem>
 	</itemizedlist>
 
 	<para>You should set <varname>CC</varname>, <varname>CXX</varname> and
@@ -650,6 +603,21 @@
 	  your $prefix are in your <varname>PATH</varname>. This includes
 	  <filename>/usr/ccs/{bin,lib}</filename>
 	  and e.g. <filename>/usr/pkg/{bin,sbin}</filename>.</para>
+      </sect3>
+
+      <sect3 id="plat.sunos.problems"><title>Common problems</title>
+
+	<para>Sometimes, when using <command>libtool</command>,
+	<filename>/bin/ksh</filename> crashes with a segmentation fault.
+	The workaround is to use another shell for the configure
+	scripts, for example by installing <filename
+	role="pkg">shells/bash</filename> and adding the following line
+	to your <filename>mk.conf</filename>:</para>
+
+<programlisting>
+    CONFIG_SHELL=   ${LOCALBASE}/bin/bash
+</programlisting>
+
       </sect3>
     </sect2>
   </sect1>
