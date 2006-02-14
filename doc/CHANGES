@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12911 2006/02/14 22:07:20 adam Exp $
+$NetBSD: CHANGES,v 1.12912 2006/02/14 23:09:50 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -967,3 +967,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated games/dopewars to 1.5.12 [adam 2006-02-14]
 	Added net/mbrowse version 0.3.1 [heinz 2006-02-14]
 	Updated x11/gtkmm to 2.8.3 [adam 2006-02-14]
+	Updated www/horde3 to 3.0.9nb4 [seb 2006-02-14]
+	Updated mail/imp4 to 4.0.4nb3 [seb 2006-02-14]
+	Updated mail/turba to 2.0.5nb3 [seb 2006-02-14]
