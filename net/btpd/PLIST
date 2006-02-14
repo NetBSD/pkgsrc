@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/14 00:49:23 rillig Exp $
+bin/btpd
+bin/btcli
+bin/btinfo
+share/doc/${PKGBASE}/README
+@dirrm share/doc/${PKGBASE}
