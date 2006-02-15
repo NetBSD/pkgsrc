@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/06 16:47:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/02/15 21:15:45 joerg Exp $
 bin/spawn-fcgi
 lib/lighttpd/mod_access.la
 lib/lighttpd/mod_accesslog.la
@@ -8,6 +8,7 @@ lib/lighttpd/mod_cgi.la
 lib/lighttpd/mod_cml.la
 lib/lighttpd/mod_compress.la
 lib/lighttpd/mod_dirlisting.la
+lib/lighttpd/mod_evasive.la
 lib/lighttpd/mod_evhost.la
 lib/lighttpd/mod_expire.la
 lib/lighttpd/mod_fastcgi.la
