@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:09:52 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/15 22:02:56 rillig Exp $
 
 DISTNAME=	tcl-itcl-20040920
 PKGNAME=	${DISTNAME:S/itcl/itcl-current/}
@@ -22,15 +22,15 @@ CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl:Q}/lib
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk:Q}/lib
 CONFIGURE_ARGS+=	--enable-shared
 
-MAKE_ENV+=	TCL_HEADER_DIR=${BUILDLINK_PREFIX.tcl}/include/tcl
+MAKE_ENV+=	TCL_HEADER_DIR=${BUILDLINK_PREFIX.tcl:Q}/include/tcl
 
-post-build:
-	${SED} -e "s|^\(.*\)='\(.*\)'|\1=\"\2\"|"			\
-		-e "s|${WRKSRC}/itcl|${PREFIX}/lib/tcl/itcl${ITCL_VERS}|"\
-		-e "s|${PREFIX}/lib/itcl${ITCL_VERS}|${PREFIX}/lib/tcl/itcl${ITCL_VERS}|"\
-		-e "s|${WRKDIR}/${DISTNAME:C/-src//}|${PREFIX}|"	\
-		${WRKSRC}/itcl/itclConfig.sh > ${WRKSRC}/itcl/itclConfig.sh.tmp &&\
-		${MV} ${WRKSRC}/itcl/itclConfig.sh.tmp ${WRKSRC}/itcl/itclConfig.sh
+SUBST_CLASSES+=		tcl-itcl
+SUBST_STAGE.tcl-itcl=	post-build
+SUBST_FILES.tcl-itcl=	itcl/itclConfig.sh
+SUBST_SED.tcl-itcl=	-e 's|^\(.*\)='\''\(.*\)'\''|\1="\2"|'
+SUBST_SED.tcl-itcl+=	-e s\|${WRKSRC:Q}/itcl\|${PREFIX:Q}/lib/tcl/itcl${ITCL_VERS:Q}\|
+SUBST_SED.tcl-itcl+=	-e s\|${PREFIX:Q}/lib/itcl${ITCL_VERS:Q}\|${PREFIX:Q}/lib/tcl/itcl${ITCL_VERS:Q}\|
+SUBST_SED.tcl-itcl+=	-e s\|${WRKDIR:Q}/${DISTNAME:C/-src//:Q}\|${PREFIX:Q}\|
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
