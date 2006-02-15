@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4614 2006/02/14 22:07:20 adam Exp $
+$NetBSD: TODO,v 1.4615 2006/02/15 20:51:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -415,7 +415,7 @@ Suggested package updates
 	o conglomerate-0.9.1
 	o conserver-8.1.13
 	o cook-2.26
-	o coreutils-5.93
+	o coreutils-5.94
 	o cqcam-0.91
 	o crafty-19.5
 	o criticalmass-1.0.0
@@ -527,6 +527,7 @@ Suggested package updates
 	o gcpio-2.6
 	o gdb6-6.3.0
 	o gdsreader-0.3.2
+	o getmail-4.5.4
 	o ggiterm-0.7.1
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
@@ -635,8 +636,8 @@ Suggested package updates
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.4
 	o java-lang-spec-3.0
-	o jdbc-postgresql-7.3.11
-	o jdbc-postgresql74-7.4.9
+	o jdbc-postgresql-7.3.14
+	o jdbc-postgresql74-7.4.12
 	o jessie-1.0.0
 	o jftpgw-0.13.5
 	o jgrasp-183
@@ -774,7 +775,7 @@ Suggested package updates
 	o nut-11.3
 	o obexftp-0.18
 	o objc-3.2.7
-	o odbc-postgresql-8.0.4
+	o odbc-postgresql-8.0.7
 	o offlineimap-4.0.11
 	o ogre-0.12.3
 	o onyx-5.1.2
@@ -956,9 +957,11 @@ Suggested package updates
 	o poppy-4.01
 	o poptop-1.3.0
 	o posh-0.4.3
-	o postgresql-8.1.1
-	o postgresql74-7.4.9
+	o postgresql-8.1.3
+	o postgresql73-7.3.14
+	o postgresql74-7.4.12
 	o postgresql73-7.3.11
+	o postgresql80-8.0.7
 	o postgresql_autodoc-1.25
 	o potrace-1.7
 	o pptp-1.6.0 [pkg/26842]
@@ -1040,6 +1043,7 @@ Suggested package updates
 	o robodoc-4.99.6
 	o root-5.04.00
 	o root-tail-1.2
+	o rosegarden-1.2.3
 	o rosegarden4-1.0 [replacing audio/rosegarden|pkgsrc-wip]
 	o rox-session-0.27
 	o roxirc-2.0
@@ -1132,7 +1136,7 @@ Suggested package updates
 	o sylpheed-devel-2.2.0rc0
 	o sympa-5.1
 	o sysinfo-4.2.2
-	o tcl-postgresql74-7.4.9
+	o tcl-postgresql74-7.4.12
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
