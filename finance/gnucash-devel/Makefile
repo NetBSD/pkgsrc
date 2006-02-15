@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/15 21:34:47 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/15 22:25:23 wiz Exp $
 #
 
 DISTNAME=		gnucash-1.9.0
@@ -14,6 +14,7 @@ DEPENDS+=		guile-www-[0-9]*:../../devel/guile-www
 USE_DIRS+=		gnome2-1.5 xdg-1.1
 USE_LIBTOOL=		yes
 USE_MAKEINFO=		yes
+USE_MSGFMT_PLURALS=	yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
