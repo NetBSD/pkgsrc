@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/08 03:55:24 tv Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/15 20:08:41 rillig Exp $
 
 DISTNAME=	nologinmsg-1.0
 CATEGORIES=	shells sysutils
@@ -8,17 +8,16 @@ MAINTAINER=	cjep@NetBSD.org
 #HOMEPAGE=
 COMMENT=	More functional native binary replacement for /sbin/nologin
 
+SUBST_CLASSES+=		nlm
+SUBST_STAGE.nlm=	pre-configure
+SUBST_FILES.nlm=	nologinmsg.8 pathnames.h
+SUBST_SED.nlm=		-e 's|/usr/local/etc|${PKG_SYSCONFDIR}|g'
+
 LIBS.Linux+=	-lnbcompat
 LIBS.IRIX+=	-lnbcompat
-MAKE_FLAGS+=	LDADD="${LIBS:Q}"
-
-post-patch:
-	${MV} ${WRKSRC}/nologinmsg.8 ${WRKSRC}/nologinmsg.8.1
-	${SED} -e 's|/usr/local/etc|${PKG_SYSCONFDIR}|g' 	\
-			${WRKSRC}/nologinmsg.8.1 > ${WRKSRC}/nologinmsg.8
-	${MV} ${WRKSRC}/pathnames.h ${WRKSRC}/pathnames.h.1
-	${SED} -e 's|/usr/local/etc|${PKG_SYSCONFDIR}|g' 	\
-			${WRKSRC}/pathnames.h.1 > ${WRKSRC}/pathnames.h
+MAKE_FLAGS+=	LDADD=${LIBS:M*:Q}
+MAKE_FLAGS+=	BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q}
+MAKE_FLAGS+=	MANOWN=${MANOWN:Q} MANGRP=${MANGRP:Q}
 
 .include "../../mk/bsd.prefs.mk"
 # XXX: ${OPSYS} != "NetBSD" ?
