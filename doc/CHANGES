@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12918 2006/02/15 21:16:15 joerg Exp $
+$NetBSD: CHANGES,v 1.12919 2006/02/15 23:40:48 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -981,3 +981,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/cups to 1.1.23nb7 [joerg 2006-02-15]
 	Updated security/p5-Crypt-DSA to 0.13 [heinz 2006-02-15]
 	Updated www/lighttpd to 1.4.10nb1 [joerg 2006-02-15]
+	Updated security/p5-Crypt-OpenSSL-DSA to 0.13 [heinz 2006-02-15]
+	Updated security/p5-Crypt-OpenSSL-RSA to 0.22 [heinz 2006-02-15]
+	Updated net/p5-Net-CIDR-Lite to 0.20 [heinz 2006-02-15]
+	Updated mail/p5-Mail-SPF-Query to 1.999 [heinz 2006-02-15]
