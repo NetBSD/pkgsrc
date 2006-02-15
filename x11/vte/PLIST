@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/08/26 16:37:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/02/15 18:03:29 drochner Exp $
 bin/vte
 include/vte/pty.h
 include/vte/reaper.h
@@ -21,7 +21,14 @@ share/doc/vte/VteReaper.html
 share/doc/vte/VteTerminal.html
 share/doc/vte/VteTerminalAccessible.html
 share/doc/vte/ch01.html
+share/doc/vte/home.png
 share/doc/vte/index.html
+share/doc/vte/index.sgml
+share/doc/vte/left.png
+share/doc/vte/right.png
+share/doc/vte/style.css
+share/doc/vte/up.png
+share/doc/vte/vte.devhelp
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/ang/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/vte.mo
@@ -57,6 +64,8 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/ka/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/ky/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/li/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/vte.mo
