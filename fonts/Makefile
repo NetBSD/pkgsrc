@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2006/02/03 00:38:28 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2006/02/15 23:39:04 abs Exp $
 #
 
 COMMENT=	Fonts
@@ -47,8 +47,8 @@ SUBDIR+=	cyr-rfx-koi8-o
 SUBDIR+=	cyr-rfx-koi8-ru
 SUBDIR+=	cyr-rfx-koi8-ub
 SUBDIR+=	cyr-rfx-koi8_1
-SUBDIR+=	cyr-rfx-mac-cyrillic
 #SUBDIR+=	cyr-rfx-share		# only shared files for cyr-rfx-*
+SUBDIR+=	cyr-rfx-mac-cyrillic
 SUBDIR+=	cyr-rfx-windows_1251
 SUBDIR+=	cyr-rfx-winlatin_1
 SUBDIR+=	dbz-ttf
@@ -94,6 +94,7 @@ SUBDIR+=	ms-ttf
 SUBDIR+=	oto
 SUBDIR+=	p5-Font-AFM
 SUBDIR+=	p5-Font-TTF
+SUBDIR+=	p5-Font-TTFMetrics
 SUBDIR+=	pcf2bdf
 SUBDIR+=	profont
 SUBDIR+=	py-TTFQuery
