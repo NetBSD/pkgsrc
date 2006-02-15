@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2005/10/16 08:20:26 heinz Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/15 22:28:06 heinz Exp $
 #
 
-DISTNAME=		Net-CIDR-Lite-0.18
+DISTNAME=		Net-CIDR-Lite-0.20
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5ncl
 CATEGORIES=		net perl5
