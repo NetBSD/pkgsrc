@@ -1,4 +1,4 @@
-$NetBSD: README,v 1.1 2006/02/04 04:10:12 rillig Exp $
+$NetBSD: README,v 1.2 2006/02/15 18:12:37 rillig Exp $
 
 == Current problems ==
 
@@ -31,3 +31,26 @@ kind of tool. It does not provide:
 - Structured data types
 
 The pkglint source code is much too big for a single file.
+
+== The pkglint type system ==
+
+The framework for defining data types in the makevars.map file is
+insufficient. It does not allow ACLs that specify which variables may
+be read or written by the various actors in pkgsrc. At the moment, the
+data type and the permissions are intermixed (see type Readonly).
+
+Actors:
+	package	-> the package author
+	system	-> the pkgsrc infrastructure
+	include	-> included make files
+	bl3	-> buildlink3 files
+	user	-> the user via mk.conf
+	cmdline	-> the user via the command line
+
+Actions:
+	default	-> provide a default value for a variable
+	append	-> append to a list
+	write	-> create or overwrite a variable
+	readpp	-> read the value of a variable during preprocessing
+	read	-> read the value of a variable during execution of the
+		   shell commands
