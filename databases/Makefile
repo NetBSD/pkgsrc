@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.195 2005/11/24 18:47:32 wiz Exp $
+# $NetBSD: Makefile,v 1.195.2.1 2006/02/15 15:50:11 salo Exp $
 #
 
 COMMENT=	Databases
@@ -190,7 +190,6 @@ SUBDIR+=	unixodbc
 SUBDIR+=	unixodbc-DataManager
 SUBDIR+=	unixodbc-ODBCConfig
 SUBDIR+=	xmysql
-SUBDIR+=	xmysqladmin
 SUBDIR+=	xsqlmenu
 SUBDIR+=	yasql
 SUBDIR+=	zope-mysql
