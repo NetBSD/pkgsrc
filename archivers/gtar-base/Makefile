@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/02/05 23:08:04 joerg Exp $
+# $NetBSD: Makefile,v 1.49 2006/02/15 18:00:10 reed Exp $
 #
 
 DISTNAME=       tar-1.15.1
@@ -18,6 +18,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -57,9 +58,8 @@ PLIST_SUBST+=		IF_LIBEXEC_RMT="@comment "
 .endif
 
 post-install:
-	${INSTALL_MAN_DIR} ${PREFIX}/man/man1
 	${INSTALL_DATA} ${FILESDIR}/gtar.1 \
-		${PREFIX}/man/man1/${GTAR_PROGRAM_PREFIX}tar.1
+		${PREFIX}/${PKGMANDIR}/man1/${GTAR_PROGRAM_PREFIX}tar.1
 .if ${GTAR_PROGRAM_PREFIX} != "g"
 	${LN} -sf ${GTAR_PROGRAM_PREFIX}tar ${PREFIX}/bin/"gtar"
 .endif
