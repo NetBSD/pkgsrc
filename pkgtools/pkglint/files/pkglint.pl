@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.518 2006/02/15 16:10:49 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.519 2006/02/15 17:00:02 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2304,7 +2304,7 @@ sub checkline_mk_shellword($$$) {
 			my $vartype = get_vartypes_map()->{$varname};
 
 			if ($vartype !~ qr"^List") {
-				$line->log_warning("Please use \${${varname}:Q} instead of \${${varname}}.");
+				$line->log_warning("[experimental] Please use \${${varname}:Q} instead of \${${varname}}.");
 			}
 		} else {
 			$opt_debug and $line->log_warning("Not sure whether the variable ${varname} needs quoting.");
@@ -2545,11 +2545,11 @@ sub checkline_mk_shelltext($$) {
 
 		$line->log_debug("[" . scst_statename->[$state] . "] shellword=${shellword}");
 
-		checkline_mk_shellword($line, $shellword, (
-		       $state != SCST_CASE
-		    && $state != SCST_FOR_CONT
-		    && $state != SCST_SET_CONT
-		    && ($state != SCST_START || $shellword !~ regex_sh_varassign)));
+		checkline_mk_shellword($line, $shellword, !(
+		       $state == SCST_CASE
+		    || $state == SCST_FOR_CONT
+		    || $state == SCST_SET_CONT
+		    || ($state == SCST_START && $shellword =~ regex_sh_varassign)));
 
 		#
 		# Actions associated with the current state
