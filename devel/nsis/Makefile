@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:08:49 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/15 17:27:19 rillig Exp $
 #
 
 DISTNAME=	nsis-${NSIS_VER}
@@ -30,22 +30,21 @@ INSTALLATION_DIRS=	bin share/nsis
 SUBST_CLASSES+=		makensis
 SUBST_STAGE.makensis=	post-patch
 SUBST_FILES.makensis=	makensis.sh
-SUBST_SED.makensis=	-e s,@@SH@@,${SH}, \
-			-e s,@@MAKENSIS@@,${MAKENSIS_BIN},
+SUBST_SED.makensis=	-e s,@@SH@@,${SH:Q}, \
+			-e s,@@MAKENSIS@@,${MAKENSIS_BIN:Q},
 
 post-extract:
-	${CP} ${FILESDIR}/makensis.sh ${WRKSRC}
+	${CP} ${FILESDIR:Q}/makensis.sh ${WRKSRC:Q}
 
 do-build:
-	cd ${WRKSRC} &&					\
-	    ${SCONS_BIN} SKIPSTUBS=all SKIPPLUGINS=all	\
-	        SKIPUTILS=all SKIPMISC=all VERSION=${NSIS_VER}
+	cd ${WRKSRC:Q} &&						\
+	    ${SCONS_BIN:Q} SKIPSTUBS=all SKIPPLUGINS=all		\
+	        SKIPUTILS=all SKIPMISC=all VERSION=${NSIS_VER:Q}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/build/release/makensis/makensis	\
-	    ${MAKENSIS_BIN}
-	${INSTALL_SCRIPT} ${WRKSRC}/makensis.sh ${PREFIX}/bin/makensis
-	cd ${WRKDIR}/${DISTNAME} && ${FIND} . -type f | \
-	    ${PAX} -rw ${PREFIX}/share/nsis
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/build/release/makensis/makensis	\
+	    ${MAKENSIS_BIN:Q}
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/makensis.sh ${PREFIX:Q}/bin/makensis
+	cd ${WRKDIR:Q}/${DISTNAME:Q} && ${PAX} -rw . ${PREFIX:Q}/share/nsis
 
 .include "../../mk/bsd.pkg.mk"
