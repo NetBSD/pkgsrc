@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.85 2006/02/15 15:45:43 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.86 2006/02/15 15:50:38 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -173,3 +173,5 @@ Pullup ticket 1136 - requested by Martti Kuparinen
 security update for php5
 Pullup ticket 1133 - requested by Joerg Sonnenberger
 fix race condition in xorg's Xsession
+Pullup ticket 1137 - requested by Joerg Sonnenberger
+remove xmysqladmin
