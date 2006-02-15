@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.15 2006/02/15 02:53:29 minskim Exp $
+
+--- configure.orig	2006-02-12 12:13:19.000000000 -0800
++++ configure
+@@ -30100,8 +30100,10 @@ fi
+ 
+ 
+ 
++
+ for ac_func in lrand48 drand48 srand48 setmode setenv getenv \
+ 	__freadable _sysconf getrusage strerror cbrt lsqrt vsnprintf \
++	_NSGetEnviron \
+ 	strtoul strtoll strtoull uname
+ do
+ as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
+@@ -30353,8 +30355,10 @@ done
+ 
+ 
+ 
++
+ for ac_header in stdarg.h stddef.h stddef.h stdlib.h stdint.h malloc.h \
+ 	search.h getopt.h pthread.h values.h float.h limits.h termios.h \
++	crt_externs.h \
+ 	errno.h time.h sys/time.h sys/times.h sys/types.h unistd.h fenv.h \
+ 	sys/select.h fpu_control.h sys/fpu.h strings.h sys/socket.h sys/stat.h
+ do
