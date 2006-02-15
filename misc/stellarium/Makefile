@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:14 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/15 18:43:45 drochner Exp $
 #
 
-DISTNAME=		stellarium-0.6.0
-PKGREVISION=		4
+DISTNAME=		stellarium-0.7.1
 CATEGORIES=		misc
-MASTER_SITES=		http://stellarium.free.fr/download/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=stellarium/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://stellarium.free.fr/
@@ -12,6 +11,7 @@ COMMENT=		Generate photorealistic skys with OpenGL
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=	yes
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
