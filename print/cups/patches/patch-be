@@ -1,31 +1,34 @@
-$NetBSD: patch-be,v 1.1 2005/12/17 04:22:55 jlam Exp $
+$NetBSD: patch-be,v 1.2 2006/02/15 19:06:13 joerg Exp $
 
 --- pdftops/Stream.cxx.orig	2004-02-02 17:41:09.000000000 -0500
 +++ pdftops/Stream.cxx
-@@ -404,18 +404,34 @@ void ImageStream::skipLine() {
- 
- StreamPredictor::StreamPredictor(Stream *strA, int predictorA,
- 				 int widthA, int nCompsA, int nBitsA) {
-+  int totalBits;
-+
-   str = strA;
-   predictor = predictorA;
+@@ -15,6 +15,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <stddef.h>
++#include <limits.h>
+ #ifndef WIN32
+ #include <unistd.h>
+ #endif
+@@ -409,13 +410,30 @@ StreamPredictor::StreamPredictor(Stream 
    width = widthA;
    nComps = nCompsA;
    nBits = nBitsA;
 +  predLine = NULL;
 +  ok = gFalse;
++
++  if (width <= 0 || nComps <= 0 || nBits <= 0 ||
++      nComps >= INT_MAX / nBits ||
++      width >= INT_MAX / nComps / nBits) {
++    return;
++  }
  
    nVals = width * nComps;
-+  totalBits = nVals * nBits;
-+  if (totalBits == 0 ||
-+      (totalBits / nBits) / nComps != width ||
-+      totalBits + 7 < 0) {
++  if (nVals * nBits + 7 <= 0) {
 +    return;
 +  }
    pixBytes = (nComps * nBits + 7) >> 3;
--  rowBytes = ((nVals * nBits + 7) >> 3) + pixBytes;
-+  rowBytes = ((totalBits + 7) >> 3) + pixBytes;
+   rowBytes = ((nVals * nBits + 7) >> 3) + pixBytes;
 +  if (rowBytes < 0) {
 +    return;
 +  }
@@ -38,7 +41,7 @@ $NetBSD: patch-be,v 1.1 2005/12/17 04:22:55 jlam Exp $
  }
  
  StreamPredictor::~StreamPredictor() {
-@@ -991,6 +1007,10 @@ LZWStream::LZWStream(Stream *strA, int p
+@@ -991,6 +1009,10 @@ LZWStream::LZWStream(Stream *strA, int p
      FilterStream(strA) {
    if (predictor != 1) {
      pred = new StreamPredictor(this, predictor, columns, colors, bits);
@@ -49,7 +52,17 @@ $NetBSD: patch-be,v 1.1 2005/12/17 04:22:55 jlam Exp $
    } else {
      pred = NULL;
    }
-@@ -2891,6 +2911,10 @@ GBool DCTStream::readBaselineSOF() {
+@@ -1239,6 +1261,9 @@ CCITTFaxStream::CCITTFaxStream(Stream *s
+   endOfLine = endOfLineA;
+   byteAlign = byteAlignA;
+   columns = columnsA;
++  if (columns + 3 < 1 || columns + 4 < 1 || columns < 1) {
++    columns = 1;
++  }
+   rows = rowsA;
+   endOfBlock = endOfBlockA;
+   black = blackA;
+@@ -2891,6 +2916,10 @@ GBool DCTStream::readBaselineSOF() {
    height = read16();
    width = read16();
    numComps = str->getChar();
@@ -60,7 +73,7 @@ $NetBSD: patch-be,v 1.1 2005/12/17 04:22:55 jlam Exp $
    if (prec != 8) {
      error(getPos(), "Bad DCT precision %d", prec);
      return gFalse;
-@@ -2917,6 +2941,10 @@ GBool DCTStream::readProgressiveSOF() {
+@@ -2917,6 +2946,10 @@ GBool DCTStream::readProgressiveSOF() {
    height = read16();
    width = read16();
    numComps = str->getChar();
@@ -71,7 +84,33 @@ $NetBSD: patch-be,v 1.1 2005/12/17 04:22:55 jlam Exp $
    if (prec != 8) {
      error(getPos(), "Bad DCT precision %d", prec);
      return gFalse;
-@@ -3249,6 +3277,10 @@ FlateStream::FlateStream(Stream *strA, i
+@@ -2939,6 +2972,10 @@ GBool DCTStream::readScanInfo() {
+ 
+   length = read16() - 2;
+   scanInfo.numComps = str->getChar();
++  if (scanInfo.numComps <= 0 || scanInfo.numComps > 4) {
++    error(getPos(), "Bad number of components in DCT stream");
++    return gFalse;
++  }
+   --length;
+   if (length != 2 * scanInfo.numComps + 3) {
+     error(getPos(), "Bad DCT scan info block");
+@@ -3013,12 +3050,12 @@ GBool DCTStream::readHuffmanTables() {
+   while (length > 0) {
+     index = str->getChar();
+     --length;
+-    if ((index & 0x0f) >= 4) {
++    if ((index & 0x0f) >= 4 || (index & ~0x10) < 0) {
+       error(getPos(), "Bad DCT Huffman table");
+       return gFalse;
+     }
+     if (index & 0x10) {
+-      index &= 0x0f;
++      index &= 0x03;
+       if (index >= numACHuffTables)
+ 	numACHuffTables = index+1;
+       tbl = &acHuffTables[index];
+@@ -3249,6 +3286,10 @@ FlateStream::FlateStream(Stream *strA, i
      FilterStream(strA) {
    if (predictor != 1) {
      pred = new StreamPredictor(this, predictor, columns, colors, bits);
