@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2005/08/04 10:32:01 rillig Exp $
+# $NetBSD: options.mk,v 1.6 2006/02/15 13:58:07 rillig Exp $
 #
 
 ### The charset option enables input/display support for various 8-bit
@@ -69,8 +69,7 @@ CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--with-screen=slang
 .include "../../devel/libslang/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mncurses)
-SCREENTYPE=		ncurses
-USE_NCURSES=		color
+USE_NCURSES=		yes
 CONFIGURE_ARGS+=	--with-screen=ncurses
 .include "../../devel/ncurses/buildlink3.mk"
 .else
