@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/02/07 13:28:08 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/02/15 16:41:04 drochner Exp $
 ${PYINC}/numarray/arraybase.h
 ${PYINC}/numarray/arrayif.h
 ${PYINC}/numarray/arrayobject.h
@@ -90,6 +90,9 @@ ${PYSITELIB}/numarray/convolve/lineshape.pyo
 ${PYSITELIB}/numarray/dotblas.py
 ${PYSITELIB}/numarray/dotblas.pyc
 ${PYSITELIB}/numarray/dotblas.pyo
+${PYSITELIB}/numarray/dtype.py
+${PYSITELIB}/numarray/dtype.pyc
+${PYSITELIB}/numarray/dtype.pyo
 ${PYSITELIB}/numarray/examples/__init__.py
 ${PYSITELIB}/numarray/examples/__init__.pyc
 ${PYSITELIB}/numarray/examples/__init__.pyo
