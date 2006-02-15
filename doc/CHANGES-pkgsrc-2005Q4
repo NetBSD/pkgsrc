@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.84 2006/02/15 14:12:42 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.85 2006/02/15 15:45:43 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -171,3 +171,5 @@ Pullup ticket 1125 - requested by Matthias Drochner
 security updates for libtasn1 and gnutls
 Pullup ticket 1136 - requested by Martti Kuparinen
 security update for php5
+Pullup ticket 1133 - requested by Joerg Sonnenberger
+fix race condition in xorg's Xsession
