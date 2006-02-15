@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12916 2006/02/15 19:07:41 joerg Exp $
+$NetBSD: CHANGES,v 1.12917 2006/02/15 20:53:05 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -966,12 +966,17 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/glibmm to 2.8.4 [adam 2006-02-14]
 	Updated games/dopewars to 1.5.12 [adam 2006-02-14]
 	Added net/mbrowse version 0.3.1 [heinz 2006-02-14]
+	Updated math/p5-Math-Pari to 2.010703 [heinz 2006-02-14]
 	Updated x11/gtkmm to 2.8.3 [adam 2006-02-14]
 	Updated www/horde3 to 3.0.9nb4 [seb 2006-02-14]
 	Updated mail/imp4 to 4.0.4nb3 [seb 2006-02-14]
 	Updated mail/turba to 2.0.5nb3 [seb 2006-02-14]
+	Updated security/p5-Crypt-RSA to 1.57 [heinz 2006-02-14]
+	Added devel/p5-Class-ErrorHandler version 0.01 [heinz 2006-02-15]
+	Updated textproc/p5-Convert-PEM to 0.07 [heinz 2006-02-15]
 	Added www/p5-HTML-Prototype version 1.43 [hiramatsu 2006-02-15]
 	Added www/p5-HTML-Prototype-Useful version 0.04 [hiramatsu 2006-02-15]
 	Removed databases/xmysqladmin [joerg 2006-02-15]
 	Updated www/lighttpd to 1.4.10 [joerg 2006-02-15]
 	Updated print/cups to 1.1.23nb7 [joerg 2006-02-15]
+	Updated security/p5-Crypt-DSA to 0.13 [heinz 2006-02-15]
