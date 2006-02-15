@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2005/12/06 08:32:22 jdolecek Exp $
+# $NetBSD: Makefile,v 1.22.2.1 2006/02/15 14:12:20 salo Exp $
 #
 
 PKGNAME=		php-${PHP_BASE_VERS}
-PKGREVISION=		2
+#PKGREVISION=		1
 CATEGORIES=		lang
 
 HOMEPAGE=		http://www.php.net/
@@ -39,7 +39,7 @@ post-install:
 	${SED} -e 's,\(-d output_buffering=1\) \(\$$INCDIR/pearcmd.php\),\1 -n \2,' ${PREFIX}/bin/pear > ${PREFIX}/bin/pear.new && \
 		${MV} ${PREFIX}/bin/pear.new ${PREFIX}/bin/pear
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${PREFIX}/bin/php
-	${INSTALL_DATA} ${WRKSRC}/sapi/cli/php.1 ${PREFIX}/man/man1/php.1
+	${INSTALL_DATA} ${WRKSRC}/sapi/cli/php.1 ${PREFIX}/${PKGMANDIR}/man1/php.1
 	${INSTALL_DATA_DIR} ${CGIDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cgi/php ${CGIDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
