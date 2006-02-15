@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.61 2006/02/15 11:41:01 rillig Exp $
+# $NetBSD: makevars.map,v 1.62 2006/02/15 16:10:49 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -65,6 +65,7 @@ BUILDLINK_LIBDIRS	List of Pathname
 BUILDLINK_LIBS		List of LdFlag
 BUILDLINK_PACKAGES	BuildlinkPackages
 BUILDLINK_PASSTHRU_DIRS	List+ of Pathname
+BUILDLINK_PASSTHRU_RPATHDIRS	List+ of Pathname
 BUILDLINK_PKGSRCDIR	RelativePkgDir
 BUILDLINK_PREFIX	Pathname
 BUILDLINK_RECOMMENDED	List!+ of Dependency
@@ -124,6 +125,7 @@ DJB_CONFIG_CMDS		List of ShellWord
 # ^^ ShellCommand, terminated by a semicolon
 DJB_RESTRICTED		YesNo
 DJB_MAKE_TARGETS	List of Identifier
+DJB_SLASHPACKAGE	YesNo
 DL_AUTO_VARS		Yes
 DL_LIBS			List+ of LdFlag
 EMACS_BIN		Readonly
@@ -137,6 +139,7 @@ EMACS_USE_LEIM		Yes
 EMACS_VERSIONS_ACCEPTED	List of { emacs21 emacs21nox emacs20 xemacs215 xemacs214 }
 EMACS_VERSION_REQD	List+
 # ^^ of Version
+EVAL_PREFIX		List! of ShellWord
 EXTRACT_CMD		List of ShellWord
 EXTRACT_ELEMENTS	List of Pathmask
 EXTRACT_ONLY		List of Pathname
@@ -157,6 +160,7 @@ FAM_TYPE		Readonly
 FETCH_BEFORE_ARGS	List of ShellWord
 FILESDIR		RelativePkgPath
 FILES_SUBST		List+ of ShellWord
+FILES_SUBST_SED		List+ of ShellWord
 FONTS_DIRS		List+ of Pathname
 GCC_REQD		List+
 GENERATE_PLIST		List+ of ShellWord
@@ -174,6 +178,7 @@ INFO_FILES		List of Pathmask
 INSTALLATION_DIRS	List of Pathname
 INSTALL_DIRS		List of WrksrcSubdirectory
 INSTALL_EXTRA_TMPL	List+ of Pathname
+INSTALL_FILE		Pathname
 INSTALL_MAKE_FLAGS	List+ of ShellWord
 INSTALL_SCRIPTS_ENV	List+ of ShellWord
 INSTALL_TARGET		List of Identifier
@@ -187,6 +192,7 @@ KRB5_TYPE		Readonly
 LDFLAGS			List+ of LdFlag
 LIBS			List+ of LdFlag
 LIBTOOL_OVERRIDE	List+ of Pathmask
+LICENCE			Identifier
 LICENSE			Identifier
 LTCONFIG_OVERRIDE	List+ of Pathmask
 MAINTAINER		Mail_Address
