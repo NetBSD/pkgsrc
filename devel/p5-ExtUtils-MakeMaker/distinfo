@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/02/15 23:17:46 abs Exp $
+
+SHA1 (ExtUtils-MakeMaker-6.30.tar.gz) = 6845b52970a35ef7cfddce8b2a9fc23b0a2b3812
+RMD160 (ExtUtils-MakeMaker-6.30.tar.gz) = 3cf6d412e1fb10bd7a432216a860df4e5d1d862d
+Size (ExtUtils-MakeMaker-6.30.tar.gz) = 219796 bytes
