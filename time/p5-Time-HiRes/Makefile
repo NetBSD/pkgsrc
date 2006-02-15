@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2005/08/06 06:19:35 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.21 2006/02/15 22:53:59 abs Exp $
 
-DISTNAME=		Time-HiRes-1.66
+DISTNAME=		Time-HiRes-1.87
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
 SVR4_PKGNAME=		p5thr
 CATEGORIES=		time perl5
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Time/}
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/J/JH/JHI/}
 
 MAINTAINER=		bad@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Time-HiRes/
