@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.12 2005/02/25 17:10:09 drochner Exp $
+$NetBSD: distinfo,v 1.13 2006/02/15 17:37:08 drochner Exp $
 
-SHA1 (Numeric-23.7.tar.gz) = 3fe90c14692c9fe9da0d4202df4036e8ecfdd365
-RMD160 (Numeric-23.7.tar.gz) = 1ff89d0e809c97b5cc06184676503bfee12c2fcd
-Size (Numeric-23.7.tar.gz) = 725824 bytes
+SHA1 (Numeric-24.2.tar.gz) = 72869ef80c12630a9a125ba10c96093b6ae16aff
+RMD160 (Numeric-24.2.tar.gz) = c9502db28663558c535e236392c9beddec9743bb
+Size (Numeric-24.2.tar.gz) = 743800 bytes
 SHA1 (patch-aa) = 0096fe9de4c3912cdefd3278385edd4b7f55cf63
-SHA1 (patch-ab) = 26f8c8bbd2bd74b5fcefb474d66d5d1fd411fbd4
+SHA1 (patch-ac) = 45ca40e38123dc72ec42b3775b2401c0037674c0
