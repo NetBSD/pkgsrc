@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.516 2006/02/14 22:03:19 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.517 2006/02/15 11:41:01 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1931,7 +1931,7 @@ sub determine_used_variables($) {
 	foreach my $line (@{$lines}) {
 		$line->log_debug(".");
 		$rest = $line->text;
-		while ($rest =~ s/(?:\$\{|defined\(|empty\()([0-9.A-Z_a-z]+)[:})]//) {
+		while ($rest =~ s/(?:\$\{|defined\(|empty\()([0-9+.A-Z_a-z]+)[:})]//) {
 			my ($varname) = ($1);
 			$varuse->{$varname} = $line;
 			$line->log_debug("Variable ${varname} is used.");
@@ -2858,6 +2858,27 @@ sub checkline_mk_vartype_basic($$$$$$) {
 			#$line->log_warning("Identifiers should be given directly.");
 		} elsif ($value !~ qr"^[+\-.0-9A-Z_a-z]+$") {
 			$line->log_warning("Invalid identifier \"${value}\".");
+		}
+
+	} elsif ($type eq "LdFlag") {
+		if ($value =~ qr"^-L(.*)") {
+			my ($dirname) = ($1);
+
+			$opt_debug and $line->log_warning("Unchecked directory ${dirname} in ${varname}.");
+
+		} elsif ($value =~ qr"^-l(.*)") {
+			my ($libname) = ($1);
+
+			$opt_debug and $line->log_warning("Unchecked library name ${libname} in ${varname}.");
+
+		} elsif ($value =~ qr"^-.*") {
+			$line->log_warning("Unknown linker flag \"${value}\".");
+
+		} elsif ($value =~ regex_unresolved) {
+			$line->log_debug("Unresolved LDFLAG: ${value}\n");
+
+		} else {
+			$line->log_warning("Linker flag \"${value}\" does not start with a dash.");
 		}
 
 	} elsif ($type eq "Mail_Address") {
