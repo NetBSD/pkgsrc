@@ -1,0 +1,70 @@
+$NetBSD: patch-ap,v 1.6 2006/02/15 19:06:13 joerg Exp $
+
+--- pdftops/JBIG2Stream.cxx.orig	2006-02-13 22:20:31.000000000 +0100
++++ pdftops/JBIG2Stream.cxx
+@@ -13,6 +13,7 @@
+ #endif
+ 
+ #include <stdlib.h>
++#include <limits.h>
+ #include "GList.h"
+ #include "Error.h"
+ #include "JBIG2Stream.h"
+@@ -1001,6 +1002,10 @@ JBIG2Bitmap::JBIG2Bitmap(Guint segNumA, 
+   w = wA;
+   h = hA;
+   line = (wA + 7) >> 3;
++  if (h < 0 || line <= 0 || h >= INT_MAX / line) {
++    data = NULL;
++    return;
++  }
+   data = (Guchar *)gmalloc(h * line);
+ }
+ 
+@@ -1010,6 +1015,12 @@ JBIG2Bitmap::JBIG2Bitmap(Guint segNumA, 
+   w = bitmap->w;
+   h = bitmap->h;
+   line = bitmap->line;
++
++  if (h < 0 || line <= 0 || h >= INT_MAX / line) {
++    data = NULL;
++    return;
++  }
++
+   data = (Guchar *)gmalloc(h * line);
+   memcpy(data, bitmap->data, h * line);
+ }
+@@ -1036,7 +1047,7 @@ JBIG2Bitmap *JBIG2Bitmap::getSlice(Guint
+ }
+ 
+ void JBIG2Bitmap::expand(int newH, Guint pixel) {
+-  if (newH <= h) {
++  if (newH <= h || line <= 0 || newH >= INT_MAX / line) {
+     return;
+   }
+   data = (Guchar *)grealloc(data, newH * line);
+@@ -2576,6 +2587,14 @@ void JBIG2Stream::readHalftoneRegionSeg(
+     error(getPos(), "Bad symbol dictionary reference in JBIG2 halftone segment");
+     return;
+   }
++  if (gridH == 0 || gridW >= INT_MAX / gridH) {
++    error(getPos(), "Bad size in JBIG2 halftone segment");
++    return;
++  }
++  if (w == 0 || h >= INT_MAX / w) {
++    error(getPos(), "Bad size in JBIG2 bitmap segment");
++    return;
++  }
+   patternDict = (JBIG2PatternDict *)seg;
+   bpp = 0;
+   i = 1;
+@@ -2763,6 +2782,9 @@ JBIG2Bitmap *JBIG2Stream::readGenericBit
+   int code1, code2, code3;
+   int x, y, a0, pix, i, refI, codingI;
+ 
++  if (w < 0 || h <= 0 || w >= INT_MAX / h)
++    return NULL;
++
+   bitmap = new JBIG2Bitmap(0, w, h);
+   bitmap->clearToZero();
+ 
