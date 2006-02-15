@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4615 2006/02/15 20:51:58 wiz Exp $
+$NetBSD: TODO,v 1.4616 2006/02/15 20:53:05 heinz Exp $
 
 Suggested new packages
 ======================
@@ -814,10 +814,7 @@ Suggested package updates
 	o p5-Compress-Bzip2-2.09
 	o p5-Convert-ASN1-0.19
 	o p5-Convert-BER-1.3101
-	o p5-Convert-PEM-0.07
 	o p5-Crypt-CipherSaber-1.00
-	o p5-Crypt-DSA-0.13
-	o p5-Crypt-RSA-1.56
 	o p5-DBD-Oracle-1.16
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-postgresql-1.32
@@ -860,7 +857,6 @@ Suggested package updates
 	o p5-Math-Bezier-0.02
 	o p5-Math-FFT-1.28
 	o p5-Math-MatrixReal-1.9
-	o p5-Math-Pari-2.010604
 	o p5-Module-Pluggable-2.96
 	o p5-Module-Signature-0.50
 	o p5-Msgcat-1.03
