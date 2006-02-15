@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.517 2006/02/15 11:41:01 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.518 2006/02/15 16:10:49 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2178,7 +2178,7 @@ sub checkline_relative_pkgdir($$) {
 	checkline_relative_path($line, $path);
 	$path = resolve_relative_path($path, false);
 
-	if ($path !~ qr"^\.\./\.\./[^/]+/[^/]+$") {
+	if ($path !~ qr"^(?:\./)?\.\./\.\./[^/]+/[^/]+$") {
 		$line->log_warning("\"${path}\" is not a valid relative package directory.");
 		$line->explain(
 			"A relative pathname always starts with \"../../\", followed",
@@ -2297,10 +2297,18 @@ sub checkline_mk_shellword($$$) {
 	my ($line, $shellword, $check_quoting) = @_;
 	my ($rest, $state);
 
-	if ($shellword =~ qr"^\$\{(${regex_varname})(:.+)?\}$") {
+	if ($opt_warn_quoting && $shellword =~ qr"^\$\{(${regex_varname})(:.+)?\}$") {
 		my ($varname, $mod) = ($1, $2);
 
-		$opt_debug and $line->log_warning("Not sure whether the variable ${varname} needs quoting.");
+		if (exists(get_vartypes_map()->{$varname}) && !(defined($mod) && $mod =~ qr":Q$")) {
+			my $vartype = get_vartypes_map()->{$varname};
+
+			if ($vartype !~ qr"^List") {
+				$line->log_warning("Please use \${${varname}:Q} instead of \${${varname}}.");
+			}
+		} else {
+			$opt_debug and $line->log_warning("Not sure whether the variable ${varname} needs quoting.");
+		}
 		return;
 	}
 
@@ -2882,7 +2890,7 @@ sub checkline_mk_vartype_basic($$$$$$) {
 		}
 
 	} elsif ($type eq "Mail_Address") {
-		if ($value =~ qr"^([-\w\d_.]+)\@([-\w\d.]+)$") {
+		if ($value =~ qr"^([+\-.0-9A-Z_a-z]+)\@([-\w\d.]+)$") {
 			my (undef, $domain) = ($1, $2);
 			if ($domain =~ qr"^NetBSD.org"i && $domain ne "NetBSD.org") {
 				$line->log_warning("Please write NetBSD.org instead of ${domain}.");
