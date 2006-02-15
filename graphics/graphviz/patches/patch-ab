@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.11 2006/02/15 02:53:29 minskim Exp $
+
+--- config.h.in.orig	2005-08-28 06:09:52.000000000 -0700
++++ config.h.in
+@@ -42,6 +42,9 @@
+ /* Define to 1 if you have the `cbrt' function. */
+ #undef HAVE_CBRT
+ 
++/* Define to 1 if you have the <crt_externs.h> header file. */
++#undef HAVE_CRT_EXTERNS_H
++
+ /* Define to 1 if you have the <dirent.h> header file, and it defines `DIR'.
+    */
+ #undef HAVE_DIRENT_H
+@@ -300,6 +303,9 @@
+ /* Define to 1 if the system has the type `_Bool'. */
+ #undef HAVE__BOOL
+ 
++/* Define to 1 if you have the `_NSGetEnviron' function. */
++#undef HAVE__NSGETENVIRON
++
+ /* Define to 1 if you have the `_sysconf' function. */
+ #undef HAVE__SYSCONF
+ 
