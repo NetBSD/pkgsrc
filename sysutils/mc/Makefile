@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2006/02/05 23:10:55 joerg Exp $
+# $NetBSD: Makefile,v 1.65 2006/02/15 20:15:46 rillig Exp $
 
 DISTNAME=	mc-4.6.1
 PKGREVISION=	1
@@ -23,22 +23,22 @@ PKG_SUGGESTED_OPTIONS=	charset edit                      slang subshell vfs
 .include "../../mk/bsd.options.mk"
 
 .if ${OPSYS} == "Linux"
-PLIST_SRC+=	${PKGDIR}/PLIST.cons.saver
+PLIST_SRC+=		${PKGDIR}/PLIST.cons.saver
 .endif
 
 # remove dir if no extensions were installed there
 post-install:
-	@${RMDIR} ${PREFIX}/lib/mc 2>/dev/null || ${TRUE}
+	@${RMDIR} ${PREFIX:Q}/lib/mc 2>/dev/null || ${TRUE}
 
 # we need working e2fsprogs and gpm packages first
 CONFIGURE_ARGS+=	--without-ext2undel
 CONFIGURE_ARGS+=	--without-gpm-mouse
 
-PLIST_SRC+=  	${PKGDIR}/PLIST
+PLIST_SRC+=		${PKGDIR}/PLIST
 
 .include "options.mk"
 
-PLIST_SRC+=	${PKGDIR}/PLIST.end
+PLIST_SRC+=		${PKGDIR}/PLIST.end
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
