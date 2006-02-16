@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:08:25 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/16 18:07:44 wiz Exp $
 
 DISTNAME=	kadu-0.4.3
 PKGREVISION=	2
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.kadu.net/
 COMMENT=	Chat client for Gadu-Gadu network (Poland)
 
 WRKSRC=			${WRKDIR}/kadu
+USE_DIRS+=		xdg-1.2
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
@@ -22,6 +23,7 @@ LIBS+=			${LIBOSSAUDIO}
 .include "../../chat/ekg/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../x11/qt3-tools/buildlink3.mk"
 
 .include "../../mk/ossaudio.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
