@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/26 03:58:06 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/02/16 18:11:03 wiz Exp $
 bin/install_iminitel
 bin/make_xtel_lignes
 bin/mdmdetect
@@ -34,4 +34,3 @@ lib/X11/fonts/xtel/fonts.alias
 ${IMAKE_MAN_DIR}/xtel.${IMAKE_MANNEWSUFFIX}
 ${IMAKE_MAN_DIR}/xteld.${IMAKE_MANNEWSUFFIX}
 @dirrm lib/X11/xtel
-@dirrm lib/X11/fonts/xtel
