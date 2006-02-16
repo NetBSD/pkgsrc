@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.6 2006/02/16 18:09:49 wiz Exp $
+
+--- Makefile.in.orig	2003-01-17 14:51:42.000000000 +0000
++++ Makefile.in
+@@ -23,7 +23,7 @@ MAL_INC = -I$(MALTOP)/mal/common \
+           -I$(MALTOP)/mal/client/common \
+           -I$(MALTOP)/mal/client/unix
+ 
+-LIBS = @libs@ $(PILOT_LIBS) $(GTKLIBS)
++LIBS = @LIBS@ $(PILOT_LIBS) $(GTKLIBS)
+ 
+ # CC options
+ CCDEFINES = @DEFS@
