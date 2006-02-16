@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:11:32 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/16 18:10:42 joerg Exp $
 
 DISTNAME=		control-center-1.4.0.5
 PKGREVISION=		2
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME control-center development library
 
 BUILD_USES_MSGFMT=	YES
+BROKEN_GETTEXT_DETECTION=	yes
 
 USE_DIRS+=		xdg-1.1 gnome1-1.5
 USE_X11BASE=		YES
