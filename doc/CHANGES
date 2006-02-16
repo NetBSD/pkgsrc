@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12928 2006/02/16 14:24:35 gavan Exp $
+$NetBSD: CHANGES,v 1.12929 2006/02/16 18:01:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1013,3 +1013,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated wm/ratpoison to 1.4.0beta4 [tonio 2006-02-16]
 	Updated pkgtools/pkg_comp to 1.27 [jmmv 2006-02-16]
 	Updated www/p5-HTML-Parser to 3.50 [gavan 2006-02-16]
+	Updated news/tin to 1.8.1 [wiz 2006-02-16]
