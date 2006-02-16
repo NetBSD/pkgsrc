@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12923 2006/02/16 10:29:56 abs Exp $
+$NetBSD: CHANGES,v 1.12924 2006/02/16 10:34:10 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -995,3 +995,18 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/multitail to 3.8.5 [rillig 2006-02-16]
 	Updated multimedia/ffmpeg to 0.4.9pre1 [abs 2006-02-16]
 	Removed multimedia/ffmpeg-devel [abs 2006-02-16]
+	Updated math/py-numarray to 1.5.1 [drochner 2006-02-16]
+	Added archivers/ucl version 1.03 [drochner 2006-02-16]
+	Updated archivers/file-roller to 2.12.3 [drochner 2006-02-16]
+	Updated math/py-Numeric to 24.2 [drochner 2006-02-16]
+	Updated graphics/gliv to 1.9.4 [drochner 2006-02-16]
+	Updated x11/vte to 0.11.18 [drochner 2006-02-16]
+	Updated print/poppler to 0.4.5 [drochner 2006-02-16]
+	Updated print/poppler-qt to 0.4.5 [drochner 2006-02-16]
+	Updated games/gnome2-games to 2.12.3 [drochner 2006-02-16]
+	Updated sysutils/nautilus-cd-burner to 2.12.3 [drochner 2006-02-16]
+	Updated www/liferea to 1.0.4 [drochner 2006-02-16]
+	Updated misc/stellarium to 0.7.1 [drochner 2006-02-16]
+	Updated security/gnupg to 1.4.2.1 [drochner 2006-02-16]
+	Updated databases/sqlite3 to 3.3.4 [drochner 2006-02-16]
+	Updated databases/sqlite3-tcl to 3.3.4 [drochner 2006-02-16]
