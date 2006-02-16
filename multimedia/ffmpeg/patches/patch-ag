@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2004/08/29 22:43:50 wiz Exp $
+$NetBSD: patch-ag,v 1.2 2006/02/16 10:26:30 abs Exp $
 
---- libavformat/audio.c.orig	2003-09-28 17:26:40.000000000 +0200
+--- libavformat/audio.c.orig	2004-06-19 05:59:34.000000000 +0200
 +++ libavformat/audio.c
 @@ -18,10 +18,19 @@
   */
@@ -164,7 +164,7 @@ $NetBSD: patch-ag,v 1.1 2004/08/29 22:43:50 wiz Exp $
      s->fd = audio_fd;
  
      return 0;
-@@ -239,7 +358,11 @@ static int audio_read_packet(AVFormatCon
+@@ -240,7 +359,11 @@ static int audio_read_packet(AVFormatCon
      AudioData *s = s1->priv_data;
      int ret, bdelay;
      int64_t cur_time;
@@ -175,8 +175,8 @@ $NetBSD: patch-ag,v 1.1 2004/08/29 22:43:50 wiz Exp $
 +#endif
      
      if (av_new_packet(pkt, s->frame_size) < 0)
-         return -EIO;
-@@ -274,9 +397,15 @@ static int audio_read_packet(AVFormatCon
+         return AVERROR_IO;
+@@ -276,9 +399,15 @@ static int audio_read_packet(AVFormatCon
      /* compute pts of the start of the packet */
      cur_time = av_gettime();
      bdelay = ret;
