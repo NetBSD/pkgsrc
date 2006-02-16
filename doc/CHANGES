@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12929 2006/02/16 18:01:37 wiz Exp $
+$NetBSD: CHANGES,v 1.12930 2006/02/16 18:04:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1014,3 +1014,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/pkg_comp to 1.27 [jmmv 2006-02-16]
 	Updated www/p5-HTML-Parser to 3.50 [gavan 2006-02-16]
 	Updated news/tin to 1.8.1 [wiz 2006-02-16]
+	Updated audio/solfege to 3.0.6nb3 [wiz 2006-02-16]
