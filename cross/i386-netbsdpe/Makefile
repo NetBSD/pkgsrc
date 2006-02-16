@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.18 2005/12/05 20:49:56 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2006/02/16 18:12:58 wiz Exp $
 
+DISTNAME=		cross-${TARGET_ARCH}-${DISTVERSION}
 DISTVERSION=		3.3.3
+PKGREVISION=		1
+CATEGORIES+=		cross lang
+MASTER_SITES=		http://chiharu.hauN.org/peace/dist/
+
 MAINTAINER=		peace-sacrifice@hauN.org
 HOMEPAGE=		http://chiharu.hauN.org/peace/
-MASTER_SITES=		http://chiharu.hauN.org/peace/dist/
 COMMENT=		Cross-compile environment for PEACE/i386
+
 # Need NetBSD headers in /usr/include
 ONLY_FOR_PLATFORM=	NetBSD-1.6[Q-Z]*-* NetBSD-[2-9]*-*
 CONFLICTS=		pth-[0-9]* pth-current-[0-9]* pth-syscall-[0-9]*
-DISTNAME=		cross-${TARGET_ARCH}-${DISTVERSION}
-CATEGORIES+=		cross lang
 USE_CROSSBASE=		yes
 
 WRKSRC=			${WRKDIR}/${GCC_DISTNAME}
@@ -19,6 +22,8 @@ BINUTILS_LDEMULATION=	i386pe
 TARGET_ARCH=		i386-netbsdpe
 GCC_CONFIGURE_ARGS+=	--enable-threads
 BINUTILS_EXTRAS=	dlltool dllwrap windres
+
+INFO_FILES=		bfd.info
 
 # Mingw pathes
 DISTFILES+=		gcc-3.3.3-20040217-1-src.diff.gz
