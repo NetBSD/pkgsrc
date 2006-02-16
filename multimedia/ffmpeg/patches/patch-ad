@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.3 2004/08/29 22:43:50 wiz Exp $
+$NetBSD: patch-ad,v 1.4 2006/02/16 10:26:30 abs Exp $
 
---- libavformat/Makefile.orig	2003-09-28 17:26:40.000000000 +0200
-+++ libavformat/Makefile	2004-08-14 14:50:54.000000000 +0200
-@@ -60,6 +60,11 @@
+--- libavformat/Makefile.orig	2004-04-24 17:16:23.000000000 +0200
++++ libavformat/Makefile
+@@ -68,6 +68,11 @@ endif
  
  ifeq ($(CONFIG_VORBIS),yes)
  OBJS+= ogg.o
@@ -13,8 +13,8 @@ $NetBSD: patch-ad,v 1.3 2004/08/29 22:43:50 wiz Exp $
 +EXTRALIBS += -lmp3lame
  endif
  
- LIB= $(LIBPREF)avformat$(LIBSUF)
-@@ -69,12 +74,14 @@
+ ifeq ($(TARGET_ARCH_SPARC64),yes)
+@@ -81,12 +86,14 @@ endif
  
  SRCS := $(OBJS:.o=.c) $(PPOBJS:.o=.cpp)
  
@@ -31,7 +31,7 @@ $NetBSD: patch-ad,v 1.3 2004/08/29 22:43:50 wiz Exp $
  
  $(SLIB): $(OBJS)
  ifeq ($(CONFIG_WIN32),yes)
-@@ -84,9 +91,6 @@
+@@ -96,9 +103,6 @@ else
  	$(CC) $(SHFLAGS) -o $@ $(OBJS) $(PPOBJS) $(EXTRALIBS)
  endif
  
@@ -41,17 +41,17 @@ $NetBSD: patch-ad,v 1.3 2004/08/29 22:43:50 wiz Exp $
  ifeq ($(BUILD_SHARED),yes)
  install: all install-headers
  ifeq ($(CONFIG_WIN32),yes)
-@@ -112,11 +116,11 @@
+@@ -124,11 +128,11 @@ install-headers:
                  "$(prefix)/include/ffmpeg"
  
  %.o: %.c
 -	$(CC) $(CFLAGS) -c -o $@ $< 
-+	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c -o $@ $< 
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c -o $@ $<
  
  # BeOS: remove -Wall to get rid of all the "multibyte constant" warnings
  %.o: %.cpp
 -	g++ $(subst -Wall,,$(CFLAGS)) -c -o $@ $< 
-+	$(LIBTOOL) --mode=compile $(CXX) $(subst -Wall,,$(CFLAGS)) -c -o $@ $< 
++	 $(LIBTOOL) --mode=compile $(CXX) $(subst -Wall,,$(CFLAGS)) -c -o $@ $<
  
- clean: 
+ distclean clean: 
  	rm -f *.o *.d .depend *~ *.a $(LIB)
