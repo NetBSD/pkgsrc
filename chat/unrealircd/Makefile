@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:08:26 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/16 21:30:06 adrianp Exp $
 
 DISTNAME=	Unreal3.2.4
 PKGNAME=	unrealircd-3.2.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	http://unrealircd.atlanti-ka.org/ \
 		http://www.ilmarinen.us/unreal/ \
@@ -14,6 +14,7 @@ COMMENT=	Advanced IRC server with IPv6 and SSL support
 
 CONFLICTS+=	ircu-[0-9]*
 
+DIST_SUBDIR=	${PKGNAME}
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config gmake
 WRKSRC=		${WRKDIR}/Unreal3.2
@@ -114,7 +115,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${IRCD_SHARE}/modules
 	${INSTALL_DATA_DIR} ${IRCD_DOCS}
 	${INSTALL_DATA_DIR} ${IRCD_EG}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/unrealircd
 
 	${INSTALL_PROGRAM} ${WRKSRC}/src/ircd ${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/networks/*.network ${IRCD_SHARE}/networks
@@ -122,17 +122,15 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/networks/makenet ${IRCD_SHARE}/networks
 	${INSTALL_DATA} ${WRKSRC}/aliases/*.conf ${IRCD_SHARE}/aliases
 	${INSTALL_DATA} ${WRKSRC}/badwords*.conf ${IRCD_SHARE}
-	${INSTALL_DATA} ${WRKSRC}/help.conf ${IRCD_SHARE}
+	${INSTALL_DATA} ${WRKSRC}/help.* ${IRCD_SHARE}
+	${INSTALL_DATA} ${WRKSRC}/doc/help.* ${IRCD_SHARE}
 	${INSTALL_DATA} ${WRKSRC}/spamfilter.conf ${IRCD_SHARE}
 	${INSTALL_DATA} ${WRKSRC}/src/modules/*.so ${IRCD_SHARE}/modules
+	${INSTALL_DATA} ${WRKSRC}/doc/unreal32docs.* ${IRCD_DOCS};
+	${INSTALL_DATA} ${WRKSRC}/doc/example.* ${IRCD_EG}
 
 	for f in ${DOC_FILES}; do \
 		${INSTALL_DATA} ${WRKSRC}/$$f ${IRCD_DOCS}; \
 	done
-
-	${INSTALL_DATA} ${WRKSRC}/doc/unreal32docs.html \
-		${PREFIX}/share/doc/html/unrealircd
-
-	${INSTALL_DATA} ${WRKSRC}/doc/example.conf ${IRCD_EG}
 
 .include "../../mk/bsd.pkg.mk"
