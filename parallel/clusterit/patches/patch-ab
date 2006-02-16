@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.1 2006/01/02 22:51:45 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2006/02/16 20:43:41 joerg Exp $
 
---- dsh/rseq.c.orig	2006-01-02 22:43:51.000000000 +0000
+--- dsh/rseq.c.orig	2006-02-16 20:24:57.000000000 +0000
 +++ dsh/rseq.c
-@@ -45,7 +45,4 @@ __RCSID("$Id: rseq.c,v 1.15 2005/06/02 1
+@@ -45,7 +45,4 @@ __RCSID("$Id: rseq.c,v 1.19 2006/01/24 1
  #endif
  
 -/* externs */
 -extern int errno;
 -
  void do_command(char **argv, int allrun, char *username);
- node_t * check_seq(void);
+ node_t *check_seq(void);
