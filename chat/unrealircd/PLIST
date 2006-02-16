@@ -1,12 +1,23 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/29 19:17:03 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/16 21:30:06 adrianp Exp $
 sbin/ircd
-share/doc/html/unrealircd/unreal32docs.html
 share/doc/unrealircd/Authors
 share/doc/unrealircd/LICENSE
 share/doc/unrealircd/coding-guidelines
 share/doc/unrealircd/tao.of.irc
+share/doc/unrealircd/unreal32docs.html
+share/doc/unrealircd/unreal32docs.de.html
+share/doc/unrealircd/unreal32docs.es.html
+share/doc/unrealircd/unreal32docs.fr.html
+share/doc/unrealircd/unreal32docs.gr.html
+share/doc/unrealircd/unreal32docs.hu.html
+share/doc/unrealircd/unreal32docs.nl.html
+share/doc/unrealircd/unreal32docs.ru.html
 share/examples/rc.d/unrealircd
 share/examples/unrealircd/example.conf
+share/examples/unrealircd/example.bg.conf
+share/examples/unrealircd/example.de.conf
+share/examples/unrealircd/example.fr.conf
+share/examples/unrealircd/example.hu.conf
 share/unrealircd/aliases/aliases.conf
 share/unrealircd/aliases/anope.conf
 share/unrealircd/aliases/auspice.conf
@@ -20,6 +31,9 @@ share/unrealircd/badwords.channel.conf
 share/unrealircd/badwords.message.conf
 share/unrealircd/badwords.quit.conf
 share/unrealircd/help.conf
+share/unrealircd/help.de.conf
+share/unrealircd/help.fr.conf
+share/unrealircd/help.ru.conf
 share/unrealircd/modules/cloak.so
 share/unrealircd/modules/commands.so
 share/unrealircd/modules/m_addline.so
@@ -162,4 +176,3 @@ share/unrealircd/spamfilter.conf
 @dirrm share/unrealircd
 @dirrm share/examples/unrealircd
 @dirrm share/doc/unrealircd
-@dirrm share/doc/html/unrealircd
