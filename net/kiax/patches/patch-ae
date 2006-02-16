@@ -1,12 +1,20 @@
-$NetBSD: patch-ae,v 1.1.1.1 2006/01/25 00:00:03 reinoud Exp $
+$NetBSD: patch-ae,v 1.2 2006/02/16 20:53:23 joerg Exp $
 
 --- lib/libiax2/src/iax.c.orig	2005-04-13 19:30:39.000000000 +0200
 +++ lib/libiax2/src/iax.c
-@@ -55,9 +55,11 @@ void gettimeofday(struct timeval *tv, st
+@@ -36,6 +36,7 @@ void gettimeofday(struct timeval *tv, st
+ 
+ #else
+ 
++#include <sys/types.h>
+ #include <netdb.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+@@ -55,9 +56,11 @@ void gettimeofday(struct timeval *tv, st
  #ifndef MACOSX
  #include <malloc.h>
  #ifndef SOLARIS
-+#if !defined(__NetBSD__) && !defined(__FreeBSD__)
++#if !defined(__NetBSD__) && !defined(__FreeBSD__) && !defined(__DragonFly__)
  #include <error.h>
  #endif
  #endif
@@ -14,12 +22,12 @@ $NetBSD: patch-ae,v 1.1.1.1 2006/01/25 00:00:03 reinoud Exp $
  
  #endif
  
-@@ -87,11 +89,15 @@ void gettimeofday(struct timeval *tv, st
+@@ -87,11 +90,15 @@ void gettimeofday(struct timeval *tv, st
  #else
  #ifdef SOLARIS
  #define IAX_SOCKOPTS MSG_DONTWAIT
 +#else
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +#define IAX_SOCKOPTS MSG_DONTWAIT
  #else  /* Linux and others */
  #define IAX_SOCKOPTS MSG_DONTWAIT | MSG_NOSIGNAL

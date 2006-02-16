@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.2 2006/01/25 15:04:30 reinoud Exp $
+$NetBSD: distinfo,v 1.3 2006/02/16 20:53:23 joerg Exp $
 
 SHA1 (kiax-0.8.4.tar.bz2) = 8889ad5051b24e4508db404b73431b5f3fcef88f
 RMD160 (kiax-0.8.4.tar.bz2) = 90d214096d447118e9e9bd312ed8745fccef0164
 Size (kiax-0.8.4.tar.bz2) = 606213 bytes
 SHA1 (patch-aa) = 869f66fbbc3c8b99499a12704940c3c5b3187385
-SHA1 (patch-ab) = f356568cacfb9558bacd98a9f3d691f087fc6aba
-SHA1 (patch-ac) = 3f92904dbe0a5c7768f5f0a0bd2dcd3b8e25ab20
-SHA1 (patch-ad) = f17a1dfb2f163dac5e40d869a5d8e9b01d39d0f5
-SHA1 (patch-ae) = 6b74195590491a8dbdf6a69258377ae3132cae96
+SHA1 (patch-ab) = 93f400d0785d334f5aff46cf96a2df8c416b7144
+SHA1 (patch-ac) = 4dbe2e3fb9c07d8d8fcdc05cded1e9f52aa96d4e
+SHA1 (patch-ad) = 1a79c45d3e67ab271468ec1b7a922071b465591d
+SHA1 (patch-ae) = d22d382ee5f632640dbe739f8a84b55d8aaee299
 SHA1 (patch-af) = b2492a4aff367ec1330948bb4c7dc093152da59c
 SHA1 (patch-ag) = 70bc22a9750f20385a4653a39e16fddf1a88a700
 SHA1 (patch-ah) = c7a2b3464f840f43df787ff7fc4a7f9d0ce44e18
-SHA1 (patch-ai) = be877fd098ac4a8218261d98c9a5498e44d6fb10
+SHA1 (patch-ai) = 7c7f35c4a62d60a395c922407778a2d49eb4ab0d
