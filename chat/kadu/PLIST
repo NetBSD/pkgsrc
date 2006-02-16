@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/01/22 00:11:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/02/16 18:07:44 wiz Exp $
 bin/kadu
 bin/kadu-config
 bin/kadu-mozilla
@@ -560,6 +560,8 @@ share/pixmaps/kadu-22.png
 share/pixmaps/kadu-24.png
 share/pixmaps/kadu-48.png
 share/pixmaps/kadu.png
+@unexec ${RMDIR} %D/share/applnk/Internet 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/applnk 2>/dev/null || ${TRUE}
 @dirrm share/kadu/translations
 @dirrm share/kadu/themes/sounds/default
 @dirrm share/kadu/themes/sounds
