@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/02/18 14:51:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/02/16 18:09:27 wiz Exp $
 include/Xbae/Caption.h
 include/Xbae/CaptionP.h
 include/Xbae/Clip.h
@@ -179,4 +179,3 @@ share/doc/Xbae/users.html
 @dirrm share/doc/Xbae/images
 @dirrm share/doc/Xbae
 @dirrm include/Xbae
-@unexec ${RMDIR} %D/share/aclocal 2>/dev/null || ${TRUE}
