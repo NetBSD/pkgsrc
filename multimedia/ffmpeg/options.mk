@@ -10,7 +10,7 @@ PKG_SUPPORTED_OPTIONS=  bktr lame mmx vorbis faac faad a52
 .include "../../mk/bsd.prefs.mk"
 
 ###
-### MMX support 
+### MMX support
 ###
 
 .include "../../mk/compiler.mk"
@@ -36,7 +36,7 @@ post-extract:
 post-patch:
 	${PATCH} --quiet -d ${WRKSRC} < ${FILESDIR}/bktr.diff
 #TODO
-#Update the documentation 
+#Update the documentation
 #	${PATCH} --quiet -d ${WRKSRC} < ${FILESDIR}/ffmpeg.1.diff
 .endif
 
