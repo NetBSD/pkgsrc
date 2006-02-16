@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:08:31 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/16 18:15:52 wiz Exp $
 #
 
 DISTNAME=		gourmet-0.8.5.12
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=grecipe-manager/}
 
@@ -10,6 +10,7 @@ MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://grecipe-manager.sourceforge.net/
 COMMENT=		Recipe database
 
+USE_DIRS+=		xdg-1.2
 USE_PKGLOCALEDIR=	yes
 PYDISTUTILSPKG=		yes
 PYTHON_VERSIONS_ACCEPTED= 23 24
