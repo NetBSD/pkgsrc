@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/02/05 23:11:46 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2006/02/16 15:15:18 yyamano Exp $
 
 DISTNAME=	xephem-3.6.4
 PKGREVISION=	2
@@ -32,7 +32,7 @@ post-install:
 	${SED} s,@PREFIX@,${PREFIX}, ${FILESDIR}/XEphem.ad > ${WRKDIR}/XEphem
 	${INSTALL_DATA} ${WRKDIR}/XEphem ${PREFIX}/lib/X11/app-defaults
 	${INSTALL_DATA_DIR} ${PREFIX}/share/xephem/tools
-	cd ${WRKSRC}; ${CP} -R auxil catalogs fifos fits		\
+	cd ${WRKSRC}; ${CP} -R auxil catalogs fifos fits gallery help lo \
 		${PREFIX}/share/xephem
 	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/xephem
 
