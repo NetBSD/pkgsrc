@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.519 2006/02/15 17:00:02 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.520 2006/02/16 06:33:41 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2772,6 +2772,10 @@ sub checkline_mk_vartype_basic($$$$$$) {
 
 			$opt_debug and $line->log_warning("Unknown directory ${dirname} in ${varname}.");
 
+		} elsif ($value eq "-c99") {
+			# Only works on IRIX, but is usually enclosed with
+			# the proper preprocessor conditional.
+
 		} elsif ($value =~ qr"^-[OWfgm]") {
 			$opt_debug and $line->log_warning("Undiscussed compiler flag ${value} in ${varname}.");
 
@@ -2878,6 +2882,9 @@ sub checkline_mk_vartype_basic($$$$$$) {
 			my ($libname) = ($1);
 
 			$opt_debug and $line->log_warning("Unchecked library name ${libname} in ${varname}.");
+
+		} elsif ($value =~ qr"^(?:-static)$") {
+			# Assume that the wrapper framework catches these.
 
 		} elsif ($value =~ qr"^-.*") {
 			$line->log_warning("Unknown linker flag \"${value}\".");
