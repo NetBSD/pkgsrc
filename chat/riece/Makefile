@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:08:26 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/16 18:08:06 wiz Exp $
 #
 
 DISTNAME=	riece-2.0.2
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat japanese
 MASTER_SITES=	http://savannah.nongnu.org/download/riece/
 
@@ -29,6 +29,6 @@ CONFIGURE_ARGS+=--with-packagedir=${EMACS_LISPPREFIX:C|/lisp\$||}
 # Riece digs sub directory.
 CONFIGURE_ARGS+=--with-lispdir=${EMACS_LISPPREFIX:Q}
 
-INFO_FILES=	riece-ja.info
+INFO_FILES=	riece-en.info riece-ja.info
 
 .include "../../mk/bsd.pkg.mk"
