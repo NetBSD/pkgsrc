@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2006/02/05 23:10:18 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2006/02/16 10:30:51 abs Exp $
 #
 
 DISTNAME=	transcode-1.0.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	multimedia
 MASTER_SITES=	http://dl.fkb.wormulon.net/transcode/ \
 		http://dl.kel.wormulon.net/transcode/ \
@@ -18,7 +18,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
 CONFIGURE_ARGS+=	--disable-libpostproc
-CONFIGURE_ARGS+=	--with-libavcodec-prefix=${BUILDLINK_PREFIX.ffmpeg-devel}
+CONFIGURE_ARGS+=	--with-libavcodec-prefix=${BUILDLINK_PREFIX.ffmpeg}
 CONFIGURE_ARGS+=	--enable-oss
 CONFIGURE_ARGS+=	--disable-xio
 
@@ -32,7 +32,7 @@ LIBS+=			${LIBOSSAUDIO}
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../multimedia/ffmpeg-devel/buildlink3.mk"
+.include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
