@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2005/01/06 18:22:16 cube Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/16 22:04:07 cube Exp $
 
 DISTNAME=	kernel_ppp_mppe-0.0.4-src
 PKGNAME=	mppe-lkm-0.0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=poptop/}
 EXTRACT_SUFX=	.tgz
