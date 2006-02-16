@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/10/23 18:58:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/02/16 18:09:27 wiz Exp $
 bin/gimp
 bin/gimp-1.2
 bin/gimp-config
@@ -1504,7 +1504,6 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gimp.mo
 @dirrm share/gimp
 @dirrm share/examples/gimp/1.2
 @dirrm share/examples/gimp
-@unexec ${RMDIR} %D/share/aclocal 2>/dev/null || ${TRUE}
 @dirrm lib/gimp/1.2/plug-ins
 @dirrm lib/gimp/1.2/modules
 @dirrm lib/gimp/1.2
