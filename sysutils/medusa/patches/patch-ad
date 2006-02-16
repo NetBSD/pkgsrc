@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2001/05/14 17:13:21 rh Exp $
+$NetBSD: patch-ad,v 1.2 2006/02/16 21:22:52 joerg Exp $
 
 --- indexer/medusa-file-index-daemon.c.orig	Fri Apr 27 02:55:43 2001
 +++ indexer/medusa-file-index-daemon.c
@@ -30,3 +30,11 @@ $NetBSD: patch-ad,v 1.1.1.1 2001/05/14 17:13:21 rh Exp $
  #endif /* HAVE_STATVFS */
  
  #include <time.h>
+@@ -87,7 +94,6 @@ static void             exit_indexer    
+ 
+ 
+ 
+-extern int errno;
+ static gboolean create_index_even_if_disk_is_full;
+ 
+ /* Main index loop.  
