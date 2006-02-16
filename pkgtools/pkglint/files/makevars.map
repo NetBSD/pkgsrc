@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.62 2006/02/15 16:10:49 rillig Exp $
+# $NetBSD: makevars.map,v 1.63 2006/02/16 06:33:00 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -252,7 +252,6 @@ PKGDIR			RelativePkgDir
 PKGNAME			PkgName
 PKGNAME_NOREV		Readonly
 PKGREPOSITORY		Userdefined
-PKGREPOSITORY		Userdefined
 PKGREVISION		PkgRevision
 PKGSRC_COMPILER		Userdefined
 PKGTOOLS_ENV		List+ of ShellWord
@@ -360,3 +359,4 @@ WRKSRC			WrkdirSubdirectory
 X11_PKGSRCDIR		Readonly
 X11_TYPE		Userdefined
 XAW_TYPE		{ 3d neXtaw standard xpm }
+XMKMF_FLAGS		List of ShellWord
