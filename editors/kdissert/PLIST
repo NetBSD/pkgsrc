@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/21 14:47:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/02/16 10:44:50 drochner Exp $
 bin/kdissert
 lib/kde3/libkdissOOOdoc.la
 lib/kde3/libkdissOOOdoc.so
@@ -20,6 +20,7 @@ lib/kde3/libkdissprosperslides.la
 lib/kde3/libkdissprosperslides.so
 lib/kde3/libkdissstx.la
 lib/kde3/libkdissstx.so
+share/applications/kde/kdissert.desktop
 share/doc/kde/HTML/en/kdissert/common
 share/doc/kde/HTML/en/kdissert/index.cache.bz2
 share/doc/kde/HTML/en/kdissert/index.docbook
@@ -27,6 +28,7 @@ share/doc/kde/HTML/en/kdissert/screenshot.jpg
 share/doc/kde/HTML/fr/kdissert/common
 share/doc/kde/HTML/fr/kdissert/index.cache.bz2
 share/doc/kde/HTML/fr/kdissert/index.docbook
+share/kde/applnk/Utilities/kdissert.desktop
 share/kde/apps/kdissert/kdissertui.rc
 share/kde/apps/kdissert/pics/nopix.png
 share/kde/apps/kdissert/templatedata/kdissOOOdoc.tar.gz
@@ -41,6 +43,25 @@ share/kde/apps/kdissert/templatedata/kdissprosperslides.tar.gz
 share/kde/apps/kdissert/templatedata/kdissstx.tar.gz
 share/kde/apps/kdissert/tips
 share/kde/apps/kdissertpart/kdissertpart.rc
+share/kde/config.kcfg/kdissert.kcfg
+share/kde/icons/hicolor/128x128/actions/kdissert_sort.png
+share/kde/icons/hicolor/128x128/apps/kdissert.png
+share/kde/icons/hicolor/16x16/actions/kdissert_link.png
+share/kde/icons/hicolor/16x16/actions/kdissert_point.png
+share/kde/icons/hicolor/16x16/actions/kdissert_sort.png
+share/kde/icons/hicolor/16x16/apps/kdissert.png
+share/kde/icons/hicolor/22x22/actions/kdissert_link.png
+share/kde/icons/hicolor/22x22/actions/kdissert_point.png
+share/kde/icons/hicolor/22x22/actions/kdissert_sort.png
+share/kde/icons/hicolor/22x22/apps/kdissert.png
+share/kde/icons/hicolor/32x32/actions/kdissert_link.png
+share/kde/icons/hicolor/32x32/actions/kdissert_point.png
+share/kde/icons/hicolor/32x32/actions/kdissert_sort.png
+share/kde/icons/hicolor/32x32/apps/kdissert.png
+share/kde/icons/hicolor/64x64/actions/kdissert_sort.png
+share/kde/icons/hicolor/64x64/apps/kdissert.png
+share/kde/mimelnk/application/x-kdissert.desktop
+share/kde/services/kdissertpart.desktop
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kdissert.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/kdissert.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/kdissert.mo
