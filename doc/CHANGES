@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12934 2006/02/16 18:12:26 wiz Exp $
+$NetBSD: CHANGES,v 1.12935 2006/02/16 18:13:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1019,3 +1019,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated comms/pilotmgr to 1.107.2nb3 [wiz 2006-02-16]
 	Updated comms/xtel to 3.3.0nb4 [wiz 2006-02-16]
 	Updated cross/i386-cygwin32 to 1.0.0.0nb3 [wiz 2006-02-16]
+	Updated cross/i386-netbsdpe to 3.3.3nb1 [wiz 2006-02-16]
