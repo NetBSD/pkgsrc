@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/01/01 16:10:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/02/16 18:01:05 wiz Exp $
 bin/metamutt
 bin/opt-case.pl
 bin/rtin
@@ -20,5 +20,6 @@ ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/tin.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/tin.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/tin.mo
 ${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/tin.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/tin.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/tin.mo
 @dirrm share/doc/tin
