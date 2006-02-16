@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.87 2006/02/16 00:26:00 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.88 2006/02/16 14:48:09 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -177,3 +177,5 @@ Pullup ticket 1137 - requested by Joerg Sonnenberger
 remove xmysqladmin
 Pullup ticket 1139 - requested by Joerg Sonnenberger
 security fix for cups
+Pullup ticket 1138 - requested by Joerg Sonnenberger
+security update for lighttpd
