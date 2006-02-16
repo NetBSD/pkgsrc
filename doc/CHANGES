@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12925 2006/02/16 11:14:04 tonio Exp $
+$NetBSD: CHANGES,v 1.12926 2006/02/16 12:46:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -985,7 +985,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/p5-Crypt-OpenSSL-RSA to 0.22 [heinz 2006-02-15]
 	Updated net/p5-Net-CIDR-Lite to 0.20 [heinz 2006-02-15]
 	Updated mail/p5-Mail-SPF-Query to 1.999 [heinz 2006-02-15]
-	Updated time/p5-Time-Hires to 1.87 [abs 2006-02-15]
+	Updated time/p5-Time-HiRes to 1.87 [abs 2006-02-15]
 	Updated devel/p5-Net-CIDR to 0.11 [abs 2006-02-15]
 	Updated databases/p5-DBD-SQLite to 1.11 [abs 2006-02-15]
 	Updated databases/p5-DBI to 1.50 [abs 2006-02-15]
