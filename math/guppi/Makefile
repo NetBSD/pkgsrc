@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/02/05 23:10:02 joerg Exp $
+# $NetBSD: Makefile,v 1.52 2006/02/16 18:34:10 joerg Exp $
 
 DISTNAME=	Guppi-0.40.3
 PKGNAME=	${DISTNAME:S/G/g/}
@@ -23,6 +23,7 @@ USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
+BROKEN_GETTEXT_DETECTION=	yes
 
 .include "../../devel/bonobo/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
