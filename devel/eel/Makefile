@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/02/05 23:08:41 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2006/02/16 19:29:41 joerg Exp $
 
 DISTNAME=	eel-1.0.2
 PKGREVISION=	2
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.eazel.com/
 COMMENT=	Eazel Extensions Library
 
 BUILD_USES_MSGFMT=	yes
+BROKEN_GETTEXT_DETECTION=	yes
 
 USE_TOOLS+=		gmake perl
 USE_LIBTOOL=		yes
