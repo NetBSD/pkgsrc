@@ -1,7 +1,7 @@
-$NetBSD: patch-aq,v 1.1 2004/09/17 09:36:02 he Exp $
+$NetBSD: patch-aq,v 1.2 2006/02/16 18:06:46 wiz Exp $
 
---- ./readline/readline/rltty.c.orig	Mon Apr  3 18:10:33 2000
-+++ ./readline/readline/rltty.c
+--- readline/readline/rltty.c.orig	2000-04-03 16:10:33.000000000 +0000
++++ readline/readline/rltty.c
 @@ -190,7 +190,7 @@ save_tty_chars (tiop)
        _rl_tty_chars.t_intr = tiop->tchars.t_intrc;
        _rl_tty_chars.t_quit = tiop->tchars.t_quitc;
