@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/01/19 01:23:36 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/02/16 18:03:55 wiz Exp $
 bin/lessonfile_editor
 bin/solfege
 man/man1/lessonfile_editor.1
@@ -16,6 +16,7 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/solfege.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/solfege.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/solfege.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/solfege.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/solfege.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/solfege.mo
 share/pixmaps/solfege.png
 share/solfege/default.config
