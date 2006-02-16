@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/16 07:37:38 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/16 18:28:52 joerg Exp $
 #
 
 DISTNAME=		e16menuedit2-0.0.1
@@ -13,6 +13,7 @@ COMMENT=		Menu editor for the Enlightenment window manager
 DEPENDS+=		enlightenment-0.16.*:../../wm/enlightenment
 
 BUILD_USES_MSGFMT=	yes
+BROKEN_GETTEXT_DETECTION=	yes
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		automake pkg-config
