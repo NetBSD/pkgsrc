@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/10 18:14:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/17 19:29:57 wiz Exp $
 lib/X11/fonts/local/iso8859-15/75dpi/courB08e.pcf
 lib/X11/fonts/local/iso8859-15/75dpi/courB10e.pcf
 lib/X11/fonts/local/iso8859-15/75dpi/courB12e.pcf
@@ -23,8 +23,6 @@ lib/X11/fonts/local/iso8859-15/75dpi/courR12e.pcf
 lib/X11/fonts/local/iso8859-15/75dpi/courR14e.pcf
 lib/X11/fonts/local/iso8859-15/75dpi/courR18e.pcf
 lib/X11/fonts/local/iso8859-15/75dpi/courR24e.pcf
-lib/X11/fonts/local/iso8859-15/75dpi/fonts.alias
-lib/X11/fonts/local/iso8859-15/75dpi/fonts.dir
 lib/X11/fonts/local/iso8859-15/75dpi/helvB08e.pcf
 lib/X11/fonts/local/iso8859-15/75dpi/helvB10e.pcf
 lib/X11/fonts/local/iso8859-15/75dpi/helvB12e.pcf
@@ -130,9 +128,4 @@ lib/X11/fonts/local/iso8859-15/misc/8x13e.pcf
 lib/X11/fonts/local/iso8859-15/misc/8x16e.pcf
 lib/X11/fonts/local/iso8859-15/misc/9x15Be.pcf
 lib/X11/fonts/local/iso8859-15/misc/9x15e.pcf
-lib/X11/fonts/local/iso8859-15/misc/fonts.alias
-lib/X11/fonts/local/iso8859-15/misc/fonts.dir
 lib/X11/fonts/local/iso8859-15/misc/nil2e.pcf
-@dirrm lib/X11/fonts/local/iso8859-15/75dpi
-@dirrm lib/X11/fonts/local/iso8859-15/misc
-@dirrm lib/X11/fonts/local/iso8859-15
