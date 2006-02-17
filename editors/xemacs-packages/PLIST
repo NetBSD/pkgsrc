@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/02/15 03:42:31 minskim Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/02/17 19:21:53 wiz Exp $
 lib/xemacs/xemacs-packages/etc/BABYL
 lib/xemacs/xemacs-packages/etc/app-defaults/de/Emacs
 lib/xemacs/xemacs-packages/etc/app-defaults/fr/Emacs
@@ -6534,10 +6534,10 @@ lib/xemacs/xemacs-packages/pkginfo/MANIFEST.zenirc
 @dirrm lib/xemacs/xemacs-packages/etc/xslt-process/java
 @dirrm lib/xemacs/xemacs-packages/etc/xslt-process/doc
 @dirrm lib/xemacs/xemacs-packages/etc/xslt-process
-@dirrm lib/xemacs/xemacs-packages/etc/x-symbol/pcf
-@dirrm lib/xemacs/xemacs-packages/etc/x-symbol/origfonts
-@dirrm lib/xemacs/xemacs-packages/etc/x-symbol/fonts
-@dirrm lib/xemacs/xemacs-packages/etc/x-symbol
+@comment in REQ_DIRS: @dirrm lib/xemacs/xemacs-packages/etc/x-symbol/pcf
+@comment in REQ_DIRS: @dirrm lib/xemacs/xemacs-packages/etc/x-symbol/origfonts
+@comment in REQ_DIRS: @dirrm lib/xemacs/xemacs-packages/etc/x-symbol/fonts
+@comment in REQ_DIRS: @dirrm lib/xemacs/xemacs-packages/etc/x-symbol
 @dirrm lib/xemacs/xemacs-packages/etc/w3
 @dirrm lib/xemacs/xemacs-packages/etc/vm
 @dirrm lib/xemacs/xemacs-packages/etc/time
@@ -6645,6 +6645,6 @@ lib/xemacs/xemacs-packages/pkginfo/MANIFEST.zenirc
 @dirrm lib/xemacs/xemacs-packages/etc/app-defaults/fr
 @dirrm lib/xemacs/xemacs-packages/etc/app-defaults/de
 @dirrm lib/xemacs/xemacs-packages/etc/app-defaults
-@dirrm lib/xemacs/xemacs-packages/etc
-@dirrm lib/xemacs/xemacs-packages
+@comment in REQ_DIRS: @dirrm lib/xemacs/xemacs-packages/etc
+@comment in REQ_DIRS: @dirrm lib/xemacs/xemacs-packages
 @comment in xemacs: @dirrm lib/xemacs
