@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.157 2006/02/11 00:23:24 jlam Exp $
+# $NetBSD: replace.mk,v 1.158 2006/02/17 19:31:33 wiz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -650,7 +650,7 @@ TOOLS_PATH.ttmkfdir=		${TOOLS_PREFIX.ttmkfdir}/bin/ttmkfdir
 .  if !empty(PKGPATH:Mfonts/type1inst)
 MAKEFLAGS+=			TOOLS_IGNORE.type1inst=
 .  elif !empty(_TOOLS_USE_PKGSRC.type1inst:M[yY][eE][sS])
-TOOLS_DEPENDS.type1inst?=	type1inst2>=0.6.1:../../fonts/type1inst
+TOOLS_DEPENDS.type1inst?=	type1inst>=0.6.1:../../fonts/type1inst
 TOOLS_CREATE+=			type1inst
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.type1inst=type1inst
 TOOLS_PATH.type1inst=		${TOOLS_PREFIX.type1inst}/bin/type1inst
