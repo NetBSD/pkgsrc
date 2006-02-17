@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:09:58 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/02/17 07:04:25 martti Exp $
 #
 
 DISTNAME=	all_locales-${VER}-20050713
@@ -21,11 +21,11 @@ INSTALLATION_DIRS=	share/squirrelmail
 WRKSRC=		${WRKDIR}
 
 do-build:
-	cd ${WRKDIR}/help && ${RM} -rf en_US
+	cd ${WRKDIR:Q}/help && ${RM} -rf en_US
 
 do-install:
-	cd ${WRKDIR} && ${TAR} -cf - help images locale | \
-		${TAR} -xf - -C ${PREFIX}/share/squirrelmail/
+	cd ${WRKDIR:Q} && ${TAR} -cf - help images locale | \
+		${TAR} -xf - -C ${PREFIX:Q}/share/squirrelmail/
 
 .include "../../mail/squirrelmail/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
