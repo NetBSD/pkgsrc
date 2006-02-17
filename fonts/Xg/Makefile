@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2006/02/05 23:09:07 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/02/17 19:27:59 wiz Exp $
 
 DISTNAME=	libXg.utf.fonts
 PKGNAME=	libXgFonts-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts plan9
 MASTER_SITES=	ftp://ftp.ecf.toronto.edu/pub/plan9/matty/
 
@@ -14,5 +14,7 @@ NO_BUILD=	yes
 USE_X11BASE=	yes
 
 USE_TOOLS+=	bdftopcf
+FONTS_DIRS.x11=	${PREFIX}/lib/X11/fonts/Xg
+REQD_DIRS=	${PREFIX}/lib/X11/fonts/Xg
 
 .include "../../mk/bsd.pkg.mk"

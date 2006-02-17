@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:48:50 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/17 19:27:59 wiz Exp $
 lib/X11/fonts/Xg/big5.4e00.16.pcf.Z
 lib/X11/fonts/Xg/big5.5000.16.pcf.Z
 lib/X11/fonts/Xg/big5.5200.16.pcf.Z
@@ -15,7 +15,6 @@ lib/X11/fonts/Xg/big5.6600.16.pcf.Z
 lib/X11/fonts/Xg/big5.6800.16.pcf.Z
 lib/X11/fonts/Xg/big5.6a00.16.pcf.Z
 lib/X11/fonts/Xg/big5.6c00.16.pcf.Z
-lib/X11/fonts/Xg/fonts.dir
 lib/X11/fonts/Xg/big5.6e00.16.pcf.Z
 lib/X11/fonts/Xg/big5.7000.16.pcf.Z
 lib/X11/fonts/Xg/big5.7200.16.pcf.Z
@@ -174,4 +173,3 @@ lib/X11/fonts/Xg/pelm.latineur.9.pcf.Z
 lib/X11/fonts/Xg/pelm.supsub.8.pcf.Z
 lib/X11/fonts/Xg/pelm.supsub.9.pcf.Z
 lib/X11/fonts/Xg/unicode.9.font
-@dirrm lib/X11/fonts/Xg
