@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: fonts,v 1.8 2005/12/29 14:10:01 jlam Exp $
+# $NetBSD: fonts,v 1.9 2006/02/17 19:32:48 wiz Exp $
 #
 # +FONTS - font database management script
 #
@@ -21,8 +21,8 @@
 #
 
 ECHO="@ECHO@"
+FIND="@FIND@"
 GREP="@GREP@"
-LS="@LS@"
 MKFONTDIR="@MKFONTDIR@"
 PWD_CMD="@PWD_CMD@"
 RM="@RM@"
@@ -69,7 +69,7 @@ ${SED} -n "/^\# FONTS: /{s/^\# FONTS: //;p;}" ${SELF} | ${SORT} -u |
 	  cd $dir
 	  case $font_type in
 	  [tT][tT][fF])		update_cmd="${TTMKFDIR}" ;;
-	  [tT][yY][pP][eE]1)	update_cmd="${TYPE1INST}" ;;
+	  [tT][yY][pP][eE]1)	update_cmd="${TYPE1INST}; ${RM} type1inst.log" ;;
 	  [xX]11)		update_cmd="${MKFONTDIR}" ;;
 	  esac
 	  ${TEST} -f "$update_cmd" || update_cmd="${TRUE}"
@@ -79,7 +79,7 @@ ${SED} -n "/^\# FONTS: /{s/^\# FONTS: //;p;}" ${SELF} | ${SORT} -u |
 	  # We filter out the encodings.dir, fonts.{alias,dirs,scale}, and
 	  # Fontmap database files from the directory listing.
 	  #
-	  ${LS} | ${GREP} -v "^encodings.dir" | ${GREP} -v "^fonts\." | ${GREP} -v "^Fontmap" >/dev/null || ${RM} -f fonts.* Fontmap*
+	  ${FIND} . -type f | ${GREP} -v "/encodings.dir" | ${GREP} -v "/fonts\." | ${GREP} -v "/Fontmap" >/dev/null || ${RM} -f fonts.* Fontmap*
 	)
 done
 case "$printed_header" in
