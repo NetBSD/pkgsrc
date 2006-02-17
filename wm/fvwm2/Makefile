@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/02/05 23:11:13 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2006/02/17 08:00:00 martti Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 PKGNAME=	fvwm2-${FVWM_VER}
@@ -27,48 +27,48 @@ PLIST_SUBST+=		FVWM_VER=${FVWM_VER:Q}
 
 EVAL_PREFIX+=		XPMDIR=xpm
 CONFIGURE_ARGS+=	--without-gnome
-CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/lib/X11/fvwm2
-CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/lib/X11
-CONFIGURE_ARGS+=	--with-xpm-includes=${XPMDIR}/include
-CONFIGURE_ARGS+=	--with-imagepath=${PREFIX}/lib/X11/fvwm2/pixmaps:${X11BASE}/include/X11/bitmaps:${X11BASE}/include/X11/pixmaps
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX:Q}/lib/X11/fvwm2
+CONFIGURE_ARGS+=	--libexecdir=${PREFIX:Q}/lib/X11
+CONFIGURE_ARGS+=	--with-xpm-includes=${{XPMDIR:Q}/include
+CONFIGURE_ARGS+=	--with-imagepath=${PREFIX:Q}/lib/X11/fvwm2/pixmaps:${X11BASE:Q}/include/X11/bitmaps:${X11BASE:Q}/include/X11/pixmaps
 
 # We don't want to have CPP from the buildlink directory
 CONFIGURE_ENV+=		ac_cv_path_FVWM_CPP=${CPP:Q}
 
 post-extract:
-	${MKDIR} ${WRKDIR}/icons
-	cd ${WRKDIR}/icons && ${TAR} -xzf ${DISTDIR}/fvwm_icons.tgz
+	${MKDIR} ${WRKDIR:Q}/icons
+	cd ${WRKDIR:Q}/icons && ${TAR} -xzf ${DISTDIR:Q}/fvwm_icons.tgz
 
 post-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fvwm2/pixmaps
+	@${INSTALL_DATA_DIR} ${PREFIX:Q}/lib/X11/fvwm2/pixmaps
 	${INSTALL_DATA} \
-		${WRKDIR}/icons/fvwm_icons/*.xpm \
-		${PREFIX}/lib/X11/fvwm2/pixmaps
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fvwm2
+		${WRKDIR:Q}/icons/fvwm_icons/*.xpm \
+		${PREFIX:Q}/lib/X11/fvwm2/pixmaps
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/lib/X11/fvwm2
 	${INSTALL_DATA} \
-		${WRKSRC}/sample.fvwmrc/decor_examples \
-		${WRKSRC}/sample.fvwmrc/system.fvwm2rc-sample-* \
-		${PREFIX}/lib/X11/fvwm2
+		${WRKSRC:Q}/sample.fvwmrc/decor_examples \
+		${WRKSRC:Q}/sample.fvwmrc/system.fvwm2rc-sample-* \
+		${PREFIX:Q}/lib/X11/fvwm2
 	${INSTALL_DATA} \
-		${WRKSRC}/sample.fvwmrc/system.fvwm2rc \
-		${PREFIX}/lib/X11/fvwm2/system.fvwm2rc.example
+		${WRKSRC:Q}/sample.fvwmrc/system.fvwm2rc \
+		${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc.example
 	${INSTALL_SCRIPT} \
-		${WRKSRC}/utils/fvwmrc_convert \
-		${PREFIX}/bin/fvwmrc_convert
-	if [ ! -f ${PREFIX}/lib/X11/fvwm2/system.fvwm2rc ]; then \
+		${WRKSRC:Q}/utils/fvwmrc_convert \
+		${PREFIX:Q}/bin/fvwmrc_convert
+	if [ ! -f ${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc ]; then \
 		${INSTALL_DATA} \
-			${PREFIX}/lib/X11/fvwm2/system.fvwm2rc.example \
-			${PREFIX}/lib/X11/fvwm2/system.fvwm2rc ; \
+			${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc.example \
+			${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc ; \
 	fi
 
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(FVWM2_USE_GTK) && ${FVWM2_USE_GTK} == "YES"
 .include "../../x11/gtk/buildlink3.mk"
-PLIST_SUBST+=	    GTK=""
+PLIST_SUBST+=		GTK=""
 .else
-PLIST_SUBST+=	    GTK="@comment "
-CONFIGURE_ARGS+=    --without-gtk-prefix
+PLIST_SUBST+=		GTK="@comment "
+CONFIGURE_ARGS+=	--without-gtk-prefix
 .endif
 
 .if defined(FVWM2_USE_RPLAY) && ${FVWM2_USE_RPLAY} == "YES"
