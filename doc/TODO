@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4621 2006/02/16 23:32:57 wiz Exp $
+$NetBSD: TODO,v 1.4622 2006/02/17 19:39:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -554,7 +554,7 @@ Suggested package updates
 	o gnome-spell-1.0.7
 	o gnome-themes-2.12.3
 	o gnome2-control-center-2.12.3
-	o gnomeicu-0.99.9
+	o gnomeicu-0.99.10
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
@@ -655,6 +655,7 @@ Suggested package updates
 	o kinput2-3.1
 	o kmess-1.3
 	o kmp-0.5
+	o ko-baekmuk-2.1
 	o kodos-2.4.5
 	o krusader-1.70.0
 	o ksi-3.4.2
@@ -746,7 +747,7 @@ Suggested package updates
 	o mysql4-client-4.1.18
 	o mysql4-server-4.1.18
 	o nagios-2.0 [replacing netsaint]
-	o nano-1.3.8
+	o nano-1.2.5 [pkg/32859]
 	o nap-1.5.3
 	o namazu-2.0.15 [taca]
 	o nautilus-cd-burner-2.12.3
@@ -772,6 +773,7 @@ Suggested package updates
 	o nut-11.3
 	o obexftp-0.18
 	o objc-3.2.7
+	o ocrad-0.14
 	o odbc-postgresql-8.0.7
 	o offlineimap-4.0.11
 	o ogre-0.12.3
