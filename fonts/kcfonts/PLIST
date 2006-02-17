@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/12/29 18:17:21 jlam Exp $
-lib/X11/fonts/local/fonts.alias
+@comment $NetBSD: PLIST,v 1.3 2006/02/17 19:34:33 wiz Exp $
 lib/X11/fonts/local/kc8x15.pcf.gz
 lib/X11/fonts/local/kc12x24.pcf.gz
 lib/X11/fonts/local/kc15f.pcf.gz
