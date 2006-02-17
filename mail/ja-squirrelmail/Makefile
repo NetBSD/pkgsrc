@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/02/05 23:09:55 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/02/17 07:04:25 martti Exp $
 
 DISTNAME=	squirrelmail-1.4.5
 PKGNAME=	ja-${DISTNAME}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 PATCH_SITES=	http://www.yamaai-tech.com/~masato/Download/
 PATCHFILES=	squirrelmail-1.4.5-ja-20050714-patch.gz
-PATCH_DIST_STRIP= -p1
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.squirrelmail.jp/
@@ -25,12 +25,12 @@ DEPENDS+=	php-mbstring>=4.3.3:../../misc/php-mbstring
 USE_LANGUAGES=	# empty
 NO_BUILD=	yes
 USE_TOOLS+=	perl:run
-REPLACE_PERL=	config/conf.pl config/ri_once.pl
+REPLACE_PERL+=	config/conf.pl config/ri_once.pl
 
 .include "../../mk/bsd.prefs.mk"
 
 PKG_SYSCONFSUBDIR?=	httpd
-MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 EGDIR=			${PREFIX}/share/examples/squirrelmail
 SMDIR=			${PREFIX}/share/squirrelmail
@@ -38,14 +38,17 @@ DATADIR=		${VARBASE}/spool/squirrelmail
 ATTACHMENTS_DIR=	${DATADIR}/attachments
 USER_PREFS_DIR=		${DATADIR}/data
 
-MESSAGE_SUBST+=		SMDIR=${SMDIR}
+MESSAGE_SUBST+=		SMDIR=${SMDIR:Q}
 FILES_SUBST+=		SMDIR=${SMDIR:Q}
 
-CONF_FILES=	${SMDIR}/config/config_default.php ${SMDIR}/config/config.php
-CONF_FILES+=	${SMDIR}/data/default_pref ${DATADIR}/data/default_pref
-CONF_FILES+=	${EGDIR}/squirrelmail.conf ${PKG_SYSCONFDIR}/squirrelmail.conf
+CONF_FILES=		${SMDIR:Q}/config/config_default.php \
+			${SMDIR:Q}/config/config.php
+CONF_FILES+=		${SMDIR:Q}/data/default_pref \
+			${DATADIR:Q}/data/default_pref
+CONF_FILES+=		${EGDIR:Q}/squirrelmail.conf \
+			${PKG_SYSCONFDIR:Q}/squirrelmail.conf
 
-REQD_DIRS=		${SMDIR} ${SMDIR}/config
+REQD_DIRS+=		${SMDIR:Q} ${SMDIR:Q}/config
 
 OWN_DIRS=		${DATADIR}
 OWN_DIRS_PERMS=		${ATTACHMENTS_DIR} ${ROOT_USER} ${APACHE_GROUP} 730
@@ -60,21 +63,22 @@ SUBST_SED.paths+=	-e 's,@SMDIR@,${SMDIR},g'
 SUBST_STAGE.paths=	post-patch
 
 post-extract:
-	${CP} ${FILESDIR}/squirrelmail.conf.dist ${WRKDIR}/squirrelmail.conf.dist
+	${CP} ${FILESDIR:Q}/squirrelmail.conf.dist \
+		${WRKDIR:Q}/squirrelmail.conf.dist
 
 pre-configure:
-	${FIND} ${WRKSRC} \( -name "*.orig*" -o -name ".cvsignore" \) -exec ${RM} -f {} \;
+	${FIND} ${WRKSRC:Q} \( -name "*.orig*" -o -name ".cvsignore" \) -exec ${RM} -f {} \;
 
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${SMDIR}
-	${INSTALL_DATA} ${WRKDIR}/squirrelmail.conf.dist ${EGDIR}/squirrelmail.conf
-	${CP} -R ${WRKSRC}/* ${SMDIR}
+	${INSTALL_DATA_DIR} ${EGDIR:Q}
+	${INSTALL_DATA_DIR} ${SMDIR:Q}
+	${INSTALL_DATA} ${WRKDIR:Q}/squirrelmail.conf.dist ${EGDIR:Q}/squirrelmail.conf
+	${CP} -R ${WRKSRC:Q}/* ${SMDIR:Q}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${SMDIR}
 	${FIND} ${SMDIR} -type d -print -exec ${CHMOD} ${PKGDIRMODE} {} \;
 	${FIND} ${SMDIR} -type f -print -exec ${CHMOD} ${SHAREMODE} {} \;
-	${CHMOD} a+x ${SMDIR}/config/conf.pl
-	${INSTALL_DATA} ${WRKSRC}/data/index.php ${USER_PREFS_DIR}/
-	${INSTALL_DATA} ${WRKSRC}/data/.htaccess ${USER_PREFS_DIR}/
+	${CHMOD} a+x ${SMDIR:Q}/config/conf.pl
+	${INSTALL_DATA} ${WRKSRC:Q}/data/index.php ${USER_PREFS_DIR:Q}/
+	${INSTALL_DATA} ${WRKSRC:Q}/data/.htaccess ${USER_PREFS_DIR:Q}/
 
 .include "../../mk/bsd.pkg.mk"
