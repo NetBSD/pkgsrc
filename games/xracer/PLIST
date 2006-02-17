@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/08 22:34:26 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/02/17 23:26:29 wiz Exp $
 bin/xracer
 bin/xracer-blender2track.pl
 bin/xracer-blenderexport.py
@@ -14,6 +14,7 @@ share/doc/xracer-0.96.9/README.txt
 share/doc/xracer-0.96.9/faq.html
 share/doc/xracer-0.96.9/faq.txt
 share/doc/xracer-0.96.9/index.html
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xracer.mo
 share/xracer/.xracer-data-directory
 share/xracer/backdrops/mountains4-alpha.jpg
 share/xracer/backdrops/mountains4.jpg
