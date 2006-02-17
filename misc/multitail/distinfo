@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2006/02/16 06:05:31 rillig Exp $
+$NetBSD: distinfo,v 1.6 2006/02/17 13:50:18 rillig Exp $
 
-SHA1 (multitail-3.8.5.tgz) = 999bb493ff030fe0ab99985ababf0b6a70decc97
-RMD160 (multitail-3.8.5.tgz) = ceaf5862124fc48760fb79d4066a101b10160867
-Size (multitail-3.8.5.tgz) = 75200 bytes
+SHA1 (multitail-3.8.6.tgz) = 993e40191a21ceb00470322124d589f9628d0a62
+RMD160 (multitail-3.8.6.tgz) = e2f076ae7a695885a83d58129e0f4c62d6142c74
+Size (multitail-3.8.6.tgz) = 75711 bytes
