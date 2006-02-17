@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2006/02/05 00:20:17 adrianp Exp $
+$NetBSD: distinfo,v 1.3 2006/02/17 14:43:49 joerg Exp $
 
 SHA1 (libssh-0.11.tgz) = 307430249ded90332c4ec77a264913b3bc93a648
 RMD160 (libssh-0.11.tgz) = 69c2cc00becb84a62555fe884345398f155815a4
 Size (libssh-0.11.tgz) = 303761 bytes
-SHA1 (patch-aa) = 193a57b02988e5170ea4b40d4e5a5e36ab6f16ac
+SHA1 (patch-aa) = 6e72fcfe9ee9bcc6fd7c21baf66d09b15923a7f1
