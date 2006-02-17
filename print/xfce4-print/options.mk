@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/12/01 18:21:52 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2006/02/17 06:49:24 martti Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xfce4-print
 PKG_SUPPORTED_OPTIONS=	cups
@@ -8,5 +8,5 @@ PKG_SUPPORTED_OPTIONS=	cups
 .if !empty(PKG_OPTIONS:Mcups)
 .include "../../print/cups/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=        --disable-cups
+CONFIGURE_ARGS+=	--disable-cups
 .endif

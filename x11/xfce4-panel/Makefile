@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/02/05 23:11:46 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2006/02/17 06:49:26 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -14,11 +14,11 @@ PTHREAD_AUTO_VARS=	yes
 
 PKG_SYSCONFSUBDIR=	xdg/xfce4/panel
 EGDIR=			${XFCE4_EGBASE}/panel
-CONF_FILES=		${EGDIR}/contents.xml ${PKG_SYSCONFDIR}/contents.xml
-.for _l in ar az ca da el eu fi fr he hu it ja ko lt ms nl pl ro ru sk sv \
+CONF_FILES=		${EGDIR:Q}/contents.xml ${PKG_SYSCONFDIR:Q}/contents.xml
+.for l in ar az ca da el eu fi fr he hu it ja ko lt ms nl pl ro ru sk sv \
 	tr vi zh_CN zh_TW
-CONF_FILES+=		${EGDIR}/contents.xml.${_l} \
-			${PKG_SYSCONFDIR}/contents.xml.${_l}
+CONF_FILES+=		${EGDIR:Q}/contents.xml.${l} \
+			${PKG_SYSCONFDIR:Q}/contents.xml.${l}
 .endfor
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
