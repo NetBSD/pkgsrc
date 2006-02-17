@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2006/02/05 23:08:59 joerg Exp $
+# $NetBSD: Makefile,v 1.49 2006/02/17 19:21:53 wiz Exp $
 
 DISTNAME=	xemacs-packages
 PKGNAME=	xemacs-packages-1.15
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=packages/}
 DISTFILES=	\
@@ -139,6 +139,17 @@ EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
 
 USE_TOOLS+=	gtar
+
+FONTS_DIRS.x11+=	${PREFIX}/lib/xemacs/xemacs-packages/etc/x-symbol/fonts
+FONTS_DIRS.x11+=	${PREFIX}/lib/xemacs/xemacs-packages/etc/x-symbol/origfonts
+FONTS_DIRS.x11+=	${PREFIX}/lib/xemacs/xemacs-packages/etc/x-symbol/pcf
+REQD_DIRS+=		${PREFIX}/lib/xemacs/xemacs-packages/etc/x-symbol/fonts
+REQD_DIRS+=		${PREFIX}/lib/xemacs/xemacs-packages/etc/x-symbol/origfonts
+REQD_DIRS+=		${PREFIX}/lib/xemacs/xemacs-packages/etc/x-symbol/pcf
+# we have to put them here, because the ones above are removed after the PLIST entries
+REQD_DIRS+=		${PREFIX}/lib/xemacs/xemacs-packages/etc/x-symbol
+REQD_DIRS+=		${PREFIX}/lib/xemacs/xemacs-packages/etc
+REQD_DIRS+=		${PREFIX}/lib/xemacs/xemacs-packages
 
 .include "../../editors/xemacs/Makefile.pkg"
 
