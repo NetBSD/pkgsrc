@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/02/05 23:11:42 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/02/17 23:26:26 adam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 QT3_TOOLS_BUILDLINK3_MK:=	${QT3_TOOLS_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	qt3-tools
 
 .if !empty(QT3_TOOLS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.qt3-tools+=	qt3-tools>=3.1.2nb3
-BUILDLINK_RECOMMENDED.qt3-tools+=	qt3-tools>=3.3.5nb2
+BUILDLINK_RECOMMENDED.qt3-tools+=	qt3-tools>=3.3.5nb3
 BUILDLINK_PKGSRCDIR.qt3-tools?=	../../x11/qt3-tools
 BUILDLINK_DEPMETHOD.qt3-tools?=	build
 .endif	# QT3_TOOLS_BUILDLINK3_MK
@@ -31,4 +31,4 @@ MAKE_ENV+=		QMAKE="${QTDIR}/bin/qmake"
 CONFIGURE_ENV+=		QMAKESPEC=${QTDIR}/mkspecs/netbsd-g++
 MAKE_ENV+=		QMAKESPEC=${QTDIR}/mkspecs/netbsd-g++
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
