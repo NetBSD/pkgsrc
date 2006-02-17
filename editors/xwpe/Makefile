@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:08:59 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/17 19:22:30 wiz Exp $
 #
 
 DISTNAME=	xwpe-1.5.29a
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	editors
 MASTER_SITES=	http://www.identicalsoftware.com/xwpe/
 
