@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:48:58 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/17 19:31:00 wiz Exp $
 lib/X11/fonts/freefont/Fontmap
 lib/X11/fonts/freefont/README
 lib/X11/fonts/freefont/agate.pfb
@@ -48,7 +48,6 @@ lib/X11/fonts/freefont/eraselt.pfb
 lib/X11/fonts/freefont/erasltra.pfb
 lib/X11/fonts/freefont/erasmed.pfb
 lib/X11/fonts/freefont/florence.pfb
-lib/X11/fonts/freefont/fonts.dir
 lib/X11/fonts/freefont/frquad.pfb
 lib/X11/fonts/freefont/frquadb.pfb
 lib/X11/fonts/freefont/ftpstrps.pfb
@@ -110,4 +109,3 @@ lib/X11/fonts/freefont/victoria.pfb
 lib/X11/fonts/freefont/windsord.pfb
 lib/X11/fonts/freefont/zalescap.license
 lib/X11/fonts/freefont/zalescap.pfb
-@dirrm lib/X11/fonts/freefont
