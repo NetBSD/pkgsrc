@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:10:58 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/02/17 06:49:24 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -15,7 +15,7 @@ PKGCONFIG_OVERRIDE=	src/xffm-1.0.pc.in
 CFLAGS+=		${PTHREAD_CFLAGS}
 LIBS+=			${PTHREAD_LDFLAGS}
 
-UNLIMIT_RESOURCES+=     datasize
+UNLIMIT_RESOURCES+=	datasize
 
 .include "../../databases/dbh/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

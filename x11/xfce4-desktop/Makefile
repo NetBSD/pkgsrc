@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/02/05 23:11:46 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2006/02/17 06:49:26 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -12,16 +12,17 @@ COMMENT=	Xfce desktop background manager
 
 PKG_SYSCONFSUBDIR=	xdg/xfce4/desktop
 EGDIR=			${XFCE4_EGBASE}/desktop
-CONF_FILES=		${EGDIR}/menu.xml ${PKG_SYSCONFDIR}/menu.xml
-.for _l in ca cs da de el es et fi fr he hu ja ko nl pl pt_BR ro ru sk sv \
+CONF_FILES=		${EGDIR:Q}/menu.xml ${PKG_SYSCONFDIR:Q}/menu.xml
+.for l in ca cs da de el es et fi fr he hu ja ko nl pl pt_BR ro ru sk sv \
 	uk vi zh_TW
-CONF_FILES+=		${EGDIR}/menu.xml.${_l} ${PKG_SYSCONFDIR}/menu.xml.${_l}
+CONF_FILES+=		${EGDIR:Q}/menu.xml.${l} \
+			${PKG_SYSCONFDIR:Q}/menu.xml.${l}
 .endfor
-CONF_FILES+=		${EGDIR}/xfce-registered-categories.xml \
-			${PKG_SYSCONFDIR}/xfce-registered-categories.xml
-.for _l in cs eu fi he hu ja nl pl pt_BR ro ru sk sv zh_CN zh_TW
-CONF_FILES+=		${EGDIR}/xfce-registered-categories.xml.${_l} \
-			${PKG_SYSCONFDIR}/xfce-registered-categories.xml.${_l}
+CONF_FILES+=		${EGDIR:Q}/xfce-registered-categories.xml \
+			${PKG_SYSCONFDIR:Q}/xfce-registered-categories.xml
+.for l in cs eu fi he hu ja nl pl pt_BR ro ru sk sv zh_CN zh_TW
+CONF_FILES+=		${EGDIR:Q}/xfce-registered-categories.xml.${l} \
+			${PKG_SYSCONFDIR:Q}/xfce-registered-categories.xml.${l}
 .endfor
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
