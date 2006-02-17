@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/08 01:47:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/17 19:29:56 wiz Exp $
 lib/X11/fonts/local/bulgarian-mik/75dpi/courB08b.pcf
 lib/X11/fonts/local/bulgarian-mik/75dpi/courB10b.pcf
 lib/X11/fonts/local/bulgarian-mik/75dpi/courB12b.pcf
@@ -23,8 +23,6 @@ lib/X11/fonts/local/bulgarian-mik/75dpi/courR12b.pcf
 lib/X11/fonts/local/bulgarian-mik/75dpi/courR14b.pcf
 lib/X11/fonts/local/bulgarian-mik/75dpi/courR18b.pcf
 lib/X11/fonts/local/bulgarian-mik/75dpi/courR24b.pcf
-lib/X11/fonts/local/bulgarian-mik/75dpi/fonts.alias
-lib/X11/fonts/local/bulgarian-mik/75dpi/fonts.dir
 lib/X11/fonts/local/bulgarian-mik/75dpi/helvB08b.pcf
 lib/X11/fonts/local/bulgarian-mik/75dpi/helvB10b.pcf
 lib/X11/fonts/local/bulgarian-mik/75dpi/helvB12b.pcf
@@ -130,9 +128,4 @@ lib/X11/fonts/local/bulgarian-mik/misc/8x13b.pcf
 lib/X11/fonts/local/bulgarian-mik/misc/8x16b.pcf
 lib/X11/fonts/local/bulgarian-mik/misc/9x15Bb.pcf
 lib/X11/fonts/local/bulgarian-mik/misc/9x15b.pcf
-lib/X11/fonts/local/bulgarian-mik/misc/fonts.alias
-lib/X11/fonts/local/bulgarian-mik/misc/fonts.dir
 lib/X11/fonts/local/bulgarian-mik/misc/nil2b.pcf
-@dirrm lib/X11/fonts/local/bulgarian-mik/75dpi
-@dirrm lib/X11/fonts/local/bulgarian-mik/misc
-@dirrm lib/X11/fonts/local/bulgarian-mik
