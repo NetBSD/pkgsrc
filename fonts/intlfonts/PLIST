@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/07/28 15:07:37 tron Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/02/17 19:33:44 wiz Exp $
 lib/X11/fonts/intlfonts/a18rk.pcf.gz
 lib/X11/fonts/intlfonts/a18rkb.pcf.gz
 lib/X11/fonts/intlfonts/a18rki.pcf.gz
@@ -233,5 +233,3 @@ lib/X11/fonts/intlfonts/visc18i-etl.pcf.gz
 lib/X11/fonts/intlfonts/visc24-etl.pcf.gz
 lib/X11/fonts/intlfonts/xtis18.pcf.gz
 lib/X11/fonts/intlfonts/xtis24.pcf.gz
-@dirrm lib/X11/fonts/intlfonts/bdf
-@dirrm lib/X11/fonts/intlfonts
