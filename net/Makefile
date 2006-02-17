@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.602 2006/02/14 21:50:03 heinz Exp $
+# $NetBSD: Makefile,v 1.603 2006/02/17 20:22:25 adrianp Exp $
 #
 
 COMMENT=	Networking tools
@@ -293,6 +293,7 @@ SUBDIR+=	p5-SNMP_Session
 SUBDIR+=	p5-SOAP-Lite
 SUBDIR+=	p5-Socket6
 SUBDIR+=	p5-Wais
+SUBDIR+=	p5-X500-DN
 SUBDIR+=	p5-ispman
 SUBDIR+=	packit
 SUBDIR+=	partysip
