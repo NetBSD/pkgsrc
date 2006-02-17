@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/02/05 23:10:35 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2006/02/17 08:10:44 martti Exp $
 
 DISTNAME=	LPRng-3.8.28
 PKGNAME=	LPRng-core-3.8.28
@@ -17,7 +17,7 @@ CONFLICTS+=		cups-[0-9]*
 
 USE_TOOLS+=		chgrp chown gmake
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LTCONFIG_OVERRIDE+=	${WRKSRC:Q}/ltconfig
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-lpd_perms_path=${LPD_PERMS_PATH:Q}
@@ -33,16 +33,16 @@ CONFIGURE_ENV+=		CHOWN=${TOOLS_CHOWN:Q}
 
 # Look for printer configuration files firstly in /etc, then ${PREFIX}/etc.
 #
-LPD_PERMS_PATH=		${PKG_SYSCONFDIR}/lpd/lpd.perms
-LPD_PRINTCAP_PATH=	${PKG_SYSCONFDIR}/printcap
-PRINTCAP_PATH=		${PKG_SYSCONFDIR}/printcap
-FILTER_DIR=		${PREFIX}/libexec/LPRng
-FILTER_LD_PATH=		/usr/lib:${PREFIX}/lib:/usr/local/lib
-FILTER_PATH=		${FILTER_DIR}:/sbin:/usr/sbin:/bin:/usr/bin:${PREFIX}/sbin:${PREFIX}/bin:/usr/local/sbin:/usr/local/bin
+LPD_PERMS_PATH=		${PKG_SYSCONFDIR:Q}/lpd/lpd.perms
+LPD_PRINTCAP_PATH=	${PKG_SYSCONFDIR:Q}/printcap
+PRINTCAP_PATH=		${PKG_SYSCONFDIR:Q}/printcap
+FILTER_DIR=		${PREFIX:Q}/libexec/LPRng
+FILTER_LD_PATH=		/usr/lib:${PREFIX:Q}/lib:/usr/local/lib
+FILTER_PATH=		${FILTER_DIR}:/sbin:/usr/sbin:/bin:/usr/bin:${PREFIX:Q}/sbin:${PREFIX:Q}/bin:/usr/local/sbin:/usr/local/bin
 
 MAKE_ENV+=		POSTINSTALL="NO"
 
-EXAMPLESDIR=	 	${PREFIX}/share/examples/LPRng
+EXAMPLESDIR=		${PREFIX:Q}/share/examples/LPRng
 DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 RCD_SCRIPTS=		LPRng
@@ -55,29 +55,29 @@ FILES_SUBST+=		MKDIR=${MKDIR:Q}
 FILES_SUBST+=		RM=${RM:Q}
 FILES_SUBST+=		TRUE=${TRUE:Q}
 FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
-FILES_SUBST_SED=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
+FILES_SUBST_SED+=	${FILES_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
 pre-patch:
-	${MV} ${WRKSRC}/man/lpd.conf.n ${WRKSRC}/man/lpd.conf.n.in
+	${MV} ${WRKSRC:Q}/man/lpd.conf.n ${WRKSRC:Q}/man/lpd.conf.n.in
 
 post-configure:
-	${SED}	-e "s,@FILTER_LD_PATH@,${FILTER_LD_PATH},g" \
-		-e "s,@FILTER_PATH@,${FILTER_PATH},g" \
-		-e "s,@LPD_PRINTCAP_PATH@,${LPD_PRINTCAP_PATH},g" \
-		-e "s,@LPD_PERMS_PATH@,${LPD_PERMS_PATH},g" \
-		-e "s,@PRINTCAP_PATH@,${PRINTCAP_PATH},g" \
-		-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g" \
-		< ${WRKSRC}/man/lpd.conf.n.in > ${WRKSRC}/man/lpd.conf.n
+	${SED}	-e "s,@FILTER_LD_PATH@,${FILTER_LD_PATH:Q},g" \
+		-e "s,@FILTER_PATH@,${FILTER_PATH:Q},g" \
+		-e "s,@LPD_PRINTCAP_PATH@,${LPD_PRINTCAP_PATH:Q},g" \
+		-e "s,@LPD_PERMS_PATH@,${LPD_PERMS_PATH:Q},g" \
+		-e "s,@PRINTCAP_PATH@,${PRINTCAP_PATH:Q},g" \
+		-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR:Q},g" \
+		< ${WRKSRC:Q}/man/lpd.conf.n.in > ${WRKSRC:Q}/man/lpd.conf.n
 
 pre-install:
-	${SED}	-e "s,@PREFIX@,${PREFIX},g" \
-		< ${FILESDIR}/LPRng.sh > ${WRKDIR}/LPRng.sh
+	${SED}	-e "s,@PREFIX@,${PREFIX:Q},g" \
+		< ${FILESDIR:Q}/LPRng.sh > ${WRKDIR:Q}/LPRng.sh
 
 post-install:
-	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
+	${INSTALL_DATA_DIR} ${EXAMPLESDIR:Q}
 	for file in lpd.conf lpd.perms printcap; do \
-		${INSTALL_DATA} ${WRKSRC}/$${file} \
-			${EXAMPLESDIR}/$${file}.example; \
+		${INSTALL_DATA} ${WRKSRC:Q}/$${file} \
+			${EXAMPLESDIR:Q}/$${file}.example; \
 	done
 
 .include "../../mk/bsd.pkg.mk"

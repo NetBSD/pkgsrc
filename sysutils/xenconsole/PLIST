@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/13 18:36:00 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/17 07:55:57 martti Exp $
 bin/xcon
-share/examples/xenconsole/xcon.ini
 share/doc/xenconsole/CHANGES.txt
 share/doc/xenconsole/README.txt
 share/doc/xenconsole/TODO.txt
+share/examples/xenconsole/xcon.ini
 share/xenconsole/colours.pm
 share/xenconsole/gothix/capstderr.pm
 share/xenconsole/gothix/cpusage.pm

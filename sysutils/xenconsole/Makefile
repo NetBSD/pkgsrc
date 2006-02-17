@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/12/29 06:22:19 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/17 07:55:57 martti Exp $
 
 DISTNAME=	xenConsole-r0.15b1-1
 PKGNAME=	xenconsole-0.15b1.1
@@ -9,7 +9,7 @@ MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://ucck.sourceforge.net/xenConsole/
 COMMENT=	Console monitor for Xen
 
-WRKSRC=		${WRKDIR}/xenConsole
+WRKSRC=		${WRKDIR:Q}/xenConsole
 
 DEPENDS+=	p5-Config-IniFiles>=2.38:../../devel/p5-Config-IniFiles
 DEPENDS+=	p5-Curses-UI>=0.95:../../devel/p5-Curses-UI
@@ -24,34 +24,34 @@ DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
 
 SUBST_CLASSES+=			xenconsole
 SUBST_STAGE.xenconsole=		pre-configure
-SUBST_MESSAGE.xenconsole=	"Fixing paths."
+SUBST_MESSAGE.xenconsole=	Fixing paths.
 SUBST_FILES.xenconsole=		xcon.pl xen_list.pm
-SUBST_SED.xenconsole=		-e "s,@PREFIX@,${PREFIX},g"
-SUBST_SED.xenconsole+=		-e "s,@LOCALBASE@,${LOCALBASE},g"
+SUBST_SED.xenconsole=		-e s,@PREFIX@,${PREFIX:Q},g
+SUBST_SED.xenconsole+=		-e s,@LOCALBASE@,${LOCALBASE:Q},g
 
-REPLACE_PERL=		xcon.pl xsnmp.pm
+REPLACE_PERL+=		xcon.pl xsnmp.pm
 
-EGDIR=			${PREFIX}/share/examples/xenconsole
-CONF_FILES=		${EGDIR}/xcon.ini ${PKG_SYSCONFDIR}/xcon.ini
+EGDIR=			${PREFIX:Q}/share/examples/xenconsole
+CONF_FILES=		${EGDIR:Q}/xcon.ini ${PKG_SYSCONFDIR:Q}/xcon.ini
 
 do-build:
-	${SED} -e "s,@PREFIX@,${PREFIX},g" \
-		< ${FILESDIR}/xcon.sh > ${WRKDIR}/xcon
+	${SED} -e "s,@PREFIX@,${PREFIX:Q},g" \
+		< ${FILESDIR:Q}/xcon.sh > ${WRKDIR:Q}/xcon
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/xenconsole
-	(cd ${WRKSRC} && ${PAX} -rw *.pm */*.pm ${PREFIX}/share/xenconsole)
-	${INSTALL_SCRIPT} ${WRKSRC}/xcon.pl ${PREFIX}/share/xenconsole/xcon
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/xenconsole
+	(cd ${WRKSRC:Q} && ${PAX} -rw *.pm */*.pm ${PREFIX:Q}/share/xenconsole)
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/xcon.pl ${PREFIX:Q}/share/xenconsole/xcon
 
 	# Configuration file
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/sample-inifile ${EGDIR}/xcon.ini
+	${INSTALL_DATA_DIR} ${EGDIR:Q}
+	${INSTALL_DATA} ${WRKSRC:Q}/sample-inifile ${EGDIR:Q}/xcon.ini
 
 	# Documentation
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xenconsole
-	(cd ${WRKSRC} && ${PAX} -rw *.txt ${PREFIX}/share/doc/xenconsole)
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/xenconsole
+	(cd ${WRKSRC:Q} && ${PAX} -rw *.txt ${PREFIX:Q}/share/doc/xenconsole)
 
 	# Launcher script
-	${INSTALL_SCRIPT} ${WRKDIR}/xcon ${PREFIX}/bin/xcon
+	${INSTALL_SCRIPT} ${WRKDIR:Q}/xcon ${PREFIX:Q}/bin/xcon
 
 .include "../../mk/bsd.pkg.mk"

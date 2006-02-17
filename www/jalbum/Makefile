@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:11:24 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/17 08:01:31 martti Exp $
 
 DISTNAME=		JAlbum6.2
 PKGNAME=		jalbum-6.2
@@ -15,17 +15,17 @@ DIST_SUBDIR=		${PKGNAME_NOREV}
 USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	blackdown-jdk13 kaffe sun-jdk13 sun-jdk14 sun-jdk15
 
-WRKSRC=			${WRKDIR}/JAlbum
+WRKSRC=			${WRKDIR:Q}/JAlbum
 
 do-build:
-	${SED}	-e "s#@PKG_JAVA_HOME@#${PKG_JAVA_HOME}#g"	\
-		-e "s#@PREFIX@#${PREFIX}#g"			\
-		< ${FILESDIR}/jalbum > ${WRKDIR}/jalbum
+	${SED}	-e "s#@PKG_JAVA_HOME@#${PKG_JAVA_HOME:Q}#g"	\
+		-e "s#@PREFIX@#${PREFIX:Q}#g"			\
+		< ${FILESDIR:Q}/jalbum > ${WRKDIR:Q}/jalbum
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/jalbum ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/jalbum
-	(cd ${WRKDIR}/JAlbum && ${PAX} -rw * ${PREFIX}/share/jalbum)
+	${INSTALL_SCRIPT} ${WRKDIR:Q}/jalbum ${PREFIX:Q}/bin
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/jalbum
+	(cd ${WRKDIR:Q}/JAlbum && ${PAX} -rw * ${PREFIX:Q}/share/jalbum)
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
