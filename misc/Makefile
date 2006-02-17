@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.255 2006/01/31 21:38:28 jschauma Exp $
+# $NetBSD: Makefile,v 1.256 2006/02/17 21:00:00 adrianp Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -183,6 +183,7 @@ SUBDIR+=	p5-Locale-Maketext
 SUBDIR+=	p5-Locale-Maketext-Fuzzy
 SUBDIR+=	p5-Locale-Maketext-Lexicon
 SUBDIR+=	p5-Locale-Maketext-Simple
+SUBDIR+=	p5-Locale-libintl
 SUBDIR+=	p5-Mac-Macbinary
 SUBDIR+=	p5-Msgcat
 SUBDIR+=	p5-Search
