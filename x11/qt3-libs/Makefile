@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2006/02/05 23:11:42 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2006/02/17 23:24:17 adam Exp $
 
-PKGNAME=		qt3-libs-${QTVERSION}
-PKGREVISION=		3
-MAINTAINER=		adam@NetBSD.org
-COMMENT=		C++ X GUI toolkit
+PKGNAME=	qt3-libs-${QTVERSION}
+PKGREVISION=	4
+MAINTAINER=	adam@NetBSD.org
+COMMENT=	C++ X GUI toolkit
 
 LIBQT=			${WRKSRC}/lib/libqt-mt.la
 
@@ -21,7 +21,7 @@ PTHREAD_OPTS+=		require
 
 UNLIMIT_RESOURCES=	datasize
 
-BUILDLINK_PASSTHRU_DIRS+= ${QTPREFIX}
+BUILDLINK_PASSTHRU_DIRS+=	${QTPREFIX}
 
 PKGCONFIG_OVERRIDE=	lib/qt-mt.pc
 
