@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2006/02/05 23:09:05 joerg Exp $
+# $NetBSD: Makefile,v 1.62 2006/02/17 19:26:20 wiz Exp $
 #
 
 DISTNAME=		vice-1.18
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.funet.fi/pub/cbm/crossplatform/emulators/VICE/ \
 			http://www.nic.funet.fi/pub/cbm/crossplatform/emulators/VICE/
@@ -13,7 +13,7 @@ COMMENT=		Emulator for C64, C128, CBM-II, PET, and VIC20
 
 BUILD_USES_MSGFMT=	YES
 
-RESTRICTED=		"ROM image copyright is questionable"
+RESTRICTED=		ROM image copyright is questionable.
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
@@ -28,24 +28,16 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-fullscreen
 
 INFO_FILES=		vice.info
+FONTS_DIRS.x11=		${PREFIX}/share/vice/fonts
+REQD_DIRS+=		${PREFIX}/share/vice/fonts
+REQD_DIRS+=		${PREFIX}/share/vice
+
+.include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.vice
-PKG_SUPPORTED_OPTIONS=	esound ffmpeg lame gnome
-
-.include "../../mk/bsd.options.mk"
-
 .if (${OPSYS} == NetBSD)
 CONFIGURE_ARGS+=	--without-oss
-.endif
-
-.if !empty(PKG_OPTIONS:Mffmpeg)
-CONFIGURE_ARGS+=	--enable-ffmpeg
-.endif
-
-.if !empty(PKG_OPTIONS:Mgnome)
-CONFIGURE_ARGS+=	--enable-gnomeui
 .endif
 
 # These changes are rather common, so sed instead of patch:
@@ -63,22 +55,10 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/vice
 	${MV} ${PREFIX}/share/doc/vice/*.html ${PREFIX}/share/doc/html/vice
 
-.if !empty(PKG_OPTIONS:Mesound)
-.include "../../audio/esound/buildlink3.mk"
-.endif
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
-.if !empty(PKG_OPTIONS:Mffmpeg)
-.include "../../multimedia/ffmpeg/buildlink3.mk"
-.  if !empty(PKG_OPTIONS:Mlame)
-.include "../../audio/lame/buildlink3.mk"
-.  endif
-.endif
-.if !empty(PKG_OPTIONS:Mgnome)
-.include "../../x11/gnome-libs/buildlink3.mk"
-.endif
 
 .include "../../mk/bsd.pkg.mk"
