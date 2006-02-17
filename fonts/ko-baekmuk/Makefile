@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:09:10 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/17 19:35:25 wiz Exp $
 #
 
 DISTNAME=	baekmuk-2.0
 PKGNAME=	ko-baekmuk-20010718
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	fonts x11 korean
 MASTER_SITES+=	ftp://ftp.mizi.com/pub/baekmuk/ \
 		http://zinc.skku.ac.kr/~wkpark/baekmuk/
@@ -13,8 +13,7 @@ COMMENT=	X11 fonts for KSX 1001 Korean standard (baekmuk foundry)
 
 CONFLICTS+=	ksc5601fonts-[0-9]*
 
-USE_X11BASE=	yes
-USE_TOOLS+=	gzip
+USE_TOOLS+=	bdftopcf gzip
 
 MAKE_ENV+=	FONTDIR=${FONTDIR:Q} GZIP_CMD=${GZIP_CMD:Q}
 
@@ -29,16 +28,16 @@ BAEKMUK_BDF=	batang10.bdf batang10b.bdf batang12.bdf batang12b.bdf \
 		gulim20b.bdf gulim24.bdf gulim24b.bdf hline10.bdf hline12.bdf \
 		hline14.bdf hline16.bdf hline18.bdf hline20.bdf hline24.bdf
 
-FONTDIR=	${PREFIX}/lib/X11/fonts/local
-FONTS_DIRS.x11=	${FONTDIR}
+FONTDIR=		${PREFIX}/lib/X11/fonts/local
+FONTS_DIRS.x11+=	${FONTDIR}
+REQD_DIRS+=		${FONTDIR}
 
 post-extract:
 	${MKDIR} ${WRKSRC}
 	${CP} ${.CURDIR}/../../fonts/ko-x11fonts/files/Makefile ${WRKSRC}
-	(cd ${WRKSRC}; ${MAKE} prepare)
+	cd ${WRKSRC} && ${MAKE} prepare
 
 pre-install:
-	[ -d ${FONTDIR} ] || ${INSTALL_DATA_DIR} ${FONTDIR}
-	cp ${WRKSRC}/../fonts.alias ${FONTDIR}
+	${CP} ${WRKSRC}/../fonts.alias ${FONTDIR}
 
 .include "../../mk/bsd.pkg.mk"
