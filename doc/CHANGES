@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12964 2006/02/17 19:36:56 wiz Exp $
+$NetBSD: CHANGES,v 1.12965 2006/02/17 19:37:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1060,3 +1060,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated fonts/ko-baekmuk to 20010718nb5 [wiz 2006-02-17]
 	Updated fonts/mozilla-fonts to 1.0nb2 [wiz 2006-02-17]
 	Updated fonts/sgi-fonts to 1.0.457nb2 [wiz 2006-02-17]
+	Updated games/sjeng to 11.0nb3 [wiz 2006-02-17]
