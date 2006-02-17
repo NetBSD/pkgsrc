@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12956 2006/02/17 19:28:58 wiz Exp $
+$NetBSD: CHANGES,v 1.12957 2006/02/17 19:30:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1041,3 +1041,15 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/xbeeb to 0.3.6nb2 [wiz 2006-02-17]
 	Updated fonts/Xg to 1.0nb2 [wiz 2006-02-17]
 	Updated fonts/biznet-iso8859_2 to 1.0nb3 [wiz 2006-02-17]
+	Updated fonts/cyr-rfx-bulgarian-mik to 1.1nb2 [wiz 2006-02-17]
+	Updated fonts/cyr-rfx-ibm-cp866 to 1.1nb2 [wiz 2006-02-17]
+	Updated fonts/cyr-rfx-iso10646_0400 to 1.1nb2 [wiz 2006-02-17]
+	Updated fonts/cyr-rfx-iso8859_15 to 1.1nb2 [wiz 2006-02-17]
+	Updated fonts/cyr-rfx-iso8859_5 to 1.1nb2 [wiz 2006-02-17]
+	Updated fonts/cyr-rfx-koi8-o to 1.1nb2 [wiz 2006-02-17]
+	Updated fonts/cyr-rfx-koi8-ru to 1.1nb2 [wiz 2006-02-17]
+	Updated fonts/cyr-rfx-koi8-ub to 1.1nb2 [wiz 2006-02-17]
+	Updated fonts/cyr-rfx-koi8_1 to 1.1nb2 [wiz 2006-02-17]
+	Updated fonts/cyr-rfx-mac-cyrillic to 1.1nb2 [wiz 2006-02-17]
+	Updated fonts/cyr-rfx-windows_1251 to 1.1nb2 [wiz 2006-02-17]
+	Updated fonts/cyr-rfx-winlatin_1 to 1.1nb2 [wiz 2006-02-17]
