@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:14 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/17 19:23:54 wiz Exp $
 bin/pcemu
 lib/pcemu/doc/BUGS
 lib/pcemu/doc/CHANGES
@@ -8,7 +8,6 @@ lib/pcemu/doc/README.BSD
 lib/pcemu/doc/lredir.readme
 lib/pcemu/doc/report.ps.gz
 lib/pcemu/font/vga.pcf.Z
-lib/pcemu/font/fonts.dir
 lib/pcemu/C/vga50.com
 lib/pcemu/C/config.sys
 lib/pcemu/C/dumpdisk.exe
@@ -16,6 +15,6 @@ lib/pcemu/C/lredir.exe
 lib/pcemu/C/emufs.sys
 lib/pcemu/DriveA
 @dirrm lib/pcemu/doc
-@dirrm lib/pcemu/font
+@comment in REQ_DIRS: @dirrm lib/pcemu/font
 @dirrm lib/pcemu/C
-@dirrm lib/pcemu
+@comment in REQ_DIRS: @dirrm lib/pcemu
