@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2006/02/05 23:09:09 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2006/02/17 19:33:44 wiz Exp $
 
 DISTNAME=	intlfonts-1.2.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_GNU:=intlfonts/intlfonts-1.2.1-split/}
 DISTFILES=	${FONT_SETS:S/$/${EXTRACT_SUFX}/} ${MISC_FILES}
@@ -32,31 +32,34 @@ EXTRA_FONTS=	Chinese.BIG	\
 # Type1/TrueType fonts for Latin1, Thai and Vietnamese
 # XXX need "fonts.scale" for them
 #
-#EXTRA_FONTS+=	Type1		\
-#		TrueType
-#CONFIGURE_ARGS+=--with-type1 --with-truetype
+EXTRA_FONTS+=	Type1		\
+		TrueType
+CONFIGURE_ARGS+=	--with-type1 --with-truetype
 
 MISC_FILES=	README.split
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_ONLY=	${FONT_SETS:S/$/${EXTRACT_SUFX}/}
-USE_X11BASE=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-fontdir=${PREFIX}/lib/X11/fonts/intlfonts \
 		--enable-compress=gzip
 
+FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/intlfonts
+FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/intlfonts/bdf
+FONTS_DIRS.type1+=	${PREFIX}/lib/X11/fonts/intlfonts/Type1
+FONTS_DIRS.ttf+=	${PREFIX}/lib/X11/fonts/intlfonts/TrueType
+REQD_DIRS+=		${PREFIX}/lib/X11/fonts/intlfonts
+REQD_DIRS+=		${PREFIX}/lib/X11/fonts/intlfonts/bdf
+REQD_DIRS+=		${PREFIX}/lib/X11/fonts/intlfonts/Type1
+REQD_DIRS+=		${PREFIX}/lib/X11/fonts/intlfonts/TrueType
+
 .include "../../mk/bsd.prefs.mk"
 
 .if !defined(NO_EXTRA_FONTS)
 FONT_SETS+=	${EXTRA_FONTS}
-PLIST_SRC=	${WRKDIR}/PLIST
-
+PLIST_SRC=	PLIST PLIST.extrafonts
 .include "../../mk/x11.buildlink3.mk"
-
-# the order may look strange, but we need to make "@dirrm" the last item.
-post-patch:
-	${CAT} ${PKGDIR}/PLIST.extrafonts ${PKGDIR}/PLIST > ${PLIST_SRC}
 .endif
 
 post-extract:
