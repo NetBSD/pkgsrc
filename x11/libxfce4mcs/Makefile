@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:11:39 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/17 06:49:25 martti Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -9,7 +9,7 @@ COMMENT=	Xfce settings management library
 
 #PKGREVISION=	1
 
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX:Q}/share/doc/html
 
 PKGCONFIG_OVERRIDE=	libxfce4mcs/libxfce4mcs-client-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	libxfce4mcs/libxfce4mcs-manager-1.0.pc.in

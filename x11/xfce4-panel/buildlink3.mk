@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/02/05 23:11:46 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2006/02/17 06:49:26 martti Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_PANEL_BUILDLINK3_MK:=	${XFCE4_PANEL_BUILDLINK3_MK}+
@@ -21,4 +21,4 @@ BUILDLINK_PKGSRCDIR.xfce4-panel?=	../../x11/xfce4-panel
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
