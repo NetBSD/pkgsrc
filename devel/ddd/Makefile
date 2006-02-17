@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2006/02/05 23:08:41 joerg Exp $
+# $NetBSD: Makefile,v 1.70 2006/02/17 07:30:13 martti Exp $
 #
 
 DISTNAME=	ddd-3.3.11
@@ -25,28 +25,28 @@ CONFIGURE_ENV+=		COMPFACE=${FALSE:Q}
 .include "../../mk/bsd.prefs.mk"
 
 post-patch:
-	@case "${PAPERSIZE}" in					\
+	@case ${PAPERSIZE:Q} in					\
 	A4)	${ECHO} "Using A4 paper size" ;;		\
 	Letter*)	${ECHO} "Using US Letter paper size";	\
-		${MV} ${WRKSRC}/ddd/Ddd.in ${WRKSRC}/ddd/Ddd.in.orig; \
+		${MV} ${WRKSRC:Q}/ddd/Ddd.in ${WRKSRC:Q}/ddd/Ddd.in.orig; \
 		${SED} -e 's|@Ddd@\*paperSize: 210mm x 297mm|@Ddd@*paperSize: 8.5" x 11"|' \
-			< ${WRKSRC}/ddd/Ddd.in.orig 		\
-			> ${WRKSRC}/ddd/Ddd.in ;;		\
+			< ${WRKSRC:Q}/ddd/Ddd.in.orig 		\
+			> ${WRKSRC:Q}/ddd/Ddd.in ;;		\
 	"")	${ECHO} "PAPERSIZE not set - defaulting to A4" ;;	\
 	*)	${ECHO} "Bad PAPERSIZE - $$PAPERSIZE - defaulting to A4" ;; \
 	esac;
 
 post-configure:
-	${ECHO} "LIBXM = ${MOTIFLIB}" >> ${WRKSRC}/ddd/Makefile
+	${ECHO} LIBXM = ${MOTIFLIB:Q} >> ${WRKSRC:Q}/ddd/Makefile
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ddd
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/ddd
-	${INSTALL_DATA} ${WRKSRC}/doc/ddd-paper.ps ${PREFIX}/share/doc/ddd
-	${INSTALL_DATA} ${WRKSRC}/doc/ddd.ps ${PREFIX}/share/doc/ddd
-	${INSTALL_DATA} ${WRKSRC}/doc/ddd.pdf ${PREFIX}/share/doc/ddd
-	${GZIP_CMD} ${PREFIX}/share/doc/ddd/ddd-paper.ps
-	${GZIP_CMD} ${PREFIX}/share/doc/ddd/ddd.ps
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/ddd
+	${INSTALL_DATA} ${WRKSRC:Q}/README ${PREFIX:Q}/share/doc/ddd
+	${INSTALL_DATA} ${WRKSRC:Q}/doc/ddd-paper.ps ${PREFIX:Q}/share/doc/ddd
+	${INSTALL_DATA} ${WRKSRC:Q}/doc/ddd.ps ${PREFIX:Q}/share/doc/ddd
+	${INSTALL_DATA} ${WRKSRC:Q}/doc/ddd.pdf ${PREFIX:Q}/share/doc/ddd
+	${GZIP_CMD} ${PREFIX:Q}/share/doc/ddd/ddd-paper.ps
+	${GZIP_CMD} ${PREFIX:Q}/share/doc/ddd/ddd.ps
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"

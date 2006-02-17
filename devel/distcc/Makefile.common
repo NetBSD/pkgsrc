@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2005/12/29 06:21:37 jlam Exp $
+# $NetBSD: Makefile.common,v 1.4 2006/02/17 07:38:45 martti Exp $
 #
 
 ### XXX: See the other 'XXX' comment below when updating this package.
@@ -25,7 +25,7 @@ SUBST_CLASSES+=		doc
 SUBST_STAGE.doc=	post-patch
 SUBST_FILES.doc=	src/distcc.c src/hosts.c
 SUBST_SED.doc=		-e "s|%s/distcc/hosts|%s/hosts|g"
-SUBST_MESSAGE.doc=	"Fixing paths."
+SUBST_MESSAGE.doc=	Fixing paths.
 
 .if empty(PKGNAME:Mdistcc-[0-9]*)
 ### XXX: Remove 'nb1' from the line below during the next update.
