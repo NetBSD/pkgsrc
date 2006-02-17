@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.23 2006/02/12 14:44:59 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.24 2006/02/17 20:38:17 rillig Exp $ -->
 
 <chapter id="build">
 <title>The build process</title>
@@ -120,9 +120,9 @@ can be put into place on the system.</para>
 
 <programlisting>
     EVAL_PREFIX+=           GTKDIR=gtk+
-    CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE}        \
-                            --with-gtk-prefix="${GTKDIR}"           \
-                            --enable-multibyte
+    CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE:Q}
+    CONFIGURE_ARGS+=        --with-gtk-prefix=${GTKDIR:Q}
+    CONFIGURE_ARGS+=        --enable-multibyte
 </programlisting>
 
 	<para>Specific defaults can be defined for the packages evaluated using
@@ -241,43 +241,49 @@ the package will be built, but not installed.</para>
 <sect1 id="build.extract">
 <title>The <emphasis>extract</emphasis> phase</title>
 
-	  <para>When the distfiles are present on the local system,
-	    they need to be extracted, as they are usually in the form
-	    of some compressed archive format, most commonly
-	    <filename>.tar.gz</filename>. </para>
+	<para>When the distfiles are present on the local system, they
+	need to be extracted, as they usually come in the form of some
+	compressed archive format.</para>
 
-	  <para> If only some of the
-	    distfiles need to be uncompressed, the files to be
-	    uncompressed should be put into
-	    <varname>EXTRACT_ONLY</varname>.</para>
+	<para>By default, all <varname>DISTFILES</varname> are
+	extracted. If you only need some of them, you can set the
+	<varname>EXTRACT_ONLY</varname> variable to the list of those
+	files.</para>
 
-	  <para> If the distfiles are not in
-	    <filename>.tar.gz</filename> format, they can be extracted
-	    by setting either <varname>EXTRACT_SUFX</varname>, or
-	    <varname>EXTRACT_CMD</varname>,
-	    <varname>EXTRACT_BEFORE_ARGS</varname> and
-	    <varname>EXTRACT_AFTER_ARGS</varname>. In the former case,
-	    pkgsrc knows how to extract a number of suffixes
-	    (<filename>.tar.gz</filename>, <filename>.tgz</filename>,
-	    <filename>.tar.gz2</filename>, <filename>.tbz</filename>,
-	    <filename>.tar.Z</filename>, <filename>.tar</filename>,
-	    <filename>.shar.gz</filename>,
-	    <filename>.shar.bz2</filename>,
-	    <filename>.shar.Z</filename>, <filename>.shar</filename>,
-	    <filename>.Z</filename>, <filename>.bz2</filename> and
-	    <filename>.gz</filename>; see the definition of the
-	    various <varname>DECOMPRESS_CMD</varname> variables in
-	    <filename>bsd.pkg.extract.mk</filename> for a complete
-	    list). Here's an example on how to use the other variables
-	    for a program that comes with a compressed shell archive
-	    whose name ends in <filename>.msg.gz</filename>:</para>
+	<para>Extracting the files is usually done by a little program,
+	<filename>mk/scripts/extract</filename>, which already knows how
+	to extract various archive formats, so most likely you will not
+	need to change anything here. But if you need, the following
+	variables may help you:</para>
 
-<programlisting>
-    EXTRACT_SUFX=           .msg.gz
-    EXTRACT_CMD=            zcat
-    EXTRACT_BEFORE_ARGS=
-    EXTRACT_AFTER_ARGS=     |sh
-</programlisting>
+	<variablelist>
+
+	<varlistentry><term><varname>EXTRACT_OPTS_{BIN,LHA,PAX,RAR,TAR,ZIP,ZOO}</varname></term>
+	<listitem><para>Use these variables to override the default
+	options for an extract command, which are defined in
+	<filename>mk/scripts/extract</filename>.</para></listitem></varlistentry>
+
+	<varlistentry><term><varname>EXTRACT_USING</varname></term>
+	<listitem><para>This variable can be set to
+	<literal>pax</literal>, <literal>tar</literal> or an absolute
+	pathname pointing to the command with which tar archives should
+	be extracted.</para></listitem></varlistentry>
+
+	</variablelist>
+
+	<para>If the <filename>extract</filename> program doesn't serve
+	your needs, you can also override the
+	<varname>EXTRACT_CMD</varname> variable, which holds the command
+	used for extracting the files. This command is executed in the
+	<filename>${WRKSRC}</filename> directory. During execution of
+	this command, the shell variable <varname>extract_file</varname>
+	holds the absolute pathname of the file that is going to be
+	extracted.</para>
+
+	<para>And if that still does not suffice, you can override the
+	<varname>do-extract</varname> target in the package
+	Makefile.</para>
+
 
 </sect1>
 
