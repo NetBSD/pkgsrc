@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:09:08 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/17 19:28:43 wiz Exp $
 #
 
 DISTNAME=	ISO8859-2-pcf
 PKGNAME=	biznet-iso8859_2-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts x11
 MASTER_SITES=	http://www.biz.net.pl/images/
 
