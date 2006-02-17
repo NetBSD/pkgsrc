@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12943 2006/02/17 13:50:49 rillig Exp $
+$NetBSD: CHANGES,v 1.12944 2006/02/17 17:53:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1028,3 +1028,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/postgresql73-server to 7.3.10nb2 [wiz 2006-02-16]
 	Added www/p5-Jemplate version 0.14 [minskim 2006-02-17]
 	Updated misc/multitail to 3.8.6 [rillig 2006-02-17]
+	Updated databases/py-ZODB to 3.2.1nb3 [wiz 2006-02-17]
