@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.256 2006/02/17 21:00:00 adrianp Exp $
+# $NetBSD: Makefile,v 1.257 2006/02/17 23:49:19 adam Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -23,9 +23,6 @@ SUBDIR+=	brs
 SUBDIR+=	bsdiff
 SUBDIR+=	buffer
 SUBDIR+=	celestia
-SUBDIR+=	celestia-gnome
-SUBDIR+=	celestia-gtk
-SUBDIR+=	celestia-kde
 SUBDIR+=	chipmunk
 SUBDIR+=	chord
 SUBDIR+=	cksfv
