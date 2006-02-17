@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12958 2006/02/17 19:31:12 wiz Exp $
+$NetBSD: CHANGES,v 1.12959 2006/02/17 19:33:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1054,3 +1054,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated fonts/cyr-rfx-windows_1251 to 1.1nb2 [wiz 2006-02-17]
 	Updated fonts/cyr-rfx-winlatin_1 to 1.1nb2 [wiz 2006-02-17]
 	Updated fonts/freefonts to 0.10nb2 [wiz 2006-02-17]
+	Updated fonts/intlfonts to 1.2.1nb4 [wiz 2006-02-17]
