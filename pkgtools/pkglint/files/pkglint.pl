@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.521 2006/02/17 15:26:01 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.522 2006/02/17 18:35:34 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2312,7 +2312,7 @@ sub checkline_mk_shellword($$$) {
 	my ($line, $shellword, $check_quoting) = @_;
 	my ($rest, $state);
 
-	if ($opt_warn_quoting && $shellword =~ qr"^\$\{(${regex_varname})(:.+)?\}$") {
+	if ($opt_warn_quoting && $shellword =~ qr"^\$\{(${regex_varname})(:[^}]+)?\}$") {
 		my ($varname, $mod) = ($1, $2);
 
 		if (exists(get_vartypes_map()->{$varname}) && !(defined($mod) && $mod =~ qr":Q$")) {
