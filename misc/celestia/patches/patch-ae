@@ -1,13 +1,21 @@
-$NetBSD: patch-ae,v 1.3 2004/11/10 16:38:27 adam Exp $
+$NetBSD: patch-ae,v 1.4 2006/02/17 23:46:40 adam Exp $
 
---- Makefile.in.orig	2004-08-23 07:22:06.000000000 +0000
+--- Makefile.in.orig	2006-02-15 22:53:42.000000000 +0100
 +++ Makefile.in
-@@ -255,7 +255,7 @@ x_includes = @x_includes@
- x_libraries = @x_libraries@
- dosstuff = celestia.mak $(wildcard *.bat)
- noinst_DATA = devguide.txt $(dosstuff)
--pkgdata_DATA = celestia.cfg $(wildcard *.cel) controls.txt COPYING
-+pkgdata_DATA = $(wildcard *.cel) controls.txt COPYING
+@@ -307,7 +307,6 @@ noinst_DATA = \
  
- EXTRA_DIST = $(pkgdata_DATA) $(noinst_DATA) admin
  
+ pkgdata_DATA = \
+-	celestia.cfg \
+ 	controls.txt \
+ 	COPYING \
+ 	$(wildcard *.cel)
+@@ -848,7 +847,7 @@ dist-hook:
+ 
+ install-data-hook:
+ 	if [ "$(kde_datadir)" -a -d $(kde_datadir)/@PACKAGE@ -a ! -h $(kde_datadir)/@PACKAGE@ ] ; then \
+-		mv -f -b $(kde_datadir)/@PACKAGE@/* $(datadir)/@PACKAGE@/ ; \
++		mv -f $(kde_datadir)/@PACKAGE@/* $(datadir)/@PACKAGE@/ ; \
+ 		rmdir $(kde_datadir)/@PACKAGE@ ; \
+ 	fi
+ 	if [ "$(kde_datadir)" -a ! -h $(kde_datadir)/@PACKAGE@ ] ; then \
