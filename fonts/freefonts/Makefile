@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:09:09 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/17 19:31:00 wiz Exp $
 #
 
 DISTNAME=	freefonts-0.10
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=X11/fonts/} \
 		ftp://ftp.gimp.org/pub/gimp/fonts/
@@ -16,7 +16,8 @@ NO_BUILD=	yes
 
 USE_X11BASE=	yes
 USE_TOOLS+=	gtar
-INSTALLATION_DIRS=	lib/X11/fonts
+FONTS_DIRS.x11=	${PREFIX}/lib/X11/fonts/freefont
+REQD_DIRS=	${PREFIX}/lib/X11/fonts/freefont
 
 do-install:
 	${GTAR} Cxzf ${PREFIX}/lib/X11/fonts \
