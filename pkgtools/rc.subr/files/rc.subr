@@ -1,4 +1,4 @@
-# $NetBSD: rc.subr,v 1.5 2004/10/11 19:32:14 tv Exp $
+# $NetBSD: rc.subr,v 1.6 2006/02/17 15:15:56 sketch Exp $
 #
 # Copyright (c) 1997-2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -62,6 +62,7 @@ _RCCMD_whoami="/usr/bin/whoami"
 
 _RCARG_psformat="-o pid,command"
 _RCARG_ps="-ax"
+_RCARG_su="-m"
 
 _osname=$(uname -s)
 case $_osname in
@@ -74,6 +75,7 @@ case $_osname in
 		_RCCMD_whoami="/usr/ucb/whoami"
 		_RCARG_psformat="-o pid,comm"
 		_RCARG_ps="-ef"
+		_RCARG_su=""
 		;;
 	Interix)
 		bsd_echo () {
@@ -609,7 +611,7 @@ ${_nice:+${_RCCMD_nice} -n $_nice }\
 ${_RCCMD_chroot} $_chroot"
 					if [ -n "$_user" ]; then
 						_doit="\
-$_doit ${_RCCMD_su} -m $_user \
+$_doit ${_RCCMD_su} ${_RCARG_su} $_user \
 -c '${_RCCMD_sh} -c'"
 					fi
 					_doit="\
@@ -628,7 +630,7 @@ ${_nice:+${_RCCMD_nice} -n $_nice }\
 ${_systrace:+${_RCCMD_systrace} $_systrace }\
 $command $rc_flags $command_args"
 				if [ -n "$_user" ]; then
-				    _doit="${_RCCMD_su} -m $_user \
+				    _doit="${_RCCMD_su} ${_RCARG_su} $_user \
 					-c '${_RCCMD_sh} -c \"$_doit\"'"
 				fi
 			fi
@@ -668,7 +670,7 @@ $command $rc_flags $command_args"
 			${_RCCMD_echo} "Stopping ${name}."
 			_doit="${_RCCMD_kill} -${sig_stop:-TERM} $rc_pid"
 			if [ -n "$_user" ]; then
-				_doit="${_RCCMD_su} -m $_user \
+				_doit="${_RCCMD_su} ${_RCARG_su} $_user \
 				    -c '${_RCCMD_sh} -c \"$_doit\"'"
 			fi
 
@@ -701,7 +703,7 @@ $command $rc_flags $command_args"
 			fi
 			_doit="${_RCCMD_kill} -${sig_reload:-HUP} $rc_pid"
 			if [ -n "$_user" ]; then
-				_doit="${_RCCMD_su} -m $_user -c '${_RCCMD_sh} -c \"$_doit\"'"
+				_doit="${_RCCMD_su} ${_RCARG_su} $_user -c '${_RCCMD_sh} -c \"$_doit\"'"
 			fi
 			if ! eval $_doit && [ -z "$rc_force" ]; then
 				return 1
