@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/02/06 06:39:59 martti Exp $
-#
+# $NetBSD: Makefile,v 1.28 2006/02/17 09:48:01 adam Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
 #PKGREVISION=		1
@@ -36,7 +35,8 @@ OWN_DIRS=		${PREFIX}/${PHP_EXTENSION_DIR}
 # file during installation; this replaces former patches/patch-al
 post-install:
 	${SED} -e 's,\(-d output_buffering=1\) \(\$$INCDIR/pearcmd.php\),\1 -n \2,' ${PREFIX}/bin/pear > ${PREFIX}/bin/pear.new && \
-		${MV} ${PREFIX}/bin/pear.new ${PREFIX}/bin/pear
+		${MV} ${PREFIX}/bin/pear.new ${PREFIX}/bin/pear && \
+		${CHMOD} 755 ${PREFIX}/bin/pear
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${PREFIX}/bin/php
 	${INSTALL_DATA} ${WRKSRC}/sapi/cli/php.1 ${PREFIX}/${PKGMANDIR}/man1/php.1
 	${INSTALL_DATA_DIR} ${CGIDIR}
