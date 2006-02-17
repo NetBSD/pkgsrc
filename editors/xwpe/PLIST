@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/06 07:58:48 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/17 19:22:30 wiz Exp $
 bin/we
 bin/wpe
 bin/xwe
 bin/xwpe
 lib/xwpe/help.key
 lib/xwpe/help.xwpe
+lib/xwpe/syntax_def
 man/man1/we.1
 man/man1/wpe.1
 man/man1/xwe.1
