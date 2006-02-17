@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/02/05 23:10:29 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2006/02/17 07:46:50 martti Exp $
 
 DISTNAME=	proftpd-1.3.0rc3
 PKGREVISION=	2
@@ -25,28 +25,28 @@ CONFIGURE_ARGS+=	--enable-ctrls
 
 RCD_SCRIPTS=	proftpd
 
-CONF_FILES=	${PREFIX}/share/examples/proftpd/basic.conf \
-		${PKG_SYSCONFDIR}/proftpd.conf
+CONF_FILES=	${PREFIX:Q}/share/examples/proftpd/basic.conf \
+		${PKG_SYSCONFDIR:Q}/proftpd.conf
 
 SUBST_CLASSES+=		man
-SUBST_MESSAGE.man=	"Fixing paths in manual pages."
+SUBST_MESSAGE.man=	Fixing paths in manual pages.
 SUBST_STAGE.man=	pre-configure
 SUBST_FILES.man=	utils/ftpcount.1.in utils/ftptop.1.in utils/ftpwho.1.in
-SUBST_SED.man=		-e s,@LOCALSTATEDIR@/run/proftpd,${VARBASE}/run,
+SUBST_SED.man=		-e s,@LOCALSTATEDIR@/run/proftpd,${VARBASE:Q}/run,
 
 .include "options.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/proftpd
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/proftpd
 .for i in NEWS README README.IPv6 README.LDAP README.PAM README.capabilities \
           README.classes README.controls README.facl README.modules
-	${INSTALL_DATA} ${WRKSRC}/${i} ${PREFIX}/share/doc/proftpd
+	${INSTALL_DATA} ${WRKSRC:Q}/${i} ${PREFIX:Q}/share/doc/proftpd
 .endfor
 .for i in Configuration.html faq.html license.txt
-	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${PREFIX}/share/doc/proftpd
+	${INSTALL_DATA} ${WRKSRC:Q}/doc/${i} ${PREFIX:Q}/share/doc/proftpd
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/proftpd
-	${INSTALL_DATA} ${WRKSRC}/sample-configurations/*.conf \
-		${PREFIX}/share/examples/proftpd
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/examples/proftpd
+	${INSTALL_DATA} ${WRKSRC:Q}/sample-configurations/*.conf \
+		${PREFIX:Q}/share/examples/proftpd
 
 .include "../../mk/bsd.pkg.mk"

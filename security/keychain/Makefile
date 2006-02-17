@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/10/28 05:29:54 martti Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/17 07:51:24 martti Exp $
 
 DISTNAME=	keychain-2.6.1
 CATEGORIES=	security
@@ -20,9 +20,9 @@ NO_BUILD=		yes
 INSTALLATION_DIRS=	bin man/man1 share/doc/${PKGBASE}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/keychain ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/keychain.1 ${PREFIX}/man/man1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/keychain
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/keychain
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/keychain ${PREFIX:Q}/bin
+	${INSTALL_MAN} ${WRKSRC:Q}/keychain.1 ${PREFIX:Q}/man/man1
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/keychain
+	${INSTALL_DATA} ${WRKSRC:Q}/README ${PREFIX:Q}/share/doc/keychain
 
 .include "../../mk/bsd.pkg.mk"
