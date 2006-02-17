@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/08 18:49:26 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2006/02/17 23:42:35 wiz Exp $
 
 DISTNAME=	cinepaint-0.20-2
 PKGNAME=	cinepaint-0.20.2
@@ -24,6 +24,7 @@ BUILDLINK_DEPENDS.lcms+=	lcms>=1.13 # needs _cmsLCMScolorSpace
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../x11/fltk/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
