@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12949 2006/02/17 19:22:15 wiz Exp $
+$NetBSD: CHANGES,v 1.12950 2006/02/17 19:22:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1034,3 +1034,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/py-postgresql to 3.8 [darcy 2006-02-17]
 	Updated devel/py-cheetah to 0.9.18nb2 [wiz 2006-02-17]
 	Updated editors/xemacs-packages to 1.15nb2 [wiz 2006-02-17]
+	Updated editors/xwpe to 1.5.29anb3 [wiz 2006-02-17]
