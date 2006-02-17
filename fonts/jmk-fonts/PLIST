@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/09/22 14:45:13 jwise Exp $
-lib/X11/fonts/jmk/fonts.alias
-lib/X11/fonts/jmk/fonts.dir
-lib/X11/fonts/jmk/fonts.scale
+@comment $NetBSD: PLIST,v 1.3 2006/02/17 19:34:08 wiz Exp $
 lib/X11/fonts/jmk/modd-iso8859-1-06x11-bold.pcf.gz
 lib/X11/fonts/jmk/modd-iso8859-1-06x11.pcf.gz
 lib/X11/fonts/jmk/modd-iso8859-1-06x13-bold.pcf.gz
@@ -110,4 +107,3 @@ lib/X11/fonts/jmk/neep-iso8859-9-10x20-bold.pcf.gz
 lib/X11/fonts/jmk/neep-iso8859-9-10x20.pcf.gz
 lib/X11/fonts/jmk/neep-iso8859-9-12x24-bold.pcf.gz
 lib/X11/fonts/jmk/neep-iso8859-9-12x24.pcf.gz
-@dirrm lib/X11/fonts/jmk
