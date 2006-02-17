@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:09:05 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/17 19:27:33 wiz Exp $
 #
 
 DISTNAME=	xbeeb-0.3.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators x11
 MASTER_SITES=	ftp://ftp.netcom.net.uk/pub/Micros/BBC/Emulators/Xbeeb/
 # for 0.4.1
@@ -20,6 +20,9 @@ MAN_PAGE=	${WRKDIR}/xbeeb.1
 XBEEBROOT=	share/xbeeb
 MESSAGE_SUBST+=	XBEEBROOT=${XBEEBROOT}
 PLIST_SUBST+=	XBEEBROOT=${XBEEBROOT:Q}
+
+FONTS_DIRS.x11=	${PREFIX}/lib/X11/fonts/xbeeb
+REQD_DIRS=	${PREFIX}/lib/X11/fonts/xbeeb
 
 INSTALLATION_DIRS=	bin man/man1
 
