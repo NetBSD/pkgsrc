@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.520 2006/02/16 06:33:41 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.521 2006/02/17 15:26:01 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1937,7 +1937,22 @@ sub determine_used_variables($) {
 			$line->log_debug("Variable ${varname} is used.");
 		}
 	}
-}	
+}
+
+sub tablen($) {
+	my ($s) = @_;
+	my ($len);
+
+	$len = 0;
+	foreach my $c (split(qr"", $s)) {
+		if ($c eq "\t") {
+			$len = ($len + 7) & ~7;
+		} else {
+			$len++;
+		}
+	}
+	return $len;
+}
 
 #
 # Loading package-specific data from files.
@@ -3505,9 +3520,16 @@ sub checklines_mk($) {
 
 		} elsif ($text =~ regex_varassign) {
 			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
+			my $space1 = substr($text, $+[1], $-[2] - $+[1]);
 			my $align = substr($text, $+[2], $-[3] - $+[2]);
 			if ($align !~ qr"^\t*$") {
 				$opt_warn_space && $line->log_note("Alignment of variable values should be done with tabs, not spaces.");
+				my $prefix = "${varname}${space1}${op}";
+				my $aligned_len = tablen("${prefix}${align}");
+				if ($aligned_len % 8 == 0) {
+					my $tabalign = ("\t" x (($aligned_len - tablen($prefix) + 7) / 8));
+					$line->replace("${prefix}${align}", "${prefix}${tabalign}");
+				}
 			}
 			checkline_mk_varassign($line, $varname, $op, $value, $comment);
 
@@ -3634,6 +3656,7 @@ sub checklines_mk($) {
 	}
 
 	checklines_trailing_empty_lines($lines);
+	autofix($lines);
 }
 
 #
