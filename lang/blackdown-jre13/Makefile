@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/12/29 06:21:45 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/02/18 22:13:23 wiz Exp $
 #
 
 BD_BASENAME=	j2re
@@ -20,24 +20,24 @@ PLIST_SRC=	${PKGDIR}/PLIST
 PLIST_SRC+=	${PKGDIR}/PLIST.i386
 .endif
 
-OWN_DIRS=	${JVM_HOME}
-OWN_DIRS+=	${JVM_HOME}/lib
-OWN_DIRS+=	${JVM_HOME}/lib/${BLACKDOWN_ARCH}
-OWN_DIRS+=	${JVM_HOME}/lib/applet
-OWN_DIRS+=	${JVM_HOME}/lib/ext
-OWN_DIRS+=	${JVM_HOME}/lib/images
-OWN_DIRS+=	${JVM_HOME}/lib/images/cursors
-OWN_DIRS+=	${JVM_HOME}/lib/security
-OWN_DIRS+=	${JVM_HOME}/plugin/${BLACKDOWN_ARCH}
-OWN_DIRS+=	${JVM_HOME}/plugin
+REQD_DIRS=	${JVM_HOME}
+REQD_DIRS+=	${JVM_HOME}/lib
+REQD_DIRS+=	${JVM_HOME}/lib/${BLACKDOWN_ARCH}
+REQD_DIRS+=	${JVM_HOME}/lib/applet
+REQD_DIRS+=	${JVM_HOME}/lib/ext
+REQD_DIRS+=	${JVM_HOME}/lib/images
+REQD_DIRS+=	${JVM_HOME}/lib/images/cursors
+REQD_DIRS+=	${JVM_HOME}/lib/security
+REQD_DIRS+=	${JVM_HOME}/plugin/${BLACKDOWN_ARCH}
+REQD_DIRS+=	${JVM_HOME}/plugin
 SFILES=		content-types.properties	flavormap.properties
 SFILES+=	font.properties			font.properties.ja
 SFILES+=	font.properties.zh		jvm.cfg
 SFILES+=	images/cursors/cursors.properties	psfont.properties.ja
 SFILES+=	psfontj2d.properties		security/java.security
 CONF_FILES=	# empty
-.for FILE in ${SFILES}
-CONF_FILES+=	${JVM_HOME}/lib/${FILE}.default ${JVM_HOME}/lib/${FILE}
+.for file in ${SFILES}
+CONF_FILES+=	${JVM_HOME}/lib/${file}.default ${JVM_HOME}/lib/${file}
 .endfor
 
 do-configure:
