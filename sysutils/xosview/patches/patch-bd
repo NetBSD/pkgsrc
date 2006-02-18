@@ -1,4 +1,6 @@
-$NetBSD: patch-bd,v 1.1 2005/11/17 15:53:01 rillig Exp $
+$NetBSD: patch-bd,v 1.2 2006/02/18 10:12:24 rillig Exp $
+
+Status: applied upstream.
 
 The Solaris SunPro compiler does not know the old <strstream.h> header.
 I fixed it to use the new one. The #define is ugly, but I wanted to keep
