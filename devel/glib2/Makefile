@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2006/02/05 23:08:42 joerg Exp $
+# $NetBSD: Makefile,v 1.90 2006/02/18 20:36:47 schwarz Exp $
 
 DISTNAME=		glib-2.8.6
 PKGNAME=		${DISTNAME:S/glib/glib2/}
@@ -78,6 +78,10 @@ PRINT_PLIST_AWK+=	/^@dirrm include\/glib$$/ \
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
+.if !empty(LOWER_OPSYS:Mirix5*)
+CONFIGURE_ARGS+=	--disable-threads
+.else
 .include "../../mk/pthread.buildlink3.mk"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
