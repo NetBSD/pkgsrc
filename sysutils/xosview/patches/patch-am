@@ -1,4 +1,6 @@
-$NetBSD: patch-am,v 1.5 2004/08/03 07:42:04 cube Exp $
+$NetBSD: patch-am,v 1.6 2006/02/18 10:12:24 rillig Exp $
+
+Status: applied upstream.
 
 --- Xrm.cc.orig	2003-10-09 05:25:25.000000000 +0200
 +++ Xrm.cc

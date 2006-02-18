@@ -1,4 +1,6 @@
-$NetBSD: patch-bg,v 1.1 2005/11/17 15:53:01 rillig Exp $
+$NetBSD: patch-bg,v 1.2 2006/02/18 10:12:24 rillig Exp $
+
+Status: applied upstream.
 
 This patch fixes the MIN and MAX macros. To my knowledge, only gcc can
 handle ({...}) expressions, so let's express that.
