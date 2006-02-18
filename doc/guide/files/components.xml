@@ -1,4 +1,9 @@
-<!-- $NetBSD: components.xml,v 1.20 2006/02/12 14:44:59 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.21 2006/02/18 17:11:50 rillig Exp $ -->
+
+<!--
+	TODO: after 2006Q1, "SITES_" should be replaced with "SITES.".
+	(2 times)
+-->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -109,7 +114,8 @@
 <programlisting>
     DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
     DISTFILES+=     foo-file.tar.gz
-    SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
+    SITES_foo-file.tar.gz= \
+            http://www.somewhere.com/somehow/ \
             http://www.somewhereelse.com/mirror/somehow/
 </programlisting>
 	</listitem>
