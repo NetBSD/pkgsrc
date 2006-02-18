@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.20 2005/06/16 06:57:58 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.21 2006/02/18 11:07:10 adam Exp $
 
-DISTNAME=	pngcrush-1.5.10
-PKGREVISION=	1
+DISTNAME=	pngcrush-1.6.2-nolib
+PKGNAME=	pngcrush-1.6.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pmt/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://pmt.sourceforge.net/pngcrush/index.html
 COMMENT=	Optimizer for PNG (Portable Network Graphics) files
 
-NO_CONFIGURE=		YES
+NO_CONFIGURE=		yes
 INSTALLATION_DIRS=	bin
 
 do-build:
@@ -19,8 +19,6 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pngcrush ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/pngcrush
-	${INSTALL_MAN} ${WRKSRC}/README.txt ${PREFIX}/share/pngcrush
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
