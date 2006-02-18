@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.27 2006/02/06 12:44:08 abs Exp $
+# $Id: pkg_chk.sh,v 1.28 2006/02/18 20:46:42 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -242,7 +242,10 @@ get_build_ver()
 
 list_packages()
     {
-    CHECKLIST=' '
+    # DEPCHECKLIST contains packages for which binary packages are known to
+    # exist, but now need to be checked for packages on which they depend
+    DEPCHECKLIST=' '
+    fatal=0
     for pkgdir in $* ; do
 	extract_pkg_vars $pkgdir PKGNAME
 	if [ -z "$PKGNAME" ]; then
@@ -251,37 +254,33 @@ list_packages()
 	if is_binary_available $PKGNAME; then
 	    :
 	else
-	    fatal_maybe " ** $PKGNAME - binary package missing"
+	    msg "*** $PKGNAME - binary package missing"
+	    fatal=1
 	    continue
 	fi
 	verbose "$PKGNAME.tgz: found"
-	CHECKLIST="$CHECKLIST$PKGNAME ";
+	DEPCHECKLIST="$DEPCHECKLIST$PKGNAME ";
     done
 
     PAIRLIST=
     PKGLIST=' '
-    while [ "$CHECKLIST" != ' ' ]; do
+    while [ "$DEPCHECKLIST" != ' ' ]; do
 	NEXTCHECK=' '
-	for pkg in $CHECKLIST ; do
-	    if is_binary_available $pkg; then
-		:
-	    else
-		fatal_maybe " ** $pkg.tgz - binary package dependency missing"
-		continue
-	    fi
+	for pkg in $DEPCHECKLIST ; do
 	    DEPLIST="$(${PKG_INFO} -. -q -N $PACKAGES/$pkg.tgz | ${GREP} .. || true)"
 	    if [ -z "$DEPLIST" ] ; then
 		PAIRLIST="${PAIRLIST}$pkg.tgz $pkg.tgz\n"
 	    fi
 	    for dep in $DEPLIST ; do
-		if is_binary_available $pkg; then
+		if is_binary_available $dep; then
 		    :
 		else
-		    fatal_maybe " ** $dep.tgz - dependency missing for $pkg"
+		    msg "*** $dep.tgz - dependency missing for $pkg"
+		    fatal=1
 		    break 2
 		fi
 		PAIRLIST="${PAIRLIST}$dep.tgz $pkg.tgz\n"
-		case "$PKGLIST$CHECKLIST$NEXTCHECK" in
+		case "$PKGLIST$DEPCHECKLIST$NEXTCHECK" in
 		    *" $dep "*)
 			verbose "$pkg: Duplicate depend $dep"
 			;;
@@ -293,8 +292,11 @@ list_packages()
 	    done
 	    PKGLIST="$pkg $PKGLIST"
 	done
-	CHECKLIST="$NEXTCHECK"
+	DEPCHECKLIST="$NEXTCHECK"
     done
+    if [ $fatal = 1 ] ; then
+	fatal_maybe "Some binary packages missing"
+    fi
     printf "$PAIRLIST" | ${TSORT}
     }
 
@@ -750,10 +752,14 @@ if [ -n "$delete_and_recheck" ]; then
 	if [ -f $PKGCHK_UPDATE_CONF ] ; then
 	    msg "Merging in previous $PKGCHK_UPDATE_CONF"
 	    tmp=$(cat $PKGCHK_UPDATE_CONF;echo $(pkgdirs_from_installed)|fmt -1)
-	    echo $tmp | fmt -1 | ${SORT} -u > $PKGCHK_UPDATE_CONF
+	    if [ -z "$opt_n" ] ; then
+		echo $tmp | fmt -1 | ${SORT} -u > $PKGCHK_UPDATE_CONF
+	    fi
 	    tmp=
 	else
-	    echo $(pkgdirs_from_installed) | fmt -1 > $PKGCHK_UPDATE_CONF
+	    if [ -z "$opt_n" ] ; then
+		echo $(pkgdirs_from_installed) | fmt -1 > $PKGCHK_UPDATE_CONF
+	    fi
 	fi
     fi
     if [ -n "$opt_r" -o -n "$opt_u" ] ; then
