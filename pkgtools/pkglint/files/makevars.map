@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.64 2006/02/18 14:12:49 rillig Exp $
+# $NetBSD: makevars.map,v 1.65 2006/02/18 16:07:16 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -131,6 +131,9 @@ DJB_MAKE_TARGETS	List of Identifier
 DJB_SLASHPACKAGE	YesNo
 DL_AUTO_VARS		Yes
 DL_LIBS			List+ of LdFlag
+EGDIR			Pathname
+# ^^ This variable is not defined by the system, but has been established
+# as a convention.
 EMACS_BIN		Readonly
 EMACS_ETCPREFIX		Readonly
 EMACS_FLAVOR		Readonly
