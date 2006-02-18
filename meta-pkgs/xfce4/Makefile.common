@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2006/02/17 06:49:24 martti Exp $
+# $NetBSD: Makefile.common,v 1.30 2006/02/18 14:55:48 rillig Exp $
 
 MASTER_SITES=		http://www.xfce.org/archive/xfce-4.2.3.2/src/ \
 			http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-4.2.3.2/src/
@@ -19,7 +19,7 @@ USE_TOOLS+=		gmake pkg-config
 GCC_REQD+=		3.0
 .endif
 
-XFCE4_EGBASE=		${PREFIX:Q}/share/examples/xfce4
+XFCE4_EGBASE=		${PREFIX}/share/examples/xfce4
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
