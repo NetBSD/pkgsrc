@@ -66,8 +66,8 @@ alink="#0000FF">
         </div>
 
         <div xmlns="http://www.w3.org/TR/xhtml1/transitional">
-          <p xmlns="" class="pubdate">$NetBSD: pkgsrc.xml,v 1.11
-          2006/01/13 17:42:33 reed Exp $</p>
+          <p xmlns="" class="pubdate">$NetBSD: pkgsrc.xml,v 1.12
+          2006/02/18 01:46:43 rillig Exp $</p>
         </div>
 
         <div>
@@ -1021,6 +1021,21 @@ alink="#0000FF">
                 <dt><span class="sect1"><a href=
                 "#moving-package">18.5. Moving a package in
                 pkgsrc</a></span></dt>
+              </dl>
+            </dd>
+
+            <dt><span class="chapter"><a href="#porting">19.
+            Porting pkgsrc</a></span></dt>
+
+            <dd>
+              <dl>
+                <dt><span class="sect1"><a href=
+                "#porting.opsys">19.1. Porting pkgsrc to a new
+                operating system</a></span></dt>
+
+                <dt><span class="sect1"><a href=
+                "#porting.compiler">19.2. Adding support for a new
+                compiler</a></span></dt>
               </dl>
             </dd>
           </dl>
@@ -2985,11 +3000,12 @@ alink="#0000FF">
               "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/shells/bash/README.html"
               target="_top"><code xmlns="" class=
               "filename">shells/bash</code></a> and adding the
-              following line to your <code xmlns=
+              following lines to your <code xmlns=
               "http://www.w3.org/TR/xhtml1/transitional" class=
               "filename">mk.conf</code>:</p>
               <pre class="programlisting">
     CONFIG_SHELL=   ${LOCALBASE}/bin/bash
+    WRAPPER_SHELL=  ${LOCALBASE}/bin/bash
 </pre>
             </div>
           </div>
@@ -4251,6 +4267,21 @@ PKG_OPTIONS.apache=     suexec
 
               <div class="itemizedlist">
                 <ul type="disc">
+                  <li>
+                    <p><code class=
+                    "varname">ALLOW_VULNERABLE_PACKAGES</code>
+                    should be set to <code class=
+                    "literal">yes</code>. The purpose of the bulk
+                    builds is creating binary packages, no matter
+                    if they are vulnerable or not. When uploading
+                    the packages to a public server, the vulnerable
+                    packages will be put into a directory of their
+                    own. Leaving this variable unset would prevent
+                    the bulk build system from even trying to build
+                    them, so possible building errors would not
+                    show up.</p>
+                  </li>
+
                   <li>
                     <p><code class="varname">CHECK_FILES</code>
                     (<code xmlns=
@@ -6585,6 +6616,21 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               pkgsrc</a></span></dt>
             </dl>
           </dd>
+
+          <dt><span class="chapter"><a href="#porting">19. Porting
+          pkgsrc</a></span></dt>
+
+          <dd>
+            <dl>
+              <dt><span class="sect1"><a href=
+              "#porting.opsys">19.1. Porting pkgsrc to a new
+              operating system</a></span></dt>
+
+              <dt><span class="sect1"><a href=
+              "#porting.compiler">19.2. Adding support for a new
+              compiler</a></span></dt>
+            </dl>
+          </dd>
         </dl>
       </div>
 
@@ -6766,7 +6812,8 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                 <pre class="programlisting">
     DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
     DISTFILES+=     foo-file.tar.gz
-    SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
+    SITES_foo-file.tar.gz= \
+            http://www.somewhere.com/somehow/ \
             http://www.somewhereelse.com/mirror/somehow/
 </pre>
               </li>
@@ -10625,9 +10672,9 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                 "filename">pkgsrc/wm/scwm/Makefile</code>:</p>
                 <pre class="programlisting">
     EVAL_PREFIX+=           GTKDIR=gtk+
-    CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE}        \
-                            --with-gtk-prefix="${GTKDIR}"           \
-                            --enable-multibyte
+    CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE:Q}
+    CONFIGURE_ARGS+=        --with-gtk-prefix=${GTKDIR:Q}
+    CONFIGURE_ARGS+=        --enable-multibyte
 </pre>
 
                 <p>Specific defaults can be defined for the
@@ -10827,64 +10874,64 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           </div>
 
           <p>When the distfiles are present on the local system,
-          they need to be extracted, as they are usually in the
-          form of some compressed archive format, most commonly
-          <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
-          class="filename">.tar.gz</code>.</p>
+          they need to be extracted, as they usually come in the
+          form of some compressed archive format.</p>
 
-          <p>If only some of the distfiles need to be uncompressed,
-          the files to be uncompressed should be put into
-          <code class="varname">EXTRACT_ONLY</code>.</p>
+          <p>By default, all <code class="varname">DISTFILES</code>
+          are extracted. If you only need some of them, you can set
+          the <code class="varname">EXTRACT_ONLY</code> variable to
+          the list of those files.</p>
 
-          <p>If the distfiles are not in <code xmlns=
+          <p>Extracting the files is usually done by a little
+          program, <code xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">.tar.gz</code> format, they can be extracted
-          by setting either <code class=
-          "varname">EXTRACT_SUFX</code>, or <code class=
-          "varname">EXTRACT_CMD</code>, <code class=
-          "varname">EXTRACT_BEFORE_ARGS</code> and <code class=
-          "varname">EXTRACT_AFTER_ARGS</code>. In the former case,
-          pkgsrc knows how to extract a number of suffixes
-          (<code xmlns="http://www.w3.org/TR/xhtml1/transitional"
-          class="filename">.tar.gz</code>, <code xmlns=
+          "filename">mk/scripts/extract</code>, which already knows
+          how to extract various archive formats, so most likely
+          you will not need to change anything here. But if you
+          need, the following variables may help you:</p>
+
+          <div class="variablelist">
+            <dl>
+              <dt><span class="term"><code class=
+              "varname">EXTRACT_OPTS_{BIN,LHA,PAX,RAR,TAR,ZIP,ZOO}</code></span></dt>
+
+              <dd>
+                <p>Use these variables to override the default
+                options for an extract command, which are defined
+                in <code xmlns=
+                "http://www.w3.org/TR/xhtml1/transitional" class=
+                "filename">mk/scripts/extract</code>.</p>
+              </dd>
+
+              <dt><span class="term"><code class=
+              "varname">EXTRACT_USING</code></span></dt>
+
+              <dd>
+                <p>This variable can be set to <code class=
+                "literal">pax</code>, <code class=
+                "literal">tar</code> or an absolute pathname
+                pointing to the command with which tar archives
+                should be extracted.</p>
+              </dd>
+            </dl>
+          </div>
+
+          <p>If the <code xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">.tgz</code>, <code xmlns=
+          "filename">extract</code> program doesn't serve your
+          needs, you can also override the <code class=
+          "varname">EXTRACT_CMD</code> variable, which holds the
+          command used for extracting the files. This command is
+          executed in the <code xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">.tar.gz2</code>, <code xmlns=
-          "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">.tbz</code>, <code xmlns=
-          "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">.tar.Z</code>, <code xmlns=
-          "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">.tar</code>, <code xmlns=
-          "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">.shar.gz</code>, <code xmlns=
-          "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">.shar.bz2</code>, <code xmlns=
-          "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">.shar.Z</code>, <code xmlns=
-          "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">.shar</code>, <code xmlns=
-          "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">.Z</code>, <code xmlns=
-          "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">.bz2</code> and <code xmlns=
-          "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">.gz</code>; see the definition of the various
-          <code class="varname">DECOMPRESS_CMD</code> variables in
-          <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
-          class="filename">bsd.pkg.extract.mk</code> for a complete
-          list). Here's an example on how to use the other
-          variables for a program that comes with a compressed
-          shell archive whose name ends in <code xmlns=
-          "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">.msg.gz</code>:</p>
-          <pre class="programlisting">
-    EXTRACT_SUFX=           .msg.gz
-    EXTRACT_CMD=            zcat
-    EXTRACT_BEFORE_ARGS=
-    EXTRACT_AFTER_ARGS=     |sh
-</pre>
+          "filename">${WRKSRC}</code> directory. During execution
+          of this command, the shell variable <code class=
+          "varname">extract_file</code> holds the absolute pathname
+          of the file that is going to be extracted.</p>
+
+          <p>And if that still does not suffice, you can override
+          the <code class="varname">do-extract</code> target in the
+          package Makefile.</p>
         </div>
 
         <div class="sect1" lang="en">
@@ -15125,6 +15172,174 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
               </li>
             </ol>
           </div>
+        </div>
+      </div>
+
+      <div class="chapter" lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title"><a name=
+              "porting"></a>Chapter&nbsp;19.&nbsp;Porting
+              pkgsrc</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="toc">
+          <p><b>Table of Contents</b></p>
+
+          <dl>
+            <dt><span class="sect1"><a href="#porting.opsys">19.1.
+            Porting pkgsrc to a new operating
+            system</a></span></dt>
+
+            <dt><span class="sect1"><a href=
+            "#porting.compiler">19.2. Adding support for a new
+            compiler</a></span></dt>
+          </dl>
+        </div>
+
+        <p>The pkgsrc system has already been ported to many
+        operating systems, hardware architectures and compilers.
+        This chapter explains the necessary steps to make pkgsrc
+        even more portable.</p>
+
+        <div class="sect1" lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "porting.opsys"></a>19.1.&nbsp;Porting pkgsrc to a
+                new operating system</h2>
+              </div>
+            </div>
+          </div>
+
+          <p>To port pkgsrc to a new operating system (called
+          <code class="literal">MyOS</code> in this example), you
+          need to touch the following files:</p>
+
+          <div class="variablelist">
+            <dl>
+              <dt><span class="term"><code xmlns=
+              "http://www.w3.org/TR/xhtml1/transitional" class=
+              "filename">bootstrap/mods/mk/<em class=
+              "replaceable"><code>MyOS</code></em>.sys.mk</code></span></dt>
+
+              <dd>
+                <p>This file contains some basic definitions, for
+                example the name of the C compiler.</p>
+              </dd>
+
+              <dt><span class="term"><code xmlns=
+              "http://www.w3.org/TR/xhtml1/transitional" class=
+              "filename">mk/bsd.prefs.mk</code></span></dt>
+
+              <dd>
+                <p>Insert code that defines the variables
+                <code class="varname">OPSYS</code>, <code class=
+                "varname">OS_VERSION</code>, <code class=
+                "varname">LOWER_OS_VERSION</code>, <code class=
+                "varname">LOWER_VENDOR</code>, <code class=
+                "varname">MACHINE_ARCH</code>, <code class=
+                "varname">OBJECT_FMT</code>, <code class=
+                "varname">APPEND_ELF</code>, and the other
+                variables that appear in this file.</p>
+              </dd>
+
+              <dt><span class="term"><code xmlns=
+              "http://www.w3.org/TR/xhtml1/transitional" class=
+              "filename">mk/platform/MyOS.mk</code></span></dt>
+
+              <dd>
+                <p>This file contains the platform-specific
+                definitions that are used by pkgsrc. Start by
+                copying one of the other files and edit it to your
+                needs.</p>
+              </dd>
+
+              <dt><span class="term"><code xmlns=
+              "http://www.w3.org/TR/xhtml1/transitional" class=
+              "filename">mk/platform/MyOS.pkg.dist</code></span></dt>
+
+              <dd>
+                <p>This file contains a list of directories,
+                together with their permission bits and ownership.
+                These directories will be created automatically
+                with every package that does not explicitly set
+                <code class="varname">NO_MTREE</code>. There have
+                been some discussions about whether this file is
+                needed at all, but with no result.</p>
+              </dd>
+
+              <dt><span class="term"><code xmlns=
+              "http://www.w3.org/TR/xhtml1/transitional" class=
+              "filename">mk/platform/MyOS.x11.dist</code></span></dt>
+
+              <dd>
+                <p>Just copy one of the pre-existing x11.dist files
+                to your <code xmlns=
+                "http://www.w3.org/TR/xhtml1/transitional" class=
+                "filename"><em class=
+                "replaceable"><code>MyOS</code></em>.x11.dist</code>.</p>
+              </dd>
+
+              <dt><span class="term"><code xmlns=
+              "http://www.w3.org/TR/xhtml1/transitional" class=
+              "filename">mk/tools/bootstrap.mk</code></span></dt>
+
+              <dd>
+                <p>On some operating systems, the tools that are
+                provided with the base system are not good enough
+                for pkgsrc. For example, there are many versions of
+                <a href=
+                "http://netbsd.gw.com/cgi-bin/man-cgi?sed+1+NetBSD-current">
+                <span class="citerefentry"><span class=
+                "refentrytitle">sed</span>(1)</span></a> that have
+                a narrow limit on the line length they can process.
+                Therefore pkgsrc brings its own tools, which can be
+                enabled here.</p>
+              </dd>
+
+              <dt><span class="term"><code xmlns=
+              "http://www.w3.org/TR/xhtml1/transitional" class=
+              "filename">mk/tools/<em class=
+              "replaceable"><code>MyOS</code></em>.mk</code></span></dt>
+
+              <dd>
+                <p>This file defines the paths to all the tools
+                that are needed by one or the other package in
+                pkgsrc, as well as by pkgsrc itself. Find out where
+                these tools are on your platform and add them.</p>
+              </dd>
+            </dl>
+          </div>
+
+          <p>Now, you should be able to build some basic packages,
+          like <a xmlns="http://www.w3.org/TR/xhtml1/transitional"
+          href=
+          "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/lang/perl5/README.html"
+          target="_top"><code xmlns="" class=
+          "filename">lang/perl5</code></a>, <a xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" href=
+          "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/shells/bash/README.html"
+          target="_top"><code xmlns="" class=
+          "filename">shells/bash</code></a>.</p>
+        </div>
+
+        <div class="sect1" lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "porting.compiler"></a>19.2.&nbsp;Adding support
+                for a new compiler</h2>
+              </div>
+            </div>
+          </div>
+
+          <p>TODO</p>
         </div>
       </div>
     </div>
