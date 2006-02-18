@@ -1,0 +1,121 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/02/18 17:19:20 bouyer Exp $
+
+--- configure.orig	2005-08-01 14:34:46.000000000 -0700
++++ configure	2005-08-03 17:03:52.000000000 -0700
+@@ -8406,7 +8406,7 @@
+ 
+ fi
+ 
+-if test "$ac_cv_lib_crypt_main" = "yes"; then
++if false; then
+   if test -n "$PGSQL"; then
+     LDFLAGS="$LDFLAGS -L$PGSQL/lib"
+     CPPFLAGS="$CPPFLAGS -I$PGSQL/include"
+@@ -9051,7 +9051,7 @@
+ 
+ fi
+ 
+-if test "$ac_cv_lib_radiusclient_rc_read_config" = "yes"; then
++if false; then
+   EXTRAS="$EXTRAS check_radius"
+ 	RADIUSLIBS="-lradiusclient"
+ 
+@@ -9132,7 +9132,7 @@
+ 
+ fi
+ 
+-if test "$ac_cv_lib_ldap_main" = "yes"; then
++if false; then
+   LDAPLIBS="-lldap -llber"\
+   LDAPINCLUDE="-I/usr/include/ldap"
+ 
+@@ -9362,7 +9362,7 @@
+   withval="$with_mysql"
+   MYSQL=$withval
+ fi;
+-if test -n "$MYSQL"; then
++if false; then
+   MYSQLLIBDIR=$MYSQL/lib/mysql
+   CPPFLAGS="-I$MYSQL/include"
+   echo "$as_me:$LINENO: checking for mysql_init in -lmysqlclient" >&5
+@@ -10050,7 +10050,7 @@
+ fi
+ 
+ fi
+-if test "$ac_cv_lib_mysqlclient_mysql_init" = "yes" -o "$ac_cv_lib_mysqlclient_mysql_close" = "yes"; then
++if false; then
+ 
+ 
+ for ac_header in mysql/mysql.h mysql/errmsg.h
+@@ -14789,7 +14789,7 @@
+ echo $ECHO_N "checking for nslookup syntax... $ECHO_C" >&6
+ if test -n "$PATH_TO_NSLOOKUP"
+ then
+-	if $PATH_TO_NSLOOKUP -sil 127.0.0.1 2>&1 | grep "Invalid option: sil" >/dev/null
++	if $PATH_TO_NSLOOKUP -sil 127.0.0.1 2>&1 | fgrep "Invalid option: sil" >/dev/null
+ 	then
+ 		ac_cv_nslookup_command="$PATH_TO_NSLOOKUP"
+ 		echo "$as_me:$LINENO: result: $ac_cv_nslookup_command" >&5
+@@ -15131,7 +15131,7 @@
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-if test -x "$PATH_TO_LMSTAT"
++if false
+ then
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -15182,7 +15182,7 @@
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-if test -x "$PATH_TO_SMBCLIENT"
++if false
+ then
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -15287,7 +15287,7 @@
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-if test -x "$PATH_TO_SNMPGET"
++if false
+ then
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -15339,7 +15339,7 @@
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-if test -x "$PATH_TO_SNMPGETNEXT"
++if false
+ then
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -15348,7 +15348,7 @@
+ 
+ fi
+ 
+-if ( $PERL -M"Net::SNMP 3.6" -e 'exit' 2>/dev/null  )
++if false
+ then
+ 	echo "$as_me:$LINENO: checking for Net::SNMP perl module" >&5
+ echo $ECHO_N "checking for Net::SNMP perl module... $ECHO_C" >&6
+@@ -15500,7 +15500,7 @@
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-if test -x "$PATH_TO_FPING"
++if false
+ then
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -16657,7 +16657,7 @@
+ 	EXTRAS="$EXTRAS check_dig"
+ fi
+ 
+-if test -f plugins/check_nt.c ; then
++if false ; then
+   EXTRAS="$EXTRAS check_nt"
+ elif test -f ../plugins/check_nt.c ; then
+   EXTRAS="$EXTRAS check_nt"
