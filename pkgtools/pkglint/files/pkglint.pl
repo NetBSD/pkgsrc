@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.525 2006/02/18 14:18:44 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.526 2006/02/18 14:48:58 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2703,13 +2703,17 @@ sub checkline_mk_shellcmd($$) {
 	checkline_mk_shelltext($line, $shellcmd);
 }
 
-sub checkline_mk_vartype_basic($$$$$$);
-sub checkline_mk_vartype_basic($$$$$$) {
-	my ($line, $varname, $type, $op, $value, $comment) = @_;
+sub checkline_mk_vartype_basic($$$$$$$);
+sub checkline_mk_vartype_basic($$$$$$$) {
+	my ($line, $varname, $type, $op, $value, $comment, $list_context) = @_;
 	my ($value_novar);
 
 	$value_novar = $value;
-	while ($value_novar =~ s/\$\{[^{}]*\}//g) {
+	while ($value_novar =~ s/\$\{([^{}]*)\}//g) {
+		my ($varuse) = ($1);
+		if (!$list_context && $varuse =~ qr":Q$") {
+			$line->log_warning("The :Q operator should only be used in lists and shell commands.");
+		}
 	}
 
 	if ($type eq "AwkCommand") {
@@ -2960,7 +2964,7 @@ sub checkline_mk_vartype_basic($$$$$$) {
 		my (@paths) = split(qr":", $value_novar);
 
 		foreach my $p (@paths) {
-			checkline_mk_vartype_basic($line, $varname, "Pathname", $op, $p, $comment);
+			checkline_mk_vartype_basic($line, $varname, "Pathname", $op, $p, $comment, false);
 		}
 
 	} elsif ($type eq "Pathmask") {
@@ -2984,7 +2988,7 @@ sub checkline_mk_vartype_basic($$$$$$) {
 		}
 
 	} elsif ($type eq "PkgOptionsVar") {
-		checkline_mk_vartype_basic($line, $varname, "Varname", $op, $value, $comment);
+		checkline_mk_vartype_basic($line, $varname, "Varname", $op, $value, $comment, false);
 		if ($value =~ qr"\$\{PKGBASE[:\}]") {
 			$line->log_error("PKGBASE must not be used in PKG_OPTIONS_VAR.");
 			$line->explain(
@@ -3157,7 +3161,7 @@ sub checkline_mk_vartype_basic($$$$$$) {
 
 	} elsif ($type eq "YesNoFromCommand") {
 		if ($op ne "!=") {
-			checkline_mk_vartype_basic($line, $varname, "YesNo", $op, $value, $comment);
+			checkline_mk_vartype_basic($line, $varname, "YesNo", $op, $value, $comment, false);
 		}
 
 	} elsif ($type =~ qr"^\{\s*(.*?)\s*\}$") {
@@ -3253,7 +3257,7 @@ sub checkline_mk_vartype($$$$$) {
 
 			foreach my $word (@words) {
 				if (defined($element_type)) {
-					checkline_mk_vartype_basic($line, $varname, $element_type, $op, $word, $comment);
+					checkline_mk_vartype_basic($line, $varname, $element_type, $op, $word, $comment, true);
 				}
 			}
 
@@ -3262,7 +3266,7 @@ sub checkline_mk_vartype($$$$$) {
 			}
 
 		} else {
-			checkline_mk_vartype_basic($line, $varname, $type, $op, $value, $comment);
+			checkline_mk_vartype_basic($line, $varname, $type, $op, $value, $comment, false);
 		}
 }
 
