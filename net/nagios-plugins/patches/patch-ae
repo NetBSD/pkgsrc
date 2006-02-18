@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/02/18 17:19:20 bouyer Exp $
+
+--- plugins/Makefile.am.orig	Fri Jul 11 08:11:06 2003
++++ plugins/Makefile.am
+@@ -33,7 +33,7 @@ TESTS = @PLUGIN_TEST@
+ test:
+ 	perl -I $(top_builddir) -I $(top_srcdir) ../test.pl
+ 
+-AM_INSTALL_PROGRAM_FLAGS = @INSTALL_OPTS@
++#AM_INSTALL_PROGRAM_FLAGS = @INSTALL_OPTS@
+ 
+ ##############################################################################
+ # the actual targets
