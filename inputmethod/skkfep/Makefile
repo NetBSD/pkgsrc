@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2005/12/05 20:50:24 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/18 22:08:50 wiz Exp $
 
 DISTNAME=	skkfep0.86c
 PKGNAME=	skkfep-0.86c
+PKGREVISION=	1
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	ftp://ei5nazha.yz.yamagata-u.ac.jp/skkfep/
 
@@ -15,18 +16,14 @@ WRKSRC=		${WRKDIR}/skkfep
 NO_CONFIGURE=	yes
 MAKE_ENV+=	MAKE_FLAGS=EXECBASE=${LOCALBASE:Q}\ CC=${CC:Q}
 
-DESCR_SRC=	${WRKDIR}/DESCR
-INSTALL_FILE=	${WRKDIR}/INSTALL
-
 INSTALLATION_DIRS=	bin man/man1
 
-post-build:
-	${SED} 's#@PKGBASE@#${LOCALBASE}#g' ${PKGDIR}/DESCR	>${DESCR_SRC}
-	${SED} 's#@PKGBASE@#${LOCALBASE}#g' ${PKGDIR}/INSTALL	>${INSTALL_FILE}
+CONF_FILES+=	${PREFIX}/share/examples/skk/skk.conf ${PKG_SYSCONFDIR}/skk.conf
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/skkfep ${PREFIX}/bin/skkfep
 	${INSTALL_MAN} ${WRKSRC}/skkfep.1 ${PREFIX}/man/man1/skkfep.1
-	${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/skk
+	${INSTALL_DATA} ${FILESDIR}/skk.conf ${PREFIX}/share/examples/skk/skk.conf
 
 .include "../../mk/bsd.pkg.mk"
