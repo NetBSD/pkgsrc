@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2006/02/18 20:36:47 schwarz Exp $
+# $NetBSD: Makefile,v 1.91 2006/02/18 20:38:54 schwarz Exp $
 
 DISTNAME=		glib-2.8.6
 PKGNAME=		${DISTNAME:S/glib/glib2/}
@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
 
-CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=gnu
+CONFIGURE_ARGS.gnu-iconv+=	--with-libiconv=gnu
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE:Q}
