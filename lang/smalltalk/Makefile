@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/02/05 23:09:48 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2006/02/18 23:42:57 wiz Exp $
 
 DISTNAME=	smalltalk-2.1.9
 PKGREVISION=	2
@@ -12,9 +12,10 @@ COMMENT=	GNU Smalltalk: A smalltalk-80 implementation
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-powerpc
 
 LIBTOOLIZE_PLIST=	NO # Manually created libc.la breaks PLIST.
-USE_TOOLS+=		gawk gmake
+USE_TOOLS+=		gawk gmake pkg-config
 USE_GNU_READLINE=	YES
 USE_LIBTOOL=		YES
+USE_MAKEINFO=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-gdbm=${BUILDLINK_PREFIX.gdbm}/lib
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}/lib
