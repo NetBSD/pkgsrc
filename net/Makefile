@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.603 2006/02/17 20:22:25 adrianp Exp $
+# $NetBSD: Makefile,v 1.604 2006/02/18 17:26:51 bouyer Exp $
 #
 
 COMMENT=	Networking tools
@@ -199,6 +199,14 @@ SUBDIR+=	mtr
 SUBDIR+=	mtr-gtk
 SUBDIR+=	mydns-mysql
 SUBDIR+=	mydns-pgsql
+SUBDIR+=	nagios-base
+SUBDIR+=	nagios-nsca
+SUBDIR+=	nagios-imagepak-base
+SUBDIR+=	nagios-plugins
+SUBDIR+=	nagios-plugin-ldap
+SUBDIR+=	nagios-plugin-mysql
+SUBDIR+=	nagios-plugin-pgsql
+SUBDIR+=	nagios-plugin-snmp
 SUBDIR+=	nam
 SUBDIR+=	nap
 SUBDIR+=	napshare
