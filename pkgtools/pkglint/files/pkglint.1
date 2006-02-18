@@ -1,17 +1,17 @@
-.\"	$NetBSD: pkglint.1,v 1.36 2006/01/20 13:33:37 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.37 2006/02/18 16:12:13 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
 .\" All Rights Reserved.  Absolutely no warranty.
 .\"
 .\" Roland Illig <roland.illig@gmx.de>, 2004, 2005.
-.\" Roland Illig <rillig@NetBSD.org>, 2005.
+.\" Roland Illig <rillig@NetBSD.org>, 2005, 2006.
 .\"
-.Dd January 20, 2006
+.Dd February 18, 2006
 .Dt PKGLINT 1
 .Sh NAME
 .Nm pkglint
-.Nd a verifier for pkgsrc directories
+.Nd static analyzer for pkgsrc packages
 .Sh SYNOPSIS
 .Nm pkglint
 .Op Fl options
@@ -30,16 +30,13 @@ Packages following these rules are assumed to make future changes to the
 pkgsrc infrastructure easier.
 .Pp
 .\" =======================================================================
-.Sy Options
-.Bl -tag -width 18n -offset indent
+.Ss Options
+.Bl -tag -width 18n
 .It Fl C{[no-]check,...}
 Enable or disable specific checks.
 For a list of checks, see below.
 .It Fl F Ns | Ns Fl -autofix
 Repair trivial things automatically.
-Currently this only works for the synchronization of category
-.Pa Makefile Ns
-s.
 .It Fl I
 Show the
 .Pa Makefile
@@ -95,8 +92,8 @@ If given more than once, debugging messages are also shown.
 .El
 .Pp
 .\" =======================================================================
-.Sy Checks
-.Bl -tag -width 18n -offset indent
+.Ss Checks
+.Bl -tag -width 18n
 .It Cm all
 Enable all checks.
 .It Cm none
@@ -124,8 +121,8 @@ Check the pkgsrc specific patch files.
 .El
 .Pp
 .\" =======================================================================
-.Sy Warnings
-.Bl -tag -width 18n -offset indent
+.Ss Warnings
+.Bl -tag -width 18n
 .It Cm all
 Enable all warnings.
 .It Cm none
@@ -140,6 +137,11 @@ Emit some additional warnings that are not enabled by default,
 for whatever reason.
 .It Cm [no-]order
 Warn if Makefile variables are not in the preferred order.
+.It Cm [no-]plist-depr
+Warn if deprecated pathnames are used in
+.Pa PLIST
+files.
+This warning is disabled by default.
 .It Cm [no-]plist-sort
 Warn if items of a PLIST file are not sorted alphabetically.
 This warning is disabled by default.
@@ -198,11 +200,7 @@ Informational messages are only written in verbose mode
 Their main use is to aid debugging.
 .El
 .Sh AUTHORS
-.An Jun-ichiro Itoh Aq itojun@itojun.org
-.An Yoshishige Arai Aq ryo2@on.rim.or.jp
 .An Roland Illig Aq rillig@NetBSD.org
-.Pp
-Many people have contributed patches and comments/suggestions.
 .Sh BUGS
 Many more checks could be added.
 .Pp
