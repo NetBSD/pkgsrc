@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.21 2006/02/12 14:44:59 rillig Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.22 2006/02/18 17:07:33 rillig Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -127,6 +127,15 @@
 	infrastructure:</para>
 
 	<itemizedlist>
+
+	<listitem><para><varname>ALLOW_VULNERABLE_PACKAGES</varname>
+	should be set to <literal>yes</literal>. The purpose of the bulk
+	builds is creating binary packages, no matter if they are
+	vulnerable or not. When uploading the packages to a public
+	server, the vulnerable packages will be put into a directory of
+	their own. Leaving this variable unset would prevent the bulk
+	build system from even trying to build them, so possible
+	building errors would not show up.</para></listitem>
 
 	<listitem><para><varname>CHECK_FILES</varname>
 	(<filename>pkgsrc/mk/bsd.pkg.check.mk</filename>) can be set to
