@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.526 2006/02/18 14:48:58 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.527 2006/02/18 16:12:13 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1123,6 +1123,7 @@ my $opt_warn_absname	= true;
 my $opt_warn_directcmd	= true;
 my $opt_warn_extra	= false;
 my $opt_warn_order	= true;
+my $opt_warn_plist_depr	= false;
 my $opt_warn_plist_sort	= false;
 my $opt_warn_quoting	= false;
 my $opt_warn_space	= false;
@@ -1133,6 +1134,7 @@ my (%warnings) = (
 	"directcmd"	=> [\$opt_warn_directcmd, "warn about use of direct command names instead of Make variables"],
 	"extra"		=> [\$opt_warn_extra, "enable some extra warnings"],
 	"order"		=> [\$opt_warn_order, "warn if Makefile entries are unordered"],
+	"plist-depr"	=> [\$opt_warn_plist_depr, "warn about deprecated paths in PLISTs"],
 	"plist-sort"	=> [\$opt_warn_plist_sort, "warn about unsorted entries in PLISTs"],
 	"quoting"	=> [\$opt_warn_quoting, "warn about quoting issues"],
 	"space"		=> [\$opt_warn_space, "warn about inconsistent use of white-space"],
@@ -1929,7 +1931,6 @@ sub determine_used_variables($) {
 	my ($rest);
 
 	foreach my $line (@{$lines}) {
-		$line->log_debug(".");
 		$rest = $line->text;
 		while ($rest =~ s/(?:\$\{|defined\(|empty\()([0-9+.A-Z_a-z]+)[:})]//) {
 			my ($varname) = ($1);
@@ -4187,6 +4188,9 @@ sub checkfile_PLIST($) {
 
 			} elsif ($text =~ qr"^lib/locale/") {
 				$line->log_error("\"lib/locale\" must not be listed. Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
+
+			} elsif ($text =~ qr"^share/doc/html/") {
+				$opt_warn_plist_depr and $line->log_warning("Use of \"share/doc/html\" is deprecated. Use \"share/doc/\${PKGBASE}\" instead.");
 
 			} elsif ($text =~ qr"^share/locale/") {
 				$line->log_warning("Use of \"share/locale\" is deprecated.  Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
