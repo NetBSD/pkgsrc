@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12979 2006/02/18 21:40:52 wiz Exp $
+$NetBSD: CHANGES,v 1.12980 2006/02/18 21:56:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1086,3 +1086,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added net/nagios-plugin-snmp version 1.4.2 [bouyer 2006-02-18]
 	Updated graphics/py-matplotlib to 0.83nb3 [wiz 2006-02-18]
 	Updated graphics/skencil to 0.6.17nb2 [wiz 2006-02-18]
+	Updated inputmethod/skk to 12.2.0nb3 [wiz 2006-02-18]
