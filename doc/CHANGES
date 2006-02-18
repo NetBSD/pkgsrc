@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12976 2006/02/18 17:30:49 bouyer Exp $
+$NetBSD: CHANGES,v 1.12977 2006/02/18 18:16:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1084,3 +1084,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added pkgsrc/net/nagios-plugin-mysql version 1.4.2 [bouyer 2006-02-18]
 	Added pkgsrc/net/nagios-plugin-pgsql version 1.4.2 [bouyer 2006-02-18]
 	Added pkgsrc/net/nagios-plugin-snmp version 1.4.2 [bouyer 2006-02-18]
+	Updated graphics/py-matplotlib to 0.83nb3 [wiz 2006-02-18]
