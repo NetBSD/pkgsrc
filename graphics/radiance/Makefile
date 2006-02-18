@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:09:38 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/18 21:27:57 wiz Exp $
 #
 
 DISTNAME=	rad3R6P1
@@ -12,8 +12,6 @@ DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}supp${EXTRACT_SUFX}
 MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://www.radiance-online.org/
 COMMENT=	Physically-based, image-generating, backward raytracer
-
-BROKEN_IN=	pkgsrc-2005Q4
 
 WRKSRC=		${WRKDIR}/ray
 
