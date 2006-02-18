@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_chk.8,v 1.15 2005/12/12 14:03:20 wiz Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.16 2006/02/18 21:34:03 abs Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
@@ -57,9 +57,7 @@ Use the
 .Pa pkgchk.conf
 file
 .Sq Ar conf .
-.It Fl c
-Check versions of packages specified in
-.Pa pkgchk.conf .
+
 .It Fl D Ar tags
 Add the comma separated list of tags to those checked when parsing
 .Pa pkgchk.conf .
@@ -82,9 +80,6 @@ Generate an initial
 file based upon the packages installed on the host machine.
 .It Fl h
 Brief help.
-.It Fl i
-Check versions of installed packages, ignoring
-.Pa pkgchk.conf .
 .It Fl k
 Continue with further packages if errors are encountered.
 .It Fl L Ar file
@@ -162,6 +157,23 @@ Once the error has been fixed, a second run will resume the update.
 Verbose - list the tags set when checking
 .Pa pkgchk.conf ,
 and all packages checked.
+.El
+.Ss Deprecated Options
+.Bl -tag -width xxxxxxxx
+.It Fl c
+Check versions of packages specified in
+.Pa pkgchk.conf .
+This is a synomyn for 
+.Nm
+.Fl a n ,
+and will be removed in a future version.
+.It Fl i
+Check versions of installed packages, ignoring
+.Pa pkgchk.conf.
+.Nm
+This is a synomyn for 
+.Fl u n ,
+and will be removed in a future version.
 .El
 .Sh FILE FORMAT
 Anything after a
