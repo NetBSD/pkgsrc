@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1798 2006/02/02 21:15:46 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1799 2006/02/18 15:37:22 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -1187,16 +1187,19 @@ ORDERED_SITES= ${_MASTER_SITE_OVERRIDE} $$unsorted_sites
 .if defined(DYNAMIC_MASTER_SITES)
 .  for fetchfile in ${_ALLFILES}
 SITES_${fetchfile:T:S/=/--/}?= `${SH} ${FILESDIR}/getsite.sh ${fetchfile:T}`
+SITES.${fetchfile:T:S/=/--/}?=	${SITES_${fetchfile:T:S/=/--/}}
 .  endfor
 .endif
 .if !empty(_DISTFILES)
 .  for fetchfile in ${_DISTFILES}
 SITES_${fetchfile:T:S/=/--/}?= ${MASTER_SITES}
+SITES.${fetchfile:T:S/=/--/}?=	${SITES_${fetchfile:T:S/=/--/}}
 .  endfor
 .endif
 .if !empty(_PATCHFILES)
 .  for fetchfile in ${_PATCHFILES}
 SITES_${fetchfile:T:S/=/--/}?= ${PATCH_SITES}
+SITES.${fetchfile:T:S/=/--/}?=	${SITES_${fetchfile:T:S/=/--/}}
 .  endfor
 .endif
 
@@ -1285,7 +1288,7 @@ do-fetch:
 	cd ${_DISTDIR};							\
 	file="${fetchfile}";						\
 	bfile="${fetchfile:T}";						\
-	unsorted_sites="${SITES_${fetchfile:T:S/=/--/}} ${_MASTER_SITE_BACKUP}"; \
+	unsorted_sites="${SITES.${fetchfile:T:S/=/--/}} ${_MASTER_SITE_BACKUP}"; \
 	sites="${ORDERED_SITES}";					\
 	${_CHECK_DIST_PATH};						\
 	 if ${TEST} "${PKG_RESUME_TRANSFERS:M[Yy][Ee][Ss]}" ; then	\
@@ -2732,7 +2735,7 @@ fetch-list-one-pkg:
 			' ${DISTINFO_FILE}` || true;			\
 		${ECHO} '# Fetch ${fetchfile} ('$${filesize-???}' bytes):'; \
 		${ECHO} '#';						\
-		${ECHO} 'unsorted_sites="${SITES_${fetchfile:T:S/=/--/}} ${_MASTER_SITE_BACKUP}"'; \
+		${ECHO} 'unsorted_sites="${SITES.${fetchfile:T:S/=/--/}} ${_MASTER_SITE_BACKUP}"'; \
 		${ECHO} sites='"'${ORDERED_SITES:Q}'"';			\
 		${ECHO} "${MKDIR} ${_DISTDIR}";				\
 		${ECHO} 'cd ${_DISTDIR} && [ -f ${fetchfile} -o -f ${fetchfile:T} ] ||'; \
