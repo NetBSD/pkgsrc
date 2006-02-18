@@ -1,7 +1,7 @@
 PKGLINT(1)              NetBSD General Commands Manual              PKGLINT(1)
 
 NNAAMMEE
-     ppkkgglliinntt -- a verifier for pkgsrc directories
+     ppkkgglliinntt -- static analyzer for pkgsrc packages
 
 SSYYNNOOPPSSIISS
      ppkkgglliinntt [--ooppttiioonnss] [_d_i_r _._._.]
@@ -14,127 +14,117 @@ DDEESSCCRRIIPPTTIIOONN
      conformance tests.  Packages following these rules are assumed to make
      future changes to the pkgsrc infrastructure easier.
 
-     OOppttiioonnss
+   OOppttiioonnss
+     --CC{{[[nnoo--]]cchheecckk,,......}}  Enable or disable specific checks.  For a list of
+                         checks, see below.
 
-           --CC{{[[nnoo--]]cchheecckk,,......}}  Enable or disable specific checks.  For a list
-                               of checks, see below.
+     --FF|----aauuttooffiixx        Repair trivial things automatically.
 
-           --FF|----aauuttooffiixx        Repair trivial things automatically.  Currently
-                               this only works for the synchronization of cat-
-                               egory _M_a_k_e_f_i_l_es.
+     --II                  Show the _M_a_k_e_f_i_l_e that is constructed by including
+                         all the files that are slurped in via `.include'
+                         directives.  This flag is mainly for debugging.
 
-           --II                  Show the _M_a_k_e_f_i_l_e that is constructed by
-                               including all the files that are slurped in via
-                               `.include' directives.  This flag is mainly for
-                               debugging.
+     --RR|----rrccssiiddssttrriinngg    Allow other RCS Id strings than NetBSD.  Multiple
+                         strings may be concatenated with `|'.
 
-           --RR|----rrccssiiddssttrriinngg    Allow other RCS Id strings than NetBSD.  Multi-
-                               ple strings may be concatenated with `|'.
+     --VV|----vveerrssiioonn        Print the current ppkkgglliinntt version number and exit.
 
-           --VV|----vveerrssiioonn        Print the current ppkkgglliinntt version number and
-                               exit.
+     --WW{{[[nnoo--]]wwaarrnn,,......}}   Enable or disable specific warnings.  For a list of
+                         warnings, see below.
 
-           --WW{{[[nnoo--]]wwaarrnn,,......}}   Enable or disable specific warnings.  For a
-                               list of warnings, see below.
+     --dd|----ddeebbuugg          Enable warnings for parsing errors and other things
+                         that haven't been completed yet.  This option is sep-
+                         arated from the `-W' options because the diagnostics
+                         are too hard to understand without detailed knowledge
+                         of pkglint's source code.
 
-           --dd|----ddeebbuugg          Enable warnings for parsing errors and other
-                               things that haven't been completed yet.  This
-                               option is separated from the `-W' options
-                               because the diagnostics are too hard to under-
-                               stand without detailed knowledge of pkglint's
-                               source code.
+     --ee|----eexxppllaaiinn        Print further explanations for diagnostics.  Some-
+                         times the reasons for diagnostics are not obvious and
+                         need further explanation.
 
-           --ee|----eexxppllaaiinn        Print further explanations for diagnostics.
-                               Sometimes the reasons for diagnostics are not
-                               obvious and need further explanation.
+     --gg|----ggcccc--oouuttppuutt--ffoorrmmaatt
+                         Use a format for the diagnostics that is understood
+                         by most programs, especially editors, so they can
+                         provide a point-and-goto interface.
 
-           --gg|----ggcccc--oouuttppuutt--ffoorrmmaatt
-                               Use a format for the diagnostics that is under-
-                               stood by most programs, especially editors, so
-                               they can provide a point-and-goto interface.
+     --hh|----hheellpp           Show the summary of command line options, then exit.
 
-           --hh|----hheellpp           Show the summary of command line options, then
-                               exit.
+     --ii|----iimmppoorrtt         Check if a package is ready to be imported into
+                         pkgsrc.  This is especially useful for packages from
+                         the pkgsrc-wip project.
 
-           --ii|----iimmppoorrtt         Check if a package is ready to be imported into
-                               pkgsrc.  This is especially useful for packages
-                               from the pkgsrc-wip project.
+     --qq|----qquuiieett          Don't print the errors and warnings summary before
+                         terminating.
 
-           --qq|----qquuiieett          Don't print the errors and warnings summary
-                               before terminating.
+     --rr                  Check subdirectories, too.  The subdirectories are
+                         those that are mentioned in a `SUBDIR+=' line.
 
-           --rr                  Check subdirectories, too.  The subdirectories
-                               are those that are mentioned in a `SUBDIR+='
-                               line.
+     --ss|----ssoouurrccee         For all diagnostics having file and line number
+                         information, show the source code along with the
+                         diagnostics.
 
-           --ss|----ssoouurrccee         For all diagnostics having file and line number
-                               information, show the source code along with
-                               the diagnostics.
+     --vv|----vveerrbboossee        Be verbose.  Show the progress report for items that
+                         are being checked.  If given more than once, debug-
+                         ging messages are also shown.
 
-           --vv|----vveerrbboossee        Be verbose.  Show the progress report for items
-                               that are being checked.  If given more than
-                               once, debugging messages are also shown.
+   CChheecckkss
+     aallll                 Enable all checks.
 
-     CChheecckkss
+     nnoonnee                Disable all checks.
 
-           aallll                 Enable all checks.
+     [[nnoo--]]AALLTTEERRNNAATTIIVVEESS   Check the alternatives file.
 
-           nnoonnee                Disable all checks.
+     [[nnoo--]]IINNSSTTAALLLL        Check the INSTALL and DEINSTALL scripts.
 
-           [[nnoo--]]AALLTTEERRNNAATTIIVVEESS   Check the alternatives file.
+     [[nnoo--]]MMaakkeeffiillee       Check the package Makefile, including all included
+                         files.
 
-           [[nnoo--]]IINNSSTTAALLLL        Check the INSTALL and DEINSTALL scripts.
+     [[nnoo--]]MMEESSSSAAGGEE        Check MESSAGE files.
 
-           [[nnoo--]]MMaakkeeffiillee       Check the package Makefile, including all
-                               included files.
+     [[nnoo--]]PPLLIISSTT          Check PLIST files.
 
-           [[nnoo--]]MMEESSSSAAGGEE        Check MESSAGE files.
+     [[nnoo--]]bbll33            Check buildlink3 Makefiles.
 
-           [[nnoo--]]PPLLIISSTT          Check PLIST files.
+     [[nnoo--]]ddiissttiinnffoo       Check the distinfo file.
 
-           [[nnoo--]]bbll33            Check buildlink3 Makefiles.
+     [[nnoo--]]eexxttrraa          Check remaining files in the package directory.
 
-           [[nnoo--]]ddiissttiinnffoo       Check the distinfo file.
+     [[nnoo--]]mmkk             Check Makefile fragments besides buildlink3.
 
-           [[nnoo--]]eexxttrraa          Check remaining files in the package directory.
+     [[nnoo--]]ppaattcchheess        Check the pkgsrc specific patch files.
 
-           [[nnoo--]]mmkk             Check Makefile fragments besides buildlink3.
+   WWaarrnniinnggss
+     aallll                 Enable all warnings.
 
-           [[nnoo--]]ppaattcchheess        Check the pkgsrc specific patch files.
+     nnoonnee                Disable all warnings.
 
-     WWaarrnniinnggss
+     [[nnoo--]]aabbssnnaammee        Warn if a file contains an absolute pathname.
 
-           aallll                 Enable all warnings.
+     [[nnoo--]]ddiirreeccttccmmdd      Warn if a system command name is used instead of a
+                         variable (e.g. sed instead of ${SED}).
 
-           nnoonnee                Disable all warnings.
+     [[nnoo--]]eexxttrraa          Emit some additional warnings that are not enabled by
+                         default, for whatever reason.
 
-           [[nnoo--]]aabbssnnaammee        Warn if a file contains an absolute pathname.
+     [[nnoo--]]oorrddeerr          Warn if Makefile variables are not in the preferred
+                         order.
 
-           [[nnoo--]]ddiirreeccttccmmdd      Warn if a system command name is used instead
-                               of a variable (e.g. sed instead of ${SED}).
+     [[nnoo--]]pplliisstt--ddeepprr     Warn if deprecated pathnames are used in _P_L_I_S_T files.
+                         This warning is disabled by default.
 
-           [[nnoo--]]eexxttrraa          Emit some additional warnings that are not
-                               enabled by default, for whatever reason.
+     [[nnoo--]]pplliisstt--ssoorrtt     Warn if items of a PLIST file are not sorted alpha-
+                         betically.  This warning is disabled by default.
 
-           [[nnoo--]]oorrddeerr          Warn if Makefile variables are not in the pre-
-                               ferred order.
+     [[nnoo--]]qquuoottiinngg        Warn for possibly invalid quoting of make variables
+                         in shell programs and shell variables themselves.
 
-           [[nnoo--]]pplliisstt--ssoorrtt     Warn if items of a PLIST file are not sorted
-                               alphabetically.  This warning is disabled by
-                               default.
+     [[nnoo--]]ssppaaccee          Emit notes for inconsistent use of white-space.
 
-           [[nnoo--]]qquuoottiinngg        Warn for possibly invalid quoting of make vari-
-                               ables in shell programs and shell variables
-                               themselves.
+     [[nnoo--]]ttyyppeess          Warn for some _M_a_k_e_f_i_l_e variables if their assigned
+                         values do not match their type.
 
-           [[nnoo--]]ssppaaccee          Emit notes for inconsistent use of white-space.
-
-           [[nnoo--]]ttyyppeess          Warn for some _M_a_k_e_f_i_l_e variables if their
-                               assigned values do not match their type.
-
-           [[nnoo--]]vvaarroorrddeerr       Warn if the variables in a package _M_a_k_e_f_i_l_es
-                               are not ordered in the way it is described the
-                               pkgsrc guide.
+     [[nnoo--]]vvaarroorrddeerr       Warn if the variables in a package _M_a_k_e_f_i_l_es are not
+                         ordered in the way it is described the pkgsrc guide.
 
      OOtthheerr aarrgguummeennttss
 
@@ -169,11 +159,7 @@ DDIIAAGGNNOOSSTTIICCSS
                    (--vv).  Their main use is to aid debugging.
 
 AAUUTTHHOORRSS
-     Jun-ichiro Itoh <itojun@itojun.org>
-     Yoshishige Arai <ryo2@on.rim.or.jp>
      Roland Illig <rillig@NetBSD.org>
-
-     Many people have contributed patches and comments/suggestions.
 
 BBUUGGSS
      Many more checks could be added.
@@ -181,4 +167,4 @@ BBUUGGSS
      If you don't understand the messages, feel free to ask on the
      <tech-pkg@NetBSD.org> mailing list.
 
-pkgsrc                         January 20, 2006                         pkgsrc
+NetBSD 3.0                     February 18, 2006                    NetBSD 3.0
