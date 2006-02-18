@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.28 2006/02/18 20:46:42 abs Exp $
+# $Id: pkg_chk.sh,v 1.29 2006/02/18 21:34:03 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -589,27 +589,27 @@ fi
 set -- $args
 while [ $# != 0 ]; do
     case "$1" in
-	-a )	opt_a=1 ; opt_c=1 ;;
+	-a )	opt_a=1 ;;
 	-B )    opt_B=1 ;;
 	-b )	opt_b=1 ;;
-	-C )	opt_C="$2" ; shift;;
-	-c )	opt_c=1 ;;
-	-D )	opt_D="$2" ; shift;;
+	-C )	opt_C="$2" ; shift ;;
+	-c )	opt_a=1 ; opt_n=1 ; echo "-c is deprecated - use -a -n" ;;
+	-D )	opt_D="$2" ; shift ;;
 	-f )	opt_f=1 ;;
 	-g )	opt_g=1 ;;
 	-h )	opt_h=1 ;;
-	-i )	opt_i=1 ;;
+	-i )	opt_u=1 ; opt_n=1 ; echo "-i is deprecated - use -u -n" ;;
 	-k )	opt_k=1 ;;
-	-L )	opt_L="$2" ; shift;;
+	-L )	opt_L="$2" ; shift ;;
 	-l )	opt_l=1 ;;
 	-N )	opt_N=1 ;;
 	-n )	opt_n=1 ;;
-	-P )	opt_P="$2" ; shift;;
-	-r )	opt_r=1 ; opt_i=1 ;;
+	-P )	opt_P="$2" ; shift ;;
+	-r )	opt_r=1 ;;
 	-S )	opt_S=1 ;;
 	-s )	opt_s=1 ;;
-	-U )	opt_U="$2" ; shift;;
-	-u )	opt_u=1 ; opt_i=1 ;;
+	-U )	opt_U="$2" ; shift ;;
+	-u )	opt_u=1 ;;
 	-v )	opt_v=1 ;;
 	-- )	shift; break ;;
     esac
@@ -620,9 +620,9 @@ if [ -z "$opt_b" -a -z "$opt_s" ];then
     opt_b=1; opt_s=1;
 fi
 
-if [ -z "$opt_a" -a -z "$opt_c" -a -z "$opt_g" -a -z "$opt_i" -a -z "$opt_N" -a -z "$opt_l" -a -z "$opt_S" ];
+if [ -z "$opt_a$opt_g$opt_l$opt_r$opt_u$opt_S$opt_N" ];
 then
-    usage "Must specify at least one of -a, -c, -g, -i, -l, -N, -S, or -u";
+    usage "Must specify at least one of -a, -g, -l, -r, -u -N, or -S";
 fi
 
 if [ -n "$opt_h" -o $# != 0 ];then
@@ -725,12 +725,12 @@ if [ -n "$opt_g" ]; then
     generate_conf_from_installed $PKGCHK_CONF
 fi
 
-if [ -n "$opt_i" ];then
+if [ -n "$opt_r" -o -n "$opt_u" ];then
     verbose "Enumerate PKGDIRLIST from installed packages"
     PKGDIRLIST=$(pkgdirs_from_installed)
 fi
 
-if [ -n "$opt_c" -o -n "$opt_l" ];then	# Append to PKGDIRLIST based on conf
+if [ -n "$opt_a" -o -n "$opt_l" ];then	# Append to PKGDIRLIST based on conf
     verbose "Append to PKGDIRLIST based on config $PKGCHK_CONF"
     PKGDIRLIST="$(pkgdirs_from_conf $PKGCHK_CONF $PKGDIRLIST)"
 fi
@@ -770,7 +770,7 @@ if [ -n "$delete_and_recheck" ]; then
 	if [ -n "$opt_u" ]; then
 	    PKGDIRLIST="$(pkgdirs_from_conf $PKGCHK_UPDATE_CONF $PKGDIRLIST)"
 	fi
-	if [ -n "$opt_u" -o -n "$opt_a" ]; then
+	if [ -n "$opt_a" -o -n "$opt_u" ]; then
 	    check_packages_installed $PKGDIRLIST # May need to add more
 	fi
     fi
