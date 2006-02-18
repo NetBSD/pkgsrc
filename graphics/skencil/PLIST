@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/12 13:07:21 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/18 21:40:34 wiz Exp $
 bin/sk2ppm
 bin/sk2ps
 bin/skconvert
@@ -574,8 +574,6 @@ share/doc/skencil/Doc/devguide-7.html
 share/doc/skencil/Doc/devguide-8.html
 share/doc/skencil/Doc/devguide-9.html
 share/doc/skencil/Doc/devguide.html
-share/doc/skencil/Doc/fonts.alias
-share/doc/skencil/Doc/fonts.scale
 share/doc/skencil/Doc/usersguide-1.html
 share/doc/skencil/Doc/usersguide-10.html
 share/doc/skencil/Doc/usersguide-2.html
