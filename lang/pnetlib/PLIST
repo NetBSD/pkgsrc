@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:40 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/02/18 22:59:38 wiz Exp $
 bin/csunit
 bin/ilinstall
 bin/jsrun
@@ -131,3 +131,5 @@ share/cscc/config/machine.default
 @dirrm lib/cscc/lib/1.2.3400.0/ca
 @dirrm lib/cscc/lib/1.2.3400.0
 @dirrm lib/cscc/lib/0.5.1.0
+@dirrm lib/cscc/lib
+@comment in pnet: @dirrm lib/cscc
