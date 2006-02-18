@@ -1,0 +1,25 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2006/02/18 17:12:20 bouyer Exp $
+#
+
+NAGIOS_USER?=		nagios
+NAGIOS_GROUP?=		${NAGIOS_USER}
+
+NAGIOSADM_USER?=	nagadmin
+NAGIOSADM_GROUP?=	${NAGIOSADM_USER}
+
+USE_X11=                YES
+GNU_CONFIGURE=          YES
+USE_TOOLS+=		gmake
+USE_PKGINSTALL=		YES
+
+PKG_SYSCONFSUBDIR=	nagios
+
+PERL5_REQD=		5.6
+
+CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/nagios
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/nagios
+CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=        --localstatedir=/var
+
+CONFIGURE_ARGS+=	--with-cgiurl=/nagios/cgi-bin
+CONFIGURE_ARGS+=	--with-htmurl=/nagios
