@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:11:32 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/18 14:07:54 joerg Exp $
 #
 
 DISTNAME=	efltk-2.0.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ede/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,12 +16,14 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
+USE_LIBTOOL=		yes
 BUILD_USES_MSGFMT=	yes
 
 CONFIGURE_ARGS+=	--enable-iconv
 CONFIGURE_ARGS+=	--enable-xft
 CONFIGURE_ARGS+=	--enable-plugins
 CONFIGURE_ARGS+=	--disable-unixODBC
+CONFIGURE_ARGS+=	--disable-shared
 
 .include "options.mk"
 
