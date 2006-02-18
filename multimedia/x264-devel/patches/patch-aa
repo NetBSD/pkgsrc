@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/02/18 16:50:39 joerg Exp $
+
+--- configure.orig	2006-02-18 17:45:22.000000000 +0100
++++ configure
+@@ -122,7 +122,7 @@ case "$UNAMEM" in
+       ASFLAGS="-f macho -DPREFIX"
+     fi
+     ;;
+-  x86_64)
++  x86_64|amd64)
+     ARCH="X86_64"
+     CFLAGS="$CFLAGS -DHAVE_MMXEXT -DHAVE_SSE2"
+     AS="yasm"
