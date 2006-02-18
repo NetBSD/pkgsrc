@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.524 2006/02/18 14:13:32 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.525 2006/02/18 14:18:44 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2604,7 +2604,7 @@ sub checkline_mk_shelltext($$) {
 		}
 
 		if ($state == SCST_PAX_S || $state == SCST_SED_E) {
-			if ($shellword !~ qr"^[\"\'].*[\"\']$") {
+			if (false && $shellword !~ qr"^[\"\'].*[\"\']$") {
 				$line->log_warning("Substitution commands like \"${shellword}\" should always be quoted.");
 				$line->explain(
 					"Usually these substitution commands contain characters like '*' or",
