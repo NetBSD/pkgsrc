@@ -14,7 +14,7 @@ The pkgsrc Developers
 
 Copyright (C) 1994-2005 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.11 2006/01/13 17:42:33 reed Exp $
+$NetBSD: pkgsrc.xml,v 1.12 2006/02/18 01:46:43 rillig Exp $
 
 Abstract
 
@@ -288,6 +288,11 @@ II. The pkgsrc developer's guide
         18.3. Committing: Importing a package into CVS
         18.4. Updating a package to a newer version
         18.5. Moving a package in pkgsrc
+
+    19. Porting pkgsrc
+
+        19.1. Porting pkgsrc to a new operating system
+        19.2. Adding support for a new compiler
 
 A. A simple example package: bison
 
@@ -1083,9 +1088,10 @@ are in your PATH. This includes /usr/ccs/{bin,lib} and e.g. /usr/pkg/
 
 Sometimes, when using libtool, /bin/ksh crashes with a segmentation fault. The
 workaround is to use another shell for the configure scripts, for example by
-installing shells/bash and adding the following line to your mk.conf:
+installing shells/bash and adding the following lines to your mk.conf:
 
     CONFIG_SHELL=   ${LOCALBASE}/bin/bash
+    WRAPPER_SHELL=  ${LOCALBASE}/bin/bash
 
 Chapter 4. Using pkgsrc
 
@@ -1564,6 +1570,13 @@ briefly described here.
     should be always available while building other packages.
 
 Some other options are scattered in the pkgsrc infrastructure:
+
+  * ALLOW_VULNERABLE_PACKAGES should be set to yes. The purpose of the bulk
+    builds is creating binary packages, no matter if they are vulnerable or
+    not. When uploading the packages to a public server, the vulnerable
+    packages will be put into a directory of their own. Leaving this variable
+    unset would prevent the bulk build system from even trying to build them,
+    so possible building errors would not show up.
 
   * CHECK_FILES (pkgsrc/mk/bsd.pkg.check.mk) can be set to "yes" to check that
     the installed set of files matches the PLIST.
@@ -2377,6 +2390,11 @@ Table of Contents
     18.4. Updating a package to a newer version
     18.5. Moving a package in pkgsrc
 
+19. Porting pkgsrc
+
+    19.1. Porting pkgsrc to a new operating system
+    19.2. Adding support for a new compiler
+
 Chapter 8. Package components - files, directories and contents
 
 Table of Contents
@@ -2470,7 +2488,8 @@ exactly in the order given here.
 
         DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
         DISTFILES+=     foo-file.tar.gz
-        SITES_foo-file.tar.gz=http://www.somewhere.com/somehow/ \
+        SITES_foo-file.tar.gz= \
+                http://www.somewhere.com/somehow/ \
                 http://www.somewhereelse.com/mirror/somehow/
 
   * DISTFILES: Name(s) of archive file(s) containing distribution. The default
@@ -4015,9 +4034,9 @@ When choosing which of these variables to use, follow the following rules:
     The following lines are taken from pkgsrc/wm/scwm/Makefile:
 
         EVAL_PREFIX+=           GTKDIR=gtk+
-        CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE}        \
-                                --with-gtk-prefix="${GTKDIR}"           \
-                                --enable-multibyte
+        CONFIGURE_ARGS+=        --with-guile-prefix=${LOCALBASE:Q}
+        CONFIGURE_ARGS+=        --with-gtk-prefix=${GTKDIR:Q}
+        CONFIGURE_ARGS+=        --enable-multibyte
 
     Specific defaults can be defined for the packages evaluated using
     EVAL_PREFIX, by using a definition of the form:
@@ -4099,25 +4118,34 @@ changed distfiles on the master distribution site or network lossage.
 14.7. The extract phase
 
 When the distfiles are present on the local system, they need to be extracted,
-as they are usually in the form of some compressed archive format, most
-commonly .tar.gz.
+as they usually come in the form of some compressed archive format.
 
-If only some of the distfiles need to be uncompressed, the files to be
-uncompressed should be put into EXTRACT_ONLY.
+By default, all DISTFILES are extracted. If you only need some of them, you can
+set the EXTRACT_ONLY variable to the list of those files.
 
-If the distfiles are not in .tar.gz format, they can be extracted by setting
-either EXTRACT_SUFX, or EXTRACT_CMD, EXTRACT_BEFORE_ARGS and
-EXTRACT_AFTER_ARGS. In the former case, pkgsrc knows how to extract a number of
-suffixes (.tar.gz, .tgz, .tar.gz2, .tbz, .tar.Z, .tar, .shar.gz, .shar.bz2,
-.shar.Z, .shar, .Z, .bz2 and .gz; see the definition of the various
-DECOMPRESS_CMD variables in bsd.pkg.extract.mk for a complete list). Here's an
-example on how to use the other variables for a program that comes with a
-compressed shell archive whose name ends in .msg.gz:
+Extracting the files is usually done by a little program, mk/scripts/extract,
+which already knows how to extract various archive formats, so most likely you
+will not need to change anything here. But if you need, the following variables
+may help you:
 
-    EXTRACT_SUFX=           .msg.gz
-    EXTRACT_CMD=            zcat
-    EXTRACT_BEFORE_ARGS=
-    EXTRACT_AFTER_ARGS=     |sh
+EXTRACT_OPTS_{BIN,LHA,PAX,RAR,TAR,ZIP,ZOO}
+
+    Use these variables to override the default options for an extract command,
+    which are defined in mk/scripts/extract.
+
+EXTRACT_USING
+
+    This variable can be set to pax, tar or an absolute pathname pointing to
+    the command with which tar archives should be extracted.
+
+If the extract program doesn't serve your needs, you can also override the
+EXTRACT_CMD variable, which holds the command used for extracting the files.
+This command is executed in the ${WRKSRC} directory. During execution of this
+command, the shell variable extract_file holds the absolute pathname of the
+file that is going to be extracted.
+
+And if that still does not suffice, you can override the do-extract target in
+the package Makefile.
 
 14.8. The patch phase
 
@@ -5848,6 +5876,69 @@ possibly untested features.
     % cvs commit oldcategory/package oldcategory/Makefile newcategory/Makefile
 
     (and any packages from step 5, of course).
+
+Chapter 19. Porting pkgsrc
+
+Table of Contents
+
+19.1. Porting pkgsrc to a new operating system
+19.2. Adding support for a new compiler
+
+The pkgsrc system has already been ported to many operating systems, hardware
+architectures and compilers. This chapter explains the necessary steps to make
+pkgsrc even more portable.
+
+19.1. Porting pkgsrc to a new operating system
+
+To port pkgsrc to a new operating system (called MyOS in this example), you
+need to touch the following files:
+
+bootstrap/mods/mk/MyOS.sys.mk
+
+    This file contains some basic definitions, for example the name of the C
+    compiler.
+
+mk/bsd.prefs.mk
+
+    Insert code that defines the variables OPSYS, OS_VERSION, LOWER_OS_VERSION,
+    LOWER_VENDOR, MACHINE_ARCH, OBJECT_FMT, APPEND_ELF, and the other variables
+    that appear in this file.
+
+mk/platform/MyOS.mk
+
+    This file contains the platform-specific definitions that are used by
+    pkgsrc. Start by copying one of the other files and edit it to your needs.
+
+mk/platform/MyOS.pkg.dist
+
+    This file contains a list of directories, together with their permission
+    bits and ownership. These directories will be created automatically with
+    every package that does not explicitly set NO_MTREE. There have been some
+    discussions about whether this file is needed at all, but with no result.
+
+mk/platform/MyOS.x11.dist
+
+    Just copy one of the pre-existing x11.dist files to your MyOS.x11.dist.
+
+mk/tools/bootstrap.mk
+
+    On some operating systems, the tools that are provided with the base system
+    are not good enough for pkgsrc. For example, there are many versions of sed
+    (1) that have a narrow limit on the line length they can process. Therefore
+    pkgsrc brings its own tools, which can be enabled here.
+
+mk/tools/MyOS.mk
+
+    This file defines the paths to all the tools that are needed by one or the
+    other package in pkgsrc, as well as by pkgsrc itself. Find out where these
+    tools are on your platform and add them.
+
+Now, you should be able to build some basic packages, like lang/perl5, shells/
+bash.
+
+19.2. Adding support for a new compiler
+
+TODO
 
 Appendix A. A simple example package: bison
 
