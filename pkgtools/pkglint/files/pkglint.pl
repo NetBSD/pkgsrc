@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.523 2006/02/18 11:39:46 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.524 2006/02/18 14:13:32 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2901,6 +2901,10 @@ sub checkline_mk_vartype_basic($$$$$$) {
 		} elsif ($value =~ qr"^(?:-static)$") {
 			# Assume that the wrapper framework catches these.
 
+		} elsif ($value =~ qr"^(-Wl,(?:-R|-rpath|--rpath))") {
+			my ($rpath_flag) = ($1);
+			$line->log_warning("Please use \${COMPILER_RPATH_FLAG} instead of ${rpath_flag}.");
+
 		} elsif ($value =~ qr"^-.*") {
 			$line->log_warning("Unknown linker flag \"${value}\".");
 
@@ -2952,14 +2956,21 @@ sub checkline_mk_vartype_basic($$$$$$) {
 			$line->log_error("\"${value}\" is not a valid option name.");
 		}
 
-	} elsif ($type eq "Pathname") {
-		if ($value_novar !~ qr"^[-0-9A-Za-z._~+%/]*$") {
-			$line->log_warning("\"${value}\" is not a valid pathname.");
+	} elsif ($type eq "Pathlist") {
+		my (@paths) = split(qr":", $value_novar);
+
+		foreach my $p (@paths) {
+			checkline_mk_vartype_basic($line, $varname, "Pathname", $op, $p, $comment);
 		}
 
 	} elsif ($type eq "Pathmask") {
 		if ($value_novar !~ qr"^[-0-9A-Za-z._~+%*?/\[\]]*$") {
 			$line->log_warning("\"${value}\" is not a valid pathname mask.");
+		}
+
+	} elsif ($type eq "Pathname") {
+		if ($value_novar !~ qr"^[-0-9A-Za-z._~+%/]*$") {
+			$line->log_warning("\"${value}\" is not a valid pathname.");
 		}
 
 	} elsif ($type eq "Perl5Packlist") {
@@ -3194,7 +3205,7 @@ sub checkline_mk_vartype($$$$$) {
 				: ($varname =~ qr"DIR$") ? "Pathname"
 				: ($varname =~ qr"FILES$") ? "List of Pathmask"
 				: ($varname =~ qr"FILE$") ? "Pathname"
-				: ($varname =~ qr"PATH$") ? "Pathname"
+				: ($varname =~ qr"PATH$") ? "Pathlist"
 				: ($varname =~ qr"PATHS$") ? "List of Pathname"
 				: ($varname =~ qr"_USER$") ? "UserGroupName"
 				: ($varname =~ qr"_GROUP$") ? "UserGroupName"
