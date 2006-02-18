@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/23 17:00:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/02/18 09:31:08 wiz Exp $
 bin/flphoto
+man/cat1/flphoto.0
+man/cat5/album.0
 man/man1/flphoto.1
 man/man5/album.5
 share/doc/flphoto/COPYING
