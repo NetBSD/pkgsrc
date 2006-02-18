@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.63 2006/02/16 06:33:00 rillig Exp $
+# $NetBSD: makevars.map,v 1.64 2006/02/18 14:12:49 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -46,6 +46,7 @@ BDB_ACCEPTED		List of { db1 db2 db3 db4 }
 BDB_DEFAULT		Userdefined
 BDB_LIBS		Readonly
 BDB_TYPE		Readonly
+BROKEN			Message
 BROKEN_GETTEXT_DETECTION	YesNo
 BROKEN_IN		List of { pkgsrc-2005Q4 }
 BUILDLINK_CONTENTS_FILTER	List of ShellWord
@@ -59,6 +60,7 @@ BUILDLINK_FILES		List+ of Pathmask
 BUILDLINK_FILES_CMD	List of ShellWord
 # ^^ ShellCommand
 BUILDLINK_INCDIRS	List of Pathname
+BUILDLINK_JAVA_PREFIX	Pathname
 BUILDLINK_LDADD		List of LdFlag
 BUILDLINK_LDFLAGS	List+ of LdFlag
 BUILDLINK_LIBDIRS	List of Pathname
@@ -123,6 +125,7 @@ DIST_SUBDIR		Filename
 DJB_BUILD_TARGETS	List of Identifier
 DJB_CONFIG_CMDS		List of ShellWord
 # ^^ ShellCommand, terminated by a semicolon
+DJB_CONFIG_HOME		Filename
 DJB_RESTRICTED		YesNo
 DJB_MAKE_TARGETS	List of Identifier
 DJB_SLASHPACKAGE	YesNo
@@ -185,6 +188,10 @@ INSTALL_TARGET		List of Identifier
 INSTALL_UNSTRIPPED	YesNo
 INTERACTIVE_STAGE	List of { fetch extract configure build install }
 IS_BUILTIN		YesNoFromCommand
+JAVA_CLASSPATH		ShellWord
+JAVA_NAME		Filename
+JAVA_UNLIMIT		List+ of { cmdsize datasize stacksize }
+JAVA_WRAPPERS		List!+ of Filename
 KRB5BASE		Readonly
 KRB5_ACCEPTED		List of { heimdal mit-krb5 }
 KRB5_DEFAULT		Userdefined
