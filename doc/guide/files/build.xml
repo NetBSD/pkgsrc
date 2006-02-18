@@ -1,4 +1,8 @@
-<!-- $NetBSD: build.xml,v 1.24 2006/02/17 20:38:17 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.25 2006/02/18 17:11:50 rillig Exp $ -->
+
+<!--
+	TODO: after 2006Q1, "SITES_" should be replaced with "SITES.".
+-->
 
 <chapter id="build">
 <title>The build process</title>
