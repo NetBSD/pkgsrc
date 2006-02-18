@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/02/05 23:10:04 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2006/02/18 13:47:55 rillig Exp $
 #
 
 DISTNAME=	yacas-1.0.59
@@ -17,22 +17,19 @@ USE_LIBTOOL=	YES
 
 TEST_TARGET=	test
 
-LDFLAGS+=	-Wl,-R${PREFIX}/lib/yacas
+LDFLAGS+=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/yacas
 
-# dos2unix fix on a few files
-pre-patch:
-.for __tmp__ in src/cyacas.h src/cyacas.cpp plugins/pcre/pcre_config.h
-	${MV} ${WRKSRC}/${__tmp__} ${WRKSRC}/${__tmp__}.bak
-	${CAT} ${WRKSRC}/${__tmp__}.bak | ${TR} -d "\015" >  \
-		${WRKSRC}/${__tmp__}
-.endfor
+SUBST_CLASSES+=		d2u
+SUBST_STAGE.d2u=	pre-patch
+SUBST_FILES.d2u=	src/cyacas.h src/cyacas.cpp plugins/pcre/pcre_config.h
+SUBST_FILTER_CMD.d2u=	${TR} -d '\015'
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/yacas.sh ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
-.for __tmp__ in yacas.el yacas-names.el yacas-functions.el yacas-notebook.el \
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/yacas.sh ${PREFIX:Q}/bin
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/emacs/site-lisp
+.for f in yacas.el yacas-names.el yacas-functions.el yacas-notebook.el \
 	yacas-notebook.sty font-latex.el
-	${INSTALL_DATA} ${WRKSRC}/YacasNotebook/${__tmp__} ${PREFIX}/share/emacs/site-lisp
+	${INSTALL_DATA} ${WRKSRC:Q}/YacasNotebook/${f:Q} ${PREFIX:Q}/share/emacs/site-lisp/
 .endfor
 
 .include "../../math/gsl/buildlink3.mk"
