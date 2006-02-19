@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:09:56 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/19 00:39:06 wiz Exp $
 #
 
 DISTNAME=	mailgraph-1.12
@@ -22,16 +22,9 @@ DBDIR?=		${VARBASE}/db/${PKGBASE}
 
 MG_SCRIPTS=	mailgraph.cgi mailgraph.pl
 
-REPLACE_PERL=	${MG_SCRIPTS}
+REPLACE_PERL+=	${MG_SCRIPTS}
 
-CGIDIR=		libexec/cgi-bin
-DOCDIR=		share/doc/${PKGBASE}
-
-OWN_DIRS+=	${PREFIX}/${DOCDIR}
 RCD_SCRIPTS=	mailgraph
-
-PLIST_SUBST+=	CGIDIR=${CGIDIR:Q}
-PLIST_SUBST+=	DOCDIR=${DOCDIR:Q}
 
 SUBST_CLASSES+=		defs
 
@@ -43,20 +36,23 @@ SUBST_SED.defs+=	-e 's,/var/log$$,${DBDIR},g'
 # Logfile
 SUBST_SED.defs+=	-e 's,/var/log/syslog,${VARBASE}/log/maillog,g'
 #
-SUBST_MESSAGE.defs=	"Fixing defaults"
+SUBST_MESSAGE.defs=	Fixing defaults.
 
-INSTALLATION_DIRS=	${CGIDIR} sbin
+INSTALLATION_DIRS=	sbin
+
 do-build:
 
 do-configure:
 
 do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/libexec/cgi-bin
 	${INSTALL_SCRIPT} \
-	    ${WRKSRC}/mailgraph.cgi ${PREFIX}/${CGIDIR}/mailgraph.cgi
+	    ${WRKSRC}/mailgraph.cgi ${PREFIX}/libexec/cgi-bin/mailgraph.cgi
 	${INSTALL_SCRIPT} \
 	    ${WRKSRC}/mailgraph.pl ${PREFIX}/sbin/mailgraph
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mailgraph
 .for i in CHANGES COPYING README
-	${INSTALL_DATA} ${WRKSRC}/${i} ${PREFIX}/${DOCDIR}/${i}
+	${INSTALL_DATA} ${WRKSRC}/${i} ${PREFIX}/share/doc/mailgraph/${i}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
