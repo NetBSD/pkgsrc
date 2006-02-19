@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:27 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/02/19 16:30:31 wiz Exp $
 
 DISTNAME=	netatalk-1.6.4a
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/} \
 		http://me.in-berlin.de/~jroger/netatalk/
@@ -13,8 +13,6 @@ COMMENT=	Netatalk appletalk file and print services
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake perl
 USE_LIBTOOL=		YES
-
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 CONFLICTS=	netatalk-asun-[0-9]* netatalk-umich-[0-9]*
 
@@ -34,6 +32,11 @@ CONFIGURE_ARGS+=	--enable-netbsd \
 
 #CONFIGURE_ARGS+=	--with-flock-locks	# broken
 #CONFIGURE_ARGS+=	--with-bdb=${PREFIX}	# still some known issues
+
+.for cf in AppleVolumes.default AppleVolumes.system afpd.conf \
+	atalkd.conf netatalk.conf papd.conf
+CONF_FILES+=		${PREFIX}/share/examples/netatalk/${cf} ${PKG_SYSCONFDIR}/${cf}
+.endfor
 
 .include "options.mk"
 

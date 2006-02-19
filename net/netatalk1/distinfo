@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/06/05 23:40:56 taca Exp $
+$NetBSD: distinfo,v 1.5 2006/02/19 16:30:31 wiz Exp $
 
 SHA1 (netatalk-1.6.4a.tar.gz) = c3dec6d29524e316967bfdc7cab35cd95e53ec90
 RMD160 (netatalk-1.6.4a.tar.gz) = b34429f5ad0b83a72e343420aabfe8d8c1fe1ecc
@@ -11,3 +11,4 @@ SHA1 (patch-ae) = 9bae8aef01e7b23fb26c9deddc53386b294d1e1c
 SHA1 (patch-af) = 386f493052a0325063b7ffe15879c09438eef8c4
 SHA1 (patch-ag) = 063b11af899f35b7030ad7c838866b68050c3b70
 SHA1 (patch-ah) = a36b7b32039b9fde4bcf395ce223c2bee2bd7b84
+SHA1 (patch-ai) = d2b3222ef460f07f0e19701f9892c7bb65ae1e7e
