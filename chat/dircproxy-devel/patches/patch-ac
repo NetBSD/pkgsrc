@@ -1,15 +1,15 @@
-$NetBSD: patch-ac,v 1.1 2005/07/30 21:18:33 rillig Exp $
+$NetBSD: patch-ac,v 1.2 2006/02/19 15:47:35 adrianp Exp $
 
 Conditional lvalues aren't portable enough for IRIX 6.5.
 
---- src/irc_server.c.orig	Sat Aug 17 23:48:03 2002
-+++ src/irc_server.c	Sat Jul 30 23:14:18 2005
-@@ -699,7 +699,7 @@ static int _ircserver_gotmsg(struct ircp
+--- src/irc_server.c.orig	2006-02-18 22:39:32.000000000 +0000
++++ src/irc_server.c
+@@ -788,7 +788,7 @@ static int _ircserver_gotmsg(struct ircp
                free(s);
  
                /* Was in the squelch list, so remove it and stop looking */
 -              s = (l ? l->next : p->squelch_modes) = n;
-+              s = *(l ? &(l->next) : &(p->squelch_modes)) = n;
++	      s = *(l ? &(l->next) : &(p->squelch_modes)) = n;
                squelch = 1;
                break;
              } else {
