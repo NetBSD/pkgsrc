@@ -1,33 +1,29 @@
-# $NetBSD: Makefile,v 1.5 2006/01/08 20:25:58 markd Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/19 10:27:52 adam Exp $
 
 DISTNAME=	htdig-3.2.0b6
 CATEGORIES=	www databases
-MASTER_SITES=	http://www.htdig.org/files/ \
-		ftp://ftp.htdig.org/ \
-		${MASTER_SITE_SOURCEFORGE:=files/} \
-		${MASTER_SITE_SOURCEFORGE:=pub/sourceforge/htdig/} \
-		http://htdig.europeanservers.net/files/ \
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=htdig/} \
+		http://www.htdig.org/files/ \
 		http://www.it.htdig.org/files/ \
-		ftp://www.it.htdig.org/pub/htdig/ \
-		http://www.opdenbrouw.nl/htdig/maindocs/files/
-EXTRACT_SUFX=	.tar.gz
+		http://www.opdenbrouw.nl/htdig/maindocs/files/ \
+		http://gnu.kookel.org/htdig/maindocs/files/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://htdig.sourceforge.net/
 COMMENT=	WWW indexing and searching system
 
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	YES
-
-GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+= --with-cgi-bin-dir=${PREFIX}/libexec/cgi-bin \
-		--with-common-dir=${PREFIX}/share/htdig/common \
-		--with-config-dir=${PKG_SYSCONFDIR:Q} \
-		--with-database-dir=${DBDIR:Q} \
-		--with-image-dir=${PREFIX}/share/examples/htdig \
-		--with-search-dir=${PREFIX}/share/examples/htdig
-CONFIGURE_ENV+=	PDF_PARSER="${LOCALBASE}/bin/acroread"
-CXXFLAGS+=	-Wno-deprecated
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-cgi-bin-dir=${PREFIX}/libexec/cgi-bin
+CONFIGURE_ARGS+=	--with-common-dir=${PREFIX}/share/htdig/common
+CONFIGURE_ARGS+=	--with-config-dir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-database-dir=${DBDIR:Q}
+CONFIGURE_ARGS+=	--with-image-dir=${PREFIX}/share/examples/htdig
+CONFIGURE_ARGS+=	--with-search-dir=${PREFIX}/share/examples/htdig
+CONFIGURE_ENV+=		PDF_PARSER="${LOCALBASE}/bin/acroread"
+CXXFLAGS+=		-Wno-deprecated
 
 INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 PKG_SYSCONFSUBDIR=	htdig
