@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/01/24 22:16:55 adam Exp $
+# $NetBSD: Makefile,v 1.43 2006/02/19 16:12:02 wiz Exp $
 
 DISTNAME=	net-snmp-5.3.0.1
 CATEGORIES=	net
@@ -85,7 +85,7 @@ CONFIGURE_ENV+=		PERLPROG=${PERL5:Q}
 # Handle ${PREFIX}/share/snmp in the DEINSTALL script since it may contain
 # leftover config files or pidfiles after deinstallation.
 #
-OWN_DIRS=	${PREFIX}/share/snmp
+REQD_DIRS=	${PREFIX}/share/snmp
 RCD_SCRIPTS=	snmpd snmptrapd
 
 post-wrapper:
