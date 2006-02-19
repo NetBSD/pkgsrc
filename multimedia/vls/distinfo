@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2006/01/03 14:04:27 joerg Exp $
+$NetBSD: distinfo,v 1.5 2006/02/19 15:51:25 wiz Exp $
 
-SHA1 (vls-0.5.6.tar.gz) = 830df3a353d36453e622474b7813448c439f9d71
-RMD160 (vls-0.5.6.tar.gz) = 4f88c59b4fd96df1ea4d46b66467fa3287776c2c
-Size (vls-0.5.6.tar.gz) = 802915 bytes
+SHA1 (vls-0.5.6/vls-0.5.6.tar.gz) = f61acab2d1b9093677de516b63aef534b0cd81b7
+RMD160 (vls-0.5.6/vls-0.5.6.tar.gz) = 5fdcd718db4caa624ad092c4cdddca2fc62b0d15
+Size (vls-0.5.6/vls-0.5.6.tar.gz) = 802901 bytes
 SHA1 (patch-aa) = cadf79b4a1244492d48def104590468b52098527
 SHA1 (patch-ab) = 30b9ba716e80972a7d4cb0cf75efc715086812b1
 SHA1 (patch-ac) = bcc44065d4c45db8c96b5ddd307d61242d70f002

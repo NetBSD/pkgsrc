@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:10:18 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/02/19 15:51:25 wiz Exp $
 #
 
 DISTNAME=		vls-0.5.6
-PKGREVISION=	2
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vls/0.5.6/
 
@@ -12,6 +12,8 @@ COMMENT=		VideoLAN Server
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+# two versions of 0.5.6 out
+DIST_SUBDIR=		${PKGNAME_NOREV}
 
 CONFIGURE_ARGS+=	--with-dvbpsi=${BUILDLINK_PREFIX.libdvbpsi}
 
