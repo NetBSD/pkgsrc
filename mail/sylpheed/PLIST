@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/07/29 19:32:23 chris Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/02/19 07:11:08 xtraeme Exp $
 bin/sylpheed
 share/examples/sylpheed/mime.types
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/sylpheed.mo
@@ -27,8 +27,9 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/sylpheed.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/sylpheed.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/sylpheed.mo
-${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/sylpheed.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/sylpheed.mo
 share/sylpheed/faq/de/sylpheed-faq-1.html
 share/sylpheed/faq/de/sylpheed-faq-2.html
 share/sylpheed/faq/de/sylpheed-faq-3.html
@@ -83,6 +84,8 @@ share/sylpheed/manual/ja/sylpheed-18.html
 share/sylpheed/manual/ja/sylpheed-19.html
 share/sylpheed/manual/ja/sylpheed-2.html
 share/sylpheed/manual/ja/sylpheed-20.html
+share/sylpheed/manual/ja/sylpheed-21.html
+share/sylpheed/manual/ja/sylpheed-22.html
 share/sylpheed/manual/ja/sylpheed-3.html
 share/sylpheed/manual/ja/sylpheed-4.html
 share/sylpheed/manual/ja/sylpheed-5.html
