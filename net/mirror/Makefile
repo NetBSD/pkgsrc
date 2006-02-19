@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2005/07/16 01:19:16 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/02/19 15:55:33 wiz Exp $
 
 DISTNAME=	mirror-2.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://src.doc.ic.ac.uk/computing/archiving/mirror/
 
@@ -16,6 +16,9 @@ SCRIPTS_ENV+=	PERL5=${PERL5}
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	do_unlinks.pl mirror.pl mm.pl pkgs_to_mmin.pl
 
+CONF_FILES+=	${PREFIX}/lib/mirror/mirror.defaults.dist \
+		${PREFIX}/lib/mirror/mirror.defaults
+
 pre-configure:
 	cd ${WRKSRC};							\
 		for i in mirror.pl mm.pl; do				\
@@ -25,12 +28,5 @@ pre-configure:
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/mirror
-
-post-install:
-	@if [ ! -f ${PREFIX}/lib/mirror/mirror.defaults ]; then \
-	    ${CP} -p \
-		${PREFIX}/lib/mirror/mirror.defaults.dist \
-		${PREFIX}/lib/mirror/mirror.defaults; \
-	fi
 
 .include "../../mk/bsd.pkg.mk"
