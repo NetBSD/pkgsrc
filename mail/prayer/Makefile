@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/02/05 23:09:57 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2006/02/19 09:24:53 wiz Exp $
 #
 
 DISTNAME=	prayer-1.0.12
@@ -34,7 +34,6 @@ CONF_FILES+=	${EGDIR}/welcome.html ${PKG_SYSCONFDIR}/welcome.html
 
 VAR_PREFIX=	${VARBASE}/spool/prayer
 
-OWN_DIRS+=	${EGDIR}
 OWN_DIRS_PERMS+=${VAR_PREFIX} ${PRAYER_USER} ${PRAYER_GROUP} 0750
 
 FILES_SUBST+=	OPSYS=${OPSYS:Q}
@@ -43,6 +42,9 @@ FILES_SUBST+=	VAR_PREFIX=${VAR_PREFIX:Q}
 post-patch:
 	${FIND} ${WRKSRC} -name CVS -type d -print | ${SORT} -r | \
 		${XARGS} ${RM} -r
+
+pre-install:
+	${INSTALL_DATA_DIR} ${EGDIR}
 
 .include "../../databases/db4/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
