@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/08/13 08:11:17 adrianp Exp $
+$NetBSD: distinfo,v 1.2 2006/02/19 22:43:59 wiz Exp $
 
 SHA1 (Net-Packet-2.04.tar.gz) = 38bdcf453d4e7665dea98414d6ece2b1a4a4e0ca
 RMD160 (Net-Packet-2.04.tar.gz) = c5bb9638a7e926733d8381cfee3db7e23f1bcf1a
 Size (Net-Packet-2.04.tar.gz) = 50984 bytes
+SHA1 (patch-aa) = 9389b7426f55f4a4a9e1d91e8a7086bb3a374acd
