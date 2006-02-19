@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:10:44 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/02/19 17:23:18 adrianp Exp $
 #
 
-DISTNAME=	honeyd-1.0
-PKGREVISION=	2
+DISTNAME=	honeyd-1.5
 CATEGORIES=	security net
-MASTER_SITES=	http://niels.xtdnet.nl/honeyd/
+MASTER_SITES=	http://www.citi.umich.edu/u/provos/honeyd/
 
 MAINTAINER=	adrianp@NetBSD.org
-HOMEPAGE=	http://niels.xtdnet.nl/honeyd/index.php
+HOMEPAGE=	http://www.honeyd.org/
 COMMENT=	Small daemon that creates virtual hosts on a network
 
-DEPENDS+=       honeyd-arpd>=0.2:../../security/honeyd-arpd
+DEPENDS+=	honeyd-arpd>=0.2:../../security/honeyd-arpd
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
@@ -28,18 +27,23 @@ EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 
 .for f in ${DIST_CONF_FILES}
-CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+CONF_FILES+=		${EGDIR:Q}/${f:Q} ${PKG_SYSCONFDIR:Q}/${f:Q}
 .endfor
 
 .include "../../devel/libevent/buildlink3.mk"
+.include "../../devel/libdnsres/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libdnet/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+
+pre-install:
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/examples/honeyd
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC:Q}/README ${DOCDIR:Q}
 
 .include "../../mk/bsd.pkg.mk"

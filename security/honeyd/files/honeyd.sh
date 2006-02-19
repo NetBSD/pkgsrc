@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: honeyd.sh,v 1.1.1.1 2004/04/20 09:14:43 xtraeme Exp $
+# $NetBSD: honeyd.sh,v 1.2 2006/02/19 17:23:18 adrianp Exp $
 #
 
 # PROVIDE: honeyd
@@ -12,7 +12,7 @@
 name="honeyd"
 rcvar=$name
 command="@PREFIX@/bin/${name}"
-pidfile="/var/run/${name}.pid"
+pidfile="@VARBASE@/run/${name}.pid"
 
 load_rc_config $name
 run_rc_command "$1"
