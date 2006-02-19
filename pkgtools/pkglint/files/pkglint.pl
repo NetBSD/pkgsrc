@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.529 2006/02/19 16:28:19 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.530 2006/02/19 21:28:35 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4060,6 +4060,7 @@ sub checkfile_patch($) {
 	# style: [c] = context diff, [u] = unified diff
 	# scope: [f] = file, [h] = hunk, [l] = line
 	# action: [d] = delete, [m] = modify, [a] = add, [c] = context
+	use constant re_patch_rcsid	=> qr"^\$.*\$$";
 	use constant re_patch_text	=> qr"^(.+)$";
 	use constant re_patch_empty	=> qr"^$";
 	use constant re_patch_cfd	=> qr"^\*\*\*\s(\S+)(.*)$";
@@ -4169,7 +4170,9 @@ sub checkfile_patch($) {
 	};
 
 	my $transitions =
-		[   [PST_START, undef, PST_CENTER, sub() {
+		[   [PST_START, re_patch_rcsid, PST_CENTER, sub() {
+			checkline_rcsid($line, "");
+		}], [PST_START, undef, PST_CENTER, sub() {
 			checkline_rcsid($line, "");
 		}], [PST_CENTER, re_patch_empty, PST_TEXT, sub() {
 			#
@@ -4186,19 +4189,19 @@ sub checkfile_patch($) {
 			#
 		}], [PST_CENTER, re_patch_cfd, PST_CFA, sub() {
 			if ($seen_comment) {
-				#$line->log_warning("Empty line expected.");
+				$opt_warn_space and $line->log_note("Empty line expected.");
 			} else {
 				#$line->log_warning("Comment expected.");
 			}
 			$line->log_warning("Please use unified diffs (diff -u) for patches.");
 		}], [PST_CENTER, re_patch_ufd, PST_UFA, sub() {
 			if ($seen_comment) {
-				#$line->log_warning("Empty line expected.");
+				$opt_warn_space and $line->log_note("Empty line expected.");
 			} else {
 				#$line->log_warning("Comment expected.");
 			}
 		}], [PST_CENTER, undef, PST_TEXT, sub() {
-			#$line->log_warning("Empty line expected.");
+			$opt_warn_space and $line->log_note("Empty line expected.");
 		}], [PST_CFA, re_patch_cfa, PST_CH, sub() {
 			$current_fname = $m->text(1);
 			$patched_files++;
@@ -4272,7 +4275,7 @@ sub checkfile_patch($) {
 		}], [PST_UL, re_patch_ulnonl, PST_UL, sub() {
 			#
 		}], [PST_UL, re_patch_empty, PST_UL, sub() {
-			$line->log_note("Leading white-space missing in hunk.");
+			$opt_warn_space and $line->log_note("Leading white-space missing in hunk.");
 			$check_hunk_line->(1, 1, PST_UH);
 		}], [PST_UL, undef, PST_UH, sub() {
 			if ($dellines != 0 || $addlines != 0) {
@@ -4307,7 +4310,7 @@ sub checkfile_patch($) {
 		$line = $s->line;
 		my $text = $line->text;
 
-		$line->log_info("[${state} ${patched_files}/".($hunks||0)."/-".($dellines||0)."+".($addlines||0)."] $text");
+		$opt_debug and $line->log_debug("[${state} ${patched_files}/".($hunks||0)."/-".($dellines||0)."+".($addlines||0)."] $text");
 
 		my $found = false;
 		foreach my $t (@{$transitions}) {
@@ -4315,7 +4318,7 @@ sub checkfile_patch($) {
 				if (!defined($t->[1])) {
 					$m = undef;
 				} elsif ($text =~ $t->[1]) {
-					$line->log_info($t->[1]);
+					$opt_debug and $line->log_debug($t->[1]);
 					$m = PkgLint::SimpleMatch->new($text, \@-, \@+);
 				} else {
 					next;
