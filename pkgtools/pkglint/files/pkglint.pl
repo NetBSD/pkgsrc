@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.528 2006/02/19 15:28:51 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.529 2006/02/19 16:28:19 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4060,7 +4060,6 @@ sub checkfile_patch($) {
 	# style: [c] = context diff, [u] = unified diff
 	# scope: [f] = file, [h] = hunk, [l] = line
 	# action: [d] = delete, [m] = modify, [a] = add, [c] = context
-	use constant re_patch_rcsid	=> qr"^(\$.*\$)$";
 	use constant re_patch_text	=> qr"^(.+)$";
 	use constant re_patch_empty	=> qr"^$";
 	use constant re_patch_cfd	=> qr"^\*\*\*\s(\S+)(.*)$";
@@ -4170,10 +4169,8 @@ sub checkfile_patch($) {
 	};
 
 	my $transitions =
-		[   [PST_START, re_patch_rcsid, PST_CENTER, sub() {
+		[   [PST_START, undef, PST_CENTER, sub() {
 			checkline_rcsid($line, "");
-		}], [PST_START, undef, PST_CENTER, sub() {
-			$line->log_error("CVS Id expected.");
 		}], [PST_CENTER, re_patch_empty, PST_TEXT, sub() {
 			#
 		}], [PST_TEXT, re_patch_cfd, PST_CFA, sub() {
