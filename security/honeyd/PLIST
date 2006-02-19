@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:04 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/02/19 17:23:18 adrianp Exp $
 bin/honeyd
 bin/honeydctl
+bin/honeydstats
 include/honeyd/debug.h
 include/honeyd/hooks.h
 include/honeyd/plugins.h
@@ -14,6 +15,8 @@ share/examples/honeyd/config.sample
 share/examples/honeyd/nmap.assoc
 share/examples/honeyd/nmap.prints
 share/examples/honeyd/pf.os
+share/examples/honeyd/proxy
+share/examples/honeyd/smtp
 share/examples/honeyd/webserver/htdocs/config.py
 share/examples/honeyd/webserver/htdocs/graphs/traffic_daily.gif
 share/examples/honeyd/webserver/htdocs/graphs/traffic_hourly.gif
