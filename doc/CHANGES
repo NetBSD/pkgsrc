@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12982 2006/02/18 22:59:53 wiz Exp $
+$NetBSD: CHANGES,v 1.12983 2006/02/19 00:05:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1089,3 +1089,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated inputmethod/skk to 12.2.0nb3 [wiz 2006-02-18]
 	Updated inputmethod/skkfep to 0.86cnb1 [wiz 2006-02-18]
 	Updated lang/pnetlib to 0.6.6nb3 [wiz 2006-02-18]
+	Updated mail/clamav to 0.88nb2 [wiz 2006-02-19]
