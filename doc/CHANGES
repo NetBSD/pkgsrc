@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13000 2006/02/19 20:51:50 recht Exp $
+$NetBSD: CHANGES,v 1.13001 2006/02/19 21:34:53 agc Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1107,3 +1107,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/fluidsynth to 1.0.7 [adam 2006-02-19]
 	Updated emulators/gxemul to 0.3.8 [xtraeme 2006-02-19]
 	Updated converters/rss2html to 0.8 [recht 2006-02-19]
+	Updated devel/netbsd-iscsi to 20060219 [agc 2006-02-19]
