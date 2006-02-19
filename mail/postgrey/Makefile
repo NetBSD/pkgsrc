@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/01/06 15:10:05 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/19 01:01:39 wiz Exp $
 #
 
 DISTNAME=	postgrey-1.21
@@ -38,16 +38,10 @@ CONF_FILES+=		${PREFIX}/${EGDIR}/${i} \
 			${PKG_SYSCONFDIR}/${i}
 .endfor
 
-OWN_DIRS+=		${PREFIX}/${DOCDIR}
-OWN_DIRS+=		${PREFIX}/${EGDIR}
-
 OWN_DIRS_PERMS+=	${POSTGREY_DBDIR} \
 			${POSTGREY_USER} ${POSTGREY_GROUP} 0775
 
 FILES_SUBST+=		PERL=${PERL5:Q}
-
-PLIST_SUBST+=		DOCDIR=${DOCDIR:Q}
-PLIST_SUBST+=		EGDIR=${EGDIR:Q}
 
 SUBST_CLASSES+=		postgrey
 
@@ -67,7 +61,7 @@ SUBST_SED.postgrey+=	-e 's,/var/spool/postfix/postgrey,${POSTGREY_DBDIR},g'
 # Config
 SUBST_SED.postgrey+=	-e 's,/etc/postfix,${PKG_SYSCONFDIR},g'
 #
-SUBST_MESSAGE.postgrey=	"Fixing defaults"
+SUBST_MESSAGE.postgrey=	Fixing defaults.
 
 INSTALLATION_DIRS=	sbin
 
@@ -75,9 +69,11 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/postgrey ${PREFIX}/sbin/postgrey
+	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
 .for i in COPYING Changes README
 	${INSTALL_DATA} ${WRKSRC}/${i} ${PREFIX}/${DOCDIR}/${i}
 .endfor
+	${INSTALL_DATA_DIR} ${PREFIX}/${EGDIR}
 .for i in postgrey_whitelist_clients postgrey_whitelist_recipients
 	${INSTALL_DATA} ${WRKSRC}/${i} ${PREFIX}/${EGDIR}/${i}
 .endfor
