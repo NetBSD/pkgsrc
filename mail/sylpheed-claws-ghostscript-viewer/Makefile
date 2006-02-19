@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2006/02/05 23:09:58 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/02/19 11:08:44 wiz Exp $
 #
 
 DISTNAME=	ghostscript-viewer-0.6
 PKGNAME=	sylpheed-claws-${DISTNAME}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	mail news x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sylpheed-claws/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,8 +12,7 @@ MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://reboot.animeirc.de/sylpheed/ghostscript_viewer/
 COMMENT=	Plugin to make Sylpheed-claws display PostScript and PDF attachments
 
-BROKEN_IN=	pkgsrc-2005Q4
-
+CONFIGURE_ENV+=		GS_PROG=${TOOLS_PATH.gs:Q}
 USE_TOOLS+=		gs:run pkg-config
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
