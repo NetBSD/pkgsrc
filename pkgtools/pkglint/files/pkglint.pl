@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.527 2006/02/18 16:12:13 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.528 2006/02/19 15:28:51 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -348,10 +348,54 @@ sub lineno($)		{ return shift(@_)->[LINENO]; }
 sub colno($)		{ return shift(@_)->[COLNO]; }
 
 #==========================================================================
-# A Match is the result of applying a regular expression to a String. It
-# can return the range and the text of the captured groups.
+# A SimpleMatch is the result of applying a regular expression to a Perl
+# scalar value. It can return the range and the text of the captured
+# groups.
 #==========================================================================
-package PkgLint::Match;
+package PkgLint::SimpleMatch;
+
+use constant STRING	=> 0;
+use constant STARTS	=> 1;
+use constant ENDS	=> 2;
+use constant N		=> 3;
+
+sub new($$) {
+	my ($class, $string, $starts, $ends) = @_;
+	my ($self) = ([$string, $starts, $ends, $#{$ends}]);
+	bless($self, $class);
+	return $self;
+}
+
+sub string($)		{ return shift(@_)->[STRING]; }
+sub n($)		{ return shift(@_)->[N]; }
+
+sub has($$) {
+	my ($self, $n) = @_;
+
+	return 0 <= $n && $n <= $self->n
+	    && defined($self->[STARTS]->[$n])
+	    && defined($self->[ENDS]->[$n]);
+}
+
+sub text($$) {
+	my ($self, $n) = @_;
+
+	my $start = $self->[STARTS]->[$n];
+	my $end = $self->[ENDS]->[$n];
+	return substr($self->string, $start, $end - $start);
+}
+
+sub range($$) {
+	my ($self, $n) = @_;
+
+	return ($self->[STARTS]->[$n], $self->[ENDS]->[$n]);
+}
+
+#==========================================================================
+# A StringMatch is the result of applying a regular expression to a String.
+# It can return the range and the text of the captured groups.
+#==========================================================================
+package PkgLint::StringMatch;
 
 use constant STRING	=> 0;
 use constant STARTS	=> 1;
@@ -667,7 +711,7 @@ sub match($$) {
 	# before doing anything with them.
 	my @starts = @-;
 	my @ends = @+;
-	return PkgLint::Match->new($self, \@starts, \@ends);
+	return PkgLint::StringMatch->new($self, \@starts, \@ends);
 }
 
 sub match_all($$) {
@@ -684,7 +728,7 @@ sub match_all($$) {
 
 		$lastpos = $ends[0];
 
-		push(@{$mm}, PkgLint::Match->new($self, \@starts, \@ends));
+		push(@{$mm}, PkgLint::StringMatch->new($self, \@starts, \@ends));
 	}
 	return ($mm, substr($rest, $lastpos));
 }
@@ -4008,7 +4052,238 @@ sub checkfile_package_Makefile($$$) {
 
 sub checkfile_patch($) {
 	my ($fname) = @_;
-	my ($strings, $files_in_patch, $patch_state, $line_type, $dellines, $current_fname);
+	my ($strings);
+	my ($state, $redostate, $nextstate, $dellines, $addlines, $hunks);
+	my ($seen_comment, $current_fname, $patched_files);
+
+	# Abbreviations used:
+	# style: [c] = context diff, [u] = unified diff
+	# scope: [f] = file, [h] = hunk, [l] = line
+	# action: [d] = delete, [m] = modify, [a] = add, [c] = context
+	use constant re_patch_rcsid	=> qr"^(\$.*\$)$";
+	use constant re_patch_text	=> qr"^(.+)$";
+	use constant re_patch_empty	=> qr"^$";
+	use constant re_patch_cfd	=> qr"^\*\*\*\s(\S+)(.*)$";
+	use constant re_patch_cfa	=> qr"^---\s(\S+)(.*)$";
+	use constant re_patch_ch	=> qr"^\*{15}(.*)$";
+	use constant re_patch_chd	=> qr"^\*{3}\s(\d+)(?:,(\d+))?\s\*{4}$";
+	use constant re_patch_cha	=> qr"^-{3}\s(\d+)(?:,(\d+))?\s-{4}$";
+	use constant re_patch_cld	=> qr"^(?:-\s(.*))?$";
+	use constant re_patch_clm	=> qr"^(?:!\s(.*))?$";
+	use constant re_patch_cla	=> qr"^(?:\+\s(.*))?$";
+	use constant re_patch_clc	=> qr"^(?:\s\s(.*))?$";
+	use constant re_patch_ufd	=> qr"^---\s(\S+)(?:\s+(.*))?$";
+	use constant re_patch_ufa	=> qr"^\+{3}\s(\S+)(?:\s+(.*))?$";
+	use constant re_patch_uh	=> qr"^\@\@\s-(?:(\d+),)?(\d+)\s\+(?:(\d+),)?(\d+)\s\@\@(.*)$";
+	use constant re_patch_uld	=> qr"^-(.*)$";
+	use constant re_patch_ula	=> qr"^\+(.*)$";
+	use constant re_patch_ulc	=> qr"^\s(.*)$";
+	use constant re_patch_ulnonl	=> qr"^\\ No newline at end of file$";
+
+	use constant PST_START		=> 0;
+	use constant PST_CENTER		=> 1;
+	use constant PST_TEXT		=> 2;
+	use constant PST_CFA		=> 3;
+	use constant PST_CH		=> 4;
+	use constant PST_CHD		=> 5;
+	use constant PST_CLD0		=> 6;
+	use constant PST_CLD		=> 7;
+	use constant PST_CLA0		=> 8;
+	use constant PST_CLA		=> 9;
+	use constant PST_UFA		=> 10;
+	use constant PST_UH		=> 11;
+	use constant PST_UL		=> 12;
+
+	my ($s, $line, $m);
+
+	my $check_text = sub($) {
+		my ($text) = @_;
+
+		if ($text =~ qr"(\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$opt_rcsidstring)(?::[^\$]*|\$))") {
+			my ($tag) = ($2);
+
+			if ($text =~ re_patch_uh) {
+				$line->log_warning("Possible RCS tag \"\$${tag}\$\". Please remove it.");
+				$line->set_text($1);
+			} else {
+				$line->log_warning("Possible RCS tag \"\$${tag}\$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".");
+			}
+		}
+	};
+
+	my $check_contents = sub() {
+
+		if ($m->has(1)) {
+			$check_text->($m->text(1));
+		}
+	};
+
+	my $check_added_contents = sub() {
+		my $text;
+
+		return unless $m->has(1);
+		$text = $m->text(1);
+		checkline_cpp_macro_names($line, $text);
+		checkline_spellcheck($line);
+
+		# XXX: This check is not as accurate as the similar one in
+		# checkline_mk_shelltext().
+		if (defined($current_fname) && $current_fname =~ qr"(?:^|/)Makefile(?:\.in|)") {
+			my ($mm, $rest) = $s->match_all($regex_shellword);
+
+			foreach my $m (@{$mm}) {
+				my $shellword = $m->text(1);
+				if ($shellword =~ qr"^/" && $shellword ne "/dev/null") {
+					$m->highlight(1);
+					$s->log_warning("Found absolute pathname: ${shellword}");
+				}
+			}
+		}
+	};
+
+	my $check_hunk_end = sub($$$) {
+		my ($deldelta, $adddelta, $newstate) = @_;
+
+		if ($deldelta < 0 && $dellines == 0) {
+			$redostate = $newstate;
+		} elsif ($adddelta < 0 && $addlines == 0) {
+			$redostate = $newstate;
+		} else {
+			if ($deldelta != 0) {
+				$dellines -= $deldelta;
+			}
+			if ($adddelta != 0) {
+				$addlines -= $adddelta;
+			}
+			if (!((defined($dellines) && $dellines > 0) ||
+			      (defined($addlines) && $addlines > 0))) {
+				$nextstate = $newstate;
+			}
+		}
+	};
+
+	my $check_hunk_line = sub($$$) {
+		my ($deldelta, $adddelta, $newstate) = @_;
+
+		$check_contents->();
+		$check_hunk_end->($deldelta, $adddelta, $newstate);
+	};
+
+	my $transitions =
+		[   [PST_START, re_patch_rcsid, PST_CENTER, sub() {
+			checkline_rcsid($line, "");
+		}], [PST_START, undef, PST_CENTER, sub() {
+			$line->log_error("CVS Id expected.");
+		}], [PST_CENTER, re_patch_empty, PST_TEXT, sub() {
+			#
+		}], [PST_TEXT, re_patch_cfd, PST_CFA, sub() {
+			#$seen_comment or $line->log_warning("Comment expected.");
+			$line->log_warning("Please use unified diffs (diff -u) for patches.");
+		}], [PST_TEXT, re_patch_ufd, PST_UFA, sub() {
+			#$seen_comment or $line->log_warning("Comment expected.");
+		}], [PST_TEXT, re_patch_text, PST_TEXT, sub() {
+			$seen_comment = true;
+		}], [PST_TEXT, re_patch_empty, PST_TEXT, sub() {
+			#
+		}], [PST_TEXT, undef, PST_TEXT, sub() {
+			#
+		}], [PST_CENTER, re_patch_cfd, PST_CFA, sub() {
+			if ($seen_comment) {
+				#$line->log_warning("Empty line expected.");
+			} else {
+				#$line->log_warning("Comment expected.");
+			}
+			$line->log_warning("Please use unified diffs (diff -u) for patches.");
+		}], [PST_CENTER, re_patch_ufd, PST_UFA, sub() {
+			if ($seen_comment) {
+				#$line->log_warning("Empty line expected.");
+			} else {
+				#$line->log_warning("Comment expected.");
+			}
+		}], [PST_CENTER, undef, PST_TEXT, sub() {
+			#$line->log_warning("Empty line expected.");
+		}], [PST_CFA, re_patch_cfa, PST_CH, sub() {
+			$current_fname = $m->text(1);
+			$patched_files++;
+			$hunks = 0;
+		}], [PST_CH, re_patch_ch, PST_CHD, sub() {
+			$hunks++;
+		}], [PST_CHD, re_patch_chd, PST_CLD0, sub() {
+			$dellines = ($m->has(2))
+			    ? (1 + $m->text(2) - $m->text(1))
+			    : ($m->text(1));
+		}], [PST_CLD0, re_patch_clc, PST_CLD, sub() {
+			$check_hunk_line->(1, 0, PST_CLD0);
+		}], [PST_CLD0, re_patch_cld, PST_CLD, sub() {
+			$check_hunk_line->(1, 0, PST_CLD0);
+		}], [PST_CLD0, re_patch_clm, PST_CLD, sub() {
+			$check_hunk_line->(1, 0, PST_CLD0);
+		}], [PST_CLD, re_patch_clc, PST_CLD, sub() {
+			$check_hunk_line->(1, 0, PST_CLD0);
+		}], [PST_CLD, re_patch_cld, PST_CLD, sub() {
+			$check_hunk_line->(1, 0, PST_CLD0);
+		}], [PST_CLD, re_patch_clm, PST_CLD, sub() {
+			$check_hunk_line->(1, 0, PST_CLD0);
+		}], [PST_CLD, undef, PST_CLD0, sub() {
+			if ($dellines != 0) {
+				$line->log_warning("Invalid number of deleted lines (${dellines}).");
+			}
+		}], [PST_CLD0, re_patch_cha, PST_CLA0, sub() {
+			$addlines = ($m->has(2))
+			    ? (1 + $m->text(2) - $m->text(1))
+			    : ($m->text(1));
+		}], [PST_CLA0, re_patch_clc, PST_CLA, sub() {
+			$check_hunk_line->(0, 1, PST_CH);
+		}], [PST_CLA0, re_patch_clm, PST_CLA, sub() {
+			$check_hunk_line->(0, 1, PST_CH);
+			$check_added_contents->();
+		}], [PST_CLA0, re_patch_cla, PST_CLA, sub() {
+			$check_hunk_line->(0, 1, PST_CH);
+			$check_added_contents->();
+		}], [PST_CLA, re_patch_clc, PST_CLA, sub() {
+			$check_hunk_line->(0, 1, PST_CH);
+		}], [PST_CLA, re_patch_clm, PST_CLA, sub() {
+			$check_hunk_line->(0, 1, PST_CH);
+			$check_added_contents->();
+		}], [PST_CLA, re_patch_cla, PST_CLA, sub() {
+			$check_hunk_line->(0, 1, PST_CH);
+			$check_added_contents->();
+		}], [PST_CLA, undef, PST_CLA0, sub() {
+			if ($addlines != 0) {
+				$line->log_warning("Invalid number of added lines (${addlines}).");
+			}
+		}], [PST_CLA0, undef, PST_CH, sub() {
+			#
+		}], [PST_CH, undef, PST_TEXT, sub() {
+			#
+		}], [PST_UFA, re_patch_ufa, PST_UH, sub() {
+			$current_fname = $m->text(1);
+			$patched_files++;
+			$hunks = 0;
+		}], [PST_UH, re_patch_uh, PST_UL, sub() {
+			$dellines = ($m->has(1) ? $m->text(2) : 1);
+			$addlines = ($m->has(3) ? $m->text(4) : 1);
+			$check_text->($line->text);
+			$hunks++;
+		}], [PST_UL, re_patch_uld, PST_UL, sub() {
+			$check_hunk_line->(1, 0, PST_UH);
+		}], [PST_UL, re_patch_ula, PST_UL, sub() {
+			$check_hunk_line->(0, 1, PST_UH);
+			$check_added_contents->();
+		}], [PST_UL, re_patch_ulc, PST_UL, sub() {
+			$check_hunk_line->(1, 1, PST_UH);
+		}], [PST_UL, re_patch_ulnonl, PST_UL, sub() {
+			#
+		}], [PST_UL, re_patch_empty, PST_UL, sub() {
+			$line->log_note("Leading white-space missing in hunk.");
+			$check_hunk_line->(1, 1, PST_UH);
+		}], [PST_UL, undef, PST_UH, sub() {
+			if ($dellines != 0 || $addlines != 0) {
+				$line->log_warning("Unexpected end of hunk (-${dellines},+${addlines} expected).");
+			}
+		}], [PST_UH, undef, PST_TEXT, sub() {
+			($hunks != 0) || $line->log_warning("No hunks for file ${current_fname}.");
+		}]];
 
 	log_info($fname, NO_LINE_NUMBER, "[checkfile_patch]");
 
@@ -4021,96 +4296,60 @@ sub checkfile_patch($) {
 		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
 		return;
 	}
-	checkline_rcsid($strings->[0]->line, "");
 
-	$files_in_patch = 0;
-	$patch_state = "";
-	$dellines = 0;
+	$state = PST_START;
+	$dellines = undef;
+	$addlines = undef;
+	$patched_files = 0;
+	$seen_comment = false;
+	$current_fname = undef;
+	$hunks = undef;
 
-	foreach my $s (@{$strings}) {
-		my $line = $s->line;
+	for (my $lineno = 0; $lineno <= $#{$strings}; ) {
+		$s = $strings->[$lineno];
+		$line = $s->line;
 		my $text = $line->text;
 
-		if ($text =~ qr"^@@ -\d+,(\d+) \+\d+,\d+ @@") {
-			$line_type = "";
-			$dellines = $1;
+		$line->log_info("[${state} ${patched_files}/".($hunks||0)."/-".($dellines||0)."+".($addlines||0)."] $text");
 
-		} elsif ($dellines == 0 && index($text, "--- ") == 0 && $text !~ qr"^--- \d+(?:,\d+|) ----$") {
-			$line_type = "-";
-
-		} elsif (index($text, "*** ") == 0 && $text !~ qr"^\*\*\* \d+(?:,\d+|) \*\*\*\*$") {
-			$s->highlight(0, 0, 3);
-			$s->log_warning("Please use unified diffs (diff -u) for patches.");
-			$line_type = "*";
-
-		} elsif ($text =~ qr"^\+\+\+ (\S+)") {
-			$line_type = "+";
-			$current_fname = $1;
-
-		} elsif ($dellines > 0 && $text =~ qr"^(?:-|\s)") {
-			$line_type = "";
-			$dellines--;
-
-		} else {
-			$line_type = "";
-		}
-
-		if ($patch_state eq "*") {
-			if ($line_type eq "-") {
-				$files_in_patch++;
-				$patch_state = "";
-			} else {
-				$line->log_error("[internal] Unknown patch format.");
-			}
-
-		} elsif ($patch_state eq "-") {
-			if ($line_type eq "+") {
-				$files_in_patch++;
-				$patch_state = "";
-			} else {
-				$line->log_error("[internal] Unknown patch format.");
-			}
-
-		} elsif ($patch_state eq "") {
-			$patch_state = $line_type;
-		}
-
-		if (my $m = $s->match(qr".(\$(Author|Date|Header|Id|Locker|Log|Name|RCSfile|Revision|Source|State|$opt_rcsidstring)(?::[^\$]*|\$))")) {
-			my ($tag) = ($m->text(2));
-
-			$m->highlight(1);
-			if ($line->text =~ qr"^(\@\@.*?\@\@)") {
-				$s->log_warning("Patches should not contain RCS tags.");
-				$line->set_text($1);
-			} else {
-				$s->log_warning("Possible RCS tag \"\$${tag}\$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".");
-			}
-		}
-
-		if ($text =~ qr"^\+") {
-			checkline_cpp_macro_names($line, substr($text, 1));
-			checkline_spellcheck($line);
-
-			# XXX: This check is not as accurate as the similar one in
-			# checkline_mk_shelltext().
-			if (defined($current_fname) && $current_fname =~ qr"(?:^|/)Makefile(?:\.in|)") {
-				my ($mm, $rest) = $s->match_all($regex_shellword);
-
-				foreach my $m (@{$mm}) {
-					my $shellword = $m->text(1);
-					if ($shellword =~ qr"^/" && $shellword ne "/dev/null") {
-						$m->highlight(1);
-						$s->log_warning("Found absolute pathname: ${shellword}");
+		my $found = false;
+		foreach my $t (@{$transitions}) {
+			if ($state == $t->[0]) {
+				if (!defined($t->[1])) {
+					$m = undef;
+				} elsif ($text =~ $t->[1]) {
+					$line->log_info($t->[1]);
+					$m = PkgLint::SimpleMatch->new($text, \@-, \@+);
+				} else {
+					next;
+				}
+				$redostate = undef;
+				$nextstate = $t->[2];
+				$t->[3]->();
+				if (defined($redostate)) {
+					$state = $redostate;
+				} else {
+					$state = $nextstate;
+					if (defined($t->[1])) {
+						$lineno++;
 					}
 				}
+				$found = true;
+				last;
 			}
+		}
+
+		if (!$found) {
+			$line->log_error("Parse error: state=${state}");
+			$state = PST_TEXT;
+			$lineno++;
 		}
 	}
 
-	if ($files_in_patch > 1) {
-		log_warning($fname, NO_LINE_NUMBER, "Contains patches for $files_in_patch files, should be only one.");
+	if ($patched_files > 1) {
+		log_warning($fname, NO_LINE_NUMBER, "Contains patches for $patched_files files, should be only one.");
 
-	} elsif ($files_in_patch == 0) {
+	} elsif ($patched_files == 0) {
 		log_error($fname, NO_LINE_NUMBER, "Contains no patch.");
 	}
 
