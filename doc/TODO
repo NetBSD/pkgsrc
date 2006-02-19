@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4625 2006/02/19 17:24:37 adrianp Exp $
+$NetBSD: TODO,v 1.4626 2006/02/19 20:51:50 recht Exp $
 
 Suggested new packages
 ======================
@@ -1045,7 +1045,6 @@ Suggested package updates
 	o rpc2-1.28
 	o rpm-4.4.4
 	o rsnapshot-1.2.3
-	o rss2html-0.8 [pkg/32857]
 	o rt-3.4.5
 	o rt-mysql-3.4.5
 	o rt-pgsql-3.4.5
