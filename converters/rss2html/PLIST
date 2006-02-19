@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/16 02:00:34 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/19 20:49:11 recht Exp $
 bin/rss2html
+man/man1/rss2html.1
 share/doc/rss2html/README
 share/doc/rss2html/rss2html.links
+share/doc/rss2html/rss2html.template
+share/doc/rss2html/usage.example
 @dirrm share/doc/rss2html
