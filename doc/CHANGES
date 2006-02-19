@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12991 2006/02/19 15:48:58 adrianp Exp $
+$NetBSD: CHANGES,v 1.12992 2006/02/19 15:56:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1098,3 +1098,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/teapop to 0.3.8nb4 [wiz 2006-02-19]
 	Updated math/qalculate to 0.8.2nb3 [wiz 2006-02-19]
 	Updated chat/dircproxy-devel to 1.2.0 [adrianp 2006-02-19]
+	Updated net/mirror to 2.9nb2 [wiz 2006-02-19]
