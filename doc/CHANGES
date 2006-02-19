@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12996 2006/02/19 17:15:03 adrianp Exp $
+$NetBSD: CHANGES,v 1.12997 2006/02/19 17:24:37 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1103,3 +1103,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/netsaint-plugins to 1.2.9.4nb10 [wiz 2006-02-19]
 	Updated net/nicotine to 1.0.8nb3 [wiz 2006-02-19]
 	Added devel/libdnsres version 0.1a [adrianp 2006-02-19]
+	Updated security/honeyd to 1.5 [adrianp 2006-02-19]
