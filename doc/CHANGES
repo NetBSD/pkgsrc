@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12992 2006/02/19 15:56:40 wiz Exp $
+$NetBSD: CHANGES,v 1.12993 2006/02/19 16:30:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1099,3 +1099,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/qalculate to 0.8.2nb3 [wiz 2006-02-19]
 	Updated chat/dircproxy-devel to 1.2.0 [adrianp 2006-02-19]
 	Updated net/mirror to 2.9nb2 [wiz 2006-02-19]
+	Updated net/netatalk1 to 1.6.4anb2 [wiz 2006-02-19]
