@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.12993 2006/02/19 16:30:46 wiz Exp $
+$NetBSD: CHANGES,v 1.12994 2006/02/19 16:47:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1100,3 +1100,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/dircproxy-devel to 1.2.0 [adrianp 2006-02-19]
 	Updated net/mirror to 2.9nb2 [wiz 2006-02-19]
 	Updated net/netatalk1 to 1.6.4anb2 [wiz 2006-02-19]
+	Updated net/netsaint-plugins to 1.2.9.4nb10 [wiz 2006-02-19]
