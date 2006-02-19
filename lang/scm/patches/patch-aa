@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.2 2005/10/25 09:32:15 adam Exp $
+$NetBSD: patch-aa,v 1.3 2006/02/19 17:50:11 joerg Exp $
 
 --- Makefile.orig	2005-06-24 01:20:35.000000000 +0000
 +++ Makefile
+@@ -44,7 +44,7 @@
+ SHELL = /bin/sh
+ #CC = gcc
+ #CFLAGS = -g
+-#LIBS =
++LIBS = -lm
+ #LD = $(CC) -g
+ LD = $(CC)
+ SCMLIT = ./scmlit
 @@ -97,7 +97,9 @@ ofiles = scm.o time.o repl.o scl.o sys.o
  # ramap.o
  ifiles = Init$(VERSION).scm Transcen.scm Link.scm Macro.scm Macexp.scm \
