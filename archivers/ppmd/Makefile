@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/01/21 02:50:35 tv Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/19 11:30:47 rillig Exp $
 #
 
 DISTNAME=	ppmdi1
@@ -21,16 +21,15 @@ USE_LANGUAGES=	c++
 
 INSTALLATION_DIRS=	bin
 
-post-extract:
-	cd ${WRKSRC} && for i in *; do \
-		${MV} $$i $$i.new; \
-		${TR} -d '\r' <$$i.new >$$i; \
-		${RM} $$i.new; \
-	done
+SUBST_CLASSES+=		d2u
+SUBST_MESSAGE.d2u=	Converting CRLF to LF.
+SUBST_STAGE.d2u=	post-extract
+SUBST_FILES.d2u=	*
+SUBST_FILTER_CMD.d2u=	tr -d '\015'
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ppmd ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ppmd
-	${INSTALL_DATA} ${WRKSRC}/read_me.txt ${PREFIX}/share/doc/ppmd/
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/ppmd ${PREFIX:Q}/bin
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/ppmd
+	${INSTALL_DATA} ${WRKSRC:Q}/read_me.txt ${PREFIX:Q}/share/doc/ppmd/
 
 .include "../../mk/bsd.pkg.mk"
