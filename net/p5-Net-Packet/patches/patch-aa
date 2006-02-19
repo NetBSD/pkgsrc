@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2006/02/19 22:43:59 wiz Exp $
+
+--- Makefile.PL.orig	2005-05-22 19:08:20.000000000 +0000
++++ Makefile.PL
+@@ -15,12 +15,6 @@ my ($lib) = $file =~ /^(.*)\//;
+ 
+ sub _getPcapHPath { (-d "$inc/pcap") ? "[$inc/pcap]" : "[$inc]" }
+ 
+-unless (-f "$inc/pcap-int.h" || -f "$inc/pcap/pcap-int.h") {
+-   die("*** Cannot find pcap-int.h . Get it from your installed libpcap ".
+-       "source distribution and copy it to: ". _getPcapHPath().
+-       " (near pcap.h)\n");
+-}
+-
+ $inc = "-I$inc -I$inc/pcap";
+ $lib = "-L$lib";
+ 
