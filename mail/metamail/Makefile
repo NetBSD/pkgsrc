@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2006/02/06 14:29:23 tron Exp $
+# $NetBSD: Makefile,v 1.41 2006/02/19 00:45:36 wiz Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	mail
 MASTER_SITES=	http://ftp.funet.fi/pub/unix/mail/metamail/	\
 		ftp://ftp.research.telcordia.com/pub/nsb/
@@ -25,6 +25,10 @@ EGDIR=		${PREFIX}/share/examples/metamail
 CONF_FILES=	${EGDIR}/mailcap ${PKG_SYSCONFDIR}/mailcap
 USE_TOOLS+=	bdftopcf
 
+FONTS_DIRS.x11+=	lib/metamail/fonts
+REQD_DIRS+=		lib/metamail
+REQD_DIRS+=		lib/metamail/fonts
+
 INSTALLATION_DIRS=	bin man/man1 man/man4
 
 SUBST_CLASSES+=		awk sys
@@ -33,7 +37,7 @@ SUBST_MESSAGE.awk=	Adjusting the path to awk
 SUBST_FILES.awk=	bin/sun2mime
 SUBST_SED.awk=		-e "s|/bin/nawk|${AWK}|"
 SUBST_STAGE.sys=	post-patch
-SUBST_MESSAGE.sys=	"Adjusting the path for PKG_SYSCONFDIR"
+SUBST_MESSAGE.sys=	Adjusting the path for PKG_SYSCONFDIR.
 SUBST_FILES.sys=	config.h
 SUBST_SED.sys=		-e "s|PKG_SYSCONFDIR|\"${PKG_SYSCONFDIR}\"|g"
 
