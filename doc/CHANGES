@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13012 2006/02/20 18:35:58 joerg Exp $
+$NetBSD: CHANGES,v 1.13013 2006/02/20 22:59:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1132,3 +1132,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/postgresql73-server to 7.3.14 [joerg 2006-02-20]
 	Updated databases/tcl-postgresql73 to 7.3.14 [joerg 2006-02-20]
 	Updated databases/tk-postgresql73 to 7.3.14 [joerg 2006-02-20]
+	Updated security/fprot-workstation-bin to 4.6.6nb2 [wiz 2006-02-20]
