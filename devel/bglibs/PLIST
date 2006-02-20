@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2005/12/02 17:18:05 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/02/20 02:59:51 schmonz Exp $
 bin/bg-installer
+bin/cli-generate
 bin/crc-gentab
 include/bglibs/adt/common.h
 include/bglibs/adt/ghash.h
@@ -124,6 +125,7 @@ lib/bglibs/unix/nonblock.a
 lib/bglibs/unix/sig.a
 lib/bglibs/vmailmgr/client.a
 lib/bglibs/vmailmgr/vpwentry.a
+man/man1/cli-generate.1
 @dirrm lib/bglibs/vmailmgr
 @dirrm lib/bglibs/unix
 @dirrm lib/bglibs/str
