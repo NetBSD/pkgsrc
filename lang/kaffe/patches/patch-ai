@@ -1,0 +1,18 @@
+$NetBSD: patch-ai,v 1.6 2006/02/20 22:36:00 tonio Exp $
+
+--- libraries/clib/awt/classpath-gtk/gtk-peer/Makefile.am.orig	2005-09-19 02:38:49.000000000 +0200
++++ libraries/clib/awt/classpath-gtk/gtk-peer/Makefile.am
+@@ -69,7 +69,6 @@ libgtkpeer_la_LIBADD = \
+ 	$(libgtkpeer_la_DEPENDENCIES)
+ 
+ libgtkpeer_la_LDFLAGS = \
+-	@CLASSPATH_MODULE@ \
+ 	@GTK_LIBS@ \
+ 	@CAIRO_LIBS@ \
+ 	@PANGOFT2_LIBS@ \
+@@ -90,5 +89,4 @@ libjawt_la_LIBADD = \
+ 	libgtkpeer.la \
+ 	$(top_builddir)/kaffe/kaffevm/libkaffevm.la
+ libjawt_la_LDFLAGS = \
+-	@CLASSPATH_MODULE@ \
+ 	@X_LIBS@
