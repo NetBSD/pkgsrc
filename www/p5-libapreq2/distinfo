@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/08/22 18:28:43 tv Exp $
+$NetBSD: distinfo,v 1.5 2006/02/20 11:15:49 hiramatsu Exp $
 
-SHA1 (libapreq2-2.06-dev.tar.gz) = 3e938e17c8f3aba6e680e3c7287183620aec6809
-RMD160 (libapreq2-2.06-dev.tar.gz) = 6d9d37d1b9440bcee2392c661a7ddef30129ee63
-Size (libapreq2-2.06-dev.tar.gz) = 711422 bytes
+SHA1 (libapreq2-2.07.tar.gz) = 49c0359faae36b1fefbf226ef782d2be11a879a2
+RMD160 (libapreq2-2.07.tar.gz) = 74050bf847ae5b0e199d3b53227897d48afad919
+Size (libapreq2-2.07.tar.gz) = 787249 bytes
