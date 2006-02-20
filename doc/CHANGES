@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13023 2006/02/20 23:24:36 wiz Exp $
+$NetBSD: CHANGES,v 1.13024 2006/02/20 23:26:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1143,3 +1143,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/eb to 4.1.3nb2 [wiz 2006-02-20]
 	Updated textproc/p5-XML-SAX to 0.12nb3 [wiz 2006-02-20]
 	Updated textproc/py-gnosis-utils to 1.1.1nb4 [wiz 2006-02-20]
+	Updated finance/gnucash-devel to 1.9.1 [wiz 2006-02-20]
