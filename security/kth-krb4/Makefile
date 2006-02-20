@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/02/05 23:10:44 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2006/02/20 15:16:45 joerg Exp $
 #
 
 DISTNAME=		krb4-1.2.1
@@ -37,6 +37,10 @@ KTH_KRB4_TRANSFORM=	s/^ftp$$/k4&/	# always k4ftp
 PLIST_SUBST+=		KRB4_PREFIX=
 .endif
 CONFIGURE_ARGS+=	--program-transform=${KTH_KRB4_TRANSFORM:Q}
+
+.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD"
+MANINSTALL=		maninstall
+.endif
 
 INFO_FILES=		kth-krb.info
 
