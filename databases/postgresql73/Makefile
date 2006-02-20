@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:08:34 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/20 18:34:07 joerg Exp $
 
 PKGNAME=	postgresql73-${BASE_VERS}
-PKGREVISION=	1
 COMMENT=	Robust, next generation, object-relational DBMS
 
 DEPENDS+=	postgresql73-client>=${BASE_VERS}:../../databases/postgresql73-client
