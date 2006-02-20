@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13011 2006/02/20 18:19:14 rxg Exp $
+$NetBSD: CHANGES,v 1.13012 2006/02/20 18:35:58 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1123,3 +1123,12 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/p5-Image-ExifTool to 6.00 [gdt 2006-02-20]
 	Updated graphics/tiff to 3.8.0nb1 [joerg 2006-02-20]
 	Updated inputmethod/gcin to 1.1.6 [rxg 2006-02-20]
+	Updated databases/postgresql73 to 7.3.14 [joerg 2006-02-20]
+	Updated databases/postgresql73-client to 7.3.14 [joerg 2006-02-20]
+	Updated databases/postgresql73-docs to 7.3.14 [joerg 2006-02-20]
+	Updated databases/postgresql73-lib to 7.3.14 [joerg 2006-02-20]
+	Updated databases/postgresql73-plperl to 7.3.14 [joerg 2006-02-20]
+	Updated databases/postgresql73-pltcl to 7.3.14 [joerg 2006-02-20]
+	Updated databases/postgresql73-server to 7.3.14 [joerg 2006-02-20]
+	Updated databases/tcl-postgresql73 to 7.3.14 [joerg 2006-02-20]
+	Updated databases/tk-postgresql73 to 7.3.14 [joerg 2006-02-20]
