@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/02/09 12:00:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/02/20 14:29:17 gdt Exp $
 bin/gimp-2.3
 bin/gimp-console-2.3
 bin/gimp-remote-2.3
@@ -269,7 +269,6 @@ lib/gimp/2.0/plug-ins/gih
 lib/gimp/2.0/plug-ins/gimpressionist
 lib/gimp/2.0/plug-ins/glasstile
 lib/gimp/2.0/plug-ins/glob
-lib/gimp/2.0/plug-ins/gnomeprint
 lib/gimp/2.0/plug-ins/gqbist
 lib/gimp/2.0/plug-ins/gradmap
 lib/gimp/2.0/plug-ins/grid
