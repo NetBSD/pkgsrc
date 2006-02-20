@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:09:42 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/20 18:16:54 rxg Exp $
 #
 
-DISTNAME=		gcin-1.1.5
-PKGREVISION=		2
+DISTNAME=		gcin-1.1.6
 CATEGORIES=		inputmethod
 MASTER_SITES=		http://www.csie.nctu.edu.tw/~cp76/gcin/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -25,9 +24,8 @@ _REPLACE.sh.old=	/bin/bash
 _REPLACE.sh.new=	${SH:Q}
 _REPLACE_FILES.sh=	configure
 _REPLACE_FILES.sh+=	scripts/gcin-user-setup
-_REPLACE_FILES.sh+=	scripts/gcin-utf8-setup
 _REPLACE_FILES.sh+=	scripts/modify-XIM
 _REPLACE_FILES.sh+=	scripts/utf8-edit
 
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk2/modules.mk"
 .include "../../mk/bsd.pkg.mk"
