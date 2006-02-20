@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
+$NetBSD: distinfo,v 1.2 2006/02/20 08:53:51 markd Exp $
 
-SHA1 (k3b-0.12.10.tar.bz2) = 4b3550436644e9ec4f96374f1e09df1b50b3434f
-RMD160 (k3b-0.12.10.tar.bz2) = 03bcaad36bfecf90b5ce58fee1a581267a465909
-Size (k3b-0.12.10.tar.bz2) = 4084756 bytes
+SHA1 (k3b-0.12.12.tar.bz2) = 87a254e1041a68086cec0f3f2c52aae602bf0536
+RMD160 (k3b-0.12.12.tar.bz2) = 73cd9d1b6a8f6f2bcbaff4720d3c69f73f52ebf3
+Size (k3b-0.12.12.tar.bz2) = 4094707 bytes
 SHA1 (patch-aa) = 700a7081dfb16fe47558b025519415d12aa2031d
 SHA1 (patch-ab) = acf80a5fb55fd236282754b6dda1743eb9790593
 SHA1 (patch-ac) = 3b65ca0ea8e585ce68611c0332a3851a107b68f7
