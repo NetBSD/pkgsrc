@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/26 12:04:27 sekiya Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/20 23:05:27 wiz Exp $
 bin/tacshell
+share/examples/tacshell/tacshell.conf
+@dirrm share/examples/tacshell
