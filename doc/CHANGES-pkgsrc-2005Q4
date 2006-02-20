@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.90 2006/02/20 13:37:46 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.91 2006/02/20 14:01:43 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -183,3 +183,5 @@ Pullup ticket 1141 - requested by Matthias Drochner
 security update for gnupg
 Pullup ticket 1143 - requested by Thomas Klausner
 security update for tin
+Pullup ticket 1150 - requested by Adrian Portelli
+security fix for honeyd
