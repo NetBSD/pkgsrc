@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2005/12/07 17:47:06 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/02/20 15:02:22 gdt Exp $
 
 DISTNAME=	lcms-1.15
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.littlecms.com/ \
 		http://www.abaforum.es/martim/
@@ -15,8 +16,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 TEST_TARGET=		check
 
-CONFIGURE_ARGS+=	--without-jpeg
-CONFIGURE_ARGS+=	--without-tiff
+# XXX Does this disable tiff with deflate?
 CONFIGURE_ARGS+=	--without-zlib
 
 # Avoid an ICE in gcc2 on sparc64
@@ -31,4 +31,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/${_f_} ${PREFIX}/share/doc/lcms/${_f_}
 .endfor
 
+# XXX Is this needed to enable use of tiff with deflate?
+#.include "../../devel/zlib/buildlink3.mk"
+
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
