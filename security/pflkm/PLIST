@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/05/03 15:49:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/02/20 23:03:56 wiz Exp $
 include/net/if_pflog.h
 include/net/if_pfsync.h
 include/net/pfvar.h
@@ -28,7 +28,10 @@ sbin/authpf
 sbin/pfctl
 sbin/pflogd
 sbin/pftcpdump
-share/examples/${PKGBASE}/pf.conf
-share/examples/${PKGBASE}/pf.os
+share/examples/pflkm/pf.conf
+share/examples/pflkm/pf.os
 share/examples/rc.d/pf
 share/examples/rc.d/pflogd
+@dirrm share/examples/pflkm
+@dirrm include/net
+@unexec ${RMDIR} %D/lkm 2>/dev/null || ${TRUE}
