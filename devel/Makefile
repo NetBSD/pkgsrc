@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.730 2006/02/19 17:13:00 adrianp Exp $
+# $NetBSD: Makefile,v 1.731 2006/02/20 00:57:29 rillig Exp $
 #
 
 COMMENT=	Development utilities
@@ -566,6 +566,7 @@ SUBDIR+=	py-unit
 SUBDIR+=	py-unitgui
 SUBDIR+=	py-urwid
 SUBDIR+=	py-zconfig
+SUBDIR+=	pychecker
 SUBDIR+=	python-mode
 SUBDIR+=	rake
 SUBDIR+=	rapidsvn
