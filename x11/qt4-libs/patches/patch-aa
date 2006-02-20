@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/02/20 12:08:15 adam Exp $
+
+--- qmake/generators/unix/unixmake2.cpp.orig	2006-02-19 21:08:33.000000000 +0100
++++ qmake/generators/unix/unixmake2.cpp
+@@ -1281,7 +1281,7 @@ UnixMakefileGenerator::writePkgConfigFil
+     else
+         libs << "QMAKE_LIBS"; //obvious one
+     libs << "QMAKE_LFLAGS_THREAD"; //not sure about this one, but what about things like -pthread?
+-    t << "Libs: -L${libdir} -l" << lname.left(lname.length()-Option::libtool_ext.length()) << " ";
++    t << "Libs: -Wl,-R${libdir} -L${libdir} -l" << lname.left(lname.length()-Option::libtool_ext.length()) << " ";
+     for(QStringList::ConstIterator it = libs.begin(); it != libs.end(); ++it)
+         t << project->variables()[(*it)].join(" ") << " ";
+     t << endl;

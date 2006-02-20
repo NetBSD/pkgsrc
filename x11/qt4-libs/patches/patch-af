@@ -1,0 +1,21 @@
+$NetBSD: patch-af,v 1.1.1.1 2006/02/20 12:08:15 adam Exp $
+
+--- qmake/Makefile.unix.orig	2005-12-16 12:51:54.000000000 +0100
++++ qmake/Makefile.unix
+@@ -37,14 +37,14 @@ DEPEND_SRC=project.cpp property.cpp meta
+ 	   @SOURCE_PATH@/src/corelib/io/qsettings.cpp @SOURCE_PATH@/src/corelib/kernel/qvariant.cpp \
+ 	   @QMAKE_QTSRCS@ $(COMMERCIAL_DEPEND_SRC)
+ 
+-CXXFLAGS = @QMAKE_CXXFLAGS@ \
++CXXFLAGS += @QMAKE_CXXFLAGS@ \
+ 	   -I. -Igenerators -Igenerators/unix -Igenerators/win32 -Igenerators/mac \
+ 	   -I@SOURCE_PATH@/src/corelib/arch/generic -I@BUILD_PATH@/include -I@BUILD_PATH@/include/QtCore \
+ 	   -I@SOURCE_PATH@/include -I@SOURCE_PATH@/include/QtCore -I@BUILD_PATH@/src/corelib/global \
+ 	   -DQT_NO_TEXTCODEC -DQT_NO_UNICODETABLES -DQT_NO_COMPONENT -DQT_NO_STL -DQT_BUILD_QMAKE \
+ 	   -DQT_NO_COMPRESS -I@QMAKESPEC@ -DHAVE_QCONFIG_CPP -DQT_NO_THREAD -DQT_NO_QOBJECT \
+            -DQT_NO_GEOM_VARIANT $(OPENSOURCE_CXXFLAGS)
+-LFLAGS=@QMAKE_LFLAGS@
++LFLAGS=@QMAKE_LFLAGS@ ${LDFLAGS}
+ 
+ first all: @BUILD_PATH@/bin/qmake
+ qmake: @BUILD_PATH@/bin/qmake
