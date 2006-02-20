@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2006/02/05 23:11:19 joerg Exp $
+# $NetBSD: Makefile,v 1.64 2006/02/20 12:10:22 wulf Exp $
 
 DISTNAME=	bluefish-1.0.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://pkedu.fbt.eitn.wau.nl/~olivier/downloads/	\
 		ftp://bluefish.advancecreations.com/bluefish/downloads/ \
@@ -23,6 +23,9 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-icon-path=${PREFIX:Q}/share/pixmaps
 CONFIGURE_ARGS+=	--with-freedesktop_org-menu=${PREFIX:Q}/share/applications
+CONFIGURE_ARGS+=	--with-freedesktop_org-mime=${PREFIX:Q}/share/mime
+CONFIGURE_ARGS+=	--with-gnome2_4-mime=${PREFIX:Q}/share/mime-info
+CONFIGURE_ARGS+=	--with-gnome2_4-appreg=${PREFIX:Q}/share/application-registry
 CONFIGURE_ENV+=		EXTERNAL_GREP=${TOOLS_GREP:Q}
 CONFIGURE_ENV+=		EXTERNAL_FIND=${TOOLS_FIND:Q}
 
