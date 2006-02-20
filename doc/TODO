@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4627 2006/02/20 03:05:42 schmonz Exp $
+$NetBSD: TODO,v 1.4628 2006/02/20 09:32:58 markd Exp $
 
 Suggested new packages
 ======================
@@ -449,7 +449,6 @@ Suggested package updates
 	o devhelp-0.10
 	o devtodo-0.1.19
 	o diffstat-1.41
-	o digikam-0.8.0
 	o dirac-0.5.4
 	o dirdiff-2.1
 	o dmalloc-5.4.2
@@ -645,7 +644,6 @@ Suggested package updates
 	o jpegpixi-1.1.1
 	o jpilot-0.99.8
 	o jwhois-3.2.3
-	o k3b-0.12.12
 	o kajaani-kombat-0.7
 	o kapooka-0.3
 	o kazehakase-0.3.5

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13005 2006/02/20 03:05:42 schmonz Exp $
+$NetBSD: CHANGES,v 1.13006 2006/02/20 09:32:57 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1112,3 +1112,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/pychecker version 0.8.17 [rillig 2006-02-20]
 	Updated devel/bglibs to 1.040 [schmonz 2006-02-20]
 	Updated mail/getmail to 4.5.4 [schmonz 2006-02-20]
+	Updated sysutils/k3b to 0.12.12 [markd 2006-02-20]
+	Updated graphics/digikam to 0.8.1 [markd 2006-02-20]
+	Updated graphics/digikamimageplugins to 0.8.1 [markd 2006-02-20]
