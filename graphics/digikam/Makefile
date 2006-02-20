@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2006/02/05 23:09:29 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/02/20 09:15:44 markd Exp $
 
-DISTNAME=		digikam-0.7.4
-PKGREVISION=		2
+DISTNAME=		digikam-0.8.1
 CATEGORIES=		graphics kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=		.tar.bz2
@@ -15,10 +14,11 @@ USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+BUILD_USES_MSGFMT=	yes
 
 BUILDLINK_DEPENDS.imlib2+=	imlib2>=1.2
 
-.include "../../databases/gdbm/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../graphics/libkexif/buildlink3.mk"
