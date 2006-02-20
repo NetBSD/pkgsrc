@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mldonkey.sh,v 1.4 2006/01/24 15:21:22 jmmv Exp $
+# $NetBSD: mldonkey.sh,v 1.5 2006/02/20 17:23:44 jmmv Exp $
 #
 # KEYWORD: shutdown
 # PROVIDE: mldonkey
@@ -29,7 +29,7 @@ mldonkey_start() {
 	fi
 	ulimit -n `ulimit -H -n`
 	@SU@ -l ${mldonkey_user} \
-	     -c "${command} ${mldonkey_flags} ${command_args}" &
+	     -c "${command} ${mldonkey_flags} ${command_args}"
 }
 
 if [ -f /etc/rc.subr ]; then
