@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.2.1 2006/02/20 14:01:23 salo Exp $
+
+--- ipfrag.h.orig	2004-12-31 19:13:43.000000000 +0000
++++ ipfrag.h
+@@ -52,6 +52,7 @@ struct fragment {
+ 	ip_addr_t ip_src;	/* Network order */
+ 	ip_addr_t ip_dst;	/* Network order */
+ 	u_short ip_id;		/* Network order */
++	u_char ip_proto;
+ 
+ 	u_short maxlen;		
+ 	u_short hadlastpacket;
