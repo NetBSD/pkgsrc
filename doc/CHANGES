@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13004 2006/02/20 03:00:23 schmonz Exp $
+$NetBSD: CHANGES,v 1.13005 2006/02/20 03:05:42 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1111,3 +1111,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/whoson to 2.03nb2 [wiz 2006-02-19]
 	Added devel/pychecker version 0.8.17 [rillig 2006-02-20]
 	Updated devel/bglibs to 1.040 [schmonz 2006-02-20]
+	Updated mail/getmail to 4.5.4 [schmonz 2006-02-20]
