@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/11 15:54:00 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/20 14:04:45 joerg Exp $
 
 DISTNAME=		gettext-0.14.5
 PKGNAME=		gettext-tools-0.14.5
@@ -27,6 +27,7 @@ CONFIGURE_ENV+=		GCJ= ac_cv_prog_GCJ= ac_cv_prog_JAR=
 CONFIGURE_ENV+=		HAVE_GCJ_IN_PATH=
 CONFIGURE_ENV+=		HAVE_JAVAC_IN_PATH=
 CONFIGURE_ENV+=		HAVE_JIKES_IN_PATH=
+CONFIGURE_ENV+=		ac_cv_libexpat=no
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
