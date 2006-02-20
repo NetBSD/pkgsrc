@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/01/19 01:18:30 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2006/02/20 03:39:25 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.05
@@ -22,11 +22,7 @@ CONFLICTS+=		mutt<=1.4.2.1nb1
 CONFLICTS+=		netqmail-[0-9]*
 CONFLICTS+=		pulsar<=0.1.1
 
-.if defined(PKG_PHASE) && ${PKG_PHASE} == "extract"
-WRKSRC=			${WRKDIR}/${DISTNAME}
-.else
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-.endif
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=		expr nroff
@@ -45,7 +41,7 @@ PKG_SYSCONFSUBDIR=	qmail
 DOCDIR=			${PREFIX}/share/doc/qmail
 EGDIR=			${PREFIX}/share/examples/qmail
 SHAREDIR=		${PREFIX}/share/qmail
-MESSAGE_SUBST+=		DOCDIR=${DOCDIR} EGDIR=${EGDIR}
+MESSAGE_SUBST+=		DOCDIR=${DOCDIR:Q} EGDIR=${EGDIR:Q}
 FILES_SUBST+=		DOCDIR=${DOCDIR:Q} EGDIR=${EGDIR:Q} SHAREDIR=${SHAREDIR:Q}
 FILES_SUBST+=		QMAILDIR=${QMAILDIR:Q} QMAIL_QUEUE_DIR=${QMAIL_QUEUE_DIR:Q}
 FILES_SUBST+=		QMAIL_QUEUE_EXTRA=${QMAIL_QUEUE_EXTRA:Q}
@@ -94,10 +90,11 @@ SUBST_SED.paths+=	-e 's,@PKG_INFO@,${PKG_INFO},g'
 SUBST_SED.paths+=	-e 's,@GREP@,${GREP},g'
 SUBST_STAGE.paths=	post-patch
 
+# extract the qmail tarball that was inside the netqmail distfile
 post-extract:
-	${_PKG_SILENT}${_PKG_DEBUG}extract_file=${PKGNAME_NOREV}.tar.gz;\
-	export extract_file; cd ${WRKSRC}; ${EXTRACT_CMD};		\
-	${MV} ${PKGNAME_NOREV} ..; ${MV} ${DISTNAME}.patch ..
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	extract_file=${WRKDIR}/${DISTNAME}/${PKGNAME_NOREV}.tar.gz;	\
+	cd ${WRKDIR} && ${EXTRACT_CMD}
 	${CP} ${FILESDIR}/README.pkgsrc ${WRKDIR}/README.pkgsrc
 
 post-install:
