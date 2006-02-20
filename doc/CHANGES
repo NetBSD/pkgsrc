@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13020 2006/02/20 23:09:12 wiz Exp $
+$NetBSD: CHANGES,v 1.13021 2006/02/20 23:12:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1140,3 +1140,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/tacshell to 0.91nb1 [wiz 2006-02-20]
 	Updated shells/nologinmsg to 1.0nb1 [wiz 2006-02-20]
 	Updated sysutils/855resolution to 0.4nb2 [wiz 2006-02-20]
+	Updated textproc/eb to 4.1.3nb2 [wiz 2006-02-20]
