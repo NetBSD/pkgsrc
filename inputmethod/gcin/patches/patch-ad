@@ -1,10 +1,15 @@
-$NetBSD: patch-ad,v 1.1.1.1 2006/01/16 13:01:16 rxg Exp $
+$NetBSD: patch-ad,v 1.2 2006/02/20 18:16:54 rxg Exp $
 
 --- im-client/Makefile.orig	2005-05-09 12:23:22.000000000 +0800
 +++ im-client/Makefile
-@@ -6,23 +6,18 @@ CFLAGS= $(WALL) $(OPTFLAGS) -I. -I.. -I.
-         -DCLIENT_LIB=1 -DGCIN_BIN_DIR=\"$(GCIN_BIN_DIR)\" \
-         -DDEBUG="0$(GCIN_DEBUG)" -DGCIN_TABLE_DIR=\"$(GCIN_TABLE_DIR)\" \
+@@ -3,26 +3,21 @@ include ../config.mak
+ .SUFFIXES:      .c .o .E
+ WALL=-Wall
+ CFLAGS= $(WALL) $(OPTFLAGS) -I. -I.. -I../IMdkit/include $(GTKINC) \
+-        -DCLIENT_LIB=1 -DGCIN_BIN_DIR=\"$(GCIN_BIN_DIR)\" \
+-        -DDEBUG="0$(GCIN_DEBUG)" -DGCIN_TABLE_DIR=\"$(GCIN_TABLE_DIR)\" \
++        -DGCIN_BIN_DIR=\"$(GCIN_BIN_DIR)\" \
++        -DGCIN_TABLE_DIR=\"$(GCIN_TABLE_DIR)\" \
          -DFREEBSD=$(FREEBSD)
 -OBJS = gcin-im-client.o im-addr.o gcin-conf.o util.o gcin-crypt.o
 +OBJS = gcin-im-client.o ../im-srv/im-addr.o ../gcin-conf.o ../util.o gcin-crypt.o
