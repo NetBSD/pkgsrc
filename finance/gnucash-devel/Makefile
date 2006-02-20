@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/02/15 22:25:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/20 23:25:46 wiz Exp $
 #
 
-DISTNAME=		gnucash-1.9.0
+DISTNAME=		gnucash-1.9.1
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
@@ -9,9 +9,10 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://gnucash.sourceforge.net/
 COMMENT=		Personal or business finance management program (development version)
 
+DEPENDS+=		guile-slib-[0-9]*:../../devel/guile-slib
 DEPENDS+=		guile-www-[0-9]*:../../devel/guile-www
 
-USE_DIRS+=		gnome2-1.5 xdg-1.1
+USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		yes
 USE_MAKEINFO=		yes
 USE_MSGFMT_PLURALS=	yes
