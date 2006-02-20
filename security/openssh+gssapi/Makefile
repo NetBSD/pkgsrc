@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/12/29 06:22:10 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2006/02/20 23:03:00 wiz Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -6,7 +6,7 @@
 
 DISTNAME=		openssh-3.6.1p2
 PKGNAME=		openssh+gssapi-3.6.1.2.20030430
-PKGREVISION=		5
+PKGREVISION=		6
 SVR4_PKGNAME=		osshgss
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp7.usa.openbsd.org/pub/os/OpenBSD/OpenSSH/portable/ \
