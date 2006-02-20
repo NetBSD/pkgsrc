@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/02/15 20:08:41 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/20 23:08:20 wiz Exp $
 
 DISTNAME=	nologinmsg-1.0
+PKGREVISION=	1
 CATEGORIES=	shells sysutils
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 
