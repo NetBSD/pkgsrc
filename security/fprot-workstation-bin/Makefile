@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2006/02/11 20:11:01 ben Exp $
+# $NetBSD: Makefile,v 1.28 2006/02/20 22:59:27 wiz Exp $
 #
 
 DISTNAME=		#defined
 PKGNAME=		fprot-workstation-bin-${FPVER}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 
 MAINTAINER=		tech-pkg@NetBSD.org
@@ -34,7 +34,7 @@ FPDIR=			${PREFIX}/libexec/fprot-workstation-bin
 CONF_FILES=		${DATDIR}/MACRO.DEF ${FPDIR}/MACRO.DEF
 CONF_FILES+=		${DATDIR}/SIGN.DEF ${FPDIR}/SIGN.DEF
 CONF_FILES+=		${DATDIR}/SIGN2.DEF ${FPDIR}/SIGN2.DEF
-OWN_DIRS=               ${FPDIR}
+REQD_DIRS=		${FPDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
