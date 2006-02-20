@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: monotone-server-init.sh,v 1.1.1.1 2005/01/12 12:52:50 jmmv Exp $
+# $NetBSD: monotone-server-init.sh,v 1.2 2006/02/20 16:54:42 jmmv Exp $
 #
 
 progname=$(basename $0)
@@ -64,7 +64,7 @@ fi
 
 cd ${home}
 
-echo "Initializing database: \`${home}'/monotone.db"
+echo "Initializing database: \`${home}/monotone.db'"
 ${MONOTONE} --db=monotone.db db init
 
 cat <<EOF
