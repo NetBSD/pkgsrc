@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/10 17:46:09 wiz Exp $
-bin/dump-finance-quote
-bin/gnc-prices
+@comment $NetBSD: PLIST,v 1.2 2006/02/20 23:25:46 wiz Exp $
+bin/gnc-fq-check
+bin/gnc-fq-dump
+bin/gnc-fq-helper
+bin/gnc-fq-update
 bin/gnc-test-env
 bin/gnucash
 bin/gnucash-bin
@@ -8,7 +10,6 @@ bin/gnucash-config
 bin/gnucash-env
 bin/gnucash-make-guids
 bin/gnucash-valgrind
-bin/update-finance-quote
 bin/update-gnucash-gconf
 etc/gnucash/config
 include/gnucash/Account.h
@@ -176,6 +177,7 @@ include/gnucash/qoflog.h
 include/gnucash/qofobject.h
 include/gnucash/qofquery.h
 include/gnucash/qofquerycore.h
+include/gnucash/qofreference.h
 include/gnucash/qofsession.h
 include/gnucash/qofsql.h
 include/gnucash/quickfillcell.h
@@ -204,6 +206,7 @@ lib/gnucash/libgncmod-ledger-core.la
 lib/gnucash/libgncmod-locale-reports-us.la
 lib/gnucash/libgncmod-log-replay.la
 lib/gnucash/libgncmod-network-utils.la
+lib/gnucash/libgncmod-ofx.la
 lib/gnucash/libgncmod-qif-import.la
 lib/gnucash/libgncmod-qif.la
 lib/gnucash/libgncmod-register-core.la
@@ -239,6 +242,7 @@ libexec/gnucash/overrides/guile
 man/man1/gnc-prices.1
 man/man1/gnucash.1
 share/aclocal/gnucash.m4
+share/applications/gnucash.desktop
 share/gconf/schemas/apps_gnucash_dialog_business_common.schemas
 share/gconf/schemas/apps_gnucash_dialog_commodities.schemas
 share/gconf/schemas/apps_gnucash_dialog_common.schemas
@@ -252,7 +256,6 @@ share/gconf/schemas/apps_gnucash_import_generic_matcher.schemas
 share/gconf/schemas/apps_gnucash_warnings.schemas
 share/gconf/schemas/apps_gnucash_window_pages_account_tree.schemas
 share/gconf/schemas/apps_gnucash_window_pages_register.schemas
-share/gnome/apps/Applications/gnucash.desktop
 share/gnucash/accounts/C/acctchrt_brokerage.gnucash-xea
 share/gnucash/accounts/C/acctchrt_business.gnucash-xea
 share/gnucash/accounts/C/acctchrt_carloan.gnucash-xea
@@ -434,6 +437,7 @@ share/gnucash/doc/INSTALL
 share/gnucash/doc/LICENSE
 share/gnucash/doc/NEWS
 share/gnucash/doc/README
+share/gnucash/doc/README.dependencies
 share/gnucash/doc/README.francais
 share/gnucash/doc/README.german
 share/gnucash/doc/README.patches
@@ -464,8 +468,6 @@ share/gnucash/doc/examples/web.qif
 share/gnucash/doc/examples/xfer.xac
 share/gnucash/doc/guile-hackers.txt
 share/gnucash/doc/projects.html
-share/gnucash/finance-quote-check
-share/gnucash/finance-quote-helper
 share/gnucash/glade/account.glade
 share/gnucash/glade/acctperiod.glade
 share/gnucash/glade/billterms.glade
@@ -545,7 +547,6 @@ share/gnucash/guile-modules/gnucash/business-gnome.scm
 share/gnucash/guile-modules/gnucash/business-utils.scm
 share/gnucash/guile-modules/gnucash/dialog-tax-table.scm
 share/gnucash/guile-modules/gnucash/engine.scm
-share/gnucash/guile-modules/gnucash/fin.scm
 share/gnucash/guile-modules/gnucash/gnc-module.scm
 share/gnucash/guile-modules/gnucash/gnome-utils.scm
 share/gnucash/guile-modules/gnucash/import-export/qif-import.scm
@@ -675,6 +676,7 @@ share/gnucash/ui/gnc-plugin-budget-ui.xml
 share/gnucash/ui/gnc-plugin-business-ui.xml
 share/gnucash/ui/gnc-plugin-file-history-ui.xml
 share/gnucash/ui/gnc-plugin-log-replay-ui.xml
+share/gnucash/ui/gnc-plugin-ofx-ui.xml
 share/gnucash/ui/gnc-plugin-page-account-tree-ui.xml
 share/gnucash/ui/gnc-plugin-page-budget-ui.xml
 share/gnucash/ui/gnc-plugin-page-invoice-ui.xml
@@ -721,6 +723,7 @@ share/xml/qsf/pilot-qsf-GnuCashInvoice.xml
 share/xml/qsf/qsf-map.xsd.xml
 share/xml/qsf/qsf-object.xsd.xml
 @dirrm share/xml/qsf
+@comment in xmlcatmgr: @dirrm share/xml
 @comment in xdg-dirs: @dirrm share/mime-info
 @dirrm share/gnucash/ui
 @dirrm share/gnucash/scm/qif-import
@@ -757,9 +760,8 @@ share/xml/qsf/qsf-object.xsd.xml
 @dirrm share/gnucash/accounts/C
 @dirrm share/gnucash/accounts
 @dirrm share/gnucash
-@comment in gnome2-dirs: @dirrm share/gnome/apps/Applications
-@comment in gnome2-dirs: @dirrm share/gnome/apps
 @comment in GConf2: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm libexec/gnucash/overrides
 @dirrm libexec/gnucash
 @dirrm lib/gnucash
