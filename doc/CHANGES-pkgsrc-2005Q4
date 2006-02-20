@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.89 2006/02/16 15:00:42 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.90 2006/02/20 13:37:46 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -181,3 +181,5 @@ Pullup ticket 1138 - requested by Joerg Sonnenberger
 security update for lighttpd
 Pullup ticket 1141 - requested by Matthias Drochner
 security update for gnupg
+Pullup ticket 1143 - requested by Thomas Klausner
+security update for tin
