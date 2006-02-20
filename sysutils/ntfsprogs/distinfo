@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2006/01/26 21:43:51 adam Exp $
+$NetBSD: distinfo,v 1.7 2006/02/20 23:10:05 wiz Exp $
 
 SHA1 (ntfsprogs-1.12.1.tar.gz) = 111e323234d395e57b8250e623ab40e1c2f22756
 RMD160 (ntfsprogs-1.12.1.tar.gz) = 4197df10e943d129b5324dbbcaac4fa9e1e19e5a
@@ -15,3 +15,4 @@ SHA1 (patch-ai) = b6a018460eb4d6c49a32052caae360fae61a7d41
 SHA1 (patch-aj) = a607fa5dd4e0b7d0075089bf35306560e5a2fe05
 SHA1 (patch-ak) = e3c7c4fd68e804f896e529635774c426368cb396
 SHA1 (patch-al) = d6a5ef4f3daaf7d237bd95c4fde445784181b0f0
+SHA1 (patch-am) = eec72f1264edcf58c924e436d5c0043c3009be9c
