@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13009 2006/02/20 12:34:08 gdt Exp $
+$NetBSD: CHANGES,v 1.13010 2006/02/20 17:57:17 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1121,3 +1121,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added x11/qt4-libs version 4.1.0 [adam 2006-02-20]
 	Added x11/qt4-tools version 4.1.0 [adam 2006-02-20]
 	Updated graphics/p5-Image-ExifTool to 6.00 [gdt 2006-02-20]
+	Updated graphics/tiff to 3.8.0nb1 [joerg 2006-02-20]
