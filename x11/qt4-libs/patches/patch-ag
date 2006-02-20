@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2006/02/20 12:08:15 adam Exp $
+
+--- src/gui/embedded/qlock.cpp.orig	2006-02-19 11:42:33.000000000 +0100
++++ src/gui/embedded/qlock.cpp
+@@ -34,7 +34,7 @@
+ #else
+ #include <sys/sem.h>
+ #if defined(__GNU_LIBRARY__) && !defined(_SEM_SEMUN_UNDEFINED) \
+-    || defined(Q_OS_FREEBSD) || defined(Q_OS_OPENBSD) || defined(Q_OS_NETBSD) || defined(Q_OS_BSDI)
++    || defined(Q_OS_FREEBSD) || defined(Q_OS_OPENBSD) || defined(Q_OS_NETBSD) || defined(Q_OS_BSDI) || defined(Q_OS_INTERIX)
+ /* union semun is defined by including <sys/sem.h> */
+ #else
+ /* according to X/OPEN we have to define it ourselves */
