@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/02/21 10:15:35 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2006/02/21 10:28:43 rillig Exp $
 
 DISTNAME=	wl-2.14.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -44,13 +44,15 @@ post-build:
 	} > ${PLIST_SRC}
 
 post-install:
-	@${INSTALL_DATA_DIR} ${DOCDIR:Q}/en ${DOCDIR:Q}/ja
+	${INSTALL_DATA_DIR} ${DOCDIR:Q}/en
+	${INSTALL_DATA_DIR} ${DOCDIR:Q}/ja
 	@set -e; \
 	for f in BUGS NEWS README; do \
 		${INSTALL_DATA} ${WRKSRC:Q}/"$$f" ${DOCDIR:Q}/en; \
 		${INSTALL_DATA} ${WRKSRC:Q}/"$$f".ja ${DOCDIR:Q}/ja; \
 	done
-	@${INSTALL_DATA_DIR} ${EXAMPLESDIR:Q}/en ${EXAMPLESDIR:Q}/ja
+	${INSTALL_DATA_DIR} ${EXAMPLESDIR:Q}/en
+	${INSTALL_DATA_DIR} ${EXAMPLESDIR:Q}/ja
 	@${INSTALL_DATA} ${WRKSRC:Q}/samples/en/dot.* ${EXAMPLESDIR:Q}/en
 	@${INSTALL_DATA} ${WRKSRC:Q}/samples/ja/dot.* ${EXAMPLESDIR:Q}/ja
 
