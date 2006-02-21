@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2006/02/21 10:08:35 ghen Exp $
+# $NetBSD: Makefile,v 1.53 2006/02/21 10:13:43 ghen Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
-PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		ftp://ftp.hu-berlin.de/pub/www/opera/${OPERA_DIR}/
 MASTER_SITES+=		http://ftp.sunet.se/pub/www/clients/Opera/${OPERA_DIR}/
@@ -27,9 +26,9 @@ USE_LANGUAGES=          # empty
 .include "../../mk/bsd.prefs.mk"
 
 OPERA_LANG=		en
-OPERA_VER_DATE=		20051114
-OPERA_PKG_VERSION=	8.51
-OPERA_PKG_VERSION_DIR=	851
+OPERA_VER_DATE=		20060201
+OPERA_PKG_VERSION=	8.52
+OPERA_PKG_VERSION_DIR=	852
 
 _OPERA_OPSYS?=		${OPSYS}
 _OPERA_MACHINE_ARCH?=	${MACHINE_ARCH}
