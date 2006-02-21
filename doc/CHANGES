@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13035 2006/02/21 22:41:00 wiz Exp $
+$NetBSD: CHANGES,v 1.13036 2006/02/21 22:43:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1169,3 +1169,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated fonts/py-fonttools to 2.0b1nb2 [wiz 2006-02-21]
 	Updated textproc/stardic to 1.31nb4 [wiz 2006-02-21]
 	Updated wm/afterstep1 to 1.8.11nb4 [wiz 2006-02-21]
+	Updated www/amaya to 9.2.1nb3 [wiz 2006-02-21]
