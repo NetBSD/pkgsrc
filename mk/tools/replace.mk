@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.158 2006/02/17 19:31:33 wiz Exp $
+# $NetBSD: replace.mk,v 1.159 2006/02/21 17:39:32 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1085,13 +1085,13 @@ ${_TOOLS_VARNAME.${_t_}}=	${TOOLS_${_TOOLS_VARNAME.${_t_}}}
 # searched for in the PATH, which would find the ones in ${TOOLS_DIR}.
 #
 # The value passed via the shell environment is stored in
-# TOOLS_VALUE_GNU.<tool>, which defaults to just the path to the
-# tool.
+# TOOLS_VALUE_GNU.<tool>, which defaults to the full command line of
+# the tool.
 #
 .for _t_ in ${_USE_TOOLS}
 .  if defined(GNU_CONFIGURE)
 .    if defined(TOOLS_${_TOOLS_VARNAME.${_t_}})
-TOOLS_VALUE_GNU.${_t_}?=	${TOOLS_PATH.${_t_}}
+TOOLS_VALUE_GNU.${_t_}?=	${TOOLS_CMDLINE.${_t_}}
 .    endif
 .    if defined(TOOLS_VALUE_GNU.${_t_})
 .      for _v_ in ${_TOOLS_VARNAME_GNU.${_t_}}
