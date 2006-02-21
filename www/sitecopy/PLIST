@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/23 09:05:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/02/21 05:54:43 hiramatsu Exp $
 bin/sitecopy
+man/fr/man1/sitecopy.1
 man/man1/sitecopy.1
 share/doc/sitecopy/NEWS
 share/doc/sitecopy/README
