@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13033 2006/02/21 22:39:18 wiz Exp $
+$NetBSD: CHANGES,v 1.13034 2006/02/21 22:40:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1167,3 +1167,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/postgresql74-server to 7.4.12 [joerg 2006-02-21]
 	Updated databases/tcl-postgresql74 to 7.4.12 [joerg 2006-02-21]
 	Updated fonts/py-fonttools to 2.0b1nb2 [wiz 2006-02-21]
+	Updated textproc/stardic to 1.31nb4 [wiz 2006-02-21]
