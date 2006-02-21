@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/19 00:22:41 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/21 22:39:02 wiz Exp $
 bin/ttx
-${FONTTOOLSPTH}${PYSITELIB}/FontTools.pth
+${PYSITELIB}/FontTools.pth
 ${PYSITELIB}/FontTools/fontTools/__init__.py
 ${PYSITELIB}/FontTools/fontTools/__init__.pyc
 ${PYSITELIB}/FontTools/fontTools/__init__.pyo
