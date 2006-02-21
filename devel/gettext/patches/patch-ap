@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.3 2006/02/21 04:12:44 jschauma Exp $
+
+--- src/po-lex.c.orig	Mon Feb 20 23:08:56 2006
++++ src/po-lex.c	Mon Feb 20 23:08:11 2006
+@@ -75,7 +75,7 @@
+ /* Error handling during the parsing of a PO file.
+    These functions can access gram_pos and gram_pos_column.  */
+ 
+-#if !(__STDC__ && \
++#if !defined __sgi && !(__STDC__ && \
+       ((defined __STDC_VERSION__ && __STDC_VERSION__ >= 199901L) \
+        || (defined __GNUC__ && __GNUC__ >= 2 && !defined __APPLE_CC__)))
+ 
