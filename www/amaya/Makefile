@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2006/02/05 23:11:16 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2006/02/21 22:43:38 wiz Exp $
 
 DISTNAME=	amaya-fullsrc-9.2.1
 PKGNAME=	${DISTNAME:S/-fullsrc//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.w3.org/Amaya/Distribution/ \
 		ftp://ftp.w3.org/pub/amaya/ \
@@ -16,13 +16,17 @@ COMMENT=	Web browser/editor from the World Wide Web Consortium (W3C)
 EXTRACT_ELEMENTS=	Amaya libwww
 WRKSRC=			${WRKDIR}/Amaya/work
 
-USE_TOOLS+=		gmake
+USE_DIRS+=		xdg-1.1
+USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../configure
 CONFIGURE_ARGS+=	--without-graphic-libs	# Use pkgsrc libraries
 CFLAGS+=		-Dunix
 # link correctly with pkgsrc zlib
 LIBS+=			-Wl,-R${LOCALBASE}/lib
+
+FONTS_DIRS.ttf+=	${PREFIX}/share/Amaya/fonts
+REQD_DIRS+=		${PREFIX}/share/Amaya ${PREFIX}/share/Amaya/fonts
 
 post-extract:
 	${MKDIR} ${WRKSRC}
