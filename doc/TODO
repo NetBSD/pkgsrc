@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4630 2006/02/21 05:56:42 hiramatsu Exp $
+$NetBSD: TODO,v 1.4631 2006/02/21 10:15:02 ghen Exp $
 
 Suggested new packages
 ======================
@@ -786,7 +786,6 @@ Suggested package updates
 	o openssh-4.3p2 [pkg/32858]
 	o openssl-0.9.8a
 	o openttd-0.4.5
-	o opera-8.52
 	o oroborus-2.0.15
 	o osh-050219
 	o oss-3.99.4a
