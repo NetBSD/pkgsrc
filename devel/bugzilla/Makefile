@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:08:40 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/21 16:48:55 adrianp Exp $
 #
 
-DISTNAME=	bugzilla-2.20
-PKGREVISION=	2
+DISTNAME=	bugzilla-2.20.1
 CATEGORIES=	www devel
 MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/webtools/
 
@@ -32,7 +31,7 @@ SENDMAIL?=	/usr/sbin/sendmail
 
 BUILD_DEFS+= 	BZ_WEB_GROUP SENDMAIL APACHE_USER
 
-MESSAGE_SUBST+=	BZDIR=${BZDIR} PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+MESSAGE_SUBST+=	BZDIR=${BZDIR:Q} PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 BZDIR=		${PREFIX}/share/bugzilla
 EGDIR=		${PREFIX}/share/examples/bugzilla
@@ -42,7 +41,7 @@ CONF_FILES=	${EGDIR}/bugzilla.conf ${PKG_SYSCONFDIR}/bugzilla.conf \
 SPECIAL_PERMS=	${BZDIR}/localconfig ${APACHE_USER} ${SHAREGRP} 0400
 PAX_DIRS=	Bugzilla skins template
 
-REPLACE_PERL=	*.pl *.cgi
+REPLACE_PERL+=	*.pl *.cgi
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
@@ -51,7 +50,7 @@ SUBST_SED.conf=		-e "s|@BZ_WEB_GROUP@|${BZ_WEB_GROUP}|g"		\
 			-e "s|@PREFIX@|${PREFIX}|g"			\
 			-e "s|@BZDIR@|${BZDIR}|g"			\
 			-e "s|/usr/lib/sendmail|${SENDMAIL}|g"
-SUBST_MESSAGE.conf=	"Fixing configuration files."
+SUBST_MESSAGE.conf=	Fixing configuration files.
 
 post-extract:
 	@${FIND} ${WRKSRC} -type d -name CVS | ${XARGS} ${RM} -rf
