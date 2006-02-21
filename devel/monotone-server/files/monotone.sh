@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: monotone.sh,v 1.2 2005/12/02 17:56:25 jmmv Exp $
+# $NetBSD: monotone.sh,v 1.3 2006/02/21 16:09:16 jmmv Exp $
 #
 # PROVIDE: monotone
 # REQUIRE: DAEMON
@@ -23,13 +23,22 @@ name="monotone"
 rcvar=${name}
 command="@PREFIX@/bin/monotone"
 command_args="--norc \
-              --rcfile=@PKG_SYSCONFDIR@/hooks.conf \
+              --confdir=@PKG_SYSCONFDIR@ \
               --db=${monotone_home}/monotone.db \
+              --rcfile=@PKG_SYSCONFDIR@/hooks.conf \
               serve ${monotone_branches} \
               >>${monotone_home}/monotone.log 2>&1 &"
+required_dirs="@PKG_SYSCONFDIR@/keys"
 required_files="@PKG_SYSCONFDIR@/branches.conf \
                 @PKG_SYSCONFDIR@/hooks.conf \
+                @PKG_SYSCONFDIR@/read-permissions \
+                @PKG_SYSCONFDIR@/write-permissions \
                 ${monotone_home}/monotone.db"
+start_precmd="monotone_start_precmd"
+
+monotone_start_precmd() {
+	echo "=> Session started at `date`" >>${monotone_home}/monotone.log
+}
 
 load_rc_config $name
 run_rc_command "$1"

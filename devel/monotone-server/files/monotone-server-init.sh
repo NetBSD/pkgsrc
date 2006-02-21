@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: monotone-server-init.sh,v 1.2 2006/02/20 16:54:42 jmmv Exp $
+# $NetBSD: monotone-server-init.sh,v 1.3 2006/02/21 16:09:16 jmmv Exp $
 #
 
 progname=$(basename $0)
@@ -15,6 +15,21 @@ if [ $(id -u) -ne 0 ]; then
     echo "${progname}: this program must be run as \`root'" 1>&2
     exit 1
 fi
+
+cat <<EOF
+The following user and group will be used to run the monotone server
+process under a restricted account:
+
+    User name \`${MONOTONE_USER}', UID \``id -u monotone`'
+    Group name \`${MONOTONE_GROUP}', GID \``id -g monotone`'
+
+If either the UID or the GID are inappropriate, please abort this
+script now, correct them and restart the utility so that all the
+files are created with the correct ownerships.
+
+Press RETURN to continue or CTRL-C to abort.
+EOF
+read key
 
 cat <<EOF
 The monotone package is currently configured to use the
@@ -65,7 +80,8 @@ fi
 cd ${home}
 
 echo "Initializing database: \`${home}/monotone.db'"
-${MONOTONE} --db=monotone.db db init
+su - ${MONOTONE_USER} -c "${MONOTONE} --confdir=${PKG_SYSCONFDIR} \
+    --db=monotone.db db init"
 
 cat <<EOF
 
@@ -76,9 +92,12 @@ you can forget about it (assuming you have a safe copy).
 
 EOF
 
-${MONOTONE} --db=monotone.db genkey ${keyname}
-${MONOTONE} --db=monotone.db pubkey ${keyname} >${keyname}-public
-${MONOTONE} --db=monotone.db privkey ${keyname} >${keyname}-private
+su - ${MONOTONE_USER} -c "${MONOTONE} --confdir=${PKG_SYSCONFDIR} \
+    --db=monotone.db genkey ${keyname}"
+su - ${MONOTONE_USER} -c "${MONOTONE} --confdir=${PKG_SYSCONFDIR} \
+    --db=monotone.db pubkey ${keyname} >${keyname}-public"
+su - ${MONOTONE_USER} -c "${MONOTONE} --confdir=${PKG_SYSCONFDIR} \
+    --db=monotone.db privkey ${keyname} >${keyname}-private"
 
 chown ${MONOTONE_USER}:${MONOTONE_GROUP} monotone.db \
       ${keyname}-public ${keyname}-private
@@ -90,17 +109,18 @@ cat <<EOF
 
 Initialization process finished!
 
-You should now backup the following files and store them in a safe place
-in case you need to reconstruct the database from scratch:
+You should now backup the following file and store it in a safe place.
+It contains the key pair that authenticates your server:
 
-    ${home}/${keyname}-public
-    ${home}/${keyname}-private
+    ${PKG_SYSCONFDIR}/keys/${keyname}
 
 At last, edit the following files to finish the configuration of your
 new server:
 
     ${PKG_SYSCONFDIR}/branches.conf
     ${PKG_SYSCONFDIR}/hooks.conf
+    ${PKG_SYSCONFDIR}/read-permissions
+    ${PKG_SYSCONFDIR}/write-permissions
 
 Once finished, use the installed rc.d script (monotone) to start the
 dedicated server process.
