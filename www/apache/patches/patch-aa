@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.24 2004/10/29 13:48:31 abs Exp $
+$NetBSD: patch-aa,v 1.25 2006/02/21 22:44:17 wiz Exp $
 
---- Makefile.tmpl.orig	2004-10-29 14:44:35.000000000 +0100
+--- Makefile.tmpl.orig	2006-02-21 12:27:34.000000000 +0000
 +++ Makefile.tmpl
 @@ -56,6 +56,8 @@ INSTALL_DATA    = $(INSTALL) $(IFLAGS_DA
  PERL            = @PERL@
@@ -156,3 +156,26 @@ $NetBSD: patch-aa,v 1.24 2004/10/29 13:48:31 abs Exp $
  		if [ .$$conf = .httpd.conf ]; then \
  			target_conf="$(TARGET).conf"; \
  		else \
+@@ -583,22 +558,10 @@ install-config:
+         	> $(TOP)/$(SRC)/.apaci.install.tmp && \
+ 		echo "$(INSTALL_DATA) $(TOP)/conf/$${conf}-dist[*] $(root)$(sysconfdir)/$${target_conf}.default"; \
+ 		$(INSTALL_DATA) $(TOP)/$(SRC)/.apaci.install.tmp $(root)$(sysconfdir)/$${target_conf}.default; \
+-		if [ ! -f "$(root)$(sysconfdir)/$${target_conf}" ]; then \
+-			echo "$(INSTALL_DATA) $(TOP)/conf/$${conf}-dist[*] $(root)$(sysconfdir)/$${target_conf}"; \
+-			$(INSTALL_DATA) $(TOP)/$(SRC)/.apaci.install.tmp $(root)$(sysconfdir)/$${target_conf}; \
+-		else \
+-			echo "[PRESERVING EXISTING CONFIG FILE: $(root)$(sysconfdir)/$${target_conf}]"; \
+-		fi; \
+ 	done
+ 	-@for conf in mime.types magic; do \
+ 		echo "$(INSTALL_DATA) $(TOP)/conf/$${conf} $(root)$(sysconfdir)/$${conf}.default"; \
+ 		$(INSTALL_DATA) $(TOP)/conf/$${conf} $(root)$(sysconfdir)/$${conf}.default; \
+-		if [ ! -f "$(root)$(sysconfdir)/$${conf}" ]; then \
+-			echo "$(INSTALL_DATA) $(TOP)/conf/$${conf} $(root)$(sysconfdir)/$${conf}"; \
+-			$(INSTALL_DATA) $(TOP)/conf/$${conf} $(root)$(sysconfdir)/$${conf}; \
+-		else \
+-			echo "[PRESERVING EXISTING CONFIG FILE: $(root)$(sysconfdir)/$${conf}]"; \
+-		fi; \
+ 	done
+ 	-@if [ ".$(ssl)" = .1 ]; then \
+ 		echo "chmod 755 $(root)$(sysconfdir)/ssl.crt"; \
