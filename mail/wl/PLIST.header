@@ -1,10 +1,16 @@
-@comment $NetBSD: PLIST.header,v 1.5 2005/04/11 18:06:00 hira Exp $
+@comment $NetBSD: PLIST.header,v 1.6 2006/02/21 10:15:35 rillig Exp $
 share/doc/wl/en/BUGS
 share/doc/wl/en/NEWS
 share/doc/wl/en/README
 share/doc/wl/ja/BUGS.ja
 share/doc/wl/ja/NEWS.ja
 share/doc/wl/ja/README.ja
+share/examples/wl/en/dot.addresses
+share/examples/wl/en/dot.folders
+share/examples/wl/en/dot.wl
+share/examples/wl/ja/dot.addresses
+share/examples/wl/ja/dot.folders
+share/examples/wl/ja/dot.wl
 ${FOR_emacs21}share/wl/access.xpm
 ${FOR_emacs21}share/wl/archive.xpm
 ${FOR_emacs21}share/wl/closed.xpm
@@ -89,9 +95,3 @@ share/wl/wl-stable-logo.img
 share/wl/wl-stable-logo.xbm
 share/wl/wl-stable-xmas-logo.img
 share/wl/wl-stable-xmas-logo.xbm
-share/examples/wl/en/dot.addresses
-share/examples/wl/en/dot.folders
-share/examples/wl/en/dot.wl
-share/examples/wl/ja/dot.addresses
-share/examples/wl/ja/dot.folders
-share/examples/wl/ja/dot.wl
