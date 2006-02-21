@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:11:07 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/21 22:39:51 wiz Exp $
 
 DISTNAME=	dic
 PKGNAME=	stardic-1.31
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	http://download.linuxbyte.net/Chinese/dictionary/
 
@@ -14,13 +14,8 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 MAKEFILE=	makefile
 USE_LANGUAGES=	c c++
 
-post-patch:
-	${CHMOD} u+w  ${WRKSRC}/hzfont
-	${MV} ${WRKSRC}/hzfont/fonts.dir ${WRKSRC}/hzfont/fonts.dir.orig
-	${ECHO} '3' > ${WRKSRC}/hzfont/fonts.dir
-	${ECHO} 'hz16.pcf.gz hz16' >> ${WRKSRC}/hzfont/fonts.dir
-	${ECHO} 'hz16ft.pcf.gz hz16ft' >> ${WRKSRC}/hzfont/fonts.dir
-	${ECHO} 'yb10x20.pcf.gz yb10x20' >> ${WRKSRC}/hzfont/fonts.dir
+FONTS_DIRS.x11+=	${PREFIX}/share/stardic/hzfont
+REQD_DIRS+=		${PREFIX}/share/stardic ${PREFIX}/share/stardic/hzfont
 
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
