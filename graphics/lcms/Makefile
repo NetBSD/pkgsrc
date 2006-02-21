@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.20 2006/02/20 15:02:22 gdt Exp $
+# $NetBSD: Makefile,v 1.21 2006/02/21 14:00:42 gdt Exp $
 
 DISTNAME=	lcms-1.15
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.littlecms.com/ \
 		http://www.abaforum.es/martim/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.littlecms.com/
 COMMENT=	Light Color Management System -- a color management library
 
@@ -16,8 +16,9 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 TEST_TARGET=		check
 
-# XXX Does this disable tiff with deflate?
-CONFIGURE_ARGS+=	--without-zlib
+# lcms does not need zlib, but will look for it and link it to tifficc
+# if present.  Therefore, we don't enjoin lcms from finding zlib, but
+# don't include it via bl3.
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE:Q}
@@ -30,9 +31,6 @@ post-install:
 .for _f_ in LCMSAPI.TXT TUTORIAL.TXT
 	${INSTALL_DATA} ${WRKSRC}/doc/${_f_} ${PREFIX}/share/doc/lcms/${_f_}
 .endfor
-
-# XXX Is this needed to enable use of tiff with deflate?
-#.include "../../devel/zlib/buildlink3.mk"
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
