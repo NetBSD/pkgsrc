@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13027 2006/02/21 10:43:45 hiramatsu Exp $
+$NetBSD: CHANGES,v 1.13028 2006/02/21 16:10:12 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1148,3 +1148,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/opera to 8.52 [ghen 2006-02-21]
 	Added devel/p5-File-Modified version 0.07 [hiramatsu 2006-02-21]
 	Added devel/p5-NEXT version 0.60 [hiramatsu 2006-02-21]
+	Updated devel/monotone-server to 0.25nb2 [jmmv 2006-02-21]
