@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/11/20 21:39:37 jschauma Exp $
+$NetBSD: patch-ac,v 1.2 2006/02/21 22:42:05 wiz Exp $
 
---- configure.orig	Thu Jan 24 03:14:48 2002
-+++ configure	Wed Nov 20 16:07:37 2002
-@@ -281,7 +281,7 @@
+--- configure.orig	2002-12-14 03:50:17.000000000 +0000
++++ configure
+@@ -436,7 +436,7 @@ EOF
    -prefix | --prefix | --prefi | --pref | --pre | --pr | --p)
      ac_prev=prefix ;;
    -prefix=* | --prefix=* | --prefi=* | --pref=* | --pre=* | --pr=* | --p=*)
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2002/11/20 21:39:37 jschauma Exp $
  
    -program-prefix | --program-prefix | --program-prefi | --program-pref \
    | --program-pre | --program-pr | --program-p)
-@@ -549,21 +549,21 @@
+@@ -704,21 +704,21 @@ else
  fi
  
  
