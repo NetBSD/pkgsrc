@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4629 2006/02/20 22:58:24 wiz Exp $
+$NetBSD: TODO,v 1.4630 2006/02/21 05:56:42 hiramatsu Exp $
 
 Suggested new packages
 ======================
@@ -1084,7 +1084,6 @@ Suggested package updates
 	o silc-toolkit-1.0.2
 	o simh-3.5.0
 	o sipsak-0.9.6
-	o sitecopy-0.16.2
 	o sitescooper-3.1.2
 	o sjeng-11.2
 	o skampi-4.1
