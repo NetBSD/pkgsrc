@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/12 14:11:22 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/21 23:20:38 joerg Exp $
 #
 
 SNAPSHOT_DATE=		20060127
@@ -12,6 +12,14 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://developers.videolan.org/x264.html
 COMMENT=		GPL licensed H.264 encoder
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386"
+BUILD_DEPENDS+=	nasm>=0.98.34:../../devel/nasm
+.elif ${MACHINE_ARCH} == "x86_64"
+BUILD_DEPENDS+=	yasm>=0.4.0:../../devel/yasm
+.endif
 
 USE_TOOLS+=		gmake
 
