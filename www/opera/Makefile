@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.51 2006/02/05 23:11:26 joerg Exp $
+# $NetBSD: Makefile,v 1.52 2006/02/21 10:08:35 ghen Exp $
 
-DISTNAME=	opera-${OPERA_PKG_VERSION:S/u/pl/}
-PKGREVISION=	1
-CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.hu-berlin.de/pub/www/opera/${OPERA_DIR}/ \
-		http://ftp.sunet.se/pub/www/clients/Opera/${OPERA_DIR}/ \
-		ftp://ftp.task.gda.pl/pub/opera/${OPERA_DIR}/ \
-		ftp://ftp.tuwien.ac.at/infosys/browsers/opera/${OPERA_DIR}/ \
-		ftp://opera.nsc.no/pub/nsc.no/mirrors/operasoftware/${OPERA_DIR}/ \
-		ftp://ftp.opera.com/pub/opera/${OPERA_DIR}/
-DISTFILES=	opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}${EXTRACT_SUFX}
+DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
+PKGREVISION=		1
+CATEGORIES=		www
+MASTER_SITES=		ftp://ftp.hu-berlin.de/pub/www/opera/${OPERA_DIR}/
+MASTER_SITES+=		http://ftp.sunet.se/pub/www/clients/Opera/${OPERA_DIR}/
+MASTER_SITES+=		ftp://ftp.task.gda.pl/pub/opera/${OPERA_DIR}/
+MASTER_SITES+=		ftp://ftp.tuwien.ac.at/infosys/browsers/opera/${OPERA_DIR}/
+MASTER_SITES+=		ftp://opera.nsc.no/pub/nsc.no/mirrors/operasoftware/${OPERA_DIR}/
+MASTER_SITES+=		ftp://ftp.opera.com/pub/opera/${OPERA_DIR}/
+DISTFILES=		opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}${EXTRACT_SUFX}
 
-MAINTAINER=	jdolecek@NetBSD.org
-HOMEPAGE=	http://www.opera.com/
-COMMENT=	Small, fast and customizable WWW client
+MAINTAINER=		jdolecek@NetBSD.org
+HOMEPAGE=		http://www.opera.com/
+COMMENT=		Small, fast and customizable WWW client
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 SunOS-*-sparc FreeBSD-*-i386 DragonFly-*-i386
 
-LICENSE=	opera-850-license
+LICENSE=		opera-850-license
 
 #PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -35,20 +35,20 @@ _OPERA_OPSYS?=		${OPSYS}
 _OPERA_MACHINE_ARCH?=	${MACHINE_ARCH}
 
 .if (${_OPERA_OPSYS} == NetBSD) || (${_OPERA_OPSYS} == DragonFly)
-DEPENDS+=	suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
+DEPENDS+=		suse_x11>=7.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 
 # we need the DIST_SUBDIR=. because of the inclusion of suse's Makefile.common
-DIST_SUBDIR=	.
-EXTRACT_ONLY=	# empty
-PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
+DIST_SUBDIR=		.
+EXTRACT_ONLY=		# empty
+PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 EXTRACT_SUFX=		.rpm
 OPERA_ARCH=		.i386
 OPERA_DIR=		linux/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/${OPERA_ARCH:S/.//}
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
 
-RPMFILES=	${DISTFILES}
-RPM2PKGSTRIP=	0
+RPMFILES=		${DISTFILES}
+RPM2PKGSTRIP=		0
 
 .elif (${_OPERA_OPSYS} == FreeBSD)
 OPERA_ARCH=		.i386.freebsd
@@ -106,7 +106,7 @@ post-install: post-install-manpage
 .include "../../emulators/suse_linux/Makefile.application"
 
 .if defined(MANCOMPRESSED) && !empty(MANCOMPRESSED:M[yY][eE][sS])
-USE_TOOLS+=	gzip
+USE_TOOLS+=		gzip
 .endif
 
 post-install-manpage:
