@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.732 2006/02/20 20:04:34 rillig Exp $
+# $NetBSD: Makefile,v 1.733 2006/02/21 10:37:31 hiramatsu Exp $
 #
 
 COMMENT=	Development utilities
@@ -390,6 +390,7 @@ SUBDIR+=	p5-File-Find-Rule
 SUBDIR+=	p5-File-Flat
 SUBDIR+=	p5-File-FlockDir
 SUBDIR+=	p5-File-MimeInfo
+SUBDIR+=	p5-File-Modified
 SUBDIR+=	p5-File-PathConvert
 SUBDIR+=	p5-File-Slurp
 SUBDIR+=	p5-File-Spec
@@ -440,6 +441,7 @@ SUBDIR+=	p5-Module-Pluggable
 SUBDIR+=	p5-Module-Refresh
 SUBDIR+=	p5-Module-ScanDeps
 SUBDIR+=	p5-Module-Versions-Report
+SUBDIR+=	p5-NEXT
 SUBDIR+=	p5-Net-CIDR
 SUBDIR+=	p5-Net-Netmask
 SUBDIR+=	p5-OLE-Storage_Lite
