@@ -1,0 +1,14 @@
+$NetBSD: patch-aq,v 1.1 2006/02/21 04:12:44 jschauma Exp $
+
+--- src/po-lex.h.orig	Mon Feb 20 23:09:02 2006
++++ src/po-lex.h	Mon Feb 20 23:08:11 2006
+@@ -71,7 +71,8 @@
+ 
+ 
+ /* ISO C 99 is smart enough to allow optimizations like this.  */
+-#if __STDC__ && (defined __STDC_VERSION__ && __STDC_VERSION__ >= 199901L)
++#if __STDC__ && (defined __STDC_VERSION__ && __STDC_VERSION__ >= 199901L)   \
++	&& !defined __sgi
+ 
+ /* CAUTION: If you change this macro, you must also make identical
+    changes to the function of the same name in src/po-lex.c  */
