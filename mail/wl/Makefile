@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/02/05 23:09:59 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/02/21 10:15:35 rillig Exp $
 
 DISTNAME=	wl-2.14.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}bbdb-[0-9]*:../../misc/bbdb
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20
 
 MAKE_FLAGS+=	LISPDIR=${EMACS_LISPPREFIX:Q}
-MAKE_FLAGS+=	PIXMAPDIR=${PREFIX}/share/wl
+MAKE_FLAGS+=	PIXMAPDIR=${PREFIX:Q}/share/wl
 INSTALL_TARGET=	install install-info
 INFO_FILES=	wl.info wl-ja.info
 
@@ -31,26 +31,28 @@ EXAMPLESDIR=	${PREFIX}/share/examples/wl
 PLIST_SRC=	${WRKDIR}/PLIST
 
 post-build:
-	@{ \
-		${CAT} ${PKGDIR}/PLIST.header; \
-		${FIND} ${WRKSRC} -name '*.elc' -print | \
+	@set -e; \
+	{ \
+		${CAT} ${PKGDIR:Q}/PLIST.header; \
+		${FIND} ${WRKSRC:Q} -name '*.elc' -print | \
 		while read f; do \
-			g=$$(basename $$f); \
-			echo '$${EMACS_LISPPREFIX}/wl/'$${g%.elc}.el; \
-			echo '$${EMACS_LISPPREFIX}/wl/'$$g; \
+			g=`basename "$$f"`; \
+			${ECHO} '$${EMACS_LISPPREFIX}/wl/'$${g%.elc}.el; \
+			${ECHO} '$${EMACS_LISPPREFIX}/wl/'$$g; \
 		done | ${SORT}; \
-		${CAT} ${PKGDIR}/PLIST.footer; \
-	} >${PLIST_SRC}
+		${CAT} ${PKGDIR:Q}/PLIST.footer; \
+	} > ${PLIST_SRC}
 
 post-install:
-	@${INSTALL_DATA_DIR} ${DOCDIR}/en ${DOCDIR}/ja
-	@for f in BUGS NEWS README; do \
-		${INSTALL_DATA} ${WRKSRC}/$$f ${DOCDIR}/en; \
-		${INSTALL_DATA} ${WRKSRC}/$${f}.ja ${DOCDIR}/ja; \
+	@${INSTALL_DATA_DIR} ${DOCDIR:Q}/en ${DOCDIR:Q}/ja
+	@set -e; \
+	for f in BUGS NEWS README; do \
+		${INSTALL_DATA} ${WRKSRC:Q}/"$$f" ${DOCDIR:Q}/en; \
+		${INSTALL_DATA} ${WRKSRC:Q}/"$$f".ja ${DOCDIR:Q}/ja; \
 	done
-	@${INSTALL_DATA_DIR} ${EXAMPLESDIR}/en ${EXAMPLESDIR}/ja
-	@${INSTALL_DATA} ${WRKSRC}/samples/en/dot.* ${EXAMPLESDIR}/en
-	@${INSTALL_DATA} ${WRKSRC}/samples/ja/dot.* ${EXAMPLESDIR}/ja
+	@${INSTALL_DATA_DIR} ${EXAMPLESDIR:Q}/en ${EXAMPLESDIR:Q}/ja
+	@${INSTALL_DATA} ${WRKSRC:Q}/samples/en/dot.* ${EXAMPLESDIR:Q}/en
+	@${INSTALL_DATA} ${WRKSRC:Q}/samples/ja/dot.* ${EXAMPLESDIR:Q}/ja
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
