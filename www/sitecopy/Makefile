@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2006/02/05 23:11:28 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2006/02/21 05:54:43 hiramatsu Exp $
 
-DISTNAME=		sitecopy-0.13.4
-PKGREVISION=		6
+DISTNAME=		sitecopy-0.16.2
 CATEGORIES=		www
 MASTER_SITES=		http://www.lyra.org/sitecopy/
 
@@ -26,8 +25,8 @@ CONFIGURE_ARGS+=	--with-libxml2
 CFLAGS+=		-I.
 
 pre-build:
-	${RM} -f ${WRKSRC}/fnmatch.h
-	${LN} -sf ${WRKSRC}/lib/fnmatch.h ${WRKSRC}/fnmatch.h
+	${RM} -f ${WRKSRC:Q}/fnmatch.h
+	${LN} -sf ${WRKSRC:Q}/lib/fnmatch.h ${WRKSRC:Q}/fnmatch.h
 
 .if !exists(/usr/include/getopt.h)
 .  include "../../pkgtools/libnbcompat/buildlink3.mk"
