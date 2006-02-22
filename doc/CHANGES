@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13050 2006/02/22 21:01:35 wiz Exp $
+$NetBSD: CHANGES,v 1.13051 2006/02/22 21:02:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1184,3 +1184,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/labltk to 3.09.1nb2 [wiz 2006-02-22]
 	Updated x11/ocaml-graphics to 3.09.1nb2 [wiz 2006-02-22]
 	Updated x11/wmweather to 2.4.2nb6 [wiz 2006-02-22]
+	Updated x11/xfce3 to 3.8.18nb7 [wiz 2006-02-22]
