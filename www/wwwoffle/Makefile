@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2006/02/22 23:00:37 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2006/02/22 23:01:28 wiz Exp $
 
 DISTNAME=	wwwoffle-2.8e
 PKGREVISION=	2
@@ -76,6 +76,7 @@ post-install:
 # We don't do the following automatically, as that would inconvenience
 # package build machines, not to mention putting the wrong information
 # into the "wwwoffle.pac" files.
+.PHONY: finish
 finish:
 	${SETENV} CONFDIR="${PKG_SYSCONFDIR}" PKG_PREFIX="${PREFIX}" \
 		${SH} INSTALL _ POST-INSTALL
