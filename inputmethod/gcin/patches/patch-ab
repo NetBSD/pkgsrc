@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/01/16 13:01:16 rxg Exp $
+$NetBSD: patch-ab,v 1.2 2006/02/22 14:55:54 rxg Exp $
 
---- Makefile.orig	2005-10-16 10:19:45.000000000 +0800
+--- Makefile.orig	2006-02-16 17:36:08.000000000 +0800
 +++ Makefile
+@@ -23,7 +23,7 @@ OBJS_gcin2tab=gcin2tab.o gtab-util.o uti
+ OBJS_gcin_steup=gcin-setup.o gcin-conf.o util.o gcin-send.o gcin-settings.o \
+ 	gcin-setup-list.o gcin-switch.o locale.o gcin-setup-pho.o about.o
+ WALL=-Wall
+-CFLAGS= $(WALL) $(OPTFLAGS) $(GTKINC) -I./IMdkit/include -DDEBUG="0$(GCIN_DEBUG)" \
++CFLAGS= $(WALL) $(GTKINC) -I./IMdkit/include \
+         -DGCIN_TABLE_DIR=\"$(GCIN_TABLE_DIR)\"  -DDOC_DIR=\"$(DOC_DIR)\" \
+         -DGCIN_ICON_DIR=\"$(GCIN_ICON_DIR)\" -DGCIN_VERSION=\"$(GCIN_VERSION)\" \
+         -DGCIN_SCRIPT_DIR=\"$(GCIN_SCRIPT_DIR)\" -DGCIN_BIN_DIR=\"$(GCIN_BIN_DIR)\" \
 @@ -36,8 +36,8 @@ endif
  
  im-srv = im-srv/im-srv.a
