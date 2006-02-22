@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:11:30 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/02/22 20:57:29 wiz Exp $
 
 DISTNAME=	colorz10b2
 PKGREVISION=	2
@@ -13,6 +13,10 @@ COMMENT=	Color management tool
 
 ZOPE_COPYPRODUCT= zope-std-copyproduct-short
 PRODNAMES=	colorz10b2
+
+# clean up after patch-aa
+post-install:
+	${RM} ${PREFIX}/lib/zope/lib/python/Products/colorz10b2/colorz.py.orig
 
 .include "../../www/zope25/product.mk"
 .include "../../mk/bsd.pkg.mk"
