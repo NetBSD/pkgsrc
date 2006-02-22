@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/02/13 15:18:32 tv Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/22 21:08:57 tv Exp $
 #
 
-PKGREVISION=		2
+PKGREVISION=		3
 
 PERDITION_COMMENT=	main program
 
