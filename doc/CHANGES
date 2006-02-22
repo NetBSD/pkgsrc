@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13046 2006/02/22 20:58:12 wiz Exp $
+$NetBSD: CHANGES,v 1.13047 2006/02/22 20:59:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1180,3 +1180,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/raggle to 0.4.4nb2 [wiz 2006-02-22]
 	Updated www/zope25-ZPhotoSlides to 1.1bnb3 [wiz 2006-02-22]
 	Updated x11/lablgtk to 1.2.7nb3 [wiz 2006-02-22]
+	Updated x11/lablgtk2 to 2.6.0nb6 [wiz 2006-02-22]
