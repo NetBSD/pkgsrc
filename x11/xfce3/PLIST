@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:10:07 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/02/22 21:02:15 wiz Exp $
 bin/CDE2Xfcepal
 bin/glob
 bin/startxfce
@@ -226,8 +226,6 @@ share/xfce/backdrops/XfceStellar.xpm
 share/xfce/backdrops/Xfcelogo.xpm
 share/xfce/backdrops/Xfcemice.jpg
 share/xfce/cursors/cursor2.pcf
-share/xfce/cursors/fonts.dir
-share/xfce/fonts/fonts.dir
 share/xfce/fonts/uniread-variable-05-b-i-ISO8859-1.pcf.gz
 share/xfce/fonts/uniread-variable-05-b-i.pcf.gz
 share/xfce/fonts/uniread-variable-05-b-r-ISO8859-1.pcf.gz
@@ -667,19 +665,19 @@ share/xfce/textures/oldwood.xpm
 share/xfce/textures/paper.xpm
 share/xfce/textures/silver.xpm
 share/xfce/textures/stripe.xpm
-@dirrm etc/xfce
+@dirrm share/xfce/textures
+@dirrm share/xfce/sounds
+@dirrm share/xfce/palettes
+@dirrm share/xfce/icons
+@dirrm share/xfce/help/images
+@dirrm share/xfce/help/html/stylesheet-images
+@dirrm share/xfce/help/html
+@dirrm share/xfce/help
+@comment in REQD_DIRS: @dirrm share/xfce/fonts
+@comment in REQD_DIRS: @dirrm share/xfce/cursors
+@dirrm share/xfce/backdrops
+@comment in REQD_DIRS: @dirrm share/xfce
 @dirrm lib/gtk/themes/engines
 @dirrm lib/gtk/themes
 @dirrm lib/gtk
-@dirrm share/xfce/backdrops
-@dirrm share/xfce/cursors
-@dirrm share/xfce/fonts
-@dirrm share/xfce/help/html/stylesheet-images
-@dirrm share/xfce/help/html
-@dirrm share/xfce/help/images
-@dirrm share/xfce/help
-@dirrm share/xfce/icons
-@dirrm share/xfce/palettes
-@dirrm share/xfce/sounds
-@dirrm share/xfce/textures
-@dirrm share/xfce
+@dirrm etc/xfce
