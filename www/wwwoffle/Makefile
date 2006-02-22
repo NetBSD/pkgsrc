@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2006/02/05 23:11:29 joerg Exp $
+# $NetBSD: Makefile,v 1.62 2006/02/22 23:00:37 wiz Exp $
 
 DISTNAME=	wwwoffle-2.8e
 PKGREVISION=	2
@@ -23,7 +23,7 @@ INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 
 RCD_SCRIPTS=		wwwoffled
 
-BUILD_DEFS+=		USE_INET6
+.include "options.mk"
 
 post-build:
 	cd ${WRKSRC}/cache/search/htdig/scripts; \
@@ -79,11 +79,5 @@ post-install:
 finish:
 	${SETENV} CONFDIR="${PKG_SYSCONFDIR}" PKG_PREFIX="${PREFIX}" \
 		${SH} INSTALL _ POST-INSTALL
-
-.include "../../mk/bsd.prefs.mk"
-
-.if defined(USE_INET6) && ${USE_INET6} == "YES"
-CONFIGURE_ARGS+= --with-ipv6
-.endif
 
 .include "../../mk/bsd.pkg.mk"
