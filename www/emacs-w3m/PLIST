@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2004/12/07 03:59:49 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/02/22 20:35:59 wiz Exp $
 ${EMACS_LISPPREFIX}/w3m/ChangeLog
 ${EMACS_LISPPREFIX}/w3m/ChangeLog.1
 ${EMACS_LISPPREFIX}/w3m/mew-w3m.el
-${EMACS_LISPPREFIX}/w3m/mew-w3m.elc
+@comment not created: ${EMACS_LISPPREFIX}/w3m/mew-w3m.elc
 ${EMACS_LISPPREFIX}/w3m/mime-w3m.el
 ${EMACS_LISPPREFIX}/w3m/mime-w3m.elc
 ${EMACS_LISPPREFIX}/w3m/octet.el
@@ -262,5 +262,5 @@ ${FOR_xemacs215}${ICONDIR}/weather-up.xpm
 ${FOR_emacs21}@dirrm ${ICONDIR}
 ${FOR_xemacs214}@dirrm ${ICONDIR}
 ${FOR_xemacs215}@dirrm ${ICONDIR}
-${FOR_emacs20}@dirrm share/emacs/${EMACS_VERSION}/etc/w3m
-${FOR_emacs21}@dirrm share/emacs/${EMACS_VERSION}/etc/w3m
+${FOR_emacs20}@dirrm ${ETCDIR}/w3m
+${FOR_emacs21}@dirrm ${ETCDIR}/w3m
