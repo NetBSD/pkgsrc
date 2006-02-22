@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/02/17 08:04:34 martti Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/22 21:02:15 wiz Exp $
 
 DISTNAME=		xfce-3.8.18
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		x11
 MASTER_SITES=		http://www.xfce.org/archive/
 
@@ -17,6 +17,12 @@ USE_LIBTOOL=		yes
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+
+FONTS_DIRS.x11+=	${PREFIX}/share/xfce/cursors
+FONTS_DIRS.x11+=	${PREFIX}/share/xfce/fonts
+REQD_DIRS+=		${PREFIX}/share/xfce
+REQD_DIRS+=		${PREFIX}/share/xfce/cursors
+REQD_DIRS+=		${PREFIX}/share/xfce/fonts
 
 .if ${MACHINE_ARCH} == "alpha"
 GCC_REQD+=		2.95
