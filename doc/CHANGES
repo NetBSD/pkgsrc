@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13054 2006/02/22 21:54:30 wiz Exp $
+$NetBSD: CHANGES,v 1.13055 2006/02/22 22:13:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1188,3 +1188,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/ruby-vapor to 0.81nb3 [wiz 2006-02-22]
 	Updated devel/guile-gtk to 0.40.91nb2 [wiz 2006-02-22]
 	Updated graphics/gliv to 1.9.4nb1 [wiz 2006-02-22]
+	Updated comms/scmxx to 0.8.2nb2 [wiz 2006-02-22]
