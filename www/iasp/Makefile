@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:11:24 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/22 20:37:45 wiz Exp $
 
 .include "../../www/iasp/Makefile.common"
 
 PKGNAME=	iasp-${IASP_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Instant ASP: Java implementation of Active Server Pages
 
 USE_TOOLS+=	gtar
@@ -27,7 +27,7 @@ PKG_USERS=	${IASP_USER}:${IASP_GROUP}
 PKG_GROUPS=	${IASP_GROUP}
 
 WRKSRC=		${WRKDIR}/${IASP_DIR}
-OWN_DIRS=	${IASP_DESTDIR}
+REQD_DIRS=	${IASP_DESTDIR}
 OWN_DIRS_PERMS=	${IASP_DESTDIR}/logs ${IASP_USER} ${IASP_GROUP} 0750
 CONFDIR=	${IASP_DESTDIR}/properties
 CFILES=		cdonts.properties	dbserver.properties
@@ -62,7 +62,7 @@ do-build:
 	${CP} ${FILESDIR}/web.xml ${WRKSRC}/WEB-INF
 
 do-install:
-	${MKDIR} ${IASP_DESTDIR:H}
+	${INSTALL_DATA_DIR} ${IASP_DESTDIR:H}
 	cd ${WRKDIR}; ${CP} -R ${IASP_DIR} ${IASP_DESTDIR:H}
 
 .include "../../mk/java-vm.mk"
