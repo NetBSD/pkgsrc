@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.pkg.dist,v 1.12 2006/02/22 21:38:55 wiz Exp $
+# $NetBSD: OSF1.pkg.dist,v 1.13 2006/02/22 21:42:05 wiz Exp $
 #
 
 /set type=dir uname=root gname=system mode=0755
@@ -439,6 +439,52 @@
         manl
         ..
         mann
+        ..
+        ru
+            cat1
+            ..
+            cat2
+            ..
+            cat3
+            ..
+            cat4
+            ..
+            cat5
+            ..
+            cat6
+            ..
+            cat7
+            ..
+            cat8
+            ..
+            cat9
+            ..
+            catl
+            ..
+            catn
+            ..
+            man1
+            ..
+            man2
+            ..
+            man3
+            ..
+            man4
+            ..
+            man5
+            ..
+            man6
+            ..
+            man7
+            ..
+            man8
+            ..
+            man9
+            ..
+            manl
+            ..
+            mann
+            ..
         ..
     ..
     sbin
