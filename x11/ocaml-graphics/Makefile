@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:11:40 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/22 21:00:32 wiz Exp $
 
 .include "../../lang/ocaml/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/ocaml/ocaml-graphics/}
-PKGREVISION=		1
+PKGREVISION=		2
 
 COMMENT+=		(graphics library)
 
@@ -35,12 +35,11 @@ SUBST_CLASSES+=		depend
 SUBST_STAGE.depend=	post-patch
 SUBST_FILES.depend=	otherlibs/graph/.depend
 SUBST_SED.depend=	-e 's,/usr/X11R6,${X11BASE},g'
-SUBST_MESSAGE.depend=	"Fixing .depend in otherlibs/graph"
-
-.include "../../lang/ocaml/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+SUBST_MESSAGE.depend=	Fixing .depend in otherlibs/graph.
 
 post-build:
 	@${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
 
+.include "../../lang/ocaml/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
