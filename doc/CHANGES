@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13044 2006/02/22 20:52:26 wiz Exp $
+$NetBSD: CHANGES,v 1.13045 2006/02/22 20:57:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1178,3 +1178,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/emacs-w3m to 1.3.3nb2 [wiz 2006-02-22]
 	Updated www/iasp to 2.1.1nb4 [wiz 2006-02-22]
 	Updated www/raggle to 0.4.4nb2 [wiz 2006-02-22]
+	Updated www/zope25-ZPhotoSlides to 1.1bnb3 [wiz 2006-02-22]
