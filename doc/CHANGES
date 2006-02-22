@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13040 2006/02/22 07:10:40 wiz Exp $
+$NetBSD: CHANGES,v 1.13041 2006/02/22 14:58:02 rxg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1174,3 +1174,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated games/bomberclone to 0.11.6nb3 [wiz 2006-02-21]
 	Updated www/bluefish to 1.0.5nb3 [wiz 2006-02-21]
 	Updated www/apc-gui to 1.0.3nb4 [wiz 2006-02-22]
+	Updated inputmethod/gcin to 1.1.7 [rxg 2006-02-22]
