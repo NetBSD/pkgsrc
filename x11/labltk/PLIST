@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/24 17:19:06 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/22 20:59:58 wiz Exp $
 bin/labltk
 bin/ocamlbrowser
 lib/ocaml/labltk/balloon.cmi
@@ -212,6 +212,10 @@ lib/ocaml/labltk/tkanim.cma
 lib/ocaml/labltk/tkanim.cmi
 lib/ocaml/labltk/tkanim.mli
 lib/ocaml/labltk/tkcompiler
+lib/ocaml/labltk/tkthread.cmi
+lib/ocaml/labltk/tkthread.cmo
+lib/ocaml/labltk/tkthread.mli
+lib/ocaml/labltk/tkthread.o
 lib/ocaml/labltk/tkvars.cmi
 lib/ocaml/labltk/tkvars.mli
 lib/ocaml/labltk/tkwait.cmi
@@ -224,5 +228,8 @@ lib/ocaml/labltk/winfo.cmi
 lib/ocaml/labltk/winfo.mli
 lib/ocaml/labltk/wm.cmi
 lib/ocaml/labltk/wm.mli
+lib/ocaml/stublibs/dlllabltk.so
+lib/ocaml/stublibs/dlltkanim.so
+@unexec ${RMDIR} %D/lib/ocaml/stublibs 2>/dev/null || ${TRUE}
 @dirrm lib/ocaml/labltk
-@comment in ocaml: @dirrm lib/ocaml
+@unexec ${RMDIR} %D/lib/ocaml 2>/dev/null || ${TRUE}
