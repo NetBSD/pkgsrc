@@ -1,41 +1,80 @@
-<!-- $NetBSD: using.xml,v 1.16 2006/02/12 14:44:59 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.17 2006/02/22 01:30:25 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
-  <title>Using pkgsrc</title>
+<title>Using pkgsrc</title>
 
-  <sect1 id="getting-started">
-    <title>Working with binary packages</title>
+	<para>Basically, there are two ways of using pkgsrc. The first
+	is to only install the package tools and to use binary packages
+	that someone else has prepared. This is the <quote>pkg</quote>
+	in pkgsrc. The second way is to install the <quote>src</quote>
+	of pkgsrc, too. Then you are able to build your own packages,
+	and you can still use binary packages from someone else.</para>
 
-    <para> This section describes how to find, retrieve and install a
-      precompiled binary package that someone else already prepared
-      for your type of machine. </para>
+<sect1 id="using-pkg">
+<title>Using binary packages</title>
 
-    <sect2 id="where-to-get-binary-packages">
-      <title>Where to get binary packages</title>
+	<para>To use binary packages, you need some tools to manage
+	them. On NetBSD, these tools are already installed. On all other
+	operating systems, you need to install them first. For the
+	following platforms, prebuilt versions of the package tools
+	are available and can simply be downloaded and unpacked in the
+	<filename>/</filename> directory:</para>
 
-      <para> Precompiled packages are stored on ftp.NetBSD.org and its
-        mirrors in the directory
-        <filename>/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/</filename> for
-	anonymous FTP access.  <varname>OSVERSION</varname> is the &os;
-	version (<command>uname -r</command>), <varname>ARCH</varname>
-	is the architecture (<command>uname -p</command>).
-	In that directory, there is a
-        subdirectory for each category plus a subdirectory
-        <filename>All</filename> which includes the actual binaries in
-        <filename>.tgz</filename> files. The category subdirectories
-        use symbolic links to those files (this is the same directory
-        layout as in
-        <filename>/usr/pkgsrc/packages</filename>). </para>
+	<informaltable id="binary-bootstrap-kits">
+	<tgroup cols="2">
+	<thead><row><entry>Platform</entry><entry>URL</entry></row></thead>
+	<tbody>
+	<row><entry>Solaris 5.10</entry><entry><filename>http://public.enst.fr/pkgsrc/packages/bootstrap-pkgsrc/</filename></entry></row>
+	</tbody>
+	</tgroup>
+	</informaltable>
 
-      <para> This same directory layout applies for CD-ROM
-        distributions, only that the directory may be rooted somewhere
-        else, probably somewhere below
-        <filename>/cdrom</filename>. Please consult your CD-ROMs
-        documentation for the exact location. </para>
-    </sect2>
+	<para>These prebuilt package tools use
+	<filename>/usr/pkg</filename> for the base directory, and
+	<filename>/var/db/pkg</filename> for the database of installed
+	packages. If you cannot use these directories for whatever
+	reasons (maybe because you're not root), you have to build the
+	package tools yourself, which is explained in <xref
+	linkend="bootstrapping-pkgsrc" />.</para>
 
-    <sect2 id="how-to-use-binary-packages">
-      <title>How to use binary packages</title>
+<sect2 id="finding-binary-packages">
+<title>Finding binary packages</title>
+
+	<para>To install binary packages, you first need to know from
+	where to get them. You can get them on CD-ROMs, DVDs, or via FTP
+	or HTTP.</para>
+
+	<para>For NetBSD, the binary packages are made available on
+	<filename>ftp.NetBSD.org</filename> and its mirrors, in the
+	directory
+	<filename>/pub/NetBSD/packages/<replaceable>OSVERSION</replaceable>/<replaceable>ARCH</replaceable>/</filename>.
+	<replaceable>OSVERSION</replaceable> is the output of
+	<command>uname -r</command>, and <replaceable>ARCH</replaceable>
+	is the output of <command>uname -p</command>.</para>
+
+	<para>For some other platforms, binary packages can be found at
+	the following locations:</para>
+
+	<informaltable id="binary-packages">
+	<tgroup cols="2">
+	<thead><row><entry>Platform</entry><entry>URL</entry></row></thead>
+	<tbody>
+	<row><entry>Solaris 5.10</entry><entry><filename>http://public.enst.fr/pkgsrc/packages/</filename></entry></row>
+	</tbody>
+	</tgroup>
+	</informaltable>
+
+	<para>In each of these directories, there is a subdirectory
+	<filename>All</filename> that contains all the binary packages.
+	Further, there are subdirectories for categories that contain
+	symbolic links that point to the actual binary package in
+	<filename>../All</filename>. This directory layout is used for
+	all package repositories, no matter if they are accessed via
+	HTTP, FTP, NFS, CD-ROM, or the local filesystem.</para>
+
+</sect2>
+<sect2 id="installing-binary-packages">
+<title>Installing binary packages</title>
 
       <para> If you have the files on a CD-ROM or downloaded them to
         your hard disk, you can install them with the following command
