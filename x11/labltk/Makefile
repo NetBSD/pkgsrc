@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:11:39 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/02/22 20:59:58 wiz Exp $
 
 .include "../../lang/ocaml/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/ocaml/labltk/}
-PKGREVISION=		1
+PKGREVISION=		2
 
 COMMENT=		Tk bindings for ocaml
-
 
 CONFIGURE_ARGS+=	-x11include ${X11BASE}/include
 CONFIGURE_ARGS+=	-x11lib ${X11BASE}/lib
@@ -14,7 +13,7 @@ CONFIGURE_ARGS+=	-tkdefs "-I${BUILDLINK_PREFIX.tk}/include  -I${BUILDLINK_PREFIX
 CONFIGURE_ARGS+=	-tklibs "`${SH} -c '. ${TCLCONFIG_SH}; . ${TKCONFIG_SH}; ${ECHO} $$TK_LD_FLAGS $$TCL_LD_FLAGS $$TK_LIBS $$TCL_LIBS'`"
 
 BUILD_TARGET=		world
-INSTALL_DIRS=		${WRKSRC}/otherlibs/labltk
+INSTALL_DIRS=		otherlibs/labltk
 INSTALL_TARGET=		install
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
     (${MACHINE_ARCH} == "sparc")
@@ -28,4 +27,5 @@ BUILDLINK_DEPMETHOD.${BDB_TYPE}=build
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
