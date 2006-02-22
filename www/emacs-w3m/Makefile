@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:11:20 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/22 20:35:59 wiz Exp $
 
 DISTNAME=	emacs-w3m-1.3.3
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://emacs-w3m.namazu.org/
 COMMENT=	Simple w3m interface for Emacs
-
-BROKEN_IN=	pkgsrc-2005Q4
 
 DEPENDS+=	{w3m,w3m-img}>=0.3.1:../../www/w3m
 BUILD_DEPENDS+=	${EMACS_PKGNAME_PREFIX}semi-[0-9]*:../../devel/semi
@@ -24,7 +22,7 @@ EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs214 xemacs215
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}apel>=10.3:../../devel/apel
 .endif
 
-EMACS_MAJOR_VERSION=	${EMACS_VERSION:C/\..*//}
+EMACS_MAJOR_VERSION=	${_EMACS_VERSION:C/\..*//}
 .if ${EMACS_FLAVOR} == "emacs" && ${EMACS_MAJOR_VERSION} == 21
 BUILD_DEPENDS+=	${EMACS_PKGNAME_PREFIX}Mule-UCS>=0.84:../../editors/mule-ucs
 .endif
@@ -43,11 +41,12 @@ DOCUMENTS=	COPYING ChangeLog ChangeLog.1 FAQ FAQ.ja README README.ja README.nama
 ETCDIR=	lib/xemacs/site-packages/etc
 ICONDIR=	${ETCDIR}/w3m
 .else
-ETCDIR=	share/emacs/${EMACS_VERSION:C/[^0-9]*$//}/etc
+ETCDIR=	share/emacs/${_EMACS_VERSION:C/(^[0-9.]*).*$/\1/}/etc
 ICONDIR=	${ETCDIR}/w3m/icons
 .endif
 DOCDIR=	${ETCDIR}/w3m/doc
 PLIST_SUBST+=	DOCDIR=${DOCDIR:Q}
+PLIST_SUBST+=	ETCDIR=${ETCDIR:Q}
 PLIST_SUBST+=	ICONDIR=${ICONDIR:Q}
 
 post-install:
