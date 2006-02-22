@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.3 2006/02/22 16:13:48 joerg Exp $
+
+--- xispid.c.orig	2006-02-22 16:06:00.000000000 +0000
++++ xispid.c
+@@ -42,7 +42,7 @@
+  #include <limits.h>
+ #endif
+ 
+-#if !defined(__FreeBSD__) && !defined(linux) /* setgrent() is int in FreeBSD */
++#if !defined(__FreeBSD__) && !defined(__DragonFly__) && !defined(linux) /* setgrent() is int in FreeBSD */
+ struct passwd *getpwuid();
+ struct group *getgrgid(), *getgrent();
+ uid_t getuid(), geteuid();
