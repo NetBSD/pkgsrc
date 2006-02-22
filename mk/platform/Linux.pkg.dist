@@ -1,5 +1,5 @@
-#     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp 
-#	$NetBSD: Linux.pkg.dist,v 1.11 2006/02/16 18:14:45 wiz Exp $
+#     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp
+#	$NetBSD: Linux.pkg.dist,v 1.12 2006/02/22 21:38:55 wiz Exp $
 #
 
 /set type=dir uname=root gname=sys mode=0755
@@ -29,96 +29,28 @@
         ..
     ..
     man
-        bg 
-            cat1            
+        bg
+            cat1
             ..
-            cat2            
+            cat2
             ..
-            cat3            
+            cat3
             ..
-            cat4            
+            cat4
             ..
-            cat5            
+            cat5
             ..
-            cat6            
+            cat6
             ..
-            cat7            
+            cat7
             ..
-            cat8            
+            cat8
             ..
-            cat9            
+            cat9
             ..
-            catl            
+            catl
             ..
-            catn            
-            ..
-            man1
-            ..
-            man2
-            ..
-            man3
-            ..
-            man4
-            ..
-            man5
-            ..
-            man6
-            ..
-            man7
-            ..
-            man8
-            ..
-            man9
-            ..
-            manl
-            ..
-            mann
-            ..
-        ..
-        cat1           
-        ..
-        cat2            
-        ..
-        cat3            
-        ..
-        cat4            
-        ..
-        cat5            
-        ..
-        cat6            
-        ..
-        cat7            
-        ..
-        cat8            
-        ..
-        cat9            
-        ..
-        catl            
-        ..
-        catn            
-        ..
-        cs 
-            cat1            
-            ..
-            cat2            
-            ..
-            cat3            
-            ..
-            cat4            
-            ..
-            cat5            
-            ..
-            cat6            
-            ..
-            cat7            
-            ..
-            cat8            
-            ..
-            cat9            
-            ..
-            catl            
-            ..
-            catn            
+            catn
             ..
             man1
             ..
@@ -143,28 +75,50 @@
             mann
             ..
         ..
-        de 
-            cat1            
+        cat1
+        ..
+        cat2
+        ..
+        cat3
+        ..
+        cat4
+        ..
+        cat5
+        ..
+        cat6
+        ..
+        cat7
+        ..
+        cat8
+        ..
+        cat9
+        ..
+        catl
+        ..
+        catn
+        ..
+        cs
+            cat1
             ..
-            cat2            
+            cat2
             ..
-            cat3            
+            cat3
             ..
-            cat4            
+            cat4
             ..
-            cat5            
+            cat5
             ..
-            cat6            
+            cat6
             ..
-            cat7            
+            cat7
             ..
-            cat8            
+            cat8
             ..
-            cat9            
+            cat9
             ..
-            catl            
+            catl
             ..
-            catn            
+            catn
             ..
             man1
             ..
@@ -189,28 +143,28 @@
             mann
             ..
         ..
-        es 
-            cat1            
+        de
+            cat1
             ..
-            cat2            
+            cat2
             ..
-            cat3            
+            cat3
             ..
-            cat4            
+            cat4
             ..
-            cat5            
+            cat5
             ..
-            cat6            
+            cat6
             ..
-            cat7            
+            cat7
             ..
-            cat8            
+            cat8
             ..
-            cat9            
+            cat9
             ..
-            catl            
+            catl
             ..
-            catn            
+            catn
             ..
             man1
             ..
@@ -235,28 +189,74 @@
             mann
             ..
         ..
-        fi 
-            cat1            
+        es
+            cat1
             ..
-            cat2            
+            cat2
             ..
-            cat3            
+            cat3
             ..
-            cat4            
+            cat4
             ..
-            cat5            
+            cat5
             ..
-            cat6            
+            cat6
             ..
-            cat7            
+            cat7
             ..
-            cat8            
+            cat8
             ..
-            cat9            
+            cat9
             ..
-            catl            
+            catl
             ..
-            catn            
+            catn
+            ..
+            man1
+            ..
+            man2
+            ..
+            man3
+            ..
+            man4
+            ..
+            man5
+            ..
+            man6
+            ..
+            man7
+            ..
+            man8
+            ..
+            man9
+            ..
+            manl
+            ..
+            mann
+            ..
+        ..
+        fi
+            cat1
+            ..
+            cat2
+            ..
+            cat3
+            ..
+            cat4
+            ..
+            cat5
+            ..
+            cat6
+            ..
+            cat7
+            ..
+            cat8
+            ..
+            cat9
+            ..
+            catl
+            ..
+            catn
             ..
             man1
             ..
@@ -281,28 +281,28 @@
             mann
             ..
 	..
-        fr 
-            cat1            
+        fr
+            cat1
             ..
-            cat2            
+            cat2
             ..
-            cat3            
+            cat3
             ..
-            cat4            
+            cat4
             ..
-            cat5            
+            cat5
             ..
-            cat6            
+            cat6
             ..
-            cat7            
+            cat7
             ..
-            cat8            
+            cat8
             ..
-            cat9            
+            cat9
             ..
-            catl            
+            catl
             ..
-            catn            
+            catn
             ..
             man1
             ..
@@ -328,27 +328,27 @@
             ..
         ..
         ja_JP.EUC
-            cat1            
+            cat1
             ..
-            cat2            
+            cat2
             ..
-            cat3            
+            cat3
             ..
-            cat4            
+            cat4
             ..
-            cat5            
+            cat5
             ..
-            cat6            
+            cat6
             ..
-            cat7            
+            cat7
             ..
-            cat8            
+            cat8
             ..
-            cat9            
+            cat9
             ..
-            catl            
+            catl
             ..
-            catn            
+            catn
             ..
             man1
             ..
@@ -373,28 +373,28 @@
             mann
             ..
         ..
-        pl 
-            cat1            
+        pl
+            cat1
             ..
-            cat2            
+            cat2
             ..
-            cat3            
+            cat3
             ..
-            cat4            
+            cat4
             ..
-            cat5            
+            cat5
             ..
-            cat6            
+            cat6
             ..
-            cat7            
+            cat7
             ..
-            cat8            
+            cat8
             ..
-            cat9            
+            cat9
             ..
-            catl            
+            catl
             ..
-            catn            
+            catn
             ..
             man1
             ..
