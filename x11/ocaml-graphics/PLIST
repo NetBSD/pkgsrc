@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/24 17:17:49 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/22 21:00:32 wiz Exp $
 lib/ocaml/graphics.a
 lib/ocaml/graphics.cma
 lib/ocaml/graphics.cmi
@@ -7,4 +7,6 @@ lib/ocaml/graphics.mli
 lib/ocaml/graphicsX11.cmi
 lib/ocaml/graphicsX11.mli
 lib/ocaml/libgraphics.a
-@comment in ocaml: @dirrm lib/ocaml
+lib/ocaml/stublibs/dllgraphics.so
+@unexec ${RMDIR} %D/lib/ocaml/stublibs 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib/ocaml 2>/dev/null || ${TRUE}
