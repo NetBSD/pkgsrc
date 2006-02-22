@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/11/01 21:19:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/02/22 20:58:43 wiz Exp $
 bin/gdk-pixbuf-mlsource
 bin/lablgladecc2
 bin/lablgtk2
@@ -287,5 +287,13 @@ lib/ocaml/lablgtk2/varcc
 lib/ocaml/lablgtk2/win32.h
 lib/ocaml/lablgtk2/wrappers.h
 lib/ocaml/lablgtk2/xml_lexer.mli
+lib/ocaml/stublibs/dlllablglade2.so
+lib/ocaml/stublibs/dlllablgnomecanvas.so
+lib/ocaml/stublibs/dlllablgnomeui.so
+lib/ocaml/stublibs/dlllablgtk2.so
+lib/ocaml/stublibs/dlllablgtkspell.so
+lib/ocaml/stublibs/dlllablpanel.so
+lib/ocaml/stublibs/dlllablrsvg.so
+@unexec ${RMDIR} %D/lib/ocaml/stublibs 2>/dev/null || ${TRUE}
 @dirrm lib/ocaml/lablgtk2
-@comment in ocaml: @dirrm lib/ocaml
+@unexec ${RMDIR} %D/lib/ocaml 2>/dev/null || ${TRUE}
