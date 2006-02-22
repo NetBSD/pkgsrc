@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/02/05 23:08:57 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2006/02/22 11:36:37 darcy Exp $
 
 DISTNAME=		sam
 PKGNAME=		sam-4.3
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.msg.gz
 MAINTAINER=		tech-pkg@NetBSD.org
 COMMENT=		Unix version of Rob Pike's editor for plan9
 
-DEPENDS+=		libXgFonts-1.0nb1:../../fonts/Xg
+DEPENDS+=		libXgFonts>=1.0nb1:../../fonts/Xg
 
 WRKSRC=			${WRKDIR}
 EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${SH}
