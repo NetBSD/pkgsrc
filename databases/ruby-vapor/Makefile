@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:08:37 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/02/22 21:02:47 wiz Exp $
 
 DISTNAME=	vapor-0.81
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/215/
 
