@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:10:31 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/22 22:51:28 wiz Exp $
 #
 
 DISTNAME=	sitescooper-2.2.8
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net comms
 MASTER_SITES=	http://sitescooper.cx/released/
 
@@ -15,6 +15,9 @@ DEPENDS+=	pilotmgr-[0-9]*:../../comms/pilotmgr
 
 USE_TOOLS+=	perl:run
 NO_BUILD=	yes
+
+CONF_FILES+=	${PREFIX}/share/examples/sitescooper/sitescooper.cf \
+		${PREFIX}/etc/sitescooper.cf \
 
 INSTALLATION_DIRS=	bin etc man/man1
 
@@ -45,9 +48,8 @@ do-install:
 .for file in CHANGES.txt README.txt sitescooper.spec
 	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/sitescooper
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/sitescooper.cf ${PREFIX}/etc/sitescooper.cf.sample
-	if [ ! -f ${PREFIX}/etc/sitescooper.cf ]; then \
-		${INSTALL_DATA} ${WRKSRC}/sitescooper.cf ${PREFIX}/etc ; \
-	fi
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/sitescooper
+	${INSTALL_DATA} ${WRKSRC}/sitescooper.cf \
+		${PREFIX}/share/examples/sitescooper/sitescooper.cf
 
 .include "../../mk/bsd.pkg.mk"
