@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/07/14 19:15:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/02/22 22:13:05 wiz Exp $
 bin/scmxx
 man/de/man1/scmxx.1
 man/it/man1/scmxx.1
@@ -16,7 +16,5 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/scmxx.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/scmxx.mo
 @dirrm share/doc/scmxx
 @dirrm share/examples/scmxx
-@dirrm man/it/man1
-@dirrm man/it
-@dirrm man/ru/man1
-@dirrm man/ru
+@unexec ${RMDIR} %D/man/it/man1 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/it 2>/dev/null || ${TRUE}
