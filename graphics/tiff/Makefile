@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2006/02/20 17:56:36 joerg Exp $
+# $NetBSD: Makefile,v 1.76 2006/02/22 12:38:17 drochner Exp $
 
 DISTNAME=	tiff-3.8.0
 PKGREVISION=	1
@@ -20,9 +20,6 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--enable-cxx
-# next line shouldn't be necessary, but 3.8.0 doesn't
-# compile correctly without it
-CONFIGURE_ARGS+=	--with-default-strip-size=8192
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/tiff
 
 .include "options.mk"
