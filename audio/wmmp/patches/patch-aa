@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/02/23 23:34:29 rpaulo Exp $
+
+--- configure	2006-02-23 22:55:17.000000000 +0000
++++ configure.new	2006-02-23 22:55:49.000000000 +0000
+@@ -10020,6 +10020,9 @@ openbsd*)
+ solaris*)
+   OS=solaris
+   ;;
++netbsd*)
++  OS=netbsd
++  ;;
+ *)
+   echo ""
+   echo "Sorry, ${host_os} is not supported yet"
