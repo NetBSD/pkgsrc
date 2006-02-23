@@ -1,0 +1,16 @@
+$NetBSD: patch-aw,v 1.1 2006/02/23 19:02:50 joerg Exp $
+
+--- openbsd-compat/port-tun.c.orig	2006-02-23 18:42:44.000000000 +0000
++++ openbsd-compat/port-tun.c
+@@ -93,7 +93,11 @@ sys_tun_open(int tun, int mode)
+ #ifdef SSH_TUN_FREEBSD
+ #include <sys/socket.h>
+ #include <net/if.h>
++#if defined(__DragonFly__)
++#include <net/tun/if_tun.h>
++#else
+ #include <net/if_tun.h>
++#endif
+ 
+ int
+ sys_tun_open(int tun, int mode)
