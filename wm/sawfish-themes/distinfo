@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 18:43:55 wiz Exp $
+$NetBSD: distinfo,v 1.3 2006/02/23 19:44:46 jschauma Exp $
 
 SHA1 (sawfish-themes/1_0-0.30.tar.gz) = 4fd1b0b0d1d0b04d1ff91cb2ffbcaeb7ceafc5b0
 RMD160 (sawfish-themes/1_0-0.30.tar.gz) = df0ea3b8e829cfa514a1e834055d0167b258bceb
@@ -267,9 +267,6 @@ Size (sawfish-themes/ice-icles-2.tar.gz) = 16155 bytes
 SHA1 (sawfish-themes/inept-0.30.tar.gz) = 17b22d371624b8813bf16e1a7239e70c84de21b1
 RMD160 (sawfish-themes/inept-0.30.tar.gz) = 8e44934164de65c694021de1c15e0fb8bd565efe
 Size (sawfish-themes/inept-0.30.tar.gz) = 3575 bytes
-SHA1 (sawfish-themes/kde2_-0.30.tar.gz) = 776af889b14c9a99226283a1a90d075e8776a19d
-RMD160 (sawfish-themes/kde2_-0.30.tar.gz) = dff43dc8318de186444619bae71244c613819422
-Size (sawfish-themes/kde2_-0.30.tar.gz) = 12107 bytes
 SHA1 (sawfish-themes/kickstart13-0.30.tar.gz) = 781cb92fef9906edd355f263d6d20fe4391f1f7b
 RMD160 (sawfish-themes/kickstart13-0.30.tar.gz) = 45c2fcec98733dc9ff5dbc0bea09141b5c5dbe0f
 Size (sawfish-themes/kickstart13-0.30.tar.gz) = 3477 bytes
