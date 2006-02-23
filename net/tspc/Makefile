@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/01/15 11:36:50 kristerw Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/23 10:18:02 ghen Exp $
 
 DISTNAME=		tspc-2.1.1-src
 PKGNAME=		${DISTNAME:S/-src//}
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://www.hexago.com/files/
 EXTRACT_SUFX=		.tgz
@@ -26,6 +27,7 @@ TARGET=			${LOWER_OPSYS}
 .endif
 
 MAKE_ENV+=		target=${TARGET:Q}
+MAKE_ENV+=		configdir=${PREFIX}/share/tspc
 
 WRKSRC=			${WRKDIR}/tspc2
 
@@ -34,11 +36,18 @@ CONF_FILES_MODE=	0600
 
 RCD_SCRIPTS=		tspc
 
+PLIST_SUBST+=		TARGET=${TARGET:Q}
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/tspc ${PREFIX}/sbin/
 	${INSTALL_MAN} ${WRKSRC}/man/man5/tspc.conf.5 ${PREFIX}/${PKGMANDIR}/man5/
 	${INSTALL_MAN} ${WRKSRC}/man/man8/tspc.8 ${PREFIX}/${PKGMANDIR}/man8/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/tspc/
 	${INSTALL_DATA} ${WRKSRC}/bin/tspc.conf.sample ${PREFIX}/share/examples/tspc/tspc.conf
+	${INSTALL_DATA_DIR} ${PREFIX}/share/tspc/ ${PREFIX}/share/tspc/template/
+	${INSTALL_SCRIPT} ${WRKSRC}/template/${TARGET}.sh ${PREFIX}/share/tspc/template/
+	${INSTALL_SCRIPT} ${WRKSRC}/template/checktunnel.sh ${PREFIX}/share/tspc/template/
+	${INSTALL_DATA} ${WRKSRC}/template/README ${PREFIX}/share/tspc/template/
+	${INSTALL_DATA} ${WRKSRC}/template/variables_environ ${PREFIX}/share/tspc/template/
 
 .include "../../mk/bsd.pkg.mk"
