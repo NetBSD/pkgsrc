@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 2004/04/24 01:15:12 wiz Exp $
+$NetBSD: patch-ac,v 1.6 2006/02/23 21:24:12 joerg Exp $
 
 --- Local.config.orig	Wed Apr  1 02:58:05 1998
 +++ Local.config
@@ -54,13 +54,10 @@ $NetBSD: patch-ac,v 1.5 2004/04/24 01:15:12 wiz Exp $
  XCOMM the default paths and man page extension.
  XCOMM
 -XCOMM BINDIR = /usr/local/bin
--XCOMM MANDIR = /usr/local/man
--XCOMM #undef ManSuffix
--XCOMM #define ManSuffix 1
+ XCOMM MANDIR = /usr/local/man
+ XCOMM #undef ManSuffix
+ XCOMM #define ManSuffix 1
 +BINDIR = ${PREFIX}/bin
-+MANDIR = ${PREFIX}/man/cat1
-+#undef ManSuffix
-+#define ManSuffix 1
  
  XCOMM Add '-g' here if you want to include debugging information.
  XCOMM Also add any optimizer flags etc. that you want.

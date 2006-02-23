@@ -1,7 +1,15 @@
-$NetBSD: patch-ae,v 1.1 1999/01/01 03:15:56 garbled Exp $
+$NetBSD: patch-ae,v 1.2 2006/02/23 21:24:12 joerg Exp $
 --- rw/rwTable.c.orig	Thu Dec 31 20:12:10 1998
 +++ rw/rwTable.c	Thu Dec 31 20:13:44 1998
-@@ -231,11 +231,6 @@
+@@ -122,7 +122,6 @@ static char *usedMagicReader = NULL;
+ static Image *
+ readMagic(char *file)
+ {
+-    extern int errno;
+     int i;
+ 
+     errno = 0;
+@@ -231,13 +230,6 @@ RWtableGetWriterList()
  char *
  RWGetMsg()
  {
@@ -10,6 +18,8 @@ $NetBSD: patch-ae,v 1.1 1999/01/01 03:15:56 garbled Exp $
 -#else
 -    extern char *sys_errlist[];
 -#endif
-     extern int errno;
- 
+-    extern int errno;
+-
      if (RWtableMsg[0] == '\0') {
+ 	if (errno == 0)
+ 	    return "";
