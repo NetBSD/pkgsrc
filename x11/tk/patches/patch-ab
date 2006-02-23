@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.23 2006/01/16 14:48:34 adam Exp $
+$NetBSD: patch-ab,v 1.24 2006/02/23 23:31:52 minskim Exp $
 
---- unix/configure.orig	2005-12-06 03:42:37.000000000 +0100
+--- unix/configure.orig	2005-12-06 02:42:37.000000000 +0000
 +++ unix/configure
 @@ -2007,12 +2007,13 @@ fi
      # Step 3: set configuration options based on system name and version.
@@ -17,14 +17,16 @@ $NetBSD: patch-ab,v 1.23 2006/01/16 14:48:34 adam Exp $
      CFLAGS_DEBUG=-g
      CFLAGS_OPTIMIZE=-O
      if test "$GCC" = "yes" ; then
-@@ -2699,7 +2700,6 @@ if eval "test \"`echo '$ac_cv_header_'$a
+@@ -2699,8 +2700,7 @@ if eval "test \"`echo '$ac_cv_header_'$a
    
  		# NetBSD/SPARC needs -fPIC, -fpic will not do.
  		SHLIB_CFLAGS="-fPIC"
 -		SHLIB_LD="ld -Bshareable -x"
- 		SHLIB_LD_LIBS=""
+-		SHLIB_LD_LIBS=""
++		SHLIB_LD_LIBS='${LIBS}'
  		SHLIB_SUFFIX=".so"
  		DL_OBJS="tclLoadDl.o"
+ 		DL_LIBS=""
 @@ -2720,13 +2720,23 @@ EOF
  if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
    egrep "yes" >/dev/null 2>&1; then
