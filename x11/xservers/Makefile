@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2006/02/08 15:20:49 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2006/02/23 15:39:48 tron Exp $
 
 DISTNAME=	xservers-3.3.6.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
