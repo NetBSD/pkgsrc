@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.7 2006/02/23 17:37:01 wiz Exp $
+
+--- converter/other/xwdtopnm.c.orig	2005-12-15 03:45:59.000000000 +0000
++++ converter/other/xwdtopnm.c
+@@ -988,7 +988,7 @@ getpix(pixelReader * const rdrP) {
+                     (rdrP->itemBuffer >> nBitsToLeave) & bitsToTakeMask;
+             } else {
+                 bitsToTake = rdrP->itemBuffer & bitsToTakeMask;
+-                bitsToTake >>= nBitsToTake;
++                rdrP->itemBuffer >>= nBitsToTake;
+             }                
+             /* Shift the bits into the right end of the accumulator */
+             pixel <<= nBitsToTake;
