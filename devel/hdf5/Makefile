@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/02/15 16:32:57 drochner Exp $
+# $NetBSD: Makefile,v 1.35 2006/02/23 18:28:06 minskim Exp $
 
 DISTNAME=	hdf5-1.6.5
 PKGREVISION=	1
@@ -9,6 +9,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://hdf.ncsa.uiuc.edu/HDF5/
 COMMENT=	Hierarchical Data Format (new generation)
 
+DIST_SUBDIR=		${PKGNAME_NOREV}
 USE_LIBTOOL=		yes
 USE_TOOLS+=		tr
 GNU_CONFIGURE=		yes
