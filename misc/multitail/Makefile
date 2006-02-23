@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/17 13:50:18 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/02/23 23:01:00 rillig Exp $
 #
 
 DISTNAME=	multitail-3.8.6
@@ -17,10 +17,10 @@ CONF_FILES=	${PREFIX:Q}/share/examples/multitail/multitail.conf	\
 		${PKG_SYSCONFDIR:Q}/multitail.conf
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/multitail ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/multitail.1 ${PREFIX}/man/man1/
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/multitail ${PREFIX:Q}/bin/
+	${INSTALL_MAN} ${WRKSRC:Q}/multitail.1 ${PREFIX:Q}/man/man1/
 	${INSTALL_DATA} ${WRKSRC:Q}/multitail.conf ${PREFIX:Q}/share/examples/multitail/
-	cd ${WRKSRC} && ${INSTALL_DATA} *.txt manual*.html ${PREFIX}/share/doc/multitail/
+	cd ${WRKSRC:Q} && ${INSTALL_DATA} *.txt manual*.html ${PREFIX:Q}/share/doc/multitail/
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
