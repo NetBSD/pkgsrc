@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.32 2006/01/16 14:47:35 adam Exp $
+$NetBSD: patch-ab,v 1.33 2006/02/23 23:30:57 minskim Exp $
 
---- unix/configure.orig	2005-12-06 17:03:33.000000000 +0100
+--- unix/configure.orig	2005-12-06 16:03:33.000000000 +0000
 +++ unix/configure
 @@ -2542,12 +2542,13 @@ fi
      # Step 3: set configuration options based on system name and version.
@@ -54,7 +54,8 @@ $NetBSD: patch-ab,v 1.32 2006/01/16 14:47:35 adam Exp $
  		# NetBSD/SPARC needs -fPIC, -fpic will not do.
  		SHLIB_CFLAGS="-fPIC"
 -		SHLIB_LD="ld -Bshareable -x"
- 		SHLIB_LD_LIBS=""
+-		SHLIB_LD_LIBS=""
++		SHLIB_LD_LIBS='${LIBS}'
  		SHLIB_SUFFIX=".so"
  		DL_OBJS="tclLoadDl.o"
  		DL_LIBS=""
