@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/02/05 23:10:28 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2006/02/23 23:37:47 minskim Exp $
 
 DISTNAME=	ns-src-2.29
 PKGNAME=	${DISTNAME:S/-src//}
@@ -11,6 +11,9 @@ HOMEPAGE=	http://www.isi.edu/nsnam/ns/
 COMMENT=	The UCB/LBNL Network Simulator Version 2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+BUILDLINK_DEPENDS.tcl+=	tcl>=8.4.12nb1
+BUILDLINK_DEPENDS.tk+=	tk>=8.4.12nb2
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 USE_LANGUAGES=	c c++
