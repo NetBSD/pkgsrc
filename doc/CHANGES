@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13068 2006/02/23 22:49:10 darcy Exp $
+$NetBSD: CHANGES,v 1.13069 2006/02/23 23:33:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1203,3 +1203,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added textproc/p5-XML-Handler-Trees 0.02 [kleink 2006-02-23]
 	Added textproc/p5-XML-Atom-Stream 0.02 [kleink 2006-02-23]
 	Updated fonts/mftrace to 1.1.18 [darcy 2006-02-23]
+	Updated lang/tcl to 8.4.12nb1 [minskim 2006-02-23]
+	Updated x11/tk to 8.4.12nb2 [minskim 2006-02-23]
