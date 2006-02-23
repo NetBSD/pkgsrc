@@ -1,4 +1,4 @@
-# $NetBSD: themes.sawfish,v 1.1.1.1 2002/10/07 17:00:45 jschauma Exp $
+# $NetBSD: themes.sawfish,v 1.2 2006/02/23 19:22:54 jschauma Exp $
 # Themes to be installed
 # If you would like to install a subset, set SAWFISH_THEMES accordingly
 
@@ -91,7 +91,6 @@ SAWFISH_THEMES?=	1_0-0.30.tar.gz 				\
 			ice_-0.30.tar.gz				\
 			ice-icles-2.tar.gz				\
 			inept-0.30.tar.gz				\
-			kde2_-0.30.tar.gz 				\
 			kickstart13-0.30.tar.gz				\
 			latem-0.30.tar.gz				\
 			lines_-0.30.tar.gz				\
