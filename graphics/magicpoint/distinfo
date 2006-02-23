@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2005/04/07 23:11:56 hira Exp $
+$NetBSD: distinfo,v 1.15 2006/02/23 20:49:49 joerg Exp $
 
 SHA1 (magicpoint-1.10a.tar.gz) = 7510ee965316cb52eac7a430f0e19a87a337fe5c
 RMD160 (magicpoint-1.10a.tar.gz) = 167bf8b57bd4bb98c8f4fdba82a5733dda1f8a6a
@@ -13,3 +13,6 @@ SHA1 (patch-ag) = 02e53e3e498b150d528349c9712978f164e8836f
 SHA1 (patch-ah) = 2cd87d9697be2ebd9d7c0a936d49583286de62d3
 SHA1 (patch-ai) = 809b2cf509bab0ee1bed1fecb2cf2d8df912ce8b
 SHA1 (patch-aj) = 07ed5e995bf35dcbe65fc7c0ab800d1b8905e004
+SHA1 (patch-ak) = bb1364f9fec905e09eb7453a4bc0a8cab557b3b3
+SHA1 (patch-al) = a0956fc353d38f937d3829fa0e6cd70c9cb60faa
+SHA1 (patch-am) = ba255a9e749f627d777cebbd29521b8c368d69dc
