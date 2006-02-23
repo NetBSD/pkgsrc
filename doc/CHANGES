@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13062 2006/02/23 13:05:16 markd Exp $
+$NetBSD: CHANGES,v 1.13063 2006/02/23 15:40:35 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1196,3 +1196,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/p5-Cache-Memcached version 1.14 [grant 2006-02-23]
 	Updated net/tspc to 2.1.1nb1 [ghen 2006-02-23]
 	Updated graphics/digikam to 0.8.1nb1 [markd 2006-02-23]
+	Updated x11/xservers to 3.3.6.5nb2 [tron 2006-02-23]
