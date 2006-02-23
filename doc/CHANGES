@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13059 2006/02/23 03:51:54 grant Exp $
+$NetBSD: CHANGES,v 1.13060 2006/02/23 03:56:57 grant Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1193,3 +1193,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/sitescooper to 2.2.8nb3 [wiz 2006-02-22]
 	Updated net/tor to 0.1.0.17 [jschauma 2006-02-22]
 	Updated devel/memcached to 1.1.12 [grant 2006-02-23]
+	Added devel/p5-Cache-Memcached version 1.14 [grant 2006-02-23]
