@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.315 2006/02/23 20:25:02 kleink Exp $
+# $NetBSD: Makefile,v 1.316 2006/02/23 20:29:15 kleink Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -184,6 +184,7 @@ SUBDIR+=	p5-Text-WrapI18N
 SUBDIR+=	p5-Text-Wrapper
 SUBDIR+=	p5-XML-Atom
 SUBDIR+=	p5-XML-Atom-SimpleFeed
+SUBDIR+=	p5-XML-Atom-Stream
 SUBDIR+=	p5-XML-Checker
 SUBDIR+=	p5-XML-DOM
 SUBDIR+=	p5-XML-Encoding
