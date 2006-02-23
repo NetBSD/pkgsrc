@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13065 2006/02/23 18:00:33 joerg Exp $
+$NetBSD: CHANGES,v 1.13066 2006/02/23 20:10:32 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1199,3 +1199,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xservers to 3.3.6.5nb2 [tron 2006-02-23]
 	Updated graphics/netpbm to 10.31nb3 [wiz 2006-02-23]
 	Updated graphics/TiffIO to 1.1.0.3nb3 [joerg 2006-02-23]
+	Updated textproc/p5-XML-Atom to 0.17 [kleink 2006-02-23]
