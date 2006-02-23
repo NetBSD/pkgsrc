@@ -1,8 +1,19 @@
-$NetBSD: patch-aa,v 1.1 2006/02/18 16:50:39 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2006/02/23 18:11:27 joerg Exp $
 
---- configure.orig	2006-02-18 17:45:22.000000000 +0100
+--- configure.orig	2006-01-27 21:45:02.000000000 +0000
 +++ configure
-@@ -122,7 +122,7 @@ case "$UNAMEM" in
+@@ -75,6 +75,10 @@ case "$UNAMES" in
+     SYS="FREEBSD"
+     LDFLAGS="$LDFLAGS -lm"
+     ;;
++  DragonFly)
++    SYS="DRAGONFLY"
++    LDFLAGS="$LDFLAGS -lm"
++    ;;
+   NetBSD)
+     SYS="NETBSD"
+     LDFLAGS="$LDFLAGS -lm"
+@@ -122,7 +126,7 @@ case "$UNAMEM" in
        ASFLAGS="-f macho -DPREFIX"
      fi
      ;;
