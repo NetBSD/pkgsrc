@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.18 2006/01/16 14:47:35 adam Exp $
+$NetBSD: patch-af,v 1.19 2006/02/23 23:30:57 minskim Exp $
 
---- unix/tcl.m4.orig	2005-12-06 17:03:34.000000000 +0100
+--- unix/tcl.m4.orig	2005-12-06 16:03:34.000000000 +0000
 +++ unix/tcl.m4
 @@ -900,6 +900,7 @@ AC_DEFUN(SC_CONFIG_CFLAGS, [
      # Step 3: set configuration options based on system name and version.
@@ -84,7 +84,8 @@ $NetBSD: patch-af,v 1.18 2006/01/16 14:47:35 adam Exp $
  		# NetBSD/SPARC needs -fPIC, -fpic will not do.
  		SHLIB_CFLAGS="-fPIC"
 -		SHLIB_LD="ld -Bshareable -x"
- 		SHLIB_LD_LIBS=""
+-		SHLIB_LD_LIBS=""
++		SHLIB_LD_LIBS='${LIBS}'
  		SHLIB_SUFFIX=".so"
  		DL_OBJS="tclLoadDl.o"
  		DL_LIBS=""
