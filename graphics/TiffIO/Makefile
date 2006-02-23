@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:09:27 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/23 17:59:49 joerg Exp $
 #
 
 DISTNAME=		TiffIO-110c
 PKGNAME=		TiffIO-1.1.0.3
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics
 MASTER_SITES=		http://artis.imag.fr/Software/TiffIO/
 EXTRACT_SUFX=		.tgz
@@ -28,9 +28,7 @@ do-install:
 
 BUILD_ENV+=		QTDIR="${QTDIR}"
 
-# XXX The package uses an included version of tiff.
-#.include "../../graphics/tiff/buildlink3.mk"
-
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
 
