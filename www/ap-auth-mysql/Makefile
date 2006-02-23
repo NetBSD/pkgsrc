@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:11:16 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/23 01:27:36 ben Exp $
 #
 
 DISTNAME=		libapache-mod-auth-mysql_4.3.1
@@ -13,6 +13,7 @@ HOMEPAGE=		http://packages.debian.org/unstable/web/libapache-mod-auth-mysql.html
 COMMENT=		Apache (${PKG_APACHE}) module to allow authentication against a MySQL database
 
 GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--with-mysql-includes=${BUILDLINK_PREFIX.mysql-client}/include/mysql	\
 			--with-mysql-libs=${BUILDLINK_PREFIX.mysql-client}/lib/mysql
