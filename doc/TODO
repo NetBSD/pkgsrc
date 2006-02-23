@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4634 2006/02/23 17:40:15 wiz Exp $
+$NetBSD: TODO,v 1.4635 2006/02/23 18:01:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -514,6 +514,7 @@ Suggested package updates
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o g2-0.50
+	o gail-1.8.10
 	o galeon-2.0.0
 	o gamin-0.1.6
 	o gap-4r4p3
@@ -677,6 +678,7 @@ Suggested package updates
 	o libggi-2.2
 	o libggimisc-2.1.2
 	o libgii-1.0.0
+	o libglademm-2.6.2
 	o libhydrogen-0.9.2
 	o libjit-0.0.6
 	o liblive-2005.10.05
