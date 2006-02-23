@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13058 2006/02/23 03:40:30 jschauma Exp $
+$NetBSD: CHANGES,v 1.13059 2006/02/23 03:51:54 grant Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1192,3 +1192,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/gauche to 0.8.6nb1 [wiz 2006-02-22]
 	Updated net/sitescooper to 2.2.8nb3 [wiz 2006-02-22]
 	Updated net/tor to 0.1.0.17 [jschauma 2006-02-22]
+	Updated devel/memcached to 1.1.12 [grant 2006-02-23]
