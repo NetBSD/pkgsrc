@@ -1,0 +1,75 @@
+$NetBSD: patch-ab,v 1.1 2006/02/23 22:19:45 joerg Exp $
+
+--- src/app-utils/gnc-ui-util.c.orig	2006-02-23 18:49:41.000000000 +0000
++++ src/app-utils/gnc-ui-util.c
+@@ -47,6 +47,14 @@
+ #include "Transaction.h"
+ #include "guile-mappings.h"
+ 
++#if defined(__DragonFly__)
++#define LC_CAST	(char **)
++#define LC_CAST2 (char *)
++#else
++#define LC_CAST
++#define LC_CAST2
++#endif
++
+ 
+ #define KEY_CURRENCY_CHOICE "currency_choice"
+ #define KEY_CURRENCY_OTHER  "currency_other"
+@@ -738,15 +746,15 @@ gnc_localeconv (void)
+ 
+   lc = *localeconv();
+ 
+-  gnc_lconv_set_utf8(&lc.decimal_point, ".");
+-  gnc_lconv_set_utf8(&lc.thousands_sep, ",");
+-  gnc_lconv_set_utf8(&lc.grouping, "\003");
+-  gnc_lconv_set_utf8(&lc.int_curr_symbol, "USD ");
+-  gnc_lconv_set_utf8(&lc.currency_symbol, "$");
+-  gnc_lconv_set_utf8(&lc.mon_decimal_point, ".");
+-  gnc_lconv_set_utf8(&lc.mon_thousands_sep, ",");
+-  gnc_lconv_set_utf8(&lc.mon_grouping, "\003");
+-  gnc_lconv_set_utf8(&lc.negative_sign, "-");
++  gnc_lconv_set_utf8(LC_CAST & lc.decimal_point, ".");
++  gnc_lconv_set_utf8(LC_CAST & lc.thousands_sep, ",");
++  gnc_lconv_set_utf8(LC_CAST & lc.grouping, "\003");
++  gnc_lconv_set_utf8(LC_CAST & lc.int_curr_symbol, "USD ");
++  gnc_lconv_set_utf8(LC_CAST & lc.currency_symbol, "$");
++  gnc_lconv_set_utf8(LC_CAST & lc.mon_decimal_point, ".");
++  gnc_lconv_set_utf8(LC_CAST & lc.mon_thousands_sep, ",");
++  gnc_lconv_set_utf8(LC_CAST & lc.mon_grouping, "\003");
++  gnc_lconv_set_utf8(LC_CAST & lc.negative_sign, "-");
+ 
+   gnc_lconv_set_char(&lc.frac_digits, 2);
+   gnc_lconv_set_char(&lc.int_frac_digits, 2);
+@@ -1224,12 +1232,12 @@ PrintAmountInternal(char *buf, gnc_numer
+     if (info->monetary)
+     {
+       separator = lc->mon_thousands_sep[0];
+-      group = lc->mon_grouping;
++      group = LC_CAST2 lc->mon_grouping;
+     }
+     else
+     {
+       separator = lc->thousands_sep[0];
+-      group = lc->grouping;
++      group = LC_CAST2 lc->grouping;
+     }
+ 
+     buf_ptr = buf;
+@@ -1574,13 +1582,13 @@ xaccParseAmount (const char * in_str, gb
+   {
+     group_separator = lc->mon_thousands_sep[0];
+     decimal_point = lc->mon_decimal_point[0];
+-    group = lc->mon_grouping;
++    group = LC_CAST2 lc->mon_grouping;
+   }
+   else
+   {
+     group_separator = lc->thousands_sep[0];
+     decimal_point = lc->decimal_point[0];
+-    group = lc->grouping;
++    group = LC_CAST2 lc->grouping;
+   }
+ 
+   return xaccParseAmountExtended(in_str, monetary, negative_sign, decimal_point,
