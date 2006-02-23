@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13069 2006/02/23 23:33:08 minskim Exp $
+$NetBSD: CHANGES,v 1.13070 2006/02/23 23:37:32 rpaulo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1205,3 +1205,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated fonts/mftrace to 1.1.18 [darcy 2006-02-23]
 	Updated lang/tcl to 8.4.12nb1 [minskim 2006-02-23]
 	Updated x11/tk to 8.4.12nb2 [minskim 2006-02-23]
+	Added audio/wmmp 0.10.0 [rpaulo 2006-02-23]
