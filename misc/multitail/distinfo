@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.7 2006/02/23 18:03:57 rillig Exp $
+$NetBSD: distinfo,v 1.8 2006/02/23 23:01:00 rillig Exp $
 
 SHA1 (multitail-3.8.6.tgz) = 993e40191a21ceb00470322124d589f9628d0a62
 RMD160 (multitail-3.8.6.tgz) = e2f076ae7a695885a83d58129e0f4c62d6142c74
 Size (multitail-3.8.6.tgz) = 75711 bytes
-SHA1 (patch-Makefile) = 732b99c9efebecb2224d45520eb31bc4ec6314d6
 SHA1 (patch-aa) = 732b99c9efebecb2224d45520eb31bc4ec6314d6
