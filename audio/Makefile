@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.300 2006/01/18 15:50:40 jmmv Exp $
+# $NetBSD: Makefile,v 1.301 2006/02/23 23:35:27 rpaulo Exp $
 #
 
 COMMENT=	Audio tools
@@ -254,6 +254,7 @@ SUBDIR+=	vorbis-tools
 SUBDIR+=	vorbisgain
 SUBDIR+=	wavesurfer
 SUBDIR+=	wmmixer
+SUBDIR+=	wmmp
 SUBDIR+=	wmmp3
 SUBDIR+=	wmsmixer
 SUBDIR+=	wmusic
