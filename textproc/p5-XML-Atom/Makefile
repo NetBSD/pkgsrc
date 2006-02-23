@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:11:04 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/02/23 19:57:26 kleink Exp $
 
-DISTNAME=	XML-Atom-0.16
+DISTNAME=	XML-Atom-0.17
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 SVR4_PKGNAME=	p5xat
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
@@ -13,6 +12,7 @@ COMMENT=	Atom feed and API implementation
 
 DEPENDS+=	p5-XML-LibXML>=1.54:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
+DEPENDS+=	p5-XML-XPath-[0-9]*:../../textproc/p5-XML-XPath
 
 # Client/Server for Atom API
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
