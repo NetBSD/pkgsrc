@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.530 2006/02/19 21:28:35 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.531 2006/02/24 14:24:42 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1886,7 +1886,7 @@ sub checkperms($) {
 sub resolve_relative_path($$) {
 	my ($relpath, $adjust_depth) = @_;
 
-	$relpath =~ s,\$\{PKGSRCDIR\},$current_dir/$pkgsrcdir,;
+	$relpath =~ s,\$\{PKGSRCDIR\},$pkgsrcdir,;
 	$relpath =~ s,\$\{\.CURDIR\},.,;
 	$relpath =~ s,\$\{PHPPKGSRCDIR\},../../lang/php5,;
 	$relpath =~ s,\$\{SUSE_DIR_PREFIX\},suse91,;
@@ -2932,7 +2932,12 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 	} elsif ($type eq "Identifier") {
 		if ($value ne $value_novar) {
 			#$line->log_warning("Identifiers should be given directly.");
-		} elsif ($value !~ qr"^[+\-.0-9A-Z_a-z]+$") {
+		}
+		if ($value_novar =~ qr"^[+\-.0-9A-Z_a-z]+$") {
+			# Fine.
+		} elsif ($value ne "" && $value_novar eq "") {
+			# Don't warn here.
+		} else {
 			$line->log_warning("Invalid identifier \"${value}\".");
 		}
 
@@ -3091,7 +3096,9 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 		checkline_mk_shellcmd($line, $value);
 
 	} elsif ($type eq "ShellWord") {
-		checkline_mk_shellword($line, $value, true);
+		if (!$list_context) {
+			checkline_mk_shellword($line, $value, true);
+		}
 
 	} elsif ($type eq "Stage") {
 		if ($value !~ qr"^(?:pre|do|post)-(?:extract|patch|configure|build|install)$") {
@@ -3303,6 +3310,9 @@ sub checkline_mk_vartype($$$$$) {
 			foreach my $word (@words) {
 				if (defined($element_type)) {
 					checkline_mk_vartype_basic($line, $varname, $element_type, $op, $word, $comment, true);
+					if (!$internal_list) {
+						checkline_mk_shellword($line, $word, true);
+					}
 				}
 			}
 
@@ -3620,6 +3630,9 @@ sub checklines_mk($) {
 
 			if ($includefile =~ qr"/x11-links/buildlink3\.mk$") {
 				$line->log_error("${includefile} must not be included directly. Include \"../../mk/x11.buildlink3.mk\" instead.");
+			}
+			if ($includefile =~ qr"/gettext-lib/builtin\.mk$") {
+				$line->log_error("${includefile} must not be included directly. Include \"../../devel/gettext-lib/buildlink3.mk\" instead.");
 			}
 
 		} elsif ($text =~ regex_mk_cond) {
@@ -4444,6 +4457,9 @@ sub checkfile_PLIST($) {
 
 			if ($text =~ qr"/CVS/") {
 				$line->log_warning("CVS files should not be in the PLIST.");
+			}
+			if ($text =~ qr"\.orig$") {
+				$line->log_warning(".orig files should not be in the PLIST.");
 			}
 
 		} else {
