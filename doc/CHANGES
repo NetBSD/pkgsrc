@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13071 2006/02/24 00:05:40 joerg Exp $
+$NetBSD: CHANGES,v 1.13072 2006/02/24 08:13:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1207,3 +1207,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/tk to 8.4.12nb2 [minskim 2006-02-23]
 	Added audio/wmmp 0.10.0 [rpaulo 2006-02-23]
 	Updated math/qalculate to 0.8.2nb4 [joerg 2006-02-24]
+	Updated audio/libsndfile to 1.0.14 [adam 2006-02-24]
