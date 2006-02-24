@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2006/02/24 19:05:40 joerg Exp $
+
+--- utils.c.orig	2006-02-24 19:03:20.000000000 +0000
++++ utils.c
+@@ -195,7 +195,7 @@ ssize_t WRITE(int fd, char *whereto, siz
+  */
+ char *get_load(void)
+ {
+-#if !defined(__UCLIBC__) && (defined(__FreeBSD__) || defined(linux) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__APPLE__) || defined(__GNU__) || defined(sun))
++#if !defined(__UCLIBC__) && (defined(__FreeBSD__) || defined(linux) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__APPLE__) || defined(__GNU__) || defined(sun) || defined(__DragonFly__))
+ 	double loadavg[3];
+ 	char *str = (char *)mymalloc(LOADAVG_STR_LEN, "loadavg string");
+ 
