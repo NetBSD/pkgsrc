@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/06/27 23:05:42 seb Exp $
+# $NetBSD: Makefile,v 1.27 2006/02/24 21:21:02 reed Exp $
 
 DISTNAME=	pkg_tarup-1.6.5
 CATEGORIES=	pkgtools
@@ -33,7 +33,7 @@ SCRIPT_SUBST+=	\
 
 SCRIPT_SUBST_SED=	${SCRIPT_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/}
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-configure:
 	${SED} ${SCRIPT_SUBST_SED}			\
@@ -49,6 +49,6 @@ do-configure:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkg_tarup ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/pkg_tarup_all ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/pkg_tarup.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/pkg_tarup.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
