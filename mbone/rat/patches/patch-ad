@@ -1,17 +1,17 @@
-$NetBSD: patch-ad,v 1.2 1998/11/05 02:46:09 mycroft Exp $
+$NetBSD: patch-ad,v 1.3 2006/02/24 00:35:59 joerg Exp $
 
---- Build.orig	Sat Aug 15 15:16:43 1998
-+++ Build	Wed Nov  4 21:34:06 1998
-@@ -54,7 +54,7 @@
+--- Build.orig	1998-08-15 19:16:43.000000000 +0000
++++ Build
+@@ -54,7 +54,7 @@ OSVERS=`uname -r`
  case $OSTYPE in
    Linux                  ) OSMVER=`echo $OSVERS | awk -F. '{printf("%d_%d", $1, $2)}'`
                             ;;
 -  SunOS | IRIX | FreeBSD ) OSMVER=`echo $OSVERS | awk -F. '{print $1}'`
-+  SunOS | IRIX | FreeBSD | NetBSD ) OSMVER=`echo $OSVERS | awk -F. '{print $1}'`
++  SunOS | IRIX | FreeBSD | DragonFly | NetBSD ) OSMVER=`echo $OSVERS | awk -F. '{print $1}'`
                             ;;
    HP-UX                  ) OSTYPE=HPUX
                             OSMVER=`echo $OSVERS | awk -F. '{print $2}'`
-@@ -68,18 +68,20 @@
+@@ -68,21 +68,23 @@ echo "OSTYPE=$OSTYPE"
  echo "OSVERS=$OSVERS"
  echo "OSMVER=$OSMVER"
  
@@ -36,4 +36,8 @@ $NetBSD: patch-ad,v 1.2 1998/11/05 02:46:09 mycroft Exp $
 +cmd="${MAKE:=make} OSTYPE=$OSTYPE OSMVER=$OSMVER OSVERS=$OSVERS USER=$USER"
  case $1 in
    rat   ) echo "Running: $cmd bin/${USER}/rat-${OSTYPE}-${OSVERS}"
-           eval $cmd bin/${USER}/rat-${OSTYPE}-${OSVERS}
+-          eval $cmd bin/${USER}/rat-${OSTYPE}-${OSVERS}
++          eval $cmd bin/rat
+           exit
+           ;;
+   depend|tags|tar|clean) echo "Running: $cmd $1"
