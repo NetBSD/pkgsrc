@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/11 13:26:44 adam Exp $
+$NetBSD: distinfo,v 1.2 2006/02/24 21:09:13 adam Exp $
 
-SHA1 (qalculate-bases-0.8.2.tar.gz) = 4682fa714f248321d899740ff9346ecb5412eaad
-RMD160 (qalculate-bases-0.8.2.tar.gz) = 3ca24e6bd9cc5634d3c0935b1f453a7461f50898
-Size (qalculate-bases-0.8.2.tar.gz) = 360843 bytes
+SHA1 (qalculate-bases-0.9.0.tar.gz) = 0fec7000f4f876a8eb0840745ce3927a6e23b0a1
+RMD160 (qalculate-bases-0.9.0.tar.gz) = 62489eee845cca8fbca5e101a12e6bad02703dc4
+Size (qalculate-bases-0.9.0.tar.gz) = 360721 bytes
