@@ -1,24 +1,25 @@
-# $NetBSD: Makefile,v 1.18 2006/02/24 14:35:30 ghen Exp $
+# $NetBSD: Makefile,v 1.19 2006/02/24 18:17:43 ghen Exp $
 
-DISTNAME=	pure-ftpd-1.0.21
-CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/		\
-		ftp://ftp2.fr.pureftpd.org/pub/mirrors/ftp.fr.pureftpd.org/pub/pure-ftpd/releases/ \
-		ftp://ftp3.fr.pureftpd.org/pure-ftpd/releases/		\
-		ftp://ftp.dk.pureftpd.org/mirrors/pure-ftpd/releases/	\
-		ftp://ftp.nl.pureftpd.org/pub/pure-ftpd/releases/	\
-		ftp://ftp.fr.pureftpd.org/pub/pure-ftpd/releases/	\
-		ftp://ftp.cn.pureftpd.org/pub/pureftpd/pure-ftpd/releases/ \
-		${MASTER_SITE_SOURCEFORGE:=pureftpd/}
+DISTNAME=		pure-ftpd-1.0.21
+CATEGORIES=		net
+MASTER_SITES=		ftp://ftp.pureftpd.org/pub/pure-ftpd/releases/
+MASTER_SITES+=		http://download.pureftpd.org/pub/pure-ftpd/
+MASTER_SITES+=		ftp://ftp2.fr.pureftpd.org/pub/mirrors/ftp.fr.pureftpd.org/pub/pure-ftpd/releases/
+MASTER_SITES+=		ftp://ftp3.fr.pureftpd.org/pure-ftpd/releases/
+MASTER_SITES+=		ftp://ftp.dk.pureftpd.org/mirrors/pure-ftpd/releases/
+MASTER_SITES+=		ftp://ftp.nl.pureftpd.org/pub/pure-ftpd/releases/
+MASTER_SITES+=		ftp://ftp.fr.pureftpd.org/pub/pure-ftpd/releases/
+MASTER_SITES+=		ftp://ftp.cn.pureftpd.org/pub/pureftpd/pure-ftpd/releases/
+MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=pureftpd/}
 
-MAINTAINER=	dawszy@arhea.net
-HOMEPAGE=	http://www.pureftpd.org/
-COMMENT=	FTP daemon with optional SQL support
+MAINTAINER=		dawszy@arhea.net
+HOMEPAGE=		http://www.pureftpd.org/
+COMMENT=		Secure FTP daemon with optional SQL support
 
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--with-everything	\
-			--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-everything
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -28,7 +29,7 @@ CONFIGURE_ARGS+=	--with-privsep
 
 .include "options.mk"
 
-RCD_SCRIPTS=	pure_ftpd
+RCD_SCRIPTS=		pure_ftpd
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pure-ftpd
