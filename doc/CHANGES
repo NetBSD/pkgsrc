@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13076 2006/02/24 21:54:47 wiz Exp $
+$NetBSD: CHANGES,v 1.13077 2006/02/24 23:08:33 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1217,3 +1217,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/qalculate-currency to 0.9.0 [adam 2006-02-24]
 	Updated math/qalculate-units to 0.9.0 [adam 2006-02-24]
 	Updated x11/kdebase3 to 3.5.1nb3 [wiz 2006-02-24]
+	Added mail/p5-Mail-DKIM version 0.14 [heinz 2006-02-24]
