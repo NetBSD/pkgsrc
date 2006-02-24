@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/01/25 05:10:00 xtraeme Exp $
+# $NetBSD: Makefile,v 1.42 2006/02/24 20:27:50 reed Exp $
 #
 
 DISTNAME=	url2pkg-1.33
@@ -18,7 +18,7 @@ NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	# empty
 
-INSTALLATION_DIRS=	bin man/man8
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
 do-build:
 	${SED} -e 's|@MAKE@|${MAKE}|g'		\
@@ -26,6 +26,6 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/url2pkg ${PREFIX}/bin/url2pkg
-	${INSTALL_MAN} ${FILESDIR}/url2pkg.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${FILESDIR}/url2pkg.8 ${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"
