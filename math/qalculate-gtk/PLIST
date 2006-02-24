@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/03 13:39:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/02/24 21:09:13 adam Exp $
 bin/qalculate-gtk
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/qalculate-gtk.mo
 share/applications/qalculate-gtk.desktop
@@ -12,8 +12,10 @@ share/gnome/help/qalculate-gtk/C/figures/completion.png
 share/gnome/help/qalculate-gtk/C/figures/convert-number-bases.png
 share/gnome/help/qalculate-gtk/C/figures/convert-unit.png
 share/gnome/help/qalculate-gtk/C/figures/edit-function.png
+share/gnome/help/qalculate-gtk/C/figures/edit-functiongeneral.png
 share/gnome/help/qalculate-gtk/C/figures/edit-matrix.png
 share/gnome/help/qalculate-gtk/C/figures/edit-unit.png
+share/gnome/help/qalculate-gtk/C/figures/edit-variable.png
 share/gnome/help/qalculate-gtk/C/figures/function-manager.png
 share/gnome/help/qalculate-gtk/C/figures/gnuplot.png
 share/gnome/help/qalculate-gtk/C/figures/import-csv.png

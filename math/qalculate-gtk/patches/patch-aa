@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/08/03 13:39:31 adam Exp $
+$NetBSD: patch-aa,v 1.2 2006/02/24 21:09:13 adam Exp $
 
---- src/Makefile.in.orig	2005-08-02 12:07:01.000000000 +0000
+--- src/Makefile.in.orig	2005-12-22 10:31:26.000000000 +0100
 +++ src/Makefile.in
-@@ -525,7 +525,6 @@ uninstall-am: uninstall-binPROGRAMS unin
+@@ -530,7 +530,6 @@ uninstall-am: uninstall-binPROGRAMS unin
  
  
  install-exec-local:

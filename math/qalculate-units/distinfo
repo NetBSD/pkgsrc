@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/11 13:29:40 adam Exp $
+$NetBSD: distinfo,v 1.2 2006/02/24 21:09:13 adam Exp $
 
-SHA1 (qalculate-units-0.8.2.tar.gz) = dac6186f234673a16308d4d2f343f4c8c7bd20a5
-RMD160 (qalculate-units-0.8.2.tar.gz) = fdd3df372f4c7805d93c65b96442d51fae139b24
-Size (qalculate-units-0.8.2.tar.gz) = 367645 bytes
+SHA1 (qalculate-units-0.9.0.tar.gz) = 144b4f888b74d7ed261cc8d518bf458d753a0cbf
+RMD160 (qalculate-units-0.9.0.tar.gz) = 97c20f8b9a125611c9f41d7c12799350c52f7fb2
+Size (qalculate-units-0.9.0.tar.gz) = 367622 bytes
