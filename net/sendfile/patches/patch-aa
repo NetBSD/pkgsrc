@@ -1,9 +1,16 @@
-$NetBSD: patch-aa,v 1.4 2003/05/01 15:44:44 jmmv Exp $
+$NetBSD: patch-aa,v 1.5 2006/02/24 19:43:56 joerg Exp $
 
---- makeconfig.orig	1999-08-26 20:53:32.000000000 +0200
+--- makeconfig.orig	1999-08-26 18:53:32.000000000 +0000
 +++ makeconfig
-@@ -16,10 +16,11 @@ LDFLAGS=-s
+@@ -9,17 +9,13 @@
+ #	$HOME/.develenv
+ # or simply call: makeconfig CC=gcc ...
  
+-# default compiling settings
+-CC=gcc
+-CFLAGS=-O2
+-LDFLAGS=-s
+-
  # default installation settings
  SPOOL=/var/spool/sendfile
 -BINDIR=/usr/local/bin
@@ -18,7 +25,16 @@ $NetBSD: patch-aa,v 1.4 2003/05/01 15:44:44 jmmv Exp $
  INETDCONF=/etc/inetd.conf
  SERVICES=/etc/services
  
-@@ -110,6 +111,10 @@ case "$SYSTEM" in
+@@ -99,7 +95,7 @@ case "$SYSTEM" in
+   *next*)	SYSTEM=NEXT;;
+   *convex*)	SYSTEM=CONVEXOS;;
+   *osf*)	SYSTEM=OSF1;;
+-  *bsd*)	SYSTEM=BSD;;
++  *bsd*|*dragonfly*)	SYSTEM=BSD;;
+   *)		SYSTEM=UNKNOWN;;
+ #  *)		SYSTEM=`uname -a | tr '[a-z]' '[A-Z]'`
+ #  		case "$SYSTEM" in
+@@ -110,6 +106,10 @@ case "$SYSTEM" in
  #		esac;;
  esac
  
@@ -29,7 +45,7 @@ $NetBSD: patch-aa,v 1.4 2003/05/01 15:44:44 jmmv Exp $
  cd ../src
  echo now in `pwd`
  
-@@ -133,6 +138,7 @@ cat <<EOD>globals.h
+@@ -133,6 +133,7 @@ cat <<EOD>globals.h
  #define MANDIR		"$MANDIR"
  #define SERVERDIR	"$SERVERDIR"
  

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/12/29 06:22:02 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/02/24 19:43:56 joerg Exp $
 #
 
 DISTNAME=	sendfile-20010216
@@ -21,6 +21,8 @@ CONF_FILES=	${EGDIR}/sendfile.cf ${PKG_SYSCONFDIR}/sendfile.cf
 CONF_FILES+=	${EGDIR}/sendfile.deny ${PKG_SYSCONFDIR}/sendfile.deny
 
 pre-configure:
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/develop
+	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/develop
 	cd ${WRKSRC} && \
 	${SED}  -e 's,@PREFIX@,${PREFIX},g' \
 		-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g' \
@@ -29,6 +31,6 @@ pre-configure:
 	${CHMOD} +x makeconfig
 
 post-configure:
-	cd ${WRKSRC} && ${MAKE} config
+	cd ${WRKSRC} &&${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} config
 
 .include "../../mk/bsd.pkg.mk"
