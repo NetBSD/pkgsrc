@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.92 2006/02/21 15:23:13 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.93 2006/02/24 15:44:43 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -187,3 +187,5 @@ Pullup ticket 1150 - requested by Adrian Portelli
 security fix for honeyd
 Pullup ticket 1155 - requested by Geert Hendrickx
 security update for opera
+Pullup ticket 1158 - requested by Thomas Klausner
+security fix for bomberclone
