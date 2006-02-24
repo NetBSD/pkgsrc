@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.531 2006/02/24 14:24:42 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.532 2006/02/24 15:05:10 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3631,8 +3631,9 @@ sub checklines_mk($) {
 			if ($includefile =~ qr"/x11-links/buildlink3\.mk$") {
 				$line->log_error("${includefile} must not be included directly. Include \"../../mk/x11.buildlink3.mk\" instead.");
 			}
-			if ($includefile =~ qr"/gettext-lib/builtin\.mk$") {
-				$line->log_error("${includefile} must not be included directly. Include \"../../devel/gettext-lib/buildlink3.mk\" instead.");
+			if ($includefile =~ qr"(.*)/builtin\.mk$") {
+				my ($dir) = ($1);
+				$line->log_error("${includefile} must not be included directly. Include \"${dir}/buildlink3.mk\" instead.");
 			}
 
 		} elsif ($text =~ regex_mk_cond) {
