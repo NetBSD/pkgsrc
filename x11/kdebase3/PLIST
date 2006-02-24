@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2006/01/31 22:25:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.40 2006/02/24 21:54:24 wiz Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -2039,7 +2039,6 @@ share/kde/apps/konsole/XTerm.schema
 share/kde/apps/konsole/eventsrc
 share/kde/apps/konsole/fonts/9x15.pcf.gz
 share/kde/apps/konsole/fonts/console8x16.pcf.gz
-share/kde/apps/konsole/fonts/fonts.dir
 share/kde/apps/konsole/icons/crystalsvg/16x16/actions/activity.png
 share/kde/apps/konsole/icons/crystalsvg/16x16/actions/konsoleblue.png
 share/kde/apps/konsole/icons/crystalsvg/16x16/actions/konsolered.png
@@ -2217,7 +2216,6 @@ share/kde/config/konqsidebartng.rc
 share/kde/config/kshorturifilterrc
 share/kde/config/kxkb_groups
 share/kde/doc/kdm/README
-share/kde/fonts/override/fonts.dir
 share/kde/icons/Daemon.png
 share/kde/icons/NetBSD-flag.png
 share/kde/icons/crystalsvg/128x128/apps/access.png
@@ -4235,8 +4233,8 @@ ${PKGLOCALEDIR}/locale/l10n/zw/flag.png
 @comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/devices
 @comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
 @comment in kde: @dirrm share/kde/icons
-@dirrm share/kde/fonts/override
-@dirrm share/kde/fonts
+@comment in REQD_DIRS: @dirrm share/kde/fonts/override
+@comment in REQD_DIRS: @dirrm share/kde/fonts
 @dirrm share/kde/doc/kdm
 @dirrm share/kde/doc
 @dirrm share/kde/config/kdm
@@ -4291,8 +4289,8 @@ ${PKGLOCALEDIR}/locale/l10n/zw/flag.png
 @dirrm share/kde/apps/konsole/icons/crystalsvg/16x16
 @dirrm share/kde/apps/konsole/icons/crystalsvg
 @dirrm share/kde/apps/konsole/icons
-@dirrm share/kde/apps/konsole/fonts
-@dirrm share/kde/apps/konsole
+@comment in REQD_DIRS: @dirrm share/kde/apps/konsole/fonts
+@comment in REQD_DIRS: @dirrm share/kde/apps/konsole
 @dirrm share/kde/apps/konqueror/tiles
 @comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
 @dirrm share/kde/apps/konqueror/profiles
