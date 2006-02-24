@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/02/24 23:02:38 heinz Exp $
+
+SHA1 (Mail-DKIM-0.14.tar.gz) = 71f5fc09fde27f3349432806d0a8472aa466470b
+RMD160 (Mail-DKIM-0.14.tar.gz) = 7da84f26cfa56813ff71183ff241ab81daf8b84f
+Size (Mail-DKIM-0.14.tar.gz) = 24102 bytes
