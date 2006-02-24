@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/07/19 10:15:30 grant Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/24 20:52:05 joerg Exp $
 
 DISTNAME=	teTeX-texmfsrc-1.0.1
 PKGNAME=	teTeX-sharesrc-1.0.1
@@ -26,7 +26,8 @@ EXTRA_PATCH=	${FILESDIR}/latex.ltx.diff
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf
-	cd ${PREFIX}/share/texmf; ${DECOMPRESS_CMD} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} | ${PAX} -O -r
+	extract_file=${_DISTDIR:Q}/${DISTFILES:Q};			\
+	cd ${PREFIX}/share/texmf; ${EXTRACT_CMD}
 
 post-install:
 	@cd ${PREFIX}/share/texmf/source/latex/base && \
