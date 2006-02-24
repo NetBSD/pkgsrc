@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2006/02/24 14:55:45 joerg Exp $
+
+--- Makefile.orig	2006-02-19 06:53:08.000000000 +0000
++++ Makefile
+@@ -1163,9 +1163,7 @@ path/mktemp.o: compile path/mktemp.c sys
+ 	./compile path/mktemp.c
+ 
+ perl-head.pl: 
+-	( set -e; PATH="/bin:/usr/bin:/usr/local/bin:$$PATH"; export PATH; \
+-	  perl=`which perl`; \
+-	  echo "#! $$perl"; \
++	( echo "#! ${PERL5}"; \
+ 	  echo "# WARNING: This file was auto-generated. Do not edit!"; \
+ 	  echo ) >perl-head.pl
+ 
