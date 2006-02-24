@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2005/07/21 12:54:02 seb Exp $
+$NetBSD: distinfo,v 1.9 2006/02/24 20:32:19 joerg Exp $
 
 SHA1 (flow-tools-0.68.tar.gz) = 6259263ac4fbf8a9394224e4053393fa756473c7
 RMD160 (flow-tools-0.68.tar.gz) = 71bfd1a40cb34fae55b2769d93208d13b3b0a927
@@ -16,3 +16,4 @@ SHA1 (patch-aj) = d183dc3b360110a1a90165b0094e349d3a964a2e
 SHA1 (patch-ak) = f5d13e165b7fac689bcea7e9d7ad07b17a79b7de
 SHA1 (patch-al) = 941cc23ea527624d21d40d3a73aa94f947f02552
 SHA1 (patch-am) = d0c096c0710fe8b41a6bb55528f9098d50cda378
+SHA1 (patch-an) = db119ec8b12eb2b2a064fe8d1af77157311132ce
