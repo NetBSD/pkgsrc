@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.106 2006/02/05 23:11:38 joerg Exp $
+# $NetBSD: Makefile,v 1.107 2006/02/24 21:54:23 wiz Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -18,6 +18,14 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 UNLIMIT_RESOURCES=	datasize
 USE_DIRS+=		xdg-1.2
 USE_TOOLS+=		pkg-config mkfontdir
+
+FONTS_DIRS.x11+=	${PREFIX}/share/kde/apps/konsole/fonts
+REQD_DIRS+=		${PREFIX}/share/kde/apps/konsole
+REQD_DIRS+=		${PREFIX}/share/kde/apps/konsole/fonts
+
+FONTS_DIRS.x11+=	${PREFIX}/share/kde/fonts/override
+REQD_DIRS+=		${PREFIX}/share/kde/fonts
+REQD_DIRS+=		${PREFIX}/share/kde/fonts/override
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
 CONFIGURE_ARGS+=	--with-ldap="${BUILDLINK_PREFIX.openldap}"
@@ -126,7 +134,7 @@ SPECIAL_PERMS+=	${PREFIX}/bin/ksysguardd	${ROOT_USER} kmem 2755
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "SunOS"
 SUBST_CLASSES+=		varlock
 SUBST_STAGE.varlock=	post-patch
-SUBST_MESSAGE.varlock=	"Fix lock directory path."
+SUBST_MESSAGE.varlock=	Fix lock directory path.
 SUBST_FILES.varlock=	kcheckpass/kcheckpass.c
 .if ${OPSYS} == "SunOS"
 SUBST_SED.varlock=	s:/var/lock:/var/spool/locks:
@@ -137,7 +145,7 @@ SUBST_SED.varlock=	s:/var/lock:/var/spool/lock:
 
 SUBST_CLASSES+=		htdig paths
 SUBST_STAGE.htdig=	post-patch
-SUBST_MESSAGE.htdig=	"Fix htdig paths."
+SUBST_MESSAGE.htdig=	Fix htdig paths.
 SUBST_FILES.htdig=	khelpcenter/searchhandlers/khc_htsearch.pl
 SUBST_SED.htdig=	s:/srv/www/cgi-bin:${PREFIX}/libexec/cgi-bin:
 
