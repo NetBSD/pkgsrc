@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2006/02/24 19:53:52 joerg Exp $
+
+--- scamper_addr2mac.c.orig	2006-02-24 19:48:36.000000000 +0000
++++ scamper_addr2mac.c
+@@ -15,7 +15,7 @@
+ #include <stdint.h>
+ #endif
+ 
+-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+ #define HAVE_BSD_ARPCACHE
+ #endif
+ 

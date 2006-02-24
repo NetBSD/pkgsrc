@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2006/02/24 19:53:52 joerg Exp $
+
+--- scamper_privsep.c.orig	2006-02-24 19:46:04.000000000 +0000
++++ scamper_privsep.c
+@@ -32,7 +32,7 @@
+ #define HAVE_ACCRIGHTS
+ #endif
+ 
+-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+ #define HAVE_SETPROCTITLE
+ #endif
+ 
