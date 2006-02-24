@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2006/02/24 19:53:52 joerg Exp $
+
+--- scamper_dl.c.orig	2006-02-24 19:47:53.000000000 +0000
++++ scamper_dl.c
+@@ -49,7 +49,7 @@
+ #include <stdint.h>
+ #endif
+ 
+-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+ #define HAVE_BPF
+ #endif
+ 
