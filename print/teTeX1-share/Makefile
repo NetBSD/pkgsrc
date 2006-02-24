@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/09 21:34:26 tonio Exp $
+# $NetBSD: Makefile,v 1.9 2006/02/24 14:53:27 joerg Exp $
 #
 
 DISTNAME=	teTeX-texmf-1.0.2
@@ -24,14 +24,19 @@ USE_TOOLS+=	patch
 
 EXTRA_PATCH=	${FILESDIR}/latex.ltx.diff
 
+# Don't extract the files listed in ${FILESDIR}/exclude, and preserve
+# permissions.
+#
+EXTRACT_OPTS=		-X ${FILESDIR:Q}/exclude
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf
-	cd ${PREFIX}/share/texmf; ${DECOMPRESS_CMD} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} | ${PAX} -O -cr `${CAT} ${FILESDIR}/exclude`
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/texmf
+	extract_file=${DISTDIR:Q}/${DIST_SUBDIR:Q}/${DISTFILES:Q} && cd ${PREFIX:Q}/share/texmf && ${EXTRACT_CMD}
 
 post-install:
-	@cd ${PREFIX}/share/texmf/tex/latex/base && \
-	  ${PATCH} ${_PATCH_BACKUP_ARG} .orig < ${EXTRA_PATCH} && \
+	@cd ${PREFIX:Q}/share/texmf/tex/latex/base && \
+	  ${PATCH} ${_PATCH_BACKUP_ARG} .orig < ${EXTRA_PATCH:Q} && \
 	  ${RM} latex.ltx.orig
-	${CP} ${FILESDIR}/dvipdfm.def ${PREFIX}/share/texmf/tex/latex/graphics
+	${CP} ${FILESDIR:Q}/dvipdfm.def ${PREFIX:Q}/share/texmf/tex/latex/graphics
 
 .include "../../mk/bsd.pkg.mk"
