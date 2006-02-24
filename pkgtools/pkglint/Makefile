@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.330 2006/02/24 20:36:29 reed Exp $
+# $NetBSD: Makefile,v 1.331 2006/02/24 21:59:49 rillig Exp $
 #
 
 DISTNAME=	pkglint-4.57
@@ -22,7 +22,7 @@ NO_CHECKSUM=	yes
 NO_BUILD=	yes
 USE_LANGUAGES=	# empty
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1 share/pkglint
+INSTALLATION_DIRS=	bin ${PKGMANDIR:Q}/cat1 ${PKGMANDIR:Q}/man1 share/pkglint
 
 SUBST_CLASSES+=		pkglint
 SUBST_STAGE.pkglint=	post-configure
@@ -30,15 +30,15 @@ SUBST_FILES.pkglint+=	lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl
 SUBST_FILES.pkglint+=	pkglint.0 pkglint.1 pkglint.pl
 SUBST_FILES.pkglint+=	plist-clash.pl
 .if defined(BATCH)
-SUBST_SED.pkglint+=	-e 's|@PKGSRCDIR@|/usr/pkgsrc|g'
+SUBST_SED.pkglint+=	-e s|@PKGSRCDIR@|/usr/pkgsrc|g
 .else
-SUBST_SED.pkglint+=	-e 's|@PKGSRCDIR@|${PKGSRCDIR}|g'
+SUBST_SED.pkglint+=	-e s|@PKGSRCDIR@|${PKGSRCDIR:Q}|g
 .endif
-SUBST_SED.pkglint+=	-e 's|@PREFIX@|${PREFIX}|g'
-SUBST_SED.pkglint+=	-e 's|@DISTVER@|${DISTNAME:S/pkglint-//}|g'
-SUBST_SED.pkglint+=	-e 's|@MAKE@|${MAKE}|g'
-SUBST_SED.pkglint+=	-e 's|@PERL@|${PERL5}|g'
-SUBST_SED.pkglint+=	-e 's|@DATADIR@|${PREFIX}/share/pkglint|g'
+SUBST_SED.pkglint+=	-e s|@PREFIX@|${PREFIX:Q}|g
+SUBST_SED.pkglint+=	-e s|@DISTVER@|${DISTNAME:S/pkglint-//:Q}|g
+SUBST_SED.pkglint+=	-e s|@MAKE@|${MAKE:Q}|g
+SUBST_SED.pkglint+=	-e s|@PERL@|${PERL5:Q}|g
+SUBST_SED.pkglint+=	-e s|@DATADIR@|${PREFIX:Q}/share/pkglint|g
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -58,7 +58,7 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC:Q}/plist-clash.pl ${PREFIX:Q}/bin/plist-clash
 	${INSTALL_MAN} ${WRKSRC:Q}/lintpkgsrc.0 ${PREFIX:Q}/${PKGMANDIR:Q}/cat1
 .if !empty(MANINSTALL:Mmaninstall)
-	${INSTALL_MAN} ${WRKSRC:Q}/lintpkgsrc.1 ${PREFIX:Q}/${PKGMANDIR:}/man1
+	${INSTALL_MAN} ${WRKSRC:Q}/lintpkgsrc.1 ${PREFIX:Q}/${PKGMANDIR:Q}/man1
 	${INSTALL_MAN} ${WRKSRC:Q}/pkglint.1 ${PREFIX:Q}/${PKGMANDIR:Q}/man1
 .endif
 	${INSTALL_MAN} ${WRKSRC:Q}/pkglint.0 ${PREFIX:Q}/${PKGMANDIR:Q}/cat1
