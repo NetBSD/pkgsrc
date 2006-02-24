@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:10:04 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/24 21:09:13 adam Exp $
 
-DISTNAME=	qalculate-kde-0.8.2
-PKGREVISION=	2
+DISTNAME=	qalculate-kde-0.9.2
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qalculate/}
 
@@ -19,4 +18,5 @@ CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/kde
 
 .include "../../math/qalculate/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
