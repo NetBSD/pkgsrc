@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13073 2006/02/24 14:36:07 ghen Exp $
+$NetBSD: CHANGES,v 1.13074 2006/02/24 14:56:13 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1209,3 +1209,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/qalculate to 0.8.2nb4 [joerg 2006-02-24]
 	Updated audio/libsndfile to 1.0.14 [adam 2006-02-24]
 	Updated net/pure-ftpd to 1.0.21 [ghen 2006-02-24]
+	Updated devel/bglibs to 1.040nb1 [joerg 2006-02-24]
