@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.8 2006/02/23 23:01:00 rillig Exp $
+$NetBSD: distinfo,v 1.9 2006/02/24 19:05:40 joerg Exp $
 
 SHA1 (multitail-3.8.6.tgz) = 993e40191a21ceb00470322124d589f9628d0a62
 RMD160 (multitail-3.8.6.tgz) = e2f076ae7a695885a83d58129e0f4c62d6142c74
 Size (multitail-3.8.6.tgz) = 75711 bytes
 SHA1 (patch-aa) = 732b99c9efebecb2224d45520eb31bc4ec6314d6
+SHA1 (patch-ab) = cc943ce263a2d9ae567bcb4917f32249e441f924
+SHA1 (patch-ac) = 9a5ad3be1c7f68a7364d65260afa5a9f1d21993a
+SHA1 (patch-ad) = 43b8e33a970aa26f1f77565266314e1f512ca3fc
+SHA1 (patch-ae) = 1c8ec906c54cc0d7834fcd8f151dccd5ebe30398
