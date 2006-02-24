@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.329 2006/02/18 12:24:22 rillig Exp $
+# $NetBSD: Makefile,v 1.330 2006/02/24 20:36:29 reed Exp $
 #
 
 DISTNAME=	pkglint-4.57
@@ -22,7 +22,7 @@ NO_CHECKSUM=	yes
 NO_BUILD=	yes
 USE_LANGUAGES=	# empty
 
-INSTALLATION_DIRS=	bin man/cat1 man/man1 share/pkglint
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1 share/pkglint
 
 SUBST_CLASSES+=		pkglint
 SUBST_STAGE.pkglint=	post-configure
@@ -56,12 +56,12 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC:Q}/pkglint.pl ${PREFIX:Q}/bin/pkglint
 	${INSTALL_SCRIPT} ${WRKSRC:Q}/lintpkgsrc.pl ${PREFIX:Q}/bin/lintpkgsrc
 	${INSTALL_SCRIPT} ${WRKSRC:Q}/plist-clash.pl ${PREFIX:Q}/bin/plist-clash
-	${INSTALL_MAN} ${WRKSRC:Q}/lintpkgsrc.0 ${PREFIX:Q}/man/cat1
+	${INSTALL_MAN} ${WRKSRC:Q}/lintpkgsrc.0 ${PREFIX:Q}/${PKGMANDIR:Q}/cat1
 .if !empty(MANINSTALL:Mmaninstall)
-	${INSTALL_MAN} ${WRKSRC:Q}/lintpkgsrc.1 ${PREFIX:Q}/man/man1
-	${INSTALL_MAN} ${WRKSRC:Q}/pkglint.1 ${PREFIX:Q}/man/man1
+	${INSTALL_MAN} ${WRKSRC:Q}/lintpkgsrc.1 ${PREFIX:Q}/${PKGMANDIR:}/man1
+	${INSTALL_MAN} ${WRKSRC:Q}/pkglint.1 ${PREFIX:Q}/${PKGMANDIR:Q}/man1
 .endif
-	${INSTALL_MAN} ${WRKSRC:Q}/pkglint.0 ${PREFIX:Q}/man/cat1
+	${INSTALL_MAN} ${WRKSRC:Q}/pkglint.0 ${PREFIX:Q}/${PKGMANDIR:Q}/cat1
 	${INSTALL_DATA} ${FILESDIR:Q}/makevars.map ${PREFIX:Q}/share/pkglint/
 	${INSTALL_DATA} ${FILESDIR:Q}/deprecated.map ${PREFIX:Q}/share/pkglint/
 
