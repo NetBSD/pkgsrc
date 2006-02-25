@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.59 2006/02/17 23:24:17 adam Exp $
+# $NetBSD: Makefile.common,v 1.60 2006/02/25 03:55:57 minskim Exp $
 
 DISTNAME=	qt-x11-free-${QTVERSION}
 CATEGORIES=	x11
@@ -70,7 +70,8 @@ LDFLAGS+=		-lresolv
 
 QMAKE_RANLIB?=		${TRUE}
 
-.if !exists(${X11BASE}/lib/libXinerama.so)
+.if !exists(${X11BASE}/lib/libXinerama.so) && \
+	!exists(${X11BASE}/lib/libXinerama.dylib)
 CONFIGURE_ARGS+=	-no-xinerama
 .endif
 
