@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.332 2006/02/25 09:45:38 adam Exp $
+# $NetBSD: Makefile,v 1.333 2006/02/25 15:56:24 rillig Exp $
 #
 
 DISTNAME=	pkglint-4.57
@@ -30,15 +30,15 @@ SUBST_FILES.pkglint+=	lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl
 SUBST_FILES.pkglint+=	pkglint.0 pkglint.1 pkglint.pl
 SUBST_FILES.pkglint+=	plist-clash.pl
 .if defined(BATCH)
-SUBST_SED.pkglint+=	-e 's|@PKGSRCDIR@|/usr/pkgsrc|g'
+SUBST_SED.pkglint+=	-e s\|@PKGSRCDIR@\|/usr/pkgsrc\|g
 .else
-SUBST_SED.pkglint+=	-e 's|@PKGSRCDIR@|${PKGSRCDIR:Q}|g'
+SUBST_SED.pkglint+=	-e s\|@PKGSRCDIR@\|${PKGSRCDIR:Q}\|g
 .endif
-SUBST_SED.pkglint+=	-e 's|@PREFIX@|${PREFIX:Q}|g'
-SUBST_SED.pkglint+=	-e 's|@DISTVER@|${DISTNAME:S/pkglint-//:Q}|g'
-SUBST_SED.pkglint+=	-e 's|@MAKE@|${MAKE:Q}|g'
-SUBST_SED.pkglint+=	-e 's|@PERL@|${PERL5:Q}|g'
-SUBST_SED.pkglint+=	-e 's|@DATADIR@|${PREFIX:Q}/share/pkglint|g'
+SUBST_SED.pkglint+=	-e s\|@PREFIX@\|${PREFIX:Q}\|g
+SUBST_SED.pkglint+=	-e s\|@DISTVER@\|${DISTNAME:S/pkglint-//:Q}\|g
+SUBST_SED.pkglint+=	-e s\|@MAKE@\|${MAKE:Q}\|g
+SUBST_SED.pkglint+=	-e s\|@PERL@\|${PERL5:Q}\|g
+SUBST_SED.pkglint+=	-e s\|@DATADIR@\|${PREFIX:Q}/share/pkglint\|g
 
 .include "../../mk/bsd.prefs.mk"
 
