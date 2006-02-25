@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.91 2006/02/18 20:38:54 schwarz Exp $
+# $NetBSD: Makefile,v 1.92 2006/02/25 13:31:03 wiz Exp $
 
-DISTNAME=		glib-2.8.6
+DISTNAME=		glib-2.10.0
 PKGNAME=		${DISTNAME:S/glib/glib2/}
-PKGREVISION=		1
 CATEGORIES=		devel
-MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.8/ \
-			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.8/ \
-			${MASTER_SITE_GNOME:=sources/glib/2.8/}
+MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.10/ \
+			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.10/ \
+			${MASTER_SITE_GNOME:=sources/glib/2.10/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
