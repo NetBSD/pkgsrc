@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.93 2006/02/24 15:44:43 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.94 2006/02/25 01:26:38 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -189,3 +189,5 @@ Pullup ticket 1155 - requested by Geert Hendrickx
 security update for opera
 Pullup ticket 1158 - requested by Thomas Klausner
 security fix for bomberclone
+Pullup ticket 1153 - requested by Martti Kuparinen
+PLIST fix for xfce4-print
