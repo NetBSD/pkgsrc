@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.605 2006/02/18 20:58:43 salo Exp $
+# $NetBSD: Makefile,v 1.606 2006/02/25 13:36:10 rpaulo Exp $
 #
 
 COMMENT=	Networking tools
@@ -458,6 +458,7 @@ SUBDIR+=	wimon
 SUBDIR+=	wistumbler
 SUBDIR+=	wistumbler2
 SUBDIR+=	wistumbler2-gtk
+SUBDIR+=	wmget
 SUBDIR+=	wminet
 SUBDIR+=	wmnet
 SUBDIR+=	wmpload
