@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.735 2006/02/25 00:29:25 minskim Exp $
+# $NetBSD: Makefile,v 1.736 2006/02/25 21:45:41 rpaulo Exp $
 #
 
 COMMENT=	Development utilities
@@ -72,6 +72,8 @@ SUBDIR+=	ccache
 SUBDIR+=	cdecl
 SUBDIR+=	cdk
 SUBDIR+=	cfitsio
+SUBDIR+=	cflow-mode
+SUBDIR+=	cflow
 SUBDIR+=	cgdb
 SUBDIR+=	check
 SUBDIR+=	chmlib
