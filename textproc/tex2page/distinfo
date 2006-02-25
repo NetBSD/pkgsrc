@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/12/01 18:50:14 gdt Exp $
+$NetBSD: distinfo,v 1.2 2006/02/25 17:48:24 gdt Exp $
 
-SHA1 (tex2page.tar.gz) = 9366553a02cf6010bb3c2b0411cc7aa178d946e8
-RMD160 (tex2page.tar.gz) = 244852ab1264d5fab49ccf65c1c43d8d30e41217
-Size (tex2page.tar.gz) = 227117 bytes
+SHA1 (tex2page.tar.gz) = d740b8c51528c8f2c81de4b94fb5d0bc09e9458e
+RMD160 (tex2page.tar.gz) = 81c264966a128c2e9446e77ccb6b6fe01fb94818
+Size (tex2page.tar.gz) = 227748 bytes
