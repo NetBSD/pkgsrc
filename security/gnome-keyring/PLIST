@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/07/27 17:30:14 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/02/25 12:13:24 wiz Exp $
 bin/gnome-keyring-daemon
 include/gnome-keyring-1/gnome-keyring.h
 lib/libgnome-keyring.la
@@ -56,5 +56,6 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-keyring.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-keyring.mo
 ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gnome-keyring.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-keyring.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/gnome-keyring.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
 @dirrm include/gnome-keyring-1
