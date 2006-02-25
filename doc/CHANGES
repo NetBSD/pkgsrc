@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13087 2006/02/25 18:31:17 veego Exp $
+$NetBSD: CHANGES,v 1.13088 2006/02/25 21:46:53 rpaulo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1230,3 +1230,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/rtorrent to 0.4.5 [tron 2006-02-25]
 	Removed games/gnocatan [veego 2006-02-25]
 	Added games/pioneers 0.9.55 [veego 2006-02-25]
+	Added devel/cflow 1.0 [rpaulo 2006-02-25]
+	Added devel/cflow-mode 1.0 [rpaulo 2006-02-25]
