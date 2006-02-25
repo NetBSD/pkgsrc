@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13086 2006/02/25 17:25:52 tron Exp $
+$NetBSD: CHANGES,v 1.13087 2006/02/25 18:31:17 veego Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1228,3 +1228,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added net/wmget 0.6.0 [rpaulo 2006-02-25]
 	Updated net/libtorrent to 0.8.5 [tron 2006-02-25]
 	Updated net/rtorrent to 0.4.5 [tron 2006-02-25]
+	Removed games/gnocatan [veego 2006-02-25]
+	Added games/pioneers 0.9.55 [veego 2006-02-25]
