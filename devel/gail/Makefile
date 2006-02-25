@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2006/02/16 18:16:42 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2006/02/25 12:20:41 wiz Exp $
 #
 
-DISTNAME=	gail-1.8.9
+DISTNAME=	gail-1.8.10
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gail/1.8/}
 EXTRACT_SUFX=	.tar.bz2
