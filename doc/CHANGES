@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13079 2006/02/25 00:37:38 reed Exp $
+$NetBSD: CHANGES,v 1.13080 2006/02/25 03:57:00 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1220,3 +1220,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added mail/p5-Mail-DKIM version 0.14 [heinz 2006-02-24]
 	Added devel/p5-PathTools version 3.12 [minskim 2006-02-25]
 	Updated graphics/freetype2 to 2.1.10nb2 [reed 2006-02-25]
+	Updated x11/qt3-libs to 3.3.5nb5 [minskim 2006-02-25]
