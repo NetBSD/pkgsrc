@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:10:43 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/25 12:13:24 wiz Exp $
 #
 
-DISTNAME=	gnome-keyring-0.4.6
-PKGREVISION=	2
+DISTNAME=	gnome-keyring-0.4.7
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-keyring/0.4/}
 EXTRACT_SUFX=	.tar.bz2
