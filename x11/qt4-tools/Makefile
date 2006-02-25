@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/20 12:09:01 adam Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/25 09:25:00 adam Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
@@ -7,9 +7,10 @@ COMMENT=	QT GUI (WYSIWYG) builder and other tools
 
 CONFIGURE_ARGS+=	-I${QTDIR}/include -L${QTDIR}/lib
 
+BUILD_TARGET=		sub-tools
+
 BUILD_QT4=		yes
 UNLIMIT_RESOURCES=	datasize
-BUILD_TARGET=		sub-tools
 
 post-configure:
 	${LN} -s ${QTPREFIX}/bin/moc ${WRKSRC}/bin/moc
@@ -24,10 +25,14 @@ do-install:
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} \
 		${QTPREFIX}/bin
 .endfor
-.for inc in QtAssistant QtDesigner QtTest QtUiTools
-	${INSTALL_DATA_DIR} ${QTPREFIX}/include/${inc}
-	${INSTALL_DATA} ${WRKSRC}/include/${inc}/*.h ${QTPREFIX}/include/${inc}/
-.endfor
+	cd ${WRKSRC}/tools/assistant/lib && env ${MAKE_ENV} \
+		${MAKE_PROGRAM} -f Makefile.Release install_assistant_headers
+	cd ${WRKSRC}/tools/designer/src/lib && env ${MAKE_ENV} \
+		${MAKE_PROGRAM} -f Makefile.Release install_designer_headers
+	cd ${WRKSRC}/tools/designer/src/uitools && env ${MAKE_ENV} \
+		${MAKE_PROGRAM} -f Makefile install_quitools_headers
+	cd ${WRKSRC}/tools/qtestlib/src && env ${MAKE_ENV} \
+		${MAKE_PROGRAM} -f Makefile install_qtestlib_headers
 	${INSTALL_LIB} ${WRKSRC}/lib/libQtAssistantClient.a ${QTPREFIX}/lib/
 .for lib in QtDesigner QtDesignerComponents QtTest
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/lib${lib}.la \
