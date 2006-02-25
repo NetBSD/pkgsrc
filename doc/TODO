@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4639 2006/02/25 06:11:58 taca Exp $
+$NetBSD: TODO,v 1.4640 2006/02/25 12:13:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -549,7 +549,6 @@ Suggested package updates
 	o gnocatan-0.8.1.59
 	o gnome-backgrounds-2.12.3.1
 	o gnome-games-2.12.3
-	o gnome-keyring-0.4.7
 	o gnome-mag-0.12.3
 	o gnome-pilot-2.0.13
 	o gnome-spell-1.0.7
