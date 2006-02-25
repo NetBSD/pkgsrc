@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2006/01/19 17:55:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2006/02/25 13:31:03 wiz Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -43,6 +43,7 @@ include/glib/glib-2.0/glib/grand.h
 include/glib/glib-2.0/glib/grel.h
 include/glib/glib-2.0/glib/gscanner.h
 include/glib/glib-2.0/glib/gshell.h
+include/glib/glib-2.0/glib/gslice.h
 include/glib/glib-2.0/glib/gslist.h
 include/glib/glib-2.0/glib/gspawn.h
 include/glib/glib-2.0/glib/gstdio.h
@@ -122,6 +123,7 @@ share/doc/glib/glib-Limits-of-Basic-Types.html
 share/doc/glib/glib-Memory-Allocation.html
 share/doc/glib/glib-Memory-Allocators.html
 share/doc/glib/glib-Memory-Chunks.html
+share/doc/glib/glib-Memory-Slices.html
 share/doc/glib/glib-Message-Logging.html
 share/doc/glib/glib-Miscellaneous-Macros.html
 share/doc/glib/glib-Miscellaneous-Utility-Functions.html
@@ -148,7 +150,7 @@ share/doc/glib/glib-Type-Conversion-Macros.html
 share/doc/glib/glib-Unicode-Manipulation.html
 share/doc/glib/glib-Version-Information.html
 share/doc/glib/glib-Warnings-and-Assertions.html
-share/doc/glib/glib-Windows-Compatability-Functions.html
+share/doc/glib/glib-Windows-Compatibility-Functions.html
 share/doc/glib/glib-building.html
 share/doc/glib/glib-changes.html
 share/doc/glib/glib-compiling.html
@@ -161,6 +163,7 @@ share/doc/glib/glib-resources.html
 share/doc/glib/glib-running.html
 share/doc/glib/glib-utilities.html
 share/doc/glib/glib.devhelp
+share/doc/glib/glib.devhelp2
 share/doc/glib/glib.html
 share/doc/glib/home.png
 share/doc/glib/index.html
@@ -171,6 +174,7 @@ share/doc/glib/ix03.html
 share/doc/glib/ix04.html
 share/doc/glib/ix05.html
 share/doc/glib/ix06.html
+share/doc/glib/ix07.html
 share/doc/glib/left.png
 share/doc/glib/mainloop-states.gif
 share/doc/glib/right.png
@@ -205,6 +209,7 @@ share/doc/gobject/gobject-memory.html
 share/doc/gobject/gobject-properties.html
 share/doc/gobject/gobject-query.html
 share/doc/gobject/gobject.devhelp
+share/doc/gobject/gobject.devhelp2
 share/doc/gobject/gtype-conventions.html
 share/doc/gobject/gtype-instantiable-classed.html
 share/doc/gobject/gtype-non-instantiable-classed.html
@@ -228,6 +233,7 @@ share/doc/gobject/ix03.html
 share/doc/gobject/ix04.html
 share/doc/gobject/ix05.html
 share/doc/gobject/ix06.html
+share/doc/gobject/ix07.html
 share/doc/gobject/left.png
 share/doc/gobject/pr01.html
 share/doc/gobject/pt01.html
@@ -279,6 +285,7 @@ ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/glib20.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/glib20.mo
@@ -310,6 +317,7 @@ ${PKGLOCALEDIR}/locale/te/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/tl/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/glib20.mo
+${PKGLOCALEDIR}/locale/tt/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/glib20.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/glib20.mo
