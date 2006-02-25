@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2006/02/16 18:16:42 wiz Exp $
+$NetBSD: distinfo,v 1.19 2006/02/25 12:20:41 wiz Exp $
 
-SHA1 (gail-1.8.9.tar.bz2) = f5b4a86ecebc6db65a51714f95d404ec238238e4
-RMD160 (gail-1.8.9.tar.bz2) = 4477cf816d5387cd745db16be5b3051e10240d8d
-Size (gail-1.8.9.tar.bz2) = 572569 bytes
+SHA1 (gail-1.8.10.tar.bz2) = 82a9ba78c2ec6a0861a1101d55df749b31518668
+RMD160 (gail-1.8.10.tar.bz2) = d7d6a4333f01d0279b51f0fa2dda090ce2a871da
+Size (gail-1.8.10.tar.bz2) = 584033 bytes
