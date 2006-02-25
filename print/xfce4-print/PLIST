@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/11/09 06:42:58 martti Exp $
+@comment $NetBSD: PLIST,v 1.12.2.1 2006/02/25 01:25:46 salo Exp $
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/xfprint.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xfprint.mo
@@ -47,7 +47,7 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xfprint.mo
 bin/xfprint-manager
 bin/xfprint4
 lib/xfce4/mcs-plugins/xfprint_plugin.la
-lib/xfce4/xfprint-plugins/bsdlpr_plugin.la
+${SOLARIS}lib/xfce4/xfprint-plugins/bsdlpr_plugin.la
 share/applications/xfce-xfprint-settings.desktop
 share/applications/xfprint-manager.desktop
 share/applications/xfprint.desktop
