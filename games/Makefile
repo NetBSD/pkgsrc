@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.264 2006/02/14 20:41:51 rillig Exp $
+# $NetBSD: Makefile,v 1.265 2006/02/25 18:27:57 veego Exp $
 #
 
 COMMENT=	Games
@@ -91,7 +91,6 @@ SUBDIR+=	glaxium
 SUBDIR+=	glchess
 SUBDIR+=	glickomania
 SUBDIR+=	gltron
-SUBDIR+=	gnocatan
 SUBDIR+=	gnome2-games
 SUBDIR+=	gnuchess
 SUBDIR+=	gnuchess-book
@@ -156,6 +155,7 @@ SUBDIR+=	openmortal
 SUBDIR+=	openttd
 SUBDIR+=	orbital_eunuchs_sniper
 SUBDIR+=	pag
+SUBDIR+=	pioneers
 SUBDIR+=	plib
 SUBDIR+=	powermanga
 SUBDIR+=	powwow
