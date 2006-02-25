@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4641 2006/02/25 12:21:04 wiz Exp $
+$NetBSD: TODO,v 1.4642 2006/02/25 12:21:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -522,7 +522,6 @@ Suggested package updates
 	o gcc-3.3.6
 	o gcc-4.0.2
 	o gcdmaster-1.2.1
-	o gcin-1.1.6
 	o gcombust-0.1.55
 	o gcpio-2.6
 	o gdb6-6.3.0
