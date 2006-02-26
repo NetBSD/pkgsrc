@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4653 2006/02/26 09:25:01 wiz Exp $
+$NetBSD: TODO,v 1.4654 2006/02/26 09:31:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -585,7 +585,7 @@ Suggested package updates
 	o gtranscript-0.2.0
 	o guile-1.8.0
 	o guile-oops-1.0.2
-	o gworkspace-0.7.2
+	o gworkspace-0.8.0
 	o gxine-0.5.4
 	o gzrecover-0.3
 	o h5utils-1.10
@@ -719,7 +719,7 @@ Suggested package updates
 	o metacity-2.12.3
 	o metakit-2.4.9.4
 	o mftrace-1.1.17
-	o mgetty-1.1.33
+	o mgetty-1.1.35
 	o micro_httpd-20050629
 	o milter-regex-1.6
 	o mimedefang-2.56
@@ -1278,7 +1278,7 @@ Suggested package updates
 	o ysm-2.9.8
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.2.12
+	o zile-2.2.13
 	o zircon-1.18.256
 	o zope-2.9.0
 	o zope25-AbracadabraObject-2.0.0
