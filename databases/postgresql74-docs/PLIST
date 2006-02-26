@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/06/30 01:50:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4.4.1 2006/02/26 22:01:11 seb Exp $
 share/doc/postgresql/FAQ
 share/doc/postgresql/FAQ_AIX
 share/doc/postgresql/FAQ_DEV
@@ -439,6 +439,10 @@ share/doc/postgresql/release-7-2-8.html
 share/doc/postgresql/release-7-2.html
 share/doc/postgresql/release-7-3-1.html
 share/doc/postgresql/release-7-3-10.html
+share/doc/postgresql/release-7-3-11.html
+share/doc/postgresql/release-7-3-12.html
+share/doc/postgresql/release-7-3-13.html
+share/doc/postgresql/release-7-3-14.html
 share/doc/postgresql/release-7-3-2.html
 share/doc/postgresql/release-7-3-3.html
 share/doc/postgresql/release-7-3-4.html
@@ -449,12 +453,16 @@ share/doc/postgresql/release-7-3-8.html
 share/doc/postgresql/release-7-3-9.html
 share/doc/postgresql/release-7-3.html
 share/doc/postgresql/release-7-4-1.html
+share/doc/postgresql/release-7-4-10.html
+share/doc/postgresql/release-7-4-11.html
 share/doc/postgresql/release-7-4-2.html
 share/doc/postgresql/release-7-4-3.html
 share/doc/postgresql/release-7-4-4.html
 share/doc/postgresql/release-7-4-5.html
 share/doc/postgresql/release-7-4-6.html
 share/doc/postgresql/release-7-4-7.html
+share/doc/postgresql/release-7-4-8.html
+share/doc/postgresql/release-7-4-9.html
 share/doc/postgresql/release-7-4.html
 share/doc/postgresql/release.html
 share/doc/postgresql/resources.html
