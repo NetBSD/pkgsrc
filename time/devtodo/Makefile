@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/06/01 02:40:43 snj Exp $
+# $NetBSD: Makefile,v 1.24 2006/02/26 13:48:31 schwarz Exp $
 
 DISTNAME=	devtodo-0.1.18
 CATEGORIES=	time
@@ -8,6 +8,7 @@ MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://swapoff.org/DevTodo
 COMMENT=	Display and manage a list of items that are outstanding
 
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 
 GNU_CONFIGURE=	YES
