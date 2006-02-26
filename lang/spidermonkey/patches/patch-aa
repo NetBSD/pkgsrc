@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/01/27 19:47:21 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2006/02/26 20:36:58 joerg Exp $
 
 --- config.mk.orig	2003-11-15 01:10:55.000000000 +0100
 +++ config.mk	2006-01-27 20:42:30.000000000 +0100
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/01/27 19:47:21 xtraeme Exp $
 +ifeq ($(OS_ARCH), FreeBSD)
 +OS_CONFIG	:= pkgsrc
 +else
-+ifeq ($(OS_ARCH), DragonFlyBSD)
++ifeq ($(OS_ARCH), DragonFly)
 +OS_CONFIG	:= pkgsrc
 +else
 +ifeq ($(OS_ARCH), OpenBSD)
