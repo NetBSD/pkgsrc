@@ -1,16 +1,14 @@
-# $NetBSD: Makefile,v 1.19 2006/02/10 13:52:18 kent Exp $
+# $NetBSD: Makefile,v 1.20 2006/02/26 17:26:32 wiz Exp $
 #
 PEACE_VERSION=	0.0.20060210
 DISTNAME=	peace-${PEACE_VERSION}
 SITES_peace-0.0.20060210.tar.gz=http://chiharu.hauN.org/peace/dist/
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 
 MAINTAINER=	kent@NetBSD.org
 HOMEPAGE=	http://chiharu.hauN.org/peace/
-COMMENT=	Enable to run Win32 executables
-
-BROKEN_IN=	pkgsrc-2005Q4
+COMMENT=	Support running Win32 executables
 
 DISTFILES+=	peace-${PEACE_VERSION}.tar.gz
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=peace/}
@@ -22,7 +20,6 @@ DEPENDS+=	icu>=2.4nb1:../../textproc/icu
 
 BUILD_DEPENDS+=	cross-i386-netbsdpe>=3.3:../../cross/i386-netbsdpe
 BUILD_DEPENDS+=	w32api>=2.5:../../devel/w32api
-BUILD_DEPENDS+= x11-links-*:../../pkgtools/x11-links
 
 LDFLAGS+=	-L${WRKSRC}/lib
 PECOFFDIR=	${PREFIX}/emul/pecoff
@@ -31,13 +28,18 @@ MAKE_FLAGS+=	PECOFFDIR=${PECOFFDIR:Q} \
 		CROSSBASE=${CROSSBASE:Q} \
 		X11BASE=${X11BASE:Q} \
 		CHECK_DEPENDENTS=NO
-MAKE_COMMAND=	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
 
-do-install:
+INSTALL_DIRS=	libexec/ld.pe_so dll bin
+
+pre-install:
 	${INSTALL_PROGRAM_DIR} ${PECOFFDIR}/usr/libexec
-	cd ${WRKSRC}/libexec/ld.pe_so && ${MAKE_COMMAND} install
 	${INSTALL_DATA_DIR} ${PECOFFDIR}/usr/lib
-	${_PKG_SILENT}cd ${WRKSRC}/dll && ${MAKE_COMMAND} install
-	${_PKG_SILENT}cd ${WRKSRC}/bin && ${MAKE_COMMAND} install
 
+post-install:
+	${RMDIR} ${PREFIX}/emul/pecoff/usr/share/man/cat1
+	${RMDIR} ${PREFIX}/emul/pecoff/usr/share/man/man1
+	${RMDIR} ${PREFIX}/emul/pecoff/usr/share/man
+	${RMDIR} ${PREFIX}/emul/pecoff/usr/share
+
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
