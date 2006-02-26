@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.4 2006/01/20 14:58:18 adam Exp $
+$NetBSD: patch-ak,v 1.5 2006/02/26 07:48:11 wiz Exp $
 
---- dlls/ntdll/file.c.orig	2006-01-20 14:08:25.000000000 +0100
+--- dlls/ntdll/file.c.orig	2006-02-15 17:02:43.000000000 +0100
 +++ dlls/ntdll/file.c
-@@ -1587,6 +1587,35 @@ NTSTATUS FILE_GetDeviceInfo( int fd, FIL
+@@ -1592,6 +1592,35 @@ NTSTATUS FILE_GetDeviceInfo( int fd, FIL
              info->DeviceType = FILE_DEVICE_DISK_FILE_SYSTEM;
              break;
          }
@@ -35,6 +35,6 @@ $NetBSD: patch-ak,v 1.4 2006/01/20 14:58:18 adam Exp $
 +	    info->DeviceType = FILE_DEVICE_NETWORK_FILE_SYSTEM;
 +	    info->Characteristics |= FILE_REMOTE_DEVICE;
 +	}
- #elif defined(__FreeBSD__)
+ #elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
          struct statfs stfs;
  

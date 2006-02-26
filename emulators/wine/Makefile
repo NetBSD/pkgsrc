@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.97 2006/02/05 23:09:05 joerg Exp $
+# $NetBSD: Makefile,v 1.98 2006/02/26 07:48:11 wiz Exp $
 
-DISTNAME=	wine-0.9.6
-PKGREVISION=	1
+DISTNAME=	wine-0.9.8
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wine/} \
 		http://ibiblio.org/pub/linux/system/emulators/wine/
@@ -17,6 +16,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD-*-i386 Linux-*-i386 SunOS-*-i386 Darwin-*-i386
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/W/w/}
+USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		yes
 USE_NCURSES=		yes
 USE_TOOLS+=		bison gmake mktemp
@@ -36,6 +36,11 @@ CONFIGURE_ENV+=		CFLAGS="${CFLAGS} -DDEVOSSAUDIO=\"${DEVOSSAUDIO}\""
 LIBS+=			${LDFLAGS}
 
 .include "options.mk"
+
+post-install:
+.for tool in bin2res fnt2bdf
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/tools/${tool} ${PREFIX}/bin
+.endfor
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../databases/openldap/buildlink3.mk"

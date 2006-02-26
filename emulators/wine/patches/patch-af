@@ -1,21 +1,22 @@
-$NetBSD: patch-af,v 1.15 2006/01/20 14:58:18 adam Exp $
+$NetBSD: patch-af,v 1.16 2006/02/26 07:48:11 wiz Exp $
 
---- dlls/ntdll/signal_i386.c.orig	2006-01-19 15:14:04.000000000 +0100
+--- dlls/ntdll/signal_i386.c.orig	2006-02-15 16:02:43.000000000 +0000
 +++ dlls/ntdll/signal_i386.c
-@@ -204,7 +204,7 @@ typedef struct trapframe SIGCONTEXT;
+@@ -208,7 +208,7 @@ typedef struct trapframe SIGCONTEXT;
  
  #endif /* bsdi */
  
--#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__)
-+#if (defined(__NetBSD__) && (__NetBSD_Version__ < 200000000)) || defined(__FreeBSD__) || defined(__OpenBSD__)
+-#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__OpenBSD__)
++#if (defined(__NetBSD__) && (__NetBSD_Version__ < 200000000)) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__OpenBSD__)
  
  typedef struct sigcontext SIGCONTEXT;
  
-@@ -328,7 +328,45 @@ typedef ucontext_t SIGCONTEXT;
+@@ -332,8 +332,45 @@ typedef ucontext_t SIGCONTEXT;
  
  #endif /* __APPLE__ */
  
--#if defined(linux) || defined(__NetBSD__) || defined(__FreeBSD__) ||\
+-#if defined(linux) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__FreeBSD_kernel__) ||\
+-    defined(__OpenBSD__) || defined(__EMX__) || defined(__CYGWIN__)
 +#if defined(__NetBSD__) && (__NetBSD_Version__ >= 200000000)
 +# include <sys/ucontext.h>
 +# include <sys/types.h>
@@ -53,8 +54,8 @@ $NetBSD: patch-af,v 1.15 2006/01/20 14:58:18 adam Exp $
 +
 +#endif	/* NetBSD */
 +
-+
 +#if defined(linux) || (defined(__NetBSD__) && (__NetBSD_Version__ < 200000000)) || defined(__FreeBSD__) ||\
-     defined(__OpenBSD__) || defined(__EMX__) || defined(__CYGWIN__)
++    defined(__FreeBSD_kernel__) || defined(__OpenBSD__) || defined(__EMX__) || defined(__CYGWIN__)
  
  #define EAX_sig(context)     ((context)->sc_eax)
+ #define EBX_sig(context)     ((context)->sc_ebx)
