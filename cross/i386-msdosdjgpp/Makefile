@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/02/05 23:08:30 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/02/26 16:26:08 joerg Exp $
 #
 
 DISTVERSION=		2.02.0
@@ -28,6 +28,7 @@ USE_CROSS_BINUTILS=	yes
 BINUTILS_GNUTARGET=	coff-go32
 BINUTILS_LDEMULATION=	i386go32
 USE_CROSS_EGCS=		yes
+USE_MAKEINFO=		yes
 
 # Scripts in the build need to have a $CPP defined that works with the built
 # compiler
