@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/11/23 22:17:55 wiz Exp $
+$NetBSD: distinfo,v 1.5 2006/02/26 08:43:44 wiz Exp $
 
-SHA1 (Tree-Simple-1.15.tar.gz) = 7d6240ffbb27fb7e110e8859760c5dcc3a2a369b
-RMD160 (Tree-Simple-1.15.tar.gz) = 24ebb9418bfa9a09d9377fae79cc95e82d74e719
-Size (Tree-Simple-1.15.tar.gz) = 31204 bytes
+SHA1 (Tree-Simple-1.16.tar.gz) = 8f32f713808110251c4da173914107ff7f80255b
+RMD160 (Tree-Simple-1.16.tar.gz) = 45aa3913c3c840bbec14f11f26879ca547bec318
+Size (Tree-Simple-1.16.tar.gz) = 32104 bytes
