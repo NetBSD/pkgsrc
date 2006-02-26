@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.66 2006/02/26 04:26:52 rillig Exp $
+# $NetBSD: makevars.map,v 1.67 2006/02/26 17:40:44 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -326,8 +326,7 @@ SUBST_FILES		List of Pathmask
 SUBST_FILTER_CMD	List of ShellWord
 # ^^ more appropriately, a Shellcommand
 SUBST_MESSAGE		Message
-SUBST_SED		List of ShellWord
-# ^^ This may be changed to a List+ later.
+SUBST_SED		SedCommands
 SUBST_STAGE		Stage
 SVR4_PKGNAME		SVR4PkgName
 TEST_DIRS		List of WrksrcSubdirectory
