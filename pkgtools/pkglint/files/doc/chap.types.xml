@@ -1,0 +1,419 @@
+<!-- $NetBSD: chap.types.xml,v 1.1 2006/02/26 23:38:07 rillig Exp $ -->
+
+<chapter id="types">
+<title>The &pkglint; type system</title>
+
+	<para>One of the most notable additions to &pkglint; is the
+	introduction of typed variables. Traditionally, in
+	<filename>Makefile</filename>s, all variables have the type
+	<type>String</type>. This prevents many useful checks from being
+	done before executing the code.</para>
+
+	<para>To that time, &pkglint; already did some checks based on
+	the value of the variables, but these checks had no common
+	structure that could be described easily.</para>
+
+<sect1 id="types.history">
+<title>History</title>
+
+	<para>In February 2005, initial support for the &pkglint; type
+	system has been added. Some of the common variables have been
+	assigned types such as <literal><type>Boolean</type></literal>
+	or <literal><type>Yes_Or_Undefined</type></literal>, which are
+	the two common ways to represent boolean variables in pkgsrc.
+	The list of typed variables has been moved from the &pkglint;
+	code to an external file, <filename>makevars.map</filename>.
+	Many more basic types have been added later.</para>
+
+	<para>In October 2005, the type system has been extended to
+	allow <literal><type>List of
+	<replaceable>simple-type</replaceable></type></literal>, which
+	allowed to handle variables like <varname>DEPENDS</varname> and
+	<varname>CFLAGS</varname>. One month later, enumeration types
+	have been added, allowing the type of
+	<varname>PTHREAD_OPTS</varname> to be expressed as <literal>List
+	of { require native }</literal>.</para>
+
+</sect1>
+
+<sect1 id="types.syntax">
+<title>Syntax for defining types</title>
+
+<programlisting>
+    type             ::= list-variant "of" simple-type
+                     |   simple-type
+    list-variant     ::= "List" "!"? "+"?
+    simple-type      ::= predefined-type
+                     |   enumeration
+    predefined-type  ::= [A-Za-z][0-9A-Z_a-z]*
+    enumeration      ::= "{" (enumeration-item)* "}"
+    enumeration-item ::= [-0-9A-Z_a-z]+
+</programlisting>
+
+</sect1>
+<sect1 id="types.semantics">
+<title>Semantics of the types</title>
+
+	<para>The <firstterm>simple types</firstterm> in &pkglint; are
+	either predefined types or enumeration types. A
+	<firstterm>predefined type</firstterm> is used by its name. See
+	<xref linkend="types.predefined"/> for the list of predefined
+	types.</para>
+
+	<para>Enumeration types are defined by writing a
+	<literal>{</literal>, followed by the enumeration items,
+	followed by a <literal>}</literal>. The enumeration items are
+	separated by space characters.</para>
+
+	<para>A list type can be constructed from a predefined type or
+	an enumeration. It is not possible to construct lists of lists,
+	since I have never needed that. When defining a list type, the
+	<literal>List</literal> keyword may be followed immediately
+	(that is, no white-space) by a <literal>!</literal> or a
+	<literal>+</literal>. A <literal>!</literal> means that the list
+	is an internal list, as opposed to an external list. Most lists
+	are external lists, so this has been chosen as the default
+	value. The differences between these two types are described in
+	the <ulink url="&pkgsrc-guide;/makefile.html">pkgsrc guide, the
+	chapter about <filename>Makefile</filename>s</ulink>. A
+	<literal>+</literal> restricts the valid operations on a
+	variable of that type. The only allowed operations are setting
+	the list to a commented empty value, for example
+	<literal>#&nbsp;none</literal>, or appending to the list, using
+	the <literal>+=</literal> operator.</para>
+
+</sect1>
+<sect1 id="types.predefined">
+<title>Predefined types</title>
+
+	<para>There are many predefined types in &pkglint;, which are
+	described below.</para>
+
+	<!-- reference: pkglint.pl, revision 1.532 -->
+	<variablelist>
+
+	<varlistentry><term><literal><type>AwkCommand</type></literal></term>
+	<listitem><para>An awk command. Currently nothing is checked
+	here.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>BuildlinkDepmethod</type></literal></term>
+	<listitem><para>Must be either <literal>build</literal> or
+	<literal>full</literal>.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>BuildlinkDepth</type></literal></term>
+	<listitem><para>This type is only intended for one variable,
+	namely <varname>BUILDLINK_DEPTH</varname>, which is only
+	modified in <filename>buildlink3.mk</filename>
+	files.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>BuildlinkPackages</type></literal></term>
+	<listitem><para>The type of the variable
+	<varname>BUILDLINK_PACKAGES</varname>. Like
+	<literal><type>BuildlinkDepth</type></literal> above, this is
+	only used in <filename>buildlink3.mk</filename> files. This
+	variable has two different patterns to be modified. The first is
+	to remove the current package from itself, and the second is to
+	append the current package. This prevents a package from showing
+	up twice in the list.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Category</type></literal></term>
+	<listitem><para>One of the categories that a package may be
+	placed in. The list of categories has been assembled manually
+	when the type was introduced. There is no further agreement on
+	which valid categories are valid, besides the top level
+	directory names in pkgsrc.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>CFlag</type></literal></term>
+	<listitem><para>One word in a <varname>CFLAGS</varname> or
+	<varname>CPPFLAGS</varname> variable. &pkglint; knows the flags
+	starting with <literal>-D</literal>, <literal>-U</literal>,
+	<literal>-I</literal>. Flags starting with
+	<literal>-O</literal>, <literal>-W</literal>,
+	<literal>-f</literal>, <literal>-g</literal> or
+	<literal>-m</literal> are silently accepted since they are
+	commonly used for the GNU compilers. As the pkgsrc framework
+	does not know how to handle most of these flags, care should be
+	taken.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Comment</type></literal></term>
+	<listitem><para>The comment of a package.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Dependency</type></literal></term>
+	<listitem><para>A simple dependency like
+	<literal>foopkg>=1.0</literal>, <literal>foopkg-[0-9]*</literal>
+	or <literal>foopkg-1.0</literal>.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>DependencyWithPath</type></literal></term>
+	<listitem><para>A dependency (see above), followed by a colon
+	and a relative directory. For some packages, special variables
+	like <varname>USE_TOOLS</varname> should be used instead of an
+	explicit dependency.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>DistSuffix</type></literal></term>
+	<listitem><para>The value of the variable
+	<varname>EXTRACT_SUFX</varname>. The difference in the name is
+	intentional here, since <varname>EXTRACT_SUFX</varname> is a
+	misnomer. <varname>DIST_SUFX</varname> or
+	<varname>DIST_SUFFIX</varname> would be more appropriate.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Filename</type></literal></term>
+	<listitem><para>A filename, as defined in <ulink
+	url="http://www.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap03.html#tag_03_169">POSIX</ulink>.
+	This type further restricts the set of allowed characters.
+	See also <literal><type>Pathname</type></literal>.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Filemask</type></literal></term>
+	<listitem><para>A shell globbing pattern that does not contain a
+	slash. See also <literal><type>Pathmask</type></literal>.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Identifier</type></literal></term>
+	<listitem><para>In various places in pkgsrc, identifiers are
+	used. This type collects the most common naming conventions.
+	When you need a more specific check, you have to write your own
+	check.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>LdFlag</type></literal></term>
+	<listitem><para>A flag that is passed to the linker. Flags
+	starting with <literal>-L</literal> or <literal>-l</literal> are
+	accepted, as well as some others that are assumed to be handled
+	by the wrapper framework.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Mail_Address</type></literal></term>
+	<listitem><para>Checks for a very restricted subset of <ulink
+	url="http://www.ietf.org/rfc/rfc2822.txt">RFC
+	2822</ulink>.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Message</type></literal></term>
+	<listitem><para>Messages are printed to the user as status
+	indicators. <ulink
+	url="http://www.freebsd.org/cgi/cvsweb.cgi/ports/devel/portlint/src/portlint.pl#rev1.77">As
+	opposed to FreeBSD</ulink>, they should not be quoted since they
+	may be used in contexts where quoting should be done
+	differently.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Option</type></literal></term>
+	<listitem><para>An option from the
+	<literal>PKG_OPTIONS</literal> framework. Options should not
+	contain underscores. They should be documented in
+	<filename>pkgsrc/mk/default/options.description</filename>.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Pathlist</type></literal></term>
+	<listitem><para>A list of directories that are separated by
+	colons, like the popular environment variable
+	<varname>PATH</varname>. This type differs from the type
+	<literal><type>List of Pathname</type></literal> in the
+	character that is used as a separator.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Pathmask</type></literal></term>
+	<listitem><para>A shell globbing expression that may include
+	slashes.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Pathname</type></literal></term>
+	<listitem><para>A pathname, as defined in <ulink
+	url="http://www.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap03.html#tag_03_266">POSIX</ulink>.
+	See also <literal><type>Filename</type></literal>.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Perl5Packlist</type></literal></term>
+	<listitem><para>A common error has been to refer to
+	<varname>INSTALLARCHLIB</varname> in the location of the packing
+	list. Therefore no references to other variables are
+	allowed.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>PkgName</type></literal></term>
+	<listitem><para>A package name should conform to some
+	restrictions, since the filename of the binary package is
+	created from it, which is then interpreted by pkg_add and the
+	like.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>PkgOptionsVar</type></literal></term>
+	<listitem><para>I had once made the mistake of referencing
+	<varname>PKGBASE</varname> in this variable, not knowing that
+	<varname>PKG_OPTIONS_VAR</varname> is used during preprocessing,
+	when <varname>PKGBASE</varname> is not yet defined. This type
+	prevent that mistake from being done again.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>PkgRevision</type></literal></term>
+	<listitem><para>The package revision must be a small integer.
+	The only place where this definition may occur is the package
+	<filename>Makefile</filename> itself, as this variable says
+	something about the individual package. There is no mechanism in
+	pkgsrc for something similar to <varname>PKGREVISION</varname>
+	that can be used in <filename>Makefile.common</filename>
+	files.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>PlatformTriple</type></literal></term>
+	<listitem><para>pkgsrc has been ported to many platforms, all of
+	which are identified using a triple of operating system,
+	operating system version and hardware
+	architecture.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Readonly</type></literal></term>
+	<listitem><para>This type is used to mark a variable as being
+	read-only to a package author. As this is not really a data type
+	but an access restriction, it will disappear in the next version
+	of the type system.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>RelativePkgDir</type></literal></term>
+	<listitem><para>A directory name that is relative to the package
+	directory. Mostly used for dependencies. See also
+	<literal><type>RelativePkgPath</type></literal>.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>RelativePkgPath</type></literal></term>
+	<listitem><para>A pathname that is relative to the package
+	directory. It may point to either a regular file or a directory.
+	See also <literal><type>RelativePkgDir</type></literal>.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>SVR4PkgName</type></literal></term>
+	<listitem><para>When converting pkgsrc packages to Solaris
+	packages, the package name is restricted to 9 characters, of
+	which five remain for the package
+	itself.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>ShellCommand</type></literal></term>
+	<listitem><para>A shell command is similar to a
+	<literal><type>List of ShellWord</type></literal>, except that
+	additional checks are performed on the direct use of tool names
+	or certain other deprecated shell commands.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>ShellWord</type></literal></term>
+	<listitem><para>A shell word is what the shell would regard as a
+	single word.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Stage</type></literal></term>
+	<listitem><para>In pkgsrc, there are phases, stages and steps.
+	Especially for the <varname>SUBST_STAGE</varname> variable, this
+	should always be one of the few predefined names, otherwise the
+	whole substitution group will be ignored.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Tool</type></literal></term>
+	<listitem><para>The pkgsrc tools framework contains very few
+	plausibility checks. To prevent spelling mistakes, the list of
+	valid tool names is loaded from the pkgsrc infrastructure files
+	and compared with the names that are used in the
+	<varname>USE_TOOLS</varname> variable.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>URL</type></literal></term>
+	<listitem><para>URLs appear in <varname>MASTER_SITES</varname>
+	and the <varname>HOMEPAGE</varname>. If a
+	<varname>MASTER_SITES</varname> group exists for a given URL, it
+	should be used instead of listing the URL directly.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>UserGroupName</type></literal></term>
+	<listitem><para>User and group names should consist only of
+	alphanumeric characters and the underscore. This restriction
+	ensures maximum portability of pkgsrc.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Userdefined</type></literal></term>
+	<listitem><para>Another instance of misuse of the type system.
+	But it helps to catch some errors in packages. This type will
+	disappear in the next version of the type system. See also
+	<literal><type>Readonly</type></literal>.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Varname</type></literal></term>
+	<listitem><para>Variable names are restricted to only uppercase
+	letters and the underscore in the basename, and arbitrary
+	characters in the parameterized part, following the dot.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>WrkdirSubdirectory</type></literal></term>
+	<listitem><para>The variable <varname>WRKSRC</varname> is
+	usually defined with reference to <varname>WRKDIR</varname>.
+	This check currently does nothing, and I don't know if it's
+	worth to check anything here.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>WrksrcSubdirectory</type></literal></term>
+	<listitem><para>Subdirectories of <varname>WRKSRC</varname> can
+	be used in <varname>CONFIGURE_DIRS</varname> and some other
+	variables. For convenience, they are interpreted relative to
+	<varname>WRKSRC</varname>, so package authors don't have to type
+	<literal>${WRKSRC}</literal> all the time.</para>
+	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>Yes</type></literal></term>
+	<listitem><para>This type is used for variables that are checked
+	using <literal>defined(VARNAME)</literal>. Their value is
+	interpreted as <quote>true</quote> if they are defined, no
+	matter if they are set to <literal>yes</literal> or
+	<literal>no</literal>.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>YesNo</type></literal></term>
+	<listitem><para>This type is used for variables that are checked
+	using <literal>defined(VARNAME) &amp;&amp;
+	!empty(VARNAME:M[Yy][Ee][Ss])</literal>. A value of
+	<varname>no</varname> means <quote>no</quote> for
+	them.</para></listitem></varlistentry>
+
+	<varlistentry><term><literal><type>YesNoFromCommand</type></literal></term>
+	<listitem><para>Like <literal><type>YesNo</type></literal>, but
+	the value may be produced by a shell command using the
+	<literal>!=</literal> operator.</para></listitem></varlistentry>
+
+	</variablelist>
+
+</sect1>
+
+<sect1 id="types.future">
+<title>Future directions</title>
+
+	<para>The framework for defining data types in the makevars.map
+	file is insufficient. It does not allow ACLs that specify which
+	variables may be read or written by the various actors in
+	pkgsrc. At the moment, the data type and the permissions are
+	intermixed (see type
+	<literal><type>Readonly</type></literal>).</para>
+
+	<para>To overcome these design flaws, I will create a new type
+	system for &pkglint; that is based on the current one, but
+	provides ACLs to define the permitted operations on each
+	variable. Each ACL entry is then a combination of an
+	<firstterm>actor</firstterm> with an
+	<firstterm>operation</firstterm>.</para>
+
+	<table id="types.acl.actors">
+	<title>ACL Actors</title>
+	<tgroup cols="2">
+	<thead><row><entry>Actor</entry><entry>Description</entry></row></thead>
+	<tbody>
+	<row><entry>package</entry><entry>The package author</entry></row>
+	<row><entry>system</entry><entry>The pkgsrc infrastructure</entry></row>
+	<row><entry>bl3</entry><entry><filename>buildlink3.mk</filename> and <filename>builtin.mk</filename> files</entry></row>
+	<row><entry>user</entry><entry>The pkgsrc user via <filename>mk.conf</filename></entry></row>
+	<row><entry>cmdline</entry><entry>The pkgsrc user via the command line</entry></row>
+	</tbody>
+	</tgroup>
+	</table>
+
+	<table id="types.acl.actions">
+	<title>ACL Operations</title>
+	<tgroup cols="2">
+	<thead><row><entry>Operation</entry><entry>Description</entry></row></thead>
+	<tbody>
+	<row><entry>write</entry><entry>Create a variable or overwrite the value</entry></row>
+	<row><entry>append</entry><entry>Append to a list</entry></row>
+	<row><entry>default</entry><entry>Provide a default value for a variable</entry></row>
+	<row><entry>read</entry><entry>Use the value when executing the shell commands</entry></row>
+	<row><entry>readpp</entry><entry>Use the value during preprocessing</entry></row>
+	</tbody>
+	</tgroup>
+	</table>
+
+</sect1>
+
+</chapter>
