@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.534 2006/02/26 16:21:14 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.535 2006/02/26 17:40:44 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1999,6 +1999,17 @@ sub tablen($) {
 	return $len;
 }
 
+sub shell_split($) {
+	my ($text) = @_;
+	my ($words);
+
+	$words = [];
+	while ($text =~ s/$regex_shellword//) {
+		push(@{$words}, $1);
+	}
+	return (($text =~ qr"^\s*$") ? $words : false);
+}
+
 #
 # Loading package-specific data from files.
 #
@@ -2428,7 +2439,7 @@ sub checkline_mk_shellword($$$) {
 			if ($state == SWST_PLAIN && defined($mod) && $mod =~ qr":Q$") {
 				# Fine.
 
-			} elsif (($state == SWST_SQUOT || $state == SWST_DQUOT) && $varname =~ qr"^(?:.*DIR|.*FILE|.*PATH|.*_VAR|PREFIX|LOCALBASE|PKGNAME)$") {
+			} elsif (($state == SWST_SQUOT || $state == SWST_DQUOT) && $varname =~ qr"^(?:.*DIR|.*FILE|.*PATH|.*_VAR|PREFIX|.*BASE|PKGNAME)$") {
 				# This is ok if we don't allow these
 				# variables to have embedded [\$\\\"\'\`].
 
@@ -3090,6 +3101,46 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 			$line->log_error("SVR4_PKGNAME must not be longer than 5 characters.");
 		}
 
+	} elsif ($type eq "SedCommands") {
+		my $words = shell_split($value);
+		if (!$words) {
+			$line->log_error("Invalid shell words in sed commands.");
+
+		} else {
+			my $nwords = scalar(@{$words});
+			my $ncommands = 0;
+
+			for (my $i = 0; $i < $nwords; $i++) {
+				my $word = $words->[$i];
+				checkline_mk_shellword($line, $word, true);
+
+				if ($word eq "-e") {
+					if ($i + 1 < $nwords) {
+						# Check the real sed command here.
+						$i++;
+						$ncommands++;
+						if ($ncommands > 1) {
+							$line->log_warning("Each sed command should appear in an assignment of its own.");
+						}
+						checkline_mk_shellword($line, $word, true);
+					} else {
+						$line->log_error("The -e option to sed requires an argument.");
+					}
+				} elsif ($word eq "-E") {
+					# Switch to extended regular expressions mode.
+
+				} elsif ($word eq "-n") {
+					# Don't print lines per default.
+
+				} elsif ($i == 0 && $word =~ qr"^([\"']?)\d*s(.).*\2\1g?$") {
+					$line->log_warning("Please always use \"-e\" in sed commands, even if there is only one substitution.");
+
+				} else {
+					$line->log_warning("Unknown sed command ${word}.");
+				}
+			}
+		}
+
 	} elsif ($type eq "ShellCommand") {
 		checkline_mk_shellcmd($line, $value);
 
@@ -3314,7 +3365,7 @@ sub checkline_mk_vartype($$$$$) {
 			}
 
 		} else {
-			checkline_mk_vartype_basic($line, $varname, $type, $op, $value, $comment, false);
+			checkline_mk_vartype_basic($line, $varname, $type, $op, $value, $comment, ($type eq "SedCommands"));
 		}
 }
 
