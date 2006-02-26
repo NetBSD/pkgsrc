@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4647 2006/02/25 23:18:48 wiz Exp $
+$NetBSD: TODO,v 1.4648 2006/02/26 02:35:08 snj Exp $
 
 Suggested new packages
 ======================
@@ -501,7 +501,6 @@ Suggested package updates
 	o file-4.15
 	o file-roller-2.12.3
 	o findutils-4.2.27
-	o flac123-0.0.9
 	o flashplayer-0.4.13
 	o fmsx-3.0
 	o fondu-040927
