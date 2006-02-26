@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2006/02/26 05:03:21 snj Exp $
+
+--- configure.in.orig	2006-02-25 20:04:11.000000000 -0800
++++ configure.in	2006-02-25 20:04:25.000000000 -0800
+@@ -3,6 +3,7 @@ AC_INIT(lsdvd.c)
+ AM_INIT_AUTOMAKE(lsdvd, 0.10)
+ CFLAGS=-g
+ AC_PROG_CC
++AC_CHECK_HEADERS([stdint.h inttypes.h])
+ AC_CHECK_LIB(dvdread, DVDOpen, , AC_MSG_ERROR([libdvdread not found!]))
+ AC_MSG_CHECKING([for dvdread/ifo_read.h])
+ AC_TRY_COMPILE([#include <dvdread/ifo_read.h>], ,
