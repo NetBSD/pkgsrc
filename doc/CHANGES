@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13101 2006/02/26 20:37:48 joerg Exp $
+$NetBSD: CHANGES,v 1.13102 2006/02/26 22:50:35 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1245,3 +1245,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/libdnsres to 0.1anb1 [joerg 2006-02-26]
 	Updated emulators/peace to 0.0.20060210nb2 [wiz 2006-02-26]
 	Updated lang/spidermonkey to 1.5nb2 [joerg 2006-02-26]
+	Updated net/bittorrent to 4.4.0 [tron 2006-02-26]
+	Updated net/bittorrent-gui to 4.4.0 [tron 2006-02-26]
