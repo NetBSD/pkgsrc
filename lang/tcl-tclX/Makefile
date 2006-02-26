@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/02/05 23:09:53 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2006/02/26 21:11:28 joerg Exp $
 #
 
 DISTNAME=	tclx8.3.5-src
@@ -33,7 +33,7 @@ PKGSRCDIR.tcl=		${.CURDIR}/../../lang/tcl
 WRKSRC.tcl_cmd=		\
 	cd ${PKGSRCDIR.tcl} && ${MAKE} show-var VARNAME=WRKSRC
 
-PKGSRC_TCL_SRC_DIR=	${WRKSRC.tcl_cmd:sh}/../
+PKGSRC_TCL_SRC_DIR=	${WRKSRC.tcl_cmd:sh}
 CONFIGURE_ENV+=		PKGSRC_TCL_SRC_DIR=${PKGSRC_TCL_SRC_DIR:Q}
 
 MAKE_ENV+=		GTAR=${GTAR:Q} CHOWN=${CHOWN:Q} CHMOD=${CHMOD:Q} \
