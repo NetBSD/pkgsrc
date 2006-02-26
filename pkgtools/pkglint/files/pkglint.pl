@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.532 2006/02/24 15:05:10 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.533 2006/02/26 04:26:52 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3105,11 +3105,6 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 			$line->log_warning("Invalid stage name. Use one of {pre,do,post}-{extract,patch,configure,build,install}.");
 		}
 
-	} elsif ($type eq "SubstMessage") {
-		if ($value =~ qr"^\".*\"$") {
-			$line->log_warning("${varname} should not be quoted.");
-		}
-
 	} elsif ($type eq "Tool") {
 		if ($value =~ qr"^([-\w]+|\[)(?::(\w+))?$") {
 			my ($toolname, $tooldep) = ($1, $2);
@@ -3117,7 +3112,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 				$line->log_error("Unknown tool \"${toolname}\".");
 			}
 			if (defined($tooldep) && $tooldep !~ qr"^(?:build|pkgsrc|run)$") {
-				$line->log_error("Unknown tool dependency \"${tooldep}\".");
+				$line->log_error("Unknown tool dependency \"${tooldep}\". Use one of \"build\", \"pkgsrc\" or \"run\".");
 			}
 		} else {
 			$line->log_error("Invalid tool syntax: \"${value}\".");
