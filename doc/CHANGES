@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13100 2006/02/26 17:26:56 wiz Exp $
+$NetBSD: CHANGES,v 1.13101 2006/02/26 20:37:48 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1244,3 +1244,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated wm/oroborox to 0.9.7.10 [rxg 2006-02-26]
 	Updated devel/libdnsres to 0.1anb1 [joerg 2006-02-26]
 	Updated emulators/peace to 0.0.20060210nb2 [wiz 2006-02-26]
+	Updated lang/spidermonkey to 1.5nb2 [joerg 2006-02-26]
