@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13090 2006/02/26 07:48:36 wiz Exp $
+$NetBSD: CHANGES,v 1.13091 2006/02/26 08:44:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1234,3 +1234,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/cflow-mode 1.0 [rpaulo 2006-02-25]
 	Updated audio/flac123 to 0.0.9 [snj 2006-02-26]
 	Updated emulators/wine to 0.9.8 [wiz 2006-02-26]
+	Updated devel/p5-Tree-Simple to 1.16 [wiz 2006-02-26]
