@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:08:54 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/02/26 22:37:22 tron Exp $
 
 DISTNAME=	swig-1.3.24
 PKGREVISION=	2
@@ -26,7 +26,7 @@ CHECK_INTERPRETER_SKIP+=	share/examples/swig/guile/matrix/matrix.scm
 
 post-install:
 	cd ${WRKSRC:Q}/Doc/Manual && \
-	ktrace ${INSTALL_DATA} SWIGDocumentation.html SWIGDocumentation.pdf	\
+	${INSTALL_DATA} SWIGDocumentation.html SWIGDocumentation.pdf	\
 		*.png ${PREFIX:Q}/share/doc/swig
 	cd ${WRKSRC:Q}/Examples &&					\
 	${PAX} -wr							\
