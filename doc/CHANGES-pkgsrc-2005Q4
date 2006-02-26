@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.94 2006/02/25 01:26:38 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.95 2006/02/26 22:09:47 seb Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -191,3 +191,5 @@ Pullup ticket 1158 - requested by Thomas Klausner
 security fix for bomberclone
 Pullup ticket 1153 - requested by Martti Kuparinen
 PLIST fix for xfce4-print
+Pullup ticket 1163 - requested by Joerg Sonnenberger                            
+mostly sync databases/postgresql74, databases/tcl-postgresql74 and databases/postgresql74-{client,contrib,docs,lib,plperl,plpython,server} with HEAD, via patch, including security fix.                                        
