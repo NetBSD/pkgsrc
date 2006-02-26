@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.41 2006/02/05 23:09:35 joerg Exp $
+# $NetBSD: Makefile,v 1.42 2006/02/26 10:39:34 wiz Exp $
 #
 
-DISTNAME=	librsvg-2.12.7
+DISTNAME=	librsvg-2.14.0
 PKGNAME=	${DISTNAME:S/-/2-/}
-PKGREVISION=	3
 CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.12/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.14/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -21,7 +20,7 @@ GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE=	librsvg-2.0.pc.in
 
-CONFIGURE_ARGS+=	--disable-gtk-doc
+CONFIGURE_ARGS+=	--enable-gtk-doc
 CONFIGURE_ARGS+=	--with-gimp=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/librsvg2
 CONFIGURE_ARGS+=	--with-tags=
@@ -33,6 +32,7 @@ GTK2_LOADERS=		yes
 
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../textproc/libcroco/buildlink3.mk"
 .include "../../x11/gtk2/modules.mk"
 .include "../../mk/bsd.pkg.mk"
