@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 20:39:45 agc Exp $
+$NetBSD: distinfo,v 1.3 2006/02/26 02:33:51 snj Exp $
 
-SHA1 (flac123-0.0.7.tar.gz) = 952755255326ba3e38a756c8d08f22dbdc204543
-RMD160 (flac123-0.0.7.tar.gz) = b3847d5cdfae5f49df6058ad7a9e7400c462e1e4
-Size (flac123-0.0.7.tar.gz) = 69852 bytes
+SHA1 (flac123-0.0.9.tar.gz) = 54784aeda6c016759007e02e51076c0ea0b937ed
+RMD160 (flac123-0.0.9.tar.gz) = f84a0373f86322d419487492858fb0973e3accfb
+Size (flac123-0.0.9.tar.gz) = 69647 bytes
