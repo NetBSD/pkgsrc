@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13096 2006/02/26 12:01:05 markd Exp $
+$NetBSD: CHANGES,v 1.13097 2006/02/26 15:04:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1240,3 +1240,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/gnome-icon-theme to 2.14.1 [wiz 2006-02-26]
 	Updated graphics/librsvg2 to 2.14.0 [wiz 2006-02-26]
 	Updated x11/kdelibs3 to 3.5.1nb2 [markd 2006-02-26]
+	Updated www/squid to 2.5.12nb5 [taca 2006-02-26]
