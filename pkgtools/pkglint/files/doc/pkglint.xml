@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+	"http://www.oasis-open.org/docbook/xml/4.4/docbook.dtd"
+[
+	<!ENTITY pkglint "<literal>pkglint</literal>">
+	<!ENTITY pkgsrc-guide "http://www.NetBSD.org/Documentation/pkgsrc">
+
+	<!ENTITY chap.intro SYSTEM "chap.intro.xml">
+	<!ENTITY chap.defs SYSTEM "chap.defs.xml">
+	<!ENTITY chap.types SYSTEM "chap.types.xml">
+	<!ENTITY chap.code SYSTEM "chap.code.xml">
+	<!ENTITY chap.statemachines SYSTEM "chap.statemachines.xml">
+]>
+
+<!-- $NetBSD: pkglint.xml,v 1.1 2006/02/26 23:38:07 rillig Exp $ -->
+
+<book>
+<title>Design and implementation of &pkglint;</title>
+
+<bookinfo>
+<author>
+	<firstname>Roland</firstname>
+	<surname>Illig</surname>
+	<email>rillig@NetBSD.org</email>
+</author>
+</bookinfo>
+
+&chap.intro;
+&chap.defs;
+&chap.types;
+&chap.code;
+&chap.statemachines;
+
+</book>
