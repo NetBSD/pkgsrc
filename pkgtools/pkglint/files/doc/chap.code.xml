@@ -1,0 +1,218 @@
+<!-- $NetBSD: chap.code.xml,v 1.1 2006/02/26 23:38:07 rillig Exp $ -->
+
+<chapter id="code">
+<title>Code structure</title>
+
+	<para>In this chapter, I give an overview of how the &pkglint;
+	code is organized, starting with the <function>main</function>
+	function, passing the functions that check a single line and
+	finally arriving at the infrastructure that makes writing the
+	other functions easier.</para>
+
+<sect1 id="code.overview">
+<title>Overview</title>
+
+	<para>The &pkglint; code is structured in modular, easy to
+	understand procedures. These procedures can be further
+	classified with respect to what they do. There are procedures
+	that check a file, others check the lines of a file, again
+	others check a single line. These classes of procedures are
+	described in the following sections in a top-down
+	fashion.</para>
+
+	<para>If nothing special is said about which procedures call
+	which others, you may assume that procedures of a certain rank
+	only call procedures that are of a strictly lower rank. For
+	example, no <function>checkline_*</function> will ever call
+	<function>checkfile_*</function>. Sometimes, functions of the
+	same rank are called, but these cases are documented
+	explicitly.</para>
+
+</sect1>
+
+<sect1 id="code.select">
+<title>Selecting the proper checking function</title>
+
+	<para>The <function>main</function> procedure of &pkglint; is a
+	simple loop around a TODO list containing pathnames of items (I
+	couldn't think of a better name here). The decision of which
+	checks to apply to a given item is done in
+	<function>checkitem</function>, which checks whether the item is
+	a file or a directory and dispatches the actual checking to
+	specialized procedures.</para>
+
+</sect1>
+
+<sect1 id="code.dir">
+<title>Checking a directory</title>
+
+	<para>The procedures that check a directory are
+	<function>checkdir_root</function> for the pkgsrc root
+	directory, <function>checkdir_category</function> for a category
+	of packages and <function>checkdir_package</function> for a
+	single package.</para>
+
+</sect1>
+
+<sect1 id="code.file">
+<title>Checking a file</title>
+
+	<para>Since the dispatching for files requires much code, it has
+	been put into a separate procedure called
+	<function>checkfile</function>, which further dispatches the
+	call to the other procedures.</para>
+
+	<para>The procedures that check a specific file are
+	<function>checkfile_ALTERNATIVES</function>,
+	<function>checkfile_DESCR</function>,
+	<function>checkfile_distinfo</function>,
+	<function>checkfile_extra</function>,
+	<function>checkfile_INSTALL</function>,
+	<function>checkfile_MESSAGE</function>,
+	<function>checkfile_mk</function>,
+	<function>checkfile_patch</function> and
+	<function>checkfile_PLIST</function>. For most of the
+	procedures, it should be obvious to which files they are
+	applied. A distinction is made between buildlink3 files and
+	other <filename>Makefiles</filename>, as some additional checks
+	apply to buildlink3 files. Of course, these procedures use
+	pretty much the same code for checking, and this is where the
+	<function>checklines_*</function> functions step in.</para>
+
+	<para>The <function>checkfile_package_Makefile</function>
+	function is somewhat special in that it expects four parameters
+	instead of only one. This is because loading the package data
+	has been separated from the actual checking.</para>
+
+</sect1>
+
+<sect1 id="code.lines">
+<title>Checking the lines in a file</title>
+
+	<para>This class of procedures consists of
+	<function>checklines_trailing_empty_lines</function>,
+	<function>checklines_package_Makefile_varorder</function> and
+	<function>checklines_mk</function>. The middle one is too
+	complex to be included in
+	<function>checkfile_package_Makefile</function>, and the other
+	ones are of so generic use that they deserved to be procedures
+	of their own.</para>
+
+	<para>The <function>checklines_mk</function> makes heavy use of
+	the various <function>checkline_*</function> functions that are
+	explained in the next chapter.</para>
+
+</sect1>
+
+<sect1 id="code.line">
+<title>Checking a single line in a file</title>
+
+	<para>This class of procedures checks a single line of a file.
+	The number of parameters differs for most of these procedures,
+	as some need more context information and others don't.</para>
+
+	<para>The procedures that are applicable to any file type are
+	<function>checkline_length</function>,
+	<function>checkline_valid_characters</function>,
+	<function>checkline_valid_characters_in_variable</function>,
+	<function>checkline_trailing_whitespace</function>,
+	<function>checkline_rcsid_regex</function>,
+	<function>checkline_rcsid</function>,
+	<function>checkline_relative_path</function>,
+	<function>checkline_relative_pkgdir</function>,
+	<function>checkline_spellcheck</function> and
+	<function>checkline_cpp_macro_names</function>.</para>
+
+	<para>The rest of the procedures is specific to
+	<filename>Makefile</filename>s:
+	<function>checkline_mk_text</function>,
+	<function>checkline_mk_shellword</function>,
+	<function>checkline_mk_shelltext</function>,
+	<function>checkline_mk_shellcmd</function>,
+	<function>checkline_mk_vartype_basic</function>,
+	<function>checkline_mk_vartype_basic</function>,
+	<function>checkline_mk_vartype</function> and
+	<function>checkline_mk_varassign</function>.</para>
+
+	<para>This class of procedures contains the most code in
+	&pkglint;. The procedures that check shell commands and shell
+	words both have around 200 lines, and the largest procedure is
+	the check for predefined variable types, which has almost 500
+	lines. But the code is not complex at all, since this procedure
+	contains a large switch for all the predefined types. The checks
+	for a single type usually fit on a single screen.</para>
+
+</sect1>
+
+<sect1 id="code.infrastructure">
+<title>The &pkglint; infrastructure</title>
+
+	<para>To keep the code in the checking procedures small and
+	legible, an additional layer of procedures is needed that
+	provides basic operations and abstractions for handling files as
+	a collection of lines and to print all diagnostics in a common
+	format that is suitable to further processing by software
+	tools.</para>
+
+	<para>Since October 2004, this part of &pkglint; makes use of
+	some of the object oriented features of the Perl programming
+	language. It has worked quite well upto now, but it has not been
+	fun to write object-oriented code in Perl. The most basic
+	feature I am missing is that the compiler checks whether an
+	object has a specific method or not, as I have often written
+	<code>$line->warning()</code> instead of
+	<code>$line->log_warning()</code>. This makes refacturing quite
+	difficult if you don't have a 100&nbsp;% coverage test, and I
+	don't have that.</para>
+
+	<para>The classes are all defined in the
+	<varname>PkgLint</varname> namespace.</para>
+
+	<para>The traditional class is <classname>Line</classname>,
+	which represents a logical line of a file. In case of
+	<filename>Makefile</filename>s, line continuations are parsed
+	properly and combined into a single line. For all other files,
+	each logical line corresponds to a physical line. The
+	<classname>Line</classname> class has accessor methods to its
+	fields <methodname>fname</methodname>,
+	<methodname>lines</methodname> and
+	<methodname>text</methodname>. It also has the methods
+	<methodname>log_fatal</methodname>,
+	<methodname>log_error</methodname>,
+	<methodname>log_warning</methodname>,
+	<methodname>log_info</methodname> and
+	<methodname>log_debug</methodname> that all have one parameter,
+	the diagnostics message. The other methods are used less
+	often.</para>
+
+	<para>In January 2006, the logging has been improved in
+	functionality. Before that, a logical line could well consist of
+	300 physical lines, so a diagnostic would say <quote>you have a
+	bug somewhere between line 100 and 400</quote>. This is not
+	helpful. Therefore, a new class has been invented that allows to
+	map each character of a logical line to its corresponding
+	physical location in the file. The new representation of a
+	logical line is called a <classname>String</classname>. This
+	feature is still experimental, since the only method for logging
+	a string is <methodname>log_warning</methodname>. The others are
+	still missing. It is also completely unclear how lines that have
+	been fixed by &pkglint; are represented since this moves
+	characters around in the physical lines.</para>
+
+	<para>To make pattern matching with the new
+	<classname>String</classname> easy to use, the additional class
+	<classname>StringMatch</classname> has been created. It saves
+	the result of a <classname>String</classname> that is matched
+	against a regular expression. The canonical way to get such a
+	<classname>StringMatch</classname> is to call the
+	<methodname>String::match</methodname> method.</para>
+
+	<para>Since the <classname>StringMatch</classname> was
+	convenient to use, the <classname>SimpleMatch</classname> class
+	represents the result of matching a Perl string against a
+	regular expression. The class <classname>Location</classname> is
+	currently unused.</para>
+
+ </sect1>
+
+</chapter>
