@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.36 2006/01/20 14:58:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2006/02/26 07:48:11 wiz Exp $
+bin/bin2res
+bin/fnt2bdf
 bin/function_grep.pl
 bin/msiexec
 bin/notepad
@@ -122,7 +124,9 @@ include/wine/windows/dciman.h
 include/wine/windows/dde.h
 include/wine/windows/ddeml.h
 include/wine/windows/ddk/cfgmgr32.h
+include/wine/windows/ddk/ntddcdvd.h
 include/wine/windows/ddk/ntddser.h
+include/wine/windows/ddk/ntddtape.h
 include/wine/windows/ddk/wdm.h
 include/wine/windows/ddk/winsplp.h
 include/wine/windows/ddraw.h
@@ -159,6 +163,7 @@ include/wine/windows/dplay.h
 include/wine/windows/dplay8.h
 include/wine/windows/dplobby.h
 include/wine/windows/dplobby8.h
+include/wine/windows/dpnathlp.h
 include/wine/windows/dsconf.h
 include/wine/windows/dsdriver.h
 include/wine/windows/dshow.h
@@ -236,6 +241,7 @@ include/wine/windows/msacm.h
 include/wine/windows/msacmdlg.h
 include/wine/windows/msacmdrv.h
 include/wine/windows/mscat.h
+include/wine/windows/mshtmcid.h
 include/wine/windows/mshtmdid.h
 include/wine/windows/mshtmhst.h
 include/wine/windows/mshtmhst.idl
@@ -315,6 +321,7 @@ include/wine/windows/sensevts.idl
 include/wine/windows/servprov.h
 include/wine/windows/servprov.idl
 include/wine/windows/setupapi.h
+include/wine/windows/sfc.h
 include/wine/windows/shellapi.h
 include/wine/windows/shldisp.h
 include/wine/windows/shldisp.idl
@@ -561,12 +568,12 @@ lib/wine/libquartz.def
 lib/wine/librasapi32.def
 lib/wine/libriched20.def
 lib/wine/librpcrt4.def
-lib/wine/librsabase.def
 lib/wine/librsaenh.def
 lib/wine/libsecur32.def
 lib/wine/libsensapi.def
 lib/wine/libserialui.def
 lib/wine/libsetupapi.def
+lib/wine/libsfc.def
 lib/wine/libshdocvw.def
 lib/wine/libshell32.def
 lib/wine/libshfolder.def
@@ -584,7 +591,6 @@ lib/wine/libuuid.a
 lib/wine/libuxtheme.def
 lib/wine/libvdmdbg.def
 lib/wine/libversion.def
-lib/wine/libw32skrnl.def
 lib/wine/libwinecrt0.a
 lib/wine/libwined3d.def
 lib/wine/libwinedos.def
@@ -682,6 +688,7 @@ lib/wine/sensapi.dll.so
 lib/wine/serialui.dll.so
 lib/wine/setupapi.dll.so
 lib/wine/setupx.dll.so
+lib/wine/sfc.dll.so
 lib/wine/shdocvw.dll.so
 lib/wine/shell.dll.so
 lib/wine/shell32.dll.so
@@ -747,7 +754,6 @@ lib/wine/wineoss.drv.so
 lib/wine/winepath.exe.so
 lib/wine/wineps.drv.so
 lib/wine/wineps16.drv.so
-lib/wine/winetest.exe.so
 lib/wine/winevdm.exe.so
 lib/wine/winex11.drv.so
 lib/wine/wing.dll.so
@@ -764,6 +770,7 @@ lib/wine/wintrust.dll.so
 lib/wine/winver.exe.so
 lib/wine/wldap32.dll.so
 lib/wine/wnaspi32.dll.so
+lib/wine/wordpad.exe.so
 lib/wine/wow32.dll.so
 lib/wine/wprocs.dll.so
 lib/wine/ws2_32.dll.so
@@ -817,6 +824,8 @@ share/wine/generic.ppd
 share/wine/wine.inf
 @dirrm share/wine
 @dirrm share/fonts/wine
+@unexec ${RMDIR} %D/share/fonts 2>/dev/null || ${TRUE}
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/wine
 @dirrm include/wine/windows/ddk
 @dirrm include/wine/windows
