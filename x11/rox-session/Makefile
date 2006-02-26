@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/11 16:12:25 rxg Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/26 08:44:39 rxg Exp $
 #
 
 DISTNAME=	ROX-Session-0.1.25
@@ -51,6 +51,9 @@ SUBST_SED.lib=		-e 's,/usr/local/lib,${PREFIX}/share/rox,g'
 
 BUILD_TARGET=		../${PLATFORM}/ROX-Session
 CONFIGURE_DIRS=		src
+
+post-patch:
+	${RM} -f ${WRKSRC}/setup.py.orig
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PLATFORM}/ROX-Session ${PREFIX}/libexec/rox
