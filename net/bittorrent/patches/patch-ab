@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.5 2005/08/07 16:15:55 recht Exp $
+$NetBSD: patch-ab,v 1.6 2006/02/26 22:43:33 tron Exp $
 
---- btdownloadheadless.py.orig	2005-07-11 00:44:41.000000000 +0200
-+++ btdownloadheadless.py	2005-08-07 17:30:34.000000000 +0200
-@@ -151,6 +151,7 @@
-         print 'share rating:  ', self.shareRating
-         print 'seed status:   ', self.seedStatus
-         print 'peer status:   ', self.peerStatus
+--- bittorrent-console.orig	2006-01-31 20:16:36.000000000 +0000
++++ bittorrent-console	2006-02-26 15:28:20.000000000 +0000
+@@ -157,6 +157,7 @@
+         print _("share rating:  "), self.shareRating
+         print _("seed status:   "), self.seedStatus
+         print _("peer status:   "), self.peerStatus
 +        sys.stdout.flush()
  
      def print_spew(self, spew):
