@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2006/01/08 20:40:02 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2006/02/26 19:28:28 joerg Exp $
 
 --- configure.orig	2004-05-12 15:13:57.000000000 +0000
 +++ configure
@@ -27,12 +27,3 @@ $NetBSD: patch-aa,v 1.4 2006/01/08 20:40:02 joerg Exp $
  sh-*-linux* | sh[34]*-*-linux*) TARGET=SH; TARGETDIR=sh;;
  esac
  
-@@ -3792,6 +3794,8 @@ for ac_option
- do
-   case "\$ac_option" in
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+    # Avoid regenerating for rechecks on pkgsrc
-+    exit 0
-     echo "running \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion"
-     exec \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion ;;
-   -version | --version | --versio | --versi | --vers | --ver | --ve | --v)
