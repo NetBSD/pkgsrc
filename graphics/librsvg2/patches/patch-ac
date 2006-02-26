@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.7 2005/10/10 13:59:00 jmmv Exp $
+$NetBSD: patch-ac,v 1.8 2006/02/26 10:39:34 wiz Exp $
 
---- Makefile.in.orig	2005-10-07 04:33:20.000000000 +0200
+--- Makefile.in.orig	2006-02-25 20:07:47.000000000 +0100
 +++ Makefile.in
-@@ -204,7 +204,7 @@ sbindir = @sbindir@
- sharedstatedir = @sharedstatedir@
- sysconfdir = @sysconfdir@
- target_alias = @target_alias@
--SUBDIRS = . gtk-engine gdk-pixbuf-loader moz-plugin doc data
-+SUBDIRS = . gtk-engine gdk-pixbuf-loader doc data
- 
+@@ -206,7 +206,7 @@ target_alias = @target_alias@
  @HAVE_GTK_TRUE@target_rsvg_view = rsvg-view
  @HAVE_GTK_FALSE@target_rsvg_view = 
+ 
+-SUBDIRS = . moz-plugin gdk-pixbuf-loader gtk-engine data $(am__append_1)
++SUBDIRS = . gdk-pixbuf-loader gtk-engine data $(am__append_1)
+ 
+ lib_LTLIBRARIES = librsvg-2.la
+ bin_PROGRAMS = rsvg-convert $(target_rsvg_view)

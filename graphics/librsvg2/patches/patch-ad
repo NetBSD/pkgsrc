@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.5 2006/02/26 10:39:34 wiz Exp $
+
+--- doc/Makefile.in.orig	2006-02-25 19:08:48.000000000 +0000
++++ doc/Makefile.in
+@@ -281,7 +281,7 @@ GTKDOC_LIBS = $(LIBRSVG_LIBS)
+ #
+ GPATH = $(srcdir)
+ 
+-TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)
++TARGET_DIR = $(HTML_DIR)
+ 
+ EXTRA_DIST = \
+ 	$(content_files)		\
