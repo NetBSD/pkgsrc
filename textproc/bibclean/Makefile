@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/12/27 13:54:59 seb Exp $
+# $NetBSD: Makefile,v 1.11 2006/02/26 13:50:14 schwarz Exp $
 #
 
 DISTNAME=	bibclean-2.11.4
@@ -12,6 +12,7 @@ COMMENT=	Prettyprinter and syntax checker for BibTeX bibliography databases
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES
 
 post-install:
