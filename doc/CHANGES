@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13088 2006/02/25 21:46:53 rpaulo Exp $
+$NetBSD: CHANGES,v 1.13089 2006/02/26 02:35:08 snj Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1232,3 +1232,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added games/pioneers 0.9.55 [veego 2006-02-25]
 	Added devel/cflow 1.0 [rpaulo 2006-02-25]
 	Added devel/cflow-mode 1.0 [rpaulo 2006-02-25]
+	Updated audio/flac123 to 0.0.9 [snj 2006-02-26]
