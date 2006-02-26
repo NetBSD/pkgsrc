@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13097 2006/02/26 15:04:52 taca Exp $
+$NetBSD: CHANGES,v 1.13098 2006/02/26 16:49:55 rxg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1241,3 +1241,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/librsvg2 to 2.14.0 [wiz 2006-02-26]
 	Updated x11/kdelibs3 to 3.5.1nb2 [markd 2006-02-26]
 	Updated www/squid to 2.5.12nb5 [taca 2006-02-26]
+	Updated wm/oroborox to 0.9.7.10 [rxg 2006-02-26]
