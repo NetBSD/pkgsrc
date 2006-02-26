@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4650 2006/02/26 07:48:37 wiz Exp $
+$NetBSD: TODO,v 1.4651 2006/02/26 08:44:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -892,7 +892,6 @@ Suggested package updates
 	o p5-Tie-EncryptedHash-1.21
 	o p5-Time-HiRes-1.74
 	o p5-Time-Piece-2.00.01
-	o p5-Tree-Simple-1.16
 	o p5-WWW-Amazon-Wishlist-1.4
 	o p5-WWW-Mechanize-1.18
 	o p5-X11-Protocol-0.54
