@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13093 2006/02/26 09:25:00 wiz Exp $
+$NetBSD: CHANGES,v 1.13094 2006/02/26 09:34:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1237,3 +1237,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-Tree-Simple to 1.16 [wiz 2006-02-26]
 	Updated www/p5-WWW-Mechanize to 1.18 [wiz 2006-02-26]
 	Updated databases/p5-DBIx-SearchBuilder to 1.39 [wiz 2006-02-26]
+	Updated graphics/gnome-icon-theme to 2.14.1 [wiz 2006-02-26]
