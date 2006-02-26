@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4648 2006/02/26 02:35:08 snj Exp $
+$NetBSD: TODO,v 1.4649 2006/02/26 07:47:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -543,7 +543,6 @@ Suggested package updates
 	o gmime-2.1.17 [pkg/32487]
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnocatan-0.8.1.59
 	o gnome-backgrounds-2.12.3.1
 	o gnome-games-2.12.3
 	o gnome-icon-theme-2.14.1
