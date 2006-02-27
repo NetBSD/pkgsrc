@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2006/02/27 11:54:26 drochner Exp $
+# $NetBSD: builtin.mk,v 1.12 2006/02/27 14:20:47 drochner Exp $
 
 BUILTIN_PKG:=	libpcap
 
@@ -50,7 +50,7 @@ _BLTN_PCAP_050!=	\
 	${GREP} -c pcap_compile_nopcap ${H_LIBPCAP} || ${TRUE}
 
 .  if ${_BLTN_PCAP_093} == "1"
-BUILTIN_VERSION.libpcap=	0.9.3
+BUILTIN_VERSION.libpcap=	0.9.3nb1
 .  elif ${_BLTN_PCAP_083} == "1"
 BUILTIN_VERSION.libpcap=	0.8.3
 .  elif ${_BLTN_PCAP_081} == "1"
