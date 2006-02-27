@@ -1,8 +1,18 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/02/23 23:34:29 rpaulo Exp $
+$NetBSD: patch-aa,v 1.2 2006/02/27 17:29:14 joerg Exp $
 
---- configure	2006-02-23 22:55:17.000000000 +0000
-+++ configure.new	2006-02-23 22:55:49.000000000 +0000
-@@ -10020,6 +10020,9 @@ openbsd*)
+--- configure.orig	2004-03-02 12:51:17.000000000 +0000
++++ configure
+@@ -10007,6 +10007,9 @@ linux*)
+   ignore_buffers=yes
+   ignore_cached=yes
+   ;;
++dragonfly*)
++  OS=dragonfly
++  ;;
+ freebsd*)
+   OS=freebsd
+   ignore_wired=yes
+@@ -10020,6 +10023,9 @@ openbsd*)
  solaris*)
    OS=solaris
    ;;
