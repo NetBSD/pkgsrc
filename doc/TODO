@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4660 2006/02/27 07:13:41 martti Exp $
+$NetBSD: TODO,v 1.4661 2006/02/27 14:53:05 abs Exp $
 
 Suggested new packages
 ======================
@@ -635,8 +635,6 @@ Suggested package updates
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.4
 	o java-lang-spec-3.0
-	o jdbc-postgresql-7.3.14
-	o jdbc-postgresql74-7.4.12
 	o jessie-1.0.0
 	o jftpgw-0.13.5
 	o jgrasp-183
