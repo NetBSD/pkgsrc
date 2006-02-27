@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13102 2006/02/26 22:50:35 tron Exp $
+$NetBSD: CHANGES,v 1.13103 2006/02/27 01:46:07 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1247,3 +1247,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/spidermonkey to 1.5nb2 [joerg 2006-02-26]
 	Updated net/bittorrent to 4.4.0 [tron 2006-02-26]
 	Updated net/bittorrent-gui to 4.4.0 [tron 2006-02-26]
+	Updated mail/prayer to 1.0.12nb3 [joerg 2006-02-27]
