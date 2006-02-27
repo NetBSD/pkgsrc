@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:09:11 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/02/27 12:26:06 rxg Exp $
 #
 
 .include "../../graphics/freetype-lib/Makefile.common"
@@ -24,7 +24,6 @@ BUILD_TARGET=		depend all
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf213
 
-TEXMF=			${PKG_LOCALTEXMFPREFIX}
 INSTALLATION_DIRS=	bin man/man1
 
 .include "../../graphics/freetype-lib/buildlink3.mk"
@@ -40,21 +39,21 @@ do-install:
 			${INSTALL_DATA}		${T2PSRC}/ttf2pk.1 \
 						${T2PSRC}/ttf2tfm.1 \
 						${PREFIX}/man/man1
-			${INSTALL_DATA_DIR}	${TEXMF}/doc/ttf2pk
+			${INSTALL_DATA_DIR}	${TEXMFDIRS}/doc/ttf2pk
 			${INSTALL_DATA}		${T2PSRC}/BUGS \
 						${T2PSRC}/README \
 						${T2PSRC}/TODO \
 						${T2PSRC}/ttf2pk.doc \
 						${T2PSRC}/data/ttfonts.map \
-						${TEXMF}/doc/ttf2pk
-			${INSTALL_DATA_DIR}	${TEXMF}/ttf2tfm
+						${TEXMFDIRS}/doc/ttf2pk
+			${INSTALL_DATA_DIR}	${TEXMFDIRS}/ttf2tfm
 			${LN} -fs		ttf2tfm \
-						${TEXMF}/ttf2pk
-			${INSTALL_DATA_DIR}	${TEXMF}/ttf2tfm/base
+						${TEXMFDIRS}/ttf2pk
+			${INSTALL_DATA_DIR}	${TEXMFDIRS}/ttf2tfm/base
 			${INSTALL_DATA}		${T2PSRC}/data/*.enc \
 						${T2PSRC}/data/*.rpl \
 						${T2PSRC}/data/*.sfd \
-						${TEXMF}/ttf2tfm/base
-			${TOUCH}		${TEXMF}/ttf2tfm/base/ttfonts.map
+						${TEXMFDIRS}/ttf2tfm/base
+			${TOUCH}		${TEXMFDIRS}/ttf2tfm/base/ttfonts.map
 
 .include "../../mk/bsd.pkg.mk"
