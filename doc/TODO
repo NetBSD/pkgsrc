@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4661 2006/02/27 14:53:05 abs Exp $
+$NetBSD: TODO,v 1.4662 2006/02/27 21:46:05 minskim Exp $
 
 Suggested new packages
 ======================
@@ -573,7 +573,6 @@ Suggested package updates
 	o gsharutils-4.6
 	o gss-0.0.16
 	o gtetrinet-0.7.9
-	o gthumb-2.6.9
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
 	o gtk2-engines-2.6.7
