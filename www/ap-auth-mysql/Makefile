@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/23 01:27:36 ben Exp $
+# $NetBSD: Makefile,v 1.14 2006/02/27 00:33:28 joerg Exp $
 #
 
 DISTNAME=		libapache-mod-auth-mysql_4.3.1
@@ -41,6 +41,10 @@ do-install:
 	elif [ -f ${WRKSRC}/libs/${PKG_APACHE}_mod_auth_mysql.so ]; then \
 		${INSTALL_DATA} \
 			${WRKSRC}/libs/${PKG_APACHE}_mod_auth_mysql.so  \
+			${PREFIX}/lib/httpd/mod_auth_mysql.so;   \
+	elif [ -f ${WRKSRC}/${PKG_APACHE}_mod_auth_mysql.so ]; then \
+		${INSTALL_DATA} \
+			${WRKSRC}/${PKG_APACHE}_mod_auth_mysql.so  \
 			${PREFIX}/lib/httpd/mod_auth_mysql.so;   \
 	fi
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_auth_mysql
