@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13106 2006/02/27 13:30:44 martti Exp $
+$NetBSD: CHANGES,v 1.13107 2006/02/27 14:48:36 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1253,3 +1253,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/squirrelmail-locales to 1.4.6 [martti 2006-02-27]
 	Updated lang/scheme48 to 1.3 [rillig 2006-02-27]
 	Updated mail/postfix-current to 2.3-20060207 [martti 2006-02-27]
+	Updated editors/texmaker to 1.3 [ghen 2006-02-27]
