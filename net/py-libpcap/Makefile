@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:10:30 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/02/27 14:14:41 drochner Exp $
 #
 
-DISTNAME=		pylibpcap-0.5
-PKGNAME=		${PYPKGPREFIX}-libpcap-0.5
-PKGREVISION=		1
+DISTNAME=		pylibpcap-0.5.1
+PKGNAME=		${PYPKGPREFIX}-libpcap-0.5.1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pylibpcap/}
 
