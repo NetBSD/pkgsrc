@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/11/30 14:02:47 martti Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/02/27 13:30:32 martti Exp $
 bin/mailq
 bin/newaliases
 libexec/postfix/anvil
@@ -97,6 +97,7 @@ sbin/postlog
 sbin/postmap
 sbin/postqueue
 sbin/postsuper
+sbin/qshape
 sbin/sendmail
 share/doc/postfix/AAAREADME
 share/doc/postfix/ADDRESS_CLASS_README
