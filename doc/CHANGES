@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13107 2006/02/27 14:48:36 ghen Exp $
+$NetBSD: CHANGES,v 1.13108 2006/02/27 14:53:05 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1151,6 +1151,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/p5-NEXT version 0.60 [hiramatsu 2006-02-21]
 	Updated devel/monotone-server to 0.25nb2 [jmmv 2006-02-21]
 	Updated devel/bugzilla to 2.20.1 [adrianp 2006-02-21]
+	Updated databases/p5-Class-DBI to 3.0.14 [abs 2006-02-21]
 	Updated databases/postgresql80 to 8.0.7 [joerg 2006-02-21]
 	Updated databases/postgresql80-client to 8.0.7 [joerg 2006-02-21]
 	Updated databases/postgresql80-plperl to 8.0.7 [joerg 2006-02-21]
@@ -1254,3 +1255,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/scheme48 to 1.3 [rillig 2006-02-27]
 	Updated mail/postfix-current to 2.3-20060207 [martti 2006-02-27]
 	Updated editors/texmaker to 1.3 [ghen 2006-02-27]
+	Renamed databases/jdbc-postgresql to databases/jdbc-postgresql73 [abs 2006-02-27]
+	Updated jdbc-postgresql74 to 216 [abs 2006-02-27]
+	Updated jdbc-postgresql80 to 315 [abs 2006-02-27]
+	Updated jdbc-postgresql81 to 405 [abs 2006-02-27]
