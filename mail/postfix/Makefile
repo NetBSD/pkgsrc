@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.176 2006/01/10 20:31:00 joerg Exp $
+# $NetBSD: Makefile,v 1.177 2006/02/27 07:10:59 martti Exp $
 
-DISTNAME=	postfix-2.2.8
+DISTNAME=	postfix-2.2.9
 #PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
@@ -41,6 +41,8 @@ CCARGS+=	-DDEF_NEWALIAS_PATH=\"${PREFIX}/bin/newaliases\"
 CCARGS+=	-DDEF_MANPAGE_DIR=\"${PREFIX}/man\"
 CCARGS+=	-DDEF_SAMPLE_DIR=\"${EXAMPLEDIR}\"
 CCARGS+=	-DDEF_README_DIR=\"${DOCDIR}\"
+
+REPLACE_PERL+=	auxiliary/qshape/qshape.pl
 
 # Override those same default paths in the installed example main.cf.
 SUBST_CLASSES+=		postfix
@@ -137,5 +139,7 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EXAMPLEDIR}/mailer.conf
 	cd ${WRKSRC}; ${SH} ./postfix-install -non-interactive		\
 		config_directory="${EXAMPLEDIR}"
+	${INSTALL_SCRIPT} ${WRKSRC}/auxiliary/qshape/qshape.pl \
+		${PREFIX}/sbin/qshape
 
 .include "../../mk/bsd.pkg.mk"
