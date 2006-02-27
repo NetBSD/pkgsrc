@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13103 2006/02/27 01:46:07 joerg Exp $
+$NetBSD: CHANGES,v 1.13104 2006/02/27 07:13:40 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1248,3 +1248,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/bittorrent to 4.4.0 [tron 2006-02-26]
 	Updated net/bittorrent-gui to 4.4.0 [tron 2006-02-26]
 	Updated mail/prayer to 1.0.12nb3 [joerg 2006-02-27]
+	Updated mail/postfix to 2.2.9 [martti 2006-02-27]
+	Updated mail/squirrelmail to 1.4.6 [martti 2006-02-27]
+	Updated mail/squirrelmail-locales to 1.4.6 [martti 2006-02-27]
