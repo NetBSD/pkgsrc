@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2005/05/25 22:31:06 rillig Exp $
+$NetBSD: distinfo,v 1.6 2006/02/27 10:33:57 rillig Exp $
 
-SHA1 (scheme48-1.2.tgz) = de3f29a7ade57f3d9340fa52bd5e3aa09a3cad04
-RMD160 (scheme48-1.2.tgz) = 295866156b7b3b053ce97ea2337c086a2bbc9f7c
-Size (scheme48-1.2.tgz) = 2048113 bytes
+SHA1 (scheme48-1.3.tgz) = be1704893b5932fc304b8a2e2279ec753a49f15b
+RMD160 (scheme48-1.3.tgz) = 25cbf7ddda946ffe114264c3cb4818817eeeb440
+Size (scheme48-1.3.tgz) = 2322178 bytes
