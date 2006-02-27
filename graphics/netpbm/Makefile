@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.132 2006/02/23 17:37:01 wiz Exp $
+# $NetBSD: Makefile,v 1.133 2006/02/27 22:01:16 adam Exp $
 
-DISTNAME=	netpbm-10.31
-PKGREVISION=	3
+DISTNAME=	netpbm-10.32
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz
@@ -16,7 +15,7 @@ USE_TOOLS+=	bash:run gmake lex perl
 
 INSTALL_TARGET=	install-dev install-run
 MAKE_ENV+=	INSTALL=${INSTALL:Q} STRIPFLAG=${_STRIPFLAG_INSTALL:Q} \
-		pkgdir=${STAGEDIR:Q}
+		pkgdir=${STAGEDIR:Q} MACHINE=${MACHINE:Q}
 MAKEFILE=	GNUmakefile
 PLIST_SRC=	${WRKDIR}/PLIST_STAGE
 REPLACE_PERL+=	editor/ppmfade editor/ppmshadow editor/pnmquant \
