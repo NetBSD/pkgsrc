@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4664 2006/02/27 22:51:59 wiz Exp $
+$NetBSD: TODO,v 1.4665 2006/02/27 22:52:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -748,7 +748,6 @@ Suggested package updates
 	o muse-0.9.1
 	o mysql4-client-4.1.18
 	o mysql4-server-4.1.18
-	o nagios-2.0 [replacing netsaint]
 	o nano-1.2.5 [pkg/32859]
 	o nap-1.5.3
 	o namazu-2.0.15 [taca]
