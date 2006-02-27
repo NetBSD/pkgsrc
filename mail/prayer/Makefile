@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2006/02/19 09:24:53 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2006/02/27 01:45:25 joerg Exp $
 #
 
 DISTNAME=	prayer-1.0.12
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/email/prayer/
 
@@ -50,5 +50,6 @@ pre-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mail/imap-uw/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/krb5.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
