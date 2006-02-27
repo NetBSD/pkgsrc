@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.535 2006/02/26 17:40:44 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.536 2006/02/27 00:01:04 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2599,6 +2599,12 @@ sub checkline_mk_shelltext($$) {
 		"SCST_FOR_CONT", "SCST_SET_CONT", "SCST_COND",
 	];
 
+	use constant forbidden_commands => array_to_hash(qw(
+		ktrace
+		strace
+		truss
+	));
+
 	if ($text =~ qr"^\@*-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)") {
 		my ($mkdir_cmd) = ($1);
 
@@ -2634,6 +2640,10 @@ sub checkline_mk_shelltext($$) {
 				$addition = " and add USE_TOOLS+=${toolname} before this line";
 			}
 			$line->log_warning("Possible direct use of tool \"${shellword}\". Please use \$\{$vartools->{$shellword}\} instead${addition}.");
+		}
+
+		if ($state == SCST_START && exists(forbidden_commands->{$shellword})) {
+			$line->log_error("${shellword} is forbidden and must not be used.");
 		}
 
 		if ($state == SCST_COND && $shellword eq "cd") {
@@ -2708,6 +2718,7 @@ sub checkline_mk_shelltext($$) {
 				: ($shellword =~ qr"^(?:then|else|do)$") ? SCST_START
 				: ($shellword eq "case") ? SCST_CASE
 				: ($shellword eq "for") ? SCST_FOR
+				: ($shellword eq "(") ? SCST_START
 				: ($shellword =~ regex_sh_varassign) ? SCST_START
 				: SCST_CONT)
 			: ($state == SCST_MKDIR) ? SCST_MKDIR
