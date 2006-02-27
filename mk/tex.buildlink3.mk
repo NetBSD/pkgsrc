@@ -1,4 +1,4 @@
-# $NetBSD: tex.buildlink3.mk,v 1.11 2006/02/11 03:00:11 ross Exp $
+# $NetBSD: tex.buildlink3.mk,v 1.12 2006/02/27 12:14:50 rxg Exp $
 #
 # A Makefile fragment for TeX and LaTeX packages
 #
@@ -8,8 +8,8 @@
 #	* tex files are installed...
 #	  	teTeX[1-2]
 #	  		-> ${PREFIX}/share/texmf
-#		  teTeX3
-#	  		->${PREFIX}/share/texmf-local
+#		teTeX3
+#	  		-> ${PREFIX}/share/texmf-local
 #   The variables PKG_TEXMFPREFIX and PKG_LOCALTEXMFPREFIX defines the main
 #   texmf tree, where teTeX should install his own texmf tree, and the local
 #   texmf tree, which is the place where other packages should install their
