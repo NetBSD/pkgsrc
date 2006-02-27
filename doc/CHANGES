@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13111 2006/02/27 21:56:31 wiz Exp $
+$NetBSD: CHANGES,v 1.13112 2006/02/27 22:03:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1261,3 +1261,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/jdbc-postgresql81 to 405 [abs 2006-02-27]
 	Updated mbone/vic to 2.8nb3 [joerg 2006-02-27]
 	Updated graphics/gthumb to 2.6.9 [minskim 2006-02-27]
+	Updated graphics/netpbm to 10.32 [adam 2006-02-27]
