@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13110 2006/02/27 21:46:04 minskim Exp $
+$NetBSD: CHANGES,v 1.13111 2006/02/27 21:56:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1256,8 +1256,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/postfix-current to 2.3-20060207 [martti 2006-02-27]
 	Updated editors/texmaker to 1.3 [ghen 2006-02-27]
 	Renamed databases/jdbc-postgresql to databases/jdbc-postgresql73 [abs 2006-02-27]
-	Updated jdbc-postgresql74 to 216 [abs 2006-02-27]
-	Updated jdbc-postgresql80 to 315 [abs 2006-02-27]
-	Updated jdbc-postgresql81 to 405 [abs 2006-02-27]
+	Updated databases/jdbc-postgresql74 to 216 [abs 2006-02-27]
+	Updated databases/jdbc-postgresql80 to 315 [abs 2006-02-27]
+	Updated databases/jdbc-postgresql81 to 405 [abs 2006-02-27]
 	Updated mbone/vic to 2.8nb3 [joerg 2006-02-27]
 	Updated graphics/gthumb to 2.6.9 [minskim 2006-02-27]
