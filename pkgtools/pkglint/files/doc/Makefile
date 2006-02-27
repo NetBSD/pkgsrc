@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/02/26 23:38:07 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2006/02/27 02:01:04 rillig Exp $
 #
 
 XMLDOCS+=	pkglint.xml
@@ -23,4 +23,4 @@ clean:
 
 .SUFFIXES: .dia .png
 .dia.png:
-	dia -e ${.TARGET:Q} -t png ${.IMPSRC}
+	dia -e ${.TARGET:Q} -t png ${.IMPSRC:Q}
