@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/02/10 12:39:25 drochner Exp $
+# $NetBSD: Makefile,v 1.21 2006/02/28 02:45:12 dsainty Exp $
 
 DISTNAME=	libtasn1-0.2.18
 CATEGORIES=	security devel
@@ -14,6 +14,7 @@ COMMENT=	ASN.1 structure parser library
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
+USE_MAKEINFO=		yes
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 
