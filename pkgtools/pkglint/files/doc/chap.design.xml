@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.design.xml,v 1.1 2006/02/28 11:40:15 rillig Exp $ -->
+<!-- $NetBSD: chap.design.xml,v 1.2 2006/02/28 23:25:23 rillig Exp $ -->
 
 <chapter id="design">
 <title>Design goals</title>
@@ -53,6 +53,32 @@
 	&pkglint; since it has been adopted from FreeBSD. It just makes
 	pkglint a more friendly tool. :)</para>
 
+	<para>All error and warning messages are formatted by a single
+	procedure, <function>PkgLint::Logging::log_message</function>. This
+	way, all messages are formatted the same way, which allows easy
+	recognition by human users as well as other tools. There are two
+	different formats available, the traditional one and the gcc-like
+	one. In both formats, each diagnostic occupies exactly one line. Up
+	to the year 2005, some of the longer messages used to take more than
+	one line, but this behavior has been removed.</para>
+
+	<para>The default format is the traditional one. It consists of the
+	severity, in upper-case letters, followed by the filename, the line
+	number and finally the message text. It allows easy recognition of
+	the severity of the messages. Even if errors and warnings are
+	intermixed in the output, the filenames start almost in the same
+	column.</para>
+
+	<para>The gcc-like output format consists of the filename, the line
+	numbers, the severity and finally the message text. It has been
+	added to make it easier to integrate the &pkglint; diagnostics into
+	various text editors, for example Emacs. Since in this format the
+	filename is the first word, it can be easily seen which warning
+	originates in which file.</para>
+
+	<para>There are some other procedures that affect the output, but
+	they have to be enabled explicitly.</para>
+
 </sect1>
 <sect1 id="design.understandable">
 <title>Understandable diagnostics</title>
@@ -65,7 +91,7 @@
 
 </sect1>
 <sect1 id="design.false-diagnostics">
-<title>False diagnostics</title>
+<title>Few false diagnostics</title>
 
 	<para><emphasis>Requirement:</emphasis> The number of
 	<firstterm>false positives</firstterm>, that is diagnostics
