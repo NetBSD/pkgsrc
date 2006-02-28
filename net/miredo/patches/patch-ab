@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/02/28 01:29:39 rpaulo Exp $
+
+--- libtun6/tun6.c	2006-02-28 00:50:05.000000000 +0000
++++ libtun6/tun6.c.new	2006-02-28 00:49:48.000000000 +0000
+@@ -89,6 +89,7 @@ static const char *os_driver = "FreeBSD"
+ static const char *os_driver = "OpenBSD";
+ 
+ # elif defined (HAVE_NETBSD)
++#  define USE_TUNHEAD
+ static const char *os_driver = "NetBSD";
+ 
+ # elif defined (HAVE_DARWIN)
+@@ -705,7 +706,7 @@ tun6_recv (const tun6 *t, const fd_set *
+ 	/* TUNTAP driver */
+ 	if (head.tun_linux.proto != htons (ETH_P_IPV6))
+ 		return -1; /* only accept IPv6 packets */
+-#elif defined (HAVE_FREEBSD) || defined (HAVE_OPENBSD)
++#elif defined (HAVE_FREEBSD) || defined (HAVE_OPENBSD) || defined (HAVE_NETBSD)
+ 	/* FreeBSD driver */
+ 	if (head.tun_bsd != htonl (AF_INET6))
+ 		return -1;
+@@ -733,7 +734,7 @@ tun6_send (const tun6 *t, const void *pa
+ 	uint16_t flags;
+ 	uint16_t proto;
+ } head = { 0, htons (ETH_P_IPV6) };
+-#elif defined (HAVE_FREEBSD) || defined (HAVE_OPENBSD)
++#elif defined (HAVE_FREEBSD) || defined (HAVE_OPENBSD) || defined (HAVE_NETBSD)
+ 	uint32_t head = htonl (AF_INET6);
+ #endif
+ 
