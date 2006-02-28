@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2006/02/05 23:08:38 joerg Exp $
+# $NetBSD: Makefile,v 1.52 2006/02/28 17:41:02 wiz Exp $
 #
 
 DISTNAME=		GConf-1.0.9
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/1.0/}
 EXTRACT_SUFX=		.tar.bz2
@@ -23,17 +23,13 @@ PKGCONFIG_OVERRIDE=	gconf.pc.in
 
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE:Q}
 
+REQD_DIRS+=		${PKG_SYSCONFDIR}/gconf ${PKG_SYSCONFDIR}/gconf/1
+CONF_FILES+=		${PREFIX}/share/examples/gconf/default.path \
+			${PKG_SYSCONFDIR}/gconf/1/path
+
 pre-build:
 	${RM} -f ${WRKSRC}/gconf/libxml
 	${LN} -sf ${BUILDLINK_DIR}/include/gnome-xml ${WRKSRC}/gconf/libxml
-
-post-install:
-	${TEST} ${PREFIX} = ${LOCALBASE} || \
-	${LN} -fs ${PREFIX}/share/aclocal/gconf-1.m4 \
-	    ${LOCALBASE}/share/aclocal/gconf-1.m4
-	${TEST} -f ${PREFIX}/etc/gconf/1/path || \
-	    ${CP} -p ${PREFIX}/etc/gconf/1/path.example \
-	    ${PREFIX}/etc/gconf/1/path
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/oaf/buildlink3.mk"
