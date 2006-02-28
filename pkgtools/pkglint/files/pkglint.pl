@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.536 2006/02/27 00:01:04 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.537 2006/02/28 00:20:23 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2010,6 +2010,12 @@ sub shell_split($) {
 	return (($text =~ qr"^\s*$") ? $words : false);
 }
 
+sub type_should_be_quoted($) {
+	my ($type) = @_;
+
+	return !($type =~ qr"^(?:List(?:$|[^!]).*|ShellCommand|SedCommands)$");
+}
+
 #
 # Loading package-specific data from files.
 #
@@ -2374,9 +2380,14 @@ sub checkline_mk_shellword($$$) {
 		if (exists(get_vartypes_map()->{$varname}) && !(defined($mod) && $mod =~ qr":Q$")) {
 			my $vartype = get_vartypes_map()->{$varname};
 
-			if ($vartype !~ qr"^List") {
+			if (type_should_be_quoted($vartype)) {
 				$line->log_warning("[experimental] Please use \${${varname}:Q} instead of \${${varname}}.");
 			}
+		} elsif (exists(get_varname_to_toolname()->{$varname})) {
+			if (defined($mod) && $mod =~ qr":Q$") {
+				$line->log_warning("The :Q operator should not be used for tools.");
+			}
+
 		} else {
 			$opt_debug and $line->log_warning("Not sure whether the variable ${varname} needs quoting.");
 		}
@@ -2836,7 +2847,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 			if ($macval =~ qr"^\\\"(?:\$\{[A-Z0-9_]+:Q\}|[^\$])*\\\"") {
 				# Everything's fine.
 
-			} elsif ($macval =~ qr"^\"\\\"(?:\$\{[A-Z0-9_]+\}|[^\$])*\\\"\"") {
+			} elsif ($macval =~ qr"^\"\\\"[^\$]*\$\{[A-Z0-9_]+\}.*\\\"\"") {
 				$opt_debug and $line->log_warning("Not the best style for CPP macros, but accepted.");
 
 			} elsif ($macval =~ regex_unresolved && $macval =~ qr"[\"']") {
@@ -3376,7 +3387,7 @@ sub checkline_mk_vartype($$$$$) {
 			}
 
 		} else {
-			checkline_mk_vartype_basic($line, $varname, $type, $op, $value, $comment, ($type eq "SedCommands"));
+			checkline_mk_vartype_basic($line, $varname, $type, $op, $value, $comment, !type_should_be_quoted($type));
 		}
 }
 
