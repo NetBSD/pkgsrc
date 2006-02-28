@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.537 2006/02/28 00:20:23 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.538 2006/02/28 15:25:44 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1171,6 +1171,7 @@ my $opt_warn_plist_depr	= false;
 my $opt_warn_plist_sort	= false;
 my $opt_warn_quoting	= false;
 my $opt_warn_space	= false;
+my $opt_warn_style	= false;
 my $opt_warn_types	= true;
 my $opt_warn_varorder	= false;
 my (%warnings) = (
@@ -1182,6 +1183,7 @@ my (%warnings) = (
 	"plist-sort"	=> [\$opt_warn_plist_sort, "warn about unsorted entries in PLISTs"],
 	"quoting"	=> [\$opt_warn_quoting, "warn about quoting issues"],
 	"space"		=> [\$opt_warn_space, "warn about inconsistent use of white-space"],
+	"style"		=> [\$opt_warn_style, "warn about stylistic issues"],
 	"types"		=> [\$opt_warn_types, "do some simple type checking in Makefiles"],
 	"varorder"	=> [\$opt_warn_varorder, "warn about the ordering of variables"],
 );
@@ -4257,10 +4259,14 @@ sub checkfile_patch($) {
 		}], [PST_CENTER, re_patch_empty, PST_TEXT, sub() {
 			#
 		}], [PST_TEXT, re_patch_cfd, PST_CFA, sub() {
-			#$seen_comment or $line->log_warning("Comment expected.");
+			if (!$seen_comment) {
+				$opt_warn_style and $line->log_warning("Comment expected.");
+			}
 			$line->log_warning("Please use unified diffs (diff -u) for patches.");
 		}], [PST_TEXT, re_patch_ufd, PST_UFA, sub() {
-			#$seen_comment or $line->log_warning("Comment expected.");
+			if (!$seen_comment) {
+				$opt_warn_style and $line->log_warning("Comment expected.");
+			}
 		}], [PST_TEXT, re_patch_text, PST_TEXT, sub() {
 			$seen_comment = true;
 		}], [PST_TEXT, re_patch_empty, PST_TEXT, sub() {
@@ -4271,14 +4277,14 @@ sub checkfile_patch($) {
 			if ($seen_comment) {
 				$opt_warn_space and $line->log_note("Empty line expected.");
 			} else {
-				#$line->log_warning("Comment expected.");
+				$opt_warn_style and $line->log_warning("Comment expected.");
 			}
 			$line->log_warning("Please use unified diffs (diff -u) for patches.");
 		}], [PST_CENTER, re_patch_ufd, PST_UFA, sub() {
 			if ($seen_comment) {
 				$opt_warn_space and $line->log_note("Empty line expected.");
 			} else {
-				#$line->log_warning("Comment expected.");
+				$opt_warn_style and $line->log_warning("Comment expected.");
 			}
 		}], [PST_CENTER, undef, PST_TEXT, sub() {
 			$opt_warn_space and $line->log_note("Empty line expected.");
