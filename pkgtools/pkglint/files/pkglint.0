@@ -120,6 +120,9 @@ DDEESSCCRRIIPPTTIIOONN
 
      [[nnoo--]]ssppaaccee          Emit notes for inconsistent use of white-space.
 
+     [[nnoo--]]ssttyyllee          Warn for stylistic issues that don't affect the build
+                         process.
+
      [[nnoo--]]ttyyppeess          Warn for some _M_a_k_e_f_i_l_e variables if their assigned
                          values do not match their type.
 
@@ -167,4 +170,4 @@ BBUUGGSS
      If you don't understand the messages, feel free to ask on the
      <tech-pkg@NetBSD.org> mailing list.
 
-NetBSD 3.0                     February 18, 2006                    NetBSD 3.0
+pkgsrc                         February 18, 2006                        pkgsrc
