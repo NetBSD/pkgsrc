@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/02/28 01:29:39 rpaulo Exp $
+
+--- libteredo/server.c	2006-02-28 00:48:07.000000000 +0000
++++ libteredo/server.c.new	2006-02-28 00:47:56.000000000 +0000
+@@ -49,6 +49,10 @@
+ #include <pthread.h>
+ #include <syslog.h>
+ 
++#ifdef __NetBSD__
++#include <machine/limits.h>
++#endif
++
+ #include "server.h"
+ #include "v4global.h"
+ #include "checksum.h"
