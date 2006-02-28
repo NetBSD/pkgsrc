@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 08:45:03 agc Exp $
+$NetBSD: distinfo,v 1.3 2006/02/28 17:55:47 wiz Exp $
 
 SHA1 (cal3d-0.9.1.tar.bz2) = 2e0765caddc972f05f70d3a255862ced1276e039
 RMD160 (cal3d-0.9.1.tar.bz2) = f77dcf34a46a9286020592df16f5b16264839d80
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = ad981dda0675e4fd83b0550a81d107bbffb73607
 SHA1 (patch-ac) = 079f524fa683faea92e44ce9f4d437cbd4b6051a
 SHA1 (patch-ad) = 9c016c70610c4846c085c33ad6eabafed6385f0a
 SHA1 (patch-ae) = c4be228afe745be9e97896e99cdaa9a5d1b03882
+SHA1 (patch-af) = 0f70889b9c9c3cb0138b9f1a8e26ea6682d04f07
