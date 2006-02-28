@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/28 18:02:47 adam Exp $
+# $NetBSD: Makefile,v 1.4 2006/02/28 18:03:41 adam Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
@@ -29,8 +29,6 @@ do-install:
 		${MAKE_PROGRAM} -f Makefile.Release install_assistant_headers
 	cd ${WRKSRC}/tools/designer/src/lib && env ${MAKE_ENV} \
 		${MAKE_PROGRAM} -f Makefile.Release install_designer_headers
-#	cd ${WRKSRC}/tools/designer/src/uitools && env ${MAKE_ENV} \
-#		${MAKE_PROGRAM} -f Makefile install_quitools_headers
 	cd ${WRKSRC}/tools/qtestlib/src && env ${MAKE_ENV} \
 		${MAKE_PROGRAM} -f Makefile install_qtestlib_headers
 	${INSTALL_LIB} ${WRKSRC}/lib/libQtAssistantClient.a ${QTPREFIX}/lib/
