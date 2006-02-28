@@ -7,12 +7,13 @@
 
 	<!ENTITY chap.intro SYSTEM "chap.intro.xml">
 	<!ENTITY chap.defs SYSTEM "chap.defs.xml">
+	<!ENTITY chap.design SYSTEM "chap.design.xml">
 	<!ENTITY chap.types SYSTEM "chap.types.xml">
 	<!ENTITY chap.code SYSTEM "chap.code.xml">
 	<!ENTITY chap.statemachines SYSTEM "chap.statemachines.xml">
 ]>
 
-<!-- $NetBSD: pkglint.xml,v 1.1 2006/02/26 23:38:07 rillig Exp $ -->
+<!-- $NetBSD: pkglint.xml,v 1.2 2006/02/28 11:40:15 rillig Exp $ -->
 
 <book>
 <title>Design and implementation of &pkglint;</title>
@@ -27,6 +28,7 @@
 
 &chap.intro;
 &chap.defs;
+&chap.design;
 &chap.types;
 &chap.code;
 &chap.statemachines;
