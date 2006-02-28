@@ -1,12 +1,24 @@
-$NetBSD: distinfo,v 1.17 2006/02/08 18:36:41 drochner Exp $
+$NetBSD: distinfo,v 1.18 2006/02/28 23:48:11 joerg Exp $
 
 SHA1 (libgtop-2.12.2.tar.bz2) = b8dc4c1abf3771ea3a088c1216530bb66b002242
 RMD160 (libgtop-2.12.2.tar.bz2) = b58186960bd1bca014b3e886105dd22f8c8add4d
 Size (libgtop-2.12.2.tar.bz2) = 623479 bytes
-SHA1 (patch-aa) = 94c3affb12ad78aa5020d81963f7898b38e3ef72
-SHA1 (patch-ab) = 55f4c875e4886194cba25874ab042da8e17261c7
-SHA1 (patch-ac) = dea1b6fba42d77a4fe6b2e9269cdab0521d3a305
-SHA1 (patch-ad) = c707545313bd4382825cedde30032f9083003823
+SHA1 (patch-aa) = 21cb73dc166780ddbff4c1d67864b9514e5fbcff
+SHA1 (patch-ab) = ca996f46f79781ce5e8270526663689b137c039f
+SHA1 (patch-ac) = c645307376eddb5c469ab00bd7ec8217feb3e2d5
+SHA1 (patch-ad) = c693dda2eef870d625d78da8f4e977613358314e
+SHA1 (patch-ae) = 035419a4e8a505c672f727c843dbd977acd8ce35
+SHA1 (patch-af) = 520dbdec4a8cba6e82b08c169d97c3caebacd419
+SHA1 (patch-ag) = 74d20bdc56224ae553935cc81ce47504e98701fe
+SHA1 (patch-ah) = 496c67e6de00ec105cf292f5e44a244b852db51b
+SHA1 (patch-ai) = 57d891785a45ec532757a48e77adafec091f3953
+SHA1 (patch-aj) = c244b5c60e61594c3d2c0bc95e05e12ad68938db
+SHA1 (patch-ak) = 0a29c6b7daf1ae34b528dbb2535d05009ad61b84
+SHA1 (patch-al) = d214415937d2c227ad1bcb1c14b9ddc001ad7cb4
+SHA1 (patch-am) = 2e10fd8096449ebc3428ef493e1ae4fe61a98e00
+SHA1 (patch-an) = 57a79bddc3f0e8237b72486aa8f8906f318ca38d
+SHA1 (patch-ao) = 72aa455cbc10afc6a744fd0684ec2d7a2e2c19c7
+SHA1 (patch-ap) = 1b842a59b821b2703b68935f59a65ffb6db3a68f
 SHA1 (patch-ba) = ebe5f9a5148ff72ae978934b259e63ce15f2d4c8
 SHA1 (patch-bb) = 2e98f16668f74b64848f54db57037289623ed3f2
 SHA1 (patch-bc) = a48255606b5c340a20d01cc7f4e2c1e821d9d629
@@ -15,5 +27,4 @@ SHA1 (patch-be) = ba1b688ea04f41a88b5d65b8af90927843619c0f
 SHA1 (patch-bf) = 1cf732d7ad22fbf34aa3511e77d17cacedbc810f
 SHA1 (patch-bg) = 330de57b732550a92b4e077ad8e850acf7e0e24d
 SHA1 (patch-bh) = afdf0dec92984528efd181a24d3ef8f3eb383173
-SHA1 (patch-bi) = 56ec02e230f0c4401b95ce728d63a3d0798971e8
 SHA1 (patch-bj) = 48c46dec8d1f8ed35e452b66f3a5283a6a8f521f
