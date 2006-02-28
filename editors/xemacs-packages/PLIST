@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/02/17 19:21:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/02/28 17:43:08 wiz Exp $
 lib/xemacs/xemacs-packages/etc/BABYL
 lib/xemacs/xemacs-packages/etc/app-defaults/de/Emacs
 lib/xemacs/xemacs-packages/etc/app-defaults/fr/Emacs
@@ -1431,7 +1431,6 @@ lib/xemacs/xemacs-packages/etc/x-symbol/pcf/5etl14sup.pcf
 lib/xemacs/xemacs-packages/etc/x-symbol/pcf/5etl16.pcf
 lib/xemacs/xemacs-packages/etc/x-symbol/pcf/5etl16sub.pcf
 lib/xemacs/xemacs-packages/etc/x-symbol/pcf/5etl16sup.pcf
-lib/xemacs/xemacs-packages/etc/x-symbol/pcf/fonts.dir
 lib/xemacs/xemacs-packages/etc/x-symbol/pcf/helvR12sub.pcf
 lib/xemacs/xemacs-packages/etc/x-symbol/pcf/helvR12sup.pcf
 lib/xemacs/xemacs-packages/etc/x-symbol/pcf/helvR14sub.pcf
