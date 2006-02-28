@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.code.xml,v 1.1 2006/02/26 23:38:07 rillig Exp $ -->
+<!-- $NetBSD: chap.code.xml,v 1.2 2006/02/28 23:22:49 rillig Exp $ -->
 
 <chapter id="code">
 <title>Code structure</title>
@@ -213,6 +213,74 @@
 	regular expression. The class <classname>Location</classname> is
 	currently unused.</para>
 
- </sect1>
+</sect1>
+<sect1 id="code.style">
+<title>Perl programming style</title>
 
+	<para>The &pkglint; source code has evolved from FreeBSD's portlint,
+	which has been written in Perl, and up to now, &pkglint; is written
+	in Perl. Since one of the main ingredients to &pkglint; are regular
+	expressions, this choice seems natural, and indeed the Perl regular
+	expressions are a great help to keep the code short. But &pkglint;
+	is more than just throwing regular expressions at the package
+	files.</para>
+
+	<para>In 2004, when the &pkglint; source code comprised about
+	40&nbsp;kilobytes, this was quite appropriate. Since then, the code
+	has become much more structured and various abstraction layers have
+	been inserted. It became more and more clear that the Perl
+	programming language has not been designed with nice-looking source
+	code in mind.</para>
+
+	<para>The first example are subroutines and their parameters. In
+	most other languages, the names of the parameters are mentioned in
+	the subroutine definition. Not so in Perl. The parameters to each
+	subroutine are passed in the <literal>$@</literal> array. The usual
+	way to get named parameters is to write assign the parameter array
+	to a list of local variables. This extra statement is a nuisance,
+	but it is merely syntactical.</para>
+
+	<para>More serious is the way the arguments are passed to a
+	subroutine. Perl allows the programmer to define subroutines with a
+	weak form of prototypes, which helps to catch calls to subroutines
+	that provide a wrong number of arguments. This feature catches many
+	bugs that are easily overlooked. The downside is that anything
+	besides using scalars as parameter types is difficult to understand
+	and quickly leads to unexpected behavior. Therefore the subroutines
+	in &pkglint; only use this style for parameter passing. Oh, and by
+	the way, the subroutine prototypes are only checked for in certain
+	situations like direct calls. In method calls, nothing is checked at
+	all. Since almost all diagnostics are produced by calling
+	<code>$line->log_warning()</code> or
+	<code>$line->log_error()</code>, most of the subroutine calls in
+	&pkglint; go unchecked.</para>
+
+	<para>Instead of using magic numbers, well written code defines
+	named constants for these numbers and then refers to them using
+	their names, giving the reader extra information that plain numbers
+	could not give. Although the constant definitions look quite good in
+	&pkglint; there is one big caveat. The Perl programming language
+	does not know constants. So these definitions are rather shortcuts
+	for defining functions that return the value of the constant. And as
+	functions in Perl have package-wide scope, so have these constants.
+	This is why the namespace prefixes like <varname>SWST_</varname> are
+	necessary to avoid name clashes.</para>
+
+	<para>Most of the constants would be written as an enumeration data
+	type if Perl had one. The same limitation applies for many of the
+	classes (implemented as packages in Perl) that are simply structs.
+	The typical Perl implementation of structs are classes, er, packages
+	which then use methods for accessing the fields. Again, the names of
+	these methods are only checked at runtime, so there is no language
+	support for detecting spelling mistakes in field names.</para>
+
+	<para>Another area where Perl fails to detect many errors is the
+	loose type system. You can apply almost every operator to almost
+	every data type, and the Perl language will give you more or less
+	what you want. Especially it does not prevent you from matching
+	a regular expression against a reference. It will simply compute
+	a string representation of the reference and match the regular
+	expression against that.</para>
+
+</sect1>
 </chapter>
