@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13120 2006/02/28 17:41:21 wiz Exp $
+$NetBSD: CHANGES,v 1.13121 2006/02/28 17:42:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1271,3 +1271,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/pango to 1.10.4 [wiz 2006-02-28]
 	Updated comms/xtel to 3.3.0nb5 [wiz 2006-02-28]
 	Updated devel/GConf to 1.0.9nb9 [wiz 2006-02-28]
+	Updated devel/opencm to 0.1.2rc8nb2 [wiz 2006-02-28]
