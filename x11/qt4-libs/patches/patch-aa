@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/02/20 12:08:15 adam Exp $
+$NetBSD: patch-aa,v 1.2 2006/02/28 18:02:47 adam Exp $
 
---- qmake/generators/unix/unixmake2.cpp.orig	2006-02-19 21:08:33.000000000 +0100
+--- qmake/generators/unix/unixmake2.cpp.orig	2006-02-16 11:51:34.000000000 +0100
 +++ qmake/generators/unix/unixmake2.cpp
-@@ -1281,7 +1281,7 @@ UnixMakefileGenerator::writePkgConfigFil
+@@ -1282,7 +1282,7 @@ UnixMakefileGenerator::writePkgConfigFil
      else
          libs << "QMAKE_LIBS"; //obvious one
      libs << "QMAKE_LFLAGS_THREAD"; //not sure about this one, but what about things like -pthread?
