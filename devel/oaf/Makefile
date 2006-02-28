@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/02/05 23:08:49 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2006/02/28 17:39:18 wiz Exp $
 #
 
 DISTNAME=		oaf-0.6.10
@@ -22,6 +22,7 @@ BROKEN_GETTEXT_DETECTION=	YES
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 
 .include "../../devel/popt/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml/buildlink3.mk"
 .include "../../x11/gnome-libs/buildlink3.mk"
 
