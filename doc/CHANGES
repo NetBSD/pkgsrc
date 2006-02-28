@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13123 2006/02/28 17:46:13 wiz Exp $
+$NetBSD: CHANGES,v 1.13124 2006/02/28 18:05:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1274,3 +1274,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/opencm to 0.1.2rc8nb2 [wiz 2006-02-28]
 	Updated editors/xemacs-packages to 1.15nb3 [wiz 2006-02-28]
 	Updated games/xracer to 0.96.9nb6 [wiz 2006-02-28]
+	Updated x11/qt4 to 4.1.1 [adam 2006-02-28]
+	Updated x11/qt4-libs to 4.1.1 [adam 2006-02-28]
+	Updated x11/qt4-tools to 4.1.1 [adam 2006-02-28]
+	Updated x11/qt4-docs to 4.1.1 [adam 2006-02-28]
