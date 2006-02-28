@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13122 2006/02/28 17:43:46 wiz Exp $
+$NetBSD: CHANGES,v 1.13123 2006/02/28 17:46:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1273,3 +1273,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/GConf to 1.0.9nb9 [wiz 2006-02-28]
 	Updated devel/opencm to 0.1.2rc8nb2 [wiz 2006-02-28]
 	Updated editors/xemacs-packages to 1.15nb3 [wiz 2006-02-28]
+	Updated games/xracer to 0.96.9nb6 [wiz 2006-02-28]
