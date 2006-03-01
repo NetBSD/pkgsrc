@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13130 2006/03/01 22:44:19 wiz Exp $
+$NetBSD: CHANGES,v 1.13131 2006/03/01 23:27:41 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -218,7 +218,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/liferea to 1.0 [wiz 2006-01-10]
 	Updated sysutils/vcdimager-devel to 0.7.23nb1 [ben 2006-01-10]
 	Added devel/cqual version 0.991 [rillig 2006-01-11]
-	Removed sysutils/cdrecord-xcdroast [xtraeme 2006-01-11] 
+	Removed sysutils/cdrecord-xcdroast [xtraeme 2006-01-11]
 	Updated converters/cn2jp to 1.4bnb2 [joerg 2006-01-11]
 	Updated print/poppler to 0.4.4 [reed 2006-01-11]
 	Updated mail/sylpheed-devel to 2.2.0beta3 [xtraeme 2006-01-11]
@@ -663,8 +663,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Added misc/p5-Geo-Weather 1.41 [jschauma 2006-01-31]
 	Added www/p5-Kwiki-Weather 0.05 [jschauma 2006-01-31]
 	Added www/p5-Kwiki-Zipcode 0.12 [jschauma 2006-01-31]
-        Updated net/nmap to 4.00 [salo 2006-01-31]
-        Updated net/nmapfe to 0.9.5nb24 [salo 2006-01-31]
+	Updated net/nmap to 4.00 [salo 2006-01-31]
+	Updated net/nmapfe to 0.9.5nb24 [salo 2006-01-31]
 	Updated meta-pkgs/kde3 to 3.5.1 [markd 2006-01-31]
 	Updated audio/arts to 1.5.1 [markd 2006-01-31]
 	Updated devel/kdesdk3 to 3.5.1 [markd 2006-01-31]
@@ -764,7 +764,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/netpbm to 10.31nb1 [joerg 2006-02-02]
 	Added chat/xchat-python version 2.4.5 [tron 2006-02-02]
 	Updated archivers/p5-Archive-Tar to 1.28 [abs 2006-02-02]
-	Updated textproc/p5-YAML to 0.57  [abs 2006-02-02]
+	Updated textproc/p5-YAML to 0.57 [abs 2006-02-02]
 	Added fonts/mplayer-fonts version 20030714 [wiz 2006-02-03]
 	Updated multimedia/mplayer-share to 1.0rc7nb2 [wiz 2006-02-03]
 	Updated databases/ruby-postgresql to 0.7.1nb6 [taca 2006-02-03]
@@ -821,7 +821,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/firefox-gtk1 to 1.5.0.1 [ghen 2006-02-05]
 	Updated mail/thunderbird to 1.5 [ghen 2006-02-05]
 	Updated mail/thunderbird-gtk1 to 1.5 [ghen 2006-02-05]
-	Updated net/freeradius to 1.1.0 [adrianp  2006-02-05]
+	Updated net/freeradius to 1.1.0 [adrianp 2006-02-05]
 	Updated chat/libtlen to 20041113 [adam 2006-02-05]
 	Updated www/bluefish to 1.0.5 [adam 2006-02-05]
 	Updated sysutils/cdbkup to 1.0nb5 [wiz 2006-02-05]
@@ -934,8 +934,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/ja-trac version 0.9.3.1 [rillig 2006-02-12]
 	Updated multimedia/avidemux to 2.1.1nb2 [joerg 2006-02-12]
 	Added multimedia/x264-devel version 20060127 [joerg 2006-02-12]
-        Updated net/nmap to 4.01 [salo 2006-02-12]
-        Updated net/nmapfe to 0.9.5nb26 [salo 2006-02-12]
+	Updated net/nmap to 4.01 [salo 2006-02-12]
+	Updated net/nmapfe to 0.9.5nb26 [salo 2006-02-12]
 	Updated audio/moc to 2.4.0 [xtraeme 2006-02-12]
 	Updated security/p5-Tie-EncryptedHash to 1.21 [heinz 2006-02-12]
 	Updated chat/libotr to 3.0.0 [salo 2006-02-13]
@@ -1280,8 +1280,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/qt4-docs to 4.1.1 [adam 2006-02-28]
 	Updated devel/libtool-base to 1.5.22nb2 [joerg 2006-02-28]
 	Updated net/btget to 1.05 [reinoud 2006-03-01]
-
 	Updated audio/xmcd to 3.0.2nb9 [tron 2006-03-01]
 	Updated pkgtools/pkglint to 4.58 [rillig 2006-03-01]
 	Updated net/nagios-nsca to 2.5nb1 [wiz 2006-03-01]
 	Updated www/moz-bin-plugger to 4.0nb2 [wiz 2006-03-01]
+	Updated textproc/py-html2text to 2.24 [schmonz 2006-03-01]
