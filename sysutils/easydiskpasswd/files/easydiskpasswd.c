@@ -1,4 +1,4 @@
-/* $NetBSD: easydiskpasswd.c,v 1.1.1.1 2002/09/19 20:56:57 drochner Exp $ */
+/* $NetBSD: easydiskpasswd.c,v 1.2 2006/03/01 17:16:01 drochner Exp $ */
 /*
  * Copyright (c) 2002
  *      Matthias Drochner.  All rights reserved.
@@ -32,7 +32,7 @@
 #include <sys/types.h>
 #include <sys/param.h>
 #include <sys/scsiio.h>
-#include <dev/scsipi/scsipi_all.h>
+#include <dev/scsipi/scsi_spc.h>
 #include <util.h>
 #include <string.h>
 #include <fcntl.h>
@@ -106,7 +106,7 @@ main(argc, argv)
 	char pathbuf[MAXPATHLEN];
 	const char *passwd = 0;
 	struct scsireq cmd;
-	struct scsipi_sense_data *sd;
+	struct scsi_sense_data *sd;
 
 	while ((ch = getopt(argc, argv, "dp:")) != -1)
 		switch (ch) {
@@ -158,11 +158,11 @@ main(argc, argv)
 		err(2, "SCIOCCOMMAND");
 
 	if (cmd.retsts == SCCMD_SENSE) {
-		sd = (struct scsipi_sense_data *)&cmd.sense;
-		if ((sd->flags & SSD_KEY) == SKEY_ILLEGAL_REQUEST) {
-			if (sd->add_sense_code == 0x24)
+		sd = (struct scsi_sense_data *)&cmd.sense;
+		if (SSD_SENSE_KEY(sd->flags) == SKEY_ILLEGAL_REQUEST) {
+			if (sd->asc == 0x24)
 				errx(3, "wrong password");
-			if (sd->add_sense_code == 0x20) {
+			if (sd->asc == 0x20) {
 				/* XXX shouldn't get here (caught above) */
 				warnx("no password set");
 				exit (0);
