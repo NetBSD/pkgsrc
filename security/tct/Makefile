@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/01/04 04:29:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.21 2006/03/01 22:48:05 wiz Exp $
 #
 
 DISTNAME=	tct-1.09
@@ -10,12 +10,10 @@ MAINTAINER=	frazee.23@osu.edu
 HOMEPAGE=	http://www.porcupine.org/forensics/tct.html
 COMMENT=	Programs to aid post-mortem after a break-in
 
-BROKEN_IN=	pkgsrc-2005Q4
-
 DEPENDS+=	p5-Date-Manip-[0-9]*:../../devel/p5-Date-Manip
 
 USE_TOOLS+=	perl:run
-REPLACE_PERL=	bin/grave-robber bin/mactime bin/strip_tct_home
+REPLACE_PERL+=	bin/grave-robber bin/mactime bin/strip_tct_home
 REPLACE_PERL+=	extras/bdf extras/ils2mac extras/realpath
 REPLACE_PERL+=	lazarus/lazarus
 
