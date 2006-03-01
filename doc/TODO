@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4668 2006/03/01 22:25:32 wiz Exp $
+$NetBSD: TODO,v 1.4669 2006/03/01 23:12:16 rillig Exp $
 
 Suggested new packages
 ======================
@@ -972,7 +972,7 @@ Suggested package updates
 	o psmisc-21.9
 	o pstoedit-3.42
 	o pstree-2.27
-	o pth-2.0.5
+	o pth-2.0.6
 	o puf-0.93.3
 	o pure-ftpd-1.0.21 [pkg/32901]
 	o puzzle-5.2
