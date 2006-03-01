@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.41 2006/02/04 03:39:40 rillig Exp $
+$NetBSD: TODO,v 1.42 2006/03/01 22:11:15 rillig Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
@@ -27,3 +27,4 @@ include the name of an example package where a warning should occur.
 * Many of the checking routines need some context to provide better
   warnings. For example, checkline_foo() may need to know what has
   happened in the file before that line.
+* Add checks for binary packages. See Debian/lintian for ideas.
