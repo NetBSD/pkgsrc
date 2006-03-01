@@ -1,4 +1,4 @@
-/*	$NetBSD: lambd.c,v 1.4 2001/07/19 20:29:08 itojun Exp $	*/
+/*	$NetBSD: lambd.c,v 1.5 2006/03/01 22:46:50 wiz Exp $	*/
 
 /*
  * Copyright (C) 2001 WIDE Project.  All rights reserved.
@@ -286,7 +286,7 @@ static const char *const alph[] = {
 int
 morse()
 {
-	const char *p, *q;
+	unsigned const char *p, *q;
 	int mark, blank;
 	unsigned long t = delay / 10;
 
@@ -300,6 +300,8 @@ morse()
 			q = alph[*p - 'A'];
 		else if (isalpha(*p) && islower(*p))
 			q = alph[*p - 'a'];
+		else
+			q = NULL;
 
 		if (debug)
 			printf("%c <%s>\n", *p, q);
