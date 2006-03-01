@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/01/04 04:29:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/01 17:16:01 drochner Exp $
 
 DISTNAME=	easydiskpasswd-1.0
 CATEGORIES=	sysutils
@@ -12,8 +12,9 @@ BROKEN_IN=	pkgsrc-2005Q4
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 
-# we depend on SCIOCCOMMAND and the "make" infrastructure
-ONLY_FOR_PLATFORM= NetBSD-*-*
+# we depend on SCIOCCOMMAND, a header defining sense codes
+# and the "make" infrastructure
+ONLY_FOR_PLATFORM= NetBSD-[3-9]*-*
 
 do-extract:
 	${CP} ${FILESDIR}/easydiskpasswd.c ${FILESDIR}/Makefile ${WRKSRC}
