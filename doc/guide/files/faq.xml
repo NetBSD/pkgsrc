@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.20 2006/02/12 14:44:59 rillig Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.21 2006/03/01 00:01:51 reed Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -310,6 +310,10 @@ you will have to add the following line into
 <programlisting>
     X11_TYPE=xorg
 </programlisting>
+
+<note><para>The DragonFly operating system defaults to using
+this X.org X11 implementation from pkgsrc.
+</para></note>
 
 </sect1>
 
