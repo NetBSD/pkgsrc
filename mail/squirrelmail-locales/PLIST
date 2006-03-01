@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/02/27 07:13:00 martti Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/03/01 06:39:52 cube Exp $
 share/squirrelmail/help/bg_BG/FAQ.hlp
 share/squirrelmail/help/bg_BG/addresses.hlp
 share/squirrelmail/help/bg_BG/basic.hlp
@@ -215,6 +215,15 @@ share/squirrelmail/help/sv_SE/main_folder.hlp
 share/squirrelmail/help/sv_SE/options.hlp
 share/squirrelmail/help/sv_SE/read_mail.hlp
 share/squirrelmail/help/sv_SE/search.hlp
+share/squirrelmail/help/th_TH/FAQ.hlp
+share/squirrelmail/help/th_TH/addresses.hlp
+share/squirrelmail/help/th_TH/basic.hlp
+share/squirrelmail/help/th_TH/compose.hlp
+share/squirrelmail/help/th_TH/folders.hlp
+share/squirrelmail/help/th_TH/main_folder.hlp
+share/squirrelmail/help/th_TH/options.hlp
+share/squirrelmail/help/th_TH/read_mail.hlp
+share/squirrelmail/help/th_TH/search.hlp
 share/squirrelmail/help/zh_CN/FAQ.hlp
 share/squirrelmail/help/zh_CN/addresses.hlp
 share/squirrelmail/help/zh_CN/basic.hlp
@@ -225,12 +234,16 @@ share/squirrelmail/help/zh_CN/options.hlp
 share/squirrelmail/help/zh_CN/read_mail.hlp
 share/squirrelmail/help/zh_CN/search.hlp
 share/squirrelmail/images/sec_remove_bn_IN.png
+share/squirrelmail/images/sec_remove_cs_CZ.png
 share/squirrelmail/images/sec_remove_da_DK.png
 share/squirrelmail/images/sec_remove_de_DE.png
 share/squirrelmail/images/sec_remove_el_GR.png
 share/squirrelmail/images/sec_remove_es_ES.png
+share/squirrelmail/images/sec_remove_et_EE.png
+share/squirrelmail/images/sec_remove_fi_FI.png
 share/squirrelmail/images/sec_remove_fo_FO.png
 share/squirrelmail/images/sec_remove_fr_FR.png
+share/squirrelmail/images/sec_remove_he_IL.png
 share/squirrelmail/images/sec_remove_hr_HR.png
 share/squirrelmail/images/sec_remove_hu_HU.png
 share/squirrelmail/images/sec_remove_id_ID.png
