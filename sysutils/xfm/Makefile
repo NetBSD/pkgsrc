@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:10:58 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/01 22:45:15 wiz Exp $
 
 DISTNAME=	xfm-1.4.3
 PKGREVISION=	2
@@ -9,7 +9,7 @@ MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://www.musikwissenschaft.uni-mainz.de/~ag/xfm/
 COMMENT=	The X File Manager
 
-BROKEN_IN=	pkgsrc-2005Q4
+BUILD_TARGET+=	all xfm.install.script Xfm.ad
 
 WRKSRC=		${WRKDIR}/xfm-1.4.3
 USE_IMAKE=	YES
