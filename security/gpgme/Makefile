@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2006/02/11 14:11:07 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2006/03/01 16:22:20 drochner Exp $
 #
 
 DISTNAME=	gpgme-1.0.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/ \
 		ftp://ftp.gnupg.org/gcrypt/alpha/gpgme/
@@ -47,6 +47,9 @@ CONFIGURE_ARGS+=	--without-pth --without-pth-test
 INFO_FILES=		gpgme.info
 
 .include "../../security/libgpg-error/buildlink3.mk"
+
+# we want the getenv_r() semantics of NetBSD-current
+BUILDLINK_DEPENDS.librfuncs+=	librfuncs>=1.0.7nb1
 .include "../../devel/librfuncs/buildlink3.mk"
 
 ##
