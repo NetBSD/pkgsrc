@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.17 2006/02/22 01:30:25 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.18 2006/03/01 17:16:21 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -48,9 +48,10 @@
 	<filename>ftp.NetBSD.org</filename> and its mirrors, in the
 	directory
 	<filename>/pub/NetBSD/packages/<replaceable>OSVERSION</replaceable>/<replaceable>ARCH</replaceable>/</filename>.
-	<replaceable>OSVERSION</replaceable> is the output of
-	<command>uname -r</command>, and <replaceable>ARCH</replaceable>
-	is the output of <command>uname -p</command>.</para>
+	For <replaceable>OSVERSION</replaceable>, you should insert the
+	output of <command>uname -r</command>, and for
+	<replaceable>ARCH</replaceable> the output of <command>uname
+	-p</command>.</para>
 
 	<para>For some other platforms, binary packages can be found at
 	the following locations:</para>
