@@ -5727,13 +5727,7 @@ _ACEOF
 cat confdefs.h >>conftest.$ac_ext
 cat >>conftest.$ac_ext <<_ACEOF
 /* end confdefs.h.  */
-
 #include <stdlib.h>
-
-int
-main ()
-{
-
 static void foo(void) __attribute__ ((noreturn));
 
 static void
@@ -5742,9 +5736,6 @@ foo(void)
   exit(1);
 }
 
-  ;
-  return 0;
-}
 _ACEOF
 rm -f conftest.$ac_objext
 if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
