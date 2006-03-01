@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.538 2006/02/28 15:25:44 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.539 2006/03/01 22:19:13 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1110,6 +1110,7 @@ use Fcntl qw(:mode);
 use File::Basename;
 use File::stat;
 use Cwd;
+use pkgsrc::Dewey;
 
 BEGIN {
 	import PkgLint::Util qw(
@@ -1806,6 +1807,52 @@ sub get_varname_to_toolname() {
 		load_tool_names();
 	}
 	return $load_tool_names_varname_to_toolname;
+}
+
+my $get_doc_TODO_updates_result = undef;
+sub get_doc_TODO_updates() {
+
+	if (defined($get_doc_TODO_updates_result)) {
+		return $get_doc_TODO_updates_result;
+	}
+
+	my ($fname) = ("${current_dir}/${pkgsrcdir}/doc/TODO");
+	my ($lines, $updates, $state, $re_suggested_update);
+
+	if (!($lines = load_file($fname))) {
+		log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
+	}
+
+	$updates = {};
+	$state = 0;
+	foreach my $line (@{$lines}) {
+		my $text = $line->text;
+
+		if ($state == 0 && $text eq "Suggested package updates") {
+			$state = 1;
+		} elsif ($state == 1 && $text eq "") {
+			$state = 2;
+		} elsif ($state == 2) {
+			$state = 3;
+		} elsif ($state == 3 && $text eq "") {
+			$state = 4;
+		}
+
+		if ($state == 3) {
+			if ($text =~ qr"^\to\s(\S+)") {
+				my ($spuname) = ($1);
+				if ($spuname =~ regex_pkgname) {
+					$updates->{$spuname} = $line;
+				} else {
+					$line->log_warning("Invalid package name $spuname");
+				}
+			} else {
+				$line->log_warning("Invalid line format $text");
+			}
+		}
+	}
+
+	return ($get_doc_TODO_updates_result = $updates);
 }
 
 #
@@ -4116,6 +4163,7 @@ sub checkfile_package_Makefile($$$) {
 
 	if (!defined($pkgname)) {
 		$pkgname = $distname;
+		$pkgname_line = $distname_line;
 	}
 
 	if (!exists($makevar->{"COMMENT"})) {
@@ -4125,6 +4173,29 @@ sub checkfile_package_Makefile($$$) {
 	if (exists($makevar->{"USE_IMAKE"}) && exists($makevar->{"USE_X11"})) {
 		$makevar->{"USE_IMAKE"}->log_note("USE_IMAKE makes ...");
 		$makevar->{"USE_X11"}->log_note("... USE_X11 superfluous.");
+	}
+
+	if (defined($pkgname) && $pkgname =~ regex_pkgname) {
+		my ($pkgbase, $pkgver) = ($1, $2);
+		my $updates = get_doc_TODO_updates();
+
+		foreach my $suggested_update (keys(%{$updates})) {
+			next unless ($suggested_update =~ regex_pkgname);
+			my ($suggbase, $suggver) = ($1, $2);
+
+			next unless $pkgbase eq $suggbase;
+			my $line = $updates->{$suggested_update};
+
+			if (dewey_cmp($pkgver, "<", $suggver)) {
+				$pkgname_line->log_warning("This package should be updated to ${suggver}.");
+			}
+			if (dewey_cmp($pkgver, "==", $suggver)) {
+				$pkgname_line->log_note("The update request to ${suggver} from doc/TODO has been done.");
+			}
+			if (dewey_cmp($pkgver, ">", $suggver)) {
+				$pkgname_line->log_note("This package is newer than the update request to ${suggver}.");
+			}
+		}
 	}
 
 	checklines_mk($lines);
