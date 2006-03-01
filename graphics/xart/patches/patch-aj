@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1 2006/02/23 21:24:12 joerg Exp $
+$NetBSD: patch-aj,v 1.2 2006/03/01 14:40:34 joerg Exp $
 
 --- rw/libpnmrw.c.orig	2006-02-23 21:15:15.000000000 +0000
 +++ rw/libpnmrw.c
@@ -10,10 +10,15 @@ $NetBSD: patch-aj,v 1.1 2006/02/23 21:24:12 joerg Exp $
  #include <stdio.h>
  #include "libpnmrw.h"
  
-@@ -133,7 +134,6 @@ pm_perror(char *reason)
- #else
-     extern char *sys_errlist[];
- #endif
+@@ -128,12 +129,6 @@ pm_freearray(char **its, int rows)
+ static void
+ pm_perror(char *reason)
+ {
+-#if defined(BSD4_4)
+-    __const extern char *__const sys_errlist[];
+-#else
+-    extern char *sys_errlist[];
+-#endif
 -    extern int errno;
      char *e;
  
