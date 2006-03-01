@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.9 2006/02/12 14:44:59 rillig Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.10 2006/03/01 00:04:30 reed Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -63,7 +63,7 @@
       </listitem>
 
       <listitem>
-	<para><ulink url="http://www.DragonFlyBSD.org/">DragonFlyBSD</ulink></para>
+	<para><ulink url="http://www.DragonFlyBSD.org/">DragonFly BSD</ulink></para>
       </listitem>
 
       <listitem>
