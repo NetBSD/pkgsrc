@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.28 2006/02/18 19:59:12 rillig Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.29 2006/03/01 00:04:30 reed Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -13,7 +13,7 @@
 
     <itemizedlist>
       <listitem><para>Darwin (Mac OS X)</para></listitem>
-      <listitem><para>DragonFlyBSD</para></listitem>
+      <listitem><para>DragonFly BSD</para></listitem>
       <listitem><para>FreeBSD</para></listitem>
       <listitem><para>Interix (Windows 2000, XP, 2003)</para></listitem>
       <listitem><para>IRIX</para></listitem>
