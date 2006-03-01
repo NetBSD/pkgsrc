@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/02/05 23:09:52 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2006/03/01 23:53:21 wiz Exp $
 
 DISTNAME=	j2re-1_3_1_17-linux-i586
 PKGNAME=	sun-jre13-1.0.17
@@ -11,11 +11,11 @@ SHORT=		JRE
 
 JAVA_WRAPPERS=	java keytool policytool rmid rmiregistry tnameserv
 WRKSRC=		${WRKDIR}/jre1.3.1_17
-OWN_DIRS=	${JAVA_HOME}
-OWN_DIRS+=	${JAVA_HOME}/lib
-OWN_DIRS+=	${JAVA_HOME}/lib/images
-OWN_DIRS+=	${JAVA_HOME}/lib/images/cursors
-OWN_DIRS+=	${JAVA_HOME}/lib/security
+REQD_DIRS=	${JAVA_HOME}
+REQD_DIRS+=	${JAVA_HOME}/lib
+REQD_DIRS+=	${JAVA_HOME}/lib/images
+REQD_DIRS+=	${JAVA_HOME}/lib/images/cursors
+REQD_DIRS+=	${JAVA_HOME}/lib/security
 SFILES=		content-types.properties	flavormap.properties
 SFILES+=	font.properties		font.properties.ja
 SFILES+=	font.properties.zh	images/cursors/cursors.properties
