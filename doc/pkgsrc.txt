@@ -57,10 +57,10 @@ I. The pkgsrc user's guide
 
     4. Using pkgsrc
 
-        4.1. Working with binary packages
+        4.1. Using binary packages
 
-            4.1.1. Where to get binary packages
-            4.1.2. How to use binary packages
+            4.1.1. Finding binary packages
+            4.1.2. Installing binary packages
             4.1.3. A word of warning
 
         4.2. Building packages from source
@@ -360,7 +360,7 @@ platforms:
 
   * Darwin (Mac OS X)
 
-  * DragonFlyBSD
+  * DragonFly BSD
 
   * FreeBSD
 
@@ -477,10 +477,10 @@ Table of Contents
 
 4. Using pkgsrc
 
-    4.1. Working with binary packages
+    4.1. Using binary packages
 
-        4.1.1. Where to get binary packages
-        4.1.2. How to use binary packages
+        4.1.1. Finding binary packages
+        4.1.2. Installing binary packages
         4.1.3. A word of warning
 
     4.2. Building packages from source
@@ -617,7 +617,7 @@ systems:
 
   * Darwin (Mac OS X)
 
-  * DragonFlyBSD
+  * DragonFly BSD
 
   * FreeBSD
 
@@ -1046,6 +1046,10 @@ to build packages.
 
 Please note the use of GNU binutils on Solaris is not supported.
 
+Whichever compiler you use, please ensure the compiler tools and your $prefix
+are in your PATH. This includes /usr/ccs/{bin,lib} and e.g. /usr/pkg/
+{bin,sbin}.
+
 3.2.7.1. If you are using gcc
 
 It makes life much simpler if you only use the same gcc consistently for
@@ -1076,15 +1080,50 @@ You should set CC, CXX and optionally, CPP in /etc/mk.conf, e.g.:
     CXX=    CC
     CPP=    /usr/ccs/lib/cpp
 
-You may also want to build 64-bit binaries, e.g.:
+3.2.7.3. Buildling 64-bit binaries with SunPro
 
-    CFLAGS= -xtarget=ultra -xarch=v9
+Building 64-bit binaries is a little trickier. First, you need to bootstrap
+pkgsrc in 64-bit mode. One problem here is that while building one of the
+programs in the bootstrap kit (bmake), the CFLAGS variable is not honored, even
+if it is set in the environment. To work around this bug, you can create a
+simple shell script called cc64 and put it somewhere in the PATH:
 
-Whichever compiler you use, please ensure the compiler tools and your $prefix
-are in your PATH. This includes /usr/ccs/{bin,lib} and e.g. /usr/pkg/
-{bin,sbin}.
+    #! /bin/sh
+    exec /opt/SUNWspro/bin/cc -xtarget=ultra -xarch=v9 ${1+"$@"}
 
-3.2.7.3. Common problems
+Then, pass the definition for CC in the environment of the bootstrap command:
+
+    $ cd bootstrap
+    $ CC=cc64 ./bootstrap
+
+After bootstrapping, there are two alternative ways, depending on whether you
+want to find bugs in packages or get your system ready quickly. If you just
+want a running system, add the following lines to your mk.conf file:
+
+    CC=                     cc64
+    CXX=                    CC64
+    PKGSRC_COMPILER=        sunpro
+
+This way, all calls to the compiler will be intercepted by the above wrapper
+and therefore get the necessary ABI options automatically. (Don't forget to
+create the shell script CC64, too.)
+
+To find packages that ignore the user-specified CFLAGS and CXXFLAGS, add the
+following lines to your mk.conf file:
+
+    CC=                     cc
+    CXX=                    CC
+    PKGSRC_COMPILER=        sunpro
+    CFLAGS=                 -xtarget=ultra -xarch=v9
+    CXXFLAGS=               -xtarget=ultra -xarch=v9
+    LDFLAGS=                -xtarget=ultra -xarch=v9
+
+Packages that don't use the flags provided in the configuration file will try
+to build 32-bit binaries and fail during linking. Detecting this is useful to
+prevent bugs on other platforms where the error would not show up but pass
+silently.
+
+3.2.7.4. Common problems
 
 Sometimes, when using libtool, /bin/ksh crashes with a segmentation fault. The
 workaround is to use another shell for the configure scripts, for example by
@@ -1097,10 +1136,10 @@ Chapter 4. Using pkgsrc
 
 Table of Contents
 
-4.1. Working with binary packages
+4.1. Using binary packages
 
-    4.1.1. Where to get binary packages
-    4.1.2. How to use binary packages
+    4.1.1. Finding binary packages
+    4.1.2. Installing binary packages
     4.1.3. A word of warning
 
 4.2. Building packages from source
@@ -1110,26 +1149,57 @@ Table of Contents
     4.2.3. How to build and install
     4.2.4. Selecting the compiler
 
-4.1. Working with binary packages
+Basically, there are two ways of using pkgsrc. The first is to only install the
+package tools and to use binary packages that someone else has prepared. This
+is the "pkg" in pkgsrc. The second way is to install the "src" of pkgsrc, too.
+Then you are able to build your own packages, and you can still use binary
+packages from someone else.
 
-This section describes how to find, retrieve and install a precompiled binary
-package that someone else already prepared for your type of machine.
+4.1. Using binary packages
 
-4.1.1. Where to get binary packages
+To use binary packages, you need some tools to manage them. On NetBSD, these
+tools are already installed. On all other operating systems, you need to
+install them first. For the following platforms, prebuilt versions of the
+package tools are available and can simply be downloaded and unpacked in the /
+directory:
 
-Precompiled packages are stored on ftp.NetBSD.org and its mirrors in the
-directory /pub/NetBSD/packages/<OSVERSION>/<ARCH>/ for anonymous FTP access.
-OSVERSION is the NetBSD version (uname -r), ARCH is the architecture (uname -p
-). In that directory, there is a subdirectory for each category plus a
-subdirectory All which includes the actual binaries in .tgz files. The category
-subdirectories use symbolic links to those files (this is the same directory
-layout as in /usr/pkgsrc/packages).
++--------------------------------------------------------------------+
+|  Platform  |                          URL                          |
+|------------+-------------------------------------------------------|
+|Solaris 5.10|http://public.enst.fr/pkgsrc/packages/bootstrap-pkgsrc/|
++--------------------------------------------------------------------+
 
-This same directory layout applies for CD-ROM distributions, only that the
-directory may be rooted somewhere else, probably somewhere below /cdrom. Please
-consult your CD-ROMs documentation for the exact location.
+These prebuilt package tools use /usr/pkg for the base directory, and /var/db/
+pkg for the database of installed packages. If you cannot use these directories
+for whatever reasons (maybe because you're not root), you have to build the
+package tools yourself, which is explained in Section 3.1, "Bootstrapping
+pkgsrc".
 
-4.1.2. How to use binary packages
+4.1.1. Finding binary packages
+
+To install binary packages, you first need to know from where to get them. You
+can get them on CD-ROMs, DVDs, or via FTP or HTTP.
+
+For NetBSD, the binary packages are made available on ftp.NetBSD.org and its
+mirrors, in the directory /pub/NetBSD/packages/OSVERSION/ARCH/. For OSVERSION,
+you should insert the output of uname -r, and for ARCH the output of uname -p.
+
+For some other platforms, binary packages can be found at the following
+locations:
+
++---------------------------------------------------+
+|  Platform  |                 URL                  |
+|------------+--------------------------------------|
+|Solaris 5.10|http://public.enst.fr/pkgsrc/packages/|
++---------------------------------------------------+
+
+In each of these directories, there is a subdirectory All that contains all the
+binary packages. Further, there are subdirectories for categories that contain
+symbolic links that point to the actual binary package in ../All. This
+directory layout is used for all package repositories, no matter if they are
+accessed via HTTP, FTP, NFS, CD-ROM, or the local filesystem.
+
+4.1.2. Installing binary packages
 
 If you have the files on a CD-ROM or downloaded them to your hard disk, you can
 install them with the following command (be sure to su to root first):
@@ -1420,13 +1490,13 @@ To see which options, if any, a package supports, and which options are
 mutually exclusive, run make show-options, for example:
 
     The following options are supported by this package:
-    ssl      Enable SSL support.
+        ssl      Enable SSL support.
     Exactly one of the following gecko options is required:
-    firefox  Use firefox as gecko rendering engine.
-    mozilla  Use mozilla as gecko rendering engine.
+        firefox  Use firefox as gecko rendering engine.
+        mozilla  Use mozilla as gecko rendering engine.
     At most one of the following database options may be selected:
-    mysql    Enable support for MySQL database.
-    pgsql    Enable support for PostgreSQL database.
+        mysql    Enable support for MySQL database.
+        pgsql    Enable support for PostgreSQL database.
 
     These options are enabled by default: firefox
     These options are currently enabled: mozilla ssl
@@ -2067,6 +2137,11 @@ X11R6, /usr/openwin, ...) you will have to add the following line into /etc/
 mk.conf:
 
     X11_TYPE=xorg
+
+Note
+
+The DragonFly operating system defaults to using this X.org X11 implementation
+from pkgsrc.
 
 7.8. How to fetch files from behind a firewall
 

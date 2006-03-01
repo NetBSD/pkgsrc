@@ -180,18 +180,17 @@ alink="#0000FF">
 
             <dd>
               <dl>
-                <dt><span class="sect1"><a href=
-                "#getting-started">4.1. Working with binary
-                packages</a></span></dt>
+                <dt><span class="sect1"><a href="#using-pkg">4.1.
+                Using binary packages</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#where-to-get-binary-packages">4.1.1. Where to
-                    get binary packages</a></span></dt>
+                    "#finding-binary-packages">4.1.1. Finding
+                    binary packages</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#how-to-use-binary-packages">4.1.2. How to use
+                    "#installing-binary-packages">4.1.2. Installing
                     binary packages</a></span></dt>
 
                     <dt><span class="sect2"><a href=
@@ -1223,7 +1222,7 @@ alink="#0000FF">
 
             <li>
               <p><a href="http://www.DragonFlyBSD.org/" target=
-              "_top">DragonFlyBSD</a></p>
+              "_top">DragonFly BSD</a></p>
             </li>
 
             <li>
@@ -1514,18 +1513,17 @@ alink="#0000FF">
 
           <dd>
             <dl>
-              <dt><span class="sect1"><a href=
-              "#getting-started">4.1. Working with binary
-              packages</a></span></dt>
+              <dt><span class="sect1"><a href="#using-pkg">4.1.
+              Using binary packages</a></span></dt>
 
               <dd>
                 <dl>
                   <dt><span class="sect2"><a href=
-                  "#where-to-get-binary-packages">4.1.1. Where to
-                  get binary packages</a></span></dt>
+                  "#finding-binary-packages">4.1.1. Finding binary
+                  packages</a></span></dt>
 
                   <dt><span class="sect2"><a href=
-                  "#how-to-use-binary-packages">4.1.2. How to use
+                  "#installing-binary-packages">4.1.2. Installing
                   binary packages</a></span></dt>
 
                   <dt><span class="sect2"><a href=
@@ -1958,7 +1956,7 @@ alink="#0000FF">
               </li>
 
               <li>
-                <p>DragonFlyBSD</p>
+                <p>DragonFly BSD</p>
               </li>
 
               <li>
@@ -2883,6 +2881,14 @@ alink="#0000FF">
             <span class="emphasis"><em>not</em></span>
             supported.</p>
 
+            <p>Whichever compiler you use, please ensure the
+            compiler tools and your $prefix are in your
+            <code class="varname">PATH</code>. This includes
+            <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
+            class="filename">/usr/ccs/{bin,lib}</code> and e.g.
+            <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
+            class="filename">/usr/pkg/{bin,sbin}</code>.</p>
+
             <div class="sect3" lang="en">
               <div class="titlepage">
                 <div>
@@ -2960,22 +2966,6 @@ alink="#0000FF">
     CXX=    CC
     CPP=    /usr/ccs/lib/cpp
 </pre>
-
-              <p>You may also want to build 64-bit binaries,
-              e.g.:</p>
-              <pre class="programlisting">
-    CFLAGS= -xtarget=ultra -xarch=v9
-</pre>
-
-              <p>Whichever compiler you use, please ensure the
-              compiler tools and your $prefix are in your
-              <code class="varname">PATH</code>. This includes
-              <code xmlns=
-              "http://www.w3.org/TR/xhtml1/transitional" class=
-              "filename">/usr/ccs/{bin,lib}</code> and e.g.
-              <code xmlns=
-              "http://www.w3.org/TR/xhtml1/transitional" class=
-              "filename">/usr/pkg/{bin,sbin}</code>.</p>
             </div>
 
             <div class="sect3" lang="en">
@@ -2983,7 +2973,89 @@ alink="#0000FF">
                 <div>
                   <div>
                     <h4 class="title"><a name=
-                    "plat.sunos.problems"></a>3.2.7.3.&nbsp;Common
+                    "solaris-sunpro-64"></a>3.2.7.3.&nbsp;Buildling
+                    64-bit binaries with SunPro</h4>
+                  </div>
+                </div>
+              </div>
+
+              <p>Building 64-bit binaries is a little trickier.
+              First, you need to bootstrap pkgsrc in 64-bit mode.
+              One problem here is that while building one of the
+              programs in the bootstrap kit (<code xmlns=
+              "http://www.w3.org/TR/xhtml1/transitional" class=
+              "filename">bmake</code>), the <code class=
+              "varname">CFLAGS</code> variable is not honored, even
+              if it is set in the environment. To work around this
+              bug, you can create a simple shell script called
+              <code xmlns=
+              "http://www.w3.org/TR/xhtml1/transitional" class=
+              "filename">cc64</code> and put it somewhere in the
+              <code class="varname">PATH</code>:</p>
+              <pre class="programlisting">
+    #! /bin/sh
+    exec /opt/SUNWspro/bin/cc -xtarget=ultra -xarch=v9 ${1+"$@"}
+</pre>
+
+              <p>Then, pass the definition for <code class=
+              "varname">CC</code> in the environment of the
+              <span><strong class=
+              "command">bootstrap</strong></span> command:</p>
+              <pre class="programlisting">
+    <code class="prompt">$</code> <strong class=
+"userinput"><code>cd bootstrap</code></strong>
+    <code class="prompt">$</code> <strong class=
+"userinput"><code>CC=cc64 ./bootstrap</code></strong>
+</pre>
+
+              <p>After bootstrapping, there are two alternative
+              ways, depending on whether you want to find bugs in
+              packages or get your system ready quickly. If you
+              just want a running system, add the following lines
+              to your <code xmlns=
+              "http://www.w3.org/TR/xhtml1/transitional" class=
+              "filename">mk.conf</code> file:</p>
+              <pre class="programlisting">
+    CC=                     cc64
+    CXX=                    CC64
+    PKGSRC_COMPILER=        sunpro
+</pre>
+
+              <p>This way, all calls to the compiler will be
+              intercepted by the above wrapper and therefore get
+              the necessary ABI options automatically. (Don't
+              forget to create the shell script <code xmlns=
+              "http://www.w3.org/TR/xhtml1/transitional" class=
+              "filename">CC64</code>, too.)</p>
+
+              <p>To find packages that ignore the user-specified
+              <code class="varname">CFLAGS</code> and <code class=
+              "varname">CXXFLAGS</code>, add the following lines to
+              your <code xmlns=
+              "http://www.w3.org/TR/xhtml1/transitional" class=
+              "filename">mk.conf</code> file:</p>
+              <pre class="programlisting">
+    CC=                     cc
+    CXX=                    CC
+    PKGSRC_COMPILER=        sunpro
+    CFLAGS=                 -xtarget=ultra -xarch=v9
+    CXXFLAGS=               -xtarget=ultra -xarch=v9
+    LDFLAGS=                -xtarget=ultra -xarch=v9
+</pre>
+
+              <p>Packages that don't use the flags provided in the
+              configuration file will try to build 32-bit binaries
+              and fail during linking. Detecting this is useful to
+              prevent bugs on other platforms where the error would
+              not show up but pass silently.</p>
+            </div>
+
+            <div class="sect3" lang="en">
+              <div class="titlepage">
+                <div>
+                  <div>
+                    <h4 class="title"><a name=
+                    "plat.sunos.problems"></a>3.2.7.4.&nbsp;Common
                     problems</h4>
                   </div>
                 </div>
@@ -3026,17 +3098,17 @@ alink="#0000FF">
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#getting-started">4.1.
-            Working with binary packages</a></span></dt>
+            <dt><span class="sect1"><a href="#using-pkg">4.1. Using
+            binary packages</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#where-to-get-binary-packages">4.1.1. Where to get
-                binary packages</a></span></dt>
+                "#finding-binary-packages">4.1.1. Finding binary
+                packages</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#how-to-use-binary-packages">4.1.2. How to use
+                "#installing-binary-packages">4.1.2. Installing
                 binary packages</a></span></dt>
 
                 <dt><span class="sect2"><a href=
@@ -3070,60 +3142,152 @@ alink="#0000FF">
           </dl>
         </div>
 
+        <p>Basically, there are two ways of using pkgsrc. The first
+        is to only install the package tools and to use binary
+        packages that someone else has prepared. This is the
+        &#8220;<span class="quote">pkg</span>&#8221; in pkgsrc. The
+        second way is to install the &#8220;<span class=
+        "quote">src</span>&#8221; of pkgsrc, too. Then you are able
+        to build your own packages, and you can still use binary
+        packages from someone else.</p>
+
         <div class="sect1" lang="en">
           <div class="titlepage">
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "getting-started"></a>4.1.&nbsp;Working with binary
+                "using-pkg"></a>4.1.&nbsp;Using binary
                 packages</h2>
               </div>
             </div>
           </div>
 
-          <p>This section describes how to find, retrieve and
-          install a precompiled binary package that someone else
-          already prepared for your type of machine.</p>
+          <p>To use binary packages, you need some tools to manage
+          them. On NetBSD, these tools are already installed. On
+          all other operating systems, you need to install them
+          first. For the following platforms, prebuilt versions of
+          the package tools are available and can simply be
+          downloaded and unpacked in the <code xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" class=
+          "filename">/</code> directory:</p>
+
+          <div class="informaltable">
+            <a name="binary-bootstrap-kits"></a>
+
+            <table border="1">
+              <colgroup>
+                <col />
+                <col />
+              </colgroup>
+
+              <thead>
+                <tr>
+                  <th>Platform</th>
+
+                  <th>URL</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Solaris 5.10</td>
+
+                  <td><code xmlns=
+                  "http://www.w3.org/TR/xhtml1/transitional" class=
+                  "filename">http://public.enst.fr/pkgsrc/packages/bootstrap-pkgsrc/</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>These prebuilt package tools use <code xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" class=
+          "filename">/usr/pkg</code> for the base directory, and
+          <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
+          class="filename">/var/db/pkg</code> for the database of
+          installed packages. If you cannot use these directories
+          for whatever reasons (maybe because you're not root), you
+          have to build the package tools yourself, which is
+          explained in <a href="#bootstrapping-pkgsrc" title=
+          "3.1.&nbsp;Bootstrapping pkgsrc">Section&nbsp;3.1,
+          &#8220;Bootstrapping pkgsrc&#8221;</a>.</p>
 
           <div class="sect2" lang="en">
             <div class="titlepage">
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "where-to-get-binary-packages"></a>4.1.1.&nbsp;Where
-                  to get binary packages</h3>
+                  "finding-binary-packages"></a>4.1.1.&nbsp;Finding
+                  binary packages</h3>
                 </div>
               </div>
             </div>
 
-            <p>Precompiled packages are stored on ftp.NetBSD.org
-            and its mirrors in the directory <code xmlns=
+            <p>To install binary packages, you first need to know
+            from where to get them. You can get them on CD-ROMs,
+            DVDs, or via FTP or HTTP.</p>
+
+            <p>For NetBSD, the binary packages are made available
+            on <code xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" class=
-            "filename">/pub/NetBSD/packages/&lt;OSVERSION&gt;/&lt;ARCH&gt;/</code>
-            for anonymous FTP access. <code class=
-            "varname">OSVERSION</code> is the NetBSD version
-            (<span><strong class="command">uname
-            -r</strong></span>), <code class="varname">ARCH</code>
-            is the architecture (<span><strong class=
-            "command">uname -p</strong></span>). In that directory,
-            there is a subdirectory for each category plus a
+            "filename">ftp.NetBSD.org</code> and its mirrors, in
+            the directory <code xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" class=
+            "filename">/pub/NetBSD/packages/<em class=
+            "replaceable"><code>OSVERSION</code></em>/<em class=
+            "replaceable"><code>ARCH</code></em>/</code>. For
+            <em class="replaceable"><code>OSVERSION</code></em>,
+            you should insert the output of <span><strong class=
+            "command">uname -r</strong></span>, and for <em class=
+            "replaceable"><code>ARCH</code></em> the output of
+            <span><strong class="command">uname
+            -p</strong></span>.</p>
+
+            <p>For some other platforms, binary packages can be
+            found at the following locations:</p>
+
+            <div class="informaltable">
+              <a name="binary-packages"></a>
+
+              <table border="1">
+                <colgroup>
+                  <col />
+                  <col />
+                </colgroup>
+
+                <thead>
+                  <tr>
+                    <th>Platform</th>
+
+                    <th>URL</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Solaris 5.10</td>
+
+                    <td><code xmlns=
+                    "http://www.w3.org/TR/xhtml1/transitional"
+                    class=
+                    "filename">http://public.enst.fr/pkgsrc/packages/</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>In each of these directories, there is a
             subdirectory <code xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" class=
-            "filename">All</code> which includes the actual
-            binaries in <code xmlns=
+            "filename">All</code> that contains all the binary
+            packages. Further, there are subdirectories for
+            categories that contain symbolic links that point to
+            the actual binary package in <code xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" class=
-            "filename">.tgz</code> files. The category
-            subdirectories use symbolic links to those files (this
-            is the same directory layout as in <code xmlns=
-            "http://www.w3.org/TR/xhtml1/transitional" class=
-            "filename">/usr/pkgsrc/packages</code>).</p>
-
-            <p>This same directory layout applies for CD-ROM
-            distributions, only that the directory may be rooted
-            somewhere else, probably somewhere below <code xmlns=
-            "http://www.w3.org/TR/xhtml1/transitional" class=
-            "filename">/cdrom</code>. Please consult your CD-ROMs
-            documentation for the exact location.</p>
+            "filename">../All</code>. This directory layout is used
+            for all package repositories, no matter if they are
+            accessed via HTTP, FTP, NFS, CD-ROM, or the local
+            filesystem.</p>
           </div>
 
           <div class="sect2" lang="en">
@@ -3131,8 +3295,8 @@ alink="#0000FF">
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "how-to-use-binary-packages"></a>4.1.2.&nbsp;How
-                  to use binary packages</h3>
+                  "installing-binary-packages"></a>4.1.2.&nbsp;Installing
+                  binary packages</h3>
                 </div>
               </div>
             </div>
@@ -3889,13 +4053,13 @@ alink="#0000FF">
           show-options</strong></span>, for example:</p>
           <pre class="programlisting">
     The following options are supported by this package:
-    ssl      Enable SSL support.
+        ssl      Enable SSL support.
     Exactly one of the following gecko options is required:
-    firefox  Use firefox as gecko rendering engine.
-    mozilla  Use mozilla as gecko rendering engine.
+        firefox  Use firefox as gecko rendering engine.
+        mozilla  Use mozilla as gecko rendering engine.
     At most one of the following database options may be selected:
-    mysql    Enable support for MySQL database.
-    pgsql    Enable support for PostgreSQL database.
+        mysql    Enable support for MySQL database.
+        pgsql    Enable support for PostgreSQL database.
 
     These options are enabled by default: firefox
     These options are currently enabled: mozilla ssl
@@ -5610,6 +5774,14 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           <pre class="programlisting">
     X11_TYPE=xorg
 </pre>
+
+          <div class="note" style=
+          "margin-left: 0.5in; margin-right: 0.5in;">
+            <h3 class="title">Note</h3>
+
+            <p>The DragonFly operating system defaults to using
+            this X.org X11 implementation from pkgsrc.</p>
+          </div>
         </div>
 
         <div class="sect1" lang="en">
