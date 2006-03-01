@@ -1,6 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/15 02:15:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/03/01 18:27:26 drochner Exp $
 bin/hg
-bin/hgmerge
+${PYSITELIB}/hgext/__init__.py
+${PYSITELIB}/hgext/__init__.pyc
+${PYSITELIB}/hgext/__init__.pyo
+${PYSITELIB}/hgext/gpg.py
+${PYSITELIB}/hgext/gpg.pyc
+${PYSITELIB}/hgext/gpg.pyo
+${PYSITELIB}/hgext/win32text.py
+${PYSITELIB}/hgext/win32text.pyc
+${PYSITELIB}/hgext/win32text.pyo
 ${PYSITELIB}/mercurial/__init__.py
 ${PYSITELIB}/mercurial/__init__.pyc
 ${PYSITELIB}/mercurial/__init__.pyo
@@ -41,6 +49,9 @@ ${PYSITELIB}/mercurial/httprangereader.pyo
 ${PYSITELIB}/mercurial/httprepo.py
 ${PYSITELIB}/mercurial/httprepo.pyc
 ${PYSITELIB}/mercurial/httprepo.pyo
+${PYSITELIB}/mercurial/i18n.py
+${PYSITELIB}/mercurial/i18n.pyc
+${PYSITELIB}/mercurial/i18n.pyo
 ${PYSITELIB}/mercurial/localrepo.py
 ${PYSITELIB}/mercurial/localrepo.pyc
 ${PYSITELIB}/mercurial/localrepo.pyo
@@ -57,6 +68,9 @@ ${PYSITELIB}/mercurial/mpatch.so
 ${PYSITELIB}/mercurial/node.py
 ${PYSITELIB}/mercurial/node.pyc
 ${PYSITELIB}/mercurial/node.pyo
+${PYSITELIB}/mercurial/packagescan.py
+${PYSITELIB}/mercurial/packagescan.pyc
+${PYSITELIB}/mercurial/packagescan.pyo
 ${PYSITELIB}/mercurial/remoterepo.py
 ${PYSITELIB}/mercurial/remoterepo.pyc
 ${PYSITELIB}/mercurial/remoterepo.pyo
@@ -72,32 +86,48 @@ ${PYSITELIB}/mercurial/sshrepo.pyo
 ${PYSITELIB}/mercurial/statichttprepo.py
 ${PYSITELIB}/mercurial/statichttprepo.pyc
 ${PYSITELIB}/mercurial/statichttprepo.pyo
+${PYSITELIB}/mercurial/templates/changelog-gitweb.tmpl
 ${PYSITELIB}/mercurial/templates/changelog-rss.tmpl
 ${PYSITELIB}/mercurial/templates/changelog.tmpl
+${PYSITELIB}/mercurial/templates/changelogentry-gitweb.tmpl
 ${PYSITELIB}/mercurial/templates/changelogentry-rss.tmpl
 ${PYSITELIB}/mercurial/templates/changelogentry.tmpl
+${PYSITELIB}/mercurial/templates/changeset-gitweb.tmpl
 ${PYSITELIB}/mercurial/templates/changeset-raw.tmpl
 ${PYSITELIB}/mercurial/templates/changeset.tmpl
+${PYSITELIB}/mercurial/templates/error-gitweb.tmpl
+${PYSITELIB}/mercurial/templates/error.tmpl
+${PYSITELIB}/mercurial/templates/fileannotate-gitweb.tmpl
 ${PYSITELIB}/mercurial/templates/fileannotate.tmpl
 ${PYSITELIB}/mercurial/templates/filediff-raw.tmpl
 ${PYSITELIB}/mercurial/templates/filediff.tmpl
+${PYSITELIB}/mercurial/templates/filelog-gitweb.tmpl
 ${PYSITELIB}/mercurial/templates/filelog-rss.tmpl
 ${PYSITELIB}/mercurial/templates/filelog.tmpl
 ${PYSITELIB}/mercurial/templates/filelogentry-rss.tmpl
 ${PYSITELIB}/mercurial/templates/filelogentry.tmpl
+${PYSITELIB}/mercurial/templates/filerevision-gitweb.tmpl
 ${PYSITELIB}/mercurial/templates/filerevision-raw.tmpl
 ${PYSITELIB}/mercurial/templates/filerevision.tmpl
+${PYSITELIB}/mercurial/templates/footer-gitweb.tmpl
 ${PYSITELIB}/mercurial/templates/footer.tmpl
+${PYSITELIB}/mercurial/templates/header-gitweb.tmpl
 ${PYSITELIB}/mercurial/templates/header-raw.tmpl
 ${PYSITELIB}/mercurial/templates/header-rss.tmpl
 ${PYSITELIB}/mercurial/templates/header.tmpl
 ${PYSITELIB}/mercurial/templates/index.tmpl
+${PYSITELIB}/mercurial/templates/manifest-gitweb.tmpl
 ${PYSITELIB}/mercurial/templates/manifest.tmpl
 ${PYSITELIB}/mercurial/templates/map
+${PYSITELIB}/mercurial/templates/map-gitweb
 ${PYSITELIB}/mercurial/templates/map-raw
 ${PYSITELIB}/mercurial/templates/map-rss
 ${PYSITELIB}/mercurial/templates/notfound.tmpl
+${PYSITELIB}/mercurial/templates/search-gitweb.tmpl
 ${PYSITELIB}/mercurial/templates/search.tmpl
+${PYSITELIB}/mercurial/templates/shortlog-gitweb.tmpl
+${PYSITELIB}/mercurial/templates/summary-gitweb.tmpl
+${PYSITELIB}/mercurial/templates/tags-gitweb.tmpl
 ${PYSITELIB}/mercurial/templates/tags.tmpl
 ${PYSITELIB}/mercurial/transaction.py
 ${PYSITELIB}/mercurial/transaction.pyc
@@ -119,3 +149,4 @@ share/doc/mercurial/comparison.txt
 @dirrm share/doc/mercurial
 @dirrm ${PYSITELIB}/mercurial/templates
 @dirrm ${PYSITELIB}/mercurial
+@dirrm ${PYSITELIB}/hgext
