@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2006/01/25 17:22:54 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2006/03/01 22:49:07 wiz Exp $
 
 --- tcpdpriv.c.orig	2000-04-18 07:59:19.000000000 +0000
 +++ tcpdpriv.c
@@ -11,7 +11,18 @@ $NetBSD: patch-aa,v 1.2 2006/01/25 17:22:54 joerg Exp $
  #include <net/slcompress.h>
  #if	!defined(osf1)
  #include <net/slip.h>
-@@ -2759,7 +2759,7 @@ usage(char *cmd)
+@@ -111,6 +111,10 @@
+ 
+ #include <pcap.h>
+ 
++#if defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900) /* NetBSD 2.99.9 */
++#define statfs statvfs
++#endif
++
+ /*
+  * deal with systems in which bpf_int32 and bpf_u_int32 are not defined
+  */
+@@ -2759,7 +2763,7 @@ usage(char *cmd)
  int
  main(int argc, char *argv[], char *envp[])
  {
@@ -20,7 +31,7 @@ $NetBSD: patch-aa,v 1.2 2006/01/25 17:22:54 joerg Exp $
      char *copy_argv(register char **argv);
      char *read_infile(char *fname);
      char *rfile, *wfile;
-@@ -2903,7 +2903,7 @@ main(int argc, char *argv[], char *envp[
+@@ -2903,7 +2907,7 @@ main(int argc, char *argv[], char *envp[
  
      /* dump? */
      if (dflag) {
