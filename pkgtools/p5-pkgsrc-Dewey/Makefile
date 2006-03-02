@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/13 19:53:19 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.2 2006/03/02 10:53:39 tron Exp $
 
 DISTNAME=	p5-pkgsrc-Dewey-1.0
 CATEGORIES=	pkgtools perl5
@@ -22,10 +21,10 @@ PKG_INSTALL_FILESDIR=	../../pkgtools/pkg_install/files
 PKG_INSTALL_FILES=	lib/dewey.c lib/dewey.h lib/defs.h
 
 do-extract:
-	${MKDIR} ${WRKSRC}
+	${MKDIR} ${WRKSRC}/lib
 	${CP} -r ${FILESDIR}/* ${WRKSRC}
 	for f in ${PKG_INSTALL_FILES}; do \
-		${CP} ${PKG_INSTALL_FILESDIR}/$$f ${WRKSRC}; \
+		${CP} ${PKG_INSTALL_FILESDIR}/$$f ${WRKSRC}/lib; \
 	done
 	${TOUCH} ${WRKSRC}/nbcompat.h
 
