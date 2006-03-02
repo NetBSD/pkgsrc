@@ -1,14 +1,11 @@
-# $NetBSD: options.mk,v 1.3 2005/05/31 10:01:37 dillo Exp $
+# $NetBSD: options.mk,v 1.4 2006/03/02 20:41:30 wiz Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gld
-PKG_SUPPORTED_OPTIONS=	mysql pgsql
-PKG_SUGGESTED_OPTIONS=	mysql
+PKG_OPTIONS_VAR=		PKG_OPTIONS.gld
+PKG_OPTIONS_REQUIRED_GROUPS=	database
+PKG_OPTIONS_GROUP.database=	mysql pgsql
+PKG_SUGGESTED_OPTIONS=		mysql
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mmysql) && !empty(PKG_OPTIONS:Mpgsql)
-PKG_FAIL_REASON+=	"Choose one option: mysql or pgsql."
-.endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
 .  include "../../mk/mysql.buildlink3.mk"
