@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13134 2006/03/02 00:49:20 schmonz Exp $
+$NetBSD: CHANGES,v 1.13135 2006/03/02 01:42:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1288,3 +1288,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/readline to 5.1pl1nb1 [minskim 2006-03-02]
 	Updated math/mathomatic to 12.5.10 [minskim 2006-03-02]
 	Updated audio/solfege to 3.0.7 [schmonz 2006-03-02]
+	Updated misc/xchm to 1.4 [minskim 2006-03-02]
