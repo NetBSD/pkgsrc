@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/16 18:15:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/03/02 19:23:04 drochner Exp $
 bin/gourmet
 ${PYSITELIB}/gourmet/FauxActionGroups.py
 ${PYSITELIB}/gourmet/FauxActionGroups.pyc
@@ -168,6 +168,9 @@ ${PYSITELIB}/gourmet/importers/BeautifulSoup.pyo
 ${PYSITELIB}/gourmet/importers/__init__.py
 ${PYSITELIB}/gourmet/importers/__init__.pyc
 ${PYSITELIB}/gourmet/importers/__init__.pyo
+${PYSITELIB}/gourmet/importers/generic_recipe_parser.py
+${PYSITELIB}/gourmet/importers/generic_recipe_parser.pyc
+${PYSITELIB}/gourmet/importers/generic_recipe_parser.pyo
 ${PYSITELIB}/gourmet/importers/gxml2_importer.py
 ${PYSITELIB}/gourmet/importers/gxml2_importer.pyc
 ${PYSITELIB}/gourmet/importers/gxml2_importer.pyo
@@ -198,9 +201,15 @@ ${PYSITELIB}/gourmet/importers/html_plugins/html_helpers.pyo
 ${PYSITELIB}/gourmet/importers/html_plugins/recipezaar.py
 ${PYSITELIB}/gourmet/importers/html_plugins/recipezaar.pyc
 ${PYSITELIB}/gourmet/importers/html_plugins/recipezaar.pyo
+${PYSITELIB}/gourmet/importers/imageBrowser.py
+${PYSITELIB}/gourmet/importers/imageBrowser.pyc
+${PYSITELIB}/gourmet/importers/imageBrowser.pyo
 ${PYSITELIB}/gourmet/importers/importer.py
 ${PYSITELIB}/gourmet/importers/importer.pyc
 ${PYSITELIB}/gourmet/importers/importer.pyo
+${PYSITELIB}/gourmet/importers/interactive_importer.py
+${PYSITELIB}/gourmet/importers/interactive_importer.pyc
+${PYSITELIB}/gourmet/importers/interactive_importer.pyo
 ${PYSITELIB}/gourmet/importers/krecipe_importer.py
 ${PYSITELIB}/gourmet/importers/krecipe_importer.pyc
 ${PYSITELIB}/gourmet/importers/krecipe_importer.pyo
@@ -279,6 +288,7 @@ share/gourmet/app.glade
 share/gourmet/converter.glade
 share/gourmet/databaseChooser.glade
 share/gourmet/default.css
+share/gourmet/generic_importer.glade
 share/gourmet/gourmet_logo.png
 share/gourmet/keyeditor.glade
 share/gourmet/preferenceDialog.glade
