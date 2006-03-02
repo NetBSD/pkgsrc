@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:09:52 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/03/02 21:37:31 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SUN_JDK14_BUILDLINK3_MK:=	${SUN_JDK14_BUILDLINK3_MK}+
@@ -19,7 +19,7 @@ BUILDLINK_DEPMETHOD.sun-jdk14?= build
 
 BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_JAVA_PREFIX.sun-jre14}
 
-BUILDLINK_CPPFLAGS.sun-jdk14=						\
+BUILDLINK_CPPFLAGS.sun-jdk14+=						\
 	-I${BUILDLINK_JAVA_PREFIX.sun-jre14}/include			\
 	-I${BUILDLINK_JAVA_PREFIX.sun-jre14}/include/linux
 
