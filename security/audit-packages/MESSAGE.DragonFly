@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.DragonFly,v 1.1 2005/12/29 23:47:55 agc Exp $
+$NetBSD: MESSAGE.DragonFly,v 1.2 2006/03/02 18:31:49 joerg Exp $
 
 You may wish to have the vulnerabilities file downloaded daily so that
 it remains current.  This may be done by adding an appropriate entry
@@ -13,7 +13,7 @@ this more often than once a day.
 
 In addition, you may wish to run the package audit from the daily
 security script.  This may be accomplished by adding the following
-lines to /etc/period/security/NNN.audit-packages, where NNN is a
+lines to /etc/periodic/security/NNN.audit-packages, where NNN is a
 number specifying the order of execution.
 
 if [ -x ${PREFIX}/sbin/audit-packages ]; then
