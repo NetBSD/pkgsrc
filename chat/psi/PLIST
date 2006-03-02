@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/01/23 17:05:02 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/03/02 23:00:46 wiz Exp $
 bin/psi
 share/doc/psi/README
 share/psi/certs/README
@@ -150,17 +150,19 @@ share/psi/iconsets/system/default/upload.png
 share/psi/iconsets/system/default/url.png
 share/psi/iconsets/system/default/vcard.png
 share/psi/iconsets/system/default/xml.png
-share/psi/psi_cs.qm
-share/psi/psi_de.qm
-share/psi/psi_el.qm
+share/psi/psi_bg.qm
+share/psi/psi_ca.qm
+share/psi/psi_eo.qm
 share/psi/psi_es.qm
-share/psi/psi_et.qm
 share/psi/psi_fr.qm
+share/psi/psi_hu.qm
 share/psi/psi_mk.qm
 share/psi/psi_nl.qm
 share/psi/psi_pl.qm
-share/psi/psi_ru.qm
+share/psi/psi_pt.qm
+share/psi/psi_pt_BR.qm
 share/psi/psi_sk.qm
+share/psi/psi_sl.qm
 share/psi/psi_vi.qm
 share/psi/psi_zh.qm
 share/psi/sound/chat1.wav

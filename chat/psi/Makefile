@@ -1,24 +1,24 @@
-# $NetBSD: Makefile,v 1.34 2006/02/05 23:08:25 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2006/03/02 23:00:46 wiz Exp $
 
 PSI_VERSION=	0.10
 DISTNAME=	psi-${PSI_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=psi/}
 EXTRACT_SUFX=	.tar.bz2
-
-DIST_SUBDIR=	${DISTNAME}
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${LANG_FILES}
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
-
-# XXX uses internal bsd.pkg.mk variable
-FETCH_BEFORE_ARGS+=	${FETCH_OUTPUT_ARGS} "${DISTDIR}/${DIST_SUBDIR}/$$bfile"
 
 MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://psi.affinix.com/
 COMMENT=	PSI Jabber Client
 
 DEPENDS+=	qca-tls>=1.0:../../security/qca-tls
+
+DIST_SUBDIR=	${DISTNAME}-20060302
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${LANG_FILES}
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
+# XXX uses internal bsd.pkg.mk variable
+FETCH_BEFORE_ARGS+=	${FETCH_OUTPUT_ARGS} "${DISTDIR}/${DIST_SUBDIR}/$$bfile"
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES+=	c++
@@ -32,12 +32,12 @@ CONFIGURE_ARGS+=	--qtdir=${QTDIR:Q}
 CONFIGURE_ARGS+=	--with-qca-inc=${BUILDLINK_PREFIX.qca:Q}/include
 CONFIGURE_ARGS+=	--with-qca-lib=${BUILDLINK_PREFIX.qca:Q}/lib
 
-LANG_FILES=	psi_zh.qm psi_nl.qm psi_sk.qm psi_fr.qm psi_cs.qm	\
-		psi_de.qm psi_et.qm psi_pl.qm psi_mk.qm psi_el.qm	\
-		psi_es.qm psi_ru.qm psi_vi.qm
+LANG_FILES=	psi_bg.qm psi_ca.qm psi_eo.qm psi_es.qm psi_fr.qm	\
+		psi_hu.qm psi_mk.qm psi_nl.qm psi_pl.qm psi_pt.qm	\
+		psi_pt_BR.qm psi_sk.qm psi_sl.qm psi_vi.qm psi_zh.qm
 
 .for l in ${LANG_FILES}
-SITES_${l}=	http://psi-im.org/download?page=download&version=${PSI_VERSION}&lang_id=
+SITES_${l}=	http://psi-im.org/files/translation/${PSI_VERSION}/
 .endfor
 
 INSTALLATION_DIRS=	bin share/psi share/doc/psi
