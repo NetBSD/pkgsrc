@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13140 2006/03/02 11:52:03 drochner Exp $
+$NetBSD: CHANGES,v 1.13141 2006/03/02 15:53:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1295,3 +1295,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/p5-pkgsrc-Dewey to 1.0nb1 [tron 2006-03-02]
 	Updated mail/sylpheed to 2.2.1 [drochner 2006-03-02]
 	Updated devel/mercurial to 0.8 [drochner 2006-03-02]
+	Updated graphics/ruby-RMagick to 1.10.0 [taca 2006-03-02]
