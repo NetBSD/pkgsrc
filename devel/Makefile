@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.736 2006/02/25 21:45:41 rpaulo Exp $
+# $NetBSD: Makefile,v 1.737 2006/03/02 19:48:22 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -72,8 +72,8 @@ SUBDIR+=	ccache
 SUBDIR+=	cdecl
 SUBDIR+=	cdk
 SUBDIR+=	cfitsio
-SUBDIR+=	cflow-mode
 SUBDIR+=	cflow
+SUBDIR+=	cflow-mode
 SUBDIR+=	cgdb
 SUBDIR+=	check
 SUBDIR+=	chmlib
@@ -330,6 +330,7 @@ SUBDIR+=	p5-Attribute-Handlers
 SUBDIR+=	p5-BSD-Resource
 SUBDIR+=	p5-Bit-Vector
 SUBDIR+=	p5-Cache-Cache
+SUBDIR+=	p5-Cache-Memcached
 SUBDIR+=	p5-Cache-Simple-TimedExpiry
 SUBDIR+=	p5-Carp-Assert
 SUBDIR+=	p5-Carp-Assert-More
