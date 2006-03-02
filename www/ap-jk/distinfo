@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2006/01/31 16:26:22 abs Exp $
+$NetBSD: distinfo,v 1.6 2006/03/02 16:55:21 erh Exp $
 
 SHA1 (jakarta-tomcat-connectors-1.2.15-src.tar.gz) = c9a67de4e03d6d7780cf0b14284f62d30bb78156
 RMD160 (jakarta-tomcat-connectors-1.2.15-src.tar.gz) = e5bce1ad604e9461ca4684a2c7ffffe1f2a7b667
@@ -6,3 +6,4 @@ Size (jakarta-tomcat-connectors-1.2.15-src.tar.gz) = 722463 bytes
 SHA1 (patch-aa) = 27774432ecc82209e47beca24a54ef5139d4e2eb
 SHA1 (patch-ab) = 57e4ead1a73d9a47fb634d5c7fb18d49d0393a08
 SHA1 (patch-ac) = 14fdec1c921f369ee51a5d73a3bee3ec9056f07a
+SHA1 (patch-ad) = 2c2548e0c5b5909c7fab369c97f747c4e4c47df2
