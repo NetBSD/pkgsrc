@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2005/04/13 17:14:01 salo Exp $
+$NetBSD: patch-aa,v 1.6 2006/03/02 20:49:39 wiz Exp $
 
 --- Makefile.in.orig	2004-10-12 14:41:49.000000000 +0200
 +++ Makefile.in	2005-04-13 19:10:29.000000000 +0200
@@ -9,7 +9,7 @@ $NetBSD: patch-aa,v 1.5 2005/04/13 17:14:01 salo Exp $
 -	@CC@ -O2 @DEFS@ -Wall server.o sql.o sockets.o cnf.o greylist.o @LIBS@ @SQL_LIBS@ -o gld
 -	strip gld
 +	@CC@ -O2 @DEFS@ -Wall server.o sql.o sockets.o cnf.o greylist.o \
-+	    $(LDFLAGS) -lmysqlclient -o gld
++	    $(LDFLAGS) @SQL_LIBS@ -o gld
  
  sockets.o: sockets.c sockets.h
  	@CC@ -O2 @DEFS@ -Wall -c sockets.c
