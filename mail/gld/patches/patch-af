@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2005/04/13 16:36:07 salo Exp $
+$NetBSD: patch-af,v 1.2 2006/03/02 21:03:39 wiz Exp $
 
---- sockets.h.orig	2005-04-13 12:13:23.000000000 -0400
-+++ sockets.h	2005-04-13 12:06:34.000000000 -0400
-@@ -118,10 +118,10 @@
+--- sockets.h.orig	2004-10-12 14:07:27.000000000 +0200
++++ sockets.h
+@@ -118,10 +118,10 @@ int CloseSocket(int sock);
  
  /* DNS functions */
  
