@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/02/11 10:58:41 rillig Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/03/02 23:57:14 joerg Exp $
 ${X11ROOT_PREFIX}/bin/X
 ${X11ROOT_PREFIX}/bin/Xnest
 ${X11ROOT_PREFIX}/bin/Xprt
@@ -1230,6 +1230,7 @@ ${X11ROOT_PREFIX}/bin/kbd_mode
 ${X11ROOT_PREFIX}/lib/modules/extensions/libdrm.so
 ${X11ROOT_PREFIX}/lib/modules/extensions/libdri.so
 ${X11ROOT_PREFIX}/${MAN_DIR}/kbd_mode.${MAN_SUFFIX}
+${X11ROOT_PREFIX}/${MAN_DIR}/Xdmx.${MAN_SUFFIX}
 @dirrm ${X11ROOT_PREFIX}/lib/modules/freebsd
 @dirrm ${X11ROOT_PREFIX}/etc/rc.d
 @comment end DragonFly
