@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2006/02/20 12:08:15 adam Exp $
+$NetBSD: patch-ad,v 1.2 2006/03/02 06:45:46 minskim Exp $
 
---- src/corelib/global/qglobal.h.orig	2005-12-16 12:51:59.000000000 +0100
+--- src/corelib/global/qglobal.h.orig	2006-02-16 02:51:07.000000000 -0800
 +++ src/corelib/global/qglobal.h
 @@ -55,6 +55,7 @@
       NETBSD   - NetBSD
@@ -20,3 +20,27 @@ $NetBSD: patch-ad,v 1.1.1.1 2006/02/20 12:08:15 adam Exp $
  #elif defined(__OpenBSD__)
  #  define Q_OS_OPENBSD
  #  define Q_OS_BSD4
+@@ -145,11 +149,6 @@
+ #  define Q_OS_WIN
+ #endif
+ 
+-#if defined(Q_OS_DARWIN)
+-#  define Q_OS_MAC /* Q_OS_MAC is mostly for compatiblity, but also more clear */
+-#  define Q_OS_MACX /* Q_OS_MACX is only for compatiblity.*/
+-#endif
+-
+ #if defined(Q_OS_MSDOS) || defined(Q_OS_OS2) || defined(Q_OS_WIN)
+ #  undef Q_OS_UNIX
+ #elif !defined(Q_OS_UNIX)
+@@ -532,10 +531,7 @@
+ #  define Q_WS_PM
+ #  error "Qt does not work with OS/2 Presentation Manager or Workplace Shell"
+ #elif defined(Q_OS_UNIX)
+-#  if defined(Q_OS_DARWIN) && !defined(__USE_WS_X11__)
+-#    define Q_WS_MAC
+-#    define Q_WS_MACX
+-#  elif !defined(Q_WS_QWS)
++#  if !defined(Q_WS_QWS)
+ #    define Q_WS_X11
+ #  endif
+ #endif
