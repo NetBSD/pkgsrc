@@ -1,11 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2004/05/04 06:18:14 mrg Exp $
+$NetBSD: patch-aa,v 1.5 2006/03/02 21:28:23 joerg Exp $
 
-ugh. NetBSD-current (post 2.0) has a new fgetstr() that conflicts...
-
-
---- uip/mhbuildsbr.c.orig	1999-09-12 23:50:12.000000000 +1000
-+++ uip/mhbuildsbr.c	2004-05-04 12:45:13.000000000 +1000
-@@ -174,7 +174,7 @@
+--- uip/mhbuildsbr.c.orig	1999-09-12 13:50:12.000000000 +0000
++++ uip/mhbuildsbr.c
+@@ -40,8 +40,6 @@
+ #endif
+ 
+ 
+-extern int errno;
+-
+ extern int debugsw;
+ extern int verbosw;
+ 
+@@ -174,7 +172,7 @@ static int InitFTP (CT);
  static int openFTP (CT, char **);
  static int InitMail (CT);
  static int openMail (CT, char **);
@@ -14,7 +20,7 @@ ugh. NetBSD-current (post 2.0) has a new fgetstr() that conflicts...
  static int user_content (FILE *, char *, char *, CT *);
  static void set_id (CT, int);
  static int compose_content (CT);
-@@ -374,7 +374,7 @@
+@@ -374,7 +372,7 @@ finish_field:
       * read and parse the composition file
       * and the directives it contains.
       */
@@ -23,7 +29,7 @@ ugh. NetBSD-current (post 2.0) has a new fgetstr() that conflicts...
  	struct part *part;
  	CT p;
  
-@@ -2829,7 +2829,7 @@
+@@ -2829,7 +2827,7 @@ openMail (CT ct, char **file)
  
  
  static char *
@@ -32,7 +38,7 @@ ugh. NetBSD-current (post 2.0) has a new fgetstr() that conflicts...
  {
      char *cp, *ep;
  
-@@ -2931,7 +2931,7 @@
+@@ -2931,7 +2929,7 @@ user_content (FILE *in, char *file, char
  
  again_descr:
  		ct->c_descr = add (buffer + i + 1, ct->c_descr);
@@ -41,7 +47,7 @@ ugh. NetBSD-current (post 2.0) has a new fgetstr() that conflicts...
  		    adios (NULL, "end-of-file after %s: field in plaintext", DESCR_FIELD);
  		switch (buffer[0]) {
  		case ' ':
-@@ -2954,7 +2954,7 @@
+@@ -2954,7 +2952,7 @@ again_descr:
  rock_and_roll:
  	    headers = -1;
  	    pos = ftell (in);
@@ -50,7 +56,7 @@ ugh. NetBSD-current (post 2.0) has a new fgetstr() that conflicts...
  		break;
  	    if (buffer[0] == '#') {
  		char *bp;
-@@ -3297,7 +3297,7 @@
+@@ -3297,7 +3295,7 @@ use_forw:
  	ct->c_ctparams = (void *) m;
  
  	pp = &m->mp_parts;
