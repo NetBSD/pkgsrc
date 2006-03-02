@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/12 15:24:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/02 20:48:56 wiz Exp $
 #
 
 DISTNAME=		gld-1.5.2
@@ -27,12 +27,12 @@ SUBST_CLASSES+=		gld users
 SUBST_STAGE.gld=	post-patch
 SUBST_FILES.gld=	gld.h
 SUBST_SED.gld=		-e "s,/etc,${PKG_SYSCONFDIR},"
-SUBST_MESSAGE.gld=	"Fixing harcoded paths."
+SUBST_MESSAGE.gld=	Fixing harcoded paths.
 SUBST_STAGE.users=	post-patch
 SUBST_FILES.users=	gld.conf
 SUBST_SED.users+=	-e "s|\#USER=nobody|USER=${GLD_USER}|"
 SUBST_SED.users+=	-e "s|\#GROUP=nobody|GROUP=${GLD_GROUP}|"
-SUBST_MESSAGE.users=	"Adjusting user/group in configuration file."
+SUBST_MESSAGE.users=	Adjusting user/group in configuration file.
 
 .include "options.mk"
 .include "../../mk/bsd.pkg.mk"
