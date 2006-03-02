@@ -1,29 +1,23 @@
-# $NetBSD: Makefile,v 1.6 2006/01/03 20:48:01 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/02 19:09:39 drochner Exp $
 #
 
-DISTNAME=		mpfr-2.0.3
-PKGREVISION=	1
+DISTNAME=		mpfr-2.2.0
 CATEGORIES=		math
 MASTER_SITES=		http://www.mpfr.org/mpfr-current/
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${GMP}${EXTRACT_SUFX}
+
+DIST_SUBDIR=		mpfr-2.2.0-060221
+PATCH_SITES=		http://www.mpfr.org/mpfr-current/
+PATCHFILES=		patches
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.mpfr.org/
 COMMENT=		GMP-based library for multiple-precision floating-point computations
 
-USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-gmp-include=${GMP_DIR:Q}
-CONFIGURE_DIRS=		${GMP_DIR} ${WRKSRC}
-CONFIG_GUESS_OVERRIDE=	${GMP_DIR}/config.guess ${WRKSRC}/config.guess
-CONFIG_SUB_OVERRIDE=	${GMP_DIR}/config.sub ${WRKSRC}/config.sub
-BUILD_DIRS=		${WRKSRC}
-
+USE_LIBTOOL=		yes
+TEST_TARGET=		check
 INFO_FILES=		mpfr.info
-
-GMP_VERSION?=		4.1.2
-GMP=			gmp-${GMP_VERSION}
-GMP_DIR=		${WRKDIR}/${GMP}
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
