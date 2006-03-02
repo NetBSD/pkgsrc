@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.540 2006/03/02 10:37:43 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.541 2006/03/02 13:08:37 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4327,10 +4327,16 @@ sub checkfile_patch($) {
 	my $check_hunk_end = sub($$$) {
 		my ($deldelta, $adddelta, $newstate) = @_;
 
-		if ($deldelta < 0 && $dellines == 0) {
+		if ($deldelta > 0 && $dellines == 0) {
 			$redostate = $newstate;
-		} elsif ($adddelta < 0 && $addlines == 0) {
+			if (defined($addlines) && $addlines > 0) {
+				$line->log_error("Expected ${addlines} more lines to be added.");
+			}
+		} elsif ($adddelta > 0 && $addlines == 0) {
 			$redostate = $newstate;
+			if (defined($dellines) && $dellines > 0) {
+				$line->log_error("Expected ${dellines} more lines to be deleted.");
+			}
 		} else {
 			if ($deldelta != 0) {
 				$dellines -= $deldelta;
