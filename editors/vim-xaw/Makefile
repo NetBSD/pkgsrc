@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/02/28 11:11:13 martti Exp $
+# $NetBSD: Makefile,v 1.43 2006/03/02 10:41:41 martti Exp $
 
 PKGNAME=		vim-xaw-${VIM_VERSION}.${VIM_PATCHLEVEL}
 #PKGREVISION=		1
@@ -29,14 +29,14 @@ MAKE_ENV+=		XAW_LIB="Xaw"
 LIBS+=			-lXaw
 
 post-install:
-	for f in gvim.1 gview.1 rgvim.1 rgview.1; do			\
-		${RM} -f ${PREFIX}/man/man1/$$f;			\
-		${LN} -s vim.1 ${PREFIX}/man/man1/$$f;			\
-	done
-	for f in gvim gview rgvim rgview rvim rview; do			\
-		${RM} -f ${PREFIX}/bin/$$f;				\
-		${LN} -s vim ${PREFIX}/bin/$$f;				\
-	done
+.for f in gvim.1 gview.1 rgvim.1 rgview.1
+	${RM} -f ${PREFIX:Q}/man/man1/${f:Q}
+	${LN} -s vim.1 ${PREFIX:Q}/man/man1/${f:Q}
+.endfor
+.for f in gvim gview rgvim rgview rvim rview
+	${RM} -f ${PREFIX:Q}/bin/${f:Q}
+	${LN} -s vim ${PREFIX:Q}/bin/${f:Q}
+.endfor
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
