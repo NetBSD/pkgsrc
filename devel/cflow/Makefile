@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/25 21:35:55 rpaulo Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/02 20:33:49 rpaulo Exp $
 
 DISTNAME=	cflow-1.0
 CATEGORIES=	devel
@@ -16,5 +16,7 @@ SUBST_MESSAGE.emacs=	Removing cflow Emacs mode
 SUBST_STAGE.emacs=	pre-configure
 SUBST_FILES.emacs=	Makefile.in
 SUBST_SED.emacs=	-e 's| elisp||g'
+
+INFO_FILES=		cflow.info
 
 .include "../../mk/bsd.pkg.mk"
