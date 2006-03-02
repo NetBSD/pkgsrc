@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/02/15 18:35:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/03/02 21:05:32 drochner Exp $
 bin/liferea
 bin/liferea-bin
 lib/liferea/liblihtmlg.la
@@ -11,6 +11,7 @@ share/liferea/css/liferea2.css
 share/liferea/doc/html/about_en.html
 share/liferea/doc/html/enclosures_en.html
 share/liferea/doc/html/faq_en.html
+share/liferea/doc/html/faq_ja.html
 share/liferea/doc/html/folders_en.html
 share/liferea/doc/html/headlines_en.html
 share/liferea/doc/html/help_feed_available.png
@@ -35,15 +36,19 @@ share/liferea/doc/html/help_vfolder_1.0.0.png
 share/liferea/doc/html/preferences_en.html
 share/liferea/doc/html/reference.css
 share/liferea/doc/html/reference_en.html
+share/liferea/doc/html/reference_ja.html
+share/liferea/doc/html/reference_nl.html
 share/liferea/doc/html/searching_en.html
 share/liferea/doc/html/subscriptions_en.html
 share/liferea/doc/html/topics_en.html
+share/liferea/doc/html/topics_ja.html
 share/liferea/doc/html/updating_en.html
 share/liferea/dtd/html.ent
 share/liferea/opml/feedlist.opml
 share/liferea/opml/feedlist_de.opml
 share/liferea/opml/feedlist_es.opml
 share/liferea/opml/feedlist_fr.opml
+share/liferea/opml/feedlist_nl.opml
 share/liferea/opml/feedlist_sk.opml
 share/liferea/pixmaps/arrow.png
 share/liferea/pixmaps/available.png
@@ -72,6 +77,7 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/liferea.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/liferea.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/liferea.mo
