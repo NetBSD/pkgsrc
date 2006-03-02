@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:09:58 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/02 07:41:44 martti Exp $
 
 DISTNAME=	squirrelmail-decode-1.0
 PKGREVISION=	1
@@ -15,8 +15,8 @@ NO_BUILD=	yes
 DEPENDS+=	php-iconv>=4.3.3:../../converters/php-iconv
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/eastasia/*.php ${WRKSRC}/x-mac/*.php \
-		${PREFIX}/share/squirrelmail/functions/decode
+	${INSTALL_DATA} ${WRKSRC:Q}/eastasia/*.php ${WRKSRC:Q}/x-mac/*.php \
+		${PREFIX:Q}/share/squirrelmail/functions/decode
 
 .include "../../mail/squirrelmail/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
