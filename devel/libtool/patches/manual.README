@@ -1,4 +1,4 @@
-$NetBSD: manual.README,v 1.8 2006/01/30 22:19:56 tv Exp $
+$NetBSD: manual.README,v 1.9 2006/03/02 18:50:17 tv Exp $
 
 ************************************************************************
 **** WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING ***
@@ -19,8 +19,10 @@ used to generate libtool's own "configure" scripts.
 
 These patches are not part of the automatic patches because libtool also
 installs these .m4 files at runtime, and we want the "off-the-shelf"
-versions of those files used instead.  So, when it comes time to update
-libtool, the following process should be used:
+versions of those files used instead -- we do NOT want the modified
+libtool.m4 copied into third party packages for reproducability and GPL
+reasons.  So, when it comes time to update libtool, the following process
+must be used:
 
 =====
 
