@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:10:44 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/02 08:40:20 minskim Exp $
 
 DISTNAME=	libfwbuilder-2.0.10
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fwbuilder/}
 
@@ -21,7 +21,7 @@ post-install:
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../net/net-snmp/buildlink3.mk"
-.include "../../textproc/libxml/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
