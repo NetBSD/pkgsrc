@@ -1,10 +1,26 @@
-$NetBSD: patch-bi,v 1.1 2006/01/18 23:24:12 rillig Exp $
+$NetBSD: patch-bi,v 1.2 2006/03/02 19:56:24 wiz Exp $
 
 SunPro says: void functions cannot return a value.
 
---- src/poly-quals.c.orig	2003-12-10 19:31:03.000000000 +0100
-+++ src/poly-quals.c	2006-01-16 14:45:40.906477400 +0100
-@@ -2833,13 +2833,13 @@ static void _traverse_error_path_edges(q
+--- src/poly-quals.c.orig	2003-12-10 18:31:03.000000000 +0000
++++ src/poly-quals.c
+@@ -1356,6 +1356,7 @@ static bool _leq_qual (qual q1, qual q2,
+   else
+     {
+       assert (0);
++      return FALSE;
+     }
+ }
+ 
+@@ -1581,6 +1582,7 @@ static int _print_qual(printf_func pf, q
+       return 0;
+     default:
+       assert (0);
++      return 0;
+     }
+ 
+ }
+@@ -2833,13 +2835,13 @@ static void _traverse_error_path_edges(q
  void traverse_error_path_edges(qual q, bool expand_summaries, bool nonerrors,
  			       edge_traverse_fn f, void *arg)
  {
@@ -20,7 +36,7 @@ SunPro says: void functions cannot return a value.
  }
  
  /**************************************************************************
-@@ -3016,7 +3016,8 @@ static void _dn_dfs (FILE* f, region scr
+@@ -3016,7 +3018,8 @@ static void _dn_dfs (FILE* f, region scr
    if (root->link)
      {
        add_graph_edge (f, root, ecr_qual (root), "+", TRUE);
