@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2006/02/17 07:46:50 martti Exp $
+# $NetBSD: Makefile,v 1.32 2006/03/02 10:46:20 martti Exp $
 
-DISTNAME=	proftpd-1.3.0rc3
-PKGREVISION=	2
+DISTNAME=	proftpd-1.3.0rc4
+#PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.proftpd.org/distrib/source/ \
 		ftp://ftp.servus.at/ProFTPD/distrib/source/ \
@@ -40,10 +40,10 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/proftpd
 .for i in NEWS README README.IPv6 README.LDAP README.PAM README.capabilities \
           README.classes README.controls README.facl README.modules
-	${INSTALL_DATA} ${WRKSRC:Q}/${i} ${PREFIX:Q}/share/doc/proftpd
+	${INSTALL_DATA} ${WRKSRC:Q}/${i:Q} ${PREFIX:Q}/share/doc/proftpd
 .endfor
 .for i in Configuration.html faq.html license.txt
-	${INSTALL_DATA} ${WRKSRC:Q}/doc/${i} ${PREFIX:Q}/share/doc/proftpd
+	${INSTALL_DATA} ${WRKSRC:Q}/doc/${i:Q} ${PREFIX:Q}/share/doc/proftpd
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/examples/proftpd
 	${INSTALL_DATA} ${WRKSRC:Q}/sample-configurations/*.conf \
