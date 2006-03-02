@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/02/16 18:03:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/03/02 00:48:31 schmonz Exp $
 bin/lessonfile_editor
 bin/solfege
 man/man1/lessonfile_editor.1
@@ -310,6 +310,9 @@ share/solfege/online-docs/C/translating-solfege.html
 share/solfege/online-docs/C/twelvetone-help.html
 share/solfege/online-docs/C/ui.html
 share/solfege/online-docs/C/welcome.html
+share/solfege/online-docs/es/theory-intervals.html
+share/solfege/online-docs/es/toc.html
+share/solfege/online-docs/es/welcome.html
 share/solfege/online-docs/es_MX/toc.html
 share/solfege/online-docs/es_MX/welcome.html
 share/solfege/online-docs/fr/bug-reporting.html
@@ -499,6 +502,7 @@ share/solfege/ui.xml
 @dirrm share/solfege/online-docs/midi
 @dirrm share/solfege/online-docs/fr
 @dirrm share/solfege/online-docs/es_MX
+@dirrm share/solfege/online-docs/es
 @dirrm share/solfege/online-docs/C
 @dirrm share/solfege/online-docs
 @dirrm share/solfege/mpd
@@ -511,4 +515,6 @@ share/solfege/ui.xml
 @dirrm share/solfege/feta
 @dirrm share/solfege/example-lesson-files
 @dirrm share/solfege
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/examples/solfege
+@comment in xdg-dirs: @dirrm share/applications
