@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2006/03/02 20:49:39 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2006/03/02 21:03:39 wiz Exp $
 
 --- Makefile.in.orig	2004-10-12 14:41:49.000000000 +0200
-+++ Makefile.in	2005-04-13 19:10:29.000000000 +0200
++++ Makefile.in
 @@ -1,8 +1,8 @@
  all: gld
  
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.6 2006/03/02 20:49:39 wiz Exp $
  
  sockets.o: sockets.c sockets.h
  	@CC@ -O2 @DEFS@ -Wall -c sockets.c
-@@ -23,11 +23,15 @@
+@@ -23,11 +23,15 @@ clean:
  	rm -f  gld *.o
  
  install: gld gld.conf
