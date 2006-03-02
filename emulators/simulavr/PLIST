@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/30 19:49:08 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/03/02 19:51:34 wiz Exp $
 bin/simulavr
 bin/simulavr-disp
 bin/simulavr-vcd
@@ -17,9 +17,4 @@ share/doc/${PKGNAME}/README
 share/doc/${PKGNAME}/README.gdb
 share/doc/${PKGNAME}/README.opcodes
 share/doc/${PKGNAME}/TODO
-share/doc/${PKGNAME}/simulavr.ps
-@exec ${MKDIR} %D/share/doc/${PKGNAME}/internals_html
-@dirrm share/doc/${PKGNAME}/internals_html
-@exec ${MKDIR} %D/share/doc/${PKGNAME}/html
-@dirrm share/doc/${PKGNAME}/html
 @dirrm share/doc/${PKGNAME}
