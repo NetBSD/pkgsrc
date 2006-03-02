@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2005/12/17 05:20:21 jlam Exp $
+# $NetBSD: Makefile.common,v 1.12.2.1 2006/03/02 00:30:16 seb Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -19,7 +19,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER?=	jlam@pkgsrc.org
 HOMEPAGE?=	http://www.postgresql.org/
 
-CONFLICTS+=	postgresql-[0-9]* postgresql73-* postgresql74-*
+CONFLICTS+=	postgresql-[0-9]* postgresql73-* postgresql74-* postgresql81-*
 
 DISTINFO_FILE?=		${.CURDIR}/../postgresql80/distinfo
 COMMON_FILESDIR?=	${.CURDIR}/../postgresql80/files
@@ -30,9 +30,9 @@ PATCHDIR?=		${.CURDIR}/../postgresql80/patches
 # DIST_VERS		version number on the postgresql distfile
 # BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
 #
-# Note: Do not forget jdbc-postgresql when updating version
+# Note: Do not forget jdbc-postgresql80 when updating version
 #
-DIST_VERS?=		8.0.4
+DIST_VERS?=		8.0.7
 BASE_VERS?=		${DIST_VERS}
 
 BUILDLINK_DEPENDS.postgresql80-client+=	postgresql80-client>=${BASE_VERS}
@@ -135,6 +135,23 @@ post-extract:
 			 >${WRKSRC}/src/backend/port/dynloader/$$template.c
 	fi
 .endif
+	if ${TEST} -d ${WRKSRC}/src/template; then			\
+		${TOUCH} ${WRKSRC}/src/template/dragonfly;		\
+	fi
+	if ${TEST} -d ${WRKSRC}/src/backend/port/dynloader; then	\
+		${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.c	\
+			${WRKSRC}/src/backend/port/dynloader/dragonfly.c; \
+		${CP} ${WRKSRC}/src/backend/port/dynloader/freebsd.h	\
+			${WRKSRC}/src/backend/port/dynloader/dragonfly.h; \
+	fi
+	if ${TEST} -d ${WRKSRC}/src/include/port; then			\
+		${CP} ${WRKSRC}/src/include/port/freebsd.h		\
+			${WRKSRC}/src/include/port/dragonfly.h;		\
+	fi
+	if ${TEST} -d ${WRKSRC}/src/makefiles; then			\
+		${CP} ${WRKSRC}/src/makefiles/Makefile.freebsd		\
+			${WRKSRC}/src/makefiles/Makefile.dragonfly;	\
+	fi
 
 # PGSQL_BLCKSZ is the size in bytes of a PostgreSQL disk page or block.
 # This also limits the size of a tuple.  The valid values are powers
