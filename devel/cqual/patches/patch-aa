@@ -1,9 +1,18 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/01/11 03:12:38 rillig Exp $
+$NetBSD: patch-aa,v 1.2 2006/03/02 19:56:24 wiz Exp $
 
 Removed C++-style comments.
 
---- src/qtype.c.orig	2003-10-06 23:28:57.000000000 +0200
-+++ src/qtype.c	2006-01-11 03:26:12.000000000 +0100
+--- src/qtype.c.orig	2003-10-06 21:28:57.000000000 +0000
++++ src/qtype.c
+@@ -774,7 +774,7 @@ static void mktoplev_struct_cons_qtype(l
+   }
+   else if (exists_fieldflow_qual && fqt && (qtype_struct(qt) || qtype_union(qt))) {
+     qual outer = qual_qtype(qt);
+-    qual inner;
++    qual inner = outer;
+ 
+     if (qtype_pointer(fqt))
+       inner = qual_qtype(points_to_qtype(fqt));
 @@ -1156,7 +1156,7 @@ qtype get_fdecl_qtype(const char *tag_na
    type lifted_t;
    struct ctq_info ctqi;
