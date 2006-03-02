@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:11:45 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/02 22:58:56 hubertf Exp $
 
-DISTNAME=	xdaemon-2.0
-PKGREVISION=	4
+DISTNAME=	xdaemon-2.1
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
-DISTFILES=	${PIX} Daemon.README
+DISTFILES=	${IMAGES:=.png} Daemon.README
 
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/
@@ -14,12 +13,12 @@ DEPENDS+=	xteddy-2.*:../../x11/xteddy2
 
 CONFLICTS+=	xdaemon-1.*
 
-#WRKSRC=	${WRKDIR}
-DIST_SUBDIR=	xdaemon
-PIX=		xdaemon.png xdaemon2.png
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes
+DIST_SUBDIR=	xdaemon
+
+IMAGES=		xdaemon xdaemon2 xnetbsd-flag xnetbsd-flag2
 
 INSTALLATION_DIRS=	bin share/doc share/xteddy
 
@@ -28,11 +27,11 @@ do-extract:
 	@${ECHO} Bringing daemonic powers to you!
 
 do-install:
-.for pic in ${PIX}
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${pic} ${PREFIX}/share/xteddy/${pic}
+.for img in ${IMAGES}
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${img}.png ${PREFIX}/share/xteddy/${img}.png
+	${RM} -f ${PREFIX}/bin/${img}
+	${LN} -s xteddy ${PREFIX}/bin/${img}
 .endfor
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/Daemon.README ${PREFIX}/share/doc/xdaemon.README
-	${LN} -s ${PREFIX}/bin/xteddy	${PREFIX}/bin/xdaemon
-	${LN} -s ${PREFIX}/bin/xteddy	${PREFIX}/bin/xdaemon2
 
 .include "../../mk/bsd.pkg.mk"
