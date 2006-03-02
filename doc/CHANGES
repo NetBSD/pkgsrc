@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13141 2006/03/02 15:53:52 taca Exp $
+$NetBSD: CHANGES,v 1.13142 2006/03/02 16:03:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1296,3 +1296,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/sylpheed to 2.2.1 [drochner 2006-03-02]
 	Updated devel/mercurial to 0.8 [drochner 2006-03-02]
 	Updated graphics/ruby-RMagick to 1.10.0 [taca 2006-03-02]
+	Updated textproc/namazu2 to 2.0.15 [taca 2006-03-02]
