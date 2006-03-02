@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:11:45 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/02 22:58:49 hubertf Exp $
 
-DISTNAME=	xdaemon-1.0
-PKGREVISION=	2
+DISTNAME=	xdaemon-1.1
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
-DISTFILES=	${PIX} Daemon.README
+DISTFILES=	Daemon.README \
+		${IMAGES:=_bw.xbm} \
+		${IMAGES:=_color.xpm} \
+		${IMAGES:=_icon.xbm} \
+		${IMAGES:=_mask.xbm} \
 
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/
@@ -15,14 +18,12 @@ DEPENDS+=	xteddy-1.*:../../x11/xteddy
 CONFLICTS+=	xdaemon-2.*
 
 WRKSRC=		${WRKDIR}
-DIST_SUBDIR=	xdaemon
-PIX=	xdaemon_bw.xbm		xdaemon2_bw.xbm \
-	xdaemon_color.xpm	xdaemon2_color.xpm \
-	xdaemon_icon.xbm	xdaemon2_icon.xbm \
-	xdaemon_mask.xbm	xdaemon2_mask.xbm
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 NO_MTREE=	yes
+DIST_SUBDIR=	xdaemon
+
+IMAGES=		xdaemon xdaemon2 xnetbsd-flag xnetbsd-flag2
 
 INSTALLATION_DIRS=	bin share/doc share/xteddy/pixmaps
 
@@ -31,11 +32,13 @@ do-extract:
 	@${ECHO} Bringing daemonic powers to you!
 
 do-install:
-.for pic in ${PIX}
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${pic} ${PREFIX}/share/xteddy/pixmaps/${pic}
-.endfor
+.for img in ${IMAGES}
+.for sufx in _bw.xbm _color.xpm _icon.xbm _mask.xbm
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${img}${sufx} ${PREFIX}/share/xteddy/pixmaps/${img}${sufx}
+.endfor # sufx
+	${RM} -f ${PREFIX}/bin/${img}
+	${LN} -s xteddy ${PREFIX}/bin/${img}
+.endfor # img
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/Daemon.README ${PREFIX}/share/doc/xdaemon.README
-	${LN} -s ${PREFIX}/bin/xteddy	${PREFIX}/bin/xdaemon
-	${LN} -s ${PREFIX}/bin/xteddy	${PREFIX}/bin/xdaemon2
 
 .include "../../mk/bsd.pkg.mk"
