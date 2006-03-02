@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/10 16:31:34 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/03/02 19:25:25 drochner Exp $
 bin/cdv
 bin/cdv-agent
 bin/cdvpasswd
@@ -76,6 +76,9 @@ ${PYSITELIB}/Codeville/old/merge.pyo
 ${PYSITELIB}/Codeville/passwd.py
 ${PYSITELIB}/Codeville/passwd.pyc
 ${PYSITELIB}/Codeville/passwd.pyo
+${PYSITELIB}/Codeville/path.py
+${PYSITELIB}/Codeville/path.pyc
+${PYSITELIB}/Codeville/path.pyo
 ${PYSITELIB}/Codeville/selectpoll.py
 ${PYSITELIB}/Codeville/selectpoll.pyc
 ${PYSITELIB}/Codeville/selectpoll.pyo
