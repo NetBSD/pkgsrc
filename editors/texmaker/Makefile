@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/27 14:46:18 ghen Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/02 15:09:49 ghen Exp $
 
 DISTNAME=	texmaker-1.3
 CATEGORIES=	editors
@@ -13,6 +13,7 @@ USE_LIBTOOL=	yes
 
 do-configure:
 	cd ${WRKSRC} && \
+	${SETENV} ${CONFIGURE_ENV} \
 	${QTDIR:Q}/bin/qmake -unix PREFIX=${PREFIX:Q} texmaker.pro
 
 .include "../../x11/qt4-libs/buildlink3.mk"
