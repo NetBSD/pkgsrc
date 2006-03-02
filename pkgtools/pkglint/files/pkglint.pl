@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.541 2006/03/02 13:08:37 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.542 2006/03/02 13:23:28 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4536,6 +4536,34 @@ sub checkfile_patch($) {
 			$line->log_error("Parse error: state=${state}");
 			$state = PST_TEXT;
 			$lineno++;
+		}
+	}
+
+	while ($state != PST_TEXT) {
+		$opt_debug and log_debug($fname, "EOF", "[${state} ${patched_files}/".($hunks||0)."/-".($dellines||0)."+".($addlines||0)."]");
+
+		my $found = false;
+		foreach my $t (@{$transitions}) {
+			if ($state == $t->[0] && !defined($t->[1])) {
+				my $newstate;
+
+				$m = undef;
+				$redostate = undef;
+				$nextstate = $t->[2];
+				$t->[3]->();
+				$newstate = (defined($redostate)) ? $redostate : $nextstate;
+				if ($newstate == $state) {
+					log_fatal($fname, "EOF", "Internal error in the patch transition table.");
+				}
+				$state = $newstate;
+				$found = true;
+				last;
+			}
+		}
+
+		if (!$found) {
+			log_error($fname, "EOF", "Parse error: state=${state}");
+			$state = PST_TEXT;
 		}
 	}
 
