@@ -40,6 +40,34 @@
 extern "C" {
 #endif
 
+/*
+ * Define the following sha2_* types to types of the correct length on
+ * the native archtecture.   Most BSD systems and Linux define u_intXX_t
+ * types.  Machines with very recent ANSI C headers, can use the
+ * uintXX_t definintions from inttypes.h by defining USE_INTTYPES_H
+ * during compile or in the sha.h header file.
+ *
+ * Machines that support neither u_intXX_t nor inttypes.h's uintXX_t
+ * will need to define these three typedefs below (and the appropriate
+ * ones in sha.h too) by hand according to their system architecture.
+ *
+ * Thank you, Jun-ichiro itojun Hagino, for suggesting using u_intXX_t
+ * types and pointing out recent ANSI C support for uintXX_t in inttypes.h.
+ */
+#ifdef USE_INTTYPES_H
+
+typedef uint8_t  sha2_byte;    /* Exactly 1 byte */
+typedef uint32_t sha2_word32;  /* Exactly 4 bytes */
+typedef uint64_t sha2_word64;  /* Exactly 8 bytes */
+
+#else /* USE_INTTYPES_H */
+
+typedef u_int8_t  sha2_byte;   /* Exactly 1 byte */
+typedef u_int32_t sha2_word32; /* Exactly 4 bytes */
+typedef u_int64_t sha2_word64; /* Exactly 8 bytes */
+
+#endif /* USE_INTTYPES_H */
+
 
 /*** SHA-256/384/512 Various Length Definitions ***********************/
 #define SHA256_BLOCK_LENGTH		64

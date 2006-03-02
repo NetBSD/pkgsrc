@@ -1,4 +1,4 @@
-/* $NetBSD: sha2hl.c,v 1.3 2002/12/21 04:06:15 schmonz Exp $	 */
+/* $NetBSD: sha2hl.c,v 1.4 2006/03/02 20:34:17 agc Exp $	 */
 
 /*
  * sha2hl.c
@@ -47,7 +47,7 @@
 #include <digest-types.h>
 
 #ifndef lint
-__RCSID("$NetBSD: sha2hl.c,v 1.3 2002/12/21 04:06:15 schmonz Exp $");
+__RCSID("$NetBSD: sha2hl.c,v 1.4 2006/03/02 20:34:17 agc Exp $");
 #endif				/* not lint */
 
 
@@ -132,7 +132,7 @@ SHA256_End(SHA256_CTX *ctx, u_char *buffer)
 }
 
 char           *
-SHA256_Data(const u_char * data, size_t len, u_char *digest)
+SHA256_Data(const sha2_byte * data, size_t len, u_char *digest)
 {
 	SHA256_CTX      ctx;
 
@@ -192,7 +192,7 @@ SHA384_End(SHA384_CTX * ctx, char buffer[])
 }
 
 char           *
-SHA384_Data(const u_char * data, size_t len, char digest[SHA384_DIGEST_STRING_LENGTH])
+SHA384_Data(const sha2_byte * data, size_t len, char digest[SHA384_DIGEST_STRING_LENGTH])
 {
 	SHA384_CTX      ctx;
 
@@ -252,7 +252,7 @@ SHA512_End(SHA512_CTX * ctx, char buffer[])
 }
 
 char           *
-SHA512_Data(const u_char * data, size_t len, char *digest)
+SHA512_Data(const sha2_byte * data, size_t len, char *digest)
 {
 	SHA512_CTX      ctx;
 
