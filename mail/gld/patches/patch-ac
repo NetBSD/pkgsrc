@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2005/04/13 16:36:07 salo Exp $
+$NetBSD: patch-ac,v 1.2 2006/03/02 21:03:39 wiz Exp $
 
---- cnf.c.orig	2005-04-13 12:06:54.000000000 -0400
-+++ cnf.c	2005-04-13 12:11:51.000000000 -0400
-@@ -36,11 +36,16 @@
+--- cnf.c.orig	2005-09-16 12:02:44.000000000 +0200
++++ cnf.c
+@@ -36,11 +36,16 @@ if(fic==(FILE *)NULL) return(-1);
  
  // We set the default values
  
@@ -21,10 +21,10 @@ $NetBSD: patch-ac,v 1.1 2005/04/13 16:36:07 salo Exp $
 +conf->sqlpasswd[sizeof(conf->sqlpasswd)-1] = '\0';
 +strncpy(conf->message,"Greylisted",sizeof(conf->message)-1);
 +conf->message[sizeof(conf->message)-1] = '\0';
+ conf->training=0;
  conf->port=2525;
  conf->maxcon=100;
- conf->mini=60;
-@@ -73,14 +78,46 @@
+@@ -72,14 +77,46 @@ while(fgets(buffer,1024,fic)!=NULL)
  		buffer[strlen(buffer)-1]=0;
                  *p=0;
                  if(strcmp(buffer,"CLIENTS")==0) ReadClients(conf,p+1);
@@ -78,4 +78,4 @@ $NetBSD: patch-ac,v 1.1 2005/04/13 16:36:07 salo Exp $
 +			}
                  if(strcmp(buffer,"PORT")==0) conf->port=atoi(p+1);
                  if(strcmp(buffer,"MAXCON")==0) conf->maxcon=atoi(p+1);
-                 if(strcmp(buffer,"MINTIME")==0) conf->mini=atol(p+1);
+                 if(strcmp(buffer,"TRAINING")==0) conf->training=atoi(p+1);

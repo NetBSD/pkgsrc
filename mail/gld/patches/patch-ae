@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2005/04/13 16:36:07 salo Exp $
+$NetBSD: patch-ae,v 1.2 2006/03/02 21:03:39 wiz Exp $
 
---- sockets.c.orig	2004-10-12 08:39:34.000000000 -0400
-+++ sockets.c	2005-04-13 12:06:13.000000000 -0400
-@@ -540,7 +540,7 @@
+--- sockets.c.orig	2004-10-12 14:39:34.000000000 +0200
++++ sockets.c
+@@ -540,7 +540,7 @@ int CloseSocket(int s)
  /*                                              */
  /************************************************/
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.1 2005/04/13 16:36:07 salo Exp $
  {
  struct hostent *hostptr;
  struct in_addr *ptr;
-@@ -552,7 +552,11 @@
+@@ -552,7 +552,11 @@ if(hostptr->h_addrtype != AF_INET) retur
  
  ptr=(struct in_addr *) *hostptr->h_addr_list;
  
@@ -24,7 +24,7 @@ $NetBSD: patch-ae,v 1.1 2005/04/13 16:36:07 salo Exp $
  return(0);
  }
  
-@@ -572,13 +576,14 @@
+@@ -572,13 +576,14 @@ return(0);
  /*                                              */
  /************************************************/
  
@@ -41,7 +41,7 @@ $NetBSD: patch-ae,v 1.1 2005/04/13 16:36:07 salo Exp $
  return(0);
  
  }
-@@ -599,7 +604,7 @@
+@@ -599,7 +604,7 @@ return(0);
  /*                                              */
  /************************************************/
  
@@ -50,7 +50,7 @@ $NetBSD: patch-ae,v 1.1 2005/04/13 16:36:07 salo Exp $
  {
  
  struct hostent *hostptr;
-@@ -609,7 +614,8 @@
+@@ -609,7 +614,8 @@ addr.s_addr=inet_addr(ip);
  
  if((hostptr=(struct hostent *)gethostbyaddr((char *)&addr,sizeof(struct in_addr),AF_INET))==NULL) return(S_HOST_ERR);
  
@@ -60,7 +60,7 @@ $NetBSD: patch-ae,v 1.1 2005/04/13 16:36:07 salo Exp $
  
  return(0);
  }
-@@ -631,20 +637,27 @@
+@@ -631,20 +637,27 @@ return(0);
  /*                                              */
  /************************************************/
  
