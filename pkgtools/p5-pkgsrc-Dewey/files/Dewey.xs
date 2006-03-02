@@ -2,7 +2,7 @@
 #include "perl.h"
 #include "XSUB.h"
 
-#include <lib/dewey.h>
+#include <dewey.h>
 
 MODULE = pkgsrc::Dewey		PACKAGE = pkgsrc::Dewey		
 
