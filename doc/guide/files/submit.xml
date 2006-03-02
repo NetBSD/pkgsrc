@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.9 2006/02/12 14:44:59 rillig Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.10 2006/03/02 23:08:40 rillig Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -62,6 +62,13 @@ packages here:
   <filename>pkgsrc/doc/TODO</filename> file and remove the entry
   for the package you updated or removed, in case it was mentioned
   there.</para>
+
+	<para>When the <varname>PKGREVISION</varname> of a package is
+	bumped, the change should appear in
+	<filename>pkgsrc/doc/CHANGES</filename> if it is security
+	related or otherwise relevant. Mass bumps that result from a
+	dependency being updated should not be mentioned. In all other
+	cases it's the developer's decision.</para>
 
 <para>There is a make target that helps in creating proper
   <filename>CHANGES</filename> entries:  <command>make
