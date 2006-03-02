@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13131 2006/03/01 23:27:41 schmonz Exp $
+$NetBSD: CHANGES,v 1.13132 2006/03/02 00:28:00 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1285,3 +1285,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/nagios-nsca to 2.5nb1 [wiz 2006-03-01]
 	Updated www/moz-bin-plugger to 4.0nb2 [wiz 2006-03-01]
 	Updated textproc/py-html2text to 2.24 [schmonz 2006-03-01]
+	Updated devel/readline to 5.1pl1nb1 [minskim 2006-03-02]
