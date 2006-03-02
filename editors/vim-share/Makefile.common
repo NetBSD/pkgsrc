@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.56 2006/03/02 10:41:41 martti Exp $
+# $NetBSD: Makefile.common,v 1.57 2006/03/02 11:32:34 martti Exp $
 
 .include "../../editors/vim-share/version.mk"
 
 DISTNAME=		vim-${VIM_VERSION}
-DISTFILES=		vim-${VIM_VERSION}${EXTRACT_SUFX}
-DISTFILES+=		vim-${VIM_VERSION}-lang.tar.gz
+DISTFILES=		vim-${VIM_VERSION:Q}${EXTRACT_SUFX:Q}
+DISTFILES+=		vim-${VIM_VERSION:Q}-lang.tar.gz
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
 			ftp://ftp.fu-berlin.de/misc/editors/vim/unix/ \
@@ -13,7 +13,7 @@ SITES_vim-${VIM_VERSION}-lang.tar.gz=	ftp://ftp.vim.org/pub/vim/extra/
 DIST_SUBDIR=		vim
 EXTRACT_SUFX=		.tar.bz2
 
-PATCH_SITES=		ftp://ftp.vim.org/pub/editors/vim/patches/${VIM_VERSION}/
+PATCH_SITES=		ftp://ftp.vim.org/pub/editors/vim/patches/${VIM_VERSION:Q}/
 PATCHFILES+=		6.4.002 6.4.003 6.4.004 6.4.005 6.4.006 6.4.007 6.4.008
 
 MAINTAINER=		martti@NetBSD.org
@@ -39,7 +39,7 @@ PATCHDIR?=		${.CURDIR}/../../editors/vim-share/patches
 DISTINFO_FILE?=		${.CURDIR}/../../editors/vim-share/distinfo
 
 .if empty(PKGNAME:Mvim-share*)
-ALTERNATIVES_SRC=	${.CURDIR}/../../editors/vim-share/ALTERNATIVES
+ALTERNATIVES_SRC=	${.CURDIR:Q}/../../editors/vim-share/ALTERNATIVES
 .else
 ALTERNATIVES_SRC=
 .endif
