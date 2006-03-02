@@ -1,2 +1,28 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/26 23:31:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/03/02 20:05:57 drochner Exp $
+bin/cgps
+bin/cgpxlogger
+bin/gpsfake
+bin/gpsflash
+bin/gpspipe
+bin/gpsprof
+bin/rtcmdecode
+bin/sirfmon
+include/gps.h
+include/gpsd.h
+include/libgpsmm.h
+lib/libgps.la
+man/man1/cgpxlogger.1
+man/man1/gpsfake.1
+man/man1/gpsflash.1
+man/man1/gpspipe.1
+man/man1/gpsprof.1
+man/man1/rtcmdecode.1
+man/man1/sirfmon.1
+man/man1/xgps.1
+man/man3/libgps.3
+man/man3/libgpsd.3
+man/man3/libgpsmm.3
+man/man5/rtcm-104.5
+man/man5/srec.5
+man/man8/gpsd.8
 sbin/gpsd
