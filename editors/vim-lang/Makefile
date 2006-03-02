@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/28 11:13:21 martti Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/02 10:41:41 martti Exp $
 
 PKGNAME=	vim-lang-${VIM_VERSION}.${VIM_PATCHLEVEL}
 #PKGREVISION=	1
@@ -15,7 +15,7 @@ INSTALL_TARGET=	install-languages
 
 PLIST_SUBST+=	VIM_SUBDIR=${VIM_SUBDIR:Q}
 
-BUILDLINK_DEPMETHOD.gettext-lib?=       build
+BUILDLINK_DEPMETHOD.gettext-lib?=	build
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
