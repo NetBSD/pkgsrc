@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2006/02/05 23:10:45 joerg Exp $
+# $NetBSD: Makefile,v 1.114 2006/03/02 03:28:07 grant Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
@@ -49,12 +49,23 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--openssldir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	shared
 
-.if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc"
+.if ${OPSYS} == "SunOS"
+.  if ${MACHINE_ARCH} == "sparc"
+OPENSSL_MACHINE_ARCH=	${SPARC_TARGET_ARCH}
+.  elif ${MACHINE_ARCH} == "i386"
+OPENSSL_MACHINE_ARCH=	x86
+.  elif ${MACHINE_ARCH} == "x86_64"
+OPENSSL_MACHINE_ARCH=	${MACHINE_ARCH}
+.  endif
+# only override the configure target if we know the platform, falling
+# back to ./config's autodetection if not.
+.  if defined(OPENSSL_MACHINE_ARCH) && !empty(OPENSSL_MACHINE_ARCH)
 CONFIGURE_SCRIPT=	./Configure
-.  if !empty(CC_VERSION:Mgcc*)
-CONFIGURE_ARGS+=	solaris-${SPARC_TARGET_ARCH}-gcc
-.  else
-CONFIGURE_ARGS+=	solaris-${SPARC_TARGET_ARCH}-cc
+.    if !empty(CC_VERSION:Mgcc*)
+CONFIGURE_ARGS+=	solaris-${OPENSSL_MACHINE_ARCH}-gcc
+.    else
+CONFIGURE_ARGS+=	solaris-${OPENSSL_MACHINE_ARCH}-cc
+.    endif
 .  endif
 .elif ${OPSYS} == "IRIX"
 CONFIGURE_ARGS+=	no-asm
