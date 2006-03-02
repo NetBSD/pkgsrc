@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2006/02/05 23:08:55 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2006/03/02 19:51:00 drochner Exp $
 #
 
-DISTNAME=		gconf-editor-2.12.0
-PKGREVISION=		3
+DISTNAME=		gconf-editor-2.12.1
 CATEGORIES=		editors gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gconf-editor/2.12/}
 EXTRACT_SUFX=		.tar.bz2
