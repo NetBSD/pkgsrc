@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/02/05 23:08:58 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2006/03/02 10:41:41 martti Exp $
 
 DISTNAME=	kvim-${KVIM_VERSION}
 PKGNAME=	vim-kde-${KVIM_VERSION}
@@ -21,8 +21,8 @@ CONFLICTS+=	vim-gtk-[0-9]* vim-gtk2-[0-9]* vim-motif-[0-9]*
 CONFLICTS+=	vim-share-[0-9]* vim-[0-9]* vim-xaw-[0-9]*
 CONFLICTS+=	pkg_alternatives-[0-9]*
 
-WRKSRC= 		${WRKDIR}/kvim-${KVIM_VERSION}/src
-USE_DIRS+=		xdg-1.1
+WRKSRC=		${WRKDIR}/kvim-${KVIM_VERSION}/src
+USE_DIRS+=	xdg-1.1
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-gui=kde
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--with-features=huge
 CONFIGURE_ARGS+=	--with-tlib=ncurses
 
 post-configure:
-	${TOUCH} ${WRKSRC}/auto/configure ${WRKSRC}/auto/config.mk
+	${TOUCH} ${WRKSRC:Q}/auto/configure ${WRKSRC:Q}/auto/config.mk
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"

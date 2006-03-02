@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:24:12 zuntum Exp $
-bin/vim
-bin/gvim
+@comment $NetBSD: PLIST,v 1.2 2006/03/02 10:41:41 martti Exp $
 bin/gview
-bin/rgvim
+bin/gvim
 bin/rgview
-bin/rvim
+bin/rgvim
 bin/rview
-man/man1/gvim.1
+bin/rvim
+bin/vim
 man/man1/gview.1
-man/man1/rgvim.1
+man/man1/gvim.1
 man/man1/rgview.1
+man/man1/rgvim.1

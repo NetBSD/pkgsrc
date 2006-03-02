@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.55 2006/03/02 07:27:44 martti Exp $
+# $NetBSD: Makefile.common,v 1.56 2006/03/02 10:41:41 martti Exp $
 
 .include "../../editors/vim-share/version.mk"
 
@@ -9,7 +9,7 @@ CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/ \
 			ftp://ftp.fu-berlin.de/misc/editors/vim/unix/ \
 			ftp://ftp.twics.co.jp/pub/vim/unix/
-SITES_vim-${VIM_VERSION}-lang.tar.gz= ftp://ftp.vim.org/pub/vim/extra/
+SITES_vim-${VIM_VERSION}-lang.tar.gz=	ftp://ftp.vim.org/pub/vim/extra/
 DIST_SUBDIR=		vim
 EXTRACT_SUFX=		.tar.bz2
 
@@ -24,14 +24,16 @@ CONFLICTS+=		vim-kde-[0-9]*
 WRKSRC=			${WRKDIR}/${VIM_SUBDIR}/src
 GNU_CONFIGURE=		yes
 
+.include "../../mk/bsd.prefs.mk"
+
 # See "configure --help" extra options. These might affect the installed
 # files (and PLIST might not include all files) so use at your own risk!
 CONFIGURE_ARGS+=	${VIM_EXTRA_OPTS}
 CONFIGURE_ARGS+=	--enable-multibyte
 
-PATCH_ARGS=		-d ${WRKDIR}/${VIM_SUBDIR} --forward --quiet \
+PATCH_ARGS=		-d ${WRKDIR:Q}/${VIM_SUBDIR:Q} --forward --quiet \
 				-E ${PATCH_STRIP}
-PATCH_DIST_ARGS=	-d ${WRKDIR}/${VIM_SUBDIR} --forward --quiet \
+PATCH_DIST_ARGS=	-d ${WRKDIR:Q}/${VIM_SUBDIR:Q} --forward --quiet \
 				-E ${PATCH_DIST_STRIP}
 PATCHDIR?=		${.CURDIR}/../../editors/vim-share/patches
 DISTINFO_FILE?=		${.CURDIR}/../../editors/vim-share/distinfo
