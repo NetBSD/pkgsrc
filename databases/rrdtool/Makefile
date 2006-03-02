@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2006/02/05 23:08:37 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2006/03/02 12:23:56 rillig Exp $
 
 DISTNAME=	rrdtool-1.2.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases graphics net
 MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/pub/
 
@@ -31,6 +31,12 @@ PERL5_PACKLIST+=	auto/RRDs/.packlist
 BUILDLINK_TRANSFORM+=	rm:-ffast-math
 
 RRDDOCDIR=		${PREFIX}/share/doc/rrdtool
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	post-build
+SUBST_MESSAGE.prefix=	Fixing $${prefix} in scripts.
+SUBST_FILES.prefix=	examples/cgi-demo.cgi
+SUBST_SED.prefix=	-e '1s,^\#! \$${prefix},\#! ${PREFIX},'
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
