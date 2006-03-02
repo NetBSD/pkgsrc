@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13136 2006/03/02 07:27:56 martti Exp $
+$NetBSD: CHANGES,v 1.13137 2006/03/02 08:41:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1290,3 +1290,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/solfege to 3.0.7 [schmonz 2006-03-02]
 	Updated misc/xchm to 1.4 [minskim 2006-03-02]
 	Updated editors/vim-share to 6.4.8nb1 [martti 2006-03-02]
+	Updated security/libfwbuilder to 2.0.10nb3 [minskim 2006-03-02]
