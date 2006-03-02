@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.542 2006/03/02 13:23:28 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.543 2006/03/02 19:47:03 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4422,6 +4422,7 @@ sub checkfile_patch($) {
 				$line->log_warning("Invalid number of deleted lines (${dellines}).");
 			}
 		}], [PST_CLD0, re_patch_cha, PST_CLA0, sub() {
+			$dellines = undef;
 			$addlines = ($m->has(2))
 			    ? (1 + $m->text(2) - $m->text(1))
 			    : ($m->text(1));
