@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2005/12/29 06:21:46 jlam Exp $
+# $NetBSD: Makefile.common,v 1.13 2006/03/02 18:46:16 joerg Exp $
 
 DISTNAME=		kaffe-1.1.6
 CATEGORIES=		lang java
@@ -14,6 +14,7 @@ DEPENDS+=       jikes>=1.22:../../lang/jikes
 
 EXTRACT_USING=		pax
 GNU_CONFIGURE_PREFIX=	${JAVA_HOME}
+GNU_CONFIGURE_MANDIR=	${PREFIX}/${PKGMANDIR}
 JAVA_HOME=		${PREFIX}/java/kaffe
 JAVA_NAME=		kaffe
 NO_MTREE=		yes
