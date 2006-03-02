@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.539 2006/03/01 22:19:13 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.540 2006/03/02 10:37:43 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2063,6 +2063,36 @@ sub type_should_be_quoted($) {
 	my ($type) = @_;
 
 	return !($type =~ qr"^(?:List(?:$|[^!]).*|ShellCommand|SedCommands)$");
+}
+
+my $check_pkglint_version_done = false;
+sub check_pkglint_version() {
+
+	return if $check_pkglint_version_done;
+	$check_pkglint_version_done = true;
+
+	my $lines = load_lines("${current_dir}/${pkgsrcdir}/pkgtools/pkglint/Makefile", true);
+	return unless $lines;
+
+	my $pkglint_version = undef;
+	foreach my $line (@{$lines}) {
+		if ($line->text =~ regex_varassign) {
+			my ($varname, undef, $value, undef) = ($1, $2, $3, $4);
+
+			if ($varname eq "DISTNAME" || $varname eq "PKGNAME") {
+				if ($value =~ regex_pkgname) {
+					$pkglint_version = $2;
+				}
+			}
+		}
+	}
+	return unless defined($pkglint_version);
+
+	if (dewey_cmp($pkglint_version, ">", conf_distver)) {
+		log_note(NO_FILE, NO_LINE_NUMBER, "A newer version of pkglint is available.");
+	} elsif (dewey_cmp($pkglint_version, "<", conf_distver)) {
+		log_error(NO_FILE, NO_LINE_NUMBER, "The pkglint version is newer than the tree to check.");
+	}
 }
 
 #
@@ -5027,36 +5057,33 @@ sub checkitem($) {
 	$is_wip = !$opt_import && ($abs_current_dir =~ qr"/wip(?:/|$)");
 	$is_internal = ($abs_current_dir =~ qr"/mk(?:/|$)");
 
-	if (-f "${current_dir}/../../../mk/bsd.pkg.mk") {
-		$pkgsrcdir = "../../..";
-		if ($is_dir) {
-			log_error($item, NO_LINE_NUMBER, "Don't know how to check this directory.");
+	$pkgsrcdir = undef;
+	foreach my $d (".", "..", "../..", "../../..") {
+		if (-f "${current_dir}/${d}/mk/bsd.pkg.mk") {
+			$pkgsrcdir = $d;
 		}
-
-	} elsif (-f "${current_dir}/../../mk/bsd.pkg.mk") {
-		$pkgsrcdir = "../..";
-		if ($is_dir) {
-			checkdir_package();
-		}
-
-	} elsif (-f "${current_dir}/../mk/bsd.pkg.mk") {
-		$pkgsrcdir = "..";
-		if ($is_dir) {
-			checkdir_category();
-		}
-
-	} elsif (-f "${current_dir}/mk/bsd.pkg.mk") {
-		$pkgsrcdir = ".";
-		if ($is_dir) {
-			checkdir_root();
-		}
-	} else {
-		log_error($item, NO_LINE_NUMBER, "Don't know how to check this " . (($is_dir) ? "directory" : "file") . ".");
+	}
+	if (!defined($pkgsrcdir)) {
+		log_error($current_dir, NO_LINE_NUMBER, "This is not inside a pkgsrc tree.");
 		return;
 	}
 
+	check_pkglint_version();	# (needs $pkgsrcdir)
+
 	if ($is_reg) {
 		checkfile($item);
+
+	} elsif ($pkgsrcdir eq "../..") {
+		checkdir_package();
+
+	} elsif ($pkgsrcdir eq "..") {
+		checkdir_category();
+
+	} elsif ($pkgsrcdir eq ".") {
+		checkdir_root();
+
+	} else {
+		log_error($item, NO_LINE_NUMBER, "Don't know how to check this directory.");
 	}
 }
 
