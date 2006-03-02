@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2006/02/05 23:11:41 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2006/03/02 21:53:52 drochner Exp $
 #
 
 DISTNAME=	PyQt-3.1-Qt-2.3.1
 PKGNAME=	${PYPKGPREFIX}-qt2-3.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11 python
 MASTER_SITES=	http://www.riverbankcomputing.co.uk/download/PyQt/
 
@@ -21,6 +21,10 @@ CONFIGURE_ARGS+=	--with-python=${PYTHONBIN:Q} \
 PY_PATCHPLIST=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 MAKE_ENV+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+
+# MesaLib is pulled in through qt2-libs; we need a version
+# which doesn't (needlessly) link to libpthread
+BUILDLINK_DEPENDS.MesaLib+=	MesaLib>=6.4.2nb1
 
 .include "../../lang/python/extension.mk"
 
