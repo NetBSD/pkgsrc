@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/09/18 19:55:15 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/03/02 21:53:52 drochner Exp $
 bin/eric${PYVERSSUFFIX}
 bin/pyuic${PYVERSSUFFIX}
 ${PYSITELIB}/eric/AsyncIO.py
@@ -16,6 +16,7 @@ ${PYSITELIB}/eric/UserInterface.py
 ${PYSITELIB}/eric/eric.py
 ${PYSITELIB}/libqtcanvascmodule.la
 ${PYSITELIB}/libqtcmodule.la
+${PYSITELIB}/libqtglcmodule.la
 ${PYSITELIB}/libqtnetworkcmodule.la
 ${PYSITELIB}/libqttablecmodule.la
 ${PYSITELIB}/libqtxmlcmodule.la
@@ -23,6 +24,8 @@ ${PYSITELIB}/qt.py
 ${PYSITELIB}/qt.pyc
 ${PYSITELIB}/qtcanvas.py
 ${PYSITELIB}/qtcanvas.pyc
+${PYSITELIB}/qtgl.py
+${PYSITELIB}/qtgl.pyc
 ${PYSITELIB}/qtnetwork.py
 ${PYSITELIB}/qtnetwork.pyc
 ${PYSITELIB}/qttable.py
