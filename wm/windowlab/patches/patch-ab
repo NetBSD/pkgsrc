@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2005/12/06 16:16:35 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2006/03/03 18:50:22 kristerw Exp $
 
 --- menufile.c.orig	2005-12-06 16:11:17.000000000 +0000
 +++ menufile.c
