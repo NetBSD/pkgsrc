@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2006/02/16 20:43:41 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2006/03/03 18:57:25 kristerw Exp $
 
 --- common/common.c.orig	2006-02-16 20:23:31.000000000 +0000
 +++ common/common.c
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.6 2006/02/16 20:43:41 joerg Exp $
      group_t *grouptemp;
      node_t *nodeptr;
      char **lumptemp;
-@@ -397,8 +396,7 @@ int test_node_connection(int rshport, in
+@@ -397,7 +396,6 @@ int test_node_connection(int rshport, in
  void
  _bailout(int line, char *file)
  {
@@ -18,4 +18,3 @@ $NetBSD: patch-aa,v 1.6 2006/02/16 20:43:41 joerg Exp $
  	
      (void)fprintf(stderr, "%s: Failed in %s line %d: %s %d\n",
  		  progname, file, line, strerror(errno), errno);
-     _exit(EXIT_FAILURE);
