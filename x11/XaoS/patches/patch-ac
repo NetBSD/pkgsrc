@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2005/08/19 02:46:29 grant Exp $
+$NetBSD: patch-ac,v 1.2 2006/03/03 18:47:25 kristerw Exp $
 
 --- src/ui/ui.c.orig	2003-03-19 23:09:31.000000000 +1100
 +++ src/ui/ui.c
