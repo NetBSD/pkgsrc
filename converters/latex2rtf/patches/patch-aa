@@ -1,14 +1,12 @@
-$NetBSD: patch-aa,v 1.4 2005/11/09 21:04:57 rillig Exp $
+$NetBSD: patch-aa,v 1.5 2006/03/03 19:52:37 kristerw Exp $
 
 --- Makefile.orig	2004-11-07 18:59:18.000000000 -0800
 +++ Makefile	2005-11-03 15:42:07.000000000 -0800
-@@ -2,5 +2,5 @@
+@@ -2,3 +2,3 @@
  
 -CC=gcc
 +CC?=gcc
  MKDIR=mkdir -p
- 
- CFLAGS:=-DUNIX
 @@ -18,14 +18,14 @@
  #CFLAGS:=$(CFLAGS) -Zwin32  
  
