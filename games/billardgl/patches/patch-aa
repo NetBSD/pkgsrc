@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/01/31 02:47:25 rillig Exp $
+$NetBSD: patch-aa,v 1.2 2006/03/03 19:21:43 kristerw Exp $
 
 --- src/Makefile.orig	2002-04-29 13:26:46.000000000 +0200
 +++ src/Makefile	2006-01-31 03:25:14.000000000 +0100
