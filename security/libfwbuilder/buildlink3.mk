@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/03/02 08:41:01 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/03/03 01:29:40 minskim Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBFWBUILDER_BUILDLINK3_MK:=	${LIBFWBUILDER_BUILDLINK3_MK}+
@@ -21,6 +21,5 @@ BUILDLINK_PKGSRCDIR.libfwbuilder?=	../../security/libfwbuilder
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
-.include "../../x11/qt3-tools/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
