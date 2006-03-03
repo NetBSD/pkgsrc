@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.4 2006/01/26 21:43:51 adam Exp $
+$NetBSD: patch-af,v 1.5 2006/03/03 10:15:46 adam Exp $
 
---- ntfsprogs/ntfsclone.c.orig	2005-10-07 15:58:47.000000000 +0200
+--- ntfsprogs/ntfsclone.c.orig	2006-02-08 22:46:40.000000000 +0100
 +++ ntfsprogs/ntfsclone.c
-@@ -52,6 +52,19 @@
+@@ -55,6 +55,19 @@
  #include <getopt.h>
  #endif
  
@@ -22,7 +22,7 @@ $NetBSD: patch-af,v 1.4 2006/01/26 21:43:51 adam Exp $
  #include "debug.h"
  #include "types.h"
  #include "support.h"
-@@ -99,7 +112,11 @@ struct {
+@@ -108,7 +121,11 @@ struct {
  	int restore_image;
  	char *output;
  	char *volume;
@@ -34,27 +34,7 @@ $NetBSD: patch-af,v 1.4 2006/01/26 21:43:51 adam Exp $
  } opt;
  
  struct bitmap {
-@@ -387,15 +404,10 @@ static void parse_options(int argc, char
- 
- 	msg_out = stdout;
- 
--	/* FIXME: this is a workaround for loosing debug info if stdout != stderr
--	   and for the uncontrollable verbose messages in libntfs. Ughhh. */
--	if (opt.std_out)
--		msg_out = stderr;
--	else if (opt.debug)
--		stderr = stdout;
--	else
--		if (!(stderr = fopen("/dev/null", "rw")))
--			perr_exit("Couldn't open /dev/null");
-+#ifdef DEBUG
-+	if (!opt.debug)
-+		ntfs_err_out = NULL;
-+#endif
- }
- 
- static void progress_init(struct progress_bar *p, u64 start, u64 stop, int res)
-@@ -538,7 +550,7 @@ static void copy_cluster(int rescue, u64
+@@ -559,7 +576,7 @@ static void copy_cluster(int rescue, u64
  	if (write_all(&fd_out, buff, csize) == -1) {
  		int err = errno;
  		perr_printf("Write failed");
@@ -63,12 +43,12 @@ $NetBSD: patch-af,v 1.4 2006/01/26 21:43:51 adam Exp $
  			Printf("Apparently you tried to clone to a remote "
  			       "Windows computer but they don't\nhave "
  			       "efficient sparse file handling by default. "
-@@ -1243,7 +1255,7 @@ static void set_filesize(s64 filesize)
+@@ -1322,7 +1339,7 @@ static void set_filesize(s64 filesize)
  		Printf("WARNING: Couldn't get filesystem type: "
  		       "%s\n", strerror(errno));
- 	else 
+ 	else
 -		fs_type = opt.stfs.f_type;
 +		fs_type = opt.stfs.F_TYPE;
- 		
+ 
  	if (fs_type == 0x52654973)
  		Printf("WARNING: You're using ReiserFS, it has very poor "
