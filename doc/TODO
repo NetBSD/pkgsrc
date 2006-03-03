@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4680 2006/03/03 22:25:02 wiz Exp $
+$NetBSD: TODO,v 1.4681 2006/03/03 22:25:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1075,7 +1075,6 @@ Suggested package updates
 	o sbcl-0.9.5
 	o scew-0.4.0
 	o sch-3.8.3
-	o scmxx-0.9.0
 	o scribus-1.2.4.1
 	o scrollz-1.9.5 [pkg/32974]
 	o sdig-0.40
