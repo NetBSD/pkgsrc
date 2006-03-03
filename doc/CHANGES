@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13154 2006/03/03 07:24:46 wiz Exp $
+$NetBSD: CHANGES,v 1.13155 2006/03/03 10:16:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1312,3 +1312,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/tkman to 2.2 [minskim 2006-03-03]
 	Updated www/php4 to 4.4.2 [cube 2006-03-03]
 	Updated devel/gnustep-make to 1.11.2nb2 [wiz 2006-03-03]
+	Updated sysutils/ntfsprogs to 1.13.0 [adam 2006-03-03]
