@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/01/17 07:35:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/03/03 07:24:10 wiz Exp $
 share/GNUstep/System/Library/Makefiles/GNUstep-reset.sh
 share/GNUstep/System/Library/Makefiles/GNUstep.csh
 share/GNUstep/System/Library/Makefiles/GNUstep.sh
@@ -115,6 +115,8 @@ share/GNUstep/System/Tools/debugapp
 share/GNUstep/System/Tools/openapp
 share/GNUstep/System/Tools/opentool
 share/GNUstep/System/share/config.site
+share/examples/GNUstep/GNUstep.conf
+@dirrm share/examples/GNUstep
 @dirrm share/GNUstep/System/share
 @exec ${MKDIR} %D/share/GNUstep/System/Tools/Resources
 @dirrm share/GNUstep/System/Tools/Resources

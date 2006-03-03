@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2006/01/17 07:35:55 adam Exp $
+$NetBSD: patch-ae,v 1.3 2006/03/03 07:24:10 wiz Exp $
 
---- GNUmakefile.in.orig	2005-11-28 22:07:45.000000000 +0100
+--- GNUmakefile.in.orig	2005-11-28 21:07:45.000000000 +0000
 +++ GNUmakefile.in
 @@ -113,7 +113,7 @@ all: generated-files which_lib$(EXEEXT)
  # used. (I mean: 'cd core/make; cd ..; mkdir make-build; cd
@@ -11,3 +11,16 @@ $NetBSD: patch-ae,v 1.2 2006/01/17 07:35:55 adam Exp $
  
  ifeq ($(messages),yes)
    EC = 
+@@ -141,9 +141,9 @@ install: all @GNUSTEP_MOVE_OBSOLETE@
+ 		$(makedir)/Instance \
+ 		$(makedir)/Instance/Shared \
+ 		$(makedir)/Instance/Documentation)
+-	$(EC)(echo "Installing GNUstep configuration file in $(GNUSTEP_CONFIG_FILE)"; \
+-	 $(srcdir)/mkinstalldirs "$(GNUSTEP_CONFIG_FILE_DIR)"; \
+-	 $(INSTALL_DATA) GNUstep.conf "$(GNUSTEP_CONFIG_FILE)")
++	$(EC)(echo "Installing GNUstep configuration file"; \
++	 $(srcdir)/mkinstalldirs "${PREFIX}/share/examples/GNUstep"; \
++	 $(INSTALL_DATA) GNUstep.conf "${PREFIX}/share/examples/GNUstep")
+ 	-$(EC) rm -f "$(GNUSTEP_SYSTEM_ROOT)/Makefiles"
+ 	 $(EC)(echo "Installing gnustep-make support software"; \
+ 	   $(INSTALL_PROGRAM) -m 755 which_lib$(EXEEXT) \
