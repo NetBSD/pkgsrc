@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.22 2006/02/18 17:07:33 rillig Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.23 2006/03/03 22:22:07 wiz Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -164,8 +164,8 @@
 	  stage.  An example use of
 	  <filename>pre-build.local</filename> is to have the line:</para>
 
-	<screen>&rprompt; <userinput>echo "I do not have enough disk space to build this pig." \
-    &gt; pkgsrc/misc/openoffice/$BROKENF</userinput></screen>
+	<screen>echo "I do not have enough disk space to build this pig." \
+    &gt; misc/openoffice/$BROKENF</screen>
 
 	<para>to prevent the system from trying to build a particular package
 	  which requires nearly 3 GB of disk space.</para>
