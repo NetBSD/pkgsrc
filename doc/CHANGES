@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13164 2006/03/03 22:29:39 wiz Exp $
+$NetBSD: CHANGES,v 1.13165 2006/03/03 22:30:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1323,3 +1323,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/curl to 7.15.2 [wiz 2006-03-03]
 	Moved archivers/unace22 to archivers/unace-bin [wiz 2006-03-03]
 	Updated archivers/unace-bin to 2.50 [wiz 2006-03-03]
+	Updated misc/dialog to 1.0.20060221 [wiz 2006-03-03]
