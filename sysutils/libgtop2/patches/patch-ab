@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2006/02/28 23:48:11 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2006/03/03 15:02:13 adam Exp $
 
 --- sysdeps/freebsd/proctime.c.orig	2005-02-23 08:20:45.000000000 +0000
 +++ sysdeps/freebsd/proctime.c
@@ -36,7 +36,7 @@ $NetBSD: patch-ab,v 1.3 2006/02/28 23:48:11 joerg Exp $
 -#elif (defined __FreeBSD__) && (__FreeBSD_version <= 500013)
 +#elif defined(__DragonFly__)
 +	buf->rtime = pinfo[0].kp_eproc.e_uticks / 100000;
-+#elif (defined __FreeBSD__) && (__FreeBSD_version <= 500013))
++#elif (defined __FreeBSD__) && (__FreeBSD_version <= 500013)
  	buf->rtime = pinfo [0].kp_proc.p_runtime;
  #else
  	buf->rtime = tv2sec (pinfo [0].kp_proc.p_rtime);
