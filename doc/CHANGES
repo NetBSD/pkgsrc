@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13156 2006/03/03 14:41:45 tonio Exp $
+$NetBSD: CHANGES,v 1.13157 2006/03/03 15:31:28 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1314,3 +1314,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/gnustep-make to 1.11.2nb2 [wiz 2006-03-03]
 	Updated sysutils/ntfsprogs to 1.13.0 [adam 2006-03-03]
 	Updated audio/daapd to 0.2.4anb2 [tonio 2006-03-03]
+	Updated net/libtorrent to 0.8.5nb1 [tron 2006-03-03]
