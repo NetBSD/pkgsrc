@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2005/12/05 20:51:18 rillig Exp $
+# $NetBSD: Makefile.common,v 1.5 2006/03/03 16:31:19 reed Exp $
 #
 
 # XXX: when updating version, be sure to update distinfo for both
@@ -7,7 +7,7 @@
 
 PYQT_VERSION=		3.15.1
 CATEGORIES=		x11 python
-MASTER_SITES=		http://www.river-bank.demon.co.uk/download/PyQt/
+MASTER_SITES=		http://www.riverbankcomputing.com/Downloads/PyQt3/GPL/
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://www.riverbankcomputing.co.uk/pyqt/
