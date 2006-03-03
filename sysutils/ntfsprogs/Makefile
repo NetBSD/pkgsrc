@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2006/01/26 21:43:51 adam Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/03 10:15:46 adam Exp $
 
-DISTNAME=	ntfsprogs-1.12.1
+DISTNAME=	ntfsprogs-1.13.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linux-ntfs/}
 
 MAINTAINER=	tech-pkg@NetBSD.org
-HOMEPAGE=	http://linux-ntfs.sourceforge.net/
+HOMEPAGE=	http://www.linux-ntfs.org/
 COMMENT=	Linux-NTFS project utilities for the Windows NT Filesystem
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-debug
 
 # XXX support for this should be possibly integrated with other
 # gnome pkgsrc and this could be a configurable option

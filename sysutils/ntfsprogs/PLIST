@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/26 21:43:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/03/03 10:15:46 adam Exp $
 bin/ntfscat
 bin/ntfscluster
 bin/ntfsfix
@@ -24,12 +24,15 @@ include/ntfs/layout.h
 include/ntfs/lcnalloc.h
 include/ntfs/list.h
 include/ntfs/logfile.h
+include/ntfs/logging.h
 include/ntfs/mft.h
 include/ntfs/mst.h
 include/ntfs/ntfstime.h
+include/ntfs/rich.h
 include/ntfs/runlist.h
 include/ntfs/security.h
 include/ntfs/support.h
+include/ntfs/tree.h
 include/ntfs/types.h
 include/ntfs/unistr.h
 include/ntfs/version.h
