@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/11/25 21:12:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/03/03 22:22:20 wiz Exp $
 bin/gsf-office-thumbnailer
 include/libgsf-1/gsf-gnome/gsf-input-bonobo.h
 include/libgsf-1/gsf-gnome/gsf-input-gnomevfs.h
@@ -78,6 +78,7 @@ share/doc/libgsf/gsf/gsf-metadata.html
 share/doc/libgsf/gsf/gsf-users.html
 share/doc/libgsf/gsf/gsf-utils.html
 share/doc/libgsf/gsf/gsf.devhelp
+share/doc/libgsf/gsf/gsf.devhelp2
 share/doc/libgsf/gsf/history.html
 share/doc/libgsf/gsf/home.png
 share/doc/libgsf/gsf/index.html
@@ -94,6 +95,7 @@ share/doc/libgsf/gsf/style.css
 share/doc/libgsf/gsf/up.png
 share/gconf/schemas/gsf-office-thumbnailer.schemas
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libgsf.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libgsf.mo
 @dirrm include/libgsf-1/gsf-win32
 @dirrm include/libgsf-1/gsf-gnome
 @dirrm include/libgsf-1/gsf

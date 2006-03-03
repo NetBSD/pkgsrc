@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2005/11/25 21:12:29 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2006/03/03 22:22:20 wiz Exp $
 
---- doc/Makefile.in.orig	2005-10-27 17:39:59.000000000 +0200
+--- doc/Makefile.in.orig	2006-03-02 05:06:25.000000000 +0000
 +++ doc/Makefile.in
-@@ -302,7 +302,7 @@ extra_files = 
+@@ -307,7 +307,7 @@ extra_files = 
  # if $(DOC_MODULE).types is non-empty.
  GTKDOC_CFLAGS = -I$(top_srcdir) $(LIBGSF_CFLAGS)
  GTKDOC_LIBS = $(top_builddir)/gsf/libgsf-1.la $(LIBGSF_LIBS)
