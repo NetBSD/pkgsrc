@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13148 2006/03/02 23:57:51 joerg Exp $
+$NetBSD: CHANGES,v 1.13149 2006/03/03 00:54:39 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1304,3 +1304,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xdaemon2 to 2.1 [hubertf 2006-03-02]
 	Updated chat/psi to 0.10nb3 [wiz 2006-03-02]
 	Updated x11/xorg-server to 6.9.0nb6 [joerg 2006-03-02]
+	Updated x11/qt3-libs to 3.3.5nb6 [minskim 2006-03-03]
+	Updated x11/qt3-tools to 3.3.5nb4 [minskim 2006-03-03]
