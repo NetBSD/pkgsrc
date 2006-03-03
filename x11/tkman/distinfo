@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 17:36:20 wiz Exp $
+$NetBSD: distinfo,v 1.4 2006/03/03 04:03:28 minskim Exp $
 
-SHA1 (tkman.tar.gz) = 0474cbe2704ee5cb01155c655594c669d844e6eb
-RMD160 (tkman.tar.gz) = 9c040d68a9d683797c91fa636a5c0de3dec30796
-Size (tkman.tar.gz) = 224735 bytes
-SHA1 (patch-aa) = 595396ea2c269904523bba1485cb54ac2efc2903
-SHA1 (patch-ab) = 96eb4193fceaa07e2c1f31f0fb44923a1cb5a8f6
+SHA1 (tkman-2.2.tar.gz) = c406b755b32292caa321397e5b76fba29d4f70b7
+RMD160 (tkman-2.2.tar.gz) = a5ab43102c3f4a3d6327c46dd4ca3ed4eed3ce15
+Size (tkman-2.2.tar.gz) = 229273 bytes
+SHA1 (patch-aa) = b30770a9bcd44a009edcf193c1b9a23f9342adc8
+SHA1 (patch-ab) = 8e3fd6e2ac4bfa439184003c7b80f89789ac1eba
 SHA1 (patch-ac) = 4178da9370cdfc5da0231b12735da89f4cc6fe41
-SHA1 (patch-ad) = ca4dbeaa9c4f2d630f025796d464034d6f524eb5
+SHA1 (patch-ad) = 3a406eba6089305ec218ce0428296cb7f4cb438a

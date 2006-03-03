@@ -1,23 +1,25 @@
-# $NetBSD: Makefile,v 1.39 2006/02/05 23:11:44 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2006/03/03 04:03:28 minskim Exp $
 
-DISTNAME=		tkman
-PKGNAME=		tkman-2.1
-PKGREVISION=		1
+DISTNAME=		tkman-2.2
 CATEGORIES=		x11
-MASTER_SITES=		ftp://tkman.sourceforge.net/pub/tkman/ \
-			http://tkman.sourceforge.net/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tkman/}
 
 MAINTAINER=		tech-pkg@NetBSD.org
 HOMEPAGE=		http://tkman.sourceforge.net/
 COMMENT=		Tcl/Tk based manual browser
 
 DEPENDS+=		glimpse>=4.1:../../textproc/glimpse
-DEPENDS+=		tk>=8.3.2:../../x11/tk83
+DEPENDS+=		tk>=8.4:../../x11/tk
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_RMAN=		yes
 
 .include "../../mk/x11.buildlink3.mk"
+
+post-extract:
+.for f in Makefile manpath.tcl
+	${MV} ${WRKSRC}/${f} ${WRKSRC}/${f}.cr
+	${TR} -d '\r' < ${WRKSRC}/${f}.cr > ${WRKSRC}/${f}
+.endfor
 
 post-install:
 	${SED} -e 's|@@LOCALBASE@@|${LOCALBASE}|' \

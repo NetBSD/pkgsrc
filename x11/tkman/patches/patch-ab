@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2000/08/31 03:58:14 fredb Exp $
+$NetBSD: patch-ab,v 1.5 2006/03/03 04:03:28 minskim Exp $
 
---- manpath.tcl.orig	Thu Jun 22 17:39:42 2000
-+++ manpath.tcl	Thu Aug 17 19:48:41 2000
-@@ -19,8 +19,13 @@
+--- manpath.tcl.orig	2003-04-01 15:31:38.000000000 -0800
++++ manpath.tcl
+@@ -24,8 +24,13 @@ proc manManpathCheck {} {
  	# doesn't that's OK (it's got a good whatis organization)
  
  	# BSDI concatenates all whatis information into single file
@@ -14,10 +14,10 @@ $NetBSD: patch-ab,v 1.4 2000/08/31 03:58:14 fredb Exp $
 +	} else {
 +		set manx(fBSDI) 0
 +	}
- 	set fDebian [expr {[file readable [set whatis "/usr/man/index.bt"]] || [file readable [set whatis "/var/catman/index.bt"]]}]
+ 	set fDebian [expr {[file readable [set whatis "/usr/share/man/index.bt"]] || [file readable [set whatis "/var/cache/man/index.bt"]] || [file readable [set whatis "/usr/man/index.bt"]] || [file readable [set whatis "/var/catman/index.bt"]]}]
  	# HPUX concatenates all whatis information into single file
  	set fHPUX 0; if {!$manx(fBSDI) && !$fDebian} { set fHPUX [file readable [set whatis "/usr/lib/whatis"]] }
-@@ -79,10 +84,12 @@
+@@ -84,10 +89,12 @@ proc manManpathCheck {} {
  			lappend manx(pathstat) $man($root)
  			set manx($root,latest) [lfirst [manLatestMan $root]]
  
