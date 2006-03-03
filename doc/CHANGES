@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13152 2006/03/03 04:04:15 minskim Exp $
+$NetBSD: CHANGES,v 1.13153 2006/03/03 07:13:09 cube Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1310,3 +1310,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/qsynth to 0.2.4nb3 [minskim 2006-03-03]
 	Updated audio/hydrogen to 0.8.0nb4 [minskim 2006-03-03]
 	Updated x11/tkman to 2.2 [minskim 2006-03-03]
+	Updated www/php4 to 4.4.2 [cube 2006-03-03]
