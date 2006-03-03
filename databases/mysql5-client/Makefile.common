@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2006/01/23 17:57:47 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.7 2006/03/03 04:00:09 grant Exp $
 
 DISTNAME=		mysql-5.0.18
 CATEGORIES=		databases
@@ -66,7 +66,8 @@ CONFIGURE_ARGS+=	--with-vio
 CONFIGURE_ARGS+=	--with-charset=${MYSQL_CHARSET:Q}
 CONFIGURE_ARGS+=	--with-extra-charsets=${MYSQL_EXTRA_CHARSET:Q}
 
-.if !empty(MACHINE_ARCH:Mi386) && ${OPSYS} != "Interix"
+.if !empty(MACHINE_ARCH:Mi386) && ${OPSYS} != "Interix" && \
+	${OPSYS} != "SunOS"
 CONFIGURE_ARGS+=	--enable-assembler
 .endif
 
