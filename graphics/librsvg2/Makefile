@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2006/02/26 10:39:34 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2006/03/03 22:24:26 wiz Exp $
 #
 
-DISTNAME=	librsvg-2.14.0
+DISTNAME=	librsvg-2.14.1
 PKGNAME=	${DISTNAME:S/-/2-/}
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.14/}
