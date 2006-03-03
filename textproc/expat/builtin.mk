@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.7 2005/06/03 19:12:49 jlam Exp $
+# $NetBSD: builtin.mk,v 1.8 2006/03/03 17:47:58 tv Exp $
 
 BUILTIN_PKG:=	expat
 
 BUILTIN_FIND_FILES_VAR:=	H_EXPAT
-BUILTIN_FIND_FILES.H_EXPAT=	${X11BASE}/include/expat.h
+BUILTIN_FIND_FILES.H_EXPAT=	${X11BASE}/include/expat.h /usr/include/expat.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -14,9 +14,13 @@ BUILTIN_FIND_FILES.H_EXPAT=	${X11BASE}/include/expat.h
 .if !defined(IS_BUILTIN.expat)
 IS_BUILTIN.expat=	no
 .  if exists(${H_EXPAT})
+.    if !empty(H_EXPAT:M${X11BASE}/)
 BUILTIN_IMAKE_CHECK:=	expat:BuildExpatLibrary
-.    include "../../mk/buildlink3/imake-check.mk"
+.      include "../../mk/buildlink3/imake-check.mk"
 IS_BUILTIN.expat=	${BUILTIN_IMAKE_CHECK.expat}
+.    else
+IS_BUILTIN.expat=	yes
+.    endif
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.expat
