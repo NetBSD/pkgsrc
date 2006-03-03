@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13166 2006/03/03 22:31:27 wiz Exp $
+$NetBSD: CHANGES,v 1.13167 2006/03/03 22:38:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1325,3 +1325,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated archivers/unace-bin to 2.50 [wiz 2006-03-03]
 	Updated misc/dialog to 1.0.20060221 [wiz 2006-03-03]
 	Updated net/mDNSResponder to 108 [wiz 2006-03-03]
+	Moved archivers/rar-linux to archivers/rar-bin [wiz 2006-03-03]
