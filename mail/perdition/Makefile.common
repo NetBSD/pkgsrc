@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2006/02/13 15:18:32 tv Exp $
+# $NetBSD: Makefile.common,v 1.3 2006/03/03 16:56:35 tv Exp $
 #
 
 PERDITION_VERSION=	1.17
@@ -16,6 +16,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKG_SYSCONFSUBDIR=	perdition
 
+CONFIGURE_ARGS+=	--disable-daemon-map
 CONFIGURE_ARGS+=	--localstatedir=/var
 
 EGDIR=			${PREFIX}/share/examples
