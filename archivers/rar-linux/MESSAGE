@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/02/27 15:10:29 wiz Exp $
-
-For best compression performance, please install
-${PREFIX}/share/doc/rar-linux/rarfiles.lst into /etc.
-
-===========================================================================
