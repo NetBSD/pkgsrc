@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1 2006/02/20 23:10:05 wiz Exp $
+$NetBSD: patch-am,v 1.2 2006/03/03 10:15:46 adam Exp $
 
---- ntfsprogs/Makefile.in.orig	2005-10-10 13:09:18.000000000 +0000
+--- ntfsprogs/Makefile.in.orig	2006-02-27 10:12:13.000000000 +0100
 +++ ntfsprogs/Makefile.in
-@@ -842,7 +842,6 @@ install-data-am: install-man
+@@ -848,7 +848,6 @@ install-data-am: install-man
  
  install-exec-am: install-binPROGRAMS install-sbinPROGRAMS
  	@$(NORMAL_INSTALL)
