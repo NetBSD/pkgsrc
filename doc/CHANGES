@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13169 2006/03/04 06:40:56 wiz Exp $
+$NetBSD: CHANGES,v 1.13170 2006/03/04 09:10:32 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1328,3 +1328,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Moved archivers/rar-linux to archivers/rar-bin [wiz 2006-03-03]
 	Updated chat/irssi to 0.8.10a [wiz 2006-03-04]
 	Updated devel/mercurial to 0.8nb1 [wiz 2006-03-04]
+	Updated mail/sylpheed to 2.2.2 [xtraeme 2006-03-04]
