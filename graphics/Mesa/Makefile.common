@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.46 2006/02/09 12:27:42 adam Exp $
+# $NetBSD: Makefile.common,v 1.47 2006/03/04 21:29:45 jlam Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MESA_VERSION=	6.4.2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mesa3d.org/
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

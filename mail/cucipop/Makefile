@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/12/29 06:21:48 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/03/04 21:29:58 jlam Exp $
 #
 
 DISTNAME=	cucipop-1.31
@@ -10,7 +10,7 @@ PATCH_SITES=	ftp://ftp.kame.net/pub/kame/misc/
 PATCHFILES=	cucipop-1.31-v6-20010223.diff.gz
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	The Cubic Circle POP3 mail server
 
 

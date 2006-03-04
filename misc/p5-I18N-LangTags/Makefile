@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/08/06 06:19:24 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/04 21:30:12 jlam Exp $
 #
 
 DISTNAME=		I18N-LangTags-0.35
@@ -8,7 +8,7 @@ PKGREVISION=		1
 CATEGORIES=		misc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=I18N/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/I18N-LangTags/
 COMMENT=		Perl5 functions for dealing with RFC3066-style language tags
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.7 2005/12/29 06:21:38 jlam Exp $
+# $NetBSD: Makefile.common,v 1.8 2006/03/04 21:29:29 jlam Exp $
 
 DISTNAME=      	rt-2-0-15
 CATEGORIES=	devel
 MASTER_SITES=	http://www.fsck.com/pub/rt/release/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fsck.com/projects/rt/
 COMMENT=	Industrial-grade ticketing system
 CONFLICTS=	rt-*

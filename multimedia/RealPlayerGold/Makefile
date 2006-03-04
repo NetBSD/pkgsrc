@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:14 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/04 21:30:14 jlam Exp $
 #
 
 DISTNAME=		RealPlayer10GOLD
@@ -8,7 +8,7 @@ CATEGORIES=		multimedia
 MASTER_SITES=		http://forms.real.com/real/player/download.html?f=unix/
 EXTRACT_SUFX=		.rpm
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.real.com/linux/
 COMMENT=		Real Audio and Video Player
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/02/09 22:07:12 minskim Exp $
+# $NetBSD: Makefile,v 1.45 2006/03/04 21:29:08 jlam Exp $
 
 DISTNAME=		db-4.4.20
 PKGNAME=		${DISTNAME:S/db/db4/}
@@ -9,7 +9,7 @@ MASTER_SITES=		http://downloads.sleepycat.com/ \
 PATCHFILES=		patch.4.4.20.1 patch.4.4.20.2
 PATCH_SITES=		http://www.sleepycat.com/update/4.4.20/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.sleepycat.com/
 COMMENT=		Berkeley DB version 4 from Sleepycat Software
 

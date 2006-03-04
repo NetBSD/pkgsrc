@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2006/02/05 23:08:05 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2006/03/04 21:28:54 jlam Exp $
 
 DISTNAME=	SDL_mixer-1.2.6
 PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_mixer/release/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libsdl.org/projects/SDL_mixer/
 COMMENT=	Multi-channel audio mixer library
 

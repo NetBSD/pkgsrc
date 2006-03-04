@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/02/05 23:09:45 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/03/04 21:29:54 jlam Exp $
 #
 
 DISTNAME=	unix_jb35foundation
@@ -10,7 +10,7 @@ MASTER_SITES=	http://ftp.cdut.edu.cn/pub2/linux/develop/jbuilder/ \
 		http://planetmirror.com.au/ftp/jbuilder/foundation/3.5/linux/ \
 		http://www.au.horde.org/pub/jbuilder/foundation/3.5/linux/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.borland.com/
 COMMENT=	Just-In-Time compiler for Linux Java Virtual Machine
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:47:17 tv Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/04 21:30:37 jlam Exp $
 #
 
 DISTNAME=		pam_dbm-0.2
@@ -6,7 +6,7 @@ PKGNAME=		pam-dbm-0.2
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.feep.net/pub/software/PAM/pam_dbm/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www-dev.cites.uiuc.edu/pam_dbm/
 COMMENT=		PAM module for DBM authentication
 

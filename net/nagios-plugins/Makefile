@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/18 17:19:20 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/04 21:30:21 jlam Exp $
 #
 
 CATEGORIES=	net sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nagiosplug/}
 
-MAINTAINER=     tech-pkg@NetBSD.org
+MAINTAINER=     pkgsrc-users@NetBSD.org
 HOMEPAGE=       http://sourceforge.net/projects/nagiosplug/
 COMMENT=	Nagios plugins
 

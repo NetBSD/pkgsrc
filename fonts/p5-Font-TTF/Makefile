@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/08/06 06:19:19 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/04 21:29:39 jlam Exp $
 #
 
 DISTNAME=	Font-TTF-0.34
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Font/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl module for TrueType font hacking
 
 PERL5_PACKLIST=		auto/Font/TTF/.packlist

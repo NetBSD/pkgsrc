@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/29 06:22:17 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/04 21:30:41 jlam Exp $
 #
 
 DISTNAME=		free-1.0
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Displays memory usage
 
 

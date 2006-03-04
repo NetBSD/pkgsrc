@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/11/23 22:15:35 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2006/03/04 21:30:49 jlam Exp $
 #
 
 DISTNAME=	Text-Template-1.44
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5tte
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.plover.com/~mjd/perl/Template/
 COMMENT=	Perl5 library for generating form letters
 

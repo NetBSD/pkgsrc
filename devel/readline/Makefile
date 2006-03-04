@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/03/02 00:24:55 minskim Exp $
+# $NetBSD: Makefile,v 1.38 2006/03/04 21:29:29 jlam Exp $
 #
 
 DISTNAME=	readline-5.1
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=readline/}
 PATCH_SITES=	${MASTER_SITE_GNU:=readline/readline-5.1-patches/}
 PATCHFILES=	readline51-001
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html
 COMMENT=	GNU library that can recall and edit previous input
 

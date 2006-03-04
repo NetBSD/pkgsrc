@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/02/05 23:11:47 joerg Exp $
+# $NetBSD: Makefile,v 1.56 2006/03/04 21:31:13 jlam Exp $
 #
 
 DISTNAME=	xforms-1.0-release
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ncmir.ucsd.edu/pub/xforms/OpenSource/ \
 		http://archive.cs.uu.nl/mirror/XFORMS/OpenSource/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://world.std.com/~xforms/
 COMMENT=	Graphical user interface toolkit for X Window System
 

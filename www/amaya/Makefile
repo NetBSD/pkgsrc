@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/02/26 13:52:23 schwarz Exp $
+# $NetBSD: Makefile,v 1.46 2006/03/04 21:30:55 jlam Exp $
 
 DISTNAME=	amaya-fullsrc-9.2.1
 PKGNAME=	${DISTNAME:S/-fullsrc//}
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.w3.org/Amaya/Distribution/ \
 		ftp://mirror.aarnet.edu.au/pub/amaya/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.w3.org/Amaya/
 COMMENT=	Web browser/editor from the World Wide Web Consortium (W3C)
 

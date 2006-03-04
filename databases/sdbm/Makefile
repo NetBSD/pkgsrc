@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/12/05 20:50:01 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/04 21:29:11 jlam Exp $
 #
 
 DISTNAME=		sdbm
@@ -9,7 +9,7 @@ CATEGORIES=		databases
 MASTER_SITES=		ftp://tsx-11.mit.edu/pub/linux/sources/libs/
 EXTRACT_SUFX=		.tar.Z
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Substitute DBM, an implementation of the `real' ndbm library
 
 WRKSRC=			${WRKDIR}

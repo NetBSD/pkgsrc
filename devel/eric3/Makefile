@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2006/03/02 19:42:39 drochner Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:14 jlam Exp $
 #
 
 DISTNAME=	eric-3.8.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=eric-ide/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.die-offenbachs.de/detlev/eric3.html
 COMMENT=	Python IDE
 

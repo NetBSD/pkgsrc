@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/08/06 06:19:14 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/04 21:29:25 jlam Exp $
 #
 
 DISTNAME=		Test-Pod-Coverage-1.06
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Test-Pod-Coverage/
 COMMENT=		Check for pod coverage in your distribution
 

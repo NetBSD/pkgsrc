@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2005/12/27 13:54:59 seb Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/04 21:30:45 jlam Exp $
 #
 
 DISTNAME=	bibparse-1.06
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.math.utah.edu/pub/bibparse/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.math.utah.edu/pub/bibparse/
 COMMENT=	Syntax checking tools for BibTeX bibliography databases
 

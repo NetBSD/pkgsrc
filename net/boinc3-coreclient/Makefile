@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/17 03:50:24 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/04 21:30:17 jlam Exp $
 #
 
 #DISTNAME=		boinc-3.07
@@ -9,7 +9,7 @@ CATEGORIES=		net
 #MASTER_SITES=		http://boinc.berkeley.edu/source/archive/
 MASTER_SITES=		http://boinc.berkeley.edu/source/nightly/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://boinc.berkeley.edu/
 COMMENT=		Core client for Boinc V3
 

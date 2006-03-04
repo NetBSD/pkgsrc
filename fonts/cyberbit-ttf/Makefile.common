@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2006/01/21 18:57:41 jlam Exp $
+# $NetBSD: Makefile.common,v 1.16 2006/03/04 21:29:38 jlam Exp $
 #
 
 DISTNAME=	# empty
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.riken.go.jp/pub/net/netscape/communicator/extras/fonts/w
 		ftp://ftp.tuwien.ac.at/infosys/browsers/netscape/netscape.com/communicator/extras/fonts/windows/
 DISTFILES=	${FONT_FILE} ReadMe.htm
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bitstream.com/
 
 BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2006/02/05 23:10:21 joerg Exp $
+# $NetBSD: Makefile,v 1.118 2006/03/04 21:30:16 jlam Exp $
 
 DISTNAME=	ORBit-0.5.17
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/ORBit/0.5/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	High-performance CORBA ORB with support for the C language
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:09:47 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/04 21:29:56 jlam Exp $
 #
 
 DISTNAME=	regina301
@@ -8,7 +8,7 @@ CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=regina-rexx/}
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://regina-rexx.sourceforge.net/
 COMMENT=	Implementation of the REXX language
 

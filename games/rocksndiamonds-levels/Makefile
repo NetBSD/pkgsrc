@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/02/05 23:09:22 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/04 21:29:43 jlam Exp $
 
 DISTNAME=	rocksndiamonds-levels-1.0
 PKGREVISION=	2
@@ -9,7 +9,7 @@ DISTFILES=	rockslevels-dx-1.0.tar.gz \
 		rockslevels-sp-1.0.tar.gz
 WRKSRC=		${WRKDIR}/levels
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.artsoft.org/rocksndiamonds/levels.html
 COMMENT=	DX, Emerald Mine, and Sokoban levels for Rocks'N'Diamonds
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:10:14 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/04 21:30:13 jlam Exp $
 
 DISTNAME=	postcodes
 PKGNAME=	postcodes-20040515
@@ -7,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	http://www.jibble.org/ukpostcodes/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jibble.org/
 COMMENT=	UK national postcode information
 

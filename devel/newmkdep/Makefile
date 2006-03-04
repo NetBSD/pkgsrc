@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2004/01/20 12:13:28 agc Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/04 21:29:18 jlam Exp $
 
 DISTNAME=	newmkdep-1.0
 CATEGORIES=	devel
 MASTER_SITES=	http://core.de/~tron/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Faster replacement for *BSD's "mkdep"
 
 WRKSRC=		${WRKDIR}/newmkdep

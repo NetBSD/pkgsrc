@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/01/02 23:15:49 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2006/03/04 21:30:31 jlam Exp $
 #
 
 DISTNAME=	papersize-1.0.8
@@ -6,7 +6,7 @@ CATEGORIES=	print
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Manipulate the default papersize in certain packages
 
 WRKSRC=		${WRKDIR}

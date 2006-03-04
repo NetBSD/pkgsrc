@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:10:05 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/04 21:30:09 jlam Exp $
 
 DISTNAME=	gtk2-extras-2.8.0
 PKGREVISION=	4
@@ -6,7 +6,7 @@ CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gtk.org/
 COMMENT=	Meta-package for the GIMP Toolkit v2
 

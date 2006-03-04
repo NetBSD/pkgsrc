@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:08:16 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/04 21:28:59 jlam Exp $
 
 DISTNAME=       xcdplayer-2.2
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.x.org/R5contrib/ \
 		ftp://ftp.cdrom.com/pub/X11/R5contrib/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	CD player for X
 
 NOT_FOR_PLATFORM=	Interix-*-*

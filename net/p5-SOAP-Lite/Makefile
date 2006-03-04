@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/02/05 23:10:28 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/04 21:30:22 jlam Exp $
 #
 
 DISTNAME=	SOAP-Lite-0.60a
@@ -7,7 +7,7 @@ PKGREVISION=	4
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SOAP/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://soaplite.com/
 COMMENT=	Perl5 module providing a lightweight interface to SOAP
 

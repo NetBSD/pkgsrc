@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:10:17 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/04 21:30:15 jlam Exp $
 #
 
 DISTNAME=	libmpeg3-1.3
@@ -6,7 +6,7 @@ PKGREVISION=	6
 CATEGORIES=	devel audio graphics multimedia
 MASTER_SITES=	http://heroines.sourceforge.net/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://heroines.sourceforge.net/libmpeg3.php3
 COMMENT=	MPEG decoding library
 

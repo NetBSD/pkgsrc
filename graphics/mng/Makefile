@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/02/05 23:09:35 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2006/03/04 21:29:50 jlam Exp $
 
 DISTNAME=	lm1009
 PKGNAME=	mng-1.0.9
@@ -10,7 +10,7 @@ MASTER_SITES= 	${MASTER_SITE_SOURCEFORGE:=libmng/} \
 # this is just a workaround because the 1.0.9 tar.gz is broken
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libmng.com/
 COMMENT=	Multiple-image Network Graphics (MNG) reference library
 

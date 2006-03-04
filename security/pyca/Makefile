@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:10:46 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/04 21:30:38 jlam Exp $
 
 # Date-based distfile name for pre-releases leading to 0.6.6.
 DISTNAME=	pyca-20031021
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	security python
 MASTER_SITES=	http://www.pyca.de/download/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pyca.de/
 COMMENT=	Administration tools for X.509/PKIX CA
 

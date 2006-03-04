@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/04/11 21:47:01 tv Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/04 21:30:25 jlam Exp $
 #
 
 DISTNAME=	tn5250-0.12.51
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.blarg.net/users/mmadore/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.linux-sna.org/software/5250/
 COMMENT=	Implementation of the IBM 5250 telnet protocol
 

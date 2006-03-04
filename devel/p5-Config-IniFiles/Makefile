@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/08/06 06:19:09 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/04 21:29:20 jlam Exp $
 #
 
 DISTNAME=	Config-IniFiles-2.38
@@ -8,7 +8,7 @@ PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/config-inifiles/
 COMMENT=	Perl module for reading .ini-style configuration files
 

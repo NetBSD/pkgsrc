@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:10:06 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/04 21:30:09 jlam Exp $
 #
 
 DISTNAME=		Addresses-0.4.6
@@ -6,7 +6,7 @@ PKGREVISION=		3
 CATEGORIES=		misc gnustep
 MASTER_SITES=		http://giesler.biz/bjoern/downloads/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://giesler.biz/bjoern/en/sw_addr.html
 COMMENT=		Address book for GNUstep
 

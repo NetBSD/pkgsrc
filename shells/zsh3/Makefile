@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/12/29 06:22:16 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/04 21:30:39 jlam Exp $
 #
 
 DISTNAME=       zsh-3.0.8
@@ -10,7 +10,7 @@ MASTER_SITES=   ftp://ftp.rge.com/pub/shells/zsh/old/ \
 		ftp://ftp.net.lut.ac.uk/zsh/old/ \
 		ftp://ftp.zsh.org/zsh/old/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sunsite.dk/zsh/
 COMMENT=	The Z shell
 

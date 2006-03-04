@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:08:29 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/04 21:29:07 jlam Exp $
 #
 
 DISTNAME=	yencode-0.45
@@ -7,7 +7,7 @@ PKGREVISION=	3
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=yencode/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.yencode.org/
 COMMENT=	yenc format encoder and decoder
 

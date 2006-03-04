@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/01/25 17:00:25 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2006/03/04 21:30:25 jlam Exp $
 #
 
 DISTNAME=	upclient-4.2.1.23
@@ -6,7 +6,7 @@ PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	http://uptimes.atomicvoid.net/files/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://uptimes.hostingwired.com/
 COMMENT=	Keeps track of your server uptime, and compares it to other hosts
 

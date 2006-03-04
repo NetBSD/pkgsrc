@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2005/12/29 06:21:31 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2006/03/04 21:28:59 jlam Exp $
 
 DISTNAME=		tracker-5.3
 PKGREVISION=		1
@@ -6,7 +6,7 @@ CATEGORIES=		audio
 MASTER_SITES=		# empty
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		MOD player
 
 RESTRICTED=		"No commercial redistribution"

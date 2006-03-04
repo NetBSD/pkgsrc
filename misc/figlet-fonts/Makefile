@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:10:08 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/04 21:30:11 jlam Exp $
 #
 
 DISTNAME=	figlet-fonts-20021023
@@ -7,7 +7,7 @@ CATEGORIES=	misc
 MASTER_SITES=	ftp://ftp.figlet.org/pub/figlet/fonts/
 DISTFILES=	contributed.tar.gz international.tar.gz ms-dos.tar.gz
 
-MAINTAINER=     tech-pkg@NetBSD.org
+MAINTAINER=     pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.figlet.org/
 COMMENT=	Additional fonts for figlet
 

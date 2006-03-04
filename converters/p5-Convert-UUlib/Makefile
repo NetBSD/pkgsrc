@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/08/06 06:19:05 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/03/04 21:29:06 jlam Exp $
 
 DISTNAME=		Convert-UUlib-1.051
 PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		converters perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Convert/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Convert-UUlib/
 COMMENT=		Perl5 module interface to the uulib library
 

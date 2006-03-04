@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2005/09/28 20:52:24 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/04 21:30:20 jlam Exp $
 #
 
 DISTNAME=		lft-2.2
 CATEGORIES=		net
 MASTER_SITES=		${HOMEPAGE}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mainnerve.com/lft/
 COMMENT=		Layer four traceroute capable of tracing protocol paths
 

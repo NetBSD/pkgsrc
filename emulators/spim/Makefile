@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/02/05 23:09:03 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2006/03/04 21:29:36 jlam Exp $
 
 DISTNAME=	spim-7.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	http://www.cs.wisc.edu/~larus/SPIM/ \
 		ftp://ftp.cs.wisc.edu/pub/spim/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cs.wisc.edu/~larus/spim.html
 COMMENT=	MIPS R2000 Simulator
 

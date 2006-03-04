@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/05/31 21:55:18 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2006/03/04 21:28:55 jlam Exp $
 #
 
 DISTNAME=       gsm-1.0.10
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.cs.tu-berlin.de/pub/local/kbs/tubmik/gsm/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kbs.cs.tu-berlin.de/~jutta/toast.html
 COMMENT=	Audio converter and library for converting u-law to gsm encoding
 

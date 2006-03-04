@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2006/02/05 23:09:48 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2006/03/04 21:29:56 jlam Exp $
 
 DISTNAME=		sather-1.2.1
 PKGREVISION=		6
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=sather/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/sather/
 COMMENT=		Compiler for the Sather object oriented programming language
 

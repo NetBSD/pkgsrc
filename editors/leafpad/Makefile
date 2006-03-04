@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:08:56 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/04 21:29:31 jlam Exp $
 #
 
 DISTNAME=	leafpad-0.8.4
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	editors gnome
 MASTER_SITES=	http://savannah.nongnu.org/download/leafpad/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tarot.freeshell.org/leafpad/
 COMMENT=	Simple and light text editor using GTK+
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:10:56 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/04 21:30:43 jlam Exp $
 #
 
 DISTNAME=		sformat-3.5
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.berlios.de/pub/sformat/
 
-MAINTAINER=		Andreas.Hallmann@tiscali.de,tech-pkg@NetBSD.org
+MAINTAINER=		Andreas.Hallmann@tiscali.de,pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://freshmeat.net/projects/sformat
 COMMENT=		SCSI disk maintainance, formating, and ultimative repair tool with support for NetBSD labels
 

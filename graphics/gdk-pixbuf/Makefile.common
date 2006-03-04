@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.44 2005/12/05 20:50:20 rillig Exp $
+# $NetBSD: Makefile.common,v 1.45 2006/03/04 21:29:47 jlam Exp $
 
 DISTNAME=		gdk-pixbuf-${VER}.0
 CATEGORIES=		graphics devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gdk-pixbuf/${VER}/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 
 VER=			0.22

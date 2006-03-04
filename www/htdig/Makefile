@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/01/21 18:57:42 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2006/03/04 21:30:58 jlam Exp $
 
 DISTNAME=	htdig-3.1.6
 PKGREVISION=	3
@@ -13,7 +13,7 @@ MASTER_SITES=	http://www.htdig.org/files/ \
 		http://www.opdenbrouw.nl/htdig/maindocs/files/
 EXTRACT_SUFX=	.tar.gz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://htdig.sourceforge.net/
 COMMENT=	WWW indexing and searching system
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2006/02/06 09:20:46 ghen Exp $
+# $NetBSD: Makefile,v 1.94 2006/03/04 21:30:58 jlam Exp $
 #
 
 DISTNAME=		galeon-1.3.21
@@ -7,7 +7,7 @@ CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=galeon/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://galeon.sourceforge.net/
 COMMENT=		GNOME2 Web browser based on gecko
 
