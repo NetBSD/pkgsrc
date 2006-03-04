@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.47 2006/02/12 15:24:15 xtraeme Exp $
+# $NetBSD: Makefile,v 1.48 2006/03/04 21:29:59 jlam Exp $
 
 DISTNAME=	dspam-3.6.3
 CATEGORIES=	mail
 MASTER_SITES=	http://www.nuclearelephant.com/projects/dspam/sources/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dspam.nuclearelephant.com/
 COMMENT=	Extremely scalable, statistical-hybrid anti-spam filter
 

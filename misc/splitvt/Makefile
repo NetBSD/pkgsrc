@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2005/06/17 03:50:22 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/04 21:30:13 jlam Exp $
 
 DISTNAME=		splitvt-1.6.3
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=utils/console/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Run two shells in a split window/terminal
 
 BUILD_TARGET=

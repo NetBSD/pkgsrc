@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:35 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/04 21:30:28 jlam Exp $
 
 DISTNAME=		#
 PKGNAME=		cnprint-3.30b
@@ -22,7 +22,7 @@ DISTFILES+=		cnprint330b.c \
 			cc48s.2.gz \
 			hbf.tar.gz
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.neurophys.wisc.edu/~cai/software/index.html
 COMMENT=		Print & convert CJK style text to PostScript
 

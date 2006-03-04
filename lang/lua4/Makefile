@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:46:14 tv Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/04 21:29:55 jlam Exp $
 
 DISTNAME=	lua-4.0.1
 PKGNAME=	lua4-4.01
@@ -16,7 +16,7 @@ MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/lua/ \
 		http://mirrors.sunsite.dk/lua/ \
 		http://ftp.chg.ru/pub/lang/lua/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lua.org/
 COMMENT=	Powerful light-weight language for extending applications
 

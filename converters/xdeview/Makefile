@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/02/05 23:08:29 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2006/03/04 21:29:07 jlam Exp $
 
 DISTNAME=	uudeview-0.5.20
 PKGNAME=	xdeview-0.5.20
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	converters
 MASTER_SITES=	http://www.fpx.de/fp/Software/UUDeview/download/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fpx.de/fp/Software/UUDeview/
 COMMENT=	X11 program for uu/xx/Base64/BinHex de-/encoding
 

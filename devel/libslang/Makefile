@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2006/02/05 23:08:45 joerg Exp $
+# $NetBSD: Makefile,v 1.57 2006/03/04 21:29:17 jlam Exp $
 #
 
 DISTNAME=	slang-1.4.9
@@ -14,7 +14,7 @@ MASTER_SITES=	ftp://space.mit.edu/pub/davis/slang/v1.4/ \
 		ftp://ftp.plig.org/pub/slang/v1.4/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=    	tech-pkg@NetBSD.org
+MAINTAINER=    	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.s-lang.org/
 COMMENT=	Routines for rapid alpha-numeric terminal applications development
 

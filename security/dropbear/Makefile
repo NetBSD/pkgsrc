@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:10:43 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/04 21:30:33 jlam Exp $
 
 DISTNAME=	dropbear-0.46
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://matt.ucc.asn.au/dropbear/releases/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://matt.ucc.asn.au/dropbear/dropbear.html
 COMMENT=	SSH2 server, aimed at embedded market
 

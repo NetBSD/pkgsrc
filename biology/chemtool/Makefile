@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2006/02/13 19:20:53 adam Exp $
+# $NetBSD: Makefile,v 1.30 2006/03/04 21:29:01 jlam Exp $
 
 DISTNAME=	chemtool-1.6.8
 CATEGORIES=	biology
 MASTER_SITES=	http://ruby.chemie.uni-freiburg.de/~martin/chemtool/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ruby.chemie.uni-freiburg.de/~martin/chemtool/
 COMMENT=	Program for drawing organic molecules
 

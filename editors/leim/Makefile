@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/02/05 23:08:57 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2006/03/04 21:29:31 jlam Exp $
 
 DISTNAME=	leim-${VERSION}
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 DISTFILES=	emacs-${VERSION}a${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	Libraries of Emacs Input Methods (for emacs21)
 

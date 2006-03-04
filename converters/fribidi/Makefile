@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/08/10 20:56:13 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/04 21:29:06 jlam Exp $
 #
 
 DISTNAME=		fribidi-0.10.4
@@ -7,7 +7,7 @@ CATEGORIES=		converters
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fribidi/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fribidi.sourceforge.net/
 COMMENT=		Free Implementation of the Unicode Bidirectional Algorithm
 

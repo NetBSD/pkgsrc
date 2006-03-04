@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2005/12/05 23:55:05 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/04 21:29:14 jlam Exp $
 #
 
 DISTNAME=		diffutils-2.8.1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=diffutils/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/diffutils/diffutils.html
 COMMENT=		GNU diff utilities - find the differences between files
 

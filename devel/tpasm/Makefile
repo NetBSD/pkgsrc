@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:08:54 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:30 jlam Exp $
 #
 
 DISTNAME=	tpasm1.0r
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.ct0.com/pub/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sqt.com/
 COMMENT=	Assembler for 6805, 68HC11, 6502, Surplus, 8051, Z80, PIC, and AVR
 
