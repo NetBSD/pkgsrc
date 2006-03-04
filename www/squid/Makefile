@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.169 2006/02/26 15:03:53 taca Exp $
+# $NetBSD: Makefile,v 1.170 2006/03/04 13:40:07 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE12
 PKGNAME=	squid-2.5.12
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -11,13 +11,14 @@ EXTRACT_SUFX=	.tar.bz2
 
 PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
 PATCHFILES=	squid-2.5.STABLE12-setenv.patch \
+		squid-2.5.STABLE12-REPORT.patch \
 		squid-2.5.STABLE12-SMB_BadFetch.patch \
 		squid-2.5.STABLE12-wbinfo_group.patch \
 		squid-2.5.STABLE12-asyncio_counters.patch \
 		squid-2.5.STABLE12-prctl_args.patch \
 		squid-2.5.STABLE12-irix_timezone.patch \
-		squid-2.5.STABLE12-log_206.patch \
-		squid-2.5.STABLE12-range2GB.patch \
+		squid-2.5.STABLE12-log_206-4.patch \
+		squid-2.5.STABLE12-range2GB-2.patch \
 		squid-2.5.STABLE12-empty_proxy_auth_acl.patch \
 		squid-2.5.STABLE12-ident_acl.patch \
 		squid-2.5.STABLE12-ntlm_nonpersistent.patch \
@@ -43,9 +44,6 @@ DATADIR=	${VARBASE}/squid
 
 DOCFILES=	ChangeLog RELEASENOTES.html doc/debug-sections.txt
 
-# Configuration directory location which can be overwritten by the user.
-PKG_SYSCONFSUBDIR?=	squid
-
 USE_TOOLS+=		perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q} \
@@ -68,6 +66,8 @@ EXAMPLES_FILES=	src/mime.conf.default src/squid.conf.default \
 		helpers/basic_auth/MSNT/msntauth.conf.default
 
 .include "../../mk/bsd.prefs.mk"
+
+PKG_SYSCONFSUBDIR?=	squid
 
 SQUID_USER?=	squid
 SQUID_GROUP?=	squid
@@ -120,18 +120,18 @@ post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	@cd ${WRKSRC};						\
 	for i in ${DOCFILES}; do				\
-		${INSTALL_DATA} $$i ${DOCDIR};			\
+		${INSTALL_DATA} ${i} ${DOCDIR};			\
 	done
 	@(							\
 	for FILE in ${OPTIONAL_FILES}; do			\
-	  ${TEST} ! -r ${PREFIX}/$$FILE || ${ECHO} $$FILE;	\
+	  ${TEST} ! -r ${PREFIX}/${FILE} || ${ECHO} ${FILE};	\
 	done;							\
 	cd ${WRKSRC}/errors;					\
 	for i in *; do						\
-		${TEST} -d $$i &&				\
-		(${LS} $$i/ERR_* |				\
+		${TEST} -d ${i} &&				\
+		(${LS} ${i}/ERR_* |				\
 		${SED} -e 's@^@share/squid/errors/@';		\
-		${ECHO} "@dirrm share/squid/errors/$$i");	\
+		${ECHO} "@dirrm share/squid/errors/${i}");	\
 	done; 							\
 	${ECHO} "@dirrm share/squid/errors";			\
 	cd ${WRKSRC}/icons;					\
