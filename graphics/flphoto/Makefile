@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/18 09:31:08 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/04 21:29:47 jlam Exp $
 #
 
 DISTNAME=		flphoto-1.2-source
@@ -8,7 +8,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fltk/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.easysw.com/~mike/flphoto/index.html
 COMMENT=		Image management and display program
 

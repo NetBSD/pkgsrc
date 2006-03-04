@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/08/06 06:19:39 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/04 21:31:02 jlam Exp $
 #
 
 DISTNAME=	HTTP-Request-Form-0.7
@@ -8,7 +8,7 @@ SVR4_PKGNAME=	p5htt
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Construct HTTP::Request objects for form processing
 
 DEPENDS+=       p5-libwww-[0-9]*:../../www/p5-libwww

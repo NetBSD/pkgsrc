@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/12/27 13:54:59 seb Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/04 21:30:45 jlam Exp $
 #
 
 DISTNAME=	biblook
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME}-2.9
 CATEGORIES=	textproc
 MASTER_SITES=	http://compgeom.cs.uiuc.edu/~jeffe/files/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://compgeom.cs.uiuc.edu/~jeffe/biblook.html
 COMMENT=	Indexing and searching tools for BibTeX bibliography databases
 

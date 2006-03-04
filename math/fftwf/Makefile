@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:10:01 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/04 21:30:03 jlam Exp $
 
 .if (${MACHINE_ARCH} == "powerpc")
 DISTNAME=		fftw-3.0.1-fma
@@ -11,7 +11,7 @@ CATEGORIES=		math
 MASTER_SITES=		ftp://ftp.fftw.org/pub/fftw/ \
 			http://www.fftw.org/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.fftw.org/
 COMMENT=		Collection of fast C routines to compute DFTs
 

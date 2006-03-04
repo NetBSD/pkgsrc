@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/08/06 06:19:38 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/03/04 21:31:01 jlam Exp $
 #
 
 PKGVER=			0.67
@@ -9,7 +9,7 @@ PKGREVISION=		2
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=FCGI/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.fastcgi.com/
 COMMENT=		Perl5 library for FastCGI, a fast startup alternative to CGI
 

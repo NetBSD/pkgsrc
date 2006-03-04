@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2005/11/22 22:58:02 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/04 21:29:20 jlam Exp $
 
 DISTNAME=	ExtUtils-AutoInstall-0.63
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ExtUtils/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~autrijus/ExtUtils-AutoInstall/
 COMMENT=	Lets Makefile.PL automatically install dependencies
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.21 2005/12/29 06:22:12 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/03/04 21:30:39 jlam Exp $
 
 DISTNAME=       rc-1.6
 PKGREVISION=	1
 CATEGORIES=	shells plan9
 MASTER_SITES=   http://www.star.le.ac.uk/%7Etjg/rc/release/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.star.le.ac.uk/%7Etjg/rc/
 COMMENT=	Unix incarnation of the plan9 shell
 

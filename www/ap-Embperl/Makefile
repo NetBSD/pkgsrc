@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:11:16 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/04 21:30:56 jlam Exp $
 #
 
 DISTNAME=       HTML-Embperl-1.2.0
@@ -8,7 +8,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/} \
 		ftp://ftp.dev.ecos.de/pub/perl/embperl/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://perl.apache.org/embperl/
 COMMENT=	Perl5 library for embedding perl in HTML documents
 

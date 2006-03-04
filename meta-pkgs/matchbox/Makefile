@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/05 23:10:06 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/04 21:30:09 jlam Exp $
 #
 
 DISTNAME=	matchbox-0.9.5
@@ -7,7 +7,7 @@ CATEGORIES=	meta-pkgs x11 wm
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://projects.o-hand.com/matchbox/
 COMMENT=	The Matchbox window manager environment
 

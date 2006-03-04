@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2005/12/31 00:03:24 wiz Exp $
+# $NetBSD: Makefile.common,v 1.22 2006/03/04 21:29:52 jlam Exp $
 
 CATEGORIES?=	graphics
 MASTER_SITES?=	ftp://ftp.mostang.com/pub/sane/${DISTNAME}/ \
@@ -6,7 +6,7 @@ MASTER_SITES?=	ftp://ftp.mostang.com/pub/sane/${DISTNAME}/ \
 		ftp://gd.tuwien.ac.at/hci/sane/${DISTNAME}/ \
 		ftp://ftp.informatik.uni-oldenburg.de/pub/sane/${DISTNAME}/
 
-MAINTAINER?=	tech-pkg@NetBSD.org
+MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	http://www.sane-project.org/
 
 SANE_MAJOR?=	1

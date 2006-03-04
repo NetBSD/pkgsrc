@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.80 2006/02/07 22:33:44 tron Exp $
+# $NetBSD: Makefile.common,v 1.81 2006/03/04 21:30:59 jlam Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -141,7 +141,7 @@ VENDOR_NAME=	# empty.  what should be here?
 PLIST_ARCH=
 .endif
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	http://home.netscape.com/browsers/index.html
 RESTRICTED=	"No re-distribution without agreement from Netscape"
 NO_SRC_ON_CDROM=	${RESTRICTED}

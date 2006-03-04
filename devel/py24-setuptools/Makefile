@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/21 17:23:16 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/04 21:29:29 jlam Exp $
 #
 
 DISTNAME=		setuptools-0.6a10-py2.4.egg
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://cheeseshop.python.org/packages/2.4/s/setuptools/
 EXTRACT_SUFX=		# empty
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://peak.telecommunity.com/DevCenter/setuptools
 COMMENT=		New Python packaging system
 

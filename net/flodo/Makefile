@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/13 17:51:50 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/04 21:30:18 jlam Exp $
 #
 
 DISTNAME=		flodo-v4
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://arctic.org/~dean/flodo/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://arctic.org/~dean/flodo/
 COMMENT=		Simple network flow sampling tool
 

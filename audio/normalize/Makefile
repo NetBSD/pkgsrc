@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:08:12 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/04 21:28:57 jlam Exp $
 #
 
 DISTNAME=	normalize-0.7.6
@@ -6,7 +6,7 @@ PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	http://www1.cs.columbia.edu/~cvaill/normalize/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www1.cs.columbia.edu/~cvaill/normalize/
 COMMENT=	Wave (.wav) file volume normalizer
 

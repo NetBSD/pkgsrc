@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/22 04:14:47 martti Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/04 21:31:06 jlam Exp $
 #
 
 DISTNAME=	Zippy
@@ -8,7 +8,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/michel/Products/Zippy/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/michel/Products/Zippy
 COMMENT=	Insert random 'Zippy the Pinhead' quotes into your documents
 

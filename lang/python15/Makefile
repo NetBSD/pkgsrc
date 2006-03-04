@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:27 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:55 jlam Exp $
 #
 
 DISTNAME=	py152
@@ -8,7 +8,7 @@ CATEGORIES=	lang python
 MASTER_SITES=	http://www.python.org/ftp/python/src/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/
 COMMENT=	Interpreted, interactive, object-oriented programming language
 

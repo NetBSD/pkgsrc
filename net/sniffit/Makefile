@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/06/17 03:50:28 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/03/04 21:30:24 jlam Exp $
 #
 
 DISTNAME=		sniffit.0.3.5
@@ -7,7 +7,7 @@ PKGREVISION=		2
 CATEGORIES=		net security
 MASTER_SITES=		http://reptile.rug.ac.be/~coder/sniffit/files/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://reptile.rug.ac.be/~coder/sniffit/sniffit.html
 COMMENT=		Packet sniffer program
 

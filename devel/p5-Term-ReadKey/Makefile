@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/08/06 06:19:14 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/04 21:29:24 jlam Exp $
 #
 
 VERS=		2.30
@@ -9,7 +9,7 @@ PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Term/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/TermReadKey/
 COMMENT=	Change terminal modes and perform non-blocking reads
 

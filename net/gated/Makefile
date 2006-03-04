@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/29 06:21:58 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/03/04 21:30:18 jlam Exp $
 
 DISTNAME=       gated-3-5-11
 PKGNAME=        gated-3.5.11
@@ -8,7 +8,7 @@ MASTER_SITES=	http://ftp.rge.com/pub/networking/gated/ \
 		http://www.zcu.cz/ftp/pub/security/merit/gated/ \
 		http://www.funet.fi/pub/unix/tcpip/gated/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gated.org/
 COMMENT=	Routing protocol daemon
 

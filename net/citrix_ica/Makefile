@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/02/05 23:10:23 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2006/03/04 21:30:17 jlam Exp $
 #
 
 # A default so lintpkgsrc is happy, overridden below
@@ -8,7 +8,7 @@ PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://download2.citrix.com/files/en/products/client/ica/current/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.citrix.com/products/clients/ica/technology.asp
 COMMENT=	Citrix(R) client for the Microsoft Windows Terminal Server
 

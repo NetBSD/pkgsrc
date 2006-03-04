@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/19 15:51:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/04 21:30:16 jlam Exp $
 #
 
 DISTNAME=		vls-0.5.6
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vls/0.5.6/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.videolan.org/
 COMMENT=		VideoLAN Server
 

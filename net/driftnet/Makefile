@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/02/05 23:10:23 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/03/04 21:30:18 jlam Exp $
 #
 
 DISTNAME=	driftnet-0.1.6
@@ -6,7 +6,7 @@ PKGREVISION=	6
 CATEGORIES=	net graphics
 MASTER_SITES=	http://www.ex-parrot.com/~chris/driftnet/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ex-parrot.com/~chris/driftnet/
 COMMENT=	Real-time image sniffer
 

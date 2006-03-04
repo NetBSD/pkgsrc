@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.35 2006/02/23 18:28:06 minskim Exp $
+# $NetBSD: Makefile,v 1.36 2006/03/04 21:29:16 jlam Exp $
 
 DISTNAME=	hdf5-1.6.5
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.ncsa.uiuc.edu/HDF/HDF5/hdf5-1.6.5/src/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hdf.ncsa.uiuc.edu/HDF5/
 COMMENT=	Hierarchical Data Format (new generation)
 

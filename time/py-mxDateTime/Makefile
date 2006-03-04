@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/02/05 23:11:10 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2006/03/04 21:30:53 jlam Exp $
 #
 
 DISTNAME=	egenix-mx-base-2.0.6
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	time python
 MASTER_SITES=	http://www.egenix.com/files/python/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.egenix.com/files/python/mxDateTime.html
 COMMENT=	Python extension that provides types and conversions for dates
 

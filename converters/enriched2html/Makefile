@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/10/10 17:15:09 hira Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/04 21:29:06 jlam Exp $
 #
 
 DISTNAME=	enriched2html-1.0
@@ -6,7 +6,7 @@ CATEGORIES=	converters
 MASTER_SITES=	http://www.fiction.net/blong/programs/mutt/autoview/
 DISTFILES=	enriched2html.c
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# none
 COMMENT=	Converts from text/enriched to HTML
 

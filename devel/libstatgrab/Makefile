@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/11/08 21:43:03 reed Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/04 21:29:17 jlam Exp $
 
 DISTNAME=	libstatgrab-0.12
 PKGREVISION=	1
@@ -10,7 +10,7 @@ MASTER_SITES=	ftp://ftp.uk.i-scream.org/pub/i-scream/libstatgrab/ \
 		ftp://ftp.i-scream.org/pub/i-scream/libstatgrab/ \
 		http://ftp.i-scream.org/pub/i-scream/libstatgrab/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.i-scream.org/libstatgrab/
 COMMENT=	Provides a useful interface to system statistics
 

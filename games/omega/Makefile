@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/06/16 06:57:55 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2006/03/04 21:29:43 jlam Exp $
 
 DISTNAME=	omega-0.90.4-src
 PKGNAME=	omega-0.90.4
@@ -6,7 +6,7 @@ PKGREVISION=			2
 CATEGORIES=	games
 MASTER_SITES=	http://www.alcyone.com/binaries/omega/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.alcyone.com/max/projects/omega/
 COMMENT=	Complex rogue-like game of exploration with a sense of humor
 

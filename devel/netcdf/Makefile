@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2005/04/11 21:45:28 tv Exp $
+# $NetBSD: Makefile,v 1.24 2006/03/04 21:29:18 jlam Exp $
 
 DISTNAME=	netcdf-3.6.0-p1
 PKGNAME=	netcdf-3.6.0p1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://www.gfd-dennou.org/arch/netcdf/unidata-mirror/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.unidata.ucar.edu/packages/netcdf/index.html
 COMMENT=	Library for array-oriented data access
 

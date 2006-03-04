@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/02/17 23:52:18 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2006/03/04 21:28:53 jlam Exp $
 
 DISTNAME=		rarbsd
 PKGNAME=		rar-2.02
@@ -6,7 +6,7 @@ CATEGORIES=		archivers
 MASTER_SITES=		ftp://ftp.elf.stuba.sk/pub/pc/pack/
 EXTRACT_SUFX=		.sfx
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.rarsoft.com/
 COMMENT=		File archiver (binary port)
 

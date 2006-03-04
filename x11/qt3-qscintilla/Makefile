@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:11:42 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/04 21:31:11 jlam Exp $
 #
 
 DISTNAME=		qscintilla-1.65-gpl-1.6
@@ -7,7 +7,7 @@ PKGREVISION=		2
 CATEGORIES=		x11
 MASTER_SITES=		http://www.river-bank.demon.co.uk/download/QScintilla/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.riverbankcomputing.co.uk/qscintilla/
 COMMENT=		C++ editor class
 

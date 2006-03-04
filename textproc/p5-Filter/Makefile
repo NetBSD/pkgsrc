@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/08/06 06:19:31 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/04 21:30:47 jlam Exp $
 
 DISTNAME=	Filter-1.30
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Filter/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl5 classes representing a number of source filters
 
 PERL5_PACKLIST=		auto/Filter/.packlist

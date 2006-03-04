@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.3 2005/07/27 16:21:17 wiz Exp $
+# $NetBSD: Makefile.common,v 1.4 2006/03/04 21:29:52 jlam Exp $
 
 VTK_VERSION=		4.2
 
 CATEGORIES=		graphics
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.vtk.org/
 
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vtk/}

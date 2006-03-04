@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/02/05 23:08:17 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2006/03/04 21:28:59 jlam Exp $
 
 DISTNAME=		xmix-2.1
 PKGREVISION=		2
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=apps/sound/mixers/}
 PATCH_SITES=		${MASTER_SITES}
 PATCHFILES=		xmix-2.1.mixers.patch
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Mixer for X Window System
 
 NOT_FOR_PLATFORM=	Interix-*-*

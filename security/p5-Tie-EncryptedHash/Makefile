@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/12 23:13:49 heinz Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/04 21:30:37 jlam Exp $
 #
 
 DISTNAME=		Tie-EncryptedHash-1.21
@@ -7,7 +7,7 @@ SVR4_PKGNAME=		p5teh
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Tie/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=
 COMMENT=		Perl5 module for hashes with encrypting fields
 

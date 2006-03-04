@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:11:13 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/04 21:30:54 jlam Exp $
 
 DISTNAME=	ethemes-0.1
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://themes.org/pub/themes/e/
 DISTFILES=	${E_THEMES}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://e.themes.org/
 COMMENT=	Themes for the window manager Enlightenment
 

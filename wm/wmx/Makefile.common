@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.16 2006/01/12 18:27:53 rillig Exp $
+# $NetBSD: Makefile.common,v 1.17 2006/03/04 21:30:55 jlam Exp $
 
 DISTNAME=	wmx-6
 WMX_VERS=	6.0
 CATEGORIES+=	x11 wm
 MASTER_SITES=	http://www.all-day-breakfast.com/wmx/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.all-day-breakfast.com/wmx/
 
 CONFLICTS+=	wmx-[0-9]* wmx-gnome-[0-9]*

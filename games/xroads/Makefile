@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:09:25 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/04 21:29:44 jlam Exp $
 #
 
 DISTNAME=	xroads-v0.5
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.autobahn.mb.ca/~foxtrot/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://apps.freshmeat.net/homepage/898367442/
 COMMENT=	Overhead view maze-based shoot 'em up game
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:09:10 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/04 21:29:39 jlam Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ms-ttf-20020306
@@ -9,7 +9,7 @@ DISTFILES=	andale32.exe webdin32.exe trebuc32.exe georgi32.exe \
 		verdan32.exe comic32.exe arialb32.exe impact32.exe \
 		arial32.exe times32.exe courie32.exe
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://corefonts.sourceforge.net/
 COMMENT=	TrueType fonts from Microsoft
 

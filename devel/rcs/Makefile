@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/12/05 20:50:07 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2006/03/04 21:29:29 jlam Exp $
 #
 
 DISTNAME=		rcs-5.7
@@ -6,7 +6,7 @@ PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=rcs/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/rcs/rcs.html
 COMMENT=		GNU Revision Control System - version control software
 

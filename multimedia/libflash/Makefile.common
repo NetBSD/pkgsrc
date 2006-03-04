@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/06/01 18:03:06 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2006/03/04 21:30:15 jlam Exp $
 #
 
 DISTNAME=	flash-0.4.10
@@ -6,7 +6,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	http://www.swift-tools.com/Flash/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gplflash.sourceforge.net/
 
 USE_LANGUAGES=	c c++

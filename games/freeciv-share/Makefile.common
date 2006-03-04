@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2005/11/16 16:03:50 adam Exp $
+# $NetBSD: Makefile.common,v 1.24 2006/03/04 21:29:41 jlam Exp $
 
 DISTNAME=	freeciv-${FC_VERS}
 FC_VERS=	2.0.7
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.freeciv.org/pub/freeciv/stable/ \
 		http://www.freeciv.org/ftp/beta/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freeciv.org/
 
 BUILD_USES_MSGFMT=	yes

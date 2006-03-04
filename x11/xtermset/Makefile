@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:11:49 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/04 21:31:14 jlam Exp $
 #
 
 DISTNAME=	xtermset-0.5.2
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clts/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bje.nu/apps/xtermset/
 COMMENT=	Change things like foreground color, size etc. on an xterm
 

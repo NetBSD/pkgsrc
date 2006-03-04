@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2005/01/12 15:32:01 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/04 21:30:08 jlam Exp $
 
 DISTNAME=		quadpack-20001130
 PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Fortran subroutines for the solution of definite univariate integrals
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL

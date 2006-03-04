@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:39 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/04 21:30:31 jlam Exp $
 #
 
 DISTNAME=	renderPM-0-9
@@ -8,7 +8,7 @@ CATEGORIES=	print python
 MASTER_SITES=   http://www.reportlab.com/ftp/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.reportlab.com/rl_addons.html
 COMMENT=	Pixmap rendering for reportlab
 

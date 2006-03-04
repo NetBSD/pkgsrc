@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/31 18:52:17 jschauma Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/04 21:31:02 jlam Exp $
 
 DISTNAME=      	Kwiki-Edit-RequireUserName-0.02
 PKGNAME=       	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Kwiki/JPEREGR/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kwiki.org/
 COMMENT=	Kwiki plugin to require a user name to edit
 

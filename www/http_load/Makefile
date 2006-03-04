@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/05 20:51:12 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/04 21:30:58 jlam Exp $
 
 DISTNAME=	http_load-04jan2002
 PKGNAME=	http_load-20020104
@@ -6,7 +6,7 @@ PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://www.acme.com/software/http_load/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.acme.com/software/http_load/
 COMMENT=	Multiprocessing http test client
 

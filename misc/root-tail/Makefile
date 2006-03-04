@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:10:13 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/04 21:30:12 jlam Exp $
 #
 
 DISTNAME=	root-tail-0.0.10
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	misc x11
 MASTER_SITES=	http://www.goof.com/pcg/marc/data/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://root-tail.plan9.de/
 COMMENT=	Allows printing of text directly to the X11 root window
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/02 21:03:39 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/04 21:30:00 jlam Exp $
 #
 
 DISTNAME=		gld-1.6
@@ -6,7 +6,7 @@ CATEGORIES=		mail
 MASTER_SITES=		http://www.gasmi.net/down/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gasmi.net/
 COMMENT=		Standalone greylisting server for Postfix
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:10:03 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/04 21:30:04 jlam Exp $
 #
 
 DISTNAME=		maxima-5.9.1
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=maxima/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://maxima.sourceforge.net/
 COMMENT=		Computer algebra system
 

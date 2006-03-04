@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:08:51 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/04 21:29:28 jlam Exp $
 #
 
 DISTNAME=		PQueue-0.2
@@ -8,7 +8,7 @@ CATEGORIES=		devel python
 MASTER_SITES=	http://www.csse.monash.edu.au/hons/projects/1999/Andrew.Snare/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.csse.monash.edu.au/hons/projects/1999/Andrew.Snare/
 COMMENT=		Priority-queues using fibonacci heaps
 

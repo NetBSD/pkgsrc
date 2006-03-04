@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.8 2005/06/01 18:03:30 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2006/03/04 21:31:11 jlam Exp $
 #
 
 QTVERSION=	2.3.1
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.trolltech.com/products/qt.html
 
 USE_X11BASE=	yes

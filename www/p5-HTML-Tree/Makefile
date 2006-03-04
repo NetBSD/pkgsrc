@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/01/01 23:11:38 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/03/04 21:31:02 jlam Exp $
 
 DISTNAME=		HTML-Tree-3.1901
 #PKGNAME=		p5-${DISTNAME}
@@ -7,7 +7,7 @@ SVR4_PKGNAME=		p5htr
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/HTML-Tree/
 COMMENT=		Perl5 modules for manipulating HTML syntax trees
 

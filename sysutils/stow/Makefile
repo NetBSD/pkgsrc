@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2005/07/16 19:10:40 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/04 21:30:43 jlam Exp $
 #
 
 DISTNAME=	stow-1.3.3
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_GNU:=stow/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.ai.mit.edu/software/stow/stow.html
 COMMENT=	Maps several separate packages into a tree without merging them
 

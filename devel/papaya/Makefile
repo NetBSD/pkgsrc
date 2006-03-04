@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:06 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:25 jlam Exp $
 #
 
 DISTNAME=	papaya-0.1.7
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.asahi-net.or.jp/~em7t-hmd/papaya/		\
 		${MASTER_SITE_SOURCEFORGE:=papaya-utils/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.asahi-net.or.jp/~em7t-hmd/papaya/index.html
 COMMENT=	Simple scripts for software development
 

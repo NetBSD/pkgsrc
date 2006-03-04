@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2005/08/08 18:13:13 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/03/04 21:29:04 jlam Exp $
 
 DISTNAME=	vicq-0.4.1
 PKGREVISION=	3
@@ -6,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gonzo.kiev.ua/projects/vicq/
 COMMENT=	Simple icq client written in perl
 

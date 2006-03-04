@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/08/06 06:19:10 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/03/04 21:29:20 jlam Exp $
 
 DISTNAME=	Expect-1.15
 PKGNAME=	p5-Expect-1.15
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Expect/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl version of the TCL "expect" tool
 
 DEPENDS+=	p5-IO-stty-[0-9]*:../../devel/p5-IO-Stty

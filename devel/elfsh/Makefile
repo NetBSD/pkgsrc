@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/09/26 14:19:44 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:14 jlam Exp $
 #
 
 VERS=		0.51b3
@@ -9,7 +9,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://elfsh.segfault.net/files/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://elfsh.segfault.net/
 COMMENT=	ELF format exploration shell
 

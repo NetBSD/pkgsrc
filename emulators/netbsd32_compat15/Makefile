@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/29 06:21:39 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/04 21:29:35 jlam Exp $
 #
 
 .if ${MACHINE_ARCH} == "sparc64"
@@ -12,7 +12,7 @@ PKGNAME=		netbsd32_compat15-1.0
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/Releases/formal-1.5/index.html
 COMMENT=		32-bit shared libraries for NetBSD 1.5 (and earlier) compatibility
 

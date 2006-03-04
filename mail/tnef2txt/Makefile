@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2004/12/03 15:15:03 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/04 21:30:02 jlam Exp $
 #
 
 DISTNAME=	tnef2txt-1.4
 CATEGORIES=	mail
 MASTER_SITES=	http://www.fiction.net/blong/programs/tnef2txt/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fiction.net/blong/programs/
 COMMENT=	Portable application/ms-tnef parser
 

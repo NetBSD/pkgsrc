@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/29 06:21:31 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/04 21:28:59 jlam Exp $
 #
 
 DISTNAME=		ubs-0.17
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=		audio
 MASTER_SITES=		http://aboleo.net/software/ubs/downloads/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://aboleo.net/software/ubs/
 COMMENT=		Uninterrupted Broadcasting System
 

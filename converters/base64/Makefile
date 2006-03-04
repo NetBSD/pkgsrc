@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/12/05 20:49:55 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2006/03/04 21:29:06 jlam Exp $
 #
 
 DISTNAME=	base64-1.3
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	http://www.fourmilab.ch/webtools/base64/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fourmilab.ch/webtools/base64/
 COMMENT=	Encode and decode base64 files
 

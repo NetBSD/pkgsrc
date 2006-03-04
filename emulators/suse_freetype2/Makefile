@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:09:04 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/04 21:29:36 jlam Exp $
 
 DISTNAME=		freetype2
 PKGNAME=		suse_${DISTNAME}-${SUSE_VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SUSE:=gra1/} \
 			${MASTER_SITE_SUSE_UPD:=gra1/}
 DISTFILES=		${RPMFILES}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for the FreeType2 library
 

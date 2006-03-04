@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/04/16 12:25:34 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/04 21:30:40 jlam Exp $
 #
 
 DISTNAME=	e2fsprogs-1.32
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=e2fsprogs/} \
 		ftp://tsx-11.mit.edu/pub/linux/packages/ext2fs/ \
 		ftp://ftp.gwdg.de/pub/linux/mirrors/tsx-11/packages/ext2fs/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://e2fsprogs.sourceforge.net/
 COMMENT=	Second extended file system (ext2fs) management programs
 

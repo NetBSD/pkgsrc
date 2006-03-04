@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/08/06 06:19:32 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/04 21:30:48 jlam Exp $
 #
 
 DISTNAME=	PDF-111
@@ -9,7 +9,7 @@ CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PDF/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.geocities.com/CapeCanaveral/Hangar/4794/
 COMMENT=	Perl5 module for pdf document manipulation
 

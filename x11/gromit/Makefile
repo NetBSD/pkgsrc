@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:11:34 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/04 21:31:09 jlam Exp $
 #
 
 DISTNAME=		gromit-20041213
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		x11
 MASTER_SITES=		http://www.home.unix-ag.org/simon/gromit/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.home.unix-ag.org/simon/gromit/
 COMMENT=		Text marker tool for the X11 screen
 

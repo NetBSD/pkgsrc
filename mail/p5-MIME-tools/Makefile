@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/01/03 18:24:14 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2006/03/04 21:30:01 jlam Exp $
 #
 
 DISTNAME=	MIME-tools-5.419
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5mit
 CATEGORIES=	perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MIME/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/MIME-tools/
 COMMENT=	Perl5 modules for encoding and decoding MIME messages
 

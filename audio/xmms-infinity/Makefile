@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:08:18 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/04 21:29:00 jlam Exp $
 #
 
 DISTNAME=	infinity-0.2
@@ -7,7 +7,7 @@ PKGREVISION=	8
 CATEGORIES=	xmms audio
 MASTER_SITES=	http://julien.carme.free.fr/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://julien.carme.free.fr/infinite.html
 COMMENT=	Psychedelic visualization plug-in for xmms
 

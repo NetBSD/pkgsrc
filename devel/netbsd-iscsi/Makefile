@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2006/02/19 21:30:30 agc Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/04 21:29:18 jlam Exp $
 
 DISTNAME=	netbsd-iscsi-20060219
 CATEGORIES=	devel
 MASTER_SITES=	http://www.alistaircrooks.co.uk/src/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.alistaircrooks.co.uk/software.html
 COMMENT=	iSCSI target (per iSCSI RFC 3720)
 

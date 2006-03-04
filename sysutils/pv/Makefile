@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:10:56 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/04 21:30:42 jlam Exp $
 #
 
 DISTNAME=		pv-0.8.6
@@ -7,7 +7,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		http://www.ivarch.com/programs/sources/
 MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=pipeviewer/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ivarch.com/programs/pv.shtml
 COMMENT=		Monitor the progress of data through a pipeline
 

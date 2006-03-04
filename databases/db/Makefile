@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/12/05 20:49:56 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2006/03/04 21:29:07 jlam Exp $
 
 DISTNAME=	db-2.7.7
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.sleepycat.com/update/snapshot/ \
 		ftp://ftp.cdrom.com/pub/perl/CPAN/src/misc/ \
 		ftp://ftp.gwdg.de/pub/languages/perl/CPAN/src/misc/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sleepycat.com/
 COMMENT=	Sleepycat Software's Berkeley DB version 2
 

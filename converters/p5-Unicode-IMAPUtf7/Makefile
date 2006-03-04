@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/08/06 06:19:05 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/04 21:29:06 jlam Exp $
 #
 
 DISTNAME=	Unicode-IMAPUtf7-2.00
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	converters mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Unicode/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cpan.uwinnipeg.ca/module/Unicode::IMAPUtf7
 COMMENT=	Perl extension to deal with IMAP UTF7
 

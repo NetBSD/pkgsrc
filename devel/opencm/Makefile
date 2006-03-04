@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/02/28 17:42:11 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2006/03/04 21:29:18 jlam Exp $
 #
 
 DISTNAME=	${OPENCM_VERSION}-2-src
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.opencm.org/releases/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.opencm.org/
 COMMENT=	Secure, high-integrity replacement for CVS
 
