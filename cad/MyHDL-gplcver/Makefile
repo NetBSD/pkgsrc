@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/10 16:40:02 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/04 21:29:01 jlam Exp $
 #
 
 DISTNAME=	myhdl-0.5
@@ -6,7 +6,7 @@ PKGNAME=	MyHDL-gplcver-0.5
 CATEGORIES=	cad python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=myhdl/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jandecaluwe.com/Tools/MyHDL/Overview.html
 COMMENT=	GPL Cver cosimulation support for py-MyHDL
 

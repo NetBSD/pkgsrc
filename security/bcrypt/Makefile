@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/09/03 22:45:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/04 21:30:33 jlam Exp $
 #
 
 DISTNAME=	bcrypt-1.1
 CATEGORIES=	security
 MASTER_SITES=	http://bcrypt.sourceforge.net/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bcrypt.sourceforge.net/
 COMMENT=	Cross platform file encryption utility
 

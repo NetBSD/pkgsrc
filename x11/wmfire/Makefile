@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/02/05 23:11:44 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2006/03/04 21:31:12 jlam Exp $
 #
 
 DISTNAME=	wmfire-0.0.3.9pre4
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://staff.xmms.org/zinx/misc/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Displays generated fire according to system load
 
 GNU_CONFIGURE=	YES

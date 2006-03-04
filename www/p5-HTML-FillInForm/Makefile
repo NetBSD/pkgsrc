@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2005/08/06 06:19:38 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/04 21:31:01 jlam Exp $
 
 DISTNAME=	HTML-FillInForm-1.04
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/HTML-FillInForm/
 COMMENT=	Perl5 module that populates HTML Forms with CGI data
 

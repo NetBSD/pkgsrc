@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/08/06 06:19:09 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/03/04 21:29:20 jlam Exp $
 #
 
 DISTNAME=     	Date-Calc-5.4
@@ -8,7 +8,7 @@ PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Date/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.engelschall.com/u/sb/download/
 COMMENT=	Perl5 module for Gregorian calendar date calculations
 

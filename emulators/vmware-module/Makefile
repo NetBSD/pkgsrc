@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/01/04 04:29:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2006/03/04 21:29:37 jlam Exp $
 
 DISTNAME=	vmware-netbsd-1.2
 PKGNAME=	vmware-module-1.2
@@ -6,7 +6,7 @@ CATEGORIES=	emulators
 MASTER_SITES=   ftp://ftp.NetBSD.org/pub/NetBSD/misc/vmware/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.wasabisystems.com/
 COMMENT=	Kernel modules for the VMware 2.x emulator
 

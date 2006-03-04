@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/02/05 23:09:44 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2006/03/04 21:29:53 jlam Exp $
 #
 
 DISTNAME=		plt-${DRSCHEME_VERSION}-src-unix
@@ -17,7 +17,7 @@ DOCFILES=		mred-doc.plt framework-doc.plt tools-doc.plt tex2page-doc.plt
 EXTRACT_SUFX=		.tgz
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.drscheme.org/
 COMMENT=		R4RS-compliant and nearly R5RS-compliant scheme tailored for teaching
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2006/02/15 19:50:52 drochner Exp $
+# $NetBSD: Makefile.common,v 1.8 2006/03/04 21:29:11 jlam Exp $
 
 DISTNAME=	sqlite-3.3.4
 PKGNAME=	${DISTNAME:S/-/3-/}
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	http://www.hwaci.com/sw/sqlite/ \
 		http://www.sqlite.org/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.hwaci.com/sw/sqlite/
 COMMENT=	SQL Database Engine in a C Library
 

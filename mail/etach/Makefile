@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:09:54 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/04 21:30:00 jlam Exp $
 
 DISTNAME=		etach-1.2.9
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://rulnick.com/etach/download/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://rulnick.com/etach/
 COMMENT=		Emacs Lisp package for dealing with MIME email attachments
 

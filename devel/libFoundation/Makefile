@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:08:44 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/04 21:29:16 jlam Exp $
 #
 
 DISTNAME=	libFoundation-1.0.72-r107
@@ -8,7 +8,7 @@ CATEGORIES=	devel gnustep
 MASTER_SITES=	ftp://ftp.opengroupware.org/sources/releases/		\
 		http://www.opengroupware.org/sources/releases/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.opengroupware.org/en/devs/thirdparty/libFoundation/
 COMMENT=	Library implementing the OpenStep Foundation API
 

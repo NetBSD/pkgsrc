@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2006/02/05 23:09:11 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2006/03/04 21:29:40 jlam Exp $
 
 DISTNAME=	t1lib-5.1.0
 PKGREVISION=	5
 CATEGORIES=	fonts devel graphics
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=libs/graphics/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Library for generating bitmaps from Adobe Type 1 fonts
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
