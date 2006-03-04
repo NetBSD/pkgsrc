@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/04/11 21:45:05 tv Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/04 21:29:04 jlam Exp $
 #
 
 DISTNAME=	tirc-1.2
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.mayn.de/pub/unix/network/irc/tirc/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://home.mayn.de/jean-luc/alt/tirc/
 COMMENT=	Token's 'Internet Relay Chat' Client
 

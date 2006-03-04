@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:09:04 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/04 21:29:37 jlam Exp $
 
 DISTNAME=		libtiff
 PKGNAME=		suse_${DISTNAME}-${SUSE_VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE:=gra1/}
 EXTRACT_SUFX=		.rpm
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for the TIFF library
 

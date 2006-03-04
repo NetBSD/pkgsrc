@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2006/01/13 22:15:38 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/04 21:29:55 jlam Exp $
 
 DISTNAME=	objc-3.2.6
 CATEGORIES=	lang
 MASTER_SITES=	http://users.pandora.be/stes/
 DISTFILES=	${DIST_BS}${EXTRACT_SUFX} ${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://users.pandora.be/stes/compiler.html
 COMMENT=	Portable Object Compiler
 

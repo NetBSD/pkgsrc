@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/06/16 06:57:58 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/04 21:29:47 jlam Exp $
 #
 
 DISTNAME=	sgif1122
@@ -7,7 +7,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.fokus.gmd.de/pub/Linux/woven/html/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ion.le.ac.uk/~mar5/giftrans.html
 COMMENT=	Manipulate GIF89a images' transparency, comment and other data
 

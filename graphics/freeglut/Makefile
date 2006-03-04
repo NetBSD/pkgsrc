@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:09:30 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/04 21:29:47 jlam Exp $
 #
 
 DISTNAME=	freeglut-2.2.0
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freeglut/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://freeglut.sourceforge.net/
 COMMENT=	Alternative to the OpenGL Utility Toolkit (GLUT) library
 

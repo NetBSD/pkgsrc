@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/01/12 13:28:57 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/04 21:30:16 jlam Exp $
 
 DISTNAME=	batchftp102
 PKGNAME=	batchftp-1.02
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/network/batchftp/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Automatically download files via the FTP protocol
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

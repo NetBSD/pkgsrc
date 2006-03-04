@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/05 20:50:15 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/04 21:29:40 jlam Exp $
 
 DISTNAME=		colchess
 PKGNAME=		${DISTNAME}-7.0
@@ -6,7 +6,7 @@ CATEGORIES=		games
 MASTER_SITES=		http://www.ast.cam.ac.uk/~cmf/chess/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ast.cam.ac.uk/~cmf/chess/colchess/
 COMMENT=		Chess analysis engine
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/02/05 23:08:10 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2006/03/04 21:28:56 jlam Exp $
 #
 
 DISTNAME=	icecast-1.3.12
@@ -6,7 +6,7 @@ PKGREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	http://www.icecast.org/releases/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.icecast.org/
 COMMENT=	Internet broadcasting system using Mpeg Layer III streaming
 

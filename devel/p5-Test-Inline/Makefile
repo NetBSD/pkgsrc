@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/11/24 18:51:51 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/04 21:29:24 jlam Exp $
 
 DISTNAME=		Test-Inline-2.103
 PKGNAME=		p5-${DISTNAME}
@@ -6,7 +6,7 @@ SVR4_PKGNAME=		p5tin
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Test-Inline/
 COMMENT=		Inlining your tests next to the code being tested
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/02/05 23:08:59 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2006/03/04 21:29:33 jlam Exp $
 
 DISTNAME=		vile-9.5
 PKGNAME=		xvile-9.5
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://dickey.his.com/vile/ \
 			ftp://invisible-island.net/vile/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://dickey.his.com/vile/vile.html
 COMMENT=		VI Like Emacs, X11 version -- a fully "X aware" vi work-alike
 

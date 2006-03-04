@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2006/02/16 18:10:42 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/04 21:31:08 jlam Exp $
 
 DISTNAME=		control-center-1.4.0.5
 PKGREVISION=		2
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/control-center/1.4/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME control-center development library
 

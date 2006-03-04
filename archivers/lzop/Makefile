@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/04/11 21:44:49 tv Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/04 21:28:53 jlam Exp $
 #
 
 DISTNAME=	lzop-1.01
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.lzop.org/download/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.oberhumer.com/opensource/lzop/
 COMMENT=	Fast file compressor similar to gzip, using the LZO library
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/05 23:09:26 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/04 21:29:45 jlam Exp $
 #
 
 DISTNAME=		xrmap-2.29
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		geography
 DISTFILES=		# empty
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://frmas.free.fr/li_1.htm
 COMMENT=		Earth map viewer - complete
 

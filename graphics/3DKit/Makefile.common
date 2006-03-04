@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2006/01/12 18:10:03 rillig Exp $
+# $NetBSD: Makefile.common,v 1.11 2006/03/04 21:29:45 jlam Exp $
 #
 
 DISTNAME=	3DKit-0.3.1r2
@@ -6,7 +6,7 @@ CATEGORIES?=	graphics gnustep
 MASTER_SITES=	http://www.gnu.org/software/gnu3dkit/
 DIST_SUBDIR=	3DKit
 
-MAINTAINER?=	tech-pkg@NetBSD.org
+MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE?=	http://www.gnu.org/software/gnu3dkit/gnu3dkit.html
 
 DISTINFO_FILE?= ${.CURDIR}/../../graphics/3DKit/distinfo

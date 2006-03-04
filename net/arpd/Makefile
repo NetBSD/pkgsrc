@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/11/08 15:41:20 tv Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/04 21:30:16 jlam Exp $
 #
 
 DISTNAME=	arpd
@@ -6,7 +6,7 @@ PKGNAME=	arpd-1.0
 CATEGORIES=	net
 MASTER_SITES=	ftp://subzero.campus.luth.se/pub/arpd/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	ARP daemon
 
 NOT_FOR_PLATFORM=	Interix-*-* # does not have bpf(4) device

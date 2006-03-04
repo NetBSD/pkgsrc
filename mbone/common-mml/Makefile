@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/06/01 18:23:37 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/04 21:30:09 jlam Exp $
 #
 
 DISTNAME=	common-1.2.0
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	mbone
 MASTER_SITES=	http://www-mice.cs.ucl.ac.uk/multimedia/software/common/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/common/index.html
 COMMENT=	Common multimedia library required by mbone tools
 
