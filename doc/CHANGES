@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13172 2006/03/04 13:42:04 taca Exp $
+$NetBSD: CHANGES,v 1.13173 2006/03/04 15:58:58 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1332,3 +1332,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/libprelude to 0.9.6.1 [shannonjr 2006-03-04]
 	Updated security/libpreludedb to 0.9.5.1 [shannonjr 2006-03-04]
 	Updated www/squid to 2.5.12nb6 [taca 2006-03-04]
+	Updated security/jessie to 1.0.1 [tonio 2006-03-04]
