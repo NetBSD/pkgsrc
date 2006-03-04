@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13170 2006/03/04 09:10:32 xtraeme Exp $
+$NetBSD: CHANGES,v 1.13171 2006/03/04 12:40:12 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1329,3 +1329,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/irssi to 0.8.10a [wiz 2006-03-04]
 	Updated devel/mercurial to 0.8nb1 [wiz 2006-03-04]
 	Updated mail/sylpheed to 2.2.2 [xtraeme 2006-03-04]
+	Updated security/libprelude to 0.9.6.1 [shannonjr 2006-03-04]
+	Updated security/libpreludedb to 0.9.5.1 [shannonjr 2006-03-04]
