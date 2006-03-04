@@ -1,7 +1,9 @@
-# $NetBSD: Makefile.common,v 1.4 2006/01/17 21:45:52 veego Exp $
+# $NetBSD: Makefile.common,v 1.5 2006/03/04 06:34:13 wiz Exp $
 
 # Specific distribution information.
-IRSSI_VERSION=		0.8.10
+IRSSI_VERSION=		0.8.10a
+# nevertheless, inside the tarball it is still 0.8.10
+WRKSRC=			${WRKDIR}/irssi-0.8.10
 IRSSI_DISTNAME=		irssi-${IRSSI_VERSION}
 IRSSI_EXTRACT_SUFX=	.tar.bz2
 IRSSI_DISTFILE=		${IRSSI_DISTNAME}${IRSSI_EXTRACT_SUFX}

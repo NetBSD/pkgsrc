@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.2 2006/01/17 21:45:52 veego Exp $
+$NetBSD: patch-af,v 1.3 2006/03/04 06:34:13 wiz Exp $
 
---- configure.orig	2005-12-11 11:45:39.000000000 +0200
+--- configure.orig	2005-12-11 23:46:06.000000000 +0100
 +++ configure
-@@ -25371,7 +25371,7 @@
+@@ -23854,7 +23854,7 @@ echo "$as_me: error: error compiling tes
     { (exit 1); exit 1; }; }
  fi
  

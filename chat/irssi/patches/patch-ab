@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2006/01/17 21:45:52 veego Exp $
+$NetBSD: patch-ab,v 1.6 2006/03/04 06:34:13 wiz Exp $
 
---- Makefile.in.orig	2005-12-11 10:45:48.000000000 +0100
-+++ Makefile.in	2005-12-12 19:03:38.000000000 +0100
-@@ -254,7 +254,7 @@
- target_alias = @target_alias@
- @BUILD_PLUGINS_TRUE@PLUGINS = plugins
+--- Makefile.in.orig	2005-12-11 23:47:21.000000000 +0100
++++ Makefile.in
+@@ -129,7 +129,7 @@ sedpath = @sedpath@
+ 
  SUBDIRS = src docs scripts
+ 
 -confdir = $(sysconfdir)
 +confdir = $(datadir)/examples/@PACKAGE@
  conf_DATA = irssi.conf
+ 
  themedir = $(datadir)/irssi/themes
- theme_DATA = default.theme colorless.theme
