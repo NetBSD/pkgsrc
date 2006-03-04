@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2006/02/05 23:10:16 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/04 21:30:15 jlam Exp $
 
 DISTNAME=	libdvdread-0.9.5
 PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.dtek.chalmers.se/groups/dvd/dist/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dtek.chalmers.se/groups/dvd/
 COMMENT=	DVD access library, primarily used in Ogle
 

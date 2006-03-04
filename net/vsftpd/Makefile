@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/01/30 18:07:06 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2006/03/04 21:30:25 jlam Exp $
 #
 
 DISTNAME=	vsftpd-2.0.4
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://vsftpd.beasts.org/users/cevans/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://vsftpd.beasts.org/
 COMMENT=	FTP server that aims to be very secure
 

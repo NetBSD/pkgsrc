@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2005/10/31 15:47:05 tv Exp $
+# $NetBSD: Makefile,v 1.18 2006/03/04 21:28:57 jlam Exp $
 
 DISTNAME=       maplay1_2
 PKGNAME=	maplay-1.2
@@ -7,7 +7,7 @@ CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.cs.tu-berlin.de/pub/misc/maplay1.2/
 EXTRACT_SUFX=	.tar
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	MPEG audio player/decoder for layer I and II MPEG audio streams
 
 WRKSRC=		${WRKDIR}

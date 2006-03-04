@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/02/05 23:10:06 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2006/03/04 21:30:10 jlam Exp $
 
 DISTNAME=       ast54unx
 PKGNAME=        astrolog-5.40
@@ -9,7 +9,7 @@ MASTER_SITES=   http://www.astrolog.org/ftp/ephem/ \
 		ftp://ftp.kiarchive.ru/pub/unix/magick/astrology/astrolog/
 DISTFILES=      ${DISTNAME}.shr ${EPHEM}
 
-MAINTAINER=     tech-pkg@NetBSD.org
+MAINTAINER=     pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.astrolog.org/
 COMMENT=	Astrology program for X11 and alpha-numeric terminals
 

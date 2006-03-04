@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/02/05 23:09:30 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2006/03/04 21:29:47 jlam Exp $
 
 DISTNAME=		freetype-${FT_VERS}
 FT_VERS=		1.3.1
@@ -7,7 +7,7 @@ CATEGORIES=		graphics meta-pkgs textproc
 MASTER_SITES=		#
 DISTFILES=		#
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.freetype.org/
 COMMENT=		FreeType libraries and utilities
 

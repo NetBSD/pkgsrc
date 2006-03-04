@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:08:13 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/04 21:28:58 jlam Exp $
 
 DISTNAME=	rsynth-2.0
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://svr-ftp.eng.cam.ac.uk/pub/comp.speech/synthesis/ \
 		ftp://svr-ftp.eng.cam.ac.uk/pub/comp.speech/dictionaries/cmudict/
 DISTFILES=	rsynth-2.0.tar.gz ${DICT_FILES}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	ftp://svr-ftp.eng.cam.ac.uk/pub/comp.speech/FAQ-complete
 COMMENT=	Public Domain Speech Synthesis System
 

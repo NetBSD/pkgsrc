@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:10:36 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/04 21:30:28 jlam Exp $
 
 DISTNAME=	ghostscript-${GS_VERS}
 PKGNAME=	ghostscript-gnu-${GS_VERS}
@@ -9,7 +9,7 @@ MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=ghostscript/} \
 		ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/gnu/gs${GS_VERS:S/.//}/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	GNU Postscript interpreter with all drivers
 HOMEPAGE=	http://www.cs.wisc.edu/~ghost/index.html
 

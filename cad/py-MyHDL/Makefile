@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/02/10 16:06:46 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/04 21:29:02 jlam Exp $
 #
 
 DISTNAME=	myhdl-0.5
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-MyHDL-0.5
 CATEGORIES=	cad python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=myhdl/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jandecaluwe.com/Tools/MyHDL/Overview.html
 COMMENT=	Hardware description in Python
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:11:05 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/04 21:30:50 jlam Exp $
 
 DISTNAME=	XML-UM-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ PKGREVISION=	4
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TJ/TJMATHER/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-UM-0.01/
 COMMENT=	Convert UTF-8 strings to any encoding supported by XML::Encoding
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2005/10/04 17:45:22 reed Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/04 21:29:15 jlam Exp $
 
 DISTNAME=		flex-2.5.4a
 CATEGORIES=		lang
 MASTER_SITES=   	${MASTER_SITE_GNU:=non-gnu/flex/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/flex/
 COMMENT=		Fast clone of lex(1), the lexical scanner generator
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:08:41 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/04 21:29:14 jlam Exp $
 #
 
 DISTNAME=	DevIL-1.6.6
@@ -7,7 +7,7 @@ PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openil/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openil.sourceforge.net/
 COMMENT=	Developer's Image Library
 

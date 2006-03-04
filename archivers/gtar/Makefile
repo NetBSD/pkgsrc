@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/02/05 23:08:04 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2006/03/04 21:28:52 jlam Exp $
 
 DISTNAME=	gtar-1.15.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/tar/tar.html
 COMMENT=	The "meta-package" for the GNU tape archiver (tar)
 

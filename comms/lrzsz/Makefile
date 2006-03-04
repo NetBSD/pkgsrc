@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2005/12/27 18:07:21 reed Exp $
+# $NetBSD: Makefile,v 1.24 2006/03/04 21:29:05 jlam Exp $
 
 DISTNAME=	lrzsz-0.12.20
 CATEGORIES=	comms
 MASTER_SITES=	http://www.ohse.de/uwe/releases/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ohse.de/uwe/software/lrzsz.html
 COMMENT=	Receive/Send files via X/Y/ZMODEM protocol.  (unrestrictive)
 

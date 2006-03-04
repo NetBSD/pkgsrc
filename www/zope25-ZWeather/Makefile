@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2003/07/22 04:14:47 martti Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/04 21:31:06 jlam Exp $
 
 DISTNAME=	ZWeather-0_0_1
 PKGREVISION=	1
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.zope.org/Members/TheJester/ZWeather/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/TheJester/ZWeather
 COMMENT=	Display the weather in a pleasant format
 

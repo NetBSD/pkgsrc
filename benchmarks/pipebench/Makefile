@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2005/09/03 06:57:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/04 21:29:01 jlam Exp $
 #
 
 DISTNAME=	pipebench-0.40
 CATEGORIES=	benchmarks
 MASTER_SITES=	ftp://ftp.habets.pp.se/pub/synscan/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.habets.pp.se/synscan/programs.php?prog=pipebench
 COMMENT=	Measures the speed of a pipe
 

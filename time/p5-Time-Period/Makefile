@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/08/06 06:19:35 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/04 21:30:53 jlam Exp $
 
 DISTNAME=      	Period-1.20
 PKGNAME=	p5-Time-${DISTNAME}
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	devel perl5 time
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/P/PR/PRYAN/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl5 module to deal with time periods
 
 PERL5_PACKLIST=		auto/Time/Period/.packlist

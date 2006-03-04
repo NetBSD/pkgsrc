@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/29 06:22:05 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/04 21:30:26 jlam Exp $
 #
 
 DISTNAME=	DQS-3.3.2
@@ -8,7 +8,7 @@ CATEGORIES=	parallel
 MASTER_SITES=	http://www.go.dlr.de/fresh/unix/src/misc/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.scri.fsu.edu/~pasko/dqs.html
 COMMENT=	Distributed queueing system
 

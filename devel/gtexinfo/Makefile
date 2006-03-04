@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2006/02/11 01:07:54 joerg Exp $
+# $NetBSD: Makefile,v 1.63 2006/03/04 21:29:15 jlam Exp $
 
 DISTNAME=		texinfo-4.8
 PKGNAME=		g${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		devel sysutils
 MASTER_SITES=		${MASTER_SITE_GNU:=texinfo/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/texinfo/texinfo.html
 COMMENT=		GNU info documentation utilities
 

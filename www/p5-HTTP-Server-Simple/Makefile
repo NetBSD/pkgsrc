@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/07 21:37:45 seb Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/04 21:31:02 jlam Exp $
 #
 
 DISTNAME=	HTTP-Server-Simple-0.17
@@ -7,7 +7,7 @@ SVR4_PKGNAME=	p5hss
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/HTTP-Server-Simple/
 COMMENT=	Perl5 module providing a simple standalone HTTP daemon
 
