@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:07 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:29 jlam Exp $
 
 DISTNAME=		stl
 PKGNAME=		sgi-stl-3.3
 CATEGORIES=		devel
 MASTER_SITES=		http://www.sgi.com/tech/stl/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.sgi.com/tech/stl/
 COMMENT=		SGI Standard Template Library
 

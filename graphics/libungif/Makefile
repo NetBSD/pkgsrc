@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.37 2006/02/01 07:10:03 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2006/03/04 21:29:50 jlam Exp $
 
 DISTNAME=	libungif-4.1.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libungif/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libungif.sourceforge.net/
 COMMENT=	Tools and library routines for working with GIF images
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:58 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/04 21:29:47 jlam Exp $
 #
 
 DISTNAME=	gif320-3.3
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.maths.tcd.ie/pub/sboyle/
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	GIF file viewer for use with VT-320 terminals
 
 BUILD_TARGET=	# empty

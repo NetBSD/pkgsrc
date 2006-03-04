@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/18 22:08:50 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/04 21:29:53 jlam Exp $
 
 DISTNAME=	skkfep0.86c
 PKGNAME=	skkfep-0.86c
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	ftp://ei5nazha.yz.yamagata-u.ac.jp/skkfep/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ei5nazha.yz.yamagata-u.ac.jp/~aito/aito-soft.html
 COMMENT=	Terminal based SKK-like Kana-to-Kanji FrontEnd Processor
 

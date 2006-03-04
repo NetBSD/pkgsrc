@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:10:14 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/04 21:30:13 jlam Exp $
 
 DISTNAME=	xtide-2.4
 PKGREVISION=	4
@@ -6,7 +6,7 @@ CATEGORIES= 	misc x11
 MASTER_SITES=	ftp://ftp.flaterco.com/xtide/
 DISTFILES=	${XTIDE_SRC} harmonics.txt.gz offsets.xml.gz
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.flaterco.com/
 COMMENT=	X11 tide predictor
 

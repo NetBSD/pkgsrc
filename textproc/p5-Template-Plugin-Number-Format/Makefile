@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/04 13:42:10 mjl Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/04 21:30:48 jlam Exp $
 #
 
 DISTNAME=	Template-Plugin-Number-Format-1.01
@@ -6,7 +6,7 @@ PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/search?module=Number::Format
 COMMENT=	Plugin/filter interface to Number::Format
 

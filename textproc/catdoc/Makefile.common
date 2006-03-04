@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.5 2005/04/11 21:47:33 tv Exp $
+# $NetBSD: Makefile.common,v 1.6 2006/03/04 21:30:45 jlam Exp $
 #
 
 DISTNAME=	catdoc-0.91.4
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.go.dlr.de/fresh/unix/src/misc/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.45.free.net/~vitus/ice/catdoc/
 COMMENT=	Reads MS-Word file and puts out its content as plain text
 

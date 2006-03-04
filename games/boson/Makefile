@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/02/05 23:09:13 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/03/04 21:29:40 jlam Exp $
 #
 
 DISTNAME=		boson-all-0.8
@@ -8,7 +8,7 @@ CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=boson/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://boson.eu.org/
 COMMENT=		OpenGL real-time strategy game for KDE 3
 

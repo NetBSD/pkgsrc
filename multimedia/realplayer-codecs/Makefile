@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/10/02 15:35:33 recht Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/04 21:30:15 jlam Exp $
 #
 
 DISTNAME=	rp8codecs${RP_ARCH}-20050115
@@ -14,7 +14,7 @@ EXTRACT_SUFX=	.tar.bz2
 # for easier 'make mdi'
 #DISTFILES=	rp8codecs-20040626.tar.bz2 rp8codecs-ppc-20050115.tar.bz2 rp8codecs-alpha-20050115.tar.bz2
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mplayerhq.hu/MPlayer/releases/codecs/
 COMMENT=	RealPlayer 8 shared libraries, primarily for use with MPlayer
 

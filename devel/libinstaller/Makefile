@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/12 15:24:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/04 21:29:17 jlam Exp $
 #
 
 DISTNAME=	libinstaller-4.0
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.bsdinstaller.org/distfiles/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bsdinstaller.org/
 COMMENT=	Library of support functions for the BSD Installer application
 

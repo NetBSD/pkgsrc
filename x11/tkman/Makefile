@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.40 2006/03/03 04:03:28 minskim Exp $
+# $NetBSD: Makefile,v 1.41 2006/03/04 21:31:11 jlam Exp $
 
 DISTNAME=		tkman-2.2
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tkman/}
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://tkman.sourceforge.net/
 COMMENT=		Tcl/Tk based manual browser
 

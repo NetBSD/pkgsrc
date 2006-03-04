@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:11 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:34 jlam Exp $
 #
 
 DISTNAME=		doscmd-19960502-2
@@ -6,7 +6,7 @@ PKGNAME=		doscmd-19960502.2
 CATEGORIES=		emulators
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/arch/i386/doscmd/
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		MS-DOS emulator (NetBSD/i386 only)
 
 # mmap() portability (no MAP_FIXED), and objcopy problems on NetBSD-1.6-i386 and later

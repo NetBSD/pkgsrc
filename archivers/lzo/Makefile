@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/10/21 22:36:21 cube Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/04 21:28:53 jlam Exp $
 #
 
 DISTNAME=	lzo-2.02
@@ -6,7 +6,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	http://ftp.uni-koeln.de/util/arc/ \
 		http://www.oberhumer.com/opensource/lzo/download/
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.oberhumer.com/opensource/lzo/
 COMMENT=	Portable lossless data compression library
 
