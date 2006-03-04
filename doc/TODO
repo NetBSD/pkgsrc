@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4686 2006/03/04 06:34:50 wiz Exp $
+$NetBSD: TODO,v 1.4687 2006/03/04 09:10:32 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1128,7 +1128,6 @@ Suggested package updates
 	o swi-prolog-5.5.33
 	o sylpheed-claws-2.0.0
 	o sylpheed-claws-ghostscript-viewer-0.8
-	o sylpheed-devel-2.2.0rc0
 	o sympa-5.1
 	o sysinfo-4.2.2
 	o tcl-postgresql74-7.4.12
