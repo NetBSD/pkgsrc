@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:10:44 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/04 15:57:32 tonio Exp $
 #
 
-DISTNAME=		jessie-0.9.7
-PKGREVISION=		1
+DISTNAME=		jessie-1.0.1
 CATEGORIES=		security
 MASTER_SITES=		http://syzygy.metastatic.org/jessie/
 
@@ -21,6 +20,7 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--with-java-prefix=${PKG_JAVA_HOME:Q}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/lib/java/jessie
+CONFIGURE_ARGS+=	--disable-provider-only
 CONFIGURE_ENV+=		JAVA=${PKG_JAVA_HOME}/bin/java
 CONFIGURE_ENV+=		JAVAC=${PKG_JAVA_HOME}/bin/javac
 
@@ -30,6 +30,6 @@ PKG_JVMS_ACCEPTED=	kaffe
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
 
-CLASSPATH!=		${ECHO} ${LOCALBASE}/lib/java/gnu-crypto/*.jar | ${TR} ' ' :
+CLASSPATH!=		${ECHO} . ${LOCALBASE}/lib/java/gnu-crypto/*.jar | ${TR} ' ' :
 CONFIGURE_ENV+=		CLASSPATH=${CLASSPATH:Q}
 MAKE_ENV+=		CLASSPATH=${CLASSPATH:Q}
