@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4687 2006/03/04 09:10:32 xtraeme Exp $
+$NetBSD: TODO,v 1.4688 2006/03/04 15:58:59 tonio Exp $
 
 Suggested new packages
 ======================
@@ -634,7 +634,6 @@ Suggested package updates
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.4
 	o java-lang-spec-3.0
-	o jessie-1.0.1
 	o jftpgw-0.13.5
 	o jgrasp-183
 	o jigdo-0.7.2
