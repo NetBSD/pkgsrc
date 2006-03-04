@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.56 2006/02/16 11:19:17 abs Exp $
+# $NetBSD: bsd.sites.mk,v 1.57 2006/03/04 00:04:38 rh Exp $
 #
 # Default MASTER_SITES
 
@@ -17,7 +17,6 @@ MASTER_SITE_XCONTRIB+=  \
 
 MASTER_SITE_GNU+=       \
 	ftp://ftp.gnu.org/pub/gnu/ \
-	http://public.planetmirror.com.au/pub/gnu/ \
 	ftp://ftp.funet.fi/pub/gnu/prep/ \
 	ftp://ftp.wustl.edu/mirrors/gnu/ \
 	ftp://ftp.kddlabs.co.jp/pub/gnu/gnu/ \
@@ -31,7 +30,6 @@ MASTER_SITE_GNU+=       \
 
 MASTER_SITE_GNUSTEP+=   \
 	ftp://ftp.gnustep.org/pub/gnustep/ \
-	http://public.planetmirror.com.au/pub/gnustep/gnustep/ \
 	http://www.peanuts.org/peanuts/Mirrors/GNUstep/gnustep/ \
 	ftp://archive.progeny.com/gnustep/ \
 	http://archive.progeny.com/gnustep/ \
