@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2006/03/01 18:27:26 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/03/04 06:40:41 wiz Exp $
 bin/hg
+bin/hgmerge
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
 ${PYSITELIB}/hgext/__init__.pyo
