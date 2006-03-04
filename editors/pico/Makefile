@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2006/01/12 21:00:52 adam Exp $
+# $NetBSD: Makefile,v 1.67 2006/03/04 00:31:43 reed Exp $
 #
 # NOTE:
 # When updating, it is necessary to change the shlib version, located in
@@ -45,7 +45,7 @@ BUILDNAME=	neb
 
 MAKE_ENV+=	_STRIPFLAG_INSTALL=	# debug...
 
-INSTALLATION_DIRS=	bin lib man/man1
+INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/man1
 
 pre-patch:
 .if ${OPSYS} == "Interix"
@@ -68,8 +68,8 @@ do-install:
 		${WRKSRC}/pico/libpico.la ${PREFIX}/lib
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
 		${WRKSRC}/pico/pico ${WRKSRC}/pico/pilot ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/pico.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/pilot.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/pico.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/pilot.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/include/pico
 	cd ${WRKSRC}/pico && ${INSTALL_DATA} *.h ${PREFIX}/include/pico
 
