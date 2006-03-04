@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2006/01/30 07:56:07 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.109 2006/03/04 00:29:27 reed Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -89,6 +89,8 @@ CONFIGURE_ENV+= CFLAGS=${CFLAGS:M*:Q}
 .  endif
 .endif
 
+INSTALLATION_DIRS+=	bin libexec sbin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
+
 post-extract:
 	#
 	# Change references to the built library to ${CCLIENT_LIB}.
@@ -148,32 +150,27 @@ do-install:
 			;;						\
 		esac;							\
 	done
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/imapd/imapd ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/ipopd/ipop2d ${PREFIX}/libexec
 	${INST_PROG} ${WRKSRC}/ipopd/ipop3d ${PREFIX}/libexec
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/sbin
 	${INST_PROG} ${WRKSRC}/mtest/mtest ${PREFIX}/sbin
 	${LN} -sf ../libexec/imapd ${PREFIX}/sbin/rimapd
-	${INSTALL_MAN_DIR} ${PREFIX}/man/man8
-	${INSTALL_MAN} ${WRKSRC}/src/imapd/imapd.8 ${PREFIX}/man/man8
-	${INSTALL_MAN} ${WRKSRC}/src/ipopd/ipopd.8 ${PREFIX}/man/man8
-	${LN} -sf ipopd.8 ${PREFIX}/man/man8/ipop2d.8
-	${LN} -sf ipopd.8 ${PREFIX}/man/man8/ipop3d.8
+	${INSTALL_MAN} ${WRKSRC}/src/imapd/imapd.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/src/ipopd/ipopd.8 ${PREFIX}/${PKGMANDIR}/man8
+	${LN} -sf ipopd.8 ${PREFIX}/${PKGMANDIR}/man8/ipop2d.8
+	${LN} -sf ipopd.8 ${PREFIX}/${PKGMANDIR}/man8/ipop3d.8
 	${INSTALL_DATA_DIR} ${DOC_DIR}
 	${CP} -R ${WRKSRC}/docs/* ${DOC_DIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DOC_DIR}
 	${FIND} ${DOC_DIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${FIND} ${DOC_DIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
 
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/bin
 	${INST_PROG} ${WRKSRC}/mailutil/mailutil ${PREFIX}/bin
-	${INSTALL_MAN_DIR} ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/src/mailutil/mailutil.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/src/mailutil/mailutil.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INST_PROG} ${WRKSRC}/dmail/dmail ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/src/dmail/dmail.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/src/dmail/dmail.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INST_PROG} ${WRKSRC}/mlock/mlock ${PREFIX}/bin
 	${INST_PROG} ${WRKSRC}/tmail/tmail ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/src/tmail/tmail.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/src/tmail/tmail.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
