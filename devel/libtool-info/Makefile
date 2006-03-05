@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2004/10/14 19:04:56 tv Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/05 16:27:25 jlam Exp $
 #
 
 .include "../../devel/libtool/Makefile.common"
@@ -10,7 +10,7 @@ COMMENT=	Generic shared library support script - info pages
 
 CONFLICTS+=	libtool<1.3.5nb11
 
-USE_MAKEINFO=	YES
+USE_TOOLS+=	makeinfo
 INFO_FILES=	libtool.info
 
 do-build:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/02/05 23:08:57 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2006/03/05 16:27:25 jlam Exp $
 
 DISTNAME=	mule-2.3
 PKGREVISION=	3
@@ -18,7 +18,7 @@ CHECK_WRKREF_SKIP+=	${PREFIX}/bin/mule-19.28
 WRKSRC=		${WRKDIR}/mule
 GNU_CONFIGURE=	yes
 GNU_CONFIGURE_MANDIR=	${PREFIX}/${PKGMANDIR}/man1
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake makeinfo
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,7 +33,6 @@ CONFIGURE_ARGS+=	--bdf-path=${X11PREFIX}/lib/X11/fonts/intlfonts/bdf
 
 .include "options.mk"
 
-USE_MAKEINFO=	YES
 INFO_FILES=	CCL ISO2022 R2L XFONT antenews-jp canna-jp cl dired-x
 INFO_FILES+=	egg egg-jp emacs forms gnus kbd-trans languages m2ps mule
 INFO_FILES+=	mule-jp quail sc terminology vip

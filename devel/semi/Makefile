@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/02/05 23:08:53 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2006/03/05 16:27:25 jlam Exp $
 #
 # TODO:
 # * Control ${WRKSRC}/SEMI-ELS explicitly, otherwise Emacs/XEmacs founds
@@ -36,7 +36,7 @@ INSTALL_TARGET=	install-package
 MAKEFLAGS+=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 .endif
 
-USE_MAKEINFO=	YES
+USE_TOOLS+=	makeinfo
 INFO_FILES=	mime-ui-en.info mime-ui-ja.info
 
 pre-build:

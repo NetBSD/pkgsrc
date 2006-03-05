@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/02/05 23:09:33 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2006/03/05 16:27:26 jlam Exp $
 #
 
 DISTNAME=	hp2xx-3.4.4
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.gnu.org/software/hp2xx/hp2xx.html
 COMMENT=	HPGL converter and previewer
 
 BUILD_DIRS=	sources
-USE_MAKEINFO=	YES
+USE_TOOLS+=	makeinfo
 INFO_FILES=	hp2xx.info
 
 post-extract:
