@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.28 2006/01/08 23:00:00 jlam Exp $
+# $NetBSD: tools.Linux.mk,v 1.29 2006/03/05 16:27:29 jlam Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -108,6 +108,9 @@ TOOLS_PLATFORM.m4?=		${TOOLS_PLATFORM.gm4}
 TOOLS_PLATFORM.mail?=		/bin/mail	# RH, Mandrake
 .elif exists(/usr/bin/mail)
 TOOLS_PLATFORM.mail?=		/usr/bin/mail	# Debian, Slackware, SuSE
+.endif
+.if exists(/usr/bin/makeinfo)
+TOOLS_PLATFORM.makeinfo?=	/usr/bin/makeinfo
 .endif
 TOOLS_PLATFORM.mkdir?=		/bin/mkdir -p
 .if exists(/usr/bin/mktemp)
