@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2006/03/04 13:40:07 taca Exp $
+# $NetBSD: Makefile,v 1.171 2006/03/05 04:21:20 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE12
 PKGNAME=	squid-2.5.12
@@ -120,7 +120,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	@cd ${WRKSRC};						\
 	for i in ${DOCFILES}; do				\
-		${INSTALL_DATA} ${i} ${DOCDIR};			\
+		${INSTALL_DATA} $$i ${DOCDIR};			\
 	done
 	@(							\
 	for FILE in ${OPTIONAL_FILES}; do			\
@@ -129,9 +129,9 @@ post-install:
 	cd ${WRKSRC}/errors;					\
 	for i in *; do						\
 		${TEST} -d ${i} &&				\
-		(${LS} ${i}/ERR_* |				\
+		(${LS} $$i/ERR_* |				\
 		${SED} -e 's@^@share/squid/errors/@';		\
-		${ECHO} "@dirrm share/squid/errors/${i}");	\
+		${ECHO} "@dirrm share/squid/errors/$$i");	\
 	done; 							\
 	${ECHO} "@dirrm share/squid/errors";			\
 	cd ${WRKSRC}/icons;					\
