@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2005/03/22 16:24:13 minskim Exp $
+$NetBSD: patch-ab,v 1.7 2006/03/05 21:40:57 adam Exp $
 
---- gnu/configure.in.orig	2004-04-17 06:28:06.000000000 -0500
+--- gnu/configure.in.orig	2005-06-21 20:27:20.000000000 +0200
 +++ gnu/configure.in
 @@ -12,13 +12,23 @@ dnl Installation script (let it be, temp
  AC_PROG_INSTALL([e:/os2apps/autoconf/install-sh])
@@ -37,7 +37,7 @@ $NetBSD: patch-ab,v 1.6 2005/03/22 16:24:13 minskim Exp $
  
  dnl Platform-specific tuning
  PROG_EXT=
-@@ -45,30 +56,42 @@ REQUIRES_DEF=
+@@ -45,22 +56,27 @@ REQUIRES_DEF=
  OS_ID="UNIX"
  OS_DEF="-D_UNIX"
  DLL_CFLAGS="-fPIC"
@@ -50,6 +50,12 @@ $NetBSD: patch-ab,v 1.6 2005/03/22 16:24:13 minskim Exp $
 -        LD_STRIP="gnu/stripgcc.lnk"
 +        LD_STRIP="-s gnu/stripgcc.lnk"
  	;;
+ k*bsd*)
+ 	AC_DEFINE(ELF_EXECUTABLES)
+ 	DYN_LIBS="-ldl"
+-	LD_STRIP="gnu/stripgcc.lnk"
++	LD_STRIP="-s gnu/stripgcc.lnk"
+ 	;;
  *bsd*)
  	AC_DEFINE(ELF_EXECUTABLES)
          DLL_FLAGS="-shared -export-dynamic"
@@ -59,13 +65,10 @@ $NetBSD: patch-ab,v 1.6 2005/03/22 16:24:13 minskim Exp $
 +darwin*)
 +	DLL_FLAGS="-bundle"
 +	LD_STRIP=""
-+	;;
-+interix3*)
-+	# not ELF
-+	DLL_FLAGS="-shared"
-+	DLL_CFLAGS=""
  	;;
- *qnx*)
+ interix3*)
+ 	# not ELF
+@@ -71,14 +87,16 @@ interix3*)
  	AC_DEFINE(ELF_EXECUTABLES)
          DLL_FLAGS="-shared -fPIC"
          DLL_CFLAGS="-shared -fPIC"
@@ -84,7 +87,7 @@ $NetBSD: patch-ab,v 1.6 2005/03/22 16:24:13 minskim Exp $
  	;;
  os2*)
  	PROG_EXT=".exe"
-@@ -115,7 +138,7 @@ dnl Initial setup
+@@ -125,7 +143,7 @@ dnl Initial setup
  
  test -z "$CONFIG_SHELL" && CONFIG_SHELL=/bin/sh
  AC_SUBST(CONFIG_SHELL)
