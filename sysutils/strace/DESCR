@@ -1,0 +1,1 @@
+strace is a system call tracing program similar to ktruss that uses PT_SYSCALL
