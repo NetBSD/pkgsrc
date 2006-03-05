@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2006/01/26 20:38:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.45 2006/03/05 21:25:48 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -58,6 +58,7 @@ include/magick/geometry.h
 include/magick/hashmap.h
 include/magick/identify.h
 include/magick/image.h
+include/magick/layer.h
 include/magick/list.h
 include/magick/locale_.h
 include/magick/log.h
@@ -135,7 +136,6 @@ lib/pkgconfig/ImageMagick++.pc
 lib/pkgconfig/ImageMagick.pc
 lib/pkgconfig/Wand.pc
 man/man1/ImageMagick.1
-man/man1/Magick++-config.1
 man/man1/Magick-config.1
 man/man1/Wand-config.1
 man/man1/animate.1
@@ -248,6 +248,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/enhance.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/exception.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/fx.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/image.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/layer.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/list.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick-attribute.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick-image.html
