@@ -1,15 +1,29 @@
-$NetBSD: patch-ab,v 1.16 2006/01/28 02:36:55 salo Exp $
+$NetBSD: patch-ab,v 1.17 2006/03/05 21:25:49 adam Exp $
 
-Security fix for CVE-2006-0082, from Debian.
-
---- wand/animate.c.orig	2006-01-13 05:49:46.000000000 +0100
-+++ wand/animate.c	2006-01-28 02:24:20.000000000 +0100
-@@ -410,7 +410,7 @@
-               /*
-                 Form filename for multi-part images.
-               */
--              (void) FormatMagickString(filename,MaxTextExtent,
-+              (void) FormatMagickStringNumeric(filename,MaxTextExtent,
-                 image_info->filename,scene);
-               if (LocaleCompare(filename,image_info->filename) == 0)
-                 (void) FormatMagickString(filename,MaxTextExtent,"%s[%lu]",
+--- Makefile.in.orig	2006-03-05 22:13:13.000000000 +0100
++++ Makefile.in
+@@ -3247,8 +3247,6 @@ WAND_CLEANFILES = \
+ @WITH_MAGICK_PLUS_PLUS_TRUE@MAGICKPP_SCRPTS = \
+ @WITH_MAGICK_PLUS_PLUS_TRUE@	Magick++/bin/Magick++-config
+ 
+-@WITH_MAGICK_PLUS_PLUS_TRUE@MAGICKPP_MANS = \
+-@WITH_MAGICK_PLUS_PLUS_TRUE@	Magick++/bin/Magick++-config.1
+ 
+ @WITH_MAGICK_PLUS_PLUS_TRUE@MAGICKPP_PKGCONFIG = \
+ @WITH_MAGICK_PLUS_PLUS_TRUE@	Magick++/lib/ImageMagick++.pc
+@@ -3298,7 +3296,6 @@ WAND_CLEANFILES = \
+ @WITH_MAGICK_PLUS_PLUS_TRUE@	Magick++/INSTALL \
+ @WITH_MAGICK_PLUS_PLUS_TRUE@	Magick++/NEWS \
+ @WITH_MAGICK_PLUS_PLUS_TRUE@	Magick++/README \
+-@WITH_MAGICK_PLUS_PLUS_TRUE@	Magick++/bin/Magick++-config.1 \
+ @WITH_MAGICK_PLUS_PLUS_TRUE@	Magick++/bin/Magick++-config.in \
+ @WITH_MAGICK_PLUS_PLUS_TRUE@	Magick++/lib/ImageMagick++.pc.in \
+ @WITH_MAGICK_PLUS_PLUS_TRUE@	Magick++/demo/model.miff \
+@@ -4566,7 +4563,6 @@ pkgconfig_DATA = \
+ # Manual pages to install
+ man_MANS = \
+ 	$(MAGICK_MANS) \
+-	$(MAGICKPP_MANS) \
+ 	$(UTILITIES_MANS) \
+ 	$(WAND_MANS)
+ 
