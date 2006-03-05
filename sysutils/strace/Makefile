@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2006/03/05 08:17:49 christos Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/05 09:04:50 christos Exp $
 #
 
 DISTNAME=		strace-4.5.14
 CATEGORIES=		sysutils
-MASTER_SITES=		http://voxel.dl.sourceforge.net/sourceforge/strace/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=strace/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		christos@NetBSD.org
@@ -13,7 +13,5 @@ COMMENT=		Trace system calls
 WRKSRC=			${WRKDIR}/${DISTNAME}/${SRCBALL_NAME}
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
-
-.include "../../mk/bsd.prefs.mk"
 
 .include "../../mk/bsd.pkg.mk"
