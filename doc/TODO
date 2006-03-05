@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4692 2006/03/05 22:07:51 adam Exp $
+$NetBSD: TODO,v 1.4693 2006/03/05 22:36:29 adam Exp $
 
 Suggested new packages
 ======================
@@ -401,7 +401,6 @@ Suggested package updates
 	o cfengine2-doc-2.1.14
 	o cfitsio-2.510
 	o cgdb-6.0
-	o cgicc-3.2.3
 	o checkbot-1.77
 	o chrony-1.21
 	o cint-5.16
