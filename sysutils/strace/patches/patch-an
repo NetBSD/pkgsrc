@@ -1,7 +1,7 @@
-$NetBSD: patch-an,v 1.1 2006/03/05 08:17:49 christos Exp $
+$NetBSD: patch-an,v 1.2 2006/03/05 08:28:29 christos Exp $
 
 --- syscall.c	2006-01-12 05:18:53.000000000 -0500
-+++ syscall.c	2006-03-05 01:59:19.000000000 -0500
++++ syscall.c	2006-03-05 03:27:00.000000000 -0500
 @@ -38,9 +38,9 @@
  #include <signal.h>
  #include <time.h>
@@ -24,15 +24,7 @@ $NetBSD: patch-an,v 1.1 2006/03/05 08:17:49 christos Exp $
  #ifdef HAVE_SYS_REG_H
  #include <sys/reg.h>
  #ifndef PTRACE_PEEKUSR
-@@ -200,6 +204,7 @@
- set_personality(personality)
- int personality;
- {
-+printf("setpersonality %d\n", personality);
- 	switch (personality) {
- 	case 0:
- 		errnoent = errnoent0;
-@@ -634,6 +639,7 @@
+@@ -634,6 +638,7 @@
  }
  #endif
  
@@ -40,7 +32,7 @@ $NetBSD: patch-an,v 1.1 2006/03/05 08:17:49 christos Exp $
  static void
  decode_subcall(tcp, subcall, nsubcalls, style)
  struct tcb *tcp;
-@@ -719,6 +725,7 @@
+@@ -719,6 +724,7 @@
  #endif /* FREEBSD */
  	}
  }
@@ -48,7 +40,7 @@ $NetBSD: patch-an,v 1.1 2006/03/05 08:17:49 christos Exp $
  #endif
  
  struct tcb *tcp_last = NULL;
-@@ -855,9 +862,9 @@
+@@ -855,9 +861,9 @@
         static long rax;
  #endif
  #endif /* LINUX */
@@ -61,7 +53,7 @@ $NetBSD: patch-an,v 1.1 2006/03/05 08:17:49 christos Exp $
  
  int
  get_scno(tcp)
-@@ -1318,9 +1325,9 @@
+@@ -1318,9 +1324,9 @@
  #ifdef HAVE_PR_SYSCALL
  	scno = tcp->status.PR_SYSCALL;
  #else /* !HAVE_PR_SYSCALL */
@@ -73,7 +65,7 @@ $NetBSD: patch-an,v 1.1 2006/03/05 08:17:49 christos Exp $
  	if (pread(tcp->pfd_reg, &regs, sizeof(regs), 0) < 0) {
  	        perror("pread");
                  return -1;
-@@ -1334,8 +1341,28 @@
+@@ -1334,8 +1340,28 @@
  	        scno = regs.r_eax;
  	        break;
  	}
@@ -103,7 +95,7 @@ $NetBSD: patch-an,v 1.1 2006/03/05 08:17:49 christos Exp $
  #endif /* USE_PROCFS */
  	if (!(tcp->flags & TCB_INSYSCALL))
  		tcp->scno = scno;
-@@ -1360,7 +1387,9 @@
+@@ -1360,7 +1386,9 @@
  struct tcb *tcp;
  {
  #ifndef USE_PROCFS
@@ -113,7 +105,7 @@ $NetBSD: patch-an,v 1.1 2006/03/05 08:17:49 christos Exp $
  #else /* USE_PROCFS */
  	int scno = known_scno(tcp);
  
-@@ -1733,7 +1762,7 @@
+@@ -1733,7 +1761,7 @@
  		}
  #endif /* MIPS */
  #endif /* SVR4 */
@@ -122,7 +114,7 @@ $NetBSD: patch-an,v 1.1 2006/03/05 08:17:49 christos Exp $
  		if (regs.r_eflags & PSL_C) {
   		        tcp->u_rval = -1;
  		        u_error = regs.r_eax;
-@@ -1743,7 +1772,7 @@
+@@ -1743,7 +1771,7 @@
  			  ((unsigned long long) regs.r_edx << 32) +  regs.r_eax;
  		        u_error = 0;
  		}
@@ -131,7 +123,7 @@ $NetBSD: patch-an,v 1.1 2006/03/05 08:17:49 christos Exp $
  	tcp->u_error = u_error;
  	return 1;
  }
-@@ -1926,6 +1955,20 @@
+@@ -1926,6 +1954,20 @@
                  return -1;
          }
  #endif /* FREEBSD */
@@ -152,7 +144,7 @@ $NetBSD: patch-an,v 1.1 2006/03/05 08:17:49 christos Exp $
  
  	/* All branches reach here on success (only).  */
  	tcp->u_error = error;
-@@ -1938,7 +1981,9 @@
+@@ -1938,7 +1980,9 @@
  struct tcb *tcp;
  {
  #ifndef USE_PROCFS
@@ -162,7 +154,7 @@ $NetBSD: patch-an,v 1.1 2006/03/05 08:17:49 christos Exp $
  #endif /* !USE_PROCFS */
  #ifdef LINUX
  #if defined(S390) || defined(S390X)
-@@ -2236,6 +2281,29 @@
+@@ -2236,6 +2280,29 @@
  	I DONT KNOW WHAT TO DO
  #endif /* !HAVE_PR_SYSCALL */
  #endif /* SVR4 */
@@ -192,7 +184,7 @@ $NetBSD: patch-an,v 1.1 2006/03/05 08:17:49 christos Exp $
  #ifdef FREEBSD
  	if (tcp->scno >= 0 && tcp->scno < nsyscalls &&
  	    sysent[tcp->scno].nargs > tcp->status.val)
-@@ -2648,6 +2716,14 @@
+@@ -2648,6 +2715,14 @@
  	pread(tcp->pfd_reg, &regs, sizeof(regs), 0);
  	val = regs.r_edx;
  #endif
