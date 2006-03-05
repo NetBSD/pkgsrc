@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4688 2006/03/04 15:58:59 tonio Exp $
+$NetBSD: TODO,v 1.4689 2006/03/05 20:10:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -305,13 +305,15 @@ Suggested package updates
 
 	o 0verkill-0.16
 	o 9base-2 [pkg/32635]
+	o BitTornado-0.3.15
+	o BitTornado-gui-0.3.15
 	o Cenon-3.71
 	o Chinput-3.0.1
 	o GMT-4.0
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
 	o GridSim-3.3
-	o ImageMagick-6.2.6.1
+	o ImageMagick-6.2.6.2
 	o PAM-0.80
 	o REminiscence-0.1.8
 	o SmartEiffel-2.1
@@ -378,6 +380,7 @@ Suggested package updates
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bochs-2.2.6
+	o boehm-gc-6.7
 	o bogofilter-1.0.1
 	o boolean-6.8
 	o boson-0.11
@@ -396,7 +399,7 @@ Suggested package updates
 	o ccd2iso-0.2
 	o cdl3-1.2.6
 	o cdrdao-1.2.1
-	o cfengine2-2.1.17
+	o cfengine2-2.1.19p1
 	o cfengine2-doc-2.1.14
 	o cfitsio-2.510
 	o cgdb-6.0
@@ -545,6 +548,7 @@ Suggested package updates
 	o gnetman-20050429
 	o gnome-backgrounds-2.12.3.1
 	o gnome-games-2.12.3
+	o gnome-keyring-0.4.8
 	o gnome-mag-0.12.3
 	o gnome-pilot-2.0.13
 	o gnome-spell-1.0.7
@@ -682,8 +686,6 @@ Suggested package updates
 	o libnasl-2.3.1
 	o libntlm-0.3.9
 	o libpqxx-2.5.5
-	o libprelude-0.9.6
-	o libpreludedb-0.9.5
 	o libshout-2.2
 	o libsmi-0.4.3
 	o libtcl-nothread-8.4.9
@@ -707,7 +709,7 @@ Suggested package updates
 	o manedit-0.6.1
 	o mantis-0.19.2
 	o mapserver-4.2.5
-	o maradns-1.2.03.2
+	o maradns-1.2.03.4
 	o md-whois-4.7.8
 	o mdd-20050318
 	o mdf2iso-0.3.0
@@ -846,6 +848,7 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Heap-0.71
 	o p5-Ima-DBI-0.34
+	o p5-Image-Info-1.19
 	o p5-Jcode-2.03
 	o p5-Lingua-EN-Inflect-1.89
 	o p5-Locale-Codes-2.07
@@ -856,6 +859,7 @@ Suggested package updates
 	o p5-Mac-Macbinary-0.06
 	o p5-Mail-Mbox-MessageParser-1.4001
 	o p5-Mail-Sendmail-0.79
+	o p5-MailTools-1.74
 	o p5-Math-Bezier-0.02
 	o p5-Math-FFT-1.28
 	o p5-Math-MatrixReal-1.9
@@ -880,6 +884,7 @@ Suggested package updates
 	o p5-Safe-Hole-0.10
 	o p5-Sendmail-AccessDB-0.09
 	o p5-Set-Scalar-1.20
+	o p5-Spreadsheet-WriteExcel-2.16 [pkg/30934]
 	o p5-String-Approx-3.25
 	o p5-Template-Extract-0.40
 	o p5-Test-Harness-2.46
@@ -1094,7 +1099,7 @@ Suggested package updates
 	o smalleiffel-0.90
 	o smalltalk-2.1.12
 	o smartmontools-5.33
-	o sml-nj-110.57
+	o sml-nj-110.58
 	o smlnj-110.51 [pkgsrc-wip]
 	o smlnj-110.54
 	o snd-7.19
@@ -1198,6 +1203,7 @@ Suggested package updates
 	o weechat-0.1.6
 	o weewm-0.01
 	o winbind-3.0.13
+	o wine-0.9.9
 	o wmctrl-1.07
 	o wmii-2.5.1 [pkg/32522]
 	o wmweather-2.4.3
@@ -1274,6 +1280,7 @@ Suggested package updates
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zile-2.2.13
 	o zircon-1.18.256
+	o zope-2.8.6
 	o zope-2.9.0
 	o zope25-AbracadabraObject-2.0.0
 	o zope25-BTreeFolder2-1.0.1
@@ -1286,7 +1293,6 @@ Suggested package updates
 	o zope25-Silva-1.0.1
 	o zope25-XMLWidgets-0.10
 	o zope25-ZWiki-0.46.0
-	o zope-2.8.4
 	o zopeedit-0.8
 	o zziplib-0.13.38
 
