@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13178 2006/03/05 22:07:50 adam Exp $
+$NetBSD: CHANGES,v 1.13179 2006/03/05 22:36:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1342,3 +1342,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/ImageMagick to 6.2.6.3 [adam 2006-03-05]
 	Updated archivers/arj to 3.10.22 [adam 2006-03-05]
 	Updated devel/libextractor to 0.5.10 [adam 2006-03-05]
+	Updated www/cgicc to 3.2.3 [adam 2006-03-05]
