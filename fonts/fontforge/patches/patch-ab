@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.5 2006/03/05 20:46:19 minskim Exp $
+
+--- po/ja.po.orig	2006-01-29 21:57:06.000000000 -0800
++++ po/ja.po
+@@ -3300,7 +3300,7 @@ msgid ""
+ "on the entire font."
+ msgstr "このフォントには少なくとも1つ非整数の座標が含まれています.\nこれは仕様上全く問題ありませんが,普通ではありませんし\n生成されるフォントのサイズを増加させます.\nフォント全体に対して エレメント(l)→整数値に変換(d) を\n適用することを試してみてはどうでしょうか."
+ 
+-msgid "PostScript\xa9"
++msgid "PostScript®"
+ msgstr "PostScript"
+ 
+ msgid "TrueType"
+@@ -7493,7 +7493,7 @@ msgid ""
+ "glyphs start at the same location."
+ msgstr "いくつかのグリフの中に, 同じ位置から始まる垂直ステムがあるかどうかをチェックします."
+ 
+-msgid "_Y near\xe2\x91\xaf"
++msgid "_Y near¹"
+ msgstr "近接する_Y"
+ 
+ msgid ""
+@@ -7562,7 +7562,7 @@ msgid ""
+ "has the wrong width."
+ msgstr "点があるヒントから僅かに離れている場合, その多くは\n1本のステムが複数の部分からなり, 一部が間違った幅を持っているのが\n原因です."
+ 
+-msgid "Hint _Width.Near\xe2\x91\xaf"
++msgid "Hint _Width.Near¹"
+ msgstr "ヒント幅のぶれ量(_W)"
+ 
+ msgid "Allows you to check that stems have consistant widths.."
