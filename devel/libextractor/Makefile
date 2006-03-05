@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2006/03/05 22:06:38 adam Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/05 22:19:31 tv Exp $
 
 DISTNAME=	libextractor-0.5.10
 CATEGORIES=	devel
 MASTER_SITES=	http://gnunet.org/libextractor/download/
 
-MAINTAINER=	tv@duh.org
+MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://gnunet.org/libextractor/
 COMMENT=	Metadata extractor for various file data types
 
