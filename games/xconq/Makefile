@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/02/05 23:09:24 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2006/03/05 16:27:25 jlam Exp $
 
 DISTNAME=		xconq-7.4.1
 PKGREVISION=		5
@@ -10,7 +10,7 @@ HOMEPAGE=		http://sources.redhat.com/xconq/
 COMMENT=		Xconq is a general strategy game system
 
 USE_X11BASE=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake makeinfo
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-alternate-scoresdir=${VARBASE}/games/xconq/scores
 CONFIGURE_ARGS+=	--with-tclconfig="${BUILDLINK_PREFIX.tcl}/lib"
@@ -18,7 +18,6 @@ CONFIGURE_ARGS+=	--with-tkconfig="${BUILDLINK_PREFIX.tk}/lib"
 
 MAKE_ENV+=		LOCALBASE=${LOCALBASE:Q}
 
-USE_MAKEINFO=		YES
 INFO_FILES=     	hacking.info xcdesign.info xconq.info
 
 post-build:

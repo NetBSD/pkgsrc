@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:08:41 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/05 16:27:24 jlam Exp $
 #
 
 DISTNAME=	elib-1.0
@@ -19,9 +19,8 @@ BUILD_ENV+=	EMACS=${EMACS_FLAVOR}
 MAKEFLAGS+=	EMACS=${EMACS_FLAVOR:Q}
 
 NO_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake makeinfo
 
-USE_MAKEINFO=	YES
 INFO_FILES=	elib.info
 
 SRCS=	stack-f.el stack-m.el queue-f.el queue-m.el elib-node.el	\
