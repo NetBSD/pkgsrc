@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:08:30 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/05 16:27:23 jlam Exp $
 
 DISTNAME=	avrdude-4.1.0
 PKGREVISION=	3
@@ -10,14 +10,14 @@ HOMEPAGE=	http://www.bsdhome.com/avrdude/
 COMMENT=	Downloader/uploader for Atmel AVR 8-bit RISC microcontrollers
 
 USE_GNU_READLINE=	YES
-TEX_DEPMETHOD=	build
+TEX_DEPMETHOD=		build
 TEX_ACCEPTED=		teTeX1 teTeX2 teTeX3
 
 BUILD_DEPENDS+=	texi2html>=1.76:../../textproc/texi2html
 
 GNU_CONFIGURE=	yes
+USE_TOOLS+=	makeinfo
 INFO_FILES=	avrdude.info
-USE_MAKEINFO=	yes
 
 CONFIGURE_ARGS+=	--disable-versioned-doc
 

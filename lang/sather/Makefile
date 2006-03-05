@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/03/04 21:29:56 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2006/03/05 16:27:26 jlam Exp $
 
 DISTNAME=		sather-1.2.1
 PKGREVISION=		6
@@ -9,11 +9,10 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/sather/
 COMMENT=		Compiler for the Sather object oriented programming language
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake makeinfo
 
 BUILD_TARGET=		full optional
 
-USE_MAKEINFO=		YES
 INFO_FILES=		sather.info sather-tutorial.info sather-mode.info
 
 REPLACE_PERL=		Browser/Web/ps2gif

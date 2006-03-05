@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:08:42 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/05 16:27:24 jlam Exp $
 
 DISTNAME=	gdbada-6.3
 PKGREVISION=	1
@@ -19,7 +19,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GDB_SUBPREFIX=	gdbada
 GDB_PREFIX=	${PREFIX}/${GDB_SUBPREFIX}
 GNU_CONFIGURE=          YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake makeinfo
 TEST_TARGET=    	check
 INFO_DIR=		${GDB_PREFIX}/info
 LIB_DIR=		${GDB_PREFIX}/lib
@@ -32,7 +32,6 @@ CONFIGURE_ARGS+=	--mandir=${GDB_PREFIX}/man
 CONFIGURE_ARGS+=	--datadir=${GDB_PREFIX}/share
 # We don't seem to be able to control where locale data goes, so:
 CONFIGURE_ARGS+=	--disable-nls
-USE_MAKEINFO=		YES
 USE_NEW_TEXINFO=	YES
 
 pre-patch:

@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.159 2006/02/21 17:39:32 rillig Exp $
+# $NetBSD: replace.mk,v 1.160 2006/03/05 16:27:29 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -483,6 +483,17 @@ TOOLS_DEPENDS.mail?=		nail>=11.22:../../mail/nail
 TOOLS_CREATE+=			mail
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mail=nail
 TOOLS_PATH.mail=		${TOOLS_PREFIX.mail}/bin/nail
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.makeinfo) && !empty(_USE_TOOLS:Mmakeinfo)
+.  if !empty(PKGPATH:Mdevel/gtexinfo)
+MAKEFLAGS+=			TOOLS_IGNORE.makeinfo=
+.  elif !empty(_TOOLS_USE_PKGSRC.makeinfo:M[yY][eE][sS])
+TOOLS_DEPENDS.makeinfo?=	gtexinfo>=${TEXINFO_REQD}:../../devel/gtexinfo
+TOOLS_CREATE+=			makeinfo
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.makeinfo=gtexinfo
+TOOLS_PATH.makeinfo=		${TOOLS_PREFIX.makeinfo}/bin/makeinfo
 .  endif
 .endif
 

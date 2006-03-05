@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/05 23:55:11 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/05 16:27:26 jlam Exp $
 #
 
 DISTNAME=		mairix-0.16.1
@@ -14,7 +14,7 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
-USE_MAKEINFO=		YES
+USE_TOOLS+=		makeinfo
 INFO_FILES=		mairix.info
 
 BINDIR=			${PREFIX}/bin

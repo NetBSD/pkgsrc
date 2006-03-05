@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:08:42 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/05 16:27:24 jlam Exp $
 #
 
 DISTNAME=		gdb-6.2.1
@@ -15,7 +15,7 @@ NOT_FOR_PLATFORM=	Darwin-*-*
 
 BUILD_USES_MSGFMT=	yes
 
-USE_TOOLS+=		autoconf213 gmake
+USE_TOOLS+=		autoconf213 gmake makeinfo
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_PKGLOCALEDIR=	yes
@@ -24,7 +24,6 @@ CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/gdb6
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/gdb6
 CONFIGURE_ARGS+=	--enable-libada
 
-USE_MAKEINFO=		yes
 INFO_FILES=		annotate.info bfd.info configure.info
 INFO_FILES+=		gdb.info gdbint.info mmalloc.info
 INFO_FILES+=		stabs.info standards.info

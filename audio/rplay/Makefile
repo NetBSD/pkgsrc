@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2006/03/04 21:28:58 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2006/03/05 16:27:22 jlam Exp $
 #
 
 DISTNAME=	rplay-3.3.2
@@ -11,12 +11,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rplay.doit.org/
 COMMENT=	Network audio player
 
+USE_TOOLS+=		makeinfo
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--build=BUILD
 
-USE_MAKEINFO=	YES
 INFO_FILES=	RPLAY.info RPTP.info librplay.info rplay.info
 RCD_SCRIPTS=	rplayd
 EGDIR=		${PREFIX}/share/examples/rplay

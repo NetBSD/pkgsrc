@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:08:39 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/05 16:27:23 jlam Exp $
 
 DISTNAME=	allegro-4.2.0
 PKGREVISION=	1
@@ -9,12 +9,11 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://alleg.sourceforge.net/
 COMMENT=	Allegro game programming library
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake makeinfo
 GNU_CONFIGURE=		yes
 
 MAKEFILE=		makefile
 BUILD_TARGET=		# there is no 'all' target for some reason
-USE_MAKEINFO=		yes
 INFO_FILES=		allegro.info
 INSTALL_TARGET=		install install-info
 

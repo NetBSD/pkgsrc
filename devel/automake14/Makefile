@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:02 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/05 16:27:24 jlam Exp $
 #
 
 DISTNAME=	automake-1.4-p6
@@ -19,8 +19,7 @@ CONFLICTS=	automake<1.6
 GNU_CONFIGURE=		YES
 _STRIPFLAG_INSTALL=	# none
 
-USE_TOOLS+=		perl:run
-USE_MAKEINFO=		YES
+USE_TOOLS+=		makeinfo perl:run
 INFO_FILES=		automake14.info
 
 TEST_TARGET=		check

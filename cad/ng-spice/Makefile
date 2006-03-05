@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/02/05 23:08:22 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2006/03/05 16:27:23 jlam Exp $
 #
 
 DISTNAME=	ng-spice-rework-17
@@ -13,8 +13,7 @@ COMMENT=	Next generation circuit simulation program
 
 WRKSRC=			${WRKDIR}/ng-spice-rework-17
 USE_LIBTOOL=		YES
-USE_MAKEINFO=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake makeinfo
 USE_GNU_READLINE=	uses rl_* interface
 
 GNU_CONFIGURE=		YES
