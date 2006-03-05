@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13177 2006/03/05 21:41:58 adam Exp $
+$NetBSD: CHANGES,v 1.13178 2006/03/05 22:07:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1341,3 +1341,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/strace version 4.5.14 [christos 2006-03-05]
 	Updated graphics/ImageMagick to 6.2.6.3 [adam 2006-03-05]
 	Updated archivers/arj to 3.10.22 [adam 2006-03-05]
+	Updated devel/libextractor to 0.5.10 [adam 2006-03-05]
