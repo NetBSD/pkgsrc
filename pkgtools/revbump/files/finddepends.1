@@ -1,9 +1,9 @@
-.\"	$NetBSD: blbump.1,v 1.2 2006/03/05 23:35:49 wiz Exp $
+.\"	$NetBSD: finddepends.1,v 1.1 2006/03/05 23:35:49 wiz Exp $
 .\"
-.\" Copyright (c) 2003, 2004, 2005 The NetBSD Foundation, Inc.
+.\" Copyright (c) 2006 The NetBSD Foundation, Inc.
 .\"
 .\" This code was originally contributed to the NetBSD Foundation, Inc.
-.\" by Julio Merino <jmmv@NetBSD.org> and Thomas Klausner <wiz@NetBSD.org>.
+.\" by Thomas Klausner <wiz@NetBSD.org>.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
 .\" modification, are permitted provided that the following conditions
@@ -32,35 +32,38 @@
 .\" IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 .\"
 .Dd March 6, 2006
-.Dt BLBUMP 1
+.Dt FINDDEPENDS 1
 .Os
 .Sh NAME
-.Nm blbump
-.Nd tool to help bumping dependencies in buildlink3 files automatically
+.Nm finddepends
+.Nd tool for finding packages including a particular file
 .Sh SYNOPSIS
 .Nm
-.Op Fl p Ar pkgsrcdir
-.Op cat1/pkg1 ... catN/pkgN
+.Ar pattern
 .Sh DESCRIPTION
 .Nm
-is a perl script for pkgsrc developers that simplifies bumping
-buildlink3 file dependencies automatically.
-Given a package (in
-.Ar category/package
-format) on the command line or stdin, it will try to adjust the
-.Dv BUILDLINK_RECOMMENDED
-line for that package to the current version automatically.
-If
-.Fl p
-is given,
-.Ar pkgsrcdir
-is used instead of the default
+is a perl script for pkgsrc developers that helps finding packages
+affected by a recursive PKGREVISION bump.
+Given a
+.Ar pattern
+on the command line, it will recursively find all buildlink3.mk files
+that include it, and then find all Makefiles that include any of the
+buildlink3.mk files.
+.Pp
+See
+.Xr revbump 1
+for an example of a complete recursive PKGREVISION bump.
+.Sh ENVIRONMENT
+.Ev PKGSRCDIR
+pkgsrc root directory.
+Defaults to
 .Pa /usr/pkgsrc .
-.Nm
-reports successful updates on stdout, and prints the package name
-(in
-.Ar category/package
-form) on stdout for each package where it failed.
+.Sh EXAMPLES
+.Dl finddepends security/libtasn1
+.Pp
+would first output all buildlink3.mk files that include
+security/libtasn1, and then all Makefiles that include any of the
+found buildlink3.mk files.
 .Sh SEE ALSO
-.Xr finddepends 1 ,
+.Xr blbump 1 ,
 .Xr revbump 1
