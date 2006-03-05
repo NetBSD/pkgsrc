@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13173 2006/03/04 15:58:58 tonio Exp $
+$NetBSD: CHANGES,v 1.13174 2006/03/05 00:41:02 grant Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -830,6 +830,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/gettext to 0.14.5 [joerg 2006-02-05]
 	Updated devel/gettext-lib to 0.14.5 [joerg 2006-02-05]
 	Updated devel/gettext-m4 to 0.14.5 [joerg 2006-02-05]
+	Updated mail/perdition to 1.17nb1 [joerg 2006-02-05]
 	Added devel/gettext-tools version 0.14.5 [joerg 2006-02-06]
 	Updated lang/php5 to 5.1.2 [martti 2006-02-06]
 	Updated pkgtools/pkglint to 4.56 [rillig 2006-02-06]
@@ -1193,6 +1194,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/gauche to 0.8.6nb1 [wiz 2006-02-22]
 	Updated net/sitescooper to 2.2.8nb3 [wiz 2006-02-22]
 	Updated net/tor to 0.1.0.17 [jschauma 2006-02-22]
+	Updated mail/perdition to 1.17nb3 [tv 2006-02-22]
 	Updated devel/memcached to 1.1.12 [grant 2006-02-23]
 	Added devel/p5-Cache-Memcached version 1.14 [grant 2006-02-23]
 	Updated net/tspc to 2.1.1nb1 [ghen 2006-02-23]
@@ -1326,6 +1328,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/dialog to 1.0.20060221 [wiz 2006-03-03]
 	Updated net/mDNSResponder to 108 [wiz 2006-03-03]
 	Moved archivers/rar-linux to archivers/rar-bin [wiz 2006-03-03]
+	Updated mail/perdition to 1.17nb4 [tv 2006-03-03]
 	Updated chat/irssi to 0.8.10a [wiz 2006-03-04]
 	Updated devel/mercurial to 0.8nb1 [wiz 2006-03-04]
 	Updated mail/sylpheed to 2.2.2 [xtraeme 2006-03-04]
@@ -1333,3 +1336,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/libpreludedb to 0.9.5.1 [shannonjr 2006-03-04]
 	Updated www/squid to 2.5.12nb6 [taca 2006-03-04]
 	Updated security/jessie to 1.0.1 [tonio 2006-03-04]
+	Updated security/gnutls to 1.3.4nb1 [wiz 2006-03-04]
+	Updated mail/perdition to 1.17nb5 [tv 2006-03-04]
