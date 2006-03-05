@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/12/29 23:01:51 garbled Exp $
+# $NetBSD: Makefile.common,v 1.7 2006/03/05 16:27:25 jlam Exp $
 #
 
 DISTNAME=		gnuplot-4.0.0
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		YES
 # because of missing rl_complete_with_tilde_expansion and rl_terminal_name
 USE_GNU_READLINE=	YES
 
-USE_MAKEINFO=		YES
+USE_TOOLS+=		makeinfo
 INFO_FILES=		gnuplot.info
 
 CONFIGURE_ARGS+=	--with-pdf

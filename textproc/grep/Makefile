@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/02/05 23:11:02 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2006/03/05 16:27:28 jlam Exp $
 #
 
 DISTNAME=	grep-2.5.1
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--disable-perl-regexp
 
-USE_MAKEINFO=		YES
+USE_TOOLS+=		makeinfo
 TEXINFO_REQD=		4.0
 INFO_FILES=		grep.info
 

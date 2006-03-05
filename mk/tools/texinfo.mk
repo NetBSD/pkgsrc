@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.8 2005/07/17 21:36:24 jlam Exp $
+# $NetBSD: texinfo.mk,v 1.9 2006/03/05 16:27:29 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -43,17 +43,38 @@ TOOLS_NOOP+=		install-info
 CONFIGURE_ENV+=		INSTALL_INFO=${TOOLS_CMD.install-info:Q}
 MAKE_ENV+=		INSTALL_INFO=${TOOLS_CMD.install-info:Q}
 
-# Create a makeinfo script that will invoke the right makeinfo command
-# if USE_MAKEINFO is "yes" or will exit on error if not.  MAKEINFO is
-# defined by mk/texinfo.mk if USE_MAKEINFO is "yes".
+TEXINFO_REQD?=		3.12
+
+# If the package doesn't explicitly request makeinfo as a tool, then
+# create a "broken" makeinfo tool to prevent its use.
 #
-USE_MAKEINFO?=		no
-.if empty(USE_MAKEINFO:M[nN][oO])
-TOOLS_CREATE+=		makeinfo
-TOOLS_PATH.makeinfo=	${MAKEINFO:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}
-TOOLS_ARGS.makeinfo=	${MAKEINFO:C/^/_asdf_/1:N_asdf_*}
-.else
+# If the package does explicitly request makeinfo as a tool, then
+# determine if the platform-provided makeinfo's version is at least
+# ${TEXINFO_REQD}.  If it isn't, then tell the tools framework to use
+# the pkgsrc makeinfo.
+#
+.if empty(USE_TOOLS:C/:.*//:Mmakeinfo)
 TOOLS_BROKEN+=		makeinfo
+.elif defined(TOOLS_PLATFORM.makeinfo) && !empty(TOOLS_PLATFORM.makeinfo)
+.  if !defined(_TOOLS_USE_PKGSRC.makeinfo)
+_TOOLS_VERSION.makeinfo!=						\
+	${TOOLS_PLATFORM.makeinfo} --version |				\
+	${AWK} '{ print $$4; exit; }'
+_TOOLS_PKG.makeinfo=		gtexinfo-${_TOOLS_VERSION.makeinfo}
+_TOOLS_USE_PKGSRC.makeinfo=	no
+.    for _dep_ in gtexinfo>=${TEXINFO_REQD}
+.      if !empty(_TOOLS_USE_PKGSRC.makeinfo:M[nN][oO])
+_TOOLS_USE_PKGSRC.makeinfo!=						\
+	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${_TOOLS_PKG.makeinfo:Q}; then \
+		${ECHO} no;						\
+	else								\
+		${ECHO} yes;						\
+	fi
+.      endif
+.    endfor
+.  endif
+MAKEVARS+=	_TOOLS_USE_PKGSRC.makeinfo
 .endif
+
 CONFIGURE_ENV+=		MAKEINFO=${TOOLS_CMD.makeinfo:Q}
 MAKE_ENV+=		MAKEINFO=${TOOLS_CMD.makeinfo:Q}
