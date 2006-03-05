@@ -1,0 +1,10 @@
+$NetBSD: patch-ar,v 1.1 2006/03/05 08:17:49 christos Exp $
+
+--- strace-graph	2005-12-01 23:27:26.000000000 -0500
++++ strace-graph	2006-03-05 03:13:23.000000000 -0500
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/usr/bin/env perl
+ 
+ # This script processes strace -f output.  It displays a graph of invoked
+ # subprocesses, and is useful for finding out what complex commands do.
