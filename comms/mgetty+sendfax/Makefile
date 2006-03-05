@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/02/05 23:08:27 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2006/03/05 16:27:23 jlam Exp $
 
 DISTNAME=	mgetty1.1.31-Jul24
 PKGNAME=	mgetty-1.1.31
@@ -22,7 +22,7 @@ INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 MAKE_ENV+=		MGETTY_CONFDIR=${PKG_SYSCONFDIR:Q}
 
-USE_MAKEINFO=		YES
+USE_TOOLS+=		makeinfo
 INFO_FILES=		mgetty.info
 PKG_SYSCONFSUBDIR=	mgetty+sendfax
 

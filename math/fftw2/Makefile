@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:10:01 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/05 16:27:27 jlam Exp $
 
 DISTNAME=		fftw-2.1.5
 PKGNAME=		fftw2-2.1.5
@@ -19,8 +19,7 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-i386-hacks
 .endif
 USE_LANGUAGES=		fortran
-USE_TOOLS+=		gmake
-USE_MAKEINFO=		yes
+USE_TOOLS+=		gmake makeinfo
 INFO_FILES=		fftw.info
 
 .include "../../mk/bsd.pkg.mk"

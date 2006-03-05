@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/02/05 23:08:39 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2006/03/05 16:27:24 jlam Exp $
 
 DISTNAME=	autogen-5.6.4
 PKGREVISION=	1
@@ -10,10 +10,9 @@ MAINTAINER=	kristerw@NetBSD.org
 HOMEPAGE=	http://autogen.sourceforge.net/
 COMMENT=	The Automated Program Generator
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake makeinfo
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_MAKEINFO=		YES
 INFO_FILES=		autogen.info
 
 .include "../../lang/guile/buildlink3.mk"

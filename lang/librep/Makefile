@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/03/04 21:29:54 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2006/03/05 16:27:26 jlam Exp $
 #
 
 DISTNAME=		librep-0.17
@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://librep.sourceforge.net/
 COMMENT=		Emacs Lisp-like runtime library, interpreter, compiler and VM
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake makeinfo
 USE_GNU_READLINE=	# uses rl_basic_quote_characters
 
 USE_LIBTOOL=		yes
@@ -23,7 +23,6 @@ CONFIGURE_ARGS+=	--enable-static
 
 CONFIG_STATUS_OVERRIDE=	# empty
 
-USE_MAKEINFO=	YES
 INFO_FILES=	librep.info
 
 post-install:

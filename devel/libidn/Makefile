@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/03/04 21:29:17 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2006/03/05 16:27:24 jlam Exp $
 
 DISTNAME=	libidn-0.6.2
 CATEGORIES=	devel
@@ -13,13 +13,12 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		pkg-config perl:build
+USE_TOOLS+=		makeinfo pkg-config perl:build
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	libidn.pc.in
 TEST_TARGET=		check
 
-USE_MAKEINFO=		yes
 INFO_FILES=		libidn.info
 
 .include "../../converters/libiconv/buildlink3.mk"

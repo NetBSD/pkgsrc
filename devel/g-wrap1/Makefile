@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:08:42 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/05 16:27:24 jlam Exp $
 
 DISTNAME=	g-wrap-1.3.4
 PKGREVISION=	7
@@ -13,10 +13,8 @@ DEPENDS+=	guile-slib>=2.4.2nb6:../../devel/guile-slib
 
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake makeinfo
 USE_LIBTOOL=		YES
-
-USE_MAKEINFO=		YES
 INFO_FILES=		g-wrap.info
 
 CONFIGURE_ARGS+=	--with-modules-dir=${PREFIX}/share/guile

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/12/05 23:55:13 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2006/03/05 16:27:27 jlam Exp $
 #
 
 DISTNAME=	freeWAIS-sf-2.2.12
@@ -14,7 +14,7 @@ COMMENT=	Enhanced Wide Area Information Server
 NOT_FOR_PLATFORM=	Darwin-*-*
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	makeinfo perl:run
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2006/02/05 23:09:45 joerg Exp $
+# $NetBSD: Makefile,v 1.70 2006/03/05 16:27:26 jlam Exp $
 
 DISTNAME=		guile-1.6.7
 PKGREVISION=		3
@@ -12,12 +12,10 @@ COMMENT=		GNU's Ubiquitous Intelligent Language for Extension
 CONFLICTS=		guile14<1.4.1nb1 guile-oops-[0-9]*
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake makeinfo
 USE_LIBTOOL=		YES
 USE_GNU_READLINE=	YES
 PTHREAD_AUTO_VARS=	YES
-
-USE_MAKEINFO=		YES
 INFO_FILES=		guile.info guile-tut.info goops.info r5rs.info
 
 TEST_DIRS=		${WRKSRC}

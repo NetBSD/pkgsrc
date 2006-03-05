@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2005/12/29 06:22:11 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/03/05 16:27:28 jlam Exp $
 #
 
 DISTNAME=		sfs-0.7.2
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-sfsdir=${SFS_ROOT:Q}
 CONFIGURE_ARGS+=	--disable-uvfs
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		makeinfo perl:run
 
 GCC_REQD+=		2.95.3
 
@@ -40,7 +40,6 @@ SFSEXAMPLEDIR=		${PREFIX}/share/examples/sfs
 
 MESSAGE_SUBST+=		SFSDIR=${SFS_ROOT} SFSEXAMPLEDIR=${SFSEXAMPLEDIR}
 
-USE_MAKEINFO=		YES
 INFO_FILES=		sfs.info
 
 post-install:
