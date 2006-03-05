@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4690 2006/03/05 21:27:04 adam Exp $
+$NetBSD: TODO,v 1.4691 2006/03/05 21:41:57 adam Exp $
 
 Suggested new packages
 ======================
@@ -354,7 +354,6 @@ Suggested package updates
 	o aranym-0.9.0
 	o argtable-2.3
 	o argus-3.4
-	o arj-3.10.22
 	o arnold-20040104
 	o asapm-3.1
 	o aspell-norwegian-2.0.6
