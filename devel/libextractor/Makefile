@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:08:44 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/05 22:06:38 adam Exp $
 
-DISTNAME=	libextractor-0.5.3
-PKGREVISION=	3
+DISTNAME=	libextractor-0.5.10
 CATEGORIES=	devel
 MASTER_SITES=	http://gnunet.org/libextractor/download/
 
@@ -18,14 +17,14 @@ PTHREAD_OPTS+=		require
 CONFLICTS=		csound-{bath,dev}-*	# bin/extract
 
 # This package requires dlopen, so save on space by skipping non-PIC libs
-SHLIBTOOL_OVERRIDE=	${WRKSRC}/libtool
+SHLIBTOOL_OVERRIDE+=	${WRKSRC}/libtool
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libltdl/convenience.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
