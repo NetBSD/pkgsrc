@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13185 2006/03/06 23:01:05 dan Exp $
+$NetBSD: CHANGES,v 1.13186 2006/03/06 23:03:20 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1349,3 +1349,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/ap-rpaf version 0.5 [tv 2006-03-06]
 	Updated mail/exim3 to 3.36nb7 [joerg 2006-03-06]
 	Updated devel/monotone-viz to 0.14 [dan 2006-03-06]
+	Updated print/dvipdfmx to 0.0.0.20050831nb2 [joerg 2006-03-06]
