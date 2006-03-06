@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2006/03/06 23:02:08 peter Exp $
 
---- pftop.c.orig	2003-08-05 01:20:39.000000000 +0000
-+++ pftop.c
+--- pftop.c.orig	2003-08-05 03:20:39.000000000 +0200
++++ pftop.c	2006-03-06 23:52:20.000000000 +0100
 @@ -31,6 +31,11 @@
   */
  #include "config.h"
@@ -14,7 +14,19 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  #include <sys/types.h>
  #include <sys/ioctl.h>
  #include <sys/socket.h>
-@@ -54,7 +59,9 @@
+@@ -39,7 +44,11 @@
+ #include <netinet/in.h>
+ #define TCPSTATES
+ #include <netinet/tcp_fsm.h>
++#ifdef __DragonFly__
++#include <net/pf/pfvar.h>
++#else
+ #include <net/pfvar.h>
++#endif
+ #include <arpa/inet.h>
+ 
+ #ifdef HAVE_ALTQ
+@@ -54,7 +63,9 @@
  #include <err.h>
  #include <errno.h>
  #include <fcntl.h>
@@ -24,7 +36,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  #include <signal.h>
  #include <stdio.h>
  #include <stdlib.h>
-@@ -192,9 +199,6 @@ int cachestates = 0;
+@@ -192,9 +203,6 @@
  
  volatile sig_atomic_t gotsig_close = 0;
  volatile sig_atomic_t gotsig_resize = 0;
@@ -34,7 +46,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  
  #define FLD_ALIGN_LEFT   0
  #define FLD_ALIGN_RIGHT  1
-@@ -506,7 +510,6 @@ tb_end(void)
+@@ -506,7 +514,6 @@
  
  int
  tbprintf(char *format, ...)
@@ -42,7 +54,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  {
  	int len;
  	va_list arg;
-@@ -543,6 +546,10 @@ move_horiz(int offset)
+@@ -543,6 +550,10 @@
  	}
  }
  
@@ -53,7 +65,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  void
  print_str(int len, const char *str)
  {
-@@ -758,7 +765,6 @@ set_curr_view(field_view *v)
+@@ -758,7 +769,6 @@
  	}
  
  	if ((curr_view != NULL) && (curr_view->mgr != v->mgr)) {
@@ -61,7 +73,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  		if (v->mgr != NULL && v->mgr->select_fn != NULL)
  			v->mgr->select_fn();
  	}
-@@ -766,7 +772,6 @@ set_curr_view(field_view *v)
+@@ -766,7 +776,6 @@
  	curr_view = v;
  	curr_mgr = v->mgr;
  	field_setup();
@@ -69,7 +81,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  }
  
  void
-@@ -849,11 +854,9 @@ update_cache()
+@@ -849,11 +858,9 @@
  	if (cachestates) {
  		show_field(FLD_SI);
  		show_field(FLD_SP);
@@ -81,7 +93,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  	}
  	field_setup();
  }
-@@ -1212,7 +1215,7 @@ read_states(int dev)
+@@ -1212,7 +1219,7 @@
  		ps.ps_buf = (char *) state_buf;
  
  		if (ioctl(dev, DIOCGETSTATES, &ps) < 0) {
@@ -90,7 +102,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  		}
  		num_states = ps.ps_len / sizeof(struct pf_state);
  
-@@ -1303,7 +1306,7 @@ print_header(struct pf_status *status)
+@@ -1303,7 +1310,7 @@
  		tbprintf(" PAUSED");
  
  	if (rawmode)
@@ -99,7 +111,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  	else
  		mvprintw(0, 0, "%s", tmp_buf);
  
-@@ -1319,7 +1322,10 @@ print_header(struct pf_status *status)
+@@ -1319,7 +1326,10 @@
  		len = columns - strlen(tmp_buf);
  		if (len < 0)
  			len = 0;
@@ -111,7 +123,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  	}
  
  	tb_end();
-@@ -1645,7 +1651,7 @@ disp_update(int dev)
+@@ -1645,7 +1655,7 @@
  		dispstart = 0;
  
  	if (ioctl(dev, DIOCGETSTATUS, &status)) {
@@ -120,7 +132,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  		return (-1);
  	}
  
-@@ -1681,7 +1687,7 @@ read_rules(int dev)
+@@ -1681,7 +1691,7 @@
  
  	memset(&pr, 0, sizeof(pr));
  	if (ioctl(dev, DIOCGETRULES, &pr)) {
@@ -129,7 +141,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  		return (-1);
  	}
  
-@@ -1704,7 +1710,7 @@ read_rules(int dev)
+@@ -1704,7 +1714,7 @@
  	for (nr = 0; nr < num_rules; ++nr) {
  		pr.nr = nr;
  		if (ioctl(dev, DIOCGETRULE, &pr)) {
@@ -138,7 +150,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  			return (-1);
  		}
  		rules[nr] = pr.rule;
-@@ -1802,7 +1808,11 @@ tb_print_fromto(struct pf_rule_addr *src
+@@ -1802,7 +1812,11 @@
  			 PF_AZERO(PT_MASK(src), AF_INET6))
  			tbprintf("any ");
  		else {
@@ -150,7 +162,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  				tbprintf("! ");
  #ifdef HAVE_ADDR_WRAP
  			tb_print_addrw(&src->addr, PT_MASK(src), af);
-@@ -1823,7 +1833,11 @@ tb_print_fromto(struct pf_rule_addr *src
+@@ -1823,7 +1837,11 @@
  			 PF_AZERO(PT_MASK(dst), AF_INET6))
  			tbprintf("any ");
  		else {
@@ -162,7 +174,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  				tbprintf("! ");
  #ifdef HAVE_ADDR_WRAP
  			tb_print_addrw(&dst->addr, PT_MASK(dst), af);
-@@ -1890,8 +1904,13 @@ print_rule(struct pf_rule *pr)
+@@ -1890,8 +1908,13 @@
  #ifdef HAVE_RULE_STATES
  	print_fld_size(FLD_STATS, pr->states);
  #endif
@@ -176,7 +188,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  	print_fld_uint(FLD_RULE, pr->nr);
  	print_fld_str(FLD_DIR, pr->direction == PF_OUT ? "Out" : "In");
  	if (pr->quick)
-@@ -2486,12 +2505,6 @@ sig_resize(int signal)
+@@ -2486,12 +2509,6 @@
  }
  
  void
@@ -189,7 +201,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  usage()
  {
  	extern char *__progname;
-@@ -2544,7 +2557,9 @@ show_help(void)
+@@ -2544,7 +2561,9 @@
  	line++;
  	mvprintw(line++, 6, "press any key to continue ...");
  
@@ -199,7 +211,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  }
  
  void
-@@ -2577,8 +2592,9 @@ setup_term(int maxstates)
+@@ -2577,8 +2596,9 @@
  		keypad(stdscr, TRUE);
  		intrflush(stdscr, FALSE);
  
@@ -210,7 +222,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  	}
  
  	if (maxstates == 0)
-@@ -2597,7 +2613,6 @@ command_set(struct command *cmd)
+@@ -2597,7 +2617,6 @@
  		cmdbuf[0] = 0;
  	}
  	curr_cmd = cmd;
@@ -218,7 +230,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  	return prev;
  }
  
-@@ -2618,10 +2633,8 @@ cmd_delay(void)
+@@ -2618,10 +2637,8 @@
  {
  	int del;
  	del = atoi(cmdbuf);
@@ -230,7 +242,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  }
  
  void
-@@ -2646,7 +2659,6 @@ cmd_keyboard(int ch)
+@@ -2646,7 +2663,6 @@
  		if (cmd_len < sizeof(cmdbuf) - 1) {
  			cmdbuf[cmd_len++] = ch;
  			cmdbuf[cmd_len] = 0;
@@ -238,7 +250,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  		} else
  			beep();
  	}
-@@ -2663,10 +2675,9 @@ cmd_keyboard(int ch)
+@@ -2663,10 +2679,9 @@
  	case KEY_BACKSPACE:
  	case KEY_DC:
  	case CTRL_H:
@@ -251,7 +263,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  			beep();
  		break;
  	default:
-@@ -2687,9 +2698,6 @@ keyboard(void)
+@@ -2687,9 +2702,6 @@
  	}
  
  	switch (ch) {
@@ -261,7 +273,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  	case 'c':
  		cachestates = !cachestates;
  		update_cache();
-@@ -2698,25 +2706,21 @@ keyboard(void)
+@@ -2698,25 +2710,21 @@
  		/* FALLTHROUGH */
  	case 'h':
  		show_help();
@@ -287,7 +299,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  		break;
  	case 's':
  		command_set(&cm_delay);
-@@ -2737,49 +2741,40 @@ keyboard(void)
+@@ -2737,49 +2745,40 @@
  		/* FALLTHROUGH */
  	case CTRL_N:
  		dispstart++;
@@ -338,7 +350,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  		set_view_hotkey(ch);
  }
  
-@@ -2790,6 +2785,7 @@ main(int argc, char *argv[])
+@@ -2790,6 +2789,7 @@
  	extern int optind;
  
  	struct pf_status status;
@@ -346,7 +358,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  
  	char *orderstr = NULL;
  	char *viewstr = NULL;
-@@ -2872,7 +2868,6 @@ main(int argc, char *argv[])
+@@ -2872,7 +2872,6 @@
  	signal(SIGINT, sig_close);
  	signal(SIGQUIT, sig_close);
  	signal(SIGWINCH, sig_resize);
@@ -354,7 +366,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  
  #ifdef HAVE_DEVICE_RO
  	dev = open("/dev/pf", O_RDONLY);
-@@ -2884,7 +2879,7 @@ main(int argc, char *argv[])
+@@ -2884,7 +2883,7 @@
  
  	/* preallocate existing states if possible */
  	if (ioctl(dev, DIOCGETSTATUS, &status)) {
@@ -363,7 +375,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  		alloc_buf(0);
  	} else
  		alloc_buf(status.states);
-@@ -2910,36 +2905,7 @@ main(int argc, char *argv[])
+@@ -2910,36 +2909,7 @@
  	if (rawmode && countmax == 0)
  		countmax = 1;
  
@@ -400,7 +412,7 @@ $NetBSD: patch-ab,v 1.3 2005/12/07 14:32:07 joerg Exp $
  		if (gotsig_close)
  			break;
  		if (gotsig_resize) {
-@@ -2947,12 +2913,30 @@ main(int argc, char *argv[])
+@@ -2947,12 +2917,30 @@
  				endwin();
  			setup_term(maxstates);
  			gotsig_resize = 0;
