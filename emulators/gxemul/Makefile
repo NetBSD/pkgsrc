@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/02/19 19:31:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.18 2006/03/06 22:03:46 xtraeme Exp $
 #
 
 DISTNAME=	gxemul-0.3.8
@@ -35,9 +35,9 @@ GLOBAL_LDFLAGS=		-L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib
 SUBST_CLASSES+=		x11
 SUBST_STAGE.x11=	post-patch
 SUBST_FILES.x11=	configure
-SUBST_SED.x11=		-e "s|-L/usr/X11R6/lib|${GLOBAL_LDFLAGS}|g" \
-			-e "s|/usr/X11R6|${X11BASE}|g"
-SUBST_MESSAGE.x11=	"Fixing X linking flags."
+SUBST_SED.x11=		-e "s|-L/usr/X11R6/lib|${GLOBAL_LDFLAGS}|g"
+SUBST_SED.x11+=		-e "s|/usr/X11R6|${X11BASE}|g"
+SUBST_MESSAGE.x11=	Fixing X linking flags.
 .endif
 
 .include "../../mk/x11.buildlink3.mk"
