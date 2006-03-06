@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4694 2006/03/06 13:47:11 adam Exp $
+$NetBSD: TODO,v 1.4695 2006/03/06 18:23:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -551,6 +551,7 @@ Suggested package updates
 	o gnome-themes-2.12.3
 	o gnome2-control-center-2.12.3
 	o gnomeicu-0.99.10
+	o gnucash-devel-1.9.2
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
@@ -615,6 +616,7 @@ Suggested package updates
 	o inn-2.4.2
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
+	o ion3-devel-20060305
 	o iozone-3.257
 	o ipa-2.0 [pkg/32398]
 	o ipcheck-0.219
@@ -1071,7 +1073,6 @@ Suggested package updates
 	o scew-0.4.0
 	o sch-3.8.3
 	o scribus-1.2.4.1
-	o scrollz-1.9.5 [pkg/32974]
 	o sdig-0.40
 	o semantic-1.4.4
 	o sendfile-20010424
