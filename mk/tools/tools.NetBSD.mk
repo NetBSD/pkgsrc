@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.25 2006/03/05 16:27:29 jlam Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.26 2006/03/06 05:25:45 jlam Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -42,6 +42,9 @@ TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/bin/id
 TOOLS_PLATFORM.install?=	/usr/bin/install
+.if exists(/usr/bin/install-info)
+TOOLS_PLATFORM.install-info?=	/usr/bin/install-info
+.endif
 .if exists(/sbin/ldconfig)
 TOOLS_PLATFORM.ldconfig?=	/sbin/ldconfig
 .endif
