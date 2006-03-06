@@ -1,4 +1,4 @@
-# $NetBSD: tools.DragonFly.mk,v 1.23 2006/03/05 16:27:29 jlam Exp $
+# $NetBSD: tools.DragonFly.mk,v 1.24 2006/03/06 05:25:45 jlam Exp $
 #
 # System-supplied tools for the DragonFly operating system.
 
@@ -36,6 +36,9 @@ TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/bin/id
 TOOLS_PLATFORM.install?=	/usr/bin/install
+.if exists(/usr/bin/install-info)
+TOOLS_PLATFORM.install-info?=	/usr/bin/install-info
+.endif
 TOOLS_PLATFORM.ldconfig?=	/sbin/ldconfig
 TOOLS_PLATFORM.lex?=		/usr/bin/lex
 TOOLS_PLATFORM.ln?=		/bin/ln

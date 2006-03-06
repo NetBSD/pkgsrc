@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.160 2006/03/05 16:27:29 jlam Exp $
+# $NetBSD: replace.mk,v 1.161 2006/03/06 05:25:45 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -425,6 +425,22 @@ TOOLS_PATH.gzip=		${TOOLS_PREFIX.gzip}/bin/gzip
 TOOLS_ARGS.gzip=		-nf ${GZIP}
 .  endif
 .endif
+
+.if !defined(TOOLS_IGNORE.install-info) && !empty(_USE_TOOLS:Minstall-info)
+.  if !empty(PKGPATH:Mpkgtools/pkg_install-info)
+MAKEFLAGS+=			TOOLS_IGNORE.install-info=
+.  elif !empty(_TOOLS_USE_PKGSRC.install-info:M[yY][eE][sS])
+TOOLS_DEPENDS.install-info?=	pkg_install-info-[0-9]*:../../pkgtools/pkg_install-info
+TOOLS_CREATE+=			install-info
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.install-info=pkg_install-info
+TOOLS_PATH.install-info=	${TOOLS_PREFIX.install-info}/bin/pkg_install-info
+.  endif
+.endif
+#
+# Always create an install-info tool that is a "no operation" command, as
+# registration of info files is handled by the INSTALL script.
+#
+TOOLS_SCRIPT.install-info=	exit 0
 
 .if !defined(TOOLS_IGNORE.ksh) && !empty(_USE_TOOLS:Mksh)
 .  if !empty(PKGPATH:Mshells/pdksh)

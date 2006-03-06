@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.9 2006/03/05 16:27:29 jlam Exp $
+# $NetBSD: texinfo.mk,v 1.10 2006/03/06 05:25:45 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -35,14 +35,6 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
-#
-# Create an install-info script that is a "no operation" command, as
-# registration of info files is handled by the INSTALL script.
-#
-TOOLS_NOOP+=		install-info
-CONFIGURE_ENV+=		INSTALL_INFO=${TOOLS_CMD.install-info:Q}
-MAKE_ENV+=		INSTALL_INFO=${TOOLS_CMD.install-info:Q}
-
 TEXINFO_REQD?=		3.12
 
 # If the package doesn't explicitly request makeinfo as a tool, then
@@ -76,5 +68,7 @@ _TOOLS_USE_PKGSRC.makeinfo!=						\
 MAKEVARS+=	_TOOLS_USE_PKGSRC.makeinfo
 .endif
 
+CONFIGURE_ENV+=		INSTALL_INFO=${TOOLS_CMD.install-info:Q}
+MAKE_ENV+=		INSTALL_INFO=${TOOLS_CMD.install-info:Q}
 CONFIGURE_ENV+=		MAKEINFO=${TOOLS_CMD.makeinfo:Q}
 MAKE_ENV+=		MAKEINFO=${TOOLS_CMD.makeinfo:Q}
