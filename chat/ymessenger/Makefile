@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/06 09:45:34 toddpw Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/06 09:56:30 toddpw Exp $
 
 DISTNAME=		ymessenger-1.0.4
 CATEGORIES=		chat
@@ -27,7 +27,7 @@ CHECK_SHLIBS=		no
 
 DIST_SUBDIR=		.
 
-RESTRICTED=		"Commercial software."
+RESTRICTED=		Commercial software.
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
@@ -41,7 +41,7 @@ PLIST_SUBST+=		EMULSUBDIR=${EMULSUBDIR:Q}
 EMUL_YMESSENGER=	${PREFIX}/${EMULSUBDIR}/opt/ymessenger/bin/ymessenger
 YMESSENGER=		${PREFIX}/bin/ymessenger
 post-install:
-	sed '1 s,bin,${EMULSUBDIR}/bin,' < ${EMUL_YMESSENGER} > ${YMESSENGER}
-	chmod 755 ${YMESSENGER}
+	${SED} '1 s,bin,${EMULSUBDIR}/bin,' < ${EMUL_YMESSENGER} > ${YMESSENGER}
+	${CHMOD} 755 ${YMESSENGER}
 
 .include "../../mk/bsd.pkg.mk"
