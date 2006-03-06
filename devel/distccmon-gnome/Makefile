@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2006/02/17 07:38:45 martti Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/06 00:18:15 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/-/-gnome-/}
 COMMENT=	Graphical monitor for distcc, the distributed C/C++ compiler
 
 .include "../../devel/distcc/Makefile.common"
-PKGREVISION=	3
+PKGREVISION=	4
 
 CATEGORIES+=	gnome
 
