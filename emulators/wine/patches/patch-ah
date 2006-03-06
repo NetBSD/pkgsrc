@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.7 2005/10/26 08:32:59 adam Exp $
+$NetBSD: patch-ah,v 1.8 2006/03/06 13:46:01 adam Exp $
 
---- tools/Makefile.in.orig	2005-10-06 16:10:02.000000000 +0000
+--- tools/Makefile.in.orig	2006-03-02 18:16:57.000000000 +0100
 +++ tools/Makefile.in
-@@ -53,16 +53,16 @@ make_ctests$(EXEEXT): make_ctests.o
+@@ -55,19 +55,19 @@ make_ctests$(EXEEXT): make_ctests.o
  	$(CC) $(CFLAGS) -o $@ make_ctests.o
  
  fnt2bdf$(EXEEXT): fnt2bdf.o
@@ -12,6 +12,10 @@ $NetBSD: patch-ah,v 1.7 2005/10/26 08:32:59 adam Exp $
  fnt2fon$(EXEEXT): fnt2fon.o
 -	$(CC) $(CFLAGS) -o $@ fnt2fon.o $(LIBPORT)
 +	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ fnt2fon.o $(LIBPORT)
+ 
+ relpath$(EXEEXT): relpath.o
+-	$(CC) $(CFLAGS) -o $@ relpath.o $(LIBPORT)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ relpath.o $(LIBPORT)
  
  sfnt2fnt$(EXEEXT): sfnt2fnt.o
 -	$(CC) $(CFLAGS) -o $@ sfnt2fnt.o $(LIBUNICODE) $(LIBPORT) $(FREETYPELIBS)
