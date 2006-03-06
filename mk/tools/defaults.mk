@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.45 2006/03/05 16:27:29 jlam Exp $
+# $NetBSD: defaults.mk,v 1.46 2006/03/06 05:25:45 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -92,6 +92,7 @@ _TOOLS_VARNAME.hostname=	HOSTNAME_CMD
 _TOOLS_VARNAME.id=		ID
 _TOOLS_VARNAME.imake=		IMAKE
 _TOOLS_VARNAME.install=		INSTALL
+_TOOLS_VARNAME.install-info=	INSTALL_INFO
 _TOOLS_VARNAME.lex=		LEX
 _TOOLS_VARNAME.lha=		LHA
 _TOOLS_VARNAME.ln=		LN
