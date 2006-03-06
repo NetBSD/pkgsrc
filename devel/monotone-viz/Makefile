@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:29:18 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/06 22:58:57 dan Exp $
 #
 
-DISTNAME=		monotone-viz-0.12
-PKGREVISION=		6
+DISTNAME=		monotone-viz-0.14
 CATEGORIES=		devel
 MASTER_SITES=		http://oandrieu.nerim.net/monotone-viz/
 
@@ -12,7 +11,7 @@ COMMENT=		Visualize monotone ancestry graphs
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-local-lablgtk --with-shared-sqlite
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 BUILD_TARGET=		monotone-viz
 BUILD_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR}
 INSTALLATION_DIRS=	bin
