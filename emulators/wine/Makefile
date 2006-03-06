@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.98 2006/02/26 07:48:11 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2006/03/06 13:46:01 adam Exp $
 
-DISTNAME=	wine-0.9.8
+DISTNAME=	wine-0.9.9
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wine/} \
 		http://ibiblio.org/pub/linux/system/emulators/wine/
@@ -21,7 +21,7 @@ USE_LIBTOOL=		yes
 USE_NCURSES=		yes
 USE_TOOLS+=		bison gmake mktemp
 GNU_CONFIGURE=		yes
-#CONFIGURE_ARGS+=	--disable-debug
+CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-trace
 UNLIMIT_RESOURCES=	datasize
 
@@ -31,7 +31,7 @@ REPLACE_PERL+=		tools/winemaker tools/winedump/function_grep.pl
 # buildlink directory, so prepend all of the LDFLAGS necessary to link
 # against the libraries.
 #
-CONFIGURE_ENV+=		X_LIBS="${LDFLAGS:M*:Q}"
+CONFIGURE_ENV+=		X_LIBS=${LDFLAGS:M*:Q}
 CONFIGURE_ENV+=		CFLAGS="${CFLAGS} -DDEVOSSAUDIO=\"${DEVOSSAUDIO}\""
 LIBS+=			${LDFLAGS}
 
@@ -39,7 +39,8 @@ LIBS+=			${LDFLAGS}
 
 post-install:
 .for tool in bin2res fnt2bdf
-	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/tools/${tool} ${PREFIX}/bin
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/tools/${tool} \
+		${PREFIX}/bin
 .endfor
 
 .include "../../audio/esound/buildlink3.mk"
