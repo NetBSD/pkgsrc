@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2006/03/03 17:47:58 tv Exp $
+# $NetBSD: builtin.mk,v 1.9 2006/03/06 19:21:34 tv Exp $
 
 BUILTIN_PKG:=	expat
 
@@ -81,9 +81,13 @@ BUILDLINK_DEPENDS.expat+=	expat>=1.95.4
 .  endif
 
 .  if !empty(USE_BUILTIN.expat:M[yY][eE][sS])
+.    if !empty(H_EXPAT:M${X11BASE}/)
 BUILDLINK_PREFIX.expat=	${X11BASE}
-.    include "../../mk/x11.buildlink3.mk"
-.    include "../../mk/x11.builtin.mk"
+.      include "../../mk/x11.buildlink3.mk"
+.      include "../../mk/x11.builtin.mk"
+.    else
+BUILDLINK_PREFIX.expat=	/usr
+.    endif
 .  endif
 
 .endif	# CHECK_BUILTIN.expat
