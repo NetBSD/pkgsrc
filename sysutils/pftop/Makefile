@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/07 12:50:30 peter Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/06 23:02:07 peter Exp $
 
 DISTNAME=	pftop-0.4
 CATEGORIES=	sysutils net
@@ -14,12 +14,6 @@ MAKE_ENV+=	OSLEVEL=${PF_VERSION:S/.//}
 CFLAGS+=	-I${PREFIX}/include
 
 INSTALLATION_DIRS=	man/man8 sbin
-
-SUBST_CLASSES+=		path
-SUBST_STAGE.path=	post-patch
-SUBST_FILES.path=	cache.c pftop.c
-SUBST_SED.path=		-e 's,net/pfvar.h,${H_PFLKM:S/\/usr\/include\///},g'
-SUBST_MESSAGE.path=	"Fixing include path."
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pftop ${PREFIX}/sbin
