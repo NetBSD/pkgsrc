@@ -1,8 +1,21 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/11/05 15:07:15 peter Exp $
+$NetBSD: patch-aa,v 1.2 2006/03/06 23:02:07 peter Exp $
 
 --- pfstat.c.orig	2003-09-10 19:45:27.000000000 +0200
-+++ pfstat.c	2004-06-08 13:36:51.000000000 +0200
-@@ -167,26 +167,26 @@
++++ pfstat.c	2006-03-06 23:50:43.000000000 +0100
+@@ -37,7 +37,12 @@
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <net/if.h>
++#ifdef __DragonFly__
++#include <net/pf/pfvar.h>
++#else
+ #include <net/pfvar.h>
++#endif
++
+ #include <err.h>
+ #include <fcntl.h>
+ #include <stdio.h>
+@@ -167,26 +172,26 @@
  	}
  	close(dev);
  	if (s.running) {
