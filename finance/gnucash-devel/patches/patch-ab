@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2006/02/23 22:19:45 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2006/03/07 04:32:49 wiz Exp $
 
---- src/app-utils/gnc-ui-util.c.orig	2006-02-23 18:49:41.000000000 +0000
+--- src/app-utils/gnc-ui-util.c.orig	2006-03-06 02:02:59.000000000 +0000
 +++ src/app-utils/gnc-ui-util.c
-@@ -47,6 +47,14 @@
- #include "Transaction.h"
- #include "guile-mappings.h"
+@@ -93,6 +93,14 @@ gnc_configure_account_separator (void)
+     free(string);
+ }
  
 +#if defined(__DragonFly__)
 +#define LC_CAST	(char **)
@@ -15,9 +15,9 @@ $NetBSD: patch-ab,v 1.1 2006/02/23 22:19:45 joerg Exp $
 +#endif
 +
  
- #define KEY_CURRENCY_CHOICE "currency_choice"
- #define KEY_CURRENCY_OTHER  "currency_other"
-@@ -738,15 +746,15 @@ gnc_localeconv (void)
+ static void
+ gnc_configure_reverse_balance (void)
+@@ -742,15 +750,15 @@ gnc_localeconv (void)
  
    lc = *localeconv();
  
@@ -42,32 +42,32 @@ $NetBSD: patch-ab,v 1.1 2006/02/23 22:19:45 joerg Exp $
  
    gnc_lconv_set_char(&lc.frac_digits, 2);
    gnc_lconv_set_char(&lc.int_frac_digits, 2);
-@@ -1224,12 +1232,12 @@ PrintAmountInternal(char *buf, gnc_numer
+@@ -1229,12 +1237,12 @@ PrintAmountInternal(char *buf, gnc_numer
      if (info->monetary)
      {
-       separator = lc->mon_thousands_sep[0];
+       separator = lc->mon_thousands_sep;
 -      group = lc->mon_grouping;
 +      group = LC_CAST2 lc->mon_grouping;
      }
      else
      {
-       separator = lc->thousands_sep[0];
+       separator = lc->thousands_sep;
 -      group = lc->grouping;
 +      group = LC_CAST2 lc->grouping;
      }
  
      buf_ptr = buf;
-@@ -1574,13 +1582,13 @@ xaccParseAmount (const char * in_str, gb
+@@ -1585,13 +1593,13 @@ xaccParseAmount (const char * in_str, gb
    {
-     group_separator = lc->mon_thousands_sep[0];
-     decimal_point = lc->mon_decimal_point[0];
+     group_separator = g_utf8_get_char(lc->mon_thousands_sep);
+     decimal_point = g_utf8_get_char(lc->mon_decimal_point);
 -    group = lc->mon_grouping;
 +    group = LC_CAST2 lc->mon_grouping;
    }
    else
    {
-     group_separator = lc->thousands_sep[0];
-     decimal_point = lc->decimal_point[0];
+     group_separator = g_utf8_get_char(lc->thousands_sep);
+     decimal_point = g_utf8_get_char(lc->decimal_point);
 -    group = lc->grouping;
 +    group = LC_CAST2 lc->grouping;
    }
