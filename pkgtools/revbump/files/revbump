@@ -1,6 +1,6 @@
 #!@PERL@ -w
 #
-# $NetBSD: revbump,v 1.1.1.1 2005/01/05 00:31:38 wiz Exp $
+# $NetBSD: revbump,v 1.2 2006/03/07 04:30:54 wiz Exp $
 #
 # Copyright (c) 2003, 2004 The NetBSD Foundation, Inc.
 #
@@ -34,13 +34,18 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+use strict;
+use Getopt::Std;
+
+my (@PACKAGES, $PKGSRCDIR, %opt, $pkg);
+
 $PKGSRCDIR = $ENV{PKGSRCDIR};
 if (! $PKGSRCDIR) {
     $PKGSRCDIR = "/usr/pkgsrc";
 }
 
 sub usage {
-    print STDERR "usage: revbump [-p pkgsrcdir] [cat1/pkg1 ... catN/pkgN]\n\n";
+    print STDERR "usage: revbump [-h] [-p pkgsrcdir] [cat1/pkg1 ... catN/pkgN]\n\n";
     print STDERR "If no packages are given as arguments, the list is read from stdin.\n";
     print STDERR "Packages for which revision cannot be bumped are written to stdout.\n";
     exit 0;
@@ -48,7 +53,7 @@ sub usage {
 
 sub revbump {
     my $pkgdir = shift;
-    my ($pkg, $oldpkgver, $pkgver, $done, $rev, $oldmk, $newmk, $backupmk);
+    my ($pkg, $oldpkgver, $pkgver, $done, $oldmk, $newmk, $backupmk);
     local (*OLDMK, *MAKE);
 
     $pkgdir =~ /\/(.*)$/;
@@ -126,18 +131,14 @@ sub revbump {
     return 1;
 }
 
-@PACKAGES = ();
-
-while (@ARGV) {
-    $arg = shift;
-    if ($arg eq '-h') {
-        usage();
-    } elsif ($arg eq '-p') {
-        $PKGSRCDIR = shift;
-    } else {
-        push @PACKAGES, $arg;
-    }
+getopts('hp:', \%opt);
+usage() if $opt{h};
+if ($opt{p}) {
+    $PKGSRCDIR = $opt{p};
 }
+
+@PACKAGES = ();
+push @PACKAGES, @ARGV;
 
 if (! -d $PKGSRCDIR || ! -d "$PKGSRCDIR/doc" || ! -d "$PKGSRCDIR/mk") {
     print STDERR "Invalid pkgsrc directory $PKGSRCDIR\n";
@@ -151,14 +152,12 @@ if (! @PACKAGES) {
     }
 }
 
-@valid = ();
 foreach $pkg (@PACKAGES) {
     if (! -f "$PKGSRCDIR/$pkg/Makefile") {
         print "$pkg\n";
     } else {
         print "$pkg\n" if revbump("$pkg") == 0;
         $pkg =~ /\/(.*)$/;
-        push @valid, $1;
     }
 }
 
