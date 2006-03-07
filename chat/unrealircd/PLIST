@@ -1,20 +1,20 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/16 21:30:06 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/03/07 17:23:51 adrianp Exp $
 sbin/ircd
 share/doc/unrealircd/Authors
 share/doc/unrealircd/LICENSE
 share/doc/unrealircd/coding-guidelines
 share/doc/unrealircd/tao.of.irc
-share/doc/unrealircd/unreal32docs.html
 share/doc/unrealircd/unreal32docs.de.html
 share/doc/unrealircd/unreal32docs.es.html
 share/doc/unrealircd/unreal32docs.fr.html
 share/doc/unrealircd/unreal32docs.gr.html
+share/doc/unrealircd/unreal32docs.html
 share/doc/unrealircd/unreal32docs.hu.html
 share/doc/unrealircd/unreal32docs.nl.html
 share/doc/unrealircd/unreal32docs.ru.html
 share/examples/rc.d/unrealircd
-share/examples/unrealircd/example.conf
 share/examples/unrealircd/example.bg.conf
+share/examples/unrealircd/example.conf
 share/examples/unrealircd/example.de.conf
 share/examples/unrealircd/example.fr.conf
 share/examples/unrealircd/example.hu.conf
@@ -123,11 +123,11 @@ share/unrealircd/modules/m_tsctl.so
 share/unrealircd/modules/m_umode2.so
 share/unrealircd/modules/m_undccdeny.so
 share/unrealircd/modules/m_unkline.so
-share/unrealircd/modules/m_user.so
-share/unrealircd/modules/m_userip.so
 share/unrealircd/modules/m_unsqline.so
 share/unrealircd/modules/m_unzline.so
+share/unrealircd/modules/m_user.so
 share/unrealircd/modules/m_userhost.so
+share/unrealircd/modules/m_userip.so
 share/unrealircd/modules/m_vhost.so
 share/unrealircd/modules/m_wallops.so
 share/unrealircd/modules/m_watch.so

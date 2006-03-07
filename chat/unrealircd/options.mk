@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.7 2005/12/05 23:55:03 rillig Exp $
+# $NetBSD: options.mk,v 1.8 2006/03/07 17:23:51 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unrealircd
 
-PKG_OPTIONS_REQUIRED_GROUPS= role
-PKG_OPTIONS_GROUP.role= unrealircd-leaf unrealircd-hub
+PKG_OPTIONS_REQUIRED_GROUPS=	role
+PKG_OPTIONS_GROUP.role=		unrealircd-leaf unrealircd-hub
 
 PKG_SUPPORTED_OPTIONS=	inet6 unrealircd-nospoof unrealircd-leaf
 PKG_SUPPORTED_OPTIONS+=	unrealircd-ziplinks unrealircd-remoteinc ssl
@@ -22,7 +22,7 @@ PKG_SUGGESTED_OPTIONS=	unrealircd-showlistmodes unrealircd-hub
 CONFIGURE_ARGS+=	--enable-inet6
 MESSAGE_SRC+=		${WRKDIR}/.MESSAGE_SRC.inet6
 .else
-CONFIGURE_ENV+= 	ac_cv_ip6=no
+CONFIGURE_ENV+=		ac_cv_ip6=no
 .endif
 
 ###
