@@ -1,4 +1,4 @@
-.\"	$NetBSD: finddepends.1,v 1.1 2006/03/05 23:35:49 wiz Exp $
+.\"	$NetBSD: finddepends.1,v 1.2 2006/03/07 04:30:54 wiz Exp $
 .\"
 .\" Copyright (c) 2006 The NetBSD Foundation, Inc.
 .\"
@@ -31,7 +31,7 @@
 .\" OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 .\" IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd March 6, 2006
+.Dd March 7, 2006
 .Dt FINDDEPENDS 1
 .Os
 .Sh NAME
@@ -39,6 +39,8 @@
 .Nd tool for finding packages including a particular file
 .Sh SYNOPSIS
 .Nm
+.Op Fl h
+.Op Fl p Ar pkgsrcdir
 .Ar pattern
 .Sh DESCRIPTION
 .Nm
@@ -49,6 +51,16 @@ Given a
 on the command line, it will recursively find all buildlink3.mk files
 that include it, and then find all Makefiles that include any of the
 buildlink3.mk files.
+.Pp
+.Nm Fl h
+displays a short usage.
+.Pp
+If
+.Fl p
+is given,
+.Ar pkgsrcdir
+is used instead of the default
+.Pa /usr/pkgsrc .
 .Pp
 See
 .Xr revbump 1

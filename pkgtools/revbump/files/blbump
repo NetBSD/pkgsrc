@@ -1,6 +1,6 @@
 #!@PERL@ -w
 #
-# $NetBSD: blbump,v 1.1.1.1 2005/01/05 00:31:39 wiz Exp $
+# $NetBSD: blbump,v 1.2 2006/03/07 04:30:54 wiz Exp $
 #
 # Copyright (c) 2003, 2004 The NetBSD Foundation, Inc.
 #
@@ -33,6 +33,10 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
+use strict;
+use Getopt::Std;
+
+my (@PACKAGES, $PKGSRCDIR, %opt, $pkg);
 
 $PKGSRCDIR = $ENV{PKGSRCDIR};
 if (! $PKGSRCDIR) {
@@ -40,7 +44,7 @@ if (! $PKGSRCDIR) {
 }
 
 sub usage {
-    print STDERR "usage: blbump [-p pkgsrcdir] [cat1/pkg1 ... catN/pkgN]\n\n";
+    print STDERR "usage: blbump [-h] [-p pkgsrcdir] [cat1/pkg1 ... catN/pkgN]\n\n";
     print STDERR "If no packages are given as arguments, the list is read from stdin.\n";
     print STDERR "Packages whose buildlink files cannot be updated automatically\n";
     print STDERR "are written to stdout.\n";
@@ -49,9 +53,13 @@ sub usage {
 
 sub blbump {
     my $pkgdir = shift;
-    my ($oldpkgver, $pkgver, $done, $rev, $oldbl, $newbl, $backupbl);
+    my ($pkgver, $ret);
     local (*MAKE);
 
+    # ignore packages without buildlink3.mk files
+    if (not -e "$PKGSRCDIR/$pkgdir/buildlink3.mk") {
+	return 1;
+    }
     open(MAKE, '-|', "cd $PKGSRCDIR/$pkgdir ; make show-var VARNAME=PKGNAME");
     $pkgver = <MAKE>;
     close(MAKE);
@@ -69,9 +77,9 @@ sub blbump {
 }
 
 sub bumpbl {
+    my ($backupbl, $done, $newbl, $oldbl, $pkgver);
     $oldbl = shift;
     $pkgver = shift;
-    my ($done, $rev, $newbl, $backupbl);
     local (*OLDBL);
 
     open(OLDBL, $oldbl) or return 0;
@@ -107,18 +115,14 @@ sub bumpbl {
     return 1;
 }
 
-@PACKAGES = ();
-
-while (@ARGV) {
-    $arg = shift;
-    if ($arg eq '-h') {
-        usage();
-    } elsif ($arg eq '-p') {
-        $PKGSRCDIR = shift;
-    } else {
-        push @PACKAGES, $arg;
-    }
+getopts('hp:', \%opt);
+usage() if $opt{h};
+if ($opt{p}) {
+    $PKGSRCDIR = $opt{p};
 }
+
+@PACKAGES = ();
+push @PACKAGES, @ARGV;
 
 if (! -d $PKGSRCDIR || ! -d "$PKGSRCDIR/doc" || ! -d "$PKGSRCDIR/mk") {
     print STDERR "Invalid pkgsrc directory $PKGSRCDIR\n";
@@ -132,14 +136,12 @@ if (! @PACKAGES) {
     }
 }
 
-@valid = ();
 foreach $pkg (@PACKAGES) {
     if (! -f "$PKGSRCDIR/$pkg/Makefile") {
         print "$pkg\n";
     } else {
         print "$pkg\n" if blbump("$pkg") == 0;
         $pkg =~ /\/(.*)$/;
-        push @valid, $1;
     }
 }
 
