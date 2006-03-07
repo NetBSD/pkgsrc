@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: usergroup,v 1.11 2005/09/26 22:12:35 jlam Exp $
+# $NetBSD: usergroup,v 1.12 2006/03/07 20:31:17 reed Exp $
 #
 # +USERGROUP - users and groups management script
 #
@@ -347,7 +347,7 @@ CHECK-REMOVE)
 	"")	;;
 	*)	${ECHO} "==========================================================================="
 		${ECHO} "The following users are no longer being used by ${PKGNAME},"
-		${ECHO} "and they can be removed if no other packages are using them:"
+		${ECHO} "and they can be removed if no other software is using them:"
 		${ECHO} ""
 		${ECHO} "$existing_users" | listwrap 40
 		${ECHO} ""
@@ -374,7 +374,7 @@ CHECK-REMOVE)
 	"")	;;
 	*)	${ECHO} "==========================================================================="
 		${ECHO} "The following groups are no longer being used by ${PKGNAME},"
-		${ECHO} "and they can be removed if no other packages are using them:"
+		${ECHO} "and they can be removed if no other software is using them:"
 		${ECHO} ""
 		${ECHO} "$existing_groups" | listwrap 40
 		${ECHO} ""
