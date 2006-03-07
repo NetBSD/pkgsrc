@@ -1,4 +1,4 @@
-$NetBSD: patch-cc,v 1.4 2004/06/01 20:58:38 shannonjr Exp $
+$NetBSD: patch-cc,v 1.5 2006/03/07 06:29:03 joerg Exp $
 
 --- interface/utils.h.orig	2000-04-19 16:41:04.000000000 -0600
 +++ interface/utils.h
@@ -15,7 +15,7 @@ $NetBSD: patch-cc,v 1.4 2004/06/01 20:58:38 shannonjr Exp $
 +#include <machine/bswap.h>
 +#endif
 +#include <err.h>	/* XXX */
-+#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
 +#include <machine/endian.h>
 +#endif
  #include <stdio.h>
