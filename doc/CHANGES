@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13196 2006/03/07 15:21:33 dillo Exp $
+$NetBSD: CHANGES,v 1.13197 2006/03/07 17:26:14 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1361,3 +1361,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/revbump to 1.4 [wiz 2006-03-07]
 	Added security/caff version 0.4.4 [ghen 2006-03-07]
 	Added math/antixls version 0.2b [dillo 2006-03-07]
+	Updated chat/unrealircd to 3.2.4nb3 [adrianp 2006-03-07]
