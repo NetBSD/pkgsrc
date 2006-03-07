@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13192 2006/03/07 04:34:35 wiz Exp $
+$NetBSD: CHANGES,v 1.13193 2006/03/07 06:32:08 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1357,3 +1357,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/sun-jdk14 to 2.11 [wiz 2006-03-07]
 	Updated pkgtools/revbump to 1.3 [wiz 2006-03-07]
 	Updated finance/gnucash-devel to 1.9.2 [wiz 2006-03-07]
+	Updated audio/cdparanoia to 3.0.9.8nb5 [joerg 2006-03-07]
