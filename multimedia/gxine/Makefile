@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/03/04 21:30:14 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/03/07 20:39:55 minskim Exp $
 
 DISTNAME=	gxine-0.4.9
 PKGREVISION=	3
@@ -14,9 +14,11 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 
-PTHREAD_OPTS+=		require
+BROKEN_GETTEXT_DETECTION=	yes
+PTHREAD_OPTS+=			require
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
