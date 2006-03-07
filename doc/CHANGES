@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13188 2006/03/07 02:53:44 wiz Exp $
+$NetBSD: CHANGES,v 1.13189 2006/03/07 03:03:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1352,3 +1352,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/dvipdfmx to 0.0.0.20050831nb2 [joerg 2006-03-06]
 	Updated security/pam-mysql to 0.7rc1 [joerg 2006-03-07]
 	Updated devel/boehm-gc to 6.7 [wiz 2006-03-07]
+	Updated security/gnome-keyring to 0.4.8 [wiz 2006-03-07]
