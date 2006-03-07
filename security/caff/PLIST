@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/07 12:22:21 ghen Exp $
+bin/caff
+bin/pgp-clean
+bin/pgp-fixkey
+man/man1/caff.1
+man/man1/pgp-clean.1
+man/man1/pgp-fixkey.1
+share/doc/caff/README
+share/doc/caff/README.gpg-agent
+share/doc/caff/README.many-keys
+share/doc/caff/README.v3-keys
+share/examples/caff/caffrc.sample
+@dirrm share/examples/caff
+@dirrm share/doc/caff
