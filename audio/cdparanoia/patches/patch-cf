@@ -1,4 +1,4 @@
-$NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
+$NetBSD: patch-cf,v 1.6 2006/03/07 06:29:03 joerg Exp $
 
 --- interface/scan_devices.c.orig	2001-03-26 15:44:01.000000000 +1000
 +++ interface/scan_devices.c
@@ -11,11 +11,11 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
  #define MAX_DEV_LEN 20 /* Safe because strings only come from below */
  /* must be absolute paths! */
  static char *scsi_cdrom_prefixes[]={
-@@ -49,10 +51,18 @@
+@@ -49,10 +51,18 @@ static char *cdrom_devices[]={
    "/dev/cm206cd",
    "/dev/gscd",
    "/dev/optcd",NULL};
-+#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
 +static char *cdrom_devices[] = {
 +	"/dev/cd?c",
 +	"/dev/acd?c",
@@ -26,11 +26,11 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
  /* Functions here look for a cdrom drive; full init of a drive type
     happens in interface.c */
  
-+#if defined(__linux__) || defined(__FreeBSD__)
++#if defined(__linux__) || defined(__FreeBSD__) || defined(__DragonFly__)
  cdrom_drive *cdda_find_a_cdrom(int messagedest,char **messages){
    /* Brute force... */
    
-@@ -75,10 +85,12 @@
+@@ -75,10 +85,12 @@ cdrom_drive *cdda_find_a_cdrom(int messa
  	if((d=cdda_identify(buffer,messagedest,messages)))
  	  return(d);
  	idmessage(messagedest,messages,"",NULL);
@@ -43,7 +43,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
        }
      }else{
        /* Name.  Go for it. */
-@@ -98,6 +110,16 @@
+@@ -98,6 +110,16 @@ cdrom_drive *cdda_find_a_cdrom(int messa
    }
    return(NULL);
  }
@@ -60,14 +60,14 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
  
  cdrom_drive *cdda_identify(const char *device, int messagedest,char **messages){
    struct stat st;
-@@ -117,8 +139,14 @@
+@@ -117,8 +139,14 @@ cdrom_drive *cdda_identify(const char *d
    }
  #endif
  
 +#if defined(__linux__) || defined(__NetBSD__)
    d=cdda_identify_cooked(device,messagedest,messages);
    if(!d)d=cdda_identify_scsi(device,NULL,messagedest,messages);
-+#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
 +  d = cdda_identify_scsi(device, NULL, messagedest, messages);
 +  if (d == NULL)
 +	d = cdda_identify_cooked(device, messagedest, messages);
@@ -75,7 +75,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
  
  #ifdef CDDA_TEST
    if(!d)d=cdda_identify_test(device,messagedest,messages);
-@@ -146,6 +174,7 @@
+@@ -146,6 +174,7 @@ char *test_resolve_symlink(const char *f
  cdrom_drive *cdda_identify_cooked(const char *dev, int messagedest,
  				  char **messages){
  
@@ -83,14 +83,14 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
    cdrom_drive *d=NULL;
    struct stat st;
    int fd=-1;
-@@ -273,8 +302,59 @@
+@@ -273,8 +302,60 @@ cdrom_drive *cdda_identify_cooked(const 
    idmessage(messagedest,messages,"\t\tCDROM sensed: %s\n",description);
    
    return(d);
 +#elif defined(__NetBSD__)
 +  /* no kernel support for CD-DA */
 +  return NULL;
-+#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
 +	cdrom_drive *d;
 +	struct stat st;
 +
@@ -120,6 +120,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
 +		goto cdda_identify_cooked_fail;
 +	}
 +
++	d->cdda_device_name = copystring(dev);
 +	d->drive_model = copystring("Generic cooked ioctl CDROM");
 +	d->interface = COOKED_IOCTL;
 +	d->bigendianp = -1;
@@ -139,11 +140,11 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
 +#endif
  }
  
-+#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) || defined(__DragonFly__)
  struct  sg_id {
    long    l1; /* target | lun << 8 | channel << 16 | low_ino << 24 */
    long    l2; /* Unique id */
-@@ -289,12 +369,18 @@
+@@ -289,12 +370,18 @@ typedef struct scsiid{
  /* Even *this* isn't as simple as it bloody well should be :-P */
  /* SG has an easy interface, but SCSI overall does not */
  static int get_scsi_id(int fd, scsiid *id){
@@ -162,7 +163,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
    if(ioctl(fd,SCSI_IOCTL_GET_IDLUN,&argid))return(-1);
    id->bus=argid.l2; /* for now */
    id->id=argid.l1&0xff;
-@@ -302,6 +388,13 @@
+@@ -302,6 +389,13 @@ static int get_scsi_id(int fd, scsiid *i
  
    if(ioctl(fd,SCSI_IOCTL_GET_BUS_NUMBER,&busarg)==0)
      id->bus=busarg;
@@ -176,7 +177,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
    
    return(0);
  }
-@@ -390,6 +483,7 @@
+@@ -390,6 +484,7 @@ matchfail:
    if(dev!=-1)close(dev);
    return(NULL);
  }
@@ -184,7 +185,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
  
  void strscat(char *a,char *b,int n){
    int i;
-@@ -401,6 +495,7 @@
+@@ -401,6 +496,7 @@ void strscat(char *a,char *b,int n){
    strcat(a," ");
  }
  
@@ -192,7 +193,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
  /* At this point, we're going to punt compatability before SG2, and
     allow only SG2 and SG3 */
  static int verify_SG_version(cdrom_drive *d,int messagedest,
-@@ -430,7 +525,9 @@
+@@ -430,7 +526,9 @@ static int verify_SG_version(cdrom_drive
    idmessage(messagedest,messages,buffer,"");
    return(major);
  }
@@ -202,7 +203,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
  cdrom_drive *cdda_identify_scsi(const char *generic_device, 
  				const char *ioctl_device, int messagedest,
  				char **messages){
-@@ -460,6 +557,7 @@
+@@ -460,6 +558,7 @@ cdrom_drive *cdda_identify_scsi(const ch
  	       generic_device);
        return(NULL);
      }
@@ -210,7 +211,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
      if((int)(g_st.st_rdev>>8)!=SCSI_GENERIC_MAJOR){
        if((int)(g_st.st_rdev>>8)!=SCSI_CDROM_MAJOR){
  	idmessage(messagedest,messages,"\t\t%s is not a SCSI device",
-@@ -471,6 +569,7 @@
+@@ -471,6 +570,7 @@ cdrom_drive *cdda_identify_scsi(const ch
  	ioctl_device=temp;
        }
      }
@@ -218,7 +219,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
    }
    if(ioctl_device){
      if(stat(ioctl_device,&i_st)){
-@@ -478,6 +577,7 @@
+@@ -478,6 +578,7 @@ cdrom_drive *cdda_identify_scsi(const ch
  	       ioctl_device);
        return(NULL);
      }
@@ -226,7 +227,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
      if((int)(i_st.st_rdev>>8)!=SCSI_CDROM_MAJOR){
        if((int)(i_st.st_rdev>>8)!=SCSI_GENERIC_MAJOR){
  	idmessage(messagedest,messages,"\t\t%s is not a SCSI device",
-@@ -489,6 +589,7 @@
+@@ -489,6 +590,7 @@ cdrom_drive *cdda_identify_scsi(const ch
  	ioctl_device=temp;
        }
      }
@@ -234,7 +235,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
    }
  
    /* we need to resolve any symlinks for the lookup code to work */
-@@ -505,6 +606,7 @@
+@@ -505,6 +607,7 @@ cdrom_drive *cdda_identify_scsi(const ch
    }
  
    if(!generic_device || !ioctl_device){
@@ -242,7 +243,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
      if(generic_device){
        ioctl_device=
  	scsi_match(generic_device,scsi_cdrom_prefixes,
-@@ -520,6 +622,12 @@
+@@ -520,6 +623,12 @@ cdrom_drive *cdda_identify_scsi(const ch
        if(!generic_device)	
  	goto cdda_identify_scsi_fail;
      }
@@ -255,7 +256,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
    }
    
    idmessage(messagedest,messages,"\t\tgeneric device: %s",generic_device);
-@@ -556,6 +664,7 @@
+@@ -556,6 +665,7 @@ cdrom_drive *cdda_identify_scsi(const ch
  
      type=(int)(i_st.st_rdev>>8);
  
@@ -263,7 +264,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
      if(type==SCSI_CDROM_MAJOR){
        if (!S_ISBLK(i_st.st_mode)) {
  	idmessage(messagedest,messages,"\t\tSCSI CDROM device %s not a "
-@@ -567,8 +676,10 @@
+@@ -567,8 +677,10 @@ cdrom_drive *cdda_identify_scsi(const ch
  		"major number",ioctl_device);
        goto cdda_identify_scsi_fail;
      }
@@ -274,7 +275,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
    if((int)(g_st.st_rdev>>8)==SCSI_GENERIC_MAJOR){
      if (!S_ISCHR(g_st.st_mode)) {
        idmessage(messagedest,messages,"\t\tGeneric SCSI device %s not a "
-@@ -580,6 +691,7 @@
+@@ -580,6 +692,7 @@ cdrom_drive *cdda_identify_scsi(const ch
  	      "major number",generic_device);
      goto cdda_identify_scsi_fail;
    }
@@ -282,7 +283,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
    
  
    d=calloc(1,sizeof(cdrom_drive));
-@@ -590,6 +702,7 @@
+@@ -590,6 +703,7 @@ cdrom_drive *cdda_identify_scsi(const ch
    d->bigendianp=-1; /* We don't know yet... */
    d->nsectors=-1;
  
@@ -290,7 +291,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
    version=verify_SG_version(d,messagedest,messages);
    switch(version){
    case -1:case 0:case 1:
-@@ -599,6 +712,9 @@
+@@ -599,6 +713,9 @@ cdrom_drive *cdda_identify_scsi(const ch
      d->interface=GENERIC_SCSI;
      break;
    }
@@ -300,7 +301,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
  
    /* malloc our big buffer for scsi commands */
    d->sg=malloc(MAX_BIG_BUFF_SIZE);
-@@ -617,7 +733,16 @@
+@@ -617,7 +734,16 @@ cdrom_drive *cdda_identify_scsi(const ch
  
    /* It would seem some TOSHIBA CDROMs gets things wrong */
   
@@ -318,11 +319,11 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
        !strncmp (p + 16, "CD-ROM", 6) &&
        p[0] == TYPE_DISK) {
      p[0] = TYPE_ROM;
-@@ -653,6 +778,87 @@
+@@ -653,6 +779,88 @@ cdda_identify_scsi_fail:
    if(g_fd!=-1)close(g_fd);
    return(NULL);
  }
-+#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
 +cdrom_drive *cdda_identify_scsi(const char *device,
 +    const char *dummy,
 +    int messagedest,
@@ -369,6 +370,7 @@ $NetBSD: patch-cf,v 1.5 2004/10/10 10:48:39 mycroft Exp $
 +		goto cdda_identify_scsi_fail;
 +	}
 +
++	d->cdda_device_name = copystring(devname);
 +	d->ioctl_fd = -1;
 +	d->bigendianp = -1;
 +	d->nsectors = -1;

@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2002/03/04 14:45:13 itohy Exp $
+$NetBSD: patch-ab,v 1.5 2006/03/07 06:29:03 joerg Exp $
+
+Note tht VERSION is *not* used for the libtool versioning.
 
 --- Makefile.in.orig	Wed Mar 28 07:46:58 2001
 +++ Makefile.in	Sun Mar  3 23:08:01 2002
