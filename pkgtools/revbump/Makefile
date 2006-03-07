@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2006/03/07 04:30:54 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/07 07:28:55 wiz Exp $
 #
 
-DISTNAME=		revbump-1.3
+DISTNAME=		revbump-1.4
 CATEGORIES=		pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -21,12 +21,12 @@ USE_LANGUAGES=	# empty
 INSTALLATION_DIRS=	bin man/man1
 
 do-build:
-	${SED} -e "s!@PERL@!${PERL5}!g" ${FILESDIR}/blbump \
-		> ${WRKDIR}/blbump
-	${SED} -e "s!@PERL@!${PERL5}!g" ${FILESDIR}/finddepends \
-		> ${WRKDIR}/finddepends
-	${SED} -e "s!@PERL@!${PERL5}!g" ${FILESDIR}/revbump \
-		> ${WRKDIR}/revbump
+	${SED} -e "s!@PERL@!${PERL5}!g" -e "s! make ! ${MAKE} !g" \
+		${FILESDIR}/blbump > ${WRKDIR}/blbump
+	${SED} -e "s!@PERL@!${PERL5}!g" -e "s! make ! ${MAKE} !g" \
+		${FILESDIR}/finddepends > ${WRKDIR}/finddepends
+	${SED} -e "s!@PERL@!${PERL5}!g"  -e "s! make ! ${MAKE} !g" \
+		${FILESDIR}/revbump > ${WRKDIR}/revbump
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/blbump ${PREFIX}/bin
