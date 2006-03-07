@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4699 2006/03/07 04:34:36 wiz Exp $
+$NetBSD: TODO,v 1.4700 2006/03/07 18:14:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -399,13 +399,13 @@ Suggested package updates
 	o cfengine2-2.1.19p1
 	o cfengine2-doc-2.1.14
 	o cfitsio-2.510
-	o cgdb-6.0
+	o cgdb-6.1
 	o checkbot-1.77
 	o chrony-1.21
 	o cint-5.16
 	o cjk-lyx-1.3.3
-	o classpath-0.20
-	o classpath-gui-0.20
+	o classpath-0.90
+	o classpath-gui-0.90
 	o clisp-2.38 (also see PR misc/31094)
 	o cmake-2.2.3
 	o cocoon-2.1.7
@@ -562,7 +562,7 @@ Suggested package updates
 	o gpsim-devel-20041104
 	o grace-5.1.19
 	o gramofile-1.6P
-	o gramps-2.0.9
+	o gramps2-2.0.10
 	o grap-1.36
 	o grep-2.5.1a
 	o grepmail-5.3032
@@ -581,7 +581,7 @@ Suggested package updates
 	o gtranscript-0.2.0
 	o guile-1.8.0
 	o guile-oops-1.0.2
-	o gworkspace-0.8.0
+	o gworkspace-0.8.1
 	o gxine-0.5.4
 	o gzrecover-0.3
 	o h5utils-1.10
@@ -590,6 +590,7 @@ Suggested package updates
 	o haskell-mode-1.45
 	o hercules-3.02
 	o hobbitmon-4.0.4 [pkg/30484]
+	o horde3-3.1
 	o hot-babe-0.2.2
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2ps-1.0b4
@@ -610,6 +611,7 @@ Suggested package updates
 	o idesk-0.7.3
 	o ifile-1.3.5
 	o ijs-0.35
+	o imp4-4.1
 	o inn-2.4.2
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
@@ -924,7 +926,7 @@ Suggested package updates
 	o phoon-20050629
 	o photopc-3.05
 	o phpldapadmin-0.9.7
-	o phpmyadmin-2.8.0rc2
+	o phpmyadmin-2.8.0
 	o phppgadmin-4.0.1
 	o phylip-3.65
 	o piewm-1.03
@@ -957,7 +959,7 @@ Suggested package updates
 	o potrace-1.7
 	o pptp-1.6.0 [pkg/26842]
 	o prayer-1.0.15
-	o prelude-lml-0.9.3
+	o prelude-lml-0.9.4
 	o proj-4.4.9
 	o projclock-0.9
 	o proxsmtp-1.2.1
@@ -1011,7 +1013,7 @@ Suggested package updates
 	o qt2-docs-2.3.2
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
-	o quagga-0.99.1
+	o quagga-0.99.3
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o qwt-0.4.0
@@ -1160,6 +1162,7 @@ Suggested package updates
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
 	o ttyrec-1.0.6
+	o turba-2.1
 	o tuxpaint-0.9.15
 	o tuxpaint-stamps-20051125
 	o twelf-1.5
