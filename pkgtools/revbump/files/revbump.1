@@ -1,4 +1,4 @@
-.\"	$NetBSD: revbump.1,v 1.4 2006/03/07 04:30:54 wiz Exp $
+.\"	$NetBSD: revbump.1,v 1.5 2006/03/07 06:51:20 wiz Exp $
 .\"
 .\" Copyright (c) 2003, 2004, 2005, 2006 The NetBSD Foundation, Inc.
 .\"
@@ -86,8 +86,8 @@ would be:
 .Bd -literal -offset indent
 cd /usr/pkgsrc
 finddepends security/openssl \*[Gt] allbump
-grep buildlink3.mk allbump | sed "s/.buildlink3.mk//" \*[Gt] bl3bump
-grep -v buildlink3.mk allbump | sed "s/.Makefile$//" \*[Gt] makebump
+grep buildlink3.mk allbump | sed 's/.buildlink3.mk//' \*[Gt] bl3bump
+grep -v buildlink3.mk allbump | sed 's/.Makefile$//' \*[Gt] makebump
 blbump \*[Lt] bl3bump \*[Gt] bl3bump.manual
 [handle the *RECOMMENDED* bumps in bl3bump.manual manually]
 revbump \*[Lt] makebump \*[Gt] makebump.manual
