@@ -1,6 +1,6 @@
 #!@PERL@ -w
 #
-# $NetBSD: finddepends,v 1.1 2006/03/05 23:35:49 wiz Exp $
+# $NetBSD: finddepends,v 1.2 2006/03/07 04:30:54 wiz Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 #
@@ -34,19 +34,31 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+use strict;
+use Getopt::Std;
+
+my ($PKGSRCDIR, $arg, $bl3, %bl3content, @bl3files, @bl3result,
+    $content, $found, $key, $makefile, @makefiles, %opt,
+    $pattern, @searchlist);
+
 $PKGSRCDIR = $ENV{PKGSRCDIR};
 if (! $PKGSRCDIR) {
     $PKGSRCDIR = "/usr/pkgsrc";
 }
 
 sub usage {
-    print STDERR "usage: finddepends package\n\n";
+    print STDERR "usage: finddepends [-h] [-p pkgsrcdir] package\n\n";
     print STDERR "Find all packages that depend on the argument package.\n";
     exit 0;
 }
 
-usage if (1 ne @ARGV);
+getopts('hp:', \%opt);
+usage() if $opt{h};
+if ($opt{p}) {
+    $PKGSRCDIR = $opt{p};
+}
 
+usage if (1 ne @ARGV);
 $arg = shift;
 
 @searchlist = ();

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2006/03/05 23:35:49 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/07 04:30:54 wiz Exp $
 #
 
-DISTNAME=		revbump-1.2
+DISTNAME=		revbump-1.3
 CATEGORIES=		pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
