@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2006/02/16 21:39:05 reed Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/07 22:32:23 peter Exp $
 
-DISTNAME=		spamd-20050726
+DISTNAME=		spamd-20060307
 CATEGORIES=		mail
 MASTER_SITES=		http://nedbsd.nl/~ppostma/pf/
 
@@ -8,7 +8,7 @@ MAINTAINER=		peter@pointless.nl
 HOMEPAGE=		http://www.benzedrine.cx/relaydb.html
 COMMENT=		OpenBSD spam deferral daemon
 
-ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-* OpenBSD-*-* FreeBSD-*-* DragonFly-*-*
 
 NO_CONFIGURE=		yes
 
