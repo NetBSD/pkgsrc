@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/03/04 21:29:52 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2006/03/07 18:56:46 minskim Exp $
 #
 
 DISTNAME=	tuxpaint-0.9.14
@@ -21,6 +21,8 @@ BUILDLINK_DEPENDS.SDL_image+=	SDL_image>=1.2.4
 
 CONFLICTS+=		tuxpaint-stamps<2003.12.23
 
+BROKEN_GETTEXT_DETECTION=	yes
+
 MAKE_ENV+=		CONFDIR=${PKG_SYSCONFDIR:Q} CP=${CP:Q} CHMOD=${CHMOD:Q}
 EGDIR=			${PREFIX}/share/examples/tuxpaint
 CONF_FILES=		${EGDIR}/tuxpaint.conf ${PKG_SYSCONFDIR}/tuxpaint.conf
@@ -40,6 +42,7 @@ post-install:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 
