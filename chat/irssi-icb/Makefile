@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/04 21:29:03 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/03/07 22:18:53 adrianp Exp $
 #
 
 DISTNAME=	irssi-icb-0.14
@@ -11,9 +11,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.irssi.org/
 COMMENT=	Irssi plugin to access ICB networks
 
-WRKSRC=		${WRKDIR}/${IRSSI_DISTNAME}/${DISTNAME}
-
 .include "../../chat/irssi/Makefile.common"
+
+WRKSRC=		${WRKDIR}/${IRSSI_DISTNAME}/${DISTNAME}
 
 DEPENDS+=	irssi>=${IRSSI_VERSION}:../../chat/irssi
 
@@ -25,6 +25,7 @@ SHLIBTOOL_OVERRIDE=	libtool
 CONFIGURE_ARGS+=	--with-irssi=${WRKDIR}/${IRSSI_DISTNAME}
 
 post-extract:
+	cd ${WRKDIR} && ${LN} -s ${IRSSI_DISTNAME:S/a//} ${IRSSI_DISTNAME}
 	${MV} ${WRKDIR}/${DISTNAME} ${WRKDIR}/${IRSSI_DISTNAME}
 	${CP} ${IRSSI_CONFIG_H} ${WRKDIR}/${IRSSI_DISTNAME}/config.h
 	${CP} ${IRSSI_CONFIG} ${WRKDIR}/${IRSSI_DISTNAME}/irssi-config
