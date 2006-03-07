@@ -13,3 +13,12 @@ Features:
    unencrypted mail (sign only keys)
  * Creates proper PGP MIME messages.
  * Uses separate GNUPGHOME for all its operations.
+
+This package also provides a collection of PGP/GnuPG related scripts:
+ * pgp-clean: removes all non-self signatures from key
+ * pgp-fixkey: removes broken packets from keys
+ * gpg-mailkeys: simply mail out a signed key to its owner
+ * gpg-key2ps: generate PostScript file with fingerprint paper strips
+ * gpglist: show who signed which of your UIDs
+ * gpgsigs: annotates list of GnuPG keys with already done signatures
+ * keylookup: ncurses wrapper around gpg --search

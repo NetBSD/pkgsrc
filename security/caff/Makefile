@@ -1,38 +1,60 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/07 12:22:21 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/07 14:31:28 tonio Exp $
 
 DISTNAME=	signing-party_0.4.4.orig
 PKGNAME=	caff-0.4.4
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/signing-party/}
 
-MAINTAINER=	ghen@NetBSD.org
+MAINTAINER=	ghen@NetBSD.org,tonio@NetBSD.org
 HOMEPAGE=	http://pgp-tools.alioth.debian.org/
-COMMENT=	CA - Fire and Forget
+COMMENT=	Various GnuPG related tools
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/:S/.orig//}/caff
+WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/:S/.orig//}
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pod2man
 USE_TOOLS+=	perl:run
 
 DEPENDS+=	gnupg>=1.3.92:../../security/gnupg
 DEPENDS+=	p5-Text-Template-[0-9]*:../../textproc/p5-Text-Template
 DEPENDS+=	p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
 DEPENDS+=	p5-GnuPG-Interface-[0-9]*:../../security/p5-GnuPG-Interface
+DEPENDS+=	dialog>=1.0:../../misc/dialog
 
-SCRIPTS=	caff pgp-clean pgp-fixkey
+REPLACE_PERL+=	caff/caff caff/pgp-fixkey caff/pgp-clean \
+		gpg-key2ps/gpg-key2ps gpgsigs/gpgsigs \
+		gpglist/gpglist keylookup/keylookup
 
-REPLACE_PERL+=	${SCRIPTS}
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	caff/caff keylookup/keylookup keylookup/keylookup.1
+SUBST_SED.paths=	-e 's,/usr/,${PREFIX}/,g'
 
 do-install:
-.for script in ${SCRIPTS}
-	${INSTALL_SCRIPT} ${WRKSRC:Q}/${script} ${PREFIX:Q}/bin/
-	${INSTALL_MAN} ${WRKSRC:Q}/${script}.1 ${PREFIX:Q}/${PKGMANDIR:Q}/man1/
-.endfor
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/caff
-.for doc in README README.gpg-agent README.many-keys README.v3-keys
-	${INSTALL_DATA} ${WRKSRC:Q}/${doc} ${PREFIX:Q}/share/doc/caff/
-.endfor
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/examples/caff
-	${INSTALL_DATA} ${WRKSRC:Q}/caffrc.sample ${PREFIX:Q}/share/examples/caff/
+	${INSTALL_SCRIPT} ${WRKSRC}/caff/caff ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/caff/pgp-fixkey ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/caff/pgp-clean ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/gpg-key2ps/gpg-key2ps ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/gpgsigs/gpgsigs ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/gpglist/gpglist ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/keylookup/keylookup ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/gpg-mailkeys/gpg-mailkeys ${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/caff/caff.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/caff/pgp-fixkey.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/caff/pgp-clean.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/gpg-key2ps/gpg-key2ps.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/gpgsigs/gpgsigs.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/gpglist/gpglist.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/keylookup/keylookup.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/gpg-mailkeys/gpg-mailkeys.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/caff
+	${INSTALL_DATA} ${WRKSRC}/caff/README ${PREFIX}/share/doc/caff
+	${INSTALL_DATA} ${WRKSRC}/caff/README.many-keys ${PREFIX}/share/doc/caff
+	${INSTALL_DATA} ${WRKSRC}/caff/README.gpg-agent ${PREFIX}/share/doc/caff
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/caff
+	${INSTALL_DATA} ${WRKSRC}/caff/caffrc.sample ${PREFIX}/share/examples/caff
+	${INSTALL_DATA} ${WRKSRC}/gpgsigs/gpgsigs-lt2k5.txt ${PREFIX}/share/examples/caff
+	${INSTALL_DATA} ${WRKSRC}/gpgsigs/gpgsigs-lt2k5-annotated.txt ${PREFIX}/share/examples/caff
 
 .include "../../mk/bsd.pkg.mk"
