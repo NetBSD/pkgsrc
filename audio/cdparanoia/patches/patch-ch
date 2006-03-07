@@ -1,4 +1,4 @@
-$NetBSD: patch-ch,v 1.1 2003/10/20 12:08:03 grant Exp $
+$NetBSD: patch-ch,v 1.2 2006/03/07 06:29:04 joerg Exp $
 
 --- interface/cdda_interface.h.orig	2001-03-24 12:15:46.000000000 +1100
 +++ interface/cdda_interface.h
@@ -6,7 +6,7 @@ $NetBSD: patch-ch,v 1.1 2003/10/20 12:08:03 grant Exp $
  #include <sys/types.h>
  #include <signal.h>
  
-+#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
 +#include <stdio.h>
 +#include <camlib.h>
 +#endif
@@ -14,12 +14,11 @@ $NetBSD: patch-ch,v 1.1 2003/10/20 12:08:03 grant Exp $
  #define MAXTRK 100
  
  typedef struct TOC {	/* structure of table of contents */
-@@ -46,14 +51,20 @@ typedef struct cdrom_drive{
- 
+@@ -47,13 +50,19 @@ typedef struct cdrom_drive{
    int opened; /* This struct may just represent a candidate for opening */
  
-+#ifndef __FreeBSD__
    char *cdda_device_name;
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
    char *ioctl_device_name;
  
    int cdda_fd;
@@ -41,7 +40,7 @@ $NetBSD: patch-ch,v 1.1 2003/10/20 12:08:03 grant Exp $
    int is_mmc;
  
    /* SCSI command buffer and offset pointers */
-+#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
    unsigned char *sg;
    unsigned char *sg_buffer;
    unsigned char inqbytes[4];
