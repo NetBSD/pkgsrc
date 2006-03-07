@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4695 2006/03/06 18:23:06 wiz Exp $
+$NetBSD: TODO,v 1.4696 2006/03/07 02:53:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -378,7 +378,6 @@ Suggested package updates
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bochs-2.2.6
-	o boehm-gc-6.7
 	o bogofilter-1.0.1
 	o boolean-6.8
 	o boson-0.11
