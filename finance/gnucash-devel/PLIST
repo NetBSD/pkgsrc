@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/20 23:25:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/03/07 04:32:48 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -29,6 +29,7 @@ include/gnucash/SchedXaction.h
 include/gnucash/Scrub.h
 include/gnucash/Scrub2.h
 include/gnucash/Scrub3.h
+include/gnucash/Split.h
 include/gnucash/TransLog.h
 include/gnucash/Transaction.h
 include/gnucash/account-quickfill.h
@@ -144,7 +145,9 @@ include/gnucash/gnc-ui-common.h
 include/gnucash/gnc-ui-util.h
 include/gnucash/gnc-window.h
 include/gnucash/gncObject.h
+include/gnucash/gnctreemodelsort.h
 include/gnucash/gtable.h
+include/gnucash/gtktreedatalist.h
 include/gnucash/guid.h
 include/gnucash/guile-util.h
 include/gnucash/import-match-map.h
@@ -167,6 +170,7 @@ include/gnucash/qofbackend.h
 include/gnucash/qofbook.h
 include/gnucash/qofchoice.h
 include/gnucash/qofclass.h
+include/gnucash/qofevent.h
 include/gnucash/qofgobj.h
 include/gnucash/qofid-p.h
 include/gnucash/qofid.h
@@ -571,7 +575,6 @@ share/gnucash/guile-modules/gnucash/report/fancy-invoice.scm
 share/gnucash/guile-modules/gnucash/report/general-journal.scm
 share/gnucash/guile-modules/gnucash/report/general-ledger.scm
 share/gnucash/guile-modules/gnucash/report/hello-world.scm
-share/gnucash/guile-modules/gnucash/report/iframe-url.scm
 share/gnucash/guile-modules/gnucash/report/income-statement.scm
 share/gnucash/guile-modules/gnucash/report/invoice.scm
 share/gnucash/guile-modules/gnucash/report/locale-specific/de_DE.scm
@@ -613,8 +616,12 @@ share/gnucash/pixmaps/new-account-16.png
 share/gnucash/pixmaps/new-account.png
 share/gnucash/pixmaps/open-account-16.png
 share/gnucash/pixmaps/open-account.png
+share/gnucash/pixmaps/split-transaction-16.png
+share/gnucash/pixmaps/split-transaction.png
 share/gnucash/pixmaps/stock_split_title.png
 share/gnucash/pixmaps/stock_split_watermark.png
+share/gnucash/pixmaps/transfer-16.png
+share/gnucash/pixmaps/transfer.png
 share/gnucash/scm/build-config.scm
 share/gnucash/scm/business-options.scm
 share/gnucash/scm/business-prefs.scm
@@ -686,6 +693,7 @@ share/gnucash/ui/gnc-plugin-page-sxregister-ui.xml
 share/gnucash/ui/gnc-plugin-qif-import-ui.xml
 share/gnucash/ui/gnc-plugin-register-ui.xml
 share/gnucash/ui/gnc-plugin-stylesheets-ui.xml
+share/gnucash/ui/gnc-reconcile-window-ui.xml
 share/gnucash/ui/gnc-sxed-to-create-window-ui.xml
 share/gnucash/ui/gnc-sxed-window-ui-full.xml
 share/gnucash/ui/gnc-sxed-window-ui.xml
