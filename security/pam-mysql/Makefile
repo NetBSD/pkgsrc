@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2006/03/04 21:30:37 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/07 01:22:16 joerg Exp $
 
-DISTNAME=	pam_mysql-0.5
-PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	2
+DISTNAME=	pam_mysql-0.7RC1
+PKGNAME=	${DISTNAME:S/_/-/:S/RC/rc/}
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pam-mysql/}
 
@@ -10,26 +9,20 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pam-mysql.sourceforge.net/
 COMMENT=	PAM module for authenticating with MySQL
 
-WRKSRC=		${WRKDIR}/pam_mysql
 DOCDIR=		${PREFIX}/share/doc/pam-mysql
 
-INSTALLATION_DIRS=	lib
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 
-do-build:
-	${CC} -fpic -DPIC -Wall -I${LOCALBASE}/include \
-		-c ${WRKSRC}/pam_mysql.c -o ${WRKSRC}/pam_mysql.o
-	${LD} -x --shared -o ${WRKSRC}/pam_mysql.so ${WRKSRC}/pam_mysql.o \
-		-lpam -lcrypt -L${LOCALBASE}/lib/mysql \
-		${COMPILER_RPATH_FLAG}${LOCALBASE}/lib/mysql -lmysqlclient \
-		-L${LOCALBASE}/lib ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
+CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client:Q}
+CONFIGURE_ARGS+=	--with-pam-mods-dir=${PREFIX:Q}/lib/security
+CONFIGURE_ARGS+=	--disable-static
 
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/pam_mysql.so ${PREFIX}/lib
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/Changelog ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/CREDITS ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/Readme ${DOCDIR}
+post-install:
+	${INSTALL_DATA_DIR} ${DOCDIR:Q}
+	cd ${WRKSRC:Q} && ${INSTALL_DATA} CREDITS ChangeLog README ${DOCDIR:Q}
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
