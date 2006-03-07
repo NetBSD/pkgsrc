@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13194 2006/03/07 07:29:22 wiz Exp $
+$NetBSD: CHANGES,v 1.13195 2006/03/07 12:24:12 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1359,3 +1359,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated finance/gnucash-devel to 1.9.2 [wiz 2006-03-07]
 	Updated audio/cdparanoia to 3.0.9.8nb5 [joerg 2006-03-07]
 	Updated pkgtools/revbump to 1.4 [wiz 2006-03-07]
+	Added security/caff version 0.4.4 [ghen 2006-03-07]
