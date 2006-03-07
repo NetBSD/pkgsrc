@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13187 2006/03/07 01:23:29 joerg Exp $
+$NetBSD: CHANGES,v 1.13188 2006/03/07 02:53:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1351,3 +1351,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/monotone-viz to 0.14 [dan 2006-03-06]
 	Updated print/dvipdfmx to 0.0.0.20050831nb2 [joerg 2006-03-06]
 	Updated security/pam-mysql to 0.7rc1 [joerg 2006-03-07]
+	Updated devel/boehm-gc to 6.7 [wiz 2006-03-07]
