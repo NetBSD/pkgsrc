@@ -1,7 +1,26 @@
-$NetBSD: patch-ab,v 1.5 2006/03/05 20:46:19 minskim Exp $
+$NetBSD: patch-ab,v 1.6 2006/03/07 23:09:28 minskim Exp $
 
---- po/ja.po.orig	2006-01-29 21:57:06.000000000 -0800
+PR bin/32650
+
+--- po/ja.po.orig	2006-01-30 05:57:06.000000000 +0000
 +++ po/ja.po
+@@ -3092,13 +3092,13 @@ msgstr "TFMとENCを出力"
+ msgid "Output OFM & CFG"
+ msgstr "OFMとCFGを出力"
+ 
+-msgid "The AFM file contains metrics information that many word-processors will read when using a PostScript\xa9 font."
++msgid "The AFM file contains metrics information that many word-processors will read when using a PostScript® font."
+ msgstr "AFMファイルには, 多くのワープロがPostScriptフォント\n使用時に読み込むメトリック情報が含まれています."
+ 
+-msgid "The PFM file contains information Windows needs to install a PostScript\xa9 font."
++msgid "The PFM file contains information Windows needs to install a PostScript® font."
+ msgstr "PFMファイルには, PostScriptフォントをインストール\nするときにWindowsが必要とする情報が含まれています."
+ 
+-msgid "The tfm and enc files contain information TeX needs to install a PostScript\xa9 font."
++msgid "The tfm and enc files contain information TeX needs to install a PostScript® font."
+ msgstr "TFM,ENCの両ファイルには, PostScriptフォントをインストール\nするときにTeXが必要とする情報が含まれています."
+ 
+ msgid ""
 @@ -3300,7 +3300,7 @@ msgid ""
  "on the entire font."
  msgstr "このフォントには少なくとも1つ非整数の座標が含まれています.\nこれは仕様上全く問題ありませんが,普通ではありませんし\n生成されるフォントのサイズを増加させます.\nフォント全体に対して エレメント(l)→整数値に変換(d) を\n適用することを試してみてはどうでしょうか."
@@ -11,6 +30,33 @@ $NetBSD: patch-ab,v 1.5 2006/03/05 20:46:19 minskim Exp $
  msgstr "PostScript"
  
  msgid "TrueType"
+@@ -4500,7 +4500,7 @@ msgstr "ブリス表意記号"
+ msgid "Bopomofo"
+ msgstr "注音字母"
+ 
+-msgid "Br\xc4\x81hm\xc4\xab"
++msgid "Brāhmī"
+ msgstr "ブラーフミー文字"
+ 
+ msgid "Braille"
+@@ -4608,7 +4608,7 @@ msgstr "マヤ神聖文字"
+ msgid "Meroitic"
+ msgstr "メロエ文字"
+ 
+-msgid "Malay\xc4\x81lam"
++msgid "Malayālam"
+ msgstr "マラヤーラム文字"
+ 
+ msgid "Myanmar"
+@@ -7485,7 +7485,7 @@ msgid ""
+ "commands. PostScript shouldn't care though."
+ msgstr "同じパス上の2つの隣り合う点が2,3ユニットより\n近くにある場合,FontForgeの一部のコマンドで問題が生ずる\nおそれがあります.\nただし, PostScriptインタプリタには影響ありません."
+ 
+-msgid "_X near\xc2\xb9"
++msgid "_X near¹"
+ msgstr "近接する_X"
+ 
+ msgid ""
 @@ -7493,7 +7493,7 @@ msgid ""
  "glyphs start at the same location."
  msgstr "いくつかのグリフの中に, 同じ位置から始まる垂直ステムがあるかどうかをチェックします."
@@ -18,6 +64,24 @@ $NetBSD: patch-ab,v 1.5 2006/03/05 20:46:19 minskim Exp $
 -msgid "_Y near\xe2\x91\xaf"
 +msgid "_Y near¹"
  msgstr "近接する_Y"
+ 
+ msgid ""
+@@ -7501,7 +7501,7 @@ msgid ""
+ "glyphs start at the same location."
+ msgstr "いくつかのグリフの中に, 同じ位置から始まる水平ステムがあるかどうかをチェックします."
+ 
+-msgid "Y near\xe2\x91\xaf _standard heights"
++msgid "Y near¹ _standard heights"
+ msgstr "標準の高さの近くのY座標(_S)"
+ 
+ msgid ""
+@@ -7552,7 +7552,7 @@ msgid ""
+ "hint exists without any points that lie on it."
+ msgstr "Ghostviewは (おそらくその他のインタプリタも)\n点が1個も上に載っていないヒントが存在すると\n問題を生じます."
+ 
+-msgid "_Points near\xe2\xa1\x9f hint edges"
++msgid "_Points near¹ hint edges"
+ msgstr "ヒント端に近い点(_P)"
  
  msgid ""
 @@ -7562,7 +7562,7 @@ msgid ""
@@ -29,3 +93,12 @@ $NetBSD: patch-ab,v 1.5 2006/03/05 20:46:19 minskim Exp $
  msgstr "ヒント幅のぶれ量(_W)"
  
  msgid "Allows you to check that stems have consistant widths.."
+@@ -7694,7 +7694,7 @@ msgid ""
+ "point to make a significant difference in the shape of the curve."
+ msgstr "制御点は,主たる点との距離が近すぎて曲線の形を変える\n役に立たない場合,無意味なものとされます"
+ 
+-msgid "\xe2\x91\xaf \"Near\" means within"
++msgid "¹ \"Near\" means within"
+ msgstr " \"近く\"と判断される距離(_N)"
+ 
+ msgid "Near"
