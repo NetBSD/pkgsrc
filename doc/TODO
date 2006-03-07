@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4698 2006/03/07 03:23:04 wiz Exp $
+$NetBSD: TODO,v 1.4699 2006/03/07 04:34:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -549,7 +549,6 @@ Suggested package updates
 	o gnome-themes-2.12.3
 	o gnome2-control-center-2.12.3
 	o gnomeicu-0.99.10
-	o gnucash-devel-1.9.2
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
