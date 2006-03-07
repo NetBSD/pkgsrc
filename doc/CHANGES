@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13195 2006/03/07 12:24:12 ghen Exp $
+$NetBSD: CHANGES,v 1.13196 2006/03/07 15:21:33 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1360,3 +1360,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/cdparanoia to 3.0.9.8nb5 [joerg 2006-03-07]
 	Updated pkgtools/revbump to 1.4 [wiz 2006-03-07]
 	Added security/caff version 0.4.4 [ghen 2006-03-07]
+	Added math/antixls version 0.2b [dillo 2006-03-07]
