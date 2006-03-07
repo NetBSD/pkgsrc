@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13198 2006/03/07 20:21:42 tonio Exp $
+$NetBSD: CHANGES,v 1.13199 2006/03/07 22:33:16 peter Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1363,3 +1363,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added math/antixls version 0.2b [dillo 2006-03-07]
 	Updated chat/unrealircd to 3.2.4nb3 [adrianp 2006-03-07]
 	Updated mail/isync to 1.0.2 [tonio 2006-03-07]
+	Updated mail/spamd to 20060307 [peter 2006-03-07]
