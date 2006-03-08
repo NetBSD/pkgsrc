@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.543 2006/03/02 19:47:03 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.544 2006/03/08 21:15:31 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3081,9 +3081,12 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 
 	} elsif ($type eq "Mail_Address") {
 		if ($value =~ qr"^([+\-.0-9A-Z_a-z]+)\@([-\w\d.]+)$") {
-			my (undef, $domain) = ($1, $2);
+			my ($localpart, $domain) = ($1, $2);
 			if ($domain =~ qr"^NetBSD.org"i && $domain ne "NetBSD.org") {
 				$line->log_warning("Please write NetBSD.org instead of ${domain}.");
+			}
+			if ($domain =~ qr"^NetBSD.org"i && $localpart eq "tech-pkg") {
+				$line->log_warning("Unmaintained packages should have pkgsrc-users\@NetBSD.org as maintainer.");
 			}
 
 		} else {
@@ -4419,7 +4422,7 @@ sub checkfile_patch($) {
 			$check_hunk_line->(1, 0, PST_CLD0);
 		}], [PST_CLD, undef, PST_CLD0, sub() {
 			if ($dellines != 0) {
-				$line->log_warning("Invalid number of deleted lines (${dellines}).");
+				$line->log_warning("Invalid number of deleted lines (${dellines} missing).");
 			}
 		}], [PST_CLD0, re_patch_cha, PST_CLA0, sub() {
 			$dellines = undef;
@@ -4444,7 +4447,7 @@ sub checkfile_patch($) {
 			$check_added_contents->();
 		}], [PST_CLA, undef, PST_CLA0, sub() {
 			if ($addlines != 0) {
-				$line->log_warning("Invalid number of added lines (${addlines}).");
+				$line->log_warning("Invalid number of added lines (${addlines} missing).");
 			}
 		}], [PST_CLA0, undef, PST_CH, sub() {
 			#
@@ -4458,6 +4461,10 @@ sub checkfile_patch($) {
 			$dellines = ($m->has(1) ? $m->text(2) : 1);
 			$addlines = ($m->has(3) ? $m->text(4) : 1);
 			$check_text->($line->text);
+			if ($line->text =~ qr"\r$") {
+				$line->log_error("The hunk header must not end with a CR character.");
+				$line->explain("The MacOS X patch utility cannot handle these.");
+			}
 			$hunks++;
 		}], [PST_UL, re_patch_uld, PST_UL, sub() {
 			$check_hunk_line->(1, 0, PST_UH);
