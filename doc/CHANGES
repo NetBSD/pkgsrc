@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13203 2006/03/08 05:02:06 hiramatsu Exp $
+$NetBSD: CHANGES,v 1.13204 2006/03/08 05:58:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1368,3 +1368,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added net/quagga-devel version 0.99.3 [gdt 2006-03-08]
 	Updated net/ethereal to 0.10.14nb3 [minskim 2006-03-08]
 	Updated www/p5-Jemplate to 0.17 [hiramatsu 2006-03-08]
+	Updated chat/bsflite to 0.81p2 [wiz 2006-03-08]
