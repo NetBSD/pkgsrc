@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/08/07 18:19:16 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.5.4.1 2006/03/08 22:41:43 seb Exp $
 share/doc/html/postgresql/admin-preface.html
 share/doc/html/postgresql/admin.html
 share/doc/html/postgresql/app-clusterdb.html
@@ -192,10 +192,10 @@ share/doc/html/postgresql/libpq-threading.html
 share/doc/html/postgresql/libpq-trace.html
 share/doc/html/postgresql/libpq.html
 share/doc/html/postgresql/ln17992.html
-share/doc/html/postgresql/ln26577.html
-share/doc/html/postgresql/ln39021.html
-share/doc/html/postgresql/ln53737.html
 share/doc/html/postgresql/ln25.html
+share/doc/html/postgresql/ln26703.html
+share/doc/html/postgresql/ln39147.html
+share/doc/html/postgresql/ln53863.html
 share/doc/html/postgresql/ln659.html
 share/doc/html/postgresql/lo-funcs.html
 share/doc/html/postgresql/lo-implementation.html
@@ -391,6 +391,10 @@ share/doc/html/postgresql/release-7-2-7.html
 share/doc/html/postgresql/release-7-2-8.html
 share/doc/html/postgresql/release-7-2.html
 share/doc/html/postgresql/release-7-3-1.html
+share/doc/html/postgresql/release-7-3-10.html
+share/doc/html/postgresql/release-7-3-11.html
+share/doc/html/postgresql/release-7-3-12.html
+share/doc/html/postgresql/release-7-3-13.html
 share/doc/html/postgresql/release-7-3-2.html
 share/doc/html/postgresql/release-7-3-3.html
 share/doc/html/postgresql/release-7-3-4.html

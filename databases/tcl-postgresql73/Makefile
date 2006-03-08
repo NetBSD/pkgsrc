@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2005/12/05 23:55:05 rillig Exp $
+# $NetBSD: Makefile,v 1.8.2.1 2006/03/08 22:41:43 seb Exp $
 
 PKGNAME=		tcl-postgresql73-${BASE_VERS}
-PKGREVISION=	1
 COMMENT=		Tcl interface to PostgreSQL
 
 
