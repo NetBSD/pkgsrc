@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/02/14 23:05:50 seb Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/08 23:38:09 adrianp Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
-PKGREVISION=	3
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.horde.org/pub/imp/tarballs/
 
@@ -22,11 +21,11 @@ DOCDIR=		${PREFIX}/share/doc/imp
 EGDIR=		${PREFIX}/share/examples/imp
 HORDEDIR=	${PREFIX}/share/horde
 IMPDIR=		${HORDEDIR}/imp
-IMPVER=		4.0.4
+IMPVER=		4.1
 PAXDIRS=	lib locale po scripts templates themes
 
-MESSAGE_SUBST+=	IMPDIR=${IMPDIR}
-MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
+MESSAGE_SUBST+=	IMPDIR=${IMPDIR:Q}
+MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 PKG_SYSCONFSUBDIR?=	httpd
 
@@ -62,7 +61,7 @@ SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
 SUBST_FILES.files=	imp.conf.dist
 SUBST_SED.files=	-e "s|@IMPDIR@|${IMPDIR}|g"
-SUBST_MESSAGE.files=	"Fixing configuration files."
+SUBST_MESSAGE.files=	Fixing configuration files.
 
 .include "options.mk"
 
@@ -86,15 +85,15 @@ do-install:
 .	endfor
 
 .	for d in ${PAXDIRS}
-		cd ${WRKSRC}/${d} && ${PAX} -rwpam . ${IMPDIR}/${d}
+		@cd ${WRKSRC}/${d} && ${PAX} -rwpam . ${IMPDIR}/${d}
 .	endfor
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${IMPDIR}/config
 	${INSTALL_DATA} ${WRKSRC}/*.php ${IMPDIR}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${IMPDIR}
-	${FIND} ${IMPDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${IMPDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
-	${CHOWN} ${APACHE_USER}:${ROOT_GROUP} ${IMPDIR}/config
-	${CHMOD} 0750 ${IMPDIR}/config
+	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${IMPDIR}
+	@${FIND} ${IMPDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	@${FIND} ${IMPDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
+	@${CHOWN} ${APACHE_USER}:${ROOT_GROUP} ${IMPDIR}/config
+	@${CHMOD} 0750 ${IMPDIR}/config
 
 .include "../../mk/bsd.pkg.mk"
