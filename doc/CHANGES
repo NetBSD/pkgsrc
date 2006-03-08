@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13214 2006/03/08 19:04:16 minskim Exp $
+$NetBSD: CHANGES,v 1.13215 2006/03/08 20:52:35 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1380,3 +1380,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/dd_rhelp version 0.0.6 [ghen 2006-03-08]
 	Updated x11/efltk to 2.0.5nb6 [joerg 2006-03-08]
 	Updated net/tcpillust to 1.0anb4 [minskim 2006-03-08]
+	Added sysutils/etcmanage version 0.2 [gdt 2006-03-08]
