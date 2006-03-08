@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:08:04 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/08 20:11:54 hubertf Exp $
 #
 
 DISTNAME=	star-1.4.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.berlios.de/pub/star/
 
@@ -17,14 +17,8 @@ MAKE_FLAGS+=	INS_BASE=${PREFIX:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "x86_64"
-post-extract:
-	${LN} -s ${WRKSRC}/RULES/i386-netbsd-cc.rul \
-	    ${WRKSRC}/RULES/x86_64-netbsd-cc.rul
-.endif
-
 pre-build:
-	@cd ${WRKSRC}/RULES && for i in arm mipsel; do			\
+	@cd ${WRKSRC}/RULES && for i in arm mipsel x86_64 sparc64; do	\
 		${LN} -s i386-netbsd-cc.rul $$i-netbsd-cc.rul; done
 	@cd ${WRKSRC}/RULES && \
 		${LN} -s os-freebsd.id os-dragonfly.id
