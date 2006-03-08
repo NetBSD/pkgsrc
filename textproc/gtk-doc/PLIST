@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/03/22 16:23:03 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/03/08 06:40:50 wiz Exp $
 bin/gtkdoc-fixxref
 bin/gtkdoc-mkdb
 bin/gtkdoc-mkhtml
@@ -11,6 +11,7 @@ bin/gtkdocize
 lib/pkgconfig/gtk-doc.pc
 share/aclocal/gtk-doc.m4
 share/gtk-doc/data/devhelp.xsl
+share/gtk-doc/data/devhelp2.xsl
 share/gtk-doc/data/gtk-doc.dcl
 share/gtk-doc/data/gtk-doc.dsl
 share/gtk-doc/data/gtk-doc.make
