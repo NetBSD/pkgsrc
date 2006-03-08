@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/14 23:06:47 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/03/08 23:54:27 adrianp Exp $
 share/doc/turba/INSTALL
 share/doc/turba/LDAP
 share/doc/turba/README
@@ -6,10 +6,12 @@ share/doc/turba/RELEASE_NOTES
 share/doc/turba/UPGRADING
 share/examples/turba/turba.conf
 share/horde/turba/add.php
+share/horde/turba/addressbooks.php
 share/horde/turba/browse.php
 share/horde/turba/config/attributes.php.dist
 share/horde/turba/config/conf.xml.dist
 share/horde/turba/config/menu.php.dist
+share/horde/turba/config/mime_drivers.php.dist
 share/horde/turba/config/prefs.php.dist
 share/horde/turba/config/sources.php.dist
 share/horde/turba/data.php
@@ -19,16 +21,19 @@ share/horde/turba/edit.php
 share/horde/turba/index.php
 share/horde/turba/lib/AbstractObject.php
 share/horde/turba/lib/Block/minisearch.php
+share/horde/turba/lib/Block/tree_menu.php
 share/horde/turba/lib/Driver.php
 share/horde/turba/lib/Driver/imsp.php
 share/horde/turba/lib/Driver/kolab.php
 share/horde/turba/lib/Driver/ldap.php
+share/horde/turba/lib/Driver/null.php
 share/horde/turba/lib/Driver/prefs.php
 share/horde/turba/lib/Driver/sql.php
 share/horde/turba/lib/Group.php
 share/horde/turba/lib/List.php
 share/horde/turba/lib/ListView.php
 share/horde/turba/lib/Object.php
+share/horde/turba/lib/Object/Group.php
 share/horde/turba/lib/ObjectView.php
 share/horde/turba/lib/Renderer.php
 share/horde/turba/lib/Turba.php
@@ -49,11 +54,13 @@ share/horde/turba/locale/es_ES/LC_MESSAGES/turba.mo
 share/horde/turba/locale/es_ES/help.xml
 share/horde/turba/locale/et_EE/LC_MESSAGES/turba.mo
 share/horde/turba/locale/fa_IR/LC_MESSAGES/turba.mo
+share/horde/turba/locale/fa_IR/help.xml
 share/horde/turba/locale/fi_FI/LC_MESSAGES/turba.mo
 share/horde/turba/locale/fi_FI/help.xml
 share/horde/turba/locale/fr_FR/LC_MESSAGES/turba.mo
 share/horde/turba/locale/gl_ES/LC_MESSAGES/turba.mo
 share/horde/turba/locale/hu_HU/LC_MESSAGES/turba.mo
+share/horde/turba/locale/is_IS/LC_MESSAGES/turba.mo
 share/horde/turba/locale/it_IT/LC_MESSAGES/turba.mo
 share/horde/turba/locale/ja_JP/LC_MESSAGES/turba.mo
 share/horde/turba/locale/ko_KR/LC_MESSAGES/turba.mo
@@ -75,6 +82,7 @@ share/horde/turba/locale/sk_SK/help.xml
 share/horde/turba/locale/sl_SI/LC_MESSAGES/turba.mo
 share/horde/turba/locale/sv_SE/LC_MESSAGES/turba.mo
 share/horde/turba/locale/tr_TR/LC_MESSAGES/turba.mo
+share/horde/turba/locale/tr_TR/help.xml
 share/horde/turba/locale/uk_UA/LC_MESSAGES/turba.mo
 share/horde/turba/locale/zh_CN/LC_MESSAGES/turba.mo
 share/horde/turba/locale/zh_TW/LC_MESSAGES/turba.mo
@@ -94,6 +102,7 @@ share/horde/turba/po/fi_FI.po
 share/horde/turba/po/fr_FR.po
 share/horde/turba/po/gl_ES.po
 share/horde/turba/po/hu_HU.po
+share/horde/turba/po/is_IS.po
 share/horde/turba/po/it_IT.po
 share/horde/turba/po/ja_JP.po
 share/horde/turba/po/ko_KR.po
@@ -117,10 +126,12 @@ share/horde/turba/po/uk_UA.po
 share/horde/turba/po/zh_CN.po
 share/horde/turba/po/zh_TW.po
 share/horde/turba/scripts/Turba.reg
+share/horde/turba/scripts/import_vcards.php
 share/horde/turba/scripts/ldap/addou
 share/horde/turba/scripts/ldap/addou.pl
 share/horde/turba/scripts/ldap/core.schema.patch
 share/horde/turba/scripts/ldap/rfc2739.schema
+share/horde/turba/scripts/sql/turba_objects.mssql.sql
 share/horde/turba/scripts/sql/turba_objects.mysql.sql
 share/horde/turba/scripts/sql/turba_objects.oci8.sql
 share/horde/turba/scripts/sql/turba_objects.pgsql.sql
@@ -128,7 +139,9 @@ share/horde/turba/scripts/sql/turba_objects.sql
 share/horde/turba/scripts/sql/turba_weddingguests.sql
 share/horde/turba/scripts/upgrades/1.2_to_2.0.sql
 share/horde/turba/scripts/upgrades/2004-10-26_create_default_histories.php
+share/horde/turba/scripts/upgrades/public_to_horde_share.php
 share/horde/turba/search.php
+share/horde/turba/templates/addressbooks.inc
 share/horde/turba/templates/block/minisearch.inc
 share/horde/turba/templates/browse/actions.inc
 share/horde/turba/templates/browse/column_footers.inc
@@ -138,14 +151,16 @@ share/horde/turba/templates/browse/footer.inc
 share/horde/turba/templates/browse/footerAlpha.inc
 share/horde/turba/templates/browse/header.inc
 share/horde/turba/templates/browse/javascript.inc
+share/horde/turba/templates/browse/row.inc
 share/horde/turba/templates/browse/search.inc
 share/horde/turba/templates/browse/search_criteria.inc
-share/horde/turba/templates/browse/select.inc
 share/horde/turba/templates/common-header.inc
 share/horde/turba/templates/data/export.inc
 share/horde/turba/templates/data/import.inc
 share/horde/turba/templates/menu.inc
+share/horde/turba/templates/prefs/addressbookselect.inc
 share/horde/turba/templates/prefs/columnselect.inc
+share/horde/turba/templates/prefs/imsp_opt.inc
 share/horde/turba/test.php
 share/horde/turba/themes/graphics/contact.png
 share/horde/turba/themes/graphics/favicon.ico
@@ -154,10 +169,13 @@ share/horde/turba/themes/graphics/menu/browse.png
 share/horde/turba/themes/graphics/menu/new.png
 share/horde/turba/themes/graphics/new.png
 share/horde/turba/themes/graphics/turba.png
+share/horde/turba/themes/ideas/screen.css
 share/horde/turba/themes/screen.css
 share/horde/turba/vcard.php
+share/horde/turba/view.php
 @dirrm share/horde/turba/themes/graphics/menu
 @dirrm share/horde/turba/themes/graphics
+@dirrm share/horde/turba/themes/ideas
 @dirrm share/horde/turba/themes
 @dirrm share/horde/turba/templates/prefs
 @dirrm share/horde/turba/templates/data
@@ -240,7 +258,10 @@ share/horde/turba/vcard.php
 @dirrm share/horde/turba/locale/bg_BG
 @dirrm share/horde/turba/locale/ar_SY/LC_MESSAGES
 @dirrm share/horde/turba/locale/ar_SY
+@dirrm share/horde/turba/locale/is_IS/LC_MESSAGES
+@dirrm share/horde/turba/locale/is_IS
 @dirrm share/horde/turba/locale
+@dirrm share/horde/turba/lib/Object
 @dirrm share/horde/turba/lib/Driver
 @dirrm share/horde/turba/lib/Block
 @dirrm share/horde/turba/lib
