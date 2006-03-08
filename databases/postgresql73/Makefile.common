@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2005/12/05 23:55:04 rillig Exp $
+# $NetBSD: Makefile.common,v 1.13.2.1 2006/03/08 22:41:43 seb Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -21,7 +21,7 @@ MASTER_SITES?=		http://www.postgresql.org/ftpsite/source/v${DIST_VERS}/ \
 MAINTAINER?=		tech-pkg@NetBSD.org
 HOMEPAGE?=		http://www.postgresql.org/
 
-CONFLICTS+=		postgresql-[0-9]* postgresql74-* postgresql80-*
+CONFLICTS+=	postgresql-[0-9]* postgresql74-* postgresql80-* postgresql81-*
 
 DISTINFO_FILE?=		${.CURDIR}/../postgresql73/distinfo
 COMMON_FILESDIR?=	${.CURDIR}/../postgresql73/files
@@ -33,7 +33,7 @@ PATCHDIR?=		${.CURDIR}/../postgresql73/patches
 # BASE_VERS		pkgsrc-mangled version number (convert pl -> .)
 #
 # Note: Do not forget jdbc-postgresql when updating version
-DIST_VERS?=		7.3.10
+DIST_VERS?=		7.3.14
 BASE_VERS?=		${DIST_VERS}
 
 BUILDLINK_DEPENDS.postgresql73-lib?=	postgresql73-lib>=${BASE_VERS}
