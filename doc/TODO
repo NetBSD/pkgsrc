@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4708 2006/03/08 07:39:21 wiz Exp $
+$NetBSD: TODO,v 1.4709 2006/03/08 21:35:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -327,7 +327,7 @@ Suggested package updates
 	o advancecomp-1.15
 	o aegis-4.21
 	o aewm++-1.0.27
-	o afterstep-2.2.0
+	o afterstep-2.2.1
 	o album-3.10
 	o ald-0.1.6 [pkg/26552]
 	o algae-4.3.6
@@ -403,6 +403,7 @@ Suggested package updates
 	o chrony-1.21
 	o cint-5.16
 	o cjk-lyx-1.3.3
+	o cksfv-1.3.9
 	o classpath-0.90
 	o classpath-gui-0.90
 	o clisp-2.38 (also see PR misc/31094)
@@ -642,7 +643,7 @@ Suggested package updates
 	o jpegpixi-1.1.1
 	o jpilot-0.99.8
 	o jwhois-3.2.3
-	o k3b-0.12.13
+	o k3b-0.12.14
 	o kajaani-kombat-0.7
 	o kapooka-0.3
 	o kazehakase-0.3.5
@@ -777,7 +778,8 @@ Suggested package updates
 	o opencobol-0.31
 	o openh323-1.17.2
 	o openldap-2.3.20
-	o openoffice-2.0.1
+	o openoffice-2.0.2
+	o openoffice-bin-2.0.2
 	o openpam-20050616
 	o openssh-4.3p2 [pkg/32858]
 	o openssl-0.9.8a
@@ -957,7 +959,7 @@ Suggested package updates
 	o projclock-0.9
 	o proxsmtp-1.2.1
 	o psmisc-21.9
-	o pstoedit-3.42
+	o pstoedit-3.43
 	o pstree-2.27
 	o pth-2.0.6
 	o puf-0.93.3
@@ -1170,6 +1172,7 @@ Suggested package updates
 	o vfu-4.03
 	o vice-1.19
 	o vifm-0.3a
+	o visual-regexp-3.1
 	o vlc-0.8.4 [needs ffmpeg prerelease/snapshot]
 	o vmware-module-3.2.2
 	o vmware-5.5
