@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/28 15:49:41 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/08 09:09:42 ghen Exp $
 
-DISTNAME=		nc6-0.5
+DISTNAME=		nc6-1.0
 PKGNAME=		${DISTNAME:S/nc/netcat/}
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.deepspace6.net/pub/ds6/sources/nc6/
