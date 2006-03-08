@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13206 2006/03/08 06:35:37 wiz Exp $
+$NetBSD: CHANGES,v 1.13207 2006/03/08 06:41:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1371,3 +1371,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/bsflite to 0.81p2 [wiz 2006-03-08]
 	Updated math/p5-Spreadsheet-WriteExcel to 2.16 [wiz 2006-03-08]
 	Updated mail/libetpan to 0.43 [wiz 2006-03-08]
+	Updated textproc/gtk-doc to 1.5 [wiz 2006-03-08]
