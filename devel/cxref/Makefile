@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:29:14 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/08 20:18:00 rillig Exp $
 #
 
 DISTNAME=	cxref-1.6a
@@ -12,6 +12,6 @@ COMMENT=	C Cross Referencing & Documenting tool
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--with-cxref-cpp
-USE_GNU_TOOLS+=	make
+USE_TOOLS+=		gmake	# uses the $< variable in the GNU way
 
 .include "../../mk/bsd.pkg.mk"
