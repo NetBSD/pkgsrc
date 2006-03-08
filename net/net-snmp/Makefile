@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/02/19 16:12:02 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2006/03/08 02:52:14 minskim Exp $
 
 DISTNAME=	net-snmp-5.3.0.1
 CATEGORIES=	net
@@ -58,7 +58,7 @@ CONFIGURE_ARGS+=	--with-persistent-directory=${NET_SNMP_PERSISTENTDIR:Q}
 CONFIGURE_ARGS+=	--with-mibdirs=${NET_SNMP_MIBDIRS:Q}
 .endif
 CONFIGURE_ARGS+=	--with-mib-modules="smux host"
-.if (${OPSYS} == "Darwin")
+.if !empty(MACHINE_PLATFORM:MDarwin-[567].*)
 CONFIGURE_ARGS+=	--with-out-mib-modules="ucd-snmp/diskio mibII"
 .endif
 #
