@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13201 2006/03/08 01:49:12 gdt Exp $
+$NetBSD: CHANGES,v 1.13202 2006/03/08 04:44:00 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1366,3 +1366,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/spamd to 20060307 [peter 2006-03-07]
 	Updated fonts/fontforge to 20060209nb1 [minskim 2006-03-07]
 	Added net/quagga-devel version 0.99.3 [gdt 2006-03-08]
+	Updated net/ethereal to 0.10.14nb3 [minskim 2006-03-08]
