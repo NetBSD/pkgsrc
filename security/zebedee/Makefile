@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2006/03/08 23:12:41 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2006/03/08 23:40:41 minskim Exp $
 
 DISTNAME=	zebedee-2.5.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zebedee/}
 
@@ -9,9 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.winton.org.uk/zebedee/
 COMMENT=	Simple tunneling program for TCP or UDP with encryption
 
-DEPENDS+=	tcl-[0-9]*:../../lang/tcl
-
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl tclsh:run
 
 MAKE_ENV+=		PERL5=${PERL5:Q}
 
@@ -21,6 +19,12 @@ MAKE_FLAGS+=		OS=macosx
 .else
 MAKE_FLAGS+=		OS=${LOWER_OPSYS:Q}
 .endif
+
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	"Fixing tclsh paths."
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	ftpgw.tcl
+SUBST_SED.paths=	-e 's,tclsh,${TCLSH},g'
 
 .include "../../mk/pthread.buildlink3.mk"
 
