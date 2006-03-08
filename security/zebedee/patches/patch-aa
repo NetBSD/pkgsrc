@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2006/01/19 23:58:28 joerg Exp $
+$NetBSD: patch-aa,v 1.8 2006/03/08 23:06:40 minskim Exp $
 
---- Makefile.orig	2005-09-06 05:59:53.000000000 +0000
+--- Makefile.orig	2005-09-05 22:59:53.000000000 -0700
 +++ Makefile
 @@ -20,7 +20,9 @@ CC_win32 = gcc -mno-cygwin
  CC_linux = gcc -pthread
@@ -28,14 +28,14 @@ $NetBSD: patch-aa,v 1.7 2006/01/19 23:58:28 joerg Exp $
 -BFINC = -I../blowfish-0.9.5a
 -BFLIB = ../blowfish-0.9.5a/libblowfish.a
 +BFINC =
-+BFLIB =
++BFLIB = -lcrypto
  
  # Location of zlib include and library
  
 -ZINC = -I../zlib-1.2.3
 -ZLIB = ../zlib-1.2.3/libz.a
 +ZINC =
-+ZLIB =
++ZLIB = -lz
  
  # Location of bzlib include and library
  # Set these empty if you don't want bzib2 support
@@ -43,7 +43,7 @@ $NetBSD: patch-aa,v 1.7 2006/01/19 23:58:28 joerg Exp $
 -BZINC = -I../bzip2-1.0.3
 -BZLIB = ../bzip2-1.0.3/libbz2.a
 +BZINC =
-+BZLIB =
++BZLIB = -lbz2
  
  #
  # Tools needed for Perl "POD"-format documentation conversion.
@@ -83,15 +83,29 @@ $NetBSD: patch-aa,v 1.7 2006/01/19 23:58:28 joerg Exp $
  
  # Suffix for executables
  
-@@ -167,6 +172,8 @@ OSLIBS_linux = -lpthread
+@@ -163,14 +168,16 @@ EXE = $(EXE_$(OS))
+ # Extra OS-specific libraries
+ 
+ OSLIBS_win32 = -lwsock32 -lwinmm
+-OSLIBS_linux = -lpthread
++OSLIBS_linux =
  OSLIBS_linux64 = $(OSLIBS_linux)
- OSLIBS_solaris = -lsocket -lnsl -lthread
+-OSLIBS_solaris = -lsocket -lnsl -lthread
++OSLIBS_solaris = -lsocket -lnsl
  OSLIBS_freebsd =
-+OSLIBS_dragonfly = -lcrypto -lbz2 -lz
-+OSLIBS_netbsd = -lcrypto -lbz2 -lz
- OSLIBS_tru64 = -lpthread
- OSLIBS_irix = -lpthread
- OSLIBS_hpux = -lpthread -lnsl
+-OSLIBS_tru64 = -lpthread
+-OSLIBS_irix = -lpthread
+-OSLIBS_hpux = -lpthread -lnsl
+-OSLIBS_macosx = -lpthread
++OSLIBS_dragonfly =
++OSLIBS_netbsd =
++OSLIBS_tru64 =
++OSLIBS_irix =
++OSLIBS_hpux = -lnsl
++OSLIBS_macosx =
+ OSLIBS_bsdi =
+ OSLIBS = $(OSLIBS_$(OS))
+ 
 @@ -186,9 +193,10 @@ SERVICEOBJ = $(SERVICEOBJ_$(OS))
  #### You REALLY shouldn't have to modify anything beyond here ...
  ####
