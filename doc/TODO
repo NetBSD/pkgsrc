@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4712 2006/03/08 23:39:06 adrianp Exp $
+$NetBSD: TODO,v 1.4713 2006/03/08 23:56:41 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -1150,7 +1150,6 @@ Suggested package updates
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
 	o ttyrec-1.0.6
-	o turba-2.1
 	o tuxpaint-0.9.15
 	o tuxpaint-stamps-20051125
 	o twelf-1.5
