@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2006/02/14 23:04:57 seb Exp $
+# $NetBSD: Makefile,v 1.20 2006/03/08 23:04:58 adrianp Exp $
 
-DISTNAME=	horde-3.0.9
-PKGREVISION=	4
+DISTNAME=	horde-3.1
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.horde.org/pub/horde/tarballs/
 
@@ -31,7 +30,7 @@ PAXDIRS=	js lib locale po scripts services templates themes util admin
 SENDMAIL?=      /usr/sbin/sendmail
 
 PKG_SYSCONFSUBDIR?=	httpd
-MESSAGE_SUBST+=		HORDEDIR=${HORDEDIR}
+MESSAGE_SUBST+=		HORDEDIR=${HORDEDIR:Q}
 
 CONF_FILES+=		${EGDIR}/horde.conf ${PKG_SYSCONFDIR}/horde.conf
 CONF_FILES_PERMS+=	${HORDEDIR}/config/conf.php.dist \
@@ -83,7 +82,7 @@ SUBST_FILES.files=	horde.conf.dist config/conf.xml config/conf.xml.dist \
 SUBST_SED.files=	-e "s|@HORDEDIR@|${HORDEDIR}|g" \
 			-e "s|/usr/lib/sendmail|${SENDMAIL}|g" \
 			-e "s|/bin/sh|${SH}|g"
-SUBST_MESSAGE.files=	"Fixing configuration files."
+SUBST_MESSAGE.files=	Fixing configuration files.
 
 .include "options.mk"
 .include "../../mk/apache.mk"
@@ -110,15 +109,15 @@ do-install:
 .	endfor
 
 .	for d in ${PAXDIRS}
-		cd ${WRKSRC}/${d} && ${PAX} -rwpam . ${HORDEDIR}/${d}
+		@cd ${WRKSRC}/${d} && ${PAX} -rwpam . ${HORDEDIR}/${d}
 .	endfor
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${HORDEDIR}/config
 	${INSTALL_DATA} ${WRKSRC}/*.php ${HORDEDIR}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${HORDEDIR}
-	${FIND} ${HORDEDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${HORDEDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
-	${CHOWN} ${APACHE_USER}:${SHAREGRP} ${HORDEDIR}/config
-	${CHMOD} 0750 ${HORDEDIR}/config
+	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${HORDEDIR}
+	@${FIND} ${HORDEDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	@${FIND} ${HORDEDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
+	@${CHOWN} ${APACHE_USER}:${SHAREGRP} ${HORDEDIR}/config
+	@${CHMOD} 0750 ${HORDEDIR}/config
 
 .include "../../mk/bsd.pkg.mk"
