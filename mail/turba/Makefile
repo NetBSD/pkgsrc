@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2006/02/14 23:06:47 seb Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/08 23:54:27 adrianp Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
-PKGREVISION=	3
 CATEGORIES=	mail www
 MASTER_SITES=	ftp://ftp.horde.org/pub/turba/
 
@@ -18,13 +17,13 @@ DOCDIR=		${PREFIX}/share/doc/turba
 EGDIR=		${PREFIX}/share/examples/turba
 HORDEDIR=	${PREFIX}/share/horde
 TURBADIR=	${HORDEDIR}/turba
-TURBAVER=	2.0.5
+TURBAVER=	2.1
 PAXDIRS=	lib locale po scripts templates themes
 USE_TOOLS+=	perl:run
 
-MESSAGE_SUBST+=	TURBADIR=${TURBADIR}
-MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
-REPLACE_PERL=	${WRKSRC}/scripts/ldap/addou.pl
+MESSAGE_SUBST+=	TURBADIR=${TURBADIR:Q}
+MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+REPLACE_PERL+=	${WRKSRC}/scripts/ldap/addou.pl
 
 PKG_SYSCONFSUBDIR?=	httpd
 
@@ -32,7 +31,7 @@ SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
 SUBST_FILES.files=	turba.conf.dist
 SUBST_SED.files=	-e "s|@TURBADIR@|${TURBADIR}|g"
-SUBST_MESSAGE.files=	"Fixing configuration files."
+SUBST_MESSAGE.files=	Fixing configuration files.
 
 CONF_FILES=		${EGDIR}/turba.conf ${PKG_SYSCONFDIR}/turba.conf
 CONF_FILES_PERMS+=	${TURBADIR}/config/sources.php.dist \
@@ -75,15 +74,15 @@ do-install:
 .	endfor
 
 .	for d in ${PAXDIRS}
-		cd ${WRKSRC}/${d} && ${PAX} -rwpma . ${TURBADIR}/${d}
+		@cd ${WRKSRC}/${d} && ${PAX} -rwpma . ${TURBADIR}/${d}
 .	endfor
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${TURBADIR}/config
 	${INSTALL_DATA} ${WRKSRC}/*.php ${TURBADIR}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${TURBADIR}
-	${FIND} ${TURBADIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${TURBADIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
-	${CHOWN} ${APACHE_USER}:${SHAREGRP} ${TURBADIR}/config
-	${CHMOD} 0750 ${TURBADIR}/config
+	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${TURBADIR}
+	@${FIND} ${TURBADIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	@${FIND} ${TURBADIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
+	@${CHOWN} ${APACHE_USER}:${SHAREGRP} ${TURBADIR}/config
+	@${CHMOD} 0750 ${TURBADIR}/config
 
 .include "../../mk/bsd.pkg.mk"
