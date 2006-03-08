@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2006/02/21 19:05:07 joerg Exp $
+# $NetBSD: Makefile.common,v 1.17 2006/03/08 02:29:06 grant Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -103,6 +103,10 @@ USE_LIBLTDL?=		yes
 USE_LIBLTDL?=		no
 
 FILES_SUBST+=		PG_PREFIX=${PG_PREFIX:Q}
+
+# libintl library dependency is not correctly detected in all cases,
+# so simply always include it here.
+LIBS+=		-lintl
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 
