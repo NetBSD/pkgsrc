@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2006/01/06 15:10:05 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/08 06:33:31 wiz Exp $
 #
 
-DISTNAME=		libetpan-0.38
+DISTNAME=		libetpan-0.43
 PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libetpan/}
@@ -21,6 +21,7 @@ SUBST_MESSAGE.conf=	Fixing libetpan-config.
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
+.include "../../security/cyrus-sasl2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
