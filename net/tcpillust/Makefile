@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/03/04 21:30:24 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/08 19:02:47 minskim Exp $
 
 DISTNAME=	tcpillust-1.0a
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.csl.sony.co.jp/CSL/nishida/
 
@@ -30,7 +30,7 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/sample/$$i ${PREFIX}/share/doc/tcpillust/sample; \
 	done
 
-.include "../../lang/tcl83/buildlink3.mk"
+.include "../../lang/tcl/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
-.include "../../x11/tk83/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
