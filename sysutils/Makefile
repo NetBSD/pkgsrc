@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.341 2006/03/08 10:02:14 ghen Exp $
+# $NetBSD: Makefile,v 1.342 2006/03/08 20:53:54 gdt Exp $
 #
 
 COMMENT=	System utilities
@@ -66,6 +66,7 @@ SUBDIR+=	dvdrecord
 SUBDIR+=	e2fsprogs
 SUBDIR+=	easydiskpasswd
 SUBDIR+=	estd
+SUBDIR+=	etcmanage
 SUBDIR+=	extipl
 SUBDIR+=	fakeroot
 SUBDIR+=	fam
