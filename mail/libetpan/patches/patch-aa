@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.1 2005/08/05 20:55:19 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2006/03/08 06:33:32 wiz Exp $
 
---- libetpan-config.in.orig	2005-08-05 22:36:50.000000000 +0200
-+++ libetpan-config.in	2005-08-05 22:37:38.000000000 +0200
-@@ -47,8 +47,8 @@
+--- libetpan-config.in.orig	2006-03-08 02:14:34.000000000 +0100
++++ libetpan-config.in
+@@ -47,8 +47,8 @@ while test $# -gt 0; do
        echo $includedir
        ;;
      --libs)
 -      libdir=-L@libdir@
--      echo $libdir -letpan@LIBSUFFIX@ @LDFLAGS@ @SSLLIBS@ @LIBICONV@ @DBLIB@ @LIBS@ @SASLLIBS@
+-      echo $libdir -letpan@LIBSUFFIX@ @LDFLAGS@ @SSLLIBS@ @GNUTLSLIB@ @LIBICONV@ @DBLIB@ @LIBS@ @SASLLIBS@
 +      libdir="-L@libdir@ @COMPILERFLAGS@@libdir@"
-+      echo $libdir -letpan@LIBSUFFIX@ @SSLLIBS@ @LIBICONV@ @DBLIB@ @LIBS@ @SASLLIBS@
++      echo $libdir -letpan@LIBSUFFIX@ @SSLLIBS@ @GNUTLSLIB@ @LIBICONV@ @DBLIB@ @LIBS@ @SASLLIBS@
        ;;
      *)
        echo "${usage}" 1>&2
