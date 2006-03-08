@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2006/03/06 00:18:12 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2006/03/08 07:38:50 wiz Exp $
 #
 
-DISTNAME=	libcroco-0.6.0
-PKGREVISION=	5
+DISTNAME=	libcroco-0.6.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libcroco/0.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +14,7 @@ USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-PKGCONFIG_OVERRIDE+=    libcroco-0.6.pc.in
+PKGCONFIG_OVERRIDE+=    libcroco-0.6.pc
 
 CONFIGURE_ARGS+=	--enable-seleng=yes
 CONFIGURE_ARGS+=	--enable-layeng=yes
