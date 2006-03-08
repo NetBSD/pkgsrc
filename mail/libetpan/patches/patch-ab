@@ -1,15 +1,17 @@
-$NetBSD: patch-ab,v 1.1 2005/08/05 20:55:19 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2006/03/08 06:33:32 wiz Exp $
 
---- src/Makefile.in.orig	2005-08-05 22:44:16.000000000 +0200
-+++ src/Makefile.in	2005-08-05 22:45:08.000000000 +0200
-@@ -14,8 +14,8 @@
+--- src/Makefile.in.orig	2006-01-04 12:08:35.000000000 +0100
++++ src/Makefile.in
+@@ -14,9 +14,9 @@ LIBTOOL	    = @LIBTOOL@
  TARGET = libetpan@LIBSUFFIX@.la
  
  VERSINFO    = @API_VERSION@
 -CC          = @CC@
--LDFLAGS     = @LIBS@ @SSLLIBS@ @LDFLAGS@ @DBLIB@ @GNUTLSLIB@
+-LDFLAGS     = @LDFLAGS@ @LIBS@ @SSLLIBS@ @LIBICONV@ \
+-	@DBLIB@ @GNUTLSLIB@ @SASLLIBS@
 +#CC          = @CC@
 +LDFLAGS += @LIBS@ @SSLLIBS@ @LDFLAGS@ @DBLIB@ @GNUTLSLIB@
++
  
  SUBLIBS = data-types/libdata-types.la \
  	low-level/liblow-level.la \
