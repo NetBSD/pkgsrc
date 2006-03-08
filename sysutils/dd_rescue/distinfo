@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/03/08 08:42:04 ghen Exp $
+
+SHA1 (dd_rescue-1.11.tar.gz) = 5c00ab592087506ce9e2851c8b4443659bbf9226
+RMD160 (dd_rescue-1.11.tar.gz) = aaf44b8034162ae0738bf0613ac3c6ac4e1ea6f0
+Size (dd_rescue-1.11.tar.gz) = 17259 bytes
+SHA1 (patch-aa) = fbb0fce59b038bad269379ca46592eab4f7929bd
