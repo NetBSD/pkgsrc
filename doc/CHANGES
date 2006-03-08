@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13217 2006/03/08 23:06:06 adrianp Exp $
+$NetBSD: CHANGES,v 1.13218 2006/03/08 23:39:05 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1383,3 +1383,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/etcmanage version 0.2 [gdt 2006-03-08]
 	Updated mail/milter-regex to 1.6 [tron 2006-03-08]
 	Updated www/horde3 to 3.1 [adrianp 2006-03-08]
+	Updated mail/imp4 to 4.1 [adrianp 2006-03-08]
