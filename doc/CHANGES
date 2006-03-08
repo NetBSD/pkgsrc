@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13216 2006/03/08 22:03:43 tron Exp $
+$NetBSD: CHANGES,v 1.13217 2006/03/08 23:06:06 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1382,3 +1382,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/tcpillust to 1.0anb4 [minskim 2006-03-08]
 	Added sysutils/etcmanage version 0.2 [gdt 2006-03-08]
 	Updated mail/milter-regex to 1.6 [tron 2006-03-08]
+	Updated www/horde3 to 3.1 [adrianp 2006-03-08]
