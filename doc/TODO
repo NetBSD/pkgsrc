@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4714 2006/03/09 11:22:05 tron Exp $
+$NetBSD: TODO,v 1.4715 2006/03/09 14:10:48 rillig Exp $
 
 Suggested new packages
 ======================
@@ -236,12 +236,6 @@ Suggested new packages
 	others.  You can also drive yourself with either a wheel or
 	keyboard or mouse.
 
-	Space Racer
-	http://spaceracer.sourceforge.net/
-	A 3D car racing game. The circuit is a road in a galactic
-	environment. It aims to be a clone of the well known Stunt
-	Car Racer.
-
 	CarWorld driving simulator
 	http://carworld.sourceforge.net/
 	A small driving simulator/demo.
@@ -428,7 +422,6 @@ Suggested package updates
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsweb-3.0.6
 	o cweb-3.64a
-	o cxref-1.6a
 	o cy-login-1.5.28
 	o cygwin_lib-1.5.19
 	o cyrus-sasl-2.1.22
