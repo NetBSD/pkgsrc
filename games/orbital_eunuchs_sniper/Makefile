@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:09:21 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/09 14:50:31 ghen Exp $
 #
 
 DISTNAME=		orbital_eunuchs_sniper-1.29
@@ -12,6 +12,11 @@ COMMENT=		Overhead shooting game
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-games-dir=${PREFIX}/libexec
+
+REPLACE_INTERPRETER+=	bash
+_REPLACE.bash.old=	.*/bin/bash
+_REPLACE.bash.new=	${SH:Q}
+_REPLACE_FILES.bash=	src/snipe2d.in
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/orbital_eunuchs_sniper

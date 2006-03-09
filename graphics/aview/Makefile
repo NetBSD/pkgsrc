@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:09:28 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/09 14:50:31 ghen Exp $
 #
 
 DISTNAME=	aview-1.3.0rc1
@@ -30,6 +30,11 @@ SUBST_SED.programs+=	-e 's,@BIN_PROGRAMS@,aview aaflip,g'
 .else
 SUBST_SED.programs+=	-e 's,@BIN_PROGRAMS@,aview,g'
 .endif
+
+REPLACE_INTERPRETER+=	bash
+_REPLACE.bash.old=	/bin/bash
+_REPLACE.bash.new+=	${SH:Q}
+_REPLACE_FILES.bash=	asciiview
 
 post-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/02/05 23:11:49 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2006/03/09 14:50:32 ghen Exp $
 
 DISTNAME=	xteddy-2.0.1
 PKGREVISION=	8
@@ -12,6 +12,11 @@ COMMENT=	Teddy bear for your desktop
 CONFLICTS+=	xteddy-1.*
 
 GNU_CONFIGURE=	yes
+
+REPLACE_INTERPRETER+=	bash
+_REPLACE.bash.old=	/bin/bash
+_REPLACE.bash.new=	/bin/ksh
+_REPLACE_FILES.bash=	xtoys
 
 pre-configure:
 	files="configure xteddy_test xtoys";				\
