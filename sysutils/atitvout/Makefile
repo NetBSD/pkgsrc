@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/04 21:30:40 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/09 11:28:00 ghen Exp $
 
 DISTNAME=       atitvout-0.4
 PKGREVISION=	1
@@ -25,11 +25,15 @@ do-configure:
 	${CP} ${FILESDIR}/Makefile.bsd ${WRKSRC}
 .endif
 
+REPLACE_INTERPRETER+=	bash
+_REPLACE.bash.old=	/bin/bash
+_REPLACE.bash.new=	${SH:Q}
+_REPLACE_FILES.bash=	test.sh
+
 SUBST_CLASSES+=	sh
-SUBST_STAGE.sh=	post-patch
+SUBST_STAGE.sh=	pre-configure
 SUBST_FILES.sh=	test.sh
 SUBST_SED.sh=	-e "s,@PREFIX@,${PREFIX},"
-SUBST_MESSAGE.sh=	"Fixing stupid bash scripts."
 
 INSTALLATION_DIRS=	sbin
 
