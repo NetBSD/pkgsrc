@@ -1,0 +1,8 @@
+$NetBSD: distinfo.powerpc,v 1.1.1.1 2006/03/09 20:34:38 tonio Exp $
+
+SHA1 (suse100/ppc/compat-2004.11.13-4.ppc.rpm) = d56387052cd865d0325e00dbba03f8086500a2cd
+RMD160 (suse100/ppc/compat-2004.11.13-4.ppc.rpm) = 732dde7d78d1fb0a09f437aab47bda6cdeeda702
+Size (suse100/ppc/compat-2004.11.13-4.ppc.rpm) = 853476 bytes
+SHA1 (suse100/ppc/compat-libstdc++-5.0.7-6.ppc.rpm) = 32d0566212edb261d12a396992ea82c08614fe11
+RMD160 (suse100/ppc/compat-libstdc++-5.0.7-6.ppc.rpm) = 43d526649a0d14861caf941321abbe1f7c6f39c5
+Size (suse100/ppc/compat-libstdc++-5.0.7-6.ppc.rpm) = 267312 bytes
