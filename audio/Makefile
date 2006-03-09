@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.301 2006/02/23 23:35:27 rpaulo Exp $
+# $NetBSD: Makefile,v 1.302 2006/03/09 20:25:49 jlam Exp $
 #
 
 COMMENT=	Audio tools
@@ -196,7 +196,6 @@ SUBDIR+=	nosefart
 SUBDIR+=	nspmod
 SUBDIR+=	oggasm
 SUBDIR+=	openal
-SUBDIR+=	oss
 SUBDIR+=	p5-Audio-CD
 SUBDIR+=	p5-Audio-Wav
 SUBDIR+=	p5-CDDB
