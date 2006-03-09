@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/02/16 11:12:13 tonio Exp $
+# $NetBSD: Makefile,v 1.19 2006/03/09 14:50:31 ghen Exp $
 #
 
 DISTNAME=	ratpoison-1.4.0-beta4
@@ -14,6 +14,11 @@ GNU_CONFIGURE=	YES
 USE_GNU_READLINE= YES
 
 INFO_FILES=	ratpoison.info
+
+REPLACE_INTERPRETER+=	bash
+_REPLACE.bash.old=	/usr/bin/env bash
+_REPLACE.bash.new=	${SH:Q}
+_REPLACE_FILES.bash=	contrib/rpws
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
