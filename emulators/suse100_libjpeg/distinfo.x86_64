@@ -1,0 +1,5 @@
+$NetBSD: distinfo.x86_64,v 1.1.1.1 2006/03/09 20:37:33 tonio Exp $
+
+SHA1 (suse100/x86_64/libjpeg-6.2.0-739.x86_64.rpm) = 6dc54163c9119c74d45f248c63515ac4b78a9e38
+RMD160 (suse100/x86_64/libjpeg-6.2.0-739.x86_64.rpm) = 2e70e92fffd825214bc40220ace5324d99ff1b84
+Size (suse100/x86_64/libjpeg-6.2.0-739.x86_64.rpm) = 70061 bytes

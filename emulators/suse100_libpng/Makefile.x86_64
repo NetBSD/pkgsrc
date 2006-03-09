@@ -1,0 +1,3 @@
+# $NetBSD: Makefile.x86_64,v 1.1.1.1 2006/03/09 20:37:56 tonio Exp $
+
+RPMFILES=		libpng-1.2.8-5.${SUSE_ARCH}.rpm

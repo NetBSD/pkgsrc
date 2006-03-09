@@ -1,0 +1,20 @@
+$NetBSD: distinfo.powerpc,v 1.1.1.1 2006/03/09 20:38:51 tonio Exp $
+
+SHA1 (suse100/ppc/atk-1.10.3-2.ppc.rpm) = f583040453c2f4615934026eb1dd1b29ecca1966
+RMD160 (suse100/ppc/atk-1.10.3-2.ppc.rpm) = 5ddf561d899880ce52a04a78a2a2e0db8bf9ca27
+Size (suse100/ppc/atk-1.10.3-2.ppc.rpm) = 193979 bytes
+SHA1 (suse100/ppc/glib2-2.8.1-3.ppc.rpm) = 06b21b579f9f5fbd697e402d8d150e5dbf65bb9d
+RMD160 (suse100/ppc/glib2-2.8.1-3.ppc.rpm) = ed70be3ec4074a17b18e5a02d5a72d815b5a7abe
+Size (suse100/ppc/glib2-2.8.1-3.ppc.rpm) = 624140 bytes
+SHA1 (suse100/ppc/gtk2-2.8.3-4.ppc.rpm) = f74493ae6efe4e67a6e8d25e351dd48aff833c8f
+RMD160 (suse100/ppc/gtk2-2.8.3-4.ppc.rpm) = d52c5bf3a8c1fe62c5fda0e46b84299ed902befb
+Size (suse100/ppc/gtk2-2.8.3-4.ppc.rpm) = 3894148 bytes
+SHA1 (suse100/ppc/cairo-1.0.0-7.ppc.rpm) = 416ce5ea34c77e13ff527a820bb94f2441f8ef95
+RMD160 (suse100/ppc/cairo-1.0.0-7.ppc.rpm) = fb7e2ed80bfd091c2c73209d9dda2335dcd94f7d
+Size (suse100/ppc/cairo-1.0.0-7.ppc.rpm) = 258214 bytes
+SHA1 (suse100/ppc/glitz-0.4.4-4.ppc.rpm) = eb681c824e99342cbbc7dcf8c3d0fb9038545655
+RMD160 (suse100/ppc/glitz-0.4.4-4.ppc.rpm) = fe43ca7ebbbecce9851b207f776debfa6d59782a
+Size (suse100/ppc/glitz-0.4.4-4.ppc.rpm) = 87494 bytes
+SHA1 (suse100/ppc/pango-1.10.0-3.ppc.rpm) = 5b6bd355a34cb908cefe98bf8474aed75bd27635
+RMD160 (suse100/ppc/pango-1.10.0-3.ppc.rpm) = e4fb855ddf12effb80528e71835909881dbe819e
+Size (suse100/ppc/pango-1.10.0-3.ppc.rpm) = 315684 bytes

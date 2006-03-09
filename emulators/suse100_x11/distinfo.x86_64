@@ -1,0 +1,5 @@
+$NetBSD: distinfo.x86_64,v 1.1.1.1 2006/03/09 20:37:05 tonio Exp $
+
+SHA1 (suse100/x86_64/xorg-x11-libs-6.8.2-100.x86_64.rpm) = f7efb5bad41ea72756b845554b92bed9957f40cd
+RMD160 (suse100/x86_64/xorg-x11-libs-6.8.2-100.x86_64.rpm) = ca7d873e9ce34f9ee9942c55fff15ae864524375
+Size (suse100/x86_64/xorg-x11-libs-6.8.2-100.x86_64.rpm) = 3130444 bytes

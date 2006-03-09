@@ -1,0 +1,8 @@
+$NetBSD: distinfo.powerpc,v 1.1.1.1 2006/03/09 20:37:05 tonio Exp $
+
+SHA1 (suse100/ppc/xorg-x11-libs-6.8.2-100.ppc.rpm) = 83d2333a1a354733deca3273c0288cc300b60204
+RMD160 (suse100/ppc/xorg-x11-libs-6.8.2-100.ppc.rpm) = a68959b243edac1f6a19a9849a6f705a44005320
+Size (suse100/ppc/xorg-x11-libs-6.8.2-100.ppc.rpm) = 2835400 bytes
+SHA1 (suse100/i586/xorg-x11-libs-6.8.2-100.i586.rpm) = e00b5a0dc265df2957cd0fbfe36b1707764cca29
+RMD160 (suse100/i586/xorg-x11-libs-6.8.2-100.i586.rpm) = 333093b77d2ba3588f32baf1acca135799922cc8
+Size (suse100/i586/xorg-x11-libs-6.8.2-100.i586.rpm) = 2926591 bytes
