@@ -6,3 +6,6 @@ to centralize the maintenence effort and to reduce duplicated
 effort. And the poppler developers would like to move libpoppler
 forward in a number of areas that doesn't fit within the goals of
 xpdf.
+
+The GLib wrapper is available in the print/poppler-glib package.
+The QT wrapper is available in the print/poppler-qt package.
