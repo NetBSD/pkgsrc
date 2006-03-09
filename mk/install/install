@@ -1,7 +1,7 @@
 # -*- sh -*-
 # start of install
 #
-# $NetBSD: install,v 1.42 2005/12/29 03:44:38 jlam Exp $
+# $NetBSD: install,v 1.43 2006/03/09 00:20:27 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -74,6 +74,11 @@ VIEW-INSTALL)
 		./+SHELL ADD ${PKG_METADATA_DIR}
 	${TEST} ! -x ./+SHELL ||
 		./+SHELL CHECK-ADD ${PKG_METADATA_DIR}
+	#
+	# Register info files.
+	#
+	${TEST} ! -x ./+INFO_FILES ||
+		./+INFO_FILES ADD ${PKG_METADATA_DIR}
 
 	# If ${PKG_SYSCONFBASE} points outside of ${PREFIX}, then add the
 	# package config files to the proper view.
