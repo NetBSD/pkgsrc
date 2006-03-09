@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.48 2006/03/04 21:29:48 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2006/03/09 17:40:24 minskim Exp $
 
 DISTNAME=	graphviz-2.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.graphviz.org/
 COMMENT=	Graph Drawing Programs from AT&T Research and Lucent Bell Labs
-
-BUILDLINK_DEPENDS.gd+=	gd>=2.0.33nb1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -47,7 +45,9 @@ pre-build:
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/gd/buildlink3.mk"
+# The configure script requires gd>=2.0.34, which was never released.
+# Uncomment the following when graphics/gd is updated to 2.0.34
+#.include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
