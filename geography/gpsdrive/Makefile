@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:09:26 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/09 11:30:51 ghen Exp $
 
 DISTNAME=	gpsdrive-1.31
 PKGREVISION=	9
@@ -20,10 +20,10 @@ USE_LANGUAGE=	c c++
 # XXX make this an option
 CONFIGURE_ARGS+=	--disable-mysql
 
-SUBST_CLASSES+=		bash
-SUBST_STAGE.bash=	post-patch
-SUBST_FILES.bash=	src/gpsfetchmap
-SUBST_SED.bash=		-e 's,\#!/bin/bash,\#!/bin/sh,'
+REPLACE_INTERPRETER+=	bash
+_REPLACE.bash.old=	/bin/bash
+_REPLACE.bash.new=	${SH:Q}
+_REPLACE_FILES.bash=	src/gpsfetchmap
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
