@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/01/20 21:14:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/03/09 17:25:54 cube Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -445,6 +445,9 @@ share/examples/gnutls/ex-session-info.c
 share/examples/gnutls/ex-verify.c
 share/examples/gnutls/ex-x509-info.c
 share/examples/gnutls/tcp.c
+${PKGLOCALEDIR}/locale/en@boldquot/LC_MESSAGES/gnutls.mo
+${PKGLOCALEDIR}/locale/en@quot/LC_MESSAGES/gnutls.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnutls.mo
 @dirrm share/examples/gnutls
 @dirrm share/doc/gnutls
 @dirrm include/gnutls
