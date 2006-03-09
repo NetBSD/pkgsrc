@@ -1,0 +1,8 @@
+$NetBSD: distinfo.x86_64,v 1.1.1.1 2006/03/09 20:34:38 tonio Exp $
+
+SHA1 (suse100/x86_64/compat-2004.11.13-4.x86_64.rpm) = 5dcbd5f5c18630cce3be6770bf235ca6cd4ec248
+RMD160 (suse100/x86_64/compat-2004.11.13-4.x86_64.rpm) = cd4274f17e45a69909afe4e6315fa2d5a3d95c09
+Size (suse100/x86_64/compat-2004.11.13-4.x86_64.rpm) = 120440 bytes
+SHA1 (suse100/x86_64/compat-libstdc++-5.0.7-6.x86_64.rpm) = 95ba61ed1d7c998c4f1177044a6047814a9671d8
+RMD160 (suse100/x86_64/compat-libstdc++-5.0.7-6.x86_64.rpm) = 98c43e40940efd442ff6c8a47cc47f711af69c1b
+Size (suse100/x86_64/compat-libstdc++-5.0.7-6.x86_64.rpm) = 453853 bytes
