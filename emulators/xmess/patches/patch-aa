@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.23 2006/01/22 18:37:52 kristerw Exp $
+$NetBSD: patch-aa,v 1.24 2006/03/09 20:51:13 kristerw Exp $
 
---- makefile.unix.orig	2006-01-22 11:08:05.000000000 +0100
-+++ makefile.unix	2006-01-22 11:11:39.000000000 +0100
+--- makefile.unix.orig	2006-03-09 19:41:47.000000000 +0100
++++ makefile.unix	2006-03-09 19:46:38.000000000 +0100
 @@ -33,7 +33,7 @@
  ###########################################################################
  
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.23 2006/01/22 18:37:52 kristerw Exp $
  
  # GCC on x86 with some optimizations
  # CFLAGS = -O2 -mtune=i686 -fomit-frame-pointer -fstrength-reduce -ffast-math
-@@ -183,16 +183,16 @@
+@@ -183,13 +183,13 @@
    #########################################################################
    
    # Check for C89 + GNU extensions compliance.
@@ -54,12 +54,8 @@ $NetBSD: patch-aa,v 1.23 2006/01/22 18:37:52 kristerw Exp $
 +  # CFLAGS += -Wno-unused
  
    # Warn about declarations after statements.
--  CFLAGS += -Wdeclaration-after-statement
-+  # CFLAGS += -Wdeclaration-after-statement
- 
-   # Don't warn about code that might break strict aliasing rules. 
-   # CFLAGS += -Wno-strict-aliasing
-@@ -328,7 +328,7 @@
+   # CFLAGS += -Wdeclaration-after-statement
+@@ -328,16 +328,16 @@
  ifeq ($(CC),icc)
  
    # Optimizations for the Intel compiler.
@@ -68,15 +64,68 @@ $NetBSD: patch-aa,v 1.23 2006/01/22 18:37:52 kristerw Exp $
  
  else
  ifeq ($(CC),sun-forte)
-@@ -551,7 +551,7 @@
- ###########################################################################
+   #
+   # sun-forte given above is just an artifice to get us into this section
+-  CC = cc
++  # CC = cc
  
- # i386, GNU asm
--MY_CPU = i386
-+# MY_CPU = i386
+   # uncomment to set compiler defaults oriented for maximum performance
+-  XOPT += -fast
++  # XOPT += -fast
  
- # i386, no asm -- needed for the Intel C++ compiler, which does not fully
- # understand GCC's inline assembly syntax, though you may still enable 
+   # Choose one optimization level;
+   #XOPT += -xO0
+@@ -346,7 +346,7 @@
+   #XOPT += -xO3
+   # -xO4 and above automatically inline
+   #XOPT += -xO4
+-  XOPT += -xO5
++  # XOPT += -xO5
+ 
+   # uncomment for code generation targeted to the local machine; this
+   # supplies -xarch, -xcpu, -xtarget.  It also seems to cause an annoying
+@@ -354,11 +354,11 @@
+   # older hardware, which apparently can't be disabled.  As an alternative,
+   # the particular -xtarget for your system could be specified; 
+   # -xtarget=ultra2/2300
+-  XTARGET += -native 
++  # XTARGET += -native 
+   #XTARGET += -xtarget=ultra2/2300
+ 
+   # uncomment to inline library math functions
+-  EXTRA_OPTS += -xlibmil
++  # EXTRA_OPTS += -xlibmil
+ 
+   ######################################################
+   # Additional options for parallelization optimizations
+@@ -374,7 +374,7 @@
+ 
+   # Sparc only, uncomment to do loop restructuring optimizations
+   # and speculative prefetch for v8plusa and above
+-  EXTRA_OPTS += -xdepend  -xsafe=mem
++  #EXTRA_OPTS += -xdepend  -xsafe=mem
+ 
+   #################################################
+   # Additional options for glx builds
+@@ -384,14 +384,14 @@
+   # (libGLU dlopen() complains of missing name mangled symbols)
+   # GLCFLAGS += -DSUN_FORTE_DLOPEN_LIBCRUN='\"libCrun.so.1\"'
+ 
+-  CFLAGS= $(XOPT) $(XTARGET) $(XPARALLEL) $(EXTRA_OPTS)
+-  LDFLAGS=$(XOPT) $(XTARGET) $(XPARALLEL) $(EXTRA_OPTS)
++  #CFLAGS= $(XOPT) $(XTARGET) $(XPARALLEL) $(EXTRA_OPTS)
++  #LDFLAGS=$(XOPT) $(XTARGET) $(XPARALLEL) $(EXTRA_OPTS)
+ 
+   # uncomment for silence...
+-  CFLAGS += -erroff
++  #CFLAGS += -erroff
+   # Tell xmame that we really are in fact elf.  If not supplied, SHARED_PREFIX 
+   # is set causing dlopen()'s to fail.
+-  CFLAGS += -D__ELF__ 
++  #CFLAGS += -D__ELF__ 
+ endif
+ endif
+ endif
 @@ -589,7 +589,7 @@
  ###########################################################################
  
@@ -86,6 +135,15 @@ $NetBSD: patch-aa,v 1.23 2006/01/22 18:37:52 kristerw Exp $
  
  # FreeBSD
  # ARCH  = freebsd
+@@ -701,7 +701,7 @@
+ # use SDL.
+ 
+ # X11 (including Glide & OpenGL if enabled below)
+-DISPLAY_METHOD = x11
++# DISPLAY_METHOD = x11
+ 
+ # SDL library 
+ # DISPLAY_METHOD = SDL
 @@ -732,7 +732,7 @@
  X11_MITSHM = 1
  
