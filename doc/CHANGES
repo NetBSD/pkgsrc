@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13234 2006/03/09 20:27:48 bouyer Exp $
+$NetBSD: CHANGES,v 1.13235 2006/03/09 20:31:36 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1404,3 +1404,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/visual-regexp to 3.0nb2 [minskim 2006-03-09]
 	Removed audio/oss [jlam 2006-03-09]
 	Updated net/netdisco to 0.94nb4 [bouyer 2006-03-09]
+	Updated devel/monotone to 0.25.2 [jmmv 2006-03-09]
