@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.133 2006/02/27 22:01:16 adam Exp $
+# $NetBSD: Makefile,v 1.134 2006/03/09 14:05:14 ghen Exp $
 
 DISTNAME=	netpbm-10.32
 CATEGORIES=	graphics
@@ -28,16 +28,18 @@ MAKE_ENV+=	NETWORKLD=${LIBS:M*:Q}
 # Several of the netpbm shell scripts use bashisms, so force using
 # bash for all of the shell scripts.
 #
-SUBST_CLASSES+=		bash
-SUBST_STAGE.bash=	post-build
-SUBST_SED.bash=		-e "1s|^\#!.*bin/sh|\#!${BASH}|"
-SUBST_FILES.bash=	converter/other/anytopnm			\
-			converter/other/pnmtoplainpnm			\
-			converter/ppm/hpcdtoppm/hpcdtoppm		\
-			converter/ppm/hpcdtoppm/pcdovtoppm		\
-			editor/pamstretch-gen	editor/pnmindex		\
-			editor/pnmmargin	editor/ppmquantall	\
-			other/ppmtomap
+REPLACE_INTERPRETER+=	bash
+_REPLACE.bash.old=	.*/bin/sh
+_REPLACE.bash.new=	${TOOLS_PATH.bash}
+_REPLACE_FILES.bash=	converter/other/anytopnm
+_REPLACE_FILES.bash+=	converter/other/pnmtoplainpnm
+_REPLACE_FILES.bash+=	converter/ppm/hpcdtoppm/hpcdtoppm
+_REPLACE_FILES.bash+=	converter/ppm/hpcdtoppm/pcdovtoppm
+_REPLACE_FILES.bash+=	editor/pamstretch-gen
+_REPLACE_FILES.bash+=	editor/pnmindex.sh
+_REPLACE_FILES.bash+=	editor/pnmmargin
+_REPLACE_FILES.bash+=	editor/ppmquantall
+_REPLACE_FILES.bash+=	other/ppmtomap
 
 .include "../../mk/bsd.prefs.mk"
 
