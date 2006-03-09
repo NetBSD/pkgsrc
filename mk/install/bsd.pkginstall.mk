@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.34 2006/01/01 18:53:03 wiz Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.35 2006/03/09 00:20:27 jlam Exp $
 #
 # This Makefile fragment is included by mk/install/pkginstall.mk and is
 # the implemenation file for the common INSTALL/DEINSTALL scripts
@@ -491,6 +491,53 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	exec 1>/dev/null;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 .endif
+
+# INFO_FILES contains names of info files that should be registered or
+# 	removed from the info directory indices.  The listed info files
+#	are assumed to be directly under ${INFO_DIR}.
+#
+INFO_FILES?=	# empty
+
+INSTALL_INFO_FILES_FILE=	${WRKDIR}/.install-info-files
+INSTALL_INFO_FILES_MEMBERS=	${INFO_FILES}
+INSTALL_UNPACK_TMPL+=		${INSTALL_INFO_FILES_FILE}
+
+.if !empty(INFO_FILES:M*)
+USE_TOOLS+=	install-info:run
+FILES_SUBST+=	INSTALL_INFO=${INSTALL_INFO:Q}
+.endif
+
+${INSTALL_INFO_FILES_FILE}: ../../mk/install/info-files
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${_FUNC_STRIP_PREFIX};						\
+	exec 1>>${.TARGET}.tmp;						\
+	${ECHO} "# start of install-info-files";			\
+	${ECHO} "#";							\
+	${ECHO} "# Generate an +INFO_FILES script that handles info file registration."; \
+	${ECHO} "#";							\
+	${ECHO} "case \$${STAGE} in";					\
+	${ECHO} "PRE-INSTALL|UNPACK)";					\
+	${ECHO} "	\$${CAT} > ./+INFO_FILES << 'EOF_INFO_FILES'";	\
+	${SED} ${FILES_SUBST_SED} ../../mk/install/info-files;		\
+	${ECHO} "";							\
+	set -- dummy ${INFO_FILES}; shift;				\
+	while ${TEST} $$# -gt 0; do					\
+		file="$$1"; shift;					\
+		file=${INFO_DIR:Q}"/$$file";				\
+		${ECHO} "# INFO: $$file";				\
+	done;								\
+	${ECHO} "EOF_INFO_FILES";					\
+	${ECHO} "	\$${CHMOD} +x ./+INFO_FILES";			\
+	${ECHO} "	;;";						\
+	${ECHO} "esac";							\
+	${ECHO} "";							\
+	${ECHO} "# end of install-info-files";				\
+	exec 1>/dev/null;						\
+	${MV} -f ${.TARGET}.tmp ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	set -- dummy ${INFO_FILES}; shift;				\
+	${TEST} $$# -gt 0 || ${ECHO} > ${.TARGET}
 
 # PKG_SHELL contains the pathname of the shell that should be added or
 #	removed from the shell database, /etc/shells.  If a pathname
