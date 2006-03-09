@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/06 00:18:14 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/09 21:04:40 jlam Exp $
 #
 
 GST_PLUGINS0.8_NAME=	oss
@@ -15,5 +15,5 @@ SUBST_SED.devoss=	-e 's|/dev/dsp|${DEVOSSAUDIO}|g'
 
 LIBS+=			${LIBOSSAUDIO}
 
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

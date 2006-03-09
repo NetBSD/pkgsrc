@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:08:10 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/09 21:04:40 jlam Exp $
 
 .include "../../audio/libao/Makefile.common"
 
@@ -25,5 +25,5 @@ BUILDLINK_DEPENDS.libao+=	libao>=0.8.6nb1
 _LIBAO_BUILDING_PLUGIN=	yes
 
 .include "../../audio/libao/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

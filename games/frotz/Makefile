@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/06/16 06:57:54 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/03/09 21:04:43 jlam Exp $
 
 DISTNAME=	frotz-2.43
 PKGREVISION=	2
@@ -32,5 +32,5 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} README INSTALL HOW_TO_PLAY ${DOCDIR}
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:09:25 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/09 21:04:44 jlam Exp $
 #
 
 DISTNAME=		xnibbles-1.0BETA4
@@ -22,6 +22,6 @@ SUBST_FILES.audio=	Makefile
 SUBST_SED.audio=	-e "s|/dev/dsp|${DEVOSSAUDIO}|"
 
 .include "../../graphics/xpm/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
