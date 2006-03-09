@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13229 2006/03/09 18:11:07 wiz Exp $
+$NetBSD: CHANGES,v 1.13230 2006/03/09 18:34:09 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1399,3 +1399,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/libtasn1 to 0.3.1 [cube 2006-03-09]
 	Updated graphics/graphviz to 2.6nb4 [minskim 2006-03-09]
 	Updated inputmethod/uim to 1.0.1nb3 [wiz 2006-03-09]
+	Updated sysutils/ups-nut to 2.0.3 [abs 2006-03-09]
