@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2005/10/05 13:29:51 wiz Exp $
+# $NetBSD: options.mk,v 1.9 2006/03/09 18:04:32 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
 PKG_SUPPORTED_OPTIONS=	anthy canna eb gtk qt
@@ -34,6 +34,7 @@ CONFIGURE_ARGS+=	--without-gtk2
 
 .if !empty(PKG_OPTIONS:Mqt)
 .include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../x11/qt3-tools/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-qt
 # Not worked this option.  need immodule patch for Qt3
 CONFIGURE_ARGS+=	--with-qt-immodule
