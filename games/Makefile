@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.265 2006/02/25 18:27:57 veego Exp $
+# $NetBSD: Makefile,v 1.266 2006/03/09 14:16:25 rillig Exp $
 #
 
 COMMENT=	Games
@@ -188,6 +188,7 @@ SUBDIR+=	scummvm-fotaq
 SUBDIR+=	sirius
 SUBDIR+=	sjeng
 SUBDIR+=	sl
+SUBDIR+=	spaceracer
 SUBDIR+=	spellcast
 SUBDIR+=	spider
 SUBDIR+=	starfighter
