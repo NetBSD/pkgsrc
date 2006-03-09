@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2006/03/05 16:27:27 jlam Exp $
+# $NetBSD: Makefile,v 1.63 2006/03/09 15:40:20 jlam Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 PKGREVISION=	1
@@ -43,8 +43,7 @@ GNU_PLATFORM_DIR!=	${.CURDIR}/../../mk/gnu-config/config.sub ${MACHINE_GNU_PLATF
 PLIST_SUBST+=	GNU_PLATFORM_DIR=${GNU_PLATFORM_DIR:Q}
 
 INFO_FILES=	octave.info liboctave.info
-LIBOCTAVE_INFO=	liboctave.info liboctave.info-1 \
-		liboctave.info-2 liboctave.info-3
+LIBOCTAVE_INFO=	liboctave.info liboctave.info-[0-9]*
 OCTAVE_DOC=	faq/Octave-FAQ.ps interpreter/octave.ps \
 		liboctave/liboctave.ps refcard/refcard-a4.ps \
 		refcard/refcard-legal.ps  refcard/refcard-letter.ps
@@ -73,8 +72,11 @@ post-build:
 	${CHMOD} a+x ${WRKSRC}/mkoctfile
 
 post-install:
-.for f in ${LIBOCTAVE_INFO}
-	${INSTALL_DATA} ${WRKSRC}/doc/liboctave/${f} ${PREFIX}/info
+	cd ${WRKSRC}/doc/liboctave;					\
+	for f in ${LIBOCTAVE_INFO}; do					\
+		${TEST} ! -f "$$f" ||					\
+			${INSTALL_DATA} "$$f" ${PREFIX}/${INFO_DIR};	\
+	done
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/octave/${OCTAVE_VER}/doc
 .for f in ${OCTAVE_DOC}
