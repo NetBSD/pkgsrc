@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/12 18:42:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/09 21:04:41 jlam Exp $
 
 DISTNAME=		moc-2.4.0
 CATEGORIES=		audio
@@ -30,6 +30,6 @@ SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

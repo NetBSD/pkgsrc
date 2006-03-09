@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/02/15 10:49:11 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2006/03/09 21:04:42 jlam Exp $
 #
 
 DISTNAME=		xmms-FMRadio-1.4
@@ -17,6 +17,6 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5Z[A-Z]-* NetBSD-1.6*-* NetBSD-[2-9]*-*
 MAKE_ENV+=		BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q}
 
 .include "../../audio/xmms/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

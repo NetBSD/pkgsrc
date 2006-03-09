@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/03/04 21:28:59 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2006/03/09 21:04:42 jlam Exp $
 #
 
 DISTNAME=		xmms-crossfade-0.2.9
@@ -19,6 +19,6 @@ OSS_DEFS+=		-DDEFAULT_OSS_ALT_AUDIO_DEVICE='"${DEVOSSSOUND}"'
 MAKE_ENV+=		OSS_DEFS=${OSS_DEFS:Q}
 
 .include "../../audio/xmms/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

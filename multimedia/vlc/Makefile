@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/03/04 21:30:16 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2006/03/09 21:04:45 jlam Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
@@ -96,6 +96,6 @@ BUILDLINK_TRANSFORM.ffmpeg+=	-e "s,include/ffmpeg,include/,g"
 .include "../../sysutils/vcdimager-devel/buildlink3.mk"
 .include "../../x11/wxGTK/buildlink3.mk"
 
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

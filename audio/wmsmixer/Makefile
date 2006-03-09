@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/04 21:28:59 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/09 21:04:42 jlam Exp $
 #
 
 DISTNAME=	wmsmixer-0.5.1
@@ -28,5 +28,5 @@ post-install:
 		${PREFIX}/share/doc/wmsmixer/README.wmsmixer
 
 .include "../../graphics/xpm/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

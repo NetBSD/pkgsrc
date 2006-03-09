@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/02/05 23:08:05 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2006/03/09 21:04:39 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ARTS_BUILDLINK3_MK:=	${ARTS_BUILDLINK3_MK}+
@@ -26,6 +26,6 @@ PRINT_PLIST_AWK+=	/^@dirrm include\/arts$$/ \
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

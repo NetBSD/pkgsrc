@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2005/12/11 09:40:46 wiz Exp $
+# $NetBSD: options.mk,v 1.15 2006/03/09 21:04:45 jlam Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -206,7 +206,7 @@ CONFIGURE_ARGS+=	--disable-nas
 
 .if !empty(PKG_OPTIONS:Moss)
 CONFIGURE_ARGS+=	--enable-ossaudio
-.  include "../../mk/ossaudio.buildlink3.mk"
+.  include "../../mk/oss.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-ossaudio
 .endif

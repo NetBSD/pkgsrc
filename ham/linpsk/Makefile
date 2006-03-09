@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:09:42 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/09 21:04:44 jlam Exp $
 #
 
 DISTNAME=	linpsk-0.8.1
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+="--with-fftw-dir=${LOCALBASE}"
 post-configure:
 	${_PKG_DEBUG}${_PKG_SILENT}${LN} -s ${FILESDIR}/pkgsrc_fixes.h ${BUILDLINK_DIR}/include/
 
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

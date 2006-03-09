@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/02/05 23:10:30 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2006/03/09 21:04:45 jlam Exp $
 #
 
 DISTNAME=		rdesktop-1.4.1
@@ -23,6 +23,6 @@ SUBST_SED.audio=	-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 SUBST_MESSAGE.audio=	"Fixing hardcoded audio device."
 
 .include "../../security/openssl/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

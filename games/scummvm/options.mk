@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2005/06/01 18:02:52 jlam Exp $
+# $NetBSD: options.mk,v 1.5 2006/03/09 21:04:44 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.scummvm
 PKG_SUPPORTED_OPTIONS=	sdl x11
@@ -13,6 +13,6 @@ CONFIGURE_ARGS+=	--backend=sdl
 
 .if !empty(PKG_OPTIONS:Mx11)
 CONFIGURE_ARGS+=	--backend=x11
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/03/05 16:27:23 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2006/03/09 21:04:42 jlam Exp $
 
 DISTNAME=		tracker-5.3
 PKGREVISION=		1
@@ -31,7 +31,7 @@ INFO_FILES=	tracker.info
 
 INSTALLATION_DIRS=	bin info
 
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 
 pre-install:
 	cd ${WRKSRC}/Docs && \
