@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.544 2006/03/08 21:15:31 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.545 2006/03/09 17:34:17 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3257,6 +3257,9 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 		if ($value !~ qr"^(?:pre|do|post)-(?:extract|patch|configure|build|install)$") {
 			$line->log_warning("Invalid stage name. Use one of {pre,do,post}-{extract,patch,configure,build,install}.");
 		}
+
+	} elsif ($type eq "String") {
+		# No further checks possible.
 
 	} elsif ($type eq "Tool") {
 		if ($value =~ qr"^([-\w]+|\[)(?::(\w+))?$") {

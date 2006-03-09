@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.69 2006/03/01 20:57:39 rillig Exp $
+# $NetBSD: makevars.map,v 1.70 2006/03/09 17:34:17 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -348,7 +348,9 @@ PTHREAD_OPTS		List+ of { native optional require }
 PTHREAD_TYPE		Readonly
 RCD_SCRIPTS		List of Filename
 RCD_SCRIPT_SRC		List of Pathname
+REPLACE			String
 REPLACE_EMACS		List+ of Pathmask
+REPLACE_FILES		List of Pathmask
 REPLACE_INTERPRETER	List+ of Identifier
 REPLACE_PERL		List+ of Pathmask
 REQD_DIRS		List+ of Pathname
