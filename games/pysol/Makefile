@@ -1,19 +1,21 @@
-# $NetBSD: Makefile,v 1.23 2006/02/05 23:09:21 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2006/03/09 18:51:55 wiz Exp $
 #
 
 DISTNAME=	pysol-4.81
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games python
-MASTER_SITES=	http://www.oberhumer.com/opensource/pysol/download/
+MASTER_SITES=	http://www.pysol.org/download/pysol/
 EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${CARDSETS}${EXTRACT_SUFX}
 
 MAINTAINER=	sakamoto@NetBSD.org
-HOMEPAGE=	http://wildsau.idv.uni-linz.ac.at/mfx/pysol.html
+HOMEPAGE=	http://www.pysol.org/
 COMMENT=	Solitaire game, written in Python
 
 NO_BUILD=	yes
 PLIST_SRC=	${WRKDIR}/PLIST.src
+
+PYTHON_VERSIONS_ACCEPTED=	22 21 20 15
 
 CARDSETS=	pysol-cardsets-4.40
 
