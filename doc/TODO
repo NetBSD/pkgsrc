@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4721 2006/03/09 20:53:55 kristerw Exp $
+$NetBSD: TODO,v 1.4722 2006/03/09 21:11:22 tonio Exp $
 
 Suggested new packages
 ======================
@@ -1101,7 +1101,6 @@ Suggested package updates
 	o strace-4.5.8
 	o stunnel-4.14
 	o subtitleripper-0.3.4
-	o suse_base-10.0
 	o svk-1.07
 	o sweep-0.9.1
 	o swfdec-0.3.6
