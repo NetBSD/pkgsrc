@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.12 2006/02/12 14:44:59 rillig Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.13 2006/03/09 21:45:51 jlam Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -124,7 +124,7 @@
       </listitem>
 
       <listitem>
-	<para><filename>ossaudio.buildlink3.mk</filename> defines several
+	<para><filename>oss.buildlink3.mk</filename> defines several
 	  variables that may be used by packages that use the
 	  Open Sound System (OSS) API.</para>
       </listitem>
