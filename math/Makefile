@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2006/03/07 23:22:05 dillo Exp $
+# $NetBSD: Makefile,v 1.148 2006/03/09 17:16:18 wiz Exp $
 #
 
 COMMENT=	Mathematics
@@ -33,8 +33,8 @@ SUBDIR+=	R-wle
 SUBDIR+=	abs
 SUBDIR+=	admesh
 SUBDIR+=	algae
-SUBDIR+=	aribas
 SUBDIR+=	antixls
+SUBDIR+=	aribas
 SUBDIR+=	bc
 SUBDIR+=	blas
 SUBDIR+=	blitz++
