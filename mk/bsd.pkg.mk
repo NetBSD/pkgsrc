@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1803 2006/03/09 15:58:10 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1804 2006/03/09 23:31:51 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -420,7 +420,7 @@ SCRIPTS_ENV+=	${INSTALL_MACROS}
 #
 .include "../../mk/alternatives.mk"
 
-.include "../../mk/install/pkginstall.mk"
+.include "../../mk/install/bsd.pkginstall.mk"
 
 # Set INSTALL_FILE to be the name of any INSTALL file
 .if !defined(INSTALL_FILE) && exists(${PKGDIR}/INSTALL)
