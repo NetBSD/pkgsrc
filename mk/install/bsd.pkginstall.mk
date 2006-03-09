@@ -1,18 +1,57 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.35 2006/03/09 00:20:27 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.36 2006/03/09 23:31:51 jlam Exp $
 #
-# This Makefile fragment is included by mk/install/pkginstall.mk and is
-# the implemenation file for the common INSTALL/DEINSTALL scripts
-# framework.  To use the pkginstall framework, simply set the relevant
-# variables to customize the install scripts to the package.
+# This Makefile fragment is included by bsd.pkg.mk and implements the
+# common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
+# framework, simply set the relevant variables to customize the install
+# scripts to the package.
 #
 
-.if defined(BSD_PKG_INSTALL_MK)
-PKG_FAIL_REASON+=	"[bsd.pkginstall.mk] Must not be included directly."
+# _PKGINSTALL_VARS is a list of the variables that, if non-empty, indicate
+#	that the pkginstall framework should be used.  These variables
+#	should be extracted from bsd.pkginstall.mk and are typically the
+#	variables named in the INSTALL_<SCRIPT>_MEMBERS lists.
+#
+# USE_PKGINSTALL may be set to "yes" to force the pkginstall framework
+#	to be used.
+#
+_PKGINSTALL_VARS+=	HEADER_EXTRA_TMPL
+_PKGINSTALL_VARS+=	DEINSTALL_PRE_TMPL DEINSTALL_EXTRA_TMPL		\
+			DEINSTALL_TMPL
+_PKGINSTALL_VARS+=	INSTALL_TMPL INSTALL_EXTRA_TMPL			\
+			INSTALL_POST_TMPL INSTALL_UNPACK_TMPL
+_PKGINSTALL_VARS+=	DEINSTALL_SRC INSTALL_SRC
 
+_PKGINSTALL_VARS+=	PKG_GROUPS PKG_USERS
+_PKGINSTALL_VARS+=	SPECIAL_PERMS
+_PKGINSTALL_VARS+=	CONF_FILES CONF_FILES_PERMS			\
+			REQD_FILES REQD_FILES_PERMS			\
+			RCD_SCRIPTS
+_PKGINSTALL_VARS+=	INFO_FILES
+_PKGINSTALL_VARS+=	MAKE_DIRS MAKE_DIRS_PERMS			\
+			REQD_DIRS REQD_DIRS_PERMS			\
+			OWN_DIRS OWN_DIRS_PERMS
+_PKGINSTALL_VARS+=	PKG_SHELL
+_PKGINSTALL_VARS+=	FONTS_DIRS.ttf FONTS_DIRS.type1 FONTS_DIRS.x11
+
+# CONF_DEPENDS notes a dependency where the config directory for the
+# package matches the dependency's config directory.  CONF_DEPENDS is
+# only meaningful if PKG_INSTALLATION_TYPE is "pkgviews".
+#
+_PKGINSTALL_VARS+=	CONF_DEPENDS
+
+.if defined(USE_PKGINSTALL) && !empty(USE_PKGINSTALL:M[yY][eE][sS])
+_USE_PKGINSTALL=	yes
 .else
-BSD_PKG_INSTALL_MK=	1
+_USE_PKGINSTALL=	no
+.endif
 
-.include "../../mk/bsd.prefs.mk"
+.if !empty(_USE_PKGINSTALL:M[nN][oO])
+.  for _var_ in ${_PKGINSTALL_VARS}
+.    if defined(${_var_}) && !empty(${_var_}:M*)
+_USE_PKGINSTALL=	yes
+.    endif
+.  endfor
+.endif
 
 # The Solaris /bin/sh does not know the ${foo#bar} shell substitution.
 # This shell function serves a similar purpose, but is specialized on
@@ -27,9 +66,6 @@ _FUNC_STRIP_PREFIX= \
 	      print s;							\
 	    }' s="$$1" prefix=${PREFIX:Q}/ /dev/null;			\
 	}
-
-DEINSTALL_FILE=		${PKG_DB_TMPDIR}/+DEINSTALL
-INSTALL_FILE=		${PKG_DB_TMPDIR}/+INSTALL
 
 # These are the template scripts for the INSTALL/DEINSTALL scripts.  Packages
 # may do additional work in the INSTALL/DEINSTALL scripts by overriding the
@@ -146,10 +182,6 @@ INSTALL_USERGROUPFUNCS_FILE?=	../../mk/install/usergroupfuncs
 INSTALL_USERGROUP_MEMBERS=	${PKG_USERS} ${PKG_GROUPS}
 INSTALL_UNPACK_TMPL+=		${INSTALL_USERGROUP_FILE}
 
-.if empty(INSTALL_USERGROUP_MEMBERS:M*)
-${INSTALL_USERGROUP_FILE}:
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
-.else
 ${INSTALL_USERGROUP_FILE}:						\
 		../../mk/install/usergroup				\
 		${INSTALL_USERGROUPFUNCS_FILE}
@@ -186,7 +218,12 @@ ${INSTALL_USERGROUP_FILE}:						\
 	${ECHO} "# end of install-usergroup";				\
 	exec 1>/dev/null;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
-.endif
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	set -- dummy ${INSTALL_USERGROUP_MEMBERS}; shift;		\
+	if ${TEST} $$# -eq 0; then					\
+		${RM} -f ${.TARGET};					\
+		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
+	fi
 
 # SPECIAL_PERMS are lists that look like:
 #		file user group mode
@@ -210,10 +247,6 @@ INSTALL_PERMS_FILE=	${WRKDIR}/.install-perms
 INSTALL_PERMS_MEMBERS=	${SPECIAL_PERMS}
 INSTALL_UNPACK_TMPL+=	${INSTALL_PERMS_FILE}
 
-.if empty(INSTALL_PERMS_MEMBERS:M*)
-${INSTALL_PERMS_FILE}:
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
-.else
 ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -245,7 +278,12 @@ ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 	${ECHO} "# end of install-perms";				\
 	exec 1>/dev/null;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
-.endif
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	set -- dummy ${INSTALL_PERMS_MEMBERS}; shift;			\
+	if ${TEST} $$# -eq 0; then					\
+		${RM} -f ${.TARGET};					\
+		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
+	fi
 
 # CONF_FILES are pairs of example and true config files, used much like
 #	MLINKS in the base system.  At post-install time, if the true config
@@ -292,10 +330,6 @@ INSTALL_FILES_MEMBERS=	${RCD_SCRIPTS} ${CONF_FILES} ${REQD_FILES} \
 	${CONF_FILES_PERMS} ${REQD_FILES_PERMS}
 INSTALL_UNPACK_TMPL+=	${INSTALL_FILES_FILE}
 
-.if empty(INSTALL_FILES_MEMBERS:M*)
-${INSTALL_FILES_FILE}:
-	${_PKG_DEBUG}${_PKG_SILENT}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
-.else
 ${INSTALL_FILES_FILE}: ../../mk/install/files
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -371,7 +405,12 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 	${ECHO} "";							\
 	${ECHO} "# end of install-files";				\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
-.endif
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	set -- dummy ${INSTALL_FILES_MEMBERS}; shift;			\
+	if ${TEST} $$# -eq 0; then					\
+		${RM} -f ${.TARGET};					\
+		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
+	fi
 
 # OWN_DIRS contains a list of directories for this package that should be
 #       created and should attempt to be destroyed by the INSTALL/DEINSTALL
@@ -408,10 +447,6 @@ INSTALL_DIRS_MEMBERS=	${PKG_SYSCONFSUBDIR} ${RCD_SCRIPTS}		\
 	${OWN_DIRS} ${OWN_DIRS_PERMS}
 INSTALL_UNPACK_TMPL+=	${INSTALL_DIRS_FILE}
 
-.if empty(INSTALL_DIRS_MEMBERS:M*)
-${INSTALL_DIRS_FILE}:
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
-.else
 ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -490,7 +525,12 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	${ECHO} "# end of install-dirs";				\
 	exec 1>/dev/null;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
-.endif
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	set -- dummy ${INSTALL_DIRS_MEMBERS}; shift;			\
+	if ${TEST} $$# -eq 0; then					\
+		${RM} -f ${.TARGET};					\
+		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
+	fi
 
 # INFO_FILES contains names of info files that should be registered or
 # 	removed from the info directory indices.  The listed info files
@@ -536,8 +576,11 @@ ${INSTALL_INFO_FILES_FILE}: ../../mk/install/info-files
 	exec 1>/dev/null;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	set -- dummy ${INFO_FILES}; shift;				\
-	${TEST} $$# -gt 0 || ${ECHO} > ${.TARGET}
+	set -- dummy ${INSTALL_INFO_FILES_MEMBERS}; shift;		\
+	if ${TEST} $$# -eq 0; then					\
+		${RM} -f ${.TARGET};					\
+		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
+	fi
 
 # PKG_SHELL contains the pathname of the shell that should be added or
 #	removed from the shell database, /etc/shells.  If a pathname
@@ -549,10 +592,6 @@ INSTALL_SHELL_FILE=	${WRKDIR}/.install-shell
 INSTALL_SHELL_MEMBERS=	${PKG_SHELL}
 INSTALL_UNPACK_TMPL+=	${INSTALL_SHELL_FILE}
 
-.if empty(INSTALL_SHELL_MEMBERS:M*)
-${INSTALL_SHELL_FILE}:
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
-.else
 ${INSTALL_SHELL_FILE}: ../../mk/install/shell
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -581,7 +620,12 @@ ${INSTALL_SHELL_FILE}: ../../mk/install/shell
 	${ECHO} "# end of install-shell";				\
 	exec 1>/dev/null;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
-.endif
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	set -- dummy ${INSTALL_SHELLS_MEMBERS}; shift;			\
+	if ${TEST} $$# -eq 0; then					\
+		${RM} -f ${.TARGET};					\
+		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
+	fi
 
 # FONTS_DIRS.<type> are lists of directories in which the font databases
 #	are updated.  If this is non-empty, then the appropriate tools is
@@ -618,10 +662,6 @@ USE_TOOLS+=		mkfontdir:run
 FILES_SUBST+=		MKFONTDIR=${TOOLS_PATH.mkfontdir:Q}
 .endif
 
-.if empty(INSTALL_FONTS_MEMBERS:M*)
-${INSTALL_FONTS_FILE}:
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
-.else
 ${INSTALL_FONTS_FILE}: ../../mk/install/fonts
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -662,7 +702,12 @@ ${INSTALL_FONTS_FILE}: ../../mk/install/fonts
 	${ECHO} "# end of install-fonts";				\
 	exec 1>/dev/null;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
-.endif
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	set -- dummy ${INSTALL_FONTS_MEMBERS}; shift;			\
+	if ${TEST} $$# -eq 0; then					\
+		${RM} -f ${.TARGET};					\
+		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
+	fi
 
 # PKG_CREATE_USERGROUP indicates whether the INSTALL script should
 #	automatically add any needed users/groups to the system using
@@ -757,6 +802,13 @@ INSTALL_SCRIPTS_ENV+=	PKG_REFCOUNT_DBDIR=${PKG_REFCOUNT_DBDIR}
 
 .PHONY: pre-install-script post-install-script
 
+# This section is the only part that hooks into the INSTALL/DEINSTALL
+# script logic in bsd.pkg.mk
+#
+.if !empty(_USE_PKGINSTALL:M[yY][eE][sS])
+DEINSTALL_FILE=		${PKG_DB_TMPDIR}/+DEINSTALL
+INSTALL_FILE=		${PKG_DB_TMPDIR}/+INSTALL
+
 pre-install-script: generate-install-scripts
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${PKG_DB_TMPDIR} &&		\
 		${SETENV} ${INSTALL_SCRIPTS_ENV}			\
@@ -766,6 +818,7 @@ post-install-script:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${PKG_DB_TMPDIR} &&		\
 		${SETENV} ${INSTALL_SCRIPTS_ENV}			\
 		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
+.endif
 
 .PHONY: generate-install-scripts
 post-build: generate-install-scripts
@@ -835,5 +888,3 @@ install-rcd-${_script_}: ${RCD_SCRIPT_WRK.${_script_}}
 .    endif
 .  endif
 .endfor
-
-.endif	# BSD_PKG_INSTALL_MK
