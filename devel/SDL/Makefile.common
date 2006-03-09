@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2006/02/07 18:16:18 wiz Exp $
+# $NetBSD: Makefile.common,v 1.27 2006/03/09 20:00:02 jlam Exp $
 
 DISTNAME=	SDL-1.2.9
 CATEGORIES=	devel games
@@ -53,10 +53,9 @@ BUILDLINK_PASSTHRU_DIRS+=	${dir}
 .endif
 
 .include "../../mk/ossaudio.buildlink3.mk"
-.  if defined(HAVE_OSS) && ${HAVE_OSS} == "YES"
+
 AM_CFLAGS=		-D_PATH_DEV_DSP="\"${DEVOSSAUDIO}\""
 MAKE_ENV+=		AM_CFLAGS=${AM_CFLAGS:Q}
-.endif
 
 # Irix comes with GL, which works fine for SDL
 .if ${OPSYS} != "IRIX"
