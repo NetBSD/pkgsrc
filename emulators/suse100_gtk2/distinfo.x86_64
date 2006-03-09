@@ -1,0 +1,20 @@
+$NetBSD: distinfo.x86_64,v 1.1.1.1 2006/03/09 20:38:51 tonio Exp $
+
+SHA1 (suse100/x86_64/atk-1.10.3-2.x86_64.rpm) = 97257906dedffa12a03f5986a39ed18091c15ea1
+RMD160 (suse100/x86_64/atk-1.10.3-2.x86_64.rpm) = ad67d77c67c246e26674a52ec4be4fa5440f506b
+Size (suse100/x86_64/atk-1.10.3-2.x86_64.rpm) = 188249 bytes
+SHA1 (suse100/x86_64/glib2-2.8.1-3.x86_64.rpm) = 15ea9709b5b18f2495b13de75fad1527e70c8850
+RMD160 (suse100/x86_64/glib2-2.8.1-3.x86_64.rpm) = be9b2b1ffa62e4c12290f509c9ad1621ae8bd9d1
+Size (suse100/x86_64/glib2-2.8.1-3.x86_64.rpm) = 609991 bytes
+SHA1 (suse100/x86_64/gtk2-2.8.3-4.x86_64.rpm) = 6d280b963567bb5a525d280f88756c1dfa7fea20
+RMD160 (suse100/x86_64/gtk2-2.8.3-4.x86_64.rpm) = 7a579a9c7a3b24f3dab328fe4507e772cf34a4dd
+Size (suse100/x86_64/gtk2-2.8.3-4.x86_64.rpm) = 3829330 bytes
+SHA1 (suse100/x86_64/cairo-1.0.0-7.x86_64.rpm) = c856e0dbe255848b13ccef2894c552e131577297
+RMD160 (suse100/x86_64/cairo-1.0.0-7.x86_64.rpm) = ad119d00af603ee147f8eb3042aae312a19badca
+Size (suse100/x86_64/cairo-1.0.0-7.x86_64.rpm) = 262289 bytes
+SHA1 (suse100/x86_64/glitz-0.4.4-4.x86_64.rpm) = 1a71fb5da673006546fcf492820c2926e7501dd5
+RMD160 (suse100/x86_64/glitz-0.4.4-4.x86_64.rpm) = 837da9e0d8f0b42d49fafe1db3299e8ac28f1df0
+Size (suse100/x86_64/glitz-0.4.4-4.x86_64.rpm) = 80965 bytes
+SHA1 (suse100/x86_64/pango-1.10.0-3.x86_64.rpm) = 21597f12a195cfb1d018cc3c82db9a786036f979
+RMD160 (suse100/x86_64/pango-1.10.0-3.x86_64.rpm) = a2b5728987ba8d8b181b1e8be8585be1566f43ab
+Size (suse100/x86_64/pango-1.10.0-3.x86_64.rpm) = 294276 bytes
