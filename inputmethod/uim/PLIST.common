@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST.common,v 1.4 2005/12/31 00:04:28 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.5 2006/03/09 18:04:32 wiz Exp $
 bin/uim-fep
 bin/uim-fep-tick
-bin/uim-input-pad-ja
 bin/uim-module-manager
 bin/uim-sh
 bin/uim-xim
@@ -109,6 +108,7 @@ share/uim/viqr.scm
 share/uim/zaurus.scm
 @dirrm share/uim/pixmaps
 @dirrm share/uim
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm share/doc/uim/uim-fep
 @dirrm share/doc/uim
 @dirrm lib/uim/plugin
