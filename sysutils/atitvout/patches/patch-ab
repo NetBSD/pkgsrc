@@ -1,10 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2004/12/18 13:18:13 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2006/03/09 11:28:00 ghen Exp $
 
---- test.sh.orig	2004-12-18 14:12:20.000000000 +0100
-+++ test.sh	2004-12-18 14:12:44.000000000 +0100
-@@ -1,8 +1,8 @@
--#!/bin/bash
-+#!/bin/sh
+--- test.sh.orig	2006-03-09 12:24:22.000000000 +0100
++++ test.sh
+@@ -2,7 +2,7 @@
  
  testit () {
  	echo "TEST: Running 'atitvout $FLAG $1' ..."
