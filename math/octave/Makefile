@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2006/03/09 15:40:20 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2006/03/09 15:43:46 jlam Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 PKGREVISION=	1
@@ -77,7 +77,6 @@ post-install:
 		${TEST} ! -f "$$f" ||					\
 			${INSTALL_DATA} "$$f" ${PREFIX}/${INFO_DIR};	\
 	done
-.endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/octave/${OCTAVE_VER}/doc
 .for f in ${OCTAVE_DOC}
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${PREFIX}/share/octave/${OCTAVE_VER}/doc
