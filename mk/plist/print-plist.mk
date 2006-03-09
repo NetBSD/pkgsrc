@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.3 2006/01/14 00:58:37 seb Exp $
+# $NetBSD: print-plist.mk,v 1.4 2006/03/09 16:39:39 jlam Exp $
 
 ###
 ### Automatic PLIST generation
@@ -36,7 +36,7 @@ _PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^info\/dir$$/)
 .if defined(INFO_DIR) && empty(INFO_DIR:Minfo)
 _PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^${INFO_DIR:S|/|\\/|g}\/dir$$/)
 .endif
-.if !empty(INFO_FILES)
+.if defined(INFO_FILES) && !empty(INFO_FILES)
 .  for _f_ in ${INFO_FILES}
 _PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^${INFO_DIR:S|/|\\/|g}\/${_f_:S|+|\+|g}(-[0-9]+)?(\.gz)?$$/)
 .  endfor
