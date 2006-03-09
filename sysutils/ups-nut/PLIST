@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.18 2005/05/21 01:44:57 lukem Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/03/09 18:32:33 abs Exp $
 bin/upsc
 bin/upscmd
 bin/upslog
 bin/upsrw
 libexec/nut/apcsmart
+libexec/nut/bcmxcp
 libexec/nut/belkin
 libexec/nut/belkinunv
 libexec/nut/bestfcom
@@ -16,6 +17,7 @@ libexec/nut/esupssmart
 libexec/nut/etapro
 libexec/nut/everups
 libexec/nut/fentonups
+libexec/nut/gamatronic
 libexec/nut/genericups
 libexec/nut/ippon
 libexec/nut/isbmex
@@ -30,8 +32,10 @@ libexec/nut/powercom
 libexec/nut/powermust
 libexec/nut/safenet
 libexec/nut/sms
+libexec/nut/solis
 libexec/nut/tripplite
 libexec/nut/tripplitesu
+libexec/nut/upscode2
 libexec/nut/upsdrvctl
 libexec/nut/victronups
 man/man5/ups.conf.5
@@ -40,6 +44,7 @@ man/man5/upsd.users.5
 man/man5/upsmon.conf.5
 man/man5/upssched.conf.5
 man/man8/apcsmart.8
+man/man8/bcmxcp.8
 man/man8/belkin.8
 man/man8/belkinunv.8
 man/man8/bestfcom.8
@@ -50,6 +55,7 @@ man/man8/cyberpower.8
 man/man8/etapro.8
 man/man8/everups.8
 man/man8/fentonups.8
+man/man8/gamatronic.8
 man/man8/genericups.8
 man/man8/ippon.8
 man/man8/isbmex.8
@@ -65,11 +71,12 @@ man/man8/powercom.8
 man/man8/powermust.8
 man/man8/safenet.8
 man/man8/sms.8
-man/man8/snmp-ups.8
+man/man8/solis.8
 man/man8/tripplite.8
 man/man8/tripplitesu.8
 man/man8/upsc.8
 man/man8/upscmd.8
+man/man8/upscode2.8
 man/man8/upsd.8
 man/man8/upsdrvctl.8
 man/man8/upslog.8
@@ -106,6 +113,7 @@ share/doc/nut/data-room.txt
 share/doc/nut/design.txt
 share/doc/nut/developers.txt
 share/doc/nut/driver.list
+share/doc/nut/hid-subdrivers.txt
 share/doc/nut/ideas.txt
 share/doc/nut/new-drivers.txt
 share/doc/nut/new-names.txt
