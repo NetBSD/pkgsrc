@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:10:26 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/09 21:04:45 jlam Exp $
 #
 
 DISTNAME=		kiax-0.8.4
@@ -31,5 +31,5 @@ SUBST_SED.path=		-e 's:/usr/local:${PREFIX}:g'
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
