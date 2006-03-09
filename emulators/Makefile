@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2006/03/06 18:23:46 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2006/03/09 20:50:08 tonio Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -79,6 +79,17 @@ SUBDIR+=	sms_sdl
 SUBDIR+=	snes9x
 SUBDIR+=	spim
 SUBDIR+=	stella
+SUBDIR+=	suse100_base
+SUBDIR+=	suse100_compat
+SUBDIR+=	suse100_expat
+SUBDIR+=	suse100_fontconfig
+SUBDIR+=	suse100_freetype2
+SUBDIR+=	suse100_gtk2
+SUBDIR+=	suse100_libjpeg
+SUBDIR+=	suse100_libpng
+SUBDIR+=	suse100_libtiff
+SUBDIR+=	suse100_linux
+SUBDIR+=	suse100_x11
 SUBDIR+=	suse91_aspell
 SUBDIR+=	suse91_base
 SUBDIR+=	suse91_compat
