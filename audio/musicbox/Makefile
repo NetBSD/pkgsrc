@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/02/05 23:08:12 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2006/03/09 21:04:41 jlam Exp $
 
 DISTNAME=	musicbox-1.01p2
 PKGREVISION=	1
@@ -23,5 +23,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/musicbox/README
 
 .include "../../x11/qt1/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

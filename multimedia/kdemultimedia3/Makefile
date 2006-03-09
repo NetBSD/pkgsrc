@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/03/07 06:30:56 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2006/03/09 21:04:45 jlam Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
 PKGREVISION=	3
@@ -58,7 +58,7 @@ UNLIMIT_RESOURCES+=	datasize
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "pth"
 .include "../../devel/pthread-sem/buildlink3.mk"
