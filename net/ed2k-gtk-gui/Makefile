@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/02/05 23:10:23 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/03/09 14:06:19 ghen Exp $
 
 DISTNAME=		ed2k-gtk-gui-0.6.3
 PKGREVISION=		3
@@ -14,12 +14,6 @@ USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		CONFIGURE_LDFLAGS=${LDFLAGS:M*:Q}
-
-SUBST_CLASSES+=		shell
-SUBST_MESSAGE.shell=	"Fixing hardcoded shell."
-SUBST_STAGE.shell=	post-patch
-SUBST_FILES.shell=	ed2k_gui/misc.c
-SUBST_SED.shell=	-e 's,/bin/bash,/bin/sh,g'
 
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
