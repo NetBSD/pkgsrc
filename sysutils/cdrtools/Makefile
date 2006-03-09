@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/04 21:30:40 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/09 21:04:45 jlam Exp $
 
 DISTNAME=	cdrtools-2.01
 PKGREVISION=	2
@@ -91,5 +91,5 @@ do-install:
 		${INSTALL_PROGRAM} OBJ/*/readcd ${PREFIX}/bin;		\
 		${INSTALL_MAN} readcd.1 ${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

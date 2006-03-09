@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:30:16 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/09 21:04:45 jlam Exp $
 
 DISTNAME=	xanim2920
 PKGNAME=	xanim-2.92.0
@@ -48,5 +48,5 @@ post-extract:
 	done
 .endif
 
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

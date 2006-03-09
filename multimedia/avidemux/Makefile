@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/02/12 14:12:54 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2006/03/09 21:04:44 jlam Exp $
 #
 
 DISTNAME=	avidemux-2.1.1
@@ -58,6 +58,6 @@ post-configure:
 .include "../../multimedia/x264-devel/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
