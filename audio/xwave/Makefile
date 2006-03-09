@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/03/04 21:29:01 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/03/09 21:04:42 jlam Exp $
 #
 
 DISTNAME=		xwave2
@@ -25,6 +25,6 @@ do-install:
 			${PREFIX}/share/doc/xwave2
 
 .include "../../graphics/xpm/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

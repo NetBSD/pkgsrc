@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/03/08 10:12:14 ghen Exp $
+# $NetBSD: Makefile,v 1.30 2006/03/09 21:04:45 jlam Exp $
 
 DISTNAME=	mjpegtools-1.8.0
 PKGREVISION=	3
@@ -37,7 +37,7 @@ INFO_FILES=		mjpeg-howto.info
 # This only disables the "glav" program.  If you really need it, please add an
 # external package for it.
 #.include "../../x11/gtk/buildlink3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

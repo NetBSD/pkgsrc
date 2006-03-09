@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/03/06 00:18:14 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2006/03/09 21:04:39 jlam Exp $
 
 DISTNAME=		amarok-1.3.8
 PKGREVISION=		3
@@ -32,7 +32,7 @@ BUILDLINK_DEPENDS.taglib+=	taglib>=1.4
 .include "../../audio/tunepimp/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../multimedia/gst-plugins0.8/buildlink3.mk"
 .include "../../multimedia/gstreamer0.8/buildlink3.mk"
 .include "../../multimedia/kdemultimedia3/buildlink3.mk"

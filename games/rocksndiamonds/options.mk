@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/08/16 15:35:51 adam Exp $
+# $NetBSD: options.mk,v 1.2 2006/03/09 21:04:43 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rocksndiamonds
 PKG_SUPPORTED_OPTIONS=	sdl x11
@@ -23,6 +23,6 @@ BUILD_TARGET=	solaris
 .else
 BUILD_TARGET=	x11
 .endif
-.include "../../mk/ossaudio.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .endif
