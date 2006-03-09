@@ -1,0 +1,110 @@
+#!@SH@
+#
+# $NetBSD: info-files,v 1.1 2006/03/09 00:20:27 jlam Exp $
+#
+# +INFO_FILES - info file registration management script
+#
+# Usage: ./+INFO_FILES ADD|REMOVE [metadatadir]
+#
+# This script supports two actions, ADD and REMOVE, that will add or
+# remove entries for info files from the package associated with
+# <metadatadir> from the info index files (the "dir" file in the
+# same directory as the info files).
+#
+# Lines starting with "# INFO: " are data read by this script that
+# name the info files that will be added or removed from the "dir"
+# index files.
+#
+#	# INFO: /usr/pkg/info/bar.info
+#	# INFO: /usr/pkg/info/baz.info
+#
+# For each INFO entry, if the path is relative, that it is taken to be
+# relative to ${PKG_PREFIX}.
+#
+
+ECHO="@ECHO@"
+GREP="@GREP@"
+INSTALL_INFO="@INSTALL_INFO@"
+PWD_CMD="@PWD_CMD@"
+RM="@RM@"
+SED="@SED@"
+SORT="@SORT@"
+TEST="@TEST@"
+
+SELF=$0
+ACTION=$1
+
+PKG_METADATA_DIR="${2-`${PWD_CMD}`}"
+: ${PKGNAME=${PKG_METADATA_DIR##*/}}
+: ${PKG_PREFIX=@PREFIX@}
+
+exitcode=0
+case $ACTION in
+ADD)
+	${SED} -n "/^\# INFO: /{s/^\# INFO: //;p;}" ${SELF} | ${SORT} -u |
+	{ while read file; do
+		case $file in
+		"")	continue ;;
+		[!/]*)	file="${PKG_PREFIX}/$file" ;;
+		esac
+
+		case "$printed_header" in
+		yes)	;;
+		*)	printed_header=yes
+			${ECHO} "==========================================================================="
+			${ECHO} "Registering info files for ${PKGNAME}:"
+			${ECHO} ""
+			;;
+		esac
+
+		infodir="${file%/*}"
+		infoindex="$infodir/dir"
+		nentries="`${GREP} -c '^\*' $infoindex 2>/dev/null`"
+		case "$nentries" in
+		[0-9]*)	${TEST} $nentries -gt 0 || ${RM} $infoindex ;;
+		esac
+		${ECHO} "	$file"
+		${INSTALL_INFO} --info-dir="$infodir" --delete $file >/dev/null 2>&1
+		${INSTALL_INFO} --info-dir="$infodir" $file >/dev/null 2>&1
+	done
+	case "$printed_header" in
+	yes)	${ECHO} ""
+		${ECHO} "==========================================================================="
+		;;
+	esac; }
+	;;
+
+REMOVE)
+	${SED} -n "/^\# INFO: /{s/^\# INFO: //;p;}" ${SELF} | ${SORT} -u |
+	{ while read file; do
+		case $file in
+		"")	continue ;;
+		[!/]*)	file="${PKG_PREFIX}/$file" ;;
+		esac
+
+		case "$printed_header" in
+		yes)	;;
+		*)	printed_header=yes
+			${ECHO} "==========================================================================="
+			${ECHO} "Unregistering info files for ${PKGNAME}:"
+			${ECHO} ""
+			;;
+		esac
+
+		infodir="${file%/*}"
+		infoindex="$infodir/dir"
+		${ECHO} "	$file"
+		${INSTALL_INFO} --info-dir="$infodir" --delete $file >/dev/null 2>&1
+		nentries="`${GREP} -c '^\*' $infoindex 2>/dev/null`"
+		case "$nentries" in
+		[0-9]*)	${TEST} $nentries -gt 1 || ${RM} $infoindex ;;
+		esac
+	done
+	case "$printed_header" in
+	yes)	${ECHO} ""
+		${ECHO} "==========================================================================="
+		;;
+	esac; }
+	;;
+esac
+exit $exitcode

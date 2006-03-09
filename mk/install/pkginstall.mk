@@ -1,4 +1,4 @@
-# $NetBSD: pkginstall.mk,v 1.3 2006/01/11 04:42:12 jlam Exp $
+# $NetBSD: pkginstall.mk,v 1.4 2006/03/09 00:20:27 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and determines whether
 # or not the bsd.pkginstall.mk implementation file should be included.
@@ -26,6 +26,7 @@ _PKGINSTALL_VARS+=	SPECIAL_PERMS
 _PKGINSTALL_VARS+=	CONF_FILES CONF_FILES_PERMS			\
 			REQD_FILES REQD_FILES_PERMS			\
 			RCD_SCRIPTS
+_PKGINSTALL_VARS+=	INFO_FILES
 _PKGINSTALL_VARS+=	MAKE_DIRS MAKE_DIRS_PERMS			\
 			REQD_DIRS REQD_DIRS_PERMS			\
 			OWN_DIRS OWN_DIRS_PERMS
