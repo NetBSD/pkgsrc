@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13235 2006/03/09 20:31:36 jmmv Exp $
+$NetBSD: CHANGES,v 1.13236 2006/03/09 20:47:24 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1405,3 +1405,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed audio/oss [jlam 2006-03-09]
 	Updated net/netdisco to 0.94nb4 [bouyer 2006-03-09]
 	Updated devel/monotone to 0.25.2 [jmmv 2006-03-09]
+	Updated devel/autogen to 5.8.3 [kristerw 2006-03-09]

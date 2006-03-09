@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4719 2006/03/09 20:25:50 jlam Exp $
+$NetBSD: TODO,v 1.4720 2006/03/09 20:47:24 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -353,7 +353,6 @@ Suggested package updates
 	o aspell-norwegian-2.0.6
 	o ast-ksh-20040229
 	o astyle-1.15.3
-	o autogen-5.8.3
 	o avcheck-0.91
 	o avidemux-2.1.2
 	o avl-2.0.1
