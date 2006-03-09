@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.45 2006/02/12 14:44:59 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.46 2006/03/09 16:34:08 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -1108,11 +1108,16 @@
 
 <programlisting>
     REPLACE_INTERPRETER+=   tcl
-    _REPLACE.tcl.old=       .*/bin/tclsh
-    _REPLACE.tcl.new=       ${PREFIX}/bin/tclsh
-    _REPLACE_FILES.tcl=     # list of tcl scripts which need to be fixed,
+    REPLACE.tcl.old=        .*/bin/tclsh
+    REPLACE.tcl.new=        ${PREFIX}/bin/tclsh
+    REPLACE_FILES.tcl=      # list of tcl scripts which need to be fixed,
                             # relative to ${WRKSRC}, just as in REPLACE_PERL
 </programlisting>
+
+	<note><para>Before March 2006, these variables were called
+	<varname>_REPLACE.*</varname> and
+	<varname>_REPLACE_FILES.*</varname>.</para></note>
+
     </sect2>
 
 
