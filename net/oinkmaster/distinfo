@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/04/27 19:50:48 adrianp Exp $
+$NetBSD: distinfo,v 1.5 2006/03/09 14:06:03 adrianp Exp $
 
-SHA1 (oinkmaster-1.2.tar.gz) = d4628e9c42e635aaaf90f8c9b2dfdcd5db618ed4
-RMD160 (oinkmaster-1.2.tar.gz) = 74dcd25477b24af4e64100cc51b70416e8f5a1ec
-Size (oinkmaster-1.2.tar.gz) = 75512 bytes
+SHA1 (oinkmaster-2.0.tar.gz) = 01a0d774195670a11af5ff3e302773d962b34224
+RMD160 (oinkmaster-2.0.tar.gz) = a3292cfc2e6b175008a7172be5809ca6e2fc85b7
+Size (oinkmaster-2.0.tar.gz) = 80111 bytes
