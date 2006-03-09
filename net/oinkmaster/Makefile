@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2006/02/05 23:10:28 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/09 14:06:03 adrianp Exp $
 
-DISTNAME=	oinkmaster-1.2
-PKGREVISION=	2
+DISTNAME=	oinkmaster-2.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oinkmaster/}
 
@@ -30,7 +29,7 @@ SUBST_STAGE.pub=	post-patch
 SUBST_FILES.pub=	oinkmaster.pl oinkmaster.conf oinkmaster.1
 SUBST_SED.pub=		-e "s|/usr/local/etc|${PKG_SYSCONFDIR}|g" \
 			-e "s|/usr/local|${PREFIX}|g"
-SUBST_MESSAGE.pub=	"Fixing harcoded paths."
+SUBST_MESSAGE.pub=	Fixing harcoded paths.
 
 INSTALLATION_DIRS=	bin share/snort/rules
 
