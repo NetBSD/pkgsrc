@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.41 2006/01/12 19:37:44 joerg Exp $
+# $NetBSD: Makefile.common,v 1.42 2006/03/09 20:31:58 jlam Exp $
 #
 # This Makefile.common is included by:
 #
@@ -59,12 +59,7 @@ CONFIGURE_ARGS+=        --without-nas
 CONFIGURE_ARGS+=        --without-gtk
 
 .if ${OPSYS} == "NetBSD"
-.if !empty(PKG_OPTIONS:Moss)
-.    include "../../audio/oss/buildlink3.mk"
-XLOCK_AUDIOPLAY?=	${BUILDLINK_PREFIX.oss}/bin/ossplay
-.  else
 XLOCK_AUDIOPLAY?=	/usr/bin/audioplay
-.  endif
 CONFIGURE_ARGS+=	--enable-def-play=${XLOCK_AUDIOPLAY:Q}
 .endif
 
