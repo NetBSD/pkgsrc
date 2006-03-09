@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1802 2006/03/09 00:20:27 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1803 2006/03/09 15:58:10 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -1506,12 +1506,22 @@ SUBST_SED.pkglocaledir=		\
 
 .if defined(REPLACE_PERL)
 REPLACE_INTERPRETER+=	perl
-_REPLACE.perl.old=	.*/bin/perl
-_REPLACE.perl.new=	${PERL5}
-_REPLACE_FILES.perl=	${REPLACE_PERL}
+REPLACE.perl.old=	.*/bin/perl
+REPLACE.perl.new=	${PERL5}
+REPLACE_FILES.perl=	${REPLACE_PERL}
 .endif
 
 .if defined(REPLACE_INTERPRETER)
+
+# After 2006Q2, all instances of _REPLACE.* and _REPLACE_FILES.* should
+# have been replaced with REPLACE.* and REPLACE_FILES.*. This code is
+# then no longer needed.
+.  for _lang_ in ${REPLACE_INTERPRETER}
+REPLACE.${_lang_}.old?=		${_REPLACE.${_lang_}.old}
+REPLACE.${_lang_}.new?=		${_REPLACE.${_lang_}.new}
+REPLACE_FILES.${_lang_}?=	${_REPLACE_FILES.${_lang_}}
+.  endfor
+
 _CONFIGURE_PREREQ+=	replace-interpreter
 .PHONY: replace-interpreter
 replace-interpreter:
