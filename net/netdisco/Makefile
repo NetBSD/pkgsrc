@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:27 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/09 20:25:28 bouyer Exp $
 #
 
 DISTNAME=		netdisco-0.94_with_mibs
 PKGNAME=		netdisco-0.94
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=netdisco/}
 
@@ -18,6 +18,7 @@ DEPENDS+=		p5-DBD-postgresql-*:../../databases/p5-DBD-postgresql
 DEPENDS+=		p5-DB_File-*:../../databases/p5-DB_File
 DEPENDS+=		p5-MasonX-Request-WithApacheSession-*:../../www/p5-MasonX-Request-WithApacheSession
 DEPENDS+=		p5-HTML-Parser-*:../../www/p5-HTML-Parser
+DEPENDS+=		p5-Graph-*:../../devel/p5-Graph
 DEPENDS+=		p5-GraphViz-*:../../graphics/p5-GraphViz
 DEPENDS+=		p5-Compress-Zlib-*:../../devel/p5-Compress-Zlib
 
@@ -42,7 +43,7 @@ REPLACE_PERL+=  mibs/rm_cisco_dups
 REPLACE_PERL+=  mibs/chk_mibs
 REPLACE_PERL+=  mibs/snmpwalkmib
 
-SUBST_CLASSES+=			installdir path var
+SUBST_CLASSES+=			installdir path var apachevers
 SUBST_STAGE.installdir=		pre-configure
 SUBST_FILES.installdir=		sql/pg_run sql/pg_init sql/pg_back
 SUBST_FILES.installdir+=	bin/netdisco_daemon
@@ -98,6 +99,18 @@ OWN_DIRS_PERMS+=        ${VARBASE}/netdisco ${NETDISCOUSER} ${NETDISCOGROUP} 077
 RCD_SCRIPTS=		netdisco
 
 .include "../../mk/apache.mk"
+
+.if ${PKG_APACHE} == "apache13"      
+SUBST_STAGE.apachevers=	pre-configure
+SUBST_FILES.var=	netdisco_apache.conf
+SUBST_SED.var=		-e "s|@APACHE2@|\#uncomment for apache2|g"      
+SUBST_MESSAGE.var=	"Fixing config files for apache-1.3"
+.elif ${PKG_APACHE} == "apache2"     
+SUBST_STAGE.apachevers=	pre-configure
+SUBST_FILES.var=	netdisco_apache.conf
+SUBST_SED.var=		-e "s|@APACHE2@||g"
+SUBST_MESSAGE.var=	"Fixing config files for apache-2"
+.endif
 
 do-build:
 	${RM} -f ${WRKSRC}/html/doc/ChangeLog.txt
