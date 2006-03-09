@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13232 2006/03/09 19:20:00 minskim Exp $
+$NetBSD: CHANGES,v 1.13233 2006/03/09 20:25:49 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1402,3 +1402,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/ups-nut to 2.0.3 [abs 2006-03-09]
 	Updated games/pysol to 4.81nb3 [wiz 2006-03-09]
 	Updated misc/visual-regexp to 3.0nb2 [minskim 2006-03-09]
+	Removed audio/oss [jlam 2006-03-09]

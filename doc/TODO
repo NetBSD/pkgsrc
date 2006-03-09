@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4718 2006/03/09 18:34:09 abs Exp $
+$NetBSD: TODO,v 1.4719 2006/03/09 20:25:50 jlam Exp $
 
 Suggested new packages
 ======================
@@ -780,7 +780,6 @@ Suggested package updates
 	o openttd-0.4.5
 	o oroborus-2.0.15
 	o osh-050219
-	o oss-3.99.4a
 	o otpCalc-0.97
 	o p11-2.10c
 	o p4-2005.1 [schmonz]
