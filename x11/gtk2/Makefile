@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.109 2006/02/25 13:33:43 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2006/03/09 17:17:52 wiz Exp $
 #
 
-DISTNAME=		gtk+-2.8.13
+DISTNAME=		gtk+-2.8.14
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.8/ \
@@ -17,7 +17,7 @@ CONFLICTS=		gtk2-engines<2.6.0
 
 BUILD_USES_MSGFMT=	yes
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.8.5
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.10.1
 BUILDLINK_DEPENDS.pango+=	pango>=1.10.0
 BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
 
