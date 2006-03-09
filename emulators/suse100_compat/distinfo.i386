@@ -1,0 +1,8 @@
+$NetBSD: distinfo.i386,v 1.1.1.1 2006/03/09 20:34:38 tonio Exp $
+
+SHA1 (suse100/i586/compat-2004.11.13-4.i586.rpm) = 20a4574823be5b2a8a82a4b0988702baa1b618a5
+RMD160 (suse100/i586/compat-2004.11.13-4.i586.rpm) = 681d3a00970e232f7f37201dd1a8d842c3738043
+Size (suse100/i586/compat-2004.11.13-4.i586.rpm) = 1363979 bytes
+SHA1 (suse100/i586/compat-libstdc++-5.0.7-6.i586.rpm) = 5bf42bac9c07f49d92861034eb06c05d31968116
+RMD160 (suse100/i586/compat-libstdc++-5.0.7-6.i586.rpm) = f4935251c3ef4aa67fd3d656248ab0185bc57636
+Size (suse100/i586/compat-libstdc++-5.0.7-6.i586.rpm) = 233040 bytes
