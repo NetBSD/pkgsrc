@@ -1,13 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/06/27 12:01:12 agc Exp $
+$NetBSD: patch-aa,v 1.2 2006/03/09 14:50:31 ghen Exp $
 
 --- tob	2003/06/27 11:08:36	1.1
 +++ tob	2003/06/27 11:13:55
-@@ -1,4 +1,4 @@
--#!/bin/bash
-+#! /bin/sh
- #
- # tob --- Tape Oriented Backup
- #
 @@ -13,8 +13,8 @@
  #
  
