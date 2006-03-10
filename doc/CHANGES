@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13246 2006/03/10 15:11:01 ghen Exp $
+$NetBSD: CHANGES,v 1.13247 2006/03/10 20:49:00 veego Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1426,3 +1426,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-Devel-Symdump to 2.06 [hiramatsu 2006-03-10]
 	Updated emulators/peace to 0.0.20060310 [kent 2006-03-10]
 	Updated security/gnupg to 1.4.2.2 [ghen 2006-03-10]
+	Updated net/bittornado to 0.3.15 [veego 2006-03-10]
+	Updated net/bittornado-gui to 0.3.15 [veego 2006-03-10]
