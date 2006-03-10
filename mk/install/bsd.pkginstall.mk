@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.36 2006/03/09 23:31:51 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.37 2006/03/10 22:23:02 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -806,8 +806,12 @@ INSTALL_SCRIPTS_ENV+=	PKG_REFCOUNT_DBDIR=${PKG_REFCOUNT_DBDIR}
 # script logic in bsd.pkg.mk
 #
 .if !empty(_USE_PKGINSTALL:M[yY][eE][sS])
+.  if !empty(DEINSTALL_SRC)
 DEINSTALL_FILE=		${PKG_DB_TMPDIR}/+DEINSTALL
+.  endif
+.  if !empty(INSTALL_SRC)
 INSTALL_FILE=		${PKG_DB_TMPDIR}/+INSTALL
+.  endif
 
 pre-install-script: generate-install-scripts
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${PKG_DB_TMPDIR} &&		\
