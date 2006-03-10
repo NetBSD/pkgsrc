@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13248 2006/03/10 22:46:18 wiz Exp $
+$NetBSD: CHANGES,v 1.13249 2006/03/10 22:52:30 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1431,3 +1431,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/acroread7 to 7.0.1nb2 [wiz 2006-03-10]
 	Updated www/firefox-bin to 1.5.0.1nb2 [wiz 2006-03-10]
 	Updated www/mozilla-bin to 1.7.12nb2 [wiz 2006-03-10]
+	Updated security/prelude-lml to 0.9.4 [shannonjr 2006-03-10]
+	Updated security/libprelude to 0.9.7 [shannonjr 2006-03-10]
+	Updated security/libpreludedb to 0.9.6 [shannonjr 2006-03-10]
