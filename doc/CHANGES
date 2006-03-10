@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13247 2006/03/10 20:49:00 veego Exp $
+$NetBSD: CHANGES,v 1.13248 2006/03/10 22:46:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1428,3 +1428,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/gnupg to 1.4.2.2 [ghen 2006-03-10]
 	Updated net/bittornado to 0.3.15 [veego 2006-03-10]
 	Updated net/bittornado-gui to 0.3.15 [veego 2006-03-10]
+	Updated print/acroread7 to 7.0.1nb2 [wiz 2006-03-10]
+	Updated www/firefox-bin to 1.5.0.1nb2 [wiz 2006-03-10]
+	Updated www/mozilla-bin to 1.7.12nb2 [wiz 2006-03-10]
