@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2006/02/26 17:26:32 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2006/03/10 13:57:13 kent Exp $
 #
-PEACE_VERSION=	0.0.20060210
+PEACE_VERSION=	0.0.20060310
 DISTNAME=	peace-${PEACE_VERSION}
-SITES_peace-0.0.20060210.tar.gz=http://chiharu.hauN.org/peace/dist/
-PKGREVISION=	2
+SITES_peace-0.0.20060310.tar.gz=http://chiharu.hauN.org/peace/dist/
 CATEGORIES=	emulators
 
 MAINTAINER=	kent@NetBSD.org
@@ -21,7 +20,8 @@ DEPENDS+=	icu>=2.4nb1:../../textproc/icu
 BUILD_DEPENDS+=	cross-i386-netbsdpe>=3.3:../../cross/i386-netbsdpe
 BUILD_DEPENDS+=	w32api>=2.5:../../devel/w32api
 
-LDFLAGS+=	-L${WRKSRC}/lib
+# Don't use "+=" here to avoid unexpected link with ELF libraries
+LDFLAGS=	-L${WRKSRC}/lib
 PECOFFDIR=	${PREFIX}/emul/pecoff
 MAKE_FLAGS+=	PECOFFDIR=${PECOFFDIR:Q} \
 		LOCALBASE=${LOCALBASE:Q} \
