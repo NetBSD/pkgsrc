@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/09 20:25:28 bouyer Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/10 21:16:30 rillig Exp $
 #
 
 DISTNAME=		netdisco-0.94_with_mibs
@@ -120,7 +120,7 @@ do-build:
 		${RM} -f ${WRKSRC}/doc/$$i ;\
 		${MV} ${WRKSRC}/$$i ${WRKSRC}/doc/ ;\
 	done
-	cd ${WRKSRC};
+	cd ${WRKSRC} && \
 	${FIND} . \( -name '*.orig' -o -name '*.bak' \) -exec ${RM} -f {} \;
 
 do-install:
