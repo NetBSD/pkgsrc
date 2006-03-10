@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13242 2006/03/10 08:34:50 martti Exp $
+$NetBSD: CHANGES,v 1.13243 2006/03/10 09:05:37 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1422,3 +1422,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated time/p5-DateTime-TimeZone to 0.42 [hiramatsu 2006-03-10]
 	Updated sysutils/xfce4-xkb-plugin to 0.3.3 [martti 2006-03-10]
 	Updated mail/postfix-current to 2.3-20060307 [martti 2006-03-10]
+	Updated www/jalbum to 6.3 [martti 2006-03-10]
