@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2005/05/05 19:37:22 kei Exp $
+# $NetBSD: Makefile.common,v 1.10 2006/03/10 16:03:44 jlam Exp $
 #
 
 DISTNAME=	FreeWnn-1.10
@@ -27,8 +27,8 @@ SEDSCRIPT+=	-e 's|$$([CK]*WNNJLIBSRC)/lib\([ck]*wnn\).a|-l\1|'
 SEDSCRIPT+=	-e 's|\(:.*\)$$(WNNJLIB)|\1|'
 .elif defined(WNN_TARGET) && (${WNN_TARGET} == "DICT")
 MAKE_ENV+=	"WNN_TARGET=DICT"
-INSTALL_FILE=	${WRKDIR}/INSTALL
 INSTALL_SRC=	${FILESDIR}/INSTALL
+FILES_SUBST+=	WNNOWNER=${WNNOWNER}
 .else
 MAKE_ENV+=	"WNN_TARGET=LIBRARY"
 .endif
@@ -88,13 +88,6 @@ pre-build:
 	@${MV} ${WRKSRC}/Wnn/Makefile ${WRKSRC}/Wnn/Makefile.orig2
 	@${SED} -e 's|\(MKDIRHIER.*=\).*|\1 ${TRUE}|' \
 		${WRKSRC}/Wnn/Makefile.orig2 > ${WRKSRC}/Wnn/Makefile
-
-post-build:
-	@${SED} -e 's|$${WNNOWNER}|${WNNOWNER}|g'	\
-		${INSTALL_SRC} > ${INSTALL_FILE}
-
-pre-install:
-	@${SETENV} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 .endif
 
 .include "../../mk/bsd.pkg.mk"
