@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/01/06 02:35:32 garbled Exp $
+# $NetBSD: Makefile,v 1.23 2006/03/10 20:08:57 jlam Exp $
 
 DISTNAME=		majordomo-1.94.5
 PKGREVISION=		1
@@ -32,8 +32,8 @@ NO_BIN_ON_CDROM=	${NO_BIN_ON_FTP}
 BUILD_TARGET=		wrapper
 INSTALL_TARGET=		install install-wrapper
 
-INSTALL_FILE=		${WRKDIR}/INSTALL
-DEINSTALL_FILE=		${WRKDIR}/DEINSTALL
+INSTALL_SRC=		${PKGDIR}/INSTALL
+DEINSTALL_SRC=		${PKGDIR}/DEINSTALL
 MAKEFILE=		Makefile.netbsd
 
 MAJORDOMO_TMPDIR?=	/var/tmp
@@ -41,11 +41,16 @@ MAJORDOMO_HOMEDIR?=	/home
 MAJORDOMO_USER?=	majordom
 MAJORDOMO_GROUP?=	majordom
 
-PLIST_SUBST+=		HOME=${MAJORDOMO_HOMEDIR:Q}		\
+PLIST_SUBST+=		HOME=${MAJORDOMO_HOMEDIR:Q}			\
 			MAJORDOMO_USER=${MAJORDOMO_USER:Q}
-MESSAGE_SUBST+=		HOME=${MAJORDOMO_HOMEDIR}		\
-			MAJORDOMO_USER=${MAJORDOMO_USER}	\
+MESSAGE_SUBST+=		HOME=${MAJORDOMO_HOMEDIR}			\
+			MAJORDOMO_USER=${MAJORDOMO_USER}		\
 			MAJORDOMO_GROUP=${MAJORDOMO_GROUP}
+FILES_SUBST+=		HOME=${MAJORDOMO_HOMEDIR:Q}			\
+			MAJORDOMO_USER=${MAJORDOMO_USER}		\
+			MAJORDOMO_GROUP=${MAJORDOMO_GROUP}		\
+			ADDUSER=${ADDUSER} ADDGROUP=${ADDGROUP}		\
+			CHGRP=${CHGRP} ID=${ID} TOUCH=${TOUCH} RM=${RM}
 
 DOCDIR=			${PREFIX}/share/doc/majordomo
 DOCFILES=		Changelog FUTURE INSTALL LICENSE NEWLIST README
@@ -73,26 +78,9 @@ require-uid:
 		${RM} -f "/tmp/grouptestmajordomo1.$$";			\
 	fi
 
-root-require-uid:
-	@${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
+root-require-uid: pre-install-script
 
-do-configure:
-	@${SED} \
-		-e 's|@MAJORDOMO_USER@|${MAJORDOMO_USER}|g' \
-		-e 's|@MAJORDOMO_GROUP@|${MAJORDOMO_GROUP}|g' \
-		-e 's|@HOME@|${MAJORDOMO_HOMEDIR}|g' \
-		-e 's|@ADDUSER@|${ADDUSER}|g' \
-		-e 's|@ADDGROUP@|${ADDGROUP}|g' \
-		-e 's|@CHGRP@|${CHGRP}|g' \
-		-e 's|@ID@|${ID}|g' \
-		-e 's|@TOUCH@|${TOUCH}|g' \
-		-e 's|@RM@|${RM}|g' \
-		< ${PKGDIR}/INSTALL > ${INSTALL_FILE}
-	@${SED} \
-		-e 's|@MAJORDOMO_USER@|${MAJORDOMO_USER}|g' \
-		-e 's|@MAJORDOMO_GROUP@|${MAJORDOMO_GROUP}|g' \
-		-e 's|@HOME@|${MAJORDOMO_HOMEDIR}|g' \
-		< ${PKGDIR}/DEINSTALL > ${DEINSTALL_FILE}
+do-configure: generate-install-scripts
 	@${MAKE} ${.MAKEFLAGS} require-uid
 	@${SED} \
 		-e 's:@PREFIX@:${PREFIX}:g' \
@@ -114,10 +102,6 @@ do-configure:
 		-e 's:@HOME@:${MAJORDOMO_HOMEDIR}:g' \
 		-e 's:@MAJORDOMO_USER@:${MAJORDOMO_USER}:g' \
 		< ${FILESDIR}/aliases.majordomo > ${WRKSRC}/aliases.majordomo
-
-pre-install:
-# for safety's sake, if the user/group got deleted since configuration
-	@${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 post-install:
 	@${LN} -sf archive2.pl ${PREFIX}/libexec/majordomo/archive
