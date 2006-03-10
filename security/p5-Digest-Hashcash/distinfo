@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:10:10 agc Exp $
+$NetBSD: distinfo,v 1.3 2006/03/10 20:29:46 heinz Exp $
 
-SHA1 (Digest-Hashcash-0.02.tar.gz) = d9b0cb7e482367b5a8886ca2c02309c3a2198c9f
-RMD160 (Digest-Hashcash-0.02.tar.gz) = 4a35e943f9ea178c3837e70217344b2fdab7351e
-Size (Digest-Hashcash-0.02.tar.gz) = 14313 bytes
-SHA1 (patch-aa) = 3383ac567fbef65e6f9f3afac775c1b96d02cad7
+SHA1 (Digest-Hashcash-0.03.tar.gz) = ef22445827bf3315f1118c31df013e2cfa6fbb97
+RMD160 (Digest-Hashcash-0.03.tar.gz) = b0a5efe3a56b975c8f6d8f20a08fa7df2f194574
+Size (Digest-Hashcash-0.03.tar.gz) = 14533 bytes
+SHA1 (patch-aa) = a716fca97bc106cbf02e6da04294f9a48d692a31
