@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2006/03/04 21:30:27 jlam Exp $
+# $NetBSD: Makefile,v 1.124 2006/03/10 22:38:30 jlam Exp $
 
 # Notes to package maintainers:
 #
@@ -34,8 +34,6 @@ NO_PKGTOOLS_REQD_CHECK=	yes
 NO_CHECKSUM=		yes
 NO_MTREE=		yes
 PKG_PRESERVE=		yes
-INSTALL_FILE=		${PKG_DB_TMPDIR}/+INSTALL
-INSTALL_SCRIPTS_ENV+=	PKG_PREFIX=${PREFIX:Q}
 
 # These are needed to solve a chicken-and-egg problem where pkgsrc uses
 # newer features of pkg_install, but older NetBSD installations won't
@@ -62,6 +60,12 @@ PKG_ADMIN=		PKG_DBDIR=${PKG_DBDIR:Q} ${PKG_ADMIN_CMD}
 
 PLIST_SUBST+=		PKG_DBDIR=${PKG_DBDIR:Q}
 
+INSTALL_SRC=		${PKGDIR}/INSTALL
+DEINSTALL_SRC=		# empty
+FILES_SUBST+=		PKG_DBDIR=${PKG_DBDIR:Q}			\
+			PKG_TOOLS_BIN=${PKG_TOOLS_BIN:Q}		\
+			MKDIR=${MKDIR:Q}
+
 .include "../../mk/bsd.prefs.mk"
 
 PKG_TOOLS_PREFIX=	${PKG_TOOLS_BIN:C|/[^/]?bin$||}
@@ -77,21 +81,6 @@ PKGMANDIR=		share/man
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
-
-post-build:
-	${SED}	-e "s|@PKG_DBDIR@|${PKG_DBDIR}|g"			\
-		-e "s|@PKG_TOOLS_BIN@|${PKG_TOOLS_BIN}|g"		\
-		-e "s|@MKDIR@|${MKDIR}|g"				\
-		${PKGDIR}/INSTALL > ${INSTALL_FILE}
-	${CHMOD} +x ${INSTALL_FILE}
-
-pre-install-script:
-	cd ${PKG_DB_TMPDIR} && ${SETENV} ${INSTALL_SCRIPTS_ENV}		\
-		${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
-
-post-install-script:
-	cd ${PKG_DB_TMPDIR} && ${SETENV} ${INSTALL_SCRIPTS_ENV}		\
-		${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 # XXX Reverse the order that update does things since
 # XXX we need pkg_delete built before we can deinstall.
