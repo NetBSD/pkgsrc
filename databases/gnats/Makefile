@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/03/05 16:27:23 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/03/10 23:26:31 rillig Exp $
 
 DISTNAME=	gnats-4.1.0
 PKGREVISION=	2
@@ -10,9 +10,8 @@ HOMEPAGE=	http://www.gnu.org/software/gnats/
 COMMENT=	GNATS bug tracking system
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gm4 gmake makeinfo
-USE_BISON=		yes
-TEXINFO_REQD=		4.6
+USE_TOOLS+=		gm4 gmake makeinfo bison
+TEXINFO_REQD+=		4.6
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
@@ -53,9 +52,9 @@ CONF_FILES_PERMS+=	${EGDIR}/databases ${GNATS_DB_FILE}		\
 			${GNATS_USER} ${GNATS_GROUP} 0600
 CONF_FILES+=		${EGDIR}/send-pr.conf ${PKG_SYSCONFDIR}/send-pr.conf
 
-MESSAGE_SUBST+=		PREFIX=${PREFIX}
-MESSAGE_SUBST+=		GNATS_USER=${GNATS_USER}
-MESSAGE_SUBST+=		GNATS_SERVICE=${GNATS_SERVICE}
+MESSAGE_SUBST+=		PREFIX=${PREFIX:Q}
+MESSAGE_SUBST+=		GNATS_USER=${GNATS_USER:Q}
+MESSAGE_SUBST+=		GNATS_SERVICE=${GNATS_SERVICE:Q}
 
 SUBST_CLASSES+=		gnats
 SUBST_STAGE.gnats=	pre-configure
