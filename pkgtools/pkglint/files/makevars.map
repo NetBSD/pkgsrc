@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.70 2006/03/09 17:34:17 rillig Exp $
+# $NetBSD: makevars.map,v 1.71 2006/03/10 12:33:49 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -360,6 +360,7 @@ RESTRICTED		Message
 SCRIPTS_ENV		List+ of ShellWord
 SPECIAL_PERMS		List of ShellWord
 SHLIBTOOL_OVERRIDE	List+ of Pathmask
+SITES			List of URL
 SUBST_CLASSES		List+
 SUBST_FILES		List of Pathmask
 SUBST_FILTER_CMD	List of ShellWord
