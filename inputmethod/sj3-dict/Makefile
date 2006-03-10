@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 20:50:23 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/10 19:24:13 jlam Exp $
 #
 
 DISTNAME=	sj3-2.0.1.20
@@ -27,9 +27,8 @@ SJ3OWNER?=	daemon
 SJ3GROUP?=	daemon
 MAKE_ENV+=	SJ3OWNER=${SJ3OWNER:Q} SJ3GROUP=${SJ3GROUP:Q} \
 		IMDICTDIR=${IMDICTDIR:Q} LOCAL_LDFLAGS=${LDFLAGS:M*:Q}
-
+FILES_SUBST+=	SJ3OWNER=${SJ3OWNER} SJ3GROUP=${SJ3GROUP} IMDICTDIR=${IMDICTDIR}
 INSTALL_SRC=	${PKGDIR}/INSTALL
-INSTALL_FILE=	${WRKDIR}/INSTALL
 
 EVAL_PREFIX+=	SJ3SERVERBINDIR=sj3-server-bin
 
@@ -46,12 +45,6 @@ do-configure:
 
 do-build:
 	@(cd ${WRKSRC}/dict/dict; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM})
-
-post-build:
-	@${SED} -e 's|$${SJ3OWNER}|${SJ3OWNER}|'	\
-		-e 's|$${SJ3GROUP}|${SJ3GROUP}|'	\
-		-e 's|$${IMDICTDIR}|${IMDICTDIR}|'	\
-		${INSTALL_SRC} > ${INSTALL_FILE}
 
 do-install:
 	@(cd ${WRKSRC}/dict/dict; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install)

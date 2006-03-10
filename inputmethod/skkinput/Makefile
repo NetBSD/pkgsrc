@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:09:43 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/10 19:30:35 jlam Exp $
 
 DISTNAME=	skkinput-2.06.3
 PKGREVISION=	1
@@ -14,19 +14,12 @@ BUILD_DEFS+=	USE_INET6
 USE_IMAKE=	YES
 
 PLIST_SUBST+=	PKGBASE=${LOCALBASE:Q}
-
-DESCR_SRC=	${WRKDIR}/DESCR
-INSTALL_FILE=	${WRKDIR}/INSTALL
-
-post-build:
-	${SED} 's#@PKGBASE@#${LOCALBASE}#g' ${PKGDIR}/DESCR	>${DESCR_SRC}
-	${SED} 's#@PKGBASE@#${LOCALBASE}#g' ${PKGDIR}/INSTALL	>${INSTALL_FILE}
+INSTALL_SRC=	${PKGDIR}/INSTALL
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/skkinput
 	${INSTALL_DATA} ${WRKSRC}/README.jis	${PREFIX}/share/doc/skkinput
 	${INSTALL_DATA} ${WRKSRC}/FAQ.jis	${PREFIX}/share/doc/skkinput
 	${INSTALL_DATA} ${WRKSRC}/BUGS.jis	${PREFIX}/share/doc/skkinput
-	${SH} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"

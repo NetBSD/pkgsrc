@@ -5,6 +5,6 @@ case $2 in
 	dic="${PKG_PREFIX}/sj3/user"
 	mkdir -p $dic
 	chmod 755 $dic
-	chown ${SJ3OWNER}.${SJ3GROUP} $dic
+	chown @SJ3OWNER@:@SJ3GROUP@ $dic
 	;;
 esac
