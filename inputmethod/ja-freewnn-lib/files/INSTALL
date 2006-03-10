@@ -1,5 +1,7 @@
 #!/bin/sh
 
+WNNOWNER="@WNNOWNER@"
+
 case $2 in
 PRE-INSTALL)
 	uid=`id -u ${WNNOWNER} 2> /dev/null`
