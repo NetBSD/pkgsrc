@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13238 2006/03/09 21:11:22 tonio Exp $
+$NetBSD: CHANGES,v 1.13239 2006/03/10 06:07:36 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1418,3 +1418,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added emulators/suse100_libpng version 10.0 [tonio 2006-03-09]
 	Added emulators/suse100_libtiff version 10.0 [tonio 2006-03-09]
 	Added emulators/suse100_x11 version 10.0 [tonio 2006-03-09]
+	Updated mail/p5-MIME-Lite to 3.01 [hiramatsu 2006-03-10]
