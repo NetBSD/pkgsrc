@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/02/05 12:43:15 martti Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/03/10 09:05:25 martti Exp $
 bin/jalbum
 share/jalbum/JAlbum.jar
 share/jalbum/StartJAlbum.bat
@@ -69,6 +69,7 @@ share/jalbum/help/images/skinfolder.gif
 share/jalbum/help/images/slideedit.gif
 share/jalbum/help/images/smiley.gif
 share/jalbum/help/images/textexample.jpg
+share/jalbum/help/images/tintexample.jpg
 share/jalbum/help/images/tip.gif
 share/jalbum/help/images/toolbox.gif
 share/jalbum/help/images/ui-accounts.png
@@ -149,6 +150,8 @@ share/jalbum/plugins/SimpleFilter.java
 share/jalbum/plugins/TextFilter.class
 share/jalbum/plugins/TextFilter.java
 share/jalbum/plugins/TextFilter.jbx
+share/jalbum/plugins/TintFilter.class
+share/jalbum/plugins/TintFilter.java
 share/jalbum/plugins/WatermarkFilter.class
 share/jalbum/plugins/WatermarkFilter.java
 share/jalbum/plugins/WatermarkFilter.jbx
@@ -1935,6 +1938,11 @@ share/jalbum/skins/Simple/texts/texts_sk.properties
 share/jalbum/skins/Simple/texts/texts_sv.properties
 share/jalbum/skins/Simple/top.htt
 share/jalbum/skins/Slide show/index.htt
+share/jalbum/skins/Slide show/init.bsh
+share/jalbum/skins/Slide show/mp3player.swf
+share/jalbum/skins/Slide show/music/Atmos.mp3
+share/jalbum/skins/Slide show/music/Drops.mp3
+share/jalbum/skins/Slide show/music/Stroboscope.mp3
 share/jalbum/skins/Slide show/onload.bsh
 share/jalbum/skins/Slide show/res/camera.gif
 share/jalbum/skins/Slide show/res/close.gif
@@ -2034,37 +2042,90 @@ share/jalbum/skins/Whitey/res/previous_disabled.gif
 share/jalbum/skins/Whitey/res/up.gif
 share/jalbum/skins/Whitey/slide.htt
 share/jalbum/skins/Whitey/styles/White.css
+share/jalbum/skins/XP/Tree.htt
 share/jalbum/skins/XP/about.txt
 share/jalbum/skins/XP/hints.jap
 share/jalbum/skins/XP/index.htt
 share/jalbum/skins/XP/init.bsh
 share/jalbum/skins/XP/onload.bsh
+share/jalbum/skins/XP/plugins.bsh
+share/jalbum/skins/XP/plugins/Example plugin/coliterator.htt
+share/jalbum/skins/XP/plugins/Example plugin/head.htt
+share/jalbum/skins/XP/plugins/Example plugin/headIndex.htt
+share/jalbum/skins/XP/plugins/Example plugin/headSlide.htt
+share/jalbum/skins/XP/plugins/Example plugin/index_indexTemplate.htt
+share/jalbum/skins/XP/plugins/Example plugin/init.bsh
+share/jalbum/skins/XP/plugins/Example plugin/javascript.js
+share/jalbum/skins/XP/plugins/Example plugin/javascriptIndex.js
+share/jalbum/skins/XP/plugins/Example plugin/javascriptOnLoad.htt
+share/jalbum/skins/XP/plugins/Example plugin/javascriptOnLoadIndex.htt
+share/jalbum/skins/XP/plugins/Example plugin/javascriptOnLoadSlide.htt
+share/jalbum/skins/XP/plugins/Example plugin/javascriptSlide.js
+share/jalbum/skins/XP/plugins/Example plugin/once_onceTemplate.htt
+share/jalbum/skins/XP/plugins/Example plugin/onload.bsh
+share/jalbum/skins/XP/plugins/Example plugin/panel.htt
+share/jalbum/skins/XP/plugins/Example plugin/panelActivities.htt
+share/jalbum/skins/XP/plugins/Example plugin/panelActivitiesIndex.htt
+share/jalbum/skins/XP/plugins/Example plugin/panelActivitiesSlide.htt
+share/jalbum/skins/XP/plugins/Example plugin/panelIndex.htt
+share/jalbum/skins/XP/plugins/Example plugin/panelInformation.htt
+share/jalbum/skins/XP/plugins/Example plugin/panelInformationIndex.htt
+share/jalbum/skins/XP/plugins/Example plugin/panelInformationSlide.htt
+share/jalbum/skins/XP/plugins/Example plugin/panelSlide.htt
+share/jalbum/skins/XP/plugins/Example plugin/res/1x1.gif
+share/jalbum/skins/XP/plugins/Example plugin/rowiterator.htt
+share/jalbum/skins/XP/plugins/Example plugin/slideReplacement.htt
+share/jalbum/skins/XP/plugins/Example plugin/slide_slideTemplate.htt
+share/jalbum/skins/XP/plugins/Example plugin/styles/LightGrey.css
+share/jalbum/skins/XP/plugins/Example plugin/styles/LightGrey/1x1LightGrey.gif
+share/jalbum/skins/XP/plugins/Example plugin/styles/OliveGreen.css
+share/jalbum/skins/XP/plugins/Example plugin/styles/OliveGreen/1x1OliveGreen.gif
+share/jalbum/skins/XP/plugins/Example plugin/styles/Standard (Blue).css
+share/jalbum/skins/XP/plugins/Example plugin/styles/Standard (Blue)/1x1Standard (Blue).gif
+share/jalbum/skins/XP/plugins/Example plugin/texts/texts.properties
+share/jalbum/skins/XP/plugins/Example plugin/texts/texts_sv.properties
+share/jalbum/skins/XP/plugins/Readme.txt
 share/jalbum/skins/XP/res/1x1.gif
 share/jalbum/skins/XP/res/Back.gif
 share/jalbum/skins/XP/res/FolderLarge.gif
 share/jalbum/skins/XP/res/FolderUp.gif
 share/jalbum/skins/XP/res/Forward.gif
+share/jalbum/skins/XP/res/IconFolder.gif
+share/jalbum/skins/XP/res/IconFolderOpen.gif
 share/jalbum/skins/XP/res/ImageLarge.gif
 share/jalbum/skins/XP/res/JAlbum.gif
 share/jalbum/skins/XP/res/OrderPrints.gif
 share/jalbum/skins/XP/res/Slideshow.gif
+share/jalbum/skins/XP/res/TreeDot.gif
+share/jalbum/skins/XP/res/TreeL.gif
+share/jalbum/skins/XP/res/TreeMinus.gif
+share/jalbum/skins/XP/res/TreePlus.gif
+share/jalbum/skins/XP/res/TreeT.gif
+share/jalbum/skins/XP/res/btnFolderClose.gif
+share/jalbum/skins/XP/res/btnFolderCloseHover.gif
 share/jalbum/skins/XP/res/folder.gif
 share/jalbum/skins/XP/res/movie.gif
 share/jalbum/skins/XP/res/x.js
 share/jalbum/skins/XP/slide.htt
 share/jalbum/skins/XP/styles/LightGrey.css
 share/jalbum/skins/XP/styles/LightGrey.jpg
+share/jalbum/skins/XP/styles/LightGrey/ImagePaneHeaderClosed.gif
 share/jalbum/skins/XP/styles/LightGrey/ImagePaneHeaderOpen.gif
+share/jalbum/skins/XP/styles/LightGrey/InfoPaneHeaderClosed.gif
 share/jalbum/skins/XP/styles/LightGrey/InfoPaneHeaderOpen.gif
 share/jalbum/skins/XP/styles/LightGrey/MainBG.gif
 share/jalbum/skins/XP/styles/OliveGreen.css
 share/jalbum/skins/XP/styles/OliveGreen.jpg
+share/jalbum/skins/XP/styles/OliveGreen/ImagePaneHeaderClosedOlive.gif
 share/jalbum/skins/XP/styles/OliveGreen/ImagePaneHeaderOpenOlive.gif
+share/jalbum/skins/XP/styles/OliveGreen/InfoPaneHeaderClosedOlive.gif
 share/jalbum/skins/XP/styles/OliveGreen/InfoPaneHeaderOpenOlive.gif
 share/jalbum/skins/XP/styles/OliveGreen/MainBGOlive.gif
 share/jalbum/skins/XP/styles/Standard (Blue).css
 share/jalbum/skins/XP/styles/Standard (Blue).jpg
+share/jalbum/skins/XP/styles/Standard (Blue)/ImagePaneHeaderClosedBlue.gif
 share/jalbum/skins/XP/styles/Standard (Blue)/ImagePaneHeaderOpenBlue.gif
+share/jalbum/skins/XP/styles/Standard (Blue)/InfoPaneHeaderClosedBlue.gif
 share/jalbum/skins/XP/styles/Standard (Blue)/InfoPaneHeaderOpenBlue.gif
 share/jalbum/skins/XP/styles/Standard (Blue)/MainBGBlue.gif
 share/jalbum/skins/XP/texts/texts.properties
@@ -2077,12 +2138,14 @@ share/jalbum/skins/XP/texts/texts_en.properties
 share/jalbum/skins/XP/texts/texts_es.properties
 share/jalbum/skins/XP/texts/texts_fi.properties
 share/jalbum/skins/XP/texts/texts_fr.properties
+share/jalbum/skins/XP/texts/texts_hu.properties
 share/jalbum/skins/XP/texts/texts_is.properties
 share/jalbum/skins/XP/texts/texts_it.properties
 share/jalbum/skins/XP/texts/texts_nl.properties
 share/jalbum/skins/XP/texts/texts_no.properties
 share/jalbum/skins/XP/texts/texts_pl.properties
 share/jalbum/skins/XP/texts/texts_pt.properties
+share/jalbum/skins/XP/texts/texts_ru.properties
 share/jalbum/skins/XP/texts/texts_sk.properties
 share/jalbum/skins/XP/texts/texts_sl.properties
 share/jalbum/skins/XP/texts/texts_sv.properties
@@ -2289,6 +2352,7 @@ share/jalbum/tools/Show supported file types.bsh
 @dirrm share/jalbum/skins/Simple/styles
 @dirrm share/jalbum/skins/Simple/texts
 @dirrm share/jalbum/skins/Simple
+@dirrm share/jalbum/skins/Slide show/music
 @dirrm share/jalbum/skins/Slide show/res
 @dirrm share/jalbum/skins/Slide show/styles
 @dirrm share/jalbum/skins/Slide show
@@ -2309,6 +2373,14 @@ share/jalbum/tools/Show supported file types.bsh
 @dirrm share/jalbum/skins/Whitey/res
 @dirrm share/jalbum/skins/Whitey/styles
 @dirrm share/jalbum/skins/Whitey
+@dirrm share/jalbum/skins/XP/plugins/Example plugin/res
+@dirrm share/jalbum/skins/XP/plugins/Example plugin/styles/LightGrey
+@dirrm share/jalbum/skins/XP/plugins/Example plugin/styles/OliveGreen
+@dirrm share/jalbum/skins/XP/plugins/Example plugin/styles/Standard (Blue)
+@dirrm share/jalbum/skins/XP/plugins/Example plugin/styles
+@dirrm share/jalbum/skins/XP/plugins/Example plugin/texts
+@dirrm share/jalbum/skins/XP/plugins/Example plugin
+@dirrm share/jalbum/skins/XP/plugins
 @dirrm share/jalbum/skins/XP/res
 @dirrm share/jalbum/skins/XP/styles/LightGrey
 @dirrm share/jalbum/skins/XP/styles/OliveGreen
