@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1804 2006/03/09 23:31:51 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1805 2006/03/10 11:02:00 tonio Exp $
 #
 # This file is in the public domain.
 #
@@ -1526,12 +1526,12 @@ _CONFIGURE_PREREQ+=	replace-interpreter
 .PHONY: replace-interpreter
 replace-interpreter:
 .  for lang in ${REPLACE_INTERPRETER}
-.    for pattern in ${_REPLACE_FILES.${lang}}
+.    for pattern in ${REPLACE_FILES.${lang}}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cd ${WRKSRC};							\
 	for f in ${pattern}; do						\
 	    if [ -f $${f} ]; then					\
-		    ${SED} -e '1s|^#!${_REPLACE.${lang}.old}|#!${_REPLACE.${lang}.new}|' \
+		    ${SED} -e '1s|^#!${REPLACE.${lang}.old}|#!${REPLACE.${lang}.new}|' \
 			    $${f} > $${f}.new;				\
 		    if [ -x $${f} ]; then				\
 			    ${CHMOD} a+x $${f}.new;			\
