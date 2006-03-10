@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/10 21:16:30 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/10 22:15:24 rillig Exp $
 #
 
 DISTNAME=		netdisco-0.94_with_mibs
@@ -32,16 +32,16 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 EGDIR=			${PREFIX}/share/examples/${PKGNAME_NOREV}
 
 USE_TOOLS+=	perl:run
-REPLACE_PERL=	bin/doc_munge
-REPLACE_PERL+=  bin/test_cdp.pl
-REPLACE_PERL+=  bin/test_fwtable.pl
-REPLACE_PERL+=  bin/test_iproute.pl
-REPLACE_PERL+=  bin/parse_kismet_ap
-REPLACE_PERL+=  netdisco
-REPLACE_PERL+=  mibs/chk_dups
-REPLACE_PERL+=  mibs/rm_cisco_dups
-REPLACE_PERL+=  mibs/chk_mibs
-REPLACE_PERL+=  mibs/snmpwalkmib
+REPLACE_PERL+=	bin/doc_munge
+REPLACE_PERL+=	bin/test_cdp.pl
+REPLACE_PERL+=	bin/test_fwtable.pl
+REPLACE_PERL+=	bin/test_iproute.pl
+REPLACE_PERL+=	bin/parse_kismet_ap
+REPLACE_PERL+=	netdisco
+REPLACE_PERL+=	mibs/chk_dups
+REPLACE_PERL+=	mibs/rm_cisco_dups
+REPLACE_PERL+=	mibs/chk_mibs
+REPLACE_PERL+=	mibs/snmpwalkmib
 
 SUBST_CLASSES+=			installdir path var apachevers
 SUBST_STAGE.installdir=		pre-configure
@@ -63,7 +63,7 @@ SUBST_FILES.installdir+=	html/doc/UPGRADE.html html/admin_reconfig.html
 SUBST_FILES.installdir+=	netdisco.crontab
 SUBST_FILES.installdir+=	mibs/snmp.conf
 SUBST_SED.installdir=		-e "s|/usr/local/netdisco|${PREFIX}/netdisco|g"
-SUBST_MESSAGE.installdir=	"Fixing hardcoded install directory path."
+SUBST_MESSAGE.installdir=	Fixing hardcoded install directory path.
 
 SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	bin/catalyst_mac_vlan.pl bin/port_control
@@ -72,69 +72,71 @@ SUBST_FILES.path+=	bin/parse_mac
 SUBST_FILES.path+=	doc/INSTALL.html doc/INSTALL.pod html/doc/INSTALL.html
 SUBST_FILES.path+=	INSTALL netdisco.crontab
 SUBST_SED.path=		-e "s|/usr/local/bin|${PREFIX}/bin|g"
-SUBST_MESSAGE.path=	"Fixing hardcoded path."
+SUBST_MESSAGE.path=	Fixing hardcoded path.
 
 SUBST_STAGE.var=	pre-configure
 SUBST_FILES.var=	netdisco.conf
 SUBST_SED.var=		-e "s|@VARBASE@|${VARBASE}|g"
-SUBST_MESSAGE.var=	"Fixing data directory."
+SUBST_MESSAGE.var=	Fixing data directory.
 
 NETDISCOUSER?=	netdisco
 NETDISCOGROUP?=	netdisco
 BUILD_DEFS+=	NETDISCOUSER NETDISCOGROUP
 
-PKG_USERS=	${NETDISCOUSER}:${NETDISCOGROUP}::Netdisco\ administrator:${PREFIX}/netdisco:${SH}
+PKG_USERS=	${NETDISCOUSER:Q}:${NETDISCOGROUP:Q}::Netdisco\ administrator:${PREFIX:Q}/netdisco:${SH:Q}
 PKG_GROUPS=	${NETDISCOGROUP}
 
 PKG_SYSCONFVAR=		netdisco
-PKG_SYSCONFDIR.netdisco= ${PREFIX}/netdisco
+PKG_SYSCONFDIR.netdisco=	${PREFIX}/netdisco
 EGDIR=			${PREFIX}/share/examples/netdisco
-CONF_FILES=		${EGDIR}/netdisco.conf ${PKG_SYSCONFDIR}/netdisco.conf
-CONF_FILES_PERMS+=	${EGDIR}/netdisco.conf ${PKG_SYSCONFDIR}/netdisco.conf \
+CONF_FILES=		${EGDIR:Q}/netdisco.conf ${PKG_SYSCONFDIR:Q}/netdisco.conf
+CONF_FILES_PERMS+=	${EGDIR:Q}/netdisco.conf ${PKG_SYSCONFDIR:Q}/netdisco.conf \
 			${NETDISCOUSER} ${NETDISCOGROUP} 0660
-CONF_FILES+=		${EGDIR}/netdisco-topology.txt ${PKG_SYSCONFDIR}/netdisco-topology.txt
+CONF_FILES+=		${EGDIR:Q}/netdisco-topology.txt ${PKG_SYSCONFDIR:Q}/netdisco-topology.txt
 
-REQD_DIRS=              ${PREFIX}/netdisco ${EGDIR}
-OWN_DIRS_PERMS+=        ${VARBASE}/netdisco ${NETDISCOUSER} ${NETDISCOGROUP} 0775
+REQD_DIRS+=		${PREFIX:Q}/netdisco ${EGDIR:Q}
+OWN_DIRS_PERMS+=	${VARBASE:Q}/netdisco ${NETDISCOUSER} ${NETDISCOGROUP} 0775
 RCD_SCRIPTS=		netdisco
 
 .include "../../mk/apache.mk"
 
-.if ${PKG_APACHE} == "apache13"      
+.if ${PKG_APACHE} == "apache13"
 SUBST_STAGE.apachevers=	pre-configure
 SUBST_FILES.var=	netdisco_apache.conf
-SUBST_SED.var=		-e "s|@APACHE2@|\#uncomment for apache2|g"      
-SUBST_MESSAGE.var=	"Fixing config files for apache-1.3"
-.elif ${PKG_APACHE} == "apache2"     
+SUBST_SED.var=		-e "s|@APACHE2@|\#uncomment for apache2|g"
+SUBST_MESSAGE.var=	Fixing config files for apache-1.3
+.elif ${PKG_APACHE} == "apache2"
 SUBST_STAGE.apachevers=	pre-configure
 SUBST_FILES.var=	netdisco_apache.conf
 SUBST_SED.var=		-e "s|@APACHE2@||g"
-SUBST_MESSAGE.var=	"Fixing config files for apache-2"
+SUBST_MESSAGE.var=	Fixing config files for apache-2
 .endif
 
 do-build:
-	${RM} -f ${WRKSRC}/html/doc/ChangeLog.txt
-	${RM} -f ${WRKSRC}/Makefile
+	${RM} -f ${WRKSRC:Q}/html/doc/ChangeLog.txt
+	${RM} -f ${WRKSRC:Q}/Makefile
+	set -e; \
 	for i in INSTALL README README-API-BACKEND README-API-SHARED \
 	    UPGRADE ChangeLog; do \
-		${RM} -f ${WRKSRC}/doc/$$i ;\
-		${MV} ${WRKSRC}/$$i ${WRKSRC}/doc/ ;\
+		${RM} -f ${WRKSRC:Q}/doc/"$$i"; \
+		${MV} ${WRKSRC:Q}/"$$i" ${WRKSRC:Q}/doc/; \
 	done
-	cd ${WRKSRC} && \
+	cd ${WRKSRC:Q} && \
 	${FIND} . \( -name '*.orig' -o -name '*.bak' \) -exec ${RM} -f {} \;
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/netdisco_daemon \
-	    ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/netdisco
-	${RM} -f ${WRKSRC}/bin/netdisco_daemon
-	cd ${WRKSRC} && ${PAX} -rw -pp . ${PREFIX}/netdisco
-	${CHOWN} -R ${NETDISCOUSER}:${NETDISCOGROUP} ${PREFIX}/netdisco
-	${CHMOD} 775 ${PREFIX}/netdisco/html
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/bin/netdisco_daemon \
+	    ${PREFIX:Q}/${RCD_SCRIPTS_EXAMPLEDIR:Q}/netdisco
+	${RM} -f ${WRKSRC:Q}/bin/netdisco_daemon
+	cd ${WRKSRC:Q} && ${PAX} -rw -pp . ${PREFIX:Q}/netdisco
+	${CHOWN} -R ${NETDISCOUSER}:${NETDISCOGROUP} ${PREFIX:Q}/netdisco
+	${CHMOD} 775 ${PREFIX:Q}/netdisco/html
+	set -e; \
 	for i in netdisco.conf netdisco-topology.txt netdisco.crontab \
 	    netdisco_apache.conf netdisco_apache_dir.conf; do \
-		${MV} ${PREFIX}/netdisco/$$i ${EGDIR}/ ;\
+		${MV} ${PREFIX:Q}/netdisco/"$$i" ${EGDIR:Q}/ ;\
 	done
-	${CHGRP} -R ${APACHE_GROUP} ${PREFIX}/netdisco/mason
-	${CHMOD} -R 775 ${PREFIX}/netdisco/mason
+	${CHGRP} -R ${APACHE_GROUP} ${PREFIX:Q}/netdisco/mason
+	${CHMOD} -R 775 ${PREFIX:Q}/netdisco/mason
 
 .include "../../mk/bsd.pkg.mk"
