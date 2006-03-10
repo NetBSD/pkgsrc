@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.37 2006/03/10 22:23:02 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.38 2006/03/10 23:33:57 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -9,16 +9,14 @@
 # _PKGINSTALL_VARS is a list of the variables that, if non-empty, indicate
 #	that the pkginstall framework should be used.  These variables
 #	should be extracted from bsd.pkginstall.mk and are typically the
-#	variables named in the INSTALL_<SCRIPT>_MEMBERS lists.
+#	variables named in the _INSTALL_<SCRIPT>_MEMBERS lists.
 #
 # USE_PKGINSTALL may be set to "yes" to force the pkginstall framework
 #	to be used.
 #
 _PKGINSTALL_VARS+=	HEADER_EXTRA_TMPL
-_PKGINSTALL_VARS+=	DEINSTALL_PRE_TMPL DEINSTALL_EXTRA_TMPL		\
-			DEINSTALL_TMPL
-_PKGINSTALL_VARS+=	INSTALL_TMPL INSTALL_EXTRA_TMPL			\
-			INSTALL_POST_TMPL INSTALL_UNPACK_TMPL
+_PKGINSTALL_VARS+=	DEINSTALL_EXTRA_TMPL
+_PKGINSTALL_VARS+=	INSTALL_EXTRA_TMPL
 _PKGINSTALL_VARS+=	DEINSTALL_SRC INSTALL_SRC
 
 _PKGINSTALL_VARS+=	PKG_GROUPS PKG_USERS
@@ -71,9 +69,7 @@ _FUNC_STRIP_PREFIX= \
 # may do additional work in the INSTALL/DEINSTALL scripts by overriding the
 # variables DEINSTALL_EXTRA_TMPL and INSTALL_EXTRA_TMPL to point to
 # additional script fragments.  These bits are included after the main
-# install/deinstall script fragments.  Packages may also override the
-# variables DEINSTALL_TMPL and INSTALL_TMPL to completely customize the
-# install/deinstall logic.
+# install/deinstall script fragments.
 #
 _HEADER_TMPL?=		${.CURDIR}/../../mk/install/header
 .if !defined(HEADER_EXTRA_TMPL) && exists(${.CURDIR}/HEADER)
@@ -81,13 +77,13 @@ HEADER_EXTRA_TMPL?=	${.CURDIR}/HEADER
 .else
 HEADER_EXTRA_TMPL?=	# empty
 .endif
-DEINSTALL_PRE_TMPL?=	${.CURDIR}/../../mk/install/deinstall-pre
+_DEINSTALL_PRE_TMPL?=	${.CURDIR}/../../mk/install/deinstall-pre
 DEINSTALL_EXTRA_TMPL?=	# empty
-DEINSTALL_TMPL?=	${.CURDIR}/../../mk/install/deinstall
-INSTALL_UNPACK_TMPL?=	# empty
-INSTALL_TMPL?=		${.CURDIR}/../../mk/install/install
+_DEINSTALL_TMPL?=	${.CURDIR}/../../mk/install/deinstall
+_INSTALL_UNPACK_TMPL?=	# empty
+_INSTALL_TMPL?=		${.CURDIR}/../../mk/install/install
 INSTALL_EXTRA_TMPL?=	# empty
-INSTALL_POST_TMPL?=	${.CURDIR}/../../mk/install/install-post
+_INSTALL_POST_TMPL?=	${.CURDIR}/../../mk/install/install-post
 _FOOTER_TMPL?=		${.CURDIR}/../../mk/install/footer
 
 # DEINSTALL_TEMPLATES and INSTALL_TEMPLATES are the default list of source
@@ -95,16 +91,16 @@ _FOOTER_TMPL?=		${.CURDIR}/../../mk/install/footer
 #
 DEINSTALL_TEMPLATES=	${_HEADER_TMPL}
 DEINSTALL_TEMPLATES+=	${HEADER_EXTRA_TMPL}
-DEINSTALL_TEMPLATES+=	${DEINSTALL_PRE_TMPL}
+DEINSTALL_TEMPLATES+=	${_DEINSTALL_PRE_TMPL}
 DEINSTALL_TEMPLATES+=	${DEINSTALL_EXTRA_TMPL}
-DEINSTALL_TEMPLATES+=	${DEINSTALL_TMPL}
+DEINSTALL_TEMPLATES+=	${_DEINSTALL_TMPL}
 DEINSTALL_TEMPLATES+=	${_FOOTER_TMPL}
 INSTALL_TEMPLATES=	${_HEADER_TMPL}
 INSTALL_TEMPLATES+=	${HEADER_EXTRA_TMPL}
-INSTALL_TEMPLATES+=	${INSTALL_UNPACK_TMPL}
-INSTALL_TEMPLATES+=	${INSTALL_TMPL}
+INSTALL_TEMPLATES+=	${_INSTALL_UNPACK_TMPL}
+INSTALL_TEMPLATES+=	${_INSTALL_TMPL}
 INSTALL_TEMPLATES+=	${INSTALL_EXTRA_TMPL}
-INSTALL_TEMPLATES+=	${INSTALL_POST_TMPL}
+INSTALL_TEMPLATES+=	${_INSTALL_POST_TMPL}
 INSTALL_TEMPLATES+=	${_FOOTER_TMPL}
 
 # These are the list of source files that are concatenated to form the
@@ -173,16 +169,16 @@ PKG_FAIL_REASON+=	"User and group '${user}' cannot have the same name on Interix
 DEPENDS+=		${_USER_DEPENDS}
 .endif
 
-INSTALL_USERGROUP_FILE=		${WRKDIR}/.install-usergroup
+_INSTALL_USERGROUP_FILE=	${WRKDIR}/.install-usergroup
 .if exists(../../mk/install/usergroupfuncs.${OPSYS})
-INSTALL_USERGROUPFUNCS_FILE?=	../../mk/install/usergroupfuncs.${OPSYS}
+_INSTALL_USERGROUPFUNCS_FILE?=	../../mk/install/usergroupfuncs.${OPSYS}
 .else
-INSTALL_USERGROUPFUNCS_FILE?=	../../mk/install/usergroupfuncs
+_INSTALL_USERGROUPFUNCS_FILE?=	../../mk/install/usergroupfuncs
 .endif
-INSTALL_USERGROUP_MEMBERS=	${PKG_USERS} ${PKG_GROUPS}
-INSTALL_UNPACK_TMPL+=		${INSTALL_USERGROUP_FILE}
+_INSTALL_USERGROUP_MEMBERS=	${PKG_USERS} ${PKG_GROUPS}
+_INSTALL_UNPACK_TMPL+=		${_INSTALL_USERGROUP_FILE}
 
-${INSTALL_USERGROUP_FILE}:						\
+${_INSTALL_USERGROUP_FILE}:						\
 		../../mk/install/usergroup				\
 		${INSTALL_USERGROUPFUNCS_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -197,7 +193,7 @@ ${INSTALL_USERGROUP_FILE}:						\
 	${ECHO} "case \$${STAGE} in";					\
 	${ECHO} "PRE-INSTALL|UNPACK)";					\
 	${ECHO} "	\$${CAT} > ./+USERGROUP << 'EOF_USERGROUP'";	\
-	${SED}	-e "/^# platform-specific adduser\/addgroup functions/r${INSTALL_USERGROUPFUNCS_FILE}" ../../mk/install/usergroup | \
+	${SED}	-e "/^# platform-specific adduser\/addgroup functions/r${_INSTALL_USERGROUPFUNCS_FILE}" ../../mk/install/usergroup | \
 	${SED} ${FILES_SUBST_SED};					\
 	${ECHO} "";							\
 	set -- dummy ${PKG_GROUPS}; shift;				\
@@ -219,7 +215,7 @@ ${INSTALL_USERGROUP_FILE}:						\
 	exec 1>/dev/null;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	set -- dummy ${INSTALL_USERGROUP_MEMBERS}; shift;		\
+	set -- dummy ${_INSTALL_USERGROUP_MEMBERS}; shift;		\
 	if ${TEST} $$# -eq 0; then					\
 		${RM} -f ${.TARGET};					\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
@@ -243,11 +239,11 @@ ${INSTALL_USERGROUP_FILE}:						\
 SPECIAL_PERMS?=		# empty
 SETUID_ROOT_PERMS?=	${ROOT_USER} ${ROOT_GROUP} 4711
 
-INSTALL_PERMS_FILE=	${WRKDIR}/.install-perms
-INSTALL_PERMS_MEMBERS=	${SPECIAL_PERMS}
-INSTALL_UNPACK_TMPL+=	${INSTALL_PERMS_FILE}
+_INSTALL_PERMS_FILE=	${WRKDIR}/.install-perms
+_INSTALL_PERMS_MEMBERS=	${SPECIAL_PERMS}
+_INSTALL_UNPACK_TMPL+=	${_INSTALL_PERMS_FILE}
 
-${INSTALL_PERMS_FILE}: ../../mk/install/perms
+${_INSTALL_PERMS_FILE}: ../../mk/install/perms
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${_FUNC_STRIP_PREFIX};						\
@@ -279,7 +275,7 @@ ${INSTALL_PERMS_FILE}: ../../mk/install/perms
 	exec 1>/dev/null;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	set -- dummy ${INSTALL_PERMS_MEMBERS}; shift;			\
+	set -- dummy ${_INSTALL_PERMS_MEMBERS}; shift;			\
 	if ${TEST} $$# -eq 0; then					\
 		${RM} -f ${.TARGET};					\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
@@ -325,12 +321,12 @@ FILES_SUBST+=		RCD_SCRIPTS_SHELL=${RCD_SCRIPTS_SHELL:Q}
 MESSAGE_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR}
 MESSAGE_SUBST+=		RCD_SCRIPTS_EXAMPLEDIR=${RCD_SCRIPTS_EXAMPLEDIR}
 
-INSTALL_FILES_FILE=	${WRKDIR}/.install-files
-INSTALL_FILES_MEMBERS=	${RCD_SCRIPTS} ${CONF_FILES} ${REQD_FILES} \
+_INSTALL_FILES_FILE=	${WRKDIR}/.install-files
+_INSTALL_FILES_MEMBERS=	${RCD_SCRIPTS} ${CONF_FILES} ${REQD_FILES} \
 	${CONF_FILES_PERMS} ${REQD_FILES_PERMS}
-INSTALL_UNPACK_TMPL+=	${INSTALL_FILES_FILE}
+_INSTALL_UNPACK_TMPL+=	${_INSTALL_FILES_FILE}
 
-${INSTALL_FILES_FILE}: ../../mk/install/files
+${_INSTALL_FILES_FILE}: ../../mk/install/files
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	exec 1>>${.TARGET}.tmp;						\
@@ -406,7 +402,7 @@ ${INSTALL_FILES_FILE}: ../../mk/install/files
 	${ECHO} "# end of install-files";				\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	set -- dummy ${INSTALL_FILES_MEMBERS}; shift;			\
+	set -- dummy ${_INSTALL_FILES_MEMBERS}; shift;			\
 	if ${TEST} $$# -eq 0; then					\
 		${RM} -f ${.TARGET};					\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
@@ -439,15 +435,15 @@ REQD_DIRS_PERMS?=	# empty
 OWN_DIRS?=		# empty
 OWN_DIRS_PERMS?=	# empty
 
-INSTALL_DIRS_FILE=	${WRKDIR}/.install-dirs
-INSTALL_DIRS_MEMBERS=	${PKG_SYSCONFSUBDIR} ${RCD_SCRIPTS}		\
+_INSTALL_DIRS_FILE=	${WRKDIR}/.install-dirs
+_INSTALL_DIRS_MEMBERS=	${PKG_SYSCONFSUBDIR} ${RCD_SCRIPTS}		\
 	${CONF_FILES} ${CONF_FILES_PERMS}				\
 	${MAKE_DIRS} ${MAKE_DIRS_PERMS}					\
 	${REQD_DIRS} ${REDQ_DIRS_PERMS}					\
 	${OWN_DIRS} ${OWN_DIRS_PERMS}
-INSTALL_UNPACK_TMPL+=	${INSTALL_DIRS_FILE}
+_INSTALL_UNPACK_TMPL+=	${_INSTALL_DIRS_FILE}
 
-${INSTALL_DIRS_FILE}: ../../mk/install/dirs
+${_INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	exec 1>>${.TARGET}.tmp;						\
@@ -526,7 +522,7 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	exec 1>/dev/null;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	set -- dummy ${INSTALL_DIRS_MEMBERS}; shift;			\
+	set -- dummy ${_INSTALL_DIRS_MEMBERS}; shift;			\
 	if ${TEST} $$# -eq 0; then					\
 		${RM} -f ${.TARGET};					\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
@@ -538,16 +534,16 @@ ${INSTALL_DIRS_FILE}: ../../mk/install/dirs
 #
 INFO_FILES?=	# empty
 
-INSTALL_INFO_FILES_FILE=	${WRKDIR}/.install-info-files
-INSTALL_INFO_FILES_MEMBERS=	${INFO_FILES}
-INSTALL_UNPACK_TMPL+=		${INSTALL_INFO_FILES_FILE}
+_INSTALL_INFO_FILES_FILE=	${WRKDIR}/.install-info-files
+_INSTALL_INFO_FILES_MEMBERS=	${INFO_FILES}
+_INSTALL_UNPACK_TMPL+=		${_INSTALL_INFO_FILES_FILE}
 
 .if !empty(INFO_FILES:M*)
 USE_TOOLS+=	install-info:run
 FILES_SUBST+=	INSTALL_INFO=${INSTALL_INFO:Q}
 .endif
 
-${INSTALL_INFO_FILES_FILE}: ../../mk/install/info-files
+${_INSTALL_INFO_FILES_FILE}: ../../mk/install/info-files
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${_FUNC_STRIP_PREFIX};						\
@@ -576,7 +572,7 @@ ${INSTALL_INFO_FILES_FILE}: ../../mk/install/info-files
 	exec 1>/dev/null;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	set -- dummy ${INSTALL_INFO_FILES_MEMBERS}; shift;		\
+	set -- dummy ${_INSTALL_INFO_FILES_MEMBERS}; shift;		\
 	if ${TEST} $$# -eq 0; then					\
 		${RM} -f ${.TARGET};					\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
@@ -588,11 +584,11 @@ ${INSTALL_INFO_FILES_FILE}: ../../mk/install/info-files
 #
 PKG_SHELL?=		# empty
 
-INSTALL_SHELL_FILE=	${WRKDIR}/.install-shell
-INSTALL_SHELL_MEMBERS=	${PKG_SHELL}
-INSTALL_UNPACK_TMPL+=	${INSTALL_SHELL_FILE}
+_INSTALL_SHELL_FILE=	${WRKDIR}/.install-shell
+_INSTALL_SHELL_MEMBERS=	${PKG_SHELL}
+_INSTALL_UNPACK_TMPL+=	${_INSTALL_SHELL_FILE}
 
-${INSTALL_SHELL_FILE}: ../../mk/install/shell
+${_INSTALL_SHELL_FILE}: ../../mk/install/shell
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${_FUNC_STRIP_PREFIX};						\
@@ -621,7 +617,7 @@ ${INSTALL_SHELL_FILE}: ../../mk/install/shell
 	exec 1>/dev/null;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	set -- dummy ${INSTALL_SHELLS_MEMBERS}; shift;			\
+	set -- dummy ${_INSTALL_SHELLS_MEMBERS}; shift;			\
 	if ${TEST} $$# -eq 0; then					\
 		${RM} -f ${.TARGET};					\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
@@ -640,9 +636,9 @@ FONTS_DIRS.ttf?=	# empty
 FONTS_DIRS.type1?=	# empty
 FONTS_DIRS.x11?=	# empty
 
-INSTALL_FONTS_FILE=	${WRKDIR}/.install-fonts
-INSTALL_FONTS_MEMBERS=	${FONTS_DIRS.ttf} ${FONTS_DIRS.type1} ${FONTS_DIRS.x11}
-INSTALL_UNPACK_TMPL+=	${INSTALL_FONTS_FILE}
+_INSTALL_FONTS_FILE=	${WRKDIR}/.install-fonts
+_INSTALL_FONTS_MEMBERS=	${FONTS_DIRS.ttf} ${FONTS_DIRS.type1} ${FONTS_DIRS.x11}
+_INSTALL_UNPACK_TMPL+=	${_INSTALL_FONTS_FILE}
 
 # Directories with TTF and Type1 fonts also need to run mkfontdir, so
 # list them as "x11" font directories as well.
@@ -662,7 +658,7 @@ USE_TOOLS+=		mkfontdir:run
 FILES_SUBST+=		MKFONTDIR=${TOOLS_PATH.mkfontdir:Q}
 .endif
 
-${INSTALL_FONTS_FILE}: ../../mk/install/fonts
+${_INSTALL_FONTS_FILE}: ../../mk/install/fonts
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${_FUNC_STRIP_PREFIX};						\
@@ -703,7 +699,7 @@ ${INSTALL_FONTS_FILE}: ../../mk/install/fonts
 	exec 1>/dev/null;						\
 	${MV} -f ${.TARGET}.tmp ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	set -- dummy ${INSTALL_FONTS_MEMBERS}; shift;			\
+	set -- dummy ${_INSTALL_FONTS_MEMBERS}; shift;			\
 	if ${TEST} $$# -eq 0; then					\
 		${RM} -f ${.TARGET};					\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
