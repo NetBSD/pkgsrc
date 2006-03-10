@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.71 2006/03/10 12:33:49 rillig Exp $
+# $NetBSD: makevars.map,v 1.72 2006/03/10 22:14:52 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -336,7 +336,10 @@ PKG_SKIP_REASON		List+ of ShellWord
 PKG_SUFX		Userdefined
 PKG_SUGGESTED_OPTIONS	List of Option
 PKG_SUPPORTED_OPTIONS	List of Option
+PKG_SYSCONFDIR		Pathname
 PKG_SYSCONFSUBDIR	Pathname
+PKG_SYSCONFVAR		Identifier
+# ^^ FIXME: name/type mismatch.
 PKG_USERS		List of ShellWord
 PLIST_SRC		List of RelativePkgPath
 PLIST_SUBST		List+ of ShellWord
