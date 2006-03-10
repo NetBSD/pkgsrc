@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/04 21:29:42 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/10 23:58:15 rillig Exp $
 
 DISTNAME=		new_brain
 PKGNAME=		knightcap-brain-19980616
@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://anu.samba.org/KnightCap/
 COMMENT=		Book of losing moves for KnightCap
 
-ONLY_FOR_PLATFORMS=	*-*-i386
+ONLY_FOR_PLATFORM=	*-*-i386
 
 WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		${PKGNAME_NOREV}
@@ -22,13 +22,13 @@ EGDIR=			${PREFIX}/share/examples/knightcap
 INSTALLATION_DIRS=	bin
 
 do-build:
-	${SED} -e "s,@PREFIX@,${PREFIX},g" < ${FILESDIR}/newbrain.sh \
-		> ${WRKSRC}/newbrain.sh
+	${SED} -e "s,@PREFIX@,${PREFIX},g" < ${FILESDIR:Q}/newbrain.sh \
+		> ${WRKSRC:Q}/newbrain.sh
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/newbrain.sh ${PREFIX}/bin/newbrain
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/new_brain.dat \
-		${EGDIR}/brain.dat
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/newbrain.sh ${PREFIX:Q}/bin/newbrain
+	${INSTALL_DATA_DIR} ${EGDIR:Q}
+	${INSTALL_DATA} ${DISTDIR:Q}/${DIST_SUBDIR:Q}/new_brain.dat \
+		${EGDIR:Q}/brain.dat
 
 .include "../../mk/bsd.pkg.mk"
