@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2006/02/17 08:01:31 martti Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/10 09:05:25 martti Exp $
 
-DISTNAME=		JAlbum6.2
-PKGNAME=		jalbum-6.2
-PKGREVISION=		1
+DISTNAME=		JAlbum6.3
+PKGNAME=		jalbum-6.3
+#PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://www.jalbum.net/download/
 EXTRACT_SUFX=		.zip
@@ -15,11 +15,11 @@ DIST_SUBDIR=		${PKGNAME_NOREV}
 USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	blackdown-jdk13 kaffe sun-jdk13 sun-jdk14 sun-jdk15
 
-WRKSRC=			${WRKDIR:Q}/JAlbum
+WRKSRC=			${WRKDIR}/JAlbum
 
 do-build:
-	${SED}	-e "s#@PKG_JAVA_HOME@#${PKG_JAVA_HOME:Q}#g"	\
-		-e "s#@PREFIX@#${PREFIX:Q}#g"			\
+	${SED}	-e s#@PKG_JAVA_HOME@#${PKG_JAVA_HOME:Q}#g	\
+		-e s#@PREFIX@#${PREFIX:Q}#g			\
 		< ${FILESDIR:Q}/jalbum > ${WRKDIR:Q}/jalbum
 
 do-install:
