@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/01/10 18:50:09 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2006/03/10 20:18:38 jlam Exp $
 
 DISTNAME=	jitterbug-1.6.2
 PKGREVISION=	1
@@ -19,8 +19,8 @@ ADDGROUP=		${LOCALBASE}/sbin/groupadd
 .endif
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/source
-INSTALL_FILE=	${WRKDIR}/INSTALL
-DEINSTALL_FILE=	${WRKDIR}/DEINSTALL
+INSTALL_SRC=	${PKGDIR}/INSTALL
+DEINSTALL_SRC=	${PKGDIR}/DEINSTALL
 CONFIGDIR=	${WRKDIR}/${PKGNAME_NOREV}/config
 DOCSDIR=	${WRKDIR}/${PKGNAME_NOREV}/docs
 CGIBINDIR=	libexec/cgi-bin
@@ -59,6 +59,12 @@ PLIST_SUBST+=	CGIBINDIR=${CGIBINDIR:Q}
 PLIST_SUBST+=	JB_PACKAGE=${JB_PACKAGE:Q}
 PLIST_SUBST+=	JB_USER=${JB_USER:Q}
 PLIST_SUBST+=	JB_GROUP=${JB_GROUP:Q}
+
+FILES_SUBST+=	JB_USER=${JB_USER} JB_USERID=${JB_USERID}		\
+		JB_GROUP=${JB_GROUP} JB_GROUPID=${JB_GROUPID}		\
+		JB_PACKAGE=${JB_PACKAGE}				\
+		ADDUSER=${ADDUSER} ADDGROUP=${ADDGROUP}			\
+		CHGRP=${CHGRP} ID=${ID} TOUCH=${TOUCH} RM=${RM}
 
 pre-extract:
 	@(if [ "X${JB_HOSTNAME}" = "X${JB_LONGNAME}" ]; then                  \
@@ -130,19 +136,6 @@ pre-install:
 .endif
 	@${SED}                                                               \
 		-e 's|@JB_USER@|${JB_USER}|g'                                 \
-		-e 's|@JB_USERID@|${JB_USERID}|g'                             \
-		-e 's|@JB_GROUP@|${JB_GROUP}|g'                               \
-		-e 's|@JB_GROUPID@|${JB_GROUPID}|g'                           \
-		-e 's|@ADDUSER@|${ADDUSER}|g'				      \
-		-e 's|@ADDGROUP@|${ADDGROUP}|g'				      \
-		-e 's|@CHGRP@|${CHGRP}|g'                                     \
-		-e 's|@ID@|${ID}|g'                                           \
-		-e 's|@TOUCH@|${TOUCH}|g'                                     \
-		-e 's|@RM@|${RM}|g'                                           \
-			<${PKGDIR}/INSTALL                                    \
-			>${INSTALL_FILE}
-	@${SED}                                                               \
-		-e 's|@JB_USER@|${JB_USER}|g'                                 \
 			<${FILESDIR}/jitterbug.auth                           \
 			>${WRKDIR}/jitterbug.auth
 	@${SED}                                                               \
@@ -151,19 +144,12 @@ pre-install:
 		-e 's|@PREFIX@|${PREFIX}|g'                                   \
 			<${FILESDIR}/NEWPACKAGE                               \
 			>${WRKDIR}/NEWPACKAGE
-	@${SED}                                                               \
-		-e 's|@JB_USER@|${JB_USER}|g'                                 \
-		-e 's|@JB_GROUP@|${JB_GROUP}|g'                               \
-		-e 's|@JB_PACKAGE@|${JB_PACKAGE}|g'                           \
-			<${PKGDIR}/DEINSTALL                                  \
-			>${DEINSTALL_FILE}
 	@${SED}								      \
 		-e 's|@JB_PACKAGE@|${JB_PACKAGE}|g'			      \
 		-e 's|@JB_USER@|${JB_USER}|g'				      \
 		-e 's|@PREFIX@|${PREFIX}|g'				      \
 			< ${FILESDIR}/httpd.conf			      \
 			> ${WRKDIR}/httpd.conf
-	PKG_PREFIX=${PREFIX} ${SH} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${JB_CONFIGDIR}
