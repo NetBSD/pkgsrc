@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/02/05 23:08:28 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2006/03/10 23:21:53 rillig Exp $
 #
 
 DISTNAME=	plptools-0.12
@@ -10,9 +10,9 @@ MAINTAINER=	sakamoto@NetBSD.org
 HOMEPAGE=	http://plptools.sourceforge.net/
 COMMENT=	FTP-like and NFS-like access tools to talk to the PSION
 
-USE_GNU_READLINE=	# uses rl_filename_quoting_desired flag
+USE_GNU_READLINE=	yes	# uses rl_filename_quoting_desired flag
 USE_TOOLS+=		gmake
-USE_LANUGAGES=		c c++
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 PTHREAD_OPTS+=		require
