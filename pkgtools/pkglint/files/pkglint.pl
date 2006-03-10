@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.545 2006/03/09 17:34:17 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.546 2006/03/10 22:30:25 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2528,6 +2528,10 @@ sub checkline_mk_shellword($$$) {
 
 			if ($state == SWST_PLAIN && defined($mod) && $mod =~ qr":Q$") {
 				# Fine.
+
+			} elsif ($state == SWST_BACKT) {
+				# Don't check here, to avoid false positives
+				# for tool names.
 
 			} elsif (($state == SWST_SQUOT || $state == SWST_DQUOT) && $varname =~ qr"^(?:.*DIR|.*FILE|.*PATH|.*_VAR|PREFIX|.*BASE|PKGNAME)$") {
 				# This is ok if we don't allow these
