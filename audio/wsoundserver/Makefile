@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/03/09 21:04:42 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2006/03/10 22:32:21 rillig Exp $
 #
 
 DISTNAME=	WSoundServer-0.4.0
@@ -14,34 +14,39 @@ COMMENT=	Sound server for windowmaker
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
+LTCONFIG_OVERRIDE+=	${WRKSRC:Q}/ltconfig
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}	# not really needed
 PKG_SYSCONFSUBDIR=	WindowMaker
 EGDIR=			${PREFIX}/share/examples/wsoundserver
-CONF_FILES=		${EGDIR}/WMSound ${PKG_SYSCONFDIR}/WMSound
+CONF_FILES=		${EGDIR:Q}/WMSound ${PKG_SYSCONFDIR:Q}/WMSound
+
+SUBST_CLASSES+=		1x
+SUBST_STAGE.1x=		post-patch
+SUBST_MESSAGE.1x=	Changing the man page category from 1x to 1.
+SUBST_FILES.1x=		doc/*
+SUBST_SED.1x=		-e s,1x,1,g
 
 post-patch:
-	@cd ${WRKSRC}/doc && for f in *; do				\
-		${SED} "s/1x/1/g" $$f > $$f.tmp && ${MV} $$f.tmp $$f;	\
-	done &&								\
-	for f in get-wsound-flags.1x getsoundset.1x setsoundset.1x	\
-		wsoundplay.1x wsoundserver.1x; do			\
+	set -e;								\
+	cd ${WRKSRC:Q}/doc;						\
+	for f in get-wsound-flags getsoundset setsoundset wsoundplay	\
+		wsoundserver; do					\
 		g=`${ECHO} $$f | ${SED} "s/x$$//"`;			\
-		${MV} $$f $$g;						\
+		${MV} "$$f".1x "$$f".1;					\
 	done
 	${SED} -e "s|@PREFIX@|${PREFIX}|g"				\
-		${FILESDIR}/WMSound > ${WRKSRC}/WMSound
+		${FILESDIR:Q}/WMSound > ${WRKSRC:Q}/WMSound
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/WMSound ${EGDIR}
+	${INSTALL_DATA_DIR} ${EGDIR:Q}
+	${INSTALL_DATA} ${WRKSRC:Q}/WMSound ${EGDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Interix"
 .  include "../../audio/esound/buildlink3.mk"
-CONFIGURE_FLAGS+=	--enable-esound
+CONFIGURE_ARGS+=	--enable-esound
 .else
 .  include "../../mk/oss.buildlink3.mk"
 .endif
