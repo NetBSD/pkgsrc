@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2006/03/04 21:30:55 jlam Exp $
+# $NetBSD: Makefile,v 1.66 2006/03/10 23:04:46 rillig Exp $
 
 DISTNAME=	WindowMaker-0.92.0
 PKGNAME=	${DISTNAME:S/WindowMaker/windowmaker/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11 wm windowmaker
 MASTER_SITES=	ftp://ftp.windowmaker.org/pub/source/release/ \
 		ftp://ftp.ics.es.osaka-u.ac.jp/mirrors/WindowMaker/source/release/
@@ -20,14 +20,15 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-usermenu
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
-CONFIGURE_ARGS+=	--with-gnustepdir=${PREFIX}/share/GNUstep
-CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/${PKGLOCALEDIR}/locale
+CONFIGURE_ARGS+=	--with-gnustepdir=${PREFIX:Q}/share/GNUstep
+CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX:Q}/${PKGLOCALEDIR:Q}/locale
 CONFIGURE_ENV+=		LINGUAS=yes
 CONFIGURE_ENV+=		CPP_PATH=${CPP:Q}
 .if ${MACHINE_ARCH} != "i386"
 CONFIGURE_ENV+=		ac_cv_c_inline_asm=no
 .endif
 
+REPLACE_PERL+=		util/wkdemenu.pl
 INSTALL_TARGET=		install-strip
 
 .include "../../mk/bsd.prefs.mk"
@@ -40,7 +41,7 @@ PKG_SYSCONFSUBDIR=	WindowMaker
 EGDIR=			${PREFIX}/share/examples/WindowMaker
 CONF_FILES=
 .for f in WMGLOBAL WMRootMenu WMState WMWindowAttributes WindowMaker
-CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+CONF_FILES+=		${EGDIR:Q}/${f:Q} ${PKG_SYSCONFDIR:Q}/${f:Q}
 .endfor
 
 # WINDOWMAKER_OPTIONS is a space-separated list of compile-time options
@@ -55,37 +56,40 @@ WINDOWMAKER_OPTIONS?=	gnome kde openlook vdesktop
 
 BUILD_DEFS+=		WINDOWMAKER_OPTIONS
 
-.for OPTION in ${WINDOWMAKER_OPTIONS}
-CONFIGURE_ARGS+=	--enable-${OPTION}
+.for option in ${WINDOWMAKER_OPTIONS}
+CONFIGURE_ARGS+=	--enable-${option:Q}
 .endfor
 
 post-extract:
-	${RM} -f ${WRKSRC}/WindowMaker/Defaults/WMState \
-		 ${WRKSRC}/WindowMaker/Defaults/WMWindowAttributes \
-		 ${WRKSRC}/WindowMaker/Defaults/WindowMaker \
-		 ${WRKSRC}/po/zh_TW.Big5.po
-	for manfile in ${WRKSRC}/doc/*.1x ${WRKSRC}/doc/*/*.1x; \
+	${RM} -f ${WRKSRC:Q}/WindowMaker/Defaults/WMState \
+		 ${WRKSRC:Q}/WindowMaker/Defaults/WMWindowAttributes \
+		 ${WRKSRC:Q}/WindowMaker/Defaults/WindowMaker \
+		 ${WRKSRC:Q}/po/zh_TW.Big5.po
+	set -e; \
+	for manfile in ${WRKSRC:Q}/doc/*.1x ${WRKSRC:Q}/doc/*/*.1x; \
 	do \
-		${MV} $${manfile} `${ECHO} $${manfile} | ${SED} "s/1x$$/1/"`; \
+		${MV} "$$manfile" `${ECHO} "$$manfile" | ${SED} "s/1x$$/1/"`; \
 	done;
-	cd ${WRKSRC} && \
+	set -e; \
+	cd ${WRKSRC:Q} && \
 	for f in WINGs/wapplication.c WindowMaker/Defaults/WindowMaker.in \
 		WPrefs.app/Paths.c WindowMaker/menu* WindowMaker/plmenu*; do \
 		${SED}	-e "s|/usr/local|${PREFIX}|g" \
 			-e "s|${PREFIX}/GNUstep|${PREFIX}/share/GNUstep|g" \
-			$$f > $$f.new && \
-		${MV} $$f.new $$f; \
+			"$$f" > "$$f".new && \
+		${MV} "$$f".new "$$f"; \
 	done
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/WindowMaker/SoundSets
-	${INSTALL_DATA_DIR} ${PREFIX}/share/WindowMaker/Sounds
-	${TOUCH} ${PREFIX}/share/WindowMaker/SoundSets/.directory
-	${TOUCH} ${PREFIX}/share/WindowMaker/Sounds/.directory
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/WindowMaker
-	cd ${WRKSRC}; ${INSTALL_DATA} \
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/WindowMaker/SoundSets
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/WindowMaker/Sounds
+	${TOUCH} ${PREFIX:Q}/share/WindowMaker/SoundSets/.directory
+	${TOUCH} ${PREFIX:Q}/share/WindowMaker/Sounds/.directory
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/WindowMaker
+	cd ${WRKSRC:Q} && \
+	${INSTALL_DATA} \
 		README README.definable-cursor FAQ FAQ.I18N \
-		${PREFIX}/share/doc/WindowMaker
+		${PREFIX:Q}/share/doc/WindowMaker
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
