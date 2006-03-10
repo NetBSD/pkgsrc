@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/02/05 23:11:15 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/03/10 23:04:46 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 WINDOWMAKER_BUILDLINK3_MK:=	${WINDOWMAKER_BUILDLINK3_MK}+
@@ -24,4 +24,4 @@ BUILDLINK_PKGSRCDIR.windowmaker?=	../../wm/windowmaker
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

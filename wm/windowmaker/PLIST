@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/10/27 08:10:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/03/10 23:04:46 rillig Exp $
 bin/convertfonts
 bin/get-wings-flags
 bin/get-wraster-flags
@@ -52,10 +52,6 @@ man/sk/man1/wmaker.1
 man/sk/man1/wmsetbg.1
 man/sk/man1/wxcopy.1
 man/sk/man1/wxpaste.1
-share/WINGs/Images.tiff
-share/WINGs/Images.xpm
-share/WINGs/defaultIcon.tiff
-share/WINGs/defaultIcon.xpm
 share/GNUstep/Applications/WPrefs.app/WPrefs
 share/GNUstep/Applications/WPrefs.app/WPrefs.tiff
 share/GNUstep/Applications/WPrefs.app/WPrefs.xpm
@@ -123,6 +119,10 @@ share/GNUstep/Applications/WPrefs.app/tiff/windowfocus.tiff
 share/GNUstep/Applications/WPrefs.app/tiff/workspace.tiff
 share/GNUstep/Applications/WPrefs.app/tiff/workspacename.tiff
 share/GNUstep/Applications/WPrefs.app/tiff/xis.tiff
+share/WINGs/Images.tiff
+share/WINGs/Images.xpm
+share/WINGs/defaultIcon.tiff
+share/WINGs/defaultIcon.xpm
 share/WindowMaker/Backgrounds/BlueImage.jpeg
 share/WindowMaker/IconSets/Default.iconset
 share/WindowMaker/Icons/BitchX.tiff
