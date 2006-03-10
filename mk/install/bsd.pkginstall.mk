@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.38 2006/03/10 23:33:57 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.39 2006/03/10 23:36:08 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -175,8 +175,8 @@ _INSTALL_USERGROUPFUNCS_FILE?=	../../mk/install/usergroupfuncs.${OPSYS}
 .else
 _INSTALL_USERGROUPFUNCS_FILE?=	../../mk/install/usergroupfuncs
 .endif
-_INSTALL_USERGROUP_MEMBERS=	${PKG_USERS} ${PKG_GROUPS}
 _INSTALL_UNPACK_TMPL+=		${_INSTALL_USERGROUP_FILE}
+_INSTALL_USERGROUP_MEMBERS=	${PKG_USERS} ${PKG_GROUPS}
 
 ${_INSTALL_USERGROUP_FILE}:						\
 		../../mk/install/usergroup				\
@@ -240,8 +240,8 @@ SPECIAL_PERMS?=		# empty
 SETUID_ROOT_PERMS?=	${ROOT_USER} ${ROOT_GROUP} 4711
 
 _INSTALL_PERMS_FILE=	${WRKDIR}/.install-perms
-_INSTALL_PERMS_MEMBERS=	${SPECIAL_PERMS}
 _INSTALL_UNPACK_TMPL+=	${_INSTALL_PERMS_FILE}
+_INSTALL_PERMS_MEMBERS=	${SPECIAL_PERMS}
 
 ${_INSTALL_PERMS_FILE}: ../../mk/install/perms
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
@@ -322,9 +322,9 @@ MESSAGE_SUBST+=		RCD_SCRIPTS_DIR=${RCD_SCRIPTS_DIR}
 MESSAGE_SUBST+=		RCD_SCRIPTS_EXAMPLEDIR=${RCD_SCRIPTS_EXAMPLEDIR}
 
 _INSTALL_FILES_FILE=	${WRKDIR}/.install-files
-_INSTALL_FILES_MEMBERS=	${RCD_SCRIPTS} ${CONF_FILES} ${REQD_FILES} \
-	${CONF_FILES_PERMS} ${REQD_FILES_PERMS}
 _INSTALL_UNPACK_TMPL+=	${_INSTALL_FILES_FILE}
+_INSTALL_FILES_MEMBERS=	${RCD_SCRIPTS} ${CONF_FILES} ${REQD_FILES}	\
+			${CONF_FILES_PERMS} ${REQD_FILES_PERMS}
 
 ${_INSTALL_FILES_FILE}: ../../mk/install/files
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
@@ -436,12 +436,12 @@ OWN_DIRS?=		# empty
 OWN_DIRS_PERMS?=	# empty
 
 _INSTALL_DIRS_FILE=	${WRKDIR}/.install-dirs
-_INSTALL_DIRS_MEMBERS=	${PKG_SYSCONFSUBDIR} ${RCD_SCRIPTS}		\
-	${CONF_FILES} ${CONF_FILES_PERMS}				\
-	${MAKE_DIRS} ${MAKE_DIRS_PERMS}					\
-	${REQD_DIRS} ${REDQ_DIRS_PERMS}					\
-	${OWN_DIRS} ${OWN_DIRS_PERMS}
 _INSTALL_UNPACK_TMPL+=	${_INSTALL_DIRS_FILE}
+_INSTALL_DIRS_MEMBERS=	${PKG_SYSCONFSUBDIR} ${RCD_SCRIPTS}		\
+			${CONF_FILES} ${CONF_FILES_PERMS}		\
+			${MAKE_DIRS} ${MAKE_DIRS_PERMS}			\
+			${REQD_DIRS} ${REDQ_DIRS_PERMS}			\
+			${OWN_DIRS} ${OWN_DIRS_PERMS}
 
 ${_INSTALL_DIRS_FILE}: ../../mk/install/dirs
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
@@ -535,8 +535,8 @@ ${_INSTALL_DIRS_FILE}: ../../mk/install/dirs
 INFO_FILES?=	# empty
 
 _INSTALL_INFO_FILES_FILE=	${WRKDIR}/.install-info-files
-_INSTALL_INFO_FILES_MEMBERS=	${INFO_FILES}
 _INSTALL_UNPACK_TMPL+=		${_INSTALL_INFO_FILES_FILE}
+_INSTALL_INFO_FILES_MEMBERS=	${INFO_FILES}
 
 .if !empty(INFO_FILES:M*)
 USE_TOOLS+=	install-info:run
@@ -585,8 +585,8 @@ ${_INSTALL_INFO_FILES_FILE}: ../../mk/install/info-files
 PKG_SHELL?=		# empty
 
 _INSTALL_SHELL_FILE=	${WRKDIR}/.install-shell
-_INSTALL_SHELL_MEMBERS=	${PKG_SHELL}
 _INSTALL_UNPACK_TMPL+=	${_INSTALL_SHELL_FILE}
+_INSTALL_SHELL_MEMBERS=	${PKG_SHELL}
 
 ${_INSTALL_SHELL_FILE}: ../../mk/install/shell
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
@@ -637,8 +637,8 @@ FONTS_DIRS.type1?=	# empty
 FONTS_DIRS.x11?=	# empty
 
 _INSTALL_FONTS_FILE=	${WRKDIR}/.install-fonts
-_INSTALL_FONTS_MEMBERS=	${FONTS_DIRS.ttf} ${FONTS_DIRS.type1} ${FONTS_DIRS.x11}
 _INSTALL_UNPACK_TMPL+=	${_INSTALL_FONTS_FILE}
+_INSTALL_FONTS_MEMBERS=	${FONTS_DIRS.ttf} ${FONTS_DIRS.type1} ${FONTS_DIRS.x11}
 
 # Directories with TTF and Type1 fonts also need to run mkfontdir, so
 # list them as "x11" font directories as well.
