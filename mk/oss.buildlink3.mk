@@ -1,9 +1,11 @@
-# $NetBSD: oss.buildlink3.mk,v 1.2 2006/03/10 07:31:32 wiz Exp $
+# $NetBSD: oss.buildlink3.mk,v 1.3 2006/03/10 22:33:24 jlam Exp $
 #
 # This Makefile fragment is included by packages that require an Open Sound
 # System (OSS) implementation.
 #
 OSS_BUILDLINK3_MK:=	${OSS_BUILDLINK3_MK}+
+
+.include "../../mk/bsd.prefs.mk"
 
 BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Noss}
 BUILDLINK_PACKAGES+=		oss
@@ -11,7 +13,6 @@ BUILDLINK_BUILTIN_MK.oss=	../../mk/oss.builtin.mk
 
 .if !empty(OSS_BUILDLINK3_MK:M+)
 LIBOSSAUDIO?=		${BUILDLINK_LDADD.oss}
-.include "bsd.prefs.mk"
 .  if (${OPSYS} == "Linux") && exists(/dev/dsp)
 DEVOSSAUDIO?=		/dev/dsp
 DEVOSSSOUND?=		/dev/dsp
