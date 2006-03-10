@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2006/03/10 16:03:44 jlam Exp $
+# $NetBSD: Makefile.common,v 1.11 2006/03/10 22:29:08 jlam Exp $
 #
 
 DISTNAME=	FreeWnn-1.10
@@ -27,6 +27,7 @@ SEDSCRIPT+=	-e 's|$$([CK]*WNNJLIBSRC)/lib\([ck]*wnn\).a|-l\1|'
 SEDSCRIPT+=	-e 's|\(:.*\)$$(WNNJLIB)|\1|'
 .elif defined(WNN_TARGET) && (${WNN_TARGET} == "DICT")
 MAKE_ENV+=	"WNN_TARGET=DICT"
+DEINSTALL_SRC=	# empty
 INSTALL_SRC=	${FILESDIR}/INSTALL
 FILES_SUBST+=	WNNOWNER=${WNNOWNER}
 .else
