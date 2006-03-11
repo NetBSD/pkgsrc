@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4732 2006/03/11 14:25:26 wiz Exp $
+$NetBSD: TODO,v 1.4733 2006/03/11 14:27:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -671,8 +671,6 @@ Suggested package updates
 	o libnasl-2.3.1
 	o libntlm-0.3.9
 	o libpqxx-2.5.5
-	o libprelude-0.9.7
-	o libpreludedb-0.9.6
 	o libshout-2.2
 	o libsmi-0.4.3
 	o libtcl-nothread-8.4.9
@@ -944,7 +942,6 @@ Suggested package updates
 	o potrace-1.7
 	o pptp-1.6.0 [pkg/26842]
 	o prayer-1.0.15
-	o prelude-lml-0.9.4
 	o proj-4.4.9
 	o projclock-0.9
 	o proxsmtp-1.2.1
