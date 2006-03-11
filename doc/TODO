@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4726 2006/03/11 00:16:15 minskim Exp $
+$NetBSD: TODO,v 1.4727 2006/03/11 02:42:42 rillig Exp $
 
 Suggested new packages
 ======================
@@ -1039,7 +1039,6 @@ Suggested package updates
 	o rt-pgsql-3.4.5
 	o rtcw-1.41.3
 	o ruby-cmd-0.8.0
-	o rudiments-0.29
 	o rxvt-unicode-7.7
 	o sablecc-3.2
 	o sablevm-1.11.3 [pkg/30022]
