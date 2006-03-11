@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/02/05 23:10:34 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2006/03/11 04:30:14 reed Exp $
 
 DISTNAME=	rpm2pkg-2.1.1
 PKGREVISION=	1
@@ -25,7 +25,7 @@ LIBS+=		-lrpm -lintl -lz -lbz2
 CFLAGS+=	-Wall
 .endif
 
-INSTALLATION_DIRS=	man/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 do-build:
 	${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS} -o ${WRKSRC}/rpm2pkg \
@@ -33,7 +33,7 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rpm2pkg ${PREFIX}/sbin
-	${INSTALL_MAN} ${FILESDIR}/rpm2pkg.8 ${PREFIX}/man/man8
+	${INSTALL_MAN} ${FILESDIR}/rpm2pkg.8 ${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
