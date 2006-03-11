@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4729 2006/03/11 11:12:29 ghen Exp $
+$NetBSD: TODO,v 1.4730 2006/03/11 13:01:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -592,7 +592,7 @@ Suggested package updates
 	o httptunnel-3.3
 	o hugs-200503 [pkg/30071]
 	o hydrogen-0.9.2
-	o hyperestraier-1.1.4
+	o hyperestraier-1.1.4 [pkg/33058]
 	o i2ocfg-1.1
 	o icdprog-0.5
 	o icecast-2.3.1
@@ -993,6 +993,7 @@ Suggested package updates
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
 	o qcad-2.0.4.0 [pkgsrc-wip]
+	o qdbm-1.8.46 [pkg/32655]
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-docs-2.3.2
@@ -1030,12 +1031,13 @@ Suggested package updates
 	o rp-l2tp-0.4
 	o rp-pppoe-3.7
 	o rpc2-1.28
-	o rpm-4.4.4
+	o rpm-4.4.5
 	o rsnapshot-1.2.3
 	o rt-3.4.5
 	o rt-mysql-3.4.5
 	o rt-pgsql-3.4.5
 	o rtcw-1.41.3
+	o ruby-RMagick-1.10.1 [pkg/33056]
 	o ruby-cmd-0.8.0
 	o rxvt-unicode-7.7
 	o sablecc-3.2
