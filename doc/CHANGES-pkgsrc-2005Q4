@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.101 2006/03/11 03:48:16 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.102 2006/03/11 04:10:40 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -203,3 +203,5 @@ Pullup ticket 1212 - requested by Adrian Portelli
 security update for snort
 Pullup ticket 1203 - requested by Joerg Sonnenberger
 security fix for tuxpaint
+Pullup ticket 1204 - requested by Joerg Sonnenberger
+security fix for exim3
