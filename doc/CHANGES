@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13265 2006/03/11 22:01:32 wiz Exp $
+$NetBSD: CHANGES,v 1.13266 2006/03/11 22:05:26 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1454,3 +1454,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/amavis-perl to 0.1nb4 [wiz 2006-03-11]
 	Updated net/xorp to 1.2 [rillig 2006-03-11]
 	Added devel/libsigsegv version 2.2 [wiz 2006-03-11]
+	Updated devel/glade2 to 2.12.1 [jmmv 2006-03-11]
+	Updated devel/glade2-gnome to 2.12.1 [jmmv 2006-03-11]
