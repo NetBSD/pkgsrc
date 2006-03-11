@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4733 2006/03/11 14:27:07 wiz Exp $
+$NetBSD: TODO,v 1.4734 2006/03/11 21:02:56 rillig Exp $
 
 Suggested new packages
 ======================
@@ -1224,7 +1224,6 @@ Suggested package updates
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xorg-7.0
-	o xorp-1.2
 	o xpad-2.11
 	o xpp-1.5
 	o xpuyopuyo-0.9.5
