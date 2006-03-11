@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13250 2006/03/11 00:16:15 minskim Exp $
+$NetBSD: CHANGES,v 1.13251 2006/03/11 02:42:42 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1435,3 +1435,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/libprelude to 0.9.7 [shannonjr 2006-03-10]
 	Updated security/libpreludedb to 0.9.6 [shannonjr 2006-03-10]
 	Updated math/mathomatic to 12.5.11 [minskim 2006-03-11]
+	Updated devel/rudiments to 0.29 [rillig 2006-03-11]
