@@ -1,49 +1,48 @@
-# $NetBSD: Makefile,v 1.47 2006/03/04 21:29:53 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2006/03/11 23:32:44 wiz Exp $
 
-DISTNAME=		clisp-2.33.2
-PKGREVISION=		1
-CATEGORIES=		lang
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	clisp-2.38
+CATEGORIES=	lang
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clisp/}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://clisp.cons.org/
-COMMENT=		CLISP, a Common Lisp implementation
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://clisp.cons.org/
+COMMENT=	CLISP, a Common Lisp implementation
 
-NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64 *-*-x86_64	# severe LP64 problems
+# XXX: uncomment if still true (commented out during update to 2.38)
+#NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64 *-*-x86_64	# severe LP64 problems
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_INSTALLATION_TYPES= overwrite pkgviews
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/src
 USE_PKGLOCALEDIR=	YES
-CONFIGURE_ENV+=		CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q} CPPFLAGS=${CPPFLAGS:M*:Q} \
-			gt_cv_func_gnugettext2_libintl=yes
+BUILD_DIRS=		src
+CONFIGURE_DIRS=		. modules/i18n modules/syscalls modules/pcre modules/readline modules/regexp modules/wildcard
+CONFIGURE_ENV+=		CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q} CPPFLAGS=${CPPFLAGS:M*:Q}
 GNU_CONFIGURE=		YES
 UNLIMIT_RESOURCES=	stacksize
 USE_LIBTOOL=		YES
 USE_GNU_READLINE=	YES
-MODULES=		--with-module=syscalls --with-module=regexp
 MODULES+=		--with-module=pcre --with-module=wildcard
+CONFIGURE_ARGS+=	${MODULES}
+TEST_TARGET=		check
 
 post-patch:
-	${CP} files/tramp-rs6000-netbsd.o ${WRKSRC}/../ffcall/callback/trampoline_r
-	${CP} files/tramp-rs6000-netbsd.s ${WRKSRC}/../ffcall/callback/trampoline_r
-	${CP} files/vacall-rs6000-netbsd.s ${WRKSRC}/../ffcall/callback/vacall_r
+	${CP} files/tramp-rs6000-netbsd.o ${WRKSRC}/ffcall/callback/trampoline_r
+	${CP} files/tramp-rs6000-netbsd.s ${WRKSRC}/ffcall/callback/trampoline_r
+	${CP} files/vacall-rs6000-netbsd.s ${WRKSRC}/ffcall/callback/vacall_r
 
-do-configure:
-	cd ${WRKSRC} && \
-	(cd .. ; ${SETENV} ${CONFIGURE_ENV} \
-		${CONFIGURE_SCRIPT} --host=${MACHINE_GNU_PLATFORM} \
-			--prefix=${PREFIX} ${MODULES}) && \
+post-configure:
+	cd ${WRKSRC}/src && \
 	./makemake --prefix=${PREFIX} --with-readline --with-gettext \
 		--with-dynamic-ffi --fsstnd=netbsd ${MODULES} >Makefile
 
 pre-build:
-	cd ${WRKSRC}/avcall && ${MAKE}
-	cd ${WRKSRC}/callback && ${MAKE}
+	cd ${WRKSRC}/src/avcall && ${MAKE}
+	cd ${WRKSRC}/src/callback && ${MAKE}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libsigsegv/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 
