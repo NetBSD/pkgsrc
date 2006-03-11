@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.72 2006/03/10 22:14:52 rillig Exp $
+# $NetBSD: makevars.map,v 1.73 2006/03/11 00:01:28 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -92,6 +92,7 @@ CC_VERSION		Readonly
 CC			Readonly
 CFLAGS			List+ of CFlag
 CHECK_BUILTIN		YesNo
+CHECK_FILES_SKIP	List of Pathmask
 CHECK_INTERPRETER_SKIP	List+ of Pathmask
 CHECK_SHLIBS		YesNo
 CHECK_WRKREF_SKIP	List+ of Pathmask
@@ -119,6 +120,7 @@ DEINSTALL_EXTRA_TMPL	List+ of Pathname
 DEPENDS			List!+ of DependencyWithPath
 DESCR_SRC		List of Pathname
 DEVOSSAUDIO		Pathname
+DEVOSSSOUND		Pathname
 DISTFILES		List of Filename
 DISTINFO_FILE		RelativePkgPath
 DISTNAME		Filename
@@ -130,6 +132,7 @@ DJB_CONFIG_HOME		Filename
 DJB_RESTRICTED		YesNo
 DJB_MAKE_TARGETS	List of Identifier
 DJB_SLASHPACKAGE	YesNo
+DLOPEN_REQUIRE_PTHREADS	YesNo
 DL_AUTO_VARS		Yes
 DL_LIBS			List+ of LdFlag
 EGDIR			Pathname
