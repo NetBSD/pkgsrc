@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13267 2006/03/11 22:23:52 jmmv Exp $
+$NetBSD: CHANGES,v 1.13268 2006/03/11 23:35:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1458,3 +1458,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/glade2-gnome to 2.12.1 [jmmv 2006-03-11]
 	Renamed devel/glade2 to devel/glade [jmmv 2006-03-11]
 	Renamed devel/glade2-gnome to devel/glade-gnome [jmmv 2006-03-11]
+	Updated lang/clisp to 2.38 [wiz 2006-03-11]

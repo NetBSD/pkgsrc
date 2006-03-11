@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4735 2006/03/11 22:05:25 jmmv Exp $
+$NetBSD: TODO,v 1.4736 2006/03/11 23:35:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -398,7 +398,6 @@ Suggested package updates
 	o cksfv-1.3.9
 	o classpath-0.90
 	o classpath-gui-0.90
-	o clisp-2.38 (also see PR misc/31094)
 	o cmake-2.2.3
 	o cocoon-2.1.7
 	o columba-1.0RC1
