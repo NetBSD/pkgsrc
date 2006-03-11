@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/02/05 23:08:19 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2006/03/11 03:44:20 rillig Exp $
 
 DISTNAME=		hbench-OS-1.0
 PKGNAME=		hbench-1.0
@@ -21,9 +21,13 @@ USE_TOOLS+=		perl:run
 
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
+GET_ARCH_CMD=		${PKGSRCDIR:Q}/mk/gnu-config/config.guess | ${SED} -e 's/-.*-.*$$//'
+GET_OS_CMD=		${PKGSRCDIR:Q}/mk/gnu-config/config.guess | ${SED} -e 's/^.*-.*-//'
+PLIST_SUBST+=		PLATFORM=${GET_OS_CMD:sh:Q}-${GET_ARCH_CMD:sh:Q}
+
 pre-configure:
-	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/scripts
-	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/scripts
+	${INSTALL} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/scripts
+	${INSTALL} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/scripts
 
 post-configure:
 	cd ${WRKSRC};							\
