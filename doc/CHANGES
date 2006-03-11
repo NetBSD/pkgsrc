@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13258 2006/03/11 13:17:48 taca Exp $
+$NetBSD: CHANGES,v 1.13259 2006/03/11 13:23:39 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1443,3 +1443,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/ja-sed to 3.02nb2 [wiz 2006-03-11]
 	Updated textproc/ja-grep to 2.4.2 [wiz 2006-03-11]
 	Updated www/squid to 2.5.12nb7 [taca 2006-03-11]
+	Added shells/zsh-current version 4.3.2 [uebayasi 2006-03-11]
