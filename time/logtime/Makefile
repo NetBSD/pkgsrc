@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2004/12/03 15:15:11 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/11 11:12:34 kim Exp $
 #
 
 DISTNAME=		logtime-1.2
@@ -12,9 +12,9 @@ COMMENT=		Prints date and time in a standard format
 
 NO_CONFIGURE=		yes
 
-MAKE_PARAMS+=		PREFIX=${PREFIX}
+MAKE_FLAGS+=		PREFIX=${PREFIX}
 
-BUILD_TARGET=		all ${MAKE_PARAMS}
-INSTALL_TARGET=		install ${MAKE_PARAMS}
+BUILD_TARGET=		all
+INSTALL_TARGET=		install
 
 .include "../../mk/bsd.pkg.mk"
