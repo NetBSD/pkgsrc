@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/03/11 10:07:50 ghen Exp $
+# $NetBSD: Makefile,v 1.24 2006/03/11 18:22:22 rillig Exp $
 
 DISTNAME=	xteddy-2.0.1
 PKGREVISION=	8
@@ -18,18 +18,10 @@ REPLACE.bash.old=	/bin/bash
 REPLACE.bash.new=	/bin/ksh
 REPLACE_FILES.bash=	xtoys
 
-pre-configure:
-	files="configure xteddy_test xtoys";				\
-	cd ${WRKSRC}; for file in $${files}; do				\
-		${MV} $${file} $${file}.fixme;				\
-		${SED} -e "s|@PREFIX@|${PREFIX}|g"			\
-			$${file}.fixme >> $${file};			\
-		if [ -x $${file}.fixme ]; then				\
-			${CHMOD} +x $${file};				\
-		fi;							\
-		${RM} -f $${file}.fixme;				\
-	done
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	pre-configure
+SUBST_FILES.prefix=	configure xteddy_test xtoys
+SUBST_SED.prefix=	-e 's|@PREFIX@|${PREFIX}|g'
 
 .include "../../graphics/imlib/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
