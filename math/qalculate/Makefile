@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2006/02/24 21:09:13 adam Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/11 03:26:05 rillig Exp $
 
 DISTNAME=	libqalculate-0.9.2
 PKGNAME=	qalculate-0.9.2
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qalculate/}
 
@@ -11,7 +12,6 @@ COMMENT=	Qalculate is a modern multi-purpose desktop calculator
 
 USE_GNU_READLINE=	yes
 USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

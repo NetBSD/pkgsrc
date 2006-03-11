@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/02/19 12:53:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/03/11 03:26:05 rillig Exp $
 bin/qalc
 include/libqalculate/BuiltinFunctions.h
 include/libqalculate/Calculator.h
@@ -15,7 +15,6 @@ include/libqalculate/qalculate.h
 include/libqalculate/util.h
 lib/libqalculate.la
 lib/pkgconfig/libqalculate.pc
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libqalculate.mo
 share/qalculate/currencies.xml
 share/qalculate/datasets.xml
 share/qalculate/elements.xml
