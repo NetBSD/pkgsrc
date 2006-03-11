@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/04 21:30:19 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/11 17:25:23 wiz Exp $
 
 DISTNAME=		jigdo-0.7.1
 PKGREVISION=		2
@@ -14,6 +14,7 @@ USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-libdb
+BROKEN_GETTEXT_DETECTION=	yes
 
 #.include "../../databases/db3/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
