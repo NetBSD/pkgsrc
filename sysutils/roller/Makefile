@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2005/09/28 20:52:27 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2006/03/11 11:13:51 kim Exp $
 #
 
 DISTNAME=		roller-1.19
@@ -19,12 +19,12 @@ DEPENDS+=		pflogsumm-[0-9]*:../../sysutils/pflogsumm
 NO_CONFIGURE=		yes
 USE_TOOLS+=		perl:run
 
-MAKE_PARAMS+=		PREFIX=${PREFIX}
-MAKE_PARAMS+=		GAWK=${AWK}
-MAKE_PARAMS+=		PERL=${PERL5}
-MAKE_PARAMS+=		SH=${SH}
+MAKE_FLAGS+=		PREFIX=${PREFIX}
+MAKE_FLAGS+=		GAWK=${AWK}
+MAKE_FLAGS+=		PERL=${PERL5}
+MAKE_FLAGS+=		SH=${SH}
 
-BUILD_TARGET=		all ${MAKE_PARAMS}
-INSTALL_TARGET=		install ${MAKE_PARAMS}
+BUILD_TARGET=		all
+INSTALL_TARGET=		install
 
 .include "../../mk/bsd.pkg.mk"
