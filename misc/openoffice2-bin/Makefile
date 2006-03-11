@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/11 11:11:04 ghen Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/11 11:15:39 ghen Exp $
 
 PKGNAME=		openoffice-bin-2.0.2
 CATEGORIES=		misc
@@ -16,7 +16,7 @@ RPM2PKGARGS=		-d ${PREFIX} -f ${WRKDIR}/PLIST.nouniq -s 1
 
 OO_VER=			2.0
 PLIST_SUBST+=		VER=${OO_VER:Q}
-MESSAGE_SUBST+=		VER=${OO_VER}
+MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
 
 NO_CONFIGURE=           yes
