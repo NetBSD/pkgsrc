@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.6 2004/03/02 15:26:02 drochner Exp $
+# $NetBSD: application.mk,v 1.7 2006/03/11 10:07:50 ghen Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -8,7 +8,7 @@
 
 .if defined(PYTHON_PATCH_SCRIPTS)
 REPLACE_INTERPRETER+=	python
-_REPLACE.python.old=	.*python[^ ]*
-_REPLACE.python.new=	${PYTHONBIN}
-_REPLACE_FILES.python=	${PYTHON_PATCH_SCRIPTS}
+REPLACE.python.old=	.*python[^ ]*
+REPLACE.python.new=	${PYTHONBIN}
+REPLACE_FILES.python=	${PYTHON_PATCH_SCRIPTS}
 .endif
