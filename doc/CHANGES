@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13266 2006/03/11 22:05:26 jmmv Exp $
+$NetBSD: CHANGES,v 1.13267 2006/03/11 22:23:52 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1456,3 +1456,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/libsigsegv version 2.2 [wiz 2006-03-11]
 	Updated devel/glade2 to 2.12.1 [jmmv 2006-03-11]
 	Updated devel/glade2-gnome to 2.12.1 [jmmv 2006-03-11]
+	Renamed devel/glade2 to devel/glade [jmmv 2006-03-11]
+	Renamed devel/glade2-gnome to devel/glade-gnome [jmmv 2006-03-11]
