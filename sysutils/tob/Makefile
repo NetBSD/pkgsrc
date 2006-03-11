@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/09 14:50:31 ghen Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/11 10:07:50 ghen Exp $
 
 DISTNAME=	tob-0.25
 CATEGORIES=	sysutils
@@ -18,9 +18,9 @@ CONF_FILES+=	${EGDIR}/example.startdir ${PKG_SYSCONFDIR}/tob/volumes/example.sta
 INSTALLATION_DIRS=	man/man8 sbin
 
 REPLACE_INTERPRETER+=	bash
-_REPLACE.bash.old=	/bin/bash
-_REPLACE.bash.new=	${SH:Q}
-_REPLACE_FILES.bash=	tob
+REPLACE.bash.old=	/bin/bash
+REPLACE.bash.new=	${SH}
+REPLACE_FILES.bash=	tob
 
 do-build:
 	for f in tob tob.rc; do						\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:30:27 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/11 10:07:50 ghen Exp $
 #
 
 DISTNAME=		OpenPBS_2_3_16
@@ -17,20 +17,20 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
 REPLACE_INTERPRETER+=	tcl
-_REPLACE.tcl.old=	.*/bin/pbs_tclsh
-_REPLACE.tcl.new=	${PREFIX}/bin/tclsh
-_REPLACE_FILES.tcl+=	src/gui/buildindex.src
-_REPLACE_FILES.tcl+=	src/tools/xpbsmon/buildindex.src
+REPLACE.tcl.old=	.*/bin/pbs_tclsh
+REPLACE.tcl.new=	${PREFIX}/bin/tclsh
+REPLACE_FILES.tcl+=	src/gui/buildindex.src
+REPLACE_FILES.tcl+=	src/tools/xpbsmon/buildindex.src
 
 REPLACE_INTERPRETER+=	tk
-_REPLACE.tk.old=	.*/bin/wish
-_REPLACE.tk.new=	${PREFIX}/bin/wish
-_REPLACE_FILES.tk+=	src/gui/xpbs.src
+REPLACE.tk.old=	.*/bin/wish
+REPLACE.tk.new=	${PREFIX}/bin/wish
+REPLACE_FILES.tk+=	src/gui/xpbs.src
 
 REPLACE_INTERPRETER+=	tk2
-_REPLACE.tk2.old=	.*/bin/pbs_wish
-_REPLACE.tk2.new=	${PREFIX}/bin/pbs_wish
-_REPLACE_FILES.tk2+=	src/tools/xpbsmon/xpbsmon.src
+REPLACE.tk2.old=	.*/bin/pbs_wish
+REPLACE.tk2.new=	${PREFIX}/bin/pbs_wish
+REPLACE_FILES.tk2+=	src/tools/xpbsmon/xpbsmon.src
 
 _CONFIGURE_POSTREQ+=     replace-interpreter
 

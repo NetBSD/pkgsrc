@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/09 14:50:31 ghen Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/11 10:07:49 ghen Exp $
 #
 
 DISTNAME=		fribidi-0.10.4
@@ -12,9 +12,9 @@ HOMEPAGE=		http://fribidi.sourceforge.net/
 COMMENT=		Free Implementation of the Unicode Bidirectional Algorithm
 
 REPLACE_INTERPRETER+=	bash
-_REPLACE.bash.old=	/bin/bash
-_REPLACE.bash.new=	${SH:Q}
-_REPLACE_FILES.bash=	run.tests
+REPLACE.bash.old=	/bin/bash
+REPLACE.bash.new=	${SH}
+REPLACE_FILES.bash=	run.tests
 
 USE_LIBTOOL=            yes
 GNU_CONFIGURE=		yes

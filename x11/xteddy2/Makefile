@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/03/09 14:50:32 ghen Exp $
+# $NetBSD: Makefile,v 1.23 2006/03/11 10:07:50 ghen Exp $
 
 DISTNAME=	xteddy-2.0.1
 PKGREVISION=	8
@@ -14,9 +14,9 @@ CONFLICTS+=	xteddy-1.*
 GNU_CONFIGURE=	yes
 
 REPLACE_INTERPRETER+=	bash
-_REPLACE.bash.old=	/bin/bash
-_REPLACE.bash.new=	/bin/ksh
-_REPLACE_FILES.bash=	xtoys
+REPLACE.bash.old=	/bin/bash
+REPLACE.bash.new=	/bin/ksh
+REPLACE_FILES.bash=	xtoys
 
 pre-configure:
 	files="configure xteddy_test xtoys";				\
