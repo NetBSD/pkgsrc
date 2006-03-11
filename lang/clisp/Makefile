@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/03/11 23:32:44 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2006/03/11 23:55:07 wiz Exp $
 
 DISTNAME=	clisp-2.38
 CATEGORIES=	lang
@@ -16,13 +16,15 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_PKGLOCALEDIR=	YES
 BUILD_DIRS=		src
-CONFIGURE_DIRS=		. modules/i18n modules/syscalls modules/pcre modules/readline modules/regexp modules/wildcard
+CONFIGURE_DIRS=		. modules/i18n modules/syscalls modules/pcre modules/rawsock \
+			modules/readline modules/regexp modules/wildcard modules/zlib
 CONFIGURE_ENV+=		CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q} CPPFLAGS=${CPPFLAGS:M*:Q}
 GNU_CONFIGURE=		YES
 UNLIMIT_RESOURCES=	stacksize
 USE_LIBTOOL=		YES
 USE_GNU_READLINE=	YES
-MODULES+=		--with-module=pcre --with-module=wildcard
+MODULES+=		--with-module=pcre --with-module=rawsock
+MODULES+=		--with-module=wildcard --with-module=zlib
 CONFIGURE_ARGS+=	${MODULES}
 TEST_TARGET=		check
 
@@ -45,5 +47,6 @@ pre-build:
 .include "../../devel/libsigsegv/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
