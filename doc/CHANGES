@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13254 2006/03/11 11:11:41 ghen Exp $
+$NetBSD: CHANGES,v 1.13255 2006/03/11 13:04:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1439,3 +1439,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/wiliki to 0.5.3 [uebayasi 2006-03-11]
 	Updated devel/libusb to 0.1.12 [adam 2006-03-11]
 	Updated misc/openoffice2-bin to 2.0.2 [ghen 2006-03-11]
+	Updated lang/ja-gawk to 3.0.6 [wiz 2006-03-11]
