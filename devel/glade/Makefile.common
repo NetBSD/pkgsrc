@@ -1,7 +1,6 @@
-# $NetBSD: Makefile.common,v 1.8 2006/03/11 22:05:02 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.1 2006/03/11 22:23:53 jmmv Exp $
 
 DISTNAME=	glade-2.12.1
-PKGNAME=	${DISTNAME:S/-/2-/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glade/2.12/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,9 +9,11 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://glade.gnome.org/
 COMMENT=	User interface builder for the GTK2+ toolkit
 
-DISTINFO_FILE=	${.CURDIR}/../../devel/glade2/distinfo
-PATCHDIR=	${.CURDIR}/../../devel/glade2/patches
-PLIST_SRC=	${.CURDIR}/../../devel/glade2/PLIST
+DISTINFO_FILE=	${.CURDIR}/../../devel/glade/distinfo
+PATCHDIR=	${.CURDIR}/../../devel/glade/patches
+PLIST_SRC=	${.CURDIR}/../../devel/glade/PLIST
+
+CONFLICTS+=		glade2-[0-9]* glade2-gnome-[0-9]*
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
