@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:10:17 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/11 04:20:36 reed Exp $
 
 .include "Makefile.common"
 
@@ -14,7 +14,7 @@ NO_CONFIGURE=	YES
 INSTALLATION_DIRS=	man/man1
 
 do-install:
-	${INSTALL_MAN} ${WRKSRC}/DOCS/man/en/mplayer.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/DOCS/man/en/mplayer.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer
 	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer/DOCS
 	${INSTALL_DATA} ${WRKSRC}/etc/codecs.conf ${PREFIX}/share/mplayer
