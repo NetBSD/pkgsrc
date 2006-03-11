@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2005/08/03 20:46:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/03/11 23:32:44 wiz Exp $
 bin/clisp
+lib/clisp/base/calls.o
+lib/clisp/base/gettext.o
 lib/clisp/base/libavcall.a
 lib/clisp/base/libcallback.a
 lib/clisp/base/libcharset.a
@@ -10,11 +12,16 @@ lib/clisp/base/lispinit.mem
 lib/clisp/base/makevars
 lib/clisp/base/modules.h
 lib/clisp/base/modules.o
+lib/clisp/base/readline.o
+lib/clisp/base/regex.o
+lib/clisp/base/regexi.o
+lib/clisp/base/regexp.dvi
 lib/clisp/clisp-link
+lib/clisp/data/Symbol-Table.text
 lib/clisp/data/UnicodeDataFull.txt
-lib/clisp/data/clhs.txt
 lib/clisp/full/calls.o
 lib/clisp/full/cpcre.o
+lib/clisp/full/gettext.o
 lib/clisp/full/libavcall.a
 lib/clisp/full/libcallback.a
 lib/clisp/full/libcharset.a
@@ -25,12 +32,13 @@ lib/clisp/full/lispinit.mem
 lib/clisp/full/makevars
 lib/clisp/full/modules.h
 lib/clisp/full/modules.o
+lib/clisp/full/readline.o
+lib/clisp/full/regex.o
 lib/clisp/full/regexi.o
 lib/clisp/full/regexp.dvi
 lib/clisp/full/wildcard.dvi
 lib/clisp/full/wildcard.o
 lib/clisp/linkkit/clisp.h
-lib/clisp/linkkit/exporting.lisp
 lib/clisp/linkkit/modprep.lisp
 lib/clisp/linkkit/modules.c
 lib/clisp/linkkit/modules.d
@@ -54,6 +62,8 @@ share/doc/clisp/clisp.ps
 share/doc/clisp/editors.txt
 share/doc/clisp/impnotes.css
 share/doc/clisp/impnotes.html
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/clisp.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/clisplow.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/clisp.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/clisplow.mo
 ${PKGLOCALEDIR}/locale/en/LC_MESSAGES/clisp.mo
