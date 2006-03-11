@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.23 2005/12/05 22:07:07 rillig Exp $
+# $NetBSD: emacs.mk,v 1.24 2006/03/11 06:23:20 uebayasi Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -117,6 +117,18 @@
 #			must honour this!
 #		Possible values:
 #			"", "xemacs-"
+#
+#	EMACS_VERSION_MAJOR
+#		Description:
+#			Emacs major version.
+#		Possible values:
+#			20, 21, 22, <integers more than that in the future>
+#
+#	EMACS_VERSION_MINOR
+#		Description:
+#			Emacs minor version.
+#		Possible values:
+#			<interger>
 #
 # Variables provided in ELPs' PLIST:
 #
@@ -283,6 +295,8 @@ CONFLICTS+=	${PKGBASE:C|^xemacs-||}-[0-9]*
 
 EMACS_FLAVOR=		${_EMACS_TYPE:C|nox||:C|[0-9].*||}
 EMACS_BIN=		${PREFIX}/bin/${EMACS_FLAVOR}
+EMACS_VERSION_MAJOR=	${_EMACS_VERSION_MAJOR}
+EMACS_VERSION_MINOR=	${_EMACS_VERSION_MINOR}
 .if ${EMACS_FLAVOR} == "emacs"
 EMACS_ETCPREFIX=	${PREFIX}/share
 EMACS_INFOPREFIX=	${PREFIX}/info
