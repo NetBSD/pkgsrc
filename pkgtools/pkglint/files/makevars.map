@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.73 2006/03/11 00:01:28 rillig Exp $
+# $NetBSD: makevars.map,v 1.74 2006/03/11 18:38:35 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -10,11 +10,12 @@
 # The type Yes is used for variables that are checked using
 #     .if defined(VAR)
 #
-# Type type List is used for lists of things. There are two modifiers
-# for lists: The "+" means that this variable should only be initialized
-# to the empty list or have some values appended using the "+=" operator.
-# The "!" means that the list is an internal list. See the pkgsrc guide,
-# chapter "Makefiles" for a detailed explanation.
+# Type type List is used for lists of things. There are two types of lists,
+# InternalList and List, which are described in the pkgsrc guide, chapter
+# "Makefiles". When a "+" is appended to the List keyword, it means that
+# this variable should only be initialized to the empty list or have some
+# values appended using the "+=" operator. All other operations will
+# generate a warning.
 
 # some variables from mk/defaults/mk.conf, 1.27
 
@@ -53,7 +54,7 @@ BUILDLINK_CONTENTS_FILTER	List of ShellWord
 # ^^ ShellCommand
 BUILDLINK_CFLAGS	List+ of CFlag
 BUILDLINK_CPPFLAGS	List+ of CFlag
-BUILDLINK_DEPENDS	List!+ of Dependency
+BUILDLINK_DEPENDS	InternalList+ of Dependency
 BUILDLINK_DEPMETHOD	BuildlinkDepmethod
 BUILDLINK_DEPTH		BuildlinkDepth
 BUILDLINK_FILES		List+ of Pathmask
@@ -70,12 +71,12 @@ BUILDLINK_PASSTHRU_DIRS	List+ of Pathname
 BUILDLINK_PASSTHRU_RPATHDIRS	List+ of Pathname
 BUILDLINK_PKGSRCDIR	RelativePkgDir
 BUILDLINK_PREFIX	Pathname
-BUILDLINK_RECOMMENDED	List!+ of Dependency
+BUILDLINK_RECOMMENDED	InternalList+ of Dependency
 BUILDLINK_RPATHDIRS	List of Pathname
 BUILDLINK_TARGETS	List+ of Identifier
 BUILDLINK_TRANSFORM	List+
 BUILD_DEFS		List+ of Varname
-BUILD_DEPENDS		List!+ of DependencyWithPath
+BUILD_DEPENDS		InternalList+ of DependencyWithPath
 BUILD_DIRS		List of WrksrcSubdirectory
 BUILD_ENV		List+ of ShellWord
 BUILD_TARGET		List of Identifier
@@ -117,7 +118,8 @@ CXX			Readonly
 CXXFLAGS		List+ of CFlag
 DEINSTALL_FILE		Pathname
 DEINSTALL_EXTRA_TMPL	List+ of Pathname
-DEPENDS			List!+ of DependencyWithPath
+DEINSTALL_SRC		List of Pathname
+DEPENDS			InternalList+ of DependencyWithPath
 DESCR_SRC		List of Pathname
 DEVOSSAUDIO		Pathname
 DEVOSSSOUND		Pathname
@@ -149,7 +151,8 @@ EMACS_USE_LEIM		Yes
 EMACS_VERSIONS_ACCEPTED	List of { emacs21 emacs21nox emacs20 xemacs215 xemacs214 }
 EMACS_VERSION_REQD	List+
 # ^^ of Version
-EVAL_PREFIX		List! of ShellWord
+EVAL_PREFIX		InternalList of ShellWord
+# ^^ FIXME: Looks like a type mismatch.
 EXTRACT_CMD		List of ShellWord
 EXTRACT_ELEMENTS	List of Pathmask
 EXTRACT_ONLY		List of Pathname
@@ -204,6 +207,7 @@ INSTALL_PROGRAM_DIR	ShellCommand
 INSTALL_SCRIPT		ShellCommand
 INSTALL_SCRIPTS_ENV	List+ of ShellWord
 INSTALL_SCRIPT_DIR	ShellCommand
+INSTALL_SRC		List of Pathname
 INSTALL_TARGET		List of Identifier
 INSTALL_UNSTRIPPED	YesNo
 INTERACTIVE_STAGE	List of { fetch extract configure build install }
@@ -211,7 +215,7 @@ IS_BUILTIN		YesNoFromCommand
 JAVA_CLASSPATH		ShellWord
 JAVA_NAME		Filename
 JAVA_UNLIMIT		List+ of { cmdsize datasize stacksize }
-JAVA_WRAPPERS		List!+ of Filename
+JAVA_WRAPPERS		InternalList+ of Filename
 KRB5BASE		Readonly
 KRB5_ACCEPTED		List of { heimdal mit-krb5 }
 KRB5_DEFAULT		Userdefined
