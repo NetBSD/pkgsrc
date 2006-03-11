@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2006/01/11 18:26:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/11 14:24:58 wiz Exp $
 
-DISTNAME=	hyperestraier-1.1.2
+DISTNAME=	hyperestraier-1.1.4
 CATEGORIES=	japanese textproc www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hyperestraier/}
 
