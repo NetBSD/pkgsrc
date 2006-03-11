@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2006/03/09 21:04:45 jlam Exp $
+# $NetBSD: Makefile.common,v 1.5 2006/03/11 04:08:47 reed Exp $
 
 DISTNAME=	libdv-0.104
 CATEGORIES=	multimedia
@@ -30,6 +30,9 @@ CONFIGURE_ARGS+=	--disable-xv
 .endif
 
 LIBS+=		${LIBOSSAUDIO}
+.if empty(CFLAGS:M-O*)
+CFLAGS+=	-O
+.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
