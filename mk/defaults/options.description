@@ -338,3 +338,4 @@ xvid			Enable usage of XVid codecs.
 zaptel	
 zip	
 ziplinks		Compress data before transmitting it between servers.
+zsh-multibyte		Enable multibyte support in Zsh.
