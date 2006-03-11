@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.112 2006/03/04 13:40:07 taca Exp $
+$NetBSD: distinfo,v 1.113 2006/03/11 13:15:59 taca Exp $
 
 SHA1 (squid-2.5.12/squid-2.5.STABLE12.tar.bz2) = 57a046ca0eda0f649d259c2c161dc95c81a5dc09
 RMD160 (squid-2.5.12/squid-2.5.STABLE12.tar.bz2) = 0b332612d90d74681e47505a2afbfb6c962807a4
@@ -60,6 +60,24 @@ Size (squid-2.5.12/squid-2.5.STABLE12-ftpdates.patch) = 721 bytes
 SHA1 (squid-2.5.12/squid-2.5.STABLE12-ftpsymlink.patch) = 64262b4cc3fa4c98b8a60146c21af7c34cb40b35
 RMD160 (squid-2.5.12/squid-2.5.STABLE12-ftpsymlink.patch) = 5ff75c30c89a085c4744274a09f5bfcacc82d92e
 Size (squid-2.5.12/squid-2.5.STABLE12-ftpsymlink.patch) = 580 bytes
+SHA1 (squid-2.5.12/squid-2.5.STABLE12-max_user_ip_log-2.patch) = 047a39c0333fafe75a16b4c1cc62826cc8238253
+RMD160 (squid-2.5.12/squid-2.5.STABLE12-max_user_ip_log-2.patch) = 47fae164af955b60496fd05ac38e79d0f19d5ee4
+Size (squid-2.5.12/squid-2.5.STABLE12-max_user_ip_log-2.patch) = 583 bytes
+SHA1 (squid-2.5.12/squid-2.5.STABLE12-longhostnames.patch) = 0ddadffbdabe95e2bc9d94f7fe4e9e8113fe7200
+RMD160 (squid-2.5.12/squid-2.5.STABLE12-longhostnames.patch) = aa9da95400035935f5354e2d219f72ea3adef73d
+Size (squid-2.5.12/squid-2.5.STABLE12-longhostnames.patch) = 2777 bytes
+SHA1 (squid-2.5.12/squid-2.5.STABLE12-Azerbaijani.patch) = 562b759a842cee196cc023b51d97e27b5ae17d5f
+RMD160 (squid-2.5.12/squid-2.5.STABLE12-Azerbaijani.patch) = 280fc25ebdce7075e5d7706657ee3b1cfd44a741
+Size (squid-2.5.12/squid-2.5.STABLE12-Azerbaijani.patch) = 36320 bytes
+SHA1 (squid-2.5.12/squid-2.5.STABLE12-peer_dns_error.patch) = 3152bbf72623ac81974f9827f6f2939c49a67fef
+RMD160 (squid-2.5.12/squid-2.5.STABLE12-peer_dns_error.patch) = b91ff8140ba79535587fa27336b4a9cf16c0074b
+Size (squid-2.5.12/squid-2.5.STABLE12-peer_dns_error.patch) = 6141 bytes
+SHA1 (squid-2.5.12/squid-2.5.STABLE12-statefulhelpers_statistics.patch) = 466f04878ded84f377857e2e9cad0f234be93d7a
+RMD160 (squid-2.5.12/squid-2.5.STABLE12-statefulhelpers_statistics.patch) = e0521c0e5c604a9854d174e0b46b8729c227c97d
+Size (squid-2.5.12/squid-2.5.STABLE12-statefulhelpers_statistics.patch) = 3185 bytes
+SHA1 (squid-2.5.12/squid-2.5.STABLE12-connstate_leak.patch) = 0282df3c75ccbb7d796f442a53443d7a2e57db73
+RMD160 (squid-2.5.12/squid-2.5.STABLE12-connstate_leak.patch) = d4faeae1446336837bb51666e20f806974fe3bf2
+Size (squid-2.5.12/squid-2.5.STABLE12-connstate_leak.patch) = 1683 bytes
 SHA1 (patch-aa) = 25d47b8ab8618af2b1d2a40f1dc3630cdc14038c
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
