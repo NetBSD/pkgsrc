@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/09 11:28:00 ghen Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/11 10:07:50 ghen Exp $
 
 DISTNAME=       atitvout-0.4
 PKGREVISION=	1
@@ -26,9 +26,9 @@ do-configure:
 .endif
 
 REPLACE_INTERPRETER+=	bash
-_REPLACE.bash.old=	/bin/bash
-_REPLACE.bash.new=	${SH:Q}
-_REPLACE_FILES.bash=	test.sh
+REPLACE.bash.old=	/bin/bash
+REPLACE.bash.new=	${SH}
+REPLACE_FILES.bash=	test.sh
 
 SUBST_CLASSES+=	sh
 SUBST_STAGE.sh=	pre-configure

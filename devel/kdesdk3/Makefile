@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/02/07 19:59:21 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2006/03/11 10:07:49 ghen Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 PKGREVISION=	1
@@ -49,9 +49,9 @@ REPLACE_PERL+=	cervisia/change_colors.pl \
 		scripts/rc2kcfgxt.pl
 
 REPLACE_INTERPRETER+=	bash
-_REPLACE.bash.old=	/bin/bash
-_REPLACE.bash.new=	/bin/sh
-_REPLACE_FILES.bash=	scripts/cvs2dist scripts/makeobj \
+REPLACE.bash.old=	/bin/bash
+REPLACE.bash.new=	${SH}
+REPLACE_FILES.bash=	scripts/cvs2dist scripts/makeobj \
 		scripts/package_crystalsvg
 
 .include "../../mk/bsd.prefs.mk"
