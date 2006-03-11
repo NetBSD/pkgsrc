@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1.2.2 2006/03/11 03:48:05 snj Exp $
+
+--- src/tuxpaint-import.sh.orig	2003-06-17 10:10:59.000000000 +0100
++++ src/tuxpaint-import.sh
+@@ -12,8 +12,8 @@
+ # September 21, 2002 - June 17, 2003
+ 
+ 
+-TMPDIR=/tmp
+ SAVEDIR=$HOME/.tuxpaint/saved
++TMPDIR=$SAVEDIR
+ 
+ 
+ if [ $# -eq 0 ]; then
