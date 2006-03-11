@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13255 2006/03/11 13:04:35 wiz Exp $
+$NetBSD: CHANGES,v 1.13256 2006/03/11 13:07:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1440,3 +1440,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/libusb to 0.1.12 [adam 2006-03-11]
 	Updated misc/openoffice2-bin to 2.0.2 [ghen 2006-03-11]
 	Updated lang/ja-gawk to 3.0.6 [wiz 2006-03-11]
+	Updated textproc/ja-sed to 3.02nb2 [wiz 2006-03-11]
