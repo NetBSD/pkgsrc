@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/02/28 00:10:04 wulf Exp $
+# $NetBSD: Makefile,v 1.18 2006/03/11 01:53:39 rillig Exp $
 #
 
 DISTNAME=	hamlib-1.2.5
@@ -17,6 +17,10 @@ USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=--without-tcl-binding \
 		--without-perl-binding \
 		--without-python-binding
+
+# The configure script is broken. It even requires a Python interpreter
+# when none is needed.
+CONFIGURE_ENV+=	PYTHON=/nonexistent
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/hamlib
