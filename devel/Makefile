@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.739 2006/03/11 22:00:30 wiz Exp $
+# $NetBSD: Makefile,v 1.740 2006/03/11 22:23:53 jmmv Exp $
 #
 
 COMMENT=	Development utilities
@@ -160,8 +160,8 @@ SUBDIR+=	gettext-m4
 SUBDIR+=	gettext-tools
 SUBDIR+=	giblib
 SUBDIR+=	gindent
-SUBDIR+=	glade2
-SUBDIR+=	glade2-gnome
+SUBDIR+=	glade
+SUBDIR+=	glade-gnome
 SUBDIR+=	glib
 SUBDIR+=	glib2
 SUBDIR+=	glibmm
