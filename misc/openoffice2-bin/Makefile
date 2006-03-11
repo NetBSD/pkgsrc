@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:10:13 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/11 11:11:04 ghen Exp $
 
-PKGNAME=		openoffice-bin-2.0.1
-PKGREVISION=		1
+PKGNAME=		openoffice-bin-2.0.2
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/2.0.1/}
+MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/2.0.2/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		mrauch@NetBSD.org
@@ -51,33 +50,33 @@ DEINSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 .    if !exists(/emul/svr4/usr/lib/ld.so)
 PKG_FAIL_REASON+=	'${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
 .    endif
-DISTNAME=	OOo_2.0.1_SolarisSparc_install
-WRKSRC=		${WRKDIR}/OOA680_m1_native_packed-1_en-US.8990/packages
+DISTNAME=	OOo_2.0.2_SolarisSparc_install
+WRKSRC=		${WRKDIR}/OOB680_m5_native_packed-1_en-US.9011/packages
 .  elif ${MACHINE_ARCH} == "i386"
-DISTNAME=	OOo_2.0.1_LinuxIntel_install
-WRKSRC=		${WRKDIR}/OOA680_m1_native_packed-1_en-US.8990/RPMS
+DISTNAME=	OOo_2.0.2_LinuxIntel_install
+WRKSRC=		${WRKDIR}/OOB680_m5_native_packed-1_en-US.9011/RPMS
 .  endif
 .endif
 
 .if ${OPSYS} == "DragonFly"
-DISTNAME=	OOo_2.0.1_LinuxIntel_install
-WRKSRC=		${WRKDIR}/OOA680_m1_native_packed-1_en-US.8990/RPMS
+DISTNAME=	OOo_2.0.2_LinuxIntel_install
+WRKSRC=		${WRKDIR}/OOB680_m5_native_packed-1_en-US.9011/RPMS
 .endif
 
 .if ${OPSYS} == "Linux"
 .if ${ARCH} == "i386"
-DISTNAME=	OOo_2.0.1_LinuxIntel_install
-WRKSRC=		${WRKDIR}/OOA680_m1_native_packed-1_en-US.8990/RPMS
+DISTNAME=	OOo_2.0.2_LinuxIntel_install
+WRKSRC=		${WRKDIR}/OOB680_m5_native_packed-1_en-US.9011/RPMS
 .endif
 .endif
 
 .if ${OPSYS} == "SunOS"
 .if ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64"
-DISTNAME=	OOo_2.0.1_SolarisSparc_install
-WRKSRC=		${WRKDIR}/OOA680_m1_native_packed-1_en-US.8990/packages
+DISTNAME=	OOo_2.0.2_SolarisSparc_install
+WRKSRC=		${WRKDIR}/OOB680_m5_native_packed-1_en-US.9011/packages
 .elif ${MACHINE_ARCH} == "i386"
-DISTNAME=	OOo_2.0.1_Solarisx86_install
-WRKSRC=		${WRKDIR}/OOA680_m1_native_packed-1_en-US.8990/packages
+DISTNAME=	OOo_2.0.2_Solarisx86_install
+WRKSRC=		${WRKDIR}/OOB680_m5_native_packed-1_en-US.9011/packages
 .endif
 .endif
 
