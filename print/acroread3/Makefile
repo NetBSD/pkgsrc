@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/03/04 21:30:28 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2006/03/11 01:35:21 rillig Exp $
 
 PKGNAME=	acroread3-3.01
 PKGREVISION=	1
@@ -23,6 +23,7 @@ NO_BUILD=	YES
 
 .if ${OPSYS} == "NetBSD"
 .if (${MACHINE_ARCH} == "i386")
+SUSE_PREFER=	7.3	# Does not work with 9.1
 DEPENDS+=	suse_libc5>=6.3:../../emulators/${SUSE_DIR_PREFIX}_libc5
 DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DISTNAME=	acroread_linux_301
