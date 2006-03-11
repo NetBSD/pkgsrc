@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2006/02/11 11:20:22 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2006/03/11 03:19:02 reed Exp $
 #
 
 DISTNAME=	bonnie++-1.03a
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.coker.com.au/bonnie++/
 EXTRACT_SUFX=	.tgz
@@ -18,7 +18,11 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl:run tee
 REPLACE_PERL+=		bon_csv2txt.in bon_csv2html.in
 
-INSTALLATION_DIRS=	bin man/man1 man/man8 sbin
+INSTALLATION_DIRS=	share/doc/bonnie++
+
+# todo: patch bonnie++.8 to point to correct path to readme.html
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/readme.html ${PREFIX}/share/doc/bonnie++/
 
 .PHONY: benchmark
 benchmark: build
