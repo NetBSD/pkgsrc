@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:14:07 agc Exp $
+$NetBSD: distinfo,v 1.4 2006/03/11 21:01:59 rillig Exp $
 
-SHA1 (xorp-1.0.tar.gz) = f5dc6ff9adbf1da2b982ef54c84d23c47142e876
-RMD160 (xorp-1.0.tar.gz) = 8cf6e36c9f463804e728a7b8b841b8eefebaecdd
-Size (xorp-1.0.tar.gz) = 7240796 bytes
+SHA1 (xorp-1.2.tar.gz) = 061792f0810c7cf8ea9782457c8408a7f7b44516
+RMD160 (xorp-1.2.tar.gz) = 8ea6865adc587d58a6f98222a2c6b61bbedc805b
+Size (xorp-1.2.tar.gz) = 8765558 bytes
