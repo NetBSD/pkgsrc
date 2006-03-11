@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/03/11 23:32:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/03/11 23:55:07 wiz Exp $
 bin/clisp
 lib/clisp/base/calls.o
 lib/clisp/base/gettext.o
@@ -32,12 +32,14 @@ lib/clisp/full/lispinit.mem
 lib/clisp/full/makevars
 lib/clisp/full/modules.h
 lib/clisp/full/modules.o
+lib/clisp/full/rawsock.o
 lib/clisp/full/readline.o
 lib/clisp/full/regex.o
 lib/clisp/full/regexi.o
 lib/clisp/full/regexp.dvi
 lib/clisp/full/wildcard.dvi
 lib/clisp/full/wildcard.o
+lib/clisp/full/zlib.o
 lib/clisp/linkkit/clisp.h
 lib/clisp/linkkit/modprep.lisp
 lib/clisp/linkkit/modules.c
