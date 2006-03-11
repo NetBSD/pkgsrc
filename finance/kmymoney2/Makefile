@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/03/04 21:29:37 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2006/03/11 03:29:20 reed Exp $
 
 DISTNAME=	kmymoney2-0.8
 PKGREVISION=	4
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kmymoney2.sourceforge.net/
-COMMENT=	Personal finance manager for kde3
+COMMENT=	Personal finance manager for KDE
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
