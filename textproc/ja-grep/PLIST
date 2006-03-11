@@ -1,7 +1,28 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/31 13:00:42 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/03/11 13:10:42 wiz Exp $
 bin/jgrep
 bin/jegrep
 bin/jfgrep
 man/man1/jgrep.1
+man/man1/jegrep.1
+man/man1/jfgrep.1
 share/doc/ja-grep/README.MB
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/grep.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/grep.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/grep.mo
+${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/grep.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/grep.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/grep.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/grep.mo
+${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/grep.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/grep.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/grep.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/grep.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/grep.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/grep.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/grep.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/grep.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/grep.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/grep.mo
+${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/grep.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/grep.mo
 @dirrm share/doc/ja-grep
