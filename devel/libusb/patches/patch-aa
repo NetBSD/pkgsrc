@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.6 2005/08/22 17:15:23 reed Exp $
+$NetBSD: patch-aa,v 1.7 2006/03/11 08:34:13 adam Exp $
 
---- configure.orig	2005-02-14 12:23:23.000000000 -0800
-+++ configure	2005-08-20 09:00:04.000000000 -0700
-@@ -19211,7 +19211,7 @@
+--- configure.orig	2006-03-04 03:54:28.000000000 +0100
++++ configure
+@@ -19212,7 +19212,7 @@ _ACEOF
  echo "${ECHO_T}Linux" >&6
      OSLIBS=""
      ;;
--  *-freebsd*|*-openbsd*|*-netbsd*)
-+  *-freebsd*|*-openbsd*|*-netbsd*|*-dragonfly*)
+-  *-freebsd*|*-kfreebsd*-gnu|*-openbsd*|*-netbsd*)
++  *-freebsd*|*-kfreebsd*-gnu|*-openbsd*|*-netbsd*|*-dragonfly*)
      cat >>confdefs.h <<\_ACEOF
  #define BSD_API 1
  _ACEOF
-@@ -19226,8 +19226,8 @@
+@@ -19227,8 +19227,8 @@ _ACEOF
  
      BSD_API=1
      os_support=bsd
@@ -22,21 +22,3 @@ $NetBSD: patch-aa,v 1.6 2005/08/22 17:15:23 reed Exp $
      OSLIBS=""
      ;;
    *-darwin*)
-@@ -21635,17 +21635,11 @@
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
- #include <dev/usb/usb.h>
--int
--main ()
--{
- int main(void)
-      {
-        int a = ((struct usb_ctl_request *)0L)->ucr_addr;
-        return 0;
-      }
--  ;
--  return 0;
--}
- _ACEOF
- rm -f conftest.$ac_objext
- if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
