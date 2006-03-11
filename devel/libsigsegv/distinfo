@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/03/11 22:00:01 wiz Exp $
+
+SHA1 (libsigsegv-2.2.tar.gz) = 793bb8ddd8f14db54d4c6acae751eab571c8508c
+RMD160 (libsigsegv-2.2.tar.gz) = 778b9a76f6501fd6a45dec3e4cca1f6786d9de03
+Size (libsigsegv-2.2.tar.gz) = 361450 bytes
