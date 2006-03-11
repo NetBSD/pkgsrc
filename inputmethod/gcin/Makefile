@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/22 14:55:54 rxg Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/11 10:07:50 ghen Exp $
 #
 
 DISTNAME=		gcin-1.1.7
@@ -20,12 +20,12 @@ USE_TOOLS+=		pkg-config gmake
 GTK2_IMMODULES=		yes
 
 REPLACE_INTERPRETER+=	sh
-_REPLACE.sh.old=	/bin/bash
-_REPLACE.sh.new=	${SH:Q}
-_REPLACE_FILES.sh=	configure
-_REPLACE_FILES.sh+=	scripts/gcin-user-setup
-_REPLACE_FILES.sh+=	scripts/modify-XIM
-_REPLACE_FILES.sh+=	scripts/utf8-edit
+REPLACE.sh.old=		/bin/bash
+REPLACE.sh.new=		${SH}
+REPLACE_FILES.sh=	configure
+REPLACE_FILES.sh+=	scripts/gcin-user-setup
+REPLACE_FILES.sh+=	scripts/modify-XIM
+REPLACE_FILES.sh+=	scripts/utf8-edit
 
 .include "../../x11/gtk2/modules.mk"
 .include "../../mk/bsd.pkg.mk"

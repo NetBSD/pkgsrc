@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/02/05 23:08:21 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2006/03/11 10:07:49 ghen Exp $
 #
 
 DISTNAME=		geda-utils-${PKGVERSION}
@@ -26,9 +26,9 @@ post-patch:
 EVAL_PREFIX+=		PYDIR=python
 
 REPLACE_INTERPRETER+=   python
-_REPLACE.python.old=	.*/bin/python
-_REPLACE.python.new=	${PYDIR}/bin/python
-_REPLACE_FILES.python=	scripts/tragesym
+REPLACE.python.old=	.*/bin/python
+REPLACE.python.new=	${PYDIR}/bin/python
+REPLACE_FILES.python=	scripts/tragesym
 
 REPLACE_PERL+=		scripts/pads_backannotate \
 			scripts/gschupdate \
