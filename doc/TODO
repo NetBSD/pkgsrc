@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4734 2006/03/11 21:02:56 rillig Exp $
+$NetBSD: TODO,v 1.4735 2006/03/11 22:05:25 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -527,7 +527,6 @@ Suggested package updates
 	o gkrellm1-wireless-2.0.3
 	o gkrellm1-xmms-0.5.8
 	o glabels-2.0.4
-	o glade2-2.12.1
 	o glibmm-2.10.0
 	o gmime-2.1.17 [pkg/32487]
 	o gnet1-1.1.9
