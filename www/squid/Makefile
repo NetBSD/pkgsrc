@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2006/03/05 04:21:20 taca Exp $
+# $NetBSD: Makefile,v 1.172 2006/03/11 10:41:03 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE12
 PKGNAME=	squid-2.5.12
@@ -123,19 +123,20 @@ post-install:
 		${INSTALL_DATA} $$i ${DOCDIR};			\
 	done
 	@(							\
-	for FILE in ${OPTIONAL_FILES}; do			\
-	  ${TEST} ! -r ${PREFIX}/${FILE} || ${ECHO} ${FILE};	\
+	for i in ${OPTIONAL_FILES}; do				\
+	  ${TEST} ! -r ${PREFIX}/$$i || ${ECHO} $$i;		\
 	done;							\
 	cd ${WRKSRC}/errors;					\
 	for i in *; do						\
-		${TEST} -d ${i} &&				\
+		${TEST} -d $$i &&				\
 		(${LS} $$i/ERR_* |				\
 		${SED} -e 's@^@share/squid/errors/@';		\
 		${ECHO} "@dirrm share/squid/errors/$$i");	\
 	done; 							\
 	${ECHO} "@dirrm share/squid/errors";			\
 	cd ${WRKSRC}/icons;					\
-	${LS} anthony-*.gif | ${SED} -e 's@^@share/squid/icons/@';	\
+	${LS} anthony-*.gif |					\
+			${SED} -e 's@^@share/squid/icons/@';	\
 	${ECHO} "@dirrm share/squid/icons";			\
 	${ECHO} "share/squid/mib.txt";				\
 	${ECHO} "@dirrm share/squid"				\
