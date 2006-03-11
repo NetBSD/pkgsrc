@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.546 2006/03/10 22:30:25 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.547 2006/03/11 18:38:35 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2062,7 +2062,7 @@ sub shell_split($) {
 sub type_should_be_quoted($) {
 	my ($type) = @_;
 
-	return !($type =~ qr"^(?:List(?:$|[^!]).*|ShellCommand|SedCommands)$");
+	return !($type =~ qr"^(?:List.*|ShellCommand|SedCommands)$");
 }
 
 my $check_pkglint_version_done = false;
@@ -2698,6 +2698,10 @@ sub checkline_mk_shelltext($$) {
 		strace
 		truss
 	));
+
+	if ($text =~ qr"\$\{SED\}" && $text =~ qr"\$\{MV\}") {
+		$line->log_note("Please use the SUBST framework instead of \${SED} and \${MV}.");
+	}
 
 	if ($text =~ qr"^\@*-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)") {
 		my ($mkdir_cmd) = ($1);
@@ -3441,8 +3445,8 @@ sub checkline_mk_vartype($$$$$) {
 		} elsif ($op eq "!=") {
 			$opt_debug and $line->log_info("Use of !=: ${value}");
 
-		} elsif ($type =~ qr"^List(!?)(\+?)(?: of (.*))?$") {
-			my ($internal_list, $append_only, $element_type) = ($1 eq "!", $2 eq "+", $3);
+		} elsif ($type =~ qr"^(InternalList|List)(\+?)(?: of (.*))?$") {
+			my ($internal_list, $append_only, $element_type) = ($1 eq "InternalList", $2 eq "+", $3);
 			my (@words, $rest);
 
 			if ($append_only && $op ne "+=" && $op ne "?=" && !($value eq "" && defined($comment) && $comment =~ qr"^#")) {
