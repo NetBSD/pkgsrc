@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/17 03:50:37 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/03/11 19:42:25 rillig Exp $
 #
 
 DISTNAME=		RTF-1.10
@@ -16,15 +16,14 @@ WRKSRC=			${WRKDIR}/rtf
 INSTALL_TARGET=		install install.man
 INSTALLATION_DIRS=	bin man/manl
 
-post-patch:
-	for i in `${FIND} ${WRKSRC} -name Makefile -print`; do \
-		${MV} $$i $$i.bak;\
-		${SED} <$$i.bak >$$i \
-			-e "s|-DVARARGS|-DSTDARGS|g" \
-			-e "s|/usr/local|${PREFIX}|g" \
-			-e "s|/usr/man|${PREFIX}/man|" \
-			-e "s|\(LOCALBINDIR =.*\)|\1/bin|" ;\
-	done
+SUBST_CLASSES+=		rtf
+SUBST_STAGE.rtf=	pre-configure
+SUBST_MESSAGE.rtf=	Fixing absolute paths in Makefiles.
+SUBST_FILES.rtf=	Makefile */Makefile
+SUBST_SED.rtf+=		-e 's|-DVARARGS|-DSTDARGS|g'
+SUBST_SED.rtf+=		-e 's|/usr/local|${PREFIX}|g'
+SUBST_SED.rtf+=		-e 's|/usr/man|${PREFIX}/man|'
+SUBST_SED.rtf+=		-e 's|\(LOCALBINDIR =.*\)|\1/bin|'
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/rtf-tools
