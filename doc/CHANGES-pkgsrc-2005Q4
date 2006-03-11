@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.98 2006/03/08 22:43:12 seb Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.99 2006/03/11 03:22:01 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -197,3 +197,5 @@ Pullup ticket 1165 - requested by Joerg Sonnenberger
 mostly sync databases/postgresql80{,-client,-plperl,-plpython,-pltcl,-server} with HEAD, via patch, including security fix
 Pullup ticket 1164 - requested by Joerg Sonnenberger
 mostly sync databases/postgresql73{,-client,-docs,-lib,-plperl,-pltcl,-server}, databases/{tcl,tk}-postgresql73 with HEAD, via patch, including security fix.
+Pullup ticket 1218 - requested by Geert Hendrickx
+security update for gnupg
