@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2006/03/06 00:18:15 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2006/03/11 22:23:53 jmmv Exp $
 
 DISTNAME=	anjuta-1.2.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=anjuta/}
 
@@ -12,7 +12,7 @@ COMMENT=	Gnome based IDE for C and C++
 DEPENDS+=	autoconf>=2.59:../../devel/autoconf
 DEPENDS+=	automake>=1.8.2:../../devel/automake
 DEPENDS+=	gettext>=0.11.5:../../devel/gettext
-DEPENDS+=	glade2>=2.6.0:../../devel/glade2
+DEPENDS+=	glade>=2.6.0:../../devel/glade
 DEPENDS+=	gnome2-terminal>=2.4.2:../../x11/gnome2-terminal
 DEPENDS+=	libtool>=1.5.2:../../devel/libtool
 DEPENDS+=	yelp>=2.4.2:../../misc/yelp
