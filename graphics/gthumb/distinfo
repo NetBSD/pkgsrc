@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2006/02/27 21:45:21 minskim Exp $
+$NetBSD: distinfo,v 1.11 2006/03/11 18:43:18 wiz Exp $
 
 SHA1 (gthumb-2.6.9.tar.gz) = 215ebd1756da6184e44a67e7b12301b55c5e3632
 RMD160 (gthumb-2.6.9.tar.gz) = 8923cf99417d0923ff20d35ae6c79f5ca945b665
 Size (gthumb-2.6.9.tar.gz) = 2549346 bytes
+SHA1 (patch-aa) = 7d868a6ed9101b62f8e8671a615a45ac04452965
