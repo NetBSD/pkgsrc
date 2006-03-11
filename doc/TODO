@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4728 2006/03/11 08:35:08 adam Exp $
+$NetBSD: TODO,v 1.4729 2006/03/11 11:12:29 ghen Exp $
 
 Suggested new packages
 ======================
@@ -773,7 +773,6 @@ Suggested package updates
 	o openh323-1.17.2
 	o openldap-2.3.20
 	o openoffice-2.0.2
-	o openoffice-bin-2.0.2
 	o openpam-20050616
 	o openssh-4.3p2 [pkg/32858]
 	o openssl-0.9.8a
