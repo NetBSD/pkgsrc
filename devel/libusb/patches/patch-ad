@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.6 2005/08/22 17:15:23 reed Exp $
+$NetBSD: patch-ad,v 1.7 2006/03/11 08:34:13 adam Exp $
 
---- bsd.c.orig	2004-02-17 22:34:52.000000000 -0800
-+++ bsd.c	2005-08-20 09:08:12.000000000 -0700
-@@ -35,14 +35,18 @@
+--- bsd.c.orig	2006-03-04 03:52:46.000000000 +0100
++++ bsd.c
+@@ -39,14 +39,18 @@
  #include <sys/time.h>
  #include <sys/ioctl.h>
  
@@ -22,7 +22,7 @@ $NetBSD: patch-ad,v 1.6 2005/08/22 17:15:23 reed Exp $
  /*
   * It appears some of the BSD's (OpenBSD atleast) have switched over to a
   * new naming convention, so we setup some macro's for backward
-@@ -399,7 +403,7 @@
+@@ -403,7 +407,7 @@ int usb_interrupt_write(usb_dev_handle *
  int usb_interrupt_read(usb_dev_handle *dev, int ep, char *bytes, int size,
                         int timeout)
  {
@@ -31,7 +31,7 @@ $NetBSD: patch-ad,v 1.6 2005/08/22 17:15:23 reed Exp $
  
    /* Ensure the endpoint address is correct */
    ep |= USB_ENDPOINT_IN;
-@@ -425,7 +429,8 @@
+@@ -429,7 +433,8 @@ int usb_interrupt_read(usb_dev_handle *d
      USB_ERROR_STR(-errno, "error setting short xfer: %s", strerror(errno));
  
    do {
@@ -39,9 +39,9 @@ $NetBSD: patch-ad,v 1.6 2005/08/22 17:15:23 reed Exp $
 +    requested = size - retrieved;
 +    ret = read(fd, bytes+retrieved, requested);
      if (ret < 0)
- #if __FreeBSD__
+ #ifdef __FreeBSD_kernel__
        USB_ERROR_STR(-errno, "error reading from interrupt endpoint %s.%d: %s",
-@@ -435,7 +440,7 @@
+@@ -439,7 +444,7 @@ int usb_interrupt_read(usb_dev_handle *d
                    dev->device->filename, UE_GET_ADDR(ep), strerror(errno));
  #endif
      retrieved += ret;
