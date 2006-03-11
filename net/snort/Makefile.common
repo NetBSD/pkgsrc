@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.29 2005/12/05 23:55:15 rillig Exp $
+# $NetBSD: Makefile.common,v 1.29.2.1 2006/03/11 03:35:57 snj Exp $
 #
 
-DISTNAME=		snort-2.4.3
+DISTNAME=		snort-2.4.4
 CATEGORIES=		net security
 MASTER_SITES=		http://www.snort.org/dl/current/ \
 			ftp://the.wiretapped.net/pub/security/network-intrusion-detection/snort/ \
@@ -55,7 +55,7 @@ SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	etc/snort.conf src/snort.c
 SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g" \
 			-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
-SUBST_MESSAGE.cgi=	"Fixing paths."
+SUBST_MESSAGE.cgi=	Fixing paths.
 
 post-install:
 	@${CP} ${WRKSRC}/etc/snort.conf ${WRKSRC}/etc/snort.conf.default

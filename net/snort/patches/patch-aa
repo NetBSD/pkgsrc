@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.12 2005/08/13 19:56:47 adrianp Exp $
+$NetBSD: patch-aa,v 1.12.4.1 2006/03/11 03:35:58 snj Exp $
 
 --- src/snort.c.orig	Wed Dec  3 16:22:22 2003
 +++ src/snort.c	Sat Jan 31 21:25:32 2004
-@@ -1391,6 +1391,18 @@
+@@ -105,7 +105,6 @@ extern OutputFuncNode *LogList;
+ long start_time;    /* tracks how many seconds snort actually ran */
+ #endif
+ 
+-extern int errno;
+ /*extern char *malloc_options;*/
+ 
+ /* exported variables *********************************************************/
+@@ -1771,6 +1770,18 @@ int SetPktProcessor()
  
              break;
  
@@ -21,7 +29,7 @@ $NetBSD: patch-aa,v 1.12 2005/08/13 19:56:47 adrianp Exp $
          case DLT_PPP:                /* point-to-point protocol */
              if(!pv.readmode_flag)
              {
-@@ -1780,7 +1792,7 @@
+@@ -2164,7 +2175,7 @@ static char *ConfigFileSearch()
  {
      struct stat st;
      int i;
