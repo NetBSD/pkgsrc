@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/12/07 17:57:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/03/12 12:30:05 wiz Exp $
 bin/wesnoth
 bin/wmlxgettext
 man/de/man6/wesnoth.6
@@ -3829,6 +3829,163 @@ share/wesnoth/sounds/ugg.wav
 share/wesnoth/sounds/wolf-attack.wav
 share/wesnoth/sounds/zombie-attack.wav
 share/wesnoth/sounds/zombie-hit.wav
+share/wesnoth/translations/af/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/af/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/af/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/af/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/af/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/af/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/af/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/ca/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/ca/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/ca/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/ca/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/ca/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/ca/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/ca/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/cs/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/cs/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/cs/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/cs/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/cs/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/cs/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/cs/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/de/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/de/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/de/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/de/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/de/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/de/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/de/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/en_GB/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/en_GB/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/en_GB/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/en_GB/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/en_GB/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/en_GB/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/en_GB/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/es/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/es/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/es/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/es/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/es/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/es/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/fi/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/fi/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/fi/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/fi/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/fi/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/fr/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/fr/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/fr/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/fr/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/fr/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/fr/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/fr/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/hu/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/hu/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/hu/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/hu/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/hu/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/hu/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/hu/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/it/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/it/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/it/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/it/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/it/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/it/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/it/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/ja/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/ja/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/ja/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/ja/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/ja/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/ja/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/la/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/la/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/la/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/la/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/la/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/nl/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/nl/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/nl/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/nl/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/nl/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/nl/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/nl/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/pl/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/pl/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/pl/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/pl/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/pl/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/pl/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/pl/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/ru/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/ru/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/ru/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/ru/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/ru/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/ru/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/ru/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/sk/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/sk/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/sk/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/sk/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/sk/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/sk/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/sk/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/sv/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/sv/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/sv/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/sv/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/sv/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/sv/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/sv/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/tr/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/tr/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/tr/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/tr/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/tr/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/tr/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/tr/LC_MESSAGES/wesnoth.mo
+@dirrm share/wesnoth/translations/tr/LC_MESSAGES
+@dirrm share/wesnoth/translations/tr
+@dirrm share/wesnoth/translations/sv/LC_MESSAGES
+@dirrm share/wesnoth/translations/sv
+@dirrm share/wesnoth/translations/sk/LC_MESSAGES
+@dirrm share/wesnoth/translations/sk
+@dirrm share/wesnoth/translations/ru/LC_MESSAGES
+@dirrm share/wesnoth/translations/ru
+@dirrm share/wesnoth/translations/pl/LC_MESSAGES
+@dirrm share/wesnoth/translations/pl
+@dirrm share/wesnoth/translations/nl/LC_MESSAGES
+@dirrm share/wesnoth/translations/nl
+@dirrm share/wesnoth/translations/la/LC_MESSAGES
+@dirrm share/wesnoth/translations/la
+@dirrm share/wesnoth/translations/ja/LC_MESSAGES
+@dirrm share/wesnoth/translations/ja
+@dirrm share/wesnoth/translations/it/LC_MESSAGES
+@dirrm share/wesnoth/translations/it
+@dirrm share/wesnoth/translations/hu/LC_MESSAGES
+@dirrm share/wesnoth/translations/hu
+@dirrm share/wesnoth/translations/fr/LC_MESSAGES
+@dirrm share/wesnoth/translations/fr
+@dirrm share/wesnoth/translations/fi/LC_MESSAGES
+@dirrm share/wesnoth/translations/fi
+@dirrm share/wesnoth/translations/es/LC_MESSAGES
+@dirrm share/wesnoth/translations/es
+@dirrm share/wesnoth/translations/en_GB/LC_MESSAGES
+@dirrm share/wesnoth/translations/en_GB
+@dirrm share/wesnoth/translations/de/LC_MESSAGES
+@dirrm share/wesnoth/translations/de
+@dirrm share/wesnoth/translations/cs/LC_MESSAGES
+@dirrm share/wesnoth/translations/cs
+@dirrm share/wesnoth/translations/ca/LC_MESSAGES
+@dirrm share/wesnoth/translations/ca
+@dirrm share/wesnoth/translations/af/LC_MESSAGES
+@dirrm share/wesnoth/translations/af
+@dirrm share/wesnoth/translations
 @dirrm share/wesnoth/sounds
 @dirrm share/wesnoth/music
 @dirrm share/wesnoth/images/tools/exploder
