@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.46 2006/03/09 16:34:08 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.47 2006/03/12 11:34:09 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -178,12 +178,11 @@
         </listitem>
 
         <listitem>
-          <para>If your package needs a library with which to link and
-            again there is no <filename>buildlink3.mk</filename> file
-            available, this is specified using the
-            <varname>DEPENDS</varname> definition.  An example of this
-            is the <filename role="pkg">print/lyx</filename> package,
-	    which uses the xpm library, version 3.4j to build:</para>
+
+	<para>If your package needs a library with which to link and
+	again there is no <filename>buildlink3.mk</filename> file
+        available, this is specified using the
+        <varname>DEPENDS</varname> definition. For example:</para>
 
 <programlisting>
     DEPENDS+=       xpm-3.4j:../../graphics/xpm
@@ -279,27 +278,13 @@
         </listitem>
       </orderedlist>
 
-      <para>If your package needs files from another package to build,
-        see the first part of the <quote>do-configure</quote> target
-        <filename role="pkg">print/ghostscript5</filename> package
-	(it relies on the jpeg sources being present in source form
-	during the build):</para>
-
-<programlisting>
-    if [ ! -e ${_PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then    \
-        cd ${_PKGSRCDIR}/../../graphics/jpeg &amp;&amp; ${MAKE} extract; \
-    fi
-</programlisting>
-
-      <para>If you build any other packages that way, please make sure
-        the working files are deleted too when this package's working
-        files are cleaned up.  The easiest way to do so is by adding a
-        pre-clean target:</para>
-
-<programlisting>
-    pre-clean:
-            cd ${_PKGSRCDIR}/../../graphics/jpeg &amp;&amp; ${MAKE} clean
-</programlisting>
+	<para>If your package needs files from another package to build,
+	add the relevant distribution files to
+	<varname>DISTFILES</varname>, so they will be extracted
+	automatically. See the <filename
+	role="pkg">print/ghostscript</filename> package for an example.
+	(It relies on the jpeg sources being present in source form
+	during the build.)</para>
 
       <para>Please also note the <varname>BUILD_USES_MSGFMT</varname>
         and <varname>BUILD_USES_GETTEXT_M4</varname> definitions, which
@@ -495,24 +480,18 @@
 	example of this usage.
 </para>
 
-      <para>If the download can't be automated, because the user must
-        submit personal information to apply for a password, or must pay
-        for the source, or whatever, you can set
-        <varname>_FETCH_MESSAGE</varname> to a macro which displays a
-        message explaining the
-        situation. <varname>_FETCH_MESSAGE</varname> must be executable
-        shell commands, not just a message. (Generally, it executes
-        <varname>${ECHO}</varname>). As of this writing, the following
-        packages use this:
-        <filename role="pkg">cad/simian</filename>,
-	<filename role="pkg">devel/ipv6socket</filename>,
-        <filename role="pkg">emulators/vmware-module</filename>,
-        <filename role="pkg">fonts/acroread-jpnfont</filename>,
-	<filename role="pkg">multimedia/realplayer</filename>,
-        <filename role="pkg">sysutils/storage-manager</filename>,
-        <filename role="pkg">www/ap-aolserver</filename>,
-	<filename role="pkg">www/openacs</filename>. Try to be
-        consistent with them.</para>
+	<para>If the download can't be automated, because the user must
+	submit personal information to apply for a password, or must pay
+	for the source, or whatever, you can set
+	<varname>_FETCH_MESSAGE</varname> to a macro which displays a
+	message explaining the situation.
+	<varname>_FETCH_MESSAGE</varname> must be executable shell
+	commands, not just a message. (Generally, it executes
+	<varname>${ECHO}</varname>). See one of the following packages
+	for an example:
+	<filename role="pkg">fonts/acroread-jpnfont</filename>,
+	<filename role="pkg">sysutils/storage-manager</filename>.</para>
+
     </sect2>
 
 
