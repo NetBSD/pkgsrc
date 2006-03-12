@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13275 2006/03/12 12:13:14 taca Exp $
+$NetBSD: CHANGES,v 1.13276 2006/03/12 12:31:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1470,3 +1470,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/tkdiff to 4.0.2nb2 [minskim 2006-03-12]
 	Updated x11/libxklavier to 2.2 [jmmv 2006-03-12]
 	Updated www/squid to 2.5.13 [taca 2006-03-12]
+	Updated games/wesnoth to 1.0.2nb4 [wiz 2006-03-12]
