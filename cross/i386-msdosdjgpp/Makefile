@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/03/05 16:27:23 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/03/12 14:31:23 rillig Exp $
 #
 
 DISTVERSION=		2.02.0
@@ -17,7 +17,7 @@ COMMENT=		Cross-compile environment for MS-DOS on 386 and higher
 
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 
-SITES_wmemu2b.zip=	http://ftp.delorie.com/pub/djgpp/beta/ \
+SITES.wmemu2b.zip=	http://ftp.delorie.com/pub/djgpp/beta/ \
 			ftp://ftp.delorie.com/pub/djgpp/beta/ \
 			ftp://ftp.iij.ad.jp/pub/djgpp/beta/ \
 			ftp://gd.tuwien.ac.at/pc/dos/djgpp/beta/ \
@@ -28,7 +28,7 @@ USE_CROSS_BINUTILS=	yes
 BINUTILS_GNUTARGET=	coff-go32
 BINUTILS_LDEMULATION=	i386go32
 USE_CROSS_EGCS=		yes
-USE_TOOLS+=		makeinfo
+USE_TOOLS+=		makeinfo unzip
 
 # Scripts in the build need to have a $CPP defined that works with the built
 # compiler
@@ -44,7 +44,7 @@ post-extract:
 	@${MKDIR} ${WRKSRC}
 	@cd ${WRKSRC}; \
 		for file in ${DJGPP_FILES}; do \
-			unzip -Loq ${_DISTDIR}/$$file; \
+			${UNZIP_CMD} -Loq ${_DISTDIR}/$$file; \
 		done; \
 		for file in `${FIND} include -type f -print`; do \
 			${CAT} $$file | col >$$file.new; \
