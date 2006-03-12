@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4737 2006/03/12 00:17:21 heinz Exp $
+$NetBSD: TODO,v 1.4738 2006/03/12 11:50:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -448,7 +448,7 @@ Suggested package updates
 	o dnstracer-1.8
 	o doxygen-1.4.6
 	o dpkg-1.10.28
-	o dropbear-0.47
+	o dropbear-0.48
 	o dspam-3.6.4
 	o dvd+rw-tools-6.1
 	o dvdauthor-0.6.11
@@ -461,6 +461,7 @@ Suggested package updates
 	o eclipse-3.1.1
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
+	o efax-gtk-3.0.9
 	o egtk-0.3.6.2
 	o electricfence-2.4.16
 	o elf-0.5.4p1
@@ -531,6 +532,7 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-backgrounds-2.12.3.1
+	o gnome-doc-utils-0.6.0
 	o gnome-games-2.12.3
 	o gnome-mag-0.12.3
 	o gnome-pilot-2.0.13
@@ -561,6 +563,8 @@ Suggested package updates
 	o gsed-4.1.4
 	o gsharutils-4.6
 	o gss-0.0.16
+	o gst-plugins0.10-base-0.10.4
+	o gstreamer0.10-0.10.4
 	o gtetrinet-0.7.9
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
@@ -621,11 +625,12 @@ Suggested package updates
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.4
+	o jabberd2-2.0s11
 	o java-lang-spec-3.0
 	o jftpgw-0.13.5
 	o jgrasp-183
 	o jigdo-0.7.2
-	o john-1.7
+	o john-1.7.0.1
 	o jove-4.16.0.69
 	o jpegpixi-1.1.1
 	o jpilot-0.99.8
@@ -652,6 +657,7 @@ Suggested package updates
 	o lftp-3.4.2
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
+	o libextractor-0.5.11
 	o libflash-0.4.13
 	o libggi-2.2.1
 	o libggigcp-1.0.1
@@ -669,6 +675,7 @@ Suggested package updates
 	o libnasl-2.3.1
 	o libntlm-0.3.9
 	o libpqxx-2.5.5
+	o librsvg-2.14.2
 	o libshout-2.2
 	o libsmi-0.4.3
 	o libtcl-nothread-8.4.9
@@ -736,6 +743,7 @@ Suggested package updates
 	o nawk-20041222
 	o ncftp2-2.8.2
 	o ncview-1.92e
+	o neon-0.26.0
 	o nessus-2.2.7
 	o netatalk1-1.6.4
 	o netcdf-4.0.0a
@@ -930,6 +938,7 @@ Suggested package updates
 	o pnetC-0.7.4
 	o pnetlib-0.7.2 [pkg/31950]
 	o pnetlib-0.7.4
+	o popa3d-1.0.1
 	o poppy-4.01
 	o poptop-1.3.0
 	o posh-0.4.3
@@ -954,7 +963,7 @@ Suggested package updates
 	o pxe-1.4.2
 	o py-FourSuite-1.0b1
 	o py-GeoIP-1.2.1
-	o py-Gnosis-Utils-1.2.0
+	o py-Gnosis-Utils-1.2.1
 	o py-HappyDoc-3.0
 	o py-Optik-1.4.1
 	o py-Scientific-2.5.5
@@ -1018,7 +1027,7 @@ Suggested package updates
 	o root-tail-1.2
 	o rosegarden-1.2.3
 	o rosegarden4-1.0 [replacing audio/rosegarden|pkgsrc-wip]
-	o rox-session-0.27
+	o rox-session-0.28
 	o roxirc-2.0
 	o rp-l2tp-0.4
 	o rp-pppoe-3.7
@@ -1062,6 +1071,7 @@ Suggested package updates
 	o silc-toolkit-1.0.2
 	o simh-3.5.0
 	o sipsak-0.9.6
+	o sitecopy-0.16.3
 	o sitescooper-3.1.2
 	o sjeng-11.2
 	o skampi-4.1
@@ -1092,7 +1102,7 @@ Suggested package updates
 	o stella-2.1
 	o stlport-4.6.2
 	o strace-4.5.8
-	o stunnel-4.14
+	o stunnel-4.15
 	o subtitleripper-0.3.4
 	o svk-1.07
 	o sweep-0.9.1
