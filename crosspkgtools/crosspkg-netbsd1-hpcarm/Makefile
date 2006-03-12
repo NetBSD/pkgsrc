@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/08/13 05:56:23 uebayasi Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/12 14:06:30 rillig Exp $
 
 DISTNAME=	crosspkg-netbsd1-hpcarm-1.6.2
 CATEGORIES=     crosspkgtools
@@ -17,11 +17,11 @@ DEPENDS+=	kwacross-netbsd1-arm-2*:../../crosspkgtools/kwacross-netbsd1-arm
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 SRC_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-1.6.2/source/sets/
-SITES_gnusrc.tgz=	${SRC_SITES}
-SITES_sharesrc.tgz=	${SRC_SITES}
-SITES_src.tgz=		${SRC_SITES}
-SITES_syssrc.tgz=	${SRC_SITES}
-SITES_xsrc.tgz=		${SRC_SITES}
+SITES.gnusrc.tgz=	${SRC_SITES}
+SITES.sharesrc.tgz=	${SRC_SITES}
+SITES.src.tgz=		${SRC_SITES}
+SITES.syssrc.tgz=	${SRC_SITES}
+SITES.xsrc.tgz=		${SRC_SITES}
 
 EXTRACT_ONLY=	# empty
 NO_BUILD=	YES
