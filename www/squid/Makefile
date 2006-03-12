@@ -1,41 +1,16 @@
-# $NetBSD: Makefile,v 1.173 2006/03/11 13:15:59 taca Exp $
+# $NetBSD: Makefile,v 1.174 2006/03/12 12:12:19 taca Exp $
 
-DISTNAME=	squid-2.5.STABLE12
-PKGNAME=	squid-2.5.12
-PKGREVISION=	7
+DISTNAME=	squid-2.5.STABLE13
+PKGNAME=	squid-2.5.13
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
 		ftp://ftp1.au.squid-cache.org/pub/squid/squid-2/STABLE/
 EXTRACT_SUFX=	.tar.bz2
-
-PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-PATCHFILES=	squid-2.5.STABLE12-setenv.patch \
-		squid-2.5.STABLE12-REPORT.patch \
-		squid-2.5.STABLE12-SMB_BadFetch.patch \
-		squid-2.5.STABLE12-wbinfo_group.patch \
-		squid-2.5.STABLE12-asyncio_counters.patch \
-		squid-2.5.STABLE12-prctl_args.patch \
-		squid-2.5.STABLE12-irix_timezone.patch \
-		squid-2.5.STABLE12-log_206-4.patch \
-		squid-2.5.STABLE12-range2GB-2.patch \
-		squid-2.5.STABLE12-empty_proxy_auth_acl.patch \
-		squid-2.5.STABLE12-ident_acl.patch \
-		squid-2.5.STABLE12-ntlm_nonpersistent.patch \
-		squid-2.5.STABLE12-ftp_upload.patch \
-		squid-2.5.STABLE12-delay_pool_reconfigure.patch \
-		squid-2.5.STABLE12-persistent_connection_after_error.patch \
-		squid-2.5.STABLE12-devnull.patch \
-		squid-2.5.STABLE12-fc5.patch \
-		squid-2.5.STABLE12-ftpdates.patch \
-		squid-2.5.STABLE12-ftpsymlink.patch \
-		squid-2.5.STABLE12-max_user_ip_log-2.patch \
-		squid-2.5.STABLE12-longhostnames.patch \
-		squid-2.5.STABLE12-Azerbaijani.patch \
-		squid-2.5.STABLE12-peer_dns_error.patch \
-		squid-2.5.STABLE12-statefulhelpers_statistics.patch \
-		squid-2.5.STABLE12-connstate_leak.patch
-PATCH_DIST_STRIP= -p1
+#
+#PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
+#PATCHFILES=
+#PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.squid-cache.org/
