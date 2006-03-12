@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.548 2006/03/12 13:34:53 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.549 2006/03/12 16:55:51 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3537,13 +3537,6 @@ sub checkline_mk_varassign($$$$$) {
 		$line->log_warning("Please use \"# empty\", \"# none\" or \"yes\" instead of \"# defined\".");
 	}
 
-	if ($varname =~ qr"^NO_(.*)_ON_(.*)$") {
-		my ($what, $where) = ($1, $2);
-		if (($what ne "SRC" && $what ne "BIN") || ($where ne "FTP" && $where ne "CDROM")) {
-			$line->log_error("Misspelled variable: Valid names are USE_{BIN,SRC}_ON_{FTP,CDROM}.");
-		}
-	}
-
 	if ($value =~ qr"\$\{(PKGNAME|PKGVERSION)[:\}]") {
 		my ($pkgvarname) = ($1);
 		if ($varname =~ qr"^PKG_.*_REASON$") {
@@ -3557,6 +3550,10 @@ sub checkline_mk_varassign($$$$$) {
 
 	if (exists(get_deprecated_map()->{$varname})) {
 		$line->log_warning("Definition of ${varname} is deprecated. ".get_deprecated_map()->{$varname});
+	}
+
+	if ($varname =~ qr"^SITES_") {
+		$line->log_warning("SITES_* is deprecated. Please use SITES.* instead.");
 	}
 
 	if ($value =~ qr"^[^=]\@comment") {
@@ -3761,7 +3758,7 @@ sub checklines_mk($) {
 			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
 			my $space1 = substr($text, $+[1], $-[2] - $+[1]);
 			my $align = substr($text, $+[2], $-[3] - $+[2]);
-			if ($align !~ qr"^\t*$") {
+			if ($align !~ qr"^(\t*|[ ])$") {
 				$opt_warn_space && $line->log_note("Alignment of variable values should be done with tabs, not spaces.");
 				my $prefix = "${varname}${space1}${op}";
 				my $aligned_len = tablen("${prefix}${align}");
@@ -4260,6 +4257,7 @@ sub checkfile_patch($) {
 	my ($strings);
 	my ($state, $redostate, $nextstate, $dellines, $addlines, $hunks);
 	my ($seen_comment, $current_fname, $patched_files);
+	my ($leading_context_lines, $trailing_context_lines, $context_scanning_leading);
 
 	# Abbreviations used:
 	# style: [c] = context diff, [u] = unified diff
@@ -4360,6 +4358,22 @@ sub checkfile_patch($) {
 				$line->log_error("Expected ${dellines} more lines to be deleted.");
 			}
 		} else {
+			if (defined($context_scanning_leading)) {
+				if ($deldelta != 0 && $adddelta != 0) {
+					if ($context_scanning_leading) {
+						$leading_context_lines++;
+					} else {
+						$trailing_context_lines++;
+					}
+				} else {
+					if ($context_scanning_leading) {
+						$context_scanning_leading = false;
+					} else {
+						$trailing_context_lines = 0;
+					}
+				}
+			}
+
 			if ($deldelta != 0) {
 				$dellines -= $deldelta;
 			}
@@ -4368,6 +4382,11 @@ sub checkfile_patch($) {
 			}
 			if (!((defined($dellines) && $dellines > 0) ||
 			      (defined($addlines) && $addlines > 0))) {
+				if (defined($context_scanning_leading)) {
+					if ($leading_context_lines != $trailing_context_lines) {
+						$opt_debug and $line->log_warning("The hunk that ends here does not have as many leading (${leading_context_lines}) as trailing (${trailing_context_lines}) lines of context.");
+					}
+				}
 				$nextstate = $newstate;
 			}
 		}
@@ -4485,6 +4504,9 @@ sub checkfile_patch($) {
 				$line->explain("The MacOS X patch utility cannot handle these.");
 			}
 			$hunks++;
+			$context_scanning_leading = (($m->has(1) && $m->text(1) ne "1") ? true : undef);
+			$leading_context_lines = 0;
+			$trailing_context_lines = 0;
 		}], [PST_UL, re_patch_uld, PST_UL, sub() {
 			$check_hunk_line->(1, 0, PST_UH);
 		}], [PST_UL, re_patch_ula, PST_UL, sub() {
