@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13282 2006/03/12 18:26:43 wiz Exp $
+$NetBSD: CHANGES,v 1.13283 2006/03/12 18:32:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1479,3 +1479,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added games/aop version 0.6 [rillig 2006-03-12]
 	Updated x11/devilspie to 0.17.1 [wiz 2006-03-12]
 	Updated misc/cksfv to 1.3.9 [wiz 2006-03-12]
+	Updated devel/libidn to 0.6.3 [wiz 2006-03-12]
