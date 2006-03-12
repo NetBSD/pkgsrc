@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/08/26 16:30:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/03/12 22:14:09 jmmv Exp $
 bin/gnome-doc-prepare
 bin/xml2po
 lib/pkgconfig/gnome-doc-utils.pc
@@ -13,6 +13,7 @@ share/xml/gnome/xslt/docbook/common/db-title.xsl
 share/xml/gnome/xslt/docbook/common/db-xref.xsl
 share/xml/gnome/xslt/docbook/html/db2html-admon.xsl
 share/xml/gnome/xslt/docbook/html/db2html-autotoc.xsl
+share/xml/gnome/xslt/docbook/html/db2html-bibliography.xsl
 share/xml/gnome/xslt/docbook/html/db2html-block.xsl
 share/xml/gnome/xslt/docbook/html/db2html-callout.xsl
 share/xml/gnome/xslt/docbook/html/db2html-classsynopsis.xsl
@@ -20,9 +21,11 @@ share/xml/gnome/xslt/docbook/html/db2html-cmdsynopsis.xsl
 share/xml/gnome/xslt/docbook/html/db2html-css.xsl
 share/xml/gnome/xslt/docbook/html/db2html-division.xsl
 share/xml/gnome/xslt/docbook/html/db2html-ebnf.xsl
+share/xml/gnome/xslt/docbook/html/db2html-footnote.xsl
 share/xml/gnome/xslt/docbook/html/db2html-funcsynopsis.xsl
 share/xml/gnome/xslt/docbook/html/db2html-info.xsl
 share/xml/gnome/xslt/docbook/html/db2html-inline.xsl
+share/xml/gnome/xslt/docbook/html/db2html-l10n.xsl
 share/xml/gnome/xslt/docbook/html/db2html-list.xsl
 share/xml/gnome/xslt/docbook/html/db2html-media.xsl
 share/xml/gnome/xslt/docbook/html/db2html-qanda.xsl
@@ -37,6 +40,7 @@ share/xml/gnome/xslt/docbook/utils/chunks.xsl
 share/xml/gnome/xslt/docbook/utils/credits.xsl
 share/xml/gnome/xslt/docbook/utils/ids.xsl
 share/xml/gnome/xslt/gettext/gettext.xsl
+share/xml/gnome/xslt/gettext/l10n-numbers.xsl
 share/xml/gnome/xslt/gettext/l10n.xml
 share/xml/gnome/xslt/xsldoc/xsldoc.xsl
 share/xml2po/docbook.py
