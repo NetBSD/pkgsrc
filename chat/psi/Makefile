@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/03/02 23:00:46 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2006/03/12 14:50:11 rillig Exp $
 
 PSI_VERSION=	0.10
 DISTNAME=	psi-${PSI_VERSION}
@@ -37,7 +37,7 @@ LANG_FILES=	psi_bg.qm psi_ca.qm psi_eo.qm psi_es.qm psi_fr.qm	\
 		psi_pt_BR.qm psi_sk.qm psi_sl.qm psi_vi.qm psi_zh.qm
 
 .for l in ${LANG_FILES}
-SITES_${l}=	http://psi-im.org/files/translation/${PSI_VERSION}/
+SITES.${l}=	http://psi-im.org/files/translation/${PSI_VERSION}/
 .endfor
 
 INSTALLATION_DIRS=	bin share/psi share/doc/psi
@@ -49,7 +49,7 @@ INSTALLATION_DIRS=	bin share/psi share/doc/psi
 post-configure:
 	${SED} \
 	-e 's:^CHK_DIR_EXISTS *= *$$:CHK_DIR_EXISTS=test -d:' \
-	-e "s:^MKDIR *= *$$:MKDIR=${MKDIR}:" \
+	-e 's:^MKDIR *= *$$:MKDIR=${MKDIR}:' \
 	-e "s:/bin/true:${TRUE}:" < ${WRKSRC}/Makefile \
 		> ${WRKSRC}/Makefile.new
 	${MV} ${WRKSRC}/Makefile.new ${WRKSRC}/Makefile
