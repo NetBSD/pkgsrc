@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2006/02/05 23:11:32 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/03/12 18:23:09 wiz Exp $
 
-DISTNAME=		devilspie-0.16
-PKGREVISION=		2
+DISTNAME=		devilspie-0.17.1
 CATEGORIES=		x11
 MASTER_SITES=		http://www.burtonini.com/computing/
 
@@ -16,12 +15,11 @@ GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 TEST_TARGET=		check
 
-#LIBS+=			-lX11
-
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/devilspie
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/devilspie/
 
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.9.1
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
