@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13280 2006/03/12 15:18:22 rillig Exp $
+$NetBSD: CHANGES,v 1.13281 2006/03/12 18:23:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1477,3 +1477,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/acpi-iasl to 20060217 [kochi 2006-03-12]
 	Updated textproc/namazu2 to 2.0.16 [taca 2006-03-12]
 	Added games/aop version 0.6 [rillig 2006-03-12]
+	Updated x11/devilspie to 0.17.1 [wiz 2006-03-12]
