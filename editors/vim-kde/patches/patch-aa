@@ -1,7 +1,22 @@
-$NetBSD: patch-aa,v 1.1 2004/04/02 03:34:54 snj Exp $
+$NetBSD: patch-aa,v 1.2 2006/03/12 13:47:36 rillig Exp $
 
---- Makefile.orig	2003-06-14 10:38:45.000000000 -0700
-+++ Makefile	2004-03-30 18:41:49.000000000 -0800
+The paths to perl and awk need to be set explicitly, otherwise the ones
+from the .tools directory are found. The rest of the patch adjusts the
+directories to the pkgsrc directory hierarchy layout.
+
+--- Makefile.orig	2003-06-14 19:38:45.000000000 +0200
++++ Makefile	2006-03-12 13:50:56.000000000 +0100
+@@ -1764,8 +1764,8 @@ installtools: $(TOOLS) $(DESTDIR)$(exec_
+ 	      fi
+ 	-chmod $(FILEMOD) $(DEST_TOOLS)/*
+ # replace the path in some tools
+-	perlpath=`./which.sh perl` && sed -e "s+/usr/bin/perl+$$perlpath+" $(TOOLSSOURCE)/efm_perl.pl >$(DEST_TOOLS)/efm_perl.pl
+-	awkpath=`./which.sh nawk` && sed -e "s+/usr/bin/nawk+$$awkpath+" $(TOOLSSOURCE)/mve.awk >$(DEST_TOOLS)/mve.awk; if test -z "$$awkpath"; then \
++	perlpath='$(PERL5)' && sed -e "s+/usr/bin/perl+$$perlpath+" $(TOOLSSOURCE)/efm_perl.pl >$(DEST_TOOLS)/efm_perl.pl
++	awkpath='$(AWK)' && sed -e "s+/usr/bin/nawk+$$awkpath+" $(TOOLSSOURCE)/mve.awk >$(DEST_TOOLS)/mve.awk; if test -z "$$awkpath"; then \
+ 		awkpath=`./which.sh gawk` && sed -e "s+/usr/bin/nawk+$$awkpath+" $(TOOLSSOURCE)/mve.awk >$(DEST_TOOLS)/mve.awk; if test -z "$$awkpath"; then \
+ 		awkpath=`./which.sh awk` && sed -e "s+/usr/bin/nawk+$$awkpath+" $(TOOLSSOURCE)/mve.awk >$(DEST_TOOLS)/mve.awk; fi; fi
+ 	-chmod $(SCRIPTMOD) `grep -l "^#!" $(DEST_TOOLS)/*`
 @@ -1789,19 +1789,19 @@ install-languages: languages $(DEST_LANG
  # doesn't.<=looks strange to install icons to user's directory ;), i add my
  # own install procedure, mikmak

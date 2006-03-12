@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2006/03/04 21:29:33 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2006/03/12 13:47:35 rillig Exp $
 
 DISTNAME=	kvim-${KVIM_VERSION}
 PKGNAME=	vim-kde-${KVIM_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	editors kde
 MASTER_SITES=	ftp://ftp.rutgers.edu/pub/kde/stable/apps/KDE3.x/utils/ \
 		ftp://ftp.kde.org/pub/kde/stable/apps/KDE3.x/utils/ \
@@ -13,16 +13,16 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freehackers.org/kvim
 COMMENT=	Vim editor (vi clone) with X11 KDE3 GUI
 
-BROKEN_IN=	pkgsrc-2005Q4
-
 KVIM_VERSION=	6.2.14
 
 CONFLICTS+=	vim-gtk-[0-9]* vim-gtk2-[0-9]* vim-motif-[0-9]*
 CONFLICTS+=	vim-share-[0-9]* vim-[0-9]* vim-xaw-[0-9]*
-CONFLICTS+=	pkg_alternatives-[0-9]*
 
 WRKSRC=		${WRKDIR}/kvim-${KVIM_VERSION}/src
 USE_DIRS+=	xdg-1.1
+USE_TOOLS+=	awk:run perl:run
+MAKE_ENV+=	AWK=${AWK:Q}
+MAKE_ENV+=	PERL5=${PERL5:Q}
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-gui=kde
