@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2006/03/11 10:51:23 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2006/03/12 12:30:05 wiz Exp $
 
 DISTNAME=	wesnoth-1.0.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 
