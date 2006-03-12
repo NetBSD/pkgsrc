@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13270 2006/03/12 01:34:29 heinz Exp $
+$NetBSD: CHANGES,v 1.13271 2006/03/12 03:47:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1463,3 +1463,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/clisp to 2.38 [wiz 2006-03-11]
 	Updated net/p5-Net-DNS to 0.57 [heinz 2006-03-12]
 	Updated security/p5-Crypt-CBC to 2.17 [heinz 2006-03-12]
+	Updated graphics/ruby-RMagick to 1.10.1 [taca 2006-03-12]
