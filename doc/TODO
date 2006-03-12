@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4742 2006/03/12 18:26:44 wiz Exp $
+$NetBSD: TODO,v 1.4743 2006/03/12 18:32:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -664,7 +664,6 @@ Suggested package updates
 	o libgiigic-1.1.1
 	o libglademm-2.6.2
 	o libhydrogen-0.9.2
-	o libidn-0.6.3
 	o libjit-0.0.6
 	o liblive-2005.10.05
 	o libmatheval-1.1.2
