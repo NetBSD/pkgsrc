@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/02/14 20:58:50 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/03/12 21:09:45 adam Exp $
 include/glibmm-2.4/glibmm.h
 include/glibmm-2.4/glibmm/arrayhandle.h
 include/glibmm-2.4/glibmm/class.h
@@ -422,11 +422,6 @@ share/doc/glibmm-2.4/docs/reference/html/containers_8h.html
 share/doc/glibmm-2.4/docs/reference/html/convert_8h.html
 share/doc/glibmm-2.4/docs/reference/html/date_8h.html
 share/doc/glibmm-2.4/docs/reference/html/debug_8h.html
-share/doc/glibmm-2.4/docs/reference/html/dir_000000.html
-share/doc/glibmm-2.4/docs/reference/html/dir_000000_dep.png
-share/doc/glibmm-2.4/docs/reference/html/dir_000001.html
-share/doc/glibmm-2.4/docs/reference/html/dir_000001_dep.png
-share/doc/glibmm-2.4/docs/reference/html/dirs.html
 share/doc/glibmm-2.4/docs/reference/html/dispatcher_8h.html
 share/doc/glibmm-2.4/docs/reference/html/doxygen.css
 share/doc/glibmm-2.4/docs/reference/html/doxygen.png
@@ -705,6 +700,7 @@ share/doc/glibmm-2.4/docs/reference/html/structGlib_1_1StaticRecMutex__inherit__
 share/doc/glibmm-2.4/docs/reference/html/structGlib_1_1TimeVal-members.html
 share/doc/glibmm-2.4/docs/reference/html/structGlib_1_1TimeVal.html
 share/doc/glibmm-2.4/docs/reference/html/structGlib_1_1TimeVal__inherit__graph.png
+share/doc/glibmm-2.4/docs/reference/html/tabs.css
 share/doc/glibmm-2.4/docs/reference/html/thread_2dispatcher_8cc-example.html
 share/doc/glibmm-2.4/docs/reference/html/thread_2thread_8cc-example.html
 share/doc/glibmm-2.4/docs/reference/html/thread_8h.html
