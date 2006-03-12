@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/03/12 12:36:01 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2006/03/12 12:37:30 wiz Exp $
 
 DISTNAME=	coreutils-5.2.1
 PKGREVISION=	2
@@ -14,7 +14,7 @@ NOT_FOR_PLATFORM=	NetBSD-2.0[D-H]-*
 
 BUILD_USES_MSGFMT=	YES
 
-CONFLICTS=	fileutils-* linuxls-* sh-utils-* textutils-*
+CONFLICTS=	fileutils-[0-9]* linuxls-[0-9]* sh-utils-[0-9]* textutils-[0-9]*
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		perl
@@ -25,7 +25,7 @@ INFO_FILES=	coreutils.info
 TEST_TARGET=		check
 
 SUBST_CLASSES+=		root
-SUBST_MESSAGE.root=	"Fixing hardcoded root."
+SUBST_MESSAGE.root=	Fixing hardcoded root.
 SUBST_STAGE.root=	post-patch
 SUBST_FILES.root=	src/Makefile.in
 SUBST_SED.root=		-e 's, root , ${ROOT_USER} ,g'
@@ -62,7 +62,7 @@ BUILD_DEFS+=		GNU_PROGRAM_PREFIX
   ${OPSYS} == "OpenBSD"
 MAKE_FLAGS+=	setuid_root_mode=a=rx
 MESSAGE_SRC=    ${.CURDIR}/MESSAGE.gsu
-MESSAGE_SUBST+=	OPSYS=${OPSYS}
+MESSAGE_SUBST+=	OPSYS=${OPSYS:Q}
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
