@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/02/20 03:39:25 schmonz Exp $
+# $NetBSD: Makefile,v 1.46 2006/03/12 14:15:43 rillig Exp $
 #
 
 DISTNAME=		netqmail-1.05
@@ -78,7 +78,7 @@ SUBST_STAGE.logging=	do-configure
 SUBST_FILES.logging=	extra.h
 SUBST_SED.logging=	-e 's|0|${QUEUE_EXTRALEN_cmd:sh}|g'
 SUBST_SED.logging+=	-e 's|""|${QUEUE_EXTRA}|g'
-SUBST_MESSAGE.logging=	"Setting QUEUE_EXTRA."
+SUBST_MESSAGE.logging=	Setting QUEUE_EXTRA.
 .endif
 
 SUBST_FILES.djbware+=	cdb_seek.c dns.c
