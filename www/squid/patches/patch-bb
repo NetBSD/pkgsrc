@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.8 2005/09/15 15:40:47 taca Exp $
+$NetBSD: patch-bb,v 1.9 2006/03/12 12:12:19 taca Exp $
 
---- include/autoconf.h.in.orig	2005-04-23 10:32:27.000000000 +0900
+--- include/autoconf.h.in.orig	2005-09-13 09:12:34.000000000 +0900
 +++ include/autoconf.h.in
-@@ -665,6 +668,9 @@
+@@ -671,6 +671,9 @@
  /* Define if you have the <linux/netfilter_ipv4.h> header file.  */
  #undef HAVE_LINUX_NETFILTER_IPV4_H
  
