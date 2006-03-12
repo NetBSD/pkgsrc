@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.7 2002/09/27 00:45:14 jlam Exp $
+$NetBSD: patch-ad,v 1.8 2006/03/12 18:13:53 jschauma Exp $
 
 --- popt/Makefile.in.orig	Wed Mar 20 06:46:09 2002
 +++ popt/Makefile.in
@@ -7,11 +7,11 @@ $NetBSD: patch-ad,v 1.7 2002/09/27 00:45:14 jlam Exp $
  noinst_PROGRAMS = test1 test2
  test1_SOURCES = test1.c
 -test1_LDFLAGS = -all-static
-+test1_LDFLAGS = --disable-shared
++test1_LDFLAGS = 
  test1_LDADD = $(noinst_LTLIBRARIES)
  test2_SOURCES = test2.c
 -test2_LDFLAGS = -all-static
-+test2_LDFLAGS = --disable-shared
++test2_LDFLAGS =
  test2_LDADD = $(noinst_LTLIBRARIES)
  
  noinst_SCRIPTS = testit.sh
