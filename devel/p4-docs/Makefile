@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:08:49 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/12 14:32:45 rillig Exp $
 #
 
 DISTNAME=	p4-docs
@@ -24,18 +24,18 @@ DISTFILES+=	p4sag_html.zip
 
 P4_DOCURL_PREFIX=		http://www.perforce.com/perforce/doc.021
 
-SITES_p4.1=			${P4_DOCURL_PREFIX}/man/
-SITES_p4d.1=			${P4_DOCURL_PREFIX}/man/
-SITES_relnotes.txt=		${P4_DOCURL_PREFIX}/user/
-SITES_platformnotes.html=	${P4_DOCURL_PREFIX}/user/
-SITES_cmdref_html.zip=		${P4_DOCURL_PREFIX}/manuals/cmdref/
-SITES_p4ftp_html.zip=		${P4_DOCURL_PREFIX}/manuals/p4ftp/
-SITES_p4guide_html.zip=		${P4_DOCURL_PREFIX}/manuals/p4guide/
-SITES_p4sag_html.zip=		${P4_DOCURL_PREFIX}/manuals/p4sag/
+SITES.p4.1=			${P4_DOCURL_PREFIX}/man/
+SITES.p4d.1=			${P4_DOCURL_PREFIX}/man/
+SITES.relnotes.txt=		${P4_DOCURL_PREFIX}/user/
+SITES.platformnotes.html=	${P4_DOCURL_PREFIX}/user/
+SITES.cmdref_html.zip=		${P4_DOCURL_PREFIX}/manuals/cmdref/
+SITES.p4ftp_html.zip=		${P4_DOCURL_PREFIX}/manuals/p4ftp/
+SITES.p4guide_html.zip=		${P4_DOCURL_PREFIX}/manuals/p4guide/
+SITES.p4sag_html.zip=		${P4_DOCURL_PREFIX}/manuals/p4sag/
 
 EXTRACT_ONLY=		cmdref_html.zip p4ftp_html.zip
 EXTRACT_ONLY+=		p4guide_html.zip p4sag_html.zip
-EXTRACT_OPTS+=		-d `${BASENAME} ${DOWNLOADED_DISTFILE} _html.zip`
+EXTRACT_OPTS+=		-d `${BASENAME} "$$extract_file" _html.zip`
 EXTRACT_OPTS_ZIP=	-Laq
 
 DOCDIR=		share/doc/p4
