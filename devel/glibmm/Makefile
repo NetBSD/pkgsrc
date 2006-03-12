@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2006/02/14 20:58:50 adam Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/12 21:09:45 adam Exp $
 
-DISTNAME=	glibmm-2.8.4
+DISTNAME=	glibmm-2.8.5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glibmm/2.8/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +13,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/glib/glibmm-2.4.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC:Q}/glib/glibmm-2.4.pc.in
 GNU_CONFIGURE=		yes
 
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.8.0
