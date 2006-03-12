@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/02/26 10:39:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/03/12 20:02:06 wiz Exp $
 bin/rsvg
 bin/rsvg-convert
 bin/rsvg-view
@@ -24,6 +24,7 @@ share/doc/librsvg2/rsvg-Cairo.html
 share/doc/librsvg2/rsvg-Core-API.html
 share/doc/librsvg2/rsvg-GdkPixbuf.html
 share/doc/librsvg2/rsvg.devhelp
+share/doc/librsvg2/rsvg.devhelp2
 share/doc/librsvg2/rsvg.html
 share/doc/librsvg2/style.css
 share/doc/librsvg2/up.png
