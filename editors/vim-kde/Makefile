@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/03/12 13:47:35 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2006/03/12 17:05:08 rillig Exp $
 
 DISTNAME=	kvim-${KVIM_VERSION}
 PKGNAME=	vim-kde-${KVIM_VERSION}
@@ -17,6 +17,7 @@ KVIM_VERSION=	6.2.14
 
 CONFLICTS+=	vim-gtk-[0-9]* vim-gtk2-[0-9]* vim-motif-[0-9]*
 CONFLICTS+=	vim-share-[0-9]* vim-[0-9]* vim-xaw-[0-9]*
+CONFLICTS+=	pkg_alternatives-[0-9]*
 
 WRKSRC=		${WRKDIR}/kvim-${KVIM_VERSION}/src
 USE_DIRS+=	xdg-1.1
