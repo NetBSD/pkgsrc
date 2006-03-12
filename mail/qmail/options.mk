@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2006/02/20 03:39:25 schmonz Exp $
+# $NetBSD: options.mk,v 1.21 2006/03/12 14:15:43 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_SUPPORTED_OPTIONS+=	darwin sasl syncdir tls qmail-badrcptto qmail-bigdns
@@ -14,21 +14,21 @@ PKG_SUGGESTED_OPTIONS+=	darwin
 .if !empty(PKG_OPTIONS:Mqmail-badrcptto)
 BADRCPTTO_PATCH=	badrcptto.patch
 PATCHFILES+=		${BADRCPTTO_PATCH}
-SITES_${BADRCPTTO_PATCH}=	http://patch.be/qmail/
+SITES.${BADRCPTTO_PATCH}=	http://patch.be/qmail/
 PATCH_DIST_STRIP.${BADRCPTTO_PATCH}=	-p2
 .endif
 
 .if !empty(PKG_OPTIONS:Mqmail-bigdns)
 BIGDNS_PATCH=		qmail-103.patch
 PATCHFILES+=		${BIGDNS_PATCH}
-SITES_${BIGDNS_PATCH}=	http://www.ckdhr.com/ckd/
+SITES.${BIGDNS_PATCH}=	http://www.ckdhr.com/ckd/
 PATCH_DIST_STRIP.${BIGDNS_PATCH}=	-p1
 .endif
 
 .if !empty(PKG_OPTIONS:Mdarwin)
 DARWIN_PATCH=		panther.patch
 PATCHFILES+=		${DARWIN_PATCH}
-SITES_${DARWIN_PATCH}=	http://http.netdevice.com:9080/qmail/patch/
+SITES.${DARWIN_PATCH}=	http://http.netdevice.com:9080/qmail/patch/
 PATCH_DIST_STRIP.${DARWIN_PATCH}=	-p1
 DARWINSUFX=		.doc
 .else
@@ -47,13 +47,13 @@ PATCH_DIST_STRIP.${NETQMAIL_PATCH}=	-p1
 .if !empty(PKG_OPTIONS:Mqmail-outgoingip)
 OUTGOINGIP_PATCH=	outgoingip.patch
 PATCHFILES+=		${OUTGOINGIP_PATCH}
-SITES_${OUTGOINGIP_PATCH}=	http://www.qmail.org/
+SITES.${OUTGOINGIP_PATCH}=	http://www.qmail.org/
 .endif
 
 .if !empty(PKG_OPTIONS:Mqmail-qregex)
 QREGEX_PATCH=		qregex-20040725.patch
 PATCHFILES+=		${QREGEX_PATCH}
-SITES_${QREGEX_PATCH}=	http://www.arda.homeunix.net/store/qmail/
+SITES.${QREGEX_PATCH}=	http://www.arda.homeunix.net/store/qmail/
 PATCH_DIST_STRIP.${QREGEX_PATCH}=	-p3
 PLIST_SRC+=             ${PKGDIR}/PLIST.qregex
 .endif
@@ -61,7 +61,7 @@ PLIST_SRC+=             ${PKGDIR}/PLIST.qregex
 .if !empty(PKG_OPTIONS:Mqmail-realrcptto)
 REALRCPTTO_PATCH=	qmail-1.03-realrcptto-2004.08.20.patch
 PATCHFILES+=		${REALRCPTTO_PATCH}
-SITES_${REALRCPTTO_PATCH}=	http://code.dogmap.org/qmail/
+SITES.${REALRCPTTO_PATCH}=	http://code.dogmap.org/qmail/
 PATCH_DIST_STRIP.${REALRCPTTO_PATCH}=	-p1
 .endif
 
@@ -72,7 +72,7 @@ PKG_OPTIONS+=		sasl
 .  include "../../security/openssl/buildlink3.mk"
 TLSSASL_PATCH=		netqmail-1.05-tls-smtpauth-20040705.patch
 PATCHFILES+=            ${TLSSASL_PATCH}
-SITES_${TLSSASL_PATCH}=	http://shupp.org/patches/
+SITES.${TLSSASL_PATCH}=	http://shupp.org/patches/
 .  if !empty(PKG_OPTIONS:Mtls)
 CFLAGS+=		-DTLS=20040419			# from the patch
 DJB_INSTALL_TARGETS=	cert tmprsadh
@@ -90,15 +90,15 @@ SUBST_SED.load=		-e '$$s|$$| ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.syncdir}/l
 .  if ${OPSYS} == "Darwin"
 SUBST_SED.load+=	-e '$$s|$$| -bind_at_load|'
 .  endif
-SUBST_MESSAGE.load=	"Setting linker flags for syncdir."
+SUBST_MESSAGE.load=	Setting linker flags for syncdir.
 .endif
 
 .if !empty(PKG_OPTIONS:Mqmail-viruscan)
 VIRUSCAN_PATCH=		qmail-smtpd-viruscan-1.3.patch
 VIRUSCAN_LOG_PATCH=	qmail-smtpd-viruscan-logging.patch
 PATCHFILES+=		${VIRUSCAN_PATCH} ${VIRUSCAN_LOG_PATCH}
-SITES_${VIRUSCAN_PATCH}=http://www.qmail.org/
-SITES_${VIRUSCAN_LOG_PATCH}=	http://scriptkitchen.com/qmail/
+SITES.${VIRUSCAN_PATCH}=	http://www.qmail.org/
+SITES.${VIRUSCAN_LOG_PATCH}=	http://scriptkitchen.com/qmail/
 PATCH_DIST_STRIP.${VIRUSCAN_PATCH}=	-p1
 PATCH_DIST_STRIP.${VIRUSCAN_LOG_PATCH}=	-p1
 VIRUSCAN_SIGS_SRCFILE=	${DISTDIR}/${VIRUSCAN_PATCH}
