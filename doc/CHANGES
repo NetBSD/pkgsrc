@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13269 2006/03/12 00:17:21 heinz Exp $
+$NetBSD: CHANGES,v 1.13270 2006/03/12 01:34:29 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1427,6 +1427,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/peace to 0.0.20060310 [kent 2006-03-10]
 	Updated security/gnupg to 1.4.2.2 [ghen 2006-03-10]
 	Updated security/p5-Digest-Hashcash to 0.03 [heinz 2006-03-10]
+	Updated archivers/p5-Archive-Tar to 1.29 [heinz 2006-03-10]
 	Updated net/bittornado to 0.3.15 [veego 2006-03-10]
 	Updated net/bittornado-gui to 0.3.15 [veego 2006-03-10]
 	Updated print/acroread7 to 7.0.1nb2 [wiz 2006-03-10]
@@ -1460,3 +1461,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Renamed devel/glade2 to devel/glade [jmmv 2006-03-11]
 	Renamed devel/glade2-gnome to devel/glade-gnome [jmmv 2006-03-11]
 	Updated lang/clisp to 2.38 [wiz 2006-03-11]
+	Updated net/p5-Net-DNS to 0.57 [heinz 2006-03-12]
+	Updated security/p5-Crypt-CBC to 2.17 [heinz 2006-03-12]
