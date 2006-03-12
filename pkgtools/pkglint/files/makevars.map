@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.74 2006/03/11 18:38:35 rillig Exp $
+# $NetBSD: makevars.map,v 1.75 2006/03/12 13:34:53 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -49,7 +49,7 @@ BDB_LIBS		Readonly
 BDB_TYPE		Readonly
 BROKEN			Message
 BROKEN_GETTEXT_DETECTION	YesNo
-BROKEN_IN		List of { pkgsrc-2005Q4 }
+BROKEN_IN		List of BrokenIn
 BUILDLINK_CONTENTS_FILTER	List of ShellWord
 # ^^ ShellCommand
 BUILDLINK_CFLAGS	List+ of CFlag
