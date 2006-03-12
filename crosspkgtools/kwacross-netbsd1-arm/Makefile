@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/14 22:56:59 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/12 14:06:30 rillig Exp $
 
 DISTNAME=	kwacross-netbsd1-arm-20050605
 CATEGORIES=     crosspkgtools
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.df.lth.se/~cato/kwacross/
 COMMENT=	Simulator for running NetBSD/arm programs
 
 DIST_SUBDIR=	kwacross-netbsd-1.6.2
-SITES_kwacross-netbsd1-arm-20050605.tgz=http://www.df.lth.se/~cato/kwacross/distfiles/
+SITES.kwacross-netbsd1-arm-20050605.tgz=http://www.df.lth.se/~cato/kwacross/distfiles/
 
 ONLY_FOR_PLATFORM=	NetBSD-1.6*-* NetBSD-[2-9]*-*
 
