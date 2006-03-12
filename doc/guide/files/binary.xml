@@ -1,4 +1,4 @@
-<!-- $NetBSD: binary.xml,v 1.23 2006/03/03 22:22:07 wiz Exp $ -->
+<!-- $NetBSD: binary.xml,v 1.24 2006/03/12 11:34:09 rillig Exp $ -->
 
 <chapter id="binary">
   <title>Creating binary packages</title>
@@ -396,9 +396,10 @@
 	</step>
 
 	<step>
-	  <para><filename>/usr/src</filename> (system sources, for <filename
-	    role="pkg">sysutils/aperture</filename>,
-	    <filename role="pkg">net/ppp-mppe</filename>):</para>
+
+	  <para><filename>/usr/src</filename> (system sources,
+	  e.&nbsp;g. for <filename
+	  role="pkg">sysutils/aperture</filename>):</para>
 
 	  <screen>&rprompt; <userinput>ln -s ../disk1/cvs .</userinput>
 &rprompt; <userinput>ln -s cvs/src-2.0 src</userinput></screen>
