@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1805 2006/03/10 11:02:00 tonio Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1806 2006/03/12 14:55:18 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -533,6 +533,10 @@ _PKGSRC_IN?=		===${SMART_MESSAGES:D> ${.TARGET} [${PKGNAME}${_PKGSRC_DEPS}] ===}
 
 # Used to print all the '===>' style prompts - override this to turn them off.
 ECHO_MSG?=		${ECHO}
+PHASE_MSG?=		${ECHO_MSG} ${_PKGSRC_IN:Q}\>
+STEP_MSG?=		${ECHO_MSG} "=>"
+WARNING_MSG?=		${ECHO_MSG} 1>&2 "WARNING:"
+ERROR_MSG?=		${ECHO_MSG} 1>&2 "ERROR:"
 
 # How to do nothing.  Override if you, for some strange reason, would rather
 # do something.
