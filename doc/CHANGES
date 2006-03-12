@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13272 2006/03/12 06:59:30 minskim Exp $
+$NetBSD: CHANGES,v 1.13273 2006/03/12 07:40:26 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1467,3 +1467,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/qt3-tools to 3.3.5nb5 [minskim 2006-03-12]
 	Updated security/libfwbuilder to 2.0.10nb5 [minskim 2006-03-12]
 	Updated security/fwbuilder to 2.0.10nb3 [minskim 2006-03-12]
+	Updated devel/tkdiff to 4.0.2nb2 [minskim 2006-03-12]
