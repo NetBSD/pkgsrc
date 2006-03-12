@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.2 2004/11/29 08:47:29 adam Exp $
+$NetBSD: patch-ab,v 1.3 2006/03/12 16:33:32 rillig Exp $
+
+HTML documentation is installed to share/doc/cln/html, DVI and
+PostScript are left out.
 
 --- doc/Makefile.in.orig	2004-10-26 21:29:16.000000000 +0000
 +++ doc/Makefile.in
@@ -7,7 +10,7 @@ $NetBSD: patch-ab,v 1.2 2004/11/29 08:47:29 adam Exp $
  infodir = @infodir@
  mandir = @mandir@
 -htmldir = $(datadir)/html
-+htmldir = $(datadir)/doc/html/cln
++htmldir = $(datadir)/doc/cln/html
  dvidir = $(datadir)/dvi
  DESTDIR =
  
