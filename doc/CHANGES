@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13281 2006/03/12 18:23:41 wiz Exp $
+$NetBSD: CHANGES,v 1.13282 2006/03/12 18:26:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1478,3 +1478,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/namazu2 to 2.0.16 [taca 2006-03-12]
 	Added games/aop version 0.6 [rillig 2006-03-12]
 	Updated x11/devilspie to 0.17.1 [wiz 2006-03-12]
+	Updated misc/cksfv to 1.3.9 [wiz 2006-03-12]
