@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13274 2006/03/12 11:18:48 jmmv Exp $
+$NetBSD: CHANGES,v 1.13275 2006/03/12 12:13:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1469,3 +1469,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/fwbuilder to 2.0.10nb3 [minskim 2006-03-12]
 	Updated devel/tkdiff to 4.0.2nb2 [minskim 2006-03-12]
 	Updated x11/libxklavier to 2.2 [jmmv 2006-03-12]
+	Updated www/squid to 2.5.13 [taca 2006-03-12]
