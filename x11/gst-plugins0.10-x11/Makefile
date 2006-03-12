@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:11:34 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/12 12:42:05 jmmv Exp $
 #
 
 GST_PLUGINS0.10_NAME=	x11
-PKGREVISION=		1
 GST_PLUGINS0.10_DIRS=	sys/ximage sys/xvimage
 GST_PLUGINS0.10_FLAGS=	x xshm xvideo
 
