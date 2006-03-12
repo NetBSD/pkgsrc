@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13285 2006/03/12 19:36:32 jmmv Exp $
+$NetBSD: CHANGES,v 1.13286 2006/03/12 20:02:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1482,3 +1482,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/libidn to 0.6.3 [wiz 2006-03-12]
 	Updated net/rsync to 2.6.7 [wiz 2006-03-12]
 	Updated pkgtools/pkg_comp to 1.28 [jmmv 2006-03-12]
+	Updated graphics/librsvg2 to 2.14.2 [wiz 2006-03-12]
