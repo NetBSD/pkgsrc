@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/03/04 21:30:45 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2006/03/12 16:55:37 jschauma Exp $
 #
 
 DISTNAME=	docbook-xsl-1.69.1
@@ -38,7 +38,7 @@ do-install:
 	    ${ECHO} "cd ${WRKSRC} && ${PAX} -rw -pp -pm $$d ${XSLDIR}/"; \
 	    cd ${WRKSRC} && ${PAX} -rw -pp -pm $$d ${XSLDIR}/; \
 	done
-	${RM} ${XSLDIR}/common/pi.xsl.orig
+	${RM} -f ${XSLDIR}/common/pi.xsl.orig
 
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
