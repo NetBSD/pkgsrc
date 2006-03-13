@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2006/02/05 23:10:22 joerg Exp $
+# $NetBSD: Makefile,v 1.54 2006/03/13 04:29:16 rillig Exp $
 
 DISTNAME=		arla-0.41
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net security
 MASTER_SITES=		ftp://ftp.stacken.kth.se/pub/arla/
 
@@ -13,6 +13,7 @@ CONFLICTS+=		heimdal-[0-9]*
 CONFLICTS+=		lwp-[0-9]*
 CONFLICTS+=		openafs-[0-9]*
 CONFLICTS+=		rx-[0-9]*
+CONFLICTS+=		kth-krb4-[0-9]*
 
 OSVERSION_SPECIFIC=	yes
 INFO_FILES=		arla.info send-pr.info
@@ -29,7 +30,7 @@ INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 .  if exists(${BSDSRCDIR}/sys/lib/libkern/libkern.h)
 CONFIGURE_ARGS+=	--with-sys=${BSDSRCDIR}/sys
 .  else
-PKG_FAIL_REASON+=	"${PKGNAME} requires kernel sources available under \$$BSDSRCDIR/sys (or //usr/src/sys)"
+PKG_FAIL_REASON+=	"${PKGNAME} requires kernel sources available under \$$BSDSRCDIR/sys (or /usr/src/sys)"
 .  endif
 .endif
 
@@ -41,7 +42,7 @@ CONFIGURE_ARGS+=	--enable-shared=no
 # (these options must match the compile options of the kernel)
 #CONFIGURE_ENV+=	KERNEL_CPPFLAGS="-DMULTIPROCESSOR -DDEBUG -DDIAGNOSTIC"
 
-MESSAGE_SUBST+=		ARLA_CACHE=${ARLA_CACHE}
+MESSAGE_SUBST+=		ARLA_CACHE=${ARLA_CACHE:Q}
 PLIST_SUBST+=		ARLA_CACHE=${ARLA_CACHE:Q}
 FILES_SUBST+=		ARLA_CACHE=${ARLA_CACHE:Q}
 
