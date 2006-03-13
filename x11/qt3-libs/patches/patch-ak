@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.1 2006/03/12 06:49:21 minskim Exp $
+$NetBSD: patch-ak,v 1.2 2006/03/13 21:53:47 minskim Exp $
 
---- qmake/generators/unix/unixmake.cpp.orig	2005-09-02 12:43:19.000000000 +0000
+--- qmake/generators/unix/unixmake.cpp.orig	2005-09-02 05:43:19.000000000 -0700
 +++ qmake/generators/unix/unixmake.cpp
-@@ -340,27 +340,31 @@ UnixMakefileGenerator::init()
+@@ -340,27 +340,30 @@ UnixMakefileGenerator::init()
  		if(libtoolify[i].startsWith("QMAKE_LINK") || libtoolify[i] == "QMAKE_AR_CMD") {
  		    libtool_flags += " --mode=link";
  		    if(project->isActiveConfig("staticlib")) {
@@ -31,7 +31,6 @@ $NetBSD: patch-ak,v 1.1 2006/03/12 06:49:21 minskim Exp $
 -				}
 +			        QString rpath = Option::fixPathToTargetOS(project->first("target.path")\
 +									      , FALSE);
-+				rpath = fileFixify(rpath);
 +				if(rpath.right(1) != Option::dir_sep)
 +				    rpath += Option::dir_sep;
  				comp_flags += " -rpath " + Option::fixPathToTargetOS(rpath, FALSE);
@@ -44,9 +43,20 @@ $NetBSD: patch-ak,v 1.1 2006/03/12 06:49:21 minskim Exp $
  		} else {
  		    libtool_flags += " --mode=compile";
  		}
-@@ -820,8 +824,12 @@ UnixMakefileGenerator::defaultInstall(co
+@@ -730,7 +733,6 @@ UnixMakefileGenerator::defaultInstall(co
+     QString targetdir = Option::fixPathToTargetOS(project->first("target.path"), FALSE);
+     if(!destdir.isEmpty() && destdir.right(1) != Option::dir_sep)
+ 	destdir += Option::dir_sep;
+-    targetdir = fileFixify(targetdir);
+     if(targetdir.right(1) != Option::dir_sep)
+ 	targetdir += Option::dir_sep;
+ 
+@@ -818,10 +820,14 @@ UnixMakefileGenerator::defaultInstall(co
+ 	QString src_targ = target;
+ 	if(src_targ == "$(TARGET)")
  	    src_targ = "$(TARGETL)";
- 	QString dst_dir = fileFixify(targetdir);
+-	QString dst_dir = fileFixify(targetdir);
++	QString dst_dir = targetdir;
  	if(QDir::isRelativePath(dst_dir))
 -	    dst_dir = Option::fixPathToTargetOS(Option::output_dir + Option::dir_sep + dst_dir);
 -	ret = "-$(LIBTOOL) --mode=install cp \"" + src_targ + "\" \"" + root + dst_dir + "\"";
