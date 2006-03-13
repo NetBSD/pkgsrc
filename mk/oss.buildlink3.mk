@@ -1,11 +1,32 @@
-# $NetBSD: oss.buildlink3.mk,v 1.3 2006/03/10 22:33:24 jlam Exp $
+# $NetBSD: oss.buildlink3.mk,v 1.4 2006/03/13 16:10:15 jlam Exp $
 #
 # This Makefile fragment is included by packages that require an Open Sound
-# System (OSS) implementation.
+# System (OSS) implementation.  After inclusion of this file, the following
+# variables may be examined:
+#
+#    OSS_TYPE
+#	The type of OSS implementation that has been found.  "native"
+#	means the native OSS implementation is used.  "none" means that
+#	no suitable OSS implementation could be found.
 #
 OSS_BUILDLINK3_MK:=	${OSS_BUILDLINK3_MK}+
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !defined(_OSS_TYPE)
+_OSS_TYPE=		none
+CHECK_BUILTIN.oss:=	yes
+.  include "../../mk/oss.builtin.mk"
+CHECK_BUILTIN.oss:=	no
+.  if defined(IS_BUILTIN.oss) && !empty(IS_BUILTIN.oss:M[yY][eE][sS])
+_OSS_TYPE=		native
+.  endif
+.endif
+MAKEVARS+=		_OSS_TYPE
+
+OSS_TYPE=		${_OSS_TYPE}
+
+.if ${OSS_TYPE} != "none"
 
 BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Noss}
 BUILDLINK_PACKAGES+=		oss
@@ -29,3 +50,5 @@ MAKE_ENV+=		LIBOSSAUDIO=${LIBOSSAUDIO:Q}
 MAKE_ENV+=		DEVOSSAUDIO=${DEVOSSAUDIO:Q}
 MAKE_ENV+=		DEVOSSSOUND=${DEVOSSSOUND:Q}
 .endif	# OSS_BUILDLINK3_MK
+
+.endif	# OSS_TYPE != none
