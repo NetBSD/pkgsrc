@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13304 2006/03/13 22:02:20 minskim Exp $
+$NetBSD: CHANGES,v 1.13305 2006/03/13 22:15:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1506,3 +1506,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/acroread7 to 7.0.1nb3 [joerg 2006-03-13]
 	Updated mail/spamassassin to 3.1.1 [heinz 2006-03-13]
 	Updated x11/qt3-tools to 3.3.5nb6 [minskim 2006-03-13]
+	Updated misc/kdeaddons3 to 3.5.1nb2 [minskim 2006-03-13]
