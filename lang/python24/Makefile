@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2006/03/09 21:04:44 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/03/13 12:59:08 rillig Exp $
 #
 
 DISTNAME=	Python-2.4.2
 PKGNAME=	python24-2.4.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang python
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.4.2/
 EXTRACT_SUFX=	.tar.bz2
@@ -110,6 +110,13 @@ PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX:Q}
 
 TEST_TARGET=	test
 INSTALL_TARGET=	altinstall
+
+REPLACE_INTERPRETER+=	py24
+REPLACE.py24.old=	.*python[^ ]*
+REPLACE.py24.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
+REPLACE_FILES.py24=	Lib/cgi.py	# explicitly demanded to be patched
+REPLACE_FILES.py24+=	Lib/bsddb/dbshelve.py Lib/test/test_bz2.py
+REPLACE_FILES.py24+=	Lib/test/test_largefile.py Lib/test/test_optparse.py
 
 post-extract:
 	${MV} ${WRKSRC}/Lib/smtpd.py ${WRKSRC}/Lib/smtpd${PY_VER_SUFFIX}.py
