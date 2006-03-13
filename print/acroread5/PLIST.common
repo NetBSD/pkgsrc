@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2005/02/21 21:24:06 veego Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2006/03/13 19:54:37 joerg Exp $
 Acrobat5/Browsers/netscape
 Acrobat5/Browsers/${PLATFORM}/nppdf.so
 Acrobat5/Reader/AcroVersion
@@ -11,6 +11,7 @@ Acrobat5/Reader/res/splashScreen11R.xbm
 Acrobat5/Reader/res/splashScreen18R.xpm
 Acrobat5/Reader/${PLATFORM}/app-defaults/AcroRead
 Acrobat5/Reader/${PLATFORM}/bin/acroread
+Acrobat5/Reader/${PLATFORM}/fonts
 Acrobat5/Reader/${PLATFORM}/lib/XKeysymDB
 Acrobat5/Reader/${PLATFORM}/lib/libACE.so
 Acrobat5/Reader/${PLATFORM}/lib/libACE.so.2.02
@@ -29,6 +30,7 @@ Acrobat5/Reader/${PLATFORM}/plug_ins/JavaScripts/AFStrENU.js
 Acrobat5/Reader/${PLATFORM}/plug_ins/JavaScripts/AForm.js
 Acrobat5/Reader/${PLATFORM}/plug_ins/ewh.api
 Acrobat5/Reader/${PLATFORM}/plug_ins/wwwlink.api
+Acrobat5/Reader/${PLATFORM}/res
 Acrobat5/Resource/Font/AdobeSansMM
 Acrobat5/Resource/Font/AdobeSansMM.MMM
 Acrobat5/Resource/Font/AdobeSerifMM
