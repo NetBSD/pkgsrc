@@ -184,6 +184,7 @@ nntpcache-pgp		Enable pgp signed nocem support.
 nogui	
 ogg			Enable Ogg support.
 okinawa_dict	
+online-tests		Requiring Internet connectivity for "make test".
 openal			Enable OpenAL support.
 opengl			Use OpenGL as display library.
 openldap		Enable OpenLDAP support.
@@ -237,8 +238,7 @@ spamassassin-perl-warnings	Enable Perl warnings at run-time.
 spamassassin-taint-checks	Enable Perl taint checks to improve security.
 spamassassin-test-awl-sql	Enable tests of the SQL module for the automatic whitelist.
 spamassassin-test-bayes-sql	Enable tests of the SQL module for Bayes data.
-spamassassin-test-net		Enable Internet based tests during 'make test'.
-spamassassin-test-prefork	Enable spamd prefork test (kills processes containing 'spam child').
+spamassassin-test-prefork	Enable spamd prefork test (kills processes containing "spam child").
 sqlite			Enable SQLite support.
 ssl			Enable SSL support.
 starttls		Enable TLS support.
