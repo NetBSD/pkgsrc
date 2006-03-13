@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/15 14:23:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/03/13 20:36:51 joerg Exp $
 Acrobat7/Browser/Browser_Plugin_HowTo.txt
 Acrobat7/Browser/install_browser_plugin
 Acrobat7/Browser/${PLATFORM}/nppdf.so
@@ -107,6 +107,7 @@ Acrobat7/Reader/HowTo/ENU/Sign07.html
 Acrobat7/Reader/HowTo/ENU/Sign09.html
 Acrobat7/Reader/HowTo/ENU/Sign11.html
 Acrobat7/Reader/HowTo/ENU/Sign13.html
+Acrobat7/Reader/HowTo/ENU/images
 Acrobat7/Reader/JavaScripts/JSByteCodeLin.bin
 Acrobat7/Reader/JavaScripts/WebSearch.js
 Acrobat7/Reader/Legal/ENU/License.html
@@ -179,6 +180,7 @@ Acrobat7/Reader/${PLATFORM}/plug_ins/Spelling.api
 Acrobat7/Reader/${PLATFORM}/plug_ins/checkers.api
 Acrobat7/Reader/${PLATFORM}/plug_ins/ewh.api
 Acrobat7/Reader/${PLATFORM}/plug_ins/wwwlink.api
+Acrobat7/Reader/${PLATFORM}/res
 Acrobat7/Resource/CMap/Identity-H
 Acrobat7/Resource/CMap/Identity-V
 Acrobat7/Resource/Font/AdobePiStd.otf
