@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/03/13 23:03:28 heinz Exp $
+
+--- lib/helper.c.orig	2006-01-17 18:31:14.000000000 +0100
++++ lib/helper.c
+@@ -378,7 +378,7 @@ ipmi_start_daemon(void)
+ 		close(fd);
+ 	}
+ #else
+-	if (setpgrp() == -1)
++	if (setpgid(0,0) == -1)
+ 		exit(1);
+ 	pid = (pid_t) fork();
+ 	if (pid < 0 || pid > 0)
