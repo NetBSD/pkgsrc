@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2006/03/07 04:32:49 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2006/03/13 21:23:03 joerg Exp $
 
 --- src/app-utils/gnc-ui-util.c.orig	2006-03-06 02:02:59.000000000 +0000
 +++ src/app-utils/gnc-ui-util.c
@@ -42,21 +42,33 @@ $NetBSD: patch-ab,v 1.2 2006/03/07 04:32:49 wiz Exp $
  
    gnc_lconv_set_char(&lc.frac_digits, 2);
    gnc_lconv_set_char(&lc.int_frac_digits, 2);
-@@ -1229,12 +1237,12 @@ PrintAmountInternal(char *buf, gnc_numer
+@@ -1228,13 +1236,13 @@ PrintAmountInternal(char *buf, gnc_numer
+ 
      if (info->monetary)
      {
-       separator = lc->mon_thousands_sep;
+-      separator = lc->mon_thousands_sep;
 -      group = lc->mon_grouping;
++      separator = LC_CAST2 lc->mon_thousands_sep;
 +      group = LC_CAST2 lc->mon_grouping;
      }
      else
      {
-       separator = lc->thousands_sep;
+-      separator = lc->thousands_sep;
 -      group = lc->grouping;
++      separator = LC_CAST2 lc->thousands_sep;
 +      group = LC_CAST2 lc->grouping;
      }
  
      buf_ptr = buf;
+@@ -1302,7 +1310,7 @@ PrintAmountInternal(char *buf, gnc_numer
+   }
+   else
+   {
+-    char *decimal_point;
++    const char *decimal_point;
+     guint8 num_decimal_places = 0;
+     char *temp_ptr = temp_buf;
+ 
 @@ -1585,13 +1593,13 @@ xaccParseAmount (const char * in_str, gb
    {
      group_separator = g_utf8_get_char(lc->mon_thousands_sep);
