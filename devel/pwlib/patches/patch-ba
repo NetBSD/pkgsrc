@@ -1,16 +1,15 @@
-$NetBSD: patch-ba,v 1.4 2006/03/13 21:20:24 joerg Exp $
+$NetBSD: patch-ba,v 1.5 2006/03/13 22:58:45 rillig Exp $
 
---- src/ptclib/pssl.cxx.orig	2004-10-09 13:31:30.000000000 +0200
-+++ src/ptclib/pssl.cxx	2004-10-09 13:33:39.000000000 +0200
+--- src/ptclib/pssl.cxx.orig	2004-04-09 08:52:17.000000000 +0200
++++ src/ptclib/pssl.cxx	2006-03-13 23:48:01.000000000 +0100
 @@ -297,14 +297,22 @@ PSSLPrivateKey::PSSLPrivateKey(const PFi
  
  PSSLPrivateKey::PSSLPrivateKey(const BYTE * keyData, PINDEX keySize)
  {
--  key = d2i_AutoPrivateKey(NULL, (BYTE **)&keyData, keySize);
 +#if OPENSSL_VERSION_NUMBER >= 0x00908000L
 +  key = d2i_AutoPrivateKey(NULL, &keyData, keySize);
 +#else
-+  key = d2i_AutoPrivateKey(NULL, (BYE **)&keyData, keySize);
+   key = d2i_AutoPrivateKey(NULL, (BYTE **)&keyData, keySize);
 +#endif
  }
  
@@ -21,7 +20,7 @@ $NetBSD: patch-ba,v 1.4 2006/03/13 21:20:24 joerg Exp $
    const BYTE * keyPtr = keyData;
 -  key = d2i_AutoPrivateKey(NULL, (BYTE **)&keyPtr, keyData.GetSize());
 +#else
-+  BYTE * keyPtr = (BYTE *)keyData;
++  BYTE * keyPtr = (BYTE *)&keyData;
 +#endif
 +  key = d2i_AutoPrivateKey(NULL, &keyPtr, keyData.GetSize());
  }
@@ -42,11 +41,12 @@ $NetBSD: patch-ba,v 1.4 2006/03/13 21:20:24 joerg Exp $
  
  PSSLCertificate::PSSLCertificate(const PBYTEArray & certData)
  {
-+#if OPENSSL_VERSION_NUMBER >= 0x00908000L
-   const BYTE * certPtr = certData;
+-  const BYTE * certPtr = certData;
 -  certificate = d2i_X509(NULL, (unsigned char **)&certPtr, certData.GetSize());
++#if OPENSSL_VERSION_NUMBER >= 0x00908000L
++  const BYTE *certPtr = certData;
 +#else
-+  BYTE * certPtr = (BYTE *)certData;
++  BYTE *certPtr = (BYTE *)&certData;
 +#endif
 +  certificate = d2i_X509(NULL, &certPtr, certData.GetSize());
  }
@@ -56,11 +56,12 @@ $NetBSD: patch-ba,v 1.4 2006/03/13 21:20:24 joerg Exp $
    PBYTEArray certData;
    PBase64::Decode(certStr, certData);
    if (certData.GetSize() > 0) {
-+#if OPENSSL_VERSION_NUMBER >= 0x00908000L
-     const BYTE * certPtr = certData;
+-    const BYTE * certPtr = certData;
 -    certificate = d2i_X509(NULL, (unsigned char **)&certPtr, certData.GetSize());
++#if OPENSSL_VERSION_NUMBER >= 0x00908000L
++    const BYTE *certPtr = certData;
 +#else
-+    BYTE * certPtr = (BYTE **)certData;
++    BYTE *certPtr = (BYTE *)&certData;
 +#endif
 +    certificate = d2i_X509(NULL, &certPtr, certData.GetSize());
    }
