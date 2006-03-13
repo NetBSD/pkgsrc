@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4747 2006/03/13 00:20:14 markd Exp $
+$NetBSD: TODO,v 1.4748 2006/03/13 08:52:03 taca Exp $
 
 Suggested new packages
 ======================
@@ -484,7 +484,7 @@ Suggested package updates
 	o exmh-2.7.2
 	o f2c-20031025
 	o faces-1.7.7
-	o fd-2.07b
+	o fd-2.08a
 	o fdgw-20040609
 	o fetchmail-6.3.2
 	o fhist-1.14
