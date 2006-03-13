@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/02 22:01:18 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/13 21:56:22 minskim Exp $
 
 DISTNAME=	qca-tls-1.0
 PKGREVISION=	2
@@ -17,20 +17,8 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=        --with-openssl-inc=${SSLBASE}/include
 CONFIGURE_ARGS+=        --with-openssl-lib=${SSLBASE}/lib
 
-# XXX the -rpath filter is somewhat ugly, and this should be eventually
-# fixed in NetBSD qmake template to not be necessary.
-post-configure:
-	cd ${WRKSRC} && ( ${SETENV} ${CONFIGURE_ENV}			\
-		${QTDIR}/bin/qmake qca-tls.pro -o Makefile.orig;	\
-		${SED} -e "s,-rpath .*,-rpath ${QTDIR}/lib," Makefile.orig > Makefile;	\
-	)
-
-do-install:
-	${INSTALL_DATA_DIR} ${QTDIR}/plugins/crypto
-	cd ${WRKSRC} && \
-	libtool --mode=install ${INSTALL_LIB} libqca-tls.la ${QTDIR}/plugins/crypto
-
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
+BUILDLINK_DEPENDS.qt3-tools+=	qt3-tools>=3.3.5nb6
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

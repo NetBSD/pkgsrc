@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:47 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/13 21:56:22 minskim Exp $
 
 DISTNAME=	qca-1.0
 PKGREVISION=	2
@@ -16,11 +16,7 @@ HAS_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	include lib
 
-do-install:
-	cd ${WRKSRC} && ${INSTALL} src/qca.h ${PREFIX}/include
-	cd ${WRKSRC} && \
-	libtool --mode=install ${INSTALL_LIB} libqca.la ${PREFIX}/lib
-
 .include "../../x11/qt3-libs/buildlink3.mk"
+BUILDLINK_DEPENDS.qt3-tools+=	qt3-tools>=3.3.5nb6
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
