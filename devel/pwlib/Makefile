@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2006/03/09 21:04:42 jlam Exp $
+# $NetBSD: Makefile,v 1.53 2006/03/13 21:20:24 joerg Exp $
 
 DISTNAME=	pwlib-v1_8_3-src
 PKGNAME=	pwlib-1.8.3
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	-tar.gz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/openh323/
 COMMENT=	Portable Windows Libary
-
-BROKEN_IN=	pkgsrc-2005Q4
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
