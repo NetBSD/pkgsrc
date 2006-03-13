@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2006/03/11 01:35:21 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2006/03/13 19:46:22 joerg Exp $
 
 PKGNAME=	acroread3-3.01
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/3.x/
 
@@ -21,7 +21,7 @@ NO_BUILD=	YES
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
 .if (${MACHINE_ARCH} == "i386")
 SUSE_PREFER=	7.3	# Does not work with 9.1
 DEPENDS+=	suse_libc5>=6.3:../../emulators/${SUSE_DIR_PREFIX}_libc5
