@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2005/12/11 11:26:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/03/13 22:14:54 minskim Exp $
 bin/atlantikdesigner
 bin/exif.py
 bin/fsview
@@ -381,7 +381,6 @@ share/kde/services/webarchivethumbnail.desktop
 @comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
-@dirrm share/kde/apps/noatun
 @dirrm share/kde/apps/microformat/pics
 @dirrm share/kde/apps/microformat
 @dirrm share/kde/apps/metabar/themes/default
