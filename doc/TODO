@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4746 2006/03/12 22:14:48 jmmv Exp $
+$NetBSD: TODO,v 1.4747 2006/03/13 00:20:14 markd Exp $
 
 Suggested new packages
 ======================
@@ -631,7 +631,6 @@ Suggested package updates
 	o jpegpixi-1.1.1
 	o jpilot-0.99.8
 	o jwhois-3.2.3
-	o k3b-0.12.14
 	o kajaani-kombat-0.7
 	o kapooka-0.3
 	o kazehakase-0.3.5
@@ -706,7 +705,6 @@ Suggested package updates
 	o mftrace-1.1.17
 	o mgetty-1.1.35
 	o micro_httpd-20050629
-	o mimedefang-2.56
 	o mini_sendmail-1.3.5
 	o minivmac-2.6.1
 	o mknmz-wwwoffle-0.7.2
