@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2006/03/06 13:46:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2006/03/13 08:31:23 adam Exp $
 bin/bin2res
 bin/fnt2bdf
 bin/function_grep.pl
@@ -436,11 +436,11 @@ lib/wine/cryptdll.dll.so
 lib/wine/ctl3d.dll16
 lib/wine/ctl3d32.dll.so
 lib/wine/ctl3dv2.dll16
-lib/wine/d3d8.dll.so
-lib/wine/d3d9.dll.so
+${WINE_OPENGL}lib/wine/d3d8.dll.so
+${WINE_OPENGL}lib/wine/d3d9.dll.so
 lib/wine/d3dim.dll.so
 lib/wine/d3drm.dll.so
-lib/wine/d3dx8.dll.so
+${WINE_OPENGL}lib/wine/d3dx8.dll.so
 lib/wine/d3dxof.dll.so
 lib/wine/dbghelp.dll.so
 lib/wine/dciman32.dll.so
@@ -472,8 +472,8 @@ lib/wine/expand.exe.so
 lib/wine/explorer.exe.so
 lib/wine/gdi.exe16
 lib/wine/gdi32.dll.so
-lib/wine/glu32.dll.so
-lib/wine/glut32.dll.so
+${WINE_OPENGL}lib/wine/glu32.dll.so
+${WINE_OPENGL}lib/wine/glut32.dll.so
 lib/wine/hh.exe.so
 lib/wine/hhctrl.ocx.so
 lib/wine/iccvid.dll.so
@@ -506,11 +506,11 @@ lib/wine/libcrtdll.def
 lib/wine/libcrypt32.def
 lib/wine/libcryptdll.def
 lib/wine/libctl3d32.def
-lib/wine/libd3d8.def
-lib/wine/libd3d9.def
+${WINE_OPENGL}lib/wine/libd3d8.def
+${WINE_OPENGL}lib/wine/libd3d9.def
 lib/wine/libd3dim.def
 lib/wine/libd3drm.def
-lib/wine/libd3dx8.def
+${WINE_OPENGL}lib/wine/libd3dx8.def
 lib/wine/libd3dxof.def
 lib/wine/libdbghelp.def
 lib/wine/libdciman32.def
@@ -527,8 +527,8 @@ lib/wine/libdxerr8.a
 lib/wine/libdxerr9.a
 lib/wine/libdxguid.a
 lib/wine/libgdi32.def
-lib/wine/libglu32.def
-lib/wine/libglut32.def
+${WINE_OPENGL}lib/wine/libglu32.def
+${WINE_OPENGL}lib/wine/libglut32.def
 lib/wine/libicmp.def
 lib/wine/libimagehlp.def
 lib/wine/libimm32.def
@@ -562,7 +562,7 @@ lib/wine/libolecli32.def
 lib/wine/liboledlg.def
 lib/wine/libolepro32.def
 lib/wine/libolesvr32.def
-lib/wine/libopengl32.def
+${WINE_OPENGL}lib/wine/libopengl32.def
 lib/wine/libpowrprof.def
 lib/wine/libpsapi.def
 lib/wine/libquartz.def
@@ -593,7 +593,7 @@ lib/wine/libuxtheme.def
 lib/wine/libvdmdbg.def
 lib/wine/libversion.def
 lib/wine/libwinecrt0.a
-lib/wine/libwined3d.def
+${WINE_OPENGL}lib/wine/libwined3d.def
 lib/wine/libwinedos.def
 lib/wine/libwininet.def
 lib/wine/libwinmm.def
@@ -667,7 +667,7 @@ lib/wine/oledlg.dll.so
 lib/wine/olepro32.dll.so
 lib/wine/olesvr.dll16
 lib/wine/olesvr32.dll.so
-lib/wine/opengl32.dll.so
+${WINE_OPENGL}lib/wine/opengl32.dll.so
 lib/wine/powrprof.dll.so
 lib/wine/progman.exe.so
 lib/wine/psapi.dll.so
@@ -742,7 +742,7 @@ lib/wine/wineboot.exe.so
 lib/wine/winebrowser.exe.so
 lib/wine/winecfg.exe.so
 lib/wine/wineconsole.exe.so
-lib/wine/wined3d.dll.so
+${WINE_OPENGL}lib/wine/wined3d.dll.so
 lib/wine/winedbg.exe.so
 lib/wine/winedos.dll.so
 lib/wine/wineesd.drv.so
