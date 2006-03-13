@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/12 23:57:55 markd Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/13 21:29:24 joerg Exp $
 #
 
 DISTNAME=		k3b-0.12.14
@@ -18,7 +18,7 @@ USE_TOOLS+=		gmake autoconf perl
 USE_LANGUAGES=          c c++
 USE_LIBTOOL=            yes
 
-ONLY_FOR_PLATFORM=	FreeBSD-*-* Linux-*-* NetBSD-*-*
+ONLY_FOR_PLATFORM=	FreeBSD-*-* Linux-*-* NetBSD-*-* DragonFly-*-*
 
 pre-configure:
 	cd ${WRKSRC} && autoheader
