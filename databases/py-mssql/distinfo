@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/14 03:10:00 minskim Exp $
+$NetBSD: distinfo,v 1.2 2006/03/13 12:52:03 rillig Exp $
 
-SHA1 (pymssql-0.7.3.tar.gz) = 70407aa1620d5e820748e4ceb7339c6bbb206747
-RMD160 (pymssql-0.7.3.tar.gz) = 979e6477067a19d6be9432c20e47559e0d438e38
-Size (pymssql-0.7.3.tar.gz) = 18341 bytes
+SHA1 (pymssql-0.7.4.tar.gz) = da0aae5bf762173d9a80fc063610ece3db9f6d12
+RMD160 (pymssql-0.7.4.tar.gz) = d1a6b48d28ff6db68c6f508adacec0aabcbe4bc7
+Size (pymssql-0.7.4.tar.gz) = 155005 bytes
