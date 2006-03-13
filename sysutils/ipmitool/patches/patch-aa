@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/03/13 23:03:28 heinz Exp $
+
+--- Makefile.in.orig	2006-01-17 18:54:11.000000000 +0100
++++ Makefile.in
+@@ -690,7 +690,7 @@ dist-hook:
+ 
+ install-data-local:
+ 	mkdir -p $(DOCDIR)
+-	install -m 644 $(DOCLIST) $(DOCDIR)
++	$(INSTALL_DATA) $(DOCLIST) $(DOCDIR)
+ 
+ .PHONY: pkg
+ pkg: PKG := ipmitool-@VERSION@-@OS@-@ARCH@
