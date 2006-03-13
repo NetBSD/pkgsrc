@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.4 2000/04/18 01:46:17 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.5 2006/03/13 19:29:45 joerg Exp $
 
 --- INSTALL.orig	Wed Jan 26 19:40:25 2000
 +++ INSTALL	Mon Apr 17 16:20:38 2000
 @@ -116,4 +116,6 @@
          if [ `uname -s` = "Linux" ] ; then
            size=`ls -lLn "$i" | ( read perm links owner group size date ; echo $size )`
-+        elif [ `uname -s|sed -e 's|.*\(...\)|\\1|'` = "BSD" ] ; then
++        elif [ `uname -s|sed -e 's|.*\(...\)|\\1|'` = "BSD" -o `uname -s` = "DragonFly" ] ; then
 +          size=`ls -lL "$i" | ( read perm links owner group size date ; echo $size )`
          else
            size=`ls -lLon "$i" | ( read perm links owner size date ; echo $size )`
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.4 2000/04/18 01:46:17 dmcmahill Exp $
      DistDefaultNum="$DistIntelBSDINum"
      DefaultName="Intel/BSDI"
 +    ;;
-+  NetBSD)
++  NetBSD | DragonFly)
 +    MachArch=`uname -p`
 +    case "$MachArch" in
 +      alpha) 
