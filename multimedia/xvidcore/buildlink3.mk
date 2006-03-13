@@ -1,9 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/03/13 17:32:39 tonio Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/03/13 18:24:45 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XVIDCORE_BUILDLINK3_MK:=	${XVIDCORE_BUILDLINK3_MK}+
-
-.include "../../mk/bsd.prefs.mk"
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	xvidcore
