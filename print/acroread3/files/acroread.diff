@@ -1,11 +1,11 @@
-$NetBSD: acroread.diff,v 1.1.1.1 2000/01/14 15:19:28 dmcmahill Exp $ 
+$NetBSD: acroread.diff,v 1.2 2006/03/13 19:46:22 joerg Exp $ 
 
 --- acroread.orig	Tue Jan 11 13:05:56 2000
 +++ acroread	Tue Jan 11 13:12:42 2000
 @@ -210,4 +210,22 @@
      export ACRO_CONFIG
      ;;
-+  NetBSD)
++  NetBSD | DragonFly)
 +    machine_type=`uname -p`
 +    case "$machine_type" in
 +      alpha)
