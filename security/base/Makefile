@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:10:42 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/13 12:25:29 adrianp Exp $
 #
 
 DISTNAME=	base-1.2.1
@@ -19,7 +19,7 @@ DEPENDS+=	pear-Log-[0-9]*:../../sysutils/pear-Log
 DEPENDS+=	pear-Numbers_Words-[0-9]*:../../math/pear-Numbers_Words
 DEPENDS+=	pear-Numbers_Roman-[0-9]*:../../math/pear-Numbers_Roman
 DEPENDS+=	pear-Image_Color-[0-9]*:../../graphics/pear-Image_Color
-DEPENDS+=	pear-Image_Graph-0.3.0dev4nb1:../../graphics/pear-Image_Graph
+DEPENDS+=	pear-Image_Graph-[0-9]*:../../graphics/pear-Image_Graph
 
 NO_BUILD=	YES
 USE_PKGINSTALL=	YES
@@ -33,7 +33,7 @@ WWW_USER?=	${APACHE_USER}
 WWW_GROUP?=	${APACHE_GROUP}
 BUILD_DEFS+=	WWW_USER WWW_GROUP
 USE_TOOLS+=	perl:run
-REPLACE_PERL=	scripts/base_maintenance.pl
+REPLACE_PERL+=	scripts/base_maintenance.pl
 
 CONF_FILES=	${EGDIR}/base.conf ${PKG_SYSCONFDIR}/base.conf
 
@@ -43,10 +43,10 @@ CONF_FILES_PERMS=	${EGDIR}/base_conf.php ${BASE_DIR}/base_conf.php \
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	post-patch
 SUBST_FILES.conf=	base.conf base_conf.php.dist
-SUBST_SED.conf=		-e "s|@BASE_DIR@|${BASE_DIR}|g" \
-			-e "s|@DBTYPE@|${DBTYPE}|g" \
-			-e "s|@PREFIX@|${PREFIX}|g"
-SUBST_MESSAGE.conf=	"Fixing configuration files."
+SUBST_SED.conf=		-e "s|@BASE_DIR@|${BASE_DIR}|g"
+SUBST_SED.conf+=	-e "s|@DBTYPE@|${DBTYPE}|g"
+SUBST_SED.conf+=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_MESSAGE.conf=	Fixing configuration files.
 
 .include "options.mk"
 
