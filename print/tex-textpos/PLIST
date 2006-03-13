@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/08 21:45:01 tonio Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/03/13 07:11:19 wiz Exp $
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/textpos/LICENCE
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/textpos/README
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/textpos/VERSION
@@ -8,7 +8,7 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/textpos/textpos.dtx
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/textpos/textpos.ins
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/textpos/textpos.log
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/textpos/textpos.sty
-@exec cd %D/share/texmf/tex/latex/textpos; latex testpos.ins
+@exec cd %D/share/texmf/tex/latex/textpos; latex textpos.ins
 @exec %D/bin/texconfig rehash
 @unexec %D/bin/texconfig rehash
 @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/textpos
