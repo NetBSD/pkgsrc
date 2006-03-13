@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2005/11/17 10:28:50 rillig Exp $
+$NetBSD: distinfo,v 1.5 2006/03/13 19:46:22 joerg Exp $
 
 SHA1 (acroread_linux_301.tar.gz) = 4e67b3459deb273d4bf7932f0793d87991b3c171
 RMD160 (acroread_linux_301.tar.gz) = afd971021d985057c47ab4df038bac1dc8a1ae8e
@@ -12,4 +12,4 @@ Size (acroread_solaris_301.tar.gz) = 4152973 bytes
 SHA1 (acroread_sunos_301.tar.gz) = c8f986b12795be310d282f34643d82b54bcfe17d
 RMD160 (acroread_sunos_301.tar.gz) = 04f05c1e59c14b85e935b993a975bb23bfd75856
 Size (acroread_sunos_301.tar.gz) = 4136746 bytes
-SHA1 (patch-aa) = 58a13d25db213726a9b3fda80a32dfdc2e85d0b7
+SHA1 (patch-aa) = 5ad7e8cf791a8a7944a13e905e22a8c96fd77ea3

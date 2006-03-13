@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2005/02/21 21:26:15 veego Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2006/03/13 19:46:22 joerg Exp $
 Acrobat3/Browsers/netscape
 Acrobat3/Browsers/${PLATFORM}/nppdf.so
 Acrobat3/Fonts/AcroRead.upr
@@ -32,9 +32,11 @@ Acrobat3/Reader/res/splashScreen21.xbm
 Acrobat3/Reader/res/splashScreen28.xpm
 Acrobat3/Reader/${PLATFORM}/app-defaults/AcroRead
 Acrobat3/Reader/${PLATFORM}/bin/acroread
+Acrobat3/Reader/${PLATFORM}/fonts
 Acrobat3/Reader/${PLATFORM}/lib/XKeysymDB
 Acrobat3/Reader/${PLATFORM}/plug_ins/Highlight.api
 Acrobat3/Reader/${PLATFORM}/plug_ins/ewh.api
 Acrobat3/Reader/${PLATFORM}/plug_ins/wwwlink.api
+Acrobat3/Reader/${PLATFORM}/res
 Acrobat3/bin/acroread
 bin/acroread3

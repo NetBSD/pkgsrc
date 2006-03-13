@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.DragonFly-i386,v 1.1 2006/03/13 19:46:22 joerg Exp $
+Acrobat3/Reader/${PLATFORM}/lib/libagm.so
+Acrobat3/Reader/${PLATFORM}/lib/libagm.so.2.0
+Acrobat3/Reader/${PLATFORM}/lib/libpfs.so
+Acrobat3/Reader/${PLATFORM}/lib/libpfs.so.2.5
+Acrobat3/Reader/${PLATFORM}/lib/libreadcore.so
+Acrobat3/Reader/${PLATFORM}/lib/libreadcore.so.3.0
