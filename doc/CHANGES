@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13298 2006/03/13 15:05:57 tron Exp $
+$NetBSD: CHANGES,v 1.13299 2006/03/13 18:26:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1497,3 +1497,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/py-mssql to 0.7.4 [rillig 2006-03-13]
 	Updated security/base to 1.2.2 [adrianp 2006-03-13]
 	Updated security/caff to 0.4.4nb2 [tron 2006-03-13]
+	Updated devel/pango to 1.12.0 [wiz 2006-03-13]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4749 2006/03/13 18:25:36 wiz Exp $
+$NetBSD: TODO,v 1.4750 2006/03/13 18:26:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -907,7 +907,6 @@ Suggested package updates
 	o p5-xmltv-0.5.42
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
-	o pango-1.12.0
 	o pari-2.1.7
 	o patchutils-0.2.31
 	o pbzip2-0.9.6
