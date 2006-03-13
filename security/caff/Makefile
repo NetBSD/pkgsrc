@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/03/07 14:31:28 tonio Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/13 15:05:43 tron Exp $
 
 DISTNAME=	signing-party_0.4.4.orig
 PKGNAME=	caff-0.4.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/signing-party/}
 
@@ -30,6 +30,16 @@ SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	caff/caff keylookup/keylookup keylookup/keylookup.1
 SUBST_SED.paths=	-e 's,/usr/,${PREFIX}/,g'
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Linux"
+SUBST_CLASSES+=		hostname
+SUBST_MESSAGE.hostname=	Fixing unportable use of "hostname" command.
+SUBST_STAGE.hostname=	pre-configure
+SUBST_FILES.hostname=	caff/caff
+SUBST_SED.hostname=	-e 's/hostname -f/hostname/g'
+.endif
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/caff/caff ${PREFIX}/bin
