@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2005/06/30 13:22:19 hubertf Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2006/03/13 19:29:45 joerg Exp $
 Acrobat4/Browsers/netscape
 Acrobat4/Browsers/${PLATFORM}/nppdf.so
 Acrobat4/ReadMe
@@ -13,12 +13,14 @@ Acrobat4/Reader/res/splashScreen21.xbm
 Acrobat4/Reader/res/splashScreen28.xpm
 Acrobat4/Reader/${PLATFORM}/app-defaults/AcroRead
 Acrobat4/Reader/${PLATFORM}/bin/acroread
+Acrobat4/Reader/${PLATFORM}/fonts
 Acrobat4/Reader/${PLATFORM}/plug_ins/AcroForm.api
 Acrobat4/Reader/${PLATFORM}/plug_ins/Highlight.api
 Acrobat4/Reader/${PLATFORM}/plug_ins/JavaScripts/AFStrENU.js
 Acrobat4/Reader/${PLATFORM}/plug_ins/JavaScripts/AForm.js
 Acrobat4/Reader/${PLATFORM}/plug_ins/ewh.api
 Acrobat4/Reader/${PLATFORM}/plug_ins/wwwlink.api
+Acrobat4/Reader/${PLATFORM}/res
 Acrobat4/Resource/Font/AdobeSansMM
 Acrobat4/Resource/Font/AdobeSansMM.MMM
 Acrobat4/Resource/Font/AdobeSerifMM
