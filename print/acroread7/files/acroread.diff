@@ -13,7 +13,7 @@
      ACRO_CONFIG=intellinux
      export ACRO_CONFIG
      ;;
-+   NetBSD)
++   NetBSD | DragonFly)
 +     machine_type=`uname -p`
 +     case "$machine_type" in
 +       i386)

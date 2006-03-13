@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/04/15 14:23:31 markd Exp $
+$NetBSD: patch-aa,v 1.2 2006/03/13 20:36:51 joerg Exp $
 
 --- INSTALL.orig	2005-03-12 14:50:00.000000000 +1300
 +++ INSTALL
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/15 14:23:31 markd Exp $
  
          if [ `uname -s` = "Linux" ] ; then
            size=`ls -lLn "$i" | ( read perm links owner group size date ; echo $size )`
-+        elif [ `uname -s|sed -e 's|.*\(...\)|\\1|'` = "BSD" ] ; then
++        elif [ `uname -s|sed -e 's|.*\(...\)|\\1|'` = "BSD" -o `uname -s` = "DragonFly" ] ; then
 +          size=`ls -lL "$i" | ( read perm links owner group size date ; echo $size )`
          else
            size=`ls -lLon "$i" | ( read perm links owner size date ; echo $size )`
@@ -24,7 +24,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/15 14:23:31 markd Exp $
      AIX)
        defdir="/usr/lpp/Adobe/Acrobat7.0"
        ;;
-+    NetBSD)
++    NetBSD | DragonFly)
 +      ;;
    esac
  
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/04/15 14:23:31 markd Exp $
      ReadDefaultNum="$ReadIntelLinuxNum"
      DefaultName="Intel/Linux"
      ;;
-+  NetBSD)
++  NetBSD | DragonFly)
 +    MachArch=`uname -p`
 +    case "$MachArch" in
 +      i386)
