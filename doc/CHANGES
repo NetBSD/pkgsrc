@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13295 2006/03/13 12:19:28 adrianp Exp $
+$NetBSD: CHANGES,v 1.13296 2006/03/13 12:52:35 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1494,3 +1494,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/kakasi to 2.3.4nb4 [taca 2006-03-13]
 	Added emulators/suse100_locale version 10.0 [tonio 2006-03-13]
 	Updated databases/adodb to 4.80 [adrianp 2006-03-13]
+	Updated databases/py-mssql to 0.7.4 [rillig 2006-03-13]
