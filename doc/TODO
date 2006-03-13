@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4752 2006/03/13 18:32:51 wiz Exp $
+$NetBSD: TODO,v 1.4753 2006/03/13 21:17:48 heinz Exp $
 
 Suggested new packages
 ======================
@@ -1102,7 +1102,6 @@ Suggested package updates
 	o source-highlight-2.3 [pkg/32325]
 	o sox-12.17.9
 	o spamass-milter-1.0
-	o spamassassin-3.1.1
 	o spamprobe-1.4b
 	o spim-7.2.1
 	o sqlite3-3.3.3
