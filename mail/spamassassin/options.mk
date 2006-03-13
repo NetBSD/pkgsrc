@@ -1,20 +1,21 @@
-# $NetBSD: options.mk,v 1.4 2005/11/13 22:48:32 heinz Exp $
+# $NetBSD: options.mk,v 1.5 2006/03/13 21:11:57 heinz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.spamassassin
 PKG_SUPPORTED_OPTIONS=	\
+			online-tests \
 			spamassassin-perl-warnings \
 			spamassassin-taint-checks \
 			spamassassin-test-awl-sql \
 			spamassassin-test-bayes-sql \
-			spamassassin-test-net \
 			spamassassin-test-prefork \
 			ssl
 PKG_OPTIONS_LEGACY_OPTS+= \
 			awl-sql-tests:spamassassin-test-awl-sql \
 			bayes-sql-tests:spamassassin-test-bayes-sql \
-			net-tests:spamassassin-test-net \
+			net-tests:online-tests \
 			perl-taint-checks:spamassassin-taint-checks \
-			perl-warnings:spamassassin-perl-warnings
+			perl-warnings:spamassassin-perl-warnings \
+			spamassassin-test-net:online-tests
 
 #
 # Default options
@@ -31,10 +32,10 @@ SUBST_CLASSES+=		satests
 SUBST_STAGE.satests=	post-configure
 SUBST_FILES.satests=	t/config
 SUBST_SED.satests=	\
-	-e s!awl_sql_tests=n!awl_sql_tests=${_AWL_SQL_TEST}! \
-	-e s!bayes_sql_tests=n!bayes_sql_tests=${_BAYES_SQL_TEST}! \
-	-e s!run_net_tests=n!run_net_tests=${_NET_TEST}! \
-	-e s!prefork_stress_test=n!prefork_stress_test=${_PREFORK_TEST}!
+	-e s!awl_sql_tests=n!awl_sql_tests=${AWL_SQL_TEST}! \
+	-e s!bayes_sql_tests=n!bayes_sql_tests=${BAYES_SQL_TEST}! \
+	-e s!run_net_tests=n!run_net_tests=${NET_TEST}! \
+	-e s!prefork_stress_test=n!prefork_stress_test=${PREFORK_TEST}!
 
 #
 # Enable tests of the SQL storage module for the automatic whitelist
@@ -42,9 +43,9 @@ SUBST_SED.satests=	\
 # configuration during 'configure' phase.
 #
 .if !empty(PKG_OPTIONS:Mspamassassin-test-awl-sql)
-_AWL_SQL_TEST=y
+AWL_SQL_TEST=y
 .else
-_AWL_SQL_TEST=n
+AWL_SQL_TEST=n
 .endif
 
 #
@@ -53,18 +54,18 @@ _AWL_SQL_TEST=n
 # configuration during 'configure' phase.
 #
 .if !empty(PKG_OPTIONS:Mspamassassin-test-bayes-sql)
-_BAYES_SQL_TEST=y
+BAYES_SQL_TEST=y
 .else
-_BAYES_SQL_TEST=n
+BAYES_SQL_TEST=n
 .endif
 
 #
 # Enable Internet based tests during 'make test' (Razor, Pyzor, etc.)
 #
-.if !empty(PKG_OPTIONS:Mspamassassin-test-net)
-_NET_TEST=y
+.if !empty(PKG_OPTIONS:Monline-tests)
+NET_TEST=y
 .else
-_NET_TEST=n
+NET_TEST=n
 .endif
 
 #
@@ -90,9 +91,9 @@ MAKE_PARAMS+=		PERL_TAINT=no
 # string 'spam child' in their process title).
 #
 .if !empty(PKG_OPTIONS:Mspamassassin-test-prefork)
-_PREFORK_TEST=y
+PREFORK_TEST=y
 .else
-_PREFORK_TEST=n
+PREFORK_TEST=n
 .endif
 
 #

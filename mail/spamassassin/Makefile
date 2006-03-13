@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2006/02/05 23:09:58 joerg Exp $
+# $NetBSD: Makefile,v 1.69 2006/03/13 21:11:57 heinz Exp $
 
-DISTNAME=	Mail-SpamAssassin-3.1.0
-PKGNAME=	spamassassin-3.1.0
-PKGREVISION=	3
+DISTNAME=	Mail-SpamAssassin-3.1.1
+PKGNAME=	spamassassin-3.1.1
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
@@ -56,7 +55,7 @@ PERL5_CONFIGURE_DIRS=	${WRKSRC}
 REPLACE_PERL=		masses/parse-rules-for-masses
 
 MAKE_PARAMS+=		CONTACT_ADDRESS=${SPAMASSASSIN_CONTACT_ADDRESS:Q}
-MAKE_PARAMS+=		DEFRULESDIR="${_RULESDIR}"
+MAKE_PARAMS+=		DEFRULESDIR="${RULESDIR}"
 MAKE_PARAMS+=		LOCALRULESDIR="${PKG_SYSCONFDIR}"
 MAKE_PARAMS+=		PERL_BIN="${PERL5}"
 MAKE_PARAMS+=		SYSCONFDIR="${PKG_SYSCONFDIR}"
@@ -64,21 +63,21 @@ MAKE_PARAMS+=		SYSCONFDIR="${PKG_SYSCONFDIR}"
 RCD_SCRIPTS=		spamd
 RCD_SCRIPT_SRC.spamd=	${WRKSRC}/spamd/netbsd-rc-script.sh
 
-_EG_SUBDIR=		share/examples/spamassassin
-_EGDIR=			${PREFIX}/${_EG_SUBDIR}
-_DOC_SUBDIR=		share/doc/spamassassin
-_DOCDIR=		${PREFIX}/${_DOC_SUBDIR}
-_RULE_SUBDIR=		share/spamassassin
-_RULESDIR=		${PREFIX}/${_RULE_SUBDIR}
+EG_SUBDIR=		share/examples/spamassassin
+EGDIR=			${PREFIX}/${EG_SUBDIR}
+DOC_SUBDIR=		share/doc/spamassassin
+DOCDIR=			${PREFIX}/${DOC_SUBDIR}
+RULE_SUBDIR=		share/spamassassin
+RULESDIR=		${PREFIX}/${RULE_SUBDIR}
 
-CONF_FILES+=		${_EGDIR}/local.cf  ${PKG_SYSCONFDIR}/local.cf	\
-			${_EGDIR}/init.pre  ${PKG_SYSCONFDIR}/init.pre	\
-			${_EGDIR}/v310.pre  ${PKG_SYSCONFDIR}/v310.pre	\
-			${_RULESDIR}/user_prefs.template		\
+CONF_FILES+=		${EGDIR}/local.cf  ${PKG_SYSCONFDIR}/local.cf	\
+			${EGDIR}/init.pre  ${PKG_SYSCONFDIR}/init.pre	\
+			${EGDIR}/v310.pre  ${PKG_SYSCONFDIR}/v310.pre	\
+			${RULESDIR}/user_prefs.template		\
 		 	  ${PKG_SYSCONFDIR}/user_prefs.template
 
-INSTALLATION_DIRS+=	${_EG_SUBDIR} ${_DOC_SUBDIR} ${_DOC_SUBDIR}/spamc\
-			${_DOC_SUBDIR}/spamd
+INSTALLATION_DIRS+=	${EG_SUBDIR} ${DOC_SUBDIR} ${DOC_SUBDIR}/spamc\
+			${DOC_SUBDIR}/spamd
 
 SUBST_CLASSES+=		sa2 sa3
 
@@ -103,14 +102,14 @@ SUBST_SED.sa3=		-e s!/usr/share!${PREFIX}/share!g		\
 .if (${OPSYS} == "NetBSD") || (${OPSYS} == "DragonFly")
 #  the 'spamd' RCD_SCRIPT behaves differently if we run NetBSD 1.6 or later
 .  if (${OPSYS} == "NetBSD") && !empty(OS_VERSION:M1.[0-5]*)
-_INTERPRETER_SUPPORT=	NO
+INTERPRETER_SUPPORT=	NO
 .  else
-_INTERPRETER_SUPPORT=	YES
+INTERPRETER_SUPPORT=	YES
 .  endif
 .endif
 
 # These variables are substituted in netbsd-rc-script.sh.
-FILES_SUBST+=		_INTERPRETER_SUPPORT=${_INTERPRETER_SUPPORT:Q}
+FILES_SUBST+=		INTERPRETER_SUPPORT=${INTERPRETER_SUPPORT:Q}
 FILES_SUBST+=		OPSYS=${OPSYS:Q}
 
 post-extract:
@@ -130,18 +129,18 @@ post-install:
 		spamc/README.qmail					\
 		sample-nonspam.txt sample-spam.txt spamd/README		\
 		spamd/README.vpopmail
-	@${INSTALL_DATA} ${WRKSRC}/${f} ${_DOCDIR}/${f}
-	@${ECHO} "${_DOC_SUBDIR}/${f}" >> ${PLIST_ADD}
+	@${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}/${f}
+	@${ECHO} "${DOC_SUBDIR}/${f}" >> ${PLIST_ADD}
 .endfor
 .for f in STATISTICS-set0.txt STATISTICS-set1.txt STATISTICS-set2.txt	\
 	  STATISTICS-set3.txt
-	@${INSTALL_DATA} ${WRKSRC}/rules/${f} ${_DOCDIR}/
-	@${ECHO} "${_DOC_SUBDIR}/${f}" >> ${PLIST_ADD}
+	@${INSTALL_DATA} ${WRKSRC}/rules/${f} ${DOCDIR}/
+	@${ECHO} "${DOC_SUBDIR}/${f}" >> ${PLIST_ADD}
 .endfor
 .for dir in masses sql ldap tools
 	@cd ${WRKSRC};							\
 	for d in `${FIND} ${dir} -type d -print`; do			\
-		${INSTALL_DATA_DIR} ${_DOCDIR}/$$d;			\
+		${INSTALL_DATA_DIR} ${DOCDIR}/$$d;			\
 	done;								\
 	for f in `${FIND} ${dir} -type f -print`; do			\
 		if ${TEST} -x $$f ; then				\
@@ -149,30 +148,30 @@ post-install:
 				> $${f}.fixed &&			\
 			${MV} $${f}.fixed $$f &&			\
 			${CHMOD} +x $$f &&				\
-			${INSTALL_SCRIPT} $$f ${_DOCDIR}/$$f;		\
+			${INSTALL_SCRIPT} $$f ${DOCDIR}/$$f;		\
 		else							\
-			${INSTALL_DATA} $$f ${_DOCDIR}/$$f;		\
+			${INSTALL_DATA} $$f ${DOCDIR}/$$f;		\
 		fi;							\
-		${ECHO} "${_DOC_SUBDIR}/$$f" >> ${PLIST_ADD};		\
+		${ECHO} "${DOC_SUBDIR}/$$f" >> ${PLIST_ADD};		\
 	done;								\
 	{ for d in `${FIND} ${dir} -type d -print`; do			\
-		${ECHO} "@dirrm ${_DOC_SUBDIR}/$$d";			\
+		${ECHO} "@dirrm ${DOC_SUBDIR}/$$d";			\
 	done; } | ${SORT} -r >> ${PLIST_ADD};
 .endfor
 	@cd ${WRKSRC}/rules;						\
 	for f in [0-9]*.cf; do						\
-		${ECHO} "${_RULE_SUBDIR}/$$f" >> ${PLIST_ADD};		\
+		${ECHO} "${RULE_SUBDIR}/$$f" >> ${PLIST_ADD};		\
 	done
-	@${ECHO} "@dirrm ${_RULE_SUBDIR}" >> ${PLIST_ADD}
+	@${ECHO} "@dirrm ${RULE_SUBDIR}" >> ${PLIST_ADD}
 	@# examples are in the static PLIST
-	@${INSTALL_DATA} ${WRKSRC}/procmailrc.example ${_EGDIR}/
-	@${INSTALL_DATA} ${WRKSRC}/rules/init.pre ${_EGDIR}/
-	@${INSTALL_DATA} ${WRKSRC}/rules/v310.pre ${_EGDIR}/
-	@${INSTALL_DATA} ${WRKSRC}/rules/local.cf ${_EGDIR}/
-	@${INSTALL_DATA} ${FILESDIR}/netbsd_lists.cf ${_EGDIR}/
-	@${CHOWN} ${SHAREOWN} ${_RULESDIR}/*
-	@${CHGRP} ${SHAREGRP} ${_RULESDIR}/*
-	@${CHMOD} a=r ${_RULESDIR}/*
+	@${INSTALL_DATA} ${WRKSRC}/procmailrc.example ${EGDIR}/
+	@${INSTALL_DATA} ${WRKSRC}/rules/init.pre ${EGDIR}/
+	@${INSTALL_DATA} ${WRKSRC}/rules/v310.pre ${EGDIR}/
+	@${INSTALL_DATA} ${WRKSRC}/rules/local.cf ${EGDIR}/
+	@${INSTALL_DATA} ${FILESDIR}/netbsd_lists.cf ${EGDIR}/
+	@${CHOWN} ${SHAREOWN} ${RULESDIR}/*
+	@${CHGRP} ${SHAREGRP} ${RULESDIR}/*
+	@${CHMOD} a=r ${RULESDIR}/*
 	@{ for d in ${INSTALLATION_DIRS}; do				\
 		${ECHO} "@dirrm $$d";					\
 	done; } | ${SORT} -r >> ${PLIST_ADD};
