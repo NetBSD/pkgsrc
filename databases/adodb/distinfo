@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2006/01/24 13:37:45 adrianp Exp $
+$NetBSD: distinfo,v 1.6 2006/03/13 12:18:23 adrianp Exp $
 
-SHA1 (adodb471.tgz) = 64d7dbca58cdde5bb6d71f7e8e8dbf7c297d4374
-RMD160 (adodb471.tgz) = 6dbf643423b92409ff8941554634ec935c9938c2
-Size (adodb471.tgz) = 421296 bytes
+SHA1 (adodb480.tgz) = ffa4b1e4bda6dfb1c850436824ace1d94ebe6720
+RMD160 (adodb480.tgz) = d2c7b50f61cf59f8429e69739f2a4b381d5c25b4
+Size (adodb480.tgz) = 452518 bytes
