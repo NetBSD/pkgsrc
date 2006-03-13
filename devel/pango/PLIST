@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.23 2005/10/02 12:16:58 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.24 2006/03/13 18:26:03 wiz Exp $
 bin/pango-querymodules
+bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
 include/pango-1.0/pango/pango-break.h
 include/pango-1.0/pango/pango-context.h
@@ -34,16 +35,16 @@ lib/libpangocairo-1.0.la
 lib/libpangoft2-1.0.la
 lib/libpangox-1.0.la
 lib/libpangoxft-1.0.la
-lib/pango/1.4.0/modules/pango-arabic-fc.la
-lib/pango/1.4.0/modules/pango-basic-fc.la
-lib/pango/1.4.0/modules/pango-basic-x.la
-lib/pango/1.4.0/modules/pango-hangul-fc.la
-lib/pango/1.4.0/modules/pango-hebrew-fc.la
-lib/pango/1.4.0/modules/pango-indic-fc.la
-lib/pango/1.4.0/modules/pango-khmer-fc.la
-lib/pango/1.4.0/modules/pango-syriac-fc.la
-lib/pango/1.4.0/modules/pango-thai-fc.la
-lib/pango/1.4.0/modules/pango-tibetan-fc.la
+lib/pango/1.5.0/modules/pango-arabic-fc.la
+lib/pango/1.5.0/modules/pango-basic-fc.la
+lib/pango/1.5.0/modules/pango-basic-x.la
+lib/pango/1.5.0/modules/pango-hangul-fc.la
+lib/pango/1.5.0/modules/pango-hebrew-fc.la
+lib/pango/1.5.0/modules/pango-indic-fc.la
+lib/pango/1.5.0/modules/pango-khmer-fc.la
+lib/pango/1.5.0/modules/pango-syriac-fc.la
+lib/pango/1.5.0/modules/pango-thai-fc.la
+lib/pango/1.5.0/modules/pango-tibetan-fc.la
 lib/pkgconfig/pango.pc
 lib/pkgconfig/pangocairo.pc
 lib/pkgconfig/pangoft2.pc
@@ -65,6 +66,7 @@ share/doc/pango/ix01.html
 share/doc/pango/layout.gif
 share/doc/pango/left.png
 share/doc/pango/lowlevel.html
+share/doc/pango/pango-ATSUI-Fonts.html
 share/doc/pango/pango-Cairo-Rendering.html
 share/doc/pango/pango-Coverage-Maps.html
 share/doc/pango/pango-Engines.html
@@ -92,8 +94,8 @@ share/doc/pango/tools.html
 share/doc/pango/up.png
 @dirrm share/doc/pango
 @dirrm libdata/pango
-@dirrm lib/pango/1.4.0/modules
-@dirrm lib/pango/1.4.0
+@dirrm lib/pango/1.5.0/modules
+@dirrm lib/pango/1.5.0
 @dirrm lib/pango
 @dirrm include/pango-1.0/pango
 @dirrm include/pango-1.0
