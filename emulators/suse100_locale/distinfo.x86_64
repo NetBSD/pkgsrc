@@ -1,0 +1,5 @@
+$NetBSD: distinfo.x86_64,v 1.1.1.1 2006/03/13 10:25:35 tonio Exp $
+
+SHA1 (suse100/x86_64/glibc-locale-2.3.5-40.x86_64.rpm) = c17884ca8e8836b6b710ea4ee030cb5236b92472
+RMD160 (suse100/x86_64/glibc-locale-2.3.5-40.x86_64.rpm) = a0b4493eeaa3f477782e7c63def328dafcd5b205
+Size (suse100/x86_64/glibc-locale-2.3.5-40.x86_64.rpm) = 12321930 bytes
