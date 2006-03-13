@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2006/01/09 20:35:33 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/03/13 12:18:23 adrianp Exp $
+share/adodb/adodb-active-record.inc.php
 share/adodb/adodb-csvlib.inc.php
 share/adodb/adodb-datadict.inc.php
 share/adodb/adodb-error.inc.php
@@ -13,6 +14,7 @@ share/adodb/adodb-perf.inc.php
 share/adodb/adodb-php4.inc.php
 share/adodb/adodb-time.inc.php
 share/adodb/adodb-xmlschema.inc.php
+share/adodb/adodb-xmlschema03.inc.php
 share/adodb/adodb.inc.php
 share/adodb/cute_icons_for_site/adodb.gif
 share/adodb/cute_icons_for_site/adodb2.gif
@@ -52,6 +54,7 @@ share/adodb/drivers/adodb-oci8.inc.php
 share/adodb/drivers/adodb-oci805.inc.php
 share/adodb/drivers/adodb-oci8po.inc.php
 share/adodb/drivers/adodb-odbc.inc.php
+share/adodb/drivers/adodb-odbc_db2.inc.php
 share/adodb/drivers/adodb-odbc_mssql.inc.php
 share/adodb/drivers/adodb-odbc_oracle.inc.php
 share/adodb/drivers/adodb-odbtp.inc.php
@@ -119,9 +122,10 @@ share/adodb/session/adodb-sessions.oracle.clob.sql
 share/adodb/session/adodb-sessions.oracle.sql
 share/adodb/session/crypt.inc.php
 share/adodb/tests/benchmark.php
-share/adodb/tests/cf~testsessions.php
 share/adodb/tests/client.php
 share/adodb/tests/pdo.php
+share/adodb/tests/test-active-record.php
+share/adodb/tests/test-active-recs2.php
 share/adodb/tests/test-datadict.php
 share/adodb/tests/test-perf.php
 share/adodb/tests/test-pgblob.php
@@ -149,9 +153,14 @@ share/adodb/tests/xmlschema.xml
 share/adodb/toexport.inc.php
 share/adodb/tohtml.inc.php
 share/adodb/xmlschema.dtd
+share/adodb/xmlschema03.dtd
 share/adodb/xsl/convert-0.1-0.2.xsl
+share/adodb/xsl/convert-0.1-0.3.xsl
 share/adodb/xsl/convert-0.2-0.1.xsl
+share/adodb/xsl/convert-0.2-0.3.xsl
 share/adodb/xsl/remove-0.2.xsl
+share/adodb/xsl/remove-0.3.xsl
+share/doc/adodb/docs-active-record.htm
 share/doc/adodb/docs-adodb.htm
 share/doc/adodb/docs-datadict.htm
 share/doc/adodb/docs-oracle.htm
