@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/14 17:03:54 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/14 01:14:29 jlam Exp $
 
 DISTNAME=	tetrinetx-1.13.16+qirc-1.40c
 PKGNAME=	tetrinetx-1.13.16
@@ -13,6 +13,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 SHAREDIR=	${PREFIX}/share/tetrinetx
 BINARY=		tetrix.netbsd
 RCD_SCRIPTS=	tetrinetx
+DEINSTALL_SRC=	${PKGDIR}/DEINSTALL
+INSTALL_SRC=	# empty
 
 LIBS.SunOS+=	-lsocket -lnsl -lresolv
 

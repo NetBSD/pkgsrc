@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/04 21:30:21 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/03/14 01:14:31 jlam Exp $
 #
 
 DISTNAME=		nocol-4.3.1
@@ -22,6 +22,8 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/cmu-snmp/snmp/libtool \
 			${WRKSRC}/cmu-snmp/snmpapps/libtool
 
 INSTALL_TARGET=		install root
+DEINSTALL_SRC=		${PKGDIR}/DEINSTALL
+INSTALL_SRC=		# empty
 
 post-patch:
 	@(hostname=`/bin/hostname`;					\

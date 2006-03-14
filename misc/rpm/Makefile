@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2006/02/05 23:10:14 joerg Exp $
+# $NetBSD: Makefile,v 1.58 2006/03/14 01:14:31 jlam Exp $
 
 DISTNAME=	rpm-2.5.4
 PKGREVISION=	5
@@ -17,9 +17,6 @@ NOT_FOR_PLATFORM+=	Interix-*-* # getmntent() is nonpublic; needs porting
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
-
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 # this is needed instead of USE_PKGLOCALEDIR
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/${PKGLOCALEDIR}
