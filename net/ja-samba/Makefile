@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/01/19 01:36:25 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2006/03/14 01:14:31 jlam Exp $
 
 DISTNAME=		samba-${SAMBA_VERSION}-ja-${JA_VERSION}
 PKGNAME=		ja-samba-${SAMBA_VERSION}.${JA_PKG_VERSION}
@@ -109,7 +109,6 @@ USE_PKGLOCALEDIR=	YES
 USE_LANGUAGE=		c
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	libtool
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 CONF_FILES=		${EGDIR}/smb.conf.default ${SAMBA_ETCDIR}/smb.conf
 CONF_FILES_PERMS+=	${EGDIR}/adduser.sh ${SAMBA_ETCDIR}/adduser \

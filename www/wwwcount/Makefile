@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:31:04 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/14 01:14:34 jlam Exp $
 
 DISTNAME=       wwwcount2.5
 PKGNAME=        wwwcount-2.5
@@ -12,6 +12,9 @@ COMMENT=	Graphical access counter, clock and date indicator for WWW pages
 GNU_CONFIGURE=  yes
 INSTALLATION_DIRS=	bin man/man1 share/doc/wwwcount/Count2.5/images \
 			share/doc/wwwcount/Count2.5/eximages share/examples
+
+DEINSTALL_SRC=	${PKGDIR}/DEINSTALL
+INSTALL_SRC=	# empty
 
 pre-configure:
 	cd ${WRKSRC}; yes "" | PREFIX=${PREFIX} VARBASE=${VARBASE} ./Count-config

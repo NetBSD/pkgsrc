@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2006/03/09 21:04:45 jlam Exp $
+# $NetBSD: Makefile,v 1.59 2006/03/14 01:14:34 jlam Exp $
 #
 
 DISTNAME=		gnome-applets-2.12.2
@@ -68,7 +68,7 @@ PRINT_PLIST_AWK+=	/[Bb]attstat/ { print "$${BATTSTAT}"$$0; next; }
 
 # This must come after GConf2's schemas.mk because it will modify default
 # values for keys created during the registration of .schemas files.
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
+INSTALL_TEMPLATE+=	${PKGDIR}/INSTALL
 
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.4.0

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2006/03/04 21:28:59 jlam Exp $
+# $NetBSD: Makefile,v 1.61 2006/03/14 01:14:26 jlam Exp $
 
 DISTNAME=	xmcd-3.0.2
 PKGREVISION=    9
@@ -14,9 +14,6 @@ PATCHFILES=		xmcd-3.0.2-proxyauth-patch
 PATCH_DIST_STRIP=	-p1
 
 WRKSRC=			${WRKDIR}/xmcd-3.0
-
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 USE_IMAKE=		yes
 MAKE_ENV+=		BATCH_BINDIR=${PREFIX}/bin

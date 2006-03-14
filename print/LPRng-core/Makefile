@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/02/18 14:22:13 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2006/03/14 01:14:32 jlam Exp $
 
 DISTNAME=	LPRng-3.8.28
 PKGNAME=	LPRng-core-3.8.28
@@ -43,8 +43,6 @@ FILTER_PATH=		${FILTER_DIR}:/sbin:/usr/sbin:/bin:/usr/bin:${PREFIX}/sbin:${PREFI
 MAKE_ENV+=		POSTINSTALL="NO"
 
 EXAMPLESDIR=		${PREFIX}/share/examples/LPRng
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 RCD_SCRIPTS=		LPRng
 
 FILES_SUBST+=		CAT=${CAT:Q}

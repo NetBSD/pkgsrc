@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.install,v 1.2 2005/12/05 20:50:07 rillig Exp $
+# $NetBSD: Makefile.install,v 1.3 2006/03/14 01:14:27 jlam Exp $
 
 RT_SHARE_DIR=		${PREFIX}/share/rt3
 RT_EXAMPLE_DIR= 	${PREFIX}/share/examples/rt3
@@ -38,7 +38,6 @@ CONF_FILES_PERMS+=	${RT_EXAMPLE_DIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_} \
 ${ROOT_USER} ${RT_GROUP} 0500
 .endfor
 
-INSTALL_EXTRA_TMPL+=	${PKGDIR}/INSTALL
 FILES_SUBST+=		RTVARDIR=${RT_VAR_DIR:Q} RTLOCALDIR=${RT_LOCAL_DIR:Q}
 FILES_SUBST+=		WEBUSER=${APACHE_USER:Q} WEBGROUP=${APACHE_GROUP:Q}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/03/04 21:30:27 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/03/14 01:14:32 jlam Exp $
 
 DISTNAME=		libkver-${VERSION}
 CATEGORIES=		pkgtools
@@ -33,9 +33,6 @@ FILES_SUBST+=		HAS_SYSCTL=true
 PLIST_SUBST+=		HAS_SYSCTL="@comment "
 FILES_SUBST+=		HAS_SYSCTL=false
 .endif
-
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
 INSTALLATION_DIRS+=	lib man/man3 man/cat3
 .if empty(LDD_SYSCTL:M*libc*)

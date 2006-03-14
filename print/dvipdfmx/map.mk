@@ -1,4 +1,4 @@
-# $NetBSD: map.mk,v 1.4 2005/12/29 06:22:06 jlam Exp $
+# $NetBSD: map.mk,v 1.5 2006/03/14 01:14:32 jlam Exp $
 # This Makefile fragment is intended to be included by packages that
 # install font maps used by dvipdfmx.  It takes care of adding and
 # removing font map entires in dvipdfmx.cfg.
@@ -20,8 +20,8 @@ DEPENDS+=		dvipdfmx>=0.0.0.20050627:../../print/dvipdfmx
 
 FILES_SUBST+=		DVIPDFMX_FONTMAPS=${DVIPDFMX_FONTMAPS:Q}
 FILES_SUBST+=		DVIPDFMX_CONFIG_DIR="${PKG_LOCALTEXMFPREFIX}/dvipdfm/config"
-INSTALL_EXTRA_TMPL+=	../../print/dvipdfmx/files/map.tmpl
-DEINSTALL_EXTRA_TMPL+=	../../print/dvipdfmx/files/map.tmpl
+INSTALL_TEMPLATE+=	../../print/dvipdfmx/files/map.tmpl
+DEINSTALL_TEMPLATE+=	../../print/dvipdfmx/files/map.tmpl
 
 PRINT_PLIST_AWK+=	/^${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}\/dvidpfm\/config\/dvipdfmx.cfg$$/ \
 			{ next; }

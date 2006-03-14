@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/02/05 23:10:43 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2006/03/14 01:14:33 jlam Exp $
 
 .include "Makefile.common"
 
@@ -47,8 +47,6 @@ SASL_ENTROPY_SOURCE?=	/dev/urandom
 CONFIGURE_ARGS+=	--with-devrandom=${SASL_ENTROPY_SOURCE:Q}
 .endif
 BUILD_DEFS+=		SASL_ENTROPY_SOURCE
-
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
 # CYRUS_USER		username of the Cyrus administrator
 # CYRUS_GROUP		group of the Cyrus administrator

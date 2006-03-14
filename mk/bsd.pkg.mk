@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1806 2006/03/12 14:55:18 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1807 2006/03/14 01:14:35 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -420,17 +420,8 @@ SCRIPTS_ENV+=	${INSTALL_MACROS}
 #
 .include "../../mk/alternatives.mk"
 
+# INSTALL/DEINSTALL script framework
 .include "../../mk/install/bsd.pkginstall.mk"
-
-# Set INSTALL_FILE to be the name of any INSTALL file
-.if !defined(INSTALL_FILE) && exists(${PKGDIR}/INSTALL)
-INSTALL_FILE=		${PKGDIR}/INSTALL
-.endif
-
-# Set DEINSTALL_FILE to be the name of any DEINSTALL file
-.if !defined(DEINSTALL_FILE) && exists(${PKGDIR}/DEINSTALL)
-DEINSTALL_FILE=		${PKGDIR}/DEINSTALL
-.endif
 
 # If MESSAGE hasn't been defined, then set MESSAGE_SRC to be a space-separated
 # list of files to be concatenated together to generate the MESSAGE file.
@@ -512,8 +503,12 @@ PKG_ARGS_COMMON+=	-P "`${MAKE} ${MAKEFLAGS} run-depends-list | ${SORT} -u`"
 .  if defined(CONFLICTS) && (${PKG_INSTALLATION_TYPE} == "overwrite")
 PKG_ARGS_COMMON+=	-C "${CONFLICTS}"
 .  endif
-PKG_ARGS_COMMON+=	${INSTALL_FILE:D-i ${INSTALL_FILE}}
-PKG_ARGS_COMMON+=	${DEINSTALL_FILE:D-k ${DEINSTALL_FILE}}
+.  if defined(INSTALL_FILE) && exists(${INSTALL_FILE})
+PKG_ARGS_COMMON+=	-i ${INSTALL_FILE}
+.  endif
+.  if defined(DEINSTALL_FILE) && exists(${DEINSTALL_FILE})
+PKG_ARGS_COMMON+=	-k ${DEINSTALL_FILE}
+.  endif
 PKG_ARGS_COMMON+=	${MESSAGE:D-D ${MESSAGE}}
 PKG_ARGS_COMMON+=	${NO_MTREE:D:U-m ${MTREE_FILE}}
 PKG_ARGS_COMMON+=	${PKG_PRESERVE:D-n ${PRESERVE_FILE}}
@@ -2334,7 +2329,7 @@ do-su-undo-replace:
 
 # Empty pre-* and post-* targets
 
-.for name in fetch tools wrapper configure build test install-script install package
+.for name in fetch tools wrapper configure build test install package
 
 .  if !target(pre-${name})
 pre-${name}:
@@ -3561,20 +3556,6 @@ post-install-fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	case ${PKG_INSTALLATION_TYPE} in				\
 	pkgview)	${TOUCH} ${PKG_DB_TMPDIR}/+VIEWS ;;		\
-	esac
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	case "${INSTALL_FILE}" in					\
-	${PKG_DB_TMPDIR}/*|"") ;;					\
-	*)	if ${TEST} -f ${INSTALL_FILE}; then			\
-			${CP} ${INSTALL_FILE} ${PKG_DB_TMPDIR}/+INSTALL; \
-		fi ;;							\
-	esac
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	case "${DEINSTALL_FILE}" in					\
-	${PKG_DB_TMPDIR}/*|"") ;;					\
-	*)	if ${TEST} -f ${DEINSTALL_FILE}; then			\
-			${CP} ${DEINSTALL_FILE} ${PKG_DB_TMPDIR}/+DEINSTALL; \
-		fi ;;							\
 	esac
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${SIZE_PKG_FILE} ${SIZE_ALL_FILE}
 .  if ${SHLIB_HANDLING} == "YES" && ${CHECK_SHLIBS} == "YES"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/02/23 03:39:25 jschauma Exp $
+# $NetBSD: Makefile,v 1.26 2006/03/14 01:14:31 jlam Exp $
 #
 
 DISTNAME=		tor-0.1.0.17
@@ -33,8 +33,6 @@ CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample 	\
 				${PKG_SYSCONFDIR}/tor/torrc
 
 RCD_SCRIPT=		tor
-
-INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 
 FILES_SUBST+=		PKG_HOME=${PKG_HOME:Q}
 FILES_SUBST+=		TOR_USER=${TOR_USER:Q} TOR_GROUP=${TOR_GROUP:Q}

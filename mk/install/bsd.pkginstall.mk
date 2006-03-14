@@ -1,55 +1,10 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.39 2006/03/10 23:36:08 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.40 2006/03/14 01:14:36 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
 # framework, simply set the relevant variables to customize the install
 # scripts to the package.
 #
-
-# _PKGINSTALL_VARS is a list of the variables that, if non-empty, indicate
-#	that the pkginstall framework should be used.  These variables
-#	should be extracted from bsd.pkginstall.mk and are typically the
-#	variables named in the _INSTALL_<SCRIPT>_MEMBERS lists.
-#
-# USE_PKGINSTALL may be set to "yes" to force the pkginstall framework
-#	to be used.
-#
-_PKGINSTALL_VARS+=	HEADER_EXTRA_TMPL
-_PKGINSTALL_VARS+=	DEINSTALL_EXTRA_TMPL
-_PKGINSTALL_VARS+=	INSTALL_EXTRA_TMPL
-_PKGINSTALL_VARS+=	DEINSTALL_SRC INSTALL_SRC
-
-_PKGINSTALL_VARS+=	PKG_GROUPS PKG_USERS
-_PKGINSTALL_VARS+=	SPECIAL_PERMS
-_PKGINSTALL_VARS+=	CONF_FILES CONF_FILES_PERMS			\
-			REQD_FILES REQD_FILES_PERMS			\
-			RCD_SCRIPTS
-_PKGINSTALL_VARS+=	INFO_FILES
-_PKGINSTALL_VARS+=	MAKE_DIRS MAKE_DIRS_PERMS			\
-			REQD_DIRS REQD_DIRS_PERMS			\
-			OWN_DIRS OWN_DIRS_PERMS
-_PKGINSTALL_VARS+=	PKG_SHELL
-_PKGINSTALL_VARS+=	FONTS_DIRS.ttf FONTS_DIRS.type1 FONTS_DIRS.x11
-
-# CONF_DEPENDS notes a dependency where the config directory for the
-# package matches the dependency's config directory.  CONF_DEPENDS is
-# only meaningful if PKG_INSTALLATION_TYPE is "pkgviews".
-#
-_PKGINSTALL_VARS+=	CONF_DEPENDS
-
-.if defined(USE_PKGINSTALL) && !empty(USE_PKGINSTALL:M[yY][eE][sS])
-_USE_PKGINSTALL=	yes
-.else
-_USE_PKGINSTALL=	no
-.endif
-
-.if !empty(_USE_PKGINSTALL:M[nN][oO])
-.  for _var_ in ${_PKGINSTALL_VARS}
-.    if defined(${_var_}) && !empty(${_var_}:M*)
-_USE_PKGINSTALL=	yes
-.    endif
-.  endfor
-.endif
 
 # The Solaris /bin/sh does not know the ${foo#bar} shell substitution.
 # This shell function serves a similar purpose, but is specialized on
@@ -65,49 +20,68 @@ _FUNC_STRIP_PREFIX= \
 	    }' s="$$1" prefix=${PREFIX:Q}/ /dev/null;			\
 	}
 
-# These are the template scripts for the INSTALL/DEINSTALL scripts.  Packages
-# may do additional work in the INSTALL/DEINSTALL scripts by overriding the
-# variables DEINSTALL_EXTRA_TMPL and INSTALL_EXTRA_TMPL to point to
-# additional script fragments.  These bits are included after the main
-# install/deinstall script fragments.
+# These are the template scripts for the INSTALL/DEINSTALL scripts.
+# Packages may do additional work in the INSTALL/DEINSTALL scripts by
+# overriding the variables DEINSTALL_TEMPLATE and INSTALL_TEMPLATE to
+# point to additional script fragments.  These bits are included after
+# the main install/deinstall script fragments.
 #
 _HEADER_TMPL?=		${.CURDIR}/../../mk/install/header
-.if !defined(HEADER_EXTRA_TMPL) && exists(${.CURDIR}/HEADER)
-HEADER_EXTRA_TMPL?=	${.CURDIR}/HEADER
-.else
-HEADER_EXTRA_TMPL?=	# empty
+HEADER_TEMPLATE?=	# empty
+.if exists(${PKGDIR}/HEADER) && \
+    empty(HEADER_TEMPLATE:M${PKGDIR}/HEADER)
+HEADER_TEMPLATE+=	${PKGDIR}/HEADER
 .endif
 _DEINSTALL_PRE_TMPL?=	${.CURDIR}/../../mk/install/deinstall-pre
-DEINSTALL_EXTRA_TMPL?=	# empty
+DEINSTALL_TEMPLATE?=	# empty
+.if exists(${PKGDIR}/DEINSTALL) && \
+    empty(DEINSTALL_TEMPLATE:M${PKGDIR}/DEINSTALL)
+DEINSTALL_TEMPLATE+=	${PKGDIR}/DEINSTALL
+.endif
 _DEINSTALL_TMPL?=	${.CURDIR}/../../mk/install/deinstall
 _INSTALL_UNPACK_TMPL?=	# empty
 _INSTALL_TMPL?=		${.CURDIR}/../../mk/install/install
-INSTALL_EXTRA_TMPL?=	# empty
+INSTALL_TEMPLATE?=	# empty
+.if exists(${PKGDIR}/INSTALL) && \
+    empty(INSTALL_TEMPLATE:M${PKGDIR}/INSTALL)
+INSTALL_TEMPLATE+=	${PKGDIR}/INSTALL
+.endif
 _INSTALL_POST_TMPL?=	${.CURDIR}/../../mk/install/install-post
 _FOOTER_TMPL?=		${.CURDIR}/../../mk/install/footer
 
-# DEINSTALL_TEMPLATES and INSTALL_TEMPLATES are the default list of source
-#	files that are concatenated to form the DEINSTALL/INSTALL scripts.
+# _DEINSTALL_TEMPLATES and _INSTALL_TEMPLATES are the list of source
+#	files that are concatenated to form the DEINSTALL/INSTALL
+#	scripts.
 #
-DEINSTALL_TEMPLATES=	${_HEADER_TMPL}
-DEINSTALL_TEMPLATES+=	${HEADER_EXTRA_TMPL}
-DEINSTALL_TEMPLATES+=	${_DEINSTALL_PRE_TMPL}
-DEINSTALL_TEMPLATES+=	${DEINSTALL_EXTRA_TMPL}
-DEINSTALL_TEMPLATES+=	${_DEINSTALL_TMPL}
-DEINSTALL_TEMPLATES+=	${_FOOTER_TMPL}
-INSTALL_TEMPLATES=	${_HEADER_TMPL}
-INSTALL_TEMPLATES+=	${HEADER_EXTRA_TMPL}
-INSTALL_TEMPLATES+=	${_INSTALL_UNPACK_TMPL}
-INSTALL_TEMPLATES+=	${_INSTALL_TMPL}
-INSTALL_TEMPLATES+=	${INSTALL_EXTRA_TMPL}
-INSTALL_TEMPLATES+=	${_INSTALL_POST_TMPL}
-INSTALL_TEMPLATES+=	${_FOOTER_TMPL}
+# _DEINSTALL_TEMPLATES_DFLT and _INSTALL_TEMPLATES_DFLT are the list of
+#	template files minus any user-supplied templates.
+#
+_DEINSTALL_TEMPLATES=	${_HEADER_TMPL} ${HEADER_TEMPLATE}		\
+			${_DEINSTALL_PRE_TMPL}				\
+			${DEINSTALL_TEMPLATE}				\
+			${_DEINSTALL_TMPL}				\
+			${_FOOTER_TMPL}
+_INSTALL_TEMPLATES=	${_HEADER_TMPL} ${HEADER_TEMPLATE}		\
+			${_INSTALL_UNPACK_TMPL}				\
+			${_INSTALL_TMPL}				\
+			${INSTALL_TEMPLATE}				\
+			${_INSTALL_POST_TMPL}				\
+			${_FOOTER_TMPL}
+
+_DEINSTALL_TEMPLATES_DFLT=	${_HEADER_TMPL}				\
+				${_DEINSTALL_PRE_TMPL}			\
+				${_DEINSTALL_TMPL}			\
+				${_FOOTER_TMPL}
+_INSTALL_TEMPLATES_DFLT=	${_HEADER_TMPL}				\
+				${_INSTALL_TMPL}			\
+				${_INSTALL_POST_TMPL}			\
+				${_FOOTER_TMPL}
 
 # These are the list of source files that are concatenated to form the
 # INSTALL/DEINSTALL scripts.
 #
-DEINSTALL_SRC?=		${DEINSTALL_TEMPLATES}
-INSTALL_SRC?=		${INSTALL_TEMPLATES}
+DEINSTALL_SRC?=		${_DEINSTALL_TEMPLATES}
+INSTALL_SRC?=		${_INSTALL_TEMPLATES}
 
 # FILES_SUBST lists what to substitute in DEINSTALL/INSTALL scripts and in
 # rc.d scripts.
@@ -798,49 +772,85 @@ INSTALL_SCRIPTS_ENV+=	PKG_REFCOUNT_DBDIR=${PKG_REFCOUNT_DBDIR}
 
 .PHONY: pre-install-script post-install-script
 
-# This section is the only part that hooks into the INSTALL/DEINSTALL
-# script logic in bsd.pkg.mk
-#
-.if !empty(_USE_PKGINSTALL:M[yY][eE][sS])
-.  if !empty(DEINSTALL_SRC)
 DEINSTALL_FILE=		${PKG_DB_TMPDIR}/+DEINSTALL
-.  endif
-.  if !empty(INSTALL_SRC)
 INSTALL_FILE=		${PKG_DB_TMPDIR}/+INSTALL
-.  endif
-
-pre-install-script: generate-install-scripts
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${PKG_DB_TMPDIR} &&		\
-		${SETENV} ${INSTALL_SCRIPTS_ENV}			\
-		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME} PRE-INSTALL
-
-post-install-script:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${PKG_DB_TMPDIR} &&		\
-		${SETENV} ${INSTALL_SCRIPTS_ENV}			\
-		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME} POST-INSTALL
-.endif
+_DEINSTALL_FILE=	${WRKDIR}/.DEINSTALL
+_INSTALL_FILE=		${WRKDIR}/.INSTALL
+_DEINSTALL_FILE_DFLT=	${WRKDIR}/.DEINSTALL_default
+_INSTALL_FILE_DFLT=	${WRKDIR}/.INSTALL_default
 
 .PHONY: generate-install-scripts
 post-build: generate-install-scripts
-generate-install-scripts:	# do nothing
+generate-install-scripts:						\
+		${_DEINSTALL_FILE} ${_INSTALL_FILE}			\
+		${_DEINSTALL_FILE_DFLT} ${_INSTALL_FILE_DFLT}
+.if !exists(${DEINSTALL_FILE}) || !exists(${INSTALL_FILE})
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${INSTALL_FILE:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${DEINSTALL_FILE:H}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if ${CMP} -s ${_INSTALL_FILE_DFLT:Q} ${_INSTALL_FILE:Q}; then	\
+		${TRUE};						\
+	else								\
+		${CP} -f ${_INSTALL_FILE} ${INSTALL_FILE};		\
+		${CP} -f ${_DEINSTALL_FILE} ${DEINSTALL_FILE};		\
+	fi
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if ${CMP} -s ${_DEINSTALL_FILE_DFLT:Q} ${_DEINSTALL_FILE:Q}; then \
+		${TRUE};						\
+	else								\
+		${CP} -f ${_DEINSTALL_FILE} ${DEINSTALL_FILE};		\
+	fi
+.endif
 
-.if !empty(DEINSTALL_SRC)
-generate-install-scripts: ${DEINSTALL_FILE}
-${DEINSTALL_FILE}: ${DEINSTALL_SRC}
+${_DEINSTALL_FILE_DFLT}: ${_DEINSTALL_TEMPLATES_DFLT}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} |			\
 		${SED} ${FILES_SUBST_SED} > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
-.endif
 
-.if !empty(INSTALL_SRC)
-generate-install-scripts: ${INSTALL_FILE}
-${INSTALL_FILE}: ${INSTALL_SRC}
+${_INSTALL_FILE_DFLT}: ${_INSTALL_TEMPLATES_DFLT}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} |			\
 		${SED} ${FILES_SUBST_SED} > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
-.endif
+
+${_DEINSTALL_FILE}: ${DEINSTALL_SRC}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	case ${.ALLSRC:Q}"" in						\
+	"")	{ ${ECHO} "#!${SH}";					\
+		  ${ECHO} "exit 0"; } > ${.TARGET} ;;			\
+	*)	${CAT} ${.ALLSRC} | ${SED} ${FILES_SUBST_SED}		\
+			> ${.TARGET} ;;					\
+	esac
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+
+${_INSTALL_FILE}: ${INSTALL_SRC}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	case ${.ALLSRC:Q}"" in						\
+	"")	{ ${ECHO} "#!${SH}";					\
+		  ${ECHO} "exit 0"; } > ${.TARGET} ;;			\
+	*)	${CAT} ${.ALLSRC} | ${SED} ${FILES_SUBST_SED}		\
+			> ${.TARGET} ;;					\
+	esac
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+
+pre-install-script:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if ${TEST} -x ${INSTALL_FILE}; then				\
+		cd ${PKG_DB_TMPDIR} && ${SETENV} ${INSTALL_SCRIPTS_ENV}	\
+		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME}		\
+			PRE-INSTALL;					\
+	fi
+
+post-install-script:
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if ${TEST} -x ${INSTALL_FILE}; then				\
+		cd ${PKG_DB_TMPDIR} && ${SETENV} ${INSTALL_SCRIPTS_ENV}	\
+		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME}		\
+			POST-INSTALL;					\
+	fi
 
 # rc.d scripts are automatically generated and installed into the rc.d
 # scripts example directory at the post-install step.  The following

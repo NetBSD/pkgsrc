@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/09 21:04:44 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/14 01:14:29 jlam Exp $
 #
 
 DISTNAME=	xscavenger-1.4.4
@@ -17,6 +17,8 @@ USE_IMAKE=		yes
 CONFIGURE_DIRS=		src
 BUILD_DIRS=		${CONFIGURE_DIRS}
 NO_INSTALL_MANPAGES=	yes
+DEINSTALL_SRC=		${PKGDIR}/DEINSTALL
+INSTALL_SRC=		# empty
 
 CPPFLAGS+=	-DSOUNDDEV="\"${DEVOSSSOUND}\""
 

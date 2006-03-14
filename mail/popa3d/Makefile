@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2005/12/29 06:21:52 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2006/03/14 01:14:30 jlam Exp $
 #
 
 DISTNAME=	popa3d-1.0
@@ -16,9 +16,6 @@ POPA3D_GROUP?=	popa3d
 
 PKG_GROUPS=	${POPA3D_GROUP}
 PKG_USERS=	${POPA3D_USER}:${POPA3D_GROUP}
-
-
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
 RCD_SCRIPTS=	popa3d
 

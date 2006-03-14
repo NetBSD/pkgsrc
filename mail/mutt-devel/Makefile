@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/02/05 23:09:56 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2006/03/14 01:14:30 jlam Exp $
 
 DISTNAME=		mutt-1.5.11
 PKGREVISION=	3
@@ -45,8 +45,7 @@ CONFIGURE_ARGS+=	--with-exec-shell=/bin/ksh
 
 LDFLAGS+=		${_STRIPFLAG_CC}
 
-DEINSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
-INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
+DEINSTALL_TEMPLATE+=	${PKGDIR}/INSTALL
 DOCDIR=			${PREFIX}/share/doc/mutt
 EGDIR=			${PREFIX}/share/examples/mutt
 CONF_FILES=		${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc

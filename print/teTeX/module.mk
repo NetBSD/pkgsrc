@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.11 2006/01/13 17:56:43 wiz Exp $
+# $NetBSD: module.mk,v 1.12 2006/03/14 01:14:32 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # install TeX packages.  It takes care of rebuilding the ls-R database
@@ -26,8 +26,8 @@ FILES_SUBST+=		MKTEXLSR="${LOCALBASE}/bin/mktexlsr"
 FILES_SUBST+=		TEXMFDIRS=${TEXMFDIRS:Q}
 FILES_SUBST+=		UPDMAP_SYS="${LOCALBASE}/bin/updmap-sys"
 FILES_SUBST+=		TEX_FONTMAPS=${TEX_FONTMAPS:Q}
-INSTALL_EXTRA_TMPL+=	../../print/teTeX/files/texmf.tmpl
-DEINSTALL_EXTRA_TMPL+=	../../print/teTeX/files/texmf.tmpl
+INSTALL_TEMPLATE+=	../../print/teTeX/files/texmf.tmpl
+DEINSTALL_TEMPLATE+=	../../print/teTeX/files/texmf.tmpl
 
 PRINT_PLIST_AWK+=	/^(@dirrm )?${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}(\/ls-R)?$$/ \
 			{ next; }
