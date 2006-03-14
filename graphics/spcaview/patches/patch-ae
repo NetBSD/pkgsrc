@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1 2006/03/14 17:06:58 hamajima Exp $
+
+--- spca5xx.c.orig	2006-03-03 15:44:32.000000000 +0000
++++ spca5xx.c
+@@ -45,7 +45,11 @@ static const char version[] = SPCA5XX_VE
+ #include <ctype.h>
+ #include <sys/ioctl.h>
+ 
++#if defined(__DragonFly__)
++#include <bus/usb/usb.h>
++#else
+ #include <dev/usb/usb.h>
++#endif
+ #include "linux_usbif.h"
+ #include "spca5xx.h"
+ 
