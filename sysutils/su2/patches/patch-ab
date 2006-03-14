@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/06/04 09:56:38 cjep Exp $
+$NetBSD: patch-ab,v 1.2 2006/03/14 02:53:13 joerg Exp $
 
---- su2.c.orig	Thu Sep  7 13:10:11 1995
+--- su2.c.orig	1995-09-07 20:10:11.000000000 +0000
 +++ su2.c
-@@ -113,9 +113,9 @@
+@@ -113,9 +113,9 @@ char   *SystemNameFile = SUPERUSERS;
  #ifndef NOSU2RC
  char   *UsersNameFile = ".su2rc";
  #endif NOSU2RC
@@ -14,12 +14,17 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/06/04 09:56:38 cjep Exp $
  
  #ifndef PATH
  # ifdef BSD
-@@ -188,7 +188,7 @@
+@@ -188,13 +188,6 @@ int    setpwent ();
  void   setpwent ();
  #endif
  
 -#ifndef sgi
-+#if !defined(sgi) && !defined(__NetBSD__)
- struct passwd  *getpwuid ();
- struct passwd  *getpwnam ();
- void    endpwent ();
+-struct passwd  *getpwuid ();
+-struct passwd  *getpwnam ();
+-void    endpwent ();
+-int     chmod ();
+-#endif
+-
+ struct passwd  *pw;
+ 
+ char   *ttyname ();
