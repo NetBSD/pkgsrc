@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/17 05:20:24 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/14 16:00:54 jlam Exp $
 
 DISTNAME=      	Kwiki-UserPreferences-0.13
 PKGNAME=       	p5-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Kwiki/}
 
-MAINTAINER=	jlam@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kwiki.org/
 COMMENT=	Kwiki user preferences plugin
 
