@@ -1,14 +1,16 @@
-$NetBSD: patch-ab,v 1.4 2005/05/19 21:14:11 jmmv Exp $
+$NetBSD: patch-ab,v 1.5 2006/03/14 15:00:57 drochner Exp $
 
---- configure.orig	2005-05-07 17:08:51.000000000 +0000
+--- configure.orig	2006-02-25 23:22:46.000000000 +0100
 +++ configure
-@@ -19614,6 +19614,9 @@ echo $ECHO_N "checking for GPGME - versi
+@@ -19762,7 +19762,10 @@ echo $ECHO_N "checking for GPGME - versi
  		 sed 's/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\).*/\3/'`
  
  	if test "$major" -eq "$req_major"; then
+-	   if test "$minor" -ge "$req_minor"; then
 +	   if test "$minor" -gt "$req_minor"; then
 +	       ok="yes"
 +	   fi
- 	   if test "$minor" -eq "$req_minor"; then
++	   if test "$minor" -eq "$req_minor"; then
  	     if test "$micro" -ge "$req_micro"; then
  	       ok="yes"
+ 	     fi
