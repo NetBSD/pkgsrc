@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2006/02/06 15:35:47 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/03/14 20:13:51 drochner Exp $
 bin/gramps
+man/fr/man1/gramps.1
 man/man1/gramps.1
 share/application-registry/gramps.applications
 share/applications/gramps.desktop
@@ -229,6 +230,8 @@ share/gramps/dates/Date_fi.py
 share/gramps/dates/Date_fi.pyo
 share/gramps/dates/Date_fr.py
 share/gramps/dates/Date_fr.pyo
+share/gramps/dates/Date_lt.py
+share/gramps/dates/Date_lt.pyo
 share/gramps/dates/Date_nl.py
 share/gramps/dates/Date_nl.pyo
 share/gramps/dates/Date_ru.py
@@ -247,6 +250,8 @@ share/gramps/docgen/LPRDoc.py
 share/gramps/docgen/LPRDoc.pyo
 share/gramps/docgen/LaTeXDoc.py
 share/gramps/docgen/LaTeXDoc.pyo
+share/gramps/docgen/ODFDoc.py
+share/gramps/docgen/ODFDoc.pyo
 share/gramps/docgen/OpenOfficeDoc.py
 share/gramps/docgen/OpenOfficeDoc.pyo
 share/gramps/docgen/OpenSpreadSheet.py
@@ -430,6 +435,8 @@ share/gramps/plugins/Ancestors.py
 share/gramps/plugins/Ancestors.pyo
 share/gramps/plugins/BookReport.py
 share/gramps/plugins/BookReport.pyo
+share/gramps/plugins/Calendar.py
+share/gramps/plugins/Calendar.pyo
 share/gramps/plugins/ChangeNames.py
 share/gramps/plugins/ChangeNames.pyo
 share/gramps/plugins/ChangeTypes.py
@@ -531,6 +538,7 @@ share/gramps/plugins/desbrowse.glade
 share/gramps/plugins/eval.glade
 share/gramps/plugins/eventcmp.glade
 share/gramps/plugins/genewebexport.glade
+share/gramps/plugins/holidays.xml
 share/gramps/plugins/leak.glade
 share/gramps/plugins/merge.glade
 share/gramps/plugins/patchnames.glade
