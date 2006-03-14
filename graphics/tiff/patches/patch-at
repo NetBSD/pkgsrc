@@ -1,8 +1,8 @@
-$NetBSD: patch-at,v 1.5 2006/02/22 12:38:17 drochner Exp $
+$NetBSD: patch-at,v 1.6 2006/03/14 14:08:30 drochner Exp $
 
---- configure.orig	2005-12-29 22:49:59.000000000 +0100
+--- configure.orig	2006-03-13 15:58:42.000000000 +0100
 +++ configure
-@@ -19765,6 +19765,117 @@ done
+@@ -12439,6 +12439,117 @@ done
  
  
  
@@ -120,12 +120,3 @@ $NetBSD: patch-at,v 1.5 2006/02/22 12:38:17 drochner Exp $
  echo "$as_me:$LINENO: checking native cpu bit order" >&5
  echo $ECHO_N "checking native cpu bit order... $ECHO_C" >&6
  case "$target_cpu" in
-@@ -23354,7 +23465,7 @@ cat >>confdefs.h <<\_ACEOF
- _ACEOF
- 
- 
--  if test "x$with_default_strip_size" == "x" ; then
-+  if test "x$with_default_strip_size" = "x" ; then
-     with_default_strip_size="8192"
-   fi
- 
