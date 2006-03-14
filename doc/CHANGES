@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13308 2006/03/14 10:17:38 martti Exp $
+$NetBSD: CHANGES,v 1.13309 2006/03/14 11:36:32 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1510,3 +1510,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/kdesdk3 to 3.5.1nb2 [minskim 2006-03-14]
 	Updated x11/kdelibdocs3 to 3.5.1nb2 [minskim 2006-03-14]
 	Updated security/john to 1.7.0.1 [martti 2006-03-14]
+	Updated x11/gtk2 to 2.8.14nb1 [tron 2006-03-14]
