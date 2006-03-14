@@ -1,17 +1,27 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:30:23 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/14 13:53:57 rillig Exp $
 
-DISTNAME=	pptp-linux-1.0.2
-PKGNAME=	pptp-1.0.2
+DISTNAME=	pptp-1.7.0
 CATEGORIES=	net
-MASTER_SITES= 	http://www.pdos.lcs.mit.edu/~cananian/Synaptics/release/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pptpclient/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pdos.lcs.mit.edu/~cananian/Projects/PPTP/
+HOMEPAGE=	http://pptpclient.sourceforge.net/
 COMMENT=	PPTP client package for Microsoft VPN servers (no encryption yet)
 
-#LICENSE=	GPL
-
 NOT_FOR_PLATFORM=	Interix-*-*
+
+MAKE_FLAGS+=	BINDIR=${PREFIX:Q}/sbin
+MAKE_FLAGS+=	MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}/man8
+MAKE_FLAGS+=	PPPDIR=${PREFIX:Q}/share/examples/pptp
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR:Q}/man8 share/examples/pptp
+INSTALLATION_DIRS+=	share/doc/pptp/Documentation share/doc/pptp/Reference
+DOCDIR=		${PREFIX}/share/doc/pptp
+
+post-install:
+	cd ${WRKSRC:Q}/Documentation && ${INSTALL_DATA} * ${DOCDIR:Q}/Documentation
+	cd ${WRKSRC:Q}/Reference && ${INSTALL_DATA} * ${DOCDIR:Q}/Reference
+	cd ${WRKSRC:Q} && ${INSTALL_DATA} INSTALL NEWS README USING ${DOCDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
