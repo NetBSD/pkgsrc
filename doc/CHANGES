@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13310 2006/03/14 13:55:27 rillig Exp $
+$NetBSD: CHANGES,v 1.13311 2006/03/14 14:02:47 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1512,3 +1512,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/john to 1.7.0.1 [martti 2006-03-14]
 	Updated x11/gtk2 to 2.8.14nb1 [tron 2006-03-14]
 	Updated net/pptp to 1.7.0 [rillig 2006-03-14]
+	Updated archivers/fastjar to 0.93nb3 [joerg 2006-03-14]
