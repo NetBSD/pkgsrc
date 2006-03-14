@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.30 2006/02/24 19:59:41 rillig Exp $
+# $NetBSD: deprecated.map,v 1.31 2006/03/14 14:18:55 rillig Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -69,3 +69,7 @@ TOOLS_DEPMETHOD		Use the :build or :run modifiers in USE_TOOLS instead.
 MANDIR			Please use ${PREFIX}/${PKGMANDIR} instead.
 DOWNLOADED_DISTFILE	Use the shell variable $$extract_file instead.
 DECOMPRESS_CMD		Use EXTRACT_CMD instead.
+
+# March 2006
+INSTALL_EXTRA_TMPL	Use INSTALL_TEMPLATE instead.
+DEINSTALL_EXTRA_TMPL	Use DEINSTALL_TEMPLATE instead.
