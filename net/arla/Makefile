@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2006/03/13 04:29:16 rillig Exp $
+# $NetBSD: Makefile,v 1.55 2006/03/14 01:14:31 jlam Exp $
 
 DISTNAME=		arla-0.41
 PKGREVISION=		3
@@ -20,9 +20,6 @@ INFO_FILES=		arla.info send-pr.info
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 .include "../../mk/bsd.prefs.mk"
 

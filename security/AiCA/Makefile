@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/29 06:22:09 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/14 01:14:33 jlam Exp $
 #
 
 DISTNAME=	AiCA-0.81
@@ -9,7 +9,6 @@ MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://mars.elcom.nitech.ac.jp/security/
 COMMENT=	Manage Certification Authority and PKI utilities
 
-INSTALL_EXTRA_TMPL+=    ${.CURDIR}/INSTALL
 GNU_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/AiCA
 

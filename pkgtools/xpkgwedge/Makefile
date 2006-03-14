@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2006/01/12 19:02:34 joerg Exp $
+# $NetBSD: Makefile,v 1.65 2006/03/14 01:14:32 jlam Exp $
 
 DISTNAME=	xpkgwedge-1.15
 CATEGORIES=	pkgtools devel x11
@@ -30,8 +30,6 @@ PKG_SKIP_REASON+=	"xpkgwedge is not needed when X11BASE is LOCALBASE"
 CONFLICTS+=	mkfontscale-[0-9]*
 .endif
 
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 INSTALLATION_DIRS=	bin lib/X11/config
 
 # FONT_PROGS are symlinked from ${X11BASE}/bin to ${PREFIX}/bin to allow

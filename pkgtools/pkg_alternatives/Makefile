@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/29 06:22:06 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/14 01:14:32 jlam Exp $
 #
 
 DISTNAME=	pkg_alternatives-1.3
@@ -21,8 +21,6 @@ DATADIR=		${PREFIX}/share/pkg_alternatives
 DBDIR=			${PREFIX}/libdata/pkg_alternatives
 EGDIR=			${PREFIX}/share/examples/pkg_alternatives
 
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 FILES_SUBST+=		PKG_ALTERNATIVES=${PREFIX}/sbin/pkg_alternatives
 
 REQD_DIRS=		${DBDIR}

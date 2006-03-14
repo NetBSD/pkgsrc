@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2005/12/29 06:22:09 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/03/14 01:14:33 jlam Exp $
 
 DISTNAME=	cyrus-sasl-2.1.20
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
@@ -33,7 +33,6 @@ CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
 
 .include "options.mk"
 
-DEINSTALL_EXTRA_TMPL=	${PKGDIR}/DEINSTALL
 RCD_SCRIPTS=		saslauthd
 FILES_SUBST+=		ROOT_USER=${ROOT_USER:Q}
 

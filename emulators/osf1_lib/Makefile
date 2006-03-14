@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:09:02 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/14 01:14:28 jlam Exp $
 
 DISTNAME=	netscape-4.7-3.alpha
 PKGNAME=	osf1_lib-1.1
@@ -29,6 +29,8 @@ EMULDIR=		${PREFIX}/${EMULSUBDIR}
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+INSTALL_SRC=	${PKGDIR}/INSTALL
+DEINSTALL_SRC=	# empty
 
 RPMARGS=	-i usr/lib -i usr/bin ${DISTDIR}/${DISTFILES}
 

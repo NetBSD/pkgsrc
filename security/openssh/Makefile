@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.165 2006/03/04 21:30:35 jlam Exp $
+# $NetBSD: Makefile,v 1.166 2006/03/14 01:14:33 jlam Exp $
 
 DISTNAME=		openssh-4.3p1
 PKGNAME=		openssh-4.3.1
@@ -139,8 +139,6 @@ RCD_SCRIPTS=		sshd
 
 PLIST_SRC+=		${.CURDIR}/PLIST
 FILES_SUBST+=		SSH_PID_DIR=${SSH_PID_DIR:Q}
-
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

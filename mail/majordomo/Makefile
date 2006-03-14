@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/03/10 20:08:57 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/03/14 01:14:30 jlam Exp $
 
 DISTNAME=		majordomo-1.94.5
 PKGREVISION=		1
@@ -32,8 +32,8 @@ NO_BIN_ON_CDROM=	${NO_BIN_ON_FTP}
 BUILD_TARGET=		wrapper
 INSTALL_TARGET=		install install-wrapper
 
-INSTALL_SRC=		${PKGDIR}/INSTALL
 DEINSTALL_SRC=		${PKGDIR}/DEINSTALL
+INSTALL_SRC=		${PKGDIR}/INSTALL
 MAKEFILE=		Makefile.netbsd
 
 MAJORDOMO_TMPDIR?=	/var/tmp

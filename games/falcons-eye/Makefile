@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/02/05 23:09:14 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2006/03/14 01:14:28 jlam Exp $
 #
 
 DISTNAME=		nethack_source_331_jtp_193
@@ -20,6 +20,8 @@ DIST_SUBDIR=		${PKGNAME_NOREV}-20050216-2
 WRKSRC=			${WRKDIR}
 USE_TOOLS+=		bison lex
 MAKE_ENV+=		YACC=${TOOLS_CMDLINE_YACC:Q}
+DEINSTALL_SRC=		${PKGDIR}/DEINSTALL
+INSTALL_SRC=		# empty
 
 LIBS.SunOS+=		-lm
 
