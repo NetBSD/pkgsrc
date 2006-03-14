@@ -1,44 +1,17 @@
-@comment $NetBSD: PLIST,v 1.7 2005/08/23 22:48:07 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/03/14 19:06:19 tron Exp $
 bin/xchat
-bin/xchat-text
 share/applications/xchat.desktop
-${PKGLOCALEDIR}/locale/am/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/az/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/et/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xchat.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/xchat.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/xchat.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xchat.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xchat.mo
 share/pixmaps/xchat.png
 @comment in xdg-dirs: @dirrm share/pixmaps
