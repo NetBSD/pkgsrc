@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2006/01/31 22:58:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.22 2006/03/14 01:49:54 minskim Exp $
 bin/adddebug
 bin/build-progress.sh
 bin/catalogmanager
@@ -1004,5 +1004,5 @@ share/kde/servicetypes/kompareviewpart.desktop
 @comment in kde: @dirrm share/applications/kde
 @comment in kde: @dirrm lib/kde3/plugins/styles
 @comment in kde: @dirrm lib/kde3
-@dirrm include/kunittest
+@comment in kdelibs: @dirrm include/kunittest
 @dirrm include/kbabel
