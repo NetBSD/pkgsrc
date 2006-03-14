@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.609 2006/03/14 21:11:18 drochner Exp $
+# $NetBSD: Makefile,v 1.610 2006/03/14 23:32:50 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -402,6 +402,7 @@ SUBDIR+=	spread
 SUBDIR+=	srsh
 SUBDIR+=	ssync
 SUBDIR+=	stripes
+SUBDIR+=	sup
 SUBDIR+=	synergy
 SUBDIR+=	tacacs
 SUBDIR+=	tcl-scotty
