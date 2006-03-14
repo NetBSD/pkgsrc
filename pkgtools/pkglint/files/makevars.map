@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.78 2006/03/14 14:18:56 rillig Exp $
+# $NetBSD: makevars.map,v 1.79 2006/03/14 14:20:13 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -186,6 +186,7 @@ GNU_CONFIGURE		Yes
 GNU_CONFIGURE_MANDIR	Pathname
 GNU_CONFIGURE_PREFIX	Pathname
 HAS_CONFIGURE		Yes
+HEADER_TEMPLATE		List of Pathname
 HOMEPAGE		URL
 INCOMPAT_CURSES		List of PlatformTriple
 INCOMPAT_ICONV		List of PlatformTriple
