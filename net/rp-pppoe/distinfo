@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2005/11/03 22:49:40 rillig Exp $
+$NetBSD: distinfo,v 1.10 2006/03/14 02:49:03 joerg Exp $
 
 SHA1 (rp-pppoe-3.5.tar.gz) = f81f351e8559b4c861c9b99adc4ef9756cecab83
 RMD160 (rp-pppoe-3.5.tar.gz) = 2746444a209fec0fcca23bcafa5ba884cbeeb7e4
 Size (rp-pppoe-3.5.tar.gz) = 189321 bytes
-SHA1 (patch-aa) = 381c1a90115565066dd67837206c1da816b1c718
+SHA1 (patch-aa) = 3f806e96d3c89d9d0850d6692fd8b14778bc46c4
 SHA1 (patch-ab) = 2c2287a02383d611b42c026d4ac66a5c48ad52e1
 SHA1 (patch-ac) = 04f8bcfb039305d580265c27321bcb4aa15cdb54
 SHA1 (patch-ad) = 555943ea178124ac17bbbd223da77f0e89b07632
