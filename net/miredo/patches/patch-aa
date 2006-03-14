@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/02/28 01:29:39 rpaulo Exp $
+$NetBSD: patch-aa,v 1.2 2006/03/14 01:58:47 joerg Exp $
 
 --- libteredo/server.c	2006-02-28 00:48:07.000000000 +0000
 +++ libteredo/server.c.new	2006-02-28 00:47:56.000000000 +0000
-@@ -49,6 +49,10 @@
+@@ -39,6 +39,7 @@
+ #include <stdlib.h>
+ 
+ #include <sys/types.h>
++#include <sys/uio.h>
+ #include <unistd.h> // close()
+ #include <sys/socket.h>
+ #include <netinet/in.h> // struct in6_addr
+@@ -49,6 +50,10 @@
  #include <pthread.h>
  #include <syslog.h>
  
@@ -13,3 +21,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/02/28 01:29:39 rpaulo Exp $
  #include "server.h"
  #include "v4global.h"
  #include "checksum.h"
+@@ -253,7 +258,9 @@ libteredo_send_ipv6 (const void *p, size
+ 				               /* ICMPv6 time exceeded */
+ 			case ECONNREFUSED: /* ICMPv6 unreach port unreachable */
+ 			case EMSGSIZE: /* ICMPv6 packet too big */
++#ifdef EPROTO
+ 			case EPROTO: /* ICMPv6 param prob (and other errors) */
++#endif
+ 				break;
+ 
+ 			default:

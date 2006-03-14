@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/03/07 18:26:53 rpaulo Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/14 01:58:47 joerg Exp $
 
 DISTNAME=	miredo-0.8.0
 CATEGORIES=	net
@@ -12,6 +12,7 @@ COMMENT=	Teredo IPv6 tunneling
 NOT_FOR_PLATFORM=	Interix-*-* NetBSD-[0-3]*-*
 
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 
 EGDIR=		${PREFIX}/share/examples/miredo
 CONF_FILES=	${EGDIR}/miredo.conf-dist ${PKG_SYSCONFDIR}/miredo.conf
