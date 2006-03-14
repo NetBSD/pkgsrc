@@ -1,10 +1,10 @@
 # start of deinstall-pre
 #
-# $NetBSD: deinstall-pre,v 1.1 2003/11/23 07:14:43 jlam Exp $
+# $NetBSD: deinstall-pre,v 1.2 2006/03/14 11:19:57 tron Exp $
 
 # Ensure that the VIEW-DEINSTALL action is called for overwrite packages.
 # This is here to ensure that it's the first DEINSTALL action (before
-# any DEINSTALL_EXTRA_TMPL DEINSTALL actions).
+# any DEINSTALL_TEMPLATE DEINSTALL actions).
 #
 case ${STAGE} in
 DEINSTALL)
