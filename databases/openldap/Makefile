@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2006/03/14 16:00:40 jlam Exp $
+# $NetBSD: Makefile,v 1.110 2006/03/14 16:23:46 joerg Exp $
 
 DISTNAME=	openldap-2.3.11
 PKGREVISION=	2
@@ -7,7 +7,7 @@ CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.OpenLDAP.org/
 COMMENT=	Lightweight Directory Access Protocol server and client
 
