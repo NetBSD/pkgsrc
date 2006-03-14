@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13315 2006/03/14 17:14:17 hamajima Exp $
+$NetBSD: CHANGES,v 1.13316 2006/03/14 19:08:34 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1510,10 +1510,11 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/kdesdk3 to 3.5.1nb2 [minskim 2006-03-14]
 	Updated x11/kdelibdocs3 to 3.5.1nb2 [minskim 2006-03-14]
 	Updated security/john to 1.7.0.1 [martti 2006-03-14]
-	Updated x11/gtk2 to 2.8.14nb1 [tron 2006-03-14]
 	Updated net/pptp to 1.7.0 [rillig 2006-03-14]
 	Updated archivers/fastjar to 0.93nb3 [joerg 2006-03-14]
 	Updated pkgtools/pkglint to 4.59 [rillig 2006-03-14]
 	Updated sysutils/xosview to 1.8.3 [rillig 2006-03-14]
 	Updated www/drupal to 4.6.6 [adrianp 2006-03-14]
 	Updated graphics/spcaview to 0.4 [hamajima 2006-03-15]
+	Updated chat/xchat to 2.6.1 [tron 2006-03-14]
+	Updated chat/xchat-python to 2.6.1 [tron 2006-03-14]
