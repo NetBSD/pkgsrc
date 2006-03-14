@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2006/03/14 00:24:06 minskim Exp $
+@comment $NetBSD: PLIST,v 1.32 2006/03/14 19:45:14 minskim Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -5194,22 +5194,22 @@ share/kde/servicetypes/scriptinterface.desktop
 ${PKGLOCALEDIR}/locale/all_languages
 ${NEED_ZONETAB}share/zone.tab
 @comment in xmlcatmgr: share/sgml/catalog
-@dirrm share/kde/servicetypes
-@dirrm share/kde/services/kresources/kabc
-@dirrm share/kde/services/kresources
-@dirrm share/kde/services/kded
+@comment in kde: @dirrm share/kde/servicetypes
+@comment in kde: @dirrm share/kde/services/kresources/kabc
+@comment in kde: @dirrm share/kde/services/kresources
+@comment in kde: @dirrm share/kde/services/kded
 @comment in kde: @dirrm share/kde/services
-@dirrm share/kde/mimelnk/video
-@dirrm share/kde/mimelnk/uri
-@dirrm share/kde/mimelnk/text
-@dirrm share/kde/mimelnk/multipart
-@dirrm share/kde/mimelnk/model
-@dirrm share/kde/mimelnk/message
-@dirrm share/kde/mimelnk/inode
-@dirrm share/kde/mimelnk/image
-@dirrm share/kde/mimelnk/audio
-@dirrm share/kde/mimelnk/application
-@dirrm share/kde/mimelnk/all
+@comment in kde: @dirrm share/kde/mimelnk/video
+@comment in kde: @dirrm share/kde/mimelnk/uri
+@comment in kde: @dirrm share/kde/mimelnk/text
+@comment in kde: @dirrm share/kde/mimelnk/multipart
+@comment in kde: @dirrm share/kde/mimelnk/model
+@comment in kde: @dirrm share/kde/mimelnk/message
+@comment in kde: @dirrm share/kde/mimelnk/inode
+@comment in kde: @dirrm share/kde/mimelnk/image
+@comment in kde: @dirrm share/kde/mimelnk/audio
+@comment in kde: @dirrm share/kde/mimelnk/application
+@comment in kde: @dirrm share/kde/mimelnk/all
 @comment in kde: @dirrm share/kde/mimelnk
 @comment in kde: @dirrm share/kde/icons/locolor/64x64/mimetypes
 @comment in kde: @dirrm share/kde/icons/locolor/64x64/filesystems
@@ -5327,20 +5327,20 @@ ${NEED_ZONETAB}share/zone.tab
 @comment in kde: @dirrm share/kde/icons/crystalsvg
 @comment in kde: @dirrm share/kde/icons
 @dirrm share/kde/emoticons/Default
-@dirrm share/kde/emoticons
+@comment in kde: @dirrm share/kde/emoticons
 @dirrm share/kde/config/ui
 @dirrm share/kde/config/colors
 @comment in kde: @dirrm share/kde/config
-@dirrm share/kde/autostart
+@comment in kde: @dirrm share/kde/autostart
 @dirrm share/kde/apps/proxyscout
 @dirrm share/kde/apps/ktexteditor_kdatatool
 @dirrm share/kde/apps/ktexteditor_isearch
 @dirrm share/kde/apps/ktexteditor_insertfile
 @dirrm share/kde/apps/ktexteditor_docwordcompletion
-@dirrm share/kde/apps/kstyle/themes
+@comment in kde: @dirrm share/kde/apps/kstyle/themes
 @dirrm share/kde/apps/kstyle/pixmaps/riscos
 @dirrm share/kde/apps/kstyle/pixmaps
-@dirrm share/kde/apps/kstyle
+@comment in kde: @dirrm share/kde/apps/kstyle
 @dirrm share/kde/apps/kssl
 @dirrm share/kde/apps/ksgmltools2/docbook/xsl/params
 @dirrm share/kde/apps/ksgmltools2/docbook/xsl/manpages
@@ -5493,22 +5493,25 @@ ${NEED_ZONETAB}share/zone.tab
 @dirrm share/kde/apps/kdeprint/icons/crystalsvg
 @dirrm share/kde/apps/kdeprint/icons
 @dirrm share/kde/apps/kdeprint/filters
-@dirrm share/kde/apps/kdeprint
-@dirrm share/kde/apps/kconf_update
-@dirrm share/kde/apps/kcm_componentchooser
+@comment in kde: @dirrm share/kde/apps/kdeprint
+@comment in kde: @dirrm share/kde/apps/kconf_update
+@comment in kde: @dirrm share/kde/apps/kcm_componentchooser
 @dirrm share/kde/apps/kcertpart
-@dirrm share/kde/apps/katepart/syntax
+@comment in kde: @dirrm share/kde/apps/katepart/syntax
 @dirrm share/kde/apps/katepart/scripts/indent
 @dirrm share/kde/apps/katepart/scripts
-@dirrm share/kde/apps/katepart
-@dirrm share/kde/apps/kabc/formats
-@dirrm share/kde/apps/kabc
+@comment in kde: @dirrm share/kde/apps/katepart
+@comment in kde: @dirrm share/kde/apps/kabc/formats
+@comment in kde: @dirrm share/kde/apps/kabc
 @dirrm share/kde/apps/dcopidlng
 @dirrm share/kde/apps/LICENSES
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde
 @dirrm share/examples/kdelibs3
 @dirrm share/doc/kde/HTML/en/kspell
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/libkscreensaver/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/libkscreensaver/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/libkscreensaver
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/libkmid/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/libkmid/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/libkmid
@@ -5518,6 +5521,12 @@ ${NEED_ZONETAB}share/zone.tab
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kutils
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kunittest/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kunittest/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kunittest
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kspell2/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kspell2/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kspell2
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kresources/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kresources/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kresources
@@ -5536,33 +5545,88 @@ ${NEED_ZONETAB}share/zone.tab
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kjs/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kjs/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kjs
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kioslave/http/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kioslave/http/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kioslave/http
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kioslave/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kioslave/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kioslave
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/kssl/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kssl/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kssl
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/kpasswdserver/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kpasswdserver/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kpasswdserver
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/kioexec/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kioexec/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kioexec
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/kio/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kio/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kio
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/kfile/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kfile/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/kfile
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/httpfilter/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/httpfilter/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/httpfilter
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/html
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/bookmarks/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/bookmarks/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/bookmarks
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kinit/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kinit/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kinit
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kimgio/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kimgio/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kimgio
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/khtml
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kdoctools/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdoctools/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdoctools
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kdeui/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeui/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeui
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kdesu/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdesu/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdesu
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kdefx/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdefx/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdefx
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kded/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kded/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kded
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdecore
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kcmshell/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kcmshell/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kcmshell
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kate/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kate/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kate
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kabc/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kabc/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kabc
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/ktexteditor/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/ktexteditor/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/ktexteditor
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kspeech/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kspeech/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kspeech
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kimproxy/library/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kimproxy/library/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kimproxy/library
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kimproxy/interface/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kimproxy/interface/html
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kimproxy/interface
+@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kimproxy
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces
@@ -5576,22 +5640,22 @@ ${NEED_ZONETAB}share/zone.tab
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/arts/html
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs/arts
 @dirrm share/doc/kde/HTML/en/kdelibs-apidocs
-@dirrm share/doc/kde/HTML/en/common
+@comment in kde: @dirrm share/doc/kde/HTML/en/common
 @comment in kde: @dirrm share/doc/kde/HTML/en
 @comment in kde: @dirrm share/doc/kde/HTML
 @comment in kde: @dirrm share/doc/kde
-@dirrm share/applications/kde
-@dirrm lib/kde3/plugins/styles
-@dirrm lib/kde3/plugins/designer
-@dirrm lib/kde3/plugins
-@dirrm lib/kde3
+@comment in kde: @dirrm share/applications/kde
+@comment in kde: @dirrm lib/kde3/plugins/styles
+@comment in kde: @dirrm lib/kde3/plugins/designer
+@comment in kde: @dirrm lib/kde3/plugins
+@comment in kde: @dirrm lib/kde3
 @dirrm include/libkmid
 @dirrm include/kunittest
 @dirrm include/ktexteditor
 @dirrm include/kspell2
 @dirrm include/ksettings
 @dirrm include/kresources
-@dirrm include/kparts
+@comment in kde: @dirrm include/kparts
 @dirrm include/knewstuff
 @dirrm include/kmediaplayer
 @dirrm include/kmdi
@@ -5601,8 +5665,8 @@ ${NEED_ZONETAB}share/zone.tab
 @dirrm include/kdesu
 @dirrm include/kdeprint/lpr
 @dirrm include/kdeprint
-@dirrm include/kate
-@dirrm include/kabc
-@dirrm include/dom
+@comment in kde: @dirrm include/kate
+@comment in kde: @dirrm include/kabc
+@comment in kde: @dirrm include/dom
 @dirrm include/dnssd
 @comment in arts: @dirrm include/arts
