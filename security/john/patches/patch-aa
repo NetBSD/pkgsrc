@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2005/11/03 20:41:43 rillig Exp $
+$NetBSD: patch-aa,v 1.4 2006/03/14 10:17:25 martti Exp $
 
---- src/Makefile.orig	1998-12-03 11:29:50.000000000 +1100
-+++ src/Makefile
-@@ -3,21 +3,21 @@
- # Copyright (c) 1996-98 by Solar Designer
+--- src/Makefile.orig	2006-01-12 04:30:50.000000000 +0200
++++ src/Makefile	2006-03-14 08:38:08.000000000 +0200
+@@ -3,10 +3,10 @@
+ # Copyright (c) 1996-2005 by Solar Designer
  #
  
 -CPP = gcc
@@ -17,7 +17,8 @@ $NetBSD: patch-aa,v 1.3 2005/11/03 20:41:43 rillig Exp $
  CP = cp
  LN = ln -sf
  RM = rm -f
- SED = sed
+@@ -15,11 +15,11 @@
+ PERL = perl
  NULL = /dev/null
  CPPFLAGS = -E
 -CFLAGS = -c -Wall -O2 -fomit-frame-pointer
@@ -27,8 +28,8 @@ $NetBSD: patch-aa,v 1.3 2005/11/03 20:41:43 rillig Exp $
 -OPT_NORMAL = -funroll-loops
 -OPT_INLINE = -finline-functions
 +LDFLAGS += -s
-+OPT_NORMAL = 
++OPT_NORMAL =
 +OPT_INLINE =
  
- JOHN_VERSION = 1.6
- JOHN_ARCHIVE = john-$(JOHN_VERSION)
+ JOHN_OBJS_MINIMAL = \
+ 	DES_fmt.o DES_std.o DES_bs.o \
