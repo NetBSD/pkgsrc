@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4756 2006/03/14 19:08:35 tron Exp $
+$NetBSD: TODO,v 1.4757 2006/03/14 23:07:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -482,6 +482,7 @@ Suggested package updates
 	o etach-1.4.1
 	o eukleides-1.0.3
 	o euler-1.61
+	o evince-0.5.2
 	o ex-050325 [pkg/32043]
 	o exim-4.60
 	o exmh-2.7.2
@@ -575,6 +576,7 @@ Suggested package updates
 	o gtetrinet-0.7.9
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
+	o gtk2-2.8.15
 	o gtk2-engines-2.6.7
 	o gtkam-0.1.13
 	o gtksee-0.6.0b
@@ -714,7 +716,7 @@ Suggested package updates
 	o mdf2iso-0.3.0
 	o memcached-1.2
 	o memtest86-3.2
-	o metacity-2.12.3
+	o metacity-2.14.1
 	o metakit-2.4.9.4
 	o mftrace-1.1.17
 	o mgetty-1.1.35
@@ -1118,6 +1120,7 @@ Suggested package updates
 	o sweep-0.9.1
 	o swfdec-0.3.6
 	o swi-prolog-5.5.33
+	o sylpheed-2.2.3
 	o sylpheed-claws-2.0.0
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.1
