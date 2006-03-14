@@ -1,0 +1,13 @@
+$NetBSD: patch-bf,v 1.1 2006/03/14 00:47:50 joerg Exp $
+
+--- bfd/config.bfd.orig	2006-03-01 00:39:22.000000000 +0000
++++ bfd/config.bfd
+@@ -470,7 +470,7 @@ case "${targ}" in
+     targ_selvecs=i386bsd_vec
+     targ_underscore=yes
+     ;;
+-  i[3-7]86-*-freebsd* | i[3-7]86-*-kfreebsd*-gnu)
++  i[3-7]86-*-freebsd* | i[3-7]86-*-kfreebsd*-gnu | i[3-7]86-*-dragonfly*)
+     targ_defvec=bfd_elf32_i386_freebsd_vec
+     targ_selvecs=i386coff_vec
+     # FreeBSD <= 4.0 supports only the old nonstandard way of ABI labelling.

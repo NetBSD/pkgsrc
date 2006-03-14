@@ -1,0 +1,12 @@
+$NetBSD: patch-bh,v 1.1 2006/03/14 00:47:50 joerg Exp $
+
+--- gdb/configure.tgt.orig	2006-03-01 00:40:30.000000000 +0000
++++ gdb/configure.tgt
+@@ -40,6 +40,7 @@ case "${target}" in
+ 
+ x86_64-*-freebsd*)	gdb_target=fbsd64 ;;
+ *-*-freebsd*)		gdb_target=fbsd	;;
++*-*-dragonfly*)		gdb_target=fbsd	;;
+ 
+ alpha*-*-osf*)		gdb_target=alpha-osf1 ;;
+ alpha*-*-linux*)	gdb_target=alpha-linux ;;

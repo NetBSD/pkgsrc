@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/05 16:27:24 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/14 00:47:50 joerg Exp $
 #
 
 DISTNAME=		gdb-6.2.1
@@ -15,7 +15,7 @@ NOT_FOR_PLATFORM=	Darwin-*-*
 
 BUILD_USES_MSGFMT=	yes
 
-USE_TOOLS+=		autoconf213 gmake makeinfo
+USE_TOOLS+=		gmake makeinfo
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_PKGLOCALEDIR=	yes
@@ -32,9 +32,6 @@ INFO_FILES+=		stabs.info standards.info
 
 pre-patch:
 	${CP} ${FILESDIR}/nbsd-nat.c ${WRKSRC}/gdb
-
-pre-configure:
-	cd ${WRKSRC}/gdb; autoheader; autoconf
 
 do-test:
 	if ${PKG_INFO} -qe dejagnu; then		\
