@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2005/11/03 20:41:43 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/14 10:17:25 martti Exp $
 #
 
-DISTNAME=	john-1.6
-PKGREVISION=	1
+DISTNAME=	john-1.7.0.1
+#PKGREVISION=	1
 CATEGORIES=	security textproc
-MASTER_SITES=	http://www.openwall.com/john/
+MASTER_SITES=	http://www.openwall.com/john/e/
 
 MAINTAINER=	DawS@irc.pl
 HOMEPAGE=	http://www.openwall.com/john/
@@ -34,17 +34,30 @@ BUILD_TARGET=	generic
 
 INSTALLATION_DIRS=	bin
 
+SUBST_CLASSES+=		john
+SUBST_STAGE.john=	pre-build
+SUBST_FILES.john=	src/params.h
+SUBST_SED.john=		-e "s+@PREFIX@+${PREFIX}+g"
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/run/john ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/john
-	${INSTALL_DATA} ${WRKSRC}/run/all.chr ${PREFIX}/share/john
-	${INSTALL_DATA} ${WRKSRC}/run/alpha.chr ${PREFIX}/share/john
-	${INSTALL_DATA} ${WRKSRC}/run/digits.chr ${PREFIX}/share/john
-	${INSTALL_DATA} ${WRKSRC}/run/john.ini ${PREFIX}/share/john
-	${INSTALL_DATA} ${WRKSRC}/run/mailer ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/run/password.lst ${PREFIX}/share/john
-	${LN} -sf ${PREFIX}/bin/john ${PREFIX}/bin/unafs
-	${LN} -sf ${PREFIX}/bin/john ${PREFIX}/bin/unique
-	${LN} -sf ${PREFIX}/bin/john ${PREFIX}/bin/unshadow
+	# programs and scripts
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/run/john ${PREFIX:Q}/bin
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/run/mailer ${PREFIX:Q}/bin
+
+	# data directory
+	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/john
+
+	# configuration file
+	${INSTALL_DATA} ${WRKSRC:Q}/run/john.conf ${PREFIX:Q}/share/john
+
+	# symbolic links
+.for i in unafs unique unshadow
+	${LN} -sf ${PREFIX:Q}/bin/john ${PREFIX:Q}/bin/${i:Q}
+.endfor
+
+	# data files
+.for i in all.chr alnum.chr alpha.chr digits.chr lanman.chr password.lst
+	${INSTALL_DATA} ${WRKSRC:Q}/run/${i:Q} ${PREFIX:Q}/share/john
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
