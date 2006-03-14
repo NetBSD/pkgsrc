@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:44 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/03/14 23:36:35 wiz Exp $
 bin/cs2cs
 bin/geod
 bin/invgeod
@@ -36,4 +36,4 @@ share/proj/stgeorge
 share/proj/stlrnc
 share/proj/stpaul
 share/proj/world
-@dirrm share/doc/proj
+@dirrm share/proj
