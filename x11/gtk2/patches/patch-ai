@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.15 2006/03/14 17:07:47 tron Exp $
+
+--- configure.orig	2006-03-14 13:37:39.000000000 +0000
++++ configure	2006-03-14 15:34:00.000000000 +0000
+@@ -26102,7 +26102,7 @@
+ 
+ use_la_modules=false
+ case $host in
+-  *-aix*) use_la_modules=true
++  *-aix*|*-darwin*) use_la_modules=true
+ esac
+ 
+ if $use_la_modules ; then
