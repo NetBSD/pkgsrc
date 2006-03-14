@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:09:38 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/14 17:17:34 hamajima Exp $
 #
 
 DISTNAME=	qce-ga-0.40d
@@ -7,12 +7,12 @@ PKGREVISION=	2
 CATEGORIES=	graphics x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qce-ga/}
 
-PATCH_SITES=	http://www2.starcat.ne.jp/~takam/bsd/
+PATCH_SITES=	http://www.medias.ne.jp/~takam/bsd/
 PATCHFILES= 	qce-ga-bsd-0.04.patch.gz
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	hamajima@NetBSD.org
-HOMEPAGE=	http://www2.starcat.ne.jp/~takam/bsd/NetBSD.html#qcam
+HOMEPAGE=	http://www.medias.ne.jp/~takam/bsd/NetBSD.html#qcam
 COMMENT=	Logitech Quickcam Express USB Utilities
 
 
