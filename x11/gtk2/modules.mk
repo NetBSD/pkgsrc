@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.11 2005/12/29 06:22:25 jlam Exp $
+# $NetBSD: modules.mk,v 1.12 2006/03/14 01:14:35 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # GTK2 modules.  It takes care of rebuilding the corresponding databases at
@@ -25,8 +25,8 @@ GTK2_LOADERS=		YES
 FILES_SUBST+=		GTK_IMMODULES_DB=${GTK_IMMODULES_DB:Q}
 FILES_SUBST+=		GTK_QUERY_IMMODULES=${GTK_QUERY_IMMODULES:Q}
 GTK_IMMODULES_DB=	${BUILDLINK_PREFIX.gtk2}/libdata/gtk-2.0/gtk.immodules
-INSTALL_EXTRA_TMPL+=	../../x11/gtk2/files/immodules.tmpl
-DEINSTALL_EXTRA_TMPL+=	../../x11/gtk2/files/immodules.tmpl
+INSTALL_TEMPLATE+=	../../x11/gtk2/files/immodules.tmpl
+DEINSTALL_TEMPLATE+=	../../x11/gtk2/files/immodules.tmpl
 .endif
 
 .if defined(GTK2_LOADERS) && !empty(GTK2_LOADERS:M[Yy][Ee][Ss])

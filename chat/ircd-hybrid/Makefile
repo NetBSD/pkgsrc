@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/02/04 15:22:06 adrianp Exp $
+# $NetBSD: Makefile,v 1.29 2006/03/14 01:14:26 jlam Exp $
 
 DISTNAME=	ircd-hybrid-7.2.0
 EXTRACT_SUFX=	.tgz
@@ -23,7 +23,6 @@ BUILD_DEFS+=	IRCD_HYBRID_SYSLOG_FACILITY IRCD_HYBRID_NICLEN \
 PKG_SYSCONFSUBDIR=	ircd-hybrid
 HYBRID_EG=		${PREFIX}/share/examples/ircd-hybrid
 HYBRID_DOC=		${PREFIX}/share/doc/ircd-hybrid
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 RCD_SCRIPTS=		ircd-hybrid
 
 CONF_FILES_PERMS=	${HYBRID_EG}/example.conf ${PKG_SYSCONFDIR}/ircd.conf \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:08:37 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/14 01:14:27 jlam Exp $
 #
 
 DISTNAME=	shared-mime-info-0.16
@@ -23,8 +23,7 @@ CONFIGURE_ARGS+=	--disable-update-mimedb
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
+DEINSTALL_TEMPLATE+=	${PKGDIR}/INSTALL
 
 FILES_SUBST+=		MIMEDB_PATH="${PREFIX}/share/mime"
 FILES_SUBST+=		UPDATE_MIMEDB="${PREFIX}/bin/update-mime-database"

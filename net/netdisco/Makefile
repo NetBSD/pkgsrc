@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/10 22:15:24 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/14 01:14:31 jlam Exp $
 #
 
 DISTNAME=		netdisco-0.94_with_mibs
@@ -21,9 +21,6 @@ DEPENDS+=		p5-HTML-Parser-*:../../www/p5-HTML-Parser
 DEPENDS+=		p5-Graph-*:../../devel/p5-Graph
 DEPENDS+=		p5-GraphViz-*:../../graphics/p5-GraphViz
 DEPENDS+=		p5-Compress-Zlib-*:../../devel/p5-Compress-Zlib
-
-#DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
-#MESSAGE_SRC=		${.CURDIR}/MESSAGE
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/03/11 16:59:54 rillig Exp $
+# $NetBSD: Makefile,v 1.47 2006/03/14 01:14:31 jlam Exp $
 
 DISTNAME=	net-snmp-5.3.0.1
 PKGREVISION=	2
@@ -20,8 +20,6 @@ USE_LIBTOOL=		yes
 # Until this is fixed you can test them after installation by doing
 # `make test TEST_TARGET=perltest'
 TEST_TARGET?=		test
-
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
 
 .include "../../mk/bsd.prefs.mk"
 
