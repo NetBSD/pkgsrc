@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4753 2006/03/13 21:17:48 heinz Exp $
+$NetBSD: TODO,v 1.4754 2006/03/14 10:17:39 martti Exp $
 
 Suggested new packages
 ======================
@@ -638,7 +638,6 @@ Suggested package updates
 	o jftpgw-0.13.5
 	o jgrasp-183
 	o jigdo-0.7.2
-	o john-1.7.0.1
 	o jove-4.16.0.69
 	o jpegpixi-1.1.1
 	o jpilot-0.99.8
