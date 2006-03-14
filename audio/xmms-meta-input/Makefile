@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:08:18 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/14 01:14:26 jlam Exp $
 #
 
 DISTNAME=		xmms-meta-input-0.4
@@ -11,6 +11,8 @@ HOMEPAGE=		http://www.corbac.com/page3.html
 COMMENT=		XMMS plugin wrapper for shell scripts
 
 INSTALLATION_DIRS=	lib/xmms/Input
+DEINSTALL_SRC=		${PKGDIR}/DEINSTALL
+INSTALL_SRC=		# empty
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libmetainput.so ${PREFIX}/lib/xmms/Input

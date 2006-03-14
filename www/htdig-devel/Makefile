@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/04 21:30:58 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/14 01:14:34 jlam Exp $
 
 DISTNAME=	htdig-3.2.0b6
 CATEGORIES=	www databases
@@ -25,7 +25,6 @@ CONFIGURE_ARGS+=	--with-search-dir=${PREFIX}/share/examples/htdig
 CONFIGURE_ENV+=		PDF_PARSER="${LOCALBASE}/bin/acroread"
 CXXFLAGS+=		-Wno-deprecated
 
-INSTALL_EXTRA_TMPL=	${PKGDIR}/INSTALL
 PKG_SYSCONFSUBDIR=	htdig
 
 DBDIR?=		${VARBASE}/db/htdig
