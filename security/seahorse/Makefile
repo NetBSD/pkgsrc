@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2006/03/06 00:18:24 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2006/03/14 15:00:57 drochner Exp $
 
-DISTNAME=	seahorse-0.8
-PKGREVISION=	5
+DISTNAME=	seahorse-0.8.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/0.8/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,7 +19,8 @@ USE_LIBTOOL=		yes
 USE_MSGFMT_PLURALS=	yes
 USE_PKGLOCALEDIR=	yes
 
-CONFIGURE_ARGS+=		--disable-gedit
+CONFIGURE_ARGS+=	--disable-gedit
+CONFIGURE_ARGS+=	--disable-nautilus
 
 GCONF2_SCHEMAS= 	seahorse.schemas
 
@@ -28,16 +28,12 @@ BUILDLINK_DEPENDS.gpgme+=	gpgme>=1.0.1nb2
 
 .include "../../databases/gnome-mime-data/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
-.include "../../devel/eel2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../net/libsoup-devel/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
