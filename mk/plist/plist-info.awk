@@ -1,4 +1,4 @@
-# $NetBSD: plist-info.awk,v 1.7 2006/03/14 15:32:18 jlam Exp $
+# $NetBSD: plist-info.awk,v 1.8 2006/03/14 17:14:47 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -41,6 +41,9 @@
 ###
 ### Certain environment variables must be set prior to running this script:
 ###
+### IGNORE_INFO_PATH is a colon-separated list of ${PREFIX}-relative paths
+###	that do *not* contain info files.
+###
 ### INFO_DIR is the ${PREFIX}-relative path to the installed info pages.
 ###
 ### LS is the path to the "ls" binary.
@@ -59,12 +62,17 @@ BEGIN {
 	MANZ = ENVIRON["MANZ"] ? ENVIRON["MANZ"] : "no"
 	PREFIX = ENVIRON["PREFIX"] ? ENVIRON["PREFIX"] : "/usr/pkg"
 	TEST = ENVIRON["TEST"] ? ENVIRON["TEST"] : "test"
+
+	IGNORE_INFO_REGEXP = ENVIRON["IGNORE_INFO_PATH"] ? ENVIRON["IGNORE_INFO_PATH"] : ""
+	gsub(":", "|", IGNORE_INFO_REGEXP)
+	IGNORE_INFO_REGEXP = "^(" IGNORE_INFO_REGEXP ")/"
 }
 
 ###
 ### Canonicalize info page entries by stripping any ".gz" suffixes.
 ###
-/^[^@]/ && /^([^\/]*\/)*info\/[^\/]*(\.info)?-[0-9]+\.gz$/ {
+/^[^@]/ && ($0 !~ IGNORE_INFO_REGEXP) && \
+/^([^\/]*\/)*info\/[^\/]*(\.info)?-[0-9]+\.gz$/ {
 	sub("\\.gz$", "")
 }
 
@@ -72,14 +80,16 @@ BEGIN {
 ### Ignore *-1, *-2, etc. files in the PLIST as we get the list of
 ### installed split files below.
 ###
-/^[^@]/ && /^([^\/]*\/)*info\/[^\/]*(\.info)?-[0-9]+$/ {
+/^[^@]/ && ($0 !~ IGNORE_INFO_REGEXP) && \
+/^([^\/]*\/)*info\/[^\/]*(\.info)?-[0-9]+$/ {
 	next
 }
 
 ###
 ### Convert info/ to ${INFO_DIR}/ for all info page entries.
 ###
-/^[^@]/ && /^([^\/]*\/)*info\/[^\/]*(\.info)?$/ {
+/^[^@]/ && ($0 !~ IGNORE_INFO_REGEXP) && \
+/^([^\/]*\/)*info\/[^\/]*(\.info)?$/ {
 	if ($0 ~ "^info/") {
 		sub("^info/", INFO_DIR "/")
 	} else {
@@ -91,7 +101,8 @@ BEGIN {
 ### For each info page entry, print all of the installed info sub-pages
 ### associated with that entry.
 ###
-/^[^@]/ && ($0 ~ "^([^\/]*\/)*" INFO_DIR "\/[^\/]*(\.info)?$") {
+/^[^@]/ && ($0 !~ IGNORE_INFO_REGEXP) && \
+($0 ~ "^([^\/]*\/)*" INFO_DIR "\/[^\/]*(\.info)?$") {
 	cmd = TEST " -f " PREFIX "/" $0 " -o -f " PREFIX "/" $0 ".gz"
 	if (system(cmd) == 0) {
 		base = $0
