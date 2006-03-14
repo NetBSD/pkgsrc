@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/14 23:55:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/14 23:58:20 wiz Exp $
 
 DISTNAME=	koffice-i18n-tr-1.3.5
 PKGREVISION=	5
@@ -12,5 +12,7 @@ COMMENT=	Turkish language pack for KOffice
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
+
+USE_PKGLOCALEDIR=	YES
 
 .include "../../mk/bsd.pkg.mk"
