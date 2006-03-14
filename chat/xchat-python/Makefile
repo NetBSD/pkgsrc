@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/14 19:06:19 tron Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/14 21:30:17 tron Exp $
 
 .include "../../chat/xchat/Makefile.common"
 
@@ -16,6 +16,15 @@ CONFIGURE_ARGS+=	--enable-tcl=no
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--enable-python
 CONFIGURE_ENV+=		ac_cv_path_pythonpath=${PYTHONBIN:Q}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+SUBST_CLASSES+=		libutil
+SUBST_STAGE.libutil=	pre-configure
+SUBST_FILES.libutil=	configure
+SUBST_SED.libutil=	-e 's/ -lutil//g'
+.endif
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
