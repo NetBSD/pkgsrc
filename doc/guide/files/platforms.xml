@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.29 2006/03/01 00:04:30 reed Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.30 2006/03/14 14:04:54 rillig Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -676,6 +676,9 @@
     CONFIG_SHELL=   ${LOCALBASE}/bin/bash
     WRAPPER_SHELL=  ${LOCALBASE}/bin/bash
 </programlisting>
+
+	<para>Then, rebuild the <filename
+	role="pkg">devel/libtool-base</filename> package.</para>
 
       </sect3>
     </sect2>
