@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2006/01/31 22:27:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.22 2006/03/14 02:02:56 minskim Exp $
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/arts.tag
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/annotated.html
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/artsmessage_8cc-source.html
@@ -7639,44 +7639,3 @@ share/doc/kde/HTML/en/kdelibs-apidocs/tab_b.gif
 share/doc/kde/HTML/en/kdelibs-apidocs/tab_l.gif
 share/doc/kde/HTML/en/kdelibs-apidocs/tab_r.gif
 share/doc/kde/HTML/en/kdelibs-apidocs/tabs.css
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/libkmid/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/libkmid
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kwallet
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kutils
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kresources/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kresources
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kparts/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kparts
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/knewstuff/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/knewstuff
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kmdi/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kmdi
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kjs/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kjs
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kio
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/khtml
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeui/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeui
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdefx/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdefx
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kdecore
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kate/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kate
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kabc/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/kabc
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/interfaces
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/dnssd/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/dnssd
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/dcop/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/dcop
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/arts/html
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs/arts
-@dirrm share/doc/kde/HTML/en/kdelibs-apidocs
