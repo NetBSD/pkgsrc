@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4754 2006/03/14 10:17:39 martti Exp $
+$NetBSD: TODO,v 1.4755 2006/03/14 13:55:27 rillig Exp $
 
 Suggested new packages
 ======================
@@ -956,7 +956,6 @@ Suggested package updates
 	o postgresql73-7.3.11
 	o postgresql_autodoc-1.25
 	o potrace-1.7
-	o pptp-1.6.0 [pkg/26842]
 	o prayer-1.0.15
 	o proj-4.4.9
 	o projclock-0.9
