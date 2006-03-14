@@ -1,0 +1,44 @@
+$NetBSD: patch-ad,v 1.1 2006/03/14 01:59:19 joerg Exp $
+
+--- configure.orig	2006-02-02 21:02:16.000000000 +0000
++++ configure
+@@ -20613,6 +20613,12 @@ _ACEOF
+ _ACEOF
+ 
+ 	;;
++  *dragonfly*)
++	cat >>confdefs.h <<\_ACEOF
++#define HAVE_DRAGONFLY 1
++_ACEOF
++
++	;;
+   *openbsd*)
+ 	cat >>confdefs.h <<\_ACEOF
+ #define HAVE_OPENBSD 1
+@@ -21878,8 +21884,7 @@ fi
+ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
+ if test "$ac_cv_search_pthread_create" = no; then
+-  for ac_lib in pthread c_r; do
+-    LIBS="-l$ac_lib  $ac_func_search_save_LIBS"
++    LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $ac_func_search_save_LIBS"
+     cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -21923,7 +21928,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; }; then
+-  ac_cv_search_pthread_create="-l$ac_lib"
++  ac_cv_search_pthread_create="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
+ break
+ else
+   echo "$as_me: failed program was:" >&5
+@@ -21932,7 +21937,6 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ fi
+ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
+-  done
+ fi
+ LIBS=$ac_func_search_save_LIBS
+ fi
