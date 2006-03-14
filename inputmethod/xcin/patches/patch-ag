@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2006/01/28 03:03:11 rxg Exp $
+$NetBSD: patch-ag,v 1.2 2006/03/14 15:11:54 rxg Exp $
 
---- src/Cinput/chewing/xcin_chewing.c.orig	2006-01-21 20:32:10.000000000 +0800
+--- src/Cinput/chewing/xcin_chewing.c.orig	2006-03-13 22:26:59.000000000 +0800
 +++ src/Cinput/chewing/xcin_chewing.c
 @@ -0,0 +1,515 @@
 +/*
@@ -57,7 +57,7 @@ $NetBSD: patch-ag,v 1.1 2006/01/28 03:03:11 rxg Exp $
 +static int
 +ChewingInit(void *conf, char *objname, xcin_rc_t *xc)
 +{
-+	char *cmd[2], kb_type_str[256];
++	char *cmd[2], kb_type_str[256], *cname;
 +	ChewingConf *cf = (ChewingConf *)conf ;
 +
 +	char *prefix = CHEWING_DATA_DIR;
@@ -69,7 +69,7 @@ $NetBSD: patch-ag,v 1.1 2006/01/28 03:03:11 rxg Exp $
 +	chewing_codeset = (! strcasecmp(xc->locale.encoding,"utf-8")) ?
 +		XCIN_BYTE_UTF8 : 
 +		XCIN_BYTE_NATIVE;
-+	char *cname = (char *) calloc(3, sizeof(char) * chewing_codeset);
++	cname = (char *) calloc(3, sizeof(char) * chewing_codeset);
 +
 +	cmd[0] = objname ;
 +	cmd[1] = "KB_TYPE" ;
