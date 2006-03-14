@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/03/09 15:55:17 hamajima Exp $
+$NetBSD: MESSAGE,v 1.2 2006/03/14 17:16:19 hamajima Exp $
 
 You should apply following kernel patch to use this package.
 
-	http://www2.starcat.ne.jp/~takam/bsd/cpia2-netbsd-sys-1.6.2.diff
+	http://www.medias.ne.jp/~takam/bsd/cpia2-netbsd-sys-1.6.2.diff
 
 ===========================================================================
