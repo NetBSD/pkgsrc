@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/03/14 01:14:29 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/03/14 14:09:34 jlam Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
@@ -51,7 +51,7 @@ do-configure:
 	cd ${WRKSRC}/lib; for file in ${SFILES}; do			\
 		${MV} -f $$file $$file.default;				\
 	done
-	@${ECHO} 'CONF_FILES="${CONF_FILES}"' >${HEADER_EXTRA_TMPL}
+	@${ECHO} 'CONF_FILES="${CONF_FILES}"' >${HEADER_TEMPLATE}
 
 pre-install:
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
