@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2005/12/30 21:03:59 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/14 16:00:40 jlam Exp $
 
 DISTNAME=	libiodbc-3.52.3
 PKGNAME=	${DISTNAME:S/^lib//}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.iodbc.org/downloads/iODBC/
 
-MAINTAINER=	jlam@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.iodbc.org/
 COMMENT=	ODBC 2.x driver manager
 

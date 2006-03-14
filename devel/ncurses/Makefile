@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2005/12/17 05:20:21 jlam Exp $
+# $NetBSD: Makefile,v 1.70 2006/03/14 16:00:40 jlam Exp $
 
 DISTNAME=	ncurses-${NC_VERS}
 NC_VERS=	5.5
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=ncurses/} \
 		ftp://dickey.his.com/ncurses/ \
 		ftp://dickey.his.com/ncurses/${NC_VERS}/
 
-MAINTAINER=	jlam@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dickey.his.com/ncurses/ncurses.html
 COMMENT=	CRT screen handling and optimization package
 
