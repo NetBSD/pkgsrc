@@ -1,9 +1,9 @@
-# $NetBSD: plist.mk,v 1.5 2006/03/14 16:54:28 jlam Exp $
+# $NetBSD: plist.mk,v 1.6 2006/03/14 17:14:47 jlam Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
 #
-# The following variables affect 
+# The following variables affect the PLIST generation:
 #
 #    PLIST_TYPE specifies whether the generated PLIST is derived
 #	automatically from the installed files, or if the PLIST entries
@@ -17,6 +17,9 @@
 #    GENERATE_PLIST is a sequence of commands, terminating in a semicolon,
 #	that outputs contents for a PLIST to stdout and is appended to
 #	the contents of ${PLIST_SRC}.
+#
+#    IGNORE_INFO_DIRS is a list of ${PREFIX}-relative paths that do
+#	*not* contain info files.
 #
 
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
@@ -75,11 +78,20 @@ _LIBTOOL_EXPAND=							\
 		SORT=${TOOLS_SORT:Q} TEST=${TOOLS_TEST:Q}		\
 	${SH} ${.CURDIR}/../../mk/plist/libtool-expand
 
+.if !defined(_IGNORE_INFO_PATH)
+.  for _dir_ in ${IGNORE_INFO_DIRS}
+_IGNORE_INFO_PATH:=	${_IGNORE_INFO_PATH}:${_dir_}
+.  endfor
+_IGNORE_INFO_PATH:=	${_IGNORE_INFO_PATH:S/^://}
+.endif
+MAKEVARS+=		_IGNORE_INFO_PATH
+
 # _PLIST_AWK_ENV holds the shell environment passed to the awk script
 # that does post-processing of the PLIST.  See the individual *.awk
 # scripts for information on each of the variable set in the environment.
 #
 _PLIST_AWK_ENV+=	IMAKE_MANINSTALL=${_IMAKE_MANINSTALL:Q}
+_PLIST_AWK_ENV+=	IGNORE_INFO_PATH=${_IGNORE_INFO_PATH:Q}
 _PLIST_AWK_ENV+=	INFO_DIR=${INFO_DIR:Q}
 _PLIST_AWK_ENV+=	LIBTOOLIZE_PLIST=${LIBTOOLIZE_PLIST:Q}
 _PLIST_AWK_ENV+=	LIBTOOL_EXPAND=${_LIBTOOL_EXPAND:Q}
