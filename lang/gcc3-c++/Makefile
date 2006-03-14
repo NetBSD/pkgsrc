@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:09:44 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/14 20:43:23 jlam Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-c++-${GCC_VERSION}
 PKGREVISION=	1
@@ -12,7 +12,6 @@ INSTLIBS=	libstdc++-v3/libsupc++/libsupc++.la			\
 CONFIGURE_ARGS+=	--enable-languages="c++"
 
 MAKE_ENV+=	ALL_GCC_CXX=${ALL_GCC_CXX:Q}
-USE_PKGINSTALL=	yes
 
 do-build:
 	cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} c++

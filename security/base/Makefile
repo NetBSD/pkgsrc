@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/13 13:11:05 adrianp Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/14 20:43:23 jlam Exp $
 #
 
 DISTNAME=	base-1.2.2
@@ -21,7 +21,6 @@ DEPENDS+=	pear-Image_Color-[0-9]*:../../graphics/pear-Image_Color
 DEPENDS+=	pear-Image_Graph-[0-9]*:../../graphics/pear-Image_Graph
 
 NO_BUILD=	YES
-USE_PKGINSTALL=	YES
 
 DOC_FILES=	CHANGELOG CREDITS README README.mssql TODO UPGRADE base_faq.rtf
 BASE_DIR=	${PREFIX}/share/base

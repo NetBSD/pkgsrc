@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2006/02/18 17:13:45 bouyer Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/03/14 20:43:23 jlam Exp $
 #
 
 NAGIOS_USER?=		nagios
@@ -11,7 +11,6 @@ NAGIOSADM_GROUP?=	${NAGIOSADM_USER}
 USE_X11=                YES
 GNU_CONFIGURE=          YES
 USE_TOOLS+=		gmake
-USE_PKGINSTALL=		YES
 
 PKG_SYSCONFSUBDIR=	nagios
 
