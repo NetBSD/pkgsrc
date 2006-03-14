@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/02/05 23:10:32 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/14 20:43:23 jlam Exp $
 #
 
 DISTNAME=		vpnc-0.3.3
@@ -16,7 +16,6 @@ USE_TOOLS+=		gmake
 BUILD_TARGET=		vpnc
 INSTALLATION_DIRS=	bin man/man8
 
-USE_PKGINSTALL=		yes
 EGDIR=                  ${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES+=		${EGDIR}/vpnc.conf ${PKG_SYSCONFDIR}/vpnc.conf
 CONF_FILES+=		${EGDIR}/vpnc-script ${PKG_SYSCONFDIR}/vpnc-script

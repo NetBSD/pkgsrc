@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/14 16:48:48 adrianp Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/14 20:43:23 jlam Exp $
 
 DISTNAME=	drupal-4.6.6
 CATEGORIES=	www
@@ -12,7 +12,6 @@ DEPENDS+=	ap-php>=4.3.3:../../www/ap-php
 DEPENDS+=	php-gd>=4.3.3:../../graphics/php-gd
 
 NO_BUILD=	YES
-USE_PKGINSTALL=	YES
 DRUPAL=		${PREFIX}/share/drupal
 PAX_DIRS=	database includes misc modules scripts themes
 
