@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:10:35 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/14 16:00:41 jlam Exp $
 
 DISTNAME=	winsteng
 PKGNAME=	adobeps-win-1.0.6
@@ -7,7 +7,7 @@ CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.adobe.com/pub/adobe/printerdrivers/win/1.x/
 EXTRACT_SUFX=	.exe
 
-MAINTAINER=	jlam@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.adobe.com/products/printerdrivers/windows.html
 COMMENT=	Adobe PostScript MS Windows drivers for CUPS/Samba
 

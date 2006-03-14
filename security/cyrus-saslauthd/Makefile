@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/03/14 01:14:33 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/03/14 16:00:41 jlam Exp $
 
 DISTNAME=	cyrus-sasl-2.1.20
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
@@ -16,7 +16,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/saslauthd
 EXTRACT_ELEMENTS=	${DISTNAME}/saslauthd
 EXTRACT_ELEMENTS+=	${DISTNAME}/include/hmac-md5.h
 
-MAINTAINER=		jlam@pkgsrc.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://asg.web.cmu.edu/sasl/
 COMMENT=		Cyrus SASL plaintext authentication daemon
 
