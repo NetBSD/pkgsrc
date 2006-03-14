@@ -1,58 +1,37 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/04/10 01:14:02 jtk Exp $
+$NetBSD: patch-ab,v 1.2 2006/03/14 13:53:57 rillig Exp $
 
-Index: pptp.c
---- pptp.c.orig	1998/09/02 14:40:54
-+++ pptp.c	1999/02/12 14:23:28
-@@ -71,6 +71,8 @@
-   /* Step 1: Get IP address for the hostname in argv[1] */
-   inetaddr = get_ip_address(argv[1]);
+Added more logging.
+
+--- pptp.c.orig	2005-07-28 03:15:11.000000000 +0200
++++ pptp.c	2006-03-14 13:51:22.000000000 +0100
+@@ -261,6 +261,8 @@ int main(int argc, char **argv, char **e
+     inetaddr = get_ip_address(argv[optind]);
+     optind++;
  
-+  log("using remote IP address %s\n", inet_ntoa(inetaddr));
++    log("using remote IP address %s\n", inet_ntoa(inetaddr));
 +
-   /* Step 2: Open connection to call manager
-    *         (Launch call manager if necessary.)
-    */
-@@ -127,8 +129,8 @@
-   }
+     /* Find the ppp options, extract phone number */
+     pppdargc = argc - optind;
+     pppdargv = argv + optind;
+@@ -356,7 +358,7 @@ int main(int argc, char **argv, char **e
+     signal(SIGUSR1, sigstats);
  
-   /* Step 6: Do GRE copy until close. */
--  pptp_gre_copy(call_id, peer_call_id, pty_fd, inetaddr);
--
-+  pptp_gre_copy(peer_call_id, call_id, pty_fd, inetaddr);
-+ 
+     /* Do GRE copy until close. */
+-    pptp_gre_copy(call_id, peer_call_id, pty_fd, gre_fd);
++    pptp_gre_copy(peer_call_id, call_id, pty_fd, gre_fd);
+ 
  shutdown:
-   /* on close, kill all. */
-   kill(parent_pid, SIGTERM);
-@@ -140,13 +142,14 @@
- struct in_addr get_ip_address(char *name) {
-   struct in_addr retval;
-   struct hostent *host = gethostbyname(name);
--  if (host==NULL)
-+  if (host==NULL) {
-     if (h_errno == HOST_NOT_FOUND)
-       fatal("gethostbyname: HOST NOT FOUND");
-     else if (h_errno == NO_ADDRESS)
-       fatal("gethostbyname: NO IP ADDRESS");
-     else
-       fatal("gethostbyname: name server error");
-+  }
-   
-   if (host->h_addrtype != AF_INET)
-     fatal("Host has non-internet address");
-@@ -239,9 +242,14 @@
-   new_argv[0] = PPPD_BINARY;
-   new_argv[1] = ttydev;
-   new_argv[2] = "38400";
--  for (i=0; i<argc; i++)
--    new_argv[i+3] = argv[i];
-+  fprintf(stderr, "running pppd: %s %s %s", new_argv[0], new_argv[1], new_argv[2]);
-+  for (i=0; i<argc; i++) {
-+      fprintf(stderr, " %s", argv[i]);
-+      new_argv[i+3] = argv[i];
-+  }
-+  fprintf(stderr, "\n");
-   new_argv[i+3] = NULL;
-+  
-   execvp(new_argv[0], new_argv);
+     /* on close, kill all. */
+@@ -504,6 +506,12 @@ void launch_pppd(char *ttydev, int argc,
+     for (j = 0; j < argc; j++)
+         new_argv[i++] = argv[j];
+     new_argv[i] = NULL;
++
++    fprintf(stderr, "running pppd:");
++    for (i = 0; new_argv[i] != NULL; i++)
++        fprintf(stderr, " %s", new_argv[i]);
++    fprintf(stderr, "\n");
++
+     execvp(new_argv[0], new_argv);
  }
  

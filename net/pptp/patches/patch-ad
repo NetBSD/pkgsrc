@@ -1,61 +1,47 @@
-$NetBSD: patch-ad,v 1.2 2000/04/10 01:24:39 jtk Exp $
+$NetBSD: patch-ad,v 1.3 2006/03/14 13:53:57 rillig Exp $
 
-Index: pptp_gre.c
---- pptp_gre.c.orig	Wed Feb 18 17:42:14 1998
-+++ pptp_gre.c	Sun Apr  9 21:21:00 2000
-@@ -6,8 +6,8 @@
-  */
+Added more logging.
+
+--- pptp_gre.c.orig	2005-07-28 03:15:11.000000000 +0200
++++ pptp_gre.c	2006-03-14 14:15:51.000000000 +0100
+@@ -44,12 +44,12 @@ int dequeue_gre(callback_t callback, int
  
-+#include <sys/types.h>
- #include <netinet/in.h>
- #include <arpa/inet.h>
- #include <sys/socket.h>
--#include <sys/types.h>
- #include <sys/stat.h>
- #include <sys/time.h>
-@@ -35,10 +35,10 @@
  #if 1
  #include <stdio.h>
--void print_packet(int fd, void *pack, unsigned len) {
-+void print_packet(int fd, void *pack, unsigned len, const char *msg) {
-   unsigned char *b = (unsigned char *)pack;
-   unsigned i,j;
-   FILE *out = fdopen(fd, "w");
- 
--  fprintf(out,"-- begin packet (%u) --\n", len);
-+  fprintf(out,"-- begin %s packet (%u) --\n", msg, len);
-   for (i=0; i<len; i+=16) {
-     for (j=0; j<8; j++)
-@@ -120,4 +120,6 @@
-   if (start>=end) {
-     if ((status=read(fd,buffer,sizeof(buffer)))<0) return status;
-+    if (status == 0)
-+	return -1;			/* FD is closed */
-     end = status; start = 0;
-   } 
-@@ -199,4 +201,5 @@
-   header = (struct pptp_gre_header *)(buffer+ip_len);
- 
-+/*  print_packet(2, buffer, status, "in");*/
-   /* verify packet (else discard) */
-   if (((ntoh8(header->ver)&0x7F)!=PPTP_GRE_VER) || /* version should be 1   */
-@@ -259,5 +262,5 @@
-   
-   /* special case ACK with no payload */
--  if (pack==NULL) 
-+  if (pack==NULL) {
-     if (ack_sent != seq_recv) {
-       u.header.ver |= hton8(PPTP_GRE_FLAG_A);
-@@ -267,4 +270,5 @@
-       return write(fd, &u.header, sizeof(u.header)-sizeof(u.header.seq));
-     } else return 0; /* we don't need to send ACK */
-+  }
-   /* send packet with payload */
-   u.header.flags |= hton8(PPTP_GRE_FLAG_S);
-@@ -284,5 +288,5 @@
-   seq_sent = seq; seq++;
-   /* write this baby out to the net */
--  /* print_packet(2, u.buffer, header_len+len); */
-+/*  print_packet(2, u.buffer, header_len+len, "out");*/
-   return write(fd, u.buffer, header_len+len);
- }
+-void print_packet(int fd, void *pack, unsigned int len)
++void print_packet(int fd, void *pack, unsigned int len, const char *msg)
+ {
+     unsigned char *b = (unsigned char *)pack;
+     unsigned int i,j;
+     FILE *out = fdopen(fd, "w");
+-    fprintf(out,"-- begin packet (%u) --\n", len);
++    fprintf(out,"-- begin %s packet (%u) --\n", msg, len);
+     for (i = 0; i < len; i += 16) {
+         for (j = 0; j < 8; j++)
+             if (i + 2 * j + 1 < len)
+@@ -234,6 +234,8 @@ int decaps_hdlc(int fd, int (*cb)(int cl
+             if ( start + len <= end)
+                 if ((status = cb (cl, buffer + start, len)) < 0)
+                     return status; /* error-check */
++            if (status == 0)
++                return -1; /* avoid an endless loop */
+             start += len;
+         }
+         return 0;
+@@ -329,6 +331,7 @@ int decaps_gre (int fd, callback_t callb
+     if ((buffer[0] & 0xF0) == 0x40) 
+         ip_len = (buffer[0] & 0xF) * 4;
+     header = (struct pptp_gre_header *)(buffer + ip_len);
++    /* print_packet(2, buffer, status, "in"); */
+     /* verify packet (else discard) */
+     if (    /* version should be 1 */
+             ((ntoh8(header->ver) & 0x7F) != PPTP_GRE_VER) ||
+@@ -508,7 +511,7 @@ int encaps_gre (int fd, void *pack, unsi
+     /* record and increment sequence numbers */
+     seq_sent = seq; seq++;
+     /* write this baby out to the net */
+-    /* print_packet(2, u.buffer, header_len + len); */
++    /* print_packet(2, u.buffer, header_len + len, "out"); */
+     rc = write(fd, u.buffer, header_len + len);
+     if (rc < 0) {
+         stats.tx_failed++;

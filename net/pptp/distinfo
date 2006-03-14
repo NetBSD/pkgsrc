@@ -1,12 +1,9 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:14:01 agc Exp $
+$NetBSD: distinfo,v 1.4 2006/03/14 13:53:57 rillig Exp $
 
-SHA1 (pptp-linux-1.0.2.tar.gz) = fe7c7ea298483de37052d57f2641977753817fcf
-RMD160 (pptp-linux-1.0.2.tar.gz) = d82bb10a9ca78848bd9c44cad451aead31ee11b5
-Size (pptp-linux-1.0.2.tar.gz) = 193299 bytes
-SHA1 (patch-aa) = 66724c2083970fdcced1cf81bbb9e3a70daf8b5d
-SHA1 (patch-ab) = b6fa33037515042f13057f2593e3a073f694f932
-SHA1 (patch-ac) = 71685d2992349a2b6796fc08fd598b8bf5b60226
-SHA1 (patch-ad) = 22da1feec4d0d80e760839e15d97e89bfee6216f
-SHA1 (patch-ae) = 82b15dce081e938351876e86866eea308829c7d0
-SHA1 (patch-af) = 56b7f7eece4b9b92de6a113886ae80c27c30b5e6
-SHA1 (patch-ag) = c272983a86ba4fbaf96baed678cb10cd95c1ac0e
+SHA1 (pptp-1.7.0.tar.gz) = fc96e8a765bf17eb02ce1584d8e9d024b68ab5a7
+RMD160 (pptp-1.7.0.tar.gz) = 62c947379c44102945a198ddc914d5aa634db13c
+Size (pptp-1.7.0.tar.gz) = 227699 bytes
+SHA1 (patch-ab) = 564949ffc4ab97af5e0845b930880cc48ee00a6b
+SHA1 (patch-ac) = 8a0dd645ed0a766375a803fecda80d716c441d52
+SHA1 (patch-ad) = a037ba927c181f812ecd5c1ea2d344483d8ad4bf
+SHA1 (patch-ah) = 9f1739cbb375c1c5d15c559490d2ec44abc72ce6
