@@ -1,0 +1,67 @@
+$NetBSD: patch-bj,v 1.1 2006/03/14 00:47:50 joerg Exp $
+
+--- gdb/configure.orig	2004-07-17 11:29:05.000000000 +0000
++++ gdb/configure
+@@ -2405,9 +2405,12 @@ echo "configure:2405: checking for gette
+ if eval "test \"`echo '$''{'gt_cv_func_gettext_libintl'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
++  ac_save_LIBS="$LIBS"
++LIBS="-lintl  $LIBS"
+   cat > conftest.$ac_ext <<EOF
+ #line 2410 "configure"
+ #include "confdefs.h"
++#include <libintl.h>
+ 
+ int main() {
+ return (int) gettext ("")
+@@ -2423,6 +2426,7 @@ else
+   gt_cv_func_gettext_libintl=no
+ fi
+ rm -f conftest*
++LIBS="$ac_save_LIBS"
+ fi
+ 
+ echo "$ac_t""$gt_cv_func_gettext_libintl" 1>&6
+@@ -7323,6 +7327,41 @@ EOF
+ 
+ fi
+ 
++# See if <sys/lwp.h> defines `struct lwp`.
++echo $ac_n "checking for struct lwp""... $ac_c" 1>&6
++echo "configure:7318: checking for struct lwp" >&5
++if eval "test \"`echo '$''{'gdb_cv_struct_lwp'+set}'`\" = set"; then
++  echo $ac_n "(cached) $ac_c" 1>&6
++else
++  cat > conftest.$ac_ext <<EOF
++#line 7323 "configure"
++#include "confdefs.h"
++#include <sys/param.h>
++#include <sys/lwp.h>
++int main() {
++struct lwp l;
++; return 0; }
++EOF
++if { (eval echo configure:7331: \"$ac_compile\") 1>&5; (eval $ac_compile) 2>&5; }; then
++  rm -rf conftest*
++  gdb_cv_struct_lwp=yes
++else
++  echo "configure: failed program was:" >&5
++  cat conftest.$ac_ext >&5
++  rm -rf conftest*
++  gdb_cv_struct_lwp=no
++fi
++rm -f conftest*
++fi
++
++echo "$ac_t""$gdb_cv_struct_lwp" 1>&6
++if test $gdb_cv_struct_lwp = yes; then
++  cat >> confdefs.h <<\EOF
++#define HAVE_STRUCT_LWP 1
++EOF
++
++fi
++
+ # See if <machine/reg.h> degines `struct reg'.
+ echo $ac_n "checking for struct reg in machine/reg.h""... $ac_c" 1>&6
+ echo "configure:7329: checking for struct reg in machine/reg.h" >&5

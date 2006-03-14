@@ -1,0 +1,25 @@
+$NetBSD: patch-bk,v 1.1 2006/03/14 00:47:50 joerg Exp $
+
+--- opcodes/configure.orig	2006-03-13 22:59:10.000000000 +0000
++++ opcodes/configure
+@@ -3900,9 +3900,12 @@ echo "configure:3900: checking for gette
+ if eval "test \"`echo '$''{'gt_cv_func_gettext_libintl'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
++  ac_save_LIBS="$LIBS"
++LIBS="-lintl  $LIBS"
+   cat > conftest.$ac_ext <<EOF
+ #line 3905 "configure"
+ #include "confdefs.h"
++#include <libintl.h>
+ 
+ int main() {
+ return (int) gettext ("")
+@@ -3918,6 +3921,7 @@ else
+   gt_cv_func_gettext_libintl=no
+ fi
+ rm -f conftest*
++LIBS="$ac_save_LIBS"
+ fi
+ 
+ echo "$ac_t""$gt_cv_func_gettext_libintl" 1>&6

@@ -1,0 +1,50 @@
+$NetBSD: patch-bg,v 1.1 2006/03/14 00:47:50 joerg Exp $
+
+--- bfd/configure.orig	2006-03-01 00:38:13.000000000 +0000
++++ bfd/configure
+@@ -3923,9 +3923,12 @@ echo "configure:3923: checking for gette
+ if eval "test \"`echo '$''{'gt_cv_func_gettext_libintl'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
++  ac_save_LIBS="$LIBS"
++LIBS="-lintl  $LIBS"
+   cat > conftest.$ac_ext <<EOF
+ #line 3928 "configure"
+ #include "confdefs.h"
++#include <libintl.h>
+ 
+ int main() {
+ return (int) gettext ("")
+@@ -3941,6 +3944,7 @@ else
+   gt_cv_func_gettext_libintl=no
+ fi
+ rm -f conftest*
++LIBS="$ac_save_LIBS"
+ fi
+ 
+ echo "$ac_t""$gt_cv_func_gettext_libintl" 1>&6
+@@ -5306,7 +5310,7 @@ if test "${target}" = "${host}"; then
+ 	COREFILE=trad-core.lo
+ 	TRAD_HEADER='"hosts/i386bsd.h"'
+ 	;;
+-  i[3-7]86-*-freebsd* | i[3-7]86-*-kfreebsd*-gnu)
++  i[3-7]86-*-freebsd* | i[3-7]86-*-kfreebsd*-gnu| i[3-7]86-*-dragonfly*)
+ 	COREFILE=''
+ 	TRAD_HEADER='"hosts/i386bsd.h"'
+ 	;;
+@@ -6292,6 +6296,7 @@ do
+     bfd_elf32_hppa_vec)		tb="$tb elf32-hppa.lo elf32.lo $elf" ;;
+     bfd_elf32_i370_vec)		tb="$tb elf32-i370.lo elf32.lo $elf" ;;
+     bfd_elf32_i386_freebsd_vec)	tb="$tb elf32-i386.lo elf32.lo $elf" ;;
++    bfd_elf32_i386_dragonfly_vec)	tb="$tb elf32-i386.lo elf32.lo $elf" ;;
+     bfd_elf32_i386_vec)		tb="$tb elf32-i386.lo elf32.lo $elf" ;;
+     bfd_elf32_i860_little_vec)	tb="$tb elf32-i860.lo elf32.lo $elf" ;;
+     bfd_elf32_i860_vec)		tb="$tb elf32-i860.lo elf32.lo $elf" ;;
+@@ -6402,6 +6407,7 @@ do
+     i386coff_vec)		tb="$tb coff-i386.lo cofflink.lo" ;;
+     i386dynix_vec)		tb="$tb i386dynix.lo aout32.lo" ;;
+     i386freebsd_vec)		tb="$tb i386freebsd.lo aout32.lo" ;;
++    i386dragonfly_vec)		tb="$tb i386freebsd.lo aout32.lo" ;;
+     i386linux_vec)		tb="$tb i386linux.lo aout32.lo" ;;
+     i386lynx_aout_vec)		tb="$tb i386lynx.lo lynx-core.lo aout32.lo" ;;
+     i386lynx_coff_vec)		tb="$tb cf-i386lynx.lo cofflink.lo lynx-core.lo" ;;
