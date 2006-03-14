@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:09:10 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/14 01:14:28 jlam Exp $
 #
 
 DISTNAME=		shinonome-0.9.10-src
@@ -19,9 +19,6 @@ USE_TOOLS+=		gawk gmake mkfontdir perl
 FONTDIR=		${PREFIX}/lib/X11/fonts/local
 FOUNDRY=		Misc
 ALIAS_SHINONOME=	${PREFIX}/share/examples/fonts.alias.shinonome
-
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 FILES_SUBST+=		FONTDIR=${FONTDIR:Q}
 FILES_SUBST+=		ALIAS_SHINONOME=${ALIAS_SHINONOME:Q}

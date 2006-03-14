@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/03/04 21:30:00 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/03/14 01:14:30 jlam Exp $
 
 DISTNAME=	mailwrapper-19990412
 PKGREVISION=	4
@@ -13,8 +13,6 @@ NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 WRKSRC=			${WRKDIR}/mailwrapper
 MANCOMPRESSED_IF_MANZ=	yes
 
-DEINSTALL_EXTRA_TMPL=	${.CURDIR}/DEINSTALL
-INSTALL_EXTRA_TMPL=	${.CURDIR}/INSTALL
 EGDIR=			${PREFIX}/share/examples/mailwrapper
 
 MAILWRAPPER_BACKUP_SFX=	.pkgsrc.mailwrapper
