@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2005/11/03 22:49:41 rillig Exp $
+$NetBSD: patch-aa,v 1.10 2006/03/14 02:49:03 joerg Exp $
 
 --- src/Makefile.in.orig	Mon Jul  8 16:38:24 2002
 +++ src/Makefile.in	Mon Oct  7 21:56:42 2002
-@@ -22,7 +22,7 @@
+@@ -22,7 +22,7 @@ DEFINES=
  prefix=@prefix@
  exec_prefix=@exec_prefix@
  mandir=@mandir@
@@ -11,7 +11,17 @@ $NetBSD: patch-aa,v 1.9 2005/11/03 22:49:41 rillig Exp $
  install=@INSTALL@
  install_dir=@INSTALL@ -d
  sbindir=@sbindir@
-@@ -69,8 +69,8 @@
+@@ -61,6 +61,9 @@ PATHS='-DPPPOE_PATH="$(PPPOE_PATH)"' '-D
+ CFLAGS= @CFLAGS@ $(LIC_INCDIR) $(DEFINES) $(LIC_DEFINE) $(PATHS) -Ilibevent
+ TARGETS=@TARGETS@
+ PPPOE_SERVER_LIBS=$(LIC_LIBDIR) $(LIC_LIB)
++.if ${OPSYS} == "DragonFly"
++PPPOE_SERVER_LIBS+= -lmd
++.endif
+ 
+ all: $(TARGETS)
+ 	@echo ""
+@@ -69,8 +72,8 @@ all: $(TARGETS)
  pppoe-sniff: pppoe-sniff.o if.o common.o debug.o
  	@CC@ -o pppoe-sniff pppoe-sniff.o if.o common.o debug.o
  
@@ -22,7 +32,7 @@ $NetBSD: patch-aa,v 1.9 2005/11/03 22:49:41 rillig Exp $
  
  pppoe: pppoe.o if.o debug.o common.o ppp.o discovery.o
  	@CC@ -o pppoe pppoe.o if.o debug.o common.o ppp.o discovery.o
-@@ -87,9 +87,6 @@
+@@ -87,9 +90,6 @@ discovery.o: discovery.c pppoe.h
  ppp.o: ppp.c pppoe.h
  	@CC@ $(CFLAGS) '-DVERSION="$(VERSION)"' -c -o ppp.o ppp.c
  
@@ -32,7 +42,7 @@ $NetBSD: patch-aa,v 1.9 2005/11/03 22:49:41 rillig Exp $
  pppoe-server.o: pppoe-server.c pppoe.h @PPPOE_SERVER_DEPS@
  	@CC@ $(CFLAGS) '-DVERSION="$(VERSION)"' -c -o pppoe-server.o pppoe-server.c
  
-@@ -147,7 +144,7 @@
+@@ -147,7 +147,7 @@ install: all
  	$(install) -m 755 ../scripts/adsl-setup $(RPM_INSTALL_ROOT)$(sbindir)
  	-mkdir -p $(RPM_INSTALL_ROOT)$(docdir)
  	$(install) -m 644 ../doc/CHANGES $(RPM_INSTALL_ROOT)$(docdir)
@@ -41,7 +51,7 @@ $NetBSD: patch-aa,v 1.9 2005/11/03 22:49:41 rillig Exp $
  	$(install) -m 644 ../doc/HOW-TO-CONNECT $(RPM_INSTALL_ROOT)$(docdir)
  	$(install) -m 644 ../doc/LICENSE $(RPM_INSTALL_ROOT)$(docdir)
  	$(install) -m 644 ../README $(RPM_INSTALL_ROOT)$(docdir)
-@@ -166,47 +163,47 @@
+@@ -166,47 +166,47 @@ install: all
  	$(install) -m 644 ../man/adsl-setup.8 $(RPM_INSTALL_ROOT)$(mandir)/man8
  	-mkdir -p $(RPM_INSTALL_ROOT)$(mandir)/man5
  	$(install) -m 644 ../man/pppoe.conf.5 $(RPM_INSTALL_ROOT)$(mandir)/man5
