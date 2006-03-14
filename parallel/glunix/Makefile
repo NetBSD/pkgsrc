@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/02/05 23:10:34 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2006/03/14 01:14:32 jlam Exp $
 
 DISTNAME=	glunix-release-1-0a
 PKGNAME=	glunix-1.0a
@@ -42,6 +42,9 @@ DEPENDS+=       user>=20000313:../../sysutils/user
 USER_CMD=       ${LOCALBASE}/sbin/user
 GROUP_CMD=      ${LOCALBASE}/sbin/group
 .endif
+
+DEINSTALL_SRC=	${PKGDIR}/DEINSTALL
+INSTALL_SRC=	${PKGDIR}/INSTALL
 
 post-patch:
 	cd ${WRKSRC};							\

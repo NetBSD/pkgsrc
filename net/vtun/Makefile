@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2005/12/29 06:22:04 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2006/03/14 01:14:31 jlam Exp $
 
 DISTNAME=	vtun-2.6
 PKGREVISION=	6
@@ -14,8 +14,6 @@ HOMEPAGE=	http://vtun.sourceforge.net/
 COMMENT=	Virtual Tunnels over TCP/IP networks with traffic shaping
 
 WRKSRC=			${WRKDIR}/vtun
-DEINSTALL_EXTRA_TMPL+=	${.CURDIR}/DEINSTALL
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}

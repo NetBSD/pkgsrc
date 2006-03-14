@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2006/03/10 22:38:30 jlam Exp $
+# $NetBSD: Makefile,v 1.125 2006/03/14 01:14:32 jlam Exp $
 
 # Notes to package maintainers:
 #
@@ -60,8 +60,8 @@ PKG_ADMIN=		PKG_DBDIR=${PKG_DBDIR:Q} ${PKG_ADMIN_CMD}
 
 PLIST_SUBST+=		PKG_DBDIR=${PKG_DBDIR:Q}
 
-INSTALL_SRC=		${PKGDIR}/INSTALL
 DEINSTALL_SRC=		# empty
+INSTALL_SRC=		${PKGDIR}/INSTALL
 FILES_SUBST+=		PKG_DBDIR=${PKG_DBDIR:Q}			\
 			PKG_TOOLS_BIN=${PKG_TOOLS_BIN:Q}		\
 			MKDIR=${MKDIR:Q}

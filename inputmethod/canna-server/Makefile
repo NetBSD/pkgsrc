@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/29 06:21:45 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/14 01:14:29 jlam Exp $
 #
 .include "../../inputmethod/canna/Makefile.common"
 
@@ -7,8 +7,6 @@ PKGREVISION=	1
 CANNA_MODULE=	server
 
 INSTALL_TARGET=	instserver
-
-INSTALL_EXTRA_TMPL+=	${.CURDIR}/INSTALL
 
 .include "../../mk/bsd.prefs.mk"
 
