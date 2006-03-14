@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13322 2006/03/14 23:09:43 christos Exp $
+$NetBSD: CHANGES,v 1.13323 2006/03/14 23:37:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1533,3 +1533,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added net/vncviewer4 version 4.1.1 [drochner 2006-03-14]
 	Updated x11/gtk2 to 2.8.15 [wiz 2006-03-14]
 	Added net/sup version 0.0 [christos 2006-03-14]
+	Updated misc/proj to 4.4.7nb3 [wiz 2006-03-14]
