@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13313 2006/03/14 15:48:34 rillig Exp $
+$NetBSD: CHANGES,v 1.13314 2006/03/14 16:49:51 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1515,3 +1515,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated archivers/fastjar to 0.93nb3 [joerg 2006-03-14]
 	Updated pkgtools/pkglint to 4.59 [rillig 2006-03-14]
 	Updated sysutils/xosview to 1.8.3 [rillig 2006-03-14]
+	Updated www/drupal to 4.6.6 [adrianp 2006-03-14]
