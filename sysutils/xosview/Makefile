@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2006/02/05 23:10:59 joerg Exp $
+# $NetBSD: Makefile,v 1.58 2006/03/14 15:48:01 rillig Exp $
 
-DISTNAME=	xosview-1.8.2
-PKGREVISION=	2
+DISTNAME=	xosview-1.8.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xosview/}
 
@@ -16,22 +15,23 @@ USE_LANGUAGES=		c++
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
-CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include
-CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/lib
+CONFIGURE_ARGS+=	--x-includes=${X11BASE:Q}/include
+CONFIGURE_ARGS+=	--x-libraries=${X11BASE:Q}/lib
 
 INSTALLATION_DIRS=	bin lib/X11/app-defaults man/man1
+MAKE_FLAGS+=		MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}/man1
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
 .  if !defined(UVM) && exists(/usr/include/uvm/uvm.h)
 CFLAGS+=	-DUVM
-UVM=		# defined
+UVM=		yes
 BUILD_DEFS+=	UVM
 .  endif
 .elif ${OPSYS} == "SunOS"
 USE_TOOLS+=	gmake
-CPPFLAGS+=	-I${X11BASE}/include
+CPPFLAGS+=	-I${X11BASE:Q}/include
 LIBS+=		-lsocket -lnsl
 .endif
 
