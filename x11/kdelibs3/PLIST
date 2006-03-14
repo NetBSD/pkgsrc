@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2006/01/31 22:20:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.31 2006/03/14 00:24:06 minskim Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -1319,7 +1319,6 @@ share/kde/apps/ksgmltools2/customization/af/entities/underArtisticLicense.docboo
 share/kde/apps/ksgmltools2/customization/af/entities/underBSDLicense.docbook
 share/kde/apps/ksgmltools2/customization/af/entities/underFDL.docbook
 share/kde/apps/ksgmltools2/customization/af/entities/underGPL.docbook
-share/kde/apps/ksgmltools2/customization/da/entities/underLGPL.docbook
 share/kde/apps/ksgmltools2/customization/af/entities/underX11License.docbook
 share/kde/apps/ksgmltools2/customization/af/entities/update-doc.docbook
 share/kde/apps/ksgmltools2/customization/af/lang.entities
@@ -1391,6 +1390,7 @@ share/kde/apps/ksgmltools2/customization/da/entities/underArtisticLicense.docboo
 share/kde/apps/ksgmltools2/customization/da/entities/underBSDLicense.docbook
 share/kde/apps/ksgmltools2/customization/da/entities/underFDL.docbook
 share/kde/apps/ksgmltools2/customization/da/entities/underGPL.docbook
+share/kde/apps/ksgmltools2/customization/da/entities/underLGPL.docbook
 share/kde/apps/ksgmltools2/customization/da/entities/underX11License.docbook
 share/kde/apps/ksgmltools2/customization/da/entities/update-doc.docbook
 share/kde/apps/ksgmltools2/customization/da/lang.entities
@@ -5191,8 +5191,8 @@ share/kde/servicetypes/ktexteditorplugin.desktop
 share/kde/servicetypes/kurifilterplugin.desktop
 share/kde/servicetypes/renamedlgplugin.desktop
 share/kde/servicetypes/scriptinterface.desktop
-${NEED_ZONETAB}share/zone.tab
 ${PKGLOCALEDIR}/locale/all_languages
+${NEED_ZONETAB}share/zone.tab
 @comment in xmlcatmgr: share/sgml/catalog
 @dirrm share/kde/servicetypes
 @dirrm share/kde/services/kresources/kabc
