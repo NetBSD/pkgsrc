@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.77 2006/03/13 01:03:59 rillig Exp $
+# $NetBSD: makevars.map,v 1.78 2006/03/14 14:18:56 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -117,8 +117,8 @@ CRYPTO			Yes
 CXX			Readonly
 CXXFLAGS		List+ of CFlag
 DEINSTALL_FILE		Pathname
-DEINSTALL_EXTRA_TMPL	List of Pathname
 DEINSTALL_SRC		List of Pathname
+DEINSTALL_TEMPLATE	List of Pathname
 DEPENDS			InternalList+ of DependencyWithPath
 DESCR_SRC		List of Pathname
 DEVOSSAUDIO		Pathname
@@ -197,7 +197,6 @@ INSTALLATION_DIRS	List of Pathname
 INSTALL_DATA		ShellCommand
 INSTALL_DATA_DIR	ShellCommand
 INSTALL_DIRS		List of WrksrcSubdirectory
-INSTALL_EXTRA_TMPL	List of Pathname
 INSTALL_FILE		Pathname
 INSTALL_GAME		ShellCommand
 INSTALL_GAME_DATA	ShellCommand
@@ -213,6 +212,7 @@ INSTALL_SCRIPTS_ENV	List+ of ShellWord
 INSTALL_SCRIPT_DIR	ShellCommand
 INSTALL_SRC		List of Pathname
 INSTALL_TARGET		List of Identifier
+INSTALL_TEMPLATE	List of Pathname
 INSTALL_UNSTRIPPED	YesNo
 INTERACTIVE_STAGE	List of { fetch extract configure build install }
 IS_BUILTIN		YesNoFromCommand
