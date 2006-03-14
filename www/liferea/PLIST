@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/03/02 21:05:32 drochner Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/03/14 19:27:48 drochner Exp $
 bin/liferea
 bin/liferea-bin
 lib/liferea/liblihtmlg.la
@@ -49,6 +49,7 @@ share/liferea/opml/feedlist_de.opml
 share/liferea/opml/feedlist_es.opml
 share/liferea/opml/feedlist_fr.opml
 share/liferea/opml/feedlist_nl.opml
+share/liferea/opml/feedlist_pl.opml
 share/liferea/opml/feedlist_sk.opml
 share/liferea/pixmaps/arrow.png
 share/liferea/pixmaps/available.png
