@@ -1,4 +1,4 @@
-# $NetBSD: plist-info.awk,v 1.8 2006/03/14 17:14:47 jlam Exp $
+# $NetBSD: plist-info.awk,v 1.9 2006/03/14 23:16:01 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -65,13 +65,13 @@ BEGIN {
 
 	IGNORE_INFO_REGEXP = ENVIRON["IGNORE_INFO_PATH"] ? ENVIRON["IGNORE_INFO_PATH"] : ""
 	gsub(":", "|", IGNORE_INFO_REGEXP)
-	IGNORE_INFO_REGEXP = "^(" IGNORE_INFO_REGEXP ")/"
+	IGNORE_INFO_REGEXP = "(" IGNORE_INFO_REGEXP ")"
 }
 
 ###
 ### Canonicalize info page entries by stripping any ".gz" suffixes.
 ###
-/^[^@]/ && ($0 !~ IGNORE_INFO_REGEXP) && \
+/^[^@]/ && ($0 !~ "^" IGNORE_INFO_REGEXP "/") && \
 /^([^\/]*\/)*info\/[^\/]*(\.info)?-[0-9]+\.gz$/ {
 	sub("\\.gz$", "")
 }
@@ -80,7 +80,7 @@ BEGIN {
 ### Ignore *-1, *-2, etc. files in the PLIST as we get the list of
 ### installed split files below.
 ###
-/^[^@]/ && ($0 !~ IGNORE_INFO_REGEXP) && \
+/^[^@]/ && ($0 !~ "^" IGNORE_INFO_REGEXP "/") && \
 /^([^\/]*\/)*info\/[^\/]*(\.info)?-[0-9]+$/ {
 	next
 }
@@ -88,7 +88,8 @@ BEGIN {
 ###
 ### Convert info/ to ${INFO_DIR}/ for all info page entries.
 ###
-/^[^@]/ && ($0 !~ IGNORE_INFO_REGEXP) && \
+/^[^@]/ && ($0 !~ "^" IGNORE_INFO_REGEXP "/") && \
+($0 !~ "^([^\/]*\/)*" INFO_DIR "\/[^\/]*(\.info)?$") && \
 /^([^\/]*\/)*info\/[^\/]*(\.info)?$/ {
 	if ($0 ~ "^info/") {
 		sub("^info/", INFO_DIR "/")
@@ -96,12 +97,17 @@ BEGIN {
 		sub("/info/", "/" INFO_DIR "/")
 	}
 }
+($0 !~ "^@dirrm " IGNORE_INFO_REGEXP "$") && \
+($0 !~ "^@dirrm " INFO_DIR "$") && \
+/^@dirrm ([^\/]*\/)*info$/ {
+	sub("info$", INFO_DIR)
+}
 
 ###
 ### For each info page entry, print all of the installed info sub-pages
 ### associated with that entry.
 ###
-/^[^@]/ && ($0 !~ IGNORE_INFO_REGEXP) && \
+/^[^@]/ && ($0 !~ "^" IGNORE_INFO_REGEXP "/") && \
 ($0 ~ "^([^\/]*\/)*" INFO_DIR "\/[^\/]*(\.info)?$") {
 	cmd = TEST " -f " PREFIX "/" $0 " -o -f " PREFIX "/" $0 ".gz"
 	if (system(cmd) == 0) {
