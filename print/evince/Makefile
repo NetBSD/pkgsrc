@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2006/03/09 01:49:03 reed Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/14 20:06:09 drochner Exp $
 #
 
 DISTNAME=		evince-0.4.0
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evince/0.4/}
 EXTRACT_SUFX=		.tar.bz2
@@ -37,7 +37,6 @@ pre-configure:
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
