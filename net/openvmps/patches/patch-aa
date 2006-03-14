@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/06/06 16:07:43 bouyer Exp $
+$NetBSD: patch-aa,v 1.2 2006/03/14 01:32:00 joerg Exp $
 
---- daemon.c.orig	2005-06-06 13:03:05.000000000 +0200
-+++ daemon.c	2005-06-06 13:04:47.000000000 +0200
-@@ -44,6 +44,9 @@
+--- daemon.c.orig	2004-07-24 00:46:49.000000000 +0000
++++ daemon.c
+@@ -14,8 +14,6 @@
+ #define	VMPS_CHECK_BSD
+ #endif
+ 
+-extern int	errno;
+-
+ #ifdef	VMPS_CHECK_BSD
+ #include <sys/file.h>
+ #include <sys/ioctl.h>
+@@ -44,6 +42,9 @@ daemon_start(ignsigcld)
  
  {
  	register int	childpid;
