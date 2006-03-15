@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.5 2005/08/10 16:50:18 he Exp $
+$NetBSD: patch-af,v 1.6 2006/03/15 19:27:31 minskim Exp $
 
---- xv.h.orig	2005-07-29 15:52:23.000000000 +0200
+--- xv.h.orig	2006-03-15 11:00:24.000000000 -0800
 +++ xv.h
 @@ -137,9 +137,7 @@
  #endif
@@ -31,7 +31,18 @@ $NetBSD: patch-af,v 1.5 2005/08/10 16:50:18 he Exp $
  #    define ERRSTR(x) strerror(x)
  #  else
  #    define ERRSTR(x) sys_errlist[x]
-@@ -345,7 +343,11 @@
+@@ -215,7 +213,9 @@
+ #  if defined(hp300) || defined(hp800) || defined(NeXT)
+ #   include <sys/malloc.h>                /* it's in 'sys' on HPs and NeXT */
+ #  else
+-#   include <malloc.h>
++#   ifndef __DARWIN__
++#    include <malloc.h>
++#   endif
+ #  endif
+ # endif
+ #endif /* !VMS */
+@@ -345,7 +345,11 @@
  #endif
  
  #ifndef S_IRWUSR
