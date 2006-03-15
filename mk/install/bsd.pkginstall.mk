@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.41 2006/03/15 04:52:57 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.42 2006/03/15 16:20:12 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -725,7 +725,6 @@ _DEINSTALL_FILE_DFLT=	${_PKGINSTALL_DIR}/DEINSTALL.default
 _INSTALL_FILE_DFLT=	${_PKGINSTALL_DIR}/INSTALL.default
 
 .PHONY: generate-install-scripts
-post-build: generate-install-scripts
 generate-install-scripts:						\
 		${_DEINSTALL_FILE} ${_INSTALL_FILE}			\
 		${_DEINSTALL_FILE_DFLT} ${_INSTALL_FILE_DFLT}
@@ -818,7 +817,6 @@ post-install-script:
 # doesn't occur.
 
 .PHONY: generate-rcd-scripts
-post-build: generate-rcd-scripts
 generate-rcd-scripts:	# do nothing
 
 .PHONY: install-rcd-scripts
@@ -849,3 +847,27 @@ install-rcd-${_script_}: ${RCD_SCRIPT_WRK.${_script_}}
 .    endif
 .  endif
 .endfor
+
+_PKGINSTALL_COOKIE=	${WRKDIR}/.pkginstall_done
+
+_PKGINSTALL_TARGETS+=	_build
+_PKGINSTALL_TARGETS+=	acquire-pkginstall-lock
+_PKGINSTALL_TARGETS+=	${_PKGINSTALL_COOKIE}
+_PKGINSTALL_TARGETS+=	release-pkginstall-lock
+
+.ORDER: ${_PKGINSTALL_TARGETS}
+
+.PHONY: pkginstall
+pkginstall: ${_PKGINSTALL_TARGETS}
+
+.PHONY: acquire-pkginstall-lock release-pkginstall-lock
+acquire-pkginstall-lock:
+	${_ACQUIRE_LOCK}
+release-pkginstall-lock:
+	${_RELEASE_LOCK}
+
+.PHONY: do-pkginstall
+do-pkginstall: generate-rcd-scripts generate-install-scripts
+
+${_PKGINSTALL_COOKIE}: do-pkginstall
+	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
