@@ -1,9 +1,8 @@
 #!@SH@
 #
-# start of header
-#
-# $NetBSD: header,v 1.34 2005/08/19 22:24:10 jlam Exp $
+# $NetBSD: header,v 1.35 2006/03/15 04:52:57 jlam Exp $
 
+SELF=$0
 PKGNAME=$1
 STAGE=$2
 
@@ -84,4 +83,3 @@ case "${PKG_CONFIG:-@PKG_CONFIG@}" in
 	;;
 esac
 
-# end of header
