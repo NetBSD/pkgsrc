@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/03/11 14:24:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/03/15 07:13:51 wiz Exp $
 bin/estcall
 bin/estcmd
 bin/estconfig
@@ -12,7 +12,7 @@ include/estraier.h
 lib/libestraier.a
 lib/libestraier.so
 lib/libestraier.so.8
-lib/libestraier.so.8.3.0
+lib/libestraier.so.8.4.0
 lib/pkgconfig/hyperestraier.pc
 libexec/estseek.cgi
 man/man1/estcall.1
