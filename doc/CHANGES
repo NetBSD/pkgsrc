@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13326 2006/03/15 07:21:17 wiz Exp $
+$NetBSD: CHANGES,v 1.13327 2006/03/15 12:42:51 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1534,6 +1534,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/gtk2 to 2.8.15 [wiz 2006-03-14]
 	Added net/sup version 0.0 [christos 2006-03-14]
 	Updated misc/proj to 4.4.7nb3 [wiz 2006-03-14]
+	Updated graphics/gimp-ufraw to 0.7 [gdt 2006-03-14]
 	Added comms/p5-Asterisk version 0.08 [gavan 2006-03-15]
 	Updated textproc/hyperestraier to 1.1.5 [wiz 2006-03-15]
 	Updated x11/x11vnc to 0.8 [wiz 2006-03-15]
