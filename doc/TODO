@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4759 2006/03/15 07:14:45 wiz Exp $
+$NetBSD: TODO,v 1.4760 2006/03/15 07:21:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1196,7 +1196,6 @@ Suggested package updates
 	o wmii-2.5.1 [pkg/32522]
 	o wmweather-2.4.3
 	o www6to4-1.6
-	o x11vnc-0.8 [pkg/33068]
 	o x2vnc-1.6.1
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xbeeb-0.4.1
