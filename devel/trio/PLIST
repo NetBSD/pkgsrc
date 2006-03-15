@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:09 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/03/15 16:44:50 joerg Exp $
 include/trio.h
 include/triop.h
-lib/libtrio.a
+lib/libtrio.la
 man/man3/strio.3
 man/man3/trio_printf.3
 man/man3/trio_register.3
