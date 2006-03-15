@@ -1,7 +1,4 @@
-# -*- sh -*-
-# start of install
-#
-# $NetBSD: install,v 1.43 2006/03/09 00:20:27 jlam Exp $
+# $NetBSD: install,v 1.44 2006/03/15 04:52:57 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -90,4 +87,3 @@ VIEW-INSTALL)
 	;;
 esac
 
-# end of install

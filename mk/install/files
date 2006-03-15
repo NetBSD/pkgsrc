@@ -1,6 +1,12 @@
-#!@SH@
+# $NetBSD: files,v 1.9 2006/03/15 04:52:57 jlam Exp $
 #
-# $NetBSD: files,v 1.8 2005/08/19 22:24:10 jlam Exp $
+# Generate a +FILES script that reference counts config files that are
+# required for the proper functioning of the package.
+#
+case "${STAGE}" in
+PRE-INSTALL|UNPACK)
+	${CAT} > ./+FILES << 'EOF'
+#!@SH@
 #
 # +FILES - reference-counted configuration file management script
 #
@@ -323,3 +329,10 @@ CHECK-REMOVE)
 	;;
 esac
 exit $exitcode
+
+EOF
+	${SED} -n "/^\# FILE: /p" ${SELF} >> ./+FILES
+	${CHMOD} +x ./+FILES
+	;;
+esac
+
