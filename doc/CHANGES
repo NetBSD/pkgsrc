@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13324 2006/03/15 00:17:50 gavan Exp $
+$NetBSD: CHANGES,v 1.13325 2006/03/15 07:14:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1535,3 +1535,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added net/sup version 0.0 [christos 2006-03-14]
 	Updated misc/proj to 4.4.7nb3 [wiz 2006-03-14]
 	Added comms/p5-Asterisk version 0.08 [gavan 2006-03-15]
+	Updated textproc/hyperestraier to 1.1.5 [wiz 2006-03-15]
