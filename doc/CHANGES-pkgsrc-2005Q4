@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.106 2006/03/15 13:29:05 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.107 2006/03/15 14:34:32 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -213,3 +213,5 @@ Pullup ticket 1186 - requested by Martti Kuparinen
 security update for squirrelmail
 Pullup ticket 1207 - requested by Thomas Klausner
 security update for sun-j{re,dk}14
+Pullup ticket 1214 - requested by Julio M. Merino Vidal
+security update for monotone
