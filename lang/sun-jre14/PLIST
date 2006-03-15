@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2004/10/14 14:32:32 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.16.10.1 2006/03/15 13:27:25 salo Exp $
 bin/sun14-java
 bin/sun14-keytool
 bin/sun14-orbd
@@ -73,41 +73,43 @@ java/sun-1.4/lib/ext/ldapsec.jar
 java/sun-1.4/lib/ext/localedata.jar
 java/sun-1.4/lib/ext/sunjce_provider.jar
 java/sun-1.4/lib/flavormap.properties.default
+java/sun-1.4/lib/font.properties.Redhat6.1.default
+java/sun-1.4/lib/font.properties.Redhat8.0
+java/sun-1.4/lib/font.properties.SuSE8.0
 java/sun-1.4/lib/font.properties.default
+java/sun-1.4/lib/font.properties.ja.Redhat3
+java/sun-1.4/lib/font.properties.ja.Redhat4
+java/sun-1.4/lib/font.properties.ja.Redhat6.1.default
+java/sun-1.4/lib/font.properties.ja.Redhat6.2.default
+java/sun-1.4/lib/font.properties.ja.Redhat7.2
+java/sun-1.4/lib/font.properties.ja.Redhat7.3
+java/sun-1.4/lib/font.properties.ja.Redhat8.0
+java/sun-1.4/lib/font.properties.ja.Turbo.default
+java/sun-1.4/lib/font.properties.ja.Turbo6.0.default
+java/sun-1.4/lib/font.properties.ja.default
 java/sun-1.4/lib/font.properties.ja_JP.Sun
 java/sun-1.4/lib/font.properties.ja_JP.Sun2003
+java/sun-1.4/lib/font.properties.ja_JP_UTF8.Sun
 java/sun-1.4/lib/font.properties.ja_JP_UTF8.Sun2003
+java/sun-1.4/lib/font.properties.ko.Redhat
+java/sun-1.4/lib/font.properties.ko.Redhat2.1
 java/sun-1.4/lib/font.properties.ko_KR.Sun
 java/sun-1.4/lib/font.properties.ko_KR_UTF8.Sun
 java/sun-1.4/lib/font.properties.ko_KR_UTF8.Sun2003
-java/sun-1.4/lib/font.properties.ja_JP_UTF8.Sun
+java/sun-1.4/lib/font.properties.zh.Turbo.default
+java/sun-1.4/lib/font.properties.zh_CN.Redhat
+java/sun-1.4/lib/font.properties.zh_CN.Redhat2.1
+java/sun-1.4/lib/font.properties.zh_CN.Redhat4
 java/sun-1.4/lib/font.properties.zh_CN.Sun
 java/sun-1.4/lib/font.properties.zh_CN_UTF8.Sun
 java/sun-1.4/lib/font.properties.zh_HK.Sun
 java/sun-1.4/lib/font.properties.zh_HK_UTF8.Sun
 java/sun-1.4/lib/font.properties.zh_HK_UTF8.Sun2003
+java/sun-1.4/lib/font.properties.zh_TW.Redhat
+java/sun-1.4/lib/font.properties.zh_TW.Redhat2.1
 java/sun-1.4/lib/font.properties.zh_TW.Sun
 java/sun-1.4/lib/font.properties.zh_TW_UTF8.Sun
 java/sun-1.4/lib/font.properties.zh_TW_UTF8.Sun2003
-java/sun-1.4/lib/font.properties.Redhat6.1.default
-java/sun-1.4/lib/font.properties.ja.default
-java/sun-1.4/lib/font.properties.ja.Redhat3
-java/sun-1.4/lib/font.properties.ja.Redhat6.1.default
-java/sun-1.4/lib/font.properties.ja.Redhat6.2.default
-java/sun-1.4/lib/font.properties.Redhat8.0
-java/sun-1.4/lib/font.properties.SuSE8.0
-java/sun-1.4/lib/font.properties.ja.Redhat7.2
-java/sun-1.4/lib/font.properties.ja.Redhat7.3
-java/sun-1.4/lib/font.properties.ja.Redhat8.0
-java/sun-1.4/lib/font.properties.ko.Redhat
-java/sun-1.4/lib/font.properties.ko.Redhat2.1
-java/sun-1.4/lib/font.properties.zh_CN.Redhat
-java/sun-1.4/lib/font.properties.zh_CN.Redhat2.1
-java/sun-1.4/lib/font.properties.zh_TW.Redhat
-java/sun-1.4/lib/font.properties.zh_TW.Redhat2.1
-java/sun-1.4/lib/font.properties.ja.Turbo.default
-java/sun-1.4/lib/font.properties.ja.Turbo6.0.default
-java/sun-1.4/lib/font.properties.zh.Turbo.default
 java/sun-1.4/lib/fonts/LucidaBrightDemiBold.ttf
 java/sun-1.4/lib/fonts/LucidaBrightDemiItalic.ttf
 java/sun-1.4/lib/fonts/LucidaBrightItalic.ttf
@@ -242,7 +244,6 @@ java/sun-1.4/lib/zi/Africa/Nouakchott
 java/sun-1.4/lib/zi/Africa/Ouagadougou
 java/sun-1.4/lib/zi/Africa/Porto-Novo
 java/sun-1.4/lib/zi/Africa/Sao_Tome
-java/sun-1.4/lib/zi/Africa/Timbuktu
 java/sun-1.4/lib/zi/Africa/Tripoli
 java/sun-1.4/lib/zi/Africa/Tunis
 java/sun-1.4/lib/zi/Africa/Windhoek
@@ -251,24 +252,34 @@ java/sun-1.4/lib/zi/America/Anchorage
 java/sun-1.4/lib/zi/America/Anguilla
 java/sun-1.4/lib/zi/America/Antigua
 java/sun-1.4/lib/zi/America/Araguaina
+java/sun-1.4/lib/zi/America/Argentina/Buenos_Aires
+java/sun-1.4/lib/zi/America/Argentina/Catamarca
+java/sun-1.4/lib/zi/America/Argentina/Cordoba
+java/sun-1.4/lib/zi/America/Argentina/Jujuy
+java/sun-1.4/lib/zi/America/Argentina/La_Rioja
+java/sun-1.4/lib/zi/America/Argentina/Mendoza
+java/sun-1.4/lib/zi/America/Argentina/Rio_Gallegos
+java/sun-1.4/lib/zi/America/Argentina/San_Juan
+java/sun-1.4/lib/zi/America/Argentina/Tucuman
+java/sun-1.4/lib/zi/America/Argentina/Ushuaia
 java/sun-1.4/lib/zi/America/Aruba
 java/sun-1.4/lib/zi/America/Asuncion
+java/sun-1.4/lib/zi/America/Bahia
 java/sun-1.4/lib/zi/America/Barbados
 java/sun-1.4/lib/zi/America/Belem
 java/sun-1.4/lib/zi/America/Belize
 java/sun-1.4/lib/zi/America/Boa_Vista
 java/sun-1.4/lib/zi/America/Bogota
 java/sun-1.4/lib/zi/America/Boise
-java/sun-1.4/lib/zi/America/Buenos_Aires
 java/sun-1.4/lib/zi/America/Cambridge_Bay
+java/sun-1.4/lib/zi/America/Campo_Grande
 java/sun-1.4/lib/zi/America/Cancun
 java/sun-1.4/lib/zi/America/Caracas
-java/sun-1.4/lib/zi/America/Catamarca
 java/sun-1.4/lib/zi/America/Cayenne
 java/sun-1.4/lib/zi/America/Cayman
 java/sun-1.4/lib/zi/America/Chicago
 java/sun-1.4/lib/zi/America/Chihuahua
-java/sun-1.4/lib/zi/America/Cordoba
+java/sun-1.4/lib/zi/America/Coral_Harbour
 java/sun-1.4/lib/zi/America/Costa_Rica
 java/sun-1.4/lib/zi/America/Cuiaba
 java/sun-1.4/lib/zi/America/Curacao
@@ -294,26 +305,24 @@ java/sun-1.4/lib/zi/America/Guyana
 java/sun-1.4/lib/zi/America/Halifax
 java/sun-1.4/lib/zi/America/Havana
 java/sun-1.4/lib/zi/America/Hermosillo
+java/sun-1.4/lib/zi/America/Indiana/Indianapolis
 java/sun-1.4/lib/zi/America/Indiana/Knox
 java/sun-1.4/lib/zi/America/Indiana/Marengo
 java/sun-1.4/lib/zi/America/Indiana/Vevay
-java/sun-1.4/lib/zi/America/Indianapolis
 java/sun-1.4/lib/zi/America/Inuvik
 java/sun-1.4/lib/zi/America/Iqaluit
 java/sun-1.4/lib/zi/America/Jamaica
-java/sun-1.4/lib/zi/America/Jujuy
 java/sun-1.4/lib/zi/America/Juneau
+java/sun-1.4/lib/zi/America/Kentucky/Louisville
 java/sun-1.4/lib/zi/America/Kentucky/Monticello
 java/sun-1.4/lib/zi/America/La_Paz
 java/sun-1.4/lib/zi/America/Lima
 java/sun-1.4/lib/zi/America/Los_Angeles
-java/sun-1.4/lib/zi/America/Louisville
 java/sun-1.4/lib/zi/America/Maceio
 java/sun-1.4/lib/zi/America/Managua
 java/sun-1.4/lib/zi/America/Manaus
 java/sun-1.4/lib/zi/America/Martinique
 java/sun-1.4/lib/zi/America/Mazatlan
-java/sun-1.4/lib/zi/America/Mendoza
 java/sun-1.4/lib/zi/America/Menominee
 java/sun-1.4/lib/zi/America/Merida
 java/sun-1.4/lib/zi/America/Mexico_City
@@ -355,6 +364,7 @@ java/sun-1.4/lib/zi/America/Tegucigalpa
 java/sun-1.4/lib/zi/America/Thule
 java/sun-1.4/lib/zi/America/Thunder_Bay
 java/sun-1.4/lib/zi/America/Tijuana
+java/sun-1.4/lib/zi/America/Toronto
 java/sun-1.4/lib/zi/America/Tortola
 java/sun-1.4/lib/zi/America/Vancouver
 java/sun-1.4/lib/zi/America/Whitehorse
@@ -461,6 +471,7 @@ java/sun-1.4/lib/zi/Atlantic/Stanley
 java/sun-1.4/lib/zi/Australia/Adelaide
 java/sun-1.4/lib/zi/Australia/Brisbane
 java/sun-1.4/lib/zi/Australia/Broken_Hill
+java/sun-1.4/lib/zi/Australia/Currie
 java/sun-1.4/lib/zi/Australia/Darwin
 java/sun-1.4/lib/zi/Australia/Hobart
 java/sun-1.4/lib/zi/Australia/Lindeman
@@ -502,7 +513,6 @@ java/sun-1.4/lib/zi/Etc/UTC
 java/sun-1.4/lib/zi/Europe/Amsterdam
 java/sun-1.4/lib/zi/Europe/Andorra
 java/sun-1.4/lib/zi/Europe/Athens
-java/sun-1.4/lib/zi/Europe/Belfast
 java/sun-1.4/lib/zi/Europe/Belgrade
 java/sun-1.4/lib/zi/Europe/Berlin
 java/sun-1.4/lib/zi/Europe/Brussels
@@ -593,7 +603,6 @@ java/sun-1.4/lib/zi/Pacific/Tongatapu
 java/sun-1.4/lib/zi/Pacific/Truk
 java/sun-1.4/lib/zi/Pacific/Wake
 java/sun-1.4/lib/zi/Pacific/Wallis
-java/sun-1.4/lib/zi/Pacific/Yap
 java/sun-1.4/lib/zi/WET
 java/sun-1.4/lib/zi/ZoneInfoMappings
 java/sun-1.4/man/ja
@@ -624,8 +633,8 @@ java/sun-1.4/man/man1/tnameserv.1
 java/sun-1.4/plugin/desktop/sun_java.desktop
 java/sun-1.4/plugin/desktop/sun_java.png
 java/sun-1.4/plugin/i386/ns4/libjavaplugin.so
-java/sun-1.4/plugin/i386/ns610/libjavaplugin_oji.so
 java/sun-1.4/plugin/i386/ns610-gcc32/libjavaplugin_oji.so
+java/sun-1.4/plugin/i386/ns610/libjavaplugin_oji.so
 @dirrm java/sun-1.4/plugin/i386/ns610-gcc32
 @dirrm java/sun-1.4/plugin/i386/ns610
 @dirrm java/sun-1.4/plugin/i386/ns4
@@ -647,6 +656,7 @@ java/sun-1.4/plugin/i386/ns610-gcc32/libjavaplugin_oji.so
 @dirrm java/sun-1.4/lib/zi/America/North_Dakota
 @dirrm java/sun-1.4/lib/zi/America/Kentucky
 @dirrm java/sun-1.4/lib/zi/America/Indiana
+@dirrm java/sun-1.4/lib/zi/America/Argentina
 @dirrm java/sun-1.4/lib/zi/America
 @dirrm java/sun-1.4/lib/zi/Africa
 @dirrm java/sun-1.4/lib/zi
