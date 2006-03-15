@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1809 2006/03/15 14:06:09 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1810 2006/03/15 16:20:11 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -410,6 +410,16 @@ INSTALL_MACROS=	BSD_INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}		\
 MAKE_ENV+=	${INSTALL_MACROS}
 SCRIPTS_ENV+=	${INSTALL_MACROS}
 
+# If pkgsrc is supposed to ensure that tests are run before installation
+# of the package, then the build targets should be "build test", otherwise
+# just "build" suffices.
+#
+.if !empty(PKGSRC_RUN_TEST:M[yY][eE][sS])
+_PKGSRC_BUILD_TARGETS=	build test
+.else
+_PKGSRC_BUILD_TARGETS=	build
+.endif
+
 # The user can override the NO_PACKAGE by specifying this from
 # the make command line
 .if defined(FORCE_PACKAGE)
@@ -461,17 +471,6 @@ MESSAGE_SUBST+=	PKGNAME=${PKGNAME}					\
 		ROOT_USER=${ROOT_USER}
 
 MESSAGE_SUBST_SED=	${MESSAGE_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}
-.endif
-
-# If pkgsrc is supposed to ensure that tests are run before installation
-# of the package, then the build targets should be "build test", otherwise
-# just "build" suffices.  _PKGSRC_BUILD_TARGETS is used in the "all",
-# "install", and "uptodate-digest" targets.
-#
-.if !empty(PKGSRC_RUN_TEST:M[yY][eE][sS])
-_PKGSRC_BUILD_TARGETS=	build test
-.else
-_PKGSRC_BUILD_TARGETS=	build
 .endif
 
 .PHONY: uptodate-digest
@@ -983,8 +982,8 @@ configure: wrapper
 
 # Disable build
 .PHONY: build
-.if defined(NO_BUILD) && !target(build)
-build: configure
+.if defined(NO_BUILD)
+_build: configure
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${_BUILD_COOKIE}
 .endif
 
@@ -2105,10 +2104,13 @@ wrapper: tools acquire-wrapper-lock ${_WRAPPER_COOKIE} release-wrapper-lock
 configure: wrapper acquire-configure-lock ${_CONFIGURE_COOKIE} release-configure-lock
 .endif
 
-.PHONY: build
-.if !target(build)
-build: configure acquire-build-lock ${_BUILD_COOKIE} release-build-lock
+.PHONY: _build
+.if !target(_build)
+_build: configure acquire-build-lock ${_BUILD_COOKIE} release-build-lock
 .endif
+
+.PHONY: build
+build: pkginstall
 
 .PHONY: test
 .if !target(test)
