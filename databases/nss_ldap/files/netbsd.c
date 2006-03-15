@@ -1,10 +1,11 @@
-/* $NetBSD: netbsd.c,v 1.4 2005/09/19 15:54:42 drochner Exp $ */
+/* $NetBSD: netbsd.c,v 1.5 2006/03/15 19:23:47 drochner Exp $ */
 
 #include <sys/param.h>
 #include <pwd.h>
 #include <grp.h>
 #include <nsswitch.h>
 #include <stdarg.h>
+#include <stdlib.h>
 #include <string.h>
 
 #include "netbsd.h"
@@ -440,6 +441,28 @@ netbsd_getgrgid_r(void *rv, void *cb_data, va_list ap)
 	return nss2netbsderr[s];
 }
 
+/* addgid helper from NetBSD's getgroupmembership.c */
+static int
+__gr_addgid(gid_t gid, gid_t *groups, int maxgrp, int *groupc)
+{
+	int	ret, dupc;
+
+						/* skip duplicates */
+	for (dupc = 0; dupc < MIN(maxgrp, *groupc); dupc++) {
+		if (groups[dupc] == gid)
+			return 1;
+	}
+
+	ret = 1;
+	if (*groupc < maxgrp)			/* add this gid */
+		groups[*groupc] = gid;
+	else
+		ret = 0;
+	(*groupc)++;
+	return ret;
+}
+
+
 static int
 netbsd_getgroupmembership(void *rv, void *cb_data, va_list ap)
 {
@@ -453,32 +476,24 @@ netbsd_getgroupmembership(void *rv, void *cb_data, va_list ap)
 	int *size = va_arg(ap, int*);
 	gid_t *tmpgroups;
 	long int lstart, lsize;
-	int origsize = *size;
+	int i;
 
 	tmpgroups = malloc(limit * sizeof(gid_t));
 	if (!tmpgroups)
 		return NS_TRYAGAIN;
 	/* insert primary membership */
-	if (*size < limit) {
-		tmpgroups[0] = group;
-		(*size)++;
-	}
-	lstart = *size;
+	__gr_addgid(group, groups, limit, size);
+
+	lstart = 0;
 	lsize = limit;
 	s = _nss_ldap_initgroups_dyn(user, group, &lstart, &lsize,
 		&tmpgroups, 0, &err);
 	if (s == NSS_STATUS_SUCCESS) {
-		if (lstart > limit) {
-			memcpy(groups, tmpgroups, limit * sizeof(gid_t));
-			*retval = -1;
-		} else {
-			memcpy(groups, tmpgroups, lstart * sizeof(gid_t));
-			*retval = 0;
-		}
-		*size = lstart;
+		for (i = 0; i < lstart; i++)
+			if (! __gr_addgid(tmpgroups[i], groups, limit, size))
+				*retval = -1;
 		s = NSS_STATUS_NOTFOUND;
-	} else
-		*size = origsize;
+	}
 	free(tmpgroups);
 		
 	return nss2netbsderr[s];
