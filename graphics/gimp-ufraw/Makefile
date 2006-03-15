@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2006/03/14 15:19:20 gdt Exp $
+# $NetBSD: Makefile,v 1.23 2006/03/15 13:02:17 gdt Exp $
 
 DISTNAME=		ufraw-0.7
+PKGREVISION=		1
 PKGNAME=		gimp-${DISTNAME}
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufraw/}
@@ -10,6 +11,7 @@ HOMEPAGE=		http://ufraw.sourceforge.net/
 COMMENT=		GIMP plug-in for raw digicam import
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-libexif
 
 USE_TOOLS+=		gmake pkg-config
 USE_TOOLS+=		perl:run pod2man
