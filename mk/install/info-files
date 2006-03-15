@@ -1,6 +1,12 @@
-#!@SH@
+# $NetBSD: info-files,v 1.2 2006/03/15 04:52:57 jlam Exp $
 #
-# $NetBSD: info-files,v 1.1 2006/03/09 00:20:27 jlam Exp $
+# Generate an +INFO_FILES script that handles info file registration for
+# the package.
+#
+case "${STAGE}" in
+PRE-INSTALL|UNPACK)
+	${CAT} > ./+INFO_FILES << 'EOF'
+#!@SH@
 #
 # +INFO_FILES - info file registration management script
 #
@@ -108,3 +114,10 @@ REMOVE)
 	;;
 esac
 exit $exitcode
+
+EOF
+	${SED} -n "/^\# INFO: /p" ${SELF} >> ./+INFO_FILES
+	${CHMOD} +x ./+INFO_FILES
+	;;
+esac
+

@@ -1,6 +1,12 @@
-#!@SH@
+# $NetBSD: perms,v 1.4 2006/03/15 04:52:57 jlam Exp $
 #
-# $NetBSD: perms,v 1.3 2005/07/29 21:41:04 jlam Exp $
+# Generate a +PERMS script that sets the special permissions on files
+# and directories used by the package.
+#
+case "${STAGE}" in
+PRE-INSTALL|UNPACK)
+	${CAT} > ./+PERMS << 'EOF'
+#!@SH@
 #
 # +PERMS - special file and directory permissions management script
 #
@@ -81,3 +87,10 @@ yes)	${ECHO} ""
 	${ECHO} "==========================================================================="
 	;;
 esac; }
+
+EOF
+	${SED} -n "/^\# PERMS: /p" ${SELF} >> ./+PERMS
+	${CHMOD} +x ./+PERMS
+	;;
+esac
+

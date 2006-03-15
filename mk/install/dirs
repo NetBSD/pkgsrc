@@ -1,6 +1,12 @@
-#!@SH@
+# $NetBSD: dirs,v 1.9 2006/03/15 04:52:57 jlam Exp $
 #
-# $NetBSD: dirs,v 1.8 2005/08/19 22:24:10 jlam Exp $
+# Generate a +DIRS script that reference counts directories that are
+# required for the proper functioning of the package.
+#
+case "${STAGE}" in
+PRE-INSTALL|UNPACK)
+	${CAT} > ./+DIRS << 'EOF'
+#!@SH@
 #
 # +DIRS - reference-counted directory management script
 #
@@ -234,3 +240,10 @@ CHECK-REMOVE)
 	;;
 esac
 exit $exitcode
+
+EOF
+	${SED} -n "/^\# DIR: /p" ${SELF} >> ./+DIRS
+	${CHMOD} +x ./+DIRS
+	;;
+esac
+

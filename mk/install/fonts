@@ -1,6 +1,11 @@
-#!@SH@
+# $NetBSD: fonts,v 1.10 2006/03/15 04:52:57 jlam Exp $
 #
-# $NetBSD: fonts,v 1.9 2006/02/17 19:32:48 wiz Exp $
+# Generate a +FONTS script that updates font databases for the package.
+#
+case "${STAGE}" in
+PRE-INSTALL|UNPACK)
+	${CAT} > ./+FONTS << 'EOF'
+#!@SH@
 #
 # +FONTS - font database management script
 #
@@ -87,3 +92,10 @@ yes)	${ECHO} ""
 	${ECHO} "==========================================================================="
 	;;
 esac; }
+
+EOF
+	${SED} -n "/^\# FONTS: /p" ${SELF} >> ./+FONTS
+	${CHMOD} +x ./+FONTS
+	;;
+esac
+

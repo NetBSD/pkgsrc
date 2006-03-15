@@ -1,6 +1,4 @@
-# start of install-post
-#
-# $NetBSD: install-post,v 1.2 2006/03/14 11:19:57 tron Exp $
+# $NetBSD: install-post,v 1.3 2006/03/15 04:52:57 jlam Exp $
 
 # Ensure that the VIEW-INSTALL action is called for overwrite packages.
 # This is here to ensure that it's the final POST-INSTALL action (after
@@ -15,4 +13,3 @@ POST-INSTALL)
 	;;
 esac
 
-# end of install-post
