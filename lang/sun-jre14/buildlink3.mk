@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/06/05 16:33:52 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2.14.1 2006/03/15 13:27:25 salo Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SUN_JRE14_BUILDLINK3_MK:=	${SUN_JRE14_BUILDLINK3_MK}+
@@ -12,6 +12,7 @@ BUILDLINK_PACKAGES+=	sun-jre14
 
 .if !empty(SUN_JRE14_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.sun-jre14+=		sun-jre14-[0-9]*
+BUILDLINK_RECOMMENDED.sun-jre14?=	sun-jre14>=2.11
 BUILDLINK_PKGSRCDIR.sun-jre14?=		../../lang/sun-jre14
 BUILDLINK_JAVA_PREFIX.sun-jre14=	${PREFIX}/java/sun-1.4
 .endif	# SUN_JRE14_BUILDLINK3_MK

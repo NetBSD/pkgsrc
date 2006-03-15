@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/09/17 16:44:54 dillo Exp $
+@comment $NetBSD: PLIST,v 1.9.4.1 2006/03/15 13:27:25 salo Exp $
 bin/sun14-appletviewer
 bin/sun14-extcheck
 bin/sun14-idlj
@@ -12,7 +12,6 @@ bin/sun14-jdb
 bin/sun14-rmic
 bin/sun14-serialver
 java/sun-1.4/README.html
-java/sun-1.4/THIRDPARTYLICENSEREADME.txt
 java/sun-1.4/bin/HtmlConverter
 java/sun-1.4/bin/appletviewer
 java/sun-1.4/bin/extcheck
@@ -916,6 +915,8 @@ java/sun-1.4/man/man1/native2ascii.1
 java/sun-1.4/man/man1/rmic.1
 java/sun-1.4/man/man1/serialver.1
 java/sun-1.4/src.zip
+@dirrm java/sun-1.4/include/linux
+@dirrm java/sun-1.4/include
 @dirrm java/sun-1.4/demo/plugin/jfc/TableExample/src
 @dirrm java/sun-1.4/demo/plugin/jfc/TableExample
 @dirrm java/sun-1.4/demo/plugin/jfc/SwingSet2/src
