@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/01/15 11:56:54 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/15 16:34:13 joerg Exp $
 #
 
 DISTNAME=	pthread-sem-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cit.gu.edu.au/teaching/2105CIT/software/
 
