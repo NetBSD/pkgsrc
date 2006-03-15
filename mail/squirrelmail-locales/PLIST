@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/03/01 06:39:52 cube Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/03/15 11:48:29 salo Exp $
 share/squirrelmail/help/bg_BG/FAQ.hlp
 share/squirrelmail/help/bg_BG/addresses.hlp
 share/squirrelmail/help/bg_BG/basic.hlp
@@ -849,4 +849,5 @@ share/squirrelmail/locale/zh_TW/setup.php
 @dirrm share/squirrelmail/help/sl_SI
 @dirrm share/squirrelmail/help/sr_YU
 @dirrm share/squirrelmail/help/sv_SE
+@dirrm share/squirrelmail/help/th_TH
 @dirrm share/squirrelmail/help/zh_CN
