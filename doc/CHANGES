@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13327 2006/03/15 12:42:51 gdt Exp $
+$NetBSD: CHANGES,v 1.13328 2006/03/15 16:51:54 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1538,3 +1538,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added comms/p5-Asterisk version 0.08 [gavan 2006-03-15]
 	Updated textproc/hyperestraier to 1.1.5 [wiz 2006-03-15]
 	Updated x11/x11vnc to 0.8 [wiz 2006-03-15]
+	Updated devel/trio to 1.3nb1 [joerg 2006-03-15]
+	Updated devel/pthread-sem to 1.0nb2 [joerg 2006-03-15]
