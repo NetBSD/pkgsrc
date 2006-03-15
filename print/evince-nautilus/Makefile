@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/15 19:27:05 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/15 21:10:10 drochner Exp $
 #
 
 DISTNAME=		evince-0.4.0
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/evince/
-COMMENT=		Document viewer for the GNOME Desktop
+COMMENT=		File properties plugin for evince files
 
 #PATCHDIR=		${.CURDIR}/../evince/patches
 DISTINFO_FILE=		${.CURDIR}/../evince/distinfo
