@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/14 01:14:29 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/03/15 08:18:45 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -55,6 +55,13 @@ FILES_SUBST+=	DATE=${DATE:Q}
 PLIST_SUBST+=  HAS_IO="@comment "
 .else
 PLIST_SUBST+=  HAS_IO=
+.endif
+
+#
+# Linux work around for getaddrinfo(3)
+#
+.if ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--enable-wide-getaddrinfo
 .endif
 
 DOCS=		COPYING COPYING.ja ChangeLog README \
