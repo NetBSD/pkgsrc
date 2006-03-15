@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/11/02 11:35:57 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.7.2.1 2006/03/15 14:44:48 salo Exp $
 share/doc/bugzilla/Bugzilla-Guide.txt
 share/doc/bugzilla/QUICKSTART
 share/doc/bugzilla/README
@@ -142,7 +142,7 @@ share/bugzilla/docs/html/using.html
 share/bugzilla/docs/html/versions.html
 share/bugzilla/docs/html/voting.html
 share/bugzilla/docs/html/whining.html
-share/bugzilla/docs/html/x3196.html
+share/bugzilla/docs/html/x3190.html
 share/bugzilla/doeditparams.cgi
 share/bugzilla/duplicates.cgi
 share/bugzilla/duplicates.xul
@@ -373,13 +373,13 @@ share/bugzilla/template/en/default/global/variables.none.tmpl
 share/bugzilla/template/en/default/index.html.tmpl
 share/bugzilla/template/en/default/list/change-columns.html.tmpl
 share/bugzilla/template/en/default/list/edit-multiple.html.tmpl
+share/bugzilla/template/en/default/list/list.atom.tmpl
 share/bugzilla/template/en/default/list/list-simple.html.tmpl
 share/bugzilla/template/en/default/list/list.csv.tmpl
 share/bugzilla/template/en/default/list/list.html.tmpl
 share/bugzilla/template/en/default/list/list.ics.tmpl
 share/bugzilla/template/en/default/list/list.js.tmpl
 share/bugzilla/template/en/default/list/list.rdf.tmpl
-share/bugzilla/template/en/default/list/list.rss.tmpl
 share/bugzilla/template/en/default/list/quips.html.tmpl
 share/bugzilla/template/en/default/list/server-push.html.tmpl
 share/bugzilla/template/en/default/list/table.html.tmpl
