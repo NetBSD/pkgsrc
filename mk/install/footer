@@ -1,7 +1,4 @@
-# start of footer
-#
-# $NetBSD: footer,v 1.1 2001/11/19 16:18:44 jlam Exp $
+# $NetBSD: footer,v 1.2 2006/03/15 04:52:57 jlam Exp $
 
 exit 0
 
-# end of footer

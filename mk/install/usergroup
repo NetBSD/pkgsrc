@@ -1,6 +1,12 @@
-#!@SH@
+# $NetBSD: usergroup,v 1.13 2006/03/15 04:52:57 jlam Exp $
 #
-# $NetBSD: usergroup,v 1.12 2006/03/07 20:31:17 reed Exp $
+# Generate a +USERGROUP script that reference-counts users and groups
+# that are required for the proper functioning of the package.
+#
+case "${STAGE}" in
+PRE-INSTALL|UNPACK)
+	${CAT} > ./+USERGROUP << 'EOF'
+#!@SH@
 #
 # +USERGROUP - users and groups management script
 #
@@ -391,3 +397,11 @@ CHECK-REMOVE)
 	;;
 esac
 exit $exitcode
+
+EOF
+	${SED} -n "/^\# GROUP: /p" ${SELF} >> ./+USERGROUP
+	${SED} -n "/^\# USER: /p" ${SELF} >> ./+USERGROUP
+	${CHMOD} +x ./+USERGROUP
+	;;
+esac
+
