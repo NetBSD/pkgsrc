@@ -1,16 +1,19 @@
-# $NetBSD: Makefile,v 1.1 2006/01/10 13:42:29 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/15 16:34:13 joerg Exp $
 
 LIB=		libsemaphore
 LIB_VER=	1:0
 LIBS?=		${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
 
 SRCS=		sem.c
+OBJS=		${SRCS:.c=.lo}
 HDRS=		semaphore.h
+
+CFLAGS+=	-I.
 
 PREFIX?=	/usr/local
 LIBDIR?=	${PREFIX}/lib
 INCLUDEDIR?=	${PREFIX}/include
-MANDIR?=	${PREFIX}/man
+MANDIR?=	${PREFIX}/${PKGMANDIR}
 MANDIR3?=	${MANDIR}/man3
 
 BSD_INSTALL?=		install
