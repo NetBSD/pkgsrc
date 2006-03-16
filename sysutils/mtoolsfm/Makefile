@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/11 16:23:59 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/16 22:46:30 wiz Exp $
 #
 
 DISTNAME=	MToolsFM-1.9-3
@@ -7,7 +7,7 @@ PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.core-coutainville.org/MToolsFM/archive/SOURCES/
 
-MAINTAINER=	ben@wongs.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.core-coutainville.org/MToolsFM/
 COMMENT=	Easy MS-DOS disk access without learning MS-DOS commands
 
