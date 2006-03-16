@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/07/15 15:55:00 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2006/03/16 21:58:52 minskim Exp $
 
 --- qscintilla.pro.orig	2003-07-13 11:45:25.000000000 +0200
 +++ qscintilla.pro	2003-07-13 11:46:00.000000000 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/07/15 15:55:00 drochner Exp $
  TEMPLATE = lib
  TARGET = qscintilla
 -DESTDIR = $(QTDIR)/lib
-+#DESTDIR = $(QTDIR)/lib
++target.path = $(QTDIR)/lib
  CONFIG += qt warn_off release dll thread
  INCLUDEPATH = . ../include ../src
  DEFINES = QEXTSCINTILLA_MAKE_DLL QT SCI_LEXER
