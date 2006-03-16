@@ -1,0 +1,12 @@
+$NetBSD: patch-ap,v 1.1.2.2 2006/03/16 12:37:12 salo Exp $
+
+--- pear/install-pear.php.orig	2006-01-07 18:51:54.000000000 +0100
++++ pear/install-pear.php
+@@ -167,6 +167,7 @@ foreach ($install_files as $package => $
+         }
+     } else {
+         $options['nodeps'] = true;
++	$options['force'] = $force;
+         $installer->setOptions($options);
+         $dp = array(&$downloaderpackage);
+         $installer->setDownloadedPackages($dp);
