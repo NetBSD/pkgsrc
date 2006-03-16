@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.108 2006/03/15 14:45:12 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.109 2006/03/16 12:37:44 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -217,3 +217,5 @@ Pullup ticket 1214 - requested by Julio M. Merino Vidal
 security update for monotone
 Pullup ticket 1215 - requested by Adrian Portelli
 security update for bugzilla
+Pullup ticket 1223 - requested by Quentin Garnier
+security update for php4
