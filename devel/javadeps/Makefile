@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:08:44 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/16 22:46:30 wiz Exp $
 #
 
 DISTNAME=	javadeps-1.1
@@ -7,7 +7,7 @@ CATEGORIES=	devel java
 MASTER_SITES=	http://www.vet.com.au/java/javadeps/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	ben@wongs.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.vet.com.au/java/javadeps/
 COMMENT=	Automatic dependency tracking for Java
 
