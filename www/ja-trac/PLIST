@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/12 13:45:43 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/03/16 23:12:48 jlam Exp $
 bin/trac-admin
 bin/tracd
 bin/tracdb2env
@@ -242,15 +242,15 @@ ${PYSITELIB}/trac/wiki/model.pyo
 ${PYSITELIB}/trac/wiki/web_ui.py
 ${PYSITELIB}/trac/wiki/web_ui.pyc
 ${PYSITELIB}/trac/wiki/web_ui.pyo
+man/man1/trac-admin.1
+man/man1/tracd.1
+man/man1/tracdb2env.1
 share/examples/trac/README
 share/examples/trac/bugzilla2trac.py
 share/examples/trac/emailfilter.py
 share/examples/trac/sourceforge2trac.py
 share/examples/trac/trac-post-commit-hook
 share/examples/trac/trac-pre-commit-hook
-${PKGMANDIR}/man1/trac-admin.1
-${PKGMANDIR}/man1/tracd.1
-${PKGMANDIR}/man1/tracdb2env.1
 share/trac/cgi-bin/trac.cgi
 share/trac/cgi-bin/trac.fcgi
 share/trac/htdocs/README
