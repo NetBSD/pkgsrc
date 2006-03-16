@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2005/12/05 20:51:13 rillig Exp $
+# $NetBSD: Makefile,v 1.59.2.1 2006/03/16 12:36:32 salo Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
-PKGREVISION=		2
 CATEGORIES+=		lang
 COMMENT=		HTML-embedded scripting language
 
