@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.161 2006/03/06 05:25:45 jlam Exp $
+# $NetBSD: replace.mk,v 1.162 2006/03/16 22:31:59 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -976,7 +976,7 @@ TOOLS_PATH.${_t_}=	${X11BASE}/bin/${_t_}
 # These tools are all supplied by an X11 imake package if there is no
 # native tool available.
 #
-_TOOLS.x11-imake=	imake mkdirhier xmkmf
+_TOOLS.x11-imake=	imake makedepend mkdirhier xmkmf
 
 .for _t_ in ${_TOOLS.x11-imake}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
