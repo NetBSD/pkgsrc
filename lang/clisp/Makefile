@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/03/14 07:17:23 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2006/03/16 22:17:04 wiz Exp $
 
 DISTNAME=	clisp-2.38
 CATEGORIES=	lang
@@ -10,7 +10,10 @@ HOMEPAGE=	http://clisp.cons.org/
 COMMENT=	CLISP, a Common Lisp implementation
 
 # XXX: uncomment if still true (commented out during update to 2.38)
-#NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64 *-*-x86_64	# severe LP64 problems
+#NOT_FOR_PLATFORM=	*-*-alpha *-*-x86_64	# severe LP64 problems
+# Sparc64 has assembler code problems, see
+# http://sourceforge.net/tracker/index.php?func=detail&aid=952681&group_id=1355&atid=101355
+NOT_FOR_PLATFORM=	*-*-sparc64
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
