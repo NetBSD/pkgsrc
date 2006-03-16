@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/02 13:54:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/03/16 23:12:48 jlam Exp $
 bin/rake
-${PKGMANDIR}/man1/rake.1
+man/man1/rake.1
 ${RUBY_SITELIBDIR}/rake.rb
 ${RUBY_SITELIBDIR}/rake/classic_namespace.rb
 ${RUBY_SITELIBDIR}/rake/clean.rb
