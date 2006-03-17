@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2006/02/05 23:08:22 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2006/03/17 23:02:16 jlam Exp $
 #
 
 DISTNAME=	pcb-${SNAPDATE}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcb/}
 
@@ -10,25 +10,19 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://pcb.sourceforge.net/
 COMMENT=	Printed circuit board layout system
 
-DEPENDS+=	tk>=8.3:../../x11/tk
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CONFLICTS+=	pcb-current-[0-9]*
 
 SNAPDATE=		20050609
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		bison gm4:run gmake lex
+CONFIGURE_ENV+=		WISH=${TOOLS_PATH.wish}
+USE_TOOLS+=		bison gm4:run gmake lex wish:run
 
 # needed for XWarpPointer in action.c
 LIBS+=		-lX11
 
 INFO_FILES=	pcb.info
-
-.include "../../mk/bsd.prefs.mk"
-
-EVAL_PREFIX+=   TKDIR=tk
-CONFIGURE_ENV+=	WISH=${TKDIR}/bin/wish
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
