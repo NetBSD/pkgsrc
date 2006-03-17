@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/03/05 16:27:22 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2006/03/17 22:37:34 jlam Exp $
 
 DISTNAME=		libmikmod-3.1.11
 PKGNAME=		libmikmod-3.1.11.1
@@ -24,8 +24,4 @@ INFO_FILES=		mikmod.info
 CONFIGURE_ARGS+=	--disable-threads
 
 .include "options.mk"
-
-pre-build:
-	${RM} -f ${WRKSRC}/docs/mikmod.info*
-
 .include "../../mk/bsd.pkg.mk"
