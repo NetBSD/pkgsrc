@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2005/03/31 19:15:23 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2006/03/17 23:53:31 wiz Exp $
 
---- scribus/scpreview.cpp.orig	2004-10-24 23:44:51.000000000 +0200
+--- scribus/scpreview.cpp.orig	2005-07-03 09:13:14.000000000 +0000
 +++ scribus/scpreview.cpp
-@@ -11,6 +11,7 @@
+@@ -19,6 +19,7 @@
  #include <qdir.h>
  #include <cmath>
  #include <cstdlib>
