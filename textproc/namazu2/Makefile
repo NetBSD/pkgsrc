@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2005/12/05 23:55:20 rillig Exp $
+# $NetBSD: Makefile,v 1.24.2.1 2006/03/17 12:03:46 salo Exp $
 
-DISTNAME=	namazu-2.0.14
-PKGREVISION=	3
+DISTNAME=	namazu-2.0.16
 CATEGORIES=	japanese textproc www
 MASTER_SITES=	http://www.namazu.org/stable/
 
@@ -20,15 +19,14 @@ USE_PKGLOCALEDIR=	yes
 USE_PKGINSTALL=		yes
 USE_TOOLS+=		perl:run
 GNU_CONFIGURE=		yes
-USE_LANGUAGE=		c
+USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
-SHLIBTOOL_OVERRIDE=     libtool
 TEST_TARGET=		check
+LTCONFIG_OVERRIDE+=	${WRKSRC}/ltconfig
 
 CONFIGURE_ARGS+= 	--localstatedir=${DATADIR:Q} \
 			--libexecdir=${PREFIX}/libexec/cgi-bin \
-			--sysconfdir=${PKG_SYSCONFBASE:Q} \
-			--with-chasen
+			--sysconfdir=${PKG_SYSCONFBASE:Q}
 
 DATADIR=		${PREFIX}/libdata
 EXAMPLESDIR=		${PREFIX}/share/examples/namazu
