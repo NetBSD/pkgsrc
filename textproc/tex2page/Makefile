@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2006/03/09 00:12:01 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/17 14:23:22 gdt Exp $
 #
 
 DISTNAME=		tex2page
 DIST_SUBDIR=		tex2page-20060131
 PKGNAME=		tex2page-20060131
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.ccs.neu.edu/home/dorai/tex2page/
 
@@ -27,6 +27,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc//tex2page
 	${INSTALL} ${WRKSRC}/*.html ${WRKSRC}/*.gif ${PREFIX}/share/doc//tex2page
 
+.include "../../graphics/netpbm/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
