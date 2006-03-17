@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2006/02/27 17:29:14 joerg Exp $
+$NetBSD: distinfo,v 1.3 2006/03/17 23:24:28 minskim Exp $
 
 SHA1 (WMmp-0.10.0.tar.gz) = 588d6e3c228adb6a8f41b6b1fb4ff90335942f77
 RMD160 (WMmp-0.10.0.tar.gz) = 771e69b3f6caac06698dbad37e11ddf08391b8e4
 Size (WMmp-0.10.0.tar.gz) = 228560 bytes
-SHA1 (patch-aa) = bc398ebfbb0f1feeee5ce1c3ae787c37955b6d37
+SHA1 (patch-aa) = 626719098acb8d6b22736e0effd67917ef4413f7
 SHA1 (patch-ab) = bf480efaf6cf92f7b554c871e0ab0a9ae9746690
