@@ -1,14 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/11/05 18:22:29 tv Exp $
+$NetBSD: patch-aa,v 1.1.1.1.10.1 2006/03/17 11:25:04 salo Exp $
 
---- src/plugins/oo/ioapi.h.orig	2004-11-05 12:45:15.000000000 -0500
-+++ src/plugins/oo/ioapi.h
-@@ -9,6 +9,9 @@
- #ifndef _ZLIBIOAPI_H
- #define _ZLIBIOAPI_H
+--- src/plugins/oo/ooextractor.c.orig	2006-03-16 15:02:36.000000000 +0100
++++ src/plugins/oo/ooextractor.c
+@@ -23,6 +23,10 @@
+ #include "extractor.h"
+ #include "zlib.h"
  
 +#ifndef OF
 +#define OF(x) x
 +#endif
++
+ #define CASESENSITIVITY (0)
+ #define MAXFILENAME (256)
  
- #define ZLIB_FILEFUNC_SEEK_CUR (1)
- #define ZLIB_FILEFUNC_SEEK_END (2)
