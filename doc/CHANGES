@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13331 2006/03/17 06:26:33 martti Exp $
+$NetBSD: CHANGES,v 1.13332 2006/03/17 23:30:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1543,3 +1543,4 @@ Changes to the packages collection and infrastructure in 2006:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2006Q1 branch [agc 2006-03-15]
 	Updated sysutils/amanda-client to 2.4.4p4nb3 [bouyer 2006-03-16]
 	Updated www/jalbum to 6.3.2 [martti 2006-03-17]
+	Updated net/netcat6 to 1.0nb2 [wiz 2006-03-17]
