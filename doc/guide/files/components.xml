@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.21 2006/02/18 17:11:50 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.22 2006/03/17 19:45:30 wiz Exp $ -->
 
 <!--
 	TODO: after 2006Q1, "SITES_" should be replaced with "SITES.".
@@ -167,7 +167,7 @@
       making major changes to the package. When packaging a new program,
       set <varname>MAINTAINER</varname> to yourself. If you really can't
       maintain the package for future updates, set it to
-      <email>tech-pkg@NetBSD.org</email>.</para></listitem>
+      <email>pkgsrc-users@NetBSD.org</email>.</para></listitem>
 
       <listitem><para><varname>HOMEPAGE</varname> is a URL where users can
       find more information about the package.</para></listitem>
