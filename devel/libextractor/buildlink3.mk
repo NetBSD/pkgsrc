@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2005/06/10 22:59:22 salo Exp $
+# $NetBSD: buildlink3.mk,v 1.2.6.1 2006/03/17 11:25:04 salo Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBEXTRACTOR_BUILDLINK3_MK:=	${LIBEXTRACTOR_BUILDLINK3_MK}+
@@ -12,8 +12,8 @@ BUILDLINK_PACKAGES+=	libextractor
 
 .if !empty(LIBEXTRACTOR_BUILDLINK3_MK:M+)
 BUILDLINK_DEPENDS.libextractor+=	libextractor>=0.3.10
-BUILDLINK_RECOMMENDED.libextractor+=	libextractor>=0.4.2
+BUILDLINK_RECOMMENDED.libextractor+=	libextractor>=0.5.3nb3
 BUILDLINK_PKGSRCDIR.libextractor?=	../../devel/libextractor
 .endif	# LIBEXTRACTOR_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

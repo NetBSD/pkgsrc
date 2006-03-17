@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/08/08 09:44:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.3.4.1 2006/03/17 11:25:04 salo Exp $
 bin/extract
 include/extractor.h
 lib/libextractor.la
@@ -32,6 +32,7 @@ lib/libextractor/libextractor_printable_en.la
 lib/libextractor/libextractor_printable_es.la
 lib/libextractor/libextractor_printable_it.la
 lib/libextractor/libextractor_printable_no.la
+lib/libextractor/libextractor_printable_pt.la
 lib/libextractor/libextractor_ps.la
 lib/libextractor/libextractor_qt.la
 lib/libextractor/libextractor_real.la
@@ -46,6 +47,7 @@ lib/libextractor/libextractor_zip.la
 man/man1/extract.1
 man/man3/libextractor.3
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libextractor.mo
+${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/libextractor.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/libextractor.mo
 ${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/libextractor.mo
 @dirrm lib/libextractor
