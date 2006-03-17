@@ -1,0 +1,9 @@
+$NetBSD: patch-bm,v 1.1 2006/03/17 13:57:38 joerg Exp $
+
+--- gdb/config.in.orig	2006-03-17 14:49:47.000000000 +0100
++++ gdb/config.in
+@@ -552,3 +552,4 @@
+ /* Define as const if the declaration of iconv() needs const. */
+ #undef ICONV_CONST
+ 
++#undef HAVE_STRUCT_LWP
