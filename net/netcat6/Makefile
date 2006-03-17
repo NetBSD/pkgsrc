@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/03/14 01:42:55 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/17 23:29:44 wiz Exp $
 
 DISTNAME=		nc6-1.0
 PKGNAME=		${DISTNAME:S/nc/netcat/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.deepspace6.net/pub/ds6/sources/nc6/
 MASTER_SITES+=		http://ftp.deepspace6.net/pub/ds6/sources/nc6/
@@ -21,4 +21,5 @@ USE_PKGLOCALEDIR=	yes
 
 .include "options.mk"
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
