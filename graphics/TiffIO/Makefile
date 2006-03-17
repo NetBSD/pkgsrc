@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/17 17:46:30 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/17 21:27:38 gdt Exp $
 #
 
 DISTNAME=		TiffIO-110c
@@ -8,7 +8,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		http://artis.imag.fr/Software/TiffIO/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tech-pkg@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://artis.imag.fr/Software/TiffIO/
 COMMENT=		Tiff support for QT image loader
 
