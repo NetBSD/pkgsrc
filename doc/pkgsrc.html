@@ -3079,6 +3079,12 @@ alink="#0000FF">
     CONFIG_SHELL=   ${LOCALBASE}/bin/bash
     WRAPPER_SHELL=  ${LOCALBASE}/bin/bash
 </pre>
+
+              <p>Then, rebuild the <a xmlns=
+              "http://www.w3.org/TR/xhtml1/transitional" href=
+              "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/libtool-base/README.html"
+              target="_top"><code xmlns="" class=
+              "filename">devel/libtool-base</code></a> package.</p>
             </div>
           </div>
         </div>
@@ -4504,9 +4510,8 @@ PKG_OPTIONS.apache=     suexec
               "filename">pre-build.local</code> is to have the
               line:</p>
               <pre class="screen">
-<code class="prompt">#</code> <strong class=
-"userinput"><code>echo "I do not have enough disk space to build this pig." \
-    &gt; pkgsrc/misc/openoffice/$BROKENF</code></strong>
+echo "I do not have enough disk space to build this pig." \
+    &gt; misc/openoffice/$BROKENF
 </pre>
 
               <p>to prevent the system from trying to build a
@@ -4820,17 +4825,12 @@ PKG_OPTIONS.apache=     suexec
                 <li>
                   <p><code xmlns=
                   "http://www.w3.org/TR/xhtml1/transitional" class=
-                  "filename">/usr/src</code> (system sources, for
-                  <a xmlns=
+                  "filename">/usr/src</code> (system sources,
+                  e.&nbsp;g. for <a xmlns=
                   "http://www.w3.org/TR/xhtml1/transitional" href=
                   "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/aperture/README.html"
                   target="_top"><code xmlns="" class=
-                  "filename">sysutils/aperture</code></a>,
-                  <a xmlns="http://www.w3.org/TR/xhtml1/transitional"
-                  href=
-                  "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/net/ppp-mppe/README.html"
-                  target="_top"><code xmlns="" class=
-                  "filename">net/ppp-mppe</code></a>):</p>
+                  "filename">sysutils/aperture</code></a>):</p>
                   <pre class="screen">
 <code class="prompt">#</code> <strong class=
 "userinput"><code>ln -s ../disk1/cvs .</code></strong>
@@ -5325,9 +5325,13 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <li>
                 <p><a href=
                 "http://www.NetBSD.org/MailingLists/index.html#pkgsrc-bugs"
-                target="_top">pkgsrc-bugs</a>: A list where problem
-                reports related to pkgsrc are sent and
-                discussed.</p>
+                target="_top">pkgsrc-bugs</a>: All bug reports in
+                category "pkg" sent with <a href=
+                "http://netbsd.gw.com/cgi-bin/man-cgi?send-pr+1+NetBSD-current">
+                <span class="citerefentry"><span class=
+                "refentrytitle">send-pr</span>(1)</span></a> appear
+                here. Please do not report your bugs here directly;
+                use one of the other mailing lists. discussed.</p>
               </li>
 
               <li>
@@ -5341,15 +5345,43 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <li>
                 <p><a href=
                 "http://www.NetBSD.org/MailingLists/index.html#pkgsrc-changes"
-                target="_top">pkgsrc-changes</a>: A list where all
-                commit messages to pkgsrc are sent.</p>
+                target="_top">pkgsrc-changes</a>: This list is for
+                those who are interested in getting a commit
+                message for every change committed to pkgsrc. It is
+                also available in digest form, meaning one daily
+                message containing all commit messages for changes
+                to the package source tree in that 24 hour
+                period.</p>
               </li>
 
               <li>
                 <p><a href=
                 "http://www.NetBSD.org/MailingLists/index.html#tech-pkg"
-                target="_top">tech-pkg</a>: A general discussion
-                list for all things related to pkgsrc.</p>
+                target="_top">pkgsrc-users</a>: This is a general
+                purpose list for most issues regarding pkgsrc,
+                regardless of platform, e.g. soliciting user help
+                for pkgsrc configuration, unexpected build
+                failures, using particular packages, upgrading
+                pkgsrc installations, questions regarding the
+                pkgsrc release branches, etc. General announcements
+                or proposals for changes that impact the pkgsrc
+                user community, e.g. major infrastructure changes,
+                new features, package removals, etc., may also be
+                posted.</p>
+              </li>
+
+              <li>
+                <p><a href=
+                "http://www.NetBSD.org/MailingLists/index.html#tech-pkg"
+                target="_top">tech-pkg</a>: This is a list for
+                technical discussions related to pkgsrc
+                development, e.g. soliciting feedback for changes
+                to pkgsrc infrastructure, proposed new features,
+                questions related to porting pkgsrc to a new
+                platform, advice for maintaining a package, patches
+                that affect many packages, help requests moved from
+                pkgsrc-users when an infrastructure bug is found,
+                etc.</p>
               </li>
             </ul>
           </div>
@@ -7064,7 +7096,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                 "varname">MAINTAINER</code> to yourself. If you
                 really can't maintain the package for future
                 updates, set it to <code class="email">&lt;<a href=
-                "mailto:tech-pkg@NetBSD.org">tech-pkg@NetBSD.org</a>&gt;</code>.</p>
+                "mailto:pkgsrc-users@NetBSD.org">pkgsrc-users@NetBSD.org</a>&gt;</code>.</p>
               </li>
 
               <li>
@@ -8760,9 +8792,9 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <li>
                 <p><code xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" class=
-                "filename">ossaudio.buildlink3.mk</code> defines
-                several variables that may be used by packages that
-                use the Open Sound System (OSS) API.</p>
+                "filename">oss.buildlink3.mk</code> defines several
+                variables that may be used by packages that use the
+                Open Sound System (OSS) API.</p>
               </li>
 
               <li>
@@ -12637,13 +12669,8 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
                   "http://www.w3.org/TR/xhtml1/transitional" class=
                   "filename">buildlink3.mk</code> file available,
                   this is specified using the <code class=
-                  "varname">DEPENDS</code> definition. An example
-                  of this is the <a xmlns=
-                  "http://www.w3.org/TR/xhtml1/transitional" href=
-                  "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/print/lyx/README.html"
-                  target="_top"><code xmlns="" class=
-                  "filename">print/lyx</code></a> package, which
-                  uses the xpm library, version 3.4j to build:</p>
+                  "varname">DEPENDS</code> definition. For
+                  example:</p>
                   <pre class="programlisting">
     DEPENDS+=       xpm-3.4j:../../graphics/xpm
 </pre>
@@ -12760,28 +12787,15 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             </div>
 
             <p>If your package needs files from another package to
-            build, see the first part of the &#8220;<span class=
-            "quote">do-configure</span>&#8221; target <a xmlns=
+            build, add the relevant distribution files to
+            <code class="varname">DISTFILES</code>, so they will be
+            extracted automatically. See the <a xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" href=
-            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/print/ghostscript5/README.html"
+            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/print/ghostscript/README.html"
             target="_top"><code xmlns="" class=
-            "filename">print/ghostscript5</code></a> package (it
-            relies on the jpeg sources being present in source form
-            during the build):</p>
-            <pre class="programlisting">
-    if [ ! -e ${_PKGSRCDIR}/graphics/jpeg/${WRKDIR:T}/jpeg-6b ]; then    \
-        cd ${_PKGSRCDIR}/../../graphics/jpeg &amp;&amp; ${MAKE} extract; \
-    fi
-</pre>
-
-            <p>If you build any other packages that way, please
-            make sure the working files are deleted too when this
-            package's working files are cleaned up. The easiest way
-            to do so is by adding a pre-clean target:</p>
-            <pre class="programlisting">
-    pre-clean:
-            cd ${_PKGSRCDIR}/../../graphics/jpeg &amp;&amp; ${MAKE} clean
-</pre>
+            "filename">print/ghostscript</code></a> package for an
+            example. (It relies on the jpeg sources being present
+            in source form during the build.)</p>
 
             <p>Please also note the <code class=
             "varname">BUILD_USES_MSGFMT</code> and <code class=
@@ -13111,43 +13125,16 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             situation. <code class="varname">_FETCH_MESSAGE</code>
             must be executable shell commands, not just a message.
             (Generally, it executes <code class=
-            "varname">${ECHO}</code>). As of this writing, the
-            following packages use this: <a xmlns=
+            "varname">${ECHO}</code>). See one of the following
+            packages for an example: <a xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" href=
-            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/cad/simian/README.html"
-            target="_top"><code xmlns="" class=
-            "filename">cad/simian</code></a>, <a xmlns=
-            "http://www.w3.org/TR/xhtml1/transitional" href=
-            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/ipv6socket/README.html"
-            target="_top"><code xmlns="" class=
-            "filename">devel/ipv6socket</code></a>, <a xmlns=
-            "http://www.w3.org/TR/xhtml1/transitional" href=
-            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/emulators/vmware-module/README.html"
-            target="_top"><code xmlns="" class=
-            "filename">emulators/vmware-module</code></a>,
-            <a xmlns="http://www.w3.org/TR/xhtml1/transitional"
-            href=
             "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/fonts/acroread-jpnfont/README.html"
             target="_top"><code xmlns="" class=
             "filename">fonts/acroread-jpnfont</code></a>, <a xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" href=
-            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/multimedia/realplayer/README.html"
-            target="_top"><code xmlns="" class=
-            "filename">multimedia/realplayer</code></a>, <a xmlns=
-            "http://www.w3.org/TR/xhtml1/transitional" href=
             "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/storage-manager/README.html"
             target="_top"><code xmlns="" class=
-            "filename">sysutils/storage-manager</code></a>,
-            <a xmlns="http://www.w3.org/TR/xhtml1/transitional"
-            href=
-            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/ap-aolserver/README.html"
-            target="_top"><code xmlns="" class=
-            "filename">www/ap-aolserver</code></a>, <a xmlns=
-            "http://www.w3.org/TR/xhtml1/transitional" href=
-            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/www/openacs/README.html"
-            target="_top"><code xmlns="" class=
-            "filename">www/openacs</code></a>. Try to be consistent
-            with them.</p>
+            "filename">sysutils/storage-manager</code></a>.</p>
           </div>
 
           <div class="sect2" lang="en">
@@ -14022,11 +14009,20 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             this example):</p>
             <pre class="programlisting">
     REPLACE_INTERPRETER+=   tcl
-    _REPLACE.tcl.old=       .*/bin/tclsh
-    _REPLACE.tcl.new=       ${PREFIX}/bin/tclsh
-    _REPLACE_FILES.tcl=     # list of tcl scripts which need to be fixed,
+    REPLACE.tcl.old=        .*/bin/tclsh
+    REPLACE.tcl.new=        ${PREFIX}/bin/tclsh
+    REPLACE_FILES.tcl=      # list of tcl scripts which need to be fixed,
                             # relative to ${WRKSRC}, just as in REPLACE_PERL
 </pre>
+
+            <div class="note" style=
+            "margin-left: 0.5in; margin-right: 0.5in;">
+              <h3 class="title">Note</h3>
+
+              <p>Before March 2006, these variables were called
+              <code class="varname">_REPLACE.*</code> and
+              <code class="varname">_REPLACE_FILES.*</code>.</p>
+            </div>
           </div>
 
           <div class="sect2" lang="en">
@@ -15127,6 +15123,15 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
           "filename">pkgsrc/doc/TODO</code> file and remove the
           entry for the package you updated or removed, in case it
           was mentioned there.</p>
+
+          <p>When the <code class="varname">PKGREVISION</code> of a
+          package is bumped, the change should appear in
+          <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
+          class="filename">pkgsrc/doc/CHANGES</code> if it is
+          security related or otherwise relevant. Mass bumps that
+          result from a dependency being updated should not be
+          mentioned. In all other cases it's the developer's
+          decision.</p>
 
           <p>There is a make target that helps in creating proper
           <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
