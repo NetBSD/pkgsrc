@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.110 2006/03/17 11:25:28 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.111 2006/03/17 12:04:17 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -221,3 +221,5 @@ Pullup ticket 1223 - requested by Quentin Garnier
 security update for php4
 Pullup ticket 1225 - requested by Joerg Sonnenberger
 security update for libextractor
+Pullup ticket 1226 - requested by Takahiro Kambe
+security update for namazu2
