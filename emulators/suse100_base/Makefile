@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/09 20:34:10 tonio Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/17 21:20:45 tonio Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -10,6 +10,10 @@ HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package
 
 CONFLICTS=		linux_SuSE-5.3 linux_lib-2.4 linuxppc_lib-[0-9]*
+
+# these files are handled by manually during de-/installation/pkg_add
+CHECK_FILES_SKIP+=      ${PREFIX}/${EMULSUBDIR}/dev/.*
+CHECK_FILES_SKIP+=      ${PREFIX}/${EMULSUBDIR}/etc/ld.so.cache
 
 EXTRACT_ONLY=		# empty
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
