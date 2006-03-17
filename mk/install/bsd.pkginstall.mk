@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.42 2006/03/15 16:20:12 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.43 2006/03/17 18:22:30 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -866,8 +866,9 @@ acquire-pkginstall-lock:
 release-pkginstall-lock:
 	${_RELEASE_LOCK}
 
-.PHONY: do-pkginstall
-do-pkginstall: generate-rcd-scripts generate-install-scripts
+.PHONY: real-pkginstall
+real-pkginstall: generate-rcd-scripts generate-install-scripts
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${_PKGINSTALL_COOKIE}
 
-${_PKGINSTALL_COOKIE}: do-pkginstall
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+${_PKGINSTALL_COOKIE}:
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-pkginstall PKG_PHASE=build
