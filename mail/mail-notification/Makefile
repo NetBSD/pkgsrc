@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2006/03/06 00:18:18 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2006/03/17 16:09:44 gdt Exp $
 #
 
 DISTNAME=	mail-notification-2.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://savannah.nongnu.org/download/mailnotify/
 
@@ -27,6 +27,7 @@ CONF_FILES=	${EGDIR}/sound/events/mail-notification.soundlist \
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mail-notification
 PKG_SUPPORTED_OPTIONS=	inet6 sasl ssl
+PKG_DEFAULT_OPTIONS=	ssl
 
 .include "../../mk/bsd.options.mk"
 
