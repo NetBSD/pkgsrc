@@ -1,7 +1,8 @@
-$NetBSD: patch-ak,v 1.1 2002/12/30 21:40:12 kristerw Exp $
---- i386/zsnesc4.asm.orig	Mon Dec 30 21:21:54 2002
-+++ i386/zsnesc4.asm	Mon Dec 30 21:22:42 2002
-@@ -51,7 +51,7 @@
+$NetBSD: patch-ak,v 1.2 2006/03/18 15:56:00 ben Exp $
+
+--- i386/zsnesc4.asm.orig	2004-12-30 14:15:44.000000000 -0800
++++ i386/zsnesc4.asm
+@@ -51,7 +51,7 @@ NEWSYM oamram, times 544 db 0	   ; Sprit
  
  SECTION .data
  
