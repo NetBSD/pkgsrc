@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/03/11 06:32:31 uebayasi Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/18 01:07:55 uebayasi Exp $
 #
 
 DISTNAME=	WiLiKi-0.5.3
 PKGNAME=	wiliki-0.5.3
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wiliki/}
 EXTRACT_SUFX=	.tgz
