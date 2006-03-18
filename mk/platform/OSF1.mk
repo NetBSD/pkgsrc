@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.mk,v 1.11 2006/01/12 23:43:57 jlam Exp $
+# $NetBSD: OSF1.mk,v 1.12 2006/03/18 21:40:45 jlam Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
@@ -47,13 +47,8 @@ IMAKE_LIBMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}3
 IMAKE_FILEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}4
 IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6
 IMAKE_MANNEWSUFFIX=	1
-.if defined(_USE_PLIST_MODULE)
 IMAKE_MANINSTALL?=	maninstall catinstall
-.endif
 
-.if !defined(_USE_PLIST_MODULE)
-_DO_SHLIB_CHECKS=	yes	# fixup PLIST
-.endif
 .if exists(/usr/include/netinet/ip6.h)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
 .else
@@ -68,9 +63,6 @@ _OPSYS_RPATH_NAME=	-rpath,	# name of symbol in rpath directive to linker
 _OPSYS_SHLIB_TYPE=	COFF	# type of shared lib
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-b -V simple -z 	# switch to patch(1) for backup suffix
-.if !defined(_USE_PLIST_MODULE)
-_PREFORMATTED_MAN_DIR=	cat	# directory where catman pages are
-.endif
 _USE_GNU_GETTEXT=	yes	# Don't use GNU gettext
 _USE_RPATH=		yes	# add rpath to LDFLAGS
 
