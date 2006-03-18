@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2006/03/18 04:52:33 minskim Exp $
+
+--- Unicode/Makefile.dynamic.in.orig	2005-09-30 06:10:58.000000000 -0700
++++ Unicode/Makefile.dynamic.in
+@@ -3,6 +3,7 @@ top_builddir = ..
+ libdir = @libdir@
+ VPATH = @srcdir@
+ prefix = @prefix@
++exec_prefix = @exec_prefix@
+ bindir = @bindir@
+ 
+ GU_VERSION=2
