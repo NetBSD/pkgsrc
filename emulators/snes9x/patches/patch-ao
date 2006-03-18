@@ -1,10 +1,11 @@
-$NetBSD: patch-ao,v 1.1 2002/12/30 21:40:12 kristerw Exp $
---- i386/sa1struc.h.orig	Mon Dec 30 22:30:11 2002
-+++ i386/sa1struc.h	Mon Dec 30 22:30:50 2002
-@@ -38,7 +38,7 @@
-  * Super NES and Super Nintendo Entertainment System are trademarks of
-  * Nintendo Co., Limited and its subsidiary companies.
-  */
+$NetBSD: patch-ao,v 1.2 2006/03/18 15:56:00 ben Exp $
+
+--- i386/sa1struc.h.orig	2004-12-30 14:15:44.000000000 -0800
++++ i386/sa1struc.h
+@@ -86,7 +86,7 @@
+   Super NES and Super Nintendo Entertainment System are trademarks of
+   Nintendo Co., Limited and its subsidiary companies.
+ *******************************************************************************/
 -#if defined(__DJGCC) || defined(MICROSOFT_C) || defined(_WINDOWS)
 +#if defined(__DJGCC) || defined(MICROSOFT_C) || defined(_WINDOWS) || defined(_ASM_UNDERBARS)
  #define S9xTraceMessage _S9xTraceMessage
