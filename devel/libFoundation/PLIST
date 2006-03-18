@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/24 02:48:06 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/03/18 00:54:28 minskim Exp $
 share/GNUstep/System/Libraries/Resources/libFoundation/CharacterSets/alphanumericCharacterSet.bitmap
 share/GNUstep/System/Libraries/Resources/libFoundation/CharacterSets/controlCharacterSet.bitmap
 share/GNUstep/System/Libraries/Resources/libFoundation/CharacterSets/decimalDigitCharacterSet.bitmap
@@ -135,8 +135,8 @@ share/GNUstep/System/Libraries/Resources/libFoundation/TimeZoneInfo/UTC
 share/GNUstep/System/Libraries/Resources/libFoundation/TimeZoneInfo/Universal
 share/GNUstep/System/Libraries/Resources/libFoundation/TimeZoneInfo/W-SU
 share/GNUstep/System/Libraries/Resources/libFoundation/TimeZoneInfo/WET
-share/GNUstep/System/Library/Headers/libFoundation/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}/GNU/lfmemory.h
-share/GNUstep/System/Library/Headers/libFoundation/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}/GNU/real_exception_file.h
+share/GNUstep/System/Library/Headers/libFoundation/${GNUSTEP_HOST_CPU}/${LIBF_HOST_OS}/GNU/lfmemory.h
+share/GNUstep/System/Library/Headers/libFoundation/${GNUSTEP_HOST_CPU}/${LIBF_HOST_OS}/GNU/real_exception_file.h
 share/GNUstep/System/Library/Headers/libFoundation/Foundation/Foundation.h
 share/GNUstep/System/Library/Headers/libFoundation/Foundation/NSAccount.h
 share/GNUstep/System/Library/Headers/libFoundation/Foundation/NSAllocDebugZone.h
@@ -252,8 +252,8 @@ share/GNUstep/System/Tools/Defaults
 @comment in devel/gnustep-make: @dirrm share/GNUstep/System/Tools
 @comment in devel/gnustep-make: @dirrm share/GNUstep/System/Library/Makefiles/Additional
 @comment in devel/gnustep-make: @dirrm share/GNUstep/System/Library/Libraries
-@dirrm share/GNUstep/System/Library/Headers/libFoundation/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}/GNU
-@dirrm share/GNUstep/System/Library/Headers/libFoundation/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS}
+@dirrm share/GNUstep/System/Library/Headers/libFoundation/${GNUSTEP_HOST_CPU}/${LIBF_HOST_OS}/GNU
+@dirrm share/GNUstep/System/Library/Headers/libFoundation/${GNUSTEP_HOST_CPU}/${LIBF_HOST_OS}
 @dirrm share/GNUstep/System/Library/Headers/libFoundation/${GNUSTEP_HOST_CPU}
 @dirrm share/GNUstep/System/Library/Headers/libFoundation/extensions/exceptions
 @dirrm share/GNUstep/System/Library/Headers/libFoundation/extensions
