@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:23 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/03/18 15:56:00 ben Exp $
 bin/snes9x
 bin/offsets
-share/doc/snes9x/CHANGES.TXT
-share/doc/snes9x/COPYRIGHT.TXT
-share/doc/snes9x/HARDWARE.TXT
-share/doc/snes9x/HOW2PORT.TXT
-share/doc/snes9x/PROBLEMS.TXT
-share/doc/snes9x/README.TXT
-share/doc/snes9x/TODO.TXT
+share/doc/snes9x/changes.txt
+share/doc/snes9x/hardware.txt
+share/doc/snes9x/porting.txt
+share/doc/snes9x/problems.txt
+share/doc/snes9x/readme.txt
+share/doc/snes9x/readme.unix
 @dirrm share/doc/snes9x
