@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.26 2006/01/08 18:35:10 xtraeme Exp $
+# $NetBSD: Makefile,v 1.27 2006/03/18 06:54:49 schmonz Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
 
-DISTNAME=		ezmlm-idx-0.443
+DISTNAME=		ezmlm-idx-${IDXVERSION}
+IDXVERSION=		0.443
 PKGREVISION=		1
-SITES_${DISTNAME}.tar.gz=	http://www.ezmlm.org/archive/${PKGVERSION}/
+SITES.${DISTNAME}.tar.gz=	http://www.ezmlm.org/archive/${IDXVERSION}/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.ezmlm.org/
@@ -20,7 +21,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 # ezmlm-idx is a modification of the ezmlm source.
 DJB_RESTRICTED=		YES
-
 
 PKG_SYSCONFSUBDIR=	ezmlm
 CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
