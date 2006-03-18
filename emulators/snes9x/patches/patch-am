@@ -1,6 +1,7 @@
-$NetBSD: patch-am,v 1.1 2002/12/30 21:40:12 kristerw Exp $
---- i386/spc.asm.orig	Mon Dec 30 21:53:48 2002
-+++ i386/spc.asm	Mon Dec 30 21:54:09 2002
+$NetBSD: patch-am,v 1.2 2006/03/18 15:56:00 ben Exp $
+
+--- i386/SPC.ASM.orig	2004-12-30 14:15:44.000000000 -0800
++++ i386/SPC.ASM
 @@ -18,7 +18,7 @@
  ;Destroys:
  ;   EAX

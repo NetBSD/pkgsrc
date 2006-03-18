@@ -1,32 +1,35 @@
-# $NetBSD: Makefile,v 1.34 2006/03/18 13:28:53 ben Exp $
+# $NetBSD: Makefile,v 1.35 2006/03/18 15:56:00 ben Exp $
 
-DISTNAME=		s9xs139
-PKGNAME=		snes9x-1.39
-PKGREVISION=		4
+SNESVER=		1.43
+DISTNAME=		snes9x-${SNESVER}-src
+PKGNAME=		snes9x-${SNESVER}
 CATEGORIES=		emulators
-MASTER_SITES=		http://www.snes9x.com/zips/
-EXTRACT_SUFX=		.zip
+MASTER_SITES=		http://www.lysator.liu.se/snes9x/${SNESVER}/ \
+			http://files.ipherswipsite.com/snes9x/ \
+			http://vincent.grigorieff.free.fr/snes9x/
 
 MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		http://www.snes9x.com/
 COMMENT=		Super Nintendo Entertainment System (SNES) emulator
 
-WRKSRC=			${WRKDIR}/release
+WRKSRC=			${WRKDIR}/${DISTNAME}/snes9x
 USE_TOOLS+=		gmake
 PTHREAD_OPTS+=		require
 INSTALLATION_DIRS=	bin
+GNU_CONFIGURE=		YES
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/snes9x ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/offsets ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snes9x
-	${INSTALL_MAN} ${WRKSRC}/CHANGES.TXT ${PREFIX}/share/doc/snes9x
-	${INSTALL_MAN} ${WRKSRC}/COPYRIGHT.TXT ${PREFIX}/share/doc/snes9x
-	${INSTALL_MAN} ${WRKSRC}/HARDWARE.TXT ${PREFIX}/share/doc/snes9x
-	${INSTALL_MAN} ${WRKSRC}/HOW2PORT.TXT ${PREFIX}/share/doc/snes9x
-	${INSTALL_MAN} ${WRKSRC}/PROBLEMS.TXT ${PREFIX}/share/doc/snes9x
-	${INSTALL_MAN} ${WRKSRC}/README.TXT ${PREFIX}/share/doc/snes9x
-	${INSTALL_MAN} ${WRKSRC}/TODO.TXT ${PREFIX}/share/doc/snes9x
+	${INSTALL_MAN} ${WRKSRC}/doc/porting.txt ${PREFIX}/share/doc/snes9x
+	${INSTALL_MAN} ${WRKSRC}/changes.txt ${PREFIX}/share/doc/snes9x
+	${INSTALL_MAN} ${WRKSRC}/hardware.txt ${PREFIX}/share/doc/snes9x
+	${INSTALL_MAN} ${WRKSRC}/problems.txt ${PREFIX}/share/doc/snes9x
+	${TR} -d '\r' <${WRKDIR}/${DISTNAME}/readme.txt >${WRKSRC}/readme.txt
+	${INSTALL_MAN} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/snes9x
+	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/readme.unix \
+		${PREFIX}/share/doc/snes9x
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,25 +41,21 @@ PKG_SUPPORTED_OPTIONS=	mmx
 
 .include "../../mk/bsd.options.mk"
 
-MAKE_ENV+=	THREAD_SOUND=1
 .if ${MACHINE_ARCH} == "i386"
-MAKE_ENV+=	USING_I386=1
+CONFIGURE_ARGS+=	--with-assembler
+.if !empty(PKG_OPTIONS:Mmmx)
+CONFIGURE_ARGS+=	--with-mmx
+.endif
 .if ${OBJECT_FMT} == "a.out"
 MAKE_ENV+=	FILEFORMAT=aoutb
 MAKE_ENV+=	_ASM_UNDERBARS=1
 .else
 MAKE_ENV+=	FILEFORMAT=elf
 .endif
-MAKE_ENV+=	ZSNESFX=1
-MAKE_ENV+=	ZSNESC4=1
-MAKE_ENV+=	ASMCPU=1
-.if !empty(PKG_OPTIONS:Mmmx)
-MAKE_ENV+=	ASMKREED=1
-.endif
 .endif
 
 .if exists(${X11BASE}/lib/libXxf86dga.a)
-MAKE_ENV+=	NETBSD_USE_DGA=1
+CONFIGURE_ARGS+=	--with-extensions
 .endif
 
 .if exists(/usr/include/usb.h) || exists(/usr/include/usbhid.h)

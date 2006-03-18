@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2001/07/17 15:31:25 wiz Exp $
+$NetBSD: patch-ad,v 1.3 2006/03/18 15:56:00 ben Exp $
 
---- netplay.cpp.orig	Wed Feb 28 22:12:22 2001
+--- netplay.cpp.orig	2004-12-30 14:15:45.000000000 -0800
 +++ netplay.cpp
-@@ -75,8 +75,12 @@
+@@ -126,9 +126,13 @@
  
  #ifdef USE_THREADS
  #include <pthread.h>
@@ -11,7 +11,8 @@ $NetBSD: patch-ad,v 1.2 2001/07/17 15:31:25 wiz Exp $
 +#else
  #include <sched.h>
  #include <semaphore.h>
-+#endif
  #endif
++#endif
  
  #include "snes9x.h"
+ #include "cpuexec.h"
