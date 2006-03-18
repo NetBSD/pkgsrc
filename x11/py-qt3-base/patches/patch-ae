@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2006/03/18 03:01:45 minskim Exp $
+
+--- qt/sipqtQCursor.cpp.orig	2006-03-17 14:51:35.000000000 -0800
++++ qt/sipqtQCursor.cpp
+@@ -158,7 +158,7 @@ static PyObject *meth_QCursor_handle(PyO
+ 		{
+ 			void *sipRes;
+ 
+-			sipRes = sipCpp -> QCursor::handle();
++			sipRes = (void *) sipCpp -> QCursor::handle();
+ 
+ 			return sipConvertFromVoidPtr(sipRes);
+ 		}
