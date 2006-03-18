@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/03/09 21:04:43 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2006/03/18 13:28:53 ben Exp $
 
 DISTNAME=		s9xs139
 PKGNAME=		snes9x-1.39
@@ -7,11 +7,9 @@ CATEGORIES=		emulators
 MASTER_SITES=		http://www.snes9x.com/zips/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		jmcneill@NetBSD.org
+MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		http://www.snes9x.com/
 COMMENT=		Super Nintendo Entertainment System (SNES) emulator
-
-BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
 WRKSRC=			${WRKDIR}/release
 USE_TOOLS+=		gmake
@@ -34,6 +32,7 @@ do-install:
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.snes9x
 .if ${MACHINE_ARCH} == "i386"
+BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 PKG_SUPPORTED_OPTIONS=	mmx
 .endif
 
@@ -67,6 +66,7 @@ MAKE_ENV+=	USBHID_H=1
 .endif
 .endif
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
