@@ -1,6 +1,7 @@
-$NetBSD: patch-an,v 1.1 2002/12/30 21:40:12 kristerw Exp $
---- i386/c4.asm.orig	Mon Dec 30 22:31:27 2002
-+++ i386/c4.asm	Mon Dec 30 22:31:55 2002
+$NetBSD: patch-an,v 1.2 2006/03/18 15:56:00 ben Exp $
+
+--- i386/C4.ASM.orig	2004-12-30 14:15:44.000000000 -0800
++++ i386/C4.ASM
 @@ -5,7 +5,7 @@
  ; enter : BL = bank number, CX = address location
  ; leave : AL = value read

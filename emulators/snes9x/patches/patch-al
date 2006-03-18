@@ -1,7 +1,8 @@
-$NetBSD: patch-al,v 1.1 2002/12/30 21:40:12 kristerw Exp $
---- i386/zsnes.asm.orig	Mon Dec 30 21:21:47 2002
-+++ i386/zsnes.asm	Mon Dec 30 21:22:23 2002
-@@ -92,7 +92,7 @@
+$NetBSD: patch-al,v 1.2 2006/03/18 15:56:00 ben Exp $
+
+--- i386/ZSNES.ASM.orig	2004-12-30 14:15:44.000000000 -0800
++++ i386/ZSNES.ASM
+@@ -92,7 +92,7 @@ NEWSYM SfxAC, dd 0
  
  SECTION .data
  
