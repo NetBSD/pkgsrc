@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/03/14 01:10:49 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2006/03/18 18:38:36 kristerw Exp $
 
 DISTNAME=		mpich-1.2.6
 PKGREVISION=		3
@@ -68,13 +68,13 @@ pre-configure:
 	set -e; for f in MPI-2-C++ examples/perftest/config/confdb mpe \
 	    mpe/slog2sdk mpe/slog2sdk/trace_rlog mpe/slog2sdk/trace_sample\
 	    mpid/ch_p4/p4 romio/confdb src/fortran/config; do \
-		${INSTALL} ${PKGSRCDIR}/mk/gnu-config/config.guess \
+		${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess \
 		    ${WRKSRC}/$$f; \
 	done
 	set -e; for f in MPI-2-C++ examples/perftest/config/confdb mpe \
 	    mpe/slog2sdk mpe/slog2sdk/trace_rlog mpe/slog2sdk/trace_sample\
 	    romio/confdb src/fortran/config; do \
-		${INSTALL} ${PKGSRCDIR}/mk/gnu-config/config.sub \
+		${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub \
 		    ${WRKSRC}/$$f; \
 	done
 .if ${MPI_RSH} == "rsh"
