@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/03/12 14:36:54 taca Exp $
+# $NetBSD: Makefile,v 1.30 2006/03/18 22:22:31 wiz Exp $
 
 DISTNAME=	namazu-2.0.16
 CATEGORIES=	japanese textproc www
@@ -8,7 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.namazu.org/index.html.en
 COMMENT=	Full-text search system intended for easy use
 
-DEPENDS+=	p5-File-MMagic>=1.09:../../misc/p5-File-MMagic
+DEPENDS+=	p5-File-MMagic>=1.25:../../misc/p5-File-MMagic
 DEPENDS+=	p5-Text-Kakasi>=1.04:../../textproc/p5-Text-Kakasi
 DEPENDS+=	p5-nkf>=1.7:../../converters/p5-nkf
 DEPENDS+=	p5-Text-ChaSen>=1.0:../../textproc/p5-Text-ChaSen
