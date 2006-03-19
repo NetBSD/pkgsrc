@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/03/25 13:21:43 adrianp Exp $
+$NetBSD: MESSAGE,v 1.2 2006/03/19 16:55:04 adrianp Exp $
 
 Please refer to the file:
 
@@ -16,7 +16,6 @@ Finally you will also need to make Turba accessible through your HTTP server.
 If you are running Apache and ap-php, then you can add the following lines
 to httpd.conf:
 
-	Include ${PKG_SYSCONFDIR}/horde.conf
 	Include ${PKG_SYSCONFDIR}/turba.conf
 
 ===========================================================================
