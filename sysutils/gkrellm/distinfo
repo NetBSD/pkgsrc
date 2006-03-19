@@ -1,23 +1,28 @@
-$NetBSD: distinfo,v 1.34 2005/09/08 13:19:56 cube Exp $
+$NetBSD: distinfo,v 1.35 2006/03/19 22:10:38 joerg Exp $
 
 SHA1 (gkrellm-2.2.7.tar.bz2) = a6910b6f843868b4d801f7f7873e1e85c4f2039c
 RMD160 (gkrellm-2.2.7.tar.bz2) = 5388e3fba604a7c4b99a9c134ab6526296fe70d8
 Size (gkrellm-2.2.7.tar.bz2) = 673728 bytes
-SHA1 (patch-aa) = 9dbffbc0bc95ea3fced7162da0ec55333396d256
+SHA1 (patch-aa) = bc07107ed828a5a86012cae39316c1d35d2d7a4d
 SHA1 (patch-ab) = 015ed1c6b4d07d2da6aeefab2b746bff3fa1a88e
 SHA1 (patch-ac) = 8890d5a5e8eaf21508a1bf91de788183fd6f7a75
 SHA1 (patch-ad) = 18218e5e9e7a8cfaabb20ec03865670ae66a15bd
-SHA1 (patch-ae) = 5f7b1bdfa99bcec9cfdaee3a97b38b27581dd954
+SHA1 (patch-ae) = d9670d5956daaf768276a7b27b1831cbfc5cf4cb
 SHA1 (patch-ag) = 6791436e17fccd7265cda8b4e3da229c4937c20f
 SHA1 (patch-ah) = 2018be5c2dd11c22c6d3f7c7fc8607e2c63123f3
 SHA1 (patch-ai) = 234e3e1e458e5709157668cf7d18faabdd076071
-SHA1 (patch-aj) = f61f36d1d82388e1d88eb78ec3107be4f8c9cf2b
+SHA1 (patch-aj) = 224deaa57e7703f34a7911c63d2e6833862920c5
 SHA1 (patch-ak) = b96987c120ca4c37c83075da61e8eb04e41d2023
 SHA1 (patch-al) = 4eab3c3757c198dcc3049a63fc3b8adceef7bc1c
 SHA1 (patch-am) = bf8b01f5e368a5387f8d224ca51ec18a74410b5c
 SHA1 (patch-an) = 1e63ce0e4fbe9bd22c46d00c6aeac6b3e7cda440
-SHA1 (patch-ao) = 63bf8657fa7707def41b13b3cc74c031098e070a
-SHA1 (patch-ap) = b3c89911085e73b8651e35f71b9561046b3cd073
+SHA1 (patch-ao) = afc56bb647c6b3bb9eba90b0b18d918dcf31a100
+SHA1 (patch-ap) = b2c33796fdfdc0166a869e528fcaab1f8f0ab615
 SHA1 (patch-aq) = 0799e334333ae072a40cdcb6ccd04ed6a2f52765
-SHA1 (patch-ar) = eae37435d69b277f2542ee5ff26cbc772272689b
+SHA1 (patch-ar) = 86ee88c8506c1ceb1d35eb488d209b16306a715d
 SHA1 (patch-as) = 3df33e28754cf1fee88717b431726bf090c15f70
+SHA1 (patch-au) = 27df64d854cb15202fa984170faeab4c128d5cad
+SHA1 (patch-av) = 09cbc2fbb8226f8fe56bff458a4772998cae3f32
+SHA1 (patch-aw) = c32ae045dad9754edb88e375b8893cfe161567d0
+SHA1 (patch-ax) = 4377fa60acbc701c2cb78636574168820af2b936
+SHA1 (patch-ay) = bc512682f19631273a372581c6e091c7465e98d6

@@ -78,7 +78,7 @@ clean:
 
 SYSDEPS = ../src/sysdeps/bsd-common.c ../src/sysdeps/bsd-net-open.c \
 	../src/sysdeps/freebsd.c ../src/sysdeps/gtop.c \
-	../src/sysdeps/linux.c ../src/sysdeps/netbsd.c \
+	../src/sysdeps/linux.c ../src/sysdeps/netbsd.c ../src/sysdeps/dragonfly.c  \
 	../src/sysdeps/openbsd.c ../src/sysdeps/solaris.c ../src/sysdeps/darwin.c
 
 main.o:		main.c gkrellmd.h

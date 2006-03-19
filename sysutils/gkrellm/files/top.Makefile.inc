@@ -66,7 +66,7 @@ endif
 
 ifeq ($(GTOP),)
 # OS-specific overrides
-SUPPORTED_OSES=	Linux NetBSD FreeBSD OpenBSD Darwin Solaris
+SUPPORTED_OSES=	Linux NetBSD FreeBSD OpenBSD Darwin Solaris DragonFly
 
 REALOPSYS=	$(shell uname -s)
 OPSYS=		$(if $(findstring $(REALOPSYS),$(SUPPORTED_OSES)),$(REALOPSYS),Linux)
@@ -128,6 +128,13 @@ SYS_LIBS+=	-lresolv -lX11
 SYS_LIBS+=	-lnsl
       endif
      endif
+    else
+      ifeq (${OPSYS},DragonFly)
+BINGROUP=	kmem
+NEED_MD5=	no
+MD5_LIBS=	-lmd
+SYS_LIBS=	-lkvm -lkinfo -ldevstat
+      endif
     endif
    endif
   endif
