@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4765 2006/03/18 15:56:48 ben Exp $
+$NetBSD: TODO,v 1.4766 2006/03/19 11:58:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -327,6 +327,7 @@ Suggested package updates
 	o aliados-0.2.0
 	o amanda-*-2.4.5p1
 	o amavis-0.3.12
+	o amule-2.1.1
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.74
 	o ap-Embperl-1.3.6
@@ -454,7 +455,7 @@ Suggested package updates
 	o dspam-3.6.4
 	o dvd+rw-tools-6.1
 	o dvdauthor-0.6.11
-	o dvdrip-0.52.6
+	o dvdrip-0.52.7
 	o dx-4.3.3
 	o e16menuedit2-0.0.3
 	o e2fsprogs-1.38
@@ -495,6 +496,7 @@ Suggested package updates
 	o fd-2.08a
 	o fdgw-20040609
 	o fetchmail-6.3.2
+	o fftw-3.1.1
 	o fhist-1.14
 	o file-4.15
 	o findutils-4.2.27
@@ -605,6 +607,7 @@ Suggested package updates
 	o haskell-mode-1.45
 	o hercules-3.02
 	o hobbitmon-4.0.4 [pkg/30484]
+	o honeyd-1.5a
 	o hot-babe-0.2.2
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2ps-1.0b4
@@ -980,6 +983,7 @@ Suggested package updates
 	o postgresql_autodoc-1.25
 	o potrace-1.7
 	o prayer-1.0.15
+	o prelude-manager-0.9.4
 	o proj-4.4.9
 	o projclock-0.9
 	o proxsmtp-1.2.1
@@ -1213,7 +1217,7 @@ Suggested package updates
 	o wcalc-2.2
 	o wdm-1.28
 	o webmin-1.260
-	o weechat-0.1.6
+	o weechat-0.1.8
 	o weewm-0.01
 	o winbind-3.0.13
 	o wine-0.9.10
