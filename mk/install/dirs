@@ -1,10 +1,10 @@
-# $NetBSD: dirs,v 1.9 2006/03/15 04:52:57 jlam Exp $
+# $NetBSD: dirs,v 1.10 2006/03/19 23:58:14 jlam Exp $
 #
 # Generate a +DIRS script that reference counts directories that are
 # required for the proper functioning of the package.
 #
-case "${STAGE}" in
-PRE-INSTALL|UNPACK)
+case "${STAGE},$1" in
+UNPACK,|UNPACK,+DIRS)
 	${CAT} > ./+DIRS << 'EOF'
 #!@SH@
 #
