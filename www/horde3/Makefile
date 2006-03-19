@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/03/08 23:04:58 adrianp Exp $
+# $NetBSD: Makefile,v 1.21 2006/03/19 16:53:22 adrianp Exp $
 
 DISTNAME=	horde-3.1
 CATEGORIES=	www
@@ -27,7 +27,7 @@ DOCDIR=		${PREFIX}/share/doc/horde
 EGDIR=		${PREFIX}/share/examples/horde
 HORDEDIR=	${PREFIX}/share/horde
 PAXDIRS=	js lib locale po scripts services templates themes util admin
-SENDMAIL?=      /usr/sbin/sendmail
+SENDMAIL?=	/usr/sbin/sendmail
 
 PKG_SYSCONFSUBDIR?=	httpd
 MESSAGE_SUBST+=		HORDEDIR=${HORDEDIR:Q}
@@ -79,9 +79,9 @@ SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
 SUBST_FILES.files=	horde.conf.dist config/conf.xml config/conf.xml.dist \
 			scripts/set_perms.sh
-SUBST_SED.files=	-e "s|@HORDEDIR@|${HORDEDIR}|g" \
-			-e "s|/usr/lib/sendmail|${SENDMAIL}|g" \
-			-e "s|/bin/sh|${SH}|g"
+SUBST_SED.files=	-e "s|@HORDEDIR@|${HORDEDIR}|g"
+SUBST_SED.files+=	-e "s|/usr/lib/sendmail|${SENDMAIL}|g"
+SUBST_SED.files+=	-e "s|/bin/sh|${SH}|g"
 SUBST_MESSAGE.files=	Fixing configuration files.
 
 .include "options.mk"
