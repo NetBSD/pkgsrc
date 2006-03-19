@@ -1,0 +1,17 @@
+$NetBSD: patch-ay,v 1.1 2006/03/19 22:10:38 joerg Exp $
+
+--- src/sysdeps-unix.c.orig	2006-03-17 01:00:20.000000000 +0000
++++ src/sysdeps-unix.c
+@@ -43,6 +43,12 @@ static gboolean (*mbmon_check_func)();
+ #include "sysdeps/sensors-common.c"
+ #endif
+ 
++#if defined(__DragonFly__)
++#include "sysdeps/dragonfly.c"
++#include "sysdeps/bsd-common.c"
++#include "sysdeps/sensors-common.c"
++#endif
++
+ #if defined(__NetBSD__)
+ #include "sysdeps/netbsd.c"
+ #include "sysdeps/bsd-net-open.c"

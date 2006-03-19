@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2005/12/05 20:51:00 rillig Exp $
+# $NetBSD: Makefile.common,v 1.14 2006/03/19 22:10:38 joerg Exp $
 
 DISTNAME=	${GKRELLM_DISTBASE}
 PKGNAME=	${GKRELLM_PKGBASE}-${GKRELLM_VERSION}
@@ -35,3 +35,4 @@ post-extract:
 	${CP} ${FILESDIR}/po.Makefile ${WRKSRC}/po/Makefile
 	${CP} ${FILESDIR}/server.Makefile ${WRKSRC}/server/Makefile
 	${CP} ${FILESDIR}/src.Makefile ${WRKSRC}/src/Makefile
+	${CP} ${FILESDIR}/dragonfly.c ${WRKSRC}/src/sysdeps

@@ -1,15 +1,17 @@
-$NetBSD: patch-ao,v 1.1 2005/03/22 14:57:12 cube Exp $
+$NetBSD: patch-ao,v 1.2 2006/03/19 22:10:38 joerg Exp $
 
---- server/sysdeps-unix.c.orig	2005-03-19 17:00:16.000000000 +0100
+--- server/sysdeps-unix.c.orig	2005-03-19 16:00:16.000000000 +0000
 +++ server/sysdeps-unix.c
-@@ -24,8 +24,10 @@
+@@ -43,6 +43,12 @@ static gint gkrellm_connect_to(gchar *, 
+ #include "../src/sysdeps/sensors-common.c"
+ #endif
  
- #include "../src/gkrellm-sysdeps.h"
- 
-+#if 0
- static gboolean (*mbmon_check_func)();
- static gint gkrellm_connect_to(gchar *, gint);
++#if defined(__DragonFly__)
++#include "../src/sysdeps/dragonfly.c"
++#include "../src/sysdeps/bsd-common.c"
++#include "../src/sysdeps/sensors-common.c"
 +#endif
- 
- #if defined(__linux__)
- #include "../src/sysdeps/linux.c"
++
+ #if defined(__NetBSD__)
+ #include "../src/sysdeps/netbsd.c"
+ #include "../src/sysdeps/bsd-net-open.c"
