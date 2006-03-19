@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:08:41 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/19 15:54:13 wiz Exp $
 
 DISTNAME=		darcs-1.0.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://abridgegame.org/darcs/
 
@@ -18,5 +18,7 @@ GNU_CONFIGURE=		yes
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../lang/ghc/buildlink3.mk"
+# gmp should be implied by ghc, but isn't (PR 33100)
+.include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
