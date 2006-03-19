@@ -1,7 +1,11 @@
-# $NetBSD: install,v 1.44 2006/03/15 04:52:57 jlam Exp $
+# $NetBSD: install,v 1.45 2006/03/19 23:58:14 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
+	#
+	# Unpack the helper scriptlets.
+	#
+	${SELF} ${PKGNAME} UNPACK
 	#
 	# Require that necessary users and groups exist or else fail the
 	# installation of the package.
