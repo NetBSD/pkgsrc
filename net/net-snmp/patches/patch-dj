@@ -1,0 +1,13 @@
+$NetBSD: patch-dj,v 1.1 2006/03/19 22:03:29 joerg Exp $
+
+--- Makefile.in.orig	2006-03-19 19:14:48.000000000 +0000
++++ Makefile.in
+@@ -20,7 +20,7 @@ INCLUDESUBDIRHEADERS= aix.h bsd.h bsdi3.
+ 	dynix.h freebsd2.h freebsd3.h freebsd4.h freebsd.h generic.h hpux.h \
+ 	irix.h linux.h mingw32.h mips.h netbsd.h openbsd.h osf5.h \
+ 	solaris2.6.h solaris2.7.h solaris2.8.h solaris2.9.h solaris2.10.h \
+-	solaris.h sunos.h svr5.h sysv.h ultrix4.h
++	solaris.h sunos.h svr5.h sysv.h ultrix4.h dragonfly.h
+ INCLUDESUBDIR2=machine
+ INCLUDESUBDIRHEADERS2=generic.h
+ INSTALLBUILTHEADERS=include/net-snmp/net-snmp-config.h
