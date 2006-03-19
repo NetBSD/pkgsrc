@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/03/08 23:54:27 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/03/19 16:55:04 adrianp Exp $
 share/doc/turba/INSTALL
 share/doc/turba/LDAP
 share/doc/turba/README
@@ -265,7 +265,7 @@ share/horde/turba/view.php
 @dirrm share/horde/turba/lib/Driver
 @dirrm share/horde/turba/lib/Block
 @dirrm share/horde/turba/lib
-@dirrm share/horde/turba/config
-@dirrm share/horde/turba
+@unexec ${RMDIR} %D/share/horde/turba/config 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/horde/turba 2>/dev/null || ${TRUE}
 @dirrm share/examples/turba
 @dirrm share/doc/turba

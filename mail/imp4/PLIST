@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/03/08 23:38:09 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/03/19 16:54:35 adrianp Exp $
 share/doc/imp/CHANGES
 share/doc/imp/COPYING
 share/doc/imp/CREDITS
@@ -497,7 +497,7 @@ share/horde/imp/view.php
 @dirrm share/horde/imp/lib/Block
 @dirrm share/horde/imp/lib/Auth
 @dirrm share/horde/imp/lib
-@dirrm share/horde/imp/config
-@dirrm share/horde/imp
+@unexec ${RMDIR} %D/share/horde/imp/config 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/horde/imp 2>/dev/null || ${TRUE}
 @dirrm share/examples/imp
 @dirrm share/doc/imp
