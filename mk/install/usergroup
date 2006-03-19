@@ -1,10 +1,10 @@
-# $NetBSD: usergroup,v 1.13 2006/03/15 04:52:57 jlam Exp $
+# $NetBSD: usergroup,v 1.14 2006/03/19 23:58:14 jlam Exp $
 #
 # Generate a +USERGROUP script that reference-counts users and groups
 # that are required for the proper functioning of the package.
 #
-case "${STAGE}" in
-PRE-INSTALL|UNPACK)
+case "${STAGE},$1" in
+UNPACK,|UNPACK,+USERGROUP)
 	${CAT} > ./+USERGROUP << 'EOF'
 #!@SH@
 #
