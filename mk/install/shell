@@ -1,9 +1,9 @@
-# $NetBSD: shell,v 1.5 2006/03/15 04:52:57 jlam Exp $
+# $NetBSD: shell,v 1.6 2006/03/19 23:58:14 jlam Exp $
 #
 # Generate a +SHELL script that handles shell registration for the package.
 #
-case "${STAGE}" in
-PRE-INSTALL|UNPACK)
+case "${STAGE},$1" in
+UNPACK,|UNPACK,+SHELL)
 	${CAT} > ./+SHELL << 'EOF'
 #!@SH@
 #

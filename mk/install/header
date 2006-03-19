@@ -1,10 +1,11 @@
 #!@SH@
 #
-# $NetBSD: header,v 1.35 2006/03/15 04:52:57 jlam Exp $
+# $NetBSD: header,v 1.36 2006/03/19 23:58:14 jlam Exp $
 
-SELF=$0
-PKGNAME=$1
-STAGE=$2
+SELF="$0"
+PKGNAME="$1"
+STAGE="$2"
+shift 2
 
 AWK="@AWK@"
 BASENAME="@BASENAME@"
