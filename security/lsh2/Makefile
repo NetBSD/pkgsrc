@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2006/03/14 19:30:12 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/19 12:22:12 wiz Exp $
 #
 
 DISTNAME=		lsh-2.0.2
 CATEGORIES=		security
-MASTER_SITES=		ftp://ftp.lysator.liu.se/pub/security/lsh/
+MASTER_SITES=		http://www.lysator.liu.se/~nisse/archive/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.lysator.liu.se/~nisse/lsh/
