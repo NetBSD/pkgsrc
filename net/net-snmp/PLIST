@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/01/24 22:16:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/03/19 22:03:29 joerg Exp $
 bin/encode_keychange
 bin/fixproc
 bin/ipf-mod.pl
@@ -143,6 +143,7 @@ include/net-snmp/system/cygwin.h
 include/net-snmp/system/darwin.h
 include/net-snmp/system/darwin7.h
 include/net-snmp/system/darwin8.h
+include/net-snmp/system/dragonfly.h
 include/net-snmp/system/dynix.h
 include/net-snmp/system/freebsd.h
 include/net-snmp/system/freebsd2.h
