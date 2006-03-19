@@ -1,7 +1,16 @@
-$NetBSD: patch-af,v 1.5 2006/01/24 22:16:55 adam Exp $
+$NetBSD: patch-af,v 1.6 2006/03/19 22:03:29 joerg Exp $
 
---- configure.orig	2006-01-14 02:51:51.000000000 +0100
+--- configure.orig	2006-01-14 01:51:51.000000000 +0000
 +++ configure
+@@ -13421,7 +13421,7 @@ else
+    default_mibs=IP-MIB:IF-MIB:TCP-MIB:UDP-MIB:HOST-RESOURCES-MIB:SNMPv2-MIB:RFC1213-MIB:NOTIFICATION-LOG-MIB:DISMAN-EVENT-MIB:DISMAN-SCHEDULE-MIB
+ 
+    case $target_os in
+-      linux* | mingw32* | cygwin* | freebsd* | dynix* | solaris2* | hpux* )
++      linux* | mingw32* | cygwin* | freebsd* | dynix* | solaris2* | hpux* | dragonfly* )
+          new_module_list="$new_module_list host"
+          ;;
+       *)
 @@ -15503,6 +15503,53 @@ fi
  
  fi
@@ -56,3 +65,118 @@ $NetBSD: patch-af,v 1.5 2006/01/24 22:16:55 adam Exp $
  # Check for libraries that the agent needs
  # saving old libraries
  NONAGENTLIBS=$LIBS
+@@ -27716,7 +27763,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -27814,7 +27863,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -27912,10 +27963,14 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+-#undef _KERNEL
++#if !defined(__DragonFly__)
++#define _KERNEL
++#endif
+ #include <net/route.h>
+ 
+ 
+@@ -27999,7 +28054,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -28066,7 +28123,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -28204,7 +28263,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -28299,7 +28360,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -28398,7 +28461,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -28497,7 +28562,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -28596,7 +28663,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #endif
+ #include <sys/types.h>
+ #define KERNEL
++#if !defined(__DragonFly__)
+ #define _KERNEL
++#endif
+ #include <sys/socket.h>
+ #undef KERNEL
+ #undef _KERNEL
+@@ -34718,6 +34787,8 @@ do
+ _ACEOF
+ cat >>$CONFIG_STATUS <<\_ACEOF
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++    # Avoid regenerating for rechecks on pkgsrc
++    exit 0
+     ac_cs_recheck=: ;;
+   --version | --vers* | -V )
+     echo "$ac_cs_version"; exit 0 ;;

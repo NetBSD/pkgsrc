@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.3 2006/01/24 22:16:55 adam Exp $
+$NetBSD: patch-am,v 1.4 2006/03/19 22:03:29 joerg Exp $
 
---- agent/mibgroup/host/hr_swrun.c.orig	2005-10-28 23:28:45.000000000 +0200
+--- agent/mibgroup/host/hr_swrun.c.orig	2005-10-28 21:28:45.000000000 +0000
 +++ agent/mibgroup/host/hr_swrun.c
 @@ -884,6 +884,8 @@ var_hrswrun(struct variable * vp,
  	else
@@ -11,3 +11,14 @@ $NetBSD: patch-am,v 1.3 2006/01/24 22:16:55 adam Exp $
  #else
  	long_return = 4;	/* application */
  #endif
+@@ -1025,6 +1027,10 @@ var_hrswrun(struct variable * vp,
+         long_return = 0;
+     #elif defined(freebsd5)
+         long_return = proc_table[LowProcIndex].ki_runtime / 100000;
++    #elif defined(dragonfly)
++        long_return = proc_table[LowProcIndex].kp_eproc.e_uticks +
++            proc_table[LowProcIndex].kp_eproc.e_sticks +
++            proc_table[LowProcIndex].kp_eproc.e_iticks;
+     #else
+         long_return = proc_table[LowProcIndex].kp_proc.p_uticks +
+             proc_table[LowProcIndex].kp_proc.p_sticks +

@@ -1,0 +1,16 @@
+$NetBSD: patch-dl,v 1.1 2006/03/19 22:03:29 joerg Exp $
+
+--- agent/mibgroup/mibII/tcp.c.orig	2006-03-19 20:03:42.000000000 +0000
++++ agent/mibgroup/mibII/tcp.c
+@@ -169,6 +169,11 @@ init_tcp(void)
+ #define USES_TRADITIONAL_TCPSTAT
+ #endif
+ 
++#ifdef dragonfly
++#define TCP_STAT_STRUCTURE	struct tcp_stats
++#define USES_TRADITIONAL_TCPSTAT
++#endif
++
+ #if !defined(TCP_STAT_STRUCTURE)
+ #define TCP_STAT_STRUCTURE	struct tcpstat
+ #define USES_TRADITIONAL_TCPSTAT

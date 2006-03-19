@@ -1,0 +1,13 @@
+$NetBSD: patch-df,v 1.1 2006/03/19 22:03:29 joerg Exp $
+
+--- agent/mibgroup/ucd_snmp.h.orig	2006-03-19 19:01:01.000000000 +0000
++++ agent/mibgroup/ucd_snmp.h
+@@ -41,6 +41,8 @@ config_arch_require(freebsd5, ucd-snmp/v
+ config_arch_require(freebsd5, ucd-snmp/memory_freebsd2)
+ config_arch_require(freebsd6, ucd-snmp/vmstat_freebsd2)
+ config_arch_require(freebsd6, ucd-snmp/memory_freebsd2)
++config_arch_require(dragonfly, ucd-snmp/vmstat_freebsd2)
++config_arch_require(dragonfly, ucd-snmp/memory_freebsd2)
+ config_arch_require(netbsd1, ucd-snmp/vmstat_netbsd1)
+ config_arch_require(netbsd1, ucd-snmp/memory_netbsd1)
+ config_arch_require(netbsd, ucd-snmp/vmstat_netbsd1)
