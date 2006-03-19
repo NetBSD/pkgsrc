@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13336 2006/03/19 15:54:59 wiz Exp $
+$NetBSD: CHANGES,v 1.13337 2006/03/19 22:04:05 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1549,3 +1549,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/snes9x to 1.43 [ben 2006-03-18]
 	Updated x11/wxhaskell to 0.9.4nb5 [wiz 2006-03-19]
 	Updated devel/darcs to 1.0.4nb2 [wiz 2006-03-19]
+	Updated net/net-snmp to 5.3.0.1nb2 [joerg 2006-03-19]
