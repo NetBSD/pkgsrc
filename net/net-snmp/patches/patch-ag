@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.6 2006/03/08 02:47:13 minskim Exp $
+$NetBSD: patch-ag,v 1.7 2006/03/19 22:03:29 joerg Exp $
 
---- agent/mibgroup/host/hr_storage.c.orig	2005-10-31 01:14:38.000000000 -0800
+--- agent/mibgroup/host/hr_storage.c.orig	2005-10-31 09:14:38.000000000 +0000
 +++ agent/mibgroup/host/hr_storage.c
 @@ -73,6 +73,13 @@
  #endif
@@ -16,7 +16,14 @@ $NetBSD: patch-ag,v 1.6 2006/03/08 02:47:13 minskim Exp $
  #if defined(HAVE_UVM_UVM_PARAM_H) && defined(HAVE_UVM_UVM_EXTERN_H)
  #include <uvm/uvm_param.h>
  #include <uvm/uvm_extern.h>
-@@ -86,13 +93,6 @@
+@@ -80,20 +87,13 @@
+ #include <vm/vm_param.h>
+ #include <vm/vm_extern.h>
+ #endif
++#endif
+ #if HAVE_KVM_H
+ #include <kvm.h>
+ #endif
  #if HAVE_FCNTL_H
  #include <fcntl.h>
  #endif
@@ -27,9 +34,10 @@ $NetBSD: patch-ag,v 1.6 2006/03/08 02:47:13 minskim Exp $
 -#else
 -#undef HAVE_SYS_POOL_H
 -#endif
- #endif
+-#endif
  #if HAVE_SYS_MBUF_H
  #include <sys/mbuf.h>
+ #endif
 @@ -732,11 +732,6 @@ really_try_next:
              case HRS_TYPE_SWAP:
                  long_return = -1;
