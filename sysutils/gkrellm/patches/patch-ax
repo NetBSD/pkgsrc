@@ -1,0 +1,13 @@
+$NetBSD: patch-ax,v 1.1 2006/03/19 22:10:38 joerg Exp $
+
+--- src/plugins.c.orig	2006-03-17 00:55:53.000000000 +0000
++++ src/plugins.c
+@@ -761,7 +761,7 @@ gkrellm_place_plugin(GList **monitor_lis
+ 				if (list == *monitor_list)
+ 					*monitor_list = g_list_prepend(list, plugin);
+ 				else
+-					g_list_prepend(list, plugin);
++					list = g_list_prepend(list, plugin);
+ 				}
+ 			return;
+ 			}
