@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/03/08 23:04:58 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/03/19 16:53:22 adrianp Exp $
 share/doc/horde/CHANGES
 share/doc/horde/CODING_STANDARDS
 share/doc/horde/CONTRIBUTING
@@ -1713,7 +1713,7 @@ share/horde/util/regex_test.php
 @dirrm share/horde/lib/Block
 @dirrm share/horde/lib
 @dirrm share/horde/js
-@dirrm share/horde/config
+@unexec ${RMDIR} %D/share/horde/config 2>/dev/null || ${TRUE}
 @dirrm share/horde/admin/setup
 @dirrm share/horde/admin/perms
 @dirrm share/horde/admin/locale/fi_FI
@@ -1721,6 +1721,6 @@ share/horde/util/regex_test.php
 @dirrm share/horde/admin/locale/hu_HU
 @dirrm share/horde/admin/locale
 @dirrm share/horde/admin
-@dirrm share/horde
+@unexec ${RMDIR} %D/share/horde 2>/dev/null || ${TRUE}
 @dirrm share/examples/horde
 @dirrm share/doc/horde
