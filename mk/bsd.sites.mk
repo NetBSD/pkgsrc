@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.57 2006/03/04 00:04:38 rh Exp $
+# $NetBSD: bsd.sites.mk,v 1.58 2006/03/19 13:12:53 jdolecek Exp $
 #
 # Default MASTER_SITES
 
@@ -26,7 +26,8 @@ MASTER_SITE_GNU+=       \
 	ftp://ftp.rediris.es/mirror/GNU/gnu/ \
 	ftp://ftp.lip6.fr/pub/gnu/ \
 	ftp://ftp.tuwien.ac.at/linux/gnu/gnusrc/ \
-	ftp://ftp.chg.ru/pub/gnu/
+	ftp://ftp.chg.ru/pub/gnu/ \
+	ftp://ftp.fi.muni.cz/pub/gnu/gnu/
 
 MASTER_SITE_GNUSTEP+=   \
 	ftp://ftp.gnustep.org/pub/gnustep/ \
@@ -43,7 +44,8 @@ MASTER_SITE_PERL_CPAN+= \
 	ftp://ftp.gmd.de/mirrors/CPAN/modules/by-module/ \
 	ftp://ftp.tuwien.ac.at/pub/CPAN/modules/by-module/ \
 	ftp://mirrors.cloud9.net/mirrors/CPAN/modules/by-module/ \
-	http://cpan.perl.org/CPAN/modules/by-module/
+	http://cpan.perl.org/CPAN/modules/by-module/ \
+	ftp://ftp.fi.muni.cz/pub/CPAN/modules/by-module/ 
 
 MASTER_SITE_R_CRAN+=    \
 	http://cran.r-project.org/src/ \
@@ -62,7 +64,8 @@ MASTER_SITE_R_CRAN+=    \
 MASTER_SITE_TEX_CTAN+= \
 	ftp://ftp.funet.fi/pub/TeX/CTAN/ \
 	ftp://ftp.tex.ac.uk/tex-archive/ \
-	ftp://ftp.dante.de/tex-archive/
+	ftp://ftp.dante.de/tex-archive/ \
+	ftp://ftp.fi.muni.cz/pub/text/CTAN/
 
 MASTER_SITE_SUNSITE+=   \
 	ftp://sunsite.unc.edu/pub/Linux/ \
