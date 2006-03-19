@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.162 2006/03/16 22:31:59 jlam Exp $
+# $NetBSD: replace.mk,v 1.163 2006/03/19 23:40:07 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -659,6 +659,17 @@ TOOLS_DEPENDS.tclsh?=		tcl>=8.4:../../lang/tcl
 TOOLS_CREATE+=			tclsh
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.tclsh=tcl
 TOOLS_PATH.tclsh=		${TOOLS_PREFIX.tclsh}/bin/tclsh
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.texi2html) && !empty(_USE_TOOLS:Mtexi2html)
+.  if !empty(PKGPATH:Mtextproc/texi2html)
+MAKEFLAGS+=			TOOLS_IGNORE.texi2html=
+.  elif !empty(_TOOLS_USE_PKGSRC.texi2html:M[yY][eE][sS])
+TOOLS_DEPENDS.texi2html?=	texi2html>=1.76:../../textproc/texi2html
+TOOLS_CREATE+=			texi2html
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.texi2html=texi2html
+TOOLS_PATH.texi2html=		${TOOLS_PREFIX.texi2html}/bin/texi2html
 .  endif
 .endif
 
