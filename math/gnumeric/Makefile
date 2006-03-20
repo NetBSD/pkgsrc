@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.106 2006/03/06 00:18:19 wiz Exp $
+# $NetBSD: Makefile,v 1.107 2006/03/20 07:14:36 wiz Exp $
 #
 
 DISTNAME=		gnumeric-1.6.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -24,6 +24,11 @@ PYTHON_VERSIONS_ACCEPTED=	24 23
 GCONF2_SCHEMAS=		gnumeric-dialogs.schemas gnumeric-general.schemas \
 			gnumeric-plugins.schemas
 
+# XXX: link test against libDynaLoader_pic.a fails; bug
+# in buildlink
+PLIST_SUBST+=	PERL="@comment "
+#.include "../../lang/perl5/buildlink3.mk"
+
 .include "../../databases/libgda/buildlink3.mk"
 .include "../../databases/libgnomedb/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
@@ -40,7 +45,6 @@ GCONF2_SCHEMAS=		gnumeric-dialogs.schemas gnumeric-general.schemas \
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 # guile is currently not supported in gnumeric
 #.include "../../lang/guile/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../misc/goffice/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"

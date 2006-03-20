@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2006/02/04 17:03:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2006/03/20 07:14:36 wiz Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -58,10 +58,10 @@ lib/gnumeric/${PKGVERSION}/plugins/oleo/oleo.la
 lib/gnumeric/${PKGVERSION}/plugins/oleo/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/openoffice/openoffice.la
 lib/gnumeric/${PKGVERSION}/plugins/openoffice/plugin.xml
-lib/gnumeric/${PKGVERSION}/plugins/perl-func/perl_func.pl
-lib/gnumeric/${PKGVERSION}/plugins/perl-func/plugin.xml
-lib/gnumeric/${PKGVERSION}/plugins/perl-loader/perl_loader.la
-lib/gnumeric/${PKGVERSION}/plugins/perl-loader/plugin.xml
+${PERL}lib/gnumeric/${PKGVERSION}/plugins/perl-func/perl_func.pl
+${PERL}lib/gnumeric/${PKGVERSION}/plugins/perl-func/plugin.xml
+${PERL}lib/gnumeric/${PKGVERSION}/plugins/perl-loader/perl_loader.la
+${PERL}lib/gnumeric/${PKGVERSION}/plugins/perl-loader/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/plan_perfect/plan_perfect.la
 lib/gnumeric/${PKGVERSION}/plugins/plan_perfect/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/qpro/plugin.xml
@@ -734,8 +734,8 @@ share/pixmaps/win32-gnumeric.ico
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/sample_datasource
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/qpro
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/plan_perfect
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/perl-loader
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/perl-func
+${PERL}@dirrm lib/gnumeric/${PKGVERSION}/plugins/perl-loader
+${PERL}@dirrm lib/gnumeric/${PKGVERSION}/plugins/perl-func
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/openoffice
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/oleo
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/numtheory
