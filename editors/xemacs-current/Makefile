@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2006/02/05 23:08:59 joerg Exp $
+# $NetBSD: Makefile,v 1.52 2006/03/20 18:21:29 jlam Exp $
 
 DISTNAME=	xemacs-21.5.19
-PKGREVISION=	2
+PKGREVISION=	3
 
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=xemacs-21.5/}
@@ -42,7 +42,7 @@ WITH_WIDGETS=	--with-widgets=lucid
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 
-INFOPATH=	${PREFIX}/info:${X11BASE}/info:/usr/local/info
+INFOPATH=	${PREFIX}/${PKGINFODIR}:${X11BASE}/${PKGINFODIR}:${LOCALBASE}/${PKGINFODIR}
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	${MACHINE_GNU_PLATFORM}
@@ -58,6 +58,7 @@ CONFIGURE_ARGS+=	--site-includes=${PREFIX}/include:${WRKDIR}
 CONFIGURE_ARGS+=	--site-libraries=${PREFIX}/lib
 
 CFLAGS+=		-Dunix
+INFO_FILES=		# PLIST
 
 post-patch:
 	@${RM} -f ${WRKSRC}/etc/ctags.1.orig
