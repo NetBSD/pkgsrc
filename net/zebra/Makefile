@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2006/03/05 16:27:28 jlam Exp $
+# $NetBSD: Makefile,v 1.75 2006/03/20 18:15:38 jlam Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 
 DISTNAME=	zebra-0.95
@@ -14,7 +14,6 @@ COMMENT=	Free multithreaded routing daemon software
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/${INFO_DIR}
 
 PKG_SYSCONFSUBDIR?=	zebra
 EGDIR=		${PREFIX}/share/examples/zebra
@@ -29,8 +28,7 @@ CFLAGS+=	-O0
 CONFLICTS+=		quagga-[0-9]*
 
 PLIST_SRC=		# empty
-
-INFO_FILES=		zebra.info
+INFO_FILES=		# PLIST
 
 BUILD_DEFS+=		USE_ZEBRA_VTYSH
 
@@ -74,7 +72,7 @@ pre-configure:
 #post-build:
 #	cd ${WRKSRC}/doc ; \
 #	${TOUCH} zebra.texi ; \
-#	${MAKEINFO} --no-split zebra.texi
+#	makeinfo zebra.texi
 
 post-install:
 	@${CHMOD} a+r ${PREFIX}/share/examples/zebra/*

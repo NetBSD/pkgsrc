@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/09/02 02:27:11 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/03/20 18:15:38 jlam Exp $
 bin/pvs
 pvs/README
 pvs/bin/ix86-redhat5/runtime/file_utils.so
@@ -14,6 +14,7 @@ pvs/bin/relocate
 pvs/bin/tarmail
 pvs/bin/untarmail
 pvs/doc/release-notes/pvs-release-notes.html
+pvs/doc/release-notes/pvs-release-notes.info
 pvs/doc/release-notes/pvs-release-notes.pdf
 pvs/doc/release-notes/pvs-release-notes.ps
 pvs/emacs/README

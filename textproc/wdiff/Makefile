@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/05 16:27:29 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/20 18:15:39 jlam Exp $
 #
 
 DISTNAME=		wdiff-0.5
@@ -15,8 +15,8 @@ CONFIGURE_HAS_INFODIR=	no
 CONFIGURE_HAS_MANDIR=	no
 
 USE_TOOLS+=		makeinfo
-INFO_FILES=		wdiff.info
-INSTALLATION_DIRS=	bin ${INFO_DIR} ${PKGMANDIR}/man1 share/doc/wdiff
+INFO_FILES=		# PLIST
+INSTALLATION_DIRS=	bin ${PKGINFODIR} ${PKGMANDIR}/man1 share/doc/wdiff
 
 # pkgsrc does not provide libtermcap, but ncurses does provide
 # libtermcap routines.
@@ -26,9 +26,12 @@ BUILDLINK_TRANSFORM+=	l:termcap:ncurses
 .endif
 
 do-install:
-	${INSTALL_MAN} ${WRKSRC}/wdiff.1 ${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_MAN} ${WRKSRC}/wdiff.info ${PREFIX}/${INFO_DIR}/
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/wdiff/
-	${INSTALL_PROGRAM} ${WRKSRC}/wdiff ${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/wdiff.1 ${PREFIX}/${PKGMANDIR}/man1
+	cd ${WRKSRC}; for f in wdiff.info wdiff.info-[0-9]*; do		\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_MAN} "$$f" ${PREFIX}/${PKGINFODIR};		\
+	done
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/wdiff
+	${INSTALL_PROGRAM} ${WRKSRC}/wdiff ${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
