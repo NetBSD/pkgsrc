@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/05 16:27:27 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/20 05:35:58 jlam Exp $
 #
 
 DISTNAME=		bbdb-2.34
@@ -19,9 +19,9 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 BUILD_TARGET=		all mhe
 USE_TOOLS+=		makeinfo
-INFO_FILES=		bbdb.info
-INFO_DIR=		${INFODIR}
-PLIST_SUBST+=		INFODIR=${INFODIR:Q}
+INFO_FILES=		# PLIST
+LISPDIR=		${EMACS_LISPPREFIX}/bbdb
+INSTALLATION_DIRS=	${EMACS_INFOPREFIX}
 
 .include "../../mk/emacs.mk"
 
@@ -29,20 +29,15 @@ PLIST_SUBST+=		INFODIR=${INFODIR:Q}
 CONFIGURE_ARGS+=	--with-emacs=xemacs
 CONFIGURE_ARGS+=	--with-package-dir=${PREFIX}/lib/xemacs/site-packages
 INSTALL_TARGET=		install-pkg
-INFODIR=		lib/xemacs/site-packages/info
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${INFODIR}
 .else
-LISPDIR=	${EMACS_LISPPREFIX}/bbdb
-INFODIR=	info
-
-INSTALLATION_DIRS=	${INFO_DIR}
-
 do-install:
 	${MKDIR} ${LISPDIR}
 	${INSTALL_DATA} ${WRKSRC}/lisp/*.el ${LISPDIR}
 	${INSTALL_DATA} ${WRKSRC}/lisp/*.elc ${LISPDIR}
-	${INSTALL_DATA} ${WRKSRC}/texinfo/bbdb.info* ${PREFIX}/${INFO_DIR}
+	cd ${WRKSRC}; for f in bbdb.info bbdb.info-[0-9]*; do		\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
+	done
 .endif
 
 .include "../../mk/bsd.pkg.mk"
