@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.14 2006/01/08 12:53:53 abs Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.15 2006/03/20 14:48:45 uebayasi Exp $
 
 .if !defined(PGVERSION_MK)
 PGVERSION_MK=	defined
@@ -84,7 +84,7 @@ _PGSQL_VERSION=	${_PGSQL_VERSION_FIRSTACCEPTED}
 #
 .if ${_PGSQL_VERSION} == "81"
 PGSQL_TYPE=	postgresql81-client
-PGPKGSRCDIR=	../../wip/postgresql81-client
+PGPKGSRCDIR=	../../databases/postgresql81-client
 .elif ${_PGSQL_VERSION} == "80"
 PGSQL_TYPE=	postgresql80-client
 PGPKGSRCDIR=	../../databases/postgresql80-client
