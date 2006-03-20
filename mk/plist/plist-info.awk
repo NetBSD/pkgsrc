@@ -1,4 +1,4 @@
-# $NetBSD: plist-info.awk,v 1.9 2006/03/14 23:16:01 jlam Exp $
+# $NetBSD: plist-info.awk,v 1.10 2006/03/20 01:48:58 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -44,7 +44,7 @@
 ### IGNORE_INFO_PATH is a colon-separated list of ${PREFIX}-relative paths
 ###	that do *not* contain info files.
 ###
-### INFO_DIR is the ${PREFIX}-relative path to the installed info pages.
+### PKGINFODIR is the ${PREFIX}-relative path to the installed info pages.
 ###
 ### LS is the path to the "ls" binary.
 ###
@@ -57,7 +57,7 @@
 ###	the path to a "test" binary.
 ###
 BEGIN {
-	INFO_DIR = ENVIRON["INFO_DIR"] ? ENVIRON["INFO_DIR"] : "info"
+	PKGINFODIR = ENVIRON["PKGINFODIR"] ? ENVIRON["PKGINFODIR"] : "info"
 	LS = ENVIRON["LS"] ? ENVIRON["LS"] : "ls"
 	MANZ = ENVIRON["MANZ"] ? ENVIRON["MANZ"] : "no"
 	PREFIX = ENVIRON["PREFIX"] ? ENVIRON["PREFIX"] : "/usr/pkg"
@@ -69,11 +69,23 @@ BEGIN {
 }
 
 ###
+### Canonicalize info page entries by converting ${PKGINFODIR}/ to info/.
+###
+/^[^@]/ && ($0 !~ "^" IGNORE_INFO_REGEXP "/") && \
+($0 ~ "^" PKGINFODIR "\/[^\/]+(\.info)?(-[0-9]+)?(\.gz)?$") {
+	sub("^" PKGINFODIR "/", "info/")
+}
+($0 !~ "^@dirrm " IGNORE_INFO_REGEXP "$") && \
+($0 ~ "^@dirrm " PKGINFODIR "$") {
+	sub(PKGINFODIR "$", "info")
+}
+
+###
 ### Canonicalize info page entries by stripping any ".gz" suffixes.
 ###
 /^[^@]/ && ($0 !~ "^" IGNORE_INFO_REGEXP "/") && \
-/^([^\/]*\/)*info\/[^\/]*(\.info)?-[0-9]+\.gz$/ {
-	sub("\\.gz$", "")
+/^([^\/]*\/)*(info\/[^\/]+(\.info)?|[^\/]+\.info)(-[0-9]+)?\.gz$/ {
+	sub("\.gz$", "")
 }
 
 ###
@@ -81,34 +93,17 @@ BEGIN {
 ### installed split files below.
 ###
 /^[^@]/ && ($0 !~ "^" IGNORE_INFO_REGEXP "/") && \
-/^([^\/]*\/)*info\/[^\/]*(\.info)?-[0-9]+$/ {
+/^([^\/]*\/)*(info\/[^\/]+(\.info)?|[^\/]+\.info)-[0-9]+$/ {
 	next
 }
 
 ###
-### Convert info/ to ${INFO_DIR}/ for all info page entries.
+### For each info page entry, convert any info/ to ${PKGINFODIR}/ and print
+### all of the installed info sub-pages associated with that entry.
 ###
 /^[^@]/ && ($0 !~ "^" IGNORE_INFO_REGEXP "/") && \
-($0 !~ "^([^\/]*\/)*" INFO_DIR "\/[^\/]*(\.info)?$") && \
-/^([^\/]*\/)*info\/[^\/]*(\.info)?$/ {
-	if ($0 ~ "^info/") {
-		sub("^info/", INFO_DIR "/")
-	} else {
-		sub("/info/", "/" INFO_DIR "/")
-	}
-}
-($0 !~ "^@dirrm " IGNORE_INFO_REGEXP "$") && \
-($0 !~ "^@dirrm " INFO_DIR "$") && \
-/^@dirrm ([^\/]*\/)*info$/ {
-	sub("info$", INFO_DIR)
-}
-
-###
-### For each info page entry, print all of the installed info sub-pages
-### associated with that entry.
-###
-/^[^@]/ && ($0 !~ "^" IGNORE_INFO_REGEXP "/") && \
-($0 ~ "^([^\/]*\/)*" INFO_DIR "\/[^\/]*(\.info)?$") {
+/^([^\/]*\/)*(info\/[^\/]+(\.info)?|[^\/]+\.info)$/ {
+	sub("^info/", PKGINFODIR "/")
 	cmd = TEST " -f " PREFIX "/" $0 " -o -f " PREFIX "/" $0 ".gz"
 	if (system(cmd) == 0) {
 		base = $0
@@ -128,4 +123,8 @@ BEGIN {
 		close(cmd)
 	}
 	next
+}
+($0 !~ "^@dirrm " IGNORE_INFO_REGEXP "$") && \
+($0 ~ "^@dirrm info$") {
+	sub("info$", PKGINFODIR)
 }

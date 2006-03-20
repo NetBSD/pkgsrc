@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.29 2006/02/23 14:38:07 tron Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.30 2006/03/20 01:48:57 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the various install-time "check"
@@ -61,8 +61,8 @@ USE_TOOLS+=		awk cat cmp diff echo find grep rm sed test	\
 # handled by pkgsrc.
 
 # Info index files updated when a new info file is added.
-.if defined(INFO_DIR)
-CHECK_FILES_SKIP+=	${PREFIX}/${INFO_DIR}/dir
+.if defined(INFO_FILES)
+CHECK_FILES_SKIP+=	${PREFIX}/.*/dir$$$$
 .endif
 
 # Perl's perllocal.pod index that is regenerated when a local module

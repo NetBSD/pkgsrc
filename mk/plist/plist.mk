@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.6 2006/03/14 17:14:47 jlam Exp $
+# $NetBSD: plist.mk,v 1.7 2006/03/20 01:48:58 jlam Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -92,7 +92,7 @@ MAKEVARS+=		_IGNORE_INFO_PATH
 #
 _PLIST_AWK_ENV+=	IMAKE_MANINSTALL=${_IMAKE_MANINSTALL:Q}
 _PLIST_AWK_ENV+=	IGNORE_INFO_PATH=${_IGNORE_INFO_PATH:Q}
-_PLIST_AWK_ENV+=	INFO_DIR=${INFO_DIR:Q}
+_PLIST_AWK_ENV+=	PKGINFODIR=${PKGINFODIR:Q}
 _PLIST_AWK_ENV+=	LIBTOOLIZE_PLIST=${LIBTOOLIZE_PLIST:Q}
 _PLIST_AWK_ENV+=	LIBTOOL_EXPAND=${_LIBTOOL_EXPAND:Q}
 _PLIST_AWK_ENV+=	LS=${TOOLS_LS:Q}
@@ -145,6 +145,9 @@ _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-man.awk
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-libtool.awk
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-default.awk
 
+_PLIST_INFO_AWK+=	-f ${.CURDIR}/../../mk/plist/plist-functions.awk
+_PLIST_INFO_AWK+=	-f ${.CURDIR}/../../mk/plist/plist-info.awk
+
 _PLIST_SHLIB_AWK=	-f ${_SHLIB_AWKFILE.${SHLIB_TYPE}}
 _SHLIB_AWKFILE.COFF=	${.CURDIR}/../../mk/plist/shlib-none.awk
 _SHLIB_AWKFILE.ELF=	${.CURDIR}/../../mk/plist/shlib-elf.awk
@@ -188,9 +191,8 @@ _INFO_GENERATE_PLIST=	${TRUE};
 # adding the named files to the PLIST.
 #
 _PLIST_IGNORE_FILES+=	+*			# package metadata files
-_PLIST_IGNORE_FILES+=	info/dir
-.  if defined(INFO_DIR) && empty(INFO_DIR:Minfo)
-_PLIST_IGNORE_FILES+=	${INFO_DIR}/dir
+.  if defined(INFO_FILES)
+_PLIST_IGNORE_FILES+=	${PKGINFODIR}/dir
 .  endif
 _PLIST_IGNORE_FILES+=	*[~\#] *.OLD *.orig *,v	# scratch config files
 .  if !empty(CONF_DEPENDS)
@@ -238,3 +240,14 @@ ${PLIST}:
 	${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_AWK} |		\
 	${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_SHLIB_AWK}		\
 		> ${.TARGET}
+
+.if defined(INFO_FILES)
+.  if empty(INFO_FILES)
+INFO_FILES_cmd=								\
+	${CAT} ${PLIST} |						\
+	${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_INFO_AWK} |		\
+	${AWK} '($$0 !~ "-[0-9]*(\.gz)?$$") { print }'
+.  else
+INFO_FILES_cmd=	${TRUE}
+.  endif
+.endif

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1811 2006/03/17 08:02:41 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1812 2006/03/20 01:48:57 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -581,10 +581,18 @@ USE_GNU_CONFIGURE_HOST?=	yes
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
 .  endif
 
+# Support for alternative info directories in packages is very sketchy.
+# For now, if we configure a package to install entirely into a
+# subdirectory of ${PREFIX}, then root the info directory directly under
+# that subdirectory.
+#
 CONFIGURE_HAS_INFODIR?=	yes
-GNU_CONFIGURE_INFODIR?=	${GNU_CONFIGURE_PREFIX}/${INFO_DIR}
-.  if defined(INFO_FILES) && !empty(INFO_FILES) && \
-      !empty(CONFIGURE_HAS_INFODIR:M[yY][eE][sS])
+.if ${GNU_CONFIGURE_PREFIX} == ${PREFIX}
+GNU_CONFIGURE_INFODIR?=	${GNU_CONFIGURE_PREFIX}/${PKGINFODIR}
+.else
+GNU_CONFIGURE_INFODIR?=	${GNU_CONFIGURE_PREFIX}/info
+.endif
+.  if defined(INFO_FILES) && !empty(CONFIGURE_HAS_INFODIR:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--infodir=${GNU_CONFIGURE_INFODIR:Q}
 .  endif
 
@@ -1839,7 +1847,7 @@ delete-package:
 .endif
 
 _PLIST_REGEXP.info=	\
-	^${INFO_DIR}/[^/]*\.info(-[0-9]+)?(\.gz)$$
+	^([^\/]*\/)*${PKGINFODIR}/[^/]*(\.info)?(-[0-9]+)?(\.gz)?$$
 _PLIST_REGEXP.man=	\
 	^([^/]*/)+(man[1-9ln]/[^/]*\.[1-9ln]|cat[1-9ln]/[^/]*\.[0-9])(\.gz)?$$
 
@@ -1968,6 +1976,7 @@ real-su-install: ${MESSAGE}
 	${ECHO_MSG} "${_PKGSRC_IN}> [Automatic manual page handling]";	\
 	${CAT} ${PLIST} | ${GREP} -v "^@" |				\
 	${EGREP} ${_PLIST_REGEXP.man:Q} | ${_DOC_COMPRESS}
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} install-script-data
 .if empty(CHECK_FILES:M[nN][oO])
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} check-files-post
 .endif
