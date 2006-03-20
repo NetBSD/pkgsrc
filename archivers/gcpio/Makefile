@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2006/03/05 16:27:22 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2006/03/20 04:14:47 jlam Exp $
 #
 
 DISTNAME=       cpio-2.6
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	g${DISTNAME}
 CATEGORIES=	archivers
 MASTER_SITES=   ${MASTER_SITE_GNU:=cpio/}
@@ -11,20 +11,19 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/cpio/cpio.html
 COMMENT=	GNU copy-in/out (cpio) with remote magnetic tape (rmt) support
 
+CONFLICTS+=	gtar-base-[0-9]*
+
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	makeinfo
+INFO_FILES=	# PLIST
 
 TEST_TARGET=	check
 
-INFO_FILES=	cpio.info
-
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-LIBS+=		-lgnumalloc
-.endif
+LIBS.NetBSD+=	-lgnumalloc
 
 .if defined(GNU_PROGRAM_PREFIX)
 CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
