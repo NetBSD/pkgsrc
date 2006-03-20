@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2006/03/04 21:29:54 jlam Exp $
+# $NetBSD: Makefile.common,v 1.22 2006/03/20 18:15:38 jlam Exp $
 
 GCC_VERSION=	3.3.5
 DISTNAME=	gcc-${GCC_VERSION}
@@ -36,10 +36,6 @@ FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
 MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${GCC_PREFIX}
-
-.if defined(INFO_FILES)
-INFO_DIR=	${GCC_SUBPREFIX}/info
-.endif
 
 # These come from $WRKSRC/Makefile.in
 ALL_GCC=	all-gcc

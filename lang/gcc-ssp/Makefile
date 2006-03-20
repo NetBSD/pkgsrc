@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/03/04 21:29:54 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2006/03/20 18:15:38 jlam Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGNAME=		gcc-ssp-2.95.3.13
@@ -43,11 +43,12 @@ MAKE_ENV+=		ac_cv_prog_chmod=${TOOLS_CHMOD:Q}
 CONFIGURE_DIRS=		${WRKDIR}/objdir
 BUILD_DIRS=		${CONFIGURE_DIRS}
 
-FILES_SUBST+=		PKGNAME_NOREV=${PKGNAME_NOREV:Q} GCC_PREFIX=${GCC_PREFIX:Q}
+FILES_SUBST+=		PKGNAME_NOREV=${PKGNAME_NOREV:Q}		\
+			GCC_PREFIX=${GCC_PREFIX:Q}
+PLIST_SUBST+=		GCC_PREFIX=${GCC_PREFIX:S|^${PREFIX}/||:Q}
 MESSAGE_SUBST+=		PKGNAME_NOREV=${PKGNAME_NOREV}
 
-INFO_DIR=		${GCC_PREFIX:S|^${PREFIX}/||}/info
-INFO_FILES=		chill.info cpp.info g77.info gcc.info
+INFO_FILES=		# PLIST
 
 .include "../../mk/bsd.prefs.mk"
 

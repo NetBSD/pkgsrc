@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/05/13 03:54:35 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/03/20 18:15:38 jlam Exp $
 bin/compile_et
 bin/gss-client
 bin/kdestroy
@@ -38,6 +38,10 @@ include/gssrpc/types.h
 include/gssrpc/xdr.h
 include/krb5.h
 include/profile.h
+info/krb425.info
+info/krb5-admin.info
+info/krb5-install.info
+info/krb5-user.info
 lib/libcom_err.la
 lib/libdes425.la
 lib/libgssapi_krb5.la

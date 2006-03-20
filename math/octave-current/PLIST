@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/01/06 22:41:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2006/03/20 18:15:38 jlam Exp $
 bin/mkoctfile-${PKGVERSION}
 bin/mkoctfile
 bin/octave
@@ -593,6 +593,8 @@ include/octave-${PKGVERSION}/octave/vx-s-crv.h
 include/octave-${PKGVERSION}/octave/xdiv.h
 include/octave-${PKGVERSION}/octave/xpow.h
 include/octave-${PKGVERSION}/octave/zfstream.h
+info/liboctave.info
+info/octave.info
 lib/libcruft.la
 lib/liboctave.la
 lib/liboctinterp.la

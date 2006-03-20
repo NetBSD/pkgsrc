@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/03/14 16:00:41 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2006/03/20 18:15:38 jlam Exp $
 
 DISTNAME=	krb5-1.4.2
 PKGNAME=	mit-${DISTNAME:S/-signed$//}
@@ -70,14 +70,14 @@ SUBST_STAGE.mit-krb5=	pre-configure
 SUBST_FILES.mit-krb5=	appl/bsd/Makefile.in include/krb5/stock/osconf.h
 SUBST_SED.mit-krb5=	-e "/KRB5_PATH_RLOGIN/s,/rlogin,/${KRB5_PREFIX}rlogin,g"
 
-INFO_FILES=	krb425.info krb5-admin.info krb5-install.info krb5-user.info
+INFO_FILES=		# PLIST
 
 OWN_DIRS_PERMS=		${MIT_KRB5_STATEDIR}/krb5kdc			\
 			${ROOT_USER} ${ROOT_GROUP} 0700
 RCD_SCRIPTS=		kadmind kdc
 
-INSTALLATION_DIRS=	bin include/gssapi include/gssrpc info lib	\
-			man/man1 man/man5 man/man8 sbin			\
+INSTALLATION_DIRS=	bin include/gssapi include/gssrpc ${PKGINFODIR}	\
+			lib man/man1 man/man5 man/man8 sbin		\
 			share/examples/krb5
 
 # The MIT krb5 distribution is actually a tar file that contains the
@@ -96,13 +96,9 @@ pre-configure:
 	done
 
 post-install:
-	cd ${WRKSRC}/../doc; for i in ${INFO_FILES}; do			\
-		${INSTALL_MAN} $$i ${PREFIX}/${INFO_DIR};		\
-		for f in $$i-[0-9]*; do					\
-			if ${TEST} -f "$$f"; then			\
-				${INSTALL_MAN} "$$f" ${PREFIX}/${INFO_DIR}; \
-			fi;						\
-		done;							\
+	cd ${WRKSRC}/../doc; for f in *.info *.info-[0-9]*; do		\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_MAN} "$$f" ${PREFIX}/${PKGINFODIR};		\
 	done
 
 .include "../../mk/bsd.pkg.mk"
