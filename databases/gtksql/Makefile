@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/03/20 19:49:16 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2006/03/20 19:51:40 joerg Exp $
 #
 
 DISTNAME=		gtksql-0.3
@@ -14,7 +14,7 @@ HOMEPAGE=		http://www.multimania.com/bbrox/GtkSQL/
 COMMENT=		Query tool for PostgreSQL written with GTK
 
 USE_X11BASE=		yes
-MAKE_ENV+=		MCFLAGS=${CFLAGS:M*:Q}
+MAKE_ENV+=		MCFLAGS=${CFLAGS:M*:Q} PGSQL_PREFIX=${PGSQL_PREFIX:Q}
 
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
