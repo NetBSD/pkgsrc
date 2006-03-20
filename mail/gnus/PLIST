@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/07 20:09:06 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/03/20 17:13:57 jlam Exp $
+share/doc/gnus/info/emacs-mime
+share/doc/gnus/info/gnus
+share/doc/gnus/info/message
+share/doc/gnus/info/pgg
+share/doc/gnus/info/sieve
 share/gnus/gnus-tut.txt
 share/gnus/gnus/bar.xbm
 share/gnus/gnus/bar.xpm
@@ -140,12 +145,16 @@ share/gnus/smilies/smile.pbm
 share/gnus/smilies/smile.xpm
 share/gnus/smilies/wry.pbm
 share/gnus/smilies/wry.xpm
+${FOR_xemacs}${EMACS_LISPPREFIX}/gnus/auto-autoloads.el
+${FOR_xemacs}${EMACS_LISPPREFIX}/gnus/auto-autoloads.elc
 ${EMACS_LISPPREFIX}/gnus/binhex.el
 ${EMACS_LISPPREFIX}/gnus/binhex.elc
 ${EMACS_LISPPREFIX}/gnus/canlock.el
 ${EMACS_LISPPREFIX}/gnus/canlock.elc
 ${EMACS_LISPPREFIX}/gnus/compface.el
 ${EMACS_LISPPREFIX}/gnus/compface.elc
+${FOR_xemacs}${EMACS_LISPPREFIX}/gnus/custom-load.el
+${FOR_xemacs}${EMACS_LISPPREFIX}/gnus/custom-load.elc
 ${EMACS_LISPPREFIX}/gnus/deuglify.el
 ${EMACS_LISPPREFIX}/gnus/deuglify.elc
 ${EMACS_LISPPREFIX}/gnus/dig.el
@@ -204,8 +213,8 @@ ${EMACS_LISPPREFIX}/gnus/gnus-load.el
 ${EMACS_LISPPREFIX}/gnus/gnus-load.elc
 ${EMACS_LISPPREFIX}/gnus/gnus-logic.el
 ${EMACS_LISPPREFIX}/gnus/gnus-logic.elc
-${EMACS_LISPPREFIX}/gnus/gnus-mh.el
-${EMACS_LISPPREFIX}/gnus/gnus-mh.elc
+${FOR_emacs}${EMACS_LISPPREFIX}/gnus/gnus-mh.el
+${FOR_emacs}${EMACS_LISPPREFIX}/gnus/gnus-mh.elc
 ${EMACS_LISPPREFIX}/gnus/gnus-ml.el
 ${EMACS_LISPPREFIX}/gnus/gnus-ml.elc
 ${EMACS_LISPPREFIX}/gnus/gnus-mlspl.el
@@ -252,6 +261,8 @@ ${EMACS_LISPPREFIX}/gnus/gnus-vm.el
 ${EMACS_LISPPREFIX}/gnus/gnus-vm.elc
 ${EMACS_LISPPREFIX}/gnus/gnus-win.el
 ${EMACS_LISPPREFIX}/gnus/gnus-win.elc
+${FOR_xemacs}${EMACS_LISPPREFIX}/gnus/gnus-xmas.el
+${FOR_xemacs}${EMACS_LISPPREFIX}/gnus/gnus-xmas.elc
 ${EMACS_LISPPREFIX}/gnus/gnus.el
 ${EMACS_LISPPREFIX}/gnus/gnus.elc
 ${EMACS_LISPPREFIX}/gnus/hex-util.el
@@ -272,6 +283,8 @@ ${EMACS_LISPPREFIX}/gnus/mailcap.el
 ${EMACS_LISPPREFIX}/gnus/mailcap.elc
 ${EMACS_LISPPREFIX}/gnus/message.el
 ${EMACS_LISPPREFIX}/gnus/message.elc
+${FOR_xemacs}${EMACS_LISPPREFIX}/gnus/messagexmas.el
+${FOR_xemacs}${EMACS_LISPPREFIX}/gnus/messagexmas.elc
 ${EMACS_LISPPREFIX}/gnus/messcompat.el
 ${EMACS_LISPPREFIX}/gnus/messcompat.elc
 ${EMACS_LISPPREFIX}/gnus/mm-bodies.el
@@ -326,6 +339,8 @@ ${EMACS_LISPPREFIX}/gnus/nngateway.el
 ${EMACS_LISPPREFIX}/gnus/nngateway.elc
 ${EMACS_LISPPREFIX}/gnus/nnheader.el
 ${EMACS_LISPPREFIX}/gnus/nnheader.elc
+${FOR_xemacs}${EMACS_LISPPREFIX}/gnus/nnheaderxm.el
+${FOR_xemacs}${EMACS_LISPPREFIX}/gnus/nnheaderxm.elc
 ${EMACS_LISPPREFIX}/gnus/nnimap.el
 ${EMACS_LISPPREFIX}/gnus/nnimap.elc
 ${EMACS_LISPPREFIX}/gnus/nnkiboze.el
@@ -356,12 +371,16 @@ ${EMACS_LISPPREFIX}/gnus/nnspool.el
 ${EMACS_LISPPREFIX}/gnus/nnspool.elc
 ${EMACS_LISPPREFIX}/gnus/nntp.el
 ${EMACS_LISPPREFIX}/gnus/nntp.elc
+${FOR_xemacs}${EMACS_LISPPREFIX}/gnus/nnultimate.el
+${FOR_xemacs}${EMACS_LISPPREFIX}/gnus/nnultimate.elc
 ${EMACS_LISPPREFIX}/gnus/nnvirtual.el
 ${EMACS_LISPPREFIX}/gnus/nnvirtual.elc
 ${EMACS_LISPPREFIX}/gnus/nnwarchive.el
 ${EMACS_LISPPREFIX}/gnus/nnwarchive.elc
 ${EMACS_LISPPREFIX}/gnus/nnweb.el
 ${EMACS_LISPPREFIX}/gnus/nnweb.elc
+${FOR_xemacs}${EMACS_LISPPREFIX}/gnus/nnwfm.el
+${FOR_xemacs}${EMACS_LISPPREFIX}/gnus/nnwfm.elc
 ${EMACS_LISPPREFIX}/gnus/parse-time.el
 ${EMACS_LISPPREFIX}/gnus/parse-time.elc
 ${EMACS_LISPPREFIX}/gnus/pgg-def.el
@@ -420,6 +439,8 @@ ${EMACS_LISPPREFIX}/gnus/utf7.el
 ${EMACS_LISPPREFIX}/gnus/utf7.elc
 ${EMACS_LISPPREFIX}/gnus/uudecode.el
 ${EMACS_LISPPREFIX}/gnus/uudecode.elc
+${FOR_xemacs}${EMACS_LISPPREFIX}/gnus/webmail.el
+${FOR_xemacs}${EMACS_LISPPREFIX}/gnus/webmail.elc
 ${EMACS_LISPPREFIX}/gnus/yenc.el
 ${EMACS_LISPPREFIX}/gnus/yenc.elc
 @dirrm share/doc/gnus/info
