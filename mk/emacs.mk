@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.25 2006/03/20 01:48:58 jlam Exp $
+# $NetBSD: emacs.mk,v 1.26 2006/03/20 05:24:33 jlam Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -46,11 +46,12 @@
 #
 # Variables ELPs can provide:
 #
-#	EMACS_USE_LEIM
+#	EMACS_MODULES
 #		Description:
-#			Set if the ELP wants LEIM support.
+#			List of Emacs LISP modules that the current ELP
+#			needs at run-time.
 #		Possible values:
-#			<undefined>, <defined>
+#			base, leim
 #		Default value:
 #			<undefined>
 #
@@ -200,15 +201,11 @@ _EMACS_REQD.emacs21=	emacs>=21.2
 _EMACS_REQD.emacs21nox=	emacs-nox11>=21.2
 _EMACS_REQD.xemacs214=	xemacs>=21.4
 _EMACS_REQD.xemacs215=	xemacs>=21.5
-_EMACS_REQD.leim20=	leim>=20.7
-_EMACS_REQD.leim21=	leim>=21.2
 _EMACS_DEP.emacs20=	../../editors/emacs20
 _EMACS_DEP.emacs21=	../../editors/emacs
 _EMACS_DEP.emacs21nox=	../../editors/emacs-nox11
 _EMACS_DEP.xemacs214=	../../editors/xemacs
 _EMACS_DEP.xemacs215=	../../editors/xemacs-current
-_EMACS_DEP.leim20=	../../editors/leim20
-_EMACS_DEP.leim21=	../../editors/leim
 
 #
 # Version decision
@@ -276,13 +273,6 @@ PKG_FAIL_REASON+=	"No valid Emacs version installed found"
 #
 
 DEPENDS+=	${_EMACS_REQD.${_EMACS_TYPE}}:${_EMACS_DEP.${_EMACS_TYPE}}
-.if defined(EMACS_USE_LEIM)
-.  if !empty(_EMACS_TYPE:Nxemacs*:Nemacs20*)
-DEPENDS+=	${_EMACS_REQD.leim21}:${_EMACS_DEP.leim21}
-.  else
-DEPENDS+=	${_EMACS_REQD.leim20}:${_EMACS_DEP.leim20}
-.  endif
-.endif
 .if !empty(_EMACS_TYPE:Nxemacs*)
 CONFLICTS+=	xemacs-${PKGBASE}-[0-9]*
 .else
@@ -349,5 +339,35 @@ PLIST_SUBST+=	NOTFOR_emacs20=${_EMACS_NOTFOR.emacs20}
 PLIST_SUBST+=	NOTFOR_xemacs=${_EMACS_NOTFOR.xemacs}
 PLIST_SUBST+=	NOTFOR_xemacs215=${_EMACS_NOTFOR.xemacs215}
 PLIST_SUBST+=	NOTFOR_xemacs214=${_EMACS_NOTFOR.xemacs214}
+
+#
+# ELP dependencies
+#
+
+EMACS_MODULES?=	# none
+
+# XXX EMACS_USE_LEIM should be removed after the 2006Q1 branch.
+.if defined(EMACS_USE_LEIM)
+EMACS_MODULES+=	leim
+.endif
+
+# "base" elisp modules
+.if !empty(_EMACS_TYPE:Memacs*)
+_EMACS_PKGDEP.${_EMACS_TYPE},base?=	# empty
+.elif !empty(_EMACS_TYPE:Mxemacs*)
+_EMACS_PKGDEP.${_EMACS_TYPE},base?=	\
+		xemacs-packages>=1.15:../../editors/xemacs-packages
+.endif
+
+# "leim" - input methods for international character sets
+.if !empty(_EMACS_TYPE:Mxemacs*) || !empty(_EMACS_TYPE:Memacs20*)
+_EMACS_PKGDEP.${_EMACS_TYPE},leim?=	leim>=20.7:../../editors/leim20
+.else
+_EMACS_PKGDEP.${_EMACS_TYPE},leim?=	leim>=21.2:../../editors/leim
+.endif
+
+.for _mod_ in ${EMACS_MODULES}
+DEPENDS+=	${_EMACS_PKGDEP.${_EMACS_TYPE},${_mod_}}
+.endfor
 
 .endif	# EMACS_MK
