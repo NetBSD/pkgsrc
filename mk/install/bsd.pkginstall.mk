@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.43 2006/03/17 18:22:30 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.44 2006/03/20 01:48:58 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -470,18 +470,12 @@ ${_INSTALL_DIRS_FILE}: ../../mk/install/dirs
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
 	fi
 
-# INFO_FILES contains names of info files that should be registered or
-# 	removed from the info directory indices.  The listed info files
-#	are assumed to be directly under ${INFO_DIR}.
-#
-INFO_FILES?=	# empty
-
 _INSTALL_INFO_FILES_FILE=	${_PKGINSTALL_DIR}/info-files
 _INSTALL_INFO_FILES_DATAFILE=	${_PKGINSTALL_DIR}/info-files-data
 _INSTALL_UNPACK_TMPL+=		${_INSTALL_INFO_FILES_FILE}
 _INSTALL_DATA_TMPL+=		${_INSTALL_INFO_FILES_DATAFILE}
 
-.if !empty(INFO_FILES:M*)
+.if defined(INFO_FILES)
 USE_TOOLS+=	install-info:run
 FILES_SUBST+=	INSTALL_INFO=${INSTALL_INFO:Q}
 .endif
@@ -495,7 +489,7 @@ ${_INSTALL_INFO_FILES_DATAFILE}:
 	exec 1>>${.TARGET}.tmp;						\
 	while ${TEST} $$# -gt 0; do					\
 		file="$$1"; shift;					\
-		file=${INFO_DIR:Q}"/$$file";				\
+		file=${PKGINFODIR:Q}"/$$file";				\
 		${ECHO} "# INFO: $$file";				\
 	done
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
@@ -505,11 +499,30 @@ ${_INSTALL_INFO_FILES_FILE}: ../../mk/install/info-files
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${SED} ${FILES_SUBST_SED} ../../mk/install/info-files > ${.TARGET}
+.if !defined(INFO_FILES)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${_ZERO_FILESIZE_P} ${_INSTALL_INFO_FILES_DATAFILE}; then	\
 		${RM} -f ${.TARGET};					\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
 	fi
+.endif
+
+.PHONY: install-script-data-info-files
+install-script-data: install-script-data-info-files
+install-script-data-info-files:
+.if defined(INFO_FILES)
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if ${TEST} -x ${INSTALL_FILE}; then				\
+		${INFO_FILES_cmd} |					\
+		while read file; do					\
+			${ECHO} "# INFO: $$file"			\
+				>> ${INSTALL_FILE};			\
+		done;							\
+		cd ${PKG_DB_TMPDIR} && ${SETENV} ${INSTALL_SCRIPTS_ENV}	\
+		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME}		\
+			UNPACK +INFO_FILES;				\
+	fi
+.endif
 
 # PKG_SHELL contains the pathname of the shell that should be added or
 #	removed from the shell database, /etc/shells.  If a pathname
@@ -857,7 +870,7 @@ _PKGINSTALL_TARGETS+=	release-pkginstall-lock
 
 .ORDER: ${_PKGINSTALL_TARGETS}
 
-.PHONY: pkginstall
+.PHONY: pkginstall install-script-data
 pkginstall: ${_PKGINSTALL_TARGETS}
 
 .PHONY: acquire-pkginstall-lock release-pkginstall-lock

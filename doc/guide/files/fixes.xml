@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.47 2006/03/12 11:34:09 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.48 2006/03/20 01:48:57 jlam Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -1139,29 +1139,8 @@
 
       <para>Some packages install info files or use the
         <quote>makeinfo</quote>  or <quote>install-info</quote>
-        commands. Each of the info files:</para>
-
-      <itemizedlist>
-        <listitem>
-          <para>is considered to be installed in the directory
-            <filename>${PREFIX}/${INFO_DIR}</filename>,</para>
-        </listitem>
-
-        <listitem>
-          <para>is registered in the Info directory file
-            <filename>${PREFIX}/${INFO_DIR}/dir</filename>,</para>
-        </listitem>
-
-        <listitem>
-          <para>and must be listed as a filename in the
-            <varname>INFO_FILES</varname> variable in the package
-            Makefile.</para>
-        </listitem>
-      </itemizedlist>
-
-      <para><varname>INFO_DIR</varname> defaults to <quote>info</quote>
-        and can be overridden in the package
-        Makefile. <filename>INSTALL</filename> and
+	commands.  <varname>INFO_FILES</varname> should be defined in
+	the package Makefile so that <filename>INSTALL</filename> and
         <filename>DEINSTALL</filename> scripts will be generated to
         handle registration of the info files in the Info directory
         file. The <quote>install-info</quote> command used for the info
@@ -1169,9 +1148,34 @@
         special purpose package automatically added as dependency if
         needed.</para>
 
+      <para><varname>PKGINFODIR</varname> is the directory under
+	<filename>${PREFIX}</filename> where info files are primarily
+	located. <varname>PKGINFODIR</varname> defaults to
+	<quote>info</quote> and can be overridden by the user.
+
+      <para>There are two mutually exclusive ways to specify the info
+	files for the package:</para>
+
+      <itemizedlist>
+	<listitem>
+	  <para>list each of info files in the package
+	    <filename>PLIST</filename>; however any split info files
+	    need not be listed, or</para>
+	</listitem>
+
+	<listitem>
+	  <para>list the filename of each info file in the
+	    <varname>INFO_FILES</varname> variable; however any split
+	    info file filenames need not be listed. In this case
+	    each of the info files should be installed into the
+	    directory <filename>${PREFIX}/${PKGINFODIR}</filename>.
+	</listitem>
+	
+      </itemizedlist>
+
       <para>A package which needs the <quote>makeinfo</quote> command
-        at build time must define the variable
-        <varname>USE_MAKEINFO</varname> in its Makefile. If a minimum
+        at build time must add <quote>makeinfo</quote> to
+        <varname>USE_TOOLS</varname> in its Makefile. If a minimum
         version of the <quote>makeinfo</quote> command is needed it
         should be noted with the <varname>TEXINFO_REQD</varname>
         variable in the package <filename>Makefile</filename>. By
@@ -1179,8 +1183,7 @@
         does not provide a <command>makeinfo</command> command or if it
         does not match the required minimum, a build dependency on the
         <filename role="pkg">devel/gtexinfo</filename> package will
-	be added automatically.
-</para>
+	be added automatically.</para>
 
       <para>The build and installation process of the software provided
         by the package should not use the
@@ -1197,9 +1200,8 @@
       <para>The script overriding <command>install-info</command> has
         no effect except the logging of a message. The script overriding
         <command>makeinfo</command> logs a message and according to the
-        value of <varname>USE_MAKEINFO</varname> and
-        <varname>TEXINFO_REQD</varname> either run the appropriate
-        <command>makeinfo</command> command or exit on error.</para>
+        value of <varname>TEXINFO_REQD</varname> either runs the appropriate
+	<command>makeinfo</command> command or exit on error.</para>
     </sect2>
 
     <sect2 id="manpages">

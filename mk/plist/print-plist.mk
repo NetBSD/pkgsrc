@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.4 2006/03/09 16:39:39 jlam Exp $
+# $NetBSD: print-plist.mk,v 1.5 2006/03/20 01:48:58 jlam Exp $
 
 ###
 ### Automatic PLIST generation
@@ -28,18 +28,16 @@ _PRINT_PLIST_AWK_SUBST+=						\
 	gsub(/${PKGNAME_NOREV}/, "$${PKGNAME}");			\
 	gsub(/${PKGVERSION:S/./\./g:C/nb[0-9]*$$//}/, "$${PKGVERSION}");\
 	gsub(/${PKGLOCALEDIR}\/locale/, "$${PKGLOCALEDIR}/locale");	\
+	gsub("^${PKGINFODIR}\/", "info/");				\
 	gsub("^${PKGMANDIR}\/", "man/");				\
 }
 
-_PRINT_PLIST_AWK_IGNORE=	($$0 ~ /emul\/linux\/proc/)
-_PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^info\/dir$$/)
-.if defined(INFO_DIR) && empty(INFO_DIR:Minfo)
-_PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^${INFO_DIR:S|/|\\/|g}\/dir$$/)
-.endif
-.if defined(INFO_FILES) && !empty(INFO_FILES)
-.  for _f_ in ${INFO_FILES}
-_PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^${INFO_DIR:S|/|\\/|g}\/${_f_:S|+|\+|g}(-[0-9]+)?(\.gz)?$$/)
-.  endfor
+_PRINT_PLIST_AWK_IGNORE=	($$0 ~ /^${PKG_DBDIR:S|^${PREFIX}/||:S|/|\\/|g}\//)
+_PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /emul\/linux\/proc/)
+.if defined(INFO_FILES)
+_PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^${PKGINFODIR:S|/|\\/|g}\/dir$$/)
+_PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^${PKGINFODIR:S|/|\\/|g}\/[^\/]+(-[0-9]+)(\.gz)?$$/)
+_PRINT_PLIST_AWK_IGNORE+=	|| ($$0 ~ /^([^\/]*\/)*(info\/[^\/]+|[^\/]+\.info)(-[0-9]+)(\.gz)?$$/)
 .endif
 
 # Common (system) directories not to generate @dirrm statements for
@@ -154,9 +152,12 @@ print-PLIST:
 			| ${SORT} -r					\
 			| ${AWK} '					\
 				/emul\/linux\/proc/ { next; }		\
-				/${PREFIX:S|/|\\/|g}\/\.$$/ { next; }	\
+				/${PKG_DBDIR:S|/|\\/|g}\// { next; }	\
 				{ sub("${PREFIX}/\\\\./", ""); }	\
+				{ sub("^${PKGINFODIR}/", "info/"); }	\
 				{ sub("^${PKGMANDIR}/", "man/"); }	\
+				/^${PKG_DBDIR:S|^${PREFIX}/||:S|/|\\/|g}(\/|$$)/ { next; } \
+				/^${PKGINFODIR:S|/|\\/|g}$$/ { next; }	\
 				${_PRINT_PLIST_COMMON_DIRS}'` ;		\
 	do								\
 		if [ `${LS} -la ${PREFIX}/$$i | ${WC} -l` = 3 ]; then	\
