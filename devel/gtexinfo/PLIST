@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.12 2004/07/04 23:17:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/03/20 04:23:37 jlam Exp $
 bin/info
 bin/infokey
 bin/install-info
 bin/makeinfo
 bin/texi2dvi
 bin/texindex
+info/info-stnd.info
+info/info.info
+info/texinfo
 man/man1/info.1
 man/man1/infokey.1
 man/man1/install-info.1
