@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/03/04 21:28:52 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/03/20 18:15:37 jlam Exp $
 #
 
 DISTNAME=       tar-1.15.1
@@ -12,16 +12,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/tar/tar.html
 COMMENT=	Info format documentation for the GNU tape archiver
 
-INFO_FILES=	tar.info
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+INFO_FILES=	# PLIST
 
-INSTALLATION_DIRS=	${INFO_DIR}
+INSTALLATION_DIRS=	${PKGINFODIR}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/tar.info ${PREFIX}/${INFO_DIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/tar.info ${PREFIX}/${PKGINFODIR}
 
 .include "../../mk/bsd.pkg.mk"
