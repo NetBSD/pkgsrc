@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:09:42 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/20 05:27:50 jlam Exp $
 
 .include	"../../inputmethod/anthy/Makefile.common"
 PKGNAME=	${EMACS_PKGNAME_PREFIX}anthy-elisp-${ANTHY_VERSION}
@@ -12,12 +12,9 @@ DEPENDS+=	anthy>=${ANTHY_VERSION}:../../inputmethod/anthy
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	EMACS=${EMACS_BIN:Q}
-EMACS_USE_LEIM=	yes	# (for emacs21/emacs20)
+EMACS_MODULES+=	base leim
 
 .include "../../mk/emacs.mk"
-.if ${EMACS_FLAVOR} == "xemacs"
-DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
-.endif
 
 do-build:
 	cd ${WRKSRC}/src-util && ${MAKE} elc-stamp
