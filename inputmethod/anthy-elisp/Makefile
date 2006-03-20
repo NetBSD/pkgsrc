@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2006/03/20 05:27:50 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/20 05:28:37 jlam Exp $
 
 .include	"../../inputmethod/anthy/Makefile.common"
 PKGNAME=	${EMACS_PKGNAME_PREFIX}anthy-elisp-${ANTHY_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	inputmethod editors
 
 MAINTAINER=	taya@NetBSD.org
