@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2006/03/04 21:29:15 jlam Exp $
+# $NetBSD: Makefile,v 1.64 2006/03/20 04:23:37 jlam Exp $
 
 DISTNAME=		texinfo-4.8
 PKGNAME=		g${DISTNAME}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		devel sysutils
 MASTER_SITES=		${MASTER_SITE_GNU:=texinfo/}
 EXTRACT_SUFX=		.tar.bz2
@@ -14,11 +14,11 @@ COMMENT=		GNU info documentation utilities
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
-INFO_FILES=		info-stnd.info info.info texinfo
+INFO_FILES=		# PLIST
 TEST_TARGET=		check
 PLIST_SRC=		${PKGDIR}/PLIST
 
-PKGSRC_INFOPATH=	${PREFIX}/${INFO_DIR}:${X11BASE}/info:${LOCALBASE}/info
+PKGSRC_INFOPATH=	${PREFIX}/${PKGINFODIR}:${X11BASE}/${PKGINFODIR:${LOCALBASE}/${PKGINFODIR}
 MAKE_ENV+=		PKGSRC_INFOPATH=${PKGSRC_INFOPATH:Q}
 
 .include "../../mk/bsd.prefs.mk"
