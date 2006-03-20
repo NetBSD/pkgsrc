@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/04/25 17:23:50 magick Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/03/20 18:21:29 jlam Exp $
 bin/${DISTNAME}
 bin/ellcc
 bin/gnuattach
@@ -755,37 +755,19 @@ lib/${DISTNAME}/etc/xemacs.xbm
 lib/${DISTNAME}/etc/xemacs.xpm
 lib/${DISTNAME}/info/cl.info
 lib/${DISTNAME}/info/custom.info
-lib/${DISTNAME}/info/dir
 lib/${DISTNAME}/info/emodules.info
 lib/${DISTNAME}/info/external-widget.info
 lib/${DISTNAME}/info/info.info
 lib/${DISTNAME}/info/internals.info
-lib/${DISTNAME}/info/internals.info-1
-lib/${DISTNAME}/info/internals.info-2
 lib/${DISTNAME}/info/lispref.info
-lib/${DISTNAME}/info/lispref.info-1
-lib/${DISTNAME}/info/lispref.info-2
-lib/${DISTNAME}/info/lispref.info-3
-lib/${DISTNAME}/info/lispref.info-4
-lib/${DISTNAME}/info/lispref.info-5
-lib/${DISTNAME}/info/lispref.info-6
-lib/${DISTNAME}/info/lispref.info-7
-lib/${DISTNAME}/info/lispref.info-8
-lib/${DISTNAME}/info/lispref.info-9
 lib/${DISTNAME}/info/new-users-guide.info
 lib/${DISTNAME}/info/standards.info
 lib/${DISTNAME}/info/term.info
 lib/${DISTNAME}/info/termcap.info
 lib/${DISTNAME}/info/texinfo.info
-lib/${DISTNAME}/info/texinfo.info-1
-lib/${DISTNAME}/info/texinfo.info-2
 lib/${DISTNAME}/info/widget.info
 lib/${DISTNAME}/info/xemacs-faq.info
 lib/${DISTNAME}/info/xemacs.info
-lib/${DISTNAME}/info/xemacs.info-1
-lib/${DISTNAME}/info/xemacs.info-2
-lib/${DISTNAME}/info/xemacs.info-3
-lib/${DISTNAME}/info/xemacs.info-4
 lib/${DISTNAME}/lisp/ChangeLog
 lib/${DISTNAME}/lisp/ChangeLog.1
 lib/${DISTNAME}/lisp/ChangeLog.GTK
