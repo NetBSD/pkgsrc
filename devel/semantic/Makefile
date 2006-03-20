@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2006/02/05 23:08:53 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2006/03/20 05:34:27 jlam Exp $
 #
 
 DISTNAME=	semantic-1.4.2
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 
@@ -20,9 +20,7 @@ BUILD_ENV+=	EMACS=${EMACS_FLAVOR}
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-
-INFO_FILES=	semantic.info
-OTHER_INFO=	semantic.info-1 semantic.info-2
+INFO_FILES=	# PLIST
 
 MAKE_ENV+=	EMACS=${EMACS_FLAVOR:Q}
 
@@ -43,14 +41,16 @@ AUXFILES=	semantic-load.el
 # XXX cd ${WRKSRC}; ${MAKE} -V aux_AUX
 AUXFILES+=	c.bnf make.bnf java.bnf scheme.bnf
 
-INSTALLATION_DIRS=	${INFO_DIR}
+INSTALLATION_DIRS=	${EMACS_INFOPREFIX}
 
 do-install:
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/semantic
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} 	\
 			${EMACS_LISPPREFIX}/semantic
 	cd ${WRKSRC} && ${INSTALL_DATA} ${AUXFILES} ${EMACS_LISPPREFIX}/semantic
-	cd ${WRKSRC} && ${INSTALL_DATA} ${INFO_FILES} ${OTHER_INFO}	\
-			${PREFIX}/${INFO_DIR}
+	cd ${WRKSRC}; for f in semantic.info semantic.info-[0-9]*; do	\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_DATA} "$$f" ${EMACS_INFOPREFIX};		\
+	done
 
 .include "../../mk/bsd.pkg.mk"
