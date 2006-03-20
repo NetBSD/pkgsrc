@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/03/05 16:27:23 jlam Exp $
+# $NetBSD: Makefile,v 1.52 2006/03/20 03:59:39 jlam Exp $
 #
 
 DISTNAME=	fidogate-4.4.10
@@ -14,11 +14,10 @@ USE_TOOLS+=		gmake makeinfo perl:run
 MAKE_ENV+=		DEBUG="${CFLAGS} -Werror"
 BUILDLINK_SETENV.CC=	CC="cc ${_STRIPFLAG_CC}"
 
-INFO_FILES=	fidogate.info
-
 EGDIR=		${PREFIX}/share/examples/fidogate
 CONF_FILES=	${EGDIR}/fidogate.conf ${PKG_SYSCONFDIR}/fidogate/fidogate.conf
 RCD_SCRIPTS=	fidogate
+INFO_FILES=	# PLIST
 
 PKG_USERS=	news:news::Network\ News:/var/spool/news:${NOLOGIN}
 PKG_GROUPS=	news
@@ -27,9 +26,16 @@ NO_CONFIGURE=	yes
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	config.make
-SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_STAGE.paths=	post-patch
+SUBST_SED.paths=	-e "s,@PREFIX@,"${PREFIX:Q}",g"
+SUBST_SED.paths+=	-e "s,@PKG_SYSCONFDIR@,"${PKG_SYSCONFDIR:Q}",g"
+SUBST_SED.paths+=	-e "s,@PKGINFODIR@,"${PKGINFODIR:Q}",g"
+SUBST_STAGE.paths=	pre-build
+
+OWN_DIRS=		${PKG_SYSCONFDIR}/fidogate
+INSTALLATION_DIRS=	${EGDIR}		lib/fidogate		\
+			lib/fidogate/bin	share/doc/fidogate	\
+			share/fidogate		share/fidogate/sendmail	\
+			share/fidogate/sendmail/mailer
 
 post-extract:
 	@${CP} ${WRKSRC}/examples/orodruin/fidogate.conf \
@@ -37,20 +43,10 @@ post-extract:
 
 pre-build:
 	${RM} -f ${WRKSRC}/doc/fidogate.info*
-	cd ${WRKSRC}/doc && ${MAKEINFO} --no-split fidogate.texi && \
+	cd ${WRKSRC}/doc && makeinfo fidogate.texi && \
 		${TOUCH} fidogate.txt html/fidogate_toc.html
 	${PERL5} ${WRKSRC}/subst.pl -t${WRKSRC} ${WRKSRC}/fidogate.conf.dist \
 		>${WRKSRC}/fidogate.conf
-
-pre-install:
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/fidogate
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/fidogate
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/fidogate/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fidogate
-	${INSTALL_DATA_DIR} ${PREFIX}/share/fidogate
-	${INSTALL_DATA_DIR} ${PREFIX}/share/fidogate/sendmail
-	${INSTALL_DATA_DIR} ${PREFIX}/share/fidogate/sendmail/mailer
 
 post-install:
 	cd ${WRKSRC}/examples && for f in `${FIND} [m-p]* -type d -print`; do \
