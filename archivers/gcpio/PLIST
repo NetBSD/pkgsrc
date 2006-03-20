@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2005/11/03 19:38:51 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/03/20 04:14:47 jlam Exp $
 bin/${GNU_PROGRAM_PREFIX}cpio
+info/cpio.info
 libexec/${GNU_PROGRAM_PREFIX}rmt
 man/man1/${GNU_PROGRAM_PREFIX}cpio.1
 man/man1/${GNU_PROGRAM_PREFIX}mt.1
