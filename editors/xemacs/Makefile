@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.79 2006/02/05 23:08:59 joerg Exp $
+# $NetBSD: Makefile,v 1.80 2006/03/20 18:21:29 jlam Exp $
 
 .include "../../editors/xemacs/Makefile.common"
 
 MAINTAINER=	uebayasi@NetBSD.org
-PKGREVISION=	1
-
+PKGREVISION=	2
 
 CONFIGURE_ARGS+=	--site-includes=${BUILDLINK_DIR}/include:${BUILDLINK_X11_DIR}/include
 CONFIGURE_ARGS+=	--site-libraries=${BUILDLINK_DIR}/lib:${BUILDLINK_X11_DIR}
