@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2006/02/18 21:56:33 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/20 05:30:33 jlam Exp $
 #
 
 DISTNAME=	ddskk-12.2.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}skk-12.2.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	http://openlab.ring.gr.jp/skk/maintrunk/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,15 +16,14 @@ CONFLICTS=	ddskk-[0-9]*
 
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox xemacs214 emacs20 xemacs215
 
+EMACS_MODULES+=	base leim
+
 .include "../../mk/emacs.mk"
 .include "options.mk"
 
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}apel>=10.6:../../devel/apel
 .if ${EMACS_FLAVOR} == "emacs"
-EMACS_USE_LEIM=	yes
 BUILD_DEPENDS+=	${EMACS_PKGNAME_PREFIX}Mule-UCS-[0-9]*:../../editors/mule-ucs
-.else
-BUILD_DEPENDS+= xemacs-packages>=1.10:../../editors/xemacs-packages
 .endif
 
 MAKEFLAGS+=	EMACS=${EMACS_BIN:Q}
