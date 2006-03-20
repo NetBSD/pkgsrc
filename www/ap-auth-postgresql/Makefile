@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/02/05 23:11:17 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2006/03/20 19:59:21 joerg Exp $
 
 DISTNAME=	AuthPG-1.4
 PKGNAME=	ap-auth-postgresql-1.4
@@ -12,8 +12,6 @@ COMMENT=	Module to allow apache authentication against a Postgresql database
 
 CONFLICTS=	ap-auth-pgsql-[0-9]*
 
-
-PGSQL_VERSION_REQD=	73
 
 APACHE_MODULE_NAME=	mod_auth_pg.so
 
