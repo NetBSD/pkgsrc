@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2005/10/11 02:03:18 jschauma Exp $
+$NetBSD: patch-aa,v 1.5 2006/03/20 18:05:22 jlam Exp $
 
---- locate/Makefile.in.orig	Sat Nov  5 15:44:08 1994
+--- locate/Makefile.in.orig	1994-11-05 09:44:08.000000000 -0500
 +++ locate/Makefile.in
 @@ -29,7 +29,7 @@ libexecdir = $(exec_prefix)/libexec
  datadir = $(prefix)/share
@@ -42,21 +42,12 @@ $NetBSD: patch-aa,v 1.4 2005/10/11 02:03:18 jschauma Exp $
  
  uninstall:: uninstall-programs
  
-@@ -140,14 +144,15 @@ install-man:
- 	for man in $(MANS); do \
- 	  sect=`echo $$man|sed 's%.*\.\([0-9][a-z]*\)$$%\1%'`; \
- 	  inst=`basename $$man $$sect|sed '$(transform)'`$$sect; \
-+	  inst0=`basename $$man $$sect|sed '$(transform)'`0; \
- 	  mdir=$(mandir)/man$$sect; \
- 	  $(top_srcdir)/mkinstalldirs $$mdir; \
+@@ -145,7 +149,7 @@ install-man:
  	  echo installing $$man as $$mdir/$$inst; \
  	  $(INSTALL_DATA) $(srcdir)/$$man $$mdir/$$inst; \
  	  cdir=$(mandir)/cat$$sect; \
- 	  if test -d $$cdir; then \
--	    echo formatting $$man as $$cdir/$$inst; \
--	    $(NROFF) -man $(srcdir)/$$man > $$cdir/$$inst; \
-+	    echo formatting $$man as $$cdir/$$inst0; \
-+	    $(NROFF) -man $(srcdir)/$$man > $$cdir/$$inst0 || true; \
+-	  if test -d $$cdir; then \
++	  if false && test -d $$cdir; then \
+ 	    echo formatting $$man as $$cdir/$$inst; \
+ 	    $(NROFF) -man $(srcdir)/$$man > $$cdir/$$inst; \
  	  fi; \
- 	done
- 
