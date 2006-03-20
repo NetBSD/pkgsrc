@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.6 2005/02/23 16:58:26 jwise Exp $
+$NetBSD: patch-ad,v 1.7 2006/03/20 04:09:37 jlam Exp $
 
 --- doc/Makefile.orig	2004-07-17 11:21:19.000000000 -0400
-+++ doc/Makefile	2005-02-23 11:10:20.000000000 -0500
++++ doc/Makefile
 @@ -6,7 +6,7 @@
  NROFF=nroff
  #
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.6 2005/02/23 16:58:26 jwise Exp $
  	  faxspool.1 faxrunq.1 faxq.1 faxrm.1 coverpg.1
  MAN4PAGES=mgettydefs.4
  MAN5PAGES=faxqueue.5
-@@ -26,7 +26,7 @@
+@@ -26,7 +26,7 @@ MAN_FMT_PRG=$(NROFF) -man
  
  all:
  
@@ -20,16 +20,7 @@ $NetBSD: patch-ad,v 1.6 2005/02/23 16:58:26 jwise Exp $
  
  manpages: $(MANSRC)
  
-@@ -43,7 +43,7 @@
- 	-texi2html -verbose mgetty.texi
- 
- mgetty.info: mgetty.texi
--	-makeinfo mgetty.texi
-+	-${MAKEINFO} mgetty.texi
- 
- mgetty.ps: mgetty.dvi
- 	-dvips -o mgetty.ps mgetty.dvi
-@@ -98,7 +98,7 @@
+@@ -98,7 +98,7 @@ doc-tar: ../mgetty0$(VS)doc.tar.gz
  
  # explicit man page dependencies
  

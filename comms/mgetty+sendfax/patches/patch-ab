@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.8 2005/02/23 16:58:26 jwise Exp $
+$NetBSD: patch-ab,v 1.9 2006/03/20 04:09:37 jlam Exp $
 
 --- Makefile.orig	2004-07-24 14:53:47.000000000 -0400
-+++ Makefile	2005-02-23 11:07:40.000000000 -0500
++++ Makefile
 @@ -4,8 +4,8 @@
  #
  # this is the C compiler to use (on SunOS, the standard "cc" does not
@@ -13,7 +13,7 @@ $NetBSD: patch-ab,v 1.8 2005/02/23 16:58:26 jwise Exp $
  #
  #### C Compiler Flags ####
  #
-@@ -102,7 +102,7 @@
+@@ -102,7 +102,7 @@ CC=gcc
  #	    USTAT	  - ustat(), no statfs etc.
  #
  #CFLAGS=-Wall -O2 -pipe -DSECUREWARE -DUSE_POLL
@@ -22,7 +22,7 @@ $NetBSD: patch-ab,v 1.8 2005/02/23 16:58:26 jwise Exp $
  #CFLAGS=-O -DSVR4
  #CFLAGS=-O -DSVR4 -DSVR42
  #CFLAGS=-O -DUSE_POLL
-@@ -144,7 +144,7 @@
+@@ -144,7 +144,7 @@ CFLAGS=-O2 -Wall -pipe
  # For Linux, add "-lutil" if the linker complains about "updwtmp".
  #
  LDFLAGS=
@@ -31,7 +31,7 @@ $NetBSD: patch-ab,v 1.8 2005/02/23 16:58:26 jwise Exp $
  #LIBS=-lprot -lsocket				# SCO Unix
  #LIBS=-lsocket
  #LIBS=-lbsd					# OSF/1
-@@ -164,15 +164,15 @@
+@@ -164,8 +164,8 @@ LIBS=
  #
  # if your systems doesn't have one, use the shell script that I provide
  # in "inst.sh" (taken from X11R5). Needed on IRIX5.2
@@ -42,67 +42,7 @@ $NetBSD: patch-ab,v 1.8 2005/02/23 16:58:26 jwise Exp $
  #INSTALL=/usr/ucb/install -c -o bin -g bin	# AIX, Solaris 2.x
  #INSTALL=installbsd -c -o bin -g bin		# OSF/1, AIX 4.1, 4.2
  #INSTALL=/usr/bin/X11/bsdinst -c -o bin 	# IRIX
- #
- # prefix, where most (all?) of the stuff lives, usually /usr/local or /usr
- #
--prefix=/usr/local
-+prefix=${PREFIX}
- #
- # prefix for all the spool directories (usually /usr/spool or /var/spool)
- #
-@@ -180,20 +180,20 @@
- #
- # where the mgetty + sendfax binaries live (used for "make install")
- #
--SBINDIR=$(prefix)/sbin
-+SBINDIR=${PREFIX}/sbin
- #
- # where the user executable binaries live
- #
--BINDIR=$(prefix)/bin
-+BINDIR=${PREFIX}/bin
- #
- # where the font+coverpage files go
- #
--LIBDIR=$(prefix)/lib/mgetty+sendfax
-+LIBDIR=${PREFIX}/lib/mgetty+sendfax
- #
- # where the configuration files (*.config, aliases, fax.allow/deny) go to
- #
--CONFDIR=$(prefix)/etc/mgetty+sendfax
--#CONFDIR=/etc/default/
-+CONFDIR=${MGETTY_CONFDIR}
-+CONF_EXAMPLES_DIR=${PREFIX}/share/examples/mgetty+sendfax
- #
- #
- # where mgetty PID files (mgetty.pid) go to
-@@ -220,20 +220,20 @@
- #
- #
- # Where section 1 manual pages should be placed
--MAN1DIR=$(prefix)/man/man1
-+MAN1DIR=${PREFIX}/man/man1
- #
- # Where section 4 manual pages (mgettydefs.4) should be placed
--MAN4DIR=$(prefix)/man/man4
-+MAN4DIR=${PREFIX}/man/man4
- #
- # Section 5 man pages (faxqueue.5)
--MAN5DIR=$(prefix)/man/man5
-+MAN5DIR=${PREFIX}/man/man5
- #
- # Section 8 man pages (sendfax.8)
--MAN8DIR=$(prefix)/man/man8
-+MAN8DIR=${PREFIX}/man/man8
- #
- # Where the GNU Info-Files are located
- #
--INFODIR=$(prefix)/info
-+INFODIR=${PREFIX}/info
- #
- #
- # A shell that understands bourne-shell syntax
-@@ -258,7 +258,7 @@
+@@ -258,7 +258,7 @@ PERL="/usr/bin/perl -w"
  # If you have Perl with TK extentions, define it here. This may be the
  # same as PERL=... above, or different, if you have TkPerl statically
  # linked.
@@ -111,7 +51,7 @@ $NetBSD: patch-ab,v 1.8 2005/02/23 16:58:26 jwise Exp $
  #
  #
  # An echo program that understands escapes like "\n" for newline or
-@@ -270,9 +270,9 @@
+@@ -270,9 +270,9 @@ TKPERL=/usr/bin/tkperl
  # please use the "mg.echo" program provided in the compat/ subdirectory.
  # Set ECHO="mg.echo" and INSTALL_MECHO to mg.echo
  #
@@ -123,7 +63,7 @@ $NetBSD: patch-ab,v 1.8 2005/02/23 16:58:26 jwise Exp $
  
  #
  # for mgetty, that's it. If you want to use the voice
-@@ -280,7 +280,7 @@
+@@ -280,7 +280,7 @@ ECHO="echo"
  
  # To maintain security, I recommend creating a new group for
  # users who are allowed to manipulate the recorded voice messages.
@@ -132,7 +72,7 @@ $NetBSD: patch-ab,v 1.8 2005/02/23 16:58:26 jwise Exp $
  PHONE_PERMS=770
  
  # Add -DNO_STRSTR to CFLAGS if you don't have strstr().
-@@ -312,7 +312,7 @@
+@@ -312,7 +312,7 @@ SFAXOBJ=sendfax.o logfile.o locks.o mode
  
  all:	bin-all doc-all
  
@@ -141,18 +81,18 @@ $NetBSD: patch-ab,v 1.8 2005/02/23 16:58:26 jwise Exp $
  
  # a few C files need extra compiler arguments
  
-@@ -564,8 +564,8 @@
+@@ -564,8 +564,8 @@ newslock: compat/newslock.c
  # internal: use this to create a "clean" mgetty+sendfax tree
  bindist: all doc-all sedscript
  	-rm -rf bindist
 -	./mkidirs bindist$(prefix) bindist$(spool)
 -	bd=`pwd`/bindist; PATH=`pwd`:"$$PATH" $(MAKE) prefix=$$bd$(prefix) \
-+	./mkidirs bindist${PREFIX}/ bindist$(spool)
-+	bd=`pwd`/bindist; PATH=`pwd`:"$$PATH" $(MAKE) prefix=$$bd${PREFIX}/ \
++	./mkidirs bindist$(prefix)/ bindist$(spool)
++	bd=`pwd`/bindist; PATH=`pwd`:"$$PATH" $(MAKE) prefix=$$bd$(prefix)/ \
  		BINDIR=$$bd$(BINDIR) SBINDIR=$$bd$(SBINDIR) \
  		LIBDIR=$$bd$(LIBDIR) CONFDIR=$$bd$(CONFDIR) \
  		spool=$$bd$(spool) FAX_SPOOL=$$bd$(FAX_SPOOL) \
-@@ -577,7 +577,7 @@
+@@ -577,7 +577,7 @@ bindist: all doc-all sedscript
  	cd bindist; gtar cvvfz mgetty$(MR).$(SR)-bin.tgz *
  
  
@@ -161,7 +101,7 @@ $NetBSD: patch-ab,v 1.8 2005/02/23 16:58:26 jwise Exp $
  
  install.bin: mgetty sendfax newslock \
  		login.config mgetty.config sendfax.config 
-@@ -585,7 +585,7 @@
+@@ -585,7 +585,7 @@ install.bin: mgetty sendfax newslock \
  # binaries
  #
  	-test -d $(BINDIR)  || ( ./mkidirs $(BINDIR)  ; chmod 755 $(BINDIR)  )
@@ -170,30 +110,3 @@ $NetBSD: patch-ab,v 1.8 2005/02/23 16:58:26 jwise Exp $
  
  	-test -d $(SBINDIR) || ( ./mkidirs $(SBINDIR) ; chmod 755 $(SBINDIR) )
  	-mv -f $(SBINDIR)/mgetty $(SBINDIR)/mgetty.old
-@@ -597,18 +597,14 @@
- #
- 	test -d $(LIBDIR)  || \
- 		( ./mkidirs $(LIBDIR) &&  chmod 755 $(LIBDIR) )
--	test -d $(CONFDIR) || \
--		( ./mkidirs $(CONFDIR) && chmod 755 $(CONFDIR))
--	test -f $(CONFDIR)/login.config || \
--		$(INSTALL) -o root -m 600 login.config $(CONFDIR)/
--	test -f $(CONFDIR)/mgetty.config || \
--		$(INSTALL) -o root -m 600 mgetty.config $(CONFDIR)/
--	test -f $(CONFDIR)/sendfax.config || \
--		$(INSTALL) -o root -m 644 sendfax.config $(CONFDIR)/
--	test -f $(CONFDIR)/dialin.config || \
--		$(INSTALL) -o root -m 600 dialin.config $(CONFDIR)/
--	test -f $(CONFDIR)/faxrunq.config || \
--		$(INSTALL) -o root -m 644 faxrunq.config $(CONFDIR)/
-+	test -d $(CONF_EXAMPLES_DIR) || \
-+		( ./mkidirs $(CONF_EXAMPLES_DIR); chmod 755 $(CONF_EXAMPLES_DIR))
-+	$(INSTALL) -o root -m 600 login.config $(CONF_EXAMPLES_DIR)/
-+	$(INSTALL) -o root -m 600 mgetty.config $(CONF_EXAMPLES_DIR)/
-+	$(INSTALL) -o root -m 644 sendfax.config $(CONF_EXAMPLES_DIR)/
-+	$(INSTALL) -o root -m 600 dialin.config $(CONF_EXAMPLES_DIR)/
-+	$(INSTALL) -o root -m 644 faxrunq.config $(CONF_EXAMPLES_DIR)/
-+
- #
- # test for outdated stuff
- #

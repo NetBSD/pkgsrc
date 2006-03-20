@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.52 2006/03/14 01:14:27 jlam Exp $
+# $NetBSD: Makefile,v 1.53 2006/03/20 04:09:37 jlam Exp $
 
 DISTNAME=	mgetty1.1.31-Jul24
 PKGNAME=	mgetty-1.1.31
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.leo.org/pub/comp/os/unix/networking/mgetty/ \
 		ftp://alpha.greenie.net/pub/mgetty/source/1.1/
@@ -18,13 +18,20 @@ CONFLICTS=	hylafax-[0-9]*
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 MAKE_ENV+=		MGETTY_CONFDIR=${PKG_SYSCONFDIR:Q}
+MAKE_FLAGS+=		prefix=${PREFIX:Q}				\
+			INFODIR=${PREFIX:Q}/${PKGINFODIR:Q}		\
+			MAN1DIR=${PREFIX:Q}/${PKGMANDIR:Q}/man1		\
+			MAN4DIR=${PREFIX:Q}/${PKGMANDIR:Q}/man4		\
+			MAN5DIR=${PREFIX:Q}/${PKGMANDIR:Q}/man5		\
+			MAN8DIR=${PREFIX:Q}/${PKGMANDIR:Q}/man8
+BUILD_MAKE_FLAGS=	${MAKE_FLAGS} CONFDIR=${PKG_SYSCONFDIR:Q}
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} CONFDIR=${EXAMPLES_DIR:Q}
 
 USE_TOOLS+=		makeinfo
-INFO_FILES=		mgetty.info
+INFO_FILES=		# PLIST
 PKG_SYSCONFSUBDIR=	mgetty+sendfax
 
-.if !defined(CONF_FILES)
-. for cfg in		dialin.config		\
+.for cfg in		dialin.config		\
 			faxheader		\
 			faxrunq.config		\
 			faxspool.rules.sample	\
@@ -32,17 +39,18 @@ PKG_SYSCONFSUBDIR=	mgetty+sendfax
 			mgetty.config		\
 			voice.conf
 
-CONF_FILES+=		${_EXAMPLES_DIR}/${cfg} ${PKG_SYSCONFDIR}/${cfg}
-. endfor
-.endif
+CONF_FILES+=		${EXAMPLES_DIR}/${cfg} ${PKG_SYSCONFDIR}/${cfg}
+.endfor
 
 PKG_GROUPS=		dialer
 PKG_USERS=		fax:dialer
 
-_EXAMPLES_DIR=		${PREFIX}/share/examples/mgetty+sendfax
-MAKE_DIRS_PERMS+=	/var/spool/fax ${ROOT_USER} ${ROOT_GROUP} 755
-MAKE_DIRS_PERMS+=	/var/spool/fax/incoming ${ROOT_USER} ${ROOT_GROUP} 755
-MAKE_DIRS_PERMS+=	/var/spool/fax/outgoing fax ${ROOT_GROUP} 755
+EXAMPLES_DIR=		${PREFIX}/share/examples/mgetty+sendfax
+OWN_DIRS_PERMS+=	/var/spool/fax ${ROOT_USER} ${ROOT_GROUP} 755
+OWN_DIRS_PERMS+=	/var/spool/fax/incoming ${ROOT_USER} ${ROOT_GROUP} 755
+OWN_DIRS_PERMS+=	/var/spool/fax/outgoing fax ${ROOT_GROUP} 755
+
+.include "../../graphics/netpbm/buildlink3.mk"
 
 do-configure:
 	${MV} ${WRKSRC}/doc/fax.1in ${WRKSRC}/doc/sendfax.1in
@@ -56,5 +64,4 @@ do-configure:
 	&& cd ${.CURDIR}					\
 	&& ${SETENV} ${SCRIPTS_ENV} ${SH} ${SCRIPTDIR}/configure
 
-.include "../../graphics/netpbm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
