@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:09:44 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/20 05:34:27 jlam Exp $
 #
 
 DISTNAME=	eieio-0.17
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 
@@ -11,18 +11,12 @@ MAINTAINER=	cjones@NetBSD.org
 HOMEPAGE=	http://cedet.sourceforge.net/eieio.shtml
 COMMENT=	Enhanced Integration of Emacs Interpreted Objects
 
-.include "../../mk/emacs.mk"
-
-.if ${EMACS_FLAVOR} == "xemacs"
-DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
-.endif
-
+EMACS_MODULES+=	base
 MAKEFLAGS+=	EMACS=${EMACS_BIN:Q}
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-
-INFO_FILES=	eieio.info
+INFO_FILES=	# PLIST
 
 # XXX $cd ${WRKSRC}; ${MAKE} -V eieio_LISP
 SRCS=	eieio.el eieio-comp.el eieio-opt.el eieio-custom.el eieio-doc.el \
@@ -30,12 +24,16 @@ SRCS=	eieio.el eieio-comp.el eieio-opt.el eieio-custom.el eieio-doc.el \
 # XXX $cd ${WRKSRC}; ${MAKE} -V examples_LISP
 SRCS+=	tree.el call-tree.el chart.el eieio-speedbar.el linemark.el
 
-INSTALLATION_DIRS=	${INFO_DIR}
+INSTALLATION_DIRS=	${EMACS_INFOPREFIX}
 
 do-install:
 	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/eieio
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} 	\
 			${EMACS_LISPPREFIX}/eieio
-	cd ${WRKSRC} && ${INSTALL_DATA} ${INFO_FILES} ${PREFIX}/${INFO_DIR}
+	cd ${WRKSRC}; for f in *.info *.info-[0-9]*; do			\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_DATA} "$$f" ${EMACS_INFOPREFIX};		\
+	done
 
+.include "../../mk/emacs.mk"
 .include "../../mk/bsd.pkg.mk"
