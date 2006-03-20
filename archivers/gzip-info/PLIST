@@ -1,1 +1,2 @@
-@comment $NetBSD: PLIST,v 1.4 2004/01/02 16:03:11 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/03/20 18:15:37 jlam Exp $
+info/gzip.info

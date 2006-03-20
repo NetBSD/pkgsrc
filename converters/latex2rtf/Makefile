@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2005/12/05 20:49:55 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2006/03/20 18:15:37 jlam Exp $
 #
 
 DISTNAME=	latex2rtf-1.9.16a
@@ -12,10 +12,14 @@ COMMENT=	LaTeX to RTF converter
 
 USE_TOOLS+=	perl
 MAKE_FLAGS+=	XCFLAGS=${CFLAGS:M*:Q}
-INFO_FILES=	latex2rtf.info
-INSTALLATION_DIRS=	share/doc/latex2rtf ${INFO_DIR}
+INFO_FILES=	# PLIST
+
+INSTALLATION_DIRS=	share/doc/latex2rtf ${PKGINFODIR}
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/latex2rtf.info ${PREFIX}/${INFO_DIR}/latex2rtf.info
+	cd ${WRKSRC}/doc; for f in *.info *.info-[0-9]*; do		\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_MAN} "$$f" ${PREFIX}/${PKGINFODIR};		\
+	done
 
 .include "../../mk/bsd.pkg.mk"

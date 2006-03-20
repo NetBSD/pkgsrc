@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/03/16 23:52:30 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/03/20 18:15:38 jlam Exp $
 
 DISTNAME=		guile-1.4.1
 PKGNAME=		guile14-1.4.1
@@ -16,9 +16,7 @@ USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 USE_GNU_READLINE=	YES
 PTHREAD_AUTO_VARS=	YES
-
-INFO_DIR=		guile/1.4/info
-INFO_FILES=		guile.info
+INFO_FILES=		# PLIST
 
 BUILDLINK_PASSTHRU_DIRS=	${PREFIX}/guile/1.4
 

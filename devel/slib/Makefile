@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/03/04 21:29:29 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/03/20 18:15:38 jlam Exp $
 
 DISTNAME=	slib3a2
 #
@@ -24,16 +24,18 @@ NO_BUILD=	yes
 
 SLIBDIR=	${PREFIX}/share/slib
 DOCDIR=		${PREFIX}/share/doc/slib
+INFO_FILES=	# PLIST
 
-INFO_FILES=	slib.info
-
-INSTALLATION_DIRS=	${INFO_DIR}
+INSTALLATION_DIRS=	${PKGINFODIR}
 
 do-install:
 	${INSTALL_DATA_DIR} ${SLIBDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} *.scm *.init ${SLIBDIR}
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC}; ${INSTALL_DATA} README FAQ ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/slib.info ${PREFIX}/${INFO_DIR}
+	cd ${WRKSRC}; for f in slib.info slib.info-[0-9]*; do		\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
+	done
 
 .include "../../mk/bsd.pkg.mk"
