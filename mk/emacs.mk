@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.24 2006/03/11 06:23:20 uebayasi Exp $
+# $NetBSD: emacs.mk,v 1.25 2006/03/20 01:48:58 jlam Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -99,7 +99,7 @@
 #			installed into.  Unlike EMACS_ETCPREFIX or
 #			EMACS_LISPPREFIX, subdirectory is not needed.
 #		Possible values:
-#			${PREFIX}/info
+#			${PREFIX}/${PKGINFODIR}
 #	  		${PREFIX}/lib/xemacs/site-packages/info
 #
 #	EMACS_LISPPREFIX
@@ -145,7 +145,7 @@
 #			Same as the one in Makefile, except that
 #			${PREFIX} is omitted in PLIST.
 #		Possible values:
-#			info
+#			${PKGINFODIR}
 #	  		lib/xemacs/site-packages/info
 #
 #	EMACS_LISPPREFIX
@@ -299,15 +299,18 @@ EMACS_VERSION_MAJOR=	${_EMACS_VERSION_MAJOR}
 EMACS_VERSION_MINOR=	${_EMACS_VERSION_MINOR}
 .if ${EMACS_FLAVOR} == "emacs"
 EMACS_ETCPREFIX=	${PREFIX}/share
-EMACS_INFOPREFIX=	${PREFIX}/info
+EMACS_INFOPREFIX=	${PREFIX}/${PKGINFODIR}
 EMACS_LISPPREFIX=	${PREFIX}/share/emacs/site-lisp
 EMACS_PKGNAME_PREFIX=
-.else
+.elif ${EMACS_FLAVOR} == "xemacs"
 EMACS_ETCPREFIX=	${PREFIX}/lib/xemacs/site-packages/etc
 EMACS_INFOPREFIX=	${PREFIX}/lib/xemacs/site-packages/info
 EMACS_LISPPREFIX=	${PREFIX}/lib/xemacs/site-packages/lisp
 EMACS_PKGNAME_PREFIX=	xemacs-
+.else
+PKG_FAIL_REASON+=	"\`\`${EMACS_FLAVOR}'' is not a valid EMACS_FLAVOR"
 .endif
+GNU_CONFIGURE_INFODIR?=	${EMACS_INFOPREFIX}
 
 _EMACS_FOR.emacs=		"@comment "
 _EMACS_FOR.emacs21=		"@comment "
@@ -328,7 +331,9 @@ _EMACS_FOR.${_EMACS_TYPE}=	""
 _EMACS_NOTFOR.${EMACS_FLAVOR}=	"@comment "
 _EMACS_NOTFOR.${_EMACS_TYPE}=	"@comment "
 
+PLIST_SUBST+=	EMACS_FLAVOR=${EMACS_FLAVOR:Q}
 PLIST_SUBST+=	EMACS_VERSION=${_EMACS_VERSION_NOREV:Q}
+PLIST_SUBST+=	EMACS_INFOPREFIX=${EMACS_INFOPREFIX:C|^${PREFIX}/||}
 PLIST_SUBST+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX:C|^${PREFIX}/||}
 PLIST_SUBST+=	FOR_emacs=${_EMACS_FOR.emacs}
 PLIST_SUBST+=	FOR_emacs21=${_EMACS_FOR.emacs21}
