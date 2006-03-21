@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/03/21 07:32:41 minskim Exp $
+# $NetBSD: Makefile,v 1.38 2006/03/21 07:48:03 minskim Exp $
 
 PSI_VERSION=	0.10
 DISTNAME=	psi-${PSI_VERSION}
@@ -53,12 +53,10 @@ post-configure:
 	-e "s:/bin/true:${TRUE}:" < ${WRKSRC}/Makefile \
 		> ${WRKSRC}/Makefile.new
 	${MV} ${WRKSRC}/Makefile.new ${WRKSRC}/Makefile
+	${ECHO} 'target.path=${QTDIR}/lib' \
+		>> ${WRKSRC}/libpsi/psiwidgets/psiwidgets.pro
 	cd ${WRKSRC}/libpsi/psiwidgets && ( ${SETENV} ${CONFIGURE_ENV}	\
 		${QTDIR}/bin/qmake psiwidgets.pro -o Makefile; \
-		${SED} -e 's,-rpath.*$$,-rpath "${QTDIR}/lib",' \
-			< Makefile > Makefile.new; \
-		${MV} Makefile.new Makefile; \
-		${LN} -s .libs/libpsiwidgets.so psiwidgets.so; \
 	)
 
 do-install:
@@ -76,5 +74,6 @@ do-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/qca/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
+BUILDLINK_DEPENDS.qt3-tools+=	qt3-tools>=3.3.5nb6
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
