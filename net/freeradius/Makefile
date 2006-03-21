@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2006/02/05 23:10:24 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2006/03/21 23:08:08 adrianp Exp $
 
-DISTNAME=	freeradius-1.1.0
-PKGREVISION=	1
+DISTNAME=	freeradius-1.1.1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 		ftp://ftp.Awfulhak.org/pub/radius/
@@ -23,11 +22,8 @@ USE_OLD_DES_API=	YES
 
 BUILDLINK_DEPENDS.openssl+=	openssl>=0.9.7
 
-# This package currently breaks using our libtool.  It does not appear to use
-# libtool properly/fully and as a result the daemon does not compile correctly.
-#
-#USE_LIBTOOL=		YES
-#LIBTOOL_OVERRIDE=	libtool
+USE_LIBTOOL=		YES
+LIBTOOL_OVERRIDE+=	libtool
 
 CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
@@ -42,14 +38,18 @@ CONFIGURE_ARGS+=	--without-rlm_pam
 CONFIGURE_ARGS+=	--without-rlm_sql_iodbc
 CONFIGURE_ARGS+=	--without-rlm_sql_oracle
 CONFIGURE_ARGS+=	--without-rlm_sql_unixodbc
+#CONFIGURE_ARGS+=	--without-rlm_eap_peap
+#CONFIGURE_ARGS+=	--without-rlm_eap_sim
+#CONFIGURE_ARGS+=	--without-rlm_eap_tls
+#CONFIGURE_ARGS+=	--without-rlm_eap_ttls
 
 SUBST_CLASSES+=		make
 SUBST_STAGE.make=	post-patch
 SUBST_FILES.make=	src/modules/rlm_mschap/Makefile \
 			src/modules/rlm_sql/drivers/rlm_sql_postgresql/Makefile.in
 SUBST_SED.make= 	-e "s|RLM_LDFLAGS	=|RLM_LDFLAGS 	= \
-				-L../../../src/lib/.libs/ -lradius|g" \
-			-e "s|RLM_SQL_LIBS	=|RLM_SQL_LIBS	= \
+				-L../../../src/lib/.libs/ -lradius|g"
+SUBST_SED.make+=	-e "s|RLM_SQL_LIBS	=|RLM_SQL_LIBS	= \
 				-L${PREFIX}/lib|g"
 SUBST_MESSAGE.make=	Fixing Makefiles.
 
@@ -104,9 +104,6 @@ SUBST_SED.make+= 	-e "s|@ldap_ldflags@|@ldap_ldflags@ \
 CFLAGS+= -fPIC
 .endif
 
-pre-build:
-	cd ${WRKSRC} && ${LN} -s src/lib lib
-
 post-build:
 	@${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
 
@@ -119,7 +116,6 @@ post-install:
 .endfor
 	${INSTALL_SCRIPT} ${WRKSRC}/src/modules/rlm_perl/example.pl ${EGDIR}
 	@${MKDIR} ${PKG_SYSCONFDIR}/certs
-	@${MKDIR} ${PKG_SYSCONFDIR}/certs/demoCA
-	cd ${WRKSRC} && ${FIND} . -name .libs | ${XARGS} ${RM} -rf
+	@${MKDIR} ${PKG_SYSCONFDIR}/certs/demoCAA
 
 .include "../../mk/bsd.pkg.mk"
