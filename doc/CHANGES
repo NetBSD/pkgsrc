@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13342 2006/03/21 07:33:13 minskim Exp $
+$NetBSD: CHANGES,v 1.13343 2006/03/21 21:52:38 recht Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1560,3 +1560,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added databases/postgresql81-pltcl version 8.1.3 [uebayasi 2006-03-20]
 	Added databases/postgresql81-client version 8.1.3 [uebayasi 2006-03-20]
 	Updated chat/psi to 0.10nb4 [minskim 2006-03-21]
+	Updated www/curl to 7.15.3 [recht 2006-03-21]
