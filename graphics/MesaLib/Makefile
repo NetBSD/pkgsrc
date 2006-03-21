@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/03/02 20:19:31 drochner Exp $
+# $NetBSD: Makefile,v 1.47 2006/03/21 19:26:31 drochner Exp $
 
 PKGNAME=	MesaLib-${MESA_VERSION}
 PKGREVISION=	1
@@ -16,6 +16,14 @@ CONFIGURE_ARGS+=	--disable-sparc
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-[12].*)
+.include "../../devel/pthread-stublib/buildlink3.mk"
+PTHREAD_STUBLIB= "-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lpthstub"
+.else
+PTHREAD_STUBLIB= # provided by libc
+.endif
+BUILD_ENV+=	PTHREAD_STUBLIB=${PTHREAD_STUBLIB}
 
 pre-build:
 	cd ${WRKSRC} && ${RM} -fr src/glu src/glut progs
