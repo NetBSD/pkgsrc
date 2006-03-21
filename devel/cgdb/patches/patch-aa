@@ -1,8 +1,24 @@
-$NetBSD: patch-aa,v 1.1 2005/12/23 16:19:12 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2006/03/21 18:18:15 minskim Exp $
 
---- various/util/src/pseudo.c.orig	2003-04-28 02:04:04.000000000 +0200
+--- various/util/src/pseudo.c.orig	2003-04-27 17:04:04.000000000 -0700
 +++ various/util/src/pseudo.c
-@@ -327,6 +327,7 @@ int pty_open(int *masterfd, int *slavefd
+@@ -88,6 +88,7 @@
+ #define set_errno(errnum) (errno = (errnum), -1)
+ 
+ 
++#ifndef HAVE_STRLCPY
+ /* strlcpy: Used instead of strcpy. Copies src into dst size bytes long.
+  *
+  * dst: destination
+@@ -119,6 +120,7 @@ static size_t strlcpy(char *dst, const c
+ 
+     return s - src - 1;
+ }
++#endif
+ 
+ static int groupname2gid(const char *groupname) {
+ 	FILE *group = fopen("/etc/group", "r");
+@@ -327,6 +329,7 @@ int pty_open(int *masterfd, int *slavefd
  
  #ifndef HAVE_CYGWIN 
  #ifndef HAVE_LINUX /* linux does not use the streams module */
@@ -10,7 +26,7 @@ $NetBSD: patch-aa,v 1.1 2005/12/23 16:19:12 wiz Exp $
  	/*
  	 * Push the appropriate streams modules, as described in Solaris pts(7).
  	 * HP-UX pts(7) doesn't have ttcompat module.
-@@ -355,6 +356,7 @@ int pty_open(int *masterfd, int *slavefd
+@@ -355,6 +358,7 @@ int pty_open(int *masterfd, int *slavefd
  #endif
  #endif
  #endif
