@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2006/02/27 07:12:13 martti Exp $
+# $NetBSD: Makefile,v 1.70 2006/03/21 07:22:05 martti Exp $
 
 DISTNAME=	squirrelmail-1.4.6
 #PKGREVISION=	1
@@ -20,7 +20,7 @@ DEPENDS+=	php-gettext>=4.3.3:../../devel/php-gettext
 USE_LANGUAGES=	# empty
 NO_BUILD=	yes
 USE_TOOLS+=	perl:run
-REPLACE_PERL+=	config/conf.pl config/ri_once.pl
+REPLACE_PERL+=	config/conf.pl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -50,7 +50,8 @@ OWN_DIRS_PERMS=		${ATTACHMENTS_DIR} ${ROOT_USER} ${APACHE_GROUP} 730
 OWN_DIRS_PERMS+=	${USER_PREFS_DIR} ${APACHE_USER} ${APACHE_GROUP} 755
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	${WRKDIR}/squirrelmail.conf.dist config/config_default.php
+SUBST_FILES.paths=	${WRKDIR:Q}/squirrelmail.conf.dist
+SUBST_FILES.paths+=	config/config_default.php
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@ATTACHMENTS_DIR@,${ATTACHMENTS_DIR},g'
 SUBST_SED.paths+=	-e 's,@USER_PREFS_DIR@,${USER_PREFS_DIR},g'
