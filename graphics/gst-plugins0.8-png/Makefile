@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/06 00:18:17 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/21 06:00:46 jlam Exp $
 #
 
 GST_PLUGINS0.8_NAME=	png
@@ -6,7 +6,7 @@ GST_PLUGINS0.8_DIR=	ext/libpng
 GST_PLUGINS0.8_FLAG=	pngenc
 
 .include "../../multimedia/gst-plugins0.8/Makefile.common"
-PKGREVISION=	3
+PKGREVISION=	4
 
 BUILDLINK_DEPENDS.png+=	png>=1.2.5nb3	# requires libpng12.pc
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2006/02/05 23:11:01 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2006/03/21 06:00:49 jlam Exp $
 
 DISTNAME=	docbook-4.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=		http://www.oasis-open.org/docbook/sgml/4.4/
 SITES_docbook-4.3.zip=	http://www.oasis-open.org/docbook/sgml/4.3/
