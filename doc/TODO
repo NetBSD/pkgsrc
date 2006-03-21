@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4769 2006/03/21 17:46:11 wiz Exp $
+$NetBSD: TODO,v 1.4770 2006/03/21 20:22:56 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -301,7 +301,7 @@ Suggested package updates
 	o 9base-2 [pkg/32635]
 	o Cenon-3.71
 	o Chinput-3.0.1
-	o GConf2-2.14.0
+	o GConf2-2.14.0 [jmmv]
 	o GMT-4.0
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
@@ -435,9 +435,9 @@ Suggested package updates
 	o dap-2.1.5
 	o dar-2.3.0
 	o darkice-0.15
-	o dasher-4.0.1
-	o dbus-0.31 [0.2x API more common -- new package?]
-	o dbus-0.50
+	o dasher-4.0.1 [jmmv]
+	o dbus-0.31 [0.2x API more common -- new package?] [jmmv]
+	o dbus-0.50 [jmmv]
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
@@ -482,9 +482,9 @@ Suggested package updates
 	o enchant-1.2.3
 	o enlightenment-0.16.8
 	o enscript-1.6.4
-	o eog2-2.14.0
-	o epiphany-2.14.0
-	o epiphany-extensions-2.14.0.1
+	o eog2-2.14.0 [jmmv]
+	o epiphany-2.14.0 [jmmv]
+	o epiphany-extensions-2.14.0.1 [jmmv]
 	o epstool-3.08
 	o eric3-3.8.1
 	o esh-0.8.5
@@ -493,8 +493,8 @@ Suggested package updates
 	o eukleides-1.0.3
 	o euler-1.61
 	o evince-0.5.2
-	o evolution-2.6.0
-	o evolution-data-server-1.6.0
+	o evolution-2.6.0 [jmmv]
+	o evolution-data-server-1.6.0 [jmmv]
 	o ex-050325 [pkg/32043]
 	o exim-4.60
 	o exmh-2.7.2
@@ -533,13 +533,13 @@ Suggested package updates
 	o gcc-4.1.0
 	o gcdmaster-1.2.1
 	o gcombust-0.1.55
-	o gconf-editor-2.14.0
+	o gconf-editor-2.14.0 [jmmv]
 	o gconfmm-2.14.0
 	o gcpio-2.6
 	o gdb6-6.3.0
-	o gdm-2.14.0
+	o gdm-2.14.0 [jmmv]
 	o gdsreader-0.3.2
-	o gedit-2.14.1
+	o gedit-2.14.1 [jmmv]
 	o ggiterm-0.7.1
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
@@ -558,30 +558,30 @@ Suggested package updates
 	o gmime-2.1.17 [pkg/32487]
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-backgrounds-2.12.3.1
-	o gnome-desktop-2.14.0
-	o gnome-games-2.12.3
-	o gnome-icon-theme-2.14.2
-	o gnome-mag-0.12.3
-	o gnome-media-2.14.0
+	o gnome-backgrounds-2.14.0 [jmmv]
+	o gnome-desktop-2.14.4.0 [jmmv]
+	o gnome-games-2.14.0 [jmmv]
+	o gnome-icon-theme-2.14.2 [jmmv]
+	o gnome-mag-0.12.3 [jmmv]
+	o gnome-media-2.14.0 [jmmv]
 	o gnome-pilot-2.0.13
-	o gnome-session-2.14.0
+	o gnome-session-2.14.0 [jmmv]
 	o gnome-spell-1.0.7
-	o gnome-themes-2.12.3
+	o gnome-themes-2.12.3 [jmmv]
 	o gnome-vfsmm-2.14.0
-	o gnome2-control-center-2.12.3
-	o gnome2-terminal-2.14.0
-	o gnome2-user-docs-2.14.0
+	o gnome2-control-center-2.12.3 [jmmv]
+	o gnome2-terminal-2.14.0 [jmmv]
+	o gnome2-user-docs-2.14.0 [jmmv]
 	o gnomeicu-0.99.10
-	o gnopernicus-1.0.3
+	o gnopernicus-1.0.3 [jmmv]
 	o gnucash-devel-1.9.3
 	o gnumeric-1.4.4
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gogo-3.11p1
-	o gok-1.0.6
-	o gossip-0.10.2
+	o gok-1.0.6 [jmmv]
+	o gossip-0.10.2 [jmmv]
 	o gpgme-1.1.0 [pkg/32761]
 	o gpsd-2.30
 	o gpsdrive-2.09
@@ -599,11 +599,11 @@ Suggested package updates
 	o gsed-4.1.4
 	o gsharutils-4.6
 	o gss-0.0.16
-	o gst-plugins0.10-base-0.10.5
+	o gst-plugins0.10-base-0.10.5 [jmmv]
 	o gtetrinet-0.7.9
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
-	o gtk2+-2.8.16
+	o gtk2+-2.8.16 [jmmv]
 	o gtk2-engines-2.6.7
 	o gtkam-0.1.13
 	o gtksee-0.6.0b
@@ -692,8 +692,8 @@ Suggested package updates
 	o leafnode-1.11.4
 	o leafpad-0.8.7
 	o lftp-3.4.2
-	o libbonobo-2.14.0
-	o libbonoboui-2.14.0
+	o libbonobo-2.14.0 [jmmv]
+	o libbonoboui-2.14.0 [jmmv]
 	o libcdio-0.77
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
@@ -753,7 +753,7 @@ Suggested package updates
 	o mdf2iso-0.3.0
 	o memcached-1.2
 	o memtest86-3.2
-	o metacity-2.14.1
+	o metacity-2.14.1 [jmmv]
 	o metakit-2.4.9.4
 	o mftrace-1.1.17
 	o mgetty-1.1.35
@@ -787,8 +787,8 @@ Suggested package updates
 	o mysql4-server-4.1.18
 	o nano-1.2.5 [pkg/32859]
 	o nap-1.5.3
-	o nautilus-2.14.0
-	o nautilus-cd-burner-2.14.0.2
+	o nautilus-2.14.0 [jmmv]
+	o nautilus-cd-burner-2.14.0.2 [jmmv]
 	o nawk-20041222
 	o ncftp2-2.8.2
 	o ncview-1.92e
@@ -1079,7 +1079,7 @@ Suggested package updates
 	o remind-3.00.23
 	o rep-gtk-0.18
 	o resize_image-0.7
-	o rhythmbox-0.9.3.1
+	o rhythmbox-0.9.3.1 [jmmv]
 	o rio500-0.8.1
 	o ripmime-1.4.0.6
 	o rman-3.2
@@ -1121,7 +1121,7 @@ Suggested package updates
 	o seahorse-0.9.0
 	o semantic-1.4.4
 	o sendfile-20010424
-	o shared-mime-info-0.17
+	o shared-mime-info-0.17 [jmmv]
 	o sharity-light-1.3
 	o shc-3.8
 	o shmux-1.0b6
