@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2005/12/05 20:51:03 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/21 06:00:50 jlam Exp $
 
 DISTNAME=	iso12083-1993
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://info.ex.ac.uk/pub/SGML/ISO-12083/ \
 		ftp://ftp.ifi.uio.no/pub/SGML/ISO12083/ \
