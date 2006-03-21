@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.pkg.dist,v 1.13 2006/02/22 21:42:05 wiz Exp $
+# $NetBSD: IRIX.pkg.dist,v 1.14 2006/03/21 19:35:45 jmmv Exp $
 #
 
 /set type=dir uname=root gname=sys mode=0755
@@ -930,6 +930,10 @@
                 ..
             ..
             pa
+                LC_MESSAGES
+                ..
+            ..
+            pa_IN
                 LC_MESSAGES
                 ..
             ..
