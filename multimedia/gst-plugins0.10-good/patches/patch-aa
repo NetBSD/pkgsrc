@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2006/03/21 14:51:46 joerg Exp $
+
+--- sys/oss/gstossmixer.c.orig	2006-03-21 14:44:22.000000000 +0000
++++ sys/oss/gstossmixer.c
+@@ -92,7 +92,7 @@ gst_ossmixer_open (GstOssMixer * mixer)
+     mixer->cardname = g_strdup (minfo.name);
+   }
+ #else
+-  oss->cardname = g_strdup ("Unknown");
++  mixer->cardname = g_strdup ("Unknown");
+ #endif
+ 
+   return TRUE;
