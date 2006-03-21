@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:48:43 agc Exp $
+$NetBSD: distinfo,v 1.3 2006/03/21 17:30:00 yyamano Exp $
 
 SHA1 (groff-1.10.tar.gz) = 032eeb221aff1a621019374646819e8741c11d39
 RMD160 (groff-1.10.tar.gz) = 3dafd992282ef8bf1b71d908acc45ede575b177f
@@ -18,3 +18,7 @@ SHA1 (patch-ai) = 4bfc39d00cc63ed0de02489ce45d01e49563871e
 SHA1 (patch-aj) = 70ec56a901457c6534c77bd1c67e6c2d6f7b7cd3
 SHA1 (patch-ak) = 2cd8539d364edee3f305bb49c5b2518735e76666
 SHA1 (patch-al) = 63c383ec386657aff1d84e01dee1843d7f94109b
+SHA1 (patch-am) = 4d0a6a4e76691d2baa17e7a0784659668977a9a6
+SHA1 (patch-an) = 3af3af89d799d968d64cfa8ba89f6b549db17bdb
+SHA1 (patch-ao) = 0e209fb57d849ac670ad2a635b7b78114203e705
+SHA1 (patch-ap) = 54949929ca91fcfb090c2d570d754d347a1923fd
