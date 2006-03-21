@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.18 2006/02/05 15:34:08 adrianp Exp $
+$NetBSD: distinfo,v 1.19 2006/03/21 23:08:08 adrianp Exp $
 
-SHA1 (freeradius-1.1.0.tar.gz) = 060454b4350f08145dfe987483c571fe7aad0dd6
-RMD160 (freeradius-1.1.0.tar.gz) = 7b8972640fa71291a949e3abee07d10d8c4608d8
-Size (freeradius-1.1.0.tar.gz) = 2351660 bytes
-SHA1 (patch-aa) = 5a5f791cb5d501a43948ddd94f8589f7cf000cb0
-SHA1 (patch-ab) = bf14479ad89bfa1e967aea923529da0a8a97f3cd
+SHA1 (freeradius-1.1.1.tar.gz) = efc52b20fa88148b8ebf58fa0ae5c36df204b703
+RMD160 (freeradius-1.1.1.tar.gz) = f9947c299ec2a7d0189d0718edf10c8dc5783119
+Size (freeradius-1.1.1.tar.gz) = 2358196 bytes
+SHA1 (patch-ab) = 7a23eb75a9818b073263fd36cbf17b692fa19a9f
 SHA1 (patch-ae) = 0c1b6c79329f41c35e3a783e61cc205cb78a4773
-SHA1 (patch-ai) = bb4dafd3f6b961403caa955c9a09c271468ada36
+SHA1 (patch-ai) = 849010c6a1516d4073ab6c620df308b14a5e5140
 SHA1 (patch-aj) = 422c9dfbde08c26acf41a040c57508ab9725004e
