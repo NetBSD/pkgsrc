@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/20 14:45:51 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/21 06:39:33 martti Exp $
 
 PKGNAME=	postgresql81-plperl-${BASE_VERS}
 COMMENT=	PL/Perl procedural language for the PostgreSQL backend
 
-DEPENDS+=	postgresql81-server>=${BASE_VERS}:../../wip/postgresql81-server
+DEPENDS+=	postgresql81-server>=${BASE_VERS}:../../databases/postgresql81-server
 
-.include "../../wip/postgresql81/Makefile.common"
+.include "../../databases/postgresql81/Makefile.common"
 
 PERL5_CONFIGURE=	NO
 CONFIGURE_ARGS+=	--with-perl
@@ -16,7 +16,7 @@ MAKEFILE=		GNUmakefile
 USE_LIBTOOL=		yes
 PKG_LIBTOOL=		${PKG_SHLIBTOOL}
 
-.include "../../wip/postgresql81-client/buildlink3.mk"
+.include "../../databases/postgresql81-client/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 
 .include "../../mk/bsd.pkg.mk"
