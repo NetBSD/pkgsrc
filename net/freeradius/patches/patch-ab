@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.4 2006/02/05 15:34:09 adrianp Exp $
+$NetBSD: patch-ab,v 1.5 2006/03/21 23:08:08 adrianp Exp $
 
---- src/modules/rlm_perl/Makefile.in.orig	2003-03-18 19:08:40.000000000 +0000
+--- src/modules/rlm_perl/Makefile.in.orig	2006-02-10 19:47:17.000000000 +0000
 +++ src/modules/rlm_perl/Makefile.in
-@@ -13,4 +13,3 @@ $(STATIC_OBJS): $(HEADERS)
- $(DYNAMIC_OBJS): $(HEADERS)
+@@ -15,4 +15,3 @@ include ../rules.mak
+ $(LT_OBJS): $(HEADERS)
  
  install-scripts:
 -	$(INSTALL) -m 755 example.pl $(R)$(raddbdir)
