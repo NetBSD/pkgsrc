@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2006/03/20 14:45:49 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/03/21 06:39:33 martti Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -9,7 +9,7 @@
 #	<lang>-postgresql	client-side interface to PostgreSQL
 #	postgresql-<lang>	server-side module for PostgreSQL backend
 
-.include "../../wip/postgresql81/Makefile.mirrors"
+.include "../../databases/postgresql81/Makefile.mirrors"
 
 DISTNAME?=	postgresql-${DIST_VERS}
 CATEGORIES+=	databases
