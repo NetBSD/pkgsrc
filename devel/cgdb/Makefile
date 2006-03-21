@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/04 21:29:13 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/21 18:26:21 minskim Exp $
 #
 
 DISTNAME=	cgdb-0.4.0
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cgdb/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cgdb.sourceforge.net/
 COMMENT=	Curses-based interface to the GNU Debugger (GDB)
-
-BROKEN_IN=	pkgsrc-2005Q4
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
