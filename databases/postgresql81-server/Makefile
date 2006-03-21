@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/20 14:45:51 uebayasi Exp $
+# $NetBSD: Makefile,v 1.2 2006/03/21 06:39:33 martti Exp $
 
 PKGNAME=	postgresql81-server-${BASE_VERS}
 COMMENT=	PostgreSQL database server programs
@@ -6,7 +6,7 @@ COMMENT=	PostgreSQL database server programs
 # mips has no TAS implementation
 NOT_FOR_PLATFORM=	*-*-mips
 
-.include "../../wip/postgresql81/Makefile.common"
+.include "../../databases/postgresql81/Makefile.common"
 
 # Use shlibtool (invoked as "$(LIBTOOL)") to build modules.
 USE_LIBTOOL=		yes
@@ -44,7 +44,7 @@ DL_LIBS+=	-lltdl
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql81-server
 PKG_SUPPORTED_OPTIONS=	pam
-.include "../../wip/postgresql81/options.mk"
+.include "../../databases/postgresql81/options.mk"
 
 # PGUSER	username of the database administrator
 # PGGROUP	group of the database administrator
@@ -64,7 +64,7 @@ PKG_GROUPS=		${PGGROUP}
 
 RCD_SCRIPTS=		pgsql
 
-.include "../../wip/postgresql81-client/buildlink3.mk"
+.include "../../databases/postgresql81-client/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
 # Avoid conflict between "${SSLBASE}/include/openssl/des.h" and
