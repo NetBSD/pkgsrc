@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2006/02/13 19:22:33 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/21 06:00:47 jlam Exp $
 #
 
 .include "Makefile.common"
+
+PKGREVISION=		1
 
 COMMENT+=		good plugins
 

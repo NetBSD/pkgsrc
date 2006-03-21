@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2006/02/05 23:11:03 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2006/03/21 06:00:50 jlam Exp $
 
 DISTNAME=	ISOEnts
 PKGNAME=	iso8879-1986
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.oasis-open.org/cover/
 EXTRACT_SUFX=	.zip

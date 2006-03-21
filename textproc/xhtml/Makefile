@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2006/03/04 21:30:52 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/21 06:00:50 jlam Exp $
 #
 
 DISTNAME=	xhtml1
 PKGNAME=	xhtml-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.w3.org/TR/xhtml1/
 EXTRACT_SUFX=	.tgz
