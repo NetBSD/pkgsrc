@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/03/04 21:29:33 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/03/21 18:53:59 minskim Exp $
 #
 
 DISTNAME=	vigor-0.016
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vigor/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://vigor.sourceforge.net/
 COMMENT=	nvi with excessive online "help"
-
-BROKEN_IN=	pkgsrc-2005Q4
 
 CONFLICTS+=	nvi-[0-9]*
 
