@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/13 07:11:19 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/22 16:56:50 minskim Exp $
 #
 
 NAME=		textpos
@@ -23,6 +23,14 @@ CONFLICTS+=	teTeX-bin>=3.0
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${TEX_DEFAULT} == "teTeX3"
+PKG_SKIP_REASON+=	"textpos is included in ${TEX_DEFAULT}."
+.else
+.include "../../mk/tex.buildlink3.mk"
+.endif
+
 do-extract:
 
 do-install:
@@ -36,5 +44,4 @@ post-install:
 	cd ${PKG_LOCALTEXMFPREFIX}/tex/latex/textpos; latex textpos.ins
 	${LOCALBASE}/bin/texconfig rehash
 
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
