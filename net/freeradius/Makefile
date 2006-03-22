@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2006/03/22 15:07:41 adrianp Exp $
+# $NetBSD: Makefile,v 1.46 2006/03/22 20:53:41 joerg Exp $
 
 DISTNAME=	freeradius-1.1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 		ftp://ftp.Awfulhak.org/pub/radius/
@@ -15,7 +15,6 @@ COMMENT=	Free RADIUS server implementation
 CONFLICTS+=		radiusd-cistron*
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		YES
-LIBTOOLIZE_PLIST=	NO
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 FILES_SUBST+=		ROOT_USER=${ROOT_USER:Q}
 FILES_SUBST+=		ROOT_GROUP=${ROOT_GROUP:Q}
@@ -93,12 +92,15 @@ CONFIGURE_ARGS+=	--without-threads
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "pth"
 .include "../../devel/pthread-sem/buildlink3.mk"
 SUBST_SED.make+= 	-e "s|@ldap_ldflags@|@ldap_ldflags@ \
-				-lpthread -lsemaphore|g"
+			${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} -lsemaphore|g"
 .endif
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native"
 SUBST_SED.make+= 	-e "s|@ldap_ldflags@|@ldap_ldflags@ \
-				-lpthread|g"
+			${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}|g"
+.endif
+
+.if ${OPSYS} == "DragonFly"
 .endif
 
 .if ${MACHINE_ARCH} == "amd64"
