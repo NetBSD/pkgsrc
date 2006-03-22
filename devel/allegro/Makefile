@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2006/03/09 21:04:42 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/03/22 23:53:33 jlam Exp $
 
 DISTNAME=	allegro-4.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=alleg/}
 
@@ -14,27 +14,19 @@ GNU_CONFIGURE=		yes
 
 MAKEFILE=		makefile
 BUILD_TARGET=		# there is no 'all' target for some reason
-INFO_FILES=		allegro.info
+INFO_FILES=		# PLIST
 INSTALL_TARGET=		install install-info
 
 # NetBSD's OSS midi emulation is non-existent.
 CONFIGURE_ARGS+=	--disable-ossmidi
-
-LIBS+=		${LIBOSSAUDIO}
 
 .include "options.mk"
 
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	post-patch
 SUBST_FILES.oss=	src/unix/uoss.c setup/setup.c
-SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
-SUBST_MESSAGE.oss=	"Fixing harcoded audio device."
-
-SUBST_CLASSES+=		path
-SUBST_STAGE.path=	post-patch
-SUBST_FILES.path=	src/unix/umodules.c src/unix/usystem.c
-SUBST_SED.path=		-e "s,@@PREFIX@@,${PREFIX},g"
-SUBST_MESSAGE.path=	"Fixing harcoded path"
+SUBST_SED.oss=		-e "s,/dev/dsp,"${DEVOSSAUDIO:Q}",g"
+SUBST_MESSAGE.oss=	Fixing harcoded audio device.
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
