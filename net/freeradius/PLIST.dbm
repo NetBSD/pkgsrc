@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST.dbm,v 1.2 2005/09/22 16:13:17 adrianp Exp $
+@comment $NetBSD: PLIST.dbm,v 1.3 2006/03/22 20:53:41 joerg Exp $
 bin/rlm_dbm_cat
 bin/rlm_dbm_parser
 lib/rlm_dbm-${PKGVERSION}.la
-lib/rlm_dbm-${PKGVERSION}.so
-lib/rlm_dbm.a
 lib/rlm_dbm.la
-lib/rlm_dbm.so

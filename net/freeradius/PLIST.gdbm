@@ -1,6 +1,3 @@
-@comment $NetBSD: PLIST.gdbm,v 1.2 2005/09/22 16:13:17 adrianp Exp $
+@comment $NetBSD: PLIST.gdbm,v 1.3 2006/03/22 20:53:41 joerg Exp $
 lib/rlm_counter-${PKGVERSION}.la
-lib/rlm_counter-${PKGVERSION}.so
-lib/rlm_counter.a
 lib/rlm_counter.la
-lib/rlm_counter.so

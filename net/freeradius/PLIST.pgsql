@@ -1,5 +1,3 @@
-@comment $NetBSD: PLIST.pgsql,v 1.1 2004/10/02 12:06:03 adrianp Exp $
-lib/rlm_sql_postgresql-${PKGVERSION}.so
-lib/rlm_sql_postgresql.a
+@comment $NetBSD: PLIST.pgsql,v 1.2 2006/03/22 20:53:41 joerg Exp $
+lib/rlm_sql_postgresql-${PKGVERSION}.la
 lib/rlm_sql_postgresql.la
-lib/rlm_sql_postgresql.so
