@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2006/03/22 17:07:10 joerg Exp $
+
+--- configure.orig	2006-03-22 16:47:46.000000000 +0000
++++ configure
+@@ -2169,7 +2169,7 @@ fi
+ 
+    OS="LINUX"
+    ;;
+-*freebsd*)
++*freebsd* | *dragonfly*)
+    cat >>confdefs.h <<\_ACEOF
+ #define OS_BSD 1
+ _ACEOF
