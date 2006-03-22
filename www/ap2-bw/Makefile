@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:11:18 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/22 22:50:33 tv Exp $
 #
 
 DISTNAME=		bw_mod-0.6
@@ -8,7 +8,7 @@ CATEGORIES=		www
 MASTER_SITES=		http://ivn.cl/apache/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tv@duh.org
+MAINTAINER=		tv@NetBSD.org
 HOMEPAGE=		http://ivn.cl/apache/
 COMMENT=		Class-based bandwidth limiting module for Apache 2
 

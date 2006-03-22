@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:11:00 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/03/22 22:50:33 tv Exp $
 #
 # Possible TODOs:
 # - set CH based on manual page section number, and real OS name
@@ -15,7 +15,7 @@ MASTER_SITES=		ftp://vic.cc.purdue.edu/pub/ \
 DIST_SUBDIR=		${PKGNAME_NOREV}
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		tv@duh.org
+MAINTAINER=		tv@NetBSD.org
 HOMEPAGE=		ftp://vic.cc.purdue.edu/pub/cawf.README
 COMMENT=		Simplistic nroff-like formatter in C, like "awf"
 

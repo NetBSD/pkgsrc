@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/08/06 06:19:30 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/22 22:50:33 tv Exp $
 #
 
 DISTNAME=	Digest-CRC-0.09
@@ -8,7 +8,7 @@ PKGREVISION=	1
 CATEGORIES=	security perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Digest/}
 
-MAINTAINER=	tv@duh.org
+MAINTAINER=	tv@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Digest-CRC/
 COMMENT=	Perl5 extension interface for cyclic redundancy check algorithms
 

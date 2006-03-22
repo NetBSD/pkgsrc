@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/12/05 20:49:53 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/22 22:50:31 tv Exp $
 #
 
 DISTNAME=		iip-1.1.0
@@ -6,7 +6,7 @@ CATEGORIES=		chat security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=invisibleip/}
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tv@duh.org
+MAINTAINER=		tv@NetBSD.org
 HOMEPAGE=		http://www.invisiblenet.net/iip/
 COMMENT=		The Invisible IRC Project
 

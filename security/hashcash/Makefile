@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:32 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/22 22:50:33 tv Exp $
 #
 
 DISTNAME=		hashcash-1.13
@@ -6,7 +6,7 @@ CATEGORIES=		security
 MASTER_SITES=		http://www.hashcash.org/source/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		tv@duh.org
+MAINTAINER=		tv@NetBSD.org
 HOMEPAGE=		http://www.hashcash.org/
 COMMENT=		Hash collision based postage stamp
 

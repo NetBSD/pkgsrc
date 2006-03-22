@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/29 06:21:47 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/22 22:50:32 tv Exp $
 #
 # Interix-only "JDK" for pkgsrc, implemented as a script wrapper around the
 # Win32 Sun JDK/JRE.
@@ -10,7 +10,7 @@ CATEGORIES=		lang java
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		tv@duh.org
+MAINTAINER=		tv@NetBSD.org
 HOMEPAGE=		http://www.java.com/
 COMMENT=		Interix wrapper package for Win32 Sun Java(tm) 2
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2005/12/05 20:50:48 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/22 22:50:32 tv Exp $
 #
 
 DISTNAME=	proxycheck-0.49a
 CATEGORIES=	net
 MASTER_SITES=	http://www.corpit.ru/mjt/proxycheck/
 
-MAINTAINER=	tv@duh.org
+MAINTAINER=	tv@NetBSD.org
 HOMEPAGE=	http://www.corpit.ru/mjt/proxycheck.html
 COMMENT=	Tester for open (promiscuous) proxy systems
 

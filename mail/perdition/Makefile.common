@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2006/03/03 16:56:35 tv Exp $
+# $NetBSD: Makefile.common,v 1.4 2006/03/22 22:50:32 tv Exp $
 #
 
 PERDITION_VERSION=	1.17
@@ -6,7 +6,7 @@ DISTNAME=		perdition-${PERDITION_VERSION}
 CATEGORIES=		mail
 MASTER_SITES=		http://www.vergenet.net/linux/perdition/download/1.17/
 
-MAINTAINER=		tv@duh.org
+MAINTAINER=		tv@NetBSD.org
 HOMEPAGE=		http://www.vergenet.net/linux/perdition/
 COMMENT=		IMAP/POP3 proxy redirector (${PERDITION_COMMENT})
 

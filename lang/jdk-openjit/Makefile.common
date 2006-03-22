@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2005/12/05 23:55:10 rillig Exp $
+# $NetBSD: Makefile.common,v 1.11 2006/03/22 22:50:32 tv Exp $
 
 OPENJIT_VERSION=1.1.16
 
@@ -6,7 +6,7 @@ DISTNAME=	OpenJIT-${OPENJIT_VERSION}
 CATEGORIES=	lang java
 MASTER_SITES=	http://www.openjit.org/dist/
 
-MAINTAINER=	tv@pobox.com
+MAINTAINER=	tv@NetBSD.org
 HOMEPAGE=	http://www.openjit.org/
 COMMENT=	Reflective JIT compiler for Java
 
