@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/05 16:27:23 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/22 18:41:09 jlam Exp $
 
 DISTNAME=	avrdude-4.1.0
 PKGREVISION=	3
@@ -13,13 +13,17 @@ USE_GNU_READLINE=	YES
 TEX_DEPMETHOD=		build
 TEX_ACCEPTED=		teTeX1 teTeX2 teTeX3
 
-BUILD_DEPENDS+=	texi2html>=1.76:../../textproc/texi2html
-
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	makeinfo
-INFO_FILES=	avrdude.info
+USE_TOOLS+=	makeinfo texi2html
+INFO_FILES=	# PLIST
 
 CONFIGURE_ARGS+=	--disable-versioned-doc
+
+# Remove avrdude's buggy and outdated texinfo.tex that was breaking
+# modern etex.
+#
+post-extract:
+	${RM} -f ${WRKSRC}/doc/texinfo.tex
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/tex.buildlink3.mk"

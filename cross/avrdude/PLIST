@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2005/03/02 13:20:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/03/22 18:41:09 jlam Exp $
 bin/avrdude
 etc/avrdude.conf
+info/avrdude.info
 man/man1/avrdude.1
 share/doc/avrdude/avrdude.pdf
 share/doc/avrdude/avrdude-html/avrdude.html
