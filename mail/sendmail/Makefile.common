@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2006/01/08 16:16:00 joerg Exp $
+# $NetBSD: Makefile.common,v 1.32 2006/03/22 19:56:36 adrianp Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -8,6 +8,9 @@ CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/ \
 		ftp://ftp.ayamura.org/pub/sendmail/
+
+PATCH_SITES=	${MASTER_SITES}
+PATCHFILES=	8.13.5.p0
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.sendmail.org/
