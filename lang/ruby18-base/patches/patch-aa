@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2006/01/03 14:37:24 taca Exp $
+$NetBSD: patch-aa,v 1.5 2006/03/22 23:05:39 taca Exp $
 
 --- configure.in.orig	2005-11-24 21:07:18.000000000 +0900
 +++ configure.in
@@ -26,7 +26,16 @@ $NetBSD: patch-aa,v 1.4 2006/01/03 14:37:24 taca Exp $
  	interix*) 	: ${LDSHARED="$CC -shared"}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
  			LIBPATHFLAG=" -L'%1\$-s'"
-@@ -1266,6 +1276,14 @@ if test "$enable_shared" = 'yes'; then
+@@ -1232,8 +1242,6 @@ if test "$enable_shared" = 'yes'; then
+ 	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR).$(MINOR).$(TEENY) lib$(RUBY_SO_NAME).so'
+ 	if test "$GCC" = yes; then
+ 	    LIBRUBY_DLDFLAGS="$DLDFLAGS "'-Wl,-h,$(@F)'
+-	else
+-	    enable_rpath=no
+ 	fi
+ 	XLDFLAGS="$XLDFLAGS "'-R${libdir}'
+  	;;
+@@ -1266,6 +1274,14 @@ if test "$enable_shared" = 'yes'; then
  	LIBRUBY_DLDFLAGS='-install_name $(libdir)/lib$(RUBY_SO_NAME).dylib -current_version $(MAJOR).$(MINOR).$(TEENY) -compatibility_version $(MAJOR).$(MINOR)'
  	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_SO_NAME).dylib'
  	;;
@@ -41,3 +50,16 @@ $NetBSD: patch-aa,v 1.4 2006/01/03 14:37:24 taca Exp $
      interix*)
  	LIBRUBYARG_SHARED='-L${libdir} -L. -l$(RUBY_SO_NAME)'
  	;;
+@@ -1274,7 +1290,11 @@ if test "$enable_shared" = 'yes'; then
+   esac
+ fi
+ if test "$enable_rpath" = yes; then
+-    LIBRUBYARG_SHARED='-Wl,-R -Wl,$(libdir) -L$(libdir) -L. '"$LIBRUBYARG_SHARED"
++    if test "$GCC" = yes; then
++	LIBRUBYARG_SHARED='-Wl,-R -Wl,$(libdir) -L$(libdir) -L. '"$LIBRUBYARG_SHARED"
++    else
++	LIBRUBYARG_SHARED='-R $(libdir) -L$(libdir) -L. '"$LIBRUBYARG_SHARED"
++    fi
+ fi
+ 
+ XLDFLAGS="$XLDFLAGS -L."
