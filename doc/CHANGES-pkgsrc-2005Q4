@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.111 2006/03/17 12:04:17 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.112 2006/03/22 14:54:49 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -223,3 +223,5 @@ Pullup ticket 1225 - requested by Joerg Sonnenberger
 security update for libextractor
 Pullup ticket 1226 - requested by Takahiro Kambe
 security update for namazu2
+Pullup ticket 1244 - requested by Takahiro Kambe
+fix namazu2 dependency on File::MMagic
