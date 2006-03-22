@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2006/03/21 23:08:08 adrianp Exp $
+# $NetBSD: Makefile,v 1.45 2006/03/22 15:07:41 adrianp Exp $
 
 DISTNAME=	freeradius-1.1.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 		ftp://ftp.Awfulhak.org/pub/radius/
@@ -116,6 +117,6 @@ post-install:
 .endfor
 	${INSTALL_SCRIPT} ${WRKSRC}/src/modules/rlm_perl/example.pl ${EGDIR}
 	@${MKDIR} ${PKG_SYSCONFDIR}/certs
-	@${MKDIR} ${PKG_SYSCONFDIR}/certs/demoCAA
+	@${MKDIR} ${PKG_SYSCONFDIR}/certs/demoCA
 
 .include "../../mk/bsd.pkg.mk"
