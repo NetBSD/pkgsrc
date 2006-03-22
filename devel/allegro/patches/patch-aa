@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.5 2006/01/22 13:55:20 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2006/03/22 23:53:33 jlam Exp $
 
---- makefile.in.orig	2005-09-10 22:17:51.000000000 +0200
+--- makefile.in.orig	2005-09-10 16:17:51.000000000 -0400
 +++ makefile.in
+@@ -59,7 +59,7 @@ ACLOCAL_M4 = aclocal.m4
+ 
+ INCLUDES = -I. -Iinclude -Iinclude/allegro -I$(srcdir)/include -I$(srcdir)/include/allegro
+ DEFS = @DEFS@
+-CPPFLAGS = @CPPFLAGS@
++CPPFLAGS = @CPPFLAGS@ -DINSTPREFIX=\"$(prefix)\"
+ override LDFLAGS += @LDFLAGS@
+ PROG_LDFLAGS = @PROG_LDFLAGS@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(CPPFLAGS) $(CFLAGS)
 @@ -481,17 +481,7 @@ install-lib: lib modules
  	fi
  	$(mkinstalldirs) $(DESTDIR)$(bindir)
