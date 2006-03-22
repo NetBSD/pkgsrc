@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2004/10/03 09:20:41 tron Exp $
+$NetBSD: patch-ae,v 1.5 2006/03/22 16:40:08 joerg Exp $
 
 --- lib/bind/configure.orig	2004-02-24 11:32:40.000000000 +0900
 +++ lib/bind/configure	2004-05-16 05:09:21.000000000 +0900
@@ -43,3 +43,30 @@ $NetBSD: patch-ae,v 1.4 2004/10/03 09:20:41 tron Exp $
  			fi
  		fi
  		;;
+@@ -5577,6 +5577,10 @@ fi
+ 			CCOPT="$CCOPT -pthread"
+ 			STD_CDEFINES="$STD_CDEFINES -D_THREAD_SAFE"
+ 			;;
++		*-dragonfly*)
++			CC="$CC -pthread"
++			CCOPT="$CCOPT -pthread"
++			;;
+ 		*-openbsd*)
+ 			CC="$CC -pthread"
+ 			CCOPT="$CCOPT -pthread"
+@@ -22995,6 +22999,7 @@ case "$host" in
+ 	*-bsdi2345*)	have_minimum_ifreq=yes;;
+ 	*-darwin*)	have_minimum_ifreq=yes;;
+ 	*-freebsd*)	have_minimum_ifreq=yes;;
++	*-drgonfly*)	have_minimum_ifreq=yes;;
+ 	*-lynxos*)	have_minimum_ifreq=yes;;
+ 	*-netbsd*)	have_minimum_ifreq=yes;;
+ 	*-next*)	have_minimum_ifreq=yes;;
+@@ -23028,6 +23033,7 @@ case "$host" in
+ 	*-darwin*)	PORT_DIR="port/darwin";;
+ 	*-osf*)		PORT_DIR="port/decunix";;
+ 	*-freebsd*)	PORT_DIR="port/freebsd";;
++	*-dragonfly*)	PORT_DIR="port/freebsd";;
+ 	*-hpux9*)	PORT_DIR="port/hpux9";;
+ 	*-hpux10*)	PORT_DIR="port/hpux10";;
+ 	*-hpux11*)	PORT_DIR="port/hpux";;
