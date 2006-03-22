@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/19 15:54:13 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/22 15:12:07 jlam Exp $
 
 DISTNAME=		wxhaskell-src-0.9.4
 PKGNAME=		${DISTNAME:S/-src//}
@@ -22,7 +22,5 @@ pre-configure:
 	cd ${WRKSRC}; ./configure --prefix=${PREFIX} --with-opengl
 
 .include "../../lang/ghc/buildlink3.mk"
-# gmp should be implied by ghc, but isn't (PR 33100)
-.include "../../devel/gmp/buildlink3.mk"
 .include "../../x11/wxGTK/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
