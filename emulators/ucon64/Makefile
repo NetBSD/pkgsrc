@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:09:05 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/22 22:50:32 tv Exp $
 #
 
 DISTNAME=		ucon64-2.0.0-src
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ucon64/}
 
-MAINTAINER=		tv@duh.org
+MAINTAINER=		tv@NetBSD.org
 HOMEPAGE=		http://ucon64.sourceforge.net/
 COMMENT=		Emulator ROM and disk image converter and inspector
 
