@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2006/03/14 16:00:54 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2006/03/22 19:31:14 minskim Exp $
 
 DISTNAME=	fltk-1.1.7-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -27,7 +27,12 @@ TEST_TARGET=		test
 PTHREAD_OPTS+=		require
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-libtool=${LIBTOOL:Q}
+.if exists(./descr)
+PLIST_SUBST+=           WITH_LINKS="@comment "
+.else
 CONFIGURE_ARGS+=	--with-links
+PLIST_SUBST+=           WITH_LINKS=""
+.endif
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
