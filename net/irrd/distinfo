@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2005/02/24 12:13:50 agc Exp $
+$NetBSD: distinfo,v 1.9 2006/03/22 22:14:43 joerg Exp $
 
 SHA1 (irrd2.2.3.tgz) = 5f1ceb19c630146f5325d475bdf2e04eb5ef187c
 RMD160 (irrd2.2.3.tgz) = 9fd7b87155d2d6d34c3bfe51613418ae959254a7
 Size (irrd2.2.3.tgz) = 689216 bytes
 SHA1 (patch-aa) = 3059131bad8df2071ae64ea5e9d0c6f858a7ae2e
+SHA1 (patch-ab) = d9172a35b907dbaac24ef7b72fcce05310d674bd
