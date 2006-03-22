@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4771 2006/03/21 21:52:38 recht Exp $
+$NetBSD: TODO,v 1.4772 2006/03/22 16:42:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -514,7 +514,7 @@ Suggested package updates
 	o fop-0.20.5
 	o fort77-1.18
 	o fortunes-de-0.20
-	o fox-1.4.27
+	o fox-1.6.0
 	o freeciv-client-2.0.8
 	o freeciv-server-2.0.8
 	o freeciv-share-2.0.8
@@ -696,6 +696,7 @@ Suggested package updates
 	o libcdio-0.77
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
+	o libetpan-0.44
 	o libextractor-0.5.11
 	o libflash-0.4.13
 	o libggi-2.2.1
@@ -718,6 +719,7 @@ Suggested package updates
 	o libnasl-2.3.1
 	o libntlm-0.3.9
 	o libpqxx-2.5.5
+	o libprelude-0.9.7.1
 	o libshout-2.2
 	o libsmi-0.4.3
 	o libsndfile-1.0.15
