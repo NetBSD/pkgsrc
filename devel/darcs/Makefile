@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/19 15:54:13 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/03/22 15:12:07 jlam Exp $
 
 DISTNAME=		darcs-1.0.4
 PKGREVISION=		2
@@ -18,7 +18,5 @@ GNU_CONFIGURE=		yes
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../lang/ghc/buildlink3.mk"
-# gmp should be implied by ghc, but isn't (PR 33100)
-.include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
