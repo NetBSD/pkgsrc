@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2005/06/06 13:49:25 seb Exp $
+# $NetBSD: hacks.mk,v 1.2 2006/03/22 23:05:39 taca Exp $
 
 .if !defined(RUBY18_BASE_HACKS_MK)
 RUBY18_BASE_HACKS_MK=	defined
@@ -14,7 +14,7 @@ RUBY18_BASE_HACKS_MK=	defined
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-sparc64)
 .  if !empty(CC_VERSION:Mgcc-3.3.*)
 PKG_HACKS+=		optimisation
-BUILDLINK_TRANSFORM+=   rm:-O[0-9]*
+BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
 .  endif
 .endif
 
