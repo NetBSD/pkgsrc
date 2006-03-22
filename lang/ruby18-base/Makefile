@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2006/03/15 08:18:45 taca Exp $
+# $NetBSD: Makefile,v 1.20 2006/03/22 23:05:39 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION}
+PKGREVISION=	1
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 
@@ -52,9 +53,9 @@ FILES_SUBST+=	DATE=${DATE:Q}
 # IRIX work around which should be fixed.
 #
 .if ${OPSYS} == "IRIX"
-PLIST_SUBST+=  HAS_IO="@comment "
+PLIST_SUBST+=	HAS_IO="@comment "
 .else
-PLIST_SUBST+=  HAS_IO=
+PLIST_SUBST+=	HAS_IO=
 .endif
 
 #
