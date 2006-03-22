@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13345 2006/03/22 19:57:54 adrianp Exp $
+$NetBSD: CHANGES,v 1.13346 2006/03/22 21:23:36 tv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1563,3 +1563,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/curl to 7.15.3 [recht 2006-03-21]
 	Updated net/freeradius to 1.1.1 [adrianp 2006-03-21]
 	Updated mail/sendmail to 8.13.5nb2 [adrianp 2006-03-22]
+	Updated mail/sendmail812 to 8.12.11nb2 [tv 2006-03-22]
