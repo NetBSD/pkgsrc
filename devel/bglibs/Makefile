@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2006/02/24 14:55:45 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/23 20:17:10 schmonz Exp $
 #
 
-DISTNAME=		bglibs-1.040
-PKGREVISION=		1
+DISTNAME=		bglibs-1.041
 CATEGORIES=		devel
 MASTER_SITES=		${HOMEPAGE}
 
