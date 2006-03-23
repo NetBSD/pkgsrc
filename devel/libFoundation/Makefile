@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/18 00:54:28 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/23 04:13:10 minskim Exp $
 #
 
 DISTNAME=	libFoundation-1.0.72-r107
@@ -24,12 +24,17 @@ PLIST_SUBST+=	LIBF_HOST_OS=${LIBF_HOST_OS}
 
 LIBF_HOST_OS=	${GNUSTEP_HOST:C/.*-//}
 
+.include "../../devel/gnustep-objc-lf2/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+
 pre-configure:
 	${MKDIR} ${WRKSRC}/config/${MACHINE_GNU_ARCH}
 	[ -e ${WRKSRC}/config/${MACHINE_GNU_ARCH}/${GNUSTEP_HOST_OS}.h ] || \
 	${LN} -s linux.h ${WRKSRC}/config/${MACHINE_GNU_ARCH}/${GNUSTEP_HOST_OS}.h
+.if ${GNUSTEP_HOST_OS} != ${LIBF_HOST_OS}
 	[ -e ${WRKSRC}/config/${MACHINE_GNU_ARCH}/${LIBF_HOST_OS}.h ] || \
 	${LN} -s linux.h ${WRKSRC}/config/${MACHINE_GNU_ARCH}/${LIBF_HOST_OS}.h
+.endif
 
 post-configure:
 	-${MKDIR} ${WRKSRC}/Foundation/${GNUSTEP_HOST_CPU}
@@ -38,6 +43,4 @@ post-configure:
 	    ${WRKSRC}/Foundation/${LIBF_HOST_OS}	\
 	    ${WRKSRC}/Foundation/${GNUSTEP_HOST_CPU}/${LIBF_HOST_OS}
 
-.include "../../devel/gnustep-objc-lf2/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
