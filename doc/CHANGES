@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13347 2006/03/22 23:06:49 taca Exp $
+$NetBSD: CHANGES,v 1.13348 2006/03/23 03:26:54 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1565,3 +1565,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/sendmail to 8.13.5nb2 [adrianp 2006-03-22]
 	Updated mail/sendmail812 to 8.12.11nb2 [tv 2006-03-22]
 	Updated lang/ruby18-base to 1.8.4nb1 [taca 2006-03-22]
+	Updated graphics/TiffIO to 1.2.0e [minskim 2006-03-23]
