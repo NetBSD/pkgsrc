@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2006/03/23 00:59:05 joerg Exp $
+
+--- python/dnet.c.orig	2006-03-23 00:56:28.000000000 +0000
++++ python/dnet.c
+@@ -270,7 +270,6 @@ static PyObject *__pyx_f_4dnet___memcpy(
+ 
+ 
+ static PyObject *__pyx_f_4dnet___oserror(void) {
+-  extern int errno;
+   PyObject *__pyx_r;
+   PyObject *__pyx_1 = 0;
+ 
