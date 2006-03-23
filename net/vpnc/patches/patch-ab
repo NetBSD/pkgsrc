@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2004/11/26 23:03:54 hubertf Exp $
+$NetBSD: patch-ab,v 1.3 2006/03/23 16:53:28 joerg Exp $
 
---- Makefile.orig	2004-11-13 00:23:36.000000000 +0100
+--- Makefile.orig	2005-05-01 20:30:35.000000000 +0000
 +++ Makefile
-@@ -22,7 +22,7 @@ SBINDIR=$(PREFIX)/sbin
+@@ -23,7 +23,7 @@ SBINDIR=$(PREFIX)/sbin
  MANDIR=$(PREFIX)/share/man
  
  CC=gcc
@@ -11,3 +11,14 @@ $NetBSD: patch-ab,v 1.2 2004/11/26 23:03:54 hubertf Exp $
  LDFLAGS=-g $(shell libgcrypt-config --libs)
  
  ifeq ($(shell uname -s), Linux)
+@@ -33,6 +33,10 @@ ifeq ($(shell uname -s), FreeBSD)
+ CFLAGS += -DSOCKADDR_IN_SIN_LEN -DHAVE_SA_LEN
+ SYSDEP=sysdep-bsd.o
+ endif
++ifeq ($(shell uname -s), DragonFly)
++CFLAGS += -DSOCKADDR_IN_SIN_LEN -DHAVE_SA_LEN
++SYSDEP=sysdep-bsd.o
++endif
+ ifeq ($(shell uname -s), NetBSD)
+ CFLAGS += -DSOCKADDR_IN_SIN_LEN -DHAVE_SA_LEN
+ SYSDEP=sysdep-bsd.o
