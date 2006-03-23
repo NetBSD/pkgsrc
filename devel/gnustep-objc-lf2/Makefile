@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/05 20:12:30 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2006/03/23 04:02:58 minskim Exp $
 #
 
 DISTNAME=	gnustep-objc-lf2.95.3-r88
@@ -15,10 +15,15 @@ COMMENT=	Objective-C library required for libFoundation
 WRKSRC=		${WRKDIR}/libobjc-lf2
 USE_TOOLS+=	gmake
 
+.include "../../devel/gnustep-make/buildlink3.mk"
+
 do-configure:
+.if ${GNUSTEP_HOST_CPU} == "x86_64"
+	${LN} -s alpha ${WRKSRC}/config/x86_64
+.else
 	${MKDIR} ${WRKSRC}/config/${GNUSTEP_HOST_CPU}
 	[ -e ${WRKSRC}/config/${GNUSTEP_HOST_CPU}/${LOWER_OPSYS} ] || \
 	${LN} -s linux-gnu ${WRKSRC}/config/${GNUSTEP_HOST_CPU}/generic
+.endif
 
-.include "../../devel/gnustep-make/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
