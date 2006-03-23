@@ -1,8 +1,18 @@
-$NetBSD: patch-ac,v 1.1 2004/03/25 20:29:36 markd Exp $
+$NetBSD: patch-ac,v 1.2 2006/03/23 17:20:22 joerg Exp $
 
---- wicontrol.c.orig	2004-03-25 00:42:00.000000000 +1200
+--- wicontrol.c.orig	2002-08-11 14:18:51.000000000 +0000
 +++ wicontrol.c
-@@ -59,7 +59,11 @@
+@@ -55,11 +55,21 @@
+ #include <net/ethernet.h>
+ 
+ #include <machine/if_wavelan_ieee.h>
++#elif defined(__DragonFly__)
++#include <net/if_var.h>
++#include <net/ethernet.h>
++
++#include <netproto/802_11/ieee80211.h>
++#include <netproto/802_11/if_wavelan_ieee.h>
+ #else
  #include <netinet/in.h>
  #include <netinet/if_ether.h>
  #ifdef __NetBSD__
