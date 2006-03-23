@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2005/08/04 10:22:21 drochner Exp $
+$NetBSD: patch-ab,v 1.4 2006/03/23 16:37:46 joerg Exp $
 
---- configure.orig	2002-07-16 00:51:08.000000000 +0200
+--- configure.orig	2002-07-15 22:51:08.000000000 +0000
 +++ configure
 @@ -538,7 +538,6 @@ fi
  
@@ -64,12 +64,20 @@ $NetBSD: patch-ab,v 1.3 2005/08/04 10:22:21 drochner Exp $
  
    cat >> confdefs.h <<EOF
  #define LIBC "${LIBC}"
-@@ -2228,7 +2235,7 @@ EOF
+@@ -2151,6 +2158,7 @@ do
+ #line 2152 "configure"
+ #include "confdefs.h"
+ 
++      #include <sys/types.h>
+       #include <sys/socket.h>
+       int connect($testproto);
+     
+@@ -2228,7 +2236,7 @@ EOF
  echo $ac_n "checking for correct poll prototype""... $ac_c" 1>&6
  echo "configure:2230: checking for correct poll prototype" >&5
  PROTO=
 -for testproto in 'struct pollfd *ufds, unsigned long nfds, int timeout' 
-+for testproto in 'struct pollfd *ufds, nfds_t nfds, int timeout' 
++for testproto in 'struct pollfd *ufds, nfds_t nfds, int timeout' 'struct pollfd *ufds, unsigned int nfds, int timeout'
  do
    if test "${PROTO}" = ""; then
      cat > conftest.$ac_ext <<EOF
