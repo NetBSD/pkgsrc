@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2006/02/05 14:49:05 ghen Exp $
+$NetBSD: patch-ab,v 1.8 2006/03/23 15:43:17 joerg Exp $
 
 --- configure.in.orig	2006-02-02 13:20:06.000000000 +0100
 +++ configure.in
@@ -10,6 +10,15 @@ $NetBSD: patch-ab,v 1.7 2006/02/05 14:49:05 ghen Exp $
          # set MACOSX to generate lib/mac/MoreFiles/Makefile
          MACOSX=1
          ;;
+@@ -1360,7 +1359,7 @@ case "$target" in
+     esac
+     ;;
+ 
+-*-freebsd*)
++*-freebsd* | *-dragonfly*)
+     if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo aout` != "elf"; then
+ 	DLL_SUFFIX=".so.1.0"
+ 	DSO_LDOPTS="-shared"
 @@ -1374,6 +1373,9 @@ case "$target" in
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
  #	MKSHLIB_UNFORCE_ALL=''
