@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/03/21 19:23:08 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/03/23 11:40:30 drochner Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.10.
 # XXX After this file has been verified as correct, the comment lines
@@ -24,5 +24,7 @@ BUILDLINK_PACKAGES+=	pthread-stublib
 BUILDLINK_DEPENDS.pthread-stublib+=	pthread-stublib>=1.0
 BUILDLINK_PKGSRCDIR.pthread-stublib?=	../../devel/pthread-stublib
 .endif	# PTHREAD_STUBLIB_BUILDLINK3_MK
+
+IS_BUILTIN.pthread-stublib=no
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
