@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/22 23:53:33 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/03/23 06:43:17 wiz Exp $
 
 DISTNAME=	allegro-4.2.0
 PKGREVISION=	2
@@ -26,7 +26,7 @@ SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	post-patch
 SUBST_FILES.oss=	src/unix/uoss.c setup/setup.c
 SUBST_SED.oss=		-e "s,/dev/dsp,"${DEVOSSAUDIO:Q}",g"
-SUBST_MESSAGE.oss=	Fixing harcoded audio device.
+SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
