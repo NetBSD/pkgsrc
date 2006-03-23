@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/11/13 08:31:05 minskim Exp $
+$NetBSD: patch-ac,v 1.2 2006/03/23 00:13:10 joerg Exp $
 
 --- configure.orig	2003-12-14 23:41:34.000000000 -0800
 +++ configure
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2005/11/13 08:31:05 minskim Exp $
  
          ;;
 -    *bsd*)
-+    *bsd* | *darwin*)
++    *bsd* | *darwin* | *dragonfly*)
  
  cat >>confdefs.h <<\_ACEOF
  #define HAVE_BSD 1
