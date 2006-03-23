@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.10 2006/03/23 16:09:32 yyamano Exp $
+
+--- src/constants.h.orig	2003-09-05 00:54:02.000000000 +0900
++++ src/constants.h
+@@ -95,7 +95,7 @@
+ #define INCLUDES	8
+ #define	FIELDS		9
+ 
+-#if (BSD || V9) && !__NetBSD__
++#if (BSD || V9) && !__NetBSD__ && !__APPLE__
+ #define TERMINFO	0	/* no terminfo curses */
+ #else
+ #define TERMINFO	1
