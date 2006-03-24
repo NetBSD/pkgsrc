@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.8 2006/03/13 21:11:57 heinz Exp $
+$NetBSD: patch-ad,v 1.9 2006/03/24 19:46:10 heinz Exp $
 
 --- spamd/netbsd-rc-script.sh.orig	2006-03-10 20:30:23.000000000 +0100
 +++ spamd/netbsd-rc-script.sh
@@ -31,13 +31,11 @@ $NetBSD: patch-ad,v 1.8 2006/03/13 21:11:57 heinz Exp $
 -# A default limit of 64 (at least on NetBSD) may be too low for many
 +# A default limit of 64 on NetBSD may be too low for many
  # people (eg with addional RBL rules)
-@@ -98,4 +104,4 @@ spamd_reload()
+@@ -98,3 +104,3 @@ spamd_reload()
  
 -if [ "${OPSYS}" = "NetBSD" ]; then
--	if checkyesno INTERPRETER_SUPPORT; then
 +if [ "${OPSYS}" = "NetBSD" -o "${OPSYS}" = "DragonFly" ]; then
-+	if checkyesno _INTERPRETER_SUPPORT; then
- 	  : # support for 'command_interpreter' was added in NetBSD 1.6
+ 	if checkyesno INTERPRETER_SUPPORT; then
 @@ -112,3 +118,3 @@ if [ "${OPSYS}" = "NetBSD" ]; then
  
 -else # not NetBSD
