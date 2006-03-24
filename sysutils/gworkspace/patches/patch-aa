@@ -1,21 +1,23 @@
-$NetBSD: patch-aa,v 1.4 2005/05/02 06:35:55 rh Exp $
+$NetBSD: patch-aa,v 1.5 2006/03/24 19:05:31 joerg Exp $
 
 --- GWorkspace/Desktop/GWDesktopManager.m.orig	2005-04-01 09:43:39.000000000 +1000
 +++ GWorkspace/Desktop/GWDesktopManager.m
-@@ -31,6 +31,12 @@
+@@ -31,6 +31,14 @@
  #include "GWorkspace.h"
  #include "GWViewersManager.h"
  #include "TShelf/TShelfWin.h"
 +#include <sys/types.h>
 +#include <sys/param.h>
 +
-+#if (defined(BSD) && BSD >= 199306)
++#if defined(__DragonFly__)
++#include <sys/mount.h>
++#elif (defined(BSD) && BSD >= 199306)
 +#include <sys/statvfs.h>
 +#endif
  
  #define RESV_MARGIN 10
  
-@@ -748,9 +754,31 @@ static GWDesktopManager *desktopManager 
+@@ -748,9 +756,39 @@ static GWDesktopManager *desktopManager 
    }
  
    if (removables == nil) {
@@ -27,7 +29,11 @@ $NetBSD: patch-aa,v 1.4 2005/05/02 06:35:55 rh Exp $
    }
    
 +#if (defined(BSD) && BSD >= 199306)
++#if defined(__DragonFly__)
++  struct statfs *mntbuf;
++#else
 +  struct statvfs *mntbuf;
++#endif
 +  int mntsize = getmntinfo(&mntbuf, MNT_NOWAIT);
 +
 +  for (i = 0; i < mntsize; i++) {
@@ -35,7 +41,11 @@ $NetBSD: patch-aa,v 1.4 2005/05/02 06:35:55 rh Exp $
 +        strcmp(mntbuf[i].f_mntonname,   [fullPath cString]) == 0) {
 +      *removableFlag = [removables containsObject:
 +                        [NSString stringWithCString: mntbuf[i].f_mntonname]];
++#if defined(__DragonFly__)
++      *writableFlag = ( mntbuf[i].f_flags & MNT_RDONLY ) ? NO : YES;
++#else
 +      *writableFlag = ( mntbuf[i].f_flag & MNT_RDONLY ) ? NO : YES;
++#endif
 +      *unmountableFlag = YES;
 +      *fileSystemType = [NSString stringWithCString: mntbuf[i].f_fstypename];
 +      *description = *fileSystemType;
@@ -47,7 +57,7 @@ $NetBSD: patch-aa,v 1.4 2005/05/02 06:35:55 rh Exp $
    mtab = [NSString stringWithContentsOfFile: mtabpath];
    mounts = [mtab componentsSeparatedByString: @"\n"];
  
-@@ -782,6 +810,7 @@ static GWDesktopManager *desktopManager 
+@@ -782,6 +820,7 @@ static GWDesktopManager *desktopManager 
        }
      }
    }
@@ -55,7 +65,7 @@ $NetBSD: patch-aa,v 1.4 2005/05/02 06:35:55 rh Exp $
  
    return NO;
  }
-@@ -801,11 +830,27 @@ static GWDesktopManager *desktopManager 
+@@ -801,11 +840,31 @@ static GWDesktopManager *desktopManager 
    }
  
    if (reserved == nil) {
@@ -70,7 +80,11 @@ $NetBSD: patch-aa,v 1.4 2005/05/02 06:35:55 rh Exp $
  
 +#if (defined(BSD) && BSD >= 199306)
 +  names = [NSMutableArray array];
++#if defined(__DragonFly__)
++  struct statfs *mntbuf;
++#else
 +  struct statvfs *mntbuf;
++#endif
 +  int mntsize = getmntinfo(&mntbuf, MNT_NOWAIT);
 +
 +  for (i = 0; i < mntsize; i++) {
@@ -83,7 +97,7 @@ $NetBSD: patch-aa,v 1.4 2005/05/02 06:35:55 rh Exp $
    mtab = [NSString stringWithContentsOfFile: mtabpath];
    mounts = [mtab componentsSeparatedByString: @"\n"];
    names = [NSMutableArray array];
-@@ -825,6 +870,7 @@ static GWDesktopManager *desktopManager 
+@@ -825,6 +884,7 @@ static GWDesktopManager *desktopManager 
        }
      } 
    }
