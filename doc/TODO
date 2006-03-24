@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4773 2006/03/23 18:05:28 wiz Exp $
+$NetBSD: TODO,v 1.4774 2006/03/24 18:50:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -344,6 +344,7 @@ Suggested package updates
 	o ap2-chroot-0.5
 	o ap2-transform-0.6.0
 	o apache-2.2.0
+	o apache-tomcat55-5.5.16
 	o apcupsd-3.10.16 [requires threads, doesn't work with pth on 1.6]
 	o apr-1.2.1
 	o aqsis-1.0.1 [heinz]
@@ -523,7 +524,7 @@ Suggested package updates
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o g2-0.50
-	o galculator-1.2.5.1On
+	o galculator-1.2.5.1O
 	o galeon-2.0.1
 	o gamin-0.1.6
 	o gap-4r4p3
@@ -574,11 +575,12 @@ Suggested package updates
 	o gnome2-user-docs-2.14.0 [jmmv]
 	o gnomeicu-0.99.10
 	o gnopernicus-1.0.3 [jmmv]
-	o gnucash-devel-1.9.3
-	o gnumeric-1.4.4
+	o gnucash-devel-1.9.3 [wiz]
+	o gnumeric-1.6.3
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
+	o goffice-0.2.1
 	o gogo-3.11p1
 	o gok-1.0.6 [jmmv]
 	o gossip-0.10.2 [jmmv]
@@ -669,6 +671,7 @@ Suggested package updates
 	o jftpgw-0.13.5
 	o jgrasp-183
 	o jigdo-0.7.2
+	o john-1.7.0.2
 	o jove-4.16.0.69
 	o jpegpixi-1.1.1
 	o jpilot-0.99.8
@@ -701,6 +704,7 @@ Suggested package updates
 	o libetpan-0.44
 	o libextractor-0.5.11
 	o libflash-0.4.13
+	o libgda-1.9.102
 	o libggi-2.2.1
 	o libggigcp-1.0.1
 	o libggimisc-2.2.1
@@ -709,6 +713,7 @@ Suggested package updates
 	o libgiigic-1.1.1
 	o libglademm-2.6.2
 	o libgnomecanvasmm-2.14.0
+	o libgnomedb-1.9.102
 	o libgnomemm-2.14.0
 	o libgnomeuimm-2.14.0
 	o libhydrogen-0.9.2
@@ -719,7 +724,7 @@ Suggested package updates
 	o libmilter-8.13.5
 	o libmpeg3-1.6
 	o libnasl-2.3.1
-	o libntlm-0.3.9
+	o libntlm-0.3.10
 	o libpqxx-2.5.5
 	o libprelude-0.9.7.1
 	o libshout-2.2
@@ -751,6 +756,7 @@ Suggested package updates
 	o maradns-1.2.03.4
 	o matchbox-1.0
 	o matchbox-panel-0.9.3
+	o mathomatic-12.5.12
 	o md-whois-4.7.8
 	o mdd-20050318
 	o mdf2iso-0.3.0
@@ -1193,6 +1199,7 @@ Suggested package updates
 	o tet3-3.6b
 	o tfmxplay-1.1.6
 	o tidy-20051006
+	o tiff-3.8.2
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
 	o tkcvs-8.0.2
@@ -1259,6 +1266,7 @@ Suggested package updates
 	o xbindkeys-1.7.2
 	o xblast-2.10.0
 	o xboard-4.2.7
+	o xchm-1.5
 	o xcircuit-3.4.0
 	o xdaliclock-2.23
 	o xdesktopwaves-1.3
