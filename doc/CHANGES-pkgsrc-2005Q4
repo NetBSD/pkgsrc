@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.112 2006/03/22 14:54:49 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.113 2006/03/24 15:52:49 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -225,3 +225,5 @@ Pullup ticket 1226 - requested by Takahiro Kambe
 security update for namazu2
 Pullup ticket 1244 - requested by Takahiro Kambe
 fix namazu2 dependency on File::MMagic
+Pullup ticket 1250 - requested by Marc Recht
+security update for curl
