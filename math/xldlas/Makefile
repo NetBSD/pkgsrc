@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/03/04 21:30:08 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2006/03/24 11:28:09 joerg Exp $
 
 DISTNAME=		xldlas-0.85
 PKGREVISION=		5
@@ -10,10 +10,6 @@ EXTRACT_SUFX=		-source.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sunsite.math.klte.hu/mirrors/xldlas/
 COMMENT=		XForms-based statistics package
-
-ONLY_FOR_PLATFORM=      NetBSD-*-alpha NetBSD-*-arm NetBSD-*-arm32	\
-			NetBSD-*-i386 NetBSD-*-m68k NetBSD-*-mipsel	\
-			NetBSD-*-ns32k NetBSD-*-sparc NetBSD-*-powerpc
 
 WRKSRC=			${WRKDIR}/xldlas
 USE_X11BASE=		yes
