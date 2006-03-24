@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/09 21:04:45 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/03/24 12:14:14 joerg Exp $
 
 DISTNAME=	cdrtools-2.01.01a05
 PKGNAME=	cdrtools-ossdvd-2.01.1.36
@@ -60,6 +60,10 @@ SUBST_FILES.fix=	cdrecord/defaults.c cdrecord/cdrecord.1 \
 			readcd/readcd.1
 SUBST_SED.fix=		-e "s,@CDRECORD_CONF@,${CDRECORD_CONF},g"
 SUBST_MESSAGE.fix=	Fixing paths.
+
+post-extract:
+	${LN} -s Defaults.freebsd ${WRKSRC}/DEFAULTS/Defaults.dragonfly
+	${LN} -s Defaults.freebsd ${WRKSRC}/DEFAULTS_ENG/Defaults.dragonfly
 
 do-configure:
 	cd ${WRKSRC}/RULES;						\
