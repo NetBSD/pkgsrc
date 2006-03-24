@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/03/14 10:38:11 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2006/03/24 12:26:47 joerg Exp $
 
 --- src/DnD.c.orig	Sat Oct  9 20:45:23 1999
 +++ src/DnD.c
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/03/14 10:38:11 wiz Exp $
  #include <X11/cursorfont.h>
  #include <stdio.h>
  #include <stdlib.h>
-+#ifndef __NetBSD__
++#if !defined(__NetBSD__) && !defined(__DragonFly__)
  #include <values.h>
 -
 +#else
