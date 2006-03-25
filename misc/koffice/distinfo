@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2006/01/05 10:28:27 markd Exp $
+$NetBSD: distinfo,v 1.29 2006/03/25 22:03:31 markd Exp $
 
 SHA1 (koffice-1.4.2.tar.bz2) = 474ab6d289ff1330c200768b30a3dbe271cd26c5
 RMD160 (koffice-1.4.2.tar.bz2) = 117d5c50aa81d669002005f39fc03bc3f999b62c
@@ -15,3 +15,6 @@ SHA1 (patch-am) = 7b23a60d7bac76421d5ec14279b3ab454af2165d
 SHA1 (patch-an) = c12e80acc30399bf95b668f64b74186624016956
 SHA1 (patch-ao) = c75c00cc380c2249cfaa399151f8ccf3625612f4
 SHA1 (patch-ap) = 5ed9f3fed39dec6852f987cd3d5071ed20914cd9
+SHA1 (patch-aq) = 413c31bbb63b3a74f68edd40956036716e554943
+SHA1 (patch-ar) = 49a5228e9d94eb4d80f35aa3c8543c7bec82d3ce
+SHA1 (patch-as) = e42b3594341cd034575ddfec84f4def014a653af
