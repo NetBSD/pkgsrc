@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4774 2006/03/24 18:50:55 wiz Exp $
+$NetBSD: TODO,v 1.4775 2006/03/25 08:40:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -635,6 +635,7 @@ Suggested package updates
 	o httptunnel-3.3
 	o hugs-200503 [pkg/30071]
 	o hydrogen-0.9.2
+	o hyperestraier-1.1.6
 	o i2ocfg-1.1
 	o icdprog-0.5
 	o icecast-2.3.1
@@ -727,6 +728,7 @@ Suggested package updates
 	o libntlm-0.3.10
 	o libpqxx-2.5.5
 	o libprelude-0.9.7.1
+	o libpreludedb-0.9.7
 	o libshout-2.2
 	o libsmi-0.4.3
 	o libsndfile-1.0.15
@@ -753,7 +755,7 @@ Suggested package updates
 	o manedit-0.6.1
 	o mantis-0.19.2
 	o mapserver-4.2.5
-	o maradns-1.2.03.4
+	o maradns-1.2.07.1
 	o matchbox-1.0
 	o matchbox-panel-0.9.3
 	o mathomatic-12.5.12
@@ -1050,6 +1052,10 @@ Suggested package updates
 	o py-mysqldb-1.1.7
 	o py-pexpect-0.99999b
 	o py-pyrex-0.9.3.1
+	o py-qt3-base-3.16
+	o py-qt3-modules-3.16
+	o py-qt3-qscintilla-3.16
+	o py-qt3-sip-4.4
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.7
 	o py-sybase-0.37
