@@ -1,0 +1,17 @@
+$NetBSD: patch-ar,v 1.1 2006/03/25 22:03:31 markd Exp $
+
+--- karbon/karbon_factory.cc.orig	2005-10-05 23:31:43.000000000 +1300
++++ karbon/karbon_factory.cc
+@@ -32,12 +32,8 @@
+ 
+ #include <kdebug.h>
+ 
+-
+ KarbonResourceServer* KarbonFactory::s_rserver = 0;
+ 
+-
+-K_EXPORT_COMPONENT_FACTORY( libkarbonpart, KarbonFactory() )
+-
+ KInstance* KarbonFactory::s_instance = 0L;
+ KAboutData* KarbonFactory::s_aboutData = 0L;
+ 
