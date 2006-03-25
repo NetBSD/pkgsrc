@@ -1,0 +1,140 @@
+$NetBSD: patch-aq,v 1.1 2006/03/25 22:03:31 markd Exp $
+
+--- karbon/Makefile.in.orig	2005-10-05 23:52:36.000000000 +1300
++++ karbon/Makefile.in
+@@ -369,7 +369,9 @@ libkarbonbase_la_SOURCES = \
+ libkarbonbase_la_LDFLAGS = $(KDE_RPATH) -version-info 2:0:0 -no-undefined $(KDE_NO_UNDEFINED)
+ libkarbonbase_la_LIBADD = $(LIB_KOFFICEUI)
+ 
+-libkarboncommon_la_LDFLAGS = $(KDE_RPATH) $(LIBFREETYPE_RPATH)
++#>- libkarboncommon_la_LDFLAGS = $(KDE_RPATH) $(LIBFREETYPE_RPATH) -no-undefined
++#>+ 1
++libkarboncommon_la_LDFLAGS = $(KDE_RPATH) $(LIBFREETYPE_RPATH) -no-undefined $(KDE_NO_UNDEFINED)
+ libkarboncommon_la_LIBADD = $(LIB_KOFFICECORE) $(LIB_KOFFICEUI) $(LIB_KOPAINTER) $(LIB_KOTEXT) \
+ 	dockers/libkarbondockers.la \
+ 	widgets/libkarbonwidgets.la \
+@@ -388,7 +390,7 @@ libkarboncommon_la_LIBADD = $(LIB_KOFFIC
+ 	$(LIBFREETYPE_LIBS)
+ 
+ 
+-libkarbonpart_la_SOURCES = dummy.cpp
++libkarbonpart_la_SOURCES = karbon_factory_init.cc
+ libkarbonpart_la_LDFLAGS = $(KDE_PLUGIN) $(LIBFREETYPE_RPATH)
+ libkarbonpart_la_LIBADD = libkarboncommon.la
+ #>- libkarbonpart_la_METASOURCES = AUTO
+@@ -455,10 +457,10 @@ libkarboncommon_la_nofinal_OBJECTS = kar
+ @KDE_USE_FINAL_FALSE@libkarboncommon_la_OBJECTS = $(libkarboncommon_la_nofinal_OBJECTS)
+ @KDE_USE_FINAL_TRUE@libkarboncommon_la_OBJECTS = $(libkarboncommon_la_final_OBJECTS)
+ libkarbonpart_la_DEPENDENCIES = libkarboncommon.la
+-am_libkarbonpart_la_OBJECTS = dummy.lo
++am_libkarbonpart_la_OBJECTS = karbon_factory_init.lo
+ #>- libkarbonpart_la_OBJECTS = $(am_libkarbonpart_la_OBJECTS)
+ #>+ 1
+-libkarbonpart_la_OBJECTS = dummy.lo
++libkarbonpart_la_OBJECTS = karbon_factory_init.lo
+ bin_PROGRAMS =
+ #>- PROGRAMS = $(bin_PROGRAMS)
+ #>+ 2
+@@ -473,9 +475,9 @@ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ depcomp = $(SHELL) $(top_srcdir)/admin/depcomp
+ am__depfiles_maybe = depfiles
+-#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/dummy.Plo \
+-#>- @AMDEP_TRUE@	./$(DEPDIR)/karbon_drag.Plo \
++#>- @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/karbon_drag.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/karbon_factory.Plo \
++#>- @AMDEP_TRUE@	./$(DEPDIR)/karbon_factory_init.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/karbon_grid_data.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/karbon_part.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/karbon_part_base.Plo \
+@@ -486,9 +488,9 @@ am__depfiles_maybe = depfiles
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/karbon_view_iface.Plo \
+ #>- @AMDEP_TRUE@	./$(DEPDIR)/main.Plo
+ #>+ 24
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/karbon.la.Po $(DEPDIR)/karbon_dummy.Plo $(DEPDIR)/karbon_part_iface_skel.P $(DEPDIR)/karbon_view_iface_skel.P  $(DEPDIR)/libkarbonbase_la.all_cc.P $(DEPDIR)/libkarboncommon_la.all_cc.P $(DEPDIR)/libkarboncommon_la.all_cpp.P ./$(DEPDIR)/dummy.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/karbon_drag.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@DEP_FILES =  $(DEPDIR)/karbon.la.Po $(DEPDIR)/karbon_dummy.Plo $(DEPDIR)/karbon_part_iface_skel.P $(DEPDIR)/karbon_view_iface_skel.P  $(DEPDIR)/libkarbonbase_la.all_cc.P $(DEPDIR)/libkarboncommon_la.all_cc.P $(DEPDIR)/libkarboncommon_la.all_cpp.P ./$(DEPDIR)/karbon_drag.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/karbon_factory.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/karbon_factory_init.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/karbon_grid_data.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/karbon_part.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/karbon_part_base.Plo \
+@@ -498,9 +500,9 @@ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/karbon_view_base.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/karbon_view_iface.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_TRUE@	@AMDEP_TRUE@	./$(DEPDIR)/main.Plo
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/karbon.la.Po $(DEPDIR)/karbon_dummy.Plo $(DEPDIR)/karbon_part_iface_skel.P $(DEPDIR)/karbon_view_iface_skel.P ./$(DEPDIR)/dummy.Plo \
+-@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/karbon_drag.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@DEP_FILES =  $(DEPDIR)/karbon.la.Po $(DEPDIR)/karbon_dummy.Plo $(DEPDIR)/karbon_part_iface_skel.P $(DEPDIR)/karbon_view_iface_skel.P ./$(DEPDIR)/karbon_drag.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/karbon_factory.Plo \
++@AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/karbon_factory_init.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/karbon_grid_data.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/karbon_part.Plo \
+ @AMDEP_TRUE@@KDE_USE_FINAL_FALSE@	@AMDEP_TRUE@	./$(DEPDIR)/karbon_part_base.Plo \
+@@ -667,7 +669,10 @@ karbon.la: $(karbon_la_OBJECTS) $(karbon
+ @KDE_USE_CLOSURE_TRUE@libkarbonbase.la: libkarbonbase.la.closure $(libkarbonbase_la_OBJECTS) $(libkarbonbase_la_DEPENDENCIES) 
+ @KDE_USE_CLOSURE_FALSE@libkarbonbase.la: $(libkarbonbase_la_OBJECTS) $(libkarbonbase_la_DEPENDENCIES) 
+ 	$(CXXLINK) -rpath $(libdir) $(libkarbonbase_la_LDFLAGS) $(libkarbonbase_la_OBJECTS) $(libkarbonbase_la_LIBADD) $(LIBS)
+-libkarboncommon.la: $(libkarboncommon_la_OBJECTS) $(libkarboncommon_la_DEPENDENCIES) 
++#>- libkarboncommon.la: $(libkarboncommon_la_OBJECTS) $(libkarboncommon_la_DEPENDENCIES) 
++#>+ 2
++@KDE_USE_CLOSURE_TRUE@libkarboncommon.la: libkarboncommon.la.closure $(libkarboncommon_la_OBJECTS) $(libkarboncommon_la_DEPENDENCIES) 
++@KDE_USE_CLOSURE_FALSE@libkarboncommon.la: $(libkarboncommon_la_OBJECTS) $(libkarboncommon_la_DEPENDENCIES) 
+ 	$(CXXLINK) -rpath $(libdir) $(libkarboncommon_la_LDFLAGS) $(libkarboncommon_la_OBJECTS) $(libkarboncommon_la_LIBADD) $(LIBS)
+ #>- libkarbonpart.la: $(libkarbonpart_la_OBJECTS) $(libkarbonpart_la_DEPENDENCIES) 
+ #>+ 2
+@@ -710,9 +715,9 @@ mostlyclean-compile:
+ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dummy.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/karbon_drag.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/karbon_factory.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/karbon_factory_init.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/karbon_grid_data.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/karbon_part.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/karbon_part_base.Plo@am__quote@
+@@ -1021,9 +1026,6 @@ uninstall-info: uninstall-info-recursive
+ 	uninstall-recursive
+ 
+ 
+-dummy.cpp:
+-	echo > dummy.cpp
+-
+ messages: rc.cpp
+ 	$(EXTRACTRC) data/*.rc >> rc.cpp
+ 	$(XGETTEXT) rc.cpp *.cpp *.cc */*.cc tools/*.h plugins/*/*.cc -o $(podir)/karbon.pot
+@@ -1077,6 +1079,15 @@ karbon_view_iface_skel.cc: karbon_view_i
+ 	$(DCOPIDL2CPP) --c++-suffix cc --no-signals --no-stub karbon_view_iface.kidl
+ 
+ #>+ 8
++libkarboncommon.la.closure: $(libkarboncommon_la_OBJECTS) $(libkarboncommon_la_DEPENDENCIES)
++	@echo "int main() {return 0;}" > libkarboncommon_la_closure.cc
++	@$(LTCXXCOMPILE) -c libkarboncommon_la_closure.cc
++	$(CXXLINK) libkarboncommon_la_closure.lo $(libkarboncommon_la_LDFLAGS) $(libkarboncommon_la_OBJECTS) $(libkarboncommon_la_LIBADD) $(LIBS)
++	@rm -f libkarboncommon_la_closure.* libkarboncommon.la.closure
++	@echo "timestamp" > libkarboncommon.la.closure
++
++
++#>+ 8
+ libkarbonpart.la.closure: $(libkarbonpart_la_OBJECTS) $(libkarbonpart_la_DEPENDENCIES)
+ 	@echo "int main() {return 0;}" > libkarbonpart_la_closure.cc
+ 	@$(LTCXXCOMPILE) -c libkarbonpart_la_closure.cc
+@@ -1118,7 +1129,7 @@ clean-metasources:
+ 	-rm -f  karbon_view.moc karbon_drag.moc karbon_part.moc karbon_factory.moc
+ 
+ #>+ 2
+-KDE_DIST=CHANGES IDEAS karbon_aboutdata.h configure.in.in karbon_resourceserver.h karbon_view_iface.h karbon_grid_data.h configure.in.bot usablity-review.txt karbon.dtd 
++KDE_DIST=karbon_view_iface.h IDEAS configure.in.bot karbon.dtd usablity-review.txt CHANGES configure.in.in karbon_resourceserver.h karbon_aboutdata.h karbon_grid_data.h 
+ 
+ #>+ 5
+ clean-idl:
+@@ -1128,7 +1139,7 @@ clean-idl:
+ 
+ #>+ 3
+ clean-closures:
+-	-rm -f  libkarbonbase.la.closure libkarbonpart.la.closure
++	-rm -f  libkarbonbase.la.closure libkarboncommon.la.closure libkarbonpart.la.closure
+ 
+ #>+ 2
+ docs-am:
