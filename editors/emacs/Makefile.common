@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2005/12/29 14:04:56 joerg Exp $
+# $NetBSD: Makefile.common,v 1.6 2006/03/25 02:48:22 uebayasi Exp $
 
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 MAINTAINER=	markd@NetBSD.org
@@ -71,6 +71,7 @@ post-extract:
 	${CP} ${FILESDIR}/powermac.h ${WRKSRC}/src/m
 	${CP} ${FILESDIR}/darwin.h ${WRKSRC}/src/s
 	${CP} ${FILESDIR}/unexmacosx.c ${WRKSRC}/src
+	${CP} ${FILESDIR}/sh3el.h ${WRKSRC}/src/m
 
 pre-install:
 	@${FIND} ${WRKSRC} -type f -name "*.orig" -print | ${XARGS} ${RM} -f
