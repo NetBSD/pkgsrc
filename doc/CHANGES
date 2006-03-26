@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13351 2006/03/23 20:17:58 schmonz Exp $
+$NetBSD: CHANGES,v 1.13352 2006/03/26 17:56:12 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1570,3 +1570,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/thunderbird-gtk1 to 1.5nb2 [joerg 2006-03-23]
 	Added www/p5-HTTP-Proxy version 0.18 [christos 2006-03-23]
 	Updated devel/bglibs to 1.041 [schmonz 2006-03-23]
+	Updated databases/phpmyadmin to 2.8.0.2 [tron 2006-03-26]
