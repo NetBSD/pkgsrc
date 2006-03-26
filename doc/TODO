@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4776 2006/03/26 14:43:22 tron Exp $
+$NetBSD: TODO,v 1.4777 2006/03/26 15:57:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -422,7 +422,7 @@ Suggested package updates
 	o crossfire-server-1.9.0
 	o crypto++-523
 	o cstream-2.6.0
-	o cue-20050808
+	o cue-20051114 [pkg/33153]
 	o cuetools-1.3.1
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsweb-3.0.6
@@ -733,6 +733,7 @@ Suggested package updates
 	o libsmi-0.4.3
 	o libsndfile-1.0.15
 	o libstatgrab-0.13
+	o libtasn1-0.3.2
 	o libtcl-nothread-8.4.9
 	o licq-core-1.3.0
 	o lighttpd-1.4.11
@@ -791,6 +792,8 @@ Suggested package updates
 	o mrtg-2.13.2 [pkg/32811]
 	o mserv-devel-0.41
 	o mtail-1.1.1
+	o mtr-0.71
+	o mtr-gtk-0.71
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.8.9
 	o muse-0.9.1
@@ -880,6 +883,7 @@ Suggested package updates
 	o p5-Device-Gsm-1.37
 	o p5-Device-Modem-1.43
 	o p5-Device-SerialPort-1.2.0
+	o p5-Digest-1.15
 	o p5-ExtUtils-Depends-0.205
 	o p5-ExtUtils-F77-1.14
 	o p5-ExtUtils-PkgConfig-1.07
@@ -892,6 +896,7 @@ Suggested package updates
 	o p5-Graph-0.20105
 	o p5-HTML-Element-Extended-1.16
 	o p5-HTML-FillInForm-1.05
+	o p5-HTML-Parser-3.51
 	o p5-HTML-TableExtract-2.07
 	o p5-HTMLObject-2.26
 	o p5-HTTP-Cache-Transparent-0.6
@@ -903,7 +908,7 @@ Suggested package updates
 	o p5-Jcode-2.03
 	o p5-Lingua-EN-Inflect-1.89
 	o p5-Locale-Codes-2.07
-	o p5-Locale-Maketext-Lexicon-0.54
+	o p5-Locale-Maketext-Lexicon-0.55
 	o p5-Log-Agent-0.307
 	o p5-MARC-1.38
 	o p5-MIME-tools-5.420
