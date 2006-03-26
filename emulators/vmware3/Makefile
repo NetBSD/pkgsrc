@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:09:05 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/26 21:37:12 veego Exp $
 
 DISTNAME=	VMware-workstation-3.2.1-2242
 PKGNAME=	vmware-3.2.1pl1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	http://download3.vmware.com/software/wkst/ \
 		http://vmware-svca.www.conxion.com/software/ \
@@ -16,7 +16,15 @@ COMMENT=	VMware emulator 3.x
 
 CONFLICTS=	vmware-2.*
 
-DEPENDS+=	vmware-module-3.*:../../emulators/vmware-module3
+# Binary patch to fix an problem with the nice(3) interface in an
+# newer glibc (>= v2.3.3)
+VMWARE_BIN_PATCH=	vmware-any-any-update99
+
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=	${VMWARE_BIN_PATCH}.tar.gz
+SITES.${VMWARE_BIN_PATCH}.tar.gz=	ftp://ftp.cvut.cz/vmware/
+
+DEPENDS+=	vmware-module>=3.2.1.8:../../emulators/vmware-module3
 DEPENDS+=	suse_vmware>=6.4nb1:../../emulators/${SUSE_DIR_PREFIX}_vmware
 
 LICENSE=	vmware-license
@@ -25,6 +33,8 @@ WRKSRC=		${WRKDIR}/vmware-distrib
 CHECK_SHLIBS=	NO
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
+# There is a kernel bug in NetBSD 3.0 for vmware.
+NOT_FOR_PLATFORM=	NetBSD-3.0*-i386
 
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -43,6 +53,11 @@ INSTALLATION_DIRS=	bin man/man1
 
 do-build:
 	${GZCAT} ${WRKSRC}/man/man1/vmware.1.gz > ${WRKDIR}/vmware.1
+	cd ${WRKDIR}/${VMWARE_BIN_PATCH} &&	\
+	${RM} -f update &&			\
+	${CC} ${CFLAGS} -o update update.c &&	\
+	${CHMOD} u+w ${WRKSRC}/bin/vmware && 	\
+	./update vmware ${WRKSRC}/bin/vmware
 
 do-install: do-install-dirs do-install-binaries do-install-docs \
 		do-install-share
