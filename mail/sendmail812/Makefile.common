@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2006/03/22 21:19:06 tv Exp $
+# $NetBSD: Makefile.common,v 1.11 2006/03/26 15:58:39 adrianp Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -6,6 +6,7 @@
 DISTNAME=	sendmail.${DIST_VERS}
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
+		ftp://ftp.sendmail.org/pub/sendmail/past-releases/ \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/ \
 		ftp://ftp.kyoto.wide.ad.jp/pub/mail/sendmail/
 
