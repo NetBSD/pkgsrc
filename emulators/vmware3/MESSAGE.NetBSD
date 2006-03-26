@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.1 2004/10/16 15:20:01 jdolecek Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.2 2006/03/26 21:37:12 veego Exp $
 
 NetBSD had problem with emulation of Linux SVID shared memory handling,
 which caused black screen in VMware 3.x when the guest OS switched
@@ -8,4 +8,6 @@ to graphics mode. The problem has been fixed in NetBSD 2.99.9 and
 
 If you experience this problem, setting your DISPLAY environment variable
 to "localhost:0" should help.
+
+VMware fails to start if you use a tmpfs for /tmp.
 ===========================================================================
