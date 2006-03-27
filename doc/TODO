@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4782 2006/03/27 09:33:01 ghen Exp $
+$NetBSD: TODO,v 1.4783 2006/03/27 18:28:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1183,7 +1183,7 @@ Suggested package updates
 	o ssam-1.10
 	o ssh-askpass-1.2.4.1
 	o statist-1.3.0
-	o stella-2.1
+	o stella-2.1 [pkg/33158]
 	o stlport-4.6.2
 	o strace-4.5.8
 	o stunnel-4.15
@@ -1215,7 +1215,7 @@ Suggested package updates
 	o tiff-3.8.2
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
-	o tkcvs-8.0.2
+	o tkcvs-8.0.3
 	o tkdiff-4.1.3
 	o tkgate-1.8.6
 	o tkhylafax-3.2
@@ -1356,6 +1356,7 @@ Suggested package updates
 	o zope25-Silva-1.0.1
 	o zope25-XMLWidgets-0.10
 	o zope25-ZWiki-0.46.0
+	o zope3-3.2.1
 	o zopeedit-0.8
 	o zziplib-0.13.38
 
