@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.5 2006/03/28 16:42:50 joerg Exp $
+
+--- src/plugins/exiv2/Makefile.in.orig	2006-03-28 16:17:07.000000000 +0000
++++ src/plugins/exiv2/Makefile.in
+@@ -275,11 +275,11 @@ libextractor_exiv2_la_LINK = \
+   /bin/sh ../../../libtool --mode=link $(CXXLD) -o libextractor_exiv2.la
+ 
+ libextractor_exiv2_la_LDFLAGS = \
+-  $(XTRA_CPPLIBS) -lpthread \
++  $(XTRA_CPPLIBS) ${PTHREAD_LDFLAGS} \
+   $(PLUGINFLAGS) $(retaincommand)
+ 
+ libextractor_exiv2_la_LIBADD = \
+-  $(top_builddir)/src/main/libextractor.la -lpthread
++  $(top_builddir)/src/main/libextractor.la ${PTHREAD_LIBS}
+ 
+ libextractor_exiv2_la_SOURCES = \
+ exiv2extractor.cc exv_conf.h exv_msvc.h \
