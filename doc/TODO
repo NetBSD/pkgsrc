@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4783 2006/03/27 18:28:11 wiz Exp $
+$NetBSD: TODO,v 1.4784 2006/03/28 15:52:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -307,6 +307,7 @@ Suggested package updates
 	o GWLib-0.7.0
 	o GridSim-3.3
 	o ImageMagick-6.2.6.4 [ghen]
+	o MyPasswordSafe-20060326
 	o ORBit2-2.14.0
 	o PAM-0.80
 	o REminiscence-0.1.8
@@ -447,7 +448,7 @@ Suggested package updates
 	o dctc-0.85.9
 	o defendguin-0.0.11
 	o dejavu-ttf-1.15 [pkg/31941]
-	o dejavu-ttf-2.4
+	o dejavu-ttf-2.4.1
 	o denemo-0.7.2a
 	o devIL-1.6.7
 	o devhelp-0.10
@@ -799,10 +800,11 @@ Suggested package updates
 	o mtr-0.71
 	o mtr-gtk-0.71
 	o multi-gnome-terminal-1.6.2
-	o multitail-3.8.9
+	o multitail-3.8.10
 	o muse-0.9.1
 	o mysql4-client-4.1.18
 	o mysql4-server-4.1.18
+	o nagios-base-2.1
 	o nano-1.2.5 [pkg/32859]
 	o nap-1.5.3
 	o nautilus-2.14.0 [jmmv]
@@ -1344,7 +1346,7 @@ Suggested package updates
 	o zile-2.2.13
 	o zircon-1.18.256
 	o zope-2.8.6
-	o zope-2.9.0
+	o zope-2.9.2
 	o zope25-AbracadabraObject-2.0.0
 	o zope25-BTreeFolder2-1.0.1
 	o zope25-CMF-1.5.4
