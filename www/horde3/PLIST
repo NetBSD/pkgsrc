@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/03/19 16:53:22 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/03/28 20:09:49 adrianp Exp $
 share/doc/horde/CHANGES
 share/doc/horde/CODING_STANDARDS
 share/doc/horde/CONTRIBUTING
@@ -597,6 +597,7 @@ share/horde/scripts/sql/horde_muvfs.sql
 share/horde/scripts/sql/horde_prefs.mssql.sql
 share/horde/scripts/sql/horde_prefs.sql
 share/horde/scripts/sql/horde_sessionhandler.mssql.sql
+share/horde/scripts/sql/horde_sessionhandler.mysql.sql
 share/horde/scripts/sql/horde_sessionhandler.oci8.sql
 share/horde/scripts/sql/horde_sessionhandler.pgsql.sql
 share/horde/scripts/sql/horde_sessionhandler.sapdb.sql
@@ -1404,8 +1405,8 @@ share/horde/themes/ideas/graphics/left_menu_top.png
 share/horde/themes/ideas/graphics/menu_top.png
 share/horde/themes/ideas/info.php
 share/horde/themes/ideas/screen.css
-share/horde/themes/ie.css
 share/horde/themes/ie5mac.css
+share/horde/themes/ie6_or_less.css
 share/horde/themes/kolab/graphics/bg.png
 share/horde/themes/kolab/graphics/kolab.png
 share/horde/themes/kolab/graphics/kolablogo.png
