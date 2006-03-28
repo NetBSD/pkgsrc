@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/06 22:26:57 ghen Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/03/28 14:10:13 ghen Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -87,7 +87,6 @@ lib/${MOZILLA}/plugins/libunixprintplugin.${SO_SUFFIX}
 lib/${MOZILLA}/LICENSE
 lib/${MOZILLA}/README.txt
 lib/${MOZILLA}/bloaturls.txt
-lib/${MOZILLA}/chrome/app-chrome.manifest
 lib/${MOZILLA}/chrome/calendar.jar
 lib/${MOZILLA}/chrome/chromelist.txt
 lib/${MOZILLA}/chrome/classic.jar
@@ -2281,6 +2280,7 @@ include/${MOZILLA}/nss/watcomfx.h
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
 @unexec ${RM} %D/lib/${MOZILLA}/components/compreg.dat
 @unexec ${RM} %D/lib/${MOZILLA}/components/xpti.dat
+@unexec ${RM} %D/lib/${MOZILLA}/chrome/app-chrome.manifest
 @comment begin DIRS
 @dirrm lib/${MOZILLA}/updates/0
 @dirrm lib/${MOZILLA}/updates
