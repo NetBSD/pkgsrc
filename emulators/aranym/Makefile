@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:34 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/28 20:11:34 joerg Exp $
 #
 
 DISTNAME=		aranym-0.8.9beta
@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://aranym.sourceforge.net/
 COMMENT=		Atari Running on Any Machine
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake makedepend
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/Unix
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--enable-blitmemmove
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} != "NetBSD"
+.if ${OPSYS} != "NetBSD" && ${OPSYS} != "DragonFly"
 CONFIGURE_ARGS+=	--enable-nfpci
 .endif
 
