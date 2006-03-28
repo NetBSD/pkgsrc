@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/04 21:30:40 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/28 14:25:41 jlam Exp $
 
 DISTNAME=		raidmgt-3.31
 PKGNAME=		dptutil-3.31
@@ -14,7 +14,7 @@ COMMENT=		DPT/Adaptec Storage Management software (dptutil)
 # may have problems.
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
-INSTALLATION_DIRS=	bni
+INSTALLATION_DIRS=	bin
 
 post-patch:
 	${SED}	-e "s,@SBINDIR@,${PREFIX}/sbin,g"			\
