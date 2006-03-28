@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/04 21:29:02 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/28 17:26:59 joerg Exp $
 
 DISTNAME=	gaim-encryption-2.38
 PKGREVISION=	2
@@ -22,6 +22,9 @@ CONFIGURE_ARGS+=	--with-nspr-includes=${BUILDLINK_PREFIX.nspr}/include/nspr
 CONFIGURE_ARGS+=	--with-nspr-libs=${BUILDLINK_PREFIX.nspr}/lib
 CONFIGURE_ARGS+=	--with-nss-includes=${BUILDLINK_PREFIX.nss}/include/nss/nss
 CONFIGURE_ARGS+=	--with-nss-libs=${BUILDLINK_PREFIX.nss}/lib
+
+PTHREAD_LIB=		${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+CONFIGURE_ENV+=		PTHREAD_LIB=${PTHREAD_LIB:Q}
 
 .include "../../chat/gaim/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
