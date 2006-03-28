@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/14 21:30:17 tron Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/28 17:38:32 joerg Exp $
 
 .include "../../chat/xchat/Makefile.common"
 
@@ -27,4 +27,5 @@ SUBST_SED.libutil=	-e 's/ -lutil//g'
 .endif
 
 .include "../../lang/python/application.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
