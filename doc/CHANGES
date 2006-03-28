@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13355 2006/03/28 06:13:48 wiz Exp $
+$NetBSD: CHANGES,v 1.13356 2006/03/28 07:36:31 agc Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1575,3 +1575,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/vmware-module3 to 3.2.1.8 [veego 2006-03-26]
 	Updated emulators/vmware3 to 3.2.1pl1nb2 [veego 2006-03-26]
 	Updated net/nagios-base to 2.0nb1 [wiz 2006-03-28]
+	Updated devel/netbsd-iscsi to 20060327 [agc 2006-03-28]
