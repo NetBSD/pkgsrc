@@ -1,10 +1,10 @@
-# $NetBSD: nagios.conf.dist,v 1.1.1.1 2006/02/18 17:12:20 bouyer Exp $
+# $NetBSD: nagios.conf.dist,v 1.2 2006/03/28 06:13:30 wiz Exp $
 #
 # nagios configuration file fragment for Apache
 
 <IfModule mod_alias.c>
-    Alias /nagios/ "@PREFIX@/share/nagios/"
     ScriptAlias /nagios/cgi-bin/ "@PREFIX@/libexec/nagios/cgi-bin/"
+    Alias /nagios/ "@PREFIX@/share/nagios/"
 </IfModule>
 
 <Directory "@PREFIX@/libexec/nagios/cgi-bin/">
