@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.27 2005/07/28 00:37:43 grant Exp $
+# $NetBSD: upload,v 1.28 2006/03/28 10:56:52 joerg Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -156,6 +156,11 @@ if [ "${MKSUMS}" = "yes" -o "${MKSUMS}" = "YES" ]; then
 	fi
 fi
 
+if [ "${MKSUMMARY}" = "yes" -o "${MKSUMMARY}" = "YES" ]; then
+	echo "Creating pkg_chk index..."
+	( cd ${pkgsrcdir}/pkgtools/pkg_chk; ${BMAKE} bulk-install )
+	pkg_chk -P "${packages}" -bS
+fi
 
 echo "#!/bin/sh" > "$upload"
 echo "packages=$packages" >> "$upload"
