@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/31 04:31:20 snj Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/03/28 22:29:53 joerg Exp $
 bin/eview
 bin/evim
 bin/ex
+bin/kview
 bin/kvim
 bin/kvimdiff
 bin/rkview
@@ -27,6 +28,7 @@ share/kde/apps/kvim/tips
 share/kde/icons/hicolor/16x16/actions/hi16-action-make.png
 share/kde/icons/hicolor/22x22/actions/hi22-action-make.png
 share/kde/icons/hicolor/32x32/apps/kvim.png
+share/kde/icons/hicolor/48x48/apps/gvim.png
 share/kde/icons/hicolor/48x48/apps/kvim.png
 share/kde/icons/locolor/16x16/apps/gvim.png
 share/kde/icons/locolor/32x32/apps/gvim.png
