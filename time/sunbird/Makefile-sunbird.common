@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-sunbird.common,v 1.3 2006/03/28 14:10:02 ghen Exp $
+# $NetBSD: Makefile-sunbird.common,v 1.4 2006/03/29 07:47:14 ghen Exp $
 
 MOZILLA_BIN=		sunbird-bin
 MOZ_VER=		0.3a1
@@ -18,6 +18,10 @@ PATCHDIR=		${.CURDIR}/../../time/sunbird/patches
 
 CONFIGURE_ARGS+=	--enable-application=calendar
 CONFIGURE_ENV+=		ac_cv_visibility_pragma=no ac_cv_visibility_hidden=no
+
+CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/chrome/app-chrome.manifest
+CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/compreg.dat
+CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/xpti.dat
 
 pre-install:
 	${CP} -r ${WRKSRC}/dist/bin/defaults/profile/extensions \
