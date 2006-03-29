@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13367 2006/03/29 22:08:29 wiz Exp $
+$NetBSD: CHANGES,v 1.13368 2006/03/29 22:13:54 agc Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1586,6 +1586,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/spcaview to 0.5a [hamajima 2006-03-29]
 	Updated print/cups to 1.1.23nb8 [joerg 2006-03-29]
 	Updated print/xpdf to 3.01pl2 [joerg 2006-03-29]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2006Q1 branch [agc 2006-03-29]
 	Updated sysutils/gnome-vfs2 to 2.12.2nb5 [jmmv 2006-03-29]
 	Updated sysutils/pstree to 2.27 [ghen 2006-03-29]
 	Updated graphics/ImageMagick to 6.2.6.4 [ghen 2006-03-29]
