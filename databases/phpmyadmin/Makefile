@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2005/12/09 13:49:21 tron Exp $
+# $NetBSD: Makefile,v 1.40.2.1 2006/03/29 14:21:22 salo Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
+PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpmyadmin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,11 +16,12 @@ DEPENDS+=	php-mysql{,i}>=4.3.3:../../databases/php-mysql
 
 PLIST_SUBST+=	CP=${CP:Q} DIST_VERSION=${DIST_VERSION:Q} \
 		PMCONFFILE=${PMCONFFILE:Q} TEST=${TEST:Q}
-MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR} PMCONFFILE=${PMCONFFILE} \
-		PMDIR=${PMDIR} EXDIR=${EXDIR}
+MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q} \
+		PMCONFFILE=${PMCONFFILE:Q} PMDIR=${PMDIR:Q} \
+		EXDIR=${EXDIR:Q}
 
 CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
-DIST_VERSION=	2.7.0-pl1
+DIST_VERSION=	2.8.0.2
 DOC_FILES=	CREDITS ChangeLog \
 		Documentation.txt INSTALL LICENSE README \
 		RELEASE-DATE-${DIST_VERSION} TODO
@@ -37,10 +39,10 @@ PKG_SYSCONFSUBDIR?=	phpmyadmin
 
 NO_BUILD=		yes
 
-INSTALL_DIRS=	css lang libraries libraries/auth libraries/dbg \
-		libraries/dbi libraries/export libraries/fpdf	\
-		libraries/fpdf/font libraries/transformations	\
-		themes themes/darkblue_orange \
+INSTALL_DIRS=	css js lang libraries libraries/auth libraries/dbg \
+		libraries/dbi libraries/engines libraries/export \
+		libraries/fpdf libraries/fpdf/font libraries/import \
+		libraries/transformations themes themes/darkblue_orange \
 		themes/darkblue_orange/css themes/darkblue_orange/img \
 		themes/original themes/original/css themes/original/img
 
@@ -49,6 +51,7 @@ do-configure:
 		> ${WRKDIR}/phpmyadmin.conf
 
 do-install:
+	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/phpmyadmin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/phpmyadmin
 	${INSTALL_DATA_DIR} ${PMDIR}
