@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13357 2006/03/28 20:12:09 adrianp Exp $
+$NetBSD: CHANGES,v 1.13358 2006/03/29 01:29:47 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1577,3 +1577,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/nagios-base to 2.0nb1 [wiz 2006-03-28]
 	Updated devel/netbsd-iscsi to 20060327 [agc 2006-03-28]
 	Updated www/horde3 to 3.1.1 [adrianp 2006-03-28]
+	Updated databases/sqlrelay to 0.37 [gavan 2006-03-29]
