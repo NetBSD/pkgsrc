@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/09 21:04:44 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/29 22:41:01 joerg Exp $
 #
 
 DISTNAME=	urban-1.5.3
@@ -11,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://urban.bengburken.net/eng/
 COMMENT=	U.R.B.A.N The Cyborg Project
 
+PTHREAD_AUTO_VARS=	yes
 GNU_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
