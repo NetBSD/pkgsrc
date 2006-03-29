@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13366 2006/03/29 22:06:10 xtraeme Exp $
+$NetBSD: CHANGES,v 1.13367 2006/03/29 22:08:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1600,3 +1600,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/bacula-tray-monitor to 1.38.6 [ghen 2006-03-29]
 	Updated sysutils/bacula-wx-console to 1.38.6 [ghen 2006-03-29]
 	Updated mail/sylpheed to 2.2.3 [xtraeme 2006-03-29]
+	Updated finance/gnucash-devel to 1.9.3 [wiz 2006-03-29]
