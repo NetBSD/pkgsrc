@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/06/04 16:44:55 cjep Exp $
+$NetBSD: patch-ab,v 1.2 2006/03/29 22:39:49 joerg Exp $
 
 --- src/Fm.h.orig	Tue Aug  1 09:09:35 2000
 +++ src/Fm.h	Tue Aug  1 09:16:04 2000
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/06/04 16:44:55 cjep Exp $
  #include <malloc.h>
  #endif
  
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
 +#include <stdlib.h>
 +#else
  #ifdef _AIX
