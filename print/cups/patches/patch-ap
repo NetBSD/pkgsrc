@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.6 2006/02/15 19:06:13 joerg Exp $
+$NetBSD: patch-ap,v 1.7 2006/03/29 17:22:46 joerg Exp $
 
 --- pdftops/JBIG2Stream.cxx.orig	2006-02-13 22:20:31.000000000 +0100
 +++ pdftops/JBIG2Stream.cxx
@@ -43,7 +43,22 @@ $NetBSD: patch-ap,v 1.6 2006/02/15 19:06:13 joerg Exp $
      return;
    }
    data = (Guchar *)grealloc(data, newH * line);
-@@ -2576,6 +2587,14 @@ void JBIG2Stream::readHalftoneRegionSeg(
+@@ -2565,6 +2576,14 @@ void JBIG2Stream::readHalftoneRegionSeg(
+       !readUWord(&stepX) || !readUWord(&stepY)) {
+     goto eofError;
+   }
++   if (w == 0 || h == 0 || w >= INT_MAX / h) {
++     error(getPos(), "Bad bitmap size in JBIG2 halftone segment");
++     return;
++   }
++   if (gridH == 0 || gridW >= INT_MAX / gridH) {
++     error(getPos(), "Bad grid size in JBIG2 halftone segment");
++     return;
++   }
+ 
+   // get pattern dictionary
+   if (nRefSegs != 1) {
+@@ -2576,6 +2595,14 @@ void JBIG2Stream::readHalftoneRegionSeg(
      error(getPos(), "Bad symbol dictionary reference in JBIG2 halftone segment");
      return;
    }
@@ -58,7 +73,7 @@ $NetBSD: patch-ap,v 1.6 2006/02/15 19:06:13 joerg Exp $
    patternDict = (JBIG2PatternDict *)seg;
    bpp = 0;
    i = 1;
-@@ -2763,6 +2782,9 @@ JBIG2Bitmap *JBIG2Stream::readGenericBit
+@@ -2763,6 +2790,9 @@ JBIG2Bitmap *JBIG2Stream::readGenericBit
    int code1, code2, code3;
    int x, y, a0, pix, i, refI, codingI;
  
