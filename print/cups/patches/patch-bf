@@ -1,4 +1,4 @@
-$NetBSD: patch-bf,v 1.1 2005/12/17 04:22:55 jlam Exp $
+$NetBSD: patch-bf,v 1.2 2006/03/29 17:22:46 joerg Exp $
 
 --- pdftops/Stream.h.orig	2004-02-02 17:41:09.000000000 -0500
 +++ pdftops/Stream.h
@@ -6,7 +6,7 @@ $NetBSD: patch-bf,v 1.1 2005/12/17 04:22:55 jlam Exp $
  
    ~StreamPredictor();
  
-+  GBool isOk() { return ok; }
++  GBool isOK() { return ok; }
 +
    int lookChar();
    int getChar();
@@ -15,7 +15,16 @@ $NetBSD: patch-bf,v 1.1 2005/12/17 04:22:55 jlam Exp $
    int rowBytes;			// bytes per line
    Guchar *predLine;		// line buffer
    int predIdx;			// current index in predLine
-+  GBool ok;			// flag for proper initialization
++  GBool ok;
+ };
+ 
+ //------------------------------------------------------------------------
+@@ -530,7 +533,7 @@ private:
+   short getWhiteCode();
+   short getBlackCode();
+   short lookBits(int n);
+-  void eatBits(int n) { inputBits -= n; }
++  void eatBits(int n) { if ((inputBits -= n) < 0) inputBits = 0; }
  };
  
  //------------------------------------------------------------------------
