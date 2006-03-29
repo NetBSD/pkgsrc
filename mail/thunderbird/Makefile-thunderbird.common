@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-thunderbird.common,v 1.10 2006/03/23 15:43:17 joerg Exp $
+# $NetBSD: Makefile-thunderbird.common,v 1.11 2006/03/29 07:47:13 ghen Exp $
 
 MOZILLA_BIN=		thunderbird-bin
 MOZ_VER=		1.5
@@ -20,8 +20,12 @@ MESSAGE=		${.CURDIR}/../../mail/thunderbird/MESSAGE
 CONFIGURE_ARGS+=	--enable-application=mail
 CONFIGURE_ARGS+=	--enable-extensions=wallet,spellcheck,xmlextras
 CONFIGURE_ARGS+=	--enable-single-profile
-CONFIGURE_ENV+=	ac_cv_visibility_pragma=no ac_cv_visibility_hidden=no
 CONFIGURE_ARGS+=	--enable-debug=-g
+CONFIGURE_ENV+=		ac_cv_visibility_pragma=no ac_cv_visibility_hidden=no
+
+CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/chrome/app-chrome.manifest
+CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/compreg.dat
+CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/xpti.dat
 
 post-install:
 	cd ${PREFIX}/lib/${MOZILLA} && \
