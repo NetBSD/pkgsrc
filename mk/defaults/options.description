@@ -90,6 +90,7 @@ gnome
 gnupg	
 gnuplot	
 gnutls			Enable GNU TLS support.
+gpgme			Enable gpg support, by using the gpgme library.
 gpgsm	
 gqmpeg-japanese		Japanese ID3 tag support.
 gqmpeg-russian		Russian ID3 tag support.
