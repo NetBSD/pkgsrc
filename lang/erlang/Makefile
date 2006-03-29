@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/04 21:29:53 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/03/29 21:33:16 ghen Exp $
 
 DISTNAME=		otp_src_R10B-9
 PKGNAME=		erlang-10.1.9
@@ -15,13 +15,13 @@ DIST_SUBDIR=		erlang
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl:run
 
-CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl:Q}
 
 SUBST_CLASSES+=		target
 SUBST_STAGE.target=	post-patch
 SUBST_FILES.target=	make/target.mk
 SUBST_SED.target=	-e "s|=.*config.guess)|= ${MACHINE_GNU_PLATFORM}|"
-SUBST_MESSAGE.target=	"Fixing target name."
+SUBST_MESSAGE.target=	Fixing target name.
 
 PLIST_SRC=		PLIST.common
 
