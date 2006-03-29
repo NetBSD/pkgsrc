@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13358 2006/03/29 01:29:47 gavan Exp $
+$NetBSD: CHANGES,v 1.13359 2006/03/29 02:19:30 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1578,3 +1578,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/netbsd-iscsi to 20060327 [agc 2006-03-28]
 	Updated www/horde3 to 3.1.1 [adrianp 2006-03-28]
 	Updated databases/sqlrelay to 0.37 [gavan 2006-03-29]
+	Updated www/firefox-bin-flash to 7.0.63 [markd 2006-03-29]
+	Updated multimedia/moz-bin-flash to 7.0.63 [markd 2006-03-29]
+	Updated multimedia/ns-flash to 7.0.63 [markd 2006-03-29]
