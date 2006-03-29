@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:10:48 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/29 21:44:41 ghen Exp $
 
-PKGREVISION=		1
 CONFLICTS+=		bacula-client-[0-9]*
 
 .include "options.mk"
