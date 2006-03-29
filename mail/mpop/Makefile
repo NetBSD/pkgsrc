@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/03/04 21:30:00 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/29 21:58:39 reed Exp $
 #
 
 DISTNAME=	mpop-0.8.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpop/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,10 +17,7 @@ USE_TOOLS+=		pkg-config
 
 CONFIGURE_ARGS+=	--enable-nls
 
-PKG_SYSCONFSUBDIR=	mpop
-
 EGDIR=		${PREFIX}/share/examples/mpop
-CONF_FILES=	${EGDIR}/mpoprc.example ${PKG_SYSCONFDIR}/mpoprc
 
 INFO_FILES=	mpop.info
 
