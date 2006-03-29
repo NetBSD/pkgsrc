@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.versions,v 1.1 2006/03/29 21:34:13 ghen Exp $
+# $NetBSD: Makefile.versions,v 1.2 2006/03/29 21:40:12 ghen Exp $
 
-ERLANG_VERSION=			10.1.9
-DIST_VERSION=			R10B-9
+ERLANG_VERSION=			10.1.10
+DIST_VERSION=			R10B-10
 
 VERSION.appmon=			2.1.5
 VERSION.asn1=			1.4.4.9
-VERSION.compiler=		4.3.11
+VERSION.compiler=		4.3.12
 VERSION.cosEvent=		2.1
 VERSION.cosEventDomain=		1.1
 VERSION.cosFileTransfer=	1.1.2
@@ -16,35 +16,36 @@ VERSION.cosTransactions=	1.2
 VERSION.crypto=			1.4
 VERSION.debugger=		3.0.1
 VERSION.edoc=			0.6.8
-VERSION.erl_interface=		3.5.4
-VERSION.erts=			5.4.12
+VERSION.erl_interface=		3.5.5
+VERSION.erts=			5.4.13
 VERSION.esdl=			0.95.0630
 VERSION.et=			1.0
 VERSION.gs=			1.5.4
-VERSION.hipe=			3.5.4
+VERSION.hipe=			3.5.5
 VERSION.ic=			4.2.9
-VERSION.inets=			4.6.2
+VERSION.inets=			4.7.2
 VERSION.jinterface=		1.3
-VERSION.kernel=			2.10.12
-VERSION.megaco=			3.2.3
+VERSION.kernel=			2.10.13
+VERSION.megaco=			3.3
 VERSION.mnemosyne=		1.2.5.1
-VERSION.mnesia=			4.2.3
+VERSION.mnesia=			4.2.5
 VERSION.mnesia_session=		1.1.5
+VERSION.odbc=			2.0.6
 VERSION.observer=		0.9.6.2
 VERSION.orber=			3.6.2
-VERSION.os_mon=			1.8
+VERSION.os_mon=			2.0
 VERSION.otp_mibs=		1.0.4
 VERSION.parsetools=		1.3.2
 VERSION.pman=			2.5.2
 VERSION.runtime_tools=		1.5.1.1
 VERSION.sasl=			2.1.1
-VERSION.snmp=			4.6.1
-VERSION.ssh=			0.9
-VERSION.ssl=			3.0.10
-VERSION.stdlib=			1.13.11
+VERSION.snmp=			4.7.1
+VERSION.ssh=			0.9.1
+VERSION.ssl=			3.0.11
+VERSION.stdlib=			1.13.12
 VERSION.syntax_tools=		1.4.3
 VERSION.toolbar=		1.2.1
-VERSION.tools=			2.4.6
+VERSION.tools=			2.4.7
 VERSION.tv=			2.1.2
 VERSION.webtool=		0.8.2
 VERSION.xmerl=			1.0.3
@@ -52,8 +53,8 @@ VERSION.xmerl=			1.0.3
 .for version in appmon asn1 compiler cosEvent cosEventDomain cosFileTransfer  \
 	cosNotification cosProperty cosTime cosTransactions crypto debugger   \
 	edoc erl_interface erts esdl et gs hipe ic inets jinterface kernel    \
-	megaco mnemosyne mnesia mnesia_session observer orber os_mon otp_mibs \
-	parsetools pman runtime_tools sasl snmp ssh ssl stdlib syntax_tools   \
-	toolbar tools tv webtool xmerl
+	megaco mnemosyne mnesia mnesia_session odbc observer orber os_mon     \
+	otp_mibs parsetools pman runtime_tools sasl snmp ssh ssl stdlib       \
+	syntax_tools toolbar tools tv webtool xmerl
 PLIST_SUBST+=	VERSION.${version}=${VERSION.${version}}
 .endfor

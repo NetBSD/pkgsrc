@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common_end,v 1.2 2006/03/29 21:34:13 ghen Exp $
+@comment $NetBSD: PLIST.common_end,v 1.3 2006/03/29 21:40:12 ghen Exp $
 @exec ${MKDIR} %D/lib/erlang/usr/lib
 @dirrm lib/erlang/usr/lib
 @dirrm lib/erlang/usr/include/obsolete
@@ -121,7 +121,6 @@
 @dirrm lib/erlang/lib/otp_mibs-${VERSION.otp_mibs}
 @dirrm lib/erlang/lib/os_mon-${VERSION.os_mon}/src
 @dirrm lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/mibs
-@dirrm lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/bin
 @dirrm lib/erlang/lib/os_mon-${VERSION.os_mon}/priv
 @dirrm lib/erlang/lib/os_mon-${VERSION.os_mon}/mibs/v1
 @dirrm lib/erlang/lib/os_mon-${VERSION.os_mon}/mibs
