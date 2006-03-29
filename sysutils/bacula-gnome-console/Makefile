@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2006/03/06 00:18:25 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/29 21:44:41 ghen Exp $
 
 PKGNAME=		${DISTNAME:S/-/-gnomeconsole-/}
-PKGREVISION=		2
 COMMENT=		Gnome console for Bacula - The Network Backup Solution
 CATEGORIES+=		gnome
 
