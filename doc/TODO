@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4790 2006/03/29 22:06:11 xtraeme Exp $
+$NetBSD: TODO,v 1.4791 2006/03/29 22:08:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -578,7 +578,6 @@ Suggested package updates
 	o gnome2-user-docs-2.14.0 [jmmv]
 	o gnomeicu-0.99.10
 	o gnopernicus-1.0.3 [jmmv]
-	o gnucash-devel-1.9.3 [wiz]
 	o gnumeric-1.6.3
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14
