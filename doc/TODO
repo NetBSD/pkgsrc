@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4788 2006/03/29 21:27:32 wiz Exp $
+$NetBSD: TODO,v 1.4789 2006/03/29 21:51:32 ghen Exp $
 
 Suggested new packages
 ======================
@@ -306,7 +306,6 @@ Suggested package updates
 	o GUIlib-1.1.1
 	o GWLib-0.7.0
 	o GridSim-3.3
-	o ImageMagick-6.2.6.4 [ghen]
 	o MyPasswordSafe-20060326
 	o ORBit2-2.14.0
 	o PAM-0.80
@@ -369,7 +368,6 @@ Suggested package updates
 	o avr-libc-1.4.1
 	o avrdude-5.1
 	o baci-20040415
-	o bacula-1.38.6 [ghen]
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
 	o bchunk-1.2.0
@@ -493,7 +491,6 @@ Suggested package updates
 	o epiphany-extensions-2.14.0.1 [jmmv]
 	o epstool-3.08
 	o eric3-3.8.1
-	o erlang-10.1.10 [ghen]
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.1
@@ -1031,7 +1028,6 @@ Suggested package updates
 	o proxsmtp-1.2.1
 	o psmisc-21.9
 	o pstoedit-3.43
-	o pstree-2.27
 	o pth-2.0.6
 	o puf-0.93.3
 	o puzzle-5.2
