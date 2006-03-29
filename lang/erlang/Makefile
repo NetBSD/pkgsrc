@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2006/03/29 21:33:16 ghen Exp $
+# $NetBSD: Makefile,v 1.26 2006/03/29 21:34:13 ghen Exp $
 
-DISTNAME=		otp_src_R10B-9
-PKGNAME=		erlang-10.1.9
+DISTNAME=		otp_src_${DIST_VERSION}
+PKGNAME=		erlang-${ERLANG_VERSION}
 PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
@@ -28,6 +28,8 @@ PLIST_SRC=		PLIST.common
 .include "options.mk"
 
 PLIST_SRC+=		PLIST.common_end
+
+.include "Makefile.versions"
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
