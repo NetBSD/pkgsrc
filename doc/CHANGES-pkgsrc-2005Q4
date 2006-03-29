@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.114 2006/03/24 16:12:57 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2005Q4,v 1.1.2.115 2006/03/29 14:22:02 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2005Q4 branch:
@@ -231,3 +231,5 @@ Pullup ticket 1254 - requested by Todd Vierling
 security fix for sendmail812
 Pullup ticket 1255 - requested by Todd Vierling
 security fix for sendmail
+Pullup ticket 1269 - requested by Matthias Scheler
+security update for mysqladmin
