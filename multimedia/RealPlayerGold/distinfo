@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/10/04 15:28:25 rpaulo Exp $
+$NetBSD: distinfo,v 1.5 2006/03/29 13:00:07 salo Exp $
 
-SHA1 (RealPlayerGold-10.0.6/RealPlayer10GOLD.rpm) = d3db703699894d501f37dd02e1df472e0c0b6fc6
-RMD160 (RealPlayerGold-10.0.6/RealPlayer10GOLD.rpm) = 1fd538288ffc43208f3303473c6c0ec091bfeaf6
-Size (RealPlayerGold-10.0.6/RealPlayer10GOLD.rpm) = 6643315 bytes
+SHA1 (RealPlayerGold-10.0.7/RealPlayer10GOLD.rpm) = 3853cfd9243de4413c4210c297e4713d15ae60f9
+RMD160 (RealPlayerGold-10.0.7/RealPlayer10GOLD.rpm) = 637dafa86cc3687da3820109641d25ed51e95047
+Size (RealPlayerGold-10.0.7/RealPlayer10GOLD.rpm) = 6650006 bytes
