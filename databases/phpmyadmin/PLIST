@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2005/12/09 13:49:21 tron Exp $
+@comment $NetBSD: PLIST,v 1.13.2.1 2006/03/29 14:21:22 salo Exp $
 share/doc/phpmyadmin/CREDITS
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/Documentation.txt
@@ -14,20 +14,14 @@ share/phpmyadmin/browse_foreigners.php
 share/phpmyadmin/calendar.php
 share/phpmyadmin/changelog.php
 share/phpmyadmin/chk_rel.php
-share/phpmyadmin/config.default.php
-share/phpmyadmin/config.footer.inc.php
-share/phpmyadmin/config.header.inc.php
 share/phpmyadmin/config.inc.php
 share/phpmyadmin/css/phpmyadmin.css.php
 share/phpmyadmin/css/print.css
 share/phpmyadmin/db_create.php
 share/phpmyadmin/db_datadict.php
 share/phpmyadmin/db_details.php
-share/phpmyadmin/db_details_common.php
-share/phpmyadmin/db_details_db_info.php
 share/phpmyadmin/db_details_export.php
 share/phpmyadmin/db_details_importdocsql.php
-share/phpmyadmin/db_details_links.php
 share/phpmyadmin/db_details_qbe.php
 share/phpmyadmin/db_details_structure.php
 share/phpmyadmin/db_import.php
@@ -37,11 +31,17 @@ share/phpmyadmin/db_search.php
 share/phpmyadmin/docs.css
 share/phpmyadmin/error.php
 share/phpmyadmin/export.php
-share/phpmyadmin/footer.inc.php
-share/phpmyadmin/header.inc.php
-share/phpmyadmin/header_printview.inc.php
 share/phpmyadmin/import.php
 share/phpmyadmin/index.php
+share/phpmyadmin/js/dom-drag.js
+share/phpmyadmin/js/functions.js
+share/phpmyadmin/js/indexes.js
+share/phpmyadmin/js/keyhandler.js
+share/phpmyadmin/js/querywindow.js
+share/phpmyadmin/js/server_privileges.js
+share/phpmyadmin/js/tbl_change.js
+share/phpmyadmin/js/tooltip.js
+share/phpmyadmin/js/user_password.js
 share/phpmyadmin/lang/afrikaans-iso-8859-1.inc.php
 share/phpmyadmin/lang/afrikaans-utf-8.inc.php
 share/phpmyadmin/lang/albanian-iso-8859-1.inc.php
@@ -160,6 +160,9 @@ share/phpmyadmin/lang/turkish-utf-8.inc.php
 share/phpmyadmin/lang/ukrainian-utf-8.inc.php
 share/phpmyadmin/lang/ukrainian-windows-1251.inc.php
 share/phpmyadmin/left.php
+share/phpmyadmin/libraries/Config.class.php
+share/phpmyadmin/libraries/Theme.class.php
+share/phpmyadmin/libraries/Theme_Manager.class.php
 share/phpmyadmin/libraries/auth/config.auth.lib.php
 share/phpmyadmin/libraries/auth/cookie.auth.lib.php
 share/phpmyadmin/libraries/auth/http.auth.lib.php
@@ -168,29 +171,45 @@ share/phpmyadmin/libraries/bookmark.lib.php
 share/phpmyadmin/libraries/charset_conversion.lib.php
 share/phpmyadmin/libraries/check_user_privileges.lib.php
 share/phpmyadmin/libraries/common.lib.php
+share/phpmyadmin/libraries/config.default.php
 share/phpmyadmin/libraries/database_interface.lib.php
 share/phpmyadmin/libraries/db_config.lib.php
+share/phpmyadmin/libraries/db_details_common.inc.php
+share/phpmyadmin/libraries/db_details_db_info.inc.php
+share/phpmyadmin/libraries/db_details_links.inc.php
 share/phpmyadmin/libraries/db_table_exists.lib.php
 share/phpmyadmin/libraries/dbg/profiling.php
 share/phpmyadmin/libraries/dbg/setup.php
 share/phpmyadmin/libraries/dbi/mysql.dbi.lib.php
 share/phpmyadmin/libraries/dbi/mysqli.dbi.lib.php
-share/phpmyadmin/libraries/defines.lib.php
 share/phpmyadmin/libraries/display_create_database.lib.php
 share/phpmyadmin/libraries/display_create_table.lib.php
 share/phpmyadmin/libraries/display_export.lib.php
 share/phpmyadmin/libraries/display_import.lib.php
+share/phpmyadmin/libraries/display_select_lang.lib.php
 share/phpmyadmin/libraries/display_tbl.lib.php
 share/phpmyadmin/libraries/display_tbl_links.lib.php
-share/phpmyadmin/libraries/dom-drag.js
+share/phpmyadmin/libraries/engines/bdb.lib.php
+share/phpmyadmin/libraries/engines/berkeleydb.lib.php
+share/phpmyadmin/libraries/engines/binlog.lib.php
+share/phpmyadmin/libraries/engines/innobase.lib.php
+share/phpmyadmin/libraries/engines/innodb.lib.php
+share/phpmyadmin/libraries/engines/memory.lib.php
+share/phpmyadmin/libraries/engines/merge.lib.php
+share/phpmyadmin/libraries/engines/mrg_myisam.lib.php
+share/phpmyadmin/libraries/engines/myisam.lib.php
+share/phpmyadmin/libraries/engines/ndbcluster.lib.php
 share/phpmyadmin/libraries/export/csv.php
 share/phpmyadmin/libraries/export/htmlexcel.php
 share/phpmyadmin/libraries/export/htmlword.php
 share/phpmyadmin/libraries/export/latex.php
+share/phpmyadmin/libraries/export/pdf.php
 share/phpmyadmin/libraries/export/sql.php
 share/phpmyadmin/libraries/export/xls.php
 share/phpmyadmin/libraries/export/xml.php
 share/phpmyadmin/libraries/file_listing.php
+share/phpmyadmin/libraries/footer.inc.php
+share/phpmyadmin/libraries/footer_custom.inc.php
 share/phpmyadmin/libraries/fpdf/README
 share/phpmyadmin/libraries/fpdf/font/FreeSans.ctg.z
 share/phpmyadmin/libraries/fpdf/font/FreeSans.php
@@ -213,30 +232,35 @@ share/phpmyadmin/libraries/fpdf/font/timesi.php
 share/phpmyadmin/libraries/fpdf/font/zapfdingbats.php
 share/phpmyadmin/libraries/fpdf/fpdf.php
 share/phpmyadmin/libraries/fpdf/ufpdf.php
-share/phpmyadmin/libraries/functions.js
 share/phpmyadmin/libraries/get_foreign.lib.php
 share/phpmyadmin/libraries/grab_globals.lib.php
+share/phpmyadmin/libraries/header.inc.php
+share/phpmyadmin/libraries/header_custom.inc.php
 share/phpmyadmin/libraries/header_http.inc.php
 share/phpmyadmin/libraries/header_meta_style.inc.php
+share/phpmyadmin/libraries/header_printview.inc.php
 share/phpmyadmin/libraries/import.lib.php
-share/phpmyadmin/libraries/indexes.js
+share/phpmyadmin/libraries/import/README
+share/phpmyadmin/libraries/import/csv.php
+share/phpmyadmin/libraries/import/ldi.php
+share/phpmyadmin/libraries/import/sql.php
 share/phpmyadmin/libraries/information_schema_relations.lib.php
 share/phpmyadmin/libraries/ip_allow_deny.lib.php
 share/phpmyadmin/libraries/kanji-encoding.lib.php
-share/phpmyadmin/libraries/keyhandler.js
 share/phpmyadmin/libraries/left_header.inc.php
 share/phpmyadmin/libraries/mcrypt.lib.php
+share/phpmyadmin/libraries/mult_submits.inc.php
 share/phpmyadmin/libraries/mysql_charsets.lib.php
 share/phpmyadmin/libraries/ob.lib.php
-share/phpmyadmin/libraries/querywindow.js
+share/phpmyadmin/libraries/plugin_interface.lib.php
 share/phpmyadmin/libraries/read_dump.lib.php
 share/phpmyadmin/libraries/relation.lib.php
 share/phpmyadmin/libraries/relation_cleanup.lib.php
 share/phpmyadmin/libraries/sanitizing.lib.php
 share/phpmyadmin/libraries/select_lang.lib.php
 share/phpmyadmin/libraries/select_server.lib.php
-share/phpmyadmin/libraries/select_theme.lib.php
-share/phpmyadmin/libraries/server_privileges.js
+share/phpmyadmin/libraries/server_common.inc.php
+share/phpmyadmin/libraries/server_links.inc.php
 share/phpmyadmin/libraries/session.inc.php
 share/phpmyadmin/libraries/sql_query_form.lib.php
 share/phpmyadmin/libraries/sqlparser.data.php
@@ -245,10 +269,13 @@ share/phpmyadmin/libraries/sqlvalidator.class.php
 share/phpmyadmin/libraries/sqlvalidator.lib.php
 share/phpmyadmin/libraries/storage_engines.lib.php
 share/phpmyadmin/libraries/string.lib.php
-share/phpmyadmin/libraries/tbl_change.js
 share/phpmyadmin/libraries/tbl_indexes.lib.php
 share/phpmyadmin/libraries/tbl_move_copy.php
-share/phpmyadmin/libraries/tooltip.js
+share/phpmyadmin/libraries/tbl_properties.inc.php
+share/phpmyadmin/libraries/tbl_properties_common.php
+share/phpmyadmin/libraries/tbl_properties_links.inc.php
+share/phpmyadmin/libraries/tbl_properties_table_info.inc.php
+share/phpmyadmin/libraries/tbl_replace_fields.inc.php
 share/phpmyadmin/libraries/transformations.lib.php
 share/phpmyadmin/libraries/transformations/README
 share/phpmyadmin/libraries/transformations/TEMPLATE
@@ -259,7 +286,6 @@ share/phpmyadmin/libraries/transformations/global.inc.php
 share/phpmyadmin/libraries/transformations/image_jpeg__inline.inc.php
 share/phpmyadmin/libraries/transformations/image_jpeg__link.inc.php
 share/phpmyadmin/libraries/transformations/image_png__inline.inc.php
-share/phpmyadmin/libraries/transformations/overview.php
 share/phpmyadmin/libraries/transformations/text_plain__dateformat.inc.php
 share/phpmyadmin/libraries/transformations/text_plain__external.inc.php
 share/phpmyadmin/libraries/transformations/text_plain__formatted.inc.php
@@ -269,11 +295,9 @@ share/phpmyadmin/libraries/transformations/text_plain__sql.inc.php
 share/phpmyadmin/libraries/transformations/text_plain__substr.inc.php
 share/phpmyadmin/libraries/unzip.lib.php
 share/phpmyadmin/libraries/url_generating.lib.php
-share/phpmyadmin/libraries/user_password.js
 share/phpmyadmin/libraries/zip.lib.php
 share/phpmyadmin/license.php
 share/phpmyadmin/main.php
-share/phpmyadmin/mult_submits.inc.php
 share/phpmyadmin/pdf_pages.php
 share/phpmyadmin/pdf_schema.php
 share/phpmyadmin/phpinfo.php
@@ -285,12 +309,10 @@ share/phpmyadmin/scripts/create_tables_mysql_4_1_2+.sql
 share/phpmyadmin/scripts/upgrade_tables_mysql_4_1_2+.sql
 share/phpmyadmin/server_binlog.php
 share/phpmyadmin/server_collations.php
-share/phpmyadmin/server_common.inc.php
 share/phpmyadmin/server_databases.php
 share/phpmyadmin/server_engines.php
 share/phpmyadmin/server_export.php
 share/phpmyadmin/server_import.php
-share/phpmyadmin/server_links.inc.php
 share/phpmyadmin/server_privileges.php
 share/phpmyadmin/server_processlist.php
 share/phpmyadmin/server_sql.php
@@ -305,19 +327,12 @@ share/phpmyadmin/tbl_import.php
 share/phpmyadmin/tbl_indexes.php
 share/phpmyadmin/tbl_move_copy.php
 share/phpmyadmin/tbl_printview.php
-share/phpmyadmin/tbl_properties.inc.php
 share/phpmyadmin/tbl_properties.php
-share/phpmyadmin/tbl_properties_common.php
 share/phpmyadmin/tbl_properties_export.php
-share/phpmyadmin/tbl_properties_links.php
 share/phpmyadmin/tbl_properties_operations.php
 share/phpmyadmin/tbl_properties_structure.php
-share/phpmyadmin/tbl_properties_table_info.php
-share/phpmyadmin/tbl_query_box.php
 share/phpmyadmin/tbl_relation.php
-share/phpmyadmin/tbl_rename.php
 share/phpmyadmin/tbl_replace.php
-share/phpmyadmin/tbl_replace_fields.php
 share/phpmyadmin/tbl_row_action.php
 share/phpmyadmin/tbl_select.php
 share/phpmyadmin/themes.php
@@ -558,6 +573,7 @@ share/phpmyadmin/themes/original/img/vertical_line.png
 share/phpmyadmin/themes/original/info.inc.php
 share/phpmyadmin/themes/original/layout.inc.php
 share/phpmyadmin/themes/original/screen.png
+share/phpmyadmin/transformation_overview.php
 share/phpmyadmin/transformation_wrapper.php
 share/phpmyadmin/translators.html
 share/phpmyadmin/user_password.php
@@ -570,14 +586,17 @@ share/phpmyadmin/user_password.php
 @dirrm share/phpmyadmin/themes
 @dirrm share/phpmyadmin/scripts
 @dirrm share/phpmyadmin/libraries/transformations
+@dirrm share/phpmyadmin/libraries/import
 @dirrm share/phpmyadmin/libraries/fpdf/font
 @dirrm share/phpmyadmin/libraries/fpdf
 @dirrm share/phpmyadmin/libraries/export
+@dirrm share/phpmyadmin/libraries/engines
 @dirrm share/phpmyadmin/libraries/dbi
 @dirrm share/phpmyadmin/libraries/dbg
 @dirrm share/phpmyadmin/libraries/auth
 @dirrm share/phpmyadmin/libraries
 @dirrm share/phpmyadmin/lang
+@dirrm share/phpmyadmin/js
 @dirrm share/phpmyadmin/css
 @dirrm share/phpmyadmin
 @dirrm share/examples/phpmyadmin
