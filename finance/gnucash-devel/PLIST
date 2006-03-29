@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/03/07 04:32:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/03/29 22:07:22 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -164,10 +164,10 @@ include/gnucash/pricecell.h
 include/gnucash/print-session.h
 include/gnucash/qof-be-utils.h
 include/gnucash/qof.h
-include/gnucash/qof_book_merge.h
 include/gnucash/qofbackend-p.h
 include/gnucash/qofbackend.h
 include/gnucash/qofbook.h
+include/gnucash/qofbookmerge.h
 include/gnucash/qofchoice.h
 include/gnucash/qofclass.h
 include/gnucash/qofevent.h
@@ -727,10 +727,19 @@ ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnucash.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnucash.mo
 share/mime-info/gnucash.keys
 share/mime-info/gnucash.mime
+share/xml/gnucash/xsl/README
+share/xml/gnucash/xsl/date-time.xsl
+share/xml/gnucash/xsl/gnucash-gnccustomer-vcard2.xsl
+share/xml/gnucash/xsl/gnucash-std.xsl
+share/xml/gnucash/xsl/string.xsl
+share/xml/gnucash/xsl/vcard-gnccustomer.pl
+share/xml/qsf/pilot-qsf-gncCustomer.xml
 share/xml/qsf/pilot-qsf-GnuCashInvoice.xml
 share/xml/qsf/qsf-map.xsd.xml
 share/xml/qsf/qsf-object.xsd.xml
 @dirrm share/xml/qsf
+@dirrm share/xml/gnucash/xsl
+@dirrm share/xml/gnucash
 @comment in xmlcatmgr: @dirrm share/xml
 @comment in xdg-dirs: @dirrm share/mime-info
 @dirrm share/gnucash/ui
