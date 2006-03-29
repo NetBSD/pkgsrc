@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2006/03/29 21:34:13 ghen Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2006/03/29 21:40:12 ghen Exp $
 bin/ear
 bin/ecc
 bin/elink
@@ -1494,6 +1494,7 @@ lib/erlang/lib/hipe-${VERSION.hipe}/flow/hipe_gen_cfg.erl
 lib/erlang/lib/hipe-${VERSION.hipe}/flow/liveness.inc
 lib/erlang/lib/hipe-${VERSION.hipe}/icode/hipe_beam_to_icode.erl
 lib/erlang/lib/hipe-${VERSION.hipe}/icode/hipe_icode.erl
+lib/erlang/lib/hipe-${VERSION.hipe}/icode/hipe_icode.hrl
 lib/erlang/lib/hipe-${VERSION.hipe}/icode/hipe_icode_binary_pass.erl
 lib/erlang/lib/hipe-${VERSION.hipe}/icode/hipe_icode_callgraph.erl
 lib/erlang/lib/hipe-${VERSION.hipe}/icode/hipe_icode_cfg.erl
@@ -2721,7 +2722,6 @@ lib/erlang/lib/orber-${VERSION.orber}/src/orber_web_server.erl
 lib/erlang/lib/os_mon-${VERSION.os_mon}/ebin/cpu_sup.beam
 lib/erlang/lib/os_mon-${VERSION.os_mon}/ebin/disksup.beam
 lib/erlang/lib/os_mon-${VERSION.os_mon}/ebin/memsup.beam
-lib/erlang/lib/os_mon-${VERSION.os_mon}/ebin/memsup_helper.beam
 lib/erlang/lib/os_mon-${VERSION.os_mon}/ebin/nteventlog.beam
 lib/erlang/lib/os_mon-${VERSION.os_mon}/ebin/os_mon.app
 lib/erlang/lib/os_mon-${VERSION.os_mon}/ebin/os_mon.appup
@@ -2733,14 +2733,11 @@ lib/erlang/lib/os_mon-${VERSION.os_mon}/include/OTP-OS-MON-MIB.hrl
 lib/erlang/lib/os_mon-${VERSION.os_mon}/mibs/OTP-OS-MON-MIB.funcs
 lib/erlang/lib/os_mon-${VERSION.os_mon}/mibs/OTP-OS-MON-MIB.mib
 lib/erlang/lib/os_mon-${VERSION.os_mon}/mibs/v1/OTP-OS-MON-MIB.mib.v1
-lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/bin/memsup
 lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/mibs/OTP-OS-MON-MIB.bin
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/cpu_sup.erl
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/disksup.erl
-lib/erlang/lib/os_mon-${VERSION.os_mon}/src/memsup.c
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/memsup.erl
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/memsup.hrl
-lib/erlang/lib/os_mon-${VERSION.os_mon}/src/memsup_helper.erl
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/nteventlog.erl
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/os_mon.erl
 lib/erlang/lib/os_mon-${VERSION.os_mon}/src/os_mon_mib.erl
@@ -2933,6 +2930,7 @@ lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpm_mpd.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpm_net_if.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpm_network_interface.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpm_server.beam
+lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpm_server_sup.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpm_supervisor.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpm_user.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpm_user_default.beam
@@ -3068,6 +3066,7 @@ lib/erlang/lib/snmp-${VERSION.snmp}/src/manager/snmpm_mpd.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/manager/snmpm_net_if.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/manager/snmpm_network_interface.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/manager/snmpm_server.erl
+lib/erlang/lib/snmp-${VERSION.snmp}/src/manager/snmpm_server_sup.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/manager/snmpm_supervisor.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/manager/snmpm_user.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/manager/snmpm_user_default.erl
@@ -3256,6 +3255,7 @@ lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/epp.beam
 lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/erl_bits.beam
 lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/erl_compile.beam
 lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/erl_eval.beam
+lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/erl_expand_records.beam
 lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/erl_internal.beam
 lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/erl_lint.beam
 lib/erlang/lib/stdlib-${VERSION.stdlib}/ebin/erl_parse.beam
@@ -3336,6 +3336,7 @@ lib/erlang/lib/stdlib-${VERSION.stdlib}/src/epp.erl
 lib/erlang/lib/stdlib-${VERSION.stdlib}/src/erl_bits.erl
 lib/erlang/lib/stdlib-${VERSION.stdlib}/src/erl_compile.erl
 lib/erlang/lib/stdlib-${VERSION.stdlib}/src/erl_eval.erl
+lib/erlang/lib/stdlib-${VERSION.stdlib}/src/erl_expand_records.erl
 lib/erlang/lib/stdlib-${VERSION.stdlib}/src/erl_internal.erl
 lib/erlang/lib/stdlib-${VERSION.stdlib}/src/erl_lint.erl
 lib/erlang/lib/stdlib-${VERSION.stdlib}/src/erl_parse.erl
