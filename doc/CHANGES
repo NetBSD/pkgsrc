@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13364 2006/03/29 20:41:55 jmmv Exp $
+$NetBSD: CHANGES,v 1.13365 2006/03/29 21:47:31 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1587,3 +1587,15 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/cups to 1.1.23nb8 [joerg 2006-03-29]
 	Updated print/xpdf to 3.01pl2 [joerg 2006-03-29]
 	Updated sysutils/gnome-vfs2 to 2.12.2nb5 [jmmv 2006-03-29]
+	Updated sysutils/pstree to 2.27 [ghen 2006-03-29]
+	Updated graphics/ImageMagick to 6.2.6.4 [ghen 2006-03-29]
+	Updated lang/erlang to 10.1.10 [ghen 2006-03-29]
+	Added lang/erlang-doc version 10.1.10 [ghen 2006-03-29]
+	Added lang/erlang-man version 10.1.10 [ghen 2006-03-29]
+	Added sysutils/torsmo version 0.18 [ghen 2006-03-29]
+	Updated sysutils/bacula to 1.38.6 [ghen 2006-03-29]
+	Updated sysutils/bacula-clientonly to 1.38.6 [ghen 2006-03-29]
+	Updated sysutils/bacula-doc to 1.38.6 [ghen 2006-03-29]
+	Updated sysutils/bacula-gnome-console to 1.38.6 [ghen 2006-03-29]
+	Updated sysutils/bacula-tray-monitor to 1.38.6 [ghen 2006-03-29]
+	Updated sysutils/bacula-wx-console to 1.38.6 [ghen 2006-03-29]
