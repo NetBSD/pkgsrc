@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2006/02/19 07:11:08 xtraeme Exp $
+# $NetBSD: options.mk,v 1.2 2006/03/29 22:54:42 chris Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sylpheed
@@ -44,4 +44,3 @@ CONFIGURE_ARGS+=	--enable-gpgme
 .else
 CONFIGURE_ARGS+=	--disable-gpgme
 .endif
-
