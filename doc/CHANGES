@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13362 2006/03/29 14:13:05 hamajima Exp $
+$NetBSD: CHANGES,v 1.13363 2006/03/29 17:32:27 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1584,3 +1584,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/RealPlayerGold to 10.0.7 [salo 2006-03-29]
 	Updated databases/phpmyadmin to 2.8.0.2nb1 [tron 2006-03-29]
 	Updated graphics/spcaview to 0.5a [hamajima 2006-03-29]
+	Updated print/cups to 1.1.23nb8 [joerg 2006-03-29]
+	Updated print/xpdf to 3.01pl2 [joerg 2006-03-29]
