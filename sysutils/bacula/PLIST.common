@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST.common,v 1.1 2005/12/08 01:04:44 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2006/03/29 21:44:41 ghen Exp $
 libexec/bacula/bacula
+libexec/bacula/bacula-ctl-dir
+libexec/bacula/bacula-ctl-fd
+libexec/bacula/bacula-ctl-sd
 libexec/bacula/bconsole
 libexec/bacula/btraceback.dbx
 libexec/bacula/btraceback.gdb
+libexec/bacula/disk-changer
 libexec/bacula/dvd-handler
 libexec/bacula/gconsole
 libexec/bacula/mtx-changer

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:10:48 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/29 21:44:42 ghen Exp $
 
 PKGNAME=		${DISTNAME:S/-/-wxconsole-/}
-PKGREVISION=		1
 COMMENT=		wxWindows-based console for Bacula - The Network Backup Solution
 
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/bacula/distinfo
