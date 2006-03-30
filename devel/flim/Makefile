@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/03/30 03:31:13 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/03/30 23:55:38 jlam Exp $
 
 DISTNAME=	flim-1.14.7
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -43,7 +43,7 @@ post-build:
 post-install:
 	cd ${WRKSRC}; for f in mime-*.info mime-*.info-[0-9]*; do	\
 		${TEST} ! -f "$$f" ||					\
-		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
+		${INSTALL_DATA} "$$f" ${EMACS_INFOPREFIX};		\
 	done
 
 .include "../../mk/bsd.pkg.mk"
