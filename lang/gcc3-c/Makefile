@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:09:44 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/30 03:44:43 jlam Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-c-${GCC_VERSION}
 PKGREVISION=	1
 COMMENT=	GNU Compiler Collection, v3 - C compiler
 
-INFO_FILES=	cpp.info gcc.info gccint.info cppinternals.info
+INFO_FILES=	# PLIST
 
 .include "../../lang/gcc3/Makefile.common"
 

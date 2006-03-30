@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/02/16 21:09:56 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/03/30 03:44:43 jlam Exp $
 bin/emacs
 bin/emacs-${PKGVERSION}
 bin/emacs-b2m
@@ -6,6 +6,20 @@ bin/emacs-ctags
 bin/emacs-etags
 bin/emacs-rcs-checkin
 bin/emacsclient
+info/ccmode
+info/cl 
+info/dired-x
+info/ediff
+info/emacs 
+info/forms
+info/gnus
+info/message 
+info/mh-e
+info/reftex
+info/sc
+info/vip
+info/viper
+info/widget
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/cvtmail
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/digest-doc
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/emacsserver

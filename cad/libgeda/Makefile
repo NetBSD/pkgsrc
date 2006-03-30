@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/02/05 23:08:22 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2006/03/30 03:44:41 jlam Exp $
 #
 
 DISTNAME=		libgeda-${PKGVERSION}
@@ -16,8 +16,7 @@ CONFLICTS+=		gEDA<19991011
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		pkg-config
-
-INFO_FILES=		libgedadoc.info
+INFO_FILES=		# PLIST
 
 .include "../../graphics/libgdgeda/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
