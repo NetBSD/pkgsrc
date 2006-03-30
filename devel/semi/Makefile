@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/03/30 23:39:23 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/03/30 23:55:38 jlam Exp $
 #
 # TODO:
 # * Control ${WRKSRC}/SEMI-ELS explicitly, otherwise Emacs/XEmacs founds
@@ -53,7 +53,7 @@ post-build:
 post-install:
 	cd ${WRKSRC}; for f in mime-ui-*.info mime-*.info-[0-9]*; do	\
 		${TEST} ! -f "$$f" ||					\
-		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};          \
+		${INSTALL_DATA} "$$f" ${EMACS_INFOPREFIX};		\
 	done
 
 .include "../../mk/bsd.pkg.mk"
