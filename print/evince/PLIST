@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/03/14 20:06:09 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/03/30 21:30:42 jmmv Exp $
 bin/evince
 bin/evince-thumbnailer
 share/applications/evince.desktop
@@ -12,17 +12,26 @@ share/gconf/schemas/evince.schemas
 share/gnome/help/evince/C/evince.xml
 share/gnome/help/evince/C/figures/evince_start_window.png
 share/gnome/help/evince/C/legal.xml
+share/gnome/help/evince/bg/evince.xml
+share/gnome/help/evince/bg/figures/evince_start_window.png
 share/gnome/help/evince/el/evince.xml
 share/gnome/help/evince/el/figures/evince_start_window.png
 share/gnome/help/evince/es/evince.xml
 share/gnome/help/evince/es/figures/evince_start_window.png
+share/gnome/help/evince/nl/evince.xml
+share/gnome/help/evince/nl/figures/evince_start_window.png
+share/gnome/help/evince/ru/evince.xml
+share/gnome/help/evince/ru/figures/evince_start_window.png
 share/gnome/help/evince/sr/evince.xml
 share/gnome/help/evince/sr/figures/evince_start_window.png
 share/gnome/help/evince/uk/evince.xml
 share/gnome/help/evince/uk/figures/evince_start_window.png
+${PKGLOCALEDIR}/locale/be/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/evince.mo
@@ -31,6 +40,7 @@ ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/es/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/et/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/fa/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/evince.mo
@@ -38,16 +48,24 @@ ${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/he/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/id/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/ka/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/evince.mo
@@ -58,12 +76,17 @@ ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/evince.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/evince.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/evince.mo
 share/omf/evince/evince-C.omf
+share/omf/evince/evince-bg.omf
 share/omf/evince/evince-el.omf
 share/omf/evince/evince-es.omf
+share/omf/evince/evince-nl.omf
+share/omf/evince/evince-ru.omf
 share/omf/evince/evince-sr.omf
 share/omf/evince/evince-uk.omf
 @dirrm share/omf/evince
@@ -72,10 +95,16 @@ share/omf/evince/evince-uk.omf
 @dirrm share/gnome/help/evince/uk
 @dirrm share/gnome/help/evince/sr/figures
 @dirrm share/gnome/help/evince/sr
+@dirrm share/gnome/help/evince/ru/figures
+@dirrm share/gnome/help/evince/ru
+@dirrm share/gnome/help/evince/nl/figures
+@dirrm share/gnome/help/evince/nl
 @dirrm share/gnome/help/evince/es/figures
 @dirrm share/gnome/help/evince/es
 @dirrm share/gnome/help/evince/el/figures
 @dirrm share/gnome/help/evince/el
+@dirrm share/gnome/help/evince/bg/figures
+@dirrm share/gnome/help/evince/bg
 @dirrm share/gnome/help/evince/C/figures
 @dirrm share/gnome/help/evince/C
 @dirrm share/gnome/help/evince
