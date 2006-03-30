@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2006/01/26 22:46:15 markd Exp $
+# $NetBSD: builtin.mk,v 1.8 2006/03/30 18:06:18 jlam Exp $
 
 BUILTIN_PKG:=	heimdal
 
@@ -16,7 +16,7 @@ BUILTIN_FIND_GREP.SH_KRB5_CONFIG=	^[ 	]*--version)
 ###
 .if !defined(IS_BUILTIN.heimdal)
 IS_BUILTIN.heimdal=	no
-.  if empty(H_HEIMDAL:M${LOCALBASE}/*) && exists(${H_HEIMDAL})
+.  if empty(H_HEIMDAL:M__nonexistent__) && empty(H_HEIMDAL:M${LOCALBASE}/*)
 IS_BUILTIN.heimdal=	yes
 .  endif
 .endif
@@ -28,7 +28,7 @@ MAKEVARS+=	IS_BUILTIN.heimdal
 ###
 .if !defined(BUILTIN_PKG.heimdal) && \
     !empty(IS_BUILTIN.heimdal:M[yY][eE][sS])
-.  if exists(${SH_KRB5_CONFIG})
+.  if empty(SH_KRB5_CONFIG:M__nonexistent__)
 BUILTIN_VERSION.heimdal!=	${SH_KRB5_CONFIG} --version |		\
 				${AWK} '{ print $$2; exit }'
 .  else
@@ -104,7 +104,8 @@ CONFIGURE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 MAKE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 .  endif
 
-.  if !empty(USE_BUILTIN.heimdal:M[yY][eE][sS]) && !exists(${SH_KRB5_CONFIG})
+.  if !empty(USE_BUILTIN.heimdal:M[yY][eE][sS]) && \
+      !empty(SH_KRB5_CONFIG:M__nonexistent__)
 BUILDLINK_TARGETS+=	fake-krb5-config
 
 fake-krb5-config:

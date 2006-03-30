@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.17 2005/10/12 02:20:10 jlam Exp $
+# $NetBSD: builtin.mk,v 1.18 2006/03/30 18:06:18 jlam Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -14,7 +14,7 @@ BUILTIN_FIND_FILES.H_OPENSSL=	/usr/include/openssl/opensslv.h
 ###
 .if !defined(IS_BUILTIN.openssl)
 IS_BUILTIN.openssl=	no
-.  if empty(H_OPENSSL:M${LOCALBASE}/*) && exists(${H_OPENSSL})
+.  if empty(H_OPENSSL:M__nonexistent__) && empty(H_OPENSSL:M${LOCALBASE}/*)
 IS_BUILTIN.openssl=	yes
 .  endif
 .endif
@@ -26,7 +26,7 @@ MAKEVARS+=	IS_BUILTIN.openssl
 ###
 .if !defined(BUILTIN_PKG.openssl) && \
     !empty(IS_BUILTIN.openssl:M[yY][eE][sS]) && \
-    exists (${H_OPENSSL})
+    empty(H_OPENSSL:M__nonexistent__)
 BUILTIN_VERSION.openssl!=						\
 	${AWK} 'BEGIN { hex="0123456789abcdef";				\
 			split("abcdefghijklmnopqrstuvwxyz", alpha, "");	\
@@ -54,7 +54,8 @@ BUILTIN_VERSION.openssl!=						\
 		}							\
 	' ${H_OPENSSL}
 
-.  if !empty(BUILTIN_VERSION.openssl:M0\.9\.6g) && exists(${H_OPENSSL})
+.  if !empty(BUILTIN_VERSION.openssl:M0\.9\.6g) && \
+      empty(H_OPENSSL:M__nonexistent__)
 #
 # If the native OpenSSL contains the security fixes pulled up to the
 # netbsd-1-6 branch on 2003-11-07, then pretend it's openssl-0.9.6l.
@@ -79,7 +80,8 @@ BUILTIN_OPENSSL_HAS_20040401_FIX!=					\
 .    if !empty(BUILTIN_OPENSSL_HAS_20040401_FIX:M[yY][eE][sS])
 BUILTIN_VERSION.openssl=	0.9.6m
 .    endif
-.  elif !empty(BUILTIN_VERSION.openssl:M0\.9\.7d) && exists(${H_OPENSSL})
+.  elif !empty(BUILTIN_VERSION.openssl:M0\.9\.7d) && \
+        empty(H_OPENSSL:M__nonexistent__)
 #
 # If the native OpenSSL contains the security fixes pulled up to the
 # netbsd-2-0, netbsd-2, and netbsd-3-0 branches on 2005-10-11, then

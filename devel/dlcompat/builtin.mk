@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2005/06/01 20:35:41 jlam Exp $
+# $NetBSD: builtin.mk,v 1.8 2006/03/30 18:06:17 jlam Exp $
 
 BUILTIN_PKG:=	dlcompat
 
@@ -14,7 +14,7 @@ BUILTIN_FIND_FILES.H_DLFCN=	/usr/include/dlfcn.h
 ###
 .if !defined(IS_BUILTIN.dlcompat)
 IS_BUILTIN.dlcompat=	no
-.  if empty(H_DLFCN:M${LOCALBASE}/*) && exists(${H_DLFCN}) && \
+.  if empty(H_DLFCN:M__nonexistent__) && empty(H_DLFCN:M${LOCALBASE}/*) && \
       !empty(BUILTIN_LIB_FOUND.dl:M[yY][eE][sS])
 IS_BUILTIN.dlcompat=	yes
 .  endif
