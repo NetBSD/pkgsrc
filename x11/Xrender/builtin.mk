@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.15 2005/10/09 21:30:55 jmmv Exp $
+# $NetBSD: builtin.mk,v 1.16 2006/03/30 18:06:19 jlam Exp $
 
 BUILTIN_PKG:=	Xrender
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.H_XRENDER=	${X11BASE}/include/X11/extensions/Xrender.h
 ###
 .if !defined(IS_BUILTIN.Xrender)
 IS_BUILTIN.Xrender=	no
-.  if exists(${H_XRENDER})
+.  if empty(H_XRENDER:M__nonexistent__)
 BUILTIN_IMAKE_CHECK:=	Xrender:BuildRenderLibrary
 .    include "../../mk/buildlink3/imake-check.mk"
 IS_BUILTIN.Xrender=	${BUILTIN_IMAKE_CHECK.Xrender}
@@ -27,7 +27,7 @@ MAKEVARS+=	IS_BUILTIN.Xrender
 ###
 .if !defined(BUILTIN_PKG.Xrender) && \
     !empty(IS_BUILTIN.Xrender:M[yY][eE][sS]) && \
-    exists(${H_XRENDER})
+    empty(H_XRENDER:M__nonexistent__)
 #
 # Xrender doesn't provide a method of discovering the version number of
 # the software.  Match up Xrender versions with X11 versions for an

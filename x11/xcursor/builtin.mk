@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2005/12/04 01:46:45 rxg Exp $
+# $NetBSD: builtin.mk,v 1.11 2006/03/30 18:06:19 jlam Exp $
 
 BUILTIN_PKG:=	xcursor
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.H_XCURSOR=	${X11BASE}/include/X11/Xcursor/Xcursor.h
 ###
 .if !defined(IS_BUILTIN.xcursor)
 IS_BUILTIN.xcursor=	no
-.  if exists(${H_XCURSOR})
+.  if empty(H_XCURSOR:M__nonexistent__)
 BUILTIN_IMAKE_CHECK:=	xcursor:BuildXcursorLibrary
 .    include "../../mk/buildlink3/imake-check.mk"
 IS_BUILTIN.xcursor=	${BUILTIN_IMAKE_CHECK.xcursor}
@@ -27,7 +27,7 @@ MAKEVARS+=	IS_BUILTIN.xcursor
 ###
 .if !defined(BUILTIN_PKG.xcursor) && \
     !empty(IS_BUILTIN.xcursor:M[yY][eE][sS]) && \
-    exists(${H_XCURSOR})
+    empty(H_XCURSOR:M__nonexistent__)
 BUILTIN_VERSION.xcursor!=						\
 	${AWK} '/\#define[ 	]*XCURSOR_(LIB_)?MAJOR/ { M = $$3 }	\
 		/\#define[ 	]*XCURSOR_(LIB_)?MINOR/ { m = "."$$3 }	\

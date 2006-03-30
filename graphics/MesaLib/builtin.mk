@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2006/01/19 12:53:17 adam Exp $
+# $NetBSD: builtin.mk,v 1.13 2006/03/30 18:06:17 jlam Exp $
 
 BUILTIN_PKG:=	MesaLib
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.H_MESALIB=	${X11BASE}/include/GL/glx.h
 ###
 .if !defined(IS_BUILTIN.MesaLib)
 IS_BUILTIN.MesaLib=	no
-.  if exists(${H_MESALIB})
+.  if empty(H_MESALIB:M__nonexistent__)
 BUILTIN_IMAKE_CHECK:=	MesaLib:BuildGLXLibrary
 .    include "../../mk/buildlink3/imake-check.mk"
 IS_BUILTIN.MesaLib=	${BUILTIN_IMAKE_CHECK.MesaLib}
@@ -27,7 +27,7 @@ MAKEVARS+=	IS_BUILTIN.MesaLib
 ###
 .if !defined(BUILTIN_PKG.MesaLib) && \
     !empty(IS_BUILTIN.MesaLib:M[yY][eE][sS]) && \
-    exists(${H_MESALIB})
+    empty(H_MESALIB:M__nonexistent__)
 .  include "../../graphics/Mesa/version.mk"
 BUILTIN_PKG.MesaLib=	MesaLib-${BUILTIN_VERSION.Mesa}
 .endif
