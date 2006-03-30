@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2006/02/05 23:10:09 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/03/30 21:14:32 jmmv Exp $
 #
 
-DISTNAME=	gnome2-dirs-1.5
-PKGREVISION=	2
+DISTNAME=	gnome2-dirs-1.6
 CATEGORIES=	misc gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -22,7 +21,7 @@ NO_BUILD=	yes
 .include "../../mk/bsd.prefs.mk"
 
 .if ${X11PREFIX} == ${LOCALBASE}
-DEPENDS+=	gnome-dirs>=1.0:../../misc/gnome-dirs
+DEPENDS+=	gnome-dirs>=1.6:../../misc/gnome-dirs
 ALL_GNOME_DIRS=	${GNOME2_DIRS}
 .else
 ALL_GNOME_DIRS=	${GNOME_DIRS} ${GNOME2_DIRS}
