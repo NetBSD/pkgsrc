@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13372 2006/03/30 03:25:47 markd Exp $
+$NetBSD: CHANGES,v 1.13373 2006/03/30 04:13:26 tv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1690,3 +1690,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/kdevelop-base to 3.3.2 [markd 2006-03-30]
 	Updated devel/kdevelop to 3.3.2 [markd 2006-03-30]
 	Updated graphics/digikam to 0.8.1nb2 [markd 2006-03-30]
+	Updated mail/p5-Mail-Milter to 0.07 [tv 2006-03-30]
