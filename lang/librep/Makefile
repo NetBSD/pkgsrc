@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/03/05 16:27:26 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2006/03/30 03:44:43 jlam Exp $
 #
 
 DISTNAME=		librep-0.17
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--enable-static
 
 CONFIG_STATUS_OVERRIDE=	# empty
 
-INFO_FILES=	librep.info
+INFO_FILES=	# PLIST
 
 post-install:
 	${RM} -f ${REP_LIBTOOL}

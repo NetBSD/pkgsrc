@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2006/03/14 01:14:34 jlam Exp $
+# $NetBSD: Makefile,v 1.116 2006/03/30 03:44:44 jlam Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=		9
@@ -24,14 +24,13 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	gdk.pc.in
 PKGCONFIG_OVERRIDE+=	gtk+.pc.in
+INFO_FILES=		# PLIST
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-xinput=xfree \
 			--with-native-locale=yes \
 			--sysconfdir=${PREFIX}/share
 CONFIGURE_ENV+=		X_LDFLAGS=${X_LDFLAGS:Q}
-
-INFO_FILES=		gdk.info gtk.info
 
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE:Q}

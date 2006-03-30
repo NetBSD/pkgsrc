@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2006/02/17 07:30:13 martti Exp $
+# $NetBSD: Makefile,v 1.71 2006/03/30 03:44:42 jlam Exp $
 #
 
 DISTNAME=	ddd-3.3.11
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.gnu.org/software/ddd/
 COMMENT=	Data Display Debugger -- graphical front-end for GDB/DBX/XDB
 
 GNU_CONFIGURE=		YES
-INFO_FILES=		ddd-themes.info ddd.info
+INFO_FILES=		# PLIST
 TEST_TARGET=		check
 USE_TOOLS+=		gmake gzip
 USE_LANGUAGES=		c c++

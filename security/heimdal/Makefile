@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2006/02/07 12:20:52 lha Exp $
+# $NetBSD: Makefile,v 1.55 2006/03/30 03:44:43 jlam Exp $
 
 DISTNAME=	heimdal-0.7.2
 CATEGORIES=	security
@@ -93,7 +93,7 @@ CONFIGURE_ARGS+=	--program-transform-name=${HEIMDAL_TRANSFORM:Q}
 OWN_DIRS_PERMS=		${HEIMDAL_STATEDIR} ${ROOT_USER} ${ROOT_GROUP} 0700
 SPECIAL_PERMS=		${PREFIX}/bin/${KRB5_PREFIX}su ${SETUID_ROOT_PERMS}
 RCD_SCRIPTS=		kadmind kcm kdc kpasswdd
-INFO_FILES=		heimdal.info
+INFO_FILES=		# PLIST
 
 # Fix some places in the Heimdal sources that don't point to the correct
 # Kerberized binaries when exec'ing programs.
