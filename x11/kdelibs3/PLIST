@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2006/03/14 19:45:14 minskim Exp $
+@comment $NetBSD: PLIST,v 1.33 2006/03/30 02:36:26 markd Exp $
 bin/artsmessage
 bin/checkXML
 ${CUPS}bin/cupsdconf
@@ -1060,6 +1060,7 @@ share/kde/apps/katepart/syntax/purebasic.xml
 share/kde/apps/katepart/syntax/python.xml
 share/kde/apps/katepart/syntax/r.xml
 share/kde/apps/katepart/syntax/rexx.xml
+share/kde/apps/katepart/syntax/rhtml.xml
 share/kde/apps/katepart/syntax/rib.xml
 share/kde/apps/katepart/syntax/rpmspec.xml
 share/kde/apps/katepart/syntax/rsiidl.xml
@@ -1501,6 +1502,7 @@ share/kde/apps/ksgmltools2/customization/et/entities/underArtisticLicense.docboo
 share/kde/apps/ksgmltools2/customization/et/entities/underBSDLicense.docbook
 share/kde/apps/ksgmltools2/customization/et/entities/underFDL.docbook
 share/kde/apps/ksgmltools2/customization/et/entities/underGPL.docbook
+share/kde/apps/ksgmltools2/customization/et/entities/underLGPL.docbook
 share/kde/apps/ksgmltools2/customization/et/entities/underX11License.docbook
 share/kde/apps/ksgmltools2/customization/et/entities/update-doc.docbook
 share/kde/apps/ksgmltools2/customization/et/lang.entities
@@ -2827,6 +2829,7 @@ share/kde/emoticons/Default/unhappy.png
 share/kde/emoticons/Default/unlove.png
 share/kde/emoticons/Default/wilted_rose.png
 share/kde/emoticons/Default/wink.png
+share/kde/icons/crystalsvg/128x128/actions/fileopen.png
 share/kde/icons/crystalsvg/128x128/actions/launch.png
 share/kde/icons/crystalsvg/128x128/actions/share.png
 share/kde/icons/crystalsvg/128x128/apps/kmenu.png
@@ -4352,6 +4355,7 @@ share/kde/icons/crystalsvg/48x48/mimetypes/widget_doc.png
 share/kde/icons/crystalsvg/48x48/mimetypes/wordprocessing.png
 share/kde/icons/crystalsvg/48x48/mimetypes/zip.png
 share/kde/icons/crystalsvg/64x64/actions/favorites.png
+share/kde/icons/crystalsvg/64x64/actions/fileopen.png
 share/kde/icons/crystalsvg/64x64/actions/knewstuff.png
 share/kde/icons/crystalsvg/64x64/actions/player_play.png
 share/kde/icons/crystalsvg/64x64/actions/share.png
@@ -4543,6 +4547,7 @@ share/kde/icons/crystalsvg/scalable/actions/eraser.svgz
 share/kde/icons/crystalsvg/scalable/actions/exit.svgz
 share/kde/icons/crystalsvg/scalable/actions/fileclose.svgz
 share/kde/icons/crystalsvg/scalable/actions/filenew.svgz
+share/kde/icons/crystalsvg/scalable/actions/fileopen.svgz
 share/kde/icons/crystalsvg/scalable/actions/fileprint.svgz
 share/kde/icons/crystalsvg/scalable/actions/filequickprint.svgz
 share/kde/icons/crystalsvg/scalable/actions/finish.svgz
@@ -5005,6 +5010,7 @@ share/kde/mimelnk/image/x-photo-cd.desktop
 share/kde/mimelnk/image/x-portable-bitmap.desktop
 share/kde/mimelnk/image/x-portable-greymap.desktop
 share/kde/mimelnk/image/x-portable-pixmap.desktop
+share/kde/mimelnk/image/x-raw.desktop
 share/kde/mimelnk/image/x-rgb.desktop
 share/kde/mimelnk/image/x-targa.desktop
 share/kde/mimelnk/image/x-vnd.adobe.photoshop.desktop
