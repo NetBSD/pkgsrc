@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2006/02/24 21:54:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.41 2006/03/30 02:39:39 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -144,6 +144,7 @@ include/kwin/workspace.h
 include/libkonq_export.h
 lib/kconf_update_bin/khotkeys_update
 lib/kconf_update_bin/kicker-3.4-reverseLayout
+lib/kconf_update_bin/kwin_update_default_rules
 lib/kconf_update_bin/kwin_update_window_settings
 lib/kde3/appletproxy.la
 lib/kde3/clock_panelapplet.la
@@ -1110,6 +1111,9 @@ share/doc/kde/HTML/en/kwrite/index.docbook
 share/doc/kde/HTML/en/kxkb/common
 share/doc/kde/HTML/en/kxkb/index.cache.bz2
 share/doc/kde/HTML/en/kxkb/index.docbook
+share/doc/kde/HTML/en/kxkb/layout.png
+share/doc/kde/HTML/en/kxkb/switching.png
+share/doc/kde/HTML/en/kxkb/xkb.png
 share/examples/kdebase3/applications-merged/kde-essential.menu
 share/examples/kdebase3/kde-information.menu
 share/examples/kdebase3/kde-screensavers.menu
@@ -1449,6 +1453,7 @@ share/kde/apps/kconf_update/kwin_focus1.sh
 share/kde/apps/kconf_update/kwin_focus1.upd
 share/kde/apps/kconf_update/kwin_focus2.sh
 share/kde/apps/kconf_update/kwin_focus2.upd
+share/kde/apps/kconf_update/kwin_fsp_workarounds_1.upd
 share/kde/apps/kconf_update/kwiniconify.upd
 share/kde/apps/kconf_update/kwinsticky.upd
 share/kde/apps/kconf_update/kwinupdatewindowsettings.upd
@@ -2147,6 +2152,7 @@ share/kde/apps/kthememanager/themes/YellowOnBlue-big/YellowOnBlue-big.xml
 share/kde/apps/kthememanager/themes/YellowOnBlue/YellowOnBlue.preview.png
 share/kde/apps/kthememanager/themes/YellowOnBlue/YellowOnBlue.xml
 share/kde/apps/kwin/b2.desktop
+share/kde/apps/kwin/default_rules/fsp_workarounds_1
 share/kde/apps/kwin/eventsrc
 share/kde/apps/kwin/keramik.desktop
 share/kde/apps/kwin/laptop.desktop
@@ -4248,6 +4254,7 @@ ${PKGLOCALEDIR}/locale/l10n/zw/flag.png
 @dirrm share/kde/apps/naughtyapplet
 @dirrm share/kde/apps/kwrite
 @dirrm share/kde/apps/kwin/pics
+@dirrm share/kde/apps/kwin/default_rules
 @comment in kde: @dirrm share/kde/apps/kwin
 @dirrm share/kde/apps/kthememanager/themes/YellowOnBlue-big
 @dirrm share/kde/apps/kthememanager/themes/YellowOnBlue
