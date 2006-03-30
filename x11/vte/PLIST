@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/02/15 18:03:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/03/30 21:18:06 jmmv Exp $
 bin/vte
 include/vte/pty.h
 include/vte/reaper.h
@@ -63,6 +63,7 @@ ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/ka/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/ky/LC_MESSAGES/vte.mo
@@ -102,6 +103,7 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/vte.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/vte.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/vte.mo
 share/vte/termcap/xterm
 @dirrm share/vte/termcap
