@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13376 2006/03/30 12:57:21 salo Exp $
+$NetBSD: CHANGES,v 1.13377 2006/03/30 13:39:39 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1694,3 +1694,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/ImageMagick to 6.2.6.6 [ghen 2006-03-30]
 	Updated mail/postgrey to 1.2.4 [is 2006-03-30]
 	Updated www/p5-CGI-Session to 4.09 [salo 2006-03-30]
+	Updated security/john to 1.7.0.2 [salo 2006-03-30]
