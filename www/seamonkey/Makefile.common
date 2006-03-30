@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2006/03/30 19:15:38 ghen Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/03/30 19:19:32 ghen Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		seamonkey-${MOZ_DIST_VER}.source
@@ -21,7 +21,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		autoconf213 gmake perl pkg-config
 GNU_CONFIGURE=		yes
 
-INSTALL_TEMPLATE+=	${.CURDIR}/../../wip/seamonkey/INSTALL
+INSTALL_TEMPLATE+=	${.CURDIR}/../../www/seamonkey/INSTALL
 
 CONFIG_GUESS_OVERRIDE=	build/autoconf/config.guess
 CONFIG_GUESS_OVERRIDE+=	nsprpub/build/autoconf/config.guess
@@ -204,4 +204,4 @@ SUBST_SED.pc=		-e 's|%includedir%|${PREFIX}/include/${MOZILLA}|g'
 SUBST_SED.pc+=		-e 's|%libdir%|${PREFIX}/lib/${MOZILLA}|g'
 SUBST_MESSAGE.pc=	Fixing pkgconfig files.
 
-.include "../../wip/seamonkey/options.mk"
+.include "../../www/seamonkey/options.mk"
