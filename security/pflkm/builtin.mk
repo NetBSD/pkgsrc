@@ -1,10 +1,11 @@
-# $NetBSD: builtin.mk,v 1.7 2005/12/07 12:06:26 peter Exp $
+# $NetBSD: builtin.mk,v 1.8 2006/03/30 16:58:16 jlam Exp $
 
 BUILTIN_PKG:=	pflkm
 
-BUILTIN_FIND_FILES_VAR:=	H_PFLKM
+BUILTIN_FIND_FILES_VAR:=	H_PFLKM EXE_PFCTL
 BUILTIN_FIND_FILES.H_PFLKM=	/usr/include/net/pfvar.h
 BUILTIN_FIND_FILES.H_PFLKM+=	/usr/include/net/pf/pfvar.h
+BUILTIN_FIND_FILES.EXE_PFCTL+=	/sbin/pfctl
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -92,3 +93,18 @@ USE_BUILTIN.pflkm!=							\
 .  endif  # PREFER.pflkm
 .endif
 MAKEVARS+=	USE_BUILTIN.pflkm
+
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
+CHECK_BUILTIN.pflkm?= no
+.if !empty(CHECK_BUILTIN.pflkm:M[nN][oO])
+
+.  if !empty(USE_BUILTIN.pflkm:M[nN][oO])
+PFCTL?=   	${BUILDLINK_PREFIX.pflkm}/bin/pfctl
+.  else
+PFCTL?=   	${EXE_PFCTL}
+.  endif
+
+.endif  # CHECK_BUILTIN.pflkm
