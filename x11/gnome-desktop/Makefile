@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2006/03/21 06:00:52 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2006/03/30 21:47:15 jmmv Exp $
 #
 
-DISTNAME=		gnome-desktop-2.12.3
-PKGREVISION=		2
+DISTNAME=		gnome-desktop-2.14.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.12/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.14/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -19,7 +18,14 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake perl:run pkg-config
 USE_LIBTOOL=		yes
 
+CONFIGURE_ARGS+=	--with-gnome-distributor="The NetBSD Foundation"
+
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.8.0
+
+post-install:
+.for f in netbsd-logo-icon.png netbsd-logo-icon-transparent.png
+	${INSTALL_DATA} ${FILESDIR}/${f} ${PREFIX}/share/pixmaps/${f}
+.endfor
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
