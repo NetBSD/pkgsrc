@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/10/16 12:13:18 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/03/30 21:33:13 jmmv Exp $
 bin/gnome-system-monitor
 share/applications/gnome-system-monitor.desktop
 share/gconf/schemas/gnome-system-monitor.schemas
@@ -17,6 +17,21 @@ share/gnome/help/gnome-system-monitor/C/figures/systemMonitor.png
 share/gnome/help/gnome-system-monitor/C/figures/viewMenu.png
 share/gnome/help/gnome-system-monitor/C/gnome-system-monitor.xml
 share/gnome/help/gnome-system-monitor/C/legal.xml
+share/gnome/help/gnome-system-monitor/bg/figures/addColumn.png
+share/gnome/help/gnome-system-monitor/bg/figures/changePriority.png
+share/gnome/help/gnome-system-monitor/bg/figures/colorPanel.png
+share/gnome/help/gnome-system-monitor/bg/figures/columnContextMenu.png
+share/gnome/help/gnome-system-monitor/bg/figures/gnome-system-monitor_window.png
+share/gnome/help/gnome-system-monitor/bg/figures/memoryMaps.png
+share/gnome/help/gnome-system-monitor/bg/figures/moreInfo.png
+share/gnome/help/gnome-system-monitor/bg/figures/processListing.png
+share/gnome/help/gnome-system-monitor/bg/figures/sortButton.png
+share/gnome/help/gnome-system-monitor/bg/figures/sortMenu.png
+share/gnome/help/gnome-system-monitor/bg/figures/sortMenu2.png
+share/gnome/help/gnome-system-monitor/bg/figures/systemMonitor.png
+share/gnome/help/gnome-system-monitor/bg/figures/viewMenu.png
+share/gnome/help/gnome-system-monitor/bg/gnome-system-monitor.xml
+share/gnome/help/gnome-system-monitor/bg/legal.xml
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gnome-system-monitor.mo
@@ -80,10 +95,14 @@ ${PKGLOCALEDIR}/locale/ug/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-system-monitor.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/gnome-system-monitor.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-system-monitor.mo
 share/omf/gnome-system-monitor/gnome-system-monitor-C.omf
+share/omf/gnome-system-monitor/gnome-system-monitor-bg.omf
 @dirrm share/omf/gnome-system-monitor
 @comment in scrollkeeper: @dirrm share/omf
+@dirrm share/gnome/help/gnome-system-monitor/bg/figures
+@dirrm share/gnome/help/gnome-system-monitor/bg
 @dirrm share/gnome/help/gnome-system-monitor/C/figures
 @dirrm share/gnome/help/gnome-system-monitor/C
 @dirrm share/gnome/help/gnome-system-monitor
