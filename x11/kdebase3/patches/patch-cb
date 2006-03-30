@@ -1,6 +1,6 @@
-$NetBSD: patch-cb,v 1.4 2005/12/17 19:36:27 markd Exp $
+$NetBSD: patch-cb,v 1.5 2006/03/30 02:39:39 markd Exp $
 
---- khelpcenter/searchhandlers/khc_docbookdig.pl.in.orig	2005-10-11 04:03:56.000000000 +1300
+--- khelpcenter/searchhandlers/khc_docbookdig.pl.in.orig	2006-03-17 23:17:24.000000000 +1300
 +++ khelpcenter/searchhandlers/khc_docbookdig.pl.in
 @@ -26,8 +26,8 @@ use strict;
  
@@ -13,16 +13,16 @@ $NetBSD: patch-cb,v 1.4 2005/12/17 19:36:27 markd Exp $
  my $kdeprefix = "@prefix@";
  chomp $kdeprefix;
  
-@@ -85,7 +85,7 @@ if ( !open( START, ">$startfile" ) ) {
-   exit 1;
- }
+@@ -89,7 +89,7 @@ $ENV{ PATH } = '/bin:/usr/bin';
+ $ENV{ CDPATH } = '';
+ $ENV{ ENV } = '';
  
--my $findcmd = "find $kdeprefix/share/doc/HTML/$lang/ -name index.docbook";
-+my $findcmd = "find $kdeprefix/share/doc/kde/HTML/$lang/ -name index.docbook";
+-my $findpath = "$kdeprefix/share/doc/HTML/$lang/";
++my $findpath = "$kdeprefix/share/doc/kde/HTML/$lang/";
+ my $findcmd = "find $findpath -name index.docbook";
  
  print STDERR "FINDCMD: $findcmd\n";
- 
-@@ -121,21 +121,24 @@ if ( !open( PARSER, ">$parserfile" ) ) {
+@@ -126,21 +126,24 @@ if ( !open( PARSER, ">$parserfile" ) ) {
  print PARSER << "EOT";
  #! /bin/sh
  
@@ -35,15 +35,15 @@ $NetBSD: patch-cb,v 1.4 2005/12/17 19:36:27 markd Exp $
  shift
  
  if test "\$#" -gt 0; then
--  orig=\${1/file:\/\//}
+-  orig=\${1/file:\\//}
 +  orig=`echo \$1 | sed -e 's=file:=/='`
    shift
  fi
  
  case "\$orig" in
    help:/*)
--	orig=\${orig/help:\//}
--	orig=\${orig/\/index.docbook//}
+-	orig=\${orig/help:\\//}
+-	orig=\${orig/\/index.docbook/}
 -	cd $kdeprefix/share/doc/HTML/en/\$orig
 +	orig=\${orig#help:}
 +	orig=\${orig\%/index.docbook}
@@ -51,7 +51,7 @@ $NetBSD: patch-cb,v 1.4 2005/12/17 19:36:27 markd Exp $
  	file=index.docbook
  	;;
    *)	
-@@ -162,14 +165,14 @@ common_dir:		$commondir
+@@ -167,14 +170,14 @@ common_dir:		$commondir
  locale:                 $locale
  database_dir:           $htdigdb
  database_base:		\${database_dir}/$identifier
