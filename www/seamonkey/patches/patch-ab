@@ -1,0 +1,54 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/03/30 19:15:47 ghen Exp $
+
+--- configure.in.orig	2006-01-10 04:11:42.000000000 +0100
++++ configure.in
+@@ -1349,7 +1349,6 @@ case "$target" in
+     DSO_LDOPTS=''
+     STRIP="$STRIP -x -S"
+     _PLATFORM_DEFAULT_TOOLKIT='mac'
+-    MOZ_ENABLE_POSTSCRIPT=
+     # set MACOSX to generate lib/mac/MoreFiles/Makefile
+     MACOSX=1
+ 
+@@ -1390,6 +1389,9 @@ case "$target" in
+ #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
+ #	MKSHLIB_UNFORCE_ALL=''
+ #    fi
++    if test "$LIBRUNPATH"; then
++	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
++    fi
+     ;; 
+ 
+ *-hpux*)
+@@ -1784,6 +1786,13 @@ case "$target" in
+     if test "$LIBRUNPATH"; then
+ 	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
+     fi
++
++    case "${target_cpu}" in
++    alpha*)
++    	CFLAGS="$CFLAGS -mieee"
++    	CXXFLAGS="$CXXFLAGS -mieee"
++    ;;
++    esac
+     ;;
+ 
+ *-nto*) 
+@@ -2009,7 +2018,7 @@ dnl the qsort routine under solaris is f
+        MKCSHLIB='$(CC) $(CFLAGS) $(DSO_PIC_FLAGS) -G -Wl,-z -Wl,muldefs -o $@'
+        MKSHLIB_FORCE_ALL='-Qoption ld -z,allextract'
+        MKSHLIB_UNFORCE_ALL=''
+-       DSO_LDOPTS='-G -Qoption ld -z,muldefs -h $@'
++       DSO_LDOPTS='-G -z muldefs -h $@'
+        AR_LIST="$AR t"
+        AR_EXTRACT="$AR x"
+        AR_DELETE="$AR d"
+@@ -5237,7 +5246,7 @@ dnl ====================================
+ dnl = Enable code optimization. ON by default.
+ dnl ========================================================
+ if test -z "$MOZ_OPTIMIZE_FLAGS"; then
+-	MOZ_OPTIMIZE_FLAGS="-O"
++	MOZ_OPTIMIZE_FLAGS=""
+ fi
+ 
+ MOZ_ARG_ENABLE_STRING(optimize,
