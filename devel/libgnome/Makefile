@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2006/03/21 06:00:44 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2006/03/30 21:08:18 jmmv Exp $
 #
 
-DISTNAME=	libgnome-2.12.0.1
-PKGREVISION=	5
+DISTNAME=	libgnome-2.14.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.12/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.14/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -52,6 +51,8 @@ GCONF2_SCHEMAS+=	desktop_gnome_peripherals_mouse.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_sound.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_thumbnailers.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_typing_break.schemas
+
+BUILDLINK_DEPENDS.libbonobo+=	libbonobo>=2.13.0
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../audio/libaudiofile/buildlink3.mk"
