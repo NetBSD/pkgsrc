@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/02/05 23:09:44 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2006/03/30 03:44:43 jlam Exp $
 #
 
 DISTNAME=	gawk-3.1.5
@@ -18,8 +18,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 TEST_TARGET=		check
-
-INFO_FILES=	gawk.info gawkinet.info
+INFO_FILES=		# PLIST
 
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 

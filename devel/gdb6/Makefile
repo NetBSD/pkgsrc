@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/14 00:47:50 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/03/30 03:44:42 jlam Exp $
 #
 
 DISTNAME=		gdb-6.2.1
@@ -23,10 +23,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/gdb6
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/gdb6
 CONFIGURE_ARGS+=	--enable-libada
-
-INFO_FILES=		annotate.info bfd.info configure.info
-INFO_FILES+=		gdb.info gdbint.info mmalloc.info
-INFO_FILES+=		stabs.info standards.info
+INFO_FILES=		# PLIST
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/20 14:04:45 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/03/30 03:44:42 jlam Exp $
 
 DISTNAME=		gettext-0.14.5
 PKGNAME=		gettext-tools-0.14.5
@@ -17,8 +17,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	libtool
 CONFIGURE_ARGS+=	--without-included-gettext
-
-INFO_FILES=		gettext.info
+INFO_FILES=		# PLIST
 
 BROKEN_GETTEXT_DETECTION=	yes
 USE_BUILTIN.gettext=	no # force use of pkgsrc gettext-lib

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/03/05 16:27:24 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2006/03/30 03:44:42 jlam Exp $
 
 DISTNAME=	binutils-2.16.1
 CATEGORIES=	devel
@@ -27,7 +27,7 @@ PLIST_SRC=	${PKGDIR}/PLIST.common
 PLIST_SRC+=	${WRKDIR}/PLIST_DYNAMIC
 PLIST_SRC+=	${PKGDIR}/PLIST.common_end
 
-INFO_FILES=	as.info bfd.info binutils.info ld.info
+INFO_FILES=	# PLIST
 
 # gprof (XXX: and others?) cannot be built on all platforms
 #
@@ -36,7 +36,6 @@ INFO_FILES=	as.info bfd.info binutils.info ld.info
 PLIST_SUBST+=	NO_GPROF="@comment "
 .else
 PLIST_SUBST+=	NO_GPROF=""
-INFO_FILES+=	gprof.info
 .endif
 
 # Prevent the need to run texi2pod.pl and pod2man hence

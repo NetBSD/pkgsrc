@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.9 2004/09/24 19:25:38 abs Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/03/30 03:44:43 jlam Exp $
 bin/gctags
 bin/global
 bin/gozilla
 bin/gtags
 bin/htags
 bin/htags.pl
+info/global.info
 man/man1/gctags.1
 man/man1/global.1
 man/man1/gozilla.1

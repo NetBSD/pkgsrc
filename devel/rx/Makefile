@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/03/04 21:29:29 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/03/30 03:44:43 jlam Exp $
 
 DISTNAME=	rx-1.5
 PKGREVISION=	1
@@ -12,8 +12,7 @@ COMMENT=	Fast replacement for the GNU regex library
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-
-INFO_FILES=	rx.info
+INFO_FILES=	# PLIST
 
 # When the API changes and breaks binary-compatibility with the previous
 # version, increment the MAJOR by 1 and reset the MINOR to 0.  Otherwise,
@@ -23,7 +22,12 @@ RX_MAJOR=	0
 RX_MINOR=	0
 MAKE_ENV+=	RX_MAJOR=${RX_MAJOR:Q} RX_MINOR=${RX_MINOR:Q}
 
+INSTALLATION_DIRS=	${PKGINFODIR}
+
 post-install:
-	cd ${WRKSRC}/doc; ${INSTALL_DATA} ${INFO_FILES} ${PREFIX}/info
+	cd ${WRKSRC}/doc; for f in rx.info rx.info-[0-9]*; do		\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
+	done
 
 .include "../../mk/bsd.pkg.mk"

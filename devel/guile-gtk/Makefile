@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/03/05 16:27:24 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/03/30 03:44:43 jlam Exp $
 #
 
 DISTNAME=		guile-gtk-0.40.91
@@ -15,8 +15,7 @@ USE_TOOLS+=		makeinfo
 
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
-
-INFO_FILES=		guile-gtk.info
+INFO_FILES=		# PLIST
 
 # Skip glade, because it pulls in gnome-libs.
 # Later, make a new package for just the glade parts,

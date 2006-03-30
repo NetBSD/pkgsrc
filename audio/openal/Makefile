@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/03/17 22:39:02 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/03/30 03:44:41 jlam Exp $
 
 DISTNAME=	openal-20040816
 PKGREVISION=	1
@@ -16,11 +16,11 @@ USE_TOOLS+=		gmake makeinfo
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-INFO_FILES=		openal.info
-INSTALLATION_DIRS=	info
+INFO_FILES=		# PLIST
+INSTALLATION_DIRS=	${PKGINFODIR}
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/openal.info ${PREFIX}/info
+	${INSTALL_DATA} ${WRKSRC}/doc/openal.info ${PREFIX}/${PKGINFODIR}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

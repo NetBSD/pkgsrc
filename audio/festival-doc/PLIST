@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/21 23:02:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/03/30 03:44:41 jlam Exp $
+info/festival.info
 share/doc/festival/festival.dvi
 share/doc/festival/festival.ps
 share/doc/festival/refcard.dvi

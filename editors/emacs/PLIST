@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/05/09 05:23:40 minskim Exp $
+@comment $NetBSD: PLIST,v 1.11 2005/05/09 05:23:40 minskim Exp
 bin/emacs
 bin/emacs-${EMACSVERSION}
 bin/emacs-b2m
@@ -20,6 +20,31 @@ libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/rcs2log
 libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/sorted-doc
 libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/vcdiff
 libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/yow
+info/ada-mode
+info/autotype
+info/ccmode
+info/cl
+info/dired-x
+info/ebrowse
+info/ediff
+info/efaq
+info/emacs
+info/emacs-mime
+info/eshell
+info/eudc
+info/forms
+info/gnus
+info/idlwave
+info/message
+info/mh-e
+info/pcl-cvs
+info/reftex
+info/sc
+info/speedbar
+info/vip
+info/viper
+info/widget
+info/woman
 man/man1/emacs-ctags.1
 man/man1/emacs-etags.1
 man/man1/emacs-gfdl.1

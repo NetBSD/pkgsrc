@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/04 21:30:51 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/03/30 03:44:44 jlam Exp $
 
 DISTNAME=	texi2html-1.76
 CATEGORIES=	textproc
@@ -15,7 +15,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=		perl:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-
-INFO_FILES=		texi2html.info
+INFO_FILES=		# PLIST
 
 .include "../../mk/bsd.pkg.mk"

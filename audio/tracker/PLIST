@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2004/01/02 18:06:57 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/03/30 03:44:41 jlam Exp $
 bin/tracker
 bin/randomize
+info/tracker.info
 share/doc/tracker/Html/Aix.html
 share/doc/tracker/Html/Introduction.html
 share/doc/tracker/Html/Availability.html

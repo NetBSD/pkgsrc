@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/03/04 21:29:15 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/03/30 03:44:43 jlam Exp $
 #
 
 DISTNAME=	global-4.8
@@ -12,7 +12,7 @@ COMMENT=	Source code tag system including web browser output
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		perl:run
-INFO_FILES=		global.info
+INFO_FILES=		# PLIST
 
 LDFLAGS+=	-L../libutil
 MAKE_ENV+=      LIBDIR="${PREFIX}/lib"

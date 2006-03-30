@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/03/17 08:06:51 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2006/03/30 03:44:41 jlam Exp $
 
 DISTNAME=		tracker-5.3
 PKGREVISION=		1
@@ -27,9 +27,9 @@ EGDIR=		${PREFIX}/share/examples/tracker
 CONF_FILES=	${EGDIR}/compression_methods ${PKG_SYSCONFDIR}/compression_methods
 
 USE_TOOLS+=	makeinfo
-INFO_FILES=	tracker.info
+INFO_FILES=	# PLIST
 
-INSTALLATION_DIRS=	bin info ${EGDIR}
+INSTALLATION_DIRS=	bin ${PKGINFODIR} ${EGDIR}
 
 .include "../../mk/oss.buildlink3.mk"
 
@@ -41,6 +41,6 @@ post-build:
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tracker
 	${CP} -R ${WRKSRC}/Docs/* ${PREFIX}/share/doc/tracker
-	${INSTALL_DATA} ${WRKDIR}/tracker.info* ${PREFIX}/info
+	${INSTALL_DATA} ${WRKDIR}/tracker.info* ${PREFIX}/${PKGINFODIR}
 
 .include "../../mk/bsd.pkg.mk"
