@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.60 2006/03/21 06:00:52 jlam Exp $
+# $NetBSD: Makefile,v 1.61 2006/03/30 21:16:53 jmmv Exp $
 #
 
-DISTNAME=		gnome-applets-2.12.2
-PKGREVISION=		4
+DISTNAME=		gnome-applets-2.14.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.12/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.14/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -28,6 +27,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 PKGCONFIG_OVERRIDE+=	libgswitchit/gswitchit.pc.in
+PKGCONFIG_OVERRIDE+=	libgweather/gweather.pc.in
 
 EGDIR=			${PREFIX}/share/examples/gnome-applets
 
@@ -37,8 +37,6 @@ GCONF2_SCHEMAS+=	geyes.schemas
 GCONF2_SCHEMAS+=	gswitchit.schemas
 GCONF2_SCHEMAS+=	gtik.schemas
 GCONF2_SCHEMAS+=	gweather.schemas
-GCONF2_SCHEMAS+=	mini-commander-global.schemas
-GCONF2_SCHEMAS+=	mini-commander.schemas
 GCONF2_SCHEMAS+=	mixer.schemas
 GCONF2_SCHEMAS+=	multiload.schemas
 GCONF2_SCHEMAS+=	stickynotes.schemas
@@ -63,15 +61,13 @@ CONFIGURE_ARGS+=	--disable-battstat
 .endif
 
 PRINT_PLIST_AWK+=	/[Bb]attstat/ { print "$${BATTSTAT}"$$0; next; }
+PRINT_PLIST_AWK+=	/examples/ { print "$${BATTSTAT}"$$0; next; }
 
 .include "../../devel/GConf2/schemas.mk"
 
-# This must come after GConf2's schemas.mk because it will modify default
-# values for keys created during the registration of .schemas files.
-INSTALL_TEMPLATE+=	${PKGDIR}/INSTALL
-
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.4.0
+BUILDLINK_DEPENDS.gnome-panel+=	gnome-panel>=2.13.4
 
 .include "../../devel/gail/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -82,10 +78,11 @@ BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.4.0
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../fonts/gucharmap/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../multimedia/gstreamer0.8/buildlink3.mk"
-.include "../../multimedia/gst-plugins0.8/buildlink3.mk"
+.include "../../multimedia/gstreamer0.10/buildlink3.mk"
+.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/libgtop2/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
