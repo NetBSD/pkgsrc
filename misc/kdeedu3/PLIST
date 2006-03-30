@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/01/31 22:39:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/03/30 02:54:00 markd Exp $
 bin/apmount
 bin/blinken
 bin/celestrongps
@@ -203,6 +203,7 @@ share/doc/kde/HTML/en/klatin/adjectives.docbook
 share/doc/kde/HTML/en/klatin/common
 share/doc/kde/HTML/en/klatin/index.cache.bz2
 share/doc/kde/HTML/en/klatin/index.docbook
+share/doc/kde/HTML/en/klatin/klatin-configuration.png
 share/doc/kde/HTML/en/klatin/klatin1.png
 share/doc/kde/HTML/en/klatin/klatin2.png
 share/doc/kde/HTML/en/klatin/klatin3.png
@@ -221,8 +222,6 @@ share/doc/kde/HTML/en/klettres/klettres3.png
 share/doc/kde/HTML/en/klettres/klettres4.png
 share/doc/kde/HTML/en/klettres/klettres5.png
 share/doc/kde/HTML/en/klettres/klettres6.png
-share/doc/kde/HTML/en/kmplot/axesdlg.png
-share/doc/kde/HTML/en/kmplot/axesopt.png
 share/doc/kde/HTML/en/kmplot/commands.docbook
 share/doc/kde/HTML/en/kmplot/common
 share/doc/kde/HTML/en/kmplot/configuration.docbook
@@ -231,8 +230,6 @@ share/doc/kde/HTML/en/kmplot/dcop.docbook
 share/doc/kde/HTML/en/kmplot/developer.docbook
 share/doc/kde/HTML/en/kmplot/edu-logo.png
 share/doc/kde/HTML/en/kmplot/firststeps.docbook
-share/doc/kde/HTML/en/kmplot/functionsdlg.png
-share/doc/kde/HTML/en/kmplot/griddlg.png
 share/doc/kde/HTML/en/kmplot/index.cache.bz2
 share/doc/kde/HTML/en/kmplot/index.docbook
 share/doc/kde/HTML/en/kmplot/install.docbook
@@ -241,16 +238,14 @@ share/doc/kde/HTML/en/kmplot/kfkt.png
 share/doc/kde/HTML/en/kmplot/ksys1.png
 share/doc/kde/HTML/en/kmplot/ksys2.png
 share/doc/kde/HTML/en/kmplot/ksys3.png
-share/doc/kde/HTML/en/kmplot/lo32-app-kmplot.png
 share/doc/kde/HTML/en/kmplot/main.png
 share/doc/kde/HTML/en/kmplot/man-kmplot.1.docbook
-share/doc/kde/HTML/en/kmplot/namesdlg.png
 share/doc/kde/HTML/en/kmplot/reference.docbook
-share/doc/kde/HTML/en/kmplot/scaledlg.png
+share/doc/kde/HTML/en/kmplot/settings-colors.png
+share/doc/kde/HTML/en/kmplot/settings-fonts.png
+share/doc/kde/HTML/en/kmplot/settings-scaling.png
 share/doc/kde/HTML/en/kmplot/settingsdlg.png
-share/doc/kde/HTML/en/kmplot/stepdlg.png
 share/doc/kde/HTML/en/kmplot/threeplots.png
-share/doc/kde/HTML/en/kmplot/toolbar.png
 share/doc/kde/HTML/en/kmplot/using.docbook
 share/doc/kde/HTML/en/kpercentage/answer.png
 share/doc/kde/HTML/en/kpercentage/commands.docbook
@@ -484,6 +479,7 @@ share/doc/kde/HTML/en/kwordquiz/common
 share/doc/kde/HTML/en/kwordquiz/index.cache.bz2
 share/doc/kde/HTML/en/kwordquiz/index.docbook
 share/doc/kde/HTML/en/kwordquiz/kwq-dlg-characters.png
+share/doc/kde/HTML/en/kwordquiz/kwq-dlg-configure-appearance.png
 share/doc/kde/HTML/en/kwordquiz/kwq-dlg-configure-characters.png
 share/doc/kde/HTML/en/kwordquiz/kwq-dlg-configure-editor.png
 share/doc/kde/HTML/en/kwordquiz/kwq-dlg-configure-quiz.png
