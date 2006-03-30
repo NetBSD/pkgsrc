@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/09/07 08:36:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/03/30 21:35:52 jmmv Exp $
 bin/vino-preferences
 lib/bonobo/servers/GNOME_RemoteDesktop.server
 libexec/vino-server
@@ -35,6 +35,7 @@ ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/vino.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/mn/LC_MESSAGES/vino.mo
@@ -68,6 +69,7 @@ ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/vino.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/vino.mo
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/gnome/vino
 @comment in gnome2-dirs: @dirrm share/gnome
 @comment in GConf2: @dirrm share/gconf/schemas

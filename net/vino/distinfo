@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/09/07 08:36:40 adam Exp $
+$NetBSD: distinfo,v 1.5 2006/03/30 21:35:52 jmmv Exp $
 
-SHA1 (vino-2.12.0.tar.bz2) = 84fd91acf281c0d9b002a70a69c79134d78743c5
-RMD160 (vino-2.12.0.tar.bz2) = 31090b5b9e272ec8ca5532a9bd17f82224be476d
-Size (vino-2.12.0.tar.bz2) = 564627 bytes
+SHA1 (vino-2.13.5.tar.bz2) = f5224a5f9445d86bacf742d0e5ffc9fc72204a35
+RMD160 (vino-2.13.5.tar.bz2) = 9daeb18df6d5cbbe3d993325c1ed0800327a7b68
+Size (vino-2.13.5.tar.bz2) = 566620 bytes
