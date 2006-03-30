@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2006/01/20 13:34:15 jmmv Exp $
+$NetBSD: distinfo,v 1.13 2006/03/30 21:27:25 jmmv Exp $
 
-SHA1 (gnome-speech-0.3.9.tar.bz2) = f2bd3dbcaf56d1d05a76f2bef01e59fe032b670b
-RMD160 (gnome-speech-0.3.9.tar.bz2) = 85c6877042000213d5a40e4d6646f1515fbf10c7
-Size (gnome-speech-0.3.9.tar.bz2) = 286385 bytes
+SHA1 (gnome-speech-0.3.10.tar.bz2) = 6cbcebec462839990cf73acad662986e5cf6fabe
+RMD160 (gnome-speech-0.3.10.tar.bz2) = 8781fb94288dfa6e5cacb952e1d16a462ebb9eb8
+Size (gnome-speech-0.3.10.tar.bz2) = 272260 bytes
 SHA1 (patch-aa) = 039606f4e47be7d6e812687504a577fc149b5722
