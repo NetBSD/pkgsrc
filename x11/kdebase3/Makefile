@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.107 2006/02/24 21:54:23 wiz Exp $
+# $NetBSD: Makefile,v 1.108 2006/03/30 02:39:39 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	3
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -9,9 +8,9 @@ COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.png Daemon.README
 DISTFILES+=	NetBSD-flag-1.0.png
-SITES_Daemon.png=	${MASTER_SITE_LOCAL}
-SITES_Daemon.README=	${MASTER_SITE_LOCAL}
-SITES_NetBSD-flag-1.0.png=	${MASTER_SITE_LOCAL}
+SITES.Daemon.png=	${MASTER_SITE_LOCAL}
+SITES.Daemon.README=	${MASTER_SITE_LOCAL}
+SITES.NetBSD-flag-1.0.png=	${MASTER_SITE_LOCAL}
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -35,8 +34,7 @@ CONFIGURE_ARGS+=	--without-lame
 CONFIGURE_ARGS+=	--without-vorbis
 CONFIGURE_ARGS+=	--without-java
 
-REPLACE_PERL=		kcontrol/fileshare/fileshareset \
-			kcontrol/keys/convertShortcuts.pl \
+REPLACE_PERL+=		kcontrol/keys/convertShortcuts.pl \
 			khelpcenter/searchhandlers/khc_docbookdig.pl.in \
 			khelpcenter/searchhandlers/khc_htdig.pl.in \
 			khelpcenter/searchhandlers/khc_htsearch.pl \
@@ -100,7 +98,7 @@ DEPENDS+=		htdig>=3.2.0:../../www/htdig-devel
 
 .if !empty(PKG_OPTIONS:Msamba)
 .include "../../net/samba/buildlink3.mk"
-LIBS+=			-L${BUILDLINK_PREFIX.samba}/lib/samba -Wl,-R${BUILDLINK_PREFIX.samba}/lib/samba
+LIBS+=			-L${BUILDLINK_PREFIX.samba}/lib/samba ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.samba}/lib/samba
 PLIST_SUBST+=		HAVE_SMB=""
 .else
 PLIST_SUBST+=		HAVE_SMB="@comment "
@@ -137,9 +135,9 @@ SUBST_STAGE.varlock=	post-patch
 SUBST_MESSAGE.varlock=	Fix lock directory path.
 SUBST_FILES.varlock=	kcheckpass/kcheckpass.c
 .if ${OPSYS} == "SunOS"
-SUBST_SED.varlock=	s:/var/lock:/var/spool/locks:
+SUBST_SED.varlock=	-e s:/var/lock:/var/spool/locks:
 .else
-SUBST_SED.varlock=	s:/var/lock:/var/spool/lock:
+SUBST_SED.varlock=	-e s:/var/lock:/var/spool/lock:
 .endif
 .endif
 
@@ -147,7 +145,7 @@ SUBST_CLASSES+=		htdig paths
 SUBST_STAGE.htdig=	post-patch
 SUBST_MESSAGE.htdig=	Fix htdig paths.
 SUBST_FILES.htdig=	khelpcenter/searchhandlers/khc_htsearch.pl
-SUBST_SED.htdig=	s:/srv/www/cgi-bin:${PREFIX}/libexec/cgi-bin:
+SUBST_SED.htdig=	-e s:/srv/www/cgi-bin:${PREFIX}/libexec/cgi-bin:
 
 SUBST_FILES.paths=	kcontrol/kdm/main.cpp kioslave/info/kde-info2html.conf
 SUBST_SED.paths=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
