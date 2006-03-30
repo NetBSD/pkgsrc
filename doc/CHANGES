@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13382 2006/03/30 19:22:13 ghen Exp $
+$NetBSD: CHANGES,v 1.13383 2006/03/30 20:57:11 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1700,6 +1700,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/wxGTK-contrib to 2.6.3 [joerg 2006-03-30]
 	Added databases/ruby-sqlite3 version 1.1.0 [minskim 2006-03-30]
 	Updated emulators/dosbox to 0.65 [xtraeme 2006-03-30]
-	Added wip/seamonkey version 1.0 [ghen 2006-03-30]
-	Added wip/seamonkey-gtk1 version 1.0 [ghen 2006-03-30]
-	Added wip/seamonkey-bin version 1.0 [ghen 2006-03-30]
+	Added www/seamonkey version 1.0 [ghen 2006-03-30]
+	Added www/seamonkey-gtk1 version 1.0 [ghen 2006-03-30]
+	Added www/seamonkey-bin version 1.0 [ghen 2006-03-30]
