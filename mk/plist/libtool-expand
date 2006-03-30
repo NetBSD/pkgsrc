@@ -1,6 +1,6 @@
 # /bin/sh
 #
-# $NetBSD: libtool-expand,v 1.1 2006/01/12 23:43:57 jlam Exp $
+# $NetBSD: libtool-expand,v 1.2 2006/03/30 03:02:40 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -65,7 +65,17 @@ do
 	*)	lapath="./$la" ;;
 	esac
 
-	if ${TEST} -r "$lapath" -a ! -h "$lapath"; then
+	# Skip symlinks to libtool archives -- we only want to expand the
+	# real libtool archive.
+	#
+	${TEST} ! -h "$lapath" || continue
+
+	# Skip unreadable *.la files.
+	if ${TEST} ! -f "$lapath" -o ! -r "$lapath" ; then
+		${ECHO} 1>&2 "$self: cannot read libtool archive \`$lapath'"
+		continue
+	fi
+
 		if ${GREP} -q "libtool library file" "$lapath"; then
 			. "$lapath"
 			if ${TEST} "$installed" = "no"; then
@@ -80,7 +90,4 @@ do
 				${ECHO} "$libpath"
 			done
 		fi
-	else
-		${ECHO} 1>&2 "$self: cannot read libtool archive \`$lapath'"
-	fi
 done | ${SORT} -u
