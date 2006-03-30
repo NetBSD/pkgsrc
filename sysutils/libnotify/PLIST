@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/30 21:00:29 jmmv Exp $
+bin/notify-send
+include/libnotify/notification.h
+include/libnotify/notify.h
+lib/libnotify.la
+lib/pkgconfig/libnotify.pc
+@dirrm include/libnotify
