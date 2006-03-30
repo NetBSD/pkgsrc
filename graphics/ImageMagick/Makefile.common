@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.49 2006/03/29 21:32:35 ghen Exp $
+# $NetBSD: Makefile.common,v 1.50 2006/03/30 09:56:12 ghen Exp $
 
 # NOTE:  When updating this version, make sure to reset PKGREVISION in
 # both graphics/ImageMagick *and* graphics/p5-PerlMagick!
 
 IM_MAJOR_VER=		6.2.6
-IM_MINOR_VER=		4
+IM_MINOR_VER=		6
 IM_MAJOR_LIB_VER=	${IM_MAJOR_VER}
 
 .if (${IM_MINOR_VER} != NONE)
