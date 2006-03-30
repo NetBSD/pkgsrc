@@ -1,26 +1,26 @@
-# $NetBSD: Makefile,v 1.7 2005/12/05 20:50:46 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/03/30 13:51:28 salo Exp $
 #
 
-DISTNAME=		hping2.0.0-rc2
-PKGNAME=		hping-2.0.0.2
+DISTNAME=		hping2.0.0-rc3
+PKGNAME=		hping-2.0.0.3
 CATEGORIES=		net
 MASTER_SITES=		http://www.hping.org/
 
 MAINTAINER=		atatat@NetBSD.org
 HOMEPAGE=		http://www.hping.org/
-COMMENT=		Traceroute and ping using TCP and UDP as well as ICMP
+COMMENT=		Command-line oriented TCP/IP packet assembler/analyzer
 
-WRKSRC=			${WRKDIR}/hping2-rc2
+WRKSRC=			${WRKDIR}/hping2-rc3
 HAS_CONFIGURE=		YES
 MANPATH=		${PREFIX}/man
 CONFIGURE_ENV+=		MANPATH=${MANPATH:Q}
-NOT_FOR_PLATFORM=	NetBSD-0.*-* NetBSD-1.[0-4]*-*
 
-BINMODE=		4755
 INSTALLATION_DIRS=	man/man8 sbin
 
 CONFIGURE_ENV+=		PCAPINCDIR=${BUILDLINK_PREFIX.libpcap}/include
 CONFIGURE_ENV+=		PCAPLIBDIR=${BUILDLINK_PREFIX.libpcap}/lib
+
+.include "options.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hping2 ${PREFIX}/sbin
