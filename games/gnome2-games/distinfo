@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.22 2006/02/15 18:15:46 drochner Exp $
+$NetBSD: distinfo,v 1.23 2006/03/30 21:32:20 jmmv Exp $
 
-SHA1 (gnome-games-2.12.3.tar.bz2) = fb77677d5b99eb10d9fafa239571f9ff9e5feccb
-RMD160 (gnome-games-2.12.3.tar.bz2) = ce94683ccbec16953784744fc8b3ff850b75ccd0
-Size (gnome-games-2.12.3.tar.bz2) = 4932211 bytes
-SHA1 (patch-aa) = e74547a19267b1a39528d9556d115fff4f7cd21d
+SHA1 (gnome-games-2.14.0.tar.bz2) = a7736830fbc51a9934b43282bb83813af54ad5e3
+RMD160 (gnome-games-2.14.0.tar.bz2) = 823f6f949a8b2b0d07c87f1c4cf1962e11dbfc8e
+Size (gnome-games-2.14.0.tar.bz2) = 4989271 bytes
 SHA1 (patch-ac) = e54f3fecee226f78edf17dc686c6bde2a25e36fd
-SHA1 (patch-ad) = fe37a9355b68f4dbd89590a6c1baab56c480840c
 SHA1 (patch-ae) = bb5870303333f7f331555eaf09811db9c313cddb
