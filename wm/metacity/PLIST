@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2005/10/12 21:53:25 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/03/30 21:38:33 jmmv Exp $
 bin/metacity
 bin/metacity-message
 bin/metacity-theme-viewer
@@ -14,6 +14,7 @@ lib/pkgconfig/libmetacity-private.pc
 libexec/metacity-dialog
 man/man1/metacity-theme-viewer.1
 man/man1/metacity-window-demo.1
+man/man1/metacity.1
 share/gconf/schemas/metacity.schemas
 share/gnome/wm-properties/metacity.desktop
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/metacity.mo
@@ -50,6 +51,7 @@ ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/metacity.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/metacity.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/metacity.mo
