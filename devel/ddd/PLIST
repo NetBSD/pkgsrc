@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2005/01/11 09:04:16 martti Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/03/30 03:44:42 jlam Exp $
 bin/ddd
+info/ddd-themes.info
+info/ddd.info
 man/man1/ddd.1
 share/${PKGNAME}/COPYING
 share/${PKGNAME}/NEWS
