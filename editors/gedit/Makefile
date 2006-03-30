@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.58 2006/03/21 06:00:45 jlam Exp $
+# $NetBSD: Makefile,v 1.59 2006/03/30 21:29:09 jmmv Exp $
 #
 
-DISTNAME=		gedit-2.12.1
-PKGREVISION=		5
+DISTNAME=		gedit-2.14.0
 CATEGORIES=		editors gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gedit/2.12/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gedit/2.14/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -28,19 +27,21 @@ CONFIGURE_ARGS+=	--enable-schemas-install
 
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.4.0
+BUILDLINK_DEPENDS.libgnomeui+=	libgnomeui>=2.13.0
+BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.13.4
 
 .include "../../devel/GConf2/schemas.mk"
-.include "../../devel/eel2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/popt/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
