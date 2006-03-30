@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.9 2006/03/30 21:07:48 jmmv Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=336390
+
+--- libgnomevfs/gnome-vfs-address.c.orig	2005-12-09 11:39:00.000000000 +0100
++++ libgnomevfs/gnome-vfs-address.c
+@@ -388,8 +388,7 @@ static gboolean
+ v6_v6_equal (const struct sockaddr_in6 *a,
+ 	     const struct sockaddr_in6 *b)
+ {
+-	return IN6_ARE_ADDR_EQUAL (a->sin6_addr.s6_addr,
+-				   b->sin6_addr.s6_addr);
++	return IN6_ARE_ADDR_EQUAL (&a->sin6_addr, &b->sin6_addr);
+ }
+ 
+ static gboolean
