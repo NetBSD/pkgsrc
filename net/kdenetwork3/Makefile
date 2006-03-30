@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2006/03/11 10:07:50 ghen Exp $
+# $NetBSD: Makefile,v 1.52 2006/03/30 02:47:01 markd Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	net
 COMMENT=	Network modules for the KDE integrated X11 desktop
 
@@ -15,7 +14,7 @@ USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		pkg-config
 PTHREAD_OPTS+=		require
 
-REPLACE_PERL=		ksirc/dsirc \
+REPLACE_PERL+=		ksirc/dsirc \
 			knewsticker/knt-0.1-0.2.pl \
 			kopete/kopete/kconf_update/kopete-account-0.10.pl \
 			kopete/kopete/kconf_update/kopete-pluginloader.pl
