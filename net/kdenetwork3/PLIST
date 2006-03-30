@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2005/12/11 11:12:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.22 2006/03/30 02:47:01 markd Exp $
 bin/dsirc
 bin/feedbrowser
 bin/kdict
@@ -1305,7 +1305,10 @@ share/kde/apps/kppp/Rules/Jamaica/CWJ_InterParish.rst
 share/kde/apps/kppp/Rules/Jamaica/CWJ_Local.rst
 share/kde/apps/kppp/Rules/Japan/NTT_Local.rst
 share/kde/apps/kppp/Rules/Kazakhstan/Akparat_Sprint.rst
-share/kde/apps/kppp/Rules/Luxembourg/Local.rst
+share/kde/apps/kppp/Rules/Luxembourg/CMD_InternetGratuit.rst
+share/kde/apps/kppp/Rules/Luxembourg/LuxembourgOnline_FreeInternet.rst
+share/kde/apps/kppp/Rules/Luxembourg/PetT_ClassicSurf.rst
+share/kde/apps/kppp/Rules/Luxembourg/PetT_KioskSurf.rst
 share/kde/apps/kppp/Rules/Macedonia/Macedonia_GenericISP_interurban.rst
 share/kde/apps/kppp/Rules/Macedonia/Macedonia_GenericISP_local.rst
 share/kde/apps/kppp/Rules/Macedonia/Macedonia_MTnet.rst
