@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.442 2006/03/23 18:07:51 christos Exp $
+# $NetBSD: Makefile,v 1.443 2006/03/30 19:20:57 ghen Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -287,6 +287,9 @@ SUBDIR+=	ruby-tag
 SUBDIR+=	ruby-webunit
 SUBDIR+=	sarg
 SUBDIR+=	screws
+SUBDIR+=	seamonkey
+SUBDIR+=	seamonkey-bin
+SUBDIR+=	seamonkey-gtk1
 SUBDIR+=	sitecopy
 SUBDIR+=	skipstone
 SUBDIR+=	snarf
