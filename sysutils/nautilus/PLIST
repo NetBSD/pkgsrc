@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/10/12 21:53:11 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/03/30 21:12:43 jmmv Exp $
 bin/nautilus
 bin/nautilus-connect-server
 bin/nautilus-file-management-properties
@@ -7,13 +7,13 @@ include/nautilus/libnautilus-extension/nautilus-column.h
 include/nautilus/libnautilus-extension/nautilus-extension-types.h
 include/nautilus/libnautilus-extension/nautilus-file-info.h
 include/nautilus/libnautilus-extension/nautilus-info-provider.h
+include/nautilus/libnautilus-extension/nautilus-location-widget-provider.h
 include/nautilus/libnautilus-extension/nautilus-menu-item.h
 include/nautilus/libnautilus-extension/nautilus-menu-provider.h
 include/nautilus/libnautilus-extension/nautilus-property-page-provider.h
 include/nautilus/libnautilus-extension/nautilus-property-page.h
 lib/bonobo/servers/Nautilus_shell.server
 lib/libnautilus-extension.la
-lib/libnautilus-private.la
 lib/pkgconfig/libnautilus-extension.pc
 share/applications/nautilus-computer.desktop
 share/applications/nautilus-file-management-properties.desktop
@@ -55,6 +55,7 @@ ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/nautilus.mo
+${PKGLOCALEDIR}/locale/km/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/li/LC_MESSAGES/nautilus.mo
@@ -96,8 +97,10 @@ ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/yi/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/nautilus.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/nautilus.mo
+share/mime/packages/nautilus.xml
 share/nautilus/browser.xml
 share/nautilus/glade/nautilus-bookmarks-window.glade
 share/nautilus/glade/nautilus-file-management-properties.glade
@@ -159,6 +162,7 @@ share/pixmaps/nautilus/thumbnail_frame.png
 @dirrm share/nautilus/patterns
 @dirrm share/nautilus/glade
 @dirrm share/nautilus
+@comment in shared-mime-info: @dirrm share/mime/packages
 @comment in GConf2: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
 @exec ${MKDIR} %D/lib/nautilus/extensions-1.0
