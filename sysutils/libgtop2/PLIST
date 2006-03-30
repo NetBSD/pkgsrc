@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/02/08 18:36:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/03/30 03:44:44 jlam Exp $
 bin/libgtop_daemon2
 ${LIBGTOP_SERVER}bin/libgtop_server2
 include/libgtop-2.0/glibtop.h
@@ -42,6 +42,7 @@ include/libgtop-2.0/glibtop_machine.h
 include/libgtop-2.0/glibtop_server.h
 ${LIBGTOP_SUID_H}include/libgtop-2.0/glibtop_suid.h
 include/libgtop-2.0/libgtopconfig.h
+info/libgtop2.info
 lib/libgtop-2.0.la
 lib/pkgconfig/libgtop-2.0.pc
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/libgtop-2.0.mo

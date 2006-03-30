@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/03/05 16:27:23 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/03/30 03:44:41 jlam Exp $
 
 DISTNAME=		cross-${TARGET_ARCH}-${DISTVERSION}
 DISTVERSION=		3.3.3
@@ -22,8 +22,7 @@ BINUTILS_LDEMULATION=	i386pe
 TARGET_ARCH=		i386-netbsdpe
 GCC_CONFIGURE_ARGS+=	--enable-threads
 BINUTILS_EXTRAS=	dlltool dllwrap windres
-
-INFO_FILES=		bfd.info
+INFO_FILES=		# PLIST
 
 # Mingw pathes
 DISTFILES+=		gcc-3.3.3-20040217-1-src.diff.gz

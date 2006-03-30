@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/05 22:38:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/03/30 03:44:43 jlam Exp $
 bin/envsubst
 bin/gettext
 bin/gettext.sh
@@ -19,6 +19,7 @@ bin/msguniq
 bin/ngettext
 bin/xgettext
 include/gettext-po.h
+info/gettext.info
 lib/libgettextlib.la
 lib/libgettextpo.la
 lib/libgettextsrc.la
