@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.66 2006/03/21 06:00:52 jlam Exp $
+# $NetBSD: Makefile,v 1.67 2006/03/30 21:15:59 jmmv Exp $
 #
 
-DISTNAME=		gnome-panel-2.12.3
-PKGREVISION=		2
+DISTNAME=		gnome-panel-2.14.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.12/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.14/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -21,6 +20,8 @@ PKGCONFIG_OVERRIDE=	libpanel-applet/libpanelapplet-2.0.pc.in
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
+CPPFLAGS+=	-DPANEL_GNOME_LOGO_ICON="\"netbsd-logo-icon-transparent\""
+
 GCONF2_SCHEMAS= 	clock.schemas
 GCONF2_SCHEMAS+=	fish.schemas
 GCONF2_SCHEMAS+=	panel-global.schemas
@@ -34,7 +35,8 @@ GCONF2_ENTRIES=		panel-default-setup.entries
 
 BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
 BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.5.0
-BUILDLINK_DEPENDS.libwnck+=	libwnck>=2.12.1
+BUILDLINK_DEPENDS.libgnome+=	libgnome>=2.13.0
+BUILDLINK_DEPENDS.libwnck+=	libwnck>=2.13.5
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -45,6 +47,7 @@ BUILDLINK_DEPENDS.libwnck+=	libwnck>=2.12.1
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
