@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/03/13 22:14:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/03/30 02:58:26 markd Exp $
 bin/atlantikdesigner
 bin/exif.py
 bin/fsview
@@ -13,7 +13,10 @@ bin/orient.py
 lib/kde3/katecppsymbolviewerplugin.la
 lib/kde3/katefiletemplates.la
 lib/kde3/katefll_plugin.la
+lib/kde3/katehelloworldplugin.la
 lib/kde3/katehtmltoolsplugin.la
+lib/kde3/kateinsertcommandplugin.la
+lib/kde3/katemakeplugin.la
 lib/kde3/katemodelineplugin.la
 lib/kde3/kateopenheaderplugin.la
 lib/kde3/katepybrowseplugin.la
@@ -80,11 +83,13 @@ lib/kde3/webarchivethumbnail.la
 share/applications/kde/atlantikdesigner.desktop
 share/applications/kde/ksig.desktop
 share/doc/kde/HTML/en/kate-plugins/common
+share/doc/kde/HTML/en/kate-plugins/configure_insertcommand.png
 share/doc/kde/HTML/en/kate-plugins/filetemplates.docbook
 share/doc/kde/HTML/en/kate-plugins/htmltools.docbook
 share/doc/kde/HTML/en/kate-plugins/index.cache.bz2
 share/doc/kde/HTML/en/kate-plugins/index.docbook
 share/doc/kde/HTML/en/kate-plugins/insertcommand.docbook
+share/doc/kde/HTML/en/kate-plugins/insertcommand.png
 share/doc/kde/HTML/en/kate-plugins/openheader.docbook
 share/doc/kde/HTML/en/kate-plugins/textfilter.docbook
 share/doc/kde/HTML/en/kate-plugins/xmlcheck.docbook
@@ -95,7 +100,6 @@ share/doc/kde/HTML/en/kicker-applets/index.docbook
 share/doc/kde/HTML/en/kicker-applets/kolourpicker.docbook
 share/doc/kde/HTML/en/kicker-applets/ktimemon.docbook
 share/doc/kde/HTML/en/konq-plugins/babel/common
-share/doc/kde/HTML/en/konq-plugins/babel/cr16-action-babelfish.png
 share/doc/kde/HTML/en/konq-plugins/babel/index.cache.bz2
 share/doc/kde/HTML/en/konq-plugins/babel/index.docbook
 share/doc/kde/HTML/en/konq-plugins/common
@@ -128,9 +132,6 @@ share/doc/kde/HTML/en/konq-plugins/kuick/index.docbook
 share/doc/kde/HTML/en/konq-plugins/mediaplayer/common
 share/doc/kde/HTML/en/konq-plugins/mediaplayer/index.cache.bz2
 share/doc/kde/HTML/en/konq-plugins/mediaplayer/index.docbook
-share/doc/kde/HTML/en/konq-plugins/smbmounter/common
-share/doc/kde/HTML/en/konq-plugins/smbmounter/index.cache.bz2
-share/doc/kde/HTML/en/konq-plugins/smbmounter/index.docbook
 share/doc/kde/HTML/en/konq-plugins/uachanger/common
 share/doc/kde/HTML/en/konq-plugins/uachanger/index.cache.bz2
 share/doc/kde/HTML/en/konq-plugins/uachanger/index.docbook
@@ -162,7 +163,10 @@ share/kde/apps/kate/plugins/katefiletemplates/templates/html.katetemplate
 share/kde/apps/kate/plugins/katefiletemplates/templates/language.xml.katetemplate
 share/kde/apps/kate/plugins/katefiletemplates/ui.rc
 share/kde/apps/kate/plugins/katefll/ui.rc
+share/kde/apps/kate/plugins/katehelloworld/ui.rc
 share/kde/apps/kate/plugins/katehtmltools/ui.rc
+share/kde/apps/kate/plugins/kateinsertcommand/ui.rc
+share/kde/apps/kate/plugins/katemake/ui.rc
 share/kde/apps/kate/plugins/katemodeline/ui.rc
 share/kde/apps/kate/plugins/kateopenheader/ui.rc
 share/kde/apps/kate/plugins/katepybrowse/ui.rc
@@ -339,7 +343,10 @@ share/kde/services/kaddressbook/gmx_xxport.desktop
 share/kde/services/katecppsymbolviewer.desktop
 share/kde/services/katefiletemplates.desktop
 share/kde/services/katefll_plugin.desktop
+share/kde/services/katehelloworld.desktop
 share/kde/services/katehtmltools.desktop
+share/kde/services/kateinsertcommand.desktop
+share/kde/services/katemake.desktop
 share/kde/services/katemodeline.desktop
 share/kde/services/kateopenheader.desktop
 share/kde/services/katepybrowse.desktop
@@ -414,7 +421,10 @@ share/kde/services/webarchivethumbnail.desktop
 @dirrm share/kde/apps/kate/plugins/katepybrowse
 @dirrm share/kde/apps/kate/plugins/kateopenheader
 @dirrm share/kde/apps/kate/plugins/katemodeline
+@dirrm share/kde/apps/kate/plugins/katemake
+@dirrm share/kde/apps/kate/plugins/kateinsertcommand
 @dirrm share/kde/apps/kate/plugins/katehtmltools
+@dirrm share/kde/apps/kate/plugins/katehelloworld
 @dirrm share/kde/apps/kate/plugins/katefll
 @dirrm share/kde/apps/kate/plugins/katefiletemplates/templates
 @dirrm share/kde/apps/kate/plugins/katefiletemplates
@@ -430,7 +440,6 @@ share/kde/services/webarchivethumbnail.desktop
 @dirrm share/doc/kde/HTML/en/konq-plugins/webarchiver
 @dirrm share/doc/kde/HTML/en/konq-plugins/validators
 @dirrm share/doc/kde/HTML/en/konq-plugins/uachanger
-@dirrm share/doc/kde/HTML/en/konq-plugins/smbmounter
 @dirrm share/doc/kde/HTML/en/konq-plugins/mediaplayer
 @dirrm share/doc/kde/HTML/en/konq-plugins/kuick
 @dirrm share/doc/kde/HTML/en/konq-plugins/khtmlsettings
