@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.10 2006/01/31 23:08:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/03/30 03:17:08 markd Exp $
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/appletproxy.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/atlantik.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/clockapplet.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/dcoprss.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/display.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/dockbarextension.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/drkonqi.mo
@@ -67,6 +68,9 @@ ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kdeprint_part.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kdeprintfax.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kdesktop.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kdesud.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kdialog.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kdict.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kdictapplet.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kdmconfig.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kdmgreet.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/keduca.mo
@@ -77,6 +81,7 @@ ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kfile_kig.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kfile_m3u.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kfile_mp3.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kfile_ogg.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kfile_torrent.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kfile_wav.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kfileaudiopreview.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kfindpart.mo
@@ -89,6 +94,7 @@ ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/khangman.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/khelpcenter.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kicker.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kig.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kinetd.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kio.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kio_audiocd.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kio_finger.mo
@@ -96,6 +102,7 @@ ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kio_fish.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kio_floppy.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kio_help.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kio_imap4.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kio_jabberdisco.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kio_lan.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kio_ldap.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kio_mac.mo
@@ -104,6 +111,7 @@ ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kio_media.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kio_nfs.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kio_pop3.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kio_print.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kio_zeroconf.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kioexec.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/klettres.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/klipper.mo
@@ -112,7 +120,6 @@ ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kmail.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kmcop.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kmenuapplet.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kmenuedit.mo
-${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kmessedwords.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kmines.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kminipagerapplet.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kmplot.mo
@@ -121,10 +128,12 @@ ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/knotify.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/konqueror.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/konsole.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kpersonalizer.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kppp.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kppplogview.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kreadconfig.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kreversi.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/krunapplet.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kscd.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kscreensaver.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kshisen.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/ksmserver.mo
@@ -146,6 +155,7 @@ ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/ktip.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/ktouch.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/ktron.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kturtle.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kuickshow.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kverbos.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kvoctrain.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/kwifimanager.mo
