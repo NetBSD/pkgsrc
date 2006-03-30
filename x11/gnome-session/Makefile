@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.62 2006/03/21 06:00:52 jlam Exp $
+# $NetBSD: Makefile,v 1.63 2006/03/30 21:19:13 jmmv Exp $
 #
 
-DISTNAME=		gnome-session-2.12.0
-PKGREVISION=		6
+DISTNAME=		gnome-session-2.14.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.12/}
-SITES_gnome-splash-2.12.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.14/}
+SITES_gnome-splash-2.14.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
 EXTRACT_SUFX=		.tar.bz2
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gnome-splash-2.12.0.png
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gnome-splash-2.14.0.png
 
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
@@ -42,15 +41,17 @@ BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.8.3nb1
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/buildlink3.mk"
 .include "../../x11/gnome2-control-center/buildlink3.mk"
+.include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 post-extract:
 	${MV} ${WRKSRC}/gnome-session/gnome-splash.png \
 	    ${WRKSRC}/gnome-session/gnome-splash-orig.png
-	${CP} ${DISTDIR}/gnome-splash-2.12.0.png \
+	${CP} ${DISTDIR}/gnome-splash-2.14.0.png \
 	    ${WRKSRC}/gnome-session/gnome-splash.png
 
 post-install:
