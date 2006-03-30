@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4797 2006/03/30 19:22:52 ghen Exp $
+$NetBSD: TODO,v 1.4798 2006/03/30 21:20:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1043,6 +1043,7 @@ Suggested package updates
 	o py-gnome2-2.14.0
 	o py-gnome2-extras-2.14.0
 	o py-gnutls-0.2.1
+	o py-gtk2-2.8.5
 	o py-kenosis-0.96
 	o py-logging-0.4.9.6
 	o py-mad-0.5.4
