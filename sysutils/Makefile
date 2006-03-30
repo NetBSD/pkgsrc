@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.344 2006/03/29 21:43:46 ghen Exp $
+# $NetBSD: Makefile,v 1.345 2006/03/30 21:06:17 jmmv Exp $
 #
 
 COMMENT=	System utilities
@@ -121,6 +121,7 @@ SUBDIR+=	lambd
 SUBDIR+=	lavaps
 SUBDIR+=	libgtop2
 SUBDIR+=	libirman
+SUBDIR+=	libnotify
 SUBDIR+=	libol
 SUBDIR+=	logfinder
 SUBDIR+=	logrot
@@ -144,6 +145,7 @@ SUBDIR+=	mtscan
 SUBDIR+=	nautilus
 SUBDIR+=	nautilus-cd-burner
 SUBDIR+=	news
+SUBDIR+=	notification-daemon
 SUBDIR+=	nrg2iso
 SUBDIR+=	ntfsprogs
 SUBDIR+=	nvnet
