@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/03/30 03:44:44 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/03/30 21:09:48 jmmv Exp $
 bin/libgtop_daemon2
 ${LIBGTOP_SERVER}bin/libgtop_server2
 include/libgtop-2.0/glibtop.h
@@ -106,6 +106,7 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/libgtop-2.0.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/libgtop-2.0.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libgtop-2.0.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/libgtop-2.0.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/libgtop-2.0.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libgtop-2.0.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libgtop-2.0.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libgtop-2.0.mo
