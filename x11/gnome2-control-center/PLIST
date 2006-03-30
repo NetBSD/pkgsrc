@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2005/10/12 21:55:02 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/03/30 21:14:58 jmmv Exp $
 bin/gnome-accessibility-keyboard-properties
 bin/gnome-at-properties
 bin/gnome-background-properties
@@ -116,6 +116,7 @@ share/gconf/schemas/desktop_gnome_font_rendering.schemas
 share/gconf/schemas/desktop_gnome_peripherals_keyboard_xkb.schemas
 share/gconf/schemas/fontilus.schemas
 share/gconf/schemas/themus.schemas
+share/gnome-default-applications/gnome-default-applications.xml
 share/gnome/cursor-fonts/cursor-large-white.pcf
 share/gnome/cursor-fonts/cursor-large.pcf
 share/gnome/cursor-fonts/cursor-white.pcf
@@ -134,6 +135,7 @@ share/gnome/help/control-center/C/config-screensaver.xml
 share/gnome/help/control-center/C/config-sound.xml
 share/gnome/help/control-center/C/config-themes.xml
 share/gnome/help/control-center/C/control-center.xml
+share/gnome/help/control-center/es/control-center.xml
 share/gnome/vfolders/font-method.directory
 share/gnome/vfolders/theme-method.directory
 share/icons/hicolor/48x48/apps/gnome-control-center.png
@@ -208,9 +210,11 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/control-center-2.0.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/control-center-2.0.mo
 ${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/control-center-2.0.mo
 share/omf/control-center/control-center-C.omf
+share/omf/control-center/control-center-es.omf
 share/pixmaps/display-capplet.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/control-center
@@ -218,10 +222,12 @@ share/pixmaps/display-capplet.png
 @comment in ORBit2: @dirrm share/idl
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @dirrm share/gnome/vfolders
+@dirrm share/gnome/help/control-center/es
 @dirrm share/gnome/help/control-center/C
 @dirrm share/gnome/help/control-center
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/gnome/cursor-fonts
+@comment in gnome2-dirs: @dirrm share/gnome-default-applications
 @comment in gnome2-dirs: @dirrm share/gnome
 @comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/examples/gnome2-control-center
@@ -229,6 +235,7 @@ share/pixmaps/display-capplet.png
 @dirrm share/control-center-2.0/pixmaps
 @dirrm share/control-center-2.0/interfaces
 @comment in gnome2-dirs: @dirrm share/control-center-2.0/icons
+@comment in gnome2-dirs: @dirrm share/control-center-2.0/capplets
 @comment in gnome2-dirs: @dirrm share/control-center-2.0
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/window-manager-settings
