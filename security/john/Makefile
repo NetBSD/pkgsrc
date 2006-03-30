@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2006/03/14 10:17:25 martti Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/30 13:38:41 salo Exp $
 #
 
-DISTNAME=	john-1.7.0.1
+DISTNAME=	john-1.7.0.2
 #PKGREVISION=	1
 CATEGORIES=	security textproc
-MASTER_SITES=	http://www.openwall.com/john/e/
+MASTER_SITES=	http://www.openwall.com/john/f/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	DawS@irc.pl
 HOMEPAGE=	http://www.openwall.com/john/
