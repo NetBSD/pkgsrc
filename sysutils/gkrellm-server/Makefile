@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2006/02/17 15:43:22 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2006/03/30 21:21:37 joerg Exp $
 .include "../../sysutils/gkrellm/Makefile.common"
 
-PKGREVISION=		1
+PKGREVISION=		2
 GKRELLM_PKGBASE=	gkrellm-server
 COMMENT=		Monitoring daemon remotely accessible by a GKrellM client
 DEPENDS+=		gkrellm-share-${GKRELLM_VERSION}nb1:../../sysutils/gkrellm-share
@@ -13,7 +13,7 @@ CONF_FILES=		${PREFIX:Q}/share/examples/gkrellm-server/gkrellmd.conf ${PREFIX:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "NetBSD")
+.if (${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly")
 SPECIAL_PERMS+=		${PREFIX:Q}/bin/gkrellmd ${ROOT_USER} kmem 2711
 .endif
 
