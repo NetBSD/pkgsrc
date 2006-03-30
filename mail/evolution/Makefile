@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.102 2006/03/21 06:00:46 jlam Exp $
+# $NetBSD: Makefile,v 1.103 2006/03/30 21:37:01 jmmv Exp $
 
-DISTNAME=		evolution-2.4.1
-PKGREVISION=		8
+DISTNAME=		evolution-2.6.0
 CATEGORIES=		mail time gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.4/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.6/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -84,6 +83,7 @@ PRINT_PLIST_AWK+=	/smime/ { print "$${HAVE_SMIME}" $$0; next; }
 # in the wrapper saying that it shouldn't.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.nss}/lib/nss
 BUILDLINK_DEPENDS.nss+=		nss>=3.9.2nb3
+.  include "../../devel/nspr/buildlink3.mk"
 .  include "../../devel/nss/buildlink3.mk"
 
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.nss}/include/nss/nss
@@ -117,10 +117,9 @@ LDFLAGS+=	-lsemaphore
 .include "../../devel/pthread-sem/buildlink3.mk"
 .endif
 .include "../../databases/openldap/buildlink3.mk"
-.include "../../devel/atk/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
+.include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-#.include "../../devel/gal2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
@@ -130,15 +129,16 @@ LDFLAGS+=	-lsemaphore
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
-.include "../../multimedia/gstreamer0.8/buildlink3.mk"
-.include "../../net/libsoup-devel/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
+.include "../../net/libsoup-devel/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../www/gtkhtml38/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
