@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2006/01/12 16:57:49 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/03/30 21:36:13 jmmv Exp $
 bin/totem
 bin/totem-video-thumbnailer
 include/totem/1/plparser/totem-disc.h
 include/totem/1/plparser/totem-pl-parser-builtins.h
+include/totem/1/plparser/totem-pl-parser-features.h
 include/totem/1/plparser/totem-pl-parser.h
 lib/libtotem-plparser.la
 lib/nautilus/extensions-1.0/libtotem-properties-page.la
@@ -23,6 +24,9 @@ share/gnome/help/totem/C/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/C/figures/totem_volume_mute_button.png
 share/gnome/help/totem/C/legal.xml
 share/gnome/help/totem/C/totem.xml
+share/gnome/help/totem/bg/figures/totem_start_window.png
+share/gnome/help/totem/bg/legal.xml
+share/gnome/help/totem/bg/totem.xml
 share/gnome/help/totem/de/figures/totem_next_button.png
 share/gnome/help/totem/de/figures/totem_pause_button.png
 share/gnome/help/totem/de/figures/totem_play_button.png
@@ -73,6 +77,7 @@ ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/br/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/totem.mo
@@ -99,6 +104,7 @@ ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/totem.mo
@@ -129,8 +135,10 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/totem.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/totem.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/totem.mo
 share/omf/totem/totem-C.omf
+share/omf/totem/totem-bg.omf
 share/omf/totem/totem-de.omf
 share/omf/totem/totem-es.omf
 share/omf/totem/totem-fr.omf
@@ -175,6 +183,8 @@ share/totem/vanity.png
 @dirrm share/gnome/help/totem/es
 @dirrm share/gnome/help/totem/de/figures
 @dirrm share/gnome/help/totem/de
+@dirrm share/gnome/help/totem/bg/figures
+@dirrm share/gnome/help/totem/bg
 @dirrm share/gnome/help/totem/C/figures
 @dirrm share/gnome/help/totem/C
 @dirrm share/gnome/help/totem
