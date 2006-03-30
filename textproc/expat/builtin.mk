@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2006/03/06 19:21:34 tv Exp $
+# $NetBSD: builtin.mk,v 1.10 2006/03/30 18:06:18 jlam Exp $
 
 BUILTIN_PKG:=	expat
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.H_EXPAT=	${X11BASE}/include/expat.h /usr/include/expat.h
 ###
 .if !defined(IS_BUILTIN.expat)
 IS_BUILTIN.expat=	no
-.  if exists(${H_EXPAT})
+.  if empty(H_EXPAT:M__nonexistent__)
 .    if !empty(H_EXPAT:M${X11BASE}/)
 BUILTIN_IMAKE_CHECK:=	expat:BuildExpatLibrary
 .      include "../../mk/buildlink3/imake-check.mk"
@@ -31,7 +31,7 @@ MAKEVARS+=	IS_BUILTIN.expat
 ###
 .if !defined(BUILTIN_PKG.expat) && \
     !empty(IS_BUILTIN.expat:M[yY][eE][sS]) && \
-    exists(${H_EXPAT})
+    empty(H_EXPAT:M__nonexistent__)
 BUILTIN_VERSION.expat!=							\
 	${AWK} '/\#define[ 	]*XML_MAJOR_VERSION/ { M = $$3 }	\
 		/\#define[ 	]*XML_MINOR_VERSION/ { m = "."$$3 }	\

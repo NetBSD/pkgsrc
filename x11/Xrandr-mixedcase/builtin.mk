@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.13 2005/07/09 03:14:36 grant Exp $
+# $NetBSD: builtin.mk,v 1.14 2006/03/30 18:06:19 jlam Exp $
 
 BUILTIN_PKG:=	Xrandr
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.H_XRANDR=	${X11BASE}/include/X11/extensions/Xrandr.h
 ###
 .if !defined(IS_BUILTIN.Xrandr)
 IS_BUILTIN.Xrandr=	no
-.  if exists(${H_XRANDR})
+.  if empty(H_XRANDR:M__nonexistent__)
 BUILTIN_IMAKE_CHECK:=	Xrandr:BuildRandRLibrary
 .    include "../../mk/buildlink3/imake-check.mk"
 IS_BUILTIN.Xrandr=	${BUILTIN_IMAKE_CHECK.Xrandr}
@@ -27,7 +27,7 @@ MAKEVARS+=	IS_BUILTIN.Xrandr
 ###
 .if !defined(BUILTIN_PKG.Xrandr) && \
     !empty(IS_BUILTIN.Xrandr:M[yY][eE][sS]) && \
-    exists(${H_XRANDR})
+    empty(H_XRANDR:M__nonexistent__)
 #                                                                              
 # Xrandr doesn't provide a method of discovering the version number of         
 # the software.  Match up Xrandr versions with X11 versions for an         
