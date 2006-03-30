@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/03/09 01:13:16 reed Exp $
+$NetBSD: patch-aa,v 1.2 2006/03/30 21:30:25 jmmv Exp $
 
---- glib/Makefile.in.orig	2006-03-08 16:43:11.000000000 -0800
-+++ glib/Makefile.in	2006-03-08 16:47:11.000000000 -0800
-@@ -63,7 +63,7 @@
+--- glib/Makefile.in.orig	2006-02-28 23:51:30.000000000 +0100
++++ glib/Makefile.in
+@@ -65,7 +65,7 @@ LTLIBRARIES = $(lib_LTLIBRARIES)
  am__DEPENDENCIES_1 =
  @BUILD_CAIRO_OUTPUT_TRUE@am__DEPENDENCIES_2 = $(am__DEPENDENCIES_1)
  libpoppler_glib_la_DEPENDENCIES =  \
--	$(top_builddir)/poppler/libpoppler.la $(am__DEPENDENCIES_1) \
-+	$(prefix)/lib/libpoppler.la $(am__DEPENDENCIES_1) \
- 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_2)
- am__objects_1 = poppler-enums.lo
- am_libpoppler_glib_la_OBJECTS = $(am__objects_1) poppler-action.lo \
-@@ -73,7 +73,7 @@
+-	$(top_builddir)/poppler/libpoppler.la \
++	$(prefix)/lib/libpoppler.la \
+ 	$(top_builddir)/poppler/libpoppler-cairo.la \
+ 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+ 	$(am__DEPENDENCIES_2)
+@@ -78,7 +78,7 @@ PROGRAMS = $(noinst_PROGRAMS)
  am_test_poppler_glib_OBJECTS = test-poppler-glib.$(OBJEXT)
  test_poppler_glib_OBJECTS = $(am_test_poppler_glib_OBJECTS)
  test_poppler_glib_DEPENDENCIES =  \
@@ -20,16 +20,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/03/09 01:13:16 reed Exp $
  	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
  	$(am__DEPENDENCIES_2)
  DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir) -I$(top_builddir)/poppler
-@@ -277,7 +277,7 @@
+@@ -306,7 +306,7 @@ libpoppler_glib_la_SOURCES = \
  	poppler-private.h
  
  libpoppler_glib_la_LIBADD = \
--	$(top_builddir)/poppler/libpoppler.la	\
-+	$(prefix)/lib/libpoppler.la	\
- 	$(POPPLER_GLIB_LIBS)			\
- 	$(FREETYPE_LIBS)			\
- 	$(cairo_libs)
-@@ -286,7 +286,7 @@
+-	$(top_builddir)/poppler/libpoppler.la		\
++	$(prefix)/lib/libpoppler.la		\
+ 	$(top_builddir)/poppler/libpoppler-cairo.la	\
+ 	$(POPPLER_GLIB_LIBS)				\
+ 	$(FREETYPE_LIBS)				\
+@@ -317,7 +317,7 @@ test_poppler_glib_SOURCES = \
         test-poppler-glib.c
  
  test_poppler_glib_LDADD = \

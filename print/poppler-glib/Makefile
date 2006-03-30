@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/03/09 01:15:58 reed Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/30 21:30:25 jmmv Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
@@ -13,21 +13,27 @@ USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE+=    ${WRKSRC}/poppler-glib.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-# Don't build the cairo graphics backend.
-CONFIGURE_ARGS+=	--disable-cairo-output
+# Build the cairo graphics backend, required by glib.
+CONFIGURE_ARGS+=	--enable-cairo-output
+# Don't build the splash graphics backend.
+CONFIGURE_ARGS+=	--disable-splash-output
 # Don't compile poppler qt wrapper.
 CONFIGURE_ARGS+=	--disable-poppler-qt
 # Don't compile GTK+ test program.
 CONFIGURE_ARGS+=        --disable-gtk-test
 
-do-build:
-	cd ${WRKSRC}/glib && ${SETENV} ${MAKE_ENV} ${GMAKE}
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
-do-install:
-	cd ${WRKSRC}/glib && ${SETENV} ${MAKE_ENV} ${GMAKE} install
+BUILD_DIRS=		${WRKSRC}/goo ${WRKSRC}/fofi ${WRKSRC}/poppler \
+			${WRKSRC}/glib
+INSTALL_DIRS=		${WRKSRC}/glib
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/poppler-cairo.pc ${PREFIX}/lib/pkgconfig
 	${INSTALL_DATA} ${WRKSRC}/poppler-glib.pc ${PREFIX}/lib/pkgconfig
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 BUILDLINK_DEPENDS.poppler+=     poppler>=${POPPLER_VERS}
 .include "../../print/poppler/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
