@@ -1,11 +1,12 @@
-# $NetBSD: builtin.mk,v 1.28 2006/02/28 23:43:38 joerg Exp $
+# $NetBSD: builtin.mk,v 1.29 2006/03/30 18:06:17 jlam Exp $
 
 BUILTIN_PKG:=	gettext
 
-BUILTIN_FIND_LIBS:=		intl
-BUILTIN_FIND_FILES_VAR:=	H_GETTEXT
-BUILTIN_FIND_FILES.H_GETTEXT=	/usr/include/libintl.h
-BUILTIN_FIND_GREP.H_GETTEXT=	\#define[ 	]*__USE_GNU_GETTEXT
+BUILTIN_FIND_LIBS:=			intl
+BUILTIN_FIND_FILES_VAR:=		H_GETTEXT
+BUILTIN_FIND_FILES.H_GETTEXT=		/usr/include/libintl.h
+BUILTIN_FIND_FILES._BLTN_H_GETTEXT=	/usr/include/libintl.h
+BUILTIN_FIND_GREP.H_GETTEXT=		\#define[ 	]*__USE_GNU_GETTEXT
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -15,17 +16,17 @@ BUILTIN_FIND_GREP.H_GETTEXT=	\#define[ 	]*__USE_GNU_GETTEXT
 ###
 .if !defined(IS_BUILTIN.gettext)
 IS_BUILTIN.gettext=	no
-.  if empty(H_GETTEXT:M${LOCALBASE}/*) && exists(${H_GETTEXT}) && \
+.  if empty(H_GETTEXT:M__nonexistent__) && \
+      empty(H_GETTEXT:M${LOCALBASE}/*) && \
       !empty(BUILTIN_LIB_FOUND.intl:M[yY][eE][sS])
 IS_BUILTIN.gettext=	yes
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.gettext
 
-_BLTN_H_GETTEXT=	/usr/include/libintl.h
 .if !defined(BUILTIN_GETTEXT_NGETTEXT)
 BUILTIN_GETTEXT_NGETTEXT=	no
-.  if exists(${_BLTN_H_GETTEXT})
+.  if empty(_BLTN_H_GETTEXT:M__nonexistent__)
 BUILTIN_GETTEXT_NGETTEXT!=						\
 	if ${GREP} -q "char.*ngettext" ${_BLTN_H_GETTEXT:Q}; then	\
 		${ECHO} yes;						\
@@ -66,7 +67,7 @@ _BLTN_REPLACE.gettext=	no
 # XXX enough to replace GNU gettext if it is part of glibc (the GNU C
 # XXX Library).
 # XXX
-.      if exists(${_BLTN_H_GETTEXT})
+.      if empty(_BLTN_H_GETTEXT:M__nonexistent__)
 _BLTN_REPLACE.gettext!=							\
 	if ${GREP} -q "This file is part of the GNU C Library" ${_BLTN_H_GETTEXT:Q}; then \
 		${ECHO} yes;						\

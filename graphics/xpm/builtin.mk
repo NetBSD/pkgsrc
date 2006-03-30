@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2005/06/03 19:12:49 jlam Exp $
+# $NetBSD: builtin.mk,v 1.11 2006/03/30 18:06:18 jlam Exp $
 
 BUILTIN_PKG:=	xpm
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.H_XPM=	${X11BASE}/include/X11/xpm.h
 ###
 .if !defined(IS_BUILTIN.xpm)
 IS_BUILTIN.xpm=		no
-.  if exists(${H_XPM})
+.  if empty(H_XPM:M__nonexistent__)
 .    if !empty(X11BASE:M*openwin) && exists(/usr/sbin/pkgchk)
 IS_BUILTIN.xpm!=							\
 	if /usr/sbin/pkgchk -l SUNWxwinc | ${GREP} -q xpm.h; then	\
@@ -38,7 +38,7 @@ MAKEVARS+=	IS_BUILTIN.xpm
 ###
 .if !defined(BUILTIN_PKG.xpm) && \
     !empty(IS_BUILTIN.xpm:M[yY][eE][sS]) && \
-    exists(${H_XPM})
+    empty(H_XPM:M__nonexistent__)
 BUILTIN_VERSION.xpm!=							\
 	${AWK} 'BEGIN { split("abcdefghijklmnopqrstuvwxyz", alpha, "");	\
 			p = ".0" }					\

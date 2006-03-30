@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1.1.1 2005/10/15 16:36:57 wiz Exp $
+# $NetBSD: builtin.mk,v 1.2 2006/03/30 18:06:19 jlam Exp $
 
 BUILTIN_PKG:=	renderext
 
@@ -18,7 +18,7 @@ IS_BUILTIN.renderext=	no
 # we'll consider this X11 package to be built-in even if it's a part
 # of one of the pkgsrc-installed X11 distributions.
 #  
-.  if exists(${H_RENDER})
+.  if empty(H_RENDER:M__nonexistent__)
 IS_BUILTIN.renderext=	yes
 .  endif
 .endif
@@ -30,7 +30,7 @@ MAKEVARS+=      IS_BUILTIN.renderext
 ###
 .if !defined(BUILTIN_PKG.renderext) && \
     !empty(IS_BUILTIN.renderext:M[yY][eE][sS]) && \
-    exists(${H_RENDER})
+    empty(H_RENDER:M__nonexistent__)
 BUILTIN_VERSION.renderext!=						\
 	${AWK} '/\#define[ 	]*RENDER_MAJOR/ { M = $$3 }		\
 		/\#define[ 	]*RENDER_MINOR/ { m = "."$$3 }		\

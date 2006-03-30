@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2005/06/03 19:12:49 jlam Exp $
+# $NetBSD: builtin.mk,v 1.8 2006/03/30 18:06:17 jlam Exp $
 
 BUILTIN_PKG:=	fontconfig
 
@@ -14,7 +14,7 @@ BUILTIN_FIND_FILES.H_FONTCONFIG=	\
 ###
 .if !defined(IS_BUILTIN.fontconfig)
 IS_BUILTIN.fontconfig=	no
-.  if exists(${H_FONTCONFIG})
+.  if empty(H_FONTCONFIG:M__nonexistent__)
 BUILTIN_IMAKE_CHECK:=	fontconfig:BuildFontconfigLibrary
 .    include "../../mk/buildlink3/imake-check.mk"
 IS_BUILTIN.fontconfig=	${BUILTIN_IMAKE_CHECK.fontconfig}
@@ -28,7 +28,7 @@ MAKEVARS+=	IS_BUILTIN.fontconfig
 ###
 .if !defined(BUILTIN_PKG.fontconfig) && \
     !empty(IS_BUILTIN.fontconfig:M[yY][eE][sS]) && \
-    exists(${H_FONTCONFIG})
+    empty(H_FONTCONFIG:M__nonexistent__)
 BUILTIN_VERSION.fontconfig!=						\
 	${AWK} '/\#define[ 	]*FC_MAJOR/ { M = $$3 }			\
 		/\#define[ 	]*FC_MINOR/ { m = "."$$3 }		\

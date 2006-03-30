@@ -1,10 +1,13 @@
-# $NetBSD: builtin.mk,v 1.11 2005/07/01 17:24:02 minskim Exp $
+# $NetBSD: builtin.mk,v 1.12 2006/03/30 18:06:17 jlam Exp $
 
 BUILTIN_PKG:=	readline
 
 BUILTIN_FIND_LIBS:=		edit readline
 BUILTIN_FIND_FILES_VAR:=	H_READLINE
 BUILTIN_FIND_FILES.H_READLINE=	/usr/include/readline/readline.h	\
+				/usr/include/readline.h
+BUILTIN_FIND_FILES._BLTN_H_READLINE=	\
+				/usr/include/readline/readline.h	\
 				/usr/include/readline.h
 BUILTIN_FIND_GREP.H_READLINE=	\#define[ 	]*RL_VERSION_MAJOR
 
@@ -16,7 +19,8 @@ BUILTIN_FIND_GREP.H_READLINE=	\#define[ 	]*RL_VERSION_MAJOR
 ###
 .if !defined(IS_BUILTIN.readline)
 IS_BUILTIN.readline=	no
-.  if empty(H_READLINE:M${LOCALBASE}/*) && exists(${H_READLINE}) && \
+.  if empty(H_READLINE:M__nonexistent__) && \
+      empty(H_READLINE:M${LOCALBASE}/*) && \
       !empty(BUILTIN_LIB_FOUND.readline:M[yY][eE][sS])
 IS_BUILTIN.readline=	yes
 .  endif
@@ -29,7 +33,7 @@ MAKEVARS+=	IS_BUILTIN.readline
 ###
 .if !defined(BUILTIN_PKG.readline) && \
     !empty(IS_BUILTIN.readline:M[yY][eE][sS]) && \
-    exists(${H_READLINE})
+    empty(H_READLINE:M__nonexistent__)
 BUILTIN_VERSION.readline!=						\
 	${AWK} '/\#define[ 	]*RL_VERSION_MAJOR/ { M = $$3 }		\
 		/\#define[ 	]*RL_VERSION_MINOR/ { m = "."$$3 }	\
@@ -69,8 +73,7 @@ USE_BUILTIN.readline!=							\
 # XXX
 .    if !empty(BUILTIN_LIB_FOUND.readline:M[nN][oO]) && \
         !empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS]) && \
-        (exists(/usr/include/readline/readline.h) || \
-         exists(/usr/include/readline.h))
+	empty(_BLTN_H_READLINE:M__nonexistent__)
 USE_BUILTIN.readline=	yes
 .    endif
 #

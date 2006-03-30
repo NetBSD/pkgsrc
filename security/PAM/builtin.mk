@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2005/06/01 18:03:20 jlam Exp $
+# $NetBSD: builtin.mk,v 1.13 2006/03/30 18:06:18 jlam Exp $
 
 BUILTIN_PKG:=	linux-pam
 
@@ -15,7 +15,7 @@ BUILTIN_FIND_GREP.H_LINUX_PAM=	The Linux-PAM Framework layer API
 ###
 .if !defined(IS_BUILTIN.linux-pam)
 IS_BUILTIN.linux-pam=	no
-.  if empty(H_LINUX_PAM:M${LOCALBASE}/*) && exists(${H_LINUX_PAM})
+.  if empty(H_LINUX_PAM:M__nonexistent__) && empty(H_LINUX_PAM:M${LOCALBASE}/*)
 IS_BUILTIN.linux-pam=	yes
 .  endif
 .endif

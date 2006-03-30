@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2005/06/03 19:12:49 jlam Exp $
+# $NetBSD: builtin.mk,v 1.8 2006/03/30 18:06:17 jlam Exp $
 
 BUILTIN_PKG:=	freetype2
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.H_FREETYPE2=	${X11BASE}/include/freetype2/freetype/freetype.h
 ###
 .if !defined(IS_BUILTIN.freetype2)
 IS_BUILTIN.freetype2=	no
-.  if exists(${H_FREETYPE2})
+.  if empty(H_FREETYPE2:M__nonexistent__)
 BUILTIN_IMAKE_CHECK:=	freetype2:BuildFreetype2Library
 .    include "../../mk/buildlink3/imake-check.mk"
 IS_BUILTIN.freetype2=	${BUILTIN_IMAKE_CHECK.freetype2}
@@ -27,7 +27,7 @@ MAKEVARS+=	IS_BUILTIN.freetype2
 ###
 .if !defined(BUILTIN_PKG.freetype2) && \
     !empty(IS_BUILTIN.freetype2:M[yY][eE][sS]) && \
-    exists(${H_FREETYPE2})
+    empty(H_FREETYPE2:M__nonexistent__)
 BUILTIN_VERSION.freetype2!=						\
 	${AWK} 'BEGIN { p = ".0" }					\
 		/\#define[ 	]*FREETYPE_MAJOR/ { M = $$3 }		\

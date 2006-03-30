@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2005/06/24 05:21:31 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2006/03/30 18:06:18 jlam Exp $
 
 BUILTIN_PKG:=	XFree86-libs
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.CF_XFREE86=	${X11BASE}/lib/X11/config/xfree86.cf
 ###
 .if !defined(IS_BUILTIN.XFree86-libs)
 IS_BUILTIN.XFree86-libs=	no
-.  if empty(CF_XFREE86:M${LOCALBASE}/*) && exists(${CF_XFREE86})
+.  if empty(CF_XFREE86:M__nonexistent__) && empty(CF_XFREE86:M${LOCALBASE}/*)
 IS_BUILTIN.XFree86-libs=	yes
 .  endif
 .endif
@@ -25,7 +25,7 @@ MAKEVARS+=	IS_BUILTIN.XFree86-libs
 ###
 .if !defined(BUILTIN_PKG.XFree86-libs) && \
     !empty(IS_BUILTIN.XFree86-libs:M[yY][eE][sS]) && \
-    exists(${CF_XFREE86})
+    empty(CF_XFREE86:M__nonexistent__)
 .  include "${BUILDLINK_PKGSRCDIR.XFree86-libs}/version.mk"
 BUILTIN_PKG.XFree86-libs=	XFree86-libs-${BUILTIN_X11_VERSION.XFree86}
 .endif

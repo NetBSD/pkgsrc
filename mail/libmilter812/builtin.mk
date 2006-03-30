@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2005/06/01 18:02:59 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2006/03/30 18:06:18 jlam Exp $
 
 BUILTIN_PKG:=	libmilter
 
@@ -14,7 +14,8 @@ BUILTIN_FIND_FILES.H_LIBMILTER=	/usr/include/libmilter/mfapi.h
 ###
 .if !defined(IS_BUILTIN.libmilter)
 IS_BUILTIN.libmilter=	no
-.  if empty(H_LIBMILTER:M${LOCALBASE}/*) && exists(${H_LIBMILTER}) && \
+.  if empty(H_LIBMILTER:M__nonexistent__) && \
+      empty(H_LIBMILTER:M${LOCALBASE}/*) && \
       !empty(BUILTIN_LIB_FOUND.milter:M[yY][eE][sS])
 IS_BUILTIN.libmilter=	yes
 .  endif

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2005/06/01 18:03:27 jlam Exp $
+# $NetBSD: builtin.mk,v 1.6 2006/03/30 18:06:19 jlam Exp $
 
 BUILTIN_PKG:=	compositeext
 
@@ -21,7 +21,8 @@ IS_BUILTIN.compositeext=	no
 # we'll consider this X11 package to be built-in even if it's a part
 # of one of the pkgsrc-installed X11 distributions.
 #
-.  if exists(${H_COMPOSITE}) && exists(${H_COMPOSITEPROTO})
+.  if empty(H_COMPOSITE:M__nonexistent__) && \
+      empty(H_COMPOSITEPROTO:M__nonexistent__)
 IS_BUILTIN.compositeext=	yes
 .  endif
 .endif

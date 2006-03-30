@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2005/06/27 18:17:57 minskim Exp $
+# $NetBSD: builtin.mk,v 1.5 2006/03/30 18:06:17 jlam Exp $
 
 BUILTIN_PKG:=	bzip2
 
@@ -14,7 +14,7 @@ BUILTIN_FIND_GREP.H_BZIP2=	BZ2_
 ###
 .if !defined(IS_BUILTIN.bzip2)
 IS_BUILTIN.bzip2=	no
-.  if empty(H_BZIP2:M${LOCALBASE}/*) && exists(${H_BZIP2})
+.  if empty(H_BZIP2:M__nonexistent__) && empty(H_BZIP2:M${LOCALBASE}/*)
 IS_BUILTIN.bzip2=	yes
 .  endif
 .endif

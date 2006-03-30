@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2005/06/01 18:03:21 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2006/03/30 18:06:18 jlam Exp $
 
 BUILTIN_PKG:=	fam
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.H_FAM=	/usr/include/fam.h
 ###
 .if !defined(IS_BUILTIN.fam)
 IS_BUILTIN.fam=	no
-.  if empty(H_FAM:M${LOCALBASE}/*) && exists(${H_FAM})
+.  if empty(H_FAM:M__nonexistent__) && empty(H_FAM:M${LOCALBASE}/*)
 IS_BUILTIN.fam=	yes
 .  endif
 .endif
