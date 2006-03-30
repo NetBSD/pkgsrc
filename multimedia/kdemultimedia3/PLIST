@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2006/01/31 22:33:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.22 2006/03/30 02:48:36 markd Exp $
 bin/artsbuilder
 bin/artscontrol
 bin/juk
@@ -462,6 +462,28 @@ share/doc/kde/HTML/en/juk/toolbar.png
 share/doc/kde/HTML/en/kaboodle/common
 share/doc/kde/HTML/en/kaboodle/index.cache.bz2
 share/doc/kde/HTML/en/kaboodle/index.docbook
+share/doc/kde/HTML/en/kaudiocreator/cdconfiguration.png
+share/doc/kde/HTML/en/kaudiocreator/cddbconfigurationlookup.png
+share/doc/kde/HTML/en/kaudiocreator/cddbconfigurationsubmit.png
+share/doc/kde/HTML/en/kaudiocreator/cdinserted.png
+share/doc/kde/HTML/en/kaudiocreator/common
+share/doc/kde/HTML/en/kaudiocreator/confirmartistcarryover.png
+share/doc/kde/HTML/en/kaudiocreator/encoderconfiguration.png
+share/doc/kde/HTML/en/kaudiocreator/encodernotfound.png
+share/doc/kde/HTML/en/kaudiocreator/entersong1.png
+share/doc/kde/HTML/en/kaudiocreator/generalconfiguration.png
+share/doc/kde/HTML/en/kaudiocreator/index.cache.bz2
+share/doc/kde/HTML/en/kaudiocreator/index.docbook
+share/doc/kde/HTML/en/kaudiocreator/jobcontrol.png
+share/doc/kde/HTML/en/kaudiocreator/jobshavestarted.png
+share/doc/kde/HTML/en/kaudiocreator/kaudiocreatormainwindow800.png
+share/doc/kde/HTML/en/kaudiocreator/lameconfiguration.png
+share/doc/kde/HTML/en/kaudiocreator/readytorip.png
+share/doc/kde/HTML/en/kaudiocreator/ripperconfiguration.png
+share/doc/kde/HTML/en/kaudiocreator/rippingandencoding.png
+share/doc/kde/HTML/en/kaudiocreator/rippingandencoding2.png
+share/doc/kde/HTML/en/kaudiocreator/setalbumcategory.png
+share/doc/kde/HTML/en/kaudiocreator/startalbumeditor.png
 share/doc/kde/HTML/en/kioslave/audiocd.docbook
 share/doc/kde/HTML/en/kmid/common
 share/doc/kde/HTML/en/kmid/index.cache.bz2
@@ -1179,6 +1201,7 @@ share/kde/servicetypes/krec_exportitem.desktop
 @dirrm share/doc/kde/HTML/en/kdemultimedia-apidocs/libkcddb
 @dirrm share/doc/kde/HTML/en/kdemultimedia-apidocs
 @comment in kde: @dirrm share/doc/kde/HTML/en/kcontrol
+@dirrm share/doc/kde/HTML/en/kaudiocreator
 @dirrm share/doc/kde/HTML/en/kaboodle
 @dirrm share/doc/kde/HTML/en/juk
 @dirrm share/doc/kde/HTML/en/artsbuilder/images
