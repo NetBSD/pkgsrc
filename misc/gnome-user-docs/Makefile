@@ -1,21 +1,23 @@
-# $NetBSD: Makefile,v 1.19 2006/03/21 06:00:47 jlam Exp $
+# $NetBSD: Makefile,v 1.1 2006/03/30 21:35:21 jmmv Exp $
 #
 
-DISTNAME=	gnome2-user-docs-2.8.1
-PKGREVISION=	3
+DISTNAME=	gnome-user-docs-2.14.0
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome2-user-docs/2.8/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-user-docs/2.14/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	The GNOME 2 users guide
 
+CONFLICTS+=		gnome2-user-docs-[0-9]*
+
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../mk/bsd.pkg.mk"
