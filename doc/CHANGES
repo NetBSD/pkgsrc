@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13375 2006/03/30 12:00:34 is Exp $
+$NetBSD: CHANGES,v 1.13376 2006/03/30 12:57:21 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1693,3 +1693,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/p5-Mail-Milter to 0.07 [tv 2006-03-30]
 	Updated graphics/ImageMagick to 6.2.6.6 [ghen 2006-03-30]
 	Updated mail/postgrey to 1.2.4 [is 2006-03-30]
+	Updated www/p5-CGI-Session to 4.09 [salo 2006-03-30]
