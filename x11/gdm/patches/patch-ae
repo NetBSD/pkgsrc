@@ -1,25 +1,19 @@
-$NetBSD: patch-ae,v 1.9 2005/10/22 22:07:32 minskim Exp $
+$NetBSD: patch-ae,v 1.10 2006/03/30 21:25:48 jmmv Exp $
 
---- config/Makefile.in.orig	2005-10-03 20:31:14.000000000 -0700
+--- config/Makefile.in.orig	2006-03-13 22:42:30.000000000 +0100
 +++ config/Makefile.in
-@@ -277,13 +277,13 @@ prefix = @prefix@
- program_transform_name = @program_transform_name@
- sbindir = @sbindir@
- sharedstatedir = @sharedstatedir@
--sysconfdir = @sysconfdir@
-+sysconfdir = @datadir@/examples
- target_alias = @target_alias@
- pixmapdir = $(datadir)/pixmaps
- confdir = $(sysconfdir)/gdm
--gdmconfdir = $(GDM_CONFIGDIR)
-+gdmconfdir = $(confdir)
- crossconfdir = $(sysconfdir)/dm
--localedir = $(sysconfdir)/gdm
-+localedir = /usr/pkg/share/locale
- bisessdir = $(datadir)/gdm/BuiltInSessions
- instsessdir = $(datadir)/xsessions
- initdir = $(sysconfdir)/gdm/Init
-@@ -539,10 +539,7 @@ install-data-hook: gdm.conf Xsession gno
+@@ -545,10 +545,6 @@ install-data-hook: gdm.conf gdm.conf-cus
+ 		$(mkinstalldirs) $(DESTDIR)$(confdir); \
+ 		chmod 755 $(DESTDIR)$(confdir); \
+ 	fi
+-	if test '!' -d $(DESTDIR)$(crossconfdir); then \
+-		$(mkinstalldirs) $(DESTDIR)$(crossconfdir); \
+-		chmod 755 $(DESTDIR)$(crossconfdir); \
+-	fi
+ 	if test '!' -d `dirname $(DESTDIR)$(GDM_DEFAULTS_CONF)`; then \
+ 		$(mkinstalldirs) `dirname $(DESTDIR)$(GDM_DEFAULTS_CONF)`; \
+ 		chmod 755 `dirname $(DESTDIR)$(GDM_DEFAULTS_CONF)`; \
+@@ -577,10 +573,7 @@ install-data-hook: gdm.conf gdm.conf-cus
  	$(INSTALL_SCRIPT) $(srcdir)/XKeepsCrashing $(DESTDIR)$(confdir)/XKeepsCrashing
  	$(INSTALL_SCRIPT) Xsession $(DESTDIR)$(confdir)/Xsession
  
@@ -31,7 +25,7 @@ $NetBSD: patch-ae,v 1.9 2005/10/22 22:07:32 minskim Exp $
  
  	if test '!' -d $(DESTDIR)$(bisessdir); then \
  		$(mkinstalldirs) $(DESTDIR)$(bisessdir); \
-@@ -618,18 +615,6 @@ install-data-hook: gdm.conf Xsession gno
+@@ -658,20 +651,8 @@ install-data-hook: gdm.conf gdm.conf-cus
  		chmod 755 $(DESTDIR)$(gnomercdir); \
  	fi
  
@@ -48,5 +42,8 @@ $NetBSD: patch-ae,v 1.9 2005/10/22 22:07:32 minskim Exp $
 -	fi
 -
  	system=`uname`; \
- 	if test -f /usr/include/security/pam_appl.h; then \
+-	if test -f /usr/include/security/pam_appl.h; then \
++	if false; then \
  	  if test '!' -d $(DESTDIR)$(PAM_PREFIX)/pam.d; then \
+ 		$(mkinstalldirs) $(DESTDIR)$(PAM_PREFIX)/pam.d; \
+ 		chmod 755 $(DESTDIR)$(PAM_PREFIX)/pam.d; \
