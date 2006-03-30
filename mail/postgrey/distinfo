@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/04/17 15:42:53 kim Exp $
+$NetBSD: distinfo,v 1.4 2006/03/30 09:06:16 is Exp $
 
-SHA1 (postgrey-1.21.tar.gz) = 3208a9da351eed031e75058e56e7e55b75757ba3
-RMD160 (postgrey-1.21.tar.gz) = 2b9b24d9a7e23a0c4a4fff493e0a973fcc9f53a1
-Size (postgrey-1.21.tar.gz) = 25934 bytes
+SHA1 (postgrey-1.24.tar.gz) = 3bc93536a4f49462f77ed69dd32ecd9884912c25
+RMD160 (postgrey-1.24.tar.gz) = 232c8fb70370f85ccd4542a11ae2880386a47e1c
+Size (postgrey-1.24.tar.gz) = 27444 bytes
