@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2006/01/20 13:32:35 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/03/30 21:17:48 jmmv Exp $
 share/gnome-background-properties/gnome-branded.xml
+share/gnome-background-properties/gnome-nature.xml
 share/gnome-background-properties/gnome-tiles.xml
 share/gnome-background-properties/gnome-translucent.xml
 ${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/gnome-backgrounds.mo
@@ -31,6 +32,7 @@ ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/ky/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-backgrounds.mo
@@ -53,19 +55,20 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-backgrounds.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/gnome-backgrounds.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-backgrounds.mo
-share/pixmaps/backgrounds/gnome/branded/GNOME-Aqua.jpg
-share/pixmaps/backgrounds/gnome/branded/GNOME-FraserIsland.jpg
-share/pixmaps/backgrounds/gnome/branded/GNOME-Redblurred.jpg
-share/pixmaps/backgrounds/gnome/branded/GNOME-Weirdcolours.jpg
-share/pixmaps/backgrounds/gnome/tiles/alien-artifact-trans.png
-share/pixmaps/backgrounds/gnome/tiles/cow-trans.png
-share/pixmaps/backgrounds/gnome/tiles/tiles-trans.png
+share/pixmaps/backgrounds/gnome/branded/GNOME-Curves.png
+share/pixmaps/backgrounds/gnome/nature/FreshFlower.jpg
+share/pixmaps/backgrounds/gnome/nature/GreenMeadow.jpg
+share/pixmaps/backgrounds/gnome/nature/OpenFlower.jpg
+share/pixmaps/backgrounds/gnome/tiles/pattern-boats.svg
+share/pixmaps/backgrounds/gnome/tiles/pattern-clouds.svg
+share/pixmaps/backgrounds/gnome/tiles/pattern-stars.svg
 share/pixmaps/backgrounds/gnome/translucent/ellipsis.svg
-share/pixmaps/backgrounds/gnome/translucent/rects.svg
 share/pixmaps/backgrounds/gnome/translucent/tentacles.svg
 @dirrm share/pixmaps/backgrounds/gnome/translucent
 @dirrm share/pixmaps/backgrounds/gnome/tiles
+@dirrm share/pixmaps/backgrounds/gnome/nature
 @dirrm share/pixmaps/backgrounds/gnome/branded
 @dirrm share/pixmaps/backgrounds/gnome
 @dirrm share/pixmaps/backgrounds
