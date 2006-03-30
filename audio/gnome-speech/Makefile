@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2006/03/04 21:28:55 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/03/30 21:27:25 jmmv Exp $
 #
 
-DISTNAME=	gnome-speech-0.3.9
-PKGREVISION=	2
+DISTNAME=	gnome-speech-0.3.10
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-speech/0.3/}
 EXTRACT_SUFX=	.tar.bz2
@@ -26,6 +25,7 @@ CONFIGURE_ARGS+=	JAVAC=no JAVA=no IDLJ=no JAB=no
 PKGCONFIG_OVERRIDE+=    gnome-speech-1.0.pc.in
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
