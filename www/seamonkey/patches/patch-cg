@@ -1,0 +1,84 @@
+$NetBSD: patch-cg,v 1.1.1.1 2006/03/30 19:15:51 ghen Exp $
+
+--- extensions/transformiix/source/base/Double.cpp.orig	2004-06-17 02:12:42.000000000 +0200
++++ extensions/transformiix/source/base/Double.cpp
+@@ -49,6 +49,38 @@
+  * Utility class for doubles
+  */
+ 
++#if defined(INFINITY) && defined(NAN)
++double Double::NaN()
++{
++	return NAN;
++}
++
++double Double::PositiveInfinity()
++{
++	return INFINITY;
++}
++
++double Double::NegativeInfinity()
++{
++	return -INFINITY;
++}
++
++MBool Double::isInfinite(double aDbl)
++{
++	return isinf(aDbl);
++}
++
++MBool Double::isNaN(double aDbl)
++{
++	return isnan(aDbl);
++}
++
++MBool Double::isNeg(double aDbl)
++{
++	return aDbl<0.0;
++}
++#else	/* pre INFINITY C environment */
++
+ //A trick to handle IEEE floating point exceptions on FreeBSD - E.D.
+ #ifdef __FreeBSD__
+ #include <ieeefp.h>
+@@ -128,9 +160,20 @@ const PRUint32 infMask[2] =    {0, TX_DO
+ const PRUint32 negInfMask[2] = {0, TX_DOUBLE_HI32_EXPMASK | TX_DOUBLE_HI32_SIGNBIT};
+ #endif
+ 
+-const double Double::NaN = *((double*)nanMask);
+-const double Double::POSITIVE_INFINITY = *((double*)infMask);
+-const double Double::NEGATIVE_INFINITY = *((double*)negInfMask);
++double Double::NaN()
++{
++	return *((double*)nanMask);
++}
++
++double Double::PositiveInfinity()
++{
++	return *((double*)infMask);
++}
++
++double Double::NegativeInfinity()
++{
++	return *((double*)negInfMask);
++}
+ 
+ /*
+  * Determines whether the given double represents positive or negative
+@@ -158,6 +201,7 @@ MBool Double::isNeg(double aDbl)
+ {
+     return (TX_DOUBLE_HI32(aDbl) & TX_DOUBLE_HI32_SIGNBIT) != 0;
+ }
++#endif	/* C environment has INFINITY and NAN */
+ 
+ /*
+  * Converts the given String to a double, if the String value does not
+@@ -245,7 +289,7 @@ public:
+     {
+         if (mState == eIllegal || mBuffer.IsEmpty() ||
+             (mBuffer.Length() == 1 && mBuffer[0] == '.')) {
+-            return Double::NaN;
++            return Double::NaN();
+         }
+         return mSign*PR_strtod(mBuffer.get(), 0);
+     }
