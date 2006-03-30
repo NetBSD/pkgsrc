@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2005/06/01 18:03:21 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2006/03/30 18:06:18 jlam Exp $
 
 BUILTIN_PKG:=	skey
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.H_SKEY=	/usr/include/skey.h
 ###
 .if !defined(IS_BUILTIN.skey)
 IS_BUILTIN.skey=	no
-.  if empty(H_SKEY:M${LOCALBASE}/*) && exists(${H_SKEY})
+.  if empty(H_SKEY:M__nonexistent__) && empty(H_SKEY:M${LOCALBASE}/*)
 IS_BUILTIN.skey=	yes
 .  endif
 .endif
@@ -25,7 +25,7 @@ MAKEVARS+=	IS_BUILTIN.skey
 ###
 .if !defined(BUILTIN_PKG.skey) && \
     !empty(IS_BUILTIN.skey:M[yY][eE][sS) && \
-    exists(${H_SKEY})
+    empty(H_SKEY:M__nonexistent__)
 # XXX
 # XXX Consider the native skey to be skey-1.1.5.
 # XXX

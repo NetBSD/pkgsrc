@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2005/06/01 18:03:21 jlam Exp $
+# $NetBSD: builtin.mk,v 1.7 2006/03/30 18:06:18 jlam Exp $
 
 BUILTIN_PKG:=	tcp_wrappers
 
@@ -14,8 +14,8 @@ BUILTIN_FIND_FILES.H_TCP_WRAPPERS=	/usr/include/tcpd.h
 ###
 .if !defined(IS_BUILTIN.tcp_wrappers)
 IS_BUILTIN.tcp_wrappers=	no
-.  if empty(H_TCP_WRAPPERS:M${LOCALBASE}/*) && \
-      exists(${H_TCP_WRAPPERS}) && \
+.  if empty(H_TCP_WRAPPERS:M__nonexistent__) && \
+      empty(H_TCP_WRAPPERS:M${LOCALBASE}/*) && \
       !empty(BUILTIN_LIB_FOUND.wrap:M[yY][eE][sS])
 IS_BUILTIN.tcp_wrappers=	yes
 .  endif

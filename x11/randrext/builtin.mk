@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2005/06/01 18:03:30 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2006/03/30 18:06:19 jlam Exp $
 
 BUILTIN_PKG:=	randrext
 
@@ -18,7 +18,7 @@ IS_BUILTIN.randrext=	no
 # we'll consider this X11 package to be built-in even if it's a part
 # of one of the pkgsrc-installed X11 distributions.
 #  
-.  if exists(${H_RANDR})
+.  if empty(H_RANDR:M__nonexistent__)
 IS_BUILTIN.randrext=	yes
 .  endif
 .endif
@@ -30,7 +30,7 @@ MAKEVARS+=      IS_BUILTIN.randrext
 ###
 .if !defined(BUILTIN_PKG.randrext) && \
     !empty(IS_BUILTIN.randrext:M[yY][eE][sS]) && \
-    exists(${H_RANDR})
+    empty(H_RANDR:M__nonexistent__)
 BUILTIN_VERSION.randrext!=						\
 	${AWK} '/\#define[ 	]*RANDR_MAJOR/ { M = $$3 }		\
 		/\#define[ 	]*RANDR_MINOR/ { m = "."$$3 }		\

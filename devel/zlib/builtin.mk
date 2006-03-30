@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2005/06/01 18:02:45 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2006/03/30 18:06:17 jlam Exp $
 
 BUILTIN_PKG:=	zlib
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.H_ZLIB=	/usr/include/zlib.h
 ###
 .if !defined(IS_BUILTIN.zlib)
 IS_BUILTIN.zlib=	no
-.  if empty(H_ZLIB:M${LOCALBASE}/*) && exists(${H_ZLIB})
+.  if empty(H_ZLIB:M__nonexistent__) && empty(H_ZLIB:M${LOCALBASE}/*)
 IS_BUILTIN.zlib=	yes
 .  endif
 .endif
@@ -25,7 +25,7 @@ MAKEVARS+=	IS_BUILTIN.zlib
 ###
 .if !defined(BUILTIN_PKG.zlib) && \
     !empty(IS_BUILTIN.zlib:M[yY][eE][sS]) && \
-    exists(${H_ZLIB})
+    empty(H_ZLIB:M__nonexistent__)
 BUILTIN_VERSION.zlib!=							\
 	${AWK} '/\#define[ 	]*ZLIB_VERSION/ {			\
 			vers = $$3;					\

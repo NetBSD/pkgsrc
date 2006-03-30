@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2005/10/16 19:53:36 tonio Exp $
+# $NetBSD: builtin.mk,v 1.4 2006/03/30 18:06:19 jlam Exp $
 
 BUILTIN_PKG:=	xorg-libs
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.CF_XORG=	${X11BASE}/lib/X11/config/xorg.cf
 ###
 .if !defined(IS_BUILTIN.xorg-libs)
 IS_BUILTIN.xorg-libs=	no
-.  if empty(CF_XORG:M${LOCALBASE}/*) && exists(${CF_XORG})
+.  if empty(CF_XORG:M__nonexistent__) && empty(CF_XORG:M${LOCALBASE}/*)
 IS_BUILTIN.xorg-libs=	yes
 .  endif
 .endif
@@ -25,7 +25,7 @@ MAKEVARS+=	IS_BUILTIN.xorg-libs
 ###
 .if !defined(BUILTIN_PKG.xorg-libs) && \
     !empty(IS_BUILTIN.xorg-libs:M[yY][eE][sS]) && \
-    exists(${CF_XORG})
+    empty(CF_XORG:M__nonexistent__)
 .  include "${BUILDLINK_PKGSRCDIR.xorg-libs}/version.mk"
 BUILTIN_PKG.xorg-libs=	xorg-libs-${BUILTIN_X11_VERSION.xorg}
 .endif

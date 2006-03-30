@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2005/06/01 18:03:28 jlam Exp $
+# $NetBSD: builtin.mk,v 1.5 2006/03/30 18:06:19 jlam Exp $
 
 BUILTIN_PKG:=	fixesext
 
@@ -21,7 +21,8 @@ IS_BUILTIN.fixesext=	no
 # we'll consider this X11 package to be built-in even if it's a part
 # of one of the pkgsrc-installed X11 distributions.
 #  
-.  if exists(${H_XFIXESPROTO}) && exists(${H_XFIXESWIRE})
+.  if empty(H_XFIXESPROTO:M__nonexistent__) && \
+      empty(H_XFIXESWIRE:M__nonexistent__)
 IS_BUILTIN.fixesext=	yes
 .  endif
 .endif

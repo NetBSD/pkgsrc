@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2005/06/01 18:03:21 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2006/03/30 18:06:18 jlam Exp $
 
 BUILTIN_PKG:=	file
 
@@ -14,7 +14,7 @@ BUILTIN_FIND_GREP.H_FILE=	magic_file
 ###
 .if !defined(IS_BUILTIN.file)
 IS_BUILTIN.file=	no
-.  if empty(H_FILE:M${LOCALBASE}/*) && exists(${H_FILE})
+.  if empty(H_FILE:M__nonexistent__) && empty(H_FILE:M${LOCALBASE}/*)
 IS_BUILTIN.file=	yes
 .  endif
 .endif

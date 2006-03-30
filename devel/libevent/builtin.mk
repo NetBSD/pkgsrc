@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2005/06/01 18:02:44 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2006/03/30 18:06:17 jlam Exp $
 
 BUILTIN_PKG:=	libevent
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.H_LIBEVENT=	/usr/include/event.h
 ###
 .if !defined(IS_BUILTIN.libevent)
 IS_BUILTIN.libevent=	no
-.  if empty(H_LIBEVENT:M${LOCALBASE}/*) && exists(${H_LIBEVENT})
+.  if empty(H_LIBEVENT:M__nonexistent__) && empty(H_LIBEVENT:M${LOCALBASE}/*)
 IS_BUILTIN.libevent=	yes
 .  endif
 .endif	# IS_BUILTIN.libevent

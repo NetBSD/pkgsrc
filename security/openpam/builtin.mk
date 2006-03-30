@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2005/06/09 06:07:29 jlam Exp $
+# $NetBSD: builtin.mk,v 1.5 2006/03/30 18:06:18 jlam Exp $
 
 BUILTIN_PKG:=	openpam
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.H_OPENPAM=	/usr/include/security/openpam_version.h
 ###
 .if !defined(IS_BUILTIN.openpam)
 IS_BUILTIN.openpam=	no
-.  if empty(H_OPENPAM:M${LOCALBASE}/*) && exists(${H_OPENPAM})
+.  if empty(H_OPENPAM:M__nonexistent__) && empty(H_OPENPAM:M${LOCALBASE}/*)
 IS_BUILTIN.openpam=	yes
 .  endif
 .endif
@@ -25,7 +25,7 @@ MAKEVARS+=	IS_BUILTIN.openpam
 ###
 .if !defined(BUILTIN_PKG.openpam) && \
     !empty(IS_BUILTIN.openpam:M[yY][eE][sS]) && \
-    exists(${H_OPENPAM})
+    empty(H_OPENPAM:M__nonexistent__)
 BUILTIN_VERSION.openpam!=	\
 	${AWK} '/\#define[ 	]*_OPENPAM_VERSION[ 	]/ {print $$3; }' \
 		${H_OPENPAM}

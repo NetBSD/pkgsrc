@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2005/06/05 09:25:37 jlam Exp $
+# $NetBSD: builtin.mk,v 1.5 2006/03/30 18:06:17 jlam Exp $
 
 BUILTIN_PKG:=	getopt
 
@@ -14,7 +14,7 @@ BUILTIN_FIND_GREP.H_GETOPT=	int.*getopt_long
 ###
 .if !defined(IS_BUILTIN.getopt)
 IS_BUILTIN.getopt=	no
-.  if empty(H_GETOPT:M${LOCALBASE}/*) && exists(${H_GETOPT})
+.  if empty(H_GETOPT:M__nonexistent__) && empty(H_GETOPT:M${LOCALBASE}/*)
 IS_BUILTIN.getopt=	yes
 .  endif
 .endif	# IS_BUILTIN.getopt

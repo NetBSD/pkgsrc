@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2006/02/27 14:20:47 drochner Exp $
+# $NetBSD: builtin.mk,v 1.13 2006/03/30 18:06:18 jlam Exp $
 
 BUILTIN_PKG:=	libpcap
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.H_LIBPCAP=	/usr/include/pcap.h
 ###
 .if !defined(IS_BUILTIN.libpcap)
 IS_BUILTIN.libpcap=	no
-.  if empty(H_LIBPCAP:M${LOCALBASE}/*) && exists(${H_LIBPCAP})
+.  if empty(H_LIBPCAP:M__nonexistent__) && empty(H_LIBPCAP:M${LOCALBASE}/*)
 IS_BUILTIN.libpcap=	yes
 .  endif
 .endif
@@ -25,7 +25,7 @@ MAKEVARS+=	IS_BUILTIN.libpcap
 ###
 .if !defined(BUILTIN_PKG.libpcap) && \
     !empty(IS_BUILTIN.libpcap:M[yY][eE][sS]) && \
-    exists(${H_LIBPCAP})
+    empty(H_LIBPCAP:M__nonexistent__)
 # libpcap>=0.9.3: pcap_setdirection added (don't use pcap_inject, this
 #  was hacked into the NetBSD version of 0.8.3)
 _BLTN_PCAP_093!=	\

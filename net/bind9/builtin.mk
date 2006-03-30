@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2005/06/26 04:05:41 jlam Exp $
+# $NetBSD: builtin.mk,v 1.10 2006/03/30 18:06:18 jlam Exp $
 
 BUILTIN_PKG:=	bind
 
@@ -13,7 +13,8 @@ BUILTIN_FIND_LIBS:=		bind
 ### system.
 ###
 .if !defined(BUILTIN_VERSION.bind) && \
-    empty(EXE_NAMED:M${LOCALBASE}/*) && exists(${EXE_NAMED})
+    empty(EXE_NAMED:M__nonexistent__) && \
+    empty(EXE_NAMED:M${LOCALBASE}/*)
 BUILTIN_VERSION.bind!=	\
 	${EXE_NAMED} -v 2>/dev/null | ${HEAD} -1 |			\
 	${AWK} 'BEGIN { v = "4.9.11"; }					\

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2005/06/01 18:03:21 jlam Exp $
+# $NetBSD: builtin.mk,v 1.5 2006/03/30 18:06:18 jlam Exp $
 
 BUILTIN_PKG:=	libdes
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.H_LIBDES=	/usr/include/libdes.h /usr/include/des.h
 ###
 .if !defined(IS_BUILTIN.libdes)
 IS_BUILTIN.libdes=	no
-.  if empty(H_LIBDES:M${LOCALBASE}/*) && exists(${H_LIBDES})
+.  if empty(H_LIBDES:M__nonexistent__) && empty(H_LIBDES:M${LOCALBASE}/*)
 IS_BUILTIN.libdes=	yes
 .  endif
 .endif

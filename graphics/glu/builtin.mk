@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2006/01/19 12:53:17 adam Exp $
+# $NetBSD: builtin.mk,v 1.10 2006/03/30 18:06:17 jlam Exp $
 
 BUILTIN_PKG:=	glu
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.H_GLU=	${X11BASE}/include/GL/glu.h
 ###
 .if !defined(IS_BUILTIN.glu)
 IS_BUILTIN.glu=	no
-.  if exists(${H_GLU})
+.  if empty(H_GLU:M__nonexistent__)
 BUILTIN_IMAKE_CHECK:=	glu:BuildGLULibrary
 .    include "../../mk/buildlink3/imake-check.mk"
 IS_BUILTIN.glu=		${BUILTIN_IMAKE_CHECK.glu}
@@ -27,7 +27,7 @@ MAKEVARS+=	IS_BUILTIN.glu
 ###
 .if !defined(BUILTIN_PKG.glu) && \
     !empty(IS_BUILTIN.glu:M[yY][eE][sS]) && \
-    exists(${H_GLU})
+    empty(H_GLU:M__nonexistent__)
 .  include "../../graphics/Mesa/version.mk"
 BUILTIN_PKG.glu=	glu-${BUILTIN_VERSION.Mesa}
 .endif

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.14 2005/06/06 01:30:56 jlam Exp $
+# $NetBSD: builtin.mk,v 1.15 2006/03/30 18:06:17 jlam Exp $
 
 BUILTIN_PKG:=	iconv
 
@@ -15,7 +15,7 @@ BUILTIN_FIND_GREP.H_ICONV=	GNU LIBICONV Library
 ###
 .if !defined(IS_BUILTIN.iconv)
 IS_BUILTIN.iconv=	no
-.  if empty(H_ICONV:M${LOCALBASE}/*) && exists(${H_ICONV}) && \
+.  if empty(H_ICONV:M__nonexistent__) && empty(H_ICONV:M${LOCALBASE}/*) && \
       !empty(BUILTIN_LIB_FOUND.iconv:M[yY][eE][sS])
 IS_BUILTIN.iconv=	yes
 .  endif
@@ -28,7 +28,7 @@ MAKEVARS+=	IS_BUILTIN.iconv
 ###
 .if !defined(BUILTIN_PKG.iconv) && \
     !empty(IS_BUILTIN.iconv:M[yY][eE][sS]) && \
-    exists(${H_ICONV})
+    empty(H_ICONV:M__nonexistent__)
 BUILTIN_VERSION.iconv!=							\
 	${AWK} 'BEGIN { hex="0123456789abcdef" }			\
 		/\#define[ 	]*_LIBICONV_VERSION[ 	]/ {		\

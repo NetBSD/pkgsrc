@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2005/06/03 19:13:35 jlam Exp $
+# $NetBSD: builtin.mk,v 1.13 2006/03/30 18:06:17 jlam Exp $
 
 BUILTIN_PKG:=	Xft2
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.H_XFT2=	${X11BASE}/include/X11/Xft/Xft.h
 ###
 .if !defined(IS_BUILTIN.Xft2)
 IS_BUILTIN.Xft2=	no
-.  if exists(${H_XFT2})
+.  if empty(H_XFT2:M__nonexistent__)
 BUILTIN_IMAKE_CHECK:=	Xft2:BuildXftLibrary
 .    include "../../mk/buildlink3/imake-check.mk"
 IS_BUILTIN.Xft2=	${BUILTIN_IMAKE_CHECK.Xft2}
@@ -27,7 +27,7 @@ MAKEVARS+=	IS_BUILTIN.Xft2
 ###
 .if !defined(BUILTIN_PKG.Xft2) && \
     !empty(IS_BUILTIN.Xft2:M[yY][eE][sS]) && \
-    exists(${H_XFT2})
+    empty(H_XFT2:M__nonexistent__)
 #
 # Extract the version number from the header file, but if it's not
 # there, then pretend it's from version 2.0.
