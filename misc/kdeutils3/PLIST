@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2005/12/11 11:45:44 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/03/30 02:50:18 markd Exp $
 bin/ark
 bin/irkick
 bin/kcalc
@@ -121,6 +121,7 @@ share/doc/kde/HTML/en/ark/man-ark.1.docbook
 share/doc/kde/HTML/en/irkick/common
 share/doc/kde/HTML/en/irkick/index.cache.bz2
 share/doc/kde/HTML/en/irkick/index.docbook
+share/doc/kde/HTML/en/kcalc/commands.docbook
 share/doc/kde/HTML/en/kcalc/common
 share/doc/kde/HTML/en/kcalc/index.cache.bz2
 share/doc/kde/HTML/en/kcalc/index.docbook
