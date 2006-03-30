@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2006/03/06 00:18:12 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2006/03/30 21:38:11 jmmv Exp $
 #
 
-DISTNAME=	libgnomeui-2.12.1
-PKGREVISION=	1
+DISTNAME=	libgnomeui-2.14.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeui/2.12/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomeui/2.14/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -28,7 +27,8 @@ PKGCONFIG_BASE=		${WRKSRC}/libgnomeui/libgnomeui-2.0.pc
 PKGCONFIG_OVERRIDE=	${PKGCONFIG_BASE}.in
 
 BUILDLINK_DEPENDS.gtk2=		gtk2+>=2.8.0
-BUILDLINK_DEPENDS.libgnome=	libgnome>=2.12.0.1
+BUILDLINK_DEPENDS.libbonoboui=	libgnome>=2.13.1
+BUILDLINK_DEPENDS.libgnome=	libgnome>=2.13.7
 
 # Needed because part of the pc files doesn't get filled in till after
 # configure does its pass
@@ -41,6 +41,7 @@ post-configure:
 .include "../../audio/esound/buildlink3.mk"
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
