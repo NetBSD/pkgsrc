@@ -105,6 +105,7 @@ gucharmap
 halfops			Halfops are similar to plain ops, but can't kick/deop plain ops.
 hdf5	
 homedir	
+hping-suid		Install hping executable setuid root.
 hpn-patch	
 i586-optimized		Optimize for i586 (only).
 iconv	
