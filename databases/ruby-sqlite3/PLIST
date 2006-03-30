@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/30 16:21:14 minskim Exp $
+${RUBY_SITELIBDIR}/sqlite3.rb
+${RUBY_SITELIBDIR}/sqlite3/constants.rb
+${RUBY_SITELIBDIR}/sqlite3/database.rb
+${RUBY_SITELIBDIR}/sqlite3/driver/dl/api.rb
+${RUBY_SITELIBDIR}/sqlite3/driver/dl/driver.rb
+${RUBY_SITELIBDIR}/sqlite3/driver/native/driver.rb
+${RUBY_SITELIBDIR}/sqlite3/errors.rb
+${RUBY_SITELIBDIR}/sqlite3/pragmas.rb
+${RUBY_SITELIBDIR}/sqlite3/resultset.rb
+${RUBY_SITELIBDIR}/sqlite3/statement.rb
+${RUBY_SITELIBDIR}/sqlite3/translator.rb
+${RUBY_SITELIBDIR}/sqlite3/value.rb
+${RUBY_SITELIBDIR}/sqlite3/version.rb
+@dirrm ${RUBY_SITELIBDIR}/sqlite3/driver/native
+@dirrm ${RUBY_SITELIBDIR}/sqlite3/driver/dl
+@dirrm ${RUBY_SITELIBDIR}/sqlite3/driver
+@dirrm ${RUBY_SITELIBDIR}/sqlite3
