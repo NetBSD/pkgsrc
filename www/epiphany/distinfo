@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2006/01/20 13:33:42 jmmv Exp $
+$NetBSD: distinfo,v 1.26 2006/03/30 21:26:06 jmmv Exp $
 
-SHA1 (epiphany-1.8.3.tar.bz2) = 980a8b60c406099377e5f58b950362434f8395ab
-RMD160 (epiphany-1.8.3.tar.bz2) = f1086c551632ece29f056fad9a409f0e903c6aee
-Size (epiphany-1.8.3.tar.bz2) = 3355417 bytes
+SHA1 (epiphany-2.14.0.tar.bz2) = d6a11525297dbba0195f7bdd5f0fc0fb6f8626cb
+RMD160 (epiphany-2.14.0.tar.bz2) = 01dc22da1fc66eb00b28ebdc436e9b1438472623
+Size (epiphany-2.14.0.tar.bz2) = 3560639 bytes
