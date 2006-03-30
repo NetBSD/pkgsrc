@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2006/03/21 06:00:45 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/03/30 21:27:42 jmmv Exp $
 #
 
-DISTNAME=	dasher-3.2.18
-PKGREVISION=	5
+DISTNAME=	dasher-4.0.0
 CATEGORIES=	editors gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dasher/3.2/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dasher/4.0/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,6 +15,13 @@ USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+# Needed for ftime(3).
+LIBS+=			-lcompat
+.endif
 
 .include "../../audio/gnome-speech/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
@@ -29,6 +35,7 @@ USE_PKGLOCALEDIR=	yes
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
