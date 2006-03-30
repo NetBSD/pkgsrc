@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.2 2005/03/22 10:55:13 jmmv Exp $
+$NetBSD: patch-aa,v 1.3 2006/03/30 20:57:08 jmmv Exp $
 
---- bus/Makefile.in.orig	2005-01-12 23:21:12.000000000 +0100
+--- bus/Makefile.in.orig	2006-02-24 17:36:50.000000000 +0100
 +++ bus/Makefile.in
-@@ -337,11 +337,11 @@ sbindir = @sbindir@
- sharedstatedir = @sharedstatedir@
- sysconfdir = @sysconfdir@
- target_alias = @target_alias@
+@@ -374,11 +374,11 @@ target_alias = @target_alias@
+ target_cpu = @target_cpu@
+ target_os = @target_os@
+ target_vendor = @target_vendor@
 -configdir = $(sysconfdir)/dbus-1
 +configdir = $(datadir)/examples/@PACKAGE@
  INCLUDES = -I$(top_srcdir) $(DBUS_BUS_CFLAGS)				\
- 	-DDAEMON_NAME=\"dbus-daemon-1\"  -DDBUS_COMPILATION		\
+ 	-DDAEMON_NAME=\"dbus-daemon\"  -DDBUS_COMPILATION		\
 -	-DDBUS_SYSTEM_CONFIG_FILE=\""$(configdir)/system.conf"\"	\
 -	-DDBUS_SESSION_CONFIG_FILE=\""$(configdir)/session.conf"\"
 +	-DDBUS_SYSTEM_CONFIG_FILE=\""$(sysconfdir)/system.conf"\"	\
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.2 2005/03/22 10:55:13 jmmv Exp $
  
  EFENCE = 
  CONFIG_IN_FILES = \
-@@ -899,8 +899,6 @@ clean-local:
+@@ -939,8 +939,6 @@ clean-local:
  	/bin/rm *.bb *.bbg *.da *.gcov || true
  
  install-data-hook:

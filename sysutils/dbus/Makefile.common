@@ -1,10 +1,7 @@
-# $NetBSD: Makefile.common,v 1.12 2006/02/11 14:30:29 rxg Exp $
+# $NetBSD: Makefile.common,v 1.13 2006/03/30 20:57:08 jmmv Exp $
 #
 
-# XXX Do not update to 0.30 or above yet.  The API in the 0.2x series is
-# XXX the most commonly used ATM.
-
-DBUS_VERSION=	0.23.4
+DBUS_VERSION=	0.61
 
 DISTNAME=	dbus-${DBUS_VERSION}
 CATEGORIES=	sysutils
@@ -21,20 +18,26 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 
-PKGCONFIG_OVERRIDE=	dbus-1.pc
-PKGCONFIG_OVERRIDE+=	dbus-glib-1.pc
-PKGCONFIG_OVERRIDE+=	dbus-sharp.pc
+PKGCONFIG_OVERRIDE=	dbus-1.pc.in
+PKGCONFIG_OVERRIDE+=	dbus-glib-1.pc.in
+PKGCONFIG_OVERRIDE+=	dbus-sharp.pc.in
 
-CONFIGURE_ARGS+=	--disable-qt
-CONFIGURE_ARGS+=	--disable-glib
-CONFIGURE_ARGS+=	--disable-gtk
-CONFIGURE_ARGS+=	--disable-xml-docs
+CONFIGURE_ARGS+=	--disable-asserts
+CONFIGURE_ARGS+=	--disable-dnotify
 CONFIGURE_ARGS+=	--disable-doxygen-docs
 CONFIGURE_ARGS+=	--disable-gcj
+CONFIGURE_ARGS+=	--disable-gcov
+CONFIGURE_ARGS+=	--disable-glib
+CONFIGURE_ARGS+=	--disable-gtk
 CONFIGURE_ARGS+=	--disable-mono
 CONFIGURE_ARGS+=	--disable-mono-docs
 CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ARGS+=	--disable-qt
+CONFIGURE_ARGS+=	--disable-qt-debug
+CONFIGURE_ARGS+=	--disable-qt3
 CONFIGURE_ARGS+=	--disable-selinux
+CONFIGURE_ARGS+=	--disable-tests
+CONFIGURE_ARGS+=	--disable-xml-docs
 CONFIGURE_ARGS+=	--enable-checks
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

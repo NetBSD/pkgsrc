@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2004/10/12 08:30:46 jmmv Exp $
-bin/dbus-glib-tool
+@comment $NetBSD: PLIST,v 1.3 2006/03/30 20:57:08 jmmv Exp $
+bin/dbus-binding-tool
 bin/dbus-monitor
+include/dbus-1.0/dbus/dbus-glib-bindings.h
 include/dbus-1.0/dbus/dbus-glib-error-enum.h
 include/dbus-1.0/dbus/dbus-glib-lowlevel.h
 include/dbus-1.0/dbus/dbus-glib.h
+include/dbus-1.0/dbus/dbus-gtype-specialized.h
 lib/libdbus-glib-1.la
 lib/pkgconfig/dbus-glib-1.pc
 man/man1/dbus-monitor.1

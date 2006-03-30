@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:10:49 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/03/30 20:57:08 jmmv Exp $
 #
 
 DBUS_INTERFACE=	glib
-DBUS_DIRS=	dbus glib tools
+DBUS_DIRS=	dbus bus glib tools
 
 .include "../../sysutils/dbus/Makefile.common"
-PKGREVISION=	2
-
+CONFIGURE_ARGS+=--enable-tests
 # We can't install from within the 'dbus' nor 'tools' directory automatically
 # because we'd get a lot of other stuff installed (overriding files in the
 # dbus package).
@@ -20,6 +19,8 @@ PRINT_PLIST_AWK+=	/^@dirrm include\/dbus-1.0\/dbus$$/ \
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/dbus-1.0/dbus
 	${INSTALL_DATA} ${WRKSRC}/dbus/dbus-glib*.h \
+		${PREFIX}/include/dbus-1.0/dbus
+	${INSTALL_DATA} ${WRKSRC}/tools/dbus-glib-bindings.h \
 		${PREFIX}/include/dbus-1.0/dbus
 	${INSTALL_DATA} ${WRKSRC}/dbus-glib-1.pc \
 		${PREFIX}/lib/pkgconfig/dbus-glib-1.pc
