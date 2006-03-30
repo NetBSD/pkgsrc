@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.108 2006/03/21 06:00:53 jlam Exp $
+# $NetBSD: Makefile,v 1.109 2006/03/30 02:36:26 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
-PKGREVISION=	4
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -29,11 +28,11 @@ SGML_CATALOGS+=		${PREFIX}/share/kde/apps/ksgmltools2/docbook/xml-dtd-4.2/docboo
 USE_TOOLS+=		gawk:pkgsrc
 .endif
 
-LIBS.NetBSD+=			${EXPORT_SYMBOLS_LDFLAGS}
+LIBS.NetBSD+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 REQD_DIRS+=	${KDE3_DIRS:O:S/^/${PREFIX}\//}
 
-REPLACE_PERL= \
+REPLACE_PERL+= \
 	dcop/dcopidlng/kalyptus \
 	kio/proxytype.pl \
 	kio/useragent.pl \
@@ -44,18 +43,18 @@ UNLIMIT_RESOURCES=	datasize memorysize
 
 SUBST_CLASSES+=			kdelibsfix
 SUBST_STAGE.kdelibsfix=		pre-configure
-SUBST_MESSAGE.kdelibsfix=	"Fixing hardcoded paths."
+SUBST_MESSAGE.kdelibsfix=	Fixing hardcoded paths.
 SUBST_FILES.kdelibsfix= \
 	kdecore/kstandarddirs.cpp \
 	kdecore/ktimezones.cpp \
 	kdeui/ksconfig.cpp \
 	kio/kssl/kopenssl.cc
-SUBST_SED.kdelibsfix=		-e 's:@LOCALBASE@:${LOCALBASE}:g' \
-	-e 's:@PKGLOCALEDIR@:${PKGLOCALEDIR}:g'
+SUBST_SED.kdelibsfix=		-e 's:@LOCALBASE@:${LOCALBASE}:g'
+SUBST_SED.kdelibsfix+=		-e 's:@PKGLOCALEDIR@:${PKGLOCALEDIR}:g'
 
 SUBST_CLASSES+=		kdemagic
 SUBST_STAGE.kdemagic=	pre-configure
-SUBST_MESSAGE.kdemagic=	"Add LOCALBASE paths to magic file."
+SUBST_MESSAGE.kdemagic=	Add LOCALBASE paths to magic file.
 SUBST_FILES.kdemagic=	kio/magic
 SUBST_SED.kdemagic=	-n -e 'p' -e 's:/usr/local/bin:${LOCALBASE}/bin:p'
 
