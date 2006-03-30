@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2005/12/11 11:40:02 markd Exp $
+@comment $NetBSD: PLIST,v 1.23 2006/03/30 02:52:17 markd Exp $
 bin/akregator
 bin/egroupwarewizard
 bin/exchangewizard
@@ -298,7 +298,6 @@ lib/kde3/kabc_kolab.la
 lib/kde3/kabc_newexchange.la
 lib/kde3/kabc_slox.la
 lib/kde3/kabc_xmlrpc.la
-lib/kde3/kcal_blogging.la
 lib/kde3/kcal_groupdav.la
 lib/kde3/kcal_groupwise.la
 lib/kde3/kcal_kabc.la
@@ -367,8 +366,8 @@ lib/kde3/libknodepart.la
 lib/kde3/libkolabwizard.la
 lib/kde3/libkontact_akregator.la
 lib/kde3/libkontact_journalplugin.la
-lib/kde3/libkontact_karm.la
 lib/kde3/libkontact_kaddressbookplugin.la
+lib/kde3/libkontact_karm.la
 lib/kde3/libkontact_kmailplugin.la
 lib/kde3/libkontact_knodeplugin.la
 lib/kde3/libkontact_knotesplugin.la
@@ -412,7 +411,6 @@ lib/libkabckonnector.la
 lib/libkabinterfaces.la
 lib/libkaddressbook.la
 lib/libkcal.la
-lib/libkcal_blogging.la
 lib/libkcal_groupdav.la
 lib/libkcal_groupwise.la
 lib/libkcal_newexchange.la
@@ -1856,7 +1854,6 @@ share/kde/services/kresources/kabc/kabc_ox.desktop
 share/kde/services/kresources/kabc/kabc_slox.desktop
 share/kde/services/kresources/kabc/kabc_xmlrpc.desktop
 share/kde/services/kresources/kabc/kolab.desktop
-share/kde/services/kresources/kcal/blogging.desktop
 share/kde/services/kresources/kcal/exchange.desktop
 share/kde/services/kresources/kcal/imap.desktop
 share/kde/services/kresources/kcal/kabc.desktop
@@ -2049,8 +2046,6 @@ share/kde/servicetypes/kpilotconduit.desktop
 @dirrm share/kde/apps/knode/icons/crystalsvg/22x22
 @dirrm share/kde/apps/knode/icons/crystalsvg/16x16/actions
 @dirrm share/kde/apps/knode/icons/crystalsvg/16x16
-@dirrm share/kde/apps/kmail/icons/crystalsvg/128x128/actions
-@dirrm share/kde/apps/kmail/icons/crystalsvg/128x128
 @dirrm share/kde/apps/knode/icons/crystalsvg
 @dirrm share/kde/apps/knode/icons
 @dirrm share/kde/apps/knode/filters
@@ -2070,6 +2065,8 @@ share/kde/servicetypes/kpilotconduit.desktop
 @dirrm share/kde/apps/kmail/icons/crystalsvg/22x22
 @dirrm share/kde/apps/kmail/icons/crystalsvg/16x16/actions
 @dirrm share/kde/apps/kmail/icons/crystalsvg/16x16
+@dirrm share/kde/apps/kmail/icons/crystalsvg/128x128/actions
+@dirrm share/kde/apps/kmail/icons/crystalsvg/128x128
 @dirrm share/kde/apps/kmail/icons/crystalsvg
 @dirrm share/kde/apps/kmail/icons
 @dirrm share/kde/apps/kmail/about
@@ -2140,9 +2137,6 @@ share/kde/servicetypes/kpilotconduit.desktop
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkpimidentities/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkpimidentities/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkpimidentities
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkpimexchange/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkpimexchange/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkpimexchange
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkpgp/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkpgp/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkpgp
@@ -2155,12 +2149,6 @@ share/kde/servicetypes/kpilotconduit.desktop
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkdepim/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkdepim/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkdepim
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkdenetwork/qgpgme/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkdenetwork/qgpgme/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkdenetwork/qgpgme
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkdenetwork/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkdenetwork/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkdenetwork
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkcal/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkcal/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/libkcal
@@ -2179,9 +2167,6 @@ share/kde/servicetypes/kpilotconduit.desktop
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kpilot/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/kpilot/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/kpilot
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/korganizer/korgac/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/korganizer/korgac/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/korganizer/korgac
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/korganizer/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/korganizer/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/korganizer
@@ -2212,9 +2197,6 @@ share/kde/servicetypes/kpilotconduit.desktop
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kgantt/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/kgantt/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/kgantt
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kfile-plugins/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kfile-plugins/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kfile-plugins
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kdgantt/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/kdgantt/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/kdgantt
@@ -2233,10 +2215,6 @@ share/kde/servicetypes/kpilotconduit.desktop
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kaddressbook/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/kaddressbook/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/kaddressbook
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kabc/kabc2mutt/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kabc/kabc2mutt/html
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kabc/kabc2mutt
-@dirrm share/doc/kde/HTML/en/kdepim-apidocs/kabc
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/certmanager/lib/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/certmanager/lib/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/certmanager/lib
