@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.65 2006/03/21 06:00:45 jlam Exp $
+# $NetBSD: Makefile,v 1.66 2006/03/30 21:32:20 jmmv Exp $
 
-DISTNAME=		gnome-games-2.12.3
-PKGREVISION=		2
+DISTNAME=		gnome-games-2.14.0
 CATEGORIES=		games gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.12/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.14/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -46,7 +45,6 @@ GCONF2_SCHEMAS+=	glines.schemas
 GCONF2_SCHEMAS+=	gnect.schemas
 GCONF2_SCHEMAS+=	gnibbles.schemas
 GCONF2_SCHEMAS+=	gnobots2.schemas
-GCONF2_SCHEMAS+=	gnome-stones.schemas
 GCONF2_SCHEMAS+=	gnometris.schemas
 GCONF2_SCHEMAS+=	gnomine.schemas
 GCONF2_SCHEMAS+=	gnotski.schemas
@@ -72,9 +70,9 @@ BUILDLINK_DEPENDS.librsvg2+=	librsvg2>=2.12.6
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../net/howl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/intltool/buildlink3.mk"
