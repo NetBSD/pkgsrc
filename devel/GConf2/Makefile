@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2006/02/07 19:11:32 minskim Exp $
+# $NetBSD: Makefile,v 1.38 2006/03/30 20:50:02 jmmv Exp $
 #
 
 .include "../../devel/GConf2/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/GConf/GConf2/}
-PKGREVISION=	1
 
 CONFIGURE_ARGS+=	--disable-gtk
 CONFIGURE_ARGS+=	ac_cv_header_ldap_h=no
