@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.102 2006/03/21 06:00:52 jlam Exp $
+# $NetBSD: Makefile,v 1.103 2006/03/30 21:25:48 jmmv Exp $
 #
 
-DISTNAME=	gdm-2.8.0.7
-PKGREVISION=	4
+DISTNAME=	gdm-2.14.0
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.8/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.14/}
 EXTRACT_SUFX=	.tar.bz2
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.README Daemon.png
 
@@ -13,6 +12,8 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
 
 BUILD_USES_MSGFMT=	YES
+
+DEPENDS+=	zenity>=2.14.0:../../x11/zenity
 
 BUILDLINK_DEPENDS.libart2+=	libart2>=2.3.11
 
@@ -35,10 +36,13 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
 CONFIGURE_ENV+=		X11BASE=${X11BASE:Q}
+INSTALL_MAKE_FLAGS+=	GDM_CUSTOM_CONF=${EGDIR}/gdm/custom.conf
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 MAKE_ENV+=		CHMOD=${CHMOD:Q} CHOWN=${CHOWN:Q}
 
-OWN_DIRS=		${PKG_SYSCONFDIR}/dm/Sessions
+OWN_DIRS=		${PKG_SYSCONFDIR}/dm
 OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/Init
+OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/PostLogin
 OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/PostSession
 OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/PreSession
 OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/modules
@@ -46,17 +50,16 @@ OWN_DIRS+=		${VARBASE}/gdm
 OWN_DIRS+=		${VARBASE}/log/gdm
 
 EGDIR=			${PREFIX}/share/examples
-CONF_FILES=		${EGDIR}/dm/Sessions/default.desktop \
-			${PKG_SYSCONFDIR}/dm/Sessions/default.desktop
-.for f in gdm.conf locale.alias \
+CONF_FILES=
+.for f in custom.conf locale.alias \
 	modules/AccessDwellMouseEvents modules/AccessKeyMouseEvents \
 	modules/factory-AccessDwellMouseEvents \
 	modules/factory-AccessKeyMouseEvents
 CONF_FILES+=		${EGDIR}/gdm/${f} \
 			${PKG_SYSCONFDIR}/gdm/${f}
 .endfor
-.for f in Init/Default PostSession/Default PreSession/Default \
-	XKeepsCrashing Xsession
+.for f in Init/Default PostLogin/Default.sample PostSession/Default \
+	PreSession/Default XKeepsCrashing Xsession
 CONF_FILES_PERMS+=	${EGDIR}/gdm/${f} \
 			${PKG_SYSCONFDIR}/gdm/${f} \
 			${ROOT_USER} ${ROOT_GROUP} 0755
@@ -120,6 +123,7 @@ PLIST_SUBST+=		DMX=""
 .else
 PLIST_SUBST+=		DMX="@comment "
 .endif
+PRINT_PLIST_AWK+=	/dmx/ { print "$${DMX}" $$0; next }
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gdm
@@ -129,14 +133,13 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"

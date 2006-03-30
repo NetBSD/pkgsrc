@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.5 2006/03/30 21:25:48 jmmv Exp $
+
+--- daemon/gdmconfig.c.orig	2006-03-13 22:18:24.000000000 +0100
++++ daemon/gdmconfig.c
+@@ -38,6 +38,9 @@
+ #include <ctype.h>
+ #include <fcntl.h>
+ #include <sys/types.h>
++#if defined(__NetBSD__)
++#include <sys/resource.h>
++#endif
+ #include <sys/stat.h>
+ #include <signal.h>
+ #include <pwd.h>
