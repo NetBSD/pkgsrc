@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2006/03/14 02:02:56 minskim Exp $
+@comment $NetBSD: PLIST,v 1.23 2006/03/30 02:40:53 markd Exp $
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/arts.tag
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/annotated.html
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/artsmessage_8cc-source.html
@@ -2440,6 +2440,7 @@ share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html/dir_000000.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html/dir_000001.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html/dir_000002.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html/dir_000003.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html/dir_000004.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html/dirs.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html/doxygen.css
 share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html/doxygen.png
@@ -5655,6 +5656,12 @@ share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DOMExceptionConstru
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DOMFunction-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DOMFunction.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DOMFunction.png
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DOMKeyEventBase-members.html
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DOMKeyEventBase.html
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DOMKeyEventBase.png
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DOMKeyboardEvent-members.html
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DOMKeyboardEvent.html
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DOMKeyboardEvent.png
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DOMMediaList-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DOMMediaList.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DOMMediaList.png
@@ -5723,6 +5730,8 @@ share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DOMTreeWalker.png
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DOMUIEvent-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DOMUIEvent.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DOMUIEvent.png
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DateTimeMS-members.html
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1DateTimeMS.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1EvalMultiLineEdit-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1EvalMultiLineEdit.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1EvalMultiLineEdit.png
@@ -5764,6 +5773,9 @@ share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1KJSDebugWin.png
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1KJSErrorDialog-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1KJSErrorDialog.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1KJSErrorDialog.png
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1KeyboardEventConstructor-members.html
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1KeyboardEventConstructor.html
+share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1KeyboardEventConstructor.png
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1Location-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1Location.html
 share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html/classKJS_1_1MozillaSidebarExtension-members.html
