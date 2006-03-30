@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2006/02/05 23:10:06 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2006/03/30 02:31:46 markd Exp $
 
-DISTNAME=	kde-3.5.1
-PKGREVISION=	1
+DISTNAME=	kde-3.5.2
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,20 +9,20 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	"meta-package" for the KDE integrated X11 desktop
 
-DEPENDS+=	kdelibs-3.5.1{,nb[0-9]*}:../../x11/kdelibs3
-DEPENDS+=	kdeaccessibility-3.5.1{,nb[0-9]*}:../../misc/kdeaccessibility3
-DEPENDS+=	kdeartwork-3.5.1{,nb[0-9]*}:../../misc/kdeartwork3
-DEPENDS+=	kdeaddons-3.5.1{,nb[0-9]*}:../../misc/kdeaddons3
-DEPENDS+=	kdeadmin-3.5.1{,nb[0-9]*}:../../misc/kdeadmin3
-DEPENDS+=	kdeedu-3.5.1{,nb[0-9]*}:../../misc/kdeedu3
-DEPENDS+=	kdegames-3.5.1{,nb[0-9]*}:../../games/kdegames3
-DEPENDS+=	kdegraphics-3.5.1{,nb[0-9]*}:../../graphics/kdegraphics3
-DEPENDS+=	kdemultimedia-3.5.1{,nb[0-9]*}:../../multimedia/kdemultimedia3
-DEPENDS+=	kdenetwork-3.5.1{,nb[0-9]*}:../../net/kdenetwork3
-DEPENDS+=	kdepim-3.5.1{,nb[0-9]*}:../../misc/kdepim3
-DEPENDS+=	kdetoys-3.5.1{,nb[0-9]*}:../../games/kdetoys3
-DEPENDS+=	kdeutils-3.5.1{,nb[0-9]*}:../../misc/kdeutils3
-DEPENDS+=	kdewebdev-3.5.1{,nb[0-9]*}:../../www/kdewebdev3
+DEPENDS+=	kdelibs-3.5.2{,nb[0-9]*}:../../x11/kdelibs3
+DEPENDS+=	kdeaccessibility-3.5.2{,nb[0-9]*}:../../misc/kdeaccessibility3
+DEPENDS+=	kdeartwork-3.5.2{,nb[0-9]*}:../../misc/kdeartwork3
+DEPENDS+=	kdeaddons-3.5.2{,nb[0-9]*}:../../misc/kdeaddons3
+DEPENDS+=	kdeadmin-3.5.2{,nb[0-9]*}:../../misc/kdeadmin3
+DEPENDS+=	kdeedu-3.5.2{,nb[0-9]*}:../../misc/kdeedu3
+DEPENDS+=	kdegames-3.5.2{,nb[0-9]*}:../../games/kdegames3
+DEPENDS+=	kdegraphics-3.5.2{,nb[0-9]*}:../../graphics/kdegraphics3
+DEPENDS+=	kdemultimedia-3.5.2{,nb[0-9]*}:../../multimedia/kdemultimedia3
+DEPENDS+=	kdenetwork-3.5.2{,nb[0-9]*}:../../net/kdenetwork3
+DEPENDS+=	kdepim-3.5.2{,nb[0-9]*}:../../misc/kdepim3
+DEPENDS+=	kdetoys-3.5.2{,nb[0-9]*}:../../games/kdetoys3
+DEPENDS+=	kdeutils-3.5.2{,nb[0-9]*}:../../misc/kdeutils3
+DEPENDS+=	kdewebdev-3.5.2{,nb[0-9]*}:../../www/kdewebdev3
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
