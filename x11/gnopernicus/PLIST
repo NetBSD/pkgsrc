@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/10/16 12:12:01 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/03/30 21:31:53 jmmv Exp $
 bin/gnopernicus
 bin/gnopernicus-mag-config
 bin/srcore
@@ -40,6 +40,9 @@ share/gnome/help/gnopernicus/C/gnopernicus.xml
 share/gnome/help/gnopernicus/C/legal.xml
 share/gnome/help/gnopernicus/es/gnopernicus.xml
 share/gnome/help/gnopernicus/es/legal.xml
+share/gnome/help/gnopernicus/pt_BR/figures/gnopernicus.png
+share/gnome/help/gnopernicus/pt_BR/gnopernicus.xml
+share/gnome/help/gnopernicus/pt_BR/legal.xml
 share/gnopernicus/glade/gnopi_files/Braille_Monitor_Settings/braille_monitor_settings.glade2
 share/gnopernicus/glade/gnopi_files/Braille_Settings/attribute_settings.glade2
 share/gnopernicus/glade/gnopi_files/Braille_Settings/braille_device.glade2
@@ -117,6 +120,8 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/te/LC_MESSAGES/gnopernicus.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnopernicus.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnopernicus.mo
@@ -146,6 +151,8 @@ share/pixmaps/gnopernicus.png
 @dirrm share/gnopernicus/glade/gnopi_files
 @dirrm share/gnopernicus/glade
 @dirrm share/gnopernicus
+@dirrm share/gnome/help/gnopernicus/pt_BR/figures
+@dirrm share/gnome/help/gnopernicus/pt_BR
 @dirrm share/gnome/help/gnopernicus/es
 @dirrm share/gnome/help/gnopernicus/C
 @dirrm share/gnome/help/gnopernicus
