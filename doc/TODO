@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4796 2006/03/30 18:12:37 xtraeme Exp $
+$NetBSD: TODO,v 1.4797 2006/03/30 19:22:52 ghen Exp $
 
 Suggested new packages
 ======================
@@ -99,10 +99,6 @@ Suggested new packages
 	Helix Player
 	http://player.helixcommunity.org/2004/downloads/
 	RealNetwork's open source audio/video player
-
-	SeaMonkey [ghen, pkgsrc-wip]
-	http://www.mozilla.org/projects/seamonkey/
-	Community-based project to continue the Mozilla Suite
 
 	Attal: Lords of Doom
 	http://www.attal-thegame.org/
