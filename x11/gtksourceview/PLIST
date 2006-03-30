@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/10/14 21:45:06 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/03/30 21:22:27 jmmv Exp $
 include/gtksourceview-1.0/gtksourceview/gtksourcebuffer.h
 include/gtksourceview-1.0/gtksourceview/gtksourceiter.h
 include/gtksourceview-1.0/gtksourceview/gtksourcelanguage.h
@@ -25,6 +25,7 @@ share/doc/gtksourceview/gtksourceview-GtkSourceMarker.html
 share/doc/gtksourceview/gtksourceview-GtkSourceTagStyle.html
 share/doc/gtksourceview/gtksourceview-Searching-in-a-GtkSourceBuffer.html
 share/doc/gtksourceview/gtksourceview.devhelp
+share/doc/gtksourceview/gtksourceview.devhelp2
 share/doc/gtksourceview/home.png
 share/doc/gtksourceview/index.html
 share/doc/gtksourceview/index.sgml
@@ -36,6 +37,7 @@ share/doc/gtksourceview/up.png
 share/gtksourceview-1.0/language-specs/R.lang
 share/gtksourceview-1.0/language-specs/ada.lang
 share/gtksourceview-1.0/language-specs/c.lang
+share/gtksourceview-1.0/language-specs/changelog.lang
 share/gtksourceview-1.0/language-specs/cpp.lang
 share/gtksourceview-1.0/language-specs/csharp.lang
 share/gtksourceview-1.0/language-specs/css.lang
@@ -55,12 +57,14 @@ share/gtksourceview-1.0/language-specs/lua.lang
 share/gtksourceview-1.0/language-specs/makefile.lang
 share/gtksourceview-1.0/language-specs/msil.lang
 share/gtksourceview-1.0/language-specs/nemerle.lang
+share/gtksourceview-1.0/language-specs/octave.lang
 share/gtksourceview-1.0/language-specs/pascal.lang
 share/gtksourceview-1.0/language-specs/perl.lang
 share/gtksourceview-1.0/language-specs/php.lang
 share/gtksourceview-1.0/language-specs/po.lang
 share/gtksourceview-1.0/language-specs/python.lang
 share/gtksourceview-1.0/language-specs/ruby.lang
+share/gtksourceview-1.0/language-specs/scheme.lang
 share/gtksourceview-1.0/language-specs/sh.lang
 share/gtksourceview-1.0/language-specs/sql.lang
 share/gtksourceview-1.0/language-specs/tcl.lang
@@ -128,6 +132,7 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gtksourceview-1.0.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/gtksourceview-1.0.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gtksourceview-1.0.mo
 @dirrm share/gtksourceview-1.0/language-specs
 @dirrm share/gtksourceview-1.0
