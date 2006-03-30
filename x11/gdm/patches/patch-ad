@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2005/07/17 22:53:06 kristerw Exp $
+$NetBSD: patch-ad,v 1.6 2006/03/30 21:25:48 jmmv Exp $
 
---- daemon/xdmcp.c.orig	Sun Jul 17 23:22:30 2005
-+++ daemon/xdmcp.c	Sun Jul 17 23:41:59 2005
-@@ -1175,6 +1175,7 @@
+--- daemon/xdmcp.c.orig	2006-02-08 00:57:25.000000000 +0100
++++ daemon/xdmcp.c
+@@ -1142,6 +1142,7 @@ gdm_xdmcp_handle_forward_query (struct s
  
  	if (clnt_port.length == 2 &&
  	       clnt_addr.length == 4) {
@@ -10,12 +10,12 @@ $NetBSD: patch-ad,v 1.5 2005/07/17 22:53:06 kristerw Exp $
  
  		/* Convert IPv4 address to IPv6 if needed */
  		struct sockaddr_in tmp_disp_sa = {0};
-@@ -1182,7 +1183,7 @@
+@@ -1149,7 +1150,7 @@ gdm_xdmcp_handle_forward_query (struct s
  		memcpy (&((struct sockaddr_in *)(&tmp_disp_sa))->sin_port, clnt_port.data, 2);
  		memcpy (&((struct sockaddr_in *)(&tmp_disp_sa))->sin_addr.s_addr, clnt_addr.data, 4);
  
 -		char * ipv4_addr = inet_ntoa (((struct sockaddr_in *)(&tmp_disp_sa))->sin_addr);
 +		ipv4_addr = inet_ntoa (((struct sockaddr_in *)(&tmp_disp_sa))->sin_addr);
- 		strcpy(buffer6, "::ffff:");
- 		strncat(buffer6, ipv4_addr, INET_ADDRSTRLEN);
+ 		strcpy (buffer6, "::ffff:");
+ 		strncat (buffer6, ipv4_addr, INET_ADDRSTRLEN);
  

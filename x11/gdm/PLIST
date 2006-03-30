@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2005/10/22 22:11:51 minskim Exp $
+@comment $NetBSD: PLIST,v 1.25 2006/03/30 21:25:48 jmmv Exp $
 ${DMX}bin/gdm-dmx-reconnect-proxy
 bin/gdmXnest
 bin/gdmXnestchooser
@@ -31,8 +31,7 @@ share/examples/gdm/PostSession/Default
 share/examples/gdm/PreSession/Default
 share/examples/gdm/XKeepsCrashing
 share/examples/gdm/Xsession
-share/examples/gdm/factory-gdm.conf
-share/examples/gdm/gdm.conf
+share/examples/gdm/custom.conf
 share/examples/gdm/locale.alias
 share/examples/gdm/modules/AccessDwellMouseEvents
 share/examples/gdm/modules/AccessKeyMouseEvents
@@ -40,6 +39,8 @@ share/examples/gdm/modules/factory-AccessDwellMouseEvents
 share/examples/gdm/modules/factory-AccessKeyMouseEvents
 share/examples/rc.d/gdm
 share/gdm/BuiltInSessions/default.desktop
+share/gdm/defaults.conf
+share/gdm/factory-defaults.conf
 share/gdm/gdmchooser.glade
 share/gdm/gdmphotosetup.glade
 share/gdm/gdmsetup.glade
@@ -52,22 +53,16 @@ share/gdm/themes/circles/options.png
 share/gdm/themes/circles/screenshot.png
 share/gdm/themes/happygnome-list/GdmGreeterTheme.desktop
 share/gdm/themes/happygnome-list/background.svg
-share/gdm/themes/happygnome-list/disconnect.png
 share/gdm/themes/happygnome-list/gnome-logo.png
 share/gdm/themes/happygnome-list/happygnome.xml
 share/gdm/themes/happygnome-list/options.png
 share/gdm/themes/happygnome-list/screenshot.png
-share/gdm/themes/happygnome-list/session.png
-share/gdm/themes/happygnome-list/system.png
 share/gdm/themes/happygnome/GdmGreeterTheme.desktop
 share/gdm/themes/happygnome/background.svg
-share/gdm/themes/happygnome/disconnect.png
 share/gdm/themes/happygnome/gnome-logo.png
 share/gdm/themes/happygnome/happygnome.xml
 share/gdm/themes/happygnome/options.png
 share/gdm/themes/happygnome/screenshot.png
-share/gdm/themes/happygnome/session.png
-share/gdm/themes/happygnome/system.png
 share/gnome/help/gdm/C/gdm.xml
 share/gnome/help/gdm/C/legal.xml
 share/gnome/help/gdm/de/figures/gdm_window.png
@@ -91,6 +86,8 @@ share/gnome/help/gdm/ko/legal.xml
 share/gnome/help/gdm/sv/figures/gdm_window.png
 share/gnome/help/gdm/sv/gdm.xml
 share/gnome/help/gdm/sv/legal.xml
+share/gnome/help/gdm/uk/gdm.xml
+share/gnome/help/gdm/uk/legal.xml
 share/gnome/help/gdm/zh_CN/figures/gdm_window.png
 share/gnome/help/gdm/zh_CN/gdm.xml
 share/gnome/help/gdm/zh_CN/legal.xml
@@ -173,6 +170,7 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gdm.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gdm.mo
 ${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/gdm.mo
 share/omf/gdm/gdm-C.omf
@@ -183,6 +181,7 @@ share/omf/gdm/gdm-it.omf
 share/omf/gdm/gdm-ja.omf
 share/omf/gdm/gdm-ko.omf
 share/omf/gdm/gdm-sv.omf
+share/omf/gdm/gdm-uk.omf
 share/omf/gdm/gdm-zh_CN.omf
 share/omf/gdm/gdm-zh_HK.omf
 share/omf/gdm/gdm-zh_TW.omf
@@ -232,6 +231,7 @@ share/xsessions/gnome.desktop
 @dirrm share/gnome/help/gdm/zh_HK
 @dirrm share/gnome/help/gdm/zh_CN/figures
 @dirrm share/gnome/help/gdm/zh_CN
+@dirrm share/gnome/help/gdm/uk
 @dirrm share/gnome/help/gdm/sv/figures
 @dirrm share/gnome/help/gdm/sv
 @dirrm share/gnome/help/gdm/ko/figures
@@ -261,8 +261,6 @@ share/xsessions/gnome.desktop
 @dirrm share/examples/gdm/PostLogin
 @dirrm share/examples/gdm/Init
 @dirrm share/examples/gdm
-@exec ${MKDIR} %D/share/examples/dm
-@dirrm share/examples/dm
 @dirrm share/doc/gdm
 @comment in xdg-dirs: @dirrm share/applications
 @comment in gtk2: @dirrm lib/gtk-2.0/modules

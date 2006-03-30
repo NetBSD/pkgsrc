@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2005/02/03 13:37:03 jmmv Exp $
+$NetBSD: patch-ac,v 1.5 2006/03/30 21:25:48 jmmv Exp $
 
---- gui/modules/Makefile.in.orig	2005-02-02 18:35:48.000000000 +0100
+--- gui/modules/Makefile.in.orig	2006-03-13 22:42:41.000000000 +0100
 +++ gui/modules/Makefile.in
-@@ -269,7 +269,7 @@ prefix = @prefix@
+@@ -323,7 +323,7 @@ prefix = @prefix@
  program_transform_name = @program_transform_name@
  sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
