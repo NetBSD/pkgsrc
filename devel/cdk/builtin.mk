@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2005/06/01 18:02:43 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2006/03/30 18:06:17 jlam Exp $
 
 BUILTIN_PKG:=	cdk
 
@@ -13,7 +13,7 @@ BUILTIN_FIND_FILES.H_CDK=	/usr/include/cdk/cdk.h
 ###
 .if !defined(IS_BUILTIN.cdk)
 IS_BUILTIN.cdk=	no
-.  if empty(H_CDK:M${LOCALBASE}/*) && exists(${H_CDK})
+.  if empty(H_CDK:M__nonexistent__) && empty(H_CDK:M${LOCALBASE}/*)
 IS_BUILTIN.cdk=	yes
 .  endif
 .endif

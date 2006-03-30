@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2005/06/03 19:12:49 jlam Exp $
+# $NetBSD: builtin.mk,v 1.10 2006/03/30 18:06:19 jlam Exp $
 
 BUILTIN_PKG:=	Xcomposite
 
@@ -14,7 +14,7 @@ BUILTIN_FIND_FILES.H_XCOMPOSITE=	\
 ###
 .if !defined(IS_BUILTIN.Xcomposite)
 IS_BUILTIN.Xcomposite=	no
-.  if exists(${H_XCOMPOSITE})
+.  if empty(H_XCOMPOSITE:M__nonexistent__)
 BUILTIN_IMAKE_CHECK:=	Xcomposite:BuildCompositeLibrary
 .    include "../../mk/buildlink3/imake-check.mk"
 IS_BUILTIN.Xcomposite=	${BUILTIN_IMAKE_CHECK.Xcomposite}

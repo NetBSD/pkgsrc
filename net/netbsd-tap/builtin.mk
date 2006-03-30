@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2005/06/01 18:03:08 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2006/03/30 18:06:18 jlam Exp $
 
 BUILTIN_PKG:=	netbsd-tap
 
@@ -13,7 +13,8 @@ BUILTIN_FIND_FILES.H_NETBSD_TAP=	/usr/include/net/if_tap.h
 ###
 .if !defined(IS_BUILTIN.netbsd-tap)
 IS_BUILTIN.netbsd-tap=	no
-. if empty(H_NETBSD_TAP:M${LOCALBASE}/*) && exists(${H_NETBSD_TAP})
+. if empty(H_NETBSD_TAP:M__nonexistent__) && \
+     empty(H_NETBSD_TAP:M${LOCALBASE}/*)
 IS_BUILTIN.netbsd-tap=	yes
 .  endif
 .endif

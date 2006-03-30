@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2005/06/01 18:02:44 jlam Exp $
+# $NetBSD: builtin.mk,v 1.9 2006/03/30 18:06:17 jlam Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -15,7 +15,8 @@ BUILTIN_FIND_GREP.H_NCURSES=	\#define[ 	]*NCURSES_VERSION
 ###
 .if !defined(IS_BUILTIN.ncurses)
 IS_BUILTIN.ncurses=	no
-.  if empty(H_NCURSES:M${LOCALBASE}/*) && exists(${H_NCURSES}) && \
+.  if empty(H_NCURSES:M__nonexistent__) && \
+      empty(H_NCURSES:M${LOCALBASE}/*) && \
       !empty(BUILTIN_LIB_FOUND.ncurses:M[yY][eE][sS])
 IS_BUILTIN.ncurses=	yes
 .  endif
@@ -28,7 +29,7 @@ MAKEVARS+=	IS_BUILTIN.ncurses
 ###
 .if !defined(BUILTIN_PKG.ncurses) && \
     !empty(IS_BUILTIN.ncurses:M[yY][eE][sS]) && \
-    exists(${H_NCURSES})
+    empty(H_NCURSES:M__nonexistent__)
 BUILTIN_VERSION.ncurses!=						\
 	${AWK} '/\#define[ 	]*NCURSES_VERSION[ 	]/ {		\
 			vers = $$3;					\

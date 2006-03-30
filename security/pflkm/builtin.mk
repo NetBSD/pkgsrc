@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2006/03/30 16:58:16 jlam Exp $
+# $NetBSD: builtin.mk,v 1.9 2006/03/30 18:06:18 jlam Exp $
 
 BUILTIN_PKG:=	pflkm
 
@@ -14,7 +14,7 @@ BUILTIN_FIND_FILES.EXE_PFCTL+=	/sbin/pfctl
 #
 .if !defined(PF_VERSION)
 PF_VERSION=	3.7	# package default
-.  if exists(${H_PFLKM})
+.  if empty(H_PFLKM:M__nonexistent__)
 # OpenBSD 3.8: pf_socket_lookup added
 _BLTN_PF_3_8!=	${GREP} -c pf_socket_lookup ${H_PFLKM} || ${TRUE}
 # OpenBSD 3.7: pf_threshold added
@@ -41,7 +41,7 @@ MAKEVARS+=	PF_VERSION
 ###
 .if !defined(IS_BUILTIN.pflkm)
 IS_BUILTIN.pflkm=	no
-.  if empty(H_PFLKM:M${LOCALBASE}/*) && exists(${H_PFLKM})
+.  if empty(H_PFLKM:M__nonexistent__) && empty(H_PFLKM:M${LOCALBASE}/*)
 IS_BUILTIN.pflkm=	yes
 .  endif
 .endif
