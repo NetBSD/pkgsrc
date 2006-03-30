@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2006/03/04 21:30:46 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/30 21:01:43 jmmv Exp $
 #
 
-DISTNAME=	iso-codes_0.48-1
-PKGNAME=	${DISTNAME:S/_/-/:S/-1//}
-PKGREVISION=	2
+DISTNAME=	iso-codes_0.50.orig
+PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/i/iso-codes/}
 
@@ -13,7 +12,7 @@ COMMENT=	List of country, language and currency names
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		autoconf automake gmake
+USE_TOOLS+=		autoconf automake gmake perl
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 PKGCONFIG_OVERRIDE=	iso-codes.pc.in
@@ -22,9 +21,8 @@ PYTHON_PATCH_SCRIPTS=	*.py */*.py
 REPLACE_PERL=		tab2h.pl
 
 PYTHON_FOR_BUILD_ONLY=		yes
-BUILDLINK_DEPMETHOD.perl5=	build
-BUILDLINK_DEPMETHOD.py-xml=	build
 BUILDLINK_DEPMETHOD.gettext=	build
+BUILDLINK_DEPMETHOD.pyxml=	build
 BUILD_USES_MSGFMT=		yes
 
 pre-configure:
@@ -38,7 +36,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/TODO ${PREFIX}/share/doc/${PKGNAME_NOREV}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../textproc/py-xml/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/buildlink3.mk"

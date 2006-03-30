@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:11:03 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/03/30 21:01:43 jmmv Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 ISO_CODES_BUILDLINK3_MK:=	${ISO_CODES_BUILDLINK3_MK}+
@@ -11,8 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Niso-codes}
 BUILDLINK_PACKAGES+=	iso-codes
 
 .if !empty(ISO_CODES_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.iso-codes+=	iso-codes>=0.48
-BUILDLINK_RECOMMENDED.iso-codes?=	iso-codes>=0.48nb2
+BUILDLINK_DEPENDS.iso-codes+=	iso-codes>=0.50
 BUILDLINK_PKGSRCDIR.iso-codes?=	../../textproc/iso-codes
 .endif	# ISO_CODES_BUILDLINK3_MK
 
