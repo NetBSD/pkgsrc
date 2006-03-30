@@ -1,0 +1,50 @@
+To regenerate the patch, get the full wxWidgets tarball, copy build/bakefiles
+and the various *.bkl files into the wxGTK tree and run
+	./bakefile_gen -f autoconf
+in build/bakefiles. manual-bakefile.diff contains the necessary patch for
+the bakefile ruleset to use libtool.
+
+--- build/bakefiles/regex.bkl.orig	2006-03-20 20:14:11.000000000 +0000
++++ build/bakefiles/regex.bkl
+@@ -27,16 +27,13 @@
+         <if cond="wxUSE_REGEX=='builtin'">$(TOP_SRCDIR)src/regex</if>
+     </set>
+ 
+-    <lib id="wxregex" template="msvc_setup_h,3rdparty_lib"
++    <dll id="wxregex" template="msvc_setup_h,anylib"
+          cond="wxUSE_REGEX=='builtin' and BUILDING_LIB=='1'">
+-        <libname cond="FORMAT=='autoconf'">
+-            $(id)$(WXUNICODEFLAG)$(WXDEBUGFLAG)$(WX_LIB_FLAVOUR)-$(WX_RELEASE)$(HOST_SUFFIX)
+-        </libname>
+-        <libname cond="FORMAT!='autoconf'">
+-            $(id)$(WXUNICODEFLAG)$(WXDEBUGFLAG)$(HOST_SUFFIX)
+-        </libname>
+-        <include cond="FORMAT!='autoconf'">$(TOP_SRCDIR)include</include>
+-        <include cond="FORMAT!='autoconf'">$(SETUPHDIR)</include>
++        <dllname>
++            $(id)$(WXUNICODEFLAG)$(WXDEBUGFLAG)$(WX_LIB_FLAVOUR)-$(WX_RELEASE)
++	</dllname>
++        <version>$(WX_VERSION)</version>
++        <so_version>$(WXSOVERSION)</so_version>
+         <define>__WX$(TOOLKIT)__</define>
+         <define>$(UNICODE_DEFINE)</define>
+         <dirname>$(LIBDIRNAME)</dirname>
+@@ -48,6 +45,6 @@
+             src/regex/regerror.c
+             src/regex/regfree.c
+         </sources>
+-    </lib>
++    </dll>
+ 
+ </makefile>
+--- build/bakefiles/wx.bkl.orig	2006-02-28 22:50:55.000000000 +0000
++++ build/bakefiles/wx.bkl
+@@ -96,7 +96,7 @@
+             <command>
+                 $(INSTALL_DIR) $(DESTDIR)$(BINDIR)
+                 $(INSTALL_DIR) $(DESTDIR)$(LIBDIR)/wx/config
+-                $(INSTALL_PROGRAM) lib/wx/config/$(TOOLCHAIN_FULLNAME) $(DESTDIR)$(LIBDIR)/wx/config
++                ${BSD_INSTALL_SCRIPT} lib/wx/config/$(TOOLCHAIN_FULLNAME) $(DESTDIR)$(LIBDIR)/wx/config
+                 (cd $(DESTDIR)$(BINDIR) &amp;&amp; rm -f wx-config &amp;&amp; $(LN_S) $(DESTDIR)$(LIBDIR)/wx/config/$(TOOLCHAIN_FULLNAME) wx-config)
+             </command>
+         </action>

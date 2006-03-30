@@ -1,10 +1,20 @@
-# $NetBSD: Makefile,v 1.48 2006/03/09 21:04:46 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2006/03/30 15:28:12 joerg Exp $
 #
 
 .include "Makefile.common"
 
 COMMENT=		GTK-based implementation of the wxWidgets GUI library
-PKGREVISION=		2
+
+post-build:
+	set -e; cd ${WRKSRC}/locale; \
+	for lang in ca cs da de el es fi fr hu id it ja nl pl ru sl sv tr uk \
+	    zh_CN zh_TW; do \
+		${TOOLS_PATH.msgfmt} -c -o $${lang}.mo $${lang}.po; \
+	done
+	set -e; cd ${WRKSRC}/locale/msw; \
+	for lang in it; do \
+	    ${TOOLS_PATH.msgfmt} -c -o $${lang}.mo $${lang}.po; \
+	done
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
