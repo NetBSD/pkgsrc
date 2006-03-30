@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/02/07 19:20:18 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/03/30 20:48:55 jmmv Exp $
 bin/ior-decode-2
 bin/linc-cleanup-sockets
 bin/orbit-idl-2
@@ -62,6 +62,7 @@ share/aclocal/ORBit2.m4
 share/doc/ORBit2/ORBit2-orbit2-allocators.html
 share/doc/ORBit2/ORBit2-orbit2-small.html
 share/doc/ORBit2/ORBit2.devhelp
+share/doc/ORBit2/ORBit2.devhelp2
 share/doc/ORBit2/general.html
 share/doc/ORBit2/home.png
 share/doc/ORBit2/index.html
