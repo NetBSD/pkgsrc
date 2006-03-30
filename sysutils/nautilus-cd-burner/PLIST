@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.9 2006/02/15 18:29:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/03/30 21:32:36 jmmv Exp $
 bin/nautilus-cd-burner
 include/libnautilus-burn/nautilus-burn-drive-selection.h
 include/libnautilus-burn/nautilus-burn-drive.h
+include/libnautilus-burn/nautilus-burn-features.h
 include/libnautilus-burn/nautilus-burn-recorder.h
 lib/gnome-vfs-2.0/modules/libmapping.la
 lib/libnautilus-burn.la
 lib/nautilus/extensions-1.0/libnautilus-burn-extension.la
 lib/pkgconfig/libnautilus-burn.pc
 libexec/mapping-daemon
+share/applications/nautilus-cd-burner.desktop
 share/examples/nautilus-cd-burner/gnome-vfs-2.0/modules/mapping-modules.conf
 share/gconf/schemas/ncb.schemas
 ${PKGLOCALEDIR}/locale/am/LC_MESSAGES/nautilus-cd-burner.mo
@@ -76,6 +78,7 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/nautilus-cd-burner.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/nautilus-cd-burner.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/nautilus-cd-burner.mo
 share/nautilus-cd-burner/cdburn.glade
 share/nautilus-cd-burner/cdspin1.png
@@ -91,6 +94,7 @@ share/nautilus-cd-burner/cdspin8.png
 @dirrm share/examples/nautilus-cd-burner/gnome-vfs-2.0/modules
 @dirrm share/examples/nautilus-cd-burner/gnome-vfs-2.0
 @dirrm share/examples/nautilus-cd-burner
+@comment in xdg-dirs: @dirrm share/applications
 @comment in nautilus: @dirrm lib/nautilus/extensions-1.0
 @comment in gnome-vfs2: @dirrm lib/gnome-vfs-2.0/modules
 @dirrm include/libnautilus-burn
