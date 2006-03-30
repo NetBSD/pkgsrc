@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/01/31 23:08:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/03/30 03:17:09 markd Exp $
 share/doc/kde/HTML/es/KRegExpEditor/altn.png
 share/doc/kde/HTML/es/KRegExpEditor/altntool.png
 share/doc/kde/HTML/es/KRegExpEditor/anychar.png
@@ -168,66 +168,12 @@ share/doc/kde/HTML/es/cervisia/popup.png
 share/doc/kde/HTML/es/cervisia/repositories.png
 share/doc/kde/HTML/es/cervisia/resolve.png
 share/doc/kde/HTML/es/cervisia/updatetag.png
-share/doc/kde/HTML/es/common/1.png
-share/doc/kde/HTML/es/common/10.png
-share/doc/kde/HTML/es/common/2.png
-share/doc/kde/HTML/es/common/3.png
-share/doc/kde/HTML/es/common/4.png
-share/doc/kde/HTML/es/common/5.png
-share/doc/kde/HTML/es/common/6.png
-share/doc/kde/HTML/es/common/7.png
-share/doc/kde/HTML/es/common/8.png
-share/doc/kde/HTML/es/common/9.png
-share/doc/kde/HTML/es/common/appheader.html
-share/doc/kde/HTML/es/common/artistic-license.html
-share/doc/kde/HTML/es/common/bottom-left.png
-share/doc/kde/HTML/es/common/bottom-middle.png
-share/doc/kde/HTML/es/common/bottom-right.png
-share/doc/kde/HTML/es/common/bottom1.png
-share/doc/kde/HTML/es/common/bottom2.png
-share/doc/kde/HTML/es/common/bsd-license.html
-share/doc/kde/HTML/es/common/docheadergears.png
-share/doc/kde/HTML/es/common/doctop1.png
-share/doc/kde/HTML/es/common/doctop1a.png
-share/doc/kde/HTML/es/common/doctop1b.png
-share/doc/kde/HTML/es/common/doctop2.png
-share/doc/kde/HTML/es/common/doxygen.css
-share/doc/kde/HTML/es/common/favicon.ico
-share/doc/kde/HTML/es/common/fdl-license
-share/doc/kde/HTML/es/common/fdl-license.html
-share/doc/kde/HTML/es/common/fdl-notice.html
 share/doc/kde/HTML/es/common/fdl-translated.html
-share/doc/kde/HTML/es/common/footer.html
-share/doc/kde/HTML/es/common/gpl-license
-share/doc/kde/HTML/es/common/gpl-license.html
 share/doc/kde/HTML/es/common/gpl-translated.html
-share/doc/kde/HTML/es/common/grad.png
-share/doc/kde/HTML/es/common/header.html
-share/doc/kde/HTML/es/common/headerbg.png
-share/doc/kde/HTML/es/common/kde-common.css
-share/doc/kde/HTML/es/common/kde-default.css
 share/doc/kde/HTML/es/common/kde-localised.css
-share/doc/kde/HTML/es/common/kde-localised.css.template
-share/doc/kde/HTML/es/common/kde-web.css
-share/doc/kde/HTML/es/common/kde_gear_64.png
 share/doc/kde/HTML/es/common/kde_logo.png
-share/doc/kde/HTML/es/common/kde_logo_bg.png
-share/doc/kde/HTML/es/common/kmenu.png
-share/doc/kde/HTML/es/common/lgpl-license
-share/doc/kde/HTML/es/common/lgpl-license.html
 share/doc/kde/HTML/es/common/lgpl-translated.html
 share/doc/kde/HTML/es/common/logotp3.png
-share/doc/kde/HTML/es/common/mainfooter.html
-share/doc/kde/HTML/es/common/mainheader.html
-share/doc/kde/HTML/es/common/qpl-license.html
-share/doc/kde/HTML/es/common/shadow.png
-share/doc/kde/HTML/es/common/top-left.png
-share/doc/kde/HTML/es/common/top-middle.png
-share/doc/kde/HTML/es/common/top-right-konqueror.png
-share/doc/kde/HTML/es/common/web-docbottom.png
-share/doc/kde/HTML/es/common/web-doctop.png
-share/doc/kde/HTML/es/common/x11-license.html
-share/doc/kde/HTML/es/common/xml.dcl
 share/doc/kde/HTML/es/flashkard/common
 share/doc/kde/HTML/es/flashkard/index.cache.bz2
 share/doc/kde/HTML/es/flashkard/index.docbook
@@ -294,8 +240,11 @@ share/doc/kde/HTML/es/kamera/common
 share/doc/kde/HTML/es/kamera/index.cache.bz2
 share/doc/kde/HTML/es/kamera/index.docbook
 share/doc/kde/HTML/es/kanagram/answer-highlight.png
+share/doc/kde/HTML/es/kanagram/common
 share/doc/kde/HTML/es/kanagram/general-settings.png
 share/doc/kde/HTML/es/kanagram/helpstates.png
+share/doc/kde/HTML/es/kanagram/index.cache.bz2
+share/doc/kde/HTML/es/kanagram/index.docbook
 share/doc/kde/HTML/es/kanagram/kanagram-hint.png
 share/doc/kde/HTML/es/kanagram/kanagram.png
 share/doc/kde/HTML/es/kanagram/newstuff-dialog.png
@@ -355,6 +304,25 @@ share/doc/kde/HTML/es/kate/unhighlighted.png
 share/doc/kde/HTML/es/katomic/common
 share/doc/kde/HTML/es/katomic/index.cache.bz2
 share/doc/kde/HTML/es/katomic/index.docbook
+share/doc/kde/HTML/es/kaudiocreator/cdconfiguration.png
+share/doc/kde/HTML/es/kaudiocreator/cddbconfigurationlookup.png
+share/doc/kde/HTML/es/kaudiocreator/cddbconfigurationsubmit.png
+share/doc/kde/HTML/es/kaudiocreator/cdinserted.png
+share/doc/kde/HTML/es/kaudiocreator/confirmartistcarryover.png
+share/doc/kde/HTML/es/kaudiocreator/encoderconfiguration.png
+share/doc/kde/HTML/es/kaudiocreator/encodernotfound.png
+share/doc/kde/HTML/es/kaudiocreator/entersong1.png
+share/doc/kde/HTML/es/kaudiocreator/generalconfiguration.png
+share/doc/kde/HTML/es/kaudiocreator/jobcontrol.png
+share/doc/kde/HTML/es/kaudiocreator/jobshavestarted.png
+share/doc/kde/HTML/es/kaudiocreator/kaudiocreatormainwindow800.png
+share/doc/kde/HTML/es/kaudiocreator/lameconfiguration.png
+share/doc/kde/HTML/es/kaudiocreator/readytorip.png
+share/doc/kde/HTML/es/kaudiocreator/ripperconfiguration.png
+share/doc/kde/HTML/es/kaudiocreator/rippingandencoding.png
+share/doc/kde/HTML/es/kaudiocreator/rippingandencoding2.png
+share/doc/kde/HTML/es/kaudiocreator/setalbumcategory.png
+share/doc/kde/HTML/es/kaudiocreator/startalbumeditor.png
 share/doc/kde/HTML/es/kbabel/back.png
 share/doc/kde/HTML/es/kbabel/bottom.png
 share/doc/kde/HTML/es/kbabel/catalogmanager.png
@@ -366,7 +334,6 @@ share/doc/kde/HTML/es/kbabel/catalogmanager_nopot_ok.png
 share/doc/kde/HTML/es/kbabel/catalogmanager_ok.png
 share/doc/kde/HTML/es/kbabel/catalogmanager_reload.png
 share/doc/kde/HTML/es/kbabel/catman.docbook
-share/doc/kde/HTML/es/kbabel/common
 share/doc/kde/HTML/es/kbabel/dbcan.png
 share/doc/kde/HTML/es/kbabel/dictionaries.docbook
 share/doc/kde/HTML/es/kbabel/editcopy.png
@@ -378,8 +345,6 @@ share/doc/kde/HTML/es/kbabel/filesave.png
 share/doc/kde/HTML/es/kbabel/find.png
 share/doc/kde/HTML/es/kbabel/forward.png
 share/doc/kde/HTML/es/kbabel/glossary.docbook
-share/doc/kde/HTML/es/kbabel/index.cache.bz2
-share/doc/kde/HTML/es/kbabel/index.docbook
 share/doc/kde/HTML/es/kbabel/kbabeldict.docbook
 share/doc/kde/HTML/es/kbabel/man-catalogmanager.1.docbook
 share/doc/kde/HTML/es/kbabel/menu.docbook
@@ -451,6 +416,7 @@ share/doc/kde/HTML/es/kbugbuster/index.docbook
 share/doc/kde/HTML/es/kcachegrind/common
 share/doc/kde/HTML/es/kcachegrind/index.cache.bz2
 share/doc/kde/HTML/es/kcachegrind/index.docbook
+share/doc/kde/HTML/es/kcalc/commands.docbook
 share/doc/kde/HTML/es/kcalc/common
 share/doc/kde/HTML/es/kcalc/index.cache.bz2
 share/doc/kde/HTML/es/kcalc/index.docbook
@@ -752,6 +718,7 @@ share/doc/kde/HTML/es/kdesu/man-kdesu.1.docbook
 share/doc/kde/HTML/es/kdevelop/SF-general.png
 share/doc/kde/HTML/es/kdevelop/SF-indent.png
 share/doc/kde/HTML/es/kdevelop/SF-other.png
+share/doc/kde/HTML/es/kdevelop/adv-build-management.docbook
 share/doc/kde/HTML/es/kdevelop/app-changelog.docbook
 share/doc/kde/HTML/es/kdevelop/app-menu.docbook
 share/doc/kde/HTML/es/kdevelop/app-misc-info.docbook
@@ -781,9 +748,11 @@ share/doc/kde/HTML/es/kdevelop/configure-snippets.png
 share/doc/kde/HTML/es/kdevelop/create-new-project-cvs.png
 share/doc/kde/HTML/es/kdevelop/createnewproject.png
 share/doc/kde/HTML/es/kdevelop/credits.docbook
+share/doc/kde/HTML/es/kdevelop/cvs.docbook
 share/doc/kde/HTML/es/kdevelop/doctreeview.png
 share/doc/kde/HTML/es/kdevelop/documentation.docbook
 share/doc/kde/HTML/es/kdevelop/documents-contents.png
+share/doc/kde/HTML/es/kdevelop/editing.docbook
 share/doc/kde/HTML/es/kdevelop/empty-ide.png
 share/doc/kde/HTML/es/kdevelop/file-browsers.docbook
 share/doc/kde/HTML/es/kdevelop/file-selector.png
@@ -796,6 +765,7 @@ share/doc/kde/HTML/es/kdevelop/kdevelop-mdi-mode.png
 share/doc/kde/HTML/es/kdevelop/kdevelop-scripting.docbook
 share/doc/kde/HTML/es/kdevelop/kdevelop-tabbed-mode.png
 share/doc/kde/HTML/es/kdevelop/kdevelop-toplevel-mode.png
+share/doc/kde/HTML/es/kdevelop/nutshell.docbook
 share/doc/kde/HTML/es/kdevelop/project-advanced.docbook
 share/doc/kde/HTML/es/kdevelop/select-user-interface-0.png
 share/doc/kde/HTML/es/kdevelop/select-user-interface.png
@@ -877,6 +847,7 @@ share/doc/kde/HTML/es/kfouleggs/index.docbook
 share/doc/kde/HTML/es/kgamma/common
 share/doc/kde/HTML/es/kgamma/index.cache.bz2
 share/doc/kde/HTML/es/kgamma/index.docbook
+share/doc/kde/HTML/es/kgeography/common
 share/doc/kde/HTML/es/kgeography/first-start1.png
 share/doc/kde/HTML/es/kgeography/first-start10.png
 share/doc/kde/HTML/es/kgeography/first-start11.png
@@ -889,10 +860,15 @@ share/doc/kde/HTML/es/kgeography/first-start6.png
 share/doc/kde/HTML/es/kgeography/first-start7.png
 share/doc/kde/HTML/es/kgeography/first-start8.png
 share/doc/kde/HTML/es/kgeography/first-start9.png
+share/doc/kde/HTML/es/kgeography/index.cache.bz2
+share/doc/kde/HTML/es/kgeography/index.docbook
 share/doc/kde/HTML/es/kgeography/kgeography.png
 share/doc/kde/HTML/es/kgeography/river.png
 share/doc/kde/HTML/es/kgeography/zoom.png
+share/doc/kde/HTML/es/kget/common
 share/doc/kde/HTML/es/kget/fileopen.png
+share/doc/kde/HTML/es/kget/index.cache.bz2
+share/doc/kde/HTML/es/kget/index.docbook
 share/doc/kde/HTML/es/kget/kget1.png
 share/doc/kde/HTML/es/kget/kget2.png
 share/doc/kde/HTML/es/kget/kget3.png
@@ -984,7 +960,6 @@ share/doc/kde/HTML/es/khelpcenter/userguide/amarok.png
 share/doc/kde/HTML/es/khelpcenter/userguide/base-kde-applications.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/browser-fine-tuning.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/burning-cds.docbook
-share/doc/kde/HTML/es/khelpcenter/userguide/common
 share/doc/kde/HTML/es/khelpcenter/userguide/control-center.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/creating-graphics.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/credits-and-license.docbook
@@ -999,8 +974,6 @@ share/doc/kde/HTML/es/khelpcenter/userguide/getting-started.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/glossary.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/groupware-kontact.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/history.docbook
-share/doc/kde/HTML/es/khelpcenter/userguide/index.cache.bz2
-share/doc/kde/HTML/es/khelpcenter/userguide/index.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/installation.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/internet-shortcuts.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/intro.docbook
@@ -1442,10 +1415,16 @@ share/doc/kde/HTML/es/knetworkconf/08.png
 share/doc/kde/HTML/es/knetworkconf/09.png
 share/doc/kde/HTML/es/knetworkconf/11.png
 share/doc/kde/HTML/es/knetworkconf/about1.png
+share/doc/kde/HTML/es/knetworkconf/common
+share/doc/kde/HTML/es/knetworkconf/index.cache.bz2
+share/doc/kde/HTML/es/knetworkconf/index.docbook
 share/doc/kde/HTML/es/knewsticker/about-icon.png
 share/doc/kde/HTML/es/knewsticker/checknews-icon.png
+share/doc/kde/HTML/es/knewsticker/common
 share/doc/kde/HTML/es/knewsticker/contextmenu.png
 share/doc/kde/HTML/es/knewsticker/help-icon.png
+share/doc/kde/HTML/es/knewsticker/index.cache.bz2
+share/doc/kde/HTML/es/knewsticker/index.docbook
 share/doc/kde/HTML/es/knewsticker/kcmnewsticker-filters.png
 share/doc/kde/HTML/es/knewsticker/kcmnewsticker-general.png
 share/doc/kde/HTML/es/knewsticker/kcmnewsticker-newssitedialog.png
@@ -1731,6 +1710,9 @@ share/doc/kde/HTML/es/kooka/shortcut1.png
 share/doc/kde/HTML/es/kooka/toolbar.png
 share/doc/kde/HTML/es/kooka/toolbar1.png
 share/doc/kde/HTML/es/kooka/toolbar2.png
+share/doc/kde/HTML/es/kopete/common
+share/doc/kde/HTML/es/kopete/index.cache.bz2
+share/doc/kde/HTML/es/kopete/index.docbook
 share/doc/kde/HTML/es/kopete/menus.docbook
 share/doc/kde/HTML/es/korganizer/common
 share/doc/kde/HTML/es/korganizer/exchange-plugin.docbook
@@ -2010,6 +1992,9 @@ share/doc/kde/HTML/es/kshisen/score-formula.png
 share/doc/kde/HTML/es/ksim/common
 share/doc/kde/HTML/es/ksim/index.cache.bz2
 share/doc/kde/HTML/es/ksim/index.docbook
+share/doc/kde/HTML/es/ksirc/common
+share/doc/kde/HTML/es/ksirc/index.cache.bz2
+share/doc/kde/HTML/es/ksirc/index.docbook
 share/doc/kde/HTML/es/ksirtet/common
 share/doc/kde/HTML/es/ksirtet/index.cache.bz2
 share/doc/kde/HTML/es/ksirtet/index.docbook
@@ -2404,6 +2389,9 @@ share/doc/kde/HTML/es/kxsldbg/xsldbg_refresh.png
 share/doc/kde/HTML/es/kxsldbg/xsldbg_source.png
 share/doc/kde/HTML/es/kxsldbg/xsldbg_stepdown.png
 share/doc/kde/HTML/es/kxsldbg/xsldbg_stepup.png
+share/doc/kde/HTML/es/lilo-config/common
+share/doc/kde/HTML/es/lilo-config/index.cache.bz2
+share/doc/kde/HTML/es/lilo-config/index.docbook
 share/doc/kde/HTML/es/lisa/common
 share/doc/kde/HTML/es/lisa/index.cache.bz2
 share/doc/kde/HTML/es/lisa/index.docbook
@@ -3316,6 +3304,7 @@ ${PKGLOCALEDIR}/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/megami
 @dirrm share/doc/kde/HTML/es/lskat
 @dirrm share/doc/kde/HTML/es/lisa
+@dirrm share/doc/kde/HTML/es/lilo-config
 @dirrm share/doc/kde/HTML/es/kxsldbg
 @dirrm share/doc/kde/HTML/es/kxkb
 @dirrm share/doc/kde/HTML/es/kxconfig
@@ -3353,6 +3342,7 @@ ${PKGLOCALEDIR}/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/ksnake
 @dirrm share/doc/kde/HTML/es/ksmiletris
 @dirrm share/doc/kde/HTML/es/ksirtet
+@dirrm share/doc/kde/HTML/es/ksirc
 @dirrm share/doc/kde/HTML/es/ksim
 @dirrm share/doc/kde/HTML/es/kshisen
 @dirrm share/doc/kde/HTML/es/kscd
@@ -3561,6 +3551,7 @@ ${PKGLOCALEDIR}/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/kbattleship
 @dirrm share/doc/kde/HTML/es/kbackgammon
 @dirrm share/doc/kde/HTML/es/kbabel
+@dirrm share/doc/kde/HTML/es/kaudiocreator
 @dirrm share/doc/kde/HTML/es/katomic
 @dirrm share/doc/kde/HTML/es/kate-plugins
 @dirrm share/doc/kde/HTML/es/kate
@@ -3577,6 +3568,7 @@ ${PKGLOCALEDIR}/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/kaboodle
 @dirrm share/doc/kde/HTML/es/juk
 @dirrm share/doc/kde/HTML/es/flashkard
+@dirrm share/doc/kde/HTML/es/es
 @dirrm share/doc/kde/HTML/es/common
 @dirrm share/doc/kde/HTML/es/cervisia
 @dirrm share/doc/kde/HTML/es/blinken

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/01/31 23:08:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/03/30 03:17:11 markd Exp $
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/akregator.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/alsaplayerui.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/appletproxy.mo
@@ -129,6 +129,8 @@ ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kdelibs.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kdelibs_colors.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kdelirc.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kdepasswd.mo
+${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kdepimresources.mo
+${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kdepimwizards.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kdeprint.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kdeprint_part.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kdeprintfax.mo
@@ -148,6 +150,8 @@ ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kfile_deb.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kfile_desktop.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kfile_folder.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kfile_html.mo
+${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kfile_ics.mo
+${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kfile_palm.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kfile_rfc822.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kfile_rpm.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kfile_txt.mo
@@ -173,6 +177,7 @@ ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kio.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kio_finger.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kio_fish.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kio_floppy.mo
+${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kio_groupwise.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kio_help.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kio_home.mo
 ${PKGLOCALEDIR}/locale/nds/LC_MESSAGES/kio_imap4.mo
