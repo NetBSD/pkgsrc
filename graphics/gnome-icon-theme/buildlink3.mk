@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/02/05 23:09:32 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/03/30 21:45:33 jmmv Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 GNOME_ICON_THEME_BUILDLINK3_MK:=	${GNOME_ICON_THEME_BUILDLINK3_MK}+
@@ -30,8 +30,5 @@ PRINT_PLIST_AWK+=	/^@dirrm ${d:S/\//\\\//g}$$/ \
 .  endfor
 .  undef dirs
 .endif	# GNOME_ICON_THEME_BUILDLINK3_MK
-
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
