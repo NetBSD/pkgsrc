@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2006/02/05 23:10:10 joerg Exp $
+# $NetBSD: Makefile,v 1.58 2006/03/30 02:52:17 markd Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
 
@@ -18,7 +17,7 @@ PKG_SUGGESTED_OPTIONS=	sasl
 
 BUILDLINK_DEPENDS.gpgme+=     gpgme>=0.4.5
 
-REPLACE_PERL=	kmail/kmail-3.1-update-new-mail-notification-settings.pl \
+REPLACE_PERL+=	kmail/kmail-3.1-update-new-mail-notification-settings.pl \
 		kmail/kmail-3.1-use-UOID-for-identities.pl \
 		kmail/kmail-3.1.4-dont-use-UOID-0-for-any-identity.pl \
 		kmail/kmail-3.3-aegypten.pl \
