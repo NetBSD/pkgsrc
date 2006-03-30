@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.29 2006/03/30 18:06:17 jlam Exp $
+# $NetBSD: builtin.mk,v 1.30 2006/03/30 18:38:19 jlam Exp $
 
 BUILTIN_PKG:=	gettext
 
 BUILTIN_FIND_LIBS:=			intl
-BUILTIN_FIND_FILES_VAR:=		H_GETTEXT
+BUILTIN_FIND_FILES_VAR:=		H_GETTEXT _BLTN_H_GETTEXT
 BUILTIN_FIND_FILES.H_GETTEXT=		/usr/include/libintl.h
 BUILTIN_FIND_FILES._BLTN_H_GETTEXT=	/usr/include/libintl.h
 BUILTIN_FIND_GREP.H_GETTEXT=		\#define[ 	]*__USE_GNU_GETTEXT
