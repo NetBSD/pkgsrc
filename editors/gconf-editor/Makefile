@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2006/03/21 06:00:45 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2006/03/30 21:28:52 jmmv Exp $
 #
 
-DISTNAME=		gconf-editor-2.12.1
-PKGREVISION=		2
+DISTNAME=		gconf-editor-2.14.0
 CATEGORIES=		editors gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gconf-editor/2.12/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gconf-editor/2.14/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -24,7 +23,7 @@ CONFIGURE_ARGS+=	--with-gconf-mandatory-source=${GCONF2_CONFIG_SOURCE:S/gconf.xm
 
 GCONF2_SCHEMAS=		gconf-editor.schemas
 
-BUILDLINK_DEPENDS.GConf2+=	GConf2>=2.10.0
+BUILDLINK_DEPENDS.GConf2+=	GConf2>=2.14.0
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
