@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/12 21:50:51 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/03/30 21:39:22 jmmv Exp $
 include/libgtkhtml-3.8/gtkhtml/gtkhtml-embedded.h
 include/libgtkhtml-3.8/gtkhtml/gtkhtml-enums.h
 include/libgtkhtml-3.8/gtkhtml/gtkhtml-properties.h
@@ -110,6 +110,7 @@ ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gtkhtml-3.8.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gtkhtml-3.8.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtkhtml-3.8.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gtkhtml-3.8.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/gtkhtml-3.8.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gtkhtml-3.8.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/gtkhtml-3.8.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gtkhtml-3.8.mo
@@ -134,11 +135,13 @@ ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gtkhtml-3.8.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gtkhtml-3.8.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gtkhtml-3.8.mo
 ${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/gtkhtml-3.8.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gtkhtml-3.8.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gtkhtml-3.8.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gtkhtml-3.8.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gtkhtml-3.8.mo
 ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gtkhtml-3.8.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gtkhtml-3.8.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/gtkhtml-3.8.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gtkhtml-3.8.mo
 @dirrm share/gtkhtml-3.8/icons
 @dirrm share/gtkhtml-3.8
