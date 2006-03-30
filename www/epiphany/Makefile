@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2006/03/21 06:00:51 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2006/03/30 21:26:06 jmmv Exp $
 #
 
-DISTNAME=	epiphany-1.8.3
-PKGREVISION=	4
+DISTNAME=	epiphany-2.14.0
 CATEGORIES=	www gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/1.8/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/2.14/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -64,6 +63,8 @@ BUILDLINK_DEPENDS.gtk2+=	gtk2+>=2.8.3
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
