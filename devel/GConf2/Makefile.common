@@ -1,9 +1,11 @@
-# $NetBSD: Makefile.common,v 1.36 2005/12/31 00:05:11 wiz Exp $
+# $NetBSD: Makefile.common,v 1.37 2006/03/30 20:50:02 jmmv Exp $
 #
 
-DISTNAME=		GConf-2.12.1
+GCONF2_VERSION=		2.14.0
+
+DISTNAME=		GConf-${GCONF2_VERSION}
 CATEGORIES=		devel gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/2.12/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/2.14/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -34,7 +36,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--enable-gconf-source=xml::${PKG_SYSCONFDIR}/gconf.xml.defaults
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.8.0
+BUILDLINK_DEPENDS.glib2+=	glib2>=2.10.0
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
