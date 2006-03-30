@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/01/31 23:00:48 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/03/30 03:08:19 markd Exp $
 bin/kdevassistant
 bin/kdevdesigner
 bin/kdevelop
@@ -541,6 +541,8 @@ share/kde/apps/kdevappwizard/qtruby.png
 share/kde/apps/kdevappwizard/qtruby.tar.gz
 share/kde/apps/kdevappwizard/qtrubyapp.png
 share/kde/apps/kdevappwizard/qtrubyapp.tar.gz
+share/kde/apps/kdevappwizard/rails.png
+share/kde/apps/kdevappwizard/rails.tar.gz
 share/kde/apps/kdevappwizard/rubyhello.png
 share/kde/apps/kdevappwizard/rubyhello.tar.gz
 share/kde/apps/kdevappwizard/sqlsimple.png
@@ -653,6 +655,7 @@ share/kde/apps/kdevappwizard/templates/qmakesimple.kdevtemplate
 share/kde/apps/kdevappwizard/templates/qtopiaapp.kdevtemplate
 share/kde/apps/kdevappwizard/templates/qtruby.kdevtemplate
 share/kde/apps/kdevappwizard/templates/qtrubyapp.kdevtemplate
+share/kde/apps/kdevappwizard/templates/rails.kdevtemplate
 share/kde/apps/kdevappwizard/templates/rubyhello.kdevtemplate
 share/kde/apps/kdevappwizard/templates/sqlsimple.kdevtemplate
 share/kde/apps/kdevappwizard/templates/superwaba.kdevtemplate
@@ -990,6 +993,7 @@ share/kde/apps/kdevdocumentation/tocs/python.toc
 share/kde/apps/kdevdocumentation/tocs/python_bugs.toc
 share/kde/apps/kdevdocumentation/tocs/qt-kdev3.toc
 share/kde/apps/kdevdocumentation/tocs/qtruby.toc
+share/kde/apps/kdevdocumentation/tocs/rails.toc
 share/kde/apps/kdevdocumentation/tocs/ruby.toc
 share/kde/apps/kdevdocumentation/tocs/ruby_bugs.toc
 share/kde/apps/kdevdocumentation/tocs/sdl.toc
@@ -1126,6 +1130,7 @@ share/kde/apps/kdevfilecreate/file-templates/pp-program
 share/kde/apps/kdevfilecreate/file-templates/pp-unit
 share/kde/apps/kdevfilecreate/file-templates/py
 share/kde/apps/kdevfilecreate/file-templates/rb
+share/kde/apps/kdevfilecreate/file-templates/rhtml
 share/kde/apps/kdevfilecreate/file-templates/ts
 share/kde/apps/kdevfilecreate/file-templates/ui
 share/kde/apps/kdevfilecreate/file-templates/ui-confdialog
