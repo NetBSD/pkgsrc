@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/03/29 14:15:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/03/30 20:47:19 jmmv Exp $
 bin/update-mime-database
 lib/pkgconfig/shared-mime-info.pc
 man/man1/update-mime-database.1
@@ -26,10 +26,13 @@ ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/shared-mime-info.mo
 ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/shared-mime-info.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/shared-mime-info.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/shared-mime-info.mo
+${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/shared-mime-info.mo
 ${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/shared-mime-info.mo
 ${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/shared-mime-info.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/shared-mime-info.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/shared-mime-info.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/shared-mime-info.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/shared-mime-info.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/shared-mime-info.mo
 share/mime/packages/freedesktop.org.xml
 @dirrm share/mime/packages
