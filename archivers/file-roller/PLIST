@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.17 2006/02/15 17:07:56 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/03/30 21:28:13 jmmv Exp $
 bin/file-roller
-lib/bonobo/libfile-roller-component.la
-lib/bonobo/servers/File_Roller_Component.server
 lib/nautilus/extensions-1.0/libnautilus-fileroller.la
-share/application-registry/file-roller.applications
 share/applications/file-roller.desktop
 share/file-roller/glade/file-roller-extract.glade
 share/file-roller/glade/file-roller.glade
@@ -15,6 +12,12 @@ share/gnome/help/file-roller/C/figures/file-roller_rightarrow.png
 share/gnome/help/file-roller/C/figures/file-roller_uparrow.png
 share/gnome/help/file-roller/C/file-roller.xml
 share/gnome/help/file-roller/C/legal.xml
+share/gnome/help/file-roller/bg/figures/file-roller_home.png
+share/gnome/help/file-roller/bg/figures/file-roller_leftarrow.png
+share/gnome/help/file-roller/bg/figures/file-roller_main_window.png
+share/gnome/help/file-roller/bg/figures/file-roller_rightarrow.png
+share/gnome/help/file-roller/bg/figures/file-roller_uparrow.png
+share/gnome/help/file-roller/bg/file-roller.xml
 share/gnome/help/file-roller/de/figures/file-roller_home.png
 share/gnome/help/file-roller/de/figures/file-roller_leftarrow.png
 share/gnome/help/file-roller/de/figures/file-roller_main_window.png
@@ -93,6 +96,7 @@ ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/br/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/file-roller.mo
@@ -120,6 +124,7 @@ ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/file-roller.mo
+${PKGLOCALEDIR}/locale/ka/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/file-roller.mo
@@ -159,9 +164,8 @@ ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/file-roller.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/file-roller.mo
-share/mime-info/file-roller.keys
-share/mime-info/file-roller.mime
 share/omf/file-roller/file-roller-C.omf
+share/omf/file-roller/file-roller-bg.omf
 share/omf/file-roller/file-roller-de.omf
 share/omf/file-roller/file-roller-es.omf
 share/omf/file-roller/file-roller-fr.omf
@@ -178,7 +182,6 @@ share/pixmaps/file-roller.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/file-roller
 @comment in scrollkeeper: @dirrm share/omf
-@comment in xdg-dirs: @dirrm share/mime-info
 @dirrm share/gnome/help/file-roller/zh_TW/figures
 @dirrm share/gnome/help/file-roller/zh_TW
 @dirrm share/gnome/help/file-roller/zh_HK/figures
@@ -203,6 +206,8 @@ share/pixmaps/file-roller.png
 @dirrm share/gnome/help/file-roller/es
 @dirrm share/gnome/help/file-roller/de/figures
 @dirrm share/gnome/help/file-roller/de
+@dirrm share/gnome/help/file-roller/bg/figures
+@dirrm share/gnome/help/file-roller/bg
 @dirrm share/gnome/help/file-roller/C/figures
 @dirrm share/gnome/help/file-roller/C
 @dirrm share/gnome/help/file-roller
@@ -211,6 +216,4 @@ share/pixmaps/file-roller.png
 @dirrm share/file-roller/glade
 @dirrm share/file-roller
 @comment in xdg-dirs: @dirrm share/applications
-@comment in xdg-dirs: @dirrm share/application-registry
 @comment in nautilus: @dirrm lib/nautilus/extensions-1.0
-@comment in libbonobo: @dirrm lib/bonobo/servers
