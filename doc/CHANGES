@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13377 2006/03/30 13:39:39 salo Exp $
+$NetBSD: CHANGES,v 1.13378 2006/03/30 13:53:19 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1695,3 +1695,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/postgrey to 1.2.4 [is 2006-03-30]
 	Updated www/p5-CGI-Session to 4.09 [salo 2006-03-30]
 	Updated security/john to 1.7.0.2 [salo 2006-03-30]
+	Updated net/hping to 2.0.0.3 [salo 2006-03-30]
