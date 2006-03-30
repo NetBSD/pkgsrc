@@ -1,12 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2006/03/09 01:29:46 reed Exp $
+# $NetBSD: Makefile,v 1.63 2006/03/30 03:02:01 markd Exp $
 
 DISTNAME=	kdegraphics-${_KDE_VERSION}
-PKGREVISION=	3
 CATEGORIES=	graphics
 COMMENT=	Graphics programs for the KDE integrated X11 desktop
-
-PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/
-PATCHFILES=	post-3.5.1-kdegraphics-CVE-2006-0301.diff
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
@@ -15,16 +11,16 @@ USE_TOOLS+=		gs:run pkg-config
 
 BUILDLINK_DEPENDS.lcms+=	lcms>=1.12
 
-REPLACE_PERL=	kghostview/update-to-xt-names.pl
+REPLACE_PERL+=	kghostview/update-to-xt-names.pl
 
 CONFIGURE_ARGS+=	--with-imlib-config=${X11PREFIX}/bin
 
 SUBST_CLASSES+=		kpdf
 SUBST_STAGE.kpdf=	post-patch
-SUBST_MESSAGE.kpdf=	"Fixing hardcoded paths."
+SUBST_MESSAGE.kpdf=	Fixing hardcoded paths.
 SUBST_FILES.kpdf=	kpdf/xpdf/xpdf/GlobalParams.cc
-SUBST_SED.kpdf=		-e 's:/usr/pkg:${LOCALBASE}:g' \
-	-e 's:/usr/X11R6:${X11BASE}:g'
+SUBST_SED.kpdf=		-e 's:/usr/pkg:${LOCALBASE}:g'
+SUBST_SED.kpdf+=	-e 's:/usr/X11R6:${X11BASE}:g'
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2006/01/31 22:47:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.27 2006/03/30 03:02:01 markd Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -1025,7 +1025,6 @@ share/kde/config.kcfg/kghostview.kcfg
 share/kde/config.kcfg/kpdf.kcfg
 share/kde/config.kcfg/kviewshell.kcfg
 share/kde/config/kookarc
-share/kde/config/magic/x-image-raw.magic
 share/kde/icons/crystalsvg/16x16/actions/camera_test.png
 share/kde/icons/crystalsvg/16x16/actions/palette_color.png
 share/kde/icons/crystalsvg/16x16/actions/palette_gray.png
@@ -1109,7 +1108,6 @@ share/kde/icons/hicolor/scalable/apps/kfaxview.svgz
 share/kde/icons/hicolor/scalable/apps/kolourpaint.svgz
 share/kde/icons/hicolor/scalable/apps/kpdf.svgz
 share/kde/icons/hicolor/scalable/apps/ksnapshot.svgz
-share/kde/mimelnk/image/x-image-raw.desktop
 share/kde/mimelnk/text/mrml.desktop
 share/kde/services/camera.protocol
 share/kde/services/djvumultipage.desktop
