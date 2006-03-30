@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/03/30 03:44:43 jlam Exp $
 include/readline/chardefs.h
 include/readline/history.h
 include/readline/keymaps.h
@@ -7,6 +7,9 @@ include/readline/rlconf.h
 include/readline/rlstdc.h
 include/readline/rltypedefs.h
 include/readline/tilde.h
+info/history.info
+info/readline.info
+info/rluserman.info
 lib/libhistory.la
 lib/libreadline.la
 man/man3/history.3

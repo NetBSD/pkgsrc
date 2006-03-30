@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/03/05 16:27:24 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/03/30 03:44:42 jlam Exp $
 
 DISTNAME=		gcvs-1.0
 PKGREVISION=		3
@@ -15,7 +15,7 @@ CONFLICTS=		cvs-[0-9]*
 
 USE_TOOLS+=		gmake makeinfo
 GNU_CONFIGURE=		yes
-INFO_FILES=		cvs.info cvsclient.info
+INFO_FILES=		# PLIST
 
 CONFIGURE_ARGS+=	--with-tclinclude="${BUILDLINK_PREFIX.tcl}/include" \
 			--with-tcllib="${BUILDLINK_PREFIX.tcl}/lib"

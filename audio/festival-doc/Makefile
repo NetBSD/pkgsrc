@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/06/16 06:57:38 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/30 03:44:41 jlam Exp $
 
 DISTNAME=	festdoc-1.4.0.1
 PKGNAME=	festival-doc-1.4.0.1
@@ -15,9 +15,9 @@ NO_BUILD=	yes
 
 DOC=		${PREFIX}/share/doc/festival
 
-INFO_FILES=	festival.info
+INFO_FILES=	# PLIST
 
-INSTALLATION_DIRS=	info
+INSTALLATION_DIRS=	${PKGINFODIR}
 
 post-extract:
 	${CHMOD} -R a+r ${WRKSRC}
@@ -31,8 +31,8 @@ do-install:
 	cd ${WRKSRC};							\
 	${PAX} -rw speechtools ${DOC};					\
 	cd festival;							\
-	for f in info/*.info info/*.info-*; do				\
-	   ${INSTALL_DATA} $${f} ${PREFIX}/info;			\
+	for f in info/*.info info/*.info-[0-9]*; do			\
+		${INSTALL_DATA} $${f} ${PREFIX}/${PKGINFODIR};		\
 	done;								\
 	${PAX} -rw user-manual ${DOC};					\
 	${PAX} -rw src-manual ${DOC};					\

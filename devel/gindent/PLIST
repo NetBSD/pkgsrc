@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/15 21:42:19 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/03/30 03:44:43 jlam Exp $
 bin/${GNU_PROGRAM_PREFIX}indent
 bin/${GNU_PROGRAM_PREFIX}texinfo2man
+info/indent.info
 man/man1/${GNU_PROGRAM_PREFIX}indent.1
 share/doc/indent/indent.html
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/indent.mo

@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2005/12/03 04:18:59 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/03/30 03:44:41 jlam Exp $
 bin/MergePCBPS
 bin/Merge_dimPCBPS
 bin/pcb
 bin/pcb-bin
+info/pcb.info
 man/man1/pcb.1
 share/pcb/CreateLibrary.sh
 share/pcb/CreateLibraryContents.sh

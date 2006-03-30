@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/10/26 15:12:45 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/03/30 03:44:43 jlam Exp $
 bin/${KRB5_PREFIX}login
 bin/${KRB5_PREFIX}rcp
 bin/${KRB5_PREFIX}rsh
@@ -63,6 +63,7 @@ include/krb5/rtbl.h
 include/krb5/sl.h
 include/krb5/ss/ss.h
 include/krb5/xdbm.h
+info/heimdal.info
 lib/libasn1.la
 lib/libcom_err.la
 lib/libeditline.la

@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:21 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/03/30 03:44:41 jlam Exp $
 bin/recode
 include/recode.h
 include/recodext.h
+info/recode.info
 lib/librecode.la
 man/man1/recode.1
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/recode.mo

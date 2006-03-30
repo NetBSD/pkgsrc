@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/04 16:23:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/03/30 03:44:42 jlam Exp $
 bin/g-wrap-config
 include/g-wrap/g-wrap-compatibility.h
 include/g-wrap/g-wrap-glib.h
 include/g-wrap/g-wrap-wct.h
+info/g-wrap.info
 lib/libgw-glib.la
 lib/libgw-gtk.la
 lib/libgw-standard.la

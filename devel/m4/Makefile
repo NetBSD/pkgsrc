@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/03/04 21:29:18 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2006/03/30 03:44:43 jlam Exp $
 
 DISTNAME=	m4-1.4.4
 CATEGORIES=	devel
@@ -11,7 +11,7 @@ COMMENT=	GNU version of UNIX m4 macro language processor
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
-INFO_FILES=		m4.info
+INFO_FILES=		# PLIST
 
 TEST_TARGET=		check
 

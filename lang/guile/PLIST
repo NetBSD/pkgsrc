@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2004/12/01 14:59:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/03/30 03:44:43 jlam Exp $
 bin/guile
 bin/guile-config
 bin/guile-snarf
@@ -100,6 +100,10 @@ include/libguile/vectors.h
 include/libguile/version.h
 include/libguile/vports.h
 include/libguile/weaks.h
+info/guile.info
+info/guile-tut.info
+info/goops.info
+info/r5rs.info
 lib/libguile-ltdl.la
 lib/libguile-srfi-srfi-13-14-v-1.la
 lib/libguile-srfi-srfi-4-v-1.la
@@ -195,8 +199,6 @@ share/guile/1.6/srfi/srfi-4.scm
 share/guile/1.6/srfi/srfi-6.scm
 share/guile/1.6/srfi/srfi-8.scm
 share/guile/1.6/srfi/srfi-9.scm
-@exec ${MKDIR} %D/share/guile/site
-@dirrm share/guile/site
 @dirrm share/guile/1.6/srfi
 @dirrm share/guile/1.6/scripts
 @dirrm share/guile/1.6/oop/goops

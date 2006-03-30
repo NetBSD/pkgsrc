@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/03/06 00:18:25 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2006/03/30 03:44:44 jlam Exp $
 
 DISTNAME=		libgtop-2.12.2
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -21,7 +21,7 @@ USE_TOOLS+=		gmake makeinfo perl pkg-config
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libgtop-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	support/gnome-support-2.0.pc.in
-INFO_FILES=		libgtop2.info
+INFO_FILES=		# PLIST
 TEXINFO_REQD=		4.6
 
 # The following flags are for debugging purposes.  They don't need to

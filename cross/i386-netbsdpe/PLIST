@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/02/16 18:12:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/03/30 03:44:41 jlam Exp $
 bin/i386-netbsdpe-addr2line
 bin/i386-netbsdpe-ar
 bin/i386-netbsdpe-as
@@ -50,6 +50,7 @@ i386-netbsdpe/share/locale/ja/LC_MESSAGES/gcc.mo
 i386-netbsdpe/share/locale/nl/LC_MESSAGES/gcc.mo
 i386-netbsdpe/share/locale/sv/LC_MESSAGES/gcc.mo
 i386-netbsdpe/share/locale/tr/LC_MESSAGES/gcc.mo
+info/bfd.info
 lib/gcc-lib/i386-netbsdpe/3.3.3/cc1
 lib/gcc-lib/i386-netbsdpe/3.3.3/cc1plus
 lib/gcc-lib/i386-netbsdpe/3.3.3/collect2

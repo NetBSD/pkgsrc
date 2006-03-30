@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.12 2006/02/16 18:09:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/03/30 03:44:44 jlam Exp $
 bin/gtk-config
+info/gdk.info
+info/gtk.info
 share/gtk/gtkrc.az
 share/gtk/gtkrc.be
 share/gtk/gtkrc.cp1251

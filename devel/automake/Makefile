@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2005/12/05 20:50:02 rillig Exp $
+# $NetBSD: Makefile,v 1.70 2006/03/30 03:44:42 jlam Exp $
 #
 
 DISTNAME=	automake-1.9.6
@@ -20,8 +20,7 @@ USE_TOOLS+=	gm4:run perl:run
 PLIST_SUBST+=		PKG_DIR_VERSION=1.9
 GNU_CONFIGURE=		YES
 _STRIPFLAG_INSTALL=	# none
-
-INFO_FILES=		automake.info
+INFO_FILES=		# PLIST
 
 # doesn't work because buildlink3 hides scripts
 # from autoconf too well

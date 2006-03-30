@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2006/02/22 21:25:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/03/30 03:44:43 jlam Exp $
 bin/build-guile-gtk
 bin/build-guile-gtk-1.2
 include/guile-gtk.h
+info/guile-gtk.info
 lib/libguilegdkpixbuf-1.2.la
 lib/libguilegtk-1.2.la
 share/guile-gtk/gdk-1.2.defs

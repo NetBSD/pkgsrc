@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/03/04 21:29:15 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/03/30 03:44:42 jlam Exp $
 #
 
 DISTNAME=       gdb-5.3
@@ -20,9 +20,9 @@ USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
-INSTALL_TARGET=	install install-info
-TEST_TARGET=	check
-INFO_FILES=		bfd.info gdb.info gdbint.info mmalloc.info stabs.info
+INSTALL_TARGET=		install install-info
+TEST_TARGET=		check
+INFO_FILES=		# PLIST.common
 CONFIGURE_ENV+=         CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2004/01/12 18:34:57 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/03/30 03:44:42 jlam Exp $
 bin/sccs
+info/cssc.info
 libexec/cssc/admin
 libexec/cssc/cdc
 libexec/cssc/delta

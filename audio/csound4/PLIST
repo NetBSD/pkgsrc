@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/04/19 20:22:52 ben Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/03/30 03:44:41 jlam Exp $
 bin/csound
 bin/csound-config
 bin/cvanal
@@ -38,6 +38,7 @@ include/csound/sort.h
 include/csound/sysdep.h
 include/csound/text.h
 include/csound/version.h
+info/csoundgbs.info
 lib/csound/gabops.la
 lib/csound/metro.la
 lib/csound/newfils.la

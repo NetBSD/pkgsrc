@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/02/05 23:08:31 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/03/30 03:44:41 jlam Exp $
 #
 
 DISTNAME=	guile-pg-0.29
@@ -13,10 +13,9 @@ COMMENT=	PostgreSQL interface for Guile
 USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
+INFO_FILES=	# PLIST
 
 TEST_TARGET=	check
-
-INFO_FILES=	guile-pg.info
 
 # There are several versions of guile; the relevant ones for this
 # module are 1.6.x, which is the current FSF version, and ttn-1.4,

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/03/04 21:29:12 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/03/30 03:44:42 jlam Exp $
 #
 
 DISTNAME=	avl-1.4.0
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.msu.edu/user/pfaffben/avl/
 COMMENT=	Library for manipulation of balanced binary trees
 
 GNU_CONFIGURE=	YES
-INFO_FILES=	avl.info
+INFO_FILES=	# PLIST
 
 # The text and html files documentation are not installed so just touch
 # them and makeinfo and texi2html are not needed at build time.
