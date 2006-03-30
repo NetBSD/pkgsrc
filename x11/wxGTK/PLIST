@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/10/04 01:47:32 minskim Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/03/30 15:28:12 joerg Exp $
 bin/wx-config
 bin/wxrc
 bin/wxrc-2.6
@@ -459,18 +459,19 @@ include/wx-2.6/wx/xtistrm.h
 include/wx-2.6/wx/xtixml.h
 include/wx-2.6/wx/zipstrm.h
 include/wx-2.6/wx/zstream.h
-lib/libwx_base-2.6.so
-lib/libwx_base_net-2.6.so
-lib/libwx_base_xml-2.6.so
-lib/libwx_gtk2_adv-2.6.so
-lib/libwx_gtk2_core-2.6.so
-lib/libwx_gtk2_gl-2.6.so
-lib/libwx_gtk2_html-2.6.so
-lib/libwx_gtk2_media-2.6.so
-lib/libwx_gtk2_qa-2.6.so
-lib/libwx_gtk2_xrc-2.6.so
-lib/wx/config/gtk2-ansi-release-2.6
-lib/wx/include/gtk2-ansi-release-2.6/wx/setup.h
+lib/libwx_base${UNICODE}-2.6.la
+lib/libwx_base${UNICODE}_net-2.6.la
+lib/libwx_base${UNICODE}_xml-2.6.la
+lib/libwx_gtk2${UNICODE}_adv-2.6.la
+lib/libwx_gtk2${UNICODE}_core-2.6.la
+lib/libwx_gtk2${UNICODE}_gl-2.6.la
+lib/libwx_gtk2${UNICODE}_html-2.6.la
+lib/libwx_gtk2${UNICODE}_media-2.6.la
+lib/libwx_gtk2${UNICODE}_qa-2.6.la
+lib/libwx_gtk2${UNICODE}_xrc-2.6.la
+lib/libwxregex${UNICODE}-2.6.la
+lib/wx/config/gtk2-${BUILDTYPE}-release-2.6
+lib/wx/include/gtk2-${BUILDTYPE}-release-2.6/wx/setup.h
 share/aclocal/wxwin.m4
 share/bakefile/presets/wx.bkl
 share/bakefile/presets/wx_unix.bkl
@@ -501,8 +502,8 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/wxstd.mo
 @dirrm share/doc/wxGTK
 @dirrm share/bakefile/presets
 @dirrm share/bakefile
-@dirrm lib/wx/include/gtk2-ansi-release-2.6/wx
-@dirrm lib/wx/include/gtk2-ansi-release-2.6
+@dirrm lib/wx/include/gtk2-${BUILDTYPE}-release-2.6/wx
+@dirrm lib/wx/include/gtk2-${BUILDTYPE}-release-2.6
 @unexec ${RMDIR} %D/lib/wx/include 2>/dev/null || ${TRUE}
 @dirrm lib/wx/config
 @unexec ${RMDIR} %D/lib/wx 2>/dev/null || ${TRUE}

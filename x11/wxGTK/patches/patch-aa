@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2005/11/07 18:13:54 joerg Exp $
+$NetBSD: patch-aa,v 1.9 2006/03/30 15:28:12 joerg Exp $
 
---- configure.orig	2005-09-20 17:03:25.000000000 +0200
+--- configure.orig	2006-03-21 23:42:05.000000000 +0000
 +++ configure
-@@ -1815,7 +1815,7 @@ _ACEOF
+@@ -1820,7 +1820,7 @@ _ACEOF
  
      DEFAULT_DEFAULT_wxUSE_MOTIF=1
    ;;
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.8 2005/11/07 18:13:54 joerg Exp $
      USE_BSD=1
      USE_FREEBSD=1
      cat >>confdefs.h <<\_ACEOF
-@@ -22529,7 +22529,8 @@ SEARCH_INCLUDE="\
+@@ -23445,7 +23445,8 @@ SEARCH_INCLUDE="\
      /usr/XFree86/include/X11  \
      /usr/pkg/include          \
                                \
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.8 2005/11/07 18:13:54 joerg Exp $
  
  echo "$as_me:$LINENO: checking for libraries directory" >&5
  echo $ECHO_N "checking for libraries directory... $ECHO_C" >&6
-@@ -35616,6 +35617,9 @@ echo "$as_me: WARNING: BeOS threads are 
+@@ -36663,6 +36664,9 @@ echo "$as_me: WARNING: BeOS threads are 
                      THREAD_OPTS="-mt $THREAD_OPTS"
                  fi
                  ;;
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.8 2005/11/07 18:13:54 joerg Exp $
            *-*-freebsd*)
                                                  THREAD_OPTS="-kthread lthread $THREAD_OPTS c_r"
                  ;;
-@@ -35749,7 +35753,7 @@ echo $ECHO_N "checking if more special f
+@@ -36797,7 +36801,7 @@ echo $ECHO_N "checking if more special f
                                                                                                                  LDFLAGS="-L/usr/lib/threads $LDFLAGS"
                  flag="-D_THREAD_SAFE"
                  ;;
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.8 2005/11/07 18:13:54 joerg Exp $
                  flag="-D_THREAD_SAFE"
                  ;;
              *-hp-hpux* )
-@@ -44116,7 +44120,7 @@ EOF
+@@ -45354,7 +45358,7 @@ EOF
        ;;
  
        powerpc-apple-macos* | \
@@ -49,7 +49,7 @@ $NetBSD: patch-aa,v 1.8 2005/11/07 18:13:54 joerg Exp $
        *-*-sunos4* | \
        *-*-osf* | \
        *-*-dgux5* | \
-@@ -44158,7 +44162,7 @@ echo "$as_me: error: unknown system type
+@@ -45396,7 +45400,7 @@ echo "$as_me: error: unknown system type
      SONAME_FLAG=
  
      case "${BAKEFILE_HOST}" in
