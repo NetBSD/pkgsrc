@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2006/03/25 02:48:22 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.7 2006/03/30 03:44:43 jlam Exp $
 
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 MAINTAINER=	markd@NetBSD.org
@@ -59,10 +59,7 @@ LDFLAGS+=	-Z
 CFLAGS+=	-fno-zero-initialized-in-bss
 .endif
 
-INFO_FILES=	ada-mode autotype ccmode cl dired-x ebrowse ediff efaq emacs
-INFO_FILES+=	emacs-mime eshell eudc forms gnus idlwave message mh-e pcl-cvs
-INFO_FILES+=	reftex sc speedbar vip viper widget woman
-
+INFO_FILES=	# PLIST
 REPLACE_PERL=	lib-src/grep-changelog
 
 post-extract:

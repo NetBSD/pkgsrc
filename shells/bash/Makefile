@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/03/05 16:27:28 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/03/30 03:44:44 jlam Exp $
 
 DISTNAME=	bash-3.1
 PKGNAME=	bash-3.1pl1
@@ -25,8 +25,7 @@ MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 CPPFLAGS+=		-DDEFAULT_PATH_VALUE="\"/usr/bin:/bin:/usr/pkg/bin:/usr/local/bin\""
 TEST_TARGET=		test
 
-INFO_FILES=		bash.info
-
+INFO_FILES=		# PLIST
 PKG_SHELL=		bin/bash
 
 # All features enabled by default.

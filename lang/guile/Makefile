@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2006/03/05 16:27:26 jlam Exp $
+# $NetBSD: Makefile,v 1.71 2006/03/30 03:44:43 jlam Exp $
 
 DISTNAME=		guile-1.6.7
 PKGREVISION=		3
@@ -16,10 +16,11 @@ USE_TOOLS+=		gmake makeinfo
 USE_LIBTOOL=		YES
 USE_GNU_READLINE=	YES
 PTHREAD_AUTO_VARS=	YES
-INFO_FILES=		guile.info guile-tut.info goops.info r5rs.info
+INFO_FILES=		# PLIST
 
 TEST_DIRS=		${WRKSRC}
 TEST_TARGET=		check
+OWN_DIRS=		${PREFIX}/share/guile/site
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,9 +31,6 @@ post-patch:
 	@${MV} ${WRKSRC}/guile-config/guile-config.in.orig \
 	    ${WRKSRC}/guile-config/guile-config.in
 .endif
-
-post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/guile/site
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
