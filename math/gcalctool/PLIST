@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/10/16 12:11:19 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/03/30 21:28:37 jmmv Exp $
 bin/gcalctool
 bin/gnome-calculator
 man/man1/gcalctool.1
@@ -10,6 +10,13 @@ share/gnome/help/gcalctool/C/figures/gcalctool_menu_symbol.png
 share/gnome/help/gcalctool/C/figures/gcalctool_scientific_window.png
 share/gnome/help/gcalctool/C/gcalctool.xml
 share/gnome/help/gcalctool/C/legal.xml
+share/gnome/help/gcalctool/bg/figures/gcalctool_advanced_window.png
+share/gnome/help/gcalctool/bg/figures/gcalctool_basic_window.png
+share/gnome/help/gcalctool/bg/figures/gcalctool_financial_window.png
+share/gnome/help/gcalctool/bg/figures/gcalctool_menu_symbol.png
+share/gnome/help/gcalctool/bg/figures/gcalctool_scientific_window.png
+share/gnome/help/gcalctool/bg/gcalctool.xml
+share/gnome/help/gcalctool/bg/legal.xml
 share/gnome/help/gcalctool/de/figures/gcalctool_basic_window.png
 share/gnome/help/gcalctool/de/figures/gcalctool_financial_window.png
 share/gnome/help/gcalctool/de/figures/gcalctool_menu_symbol.png
@@ -134,8 +141,10 @@ ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gcalctool.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/gcalctool.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gcalctool.mo
 share/omf/gcalctool/gcalctool-C.omf
+share/omf/gcalctool/gcalctool-bg.omf
 share/omf/gcalctool/gcalctool-de.omf
 share/omf/gcalctool/gcalctool-es.omf
 share/omf/gcalctool/gcalctool-fr.omf
@@ -168,6 +177,8 @@ share/omf/gcalctool/gcalctool-zh_TW.omf
 @dirrm share/gnome/help/gcalctool/es
 @dirrm share/gnome/help/gcalctool/de/figures
 @dirrm share/gnome/help/gcalctool/de
+@dirrm share/gnome/help/gcalctool/bg/figures
+@dirrm share/gnome/help/gcalctool/bg
 @dirrm share/gnome/help/gcalctool/C/figures
 @dirrm share/gnome/help/gcalctool/C
 @dirrm share/gnome/help/gcalctool

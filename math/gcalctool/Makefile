@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.51 2006/03/21 06:00:46 jlam Exp $
+# $NetBSD: Makefile,v 1.52 2006/03/30 21:28:37 jmmv Exp $
 #
 
-DISTNAME=		gcalctool-5.6.31
-PKGREVISION=		5
+DISTNAME=		gcalctool-5.7.32
 CATEGORIES=		math gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gcalctool/5.6/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gcalctool/5.7/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -22,14 +21,6 @@ USE_TOOLS+=		bison gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 
 GCONF2_SCHEMAS=		gcalctool.schemas
-
-# The sources assume <malloc.h> exists.  Create a fake one for platforms
-# that don't have it.
-post-wrapper:
-	if ${TEST} ! -f /usr/include/malloc.h; then		\
-		${ECHO} "#include <stdlib.h>"			\
-			> ${BUILDLINK_DIR}/include/malloc.h;	\
-	fi
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/atk/buildlink3.mk"
