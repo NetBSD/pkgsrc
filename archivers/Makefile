@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2006/03/03 22:37:08 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2006/03/30 03:17:53 minskim Exp $
 #
 
 COMMENT=	Archivers
@@ -61,6 +61,7 @@ SUBDIR+=	ppunpack
 SUBDIR+=	rar
 SUBDIR+=	rar-bin
 SUBDIR+=	rox-archive
+SUBDIR+=	ruby-zip
 SUBDIR+=	rzip
 SUBDIR+=	squsq
 SUBDIR+=	star
