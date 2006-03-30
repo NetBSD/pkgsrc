@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.59 2006/03/21 06:00:53 jlam Exp $
+# $NetBSD: Makefile,v 1.60 2006/03/30 21:14:58 jmmv Exp $
 #
 
-DISTNAME=	control-center-2.12.1
+DISTNAME=	control-center-2.14.0
 PKGNAME=	gnome2-${DISTNAME}
-PKGREVISION=	7
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.12/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/control-center/2.14/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -16,12 +15,13 @@ BUILD_USES_MSGFMT=	yes
 
 USE_MSGFMT_PLURALS=	yes
 GNU_CONFIGURE=		yes
-USE_DIRS+=		gnome2-1.5
+USE_DIRS+=		gnome2-1.6
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--disable-alsa
+CONFIGURE_ARGS+=	--with-gstreamer=0.10
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 INSTALL_MAKE_FLAGS+=	vfsmoduleconfdir=${PREFIX}/share/examples/${PKGBASE}
@@ -43,6 +43,7 @@ CONF_FILES+=		${EGDIR}/font-method.conf \
 			${PKG_SYSCONFDIR}/font-method.conf
 
 BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
+BUILDLINK_DEPENDS.gtk2+=	gtk2>=2.8.12
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -56,7 +57,8 @@ BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../multimedia/gst-plugins0.8/buildlink3.mk"
+.include "../../multimedia/gstreamer0.10/buildlink3.mk"
+.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-menus/buildlink3.mk"
@@ -64,6 +66,7 @@ BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../wm/metacity/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
