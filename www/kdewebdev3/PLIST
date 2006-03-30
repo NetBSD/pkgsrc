@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/12/11 11:09:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/03/30 02:42:52 markd Exp $
 bin/kfilereplace
 bin/kimagemapeditor
 bin/klinkstatus
@@ -233,6 +233,7 @@ share/kde/apps/kimagemapeditor/kimagemapeditorui.rc
 share/kde/apps/kimagemapeditor/polygoncursor.png
 share/kde/apps/kimagemapeditor/removepointcursor.png
 share/kde/apps/klinkstatus/klinkstatus_shell.rc
+share/kde/apps/klinkstatus/styles/results_stylesheet.xsl
 share/kde/apps/klinkstatuspart/klinkstatus_part.rc
 share/kde/apps/klinkstatuspart/pics/304.png
 share/kde/apps/kmdr-editor/pics/kommandersplash.png
@@ -1720,6 +1721,7 @@ share/kde/servicetypes/quantadebugger.desktop
 @dirrm share/kde/apps/kmdr-editor
 @dirrm share/kde/apps/klinkstatuspart/pics
 @dirrm share/kde/apps/klinkstatuspart
+@dirrm share/kde/apps/klinkstatus/styles
 @dirrm share/kde/apps/klinkstatus
 @dirrm share/kde/apps/kimagemapeditor
 @dirrm share/kde/apps/kfilereplacepart/icons/crystalsvg/22x22/actions
