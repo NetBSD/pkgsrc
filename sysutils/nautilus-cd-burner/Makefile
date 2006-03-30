@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2006/03/21 06:00:49 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2006/03/30 21:32:36 jmmv Exp $
 #
 
-DISTNAME=	nautilus-cd-burner-2.12.3
-PKGREVISION=	2
+DISTNAME=	nautilus-cd-burner-2.14.0.2
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/nautilus-cd-burner/2.12/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/nautilus-cd-burner/2.14/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -38,6 +37,9 @@ CONF_FILES=		${EGDIR}/mapping-modules.conf \
 
 GCONF2_SCHEMAS=		ncb.schemas
 
+BUILDLINK_DEPENDS.eel2+=	eel2>=2.13.3
+BUILDLINK_DEPENDS.nautilus+=	nautilus>=2.13.4
+
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/eel2/buildlink3.mk"
@@ -45,6 +47,7 @@ GCONF2_SCHEMAS=		ncb.schemas
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
