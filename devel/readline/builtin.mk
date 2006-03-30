@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.12 2006/03/30 18:06:17 jlam Exp $
+# $NetBSD: builtin.mk,v 1.13 2006/03/30 18:39:57 jlam Exp $
 
 BUILTIN_PKG:=	readline
 
 BUILTIN_FIND_LIBS:=		edit readline
-BUILTIN_FIND_FILES_VAR:=	H_READLINE
+BUILTIN_FIND_FILES_VAR:=	H_READLINE _BLTN_H_READLINE
 BUILTIN_FIND_FILES.H_READLINE=	/usr/include/readline/readline.h	\
 				/usr/include/readline.h
 BUILTIN_FIND_FILES._BLTN_H_READLINE=	\
