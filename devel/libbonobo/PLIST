@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/08/21 11:24:45 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/03/30 21:06:41 jmmv Exp $
 bin/activation-client
 bin/bonobo-activation-run-query
 bin/bonobo-slay
@@ -210,6 +210,7 @@ ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/libbonobo-2.0.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/li/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/libbonobo-2.0.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/libbonobo-2.0.mo
