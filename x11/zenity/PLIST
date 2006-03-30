@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/10/14 21:49:08 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/03/30 21:22:41 jmmv Exp $
 bin/gdialog
 bin/zenity
 man/man1/zenity.1
@@ -15,6 +15,18 @@ share/gnome/help/zenity/C/figures/zenity-text-screenshot.png
 share/gnome/help/zenity/C/figures/zenity-warning-screenshot.png
 share/gnome/help/zenity/C/legal.xml
 share/gnome/help/zenity/C/zenity.xml
+share/gnome/help/zenity/bg/figures/zenity-calendar-screenshot.png
+share/gnome/help/zenity/bg/figures/zenity-entry-screenshot.png
+share/gnome/help/zenity/bg/figures/zenity-error-screenshot.png
+share/gnome/help/zenity/bg/figures/zenity-fileselection-screenshot.png
+share/gnome/help/zenity/bg/figures/zenity-information-screenshot.png
+share/gnome/help/zenity/bg/figures/zenity-list-screenshot.png
+share/gnome/help/zenity/bg/figures/zenity-notification-screenshot.png
+share/gnome/help/zenity/bg/figures/zenity-progress-screenshot.png
+share/gnome/help/zenity/bg/figures/zenity-question-screenshot.png
+share/gnome/help/zenity/bg/figures/zenity-text-screenshot.png
+share/gnome/help/zenity/bg/figures/zenity-warning-screenshot.png
+share/gnome/help/zenity/bg/zenity.xml
 share/gnome/help/zenity/es/figures/zenity-calendar-screenshot.png
 share/gnome/help/zenity/es/figures/zenity-entry-screenshot.png
 share/gnome/help/zenity/es/figures/zenity-error-screenshot.png
@@ -85,6 +97,7 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/zenity-0.1.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/mi/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/zenity-0.1.mo
@@ -119,6 +132,7 @@ ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/zenity-0.1.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/zenity-0.1.mo
 share/omf/zenity/zenity-C.omf
+share/omf/zenity/zenity-bg.omf
 share/omf/zenity/zenity-es.omf
 share/omf/zenity/zenity-fr.omf
 share/omf/zenity/zenity-uk.omf
@@ -133,6 +147,7 @@ share/zenity/zenity-file.png
 share/zenity/zenity-list.png
 share/zenity/zenity-notification.png
 share/zenity/zenity-progress.png
+share/zenity/zenity-scale.png
 share/zenity/zenity-text.png
 share/zenity/zenity.glade
 share/zenity/zenity.png
@@ -146,6 +161,8 @@ share/zenity/zenity.png
 @dirrm share/gnome/help/zenity/fr
 @dirrm share/gnome/help/zenity/es/figures
 @dirrm share/gnome/help/zenity/es
+@dirrm share/gnome/help/zenity/bg/figures
+@dirrm share/gnome/help/zenity/bg
 @dirrm share/gnome/help/zenity/C/figures
 @dirrm share/gnome/help/zenity/C
 @dirrm share/gnome/help/zenity
