@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.33 2006/02/05 23:10:10 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2006/03/30 02:55:31 markd Exp $
 
 DISTNAME=	kdeartwork-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	misc
 COMMENT=	Artwork for the KDE integrated X11 desktop
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
 
-DEPENDS+=	xscreensaver>=4.19:../../x11/xscreensaver
+DEPENDS+=	xscreensaver>=4.22:../../x11/xscreensaver
 
 .include "../../mk/bsd.prefs.mk"
 
