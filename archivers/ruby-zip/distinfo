@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/03/30 03:16:48 minskim Exp $
+
+SHA1 (rubyzip-0.5.12.tgz) = 8ce562f01f13bab90e6f1b0514691984c59b6593
+RMD160 (rubyzip-0.5.12.tgz) = 13c6bf5d9639aff40de52bb8fbbfae0b529168cd
+Size (rubyzip-0.5.12.tgz) = 61651 bytes
