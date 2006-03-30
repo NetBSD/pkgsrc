@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2006/03/21 06:00:45 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2006/03/30 21:16:23 jmmv Exp $
 #
 
-DISTNAME=	gucharmap-1.4.4
-PKGREVISION=	5
+DISTNAME=	gucharmap-1.6.0
 CATEGORIES=	fonts gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gucharmap/1.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gucharmap/1.6/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -29,6 +28,7 @@ GTK2_IMMODULES=		yes
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
