@@ -1,10 +1,10 @@
-$NetBSD: patch-ah,v 1.1 2006/02/28 23:48:12 joerg Exp $
+$NetBSD: patch-ah,v 1.2 2006/03/30 21:09:48 jmmv Exp $
 
---- sysdeps/freebsd/open.c.orig	2006-02-24 17:02:00.000000000 +0000
+--- sysdeps/freebsd/open.c.orig	2005-12-12 11:09:39.000000000 +0100
 +++ sysdeps/freebsd/open.c
-@@ -22,6 +22,7 @@
- */
+@@ -23,6 +23,7 @@
  
+ #include <config.h>
  #include <glibtop.h>
 +#include <glibtop/error.h>
  #include <glibtop/open.h>
