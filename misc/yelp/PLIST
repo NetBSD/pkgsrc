@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/10/14 21:48:34 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/03/30 21:26:24 jmmv Exp $
 bin/gnome-help
 bin/yelp
 lib/bonobo/servers/GNOME_Yelp.server
@@ -43,6 +43,7 @@ ${PKGLOCALEDIR}/locale/ka/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/yelp.mo
+${PKGLOCALEDIR}/locale/ky/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/li/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/lv/LC_MESSAGES/yelp.mo
@@ -80,6 +81,7 @@ ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/yelp.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/yelp.mo
 ${PKGLOCALEDIR}/locale/zu/LC_MESSAGES/yelp.mo
 share/yelp/default.css
@@ -94,15 +96,18 @@ share/yelp/icons/yelp-watermark-blockquote-201C.png
 share/yelp/icons/yelp-watermark-blockquote-201D.png
 share/yelp/icons/yelp-watermark-blockquote-201E.png
 share/yelp/important_docs.xml
+share/yelp/info.xml
 share/yelp/man.xml
 share/yelp/scrollkeeper.xml
 share/yelp/toc.xml
+share/yelp/ui/yelp-search-ui.xml
 share/yelp/ui/yelp-ui.xml
 share/yelp/ui/yelp.glade
 share/yelp/xslt/db-title.xsl
 share/yelp/xslt/db2html.xsl
 share/yelp/xslt/info2html.xsl
 share/yelp/xslt/man2html.xsl
+share/yelp/xslt/search2html.xsl
 share/yelp/xslt/toc2html.xsl
 share/yelp/xslt/yelp-common.xsl
 share/yelp/yelp.js

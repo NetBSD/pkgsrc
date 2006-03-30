@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2006/03/21 06:00:47 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2006/03/30 21:26:24 jmmv Exp $
 #
 
-DISTNAME=		yelp-2.12.2
-PKGREVISION=		4
+DISTNAME=		yelp-2.14.0
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.12/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.14/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -46,6 +45,8 @@ BUILDLINK_DEPENDS.firefox+=     firefox>=1.5nb2
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
+.include "../../print/libgnomeprint/buildlink3.mk"
+.include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
@@ -54,5 +55,6 @@ BUILDLINK_DEPENDS.firefox+=     firefox>=1.5nb2
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../www/mozilla/gecko-depends.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/startup-notification/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
