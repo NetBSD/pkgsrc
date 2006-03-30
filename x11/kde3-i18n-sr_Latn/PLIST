@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/12/11 12:36:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/03/30 03:17:15 markd Exp $
 share/kde/apps/katepart/syntax/logohighlightstyle.sr@Latn.xml
 share/kde/apps/khangman/data/sr@Latn/animals.kvtml
 share/kde/apps/khangman/data/sr@Latn/easy.kvtml
@@ -395,6 +395,7 @@ ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/konnector_qtopia.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/konnector_remote.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/konqsidebar_delicious.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/konqsidebar_mediaplayer.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/konqsidebar_metabar.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/konqsidebar_news.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/konqueror.mo
 ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/konquest.mo

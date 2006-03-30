@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/01/31 23:08:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/03/30 03:17:11 markd Exp $
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/amor.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/appletproxy.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/ark.mo
@@ -191,6 +191,7 @@ ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kfile_tga.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kfile_theora.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kfile_tiff.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kfile_torrent.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kfile_ts.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kfile_txt.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kfile_vcf.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kfile_wav.mo
@@ -286,6 +287,7 @@ ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/knotify.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kodo.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kolf.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kolourpaint.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kolourpicker.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kompare.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/konqueror.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/konquest.mo
@@ -313,6 +315,7 @@ ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/krdc.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kreadconfig.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/krec.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kregexpeditor.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kres_bugzilla.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kres_exchange.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kres_remote.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kres_xmlrpc.mo
@@ -337,6 +340,7 @@ ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/ksplash.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/ksplashthemes.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kstars.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kstart.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kstartperf.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kstyle_keramik_config.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kstyle_plastik_config.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/ksvgplugin.mo
@@ -357,7 +361,9 @@ ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/ktouch.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/ktron.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/ktuberling.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/ktux.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kuick_plugin.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kuickshow.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kuiviewer.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kuser.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kverbos.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/kview.mo
@@ -387,6 +393,7 @@ ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/libkcalsystem.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/libkcddb.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/libkdegames.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/libkdepim.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/libkfaximgage.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/libkicker.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/libkickermenu_kdeprint.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/libkickermenu_konsole.mo
@@ -406,6 +413,7 @@ ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/libtaskmanager.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/lockout.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/lskat.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/mediaapplet.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/mf_konqplugin.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/naughtyapplet.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/noatun.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/nsplugin.mo
@@ -415,6 +423,7 @@ ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/quicklauncher.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/secpolicy.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/timezones.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/trashapplet.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/uachangerplugin.mo
 ${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/useraccount.mo
 ${PKGLOCALEDIR}/locale/mk/charset
 ${PKGLOCALEDIR}/locale/mk/entry.desktop

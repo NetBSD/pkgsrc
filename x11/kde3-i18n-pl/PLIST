@@ -1,68 +1,33 @@
-@comment $NetBSD: PLIST,v 1.17 2006/01/31 23:08:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/03/30 03:17:14 markd Exp $
 share/doc/kde/HTML/pl/ark/common
 share/doc/kde/HTML/pl/ark/index.cache.bz2
 share/doc/kde/HTML/pl/ark/index.docbook
 share/doc/kde/HTML/pl/ark/man-ark.1.docbook
-share/doc/kde/HTML/pl/common/1.png
-share/doc/kde/HTML/pl/common/10.png
-share/doc/kde/HTML/pl/common/2.png
-share/doc/kde/HTML/pl/common/3.png
-share/doc/kde/HTML/pl/common/4.png
-share/doc/kde/HTML/pl/common/5.png
-share/doc/kde/HTML/pl/common/6.png
-share/doc/kde/HTML/pl/common/7.png
-share/doc/kde/HTML/pl/common/8.png
-share/doc/kde/HTML/pl/common/9.png
-share/doc/kde/HTML/pl/common/appheader.html
-share/doc/kde/HTML/pl/common/artistic-license.html
-share/doc/kde/HTML/pl/common/bottom-left.png
-share/doc/kde/HTML/pl/common/bottom-middle.png
-share/doc/kde/HTML/pl/common/bottom-right.png
-share/doc/kde/HTML/pl/common/bottom1.png
-share/doc/kde/HTML/pl/common/bottom2.png
-share/doc/kde/HTML/pl/common/bsd-license.html
-share/doc/kde/HTML/pl/common/docheadergears.png
-share/doc/kde/HTML/pl/common/doctop1.png
-share/doc/kde/HTML/pl/common/doctop1a.png
-share/doc/kde/HTML/pl/common/doctop1b.png
-share/doc/kde/HTML/pl/common/doctop2.png
-share/doc/kde/HTML/pl/common/doxygen.css
-share/doc/kde/HTML/pl/common/favicon.ico
-share/doc/kde/HTML/pl/common/fdl-license
-share/doc/kde/HTML/pl/common/fdl-license.html
-share/doc/kde/HTML/pl/common/fdl-notice.html
+share/doc/kde/HTML/pl/blinken/common
+share/doc/kde/HTML/pl/blinken/index.cache.bz2
+share/doc/kde/HTML/pl/blinken/index.docbook
 share/doc/kde/HTML/pl/common/fdl-translated.html
-share/doc/kde/HTML/pl/common/footer.html
-share/doc/kde/HTML/pl/common/gpl-license
-share/doc/kde/HTML/pl/common/gpl-license.html
 share/doc/kde/HTML/pl/common/gpl-translated.html
-share/doc/kde/HTML/pl/common/grad.png
-share/doc/kde/HTML/pl/common/header.html
-share/doc/kde/HTML/pl/common/headerbg.png
-share/doc/kde/HTML/pl/common/kde-common.css
-share/doc/kde/HTML/pl/common/kde-default.css
 share/doc/kde/HTML/pl/common/kde-localised.css
-share/doc/kde/HTML/pl/common/kde-localised.css.template
-share/doc/kde/HTML/pl/common/kde-web.css
-share/doc/kde/HTML/pl/common/kde_gear_64.png
-share/doc/kde/HTML/pl/common/kde_logo.png
-share/doc/kde/HTML/pl/common/kde_logo_bg.png
-share/doc/kde/HTML/pl/common/kmenu.png
-share/doc/kde/HTML/pl/common/lgpl-license
-share/doc/kde/HTML/pl/common/lgpl-license.html
 share/doc/kde/HTML/pl/common/lgpl-translated.html
 share/doc/kde/HTML/pl/common/logotp3.png
-share/doc/kde/HTML/pl/common/mainfooter.html
-share/doc/kde/HTML/pl/common/mainheader.html
-share/doc/kde/HTML/pl/common/qpl-license.html
-share/doc/kde/HTML/pl/common/shadow.png
-share/doc/kde/HTML/pl/common/top-left.png
-share/doc/kde/HTML/pl/common/top-middle.png
-share/doc/kde/HTML/pl/common/top-right-konqueror.png
-share/doc/kde/HTML/pl/common/web-docbottom.png
-share/doc/kde/HTML/pl/common/web-doctop.png
-share/doc/kde/HTML/pl/common/x11-license.html
-share/doc/kde/HTML/pl/common/xml.dcl
+share/doc/kde/HTML/pl/kaddressbook/common
+share/doc/kde/HTML/pl/kaddressbook/index.cache.bz2
+share/doc/kde/HTML/pl/kaddressbook/index.docbook
+share/doc/kde/HTML/pl/kalzium/common
+share/doc/kde/HTML/pl/kalzium/gradient.png
+share/doc/kde/HTML/pl/kalzium/index.cache.bz2
+share/doc/kde/HTML/pl/kalzium/index.docbook
+share/doc/kde/HTML/pl/kalzium/infodialog_bohr.png
+share/doc/kde/HTML/pl/kalzium/infodialog_chemicaldata.png
+share/doc/kde/HTML/pl/kalzium/infodialog_energies.png
+share/doc/kde/HTML/pl/kalzium/infodialog_misc.png
+share/doc/kde/HTML/pl/kalzium/infodialog_overview.png
+share/doc/kde/HTML/pl/kalzium/infodialog_picture.png
+share/doc/kde/HTML/pl/kalzium/infodialog_spectrum.png
+share/doc/kde/HTML/pl/kalzium/plottingdialog.png
+share/doc/kde/HTML/pl/kalzium/quick-1.png
+share/doc/kde/HTML/pl/kalzium/screenshot1.png
 share/doc/kde/HTML/pl/kanagram/common
 share/doc/kde/HTML/pl/kanagram/index.cache.bz2
 share/doc/kde/HTML/pl/kanagram/index.docbook
@@ -76,11 +41,18 @@ share/doc/kde/HTML/pl/kbruch/index.cache.bz2
 share/doc/kde/HTML/pl/kbruch/index.docbook
 share/doc/kde/HTML/pl/kbruch/reduced.png
 share/doc/kde/HTML/pl/kbruch/settings.png
+share/doc/kde/HTML/pl/kcalc/commands.docbook
+share/doc/kde/HTML/pl/kcalc/common
+share/doc/kde/HTML/pl/kcalc/index.cache.bz2
+share/doc/kde/HTML/pl/kcalc/index.docbook
 share/doc/kde/HTML/pl/kdevelop/tip.database
 share/doc/kde/HTML/pl/keduca/common
 share/doc/kde/HTML/pl/keduca/index.cache.bz2
 share/doc/kde/HTML/pl/keduca/index.docbook
 share/doc/kde/HTML/pl/keduca/screenshot.png
+share/doc/kde/HTML/pl/kfind/common
+share/doc/kde/HTML/pl/kfind/index.cache.bz2
+share/doc/kde/HTML/pl/kfind/index.docbook
 share/doc/kde/HTML/pl/kgeography/common
 share/doc/kde/HTML/pl/kgeography/first-start1.png
 share/doc/kde/HTML/pl/kgeography/first-start10.png
@@ -99,6 +71,14 @@ share/doc/kde/HTML/pl/kgeography/index.docbook
 share/doc/kde/HTML/pl/kgeography/kgeography.png
 share/doc/kde/HTML/pl/kgeography/river.png
 share/doc/kde/HTML/pl/kgeography/zoom.png
+share/doc/kde/HTML/pl/khangman/common
+share/doc/kde/HTML/pl/khangman/index.cache.bz2
+share/doc/kde/HTML/pl/khangman/index.docbook
+share/doc/kde/HTML/pl/khangman/khangman1.png
+share/doc/kde/HTML/pl/khangman/khangman2.png
+share/doc/kde/HTML/pl/khangman/settings1.png
+share/doc/kde/HTML/pl/khangman/settings2.png
+share/doc/kde/HTML/pl/khangman/settings3.png
 share/doc/kde/HTML/pl/khelpcenter/common
 share/doc/kde/HTML/pl/khelpcenter/contact.docbook
 share/doc/kde/HTML/pl/khelpcenter/help.docbook
@@ -196,6 +176,23 @@ share/doc/kde/HTML/pl/klettres/klettres3.png
 share/doc/kde/HTML/pl/klettres/klettres4.png
 share/doc/kde/HTML/pl/klettres/klettres5.png
 share/doc/kde/HTML/pl/klettres/klettres6.png
+share/doc/kde/HTML/pl/kmail/common
+share/doc/kde/HTML/pl/kmail/configure.docbook
+share/doc/kde/HTML/pl/kmail/credits-and-licenses.docbook
+share/doc/kde/HTML/pl/kmail/faq.docbook
+share/doc/kde/HTML/pl/kmail/getting-started.docbook
+share/doc/kde/HTML/pl/kmail/importing.docbook
+share/doc/kde/HTML/pl/kmail/index.cache.bz2
+share/doc/kde/HTML/pl/kmail/index.docbook
+share/doc/kde/HTML/pl/kmail/intro.docbook
+share/doc/kde/HTML/pl/kmail/menus.docbook
+share/doc/kde/HTML/pl/kmail/using-kmail.docbook
+share/doc/kde/HTML/pl/kmenuedit/common
+share/doc/kde/HTML/pl/kmenuedit/index.cache.bz2
+share/doc/kde/HTML/pl/kmenuedit/index.docbook
+share/doc/kde/HTML/pl/kmines/common
+share/doc/kde/HTML/pl/kmines/index.cache.bz2
+share/doc/kde/HTML/pl/kmines/index.docbook
 share/doc/kde/HTML/pl/kmplot/commands.docbook
 share/doc/kde/HTML/pl/kmplot/common
 share/doc/kde/HTML/pl/kmplot/configuration.docbook
@@ -210,6 +207,9 @@ share/doc/kde/HTML/pl/kmplot/introduction.docbook
 share/doc/kde/HTML/pl/kmplot/menu.docbook
 share/doc/kde/HTML/pl/kmplot/reference.docbook
 share/doc/kde/HTML/pl/kmplot/using.docbook
+share/doc/kde/HTML/pl/knotes/common
+share/doc/kde/HTML/pl/knotes/index.cache.bz2
+share/doc/kde/HTML/pl/knotes/index.docbook
 share/doc/kde/HTML/pl/konqueror/basics.docbook
 share/doc/kde/HTML/pl/konqueror/bookmarks.docbook
 share/doc/kde/HTML/pl/konqueror/browser.docbook
@@ -234,6 +234,15 @@ share/doc/kde/HTML/pl/konqueror/save-settings.docbook
 share/doc/kde/HTML/pl/konqueror/shortcut1.png
 share/doc/kde/HTML/pl/konqueror/shortcut2.png
 share/doc/kde/HTML/pl/konqueror/sidebar.docbook
+share/doc/kde/HTML/pl/konsole/common
+share/doc/kde/HTML/pl/konsole/index.cache.bz2
+share/doc/kde/HTML/pl/konsole/index.docbook
+share/doc/kde/HTML/pl/kontact/common
+share/doc/kde/HTML/pl/kontact/index.cache.bz2
+share/doc/kde/HTML/pl/kontact/index.docbook
+share/doc/kde/HTML/pl/kpat/common
+share/doc/kde/HTML/pl/kpat/index.cache.bz2
+share/doc/kde/HTML/pl/kpat/index.docbook
 share/doc/kde/HTML/pl/kpdf/common
 share/doc/kde/HTML/pl/kpdf/configure.png
 share/doc/kde/HTML/pl/kpdf/index.cache.bz2
@@ -251,6 +260,9 @@ share/doc/kde/HTML/pl/kpercentage/install.docbook
 share/doc/kde/HTML/pl/kpercentage/introduction.docbook
 share/doc/kde/HTML/pl/kpercentage/using.docbook
 share/doc/kde/HTML/pl/kpercentage/welcome.png
+share/doc/kde/HTML/pl/ksirc/common
+share/doc/kde/HTML/pl/ksirc/index.cache.bz2
+share/doc/kde/HTML/pl/ksirc/index.docbook
 share/doc/kde/HTML/pl/kspell/common
 share/doc/kde/HTML/pl/kspell/index.cache.bz2
 share/doc/kde/HTML/pl/kspell/index.docbook
@@ -275,6 +287,9 @@ share/doc/kde/HTML/pl/kwordquiz/index.docbook
 share/doc/kde/HTML/pl/kxkb/common
 share/doc/kde/HTML/pl/kxkb/index.cache.bz2
 share/doc/kde/HTML/pl/kxkb/index.docbook
+share/doc/kde/HTML/pl/noatun/common
+share/doc/kde/HTML/pl/noatun/index.cache.bz2
+share/doc/kde/HTML/pl/noatun/index.docbook
 share/kde/apps/katepart/syntax/logohighlightstyle.pl.xml
 share/kde/apps/khangman/data/pl/animals.kvtml
 share/kde/apps/khangman/data/pl/easy.kvtml
@@ -865,6 +880,7 @@ ${PKGLOCALEDIR}/locale/pl/flag.png
 @comment in kde: @dirrm share/kde/apps/khangman/data
 @comment in kde: @dirrm share/kde/apps/khangman
 @comment in kde: @dirrm share/kde/apps/katepart/syntax
+@dirrm share/doc/kde/HTML/pl/noatun
 @dirrm share/doc/kde/HTML/pl/kxkb
 @dirrm share/doc/kde/HTML/pl/kwordquiz
 @dirrm share/doc/kde/HTML/pl/kwallet
@@ -872,20 +888,34 @@ ${PKGLOCALEDIR}/locale/pl/flag.png
 @dirrm share/doc/kde/HTML/pl/ktouch
 @dirrm share/doc/kde/HTML/pl/ksysguard
 @dirrm share/doc/kde/HTML/pl/kspell
+@dirrm share/doc/kde/HTML/pl/ksirc
 @dirrm share/doc/kde/HTML/pl/kpercentage
 @dirrm share/doc/kde/HTML/pl/kpdf
+@dirrm share/doc/kde/HTML/pl/kpat
+@dirrm share/doc/kde/HTML/pl/kontact
+@dirrm share/doc/kde/HTML/pl/konsole
 @dirrm share/doc/kde/HTML/pl/konqueror
+@dirrm share/doc/kde/HTML/pl/knotes
 @dirrm share/doc/kde/HTML/pl/kmplot
+@dirrm share/doc/kde/HTML/pl/kmines
+@dirrm share/doc/kde/HTML/pl/kmenuedit
+@dirrm share/doc/kde/HTML/pl/kmail
 @dirrm share/doc/kde/HTML/pl/klettres
 @dirrm share/doc/kde/HTML/pl/kig
 @dirrm share/doc/kde/HTML/pl/khelpcenter/userguide
 @dirrm share/doc/kde/HTML/pl/khelpcenter
+@dirrm share/doc/kde/HTML/pl/khangman
 @dirrm share/doc/kde/HTML/pl/kgeography
+@dirrm share/doc/kde/HTML/pl/kfind
 @dirrm share/doc/kde/HTML/pl/keduca
 @dirrm share/doc/kde/HTML/pl/kdevelop
+@dirrm share/doc/kde/HTML/pl/kcalc
 @dirrm share/doc/kde/HTML/pl/kbruch
 @dirrm share/doc/kde/HTML/pl/kanagram
+@dirrm share/doc/kde/HTML/pl/kalzium
+@dirrm share/doc/kde/HTML/pl/kaddressbook
 @dirrm share/doc/kde/HTML/pl/common
+@dirrm share/doc/kde/HTML/pl/blinken
 @dirrm share/doc/kde/HTML/pl/ark
 @dirrm share/doc/kde/HTML/pl
 @comment in kde: @dirrm share/doc/kde/HTML
