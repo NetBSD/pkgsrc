@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/20 18:15:37 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/30 05:00:05 jlam Exp $
 
 DISTNAME=		binutils-2.12.1
 PKGNAME=		cross-h8300-hms-binutils-2.12.1
@@ -22,7 +22,6 @@ CONFIGURE_ARGS+=	--target=h8300-hms
 CONFIGURE_SCRIPT=	${SRCDIR}/configure
 SRCDIR=			${WRKDIR}/${DISTNAME}
 BUILD_TARGET=		CFLAGS="-O2 -fomit-frame-pointer" all
-INFO_DIR=		libexec/cross-h8300-hms/binutils
 INFO_FILES=		# PLIST
 
 INSTALLATION_DIRS=	${H8300_PREFIX}
