@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.55 2006/03/21 06:00:43 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2006/03/30 21:28:13 jmmv Exp $
 #
 
-DISTNAME=	file-roller-2.12.3
-PKGREVISION=	2
+DISTNAME=	file-roller-2.14.0
 CATEGORIES=	archivers gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/file-roller/2.12/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/file-roller/2.14/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,6 +17,7 @@ DEPENDS+=		zip>=2.3nb2:../../archivers/zip
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
+USE_LIBTOOL=		yes
 USE_MSGFMT_PLURALS+=	yes
 USE_TOOLS+=		gmake perl pkg-config
 USE_PKGLOCALEDIR=	yes
@@ -31,7 +31,6 @@ BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.4.0
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
