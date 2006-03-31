@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2006/03/30 21:30:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.14 2006/03/31 20:37:37 jmmv Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
+
+PKGREVISION=		1
 
 COMMENT=		PDF rendering library
 
@@ -35,6 +37,7 @@ CONFIGURE_ARGS+=	--enable-a4-paper
 .endif
 
 post-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/include/poppler
 	${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/poppler/
 	${INSTALL_MAN} ${WRKSRC}/README-XPDF ${PREFIX}/share/doc/poppler/
 
