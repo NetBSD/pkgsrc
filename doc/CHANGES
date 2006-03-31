@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13388 2006/03/31 09:08:48 jmmv Exp $
+$NetBSD: CHANGES,v 1.13389 2006/03/31 10:38:26 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1748,7 +1748,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/vte to 0.12.0 [jmmv 2006-03-30]
 	Updated x11/gnome2-terminal to 2.14.0 [jmmv 2006-03-30]
 	Updated x11/gnome-session to 2.14.0 [jmmv 2006-03-30]
-	Added audio/gst-plugins0.10-esound-0.10.2 [jmmv 2006-01-20]
+	Added audio/gst-plugins0.10-esound version 0.10.2 [jmmv 2006-01-20]
 	Updated devel/at-spi to 1.7.6 [jmmv 2006-03-30]
 	Updated x11/gtksourceview to 1.6.0 [jmmv 2006-03-30]
 	Updated x11/zenity to 2.14.0 [jmmv 2006-03-30]
