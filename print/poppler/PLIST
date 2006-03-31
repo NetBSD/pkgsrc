@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/03/30 21:30:25 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/03/31 20:37:37 jmmv Exp $
 bin/pdffonts
 bin/pdfimages
 bin/pdfinfo
@@ -19,3 +19,5 @@ man/man1/pdftotext.1
 share/doc/poppler/README
 share/doc/poppler/README-XPDF
 @dirrm share/doc/poppler
+@exec ${MKDIR} %D/include/poppler
+@dirrm include/poppler
