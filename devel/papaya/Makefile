@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/03/30 23:16:10 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/03/31 05:37:09 jlam Exp $
 #
 
 DISTNAME=	papaya-0.1.7
@@ -20,7 +20,7 @@ CONFIGURE_ENV+=	sh_command=${TOOLS_SH:Q}
 CONFIGURE_ENV+=	tar_command=${TOOLS_TAR:Q}
 CONFIGURE_ENV+=	texi2html_command=${TOOLS_PATH.texi2html:Q}
 USE_TOOLS+=	sh perl:run tar texi2html
-INFO_FILES=	papaya.info
+INFO_FILES=	# PLIST
 
 CONFIGURE_ENV+=	perl_command=${PERL5:Q}
 

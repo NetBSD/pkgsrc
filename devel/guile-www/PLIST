@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2005/10/17 00:03:35 gdt Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/03/31 05:37:08 jlam Exp $
+info/guile-www.info
 share/guile/site/www/cgi
 share/guile/site/www/data/content-type
 share/guile/site/www/data/http-status

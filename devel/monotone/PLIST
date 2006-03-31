@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2005/12/31 11:33:47 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/03/31 05:37:09 jlam Exp $
 bin/monotone
+info/monotone.info
 man/man1/monotone.1
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/monotone.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/monotone.mo

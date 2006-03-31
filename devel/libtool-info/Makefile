@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/05 16:27:25 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/31 05:37:08 jlam Exp $
 #
 
 .include "../../devel/libtool/Makefile.common"
@@ -11,7 +11,7 @@ COMMENT=	Generic shared library support script - info pages
 CONFLICTS+=	libtool<1.3.5nb11
 
 USE_TOOLS+=	makeinfo
-INFO_FILES=	libtool.info
+INFO_FILES=	# PLIST
 
 do-build:
 	cd ${WRKSRC}/doc ; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
