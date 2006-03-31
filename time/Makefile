@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/02/09 10:42:34 kleink Exp $
+# $NetBSD: Makefile,v 1.46 2006/03/31 22:24:07 adrianp Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -28,6 +28,7 @@ SUBDIR+=	gtodo
 SUBDIR+=	gtodo-applet
 SUBDIR+=	ical
 SUBDIR+=	jday
+SUBDIR+=	kronolith
 SUBDIR+=	lmclock
 SUBDIR+=	logtime
 SUBDIR+=	p5-DateTime
