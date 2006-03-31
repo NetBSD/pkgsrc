@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/03/05 16:27:25 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/03/31 15:40:37 jlam Exp $
 
 DISTNAME=	zile-2.2.4
 CATEGORIES=	editors
@@ -12,7 +12,7 @@ USE_TOOLS+=	makeinfo
 USE_NCURSES=	yes	# uses stdscr->_delay directly
 GNU_CONFIGURE=	yes
 
-INFO_FILES=	zile.info
+INFO_FILES=	# PLIST
 
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
