@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/03/31 17:41:07 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2006/03/31 18:35:22 jlam Exp $
 #
 
 DISTNAME=	Gauche-0.8.6
@@ -15,37 +15,25 @@ DEPENDS+=	slib-[0-9]*:../../devel/slib
 
 .include "options.mk"
 
-# This is ad-hoc.  TRT would be to fix configure scripts, but that
-# would be also very tedious...
-SUBST_CLASSES+=		lgdbm
-SUBST_STAGE.lgdbm=	pre-configure
-SUBST_FILES.lgdbm=	configure
-SUBST_SED.lgdbm=	-e 's|"-lgdbm"|"${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gdbm}/lib -lgdbm"|g'
-
 EVAL_PREFIX+=		SLIB_PREFIX=slib
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-slib=${SLIB_PREFIX}/share/slib
-CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--enable-multibyte=utf-8
 CONFIGURE_ARGS+=	--enable-threads=none	# must match w/ boehm-gc
 CONFIGURE_ENV+=		AS="${CC} -x assembler-with-cpp -c"
 
-_WITH_ICONV_LIB=	${BUILDLINK_LIBICONV_LDADD:M-l*:C/-l//}
-LDFLAGS+=		${BUILDLINK_LIBICONV_LDADD}
+CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
+CONFIGURE_ARGS+=	--with-iconv-lib=${BUILDLINK_LDADD.iconv:M-l*:S/-l//:Q}
+MAKE_ENV+=      	ICONV_LDFLAGS=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.iconv}/lib
 
 USE_TOOLS+=		gzip makeinfo
 INFO_FILES=		gauche-refe.info gauche-refj.info
 
-post-install:
-	gzip -d ${PREFIX}/info/gauche-ref*gz
-
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-.include "../../mk/bsd.pkg.mk"
 
-.if !empty(_WITH_ICONV_LIB)
-CONFIGURE_ARGS+=	--with-iconv-lib=${_WITH_ICONV_LIB:Q}
-.else
-BUILDLINK_TRANSFORM+=	rm:-liconv
-.endif
+post-install:
+	gzip -d ${PREFIX}/${PKGINFODIR}/gauche-ref*gz
+
+.include "../../mk/bsd.pkg.mk"

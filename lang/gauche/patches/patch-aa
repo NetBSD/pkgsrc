@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2006/03/31 17:40:12 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2006/03/31 18:35:22 jlam Exp $
 
---- configure.orig	2005-11-05 01:00:47.000000000 +0000
+--- configure.orig	2005-11-04 20:00:47.000000000 -0500
 +++ configure
 @@ -1631,7 +1631,7 @@ _ACEOF
  
@@ -94,3 +94,13 @@ $NetBSD: patch-aa,v 1.6 2006/03/31 17:40:12 jlam Exp $
      SHLIB_SO_CFLAGS="-fPIC"
      SHLIB_SO_LDFLAGS="$rpath -shared -o"
      SHLIB_SO_SUFFIX="so"
+@@ -9276,7 +9341,9 @@ fi;
+ if test "${with_iconv_lib+set}" = set; then
+   withval="$with_iconv_lib"
+ 
++  if test "x$withval" != x; then
+   ICONV_NAME="$with_iconv_lib"; ICONV_LIB="-l$with_iconv_lib"
++  fi
+ 
+ fi;
+ 
