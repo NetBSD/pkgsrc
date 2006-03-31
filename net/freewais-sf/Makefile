@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2006/03/31 22:43:03 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/03/31 22:54:23 jlam Exp $
 #
 
 DISTNAME=	freeWAIS-sf-2.2.12
 PKGNAME=	freewais-sf-2.2.12
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net databases
 MASTER_SITES=	ftp://ls6-ftp.cs.uni-dortmund.de/pub/src/freeWAIS-sf/
 
@@ -14,14 +14,16 @@ COMMENT=	Enhanced Wide Area Information Server
 NOT_FOR_PLATFORM=	Darwin-*-*
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	makeinfo perl:run
+USE_TOOLS+=	makeinfo gzcat:run gzip:run perl:run
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX:Q}			\
 			-Darchname=${MACHINE_ARCH}-${LOWER_OPSYS}	\
-			-Dmansrc=${PREFIX:Q}/${PKGMANDIR:Q}/man1
+			-Dmansrc=${PREFIX:Q}/${PKGMANDIR:Q}/man1	\
+			-Dgzip=${TOOLS_PATH.gzip:Q}			\
+			-Dzcat=${TOOLS_PATH.gzcat:Q}
 CONFIGURE_ENV+=		PERL5=${PERL5:Q}
 INSTALL_TARGET=		install install.man
 INFO_FILES=		# PLIST
