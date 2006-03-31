@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/02/05 23:08:54 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2006/03/31 05:37:09 jlam Exp $
 #
 
 DISTNAME=		xdelta-1.1.1
@@ -11,10 +11,9 @@ HOMEPAGE=		http://www.xcf.berkeley.edu/~jmacd/xdelta.html
 COMMENT=		Enhanced diff that works on binary files
 
 USE_LIBTOOL=		yes
-LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
-INFO_FILES=		xdelta.info
+INFO_FILES=		# PLIST
 
 .include "../../devel/glib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
