@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/02/22 21:54:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/03/31 15:08:00 drochner Exp $
 bin/gliv
 man/de/man1/gliv.1
 man/fr/man1/gliv.1
@@ -14,6 +14,7 @@ ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gliv.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gliv.mo
 ${PKGLOCALEDIR}/locale/rw/LC_MESSAGES/gliv.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gliv.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gliv.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gliv.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gliv.mo
 share/pixmaps/gliv.png
