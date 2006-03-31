@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.13 2006/02/16 18:09:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/03/31 18:35:22 jlam Exp $
 bin/gauche-cesconv
 bin/gauche-config
 bin/gauche-install
 bin/gauche-package
 bin/gosh
+info/gauche-refe.info
+info/gauche-refj.info
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/auxsys.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/binary.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/fcntl.so
@@ -59,8 +61,8 @@ lib/gauche/${PKGVERSION}/include/gc.h
 lib/gauche/${PKGVERSION}/include/gc_config_macros.h
 lib/gauche/${PKGVERSION}/include/gc_pthread_redirects.h
 lib/libgauche.so
-lib/libgauche.so.${PKGVERSION}
 lib/libgauche.so.0
+lib/libgauche.so.${PKGVERSION}
 man/man1/gauche-config.1
 man/man1/gosh.1
 share/aclocal/gauche.m4
