@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13384 2006/03/30 21:52:20 jmmv Exp $
+$NetBSD: CHANGES,v 1.13385 2006/03/31 03:14:28 smb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1783,3 +1783,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated time/evolution-webcal to 2.5.90 [jmmv 2006-03-30]
 	Updated mail/evolution to 2.6.0 [jmmv 2006-03-30]
 	Updated mail/evolution-exchange to 2.6.0 [jmmv 2006-03-30]
+	Added print/bibtool 2.48 [smb 2006-03-30]
