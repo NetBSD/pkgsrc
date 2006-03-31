@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.3 2006/03/31 10:24:38 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.4 2006/03/31 10:46:25 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -9,3 +9,5 @@ Pullup ticket 1289 - requested by salo
 security update for p5-CGI-Session
 Pullup ticket 1293 - requested by jlam
 fix paths to tools in papaya
+Pullup ticket 1294 - requested by jlam
+fix dependencies and paths in prcs
