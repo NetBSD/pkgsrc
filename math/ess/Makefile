@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/03/05 16:27:27 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/03/31 04:29:51 jlam Exp $
 
 DISTNAME=	ess-5.1.24
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	http://software.biostat.washington.edu/ess/
 
@@ -10,27 +10,20 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://software.biostat.washington.edu/statsoft/ess/
 COMMENT=	Emacs Speaks Statistics
 
-MAKEFLAGS+=	EMACS=${EMACS_BIN:Q}
-
 USE_TOOLS+=	makeinfo perl
-
-.if defined(USE_XEMACS)
-LISPDIR=	${EMACS_LISPPREFIX}
-INFODIR=	${EMACS_LISPPREFIX}/../info
-.else
-LISPDIR=	${EMACS_LISPPREFIX}
-INFODIR=	info
-INFO_FILES=	ess.info
-.endif
-INSTALLATION_DIRS=	${INFODIR}
+EMACS_MODULES=	base
 
 MAKE_ENV+=	LISPDIR=${EMACS_LISPPREFIX}/ess
-PLIST_SUBST+=	INFODIR=${INFODIR:Q}
+MAKEFLAGS+=	EMACS=${EMACS_BIN:Q}
+
+INSTALLATION_DIRS=	${EMACS_INFOPREFIX} ${EMACS_LISPPREFIX}/ess
 
 do-install:
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/ess
 	cd ${WRKSRC}/lisp && ${INSTALL_DATA} *.el* ${EMACS_LISPPREFIX}/ess
-	${INSTALL_DATA} ${WRKSRC}/doc/ess.info* ${PREFIX}/${INFODIR}
+	cd ${WRKSRC}/doc; for f in ess.info ess.info-[0-9]*; do		\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_DATA} "$$f" ${EMACS_INFOPREFIX};		\
+        done
 
 .include "../../mk/emacs.mk"
 .include "../../mk/bsd.pkg.mk"
