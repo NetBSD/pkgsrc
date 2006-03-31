@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2006/03/31 19:29:37 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/03/31 23:20:29 jlam Exp $
 #
 
 DISTNAME=		dirmngr-0.9.3
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/alpha/dirmngr/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
@@ -35,6 +35,15 @@ SUBST_FILES+=		SYSCONFDIR=${SYSCONFDIR}
 SUBST_FILES+=		DIRMNGR_USER=${DIRMNGR_USER}
 SUBST_FILES+=		DIRMNGR_PATH=${DIRMNGR_PATH}
 
+OWN_DIRS+=		${PKG_SYSCONFDIR}/dirmngr
+OWN_DIRS+=		${PKG_SYSCONFDIR}/dirmngr/trusted-certs
+
+DIRMNGR_PERMS=		${DIRMNGR_USER} ${DIRMNGR_GROUP} 0755
+OWN_DIRS_PERMS+=	${VARBASE}/dirmngr ${DIRMNGR_PERMS}
+OWN_DIRS_PERMS+=	${VARBASE}/dirmngr/cache ${DIRMNGR_PERMS}
+OWN_DIRS_PERMS+=	${PREFIX}/libdata/dirmngr ${DIRMNGR_PERMS}
+OWN_DIRS_PERMS+=	${PREFIX}/libdata/dirmngr/extra-certs ${DIRMNGR_PERMS}
+
 # We are building a static pth library and linking against it
 pre-configure:
 	cd  ${WRKDIR}/pth-2.0.4 && ./configure --prefix=${WRKDIR}/pth --enable-pthread --enable-static --disable-shared && ${MAKE} install
@@ -45,14 +54,6 @@ pre-build:
 post-build:
 	cd ${WRKDIR} && \
 	${SETENV} ${BUILDENV} ${CC} ${CFLAGS} -DDIRMNGR_USER='"${DIRMNGR_USER}"' -DDIRMNGR_PATH='"${PREFIX}/bin/dirmngr"' -o runDirmngr runDirmngr.c
-
-pre-install:
-	${INSTALL_DATA_DIR} ${VARBASE}/dirmngr/cache
-	${INSTALL_DATA_DIR} ${PREFIX}/libdata/dirmngr
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/dirmngr/trusted-certs
-	${INSTALL_DATA_DIR} ${PREFIX}/libdata/dirmngr/extra-certs
-	${CHOWN} -R ${DIRMNGR_USER}:${DIRMNGR_GROUP} ${VARBASE}/dirmngr
-	${CHOWN} -R ${DIRMNGR_USER}:${DIRMNGR_GROUP} ${PREFIX}/libdata/dirmngr
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/runDirmngr ${PREFIX}/sbin
