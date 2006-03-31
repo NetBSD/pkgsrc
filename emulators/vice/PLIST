@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/02/17 19:26:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/03/31 16:47:44 jlam Exp $
 bin/c1541
 bin/petcat
 bin/vsid
@@ -8,27 +8,10 @@ bin/xcbm2
 bin/xpet
 bin/xplus4
 bin/xvic
+info/vice.info
 man/man1/c1541.1
 man/man1/petcat.1
 man/man1/vice.1
-share/doc/html/vice/index.html
-share/doc/html/vice/vice_1.html
-share/doc/html/vice/vice_10.html
-share/doc/html/vice/vice_11.html
-share/doc/html/vice/vice_12.html
-share/doc/html/vice/vice_13.html
-share/doc/html/vice/vice_14.html
-share/doc/html/vice/vice_15.html
-share/doc/html/vice/vice_16.html
-share/doc/html/vice/vice_2.html
-share/doc/html/vice/vice_3.html
-share/doc/html/vice/vice_4.html
-share/doc/html/vice/vice_5.html
-share/doc/html/vice/vice_6.html
-share/doc/html/vice/vice_7.html
-share/doc/html/vice/vice_8.html
-share/doc/html/vice/vice_9.html
-share/doc/html/vice/vice_toc.html
 share/doc/vice/64doc.txt
 share/doc/vice/BUGS
 share/doc/vice/COPYING
@@ -47,10 +30,28 @@ share/doc/vice/Win32-Howto.txt
 share/doc/vice/cbm_basic_tokens.txt
 share/doc/vice/drive_info.txt
 share/doc/vice/iec-bus.txt
+share/doc/vice/index.html
 share/doc/vice/mon.txt
 share/doc/vice/new.gif
 share/doc/vice/serial.txt
 share/doc/vice/vice-logo.jpg
+share/doc/vice/vice_1.html
+share/doc/vice/vice_10.html
+share/doc/vice/vice_11.html
+share/doc/vice/vice_12.html
+share/doc/vice/vice_13.html
+share/doc/vice/vice_14.html
+share/doc/vice/vice_15.html
+share/doc/vice/vice_16.html
+share/doc/vice/vice_2.html
+share/doc/vice/vice_3.html
+share/doc/vice/vice_4.html
+share/doc/vice/vice_5.html
+share/doc/vice/vice_6.html
+share/doc/vice/vice_7.html
+share/doc/vice/vice_8.html
+share/doc/vice/vice_9.html
+share/doc/vice/vice_toc.html
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/vice.mo
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/vice.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/vice.mo
@@ -240,4 +241,3 @@ share/vice/fonts/vice-cbm.pcf
 @dirrm share/vice/C128
 @comment in REQ_DIRS: @dirrm share/vice
 @dirrm share/doc/vice
-@dirrm share/doc/html/vice
