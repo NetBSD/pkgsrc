@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/04 21:30:34 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/03/31 23:44:39 jlam Exp $
 #
 
 DISTNAME=		gss-0.0.15
@@ -9,6 +9,8 @@ MASTER_SITES=		http://josefsson.org/gss/releases/ \
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gss/
 COMMENT=		GNU Generic Security Service Library
+
+CONFLICTS+=		heimdal-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
