@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2006/03/15 19:28:05 drochner Exp $
+# $NetBSD: Makefile,v 1.146 2006/03/31 03:14:28 smb Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -17,6 +17,7 @@ SUBDIR+=	apsfilter
 SUBDIR+=	auctex
 SUBDIR+=	bg5pdf
 SUBDIR+=	bg5ps
+SUBDIR+=	bibtool
 SUBDIR+=	bww2tex
 SUBDIR+=	chktex
 SUBDIR+=	cjk-lyx
