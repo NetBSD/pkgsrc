@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/03/14 01:14:27 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2006/03/31 05:37:08 jlam Exp $
 #
 
 DISTNAME=	isect-1.6.2
@@ -13,20 +13,19 @@ COMMENT=	Open source middleware daemon
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 PTHREAD_OPTS+=		require
-INFO_FILES=		isect.info
+INFO_FILES=		# PLIST
 
 RCD_SCRIPTS=	isect
 
 DOCDIR=		${PREFIX}/share/doc/isect
 EGDIR=		${PREFIX}/share/examples/isect
 
+INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
 	for file in ${WRKSRC}/doc/*.html; do \
 		${INSTALL_DATA} $${file} ${DOCDIR}; \
 	done
-
-	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${EGDIR}
 
 .include "../../www/libwww/buildlink3.mk"

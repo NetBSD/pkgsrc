@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/03/02 14:11:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/03/31 05:37:09 jlam Exp $
 bin/add-html-signature
 bin/compare-version
 bin/copy-if-changed
@@ -20,6 +20,7 @@ bin/recursive-make
 bin/search-exec
 bin/search-package
 bin/texi2html-wrapper
+info/papaya.info
 libexec/papaya-lib.pl
 libexec/papaya-lib.sh
 share/doc/papaya/Copying.html

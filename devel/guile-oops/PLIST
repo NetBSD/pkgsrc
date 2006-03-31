@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2004/10/14 15:31:40 tv Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/03/31 05:37:08 jlam Exp $
 bin/guile-oops
 include/goops-snarf.h
 include/goops.h
 include/goops/versiondat.h
+info/goops.info
 lib/libgoopscore.la
 share/guile/oop/goops.scm
 share/guile/oop/goops/active-slot.scm
