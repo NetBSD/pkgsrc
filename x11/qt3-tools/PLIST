@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2005/09/27 07:47:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2006/03/31 14:38:02 drochner Exp $
 qt3/bin/assistant
 qt3/bin/designer
 qt3/bin/linguist
@@ -66,6 +66,8 @@ qt3/mkspecs/linux-cxx/qmake.conf
 qt3/mkspecs/linux-cxx/qplatformdefs.h
 qt3/mkspecs/linux-ecc-64/qmake.conf
 qt3/mkspecs/linux-ecc-64/qplatformdefs.h
+qt3/mkspecs/linux-g++-32/qmake.conf
+qt3/mkspecs/linux-g++-32/qplatformdefs.h
 qt3/mkspecs/linux-g++-64/qmake.conf
 qt3/mkspecs/linux-g++-64/qplatformdefs.h
 qt3/mkspecs/linux-g++/qmake.conf
@@ -83,6 +85,7 @@ qt3/mkspecs/lynxos-g++/qplatformdefs.h
 qt3/mkspecs/macx-g++/Info.plist.app
 qt3/mkspecs/macx-g++/qmake.conf
 qt3/mkspecs/macx-g++/qplatformdefs.h
+qt3/mkspecs/macx-mwerks/README
 qt3/mkspecs/macx-mwerks/mwerkstmpl.xml
 qt3/mkspecs/macx-mwerks/qmake.conf
 qt3/mkspecs/macx-mwerks/qplatformdefs.h
@@ -180,6 +183,7 @@ qt3/plugins/designer/libwizards.la
 @dirrm qt3/mkspecs/linux-kcc
 @dirrm qt3/mkspecs/linux-icc
 @dirrm qt3/mkspecs/linux-g++-64
+@dirrm qt3/mkspecs/linux-g++-32
 @dirrm qt3/mkspecs/linux-g++
 @dirrm qt3/mkspecs/linux-ecc-64
 @dirrm qt3/mkspecs/linux-cxx
