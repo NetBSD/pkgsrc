@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/03/12 18:32:21 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2006/03/31 05:37:08 jlam Exp $
 
 DISTNAME=	libidn-0.6.3
 CATEGORIES=	devel
@@ -15,11 +15,10 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		makeinfo pkg-config perl:build
 GNU_CONFIGURE=		yes
+INFO_FILES=		# PLIST
 
 PKGCONFIG_OVERRIDE+=	libidn.pc.in
 TEST_TARGET=		check
-
-INFO_FILES=		libidn.info
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
