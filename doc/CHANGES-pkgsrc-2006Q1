@@ -1,6 +1,9 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.1 2006/03/29 21:38:06 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.2 2006/03/31 03:31:49 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
 
 Created pkgsrc-2006Q1 branch [agc 2005-03-29 20:15 GMT]
+
+Pullup ticket 1289 - requested by Lubomir Sedlacik
+security update for p5-CGI-Session
