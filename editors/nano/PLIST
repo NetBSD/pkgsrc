@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2004/10/21 03:39:04 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/03/31 15:40:37 jlam Exp $
 bin/nano
+info/nano.info
 man/man1/nano.1
 man/man5/nanorc.5
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/nano.mo
