@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/01/04 20:35:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/03/31 15:34:44 jlam Exp $
 bin/any2ps
 bin/b2m
 bin/coco
@@ -9,6 +9,28 @@ bin/m2ps
 bin/mule
 bin/mule-19.28
 bin/rcs-checkin
+info/CCL
+info/ISO2022
+info/R2L
+info/XFONT
+info/antenews-jp
+info/canna-jp
+info/cl
+info/dired-x
+info/egg
+info/egg-jp
+info/emacs
+info/forms
+info/gnus
+info/kbd-trans
+info/languages
+info/m2ps
+info/mule
+info/mule-jp
+info/quail
+info/sc
+info/terminology
+info/vip
 man/man1/coco.1
 man/man1/ctags.1
 man/man1/etags.1
@@ -301,7 +323,6 @@ lib/mule/19.28/lisp/egg.el
 lib/mule/19.28/lisp/egg.elc
 lib/mule/19.28/lisp/eggrc-sj3
 lib/mule/19.28/lisp/eggrc-wnn
-lib/mule/19.28/lisp/eggrc-wnn.orig
 lib/mule/19.28/lisp/ehelp.el
 lib/mule/19.28/lisp/ehelp.elc
 lib/mule/19.28/lisp/electric.el
@@ -400,7 +421,6 @@ lib/mule/19.28/lisp/indent.elc
 lib/mule/19.28/lisp/inf-lisp.el
 lib/mule/19.28/lisp/inf-lisp.elc
 lib/mule/19.28/lisp/info.el
-lib/mule/19.28/lisp/info.el.orig
 lib/mule/19.28/lisp/info.elc
 lib/mule/19.28/lisp/informat.el
 lib/mule/19.28/lisp/informat.elc
@@ -752,7 +772,6 @@ lib/mule/19.28/lisp/spell.elc
 lib/mule/19.28/lisp/spook.el
 lib/mule/19.28/lisp/spook.elc
 lib/mule/19.28/lisp/startup.el
-lib/mule/19.28/lisp/startup.el.orig
 lib/mule/19.28/lisp/startup.elc
 lib/mule/19.28/lisp/studly.el
 lib/mule/19.28/lisp/studly.elc
