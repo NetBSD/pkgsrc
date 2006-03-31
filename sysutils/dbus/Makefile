@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/30 20:57:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2006/03/31 16:40:41 joerg Exp $
 #
 
 .include "Makefile.common"
@@ -14,5 +14,7 @@ RCD_SCRIPTS=	dbus
 EGDIR=		${PREFIX}/share/examples/dbus
 CONF_FILES=	${EGDIR}/session.conf ${PKG_SYSCONFDIR}/session.conf
 CONF_FILES+=	${EGDIR}/system.conf ${PKG_SYSCONFDIR}/system.conf
+
+.include "../../devel/gettext-lib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
