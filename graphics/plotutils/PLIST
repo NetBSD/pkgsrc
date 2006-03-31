@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:37 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/03/31 23:56:28 jlam Exp $
 bin/double
 bin/graph
 bin/ode
@@ -10,6 +10,7 @@ bin/tek2plot
 include/plot.h
 include/plotcompat.h
 include/plotter.h
+info/plotutils.info
 lib/libplot.la
 lib/libplotter.la
 man/man1/ode.1

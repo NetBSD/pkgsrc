@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2005/05/31 18:02:31 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/03/31 23:56:28 jlam Exp $
 bin/gist
 bin/yorick
+info/yorick.info
 lib/yorick/1.6/Make.cfg
 lib/yorick/1.6/Makedll
 lib/yorick/1.6/Makeexe

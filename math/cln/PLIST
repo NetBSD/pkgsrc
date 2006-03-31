@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/03/12 16:33:32 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/03/31 23:56:28 jlam Exp $
 bin/cln-config
 include/cln/GV.h
 include/cln/GV_complex.h
@@ -78,6 +78,7 @@ include/cln/univpoly_modint.h
 include/cln/univpoly_rational.h
 include/cln/univpoly_real.h
 include/cln/version.h
+info/cln.info
 lib/libcln.la
 lib/pkgconfig/cln.pc
 man/man1/cln-config.1

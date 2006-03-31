@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/01/29 22:02:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/03/31 23:56:30 jlam Exp $
 bin/aspell
 bin/aspell-import
 bin/precat
@@ -10,6 +10,8 @@ bin/run-with-aspell
 bin/word-list-compress
 include/aspell.h
 include/pspell/pspell.h
+info/aspell-dev.info
+info/aspell.info
 lib/aspell/ccpp.amf
 lib/aspell/comment.amf
 ${FILTER}lib/aspell/context-filter.la

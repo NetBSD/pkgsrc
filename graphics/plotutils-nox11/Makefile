@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/31 17:28:11 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/31 23:56:28 jlam Exp $
 #
 
 DISTNAME=		plotutils-2.4.1
@@ -18,8 +18,7 @@ PATCHDIR=		${.CURDIR}/../../graphics/plotutils/patches
 
 USE_LANGUAGES=		c c++
 
-INFO_FILES=	plotutils.info
-
+INFO_FILES=		# PLIST
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-libplotter

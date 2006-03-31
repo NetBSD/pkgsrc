@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2005/05/31 17:05:36 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/03/31 23:56:28 jlam Exp $
 bin/cd-drive
 bin/cd-info
 bin/cd-paranoia
@@ -30,6 +30,7 @@ include/cdio/types.h
 include/cdio/util.h
 include/cdio/version.h
 include/cdio/xa.h
+info/libcdio.info
 lib/libcdio.la
 lib/libcdio_cdda.la
 lib/libcdio_paranoia.la

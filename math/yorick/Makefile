@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/05 16:27:27 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/03/31 23:56:28 jlam Exp $
 
 DISTNAME=	yorick-1.6.02
 PKGREVISION=	1
@@ -15,7 +15,7 @@ BUILD_DIRS=	${WRKSRC} ${WRKSRC}/doc
 INSTALL_DIRS=	${WRKSRC}
 
 USE_TOOLS+=	gmake makeinfo
-INFO_FILES=	yorick.info
+INFO_FILES=	# PLIST
 
 .include "../../mk/x11.buildlink3.mk"
 
@@ -26,11 +26,14 @@ post-patch:
 	done
 
 post-install:
-	for f in yorick gist; do \
-	cd ${PREFIX}/bin && ${LN} -sf ../lib/yorick/1.6/bin/$$f $$f; \
+	cd ${PREFIX}/bin; for f in yorick gist; do			\
+		${LN} -sf ../lib/yorick/1.6/bin/$$f $$f;		\
 	done
-	${INSTALL_DATA} ${WRKSRC}/doc/yorick.info* ${PREFIX}/info
-	${INSTALL_MAN} ${WRKSRC}/doc/*.1 ${PREFIX}/man/man1
+	cd ${WRKSRC}; for f in yorick.info yorick.info-[0-9]*; do	\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
+	done
+	${INSTALL_MAN} ${WRKSRC}/doc/*.1 ${PREFIX}/${PKGMANDIR}/man1
 	cd ${PREFIX}/share/doc && ${LN} -sf ../yorick/1.6/doc yorick
 	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
 	${INSTALL_DATA} ${WRKSRC}/emacs/*.el ${PREFIX}/share/emacs/site-lisp

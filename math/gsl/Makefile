@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/03/31 18:57:28 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/03/31 23:56:28 jlam Exp $
 
 DISTNAME=	gsl-1.7
 CATEGORIES=	math devel
@@ -10,7 +10,7 @@ COMMENT=	The GNU Scientific Library
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-INFO_FILES=		gsl-ref.info
+INFO_FILES=		# PLIST
 
 TEST_TARGET=		check
 

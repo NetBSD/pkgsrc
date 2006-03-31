@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/03/31 23:20:29 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/03/31 23:56:29 jlam Exp $
 #
 
 DISTNAME=		dirmngr-0.9.3
@@ -23,6 +23,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gawk
 USE_PKGLOCALEDIR=	yes
 RCD_SCRIPTS=		dirmngr
+INFO_FILES=		# PLIST
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE:Q}
@@ -57,8 +58,6 @@ post-build:
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/runDirmngr ${PREFIX}/sbin
-
-INFO_FILES=		dirmngr.info
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/openldap/buildlink3.mk"

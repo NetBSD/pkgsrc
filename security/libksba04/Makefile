@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:47:13 tv Exp $
+# $NetBSD: Makefile,v 1.7 2006/03/31 23:56:29 jlam Exp $
 #
 
 DISTNAME=	libksba-0.4.7
@@ -16,6 +16,6 @@ GNU_CONFIGURE=	YES
 TEST_TARGET=	check
 
 TEXINFO_REQD=	4.0
-INFO_FILES=	ksba.info
+INFO_FILES=	# PLIST
 
 .include "../../mk/bsd.pkg.mk"

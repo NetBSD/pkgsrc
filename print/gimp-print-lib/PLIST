@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.14 2004/09/27 11:33:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/03/31 23:56:29 jlam Exp $
 bin/gimpprint-config
 include/gimp-print/gimp-print.h
+info/gimpprint.info
 lib/libgimpprint.la
 man/man1/gimpprint-config.1
 man/man3/gimpprint.3

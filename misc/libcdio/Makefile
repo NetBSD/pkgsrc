@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/02/05 23:10:12 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2006/03/31 23:56:28 jlam Exp $
 
 DISTNAME=	libcdio-0.76
 PKGREVISION=	1
@@ -20,8 +20,7 @@ PKGCONFIG_OVERRIDE+=	libcdio_paranoia.pc.in
 PKGCONFIG_OVERRIDE+=	libiso9660.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-versioned-libs
-
-INFO_FILES=		libcdio.info
+INFO_FILES=		# PLIST
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/01/30 08:44:25 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/03/31 23:56:28 jlam Exp $
 bin/anytovcd.sh
 bin/jpeg2yuv
 bin/lav2avi.sh
@@ -96,6 +96,7 @@ include/mjpegtools/mplex/stream_params.hpp
 include/mjpegtools/mplex/systems.hpp
 include/mjpegtools/mplex/videostrm.hpp
 include/mjpegtools/yuv4mpeg.h
+info/mjpeg-howto.info
 lib/liblavfile.la
 lib/liblavjpeg.la
 lib/liblavplay.la
