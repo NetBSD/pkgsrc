@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13389 2006/03/31 10:38:26 salo Exp $
+$NetBSD: CHANGES,v 1.13390 2006/03/31 10:49:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1787,3 +1787,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/gtk-doc to 1.5nb2 [jmmv 2006-03-31]
 	Updated mail/evolution to 2.6.0nb1 [jmmv 2006-03-31]
 	Updated graphics/librsvg2 to 2.14.2nb2 [jmmv 2006-03-31]
+	Updated emulators/wine to 0.9.10 [adam 2006-03-31]
