@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/02/07 21:31:04 drochner Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/03/31 10:57:20 jmmv Exp $
 include/libgnomeui-2.0/gnome.h
 include/libgnomeui-2.0/libgnomeui/gnome-about.h
 include/libgnomeui-2.0/libgnomeui/gnome-app-helper.h
@@ -73,6 +73,7 @@ share/doc/libgnomeui/GnomeHRef.html
 share/doc/libgnomeui/GnomeIconEntry.html
 share/doc/libgnomeui/GnomeIconList.html
 share/doc/libgnomeui/GnomeIconSelection.html
+share/doc/libgnomeui/GnomeIconTextItem.html
 share/doc/libgnomeui/GnomeMDI.html
 share/doc/libgnomeui/GnomeMDIChild.html
 share/doc/libgnomeui/GnomeMDIGenericChild.html
@@ -90,8 +91,12 @@ share/doc/libgnomeui/home.png
 share/doc/libgnomeui/index.html
 share/doc/libgnomeui/index.sgml
 share/doc/libgnomeui/left.png
+share/doc/libgnomeui/libgnomeui-GnomeAuthentication.html
+share/doc/libgnomeui/libgnomeui-GnomeIce.html
 share/doc/libgnomeui/libgnomeui-GnomeIconLookup.html
 share/doc/libgnomeui/libgnomeui-GnomeIconTheme.html
+share/doc/libgnomeui/libgnomeui-GnomeMultiScreen.html
+share/doc/libgnomeui/libgnomeui-GnomePassword.html
 share/doc/libgnomeui/libgnomeui-GnomeThemeFile.html
 share/doc/libgnomeui/libgnomeui-GnomeThumbnail.html
 share/doc/libgnomeui/libgnomeui-gnome-app-helper.html
@@ -104,10 +109,12 @@ share/doc/libgnomeui/libgnomeui-gnome-types.html
 share/doc/libgnomeui/libgnomeui-gnome-ui-init.html
 share/doc/libgnomeui/libgnomeui-gnome-uidefs.html
 share/doc/libgnomeui/libgnomeui-gnome-vfs-util.html
+share/doc/libgnomeui/libgnomeui-gnome-window-icon.html
 share/doc/libgnomeui/libgnomeui-gnome-window.html
 share/doc/libgnomeui/libgnomeui-gnometypebuiltins.html
 share/doc/libgnomeui/libgnomeui-objects.html
 share/doc/libgnomeui/libgnomeui.devhelp
+share/doc/libgnomeui/libgnomeui.devhelp2
 share/doc/libgnomeui/miscellaneous.html
 share/doc/libgnomeui/right.png
 share/doc/libgnomeui/stock_attach.png
@@ -178,6 +185,7 @@ ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/libgnomeui-2.0.mo
+${PKGLOCALEDIR}/locale/ka/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/libgnomeui-2.0.mo
@@ -215,6 +223,7 @@ ${PKGLOCALEDIR}/locale/te/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/th/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/tk/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libgnomeui-2.0.mo
+${PKGLOCALEDIR}/locale/tt/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/libgnomeui-2.0.mo
 ${PKGLOCALEDIR}/locale/wa/LC_MESSAGES/libgnomeui-2.0.mo
