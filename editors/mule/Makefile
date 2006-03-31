@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2006/03/05 16:27:25 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2006/03/31 15:34:44 jlam Exp $
 
 DISTNAME=	mule-2.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/
 
@@ -15,14 +15,14 @@ CONFLICTS=	emacs-[0-9]*
 CHECK_WRKREF_SKIP+=	${PREFIX}/bin/mule
 CHECK_WRKREF_SKIP+=	${PREFIX}/bin/mule-19.28
 
-WRKSRC=		${WRKDIR}/mule
-GNU_CONFIGURE=	yes
+WRKSRC=			${WRKDIR}/mule
+USE_TOOLS+=		gmake makeinfo
+GNU_CONFIGURE=		yes
 GNU_CONFIGURE_MANDIR=	${PREFIX}/${PKGMANDIR}/man1
-USE_TOOLS+=	gmake makeinfo
 
 .include "../../mk/bsd.prefs.mk"
 
-CFLAGS+=-g
+CFLAGS+=	-g
 
 CONFIGURE_ARGS+=	${MACHINE_ARCH}--${LOWER_OPSYS} --with-x --with-x-toolkit=lucid
 CONFIGURE_ARGS+=	--terminal-face --mcpath --canna-libraries=${PREFIX}/lib
@@ -33,13 +33,13 @@ CONFIGURE_ARGS+=	--bdf-path=${X11PREFIX}/lib/X11/fonts/intlfonts/bdf
 
 .include "options.mk"
 
-INFO_FILES=	CCL ISO2022 R2L XFONT antenews-jp canna-jp cl dired-x
-INFO_FILES+=	egg egg-jp emacs forms gnus kbd-trans languages m2ps mule
-INFO_FILES+=	mule-jp quail sc terminology vip
-
-MAN1=		coco.1 ctags.1 etags.1 m2ps.1 mule.1
+INFO_FILES=	# PLIST
 
 .include "../../mk/x11.buildlink3.mk"
+
+# Remove original versions of patched files so that aren't installed.
+post-build:
+	${FIND} ${WRKSRC} -name "*.orig" | ${XARGS} ${RM} -f
 
 # Fix character mapping for pkgsrc/fonts/intlfonts
 post-install:
@@ -49,13 +49,5 @@ post-install:
 		-e 's/jiskan24/j83-48/' \
 		< ${WRKSRC}/etc/CHARSETS > ${PREFIX}/lib/mule/19.28/etc/CHARSETS
 	#diff -u		${WRKSRC}/etc/CHARSETS ${PREFIX}/lib/mule/19.28/etc/CHARSETS
-.for f in info/CCL.orig info/ISO2022.orig info/R2L.orig info/XFONT.orig \
-info/antenews-jp.orig info/canna-jp.orig info/egg-jp-1.orig \
-info/egg-jp-2.orig info/egg-jp.orig info/egg.orig info/kbd-trans.orig \
-info/languages.orig info/m2ps.orig info/mule-jp-1.orig info/mule-jp-2.orig \
-info/mule-jp-3.orig info/mule-jp.orig info/mule.orig info/quail.orig \
-info/terminology.orig
-	${RM} ${PREFIX}/${f}
-.endfor
 
 .include "../../mk/bsd.pkg.mk"
