@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.78 2006/03/02 19:03:20 joerg Exp $
+# $NetBSD: Makefile,v 1.79 2006/03/31 17:58:39 tron Exp $
 
-DISTNAME=		inn-2.4.1
-PKGREVISION=		8
+DISTNAME=		inn-2.4.3
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.sunet.se/pub/news/nntp/inn/ \
