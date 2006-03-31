@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/09/22 15:38:39 tron Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/03/31 17:58:40 tron Exp $
 bin/inews
 include/inn/config.h
 include/inn/dbz.h
@@ -255,7 +255,6 @@ man/man8/ovdb_stat.8
 man/man8/overchan.8
 man/man8/perl-nocem.8
 man/man8/prunehistory.8
-man/man8/pullnews.8
 man/man8/radius.8
 man/man8/rc.news.8
 man/man8/scanlogs.8
