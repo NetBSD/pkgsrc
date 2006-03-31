@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2005/12/30 14:18:52 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2006/03/31 17:40:12 jlam Exp $
 
 --- configure.orig	2005-11-05 01:00:47.000000000 +0000
 +++ configure
@@ -94,27 +94,3 @@ $NetBSD: patch-aa,v 1.5 2005/12/30 14:18:52 joerg Exp $
      SHLIB_SO_CFLAGS="-fPIC"
      SHLIB_SO_LDFLAGS="$rpath -shared -o"
      SHLIB_SO_SUFFIX="so"
-@@ -10097,12 +10162,12 @@ fi
- echo "$as_me:$LINENO: result: $ac_cv_lib_gdbm_gdbm_open" >&5
- echo "${ECHO_T}$ac_cv_lib_gdbm_gdbm_open" >&6
- if test $ac_cv_lib_gdbm_gdbm_open = yes; then
--   GDBMLIB="-lgdbm"
-+   GDBMLIB="-Wl,-R/usr/pkg/lib -lgdbm"
- fi
- 
- LIBSAVE="$LIBS"
- if test "$NDBM_HEADER" = "gdbm/ndbm.h"; then
--  NDBMLIB="-lgdbm"  # use emulation by gdbm
-+  NDBMLIB="-Wl,-R/usr/pkg/lib -lgdbm"  # use emulation by gdbm
- else
-   echo "$as_me:$LINENO: checking for library containing dbm_open" >&5
- echo $ECHO_N "checking for library containing dbm_open... $ECHO_C" >&6
-@@ -10232,7 +10297,7 @@ fi
- 
- fi
- if test "$ODBM_HEADER" = "gdbm/dbm.h"; then
--  ODBMLIB="-lgdbm"  # use emulation by gdbm
-+  ODBMLIB="-Wl,-R/usr/pkg/lib -lgdbm"  # use emulation by gdbm
- else
-   echo "$as_me:$LINENO: checking for library containing dbminit" >&5
- echo $ECHO_N "checking for library containing dbminit... $ECHO_C" >&6
