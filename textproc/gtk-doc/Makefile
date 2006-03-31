@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2006/03/21 06:00:50 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/03/31 08:53:13 jmmv Exp $
 #
 
 DISTNAME=	gtk-doc-1.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/1.5/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,11 +18,13 @@ DEPENDS+=	dsssl-docbook-modular-[0-9]*:../../textproc/dsssl-docbook-modular
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	gtk-doc.pc.in
 CONFIGURE_ARGS+=	--with-xml-catalog=${XML_DEFAULT_CATALOG:Q}
+USE_DIRS+=		gnome2-1.6
 USE_TOOLS+=		perl:run
 
 SGML_CATALOGS=		${PREFIX}/share/sgml/gtk-doc/gtk-doc.cat
 
 .include "../../textproc/jade/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
