@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/03/30 03:44:43 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2006/03/31 23:44:39 jlam Exp $
 
 DISTNAME=	heimdal-0.7.2
 CATEGORIES=	security
@@ -12,6 +12,7 @@ COMMENT=	Kerberos 5 implementation
 CONFLICTS+=	arla-[0-9]*
 CONFLICTS+=	mit-krb5-[0-9]*
 CONFLICTS+=	openafs-[0-9]*
+CONFLICTS+=	gss-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
