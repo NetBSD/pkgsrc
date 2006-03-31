@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:10:46 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/03/31 23:56:29 jlam Exp $
 #
 
 DISTNAME=		pinentry-0.7.1
@@ -13,7 +13,7 @@ COMMENT=		Applications for entering PINs or Passphrases
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 
-INFO_FILES=		pinentry.info
+INFO_FILES=		# PLIST
 
 # XXX This usage of bsd.options.mk is wrong and has to be fixed.  The
 # package has to be splitted into different packages, such as pinentry-gtk

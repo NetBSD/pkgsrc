@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:40 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/03/31 23:56:28 jlam Exp $
 bin/al
 bin/cli-unknown-ar
 bin/cli-unknown-cpp
@@ -85,6 +85,7 @@ include/pnet/il_values.h
 include/pnet/il_writer.h
 include/pnet/il_xml.h
 include/pnet/leak_detector.h
+info/pnettools.info
 lib/cscc/plugins/cscc-b
 lib/cscc/plugins/cscc-bf
 lib/cscc/plugins/cscc-c-s

@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2006/03/31 23:20:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/03/31 23:56:29 jlam Exp $
 bin/dirmngr
 bin/dirmngr-client
+info/dirmngr.info
 libexec/dirmngr_ldap
 sbin/runDirmngr
 share/examples/rc.d/dirmngr

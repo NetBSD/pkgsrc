@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/09 20:08:07 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/03/31 23:56:29 jlam Exp $
 @comment There are three files in this package that teTeX-share installs
 @comment and that teTeX-bin modifies. Take care of this:
 lib/libkpathsea.a
@@ -54,6 +54,10 @@ include/kpathsea/c-ctype.h
 include/kpathsea/c-auto.h
 include/kpathsea/absolute.h
 @dirrm include/kpathsea
+info/dvips.info
+info/kpathsea.info
+info/latex.info
+info/web2c.info
 @comment also in teTeX-share; touched but unmodified: share/texmf/fontname/linot-cd.map
 @comment also in teTeX-share; touched but unmodified: share/texmf/fontname/itc.map
 @comment also in teTeX-share; touched but unmodified: share/texmf/fontname/softkey.map

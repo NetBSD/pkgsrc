@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2005/02/28 13:29:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/03/31 23:56:29 jlam Exp $
 bin/gsasl
 include/gsasl-compat.h
 include/gsasl-mech.h
 include/gsasl.h
+info/gsasl.info
 lib/libgsasl.la
 lib/pkgconfig/libgsasl.pc
 man/man1/gsasl.1

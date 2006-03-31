@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/03/09 21:04:45 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2006/03/31 23:56:28 jlam Exp $
 
 DISTNAME=	mjpegtools-1.8.0
 PKGREVISION=	3
@@ -19,6 +19,7 @@ USE_TOOLS+=		bash:run pkg-config
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE+=	libtool
 PKGCONFIG_OVERRIDE=	mjpegtools.pc.in
+INFO_FILES=		# PLIST
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-libquicktime
@@ -27,15 +28,15 @@ CONFIGURE_ARGS+=	--with-lame-includes=${BUILDLINK_PREFIX.lame}
 
 .include "options.mk"
 
-INFO_FILES=		mjpeg-howto.info
-
 .include "../../audio/lame/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+#
 # GTK+ support is disabled to avoid a dependency on GTK+ when building GNOME2.
 # This only disables the "glav" program.  If you really need it, please add an
 # external package for it.
+#
 #.include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
