@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/02/05 23:10:43 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/03/31 19:29:37 jlam Exp $
 #
 
 DISTNAME=		dirmngr-0.9.3
@@ -23,7 +23,6 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gawk
 USE_PKGLOCALEDIR=	yes
 RCD_SCRIPTS=		dirmngr
-PKG_RCD_SCRIPTS=	yes
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE:Q}
