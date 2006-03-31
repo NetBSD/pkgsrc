@@ -1,11 +1,8 @@
-$NetBSD: patch-aj,v 1.1 2005/11/19 12:03:22 rillig Exp $
+$NetBSD: patch-aj,v 1.2 2006/03/31 17:58:40 tron Exp $
 
-Use double quotes around command variables to make them work even if
-they consist of multiple words.
-
---- scripts/innshellvars.in.orig	Wed Jan  7 23:47:19 2004
-+++ scripts/innshellvars.in	Sat Nov 19 12:57:17 2005
-@@ -67,20 +67,20 @@ SERVERPID=${INNDDIR}/innd.pid
+--- scripts/innshellvars.in.orig	2006-03-20 04:14:57.000000000 +0000
++++ scripts/innshellvars.in	2006-03-31 17:44:43.000000000 +0100
+@@ -67,22 +67,22 @@
  INNWSTATUS=${INNDDIR}/innwatch.status
  WATCHPID=${INNDDIR}/innwatch.pid
  
@@ -24,6 +21,8 @@ they consist of multiple words.
 +PGP="@_PATH_PGP@"
  SORT="@_PATH_SORT@"
  GETFTP="@GETFTP@"
+ UUX=@_PATH_UUX@
+ 
 -COMPRESS=@COMPRESS@
 -GZIP=@GZIP@
 +COMPRESS="@COMPRESS@"
