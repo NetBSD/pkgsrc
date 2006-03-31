@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2006/03/13 08:31:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.40 2006/03/31 10:48:00 adam Exp $
 bin/bin2res
 bin/fnt2bdf
 bin/function_grep.pl
@@ -791,42 +791,41 @@ man/man1/wmc.1
 man/man1/wrc.1
 share/aclocal/wine.m4
 share/applications/wine.desktop
-share/fonts/wine/coue1255.fon
-share/fonts/wine/coue1256.fon
-share/fonts/wine/coue1257.fon
-share/fonts/wine/coure.fon
-share/fonts/wine/couree.fon
-share/fonts/wine/coureg.fon
-share/fonts/wine/courer.fon
-share/fonts/wine/couret.fon
-share/fonts/wine/cvgasys.fon
-share/fonts/wine/hvgasys.fon
-share/fonts/wine/jvgasys.fon
-share/fonts/wine/marlett.ttf
-share/fonts/wine/ssee1255.fon
-share/fonts/wine/ssee1256.fon
-share/fonts/wine/ssee1257.fon
-share/fonts/wine/ssee874.fon
-share/fonts/wine/sserife.fon
-share/fonts/wine/sserifee.fon
-share/fonts/wine/sserifeg.fon
-share/fonts/wine/sserifer.fon
-share/fonts/wine/sserifet.fon
-share/fonts/wine/svgasys.fon
-share/fonts/wine/vgas1255.fon
-share/fonts/wine/vgas1256.fon
-share/fonts/wine/vgas1257.fon
-share/fonts/wine/vgas874.fon
-share/fonts/wine/vgasys.fon
-share/fonts/wine/vgasyse.fon
-share/fonts/wine/vgasysg.fon
-share/fonts/wine/vgasysr.fon
-share/fonts/wine/vgasyst.fon
+share/wine/fonts/coue1255.fon
+share/wine/fonts/coue1256.fon
+share/wine/fonts/coue1257.fon
+share/wine/fonts/coure.fon
+share/wine/fonts/couree.fon
+share/wine/fonts/coureg.fon
+share/wine/fonts/courer.fon
+share/wine/fonts/couret.fon
+share/wine/fonts/cvgasys.fon
+share/wine/fonts/hvgasys.fon
+share/wine/fonts/jvgasys.fon
+share/wine/fonts/marlett.ttf
+share/wine/fonts/ssee1255.fon
+share/wine/fonts/ssee1256.fon
+share/wine/fonts/ssee1257.fon
+share/wine/fonts/ssee874.fon
+share/wine/fonts/sserife.fon
+share/wine/fonts/sserifee.fon
+share/wine/fonts/sserifeg.fon
+share/wine/fonts/sserifer.fon
+share/wine/fonts/sserifet.fon
+share/wine/fonts/svgasys.fon
+share/wine/fonts/vgas1255.fon
+share/wine/fonts/vgas1256.fon
+share/wine/fonts/vgas1257.fon
+share/wine/fonts/vgas874.fon
+share/wine/fonts/vgasys.fon
+share/wine/fonts/vgasyse.fon
+share/wine/fonts/vgasysg.fon
+share/wine/fonts/vgasysr.fon
+share/wine/fonts/vgasyst.fon
 share/wine/generic.ppd
 share/wine/wine.inf
+@dirrm share/wine/fonts
 @dirrm share/wine
-@dirrm share/fonts/wine
-@unexec ${RMDIR} %D/share/fonts 2>/dev/null || ${TRUE}
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/wine
 @dirrm include/wine/windows/ddk

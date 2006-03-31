@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.8 2006/03/06 13:46:01 adam Exp $
+$NetBSD: patch-ah,v 1.9 2006/03/31 10:48:00 adam Exp $
 
---- tools/Makefile.in.orig	2006-03-02 18:16:57.000000000 +0100
+--- tools/Makefile.in.orig	2006-03-15 15:50:51.000000000 +0100
 +++ tools/Makefile.in
 @@ -55,19 +55,19 @@ make_ctests$(EXEEXT): make_ctests.o
  	$(CC) $(CFLAGS) -o $@ make_ctests.o
@@ -25,5 +25,5 @@ $NetBSD: patch-ah,v 1.8 2006/03/06 13:46:01 adam Exp $
 -	$(CC) $(CFLAGS) -o $@ bin2res.o $(LIBPORT)
 +	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ bin2res.o $(LIBPORT)
  
- wineprefixcreate: wineprefixcreate.in
- 	sed -e 's,@dlldir\@,$(dlldir),g' -e 's,@datadir\@,$(datadir),g' $(SRCDIR)/wineprefixcreate.in >$@ || ($(RM) $@ && false)
+ wineprefixcreate: wineprefixcreate.in relpath$(EXEEXT)
+ 	sed -e "s,@bintodlldir\@,`$(RELPATH) $(bindir) $(dlldir)`,g" -e "s,@bintodatadir\@,`$(RELPATH) $(bindir) $(datadir)/wine`,g" $(SRCDIR)/wineprefixcreate.in >$@ || ($(RM) $@ && false)
