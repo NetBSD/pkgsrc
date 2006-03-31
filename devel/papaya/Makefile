@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:25 jlam Exp $
+# $NetBSD: Makefile,v 1.15.2.1 2006/03/31 10:22:39 salo Exp $
 #
 
 DISTNAME=	papaya-0.1.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://www.asahi-net.or.jp/~em7t-hmd/papaya/		\
 		${MASTER_SITE_SOURCEFORGE:=papaya-utils/}
@@ -11,15 +11,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.asahi-net.or.jp/~em7t-hmd/papaya/index.html
 COMMENT=	Simple scripts for software development
 
-BUILD_DEPENDS+=	texi2html>=1.76:../../textproc/texi2html
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=	# empty
 GNU_CONFIGURE=	YES
+CONFIGURE_ENV+=	gzip_command=${TOOLS_GZIP_CMD:Q}
 CONFIGURE_ENV+=	sh_command=${TOOLS_SH:Q}
 CONFIGURE_ENV+=	tar_command=${TOOLS_TAR:Q}
-USE_TOOLS+=	sh perl:run tar
+CONFIGURE_ENV+=	texi2html_command=${TOOLS_PATH.texi2html:Q}
+USE_TOOLS+=	sh perl:run tar texi2html
 INFO_FILES=	papaya.info
 
 CONFIGURE_ENV+=	perl_command=${PERL5:Q}
