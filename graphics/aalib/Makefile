@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/02/05 23:09:28 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/03/31 17:11:54 jlam Exp $
 
 DISTNAME=	aalib-1.4rc5
 PKGNAME=	${DISTNAME:S/rc5/.0.5/}
@@ -16,26 +16,19 @@ WRKSRC=			${WRKDIR}/aalib-1.4.0
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
-SUBST_CLASSES+=		malloc paths
+CONFIGURE_ENV+=		SLANG_PREFIX=${BUILDLINK_PREFIX.libslang:Q}
+CONFIGURE_ENV+=		NCURSES_PREFIX=${BUILDLINK_PREFIX.ncurses:Q}
 
+SUBST_CLASSES+=		malloc
 SUBST_STAGE.malloc=	pre-configure
-SUBST_FILES.malloc=	src/aalinux.c src/aax.c src/aaxkbd.c
-SUBST_FILES.malloc+=	src/aaxmouse.c src/aarec.c src/aalib.c
-SUBST_FILES.malloc+=	src/aaedit.c src/aaregist.c src/aakbdreg.c
-SUBST_FILES.malloc+=	src/aamoureg.c src/aados.c src/aadoskbd.c
+SUBST_FILES.malloc=	src/aalinux.c src/aax.c src/aaxkbd.c		\
+			src/aaxmouse.c src/aarec.c src/aalib.c		\
+			src/aaedit.c src/aaregist.c src/aakbdreg.c	\
+			src/aamoureg.c src/aados.c src/aadoskbd.c
 SUBST_SED.malloc=	-e 's|<malloc.h>|<stdlib.h>|g'
-
-SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	configure
-SUBST_SED.paths=	-e 's|BUILDLINK_SL|${BUILDLINK_PREFIX.libslang}|g'
-SUBST_SED.paths+=	-e 's|BUILDLINK_NC|${BUILDLINK_PREFIX.ncurses}|g'
 
 INFO_FILES=	aalib.info
 
 .include "options.mk"
-
-.if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
-GCC_REQD+=		2.95.3
-.endif
 
 .include "../../mk/bsd.pkg.mk"
