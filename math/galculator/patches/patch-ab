@@ -1,0 +1,9 @@
+$NetBSD: patch-ab,v 1.1 2006/03/31 15:11:32 drochner Exp $
+
+--- po/POTFILES.in.orig	2006-03-22 15:29:56.000000000 +0100
++++ po/POTFILES.in
+@@ -17,4 +17,3 @@ ui/font.glade
+ ui/prefs.glade
+ ui/dispctrl_right.glade
+ ui/dispctrl_bottom.glade
+-
