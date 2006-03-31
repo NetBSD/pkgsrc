@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2006/03/30 21:14:58 jmmv Exp $
+# $NetBSD: Makefile,v 1.61 2006/03/31 18:59:57 jmmv Exp $
 #
 
 DISTNAME=	control-center-2.14.0
@@ -42,8 +42,8 @@ CONF_FILES=		${EGDIR}/theme-method.conf \
 CONF_FILES+=		${EGDIR}/font-method.conf \
 			${PKG_SYSCONFDIR}/font-method.conf
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
-BUILDLINK_DEPENDS.gtk2+=	gtk2>=2.8.12
+BUILDLINK_DEPENDS.glib2=	glib2>=2.6.0
+BUILDLINK_DEPENDS.gtk2+=	gtk2+>=2.8.12
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
