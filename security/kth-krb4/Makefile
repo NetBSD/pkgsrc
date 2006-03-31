@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/02/20 23:01:03 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2006/03/31 23:56:29 jlam Exp $
 #
 
 DISTNAME=		krb4-1.2.1
@@ -42,8 +42,7 @@ CONFIGURE_ARGS+=	--program-transform=${KTH_KRB4_TRANSFORM:Q}
 MANINSTALL=		maninstall
 .endif
 
-INFO_FILES=		kth-krb.info
-
+INFO_FILES=		# PLIST
 EXAMPLEDIR=		${PREFIX}/share/examples/kth-krb4
 
 # this hangs while compiling one of the files, at least with the

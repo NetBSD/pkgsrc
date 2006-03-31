@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/05 16:27:26 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/03/31 23:56:28 jlam Exp $
 
 DISTNAME=	pnet-0.6.6
 PKGREVISION=	2
@@ -16,8 +16,7 @@ CONFLICTS=	mono-[0-9]*
 USE_TOOLS+=	gmake makeinfo
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-
-INFO_FILES=	pnettools.info
+INFO_FILES=	# PLIST
 
 PTHREAD_OPTS+=	require native
 
