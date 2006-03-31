@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/03/05 16:27:25 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/03/31 05:37:09 jlam Exp $
 
 DISTNAME=	nasm-0.98.39
 PKGREVISION=	2
@@ -16,14 +16,14 @@ USE_TOOLS+=		gmake makeinfo perl
 GCC_REQD+=		3.0
 GNU_CONFIGURE=		yes
 
-INFO_FILES=		nasm.info
+INFO_FILES=		# PLIST
 BUILD_TARGET=		everything
 INSTALL_TARGET=		install_everything
 
 MAKE_ENV+=	PERL5=${PERL5:Q}			\
 		INSTALL_DATA_DIR=${INSTALL_DATA_DIR:Q}
 
-INSTALLATION_DIRS=	bin info ${PKGMANDIR}/man1 share/doc/html
+INSTALLATION_DIRS=	bin ${PKGINFODIR} ${PKGMANDIR}/man1 share/doc/html
 
 .include "../../mk/compiler.mk"
 

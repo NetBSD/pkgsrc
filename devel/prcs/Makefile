@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/03/31 03:56:30 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2006/03/31 05:37:09 jlam Exp $
 
 DISTNAME= 		prcs-1.3.3
 PKGREVISION=		3
@@ -11,7 +11,7 @@ COMMENT=		Project Revision Control System
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		lispdir=${PREFIX}/share/examples/prcs
-INFO_FILES=		prcs.info
+INFO_FILES=		# PLIST
 USE_LANGUAGES=		c c++
 CONFIGURE_ENV+=		EMACS=no
 CONFIGURE_ENV+=		PRCS_REPOSITORY=${VARBASE:Q}/PRCS
