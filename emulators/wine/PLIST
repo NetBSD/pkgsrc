@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2006/03/31 10:48:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.41 2006/04/01 16:47:48 adam Exp $
 bin/bin2res
 bin/fnt2bdf
 bin/function_grep.pl
@@ -335,6 +335,7 @@ include/wine/windows/shtypes.h
 include/wine/windows/shtypes.idl
 include/wine/windows/sipbase.h
 include/wine/windows/snmp.h
+include/wine/windows/softpub.h
 include/wine/windows/sql.h
 include/wine/windows/sqlext.h
 include/wine/windows/sqltypes.h
@@ -416,8 +417,6 @@ lib/wine/atl.dll.so
 lib/wine/avicap32.dll.so
 lib/wine/avifil32.dll.so
 lib/wine/avifile.dll16
-lib/wine/aviinfo.exe.so
-lib/wine/aviplay.exe.so
 lib/wine/cabinet.dll.so
 lib/wine/capi2032.dll.so
 lib/wine/cards.dll.so
@@ -698,6 +697,7 @@ lib/wine/shfolder.dll.so
 lib/wine/shlwapi.dll.so
 lib/wine/snmpapi.dll.so
 lib/wine/sound.drv16
+lib/wine/spoolss.dll.so
 lib/wine/start.exe.so
 lib/wine/stdole2.tlb.so
 lib/wine/stdole32.tlb.so
