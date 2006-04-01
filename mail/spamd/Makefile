@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2006/03/07 22:32:23 peter Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/01 12:14:27 peter Exp $
 
-DISTNAME=		spamd-20060307
+DISTNAME=		spamd-20060330
 CATEGORIES=		mail
 MASTER_SITES=		http://nedbsd.nl/~ppostma/pf/
 
@@ -12,21 +12,28 @@ ONLY_FOR_PLATFORM=	NetBSD-*-* OpenBSD-*-* FreeBSD-*-* DragonFly-*-*
 
 NO_CONFIGURE=		yes
 
-PKG_USERS=		_spamd:_spamd::Spam\ Daemon:${VARBASE}/chroot/spamd:/sbin/nologin
+SPAMD_HOME=		${VARBASE}/chroot/spamd
+OWN_DIRS=		${SPAMD_HOME}
+
+CPPFLAGS+=		-DPATH_SPAMD_HOME=\"${SPAMD_HOME}\"
+CPPFLAGS+=		-DPATH_SPAMD_DB=\"${VARBASE}/db/spamd\"
+CPPFLAGS+=		-DPATH_PFCTL=\"${PFCTL}\"
+CPPFLAGS+=		-DPATH_SPAMD_CONF=\"${SPAMD_CONF}\"
+
+PKG_USERS=		_spamd:_spamd::Spam\ Daemon:${SPAMD_HOME}:/sbin/nologin
 PKG_GROUPS=		_spamd
 
-OWN_DIRS=		${VARBASE}/chroot/spamd
 RCD_SCRIPTS=            pfspamd
 
-CONF_FILES=		${PREFIX}/share/examples/spamd/spamd.conf \
-			    ${PKG_SYSCONFDIR}/spamd.conf
+SPAMD_CONF=		${PKG_SYSCONFDIR}/spamd.conf
+CONF_FILES=		${PREFIX}/share/examples/spamd/spamd.conf ${SPAMD_CONF}
 
 SUBST_CLASSES+=		fix
 SUBST_STAGE.fix=	post-patch
 SUBST_FILES.fix=	spamd/spamd.8
-SUBST_FILES.fix+=	spamd-setup/spamd-setup.c spamd-setup/spamd-setup.8
-SUBST_SED.fix=		-e 's,/etc/spamd.conf,${PKG_SYSCONFDIR}/spamd.conf,g'
-SUBST_MESSAGE.fix=	"Fixing configuration paths."
+SUBST_FILES.fix+=	spamd-setup/spamd-setup.8
+SUBST_SED.fix=		-e 's,/etc/spamd.conf,${SPAMD_CONF},g'
+SUBST_MESSAGE.fix=	Fixing configuration paths.
 
 INSTALLATION_DIRS+=	libexec sbin ${PKGMANDIR}/cat5 ${PKGMANDIR}/man5
 INSTALLATION_DIRS+=	${PKGMANDIR}/cat8 ${PKGMANDIR}/man8 share/examples/spamd
