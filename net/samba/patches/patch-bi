@@ -1,8 +1,8 @@
-$NetBSD: patch-bi,v 1.2 2006/01/02 22:33:36 jlam Exp $
+$NetBSD: patch-bi,v 1.3 2006/04/01 04:55:35 jlam Exp $
 
---- rpc_server/srv_srvsvc_nt.c.orig	2005-12-14 07:45:50.000000000 -0500
+--- rpc_server/srv_srvsvc_nt.c.orig	2006-01-24 18:46:36.000000000 -0500
 +++ rpc_server/srv_srvsvc_nt.c
-@@ -156,10 +156,10 @@ BOOL share_info_db_init(void)
+@@ -158,10 +158,10 @@ BOOL share_info_db_init(void)
   
  	if (share_tdb && local_pid == sys_getpid())
  		return True;
