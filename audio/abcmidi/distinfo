@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/04/01 14:35:17 ben Exp $
+
+SHA1 (abcMIDI-2006-03-14.zip) = 5b965993dd60eb08884c56962032cf50b1fe4ce1
+RMD160 (abcMIDI-2006-03-14.zip) = 45e4d2723ce100b0a10cfd5dcbd5efeae6dca35d
+Size (abcMIDI-2006-03-14.zip) = 356836 bytes
+SHA1 (patch-aa) = a8c75e6ca44094f8057ceb61b43197d46d7cc92c

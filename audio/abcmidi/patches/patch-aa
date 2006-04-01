@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/04/01 14:35:17 ben Exp $
+
+--- makefile.orig	2005-10-15 15:28:45.000000000 -0700
++++ makefile
+@@ -31,9 +31,8 @@
+ # cure the problem, change this file from using PC-style end-of-line (carriage 
+ # return and line feed) to unix style end-of-line (line feed).
+ 
+-CC=gcc
+-CFLAGS=-DANSILIBS -O2 
+-LNK=gcc
++CFLAGS+=-DANSILIBS
++LNK=${CC}
+ 
+ all : abc2midi midi2abc abc2abc mftext yaps midicopy abcmatch
+ 
