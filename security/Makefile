@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.265 2006/03/14 15:04:53 drochner Exp $
+# $NetBSD: Makefile,v 1.266 2006/04/01 18:19:11 jmmv Exp $
 #
 
 COMMENT=	Security tools
@@ -58,6 +58,7 @@ SUBDIR+=	fressh
 SUBDIR+=	fsh
 SUBDIR+=	fwbuilder
 SUBDIR+=	gnome-keyring
+SUBDIR+=	gnome-keyring-manager
 SUBDIR+=	gnu-crypto
 SUBDIR+=	gnupg
 SUBDIR+=	gnupg-devel
