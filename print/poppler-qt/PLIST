@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/11 10:07:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/01 13:59:55 jmmv Exp $
+include/poppler/poppler-page-transition.h
 include/poppler/poppler-qt.h
 lib/libpoppler-qt.la
 lib/pkgconfig/poppler-qt.pc
