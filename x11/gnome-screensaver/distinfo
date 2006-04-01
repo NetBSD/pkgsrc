@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/04/01 21:43:59 jmmv Exp $
+
+SHA1 (gnome-screensaver-2.14.0.tar.gz) = da00872645b178f153ac0219365326ffe1da4855
+RMD160 (gnome-screensaver-2.14.0.tar.gz) = 73193955cd67368bac2ead133b14b064b19f8b34
+Size (gnome-screensaver-2.14.0.tar.gz) = 2075022 bytes
+SHA1 (patch-aa) = 1249f7f334a15cc635094e2e2c41e0774129afe7
+SHA1 (patch-ab) = 5b5f9d69fd071bfd6f9b316626e23585841dad9d

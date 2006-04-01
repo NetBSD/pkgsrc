@@ -1,0 +1,83 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/01 21:43:59 jmmv Exp $
+bin/gnome-screensaver
+bin/gnome-screensaver-command
+bin/gnome-screensaver-preferences
+lib/pkgconfig/gnome-screensaver.pc
+libexec/gnome-screensaver-dialog
+libexec/gnome-screensaver/floaters
+libexec/gnome-screensaver/popsquares
+libexec/gnome-screensaver/slideshow
+share/applications/gnome-screensaver-preferences.desktop
+share/desktop-directories/gnome-screensaver.directory
+share/examples/gnome-screensaver/pam.d/gnome-screensaver-Linux
+share/examples/gnome-screensaver/pam.d/gnome-screensaver-NetBSD
+share/examples/gnome-screensaver/xdg/menus/gnome-screensavers.menu
+share/gconf/schemas/gnome-screensaver.schemas
+share/gnome-screensaver/gnome-screensaver-preferences.glade
+share/gnome-screensaver/themes/cosmos-slideshow.desktop
+share/gnome-screensaver/themes/footlogo-floaters.desktop
+share/gnome-screensaver/themes/personal-slideshow.desktop
+share/gnome-screensaver/themes/popsquares.desktop
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/gnome-screensaver.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnome-screensaver.mo
+share/pixmaps/backgrounds/cosmos/cloud.jpg
+share/pixmaps/backgrounds/cosmos/comet.jpg
+share/pixmaps/backgrounds/cosmos/earth-horizon.jpg
+share/pixmaps/backgrounds/cosmos/earthrise.jpg
+share/pixmaps/backgrounds/cosmos/galaxy-ngc3370.jpg
+share/pixmaps/backgrounds/cosmos/helix-nebula.jpg
+share/pixmaps/backgrounds/cosmos/jupiter.jpg
+share/pixmaps/backgrounds/cosmos/sombrero.jpg
+share/pixmaps/backgrounds/cosmos/whirlpool.jpg
+share/pixmaps/gnome-logo-white.svg
+@dirrm share/pixmaps/backgrounds/cosmos
+@comment in xdg-dirs: @dirrm share/pixmaps/backgrounds
+@comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/gnome-screensaver/themes
+@dirrm share/gnome-screensaver
+@comment in GConf2: @dirrm share/gconf/schemas
+@dirrm share/examples/gnome-screensaver/xdg/menus
+@dirrm share/examples/gnome-screensaver/xdg
+@dirrm share/examples/gnome-screensaver/pam.d
+@dirrm share/examples/gnome-screensaver
+@comment in xdg-dirs: @dirrm share/desktop-directories
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm libexec/gnome-screensaver
