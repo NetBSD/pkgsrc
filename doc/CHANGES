@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13417 2006/04/01 21:48:46 minskim Exp $
+$NetBSD: CHANGES,v 1.13418 2006/04/01 22:14:37 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1818,3 +1818,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/gnome-backgrounds to 2.14.0nb1 [jmmv 2006-04-01]
 	Added x11/gnome-screensaver version 2.14.0 [jmmv 2006-04-01]
 	Added security/ruby-password version 0.5.3 [minskim 2006-04-01]
+	Added x11/fast-user-switch-applet version 2.14.0 [jmmv 2006-04-01]
