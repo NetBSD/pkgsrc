@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13411 2006/04/01 18:19:42 jmmv Exp $
+$NetBSD: CHANGES,v 1.13412 2006/04/01 19:14:11 reed Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1811,3 +1811,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/gnome-session to 2.14.0nb1 [jmmv 2006-04-01]
 	Updated x11/gnome2-applets to 2.14.0nb1 [jmmv 2006-04-01]
 	Added security/gnome-keyring-manager version 2.14.0 [jmmv 2006-04-01]
+	Added print/poppler-utils version 0.5.1 [reed 2006-04-01]
