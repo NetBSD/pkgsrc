@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.741 2006/03/30 21:03:00 jmmv Exp $
+# $NetBSD: Makefile,v 1.742 2006/04/01 06:55:29 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -546,6 +546,7 @@ SUBDIR+=	popt
 SUBDIR+=	prcs
 SUBDIR+=	pth
 SUBDIR+=	pthread-sem
+SUBDIR+=	pthread-stublib
 SUBDIR+=	pvs
 SUBDIR+=	pwlib
 SUBDIR+=	py-InlineEgg
@@ -633,6 +634,7 @@ SUBDIR+=	svk
 SUBDIR+=	swig
 SUBDIR+=	syncdir
 SUBDIR+=	sysexits
+SUBDIR+=	tailor
 SUBDIR+=	tavrasm
 SUBDIR+=	tcl-tclcl
 SUBDIR+=	tcllib
