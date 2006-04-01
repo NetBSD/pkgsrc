@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13410 2006/04/01 17:50:46 jmmv Exp $
+$NetBSD: CHANGES,v 1.13411 2006/04/01 18:19:42 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1810,3 +1810,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/wine to 0.9.11 [adam 2006-04-01]
 	Updated x11/gnome-session to 2.14.0nb1 [jmmv 2006-04-01]
 	Updated x11/gnome2-applets to 2.14.0nb1 [jmmv 2006-04-01]
+	Added security/gnome-keyring-manager version 2.14.0 [jmmv 2006-04-01]
