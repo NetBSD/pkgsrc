@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2006/03/21 06:00:49 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2006/04/01 14:43:42 jmmv Exp $
 #
 
 DISTNAME=	docbook-xml-4.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.oasis-open.org/docbook/xml/4.4/
 SITES_docbook-xml-4.3.zip=	http://www.oasis-open.org/docbook/xml/4.3/
@@ -32,6 +32,10 @@ XML_CATALOGS=
 XML_CATALOGS+= ${DTDDIR}/${ver}/catalog
 .endfor
 XML_CATALOGS+= ${DTDDIR}/4.2/catalog-4.1.2
+
+XML_ENTRIES+=	rewriteSystem http://www.oasis-open.org/docbook/xml/4.1.2 \
+		${DTDDIR}/4.2
+XML_ENTRIES+=	rewriteSystem http://www.oasis-open.org/docbook/xml ${DTDDIR}
 
 pre-install:
 .for ver in ${VER}
