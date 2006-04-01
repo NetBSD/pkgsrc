@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/03/30 21:17:48 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/01 21:42:49 jmmv Exp $
 share/gnome-background-properties/gnome-branded.xml
 share/gnome-background-properties/gnome-nature.xml
 share/gnome-background-properties/gnome-tiles.xml
@@ -71,6 +71,5 @@ share/pixmaps/backgrounds/gnome/translucent/tentacles.svg
 @dirrm share/pixmaps/backgrounds/gnome/nature
 @dirrm share/pixmaps/backgrounds/gnome/branded
 @dirrm share/pixmaps/backgrounds/gnome
-@dirrm share/pixmaps/backgrounds
-@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in xdg-dirs: @dirrm share/pixmaps/backgrounds
 @dirrm share/gnome-background-properties
