@@ -1,9 +1,10 @@
-# $NetBSD: options.mk,v 1.6 2005/10/23 20:07:19 rillig Exp $
+# $NetBSD: options.mk,v 1.7 2006/04/01 22:02:19 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
 PKG_SUPPORTED_OPTIONS=	exim-build-eximon exim-content-scan exim-lookup-dnsdb
 PKG_SUPPORTED_OPTIONS+=	exim-lookup-dsearch exim-lookup-ldap exim-lookup-mysql
-PKG_SUPPORTED_OPTIONS+= exim-lookup-whoson exim-old-demime gdbm inet6 saslauthd
+PKG_SUPPORTED_OPTIONS+=	exim-lookup-pgsql exim-lookup-sqlite exim-lookup-whoson
+PKG_SUPPORTED_OPTIONS+= exim-old-demime gdbm inet6 saslauthd
 PKG_SUGGESTED_OPTIONS=	exim-content-scan exim-lookup-dsearch exim-old-demime
 
 .include "../../mk/bsd.options.mk"
@@ -40,6 +41,18 @@ LOOKUP_LIBS+=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.openldap}  -
 LOCAL_MAKEFILE_OPTIONS+=LOOKUP_MYSQL=YES
 LOOKUP_LIBS+=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.mysql}  -L${LOCALBASE}/${BUILDLINK_LIBDIRS.mysql} -lmysqlclient
 .  include "../../mk/mysql.buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mexim-lookup-pgsql)
+LOCAL_MAKEFILE_OPTIONS+=LOOKUP_PGSQL=YES
+LOOKUP_LIBS+=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.pgsql}  -L${LOCALBASE}/${BUILDLINK_LIBDIRS.mysql} -lpq
+.  include "../../mk/pgsql.buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mexim-lookup-sqlite)
+LOCAL_MAKEFILE_OPTIONS+=LOOKUP_SQLITE=YES
+LOOKUP_LIBS+=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.sqlite3}  -L${LOCALBASE}/${BUILDLINK_LIBDIRS.sqlite3} -lsqlite3
+.  include "../../databases/sqlite3/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-lookup-whoson)
