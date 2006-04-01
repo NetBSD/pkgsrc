@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/01 21:47:22 minskim Exp $
+${RUBY_SITELIBDIR}/password.rb
+${RUBY_SITEARCHLIBDIR}/crack.bundle
