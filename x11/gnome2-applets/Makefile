@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2006/03/30 21:16:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.62 2006/04/01 17:50:18 jmmv Exp $
 #
 
 DISTNAME=		gnome-applets-2.14.0
+PKGREVISION=		1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.14/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,6 +12,9 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 panel applets
 
 BUILD_USES_MSGFMT=	YES
+
+BUILD_DEPENDS+=		gst-plugins0.10-esound>=0.10.0:../../audio/gst-plugins0.10-esound
+BUILD_DEPENDS+=		gst-plugins0.10-oss>=0.10.0:../../audio/gst-plugins0.10-oss
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
