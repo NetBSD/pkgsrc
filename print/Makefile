@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2006/03/31 03:14:28 smb Exp $
+# $NetBSD: Makefile,v 1.147 2006/04/01 14:34:08 ben Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -7,6 +7,7 @@ SUBDIR+=	LPRng
 SUBDIR+=	LPRng-core
 SUBDIR+=	LPRng-doc
 SUBDIR+=	a2ps
+SUBDIR+=	abc2ps
 SUBDIR+=	acroread
 SUBDIR+=	acroread3
 SUBDIR+=	acroread5
