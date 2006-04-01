@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2006/03/21 06:00:50 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2006/04/01 14:48:21 jmmv Exp $
 #
 
 DISTNAME=		scrollkeeper-0.3.14
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scrollkeeper/}	\
 			${MASTER_SITE_GNOME:=sources/scrollkeeper/0.3/}
@@ -14,7 +14,7 @@ COMMENT=		Open Document Cataloging Project
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 BUILD_USES_MSGFMT=	yes
-DEPENDS+=		docbook-xml>=4.2nb7:../../textproc/docbook-xml
+DEPENDS+=		docbook-xml>=4.4nb4:../../textproc/docbook-xml
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
