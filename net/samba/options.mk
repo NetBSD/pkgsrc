@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2005/12/05 23:55:15 rillig Exp $
+# $NetBSD: options.mk,v 1.13 2006/04/01 04:55:35 jlam Exp $
 
 # Recommended package options for various setups:
 #
@@ -129,33 +129,9 @@ SAMBA_STATIC_MODULES:=	${SAMBA_STATIC_MODULES},idmap_ad
 WINBINDD_RCD_SCRIPT=	winbindd
 PLIST_SUBST+=		WINBIND=
 
-# Determine the proper name for the winbind and WINS NSS modules.
-#
-# XXX We should really be trawling the generated Makefiles or config.*
-# XXX files to find this out dynamically.
-#
-NSS_WINBIND.${OPSYS}?=	# empty
-NSS_WINBIND.AIX=	WINBIND
-NSS_WINBIND.IRIX=	libns_winbind.so
-NSS_WINBIND.Linux=	libnss_winbind.so
-NSS_WINBIND.SunOS=	libnss_winbind.so
-.  if !empty(MACHINE_PLATFORM:MFreeBSD-[5-9].*)
-NSS_WINBIND.FreeBSD=	nss_winbind.so
-.  endif
-.  if !empty(MACHINE_PLATFORM:MNetBSD-[3-9].*)
-NSS_WINBIND.NetBSD=	nss_winbind.so
-.  endif
-NSS_WINBIND=		${NSS_WINBIND.${OPSYS}}
-
-NSS_WINS.${OPSYS}?=	# empty
-NSS_WINS.IRIX=		libns_wins.so
-NSS_WINS.Linux=		libnss_wins.so
-NSS_WINS.SunOS=		libnss_wins.so
-NSS_WINS=		${NSS_WINS.${OPSYS}}
-
 # Install the PAM winbind module if we're also building with PAM support.
 .  if empty(PKG_OPTIONS:Mpam)
-PLIST_SUBST+=		PAM_WINBIND="@comment no PAM winbind module"
+PLIST_SUBST+=	PAM_WINBIND="@comment no PAM winbind module"
 .  else
 PLIST_SUBST+=	PAM_WINBIND=lib/security/pam_winbind.so
 
@@ -166,26 +142,38 @@ samba-pam-winbind-install:
 .  endif
 
 # Install the NSS winbind module if it exists.
-.  if empty(NSS_WINBIND)
-PLIST_SUBST+=	NSS_WINBIND="@comment no NSS winbind module"
-.  else
-PLIST_SUBST+=	NSS_WINBIND=lib/${NSS_WINBIND}
+PLIST_SUBST+=		NSS_WINBIND=${NSS_WINBIND:Q}
+NSS_WINBIND=		${NSS_WINBIND_cmd:sh}
+NSS_WINBIND_cmd=	\
+	${TEST} -x ${WRKSRC}/config.status ||				\
+		{ ${ECHO} "@comment no NSS winbind module" ; exit 0; };	\
+	cd ${WRKDIR} && ${ECHO} @WINBIND_NSS@ |				\
+	${WRKSRC}/config.status --file=-:- | 				\
+	${AWK} '/^$$/ { print "@comment no NSS winbind module"; exit 0; } \
+		{ sub(".*/", "lib/"); print; }' &&			\
+	${RM} -f config.log
 
 post-install: samba-nss-winbind-install
 samba-nss-winbind-install:
-	${INSTALL_LIB} ${WRKSRC}/nsswitch/${NSS_WINBIND} ${PREFIX}/lib
-.  endif
+	lib=${WRKSRC:Q}/nsswitch/${NSS_WINBIND:T:Q};			\
+	${TEST} ! -f $$lib || ${INSTALL_LIB} $$lib ${PREFIX:Q}/lib
 
 # Install the NSS WINS module if it exists.
-.  if empty(NSS_WINS)
-PLIST_SUBST+=	NSS_WINS="@comment no NSS WINS module"
-.  else
-PLIST_SUBST+=	NSS_WINS=lib/${NSS_WINS}
+PLIST_SUBST+=	NSS_WINS=${NSS_WINS:Q}
+NSS_WINS=	${NSS_WINS_cmd:sh}
+NSS_WINS_cmd=	\
+	${TEST} -x ${WRKSRC}/config.status ||				\
+		{ ${ECHO} "@comment no NSS WINS module" ; exit 0; };	\
+	cd ${WRKDIR} && ${ECHO} @WINBIND_WINS_NSS@ |			\
+	${WRKSRC}/config.status --file=-:- |				\
+	${AWK} '/^$$/ { print "@comment no NSS WINS module"; exit 0; }	\
+		{ sub(".*/", "lib/"); print; }' &&			\
+	${RM} -f config.log
 
 post-install: samba-nss-wins-install
 samba-nss-wins-install:
-	${INSTALL_LIB} ${WRKSRC}/nsswitch/${NSS_WINS} ${PREFIX}/lib
-.  endif
+	lib=${WRKSRC:Q}/nsswitch/${NSS_WINS:T:Q};			\
+	${TEST} ! -f $$lib || ${INSTALL_LIB} $$lib ${PREFIX:Q}/lib
 .else
 CONFIGURE_ARGS+=	--without-winbind
 PLIST_SUBST+=		WINBIND="@comment "
