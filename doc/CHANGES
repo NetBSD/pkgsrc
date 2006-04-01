@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13408 2006/04/01 16:48:53 adam Exp $
+$NetBSD: CHANGES,v 1.13409 2006/04/01 17:37:24 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1808,3 +1808,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/scrollkeeper to 0.3.14nb10 [jmmv 2006-04-01]
 	Updated mail/evolution to 2.6.0nb2 [jmmv 2006-04-01]
 	Updated emulators/wine to 0.9.11 [adam 2006-04-01]
+	Updated x11/gnome-session to 2.14.0nb1 [jmmv 2006-04-01]
