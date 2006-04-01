@@ -1,0 +1,92 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/01 22:12:55 jmmv Exp $
+lib/bonobo/servers/GNOME_FastUserSwitchApplet.server
+libexec/fast-user-switch-applet
+share/fast-user-switch-applet/ui.glade
+share/gconf/schemas/fast-user-switch-applet.schemas
+share/gnome-2.0/ui/GNOME_FastUserSwitchApplet.xml
+share/gnome/help/fast-user-switch-applet/C/fast-user-switch-applet.xml
+share/gnome/help/fast-user-switch-applet/C/figures/fast_user_switch_applet-context.png
+share/gnome/help/fast-user-switch-applet/C/figures/fast_user_switch_applet-icon.png
+share/gnome/help/fast-user-switch-applet/C/figures/fast_user_switch_applet-prefs.png
+share/gnome/help/fast-user-switch-applet/C/figures/fast_user_switch_applet-text.png
+share/gnome/help/fast-user-switch-applet/C/figures/fast_user_switch_applet-username.png
+share/gnome/help/fast-user-switch-applet/C/figures/fast_user_switch_applet.png
+share/gnome/help/fast-user-switch-applet/C/legal.xml
+share/gnome/help/fast-user-switch-applet/es/fast-user-switch-applet.xml
+share/gnome/help/fast-user-switch-applet/es/figures/fast_user_switch_applet-context.png
+share/gnome/help/fast-user-switch-applet/es/figures/fast_user_switch_applet-icon.png
+share/gnome/help/fast-user-switch-applet/es/figures/fast_user_switch_applet-prefs.png
+share/gnome/help/fast-user-switch-applet/es/figures/fast_user_switch_applet-text.png
+share/gnome/help/fast-user-switch-applet/es/figures/fast_user_switch_applet-username.png
+share/gnome/help/fast-user-switch-applet/es/figures/fast_user_switch_applet.png
+share/gnome/help/fast-user-switch-applet/pa/fast-user-switch-applet.xml
+share/gnome/help/fast-user-switch-applet/pa/figures/fast_user_switch_applet-context.png
+share/gnome/help/fast-user-switch-applet/pa/figures/fast_user_switch_applet-icon.png
+share/gnome/help/fast-user-switch-applet/pa/figures/fast_user_switch_applet-prefs.png
+share/gnome/help/fast-user-switch-applet/pa/figures/fast_user_switch_applet-text.png
+share/gnome/help/fast-user-switch-applet/pa/figures/fast_user_switch_applet-username.png
+share/gnome/help/fast-user-switch-applet/pa/figures/fast_user_switch_applet.png
+share/gnome/help/fast-user-switch-applet/sr/fast-user-switch-applet.xml
+share/gnome/help/fast-user-switch-applet/sr/figures/fast_user_switch_applet-context.png
+share/gnome/help/fast-user-switch-applet/sr/figures/fast_user_switch_applet-icon.png
+share/gnome/help/fast-user-switch-applet/sr/figures/fast_user_switch_applet-prefs.png
+share/gnome/help/fast-user-switch-applet/sr/figures/fast_user_switch_applet-text.png
+share/gnome/help/fast-user-switch-applet/sr/figures/fast_user_switch_applet-username.png
+share/gnome/help/fast-user-switch-applet/sr/figures/fast_user_switch_applet.png
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/el/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/es/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/et/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/he/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/hi/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/it/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/ka/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/no/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/th/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/fast-user-switch-applet.mo
+${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/fast-user-switch-applet.mo
+share/omf/fast-user-switch-applet/fast-user-switch-applet-C.omf
+share/omf/fast-user-switch-applet/fast-user-switch-applet-es.omf
+share/omf/fast-user-switch-applet/fast-user-switch-applet-pa.omf
+share/omf/fast-user-switch-applet/fast-user-switch-applet-sr.omf
+@dirrm share/omf/fast-user-switch-applet
+@comment in scrollkeeper: @dirrm share/omf
+@dirrm share/gnome/help/fast-user-switch-applet/sr/figures
+@dirrm share/gnome/help/fast-user-switch-applet/sr
+@dirrm share/gnome/help/fast-user-switch-applet/pa/figures
+@dirrm share/gnome/help/fast-user-switch-applet/pa
+@dirrm share/gnome/help/fast-user-switch-applet/es/figures
+@dirrm share/gnome/help/fast-user-switch-applet/es
+@dirrm share/gnome/help/fast-user-switch-applet/C/figures
+@dirrm share/gnome/help/fast-user-switch-applet/C
+@dirrm share/gnome/help/fast-user-switch-applet
+@dirrm share/gnome/help
+@dirrm share/gnome-2.0/ui
+@comment in GConf2: @dirrm share/gconf/schemas
+@dirrm share/fast-user-switch-applet
+@comment in libbonobo: @dirrm lib/bonobo/servers
