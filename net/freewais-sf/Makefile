@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2006/03/05 16:27:27 jlam Exp $
+# $NetBSD: Makefile,v 1.24.2.1 2006/04/01 03:33:25 salo Exp $
 #
 
 DISTNAME=	freeWAIS-sf-2.2.12
 PKGNAME=	freewais-sf-2.2.12
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net databases
 MASTER_SITES=	ftp://ls6-ftp.cs.uni-dortmund.de/pub/src/freeWAIS-sf/
 
@@ -14,23 +14,27 @@ COMMENT=	Enhanced Wide Area Information Server
 NOT_FOR_PLATFORM=	Darwin-*-*
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	makeinfo perl:run
+USE_TOOLS+=	makeinfo gzcat:run gzip:run perl:run
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
 CONFIGURE_SCRIPT=	./Configure
-CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX:Q} \
-			-Darchname=${MACHINE_ARCH}-${LOWER_OPSYS}
+CONFIGURE_ARGS+=	-sde -Dprefix=${PREFIX:Q}			\
+			-Darchname=${MACHINE_ARCH}-${LOWER_OPSYS}	\
+			-Dmansrc=${PREFIX:Q}/${PKGMANDIR:Q}/man1	\
+			-Dgzip=${TOOLS_PATH.gzip:Q}			\
+			-Dzcat=${TOOLS_PATH.gzcat:Q}
 CONFIGURE_ENV+=		PERL5=${PERL5:Q}
-INSTALL_TARGET=	install install.man
-
-USE_MAKEINFO=	YES
-INFO_FILES=	fwsf.info
+INSTALL_TARGET=		install install.man
+INFO_FILES=		# PLIST
 
 post-build:
-	cd ${WRKSRC}/doc/SF; ${MAKEINFO} fwsf.texi
+	cd ${WRKSRC}/doc/SF && makeinfo fwsf.texi
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/SF/fwsf.info* ${PREFIX}/info
+	cd ${WRKSRC}/doc/SF; for f in fwsf.info fwsf.info-[0-9]*; do	\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
+	done
 
 .include "../../mk/bsd.pkg.mk"
