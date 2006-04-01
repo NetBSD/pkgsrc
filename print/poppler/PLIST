@@ -1,21 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2006/03/31 20:37:37 jmmv Exp $
-bin/pdffonts
-bin/pdfimages
-bin/pdfinfo
-bin/pdftohtml
-bin/pdftoppm
-bin/pdftops
-bin/pdftotext
+@comment $NetBSD: PLIST,v 1.5 2006/04/01 19:08:40 reed Exp $
 lib/libpoppler.la
 lib/pkgconfig/poppler-splash.pc
 lib/pkgconfig/poppler.pc
-man/man1/pdffonts.1
-man/man1/pdfimages.1
-man/man1/pdfinfo.1
-man/man1/pdftohtml.1
-man/man1/pdftoppm.1
-man/man1/pdftops.1
-man/man1/pdftotext.1
 share/doc/poppler/README
 share/doc/poppler/README-XPDF
 @dirrm share/doc/poppler

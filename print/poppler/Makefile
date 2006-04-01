@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2006/04/01 17:58:03 reed Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/01 19:08:40 reed Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
 
-PKGREVISION=		2
+PKGREVISION=		3
 
 COMMENT=		PDF rendering library
 
@@ -21,8 +21,8 @@ INSTALLATION_DIRS+=	share/doc/poppler
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 # TODO: Later add an option to choose Splash versus Cairo backend.
-## Don't build the Splash graphics backend.
-#CONFIGURE_ARGS+=	--disable-splash-output
+# Build the Splash graphics backend.
+CONFIGURE_ARGS+=	--enable-splash-output
 # Don't build the cairo graphics backend.
 CONFIGURE_ARGS+=	--disable-cairo-output
 # Don't compile poppler qt wrapper.
@@ -31,6 +31,8 @@ CONFIGURE_ARGS+=	--disable-poppler-qt
 CONFIGURE_ARGS+=	--disable-gtk-test
 # Don't compile GLib wrapper which also needs gtk2
 CONFIGURE_ARGS+=	--disable-poppler-glib
+# Don't build and install the tools
+CONFIGURE_ARGS+=	--disable-utils
 
 .include "../../mk/bsd.prefs.mk"
 
