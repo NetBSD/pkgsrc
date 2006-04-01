@@ -66,6 +66,8 @@ exim-lookup-dnsdb	Use DNS for lookups (as general database facility).
 exim-lookup-dsearch	Lookup via key as filename in directory.
 exim-lookup-ldap	LDAP lookup using a query in the form of a URL.
 exim-lookup-mysql	Perform lookups in MySQL database.
+exim-lookup-pgsql	Perform lookups in PostgreSQL database.
+exim-lookup-sqlite	Perform lookups in SQLite database.
 exim-lookup-whoson	Lookup in whoson dynamic IP address.
 exim-old-demime		Use deprecated "demime" condition in the DATA ACL.
 ezmlm-althash		Patch to hash subscriber list case-insensitively.
