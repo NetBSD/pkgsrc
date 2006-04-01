@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.104 2006/03/31 09:00:07 jmmv Exp $
+# $NetBSD: Makefile,v 1.105 2006/04/01 16:13:56 jmmv Exp $
 
 DISTNAME=		evolution-2.6.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail time gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,7 +10,6 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/evolution/
 COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
 
-DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 BUILD_USES_MSGFMT=	YES
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evolution
