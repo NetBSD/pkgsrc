@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.430 2006/04/01 21:45:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.431 2006/04/01 22:13:52 jmmv Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -35,6 +35,7 @@ SUBDIR+=	ede
 SUBDIR+=	efltk
 SUBDIR+=	egtk
 SUBDIR+=	eterm
+SUBDIR+=	fast-user-switch-applet
 SUBDIR+=	fbdesk
 SUBDIR+=	filerunner
 SUBDIR+=	fixesext
