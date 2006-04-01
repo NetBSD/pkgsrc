@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.5 2005/12/05 20:50:41 rillig Exp $
+# $NetBSD: dirs.mk,v 1.6 2006/04/01 21:39:54 jmmv Exp $
 #
 # This file is intended to be included by mk/dirs.mk, not directly by packages.
 #
@@ -13,6 +13,7 @@ XDG_DIRS+=		share/icons
 XDG_DIRS+=		share/images
 XDG_DIRS+=		share/mime-info
 XDG_DIRS+=		share/pixmaps
+XDG_DIRS+=		share/pixmaps/backgrounds
 XDG_DIRS+=		share/sounds
 XDG_DIRS+=		share/themes
 
