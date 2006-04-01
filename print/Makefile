@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2006/04/01 14:34:08 ben Exp $
+# $NetBSD: Makefile,v 1.148 2006/04/01 19:14:12 reed Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -85,6 +85,7 @@ SUBDIR+=	pnm2ppa
 SUBDIR+=	poppler
 SUBDIR+=	poppler-glib
 SUBDIR+=	poppler-qt
+SUBDIR+=	poppler-utils
 SUBDIR+=	poster
 SUBDIR+=	pscal
 SUBDIR+=	psify
