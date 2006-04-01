@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13414 2006/04/01 21:40:21 jmmv Exp $
+$NetBSD: CHANGES,v 1.13415 2006/04/01 21:43:13 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1815,3 +1815,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added misc/deskbar-applet version 2.14.0.1 [jmmv 2006-04-01]
 	Updated misc/xdg-dirs to 1.3 [jmmv 2006-04-01]
 	Updated misc/xdg-x11-dirs to 1.3 [jmmv 2006-04-01]
+	Updated graphics/gnome-backgrounds to 2.14.0nb1 [jmmv 2006-04-01]
