@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/11 14:55:51 rxg Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/01 05:24:10 rxg Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,6 @@ DBUS_INTERFACE=	python
 DBUS_DIRS=	dbus glib python tools
 
 .include "../../sysutils/dbus/Makefile.common"
-PKGREVISION=	2
 
 DEPENDS+=	${PYPKGPREFIX}-pyrex>=0.9.3:../../lang/py-pyrex
 
