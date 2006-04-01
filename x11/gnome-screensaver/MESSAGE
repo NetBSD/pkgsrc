@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/04/01 21:43:59 jmmv Exp $
+
+In order to get gnome-screensaver working properly, you need to add a
+gnome-screensaver file to your pam configuration directory (usually
+/etc/pam.d).  You can find sample files in:
+
+	${EGDIR}/pam.d/gnome-screensaver
+
+===========================================================================
