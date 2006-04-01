@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/04/01 21:43:59 jmmv Exp $
+
+--- savers/floaters.c.orig	2006-02-17 17:59:33.000000000 +0100
++++ savers/floaters.c
+@@ -69,6 +69,10 @@
+ #define GAMMA 2.2
+ #endif
+ 
++#if defined(__NetBSD__)
++#  define trunc(x) ((double)floor(x))
++#endif
++
+ typedef struct _Point Point;
+ typedef struct _Path Path;
+ typedef struct _Rectangle Rectangle;
