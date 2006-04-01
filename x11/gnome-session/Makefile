@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2006/03/30 21:19:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.64 2006/04/01 17:36:41 jmmv Exp $
 #
 
 DISTNAME=		gnome-session-2.14.0
+PKGREVISION=		1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.14/}
 SITES_gnome-splash-2.14.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
@@ -41,6 +42,7 @@ BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.8.3nb1
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/buildlink3.mk"
