@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/01 21:43:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/01 21:50:10 jmmv Exp $
 #
 
 DISTNAME=	gnome-screensaver-2.14.0
@@ -14,6 +14,7 @@ USE_DIRS+=		xdg-1.3
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
+USE_X11=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
