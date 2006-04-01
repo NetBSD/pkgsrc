@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.4 2006/03/31 10:46:25 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.5 2006/04/01 03:33:50 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -11,3 +11,5 @@ Pullup ticket 1293 - requested by jlam
 fix paths to tools in papaya
 Pullup ticket 1294 - requested by jlam
 fix dependencies and paths in prcs
+Pullup ticket 1297 - requested by jlam
+Tools paths and PLIST fixes for freewais-sf
