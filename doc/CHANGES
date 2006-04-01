@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13400 2006/04/01 12:15:51 peter Exp $
+$NetBSD: CHANGES,v 1.13401 2006/04/01 14:01:02 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1800,3 +1800,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/tailor version 0.9.20 [wiz 2006-04-01]
 	Updated devel/libtool-base to 1.5.22nb3 [grant 2006-04-01]
 	Updated mail/spamd to 20060330 [peter 2006-04-01]
+	Updated print/poppler-qt to 0.5.1nb2 [jmmv 2006-04-01]
