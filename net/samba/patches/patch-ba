@@ -1,6 +1,6 @@
-$NetBSD: patch-ba,v 1.2 2006/01/02 22:33:36 jlam Exp $
+$NetBSD: patch-ba,v 1.3 2006/04/01 04:55:35 jlam Exp $
 
---- Makefile.in.orig	2005-12-14 07:45:49.000000000 -0500
+--- Makefile.in.orig	2006-02-20 15:33:23.000000000 -0500
 +++ Makefile.in
 @@ -91,6 +91,9 @@ SWATDIR = @swatdir@
  # the directory where lock files go
@@ -21,7 +21,7 @@ $NetBSD: patch-ba,v 1.2 2006/01/02 22:33:36 jlam Exp $
  PATH_FLAGS5 = $(PATH_FLAGS4) -DLIBDIR=\"$(LIBDIR)\" \
  	      -DLOGFILEBASE=\"$(LOGFILEBASE)\" -DSHLIBEXT=\"@SHLIBEXT@\"
  PATH_FLAGS6 = $(PATH_FLAGS5) -DCONFIGDIR=\"$(CONFIGDIR)\"
-@@ -963,7 +966,7 @@ bin/pdbedit@EXEEXT@: $(PDBEDIT_OBJ) @BUI
+@@ -964,7 +967,7 @@ bin/pdbedit@EXEEXT@: $(PDBEDIT_OBJ) @BUI
  
  bin/smbget@EXEEXT@: $(SMBGET_OBJ) @BUILD_POPT@ bin/.dummy
  	@echo Linking $@
@@ -30,7 +30,7 @@ $NetBSD: patch-ba,v 1.2 2006/01/02 22:33:36 jlam Exp $
  
  bin/samtest@EXEEXT@: $(SAMTEST_OBJ) @BUILD_POPT@ bin/.dummy
  	@echo Linking $@
-@@ -991,11 +994,11 @@ bin/msgtest@EXEEXT@: $(MSGTEST_OBJ) bin/
+@@ -992,11 +995,11 @@ bin/msgtest@EXEEXT@: $(MSGTEST_OBJ) bin/
  
  bin/smbcacls@EXEEXT@: $(SMBCACLS_OBJ) @BUILD_POPT@ bin/.dummy
  	@echo Linking $@
@@ -44,7 +44,7 @@ $NetBSD: patch-ba,v 1.2 2006/01/02 22:33:36 jlam Exp $
  
  bin/eventlogadm@EXEEXT@: $(EVTLOGADM_OBJ) @BUILD_POPT@ bin/.dummy
  	@echo Linking $@
-@@ -1054,7 +1057,7 @@ bin/smbwrapper.@SHLIBEXT@: $(PICOBJS) bi
+@@ -1055,7 +1058,7 @@ bin/smbwrapper.@SHLIBEXT@: $(PICOBJS) bi
  bin/libsmbclient.@SHLIBEXT@: $(LIBSMBCLIENT_PICOBJS)
  	@echo Linking libsmbclient shared library $@
  	@$(SHLD) $(LDSHFLAGS) -o $@ $(LIBSMBCLIENT_PICOBJS) $(LDFLAGS) $(LIBS) \
@@ -53,7 +53,7 @@ $NetBSD: patch-ba,v 1.2 2006/01/02 22:33:36 jlam Exp $
  		@SONAMEFLAG@`basename $@`.$(LIBSMBCLIENT_MAJOR)
  
  bin/libsmbclient.a: $(LIBSMBCLIENT_PICOBJS)
-@@ -1352,11 +1355,11 @@ bin/ntlm_auth@EXEEXT@: $(NTLM_AUTH_OBJ) 
+@@ -1353,11 +1356,11 @@ bin/ntlm_auth@EXEEXT@: $(NTLM_AUTH_OBJ) 
  	@echo Linking $@
  	@$(CC) $(FLAGS) @PIE_LDFLAGS@ -o $@ $(LDFLAGS) $(DYNEXP) $(NTLM_AUTH_OBJ) \
  		$(PARAM_OBJ) $(LIB_NONSMBD_OBJ) $(LIBS) \
@@ -62,12 +62,12 @@ $NetBSD: patch-ba,v 1.2 2006/01/02 22:33:36 jlam Exp $
  
  bin/pam_smbpass.@SHLIBEXT@: $(PAM_SMBPASS_PICOOBJ)
  	@echo "Linking shared library $@"
--	@$(SHLD) $(LDSHFLAGS) -o $@ $(PAM_SMBPASS_PICOOBJ) -lpam $(DYNEXP) $(LIBS) -lc $(LDAP_LIBS) $(KRB5LIBS)
-+	@$(SHLD) $(LDSHFLAGS) -o $@ $(PAM_SMBPASS_PICOOBJ) -lpam $(DYNEXP) $(LIBS) -lc $(LDAP_LIBS) $(KRB5LIBS) $(PASSDB_LIBS)
+-	@$(SHLD) $(LDSHFLAGS) -o $@ $(PAM_SMBPASS_PICOOBJ) -lpam $(DYNEXP) $(LIBS) $(LDAP_LIBS) $(KRB5LIBS)
++	@$(SHLD) $(LDSHFLAGS) -o $@ $(PAM_SMBPASS_PICOOBJ) -lpam $(DYNEXP) $(LIBS) $(LDAP_LIBS) $(KRB5LIBS) $(PASSDB_LIBS)
  
  bin/tdbbackup@EXEEXT@: $(TDBBACKUP_OBJ) bin/.dummy
  	@echo Linking $@
-@@ -1402,7 +1405,7 @@ install-everything: install installmodul
+@@ -1403,7 +1406,7 @@ install-everything: install installmodul
  # is not used
  
  installdirs:
@@ -76,7 +76,7 @@ $NetBSD: patch-ba,v 1.2 2006/01/02 22:33:36 jlam Exp $
  
  installservers: all installdirs
  	@$(SHELL) $(srcdir)/script/installbin.sh $(INSTALLPERMS) $(DESTDIR)$(BASEDIR) $(DESTDIR)$(SBINDIR) $(DESTDIR)$(LIBDIR) $(DESTDIR)$(VARDIR) $(SBIN_PROGS)
-@@ -1505,6 +1508,7 @@ showlayout: 
+@@ -1506,6 +1509,7 @@ showlayout:
  	@echo "  privatedir:  $(PRIVATE_DIR)"
  	@echo "  configdir:   $(CONFIGDIR)"
  	@echo "  lockdir:     $(LOCKDIR)"

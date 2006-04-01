@@ -1,8 +1,8 @@
-$NetBSD: patch-bu,v 1.2 2006/01/02 22:33:36 jlam Exp $
+$NetBSD: patch-bu,v 1.3 2006/04/01 04:55:35 jlam Exp $
 
---- ../docs/manpages/smb.conf.5.orig	2005-12-29 11:19:48.000000000 -0500
+--- ../docs/manpages/smb.conf.5.orig	2006-01-29 11:14:30.000000000 -0500
 +++ ../docs/manpages/smb.conf.5
-@@ -3093,6 +3093,12 @@ This integer specifies the number of sec
+@@ -3097,6 +3097,12 @@ This integer specifies the number of sec
  Default: \fB\fIpasswd chat timeout\fR = 2 \fR 
  
  .TP
@@ -15,7 +15,7 @@ $NetBSD: patch-bu,v 1.2 2006/01/02 22:33:36 jlam Exp $
  passwd program (G)
  The name of a program that can be used to set UNIX user passwords\&. Any occurrences of \fI%u\fR will be replaced with the user name\&. The user name is checked for existence before calling the password changing program\&.
  
-@@ -4075,6 +4081,15 @@ This parameter determines if \fBsmbd\fR(
+@@ -4079,6 +4085,15 @@ This parameter determines if \fBsmbd\fR(
  Default: \fB\fIstat cache\fR = yes \fR 
  
  .TP
