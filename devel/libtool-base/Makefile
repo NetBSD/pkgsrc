@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2006/03/14 20:43:23 jlam Exp $
+# $NetBSD: Makefile,v 1.78 2006/04/01 11:21:42 grant Exp $
 
 ###########################################################################
 ###########################################################################
@@ -26,7 +26,7 @@
 .include "../../devel/libtool/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-base-/}
-PKGREVISION=	2
+PKGREVISION=	3
 SVR4_PKGNAME=	ltoob
 
 COMMENT=	Generic shared library support script (the script itself)
@@ -54,6 +54,11 @@ CONFIGURE_ARGS+=	--disable-libtool-lock
 CONFIGURE_ARGS+=	--disable-shared
 BUILD_SHLIBTOOL=	NO
 .  endif
+
+.elif ${OPSYS} == "SunOS"
+# force the use of /bin/sh on Solaris because under some conditions,
+# it causes ksh to dump core; see PR pkg/32886.
+CONFIG_SHELL=		/bin/sh
 
 .endif
 
