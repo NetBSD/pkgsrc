@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2006/02/05 23:09:28 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2006/04/02 19:59:13 wiz Exp $
 
-DISTNAME=	cairo-1.0.2
-PKGREVISION=	3
+DISTNAME=	cairo-1.0.4
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
 
@@ -49,5 +48,6 @@ CFLAGS+=			-c99
 .include "../../graphics/libpixman/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/Xrender/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
