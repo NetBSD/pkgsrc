@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13435 2006/04/02 20:52:28 wiz Exp $
+$NetBSD: CHANGES,v 1.13436 2006/04/02 22:23:03 ben Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1850,3 +1850,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/hyperestraier to 1.1.6 [wiz 2006-04-02]
 	Updated security/libtasn1 to 0.3.2 [wiz 2006-04-02]
 	Updated security/p5-Digest to 1.15 [wiz 2006-04-02]
+	Added print/jcabc2ps version 20060106 [ben 2006-04-02]
