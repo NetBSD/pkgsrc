@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13436 2006/04/02 22:23:03 ben Exp $
+$NetBSD: CHANGES,v 1.13437 2006/04/02 22:50:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1851,3 +1851,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/libtasn1 to 0.3.2 [wiz 2006-04-02]
 	Updated security/p5-Digest to 1.15 [wiz 2006-04-02]
 	Added print/jcabc2ps version 20060106 [ben 2006-04-02]
+	Updated databases/libgda to 1.9.102 [wiz 2006-04-02]
+	Updated databases/libgda-postgres to 1.9.102 [wiz 2006-04-02]
+	Updated databases/libgnomedb to 1.9.102 [wiz 2006-04-02]
+	Updated math/gnumeric to 1.6.3 [wiz 2006-04-02]
