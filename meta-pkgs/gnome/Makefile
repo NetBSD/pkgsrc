@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2006/02/05 23:10:05 joerg Exp $
+# $NetBSD: Makefile,v 1.58 2006/04/02 09:56:37 jmmv Exp $
 
-DISTNAME=	gnome-2.12.2
-PKGREVISION=	2
+DISTNAME=	gnome-2.14.0
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -20,46 +19,50 @@ COMMENT=	Meta-package for the GNU Network Object Model Environment
 #
 # Packages commented out are either because they are just build time
 # dependencies or because they are not yet ready to be enabled.
-DEPENDS+=	gnome-base>=2.12.2:../../meta-pkgs/gnome-base
-DEPENDS+=	at-spi>=1.6.6:../../devel/at-spi
-DEPENDS+=	libgail-gnome>=1.1.2:../../devel/libgail-gnome
-#DEPENDS+=	gtk-doc>=1.4:../../textproc/gtk-doc
-DEPENDS+=	gtksourceview>=1.4.2:../../x11/gtksourceview
-DEPENDS+=	gdm>=2.8.0.7:../../x11/gdm
-DEPENDS+=	epiphany>=1.8.3:../../www/epiphany
-DEPENDS+=	yelp>=2.12.2:../../misc/yelp
-DEPENDS+=	zenity>=2.12.1:../../x11/zenity
-DEPENDS+=	bug-buddy>=2.12.1:../../net/bug-buddy
-DEPENDS+=	gnome-speech>=0.3.9:../../audio/gnome-speech
-DEPENDS+=	dasher>=3.2.18:../../editors/dasher
-DEPENDS+=	eog>=2.12.0:../../graphics/eog2
-DEPENDS+=	file-roller>=2.12.2:../../archivers/file-roller
-DEPENDS+=	gcalctool>=5.6.31:../../math/gcalctool
-DEPENDS+=	gconf-editor>=2.12.0:../../editors/gconf-editor
-DEPENDS+=	gedit>=2.12.1:../../editors/gedit
-DEPENDS+=	evince>=0.4.0:../../print/evince
-DEPENDS+=	gok>=1.0.5:../../misc/gok
-DEPENDS+=	gnome-mag>=0.12.2:../../x11/gnome-mag
-DEPENDS+=	gnopernicus>=0.11.7:../../x11/gnopernicus
-DEPENDS+=	gnome-games>=2.12.2:../../games/gnome2-games
-DEPENDS+=	nautilus-cd-burner>=2.12.2:../../sysutils/nautilus-cd-burner
-DEPENDS+=	gnome-media>=2.12.0:../../multimedia/gnome2-media
+DEPENDS+=	gnome-base>=2.14.0:../../meta-pkgs/gnome-base
+DEPENDS+=	at-spi>=1.7.6:../../devel/at-spi
+DEPENDS+=	libgail-gnome>=1.1.3:../../devel/libgail-gnome
+#DEPENDS+=	gtk-doc>=1.5:../../textproc/gtk-doc
+DEPENDS+=	gtksourceview>=1.6.0:../../x11/gtksourceview
+DEPENDS+=	zenity>=2.14.0:../../x11/zenity
+DEPENDS+=	gdm>=2.14.0nb1:../../x11/gdm
+DEPENDS+=	gnome-screensaver>=2.14.0:../../x11/gnome-screensaver
+DEPENDS+=	fast-user-switch-applet-2.14.0:../../x11/fast-user-switch-applet
+DEPENDS+=	epiphany>=2.14.0:../../www/epiphany
+DEPENDS+=	yelp>=2.14.0:../../misc/yelp
+DEPENDS+=	bug-buddy>=2.14.0:../../net/bug-buddy
+DEPENDS+=	gnome-speech>=0.3.10:../../audio/gnome-speech
+DEPENDS+=	dasher>=4.0.0:../../editors/dasher
+DEPENDS+=	eog>=2.14.0:../../graphics/eog2
+DEPENDS+=	file-roller>=2.14.0:../../archivers/file-roller
+DEPENDS+=	gcalctool>=5.7.32:../../math/gcalctool
+DEPENDS+=	gconf-editor>=2.14.0:../../editors/gconf-editor
+DEPENDS+=	gedit>=2.14.0:../../editors/gedit
+DEPENDS+=	evince>=0.5.2:../../print/evince
+DEPENDS+=	gok>=1.0.7:../../misc/gok
+DEPENDS+=	gnome-mag>=0.12.4:../../x11/gnome-mag
+DEPENDS+=	gnopernicus>=1.0.3:../../x11/gnopernicus
+DEPENDS+=	gnome-games>=2.14.0:../../games/gnome2-games
+DEPENDS+=	nautilus-cd-burner>=2.14.0.2:../../sysutils/nautilus-cd-burner
+DEPENDS+=	gnome-media>=2.14.0:../../multimedia/gnome2-media
 DEPENDS+=	gnome-netstatus>=2.12.0:../../net/gnome-netstatus
-DEPENDS+=	gnome2-system-monitor>=2.12.1:../../sysutils/gnome2-system-monitor
-DEPENDS+=	gnome-utils>=2.12.2:../../misc/gnome2-utils
-DEPENDS+=	gnome2-user-docs>=2.8.1:../../misc/gnome2-user-docs
-DEPENDS+=	vino>=2.12.0:../../net/vino
-DEPENDS+=	{totem>=1.2.0,totem-xine>=1.2.0}:../../multimedia/totem
-DEPENDS+=	evolution-webcal>=2.4.1:../../time/evolution-webcal
-DEPENDS+=	evolution>=2.4.1:../../mail/evolution
-DEPENDS+=	evolution-exchange>=2.4.1:../../mail/evolution-exchange
-#DEPENDS+=	gnome-keyring-manager>=2.12.0:../../security/gnome-keyring-manager
-#DEPENDS+=	gnome-nettool>=1.4.1:../../net/gnome-nettool
-#DEPENDS+=	system-tools-backends>=1.4.1:../../sysutils/system-tools-backends
-#DEPENDS+=	gnome-system-tools>=1.4.1:../../sysutils/gnome-system-tools
-#DEPENDS+=	gnome-volume-manager>=1.5.4:../../sysutils/gnome-volume-manager
-#DEPENDS+=	gnomemeeting>=1.2.2:../../net/gnomemeeting
-#DEPENDS+=	sound-juicer>=2.12.3:../../audio/sound-juicer
+DEPENDS+=	gnome2-system-monitor>=2.14.0:../../sysutils/gnome2-system-monitor
+DEPENDS+=	gnome-utils>=2.14.0:../../misc/gnome2-utils
+DEPENDS+=	gnome-user-docs>=2.14.0:../../misc/gnome-user-docs
+DEPENDS+=	vino>=2.13.5:../../net/vino
+DEPENDS+=	{totem>=1.4.0,totem-xine>=1.4.0}:../../multimedia/totem
+DEPENDS+=	gnome-keyring-manager>=2.14.0:../../security/gnome-keyring-manager
+DEPENDS+=	deskbar-applet>=2.14.0.1:../../misc/deskbar-applet
+DEPENDS+=	evolution-webcal>=2.5.90:../../time/evolution-webcal
+DEPENDS+=	evolution>=2.6.0nb2:../../mail/evolution
+DEPENDS+=	evolution-exchange>=2.6.0:../../mail/evolution-exchange
+#DEPENDS+=	gnome-nettool>=2.13.91:../../net/gnome-nettool
+#DEPENDS+=	system-tools-backends>=1.4.2:../../sysutils/system-tools-backends
+#DEPENDS+=	gnome-system-tools>=2.14.0:../../sysutils/gnome-system-tools
+#DEPENDS+=	gnome-volume-manager>=1.5.15:../../sysutils/gnome-volume-manager
+#DEPENDS+=	sound-juicer>=2.14.0:../../audio/sound-juicer
+#DEPENDS+=	ekiga-2.0.1:../../net/ekiga
+#DEPENDS+=	gnome-python-desktop>=2.14.0
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes
