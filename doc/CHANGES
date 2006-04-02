@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13426 2006/04/02 16:06:17 jmmv Exp $
+$NetBSD: CHANGES,v 1.13427 2006/04/02 17:46:04 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1840,3 +1840,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated wm/oroborox to 0.9.8 [rxg 2006-04-02]
 	Updated x11/rox-session to 0.28 [rxg 2006-04-02]
 	Updated net/bug-buddy to 2.14.0nb1 [jmmv 2006-04-02]
+	Updated net/ucspi-ssl to 0.70nb1 [schmonz 2006-04-02]
