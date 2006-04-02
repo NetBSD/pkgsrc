@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4807 2006/04/02 17:48:16 wiz Exp $
+$NetBSD: TODO,v 1.4808 2006/04/02 20:00:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -385,7 +385,6 @@ Suggested package updates
 	o byacc-20050813
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.3
-	o cairo-1.0.4
 	o cal3d-0.10.0
 	o camlimages-2.12
 	o capc-calc-2.11.11
@@ -544,7 +543,6 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glabels-2.0.4
 	o glibmm-2.10.0
-	o glitz-0.5.3
 	o gmake-3.81
 	o gmime-2.1.17 [pkg/32487]
 	o gnet1-1.1.9
