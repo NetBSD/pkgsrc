@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2006/03/30 21:25:48 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.26 2006/04/02 09:16:19 jmmv Exp $
 ${DMX}bin/gdm-dmx-reconnect-proxy
 bin/gdmXnest
 bin/gdmXnestchooser
@@ -24,7 +24,6 @@ share/applications/gdmflexiserver-xnest.desktop
 share/applications/gdmflexiserver.desktop
 share/applications/gdmphotosetup.desktop
 share/applications/gdmsetup.desktop
-share/doc/gdm/Daemon.README
 share/examples/gdm/Init/Default
 share/examples/gdm/PostLogin/Default.sample
 share/examples/gdm/PostSession/Default
@@ -38,6 +37,7 @@ share/examples/gdm/modules/AccessKeyMouseEvents
 share/examples/gdm/modules/factory-AccessDwellMouseEvents
 share/examples/gdm/modules/factory-AccessKeyMouseEvents
 share/examples/rc.d/gdm
+share/gdm/BuiltInSessions/custom.desktop
 share/gdm/BuiltInSessions/default.desktop
 share/gdm/defaults.conf
 share/gdm/factory-defaults.conf
@@ -185,7 +185,7 @@ share/omf/gdm/gdm-uk.omf
 share/omf/gdm/gdm-zh_CN.omf
 share/omf/gdm/gdm-zh_HK.omf
 share/omf/gdm/gdm-zh_TW.omf
-share/pixmaps/Daemon.png
+share/pixmaps/NetBSD.xpm
 share/pixmaps/faces/astronaut.jpg
 share/pixmaps/faces/baseball.png
 share/pixmaps/faces/butterfly.png
@@ -261,6 +261,5 @@ share/xsessions/gnome.desktop
 @dirrm share/examples/gdm/PostLogin
 @dirrm share/examples/gdm/Init
 @dirrm share/examples/gdm
-@dirrm share/doc/gdm
 @comment in xdg-dirs: @dirrm share/applications
 @comment in gtk2: @dirrm lib/gtk-2.0/modules
