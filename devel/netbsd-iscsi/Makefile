@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2006/03/29 21:46:04 agc Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/02 12:16:43 agc Exp $
 
-DISTNAME=	netbsd-iscsi-20060329
+DISTNAME=	netbsd-iscsi-20060402
 CATEGORIES=	devel
 MASTER_SITES=	http://www.alistaircrooks.co.uk/src/
 
