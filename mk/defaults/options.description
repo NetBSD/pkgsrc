@@ -265,6 +265,7 @@ tls			Enable TLS support.
 trn-inn			Use INN as NNTP client.
 trn-nntpclnt		Use nntpclnt as NNTP client.
 truetype	
+ucspi-ssl-perl		Enable Perl support in ucspi-ssl.
 unicode	
 unrealircd-chroot	Enable support for running in a chroot jail.
 unrealircd-disableusermod	Disable /sethost, /setident, /chgname, /chghost, and /chgident.
