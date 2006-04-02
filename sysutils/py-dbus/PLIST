@@ -1,5 +1,38 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/11 14:55:51 rxg Exp $
-${PYSITELIB}/dbus.py
-${PYSITELIB}/dbus.pyc
-${PYSITELIB}/dbus.pyo
-${PYSITELIB}/dbus_bindings.la
+@comment $NetBSD: PLIST,v 1.2 2006/04/02 15:04:20 rxg Exp $
+${PYSITELIB}/dbus.pth
+${PYSITELIB}/dbus/__init__.py
+${PYSITELIB}/dbus/__init__.pyc
+${PYSITELIB}/dbus/__init__.pyo
+${PYSITELIB}/dbus/_dbus.py
+${PYSITELIB}/dbus/_dbus.pyc
+${PYSITELIB}/dbus/_dbus.pyo
+${PYSITELIB}/dbus/_util.py
+${PYSITELIB}/dbus/_util.pyc
+${PYSITELIB}/dbus/_util.pyo
+${PYSITELIB}/dbus/dbus_bindings.la
+${PYSITELIB}/dbus/dbus_glib_bindings.la
+${PYSITELIB}/dbus/decorators.py
+${PYSITELIB}/dbus/decorators.pyc
+${PYSITELIB}/dbus/decorators.pyo
+${PYSITELIB}/dbus/exceptions.py
+${PYSITELIB}/dbus/exceptions.pyc
+${PYSITELIB}/dbus/exceptions.pyo
+${PYSITELIB}/dbus/glib.py
+${PYSITELIB}/dbus/glib.pyc
+${PYSITELIB}/dbus/glib.pyo
+${PYSITELIB}/dbus/introspect_parser.py
+${PYSITELIB}/dbus/introspect_parser.pyc
+${PYSITELIB}/dbus/introspect_parser.pyo
+${PYSITELIB}/dbus/matchrules.py
+${PYSITELIB}/dbus/matchrules.pyc
+${PYSITELIB}/dbus/matchrules.pyo
+${PYSITELIB}/dbus/proxies.py
+${PYSITELIB}/dbus/proxies.pyc
+${PYSITELIB}/dbus/proxies.pyo
+${PYSITELIB}/dbus/service.py
+${PYSITELIB}/dbus/service.pyc
+${PYSITELIB}/dbus/service.pyo
+${PYSITELIB}/dbus/types.py
+${PYSITELIB}/dbus/types.pyc
+${PYSITELIB}/dbus/types.pyo
+@dirrm ${PYSITELIB}/dbus
