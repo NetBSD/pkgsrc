@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=User Defined Session
+Comment=This session runs your ~/.xsession file
+Exec=custom
+Icon=
+Type=Application
