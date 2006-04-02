@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2006/03/09 21:04:41 jlam Exp $
+# $NetBSD: Makefile,v 1.60 2006/04/02 02:07:38 markd Exp $
 
 DISTNAME=	nas-1.7b.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://nas.codebrilliance.com/nas/ \
 		ftp://ftp.uni-duisburg.de/Sound/NAS/
@@ -21,31 +21,21 @@ USE_IMAKE=		yes
 
 PKG_SYSCONFSUBDIR=	nas
 
-REPLACE_PERL=		clients/audio/auscope/auscope
+REPLACE_PERL+=		clients/audio/auscope/auscope
 
-pre-configure:
-	@cd ${WRKSRC}; for file in					\
-		config/NetAudio.def;					\
-	do								\
-		${SED}	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"	\
-			$${file} >> $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
-	done
-	@cd ${WRKSRC}; for file in					\
-		server/nasd.conf.eg					\
-		server/dda/voxware/auvoxware.c;				\
-	do								\
-		${SED}	-e "s|@DEVOSSAUDIO@|${DEVOSSAUDIO}|g"		\
-			$${file} >> $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
-	done
-	@cd ${WRKSRC}; for file in					\
-		config/mungeman;					\
-	do								\
-		${SED} -e "s|^[ 	]*#|#|g"			\
-			$${file} >> $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
-	done
+SUBST_CLASSES+=		sysconf ossaudio mungeman
+
+SUBST_STAGE.sysconf=	pre-configure
+SUBST_FILES.sysconf=	config/NetAudio.def
+SUBST_SED.sysconf=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+
+SUBST_STAGE.ossaudio=	pre-configure
+SUBST_FILES.ossaudio=	server/nasd.conf.eg server/dda/voxware/auvoxware.c
+SUBST_SED.ossaudio=	-e "s|@DEVOSSAUDIO@|${DEVOSSAUDIO}|g"
+
+SUBST_STAGE.mungeman=	pre-configure
+SUBST_FILES.mungeman=	config/mungeman
+SUBST_SED.mungeman=	-e 's|^ *\#|\#|g'
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -58,6 +48,7 @@ PLIST_SRC=	${PKGDIR}/PLIST.clients
 
 .if ${OPSYS} != "Interix"
 .  if (${MACHINE_ARCH} == "i386") || \
+      (${MACHINE_ARCH} == "x86_64") || \
       (${MACHINE_ARCH} == "sparc")
 .    include "../../mk/oss.buildlink3.mk"
 EGDIR=		${PREFIX}/share/examples/nas
