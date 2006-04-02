@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/03/04 21:30:33 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/04/02 23:54:01 ben Exp $
 #
 
 DISTNAME=		#defined
@@ -15,7 +15,8 @@ DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386 SunOS-*-sparc
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-[2-9]*-x86)64 \
+			Linux-*-i386 SunOS-*-sparc
 RESTRICTED=		"Redistribution not permitted"
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
@@ -51,6 +52,10 @@ DISTNAME=		fp-linux-ws-${FPVER}
 .if ${OPSYS} == "SunOS"
 MASTER_SITES=		ftp://ftp.f-prot.com/pub/solaris/
 DISTNAME=		fp-solaris-sparc-ws-${FPVER}
+.endif
+
+.if (${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "x86_64")
+DEPENDS+=	netbsd32_compat16>=1.0:../../emulators/netbsd32_compat16
 .endif
 
 DIST_SUBDIR=		${DISTNAME}
