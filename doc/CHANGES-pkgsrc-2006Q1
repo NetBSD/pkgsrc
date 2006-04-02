@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.5 2006/04/01 03:33:50 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.6 2006/04/02 14:16:46 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -13,3 +13,5 @@ Pullup ticket 1294 - requested by jlam
 fix dependencies and paths in prcs
 Pullup ticket 1297 - requested by jlam
 Tools paths and PLIST fixes for freewais-sf
+Pullup ticket 1298 - requested by jlam
+security update for samba
