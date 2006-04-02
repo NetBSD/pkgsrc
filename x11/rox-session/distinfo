@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/02/11 16:12:25 rxg Exp $
+$NetBSD: distinfo,v 1.2 2006/04/02 15:15:21 rxg Exp $
 
-SHA1 (rox/ROX-Session-0.1.25.tgz) = 1e8c8f6cf853422b4ba3b3249a1f10c384a757fd
-RMD160 (rox/ROX-Session-0.1.25.tgz) = 0fd5916590ca9f0af069d7c2ac51a7056e51da77
-Size (rox/ROX-Session-0.1.25.tgz) = 1027577 bytes
-SHA1 (patch-aa) = 428bde0a5e928807b072d28ccebabc6a9a0fffd3
-SHA1 (patch-ab) = bfd42d6b676f60a2d5d4d41bab139543764b1acd
+SHA1 (rox/rox-session-0.28.tar.bz2) = 12cd08babc01b5de0d4893702efd04e1eda61ca8
+RMD160 (rox/rox-session-0.28.tar.bz2) = a70d5ab90aa6ebb679085f09f2b0f95a614fdbf3
+Size (rox/rox-session-0.28.tar.bz2) = 129900 bytes
+SHA1 (patch-ab) = d83674b5faa03bce2f257f5872a12d7d4bedc284
 SHA1 (patch-ac) = cf4247eeab08f934685eddde573fae808f93ed0c
