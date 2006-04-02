@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4804 2006/04/02 09:00:35 wiz Exp $
+$NetBSD: TODO,v 1.4805 2006/04/02 09:07:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -545,7 +545,6 @@ Suggested package updates
 	o glabels-2.0.4
 	o glibmm-2.10.0
 	o glitz-0.5.3
-	o gliv-1.9.5
 	o gmake-3.81
 	o gmime-2.1.17 [pkg/32487]
 	o gnet1-1.1.9
@@ -558,7 +557,6 @@ Suggested package updates
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
-	o goffice-0.2.1
 	o gogo-3.11p1
 	o gossip-0.10.2 [jmmv]
 	o gpgme-1.1.0 [pkg/32761]
@@ -1046,7 +1044,6 @@ Suggested package updates
 	o qt2-docs-2.3.2
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
-	o qt3-libs-3.3.6
 	o qt4-libs-4.1.2
 	o qt4-tools-4.1.2
 	o qvplay-0.95
@@ -1173,7 +1170,6 @@ Suggested package updates
 	o tet3-3.6b
 	o tfmxplay-1.1.6
 	o tidy-20051006
-	o tiff-3.8.2
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
 	o tkcvs-8.0.3
