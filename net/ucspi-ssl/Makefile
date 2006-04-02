@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/11 20:17:58 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/02 17:44:16 schmonz Exp $
 #
 
 DISTNAME=		ucspi-ssl-0.70
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://www.superscript.com/ucspi-ssl/
 
@@ -14,21 +15,21 @@ DEPENDS+=		ucspi-tcp-[0-9]*:../../net/ucspi-tcp
 WRKSRC=			${WRKDIR}/host/superscript.com/net/${PKGNAME_NOREV}
 DJB_SLASHPACKAGE=	YES
 
-USE_TOOLS+=		perl:run
-
 SSL_SCRIPTS=		https@ sslcat sslconnect
+SSL_PROGRAMS=		sslclient sslserver
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
 SUBST_FILES.paths=	${SSL_SCRIPTS:S/^/src\//g:S/$/.sh/g}
 SUBST_SED.paths=	-e 's|HOME/command/|${PREFIX}/bin/|g'
-SUBST_MESSAGE.paths=	"Fixing paths."
+SUBST_MESSAGE.paths=	Fixing paths.
+
+PLIST_SRC=		${PKGDIR}/PLIST
 
 DJB_CONFIG_CMDS=							\
 	${ECHO} ${LOCALBASE}/bin > conf-tcpbin;				\
 	${ECHO} > conf-ssl;						\
-	${ECHO} ${PERL5} > conf-perl;					\
-	${ECHO} ${PKG_SYSCONFDIR} > conf-cadir
+	${ECHO} ${PKG_SYSCONFDIR} > conf-cadir;
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -45,7 +46,7 @@ do-install:
 	  ${INSTALL_SCRIPT} ${WRKSRC}/command/${i} ${PREFIX}/bin
 .	endfor
 
-.	for i in sslclient sslserver sslperl
+.	for i in ${SSL_PROGRAMS}
 	  ${INSTALL_PROGRAM} ${WRKSRC}/command/${i} ${PREFIX}/bin
 .	endfor
 
@@ -53,7 +54,6 @@ do-install:
 	  ${INSTALL_DATA} ${WRKSRC}/src/${i} ${PREFIX}/share/doc/ucspi-ssl
 .	endfor
 
-.include "../../lang/perl5/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
