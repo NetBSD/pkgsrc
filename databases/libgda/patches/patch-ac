@@ -1,15 +1,15 @@
-$NetBSD: patch-ac,v 1.5 2006/02/04 17:02:45 wiz Exp $
+$NetBSD: patch-ac,v 1.6 2006/04/02 22:46:55 wiz Exp $
 
---- libgda/Makefile.in.orig	2005-10-13 10:11:28.000000000 +0200
+--- libgda/Makefile.in.orig	2006-03-24 10:14:55.000000000 +0000
 +++ libgda/Makefile.in
-@@ -352,8 +352,8 @@ AM_CPPFLAGS = \
+@@ -378,8 +378,8 @@ AM_CPPFLAGS = \
  	$(LIBGDA_CFLAGS) \
  	-DLIBGDA_PLUGINDIR=\""$(libdir)/libgda-$(GDA_MAJOR_VERSION).$(GDA_MINOR_VERSION)/providers"\" \
  	-DLIBGDA_LOCALEDIR=\""$(datadir)/locale"\" \
 -	-DLIBGDA_GLOBAL_CONFIG_FILE=\""$(sysconfdir)/libgda/config"\" \
--	-DLIBGDA_GLOBAL_CONFIG_DIR=\""$(sysconfdir)/libgda"\"
+-	-DLIBGDA_GLOBAL_CONFIG_DIR=\""$(sysconfdir)/libgda"\" \
 +	-DLIBGDA_GLOBAL_CONFIG_FILE=\""$(sysconfdir)/config"\" \
-+	-DLIBGDA_GLOBAL_CONFIG_DIR=\""$(sysconfdir)"\"
++	-DLIBGDA_GLOBAL_CONFIG_DIR=\""$(sysconfdir)"\" \
+ 	-DDTDINSTALLDIR=\""$(LIBGDA_DTDDIR)"\"
  
  gda_marshal_built_files = gda-marshal.h gda-marshal.c
- gda_headers = \
