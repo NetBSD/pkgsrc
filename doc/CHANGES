@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13419 2006/04/02 02:10:23 markd Exp $
+$NetBSD: CHANGES,v 1.13420 2006/04/02 09:04:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1796,6 +1796,16 @@ Changes to the packages collection and infrastructure in 2006:
 	Added net/pear-Net_Sieve version 1.1.1 [adrianp 2006-03-31]
 	Added mail/ingo version 1.1 [adrianp 2006-03-31]
 	Added time/kronolith version 2.1 [adrianp 2006-03-31]
+	Updated graphics/tiff to 3.8.2 [drochner 2006-03-31]
+	Updated x11/qt3-libs to 3.3.6 [drochner 2006-03-31]
+	Updated x11/qt3-docs to 3.3.6 [drochner 2006-03-31]
+	Updated x11/qt3-mysql to 3.3.6 [drochner 2006-03-31]
+	Updated x11/qt3-psql to 3.3.6 [drochner 2006-03-31]
+	Updated x11/qt3-tools to 3.3.6 [drochner 2006-03-31]
+	Updated x11/qt3 to 3.3.6 [drochner 2006-03-31]
+	Updated misc/goffice to 0.2.1 [drochner 2006-03-31]
+	Updated graphics/gliv to 1.9.5 [drochner 2006-03-31]
+	Updated math/galculator to 1.2.5.1 [drochner 2006-03-31]
 	Updated net/samba to 3.0.22 [jlam 2006-04-01]
 	Added devel/tailor version 0.9.20 [wiz 2006-04-01]
 	Updated devel/libtool-base to 1.5.22nb3 [grant 2006-04-01]
