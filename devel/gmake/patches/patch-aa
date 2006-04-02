@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2003/02/21 12:40:54 grant Exp $
+$NetBSD: patch-aa,v 1.10 2006/04/02 20:10:51 wiz Exp $
 
---- make.h.orig	Thu Sep 12 02:55:44 2002
+--- make.h.orig	2006-02-15 23:54:43.000000000 +0000
 +++ make.h
-@@ -33,7 +33,7 @@ Boston, MA 02111-1307, USA.  */
+@@ -31,7 +31,7 @@ Foundation, Inc., 51 Franklin St, Fifth 
  #  ifdef _AIX
   #pragma alloca
  #  else
