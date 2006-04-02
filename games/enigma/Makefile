@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:09:14 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/02 09:49:01 jmmv Exp $
 
 DISTNAME=	enigma-0.92
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	http://savannah.nongnu.org/download/enigma/
 
@@ -26,4 +26,5 @@ SUBST_SED.enigma=	-e s!/usr/local/!${PREFIX}/!
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

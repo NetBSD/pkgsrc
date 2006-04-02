@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2006/02/17 06:49:26 martti Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/02 09:49:01 jmmv Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-session-${XFCE4_VERSION}
 #PKGREVISION=	1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 COMMENT=	Xfce session manager
 
@@ -21,5 +21,6 @@ REQD_DIRS+=		${XFCE4_EGBASE} ${EGDIR}
 
 USE_TOOLS+=	iceauth:run
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/xfce4-mcs-plugins/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
