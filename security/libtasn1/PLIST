@@ -1,9 +1,15 @@
-@comment $NetBSD: PLIST,v 1.9 2006/03/09 17:23:11 cube Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/04/02 20:40:53 wiz Exp $
+bin/asn1Coding
+bin/asn1Decoding
+bin/asn1Parser
 bin/libtasn1-config
 include/libtasn1.h
 info/libtasn1.info
 lib/libtasn1.la
 lib/pkgconfig/libtasn1.pc
+man/man1/asn1Coding.1
+man/man1/asn1Decoding.1
+man/man1/asn1Parser.1
 man/man3/asn1_array2tree.3
 man/man3/asn1_bit_der.3
 man/man3/asn1_check_version.3
