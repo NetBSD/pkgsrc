@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/01/05 16:58:49 rxg Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/04/02 14:58:56 rxg Exp $
 bin/oroborox
 libexec/rox/OroboROX
 share/rox/OroboROX/.DirIcon
@@ -10,6 +10,8 @@ share/rox/OroboROX/Configure/Keybindings/AppRun
 share/rox/OroboROX/Configure/Keybindings/Messages/de.gmo
 share/rox/OroboROX/Configure/Keybindings/Messages/de.po
 share/rox/OroboROX/Configure/Keybindings/Messages/dist
+share/rox/OroboROX/Configure/Keybindings/Messages/es.gmo
+share/rox/OroboROX/Configure/Keybindings/Messages/es.po
 share/rox/OroboROX/Configure/Keybindings/Messages/it.gmo
 share/rox/OroboROX/Configure/Keybindings/Messages/it.po
 share/rox/OroboROX/Configure/Keybindings/Messages/messages.pot
@@ -36,6 +38,8 @@ share/rox/OroboROX/Configure/OroboScheme/LoadScheme
 share/rox/OroboROX/Configure/OroboScheme/Messages/de.gmo
 share/rox/OroboROX/Configure/OroboScheme/Messages/de.po
 share/rox/OroboROX/Configure/OroboScheme/Messages/dist
+share/rox/OroboROX/Configure/OroboScheme/Messages/es.gmo
+share/rox/OroboROX/Configure/OroboScheme/Messages/es.po
 share/rox/OroboROX/Configure/OroboScheme/Messages/it.gmo
 share/rox/OroboROX/Configure/OroboScheme/Messages/it.po
 share/rox/OroboROX/Configure/OroboScheme/Messages/messages.pot
@@ -881,6 +885,8 @@ share/rox/OroboROX/Configure/Windows/Messages/de.gmo
 share/rox/OroboROX/Configure/Windows/Messages/de.mo
 share/rox/OroboROX/Configure/Windows/Messages/de.po
 share/rox/OroboROX/Configure/Windows/Messages/dist
+share/rox/OroboROX/Configure/Windows/Messages/es.gmo
+share/rox/OroboROX/Configure/Windows/Messages/es.po
 share/rox/OroboROX/Configure/Windows/Messages/it.gmo
 share/rox/OroboROX/Configure/Windows/Messages/it.po
 share/rox/OroboROX/Configure/Windows/Messages/messages.pot
@@ -901,6 +907,8 @@ share/rox/OroboROX/Configure/Workspaces/AppRun
 share/rox/OroboROX/Configure/Workspaces/Messages/de.gmo
 share/rox/OroboROX/Configure/Workspaces/Messages/de.po
 share/rox/OroboROX/Configure/Workspaces/Messages/dist
+share/rox/OroboROX/Configure/Workspaces/Messages/es.gmo
+share/rox/OroboROX/Configure/Workspaces/Messages/es.po
 share/rox/OroboROX/Configure/Workspaces/Messages/it.gmo
 share/rox/OroboROX/Configure/Workspaces/Messages/it.po
 share/rox/OroboROX/Configure/Workspaces/Messages/messages.pot
