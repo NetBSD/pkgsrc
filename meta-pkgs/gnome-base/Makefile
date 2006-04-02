@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2006/04/02 09:56:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.32 2006/04/02 18:59:12 jmmv Exp $
 
 DISTNAME=	gnome-base-2.14.0
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -33,10 +34,9 @@ DEPENDS+=	libxslt>=1.1.15:../../textproc/libxslt
 DEPENDS+=	GConf2>=2.13.5:../../devel/GConf2
 DEPENDS+=	GConf2-ui>=2.13.5:../../devel/GConf2-ui
 DEPENDS+=	libbonobo>=2.14.0:../../devel/libbonobo
-DEPENDS+=	gnome-mime-data>=2.4.2:../../databases/gnome-mime-data
 DEPENDS+=	libaudiofile>=0.2.6:../../audio/libaudiofile
 DEPENDS+=	esound>=0.2.36:../../audio/esound
-DEPENDS+=	gnome-vfs2>=2.14.0:../../sysutils/gnome-vfs2
+DEPENDS+=	gnome-vfs2>=2.14.0nb1:../../sysutils/gnome-vfs2
 DEPENDS+=	gnome-vfs2-cdda>=2.14.0:../../audio/gnome-vfs2-cdda
 DEPENDS+=	gnome-vfs2-smb>=2.14.0:../../net/gnome-vfs2-smb
 DEPENDS+=	libgnome>=2.14.0nb1:../../devel/libgnome
