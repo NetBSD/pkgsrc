@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2006/03/30 21:07:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.61 2006/04/02 18:58:19 jmmv Exp $
+
+PKGREVISION=		1
 
 PKGCONFIG_OVERRIDE=	gnome-vfs-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gnome-vfs-module-2.0.pc.in
@@ -23,7 +25,6 @@ BUILDLINK_DEPENDS.glib2+=	glib2>=2.9.3
 .include "../../devel/GConf2/schemas.mk"
 
 .include "../../archivers/bzip2/buildlink3.mk"
-.include "../../databases/gnome-mime-data/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
