@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13422 2006/04/02 09:58:06 jmmv Exp $
+$NetBSD: CHANGES,v 1.13423 2006/04/02 11:07:56 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1835,3 +1835,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated meta-pkgs/gnome-devel to 2.14.0 [jmmv 2006-04-02]
 	Updated meta-pkgs/gnome-base to 2.14.0 [jmmv 2006-04-02]
 	Updated meta-pkgs/gnome to 2.14.0 [jmmv 2006-04-02]
+	Updated x11/gnome-session to 2.14.0nb2 [jmmv 2006-04-02]
