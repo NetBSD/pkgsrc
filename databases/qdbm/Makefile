@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/23 06:20:36 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/02 20:13:54 wiz Exp $
 #
 
 .include "Makefile.common"
@@ -10,9 +10,13 @@ COMMENT=	Quick Database Manager - library of routines for managing a db
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-zlib
 CONFIGURE_ARGS+=	--enable-iconv
+CONFIGURE_ARGS+=	--enable-bzip
+CONFIGURE_ARGS+=	--enable-lzo
 PKGCONFIG_OVERRIDE=     qdbm.pc.in
 TEST_TARGET=            check
 
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/lzo/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
