@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.11 2006/03/30 21:26:51 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/04/02 16:05:46 jmmv Exp $
 bin/bug-buddy
 man/man1/bug-buddy.1
-share/application-registry/bug-buddy.applications
 share/applications/bug-buddy-core.desktop
 share/applications/bug-buddy.desktop
 share/bug-buddy/bug-buddy.glade
@@ -97,7 +96,6 @@ ${PKGLOCALEDIR}/locale/xh/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/bug-buddy.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/bug-buddy.mo
-share/mime-info/bug-buddy.keys
 share/omf/bug-buddy/bug-buddy-C.omf
 share/omf/bug-buddy/bug-buddy-es.omf
 share/omf/bug-buddy/bug-buddy-pa.omf
@@ -108,7 +106,6 @@ share/pixmaps/bug-buddy.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/bug-buddy
 @comment in scrollkeeper: @dirrm share/omf
-@comment in xdg-dirs: @dirrm share/mime-info
 @dirrm share/gnome/help/bug-buddy/vi
 @dirrm share/gnome/help/bug-buddy/uk
 @dirrm share/gnome/help/bug-buddy/sr
@@ -123,4 +120,3 @@ share/pixmaps/bug-buddy.png
 @dirrm share/bug-buddy/bugzilla
 @dirrm share/bug-buddy
 @comment in xdg-dirs: @dirrm share/applications
-@comment in xdg-dirs: @dirrm share/application-registry
