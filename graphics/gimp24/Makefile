@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2006/03/06 00:18:11 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/02 09:49:01 jmmv Exp $
 
 DISTNAME=	gimp-2.3.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v2.3/ \
 		ftp://ftp.cs.umn.edu/pub/gimp/v2.3/ \
@@ -57,6 +57,7 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/aalib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
