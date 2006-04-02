@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.103 2006/03/30 21:25:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.104 2006/04/02 09:16:19 jmmv Exp $
 #
 
 DISTNAME=	gdm-2.14.0
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.14/}
 EXTRACT_SUFX=	.tar.bz2
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Daemon.README Daemon.png
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
@@ -16,10 +16,6 @@ BUILD_USES_MSGFMT=	YES
 DEPENDS+=	zenity>=2.14.0:../../x11/zenity
 
 BUILDLINK_DEPENDS.libart2+=	libart2>=2.3.11
-
-SITES_Daemon.README=	${MASTER_SITE_LOCAL}
-SITES_Daemon.png=	${MASTER_SITE_LOCAL}
-EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
@@ -77,7 +73,7 @@ SUBST_FILES.desktop+=	config/gdm.conf.in
 SUBST_SED.desktop=	-e 's/^_//g'
 SUBST_SED.desktop+=	-e 's|^User=gdm$$|User=${GDMOWN}|g'
 SUBST_SED.desktop+=	-e 's|^Group=gdm$$|Group=${GDMGRP}|g'
-SUBST_SED.desktop+=	-e 's|^\#Logo=.*$$|Logo=@EXPANDED_PIXMAPDIR@/Daemon.png|g'
+SUBST_SED.desktop+=	-e 's|^\#Logo=.*$$|Logo=@EXPANDED_PIXMAPDIR@/NetBSD.xpm|g'
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 SUBST_SED.desktop+=	-e 's|^\#RebootCommand=.*$$|RebootCommand=/sbin/shutdown -r now|g'
 SUBST_SED.desktop+=	-e 's|^\#HaltCommand=.*$$|HaltCommand=/sbin/shutdown -p now|g'
@@ -125,11 +121,6 @@ PLIST_SUBST+=		DMX="@comment "
 .endif
 PRINT_PLIST_AWK+=	/dmx/ { print "$${DMX}" $$0; next }
 
-post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gdm
-	${INSTALL_DATA} ${DISTDIR}/Daemon.README ${PREFIX}/share/doc/gdm
-	${INSTALL_DATA} ${DISTDIR}/Daemon.png ${PREFIX}/share/pixmaps
-
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
@@ -143,5 +134,10 @@ post-install:
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+
+post-install:
+	${INSTALL_DATA} ${FILESDIR}/NetBSD.xpm ${PREFIX}/share/pixmaps
+	${INSTALL_DATA} ${FILESDIR}/custom.desktop \
+		${PREFIX}/share/gdm/BuiltInSessions
 
 .include "../../mk/bsd.pkg.mk"
