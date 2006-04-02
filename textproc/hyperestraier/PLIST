@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2006/03/15 07:13:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/02 20:18:37 wiz Exp $
 bin/estcall
 bin/estcmd
 bin/estconfig
 bin/estload
 bin/estmaster
 bin/estmttest
+bin/estwaver
 bin/estwolefind
 include/estmtdb.h
 include/estnode.h
@@ -12,13 +13,14 @@ include/estraier.h
 lib/libestraier.a
 lib/libestraier.so
 lib/libestraier.so.8
-lib/libestraier.so.8.4.0
+lib/libestraier.so.8.5.0
 lib/pkgconfig/hyperestraier.pc
 libexec/estseek.cgi
 man/man1/estcall.1
 man/man1/estcmd.1
 man/man1/estconfig.1
 man/man1/estmaster.1
+man/man1/estwaver.1
 man/man3/estnode.3
 man/man3/estraier.3
 share/hyperestraier/COPYING
@@ -79,13 +81,15 @@ share/hyperestraier/doc/pguide-en.html
 share/hyperestraier/doc/pguide-ja.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000028.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000029.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000030.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000031.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000032.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000033.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000034.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000035.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000036.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src/M000037.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000001.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000002.html
@@ -110,9 +114,6 @@ share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000020.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000021.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src/M000022.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000035.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000036.html
-share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000037.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000038.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000039.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000040.html
@@ -123,12 +124,16 @@ share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000044.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000045.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000046.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000047.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000048.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000049.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src/M000050.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000023.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000024.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000025.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000026.html
 share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000027.html
+share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src/M000028.html
 share/hyperestraier/doc/rubynativeapi/created.rid
 share/hyperestraier/doc/rubynativeapi/files/estraier-doc_rb.html
 share/hyperestraier/doc/rubynativeapi/fr_class_index.html
