@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4806 2006/04/02 17:07:07 wiz Exp $
+$NetBSD: TODO,v 1.4807 2006/04/02 17:48:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -357,7 +357,6 @@ Suggested package updates
 	o ast-ksh-20040229
 	o astyle-1.15.3
 	o at-spi-1.7.7
-	o atk-1.11.4
 	o avcheck-0.91
 	o avidemux-2.1.2
 	o avl-2.0.1
