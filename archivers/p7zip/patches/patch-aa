@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.11 2006/02/13 18:45:32 adam Exp $
+$NetBSD: patch-aa,v 1.12 2006/04/03 19:13:21 adam Exp $
 
---- makefile.machine.orig	2006-02-10 18:52:26.000000000 +0100
+--- makefile.machine.orig	2006-04-01 14:56:25.000000000 +0200
 +++ makefile.machine
-@@ -1,13 +1,13 @@
- 
--ALLFLAGS=-O1 -s \
+@@ -2,7 +2,7 @@
+ # makefile for Linux (x86, PPC, alpha ...)
+ # LITTLE_ENDIAN and BIG_ENDIAN are already defined by the system headers
+ #
+-ALLFLAGS=-O1 -s -fPIC \
 +ALLFLAGS=-Wall \
      	-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE \
+ 	-DHAVE_TIMEGM \
  	-DNDEBUG -D_REENTRANT -DENV_UNIX \
- 	$(LOCAL_FLAGS)
- 
--CXX=gcc $(ALLFLAGS)
-+CXX=g++ $(ALLFLAGS)
+@@ -12,6 +12,6 @@ CXX=g++ $(ALLFLAGS)
  CC=gcc $(ALLFLAGS)
  LINK_SHARED=-shared
  
