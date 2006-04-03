@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/04/02 23:54:01 ben Exp $
+# $NetBSD: Makefile,v 1.31 2006/04/03 13:36:12 ben Exp $
 #
 
 DISTNAME=		#defined
@@ -15,7 +15,7 @@ DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
-ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-[2-9]*-x86)64 \
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-[2-9]*-x86_64 \
 			Linux-*-i386 SunOS-*-sparc
 RESTRICTED=		"Redistribution not permitted"
 NO_SRC_ON_CDROM=	${RESTRICTED}
