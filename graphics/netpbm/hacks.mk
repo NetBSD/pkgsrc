@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.4 2006/03/11 17:41:59 schwarz Exp $
+# $NetBSD: hacks.mk,v 1.5 2006/04/03 16:39:04 tron Exp $
 
 .if !defined(NETPBM_HACKS_MK)
 NETPBM_HACKS_MK=	# defined
@@ -39,8 +39,8 @@ post-wrapper:
 ### that shows up when compiling frame.c
 ###
 .if ${OPSYS} == "Darwin" && ${PKGSRC_COMPILER} == "gcc"
-_GCC_BUILD!=	${CC} --version|${GREP} '^powerpc-apple-darwin8-gcc-4\.0\.0.*build\ 4061'
-. if !empty(_GCC_BUILD)
+_BAD_GCC_BUILD!=	${CC} --version | (${GREP} -c '^powerpc-apple-darwin8-gcc-4\.0\.0.*build\ 4061' || ${TRUE})
+. if ${_BAD_GCC_BUILD} == "1"
 PKG_HACKS+=		apple-gcc-4-bug
 BUILDLINK_TRANSFORM+=	rm:-finline-floor # unknown option to gcc-3.3
 BUILDLINK_TRANSFORM+=	rm:-mpowerpc64 # prevent internal compiler error
