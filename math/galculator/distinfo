@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2006/03/31 15:11:32 drochner Exp $
+$NetBSD: distinfo,v 1.3 2006/04/03 13:08:03 drochner Exp $
 
-SHA1 (galculator-1.2.5.1.tar.gz) = bebe58fbcdbfac4f937b371cc8139ec937117b36
-RMD160 (galculator-1.2.5.1.tar.gz) = 8886ab27bab34f459ea24a13ee1e49e78f52ea92
-Size (galculator-1.2.5.1.tar.gz) = 294568 bytes
-SHA1 (patch-ab) = e5ca93d7710259415ed6e0881bef09e8105612d1
+SHA1 (galculator-1.2.5.2.tar.gz) = 576c2b3a5759beab0d7344efe351814fa4fb518e
+RMD160 (galculator-1.2.5.2.tar.gz) = 3c4affc09b13444a076670a9534b4ee9f1d29a54
+Size (galculator-1.2.5.2.tar.gz) = 479727 bytes
