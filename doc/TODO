@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4819 2006/04/03 16:13:44 jmmv Exp $
+$NetBSD: TODO,v 1.4820 2006/04/03 18:21:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -479,7 +479,7 @@ Suggested package updates
 	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
 	o enchant-1.2.4
-	o enlightenment-0.16.8
+	o enlightenment-0.16.8.1
 	o enscript-1.6.4
 	o epiphany-extensions-2.14.0.1 [jmmv]
 	o epstool-3.08
@@ -535,6 +535,7 @@ Suggested package updates
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
 	o gift-openft-0.2.1.4
+	o gkrellm-2.2.8
 	o gkrellm-multiping-2.0.10
 	o gkrellm-weather-2.0.7
 	o gkrellm-xmms-2.1.22
@@ -640,6 +641,7 @@ Suggested package updates
 	o jpegpixi-1.1.1
 	o jpilot-0.99.8
 	o jwhois-3.2.3
+	o kaffe-1.1.7
 	o kajaani-kombat-0.7
 	o kapooka-0.3
 	o kazehakase-0.3.6
@@ -920,6 +922,7 @@ Suggested package updates
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.42
+	o p7zip-4.37
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pari-2.1.7
@@ -976,6 +979,7 @@ Suggested package updates
 	o postgresql_autodoc-1.25
 	o potrace-1.7
 	o prayer-1.0.15
+	o prboom-2.4.0
 	o prelude-manager-0.9.4.1
 	o proj-4.4.9
 	o projclock-0.9
@@ -1046,6 +1050,7 @@ Suggested package updates
 	o rapidsvn-0.9.1
 	o raptor-1.4.5
 	o rat-4.2.25
+	o ratpoison-1.4.0
 	o rayshade-4.0.6
 	o rblcheck-1.5
 	o rc-1.7.1
@@ -1067,7 +1072,7 @@ Suggested package updates
 	o rox-session-0.28
 	o roxirc-2.0
 	o rp-l2tp-0.4
-	o rp-pppoe-3.7
+	o rp-pppoe-3.8
 	o rpc2-1.28
 	o rpm-4.4.5
 	o rsnapshot-1.2.3
