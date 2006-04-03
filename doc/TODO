@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4817 2006/04/03 15:45:21 adam Exp $
+$NetBSD: TODO,v 1.4818 2006/04/03 15:46:35 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -555,7 +555,6 @@ Suggested package updates
 	o gob2-2.0.14
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gogo-3.11p1
-	o gossip-0.10.2 [jmmv]
 	o gpgme-1.1.0 [pkg/32761]
 	o gpsd-2.30
 	o gpsdrive-2.09

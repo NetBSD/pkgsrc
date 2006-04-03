@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13441 2006/04/03 15:45:20 adam Exp $
+$NetBSD: CHANGES,v 1.13442 2006/04/03 15:46:35 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1862,3 +1862,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/qt4-docs to 4.1.2 [adam 2006-04-03]
 	Updated x11/qt4-libs to 4.1.2 [adam 2006-04-03]
 	Updated x11/qt4-tools to 4.1.2 [adam 2006-04-03]
+	Updated chat/gossip to 0.10.2 [jmmv 2006-04-03]
