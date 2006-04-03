@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.159 2006/04/01 04:55:35 jlam Exp $
+# $NetBSD: Makefile,v 1.160 2006/04/03 13:23:03 salo Exp $
 
 .include "Makefile.mirrors"
 
@@ -119,6 +119,7 @@ PLIST_SUBST+=		${LIB}_${NUM}=${${LIB}_${NUM}}
 .  endfor
 .endfor
 
+.PHONY: install-samba-lib-symlinks
 install-samba-lib-symlinks:
 	cd ${SAMBA_LIBDIR} && ${LN} -s libmsrpc.so			\
 		libmsrpc.so.${LIBMSRPC_MAJOR}
