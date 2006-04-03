@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2006/02/26 10:39:34 wiz Exp $
+$NetBSD: patch-aa,v 1.10 2006/04/03 06:35:26 wiz Exp $
 
---- configure.orig	2006-02-25 20:07:49.000000000 +0100
+--- configure.orig	2006-04-01 16:31:25.000000000 +0000
 +++ configure
-@@ -23714,6 +23714,7 @@ echo "$as_me: WARNING: mozilla-config no
+@@ -23771,6 +23771,7 @@ echo "$as_me: WARNING: mozilla-config no
        build_mozilla_plugin=yes
     fi
  fi
