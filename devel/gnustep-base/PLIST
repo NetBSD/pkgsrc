@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/01/17 07:38:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/04/03 18:20:50 adam Exp $
 bin/openapp
 share/GNUstep/System/Library/Bundles/SSL.bundle/Resources/Info-gnustep.plist
 share/GNUstep/System/Library/Bundles/SSL.bundle/SSL
@@ -54,6 +54,7 @@ share/GNUstep/System/Library/Headers/Foundation/NSFormatter.h
 share/GNUstep/System/Library/Headers/Foundation/NSGeometry.h
 share/GNUstep/System/Library/Headers/Foundation/NSHashTable.h
 share/GNUstep/System/Library/Headers/Foundation/NSHost.h
+share/GNUstep/System/Library/Headers/Foundation/NSIndexPath.h
 share/GNUstep/System/Library/Headers/Foundation/NSIndexSet.h
 share/GNUstep/System/Library/Headers/Foundation/NSInvocation.h
 share/GNUstep/System/Library/Headers/Foundation/NSKeyValueCoding.h
@@ -83,6 +84,7 @@ share/GNUstep/System/Library/Headers/Foundation/NSScanner.h
 share/GNUstep/System/Library/Headers/Foundation/NSSerialization.h
 share/GNUstep/System/Library/Headers/Foundation/NSSet.h
 share/GNUstep/System/Library/Headers/Foundation/NSSortDescriptor.h
+share/GNUstep/System/Library/Headers/Foundation/NSStream.h
 share/GNUstep/System/Library/Headers/Foundation/NSString.h
 share/GNUstep/System/Library/Headers/Foundation/NSTask.h
 share/GNUstep/System/Library/Headers/Foundation/NSThread.h
@@ -258,6 +260,7 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Cayman
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Chicago
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Chihuahua
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Coral_Harbour
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Cordoba
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Costa_Rica
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Cuiaba
@@ -289,7 +292,9 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Indiana/Indianapolis
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Indiana/Knox
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Indiana/Marengo
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Indiana/Petersburg
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Indiana/Vevay
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Indiana/Vincennes
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Indianapolis
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Inuvik
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Iqaluit
@@ -313,6 +318,7 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Merida
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Mexico_City
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Miquelon
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Moncton
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Monterrey
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Montevideo
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/America/Montreal
@@ -475,6 +481,7 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Australia/Brisbane
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Australia/Broken_Hill
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Australia/Canberra
+share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Australia/Currie
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Australia/Darwin
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Australia/Hobart
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Australia/LHI
@@ -716,19 +723,6 @@ share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/ROC
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/ROK
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Singapore
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/SystemV/AST4
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/SystemV/AST4ADT
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/SystemV/CST6
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/SystemV/CST6CDT
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/SystemV/EST5
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/SystemV/EST5EDT
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/SystemV/HST10
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/SystemV/MST7
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/SystemV/MST7MDT
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/SystemV/PST8
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/SystemV/PST8PDT
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/SystemV/YST9
-share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/SystemV/YST9YDT
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Turkey
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/UCT
 share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/US/Alaska
@@ -764,6 +758,7 @@ share/GNUstep/System/Tools/make_strings
 share/GNUstep/System/Tools/pl
 share/GNUstep/System/Tools/pl2link
 share/GNUstep/System/Tools/pldes
+share/GNUstep/System/Tools/plget
 share/GNUstep/System/Tools/plmerge
 share/GNUstep/System/Tools/plparse
 share/GNUstep/System/Tools/plser
@@ -772,7 +767,6 @@ share/GNUstep/System/Tools/xmlparse
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/TraditionalChinese.lproj
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/Spanish.lproj
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/US
-@dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/SystemV
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Pacific
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Mideast
 @dirrm share/GNUstep/System/Library/Libraries/Resources/gnustep-base/NSTimeZones/zones/Mexico
