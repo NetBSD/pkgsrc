@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4814 2006/04/03 01:58:24 grant Exp $
+$NetBSD: TODO,v 1.4815 2006/04/03 06:11:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -547,7 +547,6 @@ Suggested package updates
 	o gmime-2.1.17 [pkg/32487]
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-icon-theme-2.14.2
 	o gnome-pilot-2.0.13
 	o gnome-spell-1.0.7
 	o gnome-vfsmm-2.14.0
