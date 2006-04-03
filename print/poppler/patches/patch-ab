@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2006/04/01 19:09:59 reed Exp $
+$NetBSD: patch-ab,v 1.4 2006/04/03 21:20:06 reed Exp $
 
 --- utils/Makefile.in.orig	2006-02-28 14:51:35.000000000 -0800
-+++ utils/Makefile.in	2006-04-01 10:41:52.000000000 -0800
++++ utils/Makefile.in	2006-04-03 14:10:58.000000000 -0700
 @@ -52,7 +52,7 @@
  CONFIG_HEADER = $(top_builddir)/config.h \
  	$(top_builddir)/poppler/poppler-config.h
@@ -80,12 +80,14 @@ $NetBSD: patch-ab,v 1.3 2006/04/01 19:09:59 reed Exp $
  INCLUDES = \
  	-I$(top_srcdir)				\
  	-I$(top_srcdir)/utils			\
-@@ -294,7 +294,7 @@
+@@ -294,8 +294,8 @@
  	$(UTILS_CFLAGS)
  
  LDADD = \
 -	$(top_builddir)/poppler/libpoppler.la	\
+-	$(UTILS_LIBS)
 +	$(prefix)/lib/libpoppler.la	\
- 	$(UTILS_LIBS)
++	$(UTILS_LIBS) $(PTHREAD_STUBLIB)
  
  
+ # Yay, automake!  It should be able to figure out that it has to dist

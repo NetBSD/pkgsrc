@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/01 19:11:39 reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/03 21:20:06 reed Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=		poppler-utils-${POPPLER_VERS}
+PKGREVISION=		1
 
 COMMENT=		PDF utilities (from poppler)
 
@@ -31,5 +32,15 @@ BUILD_DIRS=		utils # implies INSTALL_DIRS too
 
 BUILDLINK_DEPENDS.poppler+=     poppler>=${POPPLER_VERS}nb3
 .include "../../print/poppler/buildlink3.mk"
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-[12].*)
+.include "../../devel/pthread-stublib/buildlink3.mk"
+PTHREAD_STUBLIB=	"-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lpthstub"
+.else
+PTHREAD_STUBLIB=	# provided by libc
+.endif
+MAKE_ENV+=		PTHREAD_STUBLIB=${PTHREAD_STUBLIB}
 
 .include "../../mk/bsd.pkg.mk"
