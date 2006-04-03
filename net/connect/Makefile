@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2005/11/03 17:24:14 tv Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/03 16:05:30 tron Exp $
 
 DISTNAME=	connect
-PKGNAME=	${DISTNAME}-1.83
+PKGNAME=	${DISTNAME}-1.95
 CATEGORIES=	net security
-MASTER_SITES=	${HOMEPAGE}
+MASTER_SITES=	http://www.taiyo.co.jp/~gotoh/ssh/
 EXTRACT_SUFX=	.c
 
 MAINTAINER=	tron@NetBSD.org
-HOMEPAGE=	http://www.imasy.or.jp/~gotoh/ssh/
+HOMEPAGE=	http://www.taiyo.co.jp/~gotoh/ssh/connect.html
 COMMENT=	Open a TCP connection using a SOCKS4/5 or HTTP proxy server
 
 EXTRACT_ONLY=	# empty
