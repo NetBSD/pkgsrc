@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13440 2006/04/03 06:35:52 wiz Exp $
+$NetBSD: CHANGES,v 1.13441 2006/04/03 15:45:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1858,3 +1858,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Added print/abcm2ps version 3.7.21 [minskim 2006-04-02]
 	Updated graphics/gnome-icon-theme to 2.14.2 [wiz 2006-04-03]
 	Updated graphics/librsvg2 to 2.14.3 [wiz 2006-04-03]
+	Updated x11/qt4 to 4.1.2 [adam 2006-04-03]
+	Updated x11/qt4-docs to 4.1.2 [adam 2006-04-03]
+	Updated x11/qt4-libs to 4.1.2 [adam 2006-04-03]
+	Updated x11/qt4-tools to 4.1.2 [adam 2006-04-03]
