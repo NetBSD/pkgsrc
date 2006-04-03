@@ -1,4 +1,4 @@
-# $NetBSD: plugins.mk,v 1.4 2006/03/12 12:42:05 jmmv Exp $
+# $NetBSD: plugins.mk,v 1.5 2006/04/03 15:54:14 jmmv Exp $
 #
 # This file is shared across the gst-plugins-{base,good} packages to
 # simplify their code.  It provides a framework to write simple packages
@@ -6,7 +6,7 @@
 # this file, but use the correct Makefile.common instead.
 #
 
-DISTNAME?=	gst-plugins-${GST_PLUGINS0.10_TYPE}-0.10.4
+DISTNAME=	gst-plugins-${GST_PLUGINS0.10_TYPE}-${GST_PLUGINS0.10_VER}
 PKGNAME=	${DISTNAME:S/plugins/plugins0.10/}
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-plugins-${GST_PLUGINS0.10_TYPE}/
