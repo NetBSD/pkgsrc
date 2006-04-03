@@ -1,27 +1,22 @@
-@comment $NetBSD: PLIST,v 1.11 2005/08/25 20:16:52 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/04/03 15:45:49 jmmv Exp $
 bin/gossip
 share/applications/gossip.desktop
 share/examples/gossip/sound/events/gossip.soundlist
 share/gconf/schemas/gossip.schemas
+share/gnome/help/gossip/C/figures/gossip_first_start_window.png
+share/gnome/help/gossip/C/figures/gossip_roster.png
+share/gnome/help/gossip/C/gossip.xml
+share/gnome/help/gossip/C/legal.xml
 share/gossip/channel-old4.png
 share/gossip/chat.glade
 share/gossip/connect.glade
-share/gossip/emoticon-face1.png
-share/gossip/emoticon-face10.png
-share/gossip/emoticon-face11.png
-share/gossip/emoticon-face12.png
-share/gossip/emoticon-face2.png
-share/gossip/emoticon-face3.png
-share/gossip/emoticon-face4.png
-share/gossip/emoticon-face5.png
-share/gossip/emoticon-face6.png
-share/gossip/emoticon-face7.png
-share/gossip/emoticon-face8.png
-share/gossip/emoticon-face9.png
+share/gossip/file-transfer.glade
 share/gossip/gossip-about.png
+share/gossip/gossip-account.dtd
 share/gossip/gossip-available.png
 share/gossip/gossip-away.png
 share/gossip/gossip-busy.png
+share/gossip/gossip-chatroom.dtd
 share/gossip/gossip-contact-groups.dtd
 share/gossip/gossip-extended-away.png
 share/gossip/gossip-group-message.png
@@ -65,6 +60,7 @@ ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/ml/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gossip.mo
+${PKGLOCALEDIR}/locale/ne/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gossip.mo
@@ -77,8 +73,11 @@ ${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gossip.mo
+${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gossip.mo
+${PKGLOCALEDIR}/locale/zh_HK/LC_MESSAGES/gossip.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gossip.mo
+share/omf/gossip/gossip-C.omf
 share/pixmaps/gossip.png
 share/sounds/gossip/chat1.wav
 share/sounds/gossip/chat2.wav
@@ -88,8 +87,14 @@ share/sounds/gossip/send.wav
 @dirrm share/sounds/gossip
 @comment in xdg-dirs: @dirrm share/sounds
 @comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/omf/gossip
+@comment in scrollkeeper: @dirrm share/omf
 @dirrm share/gossip/protocols
 @dirrm share/gossip
+@dirrm share/gnome/help/gossip/C/figures
+@dirrm share/gnome/help/gossip/C
+@dirrm share/gnome/help/gossip
+@comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in GConf2: @dirrm share/gconf/schemas
 @dirrm share/examples/gossip/sound/events
 @dirrm share/examples/gossip/sound
