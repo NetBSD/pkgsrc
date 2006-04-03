@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4821 2006/04/03 18:43:01 wiz Exp $
+$NetBSD: TODO,v 1.4822 2006/04/03 19:15:10 adam Exp $
 
 Suggested new packages
 ======================
@@ -920,7 +920,6 @@ Suggested package updates
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.42
-	o p7zip-4.37
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pari-2.1.7
