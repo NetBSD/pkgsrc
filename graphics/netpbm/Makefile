@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2006/04/03 16:46:51 tron Exp $
+# $NetBSD: Makefile,v 1.137 2006/04/03 16:53:58 tron Exp $
 
 DISTNAME=	netpbm-10.32
 PKGREVISION=	1
@@ -79,6 +79,7 @@ post-install:
 	done >>${PLIST_SRC} &&					\
 	${PAX} -rwpppm . ${PREFIX}
 	${RM} -fr ${STAGEDIR}
-	${FIND} ${PREFIX}/share/doc/netpbm -type f | xargs ${CHMOD} ${NONBINMODE}
+	${FIND} ${PREFIX}/share/doc/netpbm -type f -print |	\
+	  xargs ${CHMOD} ${NONBINMODE}
 
 .include "../../mk/bsd.pkg.mk"
