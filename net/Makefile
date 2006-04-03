@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.611 2006/03/31 21:55:22 adrianp Exp $
+# $NetBSD: Makefile,v 1.612 2006/04/03 18:38:58 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -197,7 +197,6 @@ SUBDIR+=	mrstat
 SUBDIR+=	mrt
 SUBDIR+=	mrtg
 SUBDIR+=	mtr
-SUBDIR+=	mtr-gtk
 SUBDIR+=	mydns-mysql
 SUBDIR+=	mydns-pgsql
 SUBDIR+=	nagios-base
