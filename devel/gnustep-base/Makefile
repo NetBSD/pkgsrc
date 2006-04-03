@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2006/02/05 23:08:43 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2006/04/03 18:20:50 adam Exp $
 
-DISTNAME=	gnustep-base-1.11.2
-PKGREVISION=	1
+DISTNAME=	gnustep-base-1.12.0
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
@@ -12,7 +11,7 @@ COMMENT=	GNUstep foundation classes
 PTHREAD_LIBS=		-lpthread
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
+CONFIGURE_ARGS+=	--exec-prefix=${PREFIX:Q}/libexec/GNUstep
 CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_SCRIPT:Q}
 
 SUBST_CLASSES+=		pthread
@@ -21,10 +20,10 @@ SUBST_FILES.pthread=	configure base.make.in
 SUBST_SED.pthread=	-e 's|@PTHREAD_LIBS@|${PTHREAD_LIBS}|g'
 
 pre-configure:
-	${SED} 's|@PREFIX@|${PREFIX}|g' <${FILESDIR}/openapp >${WRKDIR}/openapp
+	${SED} 's|@PREFIX@|${PREFIX}|g' <${FILESDIR:Q}/openapp >${WRKDIR:Q}/openapp
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/openapp ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR:Q}/openapp ${PREFIX:Q}/bin
 
 .include "../../mk/compiler.mk"
 
