@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2006/04/02 11:03:14 jmmv Exp $
+$NetBSD: MESSAGE,v 1.2 2006/04/03 07:13:33 reed Exp $
 
 In order to get the GNOME Desktop running properly, you need to follow
 these manual steps:
@@ -13,7 +13,7 @@ these manual steps:
    dbus=YES to your /etc/rc.conf file.
 
 3) Enable the cups daemon if you installed it.  In order to do that, copy
-   the ${PREFIX}/share/examples/rc.d/{cupsd,slpd} scrips to /etc/rc.d and
+   the ${PREFIX}/share/examples/rc.d/{cupsd,slpd} scripts to /etc/rc.d and
    set cupsd=YES and slpd=NO in your /etc/rc.conf file.
 
 4) Set up the gnome-screensaver PAM service by creating the
