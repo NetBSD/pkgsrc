@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2006/03/21 06:00:44 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2006/04/03 15:45:49 jmmv Exp $
 #
 
-DISTNAME=	gossip-0.9
-PKGREVISION=	5
+DISTNAME=	gossip-0.10.2
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gossip/0.9/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gossip/0.10/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -38,8 +37,10 @@ INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
-.include "../../textproc/libxml/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
+.include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
