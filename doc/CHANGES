@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13448 2006/04/03 19:15:10 adam Exp $
+$NetBSD: CHANGES,v 1.13449 2006/04/03 20:15:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1875,3 +1875,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/mtr to 0.71 [wiz 2006-04-03]
 	Removed net/mtr-gtk [wiz 2006-04-03]
 	Updated archivers/p7zip to 4.37 [adam 2006-04-03]
+	Updated devel/tailor to 0.9.21 [wiz 2006-04-03]
