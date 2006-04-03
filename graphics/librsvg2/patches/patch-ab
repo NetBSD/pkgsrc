@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2006/02/26 10:39:34 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2006/04/03 06:35:26 wiz Exp $
 
---- gdk-pixbuf-loader/Makefile.in.orig	2006-02-25 20:08:37.000000000 +0100
+--- gdk-pixbuf-loader/Makefile.in.orig	2006-04-01 16:31:29.000000000 +0000
 +++ gdk-pixbuf-loader/Makefile.in
-@@ -526,10 +526,6 @@ uninstall-am: uninstall-info-am uninstal
+@@ -545,10 +545,6 @@ uninstall-am: uninstall-info-am uninstal
  
  
  install-data-hook: 
