@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.11 2006/04/03 18:38:58 wiz Exp $
+$NetBSD: patch-ab,v 1.12 2006/04/03 20:09:57 wiz Exp $
+
+Reported at
+	http://www.bitwizard.nl/cgi-bin/mtr/incoming?id=10799;page=1172;user=guest
 
 --- dns.c.orig	2006-03-23 05:45:58.000000000 +0000
 +++ dns.c
