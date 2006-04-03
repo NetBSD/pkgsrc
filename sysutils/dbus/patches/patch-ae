@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2006/04/02 18:20:53 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2006/04/03 15:42:04 jmmv Exp $
+
+https://bugs.freedesktop.org/show_bug.cgi?id=6487
 
 --- dbus/Makefile.in.orig	2006-04-02 17:39:35.000000000 +0000
 +++ dbus/Makefile.in
