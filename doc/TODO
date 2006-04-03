@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4820 2006/04/03 18:21:04 wiz Exp $
+$NetBSD: TODO,v 1.4821 2006/04/03 18:43:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -749,8 +749,6 @@ Suggested package updates
 	o mrtg-2.13.2 [pkg/32811]
 	o mserv-devel-0.41
 	o mtail-1.1.1
-	o mtr-0.71
-	o mtr-gtk-0.71
 	o multi-gnome-terminal-1.6.2
 	o multitail-3.8.10
 	o muse-0.9.1
