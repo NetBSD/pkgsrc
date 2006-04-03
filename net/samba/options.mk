@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2006/04/01 04:55:35 jlam Exp $
+# $NetBSD: options.mk,v 1.14 2006/04/03 13:23:03 salo Exp $
 
 # Recommended package options for various setups:
 #
@@ -39,6 +39,7 @@ CONFIGURE_ARGS+=	--without-krb5
 CONFIGURE_ARGS+=	--enable-cups
 PLIST_SUBST+=		CUPS=
 
+.PHONY: samba-cups-install
 post-install: samba-cups-install
 samba-cups-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/cups/backend
@@ -88,6 +89,7 @@ CONFIGURE_ARGS+=	--with-pam_smbpass
 PLIST_SUBST+=		PAM_SMBPASS=lib/security/pam_smbpass.so
 PLIST_SUBST+=		PAM=
 
+.PHONY: samba-pam-smbpass-install
 post-install: samba-pam-smbpass-install
 samba-pam-smbpass-install:
 	${INSTALL_LIB_DIR} ${PAM_INSTMODULEDIR}
@@ -135,6 +137,7 @@ PLIST_SUBST+=	PAM_WINBIND="@comment no PAM winbind module"
 .  else
 PLIST_SUBST+=	PAM_WINBIND=lib/security/pam_winbind.so
 
+.PHONY: samba-pam-winbind-install
 post-install: samba-pam-winbind-install
 samba-pam-winbind-install:
 	${INSTALL_LIB_DIR} ${PAM_INSTMODULEDIR}
@@ -153,6 +156,7 @@ NSS_WINBIND_cmd=	\
 		{ sub(".*/", "lib/"); print; }' &&			\
 	${RM} -f config.log
 
+.PHONY: samba-nss-winbind-install
 post-install: samba-nss-winbind-install
 samba-nss-winbind-install:
 	lib=${WRKSRC:Q}/nsswitch/${NSS_WINBIND:T:Q};			\
@@ -170,6 +174,7 @@ NSS_WINS_cmd=	\
 		{ sub(".*/", "lib/"); print; }' &&			\
 	${RM} -f config.log
 
+.PHONY: samba-nss-wins-install
 post-install: samba-nss-wins-install
 samba-nss-wins-install:
 	lib=${WRKSRC:Q}/nsswitch/${NSS_WINS:T:Q};			\
