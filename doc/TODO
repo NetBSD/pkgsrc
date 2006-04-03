@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4815 2006/04/03 06:11:22 wiz Exp $
+$NetBSD: TODO,v 1.4816 2006/04/03 06:35:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -690,7 +690,6 @@ Suggested package updates
 	o libpqxx-2.5.5
 	o libprelude-0.9.7.1
 	o libpreludedb-0.9.7.1
-	o librsvg2-2.14.3
 	o libshout-2.2
 	o libsmi-0.4.3
 	o libsndfile-1.0.15
