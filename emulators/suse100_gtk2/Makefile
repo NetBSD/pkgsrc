@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/03/14 01:14:28 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/03 18:17:55 ghen Exp $
 
 DISTNAME=		suse_gtk2-${SUSE_VERSION}
 CATEGORIES=		emulators
@@ -26,7 +26,6 @@ PLIST_SUBST+=		EMULSUBDIR=${EMULSUBDIR:Q}
 
 .if exists(Makefile.${MACHINE_ARCH})
 .include "Makefile.${MACHINE_ARCH}"
-DISTINFO_FILE=		${.CURDIR}/distinfo.${MACHINE_ARCH}
 .endif
 
 .include "../../emulators/suse100_linux/Makefile.common"
