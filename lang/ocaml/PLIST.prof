@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.prof,v 1.4 2006/01/16 09:41:48 adam Exp $
+@comment $NetBSD: PLIST.prof,v 1.5 2006/04/04 14:33:27 jlam Exp $
 lib/ocaml/arg.p.cmx
 lib/ocaml/array.p.cmx
 lib/ocaml/arrayLabels.p.cmx
@@ -42,4 +42,3 @@ lib/ocaml/string.p.cmx
 lib/ocaml/stringLabels.p.cmx
 lib/ocaml/sys.p.cmx
 lib/ocaml/weak.p.cmx
-@unexec ${RMDIR} %D/lib/ocaml 2>/dev/null || ${TRUE}
