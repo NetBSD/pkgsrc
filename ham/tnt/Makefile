@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/02/05 23:09:42 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/04/04 14:45:45 jlam Exp $
 #
 
 DISTNAME=	tnt-1.9.1
@@ -18,7 +18,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-
-INFO_FILES=	tntdoc.info
+INFO_FILES=		# PLIST
 
 .include "../../mk/bsd.pkg.mk"

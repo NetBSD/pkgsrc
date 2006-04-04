@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2004/02/17 16:14:34 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/04/04 14:45:44 jlam Exp $
 bin/cmail
 bin/pxboard
 bin/xboard
 bin/zic2xpm
+info/xboard.info
 man/man6/cmail.6
 man/man6/xboard.6
 man/man6/zic2xpm.6

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/03/05 16:27:25 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2006/04/04 14:45:44 jlam Exp $
 
 DISTNAME=		xconq-7.4.1
 PKGREVISION=		5
@@ -17,14 +17,17 @@ CONFIGURE_ARGS+=	--with-tclconfig="${BUILDLINK_PREFIX.tcl}/lib"
 CONFIGURE_ARGS+=	--with-tkconfig="${BUILDLINK_PREFIX.tk}/lib"
 
 MAKE_ENV+=		LOCALBASE=${LOCALBASE:Q}
-
-INFO_FILES=     	hacking.info xcdesign.info xconq.info
+MAKE_FLAGS+=		mandir=${PREFIX:Q}/${PKGMANDIR:Q}		\
+			infodir=${PREFIX:Q}/${PKGINFODIR:Q}
+INFO_FILES=     	# PLIST
 
 post-build:
-	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} info
+	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV}			\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} info
 
 post-install:
-	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install-info
+	cd ${WRKSRC}/doc && ${SETENV} ${MAKE_ENV}			\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} install-info
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
