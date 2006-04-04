@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.26 2005/11/22 15:44:59 ben Exp $	*/
+/*	$NetBSD: perform.c,v 1.27 2006/04/04 06:28:22 wiz Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -14,7 +14,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.26 2005/11/22 15:44:59 ben Exp $");
+__RCSID("$NetBSD: perform.c,v 1.27 2006/04/04 06:28:22 wiz Exp $");
 #endif
 #endif
 
@@ -112,8 +112,9 @@ pkg_do(char *pkg)
 				if ((cp2 = fileGetURL(cp)) != NULL) {
 					strlcpy(fname, cp2, sizeof(fname));
 					isTMP = TRUE;
+					
+					strcpy(PlayPen, cp2);
 				}
-				strcpy(PlayPen, cp2);
 			} else {
 				/*
 				 * Apply a crude heuristic to see how much space the package will
