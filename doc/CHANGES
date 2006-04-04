@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13452 2006/04/04 14:57:52 salo Exp $
+$NetBSD: CHANGES,v 1.13453 2006/04/04 15:33:18 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1879,3 +1879,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/xchm to 1.5 [wiz 2006-04-04]
 	Updated mail/dovecot to 1.0beta5 [ghen 2006-04-04]
 	Updated graphics/dia to 0.94nb6 [salo 2006-04-04]
+	Updated time/gnotime to 2.2.1nb7 [jmmv 2006-04-04]
