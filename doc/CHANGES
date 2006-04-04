@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13458 2006/04/04 21:17:06 wiz Exp $
+$NetBSD: CHANGES,v 1.13459 2006/04/04 22:21:39 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1888,3 +1888,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/sox to 12.17.9 [wiz 2006-04-04]
 	Updated audio/amarok to 1.3.9 [wiz 2006-04-04]
 	Updated security/gnupg to 1.4.3 [wiz 2006-04-04]
+	Updated cad/pcb to 20060321 [dmcmahill 2006-04-04]
