@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/03/30 21:31:53 jmmv Exp $
+# $NetBSD: Makefile,v 1.42 2006/04/04 18:07:16 jlam Exp $
 #
 
 DISTNAME=		gnopernicus-1.0.3
@@ -30,6 +30,7 @@ CONF_FILES+=		${EGDIR}/translation_tables/es.a2b \
 			${PKG_SYSCONFDIR}/translation_tables/es.a2b
 CONF_FILES+=		${EGDIR}/translation_tables/sv.a2b \
 			${PKG_SYSCONFDIR}/translation_tables/sv.a2b
+INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	translationdir=${EGDIR}/translation_tables
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnopernicus

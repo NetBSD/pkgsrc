@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2006/04/01 14:36:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.53 2006/04/04 18:07:16 jlam Exp $
 #
 
 DISTNAME=	libgnome-2.14.0
@@ -26,6 +26,7 @@ CONFIGURE_ARGS= 	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
+INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	soundlistdir=${PREFIX}/share/examples/libgnome/sound/events
 
 OWN_DIRS=	${PKG_SYSCONFDIR}/sound/events
