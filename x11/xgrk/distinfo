@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/04/04 09:33:36 is Exp $
+
+SHA1 (xgrk-1.6.3.tar.gz) = 0cfe79190225d1cf3e5489c7674b4294d793d14b
+RMD160 (xgrk-1.6.3.tar.gz) = 70c6f41f29f04ccac5662544cfb45e10dbc5eb7c
+Size (xgrk-1.6.3.tar.gz) = 25039 bytes
+SHA1 (patch-aa) = 3907d6e476576390cae8d3bfd1b49a0b5b853419
