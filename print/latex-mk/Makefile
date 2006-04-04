@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2006/01/28 05:46:02 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/04 23:21:30 dmcmahill Exp $
 #
 
-DISTNAME=	latex-mk-1.5
+DISTNAME=	latex-mk-1.6
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=latex-mk/}
 
