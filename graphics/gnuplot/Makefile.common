@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2006/03/05 16:27:25 jlam Exp $
+# $NetBSD: Makefile.common,v 1.8 2006/04/04 14:45:44 jlam Exp $
 #
 
 DISTNAME=		gnuplot-4.0.0
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	YES
 
 USE_TOOLS+=		makeinfo
-INFO_FILES=		gnuplot.info
+INFO_FILES=		# PLIST
 
 CONFIGURE_ARGS+=	--with-pdf
 CONFIGURE_ARGS+=	--enable-history-file
