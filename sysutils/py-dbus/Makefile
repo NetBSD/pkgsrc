@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2006/04/02 15:04:20 rxg Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/04 08:03:09 joerg Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+
+PYTHON_VERSIONS_ACCEPTED= 24
 
 DBUS_INTERFACE=	glib python
 DBUS_DIRS=	dbus bus glib python tools
