@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2006/04/04 14:45:44 jlam Exp $
+# $NetBSD: Makefile,v 1.97 2006/04/04 14:46:15 jlam Exp $
 
 DISTNAME=		gnucash-1.8.12
 PKGREVISION=		3
@@ -14,10 +14,8 @@ DEPENDS+=		guile-slib-[0-9]*:../../devel/guile-slib
 DEPENDS+=		p5-Date-Manip>=5.42a:../../devel/p5-Date-Manip
 DEPENDS+= 		p5-Finance-Quote>=1.06:../../finance/p5-Finance-Quote
 
-BUILD_DEPENDS+=		bison>=1.28:../../devel/bison
-
 USE_DIRS+=		gnome1-1.5
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		bison gmake pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
