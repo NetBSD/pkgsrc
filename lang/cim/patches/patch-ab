@@ -1,13 +1,15 @@
-$NetBSD: patch-ab,v 1.1 2004/05/11 03:33:57 snj Exp $
+$NetBSD: patch-ab,v 1.2 2006/04/04 16:53:59 jlam Exp $
 
---- src/Makefile.in.orig	2004-05-10 19:45:42.000000000 -0700
-+++ src/Makefile.in	2004-05-10 19:46:20.000000000 -0700
-@@ -355,7 +355,7 @@ maintainer-clean-generic clean mostlycle
+--- src/Makefile.in.orig	1999-11-05 16:07:54.000000000 -0500
++++ src/Makefile.in
+@@ -109,8 +109,8 @@ YFLAGS = -d
  
+ # Variables controlling compilation of the generated C-code
+ SCC = $(CC)
+-SCFLAGS = $(CFLAGS)
+-SLDFLAGS = $(LDFLAGS)
++SCFLAGS = $(CFLAGS) -I$(includedir)
++SLDFLAGS = -L$(libdir) $(LDFLAGS)
+ SLIBS = $(LIBS)
  
- cimcomp.o: cimcomp.c Makefile
--	$(COMPILE) '-DSCC="$(SCC)"' '-DSCFLAGS="$(SCFLAGS)"' '-DSLDFLAGS="$(SLDFLAGS)"' '-DSLIBS="$(SLIBS)"' '-DLIBDIR="$(libdir)"' '-DINCLUDEDIR="$(includedir)"' -c $(srcdir)/cimcomp.c
-+	$(COMPILE) '-DSLIBS="$(SLIBS)"' -c $(srcdir)/cimcomp.c
- 
- # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
+ INCLUDES = -I$(top_srcdir)
