@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/02/05 23:09:24 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2006/04/04 14:45:44 jlam Exp $
 
 DISTNAME=	xboard-4.2.6
 PKGREVISION=	3
@@ -14,8 +14,7 @@ CONFIGURE_ARGS+=	--enable-zippy	# interface to ICS
 CONFIGURE_ENV+=		PERLPATH=${PERL5:Q}
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		perl:run
-
-INFO_FILES=	xboard.info
+INFO_FILES=		# PLIST
 
 .include "../../mk/bsd.prefs.mk"
 

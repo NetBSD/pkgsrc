@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/03/29 22:07:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/04/04 14:45:44 jlam Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -193,6 +193,7 @@ include/gnucash/table-layout.h
 include/gnucash/table-model.h
 include/gnucash/window-main-summarybar.h
 include/gnucash/window-report.h
+info/gnucash-design.info
 lib/gnucash/libgnc-business-ledger.la
 lib/gnucash/libgncmod-app-utils.la
 lib/gnucash/libgncmod-binary-import.la

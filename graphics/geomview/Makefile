@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/03/04 21:29:47 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2006/04/04 14:45:44 jlam Exp $
 
 DISTNAME=		geomview-1.8.1
 PKGREVISION=		6
@@ -16,8 +16,7 @@ CONFIGURE_ARGS+=	--without-xforms
 CONFIGURE_ARGS+=	--with-opengl=${BUILDLINK_PREFIX.Mesa}
 CONFIGURE_ARGS+=	--with-motif=${MOTIFBASE:Q}
 CPPFLAGS+=		-Dunix -Dalloca=__builtin_alloca
-
-INFO_FILES=		geomview
+INFO_FILES=		# PLIST
 
 .include "../../mk/bsd.prefs.mk"
 

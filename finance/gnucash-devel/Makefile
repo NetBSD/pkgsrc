@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/29 22:07:22 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/04 14:45:44 jlam Exp $
 #
 
 DISTNAME=		gnucash-1.9.3
@@ -42,7 +42,7 @@ GCONF2_SCHEMAS+=	apps_gnucash_import_generic_matcher.schemas
 #GCONF2_SCHEMAS+=	apps_gnucash_dialog_hbci.schemas
 GCONF2_SCHEMAS+=	apps_gnucash_dialog_business_common.schemas
 
-INFO_FILES=	gnucash-design.info
+INFO_FILES=		# PLIST
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"

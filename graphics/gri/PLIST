@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2004/02/17 23:58:52 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/04 14:45:45 jlam Exp $
 bin/gri
 bin/${PKGNAME}
 bin/gri_merge
 bin/gri_unpage
+info/gri.info
 share/doc/html/gri/AboutGriMode.html
 share/doc/html/gri/Acknowledgments.html
 share/doc/html/gri/AdjustingCharacterPosition.html
