@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13460 2006/04/04 22:32:01 ghen Exp $
+$NetBSD: CHANGES,v 1.13461 2006/04/04 23:22:18 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1891,3 +1891,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated cad/pcb to 20060321 [dmcmahill 2006-04-04]
 	Updated graphics/ImageMagick to 6.2.6.8 [ghen 2006-04-04]
 	Updated graphics/p5-PerlMagick to 6.2.6.8 [ghen 2006-04-04]
+	Updated print/latex-mk to 1.6 [dmcmahill 2006-04-04]
