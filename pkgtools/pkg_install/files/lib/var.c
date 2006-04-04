@@ -1,4 +1,4 @@
-/*	$NetBSD: var.c,v 1.2 2005/11/06 12:37:43 wiz Exp $	*/
+/*	$NetBSD: var.c,v 1.3 2006/04/04 06:37:15 wiz Exp $	*/
 
 /*-
  * Copyright (c) 2005 The NetBSD Foundation, Inc.
@@ -40,7 +40,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: var.c,v 1.2 2005/11/06 12:37:43 wiz Exp $");
+__RCSID("$NetBSD: var.c,v 1.3 2006/04/04 06:37:15 wiz Exp $");
 #endif
 
 #if HAVE_SYS_STAT_H
@@ -135,12 +135,14 @@ var_set(const char *fname, const char *variable, const char *value)
 	sprintf(tmpname, "%s.XXXXXX", fname);
 	if ((fd=mkstemp(tmpname)) < 0) {
 		free(tmpname);
+		fclose(fp);
 		warn("var_set: can't open temp file for '%s' for writing",
 		      fname);
 		return -1;
 	}
 	if (chmod(tmpname, 0644) < 0) {
 		close(fd);
+		fclose(fp);
 		free(tmpname);
 		warn("var_set: can't set permissions for temp file for '%s'",
 		      fname);
@@ -150,6 +152,7 @@ var_set(const char *fname, const char *variable, const char *value)
 		close(fd);
 		remove(tmpname);
 		free(tmpname);
+		fclose(fp);
 		warn("var_set: can't open temp file for '%s' for writing",
 		      fname);
 		return -1;
