@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.17 2005/12/06 01:08:09 ben Exp $	*/
+/*	$NetBSD: file.c,v 1.18 2006/04/04 06:31:22 wiz Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -17,7 +17,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: file.c,v 1.29 1997/10/08 07:47:54 charnier Exp";
 #else
-__RCSID("$NetBSD: file.c,v 1.17 2005/12/06 01:08:09 ben Exp $");
+__RCSID("$NetBSD: file.c,v 1.18 2006/04/04 06:31:22 wiz Exp $");
 #endif
 #endif
 
@@ -553,7 +553,7 @@ move_files(const char *dir, const char *pattern, const char *to)
 {
 	char	fpath[MaxPathSize];
 	glob_t	globbed;
-	int	i;
+	size_t	i;
 
 	(void) snprintf(fpath, sizeof(fpath), "%s/%s", dir, pattern);
 	if ((i=glob(fpath, GLOB_NOSORT, NULL, &globbed)) != 0) {
