@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/01 21:50:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/04 18:07:16 jlam Exp $
 #
 
 DISTNAME=	gnome-screensaver-2.14.0
@@ -23,7 +23,7 @@ PKGCONFIG_OVERRIDE=	data/gnome-screensaver.pc
 GCONF2_SCHEMAS=		gnome-screensaver.schemas
 
 EGDIR=			${PREFIX}/share/examples/gnome-screensaver
-INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR:Q}
+INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
 MESSAGE_SUBST+=		EGDIR=${EGDIR:Q}
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/xdg/menus
 CONF_FILES=		${EGDIR}/xdg/menus/gnome-screensavers.menu \

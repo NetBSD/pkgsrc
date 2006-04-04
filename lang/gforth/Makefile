@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/04/04 17:16:28 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/04/04 18:07:16 jlam Exp $
 
 DISTNAME=		gforth-0.6.2
 PKGREVISION=		1
@@ -18,7 +18,8 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		EMACS=${PREFIX}/bin/emacs
 CFLAGS+=		-Dunix
 INFO_FILES=		# PLIST
-INSTALL_MAKE_FLAGS=	infodir=${PREFIX:Q}/${PKGINFODIR:Q}		\
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
+			infodir=${PREFIX:Q}/${PKGINFODIR:Q}		\
 			mandir=${PREFIX:Q}/${PKGMANDIR:Q}
 
 TEST_TARGET=	test

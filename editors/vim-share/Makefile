@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/03/02 10:41:41 martti Exp $
+# $NetBSD: Makefile,v 1.20 2006/04/04 18:07:16 jlam Exp $
 
 PKGNAME=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}
 PKGREVISION=		1
@@ -11,7 +11,7 @@ CONFIGURE_ARGS+=	--disable-gui
 
 INSTALL_TARGET=		installruntime installmacros installtutor installtools
 USE_TOOLS+=		awk
-INSTALL_MAKE_FLAGS+=	TOOLS_AWK=${TOOLS_AWK:Q}
+INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS} TOOLS_AWK=${TOOLS_AWK:Q}
 
 PLIST_SUBST+=		VIM_SUBDIR=${VIM_SUBDIR:Q}
 
