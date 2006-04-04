@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/01/16 09:41:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/04/04 14:33:27 jlam Exp $
 bin/camlp4
 bin/camlp4o
 bin/camlp4r
@@ -460,5 +460,4 @@ man/man3/Weak.S.3o
 @dirrm lib/ocaml/ocamldoc
 @dirrm lib/ocaml/camlp4
 @dirrm lib/ocaml/caml
-@unexec ${RMDIR} %D/lib/ocaml/stublibs 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/lib/ocaml 2>/dev/null || ${TRUE}
