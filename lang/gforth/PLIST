@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/12/05 00:26:38 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/04/04 17:16:28 jlam Exp $
 bin/gforth
 bin/${PKGNAME}
 bin/gforth-fast
@@ -10,24 +10,7 @@ bin/gforthmi-${PKGVERSION}
 bin/vmgen
 bin/vmgen-${PKGVERSION}
 info/gforth.info
-info/gforth.info-1
-info/gforth.info-10
-info/gforth.info-11
-info/gforth.info-12
-info/gforth.info-13
-info/gforth.info-14
-info/gforth.info-15
-info/gforth.info-2
-info/gforth.info-3
-info/gforth.info-4
-info/gforth.info-5
-info/gforth.info-6
-info/gforth.info-7
-info/gforth.info-8
-info/gforth.info-9
 info/vmgen.info
-info/vmgen.info-1
-info/vmgen.info-2
 lib/gforth/${PKGVERSION}/gforth-ditc
 lib/gforth/${PKGVERSION}/gforth.fi
 man/man1/gforth.1
@@ -136,7 +119,7 @@ share/gforth/${PKGVERSION}/kernel/saccept.fs
 share/gforth/${PKGVERSION}/kernel/tools.fs
 share/gforth/${PKGVERSION}/kernel/toolsext.fs
 share/gforth/${PKGVERSION}/kernel/vars.fs
-share/gforth/${PKGVERSION}/@KERNEL_FI@
+share/gforth/${PKGVERSION}/${KERNEL_FI}
 share/gforth/${PKGVERSION}/lib.fs
 share/gforth/${PKGVERSION}/locals.fs
 share/gforth/${PKGVERSION}/locate.fs
