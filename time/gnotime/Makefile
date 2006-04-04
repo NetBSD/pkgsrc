@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2006/03/21 06:00:50 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/04 15:32:22 jmmv Exp $
 
 DISTNAME=	gnotime-2.2.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	time gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gttr/}
 
@@ -29,6 +29,6 @@ GCONF2_SCHEMAS=		gnotime.schemas
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../www/gtkhtml36/buildlink3.mk"
+.include "../../www/gtkhtml38/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
