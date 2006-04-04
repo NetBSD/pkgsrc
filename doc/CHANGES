@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13455 2006/04/04 15:45:21 jmmv Exp $
+$NetBSD: CHANGES,v 1.13456 2006/04/04 18:19:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1885,3 +1885,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed www/gtkhtml30 [jmmv 2006-04-04]
 	Removed devel/gal20 [jmmv 2006-04-04]
 	Removed devel/gal2 [jmmv 2006-04-04]
+	Updated audio/sox to 12.17.9 [wiz 2006-04-04]
