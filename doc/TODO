@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4823 2006/04/03 20:15:43 wiz Exp $
+$NetBSD: TODO,v 1.4824 2006/04/04 06:40:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1227,7 +1227,6 @@ Suggested package updates
 	o xbindkeys-1.7.2
 	o xblast-2.10.0
 	o xboard-4.2.7
-	o xchm-1.5
 	o xcircuit-3.4.0
 	o xdaliclock-2.23
 	o xdesktopwaves-1.3
