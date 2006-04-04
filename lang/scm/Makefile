@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:56 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/04 20:47:21 jlam Exp $
 #
 # Convert the version number as follows 2d2 -> 2.4.2, where the d is
 # changed to a 4, representing the 4th letter.
@@ -22,30 +22,36 @@ DEPENDS+=	slib>=3.1.1:../../devel/slib
 USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/scm
+EVAL_PREFIX+=	SLIB_PREFIX=slib
 
 BUILD_TARGET=	scmlit libscm.a
 INSTALL_TARGET=	install installlib
 
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} mandir=${PREFIX:Q}/${PKGMANDIR:Q}/
+
 INFO_FILES=	scm.info hobbit.info Xlibscm.info
 
-post-patch:
-	${SED} -e 's|@LOCALBASE@|${LOCALBASE}|g' \
-		< ${FILESDIR}/require.scm > ${WRKSRC}/require.scm
+INSTALLATION_DIRS=	${PKGINFODIR} share/scm
+
+.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
+
+do-configure:
+	${SED} -e "s|@SLIB_PREFIX@|"${SLIB_PREFIX:Q}"|g"		\
+		${FILESDIR}/require.scm > ${WRKSRC}/require.scm
+	${SED}	-e "s|@CC@|"${CC:Q}"|g"					\
+		-e "s|@CFLAGS@|"${CFLAGS:Q}"|g"				\
+		-e "s|@PREFIX@|"${PREFIX:Q}"|g"				\
+		${FILESDIR}/buildscm.sh > ${WRKSRC}/buildscm.sh		
 
 post-build:
-	${CAT} ${FILESDIR}/buildscm.sh \
-		| ${SED} -e 's|@CC@|${CC}|g' \
-		| ${SED} -e 's|@CFLAGS@|${CFLAGS}|g' \
-		| ${SED} -e 's|@PREFIX@|${PREFIX}|g' \
-		> ${WRKSRC}/buildscm.sh
 	cd ${WRKSRC} && ${SH} ./buildscm.sh
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/slibcat ${PREFIX}/share/scm
-	for f in ${INFO_FILES}; do					\
-		${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/info;		\
+	cd ${WRKSRC}; for f in *.info *.info-[0-9]*; do			\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
 	done
 
-.include "../../devel/ncurses/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
