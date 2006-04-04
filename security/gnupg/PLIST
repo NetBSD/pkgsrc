@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.15 2005/03/22 17:50:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/04/04 21:16:37 wiz Exp $
 bin/gpg
+bin/gpg-zip
 bin/gpgsplit
 bin/gpgv
-${CURL}libexec/gnupg/gpgkeys_curl
+libexec/gnupg/gpgkeys_curl
 libexec/gnupg/gpgkeys_finger
 libexec/gnupg/gpgkeys_hkp
-${NOCURL}libexec/gnupg/gpgkeys_http
 ${OPENLDAP}libexec/gnupg/gpgkeys_ldap
 man/man1/gpg.1
 man/man1/gpg.ru.1
