@@ -1,4 +1,4 @@
-/*	$NetBSD: str.c,v 1.16 2006/01/08 12:25:06 wiz Exp $	*/
+/*	$NetBSD: str.c,v 1.17 2006/04/04 06:36:12 wiz Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "Id: str.c,v 1.5 1997/10/08 07:48:21 charnier Exp";
 #else
-__RCSID("$NetBSD: str.c,v 1.16 2006/01/08 12:25:06 wiz Exp $");
+__RCSID("$NetBSD: str.c,v 1.17 2006/04/04 06:36:12 wiz Exp $");
 #endif
 #endif
 
@@ -307,9 +307,15 @@ findbestmatchingname_fn(const char *found, void *vp)
 		if (best_version) {
 			/* skip '-' if any version found */
 			best_version++;
+			strip_txz(best_no_sfx, NULL, best_version);
+			best_version = best_no_sfx;
+		} else {
+			/* how did this end up in 'best'?
+			 * Shouldn't happen... */
+			fprintf(stderr,
+				"'%s' has no usable package(version)\n",
+				best);
 		}
-		strip_txz(best_no_sfx, NULL, best_version);
-		best_version = best_no_sfx;
 	}
 
 	if (found_version == NULL) {
@@ -318,11 +324,13 @@ findbestmatchingname_fn(const char *found, void *vp)
 	} else {
 		/* if best_version==NULL only if best==NULL
 		 * (or best[0]='\0') */
-		if (best == NULL || best[0] == '\0' ||
-		    dewey_cmp(found_version, DEWEY_GT, best_version)) {
-			/* found pkg(version) is bigger than current "best"
-			 * version - remember! */
-			strcpy(best, found);
+		if (best != NULL) {
+			if (best[0] == '\0'
+			    || dewey_cmp(found_version, DEWEY_GT, best_version)) {
+				/* found pkg(version) is bigger than current "best"
+				 * version - remember! */
+				strcpy(best, found);
+			}
 		}
 	}
 
