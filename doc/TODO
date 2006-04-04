@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4825 2006/04/04 08:51:28 grant Exp $
+$NetBSD: TODO,v 1.4826 2006/04/04 18:09:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -309,6 +309,7 @@ Suggested package updates
 	o XaoS-3.1.1
 	o YoSucker-73
 	o aap-0.144
+	o abcmidi-20060401
 	o acpi-iasl-20040715
 	o acroread7-7.0.5
 	o adocman-0.13
@@ -326,7 +327,9 @@ Suggested package updates
 	o amanda-common-2.5.0
 	o amanda-plot-2.5.0
 	o amanda-server-2.5.0
+	o amarok-1.3.9
 	o amavis-0.3.12
+	o amavisd-new-2.4.0
 	o amule-2.1.1
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.74
@@ -552,6 +555,7 @@ Suggested package updates
 	o gnome-spell-1.0.7
 	o gnome-vfsmm-2.14.0
 	o gnomeicu-0.99.10
+	o gnupg-1.4.3
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
@@ -596,7 +600,7 @@ Suggested package updates
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2ps-1.0b4
 	o html2wml-0.4.11
-	o htmldoc-1.8.24
+	o htmldoc-1.8.26
 	o http_load-20050629
 	o httperf-0.8
 	o httptunnel-3.3
@@ -796,7 +800,7 @@ Suggested package updates
 	o openpam-20050616
 	o openssh-4.3p2 [pkg/32858]
 	o openssl-0.9.8a
-	o openttd-0.4.5
+	o openttd-0.4.7
 	o oroborus-2.0.15
 	o osh-050219
 	o otpCalc-0.97
@@ -975,6 +979,7 @@ Suggested package updates
 	o postgresql73-7.3.11
 	o postgresql_autodoc-1.25
 	o potrace-1.7
+	o powermanga-0.80
 	o prayer-1.0.15
 	o prboom-2.4.0
 	o prelude-manager-0.9.4.1
@@ -1016,7 +1021,7 @@ Suggested package updates
 	o py-qt3-base-3.16
 	o py-qt3-modules-3.16
 	o py-qt3-qscintilla-3.16
-	o py-qt3-sip-4.4
+	o py-qt3-sip-4.4.1
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.7
 	o py-sybase-0.37
@@ -1114,7 +1119,7 @@ Suggested package updates
 	o sjeng-11.2
 	o skampi-4.1
 	o skill-4.1.2
-	o skipstone-0.9.5
+	o skipstone-0.9.6
 	o skkinput-2.06.4
 	o sma-1.4
 	o smalleiffel-0.90
@@ -1140,6 +1145,8 @@ Suggested package updates
 	o strace-4.5.8
 	o stunnel-4.15
 	o subtitleripper-0.3.4
+	o subversion-1.3.1
+	o subversion-base-1.3.1
 	o suse100_base-10.1
 	o svk-1.07
 	o sweep-0.9.1
