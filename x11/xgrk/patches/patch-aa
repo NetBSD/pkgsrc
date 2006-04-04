@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/04/04 09:33:36 is Exp $
+
+--- Makefile.orig	2004-02-02 13:01:14.000000000 +0100
++++ Makefile
+@@ -24,6 +24,11 @@ LIBS=-L/usr/X11R6/lib
+ INCL=-I/usr/X11R6/include
+ endif
+ 
++ifeq ($(ARCH),NetBSD)
++LIBS=-L/usr/X11R6/lib -R/usr/X11R6/lib
++INCL=-I/usr/X11R6/include
++endif
++
+ 
+ 
+ all: xgrk xgrk2
