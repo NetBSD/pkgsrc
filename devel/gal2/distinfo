@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.16 2005/07/27 17:46:52 drochner Exp $
-
-SHA1 (gal-2.4.3.tar.bz2) = 15a4da00b0be7a1e658a43c747243343719055a4
-RMD160 (gal-2.4.3.tar.bz2) = 826996cce70080fab4ebf327dd16b13d05aa4e2f
-Size (gal-2.4.3.tar.bz2) = 1056344 bytes
-SHA1 (patch-aa) = a455fb6350eea73e031c75ec9bdf408cb4465db5
-SHA1 (patch-ab) = a8050973a7dc136c842550a4b01ac20032f2891f
