@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.29 2006/02/18 21:34:03 abs Exp $
+# $Id: pkg_chk.sh,v 1.30 2006/04/04 18:38:13 tv Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -424,7 +424,9 @@ msg()
 
 msg_progress()
     {
-    msg "[ $@ ]"
+    if [ -z "$opt_q" ] ; then
+	msg "[ $@ ]"
+    fi
     }
 
 msg_n()
@@ -475,7 +477,7 @@ pkg_install()
 	run_cmd "cd $PKGSRCDIR/$PKGDIR && ${MAKE} update CLEANDEPENDS=yes"
     fi
 
-    if [ -z "$opt_n" -a ! -d $PKG_DBDIR/$PKGNAME ];then
+    if [ -z "$opt_n" -a -z "$opt_q" -a ! -d $PKG_DBDIR/$PKGNAME ];then
 	FAIL=1
     fi
 
@@ -504,8 +506,10 @@ run_cmd()
     else
 	FAILOK=$opt_k
     fi
-    msg $(date +%R) $1
-    if [ -z "$opt_n" ];then
+    if [ -z "$opt_q" ];then
+	msg $(date +%R) $1
+    fi
+    if [ -z "$opt_n" -a -z "$opt_q" ];then
 	if [ -n "$opt_L" ] ; then
 	    sh -c "$1" >> "$opt_L" 2>&1 || FAIL=1
 	else
@@ -582,7 +586,7 @@ verbose()
     fi
     }
 
-args=$(getopt BC:D:L:P:U:abcfghiklNnrsSuv $*)
+args=$(getopt BC:D:L:P:U:abcfghiklNnqrsSuv $*)
 if [ $? != 0 ]; then
     opt_h=1
 fi
@@ -593,18 +597,19 @@ while [ $# != 0 ]; do
 	-B )    opt_B=1 ;;
 	-b )	opt_b=1 ;;
 	-C )	opt_C="$2" ; shift ;;
-	-c )	opt_a=1 ; opt_n=1 ; echo "-c is deprecated - use -a -n" ;;
+	-c )	opt_a=1 ; opt_q=1 ; echo "-c is deprecated - use -a -q" ;;
 	-D )	opt_D="$2" ; shift ;;
 	-f )	opt_f=1 ;;
 	-g )	opt_g=1 ;;
 	-h )	opt_h=1 ;;
-	-i )	opt_u=1 ; opt_n=1 ; echo "-i is deprecated - use -u -n" ;;
+	-i )	opt_u=1 ; opt_q=1 ; echo "-i is deprecated - use -u -q" ;;
 	-k )	opt_k=1 ;;
 	-L )	opt_L="$2" ; shift ;;
 	-l )	opt_l=1 ;;
 	-N )	opt_N=1 ;;
 	-n )	opt_n=1 ;;
 	-P )	opt_P="$2" ; shift ;;
+	-q )	opt_q=1 ; shift ;;
 	-r )	opt_r=1 ;;
 	-S )	opt_S=1 ;;
 	-s )	opt_s=1 ;;
@@ -752,12 +757,12 @@ if [ -n "$delete_and_recheck" ]; then
 	if [ -f $PKGCHK_UPDATE_CONF ] ; then
 	    msg "Merging in previous $PKGCHK_UPDATE_CONF"
 	    tmp=$(cat $PKGCHK_UPDATE_CONF;echo $(pkgdirs_from_installed)|fmt -1)
-	    if [ -z "$opt_n" ] ; then
+	    if [ -z "$opt_n" -a -z "$opt_q" ] ; then
 		echo $tmp | fmt -1 | ${SORT} -u > $PKGCHK_UPDATE_CONF
 	    fi
 	    tmp=
 	else
-	    if [ -z "$opt_n" ] ; then
+	    if [ -z "$opt_n" -a -z "$opt_q" ] ; then
 		echo $(pkgdirs_from_installed) | fmt -1 > $PKGCHK_UPDATE_CONF
 	    fi
 	fi
