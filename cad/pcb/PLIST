@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2006/03/30 03:44:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/04/04 22:20:27 dmcmahill Exp $
 bin/MergePCBPS
 bin/Merge_dimPCBPS
 bin/pcb
 bin/pcb-bin
+bin/pcb-print
 info/pcb.info
 man/man1/pcb.1
 share/pcb/CreateLibrary.sh
@@ -44,9 +45,6 @@ share/pcb/m4/geda.list
 share/pcb/m4/geda.m4
 share/pcb/m4/generic.list
 share/pcb/m4/generic.m4
-share/pcb/m4/genericsmt.inc
-share/pcb/m4/genericsmt.list
-share/pcb/m4/genericsmt.m4
 share/pcb/m4/gtag.list
 share/pcb/m4/gtag.m4
 share/pcb/m4/jerry.list
