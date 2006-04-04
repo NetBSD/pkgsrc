@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2005/10/20 14:18:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2006/04/04 14:45:44 jlam Exp $
 bin/dump-finance-quote
 bin/gnc-prices
 bin/gnc-test-env
@@ -120,6 +120,7 @@ include/gnucash/table-layout.h
 include/gnucash/table-model.h
 include/gnucash/window-help.h
 include/gnucash/window-report.h
+info/gnucash-design.info
 lib/gnucash/libgnc-business-ledger.la
 lib/gnucash/libgncmod-app-file.la
 lib/gnucash/libgncmod-app-utils.la
