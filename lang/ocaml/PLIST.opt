@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opt,v 1.11 2006/01/16 09:41:48 adam Exp $
+@comment $NetBSD: PLIST.opt,v 1.12 2006/04/04 14:33:27 jlam Exp $
 bin/camlp4o.opt
 bin/camlp4r.opt
 bin/ocamlc.opt
@@ -161,4 +161,3 @@ lib/ocaml/unix.cmx
 lib/ocaml/unix.cmxa
 lib/ocaml/unixLabels.cmx
 lib/ocaml/weak.cmx
-@unexec ${RMDIR} %D/lib/ocaml 2>/dev/null || ${TRUE}
