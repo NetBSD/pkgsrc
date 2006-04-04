@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2006/01/02 21:13:45 epg Exp $
+# $NetBSD: Makefile.common,v 1.23 2006/04/04 03:36:32 reed Exp $
 
 DISTNAME=		subversion-${SVNVER}
 CATEGORIES=		devel
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
 CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr}
 CONFIGURE_ARGS+=	--with-neon=${BUILDLINK_PREFIX.neon}
 CONFIGURE_ARGS+=	--with-ssl
+# workaround: does not install info file, but does create directory
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 
 BUILDLINK_DEPENDS.subversion-base+=	subversion-base>=${SVNVER}
 
