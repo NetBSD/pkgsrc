@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4827 2006/04/04 18:19:37 wiz Exp $
+$NetBSD: TODO,v 1.4828 2006/04/04 20:14:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1125,9 +1125,8 @@ Suggested package updates
 	o smalleiffel-0.90
 	o smalltalk-2.1.12
 	o smartmontools-5.33
-	o sml-nj-110.58
 	o smlnj-110.51 [pkgsrc-wip]
-	o smlnj-110.54
+	o smlnj-110.58
 	o snd-8.0
 	o sope-4.5.5
 	o source-highlight-2.3 [pkg/32325]
