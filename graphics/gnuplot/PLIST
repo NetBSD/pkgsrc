@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2004/06/25 17:08:13 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/04/04 14:45:44 jlam Exp $
 bin/gnuplot
+info/gnuplot.info
 libexec/gnuplot/4.0/gnuplot_x11
 man/man1/gnuplot.1
 share/gnuplot/4.0/gnuplot.gih

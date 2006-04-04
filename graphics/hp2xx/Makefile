@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/03/05 16:27:26 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2006/04/04 14:45:45 jlam Exp $
 #
 
 DISTNAME=	hp2xx-3.4.4
@@ -12,13 +12,20 @@ COMMENT=	HPGL converter and previewer
 
 BUILD_DIRS=	sources
 USE_TOOLS+=	makeinfo
-INFO_FILES=	hp2xx.info
+MAKE_FLAGS=	prefix=${PREFIX:Q}					\
+		mandir=${PREFIX:Q}/${PKGMANDIR:Q}			\
+		infodir=${PREFIX:Q}/${PKGINFODIR:Q}
+MAKE_ENV+=	XLDFLAGS=${LDFLAGS:Q} XCPPFLAGS=${CPPFLAGS:Q}
+INFO_FILES=	# PLIST
 
-post-extract:
-	${CP} ${WRKSRC}/makes/generic.mak ${WRKSRC}/sources/Makefile
+INSTALLATION_DIRS=	bin ${PKGINFODIR} ${PKGMANDIR}/man1
 
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../print/pdflib/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
+
+post-extract:
+	${CP} ${WRKSRC}/makes/generic.mak ${WRKSRC}/sources/Makefile
+
 .include "../../mk/bsd.pkg.mk"

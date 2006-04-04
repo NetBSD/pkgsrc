@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/12/05 20:50:19 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/04 14:45:44 jlam Exp $
 #
 
 DISTNAME=	barcode-0.98
@@ -11,8 +11,11 @@ COMMENT=	Create bar codes as EPS (program and library)
 
 GNU_CONFIGURE=	YES
 MAKE_ENV+=	AWK=${AWK:Q}
+INFO_FILES=	# PLIST
 
-INFO_FILES=	barcode.info
+INSTALL_MAKE_FLAGS=	INFODIR=${PREFIX:Q}/${PKGINFODIR:Q}		\
+			MAN1DIR=${PREFIX:Q}/${PKGMANDIR:Q}/man1		\
+			MAN3DIR=${PREFIX:Q}/${PKGMANDIR:Q}/man3
 
 # man/man1/barcode.1
 CONFLICTS+=	xscreensaver-[0-9]*

@@ -1,23 +1,7 @@
-$NetBSD: patch-ab,v 1.8 2005/11/03 22:09:28 rillig Exp $
+$NetBSD: patch-ab,v 1.9 2006/04/04 14:45:45 jlam Exp $
 
---- sources/Makefile.orig	Sat Nov 27 23:52:19 2004
+--- sources/Makefile.orig	2006-04-01 00:34:38.000000000 -0500
 +++ sources/Makefile
-@@ -28,13 +28,13 @@ SHELL    = /bin/sh
- 
- CHMOD    = chmod
- CP       = cp
--MKINFO   = makeinfo
-+MKINFO   = $(MAKEINFO)
- RMCMD    = rm -f
- STRIP    = strip
- 
- # Installation sites (GNU conventions):
- #
--prefix   = /usr/local
-+prefix   = ${PREFIX}
- bindir   = $(prefix)/bin
- includedir = $(prefix)/include
- mandir   = $(prefix)/man
 @@ -44,12 +44,12 @@ infodir  = $(prefix)/info
  # CC and CFLAGS set for gcc, but any ANSI-C compiler should work.
  # For non-gcc compilers, simply set CFLAGS = -O (to start with)
@@ -30,8 +14,8 @@ $NetBSD: patch-ab,v 1.8 2005/11/03 22:09:28 rillig Exp $
 -LFLAGS   =                # only sometimes needed; see below for examples
 -CPPFLAGS = -I.            # only sometimes needed; see below for examples
 -BINDCMD  =                # only needed for EMX and DJGPP DOS extenders
-+LFLAGS   =  -Wl,-R${X11BASE}/lib -L${X11BASE}/lib  -Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib
-+CPPFLAGS = -I. -I${X11BASE}/include  -I${LOCALBASE}/include
++LFLAGS   =  ${XLDFLAGS}
++CPPFLAGS = -I. ${XCPPFLAGS}
 +BINDCMD  = echo
  
  
