@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2006/03/02 01:40:24 minskim Exp $
+# $NetBSD: Makefile,v 1.29 2006/04/04 06:39:46 wiz Exp $
 #
 
-DISTNAME=	xchm-1.4
+DISTNAME=	xchm-1.5
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xchm/}
 
