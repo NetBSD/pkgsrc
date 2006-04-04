@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2006/02/05 23:09:46 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2006/04/04 14:22:48 jlam Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		2
+PKGREVISION=		3
 
 CONFIGURE_ARGS+=	-no-tk
 CONFIGURE_ENV+=		disable_x11=yes
@@ -17,8 +17,8 @@ PLIST_SRC=	${PKGDIR}/PLIST.opt
       !(${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc")
 PLIST_SRC+=	${PKGDIR}/PLIST.prof
 .  endif
-PLIST_SRC+=	${PKGDIR}/PLIST
 .endif
+PLIST_SRC+=	${PKGDIR}/PLIST
 
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD"
 PLIST_SRC+=	${PKGDIR}/PLIST.stub
