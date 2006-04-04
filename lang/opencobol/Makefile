@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/04 21:29:55 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/04 19:21:39 jlam Exp $
 #
 
 DISTNAME=		open-cobol-0.23
@@ -16,26 +16,15 @@ BUILD_USES_MSGFMT=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-
-INFO_FILES=		open-cobol.info
+INFO_FILES=		# PLIST
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
 
 CONFIGURE_ARGS+=	--without-readline
 CONFIGURE_ARGS+=	--with-lfs
+CONFIGURE_ENV+=		NCURSES_LIB=${BUILDLINK_LDADD.ncurses:Q}
 
-EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+EGDIR=			${PREFIX}/share/examples/open-cobol
 CONF_FILES=		${EGDIR}/libconf.conf ${PKG_SYSCONFDIR}/libconf.conf
-
-.include "../../mk/bsd.prefs.mk"
-
-SUBST_CLASSES+=		lnk
-SUBST_STAGE.lnk=	post-patch
-SUBST_FILES.lnk=	configure
-SUBST_SED.lnk=		-e "s|COBC_LIBS=\"\"|COBC_LIBS=\"\$$LDFLAGS\"|g" \
-			-e "s|LIBCOB_LIBS=\"-lm\"|LIBCOB_LIBS=\"-lm \$$LDFLAGS\"|g"
-.if ${OPSYS} == "NetBSD"
-SUBST_SED.lnk+=		-e "s,-lncurses,-lcurses,g"
-.endif
-SUBST_MESSAGE.lnk=	"Fixing linking flags."
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
