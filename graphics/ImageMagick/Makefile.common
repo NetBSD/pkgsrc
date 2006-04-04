@@ -1,7 +1,15 @@
-# $NetBSD: Makefile.common,v 1.50 2006/03/30 09:56:12 ghen Exp $
+# $NetBSD: Makefile.common,v 1.51 2006/04/04 18:51:14 tv Exp $
 
-# NOTE:  When updating this version, make sure to reset PKGREVISION in
-# both graphics/ImageMagick *and* graphics/p5-PerlMagick!
+###########################################################################
+###########################################################################
+#
+# HEADS UP!  NOTE THE FOLLOWING WHEN UPDATING THIS PACKAGE:
+#
+# graphics/p5-PerlMagick also depends on this fragment.  Make sure to
+# remove its PKGREVISION upon update of ImageMagick!
+#
+###########################################################################
+###########################################################################
 
 IM_MAJOR_VER=		6.2.6
 IM_MINOR_VER=		6
