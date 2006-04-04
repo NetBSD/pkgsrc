@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2005/04/11 21:46:13 tv Exp $
+# $NetBSD: Makefile,v 1.22 2006/04/04 17:16:28 jlam Exp $
 
 DISTNAME=		gforth-0.6.2
-PKGREVISION=	1
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=gforth/}
 MASTER_SITES+=		http://www.complang.tuwien.ac.at/forth/gforth/
@@ -17,26 +17,30 @@ GNU_CONFIGURE=		YES
 # Make sure elisp will be installed even if no emacs installed.
 CONFIGURE_ENV+=		EMACS=${PREFIX}/bin/emacs
 CFLAGS+=		-Dunix
-INFO_FILES=		gforth.info vmgen.info
-
-PLIST_SRC=	${WRKDIR}/PLIST
+INFO_FILES=		# PLIST
+INSTALL_MAKE_FLAGS=	infodir=${PREFIX:Q}/${PKGINFODIR:Q}		\
+			mandir=${PREFIX:Q}/${PKGMANDIR:Q}
 
 TEST_TARGET=	test
 
 # Kernel image filename is arch dependent
-KERNEL_FI=	`cd ${WRKSRC} && (${ECHO} 'prkern:'; ${ECHO} '	@${ECHO} $$(kernel_fi)'; ${ECHO}; ${CAT} Makefile) | ${MAKE} -f - prkern`
+KERNEL_FI_cmd=								\
+	if ${TEST} ! -f ${WRKSRC}/Makefile; then			\
+		${ECHO} "__nonexistent__";				\
+		exit 0;							\
+	fi;								\
+	cd ${WRKSRC} &&							\
+	{ ${ECHO} 'prkern:';						\
+	  ${ECHO} '	@${ECHO} $$(kernel_fi)';			\
+	  ${ECHO} ;							\
+	  ${CAT} Makefile; } | ${MAKE_PROGRAM} -f - prkern
+PLIST_SUBST+=	KERNEL_FI=${KERNEL_FI_cmd:sh:Q}
 
 # XXX Need test.
 #.include "../../mk/dlopen.buildlink3.mk"
-
-post-build:
-	@${ECHO}; ${ECHO} building PLIST...
-	@k=${KERNEL_FI} && ${ECHO} "using kernel image: $$k" &&	\
-	${SED} -e "s/@KERNEL_FI@/$$k/g" <${PKGDIR}/PLIST >${PLIST_SRC}
+.include "../../devel/ffcall/buildlink3.mk"
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
-
-.include "../../devel/ffcall/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
