@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/03/04 15:32:35 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/04/05 15:14:10 jlam Exp $
 bin/incm
 bin/mewcat
 bin/mewdecode
@@ -48,6 +48,7 @@ man/man1/mewcat.1
 man/man1/mewdecode.1
 man/man1/mewencode.1
 man/man1/mewl.1
+${EMACS_INFOPREFIX}/mew.info
 ${EMACS_LISPPREFIX}/mew/contrib/00readme
 ${EMACS_LISPPREFIX}/mew/contrib/mew-browse.el
 ${EMACS_LISPPREFIX}/mew/contrib/mew-caesar.el
