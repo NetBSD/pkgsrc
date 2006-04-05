@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/31 22:23:07 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/05 22:32:04 adrianp Exp $
 share/doc/kronolith/INSTALL
 share/doc/kronolith/README
 share/doc/kronolith/RELEASE_NOTES
 share/doc/kronolith/UPGRADING
+share/examples/kronolith/kronolith.conf
 share/horde/kronolith/addevent.php
 share/horde/kronolith/addeventaction.php
 share/horde/kronolith/attend.php
@@ -208,6 +209,7 @@ share/horde/kronolith/viewevent.php
 share/horde/kronolith/week.php
 share/horde/kronolith/workweek.php
 share/horde/kronolith/year.php
+@dirrm share/examples/kronolith
 @dirrm share/horde/kronolith/themes/simplex
 @dirrm share/horde/kronolith/themes/print
 @dirrm share/horde/kronolith/themes/mozilla

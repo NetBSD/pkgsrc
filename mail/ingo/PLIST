@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/31 22:06:34 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/05 22:32:18 adrianp Exp $
 share/doc/ingo/INSTALL
 share/doc/ingo/README
 share/doc/ingo/RELEASE_NOTES
 share/doc/ingo/UPGRADING
+share/examples/ingo/ingo.conf
 share/horde/ingo/blacklist.php
 share/horde/ingo/config/backends.php.dist
 share/horde/ingo/config/conf.xml.dist
@@ -114,6 +115,7 @@ share/horde/ingo/themes/graphics/whitelist.png
 share/horde/ingo/themes/screen.css
 share/horde/ingo/vacation.php
 share/horde/ingo/whitelist.php
+@dirrm share/examples/ingo
 @dirrm share/horde/ingo/themes/graphics
 @dirrm share/horde/ingo/themes
 @dirrm share/horde/ingo/templates/whitelist
