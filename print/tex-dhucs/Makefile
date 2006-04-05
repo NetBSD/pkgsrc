@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2006/03/13 01:50:26 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/05 02:28:18 minskim Exp $
 
-DISTNAME=	dhucs-2.6.1cvs-20060215
-PKGNAME=	tex-${DISTNAME:S/cvs-/./}
+DISTNAME=	dhucs-2.7.0cvs-20060328
+PKGNAME=	tex-${DISTNAME:C/cvs-.*//}
 CATEGORIES=	print
 MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/hangul-ucs/current/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} fonts-unttf-20051219.tar.gz
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} fonts-unttf-20060215.tar.gz
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://faq.ktug.or.kr/faq/DHUcs
@@ -13,14 +13,16 @@ COMMENT=	LaTeX package to typeset Korean documents (UTF-8)
 DEPENDS+=	tex-ucs>=20041710nb2:../../print/tex-ucs
 DEPENDS+=	tex-unttf>=1.0.1.20060215:../../fonts/tex-unttf
 
-SITES_tex-unttf-dhucs-20051219.tar.bz2= \
+SITES.fonts-unttf-20060215.tar.gz= \
 	http://ftp.ktug.or.kr/KTUG/hangul-ucs/fonts/
 
 WRKSRC=		${WRKDIR}/dhucs
 NO_BUILD=	yes
 USE_TOOLS+=	bzcat perl:run
 
-REPLACE_PERL=	script/makeindex-dhucs.pl
+REPLACE_PERL+=	script/makeindex-dhucs.pl
+
+INSTALLATION_DIRS=	bin
 
 .include "../../print/teTeX/module.mk"
 
