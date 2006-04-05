@@ -1,4 +1,4 @@
-# $NetBSD: plist-libtool.awk,v 1.2 2006/02/07 18:42:38 jlam Exp $
+# $NetBSD: plist-libtool.awk,v 1.3 2006/04/05 05:54:01 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -41,6 +41,9 @@
 ###
 ### Certain environment variables must be set prior to running this script:
 ###
+### IGNORE_LIBTOOLIZE is a whitespace-separated list of ${PREFIX}-relative
+###	paths to *.la files that should not be expanded.
+###
 ### LIBTOOL_EXPAND is the path to the script that prints out the
 ###	actual library files associated with a libtool archive file.
 ###
@@ -58,13 +61,18 @@ BEGIN {
 	LIBTOOLIZE_PLIST = ENVIRON["LIBTOOLIZE_PLIST"] ? ENVIRON["LIBTOOLIZE_PLIST"] : "yes"
 	PREFIX = ENVIRON["PREFIX"] ? ENVIRON["PREFIX"] : "/usr/pkg"
 	TEST = ENVIRON["TEST"] ? ENVIRON["TEST"] : "test"
+
+	IGNORE_LA_REGEXP = ENVIRON["IGNORE_LIBTOOLIZE"] ? ENVIRON["IGNORE_LIBTOOLIZE"] : ""
+	gsub("  *", "|", IGNORE_LA_REGEXP)
+        IGNORE_LA_REGEXP = "(" IGNORE_LA_REGEXP ")"
 }
 
 ###
 ### Expand libtool archives into the list of corresponding shared and/or
 ### static libraries.
 ###
-(LIBTOOLIZE_PLIST ~ /[yY][eE][sS]/) && /^[^@].*\.la$/ {
+(LIBTOOLIZE_PLIST ~ /[yY][eE][sS]/) && \
+/^[^@]/ && ($0 !~ "^" IGNORE_LA_REGEXP "$") && /\.la$/ {
 	print_entry($0)
 	cmd = TEST " -f " PREFIX "/" $0
 	if (system(cmd) == 0) {
