@@ -1,4 +1,4 @@
-/*	$NetBSD: ftpio.c,v 1.18 2005/10/30 21:27:47 joerg Exp $	*/
+/*	$NetBSD: ftpio.c,v 1.19 2006/04/05 18:17:31 wiz Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: ftpio.c,v 1.18 2005/10/30 21:27:47 joerg Exp $");
+__RCSID("$NetBSD: ftpio.c,v 1.19 2006/04/05 18:17:31 wiz Exp $");
 #endif
 
 /*-
@@ -826,6 +826,8 @@ http_expand_URL(const char *base, char *pattern)
 		}
 
 	}
+
+	fclose(fp);
 
 	/* wait for child to exit */
 	if (waitpid(pid, &state, 0) < 0) {
