@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/03/05 16:27:26 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/04/05 15:50:27 jlam Exp $
 
 DISTNAME=	vm-7.19
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -24,34 +24,32 @@ COMMENT=	VM (View Mail) is an advanced mail user agent for Emacs
 .include "../../mk/emacs.mk"
 
 USE_TOOLS+=	makeinfo
+INFO_FILES=	# PLIST
 
 .if ${EMACS_FLAVOR} == "xemacs"
-INFODIR=	${PREFIX}/lib/xemacs/site-packages/info
-PIXMAPDIR=	${PREFIX}/lib/xemacs/site-packages/etc/vm
-BINDIR=		${PREFIX}/bin
-PLIST_SRC=	${PKGDIR}/PLIST.xemacs
+PIXMAPDIR=	${EMACS_LISPPREFIX:H}/etc/vm
 .elif ${EMACS_FLAVOR} == "emacs"
-INFODIR=	${PREFIX}/info
-PIXMAPDIR=	${PREFIX}/share/emacs/site-lisp/vm/pixmaps
-BINDIR=		${PREFIX}/bin
-INFO_FILES=	vm.info
-PLIST_SRC=	${PKGDIR}/PLIST.emacs
+PIXMAPDIR=	${EMACS_LISPPREFIX}/vm/pixmaps
 .endif
-MAKEFLAGS+=	EMACS=${EMACS_BIN:Q}
 
+MAKEFLAGS+=	EMACS=${EMACS_BIN:Q}
 MAKE_ENV+=	LISPDIR=${EMACS_LISPPREFIX}/vm
 MAKE_ENV+=	INFODIR=${INFODIR:Q}
 MAKE_ENV+=	PIXMAPDIR=${PIXMAPDIR:Q}
-MAKE_ENV+=	BINDIR=${BINDIR:Q}
+MAKE_ENV+=	BINDIR=${PREFIX:Q}/bin
+PLIST_SUBST+=	PIXMAPDIR=${PIXMAPDIR:S/^${PREFIX}\///:Q}
+
+INSTALLATION_DIRS=	bin ${EMACS_INFOPREFIX} ${EMACS_LISPPREFIX}/vm	\
+			${PIXMAPDIR}
 
 do-install:
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/vm
 	cd ${WRKSRC} && ${INSTALL_DATA} *.el* ${EMACS_LISPPREFIX}/vm
-	${INSTALL_DATA_DIR} ${INFODIR}
-	${INSTALL_DATA} ${WRKSRC}/*.info* ${INFODIR}
-	${INSTALL_DATA_DIR} ${PIXMAPDIR}
+	cd ${WRKSRC}; for f in *.info *.info-[0-9]*; do			\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_DATA} "$$f" ${EMACS_INFOPREFIX};		\
+	done
 	${INSTALL_DATA} ${WRKSRC}/pixmaps/*.x[pb]m ${PIXMAPDIR}
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} qp-decode qp-encode		\
-		base64-decode base64-encode ${BINDIR}
+		base64-decode base64-encode ${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
