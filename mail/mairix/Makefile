@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/05 16:27:26 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/05 07:03:44 jlam Exp $
 #
 
 DISTNAME=		mairix-0.16.1
@@ -9,12 +9,10 @@ MAINTAINER=		simonb@NetBSD.org
 HOMEPAGE=		http://www.rc0.org.uk/mairix/
 COMMENT=		Program for indexing and searching email messages
 
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
-USE_TOOLS+=		makeinfo
+USE_TOOLS+=		bison makeinfo
 INFO_FILES=		mairix.info
 
 BINDIR=			${PREFIX}/bin
