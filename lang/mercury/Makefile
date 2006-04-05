@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/03/04 21:29:55 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/04/05 06:27:41 jlam Exp $
 
 DISTNAME=		mercury-compiler-0.11.0
 PKGNAME=		mercury-0.11.0
@@ -14,10 +14,7 @@ COMMENT=		Modern logic/functional programming language
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 USE_GNU_READLINE=	yes	# rl_prep_term_function
-
-INFO_FILES=		mercury.info mercury_faq.info mercury_library.info
-INFO_FILES+=		mercury_ref.info mercury_trans_guide.info
-INFO_FILES+=		mercury_user_guide.info
+INFO_FILES=		# PLIST
 
 # Some of the scripts test CC and use special settings for gcc.
 CONFIGURE_ENV+=		CC=gcc
@@ -26,6 +23,16 @@ CONFIGURE_ENV+=		HOSTNAMECMD=${TOOLS_HOSTNAME_CMD:Q}
 USE_TOOLS+=		hostname
 
 MAKE_ENV+=		READLINE_PREFIX=${BUILDLINK_PREFIX.readline}
+
+INSTALL_PREFIX=		${WRKSRC}/tmp
+BUILD_MAKE_FLAGS=	${MAKE_FLAGS}
+BUILD_MAKE_FLAGS+=	INSTALL_PREFIX=${INSTALL_PREFIX:Q}
+BUILD_MAKE_FLAGS+=	INSTALL_INFO_DIR=${INSTALL_PREFIX:Q}/${PKGINFODIR:Q}
+BUILD_MAKE_FLAGS+=	INSTALL_MAN_DIR=${INSTALL_PREFIX:Q}/${PKGMANDIR:Q}
+BUILD_MAKE_FLAGS+=	MERCURY_COMPILER=${INSTALL_PREFIX:Q}/lib/mercury/bin/${MACHINE_GNU_PLATFORM}/mercury_compile
+
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 
 post-patch:
 	${TOUCH} \
@@ -37,9 +44,7 @@ post-patch:
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${MAKE} INSTALL_PREFIX=${WRKSRC}/tmp \
-			MERCURY_COMPILER=${WRKSRC}/tmp/lib/mercury/bin/${MACHINE_GNU_PLATFORM}/mercury_compile \
-		install
+		${MAKE} ${BUILD_MAKE_FLAGS} install
 
 do-install:
 	cd ${WRKSRC}/tmp && ${PAX} -rw . ${PREFIX}
@@ -48,6 +53,4 @@ do-install:
 	${FIND} ${WRKSRC} -type f -name ".cvsignore" -print | ${XARGS} ${RM} -f
 	cd ${WRKSRC}/samples && ${PAX} -rw . ${PREFIX}/share/examples/mercury
 
-.include "../../devel/readline/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
