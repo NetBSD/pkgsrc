@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2006/01/19 02:01:18 joerg Exp $
+# $NetBSD: Makefile,v 1.66 2006/04/05 23:01:16 jlam Exp $
 
 DISTNAME=	screen-4.0.2
 PKGREVISION=	4
@@ -14,7 +14,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NOT_FOR_PLATFORM=	Interix-*-* # user auth and username size fixes needed
 
-INFO_FILES=		screen.info
 PLIST_SUBST+=		DISTNAME=${DISTNAME:Q}
 
 GNU_CONFIGURE=		yes
@@ -22,6 +21,7 @@ CONFIGURE_ARGS+=	--with-sys-screenrc=${PKG_SYSCONFDIR}/screenrc
 CONFIGURE_ARGS+=	--enable-telnet
 
 PKG_SHELL=		bin/screen
+INFO_FILES=		# PLIST
 
 .include "../../mk/bsd.prefs.mk"
 
