@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/04/05 06:01:21 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2006/04/05 06:27:42 jlam Exp $
 
 DISTNAME=	smalltalk-2.1.9
 PKGREVISION=	2
@@ -26,8 +26,7 @@ CONFIGURE_ARGS+=	--without-emacs
 #CONFIGURE_ENV+=		CFLAGS="-O2 -fsigned-char"
 
 IGNORE_LIBTOOLIZE=	lib/smalltalk/libc.la
-
-INFO_FILES=		gst-base.info gst-libs.info gst.info
+INFO_FILES=		# PLIST
 TEST_TARGET=		check
 
 .include "../../converters/libiconv/buildlink3.mk"
