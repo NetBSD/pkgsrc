@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2006/02/05 23:09:56 joerg Exp $
+# $NetBSD: Makefile,v 1.68 2006/04/05 15:14:10 jlam Exp $
 
 DISTNAME=	mew-4.2
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -12,11 +12,12 @@ COMMENT=	Messaging in the Emacs World
 
 CONFLICTS=+	mew-xemacs-[0-9]* incm-[0-9]*
 
-INFO_FILES=	mew.info
+INFO_FILES=	# PLIST
 
 HAS_CONFIGURE=	yes
 
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs214 xemacs215
+EMACS_MODULES+=			base
 
 MEW_CONTRIB_DIR=${EMACS_LISPPREFIX}/mew/contrib
 
@@ -24,6 +25,8 @@ MAKE_FLAGS+=	prefix=${PREFIX:Q}
 MAKE_FLAGS+=	EMACS=${EMACS_BIN:Q}
 MAKE_FLAGS+=	elispdir=${EMACS_LISPPREFIX}/mew
 MAKE_FLAGS+=	etcdir=${PREFIX}/share/mew
+MAKE_FLAGS+=	infodir=${EMACS_INFOPREFIX}
+MAKE_FLAGS+=	mandir=${PREFIX:Q}/${PKGMANDIR:Q}/man1
 
 SUBST_CLASSES+=		local
 SUBST_STAGE.local=	post-configure
