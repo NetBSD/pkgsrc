@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.14 2006/04/05 06:01:21 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/04/05 06:27:42 jlam Exp $
 bin/gst
 bin/gst-config
 bin/gst-package
 include/gst.h
 include/gstpub.h
 include/sigsegv.h
+info/gst-base.info
+info/gst-libs.info
+info/gst.info
 lib/libgst.a
 lib/libgst.la
 lib/smalltalk/blox-tk.la
