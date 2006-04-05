@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/04/04 16:53:59 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/04/05 06:27:41 jlam Exp $
 
 DISTNAME=		cim-3.30
 PKGREVISION=		1
@@ -13,6 +13,6 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		libtool_path=${PKG_LIBTOOL:Q}
 USE_TOOLS+=		perl:run
 USE_LIBTOOL=		YES
-INFO_FILES=		cim.info
+INFO_FILES=		# PLIST
 
 .include "../../mk/bsd.pkg.mk"

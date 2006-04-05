@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:40 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/04/05 06:27:42 jlam Exp $
+info/hacking.info
+info/vmintegration.info
 java/sablevm/lib/sablevm/awt/font.properties
 java/sablevm/lib/sablevm/logging.properties
 java/sablevm/lib/sablevm/sablevm-classpath/libjavaawt.la

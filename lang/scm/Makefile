@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/04/04 20:47:21 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/05 06:27:42 jlam Exp $
 #
 # Convert the version number as follows 2d2 -> 2.4.2, where the d is
 # changed to a 4, representing the 4th letter.
@@ -23,13 +23,12 @@ USE_TOOLS+=	gmake
 
 WRKSRC=		${WRKDIR}/scm
 EVAL_PREFIX+=	SLIB_PREFIX=slib
+INFO_FILES=	# PLIST
 
 BUILD_TARGET=	scmlit libscm.a
 INSTALL_TARGET=	install installlib
 
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} mandir=${PREFIX:Q}/${PKGMANDIR:Q}/
-
-INFO_FILES=	scm.info hobbit.info Xlibscm.info
 
 INSTALLATION_DIRS=	${PKGINFODIR} share/scm
 
