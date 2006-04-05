@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2006/02/05 23:10:13 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2006/04/05 22:54:59 jlam Exp $
 #
 
 DISTNAME=		pinfo-0.6.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		misc
 MASTER_SITES=		http://zeus.polsl.gliwice.pl/~pborys/stable-version/
 
@@ -14,18 +14,14 @@ BUILD_USES_MSGFMT=	yes
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-
-INFO_FILES=	pinfo.info
-
-CPPFLAGS+=		-DDFLT_INFOPATH="\"/usr/share/info:${X11BASE}/info:${LOCALBASE}/info:/usr/local/info\""
-
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-CONF_FILES=	${PREFIX}/share/examples/pinfo/pinforc ${PKG_SYSCONFDIR}/pinforc
+CPPFLAGS+=		-DDFLT_INFOPATH="\"/usr/share/info:${PREFIX}/${PKGINFODIR}:${X11BASE}/${PKGINFODIR}:${LOCALBASE}/${PKGINFODIR}:/usr/local/info\""
 
-post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/pinfo
-	${INSTALL_DATA} ${WRKSRC}/src/pinforc ${PREFIX}/share/examples/pinfo
+EGDIR=			${PREFIX}/share/examples/pinfo
+CONF_FILES=		${EGDIR}/pinforc ${PKG_SYSCONFDIR}/pinforc
+INFO_FILES=		# PLIST
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pinfo
 PKG_SUPPORTED_OPTIONS=	pinfo-native-curses
