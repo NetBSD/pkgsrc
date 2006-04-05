@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/03/04 21:30:08 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2006/04/05 23:01:16 jlam Exp $
 #
 
 DISTNAME=	pspp-0.3.0
@@ -19,11 +19,9 @@ COMMENT=	Program for statistical analysis of sampled data
 
 BUILD_USES_MSGFMT=	yes
 
-GNU_CONFIGURE=	yes
-CPPFLAGS+=	-Dunix=1
+GNU_CONFIGURE=		yes
+CPPFLAGS+=		-Dunix=1
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-
-INFO_FILES=	pspp.info
 
 PKG_SYSCONFSUBDIR=	pspp
 EGDIR=		${PREFIX}/share/examples/pspp
@@ -31,6 +29,7 @@ CONF_FILES=	${EGDIR}/devices ${PKG_SYSCONFDIR}/devices
 CONF_FILES+=	${EGDIR}/html-prologue ${PKG_SYSCONFDIR}/html-prologue
 CONF_FILES+=	${EGDIR}/papersize ${PKG_SYSCONFDIR}/papersize
 CONF_FILES+=	${EGDIR}/ps-prologue ${PKG_SYSCONFDIR}/ps-prologue
+INFO_FILES=	# PLIST
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
