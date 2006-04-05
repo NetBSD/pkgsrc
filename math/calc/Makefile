@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/05 16:27:27 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/05 23:01:15 jlam Exp $
 
 DISTNAME=	calc-2.02f
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -15,14 +15,16 @@ COMMENT=	Advanced Calculator for GNU Emacs
 MAKE_ENV+=	EMACS=${EMACS_FLAVOR:Q}
 
 USE_TOOLS+=	makeinfo
-INFO_FILES=	calc.info
+INFO_FILES=	# PLIST
 
-INSTALLATION_DIRS=	info
+INSTALLATION_DIRS=	${EMACS_INFOPREFIX} ${EMACS_LISPPREFIX}/calc
 
 do-install:
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/calc
 	${INSTALL_DATA} ${WRKSRC}/*.el ${WRKSRC}/*.elc \
-	${WRKSRC}/calccard.tex ${EMACS_LISPPREFIX}/calc
-	${INSTALL_DATA} ${WRKSRC}/calc.info* ${PREFIX}/info
+		${WRKSRC}/calccard.tex ${EMACS_LISPPREFIX}/calc
+	cd ${WRKSRC}; for f in *.info *.info-[0-9]*; do			\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_DATA} "$$f" ${EMACS_INFOPREFIX};		\
+	done
 
 .include "../../mk/bsd.pkg.mk"
