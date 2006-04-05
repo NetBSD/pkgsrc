@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/15 07:00:08 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/04/05 16:04:01 jlam Exp $
 bin/a2ping
 bin/afm2tfm
 bin/aleph
@@ -29,7 +29,6 @@ bin/dvitype
 bin/e2pall
 bin/ebb
 bin/epstopdf
-bin/etex
 bin/fdf2tan
 bin/fdf2tex
 bin/fmtutil
@@ -47,9 +46,6 @@ bin/kpsetool
 bin/kpsewhere
 bin/kpsewhich
 bin/kpsexpand
-bin/lambda
-bin/lamed
-bin/latex
 bin/mag
 bin/makeindex
 bin/makempx
@@ -85,8 +81,6 @@ bin/oxdvi
 bin/patgen
 bin/pdfcrop
 bin/pdfetex
-bin/pdflatex
-bin/pdftex
 bin/pdfxtex
 bin/pfb2pfa
 bin/pk2bm
@@ -177,6 +171,10 @@ include/kpathsea/types.h
 include/kpathsea/variable.h
 include/kpathsea/xopendir.h
 include/kpathsea/xstat.h
+info/latex.info
+info/dvips.info
+info/web2c.info
+info/kpathsea.info
 lib/libkpathsea.la
 man/man1/afm2tfm.1
 man/man1/allcm.1
@@ -297,49 +295,6 @@ man/man1/weave.1
 man/man1/xdvi.1
 man/man1/xdvizilla.1
 man/man5/fmtutil.cnf.5
-@unexec ${RM} -f %D/share/texmf-var/fonts/map/dvipdfm/updmap/dvipdfm.map
-@unexec ${RM} -f %D/share/texmf-var/fonts/map/dvipdfm/updmap/dvipdfm_dl14.map
-@unexec ${RM} -f %D/share/texmf-var/fonts/map/dvipdfm/updmap/dvipdfm_ndl14.map
-@unexec ${RM} -f %D/share/texmf-var/fonts/map/dvips/updmap/builtin35.map
-@unexec ${RM} -f %D/share/texmf-var/fonts/map/dvips/updmap/download35.map
-@unexec ${RM} -f %D/share/texmf-var/fonts/map/dvips/updmap/ps2pk.map
-@unexec ${RM} -f %D/share/texmf-var/fonts/map/dvips/updmap/psfonts.map
-@unexec ${RM} -f %D/share/texmf-var/fonts/map/dvips/updmap/psfonts_pk.map
-@unexec ${RM} -f %D/share/texmf-var/fonts/map/dvips/updmap/psfonts_t1.map
-@unexec ${RM} -f %D/share/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-@unexec ${RM} -f %D/share/texmf-var/fonts/map/pdftex/updmap/pdftex_dl14.map
-@unexec ${RM} -f %D/share/texmf-var/fonts/map/pdftex/updmap/pdftex_ndl14.map
-share/texmf-var/web2c/aleph.fmt
-share/texmf-var/web2c/aleph.log
-share/texmf-var/web2c/cont-en.fmt
-share/texmf-var/web2c/cont-en.log
-share/texmf-var/web2c/etex.fmt
-share/texmf-var/web2c/etex.log
-share/texmf-var/web2c/lambda.fmt
-share/texmf-var/web2c/lambda.log
-share/texmf-var/web2c/lamed.fmt
-share/texmf-var/web2c/lamed.log
-share/texmf-var/web2c/latex.fmt
-share/texmf-var/web2c/latex.log
-share/texmf-var/web2c/metafun.log
-share/texmf-var/web2c/metafun.mem
-share/texmf-var/web2c/mf.base
-share/texmf-var/web2c/mf.log
-share/texmf-var/web2c/mpost.log
-share/texmf-var/web2c/mpost.mem
-share/texmf-var/web2c/mptopdf.fmt
-share/texmf-var/web2c/mptopdf.log
-share/texmf-var/web2c/omega.fmt
-share/texmf-var/web2c/omega.log
-share/texmf-var/web2c/pdfetex.fmt
-share/texmf-var/web2c/pdfetex.log
-share/texmf-var/web2c/pdflatex.fmt
-share/texmf-var/web2c/pdflatex.log
-share/texmf-var/web2c/pdftex.fmt
-share/texmf-var/web2c/pdftex.log
-share/texmf-var/web2c/tex.fmt
-share/texmf-var/web2c/tex.log
-@unexec ${RM} -f %D/share/texmf-var/web2c/updmap.log
 share/texmf/doc/tetex/TETEXDOC.dvi
 share/texmf/doc/tetex/TETEXDOC.pdf
 share/texmf/doc/tetex/TETEXDOC.ps
@@ -362,7 +317,7 @@ share/texmf/texconfig/tcfmgr.map
 share/texmf/texconfig/v/vt100
 share/texmf/texconfig/x/xterm
 share/texmf/web2c/aleph.pool
-share/texmf/web2c/fmtutil.cnf
+share/texmf/web2c/fmtutil.cnf.dist
 share/texmf/web2c/mf.pool
 share/texmf/web2c/mktex.opt
 share/texmf/web2c/mktexdir
@@ -376,7 +331,7 @@ share/texmf/web2c/pdfetex-pl.pool
 share/texmf/web2c/pdfetex.pool
 share/texmf/web2c/pdfxtex.pool
 share/texmf/web2c/tex.pool
-share/texmf/web2c/texmf.cnf
+share/texmf/web2c/texmf.cnf.dist
 share/texmf/xdvi/XDvi
 share/texmf/xdvi/pixmaps/toolbar.xpm
 share/texmf/xdvi/pixmaps/toolbar2.xpm
@@ -391,21 +346,5 @@ share/texmf/xdvi/xdvi.cfg
 @dirrm share/texmf/dvips/gsftopk
 @dirrm share/texmf/dvips/base
 @comment In teTeX-texmf:   @dirrm share/texmf/doc/tetex
-@dirrm share/texmf-var/web2c
-@unexec ${RM} -f %D/share/texmf-var/ls-R
-@dirrm share/texmf-var/fonts/map/pdftex/updmap
-@dirrm share/texmf-var/fonts/map/pdftex
-@dirrm share/texmf-var/fonts/map/dvips/updmap
-@dirrm share/texmf-var/fonts/map/dvips
-@dirrm share/texmf-var/fonts/map/dvipdfm/updmap
-@dirrm share/texmf-var/fonts/map/dvipdfm
-@dirrm share/texmf-var/fonts/map
-@dirrm share/texmf-var/fonts
-@dirrm share/texmf-var
 @comment In teTeX-texmf:   @dirrm share/texmf
 @dirrm include/kpathsea
-@comment The next file is changed by various sub-pkgs (hugetex, ...)
-@exec %D/bin/mktexlsr
-@exec %D/bin/updmap-sys
-@unexec ${RM} -f %D/share/texmf/ls-R
-@unexec ${RM} -rf %D/share/texmf-config
