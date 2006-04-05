@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:30:22 jlam Exp $
+# $NetBSD: Makefile,v 1.15.2.1 2006/04/05 14:09:36 salo Exp $
 #
 
-DISTNAME=	openvpn-2.0.5
+DISTNAME=	openvpn-2.0.6
 CATEGORIES=	net
 MASTER_SITES=	http://openvpn.net/release/ \
 		http://openvpn.net/release/old/
@@ -27,6 +27,10 @@ CONFIGURE_ARGS+=	--enable-pthread
 CONFIGURE_ARGS+=	--enable-password-save
 CONFIGURE_ARGS+=	--disable-dependency-tracking
 
+INSTALLATION_DIRS=	${DATADIR}/easy-rsa	${EGDIR}/config		\
+			${DOCDIR}		${EGDIR}/keys		\
+						${EGDIR}/scripts
+
 # OpenVPN 2.x has a shared module "plugin" architecture that allows
 # inserting callbacks into the server for various tasks.
 #
@@ -37,6 +41,7 @@ DL_AUTO_VARS=		yes
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
+# Fix up the paths to tools in the pkitool script.
 post-build:
 	for file in ${WRKSRC}/easy-rsa/2.0/pkitool; do			\
 		${SED}	-e "s|^\(GREP\)=.*|\1=\""${GREP}"\"|"		\
@@ -47,7 +52,6 @@ post-build:
 	done
 
 post-install:
-	${INSTALL_DATA_DIR} ${DATADIR}/easy-rsa
 	dir=${DATADIR:S/^${PREFIX}\///}/easy-rsa;			\
 	cd ${WRKSRC}/easy-rsa/2.0;					\
 	${GREP} "^$$dir/" ${PKGDIR}/PLIST | ${SED} "s|^$$dir/||" |	\
@@ -57,21 +61,15 @@ post-install:
 		*)		${INSTALL_SCRIPT} $$file ${PREFIX}/$$dir ;; \
 		esac;							\
 	done
-	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/management/management-notes.txt ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}/config
 	cd ${WRKSRC}/sample-config-files; for file in *; do		\
 		${INSTALL_DATA} $$file ${EGDIR}/config;			\
 	done
-	${INSTALL_DATA_DIR} ${EGDIR}/scripts
 	cd ${WRKSRC}/sample-scripts; for file in *; do			\
 		${INSTALL_DATA} $$file ${EGDIR}/scripts;		\
 	done
-	${INSTALL_DATA_DIR} ${EGDIR}/keys
 	cd ${WRKSRC}/sample-keys; for file in *; do			\
 		${INSTALL_DATA} $$file ${EGDIR}/keys;			\
 	done
-
 
 .include "../../mk/bsd.pkg.mk"
