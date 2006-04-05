@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:09:55 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/05 16:41:34 jlam Exp $
 
 DISTNAME=	mailcrypt-3.5.8
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -14,9 +14,8 @@ COMMENT=	Emacs frontend for PGP and GPG
 EMACS_VERSIONS_ACCEPTED=       emacs21 emacs21nox emacs20
 
 GNU_CONFIGURE=	yes
-MAKE_ENV+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX:Q}
-
-INFO_FILES=	mailcrypt.info
+MAKE_FLAGS+=	lispdir=${EMACS_LISPPREFIX:Q}
+INFO_FILES=	# PLIST
 
 .include "../../mk/emacs.mk"
 .include "../../mk/bsd.pkg.mk"

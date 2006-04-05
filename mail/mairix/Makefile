@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/05 07:06:13 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/04/05 16:41:34 jlam Exp $
 #
 
 DISTNAME=		mairix-0.16.1
@@ -13,23 +13,24 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
 USE_TOOLS+=		bison makeinfo
-INFO_FILES=		mairix.info
+INFO_FILES=		# PLIST
 
 BINDIR=			${PREFIX}/bin
-INFODIR=		${PREFIX}/info
+INFODIR=		${PREFIX}/${PKGINFODIR}
 HTMLDIR=		${PREFIX}/share/doc/html/mairix
 
-INSTALLATION_DIRS=	bin info
+INSTALLATION_DIRS=	${BINDIR} ${INFODIR} ${HTMLDIR}
 
 pre-build:
 	cd ${WRKSRC} && makeinfo mairix.texi
-	cd ${WRKSRC} && makeinfo --no-split --number-sections --html \
+	cd ${WRKSRC} && makeinfo --no-split --number-sections --html	\
 		mairix.texi > mairix.html
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mairix ${BINDIR}
-	${INSTALL_DATA_DIR} ${HTMLDIR}
 	${INSTALL_DATA} ${WRKSRC}/mairix.html ${HTMLDIR}
-	${INSTALL_DATA} ${WRKSRC}/mairix.info ${INFODIR}
+	cd ${WRKSRC}; for f in mairix.info mairix.info-[0-9]; do	\
+		${TEST} ! -f "$$f" || ${INSTALL_DATA} "$$f" ${INFODIR};	\
+	done
 
 .include "../../mk/bsd.pkg.mk"
