@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/08 19:46:56 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/05 23:01:16 jlam Exp $
 bin/pspp
+info/pspp.info
 share/doc/pspp/NEWS
 share/doc/pspp/README
 share/doc/pspp/TODO

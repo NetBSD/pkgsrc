@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2004/12/31 12:36:44 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/05 23:01:15 jlam Exp $
 bin/euk2edit
 bin/euk2eps
 bin/eukleides
+info/eukleides.info
 man/man1/euk2edit.1
 man/man1/euk2eps.1
 man/man1/eukleides.1

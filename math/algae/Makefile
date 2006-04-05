@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/04 21:30:02 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/05 23:01:15 jlam Exp $
 
 DISTNAME=		algae-4.1.3
 PKGREVISION=		4
@@ -15,8 +15,13 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		fortran
 USE_TOOLS+=		ls tr
 USE_GNU_READLINE=	# uses history_truncate_file
-
-INFO_FILES=		algae.info
+INFO_FILES=		# PLIST
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
+			mandir=${PREFIX:Q}/${PKGMANDIR:Q}/man1		\
+			infodir=${PREFIX:Q}/${PKGINFODIR:Q}		\
+			htmldir=${PREFIX:Q}/share/doc/html/algae	\
+			sourcedir=${PREFIX:Q}/include			\
+			hdir=${PREFIX:Q}/include/algae
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
