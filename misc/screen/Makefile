@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2006/04/05 23:01:16 jlam Exp $
+# $NetBSD: Makefile,v 1.67 2006/04/05 23:06:33 jlam Exp $
 
 DISTNAME=	screen-4.0.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc shells
 MASTER_SITES=	ftp://ftp.uni-erlangen.de/pub/utilities/screen/ \
 		${MASTER_SITE_GNU:=screen/}
@@ -31,16 +31,24 @@ SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,@EXAMPLES@,${PREFIX}/share/examples/screen,g'
 SUBST_STAGE.paths=	post-patch
 
+.if (${OPSYS} == "SunOS") && exists(/usr/5bin/tic)
+PLIST_SUBST+=	SCREEN_TERMINFO=
+post-install: screen-terminfo
+.else
+PLIST_SUBST+=	SCREEN_TERMINFO="@comment "
+.endif
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/screen
 	${INSTALL_DATA} ${WRKSRC}/etc/etcscreenrc			\
 		${PREFIX}/share/examples/screen/etcscreenrc
 	${INSTALL_DATA} ${WRKSRC}/etc/screenrc				\
 		${PREFIX}/share/examples/screen/screenrc
-.if ${OPSYS} == "SunOS"
+
+.PHONY: screen-terminfo
+screen-terminfo:
 	cd ${WRKSRC}/terminfo &&					\
 	${SETENV} TERMINFO=${PREFIX}/share/lib/terminfo			\
 		/usr/5bin/tic screeninfo.src
-.endif
 
 .include "../../mk/bsd.pkg.mk"
