@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/14 20:43:23 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/05 16:41:34 jlam Exp $
 
 DISTNAME=	msmtp-1.4.5
 CATEGORIES=	mail
@@ -18,7 +18,7 @@ EGDIR=		${PREFIX}/share/examples/msmtp
 CONF_FILES=	${EGDIR}/msmtprc-user.example \
 		${PKG_SYSCONFDIR}/msmtprc
 
-INFO_FILES=	msmtp.info
+INFO_FILES=	# PLIST
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "Interix"
