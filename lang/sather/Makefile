@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/03/05 16:27:26 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2006/04/05 06:27:42 jlam Exp $
 
 DISTNAME=		sather-1.2.1
 PKGREVISION=		6
@@ -12,8 +12,7 @@ COMMENT=		Compiler for the Sather object oriented programming language
 USE_TOOLS+=		gmake makeinfo
 
 BUILD_TARGET=		full optional
-
-INFO_FILES=		sather.info sather-tutorial.info sather-mode.info
+INFO_FILES=		# PLIST
 
 REPLACE_PERL=		Browser/Web/ps2gif
 
@@ -53,9 +52,10 @@ post-patch:
 	cd ${WRKSRC}/System/Platforms && ${CP} -r netbsd dragonfly
 
 post-build:
-	cd ${WRKSRC}/Emacs; ${MAKEINFO} sather.texinfo; 		\
-		${MAKEINFO} sather-tutorial.texinfo; 			\
-		${MAKEINFO} sather-mode.texinfo
+	cd ${WRKSRC}/Emacs;						\
+		makeinfo sather.texinfo; 				\
+		makeinfo sather-tutorial.texinfo; 			\
+		makeinfo sather-mode.texinfo
 	${RM} -fr ${WRKSRC}/System/Platforms/dualgui/dual_gui_server.code
 
 do-install:
@@ -82,12 +82,15 @@ do-install:
 		${PREFIX}/lib/sather/System
 	${FIND} ${PREFIX}/lib/sather -name \*.config -o -name Makefile 	\
 		-o -name \*.orig -print | ${XARGS} ${RM} -f
-	${INSTALL_DATA} ${WRKSRC}/Emacs/*.info* ${PREFIX}/info
+	cd ${WRKSRC}/Emacs; for f in *.info *.info-[0-9]*; do		\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
+	done
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sather
 	cd ${WRKSRC}/Doc && ${PAX} -rw -s ',.*/man.*,,' .		\
 		${PREFIX}/share/doc/sather
-	${INSTALL_MAN} ${WRKSRC}/Doc/man/man1/sacomp.1 ${PREFIX}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/Doc/man/man1/sabrowse.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/Doc/man/man1/sacomp.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/Doc/man/man1/sabrowse.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
 	${INSTALL_DATA} ${WRKSRC}/Emacs/*.el ${PREFIX}/share/emacs/site-lisp
 
