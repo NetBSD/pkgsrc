@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:09:53 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/05 06:25:52 jlam Exp $
 #
 
 DISTNAME=	twelf-1-4
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	http://www.cs.cmu.edu/~twelf/dist/
 
@@ -24,7 +24,7 @@ MAKEFILE=	smlnj/Makefile
 MAKEFLAGS+=	sml=${PREFIX:Q}/bin/sml
 BUILD_TARGET=	twelf-server twelf-sml
 
-INFO_FILES=		twelf.info
+INFO_FILES=		# PLIST
 
 TWELF_LIBDIR=		${PREFIX}/lib/twelf
 TWELF_EMACSDIR=		${EMACS_LISPPREFIX}/twelf
@@ -34,7 +34,10 @@ TWELF_EXAMPLEDIR=	${PREFIX}/share/examples/twelf
 
 .include "../../lang/smlnj/Makefile.common"
 
-INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	bin ${PKGINFODIR}				\
+			${TWELF_LIBDIR} ${TWELF_EMACSDIR}		\
+			${TWELF_DOCDIR} ${TWELF_HTMLDIR}		\
+			${TWELF_EXAMPLEDIR}
 
 post-extract:
 	${CHMOD} -R +r ${WRKSRC}
@@ -46,31 +49,28 @@ post-patch:
 		${WRKSRC}/${f}.orig > ${WRKSRC}/${f}
 .endfor
 
-pre-install:
-	${RM} -f ${WRKSRC}/bin/.mkexec.orig ${WRKSRC}/doc/info/*.orig
+post-build:
+	find ${WRKSRC} -name "*.orig" | xargs rm
 
 do-install:
-	${INSTALL_DATA_DIR} ${TWELF_LIBDIR}
 	cd ${WRKSRC} && ${PAX} -rw -pam bin ${TWELF_LIBDIR}
 	${LN} -sf ${TWELF_LIBDIR}/bin/* ${PREFIX}/bin
 
-	${INSTALL_DATA_DIR} ${TWELF_EMACSDIR}
 	cd ${WRKSRC}/emacs && ${PAX} -rw -pam * ${TWELF_EMACSDIR}
 	${LN} -sf ${TWELF_EMACSDIR} ${TWELF_LIBDIR}/emacs
 
-	${INSTALL_DATA_DIR} ${TWELF_DOCDIR}
-	cd ${WRKSRC}/doc && 						\
-	for t in dvi pdf ps; do						\
-	   ${INSTALL_DATA} $${t}/twelf.$${t} ${TWELF_DOCDIR};		\
+	cd ${WRKSRC}/doc; for t in dvi pdf ps; do			\
+		${INSTALL_DATA} $${t}/twelf.$${t} ${TWELF_DOCDIR};	\
 	done
 	${LN} -sf ${TWELF_DOCDIR} ${TWELF_LIBDIR}/doc
 
-	cd ${WRKSRC}/doc/info && ${PAX} -rw -pam * ${PREFIX}/info
+	cd ${WRKSRC}/doc/info; for f in *.info *.info-[0-9]*; do	\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
+	done
 
-	${INSTALL_DATA_DIR} ${TWELF_HTMLDOCDIR}
 	cd ${WRKSRC}/doc/html && ${PAX} -rw -pam * ${TWELF_HTMLDOCDIR}
 
-	${INSTALL_DATA_DIR} ${TWELF_EXAMPLEDIR}
 	cd ${WRKSRC}/examples && ${PAX} -rw -pam * ${TWELF_EXAMPLEDIR}
 	${LN} -sf ${TWELF_EXAMPLEDIR} ${TWELF_LIBDIR}/examples
 

@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2004/03/07 17:47:22 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/04/05 06:25:52 jlam Exp $
 bin/twelf-server
 bin/twelf-sml
+info/twelf.info
 lib/twelf/bin/.dbase/README
 lib/twelf/bin/.heap/README
 lib/twelf/bin/.heap/twelf-server.${BOX}-${OS}
@@ -15,6 +16,12 @@ lib/twelf/bin/twelf-sml
 lib/twelf/doc
 lib/twelf/emacs
 lib/twelf/examples
+${EMACS_LISPPREFIX}/twelf/README
+${EMACS_LISPPREFIX}/twelf/auc-menu.el
+${EMACS_LISPPREFIX}/twelf/twelf-font.el
+${EMACS_LISPPREFIX}/twelf/twelf-hilit.el
+${EMACS_LISPPREFIX}/twelf/twelf-init.el
+${EMACS_LISPPREFIX}/twelf/twelf.el
 share/doc/html/twelf/index.html
 share/doc/html/twelf/twelf_1.html
 share/doc/html/twelf/twelf_10.html
@@ -37,13 +44,6 @@ share/doc/html/twelf/twelf_toc.html
 share/doc/twelf/twelf.dvi
 share/doc/twelf/twelf.pdf
 share/doc/twelf/twelf.ps
-share/emacs/site-lisp/twelf/README
-share/emacs/site-lisp/twelf/auc-menu.el
-share/emacs/site-lisp/twelf/twelf-font.el
-share/emacs/site-lisp/twelf/twelf-hilit.el
-share/emacs/site-lisp/twelf/twelf-init.el
-share/emacs/site-lisp/twelf/twelf-init.el.orig
-share/emacs/site-lisp/twelf/twelf.el
 share/examples/twelf/README
 share/examples/twelf/arith/README
 share/examples/twelf/arith/arith.elf
@@ -159,7 +159,6 @@ share/examples/twelf/cpsocc/def16.elf
 share/examples/twelf/cpsocc/def3+6+fig5.elf
 share/examples/twelf/cpsocc/dsBNF.elf
 share/examples/twelf/cpsocc/examples.quy
-share/examples/twelf/cpsocc/examples.quy.orig
 share/examples/twelf/cpsocc/fig1.elf
 share/examples/twelf/cpsocc/fig10.elf
 share/examples/twelf/cpsocc/fig11.elf
@@ -176,7 +175,6 @@ share/examples/twelf/cpsocc/load.sml
 share/examples/twelf/cpsocc/sources.cfg
 share/examples/twelf/cpsocc/test.cfg
 share/examples/twelf/cpsocc/test.quy
-share/examples/twelf/cpsocc/test.quy.orig
 share/examples/twelf/cpsocc/th10.elf
 share/examples/twelf/cpsocc/th15.elf
 share/examples/twelf/cpsocc/th18.elf
@@ -393,9 +391,9 @@ share/examples/twelf/tabled/tests/test7.elf
 @dirrm share/examples/twelf/ccc
 @dirrm share/examples/twelf/arith
 @dirrm share/examples/twelf
-@dirrm share/emacs/site-lisp/twelf
 @dirrm share/doc/twelf
 @dirrm share/doc/html/twelf
+@dirrm ${EMACS_LISPPREFIX}/twelf
 @dirrm lib/twelf/bin/.heap
 @dirrm lib/twelf/bin/.dbase
 @dirrm lib/twelf/bin
