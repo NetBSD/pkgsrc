@@ -1,0 +1,30 @@
+$NetBSD: patch-ah,v 1.1 2006/04/05 07:03:25 adam Exp $
+
+--- fontforge/savefontdlg.c.orig	2006-04-04 11:44:50.000000000 +0200
++++ fontforge/savefontdlg.c
+@@ -2143,6 +2143,12 @@ static void DoSave(struct gfc_data *d,un
+     struct sflist *sfs=NULL, *cur, *last=NULL;
+     static int psscalewarned=0, ttfscalewarned=0;
+     int flags;
++    struct sflist *sfl;
++    char **former;
++    NameList *rename_to;
++    GTextInfo *ti = GGadgetGetListItemSelected(d->rename);
++    char *nlname = u2utf8_copy(ti->text);
++    extern NameList *force_names_when_saving;
+ #if defined(FONTFORGE_CONFIG_GDRAW)
+     char *buts[3];
+     buts[0] = _("_Yes");
+@@ -2151,12 +2157,6 @@ static void DoSave(struct gfc_data *d,un
+ #elif defined(FONTFORGE_CONFIG_GTK)
+     static char *buts[] = { GTK_STOCK_YES, GTK_STOCK_NO, NULL };
+ #endif
+-    struct sflist *sfl;
+-    char **former;
+-    NameList *rename_to;
+-    GTextInfo *ti = GGadgetGetListItemSelected(d->rename);
+-    char *nlname = u2utf8_copy(ti->text);
+-    extern NameList *force_names_when_saving;
+ 
+     rename_to = NameListByName(nlname);
+     free(nlname);
