@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2005/12/28 17:53:24 reed Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/04/05 23:01:16 jlam Exp $
 bin/screen
 bin/${DISTNAME}
+info/screen.info
 man/man1/screen.1
 @unexec if [ -f %D/bin/screen.old ]; then ${RM} -f %D/bin/screen.old ; fi
 share/examples/screen/etcscreenrc
