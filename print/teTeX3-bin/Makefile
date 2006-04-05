@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:10:39 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/05 16:04:01 jlam Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -10,15 +10,15 @@ MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	TeX distribution for UNIX compatible systems - binaries
 
-BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 DEPENDS+=	teTeX-texmf>=3.0:../../print/teTeX3-texmf
 DEPENDS+=	dialog>=0.6z:../../misc/dialog
 
 # games/omega previously installed an omega executable too
 CONFLICTS+=	omega<0.90.4nb1
 
-INFO_FILES=	latex.info dvips.info web2c.info kpathsea.info
+INFO_FILES=	# PLIST
 
+USE_TOOLS+=	bison
 REPLACE_PERL=	texk/xdvik/t1mapper \
 		texk/oxdvik/t1mapper
 
@@ -33,8 +33,13 @@ LOWER_PAPERSIZE=	${LOWER_PAPERSIZE_cmd:sh}
 TEXCONFIG=	${SETENV} TEXMFCONFIG=${PREFIX}/share/texmf \
 		${PREFIX}/bin/texconfig
 
+CONF_FILES+=	${PREFIX}/share/texmf/web2c/fmtutil.cnf.dist		\
+		${PREFIX}/share/texmf/web2c/fmtutil.cnf
+CONF_FILES+=	${PREFIX}/share/texmf/web2c/texmf.cnf.dist		\
+		${PREFIX}/share/texmf/web2c/texmf.cnf
+OWN_DIRS+=	${PREFIX}/share/texmf-var
+
 post-install:
-	@${RM} -f ${PREFIX}/share/texmf/web2c/*.log
 .if defined(PAPERSIZE)
 	${TEXCONFIG} dvips paper ${LOWER_PAPERSIZE}
 .  if ${PAPERSIZE} == "Letter"
