@@ -1,8 +1,7 @@
-# $NetBSD: DEINSTALL,v 1.1 2006/04/05 16:04:01 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.2 2006/04/06 14:39:11 jlam Exp $
 
 case ${STAGE} in
 DEINSTALL)
-	${TEST} ! -x ./+TETEX ||
-		./+TETEX REMOVE ${PKG_METADATA_DIR}
+	${TEST} ! -x ./+TETEX || ./+TETEX REMOVE
 	;;
 esac
