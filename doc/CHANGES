@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13467 2006/04/05 22:34:57 adrianp Exp $
+$NetBSD: CHANGES,v 1.13468 2006/04/06 00:21:06 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1901,3 +1901,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated editors/emacs-nox11 to 21.4anb3 [markd 2006-04-05]
 	Updated mail/ingo to 1.1nb1 [adrianp 2006-04-05]
 	Updated time/kronolith to 2.1nb1 [adrianp 2006-04-05]
+	Updated security/lsh to 1.4.3nb4 [salo 2006-04-06]
