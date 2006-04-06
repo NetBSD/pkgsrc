@@ -1,4 +1,4 @@
-# $NetBSD: info-files,v 1.3 2006/03/19 23:58:14 jlam Exp $
+# $NetBSD: info-files,v 1.4 2006/04/06 17:57:34 jlam Exp $
 #
 # Generate an +INFO_FILES script that handles info file registration for
 # the package.
@@ -18,11 +18,12 @@ UNPACK,|UNPACK,+INFO_FILES)
 # same directory as the info files).
 #
 # Lines starting with "# INFO: " are data read by this script that
-# name the info files that will be added or removed from the "dir"
-# index files.
+# name the info files and directory containing the "dir" index that will
+# that will be updated.  If the directory is not specified, then the
+# "dir" index is assumed to be in the same directory as the info file.
 #
-#	# INFO: /usr/pkg/info/bar.info
-#	# INFO: /usr/pkg/info/baz.info
+#	# INFO: /usr/pkg/info/bar.info /usr/pkg/info
+#	# INFO: /usr/pkg/info/baz.info /usr/pkg/info
 #
 # For each INFO entry, if the path is relative, that it is taken to be
 # relative to ${PKG_PREFIX}.
@@ -48,7 +49,7 @@ exitcode=0
 case $ACTION in
 ADD)
 	${SED} -n "/^\# INFO: /{s/^\# INFO: //;p;}" ${SELF} | ${SORT} -u |
-	{ while read file; do
+	{ while read file infodir; do
 		case $file in
 		"")	continue ;;
 		[!/]*)	file="${PKG_PREFIX}/$file" ;;
@@ -63,7 +64,7 @@ ADD)
 			;;
 		esac
 
-		infodir="${file%/*}"
+		${TEST} -n "$infodir" || infodir="${file%/*}"
 		infoindex="$infodir/dir"
 		nentries="`${GREP} -c '^\*' $infoindex 2>/dev/null`"
 		case "$nentries" in
@@ -82,7 +83,7 @@ ADD)
 
 REMOVE)
 	${SED} -n "/^\# INFO: /{s/^\# INFO: //;p;}" ${SELF} | ${SORT} -u |
-	{ while read file; do
+	{ while read file infodir; do
 		case $file in
 		"")	continue ;;
 		[!/]*)	file="${PKG_PREFIX}/$file" ;;
@@ -97,7 +98,7 @@ REMOVE)
 			;;
 		esac
 
-		infodir="${file%/*}"
+		${TEST} -n "$infodir" || infodir="${file%/*}"
 		infoindex="$infodir/dir"
 		${ECHO} "	$file"
 		${INSTALL_INFO} --info-dir="$infodir" --delete $file >/dev/null 2>&1

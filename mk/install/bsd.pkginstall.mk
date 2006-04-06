@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.44 2006/03/20 01:48:58 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.45 2006/04/06 17:57:34 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -470,6 +470,12 @@ ${_INSTALL_DIRS_FILE}: ../../mk/install/dirs
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
 	fi
 
+# INFO_DIR, if defined, specifies the directory path containing the "dir"
+#	index file that should be updated.  If the pathname is relative,
+#	then it is taken to be relative to ${PREFIX}.  This shouldn't
+#	be needed unless "dir" is not in the same directory as the
+#	installed info files.
+#
 _INSTALL_INFO_FILES_FILE=	${_PKGINSTALL_DIR}/info-files
 _INSTALL_INFO_FILES_DATAFILE=	${_PKGINSTALL_DIR}/info-files-data
 _INSTALL_UNPACK_TMPL+=		${_INSTALL_INFO_FILES_FILE}
@@ -511,12 +517,18 @@ ${_INSTALL_INFO_FILES_FILE}: ../../mk/install/info-files
 install-script-data: install-script-data-info-files
 install-script-data-info-files:
 .if defined(INFO_FILES)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
 	if ${TEST} -x ${INSTALL_FILE}; then				\
 		${INFO_FILES_cmd} |					\
 		while read file; do					\
-			${ECHO} "# INFO: $$file"			\
-				>> ${INSTALL_FILE};			\
+			infodir=${INFO_DIR:Q};				\
+			infodir=`strip_prefix "$$infodir"`;		\
+			case "$$infodir" in				\
+			"")	${ECHO} "# INFO: $$file"		\
+					>> ${INSTALL_FILE} ;;		\
+			*)	${ECHO} "# INFO: $$file $$infodir"	\
+					>> ${INSTALL_FILE} ;;		\
+			esac;						\
 		done;							\
 		cd ${PKG_DB_TMPDIR} && ${SETENV} ${INSTALL_SCRIPTS_ENV}	\
 		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME}		\
