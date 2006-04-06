@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2006/03/31 23:56:28 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/04/06 19:46:33 adam Exp $
 
-DISTNAME=	cln-1.1.9
-PKGREVISION=	2
+DISTNAME=	cln-1.1.11
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftpthep.physik.uni-mainz.de/pub/gnu/ \
 		ftp://ftp.santafe.edu/pub/gnu/ \
