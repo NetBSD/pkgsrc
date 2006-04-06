@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13472 2006/04/06 17:05:55 salo Exp $
+$NetBSD: CHANGES,v 1.13473 2006/04/06 17:41:17 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1906,3 +1906,11 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/jalbum to 6.4 [martti 2006-04-06]
 	Updated math/octave to 2.1.73 [adam 2006-04-06]
 	Added databases/pgadmin3 version 1.4.2 [adam 2006-04-06]
+	Updated x11/py-gtk2 to 2.8.5 [drochner 2006-04-06]
+	Updated x11/py-gnome2 to 2.12.4 [drochner 2006-04-06]
+	Updated games/prboom to 2.4.0 [drochner 2006-04-06]
+	Updated devel/py-gobject to 2.10.0 [drochner 2006-04-06]
+	Updated graphics/py-matplotlib to 0.87.2 [drochner 2006-04-06]
+	Added graphics/py-matplotlib-gtk2 version 0.87.2 [drochner 2006-04-06]
+	Updated devel/at-spi to 1.7.7 [drochner 2006-04-06]
+	Updated audio/libsndfile to 1.0.15 [drochner 2006-04-06]
