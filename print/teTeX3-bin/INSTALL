@@ -1,9 +1,9 @@
-# $NetBSD: INSTALL,v 1.1 2006/04/05 16:04:01 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2006/04/06 14:39:11 jlam Exp $
 
 case "${STAGE}" in
 POST-INSTALL)
-	${TEST} ! -x ./+TETEX ||
-		./+TETEX ADD ${PKG_METADATA_DIR}
+	${TEST} ! -x ./+TEXCONFIG || ./+TEXCONFIG PAPER 
+	${TEST} ! -x ./+TETEX || ./+TETEX ADD
 	;;
 esac
 
@@ -18,12 +18,11 @@ UNPACK,|UNPACK,+TETEX)
 #
 # +TETEX - teTeX installation update script
 #
-# Usage: ./+TETEX ADD|REMOVE [metadatadir]
+# Usage: ./+TETEX ADD|REMOVE
 
 CAT="@CAT@"
 ECHO="@ECHO@"
 GREP="@GREP@"
-PWD_CMD="@PWD_CMD@"
 RM="@RM@"
 RMDIR="@RMDIR@"
 TEST="@TEST@"
@@ -31,9 +30,6 @@ TRUE="@TRUE@"
 
 SELF=$0
 ACTION=$1
-PKG_METADATA_DIR="${2-`${PWD_CMD}`}"
-: ${PKGNAME=${PKG_METADATA_DIR##*/}}
-: ${PKG_DBDIR=${PKG_METADATA_DIR%/*}}
 : ${PKG_PREFIX=@PREFIX@}
 
 TEXFONTS_DIR="@TEXFONTSDIR@"
@@ -139,5 +135,65 @@ esac
 exit $exitcode
 EOF
 	${CHMOD} +x ./+TETEX
+	;;
+esac
+
+#
+# Generate a +TEXCONFIG script sets the initial font and papersize
+# settings for the teTeX installation.
+#
+case "${STAGE},$1" in
+UNPACK,|UNPACK,+TEXCONFIG)
+	${CAT} > ./+TEXCONFIG << 'EOF'
+#!@SH@
+#
+# +TEXCONFIG - default font and papersize settings for teTeX
+#
+# Usage: ./+TEXCONFIG FONTS [fontdir]
+#        ./+TEXCONFIG PAPER [papersize]
+
+ECHO="@ECHO@"
+TEST="@TEST@"
+
+SELF=$0
+ACTION=$1
+: ${PKG_PREFIX=@PREFIX@}
+
+TEXCONFIG="${PKG_PREFIX}/bin/texconfig"
+
+exitcode=0
+case $ACTION in
+FONTS)
+	# Set the default texfonts directory to the specified directory.
+	VARTEXFONTS="${2-@VARTEXFONTS@}"
+	${TEST} ! -x ${TEXCONFIG} ||
+		${TEXCONFIG} font vardir "$VARTEXFONTS"
+	${TEST} ! -x ${TEXCONFIG} ||
+		${TEXCONFIG} font rw
+	;;
+
+PAPER)
+	# Set the paper size for dvips and xdvi to the specified papersize.
+	PAPERSIZE="${2-@PAPERSIZE@}"
+	PAPERSIZE_dvips="$PAPERSIZE"
+	PAPERSIZE_xdvi="$PAPERSIZE"
+	case "$PAPERSIZE" in
+	letter)	PAPERSIZE_xdvi="us" ;;
+	us)	PAPERSIZE_dvips="letter" ;;
+	esac
+	${TEST} ! -x ${TEXCONFIG} ||
+		${TEXCONFIG} dvips paper $PAPERSIZE_dvips
+	${TEST} ! -x ${TEXCONFIG} ||
+		${TEXCONFIG} xdvi paper $PAPERSIZE_xdvi
+	;;
+
+*)
+	${ECHO} "Usage: ./+TEXCONFIG FONTS [fontdir]"
+	${ECHO} "       ./+TEXCONFIG PAPER [papersize]"
+	;;
+esac
+exit $exitcode
+EOF
+	${CHMOD} +x ./+TEXCONFIG
 	;;
 esac
