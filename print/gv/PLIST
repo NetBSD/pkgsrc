@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2004/12/30 21:04:25 snj Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/06 18:18:15 jlam Exp $
 bin/gv
+info/gv.info
 lib/gv/GV
 lib/gv/gv_class.ad
 lib/gv/gv_copyright.dat

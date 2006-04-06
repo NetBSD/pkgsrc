@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2005/03/17 12:24:13 salo Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/04/06 18:18:15 jlam Exp $
 bin/diffpp
 bin/enscript
 bin/mkafmmap
 bin/over
 bin/sliceprint
 bin/states
+info/enscript.info
 man/man1/diffpp.1
 man/man1/enscript.1
 man/man1/sliceprint.1

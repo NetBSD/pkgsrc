@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/04 23:21:30 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/06 18:18:15 jlam Exp $
 #
 
 DISTNAME=	latex-mk-1.6
@@ -18,7 +18,7 @@ CONFIGURE_ENV+=	BMAKE=${MAKE_PROGRAM:Q}
 CONFIGURE_ENV+=	GZCAT=${GZCAT:Q}
 CONFIGURE_ENV+=	GZIP=${GZIP_CMD:Q}
 
-INFO_FILES=	latex-mk.info
+INFO_FILES=	# PLIST
 
 TEST_DIRS=	${WRKSRC}
 TEST_TARGET=	check
