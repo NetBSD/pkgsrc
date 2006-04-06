@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.2 2006/04/06 14:39:11 jlam Exp $
+# $NetBSD: INSTALL,v 1.3 2006/04/06 19:11:34 minskim Exp $
 
 case "${STAGE}" in
 POST-INSTALL)
@@ -34,6 +34,7 @@ ACTION=$1
 
 TEXFONTS_DIR="@TEXFONTSDIR@"
 TEXMF_DATADIR="${PKG_PREFIX}/share/texmf"
+TEXMF_LOCALDATADIR="${PKG_PREFIX}/share/texmf-local"
 TEXMF_VARDIR="${PKG_PREFIX}/share/texmf-var"
 
 exitcode=0
@@ -60,6 +61,7 @@ REMOVE)
 	#
 	${RM} -f ${TEXFONTS_DIR}/ls-R
 	${RM} -f ${TEXMF_DATADIR}/ls-R
+	${RM} -f ${TEXMF_LOCALDATADIR}/ls-R
 	${RM} -f ${TEXMF_VARDIR}/ls-R
 
 	# We inspect both the user-modified and distributed fmtutil.cnf

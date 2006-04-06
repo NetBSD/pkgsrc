@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/04/06 14:39:11 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/06 19:11:34 minskim Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -36,7 +36,7 @@ CONF_FILES+=	${PREFIX}/share/texmf/web2c/fmtutil.cnf.dist		\
 		${PREFIX}/share/texmf/web2c/fmtutil.cnf
 CONF_FILES+=	${PREFIX}/share/texmf/web2c/texmf.cnf.dist		\
 		${PREFIX}/share/texmf/web2c/texmf.cnf
-OWN_DIRS+=	${PREFIX}/share/texmf-var
+OWN_DIRS+=	${PREFIX}/share/texmf-var ${PREFIX}/share/texmf-local
 
 .include "../../print/teTeX3-bin/Makefile.common"
 .include "../../graphics/xpm/buildlink3.mk"
