@@ -1,4 +1,4 @@
-.\"	$NetBSD: revbump.1,v 1.5 2006/03/07 06:51:20 wiz Exp $
+.\"	$NetBSD: revbump.1,v 1.6 2006/04/06 06:25:46 reed Exp $
 .\"
 .\" Copyright (c) 2003, 2004, 2005, 2006 The NetBSD Foundation, Inc.
 .\"
@@ -89,7 +89,7 @@ finddepends security/openssl \*[Gt] allbump
 grep buildlink3.mk allbump | sed 's/.buildlink3.mk//' \*[Gt] bl3bump
 grep -v buildlink3.mk allbump | sed 's/.Makefile$//' \*[Gt] makebump
 blbump \*[Lt] bl3bump \*[Gt] bl3bump.manual
-[handle the *RECOMMENDED* bumps in bl3bump.manual manually]
+[handle the *ABI_DEPENDS* bumps in bl3bump.manual manually]
 revbump \*[Lt] makebump \*[Gt] makebump.manual
 [handle the PKGREVISION bumps in makebump.manual manually;
  this will include any Makefile.common files - the files that include
