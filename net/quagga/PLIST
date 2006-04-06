@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/05/03 15:46:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/06 03:20:54 jlam Exp $
 include/quagga/buffer.h
 include/quagga/command.h
 include/quagga/distribute.h
@@ -42,6 +42,7 @@ include/quagga/vty.h
 include/quagga/zassert.h
 include/quagga/zclient.h
 include/quagga/zebra.h
+info/quagga.info
 lib/libospf.la
 lib/libzebra.la
 man/man1/vtysh.1

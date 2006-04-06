@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/04 21:30:26 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/06 03:20:54 jlam Exp $
 
 DISTNAME=	yafc-0.7.10
 PKGREVISION=	2
@@ -14,7 +14,7 @@ GNU_CONFIGURE=		yes
 USE_GNU_READLINE=	yes
 
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
-INFO_FILES=		yafc.info
+INFO_FILES=		# PLIST
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:46:47 tv Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/06 03:20:54 jlam Exp $
 
 DISTNAME=	netcat-0.7.1
 PKGNAME=	gnetcat-0.7.1
@@ -11,7 +11,6 @@ HOMEPAGE= 	http://netcat.sourceforge.net/
 COMMENT=	Read and write data across network connections
 
 GNU_CONFIGURE=		YES
-
-INFO_FILES=		netcat.info
+INFO_FILES=		# PLIST
 
 .include "../../mk/bsd.pkg.mk"

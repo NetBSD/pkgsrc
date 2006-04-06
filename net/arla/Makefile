@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2006/04/06 02:41:44 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2006/04/06 03:20:54 jlam Exp $
 
 DISTNAME=		arla-0.41
 PKGREVISION=		3
@@ -16,7 +16,7 @@ CONFLICTS+=		rx-[0-9]*
 CONFLICTS+=		kth-krb4-[0-9]*
 
 OSVERSION_SPECIFIC=	yes
-INFO_FILES=		arla.info send-pr.info
+INFO_FILES=		# PLIST
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
