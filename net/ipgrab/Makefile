@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/05 16:27:27 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/06 03:20:54 jlam Exp $
 
 DISTNAME=	ipgrab-0.9.9
 CATEGORIES=	net security
@@ -12,7 +12,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	makeinfo
-INFO_FILES=	ipgrab.info
+INFO_FILES=	# PLIST
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
