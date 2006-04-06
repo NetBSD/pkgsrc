@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2006/01/19 04:40:36 schmonz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:21:43 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TINYCDB_BUILDLINK3_MK:=	${TINYCDB_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ntinycdb}
 BUILDLINK_PACKAGES+=	tinycdb
 
 .if !empty(TINYCDB_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.tinycdb+=	tinycdb>=0.75
+BUILDLINK_API_DEPENDS.tinycdb+=	tinycdb>=0.75
 BUILDLINK_DEPMETHOD.tinycdb?=	build
 BUILDLINK_PKGSRCDIR.tinycdb?=	../../databases/tinycdb
 .endif	# TINYCDB_BUILDLINK3_MK

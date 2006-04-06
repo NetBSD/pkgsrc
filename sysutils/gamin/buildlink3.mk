@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:10:50 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:45 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GAMIN_BUILDLINK3_MK:=	${GAMIN_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngamin}
 BUILDLINK_PACKAGES+=	gamin
 
 .if !empty(GAMIN_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.gamin+=	gamin>=0.1.5
-BUILDLINK_RECOMMENDED.gamin?=	gamin>=0.1.5nb2
+BUILDLINK_API_DEPENDS.gamin+=	gamin>=0.1.5
+BUILDLINK_ABI_DEPENDS.gamin?=	gamin>=0.1.5nb2
 BUILDLINK_PKGSRCDIR.gamin?=	../../sysutils/gamin
 .endif	# GAMIN_BUILDLINK3_MK
 

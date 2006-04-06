@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/03/04 21:29:12 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2006/04/06 06:21:45 reed Exp $
 
 DISTNAME=	bonobo-1.0.22
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Architecture for creating reusable software components
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
-BUILDLINK_DEPENDS.libxml=	libxml>1.8.15
+BUILDLINK_API_DEPENDS.libxml=	libxml>1.8.15
 
 BROKEN_GETTEXT_DETECTION=	yes
 BUILD_USES_MSGFMT=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2006/03/30 18:06:17 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2006/04/06 06:21:56 reed Exp $
 
 BUILTIN_PKG:=	sysexits
 
@@ -31,7 +31,7 @@ USE_BUILTIN.sysexits=	${IS_BUILTIN.sysexits}
 .    if defined(BUILTIN_PKG.sysexits) && \
         !empty(IS_BUILTIN.sysexits:M[yY][eE][sS])
 USE_BUILTIN.sysexits=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.sysexits}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.sysexits}
 .        if !empty(USE_BUILTIN.sysexits:M[yY][eE][sS])
 USE_BUILTIN.sysexits!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.sysexits:Q}; then \

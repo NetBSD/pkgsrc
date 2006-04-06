@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.30 2006/03/14 01:14:29 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2006/04/06 06:22:13 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PERL5_BUILDLINK3_MK:=	${PERL5_BUILDLINK3_MK}+
@@ -16,7 +16,7 @@ BUILDLINK_PACKAGES+=	perl
 USE_TOOLS+=			perl
 PERL5_REQD+=			5.8.7
 TOOLS_DEPENDS.perl=		# buildlink3 will handle the dependency
-BUILDLINK_DEPENDS.perl+=	perl>=${PERL5_REQD}
+BUILDLINK_API_DEPENDS.perl+=	perl>=${PERL5_REQD}
 BUILDLINK_PKGSRCDIR.perl?=	../../lang/perl5
 
 PERL5_OPTIONS?=		# empty

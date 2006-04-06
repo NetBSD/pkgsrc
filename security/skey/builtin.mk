@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2006/03/30 18:06:18 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2006/04/06 06:22:44 reed Exp $
 
 BUILTIN_PKG:=	skey
 
@@ -45,7 +45,7 @@ USE_BUILTIN.skey=	${IS_BUILTIN.skey}
 .    if defined(BUILTIN_PKG.skey) && \
         !empty(IS_BUILTIN.skey:M[yY][eE][sS])
 USE_BUILTIN.skey=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.skey}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.skey}
 .        if !empty(USE_BUILTIN.skey:M[yY][eE][sS])
 USE_BUILTIN.skey!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.skey:Q}; then	\

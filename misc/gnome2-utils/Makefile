@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2006/03/30 21:33:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.54 2006/04/06 06:22:23 reed Exp $
 #
 
 DISTNAME=		gnome-utils-2.14.0
@@ -29,10 +29,10 @@ GCONF2_SCHEMAS+=	gnome-screenshot.schemas
 GCONF2_SCHEMAS+=	gnome-search-tool.schemas
 GCONF2_SCHEMAS+=	logview.schemas
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.9.1
-BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.8.4
-BUILDLINK_DEPENDS.libgnome+=	libgnome>=2.13.7
-BUILDLINK_DEPENDS.libgnomeui+=	libgnomeui>=2.13.2
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.9.1
+BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.8.4
+BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.13.7
+BUILDLINK_API_DEPENDS.libgnomeui+=	libgnomeui>=2.13.2
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/GConf2-ui/buildlink3.mk"

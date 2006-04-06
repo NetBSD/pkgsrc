@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/01 13:59:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2006/04/06 06:22:37 reed Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
@@ -31,7 +31,7 @@ do-install:
 		${PREFIX}/include/poppler
 	${INSTALL_DATA} ${WRKSRC}/poppler-qt.pc ${PREFIX}/lib/pkgconfig
 
-BUILDLINK_DEPENDS.poppler+=     poppler>=${POPPLER_VERS}nb1
+BUILDLINK_API_DEPENDS.poppler+=     poppler>=${POPPLER_VERS}nb1
 .include "../../print/poppler/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

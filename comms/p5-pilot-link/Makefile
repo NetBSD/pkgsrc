@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/02/05 23:08:28 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2006/04/06 06:21:39 reed Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
@@ -8,7 +8,7 @@ PKGREVISION=		5
 
 COMMENT=		Perl bindings for pilot-link
 
-BUILDLINK_DEPENDS.pilot-link-libs=	pilot-link-libs>=${PILOT_LINK_VERS}
+BUILDLINK_API_DEPENDS.pilot-link-libs=	pilot-link-libs>=${PILOT_LINK_VERS}
 
 USE_TOOLS+=		gmake
 

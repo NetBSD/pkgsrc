@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/03/30 03:44:41 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2006/04/06 06:21:32 reed Exp $
 
 DISTNAME=	sharutils-4.2.1
 PKGNAME=	g${DISTNAME}
@@ -35,7 +35,7 @@ CONFIGURE_ENV+=		SH=${TOOLS_SH:Q}
 # XXX ...but don't do this on Linux, where glibc-internalized gettext
 # always uses the non-prefixed symbols.
 #
-BUILDLINK_DEPENDS.gettext+= gettext-lib>=0.11
+BUILDLINK_API_DEPENDS.gettext+= gettext-lib>=0.11
 CPPFLAGS+=		-D_nl_default_dirname=libintl_nl_default_dirname
 .endif
 

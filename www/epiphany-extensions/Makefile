@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/06 00:18:26 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2006/04/06 06:22:54 reed Exp $
 #
 
 DISTNAME=	epiphany-extensions-1.8.1
@@ -36,7 +36,7 @@ CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/pref
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/webbrwsr
 .endif
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.8.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
