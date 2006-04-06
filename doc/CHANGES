@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13477 2006/04/06 22:50:20 minskim Exp $
+$NetBSD: CHANGES,v 1.13478 2006/04/06 23:08:16 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1918,3 +1918,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/getmail to 4.6.0 [schmonz 2006-04-06]
 	Updated math/cln to 1.1.11 [adam 2006-04-06]
 	Updated print/teTeX-bin to 2.0.2nb7 [minskim 2006-04-06]
+	Added print/texmf-dirs version 1.0 [minskim 2006-04-06]

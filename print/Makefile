@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2006/04/02 23:21:30 minskim Exp $
+# $NetBSD: Makefile,v 1.151 2006/04/06 23:08:16 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -131,6 +131,7 @@ SUBDIR+=	tex-textpos
 SUBDIR+=	tex-ucs
 SUBDIR+=	texfamily
 SUBDIR+=	texfamily-share
+SUBDIR+=	texmf-dirs
 SUBDIR+=	transfig
 SUBDIR+=	xfce4-print
 SUBDIR+=	xpdf
