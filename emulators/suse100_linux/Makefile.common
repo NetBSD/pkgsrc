@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2006/03/09 20:33:46 tonio Exp $
+# $NetBSD: Makefile.common,v 1.1.1.1.2.1 2006/04/06 15:10:16 salo Exp $
 
 .include "../../emulators/suse100_linux/vars.mk"
 .include "../../emulators/suse100_linux/arch.mk"
@@ -42,6 +42,19 @@ RPM2PKGARGS+=		-i ${TEMP}
 .for TEMP in ${RPMFILES}
 RPM2PKGARGS+=		${DISTDIR}/${DIST_SUBDIR}/${TEMP}
 .endfor
+
+# regenerate distinfo for all platforms supported by the suse100_* packages
+suse100-distinfo:
+	( ${ECHO} '$$'NetBSD'$$';			\
+	${ECHO} '';					\
+	MACHINE_ARCH=i386 ${MAKE} distinfo 1>&2;	\
+		${GREP} rpm distinfo;			\
+	MACHINE_ARCH=powerpc ${MAKE} distinfo 1>&2;	\
+		${GREP} rpm distinfo;			\
+	MACHINE_ARCH=x86_64 ${MAKE} distinfo 1>&2;	\
+		${GREP} rpm distinfo;			\
+	) > distinfo.new
+	${MV} -f distinfo.new distinfo
 
 .if !target(do-install)
 do-install:
