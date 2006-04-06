@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2006/02/20 14:04:45 joerg Exp $
+# $NetBSD: Makefile,v 1.72 2006/04/06 06:21:49 reed Exp $
 
 DISTNAME=		gettext-0.14.5
 CATEGORIES=		devel
@@ -10,7 +10,7 @@ COMMENT=		Tools for providing messages in different languages
 
 DEPENDS+=			gettext-m4-0.14.5:../../devel/gettext-m4
 DEPENDS+=			gettext-tools-0.14.5:../../devel/gettext-tools
-BUILDLINK_DEPENDS.gettext+=	gettext-lib>=0.14.5
+BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.14.5
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

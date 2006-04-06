@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/03/30 21:37:01 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/04/06 06:22:17 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 EVOLUTION_BUILDLINK3_MK:=	${EVOLUTION_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nevolution}
 BUILDLINK_PACKAGES+=	evolution
 
 .if !empty(EVOLUTION_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.evolution+=	evolution>=2.6.0
+BUILDLINK_API_DEPENDS.evolution+=	evolution>=2.6.0
 BUILDLINK_PKGSRCDIR.evolution?=	../../mail/evolution
 .endif	# EVOLUTION_BUILDLINK3_MK
 

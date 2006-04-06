@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/02/05 23:10:38 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/06 06:22:36 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PDFLIB_BUILDLINK3_MK:=	${PDFLIB_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npdflib}
 BUILDLINK_PACKAGES+=	pdflib
 
 .if !empty(PDFLIB_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.pdflib+=	pdflib>=4.0.3nb2
-BUILDLINK_RECOMMENDED.pdflib+=	pdflib>=4.0.3nb6
+BUILDLINK_API_DEPENDS.pdflib+=	pdflib>=4.0.3nb2
+BUILDLINK_ABI_DEPENDS.pdflib+=	pdflib>=4.0.3nb6
 BUILDLINK_PKGSRCDIR.pdflib?=	../../print/pdflib
 .endif	# PDFLIB_BUILDLINK3_MK
 

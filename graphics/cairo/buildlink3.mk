@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/02/05 23:09:28 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2006/04/06 06:22:01 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CAIRO_BUILDLINK3_MK:=	${CAIRO_BUILDLINK3_MK}+
@@ -11,13 +11,13 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncairo}
 BUILDLINK_PACKAGES+=	cairo
 
 .if !empty(CAIRO_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.cairo+=	cairo>=1.0.0nb2
-BUILDLINK_RECOMMENDED.cairo?=	cairo>=1.0.2nb3
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.0.0nb2
+BUILDLINK_ABI_DEPENDS.cairo?=	cairo>=1.0.2nb3
 BUILDLINK_PKGSRCDIR.cairo?=	../../graphics/cairo
 
-BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.5
-BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1.2
-BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
+BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.5
+BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
+BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 .endif	# CAIRO_BUILDLINK3_MK
 
 .include "../../devel/zlib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/02/13 15:23:28 taca Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 06:22:52 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 
@@ -22,7 +22,7 @@ RUBY_RD_LIST=	${RUBY_VERSION_LIST:C/([1-9][0-9]*)/ruby&-rdtool/g}
 
 BUILDLINK_FILES.ruby18-rdtool+=		bin/rd2
 BUILDLINK_DEPMETHOD.ruby18-rdtool?=	build
-BUILDLINK_DEPENDS.ruby18-rdtool+=	{${RUBY_RD_LIST}}>=0.6.14
+BUILDLINK_API_DEPENDS.ruby18-rdtool+=	{${RUBY_RD_LIST}}>=0.6.14
 BUILDLINK_PKGSRCDIR.ruby18-rdtool?=	../../textproc/ruby-rdtool
 .endif
 

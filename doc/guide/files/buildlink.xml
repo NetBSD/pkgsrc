@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.13 2006/03/09 21:45:51 jlam Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.14 2006/04/06 06:21:57 reed Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -85,7 +85,7 @@
     </para>
 
 <programlisting>
-    BUILDLINK_DEPENDS.foo+=   foo>=1.1.0
+    BUILDLINK_API_DEPENDS.foo+=   foo>=1.1.0
     .include "../../category/foo/buildlink3.mk"
 </programlisting>
 
@@ -197,7 +197,7 @@
     BUILDLINK_PACKAGES+=    tiff
 
     .if !empty(TIFF_BUILDLINK3_MK:M+)
-    BUILDLINK_DEPENDS.tiff+=        tiff>=3.6.1
+    BUILDLINK_API_DEPENDS.tiff+=        tiff>=3.6.1
     BUILDLINK_PKGSRCDIR.tiff?=      ../../graphics/tiff
     .endif  # TIFF_BUILDLINK3_MK
 
@@ -235,7 +235,7 @@
 
       <itemizedlist>
         <listitem>
-	  <para> <varname>BUILDLINK_DEPENDS.<replaceable>pkg</replaceable></varname>
+	  <para> <varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>
 	    is the actual dependency recorded in the installed
             package; this should always be set using
 	    <command>+=</command> to ensure that
@@ -363,12 +363,12 @@
     </sect2>
 
     <sect2 id="updating-buildlink-depends">
-      <title>Updating <varname>BUILDLINK_DEPENDS.<replaceable>pkg</replaceable></varname> in <filename>buildlink3.mk</filename> files</title>
+      <title>Updating <varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname> in <filename>buildlink3.mk</filename> files</title>
 
       <para>
         There are two situations that require increasing the
 	dependency listed in
-	<varname>BUILDLINK_DEPENDS.<replaceable>pkg</replaceable></varname>
+	<varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>
 	after a package update: </para>
 
       <orderedlist>
@@ -383,27 +383,27 @@
       </orderedlist>
 
       <para> In these cases,
-	<varname>BUILDLINK_DEPENDS.<replaceable>pkg</replaceable></varname>
+	<varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>
 	should be adjusted to require at least the new package
 	version.  In some cases, the packages that depend on this new
 	version may need their <varname>PKGREVISION</varname>s
 	increased and, if they have <filename>buildlink3.mk</filename>
 	files, their
-	<varname>BUILDLINK_DEPENDS.<replaceable>pkg</replaceable></varname>
+	<varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>
 	adjusted, too. This is needed so that binary packages made
 	using it will require the correct package dependency and not
 	settle for an older one which will not contain the necessary
 	shared libraries. </para>
 
       <para> Please take careful consideration before adjusting
-	<varname>BUILDLINK_DEPENDS.<replaceable>pkg</replaceable></varname>
+	<varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>
 	as we don't want to cause unneeded package deletions and
 	rebuilds.  In many cases, new versions of packages work just
 	fine with older dependencies.  See <xref
 	linkend="dependencies"/> for
 	more information about dependencies on other packages,
-	including the <varname>BUILDLINK_RECOMMENDED</varname> and
-	<varname>RECOMMENDED</varname> definitions. </para>
+	including the <varname>BUILDLINK_ABI_DEPENDS</varname> and
+	<varname>ABI_DEPENDS</varname> definitions. </para>
     </sect2>
   </sect1>
 
@@ -473,7 +473,7 @@
     .if !defined(USE_BUILTIN.foo)
     USE_BUILTIN.foo?=       ${IS_BUILTIN.foo}
     .  if defined(BUILTIN_PKG.foo)
-    .    for _depend_ in ${BUILDLINK_DEPENDS.foo}
+    .    for _depend_ in ${BUILDLINK_API_DEPENDS.foo}
     .      if !empty(USE_BUILTIN.foo:M[yY][eE][sS])
     USE_BUILTIN.foo!=                                                       \
           if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.foo}; then     \
@@ -519,11 +519,11 @@
         <filename>builtin.mk</filename> files.  The code in this
         section must make the determination whether the built-in
         software is adequate to satisfy the dependencies listed in
-        <varname>BUILDLINK_DEPENDS.<replaceable>pkg</replaceable></varname>.
+        <varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>.
         This is typically done by comparing
         <varname>BUILTIN_PKG.<replaceable>pkg</replaceable></varname>
         against each of the dependencies in
-        <varname>BUILDLINK_DEPENDS.<replaceable>pkg</replaceable></varname>.
+        <varname>BUILDLINK_API_DEPENDS.<replaceable>pkg</replaceable></varname>.
         <varname>USE_BUILTIN.<replaceable>pkg</replaceable></varname>
         <emphasis>must</emphasis> be set to the correct value by the
         end of the <filename>builtin.mk</filename> file.  Note that

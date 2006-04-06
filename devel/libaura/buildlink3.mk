@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/02/09 05:40:28 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:21:50 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBAURA_BUILDLINK3_MK:=	${LIBAURA_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibaura}
 BUILDLINK_PACKAGES+=	libaura
 
 .if !empty(LIBAURA_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libaura+=	libaura>=2.0
+BUILDLINK_API_DEPENDS.libaura+=	libaura>=2.0
 BUILDLINK_PKGSRCDIR.libaura?=	../../devel/libaura
 .endif	# LIBAURA_BUILDLINK3_MK
 

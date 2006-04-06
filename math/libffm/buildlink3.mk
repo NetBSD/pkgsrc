@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:10:02 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:20 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBFFM_BUILDLINK3_MK:=	${LIBFFM_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibffm}
 BUILDLINK_PACKAGES+=	libffm
 
 .if !empty(LIBFFM_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libffm+=	libffm>=0.28
-BUILDLINK_RECOMMENDED.libffm?=	libffm>=0.28nb1
+BUILDLINK_API_DEPENDS.libffm+=	libffm>=0.28
+BUILDLINK_ABI_DEPENDS.libffm?=	libffm>=0.28nb1
 BUILDLINK_PKGSRCDIR.libffm?=	../../math/libffm
 .endif	# LIBFFM_BUILDLINK3_MK
 

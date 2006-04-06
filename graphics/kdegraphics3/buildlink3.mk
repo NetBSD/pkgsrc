@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/02/05 23:09:34 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/04/06 06:22:03 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 KDEGRAPHICS_BUILDLINK3_MK:=	${KDEGRAPHICS_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nkdegraphics}
 BUILDLINK_PACKAGES+=	kdegraphics
 
 .if !empty(KDEGRAPHICS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.kdegraphics+=	kdegraphics>=3.5.0nb2
-BUILDLINK_RECOMMENDED.kdegraphics?=	kdegraphics>=3.5.1nb2
+BUILDLINK_API_DEPENDS.kdegraphics+=	kdegraphics>=3.5.0nb2
+BUILDLINK_ABI_DEPENDS.kdegraphics?=	kdegraphics>=3.5.1nb2
 BUILDLINK_PKGSRCDIR.kdegraphics?=	../../graphics/kdegraphics3
 .endif	# KDEGRAPHICS_BUILDLINK3_MK
 

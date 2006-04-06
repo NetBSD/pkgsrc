@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:09:35 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:04 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBKIPI_BUILDLINK3_MK:=	${LIBKIPI_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibkipi}
 BUILDLINK_PACKAGES+=	libkipi
 
 .if !empty(LIBKIPI_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libkipi+=	libkipi>=0.1
-BUILDLINK_RECOMMENDED.libkipi?=	libkipi>=0.1.2nb2
+BUILDLINK_API_DEPENDS.libkipi+=	libkipi>=0.1
+BUILDLINK_ABI_DEPENDS.libkipi?=	libkipi>=0.1.2nb2
 BUILDLINK_PKGSRCDIR.libkipi?=	../../graphics/libkipi
 
 .  for dir in share/kde/apps/kipi/data share/kde/apps/kipi

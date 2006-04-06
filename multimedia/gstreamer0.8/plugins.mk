@@ -1,4 +1,4 @@
-# $NetBSD: plugins.mk,v 1.2 2006/03/14 01:14:31 jlam Exp $
+# $NetBSD: plugins.mk,v 1.3 2006/04/06 06:22:25 reed Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # GStreamer modules.  It takes care of rebuilding the corresponding databases
@@ -24,7 +24,7 @@ PRINT_PLIST_AWK+=	/^@dirrm libdata\/gstreamer-0.8/ { next; }
 .if defined(_GSTREAMER0.8_NO_DEPEND)
 BUILDLINK_PREFIX.gstreamer0.8=	${LOCALBASE}
 .else
-BUILDLINK_DEPENDS.gstreamer0.8+=	gstreamer0.8>=0.8.1
+BUILDLINK_API_DEPENDS.gstreamer0.8+=	gstreamer0.8>=0.8.1
 .  include "../../multimedia/gstreamer0.8/buildlink3.mk"
 .endif
 

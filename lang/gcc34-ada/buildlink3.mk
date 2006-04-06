@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/02/05 23:09:45 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/06 06:22:11 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GCCADA_BUILDLINK3_MK:=	${GCCADA_BUILDLINK3_MK}+
@@ -12,8 +12,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngcc34-ada}
 BUILDLINK_PACKAGES+=	gcc34-ada
 
 .if !empty(GCCADA_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.gcc34-ada+=	gcc34-ada>=3.4.1nb4
-BUILDLINK_RECOMMENDED.gcc34-ada?=	gcc34-ada>=3.4.4nb1
+BUILDLINK_API_DEPENDS.gcc34-ada+=	gcc34-ada>=3.4.1nb4
+BUILDLINK_ABI_DEPENDS.gcc34-ada?=	gcc34-ada>=3.4.4nb1
 BUILDLINK_PKGSRCDIR.gcc34-ada?=	../../lang/gcc34-ada
 BUILDLINK_ENV+= ADAC=${BUILDLINK_PREFIX.gcc34-ada}/bin/gcc
 .  if exists(${BUILDLINK_PREFIX.gcc34-ada}/bin/gcc)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/02/26 21:11:28 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2006/04/06 06:22:15 reed Exp $
 #
 
 DISTNAME=	tclx8.3.5-src
@@ -14,7 +14,7 @@ COMMENT=	Extended Tcl (TclX), a set of Tcl extensions for system programming
 .include "../../lang/tcl/Makefile.version"
 
 CONFLICTS+=		tclX-[0-9]*
-BUILDLINK_DEPENDS.tcl+=	tcl>=8.4.7
+BUILDLINK_API_DEPENDS.tcl+=	tcl>=8.4.7
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

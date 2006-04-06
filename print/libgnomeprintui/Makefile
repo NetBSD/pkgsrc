@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/02/05 23:10:38 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2006/04/06 06:22:36 reed Exp $
 #
 
 DISTNAME=	libgnomeprintui-2.12.1
@@ -23,7 +23,7 @@ PKGCONFIG_OVERRIDE=	libgnomeprintui/libgnomeprintui-2.2.pc.in
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
-BUILDLINK_DEPENDS.libgnomeprint+=	libgnomeprint>=2.12.1
+BUILDLINK_API_DEPENDS.libgnomeprint+=	libgnomeprint>=2.12.1
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/GConf2/buildlink3.mk"

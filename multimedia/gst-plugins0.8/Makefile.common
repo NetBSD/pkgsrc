@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2006/01/18 12:44:03 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/04/06 06:22:25 reed Exp $
 #
 
 DISTNAME=		gst-plugins-0.8.11
@@ -163,7 +163,7 @@ SUBST_SED.libs=		-e 's|$$(top_builddir)/gst-libs/gst/libgst|${BUILDLINK_PREFIX.g
 .include "../../multimedia/gst-plugins0.8/buildlink3.mk"
 .endif
 
-BUILDLINK_DEPENDS.gstreamer0.8+=	gstreamer0.8>=0.8.11
+BUILDLINK_API_DEPENDS.gstreamer0.8+=	gstreamer0.8>=0.8.11
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

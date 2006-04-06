@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/03/21 06:00:48 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/06 06:22:44 reed Exp $
 
 DISTNAME=	seahorse-0.8.1
 PKGNAME=	seahorse-gedit-0.8.1
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--disable-nautilus
 
 GCONF2_SCHEMAS= 	seahorse-gedit.schemas
 
-BUILDLINK_DEPENDS.gpgme+=	gpgme>=1.0.1nb2
+BUILDLINK_API_DEPENDS.gpgme+=	gpgme>=1.0.1nb2
 
 BUILD_DIRS=	plugins/gedit
 INSTALL_DIRS=	plugins/gedit

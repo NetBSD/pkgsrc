@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:03 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:26 reed Exp $
 #
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
@@ -12,8 +12,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibogg}
 BUILDLINK_PACKAGES+=	libogg
 
 .if !empty(LIBOGG_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libogg+=	libogg>=1.1
-BUILDLINK_RECOMMENDED.libogg+=	libogg>=1.1.2nb1
+BUILDLINK_API_DEPENDS.libogg+=	libogg>=1.1
+BUILDLINK_ABI_DEPENDS.libogg+=	libogg>=1.1.2nb1
 BUILDLINK_PKGSRCDIR.libogg?=	../../multimedia/libogg
 .endif	# LIBOGG_BUILDLINK3_MK
 

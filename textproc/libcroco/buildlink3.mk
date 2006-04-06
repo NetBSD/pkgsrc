@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/02/05 23:11:03 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2006/04/06 06:22:51 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBCROCO_BUILDLINK3_MK:=	${LIBCROCO_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibcroco}
 BUILDLINK_PACKAGES+=	libcroco
 
 .if !empty(LIBCROCO_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libcroco+=	libcroco>=0.6.0
-BUILDLINK_RECOMMENDED.libcroco+=	libcroco>=0.6.0nb4
+BUILDLINK_API_DEPENDS.libcroco+=	libcroco>=0.6.0
+BUILDLINK_ABI_DEPENDS.libcroco+=	libcroco>=0.6.0nb4
 BUILDLINK_PKGSRCDIR.libcroco?=	../../textproc/libcroco
 .endif	# LIBCROCO_BUILDLINK3_MK
 

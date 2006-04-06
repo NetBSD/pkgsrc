@@ -1,4 +1,4 @@
-# $NetBSD: oss.builtin.mk,v 1.1 2006/03/09 20:23:13 jlam Exp $
+# $NetBSD: oss.builtin.mk,v 1.2 2006/04/06 06:23:06 reed Exp $
 
 BUILTIN_PKG:=	oss
 
@@ -37,7 +37,7 @@ USE_BUILTIN.oss=	${IS_BUILTIN.oss}
 .    if defined(BUILTIN_PKG.oss) && \
         !empty(IS_BUILTIN.oss:M[yY][eE][sS])
 USE_BUILTIN.oss=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.oss}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.oss}
 .        if !empty(USE_BUILTIN.oss:M[yY][eE][sS])
 USE_BUILTIN.oss!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.oss:Q}; then	\

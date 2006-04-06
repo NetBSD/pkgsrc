@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:08:23 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:21:38 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 VERILOG_CURRENT_BUILDLINK3_MK:=	${VERILOG_CURRENT_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nverilog-current}
 BUILDLINK_PACKAGES+=	verilog-current
 
 .if !empty(VERILOG_CURRENT_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.verilog-current+=	verilog-current>=20021019
-BUILDLINK_RECOMMENDED.verilog-current?=	verilog-current>=20060124nb1
+BUILDLINK_API_DEPENDS.verilog-current+=	verilog-current>=20021019
+BUILDLINK_ABI_DEPENDS.verilog-current?=	verilog-current>=20060124nb1
 BUILDLINK_PKGSRCDIR.verilog-current?=	../../cad/verilog-current
 .endif	# VERILOG_CURRENT_BUILDLINK3_MK
 

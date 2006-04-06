@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/02/05 23:09:41 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2006/04/06 06:22:06 reed Exp $
 
 DISTNAME=	xfig.3.2.5-alpha5.full
 PKGNAME=	xfig-3.2.5alpha5
@@ -13,7 +13,7 @@ COMMENT=	CAD-like 2D drawing tool, good for colorful scale drawings & ISOs
 DEPENDS+=	transfig>=3.2.4:../../print/transfig
 # if we're using Xaw3d, then we need 1.5E or newer since using that
 # version means we need a patch, which is currently used unconditionally
-BUILDLINK_DEPENDS.Xaw3d+=	Xaw3d>=1.5E
+BUILDLINK_API_DEPENDS.Xaw3d+=	Xaw3d>=1.5E
 
 WRKSRC=			${WRKDIR}/xfig.3.2.5-alpha5
 USE_IMAKE=		YES

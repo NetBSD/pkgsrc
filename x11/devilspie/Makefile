@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/03/12 18:23:09 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2006/04/06 06:22:57 reed Exp $
 
 DISTNAME=		devilspie-0.17.1
 CATEGORIES=		x11
@@ -19,7 +19,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/devilspie
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/devilspie/
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.9.1
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.9.1
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/03/30 03:44:43 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2006/04/06 06:22:11 reed Exp $
 #
 
 DISTNAME=	gawk-3.1.5
@@ -35,7 +35,7 @@ PKG_SUPPORTED_OPTIONS=	portals
 CONFIGURE_ARGS+=	--enable-portals
 .endif
 
-BUILDLINK_DEPENDS.gettext+=	gettext-lib>=0.10.36
+BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.10.36
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

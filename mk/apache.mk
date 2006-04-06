@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.9 2005/04/21 23:05:41 sketch Exp $
+# $NetBSD: apache.mk,v 1.10 2006/04/06 06:23:05 reed Exp $
 #
 # This Makefile fragment handles Apache dependencies and make variables,
 # and is meant to be included by packages that require Apache either at
@@ -108,8 +108,8 @@ PKG_FAIL_REASON=	"no acceptable apache found"
 _PKG_APACHE=		"none"
 .endif
 
-BUILDLINK_DEPENDS.apache13?=	apache-1.3*
-BUILDLINK_DEPENDS.apache2?=	apache-2*
+BUILDLINK_API_DEPENDS.apache13?=	apache-1.3*
+BUILDLINK_API_DEPENDS.apache2?=	apache-2*
 
 .if ${_PKG_APACHE} == "apache13"
 _APACHE_PKGSRCDIR=	../../www/apache

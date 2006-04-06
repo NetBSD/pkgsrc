@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:11:31 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:56 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XCOMPOSITE_BUILDLINK3_MK:=	${XCOMPOSITE_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NXcomposite}
 BUILDLINK_PACKAGES+=	Xcomposite
 
 .if !empty(XCOMPOSITE_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.Xcomposite+=		Xcomposite>=1.0.1
-BUILDLINK_RECOMMENDED.Xcomposite?=	Xcomposite>=1.0.1nb2
+BUILDLINK_API_DEPENDS.Xcomposite+=		Xcomposite>=1.0.1
+BUILDLINK_ABI_DEPENDS.Xcomposite?=	Xcomposite>=1.0.1nb2
 BUILDLINK_PKGSRCDIR.Xcomposite?=	../../x11/Xcomposite
 .endif	# XCOMPOSITE_BUILDLINK3_MK
 

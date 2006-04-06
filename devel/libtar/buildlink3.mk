@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2004/03/18 09:12:10 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:21:53 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBTAR_BUILDLINK3_MK:=	${LIBTAR_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibtar}
 BUILDLINK_PACKAGES+=	libtar
 
 .if !empty(LIBTAR_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libtar+=	libtar>=1.2.11
+BUILDLINK_API_DEPENDS.libtar+=	libtar>=1.2.11
 BUILDLINK_PKGSRCDIR.libtar?=	../../devel/libtar
 .endif	# LIBTAR_BUILDLINK3_MK
 
