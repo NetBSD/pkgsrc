@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2006/04/06 06:21:51 reed Exp $
+# $NetBSD: Makefile,v 1.55 2006/04/06 18:25:39 reed Exp $
 #
 
 DISTNAME=	libgnome-2.14.0
@@ -53,7 +53,7 @@ GCONF2_SCHEMAS+=	desktop_gnome_sound.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_thumbnailers.schemas
 GCONF2_SCHEMAS+=	desktop_gnome_typing_break.schemas
 
-BUILDLINK_DEPENDS.libbonobo+=	libbonobo>=2.13.0
+BUILDLINK_API_DEPENDS.libbonobo+=	libbonobo>=2.13.0
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../audio/libaudiofile/buildlink3.mk"
