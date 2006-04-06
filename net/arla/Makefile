@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2006/03/14 14:09:35 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2006/04/06 02:41:44 jlam Exp $
 
 DISTNAME=		arla-0.41
 PKGREVISION=		3
@@ -48,8 +48,11 @@ SUBST_FILES.paths=	${WRKDIR}/lkm.conf
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_STAGE.paths=	post-patch
 
-EGDIR=		${PREFIX}/share/examples/arla
+INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
+INSTALL_MAKE_FLAGS+=	lkmdir=${PREFIX:Q}/lkm
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR:Q}
 
+EGDIR=		${PREFIX}/share/examples/arla
 EGFILES=	CellServDB DynRootDB SuidCells ThisCell arla.conf
 
 .for f in ${EGFILES}
