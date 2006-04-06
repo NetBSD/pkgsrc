@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.14 2006/04/06 06:21:57 reed Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.15 2006/04/06 07:33:30 reed Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -241,8 +241,7 @@
 	    <command>+=</command> to ensure that
             we're appending to any pre-existing list of values.  This
             variable should be set to the first version of the
-            package that had the last change in the major number of a
-            shared library or that had a major API change.
+            package that had an API change.
 	    </para>
 	</listitem>
 
