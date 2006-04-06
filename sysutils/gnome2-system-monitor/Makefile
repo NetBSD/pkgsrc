@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/03/30 21:33:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.36 2006/04/06 18:25:39 reed Exp $
 #
 
 DISTNAME=	gnome-system-monitor-2.14.0
@@ -26,7 +26,7 @@ pre-configure:
 	cd ${WRKSRC} && ${PREFIX}/bin/libtoolize
 	cd ${WRKSRC} && autoconf
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.9.1
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.9.1
 
 # TODO: Add libgksu support.
 .include "../../devel/GConf2/schemas.mk"

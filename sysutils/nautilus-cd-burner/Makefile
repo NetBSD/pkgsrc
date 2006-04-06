@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/04/04 18:07:16 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2006/04/06 18:25:40 reed Exp $
 #
 
 DISTNAME=	nautilus-cd-burner-2.14.0.2
@@ -38,8 +38,8 @@ CONF_FILES=		${EGDIR}/mapping-modules.conf \
 
 GCONF2_SCHEMAS=		ncb.schemas
 
-BUILDLINK_DEPENDS.eel2+=	eel2>=2.13.3
-BUILDLINK_DEPENDS.nautilus+=	nautilus>=2.13.4
+BUILDLINK_API_DEPENDS.eel2+=	eel2>=2.13.3
+BUILDLINK_API_DEPENDS.nautilus+=	nautilus>=2.13.4
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
