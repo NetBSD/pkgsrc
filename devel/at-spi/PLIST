@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/03/30 21:22:11 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/04/06 16:49:55 drochner Exp $
 include/at-spi-1.0/cspi/spi-impl.h
 include/at-spi-1.0/cspi/spi-listener.h
 include/at-spi-1.0/cspi/spi-roletypes.h
@@ -41,6 +41,102 @@ lib/pkgconfig/cspi-1.0.pc
 lib/pkgconfig/libloginhelper-1.0.pc
 lib/pkgconfig/libspi-1.0.pc
 libexec/at-spi-registryd
+share/doc/${PKGNAME}/reference/html/Accessibility_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Accessible_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Accessible_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Action_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Action_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Application_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Application_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Component_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Component_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Desktop_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Desktop_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__EditableText_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__EditableText_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Event_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Event_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Hyperlink_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Hyperlink_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Hypertext_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Hypertext_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Image_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Image_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__LoginHelper_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__LoginHelper_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Registry_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Registry_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Relation_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Relation_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Role_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Role_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Selection_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Selection_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Selector_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Selector_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__State_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__State_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__StreamableContent_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__StreamableContent_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Table_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Table_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Text_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Text_8idl.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Value_8idl-source.html
+share/doc/${PKGNAME}/reference/html/Accessibility__Value_8idl.html
+share/doc/${PKGNAME}/reference/html/annotated.html
+share/doc/${PKGNAME}/reference/html/doxygen.css
+share/doc/${PKGNAME}/reference/html/doxygen.png
+share/doc/${PKGNAME}/reference/html/exceptionAccessibility_1_1StreamableContent_1_1IOError.html
+share/doc/${PKGNAME}/reference/html/exceptionAccessibility_1_1StreamableContent_1_1NoPermission.html
+share/doc/${PKGNAME}/reference/html/exceptionAccessibility_1_1StreamableContent_1_1NotSupported.html
+share/doc/${PKGNAME}/reference/html/files.html
+share/doc/${PKGNAME}/reference/html/functions.html
+share/doc/${PKGNAME}/reference/html/hierarchy.html
+share/doc/${PKGNAME}/reference/html/index.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Accessible.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Accessible.png
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Action.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Application.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Application.png
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1CommandListener.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Component.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Desktop.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Desktop.png
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1DeviceEventController.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1DeviceEventListener.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1EditableText.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1EditableText.png
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1EventListener.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1EventListener.png
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Hyperlink.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Hypertext.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Image.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1LoginHelper.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Registry.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Registry.png
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Relation.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Selection.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Selector.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1StateSet.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1StreamableContent.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Table.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Text.html
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Text.png
+share/doc/${PKGNAME}/reference/html/interfaceAccessibility_1_1Value.html
+share/doc/${PKGNAME}/reference/html/namespaceAccessibility.html
+share/doc/${PKGNAME}/reference/html/namespacemembers.html
+share/doc/${PKGNAME}/reference/html/namespaces.html
+share/doc/${PKGNAME}/reference/html/structAccessibility_1_1BoundingBox.html
+share/doc/${PKGNAME}/reference/html/structAccessibility_1_1Command.html
+share/doc/${PKGNAME}/reference/html/structAccessibility_1_1DeviceEvent.html
+share/doc/${PKGNAME}/reference/html/structAccessibility_1_1Event.html
+share/doc/${PKGNAME}/reference/html/structAccessibility_1_1EventDetails.html
+share/doc/${PKGNAME}/reference/html/structAccessibility_1_1EventListenerMode.html
+share/doc/${PKGNAME}/reference/html/structAccessibility_1_1KeyDefinition.html
+share/doc/${PKGNAME}/reference/html/structAccessibility_1_1LoginHelper_1_1WindowInfo.html
+share/doc/${PKGNAME}/reference/html/structAccessibility_1_1Text_1_1Range.html
 share/doc/at-spi-cspi/at-spi-cspi-Accessible-Objects.html
 share/doc/at-spi-cspi/at-spi-cspi-AccessibleAction-Interface.html
 share/doc/at-spi-cspi/at-spi-cspi-AccessibleApplication-API.html
@@ -105,6 +201,7 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/at-spi.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/at-spi.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/at-spi.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/at-spi.mo
+${PKGLOCALEDIR}/locale/dz/LC_MESSAGES/at-spi.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/at-spi.mo
 ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/at-spi.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/at-spi.mo
@@ -163,6 +260,9 @@ ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/at-spi.mo
 @dirrm share/idl/at-spi-1.0
 @comment in ORBit2: @dirrm share/idl
 @dirrm share/doc/at-spi-cspi
+@dirrm share/doc/${PKGNAME}/reference/html
+@dirrm share/doc/${PKGNAME}/reference
+@dirrm share/doc/${PKGNAME}
 @comment in ORBit2: @dirrm lib/orbit-2.0
 @comment in gtk2: @dirrm lib/gtk-2.0/modules
 @comment in libbonobo: @dirrm lib/bonobo/servers
