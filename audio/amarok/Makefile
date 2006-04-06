@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/04/04 20:13:55 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2006/04/06 06:21:33 reed Exp $
 
 DISTNAME=		amarok-1.3.9
 CATEGORIES=		audio kde
@@ -22,9 +22,9 @@ CONFIGURE_ARGS+=	--without-arts	# disable aRts engine
 
 LIBS+=			${LIBOSSAUDIO}
 
-BUILDLINK_DEPENDS.kdebase+=	kdebase>=3.3.0
-BUILDLINK_DEPENDS.kdelibs+=	kdelibs>=3.3.0
-BUILDLINK_DEPENDS.taglib+=	taglib>=1.4
+BUILDLINK_API_DEPENDS.kdebase+=	kdebase>=3.3.0
+BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs>=3.3.0
+BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.4
 
 .include "../../audio/libvisual/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"

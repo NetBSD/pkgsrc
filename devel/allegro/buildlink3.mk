@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:08:39 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:21:44 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ALLEGRO_BUILDLINK3_MK:=	${ALLEGRO_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nallegro}
 BUILDLINK_PACKAGES+=	allegro
 
 .if !empty(ALLEGRO_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.allegro+=	allegro>=4.1.13
-BUILDLINK_RECOMMENDED.allegro?=	allegro>=4.2.0nb1
+BUILDLINK_API_DEPENDS.allegro+=	allegro>=4.1.13
+BUILDLINK_ABI_DEPENDS.allegro?=	allegro>=4.2.0nb1
 BUILDLINK_PKGSRCDIR.allegro?=	../../devel/allegro
 .endif	# ALLEGRO_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:08:17 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/06 06:21:37 reed Exp $
 #
 
 .include "../../audio/xmms/Makefile.common"
@@ -11,7 +11,7 @@ COMMENT=	XMMS plugin to output sound through the esound daemon
 
 CONFLICTS+=	xmms<=1.2.7nb8
 
-BUILDLINK_DEPENDS.xmms+=	xmms>=1.2.7nb9
+BUILDLINK_API_DEPENDS.xmms+=	xmms>=1.2.7nb9
 
 BUILD_DIRS=	${WRKSRC}/Output/esd
 INSTALL_DIRS=	${WRKSRC}/Output/esd

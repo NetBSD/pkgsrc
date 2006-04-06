@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/04/06 03:33:28 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/04/06 06:22:36 reed Exp $
 
 DISTNAME=	dvipng-1.7
 CATEGORIES=	textproc converters
@@ -14,7 +14,7 @@ GNU_CONFIGURE=		yes
 
 INFO_FILES=		dvipng.info
 
-BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.3
+BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.3
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2005/01/03 01:56:15 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:21:51 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBHFS_BUILDLINK3_MK:=	${LIBHFS_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibhfs}
 BUILDLINK_PACKAGES+=	libhfs
 
 .if !empty(LIBHFS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libhfs+=	libhfs>=3.2.6nb1
+BUILDLINK_API_DEPENDS.libhfs+=	libhfs>=3.2.6nb1
 BUILDLINK_PKGSRCDIR.libhfs?=	../../devel/libhfs
 .endif	# LIBHFS_BUILDLINK3_MK
 

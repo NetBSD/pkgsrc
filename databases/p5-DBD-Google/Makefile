@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:29:09 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/06 06:21:41 reed Exp $
 #
 
 DISTNAME=		DBD-Google-0.11
@@ -14,7 +14,7 @@ DEPENDS+=		p5-Net-Google>=0.61:../../net/p5-Net-Google
 
 PERL5_PACKLIST=		auto/DBD/Google/.packlist
 
-BUILDLINK_DEPENDS.p5-DBI?=	p5-DBI>=1.39
+BUILDLINK_API_DEPENDS.p5-DBI?=	p5-DBI>=1.39
 
 .include "../../databases/p5-DBI/buildlink3.mk"
 

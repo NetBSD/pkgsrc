@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:08:34 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:21:42 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 POSTGRESQL73_LIB_BUILDLINK3_MK:=	${POSTGRESQL73_LIB_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npostgresql73-lib}
 BUILDLINK_PACKAGES+=	postgresql73-lib
 
 .if !empty(POSTGRESQL73_LIB_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.postgresql73-lib+=	postgresql73-lib>=7.3.10
-BUILDLINK_RECOMMENDED.postgresql73-lib?=	postgresql73-lib>=7.3.10nb2
+BUILDLINK_API_DEPENDS.postgresql73-lib+=	postgresql73-lib>=7.3.10
+BUILDLINK_ABI_DEPENDS.postgresql73-lib?=	postgresql73-lib>=7.3.10nb2
 BUILDLINK_PKGSRCDIR.postgresql73-lib?=	../../databases/postgresql73-lib
 BUILDLINK_INCDIRS.postgresql73-lib?=	include/postgresql
 BUILDLINK_FILES.postgresql73-lib+=	include/pgsql/*

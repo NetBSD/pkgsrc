@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/03/30 21:26:24 jmmv Exp $
+# $NetBSD: Makefile,v 1.47 2006/04/06 06:22:24 reed Exp $
 #
 
 DISTNAME=		yelp-2.14.0
@@ -13,7 +13,7 @@ COMMENT=		Help browser for GNOME 2 desktop
 DEPENDS+=		docbook>=4.2:../../textproc/docbook
 BUILD_USES_MSGFMT=	yes
 
-BUILDLINK_DEPENDS.libxslt+=	libxslt>=1.1.4
+BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=1.1.4
 
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake pkg-config
@@ -31,7 +31,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.yelp
 
 .if !empty(PKG_OPTIONS:Mfirefox)
 # Require a version that has the .pc files in it.
-BUILDLINK_DEPENDS.firefox+=     firefox>=1.5nb2
+BUILDLINK_API_DEPENDS.firefox+=     firefox>=1.5nb2
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"

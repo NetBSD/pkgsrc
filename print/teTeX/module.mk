@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.12 2006/03/14 01:14:32 jlam Exp $
+# $NetBSD: module.mk,v 1.13 2006/04/06 06:22:37 reed Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # install TeX packages.  It takes care of rebuilding the ls-R database
@@ -19,7 +19,7 @@ TEXMFDIRS?=		${PKG_LOCALTEXMFPREFIX}
 TEX_FONTMAPS?=		# empty
 
 .if !empty(TEX_FONTMAPS)
-BUILDLINK_DEPENDS.teTeX-bin+=	teTeX-bin>=3.0nb4
+BUILDLINK_API_DEPENDS.teTeX-bin+=	teTeX-bin>=3.0nb4
 .endif
 
 FILES_SUBST+=		MKTEXLSR="${LOCALBASE}/bin/mktexlsr"

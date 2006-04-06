@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/03/12 14:38:25 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:22:15 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PANTOMIME_BUILDLINK3_MK:=	${PANTOMIME_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NPantomime}
 BUILDLINK_PACKAGES+=	Pantomime
 
 .if !empty(PANTOMIME_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.Pantomime+=	Pantomime>=1.1.2
-BUILDLINK_RECOMMENDED.Pantomime+=	Pantomime>=1.1.2nb3
+BUILDLINK_API_DEPENDS.Pantomime+=	Pantomime>=1.1.2
+BUILDLINK_ABI_DEPENDS.Pantomime+=	Pantomime>=1.1.2nb3
 BUILDLINK_PKGSRCDIR.Pantomime?=	../../mail/Pantomime
 
 .include "../../devel/gnustep-make/gnustep.mk"

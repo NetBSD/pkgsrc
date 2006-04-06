@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:33 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:21:56 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SYNCDIR_BUILDLINK3_MK:=		${SYNCDIR_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Nsyncdir}
 BUILDLINK_PACKAGES+=		syncdir
 
 .if !empty(SYNCDIR_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.syncdir+=	syncdir>=1.0
-BUILDLINK_RECOMMENDED.syncdir+=	syncdir>=1.0nb1
+BUILDLINK_API_DEPENDS.syncdir+=	syncdir>=1.0
+BUILDLINK_ABI_DEPENDS.syncdir+=	syncdir>=1.0nb1
 BUILDLINK_PKGSRCDIR.syncdir?=	../../devel/syncdir
 .endif	# SYNCDIR_BUILDLINK3_MK
 

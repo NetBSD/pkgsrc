@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2005/07/25 12:12:53 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/06 06:21:54 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PHYSFS_BUILDLINK3_MK:=	${PHYSFS_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nphysfs}
 BUILDLINK_PACKAGES+=	physfs
 
 .if !empty(PHYSFS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.physfs+=	physfs>=1.0.0
-BUILDLINK_RECOMMENDED.physfs+=	physfs>=1.0.1
+BUILDLINK_API_DEPENDS.physfs+=	physfs>=1.0.0
+BUILDLINK_ABI_DEPENDS.physfs+=	physfs>=1.0.1
 BUILDLINK_PKGSRCDIR.physfs?=	../../devel/physfs
 .endif	# PHYSFS_BUILDLINK3_MK
 
