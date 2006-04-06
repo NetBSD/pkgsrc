@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13475 2006/04/06 19:34:05 schmonz Exp $
+$NetBSD: CHANGES,v 1.13476 2006/04/06 19:47:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1916,3 +1916,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/libsndfile to 1.0.15 [drochner 2006-04-06]
 	Updated print/teTeX3-bin to 3.0nb10 [minskim 2006-04-06]
 	Updated mail/getmail to 4.6.0 [schmonz 2006-04-06]
+	Updated math/cln to 1.1.11 [adam 2006-04-06]
