@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/02/07 18:59:59 drochner Exp $
+$NetBSD: distinfo,v 1.2 2006/04/06 16:10:56 drochner Exp $
 
-SHA1 (pygobject-2.9.1.tar.gz) = ac684ff41827e9100b9f95a188177328da54a1d1
-RMD160 (pygobject-2.9.1.tar.gz) = b8f30b457b47d90f623e7a3831b9fedb0dc1eed2
-Size (pygobject-2.9.1.tar.gz) = 405114 bytes
+SHA1 (pygobject-2.10.0.tar.gz) = 8ff125b83dd9a7b3757406fc6642a81518288073
+RMD160 (pygobject-2.10.0.tar.gz) = 073eba13d5fff07a9bf168571d710ff2aded1423
+Size (pygobject-2.10.0.tar.gz) = 391533 bytes
