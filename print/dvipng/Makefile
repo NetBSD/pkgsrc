@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/04/06 15:57:32 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/04/06 18:18:15 jlam Exp $
 
 DISTNAME=	dvipng-1.7
 CATEGORIES=	textproc converters
@@ -13,8 +13,7 @@ CONFLICTS+=	teTeX-bin-[3-9].* teTeX-bin-[1-9][0-9]*
 USE_TOOLS+=		makeinfo
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-
-INFO_FILES=		dvipng.info
+INFO_FILES=		# PLIST
 
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.3
 
