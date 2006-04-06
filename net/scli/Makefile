@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/04/06 03:12:46 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/04/06 03:20:54 jlam Exp $
 #
 
 DISTNAME=		scli-0.2.12
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		yes
 USE_GNU_READLINE=	# history_list
 BUILDLINK_DEPENDS.readline+=    readline>=4.0
 
-INFO_FILES=		scli.info
+INFO_FILES=		# PLIST
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"
