@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/03/30 21:32:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.31 2006/04/06 18:25:39 reed Exp $
 
 DISTNAME=		gnome-media-2.14.0
 CATEGORIES=		multimedia gnome
@@ -33,10 +33,10 @@ GCONF2_SCHEMAS+=	gnome-audio-profiles.schemas
 GCONF2_SCHEMAS+=	gnome-cd.schemas
 GCONF2_SCHEMAS+=	gnome-sound-recorder.schemas
 
-BUILDLINK_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.3
-BUILDLINK_DEPENDS.gstreamer0.10+=		gstreamer0.10>=0.10.3
-BUILDLINK_DEPENDS.libgnome+=			libgnomeui>=2.13.7
-BUILDLINK_DEPENDS.libgnomeui+=			libgnomeui>=2.13.2
+BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.3
+BUILDLINK_API_DEPENDS.gstreamer0.10+=		gstreamer0.10>=0.10.3
+BUILDLINK_API_DEPENDS.libgnome+=		libgnomeui>=2.13.7
+BUILDLINK_API_DEPENDS.libgnomeui+=		libgnomeui>=2.13.2
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"

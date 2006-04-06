@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2006/04/06 06:22:20 reed Exp $
+# $NetBSD: Makefile,v 1.111 2006/04/06 18:25:39 reed Exp $
 #
 
 DISTNAME=		gnumeric-1.6.3
@@ -45,7 +45,7 @@ PLIST_SUBST+=	PERL="@comment "
 # guile is currently not supported in gnumeric
 #.include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"
-BUILDLINK_DEPENDS.goffice+=	goffice>=0.2.1
+BUILDLINK_API_DEPENDS.goffice+=	goffice>=0.2.1
 .include "../../misc/goffice/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgnomeprint+=	libgnomeprint>=2.8.2
