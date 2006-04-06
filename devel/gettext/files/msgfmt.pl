@@ -1,11 +1,11 @@
 #!@PERL@
 #
-# $NetBSD: msgfmt.pl,v 1.2 2005/08/20 12:04:09 jmmv Exp $
+# $NetBSD: msgfmt.pl,v 1.3 2006/04/06 21:42:23 jmmv Exp $
 #
 # msgfmt.pl - Workaround uses of msgid_plural to work with implementations
 #             that don't support it.
 #
-# Copyright (c) 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
+# Copyright (c) 2004, 2005, 2006 Julio M. Merino Vidal <jmmv@NetBSD.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -70,6 +70,8 @@ while (<INFILE>) {
     if (/^msgid[ \t]+(.*)$/) {
         push @msgid_singular, "$1\n";
         while (<INFILE>) {
+            next if /^$/;
+
             if (/^[ \t]*"/) {
                 push @msgid_singular, $_;
             } else {
