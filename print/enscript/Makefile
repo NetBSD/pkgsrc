@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/04/06 16:16:38 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2006/04/06 18:18:15 jlam Exp $
 #
 
 DISTNAME=		enscript-1.6.3
@@ -16,7 +16,7 @@ USE_TOOLS+=		gmake
 BROKEN_GETTEXT_DETECTION=	yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-INFO_FILES=		enscript.info
+INFO_FILES=		# PLIST
 
 EGDIR=			${PREFIX}/share/examples/enscript
 CONF_FILES=		${EGDIR}/enscript.cfg ${PKG_SYSCONFDIR}/enscript.cfg

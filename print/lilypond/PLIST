@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/02/02 14:38:12 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/04/06 18:18:15 jlam Exp $
 bin/abc2ly
 bin/convert-ly
 bin/etf2ly
@@ -8,6 +8,9 @@ bin/lilypond-latex
 bin/midi2ly
 bin/mup2ly
 bin/ps2png
+info/lilypond/lilypond-internals.info
+info/lilypond/lilypond.info
+info/lilypond/music-glossary.info
 lib/lilypond/${PKGVERSION}/python/midi.so
 man/man1/abc2ly.1
 man/man1/convert-ly.1
