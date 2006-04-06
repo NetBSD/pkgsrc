@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/03/30 21:00:29 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 18:25:40 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBNOTIFY_BUILDLINK3_MK:=	${LIBNOTIFY_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibnotify}
 BUILDLINK_PACKAGES+=	libnotify
 
 .if !empty(LIBNOTIFY_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libnotify+=	libnotify>=0.3.2
+BUILDLINK_API_DEPENDS.libnotify+=	libnotify>=0.3.2
 BUILDLINK_PKGSRCDIR.libnotify?=	../../sysutils/libnotify
 .endif	# LIBNOTIFY_BUILDLINK3_MK
 
