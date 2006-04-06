@@ -1,4 +1,4 @@
-PKG_ADD(1)              NetBSD General Commands Manual              PKG_ADD(1)
+PKG_ADD(1)                   General Commands Manual                PKG_ADD(1)
 
 NNAAMMEE
      ppkkgg__aadddd -- a utility for installing and upgrading software package dis-
@@ -222,8 +222,9 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 is overridable with the --ff flag.
 
            7.   The package build information from _+_B_U_I_L_D___I_N_F_O is then checked
-                for IGNORE_RECOMMENDED.  If the package was built with depen-
-                dency recommendations ignored, a warning will be issued.
+                for USE_ABI_DEPENDS=NO (or IGNORE_RECOMMENDED). If the package
+                was built with ABI dependency recommendations ignored, a warn-
+                ing will be issued.
 
            8.   If the package contains a _r_e_q_u_i_r_e script (see pkg_create(1)),
                 it is executed with the following arguments:
@@ -387,4 +388,4 @@ BBUUGGSS
 
      Sure to be others.
 
-NetBSD 3.0                     November 1, 2005                     NetBSD 3.0
+pkgsrc                           April 3, 2006                          pkgsrc
