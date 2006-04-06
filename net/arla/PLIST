@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2005/12/15 21:28:47 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.20 2006/04/06 03:20:54 jlam Exp $
 bin/afsfsperf
 bin/afstool
 bin/amon
@@ -65,6 +65,8 @@ include/sl.h
 include/ss/ss.h
 include/timer.h
 include/xdbm.h
+info/arla.info
+info/send-pr.info
 lib/emacs/site-lisp/send-pr.el
 lib/libarlalib.la
 lib/libarlautil.la

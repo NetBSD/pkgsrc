@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/08 01:46:05 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/06 03:20:54 jlam Exp $
 # Based on KAME Id: Makefile,v 1.1.2.1.2.1.10.2 1999/01/05 11:03:50 itojun Exp
 #
 
@@ -27,7 +27,7 @@ CONFLICTS+=		zebra-[0-9]*
 PLIST_SRC=		${WRKDIR}/PLIST
 PLIST_CAT=		# empty
 
-INFO_FILES=	quagga.info
+INFO_FILES=	# PLIST
 
 RCD_SCRIPTS=	zebra bgpd ospfd ripd
 PKG_GROUPS=	quagga
