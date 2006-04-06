@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/08/13 07:09:01 cube Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:21:50 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBELF_BUILDLINK3_MK:=	${LIBELF_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibelf}
 BUILDLINK_PACKAGES+=	libelf
 
 .if !empty(LIBELF_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libelf+=	libelf>=0.8.5
+BUILDLINK_API_DEPENDS.libelf+=	libelf>=0.8.5
 BUILDLINK_PKGSRCDIR.libelf?=	../../devel/libelf
 BUILDLINK_DEPMETHOD.libelf?=	build
 .endif	# LIBELF_BUILDLINK3_MK

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/02/17 06:49:25 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:22:46 reed Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 XFCE4_FSGUARD_PLUGIN_BUILDLINK3_MK:=	${XFCE4_FSGUARD_PLUGIN_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4-fsguard-plugin}
 BUILDLINK_PACKAGES+=	xfce4-fsguard-plugin
 
 .if !empty(XFCE4_FSGUARD_PLUGIN_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.xfce4-fsguard-plugin+=	xfce4-fsguard-plugin>=0.2.1
-BUILDLINK_RECOMMENDED.xfce4-fsguard-plugin?=	xfce4-fsguard-plugin>=0.2.1nb2
+BUILDLINK_API_DEPENDS.xfce4-fsguard-plugin+=	xfce4-fsguard-plugin>=0.2.1
+BUILDLINK_ABI_DEPENDS.xfce4-fsguard-plugin?=	xfce4-fsguard-plugin>=0.2.1nb2
 BUILDLINK_PKGSRCDIR.xfce4-fsguard-plugin?=	../../sysutils/xfce4-fsguard-plugin
 .endif	# XFCE4_FSGUARD_PLUGIN_BUILDLINK3_MK
 

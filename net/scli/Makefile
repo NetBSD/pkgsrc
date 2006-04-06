@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/04/06 03:20:54 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/04/06 06:22:34 reed Exp $
 #
 
 DISTNAME=		scli-0.2.12
@@ -13,7 +13,7 @@ COMMENT=		SNMP command line interface
 GNU_CONFIGURE=		yes
 
 USE_GNU_READLINE=	# history_list
-BUILDLINK_DEPENDS.readline+=    readline>=4.0
+BUILDLINK_API_DEPENDS.readline+=    readline>=4.0
 
 INFO_FILES=		# PLIST
 

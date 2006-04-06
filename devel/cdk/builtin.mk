@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2006/03/30 18:06:17 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2006/04/06 06:21:47 reed Exp $
 
 BUILTIN_PKG:=	cdk
 
@@ -31,7 +31,7 @@ USE_BUILTIN.cdk=	${IS_BUILTIN.cdk}
 .    if defined(BUILTIN_PKG.cdk) && \
         !empty(IS_BUILTIN.cdk:M[yY][eE][sS])
 USE_BUILTIN.cdk=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.cdk}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.cdk}
 .        if !empty(USE_BUILTIN.cdk:M[yY][eE][sS])
 USE_BUILTIN.cdk!=							\
         if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.cdk:Q}; then	\

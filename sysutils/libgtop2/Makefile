@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/03/30 21:09:48 jmmv Exp $
+# $NetBSD: Makefile,v 1.35 2006/04/06 06:22:45 reed Exp $
 
 DISTNAME=		libgtop-2.14.0
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -92,7 +92,7 @@ CPPFLAGS+=	-DHAVE_STATVFS_WRITES_COUNT
 .endif
 .undef statvfs_h
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

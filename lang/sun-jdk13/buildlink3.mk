@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:09:52 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:14 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SUN_JDK13_BUILDLINK3_MK:=	${SUN_JDK13_BUILDLINK3_MK}+
@@ -12,8 +12,8 @@ BUILDLINK_PACKAGES+=	sun-jdk13
 
 .if !empty(SUN_JDK13_BUILDLINK3_MK:M+)
 
-BUILDLINK_DEPENDS.sun-jdk13+=	sun-jdk13-[0-9]*
-BUILDLINK_RECOMMENDED.sun-jdk13?=	sun-jdk13>=1.0.17nb1
+BUILDLINK_API_DEPENDS.sun-jdk13+=	sun-jdk13-[0-9]*
+BUILDLINK_ABI_DEPENDS.sun-jdk13?=	sun-jdk13>=1.0.17nb1
 BUILDLINK_PKGSRCDIR.sun-jdk13?=	../../lang/sun-jdk13
 BUILDLINK_DEPMETHOD.sun-jdk13?= build
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:13:03 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:27 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MPEG_BUILDLINK3_MK:=	${MPEG_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nmpeg}
 BUILDLINK_PACKAGES+=	mpeg
 
 .if !empty(MPEG_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.mpeg+=	mpeg>=1.3.1
-BUILDLINK_RECOMMENDED.mpeg+=	mpeg>=1.3.1nb1
+BUILDLINK_API_DEPENDS.mpeg+=	mpeg>=1.3.1
+BUILDLINK_ABI_DEPENDS.mpeg+=	mpeg>=1.3.1nb1
 BUILDLINK_PKGSRCDIR.mpeg?=	../../multimedia/mpeg-lib
 .endif	# MPEG_BUILDLINK3_MK
 

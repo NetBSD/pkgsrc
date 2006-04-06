@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2006/02/13 17:19:42 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:22:37 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BOTAN_BUILDLINK3_MK:=	${BOTAN_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nbotan}
 BUILDLINK_PACKAGES+=	botan
 
 .if !empty(BOTAN_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.botan+=	botan>=1.4.11
+BUILDLINK_API_DEPENDS.botan+=	botan>=1.4.11
 BUILDLINK_PKGSRCDIR.botan?=	../../security/botan
 .endif	# BOTAN_BUILDLINK3_MK
 

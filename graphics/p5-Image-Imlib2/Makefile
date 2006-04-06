@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/04 21:29:50 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/06 06:22:05 reed Exp $
 #
 
 DISTNAME=	Image-Imlib2-1.04
@@ -13,7 +13,7 @@ HOMEPAGE=	http://theory.uwinnipeg.ca/CPAN/data/Image-Imlib2/
 COMMENT=	Interface to the Imlib2 image library
 
 # versions before that contained a broken imlib2-config
-BUILDLINK_DEPENDS.imlib2+=	imlib2>=1.2.0nb2
+BUILDLINK_API_DEPENDS.imlib2+=	imlib2>=1.2.0nb2
 
 PERL5_MODULE_TYPE=	Module::Build
 

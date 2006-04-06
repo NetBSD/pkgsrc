@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2006/03/04 21:30:33 jlam Exp $
+# $NetBSD: Makefile.common,v 1.4 2006/04/06 06:22:38 reed Exp $
 
 DISTNAME=	dsniff-${VERS}
 VERS=		2.3
@@ -10,7 +10,7 @@ HOMEPAGE=	http://monkey.org/~dugsong/dsniff/
 
 GNU_CONFIGURE=	yes
 
-BUILDLINK_DEPENDS.libnet+=	libnet-1.0.*
+BUILDLINK_API_DEPENDS.libnet+=	libnet-1.0.*
 
 PATCHDIR=	${.CURDIR}/../dsniff/patches
 DISTINFO_FILE=	${.CURDIR}/../dsniff/distinfo

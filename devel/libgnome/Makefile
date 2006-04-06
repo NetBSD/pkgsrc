@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2006/04/04 18:07:16 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2006/04/06 06:21:51 reed Exp $
 #
 
 DISTNAME=	libgnome-2.14.0
@@ -13,7 +13,7 @@ COMMENT=	Core GNOME2 library (non-graphical)
 
 BUILD_USES_MSGFMT=	YES
 
-BUILDLINK_DEPENDS.esound+=	esound>=0.2.26
+BUILDLINK_API_DEPENDS.esound+=	esound>=0.2.26
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake pkg-config

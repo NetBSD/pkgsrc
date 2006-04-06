@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2006/04/02 17:47:54 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2006/04/06 06:21:44 reed Exp $
 #
 
 DISTNAME=		atk-1.11.4
@@ -27,7 +27,7 @@ CONFIGURE_ENV+=		F77=${FALSE:Q}
 # glib-mkenums overflows a 2048kb stack on atkobject.h
 UNLIMIT_RESOURCES=	stacksize
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.3
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.3
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

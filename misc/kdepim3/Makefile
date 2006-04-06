@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2006/03/30 02:52:17 markd Exp $
+# $NetBSD: Makefile,v 1.59 2006/04/06 06:22:23 reed Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -15,7 +15,7 @@ PKG_SUGGESTED_OPTIONS=	sasl
 
 .include "../../mk/bsd.options.mk"
 
-BUILDLINK_DEPENDS.gpgme+=     gpgme>=0.4.5
+BUILDLINK_API_DEPENDS.gpgme+=     gpgme>=0.4.5
 
 REPLACE_PERL+=	kmail/kmail-3.1-update-new-mail-notification-settings.pl \
 		kmail/kmail-3.1-use-UOID-for-identities.pl \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/03/30 21:26:06 jmmv Exp $
+# $NetBSD: Makefile,v 1.52 2006/04/06 06:22:53 reed Exp $
 #
 
 DISTNAME=	epiphany-2.14.0
@@ -29,7 +29,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.epiphany
 
 .if !empty(PKG_OPTIONS:Mfirefox)
 # Require a version that has the .pc files in it.
-BUILDLINK_DEPENDS.firefox+=	firefox>=1.5nb2
+BUILDLINK_API_DEPENDS.firefox+=	firefox>=1.5nb2
 
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/find
 CFLAGS+=		-I${BUILDLINK_PREFIX.firefox}/include/firefox/find
@@ -49,9 +49,9 @@ CFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/pref
 GCONF2_SCHEMAS=		epiphany.schemas
 GCONF2_SCHEMAS+=	epiphany-lockdown.schemas
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.8.0
-BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
-BUILDLINK_DEPENDS.gtk2+=	gtk2+>=2.8.3
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
+BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.3
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

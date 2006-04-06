@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:08:10 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:21:35 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBHYDROGEN_BUILDLINK3_MK:=	${LIBHYDROGEN_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibhydrogen}
 BUILDLINK_PACKAGES+=	libhydrogen
 
 .if !empty(LIBHYDROGEN_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libhydrogen+=		libhydrogen>=0.8.0
-BUILDLINK_RECOMMENDED.libhydrogen+=	libhydrogen>=0.8.0nb2
+BUILDLINK_API_DEPENDS.libhydrogen+=		libhydrogen>=0.8.0
+BUILDLINK_ABI_DEPENDS.libhydrogen+=	libhydrogen>=0.8.0nb2
 BUILDLINK_PKGSRCDIR.libhydrogen?=	../../audio/libhydrogen
 .endif	# LIBHYDROGEN_BUILDLINK3_MK
 

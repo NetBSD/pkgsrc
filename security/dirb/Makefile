@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:10:43 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/06 06:22:38 reed Exp $
 #
 
 PKGNAME=	dirb-1.9
@@ -16,7 +16,7 @@ WRKSRC=${WRKDIR}/dirb
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-BUILDLINK_DEPENDS.curl+=	curl>=7.15.0nb1
+BUILDLINK_API_DEPENDS.curl+=	curl>=7.15.0nb1
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

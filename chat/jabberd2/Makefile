@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/02/05 23:08:25 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2006/04/06 06:21:38 reed Exp $
 #
 
 DISTNAME=		jabberd-2.0s10
@@ -15,7 +15,7 @@ CONFLICTS=		jabberd-[0-9]*:../../chat/jabberd
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-BUILDLINK_DEPENDS.openssl+=	openssl>=0.9.6b
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.6b
 BUILDLINK_TRANSFORM.db4=	-e "s,/db4/,/,g"
 
 SUBST_CLASSES+=		path

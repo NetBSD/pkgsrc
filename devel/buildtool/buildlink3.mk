@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2005/12/05 23:55:05 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/06 06:21:46 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BUILDTOOL_BUILDLINK3_MK:=	${BUILDTOOL_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nbuildtool}
 BUILDLINK_PACKAGES+=	buildtool
 
 .if !empty(BUILDTOOL_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.buildtool+=	buildtool>=0.16
+BUILDLINK_API_DEPENDS.buildtool+=	buildtool>=0.16
 BUILDLINK_PKGSRCDIR.buildtool?=	../../devel/buildtool
 BUILDLINK_DEPMETHOD.buildtool?=	build
 

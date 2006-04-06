@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.12 2006/02/28 11:50:07 rillig Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.13 2006/04/06 06:21:57 reed Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -106,7 +106,7 @@
   <sect1 id="developer-advanced-settings">
     <title>Developer/advanced settings</title>
 
-    <!--	IGNORE_RECOMMENDED -->
+    <!--	USE_ABI_DEPENDS -->
     <para>XXX
       <itemizedlist>
 	<listitem><para><varname>PKG_DEVELOPER</varname>:

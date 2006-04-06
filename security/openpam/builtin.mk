@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2006/03/30 18:06:18 jlam Exp $
+# $NetBSD: builtin.mk,v 1.6 2006/04/06 06:22:43 reed Exp $
 
 BUILTIN_PKG:=	openpam
 
@@ -45,7 +45,7 @@ USE_BUILTIN.openpam=	${IS_BUILTIN.openpam}
 .    if defined(BUILTIN_PKG.openpam) && \
         !empty(IS_BUILTIN.openpam:M[yY][eE][sS])
 USE_BUILTIN.openpam=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.openpam}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.openpam}
 .        if !empty(USE_BUILTIN.openpam:M[yY][eE][sS])
 USE_BUILTIN.openpam!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.openpam:Q}; then \

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:09:43 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:07 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBTABE_BUILDLINK3_MK:=	${LIBTABE_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibtabe}
 BUILDLINK_PACKAGES+=	libtabe
 
 .if !empty(LIBTABE_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libtabe+=	libtabe>=0.2.5
-BUILDLINK_RECOMMENDED.libtabe+=	libtabe>=0.2.5nb2
+BUILDLINK_API_DEPENDS.libtabe+=	libtabe>=0.2.5
+BUILDLINK_ABI_DEPENDS.libtabe+=	libtabe>=0.2.5nb2
 BUILDLINK_PKGSRCDIR.libtabe?=	../../inputmethod/libtabe
 .endif	# LIBTABE_BUILDLINK3_MK
 

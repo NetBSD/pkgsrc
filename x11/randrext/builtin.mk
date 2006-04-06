@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2006/03/30 18:06:19 jlam Exp $
+# $NetBSD: builtin.mk,v 1.5 2006/04/06 06:23:03 reed Exp $
 
 BUILTIN_PKG:=	randrext
 
@@ -52,7 +52,7 @@ USE_BUILTIN.randrext=	${IS_BUILTIN.randrext}
 .    if defined(BUILTIN_PKG.randrext) && \
         !empty(IS_BUILTIN.randrext:M[yY][eE][sS])
 USE_BUILTIN.randrext=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.randrext}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.randrext}
 .        if !empty(USE_BUILTIN.randrext:M[yY][eE][sS])
 USE_BUILTIN.randrext!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.randrext:Q}; then \
@@ -75,7 +75,7 @@ CHECK_BUILTIN.randrext?=	no
 .if !empty(CHECK_BUILTIN.randrext:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.randrext:M[nN][oO])
-BUILDLINK_DEPENDS.randrext+=	randrext>=1.0
+BUILDLINK_API_DEPENDS.randrext+=	randrext>=1.0
 .  endif
 
 .  if !empty(USE_BUILTIN.randrext:M[yY][eE][sS])

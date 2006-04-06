@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/03/06 00:18:10 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2006/04/06 06:21:39 reed Exp $
 
 DISTNAME=	loudmouth-1.0.1
 PKGREVISION=	3
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--disable-mono
 
-BUILDLINK_DEPENDS.gnutls+=	gnutls>=1.2.0
+BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=1.2.0
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

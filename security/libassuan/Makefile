@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/31 23:56:29 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/06 06:22:42 reed Exp $
 #
 
 DISTNAME=		libassuan-0.6.10
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=		yes
 INFO_FILES=		# PLIST
 
-BUILDLINK_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
 
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

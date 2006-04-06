@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/02/17 06:49:25 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/04/06 06:22:46 reed Exp $
 
 BUILDLINK_DEPTH:=				${BUILDLINK_DEPTH}+
 XFCE4_SHOWDESKTOP_PLUGIN_BUILDLINK3_MK:=	${XFCE4_SHOWDESKTOP_PLUGIN_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4-showdesktop-plugin}
 BUILDLINK_PACKAGES+=	xfce4-showdesktop-plugin
 
 .if !empty(XFCE4_SHOWDESKTOP_PLUGIN_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.xfce4-showdesktop-plugin+=	xfce4-showdesktop-plugin>=0.4.0
-BUILDLINK_RECOMMENDED.xfce4-showdesktop-plugin?=	xfce4-showdesktop-plugin>=0.4.0nb2
+BUILDLINK_API_DEPENDS.xfce4-showdesktop-plugin+=	xfce4-showdesktop-plugin>=0.4.0
+BUILDLINK_ABI_DEPENDS.xfce4-showdesktop-plugin?=	xfce4-showdesktop-plugin>=0.4.0nb2
 BUILDLINK_PKGSRCDIR.xfce4-showdesktop-plugin?=	../../sysutils/xfce4-showdesktop-plugin
 .endif	# XFCE4_SHOWDESKTOP_PLUGIN_BUILDLINK3_MK
 

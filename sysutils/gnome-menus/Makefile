@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/04/04 18:07:16 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/04/06 06:22:45 reed Exp $
 #
 
 DISTNAME=	gnome-menus-2.13.5
@@ -38,8 +38,8 @@ SUBST_FILES.paths=	layout/*.menu
 SUBST_SED.paths=	-e 's|/usr/|${PREFIX}/|g'
 SUBST_SED.paths+=	-e 's|/etc/X11/applnk|${PREFIX}/share/kde/applnk/|g'
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
-BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
+BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

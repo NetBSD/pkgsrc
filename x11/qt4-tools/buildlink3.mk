@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/02/20 12:09:01 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:23:03 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 QT4_TOOLS_BUILDLINK3_MK:=	${QT4_TOOLS_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nqt4-tools}
 BUILDLINK_PACKAGES+=	qt4-tools
 
 .if !empty(QT4_TOOLS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.qt4-tools+=	qt4-tools>=4.1.0
+BUILDLINK_API_DEPENDS.qt4-tools+=	qt4-tools>=4.1.0
 BUILDLINK_PKGSRCDIR.qt4-tools?=	../../x11/qt4-tools
 BUILDLINK_DEPMETHOD.qt4-tools?=	build
 .endif	# QT4_TOOLS_BUILDLINK3_MK

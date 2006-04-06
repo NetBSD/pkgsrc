@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/03/22 20:53:41 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2006/04/06 06:22:32 reed Exp $
 
 DISTNAME=	freeradius-1.1.1
 PKGREVISION=	2
@@ -20,7 +20,7 @@ FILES_SUBST+=		ROOT_USER=${ROOT_USER:Q}
 FILES_SUBST+=		ROOT_GROUP=${ROOT_GROUP:Q}
 USE_OLD_DES_API=	YES
 
-BUILDLINK_DEPENDS.openssl+=	openssl>=0.9.7
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
 
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE+=	libtool

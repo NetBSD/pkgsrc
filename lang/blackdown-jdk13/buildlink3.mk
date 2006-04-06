@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/07/02 12:51:57 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:09 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BLACKDOWN_JDK13_BUILDLINK3_MK:=	${BLACKDOWN_JDK13_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	blackdown-jdk13
 
 .if !empty(BLACKDOWN_JDK13_BUILDLINK3_MK:M+)
 
-BUILDLINK_DEPENDS.blackdown-jdk13+=	blackdown-jdk13-[0-9]*
+BUILDLINK_API_DEPENDS.blackdown-jdk13+=	blackdown-jdk13-[0-9]*
 BUILDLINK_PKGSRCDIR.blackdown-jdk13?=	../../lang/blackdown-jdk13
 BUILDLINK_DEPMETHOD.blackdown-jdk13?=   build
 

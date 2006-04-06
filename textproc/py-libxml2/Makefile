@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/02/07 20:58:07 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2006/04/06 06:22:51 reed Exp $
 
 DISTNAME=	libxml2-2.6.23
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ SUBST_FILES.setup=	setup.py
 SUBST_SED.setup=	-e "/ROOT/s,'/usr','${BUILDLINK_PREFIX.libxml2}',g" \
 			-e "/^\"/s,/usr/include,${BUILDLINK_PREFIX.iconv}/include,g"
 
-BUILDLINK_DEPENDS.libxml2+=	libxml2>=${PKGVERSION}
+BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=${PKGVERSION}
 .include "../../textproc/libxml2/buildlink3.mk"
 
 .include "../../lang/python/extension.mk"

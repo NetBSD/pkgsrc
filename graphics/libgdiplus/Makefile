@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/02/05 23:09:34 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/04/06 06:22:04 reed Exp $
 #
 
 DISTNAME=	libgdiplus-1.1.11
@@ -17,9 +17,9 @@ PKGCONFIG_OVERRIDE+=	libgdiplus.pc.in
 PKGCONFIG_OVERRIDE+=	cairo/cairo.pc.in
 GNU_CONFIGURE=		yes
 
-BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.5
-BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1.2
-BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
+BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.5
+BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
+BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 
 BUILDLINK_TRANSFORM+=		rm:-Werror
 

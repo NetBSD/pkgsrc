@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/26 17:05:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/06 06:21:50 reed Exp $
 #
 
 DISTNAME=		libdnsres-0.1a
@@ -15,7 +15,7 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
 # uses event_once
-BUILDLINK_DEPENDS.libevent+=	libevent>=0.9
+BUILDLINK_API_DEPENDS.libevent+=	libevent>=0.9
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

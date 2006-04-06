@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2005/10/26 15:12:45 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2006/04/06 06:22:40 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HEIMDAL_BUILDLINK3_MK:=	${HEIMDAL_BUILDLINK3_MK}+
@@ -13,8 +13,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nheimdal}
 BUILDLINK_PACKAGES+=	heimdal
 
 .if !empty(HEIMDAL_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.heimdal+=	heimdal>=0.4e
-BUILDLINK_RECOMMENDED.heimdal+=	heimdal>=0.6.3nb2
+BUILDLINK_API_DEPENDS.heimdal+=	heimdal>=0.4e
+BUILDLINK_ABI_DEPENDS.heimdal+=	heimdal>=0.6.3nb2
 BUILDLINK_PKGSRCDIR.heimdal?=	../../security/heimdal
 BUILDLINK_INCDIRS.heimdal?=	include/krb5
 .endif	# HEIMDAL_BUILDLINK3_MK

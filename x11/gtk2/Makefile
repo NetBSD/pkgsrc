@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2006/03/30 20:48:30 jmmv Exp $
+# $NetBSD: Makefile,v 1.117 2006/04/06 06:23:01 reed Exp $
 
 DISTNAME=		gtk+-2.8.16
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -17,9 +17,9 @@ CONFLICTS=		gtk2-engines<2.6.0
 
 BUILD_USES_MSGFMT=	yes
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.10.1
-BUILDLINK_DEPENDS.pango+=	pango>=1.10.0
-BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.10.1
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.10.0
+BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
 
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes

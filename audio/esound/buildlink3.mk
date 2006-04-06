@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/10/03 00:13:05 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/06 06:21:34 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ESOUND_BUILDLINK3_MK:=	${ESOUND_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nesound}
 BUILDLINK_PACKAGES+=	esound
 
 .if !empty(ESOUND_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.esound+=	esound>=0.2.18
-BUILDLINK_RECOMMENDED.esound+=	esound>=0.2.35nb1
+BUILDLINK_API_DEPENDS.esound+=	esound>=0.2.18
+BUILDLINK_ABI_DEPENDS.esound+=	esound>=0.2.35nb1
 BUILDLINK_PKGSRCDIR.esound?=	../../audio/esound
 .endif	# ESOUND_BUILDLINK3_MK
 

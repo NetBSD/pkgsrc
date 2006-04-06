@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/02/05 23:11:33 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/04/06 06:22:58 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_LIBS_BUILDLINK3_MK:=	${GNOME_LIBS_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-libs}
 BUILDLINK_PACKAGES+=	gnome-libs
 
 .if !empty(GNOME_LIBS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.gnome-libs+=		gnome-libs>=1.4.2nb1
-BUILDLINK_RECOMMENDED.gnome-libs+=	gnome-libs>=1.4.2nb5
+BUILDLINK_API_DEPENDS.gnome-libs+=		gnome-libs>=1.4.2nb1
+BUILDLINK_ABI_DEPENDS.gnome-libs+=	gnome-libs>=1.4.2nb5
 BUILDLINK_PKGSRCDIR.gnome-libs?=	../../x11/gnome-libs
 .endif	# GNOME_LIBS_BUILDLINK3_MK
 

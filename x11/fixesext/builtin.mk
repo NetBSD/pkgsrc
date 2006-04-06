@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2006/03/30 18:06:19 jlam Exp $
+# $NetBSD: builtin.mk,v 1.6 2006/04/06 06:22:57 reed Exp $
 
 BUILTIN_PKG:=	fixesext
 
@@ -40,7 +40,7 @@ USE_BUILTIN.fixesext=	${IS_BUILTIN.fixesext}
 .    if defined(BUILTIN_PKG.fixesext) && \
         !empty(IS_BUILTIN.fixesext:M[yY][eE][sS])
 USE_BUILTIN.fixesext=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.fixesext}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.fixesext}
 .        if !empty(USE_BUILTIN.fixesext:M[yY][eE][sS])
 USE_BUILTIN.fixesext!=						\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.fixesext:Q}; then \

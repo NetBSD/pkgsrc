@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/03/22 17:29:02 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:22:22 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 UDUNITS_BUILDLINK3_MK:=	${UDUNITS_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nudunits}
 BUILDLINK_PACKAGES+=	udunits
 
 .if !empty(UDUNITS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.udunits+=	udunits>=1.11.7
+BUILDLINK_API_DEPENDS.udunits+=	udunits>=1.11.7
 BUILDLINK_PKGSRCDIR.udunits?=	../../math/udunits
 BUILDLINK_DEPMETHOD.udunits?=	build
 BUILDLINK_FILES.udunits=	include/udunits.inc

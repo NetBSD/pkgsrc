@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2006/04/02 11:07:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.66 2006/04/06 06:22:58 reed Exp $
 #
 
 DISTNAME=		gnome-session-2.14.0
@@ -31,8 +31,8 @@ GCONF2_SCHEMAS= 	gnome-session.schemas
 
 # Make sure we do not use old packages that rely on XDG_{CONFIG,DATA}_DIRS
 # in the environment being set.
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.1
-BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.8.3nb1
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.1
+BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.8.3nb1
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

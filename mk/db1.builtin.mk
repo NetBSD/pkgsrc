@@ -1,4 +1,4 @@
-# $NetBSD: db1.builtin.mk,v 1.14 2005/08/11 20:25:20 cube Exp $
+# $NetBSD: db1.builtin.mk,v 1.15 2006/04/06 06:23:06 reed Exp $
 
 BUILTIN_PKG:=	db1
 
@@ -41,7 +41,7 @@ USE_BUILTIN.db1=	no
 USE_BUILTIN.db1=	${IS_BUILTIN.db1}
 .    if defined(BUILTIN_PKG.db1) && !empty(IS_BUILTIN.db1:M[yY][eE][sS])
 USE_BUILTIN.db1=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.db1}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.db1}
 .        if !empty(USE_BUILTIN.db1:M[yY][eE][sS])
 USE_BUILTIN.db1!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.db1:Q}; then	\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/06 00:18:14 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/06 06:21:37 reed Exp $
 #
 
 DISTNAME=		tunesbrowser-0.3.0
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/tunesbrowser
 DEPENDS+=		gst-plugins0.8-esound>=0.8.1:../../audio/gst-plugins0.8-esound
 DEPENDS+=		gst-plugins0.8-mad>=0.8.1:../../audio/gst-plugins0.8-mad
 
-BUILDLINK_DEPENDS.libopendaap+=	libopendaap>=0.4.0
+BUILDLINK_API_DEPENDS.libopendaap+=	libopendaap>=0.4.0
 
 .include "../../multimedia/gst-plugins0.8/buildlink3.mk"
 .include "../../audio/libopendaap/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2006/03/30 18:06:17 jlam Exp $
+# $NetBSD: builtin.mk,v 1.6 2006/04/06 06:21:32 reed Exp $
 
 BUILTIN_PKG:=	bzip2
 
@@ -32,7 +32,7 @@ USE_BUILTIN.bzip2=	${IS_BUILTIN.bzip2}
 .    if defined(BUILTIN_PKG.bzip2) && \
         !empty(IS_BUILTIN.bzip2:M[yY][eE][sS])
 USE_BUILTIN.bzip2=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.bzip2}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.bzip2}
 .        if !empty(USE_BUILTIN.bzip2:M[yY][eE][sS])
 USE_BUILTIN.bzip2!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.bzip2:Q}; then	\

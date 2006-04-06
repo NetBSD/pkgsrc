@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2006/03/09 21:04:39 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2006/04/06 06:21:33 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ARTS_BUILDLINK3_MK:=	${ARTS_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Narts}
 BUILDLINK_PACKAGES+=	arts
 
 .if !empty(ARTS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.arts+=	arts>=1.1.4nb1
-BUILDLINK_RECOMMENDED.arts+=	arts>=1.5.1nb1
+BUILDLINK_API_DEPENDS.arts+=	arts>=1.1.4nb1
+BUILDLINK_ABI_DEPENDS.arts+=	arts>=1.5.1nb1
 BUILDLINK_PKGSRCDIR.arts?=	../../audio/arts
 
 PRINT_PLIST_AWK+=	/^@dirrm include\/arts$$/ \

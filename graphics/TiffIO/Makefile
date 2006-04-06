@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/23 03:25:12 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/06 06:22:01 reed Exp $
 #
 
 DISTNAME=		TiffIO-120e
@@ -17,7 +17,7 @@ USE_LANGUAGES=	c c++
 BUILD_ENV+=	QTDIR=${QTDIR:Q}
 
 .include "../../devel/zlib/buildlink3.mk"
-BUILDLINK_DEPENDS.tiff+=	tiff>=3.8.1
+BUILDLINK_API_DEPENDS.tiff+=	tiff>=3.8.1
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/03/06 00:18:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2006/04/06 06:22:38 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GNUTLS_BUILDLINK3_MK:=	${GNUTLS_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnutls}
 BUILDLINK_PACKAGES+=	gnutls
 
 .if !empty(GNUTLS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.gnutls+=	gnutls>=1.0.13
-BUILDLINK_RECOMMENDED.gnutls+=	gnutls>=1.3.4nb1
+BUILDLINK_API_DEPENDS.gnutls+=	gnutls>=1.0.13
+BUILDLINK_ABI_DEPENDS.gnutls+=	gnutls>=1.3.4nb1
 BUILDLINK_PKGSRCDIR.gnutls?=	../../security/gnutls
 .endif	# GNUTLS_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/03/13 18:27:46 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/04/06 06:22:38 reed Exp $
 #
 
 DISTNAME=	gnome-keyring-0.4.9
@@ -19,8 +19,8 @@ USE_PKGLOCALEDIR=	YES
 
 PKGCONFIG_OVERRIDE=	${WRKSRC}/gnome-keyring-1.pc.in
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
-BUILDLINK_DEPENDS.gtk2+=	gtk2+>=2.6.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

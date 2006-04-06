@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/03/21 06:00:51 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/04/06 06:22:53 reed Exp $
 #
 
 DISTNAME=	drivel-2.0.2
@@ -18,7 +18,7 @@ USE_PKGLOCALEDIR=	YES
 
 GCONF2_SCHEMAS=		drivel.schemas
 
-BUILDLINK_DEPENDS.curl+=	curl>=7.14.0nb1
+BUILDLINK_API_DEPENDS.curl+=	curl>=7.14.0nb1
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/GConf2/schemas.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/03/10 22:44:50 shannonjr Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 06:22:43 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBPRELUDEDB_BUILDLINK3_MK:=	${LIBPRELUDEDB_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibpreludedb}
 BUILDLINK_PACKAGES+=	libpreludedb
 
 .if !empty(LIBPRELUDEDB_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libpreludedb+=	libpreludedb>=0.9.3
-BUILDLINK_RECOMMENDED.libpreludedb?=	libpreludedb>=0.9.6
+BUILDLINK_API_DEPENDS.libpreludedb+=	libpreludedb>=0.9.3
+BUILDLINK_ABI_DEPENDS.libpreludedb?=	libpreludedb>=0.9.6
 BUILDLINK_PKGSRCDIR.libpreludedb?=	../../security/libpreludedb
 .endif	# LIBPRELUDEDB_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/02/05 23:10:55 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 06:22:45 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MEDUSA_BUILDLINK3_MK:=	${MEDUSA_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nmedusa}
 BUILDLINK_PACKAGES+=	medusa
 
 .if !empty(MEDUSA_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.medusa+=	medusa>=0.5.1nb7
-BUILDLINK_RECOMMENDED.medusa?=	medusa>=0.5.1nb9
+BUILDLINK_API_DEPENDS.medusa+=	medusa>=0.5.1nb7
+BUILDLINK_ABI_DEPENDS.medusa?=	medusa>=0.5.1nb9
 BUILDLINK_PKGSRCDIR.medusa?=	../../sysutils/medusa
 .endif	# MEDUSA_BUILDLINK3_MK
 

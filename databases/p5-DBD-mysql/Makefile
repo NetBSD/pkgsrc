@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/02/05 23:08:32 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2006/04/06 06:21:41 reed Exp $
 #
 
 DISTNAME=		DBD-mysql-3.0002
@@ -14,7 +14,7 @@ COMMENT=		Perl DBI/DBD driver for MySQL databases
 
 DEPENDS+=		p5-Data-ShowTable>=3.3:../../devel/p5-Data-ShowTable
 
-BUILDLINK_DEPENDS.mysql-client?=	mysql-client>=3.23.49nb1
+BUILDLINK_API_DEPENDS.mysql-client?=	mysql-client>=3.23.49nb1
 
 PERL5_PACKLIST=		auto/DBD/mysql/.packlist
 

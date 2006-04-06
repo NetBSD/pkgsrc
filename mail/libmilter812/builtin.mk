@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2006/03/30 18:06:18 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2006/04/06 06:22:18 reed Exp $
 
 BUILTIN_PKG:=	libmilter
 
@@ -34,7 +34,7 @@ USE_BUILTIN.libmilter=	${IS_BUILTIN.libmilter}
 .    if defined(BUILTIN_PKG.libmilter) && \
         !empty(IS_BUILTIN.libmilter:M[yY][eE][sS])
 USE_BUILTIN.libmilter=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.libmilter}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.libmilter}
 .        if !empty(USE_BUILTIN.libmilter:M[yY][eE][sS])
 USE_BUILTIN.libmilter!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libmilter:Q}; then \

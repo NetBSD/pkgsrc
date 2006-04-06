@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.13 2006/03/30 18:39:57 jlam Exp $
+# $NetBSD: builtin.mk,v 1.14 2006/04/06 06:21:55 reed Exp $
 
 BUILTIN_PKG:=	readline
 
@@ -55,7 +55,7 @@ USE_BUILTIN.readline=	${IS_BUILTIN.readline}
 .    if defined(BUILTIN_PKG.readline) && \
         !empty(IS_BUILTIN.readline:M[yY][eE][sS])
 USE_BUILTIN.readline=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.readline}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.readline}
 .        if !empty(USE_BUILTIN.readline:M[yY][eE][sS])
 USE_BUILTIN.readline!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.readline:Q}; then \

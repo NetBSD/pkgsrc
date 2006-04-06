@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:09:28 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:01 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 COMPFACE_BUILDLINK3_MK:=	${COMPFACE_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncompface}
 BUILDLINK_PACKAGES+=	compface
 
 .if !empty(COMPFACE_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.compface+=	compface>=1.4
-BUILDLINK_RECOMMENDED.compface?=	compface>=1.5.1nb1
+BUILDLINK_API_DEPENDS.compface+=	compface>=1.4
+BUILDLINK_ABI_DEPENDS.compface?=	compface>=1.5.1nb1
 BUILDLINK_PKGSRCDIR.compface?=	../../graphics/compface
 .endif	# COMPFACE_BUILDLINK3_MK
 

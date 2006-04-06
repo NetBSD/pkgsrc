@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2006/03/30 18:06:17 jlam Exp $
+# $NetBSD: builtin.mk,v 1.9 2006/04/06 06:21:48 reed Exp $
 
 BUILTIN_PKG:=	dlcompat
 
@@ -46,7 +46,7 @@ USE_BUILTIN.dlcompat=	${IS_BUILTIN.dlcompat}
 .    if defined(BUILTIN_PKG.dlcompat) && \
         !empty(IS_BUILTIN.dlcompat:M[yY][eE][sS])
 USE_BUILTIN.dlcompat=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.dlcompat}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.dlcompat}
 .        if !empty(USE_BUILTIN.dlcompat:M[yY][eE][sS])
 USE_BUILTIN.dlcompat!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.dlcompat:Q}; then \

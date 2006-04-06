@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/07 17:23:51 adrianp Exp $
+# $NetBSD: Makefile,v 1.12 2006/04/06 06:21:39 reed Exp $
 
 DISTNAME=	Unreal3.2.4
 PKGNAME=	unrealircd-3.2.4
@@ -21,8 +21,8 @@ WRKSRC=		${WRKDIR}/Unreal3.2
 TRE_NEEDED=	0.7.2
 CARES_NEEDED=	1.3.0
 
-BUILDLINK_DEPENDS.tre+=		tre-${TRE_NEEDED}
-BUILDLINK_DEPENDS.libcares+=	libcares-${CARES_NEEDED}
+BUILDLINK_API_DEPENDS.tre+=		tre-${TRE_NEEDED}
+BUILDLINK_API_DEPENDS.libcares+=	libcares-${CARES_NEEDED}
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/06 00:18:27 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/06 06:23:02 reed Exp $
 #
 
 DISTNAME=	gnome-python-extras-2.12.0
@@ -21,7 +21,7 @@ USE_TOOLS+=		pkg-config
 
 PYTHON_VERSIONS_ACCEPTED=	24 23
 
-BUILDLINK_DEPENDS.nautilus-cd-burner+=	nautilus-cd-burner>=2.11.1
+BUILDLINK_API_DEPENDS.nautilus-cd-burner+=	nautilus-cd-burner>=2.11.1
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"

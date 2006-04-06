@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2005/03/19 15:36:19 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:21:35 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBOPENDAAP_BUILDLINK3_MK:=	${LIBOPENDAAP_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibopendaap}
 BUILDLINK_PACKAGES+=	libopendaap
 
 .if !empty(LIBOPENDAAP_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libopendaap+=	libopendaap>=0.2.1
-BUILDLINK_RECOMMENDED.libopendaap+=	libopendaap>=0.2.1nb1
+BUILDLINK_API_DEPENDS.libopendaap+=	libopendaap>=0.2.1
+BUILDLINK_ABI_DEPENDS.libopendaap+=	libopendaap>=0.2.1nb1
 BUILDLINK_PKGSRCDIR.libopendaap?=	../../audio/libopendaap
 .endif	# LIBOPENDAAP_BUILDLINK3_MK
 

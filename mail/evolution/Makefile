@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2006/04/01 16:13:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.106 2006/04/06 06:22:16 reed Exp $
 
 DISTNAME=		evolution-2.6.0
 PKGREVISION=		2
@@ -82,7 +82,7 @@ PRINT_PLIST_AWK+=	/smime/ { print "$${HAVE_SMIME}" $$0; next; }
 # add rpath flags to the dependency_libs, but there is an strange comment
 # in the wrapper saying that it shouldn't.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.nss}/lib/nss
-BUILDLINK_DEPENDS.nss+=		nss>=3.9.2nb3
+BUILDLINK_API_DEPENDS.nss+=		nss>=3.9.2nb3
 .  include "../../devel/nspr/buildlink3.mk"
 .  include "../../devel/nss/buildlink3.mk"
 
@@ -108,9 +108,9 @@ GCONF2_SCHEMAS+=	evolution-mail-2.6.schemas
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
-BUILDLINK_DEPENDS.evolution-data-server+=	evolution-data-server>=1.4.1
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.4.0nb2
-BUILDLINK_DEPENDS.libsoup-devel+=		libsoup-devel>=2.2.3
+BUILDLINK_API_DEPENDS.evolution-data-server+=	evolution-data-server>=1.4.1
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.4.0nb2
+BUILDLINK_API_DEPENDS.libsoup-devel+=		libsoup-devel>=2.2.3
 
 .if !exists(/usr/include/semaphore.h)
 LDFLAGS+=	-lsemaphore

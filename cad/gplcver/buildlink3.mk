@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/02/10 16:37:51 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:21:38 reed Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.10.
 # XXX After this file has been verified as correct, the comment lines
@@ -21,7 +21,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngplcver}
 BUILDLINK_PACKAGES+=	gplcver
 
 .if !empty(GPLCVER_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.gplcver+=	gplcver>=2.11a
+BUILDLINK_API_DEPENDS.gplcver+=	gplcver>=2.11a
 BUILDLINK_PKGSRCDIR.gplcver?=	../../cad/gplcver
 .endif	# GPLCVER_BUILDLINK3_MK
 

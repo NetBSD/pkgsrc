@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.44 2005/12/12 14:43:26 joerg Exp $
+# $NetBSD: java-vm.mk,v 1.45 2006/04/06 06:23:06 reed Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -199,18 +199,18 @@ PKG_SKIP_REASON=	"no acceptable JVM found"
 _PKG_JVM=		"none"
 .endif
 
-BUILDLINK_DEPENDS.blackdown-jdk13?=	blackdown-jdk13-[0-9]*
-BUILDLINK_DEPENDS.blackdown-jre13?=	blackdown-jre13-[0-9]*
-BUILDLINK_DEPENDS.jdk?=			jdk-[0-9]*
-BUILDLINK_DEPENDS.jdk14?=		jdk14-[0-9]*
-BUILDLINK_DEPENDS.kaffe?=		kaffe>=1.1.4
-BUILDLINK_DEPENDS.sun-jdk13?=		sun-jdk13-[0-9]*
-BUILDLINK_DEPENDS.sun-jre13?=		sun-jre13-[0-9]*
-BUILDLINK_DEPENDS.sun-jdk14?=		sun-jdk14-[0-9]*
-BUILDLINK_DEPENDS.sun-jre14?=		sun-jre14-[0-9]*
-BUILDLINK_DEPENDS.sun-jdk15?=		sun-jdk15-[0-9]*
-BUILDLINK_DEPENDS.sun-jre15?=		sun-jre15-[0-9]*
-#BUILDLINK_DEPENDS.win32-jdk?=		win32-jdk>=0.1
+BUILDLINK_API_DEPENDS.blackdown-jdk13?=	blackdown-jdk13-[0-9]*
+BUILDLINK_API_DEPENDS.blackdown-jre13?=	blackdown-jre13-[0-9]*
+BUILDLINK_API_DEPENDS.jdk?=			jdk-[0-9]*
+BUILDLINK_API_DEPENDS.jdk14?=		jdk14-[0-9]*
+BUILDLINK_API_DEPENDS.kaffe?=		kaffe>=1.1.4
+BUILDLINK_API_DEPENDS.sun-jdk13?=		sun-jdk13-[0-9]*
+BUILDLINK_API_DEPENDS.sun-jre13?=		sun-jre13-[0-9]*
+BUILDLINK_API_DEPENDS.sun-jdk14?=		sun-jdk14-[0-9]*
+BUILDLINK_API_DEPENDS.sun-jre14?=		sun-jre14-[0-9]*
+BUILDLINK_API_DEPENDS.sun-jdk15?=		sun-jdk15-[0-9]*
+BUILDLINK_API_DEPENDS.sun-jre15?=		sun-jre15-[0-9]*
+#BUILDLINK_API_DEPENDS.win32-jdk?=		win32-jdk>=0.1
 
 _JRE.blackdown-jdk13=	blackdown-jre13
 _JRE.jdk=		jdk

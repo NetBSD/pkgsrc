@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:08:06 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:21:33 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 CDPLAYER_BUILDLINK3_MK:=	${CDPLAYER_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncdplayer}
 BUILDLINK_PACKAGES+=	cdplayer
 
 .if !empty(CDPLAYER_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.cdplayer+=	cdplayer>=0.4.2
-BUILDLINK_RECOMMENDED.cdplayer?=	cdplayer>=0.4.2nb3
+BUILDLINK_API_DEPENDS.cdplayer+=	cdplayer>=0.4.2
+BUILDLINK_ABI_DEPENDS.cdplayer?=	cdplayer>=0.4.2nb3
 BUILDLINK_PKGSRCDIR.cdplayer?=	../../audio/cdplayer
 .endif	# CDPLAYER_BUILDLINK3_MK
 

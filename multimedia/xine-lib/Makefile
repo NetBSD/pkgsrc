@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/02/05 23:10:18 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2006/04/06 06:22:29 reed Exp $
 
 .include "Makefile.common"
 
@@ -6,7 +6,7 @@ PKGREVISION=		5
 
 COMMENT=		Multimedia player library
 
-BUILDLINK_DEPENDS.vcdimager+= vcdimager>=0.7.20nb1
+BUILDLINK_API_DEPENDS.vcdimager+= vcdimager>=0.7.20nb1
 
 SUBST_CLASSES+=		oss w32path
 
@@ -24,7 +24,7 @@ SUBST_SED.w32path=	-e "s,@W32PATH@,${PREFIX}/lib/win32,"
 SUBST_MESSAGE.w32path=	"Fixing win32 dll path."
 
 # Needed to fix build problems under, at least, NetBSD/amd64.
-BUILDLINK_DEPENDS.libcdio+=	libcdio>=0.75
+BUILDLINK_API_DEPENDS.libcdio+=	libcdio>=0.75
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"

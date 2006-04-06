@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/31 14:54:22 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/06 06:22:23 reed Exp $
 #
 
 DISTNAME=		goffice-0.2.1
@@ -18,7 +18,7 @@ USE_TOOLS+=		gmake pkg-config
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.3
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.3
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
@@ -26,7 +26,7 @@ BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.3
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
-BUILDLINK_DEPENDS.libgnomeprint+=	libgnomeprint>=2.8.2
+BUILDLINK_API_DEPENDS.libgnomeprint+=	libgnomeprint>=2.8.2
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

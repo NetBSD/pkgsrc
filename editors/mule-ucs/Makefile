@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:08:57 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/06 06:21:58 reed Exp $
 
 DISTNAME=	Mule-UCS-0.84
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Another encoding conversion mechanism for Emacs
 
 # Mule 4.1 feature required by Mule-UCS was added to 20.7nb1.
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20
-BUILDLINK_DEPENDS.emacs20+=	emacs>=20.7nb1
+BUILDLINK_API_DEPENDS.emacs20+=	emacs>=20.7nb1
 
 do-build:
 	@cd ${WRKSRC}; \

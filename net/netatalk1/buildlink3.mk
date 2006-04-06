@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:10:27 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:33 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 NETATALK_BUILDLINK3_MK:=	${NETATALK_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGESNnetatalk}
 BUILDLINK_PACKAGES+=	netatalk
 
 .if !empty(NETATALK_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.netatalk+=	netatalk>=1.6.2
-BUILDLINK_RECOMMENDED.netatalk+=	netatalk>=1.6.4anb1
+BUILDLINK_API_DEPENDS.netatalk+=	netatalk>=1.6.2
+BUILDLINK_ABI_DEPENDS.netatalk+=	netatalk>=1.6.4anb1
 BUILDLINK_PKGSRCDIR.netatalk?=	../../net/netatalk1
 .endif	# NETATALK_BUILDLINK3_MK
 

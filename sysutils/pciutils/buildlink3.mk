@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:10:56 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:46 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PCIUTILS_BUILDLINK3_MK:=	${PCIUTILS_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npciutils}
 BUILDLINK_PACKAGES+=	pciutils
 
 .if !empty(PCIUTILS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.pciutils+=	pciutils>=2.1.11
-BUILDLINK_RECOMMENDED.pciutils?=	pciutils>=2.1.11nb1
+BUILDLINK_API_DEPENDS.pciutils+=	pciutils>=2.1.11
+BUILDLINK_ABI_DEPENDS.pciutils?=	pciutils>=2.1.11nb1
 BUILDLINK_PKGSRCDIR.pciutils?=	../../sysutils/pciutils
 BUILDLINK_DEPMETHOD.pciutils?=	build
 .endif	# PCIUTILS_BUILDLINK3_MK

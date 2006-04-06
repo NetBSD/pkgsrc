@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2006/02/05 23:10:45 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2006/04/06 06:22:43 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENSSL_BUILDLINK3_MK:=	${OPENSSL_BUILDLINK3_MK}+
@@ -13,8 +13,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nopenssl}
 BUILDLINK_PACKAGES+=	openssl
 
 .if !empty(OPENSSL_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.openssl+=	openssl>=0.9.6m
-BUILDLINK_RECOMMENDED.openssl+=	openssl>=0.9.7inb1
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.6m
+BUILDLINK_ABI_DEPENDS.openssl+=	openssl>=0.9.7inb1
 BUILDLINK_PKGSRCDIR.openssl?=	../../security/openssl
 
 # Ensure that -lcrypt comes before -lcrypto when linking so that the

@@ -1,4 +1,4 @@
-# $NetBSD: solaris-pam.builtin.mk,v 1.3 2005/06/01 18:03:06 jlam Exp $
+# $NetBSD: solaris-pam.builtin.mk,v 1.4 2006/04/06 06:23:06 reed Exp $
 
 BUILTIN_PKG:=	solaris-pam
 
@@ -32,7 +32,7 @@ USE_BUILTIN.solaris-pam=	${IS_BUILTIN.solaris-pam}
 .    if defined(BUILTIN_PKG.solaris-pam) && \
         !empty(IS_BUILTIN.solaris-pam:M[yY][eE][sS])
 USE_BUILTIN.solaris-pam=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.solaris-pam}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.solaris-pam}
 .        if !empty(USE_BUILTIN.solaris-pam:M[yY][eE][sS])
 USE_BUILTIN.solaris-pam!=						\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.solaris-pam:Q}; then \

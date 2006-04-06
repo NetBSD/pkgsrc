@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/03/12 06:56:30 minskim Exp $
+# $NetBSD: Makefile,v 1.20 2006/04/06 06:22:42 reed Exp $
 
 DISTNAME=	libfwbuilder-2.0.10
 PKGREVISION=	5
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c++
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
-BUILDLINK_DEPENDS.qt3-tools+=	qt3-tools>=3.3.5nb5
+BUILDLINK_API_DEPENDS.qt3-tools+=	qt3-tools>=3.3.5nb5
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

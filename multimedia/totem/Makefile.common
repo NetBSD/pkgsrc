@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2006/03/30 21:36:13 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.15 2006/04/06 06:22:27 reed Exp $
 #
 
 DISTNAME=	totem-1.4.0
@@ -26,8 +26,8 @@ GCONF2_SCHEMAS=		totem.schemas
 GCONF2_SCHEMAS+=	totem-handlers.schemas
 GCONF2_SCHEMAS+=	totem-video-thumbnail.schemas
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.3
-BUILDLINK_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.10.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.3
+BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.10.0
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

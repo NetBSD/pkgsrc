@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2006/04/02 09:49:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.54 2006/04/06 06:22:15 reed Exp $
 
 DISTNAME=	balsa-2.3.10
 PKGREVISION=	3
@@ -38,7 +38,7 @@ BUILDLINK_TRANSFORM+=		rm:-DGNOME_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=		rm:-DGNOME_VFS_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=		rm:-DGTK_DISABLE_DEPRECATED
 
-BUILDLINK_DEPENDS.gmime+=	gmime>=2.1.9
+BUILDLINK_API_DEPENDS.gmime+=	gmime>=2.1.9
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

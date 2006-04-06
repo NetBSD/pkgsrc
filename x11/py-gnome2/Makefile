@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/03/06 00:18:27 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2006/04/06 06:23:02 reed Exp $
 #
 
 DISTNAME=	gnome-python-2.12.3
@@ -24,18 +24,18 @@ PYTHON_VERSIONS_ACCEPTED=	24 23
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 
-BUILDLINK_DEPENDS.GConf2+=	GConf2>=2.11.1
+BUILDLINK_API_DEPENDS.GConf2+=	GConf2>=2.11.1
 .include "../../devel/GConf2/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
-BUILDLINK_DEPENDS.pyorbit+=	${PYPKGPREFIX}-ORBit>=2.0.1
+BUILDLINK_API_DEPENDS.pyorbit+=	${PYPKGPREFIX}-ORBit>=2.0.1
 .include "../../net/py-ORBit/buildlink3.mk"
-BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.9.0
+BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.9.0
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-BUILDLINK_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.6.2
+BUILDLINK_API_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.6.2
 .include "../../x11/py-gtk2/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"

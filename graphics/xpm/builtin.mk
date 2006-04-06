@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2006/03/30 18:06:18 jlam Exp $
+# $NetBSD: builtin.mk,v 1.12 2006/04/06 06:22:06 reed Exp $
 
 BUILTIN_PKG:=	xpm
 
@@ -63,7 +63,7 @@ USE_BUILTIN.xpm=	${IS_BUILTIN.xpm}
 .    if defined(BUILTIN_PKG.xpm) && \
         !empty(IS_BUILTIN.xpm:M[yY][eE][sS])
 USE_BUILTIN.xpm=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.xpm}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.xpm}
 .        if !empty(USE_BUILTIN.xpm:M[yY][eE][sS])
 USE_BUILTIN.xpm!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.xpm:Q}; then	\

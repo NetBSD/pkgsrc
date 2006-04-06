@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2006/03/14 19:50:15 tron Exp $
+# $NetBSD: Makefile,v 1.73 2006/04/06 06:21:54 reed Exp $
 
 DISTNAME=		pango-1.12.0
 CATEGORIES=		devel fonts
@@ -40,8 +40,8 @@ CONFIGURE_ARGS+=	--with-qt=no
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE:Q}
 
-BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
+BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

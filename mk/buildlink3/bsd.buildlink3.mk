@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.172 2005/12/09 16:16:41 hira Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.173 2006/04/06 06:23:06 reed Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -48,8 +48,8 @@
 # BUILDLINK_PACKAGES+=	foo
 #
 # .if !empty(FOO_BUILDLINK3_MK:M+)
-# BUILDLINK_DEPENDS.foo+=	foo-lib>=1.0
-# BUILDLINK_RECOMMENDED.foo?=	foo-lib>=1.0nb1
+# BUILDLINK_API_DEPENDS.foo+=	foo-lib>=1.0
+# BUILDLINK_ABI_DEPENDS.foo?=	foo-lib>=1.0nb1
 # BUILDLINK_PKGSRCDIR.foo?=	../../category/foo-lib
 #
 # # We want "-lbar" to eventually resolve to "-lfoo".
@@ -184,33 +184,33 @@ _BLNK_DEPENDS_LIST=	${_BLNK_DEPENDS}
 #
 _BLNK_ADD_TO.DEPENDS=		# empty
 _BLNK_ADD_TO.BUILD_DEPENDS=	# empty
-_BLNK_ADD_TO.RECOMMENDED=	# empty
+_BLNK_ADD_TO.ABI_DEPENDS=	# empty
 .for _pkg_ in ${_BLNK_DEPENDS_LIST}
 .  if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
 _BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.DEPENDS
-_BLNK_RECMETHOD.${_pkg_}=	_BLNK_ADD_TO.RECOMMENDED
+_BLNK_ABIMETHOD.${_pkg_}=	_BLNK_ADD_TO.ABI_DEPENDS
 .  elif !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mbuild)
 _BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.BUILD_DEPENDS
-_BLNK_RECMETHOD.${_pkg_}=	_BLNK_ADD_TO.BUILD_DEPENDS
+_BLNK_ABIMETHOD.${_pkg_}=	_BLNK_ADD_TO.BUILD_DEPENDS
 .  endif
-.  if defined(BUILDLINK_DEPENDS.${_pkg_}) && \
+.  if defined(BUILDLINK_API_DEPENDS.${_pkg_}) && \
       defined(BUILDLINK_PKGSRCDIR.${_pkg_})
-.    for _depend_ in ${BUILDLINK_DEPENDS.${_pkg_}}
+.    for _depend_ in ${BUILDLINK_API_DEPENDS.${_pkg_}}
 .      if empty(${_BLNK_DEPMETHOD.${_pkg_}}:M${_depend_}\:*)
 ${_BLNK_DEPMETHOD.${_pkg_}}+=	${_depend_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
 .      endif
 .    endfor
 .  endif
-.  if defined(BUILDLINK_RECOMMENDED.${_pkg_}) && \
+.  if defined(BUILDLINK_ABI_DEPENDS.${_pkg_}) && \
       defined(BUILDLINK_PKGSRCDIR.${_pkg_})
-.    for _rec_ in ${BUILDLINK_RECOMMENDED.${_pkg_}}
-.      if empty(${_BLNK_RECMETHOD.${_pkg_}}:M${_rec_}\:*)
-${_BLNK_RECMETHOD.${_pkg_}}+=	${_rec_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
+.    for _abi_ in ${BUILDLINK_ABI_DEPENDS.${_pkg_}}
+.      if empty(${_BLNK_ABIMETHOD.${_pkg_}}:M${_abi_}\:*)
+${_BLNK_ABIMETHOD.${_pkg_}}+=	${_abi_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
 .      endif
 .    endfor
 .  endif
 .endfor
-.for _depmethod_ in DEPENDS BUILD_DEPENDS RECOMMENDED
+.for _depmethod_ in DEPENDS BUILD_DEPENDS ABI_DEPENDS
 .  if !empty(_BLNK_ADD_TO.${_depmethod_})
 ${_depmethod_}+=	${_BLNK_ADD_TO.${_depmethod_}}
 .  endif
@@ -280,7 +280,7 @@ BUILDLINK_PREFIX.${_pkg_}?=	/usr
 #
 .  if !defined(_BLNK_PKG_DBDIR.${_pkg_})
 _BLNK_PKG_DBDIR.${_pkg_}?=	# empty
-.    for _depend_ in ${BUILDLINK_DEPENDS.${_pkg_}}
+.    for _depend_ in ${BUILDLINK_API_DEPENDS.${_pkg_}}
 .      if empty(_BLNK_PKG_DBDIR.${_pkg_}:M*not_found)
 _BLNK_PKG_DBDIR.${_pkg_}!=	\
 	dir="";								\

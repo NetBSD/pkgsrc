@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/09 21:04:40 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/06 06:21:35 reed Exp $
 
 .include "../../audio/libao/Makefile.common"
 
@@ -20,7 +20,7 @@ SUBST_FILES.oss=	src/plugins/oss/ao_oss.c
 SUBST_SED.oss=		-e 's|/dev/dsp|${DEVOSSAUDIO}|g'
 SUBST_SED.oss+=		-e 's|/dev/sound/dsp|${DEVOSSAUDIO}|g'
 
-BUILDLINK_DEPENDS.libao+=	libao>=0.8.6nb1
+BUILDLINK_API_DEPENDS.libao+=	libao>=0.8.6nb1
 
 _LIBAO_BUILDING_PLUGIN=	yes
 

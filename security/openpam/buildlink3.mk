@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2005/01/13 21:59:01 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:22:43 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENPAM_BUILDLINK3_MK:=	${OPENPAM_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nopenpam}
 BUILDLINK_PACKAGES+=	openpam
 
 .if !empty(OPENPAM_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.openpam+=	openpam>=20040210
+BUILDLINK_API_DEPENDS.openpam+=	openpam>=20040210
 BUILDLINK_PKGSRCDIR.openpam?=	../../security/openpam
 .endif	# OPENPAM_BUILDLINK3_MK
 
