@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:17:51 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:32 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FREEWAIS_SF_BUILDLINK3_MK:=	${FREEWAIS_SF_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nfreewais-sf}
 BUILDLINK_PACKAGES+=	freewais-sf
 
 .if !empty(FREEWAIS_SF_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.freewais-sf+=	freewais-sf>=2.2.12
-BUILDLINK_RECOMMENDED.freewais-sf+=	freewais-sf>=2.2.12nb2
+BUILDLINK_API_DEPENDS.freewais-sf+=	freewais-sf>=2.2.12
+BUILDLINK_ABI_DEPENDS.freewais-sf+=	freewais-sf>=2.2.12nb2
 BUILDLINK_PKGSRCDIR.freewais-sf?=	../../net/freewais-sf
 .endif	# FREEWAIS_SF_BUILDLINK3_MK
 

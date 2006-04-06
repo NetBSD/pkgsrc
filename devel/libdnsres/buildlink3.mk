@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/02/19 17:11:06 adrianp Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:21:50 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBDNSRES_BUILDLINK3_MK:=	${LIBDNSRES_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibdnsres}
 BUILDLINK_PACKAGES+=	libdnsres
 
 .if !empty(LIBDNSRES_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libdnsres+=	libdnsres>=0.1a
+BUILDLINK_API_DEPENDS.libdnsres+=	libdnsres>=0.1a
 BUILDLINK_PKGSRCDIR.libdnsres?=	../../devel/libdnsres
 .endif	# LIBDNSRES_BUILDLINK3_MK
 

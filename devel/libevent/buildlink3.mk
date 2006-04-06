@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2005/09/16 14:46:43 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:21:50 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBEVENT_BUILDLINK3_MK:=	${LIBEVENT_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibevent}
 BUILDLINK_PACKAGES+=	libevent
 
 .if !empty(LIBEVENT_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libevent+=	libevent>=0.6
+BUILDLINK_API_DEPENDS.libevent+=	libevent>=0.6
 BUILDLINK_PKGSRCDIR.libevent?=	../../devel/libevent
 .endif	# LIBEVENT_BUILDLINK3_MK
 

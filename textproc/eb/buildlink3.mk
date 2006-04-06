@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/02/05 23:11:01 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/06 06:22:50 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EB_BUILDLINK3_MK:=	${EB_BUILDLINK3_MK}+
@@ -26,8 +26,8 @@ PKG_SYSCONFDIR.eb=$$(						\
 	else ${ECHO}; fi )
 
 .if !empty(EB_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.eb+=		eb>=${_EB_REQD}
-BUILDLINK_RECOMMENDED.eb+=	eb>=4.1.3nb1
+BUILDLINK_API_DEPENDS.eb+=		eb>=${_EB_REQD}
+BUILDLINK_ABI_DEPENDS.eb+=	eb>=4.1.3nb1
 BUILDLINK_PKGSRCDIR.eb?=	../../textproc/eb
 .endif	# EB_BUILDLINK3_MK
 

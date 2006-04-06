@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/02/05 23:10:30 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/04/06 06:22:34 reed Exp $
 #
 
 DISTNAME=	pyorbit-2.0.1
@@ -20,7 +20,7 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 
 PYTHON_VERSIONS_ACCEPTED=	24 23 22
-BUILDLINK_DEPENDS.python22+=	python22>=2.2.2nb2
+BUILDLINK_API_DEPENDS.python22+=	python22>=2.2.2nb2
 
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../lang/python/extension.mk"

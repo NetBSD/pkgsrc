@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/03/30 21:28:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.46 2006/04/06 06:21:58 reed Exp $
 #
 
 DISTNAME=		gconf-editor-2.14.0
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--with-gconf-mandatory-source=${GCONF2_CONFIG_SOURCE:S/gconf.xm
 
 GCONF2_SCHEMAS=		gconf-editor.schemas
 
-BUILDLINK_DEPENDS.GConf2+=	GConf2>=2.14.0
+BUILDLINK_API_DEPENDS.GConf2+=	GConf2>=2.14.0
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

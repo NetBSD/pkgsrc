@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2005/03/31 01:03:12 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:21:53 reed Exp $
 
 BUILDLINK_DEPMETHOD.libts?=	build
 
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibts}
 BUILDLINK_PACKAGES+=	libts
 
 .if !empty(LIBTS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libts+=	libts>=1.08
+BUILDLINK_API_DEPENDS.libts+=	libts>=1.08
 BUILDLINK_PKGSRCDIR.libts?=	../../devel/libts
 .endif	# LIBTS_BUILDLINK3_MK
 

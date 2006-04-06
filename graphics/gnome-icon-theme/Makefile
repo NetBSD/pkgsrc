@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/04/03 06:10:57 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2006/04/06 06:22:02 reed Exp $
 #
 
 DISTNAME=		gnome-icon-theme-2.14.2
@@ -19,7 +19,7 @@ USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE=	gnome-icon-theme.pc.in
 
-BUILDLINK_DEPENDS.hicolor-icon-theme+=	hicolor-icon-theme>=0.5
+BUILDLINK_API_DEPENDS.hicolor-icon-theme+=	hicolor-icon-theme>=0.5
 HICOLOR_ICON_THEME_DEPEND_ONLY=		yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2005/11/06 10:36:46 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:22:00 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GEOS_BUILDLINK3_MK:=	${GEOS_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngeos}
 BUILDLINK_PACKAGES+=	geos
 
 .if !empty(GEOS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.geos+=	geos>=2.0.0
+BUILDLINK_API_DEPENDS.geos+=	geos>=2.0.0
 BUILDLINK_PKGSRCDIR.geos?=	../../geography/geos
 .endif	# GEOS_BUILDLINK3_MK
 

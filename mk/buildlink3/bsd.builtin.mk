@@ -1,4 +1,4 @@
-# $NetBSD: bsd.builtin.mk,v 1.6 2005/06/20 05:44:17 jlam Exp $
+# $NetBSD: bsd.builtin.mk,v 1.7 2006/04/06 06:23:06 reed Exp $
 #
 # Copyright (c) 2004-2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -85,7 +85,7 @@
 # .    if defined(BUILTIN_PKG.wibble) && \
 #         !empty(IS_BUILTIN.wibble:M[yY][eE][sS])
 # USE_BUILTIN.wibble=	yes
-# .      for _dep_ in ${BUILDLINK_DEPENDS.wibble}
+# .      for _dep_ in ${BUILDLINK_API_DEPENDS.wibble}
 # .        if !empty(USE_BUILTIN.wibble:M[yY][eE][sS])
 # USE_BUILTIN.wibble!=							\
 #	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.wibble:Q}; then	\
