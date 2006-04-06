@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13470 2006/04/06 09:12:06 adam Exp $
+$NetBSD: CHANGES,v 1.13471 2006/04/06 13:34:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1904,3 +1904,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/lsh to 1.4.3nb4 [salo 2006-04-06]
 	Updated www/jalbum to 6.4 [martti 2006-04-06]
 	Updated math/octave to 2.1.73 [adam 2006-04-06]
+	Added databases/pgadmin3 version 1.4.2 [adam 2006-04-06]
