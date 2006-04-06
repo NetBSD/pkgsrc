@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/03/10 09:05:25 martti Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/06 06:05:14 martti Exp $
 bin/jalbum
 share/jalbum/JAlbum.jar
 share/jalbum/StartJAlbum.bat
@@ -615,14 +615,23 @@ share/jalbum/skins/Camera Geek/styles/Bright.css
 share/jalbum/skins/Camera Geek/styles/Custom.css
 share/jalbum/skins/Camera Geek/styles/Dark.css
 share/jalbum/skins/Camera Geek/styles/Sunset.css
+share/jalbum/skins/Chameleon/help/help.html
+share/jalbum/skins/Chameleon/help/index.gif
+share/jalbum/skins/Chameleon/help/main.gif
+share/jalbum/skins/Chameleon/help/slide.gif
 share/jalbum/skins/Chameleon/hints.jap
+share/jalbum/skins/Chameleon/history.txt
 share/jalbum/skins/Chameleon/index.htt
 share/jalbum/skins/Chameleon/onload.bsh
+share/jalbum/skins/Chameleon/originalslide.htt
 share/jalbum/skins/Chameleon/readme.txt
+share/jalbum/skins/Chameleon/res/avi.gif
 share/jalbum/skins/Chameleon/res/bg.gif
 share/jalbum/skins/Chameleon/res/dia.gif
+share/jalbum/skins/Chameleon/res/doc.gif
 share/jalbum/skins/Chameleon/res/folder.gif
 share/jalbum/skins/Chameleon/res/folder1.gif
+share/jalbum/skins/Chameleon/res/gif.gif
 share/jalbum/skins/Chameleon/res/hdr_left.gif
 share/jalbum/skins/Chameleon/res/hdr_mid.gif
 share/jalbum/skins/Chameleon/res/hdr_right.gif
@@ -632,6 +641,8 @@ share/jalbum/skins/Chameleon/res/movie.gif
 share/jalbum/skins/Chameleon/res/next-disabled.gif
 share/jalbum/skins/Chameleon/res/next.gif
 share/jalbum/skins/Chameleon/res/next1.gif
+share/jalbum/skins/Chameleon/res/pdf.gif
+share/jalbum/skins/Chameleon/res/ppt.gif
 share/jalbum/skins/Chameleon/res/prev-disabled.gif
 share/jalbum/skins/Chameleon/res/prev.gif
 share/jalbum/skins/Chameleon/res/prev1.gif
@@ -639,8 +650,13 @@ share/jalbum/skins/Chameleon/res/show.gif
 share/jalbum/skins/Chameleon/res/show1.gif
 share/jalbum/skins/Chameleon/res/stop.gif
 share/jalbum/skins/Chameleon/res/stop1.gif
+share/jalbum/skins/Chameleon/res/txt.gif
 share/jalbum/skins/Chameleon/res/up.gif
 share/jalbum/skins/Chameleon/res/up1.gif
+share/jalbum/skins/Chameleon/res/wmv.gif
+share/jalbum/skins/Chameleon/res/xls.gif
+share/jalbum/skins/Chameleon/res/xml.gif
+share/jalbum/skins/Chameleon/res/zip.gif
 share/jalbum/skins/Chameleon/slide.htt
 share/jalbum/skins/Chameleon/styles/3D_dark.css
 share/jalbum/skins/Chameleon/styles/3D_dark.jpg
@@ -1218,17 +1234,20 @@ share/jalbum/skins/Chameleon/styles/World/stop.gif
 share/jalbum/skins/Chameleon/styles/World/stop1.gif
 share/jalbum/skins/Chameleon/styles/World/up.gif
 share/jalbum/skins/Chameleon/styles/World/up1.gif
+share/jalbum/skins/Chameleon/texts/texts.bak
 share/jalbum/skins/Chameleon/texts/texts.properties
 share/jalbum/skins/Chameleon/texts/texts_da.properties
 share/jalbum/skins/Chameleon/texts/texts_de.properties
 share/jalbum/skins/Chameleon/texts/texts_en.properties
 share/jalbum/skins/Chameleon/texts/texts_es.properties
+share/jalbum/skins/Chameleon/texts/texts_fi.properties
 share/jalbum/skins/Chameleon/texts/texts_fr.properties
 share/jalbum/skins/Chameleon/texts/texts_hu.properties
 share/jalbum/skins/Chameleon/texts/texts_it.properties
 share/jalbum/skins/Chameleon/texts/texts_nl.properties
 share/jalbum/skins/Chameleon/texts/texts_pl.properties
 share/jalbum/skins/Chameleon/texts/texts_pt.properties
+share/jalbum/skins/Chameleon/texts/texts_ru.properties
 share/jalbum/skins/Chameleon/texts/texts_sk.properties
 share/jalbum/skins/Chameleon/texts/texts_sr.properties
 share/jalbum/skins/Chameleon/texts/texts_sr_latin.properties
@@ -2253,6 +2272,7 @@ share/jalbum/tools/Show supported file types.bsh
 @dirrm share/jalbum/skins/Camera Geek/res
 @dirrm share/jalbum/skins/Camera Geek/styles
 @dirrm share/jalbum/skins/Camera Geek
+@dirrm share/jalbum/skins/Chameleon/help
 @dirrm share/jalbum/skins/Chameleon/res
 @dirrm share/jalbum/skins/Chameleon/styles/3D_dark
 @dirrm share/jalbum/skins/Chameleon/styles/3D_light
