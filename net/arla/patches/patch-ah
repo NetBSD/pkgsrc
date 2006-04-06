@@ -1,6 +1,5 @@
-$NetBSD: patch-ah,v 1.5 2005/12/15 21:28:47 wennmach Exp $
+$NetBSD: patch-ah,v 1.6 2006/04/06 02:41:44 jlam Exp $
 
-Install nnpfs_mod.o into $(lkmdir), not $(bindir).
 Don't strip  nnpfs_mod.o while installing.
 
 --- nnpfs/bsd/Makefile.in.orig	2005-11-22 17:53:54.000000000 +0100
@@ -14,12 +13,3 @@ Don't strip  nnpfs_mod.o while installing.
  INSTALL_DATA	= @INSTALL_DATA@
  MKINSTALLDIRS 	= @top_srcdir@/mkinstalldirs
  
-@@ -28,7 +28,7 @@
- libdir 		= @libdir@
- libexecdir 	= @libexecdir@
- bindir 		= @bindir@
--lkmdir 		= @bindir@
-+lkmdir		= $(exec_prefix)/lkm
- transform	= @program_transform_name@
- EXECSUFFIX	= @EXECSUFFIX@
- VARDB		= /var/db
