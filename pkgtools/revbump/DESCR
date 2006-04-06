@@ -1,4 +1,4 @@
-Tools for bumping PKGREVISIONs and adapting BUILDLINK_RECOMMENDED
+Tools for bumping PKGREVISIONs and adapting BUILDLINK_ABI_DEPENDS
 versions to the latest version automatically.
 
 This tool is mostly intended for pkgsrc developers with commit
