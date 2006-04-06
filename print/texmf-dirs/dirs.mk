@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.1.1.1 2006/04/06 23:07:01 minskim Exp $
+# $NetBSD: dirs.mk,v 1.2 2006/04/06 23:28:36 minskim Exp $
 #
 # This file is intended to be included by mk/dirs.mk, not directly by packages.
 #
@@ -36,7 +36,7 @@ TEXMF_DIRS+=	omega/otp
 TEXMF_DIRS+=	tex
 TEXMF_DIRS+=	tex/lambda
 TEXMF_DIRS+=	tex/latex
-TEXMF_DIRS+=	tex/web2c
+TEXMF_DIRS+=	web2c
 
 .if defined(_USE_TEXMF_DIRS) && !empty(_USE_TEXMF_DIRS)
 DEPENDS+=	texmf-dirs>=${_USE_TEXMF_DIRS}:../../print/texmf-dirs
