@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2006/04/06 03:44:03 jlam Exp $
+# $NetBSD: Makefile,v 1.92 2006/04/06 03:44:19 jlam Exp $
 
 DISTNAME=	wget-1.10.2
 PKGREVISION=	1
@@ -26,7 +26,6 @@ INFO_FILES=		# PLIST
 
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
 
-.include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
