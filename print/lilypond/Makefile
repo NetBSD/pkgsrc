@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/04/06 16:27:30 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2006/04/06 18:18:15 jlam Exp $
 #
 
 DISTNAME=	lilypond-2.4.3
@@ -20,15 +20,14 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison gmake gs:run makeinfo
 MAKEFILE=		GNUmakefile
 
-TEXINFO_REQD=	4.7
-GCC_REQD+=	3.0.5
-INFO_DIR=	info/lilypond
-INFO_FILES=	lilypond.info lilypond-internals.info music-glossary.info
-CONFIGURE_HAS_INFODIR=	NO
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
+TEXINFO_REQD=		4.7
+GCC_REQD+=		3.0.5
+GNU_CONFIGURE_INFODIR=	${PREFIX}/${PKGINFODIR}
+INFO_DIR=		${GNU_CONFIGURE_INFODIR}
+INFO_FILES=		# PLIST
 
-CONFIGURE_ARGS+=--disable-optimising
-CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
+CONFIGURE_ARGS+=	--disable-optimising
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 PYTHON_VERSIONS_ACCEPTED= 21 23
 # 22 has some regular expression problem
 
