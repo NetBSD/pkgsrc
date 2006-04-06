@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2006/03/21 06:00:45 jlam Exp $
+# $NetBSD: Makefile,v 1.41.2.1 2006/04/06 00:37:03 snj Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=	5
+PKGREVISION=	6
 
 USE_DIRS+=	xdg-1.1
 
