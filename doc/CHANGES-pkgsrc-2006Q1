@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.7 2006/04/05 14:10:46 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.8 2006/04/06 00:39:19 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -17,3 +17,5 @@ Pullup ticket 1298 - requested by jlam
 security update for samba
 Pullup ticket 1327 - requested by jlam
 security update for openvpn
+Pullup ticket 1320 - requested by salo
+security fix for dia
