@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/03/31 23:56:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/04/06 22:49:43 minskim Exp $
 @comment There are three files in this package that teTeX-share installs
 @comment and that teTeX-bin modifies. Take care of this:
 bin/MakeTeXPK
@@ -367,4 +367,5 @@ share/texmf/xdvi/xdvi.cfg
 @dirrm include/kpathsea
 @comment The next file is changed by various sub-pkgs (hugetex, ...)
 @exec %D/bin/mktexlsr
+@unexec ${RM} -f %D/share/texmf-local/ls-R
 @unexec ${RM} -f %D/share/texmf/ls-R
