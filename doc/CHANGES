@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13471 2006/04/06 13:34:36 adam Exp $
+$NetBSD: CHANGES,v 1.13472 2006/04/06 17:05:55 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1896,6 +1896,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/tex-dhucs to 2.7.0 [minskim 2006-04-05]
 	Updated lang/gcc34 to 3.4.6 [shannonjr 2006-04-05]
 	Updated lang/gcc34-ada to 3.4.6 [shannonjr 2006-04-05]
+	Updated net/openvpn to 2.0.6 [jlam 2006-04-05]
 	Updated databases/ruby-sqlite3 to 1.1.0nb1 [minskim 2006-04-05]
 	Updated editors/emacs to 21.4anb3 [markd 2006-04-05]
 	Updated editors/emacs-nox11 to 21.4anb3 [markd 2006-04-05]
