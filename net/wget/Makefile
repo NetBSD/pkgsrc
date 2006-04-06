@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2006/03/04 21:30:25 jlam Exp $
+# $NetBSD: Makefile,v 1.90 2006/04/06 03:20:54 jlam Exp $
 
 DISTNAME=	wget-1.10.2
 PKGREVISION=	1
@@ -22,8 +22,7 @@ CONFIGURE_ENV+=		ac_cv_func_sigsetjmp=yes
 
 EGDIR=			${PREFIX}/share/examples/wget
 CONF_FILES=		${EGDIR}/wgetrc ${PKG_SYSCONFDIR}/wgetrc
-
-INFO_FILES=		wget.info
+INFO_FILES=		# PLIST
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"

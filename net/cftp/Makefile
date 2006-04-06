@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2003/08/09 11:16:18 seb Exp $
+# $NetBSD: Makefile,v 1.12 2006/04/06 03:20:54 jlam Exp $
 #
 
 DISTNAME=	cftp-0.12
@@ -11,7 +11,7 @@ HOMEPAGE=	http://sunsite.csd.smc.univie.ac.at/pub/nih/cftp/
 COMMENT=	Comfortable FTP, a full screen ftp client
 
 GNU_CONFIGURE=	YES
-INFO_FILES=	cftp.info
+INFO_FILES=	# PLIST
 
 BUILD_DEFS+=	USE_INET6
 
