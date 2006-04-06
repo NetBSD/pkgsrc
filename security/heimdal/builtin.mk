@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2006/03/30 18:06:18 jlam Exp $
+# $NetBSD: builtin.mk,v 1.9 2006/04/06 06:22:41 reed Exp $
 
 BUILTIN_PKG:=	heimdal
 
@@ -74,7 +74,7 @@ USE_BUILTIN.heimdal=	${IS_BUILTIN.heimdal}
 .    if defined(BUILTIN_PKG.heimdal) && \
         !empty(IS_BUILTIN.heimdal:M[yY][eE][sS])
 USE_BUILTIN.heimdal=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.heimdal}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.heimdal}
 .        if !empty(USE_BUILTIN.heimdal:M[yY][eE][sS])
 USE_BUILTIN.heimdal!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.heimdal:Q}; then \
@@ -97,7 +97,7 @@ CHECK_BUILTIN.heimdal?=	no
 .if !empty(CHECK_BUILTIN.heimdal:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.heimdal:M[nN][oO])
-BUILDLINK_DEPENDS.heimdal+=	heimdal>=0.6
+BUILDLINK_API_DEPENDS.heimdal+=	heimdal>=0.6
 
 KRB5_CONFIG?=	${BUILDLINK_PREFIX.heimdal}/bin/krb5-config
 CONFIGURE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}

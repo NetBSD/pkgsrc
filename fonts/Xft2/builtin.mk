@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.13 2006/03/30 18:06:17 jlam Exp $
+# $NetBSD: builtin.mk,v 1.14 2006/04/06 06:21:59 reed Exp $
 
 BUILTIN_PKG:=	Xft2
 
@@ -67,7 +67,7 @@ USE_BUILTIN.Xft2=	${IS_BUILTIN.Xft2}
 .    if defined(BUILTIN_PKG.Xft2) && \
         !empty(IS_BUILTIN.Xft2:M[yY][eE][sS])
 USE_BUILTIN.Xft2=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.Xft2}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.Xft2}
 .        if !empty(USE_BUILTIN.Xft2:M[yY][eE][sS])
 USE_BUILTIN.Xft2!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.Xft2:Q}; then	\
@@ -90,7 +90,7 @@ CHECK_BUILTIN.Xft2?=	no
 .if !empty(CHECK_BUILTIN.Xft2:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.Xft2:M[nN][oO])
-BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1nb2
+BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1nb2
 .  endif
 
 .  if !empty(USE_BUILTIN.Xft2:M[yY][eE][sS])

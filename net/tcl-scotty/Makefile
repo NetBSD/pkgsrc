@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/04/11 21:47:00 tv Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/06 06:22:35 reed Exp $
 #
 
 DISTNAME=	scotty-${DIST_VERS}
@@ -11,7 +11,7 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://wwwhome.cs.utwente.nl/~schoenw/scotty/
 COMMENT=	Network management extensions to TCL
 
-BUILDLINK_DEPENDS.tcl+=	tcl>=8.4.6nb4
+BUILDLINK_API_DEPENDS.tcl+=	tcl>=8.4.6nb4
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

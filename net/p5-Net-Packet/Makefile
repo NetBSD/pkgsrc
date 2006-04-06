@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/05 19:37:54 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/06 06:22:34 reed Exp $
 
 DISTNAME=	Net-Packet-2.04
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Net-IPv6Addr-[0-9]*:../../net/p5-Net-IPv6Addr
 DEPENDS+=	p5-Class-Gomor-Hash-[0-9]*:../../devel/p5-Class-Gomor-Hash
 
 PKG_INSTALLATION_TYPES=		overwrite pkgviews
-BUILDLINK_DEPENDS.libpcap+=	libpcap>=0.9.3nb2
+BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.9.3nb2
 
 PERL5_PACKLIST=		auto/Net/Packet/.packlist
 

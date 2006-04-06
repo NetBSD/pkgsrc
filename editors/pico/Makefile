@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.68 2006/03/04 21:29:32 jlam Exp $
+# $NetBSD: Makefile,v 1.69 2006/04/06 06:21:58 reed Exp $
 #
 # NOTE:
 # When updating, it is necessary to change the shlib version, located in
 # several files in patches/.  If you do not KNOW that the new version is
 # backwards ABI compatible (usually not), bump the major version,
-# and then bump the BUILDLINK_DEPENDS in buildlink3.mk.
+# and then bump the BUILDLINK_API_DEPENDS in buildlink3.mk.
 
 DISTNAME=	pine4.64
 PKGNAME=	pico-4.10

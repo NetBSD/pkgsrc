@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:08:54 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:21:56 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 TEEM_BUILDLINK3_MK:=	${TEEM_BUILDLINK3_MK}+
@@ -13,8 +13,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nteem}
 BUILDLINK_PACKAGES+=	teem
 
 .if !empty(TEEM_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.teem+=		teem>=1.8.0
-BUILDLINK_RECOMMENDED.teem?=		teem>=1.8.0nb1
+BUILDLINK_API_DEPENDS.teem+=		teem>=1.8.0
+BUILDLINK_ABI_DEPENDS.teem?=		teem>=1.8.0nb1
 BUILDLINK_PKGSRCDIR.teem?=		../../devel/teem
 
 BUILDLINK_FILES.teem+=	include/teem/*

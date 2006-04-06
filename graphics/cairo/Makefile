@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/04/02 19:59:13 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2006/04/06 06:22:01 reed Exp $
 
 DISTNAME=	cairo-1.0.4
 CATEGORIES=	graphics
@@ -29,11 +29,11 @@ PLIST_SUBST+=		QUARTZ=
 PLIST_SUBST+=		QUARTZ="@comment "
 .endif
 
-BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.5
-BUILDLINK_DEPENDS.Xft2+=	Xft2>=2.1.2
-BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
-BUILDLINK_DEPENDS.glitz+=	glitz>=0.4.4
-BUILDLINK_DEPENDS.libpixman+=	libpixman>=0.1.5
+BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.5
+BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
+BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
+BUILDLINK_API_DEPENDS.glitz+=	glitz>=0.4.4
+BUILDLINK_API_DEPENDS.libpixman+=	libpixman>=0.1.5
 
 .include "../../mk/compiler.mk"
 

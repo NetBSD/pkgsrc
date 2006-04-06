@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/02/05 23:10:28 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2006/04/06 06:22:34 reed Exp $
 
 DISTNAME=	ntop-3.2
 PKGREVISION=	1
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--with-zlib-root=${BUILDLINK_PREFIX.zlib}
 # ntop-3.x crashes with IPv6
 CONFIGURE_ARGS+=	--disable-ipv6
 
-BUILDLINK_DEPENDS.libpcap+=	libpcap>=0.8.3
+BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.8.3
 
 .include "../../mk/pthread.buildlink3.mk"
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"

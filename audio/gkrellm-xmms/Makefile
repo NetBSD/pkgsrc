@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/28 16:24:21 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2006/04/06 06:21:34 reed Exp $
 #
 
 DISTNAME=	gkrellmms-2.1.20
@@ -15,7 +15,7 @@ USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	YES
 BUILD_USES_MSGFMT=	YES
 
-BUILDLINK_DEPENDS.gkrellm+=	gkrellm>=2.2.0
+BUILDLINK_API_DEPENDS.gkrellm+=	gkrellm>=2.2.0
 
 WRKSRC=		${WRKDIR}/gkrellmms
 MAKE_ENV+=	LOCALEDIR=${PREFIX}/${PKGLOCALEDIR}/locale \

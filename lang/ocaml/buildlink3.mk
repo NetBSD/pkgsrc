@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2006/02/05 23:09:46 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2006/04/06 06:22:12 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OCAML_BUILDLINK3_MK:=	${OCAML_BUILDLINK3_MK}+
@@ -12,8 +12,8 @@ BUILDLINK_PACKAGES+=		ocaml
 BUILDLINK_DEPMETHOD.ocaml?=	build
 
 .if !empty(OCAML_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.ocaml+=	ocaml>=3.08.2
-BUILDLINK_RECOMMENDED.ocaml?=	ocaml>=3.09.1nb2
+BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.08.2
+BUILDLINK_ABI_DEPENDS.ocaml?=	ocaml>=3.09.1nb2
 BUILDLINK_PKGSRCDIR.ocaml?=	../../lang/ocaml
 
 . include "../../mk/bsd.prefs.mk"

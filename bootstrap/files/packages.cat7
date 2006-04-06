@@ -477,15 +477,15 @@ PPAACCKKAAGGEE SSPPEECCIIFFIICC VVAARRIIAABBLLEESS
                      this for packages that install identical set of files.
                      The format of this entry is ``pkgname''.
 
-           RECOMMENDED
+           ABI_DEPENDS
                      A list of recommended versions of pre-requisite packages.
                      This should be used together with ``DEPENDS'' to denote
                      which version of a pre-requisite is required and which
                      version is recommended.  The format of this entry is
                      ``pkgname:dir'', the same as for ``DEPENDS''.
 
-           IGNORE_RECOMMENDED
-                     If this is set to ``NO'' (the default), then RECOMMENDED
+           IGNORE_ABI_DEPENDS
+                     If this is set to ``NO'' (the default), then ABI_DEPENDS
                      pre-requisites will be turned into dependencies.  If set
                      to ``YES'', recommendations will be ignored and a warning
                      will be printed that packages created with this option

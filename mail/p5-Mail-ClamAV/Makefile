@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/04 21:30:01 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/06 06:22:19 reed Exp $
 
 DISTNAME=	Mail-ClamAV-0.17
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Perl5 module for mail/clamav virus scanner
 DEPENDS+=	p5-Inline>=0.40:../../devel/p5-Inline
 
 # this version needs clamav>=0.80
-BUILDLINK_DEPENDS.clamav+=	clamav>=0.80
+BUILDLINK_API_DEPENDS.clamav+=	clamav>=0.80
 
 PERL5_PACKLIST=		auto/Mail/ClamAV/.packlist
 PTHREAD_OPTS+=		require

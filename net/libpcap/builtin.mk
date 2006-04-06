@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.13 2006/03/30 18:06:18 jlam Exp $
+# $NetBSD: builtin.mk,v 1.14 2006/04/06 06:22:33 reed Exp $
 
 BUILTIN_PKG:=	libpcap
 
@@ -82,7 +82,7 @@ USE_BUILTIN.libpcap=	${IS_BUILTIN.libpcap}
 .    if defined(BUILTIN_PKG.libpcap) && \
         !empty(IS_BUILTIN.libpcap:M[yY][eE][sS])
 USE_BUILTIN.libpcap=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.libpcap}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.libpcap}
 .        if !empty(USE_BUILTIN.libpcap:M[yY][eE][sS])
 USE_BUILTIN.libpcap!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libpcap:Q}; then \

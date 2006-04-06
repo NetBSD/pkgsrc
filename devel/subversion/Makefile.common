@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2006/04/04 03:36:32 reed Exp $
+# $NetBSD: Makefile.common,v 1.24 2006/04/06 06:21:56 reed Exp $
 
 DISTNAME=		subversion-${SVNVER}
 CATEGORIES=		devel
@@ -27,6 +27,6 @@ CONFIGURE_ARGS+=	--with-ssl
 # workaround: does not install info file, but does create directory
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 
-BUILDLINK_DEPENDS.subversion-base+=	subversion-base>=${SVNVER}
+BUILDLINK_API_DEPENDS.subversion-base+=	subversion-base>=${SVNVER}
 
 .include "../../devel/gettext-lib/buildlink3.mk"

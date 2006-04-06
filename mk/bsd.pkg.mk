@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1812 2006/03/20 01:48:57 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1813 2006/04/06 06:23:05 reed Exp $
 #
 # This file is in the public domain.
 #
@@ -760,11 +760,11 @@ USE_LANGUAGES?=		# empty
 
 .include "../../mk/wrapper/bsd.wrapper.mk"
 
-.if defined(RECOMMENDED)
-.  if !empty(IGNORE_RECOMMENDED:M[nN][oO])
-DEPENDS+=		${RECOMMENDED}
+.if defined(ABI_DEPENDS)
+.  if !empty(USE_ABI_DEPENDS:M[yY][eE][sS])
+DEPENDS+=		${ABI_DEPENDS}
 .  else
-BUILD_DEFS+=		IGNORE_RECOMMENDED
+BUILD_DEFS+=		USE_ABI_DEPENDS
 .  endif
 .endif
 
@@ -1806,8 +1806,8 @@ real-su-package: ${PLIST} ${DESCR}
 	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ${PKGNAME} may not be made available through FTP:"
 	@${ECHO_MSG} "${_PKGSRC_IN}>         " ${NO_BIN_ON_FTP:Q}
 .  endif
-.  if defined(RECOMMENDED) && !empty(IGNORE_RECOMMENDED:M[yY][eE][sS])
-	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: dependency recommendations are being ignored!"
+.  if defined(ABI_DEPENDS) && !empty(USE_ABI_DEPENDS:M[Nn][Oo])
+	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ABI dependency recommendations are being ignored!"
 	@${ECHO_MSG} "${_PKGSRC_IN}>          ${PKGNAME} should not be uploaded nor"
 	@${ECHO_MSG} "${_PKGSRC_IN}>          otherwise be used as a binary package!"
 .  endif

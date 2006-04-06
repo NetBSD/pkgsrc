@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.16 2006/03/30 18:06:19 jlam Exp $
+# $NetBSD: builtin.mk,v 1.17 2006/04/06 06:22:57 reed Exp $
 
 BUILTIN_PKG:=	Xrender
 
@@ -77,7 +77,7 @@ USE_BUILTIN.Xrender=	${IS_BUILTIN.Xrender}
 .    if defined(BUILTIN_PKG.Xrender) && \
         !empty(IS_BUILTIN.Xrender:M[yY][eE][sS])
 USE_BUILTIN.Xrender=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.Xrender}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.Xrender}
 .        if !empty(USE_BUILTIN.Xrender:M[yY][eE][sS])
 USE_BUILTIN.Xrender!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.Xrender:Q}; then \
@@ -100,8 +100,8 @@ CHECK_BUILTIN.Xrender?=	no
 .if !empty(CHECK_BUILTIN.Xrender:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.Xrender:M[nN][oO])
-BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8.2
-BUILDLINK_DEPENDS.render+=	Xrender>=0.8
+BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8.2
+BUILDLINK_API_DEPENDS.render+=	Xrender>=0.8
 .  endif
 
 .  if !empty(USE_BUILTIN.Xrender:M[yY][eE][sS])

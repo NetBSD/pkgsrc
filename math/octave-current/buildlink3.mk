@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/02/05 23:10:03 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/06 06:22:21 reed Exp $
 #
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
@@ -12,8 +12,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Noctave-current}
 BUILDLINK_PACKAGES+=	octave-current
 
 .if !empty(OCTAVE_CURRENT_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.octave-current+=	octave-current>=2.1.57
-BUILDLINK_RECOMMENDED.octave-current+=	octave-current>=2.9.4nb1
+BUILDLINK_API_DEPENDS.octave-current+=	octave-current>=2.1.57
+BUILDLINK_ABI_DEPENDS.octave-current+=	octave-current>=2.9.4nb1
 BUILDLINK_PKGSRCDIR.octave-current?=	../../math/octave-current
 .endif	# OCTAVE_CURRENT_BUILDLINK3_MK
 

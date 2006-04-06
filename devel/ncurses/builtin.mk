@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2006/04/04 19:11:33 jlam Exp $
+# $NetBSD: builtin.mk,v 1.11 2006/04/06 06:21:54 reed Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -53,7 +53,7 @@ USE_BUILTIN.ncurses=	${IS_BUILTIN.ncurses}
 .    if defined(BUILTIN_PKG.ncurses) && \
         !empty(IS_BUILTIN.ncurses:M[yY][eE][sS])
 USE_BUILTIN.ncurses=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.ncurses}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.ncurses}
 .        if !empty(USE_BUILTIN.ncurses:M[yY][eE][sS])
 USE_BUILTIN.ncurses!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.ncurses:Q}; then \
