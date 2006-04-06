@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4835 2006/04/06 17:02:15 wiz Exp $
+$NetBSD: TODO,v 1.4836 2006/04/06 17:04:31 salo Exp $
 
 Suggested new packages
 ======================
@@ -800,7 +800,6 @@ Suggested package updates
 	o openssh-4.3p2 [pkg/32858]
 	o openssl-0.9.8a
 	o openttd-0.4.7
-	o openvpn-2.0.6
 	o opera-8.54
 	o oroborus-2.0.15
 	o osh-050219
