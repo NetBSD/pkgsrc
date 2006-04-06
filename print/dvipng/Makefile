@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/04/06 06:22:36 reed Exp $
+# $NetBSD: Makefile,v 1.24 2006/04/06 15:57:32 jlam Exp $
 
 DISTNAME=	dvipng-1.7
 CATEGORIES=	textproc converters
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dvipng/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dvipng.sourceforge.net/dvipng.html
 COMMENT=	Convert DVI files to PNG files
+
+CONFLICTS+=	teTeX-bin-[3-9].* teTeX-bin-[1-9][0-9]*
 
 USE_TOOLS+=		makeinfo
 USE_PKGLOCALEDIR=	yes
