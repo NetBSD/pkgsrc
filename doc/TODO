@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4834 2006/04/05 21:44:14 wiz Exp $
+$NetBSD: TODO,v 1.4835 2006/04/06 17:02:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -533,6 +533,7 @@ Suggested package updates
 	o gcpio-2.6
 	o gdb6-6.3.0
 	o gdsreader-0.3.2
+	o getmail-4.6.0
 	o ggiterm-0.7.1
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
@@ -799,6 +800,8 @@ Suggested package updates
 	o openssh-4.3p2 [pkg/32858]
 	o openssl-0.9.8a
 	o openttd-0.4.7
+	o openvpn-2.0.6
+	o opera-8.54
 	o oroborus-2.0.15
 	o osh-050219
 	o otpCalc-0.97
@@ -1129,7 +1132,7 @@ Suggested package updates
 	o snd-8.0
 	o sope-4.5.5
 	o source-highlight-2.3 [pkg/32325]
-	o spamass-milter-0.3.1
+	o spamass-milter-0.3.1 [pkg/33206]
 	o spamprobe-1.4b
 	o spim-7.2.1
 	o sqlitemanager-1.1.3
@@ -1147,7 +1150,7 @@ Suggested package updates
 	o sweep-0.9.1
 	o swfdec-0.3.6
 	o swi-prolog-5.5.33
-	o sylpheed-claws-2.0.0
+	o sylpheed-claws-2.1.0
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.1
 	o sysinfo-4.2.2
@@ -1229,6 +1232,7 @@ Suggested package updates
 	o xbindkeys-1.7.2
 	o xblast-2.10.0
 	o xboard-4.2.7
+	o xchm-1.6
 	o xcircuit-3.4.0
 	o xdaliclock-2.23
 	o xdesktopwaves-1.3
