@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2006/01/28 05:46:02 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/04/06 18:18:15 jlam Exp $
 bin/ieee-copyout
 bin/latex-mk
+info/latex-mk.info
 share/latex-mk/dated_draft.ps
 share/latex-mk/example/README-example.txt
 share/latex-mk/example/biblio.tex
