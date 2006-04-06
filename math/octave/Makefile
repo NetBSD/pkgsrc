@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2006/03/20 18:15:38 jlam Exp $
+# $NetBSD: Makefile,v 1.66 2006/04/06 09:10:28 adam Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
-PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.che.wisc.edu/pub/octave/ \
 		ftp://ftp.eos.hokudai.ac.jp/pub/GNU/misc/octave/ \
@@ -17,7 +16,7 @@ BUILD_DEPENDS+=	bison>=1.875:../../devel/bison
 BUILD_DEPENDS+=	gperf>=2.7:../../devel/gperf
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
-OCTAVE_VER=	2.1.72
+OCTAVE_VER=	2.1.73
 CONFLICTS+=	octave-current-*
 
 .if (${MACHINE_ARCH} == "arm32")
@@ -80,9 +79,9 @@ post-install:
 .for f in ${OCTAVE_DOC}
 	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${PREFIX}/share/octave/${OCTAVE_VER}/doc
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/octave
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/octave
 .for f in ${OCTAVE_HTML}
-	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${PREFIX}/share/doc/html/octave
+	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${PREFIX}/share/doc/octave
 .endfor
 
 .include "../../audio/libsndfile/buildlink3.mk"
