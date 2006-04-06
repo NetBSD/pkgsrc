@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/04 21:30:33 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/04/06 06:22:37 reed Exp $
 #
 
 DISTNAME=       aide-0.10
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cs.tut.fi/~rammer/aide.html
 COMMENT=	Free intrusion detection system for checking file integrity
 
-BUILDLINK_DEPENDS.mhash?=	mhash>=0.8.17
+BUILDLINK_API_DEPENDS.mhash?=	mhash>=0.8.17
 
 
 GNU_CONFIGURE=	yes

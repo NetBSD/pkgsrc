@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/03/14 20:23:07 kristerw Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:21:46 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BUDDY_BUILDLINK3_MK:=	${BUDDY_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nbuddy}
 BUILDLINK_PACKAGES+=	buddy
 
 .if !empty(BUDDY_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.buddy+=	buddy>=2.4
+BUILDLINK_API_DEPENDS.buddy+=	buddy>=2.4
 BUILDLINK_PKGSRCDIR.buddy?=	../../devel/buddy
 .endif	# BUDDY_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/03/30 21:15:27 jmmv Exp $
+# $NetBSD: Makefile,v 1.36 2006/04/06 06:22:17 reed Exp $
 #
 
 DISTNAME=	evolution-data-server-1.6.0
@@ -13,7 +13,7 @@ COMMENT=	Evolution data server
 BUILD_USES_MSGFMT=	yes
 USE_MSGFMT_PLURALS=	yes
 
-BUILDLINK_DEPENDS.libsoup-devel+=	libsoup-devel>=2.2.3
+BUILDLINK_API_DEPENDS.libsoup-devel+=	libsoup-devel>=2.2.3
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1

@@ -1,4 +1,4 @@
-# $NetBSD: tex.buildlink3.mk,v 1.12 2006/02/27 12:14:50 rxg Exp $
+# $NetBSD: tex.buildlink3.mk,v 1.13 2006/04/06 06:23:06 reed Exp $
 #
 # A Makefile fragment for TeX and LaTeX packages
 #
@@ -88,11 +88,11 @@ TEX_ACCEPTED?=	teTeX2 teTeX3
 
 # set up variables for buildlink or depends
 #
-BUILDLINK_DEPENDS.teTeX1=	teTeX-bin-1.[0-9]*
+BUILDLINK_API_DEPENDS.teTeX1=	teTeX-bin-1.[0-9]*
 BUILDLINK_PKGSRCDIR.teTeX1=	../../print/teTeX1-bin
-BUILDLINK_DEPENDS.teTeX2=	teTeX-bin-2.[0-9]*
+BUILDLINK_API_DEPENDS.teTeX2=	teTeX-bin-2.[0-9]*
 BUILDLINK_PKGSRCDIR.teTeX2=	../../print/teTeX-bin
-BUILDLINK_DEPENDS.teTeX3=	teTeX-bin-3.[0-9]*
+BUILDLINK_API_DEPENDS.teTeX3=	teTeX-bin-3.[0-9]*
 BUILDLINK_PKGSRCDIR.teTeX3=	../../print/teTeX3-bin
 
 # Determine the TeX version to be used.
@@ -110,13 +110,13 @@ TEX_TYPE=	none
 # Set version specifics.
 #
 .if ${TEX_TYPE} == "teTeX3"
-_TEX_DEPENDENCY=	${BUILDLINK_DEPENDS.teTeX3}
+_TEX_DEPENDENCY=	${BUILDLINK_API_DEPENDS.teTeX3}
 _TEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX3}
 .elif ${TEX_TYPE} == "teTeX2"
-_TEX_DEPENDENCY=	${BUILDLINK_DEPENDS.teTeX2}
+_TEX_DEPENDENCY=	${BUILDLINK_API_DEPENDS.teTeX2}
 _TEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX2}
 .elif ${TEX_TYPE} == "teTeX1"
-_TEX_DEPENDENCY=	${BUILDLINK_DEPENDS.teTeX1}
+_TEX_DEPENDENCY=	${BUILDLINK_API_DEPENDS.teTeX1}
 _TEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX1}
 .endif
 

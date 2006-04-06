@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:11:43 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:23:04 reed Exp $
 #
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
@@ -12,8 +12,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ntk-BWidget}
 BUILDLINK_PACKAGES+=	tk-BWidget
 
 .if !empty(TK_BWIDGET_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.tk-BWidget+=	tk-BWidget>=1.7.0
-BUILDLINK_RECOMMENDED.tk-BWidget?=	tk-BWidget>=1.7.0nb1
+BUILDLINK_API_DEPENDS.tk-BWidget+=	tk-BWidget>=1.7.0
+BUILDLINK_ABI_DEPENDS.tk-BWidget?=	tk-BWidget>=1.7.0nb1
 BUILDLINK_PKGSRCDIR.tk-BWidget?=	../../x11/tk-BWidget
 .endif	# TK_BWIDGET_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/02/20 02:59:52 schmonz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 06:21:44 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BGLIBS_BUILDLINK3_MK:=	${BGLIBS_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nbglibs}
 BUILDLINK_PACKAGES+=	bglibs
 
 .if !empty(BGLIBS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.bglibs+=	bglibs>=1.040
+BUILDLINK_API_DEPENDS.bglibs+=	bglibs>=1.040
 BUILDLINK_PKGSRCDIR.bglibs?=	../../devel/bglibs
 BUILDLINK_DEPMETHOD.bglibs?=	build
 .endif	# BGLIBS_BUILDLINK3_MK

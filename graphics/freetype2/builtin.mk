@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2006/03/30 18:06:17 jlam Exp $
+# $NetBSD: builtin.mk,v 1.9 2006/04/06 06:22:02 reed Exp $
 
 BUILTIN_PKG:=	freetype2
 
@@ -51,7 +51,7 @@ USE_BUILTIN.freetype2=	${IS_BUILTIN.freetype2}
 .    if defined(BUILTIN_PKG.freetype2) && \
         !empty(IS_BUILTIN.freetype2:M[yY][eE][sS])
 USE_BUILTIN.freetype2=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.freetype2}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.freetype2}
 .        if !empty(USE_BUILTIN.freetype2:M[yY][eE][sS])
 USE_BUILTIN.freetype2!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.freetype2:Q}; then \
@@ -74,7 +74,7 @@ CHECK_BUILTIN.freetype2?=	no
 .if !empty(CHECK_BUILTIN.freetype2:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.freetype2:M[nN][oO])
-BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.3
+BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.3
 .  endif
 
 .  if !empty(USE_BUILTIN.freetype2:M[yY][eE][sS])

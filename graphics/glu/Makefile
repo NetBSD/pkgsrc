@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/02/09 12:27:42 adam Exp $
+# $NetBSD: Makefile,v 1.45 2006/04/06 06:22:02 reed Exp $
 
 PKGNAME=	${DISTNAME:C/MesaLib/glu/}
 COMMENT=	GLU polygon tessellation facility for Mesa
@@ -12,7 +12,7 @@ USE_LANGUAGES=	c c++
 
 INSTLIBS=	${WRKSRC}/src/glu/sgi/libGLU.la
 
-BUILDLINK_DEPENDS.MesaLib+=	MesaLib>=${MESA_VERSION}
+BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=${MESA_VERSION}
 .include "../../graphics/MesaLib/buildlink3.mk"
 
 pre-build:

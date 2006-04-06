@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:08:32 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:21:41 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 MYSQL_CLIENT_BUILDLINK3_MK:=	${MYSQL_CLIENT_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nmysql-client}
 BUILDLINK_PACKAGES+=	mysql-client
 
 .if !empty(MYSQL_CLIENT_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.mysql-client+=	mysql-client>=5.0.15
-BUILDLINK_RECOMMENDED.mysql-client?=	mysql-client>=5.0.18nb1
+BUILDLINK_API_DEPENDS.mysql-client+=	mysql-client>=5.0.15
+BUILDLINK_ABI_DEPENDS.mysql-client?=	mysql-client>=5.0.18nb1
 BUILDLINK_PKGSRCDIR.mysql-client?=	../../databases/mysql5-client
 BUILDLINK_LIBDIRS.mysql-client?=	lib/mysql
 BUILDLINK_INCDIRS.mysql-client?=	include/mysql

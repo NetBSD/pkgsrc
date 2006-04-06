@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2006/03/30 18:06:18 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2006/04/06 06:22:45 reed Exp $
 
 BUILTIN_PKG:=	file
 
@@ -32,7 +32,7 @@ USE_BUILTIN.file=	${IS_BUILTIN.file}
 .    if defined(BUILTIN_PKG.file) && \
         !empty(IS_BUILTIN.file:M[yY][eE][sS])
 USE_BUILTIN.file=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.file}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.file}
 .        if !empty(USE_BUILTIN.file:M[yY][eE][sS])
 USE_BUILTIN.file!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.file:Q}; then	\

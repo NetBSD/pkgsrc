@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2004/04/18 18:48:41 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:22:42 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBIDEA_BUILDLINK3_MK:=	${LIBIDEA_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibidea}
 BUILDLINK_PACKAGES+=	libidea
 
 .if !empty(LIBIDEA_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libidea+=	libidea>=0.8.2
+BUILDLINK_API_DEPENDS.libidea+=	libidea>=0.8.2
 BUILDLINK_PKGSRCDIR.libidea?=	../../security/libidea
 BUILDLINK_DEPMETHOD.libidea?=	build
 .endif	# LIBIDEA_BUILDLINK3_MK

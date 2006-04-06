@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:10:30 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:34 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PYLIBDNET_BUILDLINK3_MK:=	${PYLIBDNET_BUILDLINK3_MK}+
@@ -14,8 +14,8 @@ BUILDLINK_PACKAGES+=	pylibdnet
 
 .include "../../lang/python/pyversion.mk"
 
-BUILDLINK_DEPENDS.pylibdnet+=	${PYPKGPREFIX}-libdnet>=1.7
-BUILDLINK_RECOMMENDED.pylibdnet?=	${PYPKGPREFIX}-libdnet>=1.10nb1
+BUILDLINK_API_DEPENDS.pylibdnet+=	${PYPKGPREFIX}-libdnet>=1.7
+BUILDLINK_ABI_DEPENDS.pylibdnet?=	${PYPKGPREFIX}-libdnet>=1.10nb1
 BUILDLINK_PKGSRCDIR.pylibdnet?=	../../net/py-libdnet
 .endif	# PYLIBDNET_BUILDLINK3_MK
 

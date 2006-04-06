@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:09:44 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/06 06:22:10 reed Exp $
 #
 
 DISTNAME=	coq-8.0pl3
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	-emacslib ${PREFIX}/share/emacs/site-lisp
 CONFIGURE_ARGS+=	-reals all
 BUILD_TARGET=		world
 
-BUILDLINK_DEPENDS.ocaml+=       ocaml>=3.09
+BUILDLINK_API_DEPENDS.ocaml+=       ocaml>=3.09
 
 .include "../../mk/bsd.prefs.mk"
 

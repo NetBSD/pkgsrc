@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/03/21 06:00:48 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2006/04/06 06:22:36 reed Exp $
 #
 
 DISTNAME=	lilypond-2.4.3
@@ -13,7 +13,7 @@ COMMENT=	GNU Music Typesetter
 DEPENDS+=	ec-fonts-mftraced-[0-9]*:../../fonts/ec-fonts-mftraced
 BUILD_DEPENDS+=	bison>=1.875nb1:../../devel/bison
 
-BUILDLINK_DEPENDS.mftrace+=	mftrace>=1.1.0
+BUILDLINK_API_DEPENDS.mftrace+=	mftrace>=1.1.0
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES

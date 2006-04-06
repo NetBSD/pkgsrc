@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/02/05 23:09:29 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2006/04/06 06:22:01 reed Exp $
 #
 
 DISTNAME=	feh-1.3.4
@@ -17,8 +17,8 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--program-transform-name=s,cam,feh_cam,
 REPLACE_PERL=		cam/cam
 
-BUILDLINK_DEPENDS.giblib+=	giblib>=1.2.4
-BUILDLINK_DEPENDS.jpeg+=	jpeg>=6bnb3 # includes jpegint.h
+BUILDLINK_API_DEPENDS.giblib+=	giblib>=1.2.4
+BUILDLINK_API_DEPENDS.jpeg+=	jpeg>=6bnb3 # includes jpegint.h
 
 .include "../../devel/giblib/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"

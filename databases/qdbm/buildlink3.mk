@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/02 20:13:54 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:21:43 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 QDBM_BUILDLINK3_MK:=	${QDBM_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nqdbm}
 BUILDLINK_PACKAGES+=	qdbm
 
 .if !empty(QDBM_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.qdbm+=	qdbm>=1.8.40
+BUILDLINK_API_DEPENDS.qdbm+=	qdbm>=1.8.40
 BUILDLINK_PKGSRCDIR.qdbm?=	../../databases/qdbm
 .endif	# QDBM_BUILDLINK3_MK
 

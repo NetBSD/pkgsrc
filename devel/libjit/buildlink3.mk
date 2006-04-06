@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:08:45 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:21:51 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBJIT_BUILDLINK3_MK:=	${LIBJIT_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibjit}
 BUILDLINK_PACKAGES+=	libjit
 
 .if !empty(LIBJIT_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libjit+=	libjit>=0.0.2
-BUILDLINK_RECOMMENDED.libjit+=	libjit>=0.0.4nb1
+BUILDLINK_API_DEPENDS.libjit+=	libjit>=0.0.2
+BUILDLINK_ABI_DEPENDS.libjit+=	libjit>=0.0.4nb1
 BUILDLINK_PKGSRCDIR.libjit?=	../../devel/libjit
 .endif	# LIBJIT_BUILDLINK3_MK
 

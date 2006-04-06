@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2006/03/30 18:06:18 jlam Exp $
+# $NetBSD: builtin.mk,v 1.10 2006/04/06 06:22:44 reed Exp $
 
 BUILTIN_PKG:=	pflkm
 
@@ -79,7 +79,7 @@ USE_BUILTIN.pflkm=	${IS_BUILTIN.pflkm}
 .    if defined(BUILTIN_PKG.pflkm) && \
         !empty(IS_BUILTIN.pflkm:M[yY][eE][sS])
 USE_BUILTIN.pflkm=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.pflkm}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.pflkm}
 .        if !empty(USE_BUILTIN.pflkm:M[yY][eE][sS])
 USE_BUILTIN.pflkm!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.pflkm:Q}; then	\

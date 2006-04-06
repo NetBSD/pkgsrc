@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/04 21:29:55 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/06 06:22:12 reed Exp $
 
 DISTNAME=	onyx-${VERS}
 PKGREVISION=	2
@@ -18,7 +18,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5[YZ]*-* NetBSD-1.6*-* NetBSD-1.7*-* NetBSD-[2-9]*-*
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-pcre-prefix=${BUILDLINK_PREFIX.pcre}
 
-BUILDLINK_DEPENDS.pcre?=        pcre>=4.0
+BUILDLINK_API_DEPENDS.pcre?=        pcre>=4.0
 
 VERS=		5.1.1
 PLIST_SUBST+=	VERS=${VERS:Q}

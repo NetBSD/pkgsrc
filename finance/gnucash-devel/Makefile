@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/04 14:45:44 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/04/06 06:21:59 reed Exp $
 #
 
 DISTNAME=		gnucash-1.9.3
@@ -51,20 +51,20 @@ INFO_FILES=		# PLIST
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-BUILDLINK_DEPENDS.pango+=	pango>=1.8.0
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.8.0
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../finance/libofx/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
-BUILDLINK_DEPENDS.goffice+=	goffice>=0.1.2
+BUILDLINK_API_DEPENDS.goffice+=	goffice>=0.1.2
 .include "../../misc/goffice/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-BUILDLINK_DEPENDS.gtk2+=	gtk2+>=2.6.0
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 .include "../../www/gtkhtml38/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:08:10 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/06 06:21:35 reed Exp $
 
 .include "../../audio/libao/Makefile.common"
 
@@ -13,7 +13,7 @@ CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/ENABLE_SUN_AUDIO=no/ENABLE_SUN_AUDIO=yes/g}
 BUILD_DIRS=		${WRKSRC}/src/plugins/sun
 INSTALL_DIRS=		${WRKSRC}/src/plugins/sun
 
-BUILDLINK_DEPENDS.libao+=	libao>=0.8.6nb1
+BUILDLINK_API_DEPENDS.libao+=	libao>=0.8.6nb1
 
 _LIBAO_BUILDING_PLUGIN=	yes
 

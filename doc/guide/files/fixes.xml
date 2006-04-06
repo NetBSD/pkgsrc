@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.48 2006/03/20 01:48:57 jlam Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.49 2006/04/06 06:21:57 reed Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -221,25 +221,25 @@
 
           <para>Please note that such dependencies should only be
             updated if a package requires  a newer pre-requisite, but
-            not to denote recommendations such as security  updates or
+            not to denote recommendations such as 
             ABI changes that do not prevent a package from building
             correctly.  Such recommendations can be expressed using
-            <varname>RECOMMENDED</varname>:</para>
+            <varname>ABI_DEPENDS</varname>:</para>
 
 <programlisting>
-    RECOMMENDED+=   tiff>=3.6.1:../../graphics/tiff
+    ABI_DEPENDS+=   tiff>=3.6.1:../../graphics/tiff
 </programlisting>
 
           <para>In addition to the above <varname>DEPENDS</varname>
             line, this denotes that while a package will build against
             tiff&gt;=3.5.4, at least version 3.6.1 is recommended.
-            <varname>RECOMMENDED</varname> entries will be turned into
+            <varname>ABI_DEPENDS</varname> entries will be turned into
             dependencies unless explicitly ignored (in which case a
             warning will be printed).</para>
 
-          <para>To ignore these dependency recommendations and just
+          <para>To ignore these ABI dependency recommendations and just
             use the required <varname>DEPENDS</varname>, set
-            <varname>IGNORE_RECOMMENDED=YES</varname>.   This may make
+            <varname>USE_ABI_DEPENDS=NO</varname>.   This may make
             it easier and faster to update packages built using pkgsrc,
             since older compatible dependencies can continue to be
             used. This is useful for people who watch their rebuilds
@@ -254,8 +254,7 @@
             different versions of binary packages installed.</para>
 
           <para>For security fixes, please update the package
-            vulnerabilities file as well as setting
-            <varname>RECOMMENDED</varname>, see <xref
+            vulnerabilities file. See <xref
             linkend="security-handling"/> for more
             information.</para>
 	</listitem>
@@ -379,11 +378,7 @@
       <para>After fixing the vulnerability by a patch, its
 	<varname>PKGREVISION</varname> should be increased (this
 	is of course not necessary if the problem is fixed by using
-	a newer release of the software).  In addition, if a
-	<filename>buildlink3.mk</filename> file exists for an
-	affected package, a corresponding
-        <varname>BUILDLINK_RECOMMENDED.<replaceable>pkg</replaceable></varname>
-	entry should be added or updated in it.</para>
+	a newer release of the software).</para>
 
       <para>Also, if the fix should be applied to the stable pkgsrc
         branch, be sure to submit a pullup request!</para>

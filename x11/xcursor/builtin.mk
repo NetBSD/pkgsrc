@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2006/03/30 18:06:19 jlam Exp $
+# $NetBSD: builtin.mk,v 1.12 2006/04/06 06:23:04 reed Exp $
 
 BUILTIN_PKG:=	xcursor
 
@@ -57,7 +57,7 @@ USE_BUILTIN.xcursor=	${IS_BUILTIN.xcursor}
 .    if defined(BUILTIN_PKG.xcursor) && \
         !empty(IS_BUILTIN.xcursor:M[yY][eE][sS])
 USE_BUILTIN.xcursor=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.xcursor}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.xcursor}
 .        if !empty(USE_BUILTIN.xcursor:M[yY][eE][sS])
 USE_BUILTIN.xcursor!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.xcursor:Q}; then \
@@ -80,8 +80,8 @@ CHECK_BUILTIN.xcursor?=	no
 .if !empty(CHECK_BUILTIN.xcursor:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.xcursor:M[nN][oO])
-BUILDLINK_DEPENDS.xcursor+=	xcursor>=1.1.1
-BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
+BUILDLINK_API_DEPENDS.xcursor+=	xcursor>=1.1.1
+BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 .    for _mkfile_ in buildlink3.mk builtin.mk
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 .      sinclude "../../x11/Xfixes/${_mkfile_}"

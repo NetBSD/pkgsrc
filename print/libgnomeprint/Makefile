@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2006/02/05 23:10:38 joerg Exp $
+# $NetBSD: Makefile,v 1.48 2006/04/06 06:22:36 reed Exp $
 #
 
 DISTNAME=	libgnomeprint-2.12.1
@@ -18,7 +18,7 @@ USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
-BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.4
+BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.4
 
 PKGCONFIG_OVERRIDE=	libgnomeprint/libgnomeprint-2.2.pc.in
 

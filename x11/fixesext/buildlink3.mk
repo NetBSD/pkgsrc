@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:11:32 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:57 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FIXESEXT_BUILDLINK3_MK:=	${FIXESEXT_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nfixesext}
 BUILDLINK_PACKAGES+=	fixesext
 
 .if !empty(FIXESEXT_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.fixesext+=	fixesext>=2.0
-BUILDLINK_RECOMMENDED.fixesext?=	fixesext>=2.0.1nb1
+BUILDLINK_API_DEPENDS.fixesext+=	fixesext>=2.0
+BUILDLINK_ABI_DEPENDS.fixesext?=	fixesext>=2.0.1nb1
 BUILDLINK_PKGSRCDIR.fixesext?=	../../x11/fixesext
 .endif	# FIXESEXT_BUILDLINK3_MK
 

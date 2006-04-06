@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/04/03 06:35:26 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2006/04/06 06:22:04 reed Exp $
 #
 
 DISTNAME=	librsvg-2.14.3
@@ -32,7 +32,7 @@ GTK2_LOADERS=		yes
 
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
-BUILDLINK_DEPENDS.libcroco+=	libcroco>=0.6.1
+BUILDLINK_API_DEPENDS.libcroco+=	libcroco>=0.6.1
 .include "../../textproc/libcroco/buildlink3.mk"
 .include "../../x11/gtk2/modules.mk"
 .include "../../mk/bsd.pkg.mk"

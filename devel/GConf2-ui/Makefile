@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.25 2006/03/30 20:50:02 jmmv Exp $
+# $NetBSD: Makefile,v 1.26 2006/04/06 06:21:43 reed Exp $
 #
 
 .include "../../devel/GConf2/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/GConf/GConf2-ui/}
 
-BUILDLINK_DEPENDS.GConf2+=	GConf2>=${GCONF2_VERSION}
+BUILDLINK_API_DEPENDS.GConf2+=	GConf2>=${GCONF2_VERSION}
 
 CONFIGURE_ARGS+=	--enable-gtk
 

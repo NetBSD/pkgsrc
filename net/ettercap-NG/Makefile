@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/29 06:21:58 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/06 06:22:32 reed Exp $
 
 DISTNAME=	ettercap-NG-0.7.3
 CATEGORIES=	net
@@ -10,7 +10,7 @@ COMMENT=	Multipurpose sniffer/interceptor/logger for switched LAN
 
 CONFLICTS=	ettercap-[0-9]*
 
-BUILDLINK_DEPENDS.libpcap+=	libpcap>=0.8.1
+BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.8.1
 
 GNU_CONFIGURE=		YES
 PTHREAD_OPTS+=		require

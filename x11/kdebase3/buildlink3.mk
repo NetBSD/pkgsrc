@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2006/02/05 23:11:38 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2006/04/06 06:23:01 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDEBASE_BUILDLINK3_MK:=	${KDEBASE_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nkdebase}
 BUILDLINK_PACKAGES+=	kdebase
 
 .if !empty(KDEBASE_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.kdebase+=	kdebase>=3.5.0nb2
-BUILDLINK_RECOMMENDED.kdebase?=	kdebase>=3.5.1nb2
+BUILDLINK_API_DEPENDS.kdebase+=	kdebase>=3.5.0nb2
+BUILDLINK_ABI_DEPENDS.kdebase?=	kdebase>=3.5.1nb2
 BUILDLINK_PKGSRCDIR.kdebase?=	../../x11/kdebase3
 .endif	# KDEBASE_BUILDLINK3_MK
 
@@ -24,7 +24,7 @@ MAKEFLAGS+=	PKG_BUILD_OPTIONS.kdebase=${PKG_BUILD_OPTIONS.kdebase:Q}
 .endif
 MAKEVARS+=	PKG_BUILD_OPTIONS.kdebase
 
-BUILDLINK_DEPENDS.Xrandr+=      Xrandr>=1.0
+BUILDLINK_API_DEPENDS.Xrandr+=      Xrandr>=1.0
 
 .include "../../databases/openldap/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"

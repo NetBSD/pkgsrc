@@ -1,6 +1,6 @@
-# $NetBSD: language.mk,v 1.4 2004/09/22 08:09:39 jlam Exp $
+# $NetBSD: language.mk,v 1.5 2006/04/06 06:22:11 reed Exp $
 
-BUILDLINK_DEPENDS.gcc3-c+=	gcc3${GCC3_PKGMODIF}-c-${GCC_VERSION}{,nb*}
+BUILDLINK_API_DEPENDS.gcc3-c+=	gcc3${GCC3_PKGMODIF}-c-${GCC_VERSION}{,nb*}
 BUILDLINK_DEPMETHOD.gcc3-c+=	full
 
 .include "../../lang/gcc3/Makefile.common"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2006/02/10 16:53:36 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:21:38 reed Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.10.
 # XXX After this file has been verified as correct, the comment lines
@@ -21,7 +21,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nverilog}
 BUILDLINK_PACKAGES+=	verilog
 
 .if !empty(VERILOG_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.verilog+=	verilog>=0.8.1nb1
+BUILDLINK_API_DEPENDS.verilog+=	verilog>=0.8.1nb1
 BUILDLINK_PKGSRCDIR.verilog?=	../../cad/verilog
 .endif	# VERILOG_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.163 2006/03/19 23:40:07 jlam Exp $
+# $NetBSD: replace.mk,v 1.164 2006/04/06 06:23:06 reed Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -322,7 +322,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.flex=
 .  elif !empty(_TOOLS_USE_PKGSRC.flex:M[yY][eE][sS])
 .    include "../../devel/flex/buildlink3.mk"
 _TOOLS_DEPENDS.flex=		# empty
-.      for _dep_ in ${BUILDLINK_DEPENDS.flex}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.flex}
 _TOOLS_DEPENDS.flex+=		${_dep_}:${BUILDLINK_PKGSRCDIR.flex}
 .      endfor
 TOOLS_DEPENDS.flex?=		${_TOOLS_DEPENDS.flex}
@@ -459,7 +459,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.lex=
 .  elif !empty(_TOOLS_USE_PKGSRC.lex:M[yY][eE][sS])
 .    include "../../devel/flex/buildlink3.mk"
 _TOOLS_DEPENDS.lex=		# empty
-.      for _dep_ in ${BUILDLINK_DEPENDS.flex}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.flex}
 _TOOLS_DEPENDS.lex+=		${_dep_}:${BUILDLINK_PKGSRCDIR.flex}
 .      endfor
 TOOLS_DEPENDS.lex?=		${_TOOLS_DEPENDS.lex}

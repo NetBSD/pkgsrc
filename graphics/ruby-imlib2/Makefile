@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:09:39 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/06 06:22:05 reed Exp $
 
 DISTNAME=	imlib2-ruby-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-imlib2-${VER}
@@ -20,7 +20,7 @@ USE_RUBY_EXTCONF=	yes
 
 INSTALL_TARGET=	site-install
 
-BUILDLINK_DEPENDS.imlib2+=      imlib2>=1.2.0nb2
+BUILDLINK_API_DEPENDS.imlib2+=      imlib2>=1.2.0nb2
 
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../lang/ruby/modules.mk"

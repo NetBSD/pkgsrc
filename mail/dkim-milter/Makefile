@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/01/08 18:20:30 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/06 06:22:16 reed Exp $
 
 DISTNAME=	dkim-milter-0.1.1
 CATEGORIES=	mail
@@ -8,7 +8,7 @@ MAINTAINER=	imil@gcu.info
 HOMEPAGE=	http://sourceforge.net/projects/dkim-milter/
 COMMENT=	Open source DKIM filter software from Sendmail, Inc
 
-BUILDLINK_DEPENDS.libmilter+=	libmilter>=8.13.0
+BUILDLINK_API_DEPENDS.libmilter+=	libmilter>=8.13.0
 
 LICENSE=		no-profit
 MAKE_ENV+=		M4=${M4:Q}

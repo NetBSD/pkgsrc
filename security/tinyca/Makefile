@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:10:47 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/06 06:22:44 reed Exp $
 
 DISTNAME=	tinyca-0.6.8
 PKGREVISION=	2
@@ -21,7 +21,7 @@ CADIR=		${PREFIX}/share/tinyca
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	tinyca
 
-BUILDLINK_DEPENDS.openssl+=	openssl>=0.9.7d
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7d
 
 SUBST_CLASSES+=		script
 SUBST_STAGE.script=	post-patch

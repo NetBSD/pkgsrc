@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2006/03/30 18:06:17 jlam Exp $
+# $NetBSD: builtin.mk,v 1.11 2006/04/06 06:22:02 reed Exp $
 
 BUILTIN_PKG:=	glu
 
@@ -45,7 +45,7 @@ USE_BUILTIN.glu=	${IS_BUILTIN.glu}
 .    if defined(BUILTIN_PKG.glu) && \
         !empty(IS_BUILTIN.glu:M[yY][eE][sS])
 USE_BUILTIN.glu=	yes
-.      for dep in ${BUILDLINK_DEPENDS.glu}
+.      for dep in ${BUILDLINK_API_DEPENDS.glu}
 .        if !empty(USE_BUILTIN.glu:M[yY][eE][sS])
 USE_BUILTIN.glu!=							\
 	if ${PKG_ADMIN} pmatch ${dep:Q} ${BUILTIN_PKG.glu:Q}; then	\
@@ -68,7 +68,7 @@ CHECK_BUILTIN.glu?=	no
 .if !empty(CHECK_BUILTIN.glu:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.glu:M[nN][oO])
-BUILDLINK_DEPENDS.glu+=	glu>=6.0
+BUILDLINK_API_DEPENDS.glu+=	glu>=6.0
 .  endif
 
 .  if !empty(USE_BUILTIN.glu:M[yY][eE][sS])

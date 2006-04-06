@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/21 06:00:50 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/06 06:22:50 reed Exp $
 #
 
 DISTNAME=	gnome-doc-utils-0.6.0
@@ -30,7 +30,7 @@ PYTHON_PATCH_SCRIPTS+=	xml2po/modes/empty.py
 PYTHON_PATCH_SCRIPTS+=	xml2po/modes/gs.py
 PYTHON_PATCH_SCRIPTS+=	xml2po/xml2po.py
 
-BUILDLINK_DEPENDS.libxml2+=	libxml2>=2.6.12
+BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.12
 BUILDLINK_DEPMETHOD.libxslt?=	build
 BUILDLINK_DEPMETHOD.libxml2?=	build
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:10:49 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:45 reed Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 DESKTOP_FILE_UTILS_BUILDLINK3_MK:=	${DESKTOP_FILE_UTILS_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ndesktop-file-utils}
 BUILDLINK_PACKAGES+=	desktop-file-utils
 
 .if !empty(DESKTOP_FILE_UTILS_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.desktop-file-utils+=	desktop-file-utils>=0.8
-BUILDLINK_RECOMMENDED.desktop-file-utils+=	desktop-file-utils>=0.10nb1
+BUILDLINK_API_DEPENDS.desktop-file-utils+=	desktop-file-utils>=0.8
+BUILDLINK_ABI_DEPENDS.desktop-file-utils+=	desktop-file-utils>=0.10nb1
 BUILDLINK_PKGSRCDIR.desktop-file-utils?=../../sysutils/desktop-file-utils
 .endif	# DESKTOP_FILE_UTILS_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2006/03/30 18:06:18 jlam Exp $
+# $NetBSD: builtin.mk,v 1.4 2006/04/06 06:22:45 reed Exp $
 
 BUILTIN_PKG:=	fam
 
@@ -31,7 +31,7 @@ USE_BUILTIN.fam=	${IS_BUILTIN.fam}
 .    if defined(BUILTIN_PKG.fam) && \
         !empty(IS_BUILTIN.fam:M[yY][eE][sS])
 USE_BUILTIN.fam=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.fam}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.fam}
 .        if !empty(USE_BUILTIN.fam:M[yY][eE][sS])
 USE_BUILTIN.fam!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.fam:Q}; then	\

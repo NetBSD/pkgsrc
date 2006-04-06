@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:11:31 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:57 reed Exp $
 #
 # This Makefile fragment is included by packages that use compositeext.
 #
@@ -12,8 +12,8 @@ BUILDLINK_DEPENDS+=	compositeext
 
 .if !empty(COMPOSITEEXT_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=			compositeext
-BUILDLINK_DEPENDS.compositeext?=	compositeext>=2.0
-BUILDLINK_RECOMMENDED.compositeext?=	compositeext>=2.0nb1
+BUILDLINK_API_DEPENDS.compositeext?=	compositeext>=2.0
+BUILDLINK_ABI_DEPENDS.compositeext?=	compositeext>=2.0nb1
 BUILDLINK_PKGSRCDIR.compositeext?=	../../x11/compositeext
 
 .include "../../x11/fixesext/buildlink3.mk"

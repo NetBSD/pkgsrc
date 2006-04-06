@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:10:30 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:34 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PYLIBPCAP_BUILDLINK3_MK:=	${PYLIBPCAP_BUILDLINK3_MK}+
@@ -14,8 +14,8 @@ BUILDLINK_PACKAGES+=	pylibpcap
 
 .include "../../lang/python/pyversion.mk"
 
-BUILDLINK_DEPENDS.pylibpcap+=	${PYPKGPREFIX}-libpcap>=0.5.0
-BUILDLINK_RECOMMENDED.pylibpcap?=	${PYPKGPREFIX}-libpcap>=0.5nb1
+BUILDLINK_API_DEPENDS.pylibpcap+=	${PYPKGPREFIX}-libpcap>=0.5.0
+BUILDLINK_ABI_DEPENDS.pylibpcap?=	${PYPKGPREFIX}-libpcap>=0.5nb1
 BUILDLINK_PKGSRCDIR.pylibpcap?=	../../net/py-libpcap
 
 .endif	# PYLIBPCAP_BUILDLINK3_MK

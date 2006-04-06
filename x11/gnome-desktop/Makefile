@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/03/30 21:47:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.52 2006/04/06 06:22:58 reed Exp $
 #
 
 DISTNAME=		gnome-desktop-2.14.0
@@ -20,7 +20,7 @@ USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--with-gnome-distributor="The NetBSD Foundation"
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.8.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 
 post-install:
 .for f in netbsd-logo-icon.png netbsd-logo-icon-transparent.png

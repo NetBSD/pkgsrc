@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/22 22:50:32 tv Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/06 06:22:16 reed Exp $
 
 DISTNAME=	dk-milter-0.3.0
 PKGREVISION=	1
@@ -9,7 +9,7 @@ MAINTAINER=	tv@NetBSD.org
 HOMEPAGE=	http://sendmail.net/dk-milter/
 COMMENT=	Open source implementation of DomainKeys for sendmail
 
-BUILDLINK_DEPENDS.libmilter+=	libmilter>=8.13.0
+BUILDLINK_API_DEPENDS.libmilter+=	libmilter>=8.13.0
 
 LICENSE=		no-profit
 MAKE_ENV+=		M4=${M4:Q}

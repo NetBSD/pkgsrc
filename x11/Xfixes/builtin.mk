@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2006/03/30 18:06:19 jlam Exp $
+# $NetBSD: builtin.mk,v 1.10 2006/04/06 06:22:56 reed Exp $
 
 BUILTIN_PKG:=	Xfixes
 
@@ -33,7 +33,7 @@ USE_BUILTIN.Xfixes=	${IS_BUILTIN.Xfixes}
 .    if defined(BUILTIN_PKG.Xfixes) && \
         !empty(IS_BUILTIN.Xfixes:M[yY][eE][sS])
 USE_BUILTIN.Xfixes=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.Xfixes}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.Xfixes}
 .        if !empty(USE_BUILTIN.Xfixes:M[yY][eE][sS])
 USE_BUILTIN.Xfixes!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.Xfixes:Q}; then \

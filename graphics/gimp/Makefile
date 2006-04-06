@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2006/03/08 09:50:12 itohy Exp $
+# $NetBSD: Makefile,v 1.136 2006/04/06 06:22:02 reed Exp $
 
 DISTNAME=	gimp-2.2.10
 PKGREVISION=	3
@@ -31,9 +31,9 @@ PKGCONFIG_OVERRIDE+=	gimpui.pc.in
 .include "../../mk/bsd.prefs.mk"
 
 USE_BUILTIN.fontconfig=		    no
-BUILDLINK_DEPENDS.fontconfig+=	    fontconfig>=2.2.0
+BUILDLINK_API_DEPENDS.fontconfig+=	    fontconfig>=2.2.0
 
-BUILDLINK_DEPENDS.lcms+=	lcms>=1.12
+BUILDLINK_API_DEPENDS.lcms+=	lcms>=1.12
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-perl

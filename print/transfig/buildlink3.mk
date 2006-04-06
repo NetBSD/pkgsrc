@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/02/05 23:10:41 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:37 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 TRANSFIG_BUILDLINK3_MK:=	${TRANSFIG_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ntransfig}
 BUILDLINK_PACKAGES+=	transfig
 
 .if !empty(TRANSFIG_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.transfig+=	transfig>=3.2.4
-BUILDLINK_RECOMMENDED.transfig?=	transfig>=3.2.5alpha7nb1
+BUILDLINK_API_DEPENDS.transfig+=	transfig>=3.2.4
+BUILDLINK_ABI_DEPENDS.transfig?=	transfig>=3.2.5alpha7nb1
 BUILDLINK_PKGSRCDIR.transfig?=	../../print/transfig
 .endif	# TRANSFIG_BUILDLINK3_MK
 

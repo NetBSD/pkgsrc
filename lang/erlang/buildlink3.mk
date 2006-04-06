@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:09:44 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:10 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 ERLANG_BUILDLINK3_MK:=		${ERLANG_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Nerlang}
 BUILDLINK_PACKAGES+=		erlang
 
 .if !empty(ERLANG_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.erlang+=	erlang>=10.1
-BUILDLINK_RECOMMENDED.erlang?=	erlang>=10.1.9nb1
+BUILDLINK_API_DEPENDS.erlang+=	erlang>=10.1
+BUILDLINK_ABI_DEPENDS.erlang?=	erlang>=10.1.9nb1
 BUILDLINK_PKGSRCDIR.erlang?=	../../lang/erlang
 .endif	# ERLANG_BUILDLINK3_MK
 

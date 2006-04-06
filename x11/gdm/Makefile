@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2006/04/04 18:07:16 jlam Exp $
+# $NetBSD: Makefile,v 1.106 2006/04/06 06:22:58 reed Exp $
 #
 
 DISTNAME=	gdm-2.14.0
@@ -15,7 +15,7 @@ BUILD_USES_MSGFMT=	YES
 
 DEPENDS+=	zenity>=2.14.0:../../x11/zenity
 
-BUILDLINK_DEPENDS.libart2+=	libart2>=2.3.11
+BUILDLINK_API_DEPENDS.libart2+=	libart2>=2.3.11
 
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES

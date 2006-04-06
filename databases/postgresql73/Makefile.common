@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2006/03/04 21:29:10 jlam Exp $
+# $NetBSD: Makefile.common,v 1.17 2006/04/06 06:21:42 reed Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -36,8 +36,8 @@ PATCHDIR?=		${.CURDIR}/../postgresql73/patches
 DIST_VERS?=		7.3.14
 BASE_VERS?=		${DIST_VERS}
 
-BUILDLINK_DEPENDS.postgresql73-lib?=	postgresql73-lib>=${BASE_VERS}
-BUILDLINK_DEPENDS.tcl-postgresql73?=	tcl-postgresql73>=${BASE_VERS}
+BUILDLINK_API_DEPENDS.postgresql73-lib?=	postgresql73-lib>=${BASE_VERS}
+BUILDLINK_API_DEPENDS.tcl-postgresql73?=	tcl-postgresql73>=${BASE_VERS}
 
 USE_TOOLS+=		autoconf gmake
 GNU_CONFIGURE=		YES

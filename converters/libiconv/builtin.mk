@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.15 2006/03/30 18:06:17 jlam Exp $
+# $NetBSD: builtin.mk,v 1.16 2006/04/06 06:21:40 reed Exp $
 
 BUILTIN_PKG:=	iconv
 
@@ -63,7 +63,7 @@ USE_BUILTIN.iconv=	${IS_BUILTIN.iconv}
 .    if defined(BUILTIN_PKG.iconv) && \
         !empty(IS_BUILTIN.iconv:M[yY][eE][sS])
 USE_BUILTIN.iconv=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.iconv}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.iconv}
 .        if !empty(USE_BUILTIN.iconv:M[yY][eE][sS])
 USE_BUILTIN.iconv!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.iconv:Q}; then	\

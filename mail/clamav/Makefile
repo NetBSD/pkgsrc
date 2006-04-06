@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2006/03/14 01:14:29 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2006/04/06 06:22:16 reed Exp $
 
 DISTNAME=	clamav-${CLAMAV_VERSION}
 PKGNAME=	clamav-${CLAMAV_VERSION:S/-/./}
@@ -76,7 +76,7 @@ PLIST_SUBST+=		MILTER="@comment "
 .if !empty(PKG_OPTIONS:Mcurl)
 .  include "../../www/curl/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libcurl
-BUILDLINK_DEPENDS.curl+=curl>=7.10.0
+BUILDLINK_API_DEPENDS.curl+=curl>=7.10.0
 .else
 CONFIGURE_ARGS+=	--without-libcurl
 .endif

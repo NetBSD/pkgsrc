@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:08:11 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:21:36 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSIDPLAY_BUILDLINK3_MK:=	${LIBSIDPLAY_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibsidplay}
 BUILDLINK_PACKAGES+=	libsidplay
 
 .if !empty(LIBSIDPLAY_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libsidplay+=		libsidplay>=1.36.38
-BUILDLINK_RECOMMENDED.libsidplay+=	libsidplay>=1.36.59nb2
+BUILDLINK_API_DEPENDS.libsidplay+=		libsidplay>=1.36.38
+BUILDLINK_ABI_DEPENDS.libsidplay+=	libsidplay>=1.36.59nb2
 BUILDLINK_PKGSRCDIR.libsidplay?=	../../audio/libsidplay
 .endif	# LIBSIDPLAY_BUILDLINK3_MK
 

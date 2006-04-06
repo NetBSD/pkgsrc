@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/03/05 21:08:52 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:06 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 CANNA_LIB_BUILDLINK3_MK:=	${CANNA_LIB_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NCanna-lib}
 BUILDLINK_PACKAGES+=	Canna-lib
 
 .if !empty(CANNA_LIB_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.Canna-lib+=	Canna-lib>=3.6pl4
+BUILDLINK_API_DEPENDS.Canna-lib+=	Canna-lib>=3.6pl4
 BUILDLINK_PKGSRCDIR.Canna-lib?=	../../inputmethod/canna-lib
 
 .endif	# CANNA_LIB_BUILDLINK3_MK

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/13 21:56:22 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2006/04/06 06:22:44 reed Exp $
 
 DISTNAME=	qca-1.0
 PKGREVISION=	2
@@ -17,6 +17,6 @@ HAS_CONFIGURE=	yes
 INSTALLATION_DIRS=	include lib
 
 .include "../../x11/qt3-libs/buildlink3.mk"
-BUILDLINK_DEPENDS.qt3-tools+=	qt3-tools>=3.3.5nb6
+BUILDLINK_API_DEPENDS.qt3-tools+=	qt3-tools>=3.3.5nb6
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

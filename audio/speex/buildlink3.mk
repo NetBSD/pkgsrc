@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2004/10/03 00:13:09 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/06 06:21:36 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SPEEX_BUILDLINK3_MK:=	${SPEEX_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nspeex}
 BUILDLINK_PACKAGES+=	speex
 
 .if !empty(SPEEX_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.speex+=	speex>=1.0.4
-BUILDLINK_RECOMMENDED.speex+=	speex>=1.0.4nb1
+BUILDLINK_API_DEPENDS.speex+=	speex>=1.0.4
+BUILDLINK_ABI_DEPENDS.speex+=	speex>=1.0.4nb1
 BUILDLINK_PKGSRCDIR.speex?=	../../audio/speex
 .endif	# SPEEX_BUILDLINK3_MK
 

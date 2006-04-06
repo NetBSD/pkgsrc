@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/03/07 18:56:46 minskim Exp $
+# $NetBSD: Makefile,v 1.39 2006/04/06 06:22:05 reed Exp $
 #
 
 DISTNAME=	tuxpaint-0.9.14
@@ -15,9 +15,9 @@ USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	YES
 MANCOMPRESSED=		YES
 
-BUILDLINK_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.6
-BUILDLINK_DEPENDS.SDL_ttf+=	SDL_ttf>=2.0.7
-BUILDLINK_DEPENDS.SDL_image+=	SDL_image>=1.2.4
+BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.6
+BUILDLINK_API_DEPENDS.SDL_ttf+=	SDL_ttf>=2.0.7
+BUILDLINK_API_DEPENDS.SDL_image+=	SDL_image>=1.2.4
 
 CONFLICTS+=		tuxpaint-stamps<2003.12.23
 

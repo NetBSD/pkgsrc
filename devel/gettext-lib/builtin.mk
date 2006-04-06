@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.30 2006/03/30 18:38:19 jlam Exp $
+# $NetBSD: builtin.mk,v 1.31 2006/04/06 06:21:49 reed Exp $
 
 BUILTIN_PKG:=	gettext
 
@@ -49,7 +49,7 @@ USE_BUILTIN.gettext=	${IS_BUILTIN.gettext}
 .    if defined(BUILTIN_PKG.gettext) && \
         !empty(IS_BUILTIN.gettext:M[yY][eE][sS])
 USE_BUILTIN.gettext=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.gettext}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.gettext}
 .        if !empty(USE_BUILTIN.gettext:M[yY][eE][sS])
 USE_BUILTIN.gettext!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.gettext:Q}; then \
@@ -143,7 +143,7 @@ _BLTN_LIBINTL=		-lintl
 _BLTN_GETTEXT_ICONV_DEPENDS=	gettext-lib>=0.11.5nb1
 .    if !defined(_BLTN_GETTEXT_NEEDS_ICONV)
 _BLTN_GETTEXT_NEEDS_ICONV?=	no
-.      for _dep_ in ${BUILDLINK_DEPENDS.gettext}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.gettext}
 .        if !empty(_BLTN_GETTEXT_NEEDS_ICONV:M[nN][oO])
 _BLTN_GETTEXT_NEEDS_ICONV!=						\
 	pkg=`${PKG_BEST_EXISTS} ${_dep_:Q}`;				\
@@ -165,7 +165,7 @@ BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 .        sinclude "../../converters/libiconv/${_mkfile_}"
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
 .      endfor
-BUILDLINK_DEPENDS.gettext+=	${_BLTN_GETTEXT_ICONV_DEPENDS}
+BUILDLINK_API_DEPENDS.gettext+=	${_BLTN_GETTEXT_ICONV_DEPENDS}
 _BLTN_LIBINTL+=			${BUILDLINK_LDADD.iconv}
 .    endif
 .  endif

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2006/03/30 18:06:17 jlam Exp $
+# $NetBSD: builtin.mk,v 1.9 2006/04/06 06:21:59 reed Exp $
 
 BUILTIN_PKG:=	fontconfig
 
@@ -66,7 +66,7 @@ USE_BUILTIN.fontconfig=	${IS_BUILTIN.fontconfig}
 .    if defined(BUILTIN_PKG.fontconfig) && \
         !empty(IS_BUILTIN.fontconfig:M[yY][eE][sS])
 USE_BUILTIN.fontconfig=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.fontconfig}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.fontconfig}
 .        if !empty(USE_BUILTIN.fontconfig:M[yY][eE][sS])
 USE_BUILTIN.fontconfig!=						\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.fontconfig:Q}; then \
@@ -89,8 +89,8 @@ CHECK_BUILTIN.fontconfig?=	no
 .if !empty(CHECK_BUILTIN.fontconfig:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.fontconfig:M[nN][oO])
-BUILDLINK_DEPENDS.fontconfig+=	fontconfig>=2.1nb2
-BUILDLINK_DEPENDS.freetype2+=	freetype2>=2.1.3
+BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.1nb2
+BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.3
 .  endif
 
 .  if !empty(USE_BUILTIN.fontconfig:M[yY][eE][sS])

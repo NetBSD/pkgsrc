@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/02/05 23:11:14 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2006/04/06 06:22:52 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 METACITY_BUILDLINK3_MK:=	${METACITY_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nmetacity}
 BUILDLINK_PACKAGES+=	metacity
 
 .if !empty(METACITY_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.metacity+=	metacity>=2.8.5
-BUILDLINK_RECOMMENDED.metacity+=	metacity>=2.12.2nb2
+BUILDLINK_API_DEPENDS.metacity+=	metacity>=2.8.5
+BUILDLINK_ABI_DEPENDS.metacity+=	metacity>=2.12.2nb2
 BUILDLINK_PKGSRCDIR.metacity?=	../../wm/metacity
 .endif	# METACITY_BUILDLINK3_MK
 

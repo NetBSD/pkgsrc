@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/26 05:03:21 snj Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/06 06:22:26 reed Exp $
 
 DISTNAME=	lsdvd-0.10
 PKGREVISION=	3
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		autoconf213
 
-BUILDLINK_DEPENDS.libdvdread+=	libdvdread>=0.9.5nb1
+BUILDLINK_API_DEPENDS.libdvdread+=	libdvdread>=0.9.5nb1
 
 pre-configure:
 	cd ${WRKSRC}; autoconf

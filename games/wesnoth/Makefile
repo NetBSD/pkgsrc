@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/03/12 12:30:05 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2006/04/06 06:22:00 reed Exp $
 
 DISTNAME=	wesnoth-1.0.2
 PKGREVISION=	4
@@ -18,8 +18,8 @@ UNLIMIT_RESOURCES+=	datasize
 REPLACE_PERL+=		utils/wmlxgettext
 USE_TOOLS+=		perl:run
 
-BUILDLINK_DEPENDS.SDL+=		SDL>=1.2.7
-BUILDLINK_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.5nb3
+BUILDLINK_API_DEPENDS.SDL+=		SDL>=1.2.7
+BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.5nb3
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

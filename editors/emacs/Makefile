@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2006/04/05 22:22:16 markd Exp $
+# $NetBSD: Makefile,v 1.93 2006/04/06 06:21:58 reed Exp $
 
 DISTNAME=	emacs-${EMACSVERSION}a
 PKGREVISION=	3
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-jpeg
 .include "../../graphics/tiff/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-tiff
 # need 4.1.0b1 or higher (a bug in 4.1.0 can crash Emacs)
-BUILDLINK_DEPENDS.libungif+=	libungif>=4.1.0.1
+BUILDLINK_API_DEPENDS.libungif+=	libungif>=4.1.0.1
 .include "../../graphics/libungif/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gif
 .include "../../graphics/png/buildlink3.mk"

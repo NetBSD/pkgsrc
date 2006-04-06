@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:09:55 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/06 06:22:18 reed Exp $
 
 DISTNAME=	libspf_alt-0.4.0
 PKGREVISION=	3
@@ -9,7 +9,7 @@ MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	http://www.midwestcs.com/spf/libspf-alt/
 COMMENT=	Sender Permitted Framework (SPF) library
 
-BUILDLINK_DEPENDS.bind+=	bind>=9.2.3nb3
+BUILDLINK_API_DEPENDS.bind+=	bind>=9.2.3nb3
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=--with-bind=${BUILDLINK_PREFIX.bind}

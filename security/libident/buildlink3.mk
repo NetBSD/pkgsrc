@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2004/10/03 00:18:09 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:42 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBIDENT_BUILDLINK3_MK:=	${LIBIDENT_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibident}
 BUILDLINK_PACKAGES+=	libident
 
 .if !empty(LIBIDENT_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.libident+=	libident>=0.22
-BUILDLINK_RECOMMENDED.libident+=	libident>=0.22nb1
+BUILDLINK_API_DEPENDS.libident+=	libident>=0.22
+BUILDLINK_ABI_DEPENDS.libident+=	libident>=0.22nb1
 BUILDLINK_PKGSRCDIR.libident?=	../../security/libident
 .endif	# LIBIDENT_BUILDLINK3_MK
 

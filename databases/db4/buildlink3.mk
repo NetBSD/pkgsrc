@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2006/01/06 15:08:47 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2006/04/06 06:21:40 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DB4_BUILDLINK3_MK:=	${DB4_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ndb4}
 BUILDLINK_PACKAGES+=	db4
 
 .if !empty(DB4_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.db4+=		db4>=4.4.16
+BUILDLINK_API_DEPENDS.db4+=		db4>=4.4.16
 BUILDLINK_PKGSRCDIR.db4?=	../../databases/db4
 BUILDLINK_INCDIRS.db4?=		include/db4
 BUILDLINK_LDADD.db4=		-ldb4
@@ -23,7 +23,7 @@ BUILDLINK_TRANSFORM+=		l:db-4:db4
 #
 # Older db4 packages didn't enable the db-1.85 compatibility API.
 #
-BUILDLINK_DEPENDS.db4+=		db4>=4.2.52nb1
+BUILDLINK_API_DEPENDS.db4+=		db4>=4.2.52nb1
 BUILDLINK_LIBS.db4=		${BUILDLINK_LDADD.db4}
 BUILDLINK_TRANSFORM+=		l:db:db4
 .  endif

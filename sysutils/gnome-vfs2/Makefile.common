@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2006/04/04 18:07:16 jlam Exp $
+# $NetBSD: Makefile.common,v 1.32 2006/04/06 06:22:45 reed Exp $
 #
 
 GNOME_VFS2_VERSION=	2.14.0
@@ -87,7 +87,7 @@ SUBST_STAGE.libs=       pre-configure
 SUBST_FILES.libs=       modules/Makefile.in
 SUBST_SED.libs=         -e 's|../libgnomevfs/libgnomevfs-2.la|${BUILDLINK_PREFIX.gnome-vfs2}/lib/libgnomevfs-2.la|g'
 
-BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=${GNOME_VFS2_VERSION}
+BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=${GNOME_VFS2_VERSION}
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/gnome-vfs-2.0\/modules$$/ \

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2006/03/30 18:06:17 jlam Exp $
+# $NetBSD: builtin.mk,v 1.5 2006/04/06 06:21:50 reed Exp $
 
 BUILTIN_PKG:=	libevent
 
@@ -31,7 +31,7 @@ USE_BUILTIN.libevent=	${IS_BUILTIN.libevent}
 .    if defined(BUILTIN_PKG.libevent) && \
         !empty(IS_BUILTIN.libevent:M[yY][eE][sS])
 USE_BUILTIN.libevent=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.libevent}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.libevent}
 .        if !empty(USE_BUILTIN.libevent:M[yY][eE][sS])
 USE_BUILTIN.libevent!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libevent:Q}; then \

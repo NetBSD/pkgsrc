@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/02/15 16:58:21 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:21:33 reed Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.10.
 # XXX After this file has been verified as correct, the comment lines
@@ -21,7 +21,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nucl}
 BUILDLINK_PACKAGES+=	ucl
 
 .if !empty(UCL_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.ucl+=	ucl>=1.03
+BUILDLINK_API_DEPENDS.ucl+=	ucl>=1.03
 BUILDLINK_PKGSRCDIR.ucl?=	../../archivers/ucl
 .endif	# UCL_BUILDLINK3_MK
 

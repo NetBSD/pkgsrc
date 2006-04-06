@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.13 2006/03/30 18:06:18 jlam Exp $
+# $NetBSD: builtin.mk,v 1.14 2006/04/06 06:22:37 reed Exp $
 
 BUILTIN_PKG:=	linux-pam
 
@@ -33,7 +33,7 @@ USE_BUILTIN.linux-pam=	${IS_BUILTIN.linux-pam}
 .    if defined(BUILTIN_PKG.linux-pam) && \
         !empty(IS_BUILTIN.linux-pam:M[yY][eE][sS])
 USE_BUILTIN.linux-pam=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.linux-pam}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.linux-pam}
 .        if !empty(USE_BUILTIN.linux-pam:M[yY][eE][sS])
 USE_BUILTIN.linux-pam!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.linux-pam:Q}; then \

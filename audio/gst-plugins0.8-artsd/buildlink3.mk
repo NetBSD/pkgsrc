@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/02/05 23:08:09 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:21:34 reed Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 GST_PLUGINS0.8_ARTSD_BUILDLINK3_MK:=	${GST_PLUGINS0.8_ARTSD_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngst-plugins0.8-artsd}
 BUILDLINK_PACKAGES+=	gst-plugins0.8-artsd
 
 .if !empty(GST_PLUGINS0.8_ARTSD_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.gst-plugins0.8-artsd+=	gst-plugins0.8-artsd>=0.8.11
-BUILDLINK_RECOMMENDED.gst-plugins0.8-artsd?=	gst-plugins0.8-artsd>=0.8.11nb2
+BUILDLINK_API_DEPENDS.gst-plugins0.8-artsd+=	gst-plugins0.8-artsd>=0.8.11
+BUILDLINK_ABI_DEPENDS.gst-plugins0.8-artsd?=	gst-plugins0.8-artsd>=0.8.11nb2
 BUILDLINK_PKGSRCDIR.gst-plugins0.8-artsd?=	../../audio/gst-plugins0.8-artsd
 .endif	# GST_PLUGINS0.8_ARTSD_BUILDLINK3_MK
 

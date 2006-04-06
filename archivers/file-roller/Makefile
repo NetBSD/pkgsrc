@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2006/03/30 21:28:13 jmmv Exp $
+# $NetBSD: Makefile,v 1.57 2006/04/06 06:21:32 reed Exp $
 #
 
 DISTNAME=	file-roller-2.14.0
@@ -24,9 +24,9 @@ USE_PKGLOCALEDIR=	yes
 
 GCONF2_SCHEMAS=		file-roller.schemas
 
-BUILDLINK_DEPENDS.glib2+=	glib2>=2.6.0
-BUILDLINK_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
-BUILDLINK_DEPENDS.libglade2+=	libglade2>=2.4.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
+BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
+BUILDLINK_API_DEPENDS.libglade2+=	libglade2>=2.4.0
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

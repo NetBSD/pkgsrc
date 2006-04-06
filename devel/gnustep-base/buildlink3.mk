@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/02/05 23:08:43 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/04/06 06:21:49 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNUSTEP_BASE_BUILDLINK3_MK:=	${GNUSTEP_BASE_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnustep-base}
 BUILDLINK_PACKAGES+=	gnustep-base
 
 .if !empty(GNUSTEP_BASE_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.gnustep-base+=	gnustep-base>=1.9.1
-BUILDLINK_RECOMMENDED.gnustep-base+=	gnustep-base>=1.11.2nb1
+BUILDLINK_API_DEPENDS.gnustep-base+=	gnustep-base>=1.9.1
+BUILDLINK_ABI_DEPENDS.gnustep-base+=	gnustep-base>=1.11.2nb1
 BUILDLINK_PKGSRCDIR.gnustep-base?=	../../devel/gnustep-base
 
 PRINT_PLIST_AWK+=	/^@dirrm share\/GNUstep\/System\/Library\/Headers\/Foundation$$/ { print "@comment in devel/gnustep-base: " $$0; next; }

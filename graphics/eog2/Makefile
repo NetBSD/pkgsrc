@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/03/30 21:27:56 jmmv Exp $
+# $NetBSD: Makefile,v 1.56 2006/04/06 06:22:01 reed Exp $
 #
 
 DISTNAME=	eog-2.14.0
@@ -20,7 +20,7 @@ USE_PKGLOCALEDIR=	YES
 
 GCONF2_SCHEMAS= 	eog.schemas
 
-BUILDLINK_DEPENDS.libart2+=	libart2>=2.3.16
+BUILDLINK_API_DEPENDS.libart2+=	libart2>=2.3.16
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"

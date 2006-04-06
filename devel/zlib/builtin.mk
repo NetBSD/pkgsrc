@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2006/03/30 18:06:17 jlam Exp $
+# $NetBSD: builtin.mk,v 1.5 2006/04/06 06:21:57 reed Exp $
 
 BUILTIN_PKG:=	zlib
 
@@ -69,7 +69,7 @@ USE_BUILTIN.zlib=	${IS_BUILTIN.zlib}
 .    if defined(BUILTIN_PKG.zlib) && \
         !empty(IS_BUILTIN.zlib:M[yY][eE][sS])
 USE_BUILTIN.zlib=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.zlib}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.zlib}
 .        if !empty(USE_BUILTIN.zlib:M[yY][eE][sS])
 USE_BUILTIN.zlib!=	\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.zlib:Q}; then	\

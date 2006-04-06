@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2006/04/02 22:49:10 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2006/04/06 06:22:20 reed Exp $
 #
 
 DISTNAME=		gnumeric-1.6.3
@@ -48,9 +48,9 @@ PLIST_SUBST+=	PERL="@comment "
 BUILDLINK_DEPENDS.goffice+=	goffice>=0.2.1
 .include "../../misc/goffice/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-BUILDLINK_DEPENDS.libgnomeprint+=	libgnomeprint>=2.8.2
+BUILDLINK_API_DEPENDS.libgnomeprint+=	libgnomeprint>=2.8.2
 .include "../../print/libgnomeprint/buildlink3.mk"
-BUILDLINK_DEPENDS.libgnomeprintui+=	libgnomeprintui>=2.8.2
+BUILDLINK_API_DEPENDS.libgnomeprintui+=	libgnomeprintui>=2.8.2
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"

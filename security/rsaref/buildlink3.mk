@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2004/10/03 19:59:38 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/06 06:22:44 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 RSAREF_BUILDLINK3_MK:=	${RSAREF_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nrsaref}
 BUILDLINK_PACKAGES+=	rsaref
 
 .if !empty(RSAREF_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.rsaref+=	rsaref>=2.0p3
-BUILDLINK_RECOMMENDED.rsaref+=	rsaref>=2.0p3nb1
+BUILDLINK_API_DEPENDS.rsaref+=	rsaref>=2.0p3
+BUILDLINK_ABI_DEPENDS.rsaref+=	rsaref>=2.0p3nb1
 BUILDLINK_PKGSRCDIR.rsaref?=	../../security/rsaref
 .endif	# RSAREF_BUILDLINK3_MK
 

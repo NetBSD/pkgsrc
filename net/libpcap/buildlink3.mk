@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2005/01/12 15:44:12 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2006/04/06 06:22:33 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBPCAP_BUILDLINK3_MK:=	${LIBPCAP_BUILDLINK3_MK}+
@@ -14,7 +14,7 @@ BUILDLINK_PACKAGES+=	libpcap
 
 .if !empty(LIBPCAP_BUILDLINK3_MK:M+)
 # XXX?
-BUILDLINK_DEPENDS.libpcap+=	libpcap>=0.5.0
+BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.5.0
 BUILDLINK_PKGSRCDIR.libpcap?=	../../net/libpcap
 
 # on Solaris, we always need libnsl and libsocket because libpcap.a

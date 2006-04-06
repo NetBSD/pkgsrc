@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2006/03/30 18:06:18 jlam Exp $
+# $NetBSD: builtin.mk,v 1.11 2006/04/06 06:22:50 reed Exp $
 
 BUILTIN_PKG:=	expat
 
@@ -54,7 +54,7 @@ USE_BUILTIN.expat=	${IS_BUILTIN.expat}
 .    if defined(BUILTIN_PKG.expat) && \
         !empty(IS_BUILTIN.expat:M[yY][eE][sS])
 USE_BUILTIN.expat=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.expat}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.expat}
 .        if !empty(USE_BUILTIN.expat:M[yY][eE][sS])
 USE_BUILTIN.expat!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.expat:Q}; then	\
@@ -77,7 +77,7 @@ CHECK_BUILTIN.expat?=	no
 .if !empty(CHECK_BUILTIN.expat:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.expat:M[nN][oO])
-BUILDLINK_DEPENDS.expat+=	expat>=1.95.4
+BUILDLINK_API_DEPENDS.expat+=	expat>=1.95.4
 .  endif
 
 .  if !empty(USE_BUILTIN.expat:M[yY][eE][sS])

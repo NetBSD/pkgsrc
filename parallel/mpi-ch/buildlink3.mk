@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/02/05 23:10:34 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 06:22:36 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MPICH_BUILDLINK3_MK:=	${MPICH_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nmpich}
 BUILDLINK_PACKAGES+=	mpich
 
 .if !empty(MPICH_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.mpich+=	mpich>=1.2.6
-BUILDLINK_RECOMMENDED.mpich?=	mpich>=1.2.6nb3
+BUILDLINK_API_DEPENDS.mpich+=	mpich>=1.2.6
+BUILDLINK_ABI_DEPENDS.mpich?=	mpich>=1.2.6nb3
 BUILDLINK_PKGSRCDIR.mpich?=	../../parallel/mpi-ch
 BUILDLINK_DEPMETHOD.mpich?=	build
 .endif	# MPICH_BUILDLINK3_MK

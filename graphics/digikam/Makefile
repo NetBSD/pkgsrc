@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/03/30 03:20:04 markd Exp $
+# $NetBSD: Makefile,v 1.22 2006/04/06 06:22:01 reed Exp $
 
 DISTNAME=		digikam-0.8.1
 PKGREVISION=		2
@@ -17,8 +17,8 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 BUILD_USES_MSGFMT=	yes
 
-BUILDLINK_DEPENDS.imlib2+=	imlib2>=1.2
-BUILDLINK_DEPENDS.kdelibs+=	kdelibs>=3.5.2
+BUILDLINK_API_DEPENDS.imlib2+=	imlib2>=1.2
+BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs>=3.5.2
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"

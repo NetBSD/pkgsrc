@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.14 2006/03/30 18:06:19 jlam Exp $
+# $NetBSD: builtin.mk,v 1.15 2006/04/06 06:22:56 reed Exp $
 
 BUILTIN_PKG:=	Xrandr
 
@@ -77,7 +77,7 @@ USE_BUILTIN.Xrandr=	${IS_BUILTIN.Xrandr}
 .    if defined(BUILTIN_PKG.Xrandr) && \
         !empty(IS_BUILTIN.Xrandr:M[yY][eE][sS])
 USE_BUILTIN.Xrandr=	yes
-.      for _dep_ in ${BUILDLINK_DEPENDS.Xrandr}
+.      for _dep_ in ${BUILDLINK_API_DEPENDS.Xrandr}
 .        if !empty(USE_BUILTIN.Xrandr:M[yY][eE][sS])
 USE_BUILTIN.Xrandr!=							\
 	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.Xrandr:Q}; then	\
@@ -100,8 +100,8 @@ CHECK_BUILTIN.Xrandr?=	no
 .if !empty(CHECK_BUILTIN.Xrandr:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.Xrandr:M[nN][oO])
-BUILDLINK_DEPENDS.Xrandr+=	Xrandr>=1.0.1
-BUILDLINK_DEPENDS.Xrender+=	Xrender>=0.8
+BUILDLINK_API_DEPENDS.Xrandr+=	Xrandr>=1.0.1
+BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 .  endif
 
 .  if !empty(USE_BUILTIN.Xrandr:M[yY][eE][sS])

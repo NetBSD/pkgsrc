@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/02/05 23:09:39 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:22:05 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SIMAGE_BUILDLINK3_MK:=	${SIMAGE_BUILDLINK3_MK}+
@@ -11,8 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nsimage}
 BUILDLINK_PACKAGES+=	simage
 
 .if !empty(SIMAGE_BUILDLINK3_MK:M+)
-BUILDLINK_DEPENDS.simage+=	simage>=1.6.1
-BUILDLINK_RECOMMENDED.simage+=	simage>=1.6.1nb2
+BUILDLINK_API_DEPENDS.simage+=	simage>=1.6.1
+BUILDLINK_ABI_DEPENDS.simage+=	simage>=1.6.1nb2
 BUILDLINK_PKGSRCDIR.simage?=	../../graphics/simage
 .endif	# SIMAGE_BUILDLINK3_MK
 
