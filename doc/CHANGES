@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13487 2006/04/07 11:37:21 salo Exp $
+$NetBSD: CHANGES,v 1.13488 2006/04/07 12:01:38 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1946,3 +1946,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/postfix to 2.2.10 [martti 2006-04-07]
 	Updated mail/postfix-current to 2.3-20060405 [martti 2006-04-07]
 	Updated mail/clamav to 0.88.1 [grant 2006-04-07]
+	Updated databases/phpmyadmin to 2.8.0.3 [tron 2006-04-07]
