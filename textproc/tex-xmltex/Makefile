@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:11:08 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/07 02:09:57 minskim Exp $
 
 DISTNAME=	base
 PKGNAME=	tex-xmltex-1.9
-PKGREVISION=	2
+PKGREVISION=	3
 WRKSRC=		${WRKDIR}/base
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/xmltex/}
@@ -14,6 +14,7 @@ COMMENT=	Non-validating XML parser implemented in TeX
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 NO_CONFIGURE=	yes
+USE_DIRS+=	texmf-1.0
 TEX_ACCEPTED=	teTeX2 teTeX3
 
 .include "../../print/teTeX/module.mk"
