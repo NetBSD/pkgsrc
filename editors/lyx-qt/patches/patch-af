@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.4 2006/01/18 21:00:45 reed Exp $
+$NetBSD: patch-af,v 1.5 2006/04/07 00:44:53 minskim Exp $
 
---- lib/Makefile.in.orig	2006-01-16 06:51:40.000000000 -0800
-+++ lib/Makefile.in	2006-01-17 10:46:05.000000000 -0800
-@@ -244,7 +244,7 @@
+--- lib/Makefile.in.orig	2006-01-16 14:51:40.000000000 +0000
++++ lib/Makefile.in
+@@ -244,7 +244,7 @@ TEMPL = templates/*.lyx
  TEXSUPPORT = tex/*.cls tex/*.sty
  UI = ui/*.ui
  LIBINSTFILES = $(BIND) $(CLIPART) $(DOCINST) $(EXAMPLES) $(HELP) $(IMAGES) \
@@ -11,3 +11,12 @@ $NetBSD: patch-af,v 1.4 2006/01/18 21:00:45 reed Exp $
  
  LIBDISTFILES = $(BIND) $(CLIPART) $(DOCDIST) $(EXAMPLES) $(HELP) $(IMAGES) \
  	$(KBD) $(LAYOUT) $(TEMPL) $(UI) $(TEXSUPPORT) $(LYXSCRIPTS)
+@@ -254,7 +254,7 @@ pkgdata_DATA = lyxrc.example CREDITS chk
+ 	       encodings languages symbols
+ 
+ LYXLIBDIRS = bind clipart doc examples help images images/math kbd layouts lyx2lyx scripts \
+-	     templates tex ui
++	     templates ui
+ 
+ EXTRA_DIST = CREDITS chkconfig.ltx lyxrc.example \
+ 	external_templates bind clipart doc examples help images \
