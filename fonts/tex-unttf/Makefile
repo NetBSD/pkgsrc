@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2006/03/13 01:43:36 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/07 04:47:20 minskim Exp $
 #
 
 DISTNAME=	fonts-unttf-20060215
 PKGNAME=	${DISTNAME:S/fonts-unttf-/tex-unttf-1.0.1./}
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/hangul-ucs/fonts/
 
@@ -15,6 +16,7 @@ DEPENDS+=	un-core-ttf>=1.0:../../fonts/un-core-ttf
 DEPENDS+=	un-extra-ttf>=1.0.1:../../fonts/un-extra-ttf
 
 WRKSRC=		${WRKDIR}/fonts-unttf
+USE_DIRS+=	texmf-1.0
 NO_CONFIGURE=	yes
 
 TEX_FONTMAPS=		unttf-pdftex.map

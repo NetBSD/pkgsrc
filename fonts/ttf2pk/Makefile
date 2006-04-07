@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2006/04/07 00:24:16 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/07 04:47:20 minskim Exp $
 #
 
 .include "../../graphics/freetype-lib/Makefile.common"
 
 PKGNAME=		ttf2pk-1.3.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		print
 
 MAINTAINER=		bernhard@SDG.de,hubertf@NetBSD.org
@@ -21,6 +21,7 @@ BUILD_DIRS=		${T2PSRC}
 
 BUILD_TARGET=		depend all
 
+USE_DIRS+=		texmf-1.0
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf213
 
