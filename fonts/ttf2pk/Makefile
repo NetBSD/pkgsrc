@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/27 12:26:06 rxg Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/07 00:24:16 minskim Exp $
 #
 
 .include "../../graphics/freetype-lib/Makefile.common"
@@ -30,30 +30,30 @@ INSTALLATION_DIRS=	bin man/man1
 .include "../../print/teTeX/module.mk"
 
 pre-configure:
-			cd ${T2PSRC}; autoconf
+	cd ${T2PSRC}; autoconf
 
 do-install:
-			${INSTALL_PROGRAM}	${T2PSRC}/ttf2pk \
-						${T2PSRC}/ttf2tfm \
-						${PREFIX}/bin
-			${INSTALL_DATA}		${T2PSRC}/ttf2pk.1 \
-						${T2PSRC}/ttf2tfm.1 \
-						${PREFIX}/man/man1
-			${INSTALL_DATA_DIR}	${TEXMFDIRS}/doc/ttf2pk
-			${INSTALL_DATA}		${T2PSRC}/BUGS \
-						${T2PSRC}/README \
-						${T2PSRC}/TODO \
-						${T2PSRC}/ttf2pk.doc \
-						${T2PSRC}/data/ttfonts.map \
-						${TEXMFDIRS}/doc/ttf2pk
-			${INSTALL_DATA_DIR}	${TEXMFDIRS}/ttf2tfm
-			${LN} -fs		ttf2tfm \
-						${TEXMFDIRS}/ttf2pk
-			${INSTALL_DATA_DIR}	${TEXMFDIRS}/ttf2tfm/base
-			${INSTALL_DATA}		${T2PSRC}/data/*.enc \
-						${T2PSRC}/data/*.rpl \
-						${T2PSRC}/data/*.sfd \
-						${TEXMFDIRS}/ttf2tfm/base
-			${TOUCH}		${TEXMFDIRS}/ttf2tfm/base/ttfonts.map
+	${INSTALL_PROGRAM}	${T2PSRC}/ttf2pk \
+				${T2PSRC}/ttf2tfm \
+				${PREFIX}/bin
+	${INSTALL_DATA}		${T2PSRC}/ttf2pk.1 \
+				${T2PSRC}/ttf2tfm.1 \
+				${PREFIX}/man/man1
+	${INSTALL_DATA_DIR}	${PKG_LOCALTEXMFPREFIX}/doc/ttf2pk
+	${INSTALL_DATA}		${T2PSRC}/BUGS \
+				${T2PSRC}/README \
+				${T2PSRC}/TODO \
+				${T2PSRC}/ttf2pk.doc \
+				${T2PSRC}/data/ttfonts.map \
+				${PKG_LOCALTEXMFPREFIX}/doc/ttf2pk
+	${INSTALL_DATA_DIR}	${PKG_LOCALTEXMFPREFIX}/ttf2tfm
+	${LN} -fs		ttf2tfm \
+				${PKG_LOCALTEXMFPREFIX}/ttf2pk
+	${INSTALL_DATA_DIR}	${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base
+	${INSTALL_DATA}		${T2PSRC}/data/*.enc \
+				${T2PSRC}/data/*.rpl \
+				${T2PSRC}/data/*.sfd \
+				${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base
+	${TOUCH}		${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/ttfonts.map
 
 .include "../../mk/bsd.pkg.mk"
