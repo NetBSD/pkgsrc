@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.3 2006/04/07 05:08:50 minskim Exp $
+# $NetBSD: dirs.mk,v 1.4 2006/04/07 05:21:01 minskim Exp $
 #
 # This file is intended to be included by mk/dirs.mk, not directly by packages.
 #
@@ -42,12 +42,6 @@ TEXMF_DIRS+=	web2c
 
 .if defined(_USE_TEXMF_DIRS) && !empty(_USE_TEXMF_DIRS)
 DEPENDS+=	texmf-dirs>=${_USE_TEXMF_DIRS}:../../print/texmf-dirs
-
-# Should be removed once all TeX packages are converted to use texmf-dirs
-# and PKG_LOCALTEXMFPREFIX is defined correctly in teTeX[23]-bin/buildlink3.mk.
-.if !empty(TEX_TYPE:MteTeX[23])
-PKG_LOCALTEXMFPREFIX=	${PREFIX}/share/texmf-local
-.endif
 
 .  for dir in ${TEXMF_DIRS}
 PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/${dir:S|/|\\/|g}$$/ { next; }
