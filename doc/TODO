@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4839 2006/04/07 06:51:11 taca Exp $
+$NetBSD: TODO,v 1.4840 2006/04/07 11:37:21 salo Exp $
 
 Suggested new packages
 ======================
@@ -403,7 +403,6 @@ Suggested package updates
 	o chrony-1.21
 	o cint-5.16
 	o cjk-lyx-1.3.3
-	o clamav-0.88.1
 	o classpath-0.90
 	o classpath-gui-0.90
 	o cmake-2.2.3
