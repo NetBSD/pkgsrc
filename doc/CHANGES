@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13491 2006/04/07 16:19:58 minskim Exp $
+$NetBSD: CHANGES,v 1.13492 2006/04/07 17:41:43 rpaulo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1957,3 +1957,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/teTeX3-texmf to 3.0nb3 [minskim 2006-04-07]
 	Updated print/teTeX3-texmfsrc to 3.0nb1 [minskim 2006-04-07]
 	Updated print/teTeX3-bin to 3.0nb11 [minskim 2006-04-07]
+	Updated audio/libmpd to 0.12.0 [rpaulo 2006-04-07]
+	Updated audio/gmpc to 0.13.0 [rpaulo 2006-04-07]
