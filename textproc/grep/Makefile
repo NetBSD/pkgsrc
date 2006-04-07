@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/03/05 16:27:28 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/04/07 19:54:17 jlam Exp $
 #
 
 DISTNAME=	grep-2.5.1
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--disable-perl-regexp
 
 USE_TOOLS+=		makeinfo
 TEXINFO_REQD=		4.0
-INFO_FILES=		grep.info
+INFO_FILES=		# PLIST
 
 .include "../../mk/bsd.prefs.mk"
 

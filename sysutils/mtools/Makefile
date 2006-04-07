@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/03/05 16:27:28 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2006/04/07 19:54:17 jlam Exp $
 
 DISTNAME=	mtools-3.9.10
 PKGREVISION=	1
@@ -14,7 +14,7 @@ NOT_FOR_PLATFORM = *-*-alpha *-*-sparc64	# LP64 problem
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake makeinfo
-INFO_FILES=		mtools.info
+INFO_FILES=		# PLIST
 
 .include "../../mk/bsd.prefs.mk"
 

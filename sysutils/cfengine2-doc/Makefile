@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/06/17 03:50:33 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/07 19:54:16 jlam Exp $
 #
 
 PKGNAME=	cfengine-doc-${CFENGINE_VERSION}
@@ -10,14 +10,16 @@ COMMENT=	Documentation for cfengine
 
 NO_CONFIGURE=   yes
 NO_BUILD=       yes
-INFO_FILES=	cfengine-Reference.info cfengine-Tutorial.info
-INFO_FILES+=	cfengine-Anomalies.info
+INFO_FILES=	# PLIST
 
-INSTALLATION_DIRS=	info
+HTMLDIR=		${PREFIX}/share/doc/html/cfengine
+INSTALLATION_DIRS=	${PKGINFODIR} ${HTMLDIR}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/cfengine-*.info* ${PREFIX}/info
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/cfengine
-	${INSTALL_DATA} ${WRKSRC}/doc/cfengine-*.html ${PREFIX}/share/doc/html/cfengine
+	cd ${WRKSRC}/doc; for f in *.info *.info-[0-9]*; do		\
+		${TEST} ! -f "$$f" ||					\
+		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
+	done
+	${INSTALL_DATA} ${WRKSRC}/doc/cfengine-*.html ${HTMLDIR}
 
 .include "../../mk/bsd.pkg.mk"
