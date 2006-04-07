@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:40 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/07 03:30:36 minskim Exp $
 #
 
 DISTNAME=	prosper-1.00.4
 PKGNAME=	tex-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=prosper/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} PPRblends.sty.gz
@@ -15,14 +15,15 @@ COMMENT=	LaTeX class for writing transparencies
 WRKSRC=		${WRKDIR}/prosper
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+USE_DIRS+=	texmf-1.0
 
 TEXMF=		${PKG_LOCALTEXMFPREFIX}
-PROSPERDIR=	${TEXMF}/tex/latex/misc/prosper
+PROSPERDIR=	${TEXMF}/tex/latex/prosper
 
 DOCS=		AUTHORS ChangeLog FAQ INSTALL NEWS README TODO \
 		TROUBLESHOOTINGS
-DOCDIR=		${LOCALBASE}/share/doc/tex-prosper
-EGDIR=		${LOCALBASE}/share/examples/tex-prosper
+DOCDIR=		${PREFIX}/share/doc/tex-prosper
+EGDIR=		${PREFIX}/share/examples/tex-prosper
 
 .include "../../print/teTeX/module.mk"
 
