@@ -1,4 +1,4 @@
-# $NetBSD: texinfo.mk,v 1.10 2006/03/06 05:25:45 jlam Exp $
+# $NetBSD: texinfo.mk,v 1.11 2006/04/07 14:52:55 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -38,7 +38,10 @@
 TEXINFO_REQD?=		3.12
 
 # If the package doesn't explicitly request makeinfo as a tool, then
-# create a "broken" makeinfo tool to prevent its use.
+# create a "broken" makeinfo tool to fool GNU configure scripts into
+# believing that makeinfo is broken on ths sytem.  It will return non-zero
+# if invoked as "makeinfo --version".  Otherwise, it will just touch the
+# appropriate output file to satisfy any make dependencies.
 #
 # If the package does explicitly request makeinfo as a tool, then
 # determine if the platform-provided makeinfo's version is at least
@@ -46,7 +49,9 @@ TEXINFO_REQD?=		3.12
 # the pkgsrc makeinfo.
 #
 .if empty(USE_TOOLS:C/:.*//:Mmakeinfo)
-TOOLS_BROKEN+=		makeinfo
+TOOLS_CREATE+=		makeinfo
+TOOLS_PATH.makeinfo=	${PKGSRCDIR}/mk/gnu-config/missing
+TOOLS_SCRIPT.makeinfo=	for arg in "$$@"; do case "$$arg" in --version) exit 1 ;; esac; done; ${TOOLS_PATH.makeinfo} makeinfo "$$@"
 .elif defined(TOOLS_PLATFORM.makeinfo) && !empty(TOOLS_PLATFORM.makeinfo)
 .  if !defined(_TOOLS_USE_PKGSRC.makeinfo)
 _TOOLS_VERSION.makeinfo!=						\
