@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.12 2005/02/19 10:23:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/04/07 19:54:17 jlam Exp $
 bin/mbchk
+info/grub.info
+info/multiboot.info
 man/man1/mbchk.1
 man/man8/grub-install.8
 man/man8/grub-md5-crypt.8
