@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/05 16:27:28 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/04/07 19:54:17 jlam Exp $
 #
 
 DISTNAME=	ndtpd-3.1.5
@@ -16,7 +16,7 @@ USE_TOOLS+=	makeinfo
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
-INFO_FILES=	ndtpd-ja.info ndtpd.info
+INFO_FILES=	# PLIST
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${NDTPD_RUNDIR:Q}
