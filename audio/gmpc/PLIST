@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2005/11/22 19:27:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/07 17:40:22 rpaulo Exp $
 bin/gmpc
+include/gmpc/config1.h
+include/gmpc/cover-art.h
+include/gmpc/plugin.h
+include/gmpc/qthread.h
 share/applications/gmpc.desktop
 share/gmpc/add-browser.glade
 share/gmpc/gmpc-tray.png
@@ -23,6 +27,7 @@ share/gmpc/playlist3.glade
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gmpc.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gmpc.mo
 share/pixmaps/gmpc.png
+lib/pkgconfig/gmpc.pc
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/gmpc
 @comment in xdg-dirs: @dirrm share/applications
