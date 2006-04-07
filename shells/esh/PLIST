@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2004/03/10 00:58:44 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/07 15:28:49 jlam Exp $
 bin/esh
+info/esh.info
 share/doc/esh/esh.html
 share/doc/esh/esh_toc.html
 share/emacs/site-lisp/esh-mode.el

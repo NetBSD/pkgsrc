@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/09 23:01:17 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/07 15:28:49 jlam Exp $
 bin/fcp
 bin/fsh
 bin/fshd
 bin/in.fshd
+info/fsh.info
 libexec/fcpwrap
 share/fsh/fsh.py
 share/fsh/fshcompat.py
