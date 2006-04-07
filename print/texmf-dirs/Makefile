@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/06 23:07:01 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/07 05:08:50 minskim Exp $
 
-DISTNAME=	texmf-dirs-1.0
+DISTNAME=	texmf-dirs-1.1
 CATEGORIES=	print
 MASTER_SITES=	# empty
 DISTFILES=	# empty
