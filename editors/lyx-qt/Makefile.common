@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.35 2006/04/07 00:36:45 minskim Exp $
+# $NetBSD: Makefile.common,v 1.36 2006/04/07 00:54:25 minskim Exp $
 #
 
 DISTNAME=		lyx-1.3.7
@@ -23,6 +23,7 @@ PLIST_SRC=		${.CURDIR}/../../editors/lyx-qt/PLIST.common
 
 UNLIMIT_RESOURCES+=	datasize
 
+USE_DIRS+=		texmf-1.0
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake makepsres perl:run
