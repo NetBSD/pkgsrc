@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/04/07 03:08:49 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/07 15:57:37 minskim Exp $
 #
 
 DISTNAME=	musixtex-112
@@ -17,9 +17,6 @@ TEX_ACCEPTED=	teTeX2 teTeX3
 WRKSRC=		${WRKDIR}/musixtex-T112
 NO_CONFIGURE=	yes
 USE_DIRS+=	texmf-1.0
-
-TEXMF=		${PKG_TEXMFPREFIX}
-TEXMF_CNF=	${PKG_TEXMFPREFIX}/web2c/texmf.cnf
 
 .include "../../mk/bsd.prefs.mk"
 .if exists(${LOCALBASE}/bin/initex)
