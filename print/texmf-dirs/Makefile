@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/07 05:08:50 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/07 14:55:41 minskim Exp $
 
 DISTNAME=	texmf-dirs-1.1
 CATEGORIES=	print
@@ -23,7 +23,7 @@ WRKSRC=		${WRKDIR}
 .if ${TEX_TYPE} == "teTeX1"
 REQD_DIRS=	# empty
 .else
-REQD_DIRS+=	${TEXMF_DIRS:O:S/^/${PREFIX}\/share\/texmf-local\//}
+REQD_DIRS+=	${TEXMF_DIRS:O:S/^/${PKG_LOCALTEXMFPREFIX}\//}
 .  if ${TEX_TYPE} == "teTeX2"
 BUILDLINK_API_DEPENDS.teTeX-bin+=	teTeX-bin>=2.0.2nb7 teTeX-bin<3.0
 .  elif ${TEX_TYPE} == "teTeX3"
