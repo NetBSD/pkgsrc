@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13483 2006/04/07 05:19:55 minskim Exp $
+$NetBSD: CHANGES,v 1.13484 2006/04/07 06:29:29 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1942,3 +1942,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/texmf-dirs to 1.1 [minskim 2006-04-07]
 	Updated fonts/ec-fonts-mftraced to 1.0.8nb5 [minskim 2006-04-07]
 	Updated print/tex-textpos to 1.2bnb3 [minskim 2006-04-07]
+	Updated emulators/stella to 2.1 [dillo 2006-04-07]
