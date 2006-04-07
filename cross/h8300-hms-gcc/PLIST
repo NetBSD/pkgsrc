@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2006/03/20 18:15:37 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/04/07 15:09:06 hubertf Exp $
+bin/h8300-hms-c++
 bin/h8300-hms-cpp
+bin/h8300-hms-g++
 bin/h8300-hms-gcc
 bin/h8300-hms-gccbug
 bin/h8300-hms-gcov
+libexec/cross-h8300-hms/bin/h8300-hms-c++
 libexec/cross-h8300-hms/bin/h8300-hms-cpp
+libexec/cross-h8300-hms/bin/h8300-hms-g++
 libexec/cross-h8300-hms/bin/h8300-hms-gcc
 libexec/cross-h8300-hms/bin/h8300-hms-gccbug
 libexec/cross-h8300-hms/bin/h8300-hms-gcov
@@ -98,6 +102,7 @@ libexec/cross-h8300-hms/h8300-hms/lib/libg.a
 libexec/cross-h8300-hms/h8300-hms/lib/libiberty.a
 libexec/cross-h8300-hms/h8300-hms/lib/libm.a
 libexec/cross-h8300-hms/lib/gcc-lib/h8300-hms/3.1/cc1
+libexec/cross-h8300-hms/lib/gcc-lib/h8300-hms/3.1/cc1plus
 libexec/cross-h8300-hms/lib/gcc-lib/h8300-hms/3.1/collect2
 libexec/cross-h8300-hms/lib/gcc-lib/h8300-hms/3.1/cpp0
 libexec/cross-h8300-hms/lib/gcc-lib/h8300-hms/3.1/h8300h/int32/libgcc.a
@@ -120,6 +125,7 @@ libexec/cross-h8300-hms/lib/gcc-lib/h8300-hms/3.1/tradcpp0
 libexec/cross-h8300-hms/lib/libiberty.a
 libexec/cross-h8300-hms/man/man1/cpp.1
 libexec/cross-h8300-hms/man/man1/gcov.1
+libexec/cross-h8300-hms/man/man1/h8300-hms-g++.1
 libexec/cross-h8300-hms/man/man1/h8300-hms-gcc.1
 libexec/cross-h8300-hms/man/man7/fsf-funding.7
 libexec/cross-h8300-hms/man/man7/gfdl.7
