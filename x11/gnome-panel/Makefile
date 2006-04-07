@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2006/04/07 11:07:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.70 2006/04/07 11:09:15 jmmv Exp $
 #
 
 DISTNAME=		gnome-panel-2.14.0
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 panel application
+
+BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
