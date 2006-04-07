@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2006/01/21 18:57:42 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/04/07 16:19:15 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
@@ -25,10 +25,10 @@ EXTRACT_OPTS=		-X ${FILESDIR}/exclude
 EXTRACT_OPTS_TAR=	-p
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf
+	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf-dist
 	extract_file=${_DISTDIR:Q}/${DISTFILES:Q};			\
-	cd ${PREFIX}/share/texmf; ${EXTRACT_CMD}
-	cd ${PREFIX}/share/texmf/dvipdfm/config && \
+	cd ${PREFIX}/share/texmf-dist; ${EXTRACT_CMD}
+	cd ${PREFIX}/share/texmf-dist/dvipdfm/config && \
 	${PATCH} ${_PATCH_BACKUP_ARG} .orig < ${FILESDIR}/dvipdfm-config.diff && \
 	${RM} config.orig
 
