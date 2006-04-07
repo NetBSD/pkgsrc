@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2006/03/29 14:04:48 tron Exp $
+# $NetBSD: Makefile,v 1.47.2.1 2006/04/07 13:18:27 salo Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
-PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpmyadmin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,7 +20,7 @@ MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q} \
 		EXDIR=${EXDIR:Q}
 
 CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
-DIST_VERSION=	2.8.0.2
+DIST_VERSION=	2.8.0.3
 DOC_FILES=	CREDITS ChangeLog \
 		Documentation.txt INSTALL LICENSE README \
 		RELEASE-DATE-${DIST_VERSION} TODO
@@ -81,5 +80,7 @@ do-install:
 	cd ${WRKSRC} && \
 	${INSTALL_DATA} ${DOC_FILES} ${PREFIX}/share/doc/phpmyadmin
 	${INSTALL_DATA} ${WRKDIR}/phpmyadmin.conf ${EXDIR}/apache.conf
+
+	${RM} -f ${PREFIX}/share/phpmyadmin/libraries/footer.inc.php.orig
 
 .include "../../mk/bsd.pkg.mk"
