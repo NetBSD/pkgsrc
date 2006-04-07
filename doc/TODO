@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4840 2006/04/07 11:37:21 salo Exp $
+$NetBSD: TODO,v 1.4841 2006/04/07 19:48:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -319,6 +319,7 @@ Suggested package updates
 	o afterstep-2.2.1
 	o album-3.10
 	o ald-0.1.6 [pkg/26552]
+	o alee-ttf-7.3 [pkg/33213]
 	o algae-4.3.6
 	o aliados-0.2.0
 	o amanda-2.5.0
@@ -735,6 +736,7 @@ Suggested package updates
 	o mlview-0.9.0
 	o mmix-20050922
 	o molden-4.4
+	o mono-1.1.14
 	o moscow_ml-2.01
 	o most-4.10.2
 	o mowitz-0.3.0
