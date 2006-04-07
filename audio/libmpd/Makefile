@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2006/03/04 21:28:56 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/07 17:37:53 rpaulo Exp $
 #
 
-DISTNAME=		libmpd-0.01
+DISTNAME=		libmpd-0.12.0
 CATEGORIES=		audio
-MASTER_SITES=		http://download.qballcow.nl/programs/libmpd/
+MASTER_SITES=		http://download.qballcow.nl/programs/gmpc-0.13/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://download.qballcow.nl/programs/libmpd/libmpd.html
+HOMEPAGE=		http://cms.qballcow.nl/index.php?page=libmpd
 COMMENT=		Library to access mpd (musicpd)
 
 USE_LIBTOOL=		yes
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/libmpd-0.01.pc.in
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/22 19:26:08 wiz Exp $
-include/${PKGNAME}/libmpd/debug_printf.h
-include/${PKGNAME}/libmpd/libmpd.h
-include/${PKGNAME}/libmpd/libmpdclient.h
-lib/${PKGNAME}.la
-lib/pkgconfig/${PKGNAME}.pc
-@dirrm include/${PKGNAME}/libmpd
-@dirrm include/${PKGNAME}
+@comment $NetBSD: PLIST,v 1.2 2006/04/07 17:37:53 rpaulo Exp $
+include/libmpd/debug_printf.h
+include/libmpd/libmpd.h
+include/libmpd/libmpdclient.h
+include/libmpd/libmpd-database.h
+include/libmpd/libmpd-internal.h
+include/libmpd/libmpd-player.h
+include/libmpd/libmpd-playlist.h
+include/libmpd/libmpd-status.h
+include/libmpd/libmpd-strfsong.h
+lib/libmpd.la
+lib/libmpd.so.0.0.0
+lib/pkgconfig/libmpd.pc
+@dirrm include/libmpd/libmpd
+@dirrm include/libmpd
