@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2006/01/25 20:50:42 minskim Exp $
+# $NetBSD: Makefile.common,v 1.5 2006/04/07 04:47:20 minskim Exp $
 
 DISTNAME=	uhc-fonts-1.0
 CATEGORIES=	fonts
@@ -14,6 +14,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
+USE_DIRS+=	texmf-1.0
 
 .include "../../print/teTeX/module.mk"
 

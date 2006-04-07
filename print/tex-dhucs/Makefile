@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/04/05 02:28:18 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/07 04:47:20 minskim Exp $
 
 DISTNAME=	dhucs-2.7.0cvs-20060328
 PKGNAME=	tex-${DISTNAME:C/cvs-.*//}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/hangul-ucs/current/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} fonts-unttf-20060215.tar.gz
@@ -18,6 +19,7 @@ SITES.fonts-unttf-20060215.tar.gz= \
 
 WRKSRC=		${WRKDIR}/dhucs
 NO_BUILD=	yes
+USE_DIRS+=	texmf-1.0
 USE_TOOLS+=	bzcat perl:run
 
 REPLACE_PERL+=	script/makeindex-dhucs.pl
