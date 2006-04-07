@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/03/14 19:30:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/07 15:28:49 jlam Exp $
 bin/lcp
 bin/lsftp
 bin/lsh
@@ -53,6 +53,8 @@ include/nettle/sexp.h
 include/nettle/sha.h
 include/nettle/twofish.h
 include/nettle/yarrow.h
+info/lsh.info
+info/nettle.info
 lib/libnettle.a
 man/man1/lsftp.1
 man/man1/lsh-authorize.1
