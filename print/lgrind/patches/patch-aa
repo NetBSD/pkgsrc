@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2005/11/08 20:30:29 tonio Exp $
+$NetBSD: patch-aa,v 1.6 2006/04/07 03:01:36 minskim Exp $
 
 --- Makefile.orig	2005-11-08 21:18:37.000000000 +0100
 +++ Makefile
@@ -15,9 +15,9 @@ $NetBSD: patch-aa,v 1.5 2005/11/08 20:30:29 tonio Exp $
 -TEXINPUTS=${BASEDIR}/texmf/tex/latex/lgrind
 -DOC=${BASEDIR}/texmf/doc/latex/lgrind
 -MAN=${BASEDIR}/man
-+DEFSFILE=${PKG_TEXMFPREFIX}/tex/latex/lgrind/lgrindef
-+TEXINPUTS=${PKG_TEXMFPREFIX}/tex/latex/lgrind
-+DOC=${PKG_TEXMFPREFIX}/doc/latex/lgrind
++DEFSFILE=${PKG_LOCALTEXMFPREFIX}/tex/latex/lgrind/lgrindef
++TEXINPUTS=${PKG_LOCALTEXMFPREFIX}/tex/latex/lgrind
++DOC=${PKG_LOCALTEXMFPREFIX}/doc/latex/lgrind
 +MAN=${PREFIX}/man
  
  CC=gcc
