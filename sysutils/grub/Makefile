@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/03/04 21:30:41 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2006/04/07 19:54:17 jlam Exp $
 #
 
 DISTNAME=	grub-0.97
@@ -14,8 +14,7 @@ ONLY_FOR_PLATFORM=	*-*-i386
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
-
-INFO_FILES=		grub.info multiboot.info
+INFO_FILES=		# PLIST
 
 BUILDLINK_TRANSFORM+=	rename:-fno-builtin:-ffreestanding
 
