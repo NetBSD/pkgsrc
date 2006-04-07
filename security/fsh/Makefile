@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:10:43 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/07 15:28:49 jlam Exp $
 #
 
 DISTNAME=	fsh-1.2
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.lysator.liu.se/fsh/
 COMMENT=	Fast remote command execution
 
 GNU_CONFIGURE=	YES
-INFO_FILES=	fsh.info
+INFO_FILES=	# PLIST
 
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 
