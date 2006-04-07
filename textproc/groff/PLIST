@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/03/05 19:23:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/04/07 19:54:17 jlam Exp $
 bin/addftinfo
 bin/afmtodit
 bin/${GNU_PREFIX}eqn
@@ -32,6 +32,7 @@ bin/${GNU_PREFIX}soelim
 bin/${GNU_PREFIX}tbl
 bin/tfmtodit
 bin/${GNU_PREFIX}troff
+info/groff
 lib/groff/groffer/groffer2.sh
 man/man1/addftinfo.1
 man/man1/afmtodit.1

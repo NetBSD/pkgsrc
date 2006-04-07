@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/03/12 12:37:30 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2006/04/07 19:54:16 jlam Exp $
 
 DISTNAME=	coreutils-5.2.1
 PKGREVISION=	2
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		perl
 USE_PKGLOCALEDIR=	YES
 
-INFO_FILES=	coreutils.info
+INFO_FILES=		# PLIST
 
 TEST_TARGET=		check
 

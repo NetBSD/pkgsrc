@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2004/06/25 15:17:55 seb Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/04/07 19:54:17 jlam Exp $
 bin/${GNU_PROGRAM_PREFIX}sed
+info/sed.info
 man/man1/${GNU_PROGRAM_PREFIX}sed.1
 ${PKGLOCALEDIR}/locale/af/LC_MESSAGES/sed.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/sed.mo

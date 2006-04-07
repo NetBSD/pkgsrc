@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/03/12 16:26:09 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2006/04/07 19:54:17 jlam Exp $
 #
 
 DISTNAME=	groff-1.19.2
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ENV+=		PERLPATH=${PERL5:Q}
 USE_TOOLS+=		gs:run perl:run sed:run
 
-INFO_FILES=	groff
+INFO_FILES=		# PLIST
 
 REPLACE_INTERPRETER+=	sed
 REPLACE.sed.old=	.*/sed

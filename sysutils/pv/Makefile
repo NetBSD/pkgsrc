@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:30:42 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/07 19:54:17 jlam Exp $
 #
 
 DISTNAME=		pv-0.8.6
@@ -16,8 +16,7 @@ BUILD_USES_MSGFMT=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
-
-INFO_FILES=		pv.info
+INFO_FILES=		# PLIST
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pv
