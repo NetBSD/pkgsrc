@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.2 2006/04/06 23:28:36 minskim Exp $
+# $NetBSD: dirs.mk,v 1.3 2006/04/07 05:08:50 minskim Exp $
 #
 # This file is intended to be included by mk/dirs.mk, not directly by packages.
 #
@@ -19,12 +19,14 @@ TEXMF_DIRS+=	fonts/enc
 TEXMF_DIRS+=	fonts/enc/pdftex
 TEXMF_DIRS+=	fonts/map
 TEXMF_DIRS+=	fonts/map/dvipdfm
+TEXMF_DIRS+=	fonts/map/dvips
 TEXMF_DIRS+=	fonts/map/pdftex
 TEXMF_DIRS+=	fonts/ofm
 TEXMF_DIRS+=	fonts/ovf
 TEXMF_DIRS+=	fonts/ovp
 TEXMF_DIRS+=	fonts/source
 TEXMF_DIRS+=	fonts/tfm
+TEXMF_DIRS+=	fonts/tfm/public
 TEXMF_DIRS+=	fonts/truetype
 TEXMF_DIRS+=	fonts/type1
 TEXMF_DIRS+=	fonts/type1/public
