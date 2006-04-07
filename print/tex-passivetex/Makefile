@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:10:40 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/07 03:55:22 minskim Exp $
 #
 
 DISTNAME=	passivetex
 PKGNAME=	tex-${DISTNAME}-1.24
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	http://www.tei-c.org/Software/passivetex/
 EXTRACT_SUFX=	.zip
@@ -17,6 +17,7 @@ DEPENDS+=	tex-xmltex>=1.9:../../textproc/tex-xmltex
 DIST_SUBDIR=	${PKGNAME_NOREV}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+USE_DIRS+=	texmf-1.0
 
 .include "../../print/teTeX/module.mk"
 

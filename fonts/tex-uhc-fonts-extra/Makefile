@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/02/05 23:09:11 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/07 04:47:20 minskim Exp $
 
 PKGNAME=	tex-${DISTNAME:S/fonts/fonts-extra/}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Extra UHC fonts for HLaTeX
 
 DEPENDS+=	tex-uhc-fonts-base>=1.0:../../fonts/tex-uhc-fonts-base
