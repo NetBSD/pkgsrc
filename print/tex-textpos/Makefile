@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/03/22 16:56:50 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2006/04/07 05:18:35 minskim Exp $
 #
 
 NAME=		textpos
@@ -12,36 +12,39 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 # HOMEPAGE=
 COMMENT=	Absolute positioning of text on the LaTeX page
 
-WRKSRC=		${WRKDIR}/${NAME}
+WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${NAME}
 DISTFILES=	textpos.ins LICENCE README textpos.dtx VERSION
 
 # included in teTeX3
 TEX_ACCEPTED=	teTeX1 teTeX2
-CONFLICTS+=	teTeX-bin>=3.0
 
 NO_CONFIGURE=	yes
-NO_BUILD=	yes
+USE_DIRS+=	texmf-1.0
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${TEX_DEFAULT} == "teTeX3"
 PKG_SKIP_REASON+=	"textpos is included in ${TEX_DEFAULT}."
 .else
-.include "../../mk/tex.buildlink3.mk"
+.include "../../print/teTeX/module.mk"
 .endif
 
-do-extract:
+do-build:
+	cd ${WRKSRC} && latex textpos.ins
+	cd ${WRKSRC} && latex textpos.drv
 
 do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/textpos-example.tex \
+		${PREFIX}/share/examples/${PKGBASE}
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
+	for f in LICENCE README VERSION textpos.dvi; do \
+		${INSTALL_DATA} ${WRKSRC}/$$f \
+			${PREFIX}/share/doc/${PKGBASE}; done
 	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/latex/textpos
-	for f in ${DISTFILES}; do \
-		${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$$f \
-			${PKG_LOCALTEXMFPREFIX}/tex/latex/textpos; \
-	done
-
-post-install:
-	cd ${PKG_LOCALTEXMFPREFIX}/tex/latex/textpos; latex textpos.ins
-	${LOCALBASE}/bin/texconfig rehash
+	for f in textpos.sty textpos.dtx; do \
+		${INSTALL_DATA} ${WRKSRC}/$$f \
+			${PKG_LOCALTEXMFPREFIX}/tex/latex/textpos; done
 
 .include "../../mk/bsd.pkg.mk"
