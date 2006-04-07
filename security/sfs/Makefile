@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/03/05 16:27:28 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/04/07 15:28:49 jlam Exp $
 #
 
 DISTNAME=		sfs-0.7.2
@@ -23,6 +23,8 @@ USE_TOOLS+=		makeinfo perl:run
 
 GCC_REQD+=		2.95.3
 
+INFO_FILES=		# PLIST
+
 PKG_USERS=		sfs:sfs::Self-certifying\ file\ system:/
 PKG_GROUPS=		sfs
 PKG_SYSCONFSUBDIR=	sfs
@@ -39,8 +41,6 @@ OWN_DIRS_PERMS=		${SFS_ROOT} sfs sfs 555
 SFSEXAMPLEDIR=		${PREFIX}/share/examples/sfs
 
 MESSAGE_SUBST+=		SFSDIR=${SFS_ROOT} SFSEXAMPLEDIR=${SFSEXAMPLEDIR}
-
-INFO_FILES=		sfs.info
 
 post-install:
 	${INSTALL_DATA_DIR} ${SFSEXAMPLEDIR}

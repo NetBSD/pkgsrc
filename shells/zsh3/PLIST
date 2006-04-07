@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2005/10/23 15:37:24 rillig Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/07 15:28:50 jlam Exp $
 bin/${PKGNAME}
 bin/zsh
+info/zsh.info
 man/man1/zsh.1.gz
 man/man1/zshall.1.gz
 man/man1/zshbuiltins.1.gz
