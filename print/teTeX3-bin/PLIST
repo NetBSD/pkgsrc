@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/05 16:04:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/04/07 16:19:15 minskim Exp $
 bin/a2ping
 bin/afm2tfm
 bin/aleph
@@ -338,13 +338,15 @@ share/texmf/xdvi/pixmaps/toolbar2.xpm
 share/texmf/xdvi/xdvi.cfg
 @dirrm share/texmf/xdvi/pixmaps
 @dirrm share/texmf/xdvi
-@comment In teTeX-texmf:   @dirrm share/texmf/web2c
+@dirrm share/texmf/web2c
 @dirrm share/texmf/texconfig/x
 @dirrm share/texmf/texconfig/v
 @dirrm share/texmf/texconfig/g
 @dirrm share/texmf/texconfig
 @dirrm share/texmf/dvips/gsftopk
 @dirrm share/texmf/dvips/base
-@comment In teTeX-texmf:   @dirrm share/texmf/doc/tetex
-@comment In teTeX-texmf:   @dirrm share/texmf
+@dirrm share/texmf/dvips
+@dirrm share/texmf/doc/tetex
+@dirrm share/texmf/doc
+@dirrm share/texmf
 @dirrm include/kpathsea
