@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13493 2006/04/07 19:00:00 jmmv Exp $
+$NetBSD: CHANGES,v 1.13494 2006/04/07 19:15:03 rpaulo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1960,3 +1960,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/libmpd to 0.12.0 [rpaulo 2006-04-07]
 	Updated audio/gmpc to 0.13.0 [rpaulo 2006-04-07]
 	Updated devel/pango to 1.12.1 [jmmv 2006-04-07]
+	Updated www/opera to 8.54 [rpaulo 2006-04-07]
