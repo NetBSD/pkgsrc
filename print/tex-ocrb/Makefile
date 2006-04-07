@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:30:32 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/04/07 03:26:16 minskim Exp $
 #
 
 DISTNAME=	ocr-b
 PKGNAME=	tex-ocrb-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=fonts/${DISTNAME}/}
 
@@ -19,6 +19,11 @@ DISTFILES= ocrb10.mf ocrb10e.mf ocrb10f.mf ocrb10g.mf ocrb10l.mf \
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+USE_DIRS+=	texmf-1.0
+
+PLIST_SUBST+=	LOCALTEXMF=${PKG_LOCALTEXMFPREFIX:S/${PREFIX}\///}
+
+.include "../../print/teTeX/module.mk"
 
 do-extract:
 	${MKDIR} ${WRKSRC}
@@ -34,7 +39,5 @@ do-install:
 		${PKG_LOCALTEXMFPREFIX}/doc/fonts/ocrb
 	${INSTALL_DATA} ${WRKSRC}/*.mf \
 		${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb
-	${LOCALBASE}/bin/texconfig rehash
 
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
