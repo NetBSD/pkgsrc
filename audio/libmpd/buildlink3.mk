@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:21:35 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/07 17:37:53 rpaulo Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBMPD_BUILDLINK3_MK:=	${LIBMPD_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibmpd}
 BUILDLINK_PACKAGES+=	libmpd
 
 .if !empty(LIBMPD_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.libmpd+=	libmpd>=0.01
+BUILDLINK_API_DEPENDS.libmpd+=	libmpd>=0.12.0
 BUILDLINK_PKGSRCDIR.libmpd?=	../../audio/libmpd
 .endif	# LIBMPD_BUILDLINK3_MK
 
