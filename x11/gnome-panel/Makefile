@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2006/04/06 06:22:58 reed Exp $
+# $NetBSD: Makefile,v 1.69 2006/04/07 11:07:37 jmmv Exp $
 #
 
 DISTNAME=		gnome-panel-2.14.0
@@ -12,6 +12,7 @@ COMMENT=		GNOME2 panel application
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
+USE_MSGFMT_PLURALS=	YES
 USE_TOOLS+=		gmake perl:run pkg-config
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
