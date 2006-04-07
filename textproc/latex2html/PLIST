@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/11/08 20:02:52 tonio Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/07 02:23:19 minskim Exp $
 bin/latex2html
 bin/pstoimg
 bin/texexpand
@@ -362,5 +362,3 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/html/verbatimfiles.sty
 @dirrm share/latex2html/IndicTeX-HTML
 @dirrm share/latex2html
 @dirrm lib/latex2html
-@exec mktexlsr
-@unexec mktexlsr
