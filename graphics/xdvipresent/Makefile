@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:09:40 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/07 02:17:53 minskim Exp $
 #
 
 DISTNAME=	xdvipresent-0.6p14
 PKGNAME=	xdvipresent-0.6.1.14
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics textproc print x11
 MASTER_SITES=	http://clip.dia.fi.upm.es/Software/
 
@@ -16,16 +16,18 @@ DEPENDS+=	latex2html>=2002.2:../../textproc/latex2html
 WRKSRC=		${WRKDIR}/xdvipresent
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
+USE_DIRS+=	texmf-1.0
 
-STYDIR=		${PKG_LOCALTEXMFPREFIX}/tex/latex/other
+STYDIR=		${PKG_LOCALTEXMFPREFIX}/tex/latex/xdvipresent
 EXAMPLES_DIR=	${PREFIX}/share/examples/xdvipresent
-HTML_DIR=	${PREFIX}/share/doc/html/xdvipresent
+HTML_DIR=	${PREFIX}/share/doc/xdvipresent
 
 INSTALLATION_DIRS=	bin man/man1
 
 do-install:
-	${INSTALL_DATA_DIR} ${STYDIR}/images
+	${INSTALL_DATA_DIR} ${STYDIR}
 	${INSTALL_DATA} ${WRKSRC}/*.cls ${STYDIR}
+	${INSTALL_DATA_DIR} ${STYDIR}/images
 	${INSTALL_DATA} ${WRKSRC}/images/* ${STYDIR}/images
 	${INSTALL_SCRIPT} ${WRKSRC}/xdvipresent ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xdvipresent
