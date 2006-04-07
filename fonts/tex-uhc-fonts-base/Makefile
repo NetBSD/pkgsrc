@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/02/05 23:09:11 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/07 04:47:20 minskim Exp $
 
 PKGNAME=	tex-${DISTNAME:S/fonts/fonts-base/}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Base UHC fonts for HLaTeX
 
 CONFLICTS+=	tex-hlatex<=1.0.1

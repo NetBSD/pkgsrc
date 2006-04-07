@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2006/03/06 23:02:13 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2006/04/07 03:55:22 minskim Exp $
 
 DISTNAME=	dvipdfmx-20050831
 PKGNAME=	${DISTNAME:S/-/-0.0.0./}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print converters
 MASTER_SITES=	http://project.ktug.or.kr/dvipdfmx/snapshot/current/
 
@@ -15,6 +15,7 @@ DEPENDS+=	adobe-cmaps>=20051109:../../fonts/adobe-cmaps
 CONFLICTS+=	dvipdfm-[0-9]*
 CONFLICTS+=	ja-dvipdfm-[0-9]*
 
+USE_DIRS+=		texmf-1.0
 USE_TOOLS+=		gs:run
 GNU_CONFIGURE=		YES
 MAKE_ENV+=		PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX:Q}

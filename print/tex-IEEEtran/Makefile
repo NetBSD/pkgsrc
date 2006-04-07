@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:10:39 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/07 03:55:22 minskim Exp $
 #
 
 DISTNAME=	IEEEtran
 PKGNAME=	tex-IEEEtran-1.6c
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	http://www.ieee.org/portal/cms_docs/pubs/transactions/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} IEEEtranBST${EXTRACT_SUFX}
@@ -17,6 +17,7 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+USE_DIRS+=	texmf-1.0
 
 LATEX_FILES=	IEEEtran.cls IEEEtran_HOWTO.pdf README \
 		bare_conf.tex bare_jrnl.tex
