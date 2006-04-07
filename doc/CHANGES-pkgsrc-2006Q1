@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.10 2006/04/06 15:12:48 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.11 2006/04/07 11:36:16 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -23,3 +23,5 @@ Pullup ticket 1329 - requested by salo
 security fix for lsh
 Pullup ticket 1316 - requested by ghen
 distinfo sync for suse100_linux packages
+Pullup ticket 1341 - requested by grant
+security update for clamav
