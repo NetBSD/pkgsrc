@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13490 2006/04/07 16:02:17 mjl Exp $
+$NetBSD: CHANGES,v 1.13491 2006/04/07 16:19:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1954,3 +1954,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/bacula-tray-monitor to 1.38.7 [ghen 2006-04-07]
 	Updated sysutils/bacula-wx-console to 1.38.7 [ghen 2006-04-07]
 	Added multimedia/ggrab version 0.22a [mjl 2006-04-07]
+	Updated print/teTeX3-texmf to 3.0nb3 [minskim 2006-04-07]
+	Updated print/teTeX3-texmfsrc to 3.0nb1 [minskim 2006-04-07]
+	Updated print/teTeX3-bin to 3.0nb11 [minskim 2006-04-07]
