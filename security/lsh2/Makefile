@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/19 12:22:12 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/07 15:28:49 jlam Exp $
 #
 
 DISTNAME=		lsh-2.0.2
@@ -12,6 +12,8 @@ COMMENT=		SSH2 client/server
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake gm4
 CONFIGURE_ARGS+=	--disable-openssl --disable-pam
+INFO_FILES=		# PLIST
+
 # lcp test depends on /bin/bash and thus fails, others work
 TEST_TARGET=		check
 
@@ -20,8 +22,6 @@ CONFLICTS+=		openssh-[0-9]* openssh+gssapi-[0-9]*
 
 # src/nettle/examples/nettle-openssl.c needs des_key*
 USE_OLD_DES_API=	yes
-
-INFO_FILES=		lsh.info nettle.info
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/liboop/buildlink3.mk"
