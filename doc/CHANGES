@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13479 2006/04/07 00:59:05 minskim Exp $
+$NetBSD: CHANGES,v 1.13480 2006/04/07 05:00:47 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1921,3 +1921,21 @@ Changes to the packages collection and infrastructure in 2006:
 	Added print/texmf-dirs version 1.0 [minskim 2006-04-06]
 	Updated editors/lyx-qt to 1.3.7nb3 [minskim 2006-04-07]
 	Updated editors/lyx-xforms to 1.3.7nb2 [minskim 2006-04-07]
+	Updated textproc/tex-xmltex to 1.9nb3 [minskim 2006-04-07]
+	Updated textproc/latex2html to 2002.2.1nb7 [minskim 2006-04-07]
+	Updated graphics/xdvipresent to 0.6.1.14nb5 [minskim 2006-04-07]
+	Updated print/tex-chemarrow to 0.1nb3 [minskim 2006-04-07]
+	Updated print/lgrind to 3.5nb7 [minskim 2006-04-07]
+	Updated print/tex-musixtex to 112nb3 [minskim 2006-04-07]
+	Updated print/tex-ocrb to 1.0nb3 [minskim 2006-04-07]
+	Updated print/dvipdfmx to 0.0.0.20050831nb3 [minskim 2006-04-07]
+	Updated print/tex-IEEEtran to 1.6cnb4 [minskim 2006-04-07]
+	Updated print/tex-foiltex to 2.1.4anb3 [minskim 2006-04-07]
+	Updated print/tex-passivetex to 1.24nb2 [minskim 2006-04-07]
+	Updated print/tex-ucs to 20041710nb4 [minskim 2006-04-07]
+	Updated fonts/tex-uhc-fonts-base to 1.0nb2 [minskim 2006-04-07]
+	Updated fonts/tex-uhc-fonts-extra to 1.0nb2 [minskim 2006-04-07]
+	Updated fonts/tex-unttf to 1.0.1.20060215nb1 [minskim 2006-04-07]
+	Updated fonts/ttf2pk to 1.3.1nb4 [minskim 2006-04-07]
+	Updated print/tex-dhucs to 2.7.0nb1 [minskim 2006-04-07]
+	Updated print/tex-hlatex to 1.0.1nb3 [minskim 2006-04-07]
