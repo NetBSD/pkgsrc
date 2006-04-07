@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2006/04/06 06:21:54 reed Exp $
+# $NetBSD: Makefile,v 1.74 2006/04/07 18:59:34 jmmv Exp $
 
-DISTNAME=		pango-1.12.0
+DISTNAME=		pango-1.12.1
 CATEGORIES=		devel fonts
-PKGREVISION=		1
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.10/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v2.10/ \
 			${MASTER_SITE_GNOME:=sources/pango/1.12/}
@@ -41,7 +40,7 @@ CONFIGURE_ARGS+=	--with-qt=no
 CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.10.0
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
