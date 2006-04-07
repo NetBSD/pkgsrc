@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13486 2006/04/07 09:27:01 martti Exp $
+$NetBSD: CHANGES,v 1.13487 2006/04/07 11:37:21 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1945,3 +1945,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/stella to 2.1 [dillo 2006-04-07]
 	Updated mail/postfix to 2.2.10 [martti 2006-04-07]
 	Updated mail/postfix-current to 2.3-20060405 [martti 2006-04-07]
+	Updated mail/clamav to 0.88.1 [grant 2006-04-07]
