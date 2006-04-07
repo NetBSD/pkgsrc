@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/02/20 23:12:21 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2006/04/07 18:40:46 jlam Exp $
 
 DISTNAME=	eb-4.1.3
 PKGREVISION=	2
@@ -74,6 +74,10 @@ SUBST_SED.runpath=	-e 's|^\(.*LIBS=['\''"]\)-L\(\$$[^[:blank:]][^[:blank:]]*\)\(
 
 INSTALLATION_DIRS=	share/eb/appendix
 
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+
 post-extract:
 	${RM} -rf ${WRKSRC}/zlib
 
@@ -86,8 +90,5 @@ post-install:
 	done
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/eb.conf ${EGDIR}/eb.conf.default
-
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
