@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2006/03/14 16:23:46 joerg Exp $
+# $NetBSD: Makefile,v 1.111 2006/04/07 00:35:02 grant Exp $
 
 DISTNAME=	openldap-2.3.11
 PKGREVISION=	2
@@ -27,6 +27,21 @@ FILES_SUBST+=		OPENLDAP_ETCDIR=${OPENLDAP_ETCDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
+
+# the internal avl_* prototypes conflict with those in <sys/avl.h> which
+# is included by another system header file on Solaris, so subst them.
+.if ${OPSYS} == "SunOS"
+SUBST_CLASSES+=		conflict
+SUBST_STAGE.conflict=	post-patch
+SUBST_FILES.conflict=	${WRKSRC}/*/*.h
+SUBST_FILES.conflict+=	${WRKSRC}/*/*/*.c ${WRKSRC}/*/*/*/*.c
+SUBST_SED.conflict+=	-e 's,avl_free,openldap_avl_free,g'
+SUBST_SED.conflict+=	-e 's,avl_insert,openldap_avl_insert,g'
+SUBST_SED.conflict+=	-e 's,avl_delete,openldap_avl_delete,g'
+SUBST_SED.conflict+=	-e 's,avl_find,openldap_avl_find,g'
+SUBST_SED.conflict+=	-e 's,avl_find2,openldap_avl_find2,g'
+SUBST_MESSAGE.conflict=	Fixing conflicting function prototypes.
+.endif
 
 CPPFLAGS.Darwin+=	-DBIND_8_COMPAT
 
