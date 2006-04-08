@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/06/25 01:55:08 reed Exp $
+$NetBSD: distinfo,v 1.2 2006/04/08 16:30:57 joerg Exp $
 
 SHA1 (icecc-2.9.tar.bz2) = acfdf16a71833e80ad2f1267cadf31297050e41d
 RMD160 (icecc-2.9.tar.bz2) = 9cb70c8df6493eb7984f13821006734459ac0bcc
@@ -36,6 +36,6 @@ Size (icewm4vim.tar.bz2) = 2844 bytes
 SHA1 (icewoed-1.8.tar.bz2) = ca58b5769c27ee587458c12c285e231b990c3da9
 RMD160 (icewoed-1.8.tar.bz2) = 51cf2873f005e8c74239b138d6e5b9f8a1505047
 Size (icewoed-1.8.tar.bz2) = 21955 bytes
-SHA1 (patch-aa) = 5cb9125f34c6adb949aad6806560d1fca0916dae
+SHA1 (patch-aa) = 145aa9580bb9984513382b6f5c643974ea6744fe
 SHA1 (patch-ab) = e4cefad52c55b548e1e59dd40799d5cbee9477fe
 SHA1 (patch-ac) = d695ab2fe41c6eba3e827a0f7db59fbf4b376805
