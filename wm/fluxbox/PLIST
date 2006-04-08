@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/09/27 12:49:04 tonio Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/04/08 15:41:21 tonio Exp $
 bin/fbrun
 bin/fbsetbg
 bin/fbsetroot
@@ -28,7 +28,9 @@ share/fluxbox/nls/it_IT/fluxbox.cat
 share/fluxbox/nls/ja_JP/fluxbox.cat
 share/fluxbox/nls/ko_KR/fluxbox.cat
 share/fluxbox/nls/lv_LV/fluxbox.cat
+share/fluxbox/nls/nb_NO/fluxbox.cat
 share/fluxbox/nls/nl_NL/fluxbox.cat
+share/fluxbox/nls/no_NO/fluxbox.cat
 share/fluxbox/nls/pl_PL/fluxbox.cat
 share/fluxbox/nls/pt_BR/fluxbox.cat
 share/fluxbox/nls/pt_PT/fluxbox.cat
@@ -38,6 +40,7 @@ share/fluxbox/nls/sv_SE/fluxbox.cat
 share/fluxbox/nls/tr_TR/fluxbox.cat
 share/fluxbox/nls/uk_UA/fluxbox.cat
 share/fluxbox/nls/vi_VN/fluxbox.cat
+share/fluxbox/nls/zh_CN/fluxbox.cat
 share/fluxbox/styles/Artwiz
 share/fluxbox/styles/BlueFlux/pixmaps/button_close_active.xpm
 share/fluxbox/styles/BlueFlux/pixmaps/button_close_pressed.xpm
@@ -104,6 +107,7 @@ share/fluxbox/styles/qnx-photon
 @dirrm share/fluxbox/styles/BlueFlux/pixmaps
 @dirrm share/fluxbox/styles/BlueFlux
 @dirrm share/fluxbox/styles
+@dirrm share/fluxbox/nls/zh_CN
 @dirrm share/fluxbox/nls/vi_VN
 @dirrm share/fluxbox/nls/uk_UA
 @dirrm share/fluxbox/nls/tr_TR
@@ -113,7 +117,9 @@ share/fluxbox/styles/qnx-photon
 @dirrm share/fluxbox/nls/pt_PT
 @dirrm share/fluxbox/nls/pt_BR
 @dirrm share/fluxbox/nls/pl_PL
+@dirrm share/fluxbox/nls/no_NO
 @dirrm share/fluxbox/nls/nl_NL
+@dirrm share/fluxbox/nls/nb_NO
 @dirrm share/fluxbox/nls/lv_LV
 @dirrm share/fluxbox/nls/ko_KR
 @dirrm share/fluxbox/nls/ja_JP
