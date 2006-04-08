@@ -1,4 +1,4 @@
-;;; $NetBSD: SKK-CFG,v 1.1.1.1 2003/09/02 14:16:45 minoura Exp $
+;;; $NetBSD: SKK-CFG,v 1.2 2006/04/08 19:29:52 jlam Exp $
 ;;; from inputmethods/ddskk/files/SKK-CFG
 ;;; NetBSD: SKK-CFG,v 1.1.1.1 2002/09/16 13:20:44 uebayasi Exp 
 ;;;
@@ -8,5 +8,5 @@
 (setq VERSION_SPECIFIC_LISPDIR "@EMACS_LISPPREFIX@")
 (setq EMU_PREFIX "emu")
 (setq SKK_DATADIR "@PREFIX@/share/skk")
-(setq SKK_INFODIR "@PREFIX@/info")
+(setq SKK_INFODIR "@EMACS_INFOPREFIX@")
 (setq SKK_LISPDIR "@EMACS_LISPPREFIX@/skk")
