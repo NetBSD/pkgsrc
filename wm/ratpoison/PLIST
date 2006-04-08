@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/08 05:02:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/04/08 22:03:08 tonio Exp $
 bin/ratpoison
 bin/rpws
 info/ratpoison.info
@@ -14,6 +14,8 @@ share/ratpoison/genrpbindings
 share/ratpoison/ratpoison.el
 share/ratpoison/rpshowall.sh
 share/ratpoison/rpws
+share/ratpoison/sloppy.c
 share/ratpoison/split.sh
+share/ratpoison/unrat.c
 @dirrm share/ratpoison
 @dirrm share/doc/ratpoison
