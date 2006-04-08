@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2006/02/05 23:11:13 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2006/04/08 15:41:20 tonio Exp $
 #
 
-DISTNAME=	fluxbox-0.9.14
-PKGREVISION=	4
+DISTNAME=	fluxbox-0.9.15.1
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fluxbox/}
 EXTRACT_SUFX=	.tar.bz2
@@ -30,7 +29,11 @@ SUBST_CLASSES+=		cmds
 SUBST_STAGE.cmds=	post-build
 SUBST_MESSAGE.cmds=	"Fixing command names in data files."
 SUBST_SED.cmds=		-e 's|bsetroot|fbsetroot|g'
-SUBST_FILES.cmds=	data/*/*
+SUBST_FILES.cmds=	data/README.style data/styles/Artwiz\
+                        data/styles/MerleyKay data/styles/Outcomes\
+		       	data/styles/Rampage data/styles/Results\
+		       	data/styles/Spiff
+
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
