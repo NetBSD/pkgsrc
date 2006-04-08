@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13506 2006/04/08 22:37:00 wiz Exp $
+$NetBSD: CHANGES,v 1.13507 2006/04/08 22:56:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1974,3 +1974,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/gtk2 to 2.8.17 [wiz 2006-04-08]
 	Updated wm/ratpoison to 1.4.0 [tonio 2006-04-08]
 	Updated misc/xchm to 1.6 [wiz 2006-04-08]
+	Added graphics/ps2eps version 1.58 [minskim 2006-04-08]
