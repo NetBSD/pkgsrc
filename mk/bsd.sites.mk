@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.60 2006/04/08 18:47:31 jdolecek Exp $
+# $NetBSD: bsd.sites.mk,v 1.61 2006/04/08 18:48:58 jdolecek Exp $
 #
 # Default MASTER_SITES
 
@@ -301,7 +301,7 @@ MASTER_SITE_PGSQL+=	\
 	ftp://ftp.co.postgresql.org/pub/mirrors/postgresql/ \
 	ftp://ftp2.cr.postgresql.org/pub/Unix/postgres/ \
 	ftp://ftp.hr.postgresql.org/postgresql/ \
-	ftp://ftp.cz.postgresql.org/pub/ftp.postgresql.org/ \
+	ftp://ftp.cz.postgresql.org/pgsql/ \
 	ftp://ftp2.cz.postgresql.org/pub/postgresql/ \
 	ftp://ftp.dk.postgresql.org/postgresql/ \
 	ftp://ftp.ee.postgresql.org/mirrors/postgresql/ \
