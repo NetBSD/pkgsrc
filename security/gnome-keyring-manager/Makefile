@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/01 18:18:32 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/08 15:13:03 jmmv Exp $
 #
 
 DISTNAME=	gnome-keyring-manager-2.14.0
@@ -15,6 +15,7 @@ BUILD_USES_MSGFMT=	YES
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.6
 USE_LIBTOOL=		YES
+USE_MSGFMT_PLURALS=	YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake pkg-config
 

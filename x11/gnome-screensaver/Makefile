@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/04/04 18:07:16 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/08 15:13:48 jmmv Exp $
 #
 
 DISTNAME=	gnome-screensaver-2.14.0
@@ -12,6 +12,7 @@ COMMENT=	Screen saver and locker for the GNOME desktop
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.3
 USE_LIBTOOL=		yes
+USE_MSGFMT_PLURALS=	yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 USE_X11=		yes
