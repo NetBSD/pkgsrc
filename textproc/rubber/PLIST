@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/08 05:12:12 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/04/08 22:55:59 tonio Exp $
 bin/rubber
 bin/rubber-info
 bin/rubber-pipe
+info/rubber.info
 info/rubber.info
 man/fr/man1/rubber-info.1
 man/fr/man1/rubber-pipe.1
@@ -9,6 +10,7 @@ man/fr/man1/rubber.1
 man/man1/rubber-info.1
 man/man1/rubber-pipe.1
 man/man1/rubber.1
+share/rubber/rules.ini
 share/rubber/rubber/__init__.py
 share/rubber/rubber/__init__.pyc
 share/rubber/rubber/cmd_info.py
@@ -80,14 +82,16 @@ share/rubber/rubber/rules/shell.pyc
 share/rubber/rubber/util.py
 share/rubber/rubber/util.pyc
 share/rubber/rubber/version.py
+share/rubber/rubber/version.py
 share/rubber/rubber/version.pyc
 share/rubber/modules/aleph.rub
 share/rubber/modules/beamer.rub
 share/rubber/modules/etex.rub
 share/rubber/modules/hyperref.rub
 share/rubber/modules/minitoc-hyper.rub
+share/rubber/modules/ntheroem.rub
 share/rubber/modules/omega.rub
-share/rubber/rules.ini
+share/rubber/modules/revtex4.rub
 @dirrm share/rubber/rubber/rules/latex
 @dirrm share/rubber/rubber/rules
 @dirrm share/rubber/rubber
