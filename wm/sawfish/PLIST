@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:56 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/08 05:02:59 jlam Exp $
 bin/sawfish
 bin/sawfish-capplet
 bin/sawfish-client
 bin/sawfish-themer
 bin/sawfish-ui
+info/sawfish.info
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/DOC
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gradient.la
 libexec/sawfish/${SF_VERS}/${MACHINE_GNU_PLATFORM}/gtk-style
