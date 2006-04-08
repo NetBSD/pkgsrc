@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/06 06:22:36 reed Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/08 00:36:37 reed Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--disable-splash-output
 # Don't compile poppler qt wrapper.
 CONFIGURE_ARGS+=	--disable-poppler-qt
 # Don't compile GTK+ test program.
-CONFIGURE_ARGS+=        --disable-gtk-test
+CONFIGURE_ARGS+=	--disable-gtk-test
 
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
