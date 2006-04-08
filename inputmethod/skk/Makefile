@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/20 05:30:33 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/08 19:29:52 jlam Exp $
 #
 
 DISTNAME=	ddskk-12.2.0
@@ -29,13 +29,14 @@ BUILD_DEPENDS+=	${EMACS_PKGNAME_PREFIX}Mule-UCS-[0-9]*:../../editors/mule-ucs
 MAKEFLAGS+=	EMACS=${EMACS_BIN:Q}
 BUILD_TARGET=	elc
 
-INFO_FILES=	skk.info
+INFO_FILES=	# PLIST
 
 # SKK-CFG was copied from ${FILESDIR} during post-extract.
 SUBST_CLASSES+=		cfg
 SUBST_STAGE.cfg=	do-configure
 SUBST_FILES.cfg=	SKK-CFG
-SUBST_SED.cfg=		-e 's|@PREFIX@|${PREFIX}|g' \
+SUBST_SED.cfg=		-e 's|@PREFIX@|${PREFIX}|g'			\
+			-e 's|@EMACS_INFOPREFIX@|${EMACS_INFOPREFIX}|g'	\
 			-e 's|@EMACS_LISPPREFIX@|${EMACS_LISPPREFIX}|g'
 
 # Substitute directory definitions during do-configure.
