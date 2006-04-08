@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/30 20:57:08 jmmv Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/08 20:50:35 reed Exp $
 #
 
 DBUS_INTERFACE=	glib
@@ -11,7 +11,7 @@ CONFIGURE_ARGS+=--enable-tests
 # dbus package).
 INSTALL_DIRS=	${WRKSRC}/glib
 
-INSTALLATION_DIRS=	bin lib/pkgconfig man/man1
+INSTALLATION_DIRS=	bin lib/pkgconfig ${PKGMANDIR}/man1
 
 PRINT_PLIST_AWK+=	/^@dirrm include\/dbus-1.0\/dbus$$/ \
 				{ print "@comment in dbus: " $$0; next; }
@@ -27,7 +27,7 @@ post-install:
 	cd ${WRKSRC}/tools && ${LIBTOOL} --mode=install \
 		${INSTALL_PROGRAM} dbus-monitor ${PREFIX}/bin/dbus-monitor
 	${INSTALL_DATA} ${WRKSRC}/tools/dbus-monitor.1 \
-		${PREFIX}/man/man1/dbus-monitor.1
+		${PREFIX}/${PKGMANDIR}/man1/dbus-monitor.1
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
