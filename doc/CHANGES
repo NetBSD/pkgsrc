@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13504 2006/04/08 22:01:08 wiz Exp $
+$NetBSD: CHANGES,v 1.13505 2006/04/08 22:03:58 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1972,3 +1972,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/bitlbee to 1.0.2 [tonio 2006-04-08]
 	Updated mail/clamsmtp to 1.6nb1 [ghen 2006-04-08]
 	Updated x11/gtk2 to 2.8.17 [wiz 2006-04-08]
+	Updated wm/ratpoison to 1.4.0 [tonio 2006-04-08]
