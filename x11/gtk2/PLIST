@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2006/02/25 13:32:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.47 2006/04/08 22:00:41 wiz Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-demo
@@ -872,6 +872,8 @@ ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/dz/LC_MESSAGES/gtk20-properties.mo
+${PKGLOCALEDIR}/locale/dz/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gtk20-properties.mo
@@ -916,6 +918,8 @@ ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/ka/LC_MESSAGES/gtk20-properties.mo
+${PKGLOCALEDIR}/locale/ka/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/gtk20-properties.mo
@@ -950,6 +954,8 @@ ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/nso/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/nso/LC_MESSAGES/gtk20.mo
+${PKGLOCALEDIR}/locale/or/LC_MESSAGES/gtk20-properties.mo
+${PKGLOCALEDIR}/locale/or/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gtk20-properties.mo
 ${PKGLOCALEDIR}/locale/pa/LC_MESSAGES/gtk20.mo
 ${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gtk20-properties.mo
