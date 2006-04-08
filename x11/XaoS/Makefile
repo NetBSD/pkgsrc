@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:11:31 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/08 05:03:00 jlam Exp $
 #
 
 DISTNAME=		XaoS-3.1
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-curses-driver=no
 # DGA fails to link somehow, XXX should be fixed
 CONFIGURE_ARGS+=	--with-dga-driver=no
-INFO_FILES=		xaos.info
+INFO_FILES=		# PLIST
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
