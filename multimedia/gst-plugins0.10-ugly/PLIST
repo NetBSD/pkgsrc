@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/08 11:42:37 jmmv Exp $
+lib/gstreamer-0.10/libgstasf.la
+lib/gstreamer-0.10/libgstdvdlpcmdec.la
+lib/gstreamer-0.10/libgstdvdsub.la
+lib/gstreamer-0.10/libgstiec958.la
+lib/gstreamer-0.10/libgstmpegaudioparse.la
+lib/gstreamer-0.10/libgstmpegstream.la
+lib/gstreamer-0.10/libgstrmdemux.la
+@comment in gstreamer0.10: @dirrm lib/gstreamer-0.10
