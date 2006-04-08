@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/03/04 21:29:40 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2006/04/08 07:21:28 reed Exp $
 
 DISTNAME=	t1lib-5.1.0
 PKGREVISION=	5
@@ -48,4 +48,5 @@ post-install:
 	cd ${WRKSRC}/examples;						\
 	${PAX} -rw FontDataBase t1example1.c t1lib.config ${EGDIR}
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
