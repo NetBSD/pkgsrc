@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2006/03/04 21:29:54 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2006/04/08 20:35:49 jlam Exp $
 
 DISTNAME=		gpc-2.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 MASTER_SITES+=		http://www.gnu-pascal.de/current/ \
@@ -43,7 +43,8 @@ HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
 CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
 CONFIGURE_ARGS+=	--prefix=${GPC_PREFIX:Q}
-CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
+CONFIGURE_ARGS+=	--infodir=${PREFIX:Q}/${PKGINFODIR:Q}
+CONFIGURE_ARGS+=	--mandir=${PREFIX:Q}/${PKGMANDIR:Q}
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-languages=pascal
 
@@ -55,7 +56,7 @@ INSTALL_DIRS=		${BUILD_DIRS}/gcc
 
 INSTALL_TARGET=		pascal.install
 
-INFO_FILES=		gpc.info gpcs.info gpcs-de.info gpcs-hr.info
+INFO_FILES=		# PLIST
 
 post-extract:
 	${MKDIR} ${WRKSRC}
