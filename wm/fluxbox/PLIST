@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/04/08 15:41:21 tonio Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/04/08 23:26:56 minskim Exp $
 bin/fbrun
 bin/fbsetbg
 bin/fbsetroot
@@ -135,4 +135,4 @@ share/fluxbox/styles/qnx-photon
 @dirrm share/fluxbox/nls/be_BY
 @dirrm share/fluxbox/nls/C
 @dirrm share/fluxbox/nls
-@dirrm share/fluxbox
+@unexec ${RMDIR} %D/share/fluxbox 2>/dev/null || ${TRUE}
