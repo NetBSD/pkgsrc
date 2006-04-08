@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/07 04:47:20 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/08 02:49:56 minskim Exp $
 
 DISTNAME=	dhucs-2.7.0cvs-20060328
 PKGNAME=	tex-${DISTNAME:C/cvs-.*//}
@@ -8,7 +8,7 @@ MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/hangul-ucs/current/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} fonts-unttf-20060215.tar.gz
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://faq.ktug.or.kr/faq/DHUcs
+HOMEPAGE=	http://faq.ktug.or.kr/faq/Hangul-ucs
 COMMENT=	LaTeX package to typeset Korean documents (UTF-8)
 
 DEPENDS+=	tex-ucs>=20041710nb2:../../print/tex-ucs
