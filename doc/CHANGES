@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13499 2006/04/08 15:49:39 wiz Exp $
+$NetBSD: CHANGES,v 1.13500 2006/04/08 16:13:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1967,3 +1967,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/totem to 1.4.0nb1 [jmmv 2006-04-08]
 	Updated wm/fluxbox to 0.9.15.1 [tonio 2006-04-08]
 	Updated audio/libmpd to 0.12.0nb1 [wiz 2006-04-08]
+	Updated audio/gmpc to 0.13.0nb1 [wiz 2006-04-08]
