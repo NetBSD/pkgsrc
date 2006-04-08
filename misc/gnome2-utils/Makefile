@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2006/04/06 06:22:23 reed Exp $
+# $NetBSD: Makefile,v 1.55 2006/04/08 17:18:26 joerg Exp $
 #
 
 DISTNAME=		gnome-utils-2.14.0
@@ -45,6 +45,7 @@ BUILDLINK_API_DEPENDS.libgnomeui+=	libgnomeui>=2.13.2
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
