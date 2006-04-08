@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/02/21 10:28:43 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2006/04/08 19:02:18 jlam Exp $
 
 DISTNAME=	wl-2.14.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -15,33 +15,24 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}apel>=10.6:../../devel/apel
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}flim>=1.14.7:../../devel/flim
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}semi>=1.14.6:../../devel/semi
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}bbdb-[0-9]*:../../misc/bbdb
+
 # XXX please someone adjust paths and PLIST for XEmacs...
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20
 
+BUILD_TARGET=	all info
+INSTALL_TARGET=	install install-info
+MAKE_FLAGS+=	INFODIR=${EMACS_INFOPREFIX:Q}
 MAKE_FLAGS+=	LISPDIR=${EMACS_LISPPREFIX:Q}
 MAKE_FLAGS+=	PIXMAPDIR=${PREFIX:Q}/share/wl
-INSTALL_TARGET=	install install-info
-INFO_FILES=	wl.info wl-ja.info
+INFO_FILES=	# PLIST
 
 .include "../../mk/emacs.mk"
 
-DOCDIR=		${PREFIX}/share/doc/wl
-EXAMPLESDIR=	${PREFIX}/share/examples/wl
+DOCDIR=			${PREFIX}/share/doc/wl
+EXAMPLESDIR=		${PREFIX}/share/examples/wl
+INSTALLATION_DIRS=	${DOCDIR} ${EXAMPLESDIR} ${EMACS_INFOPREFIX}
 
-PLIST_SRC=	${WRKDIR}/PLIST
-
-post-build:
-	@set -e; \
-	{ \
-		${CAT} ${PKGDIR:Q}/PLIST.header; \
-		${FIND} ${WRKSRC:Q} -name '*.elc' -print | \
-		while read f; do \
-			g=`basename "$$f"`; \
-			${ECHO} '$${EMACS_LISPPREFIX}/wl/'$${g%.elc}.el; \
-			${ECHO} '$${EMACS_LISPPREFIX}/wl/'$$g; \
-		done | ${SORT}; \
-		${CAT} ${PKGDIR:Q}/PLIST.footer; \
-	} > ${PLIST_SRC}
+.include "../../security/openssl/buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR:Q}/en
@@ -56,5 +47,4 @@ post-install:
 	@${INSTALL_DATA} ${WRKSRC:Q}/samples/en/dot.* ${EXAMPLESDIR:Q}/en
 	@${INSTALL_DATA} ${WRKSRC:Q}/samples/ja/dot.* ${EXAMPLESDIR:Q}/ja
 
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
