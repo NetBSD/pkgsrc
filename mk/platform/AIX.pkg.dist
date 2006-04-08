@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp
-#	$NetBSD: AIX.pkg.dist,v 1.15 2006/04/02 09:51:29 jmmv Exp $
+#	$NetBSD: AIX.pkg.dist,v 1.16 2006/04/08 21:12:04 wiz Exp $
 #
 
 /set type=dir uname=root gname=system mode=0755
@@ -553,6 +553,10 @@
                 ..
             ..
             dv
+                LC_MESSAGES
+                ..
+            ..
+            dz
                 LC_MESSAGES
                 ..
             ..
