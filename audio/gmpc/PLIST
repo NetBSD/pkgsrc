@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/07 17:40:22 rpaulo Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/08 16:13:43 wiz Exp $
 bin/gmpc
 include/gmpc/config1.h
 include/gmpc/cover-art.h
@@ -31,3 +31,4 @@ lib/pkgconfig/gmpc.pc
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/gmpc
 @comment in xdg-dirs: @dirrm share/applications
+@dirrm include/gmpc
