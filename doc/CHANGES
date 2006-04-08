@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13501 2006/04/08 21:23:51 wiz Exp $
+$NetBSD: CHANGES,v 1.13502 2006/04/08 21:43:38 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1969,3 +1969,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/libmpd to 0.12.0nb1 [wiz 2006-04-08]
 	Updated audio/gmpc to 0.13.0nb1 [wiz 2006-04-08]
 	Updated devel/glib2 to 2.10.2 [wiz 2006-04-08]
+	Updated chat/bitlbee to 1.0.2 [tonio 2006-04-08]
