@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.pkg.dist,v 1.16 2006/04/08 21:12:04 wiz Exp $
+# $NetBSD: OSF1.pkg.dist,v 1.17 2006/04/08 22:34:03 wiz Exp $
 #
 
 /set type=dir uname=root gname=system mode=0755
@@ -1086,6 +1086,10 @@
                 ..
             ..
             tt
+                LC_MESSAGES
+                ..
+            ..
+            ua
                 LC_MESSAGES
                 ..
             ..
