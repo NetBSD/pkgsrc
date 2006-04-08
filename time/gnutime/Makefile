@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/12/05 23:55:21 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/08 05:02:59 jlam Exp $
 #
 
 DISTNAME=		time-1.7
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.gnu.org/directory/GNU/time.html
 COMMENT=		Report user, system, and real time used by a process
 
 GNU_CONFIGURE=		yes
-INFO_FILES=		time.info
+INFO_FILES=		# PLIST
 
 CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
