@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2006/04/08 21:56:56 ghen Exp $
+
+--- src/clamsmtpd.c.orig	2006-04-06 16:44:13.000000000 +0200
++++ src/clamsmtpd.c
+@@ -100,7 +100,7 @@ clctx_t;
+ #endif
+ 
+ #define DEFAULT_CONFIG      CONF_PREFIX "/clamsmtpd.conf"
+-#define DEFAULT_CLAMAV      "/var/run/clamav/clamd"
++#define DEFAULT_CLAMAV      "/tmp/clamd"
+ #define DEFAULT_HEADER      "X-Virus-Scanned: ClamAV using ClamSMTP"
+ 
+ /* -----------------------------------------------------------------------
