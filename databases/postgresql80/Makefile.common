@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2006/04/06 06:21:42 reed Exp $
+# $NetBSD: Makefile.common,v 1.21 2006/04/08 19:08:25 jdolecek Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -9,15 +9,18 @@
 #	<lang>-postgresql	client-side interface to PostgreSQL
 #	postgresql-<lang>	server-side module for PostgreSQL backend
 
-.include "../../databases/postgresql80/Makefile.mirrors"
-
 DISTNAME?=	postgresql-${DIST_VERS}
 CATEGORIES+=	databases
-MASTER_SITES?=  ${PGSQL_MIRRORS:=source/v${DIST_VERS}/}
+MASTER_SITES?=  ${MASTER_SITE_PGSQL:=source/v${DIST_VERS}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER?=	joerg@NetBSD.org
 HOMEPAGE?=	http://www.postgresql.org/
+
+# Craft a MASTER_SORT_REGEX that understands the location of the country
+# code in the FTP server name for the PostgreSQL mirror sites.
+#
+MASTER_SORT_REGEX=	${MASTER_SORT:S/./\\./g:C/.*/:\/\/[^[\/]*&\/ :\/\/[^\/]*&\\./}
 
 CONFLICTS+=	postgresql-[0-9]* postgresql73-* postgresql74-* postgresql81-*
 
