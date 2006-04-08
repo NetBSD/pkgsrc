@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2005/03/19 15:24:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/08 05:02:59 jlam Exp $
 bin/ratpoison
 bin/rpws
+info/ratpoison.info
 man/man1/ratpoison.1
 share/doc/ratpoison/AUTHORS
 share/doc/ratpoison/COPYING

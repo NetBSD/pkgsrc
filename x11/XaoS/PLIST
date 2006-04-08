@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2004/08/15 04:13:18 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/08 05:03:00 jlam Exp $
 bin/xaos
+info/xaos.info
 man/man6/xaos.6
 share/XaoS/catalogs/README
 share/XaoS/catalogs/cesky.cat
