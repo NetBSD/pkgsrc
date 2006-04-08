@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13497 2006/04/08 15:21:15 jmmv Exp $
+$NetBSD: CHANGES,v 1.13498 2006/04/08 15:42:05 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1965,3 +1965,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added audio/gst-plugins0.10-mad version 0.10.3 [jmmv 2006-04-08]
 	Updated wm/pekwm to 0.1.4 [xtraeme 2006-04-08]
 	Updated multimedia/totem to 1.4.0nb1 [jmmv 2006-04-08]
+	Updated wm/fluxbox to 0.9.15.1 [tonio 2006-04-08]
