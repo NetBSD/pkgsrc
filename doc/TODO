@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4844 2006/04/08 21:43:38 tonio Exp $
+$NetBSD: TODO,v 1.4845 2006/04/08 22:01:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -577,7 +577,6 @@ Suggested package updates
 	o gthumb-2.7.5.1
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
-	o gtk2+-2.8.17
 	o gtkam-0.1.13
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
