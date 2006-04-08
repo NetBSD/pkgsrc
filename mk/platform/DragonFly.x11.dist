@@ -1,4 +1,4 @@
-#     $NetBSD: DragonFly.x11.dist,v 1.5 2006/02/22 21:42:05 wiz Exp $
+#     $NetBSD: DragonFly.x11.dist,v 1.6 2006/04/08 21:12:04 wiz Exp $
 #     FreeBSD Id: BSD.x11.dist,v 1.2 1997/06/10 07:55:10 asami Exp
 #
 
@@ -389,6 +389,10 @@
                 ..
             ..
             dk
+                LC_MESSAGES
+                ..
+            ..
+            dz
                 LC_MESSAGES
                 ..
             ..
