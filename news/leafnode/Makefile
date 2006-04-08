@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/03/14 01:14:31 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2006/04/08 06:56:05 heinz Exp $
 
 DISTNAME=		leafnode-1.11.3.rel
 PKGNAME=		${DISTNAME:S/.rel//}
@@ -49,6 +49,8 @@ CONFIGURE_ARGS+=	--with-ipv6
 .else
 CONFIGURE_ARGS+=	--without-ipv6
 .endif
+
+TEST_TARGET=		check
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/leafnode
