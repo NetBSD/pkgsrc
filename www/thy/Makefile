@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/06 00:18:26 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/08 05:03:00 jlam Exp $
 
 DISTNAME=	thy-0.9.4
 PKGREVISION=	3
@@ -34,7 +34,7 @@ CONF_FILES=		${EGDIR}/thyrc ${PKG_SYSCONFDIR}/thyrc \
 			${EGDIR}/http503.html ${PKG_SYSCONFDIR}/http503.html \
 			${EGDIR}/http505.html ${PKG_SYSCONFDIR}/http505.html
 RCD_SCRIPTS=		thy
-INFO_FILES=		thy.info
+INFO_FILES=		# PLIST
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 MAKE_FLAGS+=		pkgconfdir=${EGDIR:Q}
