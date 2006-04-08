@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13502 2006/04/08 21:43:38 tonio Exp $
+$NetBSD: CHANGES,v 1.13503 2006/04/08 21:57:38 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1970,3 +1970,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/gmpc to 0.13.0nb1 [wiz 2006-04-08]
 	Updated devel/glib2 to 2.10.2 [wiz 2006-04-08]
 	Updated chat/bitlbee to 1.0.2 [tonio 2006-04-08]
+	Updated mail/clamsmtp to 1.6nb1 [ghen 2006-04-08]
