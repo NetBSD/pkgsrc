@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/02 11:28:22 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/04/08 20:35:49 jlam Exp $
 ${GPC_SUBPREFIX}bin/gpc
 ${GPC_SUBPREFIX}bin/gpc-run
 ${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/collect2
@@ -41,7 +41,11 @@ ${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/trapc.c
 ${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/turbo3.pas
 ${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/wincrt.pas
 ${GPC_SUBPREFIX}lib/gcc-lib/${MACHINE_GNU_PLATFORM}/2.95.3/units/windos.pas
-${GPC_SUBPREFIX}man/man1/gpc.1
+info/gpc.info
+info/gpcs-de.info
+info/gpcs-hr.info
+info/gpcs.info
+man/man1/gpc.1
 share/doc/gpc/AUTHORS
 share/doc/gpc/BUGS
 share/doc/gpc/COPYING
