@@ -1,8 +1,6 @@
-$NetBSD: patch-ac,v 1.3 2006/01/20 12:09:21 jmmv Exp $
-
---- build/gmake/Makefile.orig	2005-07-15 08:58:10.000000000 +0200
-+++ build/gmake/Makefile
-@@ -58,8 +58,8 @@ SHELL=/bin/sh
+--- build/gmake/Makefile.orig	2005-07-14 23:58:10.000000000 -0700
++++ build/gmake/Makefile	2006-04-07 23:06:38.000000000 -0700
+@@ -58,13 +58,13 @@
  PROJECT=tidy
  
  # Installation variables.  Spaces OK, only dir create and file copy operations.
@@ -13,7 +11,13 @@ $NetBSD: patch-ac,v 1.3 2006/01/20 12:09:21 jmmv Exp $
  
  bininst = ${runinst_prefix}/bin
  libinst = ${devinst_prefix}/lib
-@@ -79,14 +79,14 @@ DOCDIR = ${TOPDIR}/htmldoc
+ incinst = ${devinst_prefix}/include/$(PROJECT)
+-maninst = ${devinst_prefix}/man
++maninst = ${devinst_prefix}/${PKGMANDIR}
+ 
+ # Internal variables. - No spaces allowed: libtool chokes on spaces in directory names.
+ TOPDIR = ../..
+@@ -79,14 +79,14 @@
  # CFLAGS etc..
  # For optimised builds, flags such as "-O2" should be added and -D_DEBUG=1
  # disabled.
@@ -31,7 +35,7 @@ $NetBSD: patch-ac,v 1.3 2006/01/20 12:09:21 jmmv Exp $
  ifdef SUPPORT_UTF16_ENCODINGS
  CFLAGS += -DSUPPORT_UTF16_ENCODINGS=$(SUPPORT_UTF16_ENCODINGS)
  endif
-@@ -115,7 +115,7 @@ LIBSUFFIX = .a
+@@ -115,7 +115,7 @@
  OBJSUF = .o
  
  LIBRARY = $(LIBDIR)/$(LIBPREFIX)$(PROJECT)$(LIBSUFFIX)
@@ -40,7 +44,7 @@ $NetBSD: patch-ac,v 1.3 2006/01/20 12:09:21 jmmv Exp $
  
  XSLTPROC = xsltproc
  
-@@ -164,7 +164,7 @@ doc:    $(DOCS)
+@@ -164,7 +164,7 @@
  
  $(LIBRARY): $(OBJFILES)
  	if [ ! -d $(LIBDIR) ]; then mkdir $(LIBDIR); fi
@@ -49,7 +53,7 @@ $NetBSD: patch-ac,v 1.3 2006/01/20 12:09:21 jmmv Exp $
  ifdef RANLIB
  	$(RANLIB) $@
  endif
-@@ -175,7 +175,7 @@ $(OBJDIR)/%$(OBJSUF):	$(SRCDIR)/%.c $(HF
+@@ -175,7 +175,7 @@
  
  $(BINDIR)/$(PROJECT):	$(APPDIR)/tidy.c $(HFILES) $(LIBRARY)
  	if [ ! -d $(BINDIR) ]; then mkdir $(BINDIR); fi
@@ -58,7 +62,7 @@ $NetBSD: patch-ac,v 1.3 2006/01/20 12:09:21 jmmv Exp $
  
  $(BINDIR)/tab2space: $(APPDIR)/tab2space.c
  	if [ ! -d $(BINDIR) ]; then mkdir $(BINDIR); fi
-@@ -205,19 +205,19 @@ clean:
+@@ -205,19 +205,19 @@
  	if [ "$(BINDIR)" != "$(TOPDIR)" -a -d $(BINDIR) ]; then rmdir $(BINDIR); fi
  
  installhdrs: $(HFILES)
