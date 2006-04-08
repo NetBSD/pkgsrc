@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.49 2006/04/06 06:21:57 reed Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.50 2006/04/08 07:43:41 reed Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -1146,7 +1146,7 @@
       <para><varname>PKGINFODIR</varname> is the directory under
 	<filename>${PREFIX}</filename> where info files are primarily
 	located. <varname>PKGINFODIR</varname> defaults to
-	<quote>info</quote> and can be overridden by the user.
+	<quote>info</quote> and can be overridden by the user.</para>
 
       <para>There are two mutually exclusive ways to specify the info
 	files for the package:</para>
@@ -1163,7 +1163,7 @@
 	    <varname>INFO_FILES</varname> variable; however any split
 	    info file filenames need not be listed. In this case
 	    each of the info files should be installed into the
-	    directory <filename>${PREFIX}/${PKGINFODIR}</filename>.
+	    directory <filename>${PREFIX}/${PKGINFODIR}</filename>.</para>
 	</listitem>
 	
       </itemizedlist>
