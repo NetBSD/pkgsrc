@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/07 17:37:53 rpaulo Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/08 15:49:16 wiz Exp $
 include/libmpd/debug_printf.h
 include/libmpd/libmpd.h
 include/libmpd/libmpdclient.h
@@ -11,5 +11,4 @@ include/libmpd/libmpd-strfsong.h
 lib/libmpd.la
 lib/libmpd.so.0.0.0
 lib/pkgconfig/libmpd.pc
-@dirrm include/libmpd/libmpd
 @dirrm include/libmpd
