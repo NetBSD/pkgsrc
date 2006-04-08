@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2004/02/21 18:24:21 seb Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/08 20:04:18 jlam Exp $
 bin/tcinput
+${EMACS_INFOPREFIX}/tc.info
 ${EMACS_LISPPREFIX}/tc/eelll.el
 ${EMACS_LISPPREFIX}/tc/eelll.elc
 ${EMACS_LISPPREFIX}/tc/tc-bitmap.el
