@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13509 2006/04/08 23:24:20 minskim Exp $
+$NetBSD: CHANGES,v 1.13510 2006/04/08 23:27:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1977,3 +1977,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added graphics/ps2eps version 1.58 [minskim 2006-04-08]
 	Updated textproc/rubber to 1.1 [tonio 2006-04-08]
 	Updated devel/mercurial to 0.8.1 [minskim 2006-04-08]
+	Updated wm/fluxbox to 0.9.15.1nb1 [minskim 2006-04-08]
