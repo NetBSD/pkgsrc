@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/06/25 01:55:08 reed Exp $
+$NetBSD: patch-aa,v 1.2 2006/04/08 16:30:57 joerg Exp $
 
 these utilities were written with qt2 but they still ok with qt3
 
@@ -7,7 +7,7 @@ these utilities were written with qt2 but they still ok with qt3
 @@ -1,10 +1,10 @@
  INCLUDE_QT = -I$(QTDIR)/include
 -LIB_QT = -L$(QTDIR)/lib
-+LIB_QT = -L$(QTDIR)/lib -Wl,-R$(QTDIR)/lib
++LIB_QT = -L$(QTDIR)/lib -Wl,-R$(QTDIR)/lib ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
  
  all: icefonsel icecolsel
  

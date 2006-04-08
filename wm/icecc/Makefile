@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:11:13 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/08 16:30:57 joerg Exp $
 
 # Package version reflects icecc version, with PKGREVISION incremented
 # for any tool updates, according to the authors scheme.
@@ -58,7 +58,7 @@ do-configure:
 .   endfor
 
 post-build:
-	cd ${WRKSRC}/icewm4vim && ${GMAKE} QTDIR=${QTDIR}
+	cd ${WRKSRC}/icewm4vim && ${SETENV} ${MAKE_ENV} ${GMAKE} QTDIR=${QTDIR}
 
 post-install:
 .   for script in ${PYTHON_PATCH_SCRIPTS}
@@ -76,4 +76,5 @@ post-install:
 # If it is, then remove this comment.  If it is not, then remove
 # this comment and the line below, and bump PKGREVISION.
 BUILDLINK_DEPMETHOD.qt3-tools=	full
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
