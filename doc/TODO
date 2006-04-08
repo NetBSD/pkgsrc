@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4850 2006/04/08 23:05:14 tonio Exp $
+$NetBSD: TODO,v 1.4851 2006/04/08 23:43:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -358,7 +358,6 @@ Suggested package updates
 	o aspell-norwegian-2.0.6
 	o ast-ksh-20040229
 	o astyle-1.15.3
-	o at-spi-1.7.7
 	o avcheck-0.91
 	o avidemux-2.1.2
 	o avl-2.0.1
@@ -454,7 +453,6 @@ Suggested package updates
 	o dmidecode-2.8
 	o dnstop-20050405
 	o dnstracer-1.8
-	o dovecot-1.0beta5
 	o doxygen-1.4.6
 	o dpkg-1.10.28
 	o dropbear-0.48
@@ -694,7 +692,6 @@ Suggested package updates
 	o libpreludedb-0.9.7.1
 	o libshout-2.2
 	o libsmi-0.4.3
-	o libsndfile-1.0.15
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
 	o licq-core-1.3.0
@@ -727,7 +724,6 @@ Suggested package updates
 	o mdf2iso-0.3.0
 	o memcached-1.2
 	o memtest86-3.2
-	o mercurial-0.8.1
 	o metakit-2.4.9.4
 	o mftrace-1.1.17
 	o mgetty-1.1.35
@@ -983,7 +979,6 @@ Suggested package updates
 	o potrace-1.7
 	o powermanga-0.80
 	o prayer-1.0.15
-	o prboom-2.4.0
 	o prelude-manager-0.9.4.1
 	o proj-4.4.9
 	o projclock-0.9
@@ -1012,7 +1007,6 @@ Suggested package updates
 	o py-gnome2-2.14.0
 	o py-gnome2-extras-2.14.0
 	o py-gnutls-0.2.1
-	o py-gtk2-2.8.5
 	o py-kenosis-0.96
 	o py-logging-0.4.9.6
 	o py-mad-0.5.4
@@ -1073,7 +1067,6 @@ Suggested package updates
 	o root-tail-1.2
 	o rosegarden-1.2.3
 	o rosegarden4-1.0 [replacing audio/rosegarden|pkgsrc-wip]
-	o rox-session-0.28
 	o roxirc-2.0
 	o rp-l2tp-0.4
 	o rp-pppoe-3.8
