@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2006/04/04 06:39:46 wiz Exp $
+$NetBSD: distinfo,v 1.18 2006/04/08 22:36:01 wiz Exp $
 
-SHA1 (xchm-1.5.tar.gz) = 11bedd6aacc6b1f89be63e93a113111d261d0012
-RMD160 (xchm-1.5.tar.gz) = 2ccaff9d8e9cf098f365e6d644c492eff5cd7120
-Size (xchm-1.5.tar.gz) = 350510 bytes
+SHA1 (xchm-1.6.tar.gz) = 4a023341fb8fe96d3ee84a64342a73d4f82a3cbc
+RMD160 (xchm-1.6.tar.gz) = da6d8c4ab8f4a68b91021441925a239c25c07dda
+Size (xchm-1.6.tar.gz) = 353723 bytes
