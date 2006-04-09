@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1 2005/09/20 12:15:34 dmcmahill Exp $
+$NetBSD: patch-am,v 1.2 2006/04/09 07:26:52 xtraeme Exp $
 
---- src/xitk/Makefile.in.orig	2004-07-04 12:26:05.000000000 -0400
-+++ src/xitk/Makefile.in
-@@ -319,7 +319,7 @@ xine_remote_SOURCES = xine-remote.c
+--- src/xitk/Makefile.in.orig	2006-04-08 21:02:11.000000000 +0200
++++ src/xitk/Makefile.in	2006-04-08 21:02:20.000000000 +0200
+@@ -397,7 +397,7 @@
  xine_remote_DEPENDENCIES = $(top_builddir)/src/common/libcommon.la \
  			   xine-remote.c
  
@@ -10,4 +10,4 @@ $NetBSD: patch-am,v 1.1 2005/09/20 12:15:34 dmcmahill Exp $
 +xine_remote_LDADD = @XINE_LIBS@ $(INTLLIBS) $(NET_LIBS) $(THREAD_LIBS) $(READLINE_LIBS) $(NCURSES_LIB) \
  	$(top_builddir)/src/common/libcommon.la $(DBG_LIBS)
  
- 
+ session_ctrl_LDADD = @XINE_LIBS@ $(top_builddir)/src/common/libcommon.la $(DBG_LIBS)
