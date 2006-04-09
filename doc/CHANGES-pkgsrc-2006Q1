@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.13 2006/04/09 19:38:51 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.14 2006/04/09 19:53:29 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -29,3 +29,5 @@ Pullup ticket 1342 - requested by tron
 security update for phpmyadmin
 Pullup ticket 1350 - requested by wiz
 acroread7 (possibly security) update
+Pullup ticket 1340 - requested by martti
+postfix update
