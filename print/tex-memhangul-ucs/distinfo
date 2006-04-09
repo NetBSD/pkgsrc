@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/04/09 22:07:54 minskim Exp $
+
+SHA1 (memhangul-ucs-1.44c.tar.gz) = d70b1ed92a9252f9470f941aa558586f0cef5fe9
+RMD160 (memhangul-ucs-1.44c.tar.gz) = d516b32b8d3e7686948d758243aaa89060635279
+Size (memhangul-ucs-1.44c.tar.gz) = 106224 bytes
