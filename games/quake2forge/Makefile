@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2006/03/09 21:04:43 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/04/09 18:07:46 wiz Exp $
 #
 
 DISTNAME=	quake2-0.3
 PKGNAME=	${DISTNAME:S/quake2/quake2forge/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	http://www.quakeforge.net/files/quake2forge/
 
@@ -28,13 +28,13 @@ post-install:
 
 SUBST_CLASSES+=		snd data
 SUBST_STAGE.snd=	post-patch
-SUBST_FILES.snd=	src/snd.c
+SUBST_FILES.snd=	src/snd_dma.c data/baseq2/config.cfg
 SUBST_SED.snd=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
-SUBST_MESSAGE.snd=	"Fixing harcoded audio device."
+SUBST_MESSAGE.snd=	Fixing hardcoded audio device.
 SUBST_STAGE.data=	post-patch
 SUBST_FILES.data=	configure
 SUBST_SED.data=		-e "s|PACKAGE=\'quake2\'|PACKAGE=\'${PKGBASE}\'|g"
-SUBST_MESSAGE.data=	"Fixing installation directories."
+SUBST_MESSAGE.data=	Fixing installation directories.
 
 .include "../../mk/bsd.prefs.mk"
 
