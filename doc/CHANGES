@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13525 2006/04/09 18:08:28 wiz Exp $
+$NetBSD: CHANGES,v 1.13526 2006/04/09 21:47:30 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1995,3 +1995,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/rss2email to 2.57 [schmonz 2006-04-09]
 	Added net/p5-Net-FTPSSL version 0.04 [minskim 2006-04-09]
 	Updated games/quake2forge to 0.3nb3 [wiz 2006-04-09]
+	Added print/tex-memoir version 1.618 [minskim 2006-04-09]
