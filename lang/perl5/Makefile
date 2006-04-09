@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2006/04/09 06:34:32 jlam Exp $
+# $NetBSD: Makefile,v 1.118 2006/04/09 07:11:13 jlam Exp $
 
 DISTNAME=	perl-5.8.8
 CATEGORIES=	lang devel perl5
@@ -128,6 +128,7 @@ USE_TOOLS+=		hostname ln sed test
 CONFIGURE_ARGS+=	-Daphostname=${TOOLS_HOSTNAME_CMD:Q}
 CONFIGURE_ARGS+=	-Dln=${TOOLS_LN:Q}
 CONFIGURE_ARGS+=	-Dsed=${TOOLS_SED:Q}
+CONFIGURE_ARGS+=	-Dsh=${TOOLS_SH:Q}
 CONFIGURE_ARGS+=	-Dissymlink="${TOOLS_TEST} -h"
 
 # Nail down the needed libraries for each platform here to avoid hidden
