@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/09 22:07:54 minskim Exp $
+${PKG_LOCALTEXMFPREFIX}/doc/latex/memhangul/appendixtest.tex
+${PKG_LOCALTEXMFPREFIX}/doc/latex/memhangul/doeunbike.bb
+${PKG_LOCALTEXMFPREFIX}/doc/latex/memhangul/doeunbike.jpg
+${PKG_LOCALTEXMFPREFIX}/doc/latex/memhangul/memucstest.tex
+${PKG_LOCALTEXMFPREFIX}/fonts/cmap/UTF8-UCS2
+${PKG_LOCALTEXMFPREFIX}/makeindex/memucs-manual.ist
+${PKG_LOCALTEXMFPREFIX}/tex/latex/memhangul/memhangul-patch.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/memhangul/memhangul-ucs.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/memhangul/memucs-gremph.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/memhangul/memucs-interword.sty
+${PKG_LOCALTEXMFPREFIX}/tex/latex/memhangul/memucs-setspace.sty
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/memhangul
+@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/latex/memhangul
