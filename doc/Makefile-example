@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-example,v 1.12 2006/03/04 21:29:30 jlam Exp $
+# $NetBSD: Makefile-example,v 1.13 2006/04/09 01:14:52 jlam Exp $
 
 # First paragraph - distfile and binary package data
 # DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME CATEGORIES MASTER_SITES
@@ -33,7 +33,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews	# needed for package views-ready pack
 # INFO_FILES, DIST_SUBDIR, etc.
 DIST_SUBDIR=		gmake
 GNU_CONFIGURE=		yes
-INFO_FILES=		make.info	# any info files, whitespace delimited
+INFO_FILES=		# defined if the package installs info files
 TEXINFO_REQD=		4.0		# version of texinfo which is necessary
 USE_PKGLOCALEDIR=	yes
 WRKSRC=			${WRKDIR}/src
