@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13523 2006/04/09 17:02:43 schmonz Exp $
+$NetBSD: CHANGES,v 1.13524 2006/04/09 17:16:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1993,3 +1993,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/links-gui to 2.1.0.21 [wiz 2006-04-09]
 	Updated fonts/alee-ttf to 7.3 [minskim 2006-04-09]
 	Updated mail/rss2email to 2.57 [schmonz 2006-04-09]
+	Added net/p5-Net-FTPSSL version 0.04 [minskim 2006-04-09]
