@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13518 2006/04/09 09:54:25 wiz Exp $
+$NetBSD: CHANGES,v 1.13519 2006/04/09 12:37:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1986,3 +1986,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/xine-ui to 0.99.4 [xtraeme 2006-04-09]
 	Updated emulators/atari800 to 2.0.2 [adam 2006-04-09]
 	Updated print/acroread7 to 7.0.5 [wiz 2006-04-09]
+	Updated misc/xchm to 1.7.1 [root 2006-04-09]
