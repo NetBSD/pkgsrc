@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.612 2006/04/03 18:38:58 wiz Exp $
+# $NetBSD: Makefile,v 1.613 2006/04/09 17:16:56 minskim Exp $
 #
 
 COMMENT=	Networking tools
@@ -270,6 +270,7 @@ SUBDIR+=	p5-Net-DNS
 SUBDIR+=	p5-Net-DNSServer
 SUBDIR+=	p5-Net-Daemon
 SUBDIR+=	p5-Net-Dev-MIBLoadOrder
+SUBDIR+=	p5-Net-FTPSSL
 SUBDIR+=	p5-Net-Gnats
 SUBDIR+=	p5-Net-Google
 SUBDIR+=	p5-Net-IP
