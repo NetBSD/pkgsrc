@@ -1,23 +1,43 @@
-$NetBSD: patch-ap,v 1.1 2006/04/09 07:26:52 xtraeme Exp $
+$NetBSD: patch-ap,v 1.2 2006/04/09 08:21:22 xtraeme Exp $
 
---- src/xitk/oxine/mediamarks.c.orig	2006-04-08 21:16:59.000000000 +0200
-+++ src/xitk/oxine/mediamarks.c	2006-04-08 21:19:27.000000000 +0200
-@@ -451,15 +451,15 @@
+--- src/xitk/oxine/mediamarks.c.orig	Tue Sep 20 23:58:50 2005
++++ src/xitk/oxine/mediamarks.c	Wed Sep 21 00:13:23 2005
+@@ -439,34 +439,19 @@
  
-   *line = NULL;
-   *n = 0;
+ static void parse_m3u(const char *mrl, list_t *items) {
+   FILE *file;
+-  char **line;
+-  int *n;
+-  int a;
++  char line[1024];
+ 
+   file = fopen(mrl, "r");
+-  if(!file) return ;
++  if(!file) return;
+ 
+-  n = ho_new(size_t);
+-  line = ho_new(char *);
+-
+-  *line = NULL;
+-  *n = 0;
 -  a = getline(line, n, file);
-+  a = fgets(line, n, file);
-   if(a<=0) return;
- 
+-  if(a<=0) return;
+-
 -  while((a = getline(line, n, file))>0) {
-+  while((a = fgets(line, n, file))>0) {
-     char *str;
+-    char *str;
++  while(fgets(line, sizeof(line) - 1, file) != NULL) {
      playitem_t *item;
  
-     if(*line[0] == '#') continue;
+-    if(*line[0] == '#') continue;
 -    str = strndup(*line, a-1);
-+    str = strdup(*line);
++    if(line[0] == '#') continue;
      /* printf("%s\n", str); */
-     item = playitem_new (TYPE_REG, basename(str), str, list_new());
-     ho_free(str);
+-    item = playitem_new (TYPE_REG, basename(str), str, list_new());
+-    ho_free(str);
++    item = playitem_new (TYPE_REG, basename(line), line, list_new());
+     playitem_append(item, items);
+   }
+-  ho_free(line);
+-  ho_free(n);
+   fclose(file);
+ }
