@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2006/03/13 20:36:51 joerg Exp $
-Acrobat7/Browser/Browser_Plugin_HowTo.txt
+@comment $NetBSD: PLIST,v 1.2.2.1 2006/04/09 19:38:28 salo Exp $
+Acrobat7/Browser/HowTo/ENU/Browser_Plugin_HowTo.txt
 Acrobat7/Browser/install_browser_plugin
 Acrobat7/Browser/${PLATFORM}/nppdf.so
 Acrobat7/Reader/AcroVersion
 Acrobat7/Reader/Cert/curl-ca-bundle.crt
-Acrobat7/Reader/GlobalPrefs/AttachmentPerms
-Acrobat7/Reader/GlobalPrefs/URLPerms
+Acrobat7/Reader/GlobalPrefs/reader_prefs
 Acrobat7/Reader/HowTo/ENU/Forms.html
 Acrobat7/Reader/HowTo/ENU/Forms01.html
 Acrobat7/Reader/HowTo/ENU/Forms02.html
@@ -110,12 +109,14 @@ Acrobat7/Reader/HowTo/ENU/Sign13.html
 Acrobat7/Reader/HowTo/ENU/images
 Acrobat7/Reader/JavaScripts/JSByteCodeLin.bin
 Acrobat7/Reader/JavaScripts/WebSearch.js
+Acrobat7/Reader/Legal/ENU/LGPL.html
 Acrobat7/Reader/Legal/ENU/License.html
 Acrobat7/Reader/Legal/ENU/license_ENU_uc.txt
 Acrobat7/Reader/Messages/ENU/RdrMsgENU.pdf
 Acrobat7/Reader/Messages/RdrMsgSplash.pdf
+Acrobat7/Reader/Patch/selinux_patch
 Acrobat7/Reader/WebSearch/WebSearchENU.pdf
-Acrobat7/Reader/help/ENU/README
+Acrobat7/Reader/help/ENU/ReadMe.htm
 Acrobat7/Reader/help/ENU/Reader.pdf
 Acrobat7/Reader/${PLATFORM}/SPPlugins/ADMPlugin.apl
 Acrobat7/Reader/${PLATFORM}/bin/acroread
@@ -202,6 +203,56 @@ Acrobat7/Resource/Font/PFM/zy______.pfm
 Acrobat7/Resource/Font/SY______.PFB
 Acrobat7/Resource/Font/ZX______.PFB
 Acrobat7/Resource/Font/ZY______.PFB
+Acrobat7/Resource/Icons/128x128/AdobeReader.png
+Acrobat7/Resource/Icons/128x128/vnd.adobe.pdx.png
+Acrobat7/Resource/Icons/128x128/vnd.adobe.xdp+xml.png
+Acrobat7/Resource/Icons/128x128/vnd.adobe.xfdf.png
+Acrobat7/Resource/Icons/128x128/vnd.fdf.png
+Acrobat7/Resource/Icons/16x16/AdobeReader.png
+Acrobat7/Resource/Icons/16x16/vnd.adobe.pdx.png
+Acrobat7/Resource/Icons/16x16/vnd.adobe.xdp+xml.png
+Acrobat7/Resource/Icons/16x16/vnd.adobe.xfdf.png
+Acrobat7/Resource/Icons/16x16/vnd.fdf.png
+Acrobat7/Resource/Icons/192x192/AdobeReader.png
+Acrobat7/Resource/Icons/192x192/vnd.adobe.pdx.png
+Acrobat7/Resource/Icons/192x192/vnd.adobe.xdp+xml.png
+Acrobat7/Resource/Icons/192x192/vnd.adobe.xfdf.png
+Acrobat7/Resource/Icons/192x192/vnd.fdf.png
+Acrobat7/Resource/Icons/20x20/AdobeReader.png
+Acrobat7/Resource/Icons/20x20/vnd.adobe.pdx.png
+Acrobat7/Resource/Icons/20x20/vnd.adobe.xfdf.png
+Acrobat7/Resource/Icons/20x20/vnd.fdf.png
+Acrobat7/Resource/Icons/20x20/xdp.png
+Acrobat7/Resource/Icons/24x24/AdobeReader.png
+Acrobat7/Resource/Icons/24x24/vnd.adobe.pdx.png
+Acrobat7/Resource/Icons/24x24/vnd.adobe.xdp+xml.png
+Acrobat7/Resource/Icons/24x24/vnd.adobe.xfdf.png
+Acrobat7/Resource/Icons/24x24/vnd.fdf.png
+Acrobat7/Resource/Icons/32x32/AdobeReader.png
+Acrobat7/Resource/Icons/32x32/vnd.adobe.pdx.png
+Acrobat7/Resource/Icons/32x32/vnd.adobe.xdp+xml.png
+Acrobat7/Resource/Icons/32x32/vnd.adobe.xfdf.png
+Acrobat7/Resource/Icons/32x32/vnd.fdf.png
+Acrobat7/Resource/Icons/36x36/AdobeReader.png
+Acrobat7/Resource/Icons/36x36/vnd.adobe.pdx.png
+Acrobat7/Resource/Icons/36x36/vnd.adobe.xdp+xml.png
+Acrobat7/Resource/Icons/36x36/vnd.adobe.xfdf.png
+Acrobat7/Resource/Icons/36x36/vnd.fdf.png
+Acrobat7/Resource/Icons/48x48/AdobeReader.png
+Acrobat7/Resource/Icons/48x48/vnd.adobe.pdx.png
+Acrobat7/Resource/Icons/48x48/vnd.adobe.xdp+xml.png
+Acrobat7/Resource/Icons/48x48/vnd.adobe.xfdf.png
+Acrobat7/Resource/Icons/48x48/vnd.fdf.png
+Acrobat7/Resource/Icons/64x64/AdobeReader.png
+Acrobat7/Resource/Icons/64x64/vnd.adobe.pdx.png
+Acrobat7/Resource/Icons/64x64/vnd.adobe.xdp+xml.png
+Acrobat7/Resource/Icons/64x64/vnd.adobe.xfdf.png
+Acrobat7/Resource/Icons/64x64/vnd.fdf.png
+Acrobat7/Resource/Icons/96x96/AdobeReader.png
+Acrobat7/Resource/Icons/96x96/vnd.adobe.pdx.png
+Acrobat7/Resource/Icons/96x96/vnd.adobe.xdp+xml.png
+Acrobat7/Resource/Icons/96x96/vnd.adobe.xfdf.png
+Acrobat7/Resource/Icons/96x96/vnd.fdf.png
 Acrobat7/Resource/Icons/AdobeReader.png
 Acrobat7/Resource/Linguistics/LanguageNames/DisplayLanguageNames.en_US.txt
 Acrobat7/Resource/Linguistics/Providers/Proximity/brt04.lex
@@ -219,49 +270,63 @@ Acrobat7/Resource/Linguistics/Providers/Proximity/usa8601.lex
 Acrobat7/Resource/Linguistics/Providers/Proximity/usa8602.lex
 Acrobat7/Resource/Linguistics/Providers/Proximity/usa8603.lex
 Acrobat7/Resource/Linguistics/Providers/Proximity/usa8604.lex
+Acrobat7/Resource/Support/AdobeReader.xml
 Acrobat7/Resource/Support/AdobeReader_GNOME.desktop
 Acrobat7/Resource/Support/AdobeReader_KDE.desktop
+Acrobat7/Resource/Support/vnd.adobe.pdx.desktop
+Acrobat7/Resource/Support/vnd.adobe.xdp+xml.desktop
+Acrobat7/Resource/Support/vnd.adobe.xfdf.desktop
+Acrobat7/Resource/Support/vnd.fdf.desktop
 Acrobat7/bin/acroread
 bin/acroread
 bin/acroread7
-@dirrm Acrobat7/Browser/${PLATFORM}
-@dirrm Acrobat7/Browser
-@dirrm Acrobat7/Reader/Cert
-@dirrm Acrobat7/Reader/GlobalPrefs
-@exec ln -sf Images %D/Acrobat7/Reader/HowTo/ENU/images
-@unexec ${RM} -f %D/Acrobat7/Reader/HowTo/ENU/images
-@dirrm Acrobat7/Reader/HowTo/ENU/Images
-@dirrm Acrobat7/Reader/HowTo/ENU
-@dirrm Acrobat7/Reader/HowTo
-@dirrm Acrobat7/Reader/JavaScripts
-@dirrm Acrobat7/Reader/Legal/ENU
-@dirrm Acrobat7/Reader/Legal
-@dirrm Acrobat7/Reader/Messages/ENU
-@dirrm Acrobat7/Reader/Messages
-@dirrm Acrobat7/Reader/WebSearch
-@dirrm Acrobat7/Reader/help/ENU
-@dirrm Acrobat7/Reader/help
-@exec ln -sf ../../Resource %D/Acrobat7/Reader/${PLATFORM}/res
-@unexec ${RM} -f %D/Acrobat7/Reader/${PLATFORM}/res
-@dirrm Acrobat7/Reader/${PLATFORM}/SPPlugins
-@dirrm Acrobat7/Reader/${PLATFORM}/bin
-@dirrm Acrobat7/Reader/${PLATFORM}/lib
-@dirrm Acrobat7/Reader/${PLATFORM}/plug_ins/AcroForm
+@dirrm Acrobat7/bin
+@dirrm Acrobat7/Resource/Support
+@dirrm Acrobat7/Resource/Linguistics/Providers/Proximity
+@dirrm Acrobat7/Resource/Linguistics/Providers
+@dirrm Acrobat7/Resource/Linguistics/LanguageNames
+@dirrm Acrobat7/Resource/Linguistics
+@dirrm Acrobat7/Resource/Icons/96x96
+@dirrm Acrobat7/Resource/Icons/64x64
+@dirrm Acrobat7/Resource/Icons/48x48
+@dirrm Acrobat7/Resource/Icons/36x36
+@dirrm Acrobat7/Resource/Icons/32x32
+@dirrm Acrobat7/Resource/Icons/24x24
+@dirrm Acrobat7/Resource/Icons/20x20
+@dirrm Acrobat7/Resource/Icons/192x192
+@dirrm Acrobat7/Resource/Icons/16x16
+@dirrm Acrobat7/Resource/Icons/128x128
+@dirrm Acrobat7/Resource/Icons
+@dirrm Acrobat7/Resource/Font/PFM
+@dirrm Acrobat7/Resource/Font
+@dirrm Acrobat7/Resource/CMap
+@dirrm Acrobat7/Resource
 @dirrm Acrobat7/Reader/${PLATFORM}/plug_ins/Annotations/Stamps/ENU
 @dirrm Acrobat7/Reader/${PLATFORM}/plug_ins/Annotations/Stamps
 @dirrm Acrobat7/Reader/${PLATFORM}/plug_ins/Annotations
+@dirrm Acrobat7/Reader/${PLATFORM}/plug_ins/AcroForm
 @dirrm Acrobat7/Reader/${PLATFORM}/plug_ins
+@dirrm Acrobat7/Reader/${PLATFORM}/lib
+@dirrm Acrobat7/Reader/${PLATFORM}/bin
+@dirrm Acrobat7/Reader/${PLATFORM}/SPPlugins
 @dirrm Acrobat7/Reader/${PLATFORM}
+@dirrm Acrobat7/Reader/help/ENU
+@dirrm Acrobat7/Reader/help
+@dirrm Acrobat7/Reader/WebSearch
+@dirrm Acrobat7/Reader/Patch
+@dirrm Acrobat7/Reader/Messages/ENU
+@dirrm Acrobat7/Reader/Messages
+@dirrm Acrobat7/Reader/Legal/ENU
+@dirrm Acrobat7/Reader/Legal
+@dirrm Acrobat7/Reader/JavaScripts
+@dirrm Acrobat7/Reader/HowTo/ENU/Images
+@dirrm Acrobat7/Reader/HowTo/ENU
+@dirrm Acrobat7/Reader/HowTo
+@dirrm Acrobat7/Reader/GlobalPrefs
+@dirrm Acrobat7/Reader/Cert
 @dirrm Acrobat7/Reader
-@dirrm Acrobat7/Resource/CMap
-@dirrm Acrobat7/Resource/Font/PFM
-@dirrm Acrobat7/Resource/Font
-@dirrm Acrobat7/Resource/Icons
-@dirrm Acrobat7/Resource/Linguistics/LanguageNames
-@dirrm Acrobat7/Resource/Linguistics/Providers/Proximity
-@dirrm Acrobat7/Resource/Linguistics/Providers
-@dirrm Acrobat7/Resource/Linguistics
-@dirrm Acrobat7/Resource/Support
-@dirrm Acrobat7/Resource
-@dirrm Acrobat7/bin
+@dirrm Acrobat7/Browser/${PLATFORM}
+@dirrm Acrobat7/Browser/HowTo/ENU
+@dirrm Acrobat7/Browser/HowTo
+@dirrm Acrobat7/Browser
 @dirrm Acrobat7

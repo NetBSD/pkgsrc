@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2006/03/13 20:36:51 joerg Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2006/04/09 19:38:28 salo Exp $
 
 DISTNAME=	acroread7	# Overridden below
-PKGNAME=	acroread7-7.0.1
-PKGREVISION=	3
+PKGNAME=	acroread7-7.0.5
 CATEGORIES=	print
-MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/7x/7.0/enu/
+MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/7x/7.0.5/enu/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.adobe.com/prodindex/acrobat/readstep.html
@@ -15,7 +14,7 @@ CONFLICTS+=	acroread-5.*
 # maybe should do ALTERNATIVES?
 CONFLICTS+=	acroread5-5.*
 
-RESTRICTED=	"Original installer required to redistribute."
+RESTRICTED=	Original installer required to redistribute.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
@@ -38,11 +37,11 @@ PLATFORM=	unknown
 . if (${MACHINE_ARCH} == "i386")
 DEPENDS+=	suse_gtk2>=9.1:../../emulators/${SUSE_DIR_PREFIX}_gtk2
 DEPENDS+=	suse_locale>=9.1:../../emulators/${SUSE_DIR_PREFIX}_locale
-DISTNAME=	AdbeRdr701_linux_enu
+DISTNAME=	AdobeReader_enu-7.0.5-1.i386
 PLATFORM=	intellinux
 .endif
 .elif ${OPSYS} == "Linux"
-DISTNAME=	AdbeRdr701_linux_enu
+DISTNAME=	AdobeReader_enu-7.0.5-1.i386
 PLATFORM=	intellinux
 .endif
 
@@ -58,7 +57,7 @@ INSTALLATION_DIRS=	bin
 
 do-install:
 	@${INSTALL_DATA_DIR} ${PREFIX}/Acrobat7
-	@( ${ECHO} accept ) | PAGER=${CAT} InstallDir=${PREFIX}/Acrobat7 ${WRKSRC}/INSTALL
+	@( ${ECHO} n; ${ECHO} n ) | InstallDir=${PREFIX}/Acrobat7 ${WRKSRC}/INSTALL
 
 post-install:
 	@cd ${PREFIX}/Acrobat7/bin && \
