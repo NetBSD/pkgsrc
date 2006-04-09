@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2006/02/05 23:09:58 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/04/09 17:01:55 schmonz Exp $
 #
 
 DISTNAME=		rss2email-${RVER}
-PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.py
@@ -16,7 +15,7 @@ DEPENDS+=		${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
 DEPENDS+=		${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
 
 SVER=			2.0
-RVER=			2.55
+RVER=			2.57
 
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
