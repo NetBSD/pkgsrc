@@ -1,25 +1,10 @@
-# $NetBSD: Makefile,v 1.116 2006/01/19 02:09:09 joerg Exp $
+# $NetBSD: Makefile,v 1.117 2006/04/09 06:34:32 jlam Exp $
 
-DISTNAME=	perl-5.8.7
-PKGREVISION=	8
+DISTNAME=	perl-5.8.8
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
 EXTRACT_SUFX=	.tar.bz2
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
-
-# Vendor patch to fix the security vulnerability CVE-2005-3962 regarding
-# an sprintf buffer overflow attack.
-#
-PATCHFILES=	sprintf-5.8.7.patch
-PATCH_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NW/NWCLARK/}
-PATCH_DIST_STRIP= -p1
-
-# Update the base Sys-Syslog package to a version which fixes a security
-# vulnerabilty CVE-2005-3912 regarding the proper arguments for syslog().
-#
-SYS_SYSLOG=	Sys-Syslog-0.13
-SITES_${SYS_SYSLOG}.tar.gz=	${MASTER_SITE_PERL_CPAN:=Sys/}
-DISTFILES+=	${SYS_SYSLOG}.tar.gz
 
 MAINTAINER=	jlam@pkgsrc.org
 HOMEPAGE=	http://www.perl.org/
@@ -33,7 +18,8 @@ CONFLICTS=	perl-base-[0-9]* perl-thread-[0-9]*			\
 # Determine the Perl API version from the patchlevel.h file from the
 # source distribution.
 #
-PERL5_API_VERS_cmd=							\
+PERL5_API_VERS=		${PERL5_API_VERS_cmd:sh}
+PERL5_API_VERS_cmd=	\
 	if ${TEST} -f ${WRKSRC}/patchlevel.h; then			\
 		${AWK} '/\#define[ 	]*PERL_API_REVISION/ { R = $$3 }\
 			/\#define[ 	]*PERL_API_VERSION/ { r = "."$$3 } \
@@ -43,7 +29,6 @@ PERL5_API_VERS_cmd=							\
 	else								\
 		${ECHO} "unknown";					\
 	fi
-PERL5_API_VERS=		${PERL5_API_VERS_cmd:sh}
 
 PERL5_PREFIX=		${PREFIX}
 PERL5_VENDORPREFIX=	${PERL5_PREFIX}
@@ -112,17 +97,21 @@ CONFIGURE_ARGS+=	-Dprivlib=${PERL5_PRIVLIB:Q}
 CONFIGURE_ARGS+=	-Dsitelib=${PERL5_SITELIB:Q}
 CONFIGURE_ARGS+=	-Dvendorlib=${PERL5_VENDORLIB:Q}
 
+# Search for version-specific directories under these directories.
+CONFIGURE_ARGS+=	-Dsitelib_stem=${PERL5_SITEBASE:Q}
+CONFIGURE_ARGS+=	-Dvendorlib_stem=${PERL5_VENDORBASE:Q}
+
 # Avoid manpage conflicts between the standard Perl library, 3rd-party
 # modules, and other packages.
 #
 CONFIGURE_ARGS+=	-Dman1ext="1"
-CONFIGURE_ARGS+=	-Dman1dir=${PERL5_PERLBASE:Q}/man/man1
-CONFIGURE_ARGS+=	-Dsiteman1dir=${PERL5_SITEBASE:Q}/man/man1
-CONFIGURE_ARGS+=	-Dvendorman1dir=${PERL5_VENDORBASE:Q}/man/man1
+CONFIGURE_ARGS+=	-Dman1dir=${PERL5_PERLBASE:Q}/${PKGMANDIR:Q}/man1
+CONFIGURE_ARGS+=	-Dsiteman1dir=${PERL5_SITEBASE:Q}/${PKGMANDIR:Q}/man1
+CONFIGURE_ARGS+=	-Dvendorman1dir=${PERL5_VENDORBASE:Q}/${PKGMANDIR:Q}/man1
 CONFIGURE_ARGS+=	-Dman3ext="3"
-CONFIGURE_ARGS+=	-Dman3dir=${PERL5_PERLBASE:Q}/man/man3
-CONFIGURE_ARGS+=	-Dsiteman3dir=${PERL5_SITEBASE:Q}/man/man3
-CONFIGURE_ARGS+=	-Dvendorman3dir=${PERL5_VENDORBASE:Q}/man/man3
+CONFIGURE_ARGS+=	-Dman3dir=${PERL5_PERLBASE:Q}/${PKGMANDIR:Q}/man3
+CONFIGURE_ARGS+=	-Dsiteman3dir=${PERL5_SITEBASE:Q}/${PKGMANDIR:Q}/man3
+CONFIGURE_ARGS+=	-Dvendorman3dir=${PERL5_VENDORBASE:Q}/${PKGMANDIR:Q}/man3
 
 .if ${OPSYS} == "Darwin"
 #
@@ -251,18 +240,6 @@ SUBST_FILES.dirmode=	installhtml installman installperl		\
 			lib/ExtUtils/Install.pm
 SUBST_SED.dirmode=	-e "s/755/${PKGDIRMODE}/g;/umask(/d"
 
-SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	${WRKDIR}/perllink
-SUBST_SED.paths+=	-e 's,@PERL5@,${PERL5},g'
-SUBST_SED.paths+=	-e 's,@SH@,${SH},g'
-SUBST_STAGE.paths=	post-patch
-
-# Replace the base Sys-Syslog module with the fixed version.
-post-extract:
-	${RM} -fr ${WRKSRC}/ext/Sys/Syslog
-	${CP} -r ${WRKDIR}/${SYS_SYSLOG} ${WRKSRC}/ext/Sys/Syslog
-	${CP} ${FILESDIR}/perllink.in ${WRKDIR}/perllink
-
 # It's tough to guess which hints file will be used, so add our modifications
 # to all of them:
 #
@@ -319,7 +296,13 @@ pre-configure:
 	done
 .endif
 
-INSTALLATION_DIRS=	bin man/man1
+post-build:
+	${SED}	-e "s,@PERL5@,"${PERL5:Q}",g"				\
+		-e "s,@SH@,"${SH:Q}",g"					\
+		-e "s,@PKGMANDIR@,"${PKGMANDIR:Q}",g"			\
+		${FILESDIR}/perllink.in > ${WRKDIR}/perllink.sh
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 PERL5_PACKLIST_DIR_cmd=	eval `${PERL5} -V:installarchlib 2>/dev/null`;	\
 			echo $$installarchlib
 PERL5_PACKLIST_DIR=	${PERL5_PACKLIST_DIR_cmd:sh}
@@ -340,11 +323,13 @@ perl5-post-install:
 	${RMDIR} -p $$installvendorarch 2>/dev/null || ${TRUE};		\
 	eval `${PERL5} -V:scriptdir 2>/dev/null`;			\
 	eval `${PERL5} -V:man1dir 2>/dev/null`;				\
-	${INSTALL_SCRIPT} ${WRKDIR}/perllink $$scriptdir/perllink;	\
+	${INSTALL_SCRIPT} ${WRKDIR}/perllink.sh $$scriptdir/perllink;	\
 	${INSTALL_MAN} ${FILESDIR}/perllink.1 $$man1dir/perllink.1;	\
-	${RM} -f ${PREFIX}/bin/perllink ${PREFIX}/man/man1/perllink.1;	\
+	${RM} -f ${PREFIX}/bin/perllink					\
+		${PREFIX}/${PKGMANDIR}/man1/perllink.1;			\
 	${LN} -s $$scriptdir/perllink ${PREFIX}/bin/perllink;		\
-	${LN} -s $$man1dir/perllink.1 ${PREFIX}/man/man1/perllink.1;	\
+	${LN} -s $$man1dir/perllink.1					\
+		${PREFIX}/${PKGMANDIR}/man1/perllink.1;			\
 	{ ${CAT} ${PKGDIR}/PLIST;					\
 	  ${ECHO} "$$scriptdir/perllink";				\
 	  ${ECHO} "$$man1dir/perllink.1";				\

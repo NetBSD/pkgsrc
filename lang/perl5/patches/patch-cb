@@ -1,6 +1,6 @@
-$NetBSD: patch-cb,v 1.2 2005/08/06 06:18:45 jlam Exp $
+$NetBSD: patch-cb,v 1.3 2006/04/09 06:34:33 jlam Exp $
 
---- Makefile.SH.orig	2005-02-05 10:17:44.000000000 -0500
+--- Makefile.SH.orig	2006-01-24 07:49:44.000000000 -0500
 +++ Makefile.SH
 @@ -73,7 +73,11 @@ true)
  	sunos*)
@@ -24,7 +24,7 @@ $NetBSD: patch-cb,v 1.2 2005/08/06 06:18:45 jlam Exp $
  			;;
  		esac
  	        shrpldflags="$shrpldflags $ldflags $perllibs $cryptlib"
-@@ -969,6 +973,10 @@ s_dummy $(static_ext):	miniperl$(EXE_EXT
+@@ -990,6 +994,10 @@ s_dummy $(static_ext):	miniperl$(EXE_EXT
  n_dummy $(nonxs_ext):	miniperl$(EXE_EXT) preplibrary $(DYNALOADER) FORCE
  	@$(LDLIBPTH) sh ext/util/make_ext nonxs $@ MAKE=$(MAKE) LIBPERL_A=$(LIBPERL)
  
