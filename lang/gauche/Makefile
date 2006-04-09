@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/03/31 18:35:22 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2006/04/09 01:11:31 jlam Exp $
 #
 
 DISTNAME=	Gauche-0.8.6
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--with-iconv-lib=${BUILDLINK_LDADD.iconv:M-l*:S/-l//:Q}
 MAKE_ENV+=      	ICONV_LDFLAGS=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.iconv}/lib
 
 USE_TOOLS+=		gzip makeinfo
-INFO_FILES=		gauche-refe.info gauche-refj.info
+INFO_FILES=		# PLIST
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
