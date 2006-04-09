@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/04/08 22:36:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/04/09 12:36:20 wiz Exp $
 bin/xchm
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xchm.mo
@@ -13,7 +13,7 @@ ${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/xchm.mo
-${PKGLOCALEDIR}/locale/ua/LC_MESSAGES/xchm.mo
+${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xchm.mo
 ${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/xchm.mo
 share/pixmaps/copy.xpm
