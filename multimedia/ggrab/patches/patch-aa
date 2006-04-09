@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/04/09 19:35:10 joerg Exp $
+
+--- pesstream.h.orig	2006-04-09 19:32:10.000000000 +0000
++++ pesstream.h
+@@ -25,7 +25,7 @@ class pesstream {
+ 	private:
+ 		static int		m_st_nr;
+ 		int			m_nr;
+-		enum S_TYPE		m_stype;
++		S_TYPE			m_stype;
+ 		class CBuffer *		mp_cbuf;
+ 		class xlist *		mp_list;
+ 
