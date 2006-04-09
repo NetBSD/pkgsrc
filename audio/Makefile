@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.305 2006/04/08 11:45:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.306 2006/04/09 13:14:30 joerg Exp $
 #
 
 COMMENT=	Audio tools
@@ -147,6 +147,7 @@ SUBDIR+=	libopendaap
 SUBDIR+=	libsamplerate
 SUBDIR+=	libshout
 SUBDIR+=	libsidplay
+SUBDIR+=	libsidplay2
 SUBDIR+=	libsndfile
 SUBDIR+=	libvisual
 SUBDIR+=	libvisual-bmp
@@ -227,6 +228,7 @@ SUBDIR+=	rplay
 SUBDIR+=	rsynth
 SUBDIR+=	shorten
 SUBDIR+=	sidplay
+SUBDIR+=	sidplay2
 SUBDIR+=	snd
 SUBDIR+=	solfege
 SUBDIR+=	sox
