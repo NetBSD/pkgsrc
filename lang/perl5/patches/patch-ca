@@ -1,8 +1,8 @@
-$NetBSD: patch-ca,v 1.4 2005/12/29 17:54:45 jlam Exp $
+$NetBSD: patch-ca,v 1.5 2006/04/09 06:34:33 jlam Exp $
 
---- Configure.orig	2005-04-20 12:34:37.000000000 -0400
+--- Configure.orig	2006-01-08 09:51:03.000000000 -0500
 +++ Configure
-@@ -3111,11 +3111,13 @@ EOM
+@@ -3130,11 +3130,13 @@ EOM
  		dgux)	osname=dgux 
  			osvers="$3"
  			;;
@@ -17,7 +17,7 @@ $NetBSD: patch-ca,v 1.4 2005/12/29 17:54:45 jlam Exp $
  		genix)	osname=genix ;;
  		gnu)	osname=gnu
  			osvers="$3" ;;
-@@ -3137,7 +3139,7 @@ EOM
+@@ -3156,7 +3158,7 @@ EOM
  		MiNT)	osname=mint
  			;;
  		netbsd*) osname=netbsd
@@ -26,7 +26,7 @@ $NetBSD: patch-ca,v 1.4 2005/12/29 17:54:45 jlam Exp $
  			;;
  		news-os) osvers="$3"
  			case "$3" in
-@@ -3148,8 +3150,8 @@ EOM
+@@ -3167,8 +3169,8 @@ EOM
  		next*) osname=next ;;
  		nonstop-ux) osname=nonstopux ;;
  		openbsd) osname=openbsd
@@ -37,7 +37,7 @@ $NetBSD: patch-ca,v 1.4 2005/12/29 17:54:45 jlam Exp $
  		os2)	osname=os2
  			osvers="$4"
  			;;
-@@ -4426,7 +4428,7 @@ case "$plibpth" in
+@@ -4445,7 +4447,7 @@ case "$plibpth" in
  esac
  case "$libpth" in
  ' ') dlist='';;
@@ -46,7 +46,29 @@ $NetBSD: patch-ca,v 1.4 2005/12/29 17:54:45 jlam Exp $
  *) dlist="$libpth";;
  esac
  
-@@ -7856,7 +7858,7 @@ if "$useshrplib"; then
+@@ -6485,7 +6487,9 @@ rp='Pathname for the site-specific libra
+ . ./getfile
+ sitelib="$ans"
+ sitelibexp="$ansexp"
+-sitelib_stem=`echo "$sitelibexp" | sed "s,/$version$,,"`
++if $test -z "$sitelib_stem"; then
++	sitelib_stem=`echo "$sitelibexp" | sed "s,/$version$,,"`
++fi
+ : Change installation prefix, if necessary.
+ if $test X"$prefix" != X"$installprefix"; then
+ 	installsitelib=`echo $sitelibexp | $sed "s#^$prefix#$installprefix#"`
+@@ -6606,7 +6610,9 @@ case "$vendorprefix" in
+ 	vendorlibexp="$ansexp"
+ 	;;
+ esac
+-vendorlib_stem=`echo "$vendorlibexp" | sed "s,/$version$,,"`
++if $test -z "$vendorlib_stem"; then
++	vendorlib_stem=`echo "$vendorlibexp" | sed "s,/$version$,,"`
++fi
+ : Change installation prefix, if necessary.
+ if $test X"$prefix" != X"$installprefix"; then
+ 	installvendorlib=`echo $vendorlibexp | $sed "s#^$prefix#$installprefix#"`
+@@ -7889,7 +7895,7 @@ if "$useshrplib"; then
  	solaris)
  		xxx="-R $shrpdir"
  		;;
@@ -55,7 +77,7 @@ $NetBSD: patch-ca,v 1.4 2005/12/29 17:54:45 jlam Exp $
  		xxx="-Wl,-R$shrpdir"
  		;;
  	bsdos|linux|irix*|dec_osf|gnu*)
-@@ -8977,6 +8979,13 @@ EOCP
+@@ -9010,6 +9016,13 @@ EOCP
  	;;
  esac
  
@@ -69,7 +91,7 @@ $NetBSD: patch-ca,v 1.4 2005/12/29 17:54:45 jlam Exp $
  case "$vendorprefix" in
  '')	d_vendorbin="$undef"
  	vendorbin=''
-@@ -17339,7 +17348,15 @@ RCAT(Rei,ser)
+@@ -17776,7 +17789,15 @@ RCAT(Rei,ser)
  ACAT(Cir,cus)
  EOCP
  $cppstdin $cppflags $cppminus <cpp_stuff.c >cpp_stuff.out 2>&1
