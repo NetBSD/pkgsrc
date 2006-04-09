@@ -1,7 +1,9 @@
---- acroread.orig	2005-03-12 14:50:00.000000000 +1300
-+++ acroread	2005-03-16 23:59:20.000000000 +1300
-@@ -14,7 +14,7 @@
-  ScriptDirectory="`pwd 2> /dev/null`"
+$NetBSD: acroread.diff,v 1.2.2.1 2006/04/09 19:38:28 salo Exp $
+
+--- acroread.orig	2005-11-07 12:05:17.000000000 +0000
++++ acroread
+@@ -214,7 +214,7 @@ else
+  ScriptDirectory="`/bin/pwd 2> /dev/null`"
   cd "$cwd"
  fi
 -install_dir=`dirname "$ScriptDirectory"`/Reader
@@ -9,7 +11,38 @@
  
  
  #
-@@ -172,6 +172,19 @@
+@@ -439,18 +439,18 @@ check_gtk_ver_and_set_lib_path()
+     OLD_IFS=""
+ 
+     # This checks for libs in cache /etc/ld.so.cache
+-    for ifile in `/sbin/ldconfig -p|grep "libgtk-x11-2.0.so$"|sed 's/.*[ \t]*=>[ \t]*\(.*\)/\1/g' 2>/dev/null`; do
+-        version=`get_gtk_file_ver "$ifile"`
+-
+-    	while [ ${#version} -gt ${#base_version} ]; do
+-	   		base_version="${base_version}0"
+-	    done
+-
+-        if [ $version -ge $base_version ]; then
+-            export LD_LIBRARY_PATH="`dirname "$ifile"`":"$LD_LIBRARY_PATH"
+-            return 0
+-        fi
+-    done
++#    for ifile in `/sbin/ldconfig -p|grep "libgtk-x11-2.0.so$"|sed 's/.*[ \t]*=>[ \t]*\(.*\)/\1/g' 2>/dev/null`; do
++#        version=`get_gtk_file_ver "$ifile"`
++#
++#    	while [ ${#version} -gt ${#base_version} ]; do
++#	   		base_version="${base_version}0"
++#	    done
++#
++#        if [ $version -ge $base_version ]; then
++#            export LD_LIBRARY_PATH="`dirname "$ifile"`":"$LD_LIBRARY_PATH"
++#            return 0
++#        fi
++#    done
+ 
+     return 1
+ }
+@@ -577,6 +577,19 @@ case "$os_name" in
      ACRO_CONFIG=intellinux
      export ACRO_CONFIG
      ;;
@@ -29,7 +62,7 @@
  esac
  
  if [ -z "$ACRO_CONFIG" ] ; then
-@@ -202,7 +215,7 @@
+@@ -611,7 +624,7 @@ case "$ACRO_CONFIG" in
      ;;
  esac
  
