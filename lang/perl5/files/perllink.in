@@ -1,5 +1,5 @@
 #!@SH@
-#	$NetBSD: perllink.in,v 1.1 2005/08/06 06:18:45 jlam Exp $
+#	$NetBSD: perllink.in,v 1.2 2006/04/09 06:34:32 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -38,8 +38,12 @@
 
 #
 # This script parses the packlists listed on the command line and either
-# adds or deletes the symlinks in <prefix>/bin and <prefix>/man/man1 that
-# match the files in the packlists.
+# adds or deletes the symlinks in
+#
+#	<prefix>/bin
+#	<prefix>/@PKGMANDIR@/man1
+#
+# that match the files in the packlists.
 #	
 
 perlprog="@PERL5@"
@@ -89,6 +93,8 @@ fi
 
 test -n "$opt_prefix" || opt_prefix="$prefix"
 
+pkgmandir="@PKGMANDIR@"
+
 # Re-point variables so that if they are under $prefix, then they are
 # recomputed to point under $opt_prefix.
 #
@@ -98,7 +104,7 @@ $prefix/*)	scriptdir="$opt_prefix/${scriptdir#$prefix/}" ;;
 esac
 case "$man1dir" in
 $prefix/*)	man1dir="$opt_prefix/${man1dir#$prefix/}" ;;
-"")		man1dir="$opt_prefix/man/man1" ;;
+"")		man1dir="$opt_prefix/$pkgmandir/man1" ;;
 esac
 case "$siteprefix" in
 $prefix/*)	siteprefix="$opt_prefix/${siteprefix#$prefix/}" ;;
@@ -126,7 +132,7 @@ $prefix/*)	vendorman1dir="$opt_prefix/${vendorman1dir#$prefix/}" ;;
 esac
 
 destbindir="$opt_prefix/bin"
-destman1dir="$opt_prefix/man/man1"
+destman1dir="$opt_prefix/$pkgmandir/man1"
 
 echo __dummy__ | perl -pe '0' $opt_packlists |
 { while read file junk; do
