@@ -1,4 +1,4 @@
-# $NetBSD: packlist.mk,v 1.4 2006/03/14 01:14:29 jlam Exp $
+# $NetBSD: packlist.mk,v 1.5 2006/04/09 06:34:32 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # create packlist files.  This file is automatically included by
@@ -70,7 +70,7 @@ GENERATE_PLIST+=	${PERL5_GENERATE_PLIST};
 ###
 
 _PERL5_PACKLIST_MANPAGE_RE=	\
-	^(\/[^ \/]*)*\/man(\/[^ \/]*)?\/(man[1-9ln]\/[^ \/]*\.[1-9ln]|cat[1-9ln]\/[^ \/]*\.[0-9])
+	^(\/[^ \/]*)+\/(man[1-9ln]\/[^ \/]*\.[1-9ln]|cat[1-9ln]\/[^ \/]*\.[0-9])
 
 _PERL5_PACKLIST_AWK_STRIP_MANZ=						\
 	/${_PERL5_PACKLIST_MANPAGE_RE}\.gz/				\
