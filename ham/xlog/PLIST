@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.7 2006/04/09 16:09:26 rillig Exp $
 bin/xlog
 man/man1/xlog.1
 share/application-registry/xlog.applications
