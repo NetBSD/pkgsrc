@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4856 2006/04/09 16:18:29 wiz Exp $
+$NetBSD: TODO,v 1.4857 2006/04/09 16:54:58 minskim Exp $
 
 Suggested new packages
 ======================
@@ -318,7 +318,6 @@ Suggested package updates
 	o afterstep-2.2.1
 	o album-3.10
 	o ald-0.1.6 [pkg/26552]
-	o alee-ttf-7.3 [pkg/33213]
 	o algae-4.3.6
 	o aliados-0.2.0
 	o amanda-2.5.0
