@@ -1,4 +1,4 @@
-/*	$NetBSD: kver.c,v 1.7 2005/03/30 06:41:01 seb Exp $	*/
+/*	$NetBSD: kver.c,v 1.8 2006/04/09 17:47:46 cube Exp $	*/
 
 #include <sys/types.h>
 #include <sys/param.h>
@@ -52,6 +52,12 @@ static struct utsname real_utsname;
 			(void) strncpy(oldp, str, len);			\
 		}							\
 	}
+
+#if __NetBSD_Version__ >= 399001600
+#define SYSCTL_CONST	const
+#else
+#define SYSCTL_CONST
+#endif
 
 static int
 str2osrevision(char *s)
@@ -153,8 +159,8 @@ kver_initialize(void)
 }
 
 int
-sysctl(int *name, u_int namelen, void *oldp, size_t * oldlenp, const void *newp,
-    size_t newlen)
+sysctl(SYSCTL_CONST int *name, u_int namelen, void *oldp, size_t * oldlenp,
+    const void *newp, size_t newlen)
 {
 	_DIAGASSERT(name != NULL);
 
