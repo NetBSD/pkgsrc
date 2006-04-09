@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13517 2006/04/09 08:32:32 adam Exp $
+$NetBSD: CHANGES,v 1.13518 2006/04/09 09:54:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1985,3 +1985,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/perl5 to 5.8.8 [jlam 2006-04-09]
 	Updated multimedia/xine-ui to 0.99.4 [xtraeme 2006-04-09]
 	Updated emulators/atari800 to 2.0.2 [adam 2006-04-09]
+	Updated print/acroread7 to 7.0.5 [wiz 2006-04-09]
