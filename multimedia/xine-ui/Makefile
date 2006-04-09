@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2006/04/06 06:22:30 reed Exp $
+# $NetBSD: Makefile,v 1.22 2006/04/09 07:26:52 xtraeme Exp $
 #
 
-DISTNAME=		xine-ui-0.99.2
-PKGREVISION=		4
+DISTNAME=		xine-ui-0.99.4
+#PKGREVISION=		1
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 
@@ -23,6 +23,7 @@ USE_GNU_READLINE=	yes
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
