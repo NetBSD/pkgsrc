@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:09:42 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/09 16:06:30 rillig Exp $
 
 VERSION=	0.6
 DISTNAME=	gr-usrp-${VERSION}
@@ -7,8 +7,8 @@ PKGREVISION=	2
 WRKSRC=		${WRKDIR}/${DISTNAME}
 COMMENT=	USRP bindings for GNU Radio
 
-PYTHON_PATCH_SCRIPTS+= src/flexrf_debug_gui.py	
-PYTHON_PATCTH_SCRIPTS+= src/tx_debug_gui.py
+PYTHON_PATCH_SCRIPTS+=	src/flexrf_debug_gui.py
+PYTHON_PATCH_SCRIPTS+=	src/tx_debug_gui.py
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"
 
