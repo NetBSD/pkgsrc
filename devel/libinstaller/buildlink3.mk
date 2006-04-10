@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:21:51 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/10 15:06:13 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBINSTALLER_BUILDLINK3_MK:=	${LIBINSTALLER_BUILDLINK3_MK}+
@@ -11,7 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibinstaller}
 BUILDLINK_PACKAGES+=	libinstaller
 
 .if !empty(LIBINSTALLER_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.libinstaller+=	libinstaller>=4.0
+BUILDLINK_API_DEPENDS.libinstaller+=	libinstaller>=5.1
 BUILDLINK_PKGSRCDIR.libinstaller?=	../../devel/libinstaller
 .endif	# LIBINSTALLER_BUILDLINK3_MK
 
