@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1813 2006/04/06 06:23:05 reed Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1814 2006/04/10 04:47:30 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -3013,7 +3013,7 @@ make-readme-html-help:
 	@${ECHO} '${PKGNAME:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g}</a>: <TD>'${COMMENT:S/&/\&amp;/g:S/>/\&gt;/g:S/</\&lt;/g:Q}
 .endif # !target(make-readme-html-help)
 
-# Show (recursively) all the packages this package depends on.
+# Show (non-recursively) all the packages this package depends on.
 # If PACKAGE_DEPENDS_WITH_PATTERNS is set, print as pattern (if possible)
 PACKAGE_DEPENDS_WITH_PATTERNS?=true
 .PHONY: run-depends-list
