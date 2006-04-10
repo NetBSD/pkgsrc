@@ -1,4 +1,4 @@
-# $NetBSD: krb5.buildlink3.mk,v 1.8 2005/01/09 23:59:26 jlam Exp $
+# $NetBSD: krb5.buildlink3.mk,v 1.9 2006/04/10 15:04:44 tron Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Kerberos 5 implementation.  krb5.buildlink3.mk will:
@@ -20,7 +20,11 @@ KRB5_BUILDLINK3_MK:=	${KRB5_BUILDLINK3_MK}+
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(KRB5_BUILDLINK3_MK:M+)
+.if ${OPSYS} != Darwin
 KRB5_DEFAULT?=	heimdal
+.else
+KRB5_DEFAULT?=	mit-krb5
+.endif
 KRB5_ACCEPTED?=	${_KRB5_PKGS}
 
 # This is an exhaustive list of all of the Kerberos 5 implementations
