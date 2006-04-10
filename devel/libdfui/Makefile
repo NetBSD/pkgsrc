@@ -1,33 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2006/03/04 21:29:16 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/10 14:58:48 joerg Exp $
 #
 
-DISTNAME=	libdfui-3.0
-PKGREVISION=	1
+DISTNAME=	libdfui-4.2
 CATEGORIES=	devel
-MASTER_SITES=	http://www.bsdinstaller.org/distfiles/
+MASTER_SITES=	ftp://packages.stura.uni-rostock.de/bsdinstaller/distfiles/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.bsdinstaller.org/
+MAINTAINER=	joerg@NetBSD.org
+HOMEPAGE=	http://www.bsdinstaller.com/
 COMMENT=	LIBrary for DragonFly User Interfaces
 
-WRKSRC=		${WRKDIR}/libdfui
-
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-patch
-SUBST_FILES.prefix=	Makefile
-SUBST_SED.prefix=	-e "s,/usr/local,${PREFIX},g"
-SUBST_MESSAGE.prefix=	"Fixing hardcoded paths."
-
-INSTALLATION_DIRS=	include/dfui lib
-
-HEADER_FILES=		dfui dump lang system
-
-do-install:
-.for f in ${HEADER_FILES}
-	${INSTALL_DATA} ${WRKSRC}/${f}.h ${PREFIX}/include/dfui
-.endfor
-	${INSTALL_LIB} ${WRKSRC}/libdfui.so* ${PREFIX}/lib
-	${INSTALL_LIB} ${WRKSRC}/libdfui*.a ${PREFIX}/lib
+USE_LIBTOOL=	yes
 
 .include "../../devel/libaura/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
