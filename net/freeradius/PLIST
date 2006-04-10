@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.15 2006/03/22 20:53:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/04/10 15:25:04 joerg Exp $
 bin/radclient
 bin/radeapclient
 bin/radlast
 bin/radrelay
+bin/radsqlrelay
 bin/radtest
 bin/radwho
 bin/radzap
@@ -103,10 +104,12 @@ man/man5/rlm_pap.5
 man/man5/rlm_passwd.5
 man/man5/rlm_realm.5
 man/man5/rlm_sql.5
+man/man5/rlm_sql_log.5
 man/man5/rlm_unix.5
 man/man5/users.5
 man/man8/radiusd.8
 man/man8/radrelay.8
+man/man8/radsqlrelay.8
 man/man8/radwatch.8
 sbin/check-radiusd-config
 sbin/checkrad
