@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/10 15:42:07 joerg Exp $
+sbin/dfuife_curses
+share/dfuife_curses/fred.txt
+share/dfuife_curses/puffy.txt
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/dfuife_curses.mo
+@dirrm share/dfuife_curses
