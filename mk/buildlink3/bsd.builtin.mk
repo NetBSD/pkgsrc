@@ -1,4 +1,4 @@
-# $NetBSD: bsd.builtin.mk,v 1.7 2006/04/06 06:23:06 reed Exp $
+# $NetBSD: bsd.builtin.mk,v 1.8 2006/04/10 12:25:43 tron Exp $
 #
 # Copyright (c) 2004-2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -67,7 +67,7 @@
 # ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
 # ### a package name to represent the built-in package.
 # ###
-# .if !defined(BUILTIN_PKG.iconv) && \
+# .if !defined(BUILTIN_PKG.wibble) && \
 #     !empty(IS_BUILTIN.wibble:M[yY][eE][sS])
 # BUILTIN_PKG.wibble=	wibble-1.0
 # .endif
