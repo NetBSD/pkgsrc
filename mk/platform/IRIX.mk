@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.mk,v 1.22 2006/03/18 21:40:44 jlam Exp $
+# $NetBSD: IRIX.mk,v 1.23 2006/04/10 13:38:36 schwarz Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -9,6 +9,14 @@ IMAKE?=		/usr/bin/X11/imake # IRIX 5.3 location
 IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 IMAKEOPTS+=	-DMakeCmd=${PREFIX}/bin/bmake -DProjectRoot=${X11BASE}
 IMAKEOPTS+=	-DManUsr=${PREFIX}
+.if empty(OS_VERSION:M6*)
+IMAKEOPTS+=	-DShLibDir=${X11BASE}/lib
+IMAKEOPTS+=	-DOptimizerLevel="${CFLAGS}"
+IMAKEOPTS+=	-DManDir=${PREFIX}/${IMAKE_MAN_DIR}
+IMAKEOPTS+=	-DLibmanDir=${PREFIX}/${IMAKE_LIBMAN_DIR}
+IMAKEOPTS+=	-DFileManDir=${PREFIX}/${IMAKE_FILEMAN_DIR}
+IMAKEOPTS+=	-DManPath=${PREFIX}/man
+.endif
 PKGLOCALEDIR?=	share
 PS?=		/sbin/ps
 RSH?=		/usr/bsd/rsh
@@ -30,17 +38,35 @@ ULIMIT_CMD_stacksize?=	ulimit -s `ulimit -H -s`
 ULIMIT_CMD_memorysize?=	ulimit -v `ulimit -H -v`
 
 # imake installs manpages in weird places
+.if !empty(OS_VERSION:M6*)
 IMAKE_MAN_SOURCE_PATH?=	catman/u_man/cat
 IMAKE_MAN_SUFFIX?=	1
 IMAKE_LIBMAN_SUFFIX?=	3
 IMAKE_FILEMAN_SUFFIX?=	5
-IMAKE_GAMEMAN_SUFFIX=	6
+IMAKE_GAMEMAN_SUFFIX?=	6
 IMAKE_MAN_DIR?=		${IMAKE_MAN_SOURCE_PATH}1/X11
 IMAKE_LIBMAN_DIR?=	${IMAKE_MAN_SOURCE_PATH}3/X11
 IMAKE_FILEMAN_DIR?=	${IMAKE_MAN_SOURCE_PATH}5/X11
-IMAKE_GAMEMAN_DIR=	${IMAKE_MAN_SOURCE_PATH}6/X11
+IMAKE_GAMEMAN_DIR?=	${IMAKE_MAN_SOURCE_PATH}6/X11
 IMAKE_MANNEWSUFFIX?=	z
 IMAKE_MANINSTALL?=	maninstall
+.else
+IMAKE_MAN_SOURCE_PATH?=	man/man
+IMAKE_MAN_SUFFIX?=	1.gz
+IMAKE_LIBMAN_SUFFIX?=	3.gz
+IMAKE_FILEMAN_SUFFIX?=	5.gz
+IMAKE_GAMEMAN_SUFFIX?=	6.gz
+IMAKE_MAN_DIR?=		${IMAKE_MAN_SOURCE_PATH}1
+IMAKE_LIBMAN_DIR?=	${IMAKE_MAN_SOURCE_PATH}3
+IMAKE_FILEMAN_DIR?=	${IMAKE_MAN_SOURCE_PATH}5
+IMAKE_GAMEMAN_DIR?=	${IMAKE_MAN_SOURCE_PATH}6
+IMAKE_MANNEWSUFFIX?=	${IMAKE_MAN_SUFFIX}
+. if defined(USE_IMAKE) && !empty(USE_IMAKE:M[Yy][Ee][Ss])
+MAKE_ENV+=		GZIP_CMD="${GZIP_CMD}"
+USE_TOOLS+=		gzip
+MANCOMPRESSED=		yes
+. endif
+.endif
 
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes		# IPv6 is standard

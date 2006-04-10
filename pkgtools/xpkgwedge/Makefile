@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2006/03/14 01:14:32 jlam Exp $
+# $NetBSD: Makefile,v 1.66 2006/04/10 13:38:36 schwarz Exp $
 
 DISTNAME=	xpkgwedge-1.15
 CATEGORIES=	pkgtools devel x11
@@ -42,6 +42,26 @@ FILES_SUBST+=		FONT_PROGS=${FONT_PROGS:Q}
 FILES_SUBST+=		MAKE=${IMAKE_MAKE:Q}
 USE_TOOLS+=		${IMAKE_TOOLS}
 
+.if ${OPSYS} == "Darwin"
+PLIST_SUBST+=		IS_DARWIN=
+USE_TOOLS+=		patch
+.else
+PLIST_SUBST+=		IS_DARWIN="@comment "
+.endif
+
+.if ${OPSYS} == "IRIX"
+PLIST_SUBST+=		IS_IRIX=
+USE_TOOLS+=		patch
+. if !empty(OS_VERSION:M6*)
+PLIST_SUBST+=		IS_IRIX6=
+. else
+PLIST_SUBST+=		IS_IRIX6="@comment "
+. endif
+.else
+PLIST_SUBST+=		IS_IRIX="@comment "
+PLIST_SUBST+=		IS_IRIX6="@comment "
+.endif
+
 .include "../../mk/x11.buildlink3.mk"
 
 SUBST_CLASSES+=		paths
@@ -74,5 +94,20 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/config
 	${INSTALL_DATA} ${WRKSRC}/xpkgwedge.def ${PREFIX}/lib/X11/config
 	${INSTALL_SCRIPT} ${WRKSRC}/pkgxmkmf ${PREFIX}/bin/pkgxmkmf
+	@case ${OPSYS} in \
+	Darwin) \
+	${INSTALL_DATA} ${X11BASE}/lib/X11/config/darwin.cf ${PREFIX}/lib/X11/config; \
+	cd ${PREFIX}/lib/X11/config && patch ${PATCH_STRIP} < ${FILESDIR}/darwin.cf.patch; \
+	;; \
+	IRIX) \
+	${INSTALL_DATA} ${X11BASE}/lib/X11/config/sgi.cf ${PREFIX}/lib/X11/config; \
+	if [ ${OS_VERSION} -ge 6 ]; then \
+		${INSTALL_DATA} ${X11BASE}/lib/X11/config/X11.rules ${PREFIX}/lib/X11/config; \
+		cd ${PREFIX}/lib/X11/config && patch ${PATCH_STRIP} < ${FILESDIR}/irix6.patch; \
+	else \
+		cd ${PREFIX}/lib/X11/config && patch ${PATCH_STRIP} < ${FILESDIR}/irix5.patch; \
+	fi; \
+	;; \
+	esac
 
 .include "../../mk/bsd.pkg.mk"

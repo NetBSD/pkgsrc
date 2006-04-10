@@ -1,0 +1,75 @@
+$NetBSD: irix5.patch,v 1.1 2006/04/10 13:38:36 schwarz Exp $
+
+--- sgi.cf.orig	2005-12-05 16:32:49.000000000 +0100
++++ sgi.cf	2005-12-05 16:31:59.000000000 +0100
+@@ -188,7 +188,7 @@
+  * Actually, it doesn't matter what MakeCmd is, since we don't use it.
+  * We assume that $(MAKE) gets set for us by make.
+  */
+-#define MakeCmd $(TOOLROOT)/bin/make
++/*#define MakeCmd $(TOOLROOT)/bin/make */
+ #define TroffCmd psroff -t
+ 
+ #define StandardIncludes -nostdinc -I$(ROOT)/usr/include
+@@ -252,23 +252,25 @@
+ #define ManSuffix	1
+ #define LibManSuffix	3
+ 
+-#undef ManDir
+-#undef LibmanDir
++#ifndef ManDir
+ #define ManDir $(CATMAN1DIR)$(MANPACKAGE)
++#endif
++#ifndef LibmanDir
+ #define LibmanDir $(CATMAN3DIR)$(MANPACKAGE)
++#endif
+ #define NroffManDir $(MAN1DIR)$(MANPACKAGE)
+ #define NroffLibmanDir $(MAN3DIR)$(MANPACKAGE)
+ 
+ #ifdef UseInstalled
+-           MANUSR = /usr/share/local
++           MANUSR = ManUsr
+ #else
+            MANUSR = /usr/share
+ #endif
+ 
+-       CATMAN1DIR = $(MANUSR)/catman/u_man/cat1
+-       CATMAN3DIR = $(MANUSR)/catman/p_man/cat3
+-          MAN1DIR = $(MANUSR)/man/u_man/man1
+-          MAN3DIR = $(MANUSR)/man/p_man/man3
++       CATMAN1DIR = $(MANUSR)/tman/cat1
++       CATMAN3DIR = $(MANUSR)/tman/cat3
++          MAN1DIR = $(MANUSR)/man/man1
++          MAN3DIR = $(MANUSR)/man/man3
+ 
+ /*
+  * MANPACKAGE is the directory inside of cat? or man? that man pages should
+@@ -281,22 +283,22 @@
+  * InstallManPageLong - misc changes for sgi.
+  */
+ #define InstallManPageLong(file,destdir,dest)				@@\
+-file.nr.z : file.man							@@\
++file.nr.gz : file.man							@@\
+ 	@if [ -f file.man ]; then \					@@\
+-		$(RM) file.nr file.nr.z && \				@@\
++		$(RM) file.nr file.nr.gz && \				@@\
+ 		tbl file.man | eqn | nroff -man - > file.nr && \	@@\
+-		pack -f file.nr; \					@@\
++		$(GZIP_CMD) file.nr; \					@@\
+ 	fi								@@\
+ 									@@\
+-install.man:: file.nr.z							@@\
++install.man:: file.nr.gz						@@\
+ 	MakeDir($(DESTDIR)destdir); \					@@\
+ 	if [ -f file.man ]; then \					@@\
+ 		$(INSTALL) -c $(INSTMANFLAGS) \				@@\
+-			file.nr.z $(DESTDIR)destdir/dest.z; \		@@\
++			file.nr.gz $(DESTDIR)destdir/dest.1.gz;	 \	@@\
+ 	fi								@@\
+ 									@@\
+ clean::									@@\
+-	$(RM) file.nr file.nr.z
++	$(RM) file.nr file.nr.gz
+ 
+ /*
+  * InstallManPageAliases - generate rules to install manual page aliases.
