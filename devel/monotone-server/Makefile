@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/02/21 16:09:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/10 17:46:31 jmmv Exp $
 #
 
-DISTNAME=	monotone-server-0.25
-PKGREVISION=	2
+DISTNAME=	monotone-server-0.26
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,7 +10,7 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.venge.net/monotone/
 COMMENT=	Simplifies the configuration of a dedicated Monotone server
 
-DEPENDS+=	monotone>=0.25:../../devel/monotone
+DEPENDS+=	monotone>=0.26:../../devel/monotone
 
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
@@ -47,7 +46,7 @@ SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	do-configure
 SUBST_MESSAGE.vars=	"Configuring sources."
 SUBST_FILES.vars=	*
-SUBST_SED.vars=		-e 's|@MONOTONE@|${PREFIX}/bin/monotone|g'
+SUBST_SED.vars=		-e 's|@MONOTONE@|${PREFIX}/bin/mtn|g'
 SUBST_SED.vars+=	-e 's|@MONOTONE_GROUP@|${MONOTONE_GROUP}|g'
 SUBST_SED.vars+=	-e 's|@MONOTONE_USER@|${MONOTONE_USER}|g'
 SUBST_SED.vars+=	-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'
