@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/10 15:22:14 joerg Exp $
+sbin/dfuibe_installer
+share/dfuibe_installer/cmdnames.conf
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/dfuibe_installer.mo
+@dirrm share/dfuibe_installer
