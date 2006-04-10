@@ -42,7 +42,7 @@ int
 usleep(unsigned int usec)
 {
 #if HAVE_POLL
-	return (poll(NULL, 0, usec / 1000);
+	return (poll(NULL, 0, usec / 1000));
 #elif HAVE_SELECT
 	struct timeval tv;
 
