@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.17 2006/03/18 21:40:44 jlam Exp $
+# $NetBSD: Darwin.mk,v 1.18 2006/04/10 13:38:36 schwarz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -16,6 +16,9 @@ RSH?=		/usr/bin/rsh
 SU?=		/usr/bin/su
 TYPE?=		type				# Shell builtin
 IMAKEOPTS+=	-DBuildHtmlManPages=NO
+.if defined(UNPRIVILEGED) && !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
+IMAKEOPTS+=	-DInstallFlags=-c		# do not set user or group
+.endif
 
 .if !defined(PKGSRC_COMPILER) || !empty(PKGSRC_COMPILER:Mgcc)
 CPP_PRECOMP_FLAGS?=	-no-cpp-precomp	# use the GNU cpp, not the OS X cpp
