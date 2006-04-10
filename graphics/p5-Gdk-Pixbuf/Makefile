@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:50 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/10 05:34:46 jlam Exp $
 #
 
 .include "../../x11/p5-gtk/Makefile.common"
@@ -9,9 +9,7 @@ PKGREVISION=	10
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl5 Gtk::Gdk::Pixbuf
 
-MAKE_PARAMS=	INSTALLMAN3DIR=${PREFIX}/man/man3
 PERL5_PACKLIST=	auto/Gtk/Gdk/Pixbuf/.packlist
-
 SUBPACKAGE=	GdkPixbuf
 
 .include "../../www/gtkhtml/buildlink3.mk"

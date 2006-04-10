@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:09:36 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/10 05:34:46 jlam Exp $
 #
 
 .include "../../x11/p5-gtk/Makefile.common"
@@ -11,9 +11,7 @@ COMMENT=	Perl bindings for Gnome
 
 DEPENDS+=	p5-Gdk-Imlib-${GTKPERL_VERSION}nb3:../../graphics/p5-Gdk-Imlib
 
-MAKE_PARAMS=	INSTALLMAN3DIR=${PREFIX}/man/man3
 PERL5_PACKLIST=	auto/Gnome/.packlist
-
 SUBPACKAGE=	Gnome
 
 pre-configure:
