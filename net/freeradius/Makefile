@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2006/04/06 06:22:32 reed Exp $
+# $NetBSD: Makefile,v 1.48 2006/04/10 15:25:04 joerg Exp $
 
 DISTNAME=	freeradius-1.1.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 		ftp://ftp.Awfulhak.org/pub/radius/
@@ -42,6 +42,8 @@ CONFIGURE_ARGS+=	--without-rlm_sql_unixodbc
 #CONFIGURE_ARGS+=	--without-rlm_eap_sim
 #CONFIGURE_ARGS+=	--without-rlm_eap_tls
 #CONFIGURE_ARGS+=	--without-rlm_eap_ttls
+
+REPLACE_PERL=		scripts/radsqlrelay
 
 SUBST_CLASSES+=		make
 SUBST_STAGE.make=	post-patch
