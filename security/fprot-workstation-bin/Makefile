@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/04/03 13:36:12 ben Exp $
-#
+# $NetBSD: Makefile,v 1.32 2006/04/10 16:19:31 tron Exp $
 
 DISTNAME=		#defined
 PKGNAME=		fprot-workstation-bin-${FPVER}
@@ -17,7 +16,7 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-[2-9]*-x86_64 \
 			Linux-*-i386 SunOS-*-sparc
-RESTRICTED=		"Redistribution not permitted"
+RESTRICTED=		Redistribution not permitted
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
@@ -35,7 +34,7 @@ FPDIR=			${PREFIX}/libexec/fprot-workstation-bin
 CONF_FILES=		${DATDIR}/MACRO.DEF ${FPDIR}/MACRO.DEF
 CONF_FILES+=		${DATDIR}/SIGN.DEF ${FPDIR}/SIGN.DEF
 CONF_FILES+=		${DATDIR}/SIGN2.DEF ${FPDIR}/SIGN2.DEF
-REQD_DIRS=		${FPDIR}
+REQD_DIRS+=		${FPDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -61,17 +60,22 @@ DEPENDS+=	netbsd32_compat16>=1.0:../../emulators/netbsd32_compat16
 DIST_SUBDIR=		${DISTNAME}
 
 SUBST_CLASSES+=		f-prot
-SUBST_MESSAGE.f-prot=	"Configuring f-prot location."
+SUBST_MESSAGE.f-prot=	Configuring f-prot location.
 SUBST_STAGE.f-prot=	post-patch
 SUBST_FILES.f-prot=	f-prot.sh
 SUBST_SED.f-prot=	-e "s,^exec \`.*\`,exec ${FPDIR}/f-prot,g"
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Configuring default paths."
+SUBST_MESSAGE.paths=	Configuring default paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	tools/check-updates.pl
-SUBST_SED.paths=	-e "s,XXXFPDIRXXX,${FPDIR}," \
-			-e "s,/usr/bin/perl,${PREFIX}/bin/perl,g"
+SUBST_SED.paths=	-e "s,XXXFPDIRXXX,${FPDIR},"
+
+SUBST_CLASSES+=		perl
+SUBST_MESSAGE.perl=	Fixing path to Perl binary.
+SUBST_STAGE.perl=	post-patch
+SUBST_FILES.perl=	tools/check-updates.pl
+SUBST_SED.perl=		-e "s,/usr/bin/perl,${PREFIX}/bin/perl,g"
 
 INSTALLATION_DIRS=	bin man/man1 man/man8 sbin
 
