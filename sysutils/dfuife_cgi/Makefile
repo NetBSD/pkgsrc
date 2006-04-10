@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/10 15:37:04 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/10 15:38:42 joerg Exp $
 #
 
 DISTNAME=	dfuife_cgi-1.4
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.bsdinstaller.com/
 COMMENT=	DFUI CGI frontend
 
 USE_LIBTOOL=	yes
-USE_TOOL+=	msgfmt
+USE_TOOLS+=	msgfmt
 
 .include "../../devel/libaura/buildlink3.mk"
 .include "../../devel/libdfui/buildlink3.mk"
