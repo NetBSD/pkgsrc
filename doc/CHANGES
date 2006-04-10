@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13534 2006/04/10 17:47:14 jmmv Exp $
+$NetBSD: CHANGES,v 1.13535 2006/04/10 20:17:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2010,3 +2010,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/dfuife_curses version 1.5 [joerg 2006-04-10]
 	Updated devel/monotone to 0.26 [jmmv 2006-04-10]
 	Updated devel/monotone-server to 0.26 [jmmv 2006-04-10]
+	Added print/tex-abc version 1.0 [minskim 2006-04-10]

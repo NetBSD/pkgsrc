@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2006/04/09 22:09:09 minskim Exp $
+# $NetBSD: Makefile,v 1.154 2006/04/10 20:17:15 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -115,6 +115,7 @@ SUBDIR+=	teTeX3-bin
 SUBDIR+=	teTeX3-texmf
 SUBDIR+=	teTeX3-texmfsrc
 SUBDIR+=	tex-IEEEtran
+SUBDIR+=	tex-abc
 SUBDIR+=	tex-bagpipetex
 SUBDIR+=	tex-chemarrow
 SUBDIR+=	tex-dhucs
