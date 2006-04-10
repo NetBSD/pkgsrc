@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/03/31 17:58:40 tron Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/04/10 16:27:02 joerg Exp $
 bin/inews
 include/inn/config.h
 include/inn/dbz.h
@@ -167,6 +167,7 @@ man/man1/innfeed.1
 man/man1/innmail.1
 man/man1/nntpget.1
 man/man1/pgpverify.1
+man/man1/pullnews.1
 man/man1/rnews.1
 man/man1/shlock.1
 man/man1/shrinkfile.1
