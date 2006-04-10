@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.subpackage,v 1.9 2005/07/16 19:10:41 jlam Exp $
+# $NetBSD: Makefile.subpackage,v 1.10 2006/04/10 05:31:01 jlam Exp $
 #
 # makefile fragment for p5-gtk sub-packages.  you need to
 # set SUBPACKAGE before including this.
@@ -11,6 +11,12 @@ PATCHDIR=	${.CURDIR}/../../x11/p5-gtk/patches
 DEPENDS+=	p5-gtk-[0-9]*:../../x11/p5-gtk
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/${SUBPACKAGE}
+
+# Change Makefile.PL to generate .3 manpages instead .3pm.
+SUBST_CLASSES+=		3pm
+SUBST_STAGE.3pm=	pre-configure
+SUBST_FILES.3pm=	Makefile.PL
+SUBST_SED.3pm=		-e "s,\.3pm,\.3,g"
 
 post-patch:
 	cd ${GTKDIR} && ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL
