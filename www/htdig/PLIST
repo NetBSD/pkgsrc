@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/04/19 00:28:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/10 12:20:32 joerg Exp $
 bin/htfuzzy
 bin/htdig
 bin/htdump
@@ -50,8 +50,8 @@ share/htdig/common/bad_words
 share/htdig/common/english.0
 share/htdig/common/english.aff
 share/htdig/common/synonyms
-share/htdig/common/synonyms.db
 @unexec ${RM} %D/share/htdig/common/root2word.db
+@unexec ${RM} %D/share/htdig/common/synonyms.db
 @unexec ${RM} %D/share/htdig/common/word2root.db
 @dirrm share/htdig/common
 @dirrm share/htdig
