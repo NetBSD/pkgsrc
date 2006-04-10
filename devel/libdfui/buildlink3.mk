@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/10 14:58:48 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/10 15:03:29 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBDFUI_BUILDLINK3_MK:=	${LIBDFUI_BUILDLINK3_MK}+
@@ -15,6 +15,6 @@ BUILDLINK_API_DEPENDS.libdfui+=	libdfui>=4.1
 BUILDLINK_PKGSRCDIR.libdfui?=	../../devel/libdfui
 .endif	# LIBDFUI_BUILDLINK3_MK
 
-.include "../../wip/libaura/buildlink3.mk"
+.include "../../devel/libaura/buildlink3.mk"
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
