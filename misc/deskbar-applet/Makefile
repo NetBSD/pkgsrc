@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/01 19:39:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/10 16:30:47 jmmv Exp $
 #
 
 DISTNAME=	deskbar-applet-2.14.0.1
@@ -15,6 +15,7 @@ BUILD_USES_MSGFMT=	YES
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		YES
+USE_MSGFMT_PLURALS=	YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake pkg-config
 
