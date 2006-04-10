@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.345 2006/03/30 21:06:17 jmmv Exp $
+# $NetBSD: Makefile,v 1.346 2006/04/10 15:46:50 joerg Exp $
 #
 
 COMMENT=	System utilities
@@ -54,6 +54,9 @@ SUBDIR+=	dd_rhelp
 SUBDIR+=	depot
 SUBDIR+=	desktop-file-utils
 SUBDIR+=	detox
+SUBDIR+=	dfuibe_installer
+SUBDIR+=	dfuife_cgi
+SUBDIR+=	dfuife_curses
 SUBDIR+=	dirsize
 SUBDIR+=	dmassage
 SUBDIR+=	dmesg2gif
