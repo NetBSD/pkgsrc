@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.48 2006/04/10 13:29:38 schwarz Exp $
+# $NetBSD: bootstrap,v 1.49 2006/04/10 18:29:24 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -53,6 +53,7 @@ usage="Usage: $0 "'
     [ --pkgdbdir <pkgdbdir> ]
     [ --sysconfdir <sysconfdir> ]
     [ --varbase <varbase> ]
+    [ --fetch-cmd <ftp command> ]
     [ --ignore-case-check ]
     [ --ignore-user-check ]
     [ --preserve-path ]
@@ -259,6 +260,8 @@ while [ $# -gt 0 ]; do
 	--sysconfdir)	sysconfdir="$2"; shift ;;
 	--varbase=*)	varbase=`get_optarg "$1"` ;;
 	--varbase)	varbase="$2"; shift ;;
+	--fetch-cmd=*)	fetch_cmd=`get_optarg "$1"` ;;
+	--fetch-cmd)	fetch_cmd="$a"; shift ;;
 	--ignore-case-check) ignorecasecheck=yes ;;
 	--ignore-user-check) ignoreusercheck=yes ;;
 	--preserve-path) preserve_path=yes ;;
@@ -313,6 +316,13 @@ DragonFly)
 	check_prog tarprog tar
 	check_prog mtreeprog mtree
 	machine_arch=`uname -p`
+	case `uname -r` in
+	1.0* | 1.1 | 1.1[^0-9]* | 1.2.* | 1.3.*)
+		;;
+	*)
+		[ -z "$fetch_cmd" ] && fetch_cmd="/usr/bin/ftp"
+		;;
+	esac
 	;;
 FreeBSD)
 	root_group=wheel
@@ -699,20 +709,24 @@ run_cmd "(cd $wrkdir/bmake && env CPPFLAGS='$CPPFLAGS -I../../libnbcompat' LDFLA
 run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 $wrkdir/bmake/$opsys/bmake $prefix/bin/bmake"
 #run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 644 $wrkdir/bmake/$opsys/bmake.1 $prefix/man/man1/bmake.1"
 
-# bootstrap tnftp
-case "$DEBIAN" in
-yes)
-	LIBS="-lncurses"
-	;;
-esac
-echo_msg "Installing tnftp"
-copy_src ../net/tnftp/files tnftp
-run_cmd "(cd $wrkdir/tnftp; env $BSTRAP_ENV $tnftpxenv $shprog ./configure --prefix=$prefix --sysconfdir=$sysconfdir && make && (cd src && make install))"
-pkg_install_args="$pkg_install_args --with-ftp=$prefix/bin/ftp"
+if [ -z "$fetch_cmd" ]; then
+	# bootstrap tnftp
+	fetch_cmd="$prefix/bin/ftp"
+	case "$DEBIAN" in
+	yes)
+		LIBS="-lncurses"
+		;;
+	esac
+	echo_msg "Installing tnftp"
+	copy_src ../net/tnftp/files tnftp
+	run_cmd "(cd $wrkdir/tnftp; env $BSTRAP_ENV $shprog ./configure --prefix=$prefix --sysconfdir=$sysconfdir && make && (cd src && make install))"
+fi
 
-FETCH_CMD=$prefix/bin/ftp
+pkg_install_args="$pkg_install_args --with-ftp=$fetch_cmd"
+
+FETCH_CMD="$fetch_cmd"
 export FETCH_CMD
-echo "FETCH_CMD=$prefix/bin/ftp" >> ${MKCONF_EXAMPLE}
+echo "FETCH_CMD=$fetch_cmd" >> ${MKCONF_EXAMPLE}
 
 # bootstrap digest
 echo_msg "Installing digest"
