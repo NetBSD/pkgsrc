@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4858 2006/04/09 17:02:44 schmonz Exp $
+$NetBSD: TODO,v 1.4859 2006/04/10 08:09:10 salo Exp $
 
 Suggested new packages
 ======================
@@ -437,8 +437,6 @@ Suggested package updates
 	o dc_gui2-0.80
 	o dctc-0.85.9
 	o defendguin-0.0.11
-	o dejavu-ttf-1.15 [pkg/31941]
-	o dejavu-ttf-2.4.1
 	o delegate-9.1.1
 	o denemo-0.7.2a
 	o devIL-1.6.7
