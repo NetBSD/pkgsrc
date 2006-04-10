@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/02/23 01:32:34 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2006/04/10 09:31:01 martti Exp $
 
---- Makefile.in.orig	2004-02-23 02:20:31.000000000 +0100
-+++ Makefile.in	2004-02-23 02:23:09.000000000 +0100
-@@ -528,11 +528,12 @@
+--- Makefile.in.orig	2004-06-04 13:29:12.000000000 +0300
++++ Makefile.in	2006-04-10 12:15:38.000000000 +0300
+@@ -533,11 +533,12 @@
  # use mkinstalldirs, not "install -d"
  # don't install a list of file. Just one file per install.
  # if you have more of them, create a subdirectory with an extra Makefile
