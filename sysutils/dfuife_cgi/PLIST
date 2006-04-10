@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/10 15:37:04 joerg Exp $
+libexec/cgi-bin/dfuife_cgi
+share/dfuife_cgi/dfly-pg.gif
+share/dfuife_cgi/fred-bg.gif
+share/dfuife_cgi/fred.png
+share/dfuife_cgi/green_dot.jpg
+share/dfuife_cgi/dfuife.css
+share/dfuife_cgi/dfuife.js
+share/dfuife_cgi/index.html
+@dirrm share/dfuife_cgi
