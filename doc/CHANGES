@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13532 2006/04/10 13:51:06 is Exp $
+$NetBSD: CHANGES,v 1.13533 2006/04/10 15:46:19 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2002,3 +2002,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/jftpgw to 0.13.5 [martti 2006-04-10]
 	Updated www/lighttpd to 1.4.11 [joerg 2006-04-10]
 	Updated x11/xgrk to 1.6.3nb1 [is 2006-04-10]
+	Updated devel/libaura to 3.1 [joerg 2006-04-10]
+	Updated devel/libdfui to 4.2 [joerg 2006-04-10]
+	Updated devel/libinstaller to 5.1 [joerg 2006-04-10]
+	Added sysutils/dfuibe_installer version 1.1.6 [joerg 2006-04-10]
+	Added sysutils/dfuife_cgi version 1.4 [joerg 2006-04-10]
+	Added sysutils/dfuife_curses version 1.5 [joerg 2006-04-10]
