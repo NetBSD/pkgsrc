@@ -179,7 +179,15 @@ typedef unsigned short sa_family_t;
 #endif
 
 #if ! HAVE_SOCKLEN_T
+#ifdef __sgi
+typedef int socklen_t;
+#else
 typedef unsigned int socklen_t;
+#endif
+#endif
+
+#ifdef UINT32_T /* needed for example on IRIX 5 */
+typedef unsigned UINT32_T uint32_t;
 #endif
 
 #if HAVE_AF_INET6 && HAVE_SOCKADDR_IN6 && HAVE_NS_IN6ADDRSZ
