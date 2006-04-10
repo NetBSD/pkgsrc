@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13530 2006/04/10 09:31:20 martti Exp $
+$NetBSD: CHANGES,v 1.13531 2006/04/10 12:08:07 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2000,3 +2000,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added print/tex-memhangul-ucs version 1.44c [minskim 2006-04-09]
 	Updated fonts/dejavu-ttf to 2.4.1 [salo 2006-04-10]
 	Updated net/jftpgw to 0.13.5 [martti 2006-04-10]
+	Updated www/lighttpd to 1.4.11 [joerg 2006-04-10]
