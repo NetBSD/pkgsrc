@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2006/03/14 01:14:30 jlam Exp $
+# $NetBSD: Makefile,v 1.137 2006/04/11 13:26:01 tron Exp $
 
 DISTNAME=		mutt-1.4.2.1i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -37,9 +37,33 @@ CONFIGURE_ARGS+=	--without-wc-funcs
 CONFIGURE_ENV+=		ac_cv_header_inttypes_h=no
 .endif
 
+SUBST_CLASSES+=		gpg
+SUBST_MESSAGE.gpg=	Fixing path to GnuPG binary.
+SUBST_STAGE.gpg=	post-patch
+SUBST_FILES.gpg=	contrib/gpg.rc
+SUBST_SED.gpg=		-e "s,/usr/bin/gpg,gpg,g"
+
+SUBST_CLASSES+=		docdir
+SUBST_MESSAGE.docdir=	Fixing path to documentation directory.
+SUBST_STAGE.docdir=	post-patch
+SUBST_FILES.docdir=	doc/mutt.man
+SUBST_SED.docdir=	-e "s,/usr/local/doc/mutt/,${DOCDIR}/,g"
+
+SUBST_CLASSES+=		confdir
+SUBST_MESSAGE.confdir=	Fixing path do configuration directory.
+SUBST_STAGE.confdir=	post-patch
+SUBST_FILES.confdir=	doc/mutt.man
+SUBST_SED.confdir=	-e "s,/etc/,${PKG_SYSCONFDIR}/,g"
+
+SUBST_CLASSES+=		prefix
+SUBST_MESSAGE.prefix=	Fixing installation directory.
+SUBST_STAGE.prefix=	post-patch
+SUBST_FILES.prefix=	doc/mutt.man
+SUBST_SED.prefix=	-e "s,/usr/local/,${PREFIX}/,g"
+
 .if ${OPSYS} == "Interix"
 SUBST_CLASSES+=		mgroup
-SUBST_MESSAGE.mgroup=	"Configuring mail group."
+SUBST_MESSAGE.mgroup=	Configuring mail group.
 SUBST_STAGE.mgroup=	post-patch
 SUBST_FILES.mgroup=	configure
 SUBST_SED.mgroup=	-e "s,DOTLOCK_GROUP='mail',DOTLOCK_GROUP='+Administrators',"
@@ -64,30 +88,11 @@ CONF_FILES=		${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 CONF_FILES+=		${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 FILES_SUBST+=		DOCDIR=${DOCDIR:Q}
 
-.if exists(${WRKSRC}/mutt_dotlock)
-PLIST_SUBST+=		MUTT_DOTLOCK=
-.else
-PLIST_SUBST+=		MUTT_DOTLOCK="@comment "
-.endif
-INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
+INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
+PLIST_SRC=		${WRKDIR}/PLIST
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-
-# Fix some absolute paths in installed files.
-post-build:
-	for file in ${WRKSRC}/contrib/gpg.rc; do			\
-		${MV} -f $$file $$file.save;				\
-		${SED}	-e "s,/usr/bin/gpg,gpg,g"			\
-			$$file.save > $$file;				\
-	done
-	for file in ${WRKSRC}/doc/mutt.man; do				\
-		${MV} -f $$file $$file.save;				\
-		${SED}	-e "s,/etc/,${PKG_SYSCONFDIR}/,g"		\
-			-e "s,/usr/local/doc/mutt/,${DOCDIR}/,g"	\
-			-e "s,/usr/local/,${PREFIX}/,g"			\
-			$$file.save > $$file;				\
-	done
 
 # Pre-create some directories and symlinks used during the installation
 # process.
@@ -98,9 +103,13 @@ pre-install:
 	${RM} -f ${DOCDIR}/samples
 	${LN} -sf ${EGDIR} ${DOCDIR}/samples
 
-.if (${PKG_INSTALLATION_TYPE} == "pkgviews")
 post-install:
+.if (${PKG_INSTALLATION_TYPE} == "pkgviews")
 	${MV} ${PREFIX}/man/man5/mutt-mbox.5 ${PREFIX}/man/man5/mbox.5
 .endif
+	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	@if [ -f ${PREFIX}/bin/mutt_dotlock ]; then \
+		${ECHO} "bin/mutt_dotlock" >> ${PLIST_SRC}; \
+	fi
 
 .include "../../mk/bsd.pkg.mk"
