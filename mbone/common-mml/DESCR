@@ -1,7 +1,5 @@
 The UCL common multimedia library implements a number of algorithms and
-protocols needed by a number of our applications. It compiles standalone
-on a range of Unix systems (Solaris, Linux, Irix, FreeBSD) and on Windows
-95/98/NT.
+protocols needed by a number of our applications.
 
 The following protocols/algorithms are included in the library:
 
@@ -13,3 +11,5 @@ The following protocols/algorithms are included in the library:
  * DES
  * RTP
  * Mbus
+ * SAP
+ * SDP
