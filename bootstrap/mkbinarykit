@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: mkbinarykit,v 1.14 2006/04/10 18:29:24 joerg Exp $
+# $NetBSD: mkbinarykit,v 1.15 2006/04/11 14:35:48 joerg Exp $
 #
 # Make a binary bootstrap kit and place it in targetdir (or current
 # working directory if not specified). The mk.conf.example file is
@@ -41,7 +41,9 @@ AIX)
 	;;
 DragonFly)
 	case "$osrev" in
-	1.0* | 1.1 | 1.1[^0-9]* | 1.2.* | 1.3.*)
+	1.1[0-9]*)
+		;;
+	1.0* | 1.1 | 1.2.* | 1.3.*)
 		# Don't use the ports /var/db/pkg
 		pkgdbdir=$prefix/pkgdb
 		;;
