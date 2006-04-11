@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2006/04/08 21:02:26 reed Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/04/11 21:43:20 reed Exp $
 #
 
 DISTNAME=		evince-0.5.2
@@ -26,7 +26,6 @@ pre-configure:
 	${ECHO} "echo 8.51" >${BUILDLINK_DIR}/bin/gs
 	${CHMOD} +x ${BUILDLINK_DIR}/bin/gs
 
-.include "../../devel/GConf2/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
