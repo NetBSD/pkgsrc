@@ -1,0 +1,28 @@
+$NetBSD: patch-ag,v 1.1 2006/04/11 21:24:09 wiz Exp $
+
+--- LTmakefile.in.orig 2006-03-09 16:22:00.000000000 +0900
++++ LTmakefile.in
+@@ -37,7 +37,7 @@ MYLIBDIR = @libdir@
+ MYBINDIR = @bindir@
+ MYMAN1DIR = @mandir@/man1
+ MYMAN3DIR = @mandir@/man3
+-MYSHAREDIR = $(prefix)/share/$(PACKAGE)
++MYSHAREDIR = $(prefix)/share/doc/$(PACKAGE)
+ MYPCDIR = @libdir@/pkgconfig
+
+ # Building binaries
+@@ -46,11 +46,11 @@ CC = gcc
+ CFLAGS = -I. @MYDEFS@ -D_XOPEN_SOURCE=1 -D_XOPEN_SOURCE_EXTENDED=1 \
+   -D_XOPEN_SOURCE_EXTENDED=1 -D_GNU_SOURCE=1 -D_HPUX_SOURCE=1 \
+   -D_POSIX_MAPPED_FILES=1 -D_POSIX_SYNCHRONIZED_IO=1 \
+-  -DPIC=1 -D_REENTRANT=1 -O3
++  -DPIC=1 $(PTHREAD_CFLAGS) -O3
+ LD = gcc
+-LIBLDFLAGS = -rpath $(MYLIBDIR) -R $(MYLIBDIR) \
++LIBLDFLAGS = @LDFLAGS@ -rpath $(MYLIBDIR) -R $(MYLIBDIR) \
+   -version-info $$(($(LIBVER)+$(LIBREV))):0:$(LIBREV) @LIBS@
+-LDFLAGS = -rpath $(MYLIBDIR) -R $(MYLIBDIR) -L. -lqdbm @LIBS@
++LDFLAGS = @LDFLAGS@ -rpath $(MYLIBDIR) -R $(MYLIBDIR) -L. -lqdbm @LIBS@
+ INSTALL = install
+ MKDIR = mkdir -p
+ CP = cp -rf
