@@ -1,0 +1,44 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/11 17:40:01 minskim Exp $
+bin/ko-po-check
+share/ko-po-check/KPC/po.py
+share/ko-po-check/KPC/po.pyc
+share/ko-po-check/KPC/po.pyo
+share/ko-po-check/KPC/poparse.py
+share/ko-po-check/KPC/poparse.pyc
+share/ko-po-check/KPC/poparse.pyo
+share/ko-po-check/checks/convention/capital_mnemonic.py
+share/ko-po-check/checks/convention/capital_mnemonic.pyc
+share/ko-po-check/checks/convention/capital_mnemonic.pyo
+share/ko-po-check/checks/convention/consistency.py
+share/ko-po-check/checks/convention/consistency.pyc
+share/ko-po-check/checks/convention/consistency.pyo
+share/ko-po-check/checks/convention/copyright.py
+share/ko-po-check/checks/convention/copyright.pyc
+share/ko-po-check/checks/convention/copyright.pyo
+share/ko-po-check/checks/convention/gnome.py
+share/ko-po-check/checks/convention/gnome.pyc
+share/ko-po-check/checks/convention/gnome.pyo
+share/ko-po-check/checks/convention/kde.py
+share/ko-po-check/checks/convention/kde.pyc
+share/ko-po-check/checks/convention/kde.pyo
+share/ko-po-check/checks/language/chosaalternative.py
+share/ko-po-check/checks/language/chosaalternative.pyc
+share/ko-po-check/checks/language/chosaalternative.pyo
+share/ko-po-check/checks/language/spell.py
+share/ko-po-check/checks/language/spell.pyc
+share/ko-po-check/checks/language/spell.pyo
+share/ko-po-check/checks/language/typo2bul.py
+share/ko-po-check/checks/language/typo2bul.pyc
+share/ko-po-check/checks/language/typo2bul.pyo
+share/ko-po-check/checks/terminology/gnomeguide.py
+share/ko-po-check/checks/terminology/gnomeguide.pyc
+share/ko-po-check/checks/terminology/gnomeguide.pyo
+share/ko-po-check/checks/terminology/gnomeui.py
+share/ko-po-check/checks/terminology/gnomeui.pyc
+share/ko-po-check/checks/terminology/gnomeui.pyo
+@dirrm share/ko-po-check/checks/terminology
+@dirrm share/ko-po-check/checks/language
+@dirrm share/ko-po-check/checks/convention
+@dirrm share/ko-po-check/checks
+@dirrm share/ko-po-check/KPC
+@dirrm share/ko-po-check
