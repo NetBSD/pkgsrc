@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4860 2006/04/10 09:31:22 martti Exp $
+$NetBSD: TODO,v 1.4861 2006/04/11 18:40:59 minskim Exp $
 
 Suggested new packages
 ======================
@@ -406,7 +406,6 @@ Suggested package updates
 	o cmake-2.2.3
 	o cocoon-2.1.9
 	o columba-1.0RC1
-	o common-mml-1.2.16
 	o compface-1.5.2
 	o conglomerate-0.9.1
 	o conserver-8.1.13

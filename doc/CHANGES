@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13541 2006/04/11 17:41:47 minskim Exp $
+$NetBSD: CHANGES,v 1.13542 2006/04/11 18:40:59 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2018,3 +2018,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/jchkmail to 1.3.1anb1 [manu 2006-04-11]
 	Updated graphics/lib3ds to 1.2.0nb5 [jmmv 2006-04-11]
 	Added devel/ko-po-check version 0.5 [minskim 2006-04-11]
+	Updated mbone/common-mml to 1.2.16 [minskim 2006-04-11]
