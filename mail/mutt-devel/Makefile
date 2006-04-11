@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2006/03/14 01:14:30 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2006/04/11 13:57:32 jlam Exp $
 
 DISTNAME=		mutt-1.5.11
-PKGREVISION=	3
+PKGREVISION=		4
 CATEGORIES=		mail
 MUTT_SITES=		ftp://ftp.mutt.org/mutt/ \
 			ftp://ftp.stealth.net/pub/mirrors/ftp.mutt.org/pub/mutt/ \
@@ -23,7 +23,7 @@ USE_TOOLS+=		perl:run
 REPLACE_PERL=		*.pl */*.pl
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}			\
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}		\
 			--with-docdir=${PREFIX}/share/doc/mutt		\
 			--without-included-gettext			\
 			--enable-pop					\
@@ -52,6 +52,8 @@ CONF_FILES=		${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 CONF_FILES+=		${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 FILES_SUBST+=		DOCDIR=${DOCDIR:Q}
 
+# Define WRKSRC explicitly so we can use its value below.
+WRKSRC=			${WRKDIR}/${DISTNAME}
 .if exists(${WRKSRC}/mutt_dotlock)
 PLIST_SUBST+=		MUTT_DOTLOCK=
 .else

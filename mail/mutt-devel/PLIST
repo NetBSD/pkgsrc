@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2005/10/03 14:16:53 tonio Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/04/11 13:57:32 jlam Exp $
 bin/flea
-bin/mutt
+${MUTT}bin/mutt
 bin/muttbug
 ${MUTT_DOTLOCK}bin/mutt_dotlock
 bin/pgpewrap
