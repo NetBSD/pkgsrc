@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2006/04/11 06:12:02 reed Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/11 21:43:20 reed Exp $
 #
 
 .include "../../print/evince/Makefile.common"
 
-PKGREVISION=		1
+PKGREVISION=		2
 
 COMMENT=		Document viewer for the GNOME Desktop
 
@@ -25,6 +25,7 @@ GCONF2_SCHEMAS+=	evince-thumbnailer-dvi.schemas
 PLIST_SUBST+=		DVI="@comment "
 .endif
 
+.include "../../devel/GConf2/schemas.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
