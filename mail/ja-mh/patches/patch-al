@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.2 2004/11/29 05:09:43 taca Exp $
+$NetBSD: patch-al,v 1.3 2006/04/11 15:08:38 joerg Exp $
 
---- uip/vmh.c.orig	2004-10-12 16:02:00.000000000 +0900
+--- uip/vmh.c.orig	2006-04-11 14:16:00.000000000 +0000
 +++ uip/vmh.c
-@@ -113,6 +113,9 @@ void     __cputchar __P((int));
+@@ -113,13 +113,20 @@ void     __cputchar __P((int));
  #define	SMALLMOVE	1
  #define	LARGEMOVE	10
  
@@ -12,7 +12,19 @@ $NetBSD: patch-al,v 1.2 2004/11/29 05:09:43 taca Exp $
  
  #define	XYZ			/* XXX */
  
-@@ -222,6 +225,15 @@ static struct ltchars ltc;
+-#if (defined(__FreeBSD__) && __FreeBSD__ >= 5) || (defined(linux))
++#if (defined(__FreeBSD__) && __FreeBSD__ >= 5) || (defined(linux)) || defined(__DragonFly__)
+ struct ldat
+ {
++#ifdef __DragonFly__
++	char		*text;
++#else
+ 	NCURSES_CH_T	*text;
++#endif
+ 	NCURSES_SIZE_T	firstchar;
+ 	NCURSES_SIZE_T	lastchar;
+ 	NCURSES_SIZE_T	oldindex;
+@@ -222,6 +229,15 @@ static struct ltchars ltc;
  #endif
  #endif	/* TIOCGLTC */
  
@@ -28,7 +40,15 @@ $NetBSD: patch-al,v 1.2 2004/11/29 05:09:43 taca Exp $
  
  #if !defined(SYS5) && !defined(BSD44) && !defined(TERMINFO)
  int	_putchar ();
-@@ -348,7 +360,11 @@ static  vmh () {
+@@ -239,7 +255,6 @@ static TYPESIG	TSTPser ();
+ 
+ 
+ 					/* MISCELLANY */
+-extern int  errno;
+ #if !defined(BSD44) && !defined(__GNU_LIBRARY__)
+ extern int  sys_nerr;
+ extern char *sys_errlist[];
+@@ -348,7 +363,11 @@ static  vmh () {
  	wclrtoeol (Command);
  	wrefresh (Command);
  
@@ -41,7 +61,7 @@ $NetBSD: patch-al,v 1.2 2004/11/29 05:09:43 taca Exp $
  	    case NOTOK: 
  		break;
  
-@@ -808,6 +824,9 @@ static int  WINinit (nprog) {
+@@ -808,6 +827,9 @@ static int  WINinit (nprog) {
      sideground ();
  
  #ifndef	TERMINFO
@@ -51,7 +71,7 @@ $NetBSD: patch-al,v 1.2 2004/11/29 05:09:43 taca Exp $
      if (CM == NULL)
  #else	/* TERMINFO */
      if (cursor_address == NULL)	/* assume mtr wanted "cm", not "CM" */
-@@ -822,6 +841,15 @@ static int  WINinit (nprog) {
+@@ -822,6 +844,15 @@ static int  WINinit (nprog) {
  #ifndef	TERMINFO
      if (tgetflag ("xt") || tgetnum ("sg") > 0)
  	SO = SE = US = UE = NULL;
@@ -67,7 +87,7 @@ $NetBSD: patch-al,v 1.2 2004/11/29 05:09:43 taca Exp $
  #else	/* TERMINFO */
  /*
   * If termcap mapped directly to terminfo, we'd use the following:
-@@ -862,21 +890,36 @@ static int  WINinit (nprog) {
+@@ -862,21 +893,36 @@ static int  WINinit (nprog) {
  
  /*  */
  
@@ -108,7 +128,7 @@ $NetBSD: patch-al,v 1.2 2004/11/29 05:09:43 taca Exp $
  	    case '\f':
  		wrefresh (curscr);
  		break;
-@@ -1382,7 +1425,7 @@ WINDOW *w;
+@@ -1382,7 +1428,7 @@ WINDOW *w;
  	    lp -> l_buf[i] = w -> lines[getcury(w)] -> line[i].ch;
  #else
  	    wmove(w, getcury(w), i);
@@ -117,7 +137,7 @@ $NetBSD: patch-al,v 1.2 2004/11/29 05:09:43 taca Exp $
  #endif
  	}
  	lp -> l_buf[getmaxx(w)] = '\0';
-@@ -1413,8 +1456,12 @@ WINDOW *w;
+@@ -1413,8 +1459,12 @@ WINDOW *w;
      }
  #endif /* __NCURSES_H */
      for (cp = lp -> l_buf + strlen (lp -> l_buf) - 1; cp >= lp -> l_buf; cp--)
@@ -131,7 +151,7 @@ $NetBSD: patch-al,v 1.2 2004/11/29 05:09:43 taca Exp $
  	else
  	    break;
  
-@@ -1579,7 +1626,9 @@ static	TTYoff () {
+@@ -1579,7 +1629,9 @@ static	TTYoff () {
  
      INTR = intrc;
  #ifndef	SYS5
@@ -141,7 +161,7 @@ $NetBSD: patch-al,v 1.2 2004/11/29 05:09:43 taca Exp $
  #else	/* SYS5 */
  #if defined(TCGETATTR) && !defined(TCSETA) && defined(TCSANOW)
      (void) tcsetattr (fileno (stdin), TCSANOW, &sg);
-@@ -1591,6 +1640,9 @@ static	TTYoff () {
+@@ -1591,6 +1643,9 @@ static	TTYoff () {
      leaveok (curscr, TRUE);
      mvcur (0, COLS - 1, LINES - 1, 0);
      endwin ();
