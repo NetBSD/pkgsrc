@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.11 2006/04/11 08:10:41 joerg Exp $
+
+--- conf/Makefile.in.orig	2006-04-10 16:42:27.000000000 +0000
++++ conf/Makefile.in
+@@ -23,7 +23,7 @@ SHELL=/bin/sh
+ prefix=@prefix@
+ 
+ SPOOLDIR=$(DESTDIR)@SPOOLDIR@
+-CONFDIR=$(DESTDIR)@CONFDIR@
++CONFDIR=$(DESTDIR)$(prefix)/share/examples/wwwoffle
+ 
+ REAL_SPOOLDIR=@SPOOLDIR@
+ REAL_CONFDIR=@CONFDIR@
+@@ -45,6 +45,7 @@ compile : conf-file
+ ######## INSTALLATION ########
+ 
+ install : compile
++	
+ 	sed -e 's%SPOOLDIR%$(REAL_SPOOLDIR)%' -e 's%CONFDIR%$(REAL_CONFDIR)%' < wwwoffle.conf > wwwoffle.conf.install
+ 	[ -x $(CONFDIR) ] || $(INSTALL) -d -m 750 $(CONFDIR)
+ 	@[ ! -f $(DESTDIR)/etc/wwwoffle.conf ] || \
