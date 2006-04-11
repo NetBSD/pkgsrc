@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13537 2006/04/11 02:28:12 jlam Exp $
+$NetBSD: CHANGES,v 1.13538 2006/04/11 05:24:54 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2013,3 +2013,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added print/tex-abc version 1.0 [minskim 2006-04-10]
 	Updated mail/mailman to 2.1.8rc1 [bouyer 2006-04-10]
 	Updated sysutils/pv to 0.9.6 [jlam 2006-04-11]
+	Updated mail/squirrelmail to 1.4.6nb1 [martti 2006-04-11]
+	Updated mail/squirrelmail-locales to 1.4.6nb3 [martti 2006-04-11]
