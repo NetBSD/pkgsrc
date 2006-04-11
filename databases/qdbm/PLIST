@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/02 20:13:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/11 21:24:08 wiz Exp $
 bin/cbcodec
 bin/cbtest
 bin/crmgr
@@ -25,10 +25,7 @@ include/odeum.h
 include/relic.h
 include/villa.h
 include/vista.h
-lib/libqdbm.a
-lib/libqdbm.so
-lib/libqdbm.so.12
-lib/libqdbm.so.12.8.0
+lib/libqdbm.la
 lib/pkgconfig/qdbm.pc
 man/man1/cbcodec.1
 man/man1/cbtest.1

@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.6 2006/04/02 20:13:54 wiz Exp $
+$NetBSD: distinfo,v 1.7 2006/04/11 21:24:08 wiz Exp $
 
-SHA1 (qdbm-1.8.47.tar.gz) = c945fe39b6718de3d1c5b03bba5882fc8e567c94
-RMD160 (qdbm-1.8.47.tar.gz) = 1a44b37194eaf1e39181f6d99091e6942c4b6ce2
-Size (qdbm-1.8.47.tar.gz) = 893430 bytes
+SHA1 (qdbm-1.8.48.tar.gz) = fd5aea55ff7620c6c6947d4a3d3d576ec3c779a7
+RMD160 (qdbm-1.8.48.tar.gz) = d9ae92666efe7b3c24bebde6d07ee39d4cf7bf50
+Size (qdbm-1.8.48.tar.gz) = 894581 bytes
 SHA1 (patch-aa) = 4e9cc93351f577c33663065fcb8e8919bd1a873e
 SHA1 (patch-ab) = cfd59f30dc058766357461ca3265748c52665fd6
 SHA1 (patch-ac) = 31164f476b2e092b2a2664e2599a87e340550f6d
 SHA1 (patch-ad) = 0ec2622a8d2a201051a3d7c835e12804041c70ed
 SHA1 (patch-ae) = 06543315d0c9350b024a10cd4747107626de3526
 SHA1 (patch-af) = f73702a19230eca143945703b2bdd35b3282d636
+SHA1 (patch-ag) = eaa8e62fa2060aada5536b2e38f38467160f6770
