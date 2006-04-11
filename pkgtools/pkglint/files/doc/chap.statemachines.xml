@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.statemachines.xml,v 1.1 2006/02/26 23:38:07 rillig Exp $ -->
+<!-- $NetBSD: chap.statemachines.xml,v 1.2 2006/04/11 18:41:50 rillig Exp $ -->
 
 <chapter id="statemachines">
 <title>State machines</title>
@@ -59,6 +59,18 @@
 	<textobject>(Here should be a drawing of the state transitions.)</textobject>
 	</mediaobject>
 	</figure>
+
+	<para>The states on the left side are for parsing context diffs,
+	the ones on the right side are for unified diffs. Some of the
+	state names are highly abbreviated as follows. The first letter
+	gives the format of the patch, which is <quote>c</quote> for
+	context diffs and <quote>u</quote> for unified diffs. The second
+	letter gives the current syntactical level, which is
+	<quote>f</quote> for a file header, <quote>h</quote> for a hunk
+	header, or <quote>l</quote> for the hunk lines. The third letter
+	describes the action that belongs to the line, which is
+	<quote>a</quote> for an addition, and <quote>d</quote> for a
+	deletion.</para>
 
 </sect1>
 
