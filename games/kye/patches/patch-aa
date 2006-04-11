@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/05/18 16:00:08 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2006/04/11 08:34:34 drochner Exp $
 
---- Kye.orig	2005-05-18 12:55:23.000000000 +0200
-+++ Kye
-@@ -26,7 +26,7 @@ from string import upper
- import sys
- import gobject
+--- kye/common.py.orig	2006-04-10 15:30:09.000000000 +0200
++++ kye/common.py
+@@ -24,7 +24,7 @@ ysize = 20
+ 
+ version = "0.7"
  
 -kyepaths = ("levels","/usr/local/share/kye","/usr/share/kye")
-+kyepaths = ("@PREFIX@/share/kye",)
++kyepaths = ("levels","@PREFIX@/share/kye")
  
  def tryopen(filename,paths):
      try:
