@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/02 20:13:54 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/11 21:24:08 wiz Exp $
 #
 
 .include "Makefile.common"
@@ -7,7 +7,10 @@ CATEGORIES=	databases
 
 COMMENT=	Quick Database Manager - library of routines for managing a db
 
+USE_LIBTOOL=	yes
+MAKEFILE=	LTmakefile
 GNU_CONFIGURE=	yes
+
 CONFIGURE_ARGS+=	--enable-zlib
 CONFIGURE_ARGS+=	--enable-iconv
 CONFIGURE_ARGS+=	--enable-bzip
