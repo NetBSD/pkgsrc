@@ -1,13 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/17 09:46:00 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 2006/04/11 18:39:41 minskim Exp $
 
---- Makefile.in.orig	Tue May 16 19:02:48 2000
-+++ Makefile.in
-@@ -6,11 +6,11 @@
- DEFS   = @DEFS@
- CFLAGS = @CFLAGS@ $(DEFS)
- LIBS   = @LIBS@
--CC     = @CC@
-+CC     = ${LIBTOOL} @CC@
+--- src/Makefile.in.orig	2003-05-28 04:38:56.000000000 -0700
++++ src/Makefile.in
+@@ -10,7 +10,7 @@ CC     = @CC@
  AR     = ar
  RANLIB = @RANLIB@
  HOST   = @host@
@@ -16,20 +11,26 @@ $NetBSD: patch-ab,v 1.1.1.1 2000/12/17 09:46:00 hubertf Exp $
  
  exec_prefix=@exec_prefix@
  
-@@ -30,8 +30,8 @@
- 	$(CC) $(TEST_OBJS) $(CFLAGS) $(TARGET) $(LIBS) -o test-libcommon
- 	
+@@ -24,14 +24,14 @@ SRCS = $(OBJS:%.o=%.c)
+ all: version.h $(TARGET) 
+ 
  $(TARGET): $(OBJS)
 -	$(AR) r $(TARGET) $(OBJS)
 -	$(RANLIB) $(TARGET)
-+	$(CC) $(OBJS:S/.o/.lo/) -o $(TARGET) \
-+		-rpath ${PREFIX}/lib -version-info 1:2:0
++	$(LIBTOOL) --mode=link $(CC) $(OBJS:S/.o/.lo/) -o $(TARGET) \
++		-rpath ${PREFIX}/lib -version-number 1:2:16
  
- version.h:	VERSION
- 	sed -e 's/.*/#define CCL_VERSION "v&"/' VERSION > version.h
-@@ -57,3 +57,5 @@
+ version.h: ../VERSION
+ 	sed -e 's/.*/#define CCL_VERSION "v&"/' $? > version.h
+ 
+ .c.o:
+-	$(CC) $(CFLAGS) $(INC) -c $<
++	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) $(INC) -c $<
+ 
+ clean:
+ 	-rm -f $(OBJS) version.h $(TARGET) tags 
+@@ -50,4 +50,3 @@ release:
+ 
  depend: $(SRCS)
  	makedepend $(DEFS) $(INC) $(SRCS)
- 
-+install:
-+	${LIBTOOL} install -c ${TARGET} ${PREFIX}/lib
+-

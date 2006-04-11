@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1 2002/09/27 01:50:05 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.2 2006/04/11 18:39:41 minskim Exp $
 
---- inet_ntop.c.orig	Thu Dec  2 11:07:31 1999
-+++ inet_ntop.c
+--- src/inet_ntop.c.orig	1999-12-02 08:07:31.000000000 -0800
++++ src/inet_ntop.c
 @@ -16,7 +16,7 @@
   * SOFTWARE.
   */
