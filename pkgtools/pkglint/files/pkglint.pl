@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.549 2006/03/12 16:55:51 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.550 2006/04/11 17:44:29 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1484,7 +1484,9 @@ sub get_regex_plurals() {
 	);
 	my @plurals_reluctantly_accepted = qw(
 		CRYPTO
+		DEINSTALL_TEMPLATE
 		FIX_RPATH
+		INSTALL_TEMPLATE
 		PYTHON_VERSIONS_INCOMPATIBLE
 		REPLACE_INTERPRETER
 		REPLACE_PERL
@@ -4781,7 +4783,7 @@ sub checkfile($) {
 	} elsif ($basename =~ qr"^MESSAGE") {
 		$opt_check_MESSAGE and checkfile_MESSAGE($fname);
 
-	} elsif ($basename =~ qr"^patch-[A-Za-z0-9]*$") {
+	} elsif ($basename =~ qr"^patch-[A-Za-z0-9]*$" || $fname =~ qr"(?:^|/)patches/manual-[^/]*$") {
 		$opt_check_patches and checkfile_patch($fname);
 
 	} elsif ($fname =~ qr"(?:^|/)patches/[^/]*$") {
