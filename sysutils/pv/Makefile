@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/04/07 19:54:17 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/11 02:28:09 jlam Exp $
 #
 
-DISTNAME=		pv-0.8.6
-PKGREVISION=		1
+DISTNAME=		pv-0.9.6
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.ivarch.com/programs/sources/
 MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=pipeviewer/}
@@ -18,11 +17,21 @@ USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes
 INFO_FILES=		# PLIST
 
+# Don't gzip the installed info file and man pages.
+CONFIGURE_ENV+=		DO_GZIP=${TOOLS_CMD.true}
+
+DOCDIR=			${PREFIX}/share/doc/pv
+INSTALLATION_DIRS=	${DOCDIR}
+
+# Grab list of files to install from the PLIST.
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pv
-.for i in ../README index.html manual.html quickref.txt lsm NEWS TODO COPYING
-	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${PREFIX}/share/doc/pv
-.endfor
+	dir=${DOCDIR:S/^${PREFIX}\///:Q}; cd ${WRKSRC}/doc;		\
+	${GREP} "^$$dir/" ${PKGDIR}/PLIST | ${SED} "s|^$$dir/||" |	\
+	while read file; do						\
+		test ! -f "$$file" ||					\
+			${INSTALL_DATA} "$$file" ${PREFIX}/$$dir;	\
+	done
+	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
