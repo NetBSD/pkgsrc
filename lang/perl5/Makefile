@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.118 2006/04/09 07:11:13 jlam Exp $
+# $NetBSD: Makefile,v 1.119 2006/04/11 22:51:23 jlam Exp $
 
 DISTNAME=	perl-5.8.8
+PKGREVISION=	1
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
 EXTRACT_SUFX=	.tar.bz2
@@ -89,6 +90,13 @@ CONFIGURE_ARGS+=	-Dvendorprefix=${PERL5_VENDORPREFIX:Q}
 CONFIGURE_ARGS+=	-Dscriptdir=${PERL5_PERLBASE:Q}/bin
 CONFIGURE_ARGS+=	-Dsitescript=${PERL5_SITEBASE:Q}/bin
 CONFIGURE_ARGS+=	-Dvendorscript=${PERL5_VENDORBASE:Q}/bin
+
+# Put any compiled binaries into vendor- and site-specific locations to
+# avoid conflicts with each other.  The perllink script will handle all
+# the appropriate symlinking.
+#
+CONFIGURE_ARGS+=	-Dsitebin=${PERL5_SITEBASE:Q}/bin
+CONFIGURE_ARGS+=	-Dvendorbin=${PERL5_VENDORBASE:Q}/bin
 
 # Put the API-specific files into API-specific directories instead
 # of the default version-specific directories.
