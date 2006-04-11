@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2006/03/14 01:14:34 jlam Exp $
+# $NetBSD: Makefile,v 1.65 2006/04/11 08:10:40 joerg Exp $
 
 DISTNAME=	wwwoffle-2.8e
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.gedanken.freeserve.co.uk/download-wwwoffle/ \
 		ftp://ftp.ibiblio.org/pub/Linux/apps/www/servers/
@@ -18,6 +18,8 @@ CONFIGURE_ARGS+= --with-confdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+= --with-spooldir=${VARBASE}/wwwoffle
 
 PKG_SYSCONFSUBDIR= 	wwwoffle
+CONF_FILES+=		${PREFIX}/share/examples/wwwoffle/wwwoffle.conf ${PKG_SYSCONFDIR}/wwwoffle.conf
+CONF_FILES_MODE=	0640
 PLIST_SUBST+=		GZIP_CMD=${GZIP_CMD:Q}
 
 RCD_SCRIPTS=		wwwoffled
@@ -41,13 +43,6 @@ pre-install:
 	${MKDIR} ${VARBASE}/wwwoffle/prevtime1
 
 post-install:
-	if [ -f ${PKG_SYSCONFDIR}/wwwoffle.conf.install ]; then \
-		${CP} -p ${PKG_SYSCONFDIR}/wwwoffle.conf.install \
-		  ${PREFIX}/share/examples/wwwoffle.conf; \
-	elif [ -f ${PKG_SYSCONFDIR}/wwwoffle.conf ]; then \
-		${CP} -p ${PKG_SYSCONFDIR}/wwwoffle.conf \
-		  ${PREFIX}/share/examples/wwwoffle.conf; \
-	fi
 	${INSTALL_PROGRAM} ${WRKSRC}/src/convert-cache \
 	  ${PREFIX}/sbin/wwwoffle-convert-cache
 	${INSTALL_PROGRAM} ${WRKSRC}/src/uncompress-cache \
