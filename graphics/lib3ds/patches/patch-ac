@@ -1,13 +1,19 @@
-$NetBSD: patch-ac,v 1.1 2003/05/24 09:32:34 salo Exp $
+$NetBSD: patch-ac,v 1.2 2006/04/11 14:47:06 jmmv Exp $
 
---- tools/Makefile.in.orig	2002-01-14 15:24:33.000000000 +0100
-+++ tools/Makefile.in	2003-05-24 10:17:03.000000000 +0200
-@@ -91,7 +91,7 @@
+--- lib3ds/Makefile.am.orig	2002-01-14 13:27:45.000000000 +0100
++++ lib3ds/Makefile.am
+@@ -24,9 +24,12 @@ lib3dsdir=$(includedir)/lib3ds
  
+ INCLUDES = -I$(top_srcdir)
  
- LDADD = \
--  $(top_builddir)/lib3ds/lib3ds.a \
-+  -L$(top_builddir)/lib3ds -l3ds \
-   @DMALLOC_LIBS@ -lm
+-lib_LIBRARIES = lib3ds.a
++lib_LTLIBRARIES = lib3ds.la
  
- 
+-lib3ds_a_SOURCES = \
++lib3ds_la_LIBADD = -lm
++lib3ds_la_LDFLAGS = -version-info 1
++
++lib3ds_la_SOURCES = \
+   io.c \
+   float.c \
+   vector.c \
