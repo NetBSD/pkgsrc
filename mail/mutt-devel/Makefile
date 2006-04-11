@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/04/11 13:57:32 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2006/04/11 14:13:21 jlam Exp $
 
 DISTNAME=		mutt-1.5.11
 PKGREVISION=		4
@@ -51,6 +51,7 @@ EGDIR=			${PREFIX}/share/examples/mutt
 CONF_FILES=		${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 CONF_FILES+=		${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 FILES_SUBST+=		DOCDIR=${DOCDIR:Q}
+INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
 
 # Define WRKSRC explicitly so we can use its value below.
 WRKSRC=			${WRKDIR}/${DISTNAME}
@@ -78,9 +79,5 @@ post-build:
 			-e "s,/usr/local/,${PREFIX}/,g"			\
 			$$file.save > $$file;				\
 	done
-
-pre-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
