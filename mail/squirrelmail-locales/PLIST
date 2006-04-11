@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/03/15 11:48:29 salo Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/04/11 05:24:36 martti Exp $
 share/squirrelmail/help/bg_BG/FAQ.hlp
 share/squirrelmail/help/bg_BG/addresses.hlp
 share/squirrelmail/help/bg_BG/basic.hlp
@@ -224,6 +224,15 @@ share/squirrelmail/help/th_TH/main_folder.hlp
 share/squirrelmail/help/th_TH/options.hlp
 share/squirrelmail/help/th_TH/read_mail.hlp
 share/squirrelmail/help/th_TH/search.hlp
+share/squirrelmail/help/uk_UA/FAQ.hlp
+share/squirrelmail/help/uk_UA/addresses.hlp
+share/squirrelmail/help/uk_UA/basic.hlp
+share/squirrelmail/help/uk_UA/compose.hlp
+share/squirrelmail/help/uk_UA/folders.hlp
+share/squirrelmail/help/uk_UA/main_folder.hlp
+share/squirrelmail/help/uk_UA/options.hlp
+share/squirrelmail/help/uk_UA/read_mail.hlp
+share/squirrelmail/help/uk_UA/search.hlp
 share/squirrelmail/help/zh_CN/FAQ.hlp
 share/squirrelmail/help/zh_CN/addresses.hlp
 share/squirrelmail/help/zh_CN/basic.hlp
@@ -263,6 +272,7 @@ share/squirrelmail/images/sec_remove_sr_YU.png
 share/squirrelmail/images/sec_remove_sv_SE.png
 share/squirrelmail/images/sec_remove_tr_TR.png
 share/squirrelmail/images/sec_remove_ug.png
+share/squirrelmail/images/sec_remove_uk_UA.png
 share/squirrelmail/locale/ar/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/ar/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/ar/setup.php
@@ -316,6 +326,8 @@ share/squirrelmail/locale/de_DE/LC_MESSAGES/login_alias.mo
 share/squirrelmail/locale/de_DE/LC_MESSAGES/login_alias.po
 share/squirrelmail/locale/de_DE/LC_MESSAGES/naguser.mo
 share/squirrelmail/locale/de_DE/LC_MESSAGES/naguser.po
+share/squirrelmail/locale/de_DE/LC_MESSAGES/newuser_wiz.mo
+share/squirrelmail/locale/de_DE/LC_MESSAGES/newuser_wiz.po
 share/squirrelmail/locale/de_DE/LC_MESSAGES/reply_buttons.mo
 share/squirrelmail/locale/de_DE/LC_MESSAGES/reply_buttons.po
 share/squirrelmail/locale/de_DE/LC_MESSAGES/restrict_senders.mo
@@ -556,6 +568,8 @@ share/squirrelmail/locale/nl_NL/LC_MESSAGES/calendar.mo
 share/squirrelmail/locale/nl_NL/LC_MESSAGES/calendar.po
 share/squirrelmail/locale/nl_NL/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/nl_NL/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/nl_NL/LC_MESSAGES/vacation_local.mo
+share/squirrelmail/locale/nl_NL/LC_MESSAGES/vacation_local.po
 share/squirrelmail/locale/nl_NL/setup.php
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/abook_import_export.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/abook_import_export.po
@@ -579,6 +593,10 @@ share/squirrelmail/locale/nn_NO/LC_MESSAGES/debugger.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/debugger.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/empty_folders.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/empty_folders.po
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/expire.mo
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/expire.po
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/folder_settings.mo
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/folder_settings.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/html_mail.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/html_mail.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/ldapquery.mo
@@ -587,8 +605,14 @@ share/squirrelmail/locale/nn_NO/LC_MESSAGES/limit_languages.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/limit_languages.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/login_alias.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/login_alias.po
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/mini.mo
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/mini.po
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/multilogin.mo
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/multilogin.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/naguser.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/naguser.po
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/proon.mo
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/proon.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/qmailadmin_login.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/qmailadmin_login.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/reply_buttons.mo
@@ -597,6 +621,8 @@ share/squirrelmail/locale/nn_NO/LC_MESSAGES/restrict_senders.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/restrict_senders.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/sasql.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/sasql.po
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/select_language.mo
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/select_language.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/serversidefilter.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/serversidefilter.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/show_ssl_link.mo
@@ -611,10 +637,14 @@ share/squirrelmail/locale/nn_NO/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/templates.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/templates.po
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/unsafe_image_rules.mo
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/unsafe_image_rules.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/vacation_local.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/vacation_local.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/verify_reply_to.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/verify_reply_to.po
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/web_search.mo
+share/squirrelmail/locale/nn_NO/LC_MESSAGES/web_search.po
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/yelp.mo
 share/squirrelmail/locale/nn_NO/LC_MESSAGES/yelp.po
 share/squirrelmail/locale/nn_NO/setup.php
@@ -731,6 +761,19 @@ share/squirrelmail/locale/tr_TR/setup.php
 share/squirrelmail/locale/ug/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/ug/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/ug/setup.php
+share/squirrelmail/locale/uk_UA/LC_MESSAGES/askuserinfo.mo
+share/squirrelmail/locale/uk_UA/LC_MESSAGES/askuserinfo.po
+share/squirrelmail/locale/uk_UA/LC_MESSAGES/custom_charset.mo
+share/squirrelmail/locale/uk_UA/LC_MESSAGES/custom_charset.po
+share/squirrelmail/locale/uk_UA/LC_MESSAGES/sasql.mo
+share/squirrelmail/locale/uk_UA/LC_MESSAGES/sasql.po
+share/squirrelmail/locale/uk_UA/LC_MESSAGES/serversidefilter.mo
+share/squirrelmail/locale/uk_UA/LC_MESSAGES/serversidefilter.po
+share/squirrelmail/locale/uk_UA/LC_MESSAGES/squirrelmail.mo
+share/squirrelmail/locale/uk_UA/LC_MESSAGES/squirrelmail.po
+share/squirrelmail/locale/uk_UA/LC_MESSAGES/web_search.mo
+share/squirrelmail/locale/uk_UA/LC_MESSAGES/web_search.po
+share/squirrelmail/locale/uk_UA/setup.php
 share/squirrelmail/locale/zh_CN/LC_MESSAGES/squirrelmail.mo
 share/squirrelmail/locale/zh_CN/LC_MESSAGES/squirrelmail.po
 share/squirrelmail/locale/zh_CN/setup.php
@@ -821,6 +864,8 @@ share/squirrelmail/locale/zh_TW/setup.php
 @dirrm share/squirrelmail/locale/sv_SE
 @dirrm share/squirrelmail/locale/tr_TR/LC_MESSAGES
 @dirrm share/squirrelmail/locale/tr_TR
+@dirrm share/squirrelmail/locale/uk_UA/LC_MESSAGES
+@dirrm share/squirrelmail/locale/uk_UA
 @dirrm share/squirrelmail/locale/zh_CN/LC_MESSAGES
 @dirrm share/squirrelmail/locale/zh_CN
 @dirrm share/squirrelmail/locale/zh_TW/LC_MESSAGES
@@ -850,4 +895,5 @@ share/squirrelmail/locale/zh_TW/setup.php
 @dirrm share/squirrelmail/help/sr_YU
 @dirrm share/squirrelmail/help/sv_SE
 @dirrm share/squirrelmail/help/th_TH
+@dirrm share/squirrelmail/help/uk_UA
 @dirrm share/squirrelmail/help/zh_CN
