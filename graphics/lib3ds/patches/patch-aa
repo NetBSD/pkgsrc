@@ -1,44 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2004/04/24 20:51:47 snj Exp $
+$NetBSD: patch-aa,v 1.3 2006/04/11 14:47:06 jmmv Exp $
 
---- examples/Makefile.in.orig	2002-01-14 06:24:34.000000000 -0800
-+++ examples/Makefile.in	2004-04-24 13:04:41.000000000 -0700
-@@ -88,26 +88,25 @@ INCLUDES = \
- @GLUT_CHECK_TRUE@PLAYER = @GLUT_CHECK_TRUE@player
- @GLUT_CHECK_FALSE@PLAYER = 
+--- configure.in.orig	2002-01-14 13:09:15.000000000 +0100
++++ configure.in
+@@ -38,7 +38,7 @@ AM_INIT_AUTOMAKE(lib3ds, $LIB3DS_VERSION
  
--noinst_PROGRAMS = \
-+PROGRAMS = \
-   3ds2rib \
--  $(PLAYER)
-+  player
+ dnl Checks for programs.
+ AC_PROG_CC
+-AC_PROG_RANLIB
++AC_PROG_LIBTOOL
+ CONFIGURE_GLUT(,)
  
- 
- LDADD = \
--  $(top_builddir)/lib3ds/lib3ds.a \
-+  -L$(top_builddir)/lib3ds -l3ds \
-   @DMALLOC_LIBS@ -lm
- 
- 
- player_SOURCES = player.c
- player_LDADD = \
--  $(top_builddir)/lib3ds/lib3ds.a \
-+  -L$(top_builddir)/lib3ds -l3ds -lGL -lGLU -lX11 -lXi -lXmu -lglut \
-   @GLUT_LIBS@ \
-   @DMALLOC_LIBS@ -lm
- 
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = ../config.h
- CONFIG_CLEAN_FILES =  glstub.h
--PROGRAMS =  $(noinst_PROGRAMS)
- 
- 
- DEFS = @DEFS@ -I. -I$(srcdir) -I..
-@@ -239,6 +238,8 @@ check: check-am
- installcheck-am:
- installcheck: installcheck-am
- install-exec-am:
-+	${BSD_INSTALL_PROGRAM} 3ds2rib ${PREFIX}/bin
-+	${BSD_INSTALL_PROGRAM} player ${PREFIX}/bin/3dsplayer
- install-exec: install-exec-am
- 
- install-data-am:
+ AC_MSG_CHECKING([for debugging mode])
