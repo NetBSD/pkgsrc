@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.49 2006/04/10 18:29:24 joerg Exp $
+# $NetBSD: bootstrap,v 1.50 2006/04/11 14:35:48 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -317,7 +317,10 @@ DragonFly)
 	check_prog mtreeprog mtree
 	machine_arch=`uname -p`
 	case `uname -r` in
-	1.0* | 1.1 | 1.1[^0-9]* | 1.2.* | 1.3.*)
+	1.1[0-9]*)
+		[ -z "$fetch_cmd" ] && fetch_cmd="/usr/bin/ftp"
+		;;
+	1.0* | 1.1 | 1.2.* | 1.3.*)
 		;;
 	*)
 		[ -z "$fetch_cmd" ] && fetch_cmd="/usr/bin/ftp"
