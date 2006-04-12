@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.137 2006/04/11 13:26:01 tron Exp $
+# $NetBSD: Makefile,v 1.138 2006/04/12 13:29:20 tron Exp $
 
 DISTNAME=		mutt-1.4.2.1i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -43,23 +43,13 @@ SUBST_STAGE.gpg=	post-patch
 SUBST_FILES.gpg=	contrib/gpg.rc
 SUBST_SED.gpg=		-e "s,/usr/bin/gpg,gpg,g"
 
-SUBST_CLASSES+=		docdir
-SUBST_MESSAGE.docdir=	Fixing path to documentation directory.
-SUBST_STAGE.docdir=	post-patch
-SUBST_FILES.docdir=	doc/mutt.man
-SUBST_SED.docdir=	-e "s,/usr/local/doc/mutt/,${DOCDIR}/,g"
-
-SUBST_CLASSES+=		confdir
-SUBST_MESSAGE.confdir=	Fixing path do configuration directory.
-SUBST_STAGE.confdir=	post-patch
-SUBST_FILES.confdir=	doc/mutt.man
-SUBST_SED.confdir=	-e "s,/etc/,${PKG_SYSCONFDIR}/,g"
-
-SUBST_CLASSES+=		prefix
-SUBST_MESSAGE.prefix=	Fixing installation directory.
-SUBST_STAGE.prefix=	post-patch
-SUBST_FILES.prefix=	doc/mutt.man
-SUBST_SED.prefix=	-e "s,/usr/local/,${PREFIX}/,g"
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	Fixing pathnames in manual pagae.
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	doc/mutt.man
+SUBST_SED.paths=	-e "s,/usr/local/doc/mutt/,${DOCDIR}/,g"
+SUBST_SED.paths+=	-e "s,/etc/,${PKG_SYSCONFDIR}/,g"
+SUBST_SED.paths+=	-e "s,/usr/local/,${PREFIX}/,g"
 
 .if ${OPSYS} == "Interix"
 SUBST_CLASSES+=		mgroup
