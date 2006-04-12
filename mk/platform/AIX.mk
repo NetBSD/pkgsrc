@@ -1,4 +1,4 @@
-# $NetBSD: AIX.mk,v 1.23 2006/03/18 21:40:44 jlam Exp $
+# $NetBSD: AIX.mk,v 1.24 2006/04/12 21:01:15 joerg Exp $
 #
 # Variable definitions for the AIX operating system.
 
@@ -92,4 +92,5 @@ SERIAL_DEVICES?=	/dev/tty0 \
 #GAMEOWN=		games
 #GAMEGRP=		games
 #GAMEMODE=		2555
+#GAMEDIRMODE=		0775
 #.endif
