@@ -1,4 +1,4 @@
-# $NetBSD: IRIX.mk,v 1.23 2006/04/10 13:38:36 schwarz Exp $
+# $NetBSD: IRIX.mk,v 1.24 2006/04/12 21:01:15 joerg Exp $
 #
 # Variable definitions for the IRIX operating system.
 
@@ -125,4 +125,5 @@ _OPSYS_MAX_CMDLEN_CMD=	/usr/sbin/sysconf ARG_MAX
 #GAMEOWN=		games
 #GAMEGRP=		games
 #GAMEMODE=		2555
+#GAMEDIRMODE=		0775
 #.endif

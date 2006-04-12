@@ -1,4 +1,4 @@
-# $NetBSD: UnixWare.mk,v 1.20 2006/03/18 21:40:45 jlam Exp $
+# $NetBSD: UnixWare.mk,v 1.21 2006/04/12 21:01:15 joerg Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
@@ -94,4 +94,5 @@ PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 #GAMEOWN=		games
 #GAMEGRP=		games
 #GAMEMODE=		2555
+#GAMEDIRMODE=		0775
 #.endif

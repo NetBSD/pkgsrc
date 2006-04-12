@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.18 2006/04/10 13:38:36 schwarz Exp $
+# $NetBSD: Darwin.mk,v 1.19 2006/04/12 21:01:15 joerg Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -107,4 +107,5 @@ CONFIGURE_ENV+=		ac_cv_func_poll=no
 #GAMEOWN=		games
 #GAMEGRP=		games
 #GAMEMODE=		2555
+#GAMEDIRMODE=		0775
 #.endif
