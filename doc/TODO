@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4869 2006/04/12 21:13:27 rillig Exp $
+$NetBSD: TODO,v 1.4870 2006/04/12 21:47:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -462,7 +462,6 @@ Suggested package updates
 	o eclipse-3.1.1
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o eel2-2.14.1
 	o efax-gtk-3.0.9
 	o egtk-0.3.6.2
 	o electricfence-2.4.16
@@ -554,7 +553,6 @@ Suggested package updates
 	o gnome-desktop-2.14.1.1
 	o gnome-pilot-2.0.13
 	o gnome-spell-1.0.7
-	o gnome-user-docs-2.14.2
 	o gnome-vfsmm-2.14.0
 	o gnomeicu-0.99.10
 	o gnus-5.10.8
@@ -768,7 +766,6 @@ Suggested package updates
 	o nagios-base-2.1
 	o nano-1.2.5 [pkg/32859]
 	o nap-1.5.3
-	o nautilus-2.14.1
 	o nawk-20041222
 	o ncftp2-2.8.2
 	o ncview-1.92e
@@ -1017,7 +1014,6 @@ Suggested package updates
 	o py-gnome2-2.14.0
 	o py-gnome2-extras-2.14.0
 	o py-gnutls-0.2.1
-	o py-gobject-2.10.1
 	o py-kenosis-0.96
 	o py-ldap-2.2.0
 	o py-logging-0.4.9.6
@@ -1042,7 +1038,6 @@ Suggested package updates
 	o py-zconfig-2.3.1
 	o pygopherd-2.0.13
 	o pysol-4.82
-	o python24-2.4.3
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
 	o qalculate-0.9.3
