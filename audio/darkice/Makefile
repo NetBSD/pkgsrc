@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2006/03/09 21:04:40 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/12 21:12:48 rillig Exp $
 #
 
-DISTNAME=	darkice-0.14
-PKGREVISION=	2
+DISTNAME=	darkice-0.15
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=darkice/}
 
@@ -15,10 +14,10 @@ USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--with-vorbis-prefix=${BUILDLINK_PREFIX.libvorbis}
 CONFIGURE_ARGS+=	--with-lame-prefix=${BUILDLINK_PREFIX.lame}
-LIBS+=			${LIBOSSAUDIO}
+LIBS+=			${LIBOSSAUDIO:Q}
 
 EGDIR=		${PREFIX}/share/examples/darkice
-HTMLDIR=	${PREFIX}/share/doc/html/darkice
+HTMLDIR=	${PREFIX}/share/doc/darkice
 
 CONF_FILES=	${EGDIR}/darkice.conf.default ${PKG_SYSCONFDIR}/darkice.conf
 
@@ -31,12 +30,11 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/man/darkice.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/man/darkice.cfg.5 \
 		${PREFIX}/man/man5/darkice.conf.5
-	for f in ${WRKSRC}/kdoc/*.html; do \
-		${INSTALL_DATA} $$f ${HTMLDIR}; \
-	done
+	cd ${WRKSRC}/doc/doxygen/html && ${INSTALL_DATA} *.html ${HTMLDIR}
 
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
+.include "../../audio/jack/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
