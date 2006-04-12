@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2006/03/04 21:28:51 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/12 20:12:56 rillig Exp $
 
-DISTNAME=	advancecomp-1.13
+DISTNAME=	advancecomp-1.15
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=advancemame/}
 
