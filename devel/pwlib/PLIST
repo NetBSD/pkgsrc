@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2004/12/01 15:41:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/04/12 18:30:04 joerg Exp $
 bin/ptlib-config
 include/ptbuildopts.h
 include/ptbuildopts.h.in
@@ -67,7 +67,6 @@ include/ptlib/indchan.h
 include/ptlib/int64.h
 include/ptlib/ipdsock.h
 include/ptlib/ipsock.h
-include/ptlib/ipsock.h.orig
 include/ptlib/ipxsock.h
 include/ptlib/lists.h
 include/ptlib/mail.h

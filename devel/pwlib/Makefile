@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2006/03/13 21:20:24 joerg Exp $
+# $NetBSD: Makefile,v 1.54 2006/04/12 18:30:04 joerg Exp $
 
 DISTNAME=	pwlib-v1_8_3-src
 PKGNAME=	pwlib-1.8.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES+=	http://www.voxgratia.org/releases/
 EXTRACT_SUFX=	-tar.gz
@@ -51,7 +51,7 @@ do-install:
 	done
 	${INSTALL_DATA} ${WRKSRC}/version.h ${PREFIX}/include/ptlib
 	cd ${WRKSRC}; \
-	for f in `${FIND} include -name CVS -prune -o -name wince -prune -o -name msos -prune -o -type f -print`; do	\
+	for f in `${FIND} include -name CVS -prune -o -name \*.orig -prune -o -name wince -prune -o -name msos -prune -o -type f -print`; do	\
 		${INSTALL_DATA} $$f ${PREFIX}/$$f;	\
 	done
 
