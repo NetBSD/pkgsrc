@@ -1,4 +1,4 @@
-# $NetBSD: info-files,v 1.4 2006/04/06 17:57:34 jlam Exp $
+# $NetBSD: info-files,v 1.5 2006/04/12 21:13:56 jlam Exp $
 #
 # Generate an +INFO_FILES script that handles info file registration for
 # the package.
@@ -32,8 +32,10 @@ UNPACK,|UNPACK,+INFO_FILES)
 ECHO="@ECHO@"
 GREP="@GREP@"
 INSTALL_INFO="@INSTALL_INFO@"
+MKDIR="@MKDIR@"
 PWD_CMD="@PWD_CMD@"
 RM="@RM@"
+RMDIR="@RMDIR@"
 SED="@SED@"
 SORT="@SORT@"
 TEST="@TEST@"
@@ -55,24 +57,29 @@ ADD)
 		[!/]*)	file="${PKG_PREFIX}/$file" ;;
 		esac
 
-		case "$printed_header" in
-		yes)	;;
-		*)	printed_header=yes
-			${ECHO} "==========================================================================="
-			${ECHO} "Registering info files for ${PKGNAME}:"
-			${ECHO} ""
-			;;
-		esac
+		if ${TEST} ! -f "$file"; then
+			:
+		else
+			case "$printed_header" in
+			yes)	;;
+			*)	printed_header=yes
+				${ECHO} "==========================================================================="
+				${ECHO} "Registering info files for ${PKGNAME}:"
+				${ECHO} ""
+				;;
+			esac
 
-		${TEST} -n "$infodir" || infodir="${file%/*}"
-		infoindex="$infodir/dir"
-		nentries="`${GREP} -c '^\*' $infoindex 2>/dev/null`"
-		case "$nentries" in
-		[0-9]*)	${TEST} $nentries -gt 0 || ${RM} $infoindex ;;
-		esac
-		${ECHO} "	$file"
-		${INSTALL_INFO} --info-dir="$infodir" --delete $file >/dev/null 2>&1
-		${INSTALL_INFO} --info-dir="$infodir" $file >/dev/null 2>&1
+			${TEST} -n "$infodir" || infodir="${file%/*}"
+			infoindex="$infodir/dir"
+			nentries="`${GREP} -c '^\*' $infoindex 2>/dev/null`"
+			case "$nentries" in
+			[0-9]*)	${TEST} $nentries -gt 0 || ${RM} $infoindex ;;
+			esac
+			${ECHO} "	$file"
+			${MKDIR} -p "$infodir"
+			${INSTALL_INFO} --info-dir="$infodir" --delete $file >/dev/null 2>&1
+			${INSTALL_INFO} --info-dir="$infodir" $file >/dev/null 2>&1
+		fi
 	done
 	case "$printed_header" in
 	yes)	${ECHO} ""
@@ -89,23 +96,28 @@ REMOVE)
 		[!/]*)	file="${PKG_PREFIX}/$file" ;;
 		esac
 
-		case "$printed_header" in
-		yes)	;;
-		*)	printed_header=yes
-			${ECHO} "==========================================================================="
-			${ECHO} "Unregistering info files for ${PKGNAME}:"
-			${ECHO} ""
-			;;
-		esac
+		if ${TEST} ! -f "$file"; then
+			:
+		else
+			case "$printed_header" in
+			yes)	;;
+			*)	printed_header=yes
+				${ECHO} "==========================================================================="
+				${ECHO} "Unregistering info files for ${PKGNAME}:"
+				${ECHO} ""
+				;;
+			esac
 
-		${TEST} -n "$infodir" || infodir="${file%/*}"
-		infoindex="$infodir/dir"
-		${ECHO} "	$file"
-		${INSTALL_INFO} --info-dir="$infodir" --delete $file >/dev/null 2>&1
-		nentries="`${GREP} -c '^\*' $infoindex 2>/dev/null`"
-		case "$nentries" in
-		[0-9]*)	${TEST} $nentries -gt 1 || ${RM} $infoindex ;;
-		esac
+			${TEST} -n "$infodir" || infodir="${file%/*}"
+			infoindex="$infodir/dir"
+			${ECHO} "	$file"
+			${INSTALL_INFO} --info-dir="$infodir" --delete $file >/dev/null 2>&1
+			nentries="`${GREP} -c '^\*' $infoindex 2>/dev/null`"
+			case "$nentries" in
+			[0-9]*)	${TEST} $nentries -gt 1 || ${RM} $infoindex ;;
+			esac
+			${RMDIR} -p "$infodir" 2>/dev/null || ${TRUE}
+		fi
 	done
 	case "$printed_header" in
 	yes)	${ECHO} ""
