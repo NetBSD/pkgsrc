@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2006/03/14 01:14:27 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/12 23:04:21 joerg Exp $
 
 DISTNAME=	efax-0.9
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/serialcomm/fax/}
 
@@ -9,6 +10,8 @@ HOMEPAGE=	http://www.cce.com/efax/
 COMMENT=	Collection of small programs for sending and receiving faxes
 
 CONFLICTS=	kdeutils<3.1
+
+CONF_FILES+=	${PREFIX}/share/examples/efax/efax.rc ${PKG_SYSCONFDIR}/efax.rc
 
 post-patch:
 	${SED} -e 's:@PREFIX@:${PREFIX}:g;				\
