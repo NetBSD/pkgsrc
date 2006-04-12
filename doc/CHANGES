@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13545 2006/04/11 21:28:23 wiz Exp $
+$NetBSD: CHANGES,v 1.13546 2006/04/12 09:05:58 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2022,3 +2022,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/openvpn to 2.0.6nb1 [jlam 2006-04-11]
 	Updated databases/qdbm to 1.8.48 [wiz 2006-04-11]
 	Updated textproc/hyperestraier to 1.2.1 [wiz 2006-04-11]
+	Updated archivers/pbzip2 to 0.9.6 [rillig 2006-04-12]
