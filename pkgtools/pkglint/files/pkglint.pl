@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.551 2006/04/12 08:23:49 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.552 2006/04/12 08:49:57 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1825,7 +1825,7 @@ sub get_doc_TODO_updates() {
 		log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
 	}
 
-	$updates = {};
+	$updates = [];
 	$state = 0;
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
@@ -1841,10 +1841,10 @@ sub get_doc_TODO_updates() {
 		}
 
 		if ($state == 3) {
-			if ($text =~ qr"^\to\s(\S+)") {
-				my ($spuname) = ($1);
+			if ($text =~ qr"^\to\s(\S+)(?:\s*(.+))?$") {
+				my ($spuname, $comment) = ($1, $2);
 				if ($spuname =~ regex_pkgname) {
-					$updates->{$spuname} = $line;
+					push(@{$updates}, [$line, $1, $2, $comment]);
 				} else {
 					$line->log_warning("Invalid package name $spuname");
 				}
@@ -4237,23 +4237,21 @@ sub checkfile_package_Makefile($$$) {
 
 	if (defined($pkgname) && $pkgname =~ regex_pkgname) {
 		my ($pkgbase, $pkgver) = ($1, $2);
-		my $updates = get_doc_TODO_updates();
 
-		foreach my $suggested_update (keys(%{$updates})) {
-			next unless ($suggested_update =~ regex_pkgname);
-			my ($suggbase, $suggver) = ($1, $2);
+		foreach my $suggested_update (@{get_doc_TODO_updates()}) {
+			my ($line, $suggbase, $suggver, $suggcomm) = @{$suggested_update};
+			my $comment = (defined($suggcomm) ? " (${suggcomm})" : "");
 
 			next unless $pkgbase eq $suggbase;
-			my $line = $updates->{$suggested_update};
 
 			if (dewey_cmp($pkgver, "<", $suggver)) {
-				$pkgname_line->log_warning("This package should be updated to ${suggver}.");
+				$pkgname_line->log_warning("This package should be updated to ${suggver}${comment}.");
 			}
 			if (dewey_cmp($pkgver, "==", $suggver)) {
-				$pkgname_line->log_note("The update request to ${suggver} from doc/TODO has been done.");
+				$pkgname_line->log_note("The update request to ${suggver} from doc/TODO${comment} has been done.");
 			}
 			if (dewey_cmp($pkgver, ">", $suggver)) {
-				$pkgname_line->log_note("This package is newer than the update request to ${suggver}.");
+				$pkgname_line->log_note("This package is newer than the update request to ${suggver}${comment}.");
 			}
 		}
 	}
