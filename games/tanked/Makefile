@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:09:23 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/12 21:30:56 joerg Exp $
 #
 
 DISTNAME=		tanked-0.90
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games x11
 MASTER_SITES=		# empty
 
@@ -10,8 +10,8 @@ MAINTAINER=		root@garbled.net
 #HOMEPAGE=		http://ogresoft.dyn.ml.org/tanked.html
 COMMENT=		Multiplayer internet tank game for X11
 
-USE_X11BASE=		YES
-USE_TOOLS+=		imake gmake
+USE_TOOLS=		imake
+SETGIDGAME=		yes
 
 post-patch:
 	@${TOUCH} ${WRKSRC}/client/tanked.man
