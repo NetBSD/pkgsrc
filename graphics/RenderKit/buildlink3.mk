@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:22:01 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:16 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 RENDERKIT_BUILDLINK3_MK:=	${RENDERKIT_BUILDLINK3_MK}+
@@ -19,4 +19,4 @@ BUILDLINK_PKGSRCDIR.RenderKit?=	../../graphics/RenderKit
 .include "../../graphics/GeometryKit/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

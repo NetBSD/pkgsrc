@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/04/09 13:12:02 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/12 10:27:01 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSIDPLAY2_BUILDLINK3_MK:=	${LIBSIDPLAY2_BUILDLINK3_MK}+
@@ -15,4 +15,4 @@ BUILDLINK_API_DEPENDS.libsidplay2+=	libsidplay2>=2.0.9
 BUILDLINK_PKGSRCDIR.libsidplay2?=	../../audio/libsidplay2
 .endif	# LIBSIDPLAY2_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:10 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:20 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ELK_BUILDLINK3_MK:=	${ELK_BUILDLINK3_MK}+
@@ -15,4 +15,4 @@ BUILDLINK_API_DEPENDS.elk+=	elk>=3.99.6
 BUILDLINK_PKGSRCDIR.elk?=	../../lang/elk
 .endif	# ELK_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

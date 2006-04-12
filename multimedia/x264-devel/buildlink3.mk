@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:22:29 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:28 rillig Exp $
 
 BUILDLINK_DEPMETHOD.x264-devel?=	build
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
@@ -16,4 +16,4 @@ BUILDLINK_API_DEPENDS.x264-devel+=	x264-devel>=20060127
 BUILDLINK_PKGSRCDIR.x264-devel?=	../../multimedia/x264-devel
 .endif	# X264_DEVEL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:21:35 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:01 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMUSEPACK_BUILDLINK3_MK:=	${LIBMUSEPACK_BUILDLINK3_MK}+
@@ -15,4 +15,4 @@ BUILDLINK_API_DEPENDS.libmusepack+=		libmusepack>=1.0.3
 BUILDLINK_PKGSRCDIR.libmusepack?=	../../audio/libmusepack
 .endif	# LIBMUSEPACK_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
