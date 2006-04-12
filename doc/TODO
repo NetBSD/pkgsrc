@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4865 2006/04/12 18:20:18 xtraeme Exp $
+$NetBSD: TODO,v 1.4866 2006/04/12 18:23:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -396,7 +396,7 @@ Suggested package updates
 	o cfengine2-2.1.19p1
 	o cfengine2-doc-2.1.14
 	o cfitsio-2.510
-	o cgdb-6.1
+	o cgdb-0.6.2
 	o checkbot-1.77
 	o chrony-1.21
 	o cint-5.16
@@ -408,7 +408,7 @@ Suggested package updates
 	o columba-1.0RC1
 	o compface-1.5.2
 	o conglomerate-0.9.1
-	o conserver-8.1.13
+	o conserver-8.1.14
 	o cook-2.26
 	o coreutils-5.94
 	o cqcam-0.91
@@ -464,6 +464,7 @@ Suggested package updates
 	o eclipse-3.1.1
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
+	o eel2-2.14.1
 	o efax-gtk-3.0.9
 	o egtk-0.3.6.2
 	o electricfence-2.4.16
@@ -476,6 +477,8 @@ Suggested package updates
 	o enchant-1.2.5
 	o enlightenment-0.16.8.1
 	o enscript-1.6.4
+	o eog-2.14.1
+	o epiphany-2.14.1
 	o epiphany-extensions-2.14.0.1 [jmmv]
 	o epstool-3.08
 	o eric3-3.8.1
@@ -484,11 +487,15 @@ Suggested package updates
 	o etach-1.4.1
 	o eukleides-1.0.3
 	o euler-1.61
+	o evolution-2.6.1
+	o evolution-data-server-1.6.1
+	o evolution-exchange-2.6.1
 	o ex-050325 [pkg/32043]
 	o exim-4.60
 	o exmh-2.7.2
 	o f2c-20031025
 	o faces-1.7.7
+	o fast-user-switch-applet-2.14.1
 	o fceu-0.98.15
 	o fd-2.08a
 	o fdgw-20040609
@@ -496,6 +503,7 @@ Suggested package updates
 	o fftw-3.1.1
 	o fhist-1.14
 	o file-4.17
+	o file-roller-2.14.1
 	o findutils-4.2.27
 	o flashplayer-0.4.13
 	o fmsx-3.0
@@ -503,7 +511,7 @@ Suggested package updates
 	o fop-0.20.5
 	o fort77-1.18
 	o fortunes-de-0.20
-	o fox-1.6.2
+	o fox-1.6.3
 	o freeciv-client-2.0.8
 	o freeciv-server-2.0.8
 	o freeciv-share-2.0.8
@@ -525,6 +533,7 @@ Suggested package updates
 	o gconfmm-2.14.0
 	o gcpio-2.6
 	o gdb6-6.3.0
+	o gdm-2.14.1
 	o gdsreader-0.3.2
 	o ggiterm-0.7.1
 	o gifsicle-1.44
@@ -543,10 +552,14 @@ Suggested package updates
 	o gmime-2.1.17 [pkg/32487]
 	o gnet1-1.1.9
 	o gnetman-20050429
+	o gnome-backgrounds-2.14.1
+	o gnome-desktop-2.14.1.1
 	o gnome-pilot-2.0.13
 	o gnome-spell-1.0.7
+	o gnome-user-docs-2.14.2
 	o gnome-vfsmm-2.14.0
 	o gnomeicu-0.99.10
+	o gnus-5.10.8
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
@@ -566,6 +579,7 @@ Suggested package updates
 	o gsasl-0.2.12
 	o gsed-4.1.4
 	o gsharutils-4.6
+	o gsl-1.8
 	o gss-0.0.16
 	o gtetrinet-0.7.9
 	o gthumb-2.7.5.1
@@ -597,6 +611,7 @@ Suggested package updates
 	o httptunnel-3.3
 	o hugs-200503 [pkg/30071]
 	o hydrogen-0.9.2
+	o hyperestraier-1.2.1
 	o i2ocfg-1.1
 	o icdprog-0.5
 	o icecast-2.3.1
@@ -611,6 +626,7 @@ Suggested package updates
 	o ion3-devel-20060305
 	o iozone-3.257
 	o ipa-2.0 [pkg/32398]
+	o ipa-2.0.1
 	o ipcheck-0.219
 	o ipsec-tools-0.6.5
 	o ircu-2.10.12.0
@@ -635,11 +651,12 @@ Suggested package updates
 	o jpegpixi-1.1.1
 	o jpilot-0.99.8
 	o jwhois-3.2.3
+	o k3b-0.12.15
 	o kaffe-1.1.7
 	o kajaani-kombat-0.7
 	o kapooka-0.3
 	o kazehakase-0.3.6
-	o kbarcode-2.0.0
+	o kbarcode-2.0.1
 	o kdrill-6.4
 	o kinput2-3.1
 	o kmess-1.3
@@ -653,7 +670,7 @@ Suggested package updates
 	o lavaps-2.7
 	o lcab-1.0b11
 	o lcc-4.2
-	o leafnode-1.11.4
+	o leafnode-1.11.5
 	o leafpad-0.8.8
 	o lftp-3.4.4
 	o libcdio-0.77
@@ -688,6 +705,7 @@ Suggested package updates
 	o libsmi-0.4.3
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
+	o libtorrent-0.9.0
 	o licq-core-1.3.0
 	o lighttpd-1.4.11
 	o lilypond-2.8.0
@@ -698,7 +716,7 @@ Suggested package updates
 	o lout-3.31
 	o lucy-1.19p
 	o lwp-2.1
-	o lyx-1.4.0
+	o lyx-1.4.1
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
@@ -718,6 +736,7 @@ Suggested package updates
 	o mdf2iso-0.3.0
 	o memcached-1.2
 	o memtest86-3.2
+	o metacity-2.14.2
 	o metakit-2.4.9.4
 	o mftrace-1.1.17
 	o mgetty-1.1.35
@@ -738,7 +757,7 @@ Suggested package updates
 	o mpage-2.5.4
 	o mpfr-2.2.0
 	o mpich-1.2.7
-	o mplayer-plugin-firefox-3.21
+	o mplayer-plugin-firefox-3.25
 	o mpop-0.8.3 [pkg/32511]
 	o mrproject-0.9.1
 	o mrtg-2.13.2 [pkg/32811]
@@ -753,6 +772,7 @@ Suggested package updates
 	o nagios-base-2.1
 	o nano-1.2.5 [pkg/32859]
 	o nap-1.5.3
+	o nautilus-2.14.1
 	o nawk-20041222
 	o ncftp2-2.8.2
 	o ncview-1.92e
@@ -947,6 +967,7 @@ Suggested package updates
 	o pine-pgp-filters-1.2
 	o pinentry-0.7.2
 	o pinfo-0.6.9
+	o pioneers-0.9.61
 	o pircbot-1.4.4
 	o plan-1.9
 	o plib-1.8.4
@@ -1001,7 +1022,9 @@ Suggested package updates
 	o py-gnome2-2.14.0
 	o py-gnome2-extras-2.14.0
 	o py-gnutls-0.2.1
+	o py-gobject-2.10.1
 	o py-kenosis-0.96
+	o py-ldap-2.2.0
 	o py-logging-0.4.9.6
 	o py-mad-0.5.4
 	o py-metakit-2.4.9.5
@@ -1071,6 +1094,7 @@ Suggested package updates
 	o rt-mysql-3.4.5
 	o rt-pgsql-3.4.5
 	o rtcw-1.41.3
+	o rtorrent-0.5.0
 	o ruby-cmd-0.8.0
 	o rxvt-unicode-7.7
 	o sablecc-3.2
@@ -1264,7 +1288,7 @@ Suggested package updates
 	o xrn-9.02
 	o xscreensaver-4.24
 	o xskat-4.0
-	o xterm-211
+	o xterm-212
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
 	o xtux-20030306
@@ -1277,6 +1301,7 @@ Suggested package updates
 	o ysm-2.9.8
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
+	o zenity-2.14.1
 	o zile-2.2.13
 	o zircon-1.18.256
 	o zope-2.8.6
