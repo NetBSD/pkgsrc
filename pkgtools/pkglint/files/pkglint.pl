@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.550 2006/04/11 17:44:29 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.551 2006/04/12 08:23:49 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2067,6 +2067,12 @@ sub type_should_be_quoted($) {
 	return !($type =~ qr"^(?:List.*|ShellCommand|SedCommands)$");
 }
 
+sub variable_needs_quoting($) {
+	my ($varname) = @_;
+
+	return !($varname =~ qr"^(?:.*DIR|DISTNAME|LOCALBASE|PKGNAME|PREFIX|WRKSRC)$");
+}
+
 my $check_pkglint_version_done = false;
 sub check_pkglint_version() {
 
@@ -2461,7 +2467,7 @@ sub checkline_mk_shellword($$$) {
 		if (exists(get_vartypes_map()->{$varname}) && !(defined($mod) && $mod =~ qr":Q$")) {
 			my $vartype = get_vartypes_map()->{$varname};
 
-			if (type_should_be_quoted($vartype)) {
+			if (variable_needs_quoting($varname) && type_should_be_quoted($vartype)) {
 				$line->log_warning("[experimental] Please use \${${varname}:Q} instead of \${${varname}}.");
 			}
 		} elsif (exists(get_varname_to_toolname()->{$varname})) {
@@ -2546,7 +2552,10 @@ sub checkline_mk_shellword($$$) {
 					"appropriate to remove the double quotes.");
 
 			} elsif ($opt_warn_quoting) {
-				if ($state == SWST_PLAIN) {
+				if (!variable_needs_quoting($varname)) {
+					# These variables don't need to be quoted.
+
+				} elsif ($state == SWST_PLAIN) {
 					$line->log_warning("Please use \${${varname}:Q} instead of \${${varname}}.");
 					$line->replace("\${${varname}}", "\${${varname}:Q}");
 				} else {
