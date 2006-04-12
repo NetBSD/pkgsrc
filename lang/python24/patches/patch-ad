@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2004/12/05 23:27:49 recht Exp $
+$NetBSD: patch-ad,v 1.2 2006/04/12 20:21:48 drochner Exp $
 
 --- Lib/posixfile.py.orig	Wed Aug 18 17:13:40 2004
 +++ Lib/posixfile.py
@@ -6,7 +6,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2004/12/05 23:27:49 recht Exp $
          # additions for AIX by Vladimir.Marangozov@imag.fr
          import sys, os
          if sys.platform in ('netbsd1',
-+                            'netbsd2',
++                            'netbsd2', 'netbsd3',
                              'openbsd2',
                              'freebsd2', 'freebsd3', 'freebsd4', 'freebsd5',
                              'freebsd6', 'bsdos2', 'bsdos3', 'bsdos4'):
@@ -19,7 +19,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2004/12/05 23:27:49 recht Exp $
  
          if '?' in how:
              if sys.platform in ('netbsd1',
-+                                'netbsd2',
++                                'netbsd2', 'netbsd3',
                                  'openbsd2',
                                  'freebsd2', 'freebsd3', 'freebsd4', 'freebsd5',
                                  'bsdos2', 'bsdos3', 'bsdos4'):

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.4 2005/05/09 20:37:51 recht Exp $
+@comment $NetBSD: PLIST.common,v 1.5 2006/04/12 20:21:48 drochner Exp $
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 bin/smtpd${PY_VER_SUFFIX}.py
@@ -200,6 +200,9 @@ lib/python${PY_VER_SUFFIX}/bsddb/dbutils.pyo
 lib/python${PY_VER_SUFFIX}/bsddb/test/__init__.py
 lib/python${PY_VER_SUFFIX}/bsddb/test/__init__.pyc
 lib/python${PY_VER_SUFFIX}/bsddb/test/__init__.pyo
+lib/python${PY_VER_SUFFIX}/bsddb/test/test_1413192.py
+lib/python${PY_VER_SUFFIX}/bsddb/test/test_1413192.pyc
+lib/python${PY_VER_SUFFIX}/bsddb/test/test_1413192.pyo
 lib/python${PY_VER_SUFFIX}/bsddb/test/test_all.py
 lib/python${PY_VER_SUFFIX}/bsddb/test/test_all.pyc
 lib/python${PY_VER_SUFFIX}/bsddb/test/test_all.pyo
@@ -650,6 +653,7 @@ lib/python${PY_VER_SUFFIX}/email/test/data/msg_40.txt
 lib/python${PY_VER_SUFFIX}/email/test/data/msg_41.txt
 lib/python${PY_VER_SUFFIX}/email/test/data/msg_42.txt
 lib/python${PY_VER_SUFFIX}/email/test/data/msg_43.txt
+lib/python${PY_VER_SUFFIX}/email/test/data/msg_44.txt
 lib/python${PY_VER_SUFFIX}/email/test/test_email.py
 lib/python${PY_VER_SUFFIX}/email/test/test_email.pyc
 lib/python${PY_VER_SUFFIX}/email/test/test_email.pyo
@@ -1290,7 +1294,6 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/mmap.so
 ${NISMODULE}lib/python${PY_VER_SUFFIX}/lib-dynload/nis.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/operator.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/parser.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/pwd.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/regex.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/resource.so
 ${EXTRA_SO}lib/python${PY_VER_SUFFIX}/lib-dynload/rgbimg.so
@@ -1693,6 +1696,7 @@ lib/python${PY_VER_SUFFIX}/test/badsyntax_future8.py
 lib/python${PY_VER_SUFFIX}/test/badsyntax_future9.py
 lib/python${PY_VER_SUFFIX}/test/badsyntax_nocaret.py
 lib/python${PY_VER_SUFFIX}/test/cfgparser.1
+lib/python${PY_VER_SUFFIX}/test/check_soundcard.vbs
 lib/python${PY_VER_SUFFIX}/test/cjkencodings_test.py
 lib/python${PY_VER_SUFFIX}/test/cjkencodings_test.pyc
 lib/python${PY_VER_SUFFIX}/test/cjkencodings_test.pyo
@@ -1931,6 +1935,9 @@ lib/python${PY_VER_SUFFIX}/test/test_class.pyo
 lib/python${PY_VER_SUFFIX}/test/test_cmath.py
 lib/python${PY_VER_SUFFIX}/test/test_cmath.pyc
 lib/python${PY_VER_SUFFIX}/test/test_cmath.pyo
+lib/python${PY_VER_SUFFIX}/test/test_cmd_line.py
+lib/python${PY_VER_SUFFIX}/test/test_cmd_line.pyc
+lib/python${PY_VER_SUFFIX}/test/test_cmd_line.pyo
 lib/python${PY_VER_SUFFIX}/test/test_codeccallbacks.py
 lib/python${PY_VER_SUFFIX}/test/test_codeccallbacks.pyc
 lib/python${PY_VER_SUFFIX}/test/test_codeccallbacks.pyo
