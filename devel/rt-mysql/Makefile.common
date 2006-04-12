@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2006/03/04 21:29:29 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2006/04/12 19:57:45 joerg Exp $
 
 DISTNAME=      	rt-2-0-15
 CATEGORIES=	devel
@@ -32,9 +32,9 @@ PATCHDIR=	${PKGDIR}/patches
 PLIST_SRC=	${PKGDIR}/PLIST
 PKG_GROUPS=	${RT_GROUP}
 CONF_FILES=	${RT_PATH}/etc/config.pm.default ${RT_PATH}/etc/config.pm
-OWN_DIRS+=	${RT_PATH}
-OWN_DIRS+=	${RT_PATH}/etc
-OWN_DIRS+=	${RT_PATH}/WebRT
+REQD_DIRS+=	${RT_PATH}
+REQD_DIRS+=	${RT_PATH}/etc
+REQD_DIRS+=	${RT_PATH}/WebRT
 OWN_DIRS+=	${RT_VAR_PATH}
 OWN_DIRS+=	${RT_LOG_PATH}
 OWN_DIRS+=	${RT_DATA_PATH}
