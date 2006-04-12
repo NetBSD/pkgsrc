@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2006/03/03 04:00:09 grant Exp $
+# $NetBSD: Makefile.common,v 1.8 2006/04/12 11:00:24 tron Exp $
 
 DISTNAME=		mysql-5.0.18
 CATEGORIES=		databases
@@ -103,21 +103,21 @@ SUBST_STAGE.mk=		post-patch
 SUBST_FILES.mk=		dbug/Makefile.in heap/Makefile.in	\
 			mysys/Makefile.in strings/Makefile.in
 SUBST_SED.mk=		-e "/^install-exec:/s/install-pkglibLIBRARIES//"
-SUBST_MESSAGE.mk=	"Fixing Makefiles."
+SUBST_MESSAGE.mk=	Fixing Makefiles.
 SUBST_STAGE.scripts=	post-patch
 SUBST_FILES.scripts=	scripts/mysql_install_db.sh scripts/mysqld_safe.sh \
 			scripts/mysql_secure_installation.sh \
 			support-files/mysql.server.sh
 SUBST_SED.scripts=	-e "s,chown,${CHOWN},g" \
 			-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
-SUBST_MESSAGE.scripts=	"Fixing scripts."
+SUBST_MESSAGE.scripts=	Fixing scripts.
 
 # Detect correctly sem_init(3) on NetBSD.
 .if !empty(OPSYS:MNetBSD)
 SUBST_CLASSES+=		sem
 SUBST_STAGE.sem=	post-patch
 SUBST_FILES.sem=	configure
-SUBST_SED.sem=		"s|-lposix4|-lrt|g"
+SUBST_SED.sem=		-e "s|-lposix4|-lrt|g"
 .endif
 
 .include "../../security/openssl/buildlink3.mk"
