@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/03/30 21:29:09 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.21 2006/04/12 20:00:01 drochner Exp $
 bin/gedit
 bin/gnome-text-editor
 include/gedit-2.14/gedit/gedit-app.h
@@ -167,12 +167,14 @@ ${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/bn/LC_MESSAGES/gedit.mo
+${PKGLOCALEDIR}/locale/br/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gedit.mo
+${PKGLOCALEDIR}/locale/dz/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gedit.mo
@@ -193,6 +195,7 @@ ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gedit.mo
+${PKGLOCALEDIR}/locale/ka/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/kn/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/gedit.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/gedit.mo
