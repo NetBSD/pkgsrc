@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2006/04/05 06:27:42 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/12 20:22:12 joerg Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=		4
+PKGREVISION=		5
 
 INFO_FILES=		# PLIST
 
