@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13550 2006/04/12 18:24:15 wiz Exp $
+$NetBSD: CHANGES,v 1.13551 2006/04/12 20:13:43 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2039,3 +2039,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/dcraw to 8.13 [markd 2006-04-12]
 	Added x11/ratmen version 2.2.2 [minskim 2006-04-12]
 	Updated mail/dovecot to 1.0beta6 [xtraeme 2006-04-12]
+	Updated archivers/advancecomp to 1.15 [rillig 2006-04-12]
