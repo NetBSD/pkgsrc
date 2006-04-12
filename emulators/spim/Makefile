@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2006/03/04 21:29:36 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/04/12 19:27:22 joerg Exp $
 
 DISTNAME=	spim-7.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.cs.wisc.edu/~larus/SPIM/ \
 		ftp://ftp.cs.wisc.edu/pub/spim/
