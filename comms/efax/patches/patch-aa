@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/05/21 22:27:00 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2006/04/12 23:04:21 joerg Exp $
 
 --- Makefile.orig	Fri Mar 12 01:00:34 1999
 +++ Makefile
-@@ -3,37 +3,35 @@
+@@ -3,37 +3,36 @@
  # Change the following to the name of your ANSI C compiler
  # (normally gcc).
  
@@ -45,7 +45,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/05/21 22:27:00 jtb Exp $
 -	cp fax.1 efax.1 efix.1 $(MANDIR)/man1
 +	$(BSD_INSTALL_PROGRAM) efax efix $(BINDIR)
 +	$(BSD_INSTALL_SCRIPT) fax $(BINDIR)
-+	$(BSD_INSTALL_DATA) efax.rc $(CONFDIR)
++	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/examples/efax
++	$(BSD_INSTALL_DATA) efax.rc $(PREFIX)/share/examples/efax
 +	$(BSD_INSTALL_MAN) fax.1 efax.1 efix.1 $(MANDIR)/man1
  
  clean:	
