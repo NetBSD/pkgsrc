@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:10:59 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/12 20:55:04 joerg Exp $
 bin/hanterm
+${IMAKE_MAN_DIR}/hanterm.${IMAKE_MAN_SUFFIX}
 lib/X11/app-defaults/Hanterm
