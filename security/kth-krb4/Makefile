@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.43 2006/03/31 23:56:29 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2006/04/12 19:43:31 joerg Exp $
 #
 
 DISTNAME=		krb4-1.2.1
 PKGNAME=		kth-krb4-1.2.1
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.pdc.kth.se/pub/krb/src/
 
@@ -37,10 +37,6 @@ KTH_KRB4_TRANSFORM=	s/^ftp$$/k4&/	# always k4ftp
 PLIST_SUBST+=		KRB4_PREFIX=
 .endif
 CONFIGURE_ARGS+=	--program-transform=${KTH_KRB4_TRANSFORM:Q}
-
-.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD"
-MANINSTALL=		maninstall
-.endif
 
 INFO_FILES=		# PLIST
 EXAMPLEDIR=		${PREFIX}/share/examples/kth-krb4
