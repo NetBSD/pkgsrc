@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13546 2006/04/12 09:05:58 rillig Exp $
+$NetBSD: CHANGES,v 1.13547 2006/04/12 13:21:04 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2023,3 +2023,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/qdbm to 1.8.48 [wiz 2006-04-11]
 	Updated textproc/hyperestraier to 1.2.1 [wiz 2006-04-11]
 	Updated archivers/pbzip2 to 0.9.6 [rillig 2006-04-12]
+	Updated misc/koffice to 1.5.0 [markd 2006-04-12]
+	Removed misc/koffice-i18n-de [markd 2006-04-12]
+	Removed misc/koffice-i18n-en_GB [markd 2006-04-12]
+	Added misc/koffice-l10n-de version 1.5.0 [markd 2006-04-12]
+	Added misc/koffice-l10n-en_GB version 1.5.0 [markd 2006-04-12]
+	Updated graphics/dcraw to 8.13 [markd 2006-04-12]
