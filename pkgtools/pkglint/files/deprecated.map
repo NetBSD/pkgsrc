@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.31 2006/03/14 14:18:55 rillig Exp $
+# $NetBSD: deprecated.map,v 1.32 2006/04/12 09:23:36 rillig Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -73,3 +73,6 @@ DECOMPRESS_CMD		Use EXTRACT_CMD instead.
 # March 2006
 INSTALL_EXTRA_TMPL	Use INSTALL_TEMPLATE instead.
 DEINSTALL_EXTRA_TMPL	Use DEINSTALL_TEMPLATE instead.
+
+# April 2006
+RECOMMENDED		Use ABI_DEPENDS instead.
