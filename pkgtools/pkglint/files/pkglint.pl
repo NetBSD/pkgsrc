@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.552 2006/04/12 08:49:57 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.553 2006/04/12 09:23:36 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1452,7 +1452,6 @@ sub get_regex_plurals() {
 		.*_SED
 		.*_SKIP
 		BUILDLINK_LDADD
-		BUILDLINK_RECOMMENDED
 		COMMENT
 		EXTRACT_ONLY
 		GENERATE_PLIST
@@ -3510,7 +3509,7 @@ sub checkline_mk_varassign($$$$$) {
 	if ($op eq "?=" && defined($seen_bsd_prefs_mk) && !$seen_bsd_prefs_mk) {
 		if ($varbase eq "BUILDLINK_PKGSRCDIR"
 		    || $varbase eq "BUILDLINK_DEPMETHOD"
-		    || $varbase eq "BUILDLINK_RECOMMENDED") {
+		    || $varbase eq "BUILDLINK_ABI_DEPENDS") {
 			# FIXME: What about these ones? They occur quite often.
 		} else {
 			$opt_warn_extra and $line->log_warning("Please include \"../../mk/bsd.prefs.mk\" before using \"?=\".");
