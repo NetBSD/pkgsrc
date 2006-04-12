@@ -1,11 +1,20 @@
-KOffice is an integrated office suite for KDE, the K Desktop Environment.
+KOffice is an integrated office suite for KDE which utilizes free and open
+standards for its document formats, component communication and component
+embedding.
 
- KWord      - a frame-based word processor capable of professional standard
-	      documents
- KSpread    - a powerful spreadsheet application
- KPresenter - a full-featured presentation program
- Kivio      - a Visio(R)-style flowcharting application
- Karbon14   - a vector drawing application
- Kugar      - a tool for generating business quality reports
- KChart     - an integrated graph and chart drawing tool
- KFormula   - a powerful formula editor
+It includes:
+ KWord      - a frame-based, full-featured word processor
+ KSpread    - a spreadsheet application
+ KPresenter - a presentation application
+ Kivio      - a flowchart application
+ Kexi       - an integrated database application
+ Krita      - a pixel based image editing and paint application
+ Karbon14   - a vector-drawing application
+ KPlato     - a technology preview of a new project management application
+
+Additionally, KOffice includes robust embeddable objects: 
+ Kugar      - report generator (deprecated)
+ KChart     - full-featured charting engine
+ KFormula   - mathematical formula handling
+as well as a built-in thesaurus (KThesaurus) and support for many different
+file formats. 
