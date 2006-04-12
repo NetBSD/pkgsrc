@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1814 2006/04/10 04:47:30 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1815 2006/04/12 19:28:47 reed Exp $
 #
 # This file is in the public domain.
 #
@@ -418,6 +418,10 @@ SCRIPTS_ENV+=	${INSTALL_MACROS}
 _PKGSRC_BUILD_TARGETS=	build test
 .else
 _PKGSRC_BUILD_TARGETS=	build
+.endif
+
+.if !defined(_THE_DATE)
+_THE_DATE!=	${DATE} "+%Y-%m-%d %H:%M:%S %z"
 .endif
 
 # The user can override the NO_PACKAGE by specifying this from
@@ -3533,7 +3537,7 @@ pre-install-fake-pkg:
 	@${ECHO} "GMAKE=`${GMAKE} --version | ${GREP} Make`" >> ${BUILD_INFO_FILE}
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "_PKGTOOLS_VER=${PKGTOOLS_VERSION}" >> ${BUILD_INFO_FILE}
+	${ECHO} "PKGTOOLS_VERSION=${PKGTOOLS_VERSION}" >> ${BUILD_INFO_FILE}
 .endif
 
 .PHONY: post-install-fake-pkg
@@ -3610,6 +3614,14 @@ post-install-fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 		${ECHO} "REQUIRES=$$req" >> ${BUILD_INFO_FILE};		\
 	done
 .  endif
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} "HOMEPAGE=${HOMEPAGE}" >> ${BUILD_INFO_FILE}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} "CATEGORIES=${CATEGORIES}" >> ${BUILD_INFO_FILE}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} "MAINTAINER=${MAINTAINER}" >> ${BUILD_INFO_FILE}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO} "DATE=${_THE_DATE}" >> ${BUILD_INFO_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	size_this=`${MAKE} ${MAKEFLAGS} print-pkg-size-this`;		\
 	size_depends=`${MAKE} ${MAKEFLAGS} print-pkg-size-depends`;	\
