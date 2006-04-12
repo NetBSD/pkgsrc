@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13552 2006/04/12 20:43:37 rillig Exp $
+$NetBSD: CHANGES,v 1.13553 2006/04/12 21:13:27 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2041,3 +2041,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/dovecot to 1.0beta6 [xtraeme 2006-04-12]
 	Updated archivers/advancecomp to 1.15 [rillig 2006-04-12]
 	Added audio/jack version 0.100.0 [rillig 2006-04-12]
+	Updated audio/darkice to 0.15 [rillig 2006-04-12]
