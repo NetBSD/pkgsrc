@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/04/12 21:41:58 wiz Exp $
+
+--- lib/write.cpp.orig	2006-01-19 21:05:11.000000000 +0000
++++ lib/write.cpp
+@@ -38,6 +38,9 @@
+ #  if defined(__APPLE__) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__)
+ #    include <sys/param.h>
+ #    include <sys/mount.h>
++#    if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900)
++#      define statfs statvfs
++#    endif
+ #  else
+ #    include <sys/vfs.h>
+ #  endif
