@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13554 2006/04/12 21:40:26 drochner Exp $
+$NetBSD: CHANGES,v 1.13555 2006/04/12 21:41:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2052,3 +2052,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/nautilus to 2.14.1 [drochner 2006-04-12]
 	Updated sysutils/nautilus-cd-burner to 2.14.1 [drochner 2006-04-12]
 	Updated lang/python24 to 2.4.3 [drochner 2006-04-12]
+	Added multimedia/mpeg4ip version 1.4.1 [wiz 2006-04-12]
