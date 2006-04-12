@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4861 2006/04/11 18:40:59 minskim Exp $
+$NetBSD: TODO,v 1.4862 2006/04/12 08:48:29 grant Exp $
 
 Suggested new packages
 ======================
@@ -450,6 +450,7 @@ Suggested package updates
 	o dnstracer-1.8
 	o doxygen-1.4.6
 	o dpkg-1.10.28
+	o dovecot-1.0beta6
 	o dropbear-0.48
 	o dspam-3.6.4
 	o dvd+rw-tools-6.1
