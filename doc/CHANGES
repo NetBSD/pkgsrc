@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13549 2006/04/12 18:20:17 xtraeme Exp $
+$NetBSD: CHANGES,v 1.13550 2006/04/12 18:24:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2020,6 +2020,14 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/ko-po-check version 0.5 [minskim 2006-04-11]
 	Updated mbone/common-mml to 1.2.16 [minskim 2006-04-11]
 	Updated net/openvpn to 2.0.6nb1 [jlam 2006-04-11]
+	Updated games/prboom to 2.4.1 [drochner 2006-04-11]
+	Updated games/kye to 0.7 [drochner 2006-04-11]
+	Updated multimedia/vlc to 0.7.2nb10 [drochner 2006-04-11]
+	Updated www/liferea to 1.0.9 [drochner 2006-04-11]
+	Updated devel/libgnome to 2.14.1 [drochner 2006-04-11]
+	Updated devel/libgnomeui to 2.14.1 [drochner 2006-04-11]
+	Updated net/libsoup-devel to 2.2.92 [drochner 2006-04-11]
+	Updated www/gtkhtml38 to 3.10.1 [drochner 2006-04-11]
 	Updated databases/qdbm to 1.8.48 [wiz 2006-04-11]
 	Updated textproc/hyperestraier to 1.2.1 [wiz 2006-04-11]
 	Updated archivers/pbzip2 to 0.9.6 [rillig 2006-04-12]
