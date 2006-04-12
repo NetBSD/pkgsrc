@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/02/20 09:15:44 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/04/12 22:34:15 markd Exp $
 bin/digikam
 bin/showfoto
 include/digikam/colorgradientwidget.h
@@ -305,7 +305,6 @@ share/kde/icons/hicolor/48x48/apps/digikam.png
 share/kde/icons/hicolor/48x48/apps/showfoto.png
 share/kde/icons/hicolor/64x64/apps/digikam.png
 share/kde/icons/hicolor/64x64/apps/showfoto.png
-share/kde/mimelnk/image/x-raw.desktop
 share/kde/services/digikamalbums.protocol
 share/kde/services/digikamdates.protocol
 share/kde/services/digikamimageplugin_core.desktop
@@ -355,7 +354,6 @@ ${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/digikam.mo
 ${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/digikam.mo
 @comment in kde: @dirrm share/kde/servicetypes
 @comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/mimelnk/image
 @comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
