@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2006/02/12 15:29:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/12 21:53:58 joerg Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-fontserver-${XORG_VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_XORG}
 DISTFILES=	X11R${XORG_VER}-src1.tar.gz X11R${XORG_VER}-src2.tar.gz \
@@ -11,6 +11,8 @@ DISTFILES=	X11R${XORG_VER}-src1.tar.gz X11R${XORG_VER}-src2.tar.gz \
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.x.org/
 COMMENT=	X.org font server
+
+USE_TOOLS+=	imake
 
 DISTINFO_FILE=		${.CURDIR}/../../x11/xorg-libs/distinfo
 PATCHDIR=		${.CURDIR}/../../x11/xorg-libs/patches
