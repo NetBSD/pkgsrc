@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.431 2006/04/01 22:13:52 jmmv Exp $
+# $NetBSD: Makefile,v 1.432 2006/04/12 17:16:37 minskim Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -222,6 +222,7 @@ SUBDIR+=	qtarch
 SUBDIR+=	qwspritefield
 SUBDIR+=	qwt
 SUBDIR+=	randrext
+SUBDIR+=	ratmen
 SUBDIR+=	renderext
 SUBDIR+=	rep-gtk
 SUBDIR+=	rox-session
