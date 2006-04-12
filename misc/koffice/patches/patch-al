@@ -1,16 +1,13 @@
-$NetBSD: patch-al,v 1.4 2005/10/11 23:34:02 markd Exp $
+$NetBSD: patch-al,v 1.5 2006/04/12 12:37:35 markd Exp $
 
---- kexi/migration/Makefile.in.orig	2005-06-16 02:17:32.000000000 +1200
-+++ kexi/migration/Makefile.in
-@@ -451,8 +451,10 @@ VER_INFO = -version-info 0:8:0
- 
- lib_LTLIBRARIES = libkeximigrate.la
- 
-+@compile_pgsql_plugin_TRUE@PG_INCS= -I$(PG_INCDIR) -I$(PQXX_INCDIR)
-+
- INCLUDES = -I$(top_srcdir)/kexi/core -I$(top_srcdir)/kexi -I$(top_srcdir)/kexi/main/startup \
---I$(top_builddir)/kexi/main/startup $(all_includes) -I$(PG_INCDIR) -I$(PQXX_INCDIR)
-+-I$(top_builddir)/kexi/main/startup $(all_includes) $(PG_INCS)
- 
- 
- @compile_pgsql_plugin_TRUE@pgsql_dir = pqxx
+--- krita/plugins/paintops/defaultpaintops/Makefile.in.orig	2006-04-09 22:26:01.000000000 +1200
++++ krita/plugins/paintops/defaultpaintops/Makefile.in
+@@ -571,7 +571,7 @@ x_libraries = @x_libraries@
+ xdg_appsdir = @xdg_appsdir@
+ xdg_directorydir = @xdg_directorydir@
+ xdg_menudir = @xdg_menudir@
+-kritaimagesdir = $(prefix)/share/apps/krita/images
++kritaimagesdir = $(kde_datadir)/krita/images
+ kritaimages_DATA = \
+ 	airbrush.png \
+ 	paintbrush.png \
