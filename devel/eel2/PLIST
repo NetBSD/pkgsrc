@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/03/30 21:12:06 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/04/12 09:46:26 drochner Exp $
 include/eel-2/eel/eel-accessibility.h
 include/eel-2/eel/eel-alert-dialog.h
 include/eel-2/eel/eel-art-extensions.h
@@ -61,6 +61,7 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/eel-2.0.mo
+${PKGLOCALEDIR}/locale/dz/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/eel-2.0.mo
 ${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/eel-2.0.mo
