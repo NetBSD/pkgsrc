@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:22:06 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:19 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 USRP_BUILDLINK3_MK:=	${USRP_BUILDLINK3_MK}+
@@ -19,4 +19,4 @@ BUILDLINK_PKGSRCDIR.usrp?=	../../ham/usrp
 .include "../../ham/gnuradio-core/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

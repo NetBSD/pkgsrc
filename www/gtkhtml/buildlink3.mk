@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/06 06:22:55 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/12 10:27:39 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GTKHTML_BUILDLINK3_MK:=	${GTKHTML_BUILDLINK3_MK}+
@@ -23,4 +23,4 @@ BUILDLINK_PKGSRCDIR.gtkhtml?=	../../www/gtkhtml
 .include "../../www/libghttp/buildlink3.mk"
 .include "../../x11/control-center/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

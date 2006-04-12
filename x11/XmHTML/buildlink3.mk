@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:56 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:40 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XMHTML_BUILDLINK3_MK:=	${XMHTML_BUILDLINK3_MK}+
@@ -20,4 +20,4 @@ BUILDLINK_PKGSRCDIR.XmHTML?=	../../x11/XmHTML
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

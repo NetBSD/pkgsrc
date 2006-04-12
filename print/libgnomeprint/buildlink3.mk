@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/04/06 06:22:36 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/04/12 10:27:31 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOMEPRINT_BUILDLINK3_MK:=	${LIBGNOMEPRINT_BUILDLINK3_MK}+
@@ -37,4 +37,4 @@ MAKEVARS+=	PKG_BUILD_OPTIONS.libgnomeprint
 .  include "../../print/libgnomecups/buildlink3.mk"
 .endif
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

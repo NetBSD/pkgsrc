@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/06 06:21:33 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/12 10:26:59 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBCOMPREX_BUILDLINK3_MK:=	${LIBCOMPREX_BUILDLINK3_MK}+
@@ -18,4 +18,4 @@ BUILDLINK_PKGSRCDIR.libcomprex?=	../../archivers/libcomprex
 
 .include "../../www/curl/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2006/04/06 06:23:01 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2006/04/12 10:27:41 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDELIBS_BUILDLINK3_MK:=	${KDELIBS_BUILDLINK3_MK}+
@@ -50,4 +50,4 @@ MAKEVARS+=	PKG_BUILD_OPTIONS.kdelibs
 .include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

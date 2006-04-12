@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/04/06 06:22:34 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/04/12 10:27:30 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_ORBIT_BUILDLINK3_MK:=	${PY_ORBIT_BUILDLINK3_MK}+
@@ -20,4 +20,4 @@ BUILDLINK_PKGSRCDIR.pyorbit?=	../../net/py-ORBit
 
 .include "../../net/ORBit2/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/06 06:22:51 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/04/12 10:27:37 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBXML2_BUILDLINK3_MK:=	${LIBXML2_BUILDLINK3_MK}+
@@ -21,4 +21,4 @@ BUILDLINK_FILES.libxml2+=	bin/xml2-config
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

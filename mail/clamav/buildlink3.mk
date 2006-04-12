@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/04/06 06:22:16 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/04/12 10:27:23 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CLAMAV_BUILDLINK3_MK:=	${CLAMAV_BUILDLINK3_MK}+
@@ -20,4 +20,4 @@ BUILDLINK_PKGSRCDIR.clamav?=	../../mail/clamav
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

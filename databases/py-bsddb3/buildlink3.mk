@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:21:42 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:05 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_BSDDB3_BUILDLINK3_MK:=	${PY_BSDDB3_BUILDLINK3_MK}+
@@ -24,4 +24,4 @@ BUILDLINK_PKGSRCDIR.py-bsddb3?=	../../databases/py-bsddb3
 
 .include "../../databases/db4/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:36 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:31 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 A2PS_BUILDLINK3_MK:=	${A2PS_BUILDLINK3_MK}+
@@ -18,4 +18,4 @@ BUILDLINK_PKGSRCDIR.a2ps?=	../../print/a2ps
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
