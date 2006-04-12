@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.554 2006/04/12 20:28:03 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.555 2006/04/12 21:35:02 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3052,7 +3052,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 
 	} elsif ($type eq "DistSuffix") {
 		if ($value eq ".tar.gz") {
-			$line->log_note("\"${varname} is \".tar.gz\" by default, so this definition may be redundant.");
+			$line->log_note("${varname} is \".tar.gz\" by default, so this definition may be redundant.");
 		}
 
 	} elsif ($type eq "Filename") {
