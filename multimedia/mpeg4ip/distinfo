@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/04/12 21:39:38 wiz Exp $
+
+SHA1 (mpeg4ip-1.4.1.tar.gz) = f0a4b9ecfb281c6c20b332002a7e341e27a9ea10
+RMD160 (mpeg4ip-1.4.1.tar.gz) = 656d06433d490aadadd8c6fd8e8d5727870e8766
+Size (mpeg4ip-1.4.1.tar.gz) = 4791075 bytes
+SHA1 (patch-aa) = 871343e2f8412b8141849a74170c8336424c067d
+SHA1 (patch-ab) = 93875dfe86b50c399113915fbac523becae3e2aa

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/04/12 21:39:38 wiz Exp $
+
+--- bootstrap.orig	2005-08-12 17:17:17.000000000 +0000
++++ bootstrap
+@@ -34,7 +34,7 @@ if (test ! -f "$MPEG4IP_SRC/configure") 
+     exit 1
+ fi
+ 
+-target_system=`uname -s`
++target_system=Linux
+ if sdl-config --version >/dev/null 2>/dev/null
+     then
+     echo "SDL appears to be installed"
