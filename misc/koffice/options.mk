@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/06/27 02:06:45 markd Exp $
+# $NetBSD: options.mk,v 1.2 2006/04/12 12:37:35 markd Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.koffice
 PKG_SUPPORTED_OPTIONS=  mysql pgsql
@@ -16,10 +16,10 @@ PLIST_SUBST+=		HAVE_MYSQL="@comment "
 .if !empty(PKG_OPTIONS:Mpgsql)
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../databases/libpqxx/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-pgsqlincdir=${PGSQL_PREFIX}/include
-CONFIGURE_ARGS+=	--with-pgsqllibdir=${PGSQL_PREFIX}/lib
-CONFIGURE_ARGS+=	--with-pqxxincdir=${BUILDLINK_PREFIX.libpqxx}/include
-CONFIGURE_ARGS+=	--with-pqxxlibdir=${BUILDLINK_PREFIX.libpqxx}/lib
+CONFIGURE_ARGS+=	--with-pgsql-includes=${PGSQL_PREFIX}/include
+CONFIGURE_ARGS+=	--with-pgsql-libraries=${PGSQL_PREFIX}/lib
+CONFIGURE_ARGS+=	--with-pqxx-includes=${BUILDLINK_PREFIX.libpqxx}/include
+CONFIGURE_ARGS+=	--with-pqxx-libraries=${BUILDLINK_PREFIX.libpqxx}/lib
 PLIST_SUBST+=		HAVE_PGSQL=
 .else
 CONFIGURE_ARGS+=	--disable-pgsql
