@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.19 2006/03/18 21:40:45 jlam Exp $
+# $NetBSD: NetBSD.mk,v 1.20 2006/04/12 21:01:15 joerg Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -142,4 +142,5 @@ _OPSYS_MAX_CMDLEN_CMD=	/sbin/sysctl -n kern.argmax
 GAMEOWN=		games
 GAMEGRP=		games
 GAMEMODE=		2555
+GAMEDIRMODE=		0775
 .endif

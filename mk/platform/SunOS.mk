@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.23 2006/04/01 23:27:49 grant Exp $
+# $NetBSD: SunOS.mk,v 1.24 2006/04/12 21:01:15 joerg Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -131,4 +131,5 @@ PKG_TOOLS_BIN?=		${LOCALBASE}/bin
 #GAMEOWN=		games
 #GAMEGRP=		games
 #GAMEMODE=		2555
+#GAMEDIRMODE=		0775
 #.endif
