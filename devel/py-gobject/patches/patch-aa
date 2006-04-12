@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/04/12 09:28:00 drochner Exp $
+
+--- Makefile.in.orig	2006-04-11 18:41:58.000000000 +0200
++++ Makefile.in
+@@ -807,7 +807,7 @@ uninstall-info: uninstall-info-recursive
+ 
+ pygtk.py: pygtk.py.in
+ 	sed -e s!\@pyexecdir\@!@pyexecdir@! \
+-		< $< > $@
++		< pygtk.py.in > $@
+ pygtk.py: Makefile
+ 
+ # install pth file.
