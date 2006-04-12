@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:21:52 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:11 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMEMMGR_BUILDLINK3_MK:=	${LIBMEMMGR_BUILDLINK3_MK}+
@@ -18,4 +18,4 @@ BUILDLINK_DEPMETHOD.libmemmgr?=	build
 
 .include "../../devel/libetm/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/06 06:22:43 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/04/12 10:27:34 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENCDK_BUILDLINK3_MK:=	${OPENCDK_BUILDLINK3_MK}+
@@ -19,4 +19,4 @@ BUILDLINK_PKGSRCDIR.opencdk?=	../../security/opencdk
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

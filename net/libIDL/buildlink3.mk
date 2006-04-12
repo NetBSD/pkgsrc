@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/04/06 06:22:32 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/04/12 10:27:29 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBIDL_BUILDLINK3_MK:=	${LIBIDL_BUILDLINK3_MK}+
@@ -19,4 +19,4 @@ BUILDLINK_PKGSRCDIR.libIDL?=	../../net/libIDL
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

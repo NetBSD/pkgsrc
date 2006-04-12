@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/06 06:22:01 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/12 10:27:16 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CAL3D_BUILDLINK3_MK:=	${CAL3D_BUILDLINK3_MK}+
@@ -18,4 +18,4 @@ BUILDLINK_PKGSRCDIR.cal3d?=	../../graphics/cal3d
 
 .include "../../graphics/Mesa/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

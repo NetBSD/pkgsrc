@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:21:53 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:11 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBRFUNCS_BUILDLINK3_MK:=	${LIBRFUNCS_BUILDLINK3_MK}+
@@ -17,4 +17,4 @@ BUILDLINK_PKGSRCDIR.librfuncs?=	../../devel/librfuncs
 
 BUILDLINK_LDFLAGS.librfuncs+=	-lrfuncs
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

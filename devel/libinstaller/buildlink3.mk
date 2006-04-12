@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/10 15:06:13 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:10 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBINSTALLER_BUILDLINK3_MK:=	${LIBINSTALLER_BUILDLINK3_MK}+
@@ -18,4 +18,4 @@ BUILDLINK_PKGSRCDIR.libinstaller?=	../../devel/libinstaller
 .include "../../devel/libaura/buildlink3.mk"
 .include "../../devel/libdfui/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

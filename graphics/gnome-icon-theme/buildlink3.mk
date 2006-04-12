@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/04/06 06:22:02 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/04/12 10:27:17 rillig Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 GNOME_ICON_THEME_BUILDLINK3_MK:=	${GNOME_ICON_THEME_BUILDLINK3_MK}+
@@ -31,4 +31,4 @@ PRINT_PLIST_AWK+=	/^@dirrm ${d:S/\//\\\//g}$$/ \
 .  undef dirs
 .endif	# GNOME_ICON_THEME_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}

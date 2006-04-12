@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/06 06:22:23 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/12 10:27:27 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBCDIO_BUILDLINK3_MK:=	${LIBCDIO_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.libcdio+=	libcdio>=0.76nb1
 BUILDLINK_PKGSRCDIR.libcdio?=	../../misc/libcdio
 .endif	# LIBCDIO_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

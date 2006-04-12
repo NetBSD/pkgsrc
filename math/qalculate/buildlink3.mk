@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 06:22:22 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:26 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 QALCULATE_BUILDLINK3_MK:=	${QALCULATE_BUILDLINK3_MK}+
@@ -20,4 +20,4 @@ BUILDLINK_PKGSRCDIR.qalculate?=	../../math/qalculate
 .include "../../math/cln/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

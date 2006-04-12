@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 06:22:24 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:27 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 RPM_BUILDLINK3_MK:=	${RPM_BUILDLINK3_MK}+
@@ -22,4 +22,4 @@ BUILDLINK_CPPFLAGS.rpm= -I${BUILDLINK_PREFIX.rpm}/include/rpm
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
