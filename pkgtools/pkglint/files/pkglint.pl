@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.553 2006/04/12 09:23:36 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.554 2006/04/12 20:28:03 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2069,7 +2069,7 @@ sub type_should_be_quoted($) {
 sub variable_needs_quoting($) {
 	my ($varname) = @_;
 
-	return !($varname =~ qr"^(?:.*DIR|DISTNAME|LOCALBASE|PKGNAME|PREFIX|WRKSRC)$");
+	return !($varname =~ qr"^(?:.*DIR|BUILDLINK_PREFIX\..*|DISTNAME|LOCALBASE|PKGNAME|PREFIX|WRKSRC)$");
 }
 
 my $check_pkglint_version_done = false;
