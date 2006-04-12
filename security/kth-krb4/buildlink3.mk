@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:42 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:33 rillig Exp $
 # XXX	BUILDLINK_DEPMETHOD.kth-krb4?=	build
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
@@ -18,4 +18,4 @@ BUILDLINK_ABI_DEPENDS.kth-krb4?=	kth-krb4>=1.2.1nb6
 BUILDLINK_PKGSRCDIR.kth-krb4?=	../../security/kth-krb4
 .endif	# KTH_KRB4_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

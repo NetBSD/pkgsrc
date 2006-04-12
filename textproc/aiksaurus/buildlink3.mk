@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:47 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:36 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 AIKSAURUS_BUILDLINK3_MK:=	${AIKSAURUS_BUILDLINK3_MK}+
@@ -15,4 +15,4 @@ BUILDLINK_API_DEPENDS.aiksaurus+=	aiksaurus>=1.2.1
 BUILDLINK_PKGSRCDIR.aiksaurus?=	../../textproc/aiksaurus
 .endif	# AIKSAURUS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

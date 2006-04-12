@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:03 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:18 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIB3DS_BUILDLINK3_MK:=	${LIB3DS_BUILDLINK3_MK}+
@@ -18,4 +18,4 @@ BUILDLINK_PKGSRCDIR.lib3ds?=	../../graphics/lib3ds
 
 .include "../../graphics/Mesa/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

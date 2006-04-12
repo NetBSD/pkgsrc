@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:21:35 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:01 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBCDAUDIO_BUILDLINK3_MK:=	${LIBCDAUDIO_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.libcdaudio+=	libcdaudio>=0.99.12nb1
 BUILDLINK_PKGSRCDIR.libcdaudio?=	../../audio/libcdaudio
 .endif	# LIBCDAUDIO_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2006/04/06 06:21:41 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2006/04/12 10:27:04 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 OPENLDAP_BUILDLINK3_MK:=	${OPENLDAP_BUILDLINK3_MK}+
@@ -34,4 +34,4 @@ MAKEVARS+=	PKG_BUILD_OPTIONS.openldap
 .endif
 .include "../../security/openssl/buildlink3.mk"
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

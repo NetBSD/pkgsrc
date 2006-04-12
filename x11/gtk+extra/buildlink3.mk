@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:23:01 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:41 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GTK+EXTRA_BUILDLINK3_MK:=	${GTK+EXTRA_BUILDLINK3_MK}+
@@ -18,4 +18,4 @@ BUILDLINK_PKGSRCDIR.gtk+extra?=	../../x11/gtk+extra
 
 .include "../../x11/gtk/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

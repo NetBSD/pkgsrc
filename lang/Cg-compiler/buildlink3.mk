@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:09 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:20 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 CG_COMPILER_BUILDLINK3_MK:=	${CG_COMPILER_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.Cg-compiler?=	Cg-compiler>=1.3beta2nb1
 BUILDLINK_PKGSRCDIR.Cg-compiler?=	../../lang/Cg-compiler
 .endif	# CG_COMPILER_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
