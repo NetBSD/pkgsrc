@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/06 16:43:39 drochner Exp $
-@comment $NetBSD: PLIST,v 1.5 2006/04/06 16:43:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/12 22:57:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/12 22:57:59 joerg Exp $
 ${PYSITELIB}/matplotlib/__init__.py
 ${PYSITELIB}/matplotlib/__init__.pyc
 ${PYSITELIB}/matplotlib/__init__.pyo
@@ -474,6 +474,9 @@ ${PYSITELIB}/matplotlib/widgets.pyo
 ${PYSITELIB}/matplotlib/windowing.py
 ${PYSITELIB}/matplotlib/windowing.pyc
 ${PYSITELIB}/matplotlib/windowing.pyo
+${PYSITELIB}/subprocess/__init__.py
+${PYSITELIB}/subprocess/__init__.pyc
+${PYSITELIB}/subprocess/__init__.pyo
 ${PYSITELIB}/pylab.py
 ${PYSITELIB}/pylab.pyc
 ${PYSITELIB}/pylab.pyo
@@ -494,3 +497,4 @@ ${PYSITELIB}/pylab.pyo
 @dirrm ${PYSITELIB}/matplotlib/enthought
 @dirrm ${PYSITELIB}/matplotlib/backends
 @dirrm ${PYSITELIB}/matplotlib
+@dirrm ${PYSITELIB}/subprocess
