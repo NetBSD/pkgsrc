@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/12 21:54:35 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/12 22:36:34 rillig Exp $
 share/doc/wx/alignv.gif
 share/doc/wx/back.gif
 share/doc/wx/books.gif
@@ -150,12 +150,12 @@ share/doc/wx/wxwin211.htm
 share/doc/wx/wxwin212.htm
 share/doc/wx/wxwin213.htm
 share/doc/wx/wxwin214.htm
-share/doc/wx/wxwin22.htm
 share/doc/wx/wxwin215.htm
 share/doc/wx/wxwin216.htm
 share/doc/wx/wxwin217.htm
 share/doc/wx/wxwin218.htm
 share/doc/wx/wxwin219.htm
+share/doc/wx/wxwin22.htm
 share/doc/wx/wxwin220.htm
 share/doc/wx/wxwin221.htm
 share/doc/wx/wxwin222.htm
@@ -256,7 +256,6 @@ share/doc/wx/wxwin307.htm
 share/doc/wx/wxwin308.htm
 share/doc/wx/wxwin309.htm
 share/doc/wx/wxwin31.htm
-share/doc/wx/wxwin32.htm
 share/doc/wx/wxwin310.htm
 share/doc/wx/wxwin311.htm
 share/doc/wx/wxwin312.htm
@@ -267,6 +266,7 @@ share/doc/wx/wxwin316.htm
 share/doc/wx/wxwin317.htm
 share/doc/wx/wxwin318.htm
 share/doc/wx/wxwin319.htm
+share/doc/wx/wxwin32.htm
 share/doc/wx/wxwin320.htm
 share/doc/wx/wxwin321.htm
 share/doc/wx/wxwin322.htm
@@ -362,11 +362,11 @@ share/doc/wx/wxwin402.htm
 share/doc/wx/wxwin403.htm
 share/doc/wx/wxwin404.htm
 share/doc/wx/wxwin405.htm
-share/doc/wx/wxwin41.htm
 share/doc/wx/wxwin406.htm
 share/doc/wx/wxwin407.htm
 share/doc/wx/wxwin408.htm
 share/doc/wx/wxwin409.htm
+share/doc/wx/wxwin41.htm
 share/doc/wx/wxwin410.htm
 share/doc/wx/wxwin411.htm
 share/doc/wx/wxwin412.htm
