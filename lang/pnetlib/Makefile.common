@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2005/05/22 20:08:10 jlam Exp $
+# $NetBSD: Makefile.common,v 1.8 2006/04/12 20:50:56 joerg Exp $
 #
 
 DISTNAME=	pnetlib-0.6.6
@@ -21,12 +21,6 @@ PLIST_SRC=	${.CURDIR}/../pnetlib/PLIST
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=	${EXPORT_SYMBOLS_LDFLAGS}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "FreeBSD"
-PLIST_SUBST+=	LIBXSHARP="@comment "
-.else
-PLIST_SUBST+=	LIBXSHARP=
-.endif
+BUILD_DEPENDS+=	treecc>=0.2.6:../../devel/treecc
 
 .include "../../lang/pnet/buildlink3.mk"

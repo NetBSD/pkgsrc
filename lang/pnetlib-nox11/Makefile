@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:09:47 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/12 20:50:56 joerg Exp $
 #
 
 .include "${.CURDIR}/../pnetlib/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/-/-nox11-/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 CONFIGURE_ARGS+=	--without-x
 
-PLIST_SUBST+=		WITH_X11="@comment "
 CONFLICTS=		pnetlib-[0-9]*
 
 .include "../../mk/bsd.pkg.mk"
