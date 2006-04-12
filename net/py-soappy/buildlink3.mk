@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:34 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:30 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_SOAPPY_BUILDLINK3_MK:=	${PY_SOAPPY_BUILDLINK3_MK}+
@@ -20,4 +20,4 @@ BUILDLINK_PKGSRCDIR.py-SOAPpy?=	../../net/py-soappy
 
 .include "../../textproc/py-xml/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

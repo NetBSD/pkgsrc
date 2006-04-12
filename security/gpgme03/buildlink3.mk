@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 06:22:39 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:33 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GPGME03_BUILDLINK3_MK:=	${GPGME03_BUILDLINK3_MK}+
@@ -21,4 +21,4 @@ BUILDLINK_TRANSFORM.gpgme03+=	-e 's|/gpgme03.h|/gpgme.h|g'
 BUILDLINK_TRANSFORM+=		l:gpgme:gpgme03
 .endif	# GPGME03_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

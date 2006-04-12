@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/06 06:22:51 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/04/12 10:27:37 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENSP_BUILDLINK3_MK:=	${OPENSP_BUILDLINK3_MK}+
@@ -21,4 +21,4 @@ PTHREAD_OPTS+=          require
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

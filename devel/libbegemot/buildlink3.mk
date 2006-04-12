@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:21:50 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:09 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBBEGEMOT_BUILDLINK3_MK:=	${LIBBEGEMOT_BUILDLINK3_MK}+
@@ -15,4 +15,4 @@ BUILDLINK_API_DEPENDS.libbegemot+=	libbegemot>=1.9nb1
 BUILDLINK_PKGSRCDIR.libbegemot?=	../../devel/libbegemot
 .endif	# LIBBEGEMOT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

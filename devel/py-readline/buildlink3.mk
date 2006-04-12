@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:21:55 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:13 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PYREADLINE_BUILDLINK3_MK:=	${PYREADLINE_BUILDLINK3_MK}+
@@ -20,4 +20,4 @@ BUILDLINK_PKGSRCDIR.pyreadline?=	../../devel/py-readline
 
 .endif	# PYREADLINE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

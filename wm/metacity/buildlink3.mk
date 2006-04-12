@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/04/06 06:22:52 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2006/04/12 10:27:38 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 METACITY_BUILDLINK3_MK:=	${METACITY_BUILDLINK3_MK}+
@@ -23,4 +23,4 @@ BUILDLINK_PKGSRCDIR.metacity?=	../../wm/metacity
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

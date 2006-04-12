@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/06 06:21:43 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/12 10:27:05 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GCONF_BUILDLINK3_MK:=	${GCONF_BUILDLINK3_MK}+
@@ -20,4 +20,4 @@ BUILDLINK_PKGSRCDIR.GConf?=	../../devel/GConf
 .include "../../devel/oaf/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
