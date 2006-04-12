@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.61 2006/04/08 18:48:58 jdolecek Exp $
+# $NetBSD: bsd.sites.mk,v 1.62 2006/04/12 11:37:18 markd Exp $
 #
 # Default MASTER_SITES
 
@@ -90,6 +90,24 @@ MASTER_SITE_GNOME+=     \
 	ftp://ftp.chg.ru/pub/X11/gnome/ \
 	ftp://ftp.dataplus.se/pub/linux/gnome/ \
 	ftp://ftp.dit.upm.es/linux/gnome/
+
+MASTER_SITE_KDE+=	\
+	ftp://ftp.kde.org/pub/kde/stable/ \
+	ftp://ftp.uk.kde.org/pub/kde/stable/ \
+	ftp://download.au.kde.org/pub/kde/stable/ \
+	ftp://mirrors.midco.net/pub/kde/stable/ \
+	ftp://ftp.eu.uu.net/pub/kde/stable/ \
+	ftp://ftp.tiscali.nl/pub/mirrors/kde/stable/ \
+	ftp://ftp.roedu.net/pub/mirrors/ftp.kde.org/stable/ \
+	ftp://ftp.rediris.es/mirror/kde/stable/ \
+	ftp://ftp.du.se/pub/mirrors/kde/stable/ \
+	ftp://download.tw.kde.org/pub/kde/stable/ \
+	ftp://www.t.ring.gr.jp/pub/X/kde/stable/ \
+	http://www.t.ring.gr.jp/archives/X/kde/stable/ \
+	ftp://ftp.kddlabs.co.jp/pub/X/kde/stable/ \
+	ftp://ftp.de.kde.org/pub/kde/stable/ \
+	ftp://ftp.planetmirror.com.au/pub/kde/stable/ \
+	http://ftp.planetmirror.com.au/pub/kde/stable/
 
 MASTER_SITE_SOURCEFORGE+=	\
 	http://easynews.dl.sourceforge.net/sourceforge/ \
