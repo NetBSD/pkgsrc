@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/04/10 16:19:31 tron Exp $
+# $NetBSD: Makefile,v 1.33 2006/04/12 13:34:49 tron Exp $
 
 DISTNAME=		#defined
 PKGNAME=		fprot-workstation-bin-${FPVER}
@@ -70,12 +70,7 @@ SUBST_MESSAGE.paths=	Configuring default paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	tools/check-updates.pl
 SUBST_SED.paths=	-e "s,XXXFPDIRXXX,${FPDIR},"
-
-SUBST_CLASSES+=		perl
-SUBST_MESSAGE.perl=	Fixing path to Perl binary.
-SUBST_STAGE.perl=	post-patch
-SUBST_FILES.perl=	tools/check-updates.pl
-SUBST_SED.perl=		-e "s,/usr/bin/perl,${PREFIX}/bin/perl,g"
+SUBST_SED.paths+=	-e "s,/usr/bin/perl,${PREFIX}/bin/perl,g"
 
 INSTALLATION_DIRS=	bin man/man1 man/man8 sbin
 
