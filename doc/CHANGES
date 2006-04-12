@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13553 2006/04/12 21:13:27 rillig Exp $
+$NetBSD: CHANGES,v 1.13554 2006/04/12 21:40:26 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2042,3 +2042,13 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated archivers/advancecomp to 1.15 [rillig 2006-04-12]
 	Added audio/jack version 0.100.0 [rillig 2006-04-12]
 	Updated audio/darkice to 0.15 [rillig 2006-04-12]
+	Updated devel/py-gobject to 2.10.1 [drochner 2006-04-12]
+	Updated devel/eel2 to 2.14.1 [drochner 2006-04-12]
+	Updated x11/gtksourceview to 1.6.1 [drochner 2006-04-12]
+	Updated editors/gedit to 2.14.1 [drochner 2006-04-12]
+	Updated misc/yelp to 2.14.1 [drochner 2006-04-12]
+	Updated devel/libwnck to 2.14.1 [drochner 2006-04-12]
+	Updated misc/gnome-user-docs to 2.14.2 [drochner 2006-04-12]
+	Updated sysutils/nautilus to 2.14.1 [drochner 2006-04-12]
+	Updated sysutils/nautilus-cd-burner to 2.14.1 [drochner 2006-04-12]
+	Updated lang/python24 to 2.4.3 [drochner 2006-04-12]
