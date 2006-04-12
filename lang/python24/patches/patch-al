@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.9 2006/01/23 08:00:02 recht Exp $
+$NetBSD: patch-al,v 1.10 2006/04/12 20:21:48 drochner Exp $
 
---- configure.orig	2005-12-11 23:02:37.000000000 +0100
-+++ configure	2005-12-11 23:02:22.000000000 +0100
-@@ -312,7 +312,7 @@
+--- configure.orig	2006-02-17 09:39:55.000000000 +0100
++++ configure
+@@ -312,7 +312,7 @@ ac_includes_default="\
  # include <unistd.h>
  #endif"
  
@@ -11,7 +11,7 @@ $NetBSD: patch-al,v 1.9 2006/01/23 08:00:02 recht Exp $
  ac_subst_files=''
  
  # Initialize some variables set by options.
-@@ -859,7 +859,9 @@
+@@ -859,7 +859,9 @@ Optional Packages:
    --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
    --without-PACKAGE       do not use PACKAGE (same as --with-PACKAGE=no)
    --without-gcc           never use gcc
@@ -22,16 +22,16 @@ $NetBSD: patch-al,v 1.9 2006/01/23 08:00:02 recht Exp $
    --with-suffix=.exe      set executable suffix
    --with-pydebug          build with Py_DEBUG defined
    --with-libs='lib1 ...'  link against additional libs
-@@ -1482,6 +1484,8 @@
+@@ -1482,6 +1484,8 @@ case $ac_sys_system/$ac_sys_release in
    # Reconfirmed for OpenBSD 3.3 by Zachary Hamm, for 3.4 by Jason Ish.
-   OpenBSD/2.* | OpenBSD/3.[0123456])
+   OpenBSD/2.* | OpenBSD/3.[012345678])
      define_xopen_source=no;;
 +  NetBSD/1.5 | NetBSD/1.5.* | NetBSD/1.6 | NetBSD/1.6.* | NetBSD/1.6[A-S])
 +    define_xopen_source=no;;
    # On Solaris 2.6, sys/wait.h is inconsistent in the usage
    # of union __?sigval. Reported by Stuart Bishop.
    SunOS/5.6)
-@@ -1667,258 +1671,6 @@
+@@ -1676,258 +1680,6 @@ fi;
  echo "$as_me:$LINENO: result: $without_gcc" >&5
  echo "${ECHO_T}$without_gcc" >&6
  
@@ -290,12 +290,17 @@ $NetBSD: patch-al,v 1.9 2006/01/23 08:00:02 recht Exp $
  # If the user switches compilers, we can't believe the cache
  if test ! -z "$ac_cv_prog_CC" -a ! -z "$CC" -a "$CC" != "$ac_cv_prog_CC"
  then
-@@ -2755,111 +2507,467 @@
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
--$ac_declaration
--#include <stdlib.h>
+@@ -2758,117 +2510,473 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+    'extern "C" void exit (int);' \
+    'void exit (int);'
+ do
+-  cat >conftest.$ac_ext <<_ACEOF
++  cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
 +$ac_declaration
 +#include <stdlib.h>
 +int
@@ -582,11 +587,13 @@ $NetBSD: patch-al,v 1.9 2006/01/23 08:00:02 recht Exp $
 +ac_link='$CXX -o conftest$ac_exeext $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
 +ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
 +       cat >conftest.$ac_ext <<_ACEOF
-+/* confdefs.h.  */
-+_ACEOF
-+cat confdefs.h >>conftest.$ac_ext
-+cat >>conftest.$ac_ext <<_ACEOF
-+/* end confdefs.h.  */
+ /* confdefs.h.  */
+ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+-$ac_declaration
+-#include <stdlib.h>
 +
  int
  main ()
@@ -833,7 +840,7 @@ $NetBSD: patch-al,v 1.9 2006/01/23 08:00:02 recht Exp $
  # checks for UNIX variants that set C preprocessor variables
  
  ac_ext=c
-@@ -3262,22 +3370,7 @@
+@@ -3271,22 +3379,7 @@ echo "$as_me:$LINENO: checking LINKCC" >
  echo $ECHO_N "checking LINKCC... $ECHO_C" >&6
  if test -z "$LINKCC"
  then
@@ -857,16 +864,16 @@ $NetBSD: patch-al,v 1.9 2006/01/23 08:00:02 recht Exp $
  	case $ac_sys_system in
  	AIX*)
  	   exp_extra="\"\""
-@@ -3404,7 +3497,7 @@
+@@ -3413,7 +3506,7 @@ _ACEOF
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
--    Linux*|GNU*|NetBSD*|FreeBSD*)
+-    Linux*|GNU*|NetBSD*|FreeBSD*|DragonFly*)
 +    Linux*|GNU*|NetBSD*|FreeBSD*|Interix*|DragonFly*)
  	  LDLIBRARY='libpython$(VERSION).so'
  	  BLDLIBRARY='-L. -lpython$(VERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
-@@ -3828,7 +3921,12 @@
+@@ -3837,7 +3930,12 @@ echo "${ECHO_T}$ac_cv_no_strict_aliasing
  	    ;;
  	# is there any other compiler on Darwin besides gcc?
  	Darwin*)
@@ -880,7 +887,7 @@ $NetBSD: patch-al,v 1.9 2006/01/23 08:00:02 recht Exp $
  	    ;;
      esac
      ;;
-@@ -10364,12 +10462,12 @@
+@@ -10373,12 +10471,12 @@ then
  				LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -896,33 +903,23 @@ $NetBSD: patch-al,v 1.9 2006/01/23 08:00:02 recht Exp $
  	BSD/OS*/4*) LDSHARED="gcc -shared";;
  	OpenBSD*|FreeBSD*)
  		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
-@@ -10378,7 +10476,8 @@
- 		else
+@@ -10388,6 +10486,7 @@ then
  			LDSHARED="ld -Bshareable ${LDFLAGS}"
  		fi;;
--	NetBSD*) LDSHARED="cc -shared ${LDFLAGS}";;
-+	NetBSD*|DragonFly*) LDSHARED='$(CC) -shared'" ${LDFLAGS}";;
+ 	NetBSD*|DragonFly*) LDSHARED="cc -shared ${LDFLAGS}";;
 +	Interix*) LDSHARED='$(CC) -shared'" ${LDFLAGS}";; # XXX tv needs image-base hack
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then LDSHARED='$(CC) -shared'
-@@ -10410,7 +10509,8 @@
- 		 fi;;
+@@ -10421,6 +10520,7 @@ then
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
--	FreeBSD*|NetBSD*|OpenBSD*) CCSHARED="-fPIC";;
-+	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
+ 	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
 +	Interix*) CCSHARED="";;
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -10463,11 +10563,12 @@
- 	OpenUNIX*|UnixWare*) LINKFORSHARED="-Wl,-Bexport";;
- 	SCO_SV*) LINKFORSHARED="-Wl,-Bexport";;
- 	ReliantUNIX*) LINKFORSHARED="-W1 -Blargedynsym";;
--	FreeBSD*|NetBSD*|OpenBSD*)
-+	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*)
- 		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
+@@ -10478,6 +10578,7 @@ then
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
  		fi;;
@@ -930,15 +927,7 @@ $NetBSD: patch-al,v 1.9 2006/01/23 08:00:02 recht Exp $
  	SunOS/5*) case $CC in
  		  *gcc*)
  		    if $CC -Xlinker --help 2>&1 | grep export-dynamic >/dev/null
-@@ -14337,6 +14438,7 @@
- /* end confdefs.h.  */
- 
- #include "confdefs.h"
-+#include <sys/types.h>
- #include <sys/socket.h>
- #include <netinet/in.h>
- #include <arpa/inet.h>
-@@ -21044,15 +21146,15 @@
+@@ -21203,15 +21304,15 @@ s,@SGI_ABI@,$SGI_ABI,;t t
  s,@EXTRAPLATDIR@,$EXTRAPLATDIR,;t t
  s,@EXTRAMACHDEPPATH@,$EXTRAMACHDEPPATH,;t t
  s,@CONFIGURE_MACOSX_DEPLOYMENT_TARGET@,$CONFIGURE_MACOSX_DEPLOYMENT_TARGET,;t t
