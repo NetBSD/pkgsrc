@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4864 2006/04/12 13:40:10 markd Exp $
+$NetBSD: TODO,v 1.4865 2006/04/12 18:20:18 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -450,7 +450,6 @@ Suggested package updates
 	o dnstracer-1.8
 	o doxygen-1.4.6
 	o dpkg-1.10.28
-	o dovecot-1.0beta7
 	o dropbear-0.48
 	o dspam-3.6.4
 	o dvd+rw-tools-6.1
