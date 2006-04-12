@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2006/04/12 11:00:24 tron Exp $
+# $NetBSD: Makefile.common,v 1.9 2006/04/12 13:26:11 tron Exp $
 
 DISTNAME=		mysql-5.0.18
 CATEGORIES=		databases
@@ -108,8 +108,8 @@ SUBST_STAGE.scripts=	post-patch
 SUBST_FILES.scripts=	scripts/mysql_install_db.sh scripts/mysqld_safe.sh \
 			scripts/mysql_secure_installation.sh \
 			support-files/mysql.server.sh
-SUBST_SED.scripts=	-e "s,chown,${CHOWN},g" \
-			-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
+SUBST_SED.scripts=	-e "s,chown,${CHOWN},g"
+SUBST_SED.scripts+=	-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
 SUBST_MESSAGE.scripts=	Fixing scripts.
 
 # Detect correctly sem_init(3) on NetBSD.
