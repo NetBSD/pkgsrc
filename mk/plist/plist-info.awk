@@ -1,4 +1,4 @@
-# $NetBSD: plist-info.awk,v 1.10 2006/03/20 01:48:58 jlam Exp $
+# $NetBSD: plist-info.awk,v 1.11 2006/04/12 20:49:12 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -121,6 +121,13 @@ BEGIN {
 			print_entry($0)
 		}
 		close(cmd)
+	} else {
+		#if ((MANZ ~ /[yY][eE][sS]/) && ($0 !~ /\.gz$/)) {
+		#	$0 = $0 ".gz"
+		#} else if ((MANZ !~ /[yY][eE][sS]/) && ($0 ~ /\.gz$/)) {
+		#	sub("\\.gz$", "")
+		#}
+		print_entry($0)
 	}
 	next
 }
