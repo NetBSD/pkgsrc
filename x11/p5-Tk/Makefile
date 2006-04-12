@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2006/02/05 23:11:40 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2006/04/12 23:58:39 rillig Exp $
 
 DISTNAME=	Tk-804.027
 PKGNAME=	p5-Tk-804.027
-PKGREVISION=	4
+PKGREVISION=	5
 SVR4_PKGNAME=	p5tk
 CATEGORIES=	x11 tk perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Tk/}
@@ -11,13 +11,17 @@ MAINTAINER=	shell@NetBSD.org
 HOMEPAGE=	http://cpan.uwinnipeg.ca/htdocs/Tk/Tk.html
 COMMENT=	Perl5 interface to Tk
 
-BUILD_DEPENDS+= 	p5-HTML-Parser>=3.19:../../www/p5-HTML-Parser
+BUILD_DEPENDS+=	p5-HTML-Parser>=3.19:../../www/p5-HTML-Parser
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=	auto/Tk/.packlist
 
 MAKE_PARAMS=	X11=${X11BASE}
+
+REPLACE_PERL+=	blib/lib/Tk/reindex.pl
+REPLACE_PERL+=	blib/arch/Tk/pTk/Tcl-pTk
+REPLACE_PERL+=	blib/arch/Tk/pTk/mkVFunc
 
 SUBST_CLASSES+=	prefix
 SUBST_STAGE.prefix=	post-patch
