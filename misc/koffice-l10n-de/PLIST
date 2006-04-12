@@ -1,10 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/25 12:39:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.1 2006/04/12 13:01:41 markd Exp $
 share/doc/kde/HTML/de/kchart/common
 share/doc/kde/HTML/de/kchart/index.cache.bz2
 share/doc/kde/HTML/de/kchart/index.docbook
 share/doc/kde/HTML/de/kformula/common
 share/doc/kde/HTML/de/kformula/index.cache.bz2
 share/doc/kde/HTML/de/kformula/index.docbook
+share/doc/kde/HTML/de/kivio/common
+share/doc/kde/HTML/de/kivio/credits.docbook
+share/doc/kde/HTML/de/kivio/index.cache.bz2
+share/doc/kde/HTML/de/kivio/index.docbook
+share/doc/kde/HTML/de/kivio/introduction.docbook
+share/doc/kde/HTML/de/kivio/usage.docbook
+share/doc/kde/HTML/de/kivio/working.docbook
 share/doc/kde/HTML/de/koffice/common
 share/doc/kde/HTML/de/koffice/index.cache.bz2
 share/doc/kde/HTML/de/koffice/index.docbook
@@ -138,7 +145,6 @@ share/doc/kde/HTML/de/kword/kparts.docbook
 share/doc/kde/HTML/de/kword/linkdlg.png
 share/doc/kde/HTML/de/kword/listdepth1.png
 share/doc/kde/HTML/de/kword/listdepth2.png
-share/doc/kde/HTML/de/kword/listdepth3.png
 share/doc/kde/HTML/de/kword/lists.docbook
 share/doc/kde/HTML/de/kword/ltab2.png
 share/doc/kde/HTML/de/kword/mailmerge.docbook
@@ -166,7 +172,6 @@ share/doc/kde/HTML/de/kword/screen.png
 share/doc/kde/HTML/de/kword/spelldlg.png
 share/doc/kde/HTML/de/kword/storeprint.docbook
 share/doc/kde/HTML/de/kword/styldlg1.png
-share/doc/kde/HTML/de/kword/styldlg2.png
 share/doc/kde/HTML/de/kword/styles.docbook
 share/doc/kde/HTML/de/kword/table.docbook
 share/doc/kde/HTML/de/kword/tableprop1.png
@@ -189,57 +194,36 @@ share/doc/kde/HTML/de/thesaurus/common
 share/doc/kde/HTML/de/thesaurus/index.cache.bz2
 share/doc/kde/HTML/de/thesaurus/index.docbook
 share/kde/apps/koffice/autocorrect/de.xml
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/csvfilter.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/desktop_koffice.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/example.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/karbon.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/karbonepsfilter.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kchart.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kdgantt.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kexi.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kfile_abiword.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kfile_gnumeric.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kfile_koffice.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kfile_ooo.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kformdesigner.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kformula.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kformulalatexfilter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kformulamathmlfilter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kformulapngfilter.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kivio.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/koconverter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kocryptfilter.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/koffice.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kofficefilters.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/koproperty.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/koshell.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kounavail.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kplato.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kpresenter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kpresenterkwordfilter.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/krita.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kscan_plugin.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kscreenshot_plugin.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kspread.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kspreadcalc_calc.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kspreaddbasefilter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kspreadexcelimportfilter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kspreadlatexexportfilter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kspreadopencalcfilter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kspreadqprofilter.mo
+${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kspreadinsertcalendar.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kthesaurus.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kugar.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kword.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kwordabiwordfilter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kwordasciifilter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kwordhtmlexportfilter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kwordhtmlimportfilter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kwordlatexexportfilter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kwordlatexfilter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kwordlateximportfilter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kwordmswordfilter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kwordmswritefilter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kwordoowriterfilter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kwordpdfimport.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/olefilterswinword97filter.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/thesaurus_tool.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xsltexportfilter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xsltimportfilter.mo
 @comment in koffice: @dirrm share/kde/apps/koffice/autocorrect
 @dirrm share/doc/kde/HTML/de/thesaurus
 @dirrm share/doc/kde/HTML/de/kword
@@ -248,6 +232,7 @@ ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xsltimportfilter.mo
 @dirrm share/doc/kde/HTML/de/kpresenter
 @dirrm share/doc/kde/HTML/de/koshell
 @dirrm share/doc/kde/HTML/de/koffice
+@dirrm share/doc/kde/HTML/de/kivio
 @dirrm share/doc/kde/HTML/de/kformula
 @dirrm share/doc/kde/HTML/de/kchart
 @comment in kde: @dirrm share/doc/kde/HTML/de
