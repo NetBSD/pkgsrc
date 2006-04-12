@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.26 2006/02/05 23:11:43 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2006/04/12 21:52:15 rillig Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel x11 java
 MASTER_SITES=	# empty
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.javasoft.com/products/jfc/
-DOWNLOAD=	http://java.sun.com/products/jfc/download.archive.html
 COMMENT=	Sun's Java Foundation Classes (the Swing UI toolkit), version 1.1.1
 
-RESTRICTED=	"Read license before redistributing the Java(tm) Foundation Classes"
+DOWNLOAD=	http://java.sun.com/products/jfc/download.archive.html
+
+RESTRICTED=	Read license before redistributing the Java(tm) Foundation Classes
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
@@ -39,7 +40,7 @@ _FETCH_MESSAGE= \
 
 SWINGDIR=	${PREFIX}/lib/java/swing
 EGDIR=		${PREFIX}/share/examples/swing
-HTMLDIR=	${PREFIX}/share/doc/html/swing
+HTMLDIR=	${PREFIX}/share/doc/swing
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
