@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2006/03/10 22:19:29 shannonjr Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/12 19:40:51 joerg Exp $
 #
 DISTNAME=		libprelude-0.9.7
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.org/download/releases/
 
@@ -18,7 +19,8 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		make bison gawk
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+PKG_SYSCONFSUBDIR= 	prelude
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 PRELUDE_USER?=		_prelude
@@ -27,16 +29,12 @@ PRELUDE_HOME?=		${VARBASE:Q}/spool/prelude
 PKG_USERS=	${PRELUDE_USER}:${PRELUDE_GROUP}::Prelude\ IDS:${PRELUDE_HOME}:${NOLOGIN}
 PKG_GROUPS=	${PRELUDE_GROUP}
 
+CONF_FILES+=	${PREFIX}/share/examples/libprelude/client.conf ${PKG_SYSCONFDIR}/client.conf
+CONF_FILES+=	${PREFIX}/share/examples/libprelude/global.conf ${PKG_SYSCONFDIR}/global.conf
+CONF_FILES+=	${PREFIX}/share/examples/libprelude/idmef-client.conf ${PKG_SYSCONFDIR}/idmef-client.conf
+CONF_FILES+=	${PREFIX}/share/examples/libprelude/tls.conf ${PKG_SYSCONFDIR}/tls.conf
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/libprelude/
-	${INSTALL_DATA} ${WRKSRC}/client.conf \
-		${PREFIX}/share/examples/libprelude/client.conf-dist
-	${INSTALL_DATA} ${WRKSRC}/global.conf \
-		${PREFIX}/share/examples/libprelude/global.conf-dist
-	${INSTALL_DATA} ${WRKSRC}/idmef-client.conf \
-		${PREFIX}/share/examples/libprelude/idmef-client.conf-dist
-	${INSTALL_DATA} ${WRKSRC}/tls.conf \
-		${PREFIX}/share/examples/libprelude/tls.conf-dist
 	${CHOWN} -R ${PRELUDE_USER}:${PRELUDE_GROUP} ${PRELUDE_HOME}
 
 .include "../../security/gnutls/buildlink3.mk"
