@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/04/06 16:10:56 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/12 09:28:00 drochner Exp $
 #
 
-DISTNAME=		pygobject-2.10.0
-PKGNAME=		${PYPKGPREFIX}-gobject-2.10.0
+DISTNAME=		pygobject-2.10.1
+PKGNAME=		${PYPKGPREFIX}-gobject-2.10.1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pygobject/2.10/}
 
