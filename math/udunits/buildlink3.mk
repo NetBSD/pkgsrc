@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:22:22 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:26 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 UDUNITS_BUILDLINK3_MK:=	${UDUNITS_BUILDLINK3_MK}+
@@ -17,4 +17,4 @@ BUILDLINK_DEPMETHOD.udunits?=	build
 BUILDLINK_FILES.udunits=	include/udunits.inc
 .endif	# UDUNITS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

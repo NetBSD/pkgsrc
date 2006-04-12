@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 06:22:02 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:17 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GIMP_BASE_BUILDLINK3_MK:=	${GIMP_BASE_BUILDLINK3_MK}+
@@ -24,4 +24,4 @@ BUILDLINK_PKGSRCDIR.gimp-base?=	../../graphics/gimp1-base
 .include "../../multimedia/mpeg-lib/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

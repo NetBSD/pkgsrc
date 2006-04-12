@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:37 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:32 rillig Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.9.
 # XXX After this file has been verified as correct, the comment lines
@@ -26,4 +26,4 @@ BUILDLINK_ABI_DEPENDS.pslib?=	pslib>=0.2.6nb3
 BUILDLINK_PKGSRCDIR.pslib?=	../../print/pslib
 .endif	# PSLIB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

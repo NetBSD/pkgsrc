@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/04/06 06:22:33 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/04/12 10:27:30 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 NETATALK_BUILDLINK3_MK:=	${NETATALK_BUILDLINK3_MK}+
@@ -17,4 +17,4 @@ BUILDLINK_PKGSRCDIR.netatalk?=	../../net/netatalk
 BUILDLINK_DEPMETHOD.netatalk?=	build
 .endif	# NETATALK_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

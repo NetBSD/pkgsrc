@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:21:54 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:12 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NETCDF_BUILDLINK3_MK:=	${NETCDF_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.netcdf+=	netcdf>=3.5.0nb2
 BUILDLINK_PKGSRCDIR.netcdf?=	../../devel/netcdf
 .endif	# NETCDF_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

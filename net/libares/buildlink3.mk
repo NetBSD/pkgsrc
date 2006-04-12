@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:32 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:29 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBARES_BUILDLINK3_MK:=	${LIBARES_BUILDLINK3_MK}+
@@ -25,4 +25,4 @@ BUILDLINK_LDFLAGS.libares+=	-L/usr/local/lib/bind
 BUILDLINK_LIBS.libares+=	-lbind -ldb
 .endif
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

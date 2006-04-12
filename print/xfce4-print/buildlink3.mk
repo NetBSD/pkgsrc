@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/04/06 06:22:37 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2006/04/12 10:27:32 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_PRINT_BUILDLINK3_MK:=	${XFCE4_PRINT_BUILDLINK3_MK}+
@@ -32,4 +32,4 @@ MAKEVARS+=	PKG_BUILD_OPTIONS.xfce4-print
 .  include "../../print/cups/buildlink3.mk"
 .endif
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

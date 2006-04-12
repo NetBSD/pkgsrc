@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/04/06 06:21:35 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/04/12 10:27:01 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMIKMOD_BUILDLINK3_MK:=	${LIBMIKMOD_BUILDLINK3_MK}+
@@ -32,4 +32,4 @@ MAKEVARS+=	PKG_BUILD_OPTIONS.libmikmod
 .  include "../../audio/esound/buildlink3.mk"
 .endif
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

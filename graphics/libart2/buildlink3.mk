@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:03 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:18 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBART2_BUILDLINK3_MK:=	${LIBART2_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.libart2+=	libart2>=2.3.16nb1
 BUILDLINK_PKGSRCDIR.libart2?=	../../graphics/libart2
 .endif	# LIBART2_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

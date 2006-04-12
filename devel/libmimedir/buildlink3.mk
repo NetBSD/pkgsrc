@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:21:52 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:11 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMIMEDIR_BUILDLINK3_MK:=	${LIBMIMEDIR_BUILDLINK3_MK}+
@@ -15,4 +15,4 @@ BUILDLINK_API_DEPENDS.libmimedir+=	libmimedir>=0.4nb1
 BUILDLINK_PKGSRCDIR.libmimedir?=	../../devel/libmimedir
 .endif	# LIBMIMEDIR_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

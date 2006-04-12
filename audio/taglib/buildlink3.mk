@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/06 06:21:37 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/12 10:27:02 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TAGLIB_BUILDLINK3_MK:=	${TAGLIB_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.taglib+=	taglib>=1.3
 BUILDLINK_PKGSRCDIR.taglib?=	../../audio/taglib
 .endif	# TAGLIB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

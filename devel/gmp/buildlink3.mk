@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:21:49 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:08 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GMP_BUILDLINK3_MK:=	${GMP_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.gmp+=	gmp>=4.1.3nb1
 BUILDLINK_PKGSRCDIR.gmp?=	../../devel/gmp
 .endif	# GMP_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:22:20 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:25 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DJBFFT_BUILDLINK3_MK:=	${DJBFFT_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_PKGSRCDIR.djbfft?=	../../math/djbfft
 BUILDLINK_DEPMETHOD.djbfft?=	build
 .endif	# DJBFFT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

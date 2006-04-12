@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/04/06 06:22:51 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2006/04/12 10:27:37 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBCROCO_BUILDLINK3_MK:=	${LIBCROCO_BUILDLINK3_MK}+
@@ -21,4 +21,4 @@ BUILDLINK_PKGSRCDIR.libcroco?=	../../textproc/libcroco
 .include "../../devel/pango/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

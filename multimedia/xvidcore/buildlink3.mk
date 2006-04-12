@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/06 06:22:30 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/04/12 10:27:28 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XVIDCORE_BUILDLINK3_MK:=	${XVIDCORE_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.xvidcore?=	xvidcore>=1.1.0nb1
 BUILDLINK_PKGSRCDIR.xvidcore?=	../../multimedia/xvidcore
 .endif	# XVIDCORE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/06 06:21:50 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/04/12 10:27:09 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDESDK_BUILDLINK3_MK:=	${KDESDK_BUILDLINK3_MK}+
@@ -21,4 +21,4 @@ BUILDLINK_PKGSRCDIR.kdesdk?=	../../devel/kdesdk3
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

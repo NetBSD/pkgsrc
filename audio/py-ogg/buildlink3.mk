@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/04/06 06:21:36 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/04/12 10:27:02 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PY_OGG_BUILDLINK3_MK:=	${PY_OGG_BUILDLINK3_MK}+
@@ -20,4 +20,4 @@ BUILDLINK_PKGSRCDIR.pyogg?=	../../audio/py-ogg
 
 .include "../../multimedia/libogg/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

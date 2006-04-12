@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:22:52 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:38 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SABLOTRON_BUILDLINK3_MK:=	${SABLOTRON_BUILDLINK3_MK}+
@@ -19,4 +19,4 @@ BUILDLINK_PKGSRCDIR.sablotron?=	../../textproc/sablotron
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/04/06 06:21:54 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2006/04/12 10:27:12 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PANGO_BUILDLINK3_MK:=	${PANGO_BUILDLINK3_MK}+
@@ -24,4 +24,4 @@ BUILDLINK_PKGSRCDIR.pango?=	../../devel/pango
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/Xrender/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

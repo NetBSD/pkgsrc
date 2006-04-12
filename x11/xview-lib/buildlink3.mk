@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:23:05 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:47 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XVIEW_LIB_BUILDLINK3_MK:=	${XVIEW_LIB_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.xview-lib?=	xview-lib>=3.2.1nb6
 BUILDLINK_PKGSRCDIR.xview-lib?=	../../x11/xview-lib
 .endif	# XVIEW_LIB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

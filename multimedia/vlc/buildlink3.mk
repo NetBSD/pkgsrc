@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/04/06 06:22:29 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/04/12 10:27:28 rillig Exp $
 #
 # This Makefile fragment is included by packages that use vlc.
 #
@@ -43,4 +43,4 @@ BUILDLINK_PKGSRCDIR.vlc?=	../../multimedia/vlc
 .include "../../sysutils/vcdimager-devel/buildlink3.mk"
 .include "../../x11/wxGTK/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

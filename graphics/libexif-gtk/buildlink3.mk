@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:22:03 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:18 rillig Exp $
 #
 # This file was created automatically using createbuildlink-3.4.
 
@@ -22,4 +22,4 @@ BUILDLINK_PKGSRCDIR.libexif-gtk?=	../../graphics/libexif-gtk
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

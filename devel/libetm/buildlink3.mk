@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:21:50 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:09 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBETM_BUILDLINK3_MK:=	${LIBETM_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_PKGSRCDIR.libetm?=	../../devel/libetm
 BUILDLINK_DEPMETHOD.libetm?=	build
 .endif	# LIBETM_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

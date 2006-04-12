@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:34 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:30 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 NETBSD_TAP_BUILDLINK3_MK:=	${NETBSD_TAP_BUILDLINK3_MK}+
@@ -15,4 +15,4 @@ BUILDLINK_API_DEPENDS.netbsd-tap+=	netbsd-tap>=20050120
 BUILDLINK_PKGSRCDIR.netbsd-tap?=	../../net/netbsd-tap
 .endif	# NETBSD_TAP_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

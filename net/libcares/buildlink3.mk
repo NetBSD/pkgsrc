@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:22:33 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:29 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBCARES_BUILDLINK3_MK:=	${LIBCARES_BUILDLINK3_MK}+
@@ -15,4 +15,4 @@ BUILDLINK_API_DEPENDS.libcares+=	libcares>=1.3.0
 BUILDLINK_PKGSRCDIR.libcares?=	../../net/libcares
 .endif	# LIBCARES_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

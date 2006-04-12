@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 06:22:36 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:31 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PVM_BUILDLINK3_MK:=	${PVM_BUILDLINK3_MK}+
@@ -21,4 +21,4 @@ BUILDLINK_LIBDIRS.pvm?=		pvm3/lib/${PVM_ARCH}
 
 .endif	# PVM_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2006/04/06 06:22:30 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2006/04/12 10:27:28 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XINE_LIB_BUILDLINK3_MK:=	${XINE_LIB_BUILDLINK3_MK}+
@@ -28,4 +28,4 @@ BUILDLINK_PKGSRCDIR.xine-lib?=	../../multimedia/xine-lib
 .include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

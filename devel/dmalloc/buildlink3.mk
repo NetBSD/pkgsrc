@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:21:48 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:07 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DMALLOC_BUILDLINK3_MK:=	${DMALLOC_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_PKGSRCDIR.dmalloc?=	../../devel/dmalloc
 BUILDLINK_DEPMETHOD.dmalloc?=	build
 .endif	# DMALLOC_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

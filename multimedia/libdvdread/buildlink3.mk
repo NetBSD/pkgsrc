@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:22:26 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:28 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBDVDREAD_BUILDLINK3_MK:=	${LIBDVDREAD_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.libdvdread+=	libdvdread>=0.9.5nb2
 BUILDLINK_PKGSRCDIR.libdvdread?=	../../multimedia/libdvdread
 .endif	# LIBDVDREAD_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

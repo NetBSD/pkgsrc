@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/04/06 06:22:17 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/04/12 10:27:23 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 EVOLUTION_BUILDLINK3_MK:=	${EVOLUTION_BUILDLINK3_MK}+
@@ -32,4 +32,4 @@ PRINT_PLIST_AWK+=	/^@dirrm libexec\/evolution$$/ \
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../www/gtkhtml38/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

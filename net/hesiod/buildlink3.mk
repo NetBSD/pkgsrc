@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:32 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:29 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HESIOD_BUILDLINK3_MK:=	${HESIOD_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_PKGSRCDIR.hesiod?=	../../net/hesiod
 BUILDLINK_DEPMETHOD.hesiod?=	build
 .endif	# HESIOD_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

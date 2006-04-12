@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/04/06 06:21:41 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/04/12 10:27:04 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBGDA_BUILDLINK3_MK:=	${LIBGDA_BUILDLINK3_MK}+
@@ -27,4 +27,4 @@ PRINT_PLIST_AWK+=	/^@dirrm share\/libgda$$/ \
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

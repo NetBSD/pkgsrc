@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:21:42 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:04 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 POSTGRESQL73_LIB_BUILDLINK3_MK:=	${POSTGRESQL73_LIB_BUILDLINK3_MK}+
@@ -25,4 +25,4 @@ BUILDLINK_LDADD.postgresql73-lib=		-lpq
 
 .include "../../security/openssl/buildlink3.mk"
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

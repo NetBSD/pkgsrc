@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:43 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:34 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MHASH_BUILDLINK3_MK:=	${MHASH_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.mhash+=	mhash>=0.9.2nb1
 BUILDLINK_PKGSRCDIR.mhash?=	../../security/mhash
 .endif	# MHASH_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

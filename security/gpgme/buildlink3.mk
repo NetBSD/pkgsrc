@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/04/06 06:22:38 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2006/04/12 10:27:33 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GPGME_BUILDLINK3_MK:=	${GPGME_BUILDLINK3_MK}+
@@ -20,4 +20,4 @@ BUILDLINK_PKGSRCDIR.gpgme?=	../../security/gpgme
 .include "../../mk/bsd.prefs.mk"
 .include "../../devel/librfuncs/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

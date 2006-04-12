@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:21:36 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:02 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 RPLAY_BUILDLINK3_MK:=	${RPLAY_BUILDLINK3_MK}+
@@ -20,4 +20,4 @@ BUILDLINK_PKGSRCDIR.rplay?=	../../audio/rplay
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/rx/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

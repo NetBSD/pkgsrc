@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:21:42 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:05 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_METAKIT_BUILDLINK3_MK:=	${PY_METAKIT_BUILDLINK3_MK}+
@@ -18,4 +18,4 @@ BUILDLINK_ABI_DEPENDS.pymetakit?=	${PYPKGPREFIX}-metakit>=2.4.9.3nb2
 BUILDLINK_PKGSRCDIR.pymetakit?=	../../databases/py-metakit
 .endif	# PY_METAKIT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

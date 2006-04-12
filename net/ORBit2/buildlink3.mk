@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/04/06 06:22:30 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/04/12 10:27:29 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ORBIT2_BUILDLINK3_MK:=	${ORBIT2_BUILDLINK3_MK}+
@@ -25,4 +25,4 @@ PRINT_PLIST_AWK+=	/^@dirrm share\/idl$$/ \
 .include "../../devel/popt/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

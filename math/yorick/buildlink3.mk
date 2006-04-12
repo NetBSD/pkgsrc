@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:22 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:26 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 YORICK_BUILDLINK3_MK:=	${YORICK_BUILDLINK3_MK}+
@@ -17,4 +17,4 @@ BUILDLINK_ABI_DEPENDS.yorick?=	yorick>=1.6.02nb1
 BUILDLINK_PKGSRCDIR.yorick?=	../../math/yorick
 .endif	# YORICK_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

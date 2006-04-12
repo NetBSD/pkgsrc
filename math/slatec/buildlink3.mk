@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:22 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:26 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SLATEC_BUILDLINK3_MK:=	${SLATEC_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.slatec+=	slatec>=4.1nb2
 BUILDLINK_PKGSRCDIR.slatec?=	../../math/slatec
 .endif	# SLATEC_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

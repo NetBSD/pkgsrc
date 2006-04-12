@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/04/06 06:22:12 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/04/12 10:27:21 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBREP_BUILDLINK3_MK:=	${LIBREP_BUILDLINK3_MK}+
@@ -20,4 +20,4 @@ MAKE_FLAGS+=			rep_LIBTOOL=${LIBTOOL:Q}
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

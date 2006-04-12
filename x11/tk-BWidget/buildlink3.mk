@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:23:04 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:44 rillig Exp $
 #
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
@@ -17,4 +17,4 @@ BUILDLINK_ABI_DEPENDS.tk-BWidget?=	tk-BWidget>=1.7.0nb1
 BUILDLINK_PKGSRCDIR.tk-BWidget?=	../../x11/tk-BWidget
 .endif	# TK_BWIDGET_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

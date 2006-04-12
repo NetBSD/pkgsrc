@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:21:56 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:14 rillig Exp $
 #
 # This file was created automatically using createbuildlink-3.5.
 
@@ -20,4 +20,4 @@ BUILDLINK_PKGSRCDIR.vanessa_adt?=	../../devel/vanessa_adt
 
 .include "../../devel/vanessa_logger/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

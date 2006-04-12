@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/06 06:21:50 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/12 10:27:09 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HDF5_BUILDLINK3_MK:=	${HDF5_BUILDLINK3_MK}+
@@ -29,4 +29,4 @@ MAKEVARS+=	PKG_BUILD_OPTIONS.hdf5
 
 .include "../../devel/zlib/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

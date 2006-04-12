@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:57 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:40 rillig Exp $
 #
 # This Makefile fragment is included by packages that use compositeext.
 #
@@ -21,4 +21,4 @@ BUILDLINK_PKGSRCDIR.compositeext?=	../../x11/compositeext
 
 .endif # COMPOSITEEXT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

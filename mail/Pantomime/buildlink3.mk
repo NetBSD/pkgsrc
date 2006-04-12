@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:22:15 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:23 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PANTOMIME_BUILDLINK3_MK:=	${PANTOMIME_BUILDLINK3_MK}+
@@ -23,4 +23,4 @@ BUILDLINK_INCDIRS.Pantomime+=	${GNUSTEP_LOCAL_ROOT:Q}/${GNUSTEP_IDIR:Q}/Pantomim
 
 .include "../../devel/gnustep-base/buildlink3.mk"
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

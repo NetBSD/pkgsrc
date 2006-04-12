@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:21:33 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:00 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BMP_BUILDLINK3_MK:=	${BMP_BUILDLINK3_MK}+
@@ -27,4 +27,4 @@ PRINT_PLIST_AWK+=	/^@dirrm lib\/bmp\/Visualization$$/ \
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

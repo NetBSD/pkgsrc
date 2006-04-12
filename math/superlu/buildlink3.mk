@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:22:22 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:26 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SUPERLU_BUILDLINK3_MK:=	${SUPERLU_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_PKGSRCDIR.superlu?=	../../math/superlu
 BUILDLINK_DEPMETHOD.superlu?=	build
 .endif	# SUPERLU_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:38 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:32 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNUPG_DEVEL_BUILDLINK3_MK:=	${GNUPG_DEVEL_BUILDLINK3_MK}+
@@ -23,4 +23,4 @@ BUILDLINK_PREFIX.gnupg-devel?=	${LOCALBASE}
 .include "../../security/libksba/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:22:53 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:38 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CGIC_BUILDLINK3_MK:=	${CGIC_BUILDLINK3_MK}+
@@ -15,4 +15,4 @@ BUILDLINK_API_DEPENDS.cgic+=	cgic>=2.02nb1
 BUILDLINK_PKGSRCDIR.cgic?=	../../www/cgic
 .endif	# CGIC_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
