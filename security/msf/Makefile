@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2005/10/19 10:34:33 adrianp Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/12 21:31:51 rillig Exp $
 #
 
 DISTNAME=	framework-2.5
 PKGNAME=	msf-2.5
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://www.metasploit.com/tools/
 
@@ -15,15 +16,15 @@ DEPENDS+=	p5-Term-ReadLine>=1.14:../../devel/p5-Term-ReadLine
 
 LICENSE=	inlineegg-license
 
-MSFDIR?=	${PREFIX}/share/msf
-MSFDOC?=	${PREFIX}/share/doc/msf
-MESSAGE_SUBST+= MSFDIR=${MSFDIR}
+MSFDIR=		${PREFIX}/share/msf
+MESSAGE_SUBST+= MSFDIR=${MSFDIR:Q}
 
 USE_TOOLS+=	perl:run
 PERL_FILES=	msfcli msfconsole msfelfscan msfencode msflogdump msfpayload \
 		msfpescan msfupdate msfweb
 REPLACE_PERL+=	${PERL_FILES} tools/socketNinja.pl sdk/formatGen.pl \
-		sdk/patternOffset.pl sdk/spitCode.pl src/shellcode/import.pl
+		sdk/patternOffset.pl sdk/spitCode.pl src/shellcode/import.pl \
+		src/shellcode/win32/standard/build
 
 NO_BUILD=	YES
 
@@ -78,8 +79,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/payloads/external/*.py \
 		${MSFDIR}/payloads/external
 
+	set -e; \
 	cd ${WRKSRC}; for f in ${PERL_FILES}; do \
-		${INSTALL_SCRIPT} $$f ${MSFDIR}; \
+		${INSTALL_SCRIPT} "$$f" ${MSFDIR}; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
