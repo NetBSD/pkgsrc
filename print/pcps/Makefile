@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:30:31 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/12 20:57:39 joerg Exp $
 #
 
 DISTNAME=	pcps840
 PKGNAME=	pcps-8.40
+PKGREVISION=	1
 CATEGORIES=	print textproc
 MASTER_SITES=	ftp://garbo.uwasa.fi/unix/pcps/
 
@@ -23,16 +24,19 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 
 INSTALLATION_DIRS=	bin man/man1
 
+CONF_FILES+=	${PREFIX}/share/examples/pcps/pcps.cfg ${PREFIX}/bin/pcps.cfg
+
 post-patch:
 	${SED} "s,@PREFIX@,${PREFIX},g" ${FILESDIR}/pcps.1 > ${WRKDIR}/pcps.1
 
 do-install:
 	@${INSTALL_PROGRAM}  ${WRKSRC}/pcps ${PREFIX}/bin/pcps
 	@${INSTALL_MAN}      ${WRKDIR}/pcps.1 ${PREFIX}/man/man1
-	@${INSTALL_DATA}     ${FILESDIR}/pcps.cfg ${PREFIX}/bin/pcps.cfg
 	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pcps
 	@${INSTALL_DATA}     ${WRKSRC}/license.doc ${PREFIX}/share/doc/pcps
 	@${INSTALL_DATA}     ${WRKSRC}/register.doc ${PREFIX}/share/doc/pcps
 	@${INSTALL_DATA}     ${WRKSRC}/pcps.man ${PREFIX}/share/doc/pcps
+	@${INSTALL_DATA_DIR} ${PREFIX}/share/examples/pcps
+	@${INSTALL_DATA}     ${FILESDIR}/pcps.cfg ${PREFIX}/share/examples/pcps/pcps.cfg
 
 .include "../../mk/bsd.pkg.mk"
