@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.335 2006/03/14 14:24:14 rillig Exp $
+# $NetBSD: Makefile,v 1.336 2006/04/12 20:25:06 rillig Exp $
 #
 
 DISTNAME=	pkglint-4.59
@@ -23,7 +23,7 @@ NO_CHECKSUM=	yes
 NO_BUILD=	yes
 USE_LANGUAGES=	# empty
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR:Q}/cat1 ${PKGMANDIR:Q}/man1 share/pkglint
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1 share/pkglint
 
 SUBST_CLASSES+=		pkglint
 SUBST_STAGE.pkglint=	post-configure
@@ -33,40 +33,40 @@ SUBST_FILES.pkglint+=	plist-clash.pl
 .if defined(BATCH)
 SUBST_SED.pkglint+=	-e s\|@PKGSRCDIR@\|/usr/pkgsrc\|g
 .else
-SUBST_SED.pkglint+=	-e s\|@PKGSRCDIR@\|${PKGSRCDIR:Q}\|g
+SUBST_SED.pkglint+=	-e s\|@PKGSRCDIR@\|${PKGSRCDIR}\|g
 .endif
-SUBST_SED.pkglint+=	-e s\|@PREFIX@\|${PREFIX:Q}\|g
+SUBST_SED.pkglint+=	-e s\|@PREFIX@\|${PREFIX}\|g
 SUBST_SED.pkglint+=	-e s\|@DISTVER@\|${DISTNAME:S/pkglint-//:Q}\|g
 SUBST_SED.pkglint+=	-e s\|@MAKE@\|${MAKE:Q}\|g
 SUBST_SED.pkglint+=	-e s\|@PERL@\|${PERL5:Q}\|g
-SUBST_SED.pkglint+=	-e s\|@DATADIR@\|${PREFIX:Q}/share/pkglint\|g
+SUBST_SED.pkglint+=	-e s\|@DATADIR@\|${PREFIX}/share/pkglint\|g
 
 .include "../../mk/bsd.prefs.mk"
 
 # Note: This target is only intended for use by the pkglint author.
 .PHONY: quick-install
 quick-install:
-	${RM} -rf ${WRKSRC:Q}
-	${MKDIR} ${WRKSRC:Q}
+	${RM} -rf ${WRKSRC}
+	${MKDIR} ${WRKSRC}
 	${MAKE} do-extract subst-pkglint do-install post-install
 
 do-extract:
-	cd ${FILESDIR:Q} && ${CP} lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl pkglint.0 pkglint.1 pkglint.pl plist-clash.pl ${WRKSRC:Q}
+	cd ${FILESDIR} && ${CP} lintpkgsrc.0 lintpkgsrc.1 lintpkgsrc.pl pkglint.0 pkglint.1 pkglint.pl plist-clash.pl ${WRKSRC}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC:Q}/pkglint.pl ${PREFIX:Q}/bin/pkglint
-	${INSTALL_SCRIPT} ${WRKSRC:Q}/lintpkgsrc.pl ${PREFIX:Q}/bin/lintpkgsrc
-	${INSTALL_SCRIPT} ${WRKSRC:Q}/plist-clash.pl ${PREFIX:Q}/bin/plist-clash
-	${INSTALL_MAN} ${WRKSRC:Q}/lintpkgsrc.0 ${PREFIX:Q}/${PKGMANDIR:Q}/cat1
+	${INSTALL_SCRIPT} ${WRKSRC}/pkglint.pl ${PREFIX}/bin/pkglint
+	${INSTALL_SCRIPT} ${WRKSRC}/lintpkgsrc.pl ${PREFIX}/bin/lintpkgsrc
+	${INSTALL_SCRIPT} ${WRKSRC}/plist-clash.pl ${PREFIX}/bin/plist-clash
+	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.0 ${PREFIX}/${PKGMANDIR}/cat1
 .if !empty(MANINSTALL:Mmaninstall)
-	${INSTALL_MAN} ${WRKSRC:Q}/lintpkgsrc.1 ${PREFIX:Q}/${PKGMANDIR:Q}/man1
-	${INSTALL_MAN} ${WRKSRC:Q}/pkglint.1 ${PREFIX:Q}/${PKGMANDIR:Q}/man1
+	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/pkglint.1 ${PREFIX}/${PKGMANDIR}/man1
 .endif
-	${INSTALL_MAN} ${WRKSRC:Q}/pkglint.0 ${PREFIX:Q}/${PKGMANDIR:Q}/cat1
-	${INSTALL_DATA} ${FILESDIR:Q}/makevars.map ${PREFIX:Q}/share/pkglint/
-	${INSTALL_DATA} ${FILESDIR:Q}/deprecated.map ${PREFIX:Q}/share/pkglint/
+	${INSTALL_MAN} ${WRKSRC}/pkglint.0 ${PREFIX}/${PKGMANDIR}/cat1
+	${INSTALL_DATA} ${FILESDIR}/makevars.map ${PREFIX}/share/pkglint/
+	${INSTALL_DATA} ${FILESDIR}/deprecated.map ${PREFIX}/share/pkglint/
 
 post-install:
-	${PREFIX:Q}/bin/pkglint -q 1>&2
+	${PREFIX}/bin/pkglint -q 1>&2
 
 .include "../../mk/bsd.pkg.mk"
