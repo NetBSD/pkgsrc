@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/03/30 21:12:43 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/04/12 20:08:13 drochner Exp $
 bin/nautilus
 bin/nautilus-connect-server
 bin/nautilus-file-management-properties
@@ -55,6 +55,7 @@ ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/nautilus.mo
+${PKGLOCALEDIR}/locale/ka/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/km/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/nautilus.mo
 ${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/nautilus.mo
@@ -106,7 +107,6 @@ share/nautilus/glade/nautilus-bookmarks-window.glade
 share/nautilus/glade/nautilus-file-management-properties.glade
 share/nautilus/nautilus-extras.placeholder
 share/nautilus/nautilus-suggested.placeholder
-share/nautilus/patterns/.striated.png
 share/nautilus/patterns/blue_gray_rough.png
 share/nautilus/patterns/blue_ridge.png
 share/nautilus/patterns/blue_type.png
