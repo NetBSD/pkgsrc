@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13547 2006/04/12 13:21:04 markd Exp $
+$NetBSD: CHANGES,v 1.13548 2006/04/12 17:16:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2029,3 +2029,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added misc/koffice-l10n-de version 1.5.0 [markd 2006-04-12]
 	Added misc/koffice-l10n-en_GB version 1.5.0 [markd 2006-04-12]
 	Updated graphics/dcraw to 8.13 [markd 2006-04-12]
+	Added x11/ratmen version 2.2.2 [minskim 2006-04-12]
