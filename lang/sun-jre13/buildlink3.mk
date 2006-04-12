@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:14 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:22 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SUN_JRE13_BUILDLINK3_MK:=	${SUN_JRE13_BUILDLINK3_MK}+
@@ -19,4 +19,4 @@ BUILDLINK_JAVA_PREFIX.sun-jre13=	${PREFIX}/java/sun-1.3
 
 UNLIMIT_RESOURCES+=	datasize	# Must be at least 131203
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

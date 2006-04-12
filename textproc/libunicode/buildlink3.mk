@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:51 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:37 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBUNICODE_BUILDLINK3_MK:=	${LIBUNICODE_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.libunicode+=	libunicode>=0.4nb1
 BUILDLINK_PKGSRCDIR.libunicode?=	../../textproc/libunicode
 .endif	# LIBUNICODE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2006/04/06 06:22:53 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2006/04/12 10:27:39 rillig Exp $
 #
 # This Makefile fragment is included by packages that use epiphany.
 #
@@ -32,4 +32,4 @@ BUILDLINK_PKGSRCDIR.epiphany?=		../../www/epiphany
 #      this is already pulled in directly by the only user, epiphany-extensions
 .endif # EPIPHANY_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

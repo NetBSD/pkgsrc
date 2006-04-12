@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/04/06 06:21:45 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/04/12 10:27:07 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BOEHM_GC_BUILDLINK3_MK:=	${BOEHM_GC_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.boehm-gc+=	boehm-gc>=6.6nb1
 BUILDLINK_PKGSRCDIR.boehm-gc?=	../../devel/boehm-gc
 .endif	# BOEHM_GC_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

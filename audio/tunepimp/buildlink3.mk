@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 06:21:37 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:02 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 TUNEPIMP_BUILDLINK3_MK:=	${TUNEPIMP_BUILDLINK3_MK}+
@@ -22,4 +22,4 @@ BUILDLINK_PKGSRCDIR.tunepimp?=	../../audio/tunepimp
 .include "../../audio/musicbrainz/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

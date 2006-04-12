@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:05 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:19 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OPENEXR_BUILDLINK3_MK:=	${OPENEXR_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.openexr?=	openexr>=1.2.2nb1
 BUILDLINK_PKGSRCDIR.openexr?=	../../graphics/openexr
 .endif	# OPENEXR_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

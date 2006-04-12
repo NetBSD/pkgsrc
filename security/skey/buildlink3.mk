@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:44 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:34 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SKEY_BUILDLINK3_MK:=	${SKEY_BUILDLINK3_MK}+
@@ -17,4 +17,4 @@ BUILDLINK_PKGSRCDIR.skey?=	../../security/skey
 BUILDLINK_DEPMETHOD.skey?=	build
 .endif	# SKEY_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

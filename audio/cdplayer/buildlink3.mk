@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:21:33 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:00 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 CDPLAYER_BUILDLINK3_MK:=	${CDPLAYER_BUILDLINK3_MK}+
@@ -19,4 +19,4 @@ BUILDLINK_PKGSRCDIR.cdplayer?=	../../audio/cdplayer
 .include "../../audio/libcdaudio/buildlink3.mk"
 .include "../../audio/cddb-bundle/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

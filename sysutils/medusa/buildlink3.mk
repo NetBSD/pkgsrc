@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 06:22:45 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:35 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MEDUSA_BUILDLINK3_MK:=	${MEDUSA_BUILDLINK3_MK}+
@@ -18,4 +18,4 @@ BUILDLINK_PKGSRCDIR.medusa?=	../../sysutils/medusa
 
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

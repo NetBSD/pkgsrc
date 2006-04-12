@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:22:35 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:31 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 INN_BUILDLINK3_MK:=	${INN_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_PKGSRCDIR.inn?=	../../news/inn
 
 .endif	# INN_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:22:49 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:36 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CHASEN_BUILDLINK3_MK:=	${CHASEN_BUILDLINK3_MK}+
@@ -17,4 +17,4 @@ BUILDLINK_FILES.chasen=		include/chasen.h
 BUILDLINK_FILES.chasen+=	lib/libchasen.*
 .endif	# CHASEN_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

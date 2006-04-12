@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:23:01 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:41 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LABLGTK_BUILDLINK3_MK:=	${LABLGTK_BUILDLINK3_MK}+
@@ -19,4 +19,4 @@ BUILDLINK_PKGSRCDIR.lablgtk?=	../../x11/lablgtk
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

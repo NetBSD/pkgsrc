@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/06 06:21:43 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/04/12 10:27:06 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GCONF2_BUILDLINK3_MK:=	${GCONF2_BUILDLINK3_MK}+
@@ -38,4 +38,4 @@ GConf2-buildlink-fake:
 	fi
 .endif	# GCONF2_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

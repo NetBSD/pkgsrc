@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:22:30 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:29 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BOINC_LIBS_BUILDLINK3_MK:=	${BOINC_LIBS_BUILDLINK3_MK}+
@@ -18,4 +18,4 @@ BUILDLINK_PKGSRCDIR.boinclibs?=	../../net/boinc3-libs
 BUILDLINK_DEPMETHOD.boinclibs?=	build
 .endif	# BOINC_LIBS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

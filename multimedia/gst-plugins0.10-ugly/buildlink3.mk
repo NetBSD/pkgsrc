@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/04/08 11:42:37 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/04/12 10:27:27 rillig Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 GST_PLUGINS0.10_UGLY_BUILDLINK3_MK:=	${GST_PLUGINS0.10_UGLY_BUILDLINK3_MK}+
@@ -19,4 +19,4 @@ BUILDLINK_PKGSRCDIR.gst-plugins0.10-ugly?=	../../multimedia/gst-plugins0.10-ugly
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}

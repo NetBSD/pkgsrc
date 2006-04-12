@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:44 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:34 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PINENTRY_BUILDLINK3_MK:=	${PINENTRY_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.pinentry?=	pinentry>=0.7.1nb3
 BUILDLINK_PKGSRCDIR.pinentry?=	../../security/pinentry
 .endif	# PINENTRY_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

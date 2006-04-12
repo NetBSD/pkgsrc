@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:44 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:34 rillig Exp $
 # 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 QCA_BUILDLINK3_MK:=	${QCA_BUILDLINK3_MK}+
@@ -19,4 +19,4 @@ BUILDLINK_PKGSRCDIR.qca?=	../../security/qca
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

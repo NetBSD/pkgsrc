@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/04/06 06:21:53 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/04/12 10:27:12 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBWNCK_BUILDLINK3_MK:=	${LIBWNCK_BUILDLINK3_MK}+
@@ -20,4 +20,4 @@ BUILDLINK_PKGSRCDIR.libwnck?=	../../devel/libwnck
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

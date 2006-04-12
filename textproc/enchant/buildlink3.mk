@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/06 06:22:50 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/12 10:27:36 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ENCHANT_BUILDLINK3_MK:=	${ENCHANT_BUILDLINK3_MK}+
@@ -19,4 +19,4 @@ BUILDLINK_PKGSRCDIR.enchant?=	../../textproc/enchant
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

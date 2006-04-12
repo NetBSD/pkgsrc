@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/06 06:22:19 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/12 10:27:23 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SYLPHEED_CLAWS_BUILDLINK3_MK:=	${SYLPHEED_CLAWS_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.sylpheed-claws?=	sylpheed-claws>=1.0.4nb1
 BUILDLINK_PKGSRCDIR.sylpheed-claws?=	../../mail/sylpheed-claws
 .endif	# SYLPHEED_CLAWS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:21:50 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:09 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LDAPSDK_BUILDLINK3_MK:=	${LDAPSDK_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.ldapsdk?=	ldapsdk>=12311998nb2
 BUILDLINK_PKGSRCDIR.ldapsdk?=	../../devel/ldapsdk
 .endif	# LDAPSDK_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

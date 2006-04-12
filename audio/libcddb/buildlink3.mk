@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/06 06:21:35 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/04/12 10:27:01 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBCDDB_BUILDLINK3_MK:=	${LIBCDDB_BUILDLINK3_MK}+
@@ -19,4 +19,4 @@ BUILDLINK_PKGSRCDIR.libcddb?=	../../audio/libcddb
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

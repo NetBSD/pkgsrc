@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:21:56 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:14 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 UCL_BUILDLINK3_MK:=	${UCL_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.ucl+=	ucl>=1.02nb2
 BUILDLINK_PKGSRCDIR.ucl?=	../../devel/ucl
 .endif	# UCL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

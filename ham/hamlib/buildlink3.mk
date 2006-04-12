@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:22:06 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:19 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HAMLIB_BUILDLINK3_MK:=	${HAMLIB_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.hamlib+=	hamlib>=1.2.5
 BUILDLINK_PKGSRCDIR.hamlib?=	../../ham/hamlib
 .endif	# HAMLIB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

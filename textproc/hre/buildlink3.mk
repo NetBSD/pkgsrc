@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:50 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:37 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HRE_BUILDLINK3_MK:=	${HRE_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.hre+=	hre>=0.9.8anb1
 BUILDLINK_PKGSRCDIR.hre?=	../../textproc/hre
 .endif	# HRE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

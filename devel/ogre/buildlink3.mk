@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/06 06:21:54 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/04/12 10:27:12 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OGRE_BUILDLINK3_MK:=	${OGRE_BUILDLINK3_MK}+
@@ -21,4 +21,4 @@ BUILDLINK_PKGSRCDIR.ogre?=	../../devel/ogre
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

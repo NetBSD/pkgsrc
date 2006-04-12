@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 06:22:23 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:26 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 ADDRESSES_BUILDLINK3_MK:=	${ADDRESSES_BUILDLINK3_MK}+
@@ -29,4 +29,4 @@ BUILDLINK_FILES.Addresses+=	${GNUSTEP_SUBDIR}/Local/Library/Headers/Addresses/*.
 
 .include "../../x11/gnustep-back/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

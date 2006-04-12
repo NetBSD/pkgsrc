@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2006/04/06 06:23:05 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2006/04/12 10:27:45 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XORG_LIBS_BUILDLINK3_MK:=	${XORG_LIBS_BUILDLINK3_MK}+
@@ -31,4 +31,4 @@ BUILDLINK_TRANSFORM.xorg-libs+=		-e "s|/${X11ROOT_PREFIX}/|/|"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

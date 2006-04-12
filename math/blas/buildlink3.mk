@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:19 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:25 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BLAS_BUILDLINK3_MK:=	${BLAS_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.blas+=	blas>=1.0nb3
 BUILDLINK_PKGSRCDIR.blas?=	../../math/blas
 .endif	# BLAS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

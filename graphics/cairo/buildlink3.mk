@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2006/04/06 06:22:01 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2006/04/12 10:27:16 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CAIRO_BUILDLINK3_MK:=	${CAIRO_BUILDLINK3_MK}+
@@ -29,4 +29,4 @@ BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/Xrender/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:22:45 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:35 rillig Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 GST_PLUGINS0.8_GNOMEVFS_BUILDLINK3_MK:=	${GST_PLUGINS0.8_GNOMEVFS_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.gst-plugins0.8-gnomevfs?=	gst-plugins0.8-gnomevfs>=0.8.11n
 BUILDLINK_PKGSRCDIR.gst-plugins0.8-gnomevfs?=	../../sysutils/gst-plugins0.8-gnomevfs
 .endif	# GST_PLUGINS0.8_GNOMEVFS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}

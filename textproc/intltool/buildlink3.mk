@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/04/06 06:22:51 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2006/04/12 10:27:37 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 INTLTOOL_BUILDLINK3_MK:=	${INTLTOOL_BUILDLINK3_MK}+
@@ -37,4 +37,4 @@ override-intltool:
 	done
 .endif	# INTLTOOL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

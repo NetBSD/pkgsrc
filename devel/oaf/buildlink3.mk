@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 06:21:54 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:12 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OAF_BUILDLINK3_MK:=	${OAF_BUILDLINK3_MK}+
@@ -20,4 +20,4 @@ BUILDLINK_PKGSRCDIR.oaf?=	../../devel/oaf
 .include "../../textproc/libxml/buildlink3.mk"
 .include "../../x11/gnome-libs/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

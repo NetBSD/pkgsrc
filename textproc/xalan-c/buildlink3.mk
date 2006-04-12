@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 06:22:52 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:38 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XALAN_C_BUILDLINK3_MK:=	${XALAN_C_BUILDLINK3_MK}+
@@ -19,4 +19,4 @@ BUILDLINK_PKGSRCDIR.xalan-c?=	../../textproc/xalan-c
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

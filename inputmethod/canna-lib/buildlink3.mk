@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:06 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:20 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 CANNA_LIB_BUILDLINK3_MK:=	${CANNA_LIB_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_PKGSRCDIR.Canna-lib?=	../../inputmethod/canna-lib
 
 .endif	# CANNA_LIB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

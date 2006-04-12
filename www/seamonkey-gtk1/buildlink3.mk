@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 18:26:38 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:39 rillig Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 SEAMONKEY_GTK1_BUILDLINK3_MK:=		${SEAMONKEY_GTK1_BUILDLINK3_MK}+
@@ -22,4 +22,4 @@ BUILDLINK_PKGSRCDIR.seamonkey-gtk1?=	../../www/seamonkey-gtk1
 .include "../../net/ORBit/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
-BUILDLINK_DEPTH:=    			 ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}

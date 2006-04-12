@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/06 06:22:26 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:28 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMPEG2_BUILDLINK3_MK:=	${LIBMPEG2_BUILDLINK3_MK}+
@@ -18,4 +18,4 @@ BUILDLINK_PKGSRCDIR.libmpeg2?=	../../multimedia/libmpeg2
 
 .include "../../devel/SDL/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

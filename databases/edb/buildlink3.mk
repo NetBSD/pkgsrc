@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:21:40 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:04 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EDB_BUILDLINK3_MK:=	${EDB_BUILDLINK3_MK}+
@@ -16,4 +16,4 @@ BUILDLINK_ABI_DEPENDS.edb+=	edb>=1.0.3nb5
 BUILDLINK_PKGSRCDIR.edb?=	../../databases/edb
 .endif	# EDB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

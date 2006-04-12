@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 06:22:14 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:22 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PYTHON22_BUILDLINK3_MK:=	${PYTHON22_BUILDLINK3_MK}+
@@ -24,7 +24,7 @@ BUILDLINK_TRANSFORM+=		l:python:python2.2
 
 .endif	# PYTHON22_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

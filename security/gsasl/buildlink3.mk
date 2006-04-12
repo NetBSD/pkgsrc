@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/06 06:22:39 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/04/12 10:27:33 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GSASL_BUILDLINK3_MK:=	${GSASL_BUILDLINK3_MK}+
@@ -22,4 +22,4 @@ BUILDLINK_PKGSRCDIR.gsasl?=	../../security/gsasl
 .include "../../security/gss/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

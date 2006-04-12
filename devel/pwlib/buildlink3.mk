@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/04/06 06:21:55 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/04/12 10:27:13 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PWLIB_BUILDLINK3_MK:=	${PWLIB_BUILDLINK3_MK}+
@@ -19,4 +19,4 @@ BUILDLINK_PKGSRCDIR.pwlib?=	../../devel/pwlib
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

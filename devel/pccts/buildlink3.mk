@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:21:54 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:12 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PCCTS_BUILDLINK3_MK:=	${PCCTS_BUILDLINK3_MK}+
@@ -17,4 +17,4 @@ BUILDLINK_PKGSRCDIR.pccts?=	../../devel/pccts
 BUILDLINK_DEPMETHOD.pccts?=	build
 .endif	# PCCTS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

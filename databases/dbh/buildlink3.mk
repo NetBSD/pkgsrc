@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:21:40 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:04 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 DBH_BUILDLINK3_MK:=	${DBH_BUILDLINK3_MK}+
@@ -15,4 +15,4 @@ BUILDLINK_API_DEPENDS.dbh+=		dbh>=1.0.22
 BUILDLINK_PKGSRCDIR.dbh?=	../../databases/dbh
 .endif	# DBH_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

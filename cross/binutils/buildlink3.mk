@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:21:40 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:04 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 CROSS_BINUTILS_BUILDLINK3_MK:=	${CROSS_BINUTILS_BUILDLINK3_MK}+
@@ -15,4 +15,4 @@ BUILDLINK_API_DEPENDS.cross-binutils+=	cross-binutils>=2.15.0.0nb3
 BUILDLINK_PKGSRCDIR.cross-binutils?=	../../cross/binutils
 .endif	# CROSS_BINUTILS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/04/06 06:23:02 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2006/04/12 10:27:42 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PARAGUI_BUILDLINK3_MK:=	${PARAGUI_BUILDLINK3_MK}+
@@ -22,4 +22,4 @@ BUILDLINK_PKGSRCDIR.paragui?=	../../x11/paragui
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

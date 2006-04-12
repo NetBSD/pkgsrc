@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/06 06:22:52 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:38 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 
@@ -26,4 +26,4 @@ BUILDLINK_API_DEPENDS.ruby18-rdtool+=	{${RUBY_RD_LIST}}>=0.6.14
 BUILDLINK_PKGSRCDIR.ruby18-rdtool?=	../../textproc/ruby-rdtool
 .endif
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

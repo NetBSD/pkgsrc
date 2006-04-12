@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:21:56 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:13 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 RPC2_BUILDLINK3_MK:=	${RPC2_BUILDLINK3_MK}+
@@ -18,4 +18,4 @@ BUILDLINK_PKGSRCDIR.rpc2?=	../../devel/rpc2
 
 .include "../../devel/lwp/buildlink3.mk"
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}

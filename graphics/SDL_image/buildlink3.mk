@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/04/06 06:22:01 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2006/04/12 10:27:16 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SDL_IMAGE_BUILDLINK3_MK:=	${SDL_IMAGE_BUILDLINK3_MK}+
@@ -22,4 +22,4 @@ BUILDLINK_INCDIRS.SDL_image?=	include/SDL
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

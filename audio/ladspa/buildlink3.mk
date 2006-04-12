@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/06 06:21:34 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:00 rillig Exp $
 #
 # This Makefile fragment is included by packages that use ladspa.
 #
@@ -20,4 +20,4 @@ BUILDLINK_PKGSRCDIR.ladspa?=		../../audio/ladspa
 
 .endif # LADSPA_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
