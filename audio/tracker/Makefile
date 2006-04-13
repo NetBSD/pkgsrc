@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/03/30 03:44:41 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2006/04/13 23:31:19 rillig Exp $
 
 DISTNAME=		tracker-5.3
 PKGREVISION=		1
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		MOD player
 
-RESTRICTED=		"No commercial redistribution"
+RESTRICTED=		No commercial redistribution
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -34,8 +34,9 @@ INSTALLATION_DIRS=	bin ${PKGINFODIR} ${EGDIR}
 .include "../../mk/oss.buildlink3.mk"
 
 post-build:
-	cd ${WRKSRC}/Docs; ${MAKEINFO} tracker.texinfo;			\
-	${MV} -f tracker.info* ${WRKDIR};				\
+	cd ${WRKSRC}/Docs &&						\
+	${MAKEINFO} tracker.texinfo &&					\
+	${MV} -f tracker.info* ${WRKDIR} &&				\
 	${RM} *.orig
 
 post-install:
