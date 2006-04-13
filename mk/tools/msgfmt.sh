@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.1 2006/04/13 16:35:58 jlam Exp $
+# $NetBSD: msgfmt.sh,v 1.2 2006/04/13 19:41:22 jlam Exp $
 #
 # Copyright (c) 2004, 2005, 2006 Julio M. Merino Vidal <jmmv@NetBSD.org>
 #
@@ -45,6 +45,7 @@ fi
 
 # Parse the command line options.
 version=
+pofile=
 cmd="${MSGFMT}"
 while test $# -gt 0; do
 	case "$1" in
@@ -67,6 +68,7 @@ done
 
 # If we are asked for just the version, then avoid spawning awk.
 test -z "$version" || exec $cmd
+test -n "$pofile" || exec $cmd
 
 cat $pofile | ${AWK} '
 {
