@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/12 21:41:58 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/13 06:14:25 wiz Exp $
 #
 
 DISTNAME=		libtunepimp-0.4.2
@@ -13,6 +13,7 @@ HOMEPAGE=		http://musicbrainz.org/products/tunepimp/index.html
 COMMENT=		Library to support MusicBrainz enabled tagging
 
 GNU_CONFIGURE=		YES
+CONFLICTS+=		tunepimp-[0-9]*
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/musicbrainz/buildlink3.mk"
