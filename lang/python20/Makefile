@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2005/11/16 19:18:58 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2006/04/13 02:26:54 joerg Exp $
 #
 
 DISTNAME=	Python-2.0.1
 PKGNAME=	python20-2.0.1
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	lang python
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.0.1/
 EXTRACT_SUFX=	.tgz
