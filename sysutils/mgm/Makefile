@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:30:42 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/13 00:20:22 rillig Exp $
 
 DISTNAME=	mgm-1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.xiph.org/mgm/
 EXTRACT_SUFX=	.tgz
@@ -12,40 +12,34 @@ COMMENT=	Moaning Goat Meter
 
 DEPENDS+=	p5-Tk-[0-9]*:../../x11/p5-Tk
 
-WRKSRC=		${WRKDIR}/${DISTNAME:C/-.*$//}
+WRKSRC=		${WRKDIR}/mgm
 NO_BUILD=	yes
 USE_TOOLS+=	perl:run
-PERL_SCRIPTS=	mgm
 
-MGM_PERL_DIR=	${PREFIX}/lib/${DISTNAME:C/-.*$//}
-MGM_DOC_DIR=	${PREFIX}/share/doc/html/${DISTNAME:C/-.*$//}
+MGM_PERL_DIR=	${PREFIX}/lib/mgm
+MGM_DOC_DIR=	${PREFIX}/share/doc/mgm
 
 INSTALLATION_DIRS=	bin
+
+REPLACE_PERL+=	mgm lib/xpm
 
 post-patch:
 	${SED} -e 's|@@MGM_PERL_DIR@@|${MGM_PERL_DIR}|' \
 		${FILESDIR}/mgm.sh > ${WRKDIR}/mgm.sh
-	cd ${WRKSRC}; \
-	for FILE in ${PERL_SCRIPTS}; do \
-		${CP} $$FILE $${FILE}.orig; \
-		${SED} -e 's#/usr/bin/perl#${PERL5}#g' \
-			<$${FILE}.orig >$$FILE; \
-	done
 
 do-install:
 	${INSTALL_DATA_DIR} ${MGM_PERL_DIR} ${MGM_PERL_DIR}/modules
 	${INSTALL_SCRIPT} ${WRKSRC}/mgm ${MGM_PERL_DIR}
+	set -e; \
 	cd ${WRKSRC}; \
 	for DIR in lib modules/*; do \
-		${INSTALL_DATA_DIR} ${MGM_PERL_DIR}/$$DIR; \
-		for FILE in $$DIR/*; do \
-			${INSTALL_DATA} $$FILE ${MGM_PERL_DIR}/$$DIR; \
+		${INSTALL_DATA_DIR} ${MGM_PERL_DIR}/"$$DIR"; \
+		for FILE in "$$DIR"/*; do \
+			${INSTALL_DATA} "$$FILE" ${MGM_PERL_DIR}/"$$DIR"; \
 		done; \
 	done
 	${INSTALL_DATA_DIR} ${MGM_DOC_DIR}
-	for FILE in ${WRKSRC}/doc/*; do \
-		${INSTALL_DATA} $$FILE ${MGM_DOC_DIR}; \
-	done
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} * ${MGM_DOC_DIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/mgm.sh ${PREFIX}/bin/mgm
 
 .include "../../mk/bsd.pkg.mk"
