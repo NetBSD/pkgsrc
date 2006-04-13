@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/08 16:30:57 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/13 03:53:47 rillig Exp $
 
 # Package version reflects icecc version, with PKGREVISION incremented
 # for any tool updates, according to the authors scheme.
@@ -30,10 +30,8 @@ USE_TOOLS+=		gmake
 
 WRKSRC=			${WRKDIR}
 
-QSRC=			icecc-2.9 icebgset-1.3 iceked-1.5 icemc-2.1
-QSRC+=			icesndcfg-1.3 icets-1.4 icewoed-1.8
-
-BUILD_DIRS=		${QSRC:S/^/${WRKSRC}\//}
+CONFIGURE_DIRS=		icecc-2.9 icebgset-1.3 iceked-1.5 icemc-2.1
+CONFIGURE_DIRS+=	icesndcfg-1.3 icets-1.4 icewoed-1.8
 
 PYTHON_PATCH_SCRIPTS=	icecursorscfg-0.6/icecurcfg.py iceiconcvt-1.0/iceiconcvt.py
 PYTHON_PATCH_SCRIPTS+=	icemergeprefs-0.5/icemergeprefs.py icerrun-0.5/icerrrun.py
@@ -46,23 +44,23 @@ SUBST_FILES.path+=	icemc-2.1/icemc.pro icesndcfg-1.3/icesndcfg.pro icets-1.4/ice
 SUBST_FILES.path+=	icewoed-1.8/icewoed.pro
 SUBST_FILES.path+=	icecursorscfg-0.6/icecurcfg.py iceiconcvt-1.0/iceiconcvt.py
 SUBST_FILES.path+=	icemergeprefs-0.5/icemergeprefs.py
-SUBST_SED.path=		"s|/usr/local|${PREFIX}|g"
-SUBST_MESSAGE.path=	"Fixing hardcoded paths."
+SUBST_SED.path=		-e "s|/usr/local|${PREFIX}|g"
+SUBST_MESSAGE.path=	Fixing hardcoded paths.
 
 # VIM_SUBDIR comes from "editors/vim-share/version.mk"
 PLIST_SUBST+=		VIM_SUBDIR=${VIM_SUBDIR:Q}
 
 do-configure:
-.   for dir in ${QSRC}
-	cd ${WRKSRC}/${dir} && ${QTDIR}/bin/qmake "QMAKE_MKDIR=${MKDIR}" "QMAKE_CHK_DIR_EXISTS=${TEST} -d"
+.   for dir in ${CONFIGURE_DIRS}
+	cd ${WRKSRC} && cd ${dir} && ${QTDIR}/bin/qmake QMAKE_MKDIR=${MKDIR:Q} QMAKE_CHK_DIR_EXISTS=${TEST:Q}\ -d
 .   endfor
 
 post-build:
-	cd ${WRKSRC}/icewm4vim && ${SETENV} ${MAKE_ENV} ${GMAKE} QTDIR=${QTDIR}
+	cd ${WRKSRC}/icewm4vim && ${SETENV} ${MAKE_ENV} ${GMAKE} QTDIR=${QTDIR:Q}
 
 post-install:
 .   for script in ${PYTHON_PATCH_SCRIPTS}
-	${INSTALL_SCRIPT} ${WRKSRC}/${script} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/${script:Q} ${PREFIX}/bin
 .   endfor
 	${INSTALL_PROGRAM} ${WRKSRC}/icewm4vim/icecolsel ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/icewm4vim/icefonsel ${PREFIX}/bin
