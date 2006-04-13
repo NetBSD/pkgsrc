@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.555 2006/04/12 21:35:02 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.556 2006/04/13 01:57:35 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2069,7 +2069,7 @@ sub type_should_be_quoted($) {
 sub variable_needs_quoting($) {
 	my ($varname) = @_;
 
-	return !($varname =~ qr"^(?:.*DIR|BUILDLINK_PREFIX\..*|DISTNAME|LOCALBASE|PKGNAME|PREFIX|WRKSRC)$");
+	return !($varname =~ qr"^(?:.*DIR|.*_GROUP|.*_USER|BUILDLINK_PREFIX\..*|DISTNAME|LOCALBASE|PKGNAME|PREFIX|WRKSRC)$");
 }
 
 my $check_pkglint_version_done = false;
@@ -3262,7 +3262,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 				} elsif ($word eq "-n") {
 					# Don't print lines per default.
 
-				} elsif ($i == 0 && $word =~ qr"^([\"']?)\d*s(.).*\2\1g?$") {
+				} elsif ($i == 0 && $word =~ qr"^([\"']?)\d*s(.).*\2g?\1$") {
 					$line->log_warning("Please always use \"-e\" in sed commands, even if there is only one substitution.");
 
 				} else {
