@@ -1,4 +1,4 @@
-# $NetBSD: gettext.mk,v 1.1 2006/04/13 18:45:01 jlam Exp $
+# $NetBSD: gettext.mk,v 1.2 2006/04/13 19:24:29 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -35,6 +35,23 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
+# These tools are all supplied by the devel/gettext-tools package if there
+# is no native tool available.  Don't add "msgfmt" to this list as it's
+# treated specially below.
+#
+_TOOLS.gettext-tools=		gettext xgettext
+_TOOLS_DEP.gettext-tools=	{gettext>=0.10.36,gettext-tools>=0.14.5}
+
+.for _t_ in ${_TOOLS.gettext-tools}
+.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(USE_TOOLS:C/:.*//:M${_t_})
+USE_TOOLS+=	msgfmt
+.  endif
+.endfor
+
+###
+### Handle "msgfmt".  We use either the pkgsrc version or the built-in
+### version of msgfmt depending on availability and version.
+###
 .if !defined(TOOLS_IGNORE.msgfmt) && !empty(USE_TOOLS:C/:.*//:Mmsgfmt)
 .  if !empty(PKGPATH:Mdevel/gettext-tools)
 MAKEFLAGS+=		TOOLS_IGNORE.msgfmt=
@@ -72,7 +89,7 @@ _TOOLS_USE_PKGSRC.msgfmt=	yes
 
 .    if !empty(_TOOLS_USE_PKGSRC.msgfmt:M[yY][eE][sS])
 TOOLS_CREATE+=		msgfmt
-TOOLS_DEPENDS.msgfmt?=	{gettext>=0.10.36,gettext-tools>=0.14.5}:../../devel/gettext-tools
+TOOLS_DEPENDS.msgfmt?=	${_TOOLS_DEP.gettext-tools}:../../devel/gettext-tools
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.msgfmt=${TOOLS_DEPENDS.msgfmt:C/:.*//}
 TOOLS_PATH.msgfmt=	${TOOLS_PREFIX.msgfmt}/bin/msgfmt
 .    else
@@ -84,3 +101,23 @@ TOOLS_SCRIPT.msgfmt=	AWK=${TOOLS_AWK:Q}				\
 .    endif
 .  endif
 .endif
+
+.for _t_ in ${_TOOLS.gettext-tools}
+.  if !defined(TOOLS_IGNORE.${_t_}) && !empty(USE_TOOLS:C/:.*//:M${_t_})
+.    if !empty(_TOOLS_USE_PKGSRC.msgfmt:M[yY][eE][sS])
+_TOOLS_USE_PKGSRC.${_t_}=	yes
+.    elif defined(TOOLS_PLATFORM.msgfmt) && !empty(TOOLS_PLATFORM.msgfmt)
+_TOOLS_USE_PKGSRC.${_t_}?=	no
+.    else
+_TOOLS_USE_PKGSRC.${_t_}?=	yes
+.    endif
+.    if !empty(PKGPATH:Mdevel/gettext-tools)
+MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
+.    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
+TOOLS_DEPENDS.${_t_}?=	${_TOOLS_DEP.gettext-tools}:../../devel/gettext-tools
+TOOLS_CREATE+=		${_t_}
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=${TOOLS_DEPENDS.${_t_}:C/:.*//}
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
+.    endif
+.  endif
+.endfor
