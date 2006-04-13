@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13567 2006/04/13 18:58:33 wiz Exp $
+$NetBSD: CHANGES,v 1.13568 2006/04/13 19:17:02 cube Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2066,3 +2066,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/gnome-vfs2 to 2.14.0nb2 [jmmv 2006-04-13]
 	Removed audio/tunepimp [wiz 2006-04-13]
 	Updated pkgtools/revbump to 1.6 [wiz 2006-04-13]
+	Updated sysutils/gkrellm to 2.2.9 [cube 2006-04-13]
+	Updated sysutils/gkrellm-share to 2.2.9 [cube 2006-04-13]
+	Updated sysutils/gkrellm-server to 2.2.9 [cube 2006-04-13]
