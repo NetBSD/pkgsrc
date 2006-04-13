@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2006/04/06 06:22:01 reed Exp $
+# $NetBSD: Makefile,v 1.57 2006/04/13 18:23:33 jlam Exp $
 #
 
 DISTNAME=	eog-2.14.0
@@ -10,12 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Eye of GNOME: an image viewing and cataloging program
 
-BUILD_USES_MSGFMT=	YES
-
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_DIRS+=		gnome2-1.5
-USE_MSGFMT_PLURALS=	YES
 USE_PKGLOCALEDIR=	YES
 
 GCONF2_SCHEMAS= 	eog.schemas

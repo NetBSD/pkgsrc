@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/03/06 00:18:11 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2006/04/13 18:23:39 jlam Exp $
 #
 
 DISTNAME=	libgtkhtml-2.6.3
@@ -11,10 +11,8 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Lightweight HTML rendering GTK2 widget
 
-BUILD_USES_MSGFMT=	yes
-
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE=	libgtkhtml-2.0.pc.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/04/08 21:06:59 reed Exp $
+# $NetBSD: Makefile,v 1.51 2006/04/13 18:23:37 jlam Exp $
 #
 
 DISTNAME=	libgnomeprint-2.12.1
@@ -11,9 +11,7 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.levien.com/gnome/print-arch.html
 COMMENT=	Library for the GNOME2 Printing Architecture
 
-BUILD_USES_MSGFMT=	YES
-
-USE_TOOLS+=		bison gmake pkg-config
+USE_TOOLS+=		bison gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES

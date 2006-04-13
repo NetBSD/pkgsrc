@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2006/04/06 06:21:32 reed Exp $
+# $NetBSD: Makefile,v 1.58 2006/04/13 18:23:29 jlam Exp $
 #
 
 DISTNAME=	file-roller-2.14.0
@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fileroller.sourceforge.net/
 COMMENT=	Front-end to archiving programs like tar and zip
 
-BUILD_USES_MSGFMT=	yes
 DEPENDS+=		gtar-base>=1.13.25:../../archivers/gtar-base
 DEPENDS+=		unzip>=5.50nb2:../../archivers/unzip
 DEPENDS+=		zip>=2.3nb2:../../archivers/zip
@@ -18,8 +17,7 @@ DEPENDS+=		zip>=2.3nb2:../../archivers/zip
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
-USE_MSGFMT_PLURALS+=	yes
-USE_TOOLS+=		gmake perl pkg-config
+USE_TOOLS+=		gmake msgfmt perl pkg-config
 USE_PKGLOCALEDIR=	yes
 
 GCONF2_SCHEMAS=		file-roller.schemas
