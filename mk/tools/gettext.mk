@@ -1,4 +1,4 @@
-# $NetBSD: msgfmt.mk,v 1.1 2006/04/13 16:35:58 jlam Exp $
+# $NetBSD: gettext.mk,v 1.1 2006/04/13 18:45:01 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.

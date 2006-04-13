@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.31 2006/04/13 16:35:59 jlam Exp $
+# $NetBSD: tools.Linux.mk,v 1.32 2006/04/13 18:45:01 jlam Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -171,3 +171,6 @@ TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs -r
+.if exists(/usr/bin/xgettext)
+TOOLS_PLATFORM.xgettext?=	/usr/bin/xgettext
+.endif
