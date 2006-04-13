@@ -1,4 +1,4 @@
-.\"	$NetBSD: finddepends.1,v 1.3 2006/03/07 07:27:26 wiz Exp $
+.\"	$NetBSD: finddepends.1,v 1.4 2006/04/13 18:58:17 wiz Exp $
 .\"
 .\" Copyright (c) 2006 The NetBSD Foundation, Inc.
 .\"
@@ -31,7 +31,7 @@
 .\" OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 .\" IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd March 7, 2006
+.Dd April 13, 2006
 .Dt FINDDEPENDS 1
 .Os
 .Sh NAME
@@ -74,8 +74,8 @@ Defaults to
 .Dl finddepends security/libtasn1
 .Pp
 would first output all buildlink3.mk files that include
-security/libtasn1, and then all Makefiles that include any of the
-found buildlink3.mk files.
+security/libtasn1, and then all Makefiles and options.mk files that
+include any of the found buildlink3.mk files.
 .Sh SEE ALSO
 .Xr blbump 1 ,
 .Xr revbump 1
