@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/04/13 18:23:36 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2006/04/13 19:27:54 jlam Exp $
 
 DISTNAME=		gnome-media-2.14.0
 CATEGORIES=		multimedia gnome
@@ -15,11 +15,11 @@ GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake msgfmt perl pkg-config
+USE_TOOLS+=		gmake msgfmt perl pkg-config xgettext
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
-CONFIGURE_ENV+=		XGETTEXT="${LOCALBASE}/bin/xgettext"
+CONFIGURE_ENV+=		XGETTEXT=${TOOLS_PATH.xgettext:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
