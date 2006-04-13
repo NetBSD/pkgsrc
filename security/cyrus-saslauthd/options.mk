@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2005/12/05 23:55:17 rillig Exp $
+# $NetBSD: options.mk,v 1.8 2006/04/13 21:35:24 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-saslauthd
 PKG_SUPPORTED_OPTIONS=	pam kerberos ldap gssapi
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--with-pam=${PAMBASE:Q}
 ###
 .if !empty(PKG_OPTIONS:Mldap)
 .  include "../../databases/openldap/buildlink3.mk"
-.  include "../../security/cyrus-sasl2/buildlink3.mk"
+.  include "../../security/cyrus-sasl/buildlink3.mk"
 BUILDLINK_INCDIRS.cyrus-sasl=	include/sasl
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap}
 PLIST_SUBST+=		LDAP=

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.267 2006/04/01 21:48:49 minskim Exp $
+# $NetBSD: Makefile,v 1.268 2006/04/13 21:35:24 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -41,7 +41,7 @@ SUBDIR+=	cy2-ntlm
 SUBDIR+=	cy2-otp
 SUBDIR+=	cy2-plain
 SUBDIR+=	cy2-sql
-SUBDIR+=	cyrus-sasl2
+SUBDIR+=	cyrus-sasl
 SUBDIR+=	cyrus-saslauthd
 SUBDIR+=	ddos-scan
 SUBDIR+=	destroy
