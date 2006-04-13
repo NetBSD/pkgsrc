@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/04/13 18:23:29 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2006/04/13 19:26:01 jlam Exp $
 #
 
 DISTNAME=	easytag-1.1
@@ -13,8 +13,7 @@ COMMENT=	Tool to view, edit and write ID3 v1&2 TAGs with a GTK+ interface
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake
-USE_TOOLS+=		msgfmt # xgettext, really
+USE_TOOLS+=		gmake xgettext
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 
