@@ -1,0 +1,43 @@
+$NetBSD: patch-ac,v 1.2.6.1 2006/04/13 16:08:25 salo Exp $
+
+--- tun.c.orig	2006-04-05 02:29:24.000000000 -0400
++++ tun.c
+@@ -877,7 +877,37 @@ open_tun_generic (const char *dev, const
+ 	  if (dynamic && !has_digit(dev))
+ 	    {
+ 	      int i;
+-	      for (i = 0; i < 256; ++i)
++#if defined(TAPGIFNAME)
++	      /*
++	       * Perhaps we have a cloning device.  Try opening
++	       * the device without any appended digits,
++	       * and use ioctl(,TAPGIFNAME,) to get the resulting
++	       * interface name.
++	       */
++	      openvpn_snprintf (tunname, sizeof (tunname), "/dev/%s", dev);
++	      if ((tt->fd = open (tunname, O_RDWR)) > 0)
++		{
++		  struct ifreq ifr;
++		  if (ioctl (tt->fd, TAPGIFNAME, (void*)&ifr) < 0)
++		    {
++		      msg (D_READ_WRITE | M_ERRNO,
++			   "ioctl(,TAPGIFNAME,) failed for %s", tunname);
++		      close(tt->fd);
++		    }
++		  else
++		    {
++		      strlcpy (dynamic_name, ifr.ifr_name,
++			       sizeof (dynamic_name));
++		      dynamic_opened = true;
++		      msg (M_INFO, "TUN/TAP dynamic interface %s opened",
++			   dynamic_name);
++		    }
++		}
++	      if (!dynamic_opened)
++		msg (D_READ_WRITE | M_ERRNO, "Tried opening %s (failed)",
++		     tunname);
++#endif /* TAPGIFNAME */
++	      for (i = 0; i < 256 && !dynamic_opened; ++i)
+ 		{
+ 		  openvpn_snprintf (tunname, sizeof (tunname),
+ 				    "/dev/%s%d", dev, i);
