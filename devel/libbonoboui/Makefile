@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/04/06 06:21:50 reed Exp $
+# $NetBSD: Makefile,v 1.51 2006/04/13 18:23:31 jlam Exp $
 #
 
 DISTNAME=	libbonoboui-2.14.0
@@ -10,12 +10,10 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME2 Object activation framework library (graphical version)
 
-BUILD_USES_MSGFMT=	yes
-
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE=	bonobo/libbonoboui-2.0.pc.in

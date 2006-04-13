@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:10:50 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/04/13 18:23:37 jlam Exp $
 #
 
 DISTNAME=	gkrellm-1.2.13
@@ -11,10 +11,8 @@ MAINTAINER=	anthony.mallet@ficus.yi.org
 HOMEPAGE=	http://gkrellm.net/
 COMMENT=	GTK based system monitor
 
-BUILD_USES_MSGFMT=	YES
-
 OSVERSION_SPECIFIC=	YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	YES
 
 CONFLICTS+=	gkrellm-share>=2.0

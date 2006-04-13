@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2006/03/30 03:08:19 markd Exp $
+# $NetBSD: Makefile,v 1.54 2006/04/13 18:23:31 jlam Exp $
 
 DISTNAME=	kdevelop-3.3.2
 PKGNAME=	kdevelop-base-3.3.2
@@ -8,8 +8,6 @@ HOMEPAGE=       http://www.kdevelop.org/
 COMMENT=	Base modules for IDE for Unix/X11/KDE
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
-
-BUILD_USES_MSGFMT=	yes
 
 DEPENDS+=		automake>=1.7:../../devel/automake
 DEPENDS+=		doxygen>=1.3.5:../../devel/doxygen
@@ -22,7 +20,7 @@ DEPENDS+=		qt3-tools>=3.1.1:../../x11/qt3-tools
 
 CONFLICTS+=	kdevelop<=1.3
 
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	msgfmt perl:run
 
 REPLACE_PERL+= \
 	kdevprj2kdevelop \

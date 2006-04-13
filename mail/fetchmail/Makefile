@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2006/02/05 23:09:55 joerg Exp $
+# $NetBSD: Makefile,v 1.158 2006/04/13 18:23:34 jlam Exp $
 
 DISTNAME=	fetchmail-6.2.5.5
 PKGREVISION=	1
@@ -11,15 +11,13 @@ COMMENT=	Batch mail retrieval/forwarding utility for pop2, pop3, apop, imap
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-BUILD_USES_MSGFMT=	yes
-
 .include "../../mk/bsd.prefs.mk"
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-hesiod
 LDFLAGS+=		${CFLAGS}
-USE_TOOLS+=		tbl
+USE_TOOLS+=		msgfmt tbl
 
 .if ${OPSYS} == "Darwin"
 LDFLAGS+=		-lresolv

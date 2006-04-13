@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/02/05 23:10:16 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2006/04/13 18:23:36 jlam Exp $
 #
 
 DISTNAME=	kmplayer-0.9.1
@@ -11,13 +11,12 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://kmplayer.kde.org/
 COMMENT=	KDE frontend to mplayer
 
-BUILD_USES_MSGFMT=	yes
 DEPENDS+=		mplayer>=1.0rc3:../../multimedia/mplayer
 DEPENDS+=		mencoder>=1.0rc3:../../multimedia/mencoder
 DEPENDS+=		xine-arts>=1rc0a:../../audio/xine-arts
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake perl pkg-config
+USE_TOOLS+=		gmake msgfmt perl pkg-config
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 

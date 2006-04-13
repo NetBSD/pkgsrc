@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/04 21:29:40 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/13 18:23:32 jlam Exp $
 #
 
 DISTNAME=		boson-all-0.8
@@ -12,11 +12,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://boson.eu.org/
 COMMENT=		OpenGL real-time strategy game for KDE 3
 
-BUILD_USES_MSGFMT=	yes
-
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--disable-debug

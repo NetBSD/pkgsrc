@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2006/04/06 18:25:39 reed Exp $
+# $NetBSD: Makefile,v 1.112 2006/04/13 18:23:35 jlam Exp $
 #
 
 DISTNAME=		gnumeric-1.6.3
@@ -10,10 +10,9 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/gnumeric/
 COMMENT=		Spreadsheet program from the GNOME project
 
-BUILD_USES_MSGFMT=	YES
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake perl:run pkg-config
+USE_TOOLS+=		gmake msgfmt perl:run pkg-config
 USE_LIBTOOL=		YES
 
 GNU_CONFIGURE=		YES

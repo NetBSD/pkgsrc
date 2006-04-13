@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/02/05 23:08:48 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2006/04/13 18:23:31 jlam Exp $
 #
 
 DISTNAME=	maketool-0.7-src
@@ -11,10 +11,9 @@ MAINTAINER=	fredb@NetBSD.org
 HOMEPAGE=	http://www.alphalink.com.au/~gnb/maketool/
 COMMENT=	Graphical front end to GNU make
 
-BUILD_USES_MSGFMT=	yes
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../devel/gettext-lib/buildlink3.mk"

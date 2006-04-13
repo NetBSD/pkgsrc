@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/04/06 06:22:38 reed Exp $
+# $NetBSD: Makefile,v 1.21 2006/04/13 18:23:37 jlam Exp $
 #
 
 DISTNAME=	gnome-keyring-0.4.9
@@ -10,9 +10,7 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME password and secret manager
 
-BUILD_USES_MSGFMT=	YES
-
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		msgfmt pkg-config
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES

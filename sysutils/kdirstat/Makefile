@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/02/05 23:10:55 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/04/13 18:23:38 jlam Exp $
 
 DISTNAME=	kdirstat-2.4.3
 PKGREVISION=	2
@@ -10,11 +10,10 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://kdirstat.sourceforge.net/
 COMMENT= 	Graphical disk usage utility
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=          yes
-BUILD_USES_MSGFMT=	yes
 
 REPLACE_PERL=		kdirstat/fix_move_to_trash_bin.pl
 

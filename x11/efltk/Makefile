@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/08 11:29:50 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/13 18:23:39 jlam Exp $
 #
 
 DISTNAME=	efltk-2.0.5
@@ -15,9 +15,8 @@ WRKSRC=			${WRKDIR}/efltk
 GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 USE_LIBTOOL=		yes
-BUILD_USES_MSGFMT=	yes
 
 CONFIGURE_ARGS+=	--enable-iconv
 CONFIGURE_ARGS+=	--enable-xft

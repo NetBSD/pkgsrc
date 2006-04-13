@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2006/03/21 06:00:51 jlam Exp $
+# $NetBSD: Makefile,v 1.68 2006/04/13 18:23:38 jlam Exp $
 
 DISTNAME=	bluefish-1.0.5
 PKGREVISION=	5
@@ -15,10 +15,9 @@ HOMEPAGE=	http://bluefish.openoffice.nl/
 COMMENT=	GTK HTML editor for the experienced web designer
 
 DEPENDS+=		weblint-[0-9]*:../../www/weblint
-BUILD_USES_MSGFMT=	yes
 
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		find gmake grep pkg-config
+USE_TOOLS+=		find gmake grep msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-icon-path=${PREFIX:Q}/share/pixmaps

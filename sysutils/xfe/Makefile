@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/04 21:30:44 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/13 18:23:38 jlam Exp $
 
 DISTNAME=	xfe-0.84
 PKGREVISION=	1
@@ -9,11 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xfe.sourceforge.net/
 COMMENT=	Fast MS-Explorer like filemanager for X
 
-BUILD_USES_MSGFMT=	yes
-
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
 
 PKG_SYSCONFSUBDIR=	xfe

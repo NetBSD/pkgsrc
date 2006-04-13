@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/04/06 06:23:05 reed Exp $
+# $NetBSD: Makefile,v 1.33 2006/04/13 18:23:45 jlam Exp $
 #
 
 DISTNAME=	zenity-2.14.0
@@ -10,12 +10,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Display GNOME dialogs from the command line
 
-BUILD_USES_MSGFMT=	yes
-
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/04/05 22:54:59 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/04/13 18:23:35 jlam Exp $
 #
 
 DISTNAME=		pinfo-0.6.1
@@ -10,9 +10,8 @@ MAINTAINER=		fredb@NetBSD.org
 HOMEPAGE=		http://zeus.polsl.gliwice.pl/~pborys/
 COMMENT=		Przemek's Info Viewer
 
-BUILD_USES_MSGFMT=	yes
-
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 

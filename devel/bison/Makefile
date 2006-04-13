@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2006/03/30 03:44:42 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2006/04/13 18:23:31 jlam Exp $
 
 DISTNAME=		bison-2.1
 CATEGORIES=		devel
@@ -11,10 +11,9 @@ COMMENT=		GNU yacc(1) replacement
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-BUILD_USES_MSGFMT=	yes
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gm4:run
+USE_TOOLS+=		gm4:run msgfmt
 INFO_FILES=		# PLIST
 
 TEST_TARGET=		check

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/05 23:09:42 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/13 18:23:34 jlam Exp $
 
 DISTNAME=	gpredict-0.5.2
 PKGREVISION=	2
@@ -9,10 +9,9 @@ MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=       http://groundstation.sourceforge.net/
 COMMENT=	Gnome satellite tracking program
 
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=yes
 GNU_CONFIGURE=	yes
-BUILD_USES_MSGFMT=yes
 
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf-gnome/buildlink3.mk"

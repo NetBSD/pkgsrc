@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/04/04 18:07:16 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2006/04/13 18:23:29 jlam Exp $
 #
 
 DISTNAME=	gossip-0.10.2
@@ -11,10 +11,9 @@ HOMEPAGE=	http://gossip.imendio.org/
 COMMENT=	GTK2 Jabber Instant Messaging client
 
 BUILD_DEPENDS+=		p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
-BUILD_USES_MSGFMT=	yes
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=       yes
 GNU_CONFIGURE=		yes

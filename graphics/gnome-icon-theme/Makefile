@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/04/06 06:22:02 reed Exp $
+# $NetBSD: Makefile,v 1.38 2006/04/13 18:23:33 jlam Exp $
 #
 
 DISTNAME=		gnome-icon-theme-2.14.2
@@ -10,11 +10,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Theme consisting of a set of icons for GNOME
 
-BUILD_USES_MSGFMT=	yes
-
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake msgfmt perl
 USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE=	gnome-icon-theme.pc.in

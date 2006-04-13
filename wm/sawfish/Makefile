@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/04/08 05:02:59 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2006/04/13 18:23:38 jlam Exp $
 #
 
 PKGNAME=		sawfish-${SF_VERS}
@@ -13,9 +13,8 @@ USE_X11BASE=		yes
 
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
-BUILD_USES_MSGFMT=	YES
 
-USE_TOOLS+=		makeinfo
+USE_TOOLS+=		makeinfo msgfmt
 INFO_FILES=		# PLIST
 
 PLIST_SUBST+=		SF_VERS=${SF_VERS:Q}

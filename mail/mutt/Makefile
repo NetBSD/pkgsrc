@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2006/04/12 13:29:20 tron Exp $
+# $NetBSD: Makefile,v 1.139 2006/04/13 18:23:35 jlam Exp $
 
 DISTNAME=		mutt-1.4.2.1i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -18,8 +18,8 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 .include "../../mk/bsd.prefs.mk"
 
 WRKSRC=			${WRKDIR}/${DISTNAME:C/i$$//}
-BUILD_USES_MSGFMT=	yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		msgfmt
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}			\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2006/04/06 06:22:59 reed Exp $
+# $NetBSD: Makefile,v 1.64 2006/04/13 18:23:39 jlam Exp $
 #
 
 DISTNAME=		gnome-applets-2.14.0
@@ -11,15 +11,12 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 panel applets
 
-BUILD_USES_MSGFMT=	YES
-
 BUILD_DEPENDS+=		gst-plugins0.10-esound>=0.10.0:../../audio/gst-plugins0.10-esound
 BUILD_DEPENDS+=		gst-plugins0.10-oss>=0.10.0:../../audio/gst-plugins0.10-oss
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
-USE_MSGFMT_PLURALS=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 

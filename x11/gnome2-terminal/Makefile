@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/04/06 06:23:00 reed Exp $
+# $NetBSD: Makefile,v 1.52 2006/04/13 18:23:40 jlam Exp $
 #
 
 DISTNAME=		gnome-terminal-2.14.0
@@ -11,15 +11,12 @@ MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Xterm like terminal program for GNOME 2
 
-BUILD_USES_MSGFMT=	YES
-
 CONFLICTS=		gnome-core-[0-9]*
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_MSGFMT_PLURALS=	YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake perl pkg-config
+USE_TOOLS+=		gmake msgfmt perl pkg-config
 USE_LIBTOOL=		YES
 
 GCONF2_SCHEMAS= 	gnome-terminal.schemas

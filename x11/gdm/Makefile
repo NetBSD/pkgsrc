@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2006/04/06 06:22:58 reed Exp $
+# $NetBSD: Makefile,v 1.107 2006/04/13 18:23:39 jlam Exp $
 #
 
 DISTNAME=	gdm-2.14.0
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
 
-BUILD_USES_MSGFMT=	YES
-
 DEPENDS+=	zenity>=2.14.0:../../x11/zenity
 
 BUILDLINK_API_DEPENDS.libart2+=	libart2>=2.3.11
@@ -21,8 +19,7 @@ USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_MSGFMT_PLURALS=	YES
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gdm
 PKG_SUPPORTED_OPTIONS=	inet6 pam

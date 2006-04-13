@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/03/21 06:00:44 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2006/04/13 18:23:29 jlam Exp $
 #
 
 DISTNAME=	rhythmbox-0.8.8
@@ -11,7 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rhythmbox.org/
 COMMENT=	Music management application for GNOME
 
-BUILD_USES_MSGFMT=	YES
 DEPENDS+=		gst-plugins0.8-esound>=0.8.1:../../audio/gst-plugins0.8-esound
 DEPENDS+=		gst-plugins0.8-gnomevfs>=0.8.1:../../sysutils/gst-plugins0.8-gnomevfs
 DEPENDS+=		gst-plugins0.8-mad>=0.8.1:../../audio/gst-plugins0.8-mad
@@ -19,7 +18,7 @@ DEPENDS+=		gst-plugins0.8-vorbis>=0.8.1:../../audio/gst-plugins0.8-vorbis
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 

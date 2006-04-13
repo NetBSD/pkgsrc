@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/08 15:13:03 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/13 18:23:37 jlam Exp $
 #
 
 DISTNAME=	gnome-keyring-manager-2.14.0
@@ -10,14 +10,11 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://gnomesupport.org/wiki/index.php/GNOME_Keyring_Manager_Wiki
 COMMENT=	GNOME password and secret manager
 
-BUILD_USES_MSGFMT=	YES
-
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.6
 USE_LIBTOOL=		YES
-USE_MSGFMT_PLURALS=	YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 
 GCONF2_SCHEMAS=		gnome-keyring-manager.schemas
 

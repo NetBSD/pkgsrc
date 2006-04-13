@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2006/04/06 06:21:45 reed Exp $
+# $NetBSD: Makefile,v 1.57 2006/04/13 18:23:31 jlam Exp $
 
 DISTNAME=	bonobo-1.0.22
 PKGREVISION=	1
@@ -15,11 +15,10 @@ BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 BUILDLINK_API_DEPENDS.libxml=	libxml>1.8.15
 
 BROKEN_GETTEXT_DETECTION=	yes
-BUILD_USES_MSGFMT=	yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11BASE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE:Q}
 CONFIGURE_ENV+=		X11BASE=${X11BASE:Q}

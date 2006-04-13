@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/06 06:21:34 reed Exp $
+# $NetBSD: Makefile,v 1.11 2006/04/13 18:23:29 jlam Exp $
 #
 
 DISTNAME=	gtkpod-0.94.0
@@ -10,13 +10,11 @@ MAINTAINER=	smb@NetBSD.org
 HOMEPAGE=	http://gtkpod.sourceforge.net/
 COMMENT=	GUI for iPod using GTK2
 
-BUILD_USES_MSGFMT=	yes
-
 GNU_CONFIGURE=		yes
 
-USE_LIBTOOL=	yes
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=	pkg-config perl:run
+USE_TOOLS+=		msgfmt pkg-config perl:run
 
 REPLACE_PERL+=		scripts/mab2vcard
 

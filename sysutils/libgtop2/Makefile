@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/04/06 06:22:45 reed Exp $
+# $NetBSD: Makefile,v 1.36 2006/04/13 18:23:38 jlam Exp $
 
 DISTNAME=		libgtop-2.14.0
 PKGNAME=		${DISTNAME:S/-/2-/}
@@ -10,13 +10,10 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Library to retrieve system information, used in GNOME2
 
-BUILD_USES_MSGFMT=	YES
-
 OSVERSION_SPECIFIC=	YES
-USE_MSGFMT_PLURALS=	YES
 
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake makeinfo perl pkg-config
+USE_TOOLS+=		gmake makeinfo msgfmt perl pkg-config
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libgtop-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	support/gnome-support-2.0.pc.in
