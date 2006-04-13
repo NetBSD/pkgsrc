@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13565 2006/04/13 18:38:55 mjl Exp $
+$NetBSD: CHANGES,v 1.13566 2006/04/13 18:57:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2064,3 +2064,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/makedepf90 version 2.8.4 [minskim 2006-04-13]
 	Updated comms/asterisk to 1.2.7.1 [mjl 2006-04-13]
 	Updated sysutils/gnome-vfs2 to 2.14.0nb2 [jmmv 2006-04-13]
+	Removed audio/tunepimp [wiz 2006-04-13]
