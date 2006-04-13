@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2006/01/10 12:39:04 ghen Exp $
+# $NetBSD: options.mk,v 1.9 2006/04/13 18:27:24 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.courier-authlib
 PKG_SUPPORTED_OPTIONS=	pam bdb ldap mysql pgsql
@@ -108,7 +108,6 @@ CONFIGURE_ARGS+=	--without-authmysql
 # Prevent auto-adding gettext libraries to LIBS -- we only want them
 # used when we link with -lpq.
 #
-BROKEN_GETTEXT_DETECTION=	no
 .  include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-authpgsql
 CONFIGURE_ENV+=		PGSQL_LIBS="${BUILDLINK_LDADD.${PGSQL_TYPE}}"
