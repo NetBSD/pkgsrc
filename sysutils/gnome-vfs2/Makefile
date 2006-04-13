@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.62 2006/04/06 06:22:45 reed Exp $
+# $NetBSD: Makefile,v 1.63 2006/04/13 18:34:30 jmmv Exp $
 
-PKGREVISION=		1
+PKGREVISION=		2
 
 PKGCONFIG_OVERRIDE=	gnome-vfs-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gnome-vfs-module-2.0.pc.in
@@ -21,6 +21,8 @@ LDFLAGS.Darwin+=	-lresolv
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.9.3
 
 .include "Makefile.common"
+
+CONFIGURE_ARGS+=	--enable-fam
 
 .include "../../devel/GConf2/schemas.mk"
 
