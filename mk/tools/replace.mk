@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.164 2006/04/06 06:23:06 reed Exp $
+# $NetBSD: replace.mk,v 1.165 2006/04/13 16:35:58 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -78,13 +78,6 @@
 #
 #	USE_TOOLS+=	perl:run
 #
-
-# XXX Keep this hack here until the day that msgfmt and msgfmt-plurals
-# XXX is handled directly by the tools framework.
-# XXX
-.if defined(USE_MSGFMT_PLURALS) && !empty(USE_MSGFMT_PLURALS:M[yY][eE][sS])
-USE_TOOLS+=	perl
-.endif
 
 # bison implies "bison-yacc"
 .if !empty(USE_TOOLS:Mbison) || !empty(USE_TOOLS:Mbison\:*)
@@ -885,17 +878,18 @@ TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${GNU_PROGRAM_PREFIX}${_t_}
 ######################################################################
 
 # These tools are all supplied by the devel/gettext-tools package if there
-# is no native tool available.
+# is no native tool available.  Don't add "msgfmt" to this list since it
+# needs special handling -- see mk/tools/msgfmt.mk.
 #
-_TOOLS.gettext-tools=		gettext msgfmt xgettext
-_TOOLS_DEP.gettext-tools=	gettext<0.14.5,gettext-tools>=0.14.5
+_TOOLS.gettext-tools=		gettext xgettext
+_TOOLS_DEP.gettext-tools=	{gettext>0.10.35,gettext-tools>=0.14.5}
 
 .for _t_ in ${_TOOLS.gettext-tools}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
 .    if !empty(PKGPATH:Mdevel/gettext-tools)
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
-TOOLS_DEPENDS.${_t_}?=	{${_TOOLS_DEP.gettext-tools}}:../../devel/gettext-tools
+TOOLS_DEPENDS.${_t_}?=	${_TOOLS_DEP.gettext-tools}:../../devel/gettext-tools
 TOOLS_CREATE+=		${_t_}
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=${TOOLS_DEPENDS.${_t_}:C/:.*//}
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}

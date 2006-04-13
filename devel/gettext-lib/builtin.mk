@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.31 2006/04/06 06:21:49 reed Exp $
+# $NetBSD: builtin.mk,v 1.32 2006/04/13 16:35:58 jlam Exp $
 
 BUILTIN_PKG:=	gettext
 
@@ -204,40 +204,6 @@ CONFIGURE_ARGS+=	--with-libintl-prefix="${BUILDLINK_PREFIX.gettext}"
 .    else
 CONFIGURE_ARGS+=	--without-libintl-prefix
 .    endif
-.  endif
-
-.  if defined(USE_MSGFMT_PLURALS) && !empty(USE_MSGFMT_PLURALS:M[Yy][Ee][Ss])
-USE_TOOLS+=		perl
-CONFIGURE_ENV+=		MSGFMT=${BUILDLINK_DIR}/bin/msgfmt
-
-# XXX _USE_NEW_TOOLS=yes should make "msgfmt" and "msgfmt-plural" into
-# XXX tools that can be specified via USE_TOOLS.  They would replace
-# XXX BUILD_USES_MSGFMT and USE_MSGFMT_PLURALS.
-# XXX
-BUILDLINK_TARGETS+=	buildlink-msgfmt
-
-buildlink-msgfmt: ${BUILDLINK_DIR}/bin/msgfmt
-
-${BUILDLINK_DIR}/bin/msgfmt: ${.CURDIR}/../../devel/gettext/files/msgfmt.pl
-	@ver=`${BUILDLINK_PREFIX.gettext:Q}/bin/msgfmt --version |	\
-		${HEAD} -n 1 | ${CUT} -d ' ' -f 4`;			\
-	${MKDIR} ${.TARGET:H};						\
-	case $${ver} in							\
-	0.10.[1-3][0-5]|0.[0-9].*)					\
-		${ECHO} "=> Creating msgfmt wrapper to work-around"	\
-			"plurals";					\
-		${CAT} ${.ALLSRC} |					\
-			${SED} -e "s|@PERL@|"${PERL5:Q}"|g"		\
-			-e "s|@MSGFMT@|"${BUILDLINK_PREFIX.gettext:Q}/bin/msgfmt"|g" \
-			> ${.TARGET};					\
-		;;							\
-	*)								\
-		${ECHO} "#! ${SH}" >${.TARGET};				\
-		${ECHO} "${BUILDLINK_PREFIX.gettext:Q}/bin/msgfmt"	\
-			'"$$@"' >>${.TARGET};				\
-		;;							\
-	esac;								\
-	${CHMOD} +x ${.TARGET}
 .  endif
 
 .endif	# CHECK_BUILTIN.gettext
