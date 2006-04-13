@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/02/05 23:08:41 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2006/04/13 20:05:40 minskim Exp $
 
 DISTNAME=	doxygen-1.4.5.src
 PKGNAME=	doxygen-1.4.5
@@ -22,6 +22,12 @@ CONFIGURE_ARGS+=	--dot ${PREFIX}/bin/dot
 CONFIGURE_ARGS+=	--prefix ${PREFIX}
 CONFIGURE_ARGS+=	--docdir ${PREFIX}/share/doc
 MAKE_ENV+=		PKGSRC_CFLAGS=${CFLAGS:M*:Q}
+
+.if exists(./descr)
+PLIST_SUBST+=	CASESENSITIVE="@comment " CASEINSENSITIVE=""
+.else
+PLIST_SUBST+=	CASESENSITIVE="" CASEINSENSITIVE="@comment "
+.endif
 
 SUBST_CLASSES+=		pybin
 SUBST_STAGE.pybin=	pre-configure

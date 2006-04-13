@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/10/08 08:17:27 adam Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/04/13 20:05:40 minskim Exp $
 bin/doxygen
 bin/doxytag
 man/man1/doxygen.1
@@ -191,8 +191,10 @@ share/doc/doxygen/examples/diagrams_e.h
 share/doc/doxygen/examples/docstring.cfg
 share/doc/doxygen/examples/docstring.py
 share/doc/doxygen/examples/docstring/html/annotated.html
-share/doc/doxygen/examples/docstring/html/classdocstring_1_1PyClass-members.html
-share/doc/doxygen/examples/docstring/html/classdocstring_1_1PyClass.html
+${CASESENSITIVE}share/doc/doxygen/examples/docstring/html/classdocstring_1_1PyClass-members.html
+${CASEINSENSITIVE}share/doc/doxygen/examples/docstring/html/classdocstring_1_1_py_class-members.html
+${CASESENSITIVE}share/doc/doxygen/examples/docstring/html/classdocstring_1_1PyClass.html
+${CASEINSENSITIVE}share/doc/doxygen/examples/docstring/html/classdocstring_1_1_py_class.html
 share/doc/doxygen/examples/docstring/html/doxygen.css
 share/doc/doxygen/examples/docstring/html/doxygen.png
 share/doc/doxygen/examples/docstring/html/functions.html
@@ -386,8 +388,10 @@ share/doc/doxygen/examples/par/html/tabs.css
 share/doc/doxygen/examples/pyexample.cfg
 share/doc/doxygen/examples/pyexample.py
 share/doc/doxygen/examples/pyexample/html/annotated.html
-share/doc/doxygen/examples/pyexample/html/classpyexample_1_1PyClass-members.html
-share/doc/doxygen/examples/pyexample/html/classpyexample_1_1PyClass.html
+${CASESENSITIVE}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1PyClass-members.html
+${CASEINSENSITIVE}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1_py_class-members.html
+${CASESENSITIVE}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1PyClass.html
+${CASEINSENSITIVE}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1_py_class.html
 share/doc/doxygen/examples/pyexample/html/doxygen.css
 share/doc/doxygen/examples/pyexample/html/doxygen.png
 share/doc/doxygen/examples/pyexample/html/functions.html
