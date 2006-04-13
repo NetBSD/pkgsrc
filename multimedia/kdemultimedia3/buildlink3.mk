@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/04/12 10:27:27 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2006/04/13 07:23:14 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 KDEMULTIMEDIA_BUILDLINK3_MK:=	${KDEMULTIMEDIA_BUILDLINK3_MK}+
@@ -19,7 +19,7 @@ BUILDLINK_PKGSRCDIR.kdemultimedia?=	../../multimedia/kdemultimedia3
 .include "../../audio/arts/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/musicbrainz/buildlink3.mk"
-.include "../../audio/tunepimp/buildlink3.mk"
+.include "../../audio/libtunepimp/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "pth"
 .include "../../devel/pthread-sem/buildlink3.mk"
