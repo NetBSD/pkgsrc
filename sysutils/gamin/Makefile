@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/14 16:00:42 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/13 18:27:24 jlam Exp $
 
 DISTNAME=	gamin-0.1.5
 PKGREVISION=	2
@@ -18,11 +18,6 @@ CONFIGURE_ARGS+=	--enable-debug
 CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--without-threads
 CONFIGURE_ARGS+=	--with-html-dir=${DOCDIR:Q}
-
-# glib2/buildlink3.mk pulls in gettext-lib/buildlink3.mk, but the gamin
-# libraries don't need to be linked against -lintl automatically.
-#
-BROKEN_GETTEXT_DETECTION=      no
 
 PKG_SYSCONFSUBDIR=	gamin
 DOCDIR=			${PREFIX}/share/doc/gamin
