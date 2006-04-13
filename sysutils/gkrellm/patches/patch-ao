@@ -1,8 +1,18 @@
-$NetBSD: patch-ao,v 1.2 2006/03/19 22:10:38 joerg Exp $
+$NetBSD: patch-ao,v 1.3 2006/04/13 19:14:45 cube Exp $
 
---- server/sysdeps-unix.c.orig	2005-03-19 16:00:16.000000000 +0000
+--- server/sysdeps-unix.c.orig	2006-03-30 00:23:50.000000000 +0200
 +++ server/sysdeps-unix.c
-@@ -43,6 +43,12 @@ static gint gkrellm_connect_to(gchar *, 
+@@ -24,9 +24,6 @@
+ 
+ #include "../src/gkrellm-sysdeps.h"
+ 
+-static gboolean (*mbmon_check_func)();
+-static gint gkrellm_connect_to(gchar *, gint);
+-
+ #if defined(__linux__)
+ #include "../src/sysdeps/linux.c"
+ #include "../src/sysdeps/sensors-common.c"
+@@ -43,10 +40,17 @@ static gint gkrellm_connect_to(gchar *, 
  #include "../src/sysdeps/sensors-common.c"
  #endif
  
@@ -15,3 +25,17 @@ $NetBSD: patch-ao,v 1.2 2006/03/19 22:10:38 joerg Exp $
  #if defined(__NetBSD__)
  #include "../src/sysdeps/netbsd.c"
  #include "../src/sysdeps/bsd-net-open.c"
+ #include "../src/sysdeps/bsd-common.c"
++#include "../src/sysdeps/sensors-common.c"
+ #endif
+ 
+ #if defined(__OpenBSD__)
+@@ -123,7 +127,7 @@ gkrellm_sensors_linux_name_fix(gchar *id
+ 	}
+ 
+ #ifdef SENSORS_COMMON
+-static gint
++gint
+ gkrellm_connect_to(gchar *server, gint server_port)
+ 	{
+ 	gint		fd	= -1;
