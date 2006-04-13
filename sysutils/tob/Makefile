@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/11 10:07:50 ghen Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/13 00:11:47 rillig Exp $
 
 DISTNAME=	tob-0.25
 CATEGORIES=	sysutils
@@ -8,7 +8,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tinyplanet.ca/projects/tob/
 COMMENT=	General driver for making and maintaining backups
-
 
 EGDIR=		${PREFIX}/share/examples/tob
 CONF_FILES=	${EGDIR}/tob.rc ${PKG_SYSCONFDIR}/tob/tob.rc
@@ -22,12 +21,14 @@ REPLACE.bash.old=	/bin/bash
 REPLACE.bash.new=	${SH}
 REPLACE_FILES.bash=	tob
 
+SUBST_CLASSES+=		confdir
+SUBST_STAGE.confdir=	do-build
+SUBST_MESSAGE.confdir=	Adjusting configuration directory
+SUBST_FILES.confdir=	tob tob.rc
+SUBST_SED.confdir=	-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'
+
 do-build:
-	for f in tob tob.rc; do						\
-		${MV} ${WRKSRC}/$$f ${WRKSRC}/$$f-pre &&		\
-		${SED} -e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g' 	\
-			${WRKSRC}/$$f-pre > ${WRKSRC}/$$f;		\
-	done
+	@${DO_NADA}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/tob ${PREFIX}/sbin
