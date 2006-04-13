@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/04/12 20:02:24 drochner Exp $
+# $NetBSD: Makefile,v 1.49 2006/04/13 18:23:35 jlam Exp $
 #
 
 DISTNAME=		yelp-2.14.1
@@ -11,12 +11,11 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Help browser for GNOME 2 desktop
 
 DEPENDS+=		docbook>=4.2:../../textproc/docbook
-BUILD_USES_MSGFMT=	yes
 
 BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=1.1.4
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2006/03/30 03:44:44 jlam Exp $
+# $NetBSD: Makefile,v 1.117 2006/04/13 18:23:40 jlam Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=		9
@@ -16,10 +16,9 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_USES_MSGFMT=	yes
 USE_DIRS+=		xdg-1.1
 USE_X11BASE=		yes
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake msgfmt perl
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	gdk.pc.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/03/21 15:34:03 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/04/13 18:23:32 jlam Exp $
 
 DISTNAME=	cooledit-3.17.17
 PKGREVISION=	2
@@ -9,11 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cooledit.sourceforge.net/
 COMMENT=	Full-featured text editor
 
-BUILD_USES_MSGFMT=	yes
-
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
