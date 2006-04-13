@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2006/04/06 06:22:23 reed Exp $
+# $NetBSD: Makefile,v 1.60 2006/04/13 21:45:13 wiz Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
 CATEGORIES=	misc
@@ -44,7 +44,7 @@ USE_TOOLS+=	gawk:pkgsrc
 BUILDLINK_DEPMETHOD.qt3-tools=	full
 
 .if !empty(PKG_OPTIONS:Msasl)
-.include "../../security/cyrus-sasl2/buildlink3.mk"
+.include "../../security/cyrus-sasl/buildlink3.mk"
 PLIST_SUBST+=	HAVE_SASL=""
 .else
 PLIST_SUBST+=	HAVE_SASL="@comment "

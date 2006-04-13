@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.50 2005/11/14 04:25:50 rillig Exp $
+# $NetBSD: bsd.options.mk,v 1.51 2006/04/13 21:45:14 wiz Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -128,7 +128,7 @@
 # ### SASL authentication
 # ###
 # .if !empty(PKG_OPTIONS:Msasl)
-# .  include "../../security/cyrus-sasl2/buildlink3.mk"
+# .  include "../../security/cyrus-sasl/buildlink3.mk"
 # CONFIGURE_ARGS+=	--enable-sasl=${BUILDLINK_PREFIX.sasl}
 # .endif
 #
