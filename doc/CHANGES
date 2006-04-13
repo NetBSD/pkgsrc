@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13570 2006/04/13 20:20:10 wiz Exp $
+$NetBSD: CHANGES,v 1.13571 2006/04/13 21:36:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2072,3 +2072,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added textproc/p5-Encode version 2.14 [minskim 2006-04-13]
 	Moved graphics/dvdbackup to multimedia/dvdbackup [wiz 2006-04-13]
 	Moved graphics/dvdview to multimedia/dvdview [wiz 2006-04-13]
+	Moved security/cyrus-sasl2 to security/cyrus-sasl [wiz 2006-04-13]
