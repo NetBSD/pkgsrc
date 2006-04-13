@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/04/13 18:23:34 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2006/04/13 21:45:13 wiz Exp $
 #
 
 DISTNAME=	mail-notification-2.0
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 
 # Whether to add SASL2 support.
 .if !empty(PKG_OPTIONS:Msasl)
-.  include "../../security/cyrus-sasl2/buildlink3.mk"
+.  include "../../security/cyrus-sasl/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-sasl
 .endif

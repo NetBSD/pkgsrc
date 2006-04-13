@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2006/04/01 22:02:19 abs Exp $
+# $NetBSD: options.mk,v 1.8 2006/04/13 21:45:13 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
 PKG_SUPPORTED_OPTIONS=	exim-build-eximon exim-content-scan exim-lookup-dnsdb
@@ -96,6 +96,6 @@ EXIM_INCLUDE=		-I/usr/${BUILDLINK_INCDIRS.db-native}
 .if !empty(PKG_OPTIONS:Msaslauthd)
 LOCAL_MAKEFILE_OPTIONS+=AUTH_CYRUS_SASL=YES
 LOCAL_MAKEFILE_OPTIONS+=CYRUS_SASLAUTHD_SOCKET=/var/state/saslauthd/mux
-LOOKUP_LIBS+=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.cyrus-sasl2} -L${LOCALBASE}/${BUILDLINK_LIBDIRS.cyrus-sasl2} -lsasl2
-.  include "../../security/cyrus-sasl2/buildlink3.mk"
+LOOKUP_LIBS+=${COMPILER_RPATH_FLAG}${LOCALBASE}/${BUILDLINK_LIBDIRS.cyrus-sasl} -L${LOCALBASE}/${BUILDLINK_LIBDIRS.cyrus-sasl} -lsasl2
+.  include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
