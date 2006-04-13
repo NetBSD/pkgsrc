@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2006/04/12 10:27:04 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2006/04/13 21:45:13 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 OPENLDAP_BUILDLINK3_MK:=	${OPENLDAP_BUILDLINK3_MK}+
@@ -30,7 +30,7 @@ MAKEVARS+=	PKG_BUILD_OPTIONS.openldap
 
 .if !empty(PKG_BUILD_OPTIONS.openldap:Mkerberos) || \
     !empty(PKG_BUILD_OPTIONS.openldap:Msasl)
-.  include "../../security/cyrus-sasl2/buildlink3.mk"
+.  include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
 .include "../../security/openssl/buildlink3.mk"
 
