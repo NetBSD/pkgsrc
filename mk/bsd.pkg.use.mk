@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.30 2006/03/11 04:01:27 reed Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.31 2006/04/13 16:35:58 jlam Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -61,9 +61,8 @@ PKG_SKIP_REASON=	"INSTALLATION_PREFIX can't be used in a pkgviews package"
 
 ### BUILD_USES_MSGFMT
 
-.if defined(BUILD_USES_MSGFMT) && \
-    (!exists(/usr/bin/msgfmt) || ${_USE_GNU_GETTEXT} == "yes")
-BUILD_DEPENDS+=		gettext-tools>=0.14.5:../../devel/gettext-tools
+.if defined(BUILD_USES_MSGFMT)
+USE_TOOLS+=		msgfmt
 .endif
 
 ### PKG_USE_KERBEROS

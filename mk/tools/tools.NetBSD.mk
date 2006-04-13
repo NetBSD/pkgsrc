@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.26 2006/03/06 05:25:45 jlam Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.27 2006/04/13 16:35:59 jlam Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -59,6 +59,9 @@ TOOLS_PLATFORM.makeinfo?=	/usr/bin/makeinfo
 .endif
 TOOLS_PLATFORM.mkdir?=		/bin/mkdir -p
 TOOLS_PLATFORM.mktemp?=		/usr/bin/mktemp
+.if exists(/usr/bin/msgfmt)
+TOOLS_PLATFORM.msgfmt?=		/usr/bin/msgfmt
+.endif
 TOOLS_PLATFORM.mtree?=		/usr/sbin/mtree
 TOOLS_PLATFORM.mv?=		/bin/mv
 TOOLS_PLATFORM.nice?=		/usr/bin/nice

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.32 2005/08/10 20:56:20 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.33 2006/04/13 16:35:58 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -111,6 +111,7 @@ USE_TOOLS?=		# empty
 .include "../../mk/tools/automake.mk"
 .include "../../mk/tools/autoconf.mk"
 .include "../../mk/tools/texinfo.mk"
+.include "../../mk/tools/msgfmt.mk"
 .include "../../mk/tools/ldconfig.mk"
 .include "../../mk/tools/rpcgen.mk"
 .include "../../mk/tools/strip.mk"
