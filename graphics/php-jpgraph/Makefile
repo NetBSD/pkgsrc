@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:09:37 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/13 01:30:43 rillig Exp $
 
 DISTNAME=	jpgraph-1.18
 PKGNAME=	php-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics www
 MASTER_SITES=	http://members.chello.se/jpgraph/jpgdownloads/
 
@@ -27,7 +27,7 @@ MESSAGE_SUBST+=	PJCONFFILE=${PJCONFFILE} PJDIR=${PJDIR} EXDIR=${EXDIR}
 do-install:
 	${INSTALL_DATA_DIR} ${EXDIR}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/php-jpgraph
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/php-jpgraph
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/php-jpgraph/html
 	${INSTALL_DATA_DIR} ${PJDIR}
 
 	${INSTALL_SCRIPT} ${WRKSRC}/src/Examples/*.php ${EXDIR}
@@ -48,8 +48,8 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/$$f \
 			${PREFIX}/share/doc/php-jpgraph; \
 	done
-	cd ${WRKSRC}/docs && ${PAX} -rw . ${PREFIX}/share/doc/html/php-jpgraph
-	${FIND} ${PREFIX}/share/doc/html/php-jpgraph -type d | ${XARGS} \
+	cd ${WRKSRC}/docs && ${PAX} -rw . ${PREFIX}/share/doc/php-jpgraph/html
+	${FIND} ${PREFIX}/share/doc/php-jpgraph/html -type d | ${XARGS} \
 		${CHMOD} ${PKGDIRMODE}
 
 .include "../../mk/bsd.pkg.mk"
