@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/02/23 18:21:15 joerg Exp $
+# $NetBSD: Makefile,v 1.49 2006/04/13 18:23:39 jlam Exp $
 
 DISTNAME=		gtkhtml-1.1.10
 PKGREVISION=		7
@@ -11,11 +11,10 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Lightweight HTML rendering/printing/editing engine
 
 USE_X11BASE=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-BUILD_USES_MSGFMT=	yes
 BROKEN_GETTEXT_DETECTION=	yes
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no

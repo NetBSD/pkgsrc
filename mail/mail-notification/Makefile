@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/03/21 06:00:46 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/04/13 18:23:34 jlam Exp $
 #
 
 DISTNAME=	mail-notification-2.0
@@ -12,10 +12,8 @@ COMMENT=	Status icon that provides new mail notifications
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
-BUILD_USES_MSGFMT=	YES
-USE_MSGFMT_PLURALS=	YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 

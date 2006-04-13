@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/01 22:12:55 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/13 18:23:39 jlam Exp $
 #
 
 DISTNAME=	fast-user-switch-applet-2.14.0
@@ -10,15 +10,13 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://ignore-your.tv/fusa/
 COMMENT=	Switch between users from the GNOME Panel
 
-BUILD_USES_MSGFMT=	yes
-
 DEPENDS+=		gdm>=2.14.0:../../x11/gdm
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_X11=		yes
 
 .include "../../mk/bsd.prefs.mk"

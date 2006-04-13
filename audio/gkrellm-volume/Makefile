@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/03/09 21:04:40 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/04/13 18:23:29 jlam Exp $
 
 DISTNAME=	gkrellm-volume-2.1.13
 PKGREVISION=	2
@@ -9,9 +9,7 @@ MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://gkrellm.luon.net/volume.phtml
 COMMENT=	Gkrellm2 volume mixer plugin
 
-BUILD_USES_MSGFMT=	YES
-
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 WRKSRC=			${WRKDIR}/gkrellm-volume
 

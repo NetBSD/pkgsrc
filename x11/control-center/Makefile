@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/21 06:00:52 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/13 18:23:39 jlam Exp $
 
 DISTNAME=		control-center-1.4.0.5
 PKGREVISION=		3
@@ -9,12 +9,11 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME control-center development library
 
-BUILD_USES_MSGFMT=	YES
 BROKEN_GETTEXT_DETECTION=	yes
 
 USE_DIRS+=		xdg-1.1 gnome1-1.5
 USE_X11BASE=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	YES
 
 USE_LIBTOOL=		YES

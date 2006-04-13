@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/03/21 06:00:45 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2006/04/13 18:23:32 jlam Exp $
 #
 
 DISTNAME=	conglomerate-0.9.0
@@ -10,14 +10,13 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.conglomerate.org/
 COMMENT=	XML editor for GNOME2
 
-BUILD_USES_MSGFMT=	yes
 DEPENDS+=		docbook-xsl>=1.64.1:../../textproc/docbook-xsl
 DEPENDS+=		docbook-xml>=4.2nb6:../../textproc/docbook-xml
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl pkg-config
+USE_TOOLS+=		gmake msgfmt perl pkg-config
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--enable-printing

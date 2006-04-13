@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/03/20 04:15:42 jlam Exp $
+# $NetBSD: Makefile,v 1.52 2006/04/13 18:23:29 jlam Exp $
 #
 
 DISTNAME=       tar-1.15.1
@@ -14,10 +14,9 @@ COMMENT=	The GNU tape archiver with remote magnetic tape support
 
 CONFLICTS=	gcpio-[0-9]*
 
-BUILD_USES_MSGFMT=	YES
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_TOOLS+=		msgfmt
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 INSTALLATION_DIRS=	${PKGMANDIR}/man1

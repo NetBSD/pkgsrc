@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2006/03/04 21:29:12 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2006/04/13 18:23:30 jlam Exp $
 #
 
 DISTNAME=		GConf-1.0.9
@@ -12,9 +12,9 @@ HOMEPAGE=		http://advogato.org/proj/GConf/
 COMMENT=		Configuration database system used by GNOME
 
 BUILD_DEPENDS+=		gtk-doc-[0-9]*:../../textproc/gtk-doc
-BUILD_USES_MSGFMT=	yes
 
 USE_PKGLOCALEDIR=	YES
+USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		YES
 MAKE_FLAGS+=		AM_MAKEFLAGS="BDBBACKEND="
 
