@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13569 2006/04/13 19:48:35 minskim Exp $
+$NetBSD: CHANGES,v 1.13570 2006/04/13 20:20:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2070,3 +2070,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/gkrellm-share to 2.2.9 [cube 2006-04-13]
 	Updated sysutils/gkrellm-server to 2.2.9 [cube 2006-04-13]
 	Added textproc/p5-Encode version 2.14 [minskim 2006-04-13]
+	Moved graphics/dvdbackup to multimedia/dvdbackup [wiz 2006-04-13]
+	Moved graphics/dvdview to multimedia/dvdview [wiz 2006-04-13]
