@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2006/03/14 01:14:30 jlam Exp $
+# $NetBSD: Makefile,v 1.32.2.1 2006/04/13 16:31:39 salo Exp $
 
-DISTNAME=	mailman-2.1.7
-PKGREVISION=	2
+DISTNAME=	mailman-2.1.8rc1
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mailman/}
 EXTRACT_SUFX=	.tgz
@@ -20,7 +19,6 @@ GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${EXECDIR}
 
 MAKE_FLAGS+=		DIRSETGID=${TRUE:Q}
-
 EXECDIR=		${PREFIX}/lib/mailman
 MAILMAN_DATADIR?=	${VARBASE}/db/mailman
 EGDIR=                  ${PREFIX}/share/examples/mailman
@@ -110,6 +108,10 @@ pre-install:
 
 post-install:
 	cd ${WRKSRC} && for i in [A-IN-U]*; do \
+		${INSTALL_DATA} $$i ${DOCDIR}/; \
+	done
+	cd ${WRKSRC}/admin/www && for i in \
+	    mailman-*.ps mailman-*.pdf mailman-*.txt; do \
 		${INSTALL_DATA} $$i ${DOCDIR}/; \
 	done
 	${INSTALL_DATA_DIR} ${EGDIR}
