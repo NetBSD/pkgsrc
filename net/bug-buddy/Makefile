@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/04/02 16:05:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.47 2006/04/13 18:23:36 jlam Exp $
 #
 
 DISTNAME=		bug-buddy-2.14.0
@@ -11,12 +11,10 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Graphical GNOME2 bug reporting tool
 
-BUILD_USES_MSGFMT=	YES
-
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		YES
 
 GCONF2_SCHEMAS=		bug-buddy.schemas

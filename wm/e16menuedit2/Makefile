@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/21 06:00:50 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/04/13 18:23:38 jlam Exp $
 #
 
 DISTNAME=		e16menuedit2-0.0.1
@@ -12,11 +12,10 @@ COMMENT=		Menu editor for the Enlightenment window manager
 
 DEPENDS+=		enlightenment-0.16.*:../../wm/enlightenment
 
-BUILD_USES_MSGFMT=	yes
 BROKEN_GETTEXT_DETECTION=	yes
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		automake pkg-config
+USE_TOOLS+=		automake msgfmt pkg-config
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 MAKE_ENV+=		CATALOGS="de.gmo en.gmo ko.gmo tr.gmo"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/04/05 11:03:59 shannonjr Exp $
+# $NetBSD: Makefile,v 1.34 2006/04/13 18:23:34 jlam Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -11,7 +11,6 @@ MAINTAINER=	shannonjr@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
 COMMENT=	This is the gcc 3.4 compiler
 
-BUILD_USES_MSGFMT=	YES
 GCC_VERSION=		3.4.6
 
 NOT_FOR_PLATFORM=	Interix-*-*
@@ -105,7 +104,7 @@ PTHREAD_OPTS+=		native
 CONFIGURE_ARGS+=	--disable-threads
 .endif
 
-USE_TOOLS+=		gmake makeinfo
+USE_TOOLS+=		gmake makeinfo msgfmt
 HAS_CONFIGURE=		YES # no GNU_CONFIGURE!
 CONFIG_SHELL?=		${SH}
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL:Q}

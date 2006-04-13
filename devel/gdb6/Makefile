@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/03/30 03:44:42 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/04/13 18:23:31 jlam Exp $
 #
 
 DISTNAME=		gdb-6.2.1
@@ -13,9 +13,7 @@ COMMENT=		The GNU Project Debugger
 
 NOT_FOR_PLATFORM=	Darwin-*-*
 
-BUILD_USES_MSGFMT=	yes
-
-USE_TOOLS+=		gmake makeinfo
+USE_TOOLS+=		gmake makeinfo msgfmt
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_PKGLOCALEDIR=	yes

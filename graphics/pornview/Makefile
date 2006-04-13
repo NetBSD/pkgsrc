@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/13 15:23:03 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/13 18:23:34 jlam Exp $
 #
 
 PKGNAME=	pornview-0.2.0pre1
@@ -13,14 +13,12 @@ COMMENT=	GTK+ image viewer
 
 WRKSRC=			${WRKDIR}/pornview-0.2.0pre1
 
-BUILD_USES_MSGFMT=	yes
-
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		msgfmt perl:run
 REPLACE_PERL+=		src/scripts/helloworld
 
 .include "options.mk"

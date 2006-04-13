@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/04/06 06:21:34 reed Exp $
+# $NetBSD: Makefile,v 1.26 2006/04/13 18:23:29 jlam Exp $
 #
 
 DISTNAME=	gkrellmms-2.1.20
@@ -11,9 +11,8 @@ MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://gkrellm.luon.net/gkrellmms.phtml
 COMMENT=	GKrellM2 plugin to remotely control XMMS
 
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
-BUILD_USES_MSGFMT=	YES
 
 BUILDLINK_API_DEPENDS.gkrellm+=	gkrellm>=2.2.0
 

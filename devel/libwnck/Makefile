@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/04/12 20:04:35 drochner Exp $
+# $NetBSD: Makefile,v 1.39 2006/04/13 18:23:31 jlam Exp $
 #
 
 DISTNAME=	libwnck-2.14.1
@@ -10,11 +10,9 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Library to write pagers and tasklists
 
-BUILD_USES_MSGFMT=	yes
-
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE=	libwnck-1.0.pc.in

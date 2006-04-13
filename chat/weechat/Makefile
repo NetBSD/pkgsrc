@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:29:04 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/13 18:23:30 jlam Exp $
 #
 
 DISTNAME=	weechat-0.0.6
@@ -13,9 +13,8 @@ COMMENT=	Lightweight and user friendly curses based IRC client
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-BUILD_USES_MSGFMT=	yes
-
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		yes
 
 INCOMPAT_CURSES+=	NetBSD-1.*-*

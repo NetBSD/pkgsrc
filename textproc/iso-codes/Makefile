@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/30 21:01:43 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/13 18:23:38 jlam Exp $
 #
 
 DISTNAME=	iso-codes_0.50.orig
@@ -12,7 +12,7 @@ COMMENT=	List of country, language and currency names
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		autoconf automake gmake perl
+USE_TOOLS+=		autoconf automake gmake msgfmt perl
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 PKGCONFIG_OVERRIDE=	iso-codes.pc.in
@@ -23,7 +23,6 @@ REPLACE_PERL=		tab2h.pl
 PYTHON_FOR_BUILD_ONLY=		yes
 BUILDLINK_DEPMETHOD.gettext=	build
 BUILDLINK_DEPMETHOD.pyxml=	build
-BUILD_USES_MSGFMT=		yes
 
 pre-configure:
 	${TOUCH} ${WRKSRC}/AUTHORS

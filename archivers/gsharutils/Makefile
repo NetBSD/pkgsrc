@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/04/06 06:21:32 reed Exp $
+# $NetBSD: Makefile,v 1.39 2006/04/13 18:23:29 jlam Exp $
 
 DISTNAME=	sharutils-4.2.1
 PKGNAME=	g${DISTNAME}
@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/sharutils/sharutils.html
 COMMENT=	Allow packing and unpacking of shell archives
 
-BUILD_USES_MSGFMT=	yes
 BROKEN_GETTEXT_DETECTION=	yes
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -20,7 +19,7 @@ GNU_CONFIGURE=		yes
 
 INSTALL_TARGET=		install install-man
 INFO_FILES=		# PLIST
-USE_TOOLS+=		makeinfo sh:run mktemp:run
+USE_TOOLS+=		makeinfo msgfmt sh:run mktemp:run
 
 CONFIGURE_ARGS+=	--disable-uucode
 CONFIGURE_ENV+=		SH=${TOOLS_SH:Q}

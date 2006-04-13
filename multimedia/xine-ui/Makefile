@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/04/09 07:26:52 xtraeme Exp $
+# $NetBSD: Makefile,v 1.23 2006/04/13 18:23:36 jlam Exp $
 #
 
 DISTNAME=		xine-ui-0.99.4
@@ -10,11 +10,10 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xinehq.de/
 COMMENT=		Skinned xlib-based xine GUI
 
-BUILD_USES_MSGFMT=	YES
-
 BUILDLINK_API_DEPENDS.curl+=	curl>7.10.2
 
 USE_PKGLOCALEDIR=	YES
+USE_TOOLS+=		msgfmt
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES

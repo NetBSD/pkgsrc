@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/03/24 10:09:14 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2006/04/13 18:23:35 jlam Exp $
 
 .include "Makefile.common"
 
@@ -10,7 +10,7 @@ COMMENT=	X based e-mail and netnews client
 
 CONFLICTS=		sylpheed-[0-9]* sylpheed-gtk2-[0-9]*
 
-BUILD_USES_MSGFMT=	YES
+USE_TOOLS+=		msgfmt
 PKGCONFIG_OVERRIDE+=	sylpheed-claws.pc.in
 
 CONFIGURE_ARGS+=        --enable-aspell

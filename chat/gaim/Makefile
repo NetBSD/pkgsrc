@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2006/03/13 20:33:24 joerg Exp $
+# $NetBSD: Makefile,v 1.106 2006/04/13 18:23:29 jlam Exp $
 
 DISTNAME=	gaim-1.5.0
 PKGREVISION=	5
@@ -10,12 +10,10 @@ MAINTAINER=	mjl@luckie.org.nz
 HOMEPAGE=	http://gaim.sourceforge.net/
 COMMENT=	GTK+ 2.x based multi-protocol instant messaging client
 
-BUILD_USES_MSGFMT=	yes
-
 CONFLICTS+=		gaim-gnome-[0-9]*
 
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

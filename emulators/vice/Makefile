@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2006/03/31 16:47:44 jlam Exp $
+# $NetBSD: Makefile,v 1.65 2006/04/13 18:23:32 jlam Exp $
 #
 
 DISTNAME=		vice-1.18
@@ -11,8 +11,6 @@ MAINTAINER=		kristerw@NetBSD.org
 HOMEPAGE=		http://www.viceteam.org/
 COMMENT=		Emulator for C64, C128, CBM-II, PET, and VIC20
 
-BUILD_USES_MSGFMT=	YES
-
 RESTRICTED=		ROM image copyright is questionable.
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -22,7 +20,7 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake bdftopcf mkfontdir
+USE_TOOLS+=		bdftopcf gmake mkfontdir msgfmt
 USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-fullscreen

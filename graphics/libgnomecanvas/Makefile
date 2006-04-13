@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/03/30 21:08:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.41 2006/04/13 18:23:34 jlam Exp $
 #
 
 DISTNAME=		libgnomecanvas-2.14.0
@@ -10,11 +10,9 @@ MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME Canvas library
 
-BUILD_USES_MSGFMT=	yes
-
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE=	libgnomecanvas/libgnomecanvas-2.0.pc.in

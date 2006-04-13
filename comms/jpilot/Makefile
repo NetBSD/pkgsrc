@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2006/03/04 21:29:05 jlam Exp $
+# $NetBSD: Makefile,v 1.53 2006/04/13 18:23:30 jlam Exp $
 #
 
 DISTNAME=		jpilot-0.99.7
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://jpilot.org/
 COMMENT=		Desktop organizer application for the palm pilot
 
-BUILD_USES_MSGFMT=	YES
-
 CONFLICTS+=		jpilot-libplugin-[0-9]*
 
 USE_LIBTOOL=		YES
@@ -19,7 +17,7 @@ USE_PKGLOCALEDIR=	YES
 USE_X11=		YES
 USE_OLD_DES_API=	YES
 USE_DIRS+=		gnome1-1.0
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		msgfmt pkg-config
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-gtk-prefix="${BUILDLINK_PREFIX.gtk}"

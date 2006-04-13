@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2005/12/05 20:50:46 rillig Exp $
+# $NetBSD: Makefile.common,v 1.11 2006/04/13 18:23:36 jlam Exp $
 
 DISTNAME=	gftp-${VERSION}
 CATEGORIES=	net
@@ -9,8 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jmcneill@NetBSD.org
 HOMEPAGE=	http://gftp.seul.org/
 
-BUILD_USES_MSGFMT=	yes
-
+USE_TOOLS+=		msgfmt
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

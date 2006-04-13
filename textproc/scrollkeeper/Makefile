@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/04/01 14:48:21 jmmv Exp $
+# $NetBSD: Makefile,v 1.39 2006/04/13 18:23:38 jlam Exp $
 #
 
 DISTNAME=		scrollkeeper-0.3.14
@@ -13,11 +13,10 @@ COMMENT=		Open Document Cataloging Project
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-BUILD_USES_MSGFMT=	yes
 DEPENDS+=		docbook-xml>=4.4nb4:../../textproc/docbook-xml
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 

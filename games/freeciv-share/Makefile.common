@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2006/03/04 21:29:41 jlam Exp $
+# $NetBSD: Makefile.common,v 1.25 2006/04/13 18:23:32 jlam Exp $
 
 DISTNAME=	freeciv-${FC_VERS}
 FC_VERS=	2.0.7
@@ -12,8 +12,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freeciv.org/
 
-BUILD_USES_MSGFMT=	yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		yes
 
 DISTINFO_FILE=		${.CURDIR}/../../games/freeciv-share/distinfo

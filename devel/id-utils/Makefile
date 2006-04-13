@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/04/08 21:20:06 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2006/04/13 18:23:31 jlam Exp $
 
 DISTNAME=	id-utils-3.2
 PKGREVISION=	9
@@ -11,8 +11,8 @@ COMMENT=	Classic Berkeley gid/lid tools for looking up variables in code
 
 CONFLICTS=	sh-utils>=2.0nb2 coreutils-[0-9]*
 
-BUILD_USES_MSGFMT=	yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		msgfmt
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_path_EMACS=no

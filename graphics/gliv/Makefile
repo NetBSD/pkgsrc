@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/31 15:08:00 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/13 18:23:33 jlam Exp $
 
 DISTNAME=	gliv-1.9.5
 CATEGORIES=	graphics
@@ -9,11 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://guichaz.free.fr/gliv/
 COMMENT=	OpenGL image viewer
 
-BUILD_USES_MSGFMT=	yes
-
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
 
 post-install:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2006/04/06 03:44:19 jlam Exp $
+# $NetBSD: Makefile,v 1.93 2006/04/13 18:23:36 jlam Exp $
 
 DISTNAME=	wget-1.10.2
 PKGREVISION=	1
@@ -9,13 +9,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/wget/wget.html
 COMMENT=	Retrieve files from the 'net via HTTP and FTP
 
-BUILD_USES_MSGFMT=	YES
-
 USE_TOOLS+=		perl
 
 GNU_CONFIGURE=		YES
 USE_OLD_DES_API=	YES
 USE_PKGLOCALEDIR=	YES
+USE_TOOLS+=		msgfmt
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ENV+=		ac_cv_func_sigsetjmp=yes

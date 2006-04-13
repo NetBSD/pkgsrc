@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2006/03/14 01:14:31 jlam Exp $
+# $NetBSD: Makefile,v 1.59 2006/04/13 18:23:35 jlam Exp $
 
 DISTNAME=	rpm-2.5.4
 PKGREVISION=	5
@@ -9,13 +9,11 @@ MAINTAINER=	mycroft@NetBSD.org
 HOMEPAGE=	http://www.rpm.org/
 COMMENT=	The Red Hat Package Manager
 
-BUILD_USES_MSGFMT=	yes
-
 CONFLICTS+=		rpm2cpio<1.0nb1
 
 NOT_FOR_PLATFORM+=	Interix-*-* # getmntent() is nonpublic; needs porting
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
 
 # this is needed instead of USE_PKGLOCALEDIR

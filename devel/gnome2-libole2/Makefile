@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/04 21:29:15 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/13 18:23:31 jlam Exp $
 #
 
 DISTNAME=		libole2-2.2.8
@@ -12,11 +12,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		OLE2 streams parsing library for GNOME2
 
-BUILD_USES_MSGFMT=	YES
-
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		msgfmt pkg-config
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

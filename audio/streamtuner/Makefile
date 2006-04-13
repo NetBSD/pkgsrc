@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/03/21 06:00:44 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2006/04/13 18:23:29 jlam Exp $
 #
 
 DISTNAME=	streamtuner-0.99.99
@@ -12,10 +12,8 @@ COMMENT=	Stream directory browser
 
 BUILD_DEPENDS+=	hicolor-icon-theme-[0-9]*:../../graphics/hicolor-icon-theme
 
-BUILD_USES_MSGFMT=	yes
-
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

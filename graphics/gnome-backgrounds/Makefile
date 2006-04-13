@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/01 21:42:49 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/13 18:23:33 jlam Exp $
 #
 
 DISTNAME=	gnome-backgrounds-2.14.0
@@ -11,11 +11,9 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Set of background images for the GNOME Desktop
 
-BUILD_USES_MSGFMT=	YES
-
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.3
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 USE_LANGUAGES=		# empty
 USE_PKGLOCALEDIR=	YES
 

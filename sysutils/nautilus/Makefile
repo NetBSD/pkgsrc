@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2006/04/12 20:08:13 drochner Exp $
+# $NetBSD: Makefile,v 1.67 2006/04/13 18:23:38 jlam Exp $
 #
 
 DISTNAME=		nautilus-2.14.1
@@ -10,13 +10,10 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/nautilus/
 COMMENT=		Nautilus file manager for GNOME2
 
-BUILD_USES_MSGFMT=	yes
-
 USE_PKGLOCALEDIR=	yes
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		yes
-USE_MSGFMT_PLURALS=	yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	libnautilus-extension/libnautilus-extension.pc.in
 

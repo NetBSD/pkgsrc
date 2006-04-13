@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/21 06:00:45 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/13 18:23:32 jlam Exp $
 
 DISTNAME=	gtranslator-1.0.2
 PKGREVISION=	5
@@ -9,10 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gtranslator.sourceforge.net/
 COMMENT=	Gettext po file editor for the GNOME2 desktop environment
 
-BUILD_USES_MSGFMT=	yes
-
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 MANCOMPRESSED=		yes

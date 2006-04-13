@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/03/21 06:00:44 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/04/13 18:23:30 jlam Exp $
 #
 
 DISTNAME=		gramps-1.0.11
@@ -15,11 +15,10 @@ DEPENDS+=	yelp>=2.2:../../misc/yelp
 .if !exists(/usr/bin/msgconv)
 BUILD_DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
 .endif
-#BUILD_USES_MSGFMT=	yes
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		msgfmt pkg-config
 
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 # i18n support with other python versions appears to not work

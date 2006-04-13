@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/08 23:40:11 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/13 18:23:32 jlam Exp $
 #
 
 DISTNAME=		gnucash-1.9.4
@@ -14,9 +14,8 @@ DEPENDS+=		guile-www-[0-9]*:../../devel/guile-www
 
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		yes
-USE_MSGFMT_PLURALS=	yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake makeinfo pkg-config
+USE_TOOLS+=		gmake makeinfo msgfmt pkg-config
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	lib/goffice-0.0.4/libgoffice-1.pc.in

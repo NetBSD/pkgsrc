@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/03/04 21:30:11 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2006/04/13 18:23:35 jlam Exp $
 
 DISTNAME=		gperiodic-2.0.8
 PKGREVISION=		2
@@ -9,11 +9,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.acclab.helsinki.fi/~frantz/software/gperiodic.php
 COMMENT=		Displays a periodic table of the elements
 
-BUILD_USES_MSGFMT=	yes
-
 USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGDK_DISABLE_DEPRECATED

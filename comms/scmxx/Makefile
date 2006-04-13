@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/03/03 22:25:14 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2006/04/13 18:23:30 jlam Exp $
 #
 
 DISTNAME=		scmxx-0.9.0
@@ -11,10 +11,8 @@ HOMEPAGE=		http://www.hendrik-sattler.de/scmxx/
 COMMENT=		Data exchange utility for Siemens mobile phones
 
 GNU_CONFIGURE=		yes
-USE_MSGFMT_PLURALS=	yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
-BUILD_USES_MSGFMT=	yes
+USE_TOOLS+=		gmake msgfmt
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/scmxx

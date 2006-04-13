@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2006/03/29 22:54:42 chris Exp $
+# $NetBSD: Makefile,v 1.94 2006/04/13 18:23:35 jlam Exp $
 
 DISTNAME=	sylpheed-2.2.4
 CATEGORIES=	mail news x11
@@ -10,13 +10,11 @@ MAINTAINER=	chris@NetBSD.org
 HOMEPAGE=	http://sylpheed.good-day.net/index.cgi.en
 COMMENT=	X based e-mail and netnews client
 
-BUILD_USES_MSGFMT=	yes
-
 CONFLICTS=		sylpheed-claws-[0-9]* sylpheed-gtk2-[0-9]*
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=            yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-nls

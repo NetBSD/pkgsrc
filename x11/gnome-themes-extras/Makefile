@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/04/06 06:22:59 reed Exp $
+# $NetBSD: Makefile,v 1.25 2006/04/13 18:23:39 jlam Exp $
 #
 
 DISTNAME=	gnome-themes-extras-0.8.1
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Collection of metathemes for the GNOME desktop environment
-
-BUILD_USES_MSGFMT=	yes
 
 .include "../../mk/bsd.prefs.mk"
 # NetBSD's pax-as-tar truncates filenames
@@ -25,7 +23,7 @@ USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED

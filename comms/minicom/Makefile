@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/03/04 21:29:05 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2006/04/13 18:23:30 jlam Exp $
 
 DISTNAME=	minicom-2.1
 PKGREVISION=	2
@@ -9,14 +9,13 @@ MAINTAINER=     pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://minicom.alioth.debian.org/
 COMMENT=	MS-DOS Telix serial communication program "workalike"
 
-BUILD_USES_MSGFMT=	yes
 DEPENDS+=	gkermit-[0-9]*:../../comms/gkermit
 DEPENDS+=	lrzsz-[0-9]*:../../comms/lrzsz
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

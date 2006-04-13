@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2006/02/05 23:08:45 joerg Exp $
+# $NetBSD: Makefile,v 1.59 2006/04/13 18:23:31 jlam Exp $
 
 DISTNAME=		libglade-0.17
 PKGREVISION=		8
@@ -9,8 +9,7 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.daa.com.au/~james/gnome/
 COMMENT=		Runtime interpreter for GLADE GUI files
 
-BUILD_USES_MSGFMT=	yes
-
+USE_TOOLS+=		msgfmt
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

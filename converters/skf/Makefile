@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:08:29 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/13 18:23:30 jlam Exp $
 
 DISTNAME=	skf_1.93.9
 PKGNAME=	skf-1.93.9
@@ -14,9 +14,9 @@ WRKSRC=		${WRKDIR}/skf-1.93
 INSTALL_TARGET=	install locale_install
 
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		yes
 MANCOMPRESSED=		yes
-BUILD_USES_MSGFMT=	yes
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

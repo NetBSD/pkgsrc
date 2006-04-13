@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/02/28 17:45:55 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2006/04/13 18:23:33 jlam Exp $
 #
 
 DISTNAME=		xracer-0.96.9
@@ -16,7 +16,7 @@ PERL5_PACKLIST=		auto/XRacer/.packlist
 USE_LIBTOOL=		yes
 # disabled by patch-an, since the only existing translation is empty
 # and made trouble in 2.1 bulk builds
-#BUILD_USES_MSGFMT=	yes
+#USE_TOOLS+=		msgfmt
 #USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PERL5_CONFIGURE=	no

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/03/14 19:06:19 tron Exp $
+# $NetBSD: Makefile,v 1.39 2006/04/13 18:23:30 jlam Exp $
 
 .include "Makefile.common"
 
@@ -6,10 +6,9 @@ MAINTAINER=		tron@NetBSD.org
 
 COMMENT=	X11 (X Window System) IRC client, using the GTK2 toolkit
 
-BUILD_USES_MSGFMT=	YES
-
 CONFLICTS=		xchat-gnome-[0-9]*
 
+USE_TOOLS+=		msgfmt
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 

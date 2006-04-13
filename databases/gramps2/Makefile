@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/21 06:00:44 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/13 18:23:30 jlam Exp $
 #
 
 DISTNAME=		gramps-2.0.10
@@ -15,9 +15,8 @@ DEPENDS+=	yelp>=2.2:../../misc/yelp
 .if !exists(/usr/bin/msgconv)
 BUILD_DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
 .endif
-#BUILD_USES_MSGFMT=	yes
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 # disable gconf schema and mime type processing

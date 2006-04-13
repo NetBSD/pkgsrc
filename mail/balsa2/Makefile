@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2006/04/06 06:22:15 reed Exp $
+# $NetBSD: Makefile,v 1.55 2006/04/13 18:23:34 jlam Exp $
 
 DISTNAME=	balsa-2.3.10
 PKGREVISION=	3
@@ -11,13 +11,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://balsa.gnome.org/
 COMMENT=	GNOME2 EMail client
 
-BUILD_USES_MSGFMT=	yes
-
 USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake perl pkg-config
+USE_TOOLS+=		gmake msgfmt perl pkg-config
 
 CONFIGURE_ARGS+=	--with-gpgme=${BUILDLINK_PREFIX.gpgme:Q}/bin/gpgme-config
 CONFIGURE_ARGS+=	--disable-more-warnings

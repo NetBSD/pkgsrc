@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/03/04 21:29:08 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2006/04/13 18:23:30 jlam Exp $
 #
 
 DISTNAME=		gnome-mime-data-2.4.2
@@ -13,13 +13,11 @@ COMMENT=		MIME and Application database for GNOME2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-BUILD_USES_MSGFMT=	YES
-
 CONFLICTS=		gnome-vfs<=1.0.3
 
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		perl
+USE_TOOLS+=		msgfmt perl
 GNU_CONFIGURE=		YES
 
 PKGCONFIG_OVERRIDE=	gnome-mime-data-2.0.pc.in
