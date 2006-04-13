@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/10 16:30:47 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/13 18:23:35 jlam Exp $
 #
 
 DISTNAME=	deskbar-applet-2.14.0.1
@@ -10,14 +10,11 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://raphael.slinckx.net/deskbar
 COMMENT=	Omnipresent, versatile search interface for the GNOME Desktop
 
-BUILD_USES_MSGFMT=	YES
-
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		YES
-USE_MSGFMT_PLURALS=	YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 
 PKGCONFIG_OVERRIDE=	data/deskbar-applet.pc
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.50 2006/03/04 21:30:54 jlam Exp $
+# $NetBSD: Makefile.common,v 1.51 2006/04/13 18:23:38 jlam Exp $
 
 DISTNAME=		icewm-1.2.25
 CATEGORIES=		x11 wm
@@ -8,9 +8,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.icewm.org/
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	yes
-BUILD_USES_MSGFMT=	yes
 
 DISTINFO_FILE=		${.CURDIR}/../../wm/icewm/distinfo
 FILESDIR=		${.CURDIR}/../../wm/icewm/files

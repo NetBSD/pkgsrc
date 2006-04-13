@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/03/14 01:14:34 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2006/04/13 18:23:38 jlam Exp $
 
 DISTNAME=	xcdroast-${DIST_VER}
 PKGNAME=	xcdroast-${DIST_VER:S/alpha/a/}
@@ -10,13 +10,11 @@ MAINTAINER=	frueauf@NetBSD.org
 HOMEPAGE=	http://www.xcdroast.org/
 COMMENT=	Graphical user interface for the command-line cdrecord-tools
 
-BUILD_USES_MSGFMT=	YES
-
 DEPENDS+=		cdrtools>=2.01:../../sysutils/cdrtools
 
 DIST_VER=		0.98alpha15
 
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 

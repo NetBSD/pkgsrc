@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/04/05 23:01:16 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2006/04/13 18:23:35 jlam Exp $
 #
 
 DISTNAME=	pspp-0.3.0
@@ -17,8 +17,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/pspp/
 COMMENT=	Program for statistical analysis of sampled data
 
-BUILD_USES_MSGFMT=	yes
-
+USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		yes
 CPPFLAGS+=		-Dunix=1
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

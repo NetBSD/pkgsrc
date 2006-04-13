@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2006/04/07 15:28:49 jlam Exp $
+# $NetBSD: Makefile,v 1.85 2006/04/13 18:23:37 jlam Exp $
 
 DISTNAME=	gnupg-1.4.3
 CATEGORIES=	security
@@ -16,14 +16,12 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnupg.org/
 COMMENT=	GNU Privacy Guard, public-Key encryption and digital signatures
 
-BUILD_USES_MSGFMT=	yes
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 CRYPTO=			yes
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 CONFIGURE_ARGS+=	--with-static-rnd=auto
 CONFIGURE_ARGS+=	--with-mailprog=/usr/sbin/sendmail
 TEST_TARGET=		check

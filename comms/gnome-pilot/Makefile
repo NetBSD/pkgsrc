@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/03/21 06:00:44 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2006/04/13 18:23:30 jlam Exp $
 #
 
 DISTNAME=		gnome-pilot-2.0.12
@@ -11,13 +11,12 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Palm Pilot synchronisation for GNOME
 
 BUILD_DEPENDS+=		gob2-[0-9]*:../../devel/gob2
-BUILD_USES_MSGFMT=	YES
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake msgfmt perl
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../comms/pilot-link-libs/buildlink3.mk"

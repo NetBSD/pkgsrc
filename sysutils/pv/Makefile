@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/04/11 02:28:09 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/04/13 18:23:38 jlam Exp $
 #
 
 DISTNAME=		pv-0.9.6
@@ -10,10 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ivarch.com/programs/pv.shtml
 COMMENT=		Monitor the progress of data through a pipeline
 
-BUILD_USES_MSGFMT=	yes
-
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	yes
 INFO_FILES=		# PLIST
 

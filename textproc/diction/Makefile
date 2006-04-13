@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:30:45 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/13 18:23:38 jlam Exp $
 
 DISTNAME=	diction-1.08
 PKGREVISION=	1
@@ -9,9 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/diction/diction.html
 COMMENT=	GNU version of diction and style
 
-BUILD_USES_MSGFMT=	YES
-
 USE_PKGLOCALEDIR=	YES
+USE_TOOLS+=		msgfmt
 
 GNU_CONFIGURE=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/20 23:04:38 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/13 18:23:37 jlam Exp $
 
 DISTNAME=		steghide-0.5.1
 PKGREVISION=		3
@@ -9,9 +9,8 @@ MAINTAINER=		adam@monkeybyte.org
 HOMEPAGE=		http://steghide.sourceforge.net/
 COMMENT=		Steganography program
 
-BUILD_USES_MSGFMT=	yes
-
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		msgfmt
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 

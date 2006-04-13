@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/04/07 19:54:16 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2006/04/13 18:23:37 jlam Exp $
 
 DISTNAME=	coreutils-5.2.1
 PKGREVISION=	2
@@ -12,12 +12,10 @@ COMMENT=	GNU basic file, shell and text manipulation utilities
 
 NOT_FOR_PLATFORM=	NetBSD-2.0[D-H]-*
 
-BUILD_USES_MSGFMT=	YES
-
 CONFLICTS=	fileutils-[0-9]* linuxls-[0-9]* sh-utils-[0-9]* textutils-[0-9]*
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		perl
+USE_TOOLS+=		msgfmt perl
 USE_PKGLOCALEDIR=	YES
 
 INFO_FILES=		# PLIST

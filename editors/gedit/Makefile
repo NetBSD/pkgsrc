@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2006/04/12 20:00:01 drochner Exp $
+# $NetBSD: Makefile,v 1.62 2006/04/13 18:23:32 jlam Exp $
 #
 
 DISTNAME=		gedit-2.14.2
@@ -10,13 +10,10 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gedit.sourceforge.net/
 COMMENT=		Lightweight GNOME2 text editor
 
-BUILD_USES_MSGFMT=	YES
-
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake perl pkg-config
+USE_TOOLS+=		gmake msgfmt perl pkg-config
 USE_LIBTOOL=		YES
-USE_MSGFMT_PLURALS=	YES
 GNU_CONFIGURE=		YES
 
 PKGCONFIG_OVERRIDE+=	data/gedit.pc.in

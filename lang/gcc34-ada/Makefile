@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/04/05 11:43:12 shannonjr Exp $
+# $NetBSD: Makefile,v 1.23 2006/04/13 18:23:34 jlam Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -11,11 +11,9 @@ MAINTAINER=	shannonjr@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gcc/gcc.html
 COMMENT=	This is the gcc 3.4 Ada compiler
 
-BUILD_USES_MSGFMT=	YES
-
 GCC_VERSION=		3.4.6
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-languages="c,ada"
 PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC

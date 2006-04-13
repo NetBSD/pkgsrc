@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/04 21:29:32 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/13 18:23:32 jlam Exp $
 #
 
 DISTNAME=	lpe-1.2.6
@@ -11,11 +11,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cdsmith.twu.net/professional/opensource/lpe.html
 COMMENT=	Small and efficient programmer's editor for UNIX systems
 
-BUILD_USES_MSGFMT=	YES
-
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		YES
 
 SHLIBTOOL_OVERRIDE=	libtool

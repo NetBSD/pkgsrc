@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/03/09 21:04:41 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2006/04/13 18:23:29 jlam Exp $
 #
 
 DISTNAME=	sweep-0.8.3
@@ -10,11 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sweep.sourceforge.net/
 COMMENT=	Full-featured digital sound editor
 
-BUILD_USES_MSGFMT=	YES
-
 USE_DIRS+=		gnome1-1.5
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 
 GNU_CONFIGURE=		YES

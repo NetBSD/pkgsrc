@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2006/04/06 06:22:45 reed Exp $
+# $NetBSD: Makefile.common,v 1.33 2006/04/13 18:23:37 jlam Exp $
 #
 
 GNOME_VFS2_VERSION=	2.14.0
@@ -14,16 +14,13 @@ MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME Virtual File System (v2)
 
-BUILD_USES_MSGFMT=	YES
-
 DISTINFO_FILE=		${.CURDIR}/../../sysutils/gnome-vfs2/distinfo
 PATCHDIR=		${.CURDIR}/../../sysutils/gnome-vfs2/patches
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		YES
-USE_MSGFMT_PLURALS=	YES
 
 CONFIGURE_ARGS+=	--disable-cdda
 CONFIGURE_ARGS+= 	--disable-fam
