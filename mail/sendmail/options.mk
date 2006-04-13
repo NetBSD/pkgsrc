@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2005/10/20 15:10:01 adrianp Exp $
+# $NetBSD: options.mk,v 1.14 2006/04/13 21:45:14 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
 PKG_SUPPORTED_OPTIONS=	inet6 db2 db4 ldap sasl tls tcpwrappers sendmail-socketmap
@@ -29,7 +29,7 @@ PKG_OPTIONS_LEGACY_OPTS+=	socketmap:sendmail-socketmap
 ### Use SASL/v2 for SMTP AUTH
 ###
 .if !empty(PKG_OPTIONS:Msasl)
-.  include "../../security/cyrus-sasl2/buildlink3.mk"
+.  include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
 
 ###
