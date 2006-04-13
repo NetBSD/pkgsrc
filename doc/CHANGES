@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13571 2006/04/13 21:36:18 wiz Exp $
+$NetBSD: CHANGES,v 1.13572 2006/04/13 21:40:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2073,3 +2073,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Moved graphics/dvdbackup to multimedia/dvdbackup [wiz 2006-04-13]
 	Moved graphics/dvdview to multimedia/dvdview [wiz 2006-04-13]
 	Moved security/cyrus-sasl2 to security/cyrus-sasl [wiz 2006-04-13]
+	Added lang/mit-scheme-bin version 7.7.1 [wiz 2006-04-13]
