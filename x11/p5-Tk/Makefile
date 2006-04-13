@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/04/12 23:58:39 rillig Exp $
+# $NetBSD: Makefile,v 1.52 2006/04/13 00:12:50 rillig Exp $
 
 DISTNAME=	Tk-804.027
 PKGNAME=	p5-Tk-804.027
@@ -19,9 +19,9 @@ PERL5_PACKLIST=	auto/Tk/.packlist
 
 MAKE_PARAMS=	X11=${X11BASE}
 
-REPLACE_PERL+=	blib/lib/Tk/reindex.pl
-REPLACE_PERL+=	blib/arch/Tk/pTk/Tcl-pTk
-REPLACE_PERL+=	blib/arch/Tk/pTk/mkVFunc
+REPLACE_PERL+=	TextList/reindex.pl
+REPLACE_PERL+=	pTk/Tcl-pTk
+REPLACE_PERL+=	pTk/mkVFunc
 
 SUBST_CLASSES+=	prefix
 SUBST_STAGE.prefix=	post-patch
