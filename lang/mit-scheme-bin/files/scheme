@@ -1,0 +1,2 @@
+#!/bin/sh
+MITSCHEME_LIBRARY_PATH=@PREFIX@/lib/mit-scheme @PREFIX@/libexec/scheme "$@"
