@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/24 22:27:27 cube Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/13 19:14:45 cube Exp $
 share/gkrellm2/COPYRIGHT
 share/gkrellm2/README
+${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gkrellm.mo
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gkrellm.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gkrellm.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gkrellm.mo
