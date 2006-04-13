@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2006/02/05 23:09:32 joerg Exp $
+# $NetBSD: Makefile,v 1.59 2006/04/13 18:23:33 jlam Exp $
 
 DISTNAME=	gqview-2.0.1
 PKGREVISION=	2
@@ -9,9 +9,7 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://gqview.sourceforge.net/
 COMMENT=	GTK2-based graphic file viewer
 
-BUILD_USES_MSGFMT=	yes
-
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		msgfmt pkg-config
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes

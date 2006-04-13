@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/04/08 17:18:26 joerg Exp $
+# $NetBSD: Makefile,v 1.56 2006/04/13 18:23:35 jlam Exp $
 #
 
 DISTNAME=		gnome-utils-2.14.0
@@ -10,11 +10,8 @@ MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Set of useful GNOME2 utilities and applications
 
-BUILD_USES_MSGFMT=	yes
-
-USE_TOOLS+=		gmake perl pkg-config
+USE_TOOLS+=		gmake msgfmt perl pkg-config
 USE_DIRS+=		gnome2-1.5
-USE_MSGFMT_PLURALS=	yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/04/06 06:21:51 reed Exp $
+# $NetBSD: Makefile,v 1.45 2006/04/13 18:23:31 jlam Exp $
 #
 
 DISTNAME=		libglade-2.5.1
@@ -12,9 +12,7 @@ MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.daa.com.au/~james/gnome/
 COMMENT=		Runtime interpreter for GLADE GUI files (v2)
 
-BUILD_USES_MSGFMT=	YES
-
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libglade-2.0.pc.in

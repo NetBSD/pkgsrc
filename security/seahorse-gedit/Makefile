@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/04/06 06:22:44 reed Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/13 18:23:37 jlam Exp $
 
 DISTNAME=	seahorse-0.8.1
 PKGNAME=	seahorse-gedit-0.8.1
@@ -13,13 +13,11 @@ COMMENT=	Seahorse plugin for gedit
 
 PATCHDIR=	${.CURDIR}/../seahorse/patches
 DISTINFO_FILE=	${.CURDIR}/../seahorse/distinfo
-BUILD_USES_MSGFMT=	yes
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		yes
-USE_MSGFMT_PLURALS=	yes
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--disable-nautilus

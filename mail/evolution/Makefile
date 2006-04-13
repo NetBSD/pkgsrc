@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2006/04/06 06:22:16 reed Exp $
+# $NetBSD: Makefile,v 1.107 2006/04/13 18:23:34 jlam Exp $
 
 DISTNAME=		evolution-2.6.0
 PKGREVISION=		2
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/evolution/
 COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
-
-BUILD_USES_MSGFMT=	YES
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evolution
 PKG_SUGGESTED_OPTIONS=	inet6 ssl
@@ -28,9 +26,8 @@ PKG_FAIL_REASON+=	"Kerberos support conflicts with SSL"
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		bison gmake pkg-config
+USE_TOOLS+=		bison gmake msgfmt pkg-config
 USE_LIBTOOL=		YES
-USE_MSGFMT_PLURALS=	YES
 USE_PKGLOCALEDIR=	YES
 
 REPLACE_PERL+=		addressbook/tools/csv2vcard

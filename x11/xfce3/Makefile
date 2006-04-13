@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/09 21:04:46 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/13 18:23:44 jlam Exp $
 
 DISTNAME=		xfce-3.8.18
 PKGREVISION=		7
@@ -9,13 +9,11 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.xfce.org/
 COMMENT=		Lightweight desktop environment with CDE look and feel
 
-BUILD_USES_MSGFMT=	yes
-
 USE_X11BASE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
 
 FONTS_DIRS.x11+=	${PREFIX}/share/xfce/cursors

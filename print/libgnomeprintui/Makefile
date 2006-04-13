@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/04/06 06:22:36 reed Exp $
+# $NetBSD: Makefile,v 1.44 2006/04/13 18:23:37 jlam Exp $
 #
 
 DISTNAME=	libgnomeprintui-2.12.1
@@ -11,11 +11,9 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.levien.com/gnome/print-arch.html
 COMMENT=	Graphical library for the GNOME2 Printing Architecture
 
-BUILD_USES_MSGFMT=	YES
-
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		YES
 
 PKGCONFIG_OVERRIDE=	libgnomeprintui/libgnomeprintui-2.2.pc.in

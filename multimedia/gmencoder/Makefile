@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/03/06 00:18:21 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2006/04/13 18:23:36 jlam Exp $
 #
 
 DISTNAME=	gmencoder-0.1.0
@@ -11,13 +11,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gmencoder.sourceforge.net/
 COMMENT=	GNOME2 frontend to mencoder
 
-BUILD_USES_MSGFMT=	yes
 DEPENDS+=       	mencoder>=0.90:../../multimedia/mencoder
 DEPENDS+=       	mplayer>=0.90:../../multimedia/mplayer
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=       	gnome2-1.5
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 
 CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
