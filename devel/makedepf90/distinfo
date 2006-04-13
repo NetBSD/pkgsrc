@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/04/13 16:40:59 minskim Exp $
+
+SHA1 (makedepf90-2.8.4.tar.gz) = c4b46e298078a1b0e0d9795d7ce9ecfdbd8b8de4
+RMD160 (makedepf90-2.8.4.tar.gz) = e583211a0acf6d77034b01d75fc99b0ec2e7e7bb
+Size (makedepf90-2.8.4.tar.gz) = 86778 bytes
