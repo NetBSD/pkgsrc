@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/04 21:29:14 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/13 23:36:20 rillig Exp $
 #
 
 DISTNAME=	ctags-5.5.4
@@ -22,13 +22,12 @@ CPPFLAGS+=		-DETAGS="\"exetags\""
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	post-patch
 SUBST_FILES.man=	ctags.1
-SUBST_SED.man=	\
-	-e 's|^ctags \\-|exctags \\-|' \
-	-e 's|fBctags|fBexctags|g' \
-	-e 's|fBetags|fBexetags|g' \
-	-e 's|"ctags|"exctags|g' \
-	-e 's|"etags|"exetags|g' \
-	-e 's|/usr/local|${LOCALBASE}|g'
+SUBST_SED.man=		-e 's|^ctags \\-|exctags \\-|'
+SUBST_SED.man+=		-e 's|fBctags|fBexctags|g'
+SUBST_SED.man+=		-e 's|fBetags|fBexetags|g'
+SUBST_SED.man+=		-e 's|"ctags|"exctags|g'
+SUBST_SED.man+=		-e 's|"etags|"exetags|g'
+SUBST_SED.man+=		-e 's|/usr/local|${LOCALBASE}|g'
 
 SUBST_CLASSES+=		rename
 SUBST_STAGE.rename=	post-patch
