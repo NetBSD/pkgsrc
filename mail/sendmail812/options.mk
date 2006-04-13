@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2005/10/05 13:29:50 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2006/04/13 21:45:14 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
 PKG_OPTIONS_OPTIONAL_GROUPS=	database
@@ -34,7 +34,7 @@ PKG_SUGGEST_OPTIONS+=	db2
 ### Use SASL/v2 for SMTP AUTH
 ###
 .if !empty(PKG_OPTIONS:Msasl)
-.  include "../../security/cyrus-sasl2/buildlink3.mk"
+.  include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
 
 ###

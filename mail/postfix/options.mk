@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2005/07/31 03:46:05 grant Exp $
+# $NetBSD: options.mk,v 1.21 2006/04/13 21:45:13 wiz Exp $
 
 # Global and legacy options
 
@@ -84,7 +84,7 @@ AUXLIBS+=	-L${PGSQL_PREFIX}/lib -lpq \
 ### SASL support for SMTP authentication.
 ###
 .if !empty(PKG_OPTIONS:Msasl)
-.  include "../../security/cyrus-sasl2/buildlink3.mk"
+.  include "../../security/cyrus-sasl/buildlink3.mk"
 BUILDLINK_INCDIRS.cyrus-sasl=	include/sasl
 SASLLIBDIR=	${PREFIX}/lib/sasl2
 PWCHECK_METHOD=	auxprop

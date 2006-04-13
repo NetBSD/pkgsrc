@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2006/04/06 06:22:23 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2006/04/13 21:45:13 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDEPIM_BUILDLINK3_MK:=	${KDEPIM_BUILDLINK3_MK}+
@@ -28,7 +28,7 @@ MAKEVARS+=	PKG_BUILD_OPTIONS.kdepim
 .include "../../comms/pilot-link-libs/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .if !empty(PKG_BUILD_OPTIONS.kdepim:Msasl)
-.  include "../../security/cyrus-sasl2/buildlink3.mk"
+.  include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
