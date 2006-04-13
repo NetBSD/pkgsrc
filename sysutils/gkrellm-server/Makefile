@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2006/03/30 21:21:37 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2006/04/13 19:14:45 cube Exp $
 .include "../../sysutils/gkrellm/Makefile.common"
 
-PKGREVISION=		2
+PKGREVISION=		#
 GKRELLM_PKGBASE=	gkrellm-server
 COMMENT=		Monitoring daemon remotely accessible by a GKrellM client
-DEPENDS+=		gkrellm-share-${GKRELLM_VERSION}nb1:../../sysutils/gkrellm-share
+DEPENDS+=		gkrellm-share-${GKRELLM_VERSION}:../../sysutils/gkrellm-share
 
 USE_TOOLS+=		pkg-config
 PTHREAD_OPTS+=		require
