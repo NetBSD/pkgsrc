@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2006/02/26 22:37:22 tron Exp $
+# $NetBSD: Makefile,v 1.18 2006/04/13 13:32:53 wulf Exp $
 
-DISTNAME=	swig-1.3.24
-PKGREVISION=	2
+DISTNAME=	swig-1.3.29
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=swig/}
 
@@ -13,7 +12,6 @@ CONFLICTS=      swig-build-[0-9]*
 
 CONFIGURE_ARGS+=	--with-swiglibdir=${PREFIX}/share/swig/1.3
 BUILD_TARGET=		swig
-WRKSRC=			${WRKDIR}/SWIG-1.3.24
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
