@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/03/04 21:29:21 jlam Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2006/04/13 15:52:19 salo Exp $
 #
 
 DISTNAME=	ExtUtils-MakeMaker-6.30
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=   ${MASTER_SITE_PERL_CPAN:=../by-authors/id/M/MS/MSCHWERN/}
 
