@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2006/03/07 02:52:40 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2006/04/14 18:14:34 heinz Exp $
 
 DISTNAME=	gc6.7
 PKGNAME=	${DISTNAME:S/gc/boehm-gc-/}
@@ -20,7 +20,7 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man3
 
 MAKE_ENV+=		COPTS=${CFLAGS:M*:Q}
 
-#TEST_TARGET=		check
+TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
