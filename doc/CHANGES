@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13582 2006/04/14 14:48:50 minskim Exp $
+$NetBSD: CHANGES,v 1.13583 2006/04/14 17:39:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2088,3 +2088,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/firefox-bin to 1.5.0.2 [xtraeme 2006-04-14]
 	Updated print/tex-dhucs to 2.7.1 [minskim 2006-04-14]
 	Added textproc/p5-Lingua-Stem-Snowball version 0.94 [minskim 2006-04-14]
+	Updated devel/gconfmm to 2.14.0 [adam 2006-04-14]
+	Updated graphics/libgnomecanvasmm to 2.14.0 [adam 2006-04-14]
+	Updated devel/libgnomemm to 2.14.0 [adam 2006-04-14]
+	Updated devel/libgnomeuimm to 2.14.0 [adam 2006-04-14]
