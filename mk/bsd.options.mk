@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.51 2006/04/13 21:45:14 wiz Exp $
+# $NetBSD: bsd.options.mk,v 1.52 2006/04/14 17:15:03 jlam Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -326,6 +326,7 @@ PKG_FAIL_REASON:=	"The following selected options are not supported: "${_OPTIONS
 PKG_OPTIONS:=	${PKG_OPTIONS:O:u}
 
 _PKG_OPTIONS_WORDWRAP_FILTER=						\
+	${XARGS} -n 1 |							\
 	${AWK} '							\
 		BEGIN { printwidth = 40; line = "" }			\
 		{							\
@@ -368,8 +369,11 @@ show-options:
 .  endfor
 .endfor
 	@${ECHO}
-	@${ECHO} "These options are enabled by default: "${PKG_SUGGESTED_OPTIONS:O:Q}
-	@${ECHO} "These options are currently enabled: "${PKG_OPTIONS:O:Q}
+	@${ECHO} "These options are enabled by default:"
+	@${ECHO} ${PKG_SUGGESTED_OPTIONS:O:Q} | ${_PKG_OPTIONS_WORDWRAP_FILTER}
+	@${ECHO} ""
+	@${ECHO} "These options are currently enabled:"
+	@${ECHO} ${PKG_OPTIONS:O:Q} | ${_PKG_OPTIONS_WORDWRAP_FILTER}
 .    if defined(PKG_OPTIONS_DEPRECATED_WARNINGS)
 	@${ECHO}
 	@for l in ${PKG_OPTIONS_DEPRECATED_WARNINGS}; \
@@ -386,7 +390,7 @@ supported-options-message:
 	@${ECHO} "=========================================================================="
 	@${ECHO} "The supported build options for this package are:"
 	@${ECHO} ""
-	@${ECHO} ${PKG_SUPPORTED_OPTIONS:O:Q} | ${XARGS} -n 1 | ${_PKG_OPTIONS_WORDWRAP_FILTER}
+	@${ECHO} ${PKG_SUPPORTED_OPTIONS:O:Q} | ${_PKG_OPTIONS_WORDWRAP_FILTER}
 .    if !empty(PKG_OPTIONS)
 	@${ECHO} ""
 	@${ECHO} "The currently selected options are:"
