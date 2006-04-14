@@ -1,4 +1,4 @@
-# $NetBSD: plist-info.awk,v 1.11 2006/04/12 20:49:12 jlam Exp $
+# $NetBSD: plist-info.awk,v 1.12 2006/04/14 13:23:42 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -64,8 +64,10 @@ BEGIN {
 	TEST = ENVIRON["TEST"] ? ENVIRON["TEST"] : "test"
 
 	IGNORE_INFO_REGEXP = ENVIRON["IGNORE_INFO_PATH"] ? ENVIRON["IGNORE_INFO_PATH"] : ""
-	gsub(":", "|", IGNORE_INFO_REGEXP)
-	IGNORE_INFO_REGEXP = "(" IGNORE_INFO_REGEXP ")"
+	if (IGNORE_INFO_REGEXP != "") {
+		gsub(":", "|", IGNORE_INFO_REGEXP)
+		IGNORE_INFO_REGEXP = "(" IGNORE_INFO_REGEXP ")"
+	}
 }
 
 ###
