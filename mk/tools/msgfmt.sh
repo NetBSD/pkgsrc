@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.3 2006/04/14 13:40:07 jlam Exp $
+# $NetBSD: msgfmt.sh,v 1.4 2006/04/14 13:43:23 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -109,7 +109,11 @@ cat $pofile | ${AWK} '
 {
 	s = 0
 	p = 0
-	
+
+	# Treat "obsolete" messages identically with non-"obsolete"
+	# ones so that we do not need to specially handle lines
+	# starting with "#~".
+	#
 	sub("^#~", "")
 
 	# Buffer any "msgid" statements into the singular array.
