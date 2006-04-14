@@ -1,12 +1,12 @@
-$NetBSD: patch-ai,v 1.2 2006/02/16 20:53:23 joerg Exp $
+$NetBSD: patch-ai,v 1.3 2006/04/14 09:56:03 adam Exp $
 
---- lib/libiax2/src/md5.c.orig	2005-04-05 23:53:41.000000000 +0200
+--- lib/libiax2/src/md5.c.orig	2006-02-05 01:25:25.000000000 +0100
 +++ lib/libiax2/src/md5.c
 @@ -1,7 +1,7 @@
  /* MD5 checksum routines used for authentication.  Not covered by GPL, but
     in the public domain as per the copyright below */
  
--#ifdef FREEBSD
+-#if defined(__FreeBSD__) || defined(__NetBSD__)
 +#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  # include <machine/endian.h>
  #elif defined(LINUX)  
