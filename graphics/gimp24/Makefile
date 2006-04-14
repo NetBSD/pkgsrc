@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2006/04/13 18:23:33 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/04/14 10:49:41 adam Exp $
 
-DISTNAME=	gimp-2.3.7
-PKGREVISION=	3
+DISTNAME=	gimp-2.3.8
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v2.3/ \
 		ftp://ftp.cs.umn.edu/pub/gimp/v2.3/ \
@@ -28,15 +27,15 @@ PKGCONFIG_OVERRIDE+=	gimpui-2.0.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_BUILTIN.fontconfig=		no
+USE_BUILTIN.fontconfig=			no
 BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.2.0
-BUILDLINK_API_DEPENDS.lcms+=	lcms>=1.12
+BUILDLINK_API_DEPENDS.lcms+=		lcms>=1.12
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html/${PKGNAME_NOREV}
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--with-gimpprint-prefix=${BUILDLINK_PREFIX.gimp-print-lib}
 
 UNLIMIT_RESOURCES+=	datasize
@@ -50,8 +49,6 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/aalib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
