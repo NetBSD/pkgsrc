@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.556 2006/04/13 01:57:35 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.557 2006/04/14 10:26:41 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2069,7 +2069,7 @@ sub type_should_be_quoted($) {
 sub variable_needs_quoting($) {
 	my ($varname) = @_;
 
-	return !($varname =~ qr"^(?:.*DIR|.*_GROUP|.*_USER|BUILDLINK_PREFIX\..*|DISTNAME|LOCALBASE|PKGNAME|PREFIX|WRKSRC)$");
+	return !($varname =~ qr"^(?:.*DIR|.*_GROUP|.*GRP|.*MODE|.*OWN|.*_USER|BUILDLINK_PREFIX\..*|DISTNAME|LOCALBASE|PKGNAME|PREFIX|WRKSRC)$");
 }
 
 my $check_pkglint_version_done = false;
@@ -2482,11 +2482,14 @@ sub checkline_mk_shellword($$$) {
 
 	if ($shellword =~ qr"^([\w_\-]+)=(([\"']?)\$\{([\w_]+)\}\3)$") {
 		my ($key, $vexpr, undef, $vname) = ($1, $2, $3, $4);
-		my $mod = ($vname =~ regex_gnu_configure_volatile_vars) ? ":M*:Q" : ":Q";
-		my $fixed_vexpr = "\${${vname}${mod}}";
-		$line->log_warning("Please use ${fixed_vexpr} instead of ${vexpr}.");
-		$line->explain("See the pkgsrc guide, section \"quoting guideline\", for details.");
-		$line->replace($shellword, "${key}=${fixed_vexpr}");
+		
+		if (variable_needs_quoting($vname)) {
+			my $mod = ($vname =~ regex_gnu_configure_volatile_vars) ? ":M*:Q" : ":Q";
+			my $fixed_vexpr = "\${${vname}${mod}}";
+			$line->log_warning("Please use ${fixed_vexpr} instead of ${vexpr}.");
+			$line->explain("See the pkgsrc guide, section \"quoting guideline\", for details.");
+			$line->replace($shellword, "${key}=${fixed_vexpr}");
+		}
 
 	} elsif ($shellword =~ qr"^([\w_\-]+)=(\$\{([\w_]+):Q\})$") {
 		my ($key, $vexpr, $vname) = ($1, $2, $3);
