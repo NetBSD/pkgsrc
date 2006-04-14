@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/10/03 14:22:58 adam Exp $
+$NetBSD: distinfo,v 1.3 2006/04/14 17:28:36 adam Exp $
 
-SHA1 (libgnomeuimm-2.12.0.tar.bz2) = d59b2dd89b74372352db84860ef53f97d2449c09
-RMD160 (libgnomeuimm-2.12.0.tar.bz2) = 8dcf5d3453b1e80a32cc2d9e72a69967e098b2e1
-Size (libgnomeuimm-2.12.0.tar.bz2) = 322127 bytes
+SHA1 (libgnomeuimm-2.14.0.tar.bz2) = 2cbb4591f52068cab8e22b250838621dd90d32fa
+RMD160 (libgnomeuimm-2.14.0.tar.bz2) = 8bdf92a84a346e99f595c47c5c62f410908b97a5
+Size (libgnomeuimm-2.14.0.tar.bz2) = 323164 bytes
