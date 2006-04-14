@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2006/04/05 07:03:25 adam Exp $
+$NetBSD: patch-af,v 1.2 2006/04/14 08:45:06 adam Exp $
 
---- fontforge/openfontdlg.c.orig	2006-02-06 03:45:51.000000000 +0100
+--- fontforge/openfontdlg.c.orig	2006-03-26 19:26:51.000000000 +0200
 +++ fontforge/openfontdlg.c
-@@ -134,8 +134,11 @@ return( true );
+@@ -140,8 +140,11 @@ return( true );
  }
  
  static int e_h(GWindow gw, GEvent *event) {
@@ -15,7 +15,7 @@ $NetBSD: patch-af,v 1.1 2006/04/05 07:03:25 adam Exp $
  	d->done = true;
      } else if ( event->type == et_map ) {
  	/* Above palettes */
-@@ -144,16 +147,15 @@ static int e_h(GWindow gw, GEvent *event
+@@ -150,16 +153,15 @@ static int e_h(GWindow gw, GEvent *event
  return( false );
      } else if ( event->type == et_mousemove ||
  	    (event->type==et_mousedown && event->u.mouse.button==3 )) {

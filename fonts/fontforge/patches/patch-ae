@@ -1,16 +1,16 @@
-$NetBSD: patch-ae,v 1.1 2006/04/05 07:03:25 adam Exp $
+$NetBSD: patch-ae,v 1.2 2006/04/14 08:45:06 adam Exp $
 
---- fontforge/fontinfo.c.orig	2006-04-04 11:33:59.000000000 +0200
+--- fontforge/fontinfo.c.orig	2006-04-06 16:02:54.000000000 +0200
 +++ fontforge/fontinfo.c
-@@ -5151,6 +5151,7 @@ static int GFI_OK(GGadget *g, GEvent *e)
+@@ -5182,6 +5182,7 @@ static int GFI_OK(GGadget *g, GEvent *e)
  #endif
  	char os2_vendor[4];
  	NameList *nl;
 +	int ans;
+ 	extern int allow_utf8_glyphnames;
  
  	if ( d->tn_smallactive!=-1 )
- 	    TN_FinishSmallEdit(d);
-@@ -5324,7 +5325,7 @@ return( true );
+@@ -5369,7 +5370,7 @@ return(true);
  	    buts[2] = GTK_STOCK_CANCEL;
  #endif
  	    buts[3] = NULL;
