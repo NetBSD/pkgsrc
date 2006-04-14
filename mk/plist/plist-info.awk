@@ -1,4 +1,4 @@
-# $NetBSD: plist-info.awk,v 1.10 2006/03/20 01:48:58 jlam Exp $
+# $NetBSD: plist-info.awk,v 1.10.2.1 2006/04/14 14:38:49 salo Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -64,8 +64,10 @@ BEGIN {
 	TEST = ENVIRON["TEST"] ? ENVIRON["TEST"] : "test"
 
 	IGNORE_INFO_REGEXP = ENVIRON["IGNORE_INFO_PATH"] ? ENVIRON["IGNORE_INFO_PATH"] : ""
-	gsub(":", "|", IGNORE_INFO_REGEXP)
-	IGNORE_INFO_REGEXP = "(" IGNORE_INFO_REGEXP ")"
+	if (IGNORE_INFO_REGEXP != "") {
+		gsub(":", "|", IGNORE_INFO_REGEXP)
+		IGNORE_INFO_REGEXP = "(" IGNORE_INFO_REGEXP ")"
+	}
 }
 
 ###
@@ -121,6 +123,13 @@ BEGIN {
 			print_entry($0)
 		}
 		close(cmd)
+	} else {
+		#if ((MANZ ~ /[yY][eE][sS]/) && ($0 !~ /\.gz$/)) {
+		#	$0 = $0 ".gz"
+		#} else if ((MANZ !~ /[yY][eE][sS]/) && ($0 ~ /\.gz$/)) {
+		#	sub("\\.gz$", "")
+		#}
+		print_entry($0)
 	}
 	next
 }
