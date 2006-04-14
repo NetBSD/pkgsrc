@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.server,v 1.1 2005/12/08 01:04:44 wiz Exp $
+@comment $NetBSD: PLIST.server,v 1.2 2006/04/14 22:49:06 ghen Exp $
 libexec/bacula/create_${BACULA_DB}_database
 libexec/bacula/create_bacula_database
 libexec/bacula/delete_catalog_backup
@@ -19,9 +19,11 @@ sbin/bacula-sd
 sbin/bcopy
 sbin/bextract
 sbin/bls
+sbin/bregex
 sbin/bscan
 sbin/bsmtp
 sbin/btape
+sbin/bwild
 sbin/dbcheck
 share/examples/bacula/bacula-dir.conf
 share/examples/bacula/bacula-sd.conf
