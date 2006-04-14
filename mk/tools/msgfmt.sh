@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.5 2006/04/14 13:49:17 jlam Exp $
+# $NetBSD: msgfmt.sh,v 1.6 2006/04/14 14:06:54 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -113,9 +113,10 @@ ${CAT} $pofile | ${AWK} '
 
 	# Treat "obsolete" messages identically with non-"obsolete"
 	# ones so that we do not need to specially handle lines
-	# starting with "#~".
+	# starting with "#~".  We run this below whenever we read a
+	# new line of input.
 	#
-	sub("^#~", "")
+	sub("^#~[ 	]*", "")
 
 	# Buffer any "msgid" statements into the singular array.
 	if ($0 ~ /^msgid[ 	]+/) {
@@ -123,6 +124,7 @@ ${CAT} $pofile | ${AWK} '
 		singular[s++] = $0
 		while (getline) {
 			if ($0 ~ /^$/) continue
+			sub("^#~[ 	]*", "")
 			if ($0 ~ /^[ 	]*"/)
 				singular[s++] = $0
 			else
@@ -135,6 +137,7 @@ ${CAT} $pofile | ${AWK} '
 		sub("^msgid_plural[ 	]+", "");
 		plural[p++] = $0
 		while (getline) {
+			sub("^#~[ 	]*", "")
 			if ($0 ~ /^[ 	]*"/)
 				plural[p++] = $0
 			else
@@ -154,6 +157,7 @@ ${CAT} $pofile | ${AWK} '
 		}
 		print "msgstr " $0
 		while (getline) {
+			sub("^#~[ 	]*", "")
 			if ($0 ~ /^[ 	]*"/)
 				print $0
 			else
@@ -173,6 +177,7 @@ ${CAT} $pofile | ${AWK} '
 		}
 		print "msgstr " $0
 		while (getline) {
+			sub("^#~[ 	]*", "")
 			if ($0 ~ /^[ 	]*"/)
 				print $0
 			else
@@ -202,6 +207,7 @@ ${CAT} $pofile | ${AWK} '
 		}
 		if (equal == 1) {
 			while (getline) {
+				sub("^#~[ 	]*", "")
 				if ($0 !~ /^[ 	]*"/) break
 			}
 			s = 0; p = 0
@@ -215,6 +221,7 @@ ${CAT} $pofile | ${AWK} '
 		}
 		print "msgstr " $0
 		while (getline) {
+			sub("^#~[ 	]*", "")
 			if ($0 ~ /^[ 	]*"/)
 				print $0
 			else
