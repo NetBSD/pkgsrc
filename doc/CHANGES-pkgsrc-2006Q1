@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.17 2006/04/13 16:32:04 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.18 2006/04/14 14:39:20 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -37,3 +37,5 @@ Pullup ticket 1364 - requested by jlam
 NetBSD tap(4) support for openvpn
 Pullup ticket 1368 - requested by bouyer
 security update for mailman
+Pullup ticket 1375 - requested by jlam
+bugfixes for the PLIST generation infrastructure
