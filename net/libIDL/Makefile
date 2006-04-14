@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/03/31 23:56:28 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2006/04/14 07:08:07 heinz Exp $
 
 DISTNAME=	libIDL-0.8.6
 PKGREVISION=	1
@@ -28,6 +28,8 @@ CONFIGURE_ENV.SunOS+=	CPP=/usr/lib/cpp
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE:Q}
+
+TEST_TARGET=		check
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

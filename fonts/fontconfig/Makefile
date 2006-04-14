@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/04/06 06:21:59 reed Exp $
+# $NetBSD: Makefile,v 1.52 2006/04/14 07:08:07 heinz Exp $
 #
 
 DISTNAME=	fontconfig-2.3.2
@@ -51,6 +51,8 @@ CONF_FILES+=	${EGDIR}/conf.d/unhinted.conf ${PKG_SYSCONFDIR}/conf.d/unhinted.con
 CONF_FILES+=	${EGDIR}/conf.d/yes-bitmaps.conf ${PKG_SYSCONFDIR}/conf.d/yes-bitmaps.conf
 
 LIBS+=		${BUILDLINK_LDADD.iconv}
+
+TEST_TARGET=	check
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
