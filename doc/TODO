@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4875 2006/04/14 13:49:23 cube Exp $
+$NetBSD: TODO,v 1.4876 2006/04/14 17:33:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -434,7 +434,7 @@ Suggested package updates
 	o dctc-0.85.9
 	o defendguin-0.0.11
 	o delegate-9.1.1
-	o denemo-0.7.2a
+	o denemo-0.7.5
 	o deskbar-applet-2.14.1
 	o devIL-1.6.7
 	o devhelp-0.10
@@ -502,6 +502,7 @@ Suggested package updates
 	o file-4.17
 	o file-roller-2.14.1
 	o findutils-4.2.27
+	o firefox-1.5.0.2
 	o flashplayer-0.4.13
 	o fmsx-3.0
 	o fondu-040927
@@ -552,6 +553,7 @@ Suggested package updates
 	o gnetman-20050429
 	o gnome-backgrounds-2.14.1
 	o gnome-desktop-2.14.1.1
+	o gnome-games-2.14.1
 	o gnome-menus-2.14.0
 	o gnome-pilot-2.0.13
 	o gnome-spell-1.0.7
@@ -619,6 +621,7 @@ Suggested package updates
 	o idesk-0.7.3
 	o ifile-1.3.5
 	o ijs-0.35
+	o imp-4.1.1
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
 	o ion3-devel-20060305
@@ -1158,7 +1161,7 @@ Suggested package updates
 	o swi-prolog-5.5.33
 	o sylpheed-claws-2.1.0
 	o sylpheed-claws-ghostscript-viewer-0.8
-	o sympa-5.1
+	o sympa-5.2
 	o sysinfo-4.2.2
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
