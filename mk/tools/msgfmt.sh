@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.7 2006/04/14 14:40:34 jlam Exp $
+# $NetBSD: msgfmt.sh,v 1.8 2006/04/14 22:16:33 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -120,90 +120,95 @@ else
 	debug="${TEE} $pofile.debug"
 fi
 
+# XXX
+cmd="${CAT}"
+
 ${CAT} $pofile | ${AWK} '
-{
+BEGIN {
+	OBSOLETE = "#~ "
+	ORE = "^(#~[ 	]+)?"
+	ORE_MATCH = "^#~[ 	]+"
+	result = getline
+	if (result < 1) exit result
+
+	while (result == 1) {
+
 	s = 0
 	p = 0
-
-	# Treat "obsolete" messages identically with non-"obsolete"
-	# ones so that we do not need to specially handle lines
-	# starting with "#~".  We run this below whenever we read a
-	# new line of input.
-	#
-	sub("^#~[ 	]*", "")
+	obsolete = ""
 
 	# Buffer any "msgid" statements into the singular array.
-	if ($0 ~ /^msgid[ 	]+/) {
-		sub("^msgid[ 	]+", "");
+	MSGID_RE = ORE "msgid[ 	]+"
+	if ($0 ~ MSGID_RE) {
+		if ($0 ~ ORE_MATCH) obsolete = OBSOLETE
+		sub(MSGID_RE, "");
 		singular[s++] = $0
-		while (getline) {
-			if ($0 ~ /^$/) continue
-			sub("^#~[ 	]*", "")
-			if ($0 ~ /^[ 	]*"/)
-				singular[s++] = $0
-			else
-				break
+		while (result = getline) {
+			if ($0 ~ ORE "$") continue
+			if ($0 !~ ORE "[ 	]*\"") break
+			sub(ORE , "")
+			singular[s++] = $0
 		}
+		if (result < 0) break
 	}
 
 	# Buffer any "msgid_plural" statements into the plural array.
-	if ($0 ~ /^msgid_plural[ 	]+/) {
-		sub("^msgid_plural[ 	]+", "");
+	MSGID_PLURAL_RE = ORE "msgid_plural[ 	]+"
+	if ($0 ~ MSGID_PLURAL_RE) {
+		if ($0 ~ ORE_MATCH) obsolete = OBSOLETE
+		sub(MSGID_PLURAL_RE, "");
 		plural[p++] = $0
-		while (getline) {
-			sub("^#~[ 	]*", "")
-			if ($0 ~ /^[ 	]*"/)
-				plural[p++] = $0
-			else
-				break
+		while (result = getline) {
+			if ($0 !~ ORE "[ 	]*\"") break
+			sub(ORE, "")
+			plural[p++] = $0
 		}
+		if (result < 0) break
 	}
 
 	# If we see "msgstr", then we are outputting the translation
 	# of a singular form of a message, so dump the contents of the
 	# singular array and output the "msgstr" translation.
 	#
-	if ($0 ~ /^msgstr[ 	]+/) {
-		sub("^msgstr[ 	]+", "");
+	MSGSTR_RE = ORE "msgstr[ 	]+"
+	if ($0 ~ MSGSTR_RE) {
 		if (s > 0) {
-			print "msgid " singular[0]
-			for (i = 1; i < s; i++) print singular[i]
+			print obsolete "msgid " singular[0]
+			for (i = 1; i < s; i++) print obsolete singular[i]
 		}
-		print "msgstr " $0
-		while (getline) {
-			sub("^#~[ 	]*", "")
-			if ($0 ~ /^[ 	]*"/)
-				print $0
-			else
-				break
+		print $0
+		while (result = getline) {
+			if ($0 !~ ORE "[ 	]*\"") break
+			print $0
 		}
+		if (result < 0) break
 	}
 
 	# If we see "msgstr[0]", then we are outputting the translation
 	# of a singular form of a message, so dump the contents of the
 	# singular array and output the "msgstr[0]" translation.
 	#
-	if ($0 ~ /^msgstr\[0\][ 	]+/) {
-		sub("^msgstr...[ 	]+", "");
+	MSGSTR0_RE = ORE "msgstr[[]0[]][ 	]+"
+	if ($0 ~ MSGSTR0_RE) {
 		if (s > 0) {
-			print "msgid " singular[0]
-			for (i = 1; i < s; i++) print singular[i]
+			print obsolete "msgid " singular[0]
+			for (i = 1; i < s; i++) print obsolete singular[i]
 		}
-		print "msgstr " $0
-		while (getline) {
-			sub("^#~[ 	]*", "")
-			if ($0 ~ /^[ 	]*"/)
-				print $0
-			else
-				break
+		sub(MSGSTR0_RE, "");
+		print obsolete "msgstr " $0
+		while (result = getline) {
+			if ($0 !~ ORE "[ 	]*\"") break
+			print $0
 		}
+		if (result < 0) break
 	}
 
 	# If we see "msgstr[1]", then we are outputting the translation
 	# of a plural form of a message, so dump the contents of the
 	# plural array and output the "msgstr[1]" translation.
 	#
-	if ($0 ~ /^msgstr\[1\][ 	]+/) {
+	MSGSTR1_RE = ORE "msgstr[[]1[]][ 	]+"
+	if ($0 ~ MSGSTR1_RE) {
 		#
 		# Check if the singular and plural arrays are equal.
 		# If they are, then we do not need to output an
@@ -220,33 +225,34 @@ ${CAT} $pofile | ${AWK} '
 			}
 		}
 		if (equal == 1) {
-			while (getline) {
-				sub("^#~[ 	]*", "")
-				if ($0 !~ /^[ 	]*"/) break
+			while (result = getline) {
+				if ($0 !~ ORE "[ 	]*\"") break
 			}
+			if (result < 0) break
 			s = 0; p = 0
 			next
 		}
 
-		sub("^msgstr...[ 	]+", "");
 		if (p > 0) {
-			print "msgid " plural[0]
-			for (i = 1; i < p; i++) print plural[i]
+			print obsolete "msgid " plural[0]
+			for (i = 1; i < p; i++) print obsolete plural[i]
 		}
-		print "msgstr " $0
-		while (getline) {
-			sub("^#~[ 	]*", "")
-			if ($0 ~ /^[ 	]*"/)
-				print $0
-			else
-				break
+		sub(MSGSTR1_RE, "");
+		print obsolete "msgstr " $0
+		while (result = getline) {
+			if ($0 !~ ORE "[ 	]*\"") break
+			print $0
 		}
+		if (result < 0) break
 	}
 
-	# Skip comments and blank lines.
+	# Pass remaining lines verbatim
 	if ($0 ~ /^#/ || $0 ~ /^[ 	]*$/) {
 		print $0
-		next
+		result = getline
+		if (result < 0) break
+	}
+
 	}
 }
 ' | $debug | $cmd
