@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/04/06 06:22:01 reed Exp $
+# $NetBSD: Makefile,v 1.34 2006/04/14 07:08:07 heinz Exp $
 
 DISTNAME=	cairo-1.0.4
 CATEGORIES=	graphics
@@ -40,6 +40,8 @@ BUILDLINK_API_DEPENDS.libpixman+=	libpixman>=0.1.5
 .if !empty(PKGSRC_COMPILER:Mmipspro*)
 CFLAGS+=			-c99
 .endif
+
+TEST_TARGET=			check
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
