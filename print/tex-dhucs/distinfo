@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2006/04/05 02:28:18 minskim Exp $
+$NetBSD: distinfo,v 1.5 2006/04/14 14:38:14 minskim Exp $
 
-SHA1 (dhucs-2.7.0cvs-20060328.tar.gz) = 8cd9b87bab24e662b2a3f82701bd7e037dbb0b8d
-RMD160 (dhucs-2.7.0cvs-20060328.tar.gz) = aa31410ec3297da0c2212fb228885bf3211a5271
-Size (dhucs-2.7.0cvs-20060328.tar.gz) = 327252 bytes
+SHA1 (dhucs-2.7.1cvs-20060413.tar.gz) = 00c7b248ed972bc6931bc0c0939b97c4eec83073
+RMD160 (dhucs-2.7.1cvs-20060413.tar.gz) = 14636dcc4f4bc0ee6c9fdb4f997380c8d6a024e3
+Size (dhucs-2.7.1cvs-20060413.tar.gz) = 327353 bytes
 SHA1 (fonts-unttf-20060215.tar.gz) = 89b7aca07c0e4094f66d100faa4a166b38501ca0
 RMD160 (fonts-unttf-20060215.tar.gz) = fc0cbfa6c3d0570dd39ed1fe6666ef708d82a7c5
 Size (fonts-unttf-20060215.tar.gz) = 14735825 bytes
