@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2006/03/14 13:53:57 rillig Exp $
+$NetBSD: patch-ab,v 1.3 2006/04/14 10:32:02 rillig Exp $
 
 Added more logging.
 
@@ -13,15 +13,6 @@ Added more logging.
      /* Find the ppp options, extract phone number */
      pppdargc = argc - optind;
      pppdargv = argv + optind;
-@@ -356,7 +358,7 @@ int main(int argc, char **argv, char **e
-     signal(SIGUSR1, sigstats);
- 
-     /* Do GRE copy until close. */
--    pptp_gre_copy(call_id, peer_call_id, pty_fd, gre_fd);
-+    pptp_gre_copy(peer_call_id, call_id, pty_fd, gre_fd);
- 
- shutdown:
-     /* on close, kill all. */
 @@ -504,6 +506,12 @@ void launch_pppd(char *ttydev, int argc,
      for (j = 0; j < argc; j++)
          new_argv[i++] = argv[j];
