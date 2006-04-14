@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.10 2006/04/14 22:23:25 jlam Exp $
+# $NetBSD: msgfmt.sh,v 1.11 2006/04/14 22:37:38 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -241,6 +241,19 @@ BEGIN {
 			}
 			sub(MSGSTR1_RE, "");
 			print obsolete "msgstr " $0
+			while (result = getline) {
+				if ($0 !~ ORE "[ 	]*\"") break
+				print $0
+			}
+			if (result < 0) break
+		}
+
+		# We drop all other "msgstr[N]" translations since the
+		# old format only supported a single translation per
+		# plural form.
+		#
+		MSGSTRN_RE = ORE "msgstr[[]([2-9]|[1-9][0-9]+)[]][ 	]+"
+		if ($0 ~ MSGSTRN_RE) {
 			while (result = getline) {
 				if ($0 !~ ORE "[ 	]*\"") break
 				print $0
