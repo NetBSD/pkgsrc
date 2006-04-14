@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2006/04/14 08:58:58 jmmv Exp $
+$NetBSD: patch-aa,v 1.7 2006/04/14 09:59:54 jmmv Exp $
 
 --- Makefile.in.orig	2006-04-09 04:46:33.000000000 +0200
 +++ Makefile.in
@@ -16,15 +16,17 @@ $NetBSD: patch-aa,v 1.6 2006/04/14 08:58:58 jmmv Exp $
  
  html: monotone.texi version.texi std_hooks.lua texinfo.css
  	if $(CHECK_SRCDIR_EQ_BUILDDIR); then :; else \
-@@ -8341,8 +8340,9 @@ html: monotone.texi version.texi std_hoo
+@@ -8341,8 +8340,11 @@ html: monotone.texi version.texi std_hoo
  	cp -r $(srcdir)/figures $@
  	cp $(srcdir)/texinfo.css $@
  	makeinfo -I $(srcdir) --number-sections --html --output $@ $<
 -	perl -i.perlbak -pe 's@<head>@<head>\n<link type="text/css" rel="stylesheet" href="texinfo.css" />@' $@/*.html
 -	rm -f $@/*.perlbak
-+	cp $@ $@.bak
-+	sed -e 's,<head>,<head><link type="text/css" rel="stylesheet" href="texinfo.css" />,' $@.bak >$@
-+	rm -f $@.bak
++	for f in $@/*.html; do \
++		cp $$f $$f.bak; \
++		sed -e 's,<head>,<head><link type="text/css" rel="stylesheet" href="texinfo.css" />,' $$f.bak >$$f; \
++		rm -f $$f.bak; \
++	done
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
