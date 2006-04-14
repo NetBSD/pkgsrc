@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2006/04/01 16:47:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.42 2006/04/14 09:06:49 adam Exp $
 bin/bin2res
 bin/fnt2bdf
 bin/function_grep.pl
@@ -362,6 +362,7 @@ include/wine/windows/winbase.h
 include/wine/windows/wincon.h
 include/wine/windows/wincrypt.h
 include/wine/windows/windef.h
+include/wine/windows/windns.h
 include/wine/windows/windows.h
 include/wine/windows/windowsx.h
 include/wine/windows/winerror.h
@@ -459,6 +460,7 @@ lib/wine/dmstyle.dll.so
 lib/wine/dmsynth.dll.so
 lib/wine/dmusic.dll.so
 lib/wine/dmusic32.dll.so
+lib/wine/dnsapi.dll.so
 lib/wine/dplay.dll.so
 lib/wine/dplayx.dll.so
 lib/wine/dpnet.dll.so
@@ -478,6 +480,7 @@ lib/wine/hhctrl.ocx.so
 lib/wine/iccvid.dll.so
 lib/wine/icinfo.exe.so
 lib/wine/icmp.dll.so
+lib/wine/iexplore.exe.so
 lib/wine/ifsmgr.vxd.so
 lib/wine/imaadp32.acm.so
 lib/wine/imagehlp.dll.so
@@ -518,6 +521,7 @@ lib/wine/libdinput.def
 lib/wine/libdinput.def.a
 lib/wine/libdinput8.def
 lib/wine/libdmusic32.def
+lib/wine/libdnsapi.def
 lib/wine/libdplay.def
 lib/wine/libdplayx.def
 lib/wine/libdpnet.def
@@ -801,8 +805,17 @@ share/wine/fonts/courer.fon
 share/wine/fonts/couret.fon
 share/wine/fonts/cvgasys.fon
 share/wine/fonts/hvgasys.fon
+share/wine/fonts/jsmalle.fon
 share/wine/fonts/jvgasys.fon
 share/wine/fonts/marlett.ttf
+share/wine/fonts/smae1255.fon
+share/wine/fonts/smae1256.fon
+share/wine/fonts/smae1257.fon
+share/wine/fonts/smalle.fon
+share/wine/fonts/smallee.fon
+share/wine/fonts/smalleg.fon
+share/wine/fonts/smaller.fon
+share/wine/fonts/smallet.fon
 share/wine/fonts/ssee1255.fon
 share/wine/fonts/ssee1256.fon
 share/wine/fonts/ssee1257.fon
