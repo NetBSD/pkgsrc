@@ -1,4 +1,4 @@
-# $NetBSD: gettext.mk,v 1.2 2006/04/13 19:24:29 jlam Exp $
+# $NetBSD: gettext.mk,v 1.3 2006/04/14 13:49:17 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -95,7 +95,7 @@ TOOLS_PATH.msgfmt=	${TOOLS_PREFIX.msgfmt}/bin/msgfmt
 .    else
 USE_TOOLS+=		awk sh
 TOOLS_PATH.msgfmt=	${PKGSRCDIR}/mk/tools/msgfmt.sh
-TOOLS_SCRIPT.msgfmt=	AWK=${TOOLS_AWK:Q}				\
+TOOLS_SCRIPT.msgfmt=	AWK=${TOOLS_AWK:Q} CAT=${TOOLS_CAT:Q}		\
 			MSGFMT=${TOOLS_PLATFORM.msgfmt:Q}		\
 			${TOOLS_SH} ${TOOLS_PATH.msgfmt} "$$@"
 .    endif
