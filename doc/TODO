@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4873 2006/04/14 09:57:31 adam Exp $
+$NetBSD: TODO,v 1.4874 2006/04/14 11:28:30 adam Exp $
 
 Suggested new packages
 ======================
@@ -684,7 +684,6 @@ Suggested package updates
 	o libggiwmh-0.3.1
 	o libgii-1.0.1
 	o libgiigic-1.1.1
-	o libglademm-2.6.2
 	o libgnomecanvasmm-2.14.0
 	o libgnomemm-2.14.0
 	o libgnomeuimm-2.14.0
