@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.18 2006/04/14 14:39:20 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.19 2006/04/14 17:28:18 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -39,3 +39,5 @@ Pullup ticket 1368 - requested by bouyer
 security update for mailman
 Pullup ticket 1375 - requested by jlam
 bugfixes for the PLIST generation infrastructure
+Pullup ticket 1376 - requested by xtraeme
+security update for firefox-bin
