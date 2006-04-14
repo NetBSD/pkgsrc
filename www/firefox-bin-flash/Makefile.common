@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.10 2006/04/12 18:35:25 wiz Exp $
+# $NetBSD: Makefile.common,v 1.11 2006/04/14 14:14:23 xtraeme Exp $
 
 DISTNAME=		install_flash_player_7_${DISTUNAME}
 PKGNAME=		${MOZ_BIN}-flash-${FLASH_VERS:S/r/./}
 CATEGORIES=		www graphics
-MASTER_SITES=		http://fpdownload.macromedia.com/get/flashplayer/current/
+MASTER_SITES=		http://download.macromedia.com/get/flashplayer/current/
 
 MAINTAINER?=		pkgsrc-users@NetBSD.org
 HOMEPAGE?=		http://www.flash.com/
