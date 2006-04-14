@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4874 2006/04/14 11:28:30 adam Exp $
+$NetBSD: TODO,v 1.4875 2006/04/14 13:49:23 cube Exp $
 
 Suggested new packages
 ======================
@@ -538,7 +538,6 @@ Suggested package updates
 	o gift-gnutella-0.0.10.1
 	o gift-openft-0.2.1.4
 	o gimp-docs-2.0.10
-	o gkrellm-2.2.8
 	o gkrellm-multiping-2.0.10
 	o gkrellm-weather-2.0.7
 	o gkrellm-xmms-2.1.22
