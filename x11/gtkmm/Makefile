@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2006/04/06 06:23:01 reed Exp $
+# $NetBSD: Makefile,v 1.37 2006/04/14 11:01:52 adam Exp $
 
-DISTNAME=	gtkmm-2.8.3
+DISTNAME=	gtkmm-2.8.4
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/2.8/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,6 +13,8 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:run pkg-config
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-demos
+CONFIGURE_ARGS+=	--disable-examples
 
 PKGCONFIG_OVERRIDE=	atk/atkmm-1.6.pc.in
 PKGCONFIG_OVERRIDE+=	gdk/gdkmm-2.4.pc.in
