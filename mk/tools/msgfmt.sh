@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.6 2006/04/14 14:06:54 jlam Exp $
+# $NetBSD: msgfmt.sh,v 1.7 2006/04/14 14:40:34 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -67,6 +67,7 @@
 : ${AWK=awk}
 : ${CAT=cat}
 : ${MSGFMT=/usr/bin/msgfmt}
+: ${TEE=tee}
 
 case "${MSGFMT}" in
 /*)	;;
@@ -82,9 +83,13 @@ fi
 # Parse the command line options.
 version=
 pofile=
+debug=
 cmd="${MSGFMT}"
 while test $# -gt 0; do
 	case "$1" in
+	--debug)
+		debug=yes; shift
+		;;
 	--version)
 		version="$1"
 		cmd="$cmd $1"; shift
@@ -105,6 +110,15 @@ done
 # If we are asked for just the version, then avoid spawning awk.
 test -z "$version" || exec $cmd
 test -n "$pofile" || exec $cmd
+
+# If --debug is specified, then dump the output from the awk script
+# to $pofile.debug along the way.
+#
+if test -z "$debug"; then
+	debug="${CAT}"
+else
+	debug="${TEE} $pofile.debug"
+fi
 
 ${CAT} $pofile | ${AWK} '
 {
@@ -235,4 +249,4 @@ ${CAT} $pofile | ${AWK} '
 		next
 	}
 }
-' | $cmd
+' | $debug | $cmd
