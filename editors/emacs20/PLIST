@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/03/30 03:44:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/04/14 23:24:46 jlam Exp $
 bin/emacs
 bin/emacs-${PKGVERSION}
 bin/emacs-b2m
@@ -7,13 +7,13 @@ bin/emacs-etags
 bin/emacs-rcs-checkin
 bin/emacsclient
 info/ccmode
-info/cl 
+info/cl
 info/dired-x
 info/ediff
-info/emacs 
+info/emacs
 info/forms
 info/gnus
-info/message 
+info/message
 info/mh-e
 info/reftex
 info/sc
