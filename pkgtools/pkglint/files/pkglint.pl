@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.557 2006/04/14 10:26:41 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.558 2006/04/14 12:27:00 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1700,7 +1700,7 @@ sub load_tool_names() {
 	$vartools = {};
 	$predefined_vartools = {};
 	$varname_to_toolname = {};
-	foreach my $basename (qw(autoconf automake defaults ldconfig make replace rpcgen texinfo)) {
+	foreach my $basename (qw(autoconf automake defaults gettext ldconfig make replace rpcgen texinfo)) {
 		my $fname = "${current_dir}/${pkgsrcdir}/mk/tools/${basename}.mk";
 		my $lines = load_lines($fname, true);
 
