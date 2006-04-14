@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2006/03/09 21:04:45 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.7 2006/04/14 09:56:03 adam Exp $
 
-DISTNAME=		kiax-0.8.4
-PKGREVISION=		1
-CATEGORIES=		comms net audio
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kiax/}
-EXTRACT_SUFX=		.tar.bz2
+DISTNAME=	kiax-0.8.5-src
+PKGNAME=	kiax-0.8.5
+CATEGORIES=	comms net audio
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kiax/}
 
-MAINTAINER=		reinoud@NetBSD.org
-HOMEPAGE=		http://www.kiax.org/
-COMMENT=		Open internet telephony system
+MAINTAINER=	reinoud@NetBSD.org
+HOMEPAGE=	http://www.kiax.org/
+COMMENT=	Open internet telephony system
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
