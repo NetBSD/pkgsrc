@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2006/03/14 13:53:57 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/14 10:32:02 rillig Exp $
 
 DISTNAME=	pptp-1.7.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pptpclient/}
 
@@ -10,6 +11,7 @@ COMMENT=	PPTP client package for Microsoft VPN servers (no encryption yet)
 
 NOT_FOR_PLATFORM=	Interix-*-*
 
+MAKE_ENV+=	ROOT_USER=${ROOT_USER}
 MAKE_FLAGS+=	BINDIR=${PREFIX:Q}/sbin
 MAKE_FLAGS+=	MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}/man8
 MAKE_FLAGS+=	PPPDIR=${PREFIX:Q}/share/examples/pptp
