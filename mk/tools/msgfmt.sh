@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.9 2006/04/14 22:21:04 jlam Exp $
+# $NetBSD: msgfmt.sh,v 1.10 2006/04/14 22:23:25 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -129,127 +129,131 @@ BEGIN {
 	if (result < 1) exit result
 
 	while (result == 1) {
+		s = 0
+		p = 0
+		obsolete = ""
 
-	s = 0
-	p = 0
-	obsolete = ""
-
-	# Buffer any "msgid" statements into the singular array.
-	MSGID_RE = ORE "msgid[ 	]+"
-	if ($0 ~ MSGID_RE) {
-		if ($0 ~ ORE_MATCH) obsolete = OBSOLETE
-		sub(MSGID_RE, "");
-		singular[s++] = $0
-		while (result = getline) {
-			if ($0 ~ ORE "$") continue
-			if ($0 !~ ORE "[ 	]*\"") break
-			sub(ORE , "")
+		# Buffer any "msgid" statements into the singular array.
+		MSGID_RE = ORE "msgid[ 	]+"
+		if ($0 ~ MSGID_RE) {
+			if ($0 ~ ORE_MATCH) obsolete = OBSOLETE
+			sub(MSGID_RE, "");
 			singular[s++] = $0
-		}
-		if (result < 0) break
-	}
-
-	# Buffer any "msgid_plural" statements into the plural array.
-	MSGID_PLURAL_RE = ORE "msgid_plural[ 	]+"
-	if ($0 ~ MSGID_PLURAL_RE) {
-		if ($0 ~ ORE_MATCH) obsolete = OBSOLETE
-		sub(MSGID_PLURAL_RE, "");
-		plural[p++] = $0
-		while (result = getline) {
-			if ($0 !~ ORE "[ 	]*\"") break
-			sub(ORE, "")
-			plural[p++] = $0
-		}
-		if (result < 0) break
-	}
-
-	# If we see "msgstr", then we are outputting the translation
-	# of a singular form of a message, so dump the contents of the
-	# singular array and output the "msgstr" translation.
-	#
-	MSGSTR_RE = ORE "msgstr[ 	]+"
-	if ($0 ~ MSGSTR_RE) {
-		if (s > 0) {
-			print obsolete "msgid " singular[0]
-			for (i = 1; i < s; i++) print obsolete singular[i]
-		}
-		print $0
-		while (result = getline) {
-			if ($0 !~ ORE "[ 	]*\"") break
-			print $0
-		}
-		if (result < 0) break
-	}
-
-	# If we see "msgstr[0]", then we are outputting the translation
-	# of a singular form of a message, so dump the contents of the
-	# singular array and output the "msgstr[0]" translation.
-	#
-	MSGSTR0_RE = ORE "msgstr[[]0[]][ 	]+"
-	if ($0 ~ MSGSTR0_RE) {
-		if (s > 0) {
-			print obsolete "msgid " singular[0]
-			for (i = 1; i < s; i++) print obsolete singular[i]
-		}
-		sub(MSGSTR0_RE, "");
-		print obsolete "msgstr " $0
-		while (result = getline) {
-			if ($0 !~ ORE "[ 	]*\"") break
-			print $0
-		}
-		if (result < 0) break
-	}
-
-	# If we see "msgstr[1]", then we are outputting the translation
-	# of a plural form of a message, so dump the contents of the
-	# plural array and output the "msgstr[1]" translation.
-	#
-	MSGSTR1_RE = ORE "msgstr[[]1[]][ 	]+"
-	if ($0 ~ MSGSTR1_RE) {
-		#
-		# Check if the singular and plural arrays are equal.
-		# If they are, then we do not need to output an
-		# additional plural translation at all since the
-		# "singular" form is already correct.
-		#
-		equal = 0
-		if (s == p) {
-			equal = 1;
-			for (i = 0; i < s; i++) {
-				if (singular[i] != plural[i]) {
-					equal = 0; break
-				}
-			}
-		}
-		if (equal == 1) {
 			while (result = getline) {
+				if ($0 ~ ORE "$") continue
 				if ($0 !~ ORE "[ 	]*\"") break
+				sub(ORE , "")
+				singular[s++] = $0
 			}
 			if (result < 0) break
-			s = 0; p = 0
-			next
 		}
 
-		if (p > 0) {
-			print obsolete "msgid " plural[0]
-			for (i = 1; i < p; i++) print obsolete plural[i]
+		# Buffer any "msgid_plural" statements into the plural array.
+		MSGID_PLURAL_RE = ORE "msgid_plural[ 	]+"
+		if ($0 ~ MSGID_PLURAL_RE) {
+			if ($0 ~ ORE_MATCH) obsolete = OBSOLETE
+			sub(MSGID_PLURAL_RE, "");
+			plural[p++] = $0
+			while (result = getline) {
+				if ($0 !~ ORE "[ 	]*\"") break
+				sub(ORE, "")
+				plural[p++] = $0
+			}
+			if (result < 0) break
 		}
-		sub(MSGSTR1_RE, "");
-		print obsolete "msgstr " $0
-		while (result = getline) {
-			if ($0 !~ ORE "[ 	]*\"") break
+
+		# If we see "msgstr", then we are outputting the
+		# translation of a singular form of a message, so dump
+		# the contents of the singular array and output the
+		# "msgstr" translation.
+		#
+		MSGSTR_RE = ORE "msgstr[ 	]+"
+		if ($0 ~ MSGSTR_RE) {
+			if (s > 0) {
+				print obsolete "msgid " singular[0]
+				for (i = 1; i < s; i++)
+					print obsolete singular[i]
+			}
 			print $0
+			while (result = getline) {
+				if ($0 !~ ORE "[ 	]*\"") break
+				print $0
+			}
+			if (result < 0) break
 		}
-		if (result < 0) break
-	}
 
-	# Pass remaining lines verbatim
-	if ($0 ~ /^#/ || $0 ~ /^[ 	]*$/) {
-		print $0
-		result = getline
-		if (result < 0) break
-	}
+		# If we see "msgstr[0]", then we are outputting the
+		# translation of a singular form of a message, so dump
+		# the contents of the singular array and output the
+		# "msgstr[0]" translation.
+		#
+		MSGSTR0_RE = ORE "msgstr[[]0[]][ 	]+"
+		if ($0 ~ MSGSTR0_RE) {
+			if (s > 0) {
+				print obsolete "msgid " singular[0]
+				for (i = 1; i < s; i++)
+					print obsolete singular[i]
+			}
+			sub(MSGSTR0_RE, "");
+			print obsolete "msgstr " $0
+			while (result = getline) {
+				if ($0 !~ ORE "[ 	]*\"") break
+				print $0
+			}
+			if (result < 0) break
+		}
 
+		# If we see "msgstr[1]", then we are outputting the
+		# translation of a plural form of a message, so dump
+		# the contents of the plural array and output the
+		# "msgstr[1]" translation.
+		#
+		MSGSTR1_RE = ORE "msgstr[[]1[]][ 	]+"
+		if ($0 ~ MSGSTR1_RE) {
+			#
+			# Check if the singular and plural arrays are equal.
+			# If they are, then we do not need to output an
+			# additional plural translation at all since the
+			# "singular" form is already correct.
+			#
+			equal = 0
+			if (s == p) {
+				equal = 1;
+				for (i = 0; i < s; i++) {
+					if (singular[i] != plural[i]) {
+						equal = 0; break
+					}
+				}
+			}
+			if (equal == 1) {
+				while (result = getline) {
+					if ($0 !~ ORE "[ 	]*\"") break
+				}
+				if (result < 0) break
+					s = 0; p = 0
+				next
+			}
+
+			if (p > 0) {
+				print obsolete "msgid " plural[0]
+				for (i = 1; i < p; i++)
+					print obsolete plural[i]
+			}
+			sub(MSGSTR1_RE, "");
+			print obsolete "msgstr " $0
+			while (result = getline) {
+				if ($0 !~ ORE "[ 	]*\"") break
+				print $0
+			}
+			if (result < 0) break
+		}
+
+		# Pass remaining lines verbatim
+		if ($0 ~ /^#/ || $0 ~ /^[ 	]*$/) {
+			print $0
+			result = getline
+			if (result < 0) break
+		}
 	}
 }
 ' | $debug | $cmd
