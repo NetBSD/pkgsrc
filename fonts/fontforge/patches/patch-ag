@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2006/04/05 07:03:25 adam Exp $
+$NetBSD: patch-ag,v 1.2 2006/04/14 08:45:06 adam Exp $
 
---- fontforge/parsettf.c.orig	2006-04-04 11:38:32.000000000 +0200
+--- fontforge/parsettf.c.orig	2006-03-30 07:53:44.000000000 +0200
 +++ fontforge/parsettf.c
-@@ -4254,7 +4254,7 @@ return;
+@@ -4253,7 +4253,7 @@ return;
  
  static int readttf(FILE *ttf, struct ttfinfo *info, char *filename) {
      char *oldloc;
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.1 2006/04/05 07:03:25 adam Exp $
  
  #if !defined(FONTFORGE_CONFIG_NO_WINDOWING_UI)
      gwwv_progress_change_stages(3);
-@@ -4283,12 +4283,12 @@ return( 0 );
+@@ -4282,12 +4282,12 @@ return( 0 );
  	buts[3] = NULL;
  #if defined(FONTFORGE_CONFIG_GDRAW)
  	buts[2] = _("_Cancel");
