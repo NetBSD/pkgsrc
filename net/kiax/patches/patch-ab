@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.2 2006/02/16 20:53:23 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2006/04/14 09:56:03 adam Exp $
 
---- lib/portaudio/pa_unix_oss/pa_unix_oss.c.orig	2005-04-05 23:53:41.000000000 +0200
+--- lib/portaudio/pa_unix_oss/pa_unix_oss.c.orig	2006-02-05 00:51:06.000000000 +0100
 +++ lib/portaudio/pa_unix_oss/pa_unix_oss.c
 @@ -43,7 +43,7 @@
  #ifdef __linux__
  #include <linux/soundcard.h>
  #else
--#ifdef __FreeBSD__
+-#if defined(__FreeBSD__) || defined(__NetBSD__)
 +#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  #include <sys/soundcard.h>
  #else
