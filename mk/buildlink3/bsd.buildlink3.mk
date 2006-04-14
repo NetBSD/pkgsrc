@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.173 2006/04/06 06:23:06 reed Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.174 2006/04/14 16:59:04 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -321,8 +321,10 @@ BUILDLINK_IS_DEPOT.${_pkg_}?=	no
 BUILDLINK_PREFIX.${_pkg_}=	${_BLNK_PKG_DBDIR.${_pkg_}}
 .    else
 .      if empty(BUILDLINK_PKGNAME.${_pkg_}:M*not_found)
-BUILDLINK_PREFIX.${_pkg_}!=	\
-	${_BLNK_PKG_INFO.${_pkg_}} -qp ${BUILDLINK_PKGNAME.${_pkg_}} | ${SED}  -e "s,^[^/]*,,;q"
+BUILDLINK_PREFIX.${_pkg_}!=						\
+	${TRUE} Computing BUILDLINK_PREFIX.${_pkg_:Q};			\
+	${_BLNK_PKG_INFO.${_pkg_}} -qp ${BUILDLINK_PKGNAME.${_pkg_}} |	\
+	${SED}  -e "s,^[^/]*,,;q"
 .      else
 BUILDLINK_PREFIX.${_pkg_}=	BUILDLINK_PREFIX.${_pkg_}_not_found
 .      endif
