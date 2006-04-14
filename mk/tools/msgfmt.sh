@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.4 2006/04/14 13:43:23 jlam Exp $
+# $NetBSD: msgfmt.sh,v 1.5 2006/04/14 13:49:17 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -65,6 +65,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 : ${AWK=awk}
+: ${CAT=cat}
 : ${MSGFMT=/usr/bin/msgfmt}
 
 case "${MSGFMT}" in
@@ -105,7 +106,7 @@ done
 test -z "$version" || exec $cmd
 test -n "$pofile" || exec $cmd
 
-cat $pofile | ${AWK} '
+${CAT} $pofile | ${AWK} '
 {
 	s = 0
 	p = 0
