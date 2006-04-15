@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13592 2006/04/15 10:11:00 adam Exp $
+$NetBSD: CHANGES,v 1.13593 2006/04/15 10:48:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2110,3 +2110,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added wm/fluxconf version 0.9.9 [xtraeme 2006-04-15]
 	Updated net/arpwatch to 2.1a13nb1 [bouyer 2006-04-15]
 	Updated devel/Gorm to 1.0.6 [adam 2006-04-15]
+	Updated editors/abiword to 2.4.4 [adam 2006-04-15]
+	Updated editors/abiword-plugins to 2.4.4 [adam 2006-04-15]
