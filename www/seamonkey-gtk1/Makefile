@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.2 2006/03/30 19:17:16 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/15 08:36:05 ghen Exp $
 
 MOZILLA=		seamonkey-gtk1
 MOZILLA_BIN=		seamonkey-bin
-MOZ_VER=		1.0
+MOZ_VER=		1.0.1
 EXTRACT_SUFX=		.tar.bz2
 
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
