@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2006/04/08 23:30:45 minskim Exp $
+# $NetBSD: Makefile,v 1.82 2006/04/15 09:41:09 xtraeme Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -24,6 +24,7 @@ SUBDIR+=	enlightenment
 SUBDIR+=	ethemes
 SUBDIR+=	evilwm
 SUBDIR+=	fluxbox
+SUBDIR+=	fluxconf
 SUBDIR+=	fluxter
 SUBDIR+=	flwm
 #SUBDIR+=	fvwm-devel	# conflicts with other fvwm packages
