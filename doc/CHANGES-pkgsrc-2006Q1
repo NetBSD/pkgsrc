@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.19 2006/04/14 17:28:18 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.20 2006/04/15 20:21:57 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -41,3 +41,5 @@ Pullup ticket 1375 - requested by jlam
 bugfixes for the PLIST generation infrastructure
 Pullup ticket 1376 - requested by xtraeme
 security update for firefox-bin
+Pullup ticket 1333 - requested by salo
+build fix for libgnomeprint
