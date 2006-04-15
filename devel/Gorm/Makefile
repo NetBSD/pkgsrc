@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2006/04/06 06:21:43 reed Exp $
+# $NetBSD: Makefile,v 1.34 2006/04/15 10:10:08 adam Exp $
 
-DISTNAME=	Gorm-1.0.4
-PKGREVISION=	1
+DISTNAME=	Gorm-1.0.6
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=dev-apps/}
 
@@ -10,7 +9,7 @@ HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	Graphical user interface builder for GNUstep
 
 BUILDLINK_API_DEPENDS.gnustep-base+=	gnustep-base>=1.11.1
-BUILDLINK_API_DEPENDS.gnustep-gui+=		gnustep-gui>=0.10.1
+BUILDLINK_API_DEPENDS.gnustep-gui+=	gnustep-gui>=0.10.1
 
 NO_CONFIGURE=	yes
 
