@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2005/12/21 22:04:59 reed Exp $
+@comment $NetBSD: PLIST,v 1.22 2006/04/15 10:47:24 adam Exp $
 bin/AbiWord-2.4
 bin/abiword
 bin/ttfadmin.sh
@@ -48,23 +48,17 @@ share/AbiSuite-2.4/AbiWord/help/en-US/histyle.css
 share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtobidi.html
 share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtodocs.html
 share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtodocument.html
-share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtodocument.html_files/exit_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtodocument.html_files/savewarning_1.png
 share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtoexporthtml.html
 share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtohistory.html
 share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtolists.html
 share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtomailmerge.html
-share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtomailmerge.html_files/mergefielddlg1_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtomailmerge.html_files/mergesample2_0.png
 share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtonormaltemplate.html
 share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtoprefs.html
 share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtorevisions.html
 share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtotables.html
 share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtotranslation.html
 share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtoweb.html
-share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtoweb.html_files/ruler_0.png
 share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtoword.html
-share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtoword.html_files/gettingstarted_0.png
 share/AbiSuite-2.4/AbiWord/help/en-US/howto/index.html
 share/AbiSuite-2.4/AbiWord/help/en-US/index.html
 share/AbiSuite-2.4/AbiWord/help/en-US/info/index.html
@@ -131,30 +125,11 @@ share/AbiSuite-2.4/AbiWord/help/en-US/interface/menutools.html
 share/AbiSuite-2.4/AbiWord/help/en-US/interface/menuview.html
 share/AbiSuite-2.4/AbiWord/help/en-US/interface/menuwindow.html
 share/AbiSuite-2.4/AbiWord/help/en-US/interface/rulers.html
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/rulers.html_files/rulers_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/rulers.html_files/rulerscentertab_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/rulers.html_files/rulersdecimaltab_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/rulers.html_files/rulersfirstindent_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/rulers.html_files/rulersindent_1.png
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/rulers.html_files/rulersleftindent_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/rulers.html_files/rulerslefttab_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/rulers.html_files/rulerslinetab_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/rulers.html_files/rulersmargins_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/rulers.html_files/rulersrighttab_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/rulers.html_files/rulerstab_0.png
 share/AbiSuite-2.4/AbiWord/help/en-US/interface/toolbarextra.html
 share/AbiSuite-2.4/AbiWord/help/en-US/interface/toolbarformatting.html
 share/AbiSuite-2.4/AbiWord/help/en-US/interface/toolbarstandard.html
 share/AbiSuite-2.4/AbiWord/help/en-US/interface/toolbartable.html
 share/AbiSuite-2.4/AbiWord/help/en-US/interface/workspace.html
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/workspace.html_files/full_window_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/workspace.html_files/functionbars_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/workspace.html_files/functionbars_hiding_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/workspace.html_files/grabbar_shaded_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/workspace.html_files/ruler_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/workspace.html_files/statusbar_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/workspace.html_files/statusbar_quickhelp_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/interface/workspace.html_files/titlebar_0.png
 share/AbiSuite-2.4/AbiWord/help/en-US/introduction.html
 share/AbiSuite-2.4/AbiWord/help/en-US/plugins/index.html
 share/AbiSuite-2.4/AbiWord/help/en-US/problems/index.html
@@ -170,26 +145,6 @@ share/AbiSuite-2.4/AbiWord/help/en-US/template/template.html
 share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/index.html
 share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/intro.html
 share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_10_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_11_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_12_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_13_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_14_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_15_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_16_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_17_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_18_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_19_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_1_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_20_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_2_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_3_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_4_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_5_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_6_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_7_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_8_0.png
-share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files/image_9_0.png
 share/AbiSuite-2.4/AbiWord/help/fr-FR/aboutos.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/credits.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/fdl.html
@@ -197,9 +152,7 @@ share/AbiSuite-2.4/AbiWord/help/fr-FR/histyle.css
 share/AbiSuite-2.4/AbiWord/help/fr-FR/howto/howtonormaltemplate.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/howto/howtotables.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/howto/howtoweb.html
-share/AbiSuite-2.4/AbiWord/help/fr-FR/howto/howtoweb.html_files/ruler_0.png
 share/AbiSuite-2.4/AbiWord/help/fr-FR/howto/howtoword.html
-share/AbiSuite-2.4/AbiWord/help/fr-FR/howto/howtoword.html_files/gettingstarted_1.png
 share/AbiSuite-2.4/AbiWord/help/fr-FR/howto/index.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/index.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/info/index.html
@@ -234,7 +187,6 @@ share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/dialogparagraph.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/dialogplugins.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/dialogpreferences.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/dialogreplace.html
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/dialogreplace.html_files/replace_0.png
 share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/dialogsavelinux.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/dialogscreencolor.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/dialogspelling.html
@@ -255,29 +207,10 @@ share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/menuview.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/menuweb.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/menuwindow.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/rulers.html
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/rulers.html_files/image_10_0.png
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/rulers.html_files/image_11_0.png
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/rulers.html_files/image_12_0.png
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/rulers.html_files/image_1_0.png
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/rulers.html_files/image_2_0.png
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/rulers.html_files/image_3_0.png
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/rulers.html_files/image_4_0.png
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/rulers.html_files/image_5_0.png
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/rulers.html_files/image_6_0.png
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/rulers.html_files/image_7_0.png
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/rulers.html_files/image_8_0.png
 share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/toolbarextra.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/toolbarformatting.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/toolbarstandard.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/workspace.html
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/workspace.html_files/full_window_1.png
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/workspace.html_files/functionbars_1.png
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/workspace.html_files/functionbars_hiding_1.png
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/workspace.html_files/grabbar_shaded_0.png
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/workspace.html_files/ruler_0.png
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/workspace.html_files/statusbar_0.png
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/workspace.html_files/statusbar_quickhelp_1.png
-share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/workspace.html_files/titlebar_1.png
 share/AbiSuite-2.4/AbiWord/help/fr-FR/introduction.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/plugins/index.html
 share/AbiSuite-2.4/AbiWord/help/fr-FR/problems/index.html
@@ -294,9 +227,7 @@ share/AbiSuite-2.4/AbiWord/help/pl-PL/histyle.css
 share/AbiSuite-2.4/AbiWord/help/pl-PL/howto/howtonormaltemplate.html
 share/AbiSuite-2.4/AbiWord/help/pl-PL/howto/howtotables.html
 share/AbiSuite-2.4/AbiWord/help/pl-PL/howto/howtoweb.html
-share/AbiSuite-2.4/AbiWord/help/pl-PL/howto/howtoweb.html_files/ruler_0.png
 share/AbiSuite-2.4/AbiWord/help/pl-PL/howto/howtoword.html
-share/AbiSuite-2.4/AbiWord/help/pl-PL/howto/howtoword.html_files/howtoword_0.png
 share/AbiSuite-2.4/AbiWord/help/pl-PL/howto/index.html
 share/AbiSuite-2.4/AbiWord/help/pl-PL/index.html
 share/AbiSuite-2.4/AbiWord/help/pl-PL/info/index.html
@@ -326,29 +257,10 @@ share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/menutools.html
 share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/menuweb.html
 share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/menuwindow.html
 share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/rulers.html
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/rulers.html_files/rulers_0.png
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/rulers.html_files/rulerscentertab_0.png
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/rulers.html_files/rulersdecimaltab_0.png
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/rulers.html_files/rulersfirstindent_0.png
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/rulers.html_files/rulersindent_1.png
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/rulers.html_files/rulersleftindent_0.png
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/rulers.html_files/rulerslefttab_0.png
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/rulers.html_files/rulerslinetab_0.png
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/rulers.html_files/rulersmargins_0.png
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/rulers.html_files/rulersrighttab_0.png
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/rulers.html_files/rulerstab_0.png
 share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/toolbarextra.html
 share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/toolbarformatting.html
 share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/toolbarstandard.html
 share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/workspace.html
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/workspace.html_files/full_window_0.png
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/workspace.html_files/functionbars_0.png
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/workspace.html_files/functionbars_hiding_1.png
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/workspace.html_files/grabbar_shaded_0.png
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/workspace.html_files/ruler_0.png
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/workspace.html_files/statusbar_0.png
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/workspace.html_files/statusbar_quickhelp_0.png
-share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/workspace.html_files/titlebar_0.png
 share/AbiSuite-2.4/AbiWord/help/pl-PL/introduction.html
 share/AbiSuite-2.4/AbiWord/help/pl-PL/plugins/index.html
 share/AbiSuite-2.4/AbiWord/help/pl-PL/problems/index.html
@@ -607,39 +519,23 @@ share/icons/abiword_48.png
 @dirrm share/AbiSuite-2.4/AbiWord/help/pl-PL/tutorial
 @dirrm share/AbiSuite-2.4/AbiWord/help/pl-PL/problems
 @dirrm share/AbiSuite-2.4/AbiWord/help/pl-PL/plugins
-@dirrm share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/workspace.html_files
-@dirrm share/AbiSuite-2.4/AbiWord/help/pl-PL/interface/rulers.html_files
 @dirrm share/AbiSuite-2.4/AbiWord/help/pl-PL/interface
 @dirrm share/AbiSuite-2.4/AbiWord/help/pl-PL/info
-@dirrm share/AbiSuite-2.4/AbiWord/help/pl-PL/howto/howtoword.html_files
-@dirrm share/AbiSuite-2.4/AbiWord/help/pl-PL/howto/howtoweb.html_files
 @dirrm share/AbiSuite-2.4/AbiWord/help/pl-PL/howto
 @dirrm share/AbiSuite-2.4/AbiWord/help/pl-PL
 @dirrm share/AbiSuite-2.4/AbiWord/help/fr-FR/tutorial
 @dirrm share/AbiSuite-2.4/AbiWord/help/fr-FR/problems
 @dirrm share/AbiSuite-2.4/AbiWord/help/fr-FR/plugins
-@dirrm share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/workspace.html_files
-@dirrm share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/rulers.html_files
-@dirrm share/AbiSuite-2.4/AbiWord/help/fr-FR/interface/dialogreplace.html_files
 @dirrm share/AbiSuite-2.4/AbiWord/help/fr-FR/interface
 @dirrm share/AbiSuite-2.4/AbiWord/help/fr-FR/info
-@dirrm share/AbiSuite-2.4/AbiWord/help/fr-FR/howto/howtoword.html_files
-@dirrm share/AbiSuite-2.4/AbiWord/help/fr-FR/howto/howtoweb.html_files
 @dirrm share/AbiSuite-2.4/AbiWord/help/fr-FR/howto
 @dirrm share/AbiSuite-2.4/AbiWord/help/fr-FR
-@dirrm share/AbiSuite-2.4/AbiWord/help/en-US/tutorial/window.html_files
 @dirrm share/AbiSuite-2.4/AbiWord/help/en-US/tutorial
 @dirrm share/AbiSuite-2.4/AbiWord/help/en-US/template
 @dirrm share/AbiSuite-2.4/AbiWord/help/en-US/problems
 @dirrm share/AbiSuite-2.4/AbiWord/help/en-US/plugins
-@dirrm share/AbiSuite-2.4/AbiWord/help/en-US/interface/workspace.html_files
-@dirrm share/AbiSuite-2.4/AbiWord/help/en-US/interface/rulers.html_files
 @dirrm share/AbiSuite-2.4/AbiWord/help/en-US/interface
 @dirrm share/AbiSuite-2.4/AbiWord/help/en-US/info
-@dirrm share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtoword.html_files
-@dirrm share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtoweb.html_files
-@dirrm share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtomailmerge.html_files
-@dirrm share/AbiSuite-2.4/AbiWord/help/en-US/howto/howtodocument.html_files
 @dirrm share/AbiSuite-2.4/AbiWord/help/en-US/howto
 @dirrm share/AbiSuite-2.4/AbiWord/help/en-US
 @dirrm share/AbiSuite-2.4/AbiWord/help
