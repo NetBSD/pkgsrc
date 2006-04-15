@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13598 2006/04/15 20:43:52 minskim Exp $
+$NetBSD: CHANGES,v 1.13599 2006/04/15 22:29:33 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2119,3 +2119,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/classpath to 0.90 [tonio 2006-04-15]
 	Updated lang/classpath-gui to 0.90 [tonio 2006-04-15]
 	Added textproc/p5-XML-Clean version 1.06 [minskim 2006-04-15]
+	Updated lang/sablevm to 1.13 [tonio 2006-04-15]
+	Updated lang/sablevm-classpath to 1.13 [tonio 2006-04-15]
+	Updated lang/sablevm-classpath-gui to 1.13 [tonio 2006-04-15]
