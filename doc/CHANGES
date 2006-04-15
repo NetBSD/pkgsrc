@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13589 2006/04/15 09:34:22 adam Exp $
+$NetBSD: CHANGES,v 1.13590 2006/04/15 09:41:09 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2107,3 +2107,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated games/freeciv-share to 2.0.8 [adam 2006-04-15]
 	Updated games/freeciv-client to 2.0.8 [adam 2006-04-15]
 	Updated games/freeciv-server to 2.0.8 [adam 2006-04-15]
+	Added wm/fluxconf version 0.9.9 [xtraeme 2006-04-15]
