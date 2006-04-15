@@ -1,4 +1,4 @@
-# $NetBSD: plist-libtool.awk,v 1.3 2006/04/05 05:54:01 jlam Exp $
+# $NetBSD: plist-libtool.awk,v 1.4 2006/04/15 04:25:17 minskim Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -63,8 +63,10 @@ BEGIN {
 	TEST = ENVIRON["TEST"] ? ENVIRON["TEST"] : "test"
 
 	IGNORE_LA_REGEXP = ENVIRON["IGNORE_LIBTOOLIZE"] ? ENVIRON["IGNORE_LIBTOOLIZE"] : ""
-	gsub("  *", "|", IGNORE_LA_REGEXP)
-        IGNORE_LA_REGEXP = "(" IGNORE_LA_REGEXP ")"
+	if (IGNORE_LA_REGEXP != "") {
+		gsub("  *", "|", IGNORE_LA_REGEXP)
+		IGNORE_LA_REGEXP = "(" IGNORE_LA_REGEXP ")"
+	}
 }
 
 ###
