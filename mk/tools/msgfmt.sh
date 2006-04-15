@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.11 2006/04/14 22:37:38 jlam Exp $
+# $NetBSD: msgfmt.sh,v 1.12 2006/04/15 01:36:40 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -125,6 +125,8 @@ BEGIN {
 	OBSOLETE = "#~ "
 	ORE = "^(#~[ 	]+)?"
 	ORE_MATCH = "^#~[ 	]+"
+	MSG_CONTINUATION_RE = ORE "[ 	]*\""
+
 	result = getline
 	if (result < 1) exit result
 
@@ -141,7 +143,7 @@ BEGIN {
 			singular[s++] = $0
 			while (result = getline) {
 				if ($0 ~ ORE "$") continue
-				if ($0 !~ ORE "[ 	]*\"") break
+				if ($0 !~ MSG_CONTINUATION_RE) break
 				sub(ORE , "")
 				singular[s++] = $0
 			}
@@ -155,7 +157,7 @@ BEGIN {
 			sub(MSGID_PLURAL_RE, "");
 			plural[p++] = $0
 			while (result = getline) {
-				if ($0 !~ ORE "[ 	]*\"") break
+				if ($0 !~ MSG_CONTINUATION_RE) break
 				sub(ORE, "")
 				plural[p++] = $0
 			}
@@ -176,7 +178,7 @@ BEGIN {
 			}
 			print $0
 			while (result = getline) {
-				if ($0 !~ ORE "[ 	]*\"") break
+				if ($0 !~ MSG_CONTINUATION_RE) break
 				print $0
 			}
 			if (result < 0) break
@@ -197,7 +199,7 @@ BEGIN {
 			sub(MSGSTR0_RE, "");
 			print obsolete "msgstr " $0
 			while (result = getline) {
-				if ($0 !~ ORE "[ 	]*\"") break
+				if ($0 !~ MSG_CONTINUATION_RE) break
 				print $0
 			}
 			if (result < 0) break
@@ -227,7 +229,7 @@ BEGIN {
 			}
 			if (equal == 1) {
 				while (result = getline) {
-					if ($0 !~ ORE "[ 	]*\"") break
+					if ($0 !~ MSG_CONTINUATION_RE) break
 				}
 				if (result < 0) break
 					s = 0; p = 0
@@ -242,7 +244,7 @@ BEGIN {
 			sub(MSGSTR1_RE, "");
 			print obsolete "msgstr " $0
 			while (result = getline) {
-				if ($0 !~ ORE "[ 	]*\"") break
+				if ($0 !~ MSG_CONTINUATION_RE) break
 				print $0
 			}
 			if (result < 0) break
@@ -255,7 +257,7 @@ BEGIN {
 		MSGSTRN_RE = ORE "msgstr[[]([2-9]|[1-9][0-9]+)[]][ 	]+"
 		if ($0 ~ MSGSTRN_RE) {
 			while (result = getline) {
-				if ($0 !~ ORE "[ 	]*\"") break
+				if ($0 !~ MSG_CONTINUATION_RE) break
 				print $0
 			}
 			if (result < 0) break
