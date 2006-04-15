@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.21 2006/01/17 23:52:17 dmcmahill Exp $
+# $NetBSD: genreadme.awk,v 1.21.2.1 2006/04/15 21:23:51 snj Exp $
 #
 # Copyright (c) 2002, 2003, 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -277,9 +277,7 @@ END {
 			}
 			if ($0 !~ /^\#/) {
 				vulpkg[i] = $1;
-			 	j = match($2, /,/);
-				vultype[i] = substr($2, j+1);
-				vulid[i] = substr($2, 1, j-1);
+				vultype[i] = $2;
 				vulref[i] = $3;
 				i = i + 1;
 			}
