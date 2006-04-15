@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2006/04/03 19:13:21 adam Exp $
+# $NetBSD: Makefile,v 1.21 2006/04/15 12:24:35 adam Exp $
 
-DISTNAME=	p7zip_4.37_src_all
-PKGNAME=	p7zip-4.37
+DISTNAME=	p7zip_4.39_src_all
+PKGNAME=	p7zip-4.39
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=p7zip/}
 EXTRACT_SUFX=	.tar.bz2
@@ -62,6 +62,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/DOCS/MANUAL/switches/*.* ${PREFIX}/share/doc/p7zip/switches
 	${INSTALL_MAN} ${WRKSRC}/man1/7z.1 ${PREFIX}/man/man1
 	${INSTALL_MAN} ${WRKSRC}/man1/7za.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/man1/7zr.1 ${PREFIX}/man/man1
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
