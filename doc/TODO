@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4878 2006/04/15 06:59:17 adam Exp $
+$NetBSD: TODO,v 1.4879 2006/04/15 09:34:22 adam Exp $
 
 Suggested new packages
 ======================
@@ -510,9 +510,6 @@ Suggested package updates
 	o fort77-1.18
 	o fortunes-de-0.20
 	o fox-1.6.3
-	o freeciv-client-2.0.8
-	o freeciv-server-2.0.8
-	o freeciv-share-2.0.8
 	o freeglut-2.4.0
 	o freesci-0.3.5
 	o fugu-1.2.3
