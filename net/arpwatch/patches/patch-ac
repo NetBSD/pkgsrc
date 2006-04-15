@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.9 2005/12/05 20:50:44 rillig Exp $
+$NetBSD: patch-ac,v 1.10 2006/04/15 09:54:20 bouyer Exp $
 
---- arpwatch.c.orig	2005-10-25 12:53:57.000000000 +0200
-+++ arpwatch.c	2005-10-25 12:56:40.000000000 +0200
+--- arpwatch.c.orig	2004-01-22 23:18:20.000000000 +0100
++++ arpwatch.c	2006-04-12 12:36:25.000000000 +0200
 @@ -107,6 +107,8 @@
  
  char *prog;
@@ -11,6 +11,19 @@ $NetBSD: patch-ac,v 1.9 2005/12/05 20:50:44 rillig Exp $
  int can_checkpoint;
  int swapped;
  int nobogons;
+@@ -119,9 +121,9 @@
+ 	u_int32_t netmask;
+ };
+ 
+-static struct nets *nets;
+-static int nets_ind;
+-static int nets_size;
++static struct nets *nets = NULL;
++static int nets_ind = 0;
++static int nets_size = 0;
+ 
+ extern int optind;
+ extern int opterr;
 @@ -170,7 +172,7 @@
  	interface = NULL;
  	rfilename = NULL;
@@ -31,7 +44,35 @@ $NetBSD: patch-ac,v 1.9 2005/12/05 20:50:44 rillig Exp $
  		case 'n':
  			if (!addnet(optarg))
  				usage();
-@@ -751,6 +757,6 @@
+@@ -223,9 +229,24 @@
+ 
+ 		/* Determine network and netmask */
+ 		if (pcap_lookupnet(interface, &net, &netmask, errbuf) < 0) {
+-			(void)fprintf(stderr, "%s: bad interface %s: %s\n",
+-			    prog, interface, errbuf);
+-			exit(1);
++			/* use the first -n parameter if available */
++			if (nets != NULL) {
++				net = nets[0].net;
++				netmask = nets[0].netmask;
++				/*
++				 * use 2 separate printf, intoa() uses
++				 * a static buffer.
++				 */
++				printf("%s %s: %s, using %s",
++				    prog, interface, errbuf,
++				    intoa(net));
++				printf("/%s\n", intoa(netmask));
++			} else {
++				(void)fprintf(stderr,
++				    "%s: bad interface %s: %s\n",
++				    prog, interface, errbuf);
++				exit(1);
++			}
+ 		}
+ 
+ 		/* Drop into the background if not debugging */
+@@ -751,6 +772,6 @@
  
  	(void)fprintf(stderr, "Version %s\n", version);
  	(void)fprintf(stderr, "usage: %s [-dN] [-f datafile] [-i interface]"
