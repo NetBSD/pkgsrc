@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.15 2006/03/02 18:47:22 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/15 22:20:02 tonio Exp $
 #
 
-DISTNAME=	sablevm-1.1.3
-PKGREVISION=	8
+DISTNAME=	sablevm-1.13
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sablevm/} \
-		http://devel.sablevm.org/download/1.1.3/
+MASTER_SITES=	http://sablevm.org/download/release/1.13/
 
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.sablevm.org/
 COMMENT=	SableVM free Java virtual machine
 
 DEPENDS+=	unzip>=5.50:../../archivers/unzip
-DEPENDS+=	sablevm-classpath-1.1.3nb4:../../lang/sablevm-classpath
+DEPENDS+=	sablevm-classpath-1.13:../../lang/sablevm-classpath
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${JAVA_HOME}
@@ -23,12 +21,12 @@ USE_LIBTOOL=		yes
 
 JAVA_NAME=		sablevm
 JAVA_HOME=		${PREFIX}/java/sablevm
-JAVA_WRAPPERS=		java
+JAVA_WRAPPERS+=		java
 JAVA_WRAPPER_BIN.java=	${JAVA_HOME}/bin/sablevm
 
-PRINT_PLIST_AWK+=	/^@dirrm java\/sablevm$$/ \
-				{ print "@comment in sablevm-classpath: " $$0; \
-				  next; }
+PRINT_PLIST_AWK+=     /^@dirrm java\/sablevm$$/ \
+			{ print "@comment in sablevm-classpath: " $$0; \
+				next; }
 
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${JAVA_HOME}/lib
 
@@ -37,6 +35,7 @@ LDFLAGS+=	-lsemaphore
 BUILDLINK_TRANSFORM+=	l:rt:semaphore
 .include "../../devel/pthread-sem/buildlink3.mk"
 .endif
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
