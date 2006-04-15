@@ -1,10 +1,9 @@
-$NetBSD: patch-ab,v 1.5 2005/12/10 13:47:22 taya Exp $
+$NetBSD: patch-ab,v 1.5.4.1 2006/04/15 23:32:58 salo Exp $
 
-diff -ruN ../Orig/mozilla/configure.in ./configure.in
---- ../Orig/mozilla/configure.in	2005-10-04 14:53:49.000000000 +0900
-+++ ./configure.in	2005-12-04 19:02:51.000000000 +0900
-@@ -1360,7 +1360,7 @@
-     esac
+--- configure.in.orig	2006-04-15 10:47:18.000000000 +0200
++++ configure.in
+@@ -1418,7 +1418,7 @@ case "$target" in
+     LDFLAGS=$_SAVE_LDFLAGS
      ;;
  
 -*-freebsd*)
@@ -12,7 +11,7 @@ diff -ruN ../Orig/mozilla/configure.in ./configure.in
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo aout` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -1374,6 +1374,9 @@
+@@ -1432,6 +1432,9 @@ case "$target" in
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
  #	MKSHLIB_UNFORCE_ALL=''
  #    fi
@@ -22,7 +21,7 @@ diff -ruN ../Orig/mozilla/configure.in ./configure.in
      ;; 
  
  *-hpux*)
-@@ -1768,6 +1771,13 @@
+@@ -1826,6 +1829,13 @@ case "$target" in
      if test "$LIBRUNPATH"; then
  	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
      fi
@@ -36,7 +35,7 @@ diff -ruN ../Orig/mozilla/configure.in ./configure.in
      ;;
  
  *-nto*) 
-@@ -1993,7 +2003,7 @@
+@@ -2051,7 +2061,7 @@ dnl the qsort routine under solaris is f
         MKCSHLIB='$(CC) $(CFLAGS) $(DSO_PIC_FLAGS) -G -Wl,-z -Wl,muldefs -o $@'
         MKSHLIB_FORCE_ALL='-Qoption ld -z,allextract'
         MKSHLIB_UNFORCE_ALL=''
@@ -45,7 +44,7 @@ diff -ruN ../Orig/mozilla/configure.in ./configure.in
         AR_LIST="$AR t"
         AR_EXTRACT="$AR x"
         AR_DELETE="$AR d"
-@@ -5205,7 +5215,7 @@
+@@ -5279,7 +5289,7 @@ dnl ====================================
  dnl = Enable code optimization. ON by default.
  dnl ========================================================
  if test -z "$MOZ_OPTIMIZE_FLAGS"; then
