@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13597 2006/04/15 19:54:22 tonio Exp $
+$NetBSD: CHANGES,v 1.13598 2006/04/15 20:43:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2118,3 +2118,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added graphics/py-cairo version 1.0.2 [minskim 2006-04-15]
 	Updated lang/classpath to 0.90 [tonio 2006-04-15]
 	Updated lang/classpath-gui to 0.90 [tonio 2006-04-15]
+	Added textproc/p5-XML-Clean version 1.06 [minskim 2006-04-15]

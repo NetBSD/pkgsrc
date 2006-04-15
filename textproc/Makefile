@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.318 2006/04/14 14:48:51 minskim Exp $
+# $NetBSD: Makefile,v 1.319 2006/04/15 20:43:52 minskim Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -188,6 +188,7 @@ SUBDIR+=	p5-XML-Atom
 SUBDIR+=	p5-XML-Atom-SimpleFeed
 SUBDIR+=	p5-XML-Atom-Stream
 SUBDIR+=	p5-XML-Checker
+SUBDIR+=	p5-XML-Clean
 SUBDIR+=	p5-XML-DOM
 SUBDIR+=	p5-XML-Encoding
 SUBDIR+=	p5-XML-Filter-BufferText
