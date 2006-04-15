@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.12 2006/04/15 01:36:40 jlam Exp $
+# $NetBSD: msgfmt.sh,v 1.13 2006/04/15 04:32:02 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -130,16 +130,26 @@ BEGIN {
 	result = getline
 	if (result < 1) exit result
 
+	s = 0
+	p = 0
+	obsolete = ""
+
 	while (result == 1) {
-		s = 0
-		p = 0
-		obsolete = ""
+		# Pass blank lines or comments verbatim.
+		COMMENT_BLANK_RE = "^(#|[ 	]*$)"
+		if ($0 ~ COMMENT_BLANK_RE) {
+			print $0
+			result = getline
+			if (result < 0) break
+			continue
+		}
 
 		# Buffer any "msgid" statements into the singular array.
 		MSGID_RE = ORE "msgid[ 	]+"
 		if ($0 ~ MSGID_RE) {
 			if ($0 ~ ORE_MATCH) obsolete = OBSOLETE
 			sub(MSGID_RE, "");
+			s = 0
 			singular[s++] = $0
 			while (result = getline) {
 				if ($0 ~ ORE "$") continue
@@ -148,6 +158,7 @@ BEGIN {
 				singular[s++] = $0
 			}
 			if (result < 0) break
+			continue
 		}
 
 		# Buffer any "msgid_plural" statements into the plural array.
@@ -155,13 +166,16 @@ BEGIN {
 		if ($0 ~ MSGID_PLURAL_RE) {
 			if ($0 ~ ORE_MATCH) obsolete = OBSOLETE
 			sub(MSGID_PLURAL_RE, "");
+			p = 0
 			plural[p++] = $0
 			while (result = getline) {
+				if ($0 ~ ORE "$") continue
 				if ($0 !~ MSG_CONTINUATION_RE) break
 				sub(ORE, "")
 				plural[p++] = $0
 			}
 			if (result < 0) break
+			continue
 		}
 
 		# If we see "msgstr", then we are outputting the
@@ -176,12 +190,14 @@ BEGIN {
 				for (i = 1; i < s; i++)
 					print obsolete singular[i]
 			}
+			obsolete = ""
 			print $0
 			while (result = getline) {
 				if ($0 !~ MSG_CONTINUATION_RE) break
 				print $0
 			}
 			if (result < 0) break
+			continue
 		}
 
 		# If we see "msgstr[0]", then we are outputting the
@@ -198,11 +214,13 @@ BEGIN {
 			}
 			sub(MSGSTR0_RE, "");
 			print obsolete "msgstr " $0
+			obsolete = ""
 			while (result = getline) {
 				if ($0 !~ MSG_CONTINUATION_RE) break
 				print $0
 			}
 			if (result < 0) break
+			continue
 		}
 
 		# If we see "msgstr[1]", then we are outputting the
@@ -232,8 +250,8 @@ BEGIN {
 					if ($0 !~ MSG_CONTINUATION_RE) break
 				}
 				if (result < 0) break
-					s = 0; p = 0
-				next
+				s = 0; p = 0
+				continue
 			}
 
 			if (p > 0) {
@@ -243,11 +261,13 @@ BEGIN {
 			}
 			sub(MSGSTR1_RE, "");
 			print obsolete "msgstr " $0
+			obsolete = ""
 			while (result = getline) {
 				if ($0 !~ MSG_CONTINUATION_RE) break
 				print $0
 			}
 			if (result < 0) break
+			continue
 		}
 
 		# We drop all other "msgstr[N]" translations since the
@@ -261,13 +281,7 @@ BEGIN {
 				print $0
 			}
 			if (result < 0) break
-		}
-
-		# Pass remaining lines verbatim
-		if ($0 ~ /^#/ || $0 ~ /^[ 	]*$/) {
-			print $0
-			result = getline
-			if (result < 0) break
+			continue
 		}
 	}
 }
