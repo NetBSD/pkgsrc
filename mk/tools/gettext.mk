@@ -1,4 +1,4 @@
-# $NetBSD: gettext.mk,v 1.3 2006/04/14 13:49:17 jlam Exp $
+# $NetBSD: gettext.mk,v 1.4 2006/04/15 16:48:12 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -57,22 +57,26 @@ USE_TOOLS+=	msgfmt
 MAKEFLAGS+=		TOOLS_IGNORE.msgfmt=
 .  else
 .    if defined(TOOLS_PLATFORM.msgfmt) && !empty(TOOLS_PLATFORM.msgfmt)
-.      if !defined(_TOOLS_USE_PKGSRC.msgfmt)
+_TOOLS_USE_PKGSRC.msgfmt?=	no
 #
-# Discover if the version on the builtin msgfmt is new enough to handle
-# msgid_plural (at least 0.10.35).
+# Determine if the platform-supplied msgfmt is new enough to support
+# the msgid_plural statement.  We need at least 0.10.36 for GNU msgfmt.
 #
+# XXX Solaris msgfmt also understands msgid_plural but more tests are
+# XXX needed to take advantage of this.
+# XXX
+.      if !defined(_TOOLS_USE_MSGFMT_SH)
 _TOOLS_VERSION.msgfmt!=		${TOOLS_PLATFORM.msgfmt} --version |	\
 				${AWK} '{ print $$4; exit }'
-_TOOLS_USE_PKGSRC.msgfmt!=						\
-	if ${PKG_ADMIN} pmatch "gettext>=0.10.35"			\
+_TOOLS_USE_MSGFMT_SH!=							\
+	if ${PKG_ADMIN} pmatch "gettext>0.10.35"			\
 			gettext-${_TOOLS_VERSION.msgfmt:Q}; then	\
 		${ECHO} no;						\
 	else								\
 		${ECHO} yes;						\
 	fi
 .      endif
-MAKEVARS+=	_TOOLS_USE_PKGSRC.msgfmt
+MAKEVARS+=	_TOOLS_USE_MSGFMT_SH
 .    else
 _TOOLS_USE_PKGSRC.msgfmt=	yes
 .    endif
@@ -92,7 +96,8 @@ TOOLS_CREATE+=		msgfmt
 TOOLS_DEPENDS.msgfmt?=	${_TOOLS_DEP.gettext-tools}:../../devel/gettext-tools
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.msgfmt=${TOOLS_DEPENDS.msgfmt:C/:.*//}
 TOOLS_PATH.msgfmt=	${TOOLS_PREFIX.msgfmt}/bin/msgfmt
-.    else
+.    elif defined(_TOOLS_USE_MSGFMT_SH) && \
+          !empty(_TOOLS_USE_MSGFMT_SH:M[yY][eE][sS])
 USE_TOOLS+=		awk sh
 TOOLS_PATH.msgfmt=	${PKGSRCDIR}/mk/tools/msgfmt.sh
 TOOLS_SCRIPT.msgfmt=	AWK=${TOOLS_AWK:Q} CAT=${TOOLS_CAT:Q}		\
