@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:09:48 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/15 22:11:43 tonio Exp $
 #
 
 .include "../../lang/sablevm-classpath/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/classpath/classpath-gui/}
-PKGREVISION=	5
 COMMENT+=	(GUI libraries)
 
-DEPENDS+=	sablevm-classpath>=1.1.3nb1:../../lang/sablevm-classpath
+DEPENDS+=	sablevm-classpath>=1.13:../../lang/sablevm-classpath
 
 USE_TOOLS+=	pkg-config
 
-BUILD_DIRS=	${WRKSRC}/native/jni/classpath
-BUILD_DIRS+=	${WRKSRC}/native/jni/gtk-peer
-INSTALL_DIRS=	${WRKSRC}/native/jni/gtk-peer
+BUILD_DIRS=	native/jni/classpath
+BUILD_DIRS+=	native/jni/gtk-peer
+INSTALL_DIRS=	native/jni/gtk-peer
 
 PRINT_PLIST_AWK+= \
 	/^@dirrm java\/sablevm\/lib\/sablevm\/sablevm-classpath$$/ \
