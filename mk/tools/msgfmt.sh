@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.13 2006/04/15 04:32:02 jlam Exp $
+# $NetBSD: msgfmt.sh,v 1.14 2006/04/15 04:41:08 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -135,15 +135,6 @@ BEGIN {
 	obsolete = ""
 
 	while (result == 1) {
-		# Pass blank lines or comments verbatim.
-		COMMENT_BLANK_RE = "^(#|[ 	]*$)"
-		if ($0 ~ COMMENT_BLANK_RE) {
-			print $0
-			result = getline
-			if (result < 0) break
-			continue
-		}
-
 		# Buffer any "msgid" statements into the singular array.
 		MSGID_RE = ORE "msgid[ 	]+"
 		if ($0 ~ MSGID_RE) {
@@ -283,6 +274,11 @@ BEGIN {
 			if (result < 0) break
 			continue
 		}
+
+		# Pass everything else verbatim.
+		print $0
+		result = getline
+		if (result < 0) break
 	}
 }
 ' | $debug | $cmd
