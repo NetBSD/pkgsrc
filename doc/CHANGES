@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13588 2006/04/15 08:54:29 agc Exp $
+$NetBSD: CHANGES,v 1.13589 2006/04/15 09:34:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2104,3 +2104,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/seamonkey-gtk1 to 1.0.1 [ghen 2006-04-15]
 	Updated www/seamonkey-bin to 1.0.1 [ghen 2006-04-15]
 	Updated devel/netbsd-iscsi to 20060415 [agc 2006-04-15]
+	Updated games/freeciv-share to 2.0.8 [adam 2006-04-15]
+	Updated games/freeciv-client to 2.0.8 [adam 2006-04-15]
+	Updated games/freeciv-server to 2.0.8 [adam 2006-04-15]
