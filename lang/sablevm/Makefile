@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/04/15 22:20:02 tonio Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/15 23:31:37 tonio Exp $
 #
 
 DISTNAME=	sablevm-1.13
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://sablevm.org/download/release/1.13/
 
@@ -22,9 +23,13 @@ USE_LIBTOOL=		yes
 JAVA_NAME=		sablevm
 JAVA_HOME=		${PREFIX}/java/sablevm
 JAVA_WRAPPERS+=		java
-JAVA_WRAPPER_BIN.java=	${JAVA_HOME}/bin/sablevm
+JAVA_WRAPPER_BIN.java=	${JAVA_HOME}/bin/java-sablevm --classpath $${CLASSPATH}
 
 PRINT_PLIST_AWK+=     /^@dirrm java\/sablevm$$/ \
+			|| /^@dirrm java\/sablevm\/share$$/ \
+			|| /^@dirrm java\/sablevm\/lib\/sablevm\/jre$$/ \
+			|| /^@dirrm java\/sablevm\/lib\/sablevm\/include$$/ \
+			|| /^@dirrm java\/sablevm\/lib\/sablevm$$/ \
 			{ print "@comment in sablevm-classpath: " $$0; \
 				next; }
 
