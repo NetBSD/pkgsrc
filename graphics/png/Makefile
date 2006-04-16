@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2006/04/16 19:39:46 wiz Exp $
+# $NetBSD: Makefile,v 1.75 2006/04/16 23:19:15 wiz Exp $
 
-# On update, don't forget to increase shared library major/minor's in
-# accordance with changes (patch-aa).
 DISTNAME=	libpng-1.2.9
 PKGNAME=	${DISTNAME:S/lib//}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 		http://www.libpng.org/pub/png/src/ \
@@ -18,33 +17,19 @@ COMMENT=	Library for manipulating PNG images
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LIBTOOL=	yes
-TEST_TARGET=	test
-
-LIBPNG_SO_MAJOR=	3
-LIBPNG_SO_MINOR=	3
-
-MAKEFILE=	scripts/makefile.std
-MAKE_ENV+=	REALCC=${CC:Q}
-MAKE_ENV+=	LIBPNG_SO_MAJOR=${LIBPNG_SO_MAJOR:Q}
-MAKE_ENV+=	LIBPNG_SO_MINOR=${LIBPNG_SO_MINOR:Q}
-
-INSTALLATION_DIRS=	include lib/pkgconfig ${PKGMANDIR}/man3 ${PKGMANDIR}/man5
-
+GNU_CONFIGURE=	yes
 PKGCONFIG_OVERRIDE=	scripts/libpng.pc.in
+TEST_TARGET=	test
+USE_LIBTOOL=	yes
 
-SUBST_CLASSES+=		pc
-SUBST_STAGE.pc=		post-patch
-SUBST_FILES.pc=		scripts/libpng.pc.in
-SUBST_SED.pc=		-e 's,@PREFIX@,${PREFIX},'
-SUBST_MESSAGE.pc=	Fixing libpng.pc.in.
-
+# highly version dependent -- fix up libtool .la file contents, since
+# just copying a .la file to a new filename is not enough
+# PLIST breakage will show when it needs updating :)
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/libpng.3 ${PREFIX}/${PKGMANDIR}/man3
-	${INSTALL_MAN} ${WRKSRC}/libpngpf.3 ${PREFIX}/${PKGMANDIR}/man3
-	${INSTALL_MAN} ${WRKSRC}/png.5 ${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_DATA} ${WRKSRC}/scripts/libpng.pc.in \
-		${PREFIX}/lib/pkgconfig/libpng12.pc
+	cd ${PREFIX}/lib && \
+		${SED} -e 's/png12/png/g' -e 's/0.9.0/3.9.0/' -e 's/so\.0/so\.3/g' \
+			libpng.la > libpng.la.out && \
+		${MV} libpng.la.out libpng.la
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
