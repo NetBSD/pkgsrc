@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/29 21:42:55 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/16 20:26:26 ghen Exp $
 
 DISTNAME=	torsmo-0.18
 CATEGORIES=	sysutils
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=torsmo/}
 MAINTAINER=	ghen@NetBSD.org
 HOMEPAGE=	http://torsmo.sourceforge.net/
 COMMENT=	Tyopoytaorvelo System Monitor
+
+NOT_FOR_PLATFORM=	Darwin-*-*
 
 GNU_CONFIGURE=	yes
 
