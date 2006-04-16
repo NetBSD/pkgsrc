@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:10:18 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/16 16:17:28 adrianp Exp $
 
-DISTNAME=	xmltv-0.5.40
+DISTNAME=	xmltv-0.5.42
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	multimedia perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmltv/}
 EXTRACT_SUFX=	.tar.bz2
@@ -40,6 +39,8 @@ DEPENDS+=	p5-Text-Kakasi-[0-9]*:../../textproc/p5-Text-Kakasi
 DEPENDS+=	p5-XML-LibXML-[0-9]*:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
 DEPENDS+=	p5-HTTP-Cache-Transparent-[0-9]*:../../www/p5-HTTP-Cache-Transparent
+# needed by pt grabber
+DEPENDS+=	p5-Unicode-UTF8simple-[0-9]*:../../converters/p5-Unicode-UTF8simple
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
