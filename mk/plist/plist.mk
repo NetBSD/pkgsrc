@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.8 2006/04/05 05:54:01 jlam Exp $
+# $NetBSD: plist.mk,v 1.9 2006/04/16 04:27:18 jlam Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -173,18 +173,6 @@ _SHLIB_TYPE_cmd=							\
 #
 GENERATE_PLIST?=	${TRUE};
 
-# XXX Generate info page entries for each of the listed INFO_FILES.
-# XXX This section should go away after info file listings have been
-# XXX pushed into the PLISTs.
-# XXX
-.if defined(INFO_FILES) && !empty(INFO_FILES)
-.  for _file_ in ${INFO_FILES}
-_INFO_GENERATE_PLIST+=	${ECHO} "info/"${_file_:Q};
-.  endfor
-.else
-_INFO_GENERATE_PLIST=	${TRUE};
-.endif
-
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 #
 # _PLIST_IGNORE_FILES basically mirrors the list of ignored files found
@@ -224,8 +212,7 @@ _GENERATE_PLIST=							\
 		${SED} -e "s|^${PREFIX}/|@unexec ${RMDIR} -p %D/|"	\
 		       -e "s,$$, 2>/dev/null || ${TRUE},";
 .else
-_GENERATE_PLIST=	{ ${_INFO_GENERATE_PLIST} };			\
-			${CAT} ${PLIST_SRC};				\
+_GENERATE_PLIST=	${CAT} ${PLIST_SRC};				\
 			${GENERATE_PLIST}
 .endif
 
@@ -243,12 +230,8 @@ ${PLIST}:
 		> ${.TARGET}
 
 .if defined(INFO_FILES)
-.  if empty(INFO_FILES)
 INFO_FILES_cmd=								\
 	${CAT} ${PLIST} |						\
 	${SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_INFO_AWK} |		\
 	${AWK} '($$0 !~ "-[0-9]*(\.gz)?$$") { print }'
-.  else
-INFO_FILES_cmd=	${TRUE}
-.  endif
 .endif

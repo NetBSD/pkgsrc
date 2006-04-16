@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.50 2006/04/08 07:43:41 reed Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.51 2006/04/16 04:27:18 jlam Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -1148,25 +1148,9 @@
 	located. <varname>PKGINFODIR</varname> defaults to
 	<quote>info</quote> and can be overridden by the user.</para>
 
-      <para>There are two mutually exclusive ways to specify the info
-	files for the package:</para>
-
-      <itemizedlist>
-	<listitem>
-	  <para>list each of info files in the package
-	    <filename>PLIST</filename>; however any split info files
-	    need not be listed, or</para>
-	</listitem>
-
-	<listitem>
-	  <para>list the filename of each info file in the
-	    <varname>INFO_FILES</varname> variable; however any split
-	    info file filenames need not be listed. In this case
-	    each of the info files should be installed into the
-	    directory <filename>${PREFIX}/${PKGINFODIR}</filename>.</para>
-	</listitem>
-	
-      </itemizedlist>
+      <para>The info files for the package should be listed in the
+	package <filename>PLIST</filename>; however any split info files
+	need not be listed.</para>
 
       <para>A package which needs the <quote>makeinfo</quote> command
         at build time must add <quote>makeinfo</quote> to

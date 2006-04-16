@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.45 2006/04/06 17:57:34 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.46 2006/04/16 04:27:17 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -488,17 +488,8 @@ FILES_SUBST+=	INSTALL_INFO=${INSTALL_INFO:Q}
 
 ${_INSTALL_INFO_FILES_DATAFILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	set -- dummy ${INFO_FILES}; shift;				\
-	exec 1>>${.TARGET}.tmp;						\
-	while ${TEST} $$# -gt 0; do					\
-		file="$$1"; shift;					\
-		file=${PKGINFODIR:Q}"/$$file";				\
-		${ECHO} "# INFO: $$file";				\
-	done
-	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
 
 ${_INSTALL_INFO_FILES_FILE}: ${_INSTALL_INFO_FILES_DATAFILE}
 ${_INSTALL_INFO_FILES_FILE}: ../../mk/install/info-files
