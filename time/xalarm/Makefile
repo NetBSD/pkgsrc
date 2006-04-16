@@ -1,23 +1,17 @@
-# $NetBSD: Makefile,v 1.9 2006/03/04 21:30:53 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/16 01:00:06 perry Exp $
 
-DISTNAME=	xalarm-3.03
-PKGNAME=	xalarm-3.05
-PKGREVISION=	2
+DISTNAME=	xalarm-3.06
 CATEGORIES=	time
-MASTER_SITES=	${MASTER_SITE_XCONTRIB:=R5contrib-fixes/xalarm/}
-EXTRACT_SUFX=	.tar.Z
-
-PATCH_SITES=	${MASTER_SITE_XCONTRIB:=R5contrib-fixes/xalarm/}
-PATCHFILES=	xalarm-3.03-04.patch.Z xalarm-3.04-05.patch.Z
-PATCH_DIST_STRIP=-p1
+MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	X11 interactive alarm clock
 
 DEPENDS+=	skill>=4.0:../../sysutils/skill
 
-WRKSRC=		${WRKDIR}/xalarm
 USE_IMAKE=	yes
+XAW_TYPE?=	3d
 
 FORTUNE=	"Sorry, xfortune is unavailable - no fortune!"
 YOW=		"Sorry, xyow is unavailable - no yow!"
@@ -57,5 +51,7 @@ pre-configure:
 	${SED}  -e 's|@SKILL@|${LOCALBASE}/bin/skill|' \
 		-e 's|@GREP@|${GREP}|' \
 		-e 's|@KILL@|${KILL}|' ${FILESDIR}/fns.h.in > ${WRKSRC}/fns.h
+	${CP} ${FILESDIR}/XAlarm-color.ad ${WRKSRC}/
 
+.include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
