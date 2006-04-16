@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/04/13 06:14:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/16 22:10:25 markd Exp $
 #
 
 DISTNAME=		libtunepimp-0.4.2
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.musicbrainz.org/pub/musicbrainz/ \
 			http://ftp.musicbrainz.org/pub/musicbrainz/ \
@@ -13,7 +14,16 @@ HOMEPAGE=		http://musicbrainz.org/products/tunepimp/index.html
 COMMENT=		Library to support MusicBrainz enabled tagging
 
 GNU_CONFIGURE=		YES
-CONFLICTS+=		tunepimp-[0-9]*
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		YES
+CONFLICTS+=		tunepimp-[0-9]* trm-[0-9]*
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+pre-configure:
+	${ECHO} "#define HAVE_STATVFS 1" >> ${WRKSRC}/config.h.in
+.endif
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/musicbrainz/buildlink3.mk"
@@ -24,4 +34,5 @@ CONFLICTS+=		tunepimp-[0-9]*
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../multimedia/mpeg4ip/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
