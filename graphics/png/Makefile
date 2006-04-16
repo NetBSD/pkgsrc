@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.73 2005/12/27 17:34:53 reed Exp $
+# $NetBSD: Makefile,v 1.74 2006/04/16 19:39:46 wiz Exp $
 
 # On update, don't forget to increase shared library major/minor's in
 # accordance with changes (patch-aa).
-DISTNAME=	libpng-1.2.8
+DISTNAME=	libpng-1.2.9
 PKGNAME=	${DISTNAME:S/lib//}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
@@ -22,7 +22,7 @@ USE_LIBTOOL=	yes
 TEST_TARGET=	test
 
 LIBPNG_SO_MAJOR=	3
-LIBPNG_SO_MINOR=	2
+LIBPNG_SO_MINOR=	3
 
 MAKEFILE=	scripts/makefile.std
 MAKE_ENV+=	REALCC=${CC:Q}
@@ -37,7 +37,7 @@ SUBST_CLASSES+=		pc
 SUBST_STAGE.pc=		post-patch
 SUBST_FILES.pc=		scripts/libpng.pc.in
 SUBST_SED.pc=		-e 's,@PREFIX@,${PREFIX},'
-SUBST_MESSAGE.pc=	"Fixing libpng.pc.in."
+SUBST_MESSAGE.pc=	Fixing libpng.pc.in.
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/libpng.3 ${PREFIX}/${PKGMANDIR}/man3
