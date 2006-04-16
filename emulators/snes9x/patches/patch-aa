@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.12 2006/03/18 15:56:00 ben Exp $
+$NetBSD: patch-aa,v 1.13 2006/04/16 01:21:08 ben Exp $
 
---- Makefile.in.orig	2006-03-18 05:54:27.000000000 -0800
+--- Makefile.in.orig	2004-12-30 14:15:44.000000000 -0800
 +++ Makefile.in
 @@ -113,6 +113,20 @@ SPC7110OBJ=spc7110.o
  OBC1OBJ=obc1.o
@@ -36,6 +36,15 @@ $NetBSD: patch-aa,v 1.12 2006/03/18 15:56:00 ben Exp $
  endif
  
  ifdef GLIDE
+@@ -186,7 +201,7 @@ ifdef DREAMCAST
+ OPTIMISE=-O4 -ffreestanding -ffast-math -fschedule-insns2 -fomit-frame-pointer -fno-inline-functions -fno-defer-pop -fforce-addr -fstrict-aliasing -funroll-loops -fdelete-null-pointer-checks -fno-exceptions
+ CPUFLAGS=-ml  -m4-single-only
+ else
+-OPTIMISE = @OPTIMIZE@
++OPTIMISE=
+ endif
+ 
+ DEFS += \
 @@ -206,6 +221,8 @@ $(AIDODEFINES) \
  $(KREEDDEFINES) \
  $(SDD1DEFINES) \
