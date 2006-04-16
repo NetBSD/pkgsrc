@@ -1,0 +1,13 @@
+! $NetBSD: XAlarm-color.ad,v 1.1 2006/04/16 01:00:06 perry Exp $
+! This file disappeared from the distribution between 3.05 and 3.06 for
+! unknown reasons.
+
+#include "XAlarm"
+
+XAlarm*background:			LightYellow
+XAlarm*foreground:			IndianRed
+XAlarm*Command.background:		IndianRed
+XAlarm*Command.foreground:		LightYellow
+XAlarm.When?.when.Dialog.background:	MidnightBlue
+XAlarm.Warning!.warning.background:	HotPink
+XAlarm.Alarm!.alarm.background:		DarkGreen
