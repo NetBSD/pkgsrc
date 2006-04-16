@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.229 2006/04/13 21:38:12 wiz Exp $
+# $NetBSD: Makefile,v 1.230 2006/04/16 22:19:22 tonio Exp $
 #
 
 COMMENT=	Programming languages
@@ -62,6 +62,7 @@ SUBDIR+=	icon
 SUBDIR+=	inform
 SUBDIR+=	intercal
 SUBDIR+=	ja-gawk
+SUBDIR+=	jamvm
 SUBDIR+=	japhar
 SUBDIR+=	jasmin
 SUBDIR+=	java-lang-spec
