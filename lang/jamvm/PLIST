@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/16 22:16:36 tonio Exp $
+java/jamvm/bin/jamvm
+java/jamvm/include/jni.h
+java/jamvm/share/jamvm/classes.zip
+@dirrm java/jamvm/share/jamvm
+@dirrm java/jamvm/share
+@dirrm java/jamvm/include
+@dirrm java/jamvm/bin
+@dirrm java/jamvm
