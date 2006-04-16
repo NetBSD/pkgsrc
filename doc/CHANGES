@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13608 2006/04/16 22:19:22 tonio Exp $
+$NetBSD: CHANGES,v 1.13609 2006/04/16 22:25:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2133,3 +2133,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Update multimedia/p5-xmltv to 0.5.42 [adrianp 2006-04-16]
 	Updated graphics/png to 1.2.9 [wiz 2006-04-16]
 	Added lang/jamvm version 1.4.2 [tonio 2006-04-16]
+	Added time/p5-Time-Local version 1.12 [minskim 2006-04-16]
