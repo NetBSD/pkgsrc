@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2006/04/16 02:09:48 perry Exp $
+
+The appearance of xalarm is much better if the color resources are
+properly specified and the correct resources for Xaw3d are set.
+
+You can do this just by setting
+
+*customization: -color 
+
+in your ~/.Xdefaults file.
+
+Alternatively, you can put the contents of the XAlarm-color app defaults
+file into your .Xdefulats file.
+===========================================================================
