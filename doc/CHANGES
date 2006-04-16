@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13603 2006/04/16 11:56:53 wiz Exp $
+$NetBSD: CHANGES,v 1.13604 2006/04/16 12:06:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2127,3 +2127,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/mldonkey-gui to 2.7.5 [wiz 2006-04-16]
 	Updated mail/evolution-data-server to 1.6.1 [wiz 2006-04-16]
 	Updated x11/gnome-desktop to 2.14.1.1 [wiz 2006-04-16]
+	Updated sysutils/gnome-menus to 2.14.0 [wiz 2006-04-16]
