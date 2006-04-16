@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2006/04/15 15:02:10 salo Exp $
+# $NetBSD: Makefile,v 1.66 2006/04/16 16:15:01 salo Exp $
 
 DISTNAME=	audit-packages-1.42
 CATEGORIES=	security pkgtools
@@ -19,8 +19,6 @@ NO_CHECKSUM=    yes
 
 OWN_DIRS=	${PKGVULNDIR}
 INSTALLATION_DIRS=	man/cat8 man/man8 sbin
-
-SKIP_AUDIT_PACKAGES=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
