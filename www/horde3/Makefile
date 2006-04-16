@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/03/28 20:09:49 adrianp Exp $
+# $NetBSD: Makefile,v 1.23 2006/04/16 17:17:48 adrianp Exp $
 
 DISTNAME=	horde-3.1.1
 CATEGORIES=	www
@@ -10,6 +10,8 @@ COMMENT=	PHP application framework
 
 CONFLICTS+=	horde-2.*
 
+.include "../../lang/php/phpversion.mk"
+
 DEPENDS+=	php-gettext>=4.3.3:../../devel/php-gettext
 DEPENDS+=	php-mcrypt>=4.3.3:../../security/php-mcrypt
 DEPENDS+=	php-iconv>=4.3.3:../../converters/php-iconv
@@ -18,7 +20,11 @@ DEPENDS+=	pear-Log-[0-9]*:../../sysutils/pear-Log
 DEPENDS+=	pear-Mail_Mime-[0-9]*:../../mail/pear-Mail_Mime
 DEPENDS+=	pear-DB-[0-9]*:../../databases/pear-DB
 DEPENDS+=	ap-php>=4.3.3:../../www/ap-php
+.if ${PKG_PHP_VERSION} == "4"
 DEPENDS+=	php-domxml>=4.3.3:../../textproc/php4-domxml
+.elif ${PKG_PHP_VERSION} == "5"
+DEPENDS+=	php-dom-[0-9]*:../../textproc/php5-dom
+.endif
 DEPENDS+=	php-zlib>=4.3.3:../../archivers/php-zlib
 
 .include "../../mk/bsd.prefs.mk"
