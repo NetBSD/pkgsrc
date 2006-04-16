@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/03/18 15:56:00 ben Exp $
+# $NetBSD: Makefile,v 1.36 2006/04/16 01:21:08 ben Exp $
 
 SNESVER=		1.43
 DISTNAME=		snes9x-${SNESVER}-src
@@ -17,6 +17,17 @@ USE_TOOLS+=		gmake
 PTHREAD_OPTS+=		require
 INSTALLATION_DIRS=	bin
 GNU_CONFIGURE=		YES
+
+SUBST_CLASSES+=		nodos
+SUBST_STAGE.nodos=	pre-patch
+SUBST_FILES.nodos=	../language.h
+SUBST_FILES.nodos+=	dsp1.h dsp3emu.cpp dsp4emu.cpp
+SUBST_SED.nodos=	-e 's|||g'
+
+SUBST_CLASSES+=		paircpp
+SUBST_STAGE.paircpp=	pre-patch
+SUBST_FILES.paircpp=	65c816.h sa1.h
+SUBST_SED.paircpp=	-e 's|pair|snes9x_pair|g'
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/snes9x ${PREFIX}/bin
