@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/03/30 21:15:27 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/04/16 11:43:24 wiz Exp $
 include/evolution-data-server-1.6/camel/broken-date-parser.h
 include/evolution-data-server-1.6/camel/camel-address.h
 include/evolution-data-server-1.6/camel/camel-arg.h
@@ -825,6 +825,7 @@ ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/evolution-data-server-1.6.mo
 ${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/evolution-data-server-1.6.mo
 ${PKGLOCALEDIR}/locale/da/LC_MESSAGES/evolution-data-server-1.6.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/evolution-data-server-1.6.mo
+${PKGLOCALEDIR}/locale/dz/LC_MESSAGES/evolution-data-server-1.6.mo
 ${PKGLOCALEDIR}/locale/el/LC_MESSAGES/evolution-data-server-1.6.mo
 ${PKGLOCALEDIR}/locale/en_AU/LC_MESSAGES/evolution-data-server-1.6.mo
 ${PKGLOCALEDIR}/locale/en_CA/LC_MESSAGES/evolution-data-server-1.6.mo
@@ -846,6 +847,7 @@ ${PKGLOCALEDIR}/locale/id/LC_MESSAGES/evolution-data-server-1.6.mo
 ${PKGLOCALEDIR}/locale/is/LC_MESSAGES/evolution-data-server-1.6.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/evolution-data-server-1.6.mo
 ${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/evolution-data-server-1.6.mo
+${PKGLOCALEDIR}/locale/ka/LC_MESSAGES/evolution-data-server-1.6.mo
 ${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/evolution-data-server-1.6.mo
 ${PKGLOCALEDIR}/locale/ku/LC_MESSAGES/evolution-data-server-1.6.mo
 ${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/evolution-data-server-1.6.mo
