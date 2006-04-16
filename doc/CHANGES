@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13606 2006/04/16 16:20:23 adrianp Exp $
+$NetBSD: CHANGES,v 1.13607 2006/04/16 19:40:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2131,3 +2131,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/tidy to 20051026 [wiz 2006-04-16]
 	Added converters/p5-Unicode-UTF8simple version 1.06 [adrianp 2006-04-16]
 	Update multimedia/p5-xmltv to 0.5.42 [adrianp 2006-04-16]
+	Updated graphics/png to 1.2.9 [wiz 2006-04-16]
