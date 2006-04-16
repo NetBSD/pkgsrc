@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.9 2004/08/17 09:54:30 drochner Exp $
+$NetBSD: patch-ab,v 1.10 2006/04/16 19:39:46 wiz Exp $
 
---- pngtest.c.orig	2004-08-17 11:24:59.000000000 +0200
+--- pngtest.c.orig	2006-04-14 11:22:24.000000000 +0000
 +++ pngtest.c
-@@ -578,7 +578,7 @@ png_debug_free(png_structp png_ptr, png_
+@@ -576,7 +576,7 @@ png_debug_free(png_structp png_ptr, png_
           }
           if (pinfo->next == NULL)
           {
@@ -11,18 +11,18 @@ $NetBSD: patch-ab,v 1.9 2004/08/17 09:54:30 drochner Exp $
              break;
           }
           ppinfo = &pinfo->next;
-@@ -1435,8 +1435,8 @@ main(int argc, char *argv[])
+@@ -1433,8 +1433,8 @@ main(int argc, char *argv[])
                 current_allocation);
              while (pinfo != NULL)
              {
--               fprintf(STDERR, " %lu bytes at %x\n", pinfo->size, 
+-               fprintf(STDERR, " %lu bytes at %x\n", pinfo->size,
 -                 (unsigned int) pinfo->pointer);
-+               fprintf(STDERR, " %lu bytes at %p\n", pinfo->size, 
++               fprintf(STDERR, " %lu bytes at %p\n", pinfo->size,
 +                 pinfo->pointer);
                 pinfo = pinfo->next;
              }
           }
-@@ -1510,8 +1510,8 @@ main(int argc, char *argv[])
+@@ -1508,8 +1508,8 @@ main(int argc, char *argv[])
                  current_allocation);
               while (pinfo != NULL)
               {
