@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.137 2006/04/03 16:53:58 tron Exp $
+# $NetBSD: Makefile,v 1.138 2006/04/17 08:11:17 adam Exp $
 
-DISTNAME=	netpbm-10.32
-PKGREVISION=	1
+DISTNAME=	netpbm-10.33
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz
@@ -74,12 +73,12 @@ post-install:
 	${FIND} * \! -type d -print | ${SORT} >${PLIST_SRC} &&	\
 	${FIND} * -type d -print | 				\
 	while read DIR; do					\
-	  ${TEST} -d "${PREFIX}/$${DIR}" ||			\
-	    ${ECHO} "@dirrm $${DIR}";				\
+		${TEST} -d "${PREFIX}/$${DIR}" ||		\
+			${ECHO} "@dirrm $${DIR}";		\
 	done >>${PLIST_SRC} &&					\
 	${PAX} -rwpppm . ${PREFIX}
 	${RM} -fr ${STAGEDIR}
 	${FIND} ${PREFIX}/share/doc/netpbm -type f -print |	\
-	  xargs ${CHMOD} ${NONBINMODE}
+		${XARGS} ${CHMOD} ${NONBINMODE}
 
 .include "../../mk/bsd.pkg.mk"
