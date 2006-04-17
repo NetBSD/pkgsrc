@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13614 2006/04/17 08:56:35 simonb Exp $
+$NetBSD: CHANGES,v 1.13615 2006/04/17 11:22:09 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2144,3 +2144,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/qalculate-units to 0.9.3 [adam 2006-04-17]
 	Updated graphics/netpbm to 10.33 [adam 2006-04-17]
 	Updated www/adzap to 20060414 [simonb 2006-04-17]
+	Updated databases/mysql5-server to 5.0.20nb1 [tron 2006-04-17]
