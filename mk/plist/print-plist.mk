@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.5 2006/03/20 01:48:58 jlam Exp $
+# $NetBSD: print-plist.mk,v 1.6 2006/04/17 06:12:46 jlam Exp $
 
 ###
 ### Automatic PLIST generation
@@ -27,7 +27,8 @@ _PRINT_PLIST_AWK_SUBST+=						\
 	gsub(/${LOWER_OPSYS}/, "$${LOWER_OPSYS}");			\
 	gsub(/${PKGNAME_NOREV}/, "$${PKGNAME}");			\
 	gsub(/${PKGVERSION:S/./\./g:C/nb[0-9]*$$//}/, "$${PKGVERSION}");\
-	gsub(/${PKGLOCALEDIR}\/locale/, "$${PKGLOCALEDIR}/locale");	\
+	gsub(/^${PKGLOCALEDIR}\/locale/, "share/locale");		\
+	gsub(/^@dirrm ${PKGLOCALEDIR}\/locale/, "@dirrm share/locale");	\
 	gsub("^${PKGINFODIR}\/", "info/");				\
 	gsub("^${PKGMANDIR}\/", "man/");				\
 }
