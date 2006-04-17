@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:08 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/17 13:46:02 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GAL_BUILDLINK3_MK:=	${GAL_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gal
 
 .if !empty(GAL_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gal+=	gal>=0.22nb6
-BUILDLINK_ABI_DEPENDS.gal?=	gal>=0.24nb2
+BUILDLINK_ABI_DEPENDS.gal?=	gal>=0.24nb3
 BUILDLINK_PKGSRCDIR.gal?=	../../devel/gal
 .endif	# GAL_BUILDLINK3_MK
 

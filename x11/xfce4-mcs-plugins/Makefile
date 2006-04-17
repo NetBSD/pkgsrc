@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2006/04/02 09:49:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/17 13:46:12 wiz Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce-mcs-plugins-${XFCE4_VERSION}
 PKGNAME=	xfce4-mcs-plugins-${XFCE4_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 COMMENT=	Xfce settings manager plugins
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2006/02/05 23:11:43 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2006/04/17 13:47:01 wiz Exp $
 
 DISTNAME=	ruby-gtk-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-gtk-${VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11 ruby
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ruby-gnome/}
 
