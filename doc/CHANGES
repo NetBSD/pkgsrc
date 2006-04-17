@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13623 2006/04/17 21:17:04 wiz Exp $
+$NetBSD: CHANGES,v 1.13624 2006/04/17 21:41:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2136,6 +2136,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Added time/p5-Time-Local version 1.12 [minskim 2006-04-16]
 	Updated graphics/png to 1.2.9nb1 [wiz 2006-04-16]
 	Updated net/proftpd to 1.3.0 [martti 2006-04-17]
+	Updated graphics/png to 1.2.9nb2 [wiz 2006-04-17]
 	Updated math/qalculate to 0.9.3 [adam 2006-04-17]
 	Updated math/qalculate-gtk to 0.9.3 [adam 2006-04-17]
 	Updated math/qalculate-kde to 0.9.3.1 [adam 2006-04-17]
@@ -2145,6 +2146,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/netpbm to 10.33 [adam 2006-04-17]
 	Updated www/adzap to 20060414 [simonb 2006-04-17]
 	Updated databases/mysql5-server to 5.0.20nb1 [tron 2006-04-17]
+	Updated graphics/png to 1.2.9nb2 [wiz 2006-04-17]
 	Updated pkgtools/revbump to 1.7 [wiz 2006-04-17]
 	Updated emulators/vba to 1.7.2 [wiz 2006-04-17]
 	Added textproc/p5-Text-Context-EitherSide version 1.3 [minskim 2006-04-17]
@@ -2162,3 +2164,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed print/tex-eurosym [wiz 2006-04-17]
 	Removed print/texfamily [wiz 2006-04-17]
 	Removed print/texfamily-share [wiz 2006-04-17]
+	Updated print/acroread7 to 7.0.5nb1 [wiz 2006-04-17]
