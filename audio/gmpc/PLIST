@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/08 16:13:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/04/17 07:07:11 jlam Exp $
 bin/gmpc
 include/gmpc/config1.h
 include/gmpc/cover-art.h
@@ -24,8 +24,8 @@ share/gmpc/open-location.glade
 share/gmpc/player-repeat.png
 share/gmpc/player-shuffle.png
 share/gmpc/playlist3.glade
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gmpc.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gmpc.mo
+share/locale/fr/LC_MESSAGES/gmpc.mo
+share/locale/ru/LC_MESSAGES/gmpc.mo
 share/pixmaps/gmpc.png
 lib/pkgconfig/gmpc.pc
 @comment in xdg-dirs: @dirrm share/pixmaps

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/12/27 23:35:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:14 jlam Exp $
 bin/kmysqladmin
 share/doc/kde/HTML/en/kmysqladmin/Logo.png
 share/doc/kde/HTML/en/kmysqladmin/common
@@ -23,8 +23,8 @@ share/kde/icons/hicolor/32x32/apps/kmysqladmin.png
 share/kde/icons/hicolor/48x48/apps/kmysqladmin.png
 share/kde/icons/locolor/16x16/apps/kmysqladmin.png
 share/kde/icons/locolor/32x32/apps/kmysqladmin.png
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kmysqladmin.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kmysqladmin.mo
+share/locale/de/LC_MESSAGES/kmysqladmin.mo
+share/locale/hu/LC_MESSAGES/kmysqladmin.mo
 @comment in kde: @dirrm share/kde/icons/locolor/32x32/apps
 @comment in kde: @dirrm share/kde/icons/locolor/16x16/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps

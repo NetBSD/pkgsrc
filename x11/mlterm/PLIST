@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2005/06/11 15:00:04 hira Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/04/17 07:07:49 jlam Exp $
 bin/mlcc
 bin/mlclient
 bin/mlterm
@@ -15,9 +15,6 @@ libexec/mlconfig
 libexec/mlterm-menu
 man/man1/mlclient.1
 man/man1/mlterm.1
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/mlconfig.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/mlconfig.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/mlconfig.mo
 share/examples/mlterm/aafont
 share/examples/mlterm/color
 share/examples/mlterm/font
@@ -30,5 +27,8 @@ share/examples/mlterm/tfont
 share/examples/mlterm/vaafont
 share/examples/mlterm/vfont
 share/examples/mlterm/xim
+share/locale/de/LC_MESSAGES/mlconfig.mo
+share/locale/ja/LC_MESSAGES/mlconfig.mo
+share/locale/zh_TW/LC_MESSAGES/mlconfig.mo
 @dirrm share/examples/mlterm
 @dirrm lib/mlterm

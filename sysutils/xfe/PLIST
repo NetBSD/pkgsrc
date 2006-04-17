@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/07/25 10:55:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:35 jlam Exp $
 bin/xfe
 bin/xfi
 bin/xfq
@@ -152,17 +152,17 @@ man/man1/xfi.1
 man/man1/xfq.1
 man/man1/xfv.1
 share/examples/xfe/Desktop
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/xfe.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfe.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfe.mo
-${PKGLOCALEDIR}/locale/es_AR/LC_MESSAGES/xfe.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xfe.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xfe.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/xfe.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfe.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/xfe.mo
-${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/xfe.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/xfe.mo
+share/locale/ca/LC_MESSAGES/xfe.mo
+share/locale/de/LC_MESSAGES/xfe.mo
+share/locale/es/LC_MESSAGES/xfe.mo
+share/locale/es_AR/LC_MESSAGES/xfe.mo
+share/locale/fr/LC_MESSAGES/xfe.mo
+share/locale/hu/LC_MESSAGES/xfe.mo
+share/locale/it/LC_MESSAGES/xfe.mo
+share/locale/pl/LC_MESSAGES/xfe.mo
+share/locale/pt_BR/LC_MESSAGES/xfe.mo
+share/locale/pt_PT/LC_MESSAGES/xfe.mo
+share/locale/tr/LC_MESSAGES/xfe.mo
 share/pixmaps/xfe.png
 share/pixmaps/xfi.png
 share/pixmaps/xfq.png

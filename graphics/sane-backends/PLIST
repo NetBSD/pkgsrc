@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2005/12/31 00:03:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/04/17 07:07:22 jlam Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -278,20 +278,20 @@ share/examples/sane/u12.conf
 share/examples/sane/umax.conf
 share/examples/sane/umax1220u.conf
 share/examples/sane/umax_pp.conf
-${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/sane-backends.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/sane-backends.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/sane-backends.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/sane-backends.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/sane-backends.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/sane-backends.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/sane-backends.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/sane-backends.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/sane-backends.mo
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/sane-backends.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/sane-backends.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/sane-backends.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/sane-backends.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/sane-backends.mo
+share/locale/bg/LC_MESSAGES/sane-backends.mo
+share/locale/cs/LC_MESSAGES/sane-backends.mo
+share/locale/da/LC_MESSAGES/sane-backends.mo
+share/locale/de/LC_MESSAGES/sane-backends.mo
+share/locale/es/LC_MESSAGES/sane-backends.mo
+share/locale/fi/LC_MESSAGES/sane-backends.mo
+share/locale/fr/LC_MESSAGES/sane-backends.mo
+share/locale/it/LC_MESSAGES/sane-backends.mo
+share/locale/nl/LC_MESSAGES/sane-backends.mo
+share/locale/no/LC_MESSAGES/sane-backends.mo
+share/locale/pl/LC_MESSAGES/sane-backends.mo
+share/locale/pt/LC_MESSAGES/sane-backends.mo
+share/locale/ru/LC_MESSAGES/sane-backends.mo
+share/locale/sv/LC_MESSAGES/sane-backends.mo
 @exec ${MKDIR} %D/share/sane/snapscan
 @dirrm share/sane/snapscan
 @exec ${MKDIR} %D/share/sane/gt68xx

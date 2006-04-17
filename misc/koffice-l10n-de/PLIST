@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/04/12 13:01:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:29 jlam Exp $
 share/doc/kde/HTML/de/kchart/common
 share/doc/kde/HTML/de/kchart/index.cache.bz2
 share/doc/kde/HTML/de/kchart/index.docbook
@@ -194,36 +194,36 @@ share/doc/kde/HTML/de/thesaurus/common
 share/doc/kde/HTML/de/thesaurus/index.cache.bz2
 share/doc/kde/HTML/de/thesaurus/index.docbook
 share/kde/apps/koffice/autocorrect/de.xml
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/desktop_koffice.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/example.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/karbon.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kchart.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kexi.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kfile_abiword.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kfile_gnumeric.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kfile_koffice.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kfile_ooo.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kformdesigner.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kformula.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kivio.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/koconverter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/koffice.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kofficefilters.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/koproperty.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/koshell.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kounavail.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kplato.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kpresenter.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/krita.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kscan_plugin.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kscreenshot_plugin.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kspread.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kspreadcalc_calc.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kspreadinsertcalendar.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kthesaurus.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kugar.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kword.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/thesaurus_tool.mo
+share/locale/de/LC_MESSAGES/desktop_koffice.mo
+share/locale/de/LC_MESSAGES/example.mo
+share/locale/de/LC_MESSAGES/karbon.mo
+share/locale/de/LC_MESSAGES/kchart.mo
+share/locale/de/LC_MESSAGES/kexi.mo
+share/locale/de/LC_MESSAGES/kfile_abiword.mo
+share/locale/de/LC_MESSAGES/kfile_gnumeric.mo
+share/locale/de/LC_MESSAGES/kfile_koffice.mo
+share/locale/de/LC_MESSAGES/kfile_ooo.mo
+share/locale/de/LC_MESSAGES/kformdesigner.mo
+share/locale/de/LC_MESSAGES/kformula.mo
+share/locale/de/LC_MESSAGES/kivio.mo
+share/locale/de/LC_MESSAGES/koconverter.mo
+share/locale/de/LC_MESSAGES/koffice.mo
+share/locale/de/LC_MESSAGES/kofficefilters.mo
+share/locale/de/LC_MESSAGES/koproperty.mo
+share/locale/de/LC_MESSAGES/koshell.mo
+share/locale/de/LC_MESSAGES/kounavail.mo
+share/locale/de/LC_MESSAGES/kplato.mo
+share/locale/de/LC_MESSAGES/kpresenter.mo
+share/locale/de/LC_MESSAGES/krita.mo
+share/locale/de/LC_MESSAGES/kscan_plugin.mo
+share/locale/de/LC_MESSAGES/kscreenshot_plugin.mo
+share/locale/de/LC_MESSAGES/kspread.mo
+share/locale/de/LC_MESSAGES/kspreadcalc_calc.mo
+share/locale/de/LC_MESSAGES/kspreadinsertcalendar.mo
+share/locale/de/LC_MESSAGES/kthesaurus.mo
+share/locale/de/LC_MESSAGES/kugar.mo
+share/locale/de/LC_MESSAGES/kword.mo
+share/locale/de/LC_MESSAGES/thesaurus_tool.mo
 @comment in koffice: @dirrm share/kde/apps/koffice/autocorrect
 @dirrm share/doc/kde/HTML/de/thesaurus
 @dirrm share/doc/kde/HTML/de/kword

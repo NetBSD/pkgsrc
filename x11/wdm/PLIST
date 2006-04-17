@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:08 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:49 jlam Exp $
 bin/wdm
 bin/wdmLogin
 man/man1/wdm.1
@@ -20,9 +20,9 @@ share/examples/wdm/Xsetup_0
 share/examples/wdm/wdm-config
 share/examples/wdm/wdm-config.in
 share/examples/wdm/wdmReconfig
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/wdm.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/wdm.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/wdm.mo
+share/locale/de/LC_MESSAGES/wdm.mo
+share/locale/ja/LC_MESSAGES/wdm.mo
+share/locale/ru/LC_MESSAGES/wdm.mo
 share/pixmaps/wdm/Eagle.xpm
 share/pixmaps/wdm/Earth.jpg
 share/pixmaps/wdm/Earth200x130.xpm

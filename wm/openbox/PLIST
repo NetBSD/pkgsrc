@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/09/22 08:09:56 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/04/17 07:07:36 jlam Exp $
 bin/gnome-panel-control
 bin/kdetrayproxy
 bin/openbox
@@ -13,11 +13,11 @@ lib/pkgconfig/obrender-3.0.pc
 share/examples/openbox/menu.xml
 share/examples/openbox/rc.xml
 share/gnome/wm-properties/openbox.desktop
-${PKGLOCALEDIR}/locale/en@boldquot/LC_MESSAGES/openbox.mo
-${PKGLOCALEDIR}/locale/en@quot/LC_MESSAGES/openbox.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/openbox.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/openbox.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/openbox.mo
+share/locale/en@boldquot/LC_MESSAGES/openbox.mo
+share/locale/en@quot/LC_MESSAGES/openbox.mo
+share/locale/es/LC_MESSAGES/openbox.mo
+share/locale/ja/LC_MESSAGES/openbox.mo
+share/locale/sv/LC_MESSAGES/openbox.mo
 share/openbox/menu.xsd
 share/openbox/rc.xsd
 share/openbox/themeupdate.py

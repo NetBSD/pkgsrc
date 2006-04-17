@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/15 18:47:39 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:38 jlam Exp $
 bin/Terminal
 bin/terminal
 libexec/TerminalHelp
@@ -48,17 +48,17 @@ share/doc/Terminal/C/usage.html
 share/doc/Terminal/terminal.css
 share/icons/hicolor/48x48/apps/Terminal.png
 share/icons/hicolor/scalable/apps/Terminal.svg
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/Terminal.mo
-${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/Terminal.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/Terminal.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/Terminal.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/Terminal.mo
-${PKGLOCALEDIR}/locale/he/LC_MESSAGES/Terminal.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/Terminal.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/Terminal.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/Terminal.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/Terminal.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/Terminal.mo
+share/locale/de/LC_MESSAGES/Terminal.mo
+share/locale/en_GB/LC_MESSAGES/Terminal.mo
+share/locale/es/LC_MESSAGES/Terminal.mo
+share/locale/fi/LC_MESSAGES/Terminal.mo
+share/locale/fr/LC_MESSAGES/Terminal.mo
+share/locale/he/LC_MESSAGES/Terminal.mo
+share/locale/ja/LC_MESSAGES/Terminal.mo
+share/locale/nl/LC_MESSAGES/Terminal.mo
+share/locale/ru/LC_MESSAGES/Terminal.mo
+share/locale/zh_CN/LC_MESSAGES/Terminal.mo
+share/locale/zh_TW/LC_MESSAGES/Terminal.mo
 share/pixmaps/terminal.xpm
 @comment in xdg-dirs: @dirrm share/pixmaps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
