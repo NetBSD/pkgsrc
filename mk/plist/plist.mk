@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.10 2006/04/17 06:12:46 jlam Exp $
+# $NetBSD: plist.mk,v 1.11 2006/04/17 06:30:48 jlam Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -91,6 +91,7 @@ MAKEVARS+=		_IGNORE_INFO_PATH
 # scripts for information on each of the variable set in the environment.
 #
 _PLIST_AWK_ENV+=	PKGLOCALEDIR=${PKGLOCALEDIR:Q}
+_PLIST_AWK_ENV+=	USE_PKGLOCALEDIR=${USE_PKGLOCALEDIR:Dyes:Uno}
 _PLIST_AWK_ENV+=	IMAKE_MANINSTALL=${_IMAKE_MANINSTALL:Q}
 _PLIST_AWK_ENV+=	IGNORE_INFO_PATH=${_IGNORE_INFO_PATH:Q}
 _PLIST_AWK_ENV+=	PKGINFODIR=${PKGINFODIR:Q}

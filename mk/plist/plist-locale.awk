@@ -1,4 +1,4 @@
-# $NetBSD: plist-locale.awk,v 1.1 2006/04/17 06:12:46 jlam Exp $
+# $NetBSD: plist-locale.awk,v 1.2 2006/04/17 06:30:48 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -41,16 +41,22 @@
 ### PKGLOCALEDIR is the ${PREFIX}-relative path to the "locale" directory
 ###	under which all locale files are installed.
 ###
+### USE_PKGLOCALEDIR is a yes/no variable indicating whether to convert
+###	"share/locale" to be under ${PKGLOCALEDIR}.
+###
 BEGIN {
 	PKGLOCALEDIR = ENVIRON["PKGLOCALEDIR"] ? ENVIRON["PKGLOCALEDIR"] : "share"
+	USE_PKGLOCALEDIR = ENVIRON["USE_PKGLOCALEDIR"] ? ENVIRON["USE_PKGLOCALEDIR"] : "no"
 }
 
 ###
 ### Convert share/locale to ${PKGLOCALEDIR}/locale for all locale entries.
 ###
+(USE_PKGLOCALEDIR ~ /[yY][eE][sS]/) && \
 /^share\/locale\// {
 	sub("^share", PKGLOCALEDIR)
 }
+(USE_PKGLOCALEDIR ~ /[yY][eE][sS]/) && \
 /^@dirrm share\/locale\// {
 	sub("^@dirrm share", "@dirrm " PKGLOCALEDIR)
 }
