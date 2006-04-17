@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/03 00:47:04 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 12:37:18 schmonz Exp $
 share/html2text/html2text.py
+@dirrm share/html2text
