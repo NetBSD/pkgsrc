@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2006/03/06 00:18:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/17 07:48:52 adam Exp $
 
-DISTNAME=	qalculate-gtk-0.9.2
-PKGREVISION=	1
+DISTNAME=	qalculate-gtk-0.9.3
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qalculate/}
 
@@ -13,7 +12,7 @@ DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=	wget>=1.8:../../net/wget
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 GNU_CONFIGURE=		yes
 
 .include "../../devel/libglade2/buildlink3.mk"
