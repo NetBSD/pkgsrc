@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/08/03 13:41:24 adam Exp $
+$NetBSD: patch-aa,v 1.2 2006/04/17 07:48:52 adam Exp $
 
---- src/Makefile.in.orig	2005-06-11 09:32:35.000000000 +0000
+--- src/Makefile.in.orig	2006-03-24 11:16:10.000000000 +0100
 +++ src/Makefile.in
-@@ -839,7 +839,6 @@ messages: rc.cpp
+@@ -831,7 +831,6 @@ messages: rc.cpp
  	$(XGETTEXT) *.cpp -o $(podir)/qalculate_kde.pot
  
  install-exec-local:
