@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2006/02/24 21:09:13 adam Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/17 07:48:52 adam Exp $
 
-DISTNAME=	qalculate-currency-0.9.0
+DISTNAME=	qalculate-currency-0.9.3
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qalculate/}
 
@@ -9,8 +9,7 @@ HOMEPAGE=	http://qalculate.sourceforge.net/
 COMMENT=	Utility for conversion between currencies using Qalculate
 
 USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 GNU_CONFIGURE=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
