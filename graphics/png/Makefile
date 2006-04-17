@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2006/04/16 23:19:15 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2006/04/17 12:49:16 tron Exp $
 
 DISTNAME=	libpng-1.2.9
 PKGNAME=	${DISTNAME:S/lib//}
@@ -28,6 +28,7 @@ USE_LIBTOOL=	yes
 post-install:
 	cd ${PREFIX}/lib && \
 		${SED} -e 's/png12/png/g' -e 's/0.9.0/3.9.0/' -e 's/so\.0/so\.3/g' \
+			-e 's/libpng.0.dylib/libpng.3.dylib/g' \
 			libpng.la > libpng.la.out && \
 		${MV} libpng.la.out libpng.la
 
