@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4892 2006/04/17 14:51:21 wiz Exp $
+$NetBSD: TODO,v 1.4893 2006/04/17 18:29:39 rpaulo Exp $
 
 Suggested new packages
 ======================
@@ -699,7 +699,6 @@ Suggested package updates
 	o lilypond-2.8.0
 	o linuxsms-0.77
 	o lmbench-2.5
-	o lopster-1.2.2
 	o lout-3.31
 	o lucy-1.19p
 	o lwp-2.1
