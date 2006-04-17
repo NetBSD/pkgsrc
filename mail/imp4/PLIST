@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/03/19 16:54:35 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/17 21:12:30 adrianp Exp $
 share/doc/imp/CHANGES
 share/doc/imp/COPYING
 share/doc/imp/CREDITS
@@ -348,7 +348,7 @@ share/horde/imp/themes/lavander/screen.css
 share/horde/imp/themes/luc/screen.css
 share/horde/imp/themes/lucblue/screen.css
 share/horde/imp/themes/postnuke/screen.css
-share/horde/imp/themes/rtl/screen.css
+share/horde/imp/themes/rtl.css
 share/horde/imp/themes/screen.css
 share/horde/imp/themes/simplex/screen.css
 share/horde/imp/themes/sun/screen.css
@@ -356,7 +356,6 @@ share/horde/imp/thread.php
 share/horde/imp/view.php
 @dirrm share/horde/imp/themes/sun
 @dirrm share/horde/imp/themes/simplex
-@dirrm share/horde/imp/themes/rtl
 @dirrm share/horde/imp/themes/postnuke
 @dirrm share/horde/imp/themes/lucblue
 @dirrm share/horde/imp/themes/luc
