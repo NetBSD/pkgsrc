@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/03 23:34:46 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2006/04/17 14:50:47 wiz Exp $
 
 --- src/unzip.h.orig	Sun Oct 20 06:03:12 2002
 +++ src/unzip.h	Mon Jun 30 23:45:30 2003
-@@ -67,6 +67,15 @@
+@@ -68,6 +68,15 @@
  #include "zlib.h"
  #endif
  
