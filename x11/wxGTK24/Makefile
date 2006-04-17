@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:11:44 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/17 14:52:12 wiz Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=		9
+PKGREVISION=		10
 COMMENT=		GTK-based implementation of the wxWidgets GUI library
 CONFLICTS+=		wxGTK<=2.4.2nb5
 
