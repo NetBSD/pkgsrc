@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2006/04/10 20:17:15 minskim Exp $
+# $NetBSD: Makefile,v 1.155 2006/04/17 21:14:49 wiz Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -26,7 +26,6 @@ SUBDIR+=	cjk-lyx
 SUBDIR+=	cnprint
 SUBDIR+=	cups
 SUBDIR+=	dvidvi
-SUBDIR+=	dvipdfm
 SUBDIR+=	dvipdfmx
 SUBDIR+=	dvipng
 SUBDIR+=	enscript
@@ -57,7 +56,6 @@ SUBDIR+=	ijs
 SUBDIR+=	img2eps
 SUBDIR+=	imposter
 SUBDIR+=	ja-a2ps
-SUBDIR+=	ja-dvipdfm
 SUBDIR+=	ja-jsclasses
 SUBDIR+=	ja-ptex
 SUBDIR+=	ja-ptex-bin
@@ -107,10 +105,6 @@ SUBDIR+=	teTeX
 SUBDIR+=	teTeX-bin
 SUBDIR+=	teTeX-share
 SUBDIR+=	teTeX-sharesrc
-SUBDIR+=	teTeX1
-SUBDIR+=	teTeX1-bin
-SUBDIR+=	teTeX1-share
-SUBDIR+=	teTeX1-sharesrc
 SUBDIR+=	teTeX3-bin
 SUBDIR+=	teTeX3-texmf
 SUBDIR+=	teTeX3-texmfsrc
@@ -119,7 +113,6 @@ SUBDIR+=	tex-abc
 SUBDIR+=	tex-bagpipetex
 SUBDIR+=	tex-chemarrow
 SUBDIR+=	tex-dhucs
-SUBDIR+=	tex-eurosym
 SUBDIR+=	tex-foiltex
 SUBDIR+=	tex-hlatex
 SUBDIR+=	tex-hugelatex
@@ -132,8 +125,6 @@ SUBDIR+=	tex-passivetex
 SUBDIR+=	tex-prosper
 SUBDIR+=	tex-textpos
 SUBDIR+=	tex-ucs
-SUBDIR+=	texfamily
-SUBDIR+=	texfamily-share
 SUBDIR+=	texmf-dirs
 SUBDIR+=	transfig
 SUBDIR+=	xfce4-print
