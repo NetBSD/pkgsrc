@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:19 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/17 13:46:03 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 URT_BUILDLINK3_MK:=	${URT_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	urt
 
 .if !empty(URT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.urt+=	urt>=3.1b1nb5
-BUILDLINK_ABI_DEPENDS.urt?=	urt>=3.1b1nb6
+BUILDLINK_ABI_DEPENDS.urt?=	urt>=3.1b1nb7
 BUILDLINK_PKGSRCDIR.urt?=	../../graphics/urt
 .endif	# URT_BUILDLINK3_MK
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2006/02/21 22:44:53 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2006/04/17 13:46:24 wiz Exp $
 
 DISTNAME=		bomberclone-0.11.6
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bomberclone/}
 EXTRACT_SUFX=		.tar.bz2

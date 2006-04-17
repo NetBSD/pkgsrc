@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:16 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/17 13:46:03 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GEOMETRYKIT_BUILDLINK3_MK:=	${GEOMETRYKIT_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	GeometryKit
 
 .if !empty(GEOMETRYKIT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.GeometryKit+=	GeometryKit>=0.3.1r2nb3
-BUILDLINK_ABI_DEPENDS.GeometryKit?=	GeometryKit>=0.3.1r2nb9
+BUILDLINK_ABI_DEPENDS.GeometryKit?=	GeometryKit>=0.3.1r2nb10
 BUILDLINK_PKGSRCDIR.GeometryKit?=	../../graphics/GeometryKit
 .endif	# GEOMETRYKIT_BUILDLINK3_MK
 

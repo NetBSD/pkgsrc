@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2006/04/06 06:22:36 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2006/04/17 13:45:59 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CUPS_BUILDLINK3_MK:=	${CUPS_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	cups
 
 .if !empty(CUPS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.cups+=	cups>=1.1.19nb3
-BUILDLINK_ABI_DEPENDS.cups+=	cups>=1.1.23nb6
+BUILDLINK_ABI_DEPENDS.cups+=	cups>=1.1.23nb9
 BUILDLINK_PKGSRCDIR.cups?=	../../print/cups
 .endif	# CUPS_BUILDLINK3_MK
 

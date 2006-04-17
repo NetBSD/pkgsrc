@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.49 2006/02/05 23:09:20 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2006/04/17 13:46:29 wiz Exp $
 #
 
 .include "../../games/nethack-lib/Makefile.common"
 
 PKGNAME=		nethack-qt-${NETHACK_VERSION}
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES+=		x11
 
 COMMENT=		The QT-Enhanced X11 version of NetHack
