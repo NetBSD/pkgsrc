@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:02 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/17 13:46:09 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 STREAMTUNER_BUILDLINK3_MK:=	${STREAMTUNER_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	streamtuner
 
 .if !empty(STREAMTUNER_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.streamtuner+=		streamtuner>=0.99
-BUILDLINK_ABI_DEPENDS.streamtuner?=	streamtuner>=0.99.99nb2
+BUILDLINK_ABI_DEPENDS.streamtuner?=	streamtuner>=0.99.99nb4
 BUILDLINK_PKGSRCDIR.streamtuner?=	../../audio/streamtuner
 .endif	# STREAMTUNER_BUILDLINK3_MK
 

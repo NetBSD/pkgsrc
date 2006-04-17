@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2006/04/12 10:27:16 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2006/04/17 13:46:02 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 IMAGEMAGICK_BUILDLINK3_MK:=	${IMAGEMAGICK_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	ImageMagick
 
 .if !empty(IMAGEMAGICK_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.ImageMagick+=		ImageMagick>=5.5.7.11nb1
-BUILDLINK_ABI_DEPENDS.ImageMagick+=	ImageMagick>=6.2.6.0nb2
+BUILDLINK_ABI_DEPENDS.ImageMagick+=	ImageMagick>=6.2.6.8
 BUILDLINK_PKGSRCDIR.ImageMagick?=	../../graphics/ImageMagick
 .endif	# IMAGEMAGICK_BUILDLINK3_MK
 

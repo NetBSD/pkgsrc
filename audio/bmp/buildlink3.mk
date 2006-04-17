@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:00 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/17 13:46:11 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BMP_BUILDLINK3_MK:=	${BMP_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	bmp
 
 .if !empty(BMP_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.bmp+=	bmp>=0.9.7rc2nb3
-BUILDLINK_ABI_DEPENDS.bmp?=	bmp>=0.9.7nb4
+BUILDLINK_ABI_DEPENDS.bmp?=	bmp>=0.9.7nb5
 BUILDLINK_PKGSRCDIR.bmp?=	../../audio/bmp
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/bmp\/Input$$/ \
