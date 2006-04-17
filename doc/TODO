@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4895 2006/04/17 20:37:14 salo Exp $
+$NetBSD: TODO,v 1.4896 2006/04/17 21:17:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -435,7 +435,7 @@ Suggested package updates
 	o defendguin-0.0.11
 	o delegate-9.1.1
 	o denemo-0.7.5
-	o deskbar-applet-2.14.1
+	o deskbar-applet-2.14.1.1
 	o devIL-1.6.7
 	o devhelp-0.10
 	o devtodo-0.1.19
