@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13617 2006/04/17 14:51:20 wiz Exp $
+$NetBSD: CHANGES,v 1.13618 2006/04/17 15:17:27 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2147,3 +2147,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/mysql5-server to 5.0.20nb1 [tron 2006-04-17]
 	Updated pkgtools/revbump to 1.7 [wiz 2006-04-17]
 	Updated emulators/vba to 1.7.2 [wiz 2006-04-17]
+	Added textproc/p5-Text-Context-EitherSide version 1.3 [minskim 2006-04-17]
