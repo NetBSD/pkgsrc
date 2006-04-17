@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2006/04/05 22:32:04 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/17 20:56:30 adrianp Exp $
 
 DISTNAME=	kronolith-h3-${KRONOLITHVER}
-PKGREVISION=	1
 PKGNAME=	kronolith-${KRONOLITHVER}
 CATEGORIES=	www time
 MASTER_SITES=	ftp://ftp.horde.org/pub/kronolith/
@@ -20,7 +19,7 @@ DOCDIR=		${PREFIX}/share/doc/kronolith
 EGDIR=		${PREFIX}/share/examples/kronolith
 HORDEDIR=	${PREFIX}/share/horde
 KRONOLITHDIR=	${HORDEDIR}/kronolith
-KRONOLITHVER=	2.1
+KRONOLITHVER=	2.1.1
 PAXDIRS=	js lib locale po scripts templates themes
 
 MESSAGE_SUBST+=	KRONOLITHDIR=${KRONOLITHDIR:Q}
