@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2006/03/21 06:00:44 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/17 14:52:11 wiz Exp $
 #
 
 GST_PLUGINS0.8_NAME=	vorbis
 GST_PLUGINS0.8_DIR=	ext/vorbis
 
 .include "../../multimedia/gst-plugins0.8/Makefile.common"
-PKGREVISION=		4
+PKGREVISION=		5
 
 DEPENDS+=		gst-plugins0.8-ogg>=0.8.0:../../multimedia/gst-plugins0.8-ogg
 
