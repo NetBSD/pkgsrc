@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2006/04/13 18:23:34 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/17 13:46:34 wiz Exp $
 #
 
 PKGNAME=	pornview-0.2.0pre1
 DISTNAME=	pornview_0.2pre1.orig
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/p/pornview/}
 

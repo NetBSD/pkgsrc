@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:19 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/04/17 13:46:04 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 WXSVG_BUILDLINK3_MK:=	${WXSVG_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	wxsvg
 
 .if !empty(WXSVG_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.wxsvg+=	wxsvg>=1.0beta5
-BUILDLINK_ABI_DEPENDS.wxsvg?=	wxsvg>=1.0beta5nb1
+BUILDLINK_ABI_DEPENDS.wxsvg?=	wxsvg>=1.0beta5nb2
 BUILDLINK_PKGSRCDIR.wxsvg?=	../../graphics/wxsvg
 .endif	# WXSVG_BUILDLINK3_MK
 

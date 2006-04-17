@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2006/03/04 21:29:52 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2006/04/17 13:46:36 wiz Exp $
 
 DISTNAME=	xli-2005-02-27
 PKGNAME=	xli-1.17.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://pantransit.reptiles.org/prog/xli/
 

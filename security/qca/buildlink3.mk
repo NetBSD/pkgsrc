@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:34 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/17 13:46:05 wiz Exp $
 # 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 QCA_BUILDLINK3_MK:=	${QCA_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	qca
 
 .if !empty(QCA_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.qca+=	qca>=1.0
-BUILDLINK_ABI_DEPENDS.qca?=	qca>=1.0nb2
+BUILDLINK_ABI_DEPENDS.qca?=	qca>=1.0nb3
 BUILDLINK_PKGSRCDIR.qca?=	../../security/qca
 .endif	# QCA_BUILDLINK3_MK
 

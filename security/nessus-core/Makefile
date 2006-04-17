@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2006/02/05 23:10:45 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2006/04/17 13:46:10 wiz Exp $
 
 .include 	"../../security/nessus/Makefile.common"
 
 DISTNAME=	nessus-core-${VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT=	Core module of the Nessus Network Security Scanner
 

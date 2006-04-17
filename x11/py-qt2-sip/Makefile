@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:11:41 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/17 13:47:00 wiz Exp $
 #
 
 DISTNAME=	sip-3.1
 PKGNAME=	${PYPKGPREFIX}-qt2-sip-3.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11 devel python
 MASTER_SITES=	http://www.riverbankcomputing.co.uk/download/sip/
 

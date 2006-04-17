@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2006/03/09 21:04:44 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/17 13:46:41 wiz Exp $
 
 DISTNAME=	fxtv-1.03
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	multimedia
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tgz

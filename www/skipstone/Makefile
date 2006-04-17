@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2006/03/08 09:09:44 ghen Exp $
+# $NetBSD: Makefile,v 1.22 2006/04/17 13:46:52 wiz Exp $
 
 DISTNAME=		skipstone-0.9.4
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		${HOMEPAGE}
 

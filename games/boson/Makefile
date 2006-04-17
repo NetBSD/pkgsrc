@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2006/04/13 18:23:32 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/04/17 13:46:24 wiz Exp $
 #
 
 DISTNAME=		boson-all-0.8
 PKGNAME=		${DISTNAME:S/-all//}
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=boson/}
 EXTRACT_SUFX=		.tar.bz2

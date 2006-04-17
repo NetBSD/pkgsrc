@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/04/12 10:27:41 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/04/17 13:46:07 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GTKSOURCEVIEW_BUILDLINK3_MK:=	${GTKSOURCEVIEW_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gtksourceview
 
 .if !empty(GTKSOURCEVIEW_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gtksourceview+=	gtksourceview>=1.2.0
-BUILDLINK_ABI_DEPENDS.gtksourceview?=	gtksourceview>=1.4.2nb2
+BUILDLINK_ABI_DEPENDS.gtksourceview?=	gtksourceview>=1.6.1nb1
 BUILDLINK_PKGSRCDIR.gtksourceview?=	../../x11/gtksourceview
 .endif	# GTKSOURCEVIEW_BUILDLINK3_MK
 

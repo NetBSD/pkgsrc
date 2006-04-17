@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2006/03/09 21:04:40 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/04/17 13:46:16 wiz Exp $
 
 DISTNAME=	liteamp-0.2.4.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	http://kldp.net/frs/download.php/1153/
 

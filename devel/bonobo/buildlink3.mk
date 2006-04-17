@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:07 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/17 13:46:02 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BONOBO_BUILDLINK3_MK:=	${BONOBO_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	bonobo
 
 .if !empty(BONOBO_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.bonobo+=	bonobo>=1.0.18nb7
-BUILDLINK_ABI_DEPENDS.bonobo+=	bonobo>=1.0.22nb1
+BUILDLINK_ABI_DEPENDS.bonobo+=	bonobo>=1.0.22nb2
 BUILDLINK_PKGSRCDIR.bonobo?=	../../devel/bonobo
 .endif	# BONOBO_BUILDLINK3_MK
 

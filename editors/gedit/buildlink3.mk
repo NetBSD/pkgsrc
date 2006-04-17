@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:21:58 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/04/17 13:46:07 wiz Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.10.
 # XXX After this file has been verified as correct, the comment lines
@@ -22,6 +22,7 @@ BUILDLINK_PACKAGES+=	gedit
 
 .if !empty(GEDIT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gedit+=	gedit>=2.12.1nb4
+BUILDLINK_ABI_DEPENDS.gedit?=	gedit>=2.14.2nb1
 BUILDLINK_PKGSRCDIR.gedit?=	../../editors/gedit
 .endif	# GEDIT_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:39 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/17 13:46:04 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLIBWWW_BUILDLINK3_MK:=	${GLIBWWW_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	glibwww
 
 .if !empty(GLIBWWW_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.glibwww?=	glibwww>=0.2nb5
-BUILDLINK_ABI_DEPENDS.glibwww+=	glibwww>=0.2nb8
+BUILDLINK_ABI_DEPENDS.glibwww+=	glibwww>=0.2nb9
 BUILDLINK_PKGSRCDIR.glibwww?=	../../www/glibwww
 .endif	# GLIBWWW_BUILDLINK3_MK
 

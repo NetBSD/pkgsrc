@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2006/03/06 00:18:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/17 13:47:01 wiz Exp $
 #
 
 PKGNAME=		ruby-gnome2-panelapplet-${VERSION}
 COMMENT=		Ruby binding of libpanel-applet-2.6.x
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		x11 gnome
 
 RUBY_EXTCONF_SUBDIRS=	panel-applet

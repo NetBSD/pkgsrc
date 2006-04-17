@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2006/03/12 03:46:07 taca Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/17 13:46:35 wiz Exp $
 
 DISTNAME=	RMagick-1.10.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/8854/
 EXTRACT_SUFX=	.tar.bz2

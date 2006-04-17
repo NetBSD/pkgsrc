@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2006/02/05 23:10:33 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2006/04/17 13:46:44 wiz Exp $
 
 DISTNAME=	knews-1.0b.1
 PKGNAME=	knews-1.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	news x11
 MASTER_SITES=	http://www.matematik.su.se/~kjj/
 

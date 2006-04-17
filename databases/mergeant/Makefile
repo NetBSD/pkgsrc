@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2006/03/21 06:00:44 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2006/04/17 13:46:19 wiz Exp $
 #
 
 DISTNAME=		mergeant-0.62
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		databases gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/mergeant/0.62/}
 EXTRACT_SUFX=		.tar.bz2

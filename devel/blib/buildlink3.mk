@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:06 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/17 13:46:09 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BLIB_BUILDLINK3_MK:=	${BLIB_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	blib
 
 .if !empty(BLIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.blib+=	blib>=1.0.2nb1
-BUILDLINK_ABI_DEPENDS.blib+=	blib>=1.0.2nb4
+BUILDLINK_ABI_DEPENDS.blib+=	blib>=1.0.2nb5
 BUILDLINK_PKGSRCDIR.blib?=	../../devel/blib
 .endif	# BLIB_BUILDLINK3_MK
 

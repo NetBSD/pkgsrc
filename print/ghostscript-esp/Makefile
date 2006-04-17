@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2006/02/05 23:10:36 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/04/17 13:46:46 wiz Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 PKGNAME=	ghostscript-esp-${GS_VERS}
-PKGREVISION=	3
+PKGREVISION=	4
 BASEGS_VERS=	8.15
 GS_VERS=	${BASEGS_VERS}.1
 CATEGORIES=	print

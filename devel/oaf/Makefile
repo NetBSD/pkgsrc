@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2006/02/28 17:39:18 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2006/04/17 13:46:04 wiz Exp $
 #
 
 DISTNAME=		oaf-0.6.10
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/oaf/0.6/}
 EXTRACT_SUFX=		.tar.bz2

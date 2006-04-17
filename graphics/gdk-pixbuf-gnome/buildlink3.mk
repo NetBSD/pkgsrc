@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:17 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/17 13:46:01 wiz Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 GDK_PIXBUF_GNOME_BUILDLINK3_MK:=	${GDK_PIXBUF_GNOME_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gdk-pixbuf-gnome
 
 .if !empty(GDK_PIXBUF_GNOME_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gdk-pixbuf-gnome+=	gdk-pixbuf-gnome>=0.22.0nb2
-BUILDLINK_ABI_DEPENDS.gdk-pixbuf-gnome?=	gdk-pixbuf-gnome>=0.22.0nb4
+BUILDLINK_ABI_DEPENDS.gdk-pixbuf-gnome?=	gdk-pixbuf-gnome>=0.22.0nb6
 BUILDLINK_PKGSRCDIR.gdk-pixbuf-gnome?=	../../graphics/gdk-pixbuf-gnome
 .endif	# GDK_PIXBUF_GNOME_BUILDLINK3_MK
 
