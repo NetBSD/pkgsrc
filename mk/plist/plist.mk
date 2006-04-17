@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.9 2006/04/16 04:27:18 jlam Exp $
+# $NetBSD: plist.mk,v 1.10 2006/04/17 06:12:46 jlam Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -90,6 +90,7 @@ MAKEVARS+=		_IGNORE_INFO_PATH
 # that does post-processing of the PLIST.  See the individual *.awk
 # scripts for information on each of the variable set in the environment.
 #
+_PLIST_AWK_ENV+=	PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 _PLIST_AWK_ENV+=	IMAKE_MANINSTALL=${_IMAKE_MANINSTALL:Q}
 _PLIST_AWK_ENV+=	IGNORE_INFO_PATH=${_IGNORE_INFO_PATH:Q}
 _PLIST_AWK_ENV+=	PKGINFODIR=${PKGINFODIR:Q}
@@ -141,6 +142,7 @@ _PLIST_AWK_ENV+=	PLIST_SUBST_VARS=${PLIST_SUBST:S/^/PLIST_/:C/=.*//:M*:Q}
 
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-functions.awk
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-subst.awk
+_PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-locale.awk
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-info.awk
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-man.awk
 _PLIST_AWK+=		-f ${.CURDIR}/../../mk/plist/plist-libtool.awk

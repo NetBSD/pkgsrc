@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.11 2006/02/12 14:44:59 rillig Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.12 2006/04/17 06:12:46 jlam Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -130,21 +130,6 @@
               <para><varname>${OS_VERSION}</varname> - <quote><command>uname -r</command></quote></para>
             </listitem>
           </itemizedlist>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry>
-        <term><varname>${PKGLOCALEDIR}</varname></term>
-
-        <listitem>
-          <para>Packages that install locale files should list them in
-            the PLIST as
-            <quote>${PKGLOCALEDIR}/locale/de/LC_MESSAGES/...</quote>
-            instead of <quote>share/locale/de/LC_MESSAGES/...</quote>.
-            This properly handles the fact that different operating
-            systems expect locale files to be either in
-            <filename>share</filename> or <filename>lib</filename> by
-            default.</para>
         </listitem>
       </varlistentry>
     </variablelist>
