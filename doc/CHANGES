@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13622 2006/04/17 21:13:10 adrianp Exp $
+$NetBSD: CHANGES,v 1.13623 2006/04/17 21:17:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2152,3 +2152,13 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/rdiff-backup to 1.0.4 [recht 2006-04-17]
 	Updated time/kronolith to 2.1.1 [adrianp 2006-04-17]
 	Updated mail/imp4 to 4.1.1 [adrianp 2006-04-17]
+	Removed devel/cweb [wiz 2006-04-17]
+	Removed print/dvipdfm [wiz 2006-04-17]
+	Removed print/ja-dvipdfm [wiz 2006-04-17]
+	Removed print/teTeX1 [wiz 2006-04-17]
+	Removed print/teTeX1-bin [wiz 2006-04-17]
+	Removed print/teTeX1-share [wiz 2006-04-17]
+	Removed print/teTeX1-sharesrc [wiz 2006-04-17]
+	Removed print/tex-eurosym [wiz 2006-04-17]
+	Removed print/texfamily [wiz 2006-04-17]
+	Removed print/texfamily-share [wiz 2006-04-17]
