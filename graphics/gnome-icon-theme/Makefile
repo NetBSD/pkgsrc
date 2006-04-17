@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2006/04/13 18:23:33 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2006/04/17 13:46:32 wiz Exp $
 #
 
 DISTNAME=		gnome-icon-theme-2.14.2
+PKGREVISION=		1
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme/2.14/}
 EXTRACT_SUFX=		.tar.bz2

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2006/04/06 06:22:04 reed Exp $
+# $NetBSD: Makefile,v 1.27 2006/04/17 13:45:59 wiz Exp $
 #
 
 DISTNAME=	libgdiplus-1.1.11
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://go-mono.com/sources/libgdiplus-1.1/
 

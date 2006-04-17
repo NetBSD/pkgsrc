@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:43 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/17 13:46:04 wiz Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 PY_WXWIDGETS_BUILDLINK3_MK:=	${PY_WXWIDGETS_BUILDLINK3_MK}+
@@ -14,7 +14,7 @@ BUILDLINK_PACKAGES+=	${PYPKGPREFIX}-wxWidgets
 
 .if !empty(PY_WXWIDGETS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.${PYPKGPREFIX}-wxWidgets+=	${PYPKGPREFIX}-wxWidgets>=2.6.1.0
-BUILDLINK_ABI_DEPENDS.${PYPKGPREFIX}-wxWidgets?=	${PYPKGPREFIX}-wxWidgets>=2.6.1.0nb3
+BUILDLINK_ABI_DEPENDS.${PYPKGPREFIX}-wxWidgets?=	py24-wxWidgets>=2.6.1.0nb4
 BUILDLINK_PKGSRCDIR.${PYPKGPREFIX}-wxWidgets?=	../../x11/py-wxWidgets
 
 .include "../../x11/wxGTK/buildlink3.mk"
