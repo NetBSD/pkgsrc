@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/12/25 15:22:36 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:11 jlam Exp $
 bin/beep-media-player
 include/bmp/beepctrl.h
 include/bmp/configdb.h
@@ -49,27 +49,27 @@ share/bmp/images/mouse.png
 share/bmp/images/playlist.png
 share/bmp/images/plugins.png
 share/icons/bmp.svg
-${PKGLOCALEDIR}/locale/br/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/cy/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/mk/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/bmp.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/bmp.mo
+share/locale/br/LC_MESSAGES/bmp.mo
+share/locale/cs/LC_MESSAGES/bmp.mo
+share/locale/cy/LC_MESSAGES/bmp.mo
+share/locale/de/LC_MESSAGES/bmp.mo
+share/locale/el/LC_MESSAGES/bmp.mo
+share/locale/es/LC_MESSAGES/bmp.mo
+share/locale/fr/LC_MESSAGES/bmp.mo
+share/locale/hu/LC_MESSAGES/bmp.mo
+share/locale/it/LC_MESSAGES/bmp.mo
+share/locale/ja/LC_MESSAGES/bmp.mo
+share/locale/ko/LC_MESSAGES/bmp.mo
+share/locale/lt/LC_MESSAGES/bmp.mo
+share/locale/mk/LC_MESSAGES/bmp.mo
+share/locale/nl/LC_MESSAGES/bmp.mo
+share/locale/pl/LC_MESSAGES/bmp.mo
+share/locale/pt_BR/LC_MESSAGES/bmp.mo
+share/locale/ro/LC_MESSAGES/bmp.mo
+share/locale/ru/LC_MESSAGES/bmp.mo
+share/locale/sk/LC_MESSAGES/bmp.mo
+share/locale/sv/LC_MESSAGES/bmp.mo
+share/locale/zh_CN/LC_MESSAGES/bmp.mo
 @comment in xdg-dirs: @dirrm share/icons
 @dirrm share/bmp/images
 @dirrm share/bmp/glade

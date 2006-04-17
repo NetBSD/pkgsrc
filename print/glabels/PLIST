@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/04/29 04:48:24 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:32 jlam Exp $
 bin/glabels
 bin/glabels-batch
 include/libglabels/libglabels.h
@@ -33,16 +33,16 @@ share/gnome/help/glabels/C/figures/print-copies.png
 share/gnome/help/glabels/C/figures/print-merge.png
 share/gnome/help/glabels/C/glabels.xml
 share/gnome/help/glabels/C/legal.xml
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/glabels.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/glabels.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/glabels.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/glabels.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/glabels.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/glabels.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/glabels.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/glabels.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/glabels.mo
-${PKGLOCALEDIR}/locale/zh_TW.Big5/LC_MESSAGES/glabels.mo
+share/locale/cs/LC_MESSAGES/glabels.mo
+share/locale/de/LC_MESSAGES/glabels.mo
+share/locale/es/LC_MESSAGES/glabels.mo
+share/locale/fr/LC_MESSAGES/glabels.mo
+share/locale/it/LC_MESSAGES/glabels.mo
+share/locale/ja/LC_MESSAGES/glabels.mo
+share/locale/pl/LC_MESSAGES/glabels.mo
+share/locale/pt_BR/LC_MESSAGES/glabels.mo
+share/locale/ru/LC_MESSAGES/glabels.mo
+share/locale/zh_TW.Big5/LC_MESSAGES/glabels.mo
 share/mime-info/glabels.keys
 share/mime-info/glabels.mime
 share/mime/packages/glabels.xml

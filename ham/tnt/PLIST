@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/04/04 14:45:45 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/04/17 07:07:22 jlam Exp $
 bin/tnt
 bin/tntc
 include/tntrun.h
@@ -43,8 +43,8 @@ share/doc/tnt/tntdoc.html
 share/doc/tnt/tntrem.hlp.de
 share/doc/tnt/tntrem.hlp.en
 share/doc/tnt/tntrem.hlp.fr
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/tnt.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/tnt.mo
+share/locale/de/LC_MESSAGES/tnt.mo
+share/locale/fr/LC_MESSAGES/tnt.mo
 share/tnt/conf/autostrt.tnt.ex
 share/tnt/conf/boxender.tnt.ex
 share/tnt/conf/ctext.tnt.ex

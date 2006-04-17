@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/04/07 15:28:49 jlam Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/04/17 07:07:33 jlam Exp $
 bin/gpg
 bin/gpg-zip
 bin/gpgsplit
@@ -17,33 +17,33 @@ share/gnupg/DETAILS
 share/gnupg/FAQ
 share/gnupg/faq.html
 share/gnupg/options.skel
-${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/en@boldquot/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/en@quot/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/et/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/id/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gnupg.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gnupg.mo
+share/locale/be/LC_MESSAGES/gnupg.mo
+share/locale/ca/LC_MESSAGES/gnupg.mo
+share/locale/cs/LC_MESSAGES/gnupg.mo
+share/locale/da/LC_MESSAGES/gnupg.mo
+share/locale/de/LC_MESSAGES/gnupg.mo
+share/locale/el/LC_MESSAGES/gnupg.mo
+share/locale/en@boldquot/LC_MESSAGES/gnupg.mo
+share/locale/en@quot/LC_MESSAGES/gnupg.mo
+share/locale/eo/LC_MESSAGES/gnupg.mo
+share/locale/es/LC_MESSAGES/gnupg.mo
+share/locale/et/LC_MESSAGES/gnupg.mo
+share/locale/fi/LC_MESSAGES/gnupg.mo
+share/locale/fr/LC_MESSAGES/gnupg.mo
+share/locale/gl/LC_MESSAGES/gnupg.mo
+share/locale/hu/LC_MESSAGES/gnupg.mo
+share/locale/id/LC_MESSAGES/gnupg.mo
+share/locale/it/LC_MESSAGES/gnupg.mo
+share/locale/ja/LC_MESSAGES/gnupg.mo
+share/locale/pl/LC_MESSAGES/gnupg.mo
+share/locale/pt/LC_MESSAGES/gnupg.mo
+share/locale/pt_BR/LC_MESSAGES/gnupg.mo
+share/locale/ro/LC_MESSAGES/gnupg.mo
+share/locale/ru/LC_MESSAGES/gnupg.mo
+share/locale/sk/LC_MESSAGES/gnupg.mo
+share/locale/sv/LC_MESSAGES/gnupg.mo
+share/locale/tr/LC_MESSAGES/gnupg.mo
+share/locale/zh_CN/LC_MESSAGES/gnupg.mo
+share/locale/zh_TW/LC_MESSAGES/gnupg.mo
 @dirrm share/gnupg
 @dirrm libexec/gnupg

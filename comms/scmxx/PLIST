@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/03/03 22:25:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/04/17 07:07:14 jlam Exp $
 bin/adr2vcf
 bin/apoconv
 bin/scmxx
@@ -13,10 +13,10 @@ share/examples/scmxx/debian_with_scmxx.bmp
 share/examples/scmxx/sms.txt
 share/examples/scmxx/vCalendar.vcs
 share/examples/scmxx/vCard.vcf
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/scmxx.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/scmxx.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/scmxx.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/scmxx.mo
+share/locale/de/LC_MESSAGES/scmxx.mo
+share/locale/fr/LC_MESSAGES/scmxx.mo
+share/locale/it/LC_MESSAGES/scmxx.mo
+share/locale/ru/LC_MESSAGES/scmxx.mo
 @dirrm share/doc/scmxx
 @dirrm share/examples/scmxx
 @unexec ${RMDIR} %D/man/it/man1 2>/dev/null || ${TRUE}

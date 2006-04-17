@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/01 13:29:52 smb Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:12 jlam Exp $
 bin/gtkpod
 share/gtkpod/gtkpod.glade
 share/gtkpod/gtkpod.gladep
@@ -26,12 +26,12 @@ share/gtkpod/scripts/sync-korganizer.sh
 share/gtkpod/scripts/sync-notes.sh
 share/gtkpod/scripts/sync-thunderbird.sh
 share/gtkpod/scripts/sync-webcalendar.sh
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtkpod.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtkpod.mo
-${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gtkpod.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gtkpod.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtkpod.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gtkpod.mo
+share/locale/de/LC_MESSAGES/gtkpod.mo
+share/locale/fr/LC_MESSAGES/gtkpod.mo
+share/locale/he/LC_MESSAGES/gtkpod.mo
+share/locale/it/LC_MESSAGES/gtkpod.mo
+share/locale/ja/LC_MESSAGES/gtkpod.mo
+share/locale/sv/LC_MESSAGES/gtkpod.mo
 @dirrm share/gtkpod/scripts
 @dirrm share/gtkpod/pixmaps
 @dirrm share/gtkpod

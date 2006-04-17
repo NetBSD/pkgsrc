@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2004/02/24 22:46:34 cube Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:11 jlam Exp $
 lib/gkrellm2/plugins/gkrellmms.so
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gkrellmms.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gkrellmms.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gkrellmms.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gkrellmms.mo
+share/locale/da/LC_MESSAGES/gkrellmms.mo
+share/locale/fr/LC_MESSAGES/gkrellmms.mo
+share/locale/nl/LC_MESSAGES/gkrellmms.mo
+share/locale/ru/LC_MESSAGES/gkrellmms.mo

@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/28 06:42:49 martti Exp $
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfce4-fsguard.mo
-${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/xfce4-fsguard.mo
-${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfce4-fsguard.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfce4-fsguard.mo
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:35 jlam Exp $
 lib/xfce4/panel-plugins/libfsguard.la
+share/locale/de/LC_MESSAGES/xfce4-fsguard.mo
+share/locale/ko/LC_MESSAGES/xfce4-fsguard.mo
+share/locale/lt/LC_MESSAGES/xfce4-fsguard.mo
+share/locale/pl/LC_MESSAGES/xfce4-fsguard.mo

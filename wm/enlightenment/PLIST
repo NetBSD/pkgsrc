@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/01/11 13:41:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/04/17 07:07:36 jlam Exp $
 bin/edox
 bin/eesh
 bin/enlightenment
@@ -402,24 +402,24 @@ share/enlightenment/themes/winter/ttfonts/LICENSE.Vera
 share/enlightenment/themes/winter/ttfonts/Vera.ttf
 share/enlightenment/themes/winter/ttfonts/VeraBd.ttf
 share/enlightenment/themes/winter/windowmatches.cfg
-${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/enlightenment.mo
-${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/enlightenment.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/enlightenment.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/enlightenment.mo
-${PKGLOCALEDIR}/locale/en_US/LC_MESSAGES/enlightenment.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/enlightenment.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/enlightenment.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/enlightenment.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/enlightenment.mo
-${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/enlightenment.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/enlightenment.mo
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/enlightenment.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/enlightenment.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/enlightenment.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/enlightenment.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/enlightenment.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/enlightenment.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/enlightenment.mo
+share/locale/bg/LC_MESSAGES/enlightenment.mo
+share/locale/bs/LC_MESSAGES/enlightenment.mo
+share/locale/da/LC_MESSAGES/enlightenment.mo
+share/locale/de/LC_MESSAGES/enlightenment.mo
+share/locale/en_US/LC_MESSAGES/enlightenment.mo
+share/locale/es/LC_MESSAGES/enlightenment.mo
+share/locale/fr/LC_MESSAGES/enlightenment.mo
+share/locale/hu/LC_MESSAGES/enlightenment.mo
+share/locale/ja/LC_MESSAGES/enlightenment.mo
+share/locale/ko/LC_MESSAGES/enlightenment.mo
+share/locale/nl/LC_MESSAGES/enlightenment.mo
+share/locale/no/LC_MESSAGES/enlightenment.mo
+share/locale/pl/LC_MESSAGES/enlightenment.mo
+share/locale/pt/LC_MESSAGES/enlightenment.mo
+share/locale/pt_BR/LC_MESSAGES/enlightenment.mo
+share/locale/ru/LC_MESSAGES/enlightenment.mo
+share/locale/sv/LC_MESSAGES/enlightenment.mo
+share/locale/tr/LC_MESSAGES/enlightenment.mo
 @dirrm share/enlightenment/themes/winter/ttfonts
 @dirrm share/enlightenment/themes/winter/tooltips/images
 @dirrm share/enlightenment/themes/winter/tooltips

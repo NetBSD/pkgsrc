@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/15 12:42:40 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:37 jlam Exp $
 bin/selectwm
 man/man1/selectwm.1
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/selectwm.mo
+share/locale/fr/LC_MESSAGES/selectwm.mo

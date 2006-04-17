@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/11/26 23:54:56 epg Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:36 jlam Exp $
 bin/FvwmCommand
 bin/fvwm
 bin/fvwm-bug
@@ -159,21 +159,21 @@ share/fvwm/perllib/FVWM/Tracker/WindowList.pm
 share/fvwm/perllib/General/FileSystem.pm
 share/fvwm/perllib/General/Parse.pm
 share/fvwm/system.fvwm2rc-sample-95
-${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/FvwmScript.mo
-${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/FvwmTaskBar.mo
-${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/fvwm.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/FvwmScript.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/FvwmTaskBar.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/fvwm.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/FvwmScript.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/FvwmTaskBar.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/fvwm.mo
-${PKGLOCALEDIR}/locale/sv_SE/LC_MESSAGES/FvwmScript.mo
-${PKGLOCALEDIR}/locale/sv_SE/LC_MESSAGES/FvwmTaskBar.mo
-${PKGLOCALEDIR}/locale/sv_SE/LC_MESSAGES/fvwm.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/FvwmScript.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/FvwmTaskBar.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/fvwm.mo
+share/locale/ar/LC_MESSAGES/FvwmScript.mo
+share/locale/ar/LC_MESSAGES/FvwmTaskBar.mo
+share/locale/ar/LC_MESSAGES/fvwm.mo
+share/locale/de/LC_MESSAGES/FvwmScript.mo
+share/locale/de/LC_MESSAGES/FvwmTaskBar.mo
+share/locale/de/LC_MESSAGES/fvwm.mo
+share/locale/fr/LC_MESSAGES/FvwmScript.mo
+share/locale/fr/LC_MESSAGES/FvwmTaskBar.mo
+share/locale/fr/LC_MESSAGES/fvwm.mo
+share/locale/sv_SE/LC_MESSAGES/FvwmScript.mo
+share/locale/sv_SE/LC_MESSAGES/FvwmTaskBar.mo
+share/locale/sv_SE/LC_MESSAGES/fvwm.mo
+share/locale/zh_CN/LC_MESSAGES/FvwmScript.mo
+share/locale/zh_CN/LC_MESSAGES/FvwmTaskBar.mo
+share/locale/zh_CN/LC_MESSAGES/fvwm.mo
 @dirrm share/fvwm/perllib/General
 @dirrm share/fvwm/perllib/FVWM/Tracker
 @dirrm share/fvwm/perllib/FVWM/Module

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/01 03:49:19 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:13 jlam Exp $
 bin/wcalc-config
 include/${WCALC_DIR}/air_coil.h
 include/${WCALC_DIR}/air_coil_loadsave.h
@@ -20,7 +20,7 @@ include/${WCALC_DIR}/units.h
 include/${WCALC_DIR}/wcalc_loadsave.h
 lib/libwcalc.la
 lib/pkgconfig/wcalc.pc
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/wcalc.mo
+share/locale/es/LC_MESSAGES/wcalc.mo
 share/${WCALC_DIR}/air_coil.eps
 share/${WCALC_DIR}/alert_fig.eps
 share/${WCALC_DIR}/coax.eps

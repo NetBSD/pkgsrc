@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/23 19:59:53 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:20 jlam Exp $
 bin/tegclient
 bin/tegrobot
 bin/tegserver
@@ -34,13 +34,13 @@ share/gnome/help/teg/pl/mission.html
 share/gnome/help/teg/pl/server.html
 share/gnome/help/teg/pl/teg.sgml
 share/gnome/help/teg/pl/topic.dat
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/teg.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/teg.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/teg.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/teg.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/teg.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/teg.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/teg.mo
+share/locale/de/LC_MESSAGES/teg.mo
+share/locale/es/LC_MESSAGES/teg.mo
+share/locale/fr/LC_MESSAGES/teg.mo
+share/locale/it/LC_MESSAGES/teg.mo
+share/locale/pl/LC_MESSAGES/teg.mo
+share/locale/pt/LC_MESSAGES/teg.mo
+share/locale/pt_BR/LC_MESSAGES/teg.mo
 share/pixmaps/teg_icono.png
 share/pixmaps/teg_pix/disc_black.png
 share/pixmaps/teg_pix/disc_blue.png

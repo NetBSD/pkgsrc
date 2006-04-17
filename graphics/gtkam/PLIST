@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/10/04 02:57:25 minskim Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/04/17 07:07:21 jlam Exp $
 bin/gtkam
 man/man1/gtkam.1
 share/applications/gtkam.desktop
@@ -28,21 +28,21 @@ share/images/gtkam/gtkam-folder-camera.png
 share/images/gtkam/gtkam-folder.png
 share/images/gtkam/gtkam-lock.png
 share/images/gtkam/gtkam-new.png
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gtkam.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gtkam.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtkam.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gtkam.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtkam.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gtkam.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gtkam.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtkam.mo
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gtkam.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gtkam.mo
-${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/gtkam.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gtkam.mo
-${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/gtkam.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gtkam.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gtkam.mo
+share/locale/cs/LC_MESSAGES/gtkam.mo
+share/locale/da/LC_MESSAGES/gtkam.mo
+share/locale/de/LC_MESSAGES/gtkam.mo
+share/locale/es/LC_MESSAGES/gtkam.mo
+share/locale/fr/LC_MESSAGES/gtkam.mo
+share/locale/hu/LC_MESSAGES/gtkam.mo
+share/locale/it/LC_MESSAGES/gtkam.mo
+share/locale/ja/LC_MESSAGES/gtkam.mo
+share/locale/no/LC_MESSAGES/gtkam.mo
+share/locale/pt_BR/LC_MESSAGES/gtkam.mo
+share/locale/pt_PT/LC_MESSAGES/gtkam.mo
+share/locale/ru/LC_MESSAGES/gtkam.mo
+share/locale/sl/LC_MESSAGES/gtkam.mo
+share/locale/sv/LC_MESSAGES/gtkam.mo
+share/locale/uk/LC_MESSAGES/gtkam.mo
 share/omf/gtkam/gtkam-C.omf
 share/pixmaps/gtkam.png
 @comment in xdg-dirs: @dirrm share/pixmaps

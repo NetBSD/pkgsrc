@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/19 04:48:28 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:30 jlam Exp $
 bin/xfmedia
 bin/xfmedia-remote
 include/xfmedia/xfmedia-interface.h
@@ -14,19 +14,19 @@ share/applications/xfmedia.desktop
 share/icons/hicolor/22x22/actions/xfmedia-repeat.png
 share/icons/hicolor/22x22/actions/xfmedia-shuffle.png
 share/icons/hicolor/48x48/apps/xfmedia.png
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xfmedia.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xfmedia.mo
-${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/xfmedia.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/xfmedia.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xfmedia.mo
-${PKGLOCALEDIR}/locale/gu/LC_MESSAGES/xfmedia.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xfmedia.mo
-${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/xfmedia.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xfmedia.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/xfmedia.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/xfmedia.mo
-${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/xfmedia.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/xfmedia.mo
+share/locale/de/LC_MESSAGES/xfmedia.mo
+share/locale/es/LC_MESSAGES/xfmedia.mo
+share/locale/eu/LC_MESSAGES/xfmedia.mo
+share/locale/fi/LC_MESSAGES/xfmedia.mo
+share/locale/fr/LC_MESSAGES/xfmedia.mo
+share/locale/gu/LC_MESSAGES/xfmedia.mo
+share/locale/hu/LC_MESSAGES/xfmedia.mo
+share/locale/lt/LC_MESSAGES/xfmedia.mo
+share/locale/pl/LC_MESSAGES/xfmedia.mo
+share/locale/pt_BR/LC_MESSAGES/xfmedia.mo
+share/locale/sk/LC_MESSAGES/xfmedia.mo
+share/locale/vi/LC_MESSAGES/xfmedia.mo
+share/locale/zh_CN/LC_MESSAGES/xfmedia.mo
 share/xfmedia/doc/C/ch01.html
 share/xfmedia/doc/C/ch01s02.html
 share/xfmedia/doc/C/ch01s03.html

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2006/03/09 18:04:32 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2006/04/17 07:07:23 jlam Exp $
 bin/uim-fep
 bin/uim-fep-tick
 bin/uim-module-manager
@@ -30,10 +30,10 @@ share/doc/uim/UIM-SCM
 share/doc/uim/UIM-SH
 share/doc/uim/uim-fep/README
 share/doc/uim/uim-fep/README.ja
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/uim.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/uim-chardict-qt.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/uim.mo
-${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/uim.mo
+share/locale/fr/LC_MESSAGES/uim.mo
+share/locale/ja/LC_MESSAGES/uim-chardict-qt.mo
+share/locale/ja/LC_MESSAGES/uim.mo
+share/locale/ko/LC_MESSAGES/uim.mo
 share/uim/action.scm
 share/uim/anthy-custom.scm
 share/uim/anthy-key-custom.scm

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/05/04 20:57:04 reed Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/17 07:07:12 jlam Exp $
 bin/sweep
 include/sweep/sweep.h
 include/sweep/sweep_filter.h
@@ -18,15 +18,15 @@ lib/sweep/libnormalise.la
 lib/sweep/libreverse.la
 man/man1/sweep.1
 share/gnome/apps/Multimedia/sweep.desktop
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/sweep.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/sweep.mo
-${PKGLOCALEDIR}/locale/en_AU/LC_MESSAGES/sweep.mo
-${PKGLOCALEDIR}/locale/es_ES/LC_MESSAGES/sweep.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/sweep.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/sweep.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/sweep.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/sweep.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/sweep.mo
+share/locale/de/LC_MESSAGES/sweep.mo
+share/locale/el/LC_MESSAGES/sweep.mo
+share/locale/en_AU/LC_MESSAGES/sweep.mo
+share/locale/es_ES/LC_MESSAGES/sweep.mo
+share/locale/fr/LC_MESSAGES/sweep.mo
+share/locale/hu/LC_MESSAGES/sweep.mo
+share/locale/it/LC_MESSAGES/sweep.mo
+share/locale/pl/LC_MESSAGES/sweep.mo
+share/locale/ru/LC_MESSAGES/sweep.mo
 share/pixmaps/sweep.png
 share/sweep/sweep_logo.ppm
 @dirrm share/sweep

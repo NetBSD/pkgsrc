@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/09 16:09:26 rillig Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/04/17 07:07:22 jlam Exp $
 bin/xlog
 man/man1/xlog.1
 share/application-registry/xlog.applications
 share/applications/xlog.desktop
 share/applnk/Applications/xlog.desktop
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/xlog.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xlog.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xlog.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/xlog.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/xlog.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/xlog.mo
+share/locale/da/LC_MESSAGES/xlog.mo
+share/locale/es/LC_MESSAGES/xlog.mo
+share/locale/fr/LC_MESSAGES/xlog.mo
+share/locale/nl/LC_MESSAGES/xlog.mo
+share/locale/pl/LC_MESSAGES/xlog.mo
+share/locale/sk/LC_MESSAGES/xlog.mo
 share/mime-info/xlog.keys
 share/mime-info/xlog.mime
 share/mime/packages/xlog.xml

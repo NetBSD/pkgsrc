@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 12:12:06 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:29 jlam Exp $
 bin/gmencoder
 share/examples/gmencoder/gmencoder_opts
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gmencoder.mo
+share/locale/es/LC_MESSAGES/gmencoder.mo
 share/pixmaps/gmencoder/media-pause.png
 share/pixmaps/gmencoder/media-play.png
 @dirrm share/pixmaps/gmencoder

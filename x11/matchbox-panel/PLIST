@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/31 13:32:30 peter Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:49 jlam Exp $
 bin/matchbox-panel
 bin/mb-applet-battery
 bin/mb-applet-clock
@@ -11,13 +11,13 @@ share/applications/mb-applet-clock.desktop
 share/applications/mb-applet-menu-launcher.desktop
 share/applications/mb-applet-system-monitor.desktop
 share/applications/mb-launcher-term.desktop
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/matchbox-panel.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/matchbox-panel.mo
-${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/matchbox-panel.mo
-${PKGLOCALEDIR}/locale/es_ES/LC_MESSAGES/matchbox-panel.mo
-${PKGLOCALEDIR}/locale/fi_FI/LC_MESSAGES/matchbox-panel.mo
-${PKGLOCALEDIR}/locale/fr_FR/LC_MESSAGES/matchbox-panel.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/matchbox-panel.mo
+share/locale/cs/LC_MESSAGES/matchbox-panel.mo
+share/locale/de/LC_MESSAGES/matchbox-panel.mo
+share/locale/en_GB/LC_MESSAGES/matchbox-panel.mo
+share/locale/es_ES/LC_MESSAGES/matchbox-panel.mo
+share/locale/fi_FI/LC_MESSAGES/matchbox-panel.mo
+share/locale/fr_FR/LC_MESSAGES/matchbox-panel.mo
+share/locale/zh_TW/LC_MESSAGES/matchbox-panel.mo
 share/pixmaps/broken-0.png
 share/pixmaps/mbmenu.png
 share/pixmaps/mbterm.png

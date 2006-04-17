@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/06 18:18:15 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:32 jlam Exp $
 bin/diffpp
 bin/enscript
 bin/mkafmmap
@@ -151,13 +151,13 @@ share/enscript/simple.hdr
 share/enscript/squeeze.hdr
 share/enscript/vms.enc
 share/examples/enscript/enscript.cfg
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/enscript.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/enscript.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/enscript.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/enscript.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/enscript.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/enscript.mo
-${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/enscript.mo
+share/locale/de/LC_MESSAGES/enscript.mo
+share/locale/es/LC_MESSAGES/enscript.mo
+share/locale/fi/LC_MESSAGES/enscript.mo
+share/locale/fr/LC_MESSAGES/enscript.mo
+share/locale/nl/LC_MESSAGES/enscript.mo
+share/locale/ru/LC_MESSAGES/enscript.mo
+share/locale/sl/LC_MESSAGES/enscript.mo
 @dirrm share/examples/enscript
 @dirrm share/enscript/hl
 @dirrm share/enscript/afm

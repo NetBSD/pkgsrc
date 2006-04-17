@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/06/05 22:19:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:31 jlam Exp $
 bin/kftpgrabber
 include/kftpgrabber/kftpbookmarkimportplugin.h
 lib/kde3/kftpimportplugin_gftp.la
@@ -16,16 +16,16 @@ share/kde/icons/hicolor/48x48/apps/kftpgrabber.png
 share/kde/services/kftpimportplugin_gftp.desktop
 share/kde/services/kftpimportplugin_ncftp.desktop
 share/kde/servicetypes/kftpbookmarkimportplugin.desktop
-${PKGLOCALEDIR}/locale/br/LC_MESSAGES/kftpgrabber.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kftpgrabber.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kftpgrabber.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/kftpgrabber.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/kftpgrabber.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/kftpgrabber.mo
-${PKGLOCALEDIR}/locale/ga/LC_MESSAGES/kftpgrabber.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/kftpgrabber.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/kftpgrabber.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kftpgrabber.mo
+share/locale/br/LC_MESSAGES/kftpgrabber.mo
+share/locale/cs/LC_MESSAGES/kftpgrabber.mo
+share/locale/de/LC_MESSAGES/kftpgrabber.mo
+share/locale/el/LC_MESSAGES/kftpgrabber.mo
+share/locale/es/LC_MESSAGES/kftpgrabber.mo
+share/locale/fr/LC_MESSAGES/kftpgrabber.mo
+share/locale/ga/LC_MESSAGES/kftpgrabber.mo
+share/locale/hu/LC_MESSAGES/kftpgrabber.mo
+share/locale/sv/LC_MESSAGES/kftpgrabber.mo
+share/locale/zh_CN/LC_MESSAGES/kftpgrabber.mo
 @comment in kde: @dirrm share/kde/servicetypes
 @comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps

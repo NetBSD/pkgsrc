@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/10/19 09:45:09 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/04/17 07:07:12 jlam Exp $
 bin/streamtuner
 include/streamtuner/st-action-api.h
 include/streamtuner/st-category-api.h
@@ -59,11 +59,11 @@ share/help/streamtuner/C/documentation-license.xml
 share/help/streamtuner/C/figures/main-window.png
 share/help/streamtuner/C/software-license.xml
 share/help/streamtuner/C/streamtuner.xml
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/streamtuner.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/streamtuner.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/streamtuner.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/streamtuner.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/streamtuner.mo
+share/locale/de/LC_MESSAGES/streamtuner.mo
+share/locale/fr/LC_MESSAGES/streamtuner.mo
+share/locale/hu/LC_MESSAGES/streamtuner.mo
+share/locale/ja/LC_MESSAGES/streamtuner.mo
+share/locale/pt/LC_MESSAGES/streamtuner.mo
 share/omf/streamtuner/streamtuner-C.omf
 share/pixmaps/streamtuner.png
 ${PYTHON_PLUGIN}share/streamtuner/python/icons/basic.ch.png

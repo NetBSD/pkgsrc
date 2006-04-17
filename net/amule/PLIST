@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/01/20 22:06:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/04/17 07:07:30 jlam Exp $
 bin/amule
 bin/ed2k
 lib/xchat/plugins/xas.pl
@@ -29,36 +29,36 @@ share/doc/aMule-${PKGVERSION}/amule-win32.HOWTO.txt
 share/doc/aMule-${PKGVERSION}/amulesig.txt
 share/doc/aMule-${PKGVERSION}/license.txt
 share/doc/aMule-${PKGVERSION}/socks4.protocol
-${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/en_US/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/es_MX/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/et_EE/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/it_CH/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/ko_KR/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/amule.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/amule.mo
+share/locale/ar/LC_MESSAGES/amule.mo
+share/locale/bg/LC_MESSAGES/amule.mo
+share/locale/ca/LC_MESSAGES/amule.mo
+share/locale/da/LC_MESSAGES/amule.mo
+share/locale/de/LC_MESSAGES/amule.mo
+share/locale/en_GB/LC_MESSAGES/amule.mo
+share/locale/en_US/LC_MESSAGES/amule.mo
+share/locale/es/LC_MESSAGES/amule.mo
+share/locale/es_MX/LC_MESSAGES/amule.mo
+share/locale/et_EE/LC_MESSAGES/amule.mo
+share/locale/eu/LC_MESSAGES/amule.mo
+share/locale/fi/LC_MESSAGES/amule.mo
+share/locale/fr/LC_MESSAGES/amule.mo
+share/locale/gl/LC_MESSAGES/amule.mo
+share/locale/hr/LC_MESSAGES/amule.mo
+share/locale/hu/LC_MESSAGES/amule.mo
+share/locale/it/LC_MESSAGES/amule.mo
+share/locale/it_CH/LC_MESSAGES/amule.mo
+share/locale/ko_KR/LC_MESSAGES/amule.mo
+share/locale/nl/LC_MESSAGES/amule.mo
+share/locale/pl/LC_MESSAGES/amule.mo
+share/locale/pt_BR/LC_MESSAGES/amule.mo
+share/locale/pt_PT/LC_MESSAGES/amule.mo
+share/locale/ru/LC_MESSAGES/amule.mo
+share/locale/sl/LC_MESSAGES/amule.mo
+share/locale/zh_CN/LC_MESSAGES/amule.mo
+share/locale/zh_TW/LC_MESSAGES/amule.mo
 share/pixmaps/amule.xpm
 @comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm ${PKGLOCALEDIR}/locale/it_CH/LC_MESSAGES
+@dirrm share/locale/it_CH/LC_MESSAGES
 @dirrm share/doc/aMule-${PKGVERSION}
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm man/hu/man1

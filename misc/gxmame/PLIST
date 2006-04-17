@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/23 09:02:39 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:25 jlam Exp $
 bin/gxmame
 share/applications/gxmame.desktop
 share/doc/gxmame/AUTHORS
@@ -19,15 +19,15 @@ share/doc/gxmame/html/gxmame-doc.html
 share/doc/gxmame/html/includes/gxmame.css
 share/icons/gxmame.png
 share/icons/mini/gxmame.xpm
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gxmame.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gxmame.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gxmame.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gxmame.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gxmame.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gxmame.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gxmame.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gxmame.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gxmame.mo
+share/locale/de/LC_MESSAGES/gxmame.mo
+share/locale/el/LC_MESSAGES/gxmame.mo
+share/locale/es/LC_MESSAGES/gxmame.mo
+share/locale/fr/LC_MESSAGES/gxmame.mo
+share/locale/it/LC_MESSAGES/gxmame.mo
+share/locale/nl/LC_MESSAGES/gxmame.mo
+share/locale/pl/LC_MESSAGES/gxmame.mo
+share/locale/zh_CN/LC_MESSAGES/gxmame.mo
+share/locale/zh_TW/LC_MESSAGES/gxmame.mo
 @dirrm share/icons/mini
 @dirrm share/doc/gxmame/html/includes
 @dirrm share/doc/gxmame/html/gui

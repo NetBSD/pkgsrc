@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/02/19 16:57:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/17 07:07:31 jlam Exp $
 bin/nicotine
 bin/nicotine-import-winconfig
 ${PYSITELIB}/pynicotine/ConfigParser.py
@@ -97,13 +97,13 @@ ${PYSITELIB}/pynicotine/transfers.pyo
 ${PYSITELIB}/pynicotine/utils.py
 ${PYSITELIB}/pynicotine/utils.pyc
 ${PYSITELIB}/pynicotine/utils.pyo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/nicotine.mo
-${PKGLOCALEDIR}/locale/dk/LC_MESSAGES/nicotine.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/nicotine.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/nicotine.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/nicotine.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/nicotine.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/nicotine.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/nicotine.mo
+share/locale/de/LC_MESSAGES/nicotine.mo
+share/locale/dk/LC_MESSAGES/nicotine.mo
+share/locale/es/LC_MESSAGES/nicotine.mo
+share/locale/fr/LC_MESSAGES/nicotine.mo
+share/locale/it/LC_MESSAGES/nicotine.mo
+share/locale/nl/LC_MESSAGES/nicotine.mo
+share/locale/pl/LC_MESSAGES/nicotine.mo
+share/locale/sv/LC_MESSAGES/nicotine.mo
 @dirrm ${PYSITELIB}/pynicotine/gtkgui
 @dirrm ${PYSITELIB}/pynicotine
