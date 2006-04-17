@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/11 13:06:43 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:22 jlam Exp $
 bin/pornview
 share/gnome/apps/Graphics/pornview.desktop
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/pornview.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/pornview.mo
+share/locale/fr/LC_MESSAGES/pornview.mo
+share/locale/pl/LC_MESSAGES/pornview.mo
 share/pixmaps/pornview.png
 share/pornview/scripts/helloworld
 @dirrm share/pornview/scripts

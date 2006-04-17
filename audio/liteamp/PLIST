@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/18 01:28:29 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:12 jlam Exp $
 bin/liteamp
 man/man1/liteamp.1
 share/application-registry/liteamp.applications
@@ -19,7 +19,7 @@ share/liteamp/pixmaps/vol.png
 share/liteamp/pixmaps/vol_down.png
 share/liteamp/pixmaps/vol_mute.png
 share/liteamp/pixmaps/vol_up.png
-${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/liteamp.mo
+share/locale/ko/LC_MESSAGES/liteamp.mo
 share/pixmaps/liteamp.png
 @dirrm share/liteamp/pixmaps
 @dirrm share/liteamp

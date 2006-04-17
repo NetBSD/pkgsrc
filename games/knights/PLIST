@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/27 21:56:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:19 jlam Exp $
 bin/knights
 share/doc/kde/HTML/de/knights/common
 share/doc/kde/HTML/en/knights/common
@@ -30,12 +30,12 @@ share/kde/icons/hicolor/48x48/mimetypes/pgn.png
 share/kde/icons/hicolor/64x64/apps/knights.png
 share/kde/icons/hicolor/64x64/mimetypes/pgn.png
 share/kde/mimelnk/application/pgn.desktop
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/knights.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/knights.mo
-${PKGLOCALEDIR}/locale/et/LC_MESSAGES/knights.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/knights.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/knights.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/knights.mo
+share/locale/de/LC_MESSAGES/knights.mo
+share/locale/es/LC_MESSAGES/knights.mo
+share/locale/et/LC_MESSAGES/knights.mo
+share/locale/fi/LC_MESSAGES/knights.mo
+share/locale/fr/LC_MESSAGES/knights.mo
+share/locale/it/LC_MESSAGES/knights.mo
 @comment in kde: @dirrm share/kde/mimelnk/application
 @comment in kde: @dirrm share/kde/icons/hicolor/64x64/mimetypes
 @comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps

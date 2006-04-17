@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2005/10/04 19:12:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/04/17 07:07:37 jlam Exp $
 bin/anti_bins
 bin/bins
 bin/bins_cleanupgallery
@@ -252,19 +252,19 @@ share/examples/bins/templates.swigs/search_result.html
 share/examples/bins/templates.swigs/subalbum.html
 share/examples/bins/templates.swigs/thumbnail.html
 share/examples/bins/templates.swigs/tree.html
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/bins.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/bins.mo
-${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/bins.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/bins.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/bins.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bins.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/bins.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/bins.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/bins.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/bins.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/bins.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/bins.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/bins.mo
+share/locale/ca/LC_MESSAGES/bins.mo
+share/locale/de/LC_MESSAGES/bins.mo
+share/locale/eo/LC_MESSAGES/bins.mo
+share/locale/es/LC_MESSAGES/bins.mo
+share/locale/fi/LC_MESSAGES/bins.mo
+share/locale/fr/LC_MESSAGES/bins.mo
+share/locale/hu/LC_MESSAGES/bins.mo
+share/locale/it/LC_MESSAGES/bins.mo
+share/locale/ja/LC_MESSAGES/bins.mo
+share/locale/nl/LC_MESSAGES/bins.mo
+share/locale/pl/LC_MESSAGES/bins.mo
+share/locale/ru/LC_MESSAGES/bins.mo
+share/locale/zh_TW/LC_MESSAGES/bins.mo
 @dirrm share/examples/bins/templates.swigs
 @dirrm share/examples/bins/templates.satyap/static
 @dirrm share/examples/bins/templates.satyap

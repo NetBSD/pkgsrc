@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/04 15:04:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:31 jlam Exp $
 bin/gtk_wicontrol
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtk_wicontrol.mo
+share/locale/ja/LC_MESSAGES/gtk_wicontrol.mo

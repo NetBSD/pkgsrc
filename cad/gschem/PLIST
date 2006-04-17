@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/03/30 03:44:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/04/17 07:07:13 jlam Exp $
 bin/gschem
 info/gschemdoc.info
 man/man1/gschem.1
@@ -29,14 +29,14 @@ share/gEDA/scheme/gschem.scm
 share/gEDA/scheme/list-keys.scm
 share/gEDA/scheme/print-NB-attribs.scm
 share/gEDA/system-gschemrc
-${PKGLOCALEDIR}/locale/de_DE/LC_MESSAGES/geda-gschem.mo
-${PKGLOCALEDIR}/locale/es_ES/LC_MESSAGES/geda-gschem.mo
-${PKGLOCALEDIR}/locale/fr_FR/LC_MESSAGES/geda-gschem.mo
-${PKGLOCALEDIR}/locale/it_IT/LC_MESSAGES/geda-gschem.mo
-${PKGLOCALEDIR}/locale/ja_JP/LC_MESSAGES/geda-gschem.mo
-${PKGLOCALEDIR}/locale/nl_NL/LC_MESSAGES/geda-gschem.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/geda-gschem.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/geda-gschem.mo
+share/locale/de_DE/LC_MESSAGES/geda-gschem.mo
+share/locale/es_ES/LC_MESSAGES/geda-gschem.mo
+share/locale/fr_FR/LC_MESSAGES/geda-gschem.mo
+share/locale/it_IT/LC_MESSAGES/geda-gschem.mo
+share/locale/ja_JP/LC_MESSAGES/geda-gschem.mo
+share/locale/nl_NL/LC_MESSAGES/geda-gschem.mo
+share/locale/pt_BR/LC_MESSAGES/geda-gschem.mo
+share/locale/ru/LC_MESSAGES/geda-gschem.mo
 @dirrm share/gEDA/bitmap
 @unexec ${RMDIR} %D/share/doc/geda-doc/man 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/doc/geda-doc 2>/dev/null || ${TRUE}
