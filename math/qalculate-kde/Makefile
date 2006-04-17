@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2006/02/24 21:09:13 adam Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/17 07:48:52 adam Exp $
 
-DISTNAME=	qalculate-kde-0.9.2
+DISTNAME=	qalculate-kde-0.9.3.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qalculate/}
 
@@ -12,7 +12,7 @@ DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=	wget>=1.8:../../net/wget
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/kde
 
