@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4891 2006/04/17 08:00:08 adam Exp $
+$NetBSD: TODO,v 1.4892 2006/04/17 14:51:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1195,7 +1195,6 @@ Suggested package updates
 	o unrar-3.6.1
 	o userppp-030706
 	o valgrind-3.0.1
-	o vba-1.7.2
 	o verilog-0.8.2
 	o vfu-4.03
 	o vice-1.19
