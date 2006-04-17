@@ -1,0 +1,14 @@
+$NetBSD: patch-ao,v 1.1.2.2 2006/04/17 21:58:38 salo Exp $
+
+--- sql/sql_lex.cc.orig	2006-03-31 18:10:45.000000000 +0100
++++ sql/sql_lex.cc	2006-04-17 12:09:26.000000000 +0100
+@@ -960,6 +960,9 @@
+       while (lex->ptr != lex->end_of_query &&
+ 	     ((c=yyGet()) != '*' || yyPeek() != '/'))
+       {
++	if (c == '\0')
++	  return(ABORT_SYM);		// NULLs illegal even in comments
++
+ 	if (c == '\n')
+ 	  lex->yylineno++;
+       }
