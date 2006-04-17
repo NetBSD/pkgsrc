@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13612 2006/04/17 08:00:08 adam Exp $
+$NetBSD: CHANGES,v 1.13613 2006/04/17 08:12:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2142,3 +2142,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/qalculate-bases to 0.9.3 [adam 2006-04-17]
 	Updated math/qalculate-currency to 0.9.3 [adam 2006-04-17]
 	Updated math/qalculate-units to 0.9.3 [adam 2006-04-17]
+	Updated graphics/netpbm to 10.33 [adam 2006-04-17]
