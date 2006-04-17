@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/02/17 23:46:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:25 jlam Exp $
 bin/celestia
 share/celestia/COPYING
 share/celestia/controls.txt
@@ -297,18 +297,18 @@ share/celestia/textures/medres/venuslike.jpg
 share/celestia/textures/medres/venuslikenight.jpg
 share/celestia/textures/medres/venussurface.jpg
 share/examples/celestia/celestia.cfg.default
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/celestia.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/celestia.mo
-${PKGLOCALEDIR}/locale/en/LC_MESSAGES/celestia.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/celestia.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/celestia.mo
-${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/celestia.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/celestia.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/celestia.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/celestia.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/celestia.mo
-${PKGLOCALEDIR}/locale/pt_br/LC_MESSAGES/celestia.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/celestia.mo
+share/locale/de/LC_MESSAGES/celestia.mo
+share/locale/el/LC_MESSAGES/celestia.mo
+share/locale/en/LC_MESSAGES/celestia.mo
+share/locale/es/LC_MESSAGES/celestia.mo
+share/locale/fr/LC_MESSAGES/celestia.mo
+share/locale/gl/LC_MESSAGES/celestia.mo
+share/locale/hu/LC_MESSAGES/celestia.mo
+share/locale/it/LC_MESSAGES/celestia.mo
+share/locale/nl/LC_MESSAGES/celestia.mo
+share/locale/pt/LC_MESSAGES/celestia.mo
+share/locale/pt_br/LC_MESSAGES/celestia.mo
+share/locale/ru/LC_MESSAGES/celestia.mo
 @dirrm share/examples/celestia
 @dirrm share/celestia/textures/medres
 @dirrm share/celestia/textures/lores

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/01/11 11:22:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/04/17 07:07:33 jlam Exp $
 bin/gentoo
 share/examples/gentoo/gentoogtkrc
 share/examples/gentoo/gentoorc
@@ -125,18 +125,18 @@ share/gentoo/icons/xbm2.xpm
 share/gentoo/icons/xcf.xpm
 share/gentoo/icons/xpm.xpm
 share/gentoo/icons/xpm2.xpm
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gentoo.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gentoo.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gentoo.mo
-${PKGLOCALEDIR}/locale/ja_JP.UTF-8/LC_MESSAGES/gentoo.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gentoo.mo
-${PKGLOCALEDIR}/locale/ru_RU.CP1251/LC_MESSAGES/gentoo.mo
-${PKGLOCALEDIR}/locale/ru_RU.KOI8-R/LC_MESSAGES/gentoo.mo
-${PKGLOCALEDIR}/locale/ru_RU.UTF-8/LC_MESSAGES/gentoo.mo
-${PKGLOCALEDIR}/locale/ru_RU.cp1251/LC_MESSAGES/gentoo.mo
-${PKGLOCALEDIR}/locale/ru_RU.koi8r/LC_MESSAGES/gentoo.mo
-${PKGLOCALEDIR}/locale/ru_RU.utf8/LC_MESSAGES/gentoo.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gentoo.mo
+share/locale/de/LC_MESSAGES/gentoo.mo
+share/locale/fr/LC_MESSAGES/gentoo.mo
+share/locale/it/LC_MESSAGES/gentoo.mo
+share/locale/ja_JP.UTF-8/LC_MESSAGES/gentoo.mo
+share/locale/pl/LC_MESSAGES/gentoo.mo
+share/locale/ru_RU.CP1251/LC_MESSAGES/gentoo.mo
+share/locale/ru_RU.KOI8-R/LC_MESSAGES/gentoo.mo
+share/locale/ru_RU.UTF-8/LC_MESSAGES/gentoo.mo
+share/locale/ru_RU.cp1251/LC_MESSAGES/gentoo.mo
+share/locale/ru_RU.koi8r/LC_MESSAGES/gentoo.mo
+share/locale/ru_RU.utf8/LC_MESSAGES/gentoo.mo
+share/locale/sv/LC_MESSAGES/gentoo.mo
 @dirrm share/gentoo/icons
 @dirrm share/gentoo
 @dirrm share/examples/gentoo

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/03/11 23:55:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/04/17 07:07:23 jlam Exp $
 bin/clisp
 lib/clisp/base/calls.o
 lib/clisp/base/gettext.o
@@ -64,20 +64,20 @@ share/doc/clisp/clisp.ps
 share/doc/clisp/editors.txt
 share/doc/clisp/impnotes.css
 share/doc/clisp/impnotes.html
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/clisp.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/clisplow.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/clisp.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/clisplow.mo
-${PKGLOCALEDIR}/locale/en/LC_MESSAGES/clisp.mo
-${PKGLOCALEDIR}/locale/en/LC_MESSAGES/clisplow.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/clisp.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/clisplow.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/clisp.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/clisplow.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/clisp.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/clisplow.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/clisp.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/clisplow.mo
+share/locale/da/LC_MESSAGES/clisp.mo
+share/locale/da/LC_MESSAGES/clisplow.mo
+share/locale/de/LC_MESSAGES/clisp.mo
+share/locale/de/LC_MESSAGES/clisplow.mo
+share/locale/en/LC_MESSAGES/clisp.mo
+share/locale/en/LC_MESSAGES/clisplow.mo
+share/locale/es/LC_MESSAGES/clisp.mo
+share/locale/es/LC_MESSAGES/clisplow.mo
+share/locale/fr/LC_MESSAGES/clisp.mo
+share/locale/fr/LC_MESSAGES/clisplow.mo
+share/locale/nl/LC_MESSAGES/clisp.mo
+share/locale/nl/LC_MESSAGES/clisplow.mo
+share/locale/ru/LC_MESSAGES/clisp.mo
+share/locale/ru/LC_MESSAGES/clisplow.mo
 @dirrm share/doc/clisp
 @dirrm lib/clisp/linkkit
 @dirrm lib/clisp/full

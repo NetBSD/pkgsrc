@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/09/05 07:51:58 rh Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/17 07:07:14 jlam Exp $
 bin/jpilot
 bin/jpilot-dump
 bin/jpilot-sync
@@ -51,22 +51,22 @@ share/jpilot/jpilotrc.default
 share/jpilot/jpilotrc.green
 share/jpilot/jpilotrc.purple
 share/jpilot/jpilotrc.steel
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/jpilot.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/jpilot.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/jpilot.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/jpilot.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/jpilot.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/jpilot.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/jpilot.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/jpilot.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/jpilot.mo
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/jpilot.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/jpilot.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/jpilot.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/jpilot.mo
-${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/jpilot.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/jpilot.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/jpilot.mo
+share/locale/ca/LC_MESSAGES/jpilot.mo
+share/locale/cs/LC_MESSAGES/jpilot.mo
+share/locale/da/LC_MESSAGES/jpilot.mo
+share/locale/de/LC_MESSAGES/jpilot.mo
+share/locale/es/LC_MESSAGES/jpilot.mo
+share/locale/fr/LC_MESSAGES/jpilot.mo
+share/locale/it/LC_MESSAGES/jpilot.mo
+share/locale/ja/LC_MESSAGES/jpilot.mo
+share/locale/nl/LC_MESSAGES/jpilot.mo
+share/locale/no/LC_MESSAGES/jpilot.mo
+share/locale/ru/LC_MESSAGES/jpilot.mo
+share/locale/sv/LC_MESSAGES/jpilot.mo
+share/locale/tr/LC_MESSAGES/jpilot.mo
+share/locale/vi/LC_MESSAGES/jpilot.mo
+share/locale/zh_CN/LC_MESSAGES/jpilot.mo
+share/locale/zh_TW/LC_MESSAGES/jpilot.mo
 @dirrm share/jpilot
 @dirrm share/gnome/apps/Applications
 @dirrm share/doc/${PKGNAME}/icons
