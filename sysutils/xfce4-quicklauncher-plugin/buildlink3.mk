@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:36 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/17 13:46:14 wiz Exp $
 
 BUILDLINK_DEPTH:=				${BUILDLINK_DEPTH}+
 XFCE4_QUICKLAUNCHER_PLUGIN_BUILDLINK3_MK:=	${XFCE4_QUICKLAUNCHER_PLUGIN_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-quicklauncher-plugin
 
 .if !empty(XFCE4_QUICKLAUNCHER_PLUGIN_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.xfce4-quicklauncher-plugin+=	xfce4-quicklauncher-plugin>=0.81
-BUILDLINK_ABI_DEPENDS.xfce4-quicklauncher-plugin?=	xfce4-quicklauncher-plugin>=0.81nb3
+BUILDLINK_ABI_DEPENDS.xfce4-quicklauncher-plugin?=	xfce4-quicklauncher-plugin>=0.81nb4
 BUILDLINK_PKGSRCDIR.xfce4-quicklauncher-plugin?=	../../sysutils/xfce4-quicklauncher-plugin
 .endif	# XFCE4_QUICKLAUNCHER_PLUGIN_BUILDLINK3_MK
 

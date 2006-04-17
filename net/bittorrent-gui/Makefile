@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2006/02/26 22:43:33 tron Exp $
+# $NetBSD: Makefile,v 1.18 2006/04/17 13:46:42 wiz Exp $
 
 .include "../../net/bittorrent/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/BitTorrent/bittorrent-gui/}
+PKGREVISION=	1
 
 COMMENT+=	(GTK+ GUI)
 

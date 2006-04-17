@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2006/02/05 23:09:32 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2006/04/17 13:46:32 wiz Exp $
 
 DISTNAME=	gphoto-0.4.3
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.gphoto.net/dist/
 

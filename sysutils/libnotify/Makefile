@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/30 21:00:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/17 13:46:10 wiz Exp $
 #
 
 DISTNAME=	libnotify-0.3.2
+PKGREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.galago-project.org/files/releases/source/libnotify/
 

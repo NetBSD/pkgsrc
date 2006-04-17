@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/04/12 10:27:17 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/04/17 13:45:59 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 IMLIB_BUILDLINK3_MK:=	${IMLIB_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	imlib
 
 .if !empty(IMLIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.imlib+=	imlib>=1.9.14nb5
-BUILDLINK_ABI_DEPENDS.imlib+=	imlib>=1.9.15nb3
+BUILDLINK_ABI_DEPENDS.imlib+=	imlib>=1.9.15nb4
 BUILDLINK_PKGSRCDIR.imlib?=	../../graphics/imlib
 .endif	# IMLIB_BUILDLINK3_MK
 

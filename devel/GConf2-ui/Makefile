@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2006/04/06 06:21:43 reed Exp $
+# $NetBSD: Makefile,v 1.27 2006/04/17 13:46:09 wiz Exp $
 #
 
 .include "../../devel/GConf2/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/GConf/GConf2-ui/}
+PKGREVISION=	1
 
 BUILDLINK_API_DEPENDS.GConf2+=	GConf2>=${GCONF2_VERSION}
 

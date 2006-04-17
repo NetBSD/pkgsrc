@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:09 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/17 13:46:03 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBAST_BUILDLINK3_MK:=	${LIBAST_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libast
 
 .if !empty(LIBAST_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libast+=	libast>=0.5nb5
-BUILDLINK_ABI_DEPENDS.libast+=	libast>=0.6.1nb1
+BUILDLINK_ABI_DEPENDS.libast+=	libast>=0.6.1nb3
 BUILDLINK_PKGSRCDIR.libast?=	../../devel/libast
 .endif	# LIBAST_BUILDLINK3_MK
 

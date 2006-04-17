@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:32 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/17 13:46:08 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_KEYRING_BUILDLINK3_MK:=	${GNOME_KEYRING_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gnome-keyring
 
 .if !empty(GNOME_KEYRING_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=0.4.0
-BUILDLINK_ABI_DEPENDS.gnome-keyring+=	gnome-keyring>=0.4.6nb2
+BUILDLINK_ABI_DEPENDS.gnome-keyring+=	gnome-keyring>=0.4.9nb1
 BUILDLINK_PKGSRCDIR.gnome-keyring?=	../../security/gnome-keyring
 
 .include "../../devel/gettext-lib/buildlink3.mk"

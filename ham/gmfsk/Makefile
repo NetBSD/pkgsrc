@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/03/21 06:00:46 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/17 13:46:37 wiz Exp $
 #
 
 DISTNAME=	gmfsk-0.6
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	ham
 MASTER_SITES=	http://gmfsk.connect.fi/
 

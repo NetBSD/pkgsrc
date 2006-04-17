@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:11:14 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/17 13:46:50 wiz Exp $
 
 DISTNAME=		obconf-1.5
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		wm
 MASTER_SITES=		http://icculus.org/openbox/obconf/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:43 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/17 13:46:05 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 QT3_QSCINTILLA_BUILDLINK3_MK:=	${QT3_QSCINTILLA_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	qt3-qscintilla
 
 .if !empty(QT3_QSCINTILLA_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.qt3-qscintilla+=	qt3-qscintilla>=1.2
-BUILDLINK_ABI_DEPENDS.qt3-qscintilla+=	qt3-qscintilla>=1.6nb2
+BUILDLINK_ABI_DEPENDS.qt3-qscintilla+=	qt3-qscintilla>=1.6nb3
 BUILDLINK_PKGSRCDIR.qt3-qscintilla?=	../../x11/qt3-qscintilla
 .endif	# QT3_QSCINTILLA_BUILDLINK3_MK
 

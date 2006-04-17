@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:10:58 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/17 13:46:13 wiz Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
 DISTNAME=	xfce4-systray-${XFCE4_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 COMMENT=	Xfce systray plugin
 

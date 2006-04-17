@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/02/13 14:47:10 salo Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/17 13:46:18 wiz Exp $
 
 DISTNAME=	gaim-otr-3.0.0
+PKGREVISION=	1
 CATEGORIES=	chat security
 MASTER_SITES=	http://www.cypherpunks.ca/otr/
 

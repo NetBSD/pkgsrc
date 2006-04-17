@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:17 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/04/17 13:46:04 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FNLIB_BUILDLINK3_MK:=	${FNLIB_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	fnlib
 
 .if !empty(FNLIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.fnlib+=	fnlib>=0.5nb6
-BUILDLINK_ABI_DEPENDS.fnlib+=	fnlib>=0.5nb9
+BUILDLINK_ABI_DEPENDS.fnlib+=	fnlib>=0.5nb10
 BUILDLINK_PKGSRCDIR.fnlib?=	../../graphics/fnlib
 .endif	# FNLIB_BUILDLINK3_MK
 

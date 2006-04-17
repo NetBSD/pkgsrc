@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:18 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/17 13:46:10 wiz Exp $
 #
 # This file was created automatically using createbuildlink-3.4.
 
@@ -14,7 +14,7 @@ BUILDLINK_PACKAGES+=	libexif-gtk
 
 .if !empty(LIBEXIF_GTK_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libexif-gtk+=	libexif-gtk>=0.3.3nb7
-BUILDLINK_ABI_DEPENDS.libexif-gtk+=	libexif-gtk>=0.3.5nb3
+BUILDLINK_ABI_DEPENDS.libexif-gtk+=	libexif-gtk>=0.3.5nb4
 BUILDLINK_PKGSRCDIR.libexif-gtk?=	../../graphics/libexif-gtk
 .endif	# LIBEXIF_GTK_BUILDLINK3_MK
 

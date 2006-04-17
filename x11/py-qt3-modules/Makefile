@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.22 2006/02/10 10:59:36 drochner Exp $
+# $NetBSD: Makefile,v 1.23 2006/04/17 13:46:06 wiz Exp $
 #
 
 .include "../../x11/py-qt3-base/Makefile.common"
 
 PKGNAME=		${PYPKGPREFIX}-qt3-modules-${PYQT_VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 
 COMMENT=		Various Python modules for Qt3
 

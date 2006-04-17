@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2006/04/12 10:27:18 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2006/04/17 13:46:07 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBRSVG2_BUILDLINK3_MK:=	${LIBRSVG2_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	librsvg2
 
 .if !empty(LIBRSVG2_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.librsvg2+=	librsvg2>=2.12.6nb1
-BUILDLINK_ABI_DEPENDS.librsvg2+=	librsvg2>=2.14.1
+BUILDLINK_ABI_DEPENDS.librsvg2+=	librsvg2>=2.14.3nb1
 BUILDLINK_PKGSRCDIR.librsvg2?=	../../graphics/librsvg2
 .endif	# LIBRSVG2_BUILDLINK3_MK
 

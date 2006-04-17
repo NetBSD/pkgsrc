@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2006/03/30 03:44:41 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2006/04/17 13:46:02 wiz Exp $
 #
 
 DISTNAME=		libgeda-${PKGVERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		cad
 
 MAINTAINER=		dmcmahill@NetBSD.org

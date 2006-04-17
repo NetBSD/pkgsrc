@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2006/04/12 10:27:44 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2006/04/17 13:46:13 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_PANEL_BUILDLINK3_MK:=	${XFCE4_PANEL_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-panel
 
 .if !empty(XFCE4_PANEL_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.xfce4-panel+=	xfce4-panel>=4.2.3
-BUILDLINK_ABI_DEPENDS.xfce4-panel?=	xfce4-panel>=4.2.3nb2
+BUILDLINK_ABI_DEPENDS.xfce4-panel?=	xfce4-panel>=4.2.3nb4
 BUILDLINK_PKGSRCDIR.xfce4-panel?=	../../x11/xfce4-panel
 .endif	# XFCE4_PANEL_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/04/12 10:27:36 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/04/17 13:46:13 wiz Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 XFCE4_SYSTEMLOAD_PLUGIN_BUILDLINK3_MK:=	${XFCE4_SYSTEMLOAD_PLUGIN_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	xfce4-systemload-plugin
 
 .if !empty(XFCE4_SYSTEMLOAD_PLUGIN_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.xfce4-systemload-plugin+=	xfce4-systemload-plugin>=0.3.6
-BUILDLINK_ABI_DEPENDS.xfce4-systemload-plugin?=	xfce4-systemload-plugin>=0.3.6nb3
+BUILDLINK_ABI_DEPENDS.xfce4-systemload-plugin?=	xfce4-systemload-plugin>=0.3.6nb4
 BUILDLINK_PKGSRCDIR.xfce4-systemload-plugin?=	../../sysutils/xfce4-systemload-plugin
 .endif	# XFCE4_SYSTEMLOAD_PLUGIN_BUILDLINK3_MK
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:08:46 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/17 13:46:21 wiz Exp $
 
 DISTNAME=		lincvs-1.4.4-0-generic-src
 PKGNAME=		${DISTNAME:S/-0-generic-src//}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel x11
 MASTER_SITES=	        http://lincvs.com/download/
 EXTRACT_SUFX=		.tgz

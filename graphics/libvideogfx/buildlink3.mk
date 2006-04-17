@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:19 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/04/17 13:45:59 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBVIDEOGFX_BUILDLINK3_MK:=	${LIBVIDEOGFX_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libvideogfx
 
 .if !empty(LIBVIDEOGFX_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libvideogfx+=	libvideogfx>=1.0.3
-BUILDLINK_ABI_DEPENDS.libvideogfx+=	libvideogfx>=1.0.3nb2
+BUILDLINK_ABI_DEPENDS.libvideogfx+=	libvideogfx>=1.0.3nb3
 BUILDLINK_PKGSRCDIR.libvideogfx?=	../../graphics/libvideogfx
 .endif	# LIBVIDEOGFX_BUILDLINK3_MK
 

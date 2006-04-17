@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/04/12 10:27:10 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2006/04/17 13:46:11 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOMEUI_BUILDLINK3_MK:=	${LIBGNOMEUI_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libgnomeui
 
 .if !empty(LIBGNOMEUI_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libgnomeui+=		libgnomeui>=2.8.0
-BUILDLINK_ABI_DEPENDS.libgnomeui+=	libgnomeui>=2.12.1
+BUILDLINK_ABI_DEPENDS.libgnomeui+=	libgnomeui>=2.14.1nb1
 BUILDLINK_PKGSRCDIR.libgnomeui?=	../../devel/libgnomeui
 .endif	# LIBGNOMEUI_BUILDLINK3_MK
 
