@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.319 2006/04/15 20:43:52 minskim Exp $
+# $NetBSD: Makefile,v 1.320 2006/04/17 15:17:27 minskim Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -167,6 +167,7 @@ SUBDIR+=	p5-Text-CSV-Hash
 SUBDIR+=	p5-Text-CSV_XS
 SUBDIR+=	p5-Text-ChaSen
 SUBDIR+=	p5-Text-CharWidth
+SUBDIR+=	p5-Text-Context-EitherSide
 SUBDIR+=	p5-Text-DelimMatch
 SUBDIR+=	p5-Text-Diff
 SUBDIR+=	p5-Text-Diff-HTML
