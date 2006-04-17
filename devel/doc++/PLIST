@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/06/04 16:24:54 yyamano Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:16 jlam Exp $
 bin/doc++
 bin/docify
 bin/promote
@@ -35,8 +35,8 @@ share/doc/doc++/index.html
 share/doc/doc++/supportedHTMLmacros.html
 share/doc/doc++/supportedTeXmacros.html
 share/doc/doc++/toc.html
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/doc++.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/doc++.mo
-${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/doc++.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/doc++.mo
+share/locale/fr/LC_MESSAGES/doc++.mo
+share/locale/ja/LC_MESSAGES/doc++.mo
+share/locale/ro/LC_MESSAGES/doc++.mo
+share/locale/ru/LC_MESSAGES/doc++.mo
 @dirrm share/doc/doc++

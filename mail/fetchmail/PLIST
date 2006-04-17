@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/05/02 20:34:00 reed Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/04/17 07:07:24 jlam Exp $
 bin/fetchmail
 man/man1/fetchmail.1
 share/doc/fetchmail/README
@@ -9,18 +9,18 @@ share/doc/fetchmail/FEATURES
 share/doc/fetchmail/fetchmail-FAQ.html
 share/doc/fetchmail/design-notes.html
 share/doc/fetchmail/fetchmail-features.html
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/fetchmail.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/fetchmail.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/fetchmail.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/fetchmail.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/fetchmail.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/fetchmail.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/fetchmail.mo
-${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/fetchmail.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/fetchmail.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/fetchmail.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/fetchmail.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/fetchmail.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/fetchmail.mo
+share/locale/ca/LC_MESSAGES/fetchmail.mo
+share/locale/cs/LC_MESSAGES/fetchmail.mo
+share/locale/da/LC_MESSAGES/fetchmail.mo
+share/locale/de/LC_MESSAGES/fetchmail.mo
+share/locale/el/LC_MESSAGES/fetchmail.mo
+share/locale/es/LC_MESSAGES/fetchmail.mo
+share/locale/fr/LC_MESSAGES/fetchmail.mo
+share/locale/gl/LC_MESSAGES/fetchmail.mo
+share/locale/ja/LC_MESSAGES/fetchmail.mo
+share/locale/pl/LC_MESSAGES/fetchmail.mo
+share/locale/pt_BR/LC_MESSAGES/fetchmail.mo
+share/locale/sk/LC_MESSAGES/fetchmail.mo
+share/locale/tr/LC_MESSAGES/fetchmail.mo
 share/examples/rc.d/fetchmail
 @dirrm share/doc/fetchmail

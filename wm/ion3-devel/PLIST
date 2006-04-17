@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/11 10:03:48 cube Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:36 jlam Exp $
 bin/ion3
 bin/pwm3
 lib/ion3/bin/ion-completefile
@@ -82,9 +82,9 @@ share/ion3/welcome.cs.txt
 share/ion3/welcome.de.txt
 share/ion3/welcome.fi.txt
 share/ion3/welcome.txt
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/ion3.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/ion3.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/ion3.mo
+share/locale/cs/LC_MESSAGES/ion3.mo
+share/locale/de/LC_MESSAGES/ion3.mo
+share/locale/fi/LC_MESSAGES/ion3.mo
 @dirrm share/ion3
 @dirrm share/examples/ion3
 @dirrm share/doc/ion3
