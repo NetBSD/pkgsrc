@@ -8,4 +8,5 @@ ipw2100-1.2.fw      BSS mode (connection to an access point) firmware
 ipw2100-1.2-i.fw    IBSS mode (point-to-point connection) firmware
 ipw2100-1.2-p.fw    Monitor mode firmware
 
-To download one of those images to your adapter, use the ipwctl(8) command.
+If you are using NetBSD < 4.0, you need the ipwctl(8) command to load
+those images to your adapter.
