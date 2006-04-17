@@ -1,4 +1,4 @@
-$NetBSD: CHANGES,v 1.13621 2006/04/17 20:57:22 adrianp Exp $
+$NetBSD: CHANGES,v 1.13622 2006/04/17 21:13:10 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2151,3 +2151,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/lopster to 1.2.2 [rpaulo 2006-04-17]
 	Updated sysutils/rdiff-backup to 1.0.4 [recht 2006-04-17]
 	Updated time/kronolith to 2.1.1 [adrianp 2006-04-17]
+	Updated mail/imp4 to 4.1.1 [adrianp 2006-04-17]
