@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2005/02/21 21:04:06 veego Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2006/04/17 07:07:30 jlam Exp $
 bin/vlc
 bin/vlc-config
 bin/wxvlc
@@ -169,19 +169,19 @@ share/doc/vlc/intf-cdda.txt
 share/doc/vlc/intf-vcd.txt
 share/doc/vlc/vlc-howto.sgml
 share/doc/vlc/web-streaming.html
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/vlc.mo
-${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/vlc.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/vlc.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/vlc.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/vlc.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/vlc.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/vlc.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/vlc.mo
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/vlc.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/vlc.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/vlc.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/vlc.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/vlc.mo
+share/locale/de/LC_MESSAGES/vlc.mo
+share/locale/en_GB/LC_MESSAGES/vlc.mo
+share/locale/es/LC_MESSAGES/vlc.mo
+share/locale/fr/LC_MESSAGES/vlc.mo
+share/locale/hu/LC_MESSAGES/vlc.mo
+share/locale/it/LC_MESSAGES/vlc.mo
+share/locale/ja/LC_MESSAGES/vlc.mo
+share/locale/nl/LC_MESSAGES/vlc.mo
+share/locale/no/LC_MESSAGES/vlc.mo
+share/locale/pl/LC_MESSAGES/vlc.mo
+share/locale/pt_BR/LC_MESSAGES/vlc.mo
+share/locale/ru/LC_MESSAGES/vlc.mo
+share/locale/sv/LC_MESSAGES/vlc.mo
 share/vlc/familiar-forwardb16x16.xpm
 share/vlc/familiar-openb16x16.xpm
 share/vlc/familiar-pauseb16x16.xpm

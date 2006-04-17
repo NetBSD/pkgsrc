@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/10/19 13:26:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:30 jlam Exp $
 bin/gxine
 bin/gxine_client
 lib/gxine/gxineplugin.la
@@ -10,10 +10,10 @@ share/gxine/mediamarks
 share/gxine/pixmaps/gxine-icon.xpm
 share/gxine/pixmaps/splash.png
 share/gxine/pixmaps/wizards.png
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gxine.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gxine.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gxine.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/gxine.mo
+share/locale/cs/LC_MESSAGES/gxine.mo
+share/locale/de/LC_MESSAGES/gxine.mo
+share/locale/pt_BR/LC_MESSAGES/gxine.mo
+share/locale/zh_CN/LC_MESSAGES/gxine.mo
 share/pixmaps/gxine-logo.png
 @dirrm share/gxine/pixmaps
 @dirrm share/gxine

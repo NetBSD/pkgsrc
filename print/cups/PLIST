@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2005/05/02 20:34:04 reed Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/04/17 07:07:32 jlam Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestppd
@@ -707,25 +707,25 @@ share/examples/cups/cupsd.conf
 share/examples/cups/mime.convs
 share/examples/cups/mime.types
 share/examples/cups/printers.conf
-${PKGLOCALEDIR}/locale/C/cups_C
-${PKGLOCALEDIR}/locale/be/cups_be
-${PKGLOCALEDIR}/locale/cs/cups_cs
-${PKGLOCALEDIR}/locale/de/cups_de
-${PKGLOCALEDIR}/locale/en/cups_en
-${PKGLOCALEDIR}/locale/en_US/cups_en_US
-${PKGLOCALEDIR}/locale/es/cups_es
-${PKGLOCALEDIR}/locale/fr/cups_fr
-${PKGLOCALEDIR}/locale/he/cups_he
-${PKGLOCALEDIR}/locale/it/cups_it
-${PKGLOCALEDIR}/locale/ru_RU/cups_ru_RU
-${PKGLOCALEDIR}/locale/sv/cups_sv
-${PKGLOCALEDIR}/locale/uk/cups_uk
-${PKGLOCALEDIR}/locale/uk_UA/cups_uk_UA
-${PKGLOCALEDIR}/locale/zh_CN/cups_zh_CN
 share/examples/rc.d/cupsd
-@unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/uk_UA 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/ru_RU 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/${PKGLOCALEDIR}/locale/C 2>/dev/null || ${TRUE}
+share/locale/C/cups_C
+share/locale/be/cups_be
+share/locale/cs/cups_cs
+share/locale/de/cups_de
+share/locale/en/cups_en
+share/locale/en_US/cups_en_US
+share/locale/es/cups_es
+share/locale/fr/cups_fr
+share/locale/he/cups_he
+share/locale/it/cups_it
+share/locale/ru_RU/cups_ru_RU
+share/locale/sv/cups_sv
+share/locale/uk/cups_uk
+share/locale/uk_UA/cups_uk_UA
+share/locale/zh_CN/cups_zh_CN
+@unexec ${RMDIR} %D/share/locale/uk_UA 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/locale/ru_RU 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/locale/C 2>/dev/null || ${TRUE}
 @dirrm share/examples/cups
 @dirrm share/doc/cups/images
 @dirrm share/doc/cups/fr/images

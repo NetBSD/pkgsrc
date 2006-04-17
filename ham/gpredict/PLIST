@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/15 13:05:39 wulf Exp $
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gpredict.mo
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:22 jlam Exp $
 bin/gpredict
 share/gpredict/amateur.tle
 share/gpredict/iridium.tle
@@ -8,6 +7,7 @@ share/gpredict/military.tle
 share/gpredict/radar.tle
 share/gpredict/science.tle
 share/gpredict/weather.tle
+share/locale/da/LC_MESSAGES/gpredict.mo
 share/pixmaps/gpredict/icons/antenna.png
 share/pixmaps/gpredict/icons/arrow-down.png
 share/pixmaps/gpredict/icons/arrow-up.png

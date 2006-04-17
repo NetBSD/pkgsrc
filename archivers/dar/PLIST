@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/06/29 07:38:40 martti Exp $
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/dar.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/dar.mo
+@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:11 jlam Exp $
 bin/dar
 bin/dar_cp
 bin/dar_manager
@@ -57,6 +55,8 @@ share/doc/dar/api_tutorial.html
 share/doc/dar/dar-differential-backup-mini-howto.en.html
 share/doc/dar/dar-differential-backup-mini-howto.es.html
 share/doc/dar/dar-differential-backup-mini-howto.it.html
+share/locale/fr/LC_MESSAGES/dar.mo
+share/locale/sv/LC_MESSAGES/dar.mo
 @dirrm share/doc/dar
 @dirrm share/dar
 @dirrm include/dar

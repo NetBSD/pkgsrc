@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/16 20:14:20 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:14 jlam Exp $
 avr/bin/c++
 avr/bin/g++
 avr/bin/gcc
@@ -51,16 +51,16 @@ man/man1/gcov.1
 man/man7/fsf-funding.7
 man/man7/gfdl.7
 man/man7/gpl.7
-${PKGLOCALEDIR}/locale/be/LC_MESSAGES/gcc.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gcc.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gcc.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gcc.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gcc.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gcc.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gcc.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gcc.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gcc.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gcc.mo
+share/locale/be/LC_MESSAGES/gcc.mo
+share/locale/da/LC_MESSAGES/gcc.mo
+share/locale/de/LC_MESSAGES/gcc.mo
+share/locale/el/LC_MESSAGES/gcc.mo
+share/locale/es/LC_MESSAGES/gcc.mo
+share/locale/fr/LC_MESSAGES/gcc.mo
+share/locale/ja/LC_MESSAGES/gcc.mo
+share/locale/nl/LC_MESSAGES/gcc.mo
+share/locale/sv/LC_MESSAGES/gcc.mo
+share/locale/tr/LC_MESSAGES/gcc.mo
 @dirrm lib/gcc-lib/avr/3.3/avr3
 @dirrm lib/gcc-lib/avr/3.3/avr4
 @dirrm lib/gcc-lib/avr/3.3/avr5

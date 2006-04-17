@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/08 05:02:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:36 jlam Exp $
 bin/gcal
 bin/gcal-daily
 bin/gcal-ddiff
@@ -122,12 +122,12 @@ share/gcal/world
 share/gcal/wtt1.rc
 share/gcal/wtt2.rc
 share/gcal/wtt3.rc
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gcal.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gcal.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gcal.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gcal.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gcal.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gcal.mo
+share/locale/de/LC_MESSAGES/gcal.mo
+share/locale/fr/LC_MESSAGES/gcal.mo
+share/locale/nl/LC_MESSAGES/gcal.mo
+share/locale/pl/LC_MESSAGES/gcal.mo
+share/locale/ru/LC_MESSAGES/gcal.mo
+share/locale/sv/LC_MESSAGES/gcal.mo
 @dirrm share/gcal/scripts
 @dirrm share/gcal/misc/wloc
 @dirrm share/gcal/misc/srss

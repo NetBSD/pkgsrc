@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2004/11/17 15:47:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/04/17 07:07:19 jlam Exp $
 bin/gtkballs
 man/man6/gtkballs.6
 share/gtkballs/COPYING
@@ -524,10 +524,10 @@ share/gtkballs/themes/mascots/walk6.xpm
 share/gtkballs/themes/mascots/walk7.xpm
 share/gtkballs/themes/mascots/walk8.xpm
 share/gtkballs/themes/mascots/walk_small.xpm
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtkballs.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gtkballs.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gtkballs.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gtkballs.mo
+share/locale/de/LC_MESSAGES/gtkballs.mo
+share/locale/fr/LC_MESSAGES/gtkballs.mo
+share/locale/pl/LC_MESSAGES/gtkballs.mo
+share/locale/ru/LC_MESSAGES/gtkballs.mo
 @dirrm share/gtkballs/themes/mascots
 @dirrm share/gtkballs/themes/klines
 @dirrm share/gtkballs/themes/Default

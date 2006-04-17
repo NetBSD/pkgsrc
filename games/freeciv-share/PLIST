@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/09/05 08:18:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:19 jlam Exp $
 man/man6/civclient.6
 man/man6/civserver.6
 share/freeciv/civ1.serv
@@ -297,29 +297,29 @@ share/freeciv/trident/tiles.spec
 share/freeciv/trident/units.png
 share/freeciv/trident/units.spec
 share/freeciv/trident_shields.tilespec
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/et/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/he_IL/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/freeciv.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/freeciv.mo
+share/locale/ca/LC_MESSAGES/freeciv.mo
+share/locale/cs/LC_MESSAGES/freeciv.mo
+share/locale/da/LC_MESSAGES/freeciv.mo
+share/locale/de/LC_MESSAGES/freeciv.mo
+share/locale/en_GB/LC_MESSAGES/freeciv.mo
+share/locale/es/LC_MESSAGES/freeciv.mo
+share/locale/et/LC_MESSAGES/freeciv.mo
+share/locale/fi/LC_MESSAGES/freeciv.mo
+share/locale/fr/LC_MESSAGES/freeciv.mo
+share/locale/he_IL/LC_MESSAGES/freeciv.mo
+share/locale/hu/LC_MESSAGES/freeciv.mo
+share/locale/it/LC_MESSAGES/freeciv.mo
+share/locale/ja/LC_MESSAGES/freeciv.mo
+share/locale/nb/LC_MESSAGES/freeciv.mo
+share/locale/nl/LC_MESSAGES/freeciv.mo
+share/locale/no/LC_MESSAGES/freeciv.mo
+share/locale/pl/LC_MESSAGES/freeciv.mo
+share/locale/pt/LC_MESSAGES/freeciv.mo
+share/locale/pt_BR/LC_MESSAGES/freeciv.mo
+share/locale/ro/LC_MESSAGES/freeciv.mo
+share/locale/ru/LC_MESSAGES/freeciv.mo
+share/locale/sv/LC_MESSAGES/freeciv.mo
+share/locale/uk/LC_MESSAGES/freeciv.mo
 @dirrm share/freeciv/trident
 @dirrm share/freeciv/scenario
 @dirrm share/freeciv/nation

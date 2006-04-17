@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/26 22:55:18 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:31 jlam Exp $
 bin/jigdo
 bin/jigdo-file
 bin/jigdo-lite
@@ -16,6 +16,6 @@ share/jigdo/pixmaps/progress-green.png
 share/jigdo/pixmaps/restart.png
 share/jigdo/pixmaps/start.png
 share/jigdo/pixmaps/stop.png
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/jigdo.mo
+share/locale/de/LC_MESSAGES/jigdo.mo
 @dirrm share/jigdo/pixmaps
 @dirrm share/jigdo

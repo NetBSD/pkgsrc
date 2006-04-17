@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/04/11 13:26:01 tron Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/04/17 07:07:24 jlam Exp $
 bin/flea
 bin/mutt
 bin/muttbug
@@ -63,33 +63,33 @@ share/examples/mutt/pgp6.rc
 share/examples/mutt/sample.mailcap
 share/examples/mutt/sample.muttrc
 share/examples/mutt/sample.muttrc-tlr
-${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/eo/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/et/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/id/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/mutt.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/mutt.mo
+share/locale/bg/LC_MESSAGES/mutt.mo
+share/locale/ca/LC_MESSAGES/mutt.mo
+share/locale/cs/LC_MESSAGES/mutt.mo
+share/locale/da/LC_MESSAGES/mutt.mo
+share/locale/de/LC_MESSAGES/mutt.mo
+share/locale/el/LC_MESSAGES/mutt.mo
+share/locale/eo/LC_MESSAGES/mutt.mo
+share/locale/es/LC_MESSAGES/mutt.mo
+share/locale/et/LC_MESSAGES/mutt.mo
+share/locale/fr/LC_MESSAGES/mutt.mo
+share/locale/gl/LC_MESSAGES/mutt.mo
+share/locale/hu/LC_MESSAGES/mutt.mo
+share/locale/id/LC_MESSAGES/mutt.mo
+share/locale/it/LC_MESSAGES/mutt.mo
+share/locale/ja/LC_MESSAGES/mutt.mo
+share/locale/ko/LC_MESSAGES/mutt.mo
+share/locale/lt/LC_MESSAGES/mutt.mo
+share/locale/nl/LC_MESSAGES/mutt.mo
+share/locale/pl/LC_MESSAGES/mutt.mo
+share/locale/pt_BR/LC_MESSAGES/mutt.mo
+share/locale/ru/LC_MESSAGES/mutt.mo
+share/locale/sk/LC_MESSAGES/mutt.mo
+share/locale/sv/LC_MESSAGES/mutt.mo
+share/locale/tr/LC_MESSAGES/mutt.mo
+share/locale/uk/LC_MESSAGES/mutt.mo
+share/locale/zh_CN/LC_MESSAGES/mutt.mo
+share/locale/zh_TW/LC_MESSAGES/mutt.mo
 @dirrm share/examples/mutt/iconv
 @dirrm share/examples/mutt
 @dirrm share/doc/mutt/html

@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2003/04/27 14:57:58 cjep Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:31 jlam Exp $
 bin/xtraceroute
+man/man1/xtraceroute.1
 share/xtraceroute/earth.tif
 share/xtraceroute/hosts.cache
 share/xtraceroute/networks.cache
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xtraceroute.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xtraceroute.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/xtraceroute.mo
-man/man1/xtraceroute.1
+share/locale/es/LC_MESSAGES/xtraceroute.mo
+share/locale/fr/LC_MESSAGES/xtraceroute.mo
+share/locale/ja/LC_MESSAGES/xtraceroute.mo

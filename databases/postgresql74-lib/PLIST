@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/11/08 16:40:39 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/17 07:07:15 jlam Exp $
 bin/ecpg
 bin/pg_config
 include/ecpg_informix.h
@@ -375,20 +375,20 @@ lib/libpq.so.3
 lib/libpq.so.3.1
 lib/postgresql/plpgsql.so
 man/man1/ecpg.1
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libpq.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libpq.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libpq.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libpq.mo
-${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/libpq.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libpq.mo
-${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/libpq.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libpq.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/libpq.mo
-${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/libpq.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/libpq.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/libpq.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/libpq.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/libpq.mo
+share/locale/cs/LC_MESSAGES/libpq.mo
+share/locale/de/LC_MESSAGES/libpq.mo
+share/locale/es/LC_MESSAGES/libpq.mo
+share/locale/fr/LC_MESSAGES/libpq.mo
+share/locale/hr/LC_MESSAGES/libpq.mo
+share/locale/it/LC_MESSAGES/libpq.mo
+share/locale/nb/LC_MESSAGES/libpq.mo
+share/locale/pt_BR/LC_MESSAGES/libpq.mo
+share/locale/ru/LC_MESSAGES/libpq.mo
+share/locale/sl/LC_MESSAGES/libpq.mo
+share/locale/sv/LC_MESSAGES/libpq.mo
+share/locale/tr/LC_MESSAGES/libpq.mo
+share/locale/zh_CN/LC_MESSAGES/libpq.mo
+share/locale/zh_TW/LC_MESSAGES/libpq.mo
 share/postgresql/pg_service.conf.sample
 @dirrm share/postgresql
 @dirrm lib/postgresql

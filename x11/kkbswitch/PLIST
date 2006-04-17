@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/09/22 13:26:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/17 07:07:48 jlam Exp $
 bin/kkbswitch
 man/man1/kkbswitch.1
 share/doc/kde/HTML/en/kkbswitch/code_style.png
@@ -13,13 +13,13 @@ share/kde/apps/kconf_update/kkbswitch_update_14_icons
 share/kde/apps/kconf_update/kkbswitch_update_14_options
 share/kde/apps/kkbswitch/group_names
 share/kde/autostart/kkbswitch.desktop
-${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/kkbswitch.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/kkbswitch.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/kkbswitch.mo
-${PKGLOCALEDIR}/locale/he/LC_MESSAGES/kkbswitch.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/kkbswitch.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/kkbswitch.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/kkbswitch.mo
+share/locale/bg/LC_MESSAGES/kkbswitch.mo
+share/locale/cs/LC_MESSAGES/kkbswitch.mo
+share/locale/el/LC_MESSAGES/kkbswitch.mo
+share/locale/he/LC_MESSAGES/kkbswitch.mo
+share/locale/ru/LC_MESSAGES/kkbswitch.mo
+share/locale/sk/LC_MESSAGES/kkbswitch.mo
+share/locale/uk/LC_MESSAGES/kkbswitch.mo
 @comment in kde: @dirrm share/kde/autostart
 @dirrm share/kde/apps/kkbswitch
 @comment in kde: @dirrm share/kde/apps/kconf_update

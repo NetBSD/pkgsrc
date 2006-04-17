@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/03/02 19:23:04 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:14 jlam Exp $
 bin/gourmet
 ${PYSITELIB}/gourmet/FauxActionGroups.py
 ${PYSITELIB}/gourmet/FauxActionGroups.pyc
@@ -299,32 +299,32 @@ share/gourmet/recbox.png
 share/gourmet/recipe.dtd
 share/gourmet/shopList.glade
 share/gourmet/splash.png
-${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/de_AT/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/de_DE/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/es_ES/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/he/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/nl_BE/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/nl_NL/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/pt_PT/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/sv_SE/LC_MESSAGES/gourmet.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/gourmet.mo
+share/locale/bg/LC_MESSAGES/gourmet.mo
+share/locale/ca/LC_MESSAGES/gourmet.mo
+share/locale/cs/LC_MESSAGES/gourmet.mo
+share/locale/da/LC_MESSAGES/gourmet.mo
+share/locale/de_AT/LC_MESSAGES/gourmet.mo
+share/locale/de_DE/LC_MESSAGES/gourmet.mo
+share/locale/el/LC_MESSAGES/gourmet.mo
+share/locale/es/LC_MESSAGES/gourmet.mo
+share/locale/es_ES/LC_MESSAGES/gourmet.mo
+share/locale/fr/LC_MESSAGES/gourmet.mo
+share/locale/gl/LC_MESSAGES/gourmet.mo
+share/locale/he/LC_MESSAGES/gourmet.mo
+share/locale/hu/LC_MESSAGES/gourmet.mo
+share/locale/it/LC_MESSAGES/gourmet.mo
+share/locale/nb/LC_MESSAGES/gourmet.mo
+share/locale/nl/LC_MESSAGES/gourmet.mo
+share/locale/nl_BE/LC_MESSAGES/gourmet.mo
+share/locale/nl_NL/LC_MESSAGES/gourmet.mo
+share/locale/pl/LC_MESSAGES/gourmet.mo
+share/locale/pt/LC_MESSAGES/gourmet.mo
+share/locale/pt_BR/LC_MESSAGES/gourmet.mo
+share/locale/pt_PT/LC_MESSAGES/gourmet.mo
+share/locale/sk/LC_MESSAGES/gourmet.mo
+share/locale/sv/LC_MESSAGES/gourmet.mo
+share/locale/sv_SE/LC_MESSAGES/gourmet.mo
+share/locale/tr/LC_MESSAGES/gourmet.mo
 share/pixmaps/recbox.png
 @dirrm share/gourmet
 @dirrm ${PYSITELIB}/gourmet/importers/html_plugins

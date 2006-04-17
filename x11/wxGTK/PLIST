@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/03/30 15:28:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/04/17 07:07:49 jlam Exp $
 bin/wx-config
 bin/wxrc
 bin/wxrc-2.6
@@ -477,28 +477,28 @@ share/bakefile/presets/wx.bkl
 share/bakefile/presets/wx_unix.bkl
 share/bakefile/presets/wx_win32.bkl
 share/doc/wxGTK/LICENSE
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/id/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/wxmsw.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/sl/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/wxstd.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/wxstd.mo
+share/locale/ca/LC_MESSAGES/wxstd.mo
+share/locale/cs/LC_MESSAGES/wxstd.mo
+share/locale/da/LC_MESSAGES/wxstd.mo
+share/locale/de/LC_MESSAGES/wxstd.mo
+share/locale/el/LC_MESSAGES/wxstd.mo
+share/locale/es/LC_MESSAGES/wxstd.mo
+share/locale/fi/LC_MESSAGES/wxstd.mo
+share/locale/fr/LC_MESSAGES/wxstd.mo
+share/locale/hu/LC_MESSAGES/wxstd.mo
+share/locale/id/LC_MESSAGES/wxstd.mo
+share/locale/it/LC_MESSAGES/wxmsw.mo
+share/locale/it/LC_MESSAGES/wxstd.mo
+share/locale/ja/LC_MESSAGES/wxstd.mo
+share/locale/nl/LC_MESSAGES/wxstd.mo
+share/locale/pl/LC_MESSAGES/wxstd.mo
+share/locale/ru/LC_MESSAGES/wxstd.mo
+share/locale/sl/LC_MESSAGES/wxstd.mo
+share/locale/sv/LC_MESSAGES/wxstd.mo
+share/locale/tr/LC_MESSAGES/wxstd.mo
+share/locale/uk/LC_MESSAGES/wxstd.mo
+share/locale/zh_CN/LC_MESSAGES/wxstd.mo
+share/locale/zh_TW/LC_MESSAGES/wxstd.mo
 @dirrm share/doc/wxGTK
 @dirrm share/bakefile/presets
 @dirrm share/bakefile

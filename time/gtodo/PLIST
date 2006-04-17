@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/10 19:20:45 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:36 jlam Exp $
 bin/gtodo
 share/applications/gtodo.desktop
 share/gconf/schemas/gtodo.schemas
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gtodo.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gtodo.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gtodo.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gtodo.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/gtodo.mo
-${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gtodo.mo
-${PKGLOCALEDIR}/locale/sr@Latn/LC_MESSAGES/gtodo.mo
+share/locale/cs/LC_MESSAGES/gtodo.mo
+share/locale/de/LC_MESSAGES/gtodo.mo
+share/locale/ja/LC_MESSAGES/gtodo.mo
+share/locale/pl/LC_MESSAGES/gtodo.mo
+share/locale/ru/LC_MESSAGES/gtodo.mo
+share/locale/sr/LC_MESSAGES/gtodo.mo
+share/locale/sr@Latn/LC_MESSAGES/gtodo.mo
 share/pixmaps/gtodo-about.png
 share/pixmaps/gtodo-edit.png
 share/pixmaps/gtodo.png

@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/16 11:51:52 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:20 jlam Exp $
 lib/gimp/2.0/plug-ins/gimp_plugin-refocus-it
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/refocus-it.mo
+share/locale/cs/LC_MESSAGES/refocus-it.mo

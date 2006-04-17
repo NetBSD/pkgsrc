@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.14 2006/01/13 08:42:30 martti Exp $
+@comment $NetBSD: PLIST.common,v 1.15 2006/04/17 07:07:30 jlam Exp $
 bin/xine-config
 include/xine.h
 include/xine/attributes.h
@@ -212,15 +212,15 @@ share/doc/xine/hackersguide/hackersguide.html
 share/doc/xine/hackersguide/library.png
 share/doc/xine/hackersguide/overlays.png
 share/doc/xine/hackersguide/post_frame.png
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/libxine1.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/libxine1.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/libxine1.mo
-${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/libxine1.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/libxine1.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/libxine1.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/libxine1.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/libxine1.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/libxine1.mo
+share/locale/cs/LC_MESSAGES/libxine1.mo
+share/locale/de/LC_MESSAGES/libxine1.mo
+share/locale/es/LC_MESSAGES/libxine1.mo
+share/locale/eu/LC_MESSAGES/libxine1.mo
+share/locale/fr/LC_MESSAGES/libxine1.mo
+share/locale/it/LC_MESSAGES/libxine1.mo
+share/locale/pl/LC_MESSAGES/libxine1.mo
+share/locale/pt_BR/LC_MESSAGES/libxine1.mo
+share/locale/sk/LC_MESSAGES/libxine1.mo
 share/xine/libxine1/fonts/cc-16.xinefont.gz
 share/xine/libxine1/fonts/cc-20.xinefont.gz
 share/xine/libxine1/fonts/cc-24.xinefont.gz

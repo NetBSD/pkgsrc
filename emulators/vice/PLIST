@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/03/31 16:47:44 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/04/17 07:07:18 jlam Exp $
 bin/c1541
 bin/petcat
 bin/vsid
@@ -52,12 +52,12 @@ share/doc/vice/vice_7.html
 share/doc/vice/vice_8.html
 share/doc/vice/vice_9.html
 share/doc/vice/vice_toc.html
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/vice.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/vice.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/vice.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/vice.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/vice.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/vice.mo
+share/locale/de/LC_MESSAGES/vice.mo
+share/locale/fr/LC_MESSAGES/vice.mo
+share/locale/it/LC_MESSAGES/vice.mo
+share/locale/nl/LC_MESSAGES/vice.mo
+share/locale/pl/LC_MESSAGES/vice.mo
+share/locale/sv/LC_MESSAGES/vice.mo
 share/vice/C128/basic64
 share/vice/C128/basichi
 share/vice/C128/basiclo

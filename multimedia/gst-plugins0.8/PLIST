@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/01/18 12:44:03 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:29 jlam Exp $
 bin/gst-launch-ext-0.8
 bin/gst-visualise-0.8
 include/gstreamer-0.8/gst/audio/audio.h
@@ -148,21 +148,21 @@ lib/pkgconfig/gstreamer-plugins-0.8.pc
 man/man1/gst-launch-ext-0.8.1
 man/man1/gst-visualise-0.8.1
 share/gconf/schemas/gstreamer-0.8.schemas
-${PKGLOCALEDIR}/locale/af/LC_MESSAGES/gst-plugins-0.8.mo
-${PKGLOCALEDIR}/locale/az/LC_MESSAGES/gst-plugins-0.8.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gst-plugins-0.8.mo
-${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gst-plugins-0.8.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gst-plugins-0.8.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/gst-plugins-0.8.mo
-${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gst-plugins-0.8.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gst-plugins-0.8.mo
-${PKGLOCALEDIR}/locale/or/LC_MESSAGES/gst-plugins-0.8.mo
-${PKGLOCALEDIR}/locale/sq/LC_MESSAGES/gst-plugins-0.8.mo
-${PKGLOCALEDIR}/locale/sr/LC_MESSAGES/gst-plugins-0.8.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gst-plugins-0.8.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gst-plugins-0.8.mo
-${PKGLOCALEDIR}/locale/vi/LC_MESSAGES/gst-plugins-0.8.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/gst-plugins-0.8.mo
+share/locale/af/LC_MESSAGES/gst-plugins-0.8.mo
+share/locale/az/LC_MESSAGES/gst-plugins-0.8.mo
+share/locale/cs/LC_MESSAGES/gst-plugins-0.8.mo
+share/locale/en_GB/LC_MESSAGES/gst-plugins-0.8.mo
+share/locale/hu/LC_MESSAGES/gst-plugins-0.8.mo
+share/locale/it/LC_MESSAGES/gst-plugins-0.8.mo
+share/locale/nb/LC_MESSAGES/gst-plugins-0.8.mo
+share/locale/nl/LC_MESSAGES/gst-plugins-0.8.mo
+share/locale/or/LC_MESSAGES/gst-plugins-0.8.mo
+share/locale/sq/LC_MESSAGES/gst-plugins-0.8.mo
+share/locale/sr/LC_MESSAGES/gst-plugins-0.8.mo
+share/locale/sv/LC_MESSAGES/gst-plugins-0.8.mo
+share/locale/uk/LC_MESSAGES/gst-plugins-0.8.mo
+share/locale/vi/LC_MESSAGES/gst-plugins-0.8.mo
+share/locale/zh_TW/LC_MESSAGES/gst-plugins-0.8.mo
 @comment in GConf2: @dirrm share/gconf/schemas
 @comment in gstreamer0.8: @dirrm lib/gstreamer-0.8
 @dirrm include/gstreamer-0.8/gst/xwindowlistener

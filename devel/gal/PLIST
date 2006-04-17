@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/02/09 20:20:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/04/17 07:07:16 jlam Exp $
 include/gal-1.0/gal/e-paned/e-hpaned.h
 include/gal-1.0/gal/e-paned/e-paned.h
 include/gal-1.0/gal/e-paned/e-vpaned.h
@@ -174,38 +174,38 @@ share/gal/html/gal-sections.txt
 share/gal/html/gal.hierarchy
 share/gal/html/gal.signals
 share/gal/html/gal.types
-${PKGLOCALEDIR}/locale/az/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/eu/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/fi/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/gl/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/lt/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/ms/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/nn/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/ta/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/${PKGNAME}.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/${PKGNAME}.mo
+share/locale/az/LC_MESSAGES/${PKGNAME}.mo
+share/locale/ca/LC_MESSAGES/${PKGNAME}.mo
+share/locale/cs/LC_MESSAGES/${PKGNAME}.mo
+share/locale/da/LC_MESSAGES/${PKGNAME}.mo
+share/locale/de/LC_MESSAGES/${PKGNAME}.mo
+share/locale/el/LC_MESSAGES/${PKGNAME}.mo
+share/locale/en_GB/LC_MESSAGES/${PKGNAME}.mo
+share/locale/es/LC_MESSAGES/${PKGNAME}.mo
+share/locale/eu/LC_MESSAGES/${PKGNAME}.mo
+share/locale/fi/LC_MESSAGES/${PKGNAME}.mo
+share/locale/fr/LC_MESSAGES/${PKGNAME}.mo
+share/locale/gl/LC_MESSAGES/${PKGNAME}.mo
+share/locale/hu/LC_MESSAGES/${PKGNAME}.mo
+share/locale/it/LC_MESSAGES/${PKGNAME}.mo
+share/locale/ja/LC_MESSAGES/${PKGNAME}.mo
+share/locale/ko/LC_MESSAGES/${PKGNAME}.mo
+share/locale/lt/LC_MESSAGES/${PKGNAME}.mo
+share/locale/ms/LC_MESSAGES/${PKGNAME}.mo
+share/locale/nn/LC_MESSAGES/${PKGNAME}.mo
+share/locale/no/LC_MESSAGES/${PKGNAME}.mo
+share/locale/pl/LC_MESSAGES/${PKGNAME}.mo
+share/locale/pt/LC_MESSAGES/${PKGNAME}.mo
+share/locale/pt_BR/LC_MESSAGES/${PKGNAME}.mo
+share/locale/ro/LC_MESSAGES/${PKGNAME}.mo
+share/locale/ru/LC_MESSAGES/${PKGNAME}.mo
+share/locale/sk/LC_MESSAGES/${PKGNAME}.mo
+share/locale/sv/LC_MESSAGES/${PKGNAME}.mo
+share/locale/ta/LC_MESSAGES/${PKGNAME}.mo
+share/locale/tr/LC_MESSAGES/${PKGNAME}.mo
+share/locale/uk/LC_MESSAGES/${PKGNAME}.mo
+share/locale/zh_CN/LC_MESSAGES/${PKGNAME}.mo
+share/locale/zh_TW/LC_MESSAGES/${PKGNAME}.mo
 @exec ${MKDIR} %D/share/gal/html/gal
 @dirrm share/gal/html/gal
 @dirrm share/gal/html

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/10/27 20:14:20 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:20 jlam Exp $
 bin/gimv
 lib/gimageview/archiver/libgimv_lha_extarc.la
 lib/gimageview/archiver/libgimv_rar_extarc.la
@@ -115,8 +115,8 @@ share/gimageview/pixmaps/default/zoom_fit.xpm
 share/gimageview/pixmaps/default/zoom_in.xpm
 share/gimageview/pixmaps/default/zoom_out.xpm
 share/gnome/apps/Graphics/gimageview.desktop
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gimageview.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gimageview.mo
+share/locale/fr/LC_MESSAGES/gimageview.mo
+share/locale/ja/LC_MESSAGES/gimageview.mo
 share/pixmaps/gimv.png
 @dirrm share/gimageview/pixmaps/default
 @dirrm share/gimageview/pixmaps

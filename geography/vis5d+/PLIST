@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:20 jlam Exp $
 bin/comp_to_v5d
 bin/gg3d
 bin/gr3d_to_v5d
@@ -18,8 +18,8 @@ include/vis5d+/v5d.h
 include/vis5d+/v5df.h
 lib/libv5d.la
 lib/libvis5d.la
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/vis5d+.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/vis5d+.mo
+share/locale/es/LC_MESSAGES/vis5d+.mo
+share/locale/pt_BR/LC_MESSAGES/vis5d+.mo
 share/vis5d+/EARTH.TOPO
 share/vis5d+/OUTLSUPW
 share/vis5d+/OUTLUSAM

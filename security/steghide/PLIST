@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/21 03:08:08 snj Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:33 jlam Exp $
 bin/steghide
 man/man1/steghide.1
 share/doc/steghide/ABOUT-NLS
@@ -10,8 +10,8 @@ share/doc/steghide/INSTALL
 share/doc/steghide/LEAME
 share/doc/steghide/README
 share/doc/steghide/TODO
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/steghide.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/steghide.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/steghide.mo
-${PKGLOCALEDIR}/locale/ro/LC_MESSAGES/steghide.mo
+share/locale/de/LC_MESSAGES/steghide.mo
+share/locale/es/LC_MESSAGES/steghide.mo
+share/locale/fr/LC_MESSAGES/steghide.mo
+share/locale/ro/LC_MESSAGES/steghide.mo
 @dirrm share/doc/steghide
