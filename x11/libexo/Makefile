@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/02/05 23:11:39 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/17 13:46:11 wiz Exp $
 #
 
 DISTNAME=		exo-0.3.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		http://download.berlios.de/xfce-goodies/
 EXTRACT_SUFX=		.tar.bz2

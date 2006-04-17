@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/12 10:27:17 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/04/17 13:45:58 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GRAPHVIZ_BUILDLINK3_MK:=	${GRAPHVIZ_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	graphviz
 
 .if !empty(GRAPHVIZ_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.graphviz+=	graphviz>=1.12
-BUILDLINK_ABI_DEPENDS.graphviz+=	graphviz>=2.6nb3
+BUILDLINK_ABI_DEPENDS.graphviz+=	graphviz>=2.6nb5
 BUILDLINK_PKGSRCDIR.graphviz?=	../../graphics/graphviz
 .endif	# GRAPHVIZ_BUILDLINK3_MK
 

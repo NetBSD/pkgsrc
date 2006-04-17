@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:31 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/04/17 13:46:02 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SOUP_BUILDLINK3_MK:=	${SOUP_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	soup
 
 .if !empty(SOUP_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.soup?=                soup>=0.7.11nb3
-BUILDLINK_ABI_DEPENDS.soup?=	soup>=0.7.11nb5
+BUILDLINK_ABI_DEPENDS.soup?=	soup>=0.7.11nb6
 BUILDLINK_PKGSRCDIR.soup?=	../../net/soup
 .endif	# SOUP_BUILDLINK3_MK
 

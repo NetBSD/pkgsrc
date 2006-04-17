@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/04/12 10:27:08 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/04/17 13:46:08 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GAIL_BUILDLINK3_MK:=	${GAIL_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	gail
 
 .if !empty(GAIL_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gail+=	gail>=1.8.0
-BUILDLINK_ABI_DEPENDS.gail+=	gail>=1.8.8nb2
+BUILDLINK_ABI_DEPENDS.gail+=	gail>=1.8.11nb1
 BUILDLINK_PKGSRCDIR.gail?=	../../devel/gail
 .endif	# GAIL_BUILDLINK3_MK
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2006/04/06 06:22:44 reed Exp $
+# $NetBSD: Makefile,v 1.17 2006/04/17 13:46:47 wiz Exp $
 
 DISTNAME=	qca-tls-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://delta.affinix.com/download/qca/
 EXTRACT_SUFX=	.tar.bz2
