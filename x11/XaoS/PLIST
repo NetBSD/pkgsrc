@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/08 05:03:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/17 07:07:38 jlam Exp $
 bin/xaos
 info/xaos.info
 man/man6/xaos.6
@@ -167,11 +167,11 @@ share/XaoS/tutorial/square.xhf
 share/XaoS/tutorial/tree.xhf
 share/XaoS/tutorial/truecol.xaf
 share/XaoS/tutorial/truecol.xhf
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/xaos.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/xaos.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/xaos.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/xaos.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/xaos.mo
+share/locale/cs/LC_MESSAGES/xaos.mo
+share/locale/de/LC_MESSAGES/xaos.mo
+share/locale/es/LC_MESSAGES/xaos.mo
+share/locale/fr/LC_MESSAGES/xaos.mo
+share/locale/hu/LC_MESSAGES/xaos.mo
 @dirrm share/XaoS/tutorial
 @dirrm share/XaoS/help
 @dirrm share/XaoS/examples

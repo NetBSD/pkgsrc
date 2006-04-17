@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/03/31 23:56:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/04/17 07:07:32 jlam Exp $
 bin/gimpprint-config
 include/gimp-print/gimp-print.h
 info/gimpprint.info
@@ -120,23 +120,23 @@ share/gimp-print/doc/manual-html/print-color.png
 share/gimp-print/doc/manual-html/print-main.png
 share/gimp-print/doc/manual-html/print-setup.png
 share/gimp-print/doc/users-guide.pdf
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/gimp-print.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/gimp-print.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/gimp-print.mo
-${PKGLOCALEDIR}/locale/el/LC_MESSAGES/gimp-print.mo
-${PKGLOCALEDIR}/locale/en_GB/LC_MESSAGES/gimp-print.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/gimp-print.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/gimp-print.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/gimp-print.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/gimp-print.mo
-${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/gimp-print.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/gimp-print.mo
-${PKGLOCALEDIR}/locale/no/LC_MESSAGES/gimp-print.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/gimp-print.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/gimp-print.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/gimp-print.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/gimp-print.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/gimp-print.mo
+share/locale/cs/LC_MESSAGES/gimp-print.mo
+share/locale/da/LC_MESSAGES/gimp-print.mo
+share/locale/de/LC_MESSAGES/gimp-print.mo
+share/locale/el/LC_MESSAGES/gimp-print.mo
+share/locale/en_GB/LC_MESSAGES/gimp-print.mo
+share/locale/es/LC_MESSAGES/gimp-print.mo
+share/locale/fr/LC_MESSAGES/gimp-print.mo
+share/locale/hu/LC_MESSAGES/gimp-print.mo
+share/locale/ja/LC_MESSAGES/gimp-print.mo
+share/locale/nb/LC_MESSAGES/gimp-print.mo
+share/locale/nl/LC_MESSAGES/gimp-print.mo
+share/locale/no/LC_MESSAGES/gimp-print.mo
+share/locale/pl/LC_MESSAGES/gimp-print.mo
+share/locale/pt/LC_MESSAGES/gimp-print.mo
+share/locale/sk/LC_MESSAGES/gimp-print.mo
+share/locale/sv/LC_MESSAGES/gimp-print.mo
+share/locale/uk/LC_MESSAGES/gimp-print.mo
 @exec ${MKDIR} %D/share/gimp-print/samples
 @dirrm share/gimp-print/samples
 @dirrm share/gimp-print/doc/manual-html

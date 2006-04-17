@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/16 18:19:01 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:13 jlam Exp $
 bin/kmess
 share/doc/kde/HTML/en/kmess/common
 share/doc/kde/HTML/en/kmess/index.cache.bz2
@@ -95,21 +95,21 @@ share/kde/sounds/kmess_chat.ogg
 share/kde/sounds/kmess_logoff.ogg
 share/kde/sounds/kmess_logon.ogg
 share/kde/sounds/kmess_msg.ogg
-${PKGLOCALEDIR}/locale/ar/LC_MESSAGES/kmess.mo
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/kmess.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/kmess.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/kmess.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/kmess.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/kmess.mo
-${PKGLOCALEDIR}/locale/ko/LC_MESSAGES/kmess.mo
-${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/kmess.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/kmess.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/kmess.mo
-${PKGLOCALEDIR}/locale/th/LC_MESSAGES/kmess.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/kmess.mo
-${PKGLOCALEDIR}/locale/zh_CN.GB18030/LC_MESSAGES/kmess.mo
-${PKGLOCALEDIR}/locale/zh_CN.GB2312/LC_MESSAGES/kmess.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/kmess.mo
+share/locale/ar/LC_MESSAGES/kmess.mo
+share/locale/ca/LC_MESSAGES/kmess.mo
+share/locale/de/LC_MESSAGES/kmess.mo
+share/locale/es/LC_MESSAGES/kmess.mo
+share/locale/fr/LC_MESSAGES/kmess.mo
+share/locale/it/LC_MESSAGES/kmess.mo
+share/locale/ko/LC_MESSAGES/kmess.mo
+share/locale/nb/LC_MESSAGES/kmess.mo
+share/locale/nl/LC_MESSAGES/kmess.mo
+share/locale/pt_BR/LC_MESSAGES/kmess.mo
+share/locale/th/LC_MESSAGES/kmess.mo
+share/locale/tr/LC_MESSAGES/kmess.mo
+share/locale/zh_CN.GB18030/LC_MESSAGES/kmess.mo
+share/locale/zh_CN.GB2312/LC_MESSAGES/kmess.mo
+share/locale/zh_CN/LC_MESSAGES/kmess.mo
 @comment in kdelibs3: @dirrm share/kde/sounds
 @comment in kdelibs3: @dirrm share/kde/icons/locolor/48x48/apps
 @comment in kdelibs3: @dirrm share/kde/icons/locolor/48x48

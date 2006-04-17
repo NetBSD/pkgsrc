@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/18 09:31:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:20 jlam Exp $
 bin/flphoto
 man/cat1/flphoto.0
 man/cat5/album.0
@@ -35,12 +35,12 @@ share/doc/flphoto/scale.jpg
 share/doc/flphoto/slideshow.html
 share/doc/flphoto/slideshow.jpg
 share/doc/flphoto/view.html
-${PKGLOCALEDIR}/locale/de/flphoto_de
-${PKGLOCALEDIR}/locale/en_CA/flphoto_en_CA
-${PKGLOCALEDIR}/locale/en_GB/flphoto_en_GB
-${PKGLOCALEDIR}/locale/es/flphoto_es
-${PKGLOCALEDIR}/locale/fr/flphoto_fr
-${PKGLOCALEDIR}/locale/it/flphoto_it
-${PKGLOCALEDIR}/locale/nl/flphoto_nl
-${PKGLOCALEDIR}/locale/pt/flphoto_pt
+share/locale/de/flphoto_de
+share/locale/en_CA/flphoto_en_CA
+share/locale/en_GB/flphoto_en_GB
+share/locale/es/flphoto_es
+share/locale/fr/flphoto_fr
+share/locale/it/flphoto_it
+share/locale/nl/flphoto_nl
+share/locale/pt/flphoto_pt
 @dirrm share/doc/flphoto

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/02/09 11:52:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:34 jlam Exp $
 bin/krusader
 lib/kde3/kio_iso.la
 lib/kde3/kio_krarc.la
@@ -133,25 +133,25 @@ share/kde/icons/hicolor/64x64/apps/krusader.png
 share/kde/icons/hicolor/64x64/apps/krusader_red.png
 share/kde/services/iso.protocol
 share/kde/services/krarc.protocol
-${PKGLOCALEDIR}/locale/bg/LC_MESSAGES/krusader.mo
-${PKGLOCALEDIR}/locale/bs/LC_MESSAGES/krusader.mo
-${PKGLOCALEDIR}/locale/ca/LC_MESSAGES/krusader.mo
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/krusader.mo
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/krusader.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/krusader.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/krusader.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/krusader.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/krusader.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/krusader.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/krusader.mo
-${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/krusader.mo
-${PKGLOCALEDIR}/locale/pl/LC_MESSAGES/krusader.mo
-${PKGLOCALEDIR}/locale/pt/LC_MESSAGES/krusader.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/krusader.mo
-${PKGLOCALEDIR}/locale/sk/LC_MESSAGES/krusader.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/krusader.mo
-${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/krusader.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/krusader.mo
+share/locale/bg/LC_MESSAGES/krusader.mo
+share/locale/bs/LC_MESSAGES/krusader.mo
+share/locale/ca/LC_MESSAGES/krusader.mo
+share/locale/cs/LC_MESSAGES/krusader.mo
+share/locale/da/LC_MESSAGES/krusader.mo
+share/locale/de/LC_MESSAGES/krusader.mo
+share/locale/es/LC_MESSAGES/krusader.mo
+share/locale/fr/LC_MESSAGES/krusader.mo
+share/locale/hu/LC_MESSAGES/krusader.mo
+share/locale/it/LC_MESSAGES/krusader.mo
+share/locale/ja/LC_MESSAGES/krusader.mo
+share/locale/nl/LC_MESSAGES/krusader.mo
+share/locale/pl/LC_MESSAGES/krusader.mo
+share/locale/pt/LC_MESSAGES/krusader.mo
+share/locale/ru/LC_MESSAGES/krusader.mo
+share/locale/sk/LC_MESSAGES/krusader.mo
+share/locale/sv/LC_MESSAGES/krusader.mo
+share/locale/uk/LC_MESSAGES/krusader.mo
+share/locale/zh_CN/LC_MESSAGES/krusader.mo
 @comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps

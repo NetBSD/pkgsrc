@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/02 20:33:58 reed Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:15 jlam Exp $
 bin/postgres
 bin/postmaster
 lib/postgresql/ascii_and_mic.so
@@ -29,20 +29,20 @@ lib/postgresql/utf8_and_win1256.so
 lib/postgresql/utf8_and_win874.so
 man/man1/postgres.1
 man/man1/postmaster.1
-${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/postgres.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/postgres.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/postgres.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/postgres.mo
-${PKGLOCALEDIR}/locale/hr/LC_MESSAGES/postgres.mo
-${PKGLOCALEDIR}/locale/hu/LC_MESSAGES/postgres.mo
-${PKGLOCALEDIR}/locale/it/LC_MESSAGES/postgres.mo
-${PKGLOCALEDIR}/locale/nb/LC_MESSAGES/postgres.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/postgres.mo
-${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/postgres.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/postgres.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/postgres.mo
-${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/postgres.mo
-${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/postgres.mo
+share/locale/cs/LC_MESSAGES/postgres.mo
+share/locale/de/LC_MESSAGES/postgres.mo
+share/locale/es/LC_MESSAGES/postgres.mo
+share/locale/fr/LC_MESSAGES/postgres.mo
+share/locale/hr/LC_MESSAGES/postgres.mo
+share/locale/hu/LC_MESSAGES/postgres.mo
+share/locale/it/LC_MESSAGES/postgres.mo
+share/locale/nb/LC_MESSAGES/postgres.mo
+share/locale/pt_BR/LC_MESSAGES/postgres.mo
+share/locale/ru/LC_MESSAGES/postgres.mo
+share/locale/sv/LC_MESSAGES/postgres.mo
+share/locale/tr/LC_MESSAGES/postgres.mo
+share/locale/zh_CN/LC_MESSAGES/postgres.mo
+share/locale/zh_TW/LC_MESSAGES/postgres.mo
 share/examples/rc.d/pgsql
 share/postgresql/conversion_create.sql
 share/postgresql/information_schema.sql

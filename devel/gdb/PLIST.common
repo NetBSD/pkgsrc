@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.4 2006/03/30 03:44:42 jlam Exp $
+@comment $NetBSD: PLIST.common,v 1.5 2006/04/17 07:07:16 jlam Exp $
 bin/gdb
 include/ansidecl.h
 include/bfd.h
@@ -15,16 +15,16 @@ lib/libiberty.a
 lib/libmmalloc.a
 lib/libopcodes.la
 man/man1/gdb.1
-${PKGLOCALEDIR}/locale/da/LC_MESSAGES/opcodes.mo
-${PKGLOCALEDIR}/locale/de/LC_MESSAGES/opcodes.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/bfd.mo
-${PKGLOCALEDIR}/locale/es/LC_MESSAGES/opcodes.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/bfd.mo
-${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/opcodes.mo
-${PKGLOCALEDIR}/locale/id/LC_MESSAGES/opcodes.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/bfd.mo
-${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/opcodes.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/bfd.mo
-${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/opcodes.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/bfd.mo
-${PKGLOCALEDIR}/locale/tr/LC_MESSAGES/opcodes.mo
+share/locale/da/LC_MESSAGES/opcodes.mo
+share/locale/de/LC_MESSAGES/opcodes.mo
+share/locale/es/LC_MESSAGES/bfd.mo
+share/locale/es/LC_MESSAGES/opcodes.mo
+share/locale/fr/LC_MESSAGES/bfd.mo
+share/locale/fr/LC_MESSAGES/opcodes.mo
+share/locale/id/LC_MESSAGES/opcodes.mo
+share/locale/ja/LC_MESSAGES/bfd.mo
+share/locale/pt_BR/LC_MESSAGES/opcodes.mo
+share/locale/sv/LC_MESSAGES/bfd.mo
+share/locale/sv/LC_MESSAGES/opcodes.mo
+share/locale/tr/LC_MESSAGES/bfd.mo
+share/locale/tr/LC_MESSAGES/opcodes.mo

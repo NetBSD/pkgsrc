@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/06/19 18:38:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/04/17 07:07:31 jlam Exp $
 bin/findsmb
 bin/make_printerdef
 bin/make_smbcodepage
@@ -279,10 +279,10 @@ share/examples/samba/validchars/nwdos70.out
 share/examples/samba/validchars/readme
 share/examples/samba/validchars/validchr.c
 share/examples/samba/validchars/validchr.com
-${PKGLOCALEDIR}/locale/en/LC_MESSAGES/samba.mo
-${PKGLOCALEDIR}/locale/en/LC_MESSAGES/samba_swat.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/samba.mo
-${PKGLOCALEDIR}/locale/ja/LC_MESSAGES/samba_swat.mo
+share/locale/en/LC_MESSAGES/samba.mo
+share/locale/en/LC_MESSAGES/samba_swat.mo
+share/locale/ja/LC_MESSAGES/samba.mo
+share/locale/ja/LC_MESSAGES/samba_swat.mo
 share/samba/swat/help/CVS-Access.html
 share/samba/swat/help/DOMAIN_MEMBER.html
 share/samba/swat/help/ENCRYPTION.html
