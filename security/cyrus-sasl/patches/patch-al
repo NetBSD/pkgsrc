@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.3 2006/04/13 21:32:41 wiz Exp $
+$NetBSD: patch-al,v 1.4 2006/04/18 17:41:30 jlam Exp $
 
---- Makefile.in.orig	2004-10-24 16:21:09.000000000 -0400
+--- Makefile.in.orig	2005-05-15 01:58:33.000000000 -0400
 +++ Makefile.in
-@@ -237,7 +237,7 @@ AUTOMAKE_OPTIONS = 1.7
+@@ -241,7 +241,7 @@ AUTOMAKE_OPTIONS = 1.7
  @MACOSX_FALSE@INSTALLOSX = 
  @MACOSX_TRUE@INSTALLOSX = install-exec-local-osx
  

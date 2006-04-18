@@ -1,21 +1,19 @@
-$NetBSD: distinfo,v 1.14 2006/04/13 21:32:40 wiz Exp $
+$NetBSD: distinfo,v 1.15 2006/04/18 17:41:30 jlam Exp $
 
-SHA1 (cyrus-sasl-2.1.20.tar.gz) = d1eec5644c4e87edb95fa5ab8bf124cfdf277eb6
-RMD160 (cyrus-sasl-2.1.20.tar.gz) = 45f8d9e91e5ba4840f57d2f0526b8f41f90bbb8c
-Size (cyrus-sasl-2.1.20.tar.gz) = 1775163 bytes
-SHA1 (patch-aa) = c3542cc0e7887fa92b8b3cfa3c970b0dc2f27a8d
-SHA1 (patch-ab) = f3e86c1125e302466e876e5bf31764b9b5cff3ac
-SHA1 (patch-ac) = e03731395cefef42c5070021c09928c939fc6a58
-SHA1 (patch-ad) = 8a6663e358a67c27380e37be72d71841fd553fdf
+SHA1 (cyrus-sasl-2.1.21.tar.gz) = 6449f730c963d29d43600a95373a6e2db52d6d66
+RMD160 (cyrus-sasl-2.1.21.tar.gz) = 93e0e1868453c5781602b5cce23e746b8823a26b
+Size (cyrus-sasl-2.1.21.tar.gz) = 1584931 bytes
+SHA1 (patch-aa) = 0267569a89aade1c5aa455d618ebb0016022ecc4
+SHA1 (patch-ab) = 55cd67f8856239ab90696456a16af9498a4354ae
+SHA1 (patch-ac) = 671c462164f0c763b4a646aca9afe293be9448ef
+SHA1 (patch-ad) = c3fe38777a281b6800115711b732254f72887107
 SHA1 (patch-ae) = cfd176eea2e1dba320be14a7d9bf2a4426ba39ad
 SHA1 (patch-af) = 40ec1378971536daddc543a66a1923451a4c381c
-SHA1 (patch-ag) = f62062ecee2bf133572d09049a77c5624ddb7f70
-SHA1 (patch-ah) = 1b0cd2d822dac2b01523fbc712f6544cd9fc298d
-SHA1 (patch-ai) = 4181f13bf69fec11aa42d98bcb85d5d8bd83dfe2
+SHA1 (patch-ag) = 6a2713504078dad681dcc6f7ba296972d03d5b15
+SHA1 (patch-ah) = 595e58bd756e75bda5f25a19119f2fc7c27bc7d9
+SHA1 (patch-ai) = 6309e9117be65e64de635cb004385e9badcd687c
 SHA1 (patch-ak) = 1f727d2bc0536ac5d9ba28f5e4cf01c6c1998987
-SHA1 (patch-al) = a4d7aa722b334df6b7b9f532b02eb5bc7a797486
-SHA1 (patch-ap) = 3c1f4e554fd49772d2f8f279af3b571eca3a7076
-SHA1 (patch-aq) = 7e4375f0bc8c5b346d050a269fd2eea87f0aaf7c
-SHA1 (patch-ar) = f03a9bddfeb7aeb8af19c2bde315a630ce03f331
-SHA1 (patch-as) = c8cebac879afda69b282f5c334ffb2c8b5eee6cd
+SHA1 (patch-al) = d706fb15cdff279251bed0a2c0a7b5cd1bad3584
+SHA1 (patch-ap) = eb87cd283f99da69916a7eb251000f2d9254f17d
+SHA1 (patch-aq) = 6d2f126a52c589a4789d1d3e3d3e8ab5e31cd82f
 SHA1 (patch-at) = cf35ac66873a5bc18216e13a1240019da99563ca
