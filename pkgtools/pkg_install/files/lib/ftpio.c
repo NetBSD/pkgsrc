@@ -1,4 +1,4 @@
-/*	$NetBSD: ftpio.c,v 1.19 2006/04/05 18:17:31 wiz Exp $	*/
+/*	$NetBSD: ftpio.c,v 1.20 2006/04/18 20:41:44 hubertf Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: ftpio.c,v 1.19 2006/04/05 18:17:31 wiz Exp $");
+__RCSID("$NetBSD: ftpio.c,v 1.20 2006/04/18 20:41:44 hubertf Exp $");
 #endif
 
 /*-
@@ -217,7 +217,7 @@ expect(int fd, const char *str, int *ftprc)
 	set[0].fd = fd;
 	set[0].events = POLLIN;
 	while(!done) {
-		rc = poll(set, 1, 10*60*1000);    /* seconds until next message from tar */
+		rc = poll(set, 1, 60*60*1000);    /* seconds until next message from tar */
 		switch (rc) {
 		case -1:
 			if (errno == EINTR)
@@ -1240,11 +1240,11 @@ unpackURL(const char *url, const char *dir)
 			errx(EXIT_FAILURE, "don't know how to decompress %s, sorry", pkg);
 
 		/* yes, this is gross, but needed for borken ftp(1) */
-		(void) snprintf(cmd, sizeof(cmd), "get %s \"| ( cd %s; " TAR_CMD " %s %s -%sxp -f - | tee /dev/stderr )\"\n",
+		(void) snprintf(cmd, sizeof(cmd), "get %s \"| ( cd %s; " TAR_CMD " %s %s -vvxp -f - | tee %s )\"\n",
 		    pkg, dir,
 		    decompress_cmd != NULL ? "--use-compress-program" : "",
 		    decompress_cmd != NULL ? decompress_cmd : "",
-		    Verbose? "vv" : "");
+		    Verbose ? "/dev/stderr" : "/dev/null");
 
 		rc = ftp_cmd(cmd, "\n(226|550).*\n");
 		if (rc != 226) {
