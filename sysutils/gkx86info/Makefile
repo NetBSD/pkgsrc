@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.14 2006/04/17 13:46:48 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/18 19:56:26 wiz Exp $
 #
 
 DISTNAME=	gkx86info0.0.2
 PKGNAME=	gkx86info-0.0.2
 PKGREVISION=	6
 CATEGORIES=	sysutils
-MASTER_SITES=	http://asdfnews.org/yargon/
+#MASTER_SITES=	http://asdfnews.org/yargon/
 
 MAINTAINER=	ptiJo@noos.fr
-HOMEPAGE=	http://asdfnews.org/yargon/
+#HOMEPAGE=	http://asdfnews.org/yargon/
 COMMENT=	Gkrellm plugin that prints the current clock speed
 
 ONLY_FOR_PLATFORM=	*-*-i386
