@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/18 13:49:58 salo Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2006/04/18 13:58:47 tron Exp $
 
 DISTNAME=		suse_gtk-${SUSE_VERSION}
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE100}
 DISTFILES=		${RPMFILES}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		tron@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for GTK binaries
 
-DEPENDS+=		suse_x11>=${SUSE_VERSION}:../../emulators/suse91_x11
+DEPENDS+=		suse_x11>=${SUSE_VERSION}:../../emulators/suse100_x11
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
