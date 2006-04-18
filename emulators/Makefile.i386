@@ -1,0 +1,4 @@
+# $NetBSD: Makefile.i386,v 1.1.1.1 2006/04/18 08:59:49 tron Exp $
+
+RPMFILES=		openmotif-libs-2.2.3-13.${SUSE_ARCH}.rpm \
+			openmotif21-libs-2.1.30MLI4-128.${SUSE_ARCH}.rpm
