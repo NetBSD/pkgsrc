@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/18 17:17:50 reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/18 17:31:47 reed Exp $
 #
 
-DISTNAME=		compositeproto-0.2.1
+DISTNAME=		compositeproto-0.3
 CATEGORIES=		x11
-MASTER_SITES=		http://xorg.freedesktop.org/releases/X11R7.0-RC1/proto/
+MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/proto/
 
 MAINTAINER=		reed@reedmedia.net
-HOMEPAGE=		http://xorg.freedesktop.org/releases/X11R7.0-RC1/proto/
+HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Composite extension headers from modular X.org
 
 CONFLICTS+=		compositeext-[0-9]*
