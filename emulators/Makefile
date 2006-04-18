@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2006/04/18 14:12:53 salo Exp $
+# $NetBSD: Makefile,v 1.149 2006/04/18 14:44:52 salo Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -93,6 +93,7 @@ SUBDIR+=	suse100_libtiff
 #SUBDIR+=	suse100_linux		# only contains Makefile fragments
 SUBDIR+=	suse100_locale
 SUBDIR+=	suse100_openmotif
+SUBDIR+=	suse100_slang
 SUBDIR+=	suse100_x11
 SUBDIR+=	suse91_aspell
 SUBDIR+=	suse91_base
