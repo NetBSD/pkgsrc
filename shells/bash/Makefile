@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/04/06 06:22:44 reed Exp $
+# $NetBSD: Makefile,v 1.23 2006/04/18 18:17:47 schwarz Exp $
 
 DISTNAME=	bash-3.1
 PKGNAME=	bash-3.1pl1
@@ -66,6 +66,11 @@ BUILDLINK_DEPMETHOD.readline=	build
 ##
 .if empty(PKG_OPTIONS:Mmultibyte)
 CONFIGURE_ENV+=	ac_cv_type_wctype_t=no
+.endif
+
+# the code has problems with older versions of yacc
+.if !empty(LOWER_OPSYS:Mirix5*)
+USE_TOOLS+=	bison
 .endif
 
 # Use "readline" package on Darwin to avoid link erros.
