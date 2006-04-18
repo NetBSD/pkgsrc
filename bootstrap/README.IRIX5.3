@@ -1,4 +1,4 @@
-$NetBSD: README.IRIX5.3,v 1.1 2006/04/10 13:29:38 schwarz Exp $
+$NetBSD: README.IRIX5.3,v 1.2 2006/04/18 18:11:21 schwarz Exp $
 
 Installing pkgsrc on IRIX 5.3 requires some preparation.
 First, if necessary, get the IRIX 5.3 IDO (cc etc.) from SGI at
@@ -27,7 +27,7 @@ DBG=
 Unfortunately many of IRIX 5.3's native tools do not provide
 functionalitites that pkgsrc expects. It is therefore necessary to install
 the respective GNU tools for cp, grep, id, mkdir, test, touch, which,
-and xargs. To avoid conflicts you might want to do so under a differtent
+and xargs. To avoid conflicts you might want to do so under a different
 directory hierarchy than pkgsrc (in the following example
 --prefix=/usr/local is assumed). Obtain and install the following GNU
 software:
@@ -81,14 +81,12 @@ TOOLS_PLATFORM.xargs=/usr/local/bin/xargs -r
 .endif
 TYPE=/usr/local/bin/which
  
-IRIX 5.3 IDO does not come with a c++ compiler. For packages that require
-c++ you can get the GNU c++ compiler, g++, which is part of the gcc
+IRIX 5.3 IDO does not come with a C++ compiler. For packages that require
+C++ you can get the GNU C++ compiler, g++, which is part of the gcc
 distribution. Gcc 3.4.4 is known to bootstrap on IRIX 5.3. To activate it,
 add the following lines to your mk.conf:
 
-.if defined(USE_LANGUAGES) && !empty(USE_LANGUAGES:Mc++)
 CXX=g++
 USE_TOOLS+=cxx
 TOOLS_PLATFORM.cxx=/usr/local/bin/g++
 TOOLS_CMD.cxx=${TOOLS_DIR}/bin/g++
-.endif
