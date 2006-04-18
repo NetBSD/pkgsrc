@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2006/03/09 09:37:44 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.33 2006/04/18 22:39:32 adrianp Exp $
 #
 
 DISTNAME=		snort-2.4.4
@@ -52,8 +52,8 @@ SNORTDIR=		${PREFIX}/share/snort
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	etc/snort.conf src/snort.c
-SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g" \
-			-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_SED.paths+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.cgi=	Fixing paths.
 
 post-install:
