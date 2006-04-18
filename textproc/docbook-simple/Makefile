@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/03/21 06:00:49 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/18 14:10:22 jmmv Exp $
 #
 
 DISTNAME=	docbook-simple-1.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	http://docbook.org/xml/simple/1.1/
 EXTRACT_SUFX=	.zip
@@ -17,13 +17,20 @@ NO_BUILD=	YES
 
 WRKSRC=		${WRKDIR}
 INSTDIR=	${DESTDIR}${PREFIX}/share/xml
-DTDDIR=		${INSTDIR}/docbook-simple
+DTDDIR=		${INSTDIR}/docbook/simple/1.1
 DTDFILES=	sdbcent.mod sdocbook-custom.dtd sdocbookref-custom.dtd \
 		sdbhier.mod sdocbookref.dtd sdbpool.mod sdocbook.dtd \
 		sinclist.mod
 MISCFILES=	sdocbook.css
 
-XML_CATALOGS=	${PREFIX}/share/xml/docbook-simple/catalog.xml
+XML_CATALOGS=	${DTDDIR}/catalog.xml
+XML_ENTRIES=	rewriteSystem http://www.oasis-open.org/docbook/xml/simple/1.1 \
+		${DTDDIR}
+
+# share/xml/docbook is shared with docbook-xml.
+PRINT_PLIST_AWK+=	/^@dirrm share\/xml\/docbook$$/ \
+			{ print "@unexec $${RMDIR} %D/share/xml/docbook" \
+			  " >/dev/null 2>&1"; next }
 
 do-install:
 	${INSTALL_DATA_DIR} ${DTDDIR}
