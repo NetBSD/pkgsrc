@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4896 2006/04/17 21:17:29 wiz Exp $
+$NetBSD: TODO,v 1.4897 2006/04/18 17:22:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -306,7 +306,7 @@ Suggested package updates
 	o SmartEiffel-2.1
 	o XFree86-4.5.0
 	o XaoS-3.1.1
-	o YoSucker-73
+	o YoSucker-75
 	o aap-0.144
 	o abcmidi-20060401
 	o acpi-iasl-20040715
@@ -551,6 +551,7 @@ Suggested package updates
 	o gnome-spell-1.0.7
 	o gnome-vfsmm-2.14.0
 	o gnomeicu-0.99.10
+	o gnucash-devel-1.9.5
 	o gnus-5.10.8
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14
@@ -609,6 +610,8 @@ Suggested package updates
 	o icdprog-0.5
 	o icecast-2.3.1
 	o icepref-2.3
+	o icewm-1.2.26
+	o icewm-gnome-1.2.26
 	o icsi-finger-1.0.29
 	o id-utils-4.0
 	o idesk-0.7.3
@@ -945,6 +948,7 @@ Suggested package updates
 	o pear-Net_SMTP-1.2.7
 	o pear-Net_Socket-1.0.6
 	o pear-SOAP-0.9.1
+	o pekwm-0.1.5
 	o pfqueue-0.5.2
 	o pfstat-1.8
 	o phoon-20050629
@@ -1144,7 +1148,7 @@ Suggested package updates
 	o sweep-0.9.1
 	o swfdec-0.3.6
 	o swi-prolog-5.5.33
-	o sylpheed-claws-2.1.0
+	o sylpheed-claws-2.1.1
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.2
 	o sysinfo-4.2.2
@@ -1244,8 +1248,10 @@ Suggested package updates
 	o xlispstat-3.52.20
 	o xm7-303
 	o xmahjongg-3.7
+	o xmame-0.105
 	o xmbdfed-4.6
 	o xmcd-3.3.0
+	o xmess-0.105
 	o xmlsec1-1.2.9
 	o xmms-alarm-0.3.7
 	o xmms-crossfade-1.3.10
