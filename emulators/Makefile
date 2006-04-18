@@ -1,27 +1,23 @@
-# FreeBSD Id: Makefile,v 1.14 1997/07/31 07:23:58 max Exp
-#
+# $NetBSD: Makefile,v 1.1.1.2 2006/04/18 08:59:49 tron Exp $
 
-    SUBDIR += aftp
-    SUBDIR += bsvc
-    SUBDIR += cpmemu
-    SUBDIR += cpmtools
-    SUBDIR += fmsx
-    SUBDIR += hfs
-    SUBDIR += ines
-    SUBDIR += linux_lib
-    SUBDIR += macutils
-    SUBDIR += mastergear
-    SUBDIR += mtools
-    SUBDIR += pcemu
-    SUBDIR += prodosemu
-    SUBDIR += sim6811
-    SUBDIR += spim
-    SUBDIR += stella
-    SUBDIR += tkhfs
-    SUBDIR += vgb
-    SUBDIR += vmsbackup
-    SUBDIR += wine
-    SUBDIR += x48
-    SUBDIR += xgs
+DISTNAME=		suse_openmotif-${SUSE_VERSION}
+CATEGORIES=		emulators
+MASTER_SITES=		${MASTER_SITE_SUSE100}
+DISTFILES=		${RPMFILES}
 
-.include <bsd.port.subdir.mk>
+MAINTAINER=		tron@NetBSD.org
+HOMEPAGE=		http://www.suse.com/
+COMMENT=		Linux compatibility package for the Motif library
+
+DEPENDS+=		suse_x11>=${SUSE_VERSION}:../../emulators/suse100_x11
+
+EXTRACT_ONLY=		# empty
+NO_BUILD=		YES
+PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
+
+.if exists(Makefile.${MACHINE_ARCH})
+.include "Makefile.${MACHINE_ARCH}"
+.endif
+
+.include "../../emulators/suse100_linux/Makefile.common"
+.include "../../mk/bsd.pkg.mk"
