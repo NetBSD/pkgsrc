@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/10/02 15:04:41 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/04/18 14:11:29 jmmv Exp $
 share/xml/docbook/4.4/ChangeLog
 share/xml/docbook/4.4/README
 share/xml/docbook/4.4/calstblx.dtd
@@ -102,5 +102,5 @@ share/xml/docbook/4.2/soextblx.dtd
 @dirrm share/xml/docbook/4.3
 @dirrm share/xml/docbook/4.2/ent
 @dirrm share/xml/docbook/4.2
-@dirrm share/xml/docbook
+@unexec ${RMDIR} %D/share/xml/docbook >/dev/null 2>&1 || ${TRUE}
 @comment in xmlcatmgr: @dirrm share/xml
