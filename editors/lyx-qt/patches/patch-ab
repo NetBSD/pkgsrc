@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2006/01/18 21:00:45 reed Exp $
+$NetBSD: patch-ab,v 1.7 2006/04/18 23:21:18 reed Exp $
 
---- src/frontends/qt2/lyx_gui.C.orig	2006-01-18 12:25:08.000000000 -0800
-+++ src/frontends/qt2/lyx_gui.C	2006-01-18 12:33:05.000000000 -0800
-@@ -122,8 +122,22 @@
+--- src/frontends/qt2/lyx_gui.C.orig	2006-04-14 13:33:44.000000000 -0700
++++ src/frontends/qt2/lyx_gui.C	2006-04-14 14:18:59.000000000 -0700
+@@ -135,8 +135,22 @@
  
  
  LQApplication::~LQApplication()
@@ -25,5 +25,5 @@ $NetBSD: patch-ab,v 1.6 2006/01/18 21:00:45 reed Exp $
 +#endif
 +}
  
- #ifdef Q_OS_MAC
+ #ifdef Q_WS_MACX
  bool LQApplication::macEventFilter(EventRef event)
