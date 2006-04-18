@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.24 2006/04/18 22:52:55 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.25 2006/04/18 23:31:30 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -51,3 +51,5 @@ Pullup ticket 1399 - requested by xtraeme
 security update for mysql5
 Pullup ticket 1389 - requested by salo
 sync audit-packages with HEAD
+Pullup ticket 1407 - requested by jlam
+security fix for cy2-digestmd5
