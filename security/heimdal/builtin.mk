@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2006/04/06 06:22:41 reed Exp $
+# $NetBSD: builtin.mk,v 1.10 2006/04/18 14:42:28 jlam Exp $
 
 BUILTIN_PKG:=	heimdal
 
@@ -37,11 +37,11 @@ BUILTIN_VERSION.heimdal!=	${SH_KRB5_CONFIG} --version |		\
 # the version number of the software.  Match up heimdal versions with
 # OS versions for an approximate determination of the heimdal version.
 #
-_BLTN_HEIMDAL_VERSIONS=	0.6  0.5  0.4e  0.3f  0.3e
-_BLTN_HEIMDAL_0.6.3=	NetBSD-[2-9]*-*
+_BLTN_HEIMDAL_VERSIONS=	0.6.3  0.6.2  0.6.1  0.6  0.5  0.4e  0.3f  0.3e
+_BLTN_HEIMDAL_0.6.3=	NetBSD-2.* NetBSD-[3-9]*-*
 _BLTN_HEIMDAL_0.6.2=	# empty
 _BLTN_HEIMDAL_0.6.1=	NetBSD-1.6[U-Z]-* NetBSD-1.6Z*-*
-_BLTN_HEIMDAL_0.6=	NetBSD-1.6[U-Z]-* NetBSD-1.6Z*-* NetBSD-[2-9]*-*
+_BLTN_HEIMDAL_0.6=	NetBSD-1.6[U-Z]-* NetBSD-1.6Z*-*
 _BLTN_HEIMDAL_0.5=	NetBSD-1.6[I-T]-*
 _BLTN_HEIMDAL_0.4e=	NetBSD-1.6[A-H]-*				\
 			NetBSD-1.6-* NetBSD-1.6_*-* NetBSD-1.6.*-*	\
