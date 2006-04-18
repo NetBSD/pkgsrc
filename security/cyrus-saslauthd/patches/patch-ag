@@ -1,0 +1,23 @@
+$NetBSD: patch-ag,v 1.1 2006/04/18 17:42:59 jlam Exp $
+
+--- saslauthd.h.in.orig	2005-05-15 02:02:30.000000000 -0400
++++ saslauthd.h.in
+@@ -89,12 +89,18 @@
+ /* Support for PAM? */
+ #undef HAVE_PAM
+ 
++/* Define to 1 if you have the <pam/pam_appl.h> header file. */
++#undef HAVE_PAM_PAM_APPL_H
++
+ /* Does compiler understand __PRETTY_FUNCTION__ */
+ #undef HAVE_PRETTY_FUNCTION
+ 
+ /* Include support for saslauthd? */
+ #undef HAVE_SASLAUTHD
+ 
++/* Define to 1 if you have the <security/pam_appl.h> header file. */
++#undef HAVE_SECURITY_PAM_APPL_H
++
+ /* Include SIA Support */
+ #undef HAVE_SIA
+ 
