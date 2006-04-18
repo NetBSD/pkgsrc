@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.38 2006/04/12 10:27:40 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2006/04/18 19:23:47 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XRENDER_BUILDLINK3_MK:=	${XRENDER_BUILDLINK3_MK}+
@@ -17,6 +17,6 @@ BUILDLINK_PKGSRCDIR.Xrender?=	../../x11/Xrender
 .endif	# XRENDER_BUILDLINK3_MK
 
 .include "../../mk/x11.buildlink3.mk"
-.include "../../x11/renderext/buildlink3.mk"
+.include "../../x11/renderproto/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
