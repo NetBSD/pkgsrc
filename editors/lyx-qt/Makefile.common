@@ -1,17 +1,20 @@
-# $NetBSD: Makefile.common,v 1.36 2006/04/07 00:54:25 minskim Exp $
+# $NetBSD: Makefile.common,v 1.37 2006/04/18 23:21:18 reed Exp $
 #
 
-DISTNAME=		lyx-1.3.7
+DISTNAME=		lyx-1.4.1
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/ \
 			ftp://ftp.devel.lyx.org/pub/lyx/ \
 			ftp://gd.tuwien.ac.at/publishing/tex/lyx/stable/ \
-			ftp://ftp.sdsc.edu/pub/other/lyx/stable/
+			ftp://ftp.sdsc.edu/pub/other/lyx/stable/ \
+			http://lyx.mirror.fr/stable/ \
+			ftp://ftp.lip6.fr/pub/lyx/stable/ \
+			ftp://ftp.ntua.gr/pub/X11/LyX/stable/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.lyx.org/
-COMMENT=		Graphical frontend for LaTeX
+COMMENT=		Document processor and graphical frontend for LaTeX
 
 CONFLICTS=		lyx-[0-9]*
 
@@ -26,11 +29,12 @@ UNLIMIT_RESOURCES+=	datasize
 USE_DIRS+=		texmf-1.0
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake makepsres perl:run
+USE_TOOLS+=		gmake perl:run
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 GCC_REQD+=		2.95
 TEX_ACCEPTED=		teTeX1 teTeX2 teTeX3
+MAKE_ENV+=		PKG_LOCALTEXMFPREFIX=${PKG_LOCALTEXMFPREFIX}
 
 CONFIGURE_ARGS+=	--with-pspell-lib=${BUILDLINK_PREFIX.aspell}/lib \
 			--with-pspell-include=${BUILDLINK_PREFIX.aspell}/include/pspell \
@@ -70,20 +74,19 @@ CONFIGURE_ENV+= CFLAGS=${CFLAGS:M*:Q}
 .endif
 
 PYTHON_PATCH_SCRIPTS=	lib/lyx2lyx/lyx2lyx \
-			development/tools/generate_symbols_list.py \
+			lib/lyx2lyx/profiling.py \
 			lib/scripts/fen2ascii.py \
-			lib/scripts/fig2pstex.py \
-			lib/scripts/general_command_wrapper.py \
+			lib/scripts/layout2layout.py \
+			lib/scripts/legacy_lyxpreview2ppm.py \
 			lib/scripts/listerrors \
-			lib/scripts/pic2ascii.py \
-			lib/scripts/pic2png_eps.py
+			lib/scripts/lyxpreview2bitmap.py \
+			lib/scripts/lyxpreview_tools.py \
+			lib/scripts/tex_copy.py
 
-# using INSTALL_DATA_DIR instead of INSTALLATION_DIRS because PREFIX is included
-post-install:
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx &&	\
-	for i in ${WRKSRC}/lib/tex/* ; do \
-		${INSTALL_DATA} $$i ${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/ ; \
-	done
+SUBST_CLASSES+=		python
+SUBST_STAGE.python=	pre-configure
+SUBST_FILES.python=	lib/configure.m4 lib/configure
+SUBST_SED.python=	-e "s,python ,${PYTHONBIN} ,"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
