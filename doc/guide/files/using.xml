@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.18 2006/03/01 17:16:21 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.19 2006/04/18 12:56:53 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -24,7 +24,8 @@
 	<tgroup cols="2">
 	<thead><row><entry>Platform</entry><entry>URL</entry></row></thead>
 	<tbody>
-	<row><entry>Solaris 5.10</entry><entry><filename>http://public.enst.fr/pkgsrc/packages/bootstrap-pkgsrc/</filename></entry></row>
+	<row><entry>Solaris 9</entry><entry><filename>ftp://ftp0.mh.bbc.co.uk/pub/pkgsrc/packages/bootstrap-pkgsrc/</filename></entry></row>
+	<row><entry>Solaris 10</entry><entry><filename>http://public.enst.fr/pkgsrc/packages/bootstrap-pkgsrc/</filename></entry></row>
 	</tbody>
 	</tgroup>
 	</informaltable>
@@ -60,15 +61,19 @@
 	<tgroup cols="2">
 	<thead><row><entry>Platform</entry><entry>URL</entry></row></thead>
 	<tbody>
-	<row><entry>Solaris 5.10</entry><entry><filename>http://public.enst.fr/pkgsrc/packages/</filename></entry></row>
+	<row><entry>Solaris 9</entry><entry><filename>ftp://ftp0.mh.bbc.co.uk/pub/pkgsrc/packages/</filename></entry></row>
+	<row><entry>Solaris 10</entry><entry><filename>http://public.enst.fr/pkgsrc/packages/</filename></entry></row>
 	</tbody>
 	</tgroup>
 	</informaltable>
 
-	<para>In each of these directories, there is a subdirectory
-	<filename>All</filename> that contains all the binary packages.
-	Further, there are subdirectories for categories that contain
-	symbolic links that point to the actual binary package in
+	<para>Most of these directories contain the pkgsrc distribution
+	for multiple platforms. Select the appropriate subdirectories,
+	according to your machine architecture and operating system,
+	until you find a directory called <filename>All</filename>. This
+	directory contains all the binary packages. Further, there are
+	subdirectories for categories that contain symbolic links that
+	point to the actual binary package in
 	<filename>../All</filename>. This directory layout is used for
 	all package repositories, no matter if they are accessed via
 	HTTP, FTP, NFS, CD-ROM, or the local filesystem.</para>
