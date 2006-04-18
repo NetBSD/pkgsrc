@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.7 2006/04/18 14:12:47 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.8 2006/04/18 14:13:58 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2172,3 +2172,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added emulators/suse100_gtk version 10.0 [salo 2006-04-18]
 	Updated textproc/docbook-simple to 1.1nb3 [jmmv 2006-04-18]
 	Updated textproc/docbook-xml to 4.4nb4 [jmmv 2006-04-18]
+	Added emulators/suse100_aspell version 10.0 [salo 2006-04-18]
