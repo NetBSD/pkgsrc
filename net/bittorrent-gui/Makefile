@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2006/04/17 13:46:42 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/18 11:53:04 tron Exp $
 
 .include "../../net/bittorrent/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/BitTorrent/bittorrent-gui/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT+=	(GTK+ GUI)
 
@@ -13,7 +13,7 @@ PYTHON_PATCH_SCRIPTS= bittorrent maketorrent
 
 CONFLICTS+=	bittornado-gui-[0-9]*
 
-ICONS_DIR=		share/pixmaps/BitTorrent-${PKGVERSION}/icons
+ICONS_DIR=		share/pixmaps/BitTorrent-${PKGVERSION:C/nb.*//}/icons
 INSTALLATION_DIRS=	bin ${ICONS_DIR} ${ICONS_DIR}/default ${ICONS_DIR}/old
 
 do-build:	# empty
