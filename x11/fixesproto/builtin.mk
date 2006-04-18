@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1.1.1 2006/04/18 17:13:35 reed Exp $
+# $NetBSD: builtin.mk,v 1.2 2006/04/18 18:03:22 reed Exp $
 
 BUILTIN_PKG:=	fixesproto
 
@@ -54,3 +54,15 @@ USE_BUILTIN.fixesproto!=						\
 .  endif  # PREFER.fixesproto
 .endif
 MAKEVARS+=	USE_BUILTIN.fixesproto
+
+# following so old pkg-config name fixesext.pc will be available
+# this is temporary and can be removed once not used
+BUILDLINK_TARGETS+=	fixesext-symlink-pc
+
+fixesext-symlink-pc:
+	src=${BUILDLINK_PREFIX.fixesproto}/lib/pkgconfig/fixesproto.pc \
+	dst=${BUILDLINK_DIR}/lib/pkgconfig/fixesext.pc; \
+	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
+	if ${TEST} -f $${src}; then \
+		${LN} -sf $${src} $${dst}; \
+	fi
