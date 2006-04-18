@@ -1,0 +1,14 @@
+$NetBSD: patch-za,v 1.1.2.1 2006/04/18 23:25:03 salo Exp $
+
+--- plugins/digestmd5.c.orig	2004-07-29 15:21:57.000000000 -0400
++++ plugins/digestmd5.c
+@@ -2242,7 +2242,8 @@ static int digestmd5_server_mech_step2(s
+     }
+ 
+     /* Sanity check the parameters */
+-    if (strcmp(realm, text->realm) != 0) {
++    if (((realm != NULL) && (strcmp(realm, text->realm) != 0)) &&
++	(text->realm[0] != 0)) {
+ 	SETERROR(sparams->utils,
+ 		 "realm changed: authentication aborted");
+ 	result = SASL_BADAUTH;
