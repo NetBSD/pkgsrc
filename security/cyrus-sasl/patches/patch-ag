@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.4 2006/04/13 21:32:40 wiz Exp $
+$NetBSD: patch-ag,v 1.5 2006/04/18 17:41:30 jlam Exp $
 
---- plugins/Makefile.in.orig	Fri Jul  2 15:40:16 2004
+--- plugins/Makefile.in.orig	2005-05-15 01:58:39.000000000 -0400
 +++ plugins/Makefile.in
-@@ -125,7 +125,7 @@ JAVA_TRUE = @JAVA_TRUE@
+@@ -126,7 +126,7 @@ JAVA_TRUE = @JAVA_TRUE@
  LDFLAGS = @LDFLAGS@
  LIBOBJS = @LIBOBJS@
  LIBS = @LIBS@

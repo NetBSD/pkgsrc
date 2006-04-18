@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/13 21:32:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/04/18 17:41:30 jlam Exp $
 include/sasl/hmac-md5.h
 include/sasl/md5.h
 include/sasl/md5global.h
@@ -57,23 +57,23 @@ sbin/saslpasswd2
 share/doc/cyrus-sasl/advanced.html
 share/doc/cyrus-sasl/appconvert.html
 share/doc/cyrus-sasl/components.html
-share/doc/cyrus-sasl/draft-burdis-cat-srp-sasl-08.txt
-share/doc/cyrus-sasl/draft-ietf-sasl-anon-02.txt
-share/doc/cyrus-sasl/draft-ietf-sasl-crammd5-01.txt
-share/doc/cyrus-sasl/draft-ietf-sasl-gssapi-00.txt
-share/doc/cyrus-sasl/draft-ietf-sasl-plain-03.txt
-share/doc/cyrus-sasl/draft-ietf-sasl-rfc2222bis-03.txt
-share/doc/cyrus-sasl/draft-ietf-sasl-rfc2831bis-02.txt
-share/doc/cyrus-sasl/draft-ietf-sasl-saslprep-04.txt
-share/doc/cyrus-sasl/draft-murchison-sasl-login-00.txt
-share/doc/cyrus-sasl/draft-newman-sasl-c-api-01.txt
+share/doc/cyrus-sasl/draft-burdis-cat-srp-sasl-xx.txt
+share/doc/cyrus-sasl/draft-ietf-sasl-anon-xx.txt
+share/doc/cyrus-sasl/draft-ietf-sasl-crammd5-xx.txt
+share/doc/cyrus-sasl/draft-ietf-sasl-gssapi-xx.txt
+share/doc/cyrus-sasl/draft-ietf-sasl-plain-xx.txt
+share/doc/cyrus-sasl/draft-ietf-sasl-rfc2222bis-xx.txt
+share/doc/cyrus-sasl/draft-ietf-sasl-rfc2831bis-xx.txt
+share/doc/cyrus-sasl/draft-ietf-sasl-saslprep-xx.txt
+share/doc/cyrus-sasl/draft-murchison-sasl-login-xx.txt
+share/doc/cyrus-sasl/draft-newman-sasl-c-api-xx.txt
+share/doc/cyrus-sasl/draft-newman-sasl-passdss-xx.txt
 share/doc/cyrus-sasl/gssapi.html
 share/doc/cyrus-sasl/index.html
 share/doc/cyrus-sasl/install.html
 share/doc/cyrus-sasl/macosx.html
 share/doc/cyrus-sasl/mechanisms.html
 share/doc/cyrus-sasl/options.html
-share/doc/cyrus-sasl/os390.html
 share/doc/cyrus-sasl/plugprog.html
 share/doc/cyrus-sasl/programming.html
 share/doc/cyrus-sasl/readme.html
