@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/04/18 17:06:39 reed Exp $
+
+SHA1 (xproto-7.0.4.tar.bz2) = da7668bf0653ee78db709533cd920f8488f1ca03
+RMD160 (xproto-7.0.4.tar.bz2) = f2134fa216c574ad2f10711cc91f198bcc4eabc6
+Size (xproto-7.0.4.tar.bz2) = 127351 bytes
