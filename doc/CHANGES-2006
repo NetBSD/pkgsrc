@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.15 2006/04/18 20:26:05 tron Exp $
+$NetBSD: CHANGES-2006,v 1.16 2006/04/18 20:55:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2196,3 +2196,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added x11/compositeproto version 0.3 [reed 2006-04-18]
 	Updated wm/wmdrawer to 0.10.5nb3 [wiz 2006-04-18]
 	Updated graphics/gimp to 2.2.11nb2 [tron 2006-04-18]
+	Updated textproc/docbook-xsl to 1.69.1nb6 [minskim 2006-04-18]
