@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/12 10:27:40 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/04/18 19:23:47 reed Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XFIXES_BUILDLINK3_MK:=	${XFIXES_BUILDLINK3_MK}+
@@ -17,6 +17,6 @@ BUILDLINK_PKGSRCDIR.Xfixes?=	../../x11/Xfixes
 .endif	# XFIXES_BUILDLINK3_MK
 
 .include "../../mk/x11.buildlink3.mk"
-.include "../../x11/fixesext/buildlink3.mk"
+.include "../../x11/fixesproto/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
