@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.12 2006/04/18 18:57:41 cube Exp $
+$NetBSD: CHANGES-2006,v 1.13 2006/04/18 19:06:25 reed Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2188,3 +2188,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/cy2-sql to 2.1.21 [jlam 2006-04-18]
 	Updated security/cyrus-saslauthd to 2.1.21 [jlam 2006-04-18]
 	Added mail/p5-MIME-Lite-HTML version 1.21 [cube 2006-04-18]
+	Added x11/xproto version 7.0.4 [reed 2006-04-18]
+	Added x11/randrproto version 1.1.2 [reed 2006-04-18]
+	Added x11/fixesproto version 3.0.2 [reed 2006-04-18]
+	Added x11/xextproto version 7.0.2 [reed 2006-04-18]
+	Added x11/renderproto version 0.9.2 [reed 2006-04-18]
+	Added x11/compositeproto version 0.3 [reed 2006-04-18]
