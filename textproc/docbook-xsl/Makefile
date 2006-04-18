@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2006/03/21 06:00:49 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2006/04/18 20:53:34 minskim Exp $
 #
 
 DISTNAME=	docbook-xsl-1.69.1
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 EXTRACT_SUFX=	.tar.bz2
@@ -38,6 +38,7 @@ do-install:
 	    ${ECHO} "cd ${WRKSRC} && ${PAX} -rw -pp -pm $$d ${XSLDIR}/"; \
 	    cd ${WRKSRC} && ${PAX} -rw -pp -pm $$d ${XSLDIR}/; \
 	done
+	${RM} -f ${XSLDIR}/common/ko.xml.orig
 	${RM} -f ${XSLDIR}/common/pi.xsl.orig
 
 .include "../../textproc/xmlcatmgr/catalogs.mk"
