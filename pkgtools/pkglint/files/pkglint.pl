@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.558 2006/04/14 12:27:00 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.559 2006/04/18 00:01:48 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1700,6 +1700,7 @@ sub load_tool_names() {
 	$vartools = {};
 	$predefined_vartools = {};
 	$varname_to_toolname = {};
+	# TODO: get the list of additional tool files from bsd.tools.mk
 	foreach my $basename (qw(autoconf automake defaults gettext ldconfig make replace rpcgen texinfo)) {
 		my $fname = "${current_dir}/${pkgsrcdir}/mk/tools/${basename}.mk";
 		my $lines = load_lines($fname, true);
@@ -4711,9 +4712,6 @@ sub checkfile_PLIST($) {
 
 			} elsif ($text =~ qr"^share/doc/html/") {
 				$opt_warn_plist_depr and $line->log_warning("Use of \"share/doc/html\" is deprecated. Use \"share/doc/\${PKGBASE}\" instead.");
-
-			} elsif ($text =~ qr"^share/locale/") {
-				$line->log_warning("Use of \"share/locale\" is deprecated.  Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
 
 			} elsif ($text =~ qr"^share/man/") {
 				$line->log_warning("Man pages should be installed into man/, not share/man/.");
