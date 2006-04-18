@@ -5,7 +5,7 @@ NNAAMMEE
      installed packages
 
 SSYYNNOOPPSSIISS
-     aauuddiitt--ppaacckkaaggeess [--ddvv] [--ii _i_g_n_o_r_e_-_l_i_s_t] [--KK _p_k_g___d_b_d_i_r] [--pp _p_a_c_k_a_g_e]
+     aauuddiitt--ppaacckkaaggeess [--ddvv] [--KK _p_k_g___d_b_d_i_r] [--pp _p_a_c_k_a_g_e]
      ddoowwnnllooaadd--vvuullnneerraabbiilliittyy--lliisstt
 
 DDEESSCCRRIIPPTTIIOONN
@@ -20,13 +20,6 @@ DDEESSCCRRIIPPTTIIOONN
      --dd            aauuddiitt--ppaacckkaaggeess will attempt to download the vulnerabilities
                    file before scanning the installed packages for vulnerabil-
                    ities.
-
-     --ii [vvuullnniidd::_v_u_l_n_i_d|ppkkggppaatt::_p_a_t_t_e_r_n]
-                   Specify a list of vulnerabilities or packages to ignore.
-                   Packages can be specified using package wildcards (see
-                   pkg_info(1)).  Vulnerabilities can be specified with the
-                   form vvuullnniidd::_v_u_l_n_i_d.  Vulnerability ids are only present in
-                   file format 1.0.1 or higher.
 
      --KK _p_k_g___d_b_d_i_r  Use package database directory _p_k_g___d_b_d_i_r.
 
@@ -44,7 +37,7 @@ DDEESSCCRRIIPPTTIIOONN
      Each line lists the package and vulnerable versions, the type of exploit,
      and an Internet address for further information:
 
-     <package pattern> <vulnid>,<type> <url>
+     <package pattern> <type> <url>
 
      The type of exploit can be any text, although some common types of
      exploits listed are:
@@ -157,4 +150,4 @@ HHIISSTTOORRYY
      September 19, 2000.  The original idea came from Roland Dowdeswell and
      Bill Sommerfeld.
 
-NetBSD 3.0                     November 16, 2005                    NetBSD 3.0
+NetBSD 3.0                      April 15, 2006                      NetBSD 3.0
