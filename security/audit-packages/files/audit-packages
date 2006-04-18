@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: audit-packages,v 1.26 2005/11/21 10:39:50 agc Exp $
+# $NetBSD: audit-packages,v 1.26.4.1 2006/04/18 22:52:44 snj Exp $
 #
 # Copyright (c) 2000-2003 Alistair Crooks.  All rights reserved.
 #
@@ -41,19 +41,15 @@ ERR_PKGINSTALL="Please upgrade pkgtools/pkg_install to the newest version."
 
 FORMAT_MAJOR=1
 FORMAT_MINOR=0
-FORMAT_TEENY=1
+FORMAT_TEENY=0
 PKG_INSTALL_REQUIRED=20050530
 
 usage() {
 	argv0="${1##*/}"
 	cat <<EOF
 $2
-Usage: $argv0 [-dv] [-i vulnid:id|pkgpat:pattern]
-		     [-K pkg_dbdir] [-p package]
+Usage: $argv0 [-dv] [-K pkg_dbdir] [-p package]
     -d : Run download-vulnerability-list before anything else.
-    -i : Ignore packages matching one of the specified vulnerabilities,
-          or matching one of the provided patterns.
-          Repeated -i options add to the ignore list.
     -K : Use pkg_dbdir as PKG_DBDIR.
     -p : Check a specific package for vulnerabilities.
     -v : Verbose mode
@@ -71,18 +67,11 @@ vuls="${PKGVULNDIR}/pkg-vulnerabilities"
 
 download=no
 verbose=no
-ignore_list=
-pkg_patterns=
-vulnids=
 one_package=
 while [ $# -gt 0 ]; do
 	case "$1" in
 	-d)	download=yes ;;
 	-v)	verbose=yes ;;
-	-i)
-		ignore_list="$ignore_list $2"
-		shift
-		;;
 	-p)
 		one_package="$2"
 		shift
@@ -105,18 +94,6 @@ yes)	case "$settingsmsg" in
 	esac
 	;;
 esac
-
-for ign in $ignore_list ; do
-	case "$ign" in
-	pkgpat:*)
-		ign="${ign#*:}"
-		pkg_patterns="$pkg_patterns $ign"
-		;;
-	*)
-		vulnids="$vulnids $ign"
-		;;
-	esac
-done
 
 # try to download vulnerability list, as requested
 # the integrity of the list is checked below
@@ -215,22 +192,6 @@ while read pat type url; do
 	\#*|'') continue;;
 	esac
 
-	vulnid=unknown
-	if [ $file_teeny -gt 0 ] ; then
-		vulnid=${type%%,*}
-		type=${type#*,}
-
-		skipit=0
-		for ign in $vulnids; do
-			if [ "$ign" = "$vulnid" ] ; then
-				skipit=1
-			fi
-		done
-		if [ $skipit -eq 1 ] ; then
-			continue;
-		fi
-	fi
-
 	if [ -z "$one_package" ] ; then
 		vulnpkgs=`@PKG_TOOLS_BIN@/pkg_info -e "$pat"`
 	else
@@ -240,19 +201,8 @@ while read pat type url; do
 		fi
 	fi
 	for pkg in $vulnpkgs ; do
-		skipit=0
-		for ign in $pkg_patterns; do
-			ign="${ign#*:}"
-			if @PKG_TOOLS_BIN@/pkg_admin pmatch "${ign}" "$pkg" ; then
-				skipit=1
-				break
-			fi
-		done
-		if [ $skipit -eq 1 ] ; then
-			continue
-		fi
 		echo "Package $pkg has a" \
-			"$type vulnerability (vulnid:$vulnid), see $url"
+			"$type vulnerability, see $url"
 	done
 done < "$vuls"
 
