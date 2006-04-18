@@ -1,11 +1,15 @@
 #!/bin/sh
 #
-# $NetBSD: block-file-nbsd,v 1.2 2005/11/08 00:47:35 jlam Exp $
+# $NetBSD: block-file-nbsd,v 1.3 2006/04/18 15:29:36 jlam Exp $
 #
-# Usage: block-file bind file
+# Usage: block-file bind file [flags]
 #
 #    The file argument is the path to the file to which a vnd(4) device
-#    will be bound.
+#    will be bound.  The flags argument is an optional block of flags
+#    to modify how the file is bound to the vnd(4) device.  The valid
+#    flags are:
+#
+#	r	bind the file as read-only
 #
 # Usage: block-file unbind node
 #
@@ -15,6 +19,7 @@
 case "$1" in
 bind)
 	FILE="$2"
+	FLAGS="$3"
 
 	# Store the list of available vnd(4) devices in ``available_disks'',
 	# and mark them as ``free''.
@@ -33,11 +38,17 @@ bind)
 		esac
 	done
 
+	vnconfig_flags=
+	case "$FLAGS" in
+	*r*)	vnconfig_flags="$vnconfig_flags -r" ;;
+	esac
+
 	# Configure the first free vnd(4) device.
 	for disk in $available_disks; do
 		eval status=\$$disk
+		vnconfig_cmd="vnconfig $vnconfig_flags /dev/${disk}d $FILE"
 		if [ "$status" = "free" ] && \
-		   vnconfig /dev/${disk}d $FILE >/dev/null; then
+		   eval $vnconfig_cmd >/dev/null; then
 			echo /dev/${disk}d
 			exit 0
 		fi
