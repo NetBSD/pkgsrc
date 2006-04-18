@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.1 2006/04/18 00:25:04 jlam Exp $
+$NetBSD: CHANGES-2006,v 1.2 2006/04/18 06:58:39 agc Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2165,3 +2165,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed print/texfamily [wiz 2006-04-17]
 	Removed print/texfamily-share [wiz 2006-04-17]
 	Updated print/acroread7 to 7.0.5nb1 [wiz 2006-04-17]
+	Updated devel/netbsd-iscsi to 20060417 [agc 2006-04-18]
