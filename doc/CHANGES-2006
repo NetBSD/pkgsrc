@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.10 2006/04/18 15:21:44 salo Exp $
+$NetBSD: CHANGES-2006,v 1.11 2006/04/18 17:44:29 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2176,3 +2176,14 @@ Changes to the packages collection and infrastructure in 2006:
 	Added emulators/suse100_slang version 10.0 [salo 2006-04-18]
 	Added emulators/suse100_gdk-pixbuf version 10.0 [salo 2006-04-18]
 	Added emulators/suse100_glx version 10.0 [salo 2006-04-18]
+	Updated security/cyrus-sasl to 2.1.21 [jlam 2006-04-18]
+	Updated security/cy2-anonymous to 2.1.21 [jlam 2006-04-18]
+	Updated security/cy2-crammd5 to 2.1.21 [jlam 2006-04-18]
+	Updated security/cy2-digestmd5 to 2.1.21 [jlam 2006-04-18]
+	Updated security/cy2-gssapi to 2.1.21 [jlam 2006-04-18]
+	Updated security/cy2-login to 2.1.21 [jlam 2006-04-18]
+	Updated security/cy2-ntlm to 2.1.21 [jlam 2006-04-18]
+	Updated security/cy2-otp to 2.1.21 [jlam 2006-04-18]
+	Updated security/cy2-plain to 2.1.21 [jlam 2006-04-18]
+	Updated security/cy2-sql to 2.1.21 [jlam 2006-04-18]
+	Updated security/cyrus-saslauthd to 2.1.21 [jlam 2006-04-18]
