@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2006/04/18 19:23:47 reed Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/18 19:46:17 reed Exp $
 #
 
 DISTNAME=	xcompmgr-1.1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://freedesktop.org/xapps/release/
 
