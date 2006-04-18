@@ -1,22 +1,13 @@
-$NetBSD: patch-af,v 1.5 2006/04/07 00:44:53 minskim Exp $
+$NetBSD: patch-af,v 1.6 2006/04/18 23:21:18 reed Exp $
 
---- lib/Makefile.in.orig	2006-01-16 14:51:40.000000000 +0000
-+++ lib/Makefile.in
-@@ -244,7 +244,7 @@ TEMPL = templates/*.lyx
- TEXSUPPORT = tex/*.cls tex/*.sty
- UI = ui/*.ui
- LIBINSTFILES = $(BIND) $(CLIPART) $(DOCINST) $(EXAMPLES) $(HELP) $(IMAGES) \
--	$(KBD) $(LAYOUT) $(TEMPL) $(TEXSUPPORT) $(UI)
-+	$(KBD) $(LAYOUT) $(TEMPL) $(UI)
+--- lib/Makefile.in.orig	2006-04-11 17:45:48.000000000 -0700
++++ lib/Makefile.in	2006-04-11 17:49:01.000000000 -0700
+@@ -1185,7 +1185,7 @@
+ 	templates/ijmpd.lyx \
+ 	templates/agu_article.lyx
  
- LIBDISTFILES = $(BIND) $(CLIPART) $(DOCDIST) $(EXAMPLES) $(HELP) $(IMAGES) \
- 	$(KBD) $(LAYOUT) $(TEMPL) $(UI) $(TEXSUPPORT) $(LYXSCRIPTS)
-@@ -254,7 +254,7 @@ pkgdata_DATA = lyxrc.example CREDITS chk
- 	       encodings languages symbols
- 
- LYXLIBDIRS = bind clipart doc examples help images images/math kbd layouts lyx2lyx scripts \
--	     templates tex ui
-+	     templates ui
- 
- EXTRA_DIST = CREDITS chkconfig.ltx lyxrc.example \
- 	external_templates bind clipart doc examples help images \
+-texdir = $(pkgdatadir)/tex
++texdir = ${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx
+ dist_tex_DATA = \
+ 	tex/broadway.cls \
+ 	tex/cv.cls \
