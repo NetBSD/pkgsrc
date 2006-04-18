@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.23 2006/04/17 21:59:52 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.24 2006/04/18 22:52:55 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -49,3 +49,5 @@ Pullup ticket 1378 - requested by ghen
 security update for firefox
 Pullup ticket 1399 - requested by xtraeme
 security update for mysql5
+Pullup ticket 1389 - requested by salo
+sync audit-packages with HEAD
