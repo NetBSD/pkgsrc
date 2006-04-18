@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.559 2006/04/18 00:01:48 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.560 2006/04/18 00:35:18 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4790,8 +4790,11 @@ sub checkfile($) {
 	} elsif ($basename =~ qr"^MESSAGE") {
 		$opt_check_MESSAGE and checkfile_MESSAGE($fname);
 
-	} elsif ($basename =~ qr"^patch-[A-Za-z0-9]*$" || $fname =~ qr"(?:^|/)patches/manual-[^/]*$") {
+	} elsif ($basename =~ qr"^patch-[A-Za-z0-9]*$") {
 		$opt_check_patches and checkfile_patch($fname);
+
+	} elsif ($fname =~ qr"(?:^|/)patches/manual-[^/]*$") {
+		$opt_debug and log_info($fname, NO_LINE_NUMBER, "Not checked.");
 
 	} elsif ($fname =~ qr"(?:^|/)patches/[^/]*$") {
 		log_warning($fname, NO_LINE_NUMBER, "Patch files should be named \"patch-\", followed by letters and digits only.");
