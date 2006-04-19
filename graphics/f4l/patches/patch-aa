@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/11/20 16:58:12 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2006/04/19 12:46:21 adam Exp $
 
---- Makefile.orig	2005-11-20 17:22:42.000000000 +0100
-+++ Makefile	2005-11-20 17:23:10.000000000 +0100
+--- Makefile.orig	2005-11-13 15:34:49.000000000 +0100
++++ Makefile
 @@ -7,10 +7,10 @@
  #############################################################################
  
@@ -15,3 +15,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/11/20 16:58:12 xtraeme Exp $
  INSTALL_FILE= 
  INSTALL_DIR = 
  SUBTARGETS =	 \
+@@ -40,7 +40,7 @@ src/$(MAKEFILE): 
+ sub-src: src/$(MAKEFILE) FORCE
+ 	cd src && $(MAKE) -f $(MAKEFILE)
+ 
+-Makefile: f4l.pro  /usr/share/qt3/mkspecs/default/qmake.conf 
++Makefile: f4l.pro
+ 	$(QMAKE) -o Makefile f4l.pro
+ qmake: qmake_all
+ 	@$(QMAKE) -o Makefile f4l.pro
