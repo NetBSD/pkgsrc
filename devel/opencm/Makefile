@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2006/03/20 18:15:38 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2006/04/19 20:50:46 joerg Exp $
 #
 
 DISTNAME=	${OPENCM_VERSION}-2-src
 PKGNAME=	${OPENCM_VERSION:C/alpha/rc/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.opencm.org/releases/
 EXTRACT_SUFX=	.tgz
@@ -16,6 +16,7 @@ WRKSRC=		${WRKDIR}/${OPENCM_VERSION}/base
 USE_TOOLS+=	gmake gzip makeinfo
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	KRB5_BUILDLINK=${KRB5BASE:Q}
 
 OPENCM_VERSION=	opencm-0.1.2alpha8
 
@@ -35,5 +36,6 @@ post-install:
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/krb5.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
