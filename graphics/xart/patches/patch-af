@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2001/08/03 09:43:18 wiz Exp $
+$NetBSD: patch-af,v 1.2 2006/04/19 17:04:31 wiz Exp $
 
---- rw/readPNG.c.orig	Thu Aug 29 07:24:48 1996
+--- rw/readPNG.c.orig	1996-08-29 07:24:48.000000000 +0200
 +++ rw/readPNG.c
-@@ -46,8 +46,8 @@
+@@ -46,8 +46,8 @@ Image *
  ReadPNG(char *file)
  {
      FILE          *fp;
@@ -13,7 +13,7 @@ $NetBSD: patch-af,v 1.1 2001/08/03 09:43:18 wiz Exp $
      int           i, hasAlpha=FALSE;
      int           width, height, level, bit_depth, npasses;
      Image         *image = NULL;
-@@ -59,14 +59,15 @@
+@@ -59,14 +59,15 @@ ReadPNG(char *file)
          return NULL;
      }
  
@@ -31,16 +31,17 @@ $NetBSD: patch-af,v 1.1 2001/08/03 09:43:18 wiz Exp $
      if (!info_ptr) {
          RWSetMsg("Error allocating PNG info_ptr memory");
          free(png_ptr);
-@@ -74,17 +75,13 @@
+@@ -74,17 +75,13 @@ ReadPNG(char *file)
          return NULL;
      }
  
 -    if (setjmp(png_ptr->jmpbuf)) {
 +    if (setjmp(png_jmpbuf(png_ptr))) {
          RWSetMsg("Error setting longjmp error handler");
-         png_read_destroy(png_ptr, info_ptr, (png_info *)0);
+-        png_read_destroy(png_ptr, info_ptr, (png_info *)0);
 -        free(png_ptr);
 -        free(info_ptr);
++	png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
          fclose(fp);
          return NULL;
      }
@@ -50,3 +51,30 @@ $NetBSD: patch-af,v 1.1 2001/08/03 09:43:18 wiz Exp $
      png_init_io(png_ptr, fp);
      png_read_info(png_ptr, info_ptr);
  
+@@ -183,7 +180,7 @@ ReadPNG(char *file)
+               info_ptr->color_type);
+             fflush(stderr);
+             RWSetMsg("Unknown PNG image type");
+-            png_read_destroy(png_ptr, info_ptr, (png_infop)NULL);
++	    png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+             free(png_ptr);
+             free(info_ptr);
+             fclose(fp);
+@@ -217,7 +214,7 @@ ReadPNG(char *file)
+             fprintf(stderr, "ReadPNG error:  unable to malloc png_data\n");
+             fflush(stderr);
+             ImageDelete(image);
+-            png_read_destroy(png_ptr, info_ptr, (png_infop)NULL);
++	    png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+             free(png_ptr);
+             free(info_ptr);
+             fclose(fp);
+@@ -271,7 +268,7 @@ ReadPNG(char *file)
+      */
+ 
+     png_read_end(png_ptr, info_ptr);
+-    png_read_destroy(png_ptr, info_ptr, (png_infop)NULL);
++    png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
+     free(png_ptr);
+     free(info_ptr);
+     fclose(fp);
