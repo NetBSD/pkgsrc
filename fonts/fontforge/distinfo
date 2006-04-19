@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2006/04/16 20:10:29 adam Exp $
+$NetBSD: distinfo,v 1.23 2006/04/19 19:43:17 rillig Exp $
 
 SHA1 (fontforge_full-20060413.tar.bz2) = b99341f2f1f02dbfd9182bd38afb805125e36ea2
 RMD160 (fontforge_full-20060413.tar.bz2) = f9d098e9135f0074beac2ea919177f1dbb985d0e
@@ -11,3 +11,4 @@ SHA1 (patch-ae) = 5e10c47b52b7e9aaeb3dcc36337775cd66d4934b
 SHA1 (patch-af) = b417bde49041767f5959519d738096b1f5976b07
 SHA1 (patch-ag) = 7a54cd574ff723037e10161526547dae9daf3573
 SHA1 (patch-ah) = 328b157281c7face7692e97fa4782b104b4b474f
+SHA1 (patch-ai) = 95f44952e26529c6078bd85555ecbbdbf96dd271
