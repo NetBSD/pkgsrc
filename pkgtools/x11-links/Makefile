@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.76 2006/01/19 01:05:24 reed Exp $
+# $NetBSD: Makefile,v 1.77 2006/04/19 12:30:25 reed Exp $
 #
 # NOTE:	If you update this package, then you'll likely need to also update
 #	the x11-links dependency in buildlink3.mk to the correct version,
 #	usually the most recent.
 
-DISTNAME=	x11-links-0.28
+DISTNAME=	x11-links-0.29
 CATEGORIES=	pkgtools x11
 MASTER_SITES=	# empty
 DISTFILES=	# empty
