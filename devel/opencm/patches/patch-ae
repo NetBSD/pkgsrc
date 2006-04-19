@@ -1,7 +1,16 @@
-$NetBSD: patch-ae,v 1.6 2004/12/13 21:14:12 minskim Exp $
+$NetBSD: patch-ae,v 1.7 2006/04/19 20:50:47 joerg Exp $
 
---- configure.orig	2004-10-24 20:09:36.000000000 -0500
+--- configure.orig	2004-10-25 01:09:36.000000000 +0000
 +++ configure
+@@ -4920,7 +4920,7 @@ if test "${vl_cv_lib_kerberos+set}" = se
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+ 
+-    krb5_dirs="/usr/local/kerberos /usr/kerberos /usr"
++    krb5_dirs="${KRB5_BUILDLINK}"
+     if test -n "$try_krb5dir"; then
+       krb5_dirs="$try_krb5dir $krb5_dirs"
+     fi
 @@ -4928,7 +4928,7 @@ else
              if test ! -d "$dir" ; then
          continue;
