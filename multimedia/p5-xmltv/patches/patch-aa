@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/10/20 18:56:28 adrianp Exp $
+$NetBSD: patch-aa,v 1.2 2006/04/19 22:02:46 adrianp Exp $
 
---- Makefile.PL.orig	2004-09-27 22:10:51.000000000 +0100
-+++ Makefile.PL	2004-10-20 19:42:34.000000000 +0100
-@@ -473,7 +473,7 @@
+--- Makefile.PL.orig	2006-01-08 12:53:24.000000000 +0000
++++ Makefile.PL	2006-04-19 21:53:23.000000000 +0000
+@@ -544,7 +544,7 @@
  		      "\n");
      }
      print STDERR "\n";
@@ -11,3 +11,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/10/20 18:56:28 adrianp Exp $
  	# Need to set {install} for each component by prompting.
  	foreach my $info (@opt_components) {
  	    my $missing = $info->{missing};
+@@ -1019,7 +1019,7 @@
+ 	    die "target $name seen twice" if defined $r{$name};
+ 	    $r{$name} = $curr_target = [];
+ 	}
+-	elsif (/^\t/ and defined $curr_target) {
++	elsif (/^\s+/ and defined $curr_target) {
+ 	    # Commands for the target.
+ 	    push @$curr_target, $_;
+ 	}
