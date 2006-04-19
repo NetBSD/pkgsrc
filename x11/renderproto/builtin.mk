@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1.1.1 2006/04/18 17:16:06 reed Exp $
+# $NetBSD: builtin.mk,v 1.2 2006/04/19 12:25:15 reed Exp $
 
 BUILTIN_PKG:=	renderproto
 
@@ -83,5 +83,21 @@ BUILDLINK_PREFIX.renderproto=	${X11BASE}
 .    include "../../mk/x11.buildlink3.mk"
 .    include "../../mk/x11.builtin.mk"
 .  endif
+
+.endif	# CHECK_BUILTIN.renderproto
+
+CHECK_BUILTIN.renderproto?=	no
+.if !empty(CHECK_BUILTIN.renderproto:M[nN][oO])
+
+# this is temporary and can be removed once not used
+BUILDLINK_TARGETS+=	render-symlink-pc
+
+render-symlink-pc:
+	src=${BUILDLINK_PREFIX.renderproto}/lib/pkgconfig/renderproto.pc \
+	dst=${BUILDLINK_DIR}/lib/pkgconfig/render.pc; \
+	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
+	if ${TEST} -f $${src}; then \
+		${LN} -sf $${src} $${dst}; \
+	fi
 
 .endif	# CHECK_BUILTIN.renderproto
