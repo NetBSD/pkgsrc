@@ -1,4 +1,4 @@
-# $NetBSD: xorg.mk,v 1.2 2005/10/16 08:57:30 seb Exp $
+# $NetBSD: xorg.mk,v 1.3 2006/04/19 12:30:25 reed Exp $
 #
 # This is for X.org, but use "xfree" files also.
 
@@ -14,15 +14,16 @@ FILES_LIST=	${FILESDIR}/xorg
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../x11/compositeext/buildlink3.mk"
-.include "../../x11/fixesext/buildlink3.mk"
-.include "../../x11/xextensions/buildlink3.mk"
+.include "../../x11/compositeproto/buildlink3.mk"
+.include "../../x11/fixesproto/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/Xcomposite/buildlink3.mk"
 .include "../../x11/Xfixes/buildlink3.mk"
 .include "../../x11/Xrandr/buildlink3.mk"
 .include "../../x11/Xrender/buildlink3.mk"
-.include "../../x11/renderext/buildlink3.mk"
-.include "../../x11/randrext/buildlink3.mk"
+.include "../../x11/renderproto/buildlink3.mk"
+.include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/xcursor/buildlink3.mk"
 
 # XXX  what is ${X11_MODULES} ?
