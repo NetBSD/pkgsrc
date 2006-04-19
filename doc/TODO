@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4898 2006/04/18 17:46:01 jlam Exp $
+$NetBSD: TODO,v 1.4899 2006/04/19 16:58:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -432,6 +432,7 @@ Suggested package updates
 	o dc_gui2-0.80
 	o dctc-0.85.9
 	o defendguin-0.0.11
+	o dejavu-ttf-2.5
 	o delegate-9.1.1
 	o denemo-0.7.5
 	o deskbar-applet-2.14.1.1
@@ -1179,7 +1180,7 @@ Suggested package updates
 	o totd-1.5.1
 	o tpasm-1.2
 	o tpb-0.6.4
-	o trac-0.9.4
+	o trac-0.9.5
 	o trio-1.4
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
