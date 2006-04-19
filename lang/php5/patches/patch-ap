@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1.2.2 2006/04/19 00:12:27 salo Exp $
+
+--- ext/standard/html.c.orig	2006-01-01 13:50:14.000000000 +0100
++++ ext/standard/html.c
+@@ -884,7 +884,7 @@ PHPAPI char *php_unescape_html_entities(
+ 	unsigned char replacement[15];
+ 	int replacement_len;
+ 
+-	ret = estrdup(old);
++	ret = estrndup(old, oldlen);
+ 	retlen = oldlen;
+ 	if (!retlen) {
+ 		goto empty_source;
