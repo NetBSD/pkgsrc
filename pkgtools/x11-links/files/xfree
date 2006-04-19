@@ -1,4 +1,4 @@
-# $NetBSD: xfree,v 1.11 2006/01/10 16:56:43 christos Exp $
+# $NetBSD: xfree,v 1.12 2006/04/19 12:33:28 reed Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported XFree distributions, minus the set of files representing
@@ -473,6 +473,7 @@ lib@ABI@/libXaw.so.6
 lib@ABI@/libXaw.so.6.1
 lib@ABI@/libXaw.so.7
 lib@ABI@/libXaw.so.7.0
+lib@ABI@/libXaw.so.7.1
 lib@ABI@/libXaw.dylib
 lib@ABI@/libXaw.6.dylib
 lib@ABI@/libXaw.6.1.dylib
@@ -561,6 +562,7 @@ lib@ABI@/libXt.so.6.0
 lib@ABI@/libXt.dylib
 lib@ABI@/libXt.6.dylib
 lib@ABI@/libXt.6.0.dylib
+lib@ABI@/libXt.so.6.1
 lib@ABI@/libXtst.a
 lib@ABI@/libXtst.so
 lib@ABI@/libXtst.so.6
