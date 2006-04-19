@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2006/04/17 13:46:45 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2006/04/19 13:13:05 tonio Exp $
 
 DISTNAME=		advi-1.6.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		print
 MASTER_SITES=		ftp://ftp.inria.fr/INRIA/Projects/cristal/advi/
 EXTRACT_SUFX=           .tgz
@@ -10,26 +10,37 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pauillac.inria.fr/advi/
 COMMENT=		Active-DVI Presenter
 
-BROKEN_IN=		pkgsrc-2005Q4
-
 BUILD_DEPENDS+=		ocaml>=3.04:../../lang/ocaml
 
 TEX_ACCEPTED=		teTeX1 teTeX2 teTeX3
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake gs:run
+CONFIGURE_ARGS+=	--libdir=${PKG_LOCALTEXMFPREFIX:Q}
+
+# subst.mk ignores the files it thinks are not text files
+_SUBST_IS_TEXT_FILE=	true
+
+SUBST_CLASSES+=		gspath
+SUBST_MESSAGE.gspath=	Fixing gs pathname in binary.
+SUBST_STAGE.gspath=	pre-configure
+SUBST_FILES.gspath=	config.ml.in
+SUBST_SED.gspath=	-e "s,@PATH_GS@,${PREFIX}/bin/gs,g"
+
+SUBST_CLASSES+=		conf
+SUBST_MESSAGE.paths=	Fixing config file path
+SUBST_STAGE.paths=	post-configure
+SUBST_FILES.paths=	userfile.ml
+SUBST_SED.paths=	-e "s:/etc/advirc:${PKG_SYSCONFDIR}/advirc:g"
+
+USE_DIRS+=      texmf-1.0
+.include "../../print/teTeX/module.mk"
 
 post-extract:
 	@${CP} ${WRKSRC}/tex/*.eps ${WRKSRC}/doc
 	@${CP} ${WRKSRC}/doc/eng.htm ${WRKSRC}/doc/index.html
 	@${MKDIR} ${WRKSRC}/doc.orig
 	@${CP} ${WRKSRC}/doc/*.dvi ${WRKSRC}/doc.orig
-
-post-configure:
-	@for f in ${WRKSRC}/userfile.ml; do				\
-		${SED} -e 's:/etc/advirc:${PKG_SYSCONFDIR}/advirc:g'	\
-		$$f >> $$f.tmp && ${MV} $$f.tmp $$f;			\
-	done
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/advi
@@ -52,5 +63,4 @@ post-install:
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/lablgtk/buildlink3.mk"
 .include "../../x11/ocaml-graphics/buildlink3.mk"
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
