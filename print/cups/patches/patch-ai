@@ -1,0 +1,22 @@
+$NetBSD: patch-ai,v 1.14 2006/04/19 17:01:34 wiz Exp $
+
+--- filter/image-png.c.orig	2005-01-03 20:29:57.000000000 +0100
++++ filter/image-png.c
+@@ -82,7 +82,7 @@ ImageReadPNG(image_t    *img,		/* IO - I
+ 
+   png_read_info(pp, info);
+ 
+   fprintf(stderr, "DEBUG: PNG image: %dx%dx%d, color_type=%x (%s%s%s)\n",
+-          info->width, info->height, info->bit_depth, info->color_type,
++          (int)info->width, (int)info->height, info->bit_depth, info->color_type,
+ 	  (info->color_type & PNG_COLOR_MASK_COLOR) ? "RGB" : "GRAYSCALE",
+ 	  (info->color_type & PNG_COLOR_MASK_ALPHA) ? "+ALPHA" : "",
+@@ -252,7 +252,7 @@ ImageReadPNG(image_t    *img,		/* IO - I
+     }
+ 
+   png_read_end(pp, info);
+-  png_read_destroy(pp, info, NULL);
++  png_destroy_read_struct(&pp, &info, NULL);
+ 
+   fclose(fp);
+   free(in);
