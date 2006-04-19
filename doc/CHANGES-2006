@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.21 2006/04/19 19:21:55 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.22 2006/04/19 20:53:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2205,3 +2205,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/xart to 19980415nb9 [wiz 2006-04-19]
 	Updated www/p5-Apache-Test to 1.28 [cube 2006-04-19]
 	Updated www/mMosaic to 3.7.2nb5 [wiz 2006-04-19]
+	Updated graphics/netpbm to 10.33nb2 [wiz 2006-04-19]
