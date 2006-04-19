@@ -1,10 +1,10 @@
-# $NetBSD: builtin.mk,v 1.11 2006/04/06 06:22:56 reed Exp $
+# $NetBSD: builtin.mk,v 1.12 2006/04/19 15:39:06 reed Exp $
 
 BUILTIN_PKG:=	Xcomposite
 
 BUILTIN_FIND_FILES_VAR:=		H_XCOMPOSITE
 BUILTIN_FIND_FILES.H_XCOMPOSITE=	\
-	${X11BASE}/include/X11/extensions/xcomposite.h
+	${X11BASE}/include/X11/extensions/Xcomposite.h
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
