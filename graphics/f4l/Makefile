@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2006/04/17 13:46:31 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.8 2006/04/19 12:46:21 adam Exp $
 
-DISTNAME=	f4l-0.2
-PKGREVISION=	4
+DISTNAME=	f4l-0.2.1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=f4l/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,19 +9,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://f4l.sourceforge.net/
 COMMENT=	Development environment for Macromedia Flash
 
-NO_CONFIGURE=	yes
-
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake
+NO_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
 
 INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/f4l ${PREFIX}/bin
 
+.include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
-# XXX Please verify whether qt3-tools is really needed at run-time.
-# If it is, then remove this comment.  If it is not, then remove
-# this comment and the line below, and bump PKGREVISION.
-BUILDLINK_DEPMETHOD.qt3-tools=	full
 .include "../../mk/bsd.pkg.mk"
