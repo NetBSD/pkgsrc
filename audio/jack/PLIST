@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/12 20:43:27 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/19 15:25:09 joerg Exp $
 bin/jack_bufsize
 bin/jack_connect
 bin/jack_disconnect
@@ -10,6 +10,7 @@ bin/jack_metro
 bin/jack_monitor_client
 bin/jack_showtime
 bin/jack_simple_client
+bin/jack_transport
 bin/jack_unload
 bin/jackd
 include/jack/intclient.h
