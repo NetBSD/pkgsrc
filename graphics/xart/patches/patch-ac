@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2006/02/23 21:24:12 joerg Exp $
+$NetBSD: patch-ac,v 1.7 2006/04/19 17:04:31 wiz Exp $
 
---- Local.config.orig	Wed Apr  1 02:58:05 1998
+--- Local.config.orig	1998-04-01 02:58:05.000000000 +0200
 +++ Local.config
-@@ -62,8 +62,8 @@
+@@ -62,8 +62,8 @@ XCOMM
  #define HaveTIFF
  
  #ifdef HaveTIFF
@@ -13,7 +13,7 @@ $NetBSD: patch-ac,v 1.6 2006/02/23 21:24:12 joerg Exp $
  #endif
  
  XCOMM  If you have the JPEG library, make HaveJPEG defined
-@@ -73,8 +73,8 @@
+@@ -73,8 +73,8 @@ XCOMM    includes are correct.
  #define HaveJPEG
  
  #ifdef HaveJPEG
@@ -24,18 +24,18 @@ $NetBSD: patch-ac,v 1.6 2006/02/23 21:24:12 joerg Exp $
  #endif
  
  XCOMM  If you have the PNG library, make HavePNG defined
-@@ -84,8 +84,8 @@
+@@ -84,8 +84,8 @@ XCOMM    includes are correct.
  #define HavePNG
  
  #ifdef HavePNG
 -PNG_LIB     = -L/usr/local/lib -lpng -lz
 -PNG_INCLUDE = -I/usr/local/include/png
-+PNG_LIB     = -Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -lpng -lz
++PNG_LIB     = -Wl,-R${LOCALBASE}/lib -L${LOCALBASE}/lib -lpng12 -lz -lm
 +PNG_INCLUDE = -I${LOCALBASE}/include
  #endif
  
  XCOMM  If you are running SunOS and get an error with the following undefined
-@@ -102,11 +102,11 @@
+@@ -102,11 +102,11 @@ XCOMM
  XCOMM  You must have the XPM library.
  XCOMM  Make sure the path name to the library is correct.
  
@@ -49,7 +49,7 @@ $NetBSD: patch-ac,v 1.6 2006/02/23 21:24:12 joerg Exp $
  
  
  DEPENDFLAGS = -I./bitmaps
-@@ -114,10 +114,10 @@
+@@ -114,10 +114,10 @@ DEPENDFLAGS = -I./bitmaps
  XCOMM Uncomment these lines and tailor to taste, if you don't like
  XCOMM the default paths and man page extension.
  XCOMM
@@ -61,7 +61,7 @@ $NetBSD: patch-ac,v 1.6 2006/02/23 21:24:12 joerg Exp $
  
  XCOMM Add '-g' here if you want to include debugging information.
  XCOMM Also add any optimizer flags etc. that you want.
-@@ -138,9 +138,9 @@
+@@ -138,9 +138,9 @@ XCOMM This should take care of everythin
  #if defined(FreeBSDArchitecture) || defined(NetBSDArchitecture) ||  \
      defined(BSD386Architecture)
  ARCH_DEFINES = -DHAVE_PARAM_H
