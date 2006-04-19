@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4900 2006/04/19 17:05:50 wiz Exp $
+$NetBSD: TODO,v 1.4901 2006/04/19 17:18:43 cube Exp $
 
 Suggested new packages
 ======================
@@ -819,7 +819,6 @@ Suggested package updates
 	o p5-Apache-AuthCookieDBI-2.02
 	o p5-Apache-SSI-2.17
 	o p5-Apache-Session-Wrapper-0.26
-	o p5-Apache-Test-1.28
 	o p5-Audio-Wav-0.04
 	o p5-Authen-SASL-2.09
 	o p5-Authen-SASL-Cyrus-0.13
