@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.17 2006/04/19 09:53:23 dillo Exp $
+$NetBSD: CHANGES-2006,v 1.18 2006/04/19 12:47:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2198,3 +2198,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/gimp to 2.2.11nb2 [tron 2006-04-18]
 	Updated textproc/docbook-xsl to 1.69.1nb6 [minskim 2006-04-18]
 	Updated games/gtkmagnetic to 2.2.1.6 [dillo 2006-04-19]
+	Updated graphics/f4l to 0.2.1 [adam 2006-04-19]
