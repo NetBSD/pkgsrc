@@ -1,4 +1,4 @@
-# $NetBSD: tex.buildlink3.mk,v 1.13 2006/04/06 06:23:06 reed Exp $
+# $NetBSD: tex.buildlink3.mk,v 1.14 2006/04/19 13:14:57 tonio Exp $
 #
 # A Makefile fragment for TeX and LaTeX packages
 #
@@ -6,7 +6,7 @@
 #     Modify TEX_DEFAULT to change the default version (default to teTeX3)
 #
 #	* tex files are installed...
-#	  	teTeX[1-2]
+#	  	teTeX[2]
 #	  		-> ${PREFIX}/share/texmf
 #		teTeX3
 #	  		-> ${PREFIX}/share/texmf-local
@@ -32,7 +32,7 @@
 #   Description:
 #     The user's favorite TeX implementation
 #   Possible values:
-#     teTeX1, teTeX2, teTeX3
+#     teTeX2, teTeX3
 #   Default value:
 #     teTeX3
 #
@@ -50,7 +50,7 @@
 #  Description:
 #    Versions the package accepts (supports).
 #  Possible values:
-#    teTeX1, teTeX2, teTeX3
+#    teTeX2, teTeX3
 #  Default value:
 #    teTeX2, teTeX3
 #
@@ -74,7 +74,7 @@
 #   Description:
 #     The type of the used TeX package
 #   Possible values:
-#     teTeX1, teTeX2, teTeX3
+#     teTeX2, teTeX3
 
 .if !defined(TEX_BUILDLINK3_MK)
 TEX_BUILDLINK3_MK=	# defined
@@ -88,8 +88,6 @@ TEX_ACCEPTED?=	teTeX2 teTeX3
 
 # set up variables for buildlink or depends
 #
-BUILDLINK_API_DEPENDS.teTeX1=	teTeX-bin-1.[0-9]*
-BUILDLINK_PKGSRCDIR.teTeX1=	../../print/teTeX1-bin
 BUILDLINK_API_DEPENDS.teTeX2=	teTeX-bin-2.[0-9]*
 BUILDLINK_PKGSRCDIR.teTeX2=	../../print/teTeX-bin
 BUILDLINK_API_DEPENDS.teTeX3=	teTeX-bin-3.[0-9]*
@@ -115,9 +113,6 @@ _TEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX3}
 .elif ${TEX_TYPE} == "teTeX2"
 _TEX_DEPENDENCY=	${BUILDLINK_API_DEPENDS.teTeX2}
 _TEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX2}
-.elif ${TEX_TYPE} == "teTeX1"
-_TEX_DEPENDENCY=	${BUILDLINK_API_DEPENDS.teTeX1}
-_TEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX1}
 .endif
 
 .endif	# TEX_BUILDLINK3_MK
