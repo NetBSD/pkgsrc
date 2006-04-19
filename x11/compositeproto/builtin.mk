@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1.1.1 2006/04/18 17:17:50 reed Exp $
+# $NetBSD: builtin.mk,v 1.2 2006/04/19 12:27:02 reed Exp $
 
 BUILTIN_PKG:=	compositeproto
 
@@ -55,6 +55,9 @@ USE_BUILTIN.compositeproto!=						\
 .endif
 MAKEVARS+=	USE_BUILTIN.compositeproto
 
+CHECK_BUILTIN.compositeproto?=		no
+.if !empty(CHECK_BUILTIN.compositeproto:M[nN][oO])
+
 # following so old pkg-config name compositeext.pc will be available
 BUILDLINK_TARGETS+=	compositeext-symlink-pc
 
@@ -65,3 +68,5 @@ compositeext-symlink-pc:
 	if ${TEST} -f $${src}; then \
 		${LN} -sf $${src} $${dst}; \
 	fi
+
+.endif	# CHECK_BUILTIN.compositeproto
