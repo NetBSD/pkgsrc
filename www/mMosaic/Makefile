@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2006/04/17 13:46:52 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/19 19:21:28 wiz Exp $
 #
 
 DISTNAME=	mMosaic-3.7.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.enst.fr/pub/mbone/mMosaic/
 
