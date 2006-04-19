@@ -1,4 +1,4 @@
-# $NetBSD: xfree.mk,v 1.13 2006/03/23 13:46:31 dmcmahill Exp $
+# $NetBSD: xfree.mk,v 1.14 2006/04/19 12:30:25 reed Exp $
 
 FILES_LIST=	${FILESDIR}/xfree
 
@@ -11,8 +11,8 @@ FILES_LIST=	${FILESDIR}/xfree
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../x11/Xrandr/buildlink3.mk"
 .include "../../x11/Xrender/buildlink3.mk"
-.include "../../x11/renderext/buildlink3.mk"
-.include "../../x11/randrext/buildlink3.mk"
+.include "../../x11/renderproto/buildlink3.mk"
+.include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/xcursor/buildlink3.mk"
 
 # Check if any headers and libraries for ${X11_MODULES} found in
