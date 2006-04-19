@@ -1,16 +1,17 @@
-$NetBSD: patch-aa,v 1.2 2006/01/19 11:18:41 adam Exp $
+$NetBSD: patch-aa,v 1.3 2006/04/19 17:02:22 wiz Exp $
 
---- /dev/null	2006-01-19 12:14:22.000000000 +0100
+--- Makefile.orig	2006-04-19 14:47:12.000000000 +0200
 +++ Makefile
-@@ -0,0 +1,26 @@
+@@ -0,0 +1,27 @@
 +OBJS=	optipng.o opngio.o opngreduc.o cbitset.o osys.o \
 +	pngxread.o pngxrbmp.o pngxrgif.o pngxrpnm.o \
-+	gifread.o pnmerror.o pnmread.o pnmwrite.o
++	gifread.o pnmerror.o pnmread.o pnmwrite.o \
++	png_write_sig.o
 +
-+CPPFLAGS=	-I${PREFIX}/include -Ilib/pngxtern -Isrc
++CPPFLAGS=	`libpng-config --cflags` -Ilib/pngxtern -Isrc
 +
 +all: $(OBJS)
-+	$(CC) -o optipng $(LDFLAGS) $(OBJS) -lm -lz -lpng
++	$(CC) -o optipng $(LDFLAGS) $(OBJS) `libpng-config --ldflags`
 +
 +optipng.o:   src/optipng.c   src/opng.h src/osys.h src/cbitset.h src/cexcept.h
 +opngio.o:    src/opngio.c    src/opng.h
