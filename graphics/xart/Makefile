@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2006/04/17 13:46:36 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2006/04/19 17:04:31 wiz Exp $
 #
 
-DISTNAME=       xart19980415
+DISTNAME=	xart19980415
 PKGNAME=	xart-19980415
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	graphics x11
 MASTER_SITES=	http://linux01.gwdg.de/~rhohen/linux/
 EXTRACT_SUFX=	.tgz
@@ -13,7 +13,7 @@ HOMEPAGE=	http://linux01.gwdg.de/~rhohen/linux.html
 COMMENT=	Paint program (enhanced xpaint)
 
 WRKSRC=		${WRKDIR}/19980415
-USE_IMAKE=      YES
+USE_IMAKE=	YES
 
 post-extract:
 	${FIND} ${WRKSRC} -type d -exec ${CHMOD} 755 {} \;
