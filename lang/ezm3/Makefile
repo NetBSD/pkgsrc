@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:09:44 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/20 16:21:01 joerg Exp $
 
 DISTNAME=	ezm3-1.2
 PKGREVISION=	1
@@ -26,7 +26,8 @@ BUILDLINK_PASSTHRU_DIRS+=	${EZM3ROOT}
 
 # XXX: This may well work for some others.
 ONLY_FOR_PLATFORM=      FreeBSD-*-i386 NetBSD-*-i386 OpenBSD-*-i386 \
-			Linux-*-i386 DragonFly-*-i386
+			Linux-*-i386
+# DragonFly-*-i386 needs new bootstrap
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 BOOTSTRAP=	${DISTNAME}-FreeBSD4-boot.tar.bz2
