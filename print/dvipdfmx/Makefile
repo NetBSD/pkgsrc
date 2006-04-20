@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2006/04/17 13:46:45 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2006/04/20 18:45:34 minskim Exp $
 
 DISTNAME=	dvipdfmx-20050831
 PKGNAME=	${DISTNAME:S/-/-0.0.0./}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print converters
 MASTER_SITES=	http://project.ktug.or.kr/dvipdfmx/snapshot/current/
 
@@ -10,7 +10,7 @@ MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://project.ktug.or.kr/dvipdfmx/
 COMMENT=	Dvi to pdf converter with CID-keyed font support
 
-DEPENDS+=	adobe-cmaps>=20051109:../../fonts/adobe-cmaps
+DEPENDS+=	adobe-cmaps>=20060419:../../fonts/adobe-cmaps
 
 CONFLICTS+=	dvipdfm-[0-9]*
 CONFLICTS+=	ja-dvipdfm-[0-9]*
