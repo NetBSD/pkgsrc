@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2006/04/17 13:46:51 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2006/04/20 22:54:53 wiz Exp $
 
 DISTNAME=	amaya-fullsrc-9.2.1
 PKGNAME=	${DISTNAME:S/-fullsrc//}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	http://www.w3.org/Amaya/Distribution/ \
 		ftp://ftp.w3.org/pub/amaya/ \
@@ -17,14 +17,14 @@ EXTRACT_ELEMENTS=	Amaya libwww
 WRKSRC=			${WRKDIR}/Amaya/work
 
 USE_DIRS+=		xdg-1.1
-USE_LANGUAGE=		c c++
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	../configure
 CONFIGURE_ARGS+=	--without-graphic-libs	# Use pkgsrc libraries
 CFLAGS+=		-Dunix
 # link correctly with pkgsrc zlib
-LIBS+=			-Wl,-R${LOCALBASE}/lib
+LIBS+=			${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
 
 FONTS_DIRS.ttf+=	${PREFIX}/share/Amaya/fonts
 REQD_DIRS+=		${PREFIX}/share/Amaya ${PREFIX}/share/Amaya/fonts
@@ -39,5 +39,6 @@ post-configure:
 .include "../../graphics/imlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
