@@ -1,0 +1,19 @@
+$NetBSD: patch-af,v 1.1 2006/04/20 22:56:02 wiz Exp $
+
+--- src/mngutil.c.orig	2004-02-14 11:55:36.000000000 +0100
++++ src/mngutil.c
+@@ -30,12 +30,14 @@
+ #include <png.h>
+ #include "mngutil.h"
+ 
++#if 0
+ extern void png_write_data (png_structp png_ptr,
+ 				png_bytep data,png_size_t length);
+ extern void png_save_uint_32 (png_bytep buf, png_uint_32 i);
+ extern void png_save_uint_16 (png_bytep buf, png_uint_16 i);
+ extern void png_write_chunk (png_structp png_ptr,
+ 				png_bytep chunk_name, png_bytep data, png_size_t length);
++#endif
+ 
+ png_byte mng_sig[8] = {138, 77, 78, 71, 13, 10, 26, 10};
+ 
