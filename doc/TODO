@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4902 2006/04/20 18:32:42 adam Exp $
+$NetBSD: TODO,v 1.4903 2006/04/20 22:51:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -439,6 +439,7 @@ Suggested package updates
 	o devIL-1.6.7
 	o devhelp-0.10
 	o devtodo-0.1.19
+	o dia-0.95
 	o diffstat-1.41
 	o dirac-0.5.4
 	o dirdiff-2.1
@@ -499,7 +500,7 @@ Suggested package updates
 	o fftw-3.1.1
 	o fhist-1.14
 	o file-4.17
-	o file-roller-2.14.1
+	o file-roller-2.14.2
 	o findutils-4.2.27
 	o flashplayer-0.4.13
 	o fmsx-3.0
@@ -574,7 +575,7 @@ Suggested package updates
 	o gsharutils-4.6
 	o gss-0.0.16
 	o gtetrinet-0.7.9
-	o gthumb-2.7.5.1
+	o gthumb-2.7.6
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
 	o gtkam-0.1.13
@@ -739,7 +740,7 @@ Suggested package updates
 	o mlview-0.9.0
 	o mmix-20050922
 	o molden-4.4
-	o mono-1.1.14
+	o mono-1.1.15
 	o moscow_ml-2.01
 	o most-4.10.2
 	o mowitz-0.3.0
@@ -1162,6 +1163,8 @@ Suggested package updates
 	o ted-2.17
 	o tet3-3.6b
 	o tfmxplay-1.1.6
+	o thunderbird-1.5.0.2
+	o thunderbird-gtk1-1.5.0.2
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
 	o tkcvs-8.0.3
