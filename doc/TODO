@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4901 2006/04/19 17:18:43 cube Exp $
+$NetBSD: TODO,v 1.4902 2006/04/20 18:32:42 adam Exp $
 
 Suggested new packages
 ======================
@@ -572,7 +572,6 @@ Suggested package updates
 	o gsasl-0.2.12
 	o gsed-4.1.4
 	o gsharutils-4.6
-	o gsl-1.8
 	o gss-0.0.16
 	o gtetrinet-0.7.9
 	o gthumb-2.7.5.1
