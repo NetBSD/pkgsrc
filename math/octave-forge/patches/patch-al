@@ -1,12 +1,8 @@
-$NetBSD: patch-al,v 1.1 2005/03/14 04:08:42 dmcmahill Exp $
+$NetBSD: patch-al,v 1.2 2006/04/20 18:16:47 adam Exp $
 
-sometimes X_LIBS ends up with "-Rpath" in it but mkoctfile doesn't
-understand that (yet).  In an upcoming octave-current release, that
-should be fixed.
-
---- main/plot/Makefile.orig	2004-01-12 02:39:09.000000000 -0500
+--- main/plot/Makefile.orig	2006-03-12 21:39:09.000000000 +0100
 +++ main/plot/Makefile
-@@ -9,6 +9,7 @@ ifndef OCTAVE_FORGE
+@@ -11,6 +11,7 @@ ifndef OCTAVE_FORGE
  	X_LIBS = -L/usr/X11R6/lib
  endif
  
@@ -14,7 +10,7 @@ should be fixed.
  
  %.o: %.cc ; $(MKOCTFILE) -c $(X_CFLAGS) $<
  
-@@ -22,16 +23,16 @@ endif
+@@ -24,16 +25,16 @@ endif
  $(PROGS:.oct=.o): graphics.h
  
  grab.oct: grab.o graphics.o
@@ -33,5 +29,5 @@ should be fixed.
 -	$(MKOCTFILE) $< graphics.o $(X_LIBS) -o $@
 +	$(MKOCTFILE) $< graphics.o $(X_LIBS2) -o $@
  
- clean: ; -$(RM) *.o octave-core core *~ *.oct
- 
+ %.m : %.m.in
+ 	-$(INSTALL) $< $@
