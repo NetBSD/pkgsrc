@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
+$NetBSD: patch-ag,v 1.5 2006/04/20 18:16:47 adam Exp $
 
---- configure.orig	2005-06-13 06:10:01.000000000 +0000
+--- configure.orig	2006-03-17 06:26:16.000000000 +0100
 +++ configure
 @@ -954,7 +954,7 @@ esac
      else
@@ -71,7 +71,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3079,12 +3085,9 @@ ac_link='$CC -o conftest$ac_exeext $CFLA
+@@ -3102,12 +3108,9 @@ ac_link='$CC -o conftest$ac_exeext $CFLA
  ac_compiler_gnu=$ac_cv_c_compiler_gnu
  
  
@@ -85,7 +85,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
  
  # Check whether --with-x or --without-x was given.
  if test "${with_x+set}" = set; then
-@@ -3177,7 +3180,7 @@ ac_x_header_dirs='
+@@ -3200,7 +3203,7 @@ ac_x_header_dirs='
  /usr/openwin/share/include'
  
  if test "$ac_x_includes" = no; then
@@ -94,7 +94,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    # First, try using that file with no special directory specified.
    cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
-@@ -3251,7 +3254,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3274,7 +3277,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -104,7 +104,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3311,15 +3315,10 @@ else
+@@ -3334,15 +3338,10 @@ else
    # Update the cache value to reflect the command line values.
    ac_cv_have_x="have_x=yes \
  		ac_x_includes=$x_includes ac_x_libraries=$x_libraries"
@@ -122,7 +122,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
  if test "$no_x" = yes; then
    # Not all programs may use this symbol, but it does not hurt to define it.
  
-@@ -3367,7 +3366,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3390,7 +3389,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -132,7 +132,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3418,7 +3418,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3441,7 +3441,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -142,7 +142,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3494,7 +3495,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3517,7 +3518,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -152,7 +152,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3549,7 +3551,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3572,7 +3574,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -162,7 +162,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3617,7 +3620,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3640,7 +3643,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -172,7 +172,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3725,7 +3729,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3748,7 +3752,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -182,7 +182,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3789,7 +3794,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3812,7 +3817,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -192,7 +192,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3857,7 +3863,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3880,7 +3886,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -202,7 +202,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -3961,7 +3968,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -3984,7 +3991,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -212,7 +212,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -4025,7 +4033,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -4048,7 +4056,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -222,7 +222,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -4122,7 +4131,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -4145,7 +4154,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -232,7 +232,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -4186,7 +4196,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -4209,7 +4219,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -242,7 +242,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -4283,7 +4294,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -4306,7 +4317,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -252,7 +252,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -4347,7 +4359,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -4370,7 +4382,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -262,7 +262,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -4426,7 +4439,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -4449,7 +4462,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -272,7 +272,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -5089,6 +5103,48 @@ done
+@@ -5136,6 +5150,48 @@ done
  
  
  
@@ -321,7 +321,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
  if test -e main/audio/NOINSTALL ; then
  
  		STATUS=noinstall
-@@ -5147,7 +5203,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -5194,7 +5250,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -331,7 +331,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -5317,7 +5374,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -5364,7 +5421,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -341,7 +341,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -5380,7 +5438,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -5427,7 +5485,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -351,7 +351,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -5630,7 +5689,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -5721,7 +5780,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -361,7 +361,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -5783,7 +5843,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -5874,7 +5934,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -371,7 +371,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -5916,7 +5977,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -6007,7 +6068,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -381,7 +381,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -5991,7 +6053,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -6082,7 +6144,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -391,7 +391,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -6069,7 +6132,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -6160,7 +6223,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -401,7 +401,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -6161,7 +6225,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -6252,7 +6316,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -411,7 +411,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -6314,7 +6379,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -6405,7 +6470,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -421,7 +421,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -6392,7 +6458,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -6483,7 +6549,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -431,7 +431,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -6545,7 +6612,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -6636,7 +6703,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -441,7 +441,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -6724,7 +6792,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -6771,7 +6839,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -451,7 +451,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -6867,7 +6936,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -6859,7 +6928,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -461,7 +461,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -7023,7 +7093,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -7002,7 +7072,8 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -471,7 +471,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8321,6 +8392,11 @@ esac
+@@ -8891,6 +8962,11 @@ esac
    *) ac_INSTALL=$ac_top_builddir$INSTALL ;;
    esac
  
@@ -483,7 +483,7 @@ $NetBSD: patch-ag,v 1.4 2005/08/04 13:12:22 adam Exp $
    # Let's still pretend it is `configure' which instantiates (i.e., don't
    # use $as_me), people would be surprised to read:
    #    /* config.h.  Generated by config.status.  */
-@@ -8359,12 +8435,6 @@ echo "$as_me: error: cannot find input f
+@@ -8929,12 +9005,6 @@ echo "$as_me: error: cannot find input f
  	 fi;;
        esac
      done` || { (exit 1); exit 1; }
