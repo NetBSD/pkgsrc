@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/04/07 03:55:22 minskim Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/04/20 18:45:34 minskim Exp $
 bin/dvipdfmx
 share/examples/dvipdfmx/dvipdfmx.cfg
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/78-EUC-H
@@ -35,6 +35,7 @@ ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-GB1-1
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-GB1-2
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-GB1-3
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-GB1-4
+${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-GB1-5
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-GB1-UCS2
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-Japan1-0
 ${PKG_LOCALTEXMFPREFIX}/dvipdfm/CMap/Adobe-Japan1-1
