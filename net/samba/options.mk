@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2006/04/03 13:23:03 salo Exp $
+# $NetBSD: options.mk,v 1.15 2006/04/20 11:44:07 grant Exp $
 
 # Recommended package options for various setups:
 #
@@ -26,6 +26,11 @@ PKG_OPTIONS+=		ldap
 .  endif
 CONFIGURE_ARGS+=	--with-ads
 CONFIGURE_ARGS+=	--with-krb5=${KRB5BASE:Q}
+
+# ignore gssapi.h on Solaris as it conflicts with <gssapi/gssapi.h>
+.  if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=		ac_cv_header_gssapi_h=no
+.  endif
 .else
 CONFIGURE_ARGS+=	--without-ads
 CONFIGURE_ARGS+=	--without-krb5
