@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.27 2006/04/20 17:37:36 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.28 2006/04/20 18:18:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2212,3 +2212,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/php-memcache version 2.0.1 [grant 2006-04-20]
 	Added devel/p5-Proc-PID-File version 1.24 [grant 2006-04-20]
 	Updated fonts/adobe-cmaps to 20060419 [minskim 2006-04-20]
+	Updated math/octave-forge to 2006.03.17 [adam 2006-04-20]
