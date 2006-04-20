@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.25 2006/04/20 11:32:17 grant Exp $
+$NetBSD: CHANGES-2006,v 1.26 2006/04/20 11:39:12 grant Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2210,3 +2210,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-Class-Accessor to 0.25 [hiramatsu 2006-04-20]
 	Added devel/p5-SVN-Notify version 2.57 [seb 2006-04-20]
 	Added devel/php-memcache version 2.0.1 [grant 2006-04-20]
+	Added devel/p5-Proc-PID-File version 1.24 [grant 2006-04-20]
