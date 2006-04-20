@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.746 2006/04/17 21:14:49 wiz Exp $
+# $NetBSD: Makefile,v 1.747 2006/04/20 10:20:07 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -469,6 +469,7 @@ SUBDIR+=	p5-Proc-Daemon
 SUBDIR+=	p5-Regexp-Shellish
 SUBDIR+=	p5-SDL
 SUBDIR+=	p5-SVN-Mirror
+SUBDIR+=	p5-SVN-Notify
 SUBDIR+=	p5-SVN-Simple
 SUBDIR+=	p5-Safe-Hole
 SUBDIR+=	p5-Scalar-List-Utils
