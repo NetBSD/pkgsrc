@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.748 2006/04/20 11:31:26 grant Exp $
+# $NetBSD: Makefile,v 1.749 2006/04/20 11:38:47 grant Exp $
 #
 
 COMMENT=	Development utilities
@@ -466,6 +466,7 @@ SUBDIR+=	p5-PerlIO-eol
 SUBDIR+=	p5-PerlIO-via-dynamic
 SUBDIR+=	p5-PerlIO-via-symlink
 SUBDIR+=	p5-Proc-Daemon
+SUBDIR+=	p5-Proc-PID-File
 SUBDIR+=	p5-Regexp-Shellish
 SUBDIR+=	p5-SDL
 SUBDIR+=	p5-SVN-Mirror
