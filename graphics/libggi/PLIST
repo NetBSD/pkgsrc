@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/04/18 15:54:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/04/20 16:28:54 joerg Exp $
 bin/cube3d
 bin/ggiteleserver
 bin/monitest
@@ -78,7 +78,10 @@ lib/ggi/display/tele.la
 ${COND_TERMINFO}lib/ggi/display/terminfo.la
 lib/ggi/display/tile.la
 lib/ggi/display/trueemu.la
+${COND_LIBVGL}lib/ggi/display/vgl.la
+${COND_XF86DGA}lib/ggi/display/xf86dga.la
 lib/ggi/helper/helper_x_dbe.la
+${COND_XF86DGA}lib/ggi/helper/helper_x_dga.la
 lib/ggi/helper/helper_x_evi.la
 lib/ggi/helper/helper_x_shm.la
 lib/ggi/helper/helper_x_vidmode.la

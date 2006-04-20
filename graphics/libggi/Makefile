@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2006/03/04 21:29:49 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2006/04/20 16:28:54 joerg Exp $
 #
 
 DISTNAME=	libggi-2.1.1.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.ggi-project.org/pub/packages/ggi/ggi/v2.1/ \
 		http://www.ggi-project.org/ftp/ggi/v2.1/ \
@@ -38,15 +38,16 @@ PLIST_SUBST+=	COND_TERMINFO=""
 PLIST_SUBST+=	COND_TERMINFO=""
 .endif
 
+.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD"
+PLIST_SUBST+=	COND_LIBVGL=""
+.else
+PLIST_SUBST+=	COND_LIBVGL="@comment "
+.endif
+
 .if exists(${X11BASE}/include/X11/extensions/xf86dga.h)
-#
-# it would be more logical to set PLIST_SRC to PLIST first and then add
-# PLIST.dga to it, but @dirrm lib/ggi/display will fail while processing
-# pkg/PLIST, because the directory still contains files (they are listed in
-# PLIST.dga) and isn't empty, thus can't be removed
-#
-PLIST_SRC=              ${PKGDIR}/PLIST.dga
-PLIST_SRC+=             ${PKGDIR}/PLIST
+PLIST_SUBST+=	COND_XF86DGA=""
+.else
+PLIST_SUBST+=	COND_XF86DGA="@comment "
 .endif
 
 .include "../../devel/ncurses/buildlink3.mk"
