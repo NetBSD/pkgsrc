@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.29 2006/04/20 18:32:42 adam Exp $
+$NetBSD: CHANGES-2006,v 1.30 2006/04/20 18:37:04 is Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2214,3 +2214,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated fonts/adobe-cmaps to 20060419 [minskim 2006-04-20]
 	Updated math/octave-forge to 2006.03.17 [adam 2006-04-20]
 	Updated math/gsl to 1.8 [adam 2006-04-20]
+	Updated www/links to 2.1.0.21nb1 [is 2006-04-20]
+	Updated www/links-gui to 2.1.0.21nb2 [is 2006-04-20]
