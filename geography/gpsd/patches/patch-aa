@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.3 2006/04/20 15:28:00 joerg Exp $
+
+--- configure.orig	2006-04-20 15:05:19.000000000 +0000
++++ configure
+@@ -22197,13 +22197,13 @@ if test $ac_cv_lib_c_open = yes; then
+ fi
+ 
+ 
+-echo "$as_me:$LINENO: checking for main in -lpthread" >&5
+-echo $ECHO_N "checking for main in -lpthread... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking for main in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
++echo $ECHO_N "checking for main in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6
+ if test "${ac_cv_lib_pthread_main+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpthread  $LIBS"
++LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -22256,7 +22256,7 @@ fi
+ echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_main" >&5
+ echo "${ECHO_T}$ac_cv_lib_pthread_main" >&6
+ if test $ac_cv_lib_pthread_main = yes; then
+-  LIBPTHREAD="-lpthread"
++  LIBPTHREAD="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
+ fi
+ 
+ 
