@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.30 2006/04/20 18:37:04 is Exp $
+$NetBSD: CHANGES-2006,v 1.31 2006/04/20 18:47:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2216,3 +2216,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/gsl to 1.8 [adam 2006-04-20]
 	Updated www/links to 2.1.0.21nb1 [is 2006-04-20]
 	Updated www/links-gui to 2.1.0.21nb2 [is 2006-04-20]
+	Updated print/dvipdfmx to 0.0.0.20050831nb5 [minskim 2006-04-20]
