@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.24 2006/04/20 10:20:56 seb Exp $
+$NetBSD: CHANGES-2006,v 1.25 2006/04/20 11:32:17 grant Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2209,3 +2209,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/p5-DBD-SQLite to 1.12 [hiramatsu 2006-04-20]
 	Updated devel/p5-Class-Accessor to 0.25 [hiramatsu 2006-04-20]
 	Added devel/p5-SVN-Notify version 2.57 [seb 2006-04-20]
+	Added devel/php-memcache version 2.0.1 [grant 2006-04-20]
