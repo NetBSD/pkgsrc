@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/02 20:05:57 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/20 15:28:00 joerg Exp $
 
 DISTNAME=	gpsd-2.31
 CATEGORIES=	geography
@@ -14,4 +14,5 @@ USE_LIBTOOL=	yes
 INSTALLATION_DIRS=	sbin
 
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
