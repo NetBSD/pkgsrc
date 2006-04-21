@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.36 2006/04/21 09:29:46 adam Exp $
+$NetBSD: CHANGES-2006,v 1.37 2006/04/21 10:39:18 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2222,3 +2222,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated ham/dpbox to 6.00.00nb2 [wulf 2006-04-21]
 	Updated multimedia/libmpeg2 to 0.4.0bnb4 [wulf 2006-04-21]
 	Updated audio/normalize to 0.7.7 [adam 2006-04-21]
+	Updated pkgtools/pkglint to 4.60 [rillig 2006-04-21]
