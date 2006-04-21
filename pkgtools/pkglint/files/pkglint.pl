@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.560 2006/04/18 00:35:18 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.561 2006/04/21 09:42:01 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3367,6 +3367,34 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 			$line->log_warning("\"${value}\" is not a valid variable name.");
 		}
 
+	} elsif ($type eq "WrapperReorder") {
+		if ($value =~ qr"^reorder:l:([\w]+):([\w]+)$") {
+			my ($lib1, $lib2) = ($1, $2);
+			# Fine.
+		} else {
+			$line->log_warning("Invalid wrapper reorder command \"${value}\".");
+		}
+
+	} elsif ($type eq "WrapperTransform") {
+		if ($value =~ qr"^rm:(?:-[DILOUWflm].*|-std=.*)$") {
+			# Fine.
+
+		} elsif ($value =~ qr"^l:([^:]+):(.+)$") {
+			my ($lib, $replacement_libs) = ($1, $2);
+			# Fine.
+
+		} elsif ($value =~ qr"^'?(?:opt|rename|rm-optarg|rmdir):.*$") {
+			# FIXME: This is cheated.
+			# Fine.
+
+		} elsif ($value eq "-e" || $value =~ qr"^\"?'?s[|:,]") {
+			# FIXME: This is cheated.
+			# Fine.
+
+		} else {
+			$line->log_warning("Invalid wrapper transform command \"${value}\".");
+		}
+
 	} elsif ($type eq "WrkdirSubdirectory") {
 		$opt_debug and $line->log_warning("Unchecked subdirectory \"${value}\" of \${WRKSRC}.");
 
@@ -4640,7 +4668,7 @@ sub checkfile_patch($) {
 
 sub checkfile_PLIST($) {
 	my ($fname) = @_;
-	my ($plist, $last_file_seen);
+	my ($plist, $last_file_seen, $libtool_libs);
 
 	log_info($fname, NO_LINE_NUMBER, "[checkfile_PLIST]");
 
@@ -4655,7 +4683,16 @@ sub checkfile_PLIST($) {
 	}
 	checkline_rcsid($plist->[0], "\@comment ");
 
-	line:
+	# Get all libtool libraries from the PLIST.
+	$libtool_libs = {};
+	foreach my $line (@{$plist}) {
+		my $text = $line->text;
+
+		if ($text =~ qr"^(.*)\.la$") {
+			$libtool_libs->{$1} = $line;
+		}
+	}
+
 	foreach my $line (@{$plist}) {
 		my $text = $line->text;
 
@@ -4728,6 +4765,13 @@ sub checkfile_PLIST($) {
 				$line->log_warning(".orig files should not be in the PLIST.");
 			}
 
+			if ($text =~ qr"^(.*)(\.a|\.so[0-9.]*)$") {
+				my ($basename, $ext) = ($1, $2);
+
+				if (exists($libtool_libs->{$basename})) {
+					$line->log_warning("Redundant library found. The libtool library is in line " . $libtool_libs->{$basename}->lines . ".");
+				}
+			}
 		} else {
 			$line->log_error("Unknown line type.");
 		}
