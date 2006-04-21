@@ -1,24 +1,26 @@
-# $NetBSD: Makefile,v 1.17 2006/03/04 21:28:57 jlam Exp $
-#
+# $NetBSD: Makefile,v 1.18 2006/04/21 09:28:47 adam Exp $
 
-DISTNAME=	normalize-0.7.6
-PKGREVISION=	6
+DISTNAME=	normalize-0.7.7
 CATEGORIES=	audio
 MASTER_SITES=	http://www1.cs.columbia.edu/~cvaill/normalize/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www1.cs.columbia.edu/~cvaill/normalize/
-COMMENT=	Wave (.wav) file volume normalizer
+COMMENT=	Audio file volume normalizer (wav,mp3,ogg)
 
-USE_PKGLOCALEDIR=	YES
-USE_LIBTOOL=		YES
-GNU_CONFIGURE=		YES
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
 
-#CONFIGURE_ARGS+=	--with-audiofile
+CONFIGURE_ARGS+=	--with-audiofile
 CONFIGURE_ARGS+=	--with-mad
 
-#.include "../../audio/libaudiofile/buildlink3.mk"
+.include "options.mk"
+
+.include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
