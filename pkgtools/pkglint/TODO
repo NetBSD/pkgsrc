@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.43 2006/04/19 15:05:34 joerg Exp $
+$NetBSD: TODO,v 1.44 2006/04/21 10:37:51 rillig Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
@@ -29,5 +29,3 @@ include the name of an example package where a warning should occur.
   happened in the file before that line.
 * Add checks for binary packages. See Debian/lintian for ideas.
 * Check that USE_LIBTOOL=yes, when the PLIST contains *.la.
-* Warn if the PLIST contains both libtool archives and the expanded version,
-  e.g. libfoo.la and libfoo.a.
