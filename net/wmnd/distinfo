@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/04/21 13:02:24 rpaulo Exp $
+
+SHA1 (wmnd-0.4.12.tar.gz) = 636355ae7fcce862c813a9a98a4d1388008f4b42
+RMD160 (wmnd-0.4.12.tar.gz) = 67592682d18f1df48f0f16baff1fde15ab8fecf4
+Size (wmnd-0.4.12.tar.gz) = 170413 bytes
