@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2004/03/28 19:44:10 xtraeme Exp $
+$NetBSD: patch-ae,v 1.2 2006/04/21 09:18:37 rillig Exp $
 
 --- etc/router.xml.in.orig	2003-11-05 01:19:46.000000000 +0100
 +++ etc/router.xml.in	2003-11-05 01:20:44.000000000 +0100
@@ -37,3 +37,4 @@ $NetBSD: patch-ae,v 1.1.1.1 2004/03/28 19:44:10 xtraeme Exp $
 +    <pemfile>@SSLCERTS@/server.pem</pemfile>
      -->
    </local>
+ 
