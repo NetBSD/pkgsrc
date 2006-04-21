@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2006/04/17 21:14:49 wiz Exp $
+# $NetBSD: Makefile,v 1.156 2006/04/21 16:24:08 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -113,6 +113,7 @@ SUBDIR+=	tex-abc
 SUBDIR+=	tex-bagpipetex
 SUBDIR+=	tex-chemarrow
 SUBDIR+=	tex-dhucs
+SUBDIR+=	tex-fixme
 SUBDIR+=	tex-foiltex
 SUBDIR+=	tex-hlatex
 SUBDIR+=	tex-hugelatex
