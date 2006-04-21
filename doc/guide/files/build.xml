@@ -1,8 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.26 2006/04/21 07:30:32 rillig Exp $ -->
-
-<!--
-	TODO: after 2006Q1, "SITES_" should be replaced with "SITES.".
--->
+<!-- $NetBSD: build.xml,v 1.27 2006/04/21 07:54:12 rillig Exp $ -->
 
 <chapter id="build">
 <title>The build process</title>
@@ -220,7 +216,7 @@ the package will be built, but not installed.</para>
 
 	  <para>where ${site} varies through several possibilities in turn: first,
 	    <varname>MASTER_SITE_OVERRIDE</varname> is tried, then the sites
-	    specified in either <varname>SITES_file</varname> if defined, else
+	    specified in either <varname>SITES.file</varname> if defined, else
 	    <varname>MASTER_SITES</varname> or <varname>PATCH_SITES</varname>, as
 	    applies, then finally the value of
 	    <varname>MASTER_SITE_BACKUP</varname>. The order of all except the
@@ -354,8 +350,15 @@ the package will be built, but not installed.</para>
 		it.</para></listitem></varlistentry>
 
 	<varlistentry><term><varname>WRAPPER_REORDER_CMDS</varname></term>
-		<listitem><para>A list of reordering commands. [TODO:
-		investigate further]</para></listitem></varlistentry>
+
+		<listitem><para>A list of reordering commands. A
+		reordering command has the form
+		<literal>reorder:l:<replaceable>lib1</replaceable>:<replaceable>lib2</replaceable></literal>.
+		It ensures that that
+		<literal>-l<replaceable>lib1</replaceable></literal>
+		occurs before
+		<literal>-l<replaceable>lib2</replaceable></literal>.
+		</para></listitem></varlistentry>
 
 	<varlistentry><term><varname>WRAPPER_TRANSFORM_CMDS</varname></term>
 		<listitem><para>A list of transformation commands. [TODO:
