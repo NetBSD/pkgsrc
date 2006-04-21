@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:09:22 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/21 11:52:19 joerg Exp $
 #
 
 DISTNAME=		scid-3.6.1
@@ -25,8 +25,11 @@ SUBST_SED.paths=	-e 's,@TCLPREFIX@,${BUILDLINK_PREFIX.tcl},g'	\
 			-e 's,@TKPREFIX@,${BUILDLINK_PREFIX.tk},g'	\
 			-e 's,@LIBDL@,${BUILDLINK_LDADD.dl},g'
 
+MAKE_ENV+=		X_LDFLAGS=${X11_LDFLAGS:Q}
+
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
