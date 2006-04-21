@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2004/12/27 21:38:06 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2006/04/21 09:28:47 adam Exp $
 
---- src/mpegvolume.c.orig	2002-08-26 08:32:26.000000000 +0200
+--- src/mpegvolume.c.orig	2005-09-09 22:24:26.000000000 +0200
 +++ src/mpegvolume.c
-@@ -312,6 +312,7 @@ decode_output(void *dat, struct mad_head
+@@ -306,6 +306,7 @@ decode_output(void *dat, struct mad_head
       */
      ds->si->bits_per_sample = 16;
      ds->sums[0] = ds->sums[1] = 0;
