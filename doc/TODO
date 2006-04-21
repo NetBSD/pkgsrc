@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4903 2006/04/20 22:51:56 wiz Exp $
+$NetBSD: TODO,v 1.4904 2006/04/21 17:27:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -393,7 +393,7 @@ Suggested package updates
 	o ccd2iso-0.2
 	o cdl3-1.2.6
 	o cdrdao-1.2.1
-	o cfengine2-2.1.19p1
+	o cfengine2-2.1.20
 	o cfengine2-doc-2.1.14
 	o cfitsio-2.510
 	o cgdb-0.6.2
@@ -790,7 +790,7 @@ Suggested package updates
 	o obexftp-0.18
 	o objc-3.2.7
 	o ocaml-3.09.2
-	o ocrad-0.14
+	o ocrad-0.15
 	o odbc-postgresql-8.0.7
 	o offlineimap-4.0.11
 	o ogre-0.12.3
@@ -1150,6 +1150,7 @@ Suggested package updates
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.2
 	o sysinfo-4.2.2
+	o tcl-8.4.13
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
@@ -1166,6 +1167,7 @@ Suggested package updates
 	o thunderbird-1.5.0.2
 	o thunderbird-gtk1-1.5.0.2
 	o tinyproxy-1.7.0
+	o tk-8.4.13
 	o tk83-8.3.5
 	o tkcvs-8.0.3
 	o tkdiff-4.1.3
