@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/04/17 07:07:54 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/04/21 18:17:40 drochner Exp $
 bin/gdialog
 bin/zenity
 man/man1/zenity.1
@@ -75,6 +75,7 @@ share/locale/cs/LC_MESSAGES/zenity-0.1.mo
 share/locale/cy/LC_MESSAGES/zenity-0.1.mo
 share/locale/da/LC_MESSAGES/zenity-0.1.mo
 share/locale/de/LC_MESSAGES/zenity-0.1.mo
+share/locale/dz/LC_MESSAGES/zenity-0.1.mo
 share/locale/el/LC_MESSAGES/zenity-0.1.mo
 share/locale/en_CA/LC_MESSAGES/zenity-0.1.mo
 share/locale/en_GB/LC_MESSAGES/zenity-0.1.mo
@@ -95,6 +96,7 @@ share/locale/id/LC_MESSAGES/zenity-0.1.mo
 share/locale/is/LC_MESSAGES/zenity-0.1.mo
 share/locale/it/LC_MESSAGES/zenity-0.1.mo
 share/locale/ja/LC_MESSAGES/zenity-0.1.mo
+share/locale/ka/LC_MESSAGES/zenity-0.1.mo
 share/locale/kn/LC_MESSAGES/zenity-0.1.mo
 share/locale/ko/LC_MESSAGES/zenity-0.1.mo
 share/locale/ku/LC_MESSAGES/zenity-0.1.mo
@@ -109,6 +111,7 @@ share/locale/ne/LC_MESSAGES/zenity-0.1.mo
 share/locale/nl/LC_MESSAGES/zenity-0.1.mo
 share/locale/nn/LC_MESSAGES/zenity-0.1.mo
 share/locale/no/LC_MESSAGES/zenity-0.1.mo
+share/locale/or/LC_MESSAGES/zenity-0.1.mo
 share/locale/pa/LC_MESSAGES/zenity-0.1.mo
 share/locale/pl/LC_MESSAGES/zenity-0.1.mo
 share/locale/pt/LC_MESSAGES/zenity-0.1.mo
