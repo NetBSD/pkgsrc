@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1 2006/04/21 11:11:26 drochner Exp $
+
+--- src/xitk/xine-toolkit/xitk.c.orig	2006-04-21 12:52:41.000000000 +0200
++++ src/xitk/xine-toolkit/xitk.c
+@@ -1877,7 +1877,7 @@ void xitk_init(Display *display, XColor 
+   sprintf(buffer, "%s%s", buffer, " ]-");
+ 
+   if(verbosity)
+-    printf(buffer);
++    printf("%s", buffer);
+ 
+   gXitk->wm_type = xitk_check_wm(display);
+   

@@ -1,0 +1,31 @@
+$NetBSD: patch-aq,v 1.1 2006/04/21 11:11:26 drochner Exp $
+
+--- src/xitk/main.c.orig	2006-04-20 11:59:48.000000000 +0200
++++ src/xitk/main.c
+@@ -456,7 +456,7 @@ static void print_formatted(char *title,
+   int          len;
+   char        *blanks = "     ";
+ 
+-  printf(title);
++  printf("%s", title);
+   
+   sprintf(buffer, "%s", blanks);
+   plugin = *plugins++;
+@@ -469,7 +469,7 @@ static void print_formatted(char *title,
+       sprintf(buffer, "%s%s%s", buffer, (strlen(buffer) == strlen(blanks)) ? "" : ", ", plugin);
+     }
+     else {
+-      printf(buffer);
++      printf("%s", buffer);
+       printf(",\n");
+       snprintf(buffer, sizeof(buffer), "%s%s", blanks, plugin);
+     }
+@@ -478,7 +478,7 @@ static void print_formatted(char *title,
+   }
+   
+   if(strlen(buffer))
+-    printf(buffer);
++    printf("%s", buffer);
+   
+   printf(".\n\n");
+ }
