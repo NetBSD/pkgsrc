@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/04 21:30:43 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/21 12:09:57 joerg Exp $
 #
 
 DISTNAME=	tkdesk-2.0
@@ -15,7 +15,7 @@ CONFIGURE_ARGS+=--with-tcl=${BUILDLINK_PREFIX.tcl}/lib	\
 		--with-tk=${BUILDLINK_PREFIX.tk}/lib	\
 		--with-itcl=${BUILDLINK_PREFIX.tcl-itcl}/lib	\
 		--with-blt=${BUILDLINK_PREFIX.blt}/lib
-MAKE_ENV+=	LIB_RUNTIME_DIR="-L${BUILDLINK_PREFIX.tcl-itcl}/lib" \
+MAKE_ENV+=	LIB_RUNTIME_DIR=${BUILDLINK_PREFIX.tcl-itcl:Q}/lib \
 		PAX=${PAX:Q}
 
 .include "../../lang/tcl/buildlink3.mk"
