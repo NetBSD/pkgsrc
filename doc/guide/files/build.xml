@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.25 2006/02/18 17:11:50 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.26 2006/04/21 07:30:32 rillig Exp $ -->
 
 <!--
 	TODO: after 2006Q1, "SITES_" should be replaced with "SITES.".
@@ -325,8 +325,52 @@ the package will be built, but not installed.</para>
 <sect1 id="build.wrapper">
 <title>The <emphasis>wrapper</emphasis> phase</title>
 
-<para>[TODO]</para>
+	<para>This phase creates wrapper programs for the compilers and
+	linkers. The following variables can be used to tweak the
+	wrappers.</para>
 
+	<variablelist>
+
+	<varlistentry><term><varname>ECHO_WRAPPER_MSG</varname></term>
+		<listitem><para>The command used to print progress
+		messages. Does nothing by default. Set to
+		<literal>${ECHO}</literal> to see the progress
+		messages.</para></listitem></varlistentry>
+
+	<varlistentry><term><varname>WRAPPER_DEBUG</varname></term>
+		<listitem><para>This variable can be set to
+		<literal>yes</literal> (default) or
+		<literal>no</literal>, depending on whether you want
+		additional information in the wrapper log
+		file.</para></listitem></varlistentry>
+
+	<varlistentry><term><varname>WRAPPER_UPDATE_CACHE</varname></term>
+		<listitem><para>This variable can be set to
+		<literal>yes</literal> or <literal>no</literal>,
+		depending on whether the wrapper should use its cache,
+		which will improve the speed. The default value is
+		<literal>yes</literal>, but is forced to
+		<literal>no</literal> if the platform does not support
+		it.</para></listitem></varlistentry>
+
+	<varlistentry><term><varname>WRAPPER_REORDER_CMDS</varname></term>
+		<listitem><para>A list of reordering commands. [TODO:
+		investigate further]</para></listitem></varlistentry>
+
+	<varlistentry><term><varname>WRAPPER_TRANSFORM_CMDS</varname></term>
+		<listitem><para>A list of transformation commands. [TODO:
+		investigate further]</para></listitem></varlistentry>
+
+<!-- These should probably be internal variables
+	<varlistentry><term><varname>WRAPPEES</varname></term>
+		<listitem><para></para></listitem></varlistentry>
+	<varlistentry><term><varname>UNWRAP_PATTERNS</varname></term>
+		<listitem><para></para></listitem></varlistentry>
+	<varlistentry><term><varname>UNWRAP_FILES</varname></term>
+		<listitem><para></para></listitem></varlistentry>
+-->
+
+	</variablelist>
 </sect1>
 
 <sect1 id="build.configure">
