@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/04/06 06:21:38 reed Exp $
+# $NetBSD: Makefile,v 1.31 2006/04/21 09:18:37 rillig Exp $
 #
 
 DISTNAME=		jabberd-2.0s10
@@ -10,20 +10,20 @@ MAINTAINER=		xtraeme@NetBSD.org
 HOMEPAGE=		http://jabberd.jabberstudio.org/2/
 COMMENT=		Instant messaging server (version 2)
 
-CONFLICTS=		jabberd-[0-9]*:../../chat/jabberd
+CONFLICTS=		jabberd-[0-9]*
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.6b
-BUILDLINK_TRANSFORM.db4=	-e "s,/db4/,/,g"
+BUILDLINK_TRANSFORM.db4+=	-e "s,/db4/,/,g"
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	configure
-SUBST_MESSAGE.path=	"Fixing configure script."
-SUBST_SED.path=		-e "s,/usr/local,${PREFIX},g"			\
-			-e "s,\$$sysconfdir/jabberd,\$$sysconfdir,g"
+SUBST_MESSAGE.path=	Fixing configure script.
+SUBST_SED.path=		-e "s,/usr/local,${PREFIX},g"
+SUBST_SED.path+=	-e "s,\$$sysconfdir/jabberd,\$$sysconfdir,g"
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--disable-mysql
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--enable-anon
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-fs
 
-REPLACE_PERL=		tools/*.pl
+REPLACE_PERL+=		tools/*.pl
 
 .include "../../mk/bsd.prefs.mk"
 
