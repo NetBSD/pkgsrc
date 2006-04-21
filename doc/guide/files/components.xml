@@ -1,9 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.22 2006/03/17 19:45:30 wiz Exp $ -->
-
-<!--
-	TODO: after 2006Q1, "SITES_" should be replaced with "SITES.".
-	(2 times)
--->
+<!-- $NetBSD: components.xml,v 1.23 2006/04/21 07:55:16 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -107,14 +102,14 @@
 	  <para>If the package has multiple
 	    <varname>DISTFILES</varname> or multiple
 	    <varname>PATCHFILES</varname> from different
-	    sites, set <varname>SITES_foo</varname> to a list of URIs
+	    sites, set <varname>SITES.foo</varname> to a list of URIs
 	    where file <quote>foo</quote> may be
 	    found. <quote>foo</quote> includes the suffix, e.g.:</para>
 
 <programlisting>
     DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
     DISTFILES+=     foo-file.tar.gz
-    SITES_foo-file.tar.gz= \
+    SITES.foo-file.tar.gz= \
             http://www.somewhere.com/somehow/ \
             http://www.somewhereelse.com/mirror/somehow/
 </programlisting>
