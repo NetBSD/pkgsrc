@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:39:47 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/21 02:07:53 wulf Exp $
 bin/dpgate
 bin/dpcodeconv
 bin/dpmybbs
@@ -64,6 +64,7 @@ share/dpbox/language/SP.LAN
 share/dpbox/language/SPC.LAN
 share/dpbox/language/SW.LAN
 share/examples/dpbox/conf/dpbox.ini
+share/examples/dpbox/conf/crawler/stopwords
 share/examples/dpbox/conf/sf/db0xyz.sf
 share/examples/dpbox/conf/system/badwords.box
 share/examples/dpbox/conf/system/bcast.box
@@ -116,6 +117,7 @@ libexec/dpbox/search
 @dirrm share/dpbox/language
 @dirrm share/examples/dpbox/conf/sf
 @dirrm share/examples/dpbox/conf/system
+@dirrm share/examples/dpbox/conf/crawler
 @dirrm share/examples/dpbox/conf
 @dirrm share/examples/dpbox
 @dirrm libexec/dpbox

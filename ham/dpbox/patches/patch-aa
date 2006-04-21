@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2003/06/07 15:20:31 jmmv Exp $
+$NetBSD: patch-aa,v 1.4 2006/04/21 02:07:54 wulf Exp $
 
---- Makefile.netbsd.orig	2000-04-27 14:48:57.000000000 +0200
-+++ Makefile.netbsd
+--- Makefile.netbsd.orig	2000-04-27 22:18:57.000000000 +0930
++++ Makefile.netbsd	2006-04-21 10:41:09.000000000 +0930
 @@ -1,9 +1,9 @@
  ###############################################################################
  #                                                                             #
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.3 2003/06/07 15:20:31 jmmv Exp $
  # Author :     Berndt Josef Wulf, VK5ABN                                      #
  #                                                                             #
  ###############################################################################
-@@ -19,11 +19,12 @@ INSTALL_DATA	= ${INSTALL} -m 444
+@@ -19,11 +19,12 @@
  INSTALL_CONF	= ${INSTALL} -m 440
  MKDIR		= mkdir -p
  LN		= ln -sf
@@ -30,7 +30,18 @@ $NetBSD: patch-aa,v 1.3 2003/06/07 15:20:31 jmmv Exp $
  docdir		= $(prefix)/share/doc/dpbox
  landir		= $(prefix)/share/dpbox/language
  spooldir	= /var/spool/dpbox
-@@ -100,7 +101,8 @@ install: all
+@@ -63,10 +64,6 @@
+ 
+ OTHER_SRCS	= dpputlinks.c dpcodeconv.c dpgate.c crawler.c dpmybbs.c
+ 
+-SUBDIRS		= indexes infofiles newmail import save crawler \
+-		  fileserv fileserv/incoming fileserv/temp7pl fileserv/newbin \
+-		  privserv privserv/temp7pl proto server stat stat/extusers
+-
+ all:	dpbox crawler cgi toolbox
+ 
+ tgz:
+@@ -100,7 +97,8 @@
  	$(INSTALL_PROGRAM) dpputlinks $(bindir)
  	$(INSTALL_PROGRAM) dpcodeconv $(bindir)
  	$(INSTALL_PROGRAM) dpmybbs $(bindir)
@@ -40,20 +51,45 @@ $NetBSD: patch-aa,v 1.3 2003/06/07 15:20:31 jmmv Exp $
  
  	$(MKDIR) $(docdir)
  	$(INSTALL_DATA) ../document/* $(docdir)
-@@ -148,6 +150,9 @@ install: all
- 	  echo "*  and manually adjust the configuration files where      *"; \
- 	  echo "*  necessary.                                             *"; \
- 	  echo "*                                                         *"; \
-+	  echo "*  A number of example configuration files can be found   *"; \
-+	  echo "*  in the ${exampledir} directory.   *"; \
-+	  echo "*                                                         *"; \
- 	  echo "***********************************************************"; \
- 	else \
- 	  $(MKDIR) $(confdir); \
-@@ -158,24 +163,45 @@ install: all
- 	  $(INSTALL_CONF) ../sf/* $(confdir)/sf; \
- 	fi
+@@ -123,59 +121,51 @@
+ 	$(LN) HELP_SYS.DL $(landir)/HELP_SYS.HB
+ 	$(LN) HELP_SYS.DL $(landir)/HELP_SYS.OE1
  
+-	for i in $(SUBDIRS); \
+-	do \
+-		$(MKDIR) $(spooldir)/$$i; \
+-	done;
+-
+ 	$(MKDIR) $(prefix)/libexec/dpbox
+ 	$(INSTALL) -m 555 ../run/* $(prefix)/libexec/dpbox
+ 	$(INSTALL_PROGRAM) crawler $(prefix)/libexec/dpbox
+-	$(INSTALL_DATA) ../crawler/stopwords $(spooldir)/crawler
+ 
+-	@if [ -f ${confdir}/dpbox.ini ]; then \
+-	  echo "***********************************************************"; \
+-	  echo "*                                                         *"; \
+-	  echo "*                      W A R N I N G                      *"; \
+-	  echo "*                      =============                      *"; \
+-	  echo "*                                                         *"; \
+-	  echo "*  A previously installed version of DPBOX was dected     *"; \
+-	  echo "*  on this system. The installation of the configuration  *"; \
+-	  echo "*  files was suspended in order to preserve the           *"; \
+-	  echo "*  old configuration.                                     *"; \
+-	  echo "*                                                         *"; \
+-	  echo "*  Please refer to the documentation and CHANGE logfile   *"; \
+-	  echo "*  and manually adjust the configuration files where      *"; \
+-	  echo "*  necessary.                                             *"; \
+-	  echo "*                                                         *"; \
+-	  echo "***********************************************************"; \
+-	else \
+-	  $(MKDIR) $(confdir); \
+-	  $(INSTALL_CONF) ../dpbox.ini $(confdir)/dpbox.ini; \
+-	  $(MKDIR) $(confdir)/system; \
+-	  $(INSTALL_CONF) ../system/* $(confdir)/system ; \
+-	  $(MKDIR) $(confdir)/sf ; \
+-	  $(INSTALL_CONF) ../sf/* $(confdir)/sf; \
+-	fi
+-
 -	@if [ -e ${cgidir} ]; then \
 -	  echo "installing cgi-scripts"; \
 -	  $(INSTALL) -m 755 ../cgi/cgi/* $(cgidir); \
@@ -72,12 +108,14 @@ $NetBSD: patch-aa,v 1.3 2003/06/07 15:20:31 jmmv Exp $
 -	@echo 
 -	@echo Now edit the configuration files in $(confdir) and 
 -	@echo $(confdir)/dpbox.ini!!!
-+	$(MKDIR) $(exampledir); \
-+	$(INSTALL_CONF) ../dpbox.ini $(exampledir)/dpbox.ini; \
-+	$(MKDIR) $(exampledir)/system; \
-+	$(INSTALL_CONF) ../system/* $(exampledir)/system ; \
-+	$(MKDIR) $(exampledir)/sf ; \
-+	$(INSTALL_CONF) ../sf/* $(exampledir)/sf; \
++	$(MKDIR) $(exampledir)
++	$(INSTALL_CONF) ../dpbox.ini $(exampledir)/dpbox.ini
++	$(MKDIR) $(exampledir)/crawler
++	$(INSTALL_DATA) ../crawler/stopwords $(exampledir)/crawler
++	$(MKDIR) $(exampledir)/system
++	$(INSTALL_CONF) ../system/* $(exampledir)/system
++	$(MKDIR) $(exampledir)/sf
++	$(INSTALL_CONF) ../sf/* $(exampledir)/sf
 +
 +	$(MKDIR) $(cgidir)
 +	echo "installing cgi-scripts";
@@ -114,7 +152,7 @@ $NetBSD: patch-aa,v 1.3 2003/06/07 15:20:31 jmmv Exp $
  
  clean:
  	$(RM)  *.o *~ .*~ *.orig *.bak *.s *.core  
-@@ -193,4 +219,3 @@ dep:
+@@ -193,4 +183,3 @@
  ifeq (.depend,$(wildcard .depend))
  include .depend
  endif
