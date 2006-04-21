@@ -1,0 +1,38 @@
+$NetBSD: patch-ab,v 1.1 2006/04/21 07:15:38 wulf Exp $
+
+--- libmpeg2/cpu_accel.c.orig	2006-04-20 16:42:06.000000000 +0930
++++ libmpeg2/cpu_accel.c	2006-04-20 17:04:24.000000000 +0930
+@@ -37,7 +37,7 @@
+     int AMD;
+     uint32_t caps;
+ 
+-#if !defined(PIC) && !defined(__PIC__)
++#if defined(__x86_64__) || (!defined(PIC) && !defined(__PIC__))
+ #define cpuid(op,eax,ebx,ecx,edx)	\
+     __asm__ ("cpuid"			\
+ 	     : "=a" (eax),		\
+@@ -46,7 +46,7 @@
+ 	       "=d" (edx)		\
+ 	     : "a" (op)			\
+ 	     : "cc")
+-#else	/* PIC version : save ebx */
++#else	/* PIC version : save ebx (not needed on x86_64) */
+ #define cpuid(op,eax,ebx,ecx,edx)	\
+     __asm__ ("push %%ebx\n\t"		\
+ 	     "cpuid\n\t"		\
+@@ -60,6 +60,7 @@
+ 	     : "cc")
+ #endif
+ 
++#ifndef __x86_64__ /* x86_64 supports the cpuid op */
+     __asm__ ("pushf\n\t"
+ 	     "pushf\n\t"
+ 	     "pop %0\n\t"
+@@ -77,6 +78,7 @@
+ 
+     if (eax == ebx)		/* no cpuid */
+ 	return 0;
++#endif
+ 
+     cpuid (0x00000000, eax, ebx, ecx, edx);
+     if (!eax)			/* vendor string only */
