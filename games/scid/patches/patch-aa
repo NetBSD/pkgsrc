@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/02/20 16:18:41 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2006/04/21 11:52:19 joerg Exp $
 
---- configure.orig	2004-03-02 13:09:53.000000000 -0600
+--- configure.orig	2004-03-02 19:09:53.000000000 +0000
 +++ configure
 @@ -26,6 +26,9 @@ tclsh=tclsh;
  ##  done; \
@@ -12,6 +12,20 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/02/20 16:18:41 minskim Exp $
  # Now execute this script using the best tclsh version found:
  # The backslash at the end of this line is needed: \
  exec $tclsh "$0" ${1+"$@"}
+@@ -61,10 +64,10 @@ set var(TCL_VERSION) $tcl_version
+ set var(WARNINGS) -Wall
+ set var(ZLIB) -lz
+ 
+-set defaultVar(TCL_INCLUDE) {-I/usr/include}
+-set defaultVar(TCL_LIBRARY) {-L/usr/lib -ltcl$(TCL_VERSION) -ldl}
++set defaultVar(TCL_INCLUDE) {-I@TCLPREFIX@/include}
++set defaultVar(TCL_LIBRARY) {-L@TCLPREFIX@/lib -Wl,-R@TCLPREFIX@/lib -ltcl$(TCL_VERSION) @LIBDL@}
+ set defaultVar(TK_LIBRARY) \
+-    {$(TCL_LIBRARY) -ltk$(TCL_VERSION) -L/usr/X11R6/lib -lX11}
++    {-L@TKPREFIX@/lib -Wl,-R@TKPREFIX@/lib $(TCL_LIBRARY) -ltk$(TCL_VERSION) $(X_LDFLAGS) -lX11}
+ 
+ 
+ # findDir:
 @@ -105,14 +108,8 @@ proc findTclTkPaths {} {
  
      # headerPath: List of possible locations for tcl.h and tk.h
