@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/04 21:28:53 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/21 14:32:02 jlam Exp $
 #
 
 DISTNAME=	mousetar-20021217
@@ -26,7 +26,7 @@ CPPFLAGS+=	-DTAR_INODE_INTERNAL
 CPPFLAGS+=	-DLINUX_NAMLEN
 .endif
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-extract:
 	for f in ${DISTFILES}; do					\
@@ -38,6 +38,6 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mousetar ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/tar.man ${PREFIX}/man/man1/mousetar.1
+	${INSTALL_MAN} ${WRKSRC}/tar.man ${PREFIX}/${PKGMANDIR}/man1/mousetar.1
 
 .include "../../mk/bsd.pkg.mk"
