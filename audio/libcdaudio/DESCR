@@ -4,12 +4,12 @@ includes a basic command set for controlling the operation of the
 CD-ROM drive as well as functions for accessing both the CDDB, CD
 Index, and Cover Art Index.
 
-  It is recommened that all programs wishing to specifically use CDDB
+  It is recommended that all programs wishing to specifically use CDDB
 data use the FreeDB at "http://www.freedb.org/", which works well with
 libcdaudio.
 
   The CD Index ("http://www.cdindex.org/") is a rethought track
-information mangement system that uses SQL servers to manage the data.
+information management system that uses SQL servers to manage the data.
 This is another track information method libcdaudio is capable of
 using.
 

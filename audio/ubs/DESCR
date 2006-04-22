@@ -4,6 +4,6 @@ station ID's, public service announcements, and songs. This program is
 similar in function (but not design nor implementation) to DRS 2006.
 
 The UBS was not intended to be used for webcasting, but it could presumably
-be adapted for this purpose. The intented audience of the UBS is smaller
+be adapted for this purpose. The intended audience of the UBS is smaller
 college/high school/commercial radio stations which wish to do unattended
 broadcasting via a stable and reliable computer daemon.

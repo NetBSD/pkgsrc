@@ -14,5 +14,5 @@ script is simple:
 
 After transcoding, you will have matching, tagged MP3 files in the
 same directory.  Note:  Only use this script on flac files that you
-trust to have non-malicous tags (ie, ones that you've created
+trust to have non-malicious tags (ie, ones that you've created
 yourself).
