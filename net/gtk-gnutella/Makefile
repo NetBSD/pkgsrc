@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2006/04/17 13:46:43 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2006/04/22 17:32:34 joerg Exp $
 
 DISTNAME=	gtk-gnutella-0.96
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk-gnutella/}
 EXTRACT_SUFX=	.tar.bz2
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	-d -e -r -s \
 			-D official="true" \
 			-U optimize
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
