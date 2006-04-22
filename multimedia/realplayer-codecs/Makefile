@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:30:15 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/04/22 09:22:12 rillig Exp $
 #
 
 DISTNAME=	rp8codecs${RP_ARCH}-20050115
@@ -35,7 +35,7 @@ RP_ARCH=	-alpha
 
 NO_BUILD=	YES
 
-RESTRICTED=	"Unsure of codec's license"
+RESTRICTED=	Unsure of codec's license
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_CDROM=${RESTRICTED}

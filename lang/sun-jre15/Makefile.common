@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2006/03/22 22:50:32 tv Exp $
+# $NetBSD: Makefile.common,v 1.12 2006/04/22 09:22:10 rillig Exp $
 
 CATEGORIES=	lang java
 COMMENT=	Sun's Java(tm) 2 Standard Edition, ${DOWNLOAD_NAME}
@@ -11,7 +11,7 @@ DOWNLOAD_NAME=	${SHORT_NAME} 5.0 Update ${PKGNAME_NOREV:C/^.*\.//}
 ARCHIVE=	http://java.sun.com/products/archive/index.html
 
 LICENSE=	jdk13-license
-RESTRICTED=	"Redistribution of repackaged binaries not permitted"
+RESTRICTED=	Redistribution of repackaged binaries not permitted
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}

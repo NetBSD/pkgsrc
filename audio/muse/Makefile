@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/04/17 13:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/04/22 09:22:06 rillig Exp $
 #
 
 DISTNAME=	MuSE-0.9
@@ -28,7 +28,7 @@ SUBST_CLASSES+=		dsp
 SUBST_STAGE.dsp=	post-patch
 SUBST_FILES.dsp=	src/jmixer.cpp src/libmpeg/fileplayer.cc
 SUBST_SED.dsp=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
-SUBST_MESSAGE.dsp=	"Fixing hardcoded audio device."
+SUBST_MESSAGE.dsp=	Fixing hardcoded audio device.
 
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"

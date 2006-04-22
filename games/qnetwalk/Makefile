@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/17 13:46:29 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/04/22 09:22:09 rillig Exp $
 #
 
 DISTNAME=	qnetwalk-1.2
@@ -25,7 +25,7 @@ do-configure:
 
 # Fix hardcoded paths
 SUBST_CLASSES+=		path
-SUBST_MESSAGE.path=	"Fixing hardcoded paths."
+SUBST_MESSAGE.path=	Fixing hardcoded paths.
 SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	qnetwalk.pro main.cpp mainwindow.cpp
 SUBST_SED.path=		-e 's:@QNETWALK_BIN@:${QNETWALK_BIN}:g'

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2006/04/17 13:46:36 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2006/04/22 09:22:10 rillig Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	12
@@ -19,7 +19,7 @@ COMMENT=	X11 program that displays images of various formats
 USE_IMAKE=	YES
 
 # See the end of README in work/xv-3.10a for details.
-RESTRICTED=	"Distribution of modified copies and commercial distribution is not permitted."
+RESTRICTED=	Distribution of modified copies and commercial distribution is not permitted.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}

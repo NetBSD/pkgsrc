@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/04/17 13:46:20 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2006/04/22 09:22:07 rillig Exp $
 #
 
 DISTNAME=	cvsgraph-1.6.0
@@ -25,7 +25,7 @@ SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-install
 SUBST_FILES.man= 	cvsgraph.1
 SUBST_SED.man=		-e "s|/usr/local/etc|${PKG_SYSCONFDIR}|g"
-SUBST_MESSAGE.man=	"Fixing man page paths."
+SUBST_MESSAGE.man=	Fixing man page paths.
 
 INSTALLATION_DIRS=	bin man/man1 man/man5
 

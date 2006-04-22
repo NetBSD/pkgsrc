@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:30:33 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/22 09:22:14 rillig Exp $
 #
 
 DISTNAME=       amap-5.0
@@ -30,7 +30,7 @@ SUBST_SED.conf=		-e 's|@PREFIX@|${PREFIX}|g' \
 			-e 's|@COMPILER_RPATH_FLAG@|${COMPILER_RPATH_FLAG}|g' \
 			-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g' \
 			-e "s|@UNAME@|${UNAME}|g"
-SUBST_MESSAGE.conf=	"Fixing configure script."
+SUBST_MESSAGE.conf=	Fixing configure script.
 
 INSTALLATION_DIRS=	bni man/man1
 

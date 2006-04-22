@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/03/04 21:31:06 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2006/04/22 09:22:17 rillig Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-libs-${XF_VER}
@@ -39,7 +39,7 @@ SUBST_CLASSES+=		mkstrs
 SUBST_STAGE.mkstrs=	post-patch
 SUBST_FILES.mkstrs=	config/cf/Library.tmpl
 SUBST_SED.mkstrs=	-e 's,@MAKESTRS@,${X11ROOT}/bin/makestrs,g'
-SUBST_MESSAGE.mkstrs=	"Fixing path of makestrs."
+SUBST_MESSAGE.mkstrs=	Fixing path of makestrs.
 
 .if ${OPSYS} == "Linux"
 post-install:

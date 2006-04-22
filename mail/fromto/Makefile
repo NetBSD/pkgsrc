@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/07/16 01:19:12 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/22 09:22:11 rillig Exp $
 #
 
 DISTNAME=	fromto-1.5
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	#empty
 MAINTAINER=	bad@NetBSD.org
 COMMENT=	Sendmail logfile viewer
 
-RESTRICTED=	"Redistribution allowed for non-commercial purposes only"
+RESTRICTED=	Redistribution allowed for non-commercial purposes only
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	perl:run

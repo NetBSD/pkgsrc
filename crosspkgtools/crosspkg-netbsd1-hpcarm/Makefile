@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/12 14:06:30 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/22 09:22:07 rillig Exp $
 
 DISTNAME=	crosspkg-netbsd1-hpcarm-1.6.2
 CATEGORIES=     crosspkgtools
@@ -26,7 +26,7 @@ SITES.xsrc.tgz=		${SRC_SITES}
 EXTRACT_ONLY=	# empty
 NO_BUILD=	YES
 
-NO_PACKAGE=	"needs work to function properly as a binary package"
+NO_PACKAGE=	needs work to function properly as a binary package
 
 # Dynamically generate the PLIST from the installed files.
 CROSSFS_PLIST_FILES= \

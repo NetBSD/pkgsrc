@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/12/29 06:22:05 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/04/22 09:22:13 rillig Exp $
 
 DISTNAME=		autoswc-1.5
 CATEGORIES=		pkgtools sysutils
@@ -30,7 +30,7 @@ EVAL_PREFIX+=			PREFIX.libtool=libtool
 PREFIX.libtool_DEFAULT=		${LOCALBASE}
 
 SUBST_CLASSES+=		build
-SUBST_MESSAGE.build=	"Building autoswc."
+SUBST_MESSAGE.build=	Building autoswc.
 SUBST_STAGE.build=	do-build
 SUBST_FILES.build=	autoswc
 SUBST_FILES.build+=	autoswc.8

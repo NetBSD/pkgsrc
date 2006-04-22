@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/17 13:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/22 09:22:15 rillig Exp $
 
 DISTNAME=	gdick-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ PYDISTUTILSPKG=	yes
 NO_CONFIGURE=	yes
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	GNOME_GDick.server lib/gdick/gdick.py
 SUBST_SED.paths=	-e 's,/usr/,${PREFIX}/,g'
