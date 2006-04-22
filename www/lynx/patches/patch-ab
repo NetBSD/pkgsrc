@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.8 2006/04/22 15:08:04 joerg Exp $
+
+--- cfg_defs.sh.orig	2006-04-22 17:02:33.000000000 +0200
++++ cfg_defs.sh
+@@ -19,6 +19,7 @@ static CONST struct {
+ EOF
+ 
+ sed \
++	-e '/MSGFMT/d' \
+ 	-e '/^#/d'     \
+ 	-e 's/^.[^=]*_cv_//' \
+ 	-e 's/=\${.*=/=/'  \
