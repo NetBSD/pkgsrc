@@ -1,8 +1,20 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/03/07 08:13:56 hamajima Exp $
+$NetBSD: patch-aa,v 1.2 2006/04/22 17:24:27 joerg Exp $
 
---- cnxtshot.c.orig	2004-01-14 02:16:20.000000000 +0900
-+++ cnxtshot.c	2004-03-07 08:21:38.000000000 +0900
-@@ -61,7 +61,7 @@
+--- cnxtshot.c.orig	2004-01-13 17:16:20.000000000 +0000
++++ cnxtshot.c
+@@ -39,7 +39,11 @@
+ #include <string.h>
+ #include <err.h>
+ 
++#if defined(__DragonFly__)
++#include <bus/usb/usb.h>
++#else
+ #include <dev/usb/usb.h>
++#endif
+ 
+ #include "cnxt.h"
+ 
+@@ -61,7 +65,7 @@ int main(int argc, char *argv[])
  {
      int i;
      int ret;
@@ -11,16 +23,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/07 08:13:56 hamajima Exp $
  
      /* check option */
      if (argc == 1) {
---- cnxtview.c.orig	2004-01-14 02:20:15.000000000 +0900
-+++ cnxtview.c	2004-03-07 08:22:03.000000000 +0900
-@@ -78,8 +78,8 @@
-     int i;
-     int ret;
-     
--    fd = NULL;
--    efd = NULL;
-+    fd = 0;
-+    efd = 0;
- 
-     gtk_init(&argc, &argv);
-     gdk_imlib_init();
