@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.561 2006/04/21 09:42:01 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.562 2006/04/22 11:22:40 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1694,15 +1694,40 @@ my $load_tool_names_vartools = undef;
 my $load_tool_names_varname_to_toolname = undef;
 my $load_tool_names_predefined_vartools = undef;
 sub load_tool_names() {
-	my ($tools, $vartools, $predefined_vartools, $varname_to_toolname);
+	my ($tools, $vartools, $predefined_vartools, $varname_to_toolname, @tool_files);
+
+	#
+	# Get the list of files that define the tools from bsd.tools.mk.
+	#
+
+	@tool_files = ();
+	{
+		my $fname = "${current_dir}/${pkgsrcdir}/mk/tools/bsd.tools.mk";
+		my $lines = load_lines($fname, true);
+		if (!$lines) {
+			log_fatal($fname, NO_LINE_NUMBER, "Cannot be read.");
+		}
+
+		foreach my $line (@{$lines}) {
+			if ($line->text =~ regex_mk_include) {
+				my ($includefile) = ($1);
+				if ($includefile =~ qr"^\.\./\.\./mk/tools/(.*)$") {
+					push(@tool_files, $1);
+				}
+			}
+		}
+	}
+
+	#
+	# Scan the tool files for the actual definitions of the tools.
+	#
 
 	$tools = {};
 	$vartools = {};
 	$predefined_vartools = {};
 	$varname_to_toolname = {};
-	# TODO: get the list of additional tool files from bsd.tools.mk
-	foreach my $basename (qw(autoconf automake defaults gettext ldconfig make replace rpcgen texinfo)) {
-		my $fname = "${current_dir}/${pkgsrcdir}/mk/tools/${basename}.mk";
+	foreach my $basename (@tool_files) {
+		my $fname = "${current_dir}/${pkgsrcdir}/mk/tools/${basename}";
 		my $lines = load_lines($fname, true);
 
 		if (!$lines) {
