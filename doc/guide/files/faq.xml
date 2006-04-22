@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.22 2006/03/17 19:45:07 wiz Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.23 2006/04/22 05:43:51 lukem Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -405,7 +405,7 @@ but downloading the entire directory may not be appropriate.</para>
 <para>The answer here is to do a <command>make fetch-list</command> in
 <filename>/usr/pkgsrc</filename> or one of its subdirectories, carry the
 resulting list to your machine at work/school and use it there.  If you
-don't have a NetBSD-compatible &man.ftp.1; (like lukemftp) at work, don't
+don't have a NetBSD-compatible &man.ftp.1; (like tnftp) at work, don't
 forget to set <varname>FETCH_CMD</varname> to something that fetches a
 URL:</para>
 
