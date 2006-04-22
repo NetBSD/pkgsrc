@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2006/04/22 17:45:05 joerg Exp $
+$NetBSD: patch-ab,v 1.1 2006/04/22 17:45:05 joerg Exp $
 
---- cpia2shot.c.orig	2006-04-22 17:24:42.000000000 +0000
-+++ cpia2shot.c
-@@ -36,7 +36,11 @@
+--- cpia2view.c.orig	2006-04-22 17:24:42.000000000 +0000
++++ cpia2view.c
+@@ -40,7 +40,11 @@
  #include <string.h>
  #include <err.h>
  
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.2 2006/04/22 17:45:05 joerg Exp $
  #ifndef  USB_SET_PACKETCHKSUM
  #define USB_SET_PACKETCHKSUM	_IOW ('U', 115, int)
  #endif
-@@ -128,9 +132,9 @@ int main(int argc, char *argv[])
+@@ -142,9 +146,9 @@ int main(int argc, char *argv[])
      /* enable checksum to isoc data */
      chksum = 1;
      if ( (ret = ioctl(usbdev.fd, USB_SET_PACKETCHKSUM, (void *)&chksum)) != 0 ) {
