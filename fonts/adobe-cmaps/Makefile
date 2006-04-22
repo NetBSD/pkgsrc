@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:09:08 joerg Exp $
+# $NetBSD: Makefile,v 1.16.2.1 2006/04/22 23:37:45 salo Exp $
 
-DISTNAME=	adobe-cmaps-20051109
-PKGREVISION=	1
+DISTNAME=	adobe-cmaps-20060419
 CATEGORIES=	fonts print
 MASTER_SITES=	# empty
 
-CMAP_FILES=	ac15 ag14 ai0 aj16 aj20 ak12
+CMAP_FILES=	ac15 ag15 ai0 aj16 aj20 ak12
 RKSJ_FILES=	rksj-cmaps
 CMAP_DISTFILES=	${CMAP_FILES:S/$/.tar.Z/} ${RKSJ_FILES:S/$/.tar.Z/}
 .for FILE in ${CMAP_DISTFILES}
