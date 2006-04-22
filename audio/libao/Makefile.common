@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.25 2006/03/09 21:04:40 jlam Exp $
+# $NetBSD: Makefile.common,v 1.26 2006/04/22 07:32:24 lukem Exp $
 
 DISTNAME=	libao-0.8.6
 CATEGORIES=	audio devel
 MASTER_SITES=	http://downloads.xiph.org/releases/ao/
 
-MAINTAINER=	lukem@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xiph.org/ao/
 COMMENT=	Cross-platform audio library
 
