@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/04/17 13:46:42 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2006/04/22 09:22:11 rillig Exp $
 #
 
 .include "../../multimedia/mkvtoolnix/Makefile.dist"
@@ -23,7 +23,7 @@ SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
 SUBST_FILES.man=	doc/mmg.1
 SUBST_SED.man=		's,(doc/,(${PREFIX}/share/doc/mmg/,g'
-SUBST_MESSAGE.man=	"Fixing paths in manual page."
+SUBST_MESSAGE.man=	Fixing paths in manual page.
 
 INSTALLATION_DIRS=	bin man/man1
 

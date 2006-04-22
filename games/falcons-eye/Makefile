@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/03/14 01:14:28 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2006/04/22 09:22:08 rillig Exp $
 #
 
 DISTNAME=		nethack_source_331_jtp_193
@@ -26,7 +26,7 @@ INSTALL_SRC=		# empty
 LIBS.SunOS+=		-lm
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Configuring program paths."
+SUBST_MESSAGE.paths=	Configuring program paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	include/config.h src/fe-config.in
 SUBST_SED.paths=	-e "s,XXXPREFIXXXX,${PREFIX},g" \
@@ -36,7 +36,7 @@ SUBST_SED.paths=	-e "s,XXXPREFIXXXX,${PREFIX},g" \
 
 .if ${OPSYS} == "NetBSD"
 SUBST_CLASSES+=		unixconf
-SUBST_MESSAGE.unixconf=	"Configuring to use NetBSD presets."
+SUBST_MESSAGE.unixconf=	Configuring to use NetBSD presets.
 SUBST_STAGE.unixconf=	post-patch
 SUBST_FILES.unixconf=	include/unixconf.h
 SUBST_SED.unixconf=	-e 's,^\/\* \#define BSD 1 \*\/,\#define BSD 1,' \

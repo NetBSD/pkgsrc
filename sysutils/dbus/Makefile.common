@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2006/04/06 06:22:45 reed Exp $
+# $NetBSD: Makefile.common,v 1.15 2006/04/22 09:22:14 rillig Exp $
 #
 
 DBUS_VERSION=	0.61
@@ -58,7 +58,7 @@ COMMENT+=		(${DBUS_INTERFACE} interface)
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_MESSAGE.paths=	"Fixing paths to installed dbus\' libraries."
+SUBST_MESSAGE.paths=	Fixing paths to installed dbus\' libraries.
 SUBST_SED.paths=	-e 's|$$(top_builddir)/dbus/libdbus-1.la|${BUILDLINK_PREFIX.dbus}/lib/libdbus-1.la|g'
 SUBST_FILES.paths=
 
