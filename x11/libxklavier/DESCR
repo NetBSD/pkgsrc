@@ -1,5 +1,5 @@
 libxklavier is a library providing high-level API for X Keyboard Extension
-known as XKB.  This library is indended to support XFree86 and other
+known as XKB.  This library is intended to support XFree86 and other
 commercial X servers.  It is useful for creating XKB-related software
 (layout indicators etc).
 
