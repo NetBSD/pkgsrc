@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/09 12:44:15 manu Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/22 09:22:15 rillig Exp $
 #
 
 PKGNAME=		nvnet-20050620nb1
@@ -16,7 +16,7 @@ COMMENT=		Driver for nVidia ethernet
 
 LICENSE=                nvidia-license
 
-RESTRICTED=             "nVidia Licensed Software: http://www.nvidia.com/object/nv_swlicense.html"
+RESTRICTED=             nVidia Licensed Software: http://www.nvidia.com/object/nv_swlicense.html
 NO_SRC_ON_CDROM=        ${RESTRICTED}
 NO_BIN_ON_CDROM=        ${RESTRICTED}
 NO_SRC_ON_FTP=          ${RESTRICTED}

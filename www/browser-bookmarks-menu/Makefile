@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/17 13:46:51 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/22 09:22:16 rillig Exp $
 #
 
 DISTNAME=	browser-bookmarks-menu-0.3
@@ -16,7 +16,7 @@ PYTHON_PATCH_SCRIPTS=	browser-bookmarks-menu.py
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_MESSAGE.paths=	"Fixing paths to installed files."
+SUBST_MESSAGE.paths=	Fixing paths to installed files.
 SUBST_FILES.paths=	BrowserBookmarksMenu.server
 SUBST_FILES.paths+=	browser-bookmarks-menu.py
 SUBST_SED.paths=	-e 's|/usr|${PREFIX}|g'

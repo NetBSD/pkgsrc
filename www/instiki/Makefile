@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/29 06:22:23 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/22 09:22:16 rillig Exp $
 
 DISTNAME=	instiki-0.9.2
 PKGREVISION=	4
@@ -20,7 +20,7 @@ REPLACE_RUBY=		instiki
 INSTIKI_DIR=	${PREFIX}/share/${PKGBASE}
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	app/controllers/wiki.rb
 SUBST_SED.paths=							\

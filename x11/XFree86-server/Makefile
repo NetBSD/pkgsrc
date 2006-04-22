@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/03/04 21:31:06 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/04/22 09:22:17 rillig Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		XFree86-server-${XF_VER}
@@ -31,14 +31,14 @@ SUBST_FILES.parser=	programs/Xserver/hw/xfree86/parser/Makefile
 SUBST_SED.parser=	-e '/$$(INSTALL).*lib$$(LIBNAME).a/ d'
 SUBST_SED.parser+=	-e '/$$(RANLIB).*lib$$(LIBNAME).a/ d'
 SUBST_SED.parser+=	-e 's|$$(INSTALL) $$(INSTALLFLAGS) $$(INSTINCFLAGS)|echo|'
-SUBST_MESSAGE.parser=	"Fixing parser Makefile."
+SUBST_MESSAGE.parser=	Fixing parser Makefile.
 
 SUBST_CLASSES+=		stubs
 SUBST_STAGE.stubs=	pre-install
 SUBST_FILES.stubs=	lib/font/stubs/Makefile
 SUBST_SED.stubs=	-e '/$$(INSTALL).*libfntstubs.a/ d'
 SUBST_SED.stubs+=	-e '/$$(RANLIB).*libfntstubs.a/ d'
-SUBST_MESSAGE.stubs=	"Fixing stubs Makefile."
+SUBST_MESSAGE.stubs=	Fixing stubs Makefile.
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/04/08 19:57:15 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/22 09:22:06 rillig Exp $
 #
 
 # Note: The file ftp://ftp.icb.net/pub/icb/icb-0.9grok2.tar.gz is way
@@ -15,7 +15,7 @@ COMMENT=		Internet CB - a mostly-defunct chat client
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-NO_SRC_ON_FTP=		"already in MASTER_SITE_LOCAL"
+NO_SRC_ON_FTP=		already in MASTER_SITE_LOCAL
 
 .include "../../mk/bsd.prefs.mk"
 

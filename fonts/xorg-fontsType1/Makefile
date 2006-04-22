@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/12 15:29:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/22 09:22:08 rillig Exp $
 
 DISTNAME=	X11R${XORG_VER}-src1
 PKGNAME=	xorg-fontsType1-${XORG_VER}
@@ -20,7 +20,7 @@ SUBST_CLASSES+=		font
 SUBST_STAGE.font=	post-patch
 SUBST_FILES.font=	 config/cf/X11.tmpl
 SUBST_SED.font=		-e "s,FCCACHE = \$$(BINDIR)/fc-cache,FCCACHE=${LOCALBASE}/bin/fc-cache,"
-SUBST_MESSAGE.font=	"Fixing path of fc-cache."
+SUBST_MESSAGE.font=	Fixing path of fc-cache.
 
 SUBST_CLASSES+=		scaled
 SUBST_STAGE.scaled=	post-configure
