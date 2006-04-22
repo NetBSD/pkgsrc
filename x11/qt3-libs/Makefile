@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/04/17 13:45:59 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2006/04/22 09:22:17 rillig Exp $
 
 PKGNAME=	qt3-libs-${QTVERSION}
 PKGREVISION=	1
@@ -43,7 +43,7 @@ do-install:
 
 .if ${OPSYS} == "Darwin" && empty(MACHINE_PLATFORM:MDarwin-[567].*)
 SUBST_CLASSES+=		socklen
-SUBST_MESSAGE.socklen=	"Correcting socklen_t."
+SUBST_MESSAGE.socklen=	Correcting socklen_t.
 SUBST_STAGE.socklen=	pre-configure
 SUBST_FILES.socklen=	mkspecs/darwin-g++/qplatformdefs.h
 SUBST_SED.socklen=	-e 's/QT_SOCKLEN_T.*/QT_SOCKLEN_T socklen_t/'

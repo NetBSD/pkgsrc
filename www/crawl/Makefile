@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/29 06:22:22 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/22 09:22:16 rillig Exp $
 
 DISTNAME=	crawl-0.4
 PKGREVISION=	1
@@ -22,7 +22,7 @@ SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	cfg.h
 SUBST_SED.path=		-e 's,crawl.conf,${PKG_SYSCONFDIR}/crawl.conf,g'
-SUBST_MESSAGE.path=	"Fixing hardcoded path."
+SUBST_MESSAGE.path=	Fixing hardcoded path.
 
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"

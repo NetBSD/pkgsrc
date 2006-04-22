@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/12/05 20:50:51 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/22 09:22:13 rillig Exp $
 
 DISTNAME=	pkgfind-20050804
 CATEGORIES=	pkgtools
@@ -29,7 +29,7 @@ SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	pkgfind.c pkgfind.1
 SUBST_SED.path=		-e "s,/usr/pkgsrc,${PKGSRCDIR},g"
-SUBST_MESSAGE.path=	"Adjusting pkgsrc directory."
+SUBST_MESSAGE.path=	Adjusting pkgsrc directory.
 
 .include "../../mk/bsd.prefs.mk"
 

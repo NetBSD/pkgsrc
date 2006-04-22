@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2006/04/17 13:46:44 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2006/04/22 09:22:12 rillig Exp $
 
 DISTNAME=	mrtg-2.12.2
 PKGREVISION=	3
@@ -55,7 +55,7 @@ SUBST_STAGE.files=	post-patch
 SUBST_FILES.files=	../mrtg.conf.example ../netstat2mrtg		\
 			../sys2mrtg ../envstat2mrtg
 SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g"
-SUBST_MESSAGE.files=	"Fixing default configuration files."
+SUBST_MESSAGE.files=	Fixing default configuration files.
 
 INSTALLATION_DIRS=	bin libexec man/man1
 

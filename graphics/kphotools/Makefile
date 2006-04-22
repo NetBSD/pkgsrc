@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/17 13:46:33 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/04/22 09:22:09 rillig Exp $
 #
 
 DISTNAME=	kphotools-0.2.1
@@ -17,7 +17,7 @@ USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
 SUBST_CLASSES+=		kphotools
-SUBST_MESSAGE.kphotools=	"Fixing /usr/share path."
+SUBST_MESSAGE.kphotools=	Fixing /usr/share path.
 SUBST_FILES.kphotools=	src/GalleryThrd.cpp src/LogoWid.cpp src/LogoWid.ui src/StyleWid.ui.h
 SUBST_SED.kphotools=	-e 's|@kphotoolsdir@|${KDEDIR}/share/kde/apps/kphotools|'
 SUBST_STAGE.kphotools=	post-patch

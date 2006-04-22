@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2006/04/14 14:14:23 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.12 2006/04/22 09:22:16 rillig Exp $
 
 DISTNAME=		install_flash_player_7_${DISTUNAME}
 PKGNAME=		${MOZ_BIN}-flash-${FLASH_VERS:S/r/./}
@@ -21,7 +21,7 @@ DISTUNAME=		linux
 WRKNAME=		install_flash_player_7_${DISTUNAME}
 
 LICENSE=		flash-license
-RESTRICTED=             "Redistribution not permitted"
+RESTRICTED=             Redistribution not permitted
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
