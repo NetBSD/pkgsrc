@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/02/05 23:11:25 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2006/04/22 11:29:07 rillig Exp $
 
 DISTNAME=	ApacheJSSI-1.1.2
 PKGNAME=	jssi-1.1.2
@@ -10,12 +10,10 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://java.apache.org/
 COMMENT=	Java Server-Side Include engine as a JSDK-2.0 servlet
 
-BROKEN_IN=	pkgsrc-2005Q4
-
 # yes, this needs _exactly_ version 2.0
 DEPENDS+=	jsdk-2.0nb1:../../www/jsdk20
 
-WRKSRC=		${WRKDIR}/ApacheJSSI-1.1.2/src/java
+BUILD_DIRS=	src/java
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -24,14 +22,14 @@ NO_CONFIGURE=	yes
 MAKE_ENV+=	CLASSPATH=${CLASSPATH:Q}
 
 post-build:
-	(cd ${WRKSRC}/../../docs && ${SETENV} ${SCRIPTS_ENV} ${SH} generate_javadoc)
+	cd ${WRKSRC}/docs && ${SETENV} ${SCRIPTS_ENV} ${SH} ./generate_javadoc
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
-	${INSTALL_DATA} ${WRKSRC}/ApacheJSSI.jar ${PREFIX}/lib/java/ApacheJSSI.jar
+	${INSTALL_DATA} ${WRKSRC}/src/java/ApacheJSSI.jar ${PREFIX}/lib/java/ApacheJSSI.jar
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/jssi
-	${RM} -f ${WRKSRC}/../../docs/*.orig
-	cd ${WRKSRC}/../../docs && ${PAX} -rw -pp . ${PREFIX}/share/doc/java/jssi
+	${RM} -f ${WRKSRC}/docs/*.orig
+	cd ${WRKSRC}/docs && ${PAX} -rw -pp . ${PREFIX}/share/doc/java/jssi
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
