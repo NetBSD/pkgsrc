@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2006/04/17 13:44:46 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2006/04/22 07:07:55 wiz Exp $
 
 DISTNAME=	libpng-1.2.9
 PKGNAME=	${DISTNAME:S/lib//}
@@ -21,6 +21,12 @@ GNU_CONFIGURE=	yes
 PKGCONFIG_OVERRIDE=	scripts/libpng.pc.in
 TEST_TARGET=	test
 USE_LIBTOOL=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} != "i386"
+CPPFLAGS+=	-DPNG_NO_ASSEMBLER_CODE
+.endif
 
 SUBST_CLASSES+=		rpathfix
 SUBST_FILES.rpathfix=	scripts/libpng-config.in
