@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/11/14 06:05:20 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5.4.1 2006/04/22 23:37:45 salo Exp $
 share/Adobe/Resource/CMap/78-EUC-H
 share/Adobe/Resource/CMap/78-EUC-V
 share/Adobe/Resource/CMap/78-H
@@ -33,6 +33,7 @@ share/Adobe/Resource/CMap/Adobe-GB1-1
 share/Adobe/Resource/CMap/Adobe-GB1-2
 share/Adobe/Resource/CMap/Adobe-GB1-3
 share/Adobe/Resource/CMap/Adobe-GB1-4
+share/Adobe/Resource/CMap/Adobe-GB1-5
 share/Adobe/Resource/CMap/Adobe-GB1-UCS2
 share/Adobe/Resource/CMap/Adobe-Japan1-0
 share/Adobe/Resource/CMap/Adobe-Japan1-1
@@ -238,39 +239,40 @@ share/Adobe/Resource/ac15/CMap/UniCNS-UTF32-V
 share/Adobe/Resource/ac15/CMap/UniCNS-UTF8-H
 share/Adobe/Resource/ac15/CMap/UniCNS-UTF8-V
 share/Adobe/Resource/ac15/cid2code.txt
-share/Adobe/Resource/ag14/.nfsFA55
-share/Adobe/Resource/ag14/CMap/Adobe-GB1-0
-share/Adobe/Resource/ag14/CMap/Adobe-GB1-1
-share/Adobe/Resource/ag14/CMap/Adobe-GB1-2
-share/Adobe/Resource/ag14/CMap/Adobe-GB1-3
-share/Adobe/Resource/ag14/CMap/Adobe-GB1-4
-share/Adobe/Resource/ag14/CMap/GB-EUC-H
-share/Adobe/Resource/ag14/CMap/GB-EUC-V
-share/Adobe/Resource/ag14/CMap/GB-H
-share/Adobe/Resource/ag14/CMap/GB-V
-share/Adobe/Resource/ag14/CMap/GBK-EUC-H
-share/Adobe/Resource/ag14/CMap/GBK-EUC-V
-share/Adobe/Resource/ag14/CMap/GBK2K-H
-share/Adobe/Resource/ag14/CMap/GBK2K-V
-share/Adobe/Resource/ag14/CMap/GBKp-EUC-H
-share/Adobe/Resource/ag14/CMap/GBKp-EUC-V
-share/Adobe/Resource/ag14/CMap/GBT-EUC-H
-share/Adobe/Resource/ag14/CMap/GBT-EUC-V
-share/Adobe/Resource/ag14/CMap/GBT-H
-share/Adobe/Resource/ag14/CMap/GBT-V
-share/Adobe/Resource/ag14/CMap/GBTpc-EUC-H
-share/Adobe/Resource/ag14/CMap/GBTpc-EUC-V
-share/Adobe/Resource/ag14/CMap/GBpc-EUC-H
-share/Adobe/Resource/ag14/CMap/GBpc-EUC-V
-share/Adobe/Resource/ag14/CMap/UniGB-UCS2-H
-share/Adobe/Resource/ag14/CMap/UniGB-UCS2-V
-share/Adobe/Resource/ag14/CMap/UniGB-UTF16-H
-share/Adobe/Resource/ag14/CMap/UniGB-UTF16-V
-share/Adobe/Resource/ag14/CMap/UniGB-UTF32-H
-share/Adobe/Resource/ag14/CMap/UniGB-UTF32-V
-share/Adobe/Resource/ag14/CMap/UniGB-UTF8-H
-share/Adobe/Resource/ag14/CMap/UniGB-UTF8-V
-share/Adobe/Resource/ag14/cid2code.txt
+share/Adobe/Resource/ag15/.nfsFA55
+share/Adobe/Resource/ag15/CMap/Adobe-GB1-0
+share/Adobe/Resource/ag15/CMap/Adobe-GB1-1
+share/Adobe/Resource/ag15/CMap/Adobe-GB1-2
+share/Adobe/Resource/ag15/CMap/Adobe-GB1-3
+share/Adobe/Resource/ag15/CMap/Adobe-GB1-4
+share/Adobe/Resource/ag15/CMap/Adobe-GB1-5
+share/Adobe/Resource/ag15/CMap/GB-EUC-H
+share/Adobe/Resource/ag15/CMap/GB-EUC-V
+share/Adobe/Resource/ag15/CMap/GB-H
+share/Adobe/Resource/ag15/CMap/GB-V
+share/Adobe/Resource/ag15/CMap/GBK-EUC-H
+share/Adobe/Resource/ag15/CMap/GBK-EUC-V
+share/Adobe/Resource/ag15/CMap/GBK2K-H
+share/Adobe/Resource/ag15/CMap/GBK2K-V
+share/Adobe/Resource/ag15/CMap/GBKp-EUC-H
+share/Adobe/Resource/ag15/CMap/GBKp-EUC-V
+share/Adobe/Resource/ag15/CMap/GBT-EUC-H
+share/Adobe/Resource/ag15/CMap/GBT-EUC-V
+share/Adobe/Resource/ag15/CMap/GBT-H
+share/Adobe/Resource/ag15/CMap/GBT-V
+share/Adobe/Resource/ag15/CMap/GBTpc-EUC-H
+share/Adobe/Resource/ag15/CMap/GBTpc-EUC-V
+share/Adobe/Resource/ag15/CMap/GBpc-EUC-H
+share/Adobe/Resource/ag15/CMap/GBpc-EUC-V
+share/Adobe/Resource/ag15/CMap/UniGB-UCS2-H
+share/Adobe/Resource/ag15/CMap/UniGB-UCS2-V
+share/Adobe/Resource/ag15/CMap/UniGB-UTF16-H
+share/Adobe/Resource/ag15/CMap/UniGB-UTF16-V
+share/Adobe/Resource/ag15/CMap/UniGB-UTF32-H
+share/Adobe/Resource/ag15/CMap/UniGB-UTF32-V
+share/Adobe/Resource/ag15/CMap/UniGB-UTF8-H
+share/Adobe/Resource/ag15/CMap/UniGB-UTF8-V
+share/Adobe/Resource/ag15/cid2code.txt
 share/Adobe/Resource/ai0/CMap/Identity-H
 share/Adobe/Resource/ai0/CMap/Identity-V
 share/Adobe/Resource/aj16/CMap/78-EUC-H
@@ -474,8 +476,8 @@ share/Adobe/Resource/rksj-cmaps/TCVN-RKSJ-H
 @dirrm share/Adobe/Resource/aj16
 @dirrm share/Adobe/Resource/ai0/CMap
 @dirrm share/Adobe/Resource/ai0
-@dirrm share/Adobe/Resource/ag14/CMap
-@dirrm share/Adobe/Resource/ag14
+@dirrm share/Adobe/Resource/ag15/CMap
+@dirrm share/Adobe/Resource/ag15
 @dirrm share/Adobe/Resource/ac15/CMap
 @dirrm share/Adobe/Resource/ac15
 @dirrm share/Adobe/Resource/CMap
