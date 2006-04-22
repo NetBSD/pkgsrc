@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/08 22:36:42 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/04/22 17:07:19 joerg Exp $
 lib/ocaml/camlimages/Makefile.config
 lib/ocaml/camlimages/bitmap.cmi
 lib/ocaml/camlimages/bitmap.cmo
@@ -47,6 +47,12 @@ lib/ocaml/camlimages/colorhist.cmo
 lib/ocaml/camlimages/colorhist.cmx
 lib/ocaml/camlimages/colorhist.o
 lib/ocaml/camlimages/config.h
+${COND_DLL}lib/ocaml/camlimages/dllci_freetype.so
+${COND_DLL}lib/ocaml/camlimages/dllci_gif.so
+${COND_DLL}lib/ocaml/camlimages/dllci_jpeg.so
+${COND_DLL}lib/ocaml/camlimages/dllci_png.so
+${COND_DLL}lib/ocaml/camlimages/dllci_tiff.so
+${COND_DLL}lib/ocaml/camlimages/dllci_xpm.so
 lib/ocaml/camlimages/freetype.cmi
 lib/ocaml/camlimages/freetype.cmo
 lib/ocaml/camlimages/freetype.cmx
