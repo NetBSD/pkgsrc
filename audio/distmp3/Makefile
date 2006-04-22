@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/29 06:21:30 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/22 09:22:05 rillig Exp $
 #
 
 DISTNAME=		distmp3-0.1.9
@@ -18,13 +18,13 @@ CONF_FILES=		${EGDIR}/distmp3.conf ${PKG_SYSCONFDIR}/distmp3.conf
 REPLACE_PERL=		distmp3 distmp3host
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Fixing configuration file path."
+SUBST_MESSAGE.paths=	Fixing configuration file path.
 SUBST_STAGE.paths=	post-configure
 SUBST_FILES.paths=	distmp3 distmp3.1 distmp3host distmp3host.1
 SUBST_SED.paths=	-e 's,/etc/distmp3,${PKG_SYSCONFDIR},'
 
 SUBST_CLASSES+=		config
-SUBST_MESSAGE.config=	"Fixing configuration file parameters."
+SUBST_MESSAGE.config=	Fixing configuration file parameters.
 SUBST_STAGE.config=	post-configure
 SUBST_FILES.config=	distmp3.conf
 SUBST_SED.config+=	-e 's,^SERVER_PROGRAM,; SERVER_PROGRAM,'

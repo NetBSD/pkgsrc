@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/12/29 06:22:21 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/04/22 09:22:16 rillig Exp $
 #
 
 DISTNAME=	awstats-6.4
@@ -35,7 +35,7 @@ SUBST_SED.conf=		-e "s|@PREFIX@|${PREFIX}|g" \
 			-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g" \
 			-e "s|/var/log/httpd/mylog.log|${VARBASE}/log/httpd/access_log|g" \
 			-e "s|\"/etc/opt/awstats\"|\"/etc/opt/awstats\",\"${PKG_SYSCONFDIR}\"|g"
-SUBST_MESSAGE.conf=	"Fixing configuration files and scripts."
+SUBST_MESSAGE.conf=	Fixing configuration files and scripts.
 
 CONF_FILES+=	${PREFIX}/share/examples/awstats/awstats.conf \
 		${PKG_SYSCONFDIR}/awstats.model.conf

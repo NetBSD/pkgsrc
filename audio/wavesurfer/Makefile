@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/02/05 23:08:15 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/04/22 09:22:06 rillig Exp $
 
 DISTNAME=	wavesurfer-1.7.4
 PKGREVISION=	1
@@ -17,7 +17,7 @@ NO_BUILD=	yes
 USE_LANGUAGES=	# empty
 
 SUBST_CLASSES+=		wish
-SUBST_MESSAGE.wish=	"Fixing hardcoded command names."
+SUBST_MESSAGE.wish=	Fixing hardcoded command names.
 SUBST_STAGE.wish=	post-patch
 SUBST_FILES.wish=	wavesurfer.tcl
 SUBST_SED.wish=		-e 's,wish8.4,wish,g'

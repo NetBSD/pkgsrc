@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:59 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/22 09:22:15 rillig Exp $
 #
 
 DISTNAME=		RAIDAdmin1.3.1archive
@@ -13,7 +13,7 @@ COMMENT=		Tool to administer Apple's Xserve RAID
 
 LICENSE=		apple-admin-license
 
-RESTRICTED=		"Redistribution not permitted"
+RESTRICTED=		Redistribution not permitted
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=  	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}

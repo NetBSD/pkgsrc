@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/17 13:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/22 09:22:06 rillig Exp $
 #
 
 DISTNAME=	terminatorX-3.82
@@ -26,7 +26,7 @@ SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	post-patch
 SUBST_FILES.oss=	src/tX_global.c
 SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
-SUBST_MESSAGE.oss=	"Fixing hardcoded audio device."
+SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 
 .include "../../audio/ladspa/buildlink3.mk"
 .include "../../audio/libaudiofile/buildlink3.mk"

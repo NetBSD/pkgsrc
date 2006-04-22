@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/07 03:55:22 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/22 09:22:13 rillig Exp $
 
 DISTNAME=	# empty
 PKGNAME=	tex-foiltex-2.1.4a
@@ -11,7 +11,7 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tex.ac.uk/tex-archive/help/Catalogue/entries/foiltex.html
 COMMENT=	LaTeX2e class for overhead transparencies
 
-RESTRICTED=	"May not be redistributed for profit"
+RESTRICTED=	May not be redistributed for profit
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_CDROM=${RESTRICTED}
 

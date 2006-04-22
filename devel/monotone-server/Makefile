@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/04/10 17:46:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.18 2006/04/22 09:22:07 rillig Exp $
 #
 
 DISTNAME=	monotone-server-0.26
@@ -44,7 +44,7 @@ PKG_GROUPS=		${MONOTONE_GROUP}
 
 SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	do-configure
-SUBST_MESSAGE.vars=	"Configuring sources."
+SUBST_MESSAGE.vars=	Configuring sources.
 SUBST_FILES.vars=	*
 SUBST_SED.vars=		-e 's|@MONOTONE@|${PREFIX}/bin/mtn|g'
 SUBST_SED.vars+=	-e 's|@MONOTONE_GROUP@|${MONOTONE_GROUP}|g'

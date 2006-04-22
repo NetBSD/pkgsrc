@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/17 13:46:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/22 09:22:17 rillig Exp $
 #
 
 DISTNAME=		matchbox-common-0.9.1
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 PKG_SYSCONFSUBDIR=	matchbox
 
 SUBST_CLASSES+=		session
-SUBST_MESSAGE.session=	"Fixing location of system-wide matchbox session."
+SUBST_MESSAGE.session=	Fixing location of system-wide matchbox session.
 SUBST_STAGE.session=	pre-configure
 SUBST_FILES.session=	matchbox-session
 SUBST_SED.session=	-e 's|/etc/matchbox|${PKG_SYSCONFDIR}|g'

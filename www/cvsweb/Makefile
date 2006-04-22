@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/04/22 07:32:24 lukem Exp $
+# $NetBSD: Makefile,v 1.32 2006/04/22 09:22:16 rillig Exp $
 #
 
 DISTNAME=		cvsweb-3.0.5
@@ -69,6 +69,6 @@ SUBST_FILES.prefix=	cvsweb.conf cvsweb.cgi INSTALL
 SUBST_SED.prefix=	-e "s,/usr/local/etc/apache,${PKG_SYSCONFBASE}/httpd,g"
 SUBST_SED.prefix+=	-e "s,/usr/local/etc/cvsweb,${PKG_SYSCONFDIR},g"
 SUBST_SED.prefix+=	-e "s,/usr/local/bin,${LOCALBASE}/bin,g"
-SUBST_MESSAGE.prefix=	"Fixing harcoded paths."
+SUBST_MESSAGE.prefix=	Fixing harcoded paths.
 
 .include "../../mk/bsd.pkg.mk"

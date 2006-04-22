@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/03/14 01:14:33 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2006/04/22 09:22:14 rillig Exp $
 
 DISTNAME=		vlnx440e
 PKGNAME=		uvscan-4.40
@@ -26,7 +26,7 @@ WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
 LICENSE=		uvscan-license
-RESTRICTED=		"restrictive 30 day evaluation license"
+RESTRICTED=		restrictive 30 day evaluation license
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}

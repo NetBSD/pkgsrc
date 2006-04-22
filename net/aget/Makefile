@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/01/10 19:31:52 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/22 09:22:12 rillig Exp $
 #
 
 DISTNAME=	aget-0.4
@@ -17,7 +17,7 @@ NO_CONFIGURE=	yes
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=		options
-SUBST_MESSAGE.options=	"Fixing build options."
+SUBST_MESSAGE.options=	Fixing build options.
 SUBST_STAGE.options=	post-patch
 SUBST_FILES.options=	Makefile Makefile.Solaris
 SUBST_SED.options=	-e 's,CFLAGS =,\#CFLAGS =,' \

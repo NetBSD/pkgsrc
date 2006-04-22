@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/04/08 23:26:56 minskim Exp $
+# $NetBSD: Makefile,v 1.37 2006/04/22 09:22:16 rillig Exp $
 #
 
 DISTNAME=	fluxbox-0.9.15.1
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--enable-xinerama
 
 SUBST_CLASSES+=		cmds
 SUBST_STAGE.cmds=	post-build
-SUBST_MESSAGE.cmds=	"Fixing command names in data files."
+SUBST_MESSAGE.cmds=	Fixing command names in data files.
 SUBST_SED.cmds=		-e 's|bsetroot|fbsetroot|g'
 SUBST_FILES.cmds=	data/README.style data/styles/Artwiz\
                         data/styles/MerleyKay data/styles/Outcomes\

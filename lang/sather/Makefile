@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/04/05 06:27:42 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2006/04/22 09:22:10 rillig Exp $
 
 DISTNAME=		sather-1.2.1
 PKGREVISION=		6
@@ -18,7 +18,7 @@ REPLACE_PERL=		Browser/Web/ps2gif
 
 SUBST_CLASSES+=		sather-configure
 SUBST_STAGE.sather-configure=	post-wrapper
-SUBST_MESSAGE.sather-configure=	"Configuring sources"
+SUBST_MESSAGE.sather-configure=	Configuring sources
 SUBST_FILES.sather-configure=			\
 	Boot/sacomp.code/Makefile		\
 	Library/System/unix.sa			\

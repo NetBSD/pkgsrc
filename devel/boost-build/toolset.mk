@@ -1,4 +1,4 @@
-# $NetBSD: toolset.mk,v 1.2 2006/01/21 09:02:16 jmmv Exp $
+# $NetBSD: toolset.mk,v 1.3 2006/04/22 09:22:07 rillig Exp $
 
 .include "../../mk/compiler.mk"
 
@@ -11,5 +11,5 @@ BOOST_TOOLSET=		mipspro
 .elif !empty(PKGSRC_COMPILER:Msunpro)
 BOOST_TOOLSET=		sunpro
 .else
-BROKEN+=		"Unknown compiler ${PKGSRC_COMPILER} for Boost"
+PKG_FAIL_REASON+=	"Unknown compiler ${PKGSRC_COMPILER} for Boost."
 .endif

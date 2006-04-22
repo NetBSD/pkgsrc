@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/12/29 06:21:58 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/22 09:22:12 rillig Exp $
 
 DISTNAME=		ez-ipupdate-3.0.11b7
 CATEGORIES=		net
@@ -15,7 +15,7 @@ RCD_SCRIPTS=		ez-ipupdate
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
-SUBST_MESSAGE.path=	"Correcting paths in example scripts."
+SUBST_MESSAGE.path=	Correcting paths in example scripts.
 SUBST_FILES.path=	example-*.conf example.conf
 SUBST_SED.path=		-e "s|/usr/local|${PREFIX}|g"
 SUBST_SED.path+=	-e "s|cache-file=/etc/|cache-file=${PKG_SYSCONFDIR}/|g"

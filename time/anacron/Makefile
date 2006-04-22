@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:11:08 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/22 09:22:15 rillig Exp $
 #
 
 DISTNAME=	anacron-2.3
@@ -15,7 +15,7 @@ USE_TOOLS+=		gmake
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=		hdr
-SUBST_MESSAGE.hdr=	"Setting up global.h."
+SUBST_MESSAGE.hdr=	Setting up global.h.
 SUBST_STAGE.hdr=	pre-configure
 SUBST_FILES.hdr=	global.h
 .if ${OPSYS} == "NetBSD"
@@ -25,7 +25,7 @@ SUBST_SED.hdr=		-e 's|SENDMAIL ".*"|SENDMAIL "/usr/lib/sendmail"|'
 .endif
 
 SUBST_CLASSES+=		man
-SUBST_MESSAGE.man=	"Setting up manpages."
+SUBST_MESSAGE.man=	Setting up manpages.
 SUBST_STAGE.man=	pre-configure
 SUBST_FILES.man=	anacrontab.5 anacron.8
 SUBST_SED.man=		-e 's|/etc/anacrontab|${PKG_SYSCONFDIR}/anacrontab|g'

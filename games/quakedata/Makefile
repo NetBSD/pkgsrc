@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/02/05 23:09:22 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/22 09:22:09 rillig Exp $
 
 DISTNAME=	quake106
 PKGNAME=	quakedata-1.0
@@ -15,7 +15,7 @@ COMMENT=	Game data files for Quake
 BUILD_DEPENDS+=	lha-[0-9]*:../../archivers/lha
 
 LICENSE+=		quakedata-license
-RESTRICTED=		"This software is shareware."
+RESTRICTED=		This software is shareware.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}

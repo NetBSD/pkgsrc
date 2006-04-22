@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:29:58 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/22 09:22:10 rillig Exp $
 #
 
 DISTNAME=	columba-unix-1.0_M2-bin
@@ -18,7 +18,7 @@ PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 jdk14
 
 SUBST_CLASSES+=		columba
 SUBST_STAGE.columba=	pre-configure
-SUBST_MESSAGE.columba=	"Fixing path to columba\'s executable."
+SUBST_MESSAGE.columba=	Fixing path to columba\'s executable.
 SUBST_FILES.columba=	run.sh
 SUBST_SED.columba=	-e 's,columba.jar,${PREFIX}/share/${PKGBASE}/columba.jar,'
 

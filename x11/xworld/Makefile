@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:11:50 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/22 09:22:18 rillig Exp $
 #
 
 DISTNAME=		xworld-2.0
@@ -17,13 +17,13 @@ CONFIGURE_ENV+=		LDLIBS="-lm ${LDFLAGS} -lX11"
 CONFIGURE_ENV+=		CAT=${CAT:Q} STRIP=strip INCLUDES="" MORELIBS=""
 
 SUBST_CLASSES+=		x11
-SUBST_MESSAGE.x11=	"Fixing x11 options."
+SUBST_MESSAGE.x11=	Fixing x11 options.
 SUBST_STAGE.x11=	post-patch
 SUBST_FILES.x11=	defaults/NetBSD/set.csh
 SUBST_SED.x11=		-e 's,@X11BASE@,${X11BASE},g'
 
 SUBST_CLASSES+=		install
-SUBST_MESSAGE.install=	"Fixing install options."
+SUBST_MESSAGE.install=	Fixing install options.
 SUBST_STAGE.install=	post-patch
 SUBST_FILES.install=	Makefile.in
 SUBST_SED.install=	-e 's,-g bin -o bin,-g ${BINGRP} -o ${BINOWN},g'

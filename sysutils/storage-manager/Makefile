@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/04 21:30:43 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/22 09:22:15 rillig Exp $
 
 DISTNAME=		sm_linux_v314_install
 PKGNAME=		storage-manager-3.14
@@ -22,7 +22,7 @@ DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
 
 ONLY_FOR_PLATFORM=	*-*-i386
 
-RESTRICTED=		"Redistribution not permitted"
+RESTRICTED=		Redistribution not permitted
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}

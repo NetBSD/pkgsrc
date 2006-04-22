@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/02/05 23:08:24 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/04/22 09:22:06 rillig Exp $
 #
 
 DISTNAME=	ircservices-5.0.56
@@ -28,7 +28,7 @@ SUBST_SED.install=	-e "s|/bin/cp|${CP}|g" \
 			-e "s|/bin/chgrp|${CHGRP}|g" \
 			-e "s|/bin/chmod|${CHMOD}|g" \
 			-e "s|@DATDEST@|${VARBASE}/run|g"
-SUBST_MESSAGE.install=	"Fixing scripts."
+SUBST_MESSAGE.install=	Fixing scripts.
 
 SUBST_CLASSES+=		utils
 SUBST_STAGE.utils=	post-patch
@@ -36,7 +36,7 @@ SUBST_FILES.utils=	data/Makefile tools/Makefile
 SUBST_SED.utils= 	-e "s|chgrp|${CHGRP}|g" \
 			-e "s|chmod|${CHMOD}|g" \
 			-e "s|find|${FIND}|g"
-SUBST_MESSAGE.utils=	"Fixing paths of hard-coded utilities."
+SUBST_MESSAGE.utils=	Fixing paths of hard-coded utilities.
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	post-patch
@@ -45,7 +45,7 @@ SUBST_SED.conf=		-e "s|/usr/local|${PREFIX}|g" \
 			-e "s|ircservices.log|${VARBASE}/log/ircservices.log|g"\
 			-e "s|ircservices.pid|${VARBASE}/run/ircservices.pid|g"\
 			-e "s|/usr/lib/sendmail|/usr/sbin/sendmail|g"
-SUBST_MESSAGE.conf=	"Fixing configuration files."
+SUBST_MESSAGE.conf=	Fixing configuration files.
 
 CONF_FILES_PERMS=	${PREFIX}/share/examples/ircservices/ircservices.conf \
 				${PREFIX}/lib/services/ircservices.conf \

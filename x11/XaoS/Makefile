@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/04/17 13:47:01 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/22 09:22:17 rillig Exp $
 #
 
 DISTNAME=		XaoS-3.1
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--with-dga-driver=no
 INFO_FILES=		# PLIST
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	configure
 SUBST_SED.paths=	-e 's,/usr/share/locale,${PREFIX}/${PKGLOCALEDIR}/locale,g'

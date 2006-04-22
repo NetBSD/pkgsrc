@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/04/17 13:46:09 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2006/04/22 09:22:15 rillig Exp $
 
 DISTNAME=	gtkspell-2.0.11
 PKGREVISION=	3
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	gtkspell-2.0.pc.in
 
 SUBST_CLASSES+=		subdir
-SUBST_MESSAGE.subdir=	"Excluding unnecessary subdirs."
+SUBST_MESSAGE.subdir=	Excluding unnecessary subdirs.
 SUBST_STAGE.subdir=	post-patch
 SUBST_FILES.subdir=	Makefile.in
 SUBST_SED.subdir=	-e 's|SUBDIRS = gtkspell examples docs|SUBDIRS = gtkspell|'

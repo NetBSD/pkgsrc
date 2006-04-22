@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2005/12/29 06:21:46 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2006/04/22 09:22:10 rillig Exp $
 #
 
 VERSION=	1.1.8
@@ -38,7 +38,7 @@ CHECK_SHLIBS=	no
 
 
 ONLY_FOR_PLATFORM= NetBSD-*-i386 Linux-*-i[3-6]86
-RESTRICTED=	"No redistribution of the Java(tm) Development Kit"
+RESTRICTED=	No redistribution of the Java(tm) Development Kit
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/03/04 21:30:40 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2006/04/22 09:22:14 rillig Exp $
 #
 
 DISTNAME=		fam-2.7.0
@@ -31,7 +31,7 @@ CONF_FILES=		${EGDIR}/fam.conf ${PKG_SYSCONFDIR}/fam.conf
 RCD_SCRIPTS=		famd
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	man/famd.conf.5 man/famd.8
 SUBST_SED.paths=	-e 's,/usr/local/etc/,${PKG_SYSCONFDIR}/,g'
@@ -46,7 +46,7 @@ PKG_SUPPORTED_OPTIONS=	kqueue
 CPPFLAGS+=		-DHAVE_KQUEUE
 
 SUBST_CLASSES+=		kqueue
-SUBST_MESSAGE.kqueue=	"Enabling kqueue monitoring."
+SUBST_MESSAGE.kqueue=	Enabling kqueue monitoring.
 SUBST_STAGE.kqueue=	pre-configure
 SUBST_FILES.kqueue=	src/Makefile.in
 SUBST_SED.kqueue=	-e 's,@MONITOR_FUNCS@,IMonKQueue,g'
@@ -63,7 +63,7 @@ LDFLAGS.SunOS+=		-lsocket -lnsl
 .if ${OPSYS} == "SunOS"
 SUBST_CLASSES+=		sunfix dirent
 
-SUBST_MESSAGE.sunfix=	"Fixing ${OPSYS} namespace collision."
+SUBST_MESSAGE.sunfix=	Fixing ${OPSYS} namespace collision.
 SUBST_STAGE.sunfix=	pre-configure
 SUBST_FILES.sunfix+=	lib/Client.c++
 SUBST_FILES.sunfix+=	src/ClientConnection.c++ src/ClientConnection.h
@@ -72,7 +72,7 @@ SUBST_FILES.sunfix+=	src/Listener.c++
 SUBST_FILES.sunfix+=	src/TCP_Client.h
 SUBST_SED.sunfix=	-e 's/sun\([^_]\)/sa_un\1/g'
 
-SUBST_MESSAGE.dirent=	"Fixing old sys/dir.h usage."
+SUBST_MESSAGE.dirent=	Fixing old sys/dir.h usage.
 SUBST_STAGE.dirent=	pre-configure
 SUBST_FILES.dirent+=	src/Directory.c++
 SUBST_FILES.dirent+=	src/DirectoryScanner.c++ src/DirectoryScanner.h

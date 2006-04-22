@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:29:47 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/22 09:22:09 rillig Exp $
 #
 
 DISTNAME=	fujiplay
@@ -16,7 +16,7 @@ DIST_SUBDIR=	fujiplay-1.33
 WRKSRC=		${WRKDIR}
 
 SUBST_CLASSES+=		cvsid
-SUBST_MESSAGE.cvsid=	"Removing CVS Ids from files."
+SUBST_MESSAGE.cvsid=	Removing CVS Ids from files.
 SUBST_STAGE.cvsid=	post-extract
 SUBST_SED.cvsid=	-e 's|\$$Id|Id|'
 SUBST_SED.cvsid+=	-e 's| \$$$$||'

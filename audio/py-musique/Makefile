@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/17 13:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/22 09:22:06 rillig Exp $
 #
 
 DISTNAME=	pymusique-0.5
@@ -11,7 +11,7 @@ MAINTAINER=	augustss@NetBSD.org
 HOMEPAGE=	http://fuware.nanocrew.net/pymusique/
 COMMENT=	Interface to the iTunes Music Store
 
-RESTRICTED=	"Possible legal problems due to iTuness access"
+RESTRICTED=	Possible legal problems due to iTuness access
 NO_SRC_ON_FTP=          ${RESTRICTED}
 NO_BIN_ON_FTP=          ${RESTRICTED}
 NO_SRC_ON_CDROM=        ${RESTRICTED}

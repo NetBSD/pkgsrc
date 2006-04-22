@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2006/03/04 21:30:15 jlam Exp $
+# $NetBSD: Makefile.common,v 1.13 2006/04/22 09:22:11 rillig Exp $
 #
 
 DISTNAME=		mplayerplug-in-2.70
@@ -43,7 +43,7 @@ SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	post-patch
 SUBST_FILES.conf=	Source/plugin-setup.cpp
 SUBST_SED.conf=		-e "s|/etc/|${PKG_SYSCONFDIR}/|g"
-SUBST_MESSAGE.conf=	"Fixing harcoded paths."
+SUBST_MESSAGE.conf=	Fixing harcoded paths.
 
 EGDIR=		${PREFIX}/share/examples/mplayer-plugin-${BROWSER}
 CONF_FILES=	# empty

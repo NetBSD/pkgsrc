@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/02/05 23:10:31 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/04/22 09:22:13 rillig Exp $
 
 DISTNAME=	smokeping-2.0.4
 PKGREVISION=	1
@@ -56,7 +56,7 @@ SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g" \
 			-e "s|@INTERP@|${INTERP}|g" \
 			-e "s|perl-5.8.4|perl|g" \
 			-e "s|/usr/bin/perl|${PERL5}|g"
-SUBST_MESSAGE.files=	"Fixing configuration files."
+SUBST_MESSAGE.files=	Fixing configuration files.
 
 OWN_DIRS+=		${SMOKEPING_HOME} 
 

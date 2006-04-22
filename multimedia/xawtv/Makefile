@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/09 21:04:45 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/22 09:22:12 rillig Exp $
 #
 
 DISTNAME=	xawtv-3.95
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--disable-motif
 LDFLAGS+=		${LIBOSSAUDIO}
 
 SUBST_CLASSES+=		devoss
-SUBST_MESSAGE.devoss=	"Fixing path to OSS audio device."
+SUBST_MESSAGE.devoss=	Fixing path to OSS audio device.
 SUBST_STAGE.devoss=	pre-configure
 SUBST_FILES.devoss=	console/record.c libng/devices.c x11/pia.c
 SUBST_FILES.devoss+=	man/motv.1 man/record.1 man/streamer.1 man/xawtv.1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/04/06 06:22:53 reed Exp $
+# $NetBSD: Makefile,v 1.12 2006/04/22 09:22:16 rillig Exp $
 
 DISTNAME=	mod_auth_ldap3.05
 PKGNAME=	ap2-auth-ldap-3.05
@@ -28,7 +28,7 @@ SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	configure
 SUBST_SED.paths=	-e "s|@@HASHLIB@@|${PREFIX}/include|g" \
 			-e "s|@@HASHINC@@|${PREFIX}/lib|g"
-SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 
 do-install:
 	cd ${WRKSRC} && ${APXS} -i -n ${APACHE_MODULE_NAME} mod_auth_ldap.la
