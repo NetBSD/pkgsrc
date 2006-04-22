@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/14 01:14:28 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/04/22 09:22:08 rillig Exp $
 
 DISTNAME=	netscape-4.7-3.alpha
 PKGNAME=	osf1_lib-1.1
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=	rpm2pkg>=1.2:../../pkgtools/rpm2pkg
 
 ONLY_FOR_PLATFORM=	NetBSD-*-alpha
 
-RESTRICTED=		"COMPAQ Licensed Software"
+RESTRICTED=		COMPAQ Licensed Software
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}

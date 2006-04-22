@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/01/05 23:54:44 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/22 09:22:17 rillig Exp $
 
 DISTNAME=		sarg-1.4.1
 CATEGORIES=		www
@@ -30,7 +30,7 @@ SARG_REPORTSDIR?=	/var/sarg
 OWN_DIRS+=		${SARG_REPORTSDIR} ${CFLNG}
 
 SUBST_CLASSES+=		sargconf
-SUBST_MESSAGE.sargconf=	"[Adjust values in SARG configuration files]"
+SUBST_MESSAGE.sargconf=	[Adjust values in SARG configuration files]
 SUBST_STAGE.sargconf=	post-configure
 SUBST_FILES.sargconf=	sarg.conf sarg.1
 SUBST_SED.sargconf=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'

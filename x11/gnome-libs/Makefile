@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2006/04/17 13:46:04 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2006/04/22 09:22:17 rillig Exp $
 
 DISTNAME=		gnome-libs-1.4.2
 PKGREVISION=		6
@@ -31,7 +31,7 @@ LOCALSTATEDIR=		${VARBASE}/gnome
 PLIST_SUBST+=		LOCALSTATEDIR=${LOCALSTATEDIR:Q}
 
 SUBST_CLASSES+=		varbase
-SUBST_MESSAGE.varbase=	"Fixing path to score files."
+SUBST_MESSAGE.varbase=	Fixing path to score files.
 SUBST_STAGE.varbase=	post-patch
 SUBST_FILES.varbase+=	gnome-data/Makefile.in
 SUBST_FILES.varbase+=	libgnome/gnome-score.c

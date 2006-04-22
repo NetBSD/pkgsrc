@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/04/17 13:46:44 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2006/04/22 09:22:12 rillig Exp $
 
 DISTNAME=	netatalk-2.0.3
 PKGREVISION=	4
@@ -50,7 +50,7 @@ CONFIGURE_ARGS+=	--enable-netbsd \
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/msg
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	etc/psf/etc2ps.sh distrib/initscripts/Makefile.in
 SUBST_SED.paths=	-e "s,^\(DVIPS=\)\(/usr/local/tex\)\(/bin\),\1${PREFIX}\3,"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/04/12 19:27:22 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2006/04/22 09:22:08 rillig Exp $
 
 DISTNAME=	spim-7.1
 PKGREVISION=	2
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cs.wisc.edu/~larus/spim.html
 COMMENT=	MIPS R2000 Simulator
 
-RESTRICTED=		"selling is not allowed"
+RESTRICTED=		selling is not allowed
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
