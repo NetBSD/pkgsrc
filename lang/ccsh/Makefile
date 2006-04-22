@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:09:43 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/22 09:22:10 rillig Exp $
 #
 
 DISTNAME=		ccsh-0.0.4
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=		gmake
 
 SUBST_CLASSES+=		options
-SUBST_MESSAGE.options=	"Preventing CFLAGS from being overridden."
+SUBST_MESSAGE.options=	Preventing CFLAGS from being overridden.
 SUBST_STAGE.options=	post-patch
 SUBST_FILES.options=	Makefile
 SUBST_SED.options=	-e 's,^CFLAGS =,\#CFLAGS =,g'

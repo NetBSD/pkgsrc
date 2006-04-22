@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/03/13 19:54:37 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2006/04/22 09:22:13 rillig Exp $
 
 DISTNAME=	acroread5	# Overridden below
 PKGNAME=	acroread5-5.10
@@ -15,7 +15,7 @@ CONFLICTS+=	acroread-5.*
 CONFLICTS+=	acroread-7.*
 CONFLICTS+=	acroread7-7.*
 
-RESTRICTED=	"Original installer required to redistribute."
+RESTRICTED=	Original installer required to redistribute.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}

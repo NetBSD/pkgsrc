@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/04/17 13:46:27 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/04/22 09:22:09 rillig Exp $
 #
 
 DISTNAME=	fillets-ng-0.6.0
@@ -18,7 +18,7 @@ USE_LANGUAGES=	c c++
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	post-patch
 SUBST_FILES.man=	fillets.6
-SUBST_MESSAGE.man=	"Fixing documentation path in the manual page."
+SUBST_MESSAGE.man=	Fixing documentation path in the manual page.
 SUBST_SED.man=		"s,/usr/share/doc/fillets-ng/html/manual.html,${PREFIX}/share/doc/html/fillets-ng/manual.html,"
 
 .include "../../audio/SDL_mixer/buildlink3.mk"

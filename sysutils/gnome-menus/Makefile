@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/04/16 12:05:33 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2006/04/22 09:22:14 rillig Exp $
 #
 
 DISTNAME=	gnome-menus-2.14.0
@@ -33,7 +33,7 @@ CONF_FILES+=		${EXAMPLEDIR}/settings.menu \
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_MESSAGE.paths=	"Fixing paths to installation prefix."
+SUBST_MESSAGE.paths=	Fixing paths to installation prefix.
 SUBST_FILES.paths=	layout/*.menu
 SUBST_SED.paths=	-e 's|/usr/|${PREFIX}/|g'
 SUBST_SED.paths+=	-e 's|/etc/X11/applnk|${PREFIX}/share/kde/applnk/|g'

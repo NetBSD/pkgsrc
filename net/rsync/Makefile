@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2006/03/12 18:51:23 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2006/04/22 09:22:13 rillig Exp $
 
 DISTNAME=	rsync-2.6.7
 CATEGORIES=	net
@@ -25,7 +25,7 @@ TEST_TARGET=		test
 PKG_SYSCONFSUBDIR=	rsync
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	rsync.h rsync.1 rsyncd.conf.5
 SUBST_SED.paths=	-e 's|/etc/rsyncd|${PKG_SYSCONFDIR}/rsyncd|g' \

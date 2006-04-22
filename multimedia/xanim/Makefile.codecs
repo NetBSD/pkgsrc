@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.codecs,v 1.2 2005/10/11 10:06:35 tron Exp $
+# $NetBSD: Makefile.codecs,v 1.3 2006/04/22 09:22:12 rillig Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -59,7 +59,7 @@ _RESTRICTED_CODECS+=	${_codec_}
 BUILD_DEFS+=	CODECS
 
 .if defined(_RESTRICTED_CODECS)
-RESTRICTED=	"Can't mirror/distribute object modules: ${_RESTRICTED_CODECS}"
+RESTRICTED=	Can't mirror/distribute object modules: ${_RESTRICTED_CODECS}.
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}

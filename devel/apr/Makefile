@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/04/14 18:14:34 heinz Exp $
+# $NetBSD: Makefile,v 1.42 2006/04/22 09:22:07 rillig Exp $
 
 .include "../../www/apache2/Makefile.common"
 
@@ -42,7 +42,7 @@ SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	apr/config.layout apr-util/config.layout
 SUBST_SED.conf=		-e "s,@PREFIX@,${PREFIX},g"
-SUBST_MESSAGE.conf=	"Fixing hardcoded paths."
+SUBST_MESSAGE.conf=	Fixing hardcoded paths.
 
 TEST_TARGET=		check
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/17 13:46:28 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/22 09:22:09 rillig Exp $
 #
 
 DISTNAME=		kapooka_0.2
@@ -17,7 +17,7 @@ USE_TOOLS+=		gmake
 
 SUBST_CLASSES+=		kapooka
 SUBST_STAGE.kapooka=	pre-build
-SUBST_MESSAGE.kapooka=	"Fixing path to data files."
+SUBST_MESSAGE.kapooka=	Fixing path to data files.
 SUBST_FILES.kapooka=	main.h objects.c
 SUBST_SED.kapooka=	"s!data/!${PREFIX}/share/kapooka/!"
 

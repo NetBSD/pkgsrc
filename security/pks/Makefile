@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2005/12/29 06:22:11 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/04/22 09:22:14 rillig Exp $
 
 DISTNAME=	pks-0.9.4
 PKGREVISION=	3
@@ -51,7 +51,7 @@ CONFIGURE_ARGS+=	--localstatedir=${PKS_HOME:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${EGDIR:Q}
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	pks-commands.html
 SUBST_SED.paths=	-e "s|localhost|${PKS_SERVER}|g"

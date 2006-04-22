@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/17 13:46:24 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/22 09:22:08 rillig Exp $
 #
 
 DISTNAME=	blindmine-0.3-src
@@ -17,7 +17,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 SUBST_CLASSES+=		path
-SUBST_MESSAGE.path=	"Fixing paths."
+SUBST_MESSAGE.path=	Fixing paths.
 SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	blindmine.py sdl_ui.py
 SUBST_SED.path=		-e 's,/usr/bin/env python,${PYTHONBIN},g'

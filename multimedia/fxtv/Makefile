@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/04/17 13:46:41 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/22 09:22:11 rillig Exp $
 
 DISTNAME=	fxtv-1.03
 PKGREVISION=	10
@@ -14,7 +14,7 @@ USE_X11BASE=	YES
 USE_TOOLS+=	gmake
 
 SUBST_CLASSES+=		ossaudio
-SUBST_MESSAGE.ossaudio=	"Fixing path to audio device."
+SUBST_MESSAGE.ossaudio=	Fixing path to audio device.
 SUBST_STAGE.ossaudio=	pre-configure
 SUBST_FILES.ossaudio=	app_rsrc.h Fxtv README
 SUBST_SED.ossaudio=	-e 's|/dev/dsp|${DEVOSSAUDIO}|g'

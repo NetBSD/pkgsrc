@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/04/06 06:22:55 reed Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/22 09:22:17 rillig Exp $
 
 DISTNAME=	libapreq2-2.07
 PKGNAME=	p5-libapreq2-2.07
@@ -23,7 +23,7 @@ SUBST_CLASSES+=		apxs
 SUBST_STAGE.apxs=	post-patch
 SUBST_FILES.apxs=	env/Makefile.in
 SUBST_SED.apxs=		-e "s|@APACHE2_APXS@ -i -a -n|@APACHE2_APXS@ -i -n|g"
-SUBST_MESSAGE.apxs=	"Fixing module installation."
+SUBST_MESSAGE.apxs=	Fixing module installation.
 
 .include "../../lang/perl5/module.mk"
 

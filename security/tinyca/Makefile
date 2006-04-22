@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/06 06:22:44 reed Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/22 09:22:14 rillig Exp $
 
 DISTNAME=	tinyca-0.6.8
 PKGREVISION=	2
@@ -31,7 +31,7 @@ SUBST_SED.script=	-e "s|./lib|${CADIR}|g" \
 			|${BUILDLINK_PREFIX.openssl}/bin/openssl|g" \
 			-e "s|/usr/bin/zip|${PREFIX}/bin/zip|g" \
 			-e "s|./templates|${CADIR}/templates|g"
-SUBST_MESSAGE.script=	"Fixing hardcoded paths."
+SUBST_MESSAGE.script=	Fixing hardcoded paths.
 
 INSTALLATION_DIRS=	bin
 

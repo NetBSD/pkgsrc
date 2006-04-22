@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2005/08/10 20:56:17 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2006/04/22 09:22:09 rillig Exp $
 #
 
 DISTNAME=	dia-0.94
@@ -21,7 +21,7 @@ USE_PKGLOCALEDIR=	YES
 CONFIGURE_ARGS+=	--without-python
 
 SUBST_CLASSES+=		intl
-SUBST_MESSAGE.intl=	"Fixing path to installed files."
+SUBST_MESSAGE.intl=	Fixing path to installed files.
 SUBST_STAGE.intl=	pre-configure
 SUBST_FILES.intl=	lib/intl.c
 SUBST_SED.intl=		-e 's,%%PREFIX%%,${PREFIX},g'

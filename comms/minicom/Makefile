@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/04/13 18:23:30 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2006/04/22 09:22:07 rillig Exp $
 
 DISTNAME=	minicom-2.1
 PKGREVISION=	2
@@ -31,7 +31,7 @@ CONF_FILES_PERMS=	${EGDIR}/minicom.users ${PKG_SYSCONFDIR}/minicom.users \
 			uucp dialer 0644
 
 SUBST_CLASSES+=	minicom
-SUBST_MESSAGE.minicom=	"Fixing hardcoded paths."
+SUBST_MESSAGE.minicom=	Fixing hardcoded paths.
 SUBST_STAGE.minicom=	post-patch
 SUBST_FILES.minicom=	src/rwconf.c
 SUBST_SED.minicom=	-e 's,@PREFIX@,${PREFIX},g'

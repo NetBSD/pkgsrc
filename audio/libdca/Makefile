@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/09 17:21:02 salo Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/22 09:22:06 rillig Exp $
 #
 
 DISTNAME=	libdts-0.0.2
@@ -11,7 +11,7 @@ MAINTAINER=	shattered@users.sourceforge.net
 HOMEPAGE=	http://developers.videolan.org/libdca.html
 COMMENT=	Free DTS Coherent Acoustics decoder
 
-RESTRICTED=	"Unresolved patent issue"
+RESTRICTED=	Unresolved patent issue
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}

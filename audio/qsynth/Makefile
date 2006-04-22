@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/17 13:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/22 09:22:06 rillig Exp $
 
 DISTNAME=	qsynth-0.2.4
 PKGREVISION=	4
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 # a fix for qt-3.3.5, please remove if qt-3.3.6 (or newer) solves the problem
 SUBST_CLASSES+=		hints
 SUBST_STAGE.hints=	post-patch
-SUBST_MESSAGE.hints=	"Fix includehints."
+SUBST_MESSAGE.hints=	Fix includehints.
 SUBST_FILES.hints=	src/*.ui
 SUBST_FILTER_CMD.hints=	${GREP} -v includehint
 

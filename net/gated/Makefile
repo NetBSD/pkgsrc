@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/03/04 21:30:18 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/04/22 09:22:12 rillig Exp $
 
 DISTNAME=       gated-3-5-11
 PKGNAME=        gated-3.5.11
@@ -14,7 +14,7 @@ COMMENT=	Routing protocol daemon
 
 NOT_FOR_PLATFORM=	Interix-*-* # no userland routing table support
 
-RESTRICTED=		"Required license from Merit"
+RESTRICTED=		Required license from Merit
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}

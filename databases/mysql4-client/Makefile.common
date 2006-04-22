@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.50 2006/03/03 04:00:09 grant Exp $
+# $NetBSD: Makefile.common,v 1.51 2006/04/22 09:22:07 rillig Exp $
 
 DISTNAME=		mysql-4.1.15
 CATEGORIES=		databases
@@ -102,14 +102,14 @@ SUBST_FILES.mk=		dbug/Makefile.in heap/Makefile.in isam/Makefile.in \
 			merge/Makefile.in mysys/Makefile.in \
 			strings/Makefile.in
 SUBST_SED.mk=		-e "/^install-exec:/s/install-pkglibLIBRARIES//"
-SUBST_MESSAGE.mk=	"Fixing Makefiles."
+SUBST_MESSAGE.mk=	Fixing Makefiles.
 SUBST_STAGE.scripts=	post-extract
 SUBST_FILES.scripts=	scripts/mysql_install_db.sh scripts/mysqld_safe.sh \
 			scripts/mysql_secure_installation.sh \
 			support-files/mysql.server.sh
 SUBST_SED.scripts=	-e "s,chown,${CHOWN},g" \
 			-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
-SUBST_MESSAGE.scripts=	"Fixing scripts."
+SUBST_MESSAGE.scripts=	Fixing scripts.
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

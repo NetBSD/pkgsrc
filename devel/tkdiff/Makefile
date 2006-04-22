@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/12 07:39:36 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/22 09:22:08 rillig Exp $
 #
 
 DISTNAME=	tkdiff
@@ -20,7 +20,7 @@ NO_CONFIGURE=	yes
 USE_TOOLS+=	wish:run
 
 SUBST_CLASSES+=		wish
-SUBST_MESSAGE.wish=	"Fixing a hardcoded command."
+SUBST_MESSAGE.wish=	Fixing a hardcoded command.
 SUBST_STAGE.wish=	pre-configure
 SUBST_FILES.wish=	tkdiff
 SUBST_SED.wish=		-e 's,exec wish,exec ${WISH},'

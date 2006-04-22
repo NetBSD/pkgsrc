@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/02/05 23:11:40 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2006/04/22 09:22:17 rillig Exp $
 
 PKGVER=		2.2.3
 DISTNAME=	openMotif-${PKGVER}
@@ -22,7 +22,7 @@ GNU_CONFIGURE=		yes
 
 SUBST_CLASSES+=			man_rename
 SUBST_STAGE.man_rename=		pre-configure
-SUBST_MESSAGE.man_rename=	"Fixing hardcoded paths."
+SUBST_MESSAGE.man_rename=	Fixing hardcoded paths.
 SUBST_FILES.man_rename=		doc/man/man3/Makefile.in
 SUBST_SED.man_rename=		-e 's: Core.3: XCore.3:g' \
 	-e 's: Object.3: XObject.3:g' -e 's: Shell.3: XShell.3:g'

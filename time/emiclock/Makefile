@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/11 14:36:05 hira Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/22 09:22:16 rillig Exp $
 #
 
 DISTNAME=	emiclock-2.0.2
@@ -10,7 +10,7 @@ MAINTAINER=	minoura@NetBSD.org
 COMMENT=	Analog clock with image in the middle
 
 LICENSE=	emiclock-license
-RESTRICTED=	"Do not distribute"
+RESTRICTED=	Do not distribute
 NO_SRC_ON_FTP=${RESTRICTED}
 NO_BIN_ON_FTP=${RESTRICTED}
 NO_SRC_ON_CDROM=${RESTRICTED}

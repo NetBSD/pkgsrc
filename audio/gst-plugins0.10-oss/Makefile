@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/09 21:04:40 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/22 09:22:05 rillig Exp $
 #
 
 GST_PLUGINS0.10_NAME=	oss
@@ -8,7 +8,7 @@ PKGREVISION=		1
 .include "../../multimedia/gst-plugins0.10-good/Makefile.common"
 
 SUBST_CLASSES+=		devoss
-SUBST_MESSAGE.devoss=	"Fixing path to OSS audio device."
+SUBST_MESSAGE.devoss=	Fixing path to OSS audio device.
 SUBST_STAGE.devoss=	pre-configure
 SUBST_FILES.devoss=	sys/oss/*.c
 SUBST_SED.devoss=	-e 's|/dev/dsp|${DEVOSSAUDIO}|g'

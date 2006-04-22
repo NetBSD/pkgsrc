@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/12/29 06:22:06 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/22 09:22:13 rillig Exp $
 #
 
 DISTNAME=	pkg_notify-0.4.2
@@ -23,7 +23,7 @@ CONF_FILES=		${EXAMPLEDIR}/${PKGBASE}.list \
 			${PKG_SYSCONFDIR}/${PKGBASE}.list
 
 SUBST_CLASSES+=			pkg_notify
-SUBST_MESSAGE.pkg_notify=	"Setting up hardcoded path."
+SUBST_MESSAGE.pkg_notify=	Setting up hardcoded path.
 SUBST_STAGE.pkg_notify=		post-patch
 SUBST_FILES.pkg_notify=		pkg_notify
 SUBST_SED.pkg_notify=		-e 's|/usr/pkgsrc|${PKGSRCDIR}|'	\

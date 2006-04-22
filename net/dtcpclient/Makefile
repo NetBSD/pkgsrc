@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/12/29 06:21:58 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/22 09:22:12 rillig Exp $
 #
 
 DISTNAME=	dtcpclient-20050521
@@ -16,7 +16,7 @@ ONLY_FOR_PLATFORM+=	DragonFly-*-*
 RCD_SCRIPTS=	dtcpclient
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Fixing hardcoded paths."
+SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	dtcpclient.8
 SUBST_SED.paths=	's|/usr/local|${PREFIX}|g'

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/01/19 01:51:48 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2006/04/22 09:22:12 rillig Exp $
 #
 
 DISTNAME=	ipa-1.3.6
@@ -15,7 +15,7 @@ COMMENT=	IP accounting software
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-1*-* OpenBSD-*-* DragonFly-*-*
 
-RESTRICTED=		"Needs to be built uniquely for each host"
+RESTRICTED=		Needs to be built uniquely for each host
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_PACKAGE=		${RESTRICTED}

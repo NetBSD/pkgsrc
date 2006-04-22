@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/17 13:46:28 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/22 09:22:09 rillig Exp $
 #
 
 DISTNAME=	glaxium_0.5
@@ -21,7 +21,7 @@ SUBST_CLASSES+=		bill
 SUBST_STAGE.bill=	post-configure
 SUBST_FILES.bill=	conf.h
 SUBST_SED.bill=		-e "s,share\/games,share,g"
-SUBST_MESSAGE.bill=	"Fixing data path."
+SUBST_MESSAGE.bill=	Fixing data path.
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/21 11:52:19 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/22 09:22:09 rillig Exp $
 #
 
 DISTNAME=		scid-3.6.1
@@ -18,7 +18,7 @@ CONFIGURE_ENV+=		TCLCONFIG_SH=${TCLCONFIG_SH:Q}
 CONFIGURE_ARGS+=	BINDIR=${PREFIX}/bin SHAREDIR=${PREFIX}/share/scid
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Fixing paths to tcl.h and tk.h."
+SUBST_MESSAGE.paths=	Fixing paths to tcl.h and tk.h.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	configure
 SUBST_SED.paths=	-e 's,@TCLPREFIX@,${BUILDLINK_PREFIX.tcl},g'	\

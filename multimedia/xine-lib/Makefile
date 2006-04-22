@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/04/17 13:45:58 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2006/04/22 09:22:12 rillig Exp $
 
 .include "Makefile.common"
 
@@ -16,12 +16,12 @@ SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 SUBST_SED.oss+=		-e "s,\"dsp\",\"audio\",g"
 .endif
-SUBST_MESSAGE.oss=	"Fixing hardcoded audio device."
+SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 
 SUBST_STAGE.w32path=	post-patch
 SUBST_FILES.w32path=	src/libw32dll/wine/module.c
 SUBST_SED.w32path=	-e "s,@W32PATH@,${PREFIX}/lib/win32,"
-SUBST_MESSAGE.w32path=	"Fixing win32 dll path."
+SUBST_MESSAGE.w32path=	Fixing win32 dll path.
 
 # Needed to fix build problems under, at least, NetBSD/amd64.
 BUILDLINK_API_DEPENDS.libcdio+=	libcdio>=0.75

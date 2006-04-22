@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/04/17 13:46:04 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2006/04/22 09:22:12 rillig Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
@@ -62,11 +62,11 @@ SUBST_FILES.oss+=	modules/audio_output/oss.c
 SUBST_FILES.oss+=	modules/gui/pda/pda_interface.c
 SUBST_FILES.oss+=	modules/gui/pda/pda.glade
 SUBST_FILES.oss+=	modules/gui/wxwindows/v4l.cpp
-SUBST_MESSAGE.oss=	"Fixing harcoded audio device."
+SUBST_MESSAGE.oss=	Fixing harcoded audio device.
 SUBST_STAGE.fnt=	post-patch
 SUBST_SED.fnt=		-e "s,${ORIGFNT},${DEFAULT_FONT},"
 SUBST_FILES.fnt=	modules/misc/freetype.c
-SUBST_MESSAGE.fnt=	"Fixing harcoded paths."
+SUBST_MESSAGE.fnt=	Fixing harcoded paths.
 SUBST_STAGE.libav=	post-patch
 SUBST_FILES.libav=	configure
 SUBST_SED.libav=	-e "s,libavcodec/libavcodec.a,libavcodec.a,g"

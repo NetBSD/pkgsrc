@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/02/03 04:43:47 taca Exp $
+# $NetBSD: Makefile,v 1.23 2006/04/22 09:22:15 rillig Exp $
 
 DISTNAME=	rdtool-0.6.18
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -23,7 +23,7 @@ SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-configure
 SUBST_FILES.path=	bin/rd2
 SUBST_SED.path=		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|"
-SUBST_MESSAGE.path=	"Fixing PKG_SYSCONFDIR paths."
+SUBST_MESSAGE.path=	Fixing PKG_SYSCONFDIR paths.
 
 DOCS_RD=	README.rd README.rd.ja doc/rd-draft.rd doc/rd-draft.rd.ja
 DOCS=		${DOCS_RD} ${DOCS_RD:S/.rd/.html/}

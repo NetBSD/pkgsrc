@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/04/17 14:43:47 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2006/04/22 09:22:15 rillig Exp $
 
 DISTNAME=	libxml2-2.6.23
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ PYBINMODULE=	YES
 NO_CONFIGURE=	YES
 
 SUBST_CLASSES+=		setup
-SUBST_MESSAGE.setup=	"Fixing hardcoded paths."
+SUBST_MESSAGE.setup=	Fixing hardcoded paths.
 SUBST_STAGE.setup=	pre-build
 SUBST_FILES.setup=	setup.py
 SUBST_SED.setup=	-e "/ROOT/s,'/usr','${BUILDLINK_PREFIX.libxml2}',g" \

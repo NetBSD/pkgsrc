@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/04/06 06:22:51 reed Exp $
+# $NetBSD: Makefile,v 1.18 2006/04/22 09:22:15 rillig Exp $
 
 DISTNAME=	libxslt-1.1.15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ NO_CONFIGURE=	YES
 MAKE_ENV+=		PYLIBXSLTVERSION=${PKGVERSION:Q}
 
 SUBST_CLASSES+=		setup
-SUBST_MESSAGE.setup=	"Fixing hardcoded paths."
+SUBST_MESSAGE.setup=	Fixing hardcoded paths.
 SUBST_STAGE.setup=	pre-build
 SUBST_FILES.setup=	setup.py
 SUBST_SED.setup=	-e "s,@LIBICONVDIR@,${BUILDLINK_PREFIX.iconv},g" \

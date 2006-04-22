@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2006/04/17 13:46:53 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2006/04/22 09:22:17 rillig Exp $
 #
 
 DISTNAME=	gdm-2.14.0
@@ -63,7 +63,7 @@ RCD_SCRIPTS=		gdm
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=		desktop
-SUBST_MESSAGE.desktop=	"Configuring GDM settings."
+SUBST_MESSAGE.desktop=	Configuring GDM settings.
 SUBST_STAGE.desktop=	pre-configure
 SUBST_FILES.desktop=	config/default.desktop.in
 SUBST_FILES.desktop+=	config/gnome.desktop.in

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/20 20:08:53 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2006/04/22 09:22:14 rillig Exp $
 #
 
 DISTNAME=	Crypt-SSLeay-0.51
@@ -17,7 +17,7 @@ PERL5_PACKLIST=		auto/Crypt/SSLeay/.packlist
 
 SUBST_CLASSES+=		openssl
 SUBST_STAGE.openssl=	pre-configure
-SUBST_MESSAGE.openssl=	"Fixing path to OpenSSL."
+SUBST_MESSAGE.openssl=	Fixing path to OpenSSL.
 SUBST_FILES.openssl=	Makefile.PL
 SUBST_SED.openssl=	-e 's|%%SSLBASE%%|${BUILDLINK_PREFIX.openssl}|g'
 

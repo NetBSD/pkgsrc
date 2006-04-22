@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:09:28 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/22 09:22:09 rillig Exp $
 
 DISTNAME=	compface-1.5.1
 PKGREVISION=	1
@@ -15,7 +15,7 @@ USE_TOOLS+=		autoconf gmake
 GNU_CONFIGURE=		yes
 
 SUBST_CLASSES+=		perlpath
-SUBST_MESSAGE.perlpath=	"Configuring Perl path."
+SUBST_MESSAGE.perlpath=	Configuring Perl path.
 SUBST_STAGE.perlpath=	pre-configure
 SUBST_FILES.perlpath=	xbm2xface.pl
 SUBST_SED.perlpath=	-e 's|||' -e 's|/usr/bin|${PREFIX}/bin|g'

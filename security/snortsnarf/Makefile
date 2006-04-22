@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/09/28 14:31:08 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/22 09:22:14 rillig Exp $
 #
 
 DISTNAME=	SnortSnarf-050314.1
@@ -22,7 +22,7 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	snortsnarf.pl
 SUBST_SED.paths=	-e "s|./include|${PREFIX}/share/snortsnarf|g"
-SUBST_MESSAGE.paths=	"Fixing paths."
+SUBST_MESSAGE.paths=	Fixing paths.
 
 INSTALLATION_DIRS=	bin
 

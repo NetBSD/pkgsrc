@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/02/05 23:08:04 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2006/04/22 09:22:05 rillig Exp $
 
 DISTNAME=		stuffit520.611linux-i386
 PKGNAME=		stuffit-5.2.0.611
@@ -16,7 +16,7 @@ COMMENT=		Stuffit Archive Creator and Expander
 DEPENDS+=		suse_base>=6:../../emulators/${SUSE_DIR_PREFIX}_base
 .endif
 
-RESTRICTED=		"Redistribution not permitted"
+RESTRICTED=		Redistribution not permitted
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/03/04 21:30:26 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2006/04/22 09:22:13 rillig Exp $
 
 DISTNAME=	nntpclnt-1.6.1
 PKGREVISION=	5
@@ -11,7 +11,7 @@ COMMENT=	NNTP client library and inews client posting program
 CONFLICTS+=	inn-[0-9]*
 
 LICENSE=	nntpclnt-license
-RESTRICTED=	"Do not sell, rent, trade, market, or use for monetary profit"
+RESTRICTED=	Do not sell, rent, trade, market, or use for monetary profit
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 

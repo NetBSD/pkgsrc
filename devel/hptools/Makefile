@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:29:16 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/22 09:22:07 rillig Exp $
 #
 
 DISTNAME=	hptools-src-3.0.8
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://etud.epita.fr:8000/~avenar_j/hp/calcen.html
 COMMENT=	SDK for Hewlett-Packard HP-48G/49G/39G/40G calculators
 
-RESTRICTED=	"Redistribution of unmodified source only; resale prohibited."
+RESTRICTED=	Redistribution of unmodified source only; resale prohibited.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2005/12/29 06:22:24 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/22 09:22:17 rillig Exp $
 #
 
 DISTNAME=	screws-0.56
@@ -27,7 +27,7 @@ FILESDIR=	${WRKSRC}/src/Utils/files
 RCD_SCRIPTS=	screws
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Fixing paths."
+SUBST_MESSAGE.paths=	Fixing paths.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	src/Utils/screwsctl
 SUBST_SED.paths=	-e 's|/var/log|${VARBASE}/log|g'

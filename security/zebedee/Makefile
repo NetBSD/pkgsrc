@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/03/08 23:40:41 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2006/04/22 09:22:14 rillig Exp $
 
 DISTNAME=	zebedee-2.5.3
 PKGREVISION=	2
@@ -21,7 +21,7 @@ MAKE_FLAGS+=		OS=${LOWER_OPSYS:Q}
 .endif
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	"Fixing tclsh paths."
+SUBST_MESSAGE.paths=	Fixing tclsh paths.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	ftpgw.tcl
 SUBST_SED.paths=	-e 's,tclsh,${TCLSH},g'

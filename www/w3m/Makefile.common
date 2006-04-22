@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.42 2005/12/05 23:55:23 rillig Exp $
+# $NetBSD: Makefile.common,v 1.43 2006/04/22 09:22:17 rillig Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -53,7 +53,7 @@ CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 SUBST_CLASSES+=		man-ja
-SUBST_MESSAGE.man-ja=	"Fixing the path to Japanese manual pages."
+SUBST_MESSAGE.man-ja=	Fixing the path to Japanese manual pages.
 SUBST_STAGE.man-ja=	post-patch
 SUBST_FILES.man-ja=	Makefile.in config.h.dist
 SUBST_SED.man-ja=	-e 's|/ja/|/ja_JP.eucJP/|g'

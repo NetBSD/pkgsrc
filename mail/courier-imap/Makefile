@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/03/14 01:14:29 jlam Exp $
+# $NetBSD: Makefile,v 1.52 2006/04/22 09:22:10 rillig Exp $
 
 DISTNAME=	courier-imap-4.0.6
 PKGREVISION=	1
@@ -50,7 +50,7 @@ CONF_FILES_PERMS+=	${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}	\
 RCD_SCRIPTS=		courierimap courierimaps courierpop courierpops
 
 SUBST_CLASSES+=		courier
-SUBST_MESSAGE.courier=	"Convert to match courier-mta expectations."
+SUBST_MESSAGE.courier=	Convert to match courier-mta expectations.
 SUBST_FILES.courier=	imap/imapd.dist.in imap/imapd-ssl.dist.in	\
 			imap/pop3d.dist.in imap/pop3d-ssl.dist.in	\
 			imap/imapd.cnf.in imap/pop3d.cnf.in		\

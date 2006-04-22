@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/02/05 23:09:02 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/04/22 09:22:08 rillig Exp $
 
 DISTNAME=		pearpc-0.4
 PKGREVISION=		1
@@ -41,7 +41,7 @@ SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	post-patch
 SUBST_FILES.conf=	ppccfg.example
 SUBST_SED.conf=		-e "s|\"nvram\"|\"/tmp/nvram\"|"
-SUBST_MESSAGE.conf=	"Fixing configuration file."
+SUBST_MESSAGE.conf=	Fixing configuration file.
 
 .include "options.mk"
 

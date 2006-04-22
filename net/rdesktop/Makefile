@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/03/09 21:04:45 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2006/04/22 09:22:12 rillig Exp $
 #
 
 DISTNAME=		rdesktop-1.4.1
@@ -20,7 +20,7 @@ SUBST_CLASSES+=		audio
 SUBST_STAGE.audio=	pre-configure
 SUBST_FILES.audio=	rdpsnd_oss.c
 SUBST_SED.audio=	-e "s,/dev/dsp,${DEVOSSAUDIO},g"
-SUBST_MESSAGE.audio=	"Fixing hardcoded audio device."
+SUBST_MESSAGE.audio=	Fixing hardcoded audio device.
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"

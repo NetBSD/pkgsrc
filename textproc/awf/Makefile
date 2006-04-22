@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/04 21:30:45 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/22 09:22:15 rillig Exp $
 #
 
 DISTNAME=	nroff-clone
@@ -16,7 +16,7 @@ EXTRACT_CMD=	${GZCAT} ${DOWNLOADED_DISTFILE} | ${SED} -e '1,/^\#!/d' | ${SH}
 WRKSRC=		${WRKDIR}
 
 SUBST_CLASSES+=		awflib
-SUBST_MESSAGE.awflib=	"Fixing awf library path and awk pathname."
+SUBST_MESSAGE.awflib=	Fixing awf library path and awk pathname.
 SUBST_FILES.awflib=	Makefile awf awf.1
 SUBST_SED.awflib+=	-e 's|/usr/lib/awf|${PREFIX}/share/awf|'
 SUBST_SED.awflib+=	-e 's|@AWK@|${AWK}|g'

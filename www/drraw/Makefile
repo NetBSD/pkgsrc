@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/17 13:46:51 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/22 09:22:16 rillig Exp $
 #
 
 DISTNAME=		drraw-2.1.3
@@ -49,7 +49,7 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	drraw.cgi
 SUBST_SED.prefix=	-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g"
-SUBST_MESSAGE.prefix=	"Fixing harcoded paths."
+SUBST_MESSAGE.prefix=	Fixing harcoded paths.
 
 .include "../../databases/rrdtool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
