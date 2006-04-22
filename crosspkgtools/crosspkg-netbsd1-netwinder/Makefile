@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/22 09:22:07 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/22 11:34:07 rillig Exp $
 
 DISTNAME=	crosspkg-netbsd1-netwinder-1.6.2
 CATEGORIES=     crosspkgtools
@@ -29,15 +29,15 @@ NO_BUILD=	YES
 NO_PACKAGE=	needs work to function properly as a binary package
 
 # Dynamically generate the PLIST from the installed files.
-CROSSFS_PLIST_FILES= \
+CROSSFS_PLIST_FILES_CMD= \
 	(cd ${PREFIX};  ${FIND} crossfs/netbsd1-netwinder \! -type d -print ) \
 	| ${SORT} -u
-CROSSFS_PLIST_DIRS= \
+CROSSFS_PLIST_DIRS_CMD= \
 	(cd ${PREFIX};  ${FIND} crossfs/netbsd1-netwinder -type d -print ) \
 	| ${SED} -e "s,^,@unexec ${RMDIR} -p %D/,"			\
-		 -e "s,$$, 2>/dev/null || ${TRUE},"			\
+		 -e "s,\$$, 2>/dev/null || ${TRUE},"			\
 	| ${SORT} -ur
-GENERATE_PLIST+=	${CROSSFS_PLIST_FILES}; ${CROSSFS_PLIST_DIRS};
+GENERATE_PLIST+=	${CROSSFS_PLIST_FILES_CMD}; ${CROSSFS_PLIST_DIRS_CMD};
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/crossfs/netbsd1-netwinder
