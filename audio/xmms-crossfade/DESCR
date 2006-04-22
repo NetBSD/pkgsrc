@@ -11,7 +11,7 @@ smoothly crossfade inbetween.  Features are:
 
   Version 0.1 of XMMS-Crossfade was devised as a replacement plugin for
 the original OSS-plugin that comes with XMMS.  It was talking directly to
-the OSS driver.  Unfortunatelly, any other platforms (Solaris, AIX), that
+the OSS driver.  Unfortunately, any other platforms (Solaris, AIX), that
 don't support OSS, would not work this way.  As of version 0.2, it can use
 existing plugins for output.  It acts as a kind of crossfading "proxy"
 between XMMS and the output plugin.
