@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1817 2006/04/18 00:25:05 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1818 2006/04/22 08:36:07 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -1016,7 +1016,7 @@ package:
 .  if defined(SKIP_SILENT)
 	@${DO_NADA}
 .  else
-	@${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} may not be packaged: ${NO_PACKAGE}."
+	@${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} may not be packaged: "${NO_PACKAGE:Q}"."
 .  endif
 .endif
 
