@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2006/04/04 22:20:27 dmcmahill Exp $
+$NetBSD: distinfo,v 1.11 2006/04/23 03:02:26 dmcmahill Exp $
 
-SHA1 (pcb-20060321.tar.gz) = 8c8d332296eb6d55737c6e3909fc1ebed8bb7143
-RMD160 (pcb-20060321.tar.gz) = 1d73e61bb00d1a993dad4e3aa716e7708ac80db9
-Size (pcb-20060321.tar.gz) = 2520122 bytes
+SHA1 (pcb-20060422.tar.gz) = b3e7a92590d904643229cda3b39727609c0e9c7f
+RMD160 (pcb-20060422.tar.gz) = be4cc1b02eee79deb836da71f87a629954879bc8
+Size (pcb-20060422.tar.gz) = 3200182 bytes

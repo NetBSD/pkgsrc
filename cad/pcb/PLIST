@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2006/04/04 22:20:27 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/04/23 03:02:26 dmcmahill Exp $
 bin/MergePCBPS
 bin/Merge_dimPCBPS
 bin/pcb
 bin/pcb-bin
-bin/pcb-print
 info/pcb.info
 man/man1/pcb.1
 share/pcb/CreateLibrary.sh
@@ -148,15 +147,28 @@ share/pcb/newlib/tests/TK11950
 share/pcb/newlib/tests/TO99fromLED
 share/pcb/newlib/tests/UART
 share/pcb/newlib/tests/monoblock_small
+share/pcb/pad.eps
+share/pcb/pad.gif
+share/pcb/pad.pdf
+share/pcb/pad.png
 share/pcb/pcb-menu.res
+share/pcb/pcb.html
 share/pcb/pcb.pdf
 share/pcb/pcb.ps
 share/pcb/pcblib
 share/pcb/pcblib.contents
+share/pcb/puller.eps
+share/pcb/puller.gif
+share/pcb/puller.pdf
+share/pcb/puller.png
 share/pcb/qfp-ui
 share/pcb/qfp.dat
 share/pcb/refcard.pdf
 share/pcb/refcard.ps
+share/pcb/thermal.eps
+share/pcb/thermal.gif
+share/pcb/thermal.pdf
+share/pcb/thermal.png
 share/pcb/tools/MergePCBPS
 share/pcb/tools/Merge_dimPCBPS
 share/pcb/tools/PCB2HPGL
@@ -185,4 +197,5 @@ share/pcb/tutorial/tut1.pcb
 @dirrm share/pcb/m4
 @dirrm share/pcb/examples/libraries
 @dirrm share/pcb/examples
+@dirrm share/pcb-${PKGVERSION}
 @dirrm share/pcb
