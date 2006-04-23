@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.42 2006/04/23 10:06:08 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.43 2006/04/23 14:15:26 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2228,3 +2228,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/mozilla-bin to 1.7.13 [tron 2006-04-22]
 	Updated cad/pcb to 20060422 [dmcmahill 2006-04-22]
 	Updated archivers/makeself to 2.1.4 [rillig 2006-04-23]
+	Updated mail/thunderbird to 1.5.0.2 [ghen 2006-04-23]
+	Updated mail/thunderbird-gtk1 to 1.5.0.2 [ghen 2006-04-23]
