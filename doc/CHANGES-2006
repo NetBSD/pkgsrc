@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.40 2006/04/22 13:16:55 tron Exp $
+$NetBSD: CHANGES-2006,v 1.41 2006/04/23 03:04:29 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2226,3 +2226,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added net/wmnd version 0.4.12 [rpaulo 2006-04-21]
 	Added print/tex-fixme version 3.1 [minskim 2006-04-21]
 	Updated www/mozilla-bin to 1.7.13 [tron 2006-04-22]
+	Updated cad/pcb to 20060422 [dmcmahill 2006-04-22]
