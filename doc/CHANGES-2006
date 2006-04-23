@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.46 2006/04/23 18:26:51 tonio Exp $
+$NetBSD: CHANGES-2006,v 1.47 2006/04/23 18:46:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2235,3 +2235,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/xchat to 2.6.2 [tron 2006-04-23]
 	Updated chat/xchat-python to 2.6.2 [tron 2006-04-23]
 	Updated audio/daapd to 0.2.4b [tonio 2006-04-23]
+	Updated graphics/gimp24 to 2.3.8nb2 [wiz 2006-04-23]
