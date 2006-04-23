@@ -1,7 +1,75 @@
-# $NetBSD: usergroupfuncs.FreeBSD,v 1.1 2005/11/06 19:45:08 joerg Exp $
+# $NetBSD: usergroupfuncs.FreeBSD,v 1.2 2006/04/23 00:00:44 jlam Exp $
 #
 # Platform-specific adduser and addgroup functionality
 # on top of pw(8).
+
+# group_exists group groupid
+#	Returns 0 if $group exists and has gid $groupid
+#	Returns 1 if neither $group nor $groupid exist
+#	Returns 2 if $group or $groupid exist but don't match
+#	Returns 3 for all errors
+#	
+group_exists()
+{
+	_group="$1"; _groupid="$2"
+	${TEST} -n "$_group" || return 3
+
+	# Check using chgrp to work properly in an NSS/NIS environment.
+	_testfile="./grouptest.tmp.$$"
+	${ECHO} > $_testfile
+	if ${CHGRP} $_group $_testfile >/dev/null 2>&1; then
+		# $_group exists
+		_id=`${LS} -ln $_testfile 2>/dev/null | ${AWK} '{ print $4 }'`
+		${TEST} -n "$_groupid" || _groupid=$_id
+		if ${TEST} "$_groupid" = "$_id"; then
+			${RM} -f $_testfile; return 0
+		fi
+		${RM} -f $_testfile; return 2
+	elif ${CHGRP} $_groupid $_testfile >/dev/null 2>&1; then
+		_name=`${LS} -l $_testfile 2>/dev/null | ${AWK} '{ print $4 }'`
+		if ${TEST} "$_name" != "$_groupid"; then
+			# $_group doesn't exist, but $_groupid exists
+			${RM} -f $_testfile; return 2
+		fi
+		# neither $_group nor $_groupid exist
+		${RM} -f $_testfile; return 1
+	fi
+	${RM} -f $_testfile; return 3
+}
+
+# user_exists user userid
+#	Returns 0 if $user exists and has uid $userid
+#	Returns 1 if neither $user nor $userid exist
+#	Returns 2 if $user or $userid exist but don't match
+#	Returns 3 for all errors
+#	
+user_exists()
+{
+	_user="$1"; _userid="$2"
+	${TEST} -n "$_user" || return 3
+
+	# Check using chown to work properly in an NSS/NIS environment.
+	_testfile="./usertest.tmp.$$"
+	${ECHO} > $_testfile
+	if ${CHOWN} $_user $_testfile >/dev/null 2>&1; then
+		# $_user exists
+		_id=`${LS} -ln $_testfile 2>/dev/null | ${AWK} '{ print $3 }'`
+		${TEST} -n "$_userid" || _userid=$_id
+		if ${TEST} "$_userid" = "$_id"; then
+			${RM} -f $_testfile; return 0
+		fi
+		${RM} -f $_testfile; return 2
+	elif ${CHOWN} $_userid $_testfile >/dev/null 2>&1; then
+		_name=`${LS} -l $_testfile 2>/dev/null | ${AWK} '{ print $3 }'`
+		if ${TEST} "$_name" != "$_userid"; then
+			# $_user doesn't exist, but $_userid exists
+			${RM} -f $_testfile; return 2
+		fi
+		# neither $_user nor $_userid exist
+		${RM} -f $_testfile; return 1
+	fi
+	${RM} -f $_testfile; return 3
+}
 
 # adduser user group [userid] [descr] [home] [shell]
 adduser()
