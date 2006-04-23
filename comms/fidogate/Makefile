@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2006/03/22 22:50:31 tv Exp $
+# $NetBSD: Makefile,v 1.54 2006/04/23 00:12:36 jlam Exp $
 #
 
 DISTNAME=	fidogate-4.4.10
@@ -19,8 +19,10 @@ CONF_FILES=	${EGDIR}/fidogate.conf ${PKG_SYSCONFDIR}/fidogate/fidogate.conf
 RCD_SCRIPTS=	fidogate
 INFO_FILES=	# PLIST
 
-PKG_USERS=	news:news::Network\ News:/var/spool/news:${NOLOGIN}
 PKG_GROUPS=	news
+PKG_USERS=	news:news
+PKG_GECOS.news=	Network News
+PKG_HOME.news=	/var/spool/news
 
 NO_CONFIGURE=	yes
 
