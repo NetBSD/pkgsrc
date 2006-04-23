@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4904 2006/04/21 17:27:29 wiz Exp $
+$NetBSD: TODO,v 1.4905 2006/04/23 10:06:08 rillig Exp $
 
 Suggested new packages
 ======================
@@ -712,7 +712,6 @@ Suggested package updates
 	o magicpoint-1.11b
 	o mailman-2.1.8
 	o mailscanner-4.51
-	o makeself-2.1.4
 	o maketool-0.8.4
 	o makeztxt-1.60
 	o malsync-2.2.0
