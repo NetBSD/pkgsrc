@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/17 13:46:44 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/23 00:12:40 jlam Exp $
 #
 
 DISTNAME=	nagios-2.0
@@ -34,8 +34,13 @@ INSTALL_TARGET=		install install-config
 PKG_GROUPS+=	${NAGIOS_GROUP}
 PKG_GROUPS+=	${NAGIOSADM_GROUP}
 
-PKG_USERS+=	${NAGIOS_USER}:${NAGIOS_GROUP}::Nagios\ Runtime\ User
-PKG_USERS+=	${NAGIOSADM_USER}:${NAGIOSADM_GROUP}::Nagios\ Administrator:${PREFIX}/etc/nagios:${SH}
+PKG_USERS+=	${NAGIOS_USER}:${NAGIOS_GROUP}
+PKG_USERS+=	${NAGIOSADM_USER}:${NAGIOSADM_GROUP}
+
+PKG_GECOS.${NAGIOS_USER}=	Nagios Runtime User
+PKG_GECOS.${NAGIOSADM_USER}=	Nagios Administrator
+PKG_HOME.${NAGIOSADM_USER}=	${PKG_SYSCONFDIR}
+PKG_SHELL.${NAGIOSADM_USER}=	${SH}
 
 EGDIR=		${PREFIX}/share/examples/nagios
 EGFILES=	cgi.cfg checkcommands.cfg contactgroups.cfg contacts.cfg	\
