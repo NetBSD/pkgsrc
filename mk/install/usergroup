@@ -1,4 +1,4 @@
-# $NetBSD: usergroup,v 1.14 2006/03/19 23:58:14 jlam Exp $
+# $NetBSD: usergroup,v 1.15 2006/04/23 00:00:44 jlam Exp $
 #
 # Generate a +USERGROUP script that reference-counts users and groups
 # that are required for the proper functioning of the package.
@@ -44,11 +44,13 @@ UNPACK,|UNPACK,+USERGROUP)
 #
 # Only the group is required; the groupid is optional.
 #
+AWK="@AWK@"
 CAT="@CAT@"
 CHGRP="@CHGRP@"
+CHOWN="@CHOWN@"
 ECHO="@ECHO@"
 GREP="@GREP@"
-ID="@ID@"
+LS="@LS@"
 MKDIR="@MKDIR@"
 PWD_CMD="@PWD_CMD@"
 RM="@RM@"
@@ -76,36 +78,6 @@ case "${PKG_CREATE_USERGROUP:-@PKG_CREATE_USERGROUP@}" in
 	_PKG_CREATE_USERGROUP=no
 	;;
 esac
-
-group_exists()
-{
-	_group="$1"
-	case $_group in
-	"")	return 2 ;;
-	esac
-	# Check using chgrp to work properly in an NIS environment.
-	testfile="./grouptest.tmp.$$"
-	${ECHO} > $testfile
-	if ${CHGRP} $_group $testfile >/dev/null 2>&1; then
-		${RM} -f $testfile
-		return 0
-	fi
-	${RM} -f $testfile
-	return 1
-}
-
-user_exists()
-{
-	_user="$1"
-	case $_user in
-	"")	return 2 ;;
-	esac
-	# Check using id to work properly in an NIS environment.
-	if ${ID} $_user >/dev/null 2>&1; then
-		return 0
-	fi
-	return 1
-}
 
 listwrap()
 {
@@ -150,7 +122,7 @@ ADD)
 		token="$shadow_dir/${PKGNAME}"
 		if ${TEST} ! -d "$shadow_dir"; then
 			${MKDIR} $shadow_dir
-			group_exists $group &&
+			group_exists $group $groupid &&
 				${ECHO} "${PKGNAME}" > $preexist
 		fi
 		if ${TEST} -f "$token" && \
@@ -161,11 +133,11 @@ ADD)
 		fi
 		case ${_PKG_CREATE_USERGROUP} in
 		yes)
-			if group_exists $group; then
-				:
-			else
-				addgroup "$group" "$groupid"
-			fi
+			group_exists $group $groupid
+			case $? in
+			0)	;;
+			1)	addgroup "$group" "$groupid" ;;
+			esac
 			;;
 		esac
 	done; }
@@ -187,7 +159,7 @@ ADD)
 		token="$shadow_dir/${PKGNAME}"
 		if ${TEST} ! -d "$shadow_dir"; then
 			${MKDIR} $shadow_dir
-			user_exists $user &&
+			user_exists $user $userid &&
 				${ECHO} "${PKGNAME}" > $preexist
 		fi
 		if ${TEST} -f "$token" && \
@@ -198,12 +170,14 @@ ADD)
 		fi
 		case ${_PKG_CREATE_USERGROUP} in
 		yes)
-			if user_exists $user && group_exists $group; then
-				:
-			else
-				adduser "$user" "$group" "$userid"	\
+			group_exists $group || continue
+			user_exists $user $userid
+			case $? in
+			0)	;;
+			1)	adduser "$user" "$group" "$userid"	\
 					"$descr" "$home" "$shell"
-			fi
+				;;
+			esac
 			;;
 		esac
 	done; }
@@ -276,7 +250,7 @@ CHECK-ADD)
 		IFS="$SAVEIFS"
 		case $group in
 		"")	continue ;;
-		*)	group_exists $group && continue ;;
+		*)	group_exists $group $groupid && continue ;;
 		esac
 		case "$printed_header" in
 		yes)	;;
@@ -288,7 +262,7 @@ CHECK-ADD)
 		esac
 		case $groupid in
 		"")	${ECHO} "	$group" ;;
-		*)	${ECHO} "	$group ($groupid)" ;;
+		*)	${ECHO} "	$group (gid = $groupid)" ;;
 		esac
 	done
 	case "$printed_header" in
@@ -307,7 +281,7 @@ CHECK-ADD)
 		IFS="$SAVEIFS"
 		case $user in
 		"")	continue ;;
-		*)	user_exists $user && continue ;;
+		*)	user_exists $user $userid && continue ;;
 		esac
 		case "$printed_header" in
 		yes)	;;
@@ -317,11 +291,11 @@ CHECK-ADD)
 			${ECHO} ""
 			;;
 		esac
-		: ${home:="${PKG_USER_HOME}"}
-		: ${shell:="${PKG_USER_SHELL}"}
+		: ${home:="@PKG_USER_HOME@"}
+		: ${shell:="@PKG_USER_SHELL@"}
 		case $userid in
 		"")	${ECHO} "	$user: $group, $home, $shell" ;;
-		*)	${ECHO} "	$user ($userid): $group, $home, $shell" ;;
+		*)	${ECHO} "	$user (uid = $userid): $group, $home, $shell" ;;
 		esac
 	done
 	case "$printed_header" in
@@ -343,7 +317,7 @@ CHECK-REMOVE)
 		IFS="$SAVEIFS"
 		case $user in
 		"")	continue ;;
-		*)	user_exists $user || continue ;;
+		*)	user_exists $user $userid || continue ;;
 		esac
 		shadow_dir="${PKG_REFCOUNT_USERS_DBDIR}/$user"
 		${TEST} ! -d "$shadow_dir" || continue	# refcount isn't zero
@@ -370,7 +344,7 @@ CHECK-REMOVE)
 		IFS="$SAVEIFS"
 		case $group in
 		"")	continue ;;
-		*)	group_exists $group || continue ;;
+		*)	group_exists $group $groupid || continue ;;
 		esac
 		shadow_dir="${PKG_REFCOUNT_GROUPS_DBDIR}/$group"
 		${TEST} ! -d "$shadow_dir" || continue	# refcount isn't zero
