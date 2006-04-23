@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/02 11:10:28 tron Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/23 16:18:24 wiz Exp $
 
 DISTNAME=	p5-pkgsrc-Dewey-1.0
 PKGREVISION=	1
@@ -10,7 +10,7 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.netbsd.org/Documentation/pkgsrc/
 COMMENT=	Perl module to compare pkgsrc Dewey numbers
 
-CPPFLAGS+=	-DHAVE_CTYPE_H -DHAVE_STDLIB_H
+CPPFLAGS+=	-DHAVE_CTYPE_H -DHAVE_STDLIB_H -DHAVE_STRING_H
 
 NO_CHECKSUM=	yes
 
