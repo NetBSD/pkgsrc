@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.562 2006/04/22 11:22:40 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.563 2006/04/23 08:59:55 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1700,7 +1700,7 @@ sub load_tool_names() {
 	# Get the list of files that define the tools from bsd.tools.mk.
 	#
 
-	@tool_files = ();
+	@tool_files = ("defaults.mk");
 	{
 		my $fname = "${current_dir}/${pkgsrcdir}/mk/tools/bsd.tools.mk";
 		my $lines = load_lines($fname, true);
