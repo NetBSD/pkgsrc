@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/14 01:14:31 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/23 00:12:39 jlam Exp $
 #
 
 DISTNAME=		djbdns-run-20050415
@@ -26,13 +26,17 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}/dnscache/servers
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/rbldns
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/tinydns
 PKG_GROUPS=		djbdns
-PKG_USERS+=		dnslog:djbdns::dnslog
-PKG_USERS+=		axfrdns:djbdns::axfrdns
-PKG_USERS+=		dnscache:djbdns::dnscache
-PKG_USERS+=		rbldns:djbdns::rbldns
-PKG_USERS+=		tinydns:djbdns::tinydns
+PKG_USERS+=		dnslog:djbdns
+PKG_USERS+=		axfrdns:djbdns
+PKG_USERS+=		dnscache:djbdns
+PKG_USERS+=		rbldns:djbdns
+PKG_USERS+=		tinydns:djbdns
 RCD_SCRIPTS=		axfrdns djbdns dnscache rbldns tinydns
 FILES_SUBST+=		PKGNAME=${PKGNAME:Q}
+
+.for user in ${PKG_USERS:C/\:.*//}
+PKG_GECOS.${user}=	djbdns ${user} pseudo-user
+.endfor
 
 INSTALLATION_DIRS=	bin share/doc/djbdns-run
 

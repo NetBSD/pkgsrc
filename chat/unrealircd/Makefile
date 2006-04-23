@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/06 06:21:39 reed Exp $
+# $NetBSD: Makefile,v 1.13 2006/04/23 00:12:36 jlam Exp $
 
 DISTNAME=	Unreal3.2.4
 PKGNAME=	unrealircd-3.2.4
@@ -75,8 +75,12 @@ CONF_FILES_PERMS=	${IRCD_EG:Q}/example.conf \
 			${UIRCD_HOME:Q}/unrealircd.conf \
 			${UIRCD_USER} ${UIRCD_GROUP} 0660
 
-PKG_USERS=	${UIRCD_USER:Q}:${UIRCD_GROUP:Q}::UnrealIRCD\ user:${UIRCD_HOME:Q}:${NOLOGIN:Q}
 PKG_GROUPS=	${UIRCD_GROUP:Q}
+PKG_USERS=	${UIRCD_USER:Q}:${UIRCD_GROUP:Q}
+
+PKG_GECOS.${UIRCD_USER}=	UnrealIRCD user
+PKG_HOME.${UIRCD_USER}=		${UIRCD_HOME}
+
 RCD_SCRIPTS=	unrealircd
 
 MESSAGE_SRC+=	${WRKDIR}/.MESSAGE_SRC

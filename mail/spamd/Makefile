@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/01 12:14:27 peter Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/23 00:12:39 jlam Exp $
 
 DISTNAME=		spamd-20060330
 CATEGORIES=		mail
@@ -20,8 +20,10 @@ CPPFLAGS+=		-DPATH_SPAMD_DB=\"${VARBASE}/db/spamd\"
 CPPFLAGS+=		-DPATH_PFCTL=\"${PFCTL}\"
 CPPFLAGS+=		-DPATH_SPAMD_CONF=\"${SPAMD_CONF}\"
 
-PKG_USERS=		_spamd:_spamd::Spam\ Daemon:${SPAMD_HOME}:/sbin/nologin
 PKG_GROUPS=		_spamd
+PKG_USERS=		_spamd:_spamd
+PKG_GECOS._spamd=	Spam Daemon User
+PKG_HOME._spamd=	${SPAMD_HOME}
 
 RCD_SCRIPTS=            pfspamd
 

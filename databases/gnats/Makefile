@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/03/30 03:44:41 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2006/04/23 00:12:36 jlam Exp $
 
 DISTNAME=	gnats-4.1.0
 PKGREVISION=	2
@@ -31,7 +31,12 @@ GNATS_USER?=	gnats
 GNATS_GROUP?=	daemon
 GNATS_SERVICE?=	support
 GNATS_HOME?=	${VARBASE}/db/gnats
-PKG_USERS=	${GNATS_USER}:${GNATS_GROUP}::GNATS\ database\ owner:${GNATS_HOME}:${SH}
+PKG_GROUPS=	${GNATS_GROUP}
+PKG_USERS=	${GNATS_USER}:${GNATS_GROUP}
+
+PKG_GECOS.${GNATS_USER}=	GNATS database owner
+PKG_HOME.${GNATS_USER}=		${GNATS_HOME}
+PKG_SHELL.${GNATS_USER}=	${SH}
 
 GNATS_USER_FILE?=	${PKG_SYSCONFDIR}/gnatsd.user_access
 GNATS_HOST_FILE?=	${PKG_SYSCONFDIR}/gnatsd.host_access
