@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/04/22 09:22:14 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2006/04/23 00:12:42 jlam Exp $
 
 DISTNAME=	pks-0.9.4
 PKGREVISION=	3
@@ -23,8 +23,11 @@ PKS_GROUP=	pks
 PKS_SERVER?=	localhost
 PKS_HOME=	${VARBASE}/pks
 
-PKG_USERS=	${PKS_USER}:${PKS_GROUP}::PGP\ Key\ Server:${PKS_HOME}:${NOLOGIN}
 PKG_GROUPS=	${PKS_GROUP}
+PKG_USERS=	${PKS_USER}:${PKS_GROUP}
+
+PKG_GECOS.${PKS_USER}=	PGP Key Server
+PKG_HOME.${PKS_USER}=	${PKS_HOME}
 
 BDB_ACCEPTED=	db2
 
