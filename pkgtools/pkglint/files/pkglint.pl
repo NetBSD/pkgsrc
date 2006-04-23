@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.563 2006/04/23 08:59:55 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.564 2006/04/23 09:48:53 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2776,7 +2776,7 @@ sub checkline_mk_shelltext($$) {
 				my $toolname = get_varname_to_toolname->{$toolvarname};
 				$addition = " and add USE_TOOLS+=${toolname} before this line";
 			}
-			$line->log_warning("Possible direct use of tool \"${shellword}\". Please use \$\{$vartools->{$shellword}\} instead${addition}.");
+			$line->log_warning("Direct use of tool \"${shellword}\". Please use \$\{$vartools->{$shellword}\} instead${addition}.");
 		}
 
 		if ($state == SCST_START && exists(forbidden_commands->{$shellword})) {
@@ -4371,10 +4371,10 @@ sub checkfile_patch($) {
 			my ($tag) = ($2);
 
 			if ($text =~ re_patch_uh) {
-				$line->log_warning("Possible RCS tag \"\$${tag}\$\". Please remove it.");
+				$line->log_warning("Found RCS tag \"\$${tag}\$\". Please remove it.");
 				$line->set_text($1);
 			} else {
-				$line->log_warning("Possible RCS tag \"\$${tag}\$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".");
+				$line->log_warning("Found RCS tag \"\$${tag}\$\". Please remove it by reducing the number of context lines using pkgdiff or \"diff -U[210]\".");
 			}
 		}
 	};
