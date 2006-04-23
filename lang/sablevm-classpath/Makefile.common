@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2006/04/15 22:09:56 tonio Exp $
+# $NetBSD: Makefile.common,v 1.8 2006/04/23 20:03:06 tonio Exp $
 #
 
 DISTNAME=	sablevm-classpath-1.13
@@ -19,5 +19,4 @@ NO_MTREE=		yes
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 
-CONFIGURE_ARGS+=	--without-zip
 CONFIGURE_ARGS+=	--with-jikes
