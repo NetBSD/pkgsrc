@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.46 2006/04/16 04:27:17 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.47 2006/04/23 00:00:43 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -111,21 +111,41 @@ FILES_SUBST+=		PKG_INSTALLATION_TYPE=${PKG_INSTALLATION_TYPE:Q}
 # PKG_USERS represents the users to create for the package.  It is a
 #	space-separated list of elements of the form
 #
-#		user:group[:[userid][:[descr][:[home][:shell]]]]
+#		user:group
 #
-#	Only the user and group are required; everything else is optional,
-#	but the colons must be in the right places when specifying optional
-#	bits.  Note that if the description contains spaces, they must
-#	be escaped as usual, e.g.
+# The following variables are optional and specify further details of
+# the user accounts listed in PKG_USERS:
 #
-#		foo:foogrp::The\ Foomister
+# PKG_UID.<user> is the hardcoded numeric UID for <user>.
+# PKG_GECOS.<user> is <user>'s description, as well as contact info.
+# PKG_HOME.<user> is the home directory for <user>.
+# PKG_SHELL.<user> is the login shell for <user>.
+#
 #
 # PKG_GROUPS represents the groups to create for the package.  It is a
 #	space-separated list of elements of the form
 #
-#		group[:groupid]
+#		group
 #
-#	Only the group is required; the groupid is optional.
+# The following variables are optional and specify further details of
+# the user accounts listed in PKG_GROUPS:
+#
+# PKG_GID.<group> is the hardcoded numeric GID for <group>.
+#
+# For example:
+#
+#	PKG_GROUPS+=	mail
+#	PKG_USERS+=	courier:mail
+#
+#	PKG_GECOS.courier=	Courier authlib and mail user
+#
+# USERGROUP_PHASE is set to the phase just before which users and
+#	groups need to be created.  Valid values are "configure" and
+#	"build".  If not defined, then by default users and groups
+#	are created prior to installation by the pre-install-script
+#	target.  If this is defined, then the numeric UIDs and GIDs
+#	of users and groups required by this package are hardcoded
+#	into the +INSTALL script.
 #
 PKG_GROUPS?=		# empty
 PKG_USERS?=		# empty
@@ -162,19 +182,43 @@ _INSTALL_USERGROUP_DATAFILE=	${_PKGINSTALL_DIR}/usergroup-data
 _INSTALL_UNPACK_TMPL+=		${_INSTALL_USERGROUP_FILE}
 _INSTALL_DATA_TMPL+=		${_INSTALL_USERGROUP_DATAFILE}
 
+.for _group_ in ${PKG_GROUPS}
+.  if defined(USERGROUP_PHASE)
+# Determine the numeric GID of each group.
+USE_TOOLS+=	perl
+PKG_GID.${_group_}_cmd=							\
+	if ${TEST} ! -x ${PERL5}; then ${ECHO} ""; exit 0; fi;		\
+	${PERL5} -le 'print scalar getgrnam shift' ${_group_}
+PKG_GID.${_group_}?=	${PKG_GID.${_group_}_cmd:sh:M*}
+.  endif
+_PKG_GROUPS+=	${_group_}:${PKG_GID.${_group_}}
+.endfor
+
+.for _entry_ in ${PKG_USERS}
+.  if defined(USERGROUP_PHASE)
+# Determine the numeric UID of each user.
+USE_TOOLS+=	perl
+PKG_UID.${_entry_:C/\:.*//}_cmd=					\
+	if ${TEST} ! -x ${PERL5}; then ${ECHO} ""; exit 0; fi;		\
+	${PERL5} -le 'print scalar getpwnam shift' ${_entry_:C/\:.*//}
+PKG_UID.${_entry_:C/\:.*//}?=	${PKG_UID.${_entry_:C/\:.*//}_cmd:sh:M*}
+.  endif
+_PKG_USERS+=	${_user_::=${_entry_:C/\:.*//}}${_entry_}:${PKG_UID.${_user_}}:${PKG_GECOS.${_user_}:Q}:${PKG_HOME.${_user_}:Q}:${PKG_SHELL.${_user_}:Q}
+.endfor
+
 ${_INSTALL_USERGROUP_DATAFILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	set -- dummy ${PKG_GROUPS}; shift;				\
+	set -- dummy ${_PKG_GROUPS:C/\:*$//}; shift;			\
 	exec 1>>${.TARGET}.tmp;						\
 	while ${TEST} $$# -gt 0; do					\
 		i="$$1"; shift;						\
 		${ECHO} "# GROUP: $$i";					\
 	done
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	set -- dummy ${PKG_USERS}; shift;				\
+	set -- dummy ${_PKG_USERS:C/\:*$//}; shift;			\
 	exec 1>>${.TARGET}.tmp;						\
 	while ${TEST} $$# -gt 0; do					\
 		i="$$1"; shift;						\
@@ -195,6 +239,57 @@ ${_INSTALL_USERGROUP_FILE}:						\
 		${RM} -f ${.TARGET};					\
 		${TOUCH} ${TOUCH_ARGS} ${.TARGET};			\
 	fi
+
+_INSTALL_USERGROUP_UNPACKER=	${_PKGINSTALL_DIR}/usergroup-unpack
+
+${_INSTALL_USERGROUP_UNPACKER}:						\
+		${_INSTALL_USERGROUP_FILE}				\
+		${_INSTALL_USERGROUP_DATAFILE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	exec 1>${.TARGET}.tmp;						\
+	${ECHO} "#!${SH}";						\
+	${ECHO} "";							\
+	${ECHO} "CAT="${CAT:Q};						\
+	${ECHO} "CHMOD="${CHMOD:Q};					\
+	${ECHO} "SED="${SED:Q};						\
+	${ECHO} "";							\
+	${ECHO} "SELF=\$$0";						\
+	${ECHO} "STAGE=UNPACK";						\
+	${ECHO} "";							\
+	${CAT}	${_INSTALL_USERGROUP_FILE}				\
+		${_INSTALL_USERGROUP_DATAFILE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+
+.if defined(USERGROUP_PHASE)
+.  if !empty(USERGROUP_PHASE:M*configure)
+pre-configure: create-usergroup
+.  elif !empty(USERGROUP_PHASE:M*build)
+pre-build: create-usergroup
+.  endif
+.endif
+
+_INSTALL_USERGROUP_CHECK=						\
+	${SETENV} PERL5=${PERL5:Q}					\
+	${SH} ${PKGSRCDIR}/mk/install/usergroup-check
+
+.PHONY: create-usergroup
+create-usergroup: ${_INSTALL_USERGROUP_UNPACKER}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if ${_INSTALL_USERGROUP_CHECK} -g ${_PKG_GROUPS:C/\:*$//} &&	\
+	   ${_INSTALL_USERGROUP_CHECK} -u ${_PKG_USERS:C/\:*$//}; then	\
+		exit 0;							\
+	fi;								\
+	cd ${_PKGINSTALL_DIR} &&					\
+	${SH} ${_INSTALL_USERGROUP_UNPACKER} &&				\
+	${TEST} -f ./+USERGROUP &&					\
+	./+USERGROUP ADD ${_PKG_DBDIR}/${PKGNAME} &&			\
+	./+USERGROUP CHECK-ADD ${_PKG_DBDIR}/${PKGNAME} &&		\
+	${RM} -f ${_INSTALL_USERGROUP_FILE:Q}				\
+		${_INSTALL_USERGROUP_DATAFILE:Q}			\
+		${_INSTALL_USERGROUP_UNPACKER:Q}			\
+		./+USERGROUP
 
 # SPECIAL_PERMS are lists that look like:
 #		file user group mode
