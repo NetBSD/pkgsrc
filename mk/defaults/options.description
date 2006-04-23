@@ -198,6 +198,7 @@ oss			Enable support for the Open Sound System audio library.
 osx-addressbook		Enable support for MacOSX Address Book.
 pam			Enable PAM support.
 patchviewer	
+pcb-motif		Use Motif for the gui instead of GTK for cad/pcb.
 pcre	
 perf-tuning	
 perl	
