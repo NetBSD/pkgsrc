@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4905 2006/04/23 10:06:08 rillig Exp $
+$NetBSD: TODO,v 1.4906 2006/04/23 14:16:00 ghen Exp $
 
 Suggested new packages
 ======================
@@ -1163,8 +1163,6 @@ Suggested package updates
 	o ted-2.17
 	o tet3-3.6b
 	o tfmxplay-1.1.6
-	o thunderbird-1.5.0.2
-	o thunderbird-gtk1-1.5.0.2
 	o tinyproxy-1.7.0
 	o tk-8.4.13
 	o tk83-8.3.5
