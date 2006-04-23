@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2006/04/17 13:46:19 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2006/04/23 17:19:41 tron Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		1
 MAINTAINER=		tron@NetBSD.org
 
 COMMENT=	X11 (X Window System) IRC client, using the GTK2 toolkit
@@ -13,8 +12,7 @@ USE_TOOLS+=		msgfmt
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
 
-# The text frontend doesn't compile in X-Chat 2.6.1
-#CONFIGURE_ARGS+=	--enable-textfe
+CONFIGURE_ARGS+=	--enable-textfe
 CONFIGURE_ARGS+=	--enable-tcl=no
 CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-python
