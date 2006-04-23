@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/12 19:40:51 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/23 00:12:41 jlam Exp $
 #
 DISTNAME=		libprelude-0.9.7
 PKGREVISION=		1
@@ -26,8 +26,12 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 PRELUDE_USER?=		_prelude
 PRELUDE_GROUP?=		_prelude
 PRELUDE_HOME?=		${VARBASE:Q}/spool/prelude
-PKG_USERS=	${PRELUDE_USER}:${PRELUDE_GROUP}::Prelude\ IDS:${PRELUDE_HOME}:${NOLOGIN}
+
 PKG_GROUPS=	${PRELUDE_GROUP}
+PKG_USERS=	${PRELUDE_USER}:${PRELUDE_GROUP}
+
+PKG_GECOS.${PRELUDE_USER}=	Prelude IDS
+PKG_HOME.${PRELUDE_USER}=	${PRELUDE_HOME}
 
 CONF_FILES+=	${PREFIX}/share/examples/libprelude/client.conf ${PKG_SYSCONFDIR}/client.conf
 CONF_FILES+=	${PREFIX}/share/examples/libprelude/global.conf ${PKG_SYSCONFDIR}/global.conf

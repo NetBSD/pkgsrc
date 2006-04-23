@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/14 01:14:29 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/23 00:12:37 jlam Exp $
 #
 .include "../../inputmethod/canna/Makefile.common"
 
@@ -15,7 +15,7 @@ MESSAGE_SUBST+=	CANNA_USER="${CANNA_USER}"
 MESSAGE_SUBST+=	CANNA_GROUP="${CANNA_GROUP}"
 
 PKG_GROUPS=	${CANNA_GROUP}
-PKG_USERS=	${CANNA_USER}:${CANNA_GROUP}::Canna\ user
+PKG_USERS=	${CANNA_USER}:${CANNA_GROUP}
 
 OWN_DIRS_PERMS=	${CANNA_SPOOL} ${CANNA_USER} ${CANNA_GROUP} ${CANNA_MODE}
 

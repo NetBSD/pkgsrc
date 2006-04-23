@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/04/06 06:22:34 reed Exp $
+# $NetBSD: Makefile,v 1.36 2006/04/23 00:12:40 jlam Exp $
 
 DISTNAME=	nsd-2.3.3
 CATEGORIES=	net
@@ -29,11 +29,11 @@ CONFIGURE_ARGS+=--with-dbfile=${VARBASE}/db/nsd.db
 RCD_SCRIPTS=	nsd
 FILES_SUBST+=	NSDDB=${VARBASE}/db/nsd.db
 
-PKG_GROUPS?=		nsd
-PKG_USERS?=		nsd:nsd::nsd\ pseudo-user
+PKG_GROUPS?=	nsd
+PKG_USERS?=	nsd:nsd
 
 .for _file_ in nsd.zones nsdc.conf
-CONF_FILES+=		${EXAMPLEDIR}/${_file_} ${PKG_SYSCONFDIR}/nsd/${_file_}
+CONF_FILES+=	${EXAMPLEDIR}/${_file_} ${PKG_SYSCONFDIR}/nsd/${_file_}
 .endfor
 
 post-install:

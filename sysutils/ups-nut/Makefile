@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/04/22 07:32:24 lukem Exp $
+# $NetBSD: Makefile,v 1.42 2006/04/23 00:12:42 jlam Exp $
 #
 
 DISTNAME=		nut-2.0.3
@@ -40,7 +40,9 @@ MESSAGE_SUBST+=		NUT_EGDIR=${NUT_EGDIR}
 MESSAGE_SUBST+=		NUT_DOCDIR=${NUT_DOCDIR}
 
 PKG_GROUPS=		${NUT_GROUP}
-PKG_USERS=		${NUT_USER}:${NUT_GROUP}::Network\ UPS\ Tools::${SH}
+PKG_USERS=		${NUT_USER}:${NUT_GROUP}
+PKG_GECOS.${NUT_USER}=	Network UPS Tools
+PKG_SHELL.${NUT_USER}=	${SH}
 
 CONF_FILES=		${NUT_EGDIR}/ups.conf.sample ${NUT_CONFDIR}/ups.conf
 CONF_FILES+=		${NUT_EGDIR}/upssched.conf.sample \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/03/14 01:14:27 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2006/04/23 00:12:36 jlam Exp $
 #
 
 DISTNAME=		silc-server-1.0.2
@@ -23,7 +23,7 @@ SHLIBTOOL_OVERRIDE=	libtool */*/*/libtool
 SILCD_USER?=		silcd
 SILCD_GROUP?=		silcd
 PKG_GROUPS=		${SILCD_GROUP}
-PKG_USERS=		${SILCD_USER}:${SILCD_GROUP}::SILC\ Server\ user
+PKG_USERS=		${SILCD_USER}:${SILCD_GROUP}
 
 PKG_SYSCONFSUBDIR?=	${PKGBASE}
 

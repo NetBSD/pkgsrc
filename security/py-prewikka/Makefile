@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/06 00:18:22 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/23 00:12:42 jlam Exp $
 #
 
 DISTNAME=		prewikka-0.9.3
@@ -21,8 +21,11 @@ PREWIKKA_GROUP?=	prewikka
 PREWIKKA_HOME=		/nonexistent
 RCD_SCRIPTS=		prewikka
 
-PKG_USERS=	${PREWIKKA_USER}:${PREWIKKA_GROUP}::Prelude\-IDS\ console:${PREWIKKA_HOME}:${NOLOGIN}
 PKG_GROUPS=	${PREWIKKA_GROUP}
+PKG_USERS=	${PREWIKKA_USER}:${PREWIKKA_GROUP}
+
+PKG_GECOS.${PREWIKKA_USER}=	Prelude-IDS console
+PKG_HOME.${PREWIKKA_USER}=	${PREWIKKA_HOME}
 
 SUBST_CLASSES+=		code
 SUBST_STAGE.code=	post-patch

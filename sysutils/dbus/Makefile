@@ -1,11 +1,15 @@
-# $NetBSD: Makefile,v 1.11 2006/04/02 18:20:53 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/04/23 00:12:42 jlam Exp $
 #
 
 .include "Makefile.common"
 
 PKGREVISION=	1
-PKG_USERS=	messagebus:messagebus::System\ message\ bus:${VARBASE}/run/dbus:${NOLOGIN}
+
 PKG_GROUPS=	messagebus
+PKG_USERS=	messagebus:messagebus
+
+PKG_GECOS.messagebus=	System message bus
+PKG_HOME.messagebus=	${VARBASE}/run/dbus
 
 MAKE_DIRS=	${PKG_SYSCONFDIR}/event.d
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/system.d

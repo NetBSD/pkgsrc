@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2006/03/12 12:12:19 taca Exp $
+# $NetBSD: Makefile,v 1.175 2006/04/23 00:12:42 jlam Exp $
 
 DISTNAME=	squid-2.5.STABLE13
 PKGNAME=	squid-2.5.13
@@ -36,7 +36,10 @@ PLIST_SRC=	${WRKDIR}/PLIST
 RCD_SCRIPTS=	squid
 
 PKG_GROUPS=	${SQUID_GROUP}
-PKG_USERS=	${SQUID_USER}:${SQUID_GROUP}::Squid\ Web-Cache\ pseudo-user
+PKG_USERS=	${SQUID_USER}:${SQUID_GROUP}
+
+PKG_GECOS.${SQUID_USER}=	Squid Web-Cache pseudo-user
+
 CONF_FILES+=	${EXAMPLESDIR}/mime.conf ${PKG_SYSCONFDIR}/mime.conf
 CONF_FILES+=	${EXAMPLESDIR}/squid.conf ${PKG_SYSCONFDIR}/squid.conf
 CONF_FILES+=	${EXAMPLESDIR}/msntauth.conf ${PKG_SYSCONFDIR}/msntauth.conf

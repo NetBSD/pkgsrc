@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/12/29 06:21:53 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/04/23 00:12:38 jlam Exp $
 #
 
 DISTNAME=	qmail-users-1.0
@@ -15,13 +15,19 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PKG_GROUPS=	qmail nofiles
 
-PKG_USERS+=	alias:nofiles::alias:${QMAILDIR}/alias
-PKG_USERS+=	qmaill:nofiles::qmaill:${QMAILDIR}
-PKG_USERS+=	qmaild:nofiles::qmaild:${QMAILDIR}
-PKG_USERS+=	qmailp:nofiles::qmailp:${QMAILDIR}
-PKG_USERS+=	qmailq:qmail::qmailq:${QMAILDIR}
-PKG_USERS+=	qmailr:qmail::qmailr:${QMAILDIR}
-PKG_USERS+=	qmails:qmail::qmails:${QMAILDIR}
+PKG_USERS+=	alias:nofiles
+PKG_USERS+=	qmaill:nofiles
+PKG_USERS+=	qmaild:nofiles
+PKG_USERS+=	qmailp:nofiles
+PKG_USERS+=	qmailq:qmail
+PKG_USERS+=	qmailr:qmail
+PKG_USERS+=	qmails:qmail
+
+.for user in ${PKG_USERS:C/\:.*//}
+PKG_GECOS.${user}=	qmail ${user} pseudo-user
+PKG_HOME.${user}=	${QMAILDIR}
+.endfor
+PKG_HOME.alias=		${QMAILDIR}/alias
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	YES

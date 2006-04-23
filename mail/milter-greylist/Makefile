@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/02/11 23:14:15 seb Exp $
+# $NetBSD: Makefile,v 1.25 2006/04/23 00:12:38 jlam Exp $
 
 DISTNAME=	milter-greylist-2.1.2
 PKGREVISION=	2
@@ -17,8 +17,10 @@ CONFIGURE_ARGS+=--with-libspf_alt=${PREFIX:Q}
 CONFIGURE_ARGS+=--prefix=${PREFIX:Q}
 BUILD_TARGET=	milter-greylist
 
-PKG_GROUPS=	smmsp
-PKG_USERS=	smmsp:smmsp::Sendmail\ Message\ Submission\ Program
+PKG_GROUPS=		smmsp
+PKG_USERS=		smmsp:smmsp
+PKG_GECOS.smmsp=	Sendmail Message Submission Program
+
 RCD_SCRIPTS=	milter-greylist
 
 post-install:

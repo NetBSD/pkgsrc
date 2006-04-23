@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2006/03/04 21:30:57 jlam Exp $
+# $NetBSD: Makefile,v 1.185 2006/04/23 00:12:42 jlam Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -165,7 +165,7 @@ SUBST_SED.paths+=	-e 's,@VARBASE@,${VARBASE},g'
 SUBST_STAGE.paths=	post-patch
 
 PKG_GROUPS=		${APACHE_GROUP}
-PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}::Apache\ user
+PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}
 
 MAKE_ENV+=		CHMOD=${CHMOD:Q} CHOWN=${CHOWN:Q} XARGS=${XARGS:Q}
 MAKE_ENV+=		FIND=${FIND:Q} CHGRP=${CHGRP:Q}

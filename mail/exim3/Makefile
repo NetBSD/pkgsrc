@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/03/06 22:49:16 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2006/04/23 00:12:38 jlam Exp $
 
 DISTNAME=	exim-3.36
 PKGREVISION=	7
@@ -28,8 +28,13 @@ RCD_SCRIPTS=		exim
 OWN_DIRS_PERMS=		/var/log/exim ${EXIM_USER} ${EXIM_GROUP} 0750
 OWN_DIRS_PERMS+=	/var/spool/exim ${EXIM_USER} ${EXIM_GROUP} 0750
 
-PKG_USERS=		${EXIM_USER}:${EXIM_GROUP}:8:Exim\ mail\ server\ user:/var/mail:${NOLOGIN}
 PKG_GROUPS=		${EXIM_GROUP}
+PKG_USERS=		${EXIM_USER}:${EXIM_GROUP}
+
+PKG_UID.${EXIM_USER}?=	8
+PKG_GECOS.${EXIM_USER}=	Exim mail server user
+PKG_HOME.${EXIM_USER}=	${VARBASE}/mail
+PKG_SHELL.${EXIM_USER}=	${NOLOGIN}
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/08 22:01:21 tron Exp $
+# $NetBSD: Makefile,v 1.12 2006/04/23 00:12:38 jlam Exp $
 
 DISTNAME=	milter-regex-1.6
 CATEGORIES=	mail
@@ -10,8 +10,10 @@ COMMENT=	Milter enabling regular expression filtering
 
 INSTALLATION_DIRS=	man/man8 sbin
 
-PKG_GROUPS=	smmsp
-PKG_USERS=	smmsp:smmsp::Sendmail\ Message\ Submission\ Program
+PKG_GROUPS=		smmsp
+PKG_USERS=		smmsp:smmsp
+PKG_GECOS.smmsp=	Sendmail Message Submission Program
+
 RCD_SCRIPTS=	milter-regex
 
 SUBST_CLASSES+=		etc

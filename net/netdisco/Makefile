@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/14 01:14:31 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/23 00:12:40 jlam Exp $
 #
 
 DISTNAME=		netdisco-0.94_with_mibs
@@ -80,8 +80,12 @@ NETDISCOUSER?=	netdisco
 NETDISCOGROUP?=	netdisco
 BUILD_DEFS+=	NETDISCOUSER NETDISCOGROUP
 
-PKG_USERS=	${NETDISCOUSER:Q}:${NETDISCOGROUP:Q}::Netdisco\ administrator:${PREFIX:Q}/netdisco:${SH:Q}
 PKG_GROUPS=	${NETDISCOGROUP}
+PKG_USERS=	${NETDISCOUSER:Q}:${NETDISCOGROUP:Q}
+
+PKG_GECOS.${NETDISCOUSER}=	Netdisco administrator
+PKG_HOME.${NETDISCOUSER}=	${PREFIX}/netdisco
+PKG_SHELL.${NETDISCOUSER}=	${SH}
 
 PKG_SYSCONFVAR=		netdisco
 PKG_SYSCONFDIR.netdisco=	${PREFIX}/netdisco

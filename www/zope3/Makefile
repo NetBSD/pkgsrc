@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:11:30 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/23 00:12:42 jlam Exp $
 #
 
 DISTNAME=		Zope-3.2.0
@@ -31,6 +31,8 @@ BUILD_TARGET=		build
 RCD_SCRIPTS=		zope3 zss3
 PKG_GROUPS=		${ZOPE3_GROUP}
 PKG_USERS=		${ZOPE3_USER}:${ZOPE3_GROUP}::Zope3\ user
+
+PKG_GECOS.${ZOPE3_USER}=	Zope3 user
 
 MESSAGE_SUBST+=		ZOPE3_USER=${ZOPE3_USER:Q} \
 			ZOPE3_GROUP=${ZOPE3_GROUP:Q} \

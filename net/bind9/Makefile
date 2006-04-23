@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2005/12/29 06:21:57 jlam Exp $
+# $NetBSD: Makefile,v 1.76 2006/04/23 00:12:39 jlam Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 CATEGORIES=	net
@@ -26,8 +26,11 @@ CONFIGURE_ARGS+=--with-libtool=yes \
 # include at the bottom to use OpenSSL shipped with BIND9.
 CONFIGURE_ARGS+=--with-openssl=${SSLBASE:Q}
 
-PKG_USERS=	${BIND_USER}:${BIND_GROUP}::Named\ pseudo-user:${BIND_DIR}:${NOLOGIN}
 PKG_GROUPS=	${BIND_GROUP}
+PKG_USERS=	${BIND_USER}:${BIND_GROUP}
+
+PKG_GECOS.${BIND_USER}=	Named pseudo-user
+PKG_HOME.${BIND_USER}=	${BIND_DIR}
 
 PTHREAD_OPTS+=	native
 

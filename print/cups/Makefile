@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2006/04/19 17:01:34 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2006/04/23 00:12:41 jlam Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -86,7 +86,9 @@ CUPS_LOGDIR=		/var/log/cups
 CUPS_REQUESTS=		/var/spool/cups
 
 PKG_GROUPS=		${CUPS_GROUP}
-PKG_USERS=		${CUPS_USER}:${CUPS_GROUP}::Common\ UNIX\ Printing\ System\ user::${SH}
+PKG_USERS=		${CUPS_USER}:${CUPS_GROUP}
+PKG_GECOS.${CUPS_USER}=	Common UNIX Printing System user
+PKG_SHELL.${CUPS_USER}=	${SH}
 
 SPECIAL_PERMS=		${PREFIX}/bin/lppasswd ${CUPS_USER} ${CUPS_GROUP} 4755
 CONF_FILES=		${EGDIR}/client.conf ${CUPS_CONFDIR}/client.conf

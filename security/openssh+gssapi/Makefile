@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/03/14 01:14:33 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2006/04/23 00:12:41 jlam Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -44,8 +44,13 @@ INSTALL_TARGET=		install-nokeys
 PLIST_SRC=		# empty
 MESSAGE_SRC=		${.CURDIR}/MESSAGE
 
-PKG_USERS=		${OPENSSH_USER}:${OPENSSH_GROUP}:${OPENSSH_UID}:sshd\ privsep:${OPENSSH_CHROOT}:${NOLOGIN}
-PKG_GROUPS=             ${OPENSSH_GROUP}:${OPENSSH_GID}
+PKG_GROUPS=		${OPENSSH_GROUP}:${OPENSSH_GID}
+PKG_USERS=		${OPENSSH_USER}:${OPENSSH_GROUP}
+
+PKG_GID.${OPENSSH_GROUP}=	${OPENSSH_GID}
+PKG_UID.${OPENSSH_USER}=	${OPENSSH_UID}
+PKG_GECOS.${OPENSSH_USER}=	sshd privsep pseudo-user
+PKG_HOME.${OPENSSH_USER}=	${OPENSSH_CHROOT}
 
 SSH_PID_DIR=		/var/run	# default directory for PID files
 

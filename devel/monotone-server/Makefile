@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/04/22 09:22:07 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/23 00:12:37 jlam Exp $
 #
 
 DISTNAME=	monotone-server-0.26
@@ -39,8 +39,12 @@ CONF_FILES_PERMS+=	${EXAMPLEDIR}/write-permissions \
 			${PKG_SYSCONFDIR}/write-permissions \
 			${MONOTONE_USER} ${MONOTONE_GROUP} 600
 
-PKG_USERS=		${MONOTONE_USER}:${MONOTONE_GROUP}::Monotone\ dedicated\ server:${VARBASE}/monotone:${SH}
 PKG_GROUPS=		${MONOTONE_GROUP}
+PKG_USERS=		${MONOTONE_USER}:${MONOTONE_GROUP}
+
+PKG_GECOS.${MONOTONE_USER}=	Monotone dedicated server
+PKG_HOME.${MONOTONE_USER}=	${VARBASE}/monotone
+PKG_SHELL.${MONOTONE_USER}=	${SH}
 
 SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	do-configure
