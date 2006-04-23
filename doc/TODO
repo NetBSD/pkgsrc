@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4906 2006/04/23 14:16:00 ghen Exp $
+$NetBSD: TODO,v 1.4907 2006/04/23 14:23:58 hiramatsu Exp $
 
 Suggested new packages
 ======================
@@ -836,7 +836,6 @@ Suggested package updates
 	o p5-Crypt-CipherSaber-1.00
 	o p5-DBD-Oracle-1.16
 	o p5-DBD-Sybase-1.07
-	o p5-DBD-postgresql-1.32
 	o p5-DBIx-ContextualFetch-1.03
 	o p5-DBIx-SearchBuilder-1.43
 	o p5-Data-TemporaryBag-0.08
@@ -900,7 +899,6 @@ Suggested package updates
 	o p5-PerlIO-via-symlink-0.03
 	o p5-Pod-POM-0.15
 	o p5-PostScript-MailLabels-2.21
-	o p5-SQL-Abstract-1.20
 	o p5-SVN-Web-0.45
 	o p5-SWF-File-0.41
 	o p5-Safe-Hole-0.10
