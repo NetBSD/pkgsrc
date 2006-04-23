@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.30 2006/04/04 18:38:13 tv Exp $
+# $Id: pkg_chk.sh,v 1.31 2006/04/23 19:50:46 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -561,6 +561,7 @@ usage()
 	-N	List installed packages for which a newer version is in TODO
 	-n	Display actions that would be taken, but do not perform them
 	-P dir  Set PACKAGES dir (overrides any other setting)
+	-q	Do not display actions or take any action; only list packages
 	-r	Recursively remove mismatches (use with care) (implies -i)
 	-S	Create summary of binary packages
 	-s      Install packages by building from source
