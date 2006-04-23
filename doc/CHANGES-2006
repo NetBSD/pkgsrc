@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.41 2006/04/23 03:04:29 dmcmahill Exp $
+$NetBSD: CHANGES-2006,v 1.42 2006/04/23 10:06:08 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2227,3 +2227,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added print/tex-fixme version 3.1 [minskim 2006-04-21]
 	Updated www/mozilla-bin to 1.7.13 [tron 2006-04-22]
 	Updated cad/pcb to 20060422 [dmcmahill 2006-04-22]
+	Updated archivers/makeself to 2.1.4 [rillig 2006-04-23]
