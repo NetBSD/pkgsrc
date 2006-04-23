@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/03/31 23:56:29 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/04/23 00:12:41 jlam Exp $
 #
 
 DISTNAME=		dirmngr-0.9.3
@@ -17,7 +17,9 @@ COMMENT=		X509 certificate and CRL downloader
 DIRMNGR_USER?=		dirmngr
 DIRMNGR_GROUP?=		dirmngr
 PKG_GROUPS=		${DIRMNGR_GROUP}
-PKG_USERS=		${DIRMNGR_USER}:${DIRMNGR_GROUP}::pseudo\ user:${VARBASE}/dirmngr:
+PKG_USERS=		${DIRMNGR_USER}:${DIRMNGR_GROUP}
+
+PKG_SHELL.${DIRMNGR_USER}=	${VARBASE}/dirmngr
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gawk

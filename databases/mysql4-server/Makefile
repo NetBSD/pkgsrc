@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/03/14 01:14:27 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/04/23 00:12:36 jlam Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 PKGREVISION=		1
@@ -19,8 +19,13 @@ CONFIGURE_ARGS+=	--with-mysqld-user=${MYSQL_USER:Q}
 PTHREAD_OPTS+=		require
 CONFIGURE_ARGS+=	--with-pthreads
 
-PKG_USERS=		${MYSQL_USER}:${MYSQL_GROUP}::MySQL\ database\ administrator:${MYSQL_DATADIR}:${SH}
 PKG_GROUPS=		${MYSQL_GROUP}
+PKG_USERS=		${MYSQL_USER}:${MYSQL_GROUP}
+
+PKG_GECOS.${MYSQL_USER}=	MySQL database administrator
+PKG_HOME.${MYSQL_USER}=		${MYSQL_DATADIR}
+PKG_SHELL.${MYSQL_USER}=	${SH}
+
 RCD_SCRIPTS=		mysqld
 
 FILES_SUBST+=		HOSTNAME_CMD=${HOSTNAME_CMD:Q} \
