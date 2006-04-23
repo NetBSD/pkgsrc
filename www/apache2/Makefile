@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.98 2006/04/23 00:12:42 jlam Exp $
+# $NetBSD: Makefile,v 1.99 2006/04/23 11:42:38 adrianp Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	apache-${APACHE_VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	www
 
 HOMEPAGE=	http://httpd.apache.org/
@@ -48,9 +48,30 @@ PLIST_SUBST+=			${PLIST_SUBST.${_mpm_}}
 .endfor
 PLIST_SUBST.${APACHE_MPM}=	MPM_COMMENT.${APACHE_MPM}=
 
+CONFIGURE_ARGS+=	--disable-access
+CONFIGURE_ARGS+=	--disable-auth
+CONFIGURE_ARGS+=	--disable-include
+CONFIGURE_ARGS+=	--disable-log-config
+CONFIGURE_ARGS+=	--disable-env
+CONFIGURE_ARGS+=	--disable-mime
+CONFIGURE_ARGS+=	--disable-setenvif
+CONFIGURE_ARGS+=	--disable-status
+CONFIGURE_ARGS+=	--disable-autoindex
+CONFIGURE_ARGS+=	--disable-asis
+CONFIGURE_ARGS+=	--disable-cgi
+CONFIGURE_ARGS+=	--disable-negotiation
+CONFIGURE_ARGS+=	--disable-dir
+CONFIGURE_ARGS+=	--disable-imap
+CONFIGURE_ARGS+=	--disable-actions
+CONFIGURE_ARGS+=	--disable-userdir
+CONFIGURE_ARGS+=	--disable-alias
+
 DFLT_APACHE_MODULES=	all
 DFLT_APACHE_MODULES+=	proxy proxy_connect proxy_ftp proxy_http
 DFLT_APACHE_MODULES+=	ssl deflate
+DFLT_APACHE_MODULES+=	access auth include log_config env mime setenvif
+DFLT_APACHE_MODULES+=	status autoindex asis cgi negotiation dir imap
+DFLT_APACHE_MODULES+=	actions userdir alias
 
 # LDAP support
 .if !empty(PKG_BUILD_OPTIONS.apr:Mldap)
@@ -86,6 +107,10 @@ OWN_DIRS= 		${VARBASE}/log/httpd
 OWN_DIRS+=		${VARBASE}/db/httpd
 OWN_DIRS_PERMS+=	${VARBASE}/db/httpd/proxy ${APACHE_USER} ${APACHE_GROUP} 0755
 FIX_PERMS=		apachectl apxs dbmmanage envvars-std mkcert
+FIX_MAN_PERMS=		man1/htdbm.1 man1/htpasswd.1 man1/htdigest.1
+FIX_MAN_PERMS+=		man1/dbmmanage.1 man8/httpd.8 man8/suexec.8
+FIX_MAN_PERMS+=		man8/rotatelogs.8 man8/logresolve.8 man8/apxs.8
+FIX_MAN_PERMS+=		man8/apachectl.8 man8/ab.8
 
 # Fix paths in the apache manpages.
 SUBST_CLASSES+=		man
@@ -194,6 +219,16 @@ post-install:
 	for file in ${FIX_PERMS}; do \
 		${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/sbin/$$file && \
 		${CHMOD} ${BINMODE} ${PREFIX}/sbin/$$file; \
+	done
+
+	@${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/httpd
+	@${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/include/httpd
+	@${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/httpd
+	@${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/libexec/cgi-bin/test-cgi
+	@${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/libexec/cgi-bin/printenv
+
+	for file in ${FIX_MAN_PERMS}; do \
+		${CHOWN} ${MANOWN}:${MANGRP} ${PREFIX}/${PKGMANDIR}/$$file; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
