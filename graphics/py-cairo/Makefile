@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/17 13:46:15 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/04/23 17:13:03 wiz Exp $
 #
 
 DISTNAME=		pycairo-1.0.2
@@ -20,6 +20,12 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 PKGCONFIG_OVERRIDE+=	pycairo.pc.in
 PYTHON_VERSIONS_ACCEPTED= 24 23
 PY_PATCHPLIST=		yes
+
+.include "../../mk/compiler.mk"
+
+.if !empty(CC_VERSION:Mgcc-2*)
+BUILDLINK_TRANSFORM+=	rm:-std=c99
+.endif
 
 .include "../../lang/python/extension.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
