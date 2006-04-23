@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2006/04/22 09:22:16 rillig Exp $
+# $NetBSD: Makefile,v 1.98 2006/04/23 00:12:42 jlam Exp $
 
 .include "Makefile.common"
 
@@ -67,7 +67,7 @@ BUILD_DEFS+=		APACHE_MODULES
 APACHE_USER?=		www
 APACHE_GROUP?=		www
 PKG_GROUPS=		${APACHE_GROUP}
-PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}::Apache\ user
+PKG_USERS=		${APACHE_USER}:${APACHE_GROUP}
 
 PKG_SYSCONFVAR=		apache
 PKG_SYSCONFSUBDIR?=	httpd

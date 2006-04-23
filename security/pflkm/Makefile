@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/02/20 23:03:56 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/04/23 00:12:42 jlam Exp $
 
 DISTNAME=		pflkm-20050511
 PKGREVISION=		1
@@ -13,7 +13,10 @@ ONLY_FOR_PLATFORM=	NetBSD-2.[0-9]*-*
 
 NO_CONFIGURE=		yes
 
-PKG_USERS=		_pflogd:nogroup::pflogd\ pseudo-user:${VARBASE}/chroot/pflogd:${NOLOGIN}
+PKG_GROUPS=		nogroup
+PKG_USERS=		_pflogd:nogroup
+PKG_GECOS._pflogd=	pflogd pseudo-user
+PKG_HOME._pflogd=	${VARBASE}/chroot/pflogd
 
 RCD_SCRIPTS=		pf pflogd
 PKG_SYSCONFSUBDIR=	pf
