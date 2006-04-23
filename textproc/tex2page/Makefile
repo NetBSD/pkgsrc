@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/17 13:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/23 00:45:07 gdt Exp $
 #
 
 DISTNAME=		tex2page
@@ -14,11 +14,12 @@ COMMENT=		Converts TeX manuscripts into (HTML) web pages
 
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
+USE_TOOLS+=		gs:run
 
 CONFIGURE_ARGS+=	--dialect=guile
 
+# build documentation
 do-build:
-	# build documentation
 	(cd ${WRKSRC} && ./my-tex2page tex2page-doc)
 	(cd ${WRKSRC} && ./my-tex2page tex2page-doc)
 
