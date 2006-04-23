@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.45 2006/04/23 17:21:43 tron Exp $
+$NetBSD: CHANGES-2006,v 1.46 2006/04/23 18:26:51 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2234,3 +2234,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/p5-SQL-Abstract to 1.21 [hiramatsu 2006-04-23]
 	Updated chat/xchat to 2.6.2 [tron 2006-04-23]
 	Updated chat/xchat-python to 2.6.2 [tron 2006-04-23]
+	Updated audio/daapd to 0.2.4b [tonio 2006-04-23]
