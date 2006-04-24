@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.23 2006/04/06 06:49:30 reed Exp $ */
+/* $NetBSD: lib.h,v 1.24 2006/04/24 13:52:05 dillo Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -322,6 +322,7 @@ int	pipe_to_system_end(pipe_to_system_t *);
 
 char   *var_get(const char *, const char *);
 int	var_set(const char *, const char *, const char *);
+int     var_copy_list(const char *, const char **);
 
 /* automatically installed as dependency */
 
