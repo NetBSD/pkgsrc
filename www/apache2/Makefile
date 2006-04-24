@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2006/04/23 11:42:38 adrianp Exp $
+# $NetBSD: Makefile,v 1.100 2006/04/24 20:10:02 tv Exp $
 
 .include "Makefile.common"
 
@@ -28,6 +28,12 @@ CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
 CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr}
 
 BUILDLINK_API_DEPENDS.apr+=	apr>=0.9.7.2.0.55
+
+# the following must be set before bsd.prefs.mk in order to make += work
+# in mk.conf; however, it isn't expanded until referenced, so we can
+# define DFLT_APACHE_MODULES later
+#
+APACHE_MODULES?=	${DFLT_APACHE_MODULES}
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../devel/apr/buildlink3.mk"
@@ -81,7 +87,6 @@ DFLT_APACHE_MODULES+=	ldap auth_ldap
 # APACHE_MODULES are the modules that are linked statically into the
 # apache httpd executable.
 #
-APACHE_MODULES?=	${DFLT_APACHE_MODULES}
 CONFIGURE_ARGS+=	--enable-modules=${APACHE_MODULES:Q}
 BUILD_DEFS+=		APACHE_MODULES
 
