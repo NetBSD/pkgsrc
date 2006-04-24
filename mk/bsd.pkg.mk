@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1818 2006/04/22 08:36:07 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1819 2006/04/24 20:19:03 dillo Exp $
 #
 # This file is in the public domain.
 #
@@ -423,8 +423,8 @@ _PKGSRC_BUILD_TARGETS=	build test
 _PKGSRC_BUILD_TARGETS=	build
 .endif
 
-.if !defined(_THE_DATE)
-_THE_DATE!=	${DATE} "+%Y-%m-%d %H:%M:%S %z"
+.if !defined(_BUILD_DATE)
+_BUILD_DATE!=	${DATE} "+%Y-%m-%d %H:%M:%S %z"
 .endif
 
 # The user can override the NO_PACKAGE by specifying this from
@@ -3624,7 +3624,7 @@ post-install-fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} "MAINTAINER=${MAINTAINER}" >> ${BUILD_INFO_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO} "DATE=${_THE_DATE}" >> ${BUILD_INFO_FILE}
+	${ECHO} "BUILD_DATE=${_BUILD_DATE}" >> ${BUILD_INFO_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	size_this=`${MAKE} ${MAKEFLAGS} print-pkg-size-this`;		\
 	size_depends=`${MAKE} ${MAKEFLAGS} print-pkg-size-depends`;	\
