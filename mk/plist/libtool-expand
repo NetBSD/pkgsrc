@@ -1,6 +1,6 @@
-# /bin/sh
+#! /bin/sh
 #
-# $NetBSD: libtool-expand,v 1.3 2006/03/30 03:03:52 jlam Exp $
+# $NetBSD: libtool-expand,v 1.4 2006/04/24 01:31:04 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
