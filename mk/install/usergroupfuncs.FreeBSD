@@ -1,9 +1,9 @@
-# $NetBSD: usergroupfuncs.FreeBSD,v 1.2 2006/04/23 00:00:44 jlam Exp $
+# $NetBSD: usergroupfuncs.FreeBSD,v 1.3 2006/04/24 15:44:32 jlam Exp $
 #
 # Platform-specific adduser and addgroup functionality
 # on top of pw(8).
 
-# group_exists group groupid
+# group_exists group [groupid]
 #	Returns 0 if $group exists and has gid $groupid
 #	Returns 1 if neither $group nor $groupid exist
 #	Returns 2 if $group or $groupid exist but don't match
@@ -25,6 +25,9 @@ group_exists()
 			${RM} -f $_testfile; return 0
 		fi
 		${RM} -f $_testfile; return 2
+	elif ${TEST} -z "$_groupid"; then
+		# $_group doesn't exist and $_group is not set
+		return 1
 	elif ${CHGRP} $_groupid $_testfile >/dev/null 2>&1; then
 		_name=`${LS} -l $_testfile 2>/dev/null | ${AWK} '{ print $4 }'`
 		if ${TEST} "$_name" != "$_groupid"; then
@@ -37,7 +40,7 @@ group_exists()
 	${RM} -f $_testfile; return 3
 }
 
-# user_exists user userid
+# user_exists user [userid]
 #	Returns 0 if $user exists and has uid $userid
 #	Returns 1 if neither $user nor $userid exist
 #	Returns 2 if $user or $userid exist but don't match
@@ -59,6 +62,9 @@ user_exists()
 			${RM} -f $_testfile; return 0
 		fi
 		${RM} -f $_testfile; return 2
+	elif ${TEST} -z "$_userid"; then
+		# $_user doesn't exist and $_user is not set
+		return 1
 	elif ${CHOWN} $_userid $_testfile >/dev/null 2>&1; then
 		_name=`${LS} -l $_testfile 2>/dev/null | ${AWK} '{ print $3 }'`
 		if ${TEST} "$_name" != "$_userid"; then
