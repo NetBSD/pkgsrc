@@ -1,0 +1,30 @@
+$NetBSD: patch-ao,v 1.9 2006/04/24 22:16:14 markd Exp $
+
+--- kcontrol/nics/nic.cpp.orig	2006-04-17 14:30:47.642462000 +1200
++++ kcontrol/nics/nic.cpp
+@@ -215,6 +215,7 @@ NICList* findNICs()
+             tmp->netmask=i18n("Unknown");
+ 
+          ifcopy=*ifr;
++#ifdef SIOCGIFHWADDR
+          result=ioctl(sockfd,SIOCGIFHWADDR,&ifcopy);
+          if (result==0)
+          {
+@@ -222,6 +223,17 @@ NICList* findNICs()
+             tmp->HWaddr = HWaddr2String(n);
+          }
+          else
++#else
++#ifdef SIOCGENADDR
++         result=ioctl(sockfd,SIOCGENADDR,&ifcopy);
++         if (result==0)
++         {
++            char *n = &ifcopy.ifr_ifru.ifru_enaddr[0];
++            tmp->HWaddr = HWaddr2String(n);
++         }
++         else
++#endif
++#endif
+             tmp->HWaddr = i18n("Unknown");
+ 
+          nl->append(tmp);
