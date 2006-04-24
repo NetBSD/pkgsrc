@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/24 23:21:46 jlam Exp $
+bin/cu
+bin/uucp
+bin/uulog
+bin/uuname
+bin/uupick
+bin/uustat
+bin/uuto
+bin/uux
+info/uucp.info
+man/man1/cu.1
+man/man1/uucp.1
+man/man1/uustat.1
+man/man1/uux.1
+man/man8/uucico.8
+man/man8/uuxqt.8
+sbin/uuchk
+sbin/uucico
+sbin/uuconv
+sbin/uusched
+sbin/uuxqt

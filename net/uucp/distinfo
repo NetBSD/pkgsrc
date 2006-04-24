@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/04/24 23:21:46 jlam Exp $
+
+SHA1 (uucp-1.07.tar.gz) = e7c93c3aa6468f1b26dd4d9104dbbe8c2949e9ee
+RMD160 (uucp-1.07.tar.gz) = e265ecd08245dd2510db20430a7a0e387ef4df51
+Size (uucp-1.07.tar.gz) = 1013234 bytes
+SHA1 (patch-aa) = 4fc29d344083abc4ea57194c1f4f9cd77aa763eb
