@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2005/07/17 21:38:45 kristerw Exp $
+$NetBSD: patch-aa,v 1.5 2006/04/24 22:22:55 markd Exp $
 
---- Imakefile.orig	2005-07-17 23:05:04.000000000 +0200
-+++ Imakefile	2005-07-17 23:06:37.000000000 +0200
+--- Imakefile.orig	2005-01-03 13:03:48.000000000 +1300
++++ Imakefile
 @@ -44,13 +44,13 @@
  #
  
@@ -11,15 +11,39 @@ $NetBSD: patch-aa,v 1.4 2005/07/17 21:38:45 kristerw Exp $
  
  # Full path for the directory that will hold the executable files:
 -BIN_DIR = /usr/unsup/bin
-+BIN_DIR =  $(PREFIX)/bin
++# BIN_DIR =  $(PREFIX)/bin
  
  # Full path for the directory that will hold the man files:
 -MAN_DIR = /var/unsup/man
-+MAN_DIR = $(PREFIX)/man/man1
++# MAN_DIR = $(PREFIX)/man/man1
  
  
  # If you have flex, use it instead of lex.  If you use flex, define this
-@@ -250,7 +250,7 @@
+@@ -111,7 +111,7 @@ CSH = csh
+ #  Program dependencies:
+ #
+ 
+-AllTarget(spim)
++AllTarget(spim xspim)
+ 
+ spim:	force
+ 	@touch .spim-made
+@@ -131,10 +131,10 @@ configuration:
+ NormalProgramTarget(spim_sub,$(OBJS),,,)
+ NormalProgramTarget(xspim_sub,$(XOBJS),$(DEPLIBS),$(LOCALLIBS),$(SYSLIBS))
+ 
+-InstallProgram(spim,$(BIN_DIR))
+-InstallProgram(xspim,$(BIN_DIR))
+-InstallManPage(spim,$(MAN_DIR))
+-InstallManPage(xspim,$(MAN_DIR))
++InstallProgram(spim,$(BINDIR))
++InstallProgram(xspim,$(BINDIR))
++InstallManPage(spim,$(MANDIR))
++InstallManPage(xspim,$(MANDIR))
+ InstallNonExec(exceptions.s,$(EXCEPTION_DIR))
+ 
+ 
+@@ -250,7 +250,7 @@ shar:
  	mv -f lex.yy.c.xx lex.yy.c
  
  depend::
