@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4908 2006/04/23 14:40:01 wiz Exp $
+$NetBSD: TODO,v 1.4909 2006/04/24 16:51:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -554,6 +554,7 @@ Suggested package updates
 	o gnome-games-2.14.1
 	o gnome-pilot-2.0.13
 	o gnome-spell-1.0.7
+	o gnome-vfs2-2.14.1
 	o gnome-vfsmm-2.14.0
 	o gnomeicu-0.99.10
 	o gnucash-devel-1.9.5
