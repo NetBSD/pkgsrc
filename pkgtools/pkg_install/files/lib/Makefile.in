@@ -1,8 +1,12 @@
-# $NetBSD: Makefile.in,v 1.11 2005/11/22 15:44:59 ben Exp $
+# $NetBSD: Makefile.in,v 1.12 2006/04/24 13:52:05 dillo Exp $
 
 srcdir=		@srcdir@
 
 pkgdbdir=	@pkgdbdir@
+mandir=		@mandir@
+
+man5dir=	$(mandir)/man5
+cat5dir=	$(mandir)/cat5
 
 tar=		@tar@
 ftp=		@ftp@
@@ -32,4 +36,7 @@ clean:
 	rm -f $(OBJS) $(LIB)
 
 install:
-	@true # do nothing
+	$(INSTALL) -m 755 -d $(man5dir)
+	$(INSTALL) -m 755 -d $(cat5dir)
+	$(INSTALL) -m 444 pkg_summary.5 $(man5dir)/pkg_summary.5
+	$(INSTALL) -m 444 pkg_summary.cat5 $(cat5dir)/pkg_summary.0
