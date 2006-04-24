@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.48 2006/04/23 19:52:54 abs Exp $
+$NetBSD: CHANGES-2006,v 1.49 2006/04/24 10:49:12 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2237,3 +2237,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/daapd to 0.2.4b [tonio 2006-04-23]
 	Updated graphics/gimp24 to 2.3.8nb2 [wiz 2006-04-23]
 	Updated pkgtools/pkg_chk to 1.70 [abs 2006-04-23]
+	Updated security/libprelude to 0.9.7.2 [shannonjr 2006-04-24]
+	Updated security/libpreludedb to 0.9.7.1 [shannonjr 2006-04-24]
+	Updated security/prelude-manager to 0.9.4.1 [shannonjr 2006-04-24]
+	Updated security/py-prewikka to 0.9.4 [shannonjr 2006-04-24]
