@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.51 2006/04/24 22:04:17 agc Exp $
+$NetBSD: CHANGES-2006,v 1.52 2006/04/24 23:22:23 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2244,3 +2244,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/mozilla to 1.7.13 [veego 2006-04-24]
 	Updated www/mozilla-gtk2 to 1.7.13 [veego 2006-04-24]
 	Updated devel/netbsd-iscsi to 20060424 [agc 2006-04-24]
+	Added net/uucp version 1.07 [jlam 2006-04-24]
