@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.49 2006/04/24 10:49:12 shannonjr Exp $
+$NetBSD: CHANGES-2006,v 1.50 2006/04/24 16:55:02 veego Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2241,3 +2241,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/libpreludedb to 0.9.7.1 [shannonjr 2006-04-24]
 	Updated security/prelude-manager to 0.9.4.1 [shannonjr 2006-04-24]
 	Updated security/py-prewikka to 0.9.4 [shannonjr 2006-04-24]
+	Updated www/mozilla to 1.7.13 [veego 2006-04-24]
+	Updated www/mozilla-gtk2 to 1.7.13 [veego 2006-04-24]
