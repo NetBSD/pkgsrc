@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.614 2006/04/21 13:03:15 rpaulo Exp $
+# $NetBSD: Makefile,v 1.615 2006/04/24 23:22:23 jlam Exp $
 #
 
 COMMENT=	Networking tools
@@ -444,6 +444,7 @@ SUBDIR+=	unison
 SUBDIR+=	unison-devel
 SUBDIR+=	upclient
 SUBDIR+=	userppp
+SUBDIR+=	uucp
 SUBDIR+=	vcheck
 SUBDIR+=	vde
 SUBDIR+=	vino
