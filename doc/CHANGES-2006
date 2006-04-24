@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.50 2006/04/24 16:55:02 veego Exp $
+$NetBSD: CHANGES-2006,v 1.51 2006/04/24 22:04:17 agc Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2243,3 +2243,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/py-prewikka to 0.9.4 [shannonjr 2006-04-24]
 	Updated www/mozilla to 1.7.13 [veego 2006-04-24]
 	Updated www/mozilla-gtk2 to 1.7.13 [veego 2006-04-24]
+	Updated devel/netbsd-iscsi to 20060424 [agc 2006-04-24]
