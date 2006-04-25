@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/02/17 08:02:57 martti Exp $
+# $NetBSD: Makefile,v 1.50 2006/04/25 07:49:10 martti Exp $
 #
 
 DISTNAME=	fvwm-${PKG_VERSION}
@@ -19,7 +19,7 @@ GNU_CONFIGURE=	YES
 MAKE_ENV+=	VERSION=${PKG_VERSION:Q}
 CONFIGURE_ARGS+=	--without-extras --disable-dmalloc --without-gnome
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR:Q}/man1
 
 do-build:
 	@(cd ${WRKSRC:Q}/libs && \
@@ -29,7 +29,8 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/utils/xpmroot ${PREFIX:Q}/bin
-	${INSTALL_MAN} ${WRKSRC:Q}/utils/xpmroot.1 ${PREFIX:Q}/man/man1
+	${INSTALL_MAN} ${WRKSRC:Q}/utils/xpmroot.1 \
+		${PREFIX:Q}/${PKGMANDIR:Q}/man1
 
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
