@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.55 2006/04/25 10:04:52 tron Exp $
+$NetBSD: CHANGES-2006,v 1.56 2006/04/25 12:48:48 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2248,3 +2248,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/ocaml to 3.09.2 [hiramatsu 2006-04-25]
 	Updated security/keychain to 2.6.2 [martti 2006-04-25]
 	Updated net/ethereal to 0.99.0 [tron 2006-04-25]
+	Updated security/libnasl to 2.2.7 [salo 2006-04-25]
+	Updated security/nessus-core to 2.2.7 [salo 2006-04-25]
+	Updated security/nessus-libraries to 2.2.7 [salo 2006-04-25]
+	Updated security/nessus-plugins to 2.2.7 [salo 2006-04-25]
+	Updated security/nessus to 2.2.7 [salo 2006-04-25]
