@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.29 2006/04/23 23:12:20 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.30 2006/04/25 11:01:50 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -61,3 +61,5 @@ Pullup ticket 1439 - requested by tron
 security update for mozilla-bin
 Pullup ticket 1442 - requested by ghen
 security update for thunderbird
+Pullup ticket 1450 - requested by veego
+security update for mozilla
