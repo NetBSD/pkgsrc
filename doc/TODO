@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4912 2006/04/25 13:43:59 salo Exp $
+$NetBSD: TODO,v 1.4913 2006/04/25 14:05:44 hiramatsu Exp $
 
 Suggested new packages
 ======================
@@ -846,7 +846,6 @@ Suggested package updates
 	o p5-DBIx-ContextualFetch-1.03
 	o p5-DBIx-SearchBuilder-1.43
 	o p5-Data-TemporaryBag-0.08
-	o p5-DateTime-0.29.01
 	o p5-DateTime-Set-0.25
 	o p5-Devel-SmallProf-2.00_03
 	o p5-Devel-StackTrace-1.13
