@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.59 2006/04/25 14:05:44 hiramatsu Exp $
+$NetBSD: CHANGES-2006,v 1.60 2006/04/25 14:17:43 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2259,3 +2259,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated time/p5-DateTime to 0.30 [hiramatsu 2006-04-25]
 	Updated time/p5-DateTime-TimeZone to 0.44 [hiramatsu 2006-04-25]
 	Updated time/p5-DateTime-Locale to 0.22 [hiramatsu 2006-04-25]
+	Updated www/paros to 3.2.10 [salo 2006-04-25]
