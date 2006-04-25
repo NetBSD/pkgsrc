@@ -4,21 +4,24 @@ NNAAMMEE
      ppkkgg__ssuummmmaarryy -- summary of binary package repository
 
 DDEESSCCRRIIPPTTIIOONN
-     The file ppkkgg__ssuummmmaarryy contains information about each package in the
-     binary package repository as a list of variable-value pairs.  The vari-
-     ables describing different packages are separated by one empty line.
-     Each line has the format VARIABLE=VALUE.  If the value consits of more
-     than one line, each line is prefixed with VARIABLE=. Multi-line variables
-     are guaranteed to be contained in consecutive lines.
+     The file ppkkgg__ssuummmmaarryy contains information about each package in a binary
+     package repository as a list of variable-value pairs.  The variables
+     describing different packages are separated by one empty line.  Each line
+     has the format VARIABLE=VALUE.  If the value consists of more than one
+     line, each line is prefixed with VARIABLE=.  Multi-line variables are
+     guaranteed to be in consecutive lines.
 
      The following variables are used:
 
+     BUILD_DATE
+             (required) The date and time when the package was built.
+
      CATEGORIES
-             (required) A list of categories this package belongs in, sepa-
+             (required) A list of categories which this package fits in, sepa-
              rated by space.
 
      COMMENT
-             (required) A one-line comment describing the package.
+             (required) A one-line description of the package.
 
      CONFLICTS
              (optional) A list of dewey patterns of packages the package con-
@@ -37,28 +40,26 @@ DDEESSCCRRIIPPTTIIOONN
              (optional) The size of the binary package file, in bytes.
 
      HOMEPAGE
-             (mandtory) The URL of the package's original home page.
+             (optional) A URL where more information about the package can be
+             found.
 
      LICENSE
              (optional) The type of license this package is distributed under.
              If empty or missing, it is OSI-approved.
 
      MACHINE_ARCH
-             (required) The architecture the package was compiled for.
+             (required) The architecture on which the package was compiled.
 
-     OPSYS   (required) The operating system the package was compiled for.
+     OPSYS   (required) The operating system on which the package was com-
+             piled.
 
      OS_VERSION
-             (required) The version of the operating system the package was
-             compiled for.
+             (required) The version of the operating system on which the pack-
+             age was compiled.
 
      PKG_OPTIONS
              (optional) Any options selected to compile this package.  If
              missing, the package does not support options.
-
-     PKGTOOLS_VERSION
-             (required) The version of the package tools used to create the
-             package.
 
      PKGNAME
              (required) The name of the package.
@@ -66,17 +67,21 @@ DDEESSCCRRIIPPTTIIOONN
      PKGPATH
              (required) The path of the package directory within pkgsrc.
 
+     PKGTOOLS_VERSION
+             (required) The version of the package tools used to create the
+             package.
+
      PROVIDES
              (optional) A list of shared libraries provided by the package,
-             including major version, one per line.  If missing, this package
-             provides no shared libraries.
+             including major version number, one per line.  If missing, this
+             package does not provide shared libraries.
 
      REQUIRES
              (optional) A list of shared libraries needed by the package,
-             including major version, one per line.  If missing, this package
-             requires no shared libraries.
+             including major version number, one per line.  If missing, this
+             package does not require shared libraries.
 
      SIZE_PKG
-             (required) The size of the installed package.
+             (required) The size of the package when installed, in bytes.
 
-NetBSD 3.0                      April 15, 2006                      NetBSD 3.0
+NetBSD 3.0                      April 24, 2006                      NetBSD 3.0
