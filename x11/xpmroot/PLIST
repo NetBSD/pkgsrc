@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/25 07:49:11 martti Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/25 07:59:57 martti Exp $
 bin/xpmroot
-${PKGMANDIR}/man1/xpmroot.1
+man/man1/xpmroot.1
