@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2006/04/25 10:04:20 tron Exp $
+# $NetBSD: Makefile,v 1.130 2006/04/25 12:29:25 salo Exp $
 
 DISTNAME=		ethereal-0.99.0
 CATEGORIES=		net
@@ -24,7 +24,7 @@ COMMENT=		Network protocol analyzer
 USE_TOOLS+=		perl pkg-config
 
 USE_LIBTOOL=		YES
-SHLIBTOOL_OVERRIDE=	libtool
+SHLIBTOOL_OVERRIDE+=	libtool
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-gtk2
