@@ -1,21 +1,43 @@
-# $NetBSD: Makefile,v 1.29 2006/04/17 13:46:10 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2006/04/25 12:45:57 salo Exp $
 
 .include 	"../../security/nessus/Makefile.common"
 
 DISTNAME=	nessus-core-${VERS}
-PKGREVISION=	2
 
 COMMENT=	Core module of the Nessus Network Security Scanner
 
 WRKSRC=		${WRKDIR}/nessus-core
+
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-gtk --with-x --localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--enable-gtk
+CONFIGURE_ARGS+=	--with-x
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--sharedstatedir=${PKG_SYSCONFBASE:Q}
 CONFIGURE_ENV+=		ac_cv_path_GTKCONFIG="pkg-config gtk+-2.0" \
 			ac_cv_path_GLIBCONFIG="pkg-config glib-2.0"
 
 RCD_SCRIPTS=	nessusd
-PLIST_SUBST+=	VARBASE=${VARBASE:Q}
+
+PKG_SYSCONFSUBDIR?=	nessus
+
+OWN_DIRS_PERMS+=	${VARBASE}/nessus ${ROOT_USER} ${ROOT_GROUP} 0700
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR} ${ROOT_USER} ${ROOT_GROUP} 0700
+
+OWN_DIRS+=	${PREFIX}/lib/nessus		\
+		${PREFIX}/lib/nessus/reports	\
+		${PREFIX}/lib/nessus/plugins
+
+MAKE_DIRS+=	${VARBASE}/nessus/jobs		\
+		${VARBASE}/nessus/logs		\
+		${VARBASE}/nessus/tmp		\
+		${VARBASE}/nessus/users
+
+CONF_FILES+=	${BUILDLINK_PREFIX.libnasl}/share/examples/libnasl/nessus_org.pem \
+		${VARBASE}/nessus/nessus_org.pem
+CONF_FILES+=	${PREFIX}/share/examples/nessus/nessus-services	\
+		${VARBASE}/nessus/nessus-services
 
 .include "../../security/libnasl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
