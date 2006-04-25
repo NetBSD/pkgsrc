@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.54 2006/04/25 06:34:34 martti Exp $
+$NetBSD: CHANGES-2006,v 1.55 2006/04/25 10:04:52 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2247,3 +2247,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added net/uucp version 1.07 [jlam 2006-04-24]
 	Updated lang/ocaml to 3.09.2 [hiramatsu 2006-04-25]
 	Updated security/keychain to 2.6.2 [martti 2006-04-25]
+	Updated net/ethereal to 0.99.0 [tron 2006-04-25]
