@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.48 2006/04/25 19:54:39 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.49 2006/04/25 22:32:44 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -532,7 +532,7 @@ ${_INSTALL_DIRS_DATAFILE}:
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
 		dir=`strip_prefix "$$dir"`;				\
-		${ECHO} "# DIR: $$dir m $$owner $$group $$mode";	\
+		${ECHO} "# DIR: $$dir m $$mode $$owner $$group";	\
 	done
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
 	set -- dummy ${REQD_DIRS_PERMS}; shift;				\
@@ -541,7 +541,7 @@ ${_INSTALL_DIRS_DATAFILE}:
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
 		dir=`strip_prefix "$$dir"`;				\
-		${ECHO} "# DIR: $$dir fm $$owner $$group $$mode";	\
+		${ECHO} "# DIR: $$dir fm $$mode $$owner $$group";	\
 	done
 	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
 	set -- dummy ${OWN_DIRS_PERMS}; shift;				\
@@ -550,7 +550,7 @@ ${_INSTALL_DIRS_DATAFILE}:
 		dir="$$1"; owner="$$2"; group="$$3"; mode="$$4";	\
 		shift; shift; shift; shift;				\
 		dir=`strip_prefix "$$dir"`;				\
-		${ECHO} "# DIR: $$dir mo $$owner $$group $$mode";	\
+		${ECHO} "# DIR: $$dir mo $$mode $$owner $$group";	\
 	done
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
