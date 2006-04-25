@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/06/16 03:02:04 kim Exp $
+$NetBSD: patch-ab,v 1.2 2006/04/25 07:42:06 kim Exp $
 
---- GNUmakefile.in.orig	2002-11-04 02:04:03.000000000 -0500
-+++ GNUmakefile.in	2003-06-15 19:55:34.000000000 -0400
+--- GNUmakefile.in.orig	2004-01-31 03:15:33.000000000 +0200
++++ GNUmakefile.in	2006-04-25 10:39:31.000000000 +0300
 @@ -246,7 +246,7 @@
  CFLAGS = @CFLAGS@ @CPPFLAGS@ $(OTHER_CFLAGS) $(SPECIAL_CFLAGS) -Wall \
           @STATIC_PCRE_ONLY@ -Ipcre 
@@ -11,10 +11,11 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/06/16 03:02:04 kim Exp $
  
  
  #############################################################################
-@@ -1104,15 +1104,15 @@
+@@ -1122,17 +1122,6 @@
+ 	@$(ECHO) Installing man page to $(MAN_DEST)/privoxy.1
  	-$(INSTALL) $(INSTALL_T) privoxy.1  $(MAN_DEST)/privoxy.1
  
- 	@# Change the config file default directories according to the configured ones
+-	@# Change the config file default directories according to the configured ones
 -	@$(ECHO) Rewriting config for this installation
 -	@if [ -f config.base ] ; then \
 -		$(CAT) config >config~ ;\
@@ -24,15 +25,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2003/06/16 03:02:04 kim Exp $
 -	$(SED) 's+logdir .+logdir $(LOG_DEST)+' >config.updated
 -	$(MV) config config.base
 -	$(MV) config.updated config 
-+	@#$(ECHO) Rewriting config for this installation
-+	@#if [ -f config.base ] ; then \
-+	@#	$(CAT) config >config~ ;\
-+	@#	$(MV) config.base config ;\
-+	@#fi
-+	@#$(SED) 's+confdir .+confdir $(CONF_DEST)+' config | \
-+	@#$(SED) 's+logdir .+logdir $(LOG_DEST)+' >config.updated
-+	@#$(MV) config config.base
-+	@#$(MV) config.updated config 
- 
+-
  	@# Install the config support files. Test for root install, and abort 
  	@# if there is no privoxy user, and no other user was enabled during 
+ 	@# configure. Later, install init script if appropriate.
