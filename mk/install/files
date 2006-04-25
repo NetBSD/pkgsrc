@@ -1,4 +1,4 @@
-# $NetBSD: files,v 1.11 2006/04/25 19:54:39 jlam Exp $
+# $NetBSD: files,v 1.12 2006/04/25 20:12:35 jlam Exp $
 #
 # Generate a +FILES script that reference counts config files that are
 # required for the proper functioning of the package.
@@ -154,8 +154,8 @@ ADD)
 		if ${TEST} ! -f "$file" -a ! -f "$f_eg"; then
 			:
 		else
-			case "$f_flags/$_PKG_CONFIG/$_PKG_RCD_SCRIPTS" in
-			*f*/*/*|[!r]/yes/*|[!r][!r]/yes/*|[!r][!r][!r]/yes/*|*r*/yes/yes)
+			case "$f_flags:$_PKG_CONFIG:$_PKG_RCD_SCRIPTS" in
+			*f*:*:*|[!r]:yes:*|[!r][!r]:yes:*|[!r][!r][!r]:yes:*|*r*:yes:yes)
 				case "$printed_header" in
 				yes)	;;
 				*)	printed_header=yes
@@ -225,8 +225,8 @@ REMOVE)
 					:
 				elif ${TEST} -f "$file" -a -f "$f_eg" && \
 				     ${CMP} -s "$file" "$f_eg"; then
-					case "$f_flags/$_PKG_CONFIG/$_PKG_RCD_SCRIPTS" in
-					*f*/*/*|[!r]/yes/*|[!r][!r]/yes/*|[!r][!r][!r]/yes/*|*r*/yes/yes)
+					case "$f_flags:$_PKG_CONFIG:$_PKG_RCD_SCRIPTS" in
+					*f*:*:*|[!r]:yes:*|[!r][!r]:yes:*|[!r][!r][!r]:yes:*|*r*:yes:yes)
 						${RM} -f "$file"
 						;;
 					esac
@@ -245,8 +245,8 @@ REMOVE)
 PERMS)
 	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
 	while read file f_flags f_eg f_mode f_user f_group; do
-		case $_PKG_CONFIG/$_PKG_CONFIG_PERMS in
-		yes/yes)	;;
+		case $_PKG_CONFIG:$_PKG_CONFIG_PERMS in
+		yes:yes)	;;
 		*)		continue ;;
 		esac
 		case $file in
@@ -309,18 +309,18 @@ CHECK-ADD)
 			;;
 		esac
 		${ECHO} ""
-		case $f_mode/$f_user/$f_group in
-		//)
+		case $f_mode:$f_user:$f_group in
+		::)
 			${ECHO} "	$file"
 			;;
-		[!/]*//)
+		[!:]*::)
 			${ECHO} "	$file (m=$f_mode)"
 			;;
-		[!/]*/[!/]*/)
-			${ECHO} "	$file (o=$f_user, m=$f_mode)"
+		[!:]*:[!:]*:)
+			${ECHO} "	$file (m=$f_mode, o=$f_user)"
 			;;
-		[!/]*/[!/]*/[!/]*)
-			${ECHO} "	$file (o=$f_user, g=$f_group, m=$f_mode)"
+		[!:]*:[!:]*:[!:]*)
+			${ECHO} "	$file (m=$f_mode, o=$f_user, g=$f_group)"
 			;;
 		esac
 		${TEST} ! -f "$f_eg" || ${ECHO} "	    [$f_eg]"
