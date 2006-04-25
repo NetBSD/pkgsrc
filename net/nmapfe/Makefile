@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2006/04/17 13:46:44 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2006/04/25 13:43:09 salo Exp $
 #
 
-DISTNAME=	nmap-4.01
+DISTNAME=	nmap-4.03
 PKGNAME=	nmapfe-0.9.5
-PKGREVISION=	27
+PKGREVISION=	28
 CATEGORIES=	net security
 MASTER_SITES=	http://www.insecure.org/nmap/dist/
 EXTRACT_SUFX=	.tar.bz2
