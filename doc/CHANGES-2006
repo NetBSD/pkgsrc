@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.53 2006/04/25 04:59:33 hiramatsu Exp $
+$NetBSD: CHANGES-2006,v 1.54 2006/04/25 06:34:34 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2246,3 +2246,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/netbsd-iscsi to 20060424 [agc 2006-04-24]
 	Added net/uucp version 1.07 [jlam 2006-04-24]
 	Updated lang/ocaml to 3.09.2 [hiramatsu 2006-04-25]
+	Updated security/keychain to 2.6.2 [martti 2006-04-25]
