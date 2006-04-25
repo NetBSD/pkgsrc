@@ -1,4 +1,4 @@
-# $NetBSD: dirs,v 1.10 2006/03/19 23:58:14 jlam Exp $
+# $NetBSD: dirs,v 1.11 2006/04/25 19:54:39 jlam Exp $
 #
 # Generate a +DIRS script that reference counts directories that are
 # required for the proper functioning of the package.
@@ -10,8 +10,8 @@ UNPACK,|UNPACK,+DIRS)
 #
 # +DIRS - reference-counted directory management script
 #
-# Usage: ./+DIRS ADD|REMOVE [metadatadir]
-#        ./+DIRS CHECK-ADD|CHECK-REMOVE [metadatadir]
+# Usage: ./+DIRS ADD|REMOVE|PERMS [metadatadir]
+#        ./+DIRS CHECK-ADD|CHECK-REMOVE|CHECK-PERMS [metadatadir]
 #
 # This script supports two actions, ADD and REMOVE, that will add or
 # remove the directories needed by the package associated with
@@ -21,7 +21,13 @@ UNPACK,|UNPACK,+DIRS)
 # any directories needed by the package still exist, and print an
 # informative message noting those directories.  The CHECK-ADD and
 # CHECK-REMOVE actions return non-zero if they detect either missing
-# or existing directories, respectively.
+# or existing directories, respectively.  The PERMS action will correct
+# any ownership or permission discrepancies between the existing
+# directories and the data in this script, and the CHECK-PERMS action
+# will check whether any directories have the wrong ownership or
+# permission and print an informative message noting those directories.
+# The CHECK-PERMS action will return non-zero if it detects directories
+# with wrong ownership or permissions.
 #
 # Lines starting with "# DIR: " are data read by this script that
 # name the directories that this package requires to exist to function
@@ -41,12 +47,14 @@ UNPACK,|UNPACK,+DIRS)
 #	m	create (make) the directory when ADDing
 #	o	directory is owned by the package
 #
+AWK="@AWK@"
 CAT="@CAT@"
 CHGRP="@CHGRP@"
 CHMOD="@CHMOD@"
 CHOWN="@CHOWN@"
 ECHO="@ECHO@"
 GREP="@GREP@"
+LS="@LS@"
 MKDIR="@MKDIR@"
 MV="@MV@"
 PWD_CMD="@PWD_CMD@"
@@ -73,6 +81,14 @@ case "${PKG_CONFIG:-@PKG_CONFIG@}" in
 	;;
 [Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
 	_PKG_CONFIG=no
+	;;
+esac
+case "${PKG_CONFIG_PERMS:-@PKG_CONFIG_PERMS@}" in
+[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
+	_PKG_CONFIG_PERMS=yes
+	;;
+[Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
+	_PKG_CONFIG_PERMS=no
 	;;
 esac
 
@@ -162,6 +178,23 @@ REMOVE)
 	done
 	;;
 
+PERMS)
+	${SED} -n "/^\# DIR: /{s/^\# DIR: //;p;}" ${SELF} | ${SORT} -u |
+	while read dir d_flags d_user d_group d_mode; do
+		case $dir in
+		"")	continue ;;
+		[!/]*)	dir="${PKG_PREFIX}/$dir" ;;
+		esac
+		case $d_user/$d_group/$d_mode/$_PKG_CONFIG/$_PKG_CONFIG_PERMS in
+		[!/]*/[!/]*/[!/]*/yes/yes)
+			${CHOWN} $d_user $dir
+			${CHGRP} $d_group $dir
+			${CHMOD} $d_mode $dir
+			;;
+		esac
+	done
+	;;
+
 CHECK-ADD)
 	${SED} -n "/^\# DIR: /{s/^\# DIR: //;p;}" ${SELF} | ${SORT} -u |
 	{ while read dir d_flags d_user d_group d_mode; do
@@ -234,9 +267,87 @@ CHECK-REMOVE)
 	${TEST} $? -eq 0 || exitcode=1
 	;;
 
+CHECK-PERMS)
+	tmpdir="${TMPDIR:-/tmp}/private.$$"
+	${MKDIR} -p $tmpdir 2>/dev/null || exit 1
+	${CHMOD} 700 $tmpdir
+	${SED} -n "/^\# DIR: /{s/^\# DIR: //;p;}" ${SELF} | ${SORT} -ru |
+	{ while read dir d_flags d_user d_group d_mode; do
+		case $dir in
+		"")	continue ;;
+		[!/]*)	dir="${PKG_PREFIX}/$dir" ;;
+		esac
+		${TEST} -d "$dir" || continue
+		case $d_user:$d_group:$d_mode in
+		::)	continue ;;
+		esac
+
+		perms=`${LS} -ld $dir | ${AWK} '{ print $1":"$3":"$4 }'`
+		${MKDIR} -p $tmpdir/tmp
+		${CHMOD} $d_mode $tmpdir/tmp 2>/dev/null
+		longmode=`${LS} -ld $tmpdir/tmp | ${AWK} '{ print $1 }'`
+		case $d_mode:$d_user:$d_group in
+		:[!:]*:)
+			case "$perms" in
+			*:$d_user:*)	continue ;;
+			esac
+			;;
+		:[!:]*:[!:]*)
+			case "$perms" in
+			*:$d_user:$d_group)	continue ;;
+			esac
+			;;
+		[!:]*::)
+			case "$perms" in
+			$longmode:*:*)	continue ;;
+			esac
+			;;
+		[!:]*:[!:]*:)
+			case "$perms" in
+			$longmode:$d_user:*)	continue ;;
+			esac
+			;;
+		[!:]*:[!:]*:[!:]*)
+			case "$perms" in
+			$longmode:$d_user:$d_group)	continue ;;
+			esac
+			;;
+		esac
+
+		case "$printed_header" in
+		yes)	;;
+		*)	printed_header=yes
+			${ECHO} "==========================================================================="
+			${ECHO} "The following directories are used by ${PKGNAME} and"
+			${ECHO} "have the wrong ownership and/or permissions:"
+			${ECHO} ""
+			;;
+		esac
+		case $d_mode:$d_user:$d_group in
+		[!:]*::)
+			${ECHO} "	$dir (m=$d_mode)"
+			;;
+		[!:]*:[!:]*:)
+			${ECHO} "	$dir (m=$d_mode, o=$d_user)"
+			;;
+		[!:]*:[!:]*:[!:]*)
+			${ECHO} "	$dir (m=$d_mode, o=$d_user, g=$d_group)"
+			;;
+		esac
+	done
+	case "$printed_header" in
+	yes)	${ECHO} ""
+		${ECHO} "==========================================================================="
+		exit 1
+		;;
+	esac; }
+	rm -rf $tmpdir
+	${TEST} $? -eq 0 || exitcode=1
+	;;
+
 *)
-	${ECHO} "Usage: ./+DIRS ADD|REMOVE [metadatadir]"
-	${ECHO} "       ./+DIRS CHECK-ADD|CHECK-REMOVE [metadatadir]"
+	${ECHO} "Usage: ./+DIRS ADD|REMOVE|PERMS [metadatadir]"
+	${ECHO} "       ./+DIRS CHECK-ADD|CHECK-REMOVE|CHECK-PERMS [metadatadir]"
 	;;
 esac
 exit $exitcode
