@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/04/23 03:02:26 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.35 2006/04/25 00:51:11 dmcmahill Exp $
 #
 
 DISTNAME=	pcb-${SNAPDATE}
@@ -19,13 +19,16 @@ CONFIGURE_ENV+=		WISH=${TOOLS_PATH.wish}
 USE_TOOLS+=		bison gm4:run gmake lex wish:run
 INFO_FILES=		# PLIST
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.pcb
-PKG_SUPPORTED_OPTIONS=	pcb-motif png
+PKG_OPTIONS_VAR=		PKG_OPTIONS.pcb
+PKG_SUPPORTED_OPTIONS=		png
+PKG_OPTIONS_REQUIRED_GROUPS=	gui
+PKG_OPTIONS_GROUP.gui=		gtk motif
+PKG_SUGGESTED_OPTIONS=		png gtk
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mpcb-motif)
+.if !empty(PKG_OPTIONS:Mmotif)
 .include "../../mk/motif.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gui=lesstif
 .else
