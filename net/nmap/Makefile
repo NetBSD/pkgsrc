@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2006/02/12 17:24:23 salo Exp $
+# $NetBSD: Makefile,v 1.50 2006/04/25 13:43:09 salo Exp $
 #
 
-DISTNAME=	nmap-4.01
+DISTNAME=	nmap-4.03
 CATEGORIES=	net security
 MASTER_SITES=	http://www.insecure.org/nmap/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +16,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-LIBTOOL_OVERRIDE=	libdnet-stripped/libtool
+LIBTOOL_OVERRIDE+=	libdnet-stripped/libtool
 
 CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-libpcre=${BUILDLINK_PREFIX.libpcre}
