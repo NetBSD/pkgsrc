@@ -1,4 +1,4 @@
-# $NetBSD: dirs,v 1.11 2006/04/25 19:54:39 jlam Exp $
+# $NetBSD: dirs,v 1.12 2006/04/25 20:12:35 jlam Exp $
 #
 # Generate a +DIRS script that reference counts directories that are
 # required for the proper functioning of the package.
@@ -120,16 +120,16 @@ ADD)
 		else
 			${ECHO} "${PKG_METADATA_DIR}" >> $token
 		fi
-		case $d_user/$d_group/$d_mode in
-		[!/]*/[!/]*/[!/]*)
+		case $d_user:$d_group:$d_mode in
+		[!:]*:[!:]*:[!:]*)
 			${ECHO} "$d_user $d_group $d_mode" > $perms
 			;;
 		esac
-		case $d_flags/$_PKG_CONFIG in
-		*f*/*|*/yes)
+		case $d_flags:$_PKG_CONFIG in
+		*f*:*|*:yes)
 			${MKDIR} $dir
-			case $d_user/$d_group/$d_mode in
-			[!/]*/[!/]*/[!/]*)
+			case $d_user:$d_group:$d_mode in
+			[!:]*:[!:]*:[!:]*)
 				${CHOWN} $d_user $dir
 				${CHGRP} $d_group $dir
 				${CHMOD} $d_mode $dir
@@ -162,8 +162,8 @@ REMOVE)
 			case `${CAT} $tokentmp | ${SED} -n "$="` in
 			"")
 				${TEST} -f "$preexist" ||
-					{ case $d_flags/$_PKG_CONFIG in
-					  *f*/*|*/yes)
+					{ case $d_flags:$_PKG_CONFIG in
+					  *f*:*|*:yes)
 						${RMDIR} -p $dir 2>/dev/null || ${TRUE}; 
 						;;
 					  esac; }
@@ -185,8 +185,8 @@ PERMS)
 		"")	continue ;;
 		[!/]*)	dir="${PKG_PREFIX}/$dir" ;;
 		esac
-		case $d_user/$d_group/$d_mode/$_PKG_CONFIG/$_PKG_CONFIG_PERMS in
-		[!/]*/[!/]*/[!/]*/yes/yes)
+		case $d_user:$d_group:$d_mode:$_PKG_CONFIG:$_PKG_CONFIG_PERMS in
+		[!:]*:[!:]*:[!:]*:yes:yes)
 			${CHOWN} $d_user $dir
 			${CHGRP} $d_group $dir
 			${CHMOD} $d_mode $dir
@@ -215,8 +215,8 @@ CHECK-ADD)
 			${ECHO} ""
 			;;
 		esac
-		case $d_user/$d_group/$d_mode in
-		[!/]*/[!/]*/[!/]*)
+		case $d_user:$d_group:$d_mode in
+		[!:]*:[!:]*:[!:]*)
 			${ECHO} "	$dir (o=$d_user, g=$d_group, m=$d_mode)"
 			;;
 		*)
