@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.58 2006/04/25 13:52:51 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.59 2006/04/25 14:05:44 hiramatsu Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2256,3 +2256,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/nmap to 4.03 [salo 2006-04-25]
 	Updated net/nmapfe to 0.9.5nb28 [salo 2006-04-25]
 	Updated databases/sqlrelay to 0.37nb1 [joerg 2006-04-25]
+	Updated time/p5-DateTime to 0.30 [hiramatsu 2006-04-25]
+	Updated time/p5-DateTime-TimeZone to 0.44 [hiramatsu 2006-04-25]
+	Updated time/p5-DateTime-Locale to 0.22 [hiramatsu 2006-04-25]
