@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.47 2006/04/23 00:00:43 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.48 2006/04/25 19:54:39 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -745,6 +745,12 @@ ${_INSTALL_FONTS_FILE}: ../../mk/install/fonts
 #	directories needed to use the package.  It is either YES or NO
 #	and defaults to YES.
 #
+# PKG_CONFIG_PERMS indicates whether to automatically correct permissions
+#	and ownership on pre-existing files and directories, or if it
+#	should merely inform the admin of the list of files and
+#	directories whose permissions and ownership need to be fixed.  It
+#	is either YES or NO and defaults to NO.
+#
 # PKG_RCD_SCRIPTS indicates whether to automatically install rc.d scripts
 #	to ${RCD_SCRIPTS_DIR}.  It is either YES or NO and defaults to
 #	NO.  This variable only takes effect if ${PKG_CONFIG} == "YES".
@@ -761,11 +767,13 @@ ${_INSTALL_FONTS_FILE}: ../../mk/install/fonts
 #
 PKG_CREATE_USERGROUP?=	YES
 PKG_CONFIG?=		YES
+PKG_CONFIG_PERMS?=	NO
 PKG_RCD_SCRIPTS?=	NO
 PKG_REGISTER_SHELLS?=	YES
 PKG_UPDATE_FONTS_DB?=	YES
 FILES_SUBST+=		PKG_CREATE_USERGROUP=${PKG_CREATE_USERGROUP:Q}
 FILES_SUBST+=		PKG_CONFIG=${PKG_CONFIG:Q}
+FILES_SUBST+=		PKG_CONFIG_PERMS=${PKG_CONFIG_PERMS:Q}
 FILES_SUBST+=		PKG_RCD_SCRIPTS=${PKG_RCD_SCRIPTS:Q}
 FILES_SUBST+=		PKG_REGISTER_SHELLS=${PKG_REGISTER_SHELLS:Q}
 FILES_SUBST+=		PKG_UPDATE_FONTS_DB=${PKG_UPDATE_FONTS_DB:Q}

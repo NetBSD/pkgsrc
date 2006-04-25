@@ -1,4 +1,4 @@
-# $NetBSD: files,v 1.10 2006/03/19 23:58:14 jlam Exp $
+# $NetBSD: files,v 1.11 2006/04/25 19:54:39 jlam Exp $
 #
 # Generate a +FILES script that reference counts config files that are
 # required for the proper functioning of the package.
@@ -10,9 +10,9 @@ UNPACK,|UNPACK,+FILES)
 #
 # +FILES - reference-counted configuration file management script
 #
-# Usage: ./+FILES ADD|REMOVE [metadatadir]
+# Usage: ./+FILES ADD|REMOVE|PERMS [metadatadir]
 #        ./+FILES VIEW-REMOVE depotdir viewdir
-#        ./+FILES CHECK-ADD|CHECK-REMOVE [metadatadir]
+#        ./+FILES CHECK-ADD|CHECK-REMOVE|CHECK-PERMS [metadatadir]
 #
 # This script supports two actions, ADD and REMOVE, that will add or
 # remove the configuration files needed by the package associated with
@@ -23,7 +23,13 @@ UNPACK,|UNPACK,+FILES)
 # message noting those files.  The CHECK-ADD and CHECK-REMOVE actions
 # return non-zero if they detect either missing or existing files,
 # respectively.  The VIEW-REMOVE action will remove from <viewdir> the
-# links to the configuration files in <depotdir>.
+# links to the configuration files in <depotdir>.  The PERMS action
+# will correct any ownership or permission discrepancies between the
+# existing files and the data in this script, and the CHECK-PERMS
+# action will check whether any files have the wrong ownership or
+# permission and print an informative message noting those files.  The
+# CHECK-PERMS action will return non-zero if it detects files with
+# wrong ownership or permissions.
 #
 # Lines starting with "# FILE: " are data read by this script that
 # name the files that this package requires to exist to function
@@ -42,6 +48,7 @@ UNPACK,|UNPACK,+FILES)
 #	f	ignore ${PKG_CONFIG}
 #	r	file is an rc.d script (consider ${PKG_RCD_SCRIPTS})
 #
+AWK="@AWK@"
 CAT="@CAT@"
 CP="@CP@"
 CHGRP="@CHGRP@"
@@ -50,6 +57,7 @@ CHOWN="@CHOWN@"
 CMP="@CMP@"
 ECHO="@ECHO@"
 GREP="@GREP@"
+LS="@LS@"
 MKDIR="@MKDIR@"
 MV="@MV@"
 PWD_CMD="@PWD_CMD@"
@@ -73,6 +81,14 @@ case "${PKG_CONFIG:-@PKG_CONFIG@}" in
 	_PKG_CONFIG=no
 	;;
 esac
+case "${PKG_CONFIG_PERMS:-@PKG_CONFIG_PERMS@}" in
+[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
+	_PKG_CONFIG_PERMS=yes
+	;;
+[Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
+	_PKG_CONFIG_PERMS=no
+	;;
+esac
 case "${PKG_RCD_SCRIPTS:-@PKG_RCD_SCRIPTS@}" in
 [Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
 	_PKG_RCD_SCRIPTS=yes
@@ -86,7 +102,7 @@ case $ACTION in
 VIEW-REMOVE)
 	DEPOTDIR="$2"
 	VIEWDIR="$3"
-        ${TEST} -n "${DEPOTDIR}" -a -n "${VIEWDIR}" || exit 0
+	${TEST} -n "${DEPOTDIR}" -a -n "${VIEWDIR}" || exit 0
 	;;
 *)
 	PKG_METADATA_DIR="${2-`${PWD_CMD}`}"
@@ -226,6 +242,32 @@ REMOVE)
 	done
 	;;
 
+PERMS)
+	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
+	while read file f_flags f_eg f_mode f_user f_group; do
+		case $_PKG_CONFIG/$_PKG_CONFIG_PERMS in
+		yes/yes)	;;
+		*)		continue ;;
+		esac
+		case $file in
+		"")	continue ;;
+		[!/]*)	file="${PKG_PREFIX}/$file" ;;
+		esac
+		case $f_user in
+		"")	;;
+		*)	${CHOWN} $f_user $file ;;
+		esac
+		case $f_group in
+		"")	;;
+		*)	${CHGRP} $f_group $file ;;
+		esac
+		case $f_mode in
+		"")	;;
+		*)	${CHMOD} $f_mode $file ;;
+		esac
+	done
+	;;
+
 VIEW-REMOVE)
 	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
 	while read file f_flags f_eg f_mode f_user f_group; do
@@ -322,10 +364,88 @@ CHECK-REMOVE)
 	${TEST} $? -eq 0 || exitcode=1
 	;;
 
+CHECK-PERMS)
+	tmpdir="${TMPDIR:-/tmp}/private.$$"
+	${MKDIR} -p $tmpdir 2>/dev/null || exit 1
+	${CHMOD} 700 $tmpdir
+	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
+	{ while read file f_flags f_eg f_mode f_user f_group; do
+		case $file in
+		"")	continue ;;
+		[!/]*)	file="${PKG_PREFIX}/$file" ;;
+		esac
+		${TEST} -f "$file" || continue
+		case $f_mode:$f_user:$f_group in
+		::)	continue ;;
+		esac
+
+		perms=`${LS} -l $file | ${AWK} '{ print $1":"$3":"$4 }'`
+		${ECHO} > $tmpdir/tmp
+		${CHMOD} $f_mode $tmpdir/tmp 2>/dev/null
+		longmode=`${LS} -l $tmpdir/tmp | ${AWK} '{ print $1 }'`
+		case $f_mode:$f_user:$f_group in
+		:[!:]*:)
+			case "$perms" in
+			*:$f_user:*)	continue ;;
+			esac
+			;;
+		:[!:]*:[!:]*)
+			case "$perms" in
+			*:$f_user:$f_group)	continue ;;
+			esac
+			;;
+		[!:]*::)	
+			case "$perms" in
+			$longmode:*:*)	continue ;;
+			esac
+			;;
+		[!:]*:[!:]*:)
+			case "$perms" in
+			$longmode:$f_user:*)	continue ;;
+			esac
+			;;
+		[!:]*:[!:]*:[!:]*)
+			case "$perms" in
+			$longmode:$f_user:$f_group)	continue ;;
+			esac
+			;;
+		esac
+
+		case "$printed_header" in
+		yes)	;;
+		*)	printed_header=yes
+			${ECHO} "==========================================================================="
+			${ECHO} "The following files are used by ${PKGNAME} and have"
+			${ECHO} "the wrong ownership and/or permissions:"
+			${ECHO} ""
+			;;
+		esac
+		case $f_mode:$f_user:$f_group in
+		[!:]*::)
+			${ECHO} "	$file (m=$f_mode)"
+			;;
+		[!:]*:[!:]*:)
+			${ECHO} "	$file (m=$f_mode, o=$f_user)"
+			;;
+		[!:]*:[!:]*:[!:]*)
+			${ECHO} "	$file (m=$f_mode, o=$f_user, g=$f_group)"
+			;;
+		esac
+	done
+	case "$printed_header" in
+	yes)	${ECHO} ""
+		${ECHO} "==========================================================================="
+		exit 1
+		;;
+	esac; }
+	rm -rf $tmpdir
+	${TEST} $? -eq 0 || exitcode=1
+	;;
+
 *)
-	${ECHO} "Usage: ./+FILES ADD|REMOVE [metadatadir]"
+	${ECHO} "Usage: ./+FILES ADD|REMOVE|PERMS [metadatadir]"
 	${ECHO} "       ./+FILES VIEW-REMOVE depotdir viewdir"
-	${ECHO} "       ./+FILES CHECK-ADD|CHECK-REMOVE [metadatadir]"
+	${ECHO} "       ./+FILES CHECK-ADD|CHECK-REMOVE|CHECK-PERMS [metadatadir]"
 	;;
 esac
 exit $exitcode
