@@ -1,4 +1,4 @@
-# $NetBSD: install,v 1.45 2006/03/19 23:58:14 jlam Exp $
+# $NetBSD: install,v 1.46 2006/04/25 19:54:39 jlam Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -36,6 +36,8 @@ PRE-INSTALL)
 	fi
 	${TEST} ! -x ./+DIRS ||
 		./+DIRS ADD ${PKG_METADATA_DIR}
+	${TEST} ! -x ./+DIRS ||
+		./+DIRS PERMS ${PKG_METADATA_DIR}
         ;;
 
 POST-INSTALL)
@@ -44,8 +46,8 @@ POST-INSTALL)
 	#
         ${TEST} ! -x ./+FILES ||
 		./+FILES ADD ${PKG_METADATA_DIR}
-	${TEST} ! -x ./+RCD_SCRIPTS ||
-		./+RCD_SCRIPTS ADD ${PKG_METADATA_DIR}
+        ${TEST} ! -x ./+FILES ||
+		./+FILES PERMS ${PKG_METADATA_DIR}
 	#
 	# Set special permissions on any files/directories that need them.
 	#
@@ -61,10 +63,12 @@ POST-INSTALL)
 	#
 	${TEST} ! -x ./+DIRS ||
 		./+DIRS CHECK-ADD ${PKG_METADATA_DIR}
+	${TEST} ! -x ./+DIRS ||
+		./+DIRS CHECK-PERMS ${PKG_METADATA_DIR}
 	${TEST} ! -x ./+FILES ||
 		./+FILES CHECK-ADD ${PKG_METADATA_DIR}
-	${TEST} ! -x ./+RCD_SCRIPTS ||
-		./+RCD_SCRIPTS CHECK-ADD ${PKG_METADATA_DIR}
+	${TEST} ! -x ./+FILES ||
+		./+FILES CHECK-PERMS ${PKG_METADATA_DIR}
 	;;
 
 VIEW-INSTALL)
