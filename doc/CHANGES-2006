@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.57 2006/04/25 13:43:59 salo Exp $
+$NetBSD: CHANGES-2006,v 1.58 2006/04/25 13:52:51 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2255,3 +2255,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/nessus to 2.2.7 [salo 2006-04-25]
 	Updated net/nmap to 4.03 [salo 2006-04-25]
 	Updated net/nmapfe to 0.9.5nb28 [salo 2006-04-25]
+	Updated databases/sqlrelay to 0.37nb1 [joerg 2006-04-25]
