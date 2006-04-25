@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4910 2006/04/25 04:59:33 hiramatsu Exp $
+$NetBSD: TODO,v 1.4911 2006/04/25 12:48:48 salo Exp $
 
 Suggested new packages
 ======================
@@ -777,7 +777,6 @@ Suggested package updates
 	o ncftp2-2.8.2
 	o ncview-1.92e
 	o neon-0.26.0
-	o nessus-2.2.7
 	o netatalk1-1.6.4
 	o netcdf-4.0.0a
 	o netperf-2.4.0
