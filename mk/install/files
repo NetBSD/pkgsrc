@@ -1,4 +1,4 @@
-# $NetBSD: files,v 1.12 2006/04/25 20:12:35 jlam Exp $
+# $NetBSD: files,v 1.13 2006/04/25 22:35:46 jlam Exp $
 #
 # Generate a +FILES script that reference counts config files that are
 # required for the proper functioning of the package.
@@ -365,7 +365,7 @@ CHECK-REMOVE)
 	;;
 
 CHECK-PERMS)
-	tmpdir="${TMPDIR:-/tmp}/private.$$"
+	tmpdir="${TMPDIR:-/tmp}/pkginstall.$$"
 	${MKDIR} -p $tmpdir 2>/dev/null || exit 1
 	${CHMOD} 700 $tmpdir
 	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |

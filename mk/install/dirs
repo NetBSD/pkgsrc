@@ -1,4 +1,4 @@
-# $NetBSD: dirs,v 1.13 2006/04/25 22:32:44 jlam Exp $
+# $NetBSD: dirs,v 1.14 2006/04/25 22:35:46 jlam Exp $
 #
 # Generate a +DIRS script that reference counts directories that are
 # required for the proper functioning of the package.
@@ -281,7 +281,7 @@ CHECK-REMOVE)
 	;;
 
 CHECK-PERMS)
-	tmpdir="${TMPDIR:-/tmp}/private.$$"
+	tmpdir="${TMPDIR:-/tmp}/pkginstall.$$"
 	${MKDIR} -p $tmpdir 2>/dev/null || exit 1
 	${CHMOD} 700 $tmpdir
 	${SED} -n "/^\# DIR: /{s/^\# DIR: //;p;}" ${SELF} | ${SORT} -ru |
