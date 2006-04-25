@@ -1,18 +1,16 @@
-$NetBSD: patch-at,v 1.9 2006/02/02 20:47:26 rillig Exp $
-
---- configure.orig	2006-01-04 10:26:42.000000000 +0100
-+++ configure
-@@ -483,7 +483,7 @@ mksharedlibrpath=''
+--- configure.orig	2006-04-21 09:38:39.000000000 +0900
++++ configure	2006-04-21 09:49:07.000000000 +0900
+@@ -483,7 +483,7 @@
  
  if test $withsharedlibs = "yes"; then
    case "$host" in
--    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*)
-+    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-netbsd*|*-*-dragonfly*)
+-    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-gnu*)
++    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-gnu*|*-*-netbsd*|*-*-dragonfly*)
        sharedcccompopts="-fPIC"
        mksharedlib="$bytecc -shared -o"
        bytecclinkopts="$bytecclinkopts -Wl,-E"
-@@ -571,10 +571,12 @@ case "$host" in
-   sparc*-*-linux*)              arch=sparc; system=linux;;
+@@ -573,10 +573,12 @@
+   sparc*-*-gnu*)                arch=sparc; system=gnu;;
    i[3456]86-*-linux*)           arch=i386; system=linux_`sh ./runtest elf.c`;;
    i[3456]86-*-*bsd*)            arch=i386; system=bsd_`sh ./runtest elf.c`;;
 +  i[3456]86-*-dragonfly*)       arch=i386; system=bsd_`sh ./runtest elf.c`;;
@@ -21,26 +19,18 @@ $NetBSD: patch-at,v 1.9 2006/02/02 20:47:26 rillig Exp $
    i[3456]86-*-beos*)            arch=i386; system=beos;;
    i[3456]86-*-cygwin*)          arch=i386; system=cygwin;;
 +  i[3456]86-*-interix3*)        arch=i386; system=interix3;;
+   i[3456]86-*-darwin*)          arch=i386; system=macosx;;
+   i[3456]86-*-gnu*)             arch=i386; system=gnu;;
    mips-*-irix6*)                arch=mips; system=irix;;
-   hppa1.1-*-hpux*)              arch=hppa; system=hpux;;
-   hppa2.0*-*-hpux*)             arch=hppa; system=hpux;;
-@@ -659,6 +661,7 @@ case "$arch,$model,$system" in
-     profiling='prof'
+@@ -672,6 +674,7 @@
      case "$nativecc" in gcc*) ;; *) cc_profile='-xpg';; esac;;
    amd64,*,linux) profiling='prof';;
+   amd64,*,gnu) profiling='prof';;
 +  power,*,bsd) profiling='prof';;
    *) profiling='noprof';;
  esac
  
-@@ -1047,6 +1050,7 @@ if test "$pthread_wanted" = "yes"; then
-   case "$host" in
-     *-*-solaris*)  pthread_link="-lpthread -lposix4";;
-     *-*-freebsd*)  pthread_link="-pthread";;
-+    *-*-dragonfly*)  pthread_link="-pthread";;
-     *-*-openbsd*)  pthread_link="-pthread";;
-     *)             pthread_link="-lpthread";;
-   esac
-@@ -1094,6 +1098,7 @@ fi
+@@ -1107,6 +1110,7 @@
  x11_include="not found"
  x11_link="not found"
  
@@ -48,7 +38,7 @@ $NetBSD: patch-at,v 1.9 2006/02/02 20:47:26 rillig Exp $
  for dir in \
      $x11_include_dir          \
                                \
-@@ -1140,6 +1145,7 @@ do
+@@ -1153,6 +1157,7 @@
      break
    fi
  done
@@ -56,7 +46,7 @@ $NetBSD: patch-at,v 1.9 2006/02/02 20:47:26 rillig Exp $
  
  if test "$x11_include" = "not found"; then
    x11_try_lib_dir=''
-@@ -1229,31 +1235,8 @@ dbm_include="not found"
+@@ -1242,31 +1247,8 @@
  dbm_link="not found"
  use_gdbm_ndbm=no
  
@@ -72,7 +62,7 @@ $NetBSD: patch-at,v 1.9 2006/02/02 20:47:26 rillig Exp $
 -    elif sh ./hasgot -lgdbm dbm_open; then
 -      dbm_link="-lgdbm"
 -    elif sh ./hasgot -lgdbm_compat -lgdbm dbm_open; then
--      dbm_link="-lgdbm_compat -lgdbm" 
+-      dbm_link="-lgdbm_compat -lgdbm"
 -    fi
 -    break
 -  fi
@@ -82,7 +72,7 @@ $NetBSD: patch-at,v 1.9 2006/02/02 20:47:26 rillig Exp $
 -    if sh ./hasgot -lgdbm_compat -lgdbm dbm_open; then
 -      dbm_link="-lgdbm_compat -lgdbm"
 -    fi
--    break   
+-    break
 -  fi
 -done
 +dbm_include=/usr/include
@@ -90,7 +80,7 @@ $NetBSD: patch-at,v 1.9 2006/02/02 20:47:26 rillig Exp $
  if test "$dbm_include" = "not found" || test "$dbm_link" = "not found"; then
    echo "NDBM not found, the \"dbm\" library will not be supported."
  else
-@@ -1265,8 +1248,8 @@ else
+@@ -1278,8 +1260,8 @@
    fi
    echo "DBM_INCLUDES=$dbm_include" >> Makefile
    echo "DBM_LINK=$dbm_link" >> Makefile
