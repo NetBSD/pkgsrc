@@ -1,4 +1,4 @@
-# $NetBSD: dirs,v 1.12 2006/04/25 20:12:35 jlam Exp $
+# $NetBSD: dirs,v 1.13 2006/04/25 22:32:44 jlam Exp $
 #
 # Generate a +DIRS script that reference counts directories that are
 # required for the proper functioning of the package.
@@ -34,7 +34,7 @@ UNPACK,|UNPACK,+DIRS)
 # correctly, e.g.
 #
 #	# DIR: /etc/foo m
-#	# DIR: /var/log/foo/tmp mo foo-user foo-group 0700
+#	# DIR: /var/log/foo/tmp mo 0700 foo-user foo-group
 #	# DIR: share/foo-plugins fm
 #
 # For each DIR entry, if the directory path is relative, then it is taken
@@ -96,7 +96,7 @@ exitcode=0
 case $ACTION in
 ADD)
 	${SED} -n "/^\# DIR: /{s/^\# DIR: //;p;}" ${SELF} | ${SORT} -u |
-	while read dir d_flags d_user d_group d_mode; do
+	while read dir d_flags d_mode d_user d_group; do
 		case $dir in
 		"")	continue ;;
 		[!/]*)	dir="${PKG_PREFIX}/$dir" ;;
@@ -120,20 +120,24 @@ ADD)
 		else
 			${ECHO} "${PKG_METADATA_DIR}" >> $token
 		fi
-		case $d_user:$d_group:$d_mode in
-		[!:]*:[!:]*:[!:]*)
-			${ECHO} "$d_user $d_group $d_mode" > $perms
-			;;
+		case $d_mode$d_user$d_group in
+		"")	;;
+		*)	${ECHO} "$d_user $d_group $d_mode" > $perms ;;
 		esac
 		case $d_flags:$_PKG_CONFIG in
 		*f*:*|*:yes)
 			${MKDIR} $dir
-			case $d_user:$d_group:$d_mode in
-			[!:]*:[!:]*:[!:]*)
-				${CHOWN} $d_user $dir
-				${CHGRP} $d_group $dir
-				${CHMOD} $d_mode $dir
-				;;
+			case $d_user in
+			"")	;;
+			*)	${CHOWN} $d_user $dir ;;
+			esac
+			case $d_group in
+			"")	;;
+			*)	${CHGRP} $d_group $dir ;;
+			esac
+			case $d_mode in
+			"")	;;
+			*)	${CHMOD} $d_mode $dir ;;
 			esac
 			;;
 		esac
@@ -142,7 +146,7 @@ ADD)
 
 REMOVE)
 	${SED} -n "/^\# DIR: /{s/^\# DIR: //;p;}" ${SELF} | ${SORT} -ru |
-	while read dir d_flags d_user d_group d_mode; do
+	while read dir d_flags d_mode d_user d_group; do
 		case $dir in
 		"")	continue ;;
 		[!/]*)	dir="${PKG_PREFIX}/$dir" ;;
@@ -180,24 +184,33 @@ REMOVE)
 
 PERMS)
 	${SED} -n "/^\# DIR: /{s/^\# DIR: //;p;}" ${SELF} | ${SORT} -u |
-	while read dir d_flags d_user d_group d_mode; do
+	while read dir d_flags d_mode d_user d_group; do
+		case $_PKG_CONFIG:$_PKG_CONFIG_PERMS in
+		yes:yes)	;;
+		*)		continue ;;
+		esac
 		case $dir in
 		"")	continue ;;
 		[!/]*)	dir="${PKG_PREFIX}/$dir" ;;
 		esac
-		case $d_user:$d_group:$d_mode:$_PKG_CONFIG:$_PKG_CONFIG_PERMS in
-		[!:]*:[!:]*:[!:]*:yes:yes)
-			${CHOWN} $d_user $dir
-			${CHGRP} $d_group $dir
-			${CHMOD} $d_mode $dir
-			;;
+		case $d_user in
+		"")	;;
+		*)	${CHOWN} $d_user $dir ;;
+		esac
+		case $d_group in
+		"")	;;
+		*)	${CHGRP} $d_group $dir ;;
+		esac
+		case $d_mode in
+		"")	;;
+		*)	${CHMOD} $d_mode $dir ;;
 		esac
 	done
 	;;
 
 CHECK-ADD)
 	${SED} -n "/^\# DIR: /{s/^\# DIR: //;p;}" ${SELF} | ${SORT} -u |
-	{ while read dir d_flags d_user d_group d_mode; do
+	{ while read dir d_flags d_mode d_user d_group; do
 		case $dir in
 		"")	continue ;;
 		[!/]*)	dir="${PKG_PREFIX}/$dir" ;;
@@ -217,7 +230,7 @@ CHECK-ADD)
 		esac
 		case $d_user:$d_group:$d_mode in
 		[!:]*:[!:]*:[!:]*)
-			${ECHO} "	$dir (o=$d_user, g=$d_group, m=$d_mode)"
+			${ECHO} "	$dir (m=$d_mode, o=$d_user, g=$d_group)"
 			;;
 		*)
 			${ECHO} "	$dir"
@@ -235,7 +248,7 @@ CHECK-ADD)
 
 CHECK-REMOVE)
 	${SED} -n "/^\# DIR: /{s/^\# DIR: //;p;}" ${SELF} | ${SORT} -ru |
-	{ while read dir d_flags d_user d_group d_mode; do
+	{ while read dir d_flags d_mode d_user d_group; do
 		case $dir in
 		"")	continue ;;
 		[!/]*)	dir="${PKG_PREFIX}/$dir" ;;
@@ -272,7 +285,7 @@ CHECK-PERMS)
 	${MKDIR} -p $tmpdir 2>/dev/null || exit 1
 	${CHMOD} 700 $tmpdir
 	${SED} -n "/^\# DIR: /{s/^\# DIR: //;p;}" ${SELF} | ${SORT} -ru |
-	{ while read dir d_flags d_user d_group d_mode; do
+	{ while read dir d_flags d_mode d_user d_group; do
 		case $dir in
 		"")	continue ;;
 		[!/]*)	dir="${PKG_PREFIX}/$dir" ;;
