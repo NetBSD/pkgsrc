@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.10 2006/04/26 07:41:17 rillig Exp $
+
+SunPro does not like extern inline functions that reference static
+functions.
+
+--- src/adpcm.c.orig	Tue Nov 23 00:07:37 2004
++++ src/adpcm.c	Wed Apr 26 09:29:21 2006
+@@ -72,6 +72,7 @@ const short iCoef[7][2] = {
+                         { 392,-232}
+ };
+ 
++static
+ inline st_sample_t AdpcmDecode(st_sample_t c, MsState_t *state,
+                                st_sample_t sample1, st_sample_t sample2)
+ {
+@@ -303,6 +304,7 @@ static long ReAvgDelta(int ch, int chans
+ 
+ #endif
+ 
++static
+ inline void AdpcmMashChannel(
+         int ch,             /* channel number to encode, REQUIRE 0 <= ch < chans  */
+         int chans,          /* total channels */
