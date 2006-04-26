@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4915 2006/04/26 16:17:30 salo Exp $
+$NetBSD: TODO,v 1.4916 2006/04/26 20:24:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -453,7 +453,7 @@ Suggested package updates
 	o doxygen-1.4.6
 	o dpkg-1.10.28
 	o dropbear-0.48
-	o dspam-3.6.4
+	o dspam-3.6.5
 	o dvd+rw-tools-6.1
 	o dvdauthor-0.6.11
 	o dvdrip-0.52.7
@@ -524,13 +524,14 @@ Suggested package updates
 	o garmin-utils-2.2
 	o gated-3.6
 	o gauche-0.8.7
+	o gcalctool-5.8.9
 	o gcc-3.3.6
 	o gcc-4.1.0
 	o gcdmaster-1.2.1
 	o gcombust-0.1.55
 	o gcpio-2.6
 	o gdb6-6.3.0
-	o gdm-2.14.2
+	o gdm-2.14.4
 	o gdsreader-0.3.2
 	o gedit-2.14.2
 	o ggiterm-0.7.1
@@ -610,8 +611,7 @@ Suggested package updates
 	o httptunnel-3.3
 	o hugs-200503 [pkg/30071]
 	o hydrogen-0.9.2
-	o hyperestraier-1.2.2 [pkg/33252]
-	o hyperestraier-1.2.3
+	o hyperestraier-1.2.3 [pkg/33252]
 	o i2ocfg-1.1
 	o icdprog-0.5
 	o icecast-2.3.1
@@ -1048,6 +1048,7 @@ Suggested package updates
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
 	o qcad-2.0.4.0 [pkgsrc-wip]
+	o qdbm-1.8.49 [pkg/33369]
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-docs-2.3.2
@@ -1071,7 +1072,7 @@ Suggested package updates
 	o rep-gtk-0.18
 	o resize_image-0.7
 	o rhythmbox-0.9.3.1 [jmmv]
-	o rhythmbox-0.9.4
+	o rhythmbox-0.9.4.1
 	o rio500-0.8.1
 	o ripmime-1.4.0.6
 	o rman-3.2
@@ -1170,6 +1171,7 @@ Suggested package updates
 	o ted-2.17
 	o tet3-3.6b
 	o tfmxplay-1.1.6
+	o tin-1.8.2
 	o tinyproxy-1.7.0
 	o tk-8.4.13
 	o tk83-8.3.5
