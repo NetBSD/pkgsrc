@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.32 2006/04/26 14:59:05 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.33 2006/04/26 15:20:45 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -67,3 +67,5 @@ Pullup ticket 1459 - requested by tron
 security update for ethereal
 Pullup ticket 1460 - requested by drochner
 security fix for xine-ui
+Pullup ticket 1452 - requested by markd
+portability fix for emacs
