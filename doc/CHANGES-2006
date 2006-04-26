@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.62 2006/04/26 07:31:11 tonio Exp $
+$NetBSD: CHANGES-2006,v 1.63 2006/04/26 14:05:38 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2262,3 +2262,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/paros to 3.2.10 [salo 2006-04-25]
 	Updated ham/gmfsk to 0.6nb7 [wulf 2006-04-25]
 	Updated converters/bibtex2html to 1.80 [tonio 2006-04-26]
+	Updated x11/xterm to 212 [joerg 2006-04-26]
