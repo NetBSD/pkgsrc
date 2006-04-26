@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.60 2006/04/25 14:17:43 salo Exp $
+$NetBSD: CHANGES-2006,v 1.61 2006/04/26 01:55:07 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2260,3 +2260,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated time/p5-DateTime-TimeZone to 0.44 [hiramatsu 2006-04-25]
 	Updated time/p5-DateTime-Locale to 0.22 [hiramatsu 2006-04-25]
 	Updated www/paros to 3.2.10 [salo 2006-04-25]
+	Updated ham/gmfsk to 0.6nb7 [wulf 2006-04-25]
