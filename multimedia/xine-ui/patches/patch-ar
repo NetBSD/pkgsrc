@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1.2.2 2006/04/26 14:58:40 salo Exp $
+
+--- src/xitk/xine-toolkit/xitk.c.orig	2004-07-02 15:23:31.000000000 +0200
++++ src/xitk/xine-toolkit/xitk.c
+@@ -1725,7 +1725,7 @@ void xitk_init(Display *display, int ver
+   sprintf(buffer, "%s%s", buffer, " ]-");
+ 
+   if(verbosity)
+-    printf(buffer);
++    printf("%s", buffer);
+ 
+   gXitk->wm_type = xitk_check_wm(display);
+   
