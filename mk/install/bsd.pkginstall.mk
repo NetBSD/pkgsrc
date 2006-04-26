@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.49 2006/04/25 22:32:44 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.50 2006/04/26 05:58:47 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -489,11 +489,23 @@ ${_INSTALL_DIRS_DATAFILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET} ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${_PKG_SILENT}${_PKG_DEBUG}${_FUNC_STRIP_PREFIX};		\
 	exec 1>>${.TARGET}.tmp;						\
 	case ${PKG_SYSCONFSUBDIR:M*:Q}${CONF_FILES:M*:Q}${CONF_FILES_PERMS:M*:Q}"" in \
 	"")	;;							\
-	*)	${ECHO} "# DIR: ${PKG_SYSCONFDIR:S/${PREFIX}\///} m" ;;	\
+	*)	case ${PKG_SYSCONFSUBDIR:M*:Q}"" in			\
+		"")	${ECHO} "# DIR: ${PKG_SYSCONFDIR:S/${PREFIX}\///} m" ;; \
+		*)	set -- dummy ${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR_PERMS}; shift; \
+			while ${TEST} $$# -gt 0; do			\
+				dir="$$1"; owner="$$2";			\
+				group="$$3"; mode="$$4";		\
+				shift; shift; shift; shift;		\
+				dir=`strip_prefix "$$dir"`;		\
+				${ECHO} "# DIR: $$dir m $$mode $$owner $$group"; \
+			done;						\
+			;;						\
+		esac;							\
+		;;							\
 	esac
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	exec 1>>${.TARGET}.tmp;						\
