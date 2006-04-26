@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.63 2006/04/26 14:05:38 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.64 2006/04/26 16:17:30 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2263,3 +2263,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated ham/gmfsk to 0.6nb7 [wulf 2006-04-25]
 	Updated converters/bibtex2html to 1.80 [tonio 2006-04-26]
 	Updated x11/xterm to 212 [joerg 2006-04-26]
+	Updated www/trac to 0.9.5 [salo 2006-04-26]
+	Updated www/ja-trac to 0.9.5.1 [salo 2006-04-26]
