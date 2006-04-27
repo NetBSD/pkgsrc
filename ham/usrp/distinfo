@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/12/11 11:35:06 wulf Exp $
+$NetBSD: distinfo,v 1.3 2006/04/27 03:19:35 wulf Exp $
 
-SHA1 (usrp-0.9.tar.gz) = febb0cb24f2679734971d9f2ff50bca2ad7d0b45
-RMD160 (usrp-0.9.tar.gz) = 80dd4538fd84f09ce5c2223bd1b948d0351577c6
-Size (usrp-0.9.tar.gz) = 1066652 bytes
+SHA1 (usrp-0.12.tar.gz) = 70c764473effc491549b2153c26ee7e7c6fd07a1
+RMD160 (usrp-0.12.tar.gz) = 8342869a4a4855e7bb896f632c4dfd42d0706e30
+Size (usrp-0.12.tar.gz) = 1470926 bytes
