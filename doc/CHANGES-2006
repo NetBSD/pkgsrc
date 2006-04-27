@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.71 2006/04/27 19:39:40 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.72 2006/04/27 19:40:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2283,3 +2283,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/qdbm to 1.8.49 [wiz 2006-04-27]
 	Added multimedia/mplayer-plugin-seamonkey version 2.70 [ghen 2006-04-27]
 	Added multimedia/mplayer-plugin-seamonkey-gtk1 version 2.70 [ghen 2006-04-27]
+	Updated textproc/hyperestraier to 1.2.3 [wiz 2006-04-27]
