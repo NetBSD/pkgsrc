@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.65 2006/04/27 03:27:18 wulf Exp $
+$NetBSD: CHANGES-2006,v 1.66 2006/04/27 08:19:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2274,3 +2274,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated ham/gnuradio-wxgui to 0.6 [wulf 2006-04-27]
 	Updated ham/usrp to 0.12 [wulf 2006-04-27]
 	Updated meta-pkgs/gnuradio to 2.8 [wulf 2006-04-27]
+	Updated lang/tcl to 8.4.13 [adam 2006-04-27]
+	Updated x11/tk to 8.4.13 [adam 2006-04-27]
