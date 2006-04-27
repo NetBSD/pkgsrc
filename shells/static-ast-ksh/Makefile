@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2006/01/07 16:29:15 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/04/27 15:32:14 hubertf Exp $
 #
 .include "../../shells/ast-ksh/Makefile.common"
-
-PKGREVISION=	1
 
 CONFLICTS=	ast-ksh-[0-9]*	# Override.
 

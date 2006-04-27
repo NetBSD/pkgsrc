@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.67 2006/04/27 10:05:28 sketch Exp $
+$NetBSD: CHANGES-2006,v 1.68 2006/04/27 15:32:16 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2277,3 +2277,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/tcl to 8.4.13 [adam 2006-04-27]
 	Updated x11/tk to 8.4.13 [adam 2006-04-27]
 	Updated wm/evilwm to 0.99.25 [sketch 2006-04-27]
+	Updated shells/ast-ksh to 2005-02-02 [hubertf 2006-04-27]
+	Updated shells/static-ast-ksh to 2005-02-02 [hubertf 2006-04-27]
