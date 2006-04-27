@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2006/04/17 13:46:37 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/04/27 03:07:42 wulf Exp $
 
-DISTNAME=	gnuradio-examples-0.5
-PKGREVISION=	3
+DISTNAME=	gnuradio-examples-0.7
 COMMENT=	GUI framework for GNU Radio based on wxPython
 COMMENT=	Examples for GNU Radio
 
@@ -51,12 +50,14 @@ PYTHON_PATCH_SCRIPTS+=	python/usrp/usrp_siggen.py
 PYTHON_PATCH_SCRIPTS+=	python/usrp/usrp_wfm_rcv.py
 PYTHON_PATCH_SCRIPTS+=	python/usrp/usrp_wfm_rcv_nogui.py
 PYTHON_PATCH_SCRIPTS+=	python/usrp/usrp_wfm_rcv_pll.py
+PYTHON_PATCH_SCRIPTS+=	python/usrp/usrp_wfm_rcv2_nogui.py
+PYTHON_PATCH_SCRIPTS+=	python/usrp/usrp_wxapt_rcv.py
 PYTHON_PATCH_SCRIPTS+=	python/usrp/wfm_rcv_file.py
 
 EXAMPLE_DIR=	${LOCALBASE}/share/examples/gnuradio/python
 
 do-install:
-	for file in audio gmsk2 digital_voice  mc4020 usrp;		\
+	for file in audio digital_voice gmsk2 mc4020 usrp;		\
 	do								\
 		${INSTALL_SCRIPT_DIR} ${EXAMPLE_DIR}/$${file};		\
 		${INSTALL_SCRIPT} ${WRKSRC}/python/$${file}/*\.py	\
