@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:09:42 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/27 03:11:12 wulf Exp $
 
-VERSION=	0.4
+VERSION=	0.6
 DISTNAME=	gr-howto-write-a-block-${VERSION}
 PKGNAME=	gnuradio-howto-${VERSION}
-PKGREVISION=	2
 WRKSRC=		${WRKDIR}/${DISTNAME}
 COMMENT=	Documentation about GNU Radio signal processing blocks
 
