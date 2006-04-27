@@ -5,7 +5,7 @@ number of resources possible. MaraDNS was created in response to issues
 people had with the DNS servers available in early 2001; and has the
 following design goals:
 
-Security-aware programming. A DNS server needs to be secure. I have a number
+Security-aware programming. A DNS server needs to be secure. It has a number
 of security features in the code, including:
 
    1. The code uses a special string library which is resistant to buffer
