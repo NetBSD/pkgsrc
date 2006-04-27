@@ -1,18 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:09:42 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/27 03:19:34 wulf Exp $
 
-DISTNAME=	usrp-0.9
-PKGREVISION=	2
+DISTNAME=	usrp-0.12
 COMMENT=	Non GNU Radio specific part of the USRP code base
 
 BUILD_DEPENDS+=	sdcc>=2.4.0:../../devel/sdcc
 
-#post-install:
-#	${INSTALL_DATA} ${WRKSRC}/fpga/rbf/usrp_fpga_rev2.rbf  \
-#		${LOCALBASE}/share/usrp/rev2/usrp_fpga.rbf
-
 PYTHON_PATCH_SCRIPTS	+= firmware/src/common/edit-gpif
 PYTHON_PATCH_SCRIPTS	+= firmware/src/common/build_eeprom.py
 PYTHON_PATCH_SCRIPTS	+= firmware/src/usrp2/edit-gpif
+
+CONFIGURE_ARGS+=	--enable-doxygen
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"
 
