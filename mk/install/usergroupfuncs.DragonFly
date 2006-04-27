@@ -1,4 +1,4 @@
-# $NetBSD: usergroupfuncs.DragonFly,v 1.4 2006/04/24 23:44:18 jlam Exp $
+# $NetBSD: usergroupfuncs.DragonFly,v 1.5 2006/04/27 22:44:09 jlam Exp $
 #
 # Platform-specific adduser and addgroup functionality
 # on top of pw(8).
@@ -88,7 +88,11 @@ adduser()
 
 	PW="@PW@"
 
-	: ${descr:="${PKGNAME%-[0-9]*} $user user"}
+	case $user in
+	${PKGNAME%-[0-9]*})	descr_dflt="$user user" ;;
+	*)			descr_dflt="${PKGNAME%-[0-9]*} $user user" ;;
+	esac
+	: ${descr:="$descr_dflt"}
 	: ${home:="@PKG_USER_HOME@"}
 	: ${shell:="@PKG_USER_SHELL@"}
 
