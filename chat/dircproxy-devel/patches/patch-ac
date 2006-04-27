@@ -1,10 +1,20 @@
-$NetBSD: patch-ac,v 1.2 2006/02/19 15:47:35 adrianp Exp $
-
-Conditional lvalues aren't portable enough for IRIX 6.5.
+$NetBSD: patch-ac,v 1.3 2006/04/27 16:36:17 tron Exp $
 
 --- src/irc_server.c.orig	2006-02-18 22:39:32.000000000 +0000
-+++ src/irc_server.c
-@@ -788,7 +788,7 @@ static int _ircserver_gotmsg(struct ircp
++++ src/irc_server.c	2006-04-27 17:18:02.000000000 +0100
+@@ -587,9 +587,10 @@
+         ;
+         if (strcmp(ss->str,s->str))  // this line is not already present
+           ss->next = s;
+-        else
++        else {
+ 	  free(s->str);
+           free(s);
++        }
+       } else {
+         p->serversupported = s;
+       }
+@@ -788,7 +789,7 @@
                free(s);
  
                /* Was in the squelch list, so remove it and stop looking */
