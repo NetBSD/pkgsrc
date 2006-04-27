@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.64 2006/04/26 16:17:30 salo Exp $
+$NetBSD: CHANGES-2006,v 1.65 2006/04/27 03:27:18 wulf Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2265,3 +2265,12 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xterm to 212 [joerg 2006-04-26]
 	Updated www/trac to 0.9.5 [salo 2006-04-26]
 	Updated www/ja-trac to 0.9.5.1 [salo 2006-04-26]
+	Updated ham/gnuradio-core to 2.8 [wulf 2006-04-27]
+	Updated ham/gnuradio-audio-oss to 0.9 [wulf 2006-04-27]
+	Updated ham/gnuradio-examples to 0.7 [wulf 2006-04-27]
+	Updated ham/gnuradio-gsm to 0.3 [wulf 2006-04-27]
+	Updated ham/gnuradio-howto to 0.6 [wulf 2006-04-27]
+	Updated ham/gnuradio-usrp to 0.8 [wulf 2006-04-27]
+	Updated ham/gnuradio-wxgui to 0.6 [wulf 2006-04-27]
+	Updated ham/usrp to 0.12 [wulf 2006-04-27]
+	Updated meta-pkgs/gnuradio to 2.8 [wulf 2006-04-27]
