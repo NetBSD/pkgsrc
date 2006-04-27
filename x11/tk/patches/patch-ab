@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.24 2006/02/23 23:31:52 minskim Exp $
+$NetBSD: patch-ab,v 1.25 2006/04/27 08:18:09 adam Exp $
 
---- unix/configure.orig	2005-12-06 02:42:37.000000000 +0000
+--- unix/configure.orig	2006-04-19 14:29:37.000000000 +0200
 +++ unix/configure
-@@ -2007,12 +2007,13 @@ fi
+@@ -2054,12 +2054,13 @@ fi
      # Step 3: set configuration options based on system name and version.
  
      do64bit_ok=no
@@ -17,43 +17,25 @@ $NetBSD: patch-ab,v 1.24 2006/02/23 23:31:52 minskim Exp $
      CFLAGS_DEBUG=-g
      CFLAGS_OPTIMIZE=-O
      if test "$GCC" = "yes" ; then
-@@ -2699,8 +2700,7 @@ if eval "test \"`echo '$ac_cv_header_'$a
+@@ -2746,7 +2747,6 @@ if eval "test \"`echo '$ac_cv_header_'$a
    
  		# NetBSD/SPARC needs -fPIC, -fpic will not do.
  		SHLIB_CFLAGS="-fPIC"
 -		SHLIB_LD="ld -Bshareable -x"
--		SHLIB_LD_LIBS=""
-+		SHLIB_LD_LIBS='${LIBS}'
+ 		SHLIB_LD_LIBS='${LIBS}'
  		SHLIB_SUFFIX=".so"
  		DL_OBJS="tclLoadDl.o"
- 		DL_LIBS=""
-@@ -2720,13 +2720,23 @@ EOF
- if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
-   egrep "yes" >/dev/null 2>&1; then
-   rm -rf conftest*
--  echo "$ac_t""yes" 1>&6
-+  
-+		    echo "$ac_t""yes" 1>&6
-+		    SHLIB_LD='${TCL_CC} -shared -Wl,-x'
-+		    RPATH_FLAG='-Wl,-R'
-+		    LD_SEARCH_FLAGS='-Wl,-R${LIB_RUNTIME_DIR}'
- 		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
-+		
- else
-   rm -rf conftest*
--  echo "$ac_t""no" 1>&6
-+  
-+		    echo "$ac_t""no" 1>&6
-+		    SHLIB_LD="ld -Bshareable -x"
-+		    RPATH_FLAG='-R'
-+		    LD_SEARCH_FLAGS='-R${LIB_RUNTIME_DIR}'
- 		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.1.0'
- 		
-+		
+@@ -2781,6 +2781,9 @@ rm -f conftest*
  fi
- rm -f conftest*
  
-@@ -2813,12 +2823,13 @@ rm -f conftest*
+ echo "$ac_t""$tcl_cv_ld_elf" 1>&6
++		SHLIB_LD='${TCL_CC} -shared -Wl,-x'
++		RPATH_FLAG='-Wl,-R'
++		LD_SEARCH_FLAGS='-Wl,-R${LIB_RUNTIME_DIR}'
+ 		if test $tcl_cv_ld_elf = yes; then
+ 		    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
+ 		else
+@@ -2878,12 +2881,13 @@ echo "$ac_t""$tcl_cv_ld_elf" 1>&6
  	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
  	    TCL_LIB_VERSIONS_OK=nodots
  	    ;;
@@ -68,7 +50,7 @@ $NetBSD: patch-ab,v 1.24 2006/02/23 23:31:52 minskim Exp $
  	    DL_OBJS="tclLoadDl.o"
  	    DL_LIBS=""
  	    LDFLAGS="$LDFLAGS -export-dynamic"
-@@ -3748,7 +3759,7 @@ fi
+@@ -3837,7 +3841,7 @@ fi
  		    ;;
  		IRIX*)
  		    ;;
@@ -77,7 +59,7 @@ $NetBSD: patch-ab,v 1.24 2006/02/23 23:31:52 minskim Exp $
  		    ;;
  		Darwin-*)
  		    ;;
-@@ -3766,16 +3777,16 @@ fi
+@@ -3855,16 +3859,16 @@ fi
      fi
  
      if test "$SHARED_LIB_SUFFIX" = "" ; then
@@ -98,7 +80,7 @@ $NetBSD: patch-ab,v 1.24 2006/02/23 23:31:52 minskim Exp $
      else
          LIB_SUFFIX=${UNSHARED_LIB_SUFFIX}
  
-@@ -5313,7 +5324,11 @@ echo "configure:5311: checking for X11 l
+@@ -5405,7 +5409,11 @@ echo "configure:5403: checking for X11 l
  	for i in $dirs ; do
  	    if test -r $i/libX11.a -o -r $i/libX11.so -o -r $i/libX11.sl; then
  		echo "$ac_t""$i" 1>&6
@@ -111,7 +93,7 @@ $NetBSD: patch-ab,v 1.24 2006/02/23 23:31:52 minskim Exp $
  		x_libraries="$i"
  		break
  	    fi
-@@ -5322,7 +5337,11 @@ echo "configure:5311: checking for X11 l
+@@ -5414,7 +5422,11 @@ echo "configure:5403: checking for X11 l
  	if test "$x_libraries" = ""; then
  	    XLIBSW=-lX11
  	else
@@ -124,7 +106,7 @@ $NetBSD: patch-ab,v 1.24 2006/02/23 23:31:52 minskim Exp $
  	fi
      fi
      if test "$XLIBSW" = nope ; then
-@@ -5394,6 +5413,10 @@ if test "x${x_libraries}" != "x"; then
+@@ -5486,6 +5498,10 @@ if test "x${x_libraries}" != "x"; then
  fi
  if test "${TCL_LD_SEARCH_FLAGS}" = '-L${LIB_RUNTIME_DIR}'; then
      LIB_RUNTIME_DIR=`echo ${LIB_RUNTIME_DIR} |sed -e 's/:/ -L/g'`
@@ -135,7 +117,7 @@ $NetBSD: patch-ab,v 1.24 2006/02/23 23:31:52 minskim Exp $
  fi
  
  # The statement below is very tricky!  It actually *evaluates* the
-@@ -5927,11 +5950,18 @@ else
+@@ -6019,11 +6035,18 @@ else
      if test "$SHARED_BUILD" = "0" || test "$TCL_NEEDS_EXP_FILE" = "0"; then
          if test "${TCL_LIB_VERSIONS_OK}" = "ok"; then
              eval TK_LIB_FLAG="-ltk${VERSION}\${TK_DBGX}"
