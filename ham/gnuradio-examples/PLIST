@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/12/11 11:51:38 wulf Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/27 03:07:42 wulf Exp $
 share/examples/gnuradio/python/audio/audio_copy.py
 share/examples/gnuradio/python/audio/audio_play.py
 share/examples/gnuradio/python/audio/audio_to_file.py
@@ -44,6 +44,8 @@ share/examples/gnuradio/python/usrp/usrp_siggen.py
 share/examples/gnuradio/python/usrp/usrp_wfm_rcv_nogui.py
 share/examples/gnuradio/python/usrp/usrp_wfm_rcv.py
 share/examples/gnuradio/python/usrp/usrp_wfm_rcv_pll.py
+share/examples/gnuradio/python/usrp/usrp_wfm_rcv2_nogui.py
+share/examples/gnuradio/python/usrp/usrp_wxapt_rcv.py
 share/examples/gnuradio/python/usrp/wfm_rcv_file.py
 @dirrm share/examples/gnuradio/python/audio
 @dirrm share/examples/gnuradio/python/digital_voice
@@ -51,4 +53,3 @@ share/examples/gnuradio/python/usrp/wfm_rcv_file.py
 @dirrm share/examples/gnuradio/python/mc4020
 @dirrm share/examples/gnuradio/python/usrp
 @dirrm share/examples/gnuradio/python
-@dirrm share/examples/gnuradio
