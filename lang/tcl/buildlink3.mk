@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2006/04/06 06:22:15 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2006/04/27 08:17:09 adam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TCL_BUILDLINK3_MK:=	${TCL_BUILDLINK3_MK}+
@@ -11,11 +11,11 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ntcl}
 BUILDLINK_PACKAGES+=	tcl
 
 .if !empty(TCL_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.tcl+=		tcl>=8.4.6nb1
+BUILDLINK_API_DEPENDS.tcl+=	tcl>=8.4.6nb1
 BUILDLINK_ABI_DEPENDS.tcl+=	tcl>=8.4.7nb1
 BUILDLINK_PKGSRCDIR.tcl?=	../../lang/tcl
 
-BUILDLINK_FILES.tcl=	bin/tclsh*
+BUILDLINK_FILES.tcl+=	bin/tclsh*
 #
 # Make "-ltcl" and "-ltcl8.4" resolve into "-ltcl84", so that we don't
 # need to patch so many Makefiles.
