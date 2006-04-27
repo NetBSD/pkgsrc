@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/04/17 07:07:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/04/27 20:45:50 drochner Exp $
 bin/gnome-terminal
 lib/bonobo/servers/gnome-terminal.server
 share/applications/gnome-terminal.desktop
@@ -74,12 +74,14 @@ share/locale/az/LC_MESSAGES/gnome-terminal.mo
 share/locale/be/LC_MESSAGES/gnome-terminal.mo
 share/locale/bg/LC_MESSAGES/gnome-terminal.mo
 share/locale/bn/LC_MESSAGES/gnome-terminal.mo
+share/locale/br/LC_MESSAGES/gnome-terminal.mo
 share/locale/bs/LC_MESSAGES/gnome-terminal.mo
 share/locale/ca/LC_MESSAGES/gnome-terminal.mo
 share/locale/cs/LC_MESSAGES/gnome-terminal.mo
 share/locale/cy/LC_MESSAGES/gnome-terminal.mo
 share/locale/da/LC_MESSAGES/gnome-terminal.mo
 share/locale/de/LC_MESSAGES/gnome-terminal.mo
+share/locale/dz/LC_MESSAGES/gnome-terminal.mo
 share/locale/el/LC_MESSAGES/gnome-terminal.mo
 share/locale/en_CA/LC_MESSAGES/gnome-terminal.mo
 share/locale/en_GB/LC_MESSAGES/gnome-terminal.mo
