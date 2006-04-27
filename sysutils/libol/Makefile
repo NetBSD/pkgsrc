@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2006/02/06 18:31:23 adrianp Exp $
+# $NetBSD: Makefile,v 1.6 2006/04/27 19:55:44 adrianp Exp $
 
-DISTNAME=	libol-0.3.17
+DISTNAME=	libol-0.3.18
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.balabit.com/downloads/libol/0.3/
 
