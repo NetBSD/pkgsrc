@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.68 2006/04/27 15:32:16 hubertf Exp $
+$NetBSD: CHANGES-2006,v 1.69 2006/04/27 16:36:55 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2279,3 +2279,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated wm/evilwm to 0.99.25 [sketch 2006-04-27]
 	Updated shells/ast-ksh to 2005-02-02 [hubertf 2006-04-27]
 	Updated shells/static-ast-ksh to 2005-02-02 [hubertf 2006-04-27]
+	Updated chat/dircproxy-devel to 1.2.0nb1 [tron 2006-04-27]
