@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2006/04/06 06:23:03 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2006/04/27 08:18:09 adam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TK_BUILDLINK3_MK:=	${TK_BUILDLINK3_MK}+
@@ -11,11 +11,11 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ntk}
 BUILDLINK_PACKAGES+=	tk
 
 .if !empty(TK_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.tk+=		tk>=8.4.6nb1
+BUILDLINK_API_DEPENDS.tk+=	tk>=8.4.6nb1
 BUILDLINK_ABI_DEPENDS.tk+=	tk>=8.4.12nb1
 BUILDLINK_PKGSRCDIR.tk?=	../../x11/tk
 
-BUILDLINK_FILES.tk=	bin/wish*
+BUILDLINK_FILES.tk+=	bin/wish*
 #
 # Make "-ltk" and "-ltk8.4" resolve into "-ltk84", so that we don't
 # need to patch so many Makefiles.

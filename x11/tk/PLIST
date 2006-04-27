@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/07/19 11:12:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/04/27 08:18:09 adam Exp $
 bin/wish
 bin/wish8.4
 include/tk.h
@@ -136,6 +136,7 @@ lib/tk8.4/msgs/fr.msg
 lib/tk8.4/msgs/it.msg
 lib/tk8.4/msgs/nl.msg
 lib/tk8.4/msgs/pl.msg
+lib/tk8.4/msgs/pt.msg
 lib/tk8.4/msgs/ru.msg
 lib/tk8.4/obsolete.tcl
 lib/tk8.4/optMenu.tcl
