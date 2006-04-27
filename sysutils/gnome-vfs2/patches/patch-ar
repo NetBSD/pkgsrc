@@ -1,7 +1,16 @@
-$NetBSD: patch-ar,v 1.2 2006/03/30 21:07:48 jmmv Exp $
+$NetBSD: patch-ar,v 1.3 2006/04/27 18:37:24 rillig Exp $
 
---- libgnomevfs/gnome-vfs-pty.c.orig	2005-11-22 15:10:17.000000000 +0100
-+++ libgnomevfs/gnome-vfs-pty.c
+--- libgnomevfs/gnome-vfs-pty.c.orig	Tue Nov 22 15:10:17 2005
++++ libgnomevfs/gnome-vfs-pty.c	Wed Apr 26 23:15:08 2006
+@@ -306,7 +306,7 @@ _gnome_vfs_pty_run_on_pty(int fd, gboole
+ 		chdir(directory);
+ 	}
+ 
+-#ifdef HAVE_UTMP_H
++#ifdef HAVE_LOGIN_TTY
+ 	/* This sets stdin, stdout, stderr to the socket */	
+ 	if (login && login_tty (fd) == -1) {
+ 		g_printerr ("mount child process login_tty failed: %s\n", strerror (errno));
 @@ -629,6 +629,7 @@ _gnome_vfs_pty_set_size(int master, int 
  static char *
  _gnome_vfs_pty_ptsname(int master)
@@ -50,11 +59,11 @@ $NetBSD: patch-ar,v 1.2 2006/03/30 21:07:48 jmmv Exp $
  #ifdef HAVE_UNLOCKPT
  	return unlockpt(fd);
  #elif defined(TIOCSPTLCK)
-@@ -721,6 +726,7 @@ _gnome_vfs_pty_unlockpt(int fd)
+@@ -720,6 +725,7 @@ _gnome_vfs_pty_unlockpt(int fd)
+ 	return ioctl(fd, TIOCSPTLCK, &zero);
  #else
  	return -1;
- #endif
 +#endif
+ #endif
  }
  
- static int
