@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/12/11 11:47:27 wulf Exp $
+$NetBSD: distinfo,v 1.3 2006/04/27 03:16:09 wulf Exp $
 
-SHA1 (gr-wxgui-0.4.tar.gz) = ab9f370ad775288bbd8db7fbddbf308881090e3f
-RMD160 (gr-wxgui-0.4.tar.gz) = af51b447a4a8a3db18a16e99e6ec9831f50b7b72
-Size (gr-wxgui-0.4.tar.gz) = 359531 bytes
+SHA1 (gr-wxgui-0.6.tar.gz) = 93ec74088b3602fb0aa9f6aa8c9b7d86b4495584
+RMD160 (gr-wxgui-0.6.tar.gz) = e4a5d0c8d1961dcd1ee6bef3f632bae4a176c68e
+Size (gr-wxgui-0.6.tar.gz) = 361743 bytes
