@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:09:41 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/04/27 02:57:06 wulf Exp $
 
-DISTNAME=	gnuradio-core-2.6
+DISTNAME=	gnuradio-core-2.8
 COMMENT=        Runtime system and DSP blocks for GNU Radio
-PKGREVISION=	3
 
 PYTHON_PATCH_SCRIPTS+=		src/lib/filter/generate_all.py
 PYTHON_PATCH_SCRIPTS+=		src/lib/general/generate_all.py
@@ -14,10 +13,12 @@ PYTHON_PATCH_SCRIPTS+=		src/python/gnuradio/gruimpl/lmx2306.py
 PYTHON_PATCH_SCRIPTS+=		src/python/gnuradio/gruimpl/gnuplot_freqz.py
 PYTHON_PATCH_SCRIPTS+=		src/python/gnuradio/gr_unittest.py
 
-pre-install:
-	cd ${WRKSRC}/doc && ${GMAKE} docs
+CONFIGURE_ARGS+=	--enable-doxygen
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/examples
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"
+
+CONF_FILES+=    ${EGDIR}/gnuradio-core.conf ${PKG_SYSCONFDIR}/gnuradio-core.conf
 
 .include "../../devel/swig/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
