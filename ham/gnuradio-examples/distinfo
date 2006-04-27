@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/12/11 11:51:39 wulf Exp $
+$NetBSD: distinfo,v 1.3 2006/04/27 03:07:42 wulf Exp $
 
-SHA1 (gnuradio-examples-0.5.tar.gz) = 8b913cb8f54bd492071083d2126a0ec212a8cb1c
-RMD160 (gnuradio-examples-0.5.tar.gz) = 8066ee07750c7b482c8bf64a4d4d25f080d18e41
-Size (gnuradio-examples-0.5.tar.gz) = 194909 bytes
+SHA1 (gnuradio-examples-0.7.tar.gz) = 4e10807d0279ce22fc42d82227556265f04a8622
+RMD160 (gnuradio-examples-0.7.tar.gz) = b877ac290369d86f65864c9ab38479b3dcf7ed3d
+Size (gnuradio-examples-0.7.tar.gz) = 199144 bytes
