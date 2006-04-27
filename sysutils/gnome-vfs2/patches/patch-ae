@@ -1,10 +1,19 @@
-$NetBSD: patch-ae,v 1.9 2006/04/02 18:58:20 jmmv Exp $
+$NetBSD: patch-ae,v 1.10 2006/04/27 18:37:24 rillig Exp $
 
 The following bug covers the removal of the gnome-mime-data dependency:
 http://bugzilla.gnome.org/show_bug.cgi?id=336952
 
---- configure.orig	2006-03-13 10:26:09.000000000 +0100
-+++ configure
+--- configure.orig	Mon Mar 13 10:26:09 2006
++++ configure	Wed Apr 26 16:55:02 2006
+@@ -25487,7 +25487,7 @@ fi
+ 
+ 
+ 
+-for ac_func in getdtablesize open64 lseek64 statfs statvfs seteuid setegid setresuid setresgid readdir_r mbrtowc inet_pton getdelim sysctlbyname poll posix_fadvise fchmod
++for ac_func in getdtablesize login_tty open64 lseek64 statfs statvfs seteuid setegid setresuid setresgid readdir_r mbrtowc inet_pton getdelim sysctlbyname poll posix_fadvise fchmod
+ do
+ as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
+ echo "$as_me:$LINENO: checking for $ac_func" >&5
 @@ -26424,9 +26424,11 @@ cat >>conftest.$ac_ext <<_ACEOF
  int
  main ()
