@@ -1,4 +1,4 @@
-# $NetBSD: usergroupfuncs,v 1.6 2006/04/24 23:44:18 jlam Exp $
+# $NetBSD: usergroupfuncs,v 1.7 2006/04/27 22:44:09 jlam Exp $
 #
 # Default implementations of user_exists() and group_exists() shell
 # functions for checking the existence of users and groups, and of
@@ -96,7 +96,11 @@ adduser()
 
 	USERADD="@USERADD@"
 
-	: ${descr:="${PKGNAME%-[0-9]*} $user user"}
+	case $user in
+	${PKGNAME%-[0-9]*})	descr_dflt="$user user" ;;
+	*)			descr_dflt="${PKGNAME%-[0-9]*} $user user" ;;
+	esac
+	: ${descr:="$descr_dflt"}
 	: ${home:="@PKG_USER_HOME@"}
 	: ${shell:="@PKG_USER_SHELL@"}
 
