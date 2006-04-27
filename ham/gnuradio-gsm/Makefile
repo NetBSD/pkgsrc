@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:09:41 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/04/27 03:09:07 wulf Exp $
 
-VERSION=	0.2
+VERSION=	0.3
 DISTNAME=	gr-gsm-fr-vocoder-${VERSION}
 PKGNAME=	gnuradio-gsm-${VERSION}
-PKGREVISION=	2
 WRKSRC=		${WRKDIR}/${DISTNAME}
 COMMENT=	GNU Radio GSM 06.10 13kbit/sec voice encoder/decoder
 

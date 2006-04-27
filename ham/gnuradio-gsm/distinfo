@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/12/11 11:26:25 wulf Exp $
+$NetBSD: distinfo,v 1.3 2006/04/27 03:09:07 wulf Exp $
 
-SHA1 (gr-gsm-fr-vocoder-0.2.tar.gz) = 29c635bf10c48232a4ae6bc1ac9fbe5f6d63374a
-RMD160 (gr-gsm-fr-vocoder-0.2.tar.gz) = d36a17a8e543fa232c9a6ee9c3c96bb1ca8620da
-Size (gr-gsm-fr-vocoder-0.2.tar.gz) = 422443 bytes
+SHA1 (gr-gsm-fr-vocoder-0.3.tar.gz) = 23d671580f4516e4da2ff2ebde5c753597a865ac
+RMD160 (gr-gsm-fr-vocoder-0.3.tar.gz) = 0c86c4e21b78bbdb80ddb87553e2552c4ebcae7c
+Size (gr-gsm-fr-vocoder-0.3.tar.gz) = 384127 bytes
