@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/22 09:22:08 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/04/28 13:49:15 joerg Exp $
 #
 
 DISTNAME=		openmsx-0.5.2
@@ -20,6 +20,7 @@ MAKE_ENV+=		OPENMSX_FLAVOUR=pkgsrc
 
 post-extract:
 	@${CP} ${FILESDIR}/platform-netbsd.mk ${WRKSRC}/build
+	@${LN} -s platform-netbsd.mk ${WRKSRC}/build/platform-dragonfly.mk
 	@${ECHO_MSG} "OPENMSX_STRIP:=true" > \
 		${WRKSRC}/build/flavour-pkgsrc.mk
 
