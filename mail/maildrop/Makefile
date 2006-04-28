@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2006/03/21 19:50:51 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2006/04/28 18:14:06 jlam Exp $
 
-DISTNAME=	maildrop-2.0.1
-PKGREVISION=	3
+DISTNAME=	maildrop-2.0.2
 CATEGORIES=     security
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=   .tar.bz2
@@ -10,20 +9,17 @@ MAINTAINER=	jlam@pkgsrc.org
 COMMENT=	Courier mail delivery agent with filtering abilities
 HOMEPAGE=	http://www.courier-mta.org/maildrop/
 
-DEPENDS+=	courier-maildir>=0.52.1:../../mail/courier-maildir
+DEPENDS+=	courier-maildir>=0.53.1:../../mail/courier-maildir
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
 
 PKG_SUPPORTED_OPTIONS=	authlib
 PKG_SUGGESTED_OPTIONS=	authlib
 
 # PKGNAME is a parameter to the following file.
 PKGNAME=	${DISTNAME}
-.include "../../mail/courier-maildir/Makefile.common"
-
-.include "../../security/courier-authlib/Makefile.common"
+.include "../../mail/courier-mta/Makefile.common"
 
 # These are the users that may invoke maildrop with the "-d user"
 # argument (mailbox delivery mode).
@@ -45,12 +41,17 @@ CONFIGURE_ARGS+=	--enable-authlib
 CONFIGURE_ARGS+=	--disable-authlib
 .endif
 
+REQD_DIRS=	${DOCDIR}
 SPECIAL_PERMS=	bin/maildrop ${ROOT_USER} ${COURIER_GROUP} 4711
 
-post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.postfix ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/maildroptips.txt ${DOCDIR}
-
 .include "../../devel/sysexits/buildlink3.mk"
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/README.postfix ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/maildrop/maildroptips.html ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DOCDIR}/maildrop
+	${INSTALL_DATA} ${WRKSRC}/maildrop/README.html ${DOCDIR}/maildrop
+	${INSTALL_DATA} ${WRKSRC}/maildrop/makedat.html ${DOCDIR}
+	${INSTALL_MAN} ${WRKSRC}/maildrop/makedat.1 ${PREFIX}/${PKGMANDIR}/man1
+
 .include "../../mk/bsd.pkg.mk"
