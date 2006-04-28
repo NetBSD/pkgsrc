@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.2 2004/08/15 12:13:53 dillo Exp $
+$NetBSD: patch-ag,v 1.3 2006/04/28 13:09:38 joerg Exp $
 
---- src/gens/util/chd.h.orig	2004-08-15 11:35:14.000000000 +0200
+--- src/gens/util/chd.h.orig	2006-04-28 12:32:01.000000000 +0000
 +++ src/gens/util/chd.h
-@@ -0,0 +1,94 @@
+@@ -0,0 +1,95 @@
 +#ifndef HAD_CHD_H
 +
 +/*
@@ -28,6 +28,7 @@ $NetBSD: patch-ag,v 1.2 2004/08/15 12:13:53 dillo Exp $
 +  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 +*/
 +
++#include <inttypes.h>
 +#include <stdio.h>
 +#include <zlib.h>
 +
