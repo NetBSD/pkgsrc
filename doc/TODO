@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4922 2006/04/28 16:02:54 wiz Exp $
+$NetBSD: TODO,v 1.4923 2006/04/28 16:08:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1079,7 +1079,6 @@ Suggested package updates
 	o rpc2-1.28
 	o rpm-4.4.6
 	o rsnapshot-1.2.3
-	o rsync-2.6.8
 	o rt-3.4.5
 	o rt-mysql-3.4.5
 	o rt-pgsql-3.4.5
