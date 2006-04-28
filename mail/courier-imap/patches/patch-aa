@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.11 2005/08/11 00:04:01 jlam Exp $
+$NetBSD: patch-aa,v 1.12 2006/04/28 18:15:20 jlam Exp $
 
---- Makefile.in.orig	2005-07-23 09:33:42.000000000 -0400
+--- Makefile.in.orig	2006-02-25 12:16:41.000000000 -0500
 +++ Makefile.in
 @@ -246,10 +246,11 @@ DIST_SUBDIRS = numlib md5 sha1 bdbobj gd
  
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.11 2005/08/11 00:04:01 jlam Exp $
 -libexec_SCRIPTS = imapd.rc imapd-ssl.rc pop3d.rc pop3d-ssl.rc
 +libexec_SCRIPTS = 
  HTML2TXT = links -dump -no-numbering
-@@ -1019,7 +1020,7 @@ sharedindexsplit: maildir/sharedindexspl
+@@ -1031,7 +1032,7 @@ sharedindexsplit: maildir/sharedindexspl
  
 -pop3login$(EXEEXT): imap/pop3login$(EXEEXT)
 -	cp imap/pop3login$(EXEEXT) .
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.11 2005/08/11 00:04:01 jlam Exp $
 +courierpop3d$(EXEEXT): imap/pop3d$(EXEEXT)
 +	cp imap/pop3d$(EXEEXT) ./$@
  
-@@ -1067,4 +1068,7 @@ maildirkw.1: maildir/maildirkw.1
+@@ -1079,4 +1080,7 @@ maildirkw.1: maildir/maildirkw.1
  
 -imapd.8: imap/imapd.8
 -	cp imap/imapd.8 .
@@ -50,12 +50,12 @@ $NetBSD: patch-aa,v 1.11 2005/08/11 00:04:01 jlam Exp $
 +courierpop3d.8: imap/courierpop3d.8
 +	cp imap/courierpop3d.8 .
  
-@@ -1097,3 +1101,3 @@ install-exec-local:
+@@ -1109,3 +1113,3 @@ install-exec-local:
  	$(mkinstalldirs) $(DESTDIR)$(sbindir)
 -	for f in mkimapdcert mkpop3dcert ; \
 +	for f in imapd-ssl imapd mkimapdcert mkpop3dcert pop3d pop3d-ssl ; \
  		do rm -f $(DESTDIR)$(sbindir)/$$f ; \
-@@ -1103,17 +1107,4 @@ install-exec-local:
+@@ -1115,17 +1119,4 @@ install-exec-local:
  install-exec-hook:
 -	chmod 444 $(DESTDIR)$(sysconfdir)/quotawarnmsg.example
 -	mkdir -p $(DESTDIR)$(sysconfdir)/shared
