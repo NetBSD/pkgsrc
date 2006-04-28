@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2006/04/28 20:13:27 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2006/04/28 23:16:28 wiz Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VER}/
 EXTRACT_SUFX=		.tar.bz2
@@ -61,12 +61,11 @@ SUBST_FILES.oss+=	modules/access/v4l/v4l.c
 SUBST_FILES.oss+=	modules/audio_output/oss.c
 SUBST_FILES.oss+=	modules/gui/pda/pda_interface.c
 SUBST_FILES.oss+=	modules/gui/pda/pda.glade
-SUBST_FILES.oss+=	modules/gui/wxwindows/v4l.cpp
-SUBST_MESSAGE.oss=	Fixing harcoded audio device.
+SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 SUBST_STAGE.fnt=	post-patch
 SUBST_SED.fnt=		-e "s,${ORIGFNT},${DEFAULT_FONT},"
 SUBST_FILES.fnt=	modules/misc/freetype.c
-SUBST_MESSAGE.fnt=	Fixing harcoded paths.
+SUBST_MESSAGE.fnt=	Fixing hardcoded paths.
 SUBST_STAGE.libav=	post-patch
 SUBST_FILES.libav=	configure
 SUBST_SED.libav=	-e "s,libavcodec/libavcodec.a,libavcodec.a,g"
@@ -99,4 +98,5 @@ BUILDLINK_TRANSFORM.ffmpeg+=	-e "s,include/ffmpeg,include/,g"
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
