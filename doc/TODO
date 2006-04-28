@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4920 2006/04/28 02:02:56 markd Exp $
+$NetBSD: TODO,v 1.4921 2006/04/28 16:01:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1027,11 +1027,12 @@ Suggested package updates
 	o py-metakit-2.4.9.5
 	o py-mysqldb-1.1.7
 	o py-pexpect-0.99999b
+	o py-psyco-1.5.1
 	o py-pyrex-0.9.3.1
 	o py-qt3-base-3.16
 	o py-qt3-modules-3.16
 	o py-qt3-qscintilla-3.16
-	o py-qt3-sip-4.4.2
+	o py-qt3-sip-4.4.3
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.7
 	o py-sqlite2-2.2.0
