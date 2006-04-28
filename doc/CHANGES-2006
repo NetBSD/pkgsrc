@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.82 2006/04/28 21:53:23 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.83 2006/04/28 23:17:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2306,3 +2306,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/desktop-file-utils to 0.11 [wiz 2006-04-28]
 	Updated x11/xorg-imake to 6.9.0nb1 [joerg 2006-04-28]
 	Updated x11/xorg-server to 6.9.0nb9 [joerg 2006-04-28]
+	Updated multimedia/vlc to 0.7.2nb13 [wiz 2006-04-28]
