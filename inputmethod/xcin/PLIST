@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:23 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/04/28 18:12:29 joerg Exp $
 bin/cin2tab
 bin/xcin
 lib/libxcin.la
@@ -17,13 +17,13 @@ lib/xcin/tab/big5/pinyin0.tab
 lib/xcin/tab/big5/simplex.tab
 lib/xcin/tab/big5/sys.tab
 lib/xcin/tab/big5/telecode.tab
-lib/xcin/tab/euccn/default.phr
-lib/xcin/tab/euccn/jtcj_gb.tab
-lib/xcin/tab/euccn/phonegb2.tab
-lib/xcin/tab/euccn/pinyin.tab
-lib/xcin/tab/euccn/shuangpin.tab
-lib/xcin/tab/euccn/sys.tab
-lib/xcin/tab/euccn/wubizixing.tab
+lib/xcin/tab/${EUC_LOCALE}/default.phr
+lib/xcin/tab/${EUC_LOCALE}/jtcj_gb.tab
+lib/xcin/tab/${EUC_LOCALE}/phonegb2.tab
+lib/xcin/tab/${EUC_LOCALE}/pinyin.tab
+lib/xcin/tab/${EUC_LOCALE}/shuangpin.tab
+lib/xcin/tab/${EUC_LOCALE}/sys.tab
+lib/xcin/tab/${EUC_LOCALE}/wubizixing.tab
 lib/xcin/zh_hex.la
 man/man1/xcin.1
 share/doc/xcin/Bugs
@@ -63,7 +63,7 @@ share/locale/zh_TW/LC_MESSAGES/xcin.mo
 @dirrm share/doc/xcin/En/internal
 @dirrm share/doc/xcin/En
 @dirrm share/doc/xcin
-@dirrm lib/xcin/tab/euccn
+@dirrm lib/xcin/tab/${EUC_LOCALE}
 @dirrm lib/xcin/tab/big5
 @dirrm lib/xcin/tab
 @dirrm lib/xcin
