@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2006/04/22 09:22:10 rillig Exp $
+# $NetBSD: Makefile,v 1.53 2006/04/28 18:15:20 jlam Exp $
 
-DISTNAME=	courier-imap-4.0.6
-PKGREVISION=	1
+DISTNAME=	courier-imap-4.1.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,7 +9,7 @@ MAINTAINER=	jlam@pkgsrc.org
 COMMENT=	IMAP server for access to maildir-style mailboxes
 HOMEPAGE=	http://www.courier-mta.org/imap/
 
-DEPENDS+=	courier-maildir>=0.52.1:../../mail/courier-maildir
+DEPENDS+=	courier-maildir>=0.53.1:../../mail/courier-maildir
 
 USE_TOOLS+=		env gmake perl
 USE_LANGUAGES=		c c++
@@ -20,51 +19,49 @@ PKG_SUPPORTED_OPTIONS+=	fam
 
 # PKGNAME is a parameter to the following file
 PKGNAME=		${DISTNAME}
-.include "../../mail/courier-maildir/Makefile.common"
+.include "../../mail/courier-mta/Makefile.common"
 
-CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/courier
-CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/courier
+CONFIGURE_ARGS+=	--datadir=${DATADIR:Q}
+CONFIGURE_ARGS+=	--libexecdir=${LIBEXECDIR:Q}
 
 CONFIGURE_ARGS+=	--with-mailuser=${ROOT_USER:Q}
-CONFIGURE_ARGS+=	--with-piddir=${VARBASE}/run
+CONFIGURE_ARGS+=	--with-piddir=${VARBASE:Q}/run
 CONFIGURE_ARGS+=	--program-transform-name='s/\.rc$$//'
-CONFIGURE_ENV+=		OPENSSL=${SSLBASE}/bin/openssl
+CONFIGURE_ENV+=		OPENSSL=${SSLBASE:Q}/bin/openssl
 
-INSTALL_AM_MAKEFLAGS=	sysconfdir=${EGDIR}
+INSTALL_AM_MAKEFLAGS=	sysconfdir=${EGDIR:Q}
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} AM_MAKEFLAGS=${INSTALL_AM_MAKEFLAGS:Q}
 
-GEN_FILES=		imapd imapd-ssl pop3d pop3d-ssl
-SSLCNF_FILES=		imapd.cnf pop3d.cnf
+# Used in ${PKGDIR}/INSTALL
 FILES_SUBST+=		SSLCERTS=${SSLCERTS:Q}
-FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
 
-MAKE_DIRS=		${VARBASE}/run
-CONF_FILES_PERMS=	# empty
-.for FILE in ${GEN_FILES}
-CONF_FILES+=		${EGDIR}/${FILE}.dist ${PKG_SYSCONFDIR}/${FILE}
-.endfor
-.for FILE in ${SSLCNF_FILES}
-CONF_FILES_PERMS+=	${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}	\
-			${ROOT_USER} ${ROOT_GROUP} 0600
+REQD_DIRS+=		${DATADIR} ${DOCDIR} ${EGDIR} ${LIBEXECDIR}
+MAKE_DIRS+=		${VARBASE}/run ${COURIER_STATEDIR}
+
+.for _file_ in		imapd.cnf imapd.dist imapd-ssl.dist		\
+			pop3d.cnf pop3d.dist pop3d-ssl.dist
+CONF_FILES_PERMS+=	${EGDIR}/${_file_}				\
+			${PKG_SYSCONFDIR}/${_file_:S/.dist$//}		\
+			${COURIER_FILE_PERMS}
 .endfor
 RCD_SCRIPTS=		courierimap courierimaps courierpop courierpops
 
 SUBST_CLASSES+=		courier
-SUBST_MESSAGE.courier=	Convert to match courier-mta expectations.
-SUBST_FILES.courier=	imap/imapd.dist.in imap/imapd-ssl.dist.in	\
-			imap/pop3d.dist.in imap/pop3d-ssl.dist.in	\
-			imap/imapd.cnf.in imap/pop3d.cnf.in		\
-			imap/mkimapdcert.in imap/mkpop3dcert.in		\
-			imap/imapd.8.in imap/courierpop3d.8.in		\
-			imapd-ssl.rc.in imapd.rc.in			\
-			pop3d-ssl.rc.in pop3d.rc.in
+SUBST_FILES.courier=	imap/imapd-ssl.dist.in imap/imapd.8.in		\
+			imap/imapd.cnf.in imap/imapd.dist.in		\
+			imap/mkimapdcert.8.in imap/mkimapdcert.html.in	\
+			imap/mkimapdcert.in imapd-ssl.rc.in imapd.rc.in
+SUBST_FILES.courier+=	imap/courierpop3d.8.in imap/mkpop3dcert.8.in	\
+			imap/mkpop3dcert.html.in imap/mkpop3dcert.in	\
+			imap/pop3d-ssl.dist.in imap/pop3d.cnf.in	\
+			imap/pop3d.dist.in pop3d-ssl.rc.in pop3d.rc.in
 SUBST_SED.courier=	-e "s|^IMAPDSTART=.*|IMAPDSTART=YES|g"		\
 			-e "s|^IMAPDSSLSTART=.*|IMAPDSSLSTART=YES|g"	\
 			-e "s|^POP3DSTART=.*|POP3DSTART=YES|g"		\
 			-e "s|^POP3DSSLSTART=.*|POP3DSSLSTART=YES|g"	\
-			-e "s|@datadir@/imapd.pem|${SSLCERTS}/imapd.pem|g" \
+			-e "s|@datadir@/imapd.pem|@sysconfdir@/imapd.pem|g" \
 			-e "s|@datadir@/imapd.rand|@sysconfdir@/imapd.rand|g" \
-			-e "s|@datadir@/pop3d.pem|${SSLCERTS}/pop3d.pem|g" \
+			-e "s|@datadir@/pop3d.pem|@sysconfdir@/pop3d.pem|g" \
 			-e "s|@datadir@/pop3d.rand|@sysconfdir@/pop3d.rand|g" \
 			-e "s|@libexecdir@/couriertcpd|@sbindir@/couriertcpd|g" \
 			-e "s|@sbindir@/imaplogin|@libexecdir@/imaplogin|g" \
@@ -81,7 +78,13 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/imap/BUGS.html ${DOCDIR}/imap
 	${INSTALL_DATA} ${WRKSRC}/imap/README.html ${DOCDIR}/imap
 	${INSTALL_DATA} ${WRKSRC}/imap/README.proxy.html ${DOCDIR}/imap
-	${INSTALL_DATA} ${WRKSRC}/imap/imapd.pam ${EGDIR}/imap.pam
-	${INSTALL_DATA} ${WRKSRC}/imap/pop3d.pam ${EGDIR}/pop3.pam
+	${INSTALL_DATA} ${WRKSRC}/imap/courierpop3d.html ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/imap/imapd.html ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/imap/mkimapdcert.html ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/imap/mkpop3dcert.html ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/tcpd/couriertcpd.html ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/tcpd/couriertls.html ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/imap/imapd.pam ${EGDIR}/imap.authpam
+	${INSTALL_DATA} ${WRKSRC}/imap/pop3d.pam ${EGDIR}/pop3.authpam
 
 .include "../../mk/bsd.pkg.mk"

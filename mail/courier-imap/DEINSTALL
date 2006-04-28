@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.6 2005/02/18 22:12:46 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.7 2006/04/28 18:15:20 jlam Exp $
 
 case ${STAGE} in
 DEINSTALL)
@@ -8,10 +8,10 @@ DEINSTALL)
 	#
 	if ${TEST} -x ./+FILES; then
 		for file in						\
+			${PKG_SYSCONFDIR}/imapd.pem			\
 			${PKG_SYSCONFDIR}/imapd.rand			\
-			${PKG_SYSCONFDIR}/pop3d.rand			\
-			@SSLCERTS@/imapd.pem				\
-			@SSLCERTS@/pop3d.pem
+			${PKG_SYSCONFDIR}/pop3d.pem			\
+			${PKG_SYSCONFDIR}/pop3d.rand
 		do
 			${ECHO} "# FILE: $file . /dev/null" >> ./+FILES
 		done
@@ -19,7 +19,7 @@ DEINSTALL)
 	;;
 
 POST-DEINSTALL)
-	couriersslcache="@VARBASE@/couriersslcache"
+	couriersslcache="@COURIER_STATEDIR@/couriersslcache"
 	if ${TEST} -f "$couriersslcache"; then
 		# Unconditionally remove the SSL cache file.
 		${ECHO} "Removing Courier SSL cache file:"
