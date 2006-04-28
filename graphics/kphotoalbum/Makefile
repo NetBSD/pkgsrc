@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/28 16:04:39 drochner Exp $
+# $NetBSD: Makefile,v 1.1 2006/04/28 16:17:18 drochner Exp $
 #
 
 DISTNAME=		kphotoalbum-2.2
