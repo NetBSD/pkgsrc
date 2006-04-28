@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.4 2006/04/28 20:33:30 joerg Exp $
+
+--- src/exec/dpexec/ccm.c.orig	2006-04-22 18:17:03.000000000 +0000
++++ src/exec/dpexec/ccm.c
+@@ -19,6 +19,7 @@
+ #endif
+ 
+ #include <stdio.h>
++#include <string.h>
+ #include <ctype.h>
+ 
+ #if defined(HAVE_SYS_TYPES_H)
+@@ -82,7 +83,6 @@ _dxfSetupServer(int pport, int *psock,
+     u_short port;
+     int sts;
+     int oldPort;
+-    extern int errno; /* from <errno.h> */
+     int tries;
+ 
+     port = pport;
+@@ -224,7 +224,6 @@ _dxfCompleteServer(int sock, 
+     int length;
+     int fd;
+     int sts;
+-    extern int errno; /* from <errno.h> */
+     fd_set fds;
+ #ifdef   DXD_HAS_WINSOCKETS
+     int width = FD_SETSIZE;

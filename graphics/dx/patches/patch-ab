@@ -1,11 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2004/04/20 22:11:48 drochner Exp $
+$NetBSD: patch-ab,v 1.6 2006/04/28 20:33:30 joerg Exp $
 
 --- configure.orig	2003-09-26 22:13:01.000000000 +0000
-+++ configure	2004-04-20 19:09:10.000000000 +0000
-@@ -18614,6 +18614,8 @@
++++ configure
+@@ -18614,6 +18614,10 @@ else
  	    ac_cv_dx_arch=unknown
  	    if test $unameS = "FreeBSD" ; then
  		ac_cv_dx_arch=freebsd
++	    elif test $unameS = "DragonFly" ; then
++		ac_cv_dx_arch=dragonfly
 +	    elif test $unameS = "NetBSD" ; then
 +		ac_cv_dx_arch=netbsd
  	    elif test `echo $unameS | tr A-Z a-z | sed "s/^.*cygwin.*$/yes/"` = "yes" ; then
