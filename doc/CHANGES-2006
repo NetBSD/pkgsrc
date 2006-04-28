@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.77 2006/04/28 16:08:58 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.78 2006/04/28 16:24:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2297,3 +2297,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/epiphany-extensions to 2.14.1 [drochner 2006-04-28]
 	Updated chat/dircproxy-devel to 1.2.0nb2 [tron 2006-04-28]
 	Updated net/rsync to 2.6.8 [wiz 2006-04-28]
+	Updated archivers/unrar to 3.6.2 [wiz 2006-04-28]
