@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/04/17 13:46:18 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2006/04/28 11:10:02 joerg Exp $
 #
 
 DISTNAME=	licq-1.2.6
@@ -29,4 +29,5 @@ WRKSRC=			${WRKDIR:=/${DISTNAME}/plugins/qt-gui}
 INCOMPAT_CURSES=	NetBSD-1.4*-* NetBSD-1.5*-* NetBSD-1.6[-_.]*-* NetBSD-1.6[A-Q]-*
 
 .include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
