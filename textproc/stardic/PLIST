@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/21 22:39:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/28 18:48:25 joerg Exp $
 bin/stardic
 share/stardic/back.gif
 share/stardic/chinabyte.gif
 share/stardic/exitmask.xbm
 share/stardic/help.gif
 share/stardic/helpmask.xbm
-share/stardic/hzfont/fonts.dir
 share/stardic/hzfont/hz16.pcf.gz
 share/stardic/hzfont/hz16ft.pcf.gz
 share/stardic/hzfont/yb10x20.pcf.gz
