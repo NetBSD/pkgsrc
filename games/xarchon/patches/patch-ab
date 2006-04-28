@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.7 2005/02/22 16:35:55 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2006/04/28 16:23:55 joerg Exp $
 
---- configure.orig	2002-01-09 19:34:33.000000000 +0100
+--- configure.orig	2002-01-09 18:34:33.000000000 +0000
 +++ configure
 @@ -4458,13 +4458,13 @@ QT_INCLUDES="-I $qtdir/include"
  QT_LDFLAGS="-L $qtdir/lib"
@@ -15,7 +15,7 @@ $NetBSD: patch-ab,v 1.7 2005/02/22 16:35:55 wiz Exp $
  else
    ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lqt  $LIBS"
-+LIBS="-lqt-mt  $LIBS"
++LIBS="-lqt-mt $PTHREAD_LDFLAGS $PTHREAD_LIBS $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
  #line 4469 "configure"
  #include "confdefs.h"
@@ -32,7 +32,7 @@ $NetBSD: patch-ab,v 1.7 2005/02/22 16:35:55 wiz Exp $
  
    else
 -     QT_LDFLAGS="$QT_LDFLAGS -lqt"
-+     QT_LDFLAGS="$QT_LDFLAGS -lqt-mt"
++     QT_LDFLAGS="$QT_LDFLAGS -lqt-mt $PTHREAD_LDFLAGS $PTHREAD_LIBS"
  
       have_qt=yes
    fi
