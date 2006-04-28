@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2005/02/18 22:12:56 jlam Exp $
+$NetBSD: MESSAGE,v 1.7 2006/04/28 18:16:25 jlam Exp $
 
 You must create a cron job that runs at regular intervals (one hour is
 fine) that executes the following Perl script to clean the SqWebMail
@@ -7,27 +7,22 @@ user cache:
 
     ${PKG_SYSCONFDIR}/cleancache.pl
 
-You will need to make SqWebMail accessible through your HTTP server by
-making URLs with path "${IMAGEURL}/" resolve to the images in
-${IMAGEDIR}.
+There are two things which must be done to make SqWebMail accessible
+through your HTTP server:
 
-For Apache, you can add the following to httpd.conf:
+  (1) Copy the ``sqwebmail'' CGI binary to the appropriate place in your
+      HTTP document root, e.g. ${PREFIX}/libexec/cgi-bin, then Maildir
+      accounts would be accessible through:
 
-    <IfModule mod_alias.c>
-        Alias ${IMAGEURL}/ "${IMAGEDIR}/"
-    </IfModule>
+        http://your.domain.com/cgi-bin/sqwebmail
 
-Also, certain versions of Microsoft Internet Explorer have a bug in their
-HTTP/1.1 protocol implementation that results in errors when downloading
-attachments.  You should configure your HTTP server to force a HTTP/1.0
-protocol response for MSIE clients, e.g. for Apache, add the following to
-httpd.conf:
+  (2) Make URLs with path ``${IMAGEURL}/'' resolve to the images located
+      in the ${IMAGEDIR} directory.
+      For Apache, you can add the following to httpd.conf:
 
-    BrowserMatch "MSIE [45]" nokeepalive downgrade-1.0 force-response-1.0
-
-Maildir accounts will be accessible through:
-
-    http://www.domain.com/cgi-bin/sqwebmail
+        <IfModule mod_alias.c>
+	    Alias ${IMAGEURL}/ "${IMAGEDIR}/"
+        </IfModule>
 
 If you're using a non-default sendmail program, you will need to edit:
 
