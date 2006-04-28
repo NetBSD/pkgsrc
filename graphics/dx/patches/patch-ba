@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.1 2004/04/20 22:11:48 drochner Exp $
+$NetBSD: patch-ba,v 1.2 2006/04/28 20:33:30 joerg Exp $
 
 --- src/exec/libdx/memory.c.orig	2004-04-20 20:55:28.000000000 +0000
 +++ src/exec/libdx/memory.c	2004-04-20 21:05:24.000000000 +0000
@@ -7,7 +7,7 @@ $NetBSD: patch-ba,v 1.1 2004/04/20 22:11:48 drochner Exp $
  #endif
  
 -#if freebsd
-+#if defined(freebsd) || defined(__NetBSD__)
++#if defined(freebsd) || defined(__NetBSD__) || defined(__DragonFly__)
  #include <sys/types.h>
  #include <sys/sysctl.h>
  #endif
@@ -16,7 +16,7 @@ $NetBSD: patch-ba,v 1.1 2004/04/20 22:11:48 drochner Exp $
  #endif
  
 -#ifdef freebsd
-+#if defined(freebsd) || defined(__NetBSD__)
++#if defined(freebsd) || defined(__NetBSD__) || defined(__DragonFly__)
  #define initvalues
  #define SMALL_BASE    0               /* use data segment */
  #define SMALL_GET     _dxfgetmem      /* expand by using DosSetMem */
@@ -25,7 +25,7 @@ $NetBSD: patch-ba,v 1.1 2004/04/20 22:11:48 drochner Exp $
  #endif
  
 -#if freebsd
-+#if defined(freebsd) || defined(__NetBSD__)
++#if defined(freebsd) || defined(__NetBSD__) || defined(__DragonFly__)
    int mib[2],hw_physmem;
    size_t len;
    
