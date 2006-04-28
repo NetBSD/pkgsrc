@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:48:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/04/28 18:35:06 joerg Exp $
 bin/qalculate-gtk
 share/applications/qalculate-gtk.desktop
 share/gnome/help/qalculate-gtk/C/appendixa.xml
@@ -29,6 +29,7 @@ share/gnome/help/qalculate-gtk/C/figures/unit-manager.png
 share/gnome/help/qalculate-gtk/C/figures/variable-manager.png
 share/gnome/help/qalculate-gtk/C/legal.xml
 share/gnome/help/qalculate-gtk/C/qalculate-gtk.xml
+share/locale/sv/LC_MESSAGES/qalculate-gtk.mo
 share/omf/qalculate-gtk/qalculate-gtk-C.omf
 share/qalculate-gtk/glade/about.glade
 share/qalculate-gtk/glade/argumentrules.glade
