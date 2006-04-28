@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/04/13 18:23:34 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/04/28 18:12:29 joerg Exp $
 #
 
 DISTNAME=	xcin-2.5.3.pre2
@@ -28,6 +28,17 @@ INSTALLATION_DIRS=	share/doc/xcin
 
 EGDIR=			${PREFIX}/share/examples/xcin
 CONF_FILES=		${EGDIR}/xcinrc ${PKG_SYSCONFDIR}/xcinrc
+
+.if ${OPSYS} == "NetBSD"
+EUC_LOCALE=	euccn
+.else
+EUC_LOCALE=	euc
+.endif
+
+PLIST_SUBST+=	EUC_LOCALE=${EUC_LOCALE}
+
+post-extract:
+	${CP} ${FILESDIR}/xcinrc.DRAGONFLY ${WRKSRC}/etc
 
 post-install:
 	cd ${WRKSRC}/doc && ${PAX} -rw	\
