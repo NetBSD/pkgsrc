@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2006/04/27 16:36:17 tron Exp $
+$NetBSD: distinfo,v 1.5 2006/04/28 13:23:25 tron Exp $
 
 SHA1 (dircproxy-1.2.0-beta.tar.bz) = d0979ad3711184fa581fe413c9e3ea156660ac56
 RMD160 (dircproxy-1.2.0-beta.tar.bz) = 08016210b245872f7c071e25d067f7ef1e97f17d
@@ -6,3 +6,4 @@ Size (dircproxy-1.2.0-beta.tar.bz) = 312912 bytes
 SHA1 (patch-aa) = 59870074b86f1150f904e10269c654719b506f29
 SHA1 (patch-ab) = c0e8706c0f1bb7a2c981d1140d1b1deb105c601b
 SHA1 (patch-ac) = c07df4e100c82e935c48b722da702e562def135b
+SHA1 (patch-ad) = 818d7f0ca0590f40dc2e46926236ba033cadbf0d
