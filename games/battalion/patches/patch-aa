@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.10 2005/02/13 21:03:41 minskim Exp $
---- Makefile.orig	Thu Jan 16 17:31:58 1997
-+++ Makefile	Wed Apr 12 21:03:39 2000
+$NetBSD: patch-aa,v 1.11 2006/04/28 14:58:32 joerg Exp $
+
+--- Makefile.orig	1997-01-16 16:31:58.000000000 +0000
++++ Makefile
 @@ -23,7 +23,7 @@
  # (the program should compile with no warning messages - if you
  #  see a warning message please let me know about it)
@@ -10,7 +11,7 @@ $NetBSD: patch-aa,v 1.10 2005/02/13 21:03:41 minskim Exp $
  
  
  # STEP 2: IF YOU WANT TO COMPILE WITH THE MESA LIBRARIES THEN
-@@ -51,7 +51,7 @@
+@@ -51,7 +51,7 @@ GLIB =  -lGL -lGLU
  #         with the other Makefile.)
  #
  # ------------------------------------------------------------
@@ -19,7 +20,7 @@ $NetBSD: patch-aa,v 1.10 2005/02/13 21:03:41 minskim Exp $
  # or
  #OS = -DSUNVERSION
  # or
-@@ -77,8 +77,8 @@
+@@ -77,8 +77,8 @@ OS = -DSGIVERSION
  # in audio.c then everything works fine.
  #
  # ------------------------------------------------------------
@@ -30,7 +31,7 @@ $NetBSD: patch-aa,v 1.10 2005/02/13 21:03:41 minskim Exp $
  
  
  # STEP 6: IF YOU ARE COMPILING FOR A SUN AND WANT (RUDIMENTARY)
-@@ -91,13 +91,15 @@
+@@ -91,13 +91,15 @@ AUDIODEF = -DSGIAUDIO
  
  # STEP 7: CHOOSE ANY OPTIMIZATIONS OR ADD ANY SPECIAL INCLUSIONS
  # ------------------------------------------------------------
@@ -49,3 +50,12 @@ $NetBSD: patch-aa,v 1.10 2005/02/13 21:03:41 minskim Exp $
  
  # you should now be able to type 'make' and everything should be fine ...
  
+@@ -111,7 +113,7 @@ LIBS    = -L./. -L/usr/X11R6/lib -lm -lX
+ all:	$(TARGET)
+ 
+ $(OBJ): $(?:.o=.c)
+-	$(CC) $(CFLAGS) $(LIBFLAG) $(OS) $(WHICHLIB) $(AUDIODEF) -c $?
++	$(CC) $(CFLAGS) $(LIBFLAG) $(WHICHLIB) $(AUDIODEF) -c $?
+ 
+ $(TARGET): $(OBJ)
+ 	$(CC) -o $(TARGET) $(OBJ) $(LIBFLAGS) $(GLIB) $(LIBS) $(AUDIOLIB)
