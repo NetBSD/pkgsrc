@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.4 2006/01/03 05:59:12 jlam Exp $
+$NetBSD: patch-aj,v 1.5 2006/04/28 18:16:25 jlam Exp $
 
---- INSTALL.html.orig	2005-11-17 22:38:11.000000000 -0500
+--- INSTALL.html.orig	2006-02-25 12:13:16.000000000 -0500
 +++ INSTALL.html
-@@ -700,7 +700,7 @@ Qmail box.</p>
+@@ -707,7 +707,7 @@ Qmail box.</p>
  installation. The following presumes that SqWebMail's configuration files are
  installed in <code>/usr/lib/sqwebmail</code> (the default).</p>
  
