@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2006/03/14 01:14:30 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2006/04/28 18:16:25 jlam Exp $
 
-DISTNAME=	sqwebmail-5.0.7
-PKGREVISION=	2
+DISTNAME=	sqwebmail-5.1.1
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,10 +9,10 @@ MAINTAINER=	jlam@pkgsrc.org
 COMMENT=	Webmail CGI for access to maildir-style mailboxes
 HOMEPAGE=	http://www.courier-mta.org/sqwebmail/
 
-DEPENDS+=	courier-maildir>=0.52.1:../../mail/courier-maildir
-DEPENDS+=	maildrop>=1.8.1:../../mail/maildrop
+DEPENDS+=	courier-maildir>=0.53.1:../../mail/courier-maildir
+DEPENDS+=	maildrop>=2.0.1:../../mail/maildrop
 
-USE_TOOLS+=		env gmake perl:run
+USE_TOOLS+=		env gmake gzip:run perl:run
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
@@ -21,14 +20,12 @@ PKG_SUPPORTED_OPTIONS+=	fam
 
 # PKGNAME is a parameter to the following file.
 PKGNAME=		${DISTNAME}
-.include "../../mail/courier-maildir/Makefile.common"
-
-.include "../../security/courier-authlib/Makefile.common"
+.include "../../mail/courier-mta/Makefile.common"
 
 INSTALL_AM_MAKEFLAGS=	sysconfdir=${EGDIR}
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} AM_MAKEFLAGS=${INSTALL_AM_MAKEFLAGS:Q}
 
-SQWEBMAIL_STATEDIR=	${VARBASE}/sqwebmail
+SQWEBMAIL_STATEDIR=	${COURIER_STATEDIR}/sqwebmail
 SQWEBMAIL_CACHEDIR=	${SQWEBMAIL_STATEDIR}/logincache
 SQWEBMAIL_CALENDARDIR=	${SQWEBMAIL_STATEDIR}/calendar
 SQWEBMAIL_IMAGEDIR=	${PREFIX}/share/courier/sqwebmail/images
@@ -49,7 +46,7 @@ CONFIGURE_ARGS+=	--localstatedir=${SQWEBMAIL_STATEDIR:Q}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/courier
 CONFIGURE_ARGS+=	--program-transform-name='s/\.rc$$//'
 
-CONFIGURE_ARGS+=	--enable-cgibindir=${PREFIX}/libexec/cgi-bin
+CONFIGURE_ARGS+=	--enable-cgibindir=${PREFIX}/libexec/courier/cgi-bin
 CONFIGURE_ARGS+=	--enable-https=auto
 CONFIGURE_ARGS+=	--enable-imagedir=${SQWEBMAIL_IMAGEDIR:Q}
 CONFIGURE_ARGS+=	--enable-imageurl=${SQWEBMAIL_IMAGEURL:Q}
@@ -62,11 +59,15 @@ CONFIGURE_ARGS+=	--with-mailer="${SENDMAIL} -oi -t"
 CONFIGURE_ARGS+=	--with-mailgroup=${COURIER_GROUP:Q}
 CONFIGURE_ARGS+=	--with-piddir=${VARBASE}/run
 
+CONFIGURE_ENV+=		GZIP=${TOOLS_PATH.gzip:Q}
 CONFIGURE_ENV+=		GPG="${LOCALBASE}/bin/gpg"
 CONFIGURE_ENV+=		ldapsearch="${LOCALBASE}/bin/ldapsearch"
 
-MAKE_DIRS=		${VARBASE}/run
-OWN_DIRS=		${SQWEBMAIL_STATEDIR}
+REQD_DIRS+=		${DATADIR} ${DOCDIR} ${EGDIR} ${LIBEXECDIR}
+REQD_DIRS_PERMS+=	${LIBEXECDIR}/cgi-bin				\
+			${ROOT_USER} ${ROOT_GROUP} 0700
+MAKE_DIRS+=		${VARBASE}/run ${LOCALSTATEDIR}
+OWN_DIRS+=		${SQWEBMAIL_STATEDIR}
 OWN_DIRS+=		${SQWEBMAIL_CACHEDIR}
 OWN_DIRS_PERMS=		${SQWEBMAIL_CALENDARDIR}			\
 			${ROOT_USER} ${COURIER_GROUP} 0755
@@ -77,24 +78,21 @@ OWN_DIRS_PERMS+=	${SQWEBMAIL_CALENDARDIR}/private		\
 OWN_DIRS_PERMS+=	${SQWEBMAIL_CALENDARDIR}/localcache		\
 			${ROOT_USER} ${COURIER_GROUP} 0700
 
-GEN_FILES=		ldapaddressbook sqwebmaild
-FILES_SUBST+=		GEN_FILES=${GEN_FILES:Q}
-
-.for FILE in ${GEN_FILES}
-CONF_FILES+=		${EGDIR}/${FILE}.dist ${PKG_SYSCONFDIR}/${FILE}
+.for _file_ in calendarmode ldapaddressbook.dist sqwebmaild.dist
+CONF_FILES_PERMS+=	${EGDIR}/${_file_}				\
+			${PKG_SYSCONFDIR}/${_file_:S/.dist$//}		\
+			${COURIER_FILE_PERMS}
 .endfor
-CONF_FILES+=		${EGDIR}/calendarmode ${PKG_SYSCONFDIR}/calendarmode
-CONF_FILES_PERMS=	# empty
-.for FILE in cleancache.pl ldapsearch sendit.sh
-CONF_FILES_PERMS+=	${PREFIX}/share/courier/sqwebmail/${FILE}	\
-			${PKG_SYSCONFDIR}/${FILE}			\
-			${ROOT_USER} ${ROOT_GROUP} 0755
+.for _file_ in cleancache.pl ldapsearch sendit.sh
+CONF_FILES_PERMS+=	${PREFIX}/share/courier/sqwebmail/${_file_}	\
+			${PKG_SYSCONFDIR}/${_file_}			\
+			${COURIER_SCRIPT_PERMS}
 .endfor
-SPECIAL_PERMS=		libexec/courier/sqwebpasswd			\
+SPECIAL_PERMS=		${LIBEXECDIR}/sqwebpasswd			\
 			${COURIER_USER} ${COURIER_GROUP} 2755
-RCD_SCRIPTS=		sqwebmail
 
-INSTALLATION_DIRS=	bin man/man1 sbin
+RCD_SCRIPTS=		sqwebmail
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 sbin
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/courier-authlib/buildlink3.mk"
@@ -103,14 +101,21 @@ INSTALLATION_DIRS=	bin man/man1 sbin
 post-build:
 	${ECHO} "local" > ${WRKDIR}/calendarmode
 
-post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/gpglib/webgpg ${PREFIX}/sbin
+# The sqwebmail install target incorrectly overwrites the mode on
+# cgi-bin directory, so fix it back to the right value.
+#
+fix-perms:
+	${CHMOD} 0700 ${LIBEXECDIR}/cgi-bin
+
+post-install: fix-perms
+	${LN} -s ${PREFIX}/share/courier/sqwebmail/webgpg ${PREFIX}/sbin
 	${INSTALL_PROGRAM} ${WRKSRC}/gpglib/mimegpg ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/gpglib/mimegpg.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/gpglib/mimegpg.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/gpglib/mimegpg.html ${DOCDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/calendarmode ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/sqwebmail/sqwebmail.pamconf		\
-		${EGDIR}/webmail.pam
+		${EGDIR}/webmail.authpam
 	${INSTALL_DATA_DIR} ${DOCDIR}/sqwebmail
 	${INSTALL_DATA} ${WRKSRC}/README.logindomainlist.html		\
 		${DOCDIR}/sqwebmail
@@ -118,7 +123,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/gpglib/README.html			\
 		${DOCDIR}/sqwebmail/README.gpg.html
 	${INSTALL_DATA} ${WRKSRC}/pcp/README.html			\
-		${DOCDIR}/sqwebmail/README.pcp.html
+		${DOCDIR}/pcp_README.html
 	${INSTALL_DATA} ${WRKSRC}/sqwebmail/BUGS.html ${DOCDIR}/sqwebmail
 	${INSTALL_DATA} ${WRKSRC}/sqwebmail/SECURITY.html ${DOCDIR}/sqwebmail
 
