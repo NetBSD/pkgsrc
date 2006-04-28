@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courierimaps.sh,v 1.12 2005/03/01 01:42:36 jlam Exp $
+# $NetBSD: courierimaps.sh,v 1.13 2006/04/28 18:15:20 jlam Exp $
 #
 # Courier IMAP/SSL services daemon
 #
@@ -16,7 +16,6 @@ command="@PREFIX@/sbin/couriertcpd"
 ctl_command="@PREFIX@/sbin/imapd-ssl"
 pidfile="@VARBASE@/run/imapd-ssl.pid"
 required_files="@PKG_SYSCONFDIR@/imapd @PKG_SYSCONFDIR@/imapd-ssl"
-required_vars="authdaemond"
 
 start_cmd="courier_doit start"
 stop_cmd="courier_doit stop"
@@ -24,37 +23,45 @@ stop_cmd="courier_doit stop"
 courier_doit()
 {
 	action=$1
-	case ${action} in
+	case $action in
 	start)
-		for _f in $required_vars; do
-			eval _value=\$${_f}
-			case $_value in
-			[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
-				;;
-			*)
-				@ECHO@ 1>&2 "$0: WARNING: \$${_f} is not set"
-				if [ -z $rc_force ]; then
-					return 1
-				fi
-				;;
-			esac
-		done
 		for f in $required_files; do
 			if [ ! -r "$f" ]; then
 				@ECHO@ 1>&2 "$0: WARNING: $f is not readable"
-				if [ -z $rc_force ]; then
-					return 1
-				fi
+				return 1
 			fi
 		done
-		@ECHO@ "Starting ${name}."
+
+		. @PKG_SYSCONFDIR@/imapd
+		. @PKG_SYSCONFDIR@/imapd-ssl
+
+		f="$TLS_CERTFILE"
+		if [ -z "$f" ]; then
+			@ECHO@ 1>&2 "$0: WARNING: TLS_CERTFILE is empty"
+			return 1
+		fi
+		if [ ! -f "$f" ] && \
+		   [ "$f" = "@PKG_SYSCONFDIR@/imapd.pem ]; then
+			@ECHO@ "Generating IMAP SSL certificate in $f."
+			@PREFIX@/sbin/mkimapdcert >/dev/null 2>&1
+		fi
+		if [ ! -r "$f" ]; then
+			@ECHO@ 1>&2 "$0: WARNING: $f is not readable"
+			return 1
+		fi
+
+		case x$IMAPDSSLSTART in
+		x[yY]*)
+			@ECHO@ "Starting ${name}."
+			${ctl_command} $action
+               	;;
+		esac
 		;;
 	stop)
 		@ECHO@ "Stopping ${name}."
+		${ctl_command} $action
 		;;
 	esac
-
-	${ctl_command} ${action}
 }
 
 load_rc_config $name
