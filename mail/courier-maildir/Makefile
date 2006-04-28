@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2006/03/14 01:14:30 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/04/28 18:13:25 jlam Exp $
 
-DISTNAME=	courier-0.52.2
+DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-maildir-/}
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +15,7 @@ CONFLICTS=	courier-maildirmake-[0-9]*
 USE_TOOLS+=		gmake perl:run
 USE_LANGUAGES=		c c++
 
-.include "Makefile.common"
+.include "../../mail/courier-mta/Makefile.common"
 
 # This package doesn't need to depend on courier-authlib -- just fake
 # out the top-level configure script that thinks it needs
@@ -39,14 +38,23 @@ EXTRACT_ELEMENTS=	${WRKSRC_FILES:S/^/${DISTNAME}\//}
 EXTRACT_ELEMENTS+=	${WRKSRC_SUBDIRS:S/^/${DISTNAME}\//}
 
 BUILD_DIRS=		${WRKSRC_SUBDIRS:S/^/${WRKSRC}\//}
-INSTALLATION_DIRS=	bin man/man1 man/man5 man/man5 man/man7 man/man8 sbin
+INSTALLATION_DIRS=	bin			sbin			\
+			${PKGMANDIR}/man1	${PKGMANDIR}/man7	\
+			${PKGMANDIR}/man5	${PKGMANDIR}/man8	\
+			${DOCDIR}		${EGDIR}
 
-OWN_DIRS=		${PKG_SYSCONFDIR}/shared
-OWN_DIRS+=		${PKG_SYSCONFDIR}/shared.tmp
-CONF_FILES=		${EGDIR}/quotawarnmsg ${PKG_SYSCONFDIR}/quotawarnmsg
-CONF_FILES_PERMS=	${EGDIR}/sharedindexupdate			\
+REQD_DIRS=		${PREFIX}/share/doc/courier
+REQD_DIRS+=		${PREFIX}/share/examples/courier
+OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/shared			\
+			${COURIER_DIR_PERMS}
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/shared.tmp			\
+			${COURIER_DIR_PERMS}
+CONF_FILES_PERMS+=	${EGDIR}/quotawarnmsg				\
+			${PKG_SYSCONFDIR}/quotawarnmsg			\
+			${COURIER_FILE_PERMS}
+CONF_FILES_PERMS+=	${EGDIR}/sharedindexupdate			\
 			${PKG_SYSCONFDIR}/sharedindexupdate		\
-			${ROOT_USER} ${ROOT_GROUP} 0755
+			${COURIER_SCRIPT_PERMS}
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/sharedindexupdate.sh
@@ -62,8 +70,6 @@ post-extract:
 	${CP} ${FILESDIR}/sharedindexupdate.sh ${WRKDIR}/sharedindexupdate.sh
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/maildir/deliverquota		\
 		${PREFIX}/bin/deliverquota
 	${INSTALL_PROGRAM} ${WRKSRC}/maildir/maildiracl			\
@@ -73,17 +79,17 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/maildir/maildirmake		\
 		${PREFIX}/bin/courier-maildirmake
 	${INSTALL_MAN} ${WRKSRC}/maildir/maildiracl.1			\
-		${PREFIX}/man/man1/courier-maildiracl.1
+		${PREFIX}/${PKGMANDIR}/man1/courier-maildiracl.1
 	${INSTALL_MAN} ${WRKSRC}/maildir/maildirkw.1			\
-		${PREFIX}/man/man1/courier-maildirkw.1
+		${PREFIX}/${PKGMANDIR}/man1/courier-maildirkw.1
 	${INSTALL_MAN} ${WRKSRC}/maildir/maildirmake.1			\
-		${PREFIX}/man/man1/courier-maildirmake.1
+		${PREFIX}/${PKGMANDIR}/man1/courier-maildirmake.1
 	${INSTALL_MAN} ${WRKSRC}/maildir/maildir.5			\
-		${PREFIX}/man/man5/courier-maildir.5
+		${PREFIX}/${PKGMANDIR}/man5/courier-maildir.5
 	${INSTALL_MAN} ${WRKSRC}/maildir/maildirquota.7			\
-		${PREFIX}/man/man7/maildirquota.7
+		${PREFIX}/${PKGMANDIR}/man7/maildirquota.7
 	${INSTALL_MAN} ${WRKSRC}/maildir/deliverquota.8			\
-		${PREFIX}/man/man8/deliverquota.8
+		${PREFIX}/${PKGMANDIR}/man8/deliverquota.8
 	${INSTALL_DATA} ${WRKSRC}/maildir/quotawarnmsg			\
 		${EGDIR}/quotawarnmsg
 	${INSTALL_SCRIPT} ${WRKSRC}/maildir/sharedindexinstall		\
@@ -92,13 +98,11 @@ do-install:
 		${PREFIX}/sbin/sharedindexsplit
 	${INSTALL_SCRIPT} ${WRKDIR}/sharedindexupdate.sh		\
 		${EGDIR}/sharedindexupdate
-	${INSTALL_DATA} ${WRKSRC}/maildir/README.imapkeywords.html	\
-		${DOCDIR}/README.imapkeywords.html
-	${INSTALL_DATA} ${WRKSRC}/maildir/README.maildirfilter.html	\
-		${DOCDIR}/README.maildirfilter.html
-	${INSTALL_DATA} ${WRKSRC}/maildir/README.maildirquota.html	\
-		${DOCDIR}/README.maildirquota.html
-	${INSTALL_DATA} ${WRKSRC}/maildir/README.sharedfolders.html	\
-		${DOCDIR}/README.sharedfolders.html
+	grep "^${DOCDIR:S/${PREFIX}\///}" ${PKGDIR}/PLIST |		\
+	while read file; do						\
+		src=${WRKSRC:Q}/maildir/`basename $$file`;		\
+		dst=${PREFIX:Q}"/$$file";				\
+		${INSTALL_DATA} "$$src" "$$dst";			\
+	done
 
 .include "../../mk/bsd.pkg.mk"
