@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/04/17 13:46:30 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2006/04/28 16:23:55 joerg Exp $
 #
 
 DISTNAME=	xarchon-0.60
@@ -29,4 +29,5 @@ CONFIGURE_ENV+=	CC=${CC:Q}
 #HF#.include "../../x11/gtk/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
