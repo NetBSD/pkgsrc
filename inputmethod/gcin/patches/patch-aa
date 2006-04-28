@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/01/16 13:01:16 rxg Exp $
+$NetBSD: patch-aa,v 1.2 2006/04/28 18:24:53 joerg Exp $
 
 --- configure.orig	2006-01-04 19:37:46.000000000 +0800
 +++ configure
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/01/16 13:01:16 rxg Exp $
 -uname | grep FreeBSD >& /dev/null
 -if [ $? = 0 ]; then
 +OS=`uname -s`
-+if [ $OS = "FreeBSD" ] || [ $OS = "NetBSD" ]; then
++if [ $OS = "FreeBSD" ] || [ $OS = "NetBSD" ]|| [ $OS = "DragonFly" ]; then
    FREEBSD=1
  else
    FREEBSD=0
