@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2005/12/05 20:50:51 rillig Exp $
+# $NetBSD: Makefile,v 1.60 2006/04/28 06:51:14 jlam Exp $
 #
 
 DISTNAME=	pkgdiff-0.118
@@ -36,10 +36,10 @@ DIFF?=		diff
 
 INSTALLATION_DIRS=	bin
 .if !empty(MANINSTALL:Mcatinstall)
-INSTALLATION_DIRS+=	man/cat1
+INSTALLATION_DIRS+=	${PKGMANDIR}/cat1
 .endif
 .if !empty(MANINSTALL:Mmaninstall)
-INSTALLATION_DIRS+=	man/man1
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 .endif
 
 do-build:
@@ -70,10 +70,10 @@ do-install:
 .for FILE in mkpatches patchdiff pkgdiff pkgvi feedback-patches
 	${INSTALL_SCRIPT} ${WRKSRC}/${FILE} ${PREFIX}/bin
 .   if !empty(MANINSTALL:Mcatinstall)
-	${INSTALL_MAN} ${WRKSRC}/${FILE}.0 ${PREFIX}/man/cat1
+	${INSTALL_MAN} ${WRKSRC}/${FILE}.0 ${PREFIX}/${PKGMANDIR}/cat1
 .   endif
 .   if !empty(MANINSTALL:Mmaninstall)
-	${INSTALL_MAN} ${FILESDIR}/${FILE}.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${FILESDIR}/${FILE}.1 ${PREFIX}/${PKGMANDIR}/man1
 .   endif
 .endfor
 
