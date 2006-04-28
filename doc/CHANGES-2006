@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.78 2006/04/28 16:24:45 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.79 2006/04/28 18:12:03 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2298,3 +2298,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/dircproxy-devel to 1.2.0nb2 [tron 2006-04-28]
 	Updated net/rsync to 2.6.8 [wiz 2006-04-28]
 	Updated archivers/unrar to 3.6.2 [wiz 2006-04-28]
+	Added mail/courier-mta version 0.53.1 [jlam 2006-04-28]
