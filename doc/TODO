@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4925 2006/04/28 18:36:33 wiz Exp $
+$NetBSD: TODO,v 1.4926 2006/04/29 10:45:31 rillig Exp $
 
 Suggested new packages
 ======================
@@ -1172,8 +1172,6 @@ Suggested package updates
 	o tmake-1.13
 	o tob-0.26
 	o top-3.6beta1
-	o totd-1.5 [pkg/30545]
-	o totd-1.5.1
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trio-1.4
