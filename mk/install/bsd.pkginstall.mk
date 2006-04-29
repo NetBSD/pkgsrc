@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.51 2006/04/29 03:09:40 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.52 2006/04/29 03:54:10 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -290,14 +290,18 @@ do-su-create-usergroup:
 create-usergroup: ${_INSTALL_USERGROUP_UNPACKER}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cd ${_PKGINSTALL_DIR} &&					\
-	${SH} ${_INSTALL_USERGROUP_UNPACKER} &&				\
-	${TEST} -f ./+USERGROUP &&					\
-	./+USERGROUP ADD ${_PKG_DBDIR}/${PKGNAME} &&			\
-	./+USERGROUP CHECK-ADD ${_PKG_DBDIR}/${PKGNAME} &&		\
+	${SH} ${_INSTALL_USERGROUP_UNPACKER};				\
+	exitcode=1;							\
+	if ${TEST} -f ./+USERGROUP &&					\
+	   ./+USERGROUP ADD ${_PKG_DBDIR}/${PKGNAME} &&			\
+	   ./+USERGROUP CHECK-ADD ${_PKG_DBDIR}/${PKGNAME}; then	\
+		exitcode=0;						\
+	fi;								\
 	${RM} -f ${_INSTALL_USERGROUP_FILE:Q}				\
 		${_INSTALL_USERGROUP_DATAFILE:Q}			\
 		${_INSTALL_USERGROUP_UNPACKER:Q}			\
-		./+USERGROUP
+		./+USERGROUP;						\
+	exit $$exitcode
 
 # SPECIAL_PERMS are lists that look like:
 #		file user group mode
