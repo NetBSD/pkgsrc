@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2006/03/14 01:14:30 jlam Exp $
+# $NetBSD: Makefile,v 1.48 2006/04/29 04:53:17 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.05
 PKGNAME=		qmail-1.03
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		mail
 MASTER_SITES=		http://qmail.org/
 
@@ -13,7 +13,6 @@ COMMENT=		Secure, reliable, efficient, simple, and fast MTA
 
 DEPENDS+=		checkpassword-[0-9]*:../../sysutils/checkpassword
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
-DEPENDS+=		qmail-users>=1.0:../../mail/qmail-users
 DEPENDS+=		ucspi-tcp-[0-9]*:../../net/ucspi-tcp
 
 CONFLICTS+=		courier-maildirmake-[0-9]*
@@ -27,7 +26,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=		expr nroff
 
-DJB_BUILD_TARGETS= 	man
+DJB_BUILD_TARGETS=	man
 
 DJB_RESTRICTED=		YES
 
@@ -87,6 +86,16 @@ SUBST_SED.paths+=	-e 's,@PKGNAME@,${PKGNAME},g'
 SUBST_SED.paths+=	-e 's,@PKG_INFO@,${PKG_INFO},g'
 SUBST_SED.paths+=	-e 's,@GREP@,${GREP},g'
 SUBST_STAGE.paths=	post-patch
+
+USERGROUP_PHASE=	configure
+PKG_GROUPS=		qmail nofiles
+PKG_USERS+=		alias:nofiles
+PKG_USERS+=		qmaill:nofiles qmaild:nofiles qmailp:nofiles
+PKG_USERS+=		qmailq:qmail qmailr:qmail qmails:qmail
+.for user in ${PKG_USERS:C/\:.*//}
+PKG_HOME.${user}=	${QMAILDIR}
+.endfor
+PKG_HOME.alias=		${QMAILDIR}/alias
 
 # extract the qmail tarball that was inside the netqmail distfile
 post-extract:

@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.4 2004/07/21 22:35:59 schmonz Exp $
+# $NetBSD: DEINSTALL,v 1.5 2006/04/29 04:53:17 schmonz Exp $
 
 QMAILDIR=@QMAILDIR@
 
@@ -13,13 +13,5 @@ POST-DEINSTALL)
 			${RM} -f ${QMAILDIR}/$dir
 		fi
 	done
-
-	${CAT} <<EOF
-===========================================================================
-
-You may remove the qmail-users package now, as it is no longer needed.
-
-===========================================================================
-EOF
 	;;
 esac
