@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2006/04/17 20:56:30 adrianp Exp $
+# $NetBSD: Makefile,v 1.4 2006/04/29 09:23:19 adrianp Exp $
 
 DISTNAME=	kronolith-h3-${KRONOLITHVER}
 PKGNAME=	kronolith-${KRONOLITHVER}
 CATEGORIES=	www time
-MASTER_SITES=	ftp://ftp.horde.org/pub/kronolith/
+MASTER_SITES=	http://ftp.horde.org/pub/kronolith/ \
+		ftp://ftp.horde.org/pub/kronolith/
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.horde.org/kronolith/
