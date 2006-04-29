@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.84 2006/04/29 04:57:10 schmonz Exp $
+$NetBSD: CHANGES-2006,v 1.85 2006/04/29 05:51:04 gendalia Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2309,3 +2309,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/vlc to 0.7.2nb13 [wiz 2006-04-28]
 	Updated mail/qmail to 1.03nb11 [schmonz 2006-04-29]
 	Removed mail/qmail-users [schmonz 2006-04-29]
+	Updated net/openafs to 1.4.1 [gendalia 2006-04-29]
