@@ -1,4 +1,4 @@
-# $NetBSD: usergroupfuncs.FreeBSD,v 1.5 2006/04/27 22:44:09 jlam Exp $
+# $NetBSD: usergroupfuncs.FreeBSD,v 1.6 2006/04/29 03:49:12 jlam Exp $
 #
 # Platform-specific adduser and addgroup functionality
 # on top of pw(8).
@@ -27,7 +27,7 @@ group_exists()
 		${RM} -f $_testfile; return 2
 	elif ${TEST} -z "$_groupid"; then
 		# $_group doesn't exist and $_groupid is not set
-		return 1
+		${RM} -f $_testfile; return 1
 	elif ${CHGRP} $_groupid $_testfile >/dev/null 2>&1; then
 		_name=`${LS} -l $_testfile 2>/dev/null | ${AWK} '{ print $4 }'`
 		if ${TEST} "$_name" != "$_groupid"; then
@@ -64,7 +64,7 @@ user_exists()
 		${RM} -f $_testfile; return 2
 	elif ${TEST} -z "$_userid"; then
 		# $_user doesn't exist and $_user is not set
-		return 1
+		${RM} -f $_testfile; return 1
 	elif ${CHOWN} $_userid $_testfile >/dev/null 2>&1; then
 		_name=`${LS} -l $_testfile 2>/dev/null | ${AWK} '{ print $3 }'`
 		if ${TEST} "$_name" != "$_userid"; then
