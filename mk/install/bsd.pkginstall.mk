@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.52 2006/04/29 03:54:10 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.53 2006/04/29 04:36:13 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -232,8 +232,8 @@ ${_INSTALL_USERGROUP_FILE}:						\
 		${INSTALL_USERGROUPFUNCS_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${SED}	-e "/^# platform-specific adduser\/addgroup functions/r${_INSTALL_USERGROUPFUNCS_FILE}" ${FILES_SUBST_SED}				\
-		../../mk/install/usergroup > ${.TARGET}
+	${SED}	-e "/^# platform-specific adduser\/addgroup functions/r${_INSTALL_USERGROUPFUNCS_FILE}" ../../mk/install/usergroup |			\
+	${SED} ${FILES_SUBST_SED} > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${_ZERO_FILESIZE_P} ${_INSTALL_USERGROUP_DATAFILE}; then	\
 		${RM} -f ${.TARGET};					\
