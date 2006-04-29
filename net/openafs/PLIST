@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/08/11 08:48:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/04/29 05:48:25 gendalia Exp $
 bin/afsmonitor
 bin/bos
 bin/cmdebug
@@ -189,6 +189,8 @@ lib/afs/libxstat_cm.a
 lib/afs/libxstat_fs.a
 lib/afs/util.a
 lib/afs/vlib.a
+lib/libafsauthent.a
+lib/libafsrpc.a
 lib/libdes.a
 lib/liblwp.a
 lib/librx.a
