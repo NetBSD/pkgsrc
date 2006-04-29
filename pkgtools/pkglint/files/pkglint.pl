@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.564 2006/04/23 09:48:53 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.565 2006/04/29 10:12:36 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1320,7 +1320,10 @@ my $pkgdir;			# PKGDIR from the package Makefile
 my $filesdir;			# FILESDIR from the package Makefile
 my $patchdir;			# PATCHDIR from the package Makefile
 my $distinfo_file;		# DISTINFO_FILE from the package Makefile
-my $pkgname;			# PKGNAME from the package Makefile
+my $effective_pkgname;		# PKGNAME or DISTNAME from the package Makefile
+my $effective_pkgname_line;	# The line of the definition in the Makefile
+my $effective_pkgbase;		# The effective PKGNAME without the version
+my $effective_pkgversion;	# The version part of the effective PKGNAME
 my $hack_php_patches;		# Ignore non-existing patches in distinfo
 my $seen_bsd_prefs_mk;		# Has bsd.prefs.mk already been included?
 
@@ -1981,7 +1984,7 @@ sub expand_variable($$) {
 	my ($whole, $varname) = @_;
 	my ($value, $re);
 
-	$re = qr"\n${varname}([+:?]?)=[ \t]*([^\n#]*)";
+	$re = qr"\n\Q${varname}\E([+:?]?)=[ \t]*([^\n#]*)";
 	$value = undef;
 	while ($whole =~ m/$re/g) {
 		my ($op, $val) = ($1, $2);
@@ -2080,7 +2083,7 @@ sub shell_split($) {
 	my ($words);
 
 	$words = [];
-	while ($text =~ s/$regex_shellword//) {
+	while ($text =~ s/^$regex_shellword//) {
 		push(@{$words}, $1);
 	}
 	return (($text =~ qr"^\s*$") ? $words : false);
@@ -3589,7 +3592,7 @@ sub checkline_mk_varassign($$$$$) {
 		$line->log_warning("Variable names starting with an underscore are reserved for internal pkgsrc use.");
 	}
 
-	if ($varname eq "PERL5_PACKLIST" && defined($pkgname) && $pkgname !~ regex_unresolved && $pkgname =~ qr"^p5-(.*)-[0-9].*") {
+	if ($varname eq "PERL5_PACKLIST" && defined($effective_pkgbase) && $effective_pkgbase =~ qr"^p5-(.*)") {
 		my ($guess) = ($1);
 		$guess =~ s/-/\//g;
 		$guess = "auto/${guess}/.packlist";
@@ -4267,7 +4270,7 @@ sub checkfile_package_Makefile($$$) {
 	my $pkgname_line = $makevar->{"PKGNAME"};
 
 	my $distname = (defined($distname_line) && $distname_line->text =~ regex_varassign) ? $3 : undef;
-	$pkgname = (defined($pkgname_line) && $pkgname_line->text =~ regex_varassign) ? $3 : undef;
+	my $pkgname = (defined($pkgname_line) && $pkgname_line->text =~ regex_varassign) ? $3 : undef;
 
 	if (defined($pkgname) && defined($distname) && ($pkgname eq $distname || $pkgname eq "\${DISTNAME}")) {
 		$pkgname_line->log_note("PKGNAME is \${DISTNAME} by default. You don't need to define PKGNAME.");
@@ -4277,9 +4280,12 @@ sub checkfile_package_Makefile($$$) {
 		$distname_line->log_warning("As DISTNAME ist not a valid package name, please define the PKGNAME explicitly.");
 	}
 
-	if (!defined($pkgname)) {
-		$pkgname = $distname;
-		$pkgname_line = $distname_line;
+	($effective_pkgname, $effective_pkgname_line, $effective_pkgbase, $effective_pkgversion)
+		= (defined($pkgname) && $pkgname !~ regex_unresolved && $pkgname =~ regex_pkgname) ? ($pkgname, $pkgname_line, $1, $2)
+		: (defined($distname) && $distname !~ regex_unresolved && $distname =~ regex_pkgname) ? ($distname, $distname_line, $1, $2)
+		: (undef, undef, undef, undef);
+	if (defined($effective_pkgname_line)) {
+		$effective_pkgname_line->log_debug("Effective name=${effective_pkgname} base=${effective_pkgbase} version=${effective_pkgversion}.");
 	}
 
 	if (!exists($makevar->{"COMMENT"})) {
@@ -4291,23 +4297,22 @@ sub checkfile_package_Makefile($$$) {
 		$makevar->{"USE_X11"}->log_note("... USE_X11 superfluous.");
 	}
 
-	if (defined($pkgname) && $pkgname =~ regex_pkgname) {
-		my ($pkgbase, $pkgver) = ($1, $2);
+	if (defined($effective_pkgbase)) {
 
 		foreach my $suggested_update (@{get_doc_TODO_updates()}) {
 			my ($line, $suggbase, $suggver, $suggcomm) = @{$suggested_update};
 			my $comment = (defined($suggcomm) ? " (${suggcomm})" : "");
 
-			next unless $pkgbase eq $suggbase;
+			next unless $effective_pkgbase eq $suggbase;
 
-			if (dewey_cmp($pkgver, "<", $suggver)) {
-				$pkgname_line->log_warning("This package should be updated to ${suggver}${comment}.");
+			if (dewey_cmp($effective_pkgversion, "<", $suggver)) {
+				$effective_pkgname_line->log_warning("This package should be updated to ${suggver}${comment}.");
 			}
-			if (dewey_cmp($pkgver, "==", $suggver)) {
-				$pkgname_line->log_note("The update request to ${suggver} from doc/TODO${comment} has been done.");
+			if (dewey_cmp($effective_pkgversion, "==", $suggver)) {
+				$effective_pkgname_line->log_note("The update request to ${suggver} from doc/TODO${comment} has been done.");
 			}
-			if (dewey_cmp($pkgver, ">", $suggver)) {
-				$pkgname_line->log_note("This package is newer than the update request to ${suggver}${comment}.");
+			if (dewey_cmp($effective_pkgversion, ">", $suggver)) {
+				$effective_pkgname_line->log_note("This package is newer than the update request to ${suggver}${comment}.");
 			}
 		}
 	}
@@ -4757,7 +4762,13 @@ sub checkfile_PLIST($) {
 				$last_file_seen = $text;
 			}
 
-			if ($text =~ qr"^doc/") {
+			if ($text =~ qr"^bin/.*/") {
+				$line->log_warning("The bin/ directory should not have subdirectories.");
+
+			} elsif ($text =~ qr"^bin/") {
+				# Fine.
+
+			} elsif ($text =~ qr"^doc/") {
 				$line->log_error("Documentation must be installed under share/doc, not doc.");
 
 			} elsif ($text =~ qr"^etc/rc\.d/") {
@@ -4766,17 +4777,41 @@ sub checkfile_PLIST($) {
 			} elsif ($text =~ qr"^etc/") {
 				$line->log_error("Configuration files must not be registered in the PLIST. Please use the CONF_FILES framework, which is described in mk/install/bsd.pkginstall.mk.");
 
+			} elsif ($text =~ qr"^include/.*\.(?:h|hpp)$") {
+				# Fine.
+
 			} elsif ($text eq "info/dir") {
 				$line->log_error("\"info/dir\" must not be listed. Use install-info to add/remove an entry.");
+
+			} elsif (defined($effective_pkgbase) && $text =~ qr"^lib/\Q${effective_pkgbase}\E/") {
+				# Fine.
 
 			} elsif ($text =~ qr"^lib/locale/") {
 				$line->log_error("\"lib/locale\" must not be listed. Use \${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.");
 
+			} elsif ($text =~ qr"^lib/[^/]+\.(?:so|a|la)$") {
+				# Fine.
+
 			} elsif ($text =~ qr"^share/doc/html/") {
 				$opt_warn_plist_depr and $line->log_warning("Use of \"share/doc/html\" is deprecated. Use \"share/doc/\${PKGBASE}\" instead.");
 
+			} elsif (defined($effective_pkgbase) && $text =~ qr"^share/doc/\Q${effective_pkgbase}\E/") {
+				# Fine.
+
+			} elsif (defined($effective_pkgbase) && $text =~ qr"^share/examples/\Q${effective_pkgbase}\E/") {
+				# Fine.
+
+			} elsif (defined($effective_pkgbase) && $text =~ qr"^share/\Q${effective_pkgbase}\E/") {
+				# Fine.
+
+			} elsif ($text =~ qr"^share/locale/[\w\@_]+/LC_MESSAGES/[^/]+\.mo$") {
+				# Fine.
+
 			} elsif ($text =~ qr"^share/man/") {
 				$line->log_warning("Man pages should be installed into man/, not share/man/.");
+
+			} else {
+				#$line->log_warning("Unknown pathname \"${text}\".");
 			}
 
 			if ($text =~ /\${PKGLOCALEDIR}/ && defined($makevar) && !exists($makevar->{"USE_PKGLOCALEDIR"})) {
@@ -5212,7 +5247,8 @@ sub checkitem($) {
 	$makevar		= undef;
 	$varuse			= undef;
 	$seen_Makefile_common	= undef;
-	$pkgname		= undef;
+	$effective_pkgname	= undef;
+	$effective_pkgname_line	= undef;
 	$hack_php_patches	= false;
 	$seen_bsd_prefs_mk	= undef;
 
