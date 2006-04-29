@@ -1,3 +1,0 @@
-qmail's users and groups must exist in order for it to compile.
-This package creates these users and groups, and qmail has a
-dependency on it.
