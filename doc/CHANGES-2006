@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.86 2006/04/29 10:45:31 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.87 2006/04/29 20:47:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2311,3 +2311,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed mail/qmail-users [schmonz 2006-04-29]
 	Updated net/openafs to 1.4.1 [gendalia 2006-04-29]
 	Updated net/totd to 1.5.1 [rillig 2006-04-29]
+	Updated finance/gnucash-devel to 1.9.5 [wiz 2006-04-29]
