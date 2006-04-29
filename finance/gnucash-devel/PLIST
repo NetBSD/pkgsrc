@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:18 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/04/29 20:38:57 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -56,6 +56,7 @@ include/gnucash/dialog-transfer.h
 include/gnucash/dialog-utils.h
 include/gnucash/druid-commodity.h
 include/gnucash/druid-gconf-setup.h
+include/gnucash/druid-gnc-xml-import.h
 include/gnucash/druid-utils.h
 include/gnucash/engine-helpers.h
 include/gnucash/file-utils.h
@@ -90,7 +91,6 @@ include/gnucash/gnc-druid-provider-file-cb.h
 include/gnucash/gnc-druid-provider.h
 include/gnucash/gnc-druid.h
 include/gnucash/gnc-embedded-window.h
-include/gnucash/gnc-engine-util.h
 include/gnucash/gnc-engine.h
 include/gnucash/gnc-euro.h
 include/gnucash/gnc-event.h
@@ -162,7 +162,6 @@ include/gnucash/option-util.h
 include/gnucash/policy.h
 include/gnucash/pricecell.h
 include/gnucash/print-session.h
-include/gnucash/qof-be-utils.h
 include/gnucash/qof.h
 include/gnucash/qofbackend-p.h
 include/gnucash/qofbackend.h
@@ -184,6 +183,7 @@ include/gnucash/qofquerycore.h
 include/gnucash/qofreference.h
 include/gnucash/qofsession.h
 include/gnucash/qofsql.h
+include/gnucash/qofutil.h
 include/gnucash/quickfillcell.h
 include/gnucash/recncell.h
 include/gnucash/register-common.h
@@ -480,6 +480,7 @@ share/gnucash/glade/binary-import.glade
 share/gnucash/glade/budget.glade
 share/gnucash/glade/businessprefs.glade
 share/gnucash/glade/chart-export.glade
+share/gnucash/glade/choose-owner.glade
 share/gnucash/glade/commodities.glade
 share/gnucash/glade/commodity.glade
 share/gnucash/glade/customer.glade
@@ -487,6 +488,7 @@ share/gnucash/glade/date-close.glade
 share/gnucash/glade/dialog-query-list.glade
 share/gnucash/glade/dialog-reset-warnings.glade
 share/gnucash/glade/druid-gconf-setup.glade
+share/gnucash/glade/druid-gnc-xml-import.glade
 share/gnucash/glade/druid-provider-multifile.glade
 share/gnucash/glade/employee.glade
 share/gnucash/glade/exchange-dialog.glade
@@ -734,8 +736,8 @@ share/xml/gnucash/xsl/gnucash-gnccustomer-vcard2.xsl
 share/xml/gnucash/xsl/gnucash-std.xsl
 share/xml/gnucash/xsl/string.xsl
 share/xml/gnucash/xsl/vcard-gnccustomer.pl
-share/xml/qsf/pilot-qsf-gncCustomer.xml
 share/xml/qsf/pilot-qsf-GnuCashInvoice.xml
+share/xml/qsf/pilot-qsf-gncCustomer.xml
 share/xml/qsf/qsf-map.xsd.xml
 share/xml/qsf/qsf-object.xsd.xml
 @dirrm share/xml/qsf
