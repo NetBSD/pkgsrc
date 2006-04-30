@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.types.xml,v 1.1 2006/02/26 23:38:07 rillig Exp $ -->
+<!-- $NetBSD: chap.types.xml,v 1.2 2006/04/30 21:43:42 rillig Exp $ -->
 
 <chapter id="types">
 <title>The &pkglint; type system</title>
@@ -40,9 +40,8 @@
 <title>Syntax for defining types</title>
 
 <programlisting>
-    type             ::= list-variant "of" simple-type
+    type             ::= ("List" | "InternalList") "+"? "of" simple-type
                      |   simple-type
-    list-variant     ::= "List" "!"? "+"?
     simple-type      ::= predefined-type
                      |   enumeration
     predefined-type  ::= [A-Za-z][0-9A-Z_a-z]*
@@ -67,16 +66,15 @@
 
 	<para>A list type can be constructed from a predefined type or
 	an enumeration. It is not possible to construct lists of lists,
-	since I have never needed that. When defining a list type, the
-	<literal>List</literal> keyword may be followed immediately
-	(that is, no white-space) by a <literal>!</literal> or a
-	<literal>+</literal>. A <literal>!</literal> means that the list
-	is an internal list, as opposed to an external list. Most lists
-	are external lists, so this has been chosen as the default
-	value. The differences between these two types are described in
-	the <ulink url="&pkgsrc-guide;/makefile.html">pkgsrc guide, the
-	chapter about <filename>Makefile</filename>s</ulink>. A
-	<literal>+</literal> restricts the valid operations on a
+	since I have never needed that. There are two types of lists,
+	called <literal>List</literal> and
+	<literal>InternalList</literal>, which are described in the
+	<ulink url="&pkgsrc-guide;/makefile.html">pkgsrc guide, the
+	chapter about <filename>Makefile</filename>s</ulink>.
+
+	If the <literal>List</literal> or
+	<literal>InternalList</literal> is followed by a
+	<literal>+</literal>, which restricts the valid operations on a
 	variable of that type. The only allowed operations are setting
 	the list to a commented empty value, for example
 	<literal>#&nbsp;none</literal>, or appending to the list, using
