@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/04/29 04:53:17 schmonz Exp $
+# $NetBSD: Makefile,v 1.49 2006/04/30 08:03:42 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.05
@@ -24,7 +24,7 @@ CONFLICTS+=		pulsar<=0.1.1
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-USE_TOOLS+=		expr nroff
+USE_TOOLS+=		nroff
 
 DJB_BUILD_TARGETS=	man
 
@@ -68,6 +68,7 @@ PKG_FAIL_REASON+=	"QMAIL_QUEUE_DIR must not be under ${QMAILDIR}"
 .endif
 
 .if !empty(QMAIL_QUEUE_EXTRA)
+USE_TOOLS+=		expr
 QUEUE_EXTRA=		"T${QMAIL_QUEUE_EXTRA}\\0"
 QUEUE_EXTRALEN_cmd=	${EXPR} `${ECHO_N} ${QMAIL_QUEUE_EXTRA} | ${WC} -c` + 2
 SUBST_CLASSES+=		logging
