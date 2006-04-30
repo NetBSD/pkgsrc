@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2006/04/13 18:23:31 jlam Exp $
+# $NetBSD: Makefile,v 1.98 2006/04/30 16:58:03 jschauma Exp $
 
 DISTNAME=		glib-2.10.2
 PKGNAME=		${DISTNAME:S/glib/glib2/}
@@ -52,6 +52,12 @@ CONFIGURE_ENV+=		PERL_PATH=${PERL5:Q}
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 CPPFLAGS+=		-DPKGLOCALEDIR="\"${PKGLOCALEDIR}\""
 CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Mmipspro*)
+CFLAGS+=		-c99
+.endif
 
 .if ${OPSYS} == "FreeBSD"
 
