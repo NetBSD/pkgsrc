@@ -1,6 +1,8 @@
---- configure.orig	2006-04-21 09:38:39.000000000 +0900
-+++ configure	2006-04-21 09:49:07.000000000 +0900
-@@ -483,7 +483,7 @@
+$NetBSD: patch-at,v 1.11 2006/04/30 17:03:20 joerg Exp $
+
+--- configure.orig	2006-03-30 10:00:19.000000000 +0000
++++ configure
+@@ -483,7 +483,7 @@ mksharedlibrpath=''
  
  if test $withsharedlibs = "yes"; then
    case "$host" in
@@ -9,7 +11,7 @@
        sharedcccompopts="-fPIC"
        mksharedlib="$bytecc -shared -o"
        bytecclinkopts="$bytecclinkopts -Wl,-E"
-@@ -573,10 +573,12 @@
+@@ -573,10 +573,12 @@ case "$host" in
    sparc*-*-gnu*)                arch=sparc; system=gnu;;
    i[3456]86-*-linux*)           arch=i386; system=linux_`sh ./runtest elf.c`;;
    i[3456]86-*-*bsd*)            arch=i386; system=bsd_`sh ./runtest elf.c`;;
@@ -22,7 +24,7 @@
    i[3456]86-*-darwin*)          arch=i386; system=macosx;;
    i[3456]86-*-gnu*)             arch=i386; system=gnu;;
    mips-*-irix6*)                arch=mips; system=irix;;
-@@ -672,6 +674,7 @@
+@@ -672,6 +674,7 @@ case "$arch,$model,$system" in
      case "$nativecc" in gcc*) ;; *) cc_profile='-xpg';; esac;;
    amd64,*,linux) profiling='prof';;
    amd64,*,gnu) profiling='prof';;
@@ -30,7 +32,15 @@
    *) profiling='noprof';;
  esac
  
-@@ -1107,6 +1110,7 @@
+@@ -1060,6 +1063,7 @@ if test "$pthread_wanted" = "yes"; then
+   case "$host" in
+     *-*-solaris*)  pthread_link="-lpthread -lposix4";;
+     *-*-freebsd*)  pthread_link="-pthread";;
++    *-*-dragonfly*)  pthread_link="-pthread";;
+     *-*-openbsd*)  pthread_link="-pthread";;
+     *)             pthread_link="-lpthread";;
+   esac
+@@ -1107,6 +1111,7 @@ fi
  x11_include="not found"
  x11_link="not found"
  
@@ -38,7 +48,7 @@
  for dir in \
      $x11_include_dir          \
                                \
-@@ -1153,6 +1157,7 @@
+@@ -1153,6 +1158,7 @@ do
      break
    fi
  done
@@ -46,7 +56,7 @@
  
  if test "$x11_include" = "not found"; then
    x11_try_lib_dir=''
-@@ -1242,31 +1247,8 @@
+@@ -1242,31 +1248,8 @@ dbm_include="not found"
  dbm_link="not found"
  use_gdbm_ndbm=no
  
@@ -80,7 +90,7 @@
  if test "$dbm_include" = "not found" || test "$dbm_link" = "not found"; then
    echo "NDBM not found, the \"dbm\" library will not be supported."
  else
-@@ -1278,8 +1260,8 @@
+@@ -1278,8 +1261,8 @@ else
    fi
    echo "DBM_INCLUDES=$dbm_include" >> Makefile
    echo "DBM_LINK=$dbm_link" >> Makefile
