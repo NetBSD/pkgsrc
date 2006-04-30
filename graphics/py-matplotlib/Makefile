@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2006/04/17 13:46:35 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/04/30 22:30:43 joerg Exp $
 #
 
 DISTNAME=		matplotlib-0.87.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=matplotlib/}
 
@@ -16,6 +16,15 @@ PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
 .include "../../lang/python/extension.mk"
+
+.if ${PYPACKAGE} == "python15" || ${PYPACKAGE} == "python20" || \
+    ${PYPACKAGE} == "python21" || ${PYPACKAGE} == "python22" || \
+    ${PYPACKAGE} == "python23"
+PLIST_SUBST+=		COND_SUBPROCESS=""
+.else
+PLIST_SUBST+=		COND_SUBPROCESS="@comment "
+.endif
+
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
