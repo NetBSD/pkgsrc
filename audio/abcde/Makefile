@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/02/05 23:08:05 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2006/04/30 21:14:46 rillig Exp $
 
 DISTNAME=	abcde_2.3.3.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
@@ -26,12 +26,11 @@ MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 INSTALLATION_DIRS=	bin man/man1
 
-pre-configure:
-	@cd ${WRKSRC} && for f in abcde; do				\
-		${SED} "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},"		\
-			$$f > $$f.tmp &&				\
-		${MV} $$f.tmp $$f;					\
-	done
+SUBST_CLASSES+=		abcde
+SUBST_STAGE.abcde=	pre-configure
+SUBST_MESSAGE.abcde=	Adjusting the directory for configuration files
+SUBST_FILES.abcde=	abcde
+SUBST_SED.abcde=	-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},"
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/abcde ${PREFIX}/bin
