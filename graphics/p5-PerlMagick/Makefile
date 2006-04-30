@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2006/04/17 13:46:34 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2006/04/30 17:55:50 adam Exp $
 
 .include "../../graphics/ImageMagick/Makefile.common"
 
 PKGNAME=	p5-PerlMagick-${DISTVERSION}
 
-PKGREVISION=	1
 SVR4_PKGNAME=	p5pma
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,18 +16,15 @@ PATCHDIR=	${.CURDIR}/../../graphics/ImageMagick/patches
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LIBTOOL=		YES
-
-PERL5_CONFIGURE=	NO
-PERL5_PACKLIST=		auto/Image/Magick/.packlist
-
-GNU_CONFIGURE=		YES
-
-PERL5_CONFIGURE_DIRS=	${WRKSRC}/PerlMagick
-BUILD_DIRS=		${PERL5_CONFIGURE_DIRS}
-
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 # Some configure_args come from Makefile.common
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
+
+PERL5_CONFIGURE=	no
+PERL5_CONFIGURE_DIRS=	${WRKSRC}/PerlMagick
+PERL5_PACKLIST=		auto/Image/Magick/.packlist
+BUILD_DIRS=		${PERL5_CONFIGURE_DIRS}
 
 post-configure: perl5-configure
 
