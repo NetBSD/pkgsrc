@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.565 2006/04/29 10:12:36 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.566 2006/04/30 21:31:32 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2752,7 +2752,14 @@ sub checkline_mk_shelltext($$) {
 	}
 
 	$vartools = get_vartool_names();
-	($rest = $text) =~ s/^[-@]*(?:\$\{_PKG_SILENT\})?(?:\$\{_PKG_DEBUG\})?//;
+	$rest = $text;
+	if ($rest =~ s/^([-@]*)(?:\$\{_PKG_SILENT\}\$\{_PKG_DEBUG\})?//) {
+		my ($hidden) = ($1);
+		if ($hidden =~ qr"\@") {
+			$line->log_warning("Shell commands should not be hidden unconditionally.");
+		}
+	}
+
 	$state = SCST_START;
 	$set_e_mode = false;
 	while ($rest =~ s/^$regex_shellword//) {
