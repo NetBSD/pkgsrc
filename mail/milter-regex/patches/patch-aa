@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2004/06/11 23:11:48 jdarrow Exp $
+$NetBSD: patch-aa,v 1.2 2006/04/30 17:11:25 joerg Exp $
 
 --- milter-regex.c.orig	Fri Mar 19 13:21:40 2004
 +++ milter-regex.c	Mon Jun  7 16:35:18 2004
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1 2004/06/11 23:11:48 jdarrow Exp $
  		}
  		if (
 -#if ! ( __linux__ || __sun__ )
-+#if ! ( __linux__ || __sun__ || __NetBSD__ )
++#if ! ( __linux__ || __sun__ || __NetBSD__ || defined(__DragonFly__) )
  		    seteuid(pw->pw_uid) ||
  #endif
  		    setuid(pw->pw_uid)) {
