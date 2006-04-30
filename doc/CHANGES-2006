@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.87 2006/04/29 20:47:07 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.88 2006/04/30 06:51:14 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2312,3 +2312,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/openafs to 1.4.1 [gendalia 2006-04-29]
 	Updated net/totd to 1.5.1 [rillig 2006-04-29]
 	Updated finance/gnucash-devel to 1.9.5 [wiz 2006-04-29]
+	Updated mail/clamav to 0.88.2 [xtraeme 2006-04-30]
