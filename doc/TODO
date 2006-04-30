@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4929 2006/04/30 17:57:49 adam Exp $
+$NetBSD: TODO,v 1.4930 2006/04/30 21:36:37 rillig Exp $
 
 Suggested new packages
 ======================
@@ -443,7 +443,6 @@ Suggested package updates
 	o diffstat-1.41
 	o dirac-0.5.4
 	o dirdiff-2.1
-	o dmalloc-5.4.2
 	o dmidecode-2.8
 	o dnstop-20050405
 	o dnstracer-1.8
@@ -513,7 +512,6 @@ Suggested package updates
 	o fugu-1.2.3
 	o fvwm2-themes-0.7.0
 	o g2-0.50
-	o galculator-1.2.5.2
 	o galeon-2.0.1
 	o gamin-0.1.6
 	o gap-4r4p3
@@ -529,7 +527,6 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdm-2.14.4
 	o gdsreader-0.3.2
-	o gedit-2.14.2
 	o ggiterm-0.7.1
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
@@ -601,7 +598,6 @@ Suggested package updates
 	o honeyd-1.5a
 	o hot-babe-0.2.2
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
-	o html2ps-1.0b4
 	o html2wml-0.4.11
 	o htmldoc-1.8.26
 	o http_load-20050629
@@ -707,7 +703,6 @@ Suggested package updates
 	o lout-3.31
 	o lucy-1.19p
 	o lwp-2.1
-	o lyx-1.4.1
 	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.11b
@@ -723,7 +718,6 @@ Suggested package updates
 	o matchbox-1.0
 	o matchbox-panel-0.9.3
 	o md-whois-4.7.8
-	o mdd-20050318
 	o mdf2iso-0.3.0
 	o memcached-1.2
 	o memtest86-3.2
@@ -749,7 +743,6 @@ Suggested package updates
 	o moz-flash-0.4.13
 	o mp3blaster-3.2.2
 	o mpage-2.5.4
-	o mpfr-2.2.0
 	o mpich-1.2.7
 	o mplayer-plugin-firefox-3.25
 	o mpop-0.8.3 [pkg/32511]
@@ -797,7 +790,6 @@ Suggested package updates
 	o ogre-0.12.3
 	o onyx-5.1.2
 	o oo2c-2.1.7
-	o open2300-1.8
 	o openal-0.0.8
 	o opencobol-0.31
 	o openh323-1.17.2
@@ -1094,7 +1086,6 @@ Suggested package updates
 	o sbcl-0.9.5
 	o scew-0.4.0
 	o sch-3.8.3
-	o scribus-1.2.4.1
 	o sdig-0.40
 	o seahorse-0.9.1
 	o semantic-1.4.4
@@ -1151,7 +1142,6 @@ Suggested package updates
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
-	o tcpdump-3.9.4
 	o tcpick-0.2.1
 	o tcpillust-1.00b
 	o tcpslice-1.2a2
@@ -1187,7 +1177,6 @@ Suggested package updates
 	o ubs-0.20
 	o ucarp-1.2
 	o ucblogo-5.5
-	o ucl-1.03
 	o unix2dos-1.3
 	o userppp-030706
 	o valgrind-3.0.1
@@ -1282,7 +1271,6 @@ Suggested package updates
 	o ysm-2.9.8
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zenity-2.14.1
 	o zile-2.2.13
 	o zircon-1.18.256
 	o zope-2.8.6
