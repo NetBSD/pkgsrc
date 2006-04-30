@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/21 02:07:53 wulf Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/04/30 16:12:01 joerg Exp $
 bin/dpgate
 bin/dpcodeconv
 bin/dpmybbs
 bin/dphttp
+bin/dpputlinks
 sbin/dpbox
 libexec/cgi-bin/dpbbs
 libexec/cgi-bin/dpcheck
