@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2006/04/25 13:51:24 joerg Exp $
+# $NetBSD: options.mk,v 1.5 2006/04/30 16:01:21 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sqlrelay
 PKG_SUPPORTED_OPTIONS+= mysql pgsql sqlite odbc freetds perl
@@ -67,5 +67,5 @@ PLIST_SUBST+=	COND_FREETDS=""
 .include "../../databases/freetds/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-freetds
-PLIST_SUBST+=	COND_ODBC="@comment "
+PLIST_SUBST+=	COND_FREETDS="@comment "
 .endif
