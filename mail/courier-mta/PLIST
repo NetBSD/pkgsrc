@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/04/30 18:20:59 joerg Exp $
 bin/cancelmsg
 bin/courier-config
 bin/couriermlm
@@ -34,6 +34,7 @@ man/man8/courierperlfilter.8
 man/man8/dupfilter.8
 man/man8/esmtpd-msa.8
 man/man8/esmtpd.8
+man/man8/filterctl.8
 man/man8/makeacceptmailfor.8
 man/man8/makealiases.8
 man/man8/makehosteddomains.8
