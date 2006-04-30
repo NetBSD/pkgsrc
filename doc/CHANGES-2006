@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.89 2006/04/30 17:30:59 adam Exp $
+$NetBSD: CHANGES-2006,v 1.90 2006/04/30 17:57:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2314,3 +2314,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated finance/gnucash-devel to 1.9.5 [wiz 2006-04-29]
 	Updated mail/clamav to 0.88.2 [xtraeme 2006-04-30]
 	Updated audio/libsndfile to 1.0.16 [adam 2006-04-30]
+	Updated graphics/ImageMagick to 6.2.7.1 [adam 2006-04-30]
+	Updated graphics/p5-PerlMagick to 6.2.7.1 [adam 2006-04-30]
