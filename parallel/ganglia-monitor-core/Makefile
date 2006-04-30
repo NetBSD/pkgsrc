@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2006/04/17 13:46:44 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/04/30 22:28:44 joerg Exp $
 #
 
 DISTNAME=		ganglia-3.0.1
 PKGNAME=		ganglia-monitor-core-3.0.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		net parallel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ganglia/}
 EXTRACT_SUFX=		.tar.bz2
@@ -12,10 +12,14 @@ MAINTAINER=		jschauma@NetBSD.org
 HOMEPAGE=		http://ganglia.sourceforge.net/
 COMMENT=		Ganglia cluster monitor, monitoring daemon
 
-HAS_CONFIGURE=		YES
+GNU_CONFIGURE=		YES
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--with-gmetad
+USE_LIBTOOL=		yes
+CONFIG_GUESS_OVERRIDE?=		\
+	config.guess */config.guess */*/config.guess */*/*/config.guess
+CONFIG_SUB_OVERRIDE?=		\
+	config.sub */config.sub */*/config.sub */*/*/config.sub
 
 PATCH_ETC=		mans/gmetad.1 mans/gmond.1			\
 			gmetad/cmdline.c gmetad/conf.c 			\
@@ -32,6 +36,10 @@ RCD_SCRIPTS=		gmond gmetad
 
 pre-patch:
 	${MKDIR} ${WRKSRC}/srclib/libmetrics/netbsd
+	${MKDIR} ${WRKSRC}/srclib/libmetrics/dragonfly
+	${CP} ${FILESDIR}/dfly-metrics.c ${WRKSRC}/srclib/libmetrics/dragonfly/metrics.c
+	${CP} ${FILESDIR}/dfly-Makefile.am ${WRKSRC}/srclib/libmetrics/dragonfly/Makefile.am
+	${CP} ${FILESDIR}/dfly-Makefile.in ${WRKSRC}/srclib/libmetrics/dragonfly/Makefile.in
 
 post-patch:
 .for pfile in ${PATCH_ETC}
@@ -58,6 +66,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/gmond.sh ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/gmond
 	${INSTALL_DATA} ${WRKSRC}/gmetad.sh ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/gmetad
 
+BUILDLINK_DEPENDS.apr+=	apr>=0.9.7.2.0.55nb3
+
+.include "../../devel/apr/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../databases/rrdtool/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
