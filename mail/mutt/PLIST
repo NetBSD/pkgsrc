@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/04/17 07:07:24 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/04/30 20:07:55 joerg Exp $
 bin/flea
 bin/mutt
 bin/muttbug
@@ -31,8 +31,6 @@ share/doc/mutt/html/manual-7.html
 share/doc/mutt/html/manual.html
 share/doc/mutt/manual.txt
 share/doc/mutt/patch-notes.txt
-@exec ${LN} -s %D/share/examples/mutt %D/share/doc/mutt/samples
-@unexec ${RM} -f %D/share/doc/mutt/samples
 share/examples/mutt/Mush.rc
 share/examples/mutt/Muttrc
 share/examples/mutt/Pine.rc
@@ -63,6 +61,8 @@ share/examples/mutt/pgp6.rc
 share/examples/mutt/sample.mailcap
 share/examples/mutt/sample.muttrc
 share/examples/mutt/sample.muttrc-tlr
+@comment This entry must be specified after share/examples/mutt!
+share/doc/mutt/samples
 share/locale/bg/LC_MESSAGES/mutt.mo
 share/locale/ca/LC_MESSAGES/mutt.mo
 share/locale/cs/LC_MESSAGES/mutt.mo
