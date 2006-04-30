@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.8 2006/02/24 08:11:26 adam Exp $
+$NetBSD: patch-ad,v 1.9 2006/04/30 17:29:29 adam Exp $
 
---- examples/Makefile.in.orig	2006-02-20 22:10:12.000000000 +0100
+--- examples/Makefile.in.orig	2006-04-30 04:48:27.000000000 +0200
 +++ examples/Makefile.in
-@@ -237,7 +237,7 @@ INCLUDES = -I$(srcdir)/$(SNDFILEDIR) $(O
+@@ -235,7 +235,7 @@ INCLUDES = -I$(srcdir)/$(SNDFILEDIR) $(O
  sndfile_info_SOURCES = sndfile-info.c 
  sndfile_info_LDADD = $(SNDFILEDIR)/libsndfile.la
  sndfile_play_SOURCES = sndfile-play.c 
