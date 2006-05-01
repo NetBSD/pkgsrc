@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.17 2006/04/02 09:16:19 jmmv Exp $
+$NetBSD: patch-aa,v 1.18 2006/05/01 09:50:25 jmmv Exp $
 
---- configure.orig	2006-03-13 22:42:24.000000000 +0100
+--- configure.orig	2006-04-14 22:49:06.000000000 +0200
 +++ configure
-@@ -32481,6 +32481,7 @@ else
+@@ -32571,6 +32571,7 @@ else
     GDM_USER_PATH="$GDM_USER_PATH:/usr/bin/X11:/usr/X11R6/bin:/usr/local/bin:/opt/X11R6/bin"
     X_CONFIG_OPTIONS="-audit 0"
  fi
 +X_CONFIG_OPTIONS="$X_SERVER_ARGS $X_CONFIG_OPTIONS"
  
- # Don't add EXPANDED_BINDIR to GDM_USER_PATH if it is already in the PATH.
- # If it is /usr/bin, for example.
+ # Don't add bindir to GDM_USER_PATH if it is already in the PATH.
+ # If it is /bin or /usr/bin, for example.
