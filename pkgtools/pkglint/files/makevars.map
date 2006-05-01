@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.83 2006/05/01 00:13:47 rillig Exp $
+# $NetBSD: makevars.map,v 1.84 2006/05/01 20:19:04 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -273,8 +273,8 @@ MYSQL_VERSIONS_ACCEPTED	List of { 40 41 50 }
 MYSQL_VERSION_DEFAULT	Userdefined
 NOT_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc }
 NOT_FOR_PLATFORM	List of PlatformTriple
-NO_BIN_ON_CDROM		Message
-NO_BIN_ON_FTP		Message
+NO_BIN_ON_CDROM		Restricted
+NO_BIN_ON_FTP		Restricted
 NO_BUILD		Yes
 NO_CHECKSUM		Yes
 NO_CONFIGURE		Yes
@@ -285,8 +285,8 @@ NO_MTREE		Yes
 NO_PACKAGE		Message
 NO_PKGTOOLS_REQD_CHECK	Yes
 NO_PKG_REGISTER		Yes
-NO_SRC_ON_CDROM		Message
-NO_SRC_ON_FTP		Message
+NO_SRC_ON_CDROM		Restricted
+NO_SRC_ON_FTP		Restricted
 ONLY_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc }
 ONLY_FOR_PLATFORM	List of PlatformTriple
 OPSYSVARS		List+ of Varname
