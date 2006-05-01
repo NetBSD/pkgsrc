@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.570 2006/05/01 20:19:04 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.571 2006/05/01 22:01:21 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4470,6 +4470,10 @@ sub checkfile_package_Makefile($$$) {
 	if (exists($makevar->{"REPLACE_PERL"}) && exists($makevar->{"NO_CONFIGURE"})) {
 		$makevar->{"REPLACE_PERL"}->log_warning("REPLACE_PERL is ignored when ...");
 		$makevar->{"NO_CONFIGURE"}->log_warning("... NO_CONFIGURE is set.");
+	}
+
+	if (exists($makevar->{"RESTRICTED"}) && !exists($makevar->{"LICENSE"})) {
+		$makevar->{"RESTRICTED"}->log_error("Restricted packages must have a LICENSE.");
 	}
 
 	my $distname_line = $makevar->{"DISTNAME"};
