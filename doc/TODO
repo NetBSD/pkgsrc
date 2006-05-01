@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4930 2006/04/30 21:36:37 rillig Exp $
+$NetBSD: TODO,v 1.4931 2006/05/01 07:28:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -471,13 +471,13 @@ Suggested package updates
 	o elscreen-1.3.3
 	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
-	o enchant-1.2.5
+	o enchant-1.2.6
 	o enlightenment-0.16.8.1
 	o enscript-1.6.4
 	o eog-2.14.1
 	o epiphany-extensions-2.14.0.1 [jmmv]
 	o epstool-3.08
-	o eric3-3.8.1
+	o eric3-3.9.0
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.1
@@ -575,6 +575,7 @@ Suggested package updates
 	o gsharutils-4.6
 	o gss-0.0.16
 	o gst-plugins0.10-base-0.10.6
+	o gstreamer0.10-0.10.5
 	o gtetrinet-0.7.9
 	o gthumb-2.7.6
 	o gtk-send-pr-0.4.7
@@ -605,6 +606,7 @@ Suggested package updates
 	o httptunnel-3.3
 	o hugs-200503 [pkg/30071]
 	o hydrogen-0.9.2
+	o hyperestraier-1.2.4
 	o i2ocfg-1.1
 	o icdprog-0.5
 	o icecast-2.3.1
@@ -650,7 +652,7 @@ Suggested package updates
 	o kaffe-1.1.7
 	o kajaani-kombat-0.7
 	o kapooka-0.3
-	o kazehakase-0.3.6
+	o kazehakase-0.3.7
 	o kbarcode-2.0.2
 	o kdrill-6.4
 	o kinput2-3.1
@@ -661,6 +663,7 @@ Suggested package updates
 	o krusader-1.70.0
 	o ksi-3.4.2
 	o kth-krb4-1.2.2
+	o kye-0.8
 	o latd-1.21
 	o lavaps-2.7
 	o lcab-1.0b11
@@ -671,7 +674,7 @@ Suggested package updates
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
 	o libetpan-0.44
-	o libextractor-0.5.12
+	o libextractor-0.5.13
 	o libflash-0.4.13
 	o libggi-2.2.1
 	o libggigcp-1.0.1
@@ -691,6 +694,7 @@ Suggested package updates
 	o libpqxx-2.5.5
 	o libprelude-0.9.7.1
 	o libshout-2.2
+	o libsigsegv-2.3
 	o libsmi-0.4.3
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
@@ -781,7 +785,7 @@ Suggested package updates
 	o nss-3.11
 	o nss_ldap-248
 	o nulib2-210
-	o nut-11.3
+	o nut-11.4
 	o obexftp-0.18
 	o objc-3.2.7
 	o ocrad-0.15
@@ -851,7 +855,7 @@ Suggested package updates
 	o p5-Graph-0.20105
 	o p5-HTML-Element-Extended-1.16
 	o p5-HTML-FillInForm-1.05
-	o p5-HTML-Parser-3.51
+	o p5-HTML-Parser-3.54
 	o p5-HTML-TableExtract-2.07
 	o p5-HTMLObject-2.26
 	o p5-HTTP-Cache-Transparent-0.6
@@ -1259,6 +1263,7 @@ Suggested package updates
 	o xrn-9.02
 	o xscreensaver-4.24
 	o xskat-4.0
+	o xterm-213
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
 	o xtux-20030306
