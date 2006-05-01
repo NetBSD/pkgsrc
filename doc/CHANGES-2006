@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.103 2006/05/01 20:48:29 adam Exp $
+$NetBSD: CHANGES-2006,v 1.104 2006/05/01 21:08:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2332,3 +2332,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/lftp to 3.4.6 [salo 2006-05-01]
 	Updated x11/gdm to 2.14.4nb1 [jmmv 2006-05-01]
 	Updated graphics/potrace to 1.7 [adam 2006-05-01]
+	Updated devel/libextractor to 0.5.13 [adam 2006-05-01]
