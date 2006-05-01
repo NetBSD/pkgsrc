@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.568 2006/05/01 13:47:54 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.569 2006/05/01 18:08:00 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4150,8 +4150,8 @@ sub checkfile_buildlink3_mk($) {
 			# Comments and empty lines are fine here.
 
 		} else {
-			$lines->[$lineno]->log_warning("Unexpected line.");
-			return;
+			$opt_debug and $lines->[$lineno]->log_warning("Unexpected line.");
+			$lineno++;
 		}
 	}
 	expect_empty_line($lines, \$lineno);
