@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/10/23 15:40:39 rillig Exp $
+@comment $NetBSD: PLIST,v 1.6.4.1 2006/05/01 21:56:14 salo Exp $
 share/doc/mantis/CUSTOMIZATION
 share/doc/mantis/INSTALL
 share/doc/mantis/README
@@ -224,32 +224,6 @@ share/mantis/core/adodb/session/old/adodb-cryptsession.php
 share/mantis/core/adodb/session/old/adodb-session-clob.php
 share/mantis/core/adodb/session/old/adodb-session.php
 share/mantis/core/adodb/session/old/crypt.inc.php
-share/mantis/core/adodb/tests/benchmark.php
-share/mantis/core/adodb/tests/client.php
-share/mantis/core/adodb/tests/pdo.php
-share/mantis/core/adodb/tests/test-datadict.php
-share/mantis/core/adodb/tests/test-perf.php
-share/mantis/core/adodb/tests/test-pgblob.php
-share/mantis/core/adodb/tests/test-php5.php
-share/mantis/core/adodb/tests/test-xmlschema.php
-share/mantis/core/adodb/tests/test.php
-share/mantis/core/adodb/tests/test2.php
-share/mantis/core/adodb/tests/test3.php
-share/mantis/core/adodb/tests/test4.php
-share/mantis/core/adodb/tests/test5.php
-share/mantis/core/adodb/tests/test_rs_array.php
-share/mantis/core/adodb/tests/testcache.php
-share/mantis/core/adodb/tests/testdatabases.inc.php
-share/mantis/core/adodb/tests/testgenid.php
-share/mantis/core/adodb/tests/testmssql.php
-share/mantis/core/adodb/tests/testoci8.php
-share/mantis/core/adodb/tests/testoci8cursor.php
-share/mantis/core/adodb/tests/testpaging.php
-share/mantis/core/adodb/tests/testpear.php
-share/mantis/core/adodb/tests/testsessions.php
-share/mantis/core/adodb/tests/time.php
-share/mantis/core/adodb/tests/tmssql.php
-share/mantis/core/adodb/tests/xmlschema.xml
 share/mantis/core/adodb/toexport.inc.php
 share/mantis/core/adodb/tohtml.inc.php
 share/mantis/core/adodb/xmlschema.dtd
@@ -573,7 +547,6 @@ share/mantis/view_filters_page.php
 @dirrm share/mantis/core/adodb/datadict
 @dirrm share/mantis/core/adodb/session/old
 @dirrm share/mantis/core/adodb/session
-@dirrm share/mantis/core/adodb/tests
 @dirrm share/mantis/core/adodb/xsl
 @dirrm share/mantis/core/adodb
 @dirrm share/mantis/core
