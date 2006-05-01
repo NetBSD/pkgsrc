@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.94 2006/05/01 09:35:12 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.95 2006/05/01 09:48:41 cube Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2320,3 +2320,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/cherokee version 0.5.3 [jmmv 2006-05-01]
 	Updated archivers/libarchive to 1.2.53 [xtraeme 2006-05-01]
 	Updated pkgtools/pkg_chk to 1.71 [wiz 2006-05-01]
+	Updated devel/rt3 to 3.4.5 [cube 2006-05-01]
+	Updated devel/RTFM to 2.0.4nb3 [cube 2006-05-01]
+	Added devel/RTx-Shredder version 0.03 [cube 2006-05-01]
+	Added devel/RTx-RightsMatrix version 0.03.00 [cube 2006-05-01]
