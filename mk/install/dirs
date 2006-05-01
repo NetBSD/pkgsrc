@@ -1,4 +1,4 @@
-# $NetBSD: dirs,v 1.14 2006/04/25 22:35:46 jlam Exp $
+# $NetBSD: dirs,v 1.15 2006/05/01 14:56:23 jlam Exp $
 #
 # Generate a +DIRS script that reference counts directories that are
 # required for the proper functioning of the package.
@@ -281,9 +281,9 @@ CHECK-REMOVE)
 	;;
 
 CHECK-PERMS)
-	tmpdir="${TMPDIR:-/tmp}/pkginstall.$$"
+	tmpdir="./.pkginstall.$$"
 	${MKDIR} -p $tmpdir 2>/dev/null || exit 1
-	${CHMOD} 700 $tmpdir
+	${CHMOD} 0700 $tmpdir
 	${SED} -n "/^\# DIR: /{s/^\# DIR: //;p;}" ${SELF} | ${SORT} -ru |
 	{ while read dir d_flags d_mode d_user d_group; do
 		case $dir in
@@ -296,9 +296,10 @@ CHECK-PERMS)
 		esac
 
 		perms=`${LS} -ld $dir | ${AWK} '{ print $1":"$3":"$4 }'`
-		${MKDIR} -p $tmpdir/tmp
-		${CHMOD} $d_mode $tmpdir/tmp 2>/dev/null
-		longmode=`${LS} -ld $tmpdir/tmp | ${AWK} '{ print $1 }'`
+		testpath="$tmpdir/dir_perms"
+		${MKDIR} -p $testpath
+		${CHMOD} $d_mode $testpath 2>/dev/null
+		longmode=`${LS} -ld $testpath | ${AWK} '{ print $1 }'`
 		case $d_mode:$d_user:$d_group in
 		:[!:]*:)
 			case "$perms" in
@@ -354,7 +355,7 @@ CHECK-PERMS)
 		exit 1
 		;;
 	esac; }
-	rm -rf $tmpdir
+	${RM} -fr $tmpdir
 	${TEST} $? -eq 0 || exitcode=1
 	;;
 
