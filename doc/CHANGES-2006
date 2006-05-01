@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.96 2006/05/01 10:02:26 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.97 2006/05/01 13:02:13 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2325,3 +2325,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/RTx-Shredder version 0.03 [cube 2006-05-01]
 	Added devel/RTx-RightsMatrix version 0.03.00 [cube 2006-05-01]
 	Updated x11/gdm to 2.14.4 [jmmv 2006-05-01]
+	Updated devel/mantis to 1.0.2 [adrianp 2006-05-01]
