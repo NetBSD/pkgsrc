@@ -1,52 +1,66 @@
-# $NetBSD: Makefile.install,v 1.4 2006/04/12 20:05:19 joerg Exp $
+# $NetBSD: Makefile.install,v 1.5 2006/05/01 09:38:08 cube Exp $
 
-RT_SHARE_DIR=		${PREFIX}/share/rt3
-RT_EXAMPLE_DIR= 	${PREFIX}/share/examples/rt3
-RT_LIB_DIR=		${PREFIX}/lib/rt3
-RT_VAR_DIR=		${VARBASE}/spool/rt3
-RT_LOCAL_DIR?=		${RT_SHARE_DIR}/local
-RT_HTML_DIR=		${RT_SHARE_DIR}/html
-RT_DOC_DIR=		${PREFIX}/share/doc/rt3
+.include "dirs.mk"
 
-BUILD_DEFS+=		RT_LOCAL_DIR
+OWN_DIRS+=		${RT_VAR_DIR} ${RT_LOCAL_DIR} ${RT_LOCAL_DIR}/etc
+OWN_DIRS+=		${RT_LOCAL_DIR}/lib ${RT_LOCAL_DIR}/po
+OWN_DIRS+=		${RT_LOCAL_DIR}/html
+REQD_DIRS+=		${RT_HTML_DIR}/Callbacks
 
-REQD_DIRS+=		${RT_LOCAL_DIR} ${RT_SHARE_DIR}
-OWN_DIRS+=		${RT_VAR_DIR}
+OWN_DIRS_PERMS+=	${RT_VAR_DIR}/mason_data	${APACHE_USER}	${APACHE_GROUP}	0770
+OWN_DIRS_PERMS+=	${RT_VAR_DIR}/mason_data/cache	${APACHE_USER}	${APACHE_GROUP}	0770
+OWN_DIRS_PERMS+=	${RT_VAR_DIR}/mason_data/etc	${APACHE_USER}	${APACHE_GROUP}	0770
+OWN_DIRS_PERMS+=	${RT_VAR_DIR}/mason_data/obj	${APACHE_USER}	${APACHE_GROUP}	0770
+OWN_DIRS_PERMS+=	${RT_VAR_DIR}/session_data	${APACHE_USER}	${APACHE_GROUP}	0770
 
 SUBST_CLASSES+=		prefix
 SUBST_FILES.prefix=	config.layout
-SUBST_SED.prefix=	-e s,@PREFIX@,${PREFIX},		\
-			-e s,@PKGSYSCONFDIR@,${PKG_SYSCONFDIR},	\
-			-e s,@RTLIBDIR@,${RT_LIB_DIR},		\
-			-e s,@RTSHAREDIR@,${RT_SHARE_DIR},	\
-			-e s,@RTHTMLDIR@,${RT_HTML_DIR},	\
-			-e s,@RTDOCDIR@,${RT_DOC_DIR},		\
-			-e s,@RTVARDIR@,${RT_VAR_DIR},		\
-			-e s,@RTLOCALDIR@,${RT_LOCAL_DIR},
+SUBST_SED.prefix=	-e s,@PREFIX@,${PREFIX},
+SUBST_SED.prefix+=	-e s,@PKGSYSCONFDIR@,${PKG_SYSCONFDIR},
+SUBST_SED.prefix+=	-e s,@RTLIBDIR@,${RT_LIB_DIR},
+SUBST_SED.prefix+=	-e s,@RTSHAREDIR@,${RT_SHARE_DIR},
+SUBST_SED.prefix+=	-e s,@RTHTMLDIR@,${RT_HTML_DIR},
+SUBST_SED.prefix+=	-e s,@RTDOCDIR@,${RT_DOC_DIR},
+SUBST_SED.prefix+=	-e s,@RTVARDIR@,${RT_VAR_DIR},
+SUBST_SED.prefix+=	-e s,@RTLOCALDIR@,${RT_LOCAL_DIR},
 SUBST_STAGE.prefix=	pre-configure
 
+SUBST_CLASSES+=		etcpath
+SUBST_FILES.etcpath=	sbin/rt-setup-database.in
+SUBST_SED.etcpath=	-e 's,\$$RT::EtcPath,"${RT_SHARE_DIR}/etc",'
+SUBST_STAGE.etcpath=	post-patch
+
 RT_CONFIG_FILES=	RT_Config.pm RT_SiteConfig.pm
-RT_SUPPORT_FILES=	acl.Informix acl.Oracle acl.Pg acl.Sybase acl.mysql		\
-			initialdata schema.Informix schema.Oracle schema.Pg		\
-			schema.Sybase schema.mysql
 
 .for _file_ in ${RT_CONFIG_FILES}
-CONF_FILES_PERMS+=	${RT_EXAMPLE_DIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_} \
-${ROOT_USER} ${RT_GROUP} 0550
-.endfor
-.for _file_ in ${RT_SUPPORT_FILES}
-CONF_FILES_PERMS+=	${RT_EXAMPLE_DIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_} \
-${ROOT_USER} ${RT_GROUP} 0500
+CONF_FILES_PERMS+=	${RT_EXAMPLE_DIR}/${_file_}	\
+			${PKG_SYSCONFDIR}/${_file_}	\
+			${ROOT_USER} ${RT_GROUP} 0550
 .endfor
 
-FILES_SUBST+=		RTVARDIR=${RT_VAR_DIR:Q} RTLOCALDIR=${RT_LOCAL_DIR:Q}
-FILES_SUBST+=		WEBUSER=${APACHE_USER:Q} WEBGROUP=${APACHE_GROUP:Q}
+RT_ETC_FILES=		acl.Oracle acl.Pg acl.mysql constraints.mysql	\
+			drop.Oracle initialdata schema.Oracle schema.Pg	\
+			schema.SQLite schema.mysql
+RT_UPGRADE_DIRS=	3.3.0 3.3.11
+
+MESSAGE_SUBST+=		RTVARDIR=${RT_VAR_DIR:Q} RTSHAREDIR=${RT_SHARE_DIR:Q}
 
 do-install:
 	@${ECHO} "=> Configuration files"
 	${INSTALL_DATA_DIR} ${RT_EXAMPLE_DIR}
-.for _file_ in ${RT_CONFIG_FILES} ${RT_SUPPORT_FILES}
+.for _file_ in ${RT_CONFIG_FILES}
 	${INSTALL_DATA} ${WRKSRC}/etc/${_file_} ${RT_EXAMPLE_DIR}
+.endfor
+	${INSTALL_DATA_DIR} ${RT_SHARE_DIR}/etc
+.for _file_ in ${RT_ETC_FILES}
+	${INSTALL_DATA} ${WRKSRC}/etc/${_file_} ${RT_SHARE_DIR}/etc
+.endfor
+	${INSTALL_DATA_DIR} ${RT_SHARE_DIR}/etc/upgrade
+.for _dir_ in ${RT_UPGRADE_DIRS}
+	${INSTALL_DATA_DIR} ${RT_SHARE_DIR}/etc/upgrade/${_dir_}
+	cd ${WRKSRC}/etc/upgrade/${_dir_} &&						\
+		${FIND} . -type f ! -name '*.orig' 2>/dev/null | 			\
+		${PAX} -rw ${RT_SHARE_DIR}/etc/upgrade/${_dir_}
 .endfor
 	@${ECHO} "=> Libraries"
 	${INSTALL_DATA_DIR} ${RT_LIB_DIR}
