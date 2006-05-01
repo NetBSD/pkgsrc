@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/13 21:34:16 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/05/01 09:02:38 xtraeme Exp $
 include/archive.h
 include/archive_entry.h
 lib/libarchive.la
@@ -8,4 +8,3 @@ man/man3/archive_util.3
 man/man3/archive_write.3
 man/man3/libarchive.3
 man/man5/libarchive-formats.5
-man/man5/tar.5
