@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/12 10:27:07 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/05/01 00:27:04 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BOOST_PYTHON_BUILDLINK3_MK:=	${BOOST_PYTHON_BUILDLINK3_MK}+
@@ -15,6 +15,7 @@ BUILDLINK_PACKAGES+=	boost-python
 BUILDLINK_API_DEPENDS.boost-python+=	boost-python-1.33.*
 BUILDLINK_ABI_DEPENDS.boost-python?=	boost-python>=1.33.1nb1
 BUILDLINK_PKGSRCDIR.boost-python?=	../../devel/boost-python
+.endif
 
 .include "../../devel/boost-headers/buildlink3.mk"
 
