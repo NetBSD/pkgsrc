@@ -1,24 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/28 19:07:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/05/01 22:23:43 rillig Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
 info/maxima.info
 info/maxima.info-1
-info/maxima.info-10
-info/maxima.info-11
-info/maxima.info-12
-info/maxima.info-13
-info/maxima.info-14
-info/maxima.info-15
-info/maxima.info-16
 info/maxima.info-2
 info/maxima.info-3
 info/maxima.info-4
 info/maxima.info-5
-info/maxima.info-6
-info/maxima.info-7
-info/maxima.info-8
-info/maxima.info-9
 lib/maxima/${PKGVERSION}/binary-clisp/lisp.run
 lib/maxima/${PKGVERSION}/binary-clisp/maxima.mem
 libexec/maxima/${PKGVERSION}/mgnuplot
@@ -81,6 +70,8 @@ share/maxima/${PKGVERSION}/doc/html/maxima_40.html
 share/maxima/${PKGVERSION}/doc/html/maxima_41.html
 share/maxima/${PKGVERSION}/doc/html/maxima_42.html
 share/maxima/${PKGVERSION}/doc/html/maxima_43.html
+share/maxima/${PKGVERSION}/doc/html/maxima_44.html
+share/maxima/${PKGVERSION}/doc/html/maxima_45.html
 share/maxima/${PKGVERSION}/doc/html/maxima_5.html
 share/maxima/${PKGVERSION}/doc/html/maxima_6.html
 share/maxima/${PKGVERSION}/doc/html/maxima_7.html
@@ -89,72 +80,6 @@ share/maxima/${PKGVERSION}/doc/html/maxima_9.html
 share/maxima/${PKGVERSION}/doc/html/maxima_toc.html
 share/maxima/${PKGVERSION}/doc/implementation/dir_vars.txt
 share/maxima/${PKGVERSION}/doc/implementation/external-interface.txt
-share/maxima/${PKGVERSION}/doc/maximabook/Makefile
-share/maxima/${PKGVERSION}/doc/maximabook/README
-share/maxima/${PKGVERSION}/doc/maximabook/TODO
-share/maxima/${PKGVERSION}/doc/maximabook/algcal/algcal.tex
-share/maxima/${PKGVERSION}/doc/maximabook/basics/basics.tex
-share/maxima/${PKGVERSION}/doc/maximabook/examples/examples.tex
-share/maxima/${PKGVERSION}/doc/maximabook/images/2dplotwindow.eps
-share/maxima/${PKGVERSION}/doc/maximabook/images/2dplotwindow.png
-share/maxima/${PKGVERSION}/doc/maximabook/images/3dplotwindow.eps
-share/maxima/${PKGVERSION}/doc/maximabook/images/3dplotwindow.png
-share/maxima/${PKGVERSION}/doc/maximabook/images/emacsmaximamodeshot.eps
-share/maxima/${PKGVERSION}/doc/maximabook/images/emacsmaximamodeshot.png
-share/maxima/${PKGVERSION}/doc/maximabook/images/emacsshot.eps
-share/maxima/${PKGVERSION}/doc/maximabook/images/emacsshot.png
-share/maxima/${PKGVERSION}/doc/maximabook/images/emaximashot.eps
-share/maxima/${PKGVERSION}/doc/maximabook/images/emaximashot.png
-share/maxima/${PKGVERSION}/doc/maximabook/images/imaxima.eps
-share/maxima/${PKGVERSION}/doc/maximabook/images/imaxima.png
-share/maxima/${PKGVERSION}/doc/maximabook/images/maxima_geomview.eps
-share/maxima/${PKGVERSION}/doc/maximabook/images/maxima_geomview.png
-share/maxima/${PKGVERSION}/doc/maximabook/images/maxima_gnuplot.eps
-share/maxima/${PKGVERSION}/doc/maximabook/images/maxima_gnuplot.png
-share/maxima/${PKGVERSION}/doc/maximabook/images/maxima_openmath.eps
-share/maxima/${PKGVERSION}/doc/maximabook/images/maxima_openmath.png
-share/maxima/${PKGVERSION}/doc/maximabook/images/maximawindowsinstall1.eps
-share/maxima/${PKGVERSION}/doc/maximabook/images/maximawindowsinstall1.png
-share/maxima/${PKGVERSION}/doc/maximabook/images/symaxx.eps
-share/maxima/${PKGVERSION}/doc/maximabook/images/symaxx.png
-share/maxima/${PKGVERSION}/doc/maximabook/images/symaxxoutput.png
-share/maxima/${PKGVERSION}/doc/maximabook/images/symaxxoutput.ps
-share/maxima/${PKGVERSION}/doc/maximabook/images/terminalshot.eps
-share/maxima/${PKGVERSION}/doc/maximabook/images/terminalshot.png
-share/maxima/${PKGVERSION}/doc/maximabook/images/texmacs.eps
-share/maxima/${PKGVERSION}/doc/maximabook/images/texmacs.png
-share/maxima/${PKGVERSION}/doc/maximabook/images/xmaxima.eps
-share/maxima/${PKGVERSION}/doc/maximabook/images/xmaxima.png
-share/maxima/${PKGVERSION}/doc/maximabook/install/install.tex
-share/maxima/${PKGVERSION}/doc/maximabook/interfaces/interfaces.tex
-share/maxima/${PKGVERSION}/doc/maximabook/introduction/introduction.tex
-share/maxima/${PKGVERSION}/doc/maximabook/maxima.bib
-share/maxima/${PKGVERSION}/doc/maximabook/maxima.tex
-share/maxima/${PKGVERSION}/doc/maximabook/maxims/maxims.tex
-share/maxima/${PKGVERSION}/doc/maximabook/odes/advmath.tex
-share/maxima/${PKGVERSION}/doc/maximabook/odes/odes.tex
-share/maxima/${PKGVERSION}/doc/maximabook/output/izicinfo.txt
-share/maxima/${PKGVERSION}/doc/maximabook/output/output.tex
-share/maxima/${PKGVERSION}/doc/maximabook/preface/pref.tex
-share/maxima/${PKGVERSION}/doc/maximabook/programming/prog.tex
-share/maxima/${PKGVERSION}/doc/maximabook/share/calculus/pdiff.tex
-share/maxima/${PKGVERSION}/doc/maximabook/share/physics/dimension.tex
-share/maxima/${PKGVERSION}/doc/maximabook/storage/bibarchive/axiom.bib
-share/maxima/${PKGVERSION}/doc/maximabook/storage/bibarchive/higherordersymbcomput.bib
-share/maxima/${PKGVERSION}/doc/maximabook/storage/bibarchive/jsymcomp.bib
-share/maxima/${PKGVERSION}/doc/maximabook/storage/bibarchive/lispsymbcomput.bib
-share/maxima/${PKGVERSION}/doc/maximabook/storage/bibarchive/macsyma.bib
-share/maxima/${PKGVERSION}/doc/maximabook/storage/bibarchive/maple-extract.bib
-share/maxima/${PKGVERSION}/doc/maximabook/storage/bibarchive/maple-tech.bib
-share/maxima/${PKGVERSION}/doc/maximabook/storage/bibarchive/mathematica.bib
-share/maxima/${PKGVERSION}/doc/maximabook/storage/bibarchive/red-a-f.bib
-share/maxima/${PKGVERSION}/doc/maximabook/storage/bibarchive/red-g-l.bib
-share/maxima/${PKGVERSION}/doc/maximabook/storage/bibarchive/red-m-z.bib
-share/maxima/${PKGVERSION}/doc/maximabook/storage/bibarchive/redbooks.bib
-share/maxima/${PKGVERSION}/doc/maximabook/storage/bibarchive/redextra.bib
-share/maxima/${PKGVERSION}/doc/maximabook/storage/bibarchive/reduce.bib
-share/maxima/${PKGVERSION}/doc/maximabook/storage/bibarchive/sigsam.bib
-share/maxima/${PKGVERSION}/doc/maximabook/storage/primer/primer.tex
 share/maxima/${PKGVERSION}/doc/misc/completescanoffunctionssortedbybytecodelength.txt
 share/maxima/${PKGVERSION}/doc/misc/grepforvariables.sh
 share/maxima/${PKGVERSION}/doc/misc/maximafunctions.txt
@@ -180,6 +105,7 @@ share/maxima/${PKGVERSION}/emacs/maxima-font-lock.el
 share/maxima/${PKGVERSION}/emacs/maxima.el
 share/maxima/${PKGVERSION}/emacs/smart-complete.el
 share/maxima/${PKGVERSION}/emacs/sshell.el
+share/maxima/${PKGVERSION}/msgs/ru.msg
 share/maxima/${PKGVERSION}/share/affine/README
 share/maxima/${PKGVERSION}/share/affine/affine.lisp
 share/maxima/${PKGVERSION}/share/affine/affine.system
@@ -204,6 +130,7 @@ share/maxima/${PKGVERSION}/share/affine/polysmp.lisp
 share/maxima/${PKGVERSION}/share/affine/sheafa.lisp
 share/maxima/${PKGVERSION}/share/affine/sheafb.lisp
 share/maxima/${PKGVERSION}/share/affine/sheafc.lisp
+share/maxima/${PKGVERSION}/share/affine/sloop.lisp
 share/maxima/${PKGVERSION}/share/affine/sparsemat.lisp
 share/maxima/${PKGVERSION}/share/affine/sub-proj.lisp
 share/maxima/${PKGVERSION}/share/affine/sys-declaim.lisp
@@ -212,13 +139,15 @@ share/maxima/${PKGVERSION}/share/affine/sysdef.lisp
 share/maxima/${PKGVERSION}/share/affine/todd-coxeter.lisp
 share/maxima/${PKGVERSION}/share/algebra/charsets/README
 share/maxima/${PKGVERSION}/share/algebra/charsets/charsets.mac
+share/maxima/${PKGVERSION}/share/algebra/charsets/flatten.lisp
+share/maxima/${PKGVERSION}/share/algebra/charsets/rtestflatten.mac
+share/maxima/${PKGVERSION}/share/algebra/charsets/set.lisp
 share/maxima/${PKGVERSION}/share/algebra/charsets/test1.mac
 share/maxima/${PKGVERSION}/share/algebra/differ.dem
 share/maxima/${PKGVERSION}/share/algebra/differ.mac
 share/maxima/${PKGVERSION}/share/algebra/gcdex.mac
 share/maxima/${PKGVERSION}/share/algebra/grob1.lisp
 share/maxima/${PKGVERSION}/share/algebra/nusum.mac
-share/maxima/${PKGVERSION}/share/algebra/nusum.usg
 share/maxima/${PKGVERSION}/share/algebra/recur.dem
 share/maxima/${PKGVERSION}/share/algebra/recur.lisp
 share/maxima/${PKGVERSION}/share/algebra/recur.mac
@@ -237,9 +166,7 @@ share/maxima/${PKGVERSION}/share/calculus/cartan.dem
 share/maxima/${PKGVERSION}/share/calculus/cartan.lisp
 share/maxima/${PKGVERSION}/share/calculus/fourie.dem
 share/maxima/${PKGVERSION}/share/calculus/fourie.mac
-share/maxima/${PKGVERSION}/share/calculus/fourie.usg
 share/maxima/${PKGVERSION}/share/calculus/gendif.mac
-share/maxima/${PKGVERSION}/share/calculus/gendif.usg
 share/maxima/${PKGVERSION}/share/calculus/optmiz.dem
 share/maxima/${PKGVERSION}/share/calculus/optmiz.mac
 share/maxima/${PKGVERSION}/share/calculus/optmiz.transcript
@@ -260,7 +187,6 @@ share/maxima/${PKGVERSION}/share/calculus/qual.mac
 share/maxima/${PKGVERSION}/share/calculus/qual.usg
 share/maxima/${PKGVERSION}/share/calculus/qualsp.lisp
 share/maxima/${PKGVERSION}/share/calculus/revert.mac
-share/maxima/${PKGVERSION}/share/calculus/revert.usg
 share/maxima/${PKGVERSION}/share/calculus/taylor1.mac
 share/maxima/${PKGVERSION}/share/combinatorics/comgen.lisp
 share/maxima/${PKGVERSION}/share/combinatorics/permut.lisp
@@ -269,6 +195,43 @@ share/maxima/${PKGVERSION}/share/contrib/Grobner/grobner-demo.output
 share/maxima/${PKGVERSION}/share/contrib/Grobner/grobner.demo
 share/maxima/${PKGVERSION}/share/contrib/Grobner/maxima-grobner.lisp
 share/maxima/${PKGVERSION}/share/contrib/README
+share/maxima/${PKGVERSION}/share/contrib/Zeilberger/Gosper.mac
+share/maxima/${PKGVERSION}/share/contrib/Zeilberger/GosperEq.mac
+share/maxima/${PKGVERSION}/share/contrib/Zeilberger/LOADZeilberger.mac
+share/maxima/${PKGVERSION}/share/contrib/Zeilberger/Zeilberger.mac
+share/maxima/${PKGVERSION}/share/contrib/Zeilberger/algUtil.mac
+share/maxima/${PKGVERSION}/share/contrib/Zeilberger/compatible.mac
+share/maxima/${PKGVERSION}/share/contrib/Zeilberger/constants.mac
+share/maxima/${PKGVERSION}/share/contrib/Zeilberger/linearAlgebra.mac
+share/maxima/${PKGVERSION}/share/contrib/Zeilberger/makeGosperForm.mac
+share/maxima/${PKGVERSION}/share/contrib/Zeilberger/norm.mac
+share/maxima/${PKGVERSION}/share/contrib/Zeilberger/numerical.mac
+share/maxima/${PKGVERSION}/share/contrib/Zeilberger/readme.txt
+share/maxima/${PKGVERSION}/share/contrib/Zeilberger/settings.mac
+share/maxima/${PKGVERSION}/share/contrib/Zeilberger/shiftQuotient.mac
+share/maxima/${PKGVERSION}/share/contrib/Zeilberger/testGosper.mac
+share/maxima/${PKGVERSION}/share/contrib/Zeilberger/testZeilberger.mac
+share/maxima/${PKGVERSION}/share/contrib/Zeilberger/whatsnew.txt
+share/maxima/${PKGVERSION}/share/contrib/defstruct.lisp
+share/maxima/${PKGVERSION}/share/contrib/descriptive/README
+share/maxima/${PKGVERSION}/share/contrib/descriptive/biomed.data
+share/maxima/${PKGVERSION}/share/contrib/descriptive/descriptive.mac
+share/maxima/${PKGVERSION}/share/contrib/descriptive/doc/barsplot1.eps
+share/maxima/${PKGVERSION}/share/contrib/descriptive/doc/barsplot2.eps
+share/maxima/${PKGVERSION}/share/contrib/descriptive/doc/boxplot1.eps
+share/maxima/${PKGVERSION}/share/contrib/descriptive/doc/boxplot2.eps
+share/maxima/${PKGVERSION}/share/contrib/descriptive/doc/dataplot1.eps
+share/maxima/${PKGVERSION}/share/contrib/descriptive/doc/dataplot2.eps
+share/maxima/${PKGVERSION}/share/contrib/descriptive/doc/dataplot3.eps
+share/maxima/${PKGVERSION}/share/contrib/descriptive/doc/dataplot4.eps
+share/maxima/${PKGVERSION}/share/contrib/descriptive/doc/dataplot5.eps
+share/maxima/${PKGVERSION}/share/contrib/descriptive/doc/dataplot6.eps
+share/maxima/${PKGVERSION}/share/contrib/descriptive/doc/descriptive_en.tex
+share/maxima/${PKGVERSION}/share/contrib/descriptive/doc/descriptive_es.tex
+share/maxima/${PKGVERSION}/share/contrib/descriptive/doc/histogram1.eps
+share/maxima/${PKGVERSION}/share/contrib/descriptive/doc/histogram2.eps
+share/maxima/${PKGVERSION}/share/contrib/descriptive/pidigits.data
+share/maxima/${PKGVERSION}/share/contrib/descriptive/wind.data
 share/maxima/${PKGVERSION}/share/contrib/diag.dem
 share/maxima/${PKGVERSION}/share/contrib/diag.mac
 share/maxima/${PKGVERSION}/share/contrib/diag.usg
@@ -288,9 +251,28 @@ share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtest_ode1_abel.mac
 share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtest_ode1_riccati.mac
 share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtest_sym.mac
 share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtest_sym2.mac
-share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy1.mac
-share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy2.mac
+share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_kamke_1_1.mac
+share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_kamke_1_2.mac
+share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_kamke_1_3.mac
+share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_kamke_1_4.mac
+share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_kamke_1_5.mac
+share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_kamke_1_6.mac
+share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy_1_1.mac
+share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy_1_2.mac
+share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy_1_3.mac
+share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy_1_4.mac
+share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy_1_5.mac
+share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy_1_6.mac
+share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy_2_1.mac
+share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy_2_2.mac
+share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy_2_3.mac
+share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy_2_4.mac
+share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/rtestode_murphy_2_5.mac
 share/maxima/${PKGVERSION}/share/contrib/diffequations/tests/testsuite.lisp
+share/maxima/${PKGVERSION}/share/contrib/distrib/README
+share/maxima/${PKGVERSION}/share/contrib/distrib/distrib.mac
+share/maxima/${PKGVERSION}/share/contrib/distrib/doc/distrib_en.tex
+share/maxima/${PKGVERSION}/share/contrib/eval_string.lisp
 share/maxima/${PKGVERSION}/share/contrib/f90.lisp
 share/maxima/${PKGVERSION}/share/contrib/f90.usg
 share/maxima/${PKGVERSION}/share/contrib/format/README
@@ -317,6 +299,7 @@ share/maxima/${PKGVERSION}/share/contrib/gentran/lspc.lisp
 share/maxima/${PKGVERSION}/share/contrib/gentran/lspfor.lisp
 share/maxima/${PKGVERSION}/share/contrib/gentran/lsprat.lisp
 share/maxima/${PKGVERSION}/share/contrib/gentran/man/MANUAL.ms
+share/maxima/${PKGVERSION}/share/contrib/gentran/man/MANUAL.ps.gz
 share/maxima/${PKGVERSION}/share/contrib/gentran/man/appA.ms
 share/maxima/${PKGVERSION}/share/contrib/gentran/man/appA1.ms
 share/maxima/${PKGVERSION}/share/contrib/gentran/man/appB.ms
@@ -369,6 +352,11 @@ share/maxima/${PKGVERSION}/share/contrib/impdiff.mac
 share/maxima/${PKGVERSION}/share/contrib/lindstedt.mac
 share/maxima/${PKGVERSION}/share/contrib/lsquares.dem
 share/maxima/${PKGVERSION}/share/contrib/lsquares.mac
+share/maxima/${PKGVERSION}/share/contrib/lurkmathml/README
+share/maxima/${PKGVERSION}/share/contrib/lurkmathml/mathml.lisp
+share/maxima/${PKGVERSION}/share/contrib/lurkmathml/mathml_ref_list_for_IE
+share/maxima/${PKGVERSION}/share/contrib/lurkmathml/mathmltest
+share/maxima/${PKGVERSION}/share/contrib/lurkmathml/maximadiffs.txt
 share/maxima/${PKGVERSION}/share/contrib/makeOrders.mac
 share/maxima/${PKGVERSION}/share/contrib/maximaMathML/CtMathML.lisp
 share/maxima/${PKGVERSION}/share/contrib/maximaMathML/PrMathML.lisp
@@ -376,14 +364,20 @@ share/maxima/${PKGVERSION}/share/contrib/maximaMathML/load-mathml.lisp
 share/maxima/${PKGVERSION}/share/contrib/maximaMathML/mathml-maxima.lisp
 share/maxima/${PKGVERSION}/share/contrib/maximaMathML/mathml.readme
 share/maxima/${PKGVERSION}/share/contrib/maximaMathML/mathmldisplay.lisp
+share/maxima/${PKGVERSION}/share/contrib/mcclim/README
+share/maxima/${PKGVERSION}/share/contrib/mcclim/formula.lisp
+share/maxima/${PKGVERSION}/share/contrib/mcclim/listeneroutput.png
+share/maxima/${PKGVERSION}/share/contrib/mcclim/maxima-repl-mcclim.lisp
+share/maxima/${PKGVERSION}/share/contrib/mcclim/postscriptoutput.png
 share/maxima/${PKGVERSION}/share/contrib/mnewton.dem
 share/maxima/${PKGVERSION}/share/contrib/mnewton.mac
 share/maxima/${PKGVERSION}/share/contrib/nset/README
+share/maxima/${PKGVERSION}/share/contrib/nset/announce-1.2.txt
+share/maxima/${PKGVERSION}/share/contrib/nset/changes_1.0_to_1.2.txt
+share/maxima/${PKGVERSION}/share/contrib/nset/maxima-init.lisp
 share/maxima/${PKGVERSION}/share/contrib/nset/nset-init.lisp
 share/maxima/${PKGVERSION}/share/contrib/nset/nset.html
-share/maxima/${PKGVERSION}/share/contrib/nset/nset.lisp
-share/maxima/${PKGVERSION}/share/contrib/nset/nset.texi
-share/maxima/${PKGVERSION}/share/contrib/nset/test-nset.mac
+share/maxima/${PKGVERSION}/share/contrib/nset/nset_toc.html
 share/maxima/${PKGVERSION}/share/contrib/numericalio/README
 share/maxima/${PKGVERSION}/share/contrib/numericalio/array.data
 share/maxima/${PKGVERSION}/share/contrib/numericalio/array.mac
@@ -403,6 +397,9 @@ share/maxima/${PKGVERSION}/share/contrib/pdiff/history.txt
 share/maxima/${PKGVERSION}/share/contrib/pdiff/pdiff-doc.pdf
 share/maxima/${PKGVERSION}/share/contrib/pdiff/pdiff-doc.tex
 share/maxima/${PKGVERSION}/share/contrib/pdiff/pdiff.lisp
+share/maxima/${PKGVERSION}/share/contrib/plotdf.dem
+share/maxima/${PKGVERSION}/share/contrib/plotdf.lisp
+share/maxima/${PKGVERSION}/share/contrib/plotdf.usg
 share/maxima/${PKGVERSION}/share/contrib/plsquares.dem
 share/maxima/${PKGVERSION}/share/contrib/plsquares.mac
 share/maxima/${PKGVERSION}/share/contrib/rand/Avg3.mac
@@ -459,8 +456,30 @@ share/maxima/${PKGVERSION}/share/contrib/rand/twovar.mac
 share/maxima/${PKGVERSION}/share/contrib/rand/twovar.usg
 share/maxima/${PKGVERSION}/share/contrib/rand/vandpol.mac
 share/maxima/${PKGVERSION}/share/contrib/rand/vandpol.usg
+share/maxima/${PKGVERSION}/share/contrib/rtestdefstruct.mac
+share/maxima/${PKGVERSION}/share/contrib/sarag/aliases.mac
+share/maxima/${PKGVERSION}/share/contrib/sarag/constants.mac
+share/maxima/${PKGVERSION}/share/contrib/sarag/examples.mac
+share/maxima/${PKGVERSION}/share/contrib/sarag/linearAlgebra.mac
+share/maxima/${PKGVERSION}/share/contrib/sarag/loadSARAG.mac
+share/maxima/${PKGVERSION}/share/contrib/sarag/lowLevel.mac
+share/maxima/${PKGVERSION}/share/contrib/sarag/readme.txt
+share/maxima/${PKGVERSION}/share/contrib/sarag/rootCounting.mac
+share/maxima/${PKGVERSION}/share/contrib/sarag/rootIsolation.mac
+share/maxima/${PKGVERSION}/share/contrib/sarag/settings.mac
+share/maxima/${PKGVERSION}/share/contrib/sarag/signDetermination.mac
+share/maxima/${PKGVERSION}/share/contrib/state/a.cir
+share/maxima/${PKGVERSION}/share/contrib/state/b.cir
+share/maxima/${PKGVERSION}/share/contrib/state/c.cir
+share/maxima/${PKGVERSION}/share/contrib/state/d.cir
+share/maxima/${PKGVERSION}/share/contrib/state/matrix2.mac
+share/maxima/${PKGVERSION}/share/contrib/state/readfile.lsp
+share/maxima/${PKGVERSION}/share/contrib/state/sortem.mac
+share/maxima/${PKGVERSION}/share/contrib/state/state.mac
+share/maxima/${PKGVERSION}/share/contrib/state/tree.mac
+share/maxima/${PKGVERSION}/share/contrib/unit/unit-functions.lisp
 share/maxima/${PKGVERSION}/share/contrib/unit/unit.mac
-share/maxima/${PKGVERSION}/share/contrib/unit/unit.usg
+share/maxima/${PKGVERSION}/share/contrib/unit/unit.texi
 share/maxima/${PKGVERSION}/share/diffequations/abel.mac
 share/maxima/${PKGVERSION}/share/diffequations/desoln.mac
 share/maxima/${PKGVERSION}/share/diffequations/desoln.usg
@@ -473,19 +492,30 @@ share/maxima/${PKGVERSION}/share/diffequations/pdvtr.mac
 share/maxima/${PKGVERSION}/share/diffequations/phypgm.mac
 share/maxima/${PKGVERSION}/share/diffequations/pivtr.mac
 share/maxima/${PKGVERSION}/share/diffequations/pmain.mac
-share/maxima/${PKGVERSION}/share/graphics/world.mac
 share/maxima/${PKGVERSION}/share/integequations/inteqn.mac
 share/maxima/${PKGVERSION}/share/integequations/inteqn.usg
 share/maxima/${PKGVERSION}/share/integequations/intexs.mac
 share/maxima/${PKGVERSION}/share/integration/antid.dem
 share/maxima/${PKGVERSION}/share/integration/antid.mac
-share/maxima/${PKGVERSION}/share/integration/antid.usg
 share/maxima/${PKGVERSION}/share/integration/bypart.mac
 share/maxima/${PKGVERSION}/share/integration/delta.dem
 share/maxima/${PKGVERSION}/share/integration/delta.mac
 share/maxima/${PKGVERSION}/share/integration/delta.usg
-share/maxima/${PKGVERSION}/share/integration/intsce.mac
-share/maxima/${PKGVERSION}/share/integration/intsce.usg
+share/maxima/${PKGVERSION}/share/linearalgebra/announcement.txt
+share/maxima/${PKGVERSION}/share/linearalgebra/conjugate.lisp
+share/maxima/${PKGVERSION}/share/linearalgebra/linalg-utilities.lisp
+share/maxima/${PKGVERSION}/share/linearalgebra/linalg.demo
+share/maxima/${PKGVERSION}/share/linearalgebra/linalg.mac
+share/maxima/${PKGVERSION}/share/linearalgebra/linalg.usage
+share/maxima/${PKGVERSION}/share/linearalgebra/lu.lisp
+share/maxima/${PKGVERSION}/share/linearalgebra/matrixexp.lisp
+share/maxima/${PKGVERSION}/share/linearalgebra/matrixexp.usage
+share/maxima/${PKGVERSION}/share/linearalgebra/polynomialp.lisp
+share/maxima/${PKGVERSION}/share/linearalgebra/test-conjugate.mac
+share/maxima/${PKGVERSION}/share/linearalgebra/test-linalg.mac
+share/maxima/${PKGVERSION}/share/linearalgebra/test-lu.mac
+share/maxima/${PKGVERSION}/share/linearalgebra/test-matrixexp.mac
+share/maxima/${PKGVERSION}/share/linearalgebra/test-polynomialp.mac
 share/maxima/${PKGVERSION}/share/macro/autolo.mac
 share/maxima/${PKGVERSION}/share/macro/basic.mac
 share/maxima/${PKGVERSION}/share/macro/caseq.mac
@@ -504,7 +534,6 @@ share/maxima/${PKGVERSION}/share/matrix/determ.mac
 share/maxima/${PKGVERSION}/share/matrix/determ.usg
 share/maxima/${PKGVERSION}/share/matrix/eigen.dem
 share/maxima/${PKGVERSION}/share/matrix/eigen.mac
-share/maxima/${PKGVERSION}/share/matrix/eigen.usg
 share/maxima/${PKGVERSION}/share/matrix/eigen_1.dem
 share/maxima/${PKGVERSION}/share/matrix/eigeni.mac
 share/maxima/${PKGVERSION}/share/matrix/invert.mac
@@ -530,12 +559,8 @@ share/maxima/${PKGVERSION}/share/misc/foptim.lisp
 share/maxima/${PKGVERSION}/share/misc/seqopt.dem
 share/maxima/${PKGVERSION}/share/misc/seqopt.lisp
 share/maxima/${PKGVERSION}/share/misc/seqopt.usg
-share/maxima/${PKGVERSION}/share/misc/set.lisp
-share/maxima/${PKGVERSION}/share/misc/set.usg
 share/maxima/${PKGVERSION}/share/misc/smacro.mac
-share/maxima/${PKGVERSION}/share/numeric/bffac.lisp
 share/maxima/${PKGVERSION}/share/numeric/bffac.mac
-share/maxima/${PKGVERSION}/share/numeric/bffac.usg
 share/maxima/${PKGVERSION}/share/numeric/brmbrg.lisp
 share/maxima/${PKGVERSION}/share/numeric/brmbrg.usg
 share/maxima/${PKGVERSION}/share/numeric/cfortr.dem
@@ -556,6 +581,7 @@ share/maxima/${PKGVERSION}/share/numeric/forma1.lisp
 share/maxima/${PKGVERSION}/share/numeric/forma1.usg
 share/maxima/${PKGVERSION}/share/numeric/format.lisp
 share/maxima/${PKGVERSION}/share/numeric/format.usg
+share/maxima/${PKGVERSION}/share/numeric/interpol.mac
 share/maxima/${PKGVERSION}/share/numeric/kach.dem
 share/maxima/${PKGVERSION}/share/numeric/kach.mac
 share/maxima/${PKGVERSION}/share/numeric/newton.mac
@@ -619,7 +645,6 @@ share/maxima/${PKGVERSION}/share/simplification/stopex.dem
 share/maxima/${PKGVERSION}/share/simplification/stopex.mac
 share/maxima/${PKGVERSION}/share/simplification/stopex.usg
 share/maxima/${PKGVERSION}/share/specfunctions/airy.lisp
-share/maxima/${PKGVERSION}/share/specfunctions/airy.usg
 share/maxima/${PKGVERSION}/share/specfunctions/ellipt.lisp
 share/maxima/${PKGVERSION}/share/specfunctions/ellipt.usg
 share/maxima/${PKGVERSION}/share/specfunctions/gamma.mac
@@ -652,45 +677,67 @@ share/maxima/${PKGVERSION}/share/sym/resolv1.lisp
 share/maxima/${PKGVERSION}/share/sym/resolvante.mac
 share/maxima/${PKGVERSION}/share/sym/schur.lisp
 share/maxima/${PKGVERSION}/share/sym/sym.mac
+share/maxima/${PKGVERSION}/share/sym/sym.system
 share/maxima/${PKGVERSION}/share/sym/sym1.mac
+share/maxima/${PKGVERSION}/share/sym/symtest.mac
+share/maxima/${PKGVERSION}/share/sym/testsuite.lisp
 share/maxima/${PKGVERSION}/share/sym/treillis.lisp
 share/maxima/${PKGVERSION}/share/sym/tri.lisp
 share/maxima/${PKGVERSION}/share/sym/util.lisp
-share/maxima/${PKGVERSION}/share/tensor/aatest.mac
-share/maxima/${PKGVERSION}/share/tensor/ademo-2steps.dem
 share/maxima/${PKGVERSION}/share/tensor/ademo.dem
-share/maxima/${PKGVERSION}/share/tensor/ajpff.mac
-share/maxima/${PKGVERSION}/share/tensor/brans_vacuum.mac
+share/maxima/${PKGVERSION}/share/tensor/adsitter.dem
+share/maxima/${PKGVERSION}/share/tensor/allnutt.dem
+share/maxima/${PKGVERSION}/share/tensor/atensor.dem
+share/maxima/${PKGVERSION}/share/tensor/atensor.mac
+share/maxima/${PKGVERSION}/share/tensor/bianchi.dem
 share/maxima/${PKGVERSION}/share/tensor/canten.lisp
 share/maxima/${PKGVERSION}/share/tensor/car_iden.dem
-share/maxima/${PKGVERSION}/share/tensor/ctenso_1.dem
-share/maxima/${PKGVERSION}/share/tensor/ctenso_2.dem
-share/maxima/${PKGVERSION}/share/tensor/ctenso_3.dem
-share/maxima/${PKGVERSION}/share/tensor/ctenso_4.dem
-share/maxima/${PKGVERSION}/share/tensor/ctensr.mac
+share/maxima/${PKGVERSION}/share/tensor/ctensor.mac
+share/maxima/${PKGVERSION}/share/tensor/ctensor1.dem
+share/maxima/${PKGVERSION}/share/tensor/ctensor2.dem
+share/maxima/${PKGVERSION}/share/tensor/ctensor3.dem
+share/maxima/${PKGVERSION}/share/tensor/ctensor4.dem
+share/maxima/${PKGVERSION}/share/tensor/ctensor5.dem
+share/maxima/${PKGVERSION}/share/tensor/ctensor6.dem
+share/maxima/${PKGVERSION}/share/tensor/ctensor7.dem
+share/maxima/${PKGVERSION}/share/tensor/ctensor8.dem
 share/maxima/${PKGVERSION}/share/tensor/ex_calc.dem
 share/maxima/${PKGVERSION}/share/tensor/ex_calc.mac
 share/maxima/${PKGVERSION}/share/tensor/gener.lisp
-share/maxima/${PKGVERSION}/share/tensor/info-tensor-2.txt
-share/maxima/${PKGVERSION}/share/tensor/info-tensor.txt
-share/maxima/${PKGVERSION}/share/tensor/inpfix.lisp
-share/maxima/${PKGVERSION}/share/tensor/itensor.dem
+share/maxima/${PKGVERSION}/share/tensor/godel.dem
+share/maxima/${PKGVERSION}/share/tensor/helicity.dem
+share/maxima/${PKGVERSION}/share/tensor/hodge.dem
+share/maxima/${PKGVERSION}/share/tensor/iframe.mac
 share/maxima/${PKGVERSION}/share/tensor/itensor.lisp
-share/maxima/${PKGVERSION}/share/tensor/itensor.usg
-share/maxima/${PKGVERSION}/share/tensor/jpff.mac
+share/maxima/${PKGVERSION}/share/tensor/itensor1.dem
+share/maxima/${PKGVERSION}/share/tensor/itensor2.dem
+share/maxima/${PKGVERSION}/share/tensor/itensor3.dem
+share/maxima/${PKGVERSION}/share/tensor/itensor4.dem
+share/maxima/${PKGVERSION}/share/tensor/itensor5.dem
+share/maxima/${PKGVERSION}/share/tensor/itensor6.dem
+share/maxima/${PKGVERSION}/share/tensor/itensor8.dem
+share/maxima/${PKGVERSION}/share/tensor/itensor9.dem
 share/maxima/${PKGVERSION}/share/tensor/kaluza.dem
-share/maxima/${PKGVERSION}/share/tensor/kaluza.mac
 share/maxima/${PKGVERSION}/share/tensor/lckdt.mac
-share/maxima/${PKGVERSION}/share/tensor/manual.txt
-share/maxima/${PKGVERSION}/share/tensor/metrics.mac
-share/maxima/${PKGVERSION}/share/tensor/motion.mac
-share/maxima/${PKGVERSION}/share/tensor/petrov.mac
-share/maxima/${PKGVERSION}/share/tensor/swartz.dem
+share/maxima/${PKGVERSION}/share/tensor/mail-archive.txt
+share/maxima/${PKGVERSION}/share/tensor/maxwell.dem
+share/maxima/${PKGVERSION}/share/tensor/petrov.dem
+share/maxima/${PKGVERSION}/share/tensor/plasma.dem
+share/maxima/${PKGVERSION}/share/tensor/reissner.dem
+share/maxima/${PKGVERSION}/share/tensor/schwarz.dem
+share/maxima/${PKGVERSION}/share/tensor/spinor.dem
 share/maxima/${PKGVERSION}/share/tensor/symtry.lisp
-share/maxima/${PKGVERSION}/share/tensor/ten_alg.dem
-share/maxima/${PKGVERSION}/share/tensor/tensor-doc.txt
+share/maxima/${PKGVERSION}/share/tensor/taubnut.dem
+share/maxima/${PKGVERSION}/share/tensor/tendemo.mac
+share/maxima/${PKGVERSION}/share/tensor/tensor.dem
 share/maxima/${PKGVERSION}/share/tensor/tentex.lisp
-share/maxima/${PKGVERSION}/share/tensor/test1.mac
+share/maxima/${PKGVERSION}/share/tensor/tests/atest.mac
+share/maxima/${PKGVERSION}/share/tensor/tests/ctest.mac
+share/maxima/${PKGVERSION}/share/tensor/tests/do_tests.mac
+share/maxima/${PKGVERSION}/share/tensor/tests/itest.mac
+share/maxima/${PKGVERSION}/share/tensor/tests/testsuite.lisp
+share/maxima/${PKGVERSION}/share/tensor/tetrad.dem
+share/maxima/${PKGVERSION}/share/tensor/weyl.dem
 share/maxima/${PKGVERSION}/share/trigonometry/atrig1.mac
 share/maxima/${PKGVERSION}/share/trigonometry/atrig1.usg
 share/maxima/${PKGVERSION}/share/trigonometry/ntrig.mac
@@ -699,14 +746,6 @@ share/maxima/${PKGVERSION}/share/trigonometry/spangl.mac
 share/maxima/${PKGVERSION}/share/trigonometry/spangl.usg
 share/maxima/${PKGVERSION}/share/trigonometry/trgsmp.mac
 share/maxima/${PKGVERSION}/share/trigonometry/trigrat.lisp
-share/maxima/${PKGVERSION}/share/utils/batch.dem
-share/maxima/${PKGVERSION}/share/utils/batch.mac
-share/maxima/${PKGVERSION}/share/utils/batch.transcript
-share/maxima/${PKGVERSION}/share/utils/batch.usg
-share/maxima/${PKGVERSION}/share/utils/dskuse.lisp
-share/maxima/${PKGVERSION}/share/utils/dskuse.usg
-share/maxima/${PKGVERSION}/share/utils/fileop.lisp
-share/maxima/${PKGVERSION}/share/utils/fileop.usg
 share/maxima/${PKGVERSION}/share/utils/mactex-utilities.lisp
 share/maxima/${PKGVERSION}/share/vector/vect.dem
 share/maxima/${PKGVERSION}/share/vector/vect.mac
@@ -716,6 +755,7 @@ share/maxima/${PKGVERSION}/share/vector/vector.dem
 share/maxima/${PKGVERSION}/share/vector/vector.mac
 share/maxima/${PKGVERSION}/share/vector/vector.usg
 share/maxima/${PKGVERSION}/src/acall.lisp
+share/maxima/${PKGVERSION}/src/airy.lisp
 share/maxima/${PKGVERSION}/src/algfac.lisp
 share/maxima/${PKGVERSION}/src/algsys.lisp
 share/maxima/${PKGVERSION}/src/ar.lisp
@@ -751,7 +791,6 @@ share/maxima/${PKGVERSION}/src/evalw.lisp
 share/maxima/${PKGVERSION}/src/ezgcd.lisp
 share/maxima/${PKGVERSION}/src/factor.lisp
 share/maxima/${PKGVERSION}/src/fcall.lisp
-share/maxima/${PKGVERSION}/src/flatten.lisp
 share/maxima/${PKGVERSION}/src/float.lisp
 share/maxima/${PKGVERSION}/src/fortra.lisp
 share/maxima/${PKGVERSION}/src/generate-sys-proclaim.lisp
@@ -811,6 +850,7 @@ share/maxima/${PKGVERSION}/src/nisimp.lisp
 share/maxima/${PKGVERSION}/src/nparse.lisp
 share/maxima/${PKGVERSION}/src/nrat4.lisp
 share/maxima/${PKGVERSION}/src/nregex.lisp
+share/maxima/${PKGVERSION}/src/nset.lisp
 share/maxima/${PKGVERSION}/src/numer.lisp
 share/maxima/${PKGVERSION}/src/numerical/f2cl-lib.lisp
 share/maxima/${PKGVERSION}/src/numerical/f2cl-package.lisp
@@ -836,6 +876,8 @@ share/maxima/${PKGVERSION}/src/numerical/slatec/dbesk1.lisp
 share/maxima/${PKGVERSION}/src/numerical/slatec/dbesy.lisp
 share/maxima/${PKGVERSION}/src/numerical/slatec/dbesy0.lisp
 share/maxima/${PKGVERSION}/src/numerical/slatec/dbesy1.lisp
+share/maxima/${PKGVERSION}/src/numerical/slatec/dbi.lisp
+share/maxima/${PKGVERSION}/src/numerical/slatec/dbie.lisp
 share/maxima/${PKGVERSION}/src/numerical/slatec/dbsi0e.lisp
 share/maxima/${PKGVERSION}/src/numerical/slatec/dbsi1e.lisp
 share/maxima/${PKGVERSION}/src/numerical/slatec/dbsk0e.lisp
@@ -911,6 +953,7 @@ share/maxima/${PKGVERSION}/src/numerical/slatec/zbesj.lisp
 share/maxima/${PKGVERSION}/src/numerical/slatec/zbesk.lisp
 share/maxima/${PKGVERSION}/src/numerical/slatec/zbesy.lisp
 share/maxima/${PKGVERSION}/src/numerical/slatec/zbinu.lisp
+share/maxima/${PKGVERSION}/src/numerical/slatec/zbiry.lisp
 share/maxima/${PKGVERSION}/src/numerical/slatec/zbknu.lisp
 share/maxima/${PKGVERSION}/src/numerical/slatec/zbuni.lisp
 share/maxima/${PKGVERSION}/src/numerical/slatec/zbunk.lisp
@@ -952,6 +995,7 @@ share/maxima/${PKGVERSION}/src/polyrz.lisp
 share/maxima/${PKGVERSION}/src/powers.lisp
 share/maxima/${PKGVERSION}/src/procs.lisp
 share/maxima/${PKGVERSION}/src/psolve.lisp
+share/maxima/${PKGVERSION}/src/rand-mt19937.lisp
 share/maxima/${PKGVERSION}/src/rat3a.lisp
 share/maxima/${PKGVERSION}/src/rat3b.lisp
 share/maxima/${PKGVERSION}/src/rat3c.lisp
@@ -971,7 +1015,6 @@ share/maxima/${PKGVERSION}/src/schatc.lisp
 share/maxima/${PKGVERSION}/src/scs.lisp
 share/maxima/${PKGVERSION}/src/series.lisp
 share/maxima/${PKGVERSION}/src/server.lisp
-share/maxima/${PKGVERSION}/src/set.lisp
 share/maxima/${PKGVERSION}/src/simp.lisp
 share/maxima/${PKGVERSION}/src/sin.lisp
 share/maxima/${PKGVERSION}/src/sinint.lisp
@@ -1010,6 +1053,8 @@ share/maxima/${PKGVERSION}/src/trutil.lisp
 share/maxima/${PKGVERSION}/src/ufact.lisp
 share/maxima/${PKGVERSION}/src/utils.lisp
 share/maxima/${PKGVERSION}/src/zero.lisp
+share/maxima/${PKGVERSION}/tests/mcond_display_elseif.mac
+share/maxima/${PKGVERSION}/tests/mcond_display_elseif.out
 share/maxima/${PKGVERSION}/tests/rexamples.mac
 share/maxima/${PKGVERSION}/tests/rtest1.mac
 share/maxima/${PKGVERSION}/tests/rtest10.mac
@@ -1019,6 +1064,7 @@ share/maxima/${PKGVERSION}/tests/rtest13.mac
 share/maxima/${PKGVERSION}/tests/rtest13s.mac
 share/maxima/${PKGVERSION}/tests/rtest14.mac
 share/maxima/${PKGVERSION}/tests/rtest15.mac
+share/maxima/${PKGVERSION}/tests/rtest16.mac
 share/maxima/${PKGVERSION}/tests/rtest1a.mac
 share/maxima/${PKGVERSION}/tests/rtest2.mac
 share/maxima/${PKGVERSION}/tests/rtest3.mac
@@ -1031,7 +1077,10 @@ share/maxima/${PKGVERSION}/tests/rtest7.mac
 share/maxima/${PKGVERSION}/tests/rtest8.mac
 share/maxima/${PKGVERSION}/tests/rtest9.mac
 share/maxima/${PKGVERSION}/tests/rtest9a.mac
-share/maxima/${PKGVERSION}/tests/rtestflatten.mac
+share/maxima/${PKGVERSION}/tests/rtesthyp.mac
+share/maxima/${PKGVERSION}/tests/rtestmcond_display.mac
+share/maxima/${PKGVERSION}/tests/rtestmt19937.mac
+share/maxima/${PKGVERSION}/tests/rtestnset.mac
 share/maxima/${PKGVERSION}/tests/rtestode.mac
 share/maxima/${PKGVERSION}/tests/rtestode_zp.mac
 share/maxima/${PKGVERSION}/tests/testsuite.lisp
@@ -1042,7 +1091,9 @@ share/maxima/${PKGVERSION}/xmaxima/maxima-icon.ico
 share/maxima/${PKGVERSION}/xmaxima/maxima-icon.png
 share/maxima/${PKGVERSION}/xmaxima/maxima-new.gif
 share/maxima/${PKGVERSION}/xmaxima/maxima-new.png
+share/maxima/${PKGVERSION}/xmaxima/msgs/ru.msg
 share/maxima/${PKGVERSION}/xmaxima/plotmaxima.html
+@dirrm share/maxima/${PKGVERSION}/xmaxima/msgs
 @dirrm share/maxima/${PKGVERSION}/xmaxima
 @dirrm share/maxima/${PKGVERSION}/tests
 @dirrm share/maxima/${PKGVERSION}/src/numerical/slatec
@@ -1051,6 +1102,7 @@ share/maxima/${PKGVERSION}/xmaxima/plotmaxima.html
 @dirrm share/maxima/${PKGVERSION}/share/vector
 @dirrm share/maxima/${PKGVERSION}/share/utils
 @dirrm share/maxima/${PKGVERSION}/share/trigonometry
+@dirrm share/maxima/${PKGVERSION}/share/tensor/tests
 @dirrm share/maxima/${PKGVERSION}/share/tensor
 @dirrm share/maxima/${PKGVERSION}/share/sym
 @dirrm share/maxima/${PKGVERSION}/share/specfunctions
@@ -1060,22 +1112,31 @@ share/maxima/${PKGVERSION}/xmaxima/plotmaxima.html
 @dirrm share/maxima/${PKGVERSION}/share/misc
 @dirrm share/maxima/${PKGVERSION}/share/matrix
 @dirrm share/maxima/${PKGVERSION}/share/macro
+@dirrm share/maxima/${PKGVERSION}/share/linearalgebra
 @dirrm share/maxima/${PKGVERSION}/share/integration
 @dirrm share/maxima/${PKGVERSION}/share/integequations
-@dirrm share/maxima/${PKGVERSION}/share/graphics
 @dirrm share/maxima/${PKGVERSION}/share/diffequations
 @dirrm share/maxima/${PKGVERSION}/share/contrib/unit
+@dirrm share/maxima/${PKGVERSION}/share/contrib/state
+@dirrm share/maxima/${PKGVERSION}/share/contrib/sarag
 @dirrm share/maxima/${PKGVERSION}/share/contrib/rand
 @dirrm share/maxima/${PKGVERSION}/share/contrib/pdiff
 @dirrm share/maxima/${PKGVERSION}/share/contrib/numericalio
 @dirrm share/maxima/${PKGVERSION}/share/contrib/nset
+@dirrm share/maxima/${PKGVERSION}/share/contrib/mcclim
 @dirrm share/maxima/${PKGVERSION}/share/contrib/maximaMathML
+@dirrm share/maxima/${PKGVERSION}/share/contrib/lurkmathml
 @dirrm share/maxima/${PKGVERSION}/share/contrib/gentran/test
 @dirrm share/maxima/${PKGVERSION}/share/contrib/gentran/man
 @dirrm share/maxima/${PKGVERSION}/share/contrib/gentran
 @dirrm share/maxima/${PKGVERSION}/share/contrib/format
+@dirrm share/maxima/${PKGVERSION}/share/contrib/distrib/doc
+@dirrm share/maxima/${PKGVERSION}/share/contrib/distrib
 @dirrm share/maxima/${PKGVERSION}/share/contrib/diffequations/tests
 @dirrm share/maxima/${PKGVERSION}/share/contrib/diffequations
+@dirrm share/maxima/${PKGVERSION}/share/contrib/descriptive/doc
+@dirrm share/maxima/${PKGVERSION}/share/contrib/descriptive
+@dirrm share/maxima/${PKGVERSION}/share/contrib/Zeilberger
 @dirrm share/maxima/${PKGVERSION}/share/contrib/Grobner
 @dirrm share/maxima/${PKGVERSION}/share/contrib
 @dirrm share/maxima/${PKGVERSION}/share/combinatorics
@@ -1085,28 +1146,10 @@ share/maxima/${PKGVERSION}/xmaxima/plotmaxima.html
 @dirrm share/maxima/${PKGVERSION}/share/algebra
 @dirrm share/maxima/${PKGVERSION}/share/affine
 @dirrm share/maxima/${PKGVERSION}/share
+@dirrm share/maxima/${PKGVERSION}/msgs
 @dirrm share/maxima/${PKGVERSION}/emacs
 @dirrm share/maxima/${PKGVERSION}/doc/share
 @dirrm share/maxima/${PKGVERSION}/doc/misc
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook/storage/primer
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook/storage/bibarchive
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook/storage
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook/share/physics
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook/share/calculus
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook/share
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook/programming
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook/preface
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook/output
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook/odes
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook/maxims
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook/introduction
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook/interfaces
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook/install
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook/images
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook/examples
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook/basics
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook/algcal
-@dirrm share/maxima/${PKGVERSION}/doc/maximabook
 @dirrm share/maxima/${PKGVERSION}/doc/implementation
 @dirrm share/maxima/${PKGVERSION}/doc/html
 @dirrm share/maxima/${PKGVERSION}/doc
