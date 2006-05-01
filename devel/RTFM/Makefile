@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:08:38 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/01 09:39:48 cube Exp $
 #
 
 DISTNAME=	RTFM-2.0.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/
 
@@ -10,16 +10,9 @@ MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://www.bestpractical.com/rtfm/
 COMMENT=	Enterprise-grade knowledge management tool
 
-DEPENDS+=	p5-Text-WikiFormat>=0.72:../../textproc/p5-Text-WikiFormat
-DEPENDS+=	rt>=3.2.1:../../devel/rt3
+DEPENDS+=	rt>=3.4.5:../../devel/rt3
 
-.include "../../mk/bsd.prefs.mk"
-
-RT_LIB_DIR=	${LOCALBASE}/lib/rt3
-RT_SITE_DIR=	${LOCALBASE}/share/rt3
-RT_HTML_DIR=	${RT_SITE_DIR}/html
-RT_I18N_DIR=	${RT_SITE_DIR}/local/po
-BUILD_DEFS+=	RT_HTML_DIR RT_I18N_DIR
+.include "../../devel/rt3/dirs.mk"
 
 PLIST_SUBST+=	RT_HTML_DIR=${RT_HTML_DIR:C/^${LOCALBASE}\///}	\
 		RT_I18N_DIR=${RT_I18N_DIR:C/^${LOCALBASE}\///}
@@ -31,8 +24,8 @@ INSTALLATION_DIRS=	lib share
 
 do-install:
 	@${ECHO} "=> Libraries"
-	cd ${WRKSRC}/lib && ${FIND} . -type f ! -name '*.orig' 2>/dev/null |		\
-		${PAX} -rw ${RT_LIB_DIR}
+	cd ${WRKSRC}/lib/RT && ${FIND} . -type f ! -name '*.orig' 2>/dev/null |		\
+		${PAX} -rw ${RT_LIB_DIR}/RT
 	@${ECHO} "=> HTML Documents"
 	cd ${WRKSRC}/html && ${FIND} . -type f ! -name '*.orig' 2>/dev/null |		\
 		${PAX} -rw ${RT_HTML_DIR}
