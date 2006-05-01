@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/04/17 05:33:09 martti Exp $
+# $NetBSD: Makefile,v 1.35 2006/05/01 21:17:06 minskim Exp $
 
 DISTNAME=	proftpd-1.3.0
 #PKGREVISION=	1
@@ -22,6 +22,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--disable-sendfile
 CONFIGURE_ARGS+=	--enable-ctrls
+
+CONFIGURE_ENV+=	install_user=${ROOT_USER} install_group=${ROOT_GROUP}
 
 RCD_SCRIPTS=	proftpd
 
