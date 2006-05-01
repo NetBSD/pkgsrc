@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.569 2006/05/01 18:08:00 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.570 2006/05/01 20:19:04 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3311,6 +3311,11 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 
 	} elsif ($type eq "RelativePkgPath") {
 		checkline_relative_path($line, $value);
+
+	} elsif ($type eq "Restricted") {
+		if ($value ne "\${RESTRICTED}") {
+			$line->log_warning("This variable should be set to \${RESTRICTED}.");
+		}
 
 	} elsif ($type eq "SVR4PkgName") {
 		if ($value =~ regex_unresolved) {
