@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.109 2006/04/22 09:22:17 rillig Exp $
+# $NetBSD: Makefile,v 1.110 2006/05/01 09:50:25 jmmv Exp $
 #
 
-DISTNAME=	gdm-2.14.0
-PKGREVISION=	2
+DISTNAME=	gdm-2.14.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.14/}
 EXTRACT_SUFX=	.tar.bz2
@@ -27,35 +26,36 @@ PKG_SUPPORTED_OPTIONS=	inet6 pam
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-dmconfdir=${PKG_SYSCONFDIR:Q}/dm
+CONFIGURE_ARGS+=	--with-sysconfsubdir=
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
 CONFIGURE_ENV+=		X11BASE=${X11BASE:Q}
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
-INSTALL_MAKE_FLAGS+=	GDM_CUSTOM_CONF=${EGDIR}/gdm/custom.conf
-INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
+INSTALL_MAKE_FLAGS+=	GDM_CUSTOM_CONF=${EGDIR:Q}/custom.conf
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR:Q}
 MAKE_ENV+=		CHMOD=${CHMOD:Q} CHOWN=${CHOWN:Q}
 
-OWN_DIRS=		${PKG_SYSCONFDIR}/dm
-OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/Init
-OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/PostLogin
-OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/PostSession
-OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/PreSession
-OWN_DIRS+=		${PKG_SYSCONFDIR}/gdm/modules
+OWN_DIRS=		${PKG_SYSCONFDIR}/Init
+OWN_DIRS+=		${PKG_SYSCONFDIR}/PostLogin
+OWN_DIRS+=		${PKG_SYSCONFDIR}/PostSession
+OWN_DIRS+=		${PKG_SYSCONFDIR}/PreSession
+OWN_DIRS+=		${PKG_SYSCONFDIR}/dm
+OWN_DIRS+=		${PKG_SYSCONFDIR}/modules
 OWN_DIRS+=		${VARBASE}/gdm
 OWN_DIRS+=		${VARBASE}/log/gdm
 
-EGDIR=			${PREFIX}/share/examples
+PKG_SYSCONFSUBDIR=	gdm
+EGDIR=			${PREFIX}/share/examples/gdm
 CONF_FILES=
 .for f in custom.conf locale.alias \
 	modules/AccessDwellMouseEvents modules/AccessKeyMouseEvents \
 	modules/factory-AccessDwellMouseEvents \
 	modules/factory-AccessKeyMouseEvents
-CONF_FILES+=		${EGDIR}/gdm/${f} \
-			${PKG_SYSCONFDIR}/gdm/${f}
+CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 .for f in Init/Default PostLogin/Default.sample PostSession/Default \
 	PreSession/Default XKeepsCrashing Xsession
-CONF_FILES_PERMS+=	${EGDIR}/gdm/${f} \
-			${PKG_SYSCONFDIR}/gdm/${f} \
+CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
 			${ROOT_USER} ${ROOT_GROUP} 0755
 .endfor
 RCD_SCRIPTS=		gdm
