@@ -1,19 +1,19 @@
-$NetBSD: patch-ae,v 1.10 2006/03/30 21:25:48 jmmv Exp $
+$NetBSD: patch-ae,v 1.11 2006/05/01 09:50:25 jmmv Exp $
 
---- config/Makefile.in.orig	2006-03-13 22:42:30.000000000 +0100
+--- config/Makefile.in.orig	2006-04-14 22:49:13.000000000 +0200
 +++ config/Makefile.in
-@@ -545,10 +545,6 @@ install-data-hook: gdm.conf gdm.conf-cus
+@@ -569,10 +569,6 @@ install-data-hook: gdm.conf gdm.conf-cus
  		$(mkinstalldirs) $(DESTDIR)$(confdir); \
  		chmod 755 $(DESTDIR)$(confdir); \
  	fi
--	if test '!' -d $(DESTDIR)$(crossconfdir); then \
--		$(mkinstalldirs) $(DESTDIR)$(crossconfdir); \
--		chmod 755 $(DESTDIR)$(crossconfdir); \
+-	if test '!' -d $(DESTDIR)$(dmconfdir); then \
+-		$(mkinstalldirs) $(DESTDIR)$(dmconfdir); \
+-		chmod 755 $(DESTDIR)$(dmconfdir); \
 -	fi
  	if test '!' -d `dirname $(DESTDIR)$(GDM_DEFAULTS_CONF)`; then \
  		$(mkinstalldirs) `dirname $(DESTDIR)$(GDM_DEFAULTS_CONF)`; \
  		chmod 755 `dirname $(DESTDIR)$(GDM_DEFAULTS_CONF)`; \
-@@ -577,10 +573,7 @@ install-data-hook: gdm.conf gdm.conf-cus
+@@ -601,10 +597,7 @@ install-data-hook: gdm.conf gdm.conf-cus
  	$(INSTALL_SCRIPT) $(srcdir)/XKeepsCrashing $(DESTDIR)$(confdir)/XKeepsCrashing
  	$(INSTALL_SCRIPT) Xsession $(DESTDIR)$(confdir)/Xsession
  
@@ -25,7 +25,7 @@ $NetBSD: patch-ae,v 1.10 2006/03/30 21:25:48 jmmv Exp $
  
  	if test '!' -d $(DESTDIR)$(bisessdir); then \
  		$(mkinstalldirs) $(DESTDIR)$(bisessdir); \
-@@ -658,20 +651,8 @@ install-data-hook: gdm.conf gdm.conf-cus
+@@ -682,20 +675,8 @@ install-data-hook: gdm.conf gdm.conf-cus
  		chmod 755 $(DESTDIR)$(gnomercdir); \
  	fi
  

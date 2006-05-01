@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2006/04/17 07:07:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.28 2006/05/01 09:50:25 jmmv Exp $
 ${DMX}bin/gdm-dmx-reconnect-proxy
 bin/gdmXnest
 bin/gdmXnestchooser
@@ -53,13 +53,13 @@ share/gdm/themes/circles/options.png
 share/gdm/themes/circles/screenshot.png
 share/gdm/themes/happygnome-list/GdmGreeterTheme.desktop
 share/gdm/themes/happygnome-list/background.svg
-share/gdm/themes/happygnome-list/gnome-logo.png
+share/gdm/themes/happygnome-list/gnome-logo.svg
 share/gdm/themes/happygnome-list/happygnome.xml
 share/gdm/themes/happygnome-list/options.png
 share/gdm/themes/happygnome-list/screenshot.png
 share/gdm/themes/happygnome/GdmGreeterTheme.desktop
 share/gdm/themes/happygnome/background.svg
-share/gdm/themes/happygnome/gnome-logo.png
+share/gdm/themes/happygnome/gnome-logo.svg
 share/gdm/themes/happygnome/happygnome.xml
 share/gdm/themes/happygnome/options.png
 share/gdm/themes/happygnome/screenshot.png
@@ -113,6 +113,7 @@ share/locale/cs/LC_MESSAGES/gdm.mo
 share/locale/cy/LC_MESSAGES/gdm.mo
 share/locale/da/LC_MESSAGES/gdm.mo
 share/locale/de/LC_MESSAGES/gdm.mo
+share/locale/dz/LC_MESSAGES/gdm.mo
 share/locale/el/LC_MESSAGES/gdm.mo
 share/locale/en_CA/LC_MESSAGES/gdm.mo
 share/locale/en_GB/LC_MESSAGES/gdm.mo
@@ -133,6 +134,7 @@ share/locale/id/LC_MESSAGES/gdm.mo
 share/locale/is/LC_MESSAGES/gdm.mo
 share/locale/it/LC_MESSAGES/gdm.mo
 share/locale/ja/LC_MESSAGES/gdm.mo
+share/locale/ka/LC_MESSAGES/gdm.mo
 share/locale/ko/LC_MESSAGES/gdm.mo
 share/locale/ku/LC_MESSAGES/gdm.mo
 share/locale/lt/LC_MESSAGES/gdm.mo
@@ -225,6 +227,7 @@ share/xsessions/gnome.desktop
 @comment in scrollkeeper: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/gnome/help/gdm/zh_TW/figures
 @dirrm share/gnome/help/gdm/zh_TW
 @dirrm share/gnome/help/gdm/zh_HK/figures
