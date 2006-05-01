@@ -1,4 +1,4 @@
-# $NetBSD: usergroupfuncs.DragonFly,v 1.6 2006/04/29 03:49:12 jlam Exp $
+# $NetBSD: usergroupfuncs.DragonFly,v 1.7 2006/05/01 14:56:23 jlam Exp $
 #
 # Platform-specific adduser and addgroup functionality
 # on top of pw(8).
@@ -15,29 +15,32 @@ group_exists()
 	${TEST} -n "$_group" || return 3
 
 	# Check using chgrp to work properly in an NSS/NIS environment.
-	_testfile="./grouptest.tmp.$$"
-	${ECHO} > $_testfile
-	if ${CHGRP} $_group $_testfile >/dev/null 2>&1; then
+	_tmpdir="./.pkginstall.$$"
+	${MKDIR} -p $_tmpdir 2>/dev/null || return 3
+	${CHMOD} 0700 $_tmpdir
+	_testpath="$_tmpdir/group_exists"
+	${ECHO} > $_testpath
+	if ${CHGRP} $_group $_testpath >/dev/null 2>&1; then
 		# $_group exists
-		_id=`${LS} -ln $_testfile 2>/dev/null | ${AWK} '{ print $4 }'`
+		_id=`${LS} -ln $_testpath 2>/dev/null | ${AWK} '{ print $4 }'`
 		${TEST} -n "$_groupid" || _groupid=$_id
 		if ${TEST} "$_groupid" = "$_id"; then
-			${RM} -f $_testfile; return 0
+			${RM} -fr $_tmpdir; return 0
 		fi
-		${RM} -f $_testfile; return 2
+		${RM} -fr $_tmpdir; return 2
 	elif ${TEST} -z "$_groupid"; then
 		# $_group doesn't exist and $_groupid is not set
-		${RM} -f $_testfile; return 1
-	elif ${CHGRP} $_groupid $_testfile >/dev/null 2>&1; then
-		_name=`${LS} -l $_testfile 2>/dev/null | ${AWK} '{ print $4 }'`
+		${RM} -fr $_tmpdir; return 1
+	elif ${CHGRP} $_groupid $_testpath >/dev/null 2>&1; then
+		_name=`${LS} -l $_testpath 2>/dev/null | ${AWK} '{ print $4 }'`
 		if ${TEST} "$_name" != "$_groupid"; then
 			# $_group doesn't exist, but $_groupid exists
-			${RM} -f $_testfile; return 2
+			${RM} -fr $_tmpdir; return 2
 		fi
 		# neither $_group nor $_groupid exist
-		${RM} -f $_testfile; return 1
+		${RM} -fr $_tmpdir; return 1
 	fi
-	${RM} -f $_testfile; return 3
+	${RM} -fr $_tmpdir; return 3
 }
 
 # user_exists user [userid]
@@ -52,29 +55,32 @@ user_exists()
 	${TEST} -n "$_user" || return 3
 
 	# Check using chown to work properly in an NSS/NIS environment.
-	_testfile="./usertest.tmp.$$"
-	${ECHO} > $_testfile
-	if ${CHOWN} $_user $_testfile >/dev/null 2>&1; then
+	_tmpdir="./.pkginstall.$$"
+	${MKDIR} -p $_tmpdir 2>/dev/null || return 3
+	${CHMOD} 0700 $_tmpdir
+	_testpath="$_tmpdir/user_exists"
+	${ECHO} > $_testpath
+	if ${CHOWN} $_user $_testpath >/dev/null 2>&1; then
 		# $_user exists
-		_id=`${LS} -ln $_testfile 2>/dev/null | ${AWK} '{ print $3 }'`
+		_id=`${LS} -ln $_testpath 2>/dev/null | ${AWK} '{ print $3 }'`
 		${TEST} -n "$_userid" || _userid=$_id
 		if ${TEST} "$_userid" = "$_id"; then
-			${RM} -f $_testfile; return 0
+			${RM} -fr $_tmpdir; return 0
 		fi
-		${RM} -f $_testfile; return 2
+		${RM} -fr $_tmpdir; return 2
 	elif ${TEST} -z "$_userid"; then
 		# $_user doesn't exist and $_user is not set
-		${RM} -f $_testfile; return 1
-	elif ${CHOWN} $_userid $_testfile >/dev/null 2>&1; then
-		_name=`${LS} -l $_testfile 2>/dev/null | ${AWK} '{ print $3 }'`
+		${RM} -fr $_tmpdir; return 1
+	elif ${CHOWN} $_userid $_testpath >/dev/null 2>&1; then
+		_name=`${LS} -l $_testpath 2>/dev/null | ${AWK} '{ print $3 }'`
 		if ${TEST} "$_name" != "$_userid"; then
 			# $_user doesn't exist, but $_userid exists
-			${RM} -f $_testfile; return 2
+			${RM} -fr $_tmpdir; return 2
 		fi
 		# neither $_user nor $_userid exist
-		${RM} -f $_testfile; return 1
+		${RM} -fr $_tmpdir; return 1
 	fi
-	${RM} -f $_testfile; return 3
+	${RM} -fr $_tmpdir; return 3
 }
 
 # adduser user group [userid] [descr] [home] [shell]

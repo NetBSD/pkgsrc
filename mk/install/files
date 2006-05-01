@@ -1,4 +1,4 @@
-# $NetBSD: files,v 1.13 2006/04/25 22:35:46 jlam Exp $
+# $NetBSD: files,v 1.14 2006/05/01 14:56:23 jlam Exp $
 #
 # Generate a +FILES script that reference counts config files that are
 # required for the proper functioning of the package.
@@ -365,9 +365,9 @@ CHECK-REMOVE)
 	;;
 
 CHECK-PERMS)
-	tmpdir="${TMPDIR:-/tmp}/pkginstall.$$"
+	tmpdir="./.pkginstall.$$"
 	${MKDIR} -p $tmpdir 2>/dev/null || exit 1
-	${CHMOD} 700 $tmpdir
+	${CHMOD} 0700 $tmpdir
 	${SED} -n "/^\# FILE: /{s/^\# FILE: //;p;}" ${SELF} | ${SORT} -ru |
 	{ while read file f_flags f_eg f_mode f_user f_group; do
 		case $file in
@@ -380,9 +380,10 @@ CHECK-PERMS)
 		esac
 
 		perms=`${LS} -l $file | ${AWK} '{ print $1":"$3":"$4 }'`
-		${ECHO} > $tmpdir/tmp
-		${CHMOD} $f_mode $tmpdir/tmp 2>/dev/null
-		longmode=`${LS} -l $tmpdir/tmp | ${AWK} '{ print $1 }'`
+		testpath="$tmpdir/file_perms"
+		${ECHO} > $testpath
+		${CHMOD} $f_mode $testpath 2>/dev/null
+		longmode=`${LS} -l $testpath | ${AWK} '{ print $1 }'`
 		case $f_mode:$f_user:$f_group in
 		:[!:]*:)
 			case "$perms" in
@@ -438,7 +439,7 @@ CHECK-PERMS)
 		exit 1
 		;;
 	esac; }
-	rm -rf $tmpdir
+	${RM} -fr $tmpdir
 	${TEST} $? -eq 0 || exitcode=1
 	;;
 
