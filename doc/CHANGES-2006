@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.105 2006/05/01 21:44:32 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.106 2006/05/01 22:27:55 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2334,3 +2334,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/potrace to 1.7 [adam 2006-05-01]
 	Updated devel/libextractor to 0.5.13 [adam 2006-05-01]
 	Updated graphics/libungif to 4.1.4nb1 [minskim 2006-05-01]
+	Updated math/maxima to 5.9.2 [rillig 2006-05-01]
