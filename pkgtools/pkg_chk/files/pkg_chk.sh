@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.31 2006/04/23 19:50:46 abs Exp $
+# $Id: pkg_chk.sh,v 1.32 2006/05/01 09:34:33 wiz Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -722,7 +722,7 @@ if [ \( -n "$opt_b" -o -n "$opt_S" \) -a -z "$opt_s" ] ; then
 fi
 
 if [ -n "$opt_S" ]; then
-    msg_progress "Write $PACKGES/$SUMMARY_FILE"
+    msg_progress "Write $PACKAGES/$SUMMARY_FILE"
     echo "$PKGDB" | tr ' ' '\012' > $PACKAGES/$SUMMARY_FILE
 fi
 
