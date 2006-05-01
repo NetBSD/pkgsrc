@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/05/01 07:22:29 jmmv Exp $
+
+SHA1 (cherokee-0.5.3.tar.gz) = 97f436a8e5109eb1420b9ead70f281adac535278
+RMD160 (cherokee-0.5.3.tar.gz) = adad3e9c0f3b181dda135c931337b1946770bfce
+Size (cherokee-0.5.3.tar.gz) = 1547870 bytes
+SHA1 (patch-aa) = 541c40b0ffeedab919f345b4439305a3c7c63dc4
