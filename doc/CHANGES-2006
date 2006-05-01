@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.93 2006/05/01 09:03:59 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.94 2006/05/01 09:35:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2319,3 +2319,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/apr to 0.9.7.2.0.55nb3 [joerg 2006-04-30]
 	Added www/cherokee version 0.5.3 [jmmv 2006-05-01]
 	Updated archivers/libarchive to 1.2.53 [xtraeme 2006-05-01]
+	Updated pkgtools/pkg_chk to 1.71 [wiz 2006-05-01]
