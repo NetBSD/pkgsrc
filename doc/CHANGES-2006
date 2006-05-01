@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.100 2006/05/01 18:33:22 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.101 2006/05/01 18:54:39 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2329,3 +2329,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/p5-Kwiki-Notify-Mail version 0.04 [jschauma 2006-05-01]
 	Added textproc/p5-Text-LevenshteinXS version 0.03 [ben 2006-05-01]
 	Updated print/tex-fixme to 3.2 [minskim 2006-05-01]
+	Updated net/lftp to 3.4.6 [salo 2006-05-01]
