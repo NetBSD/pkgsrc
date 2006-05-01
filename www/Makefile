@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.445 2006/04/04 15:42:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.446 2006/05/01 07:23:07 jmmv Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -70,6 +70,7 @@ SUBDIR+=	cgic
 SUBDIR+=	cgicc
 SUBDIR+=	cgilib
 SUBDIR+=	checkbot
+SUBDIR+=	cherokee
 SUBDIR+=	chimera
 SUBDIR+=	clearsilver
 SUBDIR+=	clearsilver-base
