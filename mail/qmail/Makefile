@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/04/30 08:03:42 schmonz Exp $
+# $NetBSD: Makefile,v 1.50 2006/05/01 02:57:03 jlam Exp $
 #
 
 DISTNAME=		netqmail-1.05
@@ -16,6 +16,7 @@ DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 DEPENDS+=		ucspi-tcp-[0-9]*:../../net/ucspi-tcp
 
 CONFLICTS+=		courier-maildirmake-[0-9]*
+CONFLICTS+=		courier-mta-[0-9]*
 CONFLICTS+=		mirrordir-[0-9]*
 CONFLICTS+=		mutt<=1.4.2.1nb1
 CONFLICTS+=		netqmail-[0-9]*

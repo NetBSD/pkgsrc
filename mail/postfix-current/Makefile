@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2006/04/23 00:12:38 jlam Exp $
+# $NetBSD: Makefile,v 1.63 2006/05/01 02:57:03 jlam Exp $
 
 DISTNAME=	postfix-2.3-20060405
 #PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Postfix SMTP server and tools
 
 DIST_SUBDIR=	postfix
 
-CONFLICTS+=	sendmail-[0-9]* fastforward>=0.51nb2
+CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
