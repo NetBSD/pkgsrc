@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.91 2006/04/30 22:04:36 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.92 2006/05/01 07:24:04 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2317,3 +2317,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/ImageMagick to 6.2.7.1 [adam 2006-04-30]
 	Updated graphics/p5-PerlMagick to 6.2.7.1 [adam 2006-04-30]
 	Updated devel/apr to 0.9.7.2.0.55nb3 [joerg 2006-04-30]
+	Added www/cherokee version 0.5.3 [jmmv 2006-05-01]
