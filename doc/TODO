@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4937 2006/05/01 20:48:29 adam Exp $
+$NetBSD: TODO,v 1.4938 2006/05/01 21:08:07 adam Exp $
 
 Suggested new packages
 ======================
@@ -672,7 +672,6 @@ Suggested package updates
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.5
 	o libetpan-0.44
-	o libextractor-0.5.13
 	o libflash-0.4.13
 	o libggi-2.2.1
 	o libggigcp-1.0.1
