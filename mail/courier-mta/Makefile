@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2006/04/30 18:20:59 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/01 02:57:58 jlam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
+
+CONFLICTS+=	postfix-[0-9]* qmail-[0-9]* sendmail-[0-9]*
 
 MAINTAINER=	jlam@pkgsrc.org
 COMMENT=	Courier mail transport agent
