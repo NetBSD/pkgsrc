@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.566 2006/04/30 21:31:32 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.567 2006/05/01 00:15:04 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1268,7 +1268,7 @@ my (@options) = (
 
 use constant regex_gnu_configure_volatile_vars
 				=> qr"^(?:CFLAGS||CPPFLAGS|CXXFLAGS|FFLAGS|LDFLAGS|LIBS)$";
-use constant regex_mk_cond	=> qr"^\.\s*(if|ifdef|ifndef|else|elif|endif|for|endfor|undef)(?:\s+([^\s#][^#]*?))?\s*(?:#.*)?$";
+use constant regex_mk_cond	=> qr"^\.(\s*)(if|ifdef|ifndef|else|elif|endif|for|endfor|undef)(?:\s+([^\s#][^#]*?))?\s*(?:#.*)?$";
 use constant regex_mk_dependency=> qr"^([^\s:]+(?:\s*[^\s:]+)*):\s*([^#]*?)(?:\s*#.*)?$";
 use constant regex_mk_include	=> qr"^\.\s*s?include\s+\"([^\"]+)\"(?:\s*#.*)?$";
 use constant regex_pkgname	=> qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
@@ -1330,6 +1330,10 @@ my $seen_bsd_prefs_mk;		# Has bsd.prefs.mk already been included?
 my $makevar;			# Table of variables and values
 my $varuse;			# Table of used variables
 my $seen_Makefile_common;	# Does the package have any .includes?
+
+# Context in the Makefile that is currently checked.
+my $mkctx_indent;		# Indentation depth of preprocessing directives
+my $mkctx_target;		# Current make(1) target
 
 my @todo_items;			# The list of directory entries that still need
 				# to be checked. Mostly relevant with
@@ -1787,7 +1791,7 @@ sub load_tool_names() {
 				}
 
 			} elsif ($text =~ regex_mk_cond) {
-				my ($cond, $args, undef) = ($1, $2, $3);
+				my ($indent, $cond, $args, $comment) = ($1, $2, $3, $4);
 
 				if ($cond =~ qr"^(?:if|ifdef|ifndef|for)$") {
 					$cond_depth++;
@@ -2753,10 +2757,20 @@ sub checkline_mk_shelltext($$) {
 
 	$vartools = get_vartool_names();
 	$rest = $text;
+
+	use constant hidden_shell_commands => array_to_hash(qw(
+		${DO_NADA}
+		${ECHO} ${ECHO_MSG} ${ECHO_N}
+	));
+
 	if ($rest =~ s/^([-@]*)(?:\$\{_PKG_SILENT\}\$\{_PKG_DEBUG\})?//) {
 		my ($hidden) = ($1);
-		if ($hidden =~ qr"\@") {
-			$line->log_warning("Shell commands should not be hidden unconditionally.");
+		if ($hidden =~ qr"\@" && $rest =~ $regex_shellword) {
+			my ($cmd) = ($1);
+
+			if (!exists(hidden_shell_commands->{$cmd})) {
+				$line->log_warning("The shell command \"${cmd}\" should not be hidden.");
+			}
 		}
 	}
 
@@ -3809,12 +3823,13 @@ sub checklines_package_Makefile_varorder($) {
 	}
 }
 
-# This subroutine contains "local" checks that can be made looking only
-# at a single line at a time. The other checks are in
-# checkfile_package_Makefile.
 sub checklines_mk($) {
 	my ($lines) = @_;
 	my ($allowed_targets, $for_variables) = ({}, {});
+
+	# Define global variables for the Makefile context.
+	$mkctx_indent = 0;
+	$mkctx_target = undef;
 
 	foreach my $prefix (qw(pre do post)) {
 		foreach my $action (qw(fetch extract patch tools wrapper configure build test install package clean)) {
@@ -3878,9 +3893,22 @@ sub checklines_mk($) {
 			}
 
 		} elsif ($text =~ regex_mk_cond) {
-			my ($directive, $args) = ($1, $2);
+			my ($indent, $directive, $args, $comment) = ($1, $2, $3, $4);
 
 			use constant regex_directives_with_args => qr"^(?:if|ifdef|ifndef|elif|for|undef)$";
+
+			if ($directive =~ qr"^(?:endif|endfor|elif|else)$") {
+				$mkctx_indent -= 2;
+			}
+
+			# Check the indentation
+			if ($indent ne " " x $mkctx_indent) {
+				$opt_warn_space and $line->log_warning("This directive should be indented by ${mkctx_indent} spaces.");
+			}
+
+			if ($directive =~ qr"^(?:if|ifdef|ifndef|for|elif|else)$") {
+				$mkctx_indent += 2;
+			}
 
 			if ($directive =~ regex_directives_with_args && !defined($args)) {
 				$line->log_error("\".${directive}\" must be given some arguments.");
@@ -3974,6 +4002,12 @@ sub checklines_mk($) {
 
 	checklines_trailing_empty_lines($lines);
 	autofix($lines);
+
+	if ($mkctx_indent != 0) {
+		$lines->[-1]->log_error("Directive indentation is not 0, but ${mkctx_indent} at EOF.");
+	}
+	$mkctx_indent = undef;
+	$mkctx_target = undef;
 }
 
 #
