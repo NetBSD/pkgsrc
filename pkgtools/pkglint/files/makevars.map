@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.82 2006/04/21 09:42:01 rillig Exp $
+# $NetBSD: makevars.map,v 1.83 2006/05/01 00:13:47 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -19,18 +19,18 @@
 
 # some variables from mk/defaults/mk.conf, 1.27
 
-MANZ			Yes
-MKCRYPTO		YesNo
-USETBL			Yes
-ABI			{ 32 64 }
-PKG_REGISTER_SHELLS	YesNo
-USE_XPKGWEDGE		YesNo
-LIBTOOLIZE_PLIST	YesNo
-EXTRACT_USING_PAX	Yes
-SETGIDGAME		YesNo
+MANZ			Readonly
+MKCRYPTO		Readonly
+USETBL			Readonly
+ABI			Readonly
+PKG_REGISTER_SHELLS	Readonly
+USE_XPKGWEDGE		Readonly
+LIBTOOLIZE_PLIST	Readonly
+EXTRACT_USING_PAX	Readonly
+SETGIDGAME		Readonly
 
-USE_CRYPTO		{ YES NO }
-USE_INET6		YesNo
+USE_CRYPTO		Readonly
+USE_INET6		Readonly
 
 # some other variables, sorted alphabetically
 
