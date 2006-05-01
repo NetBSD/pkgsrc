@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.567 2006/05/01 00:15:04 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.568 2006/05/01 13:47:54 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -361,7 +361,7 @@ use constant N		=> 3;
 
 sub new($$) {
 	my ($class, $string, $starts, $ends) = @_;
-	my ($self) = ([$string, $starts, $ends, $#{$ends}]);
+	my ($self) = ([$string, [@{$starts}], [@{$ends}], $#{$ends}]);
 	bless($self, $class);
 	return $self;
 }
@@ -403,7 +403,7 @@ use constant ENDS	=> 2;
 
 sub new($$) {
 	my ($class, $string, $starts, $ends) = @_;
-	my ($self) = ([$string, $starts, $ends]);
+	my ($self) = ([$string, [@{$starts}], [@{$ends}]]);
 	bless($self, $class);
 	return $self;
 }
@@ -1316,6 +1316,8 @@ my $is_internal;		# Is the current item from the infrastructure?
 
 my $pkgsrcdir;			# The pkgsrc root directory, relative to
 				# current_dir
+
+# Context of the package that is currently checked.
 my $pkgdir;			# PKGDIR from the package Makefile
 my $filesdir;			# FILESDIR from the package Makefile
 my $patchdir;			# PATCHDIR from the package Makefile
@@ -2132,6 +2134,39 @@ sub check_pkglint_version() {
 		log_note(NO_FILE, NO_LINE_NUMBER, "A newer version of pkglint is available.");
 	} elsif (dewey_cmp($pkglint_version, "<", conf_distver)) {
 		log_error(NO_FILE, NO_LINE_NUMBER, "The pkglint version is newer than the tree to check.");
+	}
+}
+
+sub expect($$$) {
+	my ($lines, $lineno_ref, $regex) = @_;
+	my $lineno = ${$lineno_ref};
+	if ($lineno <= $#{$lines} && $lines->[$lineno]->text =~ $regex) {
+		${$lineno_ref}++;
+		return new PkgLint::SimpleMatch($lines->[$lineno]->text, \@-, \@+);
+	} else {
+		return false;
+	}
+}
+
+sub expect_empty_line($$) {
+	my ($lines, $lineno_ref) = @_;
+
+	if (expect($lines, $lineno_ref, qr"^$")) {
+		return true;
+	} else {
+		$opt_warn_space and $lines->[${$lineno_ref}]->log_note("Empty line expected.");
+		return false;
+	}
+}
+
+sub expect_text($$$) {
+	my ($lines, $lineno_ref, $text) = @_;
+
+	if (expect($lines, $lineno_ref, qr"^\Q${text}\E$")) {
+		return true;
+	} else {
+		$lines->[${$lineno_ref}]->log_warning("Expected \"${text}\".");
+		return false;
 	}
 }
 
@@ -3965,6 +4000,8 @@ sub checklines_mk($) {
 			my ($targets, $dependencies) = ($1, $2);
 
 			$line->log_debug("targets=${targets}, dependencies=${dependencies}");
+			$mkctx_target = $targets;
+
 			foreach my $target (split(/\s+/, $targets)) {
 				if ($target eq ".PHONY") {
 					foreach my $dep (split(qr"\s+", $dependencies)) {
@@ -4024,6 +4061,129 @@ sub checkfile_ALTERNATIVES($) {
 	if (!($lines = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return;
+	}
+}
+
+sub checkfile_buildlink3_mk($) {
+	my ($fname) = @_;
+	my ($lines, $lineno, $m, $bl_PKGBASE, $bl_pkgbase);
+
+	log_info($fname, NO_LINE_NUMBER, "[checkfile_buildlink3_mk]");
+
+	checkperms($fname);
+	if (!($lines = load_lines($fname, true))) {
+		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
+		return;
+	}
+
+	checklines_mk($lines);
+
+	$lineno = 0;
+
+	# Header comments
+	while ($lineno <= $#{$lines} && (my $text = $lines->[$lineno]->text) =~ qr"^#") {
+		if ($text =~ qr"^# XXX") {
+			$lines->[$lineno]->log_note("Please read this comment and remove it if appropriate.");
+		}
+		$lineno++;
+	}
+	expect_empty_line($lines, \$lineno);
+
+	# This line does not belong here, but appears often.
+	if (expect($lines, \$lineno, qr"^BUILDLINK_DEPMETHOD\.(\S+)\?=.*$")) {
+		$lines->[$lineno - 1]->log_warning("This line belongs in the fourth paragraph.");
+		while ($lines->[$lineno]->text eq "") {
+			$lineno++;
+		}
+	}
+
+	# First paragraph: Reference counters.
+	if (!expect($lines, \$lineno, qr"^BUILDLINK_DEPTH:=\t+\$\{BUILDLINK_DEPTH\}\+$")) {
+		$lines->[$lineno]->log_warning("BUILDLINK_DEPTH line expected.");
+		return;
+	}
+	if (($m = expect($lines, \$lineno, qr"^(.*)_BUILDLINK3_MK:=\t+\$\{\1_BUILDLINK3_MK\}\+$"))) {
+		$bl_PKGBASE = $m->text(1);
+		$lines->[$lineno - 1]->log_debug("bl_PKGBASE=${bl_PKGBASE}");
+	} else {
+		$lines->[$lineno]->log_warning("Expected reference counter incrementing line.");
+		return;
+	}
+	expect_empty_line($lines, \$lineno);
+
+	# Second paragraph: Adding the dependency.
+	if (!expect_text($lines, \$lineno, ".if !empty(BUILDLINK_DEPTH:M+)")) {
+		return;
+	}
+	if (($m = expect($lines, \$lineno, qr"^BUILDLINK_DEPENDS\+=\t+(\S+)$"))) {
+		$bl_pkgbase = $m->text(1);
+		$lines->[$lineno - 1]->log_debug("bl_pkgbase=${bl_pkgbase}");
+	} else {
+		$lines->[$lineno]->log_warning("BUILDLINK_DEPENDS line expected.");
+		return;
+	}
+	if (!expect_text($lines, \$lineno, ".endif")) {
+		return;
+	}
+	expect_empty_line($lines, \$lineno);
+
+	# Third paragraph: Duplicate elimination.
+	if (!expect($lines, \$lineno, qr"^BUILDLINK_PACKAGES:=\t+\$\{BUILDLINK_PACKAGES:N\Q${bl_pkgbase}\E\}$")) {
+		$lines->[$lineno]->log_warning("Expected duplicate elimination line.");
+		return;
+	}
+	if (!expect($lines, \$lineno, qr"^BUILDLINK_PACKAGES\+=\t+\Q${bl_pkgbase}\E$")) {
+		$lines->[$lineno]->log_warning("Expected package addition line.");
+		return;
+	}
+	expect_empty_line($lines, \$lineno);
+
+	# Fourth paragraph: Package information.
+	if (!expect_text($lines, \$lineno, ".if !empty(${bl_PKGBASE}_BUILDLINK3_MK:M+)")) {
+		return;
+	}
+	while ($lineno <= $#{$lines} && !expect($lines, \$lineno, qr"^\.endif.*$")) {
+		if (expect($lines, \$lineno, regex_varassign)) {
+			# TODO: Stricter checks.
+
+		} elsif (expect($lines, \$lineno, qr"^(?:#.*)?$")) {
+			# Comments and empty lines are fine here.
+
+		} else {
+			$lines->[$lineno]->log_warning("Unexpected line.");
+			return;
+		}
+	}
+	expect_empty_line($lines, \$lineno);
+
+	# Fifth paragraph (optional): Dependencies.
+	my $have_dependencies = false;
+	my $need_empty_line = false;
+	while (true) {
+		if (expect($lines, \$lineno, qr"^\.include \"\.\./\.\./([^/]+/[^/]+)/buildlink3\.mk\"$")
+		 || expect($lines, \$lineno, qr"^\.include \"\.\./\.\./mk/(\S+)\.buildlink3\.mk\"$")) {
+			$have_dependencies = true;
+			$need_empty_line = true;
+		} elsif ($have_dependencies && expect($lines, \$lineno, qr"^$")) {
+			$need_empty_line = false;
+		} else {
+			last;
+		}
+	}
+	if ($need_empty_line) {
+		expect_empty_line($lines, \$lineno);
+	}
+
+	# Sixth paragraph: Reference counter.
+	if (!expect($lines, \$lineno, qr"^BUILDLINK_DEPTH:=\t+\$\{BUILDLINK_DEPTH:S/\+\$//\}$")) {
+		$lines->[$lineno]->log_warning("Expected reference counter decrementing line.");
+		return;
+	}
+
+	if ($lineno <= $#{$lines}) {
+		$lines->[$lineno]->log_warning("The file should end here.");
+	} else {
+		$lines->[$lineno - 1]->log_info("Fine.");
 	}
 }
 
@@ -4918,7 +5078,7 @@ sub checkfile($) {
 		$opt_check_ALTERNATIVES and checkfile_ALTERNATIVES($fname);
 
 	} elsif ($basename eq "buildlink3.mk") {
-		$opt_check_bl3 and checkfile_mk($fname);
+		$opt_check_bl3 and checkfile_buildlink3_mk($fname);
 
 	} elsif ($basename =~ qr"^(?:.*\.mk|Makefile.*)$") {
 		$opt_check_mk and checkfile_mk($fname);
@@ -5037,11 +5197,7 @@ sub checkdir_category() {
 	}
 
 	# Then we need an empty line
-	if ($lineno <= $#{$lines} && $lines->[$lineno]->text eq "") {
-		$lineno++;
-	} else {
-		$lines->[$lineno]->log_error("Empty line expected.");
-	}
+	expect_empty_line($lines, \$lineno);
 
 	# Then comes the COMMENT line
 	if ($lineno <= $#{$lines} && $lines->[$lineno]->text =~ qr"^COMMENT=\t*(.*)") {
@@ -5054,11 +5210,7 @@ sub checkdir_category() {
 	}
 
 	# Then we need an empty line
-	if ($lineno <= $#{$lines} && $lines->[$lineno]->text eq "") {
-		$lineno++;
-	} else {
-		$lines->[$lineno]->log_error("Empty line expected.");
-	}
+	expect_empty_line($lines, \$lineno);
 
 	# And now to the most complicated part of the category Makefiles,
 	# the (hopefully) sorted list of SUBDIRs. The first step is to
