@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.749 2006/04/20 11:38:47 grant Exp $
+# $NetBSD: Makefile,v 1.750 2006/05/01 09:45:21 cube Exp $
 #
 
 COMMENT=	Development utilities
@@ -13,6 +13,8 @@ SUBDIR+=	Gorm
 SUBDIR+=	ObjectiveLib
 SUBDIR+=	ProjectCenter
 SUBDIR+=	RTFM
+SUBDIR+=	RTx-RightsMatrix
+SUBDIR+=	RTx-Shredder
 SUBDIR+=	Renaissance
 SUBDIR+=	SDL
 SUBDIR+=	SDL-intro-en
