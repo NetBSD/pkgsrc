@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/21 16:23:07 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/01 18:32:26 minskim Exp $
 
 DISTNAME=	fixme
-PKGNAME=	tex-${DISTNAME}-3.1
+PKGNAME=	tex-${DISTNAME}-3.2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/latex/contrib/}
 EXTRACT_SUFX=	.zip
@@ -10,6 +10,7 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://tug.ctan.org/tex-archive/macros/latex/contrib/fixme/
 COMMENT=	Insert "fixme" notes into draft documents
 
+DIST_SUBDIR=	${PKGNAME}
 USE_DIRS+=	texmf-1.2
 
 .include "../../print/teTeX/module.mk"
