@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.111 2006/05/02 03:30:58 jlam Exp $
+$NetBSD: CHANGES-2006,v 1.112 2006/05/02 04:02:15 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2341,3 +2341,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/p5-VCP-Dest-svk version 0.28 [jlam 2006-05-02]
 	Updated textproc/p5-Filter to 1.32 [jlam 2006-05-02]
 	Updated devel/p5-Spiffy to 0.30 [jlam 2006-05-02]
+	Added devel/p5-IO-Capture version 0.05 [jlam 2006-05-02]
