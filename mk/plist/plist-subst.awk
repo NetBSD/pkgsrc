@@ -1,4 +1,4 @@
-# $NetBSD: plist-subst.awk,v 1.2 2006/01/22 16:54:13 jlam Exp $
+# $NetBSD: plist-subst.awk,v 1.3 2006/05/02 14:32:35 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -49,7 +49,7 @@ BEGIN {
 		value = ENVIRON[vars[i]]
 		var = vars[i]
 		sub("^PLIST_", "", var)
-		regexp = "\\${" var "}"
+		regexp = "[$][{]" var "[}]"
 		substitute[regexp] = value
 	}
 }
