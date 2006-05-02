@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/02 04:11:58 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/02 04:45:09 jlam Exp $
 
 DISTNAME=	HTTP-Server-Simple-Kwiki-0.29
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	standalone HTTP server for Kwiki
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/HTTP/Server/Simple/Kwiki/.packlist
 
-DEPENDS+=	p5-HTTP-Server-Simple-[0-9]*:../../www/p5-HTTP-Server-Simple
+DEPENDS+=	p5-HTTP-Server-Simple-Static-[0-9]*:../../www/p5-HTTP-Server-Simple-Static
 DEPENDS+=	p5-IO-Capture-[0-9]*:../../devel/p5-IO-Capture
 DEPENDS+=	p5-Kwiki-[0-9]*:../../www/p5-Kwiki
 
