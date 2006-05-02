@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.114 2006/05/02 04:13:11 jlam Exp $
+$NetBSD: CHANGES-2006,v 1.115 2006/05/02 04:30:03 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2344,3 +2344,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/p5-IO-Capture version 0.05 [jlam 2006-05-02]
 	Updated www/p5-HTTP-Server-Simple to 0.18 [jlam 2006-05-02]
 	Added www/p5-HTTP-Server-Simple-Kwiki version 0.29 [jlam 2006-05-02]
+	Updated misc/p5-File-MMagic to 1.26 [jlam 2006-05-02]
