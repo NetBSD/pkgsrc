@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2006/04/01 21:43:59 jmmv Exp $
+$NetBSD: MESSAGE,v 1.2 2006/05/02 15:54:16 drochner Exp $
 
 In order to get gnome-screensaver working properly, you need to add a
 gnome-screensaver file to your pam configuration directory (usually
@@ -7,4 +7,6 @@ gnome-screensaver file to your pam configuration directory (usually
 
 	${EGDIR}/pam.d/gnome-screensaver
 
+The "floating feet" animation needs librsvg (from pkgsrc/graphics/librsvg2)
+to read its graphics file.
 ===========================================================================
