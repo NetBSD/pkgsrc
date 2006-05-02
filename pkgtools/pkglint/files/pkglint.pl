@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.571 2006/05/01 22:01:21 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.572 2006/05/02 07:12:19 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3943,7 +3943,7 @@ sub checklines_mk($) {
 
 			# Check the indentation
 			if ($indent ne " " x $mkctx_indent) {
-				$opt_warn_space and $line->log_warning("This directive should be indented by ${mkctx_indent} spaces.");
+				$opt_warn_space and $line->log_note("This directive should be indented by ${mkctx_indent} spaces.");
 			}
 
 			if ($directive =~ qr"^(?:if|ifdef|ifndef|for|elif|else)$") {
