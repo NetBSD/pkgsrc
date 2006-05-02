@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.572 2006/05/02 07:12:19 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.573 2006/05/02 10:12:10 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1334,7 +1334,7 @@ my $varuse;			# Table of used variables
 my $seen_Makefile_common;	# Does the package have any .includes?
 
 # Context in the Makefile that is currently checked.
-my $mkctx_indent;		# Indentation depth of preprocessing directives
+my $mkctx_indentations;		# Indentation depth of preprocessing directives
 my $mkctx_target;		# Current make(1) target
 
 my @todo_items;			# The list of directory entries that still need
@@ -3868,7 +3868,7 @@ sub checklines_mk($) {
 	my ($allowed_targets, $for_variables) = ({}, {});
 
 	# Define global variables for the Makefile context.
-	$mkctx_indent = 0;
+	$mkctx_indentations = [0];
 	$mkctx_target = undef;
 
 	foreach my $prefix (qw(pre do post)) {
@@ -3938,16 +3938,21 @@ sub checklines_mk($) {
 			use constant regex_directives_with_args => qr"^(?:if|ifdef|ifndef|elif|for|undef)$";
 
 			if ($directive =~ qr"^(?:endif|endfor|elif|else)$") {
-				$mkctx_indent -= 2;
+				if ($#{$mkctx_indentations} >= 1) {
+					pop(@{$mkctx_indentations});
+				}
 			}
 
 			# Check the indentation
-			if ($indent ne " " x $mkctx_indent) {
-				$opt_warn_space and $line->log_note("This directive should be indented by ${mkctx_indent} spaces.");
+			if ($indent ne " " x $mkctx_indentations->[-1]) {
+				$opt_warn_space and $line->log_note("This directive should be indented by ".$mkctx_indentations->[-1]." spaces.");
 			}
 
-			if ($directive =~ qr"^(?:if|ifdef|ifndef|for|elif|else)$") {
-				$mkctx_indent += 2;
+			if ($directive eq "if" && $args =~ qr"^!defined\([\w]+_MK\)$") {
+				push(@{$mkctx_indentations}, $mkctx_indentations->[-1]);
+
+			} elsif ($directive =~ qr"^(?:if|ifdef|ifndef|for|elif|else)$") {
+				push(@{$mkctx_indentations}, $mkctx_indentations->[-1] + 2);
 			}
 
 			if ($directive =~ regex_directives_with_args && !defined($args)) {
@@ -4045,10 +4050,10 @@ sub checklines_mk($) {
 	checklines_trailing_empty_lines($lines);
 	autofix($lines);
 
-	if ($mkctx_indent != 0) {
-		$lines->[-1]->log_error("Directive indentation is not 0, but ${mkctx_indent} at EOF.");
+	if ($#{$mkctx_indentations} != 0) {
+		$lines->[-1]->log_error("Directive indentation is not 0, but ".$mkctx_indentations->[-1]." at EOF.");
 	}
-	$mkctx_indent = undef;
+	$mkctx_indentations = undef;
 	$mkctx_target = undef;
 }
 
