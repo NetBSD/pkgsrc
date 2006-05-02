@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2006/04/17 13:46:31 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/02 16:23:30 drochner Exp $
 #
 
 DIA_SUBPKG=		-python
 .include "../../graphics/dia/Makefile.common"
-PKGREVISION=		6
 
 COMMENT+=		(Python plugin)
 
@@ -16,6 +15,11 @@ PYTHON_PATCH_SCRIPTS+=	sheets/checktrans.py
 
 BUILD_DIRS+=		${WRKSRC}/plug-ins/python
 INSTALL_DIRS+=		${WRKSRC}/plug-ins/python
+
+PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
+
+post-install:
+	${PYTHONBIN} ${PYCOMPILEALL} ${PREFIX}/share/dia
 
 .include "../../lang/python/application.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
