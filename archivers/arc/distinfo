@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.9 2005/10/06 14:23:39 salo Exp $
+$NetBSD: distinfo,v 1.10 2006/05/02 19:06:45 wiz Exp $
 
-SHA1 (arc521e.pl8.tar.Z) = 34210f9aeaac39a15b34e6aa400b38127b6a2a20
-RMD160 (arc521e.pl8.tar.Z) = 1fcd823b93b4e633244797ed231318c5bc741965
-Size (arc521e.pl8.tar.Z) = 100821 bytes
-SHA1 (patch-aa) = 62324f346559b2997eba56698b1c0c1c29a328c3
-SHA1 (patch-ab) = 64fba2f0b5d03f26e427ecddc70e2a9b6b2fc521
-SHA1 (patch-ac) = 64d87af431c6bc0ded0b26167782309a7bfadd8a
-SHA1 (patch-ad) = 6f82d17b8eb2f2353d7ebfffaec1d52673acc7a0
-SHA1 (patch-ae) = bb176dee99c3fbc43e0fa00a2ae2ebe00865cc72
+SHA1 (arc-5.21o.tgz) = 4b803eae04976072fae88d4dbfc4b3e45796f8f3
+RMD160 (arc-5.21o.tgz) = 2897f62452f59efcb757cd5447d6d330df0cfdd1
+Size (arc-5.21o.tgz) = 82386 bytes
+SHA1 (patch-aa) = 2222318794a68a913e80cb808e3881a4fdc07fb0
+SHA1 (patch-ab) = e85c2698747106a7319db07185bfe0b6e2480974
+SHA1 (patch-ac) = 3332d9db5c41fb205ab9f5123b0de0704ae634b3
+SHA1 (patch-ad) = 3b43c7b64d0e926677dc8d1b20f3afbf0c854a5b
