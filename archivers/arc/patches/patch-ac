@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2005/01/01 11:43:27 kristerw Exp $
+$NetBSD: patch-ac,v 1.2 2006/05/02 19:06:45 wiz Exp $
 
---- arcmisc.c.orig	Wed Apr 15 00:59:12 1992
-+++ arcmisc.c	Sat Jan  1 12:36:08 2005
+--- arcmisc.c.orig	2005-10-09 03:38:22.000000000 +0200
++++ arcmisc.c
 @@ -5,6 +5,7 @@
  
  #include <stdio.h>
@@ -10,24 +10,11 @@ $NetBSD: patch-ac,v 1.1 2005/01/01 11:43:27 kristerw Exp $
  #include "arc.h"
  
  #include <string.h>
-@@ -233,16 +234,16 @@
+@@ -245,7 +246,6 @@ gcdir(dirname)
  	char           *dirname;
  
  {
--	char           *getwd();
-+	size_t		buf_size = 0;
+-	char           *getcwd();
  #if	GEMDOS
  	int             drv;
  	char           *buf;
- #endif
--	if (dirname == NULL || strlen(dirname) == 0)
--		dirname = (char *) malloc(1024);
-+	if (dirname == NULL || (buf_size = strlen(dirname)) == 0)
-+		dirname = (char *) malloc(buf_size = 1024);
- 
- #if	!GEMDOS
--	getwd(dirname);
-+	getcwd(dirname, buf_size);
- #else
- 	buf = dirname;
- 	*buf++ = (drv = Dgetdrv()) + 'A';
