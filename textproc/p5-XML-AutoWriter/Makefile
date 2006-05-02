@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/02 01:00:19 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/02 01:06:23 jlam Exp $
 
 DISTNAME=	XML-AutoWriter-0.39
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-ValidWriter/
 COMMENT=	DOCTYPE-driven valid XML output
 
-PERL5_PACKLIST=		auto/XML/ValidWriter/.packlist
+PERL5_PACKLIST=		auto/XML/AutoWriter/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
