@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.121 2006/05/02 08:40:16 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.122 2006/05/02 14:20:05 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2349,3 +2349,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/p5-HTTP-Server-Simple-Kwiki version 0.29 [jlam 2006-05-02]
 	Added www/p5-Kwiki-Simple-Server-HTTP version 0.03 [jlam 2006-05-02]
 	Updated mail/qpopper to 4.0.8nb1 [joerg 2006-05-02]
+	Added www/p5-Kwiki-Wikiwyg version 0.13 [jlam 2006-05-02]
