@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/04/23 00:12:40 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2006/05/02 17:32:05 joerg Exp $
 
 DISTNAME=	nsd-2.3.3
 CATEGORIES=	net
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=--disable-ipv6
 CONFIGURE_ARGS+=--with-pidfile=${VARBASE}/run/nsd.pid
 CONFIGURE_ARGS+=--with-user=nsd
 CONFIGURE_ARGS+=--with-dbfile=${VARBASE}/db/nsd.db
+CONFIGURE_ARGS+=--with-ssl=${BUILDLINK_PREFIX.openssl}
 
 RCD_SCRIPTS=	nsd
 FILES_SUBST+=	NSDDB=${VARBASE}/db/nsd.db
