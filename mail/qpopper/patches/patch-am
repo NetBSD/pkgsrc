@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.4 2005/06/01 20:55:16 adrianp Exp $
+$NetBSD: patch-am,v 1.5 2006/05/02 08:39:37 joerg Exp $
 
---- popper/Makefile.in.orig	2005-05-13 20:20:11.000000000 +0100
+--- popper/Makefile.in.orig	2005-05-13 19:20:11.000000000 +0000
 +++ popper/Makefile.in
 @@ -96,6 +96,8 @@ VPATH           =   @srcdir@
  prefix          =   @prefix@
@@ -75,7 +75,7 @@ $NetBSD: patch-am,v 1.4 2005/06/01 20:55:16 adrianp Exp $
  		${common_dir}/libcommon.a
  
  poppassd: common_library
-@@ -206,22 +216,36 @@ poppassd: common_library
+@@ -206,22 +216,35 @@ poppassd: common_library
  	        -I${mmangle_srcdir} -I${common_srcdir} ${SSL_INC} \
  	        ${CFLAGS} ${DEFS} ${CDEFS} ${OS_DEFS} $< -o $@
  
@@ -109,7 +109,6 @@ $NetBSD: patch-am,v 1.4 2005/06/01 20:55:16 adrianp Exp $
 +			${sbindir}/q${pop_auth}; \
 +		echo "Installed popauth as ${sbindir}/q${pop_auth} " \
 +			"with uid ${apop_uid}"; \
-+		${sbindir}/q${pop_auth} -init -safe; \
  	fi
  
 -	if [ "x${pop_auth}" != "x" ]; then \
