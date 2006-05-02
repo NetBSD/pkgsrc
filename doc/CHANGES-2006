@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.123 2006/05/02 15:38:07 rpaulo Exp $
+$NetBSD: CHANGES-2006,v 1.124 2006/05/02 19:07:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2351,3 +2351,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/qpopper to 4.0.8nb1 [joerg 2006-05-02]
 	Added www/p5-Kwiki-Wikiwyg version 0.13 [jlam 2006-05-02]
 	Updated net/miredo to 0.8.4 [rpaulo 2006-05-02]
+	Updated archivers/arc to 5.21o [wiz 2006-05-02]
