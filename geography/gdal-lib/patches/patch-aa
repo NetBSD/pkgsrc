@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/05/02 20:36:33 wiz Exp $
+
+--- GDALmake.opt.in.orig	2005-12-30 22:14:55.000000000 +0000
++++ GDALmake.opt.in
+@@ -34,7 +34,7 @@ C_DBGFLAGS =	-g -DDEBUG 
+ CXX_PROFFLAGS =	-g3 -pg -DDEBUG 
+ C_PROFFLAGS =	-g3 -pg -DDEBUG 
+ 
+-LIBS	=	@LIBS@
++LIBS	=	@LIBS@ -lcompat
+ 
+ PYTHON_INCLUDES = @PYTHON_INCLUDES@
+ PYTHON_LIBS = @PYTHON_LIBS@
