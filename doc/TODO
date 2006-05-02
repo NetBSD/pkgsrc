@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4938 2006/05/01 21:08:07 adam Exp $
+$NetBSD: TODO,v 1.4939 2006/05/02 15:38:07 rpaulo Exp $
 
 Suggested new packages
 ======================
@@ -729,7 +729,6 @@ Suggested package updates
 	o mined-2000.12
 	o mini_sendmail-1.3.5
 	o minivmac-2.6.1
-	o miredo-0.8.2
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-1.7.0
 	o mlview-0.9.0
