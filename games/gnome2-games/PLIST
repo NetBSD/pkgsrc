@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/04/17 07:07:19 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/05/02 17:19:22 drochner Exp $
 bin/blackjack
 bin/games-server.py
 bin/gataxx
@@ -354,6 +354,7 @@ share/locale/cs/LC_MESSAGES/gnome-games.mo
 share/locale/cy/LC_MESSAGES/gnome-games.mo
 share/locale/da/LC_MESSAGES/gnome-games.mo
 share/locale/de/LC_MESSAGES/gnome-games.mo
+share/locale/dz/LC_MESSAGES/gnome-games.mo
 share/locale/el/LC_MESSAGES/gnome-games.mo
 share/locale/en_CA/LC_MESSAGES/gnome-games.mo
 share/locale/en_GB/LC_MESSAGES/gnome-games.mo
@@ -374,6 +375,7 @@ share/locale/id/LC_MESSAGES/gnome-games.mo
 share/locale/is/LC_MESSAGES/gnome-games.mo
 share/locale/it/LC_MESSAGES/gnome-games.mo
 share/locale/ja/LC_MESSAGES/gnome-games.mo
+share/locale/ka/LC_MESSAGES/gnome-games.mo
 share/locale/ko/LC_MESSAGES/gnome-games.mo
 share/locale/ku/LC_MESSAGES/gnome-games.mo
 share/locale/lt/LC_MESSAGES/gnome-games.mo
