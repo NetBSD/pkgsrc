@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/03/12 22:14:09 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/05/02 13:41:58 drochner Exp $
 bin/gnome-doc-prepare
 bin/xml2po
 lib/pkgconfig/gnome-doc-utils.pc
@@ -44,8 +44,11 @@ share/xml/gnome/xslt/gettext/l10n-numbers.xsl
 share/xml/gnome/xslt/gettext/l10n.xml
 share/xml/gnome/xslt/xsldoc/xsldoc.xsl
 share/xml2po/docbook.py
+share/xml2po/docbook.pyc
 share/xml2po/empty.py
+share/xml2po/empty.pyc
 share/xml2po/gs.py
+share/xml2po/gs.pyc
 @dirrm share/xml2po
 @dirrm share/xml/gnome/xslt/xsldoc
 @dirrm share/xml/gnome/xslt/gettext
