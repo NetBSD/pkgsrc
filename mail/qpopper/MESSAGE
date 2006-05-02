@@ -1,5 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2004/05/06 13:46:22 taca Exp $
+$NetBSD: MESSAGE,v 1.4 2006/05/02 08:39:37 joerg Exp $
+
+In order to enable APOP, you have to create the authentication database.
+It is no longer created as part of the installation, you should run
+the following command to create it:
+    ${PREFIX}/sbin/qpopauth -init -safe
 
 In order to enable POP service, you should add the following lines
 to your /etc/inetd.conf:
