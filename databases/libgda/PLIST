@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/04/17 07:07:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/05/02 10:44:20 drochner Exp $
 bin/gda-author-dict-file
 bin/gda-diagnose
 bin/gda-inspect-dict-file
@@ -328,4 +328,3 @@ share/locale/zh_TW/LC_MESSAGES/libgda-3.mo
 @dirrm include/libgda-1.9/libgda-report
 @dirrm include/libgda-1.9/libgda
 @dirrm include/libgda-1.9
-@dirrm etc/libgda
