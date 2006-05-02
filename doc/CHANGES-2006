@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.119 2006/05/02 04:47:04 jlam Exp $
+$NetBSD: CHANGES-2006,v 1.120 2006/05/02 04:51:50 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2347,3 +2347,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/p5-MIME-Types to 1.16 [jlam 2006-05-02]
 	Added www/p5-HTTP-Server-Simple-Static version 0.02 [jlam 2006-05-02]
 	Added www/p5-HTTP-Server-Simple-Kwiki version 0.29 [jlam 2006-05-02]
+	Added www/p5-Kwiki-Simple-Server-HTTP version 0.03 [jlam 2006-05-02]
