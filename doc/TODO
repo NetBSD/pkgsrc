@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4939 2006/05/02 15:38:07 rpaulo Exp $
+$NetBSD: TODO,v 1.4940 2006/05/02 17:41:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -295,6 +295,7 @@ Suggested package updates
 
 	o 0verkill-0.16
 	o 9base-2 [pkg/32635]
+	o BasiliskII-1.0.20060501
 	o Cenon-3.71
 	o Chinput-3.0.1
 	o GMT-4.0
@@ -518,7 +519,7 @@ Suggested package updates
 	o garmin-utils-2.2
 	o gated-3.6
 	o gauche-0.8.7
-	o gcalctool-5.8.9
+	o gcalctool-5.8.10
 	o gcc-3.3.6
 	o gcc-4.1.0
 	o gcdmaster-1.2.1
@@ -539,6 +540,7 @@ Suggested package updates
 	o gkrellm1-wireless-2.0.3
 	o gkrellm1-xmms-0.5.8
 	o glabels-2.0.4
+	o gld-1.7
 	o glibmm-2.10.1
 	o gmime-2.1.17 [pkg/32487]
 	o gnet1-1.1.9
@@ -557,6 +559,7 @@ Suggested package updates
 	o goffice-0.3.0
 	o gogo-3.11p1
 	o gok-1.0.8
+	o gossip-0.11
 	o gpgme-1.1.0 [pkg/32761]
 	o gpsd-2.30
 	o gpsdrive-2.09
@@ -587,7 +590,7 @@ Suggested package updates
 	o guile-1.8.0
 	o guile-oops-1.0.2
 	o gworkspace-0.8.2
-	o gxine-0.5.5
+	o gxine-0.5.6
 	o gzrecover-0.3
 	o h5utils-1.10
 	o hackbot-2.21
@@ -697,6 +700,7 @@ Suggested package updates
 	o libtcl-nothread-8.4.9
 	o libtorrent-0.9.0
 	o libxml2-2.6.24
+	o libxslt-1.1.16
 	o licq-core-1.3.0
 	o lilypond-2.8.0
 	o linuxsms-0.77
@@ -1121,6 +1125,7 @@ Suggested package updates
 	o ssh-askpass-1.2.4.1
 	o statist-1.3.0
 	o stella-2.2
+	o stellarium-0.8.0
 	o stlport-4.6.2
 	o strace-4.5.8
 	o stunnel-4.15
