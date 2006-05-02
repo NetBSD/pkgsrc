@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2005/12/29 06:21:32 jlam Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2006/05/02 22:26:37 salo Exp $
 
-DISTNAME=	cgiirc-0.5.6
+DISTNAME=	cgiirc-0.5.8
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cgiirc/}
 
@@ -24,8 +24,8 @@ CONF_FILES+=	${PREFIX}/share/examples/cgiirc/cgiirc.config \
 DEPENDS+=	p5-INET6-*:../../net/p5-INET6
 .endif
 
-REPLACE_PERL=	client-perl.cgi irc.cgi nph-irc.cgi docs/decode.pl \
-		docs/identd.pl viewconnects.pl modules/parse.pl \
+REPLACE_PERL+=	client-perl.cgi irc.cgi nph-irc.cgi docs/decode.pl \
+		docs/identd.pl docs/viewconnects.pl modules/parse.pl \
 		interfaces/interface-make/make-js-interfaces.pl
 
 DOCFILES=	identd.xinetd decode.pl identd.pl viewconnects.pl
