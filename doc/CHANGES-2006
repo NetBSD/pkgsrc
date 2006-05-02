@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.110 2006/05/02 03:00:48 jlam Exp $
+$NetBSD: CHANGES-2006,v 1.111 2006/05/02 03:30:58 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2339,3 +2339,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added textproc/p5-XML-AutoWriter version 0.39 [jlam 2006-05-02]
 	Added devel/p5-VCP version 0.9beta20050110 [jlam 2006-05-02]
 	Added devel/p5-VCP-Dest-svk version 0.28 [jlam 2006-05-02]
+	Updated textproc/p5-Filter to 1.32 [jlam 2006-05-02]
+	Updated devel/p5-Spiffy to 0.30 [jlam 2006-05-02]
