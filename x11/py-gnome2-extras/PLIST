@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/25 11:07:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/05/02 10:40:58 drochner Exp $
 lib/pkgconfig/gnome-python-extras-2.0.pc
 ${PYSITELIB}/gtk-2.0/egg/__init__.py
 ${PYSITELIB}/gtk-2.0/egg/__init__.pyc
@@ -83,7 +83,6 @@ share/pygtk/2.0/defs/wnck.defs
 @dirrm share/gtk-doc/html/pygtkmozembed
 @dirrm share/gtk-doc/html/pygnomeprintui
 @dirrm share/gtk-doc/html/pygnomeprint
-@dirrm share/gtk-doc/html
 @dirrm ${PYSITELIB}/gtk-2.0/gnomeprint
 @dirrm ${PYSITELIB}/gtk-2.0/gksu
 @dirrm ${PYSITELIB}/gtk-2.0/egg
