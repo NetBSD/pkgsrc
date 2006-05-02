@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/04/22 09:22:06 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2006/05/02 13:53:18 gdt Exp $
 
 DISTNAME=	iozone3_248
 PKGNAME=	iozone-3.248
@@ -10,7 +10,8 @@ MAINTAINER=	root@garbled.net
 HOMEPAGE=	http://www.iozone.org/
 COMMENT=	Benchmark for file read and write speed
 
-RESTRICTED=	Publication of derivative works not allowed
+# No derivative works
+LICENSE=	iozone-license
 
 NOT_FOR_PLATFORM=	Interix-*-* # has only 32-bit off_t
 
