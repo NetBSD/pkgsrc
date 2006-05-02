@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/06 09:56:30 toddpw Exp $
+# $NetBSD: Makefile,v 1.15 2006/05/02 14:13:11 gdt Exp $
 
 DISTNAME=		ymessenger-1.0.4
 CATEGORIES=		chat
@@ -27,7 +27,8 @@ CHECK_SHLIBS=		no
 
 DIST_SUBDIR=		.
 
-RESTRICTED=		Commercial software.
+LICENSE=		generic-nonlicense
+RESTRICTED=		Commercial software (no permission to copy is evident).
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
