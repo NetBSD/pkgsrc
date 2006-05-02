@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/04/22 09:22:07 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2006/05/02 14:00:16 gdt Exp $
 
 DISTNAME=	estic-1.61
 PKGREVISION=	1
@@ -13,9 +13,13 @@ COMMENT=	German language configuration tool for ISTEC 1003/1008 ISDN systems
 
 EXTRACT_ONLY=	estic-1.60-sources${EXTRACT_SUFX}
 
-RESTRICTED=	Only free distribution permitted
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_CDROM=${RESTRICTED}
+# No permissions are apparent from inspecting the sources.
+LICENSE=		generic-nonlicense
+RESTRICTED=		No permission to copy
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:C/-.*//}
 
