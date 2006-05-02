@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2005/03/03 08:58:27 garbled Exp $
+$NetBSD: patch-ac,v 1.2.10.1 2006/05/02 15:54:56 salo Exp $
 
 --- bonnie.c.orig	Wed Aug 28 12:23:49 1996
 +++ bonnie.c	Tue Apr 29 23:22:39 2003
@@ -45,7 +45,7 @@ $NetBSD: patch-ac,v 1.2 2005/03/03 08:58:27 garbled Exp $
 -  fprintf(stderr, "File '%s', size: %ld\n", name, size);
 +  fprintf(stderr, "File '%s', size: %qu\n", name, (u_quad_t) size);
 +
-+  if (!(buf = (int *) malloc(Chunk / IntSize))) {
++  if (!(buf = (int *) malloc(Chunk))) {
 +    fprintf(stderr, "Error allocating buffer memory: %s\n", strerror(errno));
 +    exit(1);
 +  }     
