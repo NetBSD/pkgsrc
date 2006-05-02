@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2005/01/16 16:39:08 tv Exp $
+$NetBSD: patch-ab,v 1.5 2006/05/02 19:06:45 wiz Exp $
 
---- arcdos.c.orig	1992-04-14 18:58:21.000000000 -0400
+--- arcdos.c.orig	2003-10-31 03:32:19.000000000 +0100
 +++ arcdos.c
 @@ -31,7 +31,11 @@
  #include <sys/types.h>
@@ -13,8 +13,8 @@ $NetBSD: patch-ab,v 1.4 2005/01/16 16:39:08 tv Exp $
 +#endif
  #else	
  #include <time.h>		/* Sys V. Bleah. */
- struct	timeval {
-@@ -50,6 +54,11 @@ struct	timeval {
+ #if	NEED_TIMEVAL
+@@ -52,6 +56,11 @@ struct	timeval {
  char	*malloc();
  #endif
  
@@ -26,7 +26,7 @@ $NetBSD: patch-ab,v 1.4 2005/01/16 16:39:08 tv Exp $
  VOID
  getstamp(f, date, time)		/* get a file's date/time stamp */
  #if	!_MTS
-@@ -171,20 +180,29 @@ setstamp(f, date, time)		/* set a file's
+@@ -173,20 +182,29 @@ setstamp(f, date, time)		/* set a file's
  #endif
  #if	UNIX
  	struct tm	tm;
