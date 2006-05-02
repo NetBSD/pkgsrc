@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/04/17 13:46:13 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/05/02 10:42:33 drochner Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -7,6 +7,8 @@ PKGNAME=	xfce4-wm-themes-${XFCE4_VERSION}
 PKGREVISION=	3
 CATEGORIES=	wm
 COMMENT=	Xfce window manager themes
+
+USE_DIRS=	theme-1.1 xdg-1.1
 
 .include "../../wm/xfce4-wm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
