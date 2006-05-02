@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/16 22:16:36 tonio Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/02 08:59:30 joerg Exp $
 #
 
 DISTNAME=		jamvm-1.4.2
@@ -22,18 +22,8 @@ USE_TOOLS+=	gmake
 
 DEPENDS+=	classpath>=0.19:../../lang/classpath
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Linux"
-.	if ${MACHINE_ARCH} == "i386"
-MACHINE_GNU_PLATFORM=i686-pc-linux-gnu
-.	endif
-.endif
-.if ${OPSYS} == "NetBSD"
-MACHINE_GNU_PLATFORM=${MACHINE_ARCH}-foo-openbsd
-.endif
-
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/java-env.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
