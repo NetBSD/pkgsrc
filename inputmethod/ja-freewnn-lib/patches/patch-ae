@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2005/12/30 21:51:23 joerg Exp $
+$NetBSD: patch-ae,v 1.5 2006/05/02 08:00:08 yyamano Exp $
 
 --- configure.orig	Tue Apr  6 12:12:18 1999
 +++ configure
@@ -14,7 +14,7 @@ $NetBSD: patch-ae,v 1.4 2005/12/30 21:51:23 joerg Exp $
          CPP=/usr/libexec/cpp
      fi
 +    ;;
-+"NetBSD" | "DragonFly")
++"NetBSD" | "DragonFly" | "Darwin")
 +    CCOPTIONS="-DCSRG_BASED"
 +    CDEBUGFLAGS="-O2 -fno-strength-reduce"
 +    CPP=/usr/bin/cpp
