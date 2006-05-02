@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2006/04/22 09:22:16 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/02 09:07:20 joerg Exp $
 #
 
 DISTNAME=		drraw-2.1.3
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		databases graphics www
 MASTER_SITES=		http://web.taranis.org/drraw/dist/
 EXTRACT_SUFX=		.tgz
@@ -29,6 +29,8 @@ DRRAW_DOCS=		CHANGES INSTALL README.EVENTS WISHLIST
 
 CONF_FILES=		${EGDIR}/drraw.conf ${PKG_SYSCONFDIR}/drraw.conf
 
+DEPENDS+=		rrdtool>=1.2.9:../../databases/rrdtool
+
 do-install:
 	${INSTALL_SCRIPT_DIR} ${PREFIX}/libexec/cgi-bin
 	${INSTALL_SCRIPT} ${WRKSRC}/drraw.cgi ${PREFIX}/libexec/cgi-bin
@@ -51,5 +53,4 @@ SUBST_FILES.prefix=	drraw.cgi
 SUBST_SED.prefix=	-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g"
 SUBST_MESSAGE.prefix=	Fixing harcoded paths.
 
-.include "../../databases/rrdtool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
