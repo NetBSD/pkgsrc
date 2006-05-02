@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.751 2006/05/02 01:55:03 jlam Exp $
+# $NetBSD: Makefile,v 1.752 2006/05/02 03:00:48 jlam Exp $
 #
 
 COMMENT=	Development utilities
@@ -513,6 +513,7 @@ SUBDIR+=	p5-Tree-Simple
 SUBDIR+=	p5-UNIVERSAL-moniker
 SUBDIR+=	p5-UNIVERSAL-require
 SUBDIR+=	p5-VCP
+SUBDIR+=	p5-VCP-Dest-svk
 SUBDIR+=	p5-Want
 SUBDIR+=	p5-WeakRef
 SUBDIR+=	p5-capitalization
