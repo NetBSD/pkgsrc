@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2006/04/17 13:46:53 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/02 15:54:16 drochner Exp $
 #
 
-DISTNAME=	gnome-screensaver-2.14.0
-PKGREVISION=	1
+DISTNAME=	gnome-screensaver-2.14.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-screensaver/2.14/}
 
@@ -36,6 +35,7 @@ post-install:
 		${EGDIR}/pam.d/gnome-screensaver-NetBSD
 	${INSTALL_DATA} ${WRKSRC}/data/gnome-screensaver \
 		${EGDIR}/pam.d/gnome-screensaver-Linux
+	${CHMOD} 04555 ${PREFIX}/libexec/gnome-screensaver-dialog
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
