@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/04/22 09:22:17 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2006/05/02 08:56:37 joerg Exp $
 
 PKGVER=		2.2.3
 DISTNAME=	openMotif-${PKGVER}
@@ -17,7 +17,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_X11BASE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake tbl
+USE_TOOLS+=		flex gmake tbl
 GNU_CONFIGURE=		yes
 
 SUBST_CLASSES+=			man_rename
