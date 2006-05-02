@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/15 18:36:55 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.12.1 2006/05/02 22:26:37 salo Exp $
 share/cgiirc/client-perl.cgi
 share/cgiirc/formats/dark
 share/cgiirc/formats/default
+share/cgiirc/formats/dutch
+share/cgiirc/formats/german
 share/cgiirc/formats/gothic
 share/cgiirc/formats/mirc
+share/cgiirc/formats/norwegian
+share/cgiirc/formats/romanian
 share/cgiirc/formats/russian
 share/cgiirc/images/actmsg.wav
 share/cgiirc/images/actsound.gif
