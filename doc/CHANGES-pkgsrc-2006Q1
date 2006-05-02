@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.36 2006/05/01 21:56:36 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.37 2006/05/02 15:55:22 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -75,3 +75,5 @@ Pullup ticket 1492 - requested by xtraeme
 security update for clamav
 Pullup ticket 1490 - requested by adrianp
 security update for mantis
+Pullup ticket 1500 - requested by simonb
+bonnie runtime fix
