@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2006/03/14 20:43:23 jlam Exp $
+# $NetBSD: Makefile,v 1.22.2.1 2006/05/03 08:57:02 salo Exp $
 
-DISTNAME=	asterisk-1.2.4
-# PKGREVISION=	1
-PKGREVISION=	1
+DISTNAME=	asterisk-1.2.7.1
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://ftp.digium.com/pub/asterisk/ \
 		http://ftp.digium.com/pub/asterisk/old-releases
@@ -15,8 +13,6 @@ COMMENT=	The Asterisk Software PBX
 
 USE_TOOLS+=		bison gmake perl:run
 REPLACE_PERL+=		agi/agi-test.agi
-
-# MANCOMPRESSED= 		yes
 
 INSTALL_TARGET=		install samples
 
@@ -45,20 +41,19 @@ ASTEXAMPLEDIR?=		${PREFIX}/share/examples/asterisk
 SUBST_CLASSES+=		asterisk
 SUBST_STAGE.asterisk=	pre-configure
 SUBST_FILES.asterisk=	Makefile configs/musiconhold.conf.sample
-SUBST_SED.asterisk=	\
-	-e 's|/var/lib/asterisk|${ASTVARLIBDIR}|'		\
-	-e 's|^ *\(ASTLIBDIR\)=.*|\1 = ${ASTLIBDIR}|'		\
-	-e 's|^ *\(ASTVARLIBDIR\)=.*|\1 = ${ASTVARLIBDIR}|'	\
-	-e 's|^ *\(ASTETCDIR\)=.*|\1 = ${ASTETCDIR}|'		\
-	-e 's|^ *\(ASTSPOOLDIR\)=.*|\1 = ${ASTSPOOLDIR}|'	\
-	-e 's|^ *\(ASTLOGDIR\)=.*|\1 = ${ASTLOGDIR}|'		\
-	-e 's|^ *\(ASTHEADERDIR\)=.*|\1 = ${ASTHEADERDIR}|'	\
-	-e 's|^ *\(ASTCONFPATH\)=.*|\1 = ${ASTCONFPATH}|'	\
-	-e 's|^ *\(ASTBINDIR\)=.*|\1 = ${ASTBINDIR}|'		\
-	-e 's|^ *\(ASTSBINDIR\)=.*|\1 = ${ASTSBINDIR}|'		\
-	-e 's|^ *\(ASTVARRUNDIR\)=.*|\1 = ${ASTVARRUNDIR}|'	\
-	-e 's|^ *\(ASTMANDIR\)=.*|\1 = ${ASTMANDIR}|'		\
-	-e 's|^ *\(ASTEXAMPLEDIR\)=.*|\1 = ${ASTEXAMPLEDIR}|'
+SUBST_SED.asterisk+=	-e 's|/var/lib/asterisk|${ASTVARLIBDIR}|'
+SUBST_SED.asterisk+=	-e 's|^ *\(ASTLIBDIR\)=.*|\1 = ${ASTLIBDIR}|'
+SUBST_SED.asterisk+=	-e 's|^ *\(ASTVARLIBDIR\)=.*|\1 = ${ASTVARLIBDIR}|'
+SUBST_SED.asterisk+=	-e 's|^ *\(ASTETCDIR\)=.*|\1 = ${ASTETCDIR}|'
+SUBST_SED.asterisk+=	-e 's|^ *\(ASTSPOOLDIR\)=.*|\1 = ${ASTSPOOLDIR}|'
+SUBST_SED.asterisk+=	-e 's|^ *\(ASTLOGDIR\)=.*|\1 = ${ASTLOGDIR}|'
+SUBST_SED.asterisk+=	-e 's|^ *\(ASTHEADERDIR\)=.*|\1 = ${ASTHEADERDIR}|'
+SUBST_SED.asterisk+=	-e 's|^ *\(ASTCONFPATH\)=.*|\1 = ${ASTCONFPATH}|'
+SUBST_SED.asterisk+=	-e 's|^ *\(ASTBINDIR\)=.*|\1 = ${ASTBINDIR}|'
+SUBST_SED.asterisk+=	-e 's|^ *\(ASTSBINDIR\)=.*|\1 = ${ASTSBINDIR}|'
+SUBST_SED.asterisk+=	-e 's|^ *\(ASTVARRUNDIR\)=.*|\1 = ${ASTVARRUNDIR}|'
+SUBST_SED.asterisk+=	-e 's|^ *\(ASTMANDIR\)=.*|\1 = ${ASTMANDIR}|'
+SUBST_SED.asterisk+=	-e 's|^ *\(ASTEXAMPLEDIR\)=.*|\1 = ${ASTEXAMPLEDIR}|'
 
 .include "options.mk"
 

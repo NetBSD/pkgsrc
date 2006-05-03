@@ -1,7 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2005/05/24 14:29:06 riz Exp $
---- codecs/lpc10/Makefile.orig	2005-05-23 20:31:37.000000000 -0700
-+++ codecs/lpc10/Makefile	2005-05-23 20:32:34.000000000 -0700
-@@ -29,6 +29,7 @@
+$NetBSD: patch-ag,v 1.1.8.1 2006/05/03 08:57:02 salo Exp $
+
+--- codecs/lpc10/Makefile.orig	2005-11-29 19:24:39.000000000 +0100
++++ codecs/lpc10/Makefile
+@@ -32,6 +32,7 @@ endif
  ifneq ($(OSARCH),Darwin)
  ifneq ($(findstring BSD,${OSARCH}),BSD)
  ifneq ($(PROC),ppc)
@@ -9,7 +10,7 @@ $NetBSD: patch-ag,v 1.1 2005/05/24 14:29:06 riz Exp $
  ifneq ($(PROC),x86_64)
  ifneq ($(PROC),alpha)
  #The problem with sparc is the best stuff is in newer versions of gcc (post 3.0) only.
-@@ -46,6 +47,7 @@
+@@ -53,6 +54,7 @@ endif
  endif
  endif
  endif
