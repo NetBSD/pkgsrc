@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.16 2006/01/05 07:04:47 taca Exp $
+# $NetBSD: modules.mk,v 1.17 2006/05/03 02:11:00 minskim Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -136,8 +136,15 @@ ruby-simple-install:
 .include "replace.mk"
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/ruby$$/ { next; }
+PRINT_PLIST_AWK+=	/\.${RUBY_DLEXT}$$/ \
+			{ gsub(/${RUBY_DLEXT}$$/, "$${RUBY_DLEXT}") }
+PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SITEARCHLIBDIR:S|${PREFIX}/||:S|/|\\/|g}$$/ \
+			{ next; }
 PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SITELIBDIR:S|${PREFIX}/||:S|/|\\/|g}$$/ \
 			{ next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_SITEARCHLIBDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
+			{ gsub(/${RUBY_SITEARCHLIBDIR:S|${PREFIX}/||:S|/|\\/|g}/, "$${RUBY_SITEARCHLIBDIR}"); \
+			print; next; }
 PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_SITELIBDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
 			{ gsub(/${RUBY_SITELIBDIR:S|${PREFIX}/||:S|/|\\/|g}/, "$${RUBY_SITELIBDIR}"); \
 			print; next; }
