@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.132 2006/05/03 14:14:56 tv Exp $
+$NetBSD: CHANGES-2006,v 1.133 2006/05/03 15:42:19 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2359,3 +2359,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xorg-server to 6.9.0nb10 [tron 2006-05-03]
 	Added www/php-apc version 3.0.10 [tv 2006-05-03]
 	Added textproc/p5-XML-Dumper version 0.81 [tv 2006-05-03]
+	Updated devel/bison to 2.1nb1 [minskim 2006-05-03]
