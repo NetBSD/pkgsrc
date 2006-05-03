@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2006/01/29 01:30:20 rillig Exp $
+@comment $NetBSD: PLIST.common,v 1.5.2.1 2006/05/03 08:57:02 salo Exp $
 include/asterisk/acl.h
 include/asterisk/adsi.h
 include/asterisk/aes.h
@@ -556,7 +556,6 @@ libdata/asterisk/sounds/vm-undeleted.gsm
 libdata/asterisk/sounds/vm-unknown-caller.gsm
 libdata/asterisk/sounds/vm-whichbox.gsm
 libdata/asterisk/sounds/vm-youhave.gsm
-libdata/asterisk/sounds/voicemail
 man/man8/asterisk.8
 man/man8/astgenkey.8
 man/man8/autosupport.8
