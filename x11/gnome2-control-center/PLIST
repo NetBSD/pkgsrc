@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2006/04/17 07:07:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.20 2006/05/03 11:25:48 drochner Exp $
 bin/gnome-accessibility-keyboard-properties
 bin/gnome-at-properties
 bin/gnome-background-properties
@@ -107,6 +107,8 @@ share/control-center-2.0/xrdb/General.ad
 share/control-center-2.0/xrdb/Motif.ad
 share/control-center-2.0/xrdb/Tk.ad
 share/control-center-2.0/xrdb/Xaw.ad
+share/desktop-directories/font-method.directory
+share/desktop-directories/theme-method.directory
 share/examples/gnome2-control-center/font-method.conf
 share/examples/gnome2-control-center/theme-method.conf
 share/gconf/schemas/apps_gnome_settings_daemon_default_editor.schemas
@@ -136,8 +138,6 @@ share/gnome/help/control-center/C/config-sound.xml
 share/gnome/help/control-center/C/config-themes.xml
 share/gnome/help/control-center/C/control-center.xml
 share/gnome/help/control-center/es/control-center.xml
-share/gnome/vfolders/font-method.directory
-share/gnome/vfolders/theme-method.directory
 share/icons/hicolor/48x48/apps/gnome-control-center.png
 share/idl/ConfigArchiver.idl
 share/idl/GNOME_SettingsDaemon.idl
@@ -148,12 +148,14 @@ share/locale/az/LC_MESSAGES/control-center-2.0.mo
 share/locale/be/LC_MESSAGES/control-center-2.0.mo
 share/locale/bg/LC_MESSAGES/control-center-2.0.mo
 share/locale/bn/LC_MESSAGES/control-center-2.0.mo
+share/locale/br/LC_MESSAGES/control-center-2.0.mo
 share/locale/bs/LC_MESSAGES/control-center-2.0.mo
 share/locale/ca/LC_MESSAGES/control-center-2.0.mo
 share/locale/cs/LC_MESSAGES/control-center-2.0.mo
 share/locale/cy/LC_MESSAGES/control-center-2.0.mo
 share/locale/da/LC_MESSAGES/control-center-2.0.mo
 share/locale/de/LC_MESSAGES/control-center-2.0.mo
+share/locale/dz/LC_MESSAGES/control-center-2.0.mo
 share/locale/el/LC_MESSAGES/control-center-2.0.mo
 share/locale/en_CA/LC_MESSAGES/control-center-2.0.mo
 share/locale/en_GB/LC_MESSAGES/control-center-2.0.mo
@@ -174,6 +176,7 @@ share/locale/id/LC_MESSAGES/control-center-2.0.mo
 share/locale/is/LC_MESSAGES/control-center-2.0.mo
 share/locale/it/LC_MESSAGES/control-center-2.0.mo
 share/locale/ja/LC_MESSAGES/control-center-2.0.mo
+share/locale/ka/LC_MESSAGES/control-center-2.0.mo
 share/locale/ko/LC_MESSAGES/control-center-2.0.mo
 share/locale/ku/LC_MESSAGES/control-center-2.0.mo
 share/locale/lt/LC_MESSAGES/control-center-2.0.mo
@@ -221,7 +224,6 @@ share/pixmaps/display-capplet.png
 @comment in scrollkeeper: @dirrm share/omf
 @comment in ORBit2: @dirrm share/idl
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@dirrm share/gnome/vfolders
 @dirrm share/gnome/help/control-center/es
 @dirrm share/gnome/help/control-center/C
 @dirrm share/gnome/help/control-center
