@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/05/01 13:52:55 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/03 06:37:36 wiz Exp $
 
 PDO_DRIVER=		# empty
 PDO_VERSION=		1.0.2
@@ -18,7 +18,7 @@ PDO_INCLUDES=		php_pdo_driver.h php_pdo.h
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/php/ext/pdo
-.for inc ${PDO_INCLUDES}
+.for inc in ${PDO_INCLUDES}
 	${INSTALL_DATA} ${WRKSRC}/${inc:Q} ${PREFIX}/include/php/ext/pdo/${inc:Q}
 .endfor
 
