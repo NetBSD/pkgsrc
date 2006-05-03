@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4940 2006/05/02 17:41:03 wiz Exp $
+$NetBSD: TODO,v 1.4941 2006/05/03 17:42:59 drochner Exp $
 
 Suggested new packages
 ======================
@@ -440,7 +440,6 @@ Suggested package updates
 	o devIL-1.6.7
 	o devhelp-0.10
 	o devtodo-0.1.19
-	o dia-0.95
 	o diffstat-1.41
 	o dirac-0.5.4
 	o dirdiff-2.1
@@ -475,7 +474,6 @@ Suggested package updates
 	o enchant-1.2.6
 	o enlightenment-0.16.8.1
 	o enscript-1.6.4
-	o eog-2.14.1
 	o epiphany-extensions-2.14.0.1 [jmmv]
 	o epstool-3.08
 	o eric3-3.9.0
@@ -499,7 +497,6 @@ Suggested package updates
 	o fftw-3.1.1
 	o fhist-1.14
 	o file-4.17
-	o file-roller-2.14.2
 	o findutils-4.2.27
 	o flashplayer-0.4.13
 	o fmsx-3.0
@@ -546,10 +543,8 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-backgrounds-2.14.1
-	o gnome-games-2.14.1
 	o gnome-pilot-2.0.13
 	o gnome-spell-1.0.7
-	o gnome-vfs2-2.14.1
 	o gnome-vfsmm-2.14.0
 	o gnomeicu-0.99.10
 	o gnus-5.10.8
@@ -561,7 +556,6 @@ Suggested package updates
 	o gok-1.0.8
 	o gossip-0.11
 	o gpgme-1.1.0 [pkg/32761]
-	o gpsd-2.30
 	o gpsdrive-2.09
 	o gpsim-0.21.4
 	o gpsim-devel-20041104
@@ -590,7 +584,6 @@ Suggested package updates
 	o guile-1.8.0
 	o guile-oops-1.0.2
 	o gworkspace-0.8.2
-	o gxine-0.5.6
 	o gzrecover-0.3
 	o h5utils-1.10
 	o hackbot-2.21
@@ -725,8 +718,6 @@ Suggested package updates
 	o mdf2iso-0.3.0
 	o memcached-1.2
 	o memtest86-3.2
-	o metacity-2.14.3
-	o metakit-2.4.9.4
 	o mftrace-1.1.17
 	o mgetty-1.1.35
 	o micro_httpd-20050629
@@ -1004,14 +995,12 @@ Suggested package updates
 	o py-ZODB-3.2.9
 	o py-bdb-xml-2.1.8
 	o py-checker-0.8.17
-	o py-gnome2-2.14.0
 	o py-gnome2-extras-2.14.0
 	o py-gnutls-0.2.1
 	o py-kenosis-0.96
 	o py-ldap-2.2.0
 	o py-logging-0.4.9.6
 	o py-mad-0.5.4
-	o py-metakit-2.4.9.5
 	o py-mysqldb-1.1.7
 	o py-pexpect-0.99999b
 	o py-psyco-1.5.1
