@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.39 2006/05/02 22:27:09 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.40 2006/05/03 08:20:29 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -81,3 +81,5 @@ Pullup ticket 1503 - requested by drochner
 security fix for firefox
 Pullup ticket 1509 - requested by adrianp
 security update for cgiirc
+Pullup ticket 1513 - requested by simonb
+rsync bugfix update
