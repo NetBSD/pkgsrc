@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/04/22 09:22:07 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/05/03 15:12:24 gdt Exp $
 #
 
 DISTNAME=	icb.2.1.4
@@ -12,6 +12,7 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.icb.net/
 COMMENT=	TK interface to the ICB chat system
 
+LICENSE=		generic-nonlicense
 RESTRICTED=		Author wishes to handle distribution
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
