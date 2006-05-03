@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2006/04/23 00:12:41 jlam Exp $
+# $NetBSD: Makefile,v 1.112 2006/05/03 15:34:36 gdt Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -46,14 +46,14 @@ CONFIGURE_ARGS+=	--with-cups-user=${CUPS_USER:Q}
 CONFIGURE_ARGS+=	--with-cups-group=${CUPS_GROUP:Q}
 CONFIGURE_ARGS+=	--with-manext=bsd
 CONFIGURE_ARGS+=	--enable-libtool
-CONFIGURE_ARGS+=	--enable-slp
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ENV+=		DSOFLAGS=${LDFLAGS:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
-PKG_SUPPORTED_OPTIONS=	pam
+PKG_SUPPORTED_OPTIONS=	pam slp
+PKG_SUGGESTED_OPTIONS=	slp
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mpam)
@@ -66,6 +66,13 @@ PLIST_SUBST+=		PAM=
 CONFIGURE_ARGS+=	--disable-pam
 MESSAGE_SRC=		${.CURDIR}/MESSAGE
 PLIST_SUBST+=		PAM="@comment "
+.endif
+
+.if !empty(PKG_OPTIONS:Mslp)
+.include "../../net/openslp/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-slp
+.else
+CONFIGURE_ARGS+=	--disable-slp
 .endif
 
 # CUPS_USER	username of the CUPS administrator
@@ -111,7 +118,6 @@ OWN_DIRS_PERMS+=	${CUPS_REQUESTS}/tmp ${CUPS_USER} ${CUPS_GROUP} 1770
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../net/openslp/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 
 SUBST_CLASSES+=		paths
