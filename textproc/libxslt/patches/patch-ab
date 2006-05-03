@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.13 2005/03/20 10:45:48 recht Exp $
+$NetBSD: patch-ab,v 1.14 2006/05/03 11:02:46 drochner Exp $
 
---- libexslt/crypto.c.orig	Sun Mar 20 11:32:00 2005
-+++ libexslt/crypto.c	Sun Mar 20 11:32:37 2005
-@@ -317,6 +317,13 @@
+--- libexslt/crypto.c.orig	2006-03-10 12:01:42.000000000 +0100
++++ libexslt/crypto.c
+@@ -317,6 +317,13 @@ exsltCryptoCryptoApiRc4Decrypt (xmlXPath
  #define PLATFORM_MD5 GCRY_MD_MD5
  #define PLATFORM_SHA1 GCRY_MD_SHA1
  
@@ -13,6 +13,6 @@ $NetBSD: patch-ab,v 1.13 2005/03/20 10:45:48 recht Exp $
 +# include <stdint.h>
 +#endif
 +
+ #ifdef HAVE_SYS_SELECT_H
  #include <sys/select.h>		/* needed by gcrypt.h 4 Jul 04 */
- #include <gcrypt.h>
- 
+ #endif
