@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.754 2006/05/03 05:19:41 minskim Exp $
+# $NetBSD: Makefile,v 1.755 2006/05/03 23:13:35 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -614,6 +614,7 @@ SUBDIR+=	ruby-priority-queue
 SUBDIR+=	ruby-racc
 SUBDIR+=	ruby-rd-mode
 SUBDIR+=	ruby-readline
+SUBDIR+=	ruby-rgl
 SUBDIR+=	ruby-subversion
 SUBDIR+=	rudiments
 SUBDIR+=	rvm

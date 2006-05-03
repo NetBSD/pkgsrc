@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.134 2006/05/03 17:26:28 drochner Exp $
+$NetBSD: CHANGES-2006,v 1.135 2006/05/03 23:13:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2370,3 +2370,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated wm/metacity to 2.14.3 [drochner 2006-05-03]
 	Updated x11/gnome-session to 2.14.1 [drochner 2006-05-03]
 	Updated multimedia/gxine to 0.5.6 [drochner 2006-05-03]
+	Added devel/ruby-rgl version 0.2.3 [minskim 2006-05-03]
