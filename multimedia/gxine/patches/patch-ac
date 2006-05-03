@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2006/03/13 17:31:00 joerg Exp $
+$NetBSD: patch-ac,v 1.5 2006/05/03 12:47:47 drochner Exp $
 
---- src/desktop_integration.c.orig	Tue Nov  9 17:43:13 2004
-+++ src/desktop_integration.c	Sat May  7 18:57:38 2005
+--- src/desktop_integration.c.orig	2006-03-07 22:26:26.000000000 +0100
++++ src/desktop_integration.c
 @@ -31,7 +31,9 @@
  #include <stdlib.h>
  #include <stdio.h>
@@ -10,5 +10,5 @@ $NetBSD: patch-ac,v 1.4 2006/03/13 17:31:00 joerg Exp $
  #include <alloca.h>
 +#endif
  #include <string.h>
- 
- #include "utils.h"
+ #include <sys/types.h>
+ #include <sys/stat.h>

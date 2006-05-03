@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.2 2005/09/08 18:15:39 drochner Exp $
+$NetBSD: patch-af,v 1.3 2006/05/03 12:47:47 drochner Exp $
 
---- doc/man/Makefile.in.orig	2005-08-26 02:12:42.000000000 +0200
+--- doc/man/Makefile.in.orig	2006-03-08 01:38:53.000000000 +0100
 +++ doc/man/Makefile.in
-@@ -147,7 +147,7 @@ am__include = @am__include@
- am__quote = @am__quote@
- gxine_have_gdk_pixbuf_csource = @gxine_have_gdk_pixbuf_csource@
- install_sh = @install_sh@
+@@ -190,7 +190,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
 -SUBDIRS = en de
 +SUBDIRS = en
  subdir = doc/man
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
  mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = $(top_builddir)/include/config.h

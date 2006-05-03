@@ -1,0 +1,26 @@
+$NetBSD: patch-al,v 1.1 2006/05/03 12:47:47 drochner Exp $
+
+--- src/engine.c.orig	2006-03-16 18:16:18.000000000 +0100
++++ src/engine.c
+@@ -36,7 +36,7 @@
+ 
+ se_t *gse; /* global script engine */
+ xine_t *xine; /* global xine instance */
+-pthread_mutex_t engine_lock = PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP;
++pthread_mutex_t engine_lock;
+ 
+ gboolean initialised = FALSE;
+ 
+@@ -277,7 +277,12 @@ void engine_init (void)
+ {
+   char *cfgfilename;
+   GtkWidget *w;
++  pthread_mutexattr_t ma;
+   
++  pthread_mutexattr_init(&ma);
++  pthread_mutexattr_settype(&ma, PTHREAD_MUTEX_RECURSIVE);
++  pthread_mutex_init(&engine_lock, &ma);
++
+   /*
+    * init the global xine engine
+    */
