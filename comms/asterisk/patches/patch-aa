@@ -1,8 +1,16 @@
-$NetBSD: patch-aa,v 1.7 2006/01/29 01:21:45 rillig Exp $
+$NetBSD: patch-aa,v 1.7.2.1 2006/05/03 08:57:02 salo Exp $
 
---- Makefile.orig	2005-12-05 06:47:51.000000000 +0000
+--- Makefile.orig	2006-04-11 23:58:47.000000000 +0200
 +++ Makefile
-@@ -106,31 +106,32 @@ BUSYDETECT+= #-DBUSYDETECT_TONEONLY
+@@ -46,7 +46,6 @@ ifneq ($(findstring dont-optimize,$(MAKE
+ #K6OPT  = -DK6OPT
+ 
+ #Tell gcc to optimize the code
+-OPTIMIZE+=-O6
+ endif
+ 
+ #Overwite config files on "make samples"
+@@ -108,31 +107,32 @@ BUSYDETECT+= #-DBUSYDETECT_TONEONLY
  BUSYDETECT+= #-DBUSYDETECT_COMPARE_TONE_AND_SILENCE
  
  ifneq ($(OSARCH),SunOS)
@@ -57,7 +65,7 @@ $NetBSD: patch-aa,v 1.7 2006/01/29 01:21:45 rillig Exp $
    MODULES_DIR=$(ASTLIBDIR)/modules
    AGI_DIR=$(ASTVARLIBDIR)/agi-bin
  endif
-@@ -223,7 +224,7 @@ ASTCFLAGS+=$(OPTIMIZE)
+@@ -226,7 +226,7 @@ ASTCFLAGS+=$(OPTIMIZE)
  ASTOBJ=-o asterisk
  
  ifeq ($(findstring BSD,$(OSARCH)),BSD)
@@ -66,7 +74,7 @@ $NetBSD: patch-aa,v 1.7 2006/01/29 01:21:45 rillig Exp $
    ASTCFLAGS+=-I$(CROSS_COMPILE_TARGET)/usr/local/include -L$(CROSS_COMPILE_TARGET)/usr/local/lib
  endif
  
-@@ -254,24 +255,24 @@ ifeq ($(OSARCH),FreeBSD)
+@@ -257,24 +257,24 @@ ifeq ($(OSARCH),FreeBSD)
  
    # XXX FreeBSD paths
    PREFIX?=/usr/local
@@ -103,7 +111,7 @@ $NetBSD: patch-aa,v 1.7 2006/01/29 01:21:45 rillig Exp $
    MPG123TARG=netbsd
  endif
  
-@@ -290,7 +291,7 @@ ifeq ($(findstring CYGWIN,$(OSARCH)),CYG
+@@ -293,7 +293,7 @@ ifeq ($(findstring CYGWIN,$(OSARCH)),CYG
    ASTOBJ=-shared -o asterisk.dll -Wl,--out-implib=libasterisk.dll.a -Wl,--export-all-symbols
    ASTLINK=
    LIBS+=-lpthread -lncurses -lm -lresolv
@@ -112,7 +120,7 @@ $NetBSD: patch-aa,v 1.7 2006/01/29 01:21:45 rillig Exp $
    PROC=$(shell uname -m)
  endif
  
-@@ -367,7 +368,8 @@ ifeq ($(OSARCH),Darwin)
+@@ -370,7 +370,8 @@ ifeq ($(OSARCH),Darwin)
    AUDIO_LIBS=-framework CoreAudio
    ASTLINK=-Wl,-dynamic
    SOLINK=-dynamic -bundle -undefined suppress -force_flat_namespace
@@ -122,7 +130,7 @@ $NetBSD: patch-aa,v 1.7 2006/01/29 01:21:45 rillig Exp $
    ASTCFLAGS+=-DPOLLCOMPAT
  else
  #These are used for all but Darwin
-@@ -379,8 +381,12 @@ ifeq ($(OSARCH),FreeBSD)
+@@ -382,8 +383,12 @@ ifeq ($(OSARCH),FreeBSD)
    LIBS+=-lcrypto
  endif
  
@@ -136,7 +144,7 @@ $NetBSD: patch-aa,v 1.7 2006/01/29 01:21:45 rillig Exp $
  endif
  
  ifeq ($(OSARCH),OpenBSD)
-@@ -718,31 +724,31 @@ install: all datafiles bininstall
+@@ -719,31 +724,31 @@ install: all datafiles bininstall
  upgrade: all bininstall
  
  adsi:
@@ -177,7 +185,7 @@ $NetBSD: patch-aa,v 1.7 2006/01/29 01:21:45 rillig Exp $
  		( \
  		echo "[directories]" ; \
  		echo "astetcdir => $(ASTETCDIR)" ; \
-@@ -759,7 +765,7 @@ samples: adsi
+@@ -760,7 +765,7 @@ samples: adsi
  		echo ";astctlowner = root" ; \
  		echo ";astctlgroup = apache" ; \
  		echo ";astctl = asterisk.ctl" ; \

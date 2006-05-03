@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.11 2006/02/01 01:45:29 mjl Exp $
+$NetBSD: distinfo,v 1.11.2.1 2006/05/03 08:57:02 salo Exp $
 
-SHA1 (asterisk-1.2.4.tar.gz) = 557528a0a3d2c05245d1ef3d280ed441635f1958
-RMD160 (asterisk-1.2.4.tar.gz) = 826351d12a9ffb13f81d4605d80bbc07d678f5b2
-Size (asterisk-1.2.4.tar.gz) = 10536366 bytes
-SHA1 (patch-aa) = 8951b74a18d83863d728f2a6f0884087d24d6697
+SHA1 (asterisk-1.2.7.1.tar.gz) = 070a5ca9aaac5fd11544955e4261d5f38b765911
+RMD160 (asterisk-1.2.7.1.tar.gz) = 28c1d5c3ac6db52d7d315f59d391a655b77338fd
+Size (asterisk-1.2.7.1.tar.gz) = 10554037 bytes
+SHA1 (patch-aa) = eacc0ecee06ab79f6fb1e6dfed009a0b514c8c5a
 SHA1 (patch-ab) = 1bdae0ff206b63fe63373a307ecd23859c10cb79
 SHA1 (patch-ac) = 4f783699c7d701030788646f8b961fa9245dc127
 SHA1 (patch-ad) = bfc898732884063c6c300b15674e462793588601
-SHA1 (patch-ae) = 9b7b2ed60d79aab3e2653d97409067c17cd342b4
-SHA1 (patch-af) = 33c03a4ae531296b2b4e60713e33d7491fff504d
-SHA1 (patch-ag) = 3e6ce8f463df94fe9cba8fa8dbe03eda408aa581
+SHA1 (patch-ae) = d3ff3a6e2340c53814d2e7ac97b798e9905a4c57
+SHA1 (patch-af) = 1ece9dd83cdb68f2daa1dfd3bf53014f873def81
+SHA1 (patch-ag) = 7adec0d05371f6ffa56e067770c04c8acec2d922
 SHA1 (patch-ai) = 81c0ff8f8a273562a64ab7cfb301d578e18808e3
 SHA1 (patch-aj) = 9111528ac9702040233308c655e5233120ee9bcf
 SHA1 (patch-ak) = 3027134258138ca9163d9569548c7d4faffb874f

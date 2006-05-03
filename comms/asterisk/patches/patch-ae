@@ -1,7 +1,8 @@
-$NetBSD: patch-ae,v 1.2 2006/01/13 20:32:38 riz Exp $
---- apps/Makefile.orig	2005-11-29 18:24:39.000000000 +0000
-+++ apps/Makefile	2006-01-02 00:58:23.000000000 +0000
-@@ -45,15 +45,17 @@
+$NetBSD: patch-ae,v 1.2.2.1 2006/05/03 08:57:02 salo Exp $
+
+--- apps/Makefile.orig	2006-02-09 03:31:21.000000000 +0100
++++ apps/Makefile
+@@ -45,15 +45,17 @@ APPS=app_dial.so app_playback.so app_voi
  #APPS+=app_rpt.so
  
  ifndef WITHOUT_ZAPTEL
@@ -21,12 +22,12 @@ $NetBSD: patch-ae,v 1.2 2006/01/13 20:32:38 riz Exp $
  ifeq ($(findstring BSD,${OSARCH}),BSD)
  CFLAGS+=-I$(CROSS_COMPILE_TARGET)/usr/local/include -L$(CROSS_COMPILE_TARGET)/usr/local/lib
  endif
-@@ -103,10 +105,10 @@
+@@ -103,10 +105,10 @@ app_curl.so: app_curl.o
  	$(CC) $(SOLINK) -o $@ ${CYGSOLINK} $< ${CYGSOLIB} $(CURLLIBS)
  
  app_sql_postgres.o: app_sql_postgres.c
--	$(CC) -pipe -I/usr/local/pgsql/include $(CFLAGS) -c -o app_sql_postgres.o app_sql_postgres.c
-+	$(CC) -pipe -I${PREFIX}/include $(CFLAGS) -c -o app_sql_postgres.o app_sql_postgres.c
+-	$(CC) -pipe -I$(CROSS_COMPILE_TARGET)/usr/local/pgsql/include -I$(CROSS_COMPILE_TARGET)/usr/include/postgresql $(CFLAGS) -c -o app_sql_postgres.o app_sql_postgres.c
++	$(CC) -pipe -I$(CROSS_COMPILE_TARGET)/${PREFIX}/include $(CFLAGS) -c -o app_sql_postgres.o app_sql_postgres.c
  
  app_sql_postgres.so: app_sql_postgres.o
 -	$(CC) $(SOLINK) -o $@ ${CYGSOLINK} $< ${CYGSOLIB} -L/usr/local/pgsql/lib -lpq
