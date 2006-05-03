@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2006/05/03 14:09:25 tv Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/03 14:14:25 tv Exp $
 
-DISTNAME=	XML-Dumper-0.79
+DISTNAME=	XML-Dumper-0.81
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5xdu
 CATEGORIES=	textproc perl5

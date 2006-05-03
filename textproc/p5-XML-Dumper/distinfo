@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/05/03 14:08:12 tv Exp $
+$NetBSD: distinfo,v 1.4 2006/05/03 14:14:25 tv Exp $
 
-SHA1 (XML-Dumper-0.79.tar.gz) = 6d5577680cf6fe9e10a7433e46f340e9046ca41f
-RMD160 (XML-Dumper-0.79.tar.gz) = ae77d3f32664f6e600cb7282394492081079ab40
-Size (XML-Dumper-0.79.tar.gz) = 17568 bytes
+SHA1 (XML-Dumper-0.81.tar.gz) = df5091d8c45ab1a95a630c089c545fdb71d1f5d7
+RMD160 (XML-Dumper-0.81.tar.gz) = 85b6a5ea85e5057ec53d5b4cbf997c1b03256fa2
+Size (XML-Dumper-0.81.tar.gz) = 17988 bytes
