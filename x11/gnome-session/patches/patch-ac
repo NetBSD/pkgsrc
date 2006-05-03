@@ -1,8 +1,6 @@
-$NetBSD: patch-ac,v 1.6 2006/04/01 17:36:41 jmmv Exp $
+$NetBSD: patch-ac,v 1.7 2006/05/03 11:21:26 drochner Exp $
 
-http://bugzilla.gnome.org/show_bug.cgi?id=336237
-
---- gnome-session/main.c.orig	2006-03-06 14:30:08.000000000 +0100
+--- gnome-session/main.c.orig	2006-03-21 18:37:40.000000000 +0100
 +++ gnome-session/main.c
 @@ -43,6 +43,7 @@
  #include "command.h"
@@ -13,9 +11,9 @@ http://bugzilla.gnome.org/show_bug.cgi?id=336237
  #include "gsm-gsd.h"
  #include "gsm-keyring.h"
 @@ -334,6 +335,7 @@ main (int argc, char *argv[])
-   int status;
    char *display_str;
    char **versions;
+   GConfClient *gconf_client;
 +  gboolean dbus_daemon_owner;
    
    if (getenv ("GSM_VERBOSE_DEBUG"))
@@ -28,13 +26,13 @@ http://bugzilla.gnome.org/show_bug.cgi?id=336237
  
    /* Make sure children see the right value for DISPLAY.  This is
       useful if --display was specified on the command line.  */
-@@ -497,6 +500,9 @@ main (int argc, char *argv[])
-   gsm_sound_logout ();
+@@ -496,6 +499,9 @@ main (int argc, char *argv[])
  
    gsm_keyring_daemon_stop ();
-+
+ 
 +  if (dbus_daemon_owner)
-+    gsm_dbus_daemon_stop ();
-   
++	gsm_dbus_daemon_stop ();
++
+   g_object_unref (gconf_client);
    gsm_shutdown_gconfd ();
  

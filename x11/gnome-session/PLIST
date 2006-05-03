@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/04/17 07:07:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/05/03 11:21:26 drochner Exp $
 bin/gnome-session
 bin/gnome-session-properties
 bin/gnome-session-remove
@@ -26,6 +26,7 @@ share/locale/cs/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/cy/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/da/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/de/LC_MESSAGES/gnome-session-2.0.mo
+share/locale/dz/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/el/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/en_CA/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/en_GB/LC_MESSAGES/gnome-session-2.0.mo
@@ -48,6 +49,7 @@ share/locale/id/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/is/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ja/LC_MESSAGES/gnome-session-2.0.mo
+share/locale/ka/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/kn/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ku/LC_MESSAGES/gnome-session-2.0.mo
