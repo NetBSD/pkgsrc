@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4944 2006/05/04 16:32:35 drochner Exp $
+$NetBSD: TODO,v 1.4945 2006/05/04 19:01:36 ghen Exp $
 
 Suggested new packages
 ======================
@@ -363,6 +363,7 @@ Suggested package updates
 	o avr-libc-1.4.1
 	o avrdude-5.1
 	o baci-20040415
+	o bacula-1.38.9
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
 	o bchunk-1.2.0
