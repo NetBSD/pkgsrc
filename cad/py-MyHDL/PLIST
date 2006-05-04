@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/02/10 16:06:46 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/05/04 16:58:05 drochner Exp $
 ${PYSITELIB}/myhdl/_Cosimulation.py
 ${PYSITELIB}/myhdl/_Cosimulation.pyc
 ${PYSITELIB}/myhdl/_Cosimulation.pyo
@@ -74,8 +74,5 @@ ${PYSITELIB}/myhdl/_unparse.pyo
 ${PYSITELIB}/myhdl/_util.py
 ${PYSITELIB}/myhdl/_util.pyc
 ${PYSITELIB}/myhdl/_util.pyo
-${PYSITELIB}/myhdl/test.py
-${PYSITELIB}/myhdl/test.pyc
-${PYSITELIB}/myhdl/test.pyo
 @dirrm ${PYSITELIB}/myhdl/_toVerilog
 @dirrm ${PYSITELIB}/myhdl
