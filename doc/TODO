@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4942 2006/05/03 21:36:18 wiz Exp $
+$NetBSD: TODO,v 1.4943 2006/05/04 05:17:52 ghen Exp $
 
 Suggested new packages
 ======================
@@ -500,8 +500,6 @@ Suggested package updates
 	o fhist-1.14
 	o file-4.17
 	o findutils-4.2.27
-	o firefox-1.5.0.3
-	o firefox-gtk1-1.5.0.3
 	o flashplayer-0.4.13
 	o fmsx-3.0
 	o fondu-040927
