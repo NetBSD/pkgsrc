@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4943 2006/05/04 05:17:52 ghen Exp $
+$NetBSD: TODO,v 1.4944 2006/05/04 16:32:35 drochner Exp $
 
 Suggested new packages
 ======================
@@ -1181,7 +1181,7 @@ Suggested package updates
 	o vice-1.19
 	o vifm-0.3a
 	o visual-regexp-3.1
-	o vlc-0.8.4 [needs ffmpeg prerelease/snapshot]
+	o vlc-0.8.4a
 	o vmware-module-3.2.2
 	o vmware-5.5
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
