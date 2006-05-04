@@ -1,0 +1,10 @@
+VideoLAN is a project of French students from the Ecole Centrale Paris
+and developers from all over the world. Its main goals is MPEG streaming
+on a network, but it also features a standalone multimedia player. The
+VideoLAN Server can stream video read from a hard disk, a DVD player,
+a satellite card or an MPEG 2 compression card, and unicast or multicast
+it on a network. The VideoLAN Client can read the stream from the network
+and display it. It can also be used to display video read locally on
+the computer : DVDs, VCDs, MPEG and DivX files and from a satellite
+card. It is multi-plaform : Linux, Windows, Mac OS X, BeOS, BSD, Solaris,
+QNX, iPaq... The VideoLAN Client and Server now have a full IPv6 support.
