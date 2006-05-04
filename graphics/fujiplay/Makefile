@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/04/22 09:22:09 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2006/05/04 16:39:53 tv Exp $
 #
 
 DISTNAME=	fujiplay
@@ -23,14 +23,6 @@ SUBST_SED.cvsid+=	-e 's| \$$$$||'
 SUBST_FILES.cvsid=	fujiplay.c
 
 INSTALLATION_DIRS=	bin
-
-xpost-patch:
-	cd ${WRKSRC} ; ${MV} fujiplay.c fujiplay.c.orig2 ; \
-	${SED} \
-		-e '791,794s/^/"/g' \
-		-e '791,793s/$$/\\n"/' \
-		-e '790,790s/".*$$//' \
-		<fujiplay.c.orig2 >fujiplay.c
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fujiplay	${PREFIX}/bin
