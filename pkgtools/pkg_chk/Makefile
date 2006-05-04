@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2006/05/01 09:34:33 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2006/05/04 22:08:05 dillo Exp $
 
-DISTNAME=	pkg_chk-1.71
+DISTNAME=	pkg_chk-1.72
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -24,9 +24,11 @@ INSTALLATION_DIRS=	sbin man/man8
 
 MAKECONF?=	/etc/mk.conf
 
+#XXX: how to get GZIP_CMD?!
 do-build:
 	${SED} -e 's#@AWK@#${AWK}#g' \
 	  -e 's#@GREP@#${GREP}#g' \
+	  -e 's#@GZIP_CMD@#gzip#g' \
 	  -e 's#@MAKE@#${MAKE}#g' \
 	  -e 's#@MAKECONF@#${MAKECONF}#g' \
 	  -e 's#@PKG_ADD@#${PKG_ADD}#g' \
