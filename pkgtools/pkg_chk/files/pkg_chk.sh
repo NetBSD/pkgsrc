@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.32 2006/05/01 09:34:33 wiz Exp $
+# $Id: pkg_chk.sh,v 1.33 2006/05/04 22:08:05 dillo Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -8,7 +8,8 @@
 
 PATH=${PATH}:/usr/sbin:/usr/bin
 
-SUMMARY_FILE=pkg_chk-summary
+SUMMARY_FILE=pkg_summary.gz
+OLD_SUMMARY_FILE=pkg_chk-summary
 
 is_binary_available()
     {
@@ -163,9 +164,9 @@ extract_variables()
 
     if [ -z "$opt_b" -o -n "$opt_s" -o -d $PKGSRCDIR/pkgtools/pkg_chk ] ; then
 	cd $PKGSRCDIR/pkgtools/pkg_chk
-	extract_make_vars Makefile AWK GREP SED TSORT SORT PACKAGES PKG_INFO \
-			PKG_ADD PKG_DELETE PKGCHK_CONF PKGCHK_UPDATE_CONF \
-			PKGCHK_TAGS PKGCHK_NOTAGS
+	extract_make_vars Makefile AWK GREP GZIP_CMD SED TSORT SORT PACKAGES \
+	                PKG_INFO PKG_ADD PKG_DELETE PKGCHK_CONF \
+ 	    		PKGCHK_UPDATE_CONF PKGCHK_TAGS PKGCHK_NOTAGS
 	if [ -z "$PACKAGES" ];then
 	    PACKAGES=$PKGSRCDIR/packages
 	fi
@@ -563,7 +564,6 @@ usage()
 	-P dir  Set PACKAGES dir (overrides any other setting)
 	-q	Do not display actions or take any action; only list packages
 	-r	Recursively remove mismatches (use with care) (implies -i)
-	-S	Create summary of binary packages
 	-s      Install packages by building from source
 	-U tags Comma separated list of pkgchk.conf tags to unset
 	-u      Update all mismatched packages (implies -i)
@@ -612,7 +612,6 @@ while [ $# != 0 ]; do
 	-P )	opt_P="$2" ; shift ;;
 	-q )	opt_q=1 ; shift ;;
 	-r )	opt_r=1 ;;
-	-S )	opt_S=1 ;;
 	-s )	opt_s=1 ;;
 	-U )	opt_U="$2" ; shift ;;
 	-u )	opt_u=1 ;;
@@ -641,6 +640,8 @@ unset PKG_PATH || true
 
 test -n "$AWK"        || AWK="@AWK@"
 test -n "$GREP"       || GREP="@GREP@"
+test -n "$GZIP_CMD"   || GZIP_CMD="@GZIP_CMD@"
+export GZIP_CMD
 test -n "$MAKE"       || MAKE="@MAKE@"
 test -n "$MAKECONF"   || MAKECONF="@MAKECONF@"
 test -n "$PKG_ADD"    || PKG_ADD="@PKG_ADD@"
@@ -703,10 +704,17 @@ if [ -n "$opt_N" ]; then
 	done
 fi
 
+AWK_PARSE_SUMMARY='$1=="PKGNAME"{pkgname=$2} $1=="PKGPATH"{pkgpath=$2} NF==0{if (pkgpath && pkgname) print pkgpath ":" pkgname; pkgpath=""; pkgname=""} END{if (pkgpath && pkgname) print pkgpath ":" pkgname}'
+
 if [ \( -n "$opt_b" -o -n "$opt_S" \) -a -z "$opt_s" ] ; then
     case $PACKAGES in
 	http://*|ftp://*)
-	    PKGDB=`ftp -o - $PACKAGES/$SUMMARY_FILE`;;
+            PKGDB=`ftp -o - $PACKAGES/$SUMMARY_FILE | ${GZIP_CMD} -cd \
+		| ${AWK} -F= "$AWK_PARSE_SUMMARY"`
+	    if [ -z "$PKGDB" ]
+	    then
+		PKGDB=`ftp -o - $PACKAGES/$OLD_SUMMARY_FILE`
+	    fi;;
 	*)
 	    if [ -d "$PACKAGES" ] ; then
 		msg_progress Scan $PACKAGES
@@ -719,11 +727,6 @@ if [ \( -n "$opt_b" -o -n "$opt_S" \) -a -z "$opt_s" ] ; then
 		PKGSRCDIR=NONE
 	    fi;;
     esac
-fi
-
-if [ -n "$opt_S" ]; then
-    msg_progress "Write $PACKAGES/$SUMMARY_FILE"
-    echo "$PKGDB" | tr ' ' '\012' > $PACKAGES/$SUMMARY_FILE
 fi
 
 if [ -n "$opt_g" ]; then
