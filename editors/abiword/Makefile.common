@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2006/04/15 10:47:24 adam Exp $
+# $NetBSD: Makefile.common,v 1.32 2006/05/04 12:59:04 sketch Exp $
 
 # Be sure to update PLIST and distinfo for editors/abiword-plugins when updating
 ABIWORD_VERSION=	2.4.4
@@ -20,6 +20,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libpng=${BUILDLINK_PREFIX.png}
 
 .include "../../converters/fribidi/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../converters/wv/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
