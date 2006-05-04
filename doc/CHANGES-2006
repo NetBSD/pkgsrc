@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.140 2006/05/04 09:37:36 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.141 2006/05/04 22:09:26 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2377,3 +2377,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/firefox-gtk1 to 1.5.0.3 [ghen 2006-05-04]
 	Updated net/mtr to 0.71nb1 [tron 2006-05-04]
 	Added devel/sgb version 0pre20050409 [minskim 2006-05-04]
+	Updated pkgtools/pkg_chk to 1.72 [dillo 2006-05-04]
