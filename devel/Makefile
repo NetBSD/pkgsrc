@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.756 2006/05/04 01:31:55 minskim Exp $
+# $NetBSD: Makefile,v 1.757 2006/05/04 09:37:36 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -627,6 +627,7 @@ SUBDIR+=	sdcc
 SUBDIR+=	semantic
 SUBDIR+=	semi
 SUBDIR+=	sfio
+SUBDIR+=	sgb
 SUBDIR+=	sgi-stl
 SUBDIR+=	sgi-stl-docs
 SUBDIR+=	silc-toolkit
