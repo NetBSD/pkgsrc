@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4946 2006/05/04 23:28:51 wiz Exp $
+$NetBSD: TODO,v 1.4947 2006/05/04 23:34:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -760,8 +760,8 @@ Suggested package updates
 	o mysql4-server-4.1.18
 	o mysql5-client-5.0.21
 	o mysql5-server-5.0.21
-	o nagios-2.2
-	o nagios-base-2.1
+	o nagios-2.3
+	o nagios-base-2.3
 	o nano-1.2.5 [pkg/32859]
 	o nap-1.5.3
 	o nawk-20041222
