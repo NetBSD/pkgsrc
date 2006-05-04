@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.136 2006/05/04 01:31:55 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.137 2006/05/04 01:38:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2372,3 +2372,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/gxine to 0.5.6 [drochner 2006-05-03]
 	Added devel/ruby-rgl version 0.2.3 [minskim 2006-05-03]
 	Added devel/ruby-stream version 0.5 [minskim 2006-05-04]
+	Updated devel/ruby-rgl to 0.2.3nb1 [minskim 2006-05-04]
