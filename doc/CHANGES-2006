@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.138 2006/05/04 05:17:18 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.139 2006/05/04 05:40:39 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2375,3 +2375,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/ruby-rgl to 0.2.3nb1 [minskim 2006-05-04]
 	Updated www/firefox to 1.5.0.3 [ghen 2006-05-04]
 	Updated www/firefox-gtk1 to 1.5.0.3 [ghen 2006-05-04]
+	Updated net/mtr to 0.71nb1 [tron 2006-05-04]
