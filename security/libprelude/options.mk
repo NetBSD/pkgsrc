@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2006/03/10 22:19:29 shannonjr Exp $
+# $NetBSD: options.mk,v 1.3 2006/05/04 13:13:17 shannonjr Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libprelude
 PKG_SUPPORTED_OPTIONS=	perl python
@@ -12,17 +12,17 @@ PKG_SUPPORTED_OPTIONS=	perl python
 ###
 
 .if !empty(PKG_OPTIONS:Mperl)
-CONFIGURE_ARGS+=	--enable-perl
+CONFIGURE_ARGS+=	--with-perl
 REPLACE_PERL+=		bindings/perl/Makefile.PL
 .else
-CONFIGURE_ARGS+=	--disable-perl
+CONFIGURE_ARGS+=	--with-perl=no
 .endif
 .if !empty(PKG_OPTIONS:Mpython)
-CONFIGURE_ARGS+=	--enable-python
+CONFIGURE_ARGS+=	--with-python
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 PY_PATCHPLIST=		yes
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .else
-CONFIGURE_ARGS+=	--disable-python
+CONFIGURE_ARGS+=	--with-python=no
 .endif
