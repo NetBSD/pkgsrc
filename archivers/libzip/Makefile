@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/07/14 16:56:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/05 23:51:15 dillo Exp $
 #
 
-DISTNAME=		libzip-0.6.1
+DISTNAME=		libzip-0.7
 CATEGORIES=		archivers devel
 MASTER_SITES=		http://www.nih.at/libzip/
 
