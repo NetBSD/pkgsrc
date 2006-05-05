@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/05/05 23:14:43 minskim Exp $
+
+SHA1 (gt-itm.tar.gz) = 1e52ee9c9d6e3ef09ac39c860d1cd829cf3c6e4e
+RMD160 (gt-itm.tar.gz) = 0a7cbdfce185ab4bc2c73b78f290e8a831dc04e2
+Size (gt-itm.tar.gz) = 623345 bytes
+SHA1 (patch-aa) = 6f91fa29114fc33c9976ff5f70e259c88ef63cea
+SHA1 (patch-ab) = 72e60f9b5fc07b3ee44e838e017696178444135b
