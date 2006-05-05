@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.147 2006/05/05 17:43:10 adam Exp $
+$NetBSD: CHANGES-2006,v 1.148 2006/05/05 17:47:06 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2390,3 +2390,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/bacula-tray-monitor to 1.38.9 [ghen 2006-05-05]
 	Updated sysutils/bacula-wx-console to 1.38.9 [ghen 2006-05-05]
 	Updated databases/rrdtool to 1.2.13 [adam 2006-05-05]
+	Updated net/autonet to 0.19 [abs 2006-05-05]
