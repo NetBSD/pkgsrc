@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.149 2006/05/05 17:51:12 abs Exp $
+$NetBSD: CHANGES-2006,v 1.150 2006/05/05 23:16:46 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2392,3 +2392,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/rrdtool to 1.2.13 [adam 2006-05-05]
 	Updated net/autonet to 0.19 [abs 2006-05-05]
 	Updated devel/p5-File-Slurp to 9999.12 [abs 2006-05-05]
+	Added net/gt-itm version 0pre19961004 [minskim 2006-05-05]
