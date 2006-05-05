@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.7 2006/01/24 22:22:16 adam Exp $
+$NetBSD: patch-as,v 1.8 2006/05/05 17:42:07 adam Exp $
 
---- src/rrd_cgi.c.orig	2005-12-18 21:30:45.000000000 +0100
+--- src/rrd_cgi.c.orig	2006-05-04 15:26:28.000000000 +0200
 +++ src/rrd_cgi.c
-@@ -413,7 +413,7 @@ int main(int argc, char *argv[]) {
+@@ -418,7 +418,7 @@ int main(int argc, char *argv[]) {
  
  	if (!filter) {
  		printf ("Content-Type: text/html\n" 
