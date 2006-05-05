@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.143 2006/05/05 02:53:22 taca Exp $
+$NetBSD: CHANGES-2006,v 1.144 2006/05/05 03:14:55 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2381,3 +2381,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/ja-squirrelmail to 1.4.6 [taca 2006-05-05]
 	Updated mail/qpopper to 4.0.9 [taca 2006-05-05]
 	Updated mail/poppassd to 4.0.9 [taca 2006-05-05]
+	Updated textproc/aspell to 0.60.4nb2 [minskim 2006-05-05]
