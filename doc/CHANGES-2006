@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.150 2006/05/05 23:16:46 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.151 2006/05/05 23:52:41 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2393,3 +2393,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/autonet to 0.19 [abs 2006-05-05]
 	Updated devel/p5-File-Slurp to 9999.12 [abs 2006-05-05]
 	Added net/gt-itm version 0pre19961004 [minskim 2006-05-05]
+	Updated archivers/libzip to 0.7 [dillo 2006-05-05]
