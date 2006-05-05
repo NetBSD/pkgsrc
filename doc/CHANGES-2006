@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.142 2006/05/05 02:47:59 taca Exp $
+$NetBSD: CHANGES-2006,v 1.143 2006/05/05 02:53:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2379,3 +2379,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/sgb version 0pre20050409 [minskim 2006-05-04]
 	Updated pkgtools/pkg_chk to 1.72 [dillo 2006-05-04]
 	Updated mail/ja-squirrelmail to 1.4.6 [taca 2006-05-05]
+	Updated mail/qpopper to 4.0.9 [taca 2006-05-05]
+	Updated mail/poppassd to 4.0.9 [taca 2006-05-05]
