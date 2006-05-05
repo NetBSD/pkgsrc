@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.145 2006/05/05 05:32:58 martti Exp $
+$NetBSD: CHANGES-2006,v 1.146 2006/05/05 16:14:37 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2383,3 +2383,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/poppassd to 4.0.9 [taca 2006-05-05]
 	Updated textproc/aspell to 0.60.4nb2 [minskim 2006-05-05]
 	Updated mail/ja-squirrelmail to 1.4.6nb1 [martti 2006-05-05]
+	Updated sysutils/bacula to 1.38.9 [ghen 2006-05-05]
+	Updated sysutils/bacula-clientonly to 1.38.9 [ghen 2006-05-05]
+	Updated sysutils/bacula-doc to 1.38.9 [ghen 2006-05-05]
+	Updated sysutils/bacula-gnome-console to 1.38.9 [ghen 2006-05-05]
+	Updated sysutils/bacula-tray-monitor to 1.38.9 [ghen 2006-05-05]
+	Updated sysutils/bacula-wx-console to 1.38.9 [ghen 2006-05-05]
