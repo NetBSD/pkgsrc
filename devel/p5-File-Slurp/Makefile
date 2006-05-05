@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2006/01/22 20:47:22 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/05 17:50:49 abs Exp $
 
-DISTNAME=		File-Slurp-9999.11
+DISTNAME=		File-Slurp-9999.12
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5fsl
 CATEGORIES=		devel perl5
