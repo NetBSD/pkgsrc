@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.141 2006/05/04 22:09:26 dillo Exp $
+$NetBSD: CHANGES-2006,v 1.142 2006/05/05 02:47:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2378,3 +2378,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/mtr to 0.71nb1 [tron 2006-05-04]
 	Added devel/sgb version 0pre20050409 [minskim 2006-05-04]
 	Updated pkgtools/pkg_chk to 1.72 [dillo 2006-05-04]
+	Updated mail/ja-squirrelmail to 1.4.6 [taca 2006-05-05]
