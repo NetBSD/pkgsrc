@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/03/31 23:56:30 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/05/05 03:11:53 minskim Exp $
 bin/aspell
 bin/aspell-import
 bin/precat
@@ -101,6 +101,27 @@ share/aspell/split.kbd
 share/aspell/standard.kbd
 ${FILTER}share/aspell/tex-filter.info
 ${FILTER}share/aspell/texinfo-filter.info
+share/locale/be/LC_MESSAGES/aspell.mo
+share/locale/cs/LC_MESSAGES/aspell.mo
+share/locale/da/LC_MESSAGES/aspell.mo
+share/locale/de/LC_MESSAGES/aspell.mo
+share/locale/en_GB/LC_MESSAGES/aspell.mo
+share/locale/es/LC_MESSAGES/aspell.mo
+share/locale/fr/LC_MESSAGES/aspell.mo
+share/locale/ga/LC_MESSAGES/aspell.mo
+share/locale/it/LC_MESSAGES/aspell.mo
+share/locale/mn/LC_MESSAGES/aspell.mo
+share/locale/nl/LC_MESSAGES/aspell.mo
+share/locale/pt_BR/LC_MESSAGES/aspell.mo
+share/locale/ro/LC_MESSAGES/aspell.mo
+share/locale/ru/LC_MESSAGES/aspell.mo
+share/locale/rw/LC_MESSAGES/aspell.mo
+share/locale/sl/LC_MESSAGES/aspell.mo
+share/locale/sr/LC_MESSAGES/aspell.mo
+share/locale/tg/LC_MESSAGES/aspell.mo
+share/locale/uk/LC_MESSAGES/aspell.mo
+share/locale/vi/LC_MESSAGES/aspell.mo
+share/locale/wa/LC_MESSAGES/aspell.mo
 @dirrm share/aspell
 @dirrm lib/aspell
 @dirrm include/pspell
