@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.7 2006/01/24 22:22:16 adam Exp $
+$NetBSD: patch-aj,v 1.8 2006/05/05 17:42:07 adam Exp $
 
---- doc/Makefile.in.orig	2005-12-18 21:32:11.000000000 +0100
+--- doc/Makefile.in.orig	2006-05-04 15:27:59.000000000 +0200
 +++ doc/Makefile.in
-@@ -252,9 +252,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefi
+@@ -254,9 +254,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefi
  	      exit 1;; \
  	  esac; \
  	done; \
