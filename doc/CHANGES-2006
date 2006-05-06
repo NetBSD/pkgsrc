@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.159 2006/05/06 22:39:44 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.160 2006/05/06 22:43:42 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2403,3 +2403,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/qemu to 0.8.1 [xtraeme 2006-05-06]
 	Updated cad/verilog to 0.8.2 [dmcmahill 2006-05-06]
 	Updated www/zope3 to 3.2.1 [wiz 2006-05-06]
+	Updated lang/php5 to 5.1.4 [jdolecek 2006-05-07]
