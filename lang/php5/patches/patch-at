@@ -1,11 +1,13 @@
-$NetBSD: patch-at,v 1.1 2006/04/22 10:27:05 jdolecek Exp $
+$NetBSD: patch-at,v 1.2 2006/05/06 22:42:44 jdolecek Exp $
 
---- ext/wddx/wddx.c.orig	2006-04-22 11:53:01.000000000 +0200
-+++ ext/wddx/wddx.c
-@@ -20,2 +20,6 @@
+--- sapi/cgi/fastcgi.c.orig	2006-04-27 13:39:32.000000000 +0200
++++ sapi/cgi/fastcgi.c
+@@ -69,7 +69,7 @@
+ # include <netinet/in.h>
+ # include <arpa/inet.h>
+ # include <netdb.h>
+-# include <sys/signal.h>
++# include <signal.h>
  
-+#ifdef HAVE_CONFIG_H
-+#include "config.h"
-+#endif
-+
- #include "php.h"
+ #ifndef INADDR_NONE
+ #define INADDR_NONE ((unsigned long) -1)
