@@ -1,12 +1,12 @@
-$NetBSD: patch-ak,v 1.5 2005/10/23 19:55:59 rillig Exp $
+$NetBSD: patch-ak,v 1.6 2006/05/06 18:09:53 xtraeme Exp $
 
---- Makefile.orig	2005-07-29 18:18:05.000000000 +0200
-+++ Makefile	2005-07-29 18:22:06.000000000 +0200
+--- Makefile.orig	2006-05-06 19:34:25.000000000 +0200
++++ Makefile	2006-05-06 19:37:07.000000000 +0200
 @@ -1,10 +1,10 @@
- -include config-host.mak
+ include config-host.mak
  
--CFLAGS=-Wall -O2 -g -fno-strict-aliasing 
-+#CFLAGS=-Wall -O2 -g -fno-strict-aliasing 
+-CFLAGS=-Wall -O2 -g -fno-strict-aliasing -I.
++#CFLAGS=-Wall -O2 -g -fno-strict-aliasing -I.
  ifdef CONFIG_DARWIN
  CFLAGS+= -mdynamic-no-pic
  endif
@@ -15,27 +15,30 @@ $NetBSD: patch-ak,v 1.5 2005/10/23 19:55:59 rillig Exp $
  LIBS=
  DEFINES+=-D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
  TOOLS=qemu-img$(EXESUF)
-@@ -54,16 +54,16 @@
+@@ -48,20 +48,20 @@
  common  de-ch  es     fo  fr-ca  hu     ja  mk  nl-be      pt  sl     tr
  
- install: all 
--	mkdir -p "$(bindir)"
--	install -m 755 -s $(TOOLS) "$(bindir)"
--	mkdir -p "$(datadir)"
--	install -m 644 pc-bios/bios.bin pc-bios/vgabios.bin \
+ install-doc: $(DOCS)
+-	mkdir -p "$(DESTDIR)$(docdir)"
+-	$(INSTALL) -m 644 qemu-doc.html  qemu-tech.html "$(DESTDIR)$(docdir)"
++	$(BSD_INSTALL_MAN_DIR) "$(DESTDIR)$(docdir)"
++	$(BSD_INSTALL_DATA) qemu-doc.html  qemu-tech.html "$(DESTDIR)$(docdir)"
+ ifndef CONFIG_WIN32
+ 	mkdir -p "$(DESTDIR)$(mandir)/man1"
+ 	$(INSTALL) qemu.1 qemu-img.1 "$(DESTDIR)$(mandir)/man1"
+ endif
+ 
+ install: all $(if $(BUILD_DOCS),install-doc)
+-	mkdir -p "$(DESTDIR)$(bindir)"
+-	$(INSTALL) -m 755 -s $(TOOLS) "$(DESTDIR)$(bindir)"
+-	mkdir -p "$(DESTDIR)$(datadir)"
 +	$(BSD_INSTALL_PROGRAM_DIR) $(bindir)
 +	$(BSD_INSTALL_PROGRAM) $(TOOLS) $(bindir)
 +	$(BSD_INSTALL_DATA_DIR) $(datadir)
-+	$(BSD_INSTALL_DATA) pc-bios/bios.bin pc-bios/vgabios.bin \
-                        pc-bios/vgabios-cirrus.bin \
-                        pc-bios/ppc_rom.bin pc-bios/video.x \
-                        pc-bios/proll.elf \
--                       pc-bios/linux_boot.bin "$(datadir)"
--	mkdir -p "$(docdir)"
--	install -m 644 qemu-doc.html  qemu-tech.html "$(docdir)"
-+                       pc-bios/linux_boot.bin $(datadir)
-+	$(BSD_INSTALL_DATA_DIR) $(docdir)
-+	$(BSD_INSTALL_DATA) qemu-doc.html  qemu-tech.html "$(docdir)"
+ 	for x in bios.bin vgabios.bin vgabios-cirrus.bin ppc_rom.bin \
+ 			video.x proll.elf linux_boot.bin; do \
+-		$(INSTALL) -m 644 $(SRC_PATH)/pc-bios/$$x "$(DESTDIR)$(datadir)"; \
++		$(BSD_INSTALL_DATA) $(SRC_PATH)/pc-bios/$$x "$(DESTDIR)$(datadir)"; \
+ 	done
  ifndef CONFIG_WIN32
- 	mkdir -p "$(mandir)/man1"
- 	install qemu.1 qemu-img.1 "$(mandir)/man1"
+ 	mkdir -p "$(DESTDIR)$(datadir)/keymaps"
