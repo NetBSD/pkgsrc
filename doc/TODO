@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4948 2006/05/05 16:14:59 ghen Exp $
+$NetBSD: TODO,v 1.4949 2006/05/06 08:37:18 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -453,7 +453,6 @@ Suggested package updates
 	o dpkg-1.10.28
 	o dropbear-0.48
 	o drupal-4.7.0
-	o dspam-3.6.5
 	o dvd+rw-tools-6.1
 	o dvdauthor-0.6.11
 	o dvdrip-0.52.7
