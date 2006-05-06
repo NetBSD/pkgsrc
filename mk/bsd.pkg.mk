@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1820 2006/04/26 05:58:44 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1821 2006/05/06 03:28:44 reed Exp $
 #
 # This file is in the public domain.
 #
@@ -768,9 +768,10 @@ USE_LANGUAGES?=		# empty
 
 .include "../../mk/wrapper/bsd.wrapper.mk"
 
-.if defined(ABI_DEPENDS)
+.if defined(ABI_DEPENDS) || defined(BUILD_ABI_DEPENDS)
 .  if !empty(USE_ABI_DEPENDS:M[yY][eE][sS])
 DEPENDS+=		${ABI_DEPENDS}
+BUILD_DEPENDS+=		${BUILD_ABI_DEPENDS}
 .  else
 BUILD_DEFS+=		USE_ABI_DEPENDS
 .  endif
