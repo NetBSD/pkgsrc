@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/02/06 06:39:59 martti Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/05/06 22:42:44 jdolecek Exp $
 bin/pear
 bin/peardev
 bin/pecl
@@ -93,6 +93,7 @@ include/php/ext/pcre/pcrelib/pcre_scanner.h
 include/php/ext/pcre/pcrelib/pcre_stringpiece.h
 include/php/ext/pcre/pcrelib/pcrecpp.h
 include/php/ext/pcre/pcrelib/pcreposix.h
+include/php/ext/pcre/pcrelib/pcrecpparg.h
 include/php/ext/pcre/pcrelib/ucp.h
 include/php/ext/pcre/pcrelib/ucpinternal.h
 include/php/ext/pcre/php_pcre.h
