@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2006/01/07 13:13:28 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2006/05/06 22:38:28 wiz Exp $
 
---- Dependencies/ZConfig-Zope-3.2.0/ZConfig/scripts/zconfig.orig	2006-01-06 05:04:42.000000000 +0900
-+++ Dependencies/ZConfig-Zope-3.2.0/ZConfig/scripts/zconfig
+--- Dependencies/ZConfig-Zope-3.2.1/ZConfig/scripts/zconfig.orig	2006-04-28 09:02:23.000000000 +0900
++++ Dependencies/ZConfig-Zope-3.2.1/ZConfig/scripts/zconfig
 @@ -40,2 +40,13 @@
  import sys
 +import os
