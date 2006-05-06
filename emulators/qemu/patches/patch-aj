@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.4 2005/05/25 18:04:57 dbj Exp $
+$NetBSD: patch-aj,v 1.5 2006/05/06 18:09:53 xtraeme Exp $
 
---- Makefile.target.orig	Wed Apr 27 16:52:05 2005
-+++ Makefile.target	Wed May 25 11:39:47 2005
-@@ -14,9 +14,9 @@
+--- Makefile.target.orig	2006-05-06 19:30:04.000000000 +0200
++++ Makefile.target	2006-05-06 19:31:21.000000000 +0200
+@@ -17,9 +17,9 @@
  VPATH+=:$(SRC_PATH)/linux-user
  DEFINES+=-I$(SRC_PATH)/linux-user -I$(SRC_PATH)/linux-user/$(TARGET_ARCH)
  endif
@@ -14,7 +14,7 @@ $NetBSD: patch-aj,v 1.4 2005/05/25 18:04:57 dbj Exp $
  LIBS=
  HELPER_CFLAGS=$(CFLAGS)
  DYNGEN=../dyngen$(EXESUF)
-@@ -403,6 +403,9 @@
+@@ -411,6 +411,9 @@
  sdlaudio.o: sdlaudio.c
  	$(CC) $(CFLAGS) $(DEFINES) $(SDL_CFLAGS) -c -o $@ $<
  
@@ -24,11 +24,11 @@ $NetBSD: patch-aj,v 1.4 2005/05/25 18:04:57 dbj Exp $
  depend: $(SRCS)
  	$(CC) -MM $(CFLAGS) $(DEFINES) $^ 1>.depend
  
-@@ -463,7 +466,7 @@
+@@ -492,7 +495,7 @@
  
  install: all 
  ifneq ($(PROGS),)
--	install -m 755 -s $(PROGS) "$(bindir)"
+-	$(INSTALL) -m 755 -s $(PROGS) "$(DESTDIR)$(bindir)"
 +	$(BSD_INSTALL_PROGRAM) $(PROGS) "$(bindir)"
  endif
  
