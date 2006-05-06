@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2006/01/01 19:12:54 hubertf Exp $
+$NetBSD: patch-ab,v 1.6 2006/05/06 18:41:49 xtraeme Exp $
 
 --- target-arm/cpu.h.orig	2005-12-19 23:51:53.000000000 +0100
 +++ target-arm/cpu.h
@@ -8,7 +8,7 @@ $NetBSD: patch-ab,v 1.5 2006/01/01 19:12:54 hubertf Exp $
     is returned if the signal was handled by the virtual CPU.  */
 +#ifdef __NetBSD__
 +union siginfo;
-+int cpu_x86_signal_handler(int host_signum, union siginfo *info,
++int cpu_arm_signal_handler(int host_signum, union siginfo *info,
 +                           void *puc);
 +#else
  struct siginfo;
