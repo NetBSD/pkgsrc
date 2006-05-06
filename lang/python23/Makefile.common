@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2006/03/09 21:04:44 jlam Exp $
+# $NetBSD: Makefile.common,v 1.31 2006/05/06 02:12:07 minskim Exp $
 #
 
 DISTNAME=	Python-2.3.5
@@ -60,6 +60,9 @@ OSSAUDIODEV_SUBST=
 .   endif
 .elif ${OPSYS} == "SunOS" || ( ${OPSYS} == "IRIX" && ${ABI} != "64" )
 EXTRA_SO_SUBST=
+.endif
+.if ${MACHINE_ARCH} == "x86_64" && ${PY_PLATNAME} == "linux2"
+OSSAUDIODEV_SUBST=
 .endif
 
 PLIST_SUBST+=	EXTRA_SO=${EXTRA_SO_SUBST}
