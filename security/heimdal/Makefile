@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2006/03/31 23:44:39 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2006/05/06 01:05:51 minskim Exp $
 
 DISTNAME=	heimdal-0.7.2
 CATEGORIES=	security
@@ -17,7 +17,7 @@ CONFLICTS+=	gss-[0-9]*
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		bison
+USE_TOOLS+=		bison flex
 MAKE_ENV+=		INSTALL_CATPAGES=no
 
 HEIMDAL_STATEDIR?=	${VARBASE}/heimdal
