@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.3 2006/05/06 11:08:50 joerg Exp $
+
+--- gedit/gedit-document-saver.c.orig	2006-05-06 10:16:41.000000000 +0000
++++ gedit/gedit-document-saver.c
+@@ -32,8 +32,8 @@
+ #include <config.h>
+ #endif
+ 
+-#include <sys/mman.h>
+ #include <sys/types.h>
++#include <sys/mman.h>
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ #include <string.h>
