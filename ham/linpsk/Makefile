@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/17 13:46:37 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/05/06 13:48:02 joerg Exp $
 #
 
 DISTNAME=	linpsk-0.8.1
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.prefs.mk"
 
-LDFLAGS+= ${LIBOSSAUDIO} -lqt-mt
+LDFLAGS+= ${LIBOSSAUDIO} -lqt-mt ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
 
 CONFIGURE_ARGS+="--with-fftw-dir=${LOCALBASE}"
 
@@ -29,4 +29,5 @@ post-configure:
 .include "../../mk/oss.buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
