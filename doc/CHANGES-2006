@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.156 2006/05/06 12:41:51 tonio Exp $
+$NetBSD: CHANGES-2006,v 1.157 2006/05/06 18:10:51 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2400,3 +2400,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/optipng to 0.5.1 [adam 2006-05-06]
 	Updated graphics/povray to 3.6.1nb5 [wiz 2006-05-06]
 	Updated security/caff to 0.4.5 [tonio 2006-05-06]
+	Updated emulators/qemu to 0.8.1 [xtraeme 2006-05-06]
