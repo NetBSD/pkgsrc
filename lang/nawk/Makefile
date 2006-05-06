@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2005/12/05 20:50:26 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2006/05/06 03:09:03 reed Exp $
 #
 
 DISTNAME=       awk
@@ -24,7 +24,7 @@ CFLAGS+=	${CPPFLAGS}
 MAKE_FLAGS+=	CC=${CC:Q} YACC=${YACC:Q} CFLAGS=${CFLAGS:M*:Q}
 BUILD_TARGET=	a.out
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 # Fix bug in distributed makefile with respect to improper makefile
 # comments -- we simply just strip out all comments from the file.
@@ -39,6 +39,6 @@ post-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/a.out ${PREFIX}/bin/nawk
-	${INSTALL_MAN} ${WRKSRC}/nawk.1 ${PREFIX}/man/man1/nawk.1
+	${INSTALL_MAN} ${WRKSRC}/nawk.1 ${PREFIX}/${PKGMANDIR}/man1/nawk.1
 
 .include "../../mk/bsd.pkg.mk"
