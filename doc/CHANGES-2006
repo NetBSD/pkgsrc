@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.151 2006/05/05 23:52:41 dillo Exp $
+$NetBSD: CHANGES-2006,v 1.152 2006/05/06 02:12:42 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2394,3 +2394,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-File-Slurp to 9999.12 [abs 2006-05-05]
 	Added net/gt-itm version 0pre19961004 [minskim 2006-05-05]
 	Updated archivers/libzip to 0.7 [dillo 2006-05-05]
+	Updated lang/python23 to 2.3.5nb8 [minskim 2006-05-06]
