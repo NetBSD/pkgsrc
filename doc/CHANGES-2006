@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.153 2006/05/06 08:37:18 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.154 2006/05/06 08:51:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2396,3 +2396,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated archivers/libzip to 0.7 [dillo 2006-05-05]
 	Updated lang/python23 to 2.3.5nb8 [minskim 2006-05-06]
 	Updated mail/dspam to 3.6.5 [xtraeme 2006-05-06]
+	Updated x11/gtkmm to 2.8.5 [adam 2006-05-06]
+	Updated graphics/optipng to 0.5.1 [adam 2006-05-06]
