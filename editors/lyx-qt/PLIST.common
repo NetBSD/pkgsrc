@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST.common,v 1.12 2006/04/19 00:54:29 reed Exp $
+@comment $NetBSD: PLIST.common,v 1.13 2006/05/06 20:18:36 reed Exp $
 bin/lyx
 bin/lyxclient
 bin/tex2lyx
 man/man1/lyx.1
+man/man1/lyxclient.1
+man/man1/tex2lyx.1
 share/locale/da/LC_MESSAGES/lyx.mo
 share/locale/de/LC_MESSAGES/lyx.mo
 share/locale/es/LC_MESSAGES/lyx.mo
