@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4949 2006/05/06 08:37:18 xtraeme Exp $
+$NetBSD: TODO,v 1.4950 2006/05/06 08:51:01 adam Exp $
 
 Suggested new packages
 ======================
@@ -581,7 +581,6 @@ Suggested package updates
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
 	o gtkam-0.1.13
-	o gtkmm-2.8.5
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
