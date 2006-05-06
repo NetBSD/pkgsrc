@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4953 2006/05/06 19:15:35 dmcmahill Exp $
+$NetBSD: TODO,v 1.4954 2006/05/06 22:39:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1282,7 +1282,6 @@ Suggested package updates
 	o zope25-Silva-1.0.1
 	o zope25-XMLWidgets-0.10
 	o zope25-ZWiki-0.46.0
-	o zope3-3.2.1
 	o zopeedit-0.8
 	o zziplib-0.13.38
 
