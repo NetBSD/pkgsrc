@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2006/05/06 08:48:43 adam Exp $
+$NetBSD: patch-aa,v 1.5 2006/05/06 10:25:20 adam Exp $
 
 --- Makefile.orig	2006-04-19 14:47:12.000000000 +0200
 +++ Makefile
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2006/05/06 08:48:43 adam Exp $
 +CPPFLAGS=	`libpng-config --cflags` -Ilib/pngxtern -Isrc
 +
 +all: $(OBJS)
-+	$(CC) -o optipng $(LDFLAGS) $(OBJS) `libpng-config --ldflags`
++	$(CC) -o optipng $(LDFLAGS) $(OBJS) -lz `libpng-config --ldflags`
 +
 +optipng.o:   src/optipng.c   src/opng.h src/osys.h src/cbitset.h src/cexcept.h
 +opngio.o:    src/opngio.c    src/opng.h
