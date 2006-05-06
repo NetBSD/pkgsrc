@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2006/04/22 09:22:11 rillig Exp $
+# $NetBSD: Makefile.common,v 1.40 2006/05/06 03:14:12 reed Exp $
 #
 # XBUILD_DIRS is the group of directories under ${WRKSRC} that will
 #   be built in.
@@ -143,7 +143,7 @@ PLIST_SUBST+=	MISCMAN_SUFFIX=${MISCMAN_SUFFIX}
 
 CHECK_X11_TYPE?=	yes
 
-.if defined(CHECK_X11_TYPE)
+.if defined(CHECK_X11_TYPE) && !empty(CHECK_X11_TYPE:M[Yy][Ee][Ss])
 .    if !defined(X11_TYPE) || empty(X11_TYPE:Mxorg)
 PKG_SKIP_REASON+=       "X11_TYPE=xorg is mandatory."
 .    endif
