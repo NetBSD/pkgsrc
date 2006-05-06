@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/07 13:13:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/05/06 22:38:27 wiz Exp $
 bin/mkzeoinstance
 bin/mkzopeinstance
 bin/zopetest
@@ -131,6 +131,9 @@ share/zope3/lib/python/ClientCookie/__init__.pyo
 share/zope3/lib/python/ClientCookie/_urllib2_support.py
 share/zope3/lib/python/ClientCookie/_urllib2_support.pyc
 share/zope3/lib/python/ClientCookie/_urllib2_support.pyo
+share/zope3/lib/python/ClientForm.py
+share/zope3/lib/python/ClientForm.pyc
+share/zope3/lib/python/ClientForm.pyo
 share/zope3/lib/python/RestrictedPython/Eval.py
 share/zope3/lib/python/RestrictedPython/Eval.pyc
 share/zope3/lib/python/RestrictedPython/Eval.pyo
@@ -1066,6 +1069,9 @@ share/zope3/lib/python/persistent/tests/test_wref.pyo
 share/zope3/lib/python/persistent/wref.py
 share/zope3/lib/python/persistent/wref.pyc
 share/zope3/lib/python/persistent/wref.pyo
+share/zope3/lib/python/pullparser.py
+share/zope3/lib/python/pullparser.pyc
+share/zope3/lib/python/pullparser.pyo
 share/zope3/lib/python/pytz/LICENSE.txt
 share/zope3/lib/python/pytz/README.txt
 share/zope3/lib/python/pytz/__init__.py
@@ -9172,6 +9178,9 @@ share/zope3/lib/python/zope/formlib/i18n.pyo
 share/zope3/lib/python/zope/formlib/interfaces.py
 share/zope3/lib/python/zope/formlib/interfaces.pyc
 share/zope3/lib/python/zope/formlib/interfaces.pyo
+share/zope3/lib/python/zope/formlib/locales/de/LC_MESSAGES/zope.formlib.mo
+share/zope3/lib/python/zope/formlib/locales/de/LC_MESSAGES/zope.formlib.po
+share/zope3/lib/python/zope/formlib/locales/zope.formlib.pot
 share/zope3/lib/python/zope/formlib/namedtemplate.py
 share/zope3/lib/python/zope/formlib/namedtemplate.pyc
 share/zope3/lib/python/zope/formlib/namedtemplate.pyo
@@ -10732,9 +10741,6 @@ share/zope3/lib/python/zope/tales/tests/test_tales.pyo
 share/zope3/lib/python/zope/tales/tests/test_traverser.py
 share/zope3/lib/python/zope/tales/tests/test_traverser.pyc
 share/zope3/lib/python/zope/tales/tests/test_traverser.pyo
-share/zope3/lib/python/zope/testbrowser/ClientForm.py
-share/zope3/lib/python/zope/testbrowser/ClientForm.pyc
-share/zope3/lib/python/zope/testbrowser/ClientForm.pyo
 share/zope3/lib/python/zope/testbrowser/DEPENDENCIES.cfg
 share/zope3/lib/python/zope/testbrowser/README.txt
 share/zope3/lib/python/zope/testbrowser/SETUP.cfg
@@ -10764,9 +10770,6 @@ share/zope3/lib/python/zope/testbrowser/interfaces.py
 share/zope3/lib/python/zope/testbrowser/interfaces.pyc
 share/zope3/lib/python/zope/testbrowser/interfaces.pyo
 share/zope3/lib/python/zope/testbrowser/over_the_wire.txt
-share/zope3/lib/python/zope/testbrowser/pullparser.py
-share/zope3/lib/python/zope/testbrowser/pullparser.pyc
-share/zope3/lib/python/zope/testbrowser/pullparser.pyo
 share/zope3/lib/python/zope/testbrowser/testing.py
 share/zope3/lib/python/zope/testbrowser/testing.pyc
 share/zope3/lib/python/zope/testbrowser/testing.pyo
@@ -11263,6 +11266,9 @@ share/zope3/zopeskel/var/README.txt
 @dirrm share/zope3/lib/python/zope/i18n
 @dirrm share/zope3/lib/python/zope/hookable/tests
 @dirrm share/zope3/lib/python/zope/hookable
+@dirrm share/zope3/lib/python/zope/formlib/locales/de/LC_MESSAGES
+@dirrm share/zope3/lib/python/zope/formlib/locales/de
+@dirrm share/zope3/lib/python/zope/formlib/locales
 @dirrm share/zope3/lib/python/zope/formlib
 @dirrm share/zope3/lib/python/zope/exceptions/tests
 @dirrm share/zope3/lib/python/zope/exceptions
