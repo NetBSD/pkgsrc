@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.154 2006/05/06 08:51:01 adam Exp $
+$NetBSD: CHANGES-2006,v 1.155 2006/05/06 12:00:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2398,3 +2398,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/dspam to 3.6.5 [xtraeme 2006-05-06]
 	Updated x11/gtkmm to 2.8.5 [adam 2006-05-06]
 	Updated graphics/optipng to 0.5.1 [adam 2006-05-06]
+	Updated graphics/povray to 3.6.1nb5 [wiz 2006-05-06]
