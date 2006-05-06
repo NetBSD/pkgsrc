@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2006/03/13 15:05:43 tron Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/06 12:40:44 tonio Exp $
 
-DISTNAME=	signing-party_0.4.4.orig
-PKGNAME=	caff-0.4.4
-PKGREVISION=	2
+DISTNAME=	signing-party_0.4.5.orig
+PKGNAME=	caff-0.4.5
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/signing-party/}
 
@@ -28,7 +27,7 @@ REPLACE_PERL+=	caff/caff caff/pgp-fixkey caff/pgp-clean \
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	caff/caff keylookup/keylookup keylookup/keylookup.1
+SUBST_FILES.paths=	caff/caff keylookup/keylookup.1
 SUBST_SED.paths=	-e 's,/usr/,${PREFIX}/,g'
 
 .include "../../mk/bsd.prefs.mk"
