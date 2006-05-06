@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/04 19:20:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/05/06 08:25:20 xtraeme Exp $
 bin/vlc
 bin/vlc-config
 bin/wxvlc
@@ -77,6 +77,7 @@ lib/vlc/codec/liblpcm_plugin.so
 lib/vlc/codec/libmpeg_audio_plugin.so
 lib/vlc/codec/libpng_plugin.so
 lib/vlc/codec/librawvideo_plugin.so
+lib/vlc/codec/libsdl_image_plugin.so
 lib/vlc/codec/libspudec_plugin.so
 lib/vlc/codec/libsubsdec_plugin.so
 lib/vlc/codec/libsvcdsub_plugin.so
@@ -116,7 +117,6 @@ lib/vlc/demux/librawdv_plugin.so
 lib/vlc/demux/libreal_plugin.so
 lib/vlc/demux/libsgimb_plugin.so
 lib/vlc/demux/libsubtitle_plugin.so
-lib/vlc/demux/libts_plugin.so
 lib/vlc/demux/libty_plugin.so
 lib/vlc/demux/libvobsub_plugin.so
 lib/vlc/demux/libvoc_plugin.so
@@ -132,7 +132,6 @@ lib/vlc/libmemcpy3dn.a
 lib/vlc/libmemcpymmx.a
 lib/vlc/libmemcpymmxext.a
 lib/vlc/libmkv.a
-lib/vlc/libmux_ts.a
 lib/vlc/libstream_out_switcher.a
 lib/vlc/misc/libdummy_plugin.so
 lib/vlc/misc/libexport_plugin.so
@@ -281,9 +280,6 @@ share/vlc/vlc32x32.png
 share/vlc/vlc32x32.xpm
 share/vlc/vlc48x48.ico
 share/vlc/vlc48x48.png
-@exec ${MKDIR} %D/share/vlc/skins/default
-@dirrm share/vlc/skins/default
-@dirrm share/vlc/skins
 @dirrm share/vlc/osdmenu/dvd/volume
 @dirrm share/vlc/osdmenu/dvd/unselect
 @dirrm share/vlc/osdmenu/dvd/selection
