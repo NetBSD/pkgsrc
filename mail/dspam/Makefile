@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2006/04/22 09:22:10 rillig Exp $
+# $NetBSD: Makefile,v 1.50 2006/05/06 08:36:10 xtraeme Exp $
 
-DISTNAME=	dspam-3.6.3
+DISTNAME=	dspam-3.6.5
 CATEGORIES=	mail
 MASTER_SITES=	http://www.nuclearelephant.com/projects/dspam/sources/
 
@@ -12,8 +12,8 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
 USE_TOOLS+=		perl:run pkg-config
-REPLACE_PERL=		tools/dspam_genaliases.in			\
-			tools/dspam_corpus.in				\
+REPLACE_PERL=		src/tools/dspam_genaliases.in			\
+			src/tools/dspam_corpus.in			\
 			webui/cgi-bin/*.cgi webui/cgi-bin/configure.pl.in
 
 PKGCONFIG_OVERRIDE+=	src/dspam.pc.in
@@ -37,6 +37,7 @@ BUILD_DEFS+=		DSPAM_SIGNATURE_LIFE
 BUILD_DEFS+=		DSPAM_USER DSPAM_GROUP
 BUILD_DEFS+=		DSPAM_BINMODE
 BUILD_DEFS+=		DSPAM_LOGDIR
+BUILD_DEFS+=		DSPAM_LOGFILE
 BUILD_DEFS+=		DSPAM_DOMAIN
 BUILD_DEFS+=		DSPAM_WWWHOME
 BUILD_DEFS+=		DSPAM_PIDDIR
@@ -51,6 +52,7 @@ DSPAM_BINMODE?=		4511
 DSPAM_USER?=		dspam
 DSPAM_GROUP?=		dspam
 DSPAM_LOGDIR?=		${DSPAM_HOME}/log
+DSPAM_LOGFILE?=		${DSPAM_LOGDIR}/dspam.log
 DSPAM_DOMAIN?=		yourdomain.com
 DSPAM_WWWHOME?=		/dspam
 DSPAM_PIDDIR?=		${VARBASE}/run/dspam

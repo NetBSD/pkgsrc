@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/03/02 18:38:20 jwise Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/05/06 08:36:10 xtraeme Exp $
 ${HASH}bin/cssstat
 ${HASH}bin/csscompress
 ${HASH}bin/cssclean
@@ -14,6 +14,7 @@ bin/dspam_genaliases
 bin/dspam_logrotate
 bin/dspam_merge
 bin/dspam_stats
+bin/dspam_train
 bin/dspamc
 include/dspam/buffer.h
 include/dspam/config.h
@@ -35,6 +36,7 @@ man/man1/dspam_corpus.1
 man/man1/dspam_dump.1
 man/man1/dspam_merge.1
 man/man1/dspam_stats.1
+man/man1/dspam_train.1
 man/man3/dspam_addattribute.3
 man/man3/dspam_attach.3
 man/man3/dspam_create.3
@@ -60,6 +62,9 @@ share/doc/dspam/qmail.txt
 share/doc/dspam/relay.txt
 share/doc/dspam/sendmail.txt
 share/doc/dspam/sqlite_drv.txt
+share/dspam/txt/firstrun.txt
+share/dspam/txt/firstspam.txt
+share/dspam/txt/quarantinefull.txt
 share/dspam/webui/cgi-bin/admin.cgi
 share/dspam/webui/cgi-bin/admingraph.cgi
 share/dspam/webui/cgi-bin/dspam.cgi
@@ -72,6 +77,7 @@ share/dspam/webui/cgi-bin/templates/nav_admin_user.html
 share/dspam/webui/cgi-bin/templates/nav_alerts.html
 share/dspam/webui/cgi-bin/templates/nav_analysis.html
 share/dspam/webui/cgi-bin/templates/nav_error.html
+share/dspam/webui/cgi-bin/templates/nav_fragment.html
 share/dspam/webui/cgi-bin/templates/nav_history.html
 share/dspam/webui/cgi-bin/templates/nav_performance.html
 share/dspam/webui/cgi-bin/templates/nav_preferences.html
@@ -92,23 +98,20 @@ ${PGSQL}share/dspam/pgsql/purge.sql
 ${PGSQL}share/dspam/pgsql/virtual_users.sql
 ${SQLITE}share/dspam/sqlite/purge-2.sql
 ${SQLITE}share/dspam/sqlite/purge-3.sql
-share/dspam/txt/firstrun.txt
-share/dspam/txt/firstspam.txt
-share/dspam/txt/quarantinefull.txt
 share/examples/dspam/cgi-admins
 share/examples/dspam/cgi-default.prefs
 share/examples/dspam/configure.pl
 share/examples/dspam/dspam.conf
 share/examples/rc.d/dspam
 @dirrm share/examples/dspam
-@dirrm share/dspam/txt
 ${PGSQL}@dirrm share/dspam/pgsql
 ${MYSQL}@dirrm share/dspam/mysql
 ${SQLITE}@dirrm share/dspam/sqlite
+@dirrm share/dspam/webui/htdocs
 @dirrm share/dspam/webui/cgi-bin/templates
 @dirrm share/dspam/webui/cgi-bin
-@dirrm share/dspam/webui/htdocs
 @dirrm share/dspam/webui
+@dirrm share/dspam/txt
 @dirrm share/dspam
 @dirrm share/doc/dspam
 @dirrm include/dspam

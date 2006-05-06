@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2006/01/02 19:59:33 adrianp Exp $
+# $NetBSD: options.mk,v 1.15 2006/05/06 08:36:10 xtraeme Exp $
 
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
@@ -7,7 +7,7 @@ DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dspam
 PKG_SUPPORTED_OPTIONS=	largescale homedir long-usernames graphs \
 			domainscale virtualusers preferences-extension \
-			neural clamav ldap debug verbose-debug
+			neural clamav ldap syslog debug verbose-debug
 
 .include "../../mk/bsd.options.mk"
 
@@ -197,6 +197,17 @@ DSPAM_PSFLAGS?=         aux
 .if !empty(PKG_OPTIONS:Mclamav)
 CONFIGURE_ARGS+=	--enable-clamav
 .include "../../mail/clamav/buildlink3.mk"
+.endif
+
+###
+### Enable syslog support, otherwise
+### set flat logfile pathname for logging
+###
+.if !empty(PKG_OPTIONS:Msyslog)
+CONFIGURE_ARGS+=--enable-syslog
+.else
+CONFIGURE_ARGS+=--disable-syslog
+CONFIGURE_ARGS+=--with-logfile=${DSPAM_LOGFILE}
 .endif
 
 ###
