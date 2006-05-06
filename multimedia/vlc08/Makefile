@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/04 19:19:59 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/06 08:25:20 xtraeme Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
+PKGREVISION=		1
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VER}/
 EXTRACT_SUFX=		.tar.bz2
@@ -27,19 +28,18 @@ BUILDLINK_API_DEPENDS.ffmpeg+=	ffmpeg>=0.4.8nb1 # Postprocess fix
 
 CONFIGURE_ARGS+=	--disable-skins2
 CONFIGURE_ARGS+=	--disable-speex # needs unstable 1.1.x branch
-
-CONFIGURE_ARGS+=	--enable-dvb
-CONFIGURE_ARGS+=	--enable-flac
 CONFIGURE_ARGS+=	--disable-gtk
+CONFIGURE_ARGS+=	--disable-gnomevfs
+CONFIGURE_ARGS+=	--disable-gnutls
+CONFIGURE_ARGS+=	--disable-smb
+CONFIGURE_ARGS+=	--disable-dvbpsi
+CONFIGURE_ARGS+=	--disable-mod
+CONFIGURE_ARGS+=	--disable-mpc
+CONFIGURE_ARGS+=	--disable-dts
+
 CONFIGURE_ARGS+=	--with-ffmpeg-tree=${BUILDLINK_PREFIX.ffmpeg}/lib
 CONFIGURE_ARGS+=	--enable-cddax
-
-BUILD_DEFS+=		WITH_DVDCSS
-
-.if defined(WITH_DVDCSS) && !empty(WITH_DVDCSS:M[Yy][Ee][Ss])
-CONFIGURE_ARGS+=	--with-dvdcss=${BUILDLINK_PREFIX.libdvdcss}
-.include "../../multimedia/libdvdcss/buildlink3.mk"
-.endif
+CONFIGURE_ARGS+=	--enable-dvdread
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/admin
@@ -71,7 +71,6 @@ SUBST_SED.libav=	-e "s,libavcodec/libavcodec.a,libavcodec.a,g"
 
 BUILDLINK_TRANSFORM.ffmpeg+=	-e "s,include/ffmpeg,include/,g"
 
-.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
 .include "../../audio/libcddb/buildlink3.mk"
@@ -81,18 +80,17 @@ BUILDLINK_TRANSFORM.ffmpeg+=	-e "s,include/ffmpeg,include/,g"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../multimedia/libdvdplay/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
-.include "../../multimedia/libdvbpsi/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libmatroska/buildlink3.mk"
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
-.include "../../net/openslp/buildlink3.mk"
-.include "../../sysutils/vcdimager-devel/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/wxGTK/buildlink3.mk"
 
 .include "../../mk/oss.buildlink3.mk"
