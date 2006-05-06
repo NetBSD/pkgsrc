@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.158 2006/05/06 19:15:35 dmcmahill Exp $
+$NetBSD: CHANGES-2006,v 1.159 2006/05/06 22:39:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2402,3 +2402,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/caff to 0.4.5 [tonio 2006-05-06]
 	Updated emulators/qemu to 0.8.1 [xtraeme 2006-05-06]
 	Updated cad/verilog to 0.8.2 [dmcmahill 2006-05-06]
+	Updated www/zope3 to 3.2.1 [wiz 2006-05-06]
