@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/17 13:40:17 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/06 03:38:06 reed Exp $
 #
 
 DISTNAME=		revbump-1.7
@@ -18,7 +18,7 @@ NO_CONFIGURE=	yes
 USE_TOOLS+=	perl:run
 USE_LANGUAGES=	# empty
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-build:
 	${SED} -e "s!@PERL@!${PERL5}!g" -e "s! make ! ${MAKE} !g" \
@@ -30,10 +30,10 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/blbump ${PREFIX}/bin
-	${INSTALL_MAN} ${FILESDIR}/blbump.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${FILESDIR}/blbump.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_SCRIPT} ${WRKDIR}/finddepends ${PREFIX}/bin
-	${INSTALL_MAN} ${FILESDIR}/finddepends.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${FILESDIR}/finddepends.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_SCRIPT} ${WRKDIR}/revbump ${PREFIX}/bin
-	${INSTALL_MAN} ${FILESDIR}/revbump.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${FILESDIR}/revbump.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
