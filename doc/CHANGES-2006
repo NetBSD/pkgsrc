@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.164 2006/05/07 10:39:47 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.165 2006/05/07 12:38:06 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2414,3 +2414,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated games/xblast to 2.10.2 [dsainty 2006-05-07]
 	Updated archivers/dar to 2.2.2nb3 [minskim 2006-05-07]
 	Updated databases/qdbm to 1.8.50 [wiz 2006-05-07]
+	Updated devel/apr to 0.9.12.2.0.58 [tron 2006-05-07]
+	Updated www/apache2 to 2.0.58 [tron 2006-05-07]
