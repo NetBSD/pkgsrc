@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2005/10/23 20:14:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.33 2006/05/07 12:35:27 tron Exp $
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
 include/httpd/ap_config_auto.h
@@ -75,6 +75,7 @@ sbin/htdbm
 sbin/htdigest
 sbin/htpasswd
 sbin/httpd
+sbin/httxt2dbm
 sbin/logresolve
 sbin/mkcert
 sbin/rotatelogs
@@ -773,6 +774,10 @@ share/httpd/manual/mod/mod_userdir.html.ja.euc-jp
 share/httpd/manual/mod/mod_userdir.html.ko.euc-kr
 share/httpd/manual/mod/mod_usertrack.html
 share/httpd/manual/mod/mod_usertrack.html.en
+share/httpd/manual/mod/mod_version.html
+share/httpd/manual/mod/mod_version.html.en
+share/httpd/manual/mod/mod_version.html.ja.euc-jp
+share/httpd/manual/mod/mod_version.html.ko.euc-kr
 share/httpd/manual/mod/mod_vhost_alias.html
 share/httpd/manual/mod/mod_vhost_alias.html.en
 share/httpd/manual/mod/module-dict.html
@@ -944,6 +949,7 @@ share/httpd/manual/style/css/manual-zip-100pc.css
 share/httpd/manual/style/css/manual-zip.css
 share/httpd/manual/style/css/manual.css
 share/httpd/manual/style/faq.dtd
+share/httpd/manual/style/lang.dtd
 share/httpd/manual/style/latex/atbeginend.sty
 share/httpd/manual/style/latex/common.xsl
 share/httpd/manual/style/latex/directiveindex.xsl
@@ -964,6 +970,7 @@ share/httpd/manual/style/manual.ru.xsl
 share/httpd/manual/style/manualpage.dtd
 share/httpd/manual/style/modulesynopsis.dtd
 share/httpd/manual/style/sitemap.dtd
+share/httpd/manual/style/version.ent
 share/httpd/manual/style/xsl/common.xsl
 share/httpd/manual/style/xsl/directiveindex.xsl
 share/httpd/manual/style/xsl/faq.xsl
