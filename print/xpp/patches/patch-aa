@@ -1,22 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2001/01/30 16:37:57 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2006/05/07 01:47:00 chap Exp $
 
---- configure.in.orig	Fri Jan 26 19:17:37 2001
-+++ configure.in
-@@ -37,6 +37,8 @@
- AC_CHECK_LIB(Xext, main,,,$LIBS)
- dnl Replace `main' with a function in -lcups:
- dnl AC_CHECK_LIB(cups, main)
-+dnl Replace `main' with a function in -lm:
-+AC_CHECK_LIB(m, main)
- dnl Replace `main' with a function in -lGL:
- AC_CHECK_LIB(GL, main)
- dnl Replace `main' with a function in -lGLU:
-@@ -47,8 +49,6 @@
- AC_CHECK_LIB(fltk, main,LIBS="$LIBFLTKA $LIBS",,$LIBS)
- dnl Replace `main' with a function in -lfltk:
- dnl AC_CHECK_LIB(fltk, main,,,$LIBS)
--dnl Replace `main' with a function in -lm:
--AC_CHECK_LIB(m, main)
- dnl Checks for header files.
- AC_HEADER_STDC
- AC_CHECK_HEADERS(cups/cups.h FL/Fl.H)
+--- mainwindow.fl.orig	2006-02-25 17:02:37.000000000 -0500
++++ mainwindow.fl
+@@ -18,6 +18,8 @@ class xppMainWindow {open
+   Function {xppMainWindow(int  argc, char *argv[], int &exitstat)} {open
+   } {
+     code {exitstat = 0;
++optionDialog=NULL;
++instanceDialog=NULL;
+ print=new printFiles(argc,argv,exitstat);
+ if (exitstat != 0) return;} {}
+     Fl_Window mainWindow {
