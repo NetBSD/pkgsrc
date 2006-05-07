@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2006/04/17 13:46:47 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2006/05/07 01:47:00 chap Exp $
 
-DISTNAME=	xpp-1.1
-PKGREVISION=	7
+DISTNAME=	xpp-1.5
 CATEGORIES=	print x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cups/}
 
