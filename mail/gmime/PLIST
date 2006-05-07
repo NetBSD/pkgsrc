@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/11/14 16:48:55 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/05/07 18:22:41 recht Exp $
 bin/gmime-config
 bin/uudecode
 bin/uuencode
@@ -23,7 +23,6 @@ include/gmime-2.0/gmime/gmime-filter-yenc.h
 include/gmime-2.0/gmime/gmime-filter.h
 include/gmime-2.0/gmime/gmime-gpg-context.h
 include/gmime-2.0/gmime/gmime-header.h
-include/gmime-2.0/gmime/gmime-host-utils.h
 include/gmime-2.0/gmime/gmime-iconv-utils.h
 include/gmime-2.0/gmime/gmime-iconv.h
 include/gmime-2.0/gmime/gmime-message-part.h
@@ -47,7 +46,6 @@ include/gmime-2.0/gmime/gmime-stream-mem.h
 include/gmime-2.0/gmime/gmime-stream-mmap.h
 include/gmime-2.0/gmime/gmime-stream-null.h
 include/gmime-2.0/gmime/gmime-stream.h
-include/gmime-2.0/gmime/gmime-type-utils.h
 include/gmime-2.0/gmime/gmime-utils.h
 include/gmime-2.0/gmime/gmime.h
 include/gmime-2.0/gmime/internet-address.h
@@ -93,7 +91,6 @@ share/doc/gmime/gmime-gmime-filter-yenc.html
 share/doc/gmime/gmime-gmime-filter.html
 share/doc/gmime/gmime-gmime-gpg-context.html
 share/doc/gmime/gmime-gmime-header.html
-share/doc/gmime/gmime-gmime-host-utils.html
 share/doc/gmime/gmime-gmime-iconv-utils.html
 share/doc/gmime/gmime-gmime-iconv.html
 share/doc/gmime/gmime-gmime-message-part.html
