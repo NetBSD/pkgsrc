@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/11 21:24:08 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/07 10:38:40 wiz Exp $
 #
 
 .include "Makefile.common"
@@ -15,8 +15,8 @@ CONFIGURE_ARGS+=	--enable-zlib
 CONFIGURE_ARGS+=	--enable-iconv
 CONFIGURE_ARGS+=	--enable-bzip
 CONFIGURE_ARGS+=	--enable-lzo
-PKGCONFIG_OVERRIDE=     qdbm.pc.in
-TEST_TARGET=            check
+PKGCONFIG_OVERRIDE=	qdbm.pc.in
+TEST_TARGET=		check
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
@@ -24,7 +24,7 @@ TEST_TARGET=            check
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
-CONFIGURE_ARGS+=        --without-pthread
+CONFIGURE_ARGS+=	--without-pthread
 .else
 CONFIGURE_ARGS+=	--enable-pthread
 CFLAGS+=		${PTHREAD_CFLAGS}
