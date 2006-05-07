@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4956 2006/05/07 12:38:06 tron Exp $
+$NetBSD: TODO,v 1.4957 2006/05/07 13:05:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -600,7 +600,6 @@ Suggested package updates
 	o httptunnel-3.3
 	o hugs-200503 [pkg/30071]
 	o hydrogen-0.9.2
-	o hyperestraier-1.2.4
 	o i2ocfg-1.1
 	o icdprog-0.5
 	o icecast-2.3.1
