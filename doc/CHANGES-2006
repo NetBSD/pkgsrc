@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.160 2006/05/06 22:43:42 jdolecek Exp $
+$NetBSD: CHANGES-2006,v 1.161 2006/05/07 03:20:22 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2404,3 +2404,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated cad/verilog to 0.8.2 [dmcmahill 2006-05-06]
 	Updated www/zope3 to 3.2.1 [wiz 2006-05-06]
 	Updated lang/php5 to 5.1.4 [jdolecek 2006-05-07]
+	Updated games/xblast to 2.10.2 [dsainty 2006-05-07]
