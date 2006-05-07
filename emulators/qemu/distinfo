@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2006/05/06 18:41:49 xtraeme Exp $
+$NetBSD: distinfo,v 1.22 2006/05/07 21:33:53 xtraeme Exp $
 
 SHA1 (qemu-0.8.1.tar.gz) = 72c943c24bed6aa066dcc3012b198c20f04aef30
 RMD160 (qemu-0.8.1.tar.gz) = 04d163d4792bbea39fc0b1e52af124cdb7e907dc
@@ -21,3 +21,4 @@ SHA1 (patch-au) = 29d05fb5f4717fb572491d9d0653ec74ba46ae7e
 SHA1 (patch-aw) = 6299964fb3a747e8f5dfe4354e66722030ee9a75
 SHA1 (patch-ax) = 66b060005ecbf9fd0451f7960e81eccbabf959ca
 SHA1 (patch-ay) = b1a2c96012cc24c3818f1c494eadbbd9968ea085
+SHA1 (patch-az) = 27ab658a2bb48ff78a313e47da0e1907b660f150
