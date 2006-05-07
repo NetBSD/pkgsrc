@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2005,v 1.6 2006/04/23 14:35:03 wiz Exp $
+$NetBSD: CHANGES-2005,v 1.7 2006/05/07 10:20:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1246,6 +1246,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated misc/p5-Locale-Maketext to 1.09 [wiz 2005-03-02]
 	Updated misc/p5-Locale-Maketext-Lexicon to 0.47 [wiz 2005-03-02]
 	Updated lang/sr to 2.3.3nb1 [is 2005-03-02]
+	Updated devel/dmalloc to 5.4.2 [drochner 2005-03-02]
 	Added devel/p5-ExtUtils-AutoInstall version 0.61 [epg 2005-03-03]
 	Added devel/p5-Class-Autouse version 1.16 [epg 2005-03-03]
 	Updated devel/p5-SVN-Simple to 0.27 [epg 2005-03-03]
@@ -1755,6 +1756,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated lang/sun-jre15 to 5.0.2 [tv 2005-03-25]
 	Added databases/lbdb version 0.29 [kim 2005-03-25]
 	Removed net/xspeakfree [kristerw 2005-03-25]
+	Updated mbone/mdd to 20050318 [manu 2005-03-25]
 	Updated net/host to 20040812 [christos 2005-03-26]
 	Updated chat/cgiirc to 0.5.6 [adrianp 2005-03-26]
 	Updated databases/phpldapadmin to 0.9.5 [seb 2005-03-26]
@@ -3135,7 +3137,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated chat/gaim to 1.4.0 [grant 2005-07-08]
 	Updated wm/windowmaker to 0.92.0 [adam 2005-07-08]
 	Updated mail/msmtp to 1.4.2 [adam 2005-07-08]
-	Updated print/html2ps to 1.0b4nb1 [2005-07-08]
+	Updated print/html2ps to 1.0b4nb1 [hubertf 2005-07-08]
 	Added print/poppler version 0.3.3nb1 [reed 2005-07-08]
 	Updated sysutils/radmind to 1.5.0nb1 [kristerw 2005-07-08]
 	Updated misc/tds to 1.4.2nb1 [kristerw 2005-07-08]
