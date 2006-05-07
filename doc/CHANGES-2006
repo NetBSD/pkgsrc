@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.162 2006/05/07 05:02:27 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.163 2006/05/07 10:21:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1306,6 +1306,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xdaemon2 to 2.1 [hubertf 2006-03-02]
 	Updated chat/psi to 0.10nb3 [wiz 2006-03-02]
 	Updated x11/xorg-server to 6.9.0nb6 [joerg 2006-03-02]
+	Updated math/mpfr to 2.2.0 [drochner 2006-03-02]
+	Updated print/scribus to 1.2.4.1 [drochner 2006-03-02]
+	Updated net/tcpdump to 3.9.4 [drochner 2006-03-02]
 	Updated x11/qt3-libs to 3.3.5nb6 [minskim 2006-03-03]
 	Updated x11/qt3-tools to 3.3.5nb4 [minskim 2006-03-03]
 	Updated security/libfwbuilder to 2.0.10nb4 [minskim 2006-03-03]
@@ -1876,6 +1879,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed net/mtr-gtk [wiz 2006-04-03]
 	Updated archivers/p7zip to 4.37 [adam 2006-04-03]
 	Updated devel/tailor to 0.9.21 [wiz 2006-04-03]
+	Updated math/galculator to 1.2.5.2 [drochner 2006-04-03]
 	Updated misc/xchm to 1.5 [wiz 2006-04-04]
 	Updated mail/dovecot to 1.0beta5 [ghen 2006-04-04]
 	Updated graphics/dia to 0.94nb6 [salo 2006-04-04]
@@ -2045,7 +2049,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/py-gobject to 2.10.1 [drochner 2006-04-12]
 	Updated devel/eel2 to 2.14.1 [drochner 2006-04-12]
 	Updated x11/gtksourceview to 1.6.1 [drochner 2006-04-12]
-	Updated editors/gedit to 2.14.1 [drochner 2006-04-12]
+	Updated editors/gedit to 2.14.2 [drochner 2006-04-12]
 	Updated misc/yelp to 2.14.1 [drochner 2006-04-12]
 	Updated devel/libwnck to 2.14.1 [drochner 2006-04-12]
 	Updated misc/gnome-user-docs to 2.14.2 [drochner 2006-04-12]
@@ -2197,6 +2201,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated wm/wmdrawer to 0.10.5nb3 [wiz 2006-04-18]
 	Updated graphics/gimp to 2.2.11nb2 [tron 2006-04-18]
 	Updated textproc/docbook-xsl to 1.69.1nb6 [minskim 2006-04-18]
+	Updated editors/lyx-qt to 1.4.1 [reed 2006-04-18]
+	Updated editors/lyx-xforms to 1.4.1 [reed 2006-04-18]
 	Updated games/gtkmagnetic to 2.2.1.6 [dillo 2006-04-19]
 	Updated graphics/f4l to 0.2.1 [adam 2006-04-19]
 	Updated graphics/pngcrush to 1.6.3 [wiz 2006-04-19]
@@ -2225,6 +2231,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/pkglint to 4.60 [rillig 2006-04-21]
 	Added net/wmnd version 0.4.12 [rpaulo 2006-04-21]
 	Added print/tex-fixme version 3.1 [minskim 2006-04-21]
+	Updated x11/zenity to 2.14.1 [drochner 2006-04-21]
 	Updated www/mozilla-bin to 1.7.13 [tron 2006-04-22]
 	Updated cad/pcb to 20060422 [dmcmahill 2006-04-22]
 	Updated archivers/makeself to 2.1.4 [rillig 2006-04-23]
