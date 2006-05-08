@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4959 2006/05/07 18:25:00 recht Exp $
+$NetBSD: TODO,v 1.4960 2006/05/08 06:24:26 snj Exp $
 
 Suggested new packages
 ======================
@@ -444,7 +444,6 @@ Suggested package updates
 	o devIL-1.6.7
 	o devhelp-0.10
 	o devtodo-0.1.19
-	o diffstat-1.41
 	o dillo-0.8.6
 	o dirac-0.5.4
 	o dirdiff-2.1
