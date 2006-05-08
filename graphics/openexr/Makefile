@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/28 17:55:48 jschauma Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/08 11:04:40 salo Exp $
 
 DISTNAME=	OpenEXR-1.2.2
 PKGNAME=	openexr-1.2.2
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.openexr.com/
 COMMENT=	High dynamic-range (HDR) image file format library and tools
 
 USE_TOOLS+=		gmake
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	${WRKSRC}/OpenExr.pc.in
