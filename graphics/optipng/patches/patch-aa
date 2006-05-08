@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.5 2006/05/06 10:25:20 adam Exp $
+$NetBSD: patch-aa,v 1.6 2006/05/08 22:31:12 adam Exp $
 
---- Makefile.orig	2006-04-19 14:47:12.000000000 +0200
+--- /dev/null	2006-05-09 00:31:28.000000000 +0200
 +++ Makefile
-@@ -0,0 +1,28 @@
-+OBJS=	optipng.o opngio.o opngreduc.o cbitset.o osys.o \
-+	pngxread.o pngxrbmp.o pngxrgif.o pngxrpnm.o \
-+	gifread.o pnmerror.o pnmread.o pnmwrite.o \
-+	strutil.o png_write_sig.o
+@@ -0,0 +1,30 @@
++OBJS=	optipng.o opngio.o opngreduc.o cbitset.o osys.o strutil.o \
++	pngxread.o pngxrbmp.o pngxrgif.o pngxrjpg.o pngxrpnm.o \
++	pngxrtif.o gifread.o pnmerror.o pnmread.o pnmwrite.o \
++	png_write_sig.o
 +
 +CPPFLAGS=	`libpng-config --cflags` -Ilib/pngxtern -Isrc
 +
@@ -20,14 +20,16 @@ $NetBSD: patch-aa,v 1.5 2006/05/06 10:25:20 adam Exp $
 +osys.o:      src/osys.c      src/osys.h
 +strutil.o:   src/strutil.c   src/strutil.h
 +
++pngxread.o:  lib/pngxtern/pngxread.c		lib/pngxtern/pngxtern.h
++pngxrbmp.o:  lib/pngxtern/pngxrbmp.c		lib/pngxtern/pngxtern.h 
++pngxrgif.o:  lib/pngxtern/pngxrgif.c		lib/pngxtern/pngxtern.h 
++pngxrjpg.o:  lib/pngxtern/pngxrjpg.c		lib/pngxtern/pngxtern.h 
++pngxrpnm.o:  lib/pngxtern/pngxrpnm.c		lib/pngxtern/pngxtern.h 
++pngxrtif.o:  lib/pngxtern/pngxrtif.c		lib/pngxtern/pngxtern.h 
 +gifread.o:   lib/pngxtern/gif/gifread.c		lib/pngxtern/gif/gifread.h
 +pnmerror.o:  lib/pngxtern/pnm/pnmerror.c	lib/pngxtern/pnm/pnmio.h
 +pnmread.o:   lib/pngxtern/pnm/pnmread.c		lib/pngxtern/pnm/pnmio.h
 +pnmwrite.o:  lib/pngxtern/pnm/pnmwrite.c	lib/pngxtern/pnm/pnmio.h
-+pngxread.o:  lib/pngxtern/pngxread.c		lib/pngxtern/pngxtern.h
-+pngxrbmp.o:  lib/pngxtern/pngxrbmp.c		lib/pngxtern/pngxtern.h 
-+pngxrgif.o:  lib/pngxtern/pngxrgif.c		lib/pngxtern/pngxtern.h 
-+pngxrpnm.o:  lib/pngxtern/pngxrpnm.c		lib/pngxtern/pngxtern.h 
 +
 +install:
 +	${BSD_INSTALL_PROGRAM} optipng ${PREFIX}/bin
