@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/04/17 13:46:05 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2006/05/08 13:06:04 drochner Exp $
 #
 
 DISTNAME=		qscintilla-1.65-gpl-1.6
@@ -18,6 +18,7 @@ BUILD_DEPENDS+=		qt3-tools-3.*:../../x11/qt3-tools
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
+USE_LANGUAGES+=		c++
 
 MAKE_ENV+=	QTPREFIX=${QTDIR:Q}
 
