@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2006/03/05 21:25:48 adam Exp $
+@comment $NetBSD: PLIST,v 1.46 2006/05/08 11:39:07 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -255,6 +255,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick-image.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick-wand.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/magick.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/memory.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/module.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/monitor.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/montage.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/paint.html
@@ -271,6 +272,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/signature.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/stream.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/transform.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/version.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/architecture.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/binary-releases.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/changelog.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/color.html
