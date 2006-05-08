@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.171 2006/05/08 16:41:28 gson Exp $
+$NetBSD: CHANGES-2006,v 1.172 2006/05/08 19:29:56 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2423,3 +2423,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/diffstat to 1.41 [snj 2006-05-08]
 	Updated graphics/ImageMagick to 6.2.7.4 [adam 2006-05-08]
 	Updated www/p5-HTML-TableExtract to 2.08 [gson 2006-05-08]
+	Updated x11/xlockmore to 5.22 [hubertf 2006-05-08]
+	Updated x11/xlockmore-lite to 5.22 [hubertf 2006-05-08]
