@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.172 2006/05/08 19:29:56 hubertf Exp $
+$NetBSD: CHANGES-2006,v 1.173 2006/05/08 22:07:38 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2425,3 +2425,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/p5-HTML-TableExtract to 2.08 [gson 2006-05-08]
 	Updated x11/xlockmore to 5.22 [hubertf 2006-05-08]
 	Updated x11/xlockmore-lite to 5.22 [hubertf 2006-05-08]
+	Added mail/up-imapproxy version 1.2.4 [adrianp 2006-05-08]

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.286 2006/04/29 08:50:30 wiz Exp $
+# $NetBSD: Makefile,v 1.287 2006/05/08 22:07:38 adrianp Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -221,6 +221,7 @@ SUBDIR+=	tmda
 SUBDIR+=	tnef
 SUBDIR+=	tnef2txt
 SUBDIR+=	turba
+SUBDIR+=	up-imapproxy
 SUBDIR+=	vm
 SUBDIR+=	wl
 SUBDIR+=	wmbiff
