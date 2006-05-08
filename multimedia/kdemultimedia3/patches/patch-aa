@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
+$NetBSD: patch-aa,v 1.10 2006/05/08 22:14:27 joerg Exp $
 
---- configure.orig	2006-01-21 06:48:39.000000000 +1300
+--- configure.orig	2006-03-18 13:44:39.000000000 +0000
 +++ configure
-@@ -28679,34 +28679,15 @@ if test $kde_qtver = 1; then
+@@ -28862,34 +28862,15 @@ if test $kde_qtver = 1; then
     kde_qt_dirs="$QTDIR /usr/lib/qt"
  fi
  
@@ -42,7 +42,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -28751,38 +28732,26 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -28934,38 +28915,26 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -90,7 +90,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -28828,6 +28797,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -29011,6 +28980,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
    ac_cv_lib_pthread_pthread_create=yes
@@ -98,7 +98,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -28837,13 +28807,9 @@ fi
+@@ -29020,13 +28990,9 @@ fi
  rm -f conftest.err conftest.$ac_objext \
        conftest$ac_exeext conftest.$ac_ext
  LIBS=$ac_check_lib_save_LIBS
@@ -113,7 +113,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
    fi
  
      if test -z "$LIBPTHREAD" ; then
-@@ -28905,12 +28871,6 @@ rm -f conftest.err conftest.$ac_objext \
+@@ -29088,12 +29054,6 @@ rm -f conftest.err conftest.$ac_objext \
      LIBS=$kde_safe_libs
    fi
  
@@ -126,7 +126,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
  
        USE_THREADS=""
        if test -z "$LIBPTHREAD"; then
-@@ -34433,7 +34393,7 @@ if test "${ac_cv_lib_ossaudio__oss_ioctl
+@@ -34616,7 +34576,7 @@ if test "${ac_cv_lib_ossaudio__oss_ioctl
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -135,7 +135,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -34500,7 +34460,7 @@ fi
+@@ -34683,7 +34643,7 @@ fi
  
    if test "x$have_ossaudio" = xyes; then
      # for kmix/ and akode/
@@ -144,7 +144,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
    fi
  
  
-@@ -35097,7 +35057,7 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -35280,7 +35240,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -153,7 +153,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
-@@ -35141,7 +35101,7 @@ _ACEOF
+@@ -35324,7 +35284,7 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
@@ -162,7 +162,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
  _ACEOF
  if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
    (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
-@@ -35251,7 +35211,7 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -35434,7 +35394,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -171,7 +171,16 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
  
  int
  main ()
-@@ -38039,7 +37999,7 @@ if test "${ac_cv_lib_FLAC_FLAC__seekable
+@@ -37422,7 +37382,7 @@ if test "${ac_cv_lib_tunepimp_tp_SetFile
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ltunepimp  $LIBS"
++LIBS="-ltunepimp ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -38330,7 +38290,7 @@ if test "${ac_cv_lib_FLAC_FLAC__seekable
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -180,7 +189,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -40209,8 +40169,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -40500,8 +40460,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -206,7 +215,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -40273,7 +40248,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -40564,7 +40539,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -229,7 +238,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -40337,7 +40327,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -40628,7 +40618,22 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
  
@@ -252,7 +261,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -40409,6 +40414,9 @@ case "$OS_TYPE" in
+@@ -40700,6 +40705,9 @@ case "$OS_TYPE" in
    SunOS)
      kde_mpeglib_compiles=yes
      ;;
@@ -262,7 +271,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
    *)
      echo "$as_me:$LINENO: result: *** We disable mpeglib for this platform ***" >&5
  echo "${ECHO_T}*** We disable mpeglib for this platform ***" >&6
-@@ -40418,33 +40426,14 @@ esac
+@@ -40709,33 +40717,14 @@ esac
  
  
  
@@ -300,7 +309,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -40489,31 +40478,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -40780,31 +40769,23 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -339,7 +348,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
      echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
  echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
  if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
-@@ -40566,6 +40547,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -40857,6 +40838,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
    ac_cv_lib_pthread_pthread_create=yes
@@ -347,7 +356,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -40578,10 +40560,6 @@ LIBS=$ac_check_lib_save_LIBS
+@@ -40869,10 +40851,6 @@ LIBS=$ac_check_lib_save_LIBS
  fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
  echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6
@@ -358,7 +367,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
    fi
  
      if test -z "$LIBPTHREAD" ; then
-@@ -40643,10 +40621,6 @@ rm -f conftest.err conftest.$ac_objext \
+@@ -40934,10 +40912,6 @@ rm -f conftest.err conftest.$ac_objext \
      LIBS=$kde_safe_libs
    fi
  
@@ -369,7 +378,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
  
  
  case "$OS_TYPE" in
-@@ -40668,7 +40642,7 @@ _ACEOF
+@@ -40959,7 +40933,7 @@ _ACEOF
  
      ;;
  
@@ -378,7 +387,7 @@ $NetBSD: patch-aa,v 1.9 2006/01/31 22:33:03 markd Exp $
      OS_TYPE="BSD"
  
  cat >>confdefs.h <<\_ACEOF
-@@ -45117,11 +45093,6 @@ cat >>$CONFIG_STATUS <<\_ACEOF
+@@ -45411,11 +45387,6 @@ cat >>$CONFIG_STATUS <<\_ACEOF
  
  { (exit 0); exit 0; }
  _ACEOF
