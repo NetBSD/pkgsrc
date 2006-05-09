@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/02/12 15:29:19 xtraeme Exp $
+# $NetBSD: Makefile,v 1.33.2.1 2006/05/09 15:09:25 salo Exp $
 
 DISTNAME=		${DISTFILES}
 PKGNAME=		xorg-libs-${XORG_VER}
@@ -47,7 +47,7 @@ SUBST_CLASSES+=		mkstrs
 SUBST_STAGE.mkstrs=	post-patch
 SUBST_FILES.mkstrs=	config/cf/Library.tmpl
 SUBST_SED.mkstrs=	-e 's,@MAKESTRS@,${X11ROOT}/bin/makestrs,g'
-SUBST_MESSAGE.mkstrs=	"Fixing path of makestrs."
+SUBST_MESSAGE.mkstrs=	Fixing path of makestrs.
 
 post-install:
 	@${SED} ${XORG_PLIST_SED} ${PKGDIR}/PLIST > ${PLIST_SRC}

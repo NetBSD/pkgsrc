@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2006/03/20 21:34:59 joerg Exp $
+# $NetBSD: Makefile,v 1.40.2.1 2006/05/09 15:09:25 salo Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-server-${XORG_VER}
-PKGREVISION=	7
+PKGREVISION=	10
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG}
 DISTFILES=	X11R${XORG_VER}-src1.tar.gz \
@@ -30,6 +30,9 @@ PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 XORG_PLIST_ENTRY=	${OPSYS}
 
 REPLACE_PERL+=		exports/lib/modules/getconfig*
+REPLACE_PERL+=		programs/Xserver/hw/xfree86/getconfig/getconfig.pl
+REPLACE_PERL+=		programs/Xserver/hw/xfree86/getconfig/getconfig.sh
+USE_TOOLS+=		perl:run
 
 SUBST_CLASSES+=		parser
 SUBST_STAGE.parser=	pre-install
@@ -47,10 +50,6 @@ SUBST_SED.stubs+=	-e '/$$(RANLIB).*libfntstubs.a/ d'
 SUBST_MESSAGE.stubs=	Fixing stubs Makefile.
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} != "NetBSD"
-USE_TOOLS+=	perl	# Yeah, we need this :-)
-.endif
 
 .if ${OPSYS} == "Darwin"
 BUILDLINK_PASSTHRU_DIRS+=	/System
