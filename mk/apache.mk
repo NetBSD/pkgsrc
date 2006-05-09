@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.10 2006/04/06 06:23:05 reed Exp $
+# $NetBSD: apache.mk,v 1.11 2006/05/09 10:05:04 tron Exp $
 #
 # This Makefile fragment handles Apache dependencies and make variables,
 # and is meant to be included by packages that require Apache either at
@@ -54,7 +54,7 @@ _PKG_APACHE_ACCEPTED?=	${_PKG_APACHES}
 _PKG_APACHE_DEFAULT=	${PKG_APACHE_DEFAULT}
 .endif
 .if !defined(_PKG_APACHE_DEFAULT)
-_PKG_APACHE_DEFAULT?=	apache13
+_PKG_APACHE_DEFAULT?=	apache2
 .endif
 
 _APACHE_PKGBASE.apache13=	apache-1\*
