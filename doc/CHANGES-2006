@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.175 2006/05/09 06:36:59 martti Exp $
+$NetBSD: CHANGES-2006,v 1.176 2006/05/09 18:13:32 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2428,3 +2428,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added mail/up-imapproxy version 1.2.4 [adrianp 2006-05-08]
 	Updated graphics/optipng to 0.5.2 [adam 2006-05-09]
 	Updated editors/vim-share to 7.0.0 [martti 2006-05-09]
+	Updated net/nagios-base to 2.3 [bouyer 2006-05-09]
+	Updated net/nagios-nsca to 2.6 [bouyer 2006-05-09]
