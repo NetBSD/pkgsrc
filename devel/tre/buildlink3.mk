@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:14 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/05/09 12:34:18 adrianp Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 TRE_BUILDLINK3_MK:=	${TRE_BUILDLINK3_MK}+
@@ -12,8 +12,9 @@ BUILDLINK_PACKAGES+=	tre
 
 .if !empty(TRE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.tre+=		tre>=0.7.2
-BUILDLINK_PKGSRCDIR.tre?=	../../devel/tre
-BUILDLINK_DEPMETHOD.tre?=	build
+BUILDLINK_PKGSRCDIR.tre?=		../../devel/tre
+BUILDLINK_DEPMETHOD.tre?=		build
+BUILDLINK_CPPFLAGS.tre+=		-I${BUILDLINK_PREFIX.tre}/include/tre
 .endif	# TRE_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
