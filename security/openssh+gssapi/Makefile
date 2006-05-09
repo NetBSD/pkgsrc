@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/04/23 00:12:41 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2006/05/09 17:58:33 jlam Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -44,7 +44,7 @@ INSTALL_TARGET=		install-nokeys
 PLIST_SRC=		# empty
 MESSAGE_SRC=		${.CURDIR}/MESSAGE
 
-PKG_GROUPS=		${OPENSSH_GROUP}:${OPENSSH_GID}
+PKG_GROUPS=		${OPENSSH_GROUP}
 PKG_USERS=		${OPENSSH_USER}:${OPENSSH_GROUP}
 
 PKG_GID.${OPENSSH_GROUP}=	${OPENSSH_GID}
