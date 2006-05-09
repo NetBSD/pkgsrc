@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/05/09 10:09:06 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/05/09 16:37:18 wiz Exp $
 
 .include "../../editors/abiword/Makefile.common"
 
@@ -9,8 +9,6 @@ COMMENT=	Plugins enhancing Abiword's capabilities
 WRKSRC=		${WRKDIR}/${DISTNAME}/abiword-plugins
 
 BUILD_DEPENDS+=	abiword-${ABIWORD_VERSION}*:../../editors/abiword
-
-USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.prefs.mk"
 
