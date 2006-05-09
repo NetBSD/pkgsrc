@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2006/04/22 07:07:55 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2006/05/09 22:28:18 wiz Exp $
 
 DISTNAME=	libpng-1.2.9
 PKGNAME=	${DISTNAME:S/lib//}
@@ -23,7 +23,7 @@ TEST_TARGET=	test
 USE_LIBTOOL=	yes
 
 .include "../../mk/bsd.prefs.mk"
-
+# keep this in sync with the same code in buildlink3.mk
 .if ${MACHINE_ARCH} != "i386"
 CPPFLAGS+=	-DPNG_NO_ASSEMBLER_CODE
 .endif
