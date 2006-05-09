@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.8 2006/02/27 22:58:57 joerg Exp $
+$NetBSD: patch-ac,v 1.8.2.1 2006/05/09 15:09:25 salo Exp $
 
---- config/cf/NetBSD.cf.in.orig	2005-12-06 10:56:30.000000000 +0100
-+++ config/cf/NetBSD.cf.in	2005-12-06 11:01:02.000000000 +0100
+--- config/cf/NetBSD.cf.in.orig	2006-04-28 23:09:24.000000000 +0200
++++ config/cf/NetBSD.cf.in
 @@ -126,7 +126,7 @@ XCOMM operating system:  OSName (OSMajor
  # if ((OSMajorVersion == 2 && OSMinorVersion == 99 && OSTeenyVersion < 11) || \
        (OSMajorVersion == 2 && OSMinorVersion < 99) || \
@@ -38,7 +38,7 @@ $NetBSD: patch-ac,v 1.8 2006/02/27 22:58:57 joerg Exp $
  #  ifndef DoLoadableServer
  #  define DoLoadableServer	YES
  #  endif
-@@ -240,16 +240,19 @@ XCOMM operating system:  OSName (OSMajor
+@@ -240,17 +240,24 @@ XCOMM operating system:  OSName (OSMajor
  #   define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME
  # elif defined(PpcArchitecture)
  #  define ServerOSDefines	XFree86ServerOSDefines -DDDXTIME -DDDXOSINIT
@@ -56,11 +56,26 @@ $NetBSD: patch-ac,v 1.8 2006/02/27 22:58:57 joerg Exp $
  # endif
  #endif
 -#ifdef i386Architecture
+-# define ServerExtraDefines GccGasOption XFree86ServerDefines
 +#if defined(i386Architecture) || defined(AMD64Architecture)
- # define ServerExtraDefines GccGasOption XFree86ServerDefines
++#  if defined(AMD64Architecture)
++#   define ServerExtraDefines XFree86ServerDefines -D_XSERVER64
++#  else
++#   define ServerExtraDefines GccGasOption XFree86ServerDefines
++#  endif
  # ifndef XFree86ConsoleDefines
  #  if (OSMajorVersion == 1 && ((OSMinorVersion == 3 && OSTeenyVersion >= 6) \
-@@ -404,6 +407,10 @@ XCOMM operating system:  OSName (OSMajor
+ 	                       || OSMinorVersion >= 4) \
+@@ -284,6 +291,8 @@ XCOMM operating system:  OSName (OSMajor
+ #  ifndef XFree86ConsoleDefines
+ #    define XFree86ConsoleDefines	-DWSCONS_SUPPORT
+ #  endif
++#elif defined(ia64Architecture)
++#  define ServerExtraDefines GccGasOption XFree86ServerDefines -D_XSERVER64
+ #else
+ #  define ServerExtraDefines GccGasOption
+ #endif
+@@ -404,6 +413,10 @@ XCOMM operating system:  OSName (OSMajor
  # endif /* MTRRBuiltin */
  #endif /* i386Architecture */
  
@@ -71,7 +86,7 @@ $NetBSD: patch-ac,v 1.8 2006/02/27 22:58:57 joerg Exp $
  /*
   * agpgart support (NetBSD 1.5Y and up)
   */
-@@ -420,7 +427,7 @@ XCOMM operating system:  OSName (OSMajor
+@@ -420,7 +433,7 @@ XCOMM operating system:  OSName (OSMajor
   * MMX, SSE and 3DNow will be autodetected. NetBSD 1.6 and up have the
   * necessary kernel and toolchain support.
   */
@@ -80,7 +95,7 @@ $NetBSD: patch-ac,v 1.8 2006/02/27 22:58:57 joerg Exp $
  	((OSMajorVersion > 1) || (OSMajorVersion == 1 && OSMinorVersion > 5))
  # define HasX86Support          YES
  # define HasMMXSupport          YES
-@@ -590,7 +597,7 @@ InstallManPageAliasesBase(file,destdir,a
+@@ -590,7 +603,7 @@ InstallManPageAliasesBase(file,destdir,a
  # define BuildXInputLib          YES
  #endif
  

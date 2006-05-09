@@ -1,0 +1,10 @@
+$NetBSD: patch-bp,v 1.1.2.2 2006/05/09 15:09:25 salo Exp $
+
+--- programs/Xserver/hw/xfree86/getconfig/getconfig.sh.orig	2006-04-22 16:05:00.000000000 +0200
++++ programs/Xserver/hw/xfree86/getconfig/getconfig.sh
+@@ -40,4 +40,4 @@ if echo $0 | grep / >/dev/null 2>&1; the
+ 	DIR=`dirname $0`/
+ fi
+ 
+-exec perl ${DIR}getconfig.pl "$@"
++exec /usr/pkg/bin/perl ${DIR}getconfig.pl "$@"
