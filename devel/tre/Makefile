@@ -1,10 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/29 19:12:04 adrianp Exp $
-
-#
-# Please do not update or modify this package as it has been imported only
-# as a dependecy for chat/unrealircd. This package should only be updated
-# when chat/unrealircd requires it.
-#
+# $NetBSD: Makefile,v 1.2 2006/05/09 12:34:18 adrianp Exp $
 
 DISTNAME=	tre-0.7.2
 CATEGORIES=	devel
@@ -13,6 +7,12 @@ MASTER_SITES=	http://laurikari.net/tre/
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://laurikari.net/tre/
 COMMENT=	Lightweight and robust POSIX compliant regexp matching library
+
+#
+# Please do not update or modify this package as it has been imported only
+# as a dependecy for chat/unrealircd. This package should only be updated
+# when chat/unrealircd requires it.
+#
 
 GNU_CONFIGURE=		YES
 
