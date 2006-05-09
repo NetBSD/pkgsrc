@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.3 2005/05/09 19:24:46 jdolecek Exp $
+# $NetBSD: phpversion.mk,v 1.4 2006/05/09 10:06:34 tron Exp $
 # PHP wrapper, for module builds
 
 .if !defined(PHPVERSION_MK)
@@ -6,7 +6,7 @@ PHPVERSION_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
 
-PHP_VERSION_DEFAULT?=		4
+PHP_VERSION_DEFAULT?=		5
 PHP_VERSIONS_ACCEPTED?=		4 5
 
 # transform the list into individual variables
