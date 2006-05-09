@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.57 2006/03/02 11:32:34 martti Exp $
+# $NetBSD: Makefile.common,v 1.58 2006/05/09 06:36:48 martti Exp $
 
 .include "../../editors/vim-share/version.mk"
 
@@ -13,8 +13,8 @@ SITES_vim-${VIM_VERSION}-lang.tar.gz=	ftp://ftp.vim.org/pub/vim/extra/
 DIST_SUBDIR=		vim
 EXTRACT_SUFX=		.tar.bz2
 
-PATCH_SITES=		ftp://ftp.vim.org/pub/editors/vim/patches/${VIM_VERSION:Q}/
-PATCHFILES+=		6.4.002 6.4.003 6.4.004 6.4.005 6.4.006 6.4.007 6.4.008
+#PATCH_SITES=		ftp://ftp.vim.org/pub/editors/vim/patches/${VIM_VERSION:Q}/
+#PATCHFILES+=		7.0.001
 
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.vim.org/

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2005/10/17 06:49:34 martti Exp $
+$NetBSD: patch-aa,v 1.10 2006/05/09 06:36:48 martti Exp $
 
---- src/auto/configure.orig	2005-10-15 15:55:10.000000000 +0300
-+++ src/auto/configure	2005-10-17 04:16:25.000000000 +0300
-@@ -4593,7 +4593,7 @@
+--- src/auto/configure.orig	2006-05-04 13:46:19.000000000 +0300
++++ src/auto/configure	2006-05-08 10:00:33.000000000 +0300
+@@ -7977,7 +7977,7 @@
  
  
  if test -z "$SKIP_MOTIF"; then
@@ -10,4 +10,4 @@ $NetBSD: patch-aa,v 1.9 2005/10/17 06:49:34 martti Exp $
 +  gui_XXX="${BUILDLINK_DIR}/include"
      GUI_INC_LOC="`echo $GUI_INC_LOC|sed 's%-I%%g'`"
  
-   echo $ac_n "checking for location of Motif GUI includes""... $ac_c" 1>&6
+   echo "$as_me:$LINENO: checking for location of Motif GUI includes" >&5
