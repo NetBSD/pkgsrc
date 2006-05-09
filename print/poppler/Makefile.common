@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2006/04/01 17:22:12 reed Exp $
+# $NetBSD: Makefile.common,v 1.5 2006/05/09 16:31:56 joerg Exp $
 #
 
 POPPLER_VERS=		0.5.1
@@ -14,3 +14,4 @@ PATCHDIR=		${.CURDIR}/../../print/poppler/patches
 
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
+USE_LANGUAGES=		c c++
