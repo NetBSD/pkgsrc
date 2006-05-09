@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/02/27 22:58:57 joerg Exp $
+# $NetBSD: Makefile,v 1.26.2.1 2006/05/09 15:09:25 salo Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-imake-${XORG_VER}
@@ -98,7 +98,7 @@ SUBST_CLASSES+=		thr
 SUBST_STAGE.thr=	post-patch
 SUBST_FILES.thr=	config/cf/NetBSD.cf.in
 SUBST_SED.thr=		-e 's|@@NETBSD_THREADLIB@@|-DUSE_NBSD_THREADLIB|'
-SUBST_MESSAGE.thr=	"Fixes for threadlib.h."
+SUBST_MESSAGE.thr=	Fixes for threadlib.h.
 .  else
 SUBST_CLASSES+=		nada
 SUBST_STAGE.nada=	post-patch

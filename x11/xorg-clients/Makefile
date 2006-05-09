@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2006/03/14 20:43:24 jlam Exp $
+# $NetBSD: Makefile,v 1.26.2.1 2006/05/09 15:09:25 salo Exp $
 
 DISTNAME=	${DISTFILES}
 PKGNAME=	xorg-clients-${XORG_VER}
-PKGREVISION=	5
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG}
 DISTFILES=	X11R${XORG_VER}-src1.tar.gz \
@@ -19,6 +19,9 @@ PATCHDIR=		${.CURDIR}/../../x11/xorg-libs/patches
 XBUILD_DIRS=		lib/xtrans lib/lbxutil programs fonts/util
 XINSTALL_DIRS=		programs fonts/util
 XINSTALL_MAN_DIRS=	programs
+
+USE_TOOLS+=	perl:run
+REPLACE_PERL+=	fonts/util/bdftruncate.pl
 
 # XXX TODO: define build's VarDirectory to pkgsrc's VARBASE
 OWN_DIRS=               ${VARBASE}/lib/xdm

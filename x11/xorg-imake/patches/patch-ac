@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2006/01/18 23:53:06 xtraeme Exp $
+$NetBSD: patch-ac,v 1.6.2.1 2006/05/09 15:09:25 salo Exp $
 
---- config/cf/NetBSD.cf.in.orig	2005-12-06 10:56:30.000000000 +0100
-+++ config/cf/NetBSD.cf.in	2005-12-06 11:01:02.000000000 +0100
-@@ -126,7 +126,7 @@
+--- config/cf/NetBSD.cf.in.orig	2005-11-30 06:20:06.000000000 +0100
++++ config/cf/NetBSD.cf.in
+@@ -126,7 +126,7 @@ XCOMM operating system:  OSName (OSMajor
  # if ((OSMajorVersion == 2 && OSMinorVersion == 99 && OSTeenyVersion < 11) || \
        (OSMajorVersion == 2 && OSMinorVersion < 99) || \
        (OSMajorVersion < 2))
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.6 2006/01/18 23:53:06 xtraeme Exp $
  # endif
  # define SystemMTDefines	-D_REENTRANT
  # define MTSafeAPIDefines	-DXUSE_MTSAFE_API -DXNO_MTSAFE_PWDAPI
-@@ -150,7 +150,7 @@
+@@ -150,7 +150,7 @@ XCOMM operating system:  OSName (OSMajor
  #define MkdirHierCmd		mkdir -p
  
  #undef CcCmd
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.6 2006/01/18 23:53:06 xtraeme Exp $
  #ifndef DefaultCCOptions
  #if defined(UseInstalled)
  #define DefaultCCOptions 	/**/
-@@ -166,7 +166,7 @@
+@@ -166,7 +166,7 @@ XCOMM operating system:  OSName (OSMajor
  #endif
  #endif
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ac,v 1.6 2006/01/18 23:53:06 xtraeme Exp $
  #define StandardCppOptions	-traditional
  #define StandardCppDefines	/**/
  #define PreProcessCmd   	CcCmd -E
-@@ -195,7 +195,7 @@
+@@ -195,7 +195,7 @@ XCOMM operating system:  OSName (OSMajor
   * Disabled for NetBSD/vax until I figure out the scheme. --CS 
   */
  #if ((OSMajorVersion > 0) && defined(i386Architecture)) || \
@@ -38,7 +38,16 @@ $NetBSD: patch-ac,v 1.6 2006/01/18 23:53:06 xtraeme Exp $
  #  ifndef DoLoadableServer
  #  define DoLoadableServer	YES
  #  endif
-@@ -404,6 +404,10 @@
+@@ -284,6 +284,8 @@ XCOMM operating system:  OSName (OSMajor
+ #  ifndef XFree86ConsoleDefines
+ #    define XFree86ConsoleDefines	-DWSCONS_SUPPORT
+ #  endif
++#elif defined(ia64Architecture) || defined(AMD64Architecture)
++#define ServerExtraDefines GccGasOption XFree86ServerDefines -D_XSERVER64
+ #else
+ #  define ServerExtraDefines GccGasOption
+ #endif
+@@ -404,6 +406,10 @@ XCOMM operating system:  OSName (OSMajor
  # endif /* MTRRBuiltin */
  #endif /* i386Architecture */
  
@@ -49,7 +58,7 @@ $NetBSD: patch-ac,v 1.6 2006/01/18 23:53:06 xtraeme Exp $
  /*
   * agpgart support (NetBSD 1.5Y and up)
   */
-@@ -590,7 +594,7 @@
+@@ -590,7 +596,7 @@ InstallManPageAliasesBase(file,destdir,a
  # define BuildXInputLib          YES
  #endif
  
