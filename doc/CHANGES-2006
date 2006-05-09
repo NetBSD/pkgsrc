@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.174 2006/05/08 22:32:44 adam Exp $
+$NetBSD: CHANGES-2006,v 1.175 2006/05/09 06:36:59 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2427,3 +2427,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xlockmore-lite to 5.22 [hubertf 2006-05-08]
 	Added mail/up-imapproxy version 1.2.4 [adrianp 2006-05-08]
 	Updated graphics/optipng to 0.5.2 [adam 2006-05-09]
+	Updated editors/vim-share to 7.0.0 [martti 2006-05-09]
