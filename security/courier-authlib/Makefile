@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/03/14 01:14:33 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/05/09 17:58:46 joerg Exp $
 
 .include "Makefile.common"
 
@@ -22,6 +22,7 @@ PKG_SYSCONFSUBDIR=	authlib
 
 REPLACE_PERL=		samplepipe.pl sysconftool
 
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		cat:run gmake perl:run
 CONFIGURE_ENV+=		CAT=${TOOLS_CAT:Q}		# makedat
 
