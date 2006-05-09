@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1 2006/05/09 21:18:50 joerg Exp $
+
+--- configure.orig	2006-05-09 19:56:35.000000000 +0000
++++ configure
+@@ -1806,6 +1806,18 @@ cat >>confdefs.h <<\_ACEOF
+ _ACEOF
+ 
+     ;;
++    dragonfly* )
++
++cat >>confdefs.h <<\_ACEOF
++#define HOST_OS_DRAGONFLY 1
++_ACEOF
++
++
++cat >>confdefs.h <<\_ACEOF
++#define HOST_OS_NAME "DragonFly"
++_ACEOF
++
++    ;;
+     linux* )
+ 
+ cat >>confdefs.h <<\_ACEOF
