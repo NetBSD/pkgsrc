@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2006/05/05 23:51:15 dillo Exp $
+$NetBSD: distinfo,v 1.4 2006/05/09 16:31:44 joerg Exp $
 
 SHA1 (libzip-0.7.tar.gz) = ea11146fb844c66eefada332cb2a09c4b514f2b3
 RMD160 (libzip-0.7.tar.gz) = 246e4373929c7262aa69220e0619096709ae4f32
 Size (libzip-0.7.tar.gz) = 402655 bytes
+SHA1 (patch-aa) = 48894a6cde7931cfc09b49a58152d694a5a61f16
