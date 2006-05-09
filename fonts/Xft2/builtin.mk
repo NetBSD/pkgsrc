@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.14 2006/04/06 06:21:59 reed Exp $
+# $NetBSD: builtin.mk,v 1.15 2006/05/09 00:14:55 reed Exp $
 
 BUILTIN_PKG:=	Xft2
 
@@ -95,7 +95,7 @@ BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1nb2
 
 .  if !empty(USE_BUILTIN.Xft2:M[yY][eE][sS])
 BUILDLINK_PREFIX.Xft2=	${X11BASE}
-BUILDLINK_FILES.Xft2+=	lib/pkgconfig/Xft2.pc
+BUILDLINK_FILES.Xft2+=	lib/pkgconfig/xft.pc
 
 USE_BUILTIN.Xrender=	yes
 USE_BUILTIN.fontconfig=	yes
