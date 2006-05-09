@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
+$NetBSD: patch-ac,v 1.4 2006/05/09 18:20:18 joerg Exp $
 
 --- itk/configure.orig	2004-09-08 01:23:51.000000000 +0000
 +++ itk/configure
@@ -3522,7 +3522,35 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8426,6 +8914,9 @@ echo "$as_me: WARNING: \"64bit mode only
+@@ -8165,7 +8653,7 @@ rm -f conftest*
+ 	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
+ 	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+-	FreeBSD-*)
++	FreeBSD-*|DragonFly-*)
+ 	    # FreeBSD 3.* and greater have ELF.
+ 	    SHLIB_CFLAGS="-fPIC"
+ 	    SHLIB_LD="ld -Bshareable -x"
+@@ -8181,14 +8669,10 @@ rm -f conftest*
+ 		CFLAGS="$CFLAGS -pthread"
+ 	    	LDFLAGS="$LDFLAGS -pthread"
+ 	    fi
+-	    case $system in
+-	    FreeBSD-3.*)
+-	    	# FreeBSD-3 doesn't handle version numbers with dots.
+-	    	UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
+-	    	SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so'
+-	    	TCL_LIB_VERSIONS_OK=nodots
+-		;;
+-	    esac
++
++	    SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.so.0.0'
++	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
++	    TCL_LIB_VERSIONS_OK=nodots
+ 	    ;;
+ 	Rhapsody-*|Darwin-*)
+ 	    SHLIB_CFLAGS="-fno-common"
+@@ -8426,6 +8910,9 @@ echo "$as_me: WARNING: \"64bit mode only
  		SHLIB_LD="/usr/ccs/bin/ld -G -z text"
  		LD_SEARCH_FLAGS='-R ${LIB_RUNTIME_DIR}'
  	    fi
@@ -3532,7 +3560,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  	    ;;
  	ULTRIX-4.*)
  	    SHLIB_CFLAGS="-G 0"
-@@ -8454,7 +8945,6 @@ echo "$as_me: WARNING: \"64bit mode only
+@@ -8454,7 +8941,6 @@ echo "$as_me: WARNING: \"64bit mode only
  echo $ECHO_N "checking for ld accepts -Bexport flag... $ECHO_C" >&6
  	    LDFLAGS="$LDFLAGS -Wl,-Bexport"
  	    cat >conftest.$ac_ext <<_ACEOF
@@ -3540,7 +3568,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8471,11 +8961,21 @@ int i;
+@@ -8471,11 +8957,21 @@ int i;
  _ACEOF
  rm -f conftest.$ac_objext conftest$ac_exeext
  if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
@@ -3564,7 +3592,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8488,7 +8988,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -8488,7 +8984,8 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  LDFLAGS=$hold_ldflags found=no
  fi
@@ -3574,7 +3602,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  	    echo "$as_me:$LINENO: result: $found" >&5
  echo "${ECHO_T}$found" >&6
  	    LD_SEARCH_FLAGS=""
-@@ -8523,7 +9024,6 @@ echo "$as_me: WARNING: \"64bit support b
+@@ -8523,7 +9020,6 @@ echo "$as_me: WARNING: \"64bit support b
  	echo "$as_me:$LINENO: checking sys/exec.h" >&5
  echo $ECHO_N "checking sys/exec.h... $ECHO_C" >&6
  	cat >conftest.$ac_ext <<_ACEOF
@@ -3582,7 +3610,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8551,11 +9051,21 @@ main ()
+@@ -8551,11 +9047,21 @@ main ()
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -3606,7 +3634,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8568,7 +9078,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -8568,7 +9074,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  tcl_ok=unusable
  fi
@@ -3615,7 +3643,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  	echo "$as_me:$LINENO: result: $tcl_ok" >&5
  echo "${ECHO_T}$tcl_ok" >&6
  	if test $tcl_ok = usable; then
-@@ -8580,7 +9090,6 @@ _ACEOF
+@@ -8580,7 +9086,6 @@ _ACEOF
  	    echo "$as_me:$LINENO: checking a.out.h" >&5
  echo $ECHO_N "checking a.out.h... $ECHO_C" >&6
  	    cat >conftest.$ac_ext <<_ACEOF
@@ -3623,7 +3651,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8608,11 +9117,21 @@ main ()
+@@ -8608,11 +9113,21 @@ main ()
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -3647,7 +3675,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8625,7 +9144,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -8625,7 +9140,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  tcl_ok=unusable
  fi
@@ -3656,7 +3684,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  	    echo "$as_me:$LINENO: result: $tcl_ok" >&5
  echo "${ECHO_T}$tcl_ok" >&6
  	    if test $tcl_ok = usable; then
-@@ -8637,7 +9156,6 @@ _ACEOF
+@@ -8637,7 +9152,6 @@ _ACEOF
  		echo "$as_me:$LINENO: checking sys/exec_aout.h" >&5
  echo $ECHO_N "checking sys/exec_aout.h... $ECHO_C" >&6
  		cat >conftest.$ac_ext <<_ACEOF
@@ -3664,7 +3692,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8665,11 +9183,21 @@ main ()
+@@ -8665,11 +9179,21 @@ main ()
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -3688,7 +3716,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8682,7 +9210,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -8682,7 +9206,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  tcl_ok=unusable
  fi
@@ -3697,7 +3725,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  		echo "$as_me:$LINENO: result: $tcl_ok" >&5
  echo "${ECHO_T}$tcl_ok" >&6
  		if test $tcl_ok = usable; then
-@@ -8789,7 +9317,6 @@ echo $ECHO_N "checking for required earl
+@@ -8789,7 +9313,6 @@ echo $ECHO_N "checking for required earl
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -3705,7 +3733,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8806,11 +9333,21 @@ char *p = (char *)strtoll; char *q = (ch
+@@ -8806,11 +9329,21 @@ char *p = (char *)strtoll; char *q = (ch
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -3729,7 +3757,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8822,7 +9359,6 @@ else
+@@ -8822,7 +9355,6 @@ else
  sed 's/^/| /' conftest.$ac_ext >&5
  
  cat >conftest.$ac_ext <<_ACEOF
@@ -3737,7 +3765,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8840,11 +9376,21 @@ char *p = (char *)strtoll; char *q = (ch
+@@ -8840,11 +9372,21 @@ char *p = (char *)strtoll; char *q = (ch
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -3761,7 +3789,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8857,9 +9403,9 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -8857,9 +9399,9 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  tcl_cv_flag__isoc99_source=no
  fi
@@ -3773,7 +3801,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  fi
  
      if test "x${tcl_cv_flag__isoc99_source}" = "xyes" ; then
-@@ -8875,7 +9421,6 @@ _ACEOF
+@@ -8875,7 +9417,6 @@ _ACEOF
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
@@ -3781,7 +3809,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8892,11 +9437,21 @@ struct stat64 buf; int i = stat64("/", &
+@@ -8892,11 +9433,21 @@ struct stat64 buf; int i = stat64("/", &
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -3805,7 +3833,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8908,7 +9463,6 @@ else
+@@ -8908,7 +9459,6 @@ else
  sed 's/^/| /' conftest.$ac_ext >&5
  
  cat >conftest.$ac_ext <<_ACEOF
@@ -3813,7 +3841,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8926,11 +9480,21 @@ struct stat64 buf; int i = stat64("/", &
+@@ -8926,11 +9476,21 @@ struct stat64 buf; int i = stat64("/", &
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -3837,7 +3865,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -8943,9 +9507,9 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -8943,9 +9503,9 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  tcl_cv_flag__largefile64_source=no
  fi
@@ -3849,7 +3877,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  fi
  
      if test "x${tcl_cv_flag__largefile64_source}" = "xyes" ; then
-@@ -8974,7 +9538,6 @@ else
+@@ -8974,7 +9534,6 @@ else
  	tcl_cv_type_64bit=none
  	# See if the compiler knows natively about __int64
  	cat >conftest.$ac_ext <<_ACEOF
@@ -3857,7 +3885,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -8991,11 +9554,21 @@ __int64 value = (__int64) 0;
+@@ -8991,11 +9550,21 @@ __int64 value = (__int64) 0;
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -3881,7 +3909,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -9008,12 +9581,11 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -9008,12 +9577,11 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  tcl_type_64bit="long long"
  fi
@@ -3895,7 +3923,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -9032,11 +9604,21 @@ switch (0) {
+@@ -9032,11 +9600,21 @@ switch (0) {
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -3919,7 +3947,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -9048,7 +9630,7 @@ else
+@@ -9048,7 +9626,7 @@ else
  sed 's/^/| /' conftest.$ac_ext >&5
  
  fi
@@ -3928,7 +3956,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  fi
  
      if test "${tcl_cv_type_64bit}" = none ; then
-@@ -9079,7 +9661,6 @@ echo $ECHO_N "checking for struct dirent
+@@ -9079,7 +9657,6 @@ echo $ECHO_N "checking for struct dirent
  else
  
  	    cat >conftest.$ac_ext <<_ACEOF
@@ -3936,7 +3964,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -9097,11 +9678,21 @@ struct dirent64 p;
+@@ -9097,11 +9674,21 @@ struct dirent64 p;
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -3960,7 +3988,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -9114,7 +9705,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -9114,7 +9701,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  tcl_cv_struct_dirent64=no
  fi
@@ -3969,7 +3997,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  fi
  
  	if test "x${tcl_cv_struct_dirent64}" = "xyes" ; then
-@@ -9133,7 +9724,6 @@ echo $ECHO_N "checking for struct stat64
+@@ -9133,7 +9720,6 @@ echo $ECHO_N "checking for struct stat64
  else
  
  	    cat >conftest.$ac_ext <<_ACEOF
@@ -3977,7 +4005,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -9151,11 +9741,21 @@ struct stat64 p;
+@@ -9151,11 +9737,21 @@ struct stat64 p;
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -4001,7 +4029,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -9168,7 +9768,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -9168,7 +9764,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  tcl_cv_struct_stat64=no
  fi
@@ -4010,7 +4038,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  fi
  
  	if test "x${tcl_cv_struct_stat64}" = "xyes" ; then
-@@ -9187,7 +9787,6 @@ echo $ECHO_N "checking for off64_t... $E
+@@ -9187,7 +9783,6 @@ echo $ECHO_N "checking for off64_t... $E
  else
  
  	    cat >conftest.$ac_ext <<_ACEOF
@@ -4018,7 +4046,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
-@@ -9205,11 +9804,21 @@ off64_t offset;
+@@ -9205,11 +9800,21 @@ off64_t offset;
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
@@ -4042,7 +4070,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
-@@ -9222,7 +9831,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -9222,7 +9827,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  
  tcl_cv_type_off64_t=no
  fi
@@ -4051,7 +4079,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  fi
  
  	if test "x${tcl_cv_type_off64_t}" = "xyes" ; then
-@@ -9338,7 +9947,7 @@ fi
+@@ -9338,7 +9943,7 @@ fi
  	MAKE_STUB_LIB="\${STLIB_LD} -out:\$@ \$(PKG_STUB_OBJECTS)"
      else
  	MAKE_STATIC_LIB="\${STLIB_LD} \$@ \$(PKG_OBJECTS)"
@@ -4060,7 +4088,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  	MAKE_STUB_LIB="\${STLIB_LD} \$@ \$(PKG_STUB_OBJECTS)"
      fi
  
-@@ -9544,13 +10153,13 @@ _ACEOF
+@@ -9544,13 +10149,13 @@ _ACEOF
        # `set' does not quote correctly, so add quotes (double-quote
        # substitution turns \\\\ into \\, and sed turns \\ into \).
        sed -n \
@@ -4077,7 +4105,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
        ;;
      esac;
  } |
-@@ -9580,13 +10189,13 @@ test "x$exec_prefix" = xNONE && exec_pre
+@@ -9580,13 +10185,13 @@ test "x$exec_prefix" = xNONE && exec_pre
  # trailing colons and then remove the whole line if VPATH becomes empty
  # (actually we leave an empty line to preserve line numbers).
  if test "x$srcdir" = x.; then
@@ -4094,7 +4122,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  }'
  fi
  
-@@ -9600,13 +10209,13 @@ fi
+@@ -9600,13 +10205,13 @@ fi
  cat >confdef2opt.sed <<\_ACEOF
  t clear
  : clear
@@ -4111,7 +4139,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  s,\[,\\&,g
  s,\],\\&,g
  s,\$,$$,g
-@@ -9628,7 +10237,7 @@ ac_ltlibobjs=
+@@ -9628,7 +10233,7 @@ ac_ltlibobjs=
  for ac_i in : $LIBOBJS; do test "x$ac_i" = x: && continue
    # 1. Remove the extension, and $U if already installed.
    ac_i=`echo "$ac_i" |
@@ -4120,7 +4148,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
    # 2. Add them.
    ac_libobjs="$ac_libobjs $ac_i\$U.$ac_objext"
    ac_ltlibobjs="$ac_ltlibobjs $ac_i"'$U.lo'
-@@ -9672,9 +10281,10 @@ if test -n "${ZSH_VERSION+set}" && (emul
+@@ -9672,9 +10277,10 @@ if test -n "${ZSH_VERSION+set}" && (emul
  elif test -n "${BASH_VERSION+set}" && (set -o posix) >/dev/null 2>&1; then
    set -o posix
  fi
@@ -4132,7 +4160,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
    as_unset=unset
  else
    as_unset=false
-@@ -9693,7 +10303,7 @@ for as_var in \
+@@ -9693,7 +10299,7 @@ for as_var in \
    LC_MEASUREMENT LC_MESSAGES LC_MONETARY LC_NAME LC_NUMERIC LC_PAPER \
    LC_TELEPHONE LC_TIME
  do
@@ -4141,7 +4169,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
      eval $as_var=C; export $as_var
    else
      $as_unset $as_var
-@@ -9872,16 +10482,17 @@ rm -f conf$$ conf$$.exe conf$$.file
+@@ -9872,16 +10478,17 @@ rm -f conf$$ conf$$.exe conf$$.file
  if mkdir -p . 2>/dev/null; then
    as_mkdir_p=:
  else
@@ -4161,7 +4189,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  
  
  # IFS
-@@ -9908,7 +10519,7 @@ _ASBOX
+@@ -9908,7 +10515,7 @@ _ASBOX
  cat >&5 <<_CSEOF
  
  This file was extended by itk $as_me 3.3, which was
@@ -4170,7 +4198,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  
    CONFIG_FILES    = $CONFIG_FILES
    CONFIG_HEADERS  = $CONFIG_HEADERS
-@@ -9952,7 +10563,7 @@ Usage: $0 [OPTIONS] [FILE]...
+@@ -9952,7 +10559,7 @@ Usage: $0 [OPTIONS] [FILE]...
    -d, --debug      don't remove temporary files
        --recheck    update $as_me by reconfiguring in the same conditions
    --file=FILE[:TEMPLATE]
@@ -4179,7 +4207,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  
  Configuration files:
  $config_files
-@@ -9963,11 +10574,10 @@ _ACEOF
+@@ -9963,11 +10570,10 @@ _ACEOF
  cat >>$CONFIG_STATUS <<_ACEOF
  ac_cs_version="\\
  itk config.status 3.3
@@ -4193,7 +4221,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  This config.status script is free software; the Free Software Foundation
  gives unlimited permission to copy, distribute and modify it."
  srcdir=$srcdir
-@@ -10286,9 +10896,9 @@ _ACEOF
+@@ -10286,9 +10892,9 @@ _ACEOF
        (echo ':t
    /@[a-zA-Z_][a-zA-Z_0-9]*@/!b' && cat $tmp/subs.frag) >$tmp/subs-$ac_sed_frag.sed
        if test -z "$ac_sed_cmds"; then
@@ -4205,7 +4233,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
        fi
        ac_sed_frag=`expr $ac_sed_frag + 1`
        ac_beg=$ac_end
-@@ -10306,21 +10916,21 @@ for ac_file in : $CONFIG_FILES; do test 
+@@ -10306,21 +10912,21 @@ for ac_file in : $CONFIG_FILES; do test 
    # Support "outfile[:infile[:infile...]]", defaulting infile="outfile.in".
    case $ac_file in
    - | *:- | *:-:* ) # input from stdin
@@ -4235,7 +4263,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  echo X"$ac_file" |
      sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{ s//\1/; q; }
    	  /^X\(\/\/\)[^/].*/{ s//\1/; q; }
-@@ -10336,10 +10946,10 @@ echo X"$ac_file" |
+@@ -10336,10 +10942,10 @@ echo X"$ac_file" |
        as_dirs="$as_dir $as_dirs"
        as_dir=`(dirname "$as_dir") 2>/dev/null ||
  $as_expr X"$as_dir" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
@@ -4250,7 +4278,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  echo X"$as_dir" |
      sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{ s//\1/; q; }
    	  /^X\(\/\/\)[^/].*/{ s//\1/; q; }
-@@ -10377,12 +10987,45 @@ case $srcdir in
+@@ -10377,12 +10983,45 @@ case $srcdir in
      ac_srcdir=$ac_top_builddir$srcdir$ac_dir_suffix
      ac_top_srcdir=$ac_top_builddir$srcdir ;;
  esac
@@ -4302,7 +4330,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  
  
    case $INSTALL in
-@@ -10404,7 +11047,7 @@ echo "$as_me: creating $ac_file" >&6;}
+@@ -10404,7 +11043,7 @@ echo "$as_me: creating $ac_file" >&6;}
      configure_input="$ac_file.  "
    fi
    configure_input=$configure_input"Generated from `echo $ac_file_in |
@@ -4311,7 +4339,7 @@ $NetBSD: patch-ac,v 1.3 2005/04/05 01:42:46 dmcmahill Exp $
  
    # First look for the input files in the build tree, otherwise in the
    # src tree.
-@@ -10413,24 +11056,24 @@ echo "$as_me: creating $ac_file" >&6;}
+@@ -10413,24 +11052,24 @@ echo "$as_me: creating $ac_file" >&6;}
        case $f in
        -) echo $tmp/stdin ;;
        [\\/$]*)
