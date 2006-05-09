@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/22 09:22:13 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/05/09 09:31:42 abs Exp $
 #
 
 DISTNAME=		skype_staticQT-1.2.0.18
@@ -15,11 +15,11 @@ COMMENT=		P2P VoIP software
 .include "../../emulators/suse_linux/Makefile.application"
 
 .if !defined(USE_NATIVE_LINUX)
-DEPENDS+=	suse_base>=9.1:../../emulators/suse91_base
-DEPENDS+=	suse_glx>=9.1:../../emulators/suse91_glx
-DEPENDS+=	suse_fontconfig>=9.1:../../emulators/suse91_fontconfig
-DEPENDS+=	suse_freetype2>=9.1:../../emulators/suse91_freetype2
-DEPENDS+=	suse_x11>=9.1:../../emulators/suse91_x11
+DEPENDS+=	suse_base-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_base
+DEPENDS+=	suse_glx-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_glx
+DEPENDS+=	suse_fontconfig-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_fontconfig
+DEPENDS+=	suse_freetype2-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_freetype2
+DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
 .else
 .include "../../mk/x11.buildlink3.mk"
 .endif
