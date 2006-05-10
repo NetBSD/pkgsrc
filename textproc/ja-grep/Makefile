@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/07 19:54:17 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/10 17:49:17 joerg Exp $
 
 DISTNAME=	grep-2.4.2
 PKGNAME=	ja-grep-2.4.2
@@ -17,6 +17,7 @@ COMMENT=	GNU grep + multi-byte extension
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=	msgfmt
 CONFIGURE_ARGS+=	--program-transform-name='s,^,j,'
 TEST_TARGET=	check
 INFO_FILES=	# PLIST
