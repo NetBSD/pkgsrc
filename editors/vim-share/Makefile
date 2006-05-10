@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/05/09 06:36:48 martti Exp $
+# $NetBSD: Makefile,v 1.22 2006/05/10 13:27:43 tonio Exp $
 
 PKGNAME=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}
 #PKGREVISION=		1
@@ -8,6 +8,7 @@ COMMENT=		Data files for the vim editor (vi clone)
 .include		"Makefile.common"
 
 CONFIGURE_ARGS+=	--disable-gui
+CONFIGURE_ARGS+=	--without-x
 
 BUILD_TARGET=		vim
 INSTALL_TARGET=		installruntime installmacros installtutor installtools
