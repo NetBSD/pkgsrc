@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.575 2006/05/10 11:34:52 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.576 2006/05/10 15:31:41 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1602,7 +1602,7 @@ sub get_vartypes_map() {
 	use constant re_vartypedef => qr"^
 		([\w\d_.]+) \s+				# variable name
 		(?:(InternalList|List) \s+ of \s+)?	# kind of list
-		(?:([\w\d_]+) | \{([\w\d_.+\-\s]+)\})	# basic type
+		(?:([\w\d_]+) | \{\s*([\w\d_.+\-\s]+?)\s*\}) # basic type
 		(?:\s+ \[ ([^\]]*) \])?			# optional ACL
 		(?:\s*\#.*)?				# optional comment
 		$"x;
@@ -1634,6 +1634,7 @@ sub get_vartypes_map() {
 						"b" => qr"(?:^|/)buildlink3\.mk$",
 						"c" => qr"(?:^|/)Makefile\.common$",
 						"h" => qr"(?:^|/)hacks\.mk$",
+						"k" => qr"\.mk$",
 						"m" => qr"(?:^|/)Makefile$",
 						"o" => qr"(?:^|/)options\.mk$",
 						"_" => qr".*",
@@ -3352,6 +3353,26 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 			$line->log_warning("Linker flag \"${value}\" does not start with a dash.");
 		}
 
+	} elsif ($type eq "License") {
+
+		use constant deprecated_licenses => array_to_hash(qw(
+			fee-based-commercial-use
+			no-commercial-use no-profit no-redistribution
+			shareware
+		));
+
+		my $license_file = "${current_dir}/${pkgsrcdir}/licenses/${value}";
+		if (exists($makevar->{"LICENSE_FILE"})) {
+			$license_file = "${current_dir}/" . $makevar->{"LICENSE_FILE"};
+		}
+		if (!-f $license_file) {
+			$line->log_warning("License file ${license_file} does not exist.");
+		}
+
+		if (exists(deprecated_licenses->{$value})) {
+			$line->log_warning("License ${value} is deprecated.");
+		}
+
 	} elsif ($type eq "Mail_Address") {
 		if ($value =~ qr"^([+\-.0-9A-Z_a-z]+)\@([-\w\d.]+)$") {
 			my ($localpart, $domain) = ($1, $2);
@@ -3511,7 +3532,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 				} elsif ($word eq "-n") {
 					# Don't print lines per default.
 
-				} elsif ($i == 0 && $word =~ qr"^([\"']?)\d*s(.).*\2g?\1$") {
+				} elsif ($i == 0 && $word =~ qr"^([\"']?)(?:\d*|/.*/)s(.).*\2g?\1$") {
 					$line->log_warning("Please always use \"-e\" in sed commands, even if there is only one substitution.");
 
 				} else {
@@ -3569,7 +3590,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 		} elsif ($value =~ regex_unresolved) {
 			# No further checks
 
-		} elsif ($value =~ qr"^(?:http://|ftp://|gopher://)[-0-9A-Za-z.]+(?::\d+)?/~?([-%&+,./0-9:=?\@A-Z_a-z]|\\#)*?$") {
+		} elsif ($value =~ qr"^(?:http://|ftp://|gopher://)[-0-9A-Za-z.]+(?::\d+)?/([-%&+,./0-9:=?\@A-Z_a-z~]|\\#)*?$") {
 			my $sites = get_dist_sites();
 
 			foreach my $site (keys(%{$sites})) {
