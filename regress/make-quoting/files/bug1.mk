@@ -1,4 +1,4 @@
-# $NetBSD: bug1.mk,v 1.2 2005/05/15 23:37:13 rillig Exp $
+# $NetBSD: bug1.mk,v 1.3 2006/05/10 17:35:58 rillig Exp $
 #
 # This file demonstrates a parsing bug in make(1) from NetBSD-1.6.2 and
 # the current pkgsrc bmake. The make from NetBSD-2.99.15 has been fixed.
@@ -33,7 +33,7 @@ OPTIONS_2:=	${OPTIONS_2:N${_popt_}}		# <-- workaround, part 2
 PASSED?=	no
 
 # /usr/bin/make from NetBSD 2.99.15 or similar
-.if !empty(MAKE_VERSION:Mnetbsd-2005*) && ${OPTIONS_1} == "a"
+.if !empty(MAKE_VERSION:Mnetbsd-2005*) && ${OPTIONS_1} == "a d"
 PASSED=		yes
 
 # /usr/bin/make from NetBSD 1.6.2
@@ -44,6 +44,8 @@ PASSED=		yes
 .elif !empty(MAKE_VERSION:Mbmake-3.1.12*) && ${OPTIONS_1} == "a b c d}}"
 PASSED=		yes
 
+.else
+PASSED=		no (MAKE_VERSION=${MAKE_VERSION})
 .endif
 
 .PHONY: all
