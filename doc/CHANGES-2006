@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.177 2006/05/10 16:47:15 gdt Exp $
+$NetBSD: CHANGES-2006,v 1.178 2006/05/10 16:48:05 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2431,3 +2431,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/nagios-base to 2.3 [bouyer 2006-05-09]
 	Updated net/nagios-nsca to 2.6 [bouyer 2006-05-09]
 	Updated x11/xephem to 3.7.1 [gdt 2006-05-10]
+	Updated lang/kaffe to 1.1.7 [tonio 2006-05-10]
+	Updated lang/kaffe-x11 to 1.1.7 [tonio 2006-05-10]
+	Updated lang/kaffe-esound to 1.1.7 [tonio 2006-05-10]
