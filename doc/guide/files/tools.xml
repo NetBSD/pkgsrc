@@ -1,4 +1,4 @@
-<!-- $NetBSD: tools.xml,v 1.2 2006/01/16 00:29:23 rillig Exp $ -->
+<!-- $NetBSD: tools.xml,v 1.3 2006/05/10 22:43:15 rillig Exp $ -->
 
 <chapter id="tools">
 <title>Tools needed for building or running</title>
@@ -71,8 +71,8 @@ and pkg-config:build.)
 </para>
 
 <programlisting>
-USE_TOOLS+=	mktemp:pkgsrc
-USE_TOOLS+=	gmake perl:run pkg-config
+USE_TOOLS+=     mktemp:pkgsrc
+USE_TOOLS+=     gmake perl:run pkg-config
 </programlisting>
 
 <para>

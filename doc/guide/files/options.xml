@@ -1,4 +1,4 @@
-<!-- $NetBSD: options.xml,v 1.17 2006/02/12 14:44:59 rillig Exp $ -->
+<!-- $NetBSD: options.xml,v 1.18 2006/05/10 22:43:15 rillig Exp $ -->
 
 <!-- based on: pkgsrc/mk/bsd.options.mk 1.42 -->
 
@@ -36,21 +36,21 @@ e.g. <filename>options.mk</filename>, that is included by the
 main package <filename>Makefile</filename>.</para>
 
 <programlisting>
-    PKG_OPTIONS_VAR=		PKG_OPTIONS.wibble
-    PKG_SUPPORTED_OPTIONS=		wibble-foo ldap
-    PKG_OPTIONS_OPTIONAL_GROUPS=	database
-    PKG_OPTIONS_GROUP.database=	mysql pgsql
-    PKG_SUGGESTED_OPTIONS=		wibble-foo
-    PKG_OPTIONS_LEGACY_VARS+=	WIBBLE_USE_OPENLDAP:ldap
-    PKG_OPTIONS_LEGACY_OPTS+=	foo:wibble-foo
+    PKG_OPTIONS_VAR=                PKG_OPTIONS.wibble
+    PKG_SUPPORTED_OPTIONS=          wibble-foo ldap
+    PKG_OPTIONS_OPTIONAL_GROUPS=    database
+    PKG_OPTIONS_GROUP.database=     mysql pgsql
+    PKG_SUGGESTED_OPTIONS=          wibble-foo
+    PKG_OPTIONS_LEGACY_VARS+=       WIBBLE_USE_OPENLDAP:ldap
+    PKG_OPTIONS_LEGACY_OPTS+=       foo:wibble-foo
 
     .include "../../mk/bsd.prefs.mk"
 
     # this package was previously named wibble2
     .if defined(PKG_OPTIONS.wibble2)
-    PKG_LEGACY_OPTIONS+=  ${PKG_OPTIONS.wibble2}
+    PKG_LEGACY_OPTIONS+=            ${PKG_OPTIONS.wibble2}
     PKG_OPTIONS_DEPRECATED_WARNINGS+= \
-            "Deprecated variable PKG_OPTIONS.wibble2 used, use "${PKG_OPTIONS_VAR:Q}" instead."
+            "Deprecated variable PKG_OPTIONS.wibble2 used, use ${PKG_OPTIONS_VAR instead."
     .endif
 
     .include "../../mk/bsd.options.mk"
@@ -61,7 +61,7 @@ main package <filename>Makefile</filename>.</para>
     ### FOO support
     ###
     .if !empty(PKG_OPTIONS:Mwibble-foo)
-    CONFIGURE_ARGS+=	--enable-foo
+    CONFIGURE_ARGS+=    --enable-foo
     .endif
 
     ###
@@ -69,7 +69,7 @@ main package <filename>Makefile</filename>.</para>
     ###
     .if !empty(PKG_OPTIONS:Mldap)
     .  include "../../databases/openldap/buildlink3.mk"
-    CONFIGURE_ARGS+=	--enable-ldap=${BUILDLINK_PREFIX.openldap}
+    CONFIGURE_ARGS+=    --enable-ldap=${BUILDLINK_PREFIX.openldap}
     .endif
 
     ###
