@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:30:38 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/05/10 12:26:31 gdt Exp $
 
 DISTNAME=	ssh-3.2.9.1
 PKGNAME=	${DISTNAME:C/ssh-/ssh2-/}
@@ -29,9 +29,10 @@ PLIST_SRC=		${.CURDIR}/../../security/ssh2/PLIST
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS:M*BSD} == "") && (${OPSYS} != "Linux")
-LICENSE=		no-commercial-use
-.endif
+LICENSE=		ssh-communications-security-license
+RESTRICTED=		Reciprocal grant required for derivative works.  Non-comercial use restrictions on some systems.
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc64"
 # Later we may want to put an upper version bound on OS_VERSION or on
