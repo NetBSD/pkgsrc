@@ -1,4 +1,4 @@
-# $NetBSD: usergroupfuncs.FreeBSD,v 1.7 2006/05/01 14:56:23 jlam Exp $
+# $NetBSD: usergroupfuncs.FreeBSD,v 1.8 2006/05/10 05:41:40 jlam Exp $
 #
 # Platform-specific adduser and addgroup functionality
 # on top of pw(8).
@@ -15,7 +15,7 @@ group_exists()
 	${TEST} -n "$_group" || return 3
 
 	# Check using chgrp to work properly in an NSS/NIS environment.
-	_tmpdir="./.pkginstall.$$
+	_tmpdir="./.pkginstall.$$"
 	${MKDIR} -p $_tmpdir 2>/dev/null || return 3
 	${CHMOD} 0700 $_tmpdir
 	_testpath="$_tmpdir/group_exists"
@@ -55,7 +55,7 @@ user_exists()
 	${TEST} -n "$_user" || return 3
 
 	# Check using chown to work properly in an NSS/NIS environment.
-	_tmpdir="./.pkginstall.$$
+	_tmpdir="./.pkginstall.$$"
 	${MKDIR} -p $_tmpdir 2>/dev/null || return 3
 	${CHMOD} 0700 $_tmpdir
 	_testpath="$_tmpdir/user_exists"
