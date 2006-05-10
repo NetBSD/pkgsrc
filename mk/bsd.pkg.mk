@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1821 2006/05/06 03:28:44 reed Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1822 2006/05/10 17:53:34 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -1668,16 +1668,16 @@ do-configure:
 .  if defined(HAS_CONFIGURE)
 .    for _dir_ in ${CONFIGURE_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
-	cd ${WRKSRC}; cd ${_dir_};					\
+	cd ${WRKSRC} && cd ${_dir_} &&					\
 	${SETENV}							\
-	    AWK="${TOOLS_AWK}"						\
-	    INSTALL="${INSTALL} -c -o ${BINOWN} -g ${BINGRP}"		\
-	    ac_given_INSTALL="${INSTALL} -c -o ${BINOWN} -g ${BINGRP}"	\
-	    INSTALL_DATA="${INSTALL_DATA}"				\
-	    INSTALL_PROGRAM="${INSTALL_PROGRAM}"			\
-	    INSTALL_GAME="${INSTALL_GAME}"				\
-	    INSTALL_GAME_DATA="${INSTALL_GAME_DATA}"			\
-	    INSTALL_SCRIPT="${INSTALL_SCRIPT}"				\
+	    AWK=${TOOLS_AWK:Q}						\
+	    INSTALL=${INSTALL:Q}\ -c\ -o\ ${BINOWN}\ -g\ ${BINGRP}	\
+	    ac_given_INSTALL=${INSTALL:Q}\ -c\ -o\ ${BINOWN}\ -g\ ${BINGRP} \
+	    INSTALL_DATA=${INSTALL_DATA:Q}				\
+	    INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}			\
+	    INSTALL_GAME=${INSTALL_GAME:Q}				\
+	    INSTALL_GAME_DATA=${INSTALL_GAME_DATA:Q}			\
+	    INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}				\
 	    ${CONFIGURE_ENV} ${CONFIG_SHELL}				\
 	    ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 .    endfor
@@ -1739,7 +1739,7 @@ BUILD_MAKE_FLAGS?=	${MAKE_FLAGS}
 do-build:
 .  for _dir_ in ${BUILD_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
-	cd ${WRKSRC}; cd ${_dir_};					\
+	cd ${WRKSRC} && cd ${_dir_} &&					\
 	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}	\
 		-f ${MAKEFILE} ${BUILD_TARGET}
 .  endfor
@@ -1757,7 +1757,7 @@ do-test:
 .  if defined(TEST_TARGET) && !empty(TEST_TARGET)
 .    for _dir_ in ${TEST_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
-	cd ${WRKSRC}; cd ${_dir_};					\
+	cd ${WRKSRC} && cd ${_dir_} &&					\
 	${SETENV} ${TEST_ENV} ${MAKE_PROGRAM} ${TEST_MAKE_FLAGS}	\
 		-f ${MAKEFILE} ${TEST_TARGET}
 .    endfor
@@ -1773,7 +1773,7 @@ do-test:
 do-install:
 .  for _dir_ in ${INSTALL_DIRS}
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
-	cd ${WRKSRC}; cd ${_dir_};					\
+	cd ${WRKSRC} && cd ${_dir_} &&					\
 	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS}	\
 		-f ${MAKEFILE} ${INSTALL_TARGET}
 .  endfor
