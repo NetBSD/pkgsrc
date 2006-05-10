@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/01/14 17:18:31 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2006/05/10 22:43:51 rillig Exp $
 #
 
 DISTNAME=		htdocs-share-20060114
@@ -112,8 +112,8 @@ DETAB_PROGRAM= \
 # TeX does not like them.
 .PHONY: detab
 detab:
-	cd ${FILESDIR};							\
-	perl -p -i ".detab.tmp" -e '${DETAB_PROGRAM}' *.xml;		\
+	cd ${FILESDIR} &&						\
+	perl -p -i".detab.tmp" -e '${DETAB_PROGRAM}' *.xml &&		\
 	${RM} -f *.xml.detab.tmp
 
 .include "../../mk/bsd.pkg.mk"
