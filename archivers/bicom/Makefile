@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/02/05 23:08:03 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2006/05/10 12:31:46 gdt Exp $
 #
 
 DISTNAME=		bicom101
@@ -12,7 +12,7 @@ MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		http://www3.sympatico.ca/mt0000/bicom/bicom.html
 COMMENT=		Data compressor in the PPM family
 
-LICENSE=		no-commercial-use
+LICENSE=		bicom-license
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
