@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.86 2006/05/10 11:34:52 rillig Exp $
+# $NetBSD: makevars.map,v 1.87 2006/05/10 15:31:41 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -99,7 +99,7 @@ ALL_ENV			List of ShellWord
 ALTERNATIVES_FILE	Filename
 ALTERNATIVES_SRC	List of Pathname
 APACHE_MODULE		Yes
-AUTOCONF_REQD		List of Version [m:a, c:a]
+AUTOCONF_REQD		List of Version [_:a]
 AUTOMAKE_OVERRIDE	List of Pathmask
 BDB185_DEFAULT		Unchecked []
 BDBBASE			Unchecked []
@@ -111,15 +111,15 @@ BROKEN			Message
 BROKEN_GETTEXT_DETECTION	YesNo [m:s,c:s]
 BROKEN_IN		List of BrokenIn [m:s]
 BUILDLINK_ABI_DEPENDS	List of Dependency [b:da,m:a]		# b:d?
-BUILDLINK_API_DEPENDS	List of Dependency [b:da,m:a]		# b:d?
+BUILDLINK_API_DEPENDS	List of Dependency [b:da,m:a, builtin.mk:a] # b:d?
 BUILDLINK_CONTENTS_FILTER	List of ShellWord
 # ^^ ShellCommand
 BUILDLINK_CFLAGS	List of CFlag
 BUILDLINK_CPPFLAGS	List of CFlag
 BUILDLINK_DEPENDS	InternalList of Dependency [b:a]
-BUILDLINK_DEPMETHOD	BuildlinkDepmethod [b:d,m:s]
+BUILDLINK_DEPMETHOD	BuildlinkDepmethod [b:d,m:as,c:a]
 BUILDLINK_DEPTH		BuildlinkDepth [b:s]
-BUILDLINK_FILES		List of Pathmask [b:a]
+BUILDLINK_FILES		List of Pathmask [b:a, builtin.mk:a]
 BUILDLINK_FILES_CMD	List of ShellWord
 # ^^ ShellCommand
 BUILDLINK_INCDIRS	List of Pathname [b:ad]			# b:d?
@@ -139,7 +139,7 @@ BUILDLINK_TRANSFORM	List of WrapperTransform [m:a,builtin.mk:a,h:a,b:a]
 BUILD_DEFS		List of Varname [m:a,c:a,o:a]
 BUILD_DEPENDS		InternalList of DependencyWithPath [c:a,m:a,o:a]
 BUILD_DIRS		List of WrksrcSubdirectory [m:as,c:as]
-BUILD_ENV		List of ShellWord [m:a,c:a]
+BUILD_ENV		List of ShellWord [_:a]
 BUILD_TARGET		List of Identifier [m:as,c:as]
 BUILD_USES_MSGFMT	Yes
 BUILTIN_PKG		Identifier [builtin.mk:s]
@@ -152,7 +152,7 @@ BUILTIN_X11_VERSION	Unchecked []
 CATEGORIES		List of Category [m:as,c:as]
 CC_VERSION		Unchecked []
 CC			ShellCommand [m:]
-CFLAGS			List of CFlag [m:a,c:a,o:a]
+CFLAGS			List of CFlag [m:a,c:a,o:a,h:a]
 CHECK_BUILTIN		YesNo [builtin.mk:d,m:s]
 CHECK_FILES_SKIP	List of Pathmask [m:a,c:a]
 CHECK_INTERPRETER_SKIP	List of Pathmask [m:a,c:a]
@@ -161,7 +161,7 @@ CHECK_WRKREF_SKIP	List of Pathmask [m:a,c:a]
 COMMENT			Comment [m:as,c:as]			# m:a?, c:a?
 CONFIGURE_ARGS		List of ShellWord [c:a,m:a,o:a,h:a,builtin.mk:a]
 CONFIGURE_DIRS		List of WrksrcSubdirectory [m:s,c:s]
-CONFIGURE_ENV		List of ShellWord [c:a,m:a,o:a,b:a]
+CONFIGURE_ENV		List of ShellWord [_:a]
 CONFIGURE_HAS_INFODIR	YesNo
 CONFIGURE_HAS_MANDIR	YesNo [m:s]
 CONFIGURE_SCRIPT	Pathname [m:s]
@@ -172,22 +172,22 @@ CONFIG_SUB_OVERRIDE	List of Pathmask [m:as,c:as]
 CONFLICTS		List of Dependency [m:as,c:a]
 CONF_FILES		List of ShellWord [m:as,c:a]
 CONF_FILES_MODE		{ 0644 0640 0600 0400 } [m:as,c:a]
-CONF_FILES_PERMS	List of ShellWord [m:as,c:a]
+CONF_FILES_PERMS	List of ShellWord [m:as,c:a,o:a]
 CPPFLAGS		List of CFlag [m:a,h:a,c:a,o:a]
 CRYPTO			Yes [m:s]
 CXX			ShellCommand [m:]
 CXXFLAGS		List of CFlag [m:a,c:a,o:a,h:a]
 DEINSTALL_FILE		Pathname [m:s]
-DEINSTALL_SRC		List of Pathname [m:s,c:s]
+DEINSTALL_SRC		List of Pathname [m:s,c:ds]
 DEINSTALL_TEMPLATE	List of Pathname
-DEPENDS			InternalList of DependencyWithPath [c:a,m:a,o:a,b:a]
-DESCR_SRC		List of Pathname [c:ds]
+DEPENDS			InternalList of DependencyWithPath [_:a]
+DESCR_SRC		List of Pathname [m:s,c:ds]
 DEVOSSAUDIO		Pathname
 DEVOSSSOUND		Pathname
-DISTFILES		List of Filename [m:as,c:as]
+DISTFILES		List of Filename [m:as,c:ads]
 DISTINFO_FILE		RelativePkgPath [m:s,c:ds]
-DISTNAME		Filename [m:s,c:as]
-DIST_SUBDIR		Filename [m:s,c:s]
+DISTNAME		Filename [m:s,c:ads]
+DIST_SUBDIR		Filename [m:s,c:ds]
 DJB_BUILD_TARGETS	List of Identifier
 DJB_CONFIG_CMDS		List of ShellWord
 # ^^ ShellCommand, terminated by a semicolon
@@ -218,15 +218,15 @@ EVAL_PREFIX		InternalList of ShellWord [m:a,c:a]
 # ^^ FIXME: Looks like a type mismatch.
 EXTRACT_CMD		ShellCommand [m:s]
 EXTRACT_ELEMENTS	List of Pathmask [m:s]
-EXTRACT_ONLY		List of Pathname [m:as]
-EXTRACT_OPTS		List of ShellWord [m:as]
-EXTRACT_OPTS_BIN	List of ShellWord [m:as]
-EXTRACT_OPTS_LHA	List of ShellWord [m:as]
-EXTRACT_OPTS_PAX	List of ShellWord [m:as]
-EXTRACT_OPTS_RAR	List of ShellWord [m:as]
-EXTRACT_OPTS_TAR	List of ShellWord [m:as]
-EXTRACT_OPTS_ZIP	List of ShellWord [m:as]
-EXTRACT_OPTS_ZOO	List of ShellWord [m:as]
+EXTRACT_ONLY		List of Pathname [m:as,c:as]
+EXTRACT_OPTS		List of ShellWord [m:as,c:as]
+EXTRACT_OPTS_BIN	List of ShellWord [m:as,c:as]
+EXTRACT_OPTS_LHA	List of ShellWord [m:as,c:as]
+EXTRACT_OPTS_PAX	List of ShellWord [m:as,c:as]
+EXTRACT_OPTS_RAR	List of ShellWord [m:as,c:as]
+EXTRACT_OPTS_TAR	List of ShellWord [m:as,c:as]
+EXTRACT_OPTS_ZIP	List of ShellWord [m:as,c:as]
+EXTRACT_OPTS_ZOO	List of ShellWord [m:as,c:as]
 EXTRACT_SUFX		DistSuffix [c:s,m:s]
 FAMBASE			Unchecked []
 FAM_ACCEPTED		List of { fam gamin }
@@ -236,8 +236,8 @@ FETCH_BEFORE_ARGS	List of ShellWord [m:as]
 FILESDIR		RelativePkgPath [m:s,c:ds]
 FILES_SUBST		List of ShellWord [m:a,c:a]
 FILES_SUBST_SED		List of ShellWord
-FONTS_DIRS		List of Pathname [m:s]
-GCC_REQD		List of Version [h:a,m:a]
+FONTS_DIRS		List of Pathname [m:as,c:a]
+GCC_REQD		List of Version [_:a]
 GENERATE_PLIST		List of ShellWord [m:a,c:a]
 # ^^ List of Shellcommand, terminated with a semicolon
 GNU_ARCH		{ mips }
@@ -252,25 +252,25 @@ INCOMPAT_ICONV		List of PlatformTriple
 INFO_DIR		Pathname
 # ^^ relative to PREFIX
 INFO_FILES		List of Pathmask [m:s]
-INSTALL			ShellCommand [m:]
-INSTALLATION_DIRS	List of Pathname [m:as]
-INSTALL_DATA		ShellCommand [m:]
-INSTALL_DATA_DIR	ShellCommand [m:]
+INSTALL			ShellCommand []
+INSTALLATION_DIRS	List of Pathname [m:as,c:a]
+INSTALL_DATA		ShellCommand []
+INSTALL_DATA_DIR	ShellCommand []
 INSTALL_DIRS		List of WrksrcSubdirectory [m:as,c:as]
 INSTALL_FILE		Pathname [m:s]
-INSTALL_GAME		ShellCommand [m:]
-INSTALL_GAME_DATA	ShellCommand [m:]
-INSTALL_LIB		ShellCommand [m:]
-INSTALL_LIB_DIR		ShellCommand [m:]
-INSTALL_MAKE_FLAGS	List of ShellWord [m:as]
-INSTALL_MAN		ShellCommand [m:]
-INSTALL_MAN_DIR		ShellCommand [m:]
-INSTALL_PROGRAM		ShellCommand [m:]
-INSTALL_PROGRAM_DIR	ShellCommand [m:]
-INSTALL_SCRIPT		ShellCommand [m:]
+INSTALL_GAME		ShellCommand []
+INSTALL_GAME_DATA	ShellCommand []
+INSTALL_LIB		ShellCommand []
+INSTALL_LIB_DIR		ShellCommand []
+INSTALL_MAKE_FLAGS	List of ShellWord [m:as,_:a]
+INSTALL_MAN		ShellCommand []
+INSTALL_MAN_DIR		ShellCommand []
+INSTALL_PROGRAM		ShellCommand []
+INSTALL_PROGRAM_DIR	ShellCommand []
+INSTALL_SCRIPT		ShellCommand []
 INSTALL_SCRIPTS_ENV	List of ShellWord
-INSTALL_SCRIPT_DIR	ShellCommand [m:]
-INSTALL_SRC		List of Pathname [m:s,c:s]
+INSTALL_SCRIPT_DIR	ShellCommand []
+INSTALL_SRC		List of Pathname [m:s,c:ds]
 INSTALL_TARGET		List of Identifier [m:as,c:as]
 INSTALL_TEMPLATE	List of Pathname
 INSTALL_UNSTRIPPED	YesNo [m:s]
@@ -288,8 +288,8 @@ LDFLAGS			List of LdFlag [m:a,c:a,h:a]
 LIBOSSAUDIO		Pathname
 LIBS			List of LdFlag [m:a,o:a,h:a]
 LIBTOOL_OVERRIDE	List of Pathmask [m:as]
-LICENCE			Identifier
-LICENSE			Identifier [m:s,c:s]
+LICENCE			License
+LICENSE			License [m:s,c:s]
 LTCONFIG_OVERRIDE	List of Pathmask [m:as,c:a]
 MAINTAINER		Mail_Address [m:s,c:ds]
 MAKEFILE		Pathname [m:s,c:s]
@@ -297,8 +297,8 @@ MAKEFLAGS		List of ShellWord [m:a,c:a,b:a,h:a]
 MAKEVARS		List of Varname [builtin.mk:a,b:a]
 MAKE_DIRS		List of Pathname
 MAKE_DIRS_PERMS		List of ShellWord
-MAKE_ENV		List of ShellWord [m:a,c:a,o:a,b:a]
-MAKE_FLAGS		List of ShellWord [m:a,c:a,o:a]
+MAKE_ENV		List of ShellWord [_:a]
+MAKE_FLAGS		List of ShellWord [_:a]
 MANCOMPRESSED		YesNo [m:s,c:ds]
 MANCOMPRESSED_IF_MANZ	Yes [m:s,c:ds]
 MASTER_SITES		List of URL [c:ads,m:as]
@@ -324,17 +324,17 @@ MASTER_SITE_SUSE	List of URL
 MASTER_SITE_TEX_CTAN	List of URL
 MASTER_SITE_XCONTRIB	List of URL
 MASTER_SITE_XEMACS	List of URL
-MESSAGE_SRC		List of Pathname [m:as,o:a]
+MESSAGE_SRC		List of Pathname [m:as,o:ads]
 MESSAGE_SUBST		List of ShellWord [c:a,m:a,o:a]
 MYSQL_VERSIONS_ACCEPTED	List of { 40 41 50 } [m:s]
 MYSQL_VERSION_DEFAULT	Unchecked []
-NOT_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc } [m:as]
-NOT_FOR_PLATFORM	List of PlatformTriple [m:as]
-NO_BIN_ON_CDROM		Restricted [m:s]
-NO_BIN_ON_FTP		Restricted [m:s]
-NO_BUILD		Yes [m:s]
+NOT_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc } [m:as,c:a]
+NOT_FOR_PLATFORM	List of PlatformTriple [m:as,c:a]
+NO_BIN_ON_CDROM		Restricted [m:s,c:s]
+NO_BIN_ON_FTP		Restricted [m:s,c:s]
+NO_BUILD		Yes [m:s,c:s]
 NO_CHECKSUM		Yes [m:s]
-NO_CONFIGURE		Yes [m:s]
+NO_CONFIGURE		Yes [m:s,c:s]
 NO_EXPORT_CPP		Yes [m:s]
 NO_EXTRACT		Yes
 NO_INSTALL_MANPAGES	Yes [m:s]
@@ -342,14 +342,14 @@ NO_MTREE		Yes [m:s]
 NO_PACKAGE		Message [m:s]
 NO_PKGTOOLS_REQD_CHECK	Yes [m:s]
 NO_PKG_REGISTER		Yes [m:s]
-NO_SRC_ON_CDROM		Restricted [m:s]
-NO_SRC_ON_FTP		Restricted [m:s]
-ONLY_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc }
-ONLY_FOR_PLATFORM	List of PlatformTriple [m:as]
+NO_SRC_ON_CDROM		Restricted [m:s,c:s]
+NO_SRC_ON_FTP		Restricted [m:s,c:s]
+ONLY_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc } [m:as,c:a]
+ONLY_FOR_PLATFORM	List of PlatformTriple [m:as,c:a]
 OPSYSVARS		List of Varname [m:a,c:a]
 OSVERSION_SPECIFIC	Yes [m:s,c:s]
 OWN_DIRS		List of Pathname [m:as,c:a]
-OWN_DIRS_PERMS		List of ShellWord [m:as]
+OWN_DIRS_PERMS		List of ShellWord [m:as,o:a]
 PAMBASE			Unchecked []
 PAM_ACCEPTED		List of { linux-pam openpam solaris-pam }
 PAM_DEFAULT		Unchecked []
@@ -380,10 +380,10 @@ PKG_APACHE_ACCEPTED	List of { apache13 apache2 }
 PKG_APACHE_DEFAULT	Unchecked []
 PKG_DEBUG_LEVEL		Unchecked []
 PKG_DEFAULT_OPTIONS	Unchecked []
-PKG_FAIL_REASON		List of ShellWord [m:a]
+PKG_FAIL_REASON		List of ShellWord [_:a]
 PKG_GECOS		Unchecked [m:s]
 PKG_GID			Unchecked [m:s]
-PKG_GROUPS		List of ShellWord [m:s]
+PKG_GROUPS		List of ShellWord [m:as]
 PKG_HOME		Pathname [m:s]
 PKG_HACKS		List of Identifier [h:a]
 PKG_INSTALLATION_TYPES	List of { overwrite pkgviews } [m:s,c:s]
@@ -414,16 +414,16 @@ PKG_SYSCONFSUBDIR	Pathname [m:s,c:s]
 PKG_SYSCONFVAR		Identifier
 # ^^ FIXME: name/type mismatch.
 PKG_UID			Unchecked [m:s]
-PKG_USERS		List of ShellWord [m:s]
-PLIST_SRC		List of RelativePkgPath [m:as,o:a,c:as]
+PKG_USERS		List of ShellWord [m:as]
+PLIST_SRC		List of RelativePkgPath [m:as,o:a,c:ads]
 PLIST_SUBST		List of ShellWord [c:a,o:a,m:a]
 PLIST_TYPE		{ dynamic static }
 PREPEND_PATH		List of Pathname
-PRINT_PLIST_AWK		AwkCommand [b:a]
+PRINT_PLIST_AWK		AwkCommand [_:a]
 PTHREAD_AUTO_VARS	YesNo [m:s]
 PTHREAD_OPTS		List of { native optional require } [m:as,c:a,b:a]
 PTHREAD_TYPE		Unchecked []
-RCD_SCRIPTS		List of Filename [m:s]
+RCD_SCRIPTS		List of Filename [m:s,c:as]
 RCD_SCRIPT_SRC		List of Pathname [m:s]
 REPLACE			String [m:s]
 REPLACE_EMACS		List of Pathmask
@@ -433,12 +433,12 @@ REPLACE_PERL		List of Pathmask [m:as,c:a]
 REQD_DIRS		List of Pathname [m:as]
 REQD_FILES		List of Pathname [m:as]
 REQD_FILES_MODE		{ 0644 0640 0600 0400 } [m:as]
-RESTRICTED		Message [m:s]
+RESTRICTED		Message [m:s,c:ds]
 SCRIPTS_ENV		List of ShellWord
 SHLIB_HANDLING		{ YES NO no }
 SPECIAL_PERMS		List of ShellWord [m:as]
 SHLIBTOOL_OVERRIDE	List of Pathmask [m:as,c:a]
-SITES			List of URL [m:s,c:s]
+SITES			List of URL [m:as,c:as]
 SUBST_CLASSES		List of Identifier [m:a,c:a,h:a]
 SUBST_FILES		List of Pathmask [m:as,c:as,h:as,o:as]
 SUBST_FILTER_CMD	ShellCommand [m:s,c:s,h:s,o:s]
@@ -451,7 +451,7 @@ TEST_ENV		List of ShellWord
 TEST_TARGET		List of Identifier [m:s]
 TEX_ACCEPTED		List of { teTeX1 teTeX2 teTeX3 } [m:s,c:s]
 TEX_DEPMETHOD		{ build run } [m:s,c:s]
-TEXINFO_REQD		List of Version [m:a]
+TEXINFO_REQD		List of Version [_:a]
 TOOLS_ALIASES		List of Filename
 TOOLS_BROKEN		List of Tool
 TOOLS_CREATE		List of Tool
