@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2006/04/17 13:46:51 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2006/05/10 21:03:41 adam Exp $
 
-DISTNAME=	dillo-0.8.5
-PKGREVISION=	3
+DISTNAME=	dillo-0.8.6
 CATEGORIES=	www
 MASTER_SITES=	http://www.dillo.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,8 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dillo.org/
 COMMENT=	Very small and fast graphical web-browser
 
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
-
+CONFIGURE_ARGS+=	--disable-dlgui
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 EGDIR=		${PREFIX}/share/examples/dillo
@@ -36,6 +36,7 @@ post-install:
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
