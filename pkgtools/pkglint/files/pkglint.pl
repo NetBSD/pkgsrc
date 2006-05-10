@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.573 2006/05/02 10:12:10 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.574 2006/05/10 08:17:25 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -578,6 +578,16 @@ sub replace($$$) {
 		}
 	}
 }
+sub replace_regex($$$) {
+	my ($self, $from_re, $to) = @_;
+	my $phys = $self->[PHYSLINES];
+
+	foreach my $i (0..$#{$phys}) {
+		if ($phys->[$i]->[0] != 0 && $phys->[$i]->[1] =~ s/$from_re/$to/) {
+			$self->[CHANGED] = true;
+		}
+	}
+}
 sub set_text($$) {
 	my ($self, $text) = @_;
 	$self->[PHYSLINES] = [[0, "$text\n"]];
@@ -1073,6 +1083,55 @@ sub save_autofix_changes($) {
 
 #== End of PkgLint::FileUtil ==============================================
 
+package PkgLint::Type;
+
+BEGIN {
+	import PkgLint::Util qw(
+		false true
+	);
+	use Exporter;
+	use vars qw(@ISA @EXPORT_OK);
+	@ISA = qw(Exporter);
+	@EXPORT_OK = qw(
+		LK_NONE LK_INTERNAL LK_EXTERNAL
+	);
+}
+
+use constant KIND_OF_LIST	=> 0;
+use constant   LK_NONE		=> 0;
+use constant   LK_INTERNAL	=> 1;
+use constant   LK_EXTERNAL	=> 2;
+use constant BASIC_TYPE		=> 1;
+use constant ACLS		=> 2; # Array of ACL entries
+use constant   ACL_SUBJECT_RE	=> 0;
+use constant   ACL_PERMS	=> 1;
+
+sub new($$$) {
+	my ($class, $kind_of_list, $basic_type, $acls) = @_;
+	my ($self) = ([$kind_of_list, $basic_type, $acls]);
+	bless($self, $class);
+	return $self;
+}
+
+sub kind_of_list($)	{ return shift(@_)->[KIND_OF_LIST]; }
+sub basic_type($)	{ return shift(@_)->[BASIC_TYPE]; }
+
+sub perms($$) {
+	my ($self, $fname) = @_;
+	my ($perms);
+
+	$perms = "";
+	foreach my $acl_entry (@{$self->[ACLS]}) {
+		if ($fname =~ $acl_entry->[0]) {
+			$perms = $acl_entry->[1];
+			last;
+		}
+	}
+	return $perms;
+}
+
+#== End of PkgLint::Type ==================================================
+
 package main;
 #==========================================================================
 # This package contains the application-specific code of pkglint.
@@ -1125,6 +1184,9 @@ BEGIN {
 		load_file load_lines
 		save_autofix_changes
 	);
+	import PkgLint::Type qw(
+		LK_NONE LK_INTERNAL LK_EXTERNAL
+	);
 }
 
 #
@@ -1165,6 +1227,7 @@ my (%checks) = (
 );
 
 my $opt_warn_absname	= true;
+my $opt_warn_acl	= false;
 my $opt_warn_directcmd	= true;
 my $opt_warn_extra	= false;
 my $opt_warn_order	= true;
@@ -1177,6 +1240,7 @@ my $opt_warn_types	= true;
 my $opt_warn_varorder	= false;
 my (%warnings) = (
 	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
+	"acl"		=> [\$opt_warn_acl, "enable ACLs for restricting variable definitions"],
 	"directcmd"	=> [\$opt_warn_directcmd, "warn about use of direct command names instead of Make variables"],
 	"extra"		=> [\$opt_warn_extra, "enable some extra warnings"],
 	"order"		=> [\$opt_warn_order, "warn if Makefile entries are unordered"],
@@ -1529,6 +1593,14 @@ sub get_vartypes_map() {
 		return $get_vartypes_map_result;
 	}
 
+	use constant re_vartypedef => qr"^
+		([\w\d_.]+) \s+				# variable name
+		(?:(InternalList|List) \s+ of \s+)?	# kind of list
+		(?:([\w\d_]+) | \{([\w\d_.+\-\s]+)\})	# basic type
+		(?:\s+ \[ ([\w.:\-,\s]*) \])?		# optional ACL
+		(?:\s*\#.*)?				# optional comment
+		$"x;
+
 	$fname = conf_datadir."/makevars.map";
 	$vartypes = {};
 
@@ -1537,8 +1609,38 @@ sub get_vartypes_map() {
 			if ($line->text =~ qr"^(?:#.*|\s*)$") {
 				# ignore empty and comment lines
 
-			} elsif ($line->text =~ qr"^([\w\d_.]+)\s+([-!\+.\w\d_ \{\}]+)$") {
-				$vartypes->{$1} = $2;
+			} elsif ($line->text =~ re_vartypedef) {
+				my ($varname, $kind_of_list_text, $typename, $enums, $acltext) = ($1, $2, $3, $4, $5);
+				my $kind_of_list = !defined($kind_of_list_text) ? LK_NONE
+				    : ($kind_of_list_text eq "List") ? LK_EXTERNAL
+				    : LK_INTERNAL;
+				my $acls = [];
+				my $basic_type;
+
+				if (!defined($acltext)) {
+					$acltext = "";
+				}
+				while ($acltext =~ s,^([\w.]+):([acdprw]*)(?:\,\s*|$),,) {
+					my ($subject, $perms) = ($1, $2);
+
+					use constant ACL_shortcuts => {
+						"b" => qr"(?:^|/)buildlink3\.mk$",
+						"c" => qr"(?:^|/)Makefile\.common$",
+						"h" => qr"(?:^|/)hacks\.mk$",
+						"m" => qr"(?:^|/)Makefile$",
+						"o" => qr"(?:^|/)options\.mk$",
+						"s" => qr"/mk/"
+					};
+
+					push(@{$acls}, [exists(ACL_shortcuts->{$subject}) ? ACL_shortcuts->{$subject} : qr"(?:^|/)\Q${subject}\E$", $perms]);
+				}
+				if ($acltext ne "") {
+					$line->log_fatal("Invalid ACL: ${acltext}.");
+				}
+				$basic_type = defined($enums)
+				    ? array_to_hash(split(qr"\s+", $enums))
+				    : $typename;
+				$vartypes->{$varname} = PkgLint::Type->new($kind_of_list, $basic_type, $acls);
 
 			} else {
 				$line->log_fatal("Unknown line format.");
@@ -2098,13 +2200,22 @@ sub shell_split($) {
 sub type_should_be_quoted($) {
 	my ($type) = @_;
 
-	return !($type =~ qr"^(?:List.*|ShellCommand|SedCommands)$");
+	if ($type->kind_of_list == PkgLint::Type::LK_INTERNAL) {
+		return true;
+	}
+	if ($type->kind_of_list == LK_EXTERNAL) {
+		return false;
+	}
+	if ($type->basic_type =~ qr"^(?:ShellCommand|SedCommands)$") {
+		return false;
+	}
+	return true;
 }
 
 sub variable_needs_quoting($) {
 	my ($varname) = @_;
 
-	return !($varname =~ qr"^(?:.*DIR|.*_GROUP|.*GRP|.*MODE|.*OWN|.*_USER|BUILDLINK_PREFIX\..*|DISTNAME|LOCALBASE|PKGNAME|PREFIX|WRKSRC)$");
+	return !($varname =~ qr"^(?:.*DIR|.*_GROUP|(?:BIN|LIB|MAN|GAMES|SHARE)(?:GRP|OWN|MODE)|.*_USER|BUILDLINK_PREFIX\..*|DISTNAME|LOCALBASE|PKGNAME|PREFIX|WRKSRC)$");
 }
 
 my $check_pkglint_version_done = false;
@@ -2363,6 +2474,7 @@ sub checkline_trailing_whitespace($) {
 
 	if ($line->text =~ /\s+$/) {
 		$line->log_note("Trailing white-space.");
+		$line->replace_regex(qr"\s+\n$", "\n");
 	}
 }
 
@@ -2673,7 +2785,7 @@ sub checkline_mk_shellword($$$) {
 			} elsif ($rest =~ s/^[^\$"\\\`]+//) {
 			} elsif ($rest =~ s/^\\(?:[\\\"\`]|\$\$)//) {
 			} elsif ($rest =~ s/^\$\$\{([0-9A-Za-z_]+)\}//
-			    || $rest =~ s/^\$\$([0-9A-Z_a-z]+|[!#?\@])//) {
+			    || $rest =~ s/^\$\$([0-9A-Z_a-z]+|[\$!#?\@])//) {
 				my ($varname) = ($1);
 				$line->log_debug("[checkline_mk_shellword] Found double-quoted variable ${varname}.");
 			} elsif ($rest =~ s/^\$\$//) {
@@ -2964,6 +3076,36 @@ sub checkline_mk_shellcmd($$) {
 	checkline_mk_shelltext($line, $shellcmd);
 }
 
+sub checkline_mk_vardef($$$) {
+	my ($line, $varname, $op) = @_;
+	my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
+
+	if (!$opt_warn_acl) {
+		# Skip this check.
+
+	} elsif (exists(get_vartypes_map()->{$varbase})) {
+		my $perms = get_vartypes_map()->{$varbase}->perms($line->fname);
+		my $needed = { "=" => "w", "!=" => "w", "?=" => "d", "+=" => "a", ":=" => "c" }->{$op};
+
+		if (!defined($perms)) {
+			$opt_debug and $line->log_warning("No ACL definition for ${varname}.");
+		} elsif (index($perms, $needed) != -1) {
+			# Fine.
+		} else {
+			$line->log_warning("ACL mismatch for ${varname}: [${needed}] requested, but only [${perms}] is allowed.");
+		}
+	} else {
+		$opt_debug and $line->log_warning("No data type for ${varname}.");
+	}
+}
+
+sub checkline_mk_varuse($$$) {
+	my ($line, $varname, $context) = @_;
+
+	# TODO: ACL checks
+	$line->log_info("varuse: ${varname}");
+}
+
 sub checkline_mk_vartype_basic($$$$$$$);
 sub checkline_mk_vartype_basic($$$$$$$) {
 	my ($line, $varname, $type, $op, $value, $comment, $list_context) = @_;
@@ -2977,7 +3119,12 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 		}
 	}
 
-	if ($type eq "AwkCommand") {
+	if (ref($type) eq "HASH") {
+		if (!exists($type->{$value})) {
+			$line->log_warning("\"${value}\" is not valid for ${varname}. Use one of ".join(" ", keys(%{$type}))." instead.");
+		}
+
+	} elsif ($type eq "AwkCommand") {
 		$opt_debug and $line->log_warning("Unchecked AWK command: ${value}");
 
 	} elsif ($type eq "BrokenIn") {
@@ -3275,8 +3422,8 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 		}
 
 	} elsif ($type eq "PkgRevision") {
-		if ($value !~ qr"^\d+$") {
-			$line->log_warning("\"${value}\" is not a valid Integer.");
+		if ($value !~ qr"^[1-9]\d*$") {
+			$line->log_warning("${varname} must be a positive integer number.");
 		}
 		if ($line->fname !~ qr"(?:^|/)Makefile$") {
 			$line->log_error("${varname} must not be set outside the package Makefile.");
@@ -3314,7 +3461,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 
 	} elsif ($type eq "Restricted") {
 		if ($value ne "\${RESTRICTED}") {
-			$line->log_warning("This variable should be set to \${RESTRICTED}.");
+			$line->log_warning("The only valid value for this variable is \${RESTRICTED}.");
 		}
 
 	} elsif ($type eq "SVR4PkgName") {
@@ -3365,7 +3512,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 		}
 
 	} elsif ($type eq "ShellCommand") {
-		checkline_mk_shellcmd($line, $value);
+		checkline_mk_shelltext($line, $value);
 
 	} elsif ($type eq "ShellWord") {
 		if (!$list_context) {
@@ -3392,6 +3539,9 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 		} else {
 			$line->log_error("Invalid tool syntax: \"${value}\".");
 		}
+
+	} elsif ($type eq "Unchecked") {
+		# Do nothing, as the name says.
 
 	} elsif ($type eq "URL") {
 		if ($value eq "" && defined($comment) && $comment =~ qr"^#") {
@@ -3456,8 +3606,13 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 			$line->log_warning("\"${value}\" is not a valid variable name.");
 		}
 
+	} elsif ($type eq "Version") {
+		if ($value !~ qr"^([\d.])+$") {
+			$line->log_warning("Invalid version number \"${value}\".");
+		}
+
 	} elsif ($type eq "WrapperReorder") {
-		if ($value =~ qr"^reorder:l:([\w]+):([\w]+)$") {
+		if ($value =~ qr"^reorder:l:([\w\-]+):([\w\-]+)$") {
 			my ($lib1, $lib2) = ($1, $2);
 			# Fine.
 		} else {
@@ -3514,20 +3669,6 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 			checkline_mk_vartype_basic($line, $varname, "YesNo", $op, $value, $comment, false);
 		}
 
-	} elsif ($type =~ qr"^\{\s*(.*?)\s*\}$") {
-		my ($values) = ($1);
-		my @enum = split(qr"\s+", $values);
-		my $found = false;
-
-		foreach my $v (@enum) {
-			if ($v eq $value) {
-				$found = true;
-			}
-		}
-		if (!$found) {
-			$line->log_warning("\"${value}\" is not valid for ${varname}. Use one of ${type} instead.");
-		}
-
 	} else {
 		$line->log_fatal("Type ${type} unknown.");
 	}
@@ -3555,21 +3696,21 @@ sub checkline_mk_vartype($$$$$) {
 		if (!defined($type)) {
 			# Guess the datatype of the variable based on
 			# naming conventions.
-			$type =	  ($varname =~ qr"DIRS$") ? "List of Pathmask"
-				: ($varname =~ qr"DIR$") ? "Pathname"
-				: ($varname =~ qr"FILES$") ? "List of Pathmask"
-				: ($varname =~ qr"FILE$") ? "Pathname"
-				: ($varname =~ qr"PATH$") ? "Pathlist"
-				: ($varname =~ qr"PATHS$") ? "List of Pathname"
-				: ($varname =~ qr"_USER$") ? "UserGroupName"
-				: ($varname =~ qr"_GROUP$") ? "UserGroupName"
-				: ($varname =~ qr"_ENV$") ? "List+ of ShellWord"
-				: ($varname =~ qr"_CMD$") ? "ShellCommand"
-				: ($varname =~ qr"_ARGS$") ? "List of ShellWord"
-				: ($varname =~ qr"_FLAGS$") ? "List of ShellWord"
+			$type =	  ($varname =~ qr"DIRS$") ? PkgLint::Type->new(LK_EXTERNAL, "Pathmask", [])
+				: ($varname =~ qr"DIR$") ? PkgLint::Type->new(LK_NONE, "Pathname", [])
+				: ($varname =~ qr"FILES$") ? PkgLint::Type->new(LK_EXTERNAL, "Pathmask", [])
+				: ($varname =~ qr"FILE$") ? PkgLint::Type->new(LK_NONE, "Pathname", [])
+				: ($varname =~ qr"PATH$") ? PkgLint::Type->new(LK_NONE, "Pathlist", [])
+				: ($varname =~ qr"PATHS$") ? PkgLint::Type->new(LK_EXTERNAL, "List of Pathname", [])
+				: ($varname =~ qr"_USER$") ? PkgLint::Type->new(LK_NONE, "UserGroupName", [])
+				: ($varname =~ qr"_GROUP$") ? PkgLint::Type->new(LK_NONE, "UserGroupName", [])
+				: ($varname =~ qr"_ENV$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", [])
+				: ($varname =~ qr"_CMD$") ? PkgLint::Type->new(LK_NONE, "ShellCommand", [])
+				: ($varname =~ qr"_ARGS$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", [])
+				: ($varname =~ qr"_FLAGS$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", [])
 				: $type;
 			if (defined($type)) {
-				$line->log_info("The guessed type of ${varname} is \"${type}\".");
+				$line->log_info("The guessed type of ${varname} is \"${type}\"."); # FIXME
 			}
 			$guessed = true;
 		}
@@ -3584,15 +3725,10 @@ sub checkline_mk_vartype($$$$$) {
 		} elsif ($op eq "!=") {
 			$opt_debug and $line->log_info("Use of !=: ${value}");
 
-		} elsif ($type =~ qr"^(InternalList|List)(\+?)(?: of (.*))?$") {
-			my ($internal_list, $append_only, $element_type) = ($1 eq "InternalList", $2 eq "+", $3);
+		} elsif ($type->kind_of_list != LK_NONE) {
 			my (@words, $rest);
 
-			if ($append_only && $op ne "+=" && $op ne "?=" && !($value eq "" && defined($comment) && $comment =~ qr"^#")) {
-				$line->log_warning("${varname} should be modified using \"+=\".");
-			}
-
-			if ($internal_list) {
+			if ($type->kind_of_list == LK_INTERNAL) {
 				@words = split(qr"\s+", $value);
 				$rest = "";
 			} else {
@@ -3606,11 +3742,9 @@ sub checkline_mk_vartype($$$$$) {
 			}
 
 			foreach my $word (@words) {
-				if (defined($element_type)) {
-					checkline_mk_vartype_basic($line, $varname, $element_type, $op, $word, $comment, true);
-					if (!$internal_list) {
-						checkline_mk_shellword($line, $word, true);
-					}
+				checkline_mk_vartype_basic($line, $varname, $type->basic_type, $op, $word, $comment, true);
+				if ($type->kind_of_list != LK_INTERNAL) {
+					checkline_mk_shellword($line, $word, true);
 				}
 			}
 
@@ -3619,13 +3753,15 @@ sub checkline_mk_vartype($$$$$) {
 			}
 
 		} else {
-			checkline_mk_vartype_basic($line, $varname, $type, $op, $value, $comment, !type_should_be_quoted($type));
+			checkline_mk_vartype_basic($line, $varname, $type->basic_type, $op, $value, $comment, !type_should_be_quoted($type));
 		}
 }
 
 sub checkline_mk_varassign($$$$$) {
 	my ($line, $varname, $op, $value, $comment) = @_;
 	my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
+
+	checkline_mk_vardef($line, $varname, $op);
 
 	if ($op eq "?=" && defined($seen_bsd_prefs_mk) && !$seen_bsd_prefs_mk) {
 		if ($varbase eq "BUILDLINK_PKGSRCDIR"
@@ -3746,7 +3882,7 @@ sub checklines_package_Makefile_varorder($) {
 				[ "DYNAMIC_MASTER_SITES", optional ],
 				[ "MASTER_SITE_SUBDIR", optional ],
 				[ "EXTRACT_SUFX", optional ],
-				[ "DISTFILES", optional ],
+				[ "DISTFILES", many ],
 # The following are questionable.
 #				[ "NOT_FOR_PLATFORM", optional ],
 #				[ "ONLY_FOR_PLATFORM", optional ],
@@ -4231,6 +4367,7 @@ sub checkfile_DESCR($) {
 			"fit on one screen. It is also intended to give a _brief_ summary",
 			"about the package's contents.");
 	}
+	autofix($descr);
 }
 
 sub checkfile_distinfo($) {
