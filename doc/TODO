@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4962 2006/05/10 07:43:09 wiz Exp $
+$NetBSD: TODO,v 1.4963 2006/05/10 16:48:05 tonio Exp $
 
 Suggested new packages
 ======================
@@ -651,7 +651,6 @@ Suggested package updates
 	o jpegpixi-1.1.1
 	o jpilot-0.99.8
 	o jwhois-3.2.3
-	o kaffe-1.1.7
 	o kajaani-kombat-0.7
 	o kapooka-0.3
 	o kazehakase-0.3.7
