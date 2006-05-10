@@ -1,0 +1,49 @@
+$NetBSD: patch-ai,v 1.1 2006/05/10 16:28:43 drochner Exp $
+
+--- configure.orig	2006-05-08 13:43:40.000000000 +0200
++++ configure
+@@ -36628,7 +36628,7 @@ fi;
+ test "${enable_debug}" != "yes" && enable_debug="no"
+ 
+ 
+-if test "x${enable_debug}" == "xno"; then
++if test "x${enable_debug}" = "xno"; then
+   cat >>confdefs.h <<\_ACEOF
+ #define NDEBUG 1
+ _ACEOF
+@@ -58120,7 +58120,7 @@ rm -f conftest.err conftest.$ac_objext \
+       conftest$ac_exeext conftest.$ac_ext
+       done
+       LIBS="${LIBS_save}"
+-            if test "${LIBS_cclink}" == "no"; then
++            if test "${LIBS_cclink}" = "no"; then
+   { { echo "$as_me:$LINENO: error: cannot find XML parser for CyberLink
+ See \`config.log' for more details." >&5
+ echo "$as_me: error: cannot find XML parser for CyberLink
+@@ -58244,7 +58244,7 @@ else
+   has_upnp="no"
+ fi
+ 
+-  if test "x${enable_upnp}" != "x" && test "${has_upnp}" == "no"; then
++  if test "x${enable_upnp}" != "x" && test "${has_upnp}" = "no"; then
+    
+     { { echo "$as_me:$LINENO: error: cannot find Intel UPnP SDK (libupnp)" >&5
+ echo "$as_me: error: cannot find Intel UPnP SDK (libupnp)" >&2;}
+@@ -58252,7 +58252,7 @@ echo "$as_me: error: cannot find Intel U
+ 
+ fi
+ 
+-  if test "${has_upnp}" == "yes"; then
++  if test "${has_upnp}" = "yes"; then
+ 
+ 
+   for element in upnp_intel; do
+@@ -58271,7 +58271,7 @@ else
+ fi
+ 
+ 
+-if test "${has_upnp}" == "yes"; then
++if test "${has_upnp}" = "yes"; then
+ 
+ 
+   PLUGINS="${PLUGINS} upnp_intel"
