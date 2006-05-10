@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.51 2006/04/16 04:27:18 jlam Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.52 2006/05/10 22:43:15 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -588,9 +588,9 @@
 
     AGE
         The difference between the newest and oldest interfaces that
-	this library implements.  In other words, the library implements
-	all the interface numbers in the range from number `CURRENT -
-	AGE' to `CURRENT'.
+        this library implements.  In other words, the library implements
+        all the interface numbers in the range from number `CURRENT -
+        AGE' to `CURRENT'.
 
     If two libraries have identical CURRENT and AGE numbers, then the
     dynamic linker chooses the library with the greater REVISION number.
@@ -824,8 +824,8 @@
 
 <programlisting>
     FreeBSD     __FreeBSD__
-    DragonFly	__DragonFly__
-    Interix	__INTERIX
+    DragonFly   __DragonFly__
+    Interix     __INTERIX
     Linux       linux, __linux, __linux__
     NetBSD      __NetBSD__
     OpenBSD     __OpenBSD__
@@ -846,7 +846,7 @@
 
 <programlisting>
     GCC         __GNUC__ (major version), __GNUC_MINOR__
-    SunPro	__SUNPRO_C (0x570 for version 5.7)
+    SunPro      __SUNPRO_C (0x570 for version 5.7)
 </programlisting>
 
       </sect3>
