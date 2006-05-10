@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2006/05/06 08:25:20 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/05/10 16:28:43 drochner Exp $
 bin/vlc
 bin/vlc-config
 bin/wxvlc
 include/vlc/aout.h
-include/vlc/control.h
 include/vlc/decoder.h
 include/vlc/input.h
 include/vlc/intf.h
+include/vlc/libvlc.h
+include/vlc/mediacontrol.h
+include/vlc/mediacontrol_structures.h
 include/vlc/sout.h
 include/vlc/vlc.h
 include/vlc/vout.h
@@ -46,6 +48,7 @@ lib/vlc/audio_filter/libheadphone_channel_mixer_plugin.so
 lib/vlc/audio_filter/liblinear_resampler_plugin.so
 lib/vlc/audio_filter/libmpgatofixed32_plugin.so
 lib/vlc/audio_filter/libnormvol_plugin.so
+lib/vlc/audio_filter/libparam_eq_plugin.so
 lib/vlc/audio_filter/libs16tofixed32_plugin.so
 lib/vlc/audio_filter/libs16tofloat32_plugin.so
 lib/vlc/audio_filter/libs16tofloat32swab_plugin.so
@@ -136,6 +139,7 @@ lib/vlc/libstream_out_switcher.a
 lib/vlc/misc/libdummy_plugin.so
 lib/vlc/misc/libexport_plugin.so
 lib/vlc/misc/libfreetype_plugin.so
+lib/vlc/misc/libgrowl_plugin.so
 lib/vlc/misc/libipv4_plugin.so
 lib/vlc/misc/libipv6_plugin.so
 lib/vlc/misc/liblogger_plugin.so
@@ -157,6 +161,7 @@ lib/vlc/packetizer/libpacketizer_h264_plugin.so
 lib/vlc/packetizer/libpacketizer_mpeg4audio_plugin.so
 lib/vlc/packetizer/libpacketizer_mpeg4video_plugin.so
 lib/vlc/packetizer/libpacketizer_mpegvideo_plugin.so
+lib/vlc/services_discovery/libpodcast_plugin.so
 lib/vlc/services_discovery/libsap_plugin.so
 lib/vlc/services_discovery/libshout_plugin.so
 lib/vlc/stream_out/libstream_out_bridge_plugin.so
@@ -182,6 +187,7 @@ lib/vlc/video_filter/libdeinterlace_plugin.so
 lib/vlc/video_filter/libdistort_plugin.so
 lib/vlc/video_filter/libinvert_plugin.so
 lib/vlc/video_filter/liblogo_plugin.so
+lib/vlc/video_filter/libmagnify_plugin.so
 lib/vlc/video_filter/libmarq_plugin.so
 lib/vlc/video_filter/libmosaic_plugin.so
 lib/vlc/video_filter/libmotionblur_plugin.so
@@ -213,10 +219,15 @@ share/locale/en_GB/LC_MESSAGES/vlc.mo
 share/locale/es/LC_MESSAGES/vlc.mo
 share/locale/fr/LC_MESSAGES/vlc.mo
 share/locale/gl/LC_MESSAGES/vlc.mo
+share/locale/he/LC_MESSAGES/vlc.mo
+share/locale/hi/LC_MESSAGES/vlc.mo
+share/locale/hu/LC_MESSAGES/vlc.mo
 share/locale/it/LC_MESSAGES/vlc.mo
 share/locale/ja/LC_MESSAGES/vlc.mo
+share/locale/ka/LC_MESSAGES/vlc.mo
 share/locale/ko/LC_MESSAGES/vlc.mo
 share/locale/nl/LC_MESSAGES/vlc.mo
+share/locale/oc/LC_MESSAGES/vlc.mo
 share/locale/pt_BR/LC_MESSAGES/vlc.mo
 share/locale/ro/LC_MESSAGES/vlc.mo
 share/locale/ru/LC_MESSAGES/vlc.mo
@@ -224,18 +235,111 @@ share/locale/sv/LC_MESSAGES/vlc.mo
 share/locale/tr/LC_MESSAGES/vlc.mo
 share/locale/zh_CN/LC_MESSAGES/vlc.mo
 share/locale/zh_TW/LC_MESSAGES/vlc.mo
-share/vlc/http/admin/.access
-share/vlc/http/admin/browse.html
-share/vlc/http/admin/dboxfiles.html
-share/vlc/http/admin/index.html
-share/vlc/http/cone_minus.png
-share/vlc/http/cone_plus.png
+share/vlc/http/.hosts
+share/vlc/http/dialogs/.hosts
+share/vlc/http/dialogs/browse
+share/vlc/http/dialogs/footer
+share/vlc/http/dialogs/input
+share/vlc/http/dialogs/main
+share/vlc/http/dialogs/mosaic
+share/vlc/http/dialogs/playlist
+share/vlc/http/dialogs/sout
+share/vlc/http/dialogs/vlm
 share/vlc/http/favicon.ico
+share/vlc/http/iehacks.css
+share/vlc/http/images/delete.png
+share/vlc/http/images/delete_small.png
+share/vlc/http/images/eject.png
+share/vlc/http/images/empty.png
+share/vlc/http/images/fullscreen.png
+share/vlc/http/images/help.png
+share/vlc/http/images/info.png
+share/vlc/http/images/loop.png
+share/vlc/http/images/minus.png
+share/vlc/http/images/next.png
+share/vlc/http/images/pause.png
+share/vlc/http/images/play.png
+share/vlc/http/images/playlist.png
+share/vlc/http/images/playlist_small.png
+share/vlc/http/images/plus.png
+share/vlc/http/images/prev.png
+share/vlc/http/images/refresh.png
+share/vlc/http/images/repeat.png
+share/vlc/http/images/sd.png
+share/vlc/http/images/shuffle.png
+share/vlc/http/images/slider_bar.png
+share/vlc/http/images/slider_left.png
+share/vlc/http/images/slider_point.png
+share/vlc/http/images/slider_right.png
+share/vlc/http/images/slow.png
+share/vlc/http/images/sort.png
+share/vlc/http/images/sout.png
+share/vlc/http/images/speaker.png
+share/vlc/http/images/speaker_mute.png
+share/vlc/http/images/stop.png
+share/vlc/http/images/vlc16x16.png
+share/vlc/http/images/volume_down.png
+share/vlc/http/images/volume_up.png
+share/vlc/http/images/white.png
+share/vlc/http/images/white_cross_small.png
 share/vlc/http/index.html
-share/vlc/http/info.html
+share/vlc/http/js/functions.js
+share/vlc/http/js/mosaic.js
+share/vlc/http/js/vlm.js
+share/vlc/http/mosaic.html
+share/vlc/http/old/.hosts
+share/vlc/http/old/admin/.access
+share/vlc/http/old/admin/browse.html
+share/vlc/http/old/admin/dboxfiles.html
+share/vlc/http/old/admin/index.html
+share/vlc/http/old/cone_minus.png
+share/vlc/http/old/cone_plus.png
+share/vlc/http/old/index.html
+share/vlc/http/old/info.html
+share/vlc/http/old/style.css
+share/vlc/http/old/vlm/edit.html
+share/vlc/http/old/vlm/index.html
+share/vlc/http/old/vlm/new.html
+share/vlc/http/old/vlm/show.html
+share/vlc/http/old/webcam.html
+share/vlc/http/requests/browse.xml
+share/vlc/http/requests/playlist.xml
+share/vlc/http/requests/readme
+share/vlc/http/requests/status.xml
+share/vlc/http/requests/vlm.xml
+share/vlc/http/requests/vlm_cmd.xml
 share/vlc/http/style.css
-share/vlc/http/webcam.html
+share/vlc/http/vlm.html
+share/vlc/http/vlm_export.html
 share/vlc/osdmenu/default.cfg
+share/vlc/osdmenu/default/selected/bw.png
+share/vlc/osdmenu/default/selected/esc.png
+share/vlc/osdmenu/default/selected/fw.png
+share/vlc/osdmenu/default/selected/next.png
+share/vlc/osdmenu/default/selected/play_pause.png
+share/vlc/osdmenu/default/selected/previous.png
+share/vlc/osdmenu/default/selected/stop.png
+share/vlc/osdmenu/default/selected/volume.png
+share/vlc/osdmenu/default/selection/bw.png
+share/vlc/osdmenu/default/selection/esc.png
+share/vlc/osdmenu/default/selection/fw.png
+share/vlc/osdmenu/default/selection/next.png
+share/vlc/osdmenu/default/selection/play_pause.png
+share/vlc/osdmenu/default/selection/previous.png
+share/vlc/osdmenu/default/selection/stop.png
+share/vlc/osdmenu/default/selection/volume.png
+share/vlc/osdmenu/default/unselected.png
+share/vlc/osdmenu/default/volume/volume_00.png
+share/vlc/osdmenu/default/volume/volume_01.png
+share/vlc/osdmenu/default/volume/volume_02.png
+share/vlc/osdmenu/default/volume/volume_03.png
+share/vlc/osdmenu/default/volume/volume_04.png
+share/vlc/osdmenu/default/volume/volume_05.png
+share/vlc/osdmenu/default/volume/volume_06.png
+share/vlc/osdmenu/default/volume/volume_07.png
+share/vlc/osdmenu/default/volume/volume_08.png
+share/vlc/osdmenu/default/volume/volume_09.png
+share/vlc/osdmenu/default/volume/volume_10.png
 share/vlc/osdmenu/dvd.cfg
 share/vlc/osdmenu/dvd/selected/bw.png
 share/vlc/osdmenu/dvd/selected/esc.png
@@ -273,6 +377,12 @@ share/vlc/pda-playlistb16x16.xpm
 share/vlc/pda-preferencesb16x16.xpm
 share/vlc/pda-rewindb16x16.xpm
 share/vlc/pda-stopb16x16.xpm
+share/vlc/skins2/default.vlt
+share/vlc/skins2/fonts/FreeSans.ttf
+share/vlc/skins2/fonts/FreeSansBold.ttf
+share/vlc/skins2/skin.catalog
+share/vlc/skins2/skin.dtd
+share/vlc/skins2/winamp2.xml
 share/vlc/vlc128x128.png
 share/vlc/vlc16x16.png
 share/vlc/vlc16x16.xpm
@@ -280,13 +390,25 @@ share/vlc/vlc32x32.png
 share/vlc/vlc32x32.xpm
 share/vlc/vlc48x48.ico
 share/vlc/vlc48x48.png
+@dirrm share/vlc/skins2/fonts
+@dirrm share/vlc/skins2
 @dirrm share/vlc/osdmenu/dvd/volume
 @dirrm share/vlc/osdmenu/dvd/unselect
 @dirrm share/vlc/osdmenu/dvd/selection
 @dirrm share/vlc/osdmenu/dvd/selected
 @dirrm share/vlc/osdmenu/dvd
+@dirrm share/vlc/osdmenu/default/volume
+@dirrm share/vlc/osdmenu/default/selection
+@dirrm share/vlc/osdmenu/default/selected
+@dirrm share/vlc/osdmenu/default
 @dirrm share/vlc/osdmenu
-@dirrm share/vlc/http/admin
+@dirrm share/vlc/http/requests
+@dirrm share/vlc/http/old/vlm
+@dirrm share/vlc/http/old/admin
+@dirrm share/vlc/http/old
+@dirrm share/vlc/http/js
+@dirrm share/vlc/http/images
+@dirrm share/vlc/http/dialogs
 @dirrm share/vlc/http
 @dirrm share/vlc
 @dirrm share/doc/vlc

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/05/06 08:25:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/10 16:28:43 drochner Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
-PKGREVISION=		1
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VER}/
 EXTRACT_SUFX=		.tar.bz2
@@ -15,8 +14,9 @@ USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
+USE_LANGUAGES+=		c++
 
-VLC_VER=		0.8.4a
+VLC_VER=		0.8.5
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,15 +38,28 @@ CONFIGURE_ARGS+=	--disable-mpc
 CONFIGURE_ARGS+=	--disable-dts
 
 CONFIGURE_ARGS+=	--with-ffmpeg-tree=${BUILDLINK_PREFIX.ffmpeg}/lib
+CONFIGURE_ARGS+=	--with-ffmpeg-zlib
 CONFIGURE_ARGS+=	--enable-cddax
 CONFIGURE_ARGS+=	--enable-dvdread
 
 pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/admin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/dialogs
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/images
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/js
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/old
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/old/admin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/old/vlm
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/requests
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/default
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/default/selected
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/default/selection
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/default/volume
 	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/dvd/selected
 	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/dvd/volume
 	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/dvd/unselect
 	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/dvd/selection
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/skins2
+	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/skins2/fonts
 	${INSTALL_DATA} ${WRKSRC}/doc/vlc.1 ${PREFIX}/man/man1
 	${INSTALL_DATA} ${WRKSRC}/doc/vlc-config.1 ${PREFIX}/man/man1
 
