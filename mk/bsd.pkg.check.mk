@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.31 2006/05/08 21:29:07 joerg Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.32 2006/05/10 16:09:08 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the various install-time "check"
@@ -189,19 +189,22 @@ check-files-post-message:
 
 ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${FIND} ${PREFIX} \( -type f -or -type l \) -print 2>/dev/null	\
+	${FIND} ${PREFIX}/. \( -type f -or -type l \) -print 2>/dev/null \
+		| ${SED} -e 's,/\./,/,'					\
 		| ${_CHECK_FILES_SKIP_FILTER} > ${.TARGET}		\
                 || ${TRUE}
 
 ${_CHECK_FILES_PRE.sysconfdir} ${_CHECK_FILES_POST.sysconfdir}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${FIND} ${PKG_SYSCONFDIR} -print 2>/dev/null			\
+	${FIND} ${PKG_SYSCONFDIR}/. -print 2>/dev/null			\
+		| ${SED} -e 's,/\./,/,'					\
 		| ${_CHECK_FILES_SKIP_FILTER} > ${.TARGET}		\
 		|| ${TRUE}
 
 ${_CHECK_FILES_PRE.varbase} ${_CHECK_FILES_POST.varbase}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${FIND} ${VARBASE} -print 2>/dev/null				\
+	${FIND} ${VARBASE}/. -print 2>/dev/null				\
+		| ${SED} -e 's,/\./,/,'					\
 		| ${_CHECK_FILES_SKIP_FILTER} > ${.TARGET}		\
 		|| ${TRUE}
 
