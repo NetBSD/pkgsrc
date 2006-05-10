@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.178 2006/05/10 16:48:05 tonio Exp $
+$NetBSD: CHANGES-2006,v 1.179 2006/05/10 21:04:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2434,3 +2434,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/kaffe to 1.1.7 [tonio 2006-05-10]
 	Updated lang/kaffe-x11 to 1.1.7 [tonio 2006-05-10]
 	Updated lang/kaffe-esound to 1.1.7 [tonio 2006-05-10]
+	Updated www/dillo to 0.8.6 [adam 2006-05-10]
