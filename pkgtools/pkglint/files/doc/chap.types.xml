@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.types.xml,v 1.3 2006/05/10 08:17:25 rillig Exp $ -->
+<!-- $NetBSD: chap.types.xml,v 1.4 2006/05/10 10:06:03 rillig Exp $ -->
 
 <chapter id="types">
 <title>The &pkglint; type system</title>
@@ -9,7 +9,7 @@
 	<type>String</type>. This prevents many useful checks from being
 	done before executing the code.</para>
 
-	<para>To that time, &pkglint; already did some checks based on
+	<para>Up to 2004, &pkglint; already did some checks based on
 	the value of the variables, but these checks had no common
 	structure that could be described easily.</para>
 
@@ -34,19 +34,31 @@
 	<varname>PTHREAD_OPTS</varname> to be expressed as <literal>List
 	of { require native }</literal>.</para>
 
+	<para>In May 2006, the definition and use of variables has been
+	further restricted by introducing ACLs, which define the
+	permitted operations (write, append, default, read, preprocess-read)
+	depending on the current file.</para>
+
 </sect1>
 
 <sect1 id="types.syntax">
 <title>Syntax for defining types</title>
 
 <programlisting>
-    type             ::= ("List" | "InternalList") "+"? "of" simple-type
-                     |   simple-type
+    type             ::= list-type<subscript>opt</subscript> simple-type acls<subscript>opt</subscript>
+
+    list-type        ::= ("List" | "InternalList") "of"
+
     simple-type      ::= predefined-type
                      |   enumeration
     predefined-type  ::= [A-Za-z][0-9A-Z_a-z]*
     enumeration      ::= "{" (enumeration-item)* "}"
     enumeration-item ::= [-0-9A-Z_a-z]+
+
+    acls             ::= "[" (acl-entry)* "]"
+    acl-entry        ::= acl-subject ":" acl-perms
+    acl-subject      ::= [.0-9A-Za-z]+ | "_"
+    acl-perms        ::= [adprs]*
 </programlisting>
 
 </sect1>
@@ -70,16 +82,80 @@
 	called <literal>List</literal> and
 	<literal>InternalList</literal>, which are described in the
 	<ulink url="&pkgsrc-guide;/makefile.html">pkgsrc guide, the
-	chapter about <filename>Makefile</filename>s</ulink>.
+	chapter about <filename>Makefile</filename>s</ulink>.</para>
 
-	If the <literal>List</literal> or
-	<literal>InternalList</literal> is followed by a
-	<literal>+</literal>, which restricts the valid operations on a
-	variable of that type. The only allowed operations are setting
-	the list to a commented empty value, for example
-	<literal>#&nbsp;none</literal>, or appending to the list, using
-	the <literal>+=</literal> operator.</para>
+</sect1>
+<sect1 id="types.acls">
+<title>Access Control Lists</title>
 
+	<para>Additionally to the data type, which specifies
+	<emphasis>what</emphasis> a variable can contain, the ACLs
+	define <emphasis>where</emphasis> the variable can be defined or
+	used (this is called the <firstterm>ACL subject</firstterm>) and
+	which operations are allowed (these are the <firstterm>ACL
+	permissions</firstterm>).</para>
+
+	<para>The ACL subjects are specified by the filename. For
+	example, <filename>Makefile</filename> and
+	<filename>buildlink3.mk</filename> are valid ACL subjects. Since
+	some names occur over an over in pkgsrc, these can be
+	abbreviated as shown in <xref linkend="types.acl.subjects.abbr"
+	/>. The possible actions on a variable are shown in <xref
+	linkend="types.acl.perms" />.</para>
+
+	<table id="types.acl.subjects.abbr">
+	<title>ACL Subjects</title>
+	<tgroup cols="2">
+	<thead><row><entry>Subject</entry><entry>Abbreviation</entry></row></thead>
+	<tbody>
+	<row><entry><filename>Makefile</filename></entry><entry>m</entry></row>
+	<row><entry><filename>Makefile.common</filename></entry><entry>c</entry></row>
+	<row><entry><filename>buildlink3.mk</filename></entry><entry>b</entry></row>
+	<row><entry><filename>hacks.mk</filename></entry><entry>h</entry></row>
+	<row><entry><filename>options.mk</filename></entry><entry>o</entry></row>
+	<row><entry>any file</entry><entry>_</entry></row>
+	</tbody>
+	</tgroup>
+	</table>
+
+	<table id="types.acl.perms">
+	<title>ACL Permissions</title>
+	<tgroup cols="2">
+	<thead><row><entry>Permission</entry><entry>Description</entry></row></thead>
+	<tbody>
+	<row><entry><filename>a</filename></entry><entry>Append to the
+	variable using the <literal>+=</literal> operator.</entry></row>
+	<row><entry><filename>d</filename></entry><entry>Provide a
+	default value for the variable using the <literal>?=</literal>
+	operator.</entry></row>
+	<row><entry><filename>s</filename></entry><entry>Set the
+	variable unconditionally using the <literal>=</literal>
+	operator.</entry></row>
+	<row><entry><filename>u</filename></entry><entry>Use the value
+	of the variable.</entry></row>
+	<row><entry><filename>p</filename></entry><entry>Use the value
+	of the variable during preprocessing.</entry></row>
+	</tbody>
+	</tgroup>
+	</table>
+
+	<para>If a variable has no ACL definition at all, all operations
+	are allowed on it. Otherwise exactly those operations of the
+	first ACL entry whose subject matches the current filename are
+	allowed. If no entry matches, nothing is allowed.</para>
+
+<sect2 id="types.acls.future">
+<title>Future Directions</title>
+
+	<para>Currently the ACLs only cover the <quote>user
+	space</quote> of pksrc. They will be extended later to also
+	check for valid variable definition and use in the pkgsrc
+	infrastructure, as well as the user configuration file. For
+	completeness, those variables that are intended to be specified
+	on the command line will be added to the
+	<filename>makevars.map</filename> file.</para>
+
+</sect2>
 </sect1>
 <sect1 id="types.predefined">
 <title>Predefined types</title>
@@ -366,53 +442,4 @@
 	</variablelist>
 
 </sect1>
-
-<sect1 id="types.future">
-<title>Future directions</title>
-
-	<para>The framework for defining data types in the makevars.map
-	file is insufficient. It does not allow ACLs that specify which
-	variables may be read or written by the various actors in
-	pkgsrc. At the moment, the data type and the permissions are
-	intermixed (see type
-	<literal><type>Readonly</type></literal>).</para>
-
-	<para>To overcome these design flaws, I will create a new type
-	system for &pkglint; that is based on the current one, but
-	provides ACLs to define the permitted operations on each
-	variable. Each ACL entry is then a combination of an
-	<firstterm>actor</firstterm> with an
-	<firstterm>operation</firstterm>.</para>
-
-	<table id="types.acl.actors">
-	<title>ACL Actors</title>
-	<tgroup cols="2">
-	<thead><row><entry>Actor</entry><entry>Description</entry></row></thead>
-	<tbody>
-	<row><entry>package</entry><entry>The package author</entry></row>
-	<row><entry>system</entry><entry>The pkgsrc infrastructure</entry></row>
-	<row><entry>bl3</entry><entry><filename>buildlink3.mk</filename> and <filename>builtin.mk</filename> files</entry></row>
-	<row><entry>user</entry><entry>The pkgsrc user via <filename>mk.conf</filename></entry></row>
-	<row><entry>cmdline</entry><entry>The pkgsrc user via the command line</entry></row>
-	</tbody>
-	</tgroup>
-	</table>
-
-	<table id="types.acl.actions">
-	<title>ACL Operations</title>
-	<tgroup cols="2">
-	<thead><row><entry>Operation</entry><entry>Description</entry></row></thead>
-	<tbody>
-	<row><entry>write</entry><entry>Create a variable or overwrite the value</entry></row>
-	<row><entry>colon</entry><entry>Assign using the <literal>:=</literal> operator</entry></row>
-	<row><entry>append</entry><entry>Append to a list</entry></row>
-	<row><entry>default</entry><entry>Provide a default value for a variable</entry></row>
-	<row><entry>read</entry><entry>Use the value when executing the shell commands</entry></row>
-	<row><entry>readpp</entry><entry>Use the value during preprocessing</entry></row>
-	</tbody>
-	</tgroup>
-	</table>
-
-</sect1>
-
 </chapter>
