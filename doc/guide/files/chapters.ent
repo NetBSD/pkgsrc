@@ -1,7 +1,7 @@
 <!--
 	Creates entities for each chapter in the pkgsrc book.
 
-	$NetBSD: chapters.ent,v 1.8 2006/02/18 01:46:43 rillig Exp $
+	$NetBSD: chapters.ent,v 1.9 2006/05/10 13:58:34 rillig Exp $
 -->
 
 <!ENTITY chap.intro			SYSTEM "introduction.xml">
@@ -27,6 +27,7 @@
 <!ENTITY chap.debug			SYSTEM "debug.xml">
 <!ENTITY chap.submit			SYSTEM "submit.xml">
 <!ENTITY chap.porting			SYSTEM "porting.xml">
+<!ENTITY chap.devfaq			SYSTEM "devfaq.xml">
 
 <!-- appendix -->
 <!ENTITY chap.examples			SYSTEM "examples.xml">
