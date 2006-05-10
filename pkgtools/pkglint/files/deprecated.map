@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.33 2006/04/13 21:04:00 rillig Exp $
+# $NetBSD: deprecated.map,v 1.34 2006/05/10 08:17:25 rillig Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -78,3 +78,7 @@ DEINSTALL_EXTRA_TMPL	Use DEINSTALL_TEMPLATE instead.
 RECOMMENDED		Use ABI_DEPENDS instead.
 BUILD_USES_MSGFMT	Use USE_TOOLS+=msgfmt instead.
 USE_MSGFMT_PLURALS	Use USE_TOOLS+=msgfmt instead.
+
+# May 2006
+EXTRACT_USING_PAX	Use "EXTRACT_OPTS=-t pax" instead.
+NO_EXTRACT		It doesn't exist anymore.

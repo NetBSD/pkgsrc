@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.types.xml,v 1.2 2006/04/30 21:43:42 rillig Exp $ -->
+<!-- $NetBSD: chap.types.xml,v 1.3 2006/05/10 08:17:25 rillig Exp $ -->
 
 <chapter id="types">
 <title>The &pkglint; type system</title>
@@ -404,6 +404,7 @@
 	<thead><row><entry>Operation</entry><entry>Description</entry></row></thead>
 	<tbody>
 	<row><entry>write</entry><entry>Create a variable or overwrite the value</entry></row>
+	<row><entry>colon</entry><entry>Assign using the <literal>:=</literal> operator</entry></row>
 	<row><entry>append</entry><entry>Append to a list</entry></row>
 	<row><entry>default</entry><entry>Provide a default value for a variable</entry></row>
 	<row><entry>read</entry><entry>Use the value when executing the shell commands</entry></row>
