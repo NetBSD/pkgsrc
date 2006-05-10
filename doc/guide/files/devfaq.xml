@@ -1,4 +1,4 @@
-<!-- $NetBSD: devfaq.xml,v 1.1 2006/05/10 13:58:34 rillig Exp $ -->
+<!-- $NetBSD: devfaq.xml,v 1.2 2006/05/10 16:19:55 rillig Exp $ -->
 
 <chapter id="devfaq"> <?dbhtml filename="devfaq.html"?>
 <title>Frequently Asked Questions</title>
@@ -61,6 +61,20 @@
 	<varname>BUILDLINK_LIBS</varname>?</para></question>
 
 	<answer><para>[FIXME]</para></answer>
+
+</qandaentry>
+
+<qandaentry>
+
+	<question><para>Why does <command>make show-var
+	VARNAME=BUILDLINK_PREFIX.<replaceable>foo</replaceable></command>
+	say it's empty?</para></question>
+
+	<answer><para>For optimization reasons, some variables are only
+	available in the <quote>wrapper</quote> phase and later. To
+	<quote>simulate</quote> the wrapper phase, append
+	<command>PKG_PHASE=wrapper</command> to the above
+	command.</para></answer>
 
 </qandaentry>
 </qandaset>
