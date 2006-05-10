@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4961 2006/05/09 16:46:21 wiz Exp $
+$NetBSD: TODO,v 1.4962 2006/05/10 07:43:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -472,7 +472,7 @@ Suggested package updates
 	o electricfence-2.4.16
 	o elf-0.5.4p1
 	o elfsh-0.65rc1
-	o elm-me-2.4pl122g
+	o elm-me-2.4pl122h
 	o elscreen-1.3.3
 	o emacs-w3m-1.4.4
 	o emech-2.8.5.1
@@ -1264,6 +1264,7 @@ Suggested package updates
 	o xtide-2.8.2
 	o xtraceroute-0.9.1
 	o xtux-20030306
+	o xview-3.2.1.4.21.2
 	o xwrits-2.22
 	o xzip-182
 	o yafc-1.1
