@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.576 2006/05/10 15:31:41 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.577 2006/05/10 17:14:08 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1627,7 +1627,8 @@ sub get_vartypes_map() {
 					$acltext = "";
 					$acls = undef;
 				}
-				while ($acltext =~ s,^([\w.]+|_):([adpsu]*)(?:\,\s*|$),,) {
+
+				while ($acltext =~ s,^([\w.*]+|_):([adpsu]*)(?:\,\s*|$),,) {
 					my ($subject, $perms) = ($1, $2);
 
 					use constant ACL_shortcuts => {
@@ -1640,7 +1641,11 @@ sub get_vartypes_map() {
 						"_" => qr".*",
 					};
 
-					push(@{$acls}, [exists(ACL_shortcuts->{$subject}) ? ACL_shortcuts->{$subject} : qr"(?:^|/)\Q${subject}\E$", $perms]);
+					# Transform $subject to a regular expression.
+					$subject =~ s/\./[.]/g;
+					$subject =~ s/\*/.*/g;
+
+					push(@{$acls}, [exists(ACL_shortcuts->{$subject}) ? ACL_shortcuts->{$subject} : qr"(?:^|/)${subject}$", $perms]);
 				}
 				if ($acltext ne "") {
 					$line->log_fatal("Invalid ACL: ${acltext}.");
@@ -3129,7 +3134,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 
 	if (ref($type) eq "HASH") {
 		if (!exists($type->{$value})) {
-			$line->log_warning("\"${value}\" is not valid for ${varname}. Use one of ".join(" ", keys(%{$type}))." instead.");
+			$line->log_warning("\"${value}\" is not valid for ${varname}. Use one of ".join(" ", sort(keys(%{$type})))." instead.");
 		}
 
 	} elsif ($type eq "AwkCommand") {
