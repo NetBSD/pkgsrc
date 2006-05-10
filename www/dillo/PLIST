@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.11 2005/06/19 00:13:30 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/05/10 21:03:41 adam Exp $
 bin/dillo
 bin/dpid
 bin/dpidc
 lib/dillo/dpi/bookmarks/bookmarks.dpi
+lib/dillo/dpi/cookies/cookies.dpi
+lib/dillo/dpi/datauri/datauri.filter.dpi
 lib/dillo/dpi/downloads/downloads.dpi
 lib/dillo/dpi/file/file.dpi
 lib/dillo/dpi/ftp/ftp.filter.dpi
@@ -33,6 +35,8 @@ share/examples/dillo/dpidrc
 @dirrm lib/dillo/dpi/ftp
 @dirrm lib/dillo/dpi/file
 @dirrm lib/dillo/dpi/downloads
+@dirrm lib/dillo/dpi/datauri
+@dirrm lib/dillo/dpi/cookies
 @dirrm lib/dillo/dpi/bookmarks
 @dirrm lib/dillo/dpi
 @dirrm lib/dillo
