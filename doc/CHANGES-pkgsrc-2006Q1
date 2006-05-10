@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.44 2006/05/09 15:09:53 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.45 2006/05/10 10:23:10 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -91,3 +91,5 @@ Pullup ticket 1519 - requested by hira
 update acroread7 dependencies
 Pullup ticket 1538 - requested by tron
 security fix for xorg
+Pullup ticket 1548 - requested by bouyer
+security update for nagios
