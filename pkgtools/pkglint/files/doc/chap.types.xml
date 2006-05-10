@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.types.xml,v 1.4 2006/05/10 10:06:03 rillig Exp $ -->
+<!-- $NetBSD: chap.types.xml,v 1.5 2006/05/10 13:52:49 rillig Exp $ -->
 
 <chapter id="types">
 <title>The &pkglint; type system</title>
@@ -45,7 +45,7 @@
 <title>Syntax for defining types</title>
 
 <programlisting>
-    type             ::= list-type<subscript>opt</subscript> simple-type acls<subscript>opt</subscript>
+    type             ::= (list-type)? simple-type (acls)?
 
     list-type        ::= ("List" | "InternalList") "of"
 
@@ -55,7 +55,7 @@
     enumeration      ::= "{" (enumeration-item)* "}"
     enumeration-item ::= [-0-9A-Z_a-z]+
 
-    acls             ::= "[" (acl-entry)* "]"
+    acls             ::= "[" (acl-entry ("," acl-entry)*)? "]"
     acl-entry        ::= acl-subject ":" acl-perms
     acl-subject      ::= [.0-9A-Za-z]+ | "_"
     acl-perms        ::= [adprs]*
