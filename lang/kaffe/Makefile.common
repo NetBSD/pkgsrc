@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.13 2006/03/02 18:46:16 joerg Exp $
+# $NetBSD: Makefile.common,v 1.14 2006/05/10 16:46:20 tonio Exp $
 
-DISTNAME=		kaffe-1.1.6
+DISTNAME=		kaffe-1.1.7
 CATEGORIES=		lang java
 MASTER_SITES=		ftp://ftp.kaffe.org/pub/kaffe/v1.1.x-development/
 
@@ -8,11 +8,10 @@ MAINTAINER=		tonio@NetBSD.org
 HOMEPAGE=		http://www.kaffe.org/
 COMMENT=		Virtual machine capable of running Java(tm) code
 
-BUILD_DEPENDS+=  unzip-[0-9]*:../../archivers/unzip
-BUILD_DEPENDS+=  zip-[0-9]*:../../archivers/zip
 DEPENDS+=       jikes>=1.22:../../lang/jikes
+DEPENDS+=	fastjar>=0.93:../../archivers/fastjar
 
-EXTRACT_USING=		pax
+EXTRACT_USING=	gtar
 GNU_CONFIGURE_PREFIX=	${JAVA_HOME}
 GNU_CONFIGURE_MANDIR=	${PREFIX}/${PKGMANDIR}
 JAVA_HOME=		${PREFIX}/java/kaffe
@@ -22,8 +21,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 TEST_TARGET=		check
 
-ONLY_FOR_PLATFORM=	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k *-*-mips*	\
-			*-*-sparc *-*-powerpc
+ONLY_FOR_PLATFORM=	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k 	\
+			*-*-mipsel *-*-sparc *-*-powerpc
 
 GNU_CONFIGURE=		yes
 CPPFLAGS+=		-Dunix
@@ -37,7 +36,7 @@ CONFIGURE_ARGS+=	--disable-boehm-gc-configuration
 CONFIGURE_ARGS+=	--without-alsa
 CONFIGURE_ARGS+=	--without-esd
 CONFIGURE_ARGS+=	--disable-esdtest
-CONFIGURE_ARGS+=	--disable-native-awt
+CONFIGURE_ARGS+=	--disable-fastjar
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -54,7 +53,7 @@ CONFIGURE_ENV+=		VM_LIBS="-lc"
 CONFIGURE_ARGS+=	--with-engine=intrp
 .endif
 
+.include "../../devel/libltdl/convenience.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"

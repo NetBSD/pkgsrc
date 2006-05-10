@@ -1,11 +1,15 @@
-# $NetBSD: Makefile,v 1.67 2006/02/05 23:09:46 joerg Exp $
+# $NetBSD: Makefile,v 1.68 2006/05/10 16:46:20 tonio Exp $
 #
 
 .include "Makefile.common"
 
-PKGREVISION=		2
-
 CONFLICTS+=		kaffe-nox11-[0-9]*
+
+CONFIGURE_ARGS+=	--disable-native-awt
+CONFIGURE_ARGS+=	--disable-gtk-peer
+CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS+=	--without-esd
+CONFIGURE_ARGS+=	--disable-esdtest
 
 JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javakey \
 			javap jdb rmic rmiregistry serialver
@@ -24,6 +28,5 @@ PRINT_PLIST_AWK+=	/^java\/kaffe\/jre\/lib\/security\/java.security$$/ \
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/license.terms ${JAVA_HOME}
 
-.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/java-env.mk"
 .include "../../mk/bsd.pkg.mk"
