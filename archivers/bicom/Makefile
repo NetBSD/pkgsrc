@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2006/05/10 12:31:46 gdt Exp $
+# $NetBSD: Makefile,v 1.23 2006/05/10 13:23:07 ben Exp $
 #
 
 DISTNAME=		bicom101
 PKGNAME=		bicom-1.01
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		archivers
 MASTER_SITES=		http://www3.sympatico.ca/mt0000/bicom/
 EXTRACT_SUFX=		.zip
@@ -12,7 +12,7 @@ MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		http://www3.sympatico.ca/mt0000/bicom/bicom.html
 COMMENT=		Data compressor in the PPM family
 
-LICENSE=		bicom-license
+LICENSE=		no-commercial-use
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -35,5 +35,8 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bicom/bicom ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bicom
+	${INSTALL_DATA} ${WRKSRC}/README.TXT \
+		${prefix}/share/doc/bicom/readme.txt
 
 .include "../../mk/bsd.pkg.mk"
