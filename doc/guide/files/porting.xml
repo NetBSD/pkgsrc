@@ -1,6 +1,6 @@
-<!-- $NetBSD: porting.xml,v 1.1 2006/02/18 01:46:43 rillig Exp $ -->
+<!-- $NetBSD: porting.xml,v 1.2 2006/05/10 20:56:00 rillig Exp $ -->
 
-<chapter id="porting">
+<chapter id="porting"> <?dbhtml filename="porting.html"?>
 <title>Porting pkgsrc</title>
 
 	<para>The pkgsrc system has already been ported to many

@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkgsrc.xml,v 1.13 2006/05/10 13:58:34 rillig Exp $ -->
+<!-- $NetBSD: pkgsrc.xml,v 1.14 2006/05/10 20:56:00 rillig Exp $ -->
 
 
 <?xml version="1.0"?>
@@ -45,7 +45,7 @@
       <holder role="mailto:www@NetBSD.org">The NetBSD Foundation, Inc</holder>
     </copyright>
 
-    <pubdate>$NetBSD: pkgsrc.xml,v 1.13 2006/05/10 13:58:34 rillig Exp $</pubdate>
+    <pubdate>$NetBSD: pkgsrc.xml,v 1.14 2006/05/10 20:56:00 rillig Exp $</pubdate>
 
     <abstract>
       <para>Information about using the NetBSD package system (pkgsrc)
@@ -82,8 +82,15 @@
     &chap.fixes;
     &chap.debug;
     &chap.submit;
-    &chap.porting;
     &chap.devfaq;
+  </part>
+
+  <!-- The pkgsrc infrastructure -->
+  <part id="infrastructure"><?dbhtml filename="infrastructure.html"?>
+    <title>The pkgsrc infrastructure</title>
+
+    &chap.regression;
+    &chap.porting;
   </part>
 
   <!-- appendix -->
