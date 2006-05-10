@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.types.xml,v 1.6 2006/05/10 15:31:41 rillig Exp $ -->
+<!-- $NetBSD: chap.types.xml,v 1.7 2006/05/10 17:01:44 rillig Exp $ -->
 
 <chapter id="types">
 <title>The &pkglint; type system</title>
@@ -130,7 +130,8 @@
 	default value for the variable using the <literal>?=</literal>
 	operator.</entry></row>
 	<row><entry><filename>s</filename></entry><entry>Set the
-	variable unconditionally using the <literal>=</literal>
+	variable unconditionally using the <literal>=</literal>,
+	<literal>:=</literal> or <literal>!=</literal>
 	operator.</entry></row>
 	<row><entry><filename>u</filename></entry><entry>Use the value
 	of the variable.</entry></row>
