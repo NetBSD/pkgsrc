@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2006/04/23 00:12:38 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2006/05/10 13:18:21 joerg Exp $
 
 DISTNAME=	mailman-2.1.8rc1
+PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mailman/}
 EXTRACT_SUFX=	.tgz
@@ -96,6 +97,8 @@ SUBST_SED.paths+=	-e 's,@EXECDIR@,${EXECDIR},g'
 SUBST_SED.paths+=	-e 's,@MAILMAN_DATADIR@,${MAILMAN_DATADIR},g'
 SUBST_STAGE.paths=	post-patch
 
+PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
+
 post-extract:
 	${CP} ${FILESDIR}/mailman.conf.dist ${WRKDIR}/mailman.conf.dist
 
@@ -121,6 +124,7 @@ post-install:
 	${CHMOD} -R g+w ${EXECDIR}
 	${CHMOD} g+s ${EXECDIR}/cgi-bin/*
 	${RM} -f ${EXECDIR}/Mailman/mm_cfg.pyc
+	${PYTHONBIN} ${PYCOMPILEALL} ${PREFIX}/lib/mailman/bin ${PREFIX}/lib/mailman/cron ${PREFIX}/lib/mailman/scripts
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
