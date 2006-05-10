@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/03/04 21:31:12 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2006/05/10 14:42:52 gdt Exp $
 
 DISTNAME=	xephem-3.6.4
 PKGREVISION=	2
@@ -6,11 +6,16 @@ CATEGORIES=	x11
 MASTER_SITES=	http://www.clearskyinstitute.com/xephem/ \
 		ftp://iphcip1.physik.uni-mainz.de/pub/xephem/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.clearskyinstitute.com/xephem/
 COMMENT=	Interactive astronomical ephemeris program
 
-LICENSE=	no-commercial-use
+LICENSE=		xephem-license
+RESTRICTED=		No permission to distribute distfile or binary package.
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/GUI/xephem
 USE_IMAKE=	yes
