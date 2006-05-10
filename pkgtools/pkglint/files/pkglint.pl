@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.574 2006/05/10 08:17:25 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.575 2006/05/10 11:34:52 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1120,6 +1120,12 @@ sub perms($$) {
 	my ($self, $fname) = @_;
 	my ($perms);
 
+	# If there is no ACL defined at all, everything is allowed.
+	if (!defined($self->[ACLS])) {
+		return "adpsu";
+	}
+
+	# By default, nothing is allowed.
 	$perms = "";
 	foreach my $acl_entry (@{$self->[ACLS]}) {
 		if ($fname =~ $acl_entry->[0]) {
@@ -1597,7 +1603,7 @@ sub get_vartypes_map() {
 		([\w\d_.]+) \s+				# variable name
 		(?:(InternalList|List) \s+ of \s+)?	# kind of list
 		(?:([\w\d_]+) | \{([\w\d_.+\-\s]+)\})	# basic type
-		(?:\s+ \[ ([\w.:\-,\s]*) \])?		# optional ACL
+		(?:\s+ \[ ([^\]]*) \])?			# optional ACL
 		(?:\s*\#.*)?				# optional comment
 		$"x;
 
@@ -1619,8 +1625,9 @@ sub get_vartypes_map() {
 
 				if (!defined($acltext)) {
 					$acltext = "";
+					$acls = undef;
 				}
-				while ($acltext =~ s,^([\w.]+):([acdprw]*)(?:\,\s*|$),,) {
+				while ($acltext =~ s,^([\w.]+|_):([adpsu]*)(?:\,\s*|$),,) {
 					my ($subject, $perms) = ($1, $2);
 
 					use constant ACL_shortcuts => {
@@ -1629,7 +1636,7 @@ sub get_vartypes_map() {
 						"h" => qr"(?:^|/)hacks\.mk$",
 						"m" => qr"(?:^|/)Makefile$",
 						"o" => qr"(?:^|/)options\.mk$",
-						"s" => qr"/mk/"
+						"_" => qr".*",
 					};
 
 					push(@{$acls}, [exists(ACL_shortcuts->{$subject}) ? ACL_shortcuts->{$subject} : qr"(?:^|/)\Q${subject}\E$", $perms]);
@@ -3085,7 +3092,7 @@ sub checkline_mk_vardef($$$) {
 
 	} elsif (exists(get_vartypes_map()->{$varbase})) {
 		my $perms = get_vartypes_map()->{$varbase}->perms($line->fname);
-		my $needed = { "=" => "w", "!=" => "w", "?=" => "d", "+=" => "a", ":=" => "c" }->{$op};
+		my $needed = { "=" => "s", "!=" => "s", "?=" => "d", "+=" => "a", ":=" => "s" }->{$op};
 
 		if (!defined($perms)) {
 			$opt_debug and $line->log_warning("No ACL definition for ${varname}.");
@@ -3312,6 +3319,11 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 			$line->log_warning("Invalid identifier \"${value}\".");
 		}
 
+	} elsif ($type eq "Integer") {
+		if ($value !~ qr"^\d+$") {
+			$line->log_warning("${varname} must be a valid integer.");
+		}
+
 	} elsif ($type eq "LdFlag") {
 		if ($value =~ qr"^-L(.*)") {
 			my ($dirname) = ($1);
@@ -3449,9 +3461,6 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 				"Each of these components may be a shell globbing expression.",
 				"Examples: NetBSD-*-i386, *-*-*, Linux-*-*.");
 		}
-
-	} elsif ($type eq "Readonly") {
-		$line->log_error("\"${varname}\" is a read-only variable and therefore must not be modified.");
 
 	} elsif ($type eq "RelativePkgDir") {
 		checkline_relative_pkgdir($line, $value);
@@ -3594,9 +3603,6 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 		} elsif ($value !~ qr"^[0-9_a-z]+$") {
 			$line->log_warning("Invalid user or group name \"${value}\".");
 		}
-
-	} elsif ($type eq "Userdefined") {
-		$line->log_error("\"${varname}\" may only be set by the user, not the package.");
 
 	} elsif ($type eq "Varname") {
 		if ($value ne "" && $value_novar eq "") {
