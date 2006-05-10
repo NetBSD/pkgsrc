@@ -14,7 +14,7 @@ The pkgsrc Developers
 
 Copyright (C) 1994-2005 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.12 2006/02/18 01:46:43 rillig Exp $
+$NetBSD: pkgsrc.xml,v 1.14 2006/05/10 20:56:00 rillig Exp $
 
 Abstract
 
@@ -158,7 +158,7 @@ II. The pkgsrc developer's guide
         11.2. Writing buildlink3.mk files
 
             11.2.1. Anatomy of a buildlink3.mk file
-            11.2.2. Updating BUILDLINK_DEPENDS.pkg in buildlink3.mk files
+            11.2.2. Updating BUILDLINK_API_DEPENDS.pkg in buildlink3.mk files
 
         11.3. Writing builtin.mk files
 
@@ -289,10 +289,23 @@ II. The pkgsrc developer's guide
         18.4. Updating a package to a newer version
         18.5. Moving a package in pkgsrc
 
-    19. Porting pkgsrc
+    19. Frequently Asked Questions
 
-        19.1. Porting pkgsrc to a new operating system
-        19.2. Adding support for a new compiler
+III. The pkgsrc infrastructure
+
+    20. Regression tests
+
+        20.1. The regression tests framework
+        20.2. Running the regression tests
+        20.3. Adding a new regression test
+
+            20.3.1. Overridable functions
+            20.3.2. Helper functions
+
+    21. Porting pkgsrc
+
+        21.1. Porting pkgsrc to a new operating system
+        21.2. Adding support for a new compiler
 
 A. A simple example package: bison
 
@@ -1165,11 +1178,13 @@ install them first. For the following platforms, prebuilt versions of the
 package tools are available and can simply be downloaded and unpacked in the /
 directory:
 
-+--------------------------------------------------------------------+
-|  Platform  |                          URL                          |
-|------------+-------------------------------------------------------|
-|Solaris 5.10|http://public.enst.fr/pkgsrc/packages/bootstrap-pkgsrc/|
-+--------------------------------------------------------------------+
++------------------------------------------------------------------------+
+| Platform |                             URL                             |
+|----------+-------------------------------------------------------------|
+|Solaris 9 |ftp://ftp0.mh.bbc.co.uk/pub/pkgsrc/packages/bootstrap-pkgsrc/|
+|----------+-------------------------------------------------------------|
+|Solaris 10|http://public.enst.fr/pkgsrc/packages/bootstrap-pkgsrc/      |
++------------------------------------------------------------------------+
 
 These prebuilt package tools use /usr/pkg for the base directory, and /var/db/
 pkg for the database of installed packages. If you cannot use these directories
@@ -1189,17 +1204,22 @@ you should insert the output of uname -r, and for ARCH the output of uname -p.
 For some other platforms, binary packages can be found at the following
 locations:
 
-+---------------------------------------------------+
-|  Platform  |                 URL                  |
-|------------+--------------------------------------|
-|Solaris 5.10|http://public.enst.fr/pkgsrc/packages/|
-+---------------------------------------------------+
++-------------------------------------------------------+
+| Platform |                    URL                     |
+|----------+--------------------------------------------|
+|Solaris 9 |ftp://ftp0.mh.bbc.co.uk/pub/pkgsrc/packages/|
+|----------+--------------------------------------------|
+|Solaris 10|http://public.enst.fr/pkgsrc/packages/      |
++-------------------------------------------------------+
 
-In each of these directories, there is a subdirectory All that contains all the
-binary packages. Further, there are subdirectories for categories that contain
-symbolic links that point to the actual binary package in ../All. This
-directory layout is used for all package repositories, no matter if they are
-accessed via HTTP, FTP, NFS, CD-ROM, or the local filesystem.
+Most of these directories contain the pkgsrc distribution for multiple
+platforms. Select the appropriate subdirectories, according to your machine
+architecture and operating system, until you find a directory called All. This
+directory contains all the binary packages. Further, there are subdirectories
+for categories that contain symbolic links that point to the actual binary
+package in ../All. This directory layout is used for all package repositories,
+no matter if they are accessed via HTTP, FTP, NFS, CD-ROM, or the local
+filesystem.
 
 4.1.2. Installing binary packages
 
@@ -2198,7 +2218,7 @@ on ftp.NetBSD.org, but downloading the entire directory may not be appropriate.
 
 The answer here is to do a make fetch-list in /usr/pkgsrc or one of its
 subdirectories, carry the resulting list to your machine at work/school and use
-it there. If you don't have a NetBSD-compatible ftp(1) (like lukemftp) at work,
+it there. If you don't have a NetBSD-compatible ftp(1) (like tnftp) at work,
 don't forget to set FETCH_CMD to something that fetches a URL:
 
 At home:
@@ -2354,7 +2374,7 @@ Table of Contents
     11.2. Writing buildlink3.mk files
 
         11.2.1. Anatomy of a buildlink3.mk file
-        11.2.2. Updating BUILDLINK_DEPENDS.pkg in buildlink3.mk files
+        11.2.2. Updating BUILDLINK_API_DEPENDS.pkg in buildlink3.mk files
 
     11.3. Writing builtin.mk files
 
@@ -2484,10 +2504,7 @@ Table of Contents
     18.4. Updating a package to a newer version
     18.5. Moving a package in pkgsrc
 
-19. Porting pkgsrc
-
-    19.1. Porting pkgsrc to a new operating system
-    19.2. Adding support for a new compiler
+19. Frequently Asked Questions
 
 Chapter 8. Package components - files, directories and contents
 
@@ -2577,12 +2594,12 @@ exactly in the order given here.
     Note the trailing slash after the subdirectory name.
 
     If the package has multiple DISTFILES or multiple PATCHFILES from different
-    sites, set SITES_foo to a list of URIs where file "foo" may be found. "foo"
+    sites, set SITES.foo to a list of URIs where file "foo" may be found. "foo"
     includes the suffix, e.g.:
 
         DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
         DISTFILES+=     foo-file.tar.gz
-        SITES_foo-file.tar.gz= \
+        SITES.foo-file.tar.gz= \
                 http://www.somewhere.com/somehow/ \
                 http://www.somewhereelse.com/mirror/somehow/
 
@@ -3112,13 +3129,6 @@ ${OPSYS}, ${LOWER_OPSYS}, ${OS_VERSION}
 
       * ${OS_VERSION} - "uname -r"
 
-${PKGLOCALEDIR}
-
-    Packages that install locale files should list them in the PLIST as "$
-    {PKGLOCALEDIR}/locale/de/LC_MESSAGES/..." instead of "share/locale/de/
-    LC_MESSAGES/...". This properly handles the fact that different operating
-    systems expect locale files to be either in share or lib by default.
-
 For a complete list of values which are replaced by default, please look in
 bsd.pkg.mk (and search for PLIST_SUBST).
 
@@ -3215,7 +3225,7 @@ Table of Contents
 11.2. Writing buildlink3.mk files
 
     11.2.1. Anatomy of a buildlink3.mk file
-    11.2.2. Updating BUILDLINK_DEPENDS.pkg in buildlink3.mk files
+    11.2.2. Updating BUILDLINK_API_DEPENDS.pkg in buildlink3.mk files
 
 11.3. Writing builtin.mk files
 
@@ -3271,7 +3281,7 @@ The buildlink3.mk files usually define the required dependencies. If you need a
 newer version of the dependency when using buildlink3.mk files, then you can
 define it in your Makefile; for example:
 
-    BUILDLINK_DEPENDS.foo+=   foo>=1.1.0
+    BUILDLINK_API_DEPENDS.foo+=   foo>=1.1.0
     .include "../../category/foo/buildlink3.mk"
 
 There are several buildlink3.mk files in pkgsrc/mk that handle special package
@@ -3338,7 +3348,7 @@ tiff:
     BUILDLINK_PACKAGES+=    tiff
 
     .if !empty(TIFF_BUILDLINK3_MK:M+)
-    BUILDLINK_DEPENDS.tiff+=        tiff>=3.6.1
+    BUILDLINK_API_DEPENDS.tiff+=        tiff>=3.6.1
     BUILDLINK_PKGSRCDIR.tiff?=      ../../graphics/tiff
     .endif  # TIFF_BUILDLINK3_MK
 
@@ -3362,11 +3372,10 @@ within a buildlink3.mk file.
 The third section is protected from multiple inclusion and controls how the
 dependency on pkg is added. Several important variables are set in the section:
 
-  * BUILDLINK_DEPENDS.pkg is the actual dependency recorded in the installed
-    package; this should always be set using += to ensure that we're appending
-    to any pre-existing list of values. This variable should be set to the
-    first version of the package that had the last change in the major number
-    of a shared library or that had a major API change.
+  * BUILDLINK_API_DEPENDS.pkg is the actual dependency recorded in the
+    installed package; this should always be set using += to ensure that we're
+    appending to any pre-existing list of values. This variable should be set
+    to the first version of the package that had an API change.
 
   * BUILDLINK_PKGSRCDIR.pkg is the location of the pkg pkgsrc directory.
 
@@ -3415,29 +3424,36 @@ dependencies. Including these buildlink3.mk files means that the headers and
 libraries for these dependencies are also symlinked into ${BUILDLINK_DIR}
 whenever the pkg buildlink3.mk file is included.
 
-11.2.2. Updating BUILDLINK_DEPENDS.pkg in buildlink3.mk files
+11.2.2. Updating BUILDLINK_API_DEPENDS.pkg in buildlink3.mk files
 
-There are two situations that require increasing the dependency listed in
-BUILDLINK_DEPENDS.pkg after a package update:
+The situation that requires increasing the dependency listed in
+BUILDLINK_API_DEPENDS.pkg after a package update is when the API or interface
+to the header files change.
 
- 1. if the sonames (major number of the library version) of any installed
-    shared libraries change.
-
- 2. if the API or interface to the header files change.
-
-In these cases, BUILDLINK_DEPENDS.pkg should be adjusted to require at least
+In this case, BUILDLINK_API_DEPENDS.pkg should be adjusted to require at least
 the new package version. In some cases, the packages that depend on this new
 version may need their PKGREVISIONs increased and, if they have buildlink3.mk
-files, their BUILDLINK_DEPENDS.pkg adjusted, too. This is needed so that binary
-packages made using it will require the correct package dependency and not
-settle for an older one which will not contain the necessary shared libraries.
+files, their BUILDLINK_API_DEPENDS.pkg adjusted, too. This is needed so pkgsrc
+will require the correct package dependency and not settle for an older one
+when building the source.
 
-Please take careful consideration before adjusting BUILDLINK_DEPENDS.pkg as we
-don't want to cause unneeded package deletions and rebuilds. In many cases, new
-versions of packages work just fine with older dependencies. See
-Section 16.1.4, "Handling dependencies" for more information about dependencies
-on other packages, including the BUILDLINK_RECOMMENDED and RECOMMENDED
-definitions.
+BUILDLINK_ABI_DEPENDS.pkg should be increased when the binary interface or
+sonames (major number of the library version) of any installed shared libraries
+change. This is needed so that binary packages made using it will require the
+correct package dependency and not settle for an older one which will not
+contain the necessary shared libraries.
+
+See Section 16.1.4, "Handling dependencies" for more information about
+dependencies on other packages, including the BUILDLINK_ABI_DEPENDS and
+ABI_DEPENDS definitions.
+
+Please take careful consideration before adjusting BUILDLINK_API_DEPENDS.pkg or
+BUILDLINK_ABI_DEPENDS.pkg as we don't want to cause unneeded package deletions
+and rebuilds. In many cases, new versions of packages work just fine with older
+dependencies.
+
+Also it is not needed to set BUILDLINK_ABI_DEPENDS.pkg when it is identical to
+BUILDLINK_API_DEPENDS.pkg.
 
 11.3. Writing builtin.mk files
 
@@ -3479,7 +3495,7 @@ The following is the recommended template for builtin.mk files:
     .if !defined(USE_BUILTIN.foo)
     USE_BUILTIN.foo?=       ${IS_BUILTIN.foo}
     .  if defined(BUILTIN_PKG.foo)
-    .    for _depend_ in ${BUILDLINK_DEPENDS.foo}
+    .    for _depend_ in ${BUILDLINK_API_DEPENDS.foo}
     .      if !empty(USE_BUILTIN.foo:M[yY][eE][sS])
     USE_BUILTIN.foo!=                                                       \
           if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.foo}; then     \
@@ -3512,13 +3528,13 @@ internally within the builtin.mk file.
 
 The third section sets USE_BUILTIN.pkg and is required in all builtin.mk files.
 The code in this section must make the determination whether the built-in
-software is adequate to satisfy the dependencies listed in BUILDLINK_DEPENDS.
-pkg. This is typically done by comparing BUILTIN_PKG.pkg against each of the
-dependencies in BUILDLINK_DEPENDS.pkg. USE_BUILTIN.pkg must be set to the
-correct value by the end of the builtin.mk file. Note that USE_BUILTIN.pkg may
-be "yes" even if IS_BUILTIN.pkg is "no" because we may make the determination
-that the built-in version of the software is similar enough to be used as a
-replacement.
+software is adequate to satisfy the dependencies listed in
+BUILDLINK_API_DEPENDS.pkg. This is typically done by comparing BUILTIN_PKG.pkg
+against each of the dependencies in BUILDLINK_API_DEPENDS.pkg. USE_BUILTIN.pkg
+must be set to the correct value by the end of the builtin.mk file. Note that
+USE_BUILTIN.pkg may be "yes" even if IS_BUILTIN.pkg is "no" because we may make
+the determination that the built-in version of the software is similar enough
+to be used as a replacement.
 
 The last section is guarded by CHECK_BUILTIN.pkg, and includes code that uses
 the value of USE_BUILTIN.pkg set in the previous section. This typically
@@ -3813,24 +3829,28 @@ If a package needs to create special users and/or groups during installation,
 it can do so by using the pkginstall framework.
 
 Users can be created by adding entries to the PKG_USERS variable. Each entry
-has the following syntax, which mimics /etc/passwd:
+has the following syntax:
 
-    user:group[:[userid][:[descr][:[home][:shell]]]]
+    user:group
 
-Only the user and group are required; everything else is optional, but the
-colons must be in the right places when specifying optional bits. By default, a
-new user will have home directory /nonexistent, and login shell /sbin/nologin
-unless they are specified as part of the user element. Note that if the
-description contains spaces, then spaces should be backslash-escaped, as in:
+Further specification of user details may be done by setting per-user
+variables. PKG_UID.user is the numeric UID for the user. PKG_GECOS.user is the
+user's description or comment. PKG_HOME.user is the user's home directory, and
+defaults to /nonexistent if not specified. PKG_SHELL.user is the user's shell,
+and defaults to /sbinno/login if not specified.
 
-    foo:foogrp::The\ Foomister
+Similarly, groups can be created by adding entries to the PKG_GROUPS variable,
+whose syntax is:
 
-Similarly, groups can be created using the PKG_GROUPS variable, whose syntax
-is:
+    group
 
-    group[:groupid]
+The numeric GID of the group may be set by defining PKG_GID.group.
 
-As before, only the group name is required; the numeric identifier is optional.
+If a package needs to create the users and groups at an earlier stage, then it
+can set USERGROUP_PHASE to either configure or build to indicate the phase
+before which the users and groups are created. In this case, the numeric UIDs
+and GIDs of the created users and groups are automatically hardcoded into the
+final installation scripts.
 
 12.5. System shells
 
@@ -4196,7 +4216,7 @@ them using commands of the form:
     ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 
 where ${site} varies through several possibilities in turn: first,
-MASTER_SITE_OVERRIDE is tried, then the sites specified in either SITES_file if
+MASTER_SITE_OVERRIDE is tried, then the sites specified in either SITES.file if
 defined, else MASTER_SITES or PATCH_SITES, as applies, then finally the value
 of MASTER_SITE_BACKUP. The order of all except the first can be optionally
 sorted by the user, via setting either MASTER_SORT_AWK or MASTER_SORT_REGEX.
@@ -4261,7 +4281,33 @@ This is covered in Chapter 15, Tools needed for building or running.
 
 14.10. The wrapper phase
 
-[TODO]
+This phase creates wrapper programs for the compilers and linkers. The
+following variables can be used to tweak the wrappers.
+
+ECHO_WRAPPER_MSG
+
+    The command used to print progress messages. Does nothing by default. Set
+    to ${ECHO} to see the progress messages.
+
+WRAPPER_DEBUG
+
+    This variable can be set to yes (default) or no, depending on whether you
+    want additional information in the wrapper log file.
+
+WRAPPER_UPDATE_CACHE
+
+    This variable can be set to yes or no, depending on whether the wrapper
+    should use its cache, which will improve the speed. The default value is
+    yes, but is forced to no if the platform does not support it.
+
+WRAPPER_REORDER_CMDS
+
+    A list of reordering commands. A reordering command has the form reorder:l:
+    lib1:lib2. It ensures that that -llib1 occurs before -llib2.
+
+WRAPPER_TRANSFORM_CMDS
+
+    A list of transformation commands. [TODO: investigate further]
 
 14.11. The configure phase
 
@@ -4903,18 +4949,18 @@ version numbers recognized by pkg_info(1).
 
     Please note that such dependencies should only be updated if a package
     requires a newer pre-requisite, but not to denote recommendations such as
-    security updates or ABI changes that do not prevent a package from building
-    correctly. Such recommendations can be expressed using RECOMMENDED:
+    ABI changes that do not prevent a package from building correctly. Such
+    recommendations can be expressed using ABI_DEPENDS:
 
-        RECOMMENDED+=   tiff>=3.6.1:../../graphics/tiff
+        ABI_DEPENDS+=   tiff>=3.6.1:../../graphics/tiff
 
     In addition to the above DEPENDS line, this denotes that while a package
     will build against tiff>=3.5.4, at least version 3.6.1 is recommended.
-    RECOMMENDED entries will be turned into dependencies unless explicitly
+    ABI_DEPENDS entries will be turned into dependencies unless explicitly
     ignored (in which case a warning will be printed).
 
-    To ignore these dependency recommendations and just use the required
-    DEPENDS, set IGNORE_RECOMMENDED=YES. This may make it easier and faster to
+    To ignore these ABI dependency recommendations and just use the required
+    DEPENDS, set USE_ABI_DEPENDS=NO. This may make it easier and faster to
     update packages built using pkgsrc, since older compatible dependencies can
     continue to be used. This is useful for people who watch their rebuilds
     very carefully; it is not very good as a general-purpose hammer. If you use
@@ -4925,9 +4971,9 @@ version numbers recognized by pkg_info(1).
     ftp.NetBSD.org by developers and should not be used across different
     systems that may have different versions of binary packages installed.
 
-    For security fixes, please update the package vulnerabilities file as well
-    as setting RECOMMENDED, see Section 16.1.8, "Handling packages with
-    security problems" for more information.
+    For security fixes, please update the package vulnerabilities file. See
+    Section 16.1.8, "Handling packages with security problems" for more
+    information.
 
  4. If your package needs some executable to be able to run correctly and if
     there's no buildlink3.mk file, this is specified using the DEPENDS
@@ -5003,9 +5049,7 @@ in the same directory to update the file on ftp.NetBSD.org.
 
 After fixing the vulnerability by a patch, its PKGREVISION should be increased
 (this is of course not necessary if the problem is fixed by using a newer
-release of the software). In addition, if a buildlink3.mk file exists for an
-affected package, a corresponding BUILDLINK_RECOMMENDED.pkg entry should be
-added or updated in it.
+release of the software).
 
 Also, if the fix should be applied to the stable pkgsrc branch, be sure to
 submit a pullup request!
@@ -5494,28 +5538,24 @@ substituted for in the PLIST.
 16.5.7. Packages installing info files
 
 Some packages install info files or use the "makeinfo" or "install-info"
-commands. Each of the info files:
+commands. INFO_FILES should be defined in the package Makefile so that INSTALL
+and DEINSTALL scripts will be generated to handle registration of the info
+files in the Info directory file. The "install-info" command used for the info
+files registration is either provided by the system, or by a special purpose
+package automatically added as dependency if needed.
 
-  * is considered to be installed in the directory ${PREFIX}/${INFO_DIR},
+PKGINFODIR is the directory under ${PREFIX} where info files are primarily
+located. PKGINFODIR defaults to "info" and can be overridden by the user.
 
-  * is registered in the Info directory file ${PREFIX}/${INFO_DIR}/dir,
+The info files for the package should be listed in the package PLIST; however
+any split info files need not be listed.
 
-  * and must be listed as a filename in the INFO_FILES variable in the package
-    Makefile.
-
-INFO_DIR defaults to "info" and can be overridden in the package Makefile.
-INSTALL and DEINSTALL scripts will be generated to handle registration of the
-info files in the Info directory file. The "install-info" command used for the
-info files registration is either provided by the system, or by a special
-purpose package automatically added as dependency if needed.
-
-A package which needs the "makeinfo" command at build time must define the
-variable USE_MAKEINFO in its Makefile. If a minimum version of the "makeinfo"
-command is needed it should be noted with the TEXINFO_REQD variable in the
-package Makefile. By default, a minimum version of 3.12 is required. If the
-system does not provide a makeinfo command or if it does not match the required
-minimum, a build dependency on the devel/gtexinfo package will be added
-automatically.
+A package which needs the "makeinfo" command at build time must add "makeinfo"
+to USE_TOOLS in its Makefile. If a minimum version of the "makeinfo" command is
+needed it should be noted with the TEXINFO_REQD variable in the package
+Makefile. By default, a minimum version of 3.12 is required. If the system does
+not provide a makeinfo command or if it does not match the required minimum, a
+build dependency on the devel/gtexinfo package will be added automatically.
 
 The build and installation process of the software provided by the package
 should not use the install-info command as the registration of info files is
@@ -5527,8 +5567,8 @@ the install-info and makeinfo commands in a directory listed early in PATH.
 
 The script overriding install-info has no effect except the logging of a
 message. The script overriding makeinfo logs a message and according to the
-value of USE_MAKEINFO and TEXINFO_REQD either run the appropriate makeinfo
-command or exit on error.
+value of TEXINFO_REQD either runs the appropriate makeinfo command or exit on
+error.
 
 16.5.8. Packages installing man pages
 
@@ -5967,18 +6007,161 @@ possibly untested features.
 
     (and any packages from step 5, of course).
 
-Chapter 19. Porting pkgsrc
+Chapter 19. Frequently Asked Questions
+
+This section contains the answers to questions that may arise when you are
+writing a package. If you don't find your question answered here, first have a
+look in the other chapters, and if you still don't have the answer, ask on the
+pkgsrc-users mailing list.
+
+19.1. What is the difference between MAKEFLAGS, .MAKEFLAGS and MAKE_FLAGS?
+19.2. What is the difference between MAKE, GMAKE and MAKE_PROGRAM?
+19.3. What is the difference between CC, PKG_CC and PKGSRC_COMPILER?
+19.4. What is the difference between BUILDLINK_LDFLAGS, BUILDLINK_LDADD and
+    BUILDLINK_LIBS?
+19.5. Why does make show-var VARNAME=BUILDLINK_PREFIX.foo say it's empty?
+
+19.1. What is the difference between MAKEFLAGS, .MAKEFLAGS and MAKE_FLAGS?
+
+      MAKEFLAGS are the flags passed to the pkgsrc-internal invocations of make
+      (1), while MAKE_FLAGS are the flags that are passed to the MAKE_PROGRAM
+      when building the package. [FIXME: What is .MAKEFLAGS for?]
+
+19.2. What is the difference between MAKE, GMAKE and MAKE_PROGRAM?
+
+      MAKE is the path to the make(1) program that is used in the pkgsrc
+      infrastructure. GMAKE is the path to GNU Make, but you need to say
+      USE_TOOLS+=gmake to use that. MAKE_PROGRAM is the path to the Make
+      program that is used for building the package.
+
+19.3. What is the difference between CC, PKG_CC and PKGSRC_COMPILER?
+
+      CC is the path to the real C compiler, which can be configured by the
+      pkgsrc user. PKG_CC is the path to the compiler wrapper. PKGSRC_COMPILER
+      is not a path to a compiler, but the type of compiler that should be
+      used. See mk/compiler.mk for more information about the latter variable.
+
+19.4. What is the difference between BUILDLINK_LDFLAGS, BUILDLINK_LDADD and
+      BUILDLINK_LIBS?
+
+      [FIXME]
+
+19.5. Why does make show-var VARNAME=BUILDLINK_PREFIX.foo say it's empty?
+
+      For optimization reasons, some variables are only available in the
+      "wrapper" phase and later. To "simulate" the wrapper phase, append
+      PKG_PHASE=wrapper to the above command.
+
+Part III. The pkgsrc infrastructure
 
 Table of Contents
 
-19.1. Porting pkgsrc to a new operating system
-19.2. Adding support for a new compiler
+20. Regression tests
+
+    20.1. The regression tests framework
+    20.2. Running the regression tests
+    20.3. Adding a new regression test
+
+        20.3.1. Overridable functions
+        20.3.2. Helper functions
+
+21. Porting pkgsrc
+
+    21.1. Porting pkgsrc to a new operating system
+    21.2. Adding support for a new compiler
+
+Chapter 20. Regression tests
+
+Table of Contents
+
+20.1. The regression tests framework
+20.2. Running the regression tests
+20.3. Adding a new regression test
+
+    20.3.1. Overridable functions
+    20.3.2. Helper functions
+
+The pkgsrc infrastructure consists of a large codebase, and there are many
+corners where every little bit of a file is well thought out, making pkgsrc
+likely to fail as soon as anything is changed near those parts. To prevent most
+changes from breaking anything, a suite of regression tests should go along
+with every important part of the pkgsrc infrastructure. This chapter describes
+how regression tests work in pkgsrc and how you can add new tests.
+
+20.1. The regression tests framework
+
+20.2. Running the regression tests
+
+You first need to install the pkgtools/pkg_regress package, which provides the
+pkg_regress command. Then you can simply run that command, which will run all
+tests in the regress category.
+
+20.3. Adding a new regression test
+
+Every directory in the regress category that contains a file called spec is
+considered a regression test. This file is a shell program that is included by
+the pkg_regress command. The following functions can be overridden to suit your
+needs.
+
+20.3.1. Overridable functions
+
+These functions do not take any parameters. They are all called in "set -e"
+mode, so you should be careful to check the exitcodes of any commands you run
+in the test.
+
+do_setup()
+
+    This function prepares the environment for the test. By default it does
+    nothing.
+
+do_test()
+
+    This function runs the actual test. By default, it calls TEST_MAKE with the
+    arguments MAKEARGS_TEST and writes its output including error messages into
+    the file TEST_OUTFILE.
+
+check_result()
+
+    This function is run after the test and is typically used to compare the
+    actual output from the one that is expected. It can make use of the various
+    helper functions from the next section.
+
+do_cleanup()
+
+    This function cleans everything up after the test has been run. By default
+    it does nothing.
+
+20.3.2. Helper functions
+
+exit_status(expected)
+
+    This function compares the exitcode of the do_test() function with its
+    first parameter. If they differ, the test will fail.
+
+output_require(regex...)
+
+    This function checks for each of its parameters if the output from do_test
+    () matches the extended regular expression. If it does not, the test will
+    fail.
+
+output_prohibit(regex...)
+
+    This function checks for each of its parameters if the output from do_test
+    () does not match the extended regular expression. If any of the regular
+    expressions matches, the test will fail.
+
+Chapter 21. Porting pkgsrc
+
+Table of Contents
+
+21.1. Porting pkgsrc to a new operating system
+21.2. Adding support for a new compiler
 
 The pkgsrc system has already been ported to many operating systems, hardware
 architectures and compilers. This chapter explains the necessary steps to make
 pkgsrc even more portable.
 
-19.1. Porting pkgsrc to a new operating system
+21.1. Porting pkgsrc to a new operating system
 
 To port pkgsrc to a new operating system (called MyOS in this example), you
 need to touch the following files:
@@ -6026,7 +6209,7 @@ mk/tools/MyOS.mk
 Now, you should be able to build some basic packages, like lang/perl5, shells/
 bash.
 
-19.2. Adding support for a new compiler
+21.2. Adding support for a new compiler
 
 TODO
 
