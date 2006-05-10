@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2005/11/18 11:23:34 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/05/10 16:52:27 drochner Exp $
 bin/ufraw
 bin/ufraw-batch
 lib/gimp/2.0/plug-ins/ufraw-gimp
 man/man1/ufraw.1
 share/applications/ufraw.desktop
 share/pixmaps/ufraw.png
-@dirrm share/pixmaps
-@dirrm share/applications
