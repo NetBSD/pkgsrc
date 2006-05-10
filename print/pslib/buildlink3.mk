@@ -1,14 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:32 rillig Exp $
-# XXX
-# XXX This file was created automatically using createbuildlink-3.9.
-# XXX After this file has been verified as correct, the comment lines
-# XXX beginning with "XXX" should be removed.  Please do not commit
-# XXX unverified buildlink3.mk files.
-# XXX
-# XXX Packages that only install static libraries or headers should
-# XXX include the following line:
-# XXX
-# XXX	BUILDLINK_DEPMETHOD.pslib?=	build
+# $NetBSD: buildlink3.mk,v 1.6 2006/05/10 09:02:21 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PSLIB_BUILDLINK3_MK:=	${PSLIB_BUILDLINK3_MK}+
