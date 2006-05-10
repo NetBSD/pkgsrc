@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.types.xml,v 1.5 2006/05/10 13:52:49 rillig Exp $ -->
+<!-- $NetBSD: chap.types.xml,v 1.6 2006/05/10 15:31:41 rillig Exp $ -->
 
 <chapter id="types">
 <title>The &pkglint; type system</title>
@@ -113,6 +113,7 @@
 	<row><entry><filename>buildlink3.mk</filename></entry><entry>b</entry></row>
 	<row><entry><filename>hacks.mk</filename></entry><entry>h</entry></row>
 	<row><entry><filename>options.mk</filename></entry><entry>o</entry></row>
+	<row><entry><filename>*.mk</filename></entry><entry>k</entry></row>
 	<row><entry>any file</entry><entry>_</entry></row>
 	</tbody>
 	</tgroup>
