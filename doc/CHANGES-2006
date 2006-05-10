@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.176 2006/05/09 18:13:32 bouyer Exp $
+$NetBSD: CHANGES-2006,v 1.177 2006/05/10 16:47:15 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2430,3 +2430,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated editors/vim-share to 7.0.0 [martti 2006-05-09]
 	Updated net/nagios-base to 2.3 [bouyer 2006-05-09]
 	Updated net/nagios-nsca to 2.6 [bouyer 2006-05-09]
+	Updated x11/xephem to 3.7.1 [gdt 2006-05-10]
