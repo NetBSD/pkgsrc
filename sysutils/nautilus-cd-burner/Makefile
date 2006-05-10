@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/04/17 13:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2006/05/10 16:40:03 drochner Exp $
 #
 
 DISTNAME=	nautilus-cd-burner-2.14.1
@@ -18,6 +18,7 @@ USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+USE_LANGUAGES+=		c++
 
 PKGCONFIG_OVERRIDE=	libnautilus-burn.pc.in
 
