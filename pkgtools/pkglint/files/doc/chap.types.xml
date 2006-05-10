@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.types.xml,v 1.7 2006/05/10 17:01:44 rillig Exp $ -->
+<!-- $NetBSD: chap.types.xml,v 1.8 2006/05/10 17:14:08 rillig Exp $ -->
 
 <chapter id="types">
 <title>The &pkglint; type system</title>
@@ -100,7 +100,9 @@
 	<filename>buildlink3.mk</filename> are valid ACL subjects. Since
 	some names occur over an over in pkgsrc, these can be
 	abbreviated as shown in <xref linkend="types.acl.subjects.abbr"
-	/>. The possible actions on a variable are shown in <xref
+	/>. The character <literal>*</literal> is a placeholder for zero
+	or more arbitrary characters, like in the shell. The possible
+	actions on a variable are shown in <xref
 	linkend="types.acl.perms" />.</para>
 
 	<table id="types.acl.subjects.abbr">
@@ -113,8 +115,7 @@
 	<row><entry><filename>buildlink3.mk</filename></entry><entry>b</entry></row>
 	<row><entry><filename>hacks.mk</filename></entry><entry>h</entry></row>
 	<row><entry><filename>options.mk</filename></entry><entry>o</entry></row>
-	<row><entry><filename>*.mk</filename></entry><entry>k</entry></row>
-	<row><entry>any file</entry><entry>_</entry></row>
+	<row><entry>any file</entry><entry>*</entry></row>
 	</tbody>
 	</tgroup>
 	</table>
