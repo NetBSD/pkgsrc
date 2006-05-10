@@ -1,0 +1,67 @@
+<!-- $NetBSD: devfaq.xml,v 1.1 2006/05/10 13:58:34 rillig Exp $ -->
+
+<chapter id="devfaq"> <?dbhtml filename="devfaq.html"?>
+<title>Frequently Asked Questions</title>
+
+	<para>This section contains the answers to questions that may
+	arise when you are writing a package. If you don't find your
+	question answered here, first have a look in the other chapters,
+	and if you still don't have the answer, ask on the
+	<literal>pkgsrc-users</literal> mailing list.</para>
+
+<qandaset>
+<qandaentry>
+
+	<question><para>What is the difference between
+	<varname>MAKEFLAGS</varname>, <varname>.MAKEFLAGS</varname> and
+	<varname>MAKE_FLAGS</varname>?</para></question>
+
+	<answer><para><varname>MAKEFLAGS</varname> are the flags passed
+	to the pkgsrc-internal invocations of &man.make.1;, while
+	<varname>MAKE_FLAGS</varname> are the flags that are passed to
+	the <varname>MAKE_PROGRAM</varname> when building the
+	package. [FIXME: What is .MAKEFLAGS for?]</para></answer>
+
+</qandaentry>
+<qandaentry>
+
+	<question><para>What is the difference between
+	<varname>MAKE</varname>, <varname>GMAKE</varname> and
+	<varname>MAKE_PROGRAM</varname>?</para></question>
+
+	<answer><para><varname>MAKE</varname> is the path to the
+	&man.make.1; program that is used in the pkgsrc
+	infrastructure. <varname>GMAKE</varname> is the path to GNU
+	Make, but you need to say <varname>USE_TOOLS+=gmake</varname> to
+	use that. <varname>MAKE_PROGRAM</varname> is the path to the
+	Make program that is used for building the
+	package.</para></answer>
+
+</qandaentry>
+<qandaentry>
+
+	<question><para>What is the difference between
+	<varname>CC</varname>, <varname>PKG_CC</varname> and
+	<varname>PKGSRC_COMPILER</varname>?</para></question>
+
+	<answer><para><varname>CC</varname> is the path to the real C
+	compiler, which can be configured by the pkgsrc user.
+	<varname>PKG_CC</varname> is the path to the compiler wrapper.
+	<varname>PKGSRC_COMPILER</varname> is <emphasis>not</emphasis> a
+	path to a compiler, but the type of compiler that should be
+	used. See <filename>mk/compiler.mk</filename> for more
+	information about the latter variable.</para></answer>
+
+</qandaentry>
+<qandaentry>
+
+	<question><para>What is the difference between
+	<varname>BUILDLINK_LDFLAGS</varname>,
+	<varname>BUILDLINK_LDADD</varname> and
+	<varname>BUILDLINK_LIBS</varname>?</para></question>
+
+	<answer><para>[FIXME]</para></answer>
+
+</qandaentry>
+</qandaset>
+</chapter>
