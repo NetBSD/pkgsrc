@@ -66,8 +66,8 @@ alink="#0000FF">
         </div>
 
         <div xmlns="http://www.w3.org/TR/xhtml1/transitional">
-          <p xmlns="" class="pubdate">$NetBSD: pkgsrc.xml,v 1.12
-          2006/02/18 01:46:43 rillig Exp $</p>
+          <p xmlns="" class="pubdate">$NetBSD: pkgsrc.xml,v 1.14
+          2006/05/10 20:56:00 rillig Exp $</p>
         </div>
 
         <div>
@@ -549,7 +549,7 @@ alink="#0000FF">
                     <dt><span class="sect2"><a href=
                     "#updating-buildlink-depends">11.2.2. Updating
                     <code class=
-                    "varname">BUILDLINK_DEPENDS.<em class=
+                    "varname">BUILDLINK_API_DEPENDS.<em class=
                     "replaceable"><code>pkg</code></em></code> in
                     <code xmlns=
                     "http://www.w3.org/TR/xhtml1/transitional"
@@ -1023,17 +1023,58 @@ alink="#0000FF">
               </dl>
             </dd>
 
-            <dt><span class="chapter"><a href="#porting">19.
+            <dt><span class="chapter"><a href="#devfaq">19.
+            Frequently Asked Questions</a></span></dt>
+          </dl>
+        </dd>
+
+        <dt><span class="part"><a href="#infrastructure">III. The
+        pkgsrc infrastructure</a></span></dt>
+
+        <dd>
+          <dl>
+            <dt><span class="chapter"><a href="#regression">20.
+            Regression tests</a></span></dt>
+
+            <dd>
+              <dl>
+                <dt><span class="sect1"><a href=
+                "#regression.descr">20.1. The regression tests
+                framework</a></span></dt>
+
+                <dt><span class="sect1"><a href=
+                "#regression.run">20.2. Running the regression
+                tests</a></span></dt>
+
+                <dt><span class="sect1"><a href=
+                "#regression.new">20.3. Adding a new regression
+                test</a></span></dt>
+
+                <dd>
+                  <dl>
+                    <dt><span class="sect2"><a href=
+                    "#regression.fun.override">20.3.1. Overridable
+                    functions</a></span></dt>
+
+                    <dt><span class="sect2"><a href=
+                    "#regression.fun.helper">20.3.2. Helper
+                    functions</a></span></dt>
+                  </dl>
+                </dd>
+              </dl>
+            </dd>
+
+            <dt><span class="chapter"><a href="#porting">21.
             Porting pkgsrc</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect1"><a href=
-                "#porting.opsys">19.1. Porting pkgsrc to a new
+                "#porting.opsys">21.1. Porting pkgsrc to a new
                 operating system</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#porting.compiler">19.2. Adding support for a new
+                "#porting.compiler">21.2. Adding support for a new
                 compiler</a></span></dt>
               </dl>
             </dd>
@@ -3196,7 +3237,15 @@ alink="#0000FF">
 
               <tbody>
                 <tr>
-                  <td>Solaris 5.10</td>
+                  <td>Solaris 9</td>
+
+                  <td><code xmlns=
+                  "http://www.w3.org/TR/xhtml1/transitional" class=
+                  "filename">ftp://ftp0.mh.bbc.co.uk/pub/pkgsrc/packages/bootstrap-pkgsrc/</code></td>
+                </tr>
+
+                <tr>
+                  <td>Solaris 10</td>
 
                   <td><code xmlns=
                   "http://www.w3.org/TR/xhtml1/transitional" class=
@@ -3271,7 +3320,16 @@ alink="#0000FF">
 
                 <tbody>
                   <tr>
-                    <td>Solaris 5.10</td>
+                    <td>Solaris 9</td>
+
+                    <td><code xmlns=
+                    "http://www.w3.org/TR/xhtml1/transitional"
+                    class=
+                    "filename">ftp://ftp0.mh.bbc.co.uk/pub/pkgsrc/packages/</code></td>
+                  </tr>
+
+                  <tr>
+                    <td>Solaris 10</td>
 
                     <td><code xmlns=
                     "http://www.w3.org/TR/xhtml1/transitional"
@@ -3282,11 +3340,14 @@ alink="#0000FF">
               </table>
             </div>
 
-            <p>In each of these directories, there is a
-            subdirectory <code xmlns=
+            <p>Most of these directories contain the pkgsrc
+            distribution for multiple platforms. Select the
+            appropriate subdirectories, according to your machine
+            architecture and operating system, until you find a
+            directory called <code xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" class=
-            "filename">All</code> that contains all the binary
-            packages. Further, there are subdirectories for
+            "filename">All</code>. This directory contains all the
+            binary packages. Further, there are subdirectories for
             categories that contain symbolic links that point to
             the actual binary package in <code xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" class=
@@ -5921,8 +5982,8 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           NetBSD-compatible <a href=
           "http://netbsd.gw.com/cgi-bin/man-cgi?ftp+1+NetBSD-current">
           <span class="citerefentry"><span class=
-          "refentrytitle">ftp</span>(1)</span></a> (like lukemftp)
-          at work, don't forget to set <code class=
+          "refentrytitle">ftp</span>(1)</span></a> (like tnftp) at
+          work, don't forget to set <code class=
           "varname">FETCH_CMD</code> to something that fetches a
           URL:</p>
 
@@ -6359,8 +6420,9 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                   <dt><span class="sect2"><a href=
                   "#updating-buildlink-depends">11.2.2. Updating
                   <code class=
-                  "varname">BUILDLINK_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
-                  in <code xmlns=
+                  "varname">BUILDLINK_API_DEPENDS.<em class=
+                  "replaceable"><code>pkg</code></em></code> in
+                  <code xmlns=
                   "http://www.w3.org/TR/xhtml1/transitional" class=
                   "filename">buildlink3.mk</code>
                   files</a></span></dt>
@@ -6821,20 +6883,8 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             </dl>
           </dd>
 
-          <dt><span class="chapter"><a href="#porting">19. Porting
-          pkgsrc</a></span></dt>
-
-          <dd>
-            <dl>
-              <dt><span class="sect1"><a href=
-              "#porting.opsys">19.1. Porting pkgsrc to a new
-              operating system</a></span></dt>
-
-              <dt><span class="sect1"><a href=
-              "#porting.compiler">19.2. Adding support for a new
-              compiler</a></span></dt>
-            </dl>
-          </dd>
+          <dt><span class="chapter"><a href="#devfaq">19.
+          Frequently Asked Questions</a></span></dt>
         </dl>
       </div>
 
@@ -7008,7 +7058,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                 <p>If the package has multiple <code class=
                 "varname">DISTFILES</code> or multiple <code class=
                 "varname">PATCHFILES</code> from different sites,
-                set <code class="varname">SITES_foo</code> to a
+                set <code class="varname">SITES.foo</code> to a
                 list of URIs where file &#8220;<span class=
                 "quote">foo</span>&#8221; may be found.
                 &#8220;<span class="quote">foo</span>&#8221;
@@ -7016,7 +7066,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                 <pre class="programlisting">
     DISTFILES=      ${DISTNAME}${EXTRACT_SUFX}
     DISTFILES+=     foo-file.tar.gz
-    SITES_foo-file.tar.gz= \
+    SITES.foo-file.tar.gz= \
             http://www.somewhere.com/somehow/ \
             http://www.somewhereelse.com/mirror/somehow/
 </pre>
@@ -8319,24 +8369,6 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                   </ul>
                 </div>
               </dd>
-
-              <dt><span class="term"><code class=
-              "varname">${PKGLOCALEDIR}</code></span></dt>
-
-              <dd>
-                <p>Packages that install locale files should list
-                them in the PLIST as &#8220;<span class=
-                "quote">${PKGLOCALEDIR}/locale/de/LC_MESSAGES/...</span>&#8221;
-                instead of &#8220;<span class=
-                "quote">share/locale/de/LC_MESSAGES/...</span>&#8221;.
-                This properly handles the fact that different
-                operating systems expect locale files to be either
-                in <code xmlns=
-                "http://www.w3.org/TR/xhtml1/transitional" class=
-                "filename">share</code> or <code xmlns=
-                "http://www.w3.org/TR/xhtml1/transitional" class=
-                "filename">lib</code> by default.</p>
-              </dd>
             </dl>
           </div>
 
@@ -8590,7 +8622,8 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
 
                 <dt><span class="sect2"><a href=
                 "#updating-buildlink-depends">11.2.2. Updating
-                <code class="varname">BUILDLINK_DEPENDS.<em class=
+                <code class=
+                "varname">BUILDLINK_API_DEPENDS.<em class=
                 "replaceable"><code>pkg</code></em></code> in
                 <code xmlns=
                 "http://www.w3.org/TR/xhtml1/transitional" class=
@@ -8728,7 +8761,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           dependency when using buildlink3.mk files, then you can
           define it in your Makefile; for example:</p>
           <pre class="programlisting">
-    BUILDLINK_DEPENDS.foo+=   foo&gt;=1.1.0
+    BUILDLINK_API_DEPENDS.foo+=   foo&gt;=1.1.0
     .include "../../category/foo/buildlink3.mk"
 </pre>
 
@@ -8912,7 +8945,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
     BUILDLINK_PACKAGES+=    tiff
 
     .if !empty(TIFF_BUILDLINK3_MK:M+)
-    BUILDLINK_DEPENDS.tiff+=        tiff&gt;=3.6.1
+    BUILDLINK_API_DEPENDS.tiff+=        tiff&gt;=3.6.1
     BUILDLINK_PKGSRCDIR.tiff?=      ../../graphics/tiff
     .endif  # TIFF_BUILDLINK3_MK
 
@@ -8961,7 +8994,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
               <ul type="disc">
                 <li>
                   <p><code class=
-                  "varname">BUILDLINK_DEPENDS.<em class=
+                  "varname">BUILDLINK_API_DEPENDS.<em class=
                   "replaceable"><code>pkg</code></em></code> is the
                   actual dependency recorded in the installed
                   package; this should always be set using
@@ -8969,9 +9002,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                   to ensure that we're appending to any
                   pre-existing list of values. This variable should
                   be set to the first version of the package that
-                  had the last change in the major number of a
-                  shared library or that had a major API
-                  change.</p>
+                  had an API change.</p>
                 </li>
 
                 <li>
@@ -9150,37 +9181,24 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
                   <h3 class="title"><a name=
                   "updating-buildlink-depends"></a>11.2.2.&nbsp;Updating
                   <code class=
-                  "varname">BUILDLINK_DEPENDS.<em class="replaceable"><code>pkg</code></em></code>
-                  in <code xmlns=
+                  "varname">BUILDLINK_API_DEPENDS.<em class=
+                  "replaceable"><code>pkg</code></em></code> in
+                  <code xmlns=
                   "http://www.w3.org/TR/xhtml1/transitional" class=
                   "filename">buildlink3.mk</code> files</h3>
                 </div>
               </div>
             </div>
 
-            <p>There are two situations that require increasing the
+            <p>The situation that requires increasing the
             dependency listed in <code class=
-            "varname">BUILDLINK_DEPENDS.<em class=
+            "varname">BUILDLINK_API_DEPENDS.<em class=
             "replaceable"><code>pkg</code></em></code> after a
-            package update:</p>
+            package update is when the API or interface to the
+            header files change.</p>
 
-            <div class="orderedlist">
-              <ol type="1">
-                <li>
-                  <p>if the sonames (major number of the library
-                  version) of any installed shared libraries
-                  change.</p>
-                </li>
-
-                <li>
-                  <p>if the API or interface to the header files
-                  change.</p>
-                </li>
-              </ol>
-            </div>
-
-            <p>In these cases, <code class=
-            "varname">BUILDLINK_DEPENDS.<em class=
+            <p>In this case, <code class=
+            "varname">BUILDLINK_API_DEPENDS.<em class=
             "replaceable"><code>pkg</code></em></code> should be
             adjusted to require at least the new package version.
             In some cases, the packages that depend on this new
@@ -9189,26 +9207,45 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             have <code xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" class=
             "filename">buildlink3.mk</code> files, their
-            <code class="varname">BUILDLINK_DEPENDS.<em class=
+            <code class="varname">BUILDLINK_API_DEPENDS.<em class=
             "replaceable"><code>pkg</code></em></code> adjusted,
-            too. This is needed so that binary packages made using
-            it will require the correct package dependency and not
-            settle for an older one which will not contain the
-            necessary shared libraries.</p>
+            too. This is needed so pkgsrc will require the correct
+            package dependency and not settle for an older one when
+            building the source.</p>
 
-            <p>Please take careful consideration before adjusting
-            <code class="varname">BUILDLINK_DEPENDS.<em class=
-            "replaceable"><code>pkg</code></em></code> as we don't
-            want to cause unneeded package deletions and rebuilds.
-            In many cases, new versions of packages work just fine
-            with older dependencies. See <a href="#dependencies"
-            title=
+            <p><code class=
+            "varname">BUILDLINK_ABI_DEPENDS.<em class=
+            "replaceable"><code>pkg</code></em></code> should be
+            increased when the binary interface or sonames (major
+            number of the library version) of any installed shared
+            libraries change. This is needed so that binary
+            packages made using it will require the correct package
+            dependency and not settle for an older one which will
+            not contain the necessary shared libraries.</p>
+
+            <p>See <a href="#dependencies" title=
             "16.1.4.&nbsp;Handling dependencies">Section&nbsp;16.1.4,
             &#8220;Handling dependencies&#8221;</a> for more
             information about dependencies on other packages,
             including the <code class=
-            "varname">BUILDLINK_RECOMMENDED</code> and <code class=
-            "varname">RECOMMENDED</code> definitions.</p>
+            "varname">BUILDLINK_ABI_DEPENDS</code> and <code class=
+            "varname">ABI_DEPENDS</code> definitions.</p>
+
+            <p>Please take careful consideration before adjusting
+            <code class="varname">BUILDLINK_API_DEPENDS.<em class=
+            "replaceable"><code>pkg</code></em></code> or
+            <code class="varname">BUILDLINK_ABI_DEPENDS.<em class=
+            "replaceable"><code>pkg</code></em></code> as we don't
+            want to cause unneeded package deletions and rebuilds.
+            In many cases, new versions of packages work just fine
+            with older dependencies.</p>
+
+            <p>Also it is not needed to set <code class=
+            "varname">BUILDLINK_ABI_DEPENDS.<em class=
+            "replaceable"><code>pkg</code></em></code> when it is
+            identical to <code class=
+            "varname">BUILDLINK_API_DEPENDS.<em class=
+            "replaceable"><code>pkg</code></em></code>.</p>
           </div>
         </div>
 
@@ -9305,7 +9342,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
     .if !defined(USE_BUILTIN.foo)
     USE_BUILTIN.foo?=       ${IS_BUILTIN.foo}
     .  if defined(BUILTIN_PKG.foo)
-    .    for _depend_ in ${BUILDLINK_DEPENDS.foo}
+    .    for _depend_ in ${BUILDLINK_API_DEPENDS.foo}
     .      if !empty(USE_BUILTIN.foo:M[yY][eE][sS])
     USE_BUILTIN.foo!=                                                       \
           if ${PKG_ADMIN} pmatch '${_depend_}' ${BUILTIN_PKG.foo}; then     \
@@ -9363,13 +9400,13 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             this section must make the determination whether the
             built-in software is adequate to satisfy the
             dependencies listed in <code class=
-            "varname">BUILDLINK_DEPENDS.<em class=
+            "varname">BUILDLINK_API_DEPENDS.<em class=
             "replaceable"><code>pkg</code></em></code>. This is
             typically done by comparing <code class=
             "varname">BUILTIN_PKG.<em class=
             "replaceable"><code>pkg</code></em></code> against each
             of the dependencies in <code class=
-            "varname">BUILDLINK_DEPENDS.<em class=
+            "varname">BUILDLINK_API_DEPENDS.<em class=
             "replaceable"><code>pkg</code></em></code>.
             <code class="varname">USE_BUILTIN.<em class=
             "replaceable"><code>pkg</code></em></code> <span class=
@@ -10143,37 +10180,50 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
 
           <p>Users can be created by adding entries to the
           <code class="varname">PKG_USERS</code> variable. Each
-          entry has the following syntax, which mimics <code xmlns=
+          entry has the following syntax:</p>
+          <pre class="programlisting">
+    user:group
+</pre>
+
+          <p>Further specification of user details may be done by
+          setting per-user variables. <code class=
+          "varname">PKG_UID.<em class=
+          "replaceable"><code>user</code></em></code> is the
+          numeric UID for the user. <code class=
+          "varname">PKG_GECOS.<em class=
+          "replaceable"><code>user</code></em></code> is the user's
+          description or comment. <code class=
+          "varname">PKG_HOME.<em class=
+          "replaceable"><code>user</code></em></code> is the user's
+          home directory, and defaults to <code xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">/etc/passwd</code>:</p>
-          <pre class="programlisting">
-    user:group[:[userid][:[descr][:[home][:shell]]]]
-</pre>
-
-          <p>Only the user and group are required; everything else
-          is optional, but the colons must be in the right places
-          when specifying optional bits. By default, a new user
-          will have home directory <code xmlns=
+          "filename">/nonexistent</code> if not specified.
+          <code class="varname">PKG_SHELL.<em class=
+          "replaceable"><code>user</code></em></code> is the user's
+          shell, and defaults to <code xmlns=
           "http://www.w3.org/TR/xhtml1/transitional" class=
-          "filename">/nonexistent</code>, and login shell
-          <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
-          class="filename">/sbin/nologin</code> unless they are
-          specified as part of the user element. Note that if the
-          description contains spaces, then spaces should be
-          backslash-escaped, as in:</p>
+          "filename">/sbinno/login</code> if not specified.</p>
+
+          <p>Similarly, groups can be created by adding entries to
+          the <code class="varname">PKG_GROUPS</code> variable,
+          whose syntax is:</p>
           <pre class="programlisting">
-    foo:foogrp::The\ Foomister
+    group
 </pre>
 
-          <p>Similarly, groups can be created using the
-          <code class="varname">PKG_GROUPS</code> variable, whose
-          syntax is:</p>
-          <pre class="programlisting">
-    group[:groupid]
-</pre>
+          <p>The numeric GID of the group may be set by defining
+          <code class="varname">PKG_GID.<em class=
+          "replaceable"><code>group</code></em></code>.</p>
 
-          <p>As before, only the group name is required; the
-          numeric identifier is optional.</p>
+          <p>If a package needs to create the users and groups at
+          an earlier stage, then it can set <code class=
+          "varname">USERGROUP_PHASE</code> to either <code class=
+          "literal">configure</code> or <code class=
+          "literal">build</code> to indicate the phase before which
+          the users and groups are created. In this case, the
+          numeric UIDs and GIDs of the created users and groups are
+          automatically hardcoded into the final installation
+          scripts.</p>
         </div>
 
         <div class="sect1" lang="en">
@@ -11035,7 +11085,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           turn: first, <code class=
           "varname">MASTER_SITE_OVERRIDE</code> is tried, then the
           sites specified in either <code class=
-          "varname">SITES_file</code> if defined, else <code class=
+          "varname">SITES.file</code> if defined, else <code class=
           "varname">MASTER_SITES</code> or <code class=
           "varname">PATCH_SITES</code>, as applies, then finally
           the value of <code class=
@@ -11214,7 +11264,70 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
             </div>
           </div>
 
-          <p>[TODO]</p>
+          <p>This phase creates wrapper programs for the compilers
+          and linkers. The following variables can be used to tweak
+          the wrappers.</p>
+
+          <div class="variablelist">
+            <dl>
+              <dt><span class="term"><code class=
+              "varname">ECHO_WRAPPER_MSG</code></span></dt>
+
+              <dd>
+                <p>The command used to print progress messages.
+                Does nothing by default. Set to <code class=
+                "literal">${ECHO}</code> to see the progress
+                messages.</p>
+              </dd>
+
+              <dt><span class="term"><code class=
+              "varname">WRAPPER_DEBUG</code></span></dt>
+
+              <dd>
+                <p>This variable can be set to <code class=
+                "literal">yes</code> (default) or <code class=
+                "literal">no</code>, depending on whether you want
+                additional information in the wrapper log file.</p>
+              </dd>
+
+              <dt><span class="term"><code class=
+              "varname">WRAPPER_UPDATE_CACHE</code></span></dt>
+
+              <dd>
+                <p>This variable can be set to <code class=
+                "literal">yes</code> or <code class=
+                "literal">no</code>, depending on whether the
+                wrapper should use its cache, which will improve
+                the speed. The default value is <code class=
+                "literal">yes</code>, but is forced to <code class=
+                "literal">no</code> if the platform does not
+                support it.</p>
+              </dd>
+
+              <dt><span class="term"><code class=
+              "varname">WRAPPER_REORDER_CMDS</code></span></dt>
+
+              <dd>
+                <p>A list of reordering commands. A reordering
+                command has the form <code class=
+                "literal">reorder:l:<em class=
+                "replaceable"><code>lib1</code></em>:<em class=
+                "replaceable"><code>lib2</code></em></code>. It
+                ensures that that <code class=
+                "literal">-l<em class="replaceable"><code>lib1</code></em></code>
+                occurs before <code class="literal">-l<em class=
+                "replaceable"><code>lib2</code></em></code>.</p>
+              </dd>
+
+              <dt><span class="term"><code class=
+              "varname">WRAPPER_TRANSFORM_CMDS</code></span></dt>
+
+              <dd>
+                <p>A list of transformation commands. [TODO:
+                investigate further]</p>
+              </dd>
+            </dl>
+          </div>
         </div>
 
         <div class="sect1" lang="en">
@@ -12714,12 +12827,12 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
                   <p>Please note that such dependencies should only
                   be updated if a package requires a newer
                   pre-requisite, but not to denote recommendations
-                  such as security updates or ABI changes that do
-                  not prevent a package from building correctly.
-                  Such recommendations can be expressed using
-                  <code class="varname">RECOMMENDED</code>:</p>
+                  such as ABI changes that do not prevent a package
+                  from building correctly. Such recommendations can
+                  be expressed using <code class=
+                  "varname">ABI_DEPENDS</code>:</p>
                   <pre class="programlisting">
-    RECOMMENDED+=   tiff&gt;=3.6.1:../../graphics/tiff
+    ABI_DEPENDS+=   tiff&gt;=3.6.1:../../graphics/tiff
 </pre>
 
                   <p>In addition to the above <code class=
@@ -12727,15 +12840,15 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
                   while a package will build against
                   tiff&gt;=3.5.4, at least version 3.6.1 is
                   recommended. <code class=
-                  "varname">RECOMMENDED</code> entries will be
+                  "varname">ABI_DEPENDS</code> entries will be
                   turned into dependencies unless explicitly
                   ignored (in which case a warning will be
                   printed).</p>
 
-                  <p>To ignore these dependency recommendations and
-                  just use the required <code class=
+                  <p>To ignore these ABI dependency recommendations
+                  and just use the required <code class=
                   "varname">DEPENDS</code>, set <code class=
-                  "varname">IGNORE_RECOMMENDED=YES</code>. This may
+                  "varname">USE_ABI_DEPENDS=NO</code>. This may
                   make it easier and faster to update packages
                   built using pkgsrc, since older compatible
                   dependencies can continue to be used. This is
@@ -12752,9 +12865,8 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
                   versions of binary packages installed.</p>
 
                   <p>For security fixes, please update the package
-                  vulnerabilities file as well as setting
-                  <code class="varname">RECOMMENDED</code>, see
-                  <a href="#security-handling" title=
+                  vulnerabilities file. See <a href=
+                  "#security-handling" title=
                   "16.1.8.&nbsp;Handling packages with security problems">
                   Section&nbsp;16.1.8, &#8220;Handling packages
                   with security problems&#8221;</a> for more
@@ -12954,13 +13066,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             <code class="varname">PKGREVISION</code> should be
             increased (this is of course not necessary if the
             problem is fixed by using a newer release of the
-            software). In addition, if a <code xmlns=
-            "http://www.w3.org/TR/xhtml1/transitional" class=
-            "filename">buildlink3.mk</code> file exists for an
-            affected package, a corresponding <code class=
-            "varname">BUILDLINK_RECOMMENDED.<em class=
-            "replaceable"><code>pkg</code></em></code> entry should
-            be added or updated in it.</p>
+            software).</p>
 
             <p>Also, if the fix should be applied to the stable
             pkgsrc branch, be sure to submit a pullup request!</p>
@@ -14088,37 +14194,10 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             <p>Some packages install info files or use the
             &#8220;<span class="quote">makeinfo</span>&#8221; or
             &#8220;<span class="quote">install-info</span>&#8221;
-            commands. Each of the info files:</p>
-
-            <div class="itemizedlist">
-              <ul type="disc">
-                <li>
-                  <p>is considered to be installed in the directory
-                  <code xmlns=
-                  "http://www.w3.org/TR/xhtml1/transitional" class=
-                  "filename">${PREFIX}/${INFO_DIR}</code>,</p>
-                </li>
-
-                <li>
-                  <p>is registered in the Info directory file
-                  <code xmlns=
-                  "http://www.w3.org/TR/xhtml1/transitional" class=
-                  "filename">${PREFIX}/${INFO_DIR}/dir</code>,</p>
-                </li>
-
-                <li>
-                  <p>and must be listed as a filename in the
-                  <code class="varname">INFO_FILES</code> variable
-                  in the package Makefile.</p>
-                </li>
-              </ul>
-            </div>
-
-            <p><code class="varname">INFO_DIR</code> defaults to
-            &#8220;<span class="quote">info</span>&#8221; and can
-            be overridden in the package Makefile. <code xmlns=
-            "http://www.w3.org/TR/xhtml1/transitional" class=
-            "filename">INSTALL</code> and <code xmlns=
+            commands. <code class="varname">INFO_FILES</code>
+            should be defined in the package Makefile so that
+            <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
+            class="filename">INSTALL</code> and <code xmlns=
             "http://www.w3.org/TR/xhtml1/transitional" class=
             "filename">DEINSTALL</code> scripts will be generated
             to handle registration of the info files in the Info
@@ -14128,10 +14207,26 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             system, or by a special purpose package automatically
             added as dependency if needed.</p>
 
+            <p><code class="varname">PKGINFODIR</code> is the
+            directory under <code xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" class=
+            "filename">${PREFIX}</code> where info files are
+            primarily located. <code class=
+            "varname">PKGINFODIR</code> defaults to
+            &#8220;<span class="quote">info</span>&#8221; and can
+            be overridden by the user.</p>
+
+            <p>The info files for the package should be listed in
+            the package <code xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" class=
+            "filename">PLIST</code>; however any split info files
+            need not be listed.</p>
+
             <p>A package which needs the &#8220;<span class=
             "quote">makeinfo</span>&#8221; command at build time
-            must define the variable <code class=
-            "varname">USE_MAKEINFO</code> in its Makefile. If a
+            must add &#8220;<span class=
+            "quote">makeinfo</span>&#8221; to <code class=
+            "varname">USE_TOOLS</code> in its Makefile. If a
             minimum version of the &#8220;<span class=
             "quote">makeinfo</span>&#8221; command is needed it
             should be noted with the <code class=
@@ -14171,8 +14266,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             except the logging of a message. The script overriding
             <span><strong class="command">makeinfo</strong></span>
             logs a message and according to the value of
-            <code class="varname">USE_MAKEINFO</code> and
-            <code class="varname">TEXINFO_REQD</code> either run
+            <code class="varname">TEXINFO_REQD</code> either runs
             the appropriate <span><strong class=
             "command">makeinfo</strong></span> command or exit on
             error.</p>
@@ -15357,7 +15451,480 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
           <div>
             <div>
               <h2 class="title"><a name=
-              "porting"></a>Chapter&nbsp;19.&nbsp;Porting
+              "devfaq"></a>Chapter&nbsp;19.&nbsp;Frequently Asked
+              Questions</h2>
+            </div>
+          </div>
+        </div>
+
+        <p>This section contains the answers to questions that may
+        arise when you are writing a package. If you don't find
+        your question answered here, first have a look in the other
+        chapters, and if you still don't have the answer, ask on
+        the <code class="literal">pkgsrc-users</code> mailing
+        list.</p>
+
+        <div class="qandaset">
+          <dl>
+            <dt>19.1. <a href="#id2654337">What is the difference
+            between MAKEFLAGS, .MAKEFLAGS and MAKE_FLAGS?</a></dt>
+
+            <dt>19.2. <a href="#id2654373">What is the difference
+            between MAKE, GMAKE and MAKE_PROGRAM?</a></dt>
+
+            <dt>19.3. <a href="#id2654411">What is the difference
+            between CC, PKG_CC and PKGSRC_COMPILER?</a></dt>
+
+            <dt>19.4. <a href="#id2654449">What is the difference
+            between BUILDLINK_LDFLAGS, BUILDLINK_LDADD and
+            BUILDLINK_LIBS?</a></dt>
+
+            <dt>19.5. <a href="#id2654467">Why does make show-var
+            VARNAME=BUILDLINK_PREFIX.foo say it's empty?</a></dt>
+          </dl>
+
+          <table border="0" summary="Q and A Set">
+            <col align="left" width="1%" />
+
+            <tbody>
+              <tr class="question">
+                <td align="left" valign="top"><a name=
+                "id2654337"></a><a name=
+                "id2654338"></a><b>19.1.</b></td>
+
+                <td align="left" valign="top">
+                  <p>What is the difference between <code class=
+                  "varname">MAKEFLAGS</code>, <code class=
+                  "varname">.MAKEFLAGS</code> and <code class=
+                  "varname">MAKE_FLAGS</code>?</p>
+                </td>
+              </tr>
+
+              <tr class="answer">
+                <td align="left" valign="top"></td>
+
+                <td align="left" valign="top">
+                  <p><code class="varname">MAKEFLAGS</code> are the
+                  flags passed to the pkgsrc-internal invocations
+                  of <a href=
+                  "http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current">
+                  <span class="citerefentry"><span class=
+                  "refentrytitle">make</span>(1)</span></a>, while
+                  <code class="varname">MAKE_FLAGS</code> are the
+                  flags that are passed to the <code class=
+                  "varname">MAKE_PROGRAM</code> when building the
+                  package. [FIXME: What is .MAKEFLAGS for?]</p>
+                </td>
+              </tr>
+
+              <tr class="question">
+                <td align="left" valign="top"><a name=
+                "id2654373"></a><a name=
+                "id2654374"></a><b>19.2.</b></td>
+
+                <td align="left" valign="top">
+                  <p>What is the difference between <code class=
+                  "varname">MAKE</code>, <code class=
+                  "varname">GMAKE</code> and <code class=
+                  "varname">MAKE_PROGRAM</code>?</p>
+                </td>
+              </tr>
+
+              <tr class="answer">
+                <td align="left" valign="top"></td>
+
+                <td align="left" valign="top">
+                  <p><code class="varname">MAKE</code> is the path
+                  to the <a href=
+                  "http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current">
+                  <span class="citerefentry"><span class=
+                  "refentrytitle">make</span>(1)</span></a> program
+                  that is used in the pkgsrc infrastructure.
+                  <code class="varname">GMAKE</code> is the path to
+                  GNU Make, but you need to say <code class=
+                  "varname">USE_TOOLS+=gmake</code> to use that.
+                  <code class="varname">MAKE_PROGRAM</code> is the
+                  path to the Make program that is used for
+                  building the package.</p>
+                </td>
+              </tr>
+
+              <tr class="question">
+                <td align="left" valign="top"><a name=
+                "id2654411"></a><a name=
+                "id2654412"></a><b>19.3.</b></td>
+
+                <td align="left" valign="top">
+                  <p>What is the difference between <code class=
+                  "varname">CC</code>, <code class=
+                  "varname">PKG_CC</code> and <code class=
+                  "varname">PKGSRC_COMPILER</code>?</p>
+                </td>
+              </tr>
+
+              <tr class="answer">
+                <td align="left" valign="top"></td>
+
+                <td align="left" valign="top">
+                  <p><code class="varname">CC</code> is the path to
+                  the real C compiler, which can be configured by
+                  the pkgsrc user. <code class=
+                  "varname">PKG_CC</code> is the path to the
+                  compiler wrapper. <code class=
+                  "varname">PKGSRC_COMPILER</code> is <span class=
+                  "emphasis"><em>not</em></span> a path to a
+                  compiler, but the type of compiler that should be
+                  used. See <code xmlns=
+                  "http://www.w3.org/TR/xhtml1/transitional" class=
+                  "filename">mk/compiler.mk</code> for more
+                  information about the latter variable.</p>
+                </td>
+              </tr>
+
+              <tr class="question">
+                <td align="left" valign="top"><a name=
+                "id2654449"></a><a name=
+                "id2654450"></a><b>19.4.</b></td>
+
+                <td align="left" valign="top">
+                  <p>What is the difference between <code class=
+                  "varname">BUILDLINK_LDFLAGS</code>, <code class=
+                  "varname">BUILDLINK_LDADD</code> and <code class=
+                  "varname">BUILDLINK_LIBS</code>?</p>
+                </td>
+              </tr>
+
+              <tr class="answer">
+                <td align="left" valign="top"></td>
+
+                <td align="left" valign="top">
+                  <p>[FIXME]</p>
+                </td>
+              </tr>
+
+              <tr class="question">
+                <td align="left" valign="top"><a name=
+                "id2654467"></a><a name=
+                "id2654468"></a><b>19.5.</b></td>
+
+                <td align="left" valign="top">
+                  <p>Why does <span><strong class="command">make
+                  show-var VARNAME=BUILDLINK_PREFIX.<em class=
+                  "replaceable"><code>foo</code></em></strong></span>
+                  say it's empty?</p>
+                </td>
+              </tr>
+
+              <tr class="answer">
+                <td align="left" valign="top"></td>
+
+                <td align="left" valign="top">
+                  <p>For optimization reasons, some variables are
+                  only available in the &#8220;<span class=
+                  "quote">wrapper</span>&#8221; phase and later. To
+                  &#8220;<span class="quote">simulate</span>&#8221;
+                  the wrapper phase, append <span><strong class=
+                  "command">PKG_PHASE=wrapper</strong></span> to
+                  the above command.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="part" lang="en">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h1 class="title"><a name=
+            "infrastructure"></a>Part&nbsp;III.&nbsp;The pkgsrc
+            infrastructure</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="toc">
+        <p><b>Table of Contents</b></p>
+
+        <dl>
+          <dt><span class="chapter"><a href="#regression">20.
+          Regression tests</a></span></dt>
+
+          <dd>
+            <dl>
+              <dt><span class="sect1"><a href=
+              "#regression.descr">20.1. The regression tests
+              framework</a></span></dt>
+
+              <dt><span class="sect1"><a href=
+              "#regression.run">20.2. Running the regression
+              tests</a></span></dt>
+
+              <dt><span class="sect1"><a href=
+              "#regression.new">20.3. Adding a new regression
+              test</a></span></dt>
+
+              <dd>
+                <dl>
+                  <dt><span class="sect2"><a href=
+                  "#regression.fun.override">20.3.1. Overridable
+                  functions</a></span></dt>
+
+                  <dt><span class="sect2"><a href=
+                  "#regression.fun.helper">20.3.2. Helper
+                  functions</a></span></dt>
+                </dl>
+              </dd>
+            </dl>
+          </dd>
+
+          <dt><span class="chapter"><a href="#porting">21. Porting
+          pkgsrc</a></span></dt>
+
+          <dd>
+            <dl>
+              <dt><span class="sect1"><a href=
+              "#porting.opsys">21.1. Porting pkgsrc to a new
+              operating system</a></span></dt>
+
+              <dt><span class="sect1"><a href=
+              "#porting.compiler">21.2. Adding support for a new
+              compiler</a></span></dt>
+            </dl>
+          </dd>
+        </dl>
+      </div>
+
+      <div class="chapter" lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title"><a name=
+              "regression"></a>Chapter&nbsp;20.&nbsp;Regression
+              tests</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="toc">
+          <p><b>Table of Contents</b></p>
+
+          <dl>
+            <dt><span class="sect1"><a href=
+            "#regression.descr">20.1. The regression tests
+            framework</a></span></dt>
+
+            <dt><span class="sect1"><a href="#regression.run">20.2.
+            Running the regression tests</a></span></dt>
+
+            <dt><span class="sect1"><a href="#regression.new">20.3.
+            Adding a new regression test</a></span></dt>
+
+            <dd>
+              <dl>
+                <dt><span class="sect2"><a href=
+                "#regression.fun.override">20.3.1. Overridable
+                functions</a></span></dt>
+
+                <dt><span class="sect2"><a href=
+                "#regression.fun.helper">20.3.2. Helper
+                functions</a></span></dt>
+              </dl>
+            </dd>
+          </dl>
+        </div>
+
+        <p>The pkgsrc infrastructure consists of a large codebase,
+        and there are many corners where every little bit of a file
+        is well thought out, making pkgsrc likely to fail as soon
+        as anything is changed near those parts. To prevent most
+        changes from breaking anything, a suite of regression tests
+        should go along with every important part of the pkgsrc
+        infrastructure. This chapter describes how regression tests
+        work in pkgsrc and how you can add new tests.</p>
+
+        <div class="sect1" lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "regression.descr"></a>20.1.&nbsp;The regression
+                tests framework</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sect1" lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "regression.run"></a>20.2.&nbsp;Running the
+                regression tests</h2>
+              </div>
+            </div>
+          </div>
+
+          <p>You first need to install the <a xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" href=
+          "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/pkgtools/pkg_regress/README.html"
+          target="_top"><code xmlns="" class=
+          "filename">pkgtools/pkg_regress</code></a> package, which
+          provides the <span><strong class=
+          "command">pkg_regress</strong></span> command. Then you
+          can simply run that command, which will run all tests in
+          the <code xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" class=
+          "filename">regress</code> category.</p>
+        </div>
+
+        <div class="sect1" lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "regression.new"></a>20.3.&nbsp;Adding a new
+                regression test</h2>
+              </div>
+            </div>
+          </div>
+
+          <p>Every directory in the <code xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" class=
+          "filename">regress</code> category that contains a file
+          called <code xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" class=
+          "filename">spec</code> is considered a regression test.
+          This file is a shell program that is included by the
+          <span><strong class="command">pkg_regress</strong></span>
+          command. The following functions can be overridden to
+          suit your needs.</p>
+
+          <div class="sect2" lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h3 class="title"><a name=
+                  "regression.fun.override"></a>20.3.1.&nbsp;Overridable
+                  functions</h3>
+                </div>
+              </div>
+            </div>
+
+            <p>These functions do not take any parameters. They are
+            all called in &#8220;<span class="quote">set
+            -e</span>&#8221; mode, so you should be careful to
+            check the exitcodes of any commands you run in the
+            test.</p>
+
+            <div class="variablelist">
+              <dl>
+                <dt><span class="term"><code class=
+                "varname">do_setup()</code></span></dt>
+
+                <dd>
+                  <p>This function prepares the environment for the
+                  test. By default it does nothing.</p>
+                </dd>
+
+                <dt><span class="term"><code class=
+                "varname">do_test()</code></span></dt>
+
+                <dd>
+                  <p>This function runs the actual test. By
+                  default, it calls <code class=
+                  "varname">TEST_MAKE</code> with the arguments
+                  <code class="varname">MAKEARGS_TEST</code> and
+                  writes its output including error messages into
+                  the file <code class=
+                  "varname">TEST_OUTFILE</code>.</p>
+                </dd>
+
+                <dt><span class="term"><code class=
+                "varname">check_result()</code></span></dt>
+
+                <dd>
+                  <p>This function is run after the test and is
+                  typically used to compare the actual output from
+                  the one that is expected. It can make use of the
+                  various helper functions from the next
+                  section.</p>
+                </dd>
+
+                <dt><span class="term"><code class=
+                "varname">do_cleanup()</code></span></dt>
+
+                <dd>
+                  <p>This function cleans everything up after the
+                  test has been run. By default it does
+                  nothing.</p>
+                </dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="sect2" lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h3 class="title"><a name=
+                  "regression.fun.helper"></a>20.3.2.&nbsp;Helper
+                  functions</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="variablelist">
+              <dl>
+                <dt><span class="term"><code class=
+                "varname">exit_status(expected)</code></span></dt>
+
+                <dd>
+                  <p>This function compares the exitcode of the
+                  <span><strong class=
+                  "command">do_test()</strong></span> function with
+                  its first parameter. If they differ, the test
+                  will fail.</p>
+                </dd>
+
+                <dt><span class="term"><code class=
+                "varname">output_require(regex...)</code></span></dt>
+
+                <dd>
+                  <p>This function checks for each of its
+                  parameters if the output from
+                  <span><strong class="command">do_test()</strong></span>
+                  matches the extended regular expression. If it
+                  does not, the test will fail.</p>
+                </dd>
+
+                <dt><span class="term"><code class=
+                "varname">output_prohibit(regex...)</code></span></dt>
+
+                <dd>
+                  <p>This function checks for each of its
+                  parameters if the output from
+                  <span><strong class="command">do_test()</strong></span>
+                  does <span class="emphasis"><em>not</em></span>
+                  match the extended regular expression. If any of
+                  the regular expressions matches, the test will
+                  fail.</p>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chapter" lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title"><a name=
+              "porting"></a>Chapter&nbsp;21.&nbsp;Porting
               pkgsrc</h2>
             </div>
           </div>
@@ -15367,12 +15934,12 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#porting.opsys">19.1.
+            <dt><span class="sect1"><a href="#porting.opsys">21.1.
             Porting pkgsrc to a new operating
             system</a></span></dt>
 
             <dt><span class="sect1"><a href=
-            "#porting.compiler">19.2. Adding support for a new
+            "#porting.compiler">21.2. Adding support for a new
             compiler</a></span></dt>
           </dl>
         </div>
@@ -15387,7 +15954,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "porting.opsys"></a>19.1.&nbsp;Porting pkgsrc to a
+                "porting.opsys"></a>21.1.&nbsp;Porting pkgsrc to a
                 new operating system</h2>
               </div>
             </div>
@@ -15510,7 +16077,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "porting.compiler"></a>19.2.&nbsp;Adding support
+                "porting.compiler"></a>21.2.&nbsp;Adding support
                 for a new compiler</h2>
               </div>
             </div>
