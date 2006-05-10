@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/04 21:29:11 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/05/10 14:31:08 joerg Exp $
 #
 
 DISTNAME=	metakit-2.4.9.5
@@ -17,6 +17,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_DIRS=	builds
 CONFIGURE_SCRIPT= ../unix/configure
 CONFIGURE_ARGS+= --with-python=${LOCALBASE}/${PYINC},${LOCALBASE}/${PYSITELIB}
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 BUILD_TARGET=	python
 INSTALL_TARGET=	install-python
@@ -33,4 +34,5 @@ post-install:
 
 .include "../../databases/metakit-lib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
