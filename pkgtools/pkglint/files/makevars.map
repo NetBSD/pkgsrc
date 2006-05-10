@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.84 2006/05/01 20:19:04 rillig Exp $
+# $NetBSD: makevars.map,v 1.85 2006/05/10 08:17:25 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -26,7 +26,6 @@ ABI			Readonly
 PKG_REGISTER_SHELLS	Readonly
 USE_XPKGWEDGE		Readonly
 LIBTOOLIZE_PLIST	Readonly
-EXTRACT_USING_PAX	Readonly
 SETGIDGAME		Readonly
 
 USE_CRYPTO		Readonly
@@ -34,12 +33,12 @@ USE_INET6		Readonly
 
 # some other variables, sorted alphabetically
 
-ALL_ENV			List+ of ShellWord
+ALL_ENV			List of ShellWord
 ALTERNATIVES_FILE	Filename
-ALTERNATIVES_SRC	List+ of Pathname
+ALTERNATIVES_SRC	List of Pathname
 APACHE_MODULE		Yes
-AUTOCONF_REQD		List+
-AUTOMAKE_OVERRIDE	List+ of Pathmask
+AUTOCONF_REQD		List of Version [m:a, c:a]
+AUTOMAKE_OVERRIDE	List of Pathmask
 BDB185_DEFAULT		Userdefined
 BDBBASE			Readonly
 BDB_ACCEPTED		List of { db1 db2 db3 db4 }
@@ -47,86 +46,86 @@ BDB_DEFAULT		Userdefined
 BDB_LIBS		Readonly
 BDB_TYPE		Readonly
 BROKEN			Message
-BROKEN_GETTEXT_DETECTION	YesNo
-BROKEN_IN		List of BrokenIn
-BUILDLINK_ABI_DEPENDS	List of Dependency
-BUILDLINK_API_DEPENDS	List of Dependency
+BROKEN_GETTEXT_DETECTION	YesNo [m:w]
+BROKEN_IN		List of BrokenIn [m:w]
+BUILDLINK_ABI_DEPENDS	List of Dependency [b:da,m:a]		# b:d?
+BUILDLINK_API_DEPENDS	List of Dependency [b:da,m:a]		# b:d?
 BUILDLINK_CONTENTS_FILTER	List of ShellWord
 # ^^ ShellCommand
-BUILDLINK_CFLAGS	List+ of CFlag
-BUILDLINK_CPPFLAGS	List+ of CFlag
-BUILDLINK_DEPENDS	InternalList+ of Dependency
-BUILDLINK_DEPMETHOD	BuildlinkDepmethod
-BUILDLINK_DEPTH		BuildlinkDepth
-BUILDLINK_FILES		List+ of Pathmask
+BUILDLINK_CFLAGS	List of CFlag
+BUILDLINK_CPPFLAGS	List of CFlag
+BUILDLINK_DEPENDS	InternalList of Dependency [b:a]
+BUILDLINK_DEPMETHOD	BuildlinkDepmethod [b:d,m:w]
+BUILDLINK_DEPTH		BuildlinkDepth [b:c]
+BUILDLINK_FILES		List of Pathmask [b:a]
 BUILDLINK_FILES_CMD	List of ShellWord
 # ^^ ShellCommand
-BUILDLINK_INCDIRS	List of Pathname
+BUILDLINK_INCDIRS	List of Pathname [b:ad]			# b:d?
 BUILDLINK_JAVA_PREFIX	Pathname
-BUILDLINK_LDADD		List of LdFlag
-BUILDLINK_LDFLAGS	List+ of LdFlag
-BUILDLINK_LIBDIRS	List of Pathname
-BUILDLINK_LIBS		List of LdFlag
-BUILDLINK_PACKAGES	BuildlinkPackages
-BUILDLINK_PASSTHRU_DIRS	List+ of Pathname
-BUILDLINK_PASSTHRU_RPATHDIRS	List+ of Pathname
-BUILDLINK_PKGSRCDIR	RelativePkgDir
-BUILDLINK_PREFIX	Pathname
+BUILDLINK_LDADD		List of LdFlag [builtin.mk:adw]
+BUILDLINK_LDFLAGS	List of LdFlag
+BUILDLINK_LIBDIRS	List of Pathname [b:a]
+BUILDLINK_LIBS		List of LdFlag [b:a]
+BUILDLINK_PACKAGES	BuildlinkPackages [b:ac]
+BUILDLINK_PASSTHRU_DIRS	List of Pathname [m:a,c:a,b:a,h:a]
+BUILDLINK_PASSTHRU_RPATHDIRS	List of Pathname [m:a,c:a,b:a,h:a]
+BUILDLINK_PKGSRCDIR	RelativePkgDir [b:d]
+BUILDLINK_PREFIX	Pathname [builtin.mk:w]
 BUILDLINK_RPATHDIRS	List of Pathname
-BUILDLINK_TARGETS	List+ of Identifier
-BUILDLINK_TRANSFORM	List+ of WrapperTransform
-BUILD_DEFS		List+ of Varname
-BUILD_DEPENDS		InternalList+ of DependencyWithPath
-BUILD_DIRS		List of WrksrcSubdirectory
-BUILD_ENV		List+ of ShellWord
-BUILD_TARGET		List of Identifier
+BUILDLINK_TARGETS	List of Identifier
+BUILDLINK_TRANSFORM	List of WrapperTransform [m:a,builtin.mk:a,h:a,b:a]
+BUILD_DEFS		List of Varname [m:a,c:a,o:a]
+BUILD_DEPENDS		InternalList of DependencyWithPath [c:a,m:a,o:a]
+BUILD_DIRS		List of WrksrcSubdirectory [m:aw,c:aw]
+BUILD_ENV		List of ShellWord [m:a,c:a]
+BUILD_TARGET		List of Identifier [m:aw,c:aw]
 BUILD_USES_MSGFMT	Yes
-BUILTIN_PKG		Identifier
-BUILTIN_FIND_FILES_VAR	List of Varname
-BUILTIN_FIND_FILES	List of Pathname
-BUILTIN_FIND_GREP	List
-BUILTIN_FIND_LIBS	List of Pathname
+BUILTIN_PKG		Identifier [builtin.mk:c]
+BUILTIN_FIND_FILES_VAR	List of Varname [builtin.mk:c]
+BUILTIN_FIND_FILES	List of Pathname [builtin.mk:c]
+BUILTIN_FIND_GREP	List of ShellWord [builtin.mk:c]
+BUILTIN_FIND_LIBS	List of Pathname [builtin.mk:c]
 BUILTIN_X11_TYPE	Readonly
 BUILTIN_X11_VERSION	Readonly
-CATEGORIES		List of Category
+CATEGORIES		List of Category [m:aw,c:aw]
 CC_VERSION		Readonly
-CC			Readonly
-CFLAGS			List+ of CFlag
-CHECK_BUILTIN		YesNo
-CHECK_FILES_SKIP	List of Pathmask
-CHECK_INTERPRETER_SKIP	List+ of Pathmask
-CHECK_SHLIBS		YesNo
-CHECK_WRKREF_SKIP	List+ of Pathmask
-COMMENT			Comment
-CONFIGURE_ARGS		List+ of ShellWord
-CONFIGURE_DIRS		List of WrksrcSubdirectory
-CONFIGURE_ENV		List+ of ShellWord
+CC			ShellCommand [m:]
+CFLAGS			List of CFlag [m:a,c:a,o:a]
+CHECK_BUILTIN		YesNo [builtin.mk:d,m:c]
+CHECK_FILES_SKIP	List of Pathmask [m:a,c:a]
+CHECK_INTERPRETER_SKIP	List of Pathmask [m:a,c:a]
+CHECK_SHLIBS		YesNo [m:w]
+CHECK_WRKREF_SKIP	List of Pathmask [m:a,c:a]
+COMMENT			Comment [m:aw,c:aw]			# m:a?, c:a?
+CONFIGURE_ARGS		List of ShellWord [c:a,m:a,o:a,h:a,builtin.mk:a]
+CONFIGURE_DIRS		List of WrksrcSubdirectory [m:w,c:w]
+CONFIGURE_ENV		List of ShellWord [c:a,m:a,o:a,b:a]
 CONFIGURE_HAS_INFODIR	YesNo
-CONFIGURE_HAS_MANDIR	YesNo
-CONFIGURE_SCRIPT	Pathname
-CONFIG_GUESS_OVERRIDE	List+ of Pathmask
-CONFIG_STATUS_OVERRIDE	List+ of Pathmask
-CONFIG_SHELL		ShellWord
-CONFIG_SUB_OVERRIDE	List+ of Pathmask
-CONFLICTS		List of Dependency
-CONF_FILES		List of ShellWord
-CONF_FILES_MODE		{ 0644 0640 0600 0400 }
-CONF_FILES_PERMS	List of ShellWord
-CPPFLAGS		List+ of CFlag
-CRYPTO			Yes
-CXX			Readonly
-CXXFLAGS		List+ of CFlag
-DEINSTALL_FILE		Pathname
-DEINSTALL_SRC		List of Pathname
+CONFIGURE_HAS_MANDIR	YesNo [m:w]
+CONFIGURE_SCRIPT	Pathname [m:w]
+CONFIG_GUESS_OVERRIDE	List of Pathmask [m:aw,c:aw]
+CONFIG_STATUS_OVERRIDE	List of Pathmask [m:aw,c:aw]
+CONFIG_SHELL		ShellWord [m:w,c:w]
+CONFIG_SUB_OVERRIDE	List of Pathmask [m:aw,c:aw]
+CONFLICTS		List of Dependency [m:aw,c:a]
+CONF_FILES		List of ShellWord [m:aw,c:a]
+CONF_FILES_MODE		{ 0644 0640 0600 0400 } [m:aw,c:a]
+CONF_FILES_PERMS	List of ShellWord [m:aw,c:a]
+CPPFLAGS		List of CFlag [m:a,h:a,c:a,o:a]
+CRYPTO			Yes [m:w]
+CXX			Readonly [m:]
+CXXFLAGS		List of CFlag [m:a,c:a,o:a,h:a]
+DEINSTALL_FILE		Pathname [m:w]
+DEINSTALL_SRC		List of Pathname [m:w,c:w]
 DEINSTALL_TEMPLATE	List of Pathname
-DEPENDS			InternalList+ of DependencyWithPath
-DESCR_SRC		List of Pathname
+DEPENDS			InternalList of DependencyWithPath [c:a,m:a,o:a,b:a]
+DESCR_SRC		List of Pathname [c:dw]
 DEVOSSAUDIO		Pathname
 DEVOSSSOUND		Pathname
-DISTFILES		List of Filename
-DISTINFO_FILE		RelativePkgPath
-DISTNAME		Filename
-DIST_SUBDIR		Filename
+DISTFILES		List of Filename [m:aw,c:aw]
+DISTINFO_FILE		RelativePkgPath [m:w,c:dw]
+DISTNAME		Filename [m:w,c:aw]
+DIST_SUBDIR		Filename [m:w,c:w]
 DJB_BUILD_TARGETS	List of Identifier
 DJB_CONFIG_CMDS		List of ShellWord
 # ^^ ShellCommand, terminated by a semicolon
@@ -135,12 +134,12 @@ DJB_CONFIG_HOME		Filename
 DJB_BUILD_TARGETS	List of Identifier
 DJB_INSTALL_TARGETS	List of Identifier
 DJB_MAKE_TARGETS	List of Identifier
-DJB_RESTRICTED		YesNo
+DJB_RESTRICTED		YesNo [m:w]
 DJB_SLASHPACKAGE	YesNo
 DLOPEN_REQUIRE_PTHREADS	YesNo
 DL_AUTO_VARS		Yes
-DL_LIBS			List+ of LdFlag
-EGDIR			Pathname
+DL_LIBS			List of LdFlag
+EGDIR			Pathname [m:w,c:w]
 # ^^ This variable is not defined by the system, but has been established
 # as a convention.
 EMACS_BIN		Readonly
@@ -148,102 +147,103 @@ EMACS_ETCPREFIX		Readonly
 EMACS_FLAVOR		Readonly
 EMACS_INFOPREFIX	Readonly
 EMACS_LISPPREFIX	Readonly
+EMACS_MODULES		List of Identifier [m:aw,c:aw]
 EMACS_PKGNAME_PREFIX	Readonly
 EMACS_TYPE		Userdefined
 EMACS_USE_LEIM		Yes
-EMACS_VERSIONS_ACCEPTED	List of { emacs21 emacs21nox emacs20 xemacs215 xemacs214 }
-EMACS_VERSION_REQD	List+
+EMACS_VERSIONS_ACCEPTED	List of { emacs21 emacs21nox emacs20 xemacs215 xemacs214 } [m:w]
+EMACS_VERSION_REQD	List of Version
 # ^^ of Version
-EVAL_PREFIX		InternalList of ShellWord
+EVAL_PREFIX		InternalList of ShellWord [m:a,c:a]
 # ^^ FIXME: Looks like a type mismatch.
-EXTRACT_CMD		List of ShellWord
-EXTRACT_ELEMENTS	List of Pathmask
-EXTRACT_ONLY		List of Pathname
-EXTRACT_OPTS		List of ShellWord
-EXTRACT_OPTS_BIN	List of ShellWord
-EXTRACT_OPTS_LHA	List of ShellWord
-EXTRACT_OPTS_PAX	List of ShellWord
-EXTRACT_OPTS_RAR	List of ShellWord
-EXTRACT_OPTS_TAR	List of ShellWord
-EXTRACT_OPTS_ZIP	List of ShellWord
-EXTRACT_OPTS_ZOO	List of ShellWord
-EXTRACT_SUFX		DistSuffix
-EXTRACT_USING		{ gtar nbtar pax }
+EXTRACT_CMD		ShellCommand [m:w]
+EXTRACT_ELEMENTS	List of Pathmask [m:w]
+EXTRACT_ONLY		List of Pathname [m:aw]
+EXTRACT_OPTS		List of ShellWord [m:aw]
+EXTRACT_OPTS_BIN	List of ShellWord [m:aw]
+EXTRACT_OPTS_LHA	List of ShellWord [m:aw]
+EXTRACT_OPTS_PAX	List of ShellWord [m:aw]
+EXTRACT_OPTS_RAR	List of ShellWord [m:aw]
+EXTRACT_OPTS_TAR	List of ShellWord [m:aw]
+EXTRACT_OPTS_ZIP	List of ShellWord [m:aw]
+EXTRACT_OPTS_ZOO	List of ShellWord [m:aw]
+EXTRACT_SUFX		DistSuffix [c:w,m:w]
+EXTRACT_USING		{ gtar nbtar pax } [m:w]
 FAMBASE			Readonly
 FAM_ACCEPTED		List of { fam gamin }
 FAM_DEFAULT		Userdefined
 FAM_TYPE		Readonly
-FETCH_BEFORE_ARGS	List of ShellWord
-FILESDIR		RelativePkgPath
-FILES_SUBST		List+ of ShellWord
-FILES_SUBST_SED		List+ of ShellWord
-FONTS_DIRS		List+ of Pathname
-GCC_REQD		List+
-GENERATE_PLIST		List+ of ShellWord
-# ^^ List+ of Shellcommand, terminated with a semicolon
+FETCH_BEFORE_ARGS	List of ShellWord [m:aw]
+FILESDIR		RelativePkgPath [m:w,c:dw]
+FILES_SUBST		List of ShellWord [m:a,c:a]
+FILES_SUBST_SED		List of ShellWord
+FONTS_DIRS		List of Pathname [m:w]
+GCC_REQD		List of Version [h:a,m:a]
+GENERATE_PLIST		List of ShellWord [m:a,c:a]
+# ^^ List of Shellcommand, terminated with a semicolon
 GNU_ARCH		{ mips }
-GNU_CONFIGURE		Yes
-GNU_CONFIGURE_MANDIR	Pathname
+GNU_CONFIGURE		Yes [c:w,m:w]
+GNU_CONFIGURE_MANDIR	Pathname [m:w,c:w]
 GNU_CONFIGURE_PREFIX	Pathname
-HAS_CONFIGURE		Yes
+HAS_CONFIGURE		Yes [m:w,c:w]
 HEADER_TEMPLATE		List of Pathname
-HOMEPAGE		URL
-INCOMPAT_CURSES		List of PlatformTriple
+HOMEPAGE		URL [m:w,c:dw]
+INCOMPAT_CURSES		List of PlatformTriple [m:aw]
 INCOMPAT_ICONV		List of PlatformTriple
 INFO_DIR		Pathname
 # ^^ relative to PREFIX
-INFO_FILES		List of Pathmask
-INSTALL			ShellCommand
-INSTALLATION_DIRS	List of Pathname
-INSTALL_DATA		ShellCommand
-INSTALL_DATA_DIR	ShellCommand
-INSTALL_DIRS		List of WrksrcSubdirectory
-INSTALL_FILE		Pathname
-INSTALL_GAME		ShellCommand
-INSTALL_GAME_DATA	ShellCommand
-INSTALL_LIB		ShellCommand
-INSTALL_LIB_DIR		ShellCommand
-INSTALL_MAKE_FLAGS	List+ of ShellWord
-INSTALL_MAN		ShellCommand
-INSTALL_MAN_DIR		ShellCommand
-INSTALL_PROGRAM		ShellCommand
-INSTALL_PROGRAM_DIR	ShellCommand
-INSTALL_SCRIPT		ShellCommand
-INSTALL_SCRIPTS_ENV	List+ of ShellWord
-INSTALL_SCRIPT_DIR	ShellCommand
-INSTALL_SRC		List of Pathname
-INSTALL_TARGET		List of Identifier
+INFO_FILES		List of Pathmask [m:w]
+INSTALL			ShellCommand [m:]
+INSTALLATION_DIRS	List of Pathname [m:aw]
+INSTALL_DATA		ShellCommand [m:]
+INSTALL_DATA_DIR	ShellCommand [m:]
+INSTALL_DIRS		List of WrksrcSubdirectory [m:aw,c:aw]
+INSTALL_FILE		Pathname [m:w]
+INSTALL_GAME		ShellCommand [m:]
+INSTALL_GAME_DATA	ShellCommand [m:]
+INSTALL_LIB		ShellCommand [m:]
+INSTALL_LIB_DIR		ShellCommand [m:]
+INSTALL_MAKE_FLAGS	List of ShellWord [m:aw]
+INSTALL_MAN		ShellCommand [m:]
+INSTALL_MAN_DIR		ShellCommand [m:]
+INSTALL_PROGRAM		ShellCommand [m:]
+INSTALL_PROGRAM_DIR	ShellCommand [m:]
+INSTALL_SCRIPT		ShellCommand [m:]
+INSTALL_SCRIPTS_ENV	List of ShellWord
+INSTALL_SCRIPT_DIR	ShellCommand [m:]
+INSTALL_SRC		List of Pathname [m:w,c:w]
+INSTALL_TARGET		List of Identifier [m:aw,c:aw]
 INSTALL_TEMPLATE	List of Pathname
-INSTALL_UNSTRIPPED	YesNo
-INTERACTIVE_STAGE	List of { fetch extract configure build install }
-IS_BUILTIN		YesNoFromCommand
+INSTALL_UNSTRIPPED	YesNo [m:w]
+INTERACTIVE_STAGE	List of { fetch extract configure build install } [m:w]
+IS_BUILTIN		YesNoFromCommand [builtin.mk:w]
 JAVA_CLASSPATH		ShellWord
 JAVA_NAME		Filename
-JAVA_UNLIMIT		List+ of { cmdsize datasize stacksize }
-JAVA_WRAPPERS		InternalList+ of Filename
+JAVA_UNLIMIT		List of { cmdsize datasize stacksize }
+JAVA_WRAPPERS		InternalList of Filename
 KRB5BASE		Readonly
 KRB5_ACCEPTED		List of { heimdal mit-krb5 }
 KRB5_DEFAULT		Userdefined
 KRB5_TYPE		Readonly
-LDFLAGS			List+ of LdFlag
+LDFLAGS			List of LdFlag [m:a,c:a,h:a]
 LIBOSSAUDIO		Pathname
-LIBS			List+ of LdFlag
-LIBTOOL_OVERRIDE	List+ of Pathmask
+LIBS			List of LdFlag [m:a,o:a,h:a]
+LIBTOOL_OVERRIDE	List of Pathmask [m:aw]
 LICENCE			Identifier
-LICENSE			Identifier
-LTCONFIG_OVERRIDE	List+ of Pathmask
-MAINTAINER		Mail_Address
-MAKEFILE		Pathname
-MAKEFLAGS		List+ of ShellWord
-MAKEVARS		List+ of Varname
-MAKE_DIRS		List+ of Pathname
+LICENSE			Identifier [m:w,c:w]
+LTCONFIG_OVERRIDE	List of Pathmask [m:aw,c:a]
+MAINTAINER		Mail_Address [m:w,c:dw]
+MAKEFILE		Pathname [m:w,c:w]
+MAKEFLAGS		List of ShellWord [m:a,c:a,b:a,h:a]
+MAKEVARS		List of Varname [builtin.mk:a,b:a]
+MAKE_DIRS		List of Pathname
 MAKE_DIRS_PERMS		List of ShellWord
-MAKE_ENV		List+ of ShellWord
-MAKE_FLAGS		List+ of ShellWord
-MANCOMPRESSED		YesNo
-MANCOMPRESSED_IF_MANZ	Yes
+MAKE_ENV		List of ShellWord [m:a,c:a,o:a,b:a]
+MAKE_FLAGS		List of ShellWord [m:a,c:a,o:a]
+MANCOMPRESSED		YesNo [m:w,c:dw]
+MANCOMPRESSED_IF_MANZ	Yes [m:w,c:dw]
 MANZ			Yes
-MASTER_SITES		List of URL
+MASTER_SITES		List of URL [c:adw,m:aw]
 MASTER_SITE_APACHE	List of URL
 MASTER_SITE_BACKUP	List of URL
 MASTER_SITE_CYGWIN	List of URL
@@ -266,166 +266,169 @@ MASTER_SITE_SUSE	List of URL
 MASTER_SITE_TEX_CTAN	List of URL
 MASTER_SITE_XCONTRIB	List of URL
 MASTER_SITE_XEMACS	List of URL
-MASTER_SORT_REGEX	List
-MESSAGE_SRC		List of Pathname
-MESSAGE_SUBST		List+ of ShellWord
-MYSQL_VERSIONS_ACCEPTED	List of { 40 41 50 }
+MASTER_SORT_REGEX	List of ShellWord
+MESSAGE_SRC		List of Pathname [m:aw,o:a]
+MESSAGE_SUBST		List of ShellWord [c:a,m:a,o:a]
+MYSQL_VERSIONS_ACCEPTED	List of { 40 41 50 } [m:w]
 MYSQL_VERSION_DEFAULT	Userdefined
-NOT_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc }
-NOT_FOR_PLATFORM	List of PlatformTriple
-NO_BIN_ON_CDROM		Restricted
-NO_BIN_ON_FTP		Restricted
-NO_BUILD		Yes
-NO_CHECKSUM		Yes
-NO_CONFIGURE		Yes
-NO_EXPORT_CPP		Yes
+NOT_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc } [m:aw]
+NOT_FOR_PLATFORM	List of PlatformTriple [m:aw]
+NO_BIN_ON_CDROM		Restricted [m:w]
+NO_BIN_ON_FTP		Restricted [m:w]
+NO_BUILD		Yes [m:w]
+NO_CHECKSUM		Yes [m:w]
+NO_CONFIGURE		Yes [m:w]
+NO_EXPORT_CPP		Yes [m:w]
 NO_EXTRACT		Yes
-NO_INSTALL_MANPAGES	Yes
-NO_MTREE		Yes
-NO_PACKAGE		Message
-NO_PKGTOOLS_REQD_CHECK	Yes
-NO_PKG_REGISTER		Yes
-NO_SRC_ON_CDROM		Restricted
-NO_SRC_ON_FTP		Restricted
+NO_INSTALL_MANPAGES	Yes [m:w]
+NO_MTREE		Yes [m:w]
+NO_PACKAGE		Message [m:w]
+NO_PKGTOOLS_REQD_CHECK	Yes [m:w]
+NO_PKG_REGISTER		Yes [m:w]
+NO_SRC_ON_CDROM		Restricted [m:w]
+NO_SRC_ON_FTP		Restricted [m:w]
 ONLY_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc }
-ONLY_FOR_PLATFORM	List of PlatformTriple
-OPSYSVARS		List+ of Varname
-OSVERSION_SPECIFIC	Yes
-OWN_DIRS		List of Pathname
-OWN_DIRS_PERMS		List of ShellWord
+ONLY_FOR_PLATFORM	List of PlatformTriple [m:aw]
+OPSYSVARS		List of Varname [m:a,c:a]
+OSVERSION_SPECIFIC	Yes [m:w,c:w]
+OWN_DIRS		List of Pathname [m:aw,c:a]
+OWN_DIRS_PERMS		List of ShellWord [m:aw]
 PAMBASE			Readonly
 PAM_ACCEPTED		List of { linux-pam openpam solaris-pam }
 PAM_DEFAULT		Userdefined
 PAM_TYPE		Readonly
-PATCHDIR		RelativePkgPath
-PATCHFILES		List of Filename
+PATCHDIR		RelativePkgPath [m:w,c:dw]
+PATCHFILES		List of Filename [m:aw,o:aw,c:aw]
 PATCH_ARGS		List of ShellWord
-PATCH_DIST_ARGS		List of ShellWord
+PATCH_DIST_ARGS		List of ShellWord [m:aw]
 PATCH_DIST_CAT		ShellCommand
-PATCH_DIST_STRIP	ShellWord
-PATCH_SITES		List of URL
+PATCH_DIST_STRIP	ShellWord [o:w,c:a,m:aw]
+PATCH_SITES		List of URL [m:w,o:w,c:w]
 PATCH_STRIP		ShellWord
-PERL5_PACKLIST		Perl5Packlist
+PERL5_PACKLIST		Perl5Packlist [m:w,o:wa]
 PGSQL_VERSIONS_ACCEPTED	List of { 73 74 80 }
 PGSQL_VERSION_DEFAULT	Userdefined
 PKGBASE			Readonly
-PKGCONFIG_OVERRIDE	List of Pathmask
+PKGCONFIG_OVERRIDE	List of Pathmask [m:aw,c:a]
 PKGDIR			RelativePkgDir
-PKGNAME			PkgName
+PKGNAME			PkgName [m:w,c:w]
 PKGNAME_NOREV		Readonly
 PKGREPOSITORY		Userdefined
-PKGREVISION		PkgRevision
+PKGREVISION		PkgRevision [m:w]
 PKGSRC_COMPILER		Userdefined
-PKGTOOLS_ENV		List+ of ShellWord
-PKGVERSION		Readonly
+PKGTOOLS_ENV		List of ShellWord
+PKGVERSION		Version [m:,c:]
 PKGWILDCARD		Readonly
 PKG_APACHE		Readonly
 PKG_APACHE_ACCEPTED	List of { apache13 apache2 }
 PKG_APACHE_DEFAULT	Userdefined
 PKG_DEBUG_LEVEL		Userdefined
 PKG_DEFAULT_OPTIONS	Userdefined
-PKG_FAIL_REASON		List+ of ShellWord
-PKG_GROUPS		List of ShellWord
-PKG_HACKS		List+ of Identifier
-PKG_INSTALLATION_TYPES	List of { overwrite pkgviews }
+PKG_FAIL_REASON		List of ShellWord [m:a]
+PKG_GECOS		Unchecked [m:w]
+PKG_GID			Unchecked [m:w]
+PKG_GROUPS		List of ShellWord [m:w]
+PKG_HOME		Pathname [m:w]
+PKG_HACKS		List of Identifier [h:a]
+PKG_INSTALLATION_TYPES	List of { overwrite pkgviews } [m:w,c:w]
 PKG_JAVA_HOME		Readonly
 PKG_JVM			Readonly
 PKG_JVMS_ACCEPTED	List of { blackdown-jdk13 jdk jdk14 kaffe sun-jdk13 sun-jdk14 sun-jdk15 }
 PKG_JVM_DEFAULT		Userdefined
 PKG_LEGACY_OPTIONS	List of Option
 PKG_LIBTOOL		Pathname
-PKG_OPTIONS		Readonly
+PKG_OPTIONS		List of Option [o:,m:,c:]
 PKG_OPTIONS_DEPRECATED_WARNINGS	List of ShellWord
-PKG_OPTIONS_GROUP	List
-PKG_OPTIONS_LEGACY_OPTS	List
-PKG_OPTIONS_LEGACY_VARS	List
-PKG_OPTIONS_NONEMPTY_SETS	List
-PKG_OPTIONS_OPTIONAL_GROUPS	List
-PKG_OPTIONS_REQUIRED_GROUPS	List
-PKG_OPTIONS_SET		List
-PKG_OPTIONS_VAR		PkgOptionsVar
-PKG_PRESERVE		Yes
-PKG_SHELL		Pathname
+PKG_OPTIONS_GROUP	List of Option [o:w,m:w]
+PKG_OPTIONS_LEGACY_OPTS	List of Unchecked [m:a,c:a,o:a]
+PKG_OPTIONS_LEGACY_VARS	List of Unchecked [m:a,c:a,o:a]
+PKG_OPTIONS_NONEMPTY_SETS	List of Option
+PKG_OPTIONS_OPTIONAL_GROUPS	List of Identifier [o:aw]
+PKG_OPTIONS_REQUIRED_GROUPS	List of Identifier [o:w,m:w]
+PKG_OPTIONS_SET		List of Option
+PKG_OPTIONS_VAR		PkgOptionsVar [o:w,m:w,c:w]
+PKG_PRESERVE		Yes [m:w]
+PKG_SHELL		Pathname [m:w,c:w]
 PKG_SHLIBTOOL		Pathname
-PKG_SKIP_REASON		List+ of ShellWord
+PKG_SKIP_REASON		List of ShellWord
 PKG_SUFX		Userdefined
-PKG_SUGGESTED_OPTIONS	List of Option
-PKG_SUPPORTED_OPTIONS	List of Option
+PKG_SUGGESTED_OPTIONS	List of Option [o:acw,m:aw,c:w]
+PKG_SUPPORTED_OPTIONS	List of Option [o:acw,m:aw,c:w]
 PKG_SYSCONFDIR		Pathname
-PKG_SYSCONFSUBDIR	Pathname
+PKG_SYSCONFSUBDIR	Pathname [m:w,c:w]
 PKG_SYSCONFVAR		Identifier
 # ^^ FIXME: name/type mismatch.
-PKG_USERS		List of ShellWord
-PLIST_SRC		List of RelativePkgPath
-PLIST_SUBST		List+ of ShellWord
+PKG_UID			Unchecked [m:w]
+PKG_USERS		List of ShellWord [m:w]
+PLIST_SRC		List of RelativePkgPath [m:aw,o:a,c:aw]
+PLIST_SUBST		List of ShellWord [c:a,o:a,m:a]
 PLIST_TYPE		{ dynamic static }
-PREPEND_PATH		List+ of Pathname
-PRINT_PLIST_AWK		AwkCommand
-PTHREAD_AUTO_VARS	YesNo
-PTHREAD_OPTS		List+ of { native optional require }
+PREPEND_PATH		List of Pathname
+PRINT_PLIST_AWK		AwkCommand [b:a]
+PTHREAD_AUTO_VARS	YesNo [m:w]
+PTHREAD_OPTS		List of { native optional require } [m:aw,c:a,b:a]
 PTHREAD_TYPE		Readonly
-RCD_SCRIPTS		List of Filename
-RCD_SCRIPT_SRC		List of Pathname
-REPLACE			String
-REPLACE_EMACS		List+ of Pathmask
-REPLACE_FILES		List of Pathmask
-REPLACE_INTERPRETER	List+ of Identifier
-REPLACE_PERL		List+ of Pathmask
-REQD_DIRS		List+ of Pathname
-REQD_FILES		List+ of Pathname
-REQD_FILES_MODE		{ 0644 0640 0600 0400 }
-RESTRICTED		Message
-SCRIPTS_ENV		List+ of ShellWord
+RCD_SCRIPTS		List of Filename [m:w]
+RCD_SCRIPT_SRC		List of Pathname [m:w]
+REPLACE			String [m:w]
+REPLACE_EMACS		List of Pathmask
+REPLACE_FILES		List of Pathmask [m:aw,c:aw]
+REPLACE_INTERPRETER	List of Identifier [m:a,c:a]
+REPLACE_PERL		List of Pathmask [m:aw,c:a]
+REQD_DIRS		List of Pathname [m:aw]
+REQD_FILES		List of Pathname [m:aw]
+REQD_FILES_MODE		{ 0644 0640 0600 0400 } [m:aw]
+RESTRICTED		Message [m:w]
+SCRIPTS_ENV		List of ShellWord
 SHLIB_HANDLING		{ YES NO no }
-SPECIAL_PERMS		List of ShellWord
-SHLIBTOOL_OVERRIDE	List+ of Pathmask
-SITES			List of URL
-SUBST_CLASSES		List+
-SUBST_FILES		List of Pathmask
-SUBST_FILTER_CMD	List of ShellWord
-# ^^ more appropriately, a Shellcommand
-SUBST_MESSAGE		Message
-SUBST_SED		SedCommands
-SUBST_STAGE		Stage
-SVR4_PKGNAME		SVR4PkgName
-TEST_DIRS		List of WrksrcSubdirectory
-TEST_ENV		List+ of ShellWord
-TEST_TARGET		List of Identifier
-TEX_ACCEPTED		List of { teTeX1 teTeX2 teTeX3 }
-TEX_DEPMETHOD		{ build run }
-TEXINFO_REQD		List+
-TOOLS_ALIASES		List+ of Filename
-TOOLS_BROKEN		List+ of Tool
-TOOLS_CREATE		List+ of Tool
-TOOLS_GNU_MISSING	List+ of Tool
-TOOLS_NOOP		List+ of Tool
+SPECIAL_PERMS		List of ShellWord [m:aw]
+SHLIBTOOL_OVERRIDE	List of Pathmask [m:aw,c:a]
+SITES			List of URL [m:w,c:w]
+SUBST_CLASSES		List of Identifier [m:a,c:a,h:a]
+SUBST_FILES		List of Pathmask [m:aw,c:aw,h:aw,o:aw]
+SUBST_FILTER_CMD	ShellCommand [m:w,c:w,h:w,o:w]
+SUBST_MESSAGE		Message [m:w,c:w,h:w,o:w]
+SUBST_SED		SedCommands [m:aw,c:aw,h:aw,o:aw]
+SUBST_STAGE		Stage [m:w,c:w,h:w,o:w]
+SVR4_PKGNAME		SVR4PkgName [m:w]
+TEST_DIRS		List of WrksrcSubdirectory [m:aw,c:aw]
+TEST_ENV		List of ShellWord
+TEST_TARGET		List of Identifier [m:w]
+TEX_ACCEPTED		List of { teTeX1 teTeX2 teTeX3 } [m:w,c:w]
+TEX_DEPMETHOD		{ build run } [m:w,c:w]
+TEXINFO_REQD		List of Version [m:a]
+TOOLS_ALIASES		List of Filename
+TOOLS_BROKEN		List of Tool
+TOOLS_CREATE		List of Tool
+TOOLS_GNU_MISSING	List of Tool
+TOOLS_NOOP		List of Tool
 TOOLS_PATH		Pathname
-UNLIMIT_RESOURCES	List of { datasize stacksize memorysize }
-UNWRAP_FILES		List+ of Pathmask
-USE_BUILTIN		YesNoFromCommand
-USE_CROSSBASE		Yes
-USE_DIRS		List of PkgName
+UNLIMIT_RESOURCES	List of { datasize stacksize memorysize } [m:aw,c:a]
+UNWRAP_FILES		List of Pathmask [m:a,c:a]
+USE_BUILTIN		YesNoFromCommand [builtin.mk:w]
+USE_CROSSBASE		Yes [m:w]
+USE_DIRS		List of { xdg-1.1 gnome2-1.5 gnome1-1.5 xdg-1.2 gnome1-1.0 texmf-1.0 texmf-1.1 xdg-1.3 XFree86-1.0 xorg-1.0 texmf-dirs-1.0 gnome2-1.6 gnome2-1.3 theme-1.0 XFree86-1.1 } [m:a,c:a]
 USE_GNU_CONFIGURE_HOST	YesNo
-USE_GNU_ICONV		Yes
-USE_GNU_READLINE	Yes
-USE_IMAKE		Yes
-USE_JAVA		{ run yes }
-USE_JAVA2		{ YES yes 1.4 1.5 }
-USE_LANGUAGES		List of { c c++ fortran java objc }
-USE_LIBTOOL		Yes
+USE_GNU_ICONV		Yes [m:w,c:w]
+USE_GNU_READLINE	Yes [m:w]
+USE_IMAKE		Yes [m:w]
+USE_JAVA		{ run yes } [m:w]
+USE_JAVA2		{ YES yes 1.4 1.5 } [m:w]
+USE_LANGUAGES		List of { c c++ fortran java objc } [m:aw,c:aw,o:a]
+USE_LIBTOOL		Yes [m:w,c:w]
 USE_MAKEINFO		Yes
 USE_MSGFMT_PLURALS	Yes
-USE_NCURSES		Yes
-USE_OLD_DES_API		YesNo
+USE_NCURSES		Yes [m:w]
+USE_OLD_DES_API		YesNo [m:w,c:w]
 USE_PKGINSTALL		Yes
-USE_PKGLOCALEDIR	YesNo
+USE_PKGLOCALEDIR	YesNo [m:w,c:w]
 USE_PKGSRC_GCC		Userdefined
-USE_TOOLS		List+ of Tool
-USE_X11			Yes
-USE_X11BASE		Yes
-WRAPPER_REORDER_CMDS	List+ of WrapperReorder
-WRAPPER_TRANSFORM_CMDS	List+ of WrapperTransform
-WRKSRC			WrkdirSubdirectory
+USE_TOOLS		List of Tool [m:a,c:a,o:a]
+USE_X11			Yes [m:w,c:w]
+USE_X11BASE		Yes [m:w,c:w]
+WRAPPER_REORDER_CMDS	List of WrapperReorder [b:a,c:a,m:a]
+WRAPPER_TRANSFORM_CMDS	List of WrapperTransform [b:a,c:a,m:a]
+WRKSRC			WrkdirSubdirectory [m:w,c:dw]
 X11_PKGSRCDIR		Readonly
 X11_TYPE		Userdefined
 XAW_TYPE		{ 3d neXtaw standard xpm }
