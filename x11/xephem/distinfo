@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2005/05/20 13:17:11 drochner Exp $
+$NetBSD: distinfo,v 1.8 2006/05/10 16:45:35 gdt Exp $
 
-SHA1 (xephem-3.6.4.tar.gz) = c0d262b5c95b91cab841e5b32dafa36ed9834e1b
-RMD160 (xephem-3.6.4.tar.gz) = 2c784e7e10a2faac1f53e157cd3216be77c2f31d
-Size (xephem-3.6.4.tar.gz) = 10022695 bytes
-SHA1 (patch-aa) = 735179176b04d7a21f410714e9a1c596ed949274
+SHA1 (xephem-3.7.1.tar.gz) = e6567b358c3b00f696e71eace20f4f5226bab011
+RMD160 (xephem-3.7.1.tar.gz) = 7debeb25b9e76b3e796ae5349d84d6b36ae04e54
+Size (xephem-3.7.1.tar.gz) = 12986819 bytes
+SHA1 (patch-aa) = ea4d59efc966e41487357cd511b3e737dbd971d3

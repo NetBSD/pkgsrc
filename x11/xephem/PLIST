@@ -1,12 +1,16 @@
-@comment $NetBSD: PLIST,v 1.6 2006/02/16 15:15:18 yyamano Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/05/10 16:45:35 gdt Exp $
 bin/xephem
 lib/X11/app-defaults/XEphem
-${IMAKE_MAN_DIR}/xephem.${IMAKE_MAN_SUFFIX}
+man/man1/xephem.1
+share/xephem/auxil/HAReyfigs.csf
 share/xephem/auxil/README
 share/xephem/auxil/SOHO_512_20030809_0719_eit_304.gif
 share/xephem/auxil/analemma.plt
+share/xephem/auxil/annotation.ano
 share/xephem/auxil/astorb2edb.pl
+share/xephem/auxil/classicfigs.csf
 share/xephem/auxil/dearth.gif
+share/xephem/auxil/eyepieces.epl
 share/xephem/auxil/eyepieces.eyp
 share/xephem/auxil/favorites.fav
 share/xephem/auxil/jupiter.9910
@@ -32,7 +36,7 @@ share/xephem/auxil/wmm.cof
 share/xephem/auxil/xephem_sites
 share/xephem/auxil/xephem_skyhist
 share/xephem/catalogs/Messier.edb
-share/xephem/catalogs/YBS.edb
+share/xephem/catalogs/SKY2k65.edb
 share/xephem/fifos/Makefile
 share/xephem/fifos/README
 share/xephem/fits/Abell426.fts
@@ -68,6 +72,7 @@ share/xephem/help/png/external-input.png
 share/xephem/help/png/favorites.png
 share/xephem/help/png/fieldstars.png
 share/xephem/help/png/gallery.png
+share/xephem/help/png/imreg.png
 share/xephem/help/png/indiconfig.png
 share/xephem/help/png/indicontrol.png
 share/xephem/help/png/internet-update.png
@@ -88,6 +93,7 @@ share/xephem/help/png/mars-more-info.png
 share/xephem/help/png/mars.png
 share/xephem/help/png/moon-more-info.png
 share/xephem/help/png/moon.png
+share/xephem/help/png/movie.png
 share/xephem/help/png/naag.png
 share/xephem/help/png/network-setup.png
 share/xephem/help/png/obslog.png
@@ -131,12 +137,14 @@ share/xephem/help/png/sky-view-where-tb.png
 share/xephem/help/png/sky-view.png
 share/xephem/help/png/solsys.png
 share/xephem/help/png/solver.png
+share/xephem/help/png/stepsize.png
 share/xephem/help/png/sun-view.png
 share/xephem/help/png/syslog.png
 share/xephem/help/png/trails.png
 share/xephem/help/png/uranus-more-info.png
 share/xephem/help/png/uranus.png
 share/xephem/help/png/valid-html401.png
+share/xephem/help/png/wcssolver.png
 share/xephem/help/xephem.html
 share/xephem/lo/lodb.xml
 @exec ${MKDIR} %D/share/xephem/tools
