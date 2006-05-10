@@ -1,23 +1,31 @@
-# $NetBSD: Makefile,v 1.9 2006/04/17 13:46:38 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/10 16:46:21 tonio Exp $
 #
 
 .include "../../lang/kaffe/Makefile.common"
 
 PKGNAME=    ${DISTNAME:S/kaffe/kaffe-x11/}
-PKGREVISION=	3
 
 COMMENT+=   (AWT support through X11)
 
-CONFIGURE_ARGS:=  ${CONFIGURE_ARGS:S/--disable-native-awt/--with-kaffe-x-awt/}
+CONFIGURE_ARGS+=  --with-kaffe-x-awt
+CONFIGURE_ARGS+=  --enable-gtk-peer
+CONFIGURE_ARGS+=  --with-x
+CONFIGURE_ARGS+=  --without-esd
+CONFIGURE_ARGS+=  --disable-esdtest
 
-BUILD_DIRS=     ${WRKSRC}/config
-BUILD_DIRS+=    ${WRKSRC}/libraries/javalib
-BUILD_DIRS+=    ${WRKSRC}/include
-BUILD_DIRS+=    ${WRKSRC}/replace
-BUILD_DIRS+=    ${WRKSRC}/kaffe/kaffevm
-BUILD_DIRS+=    ${WRKSRC}/libraries/clib/classpath
-BUILD_DIRS+=    ${WRKSRC}/libraries/clib/awt
-INSTALL_DIRS=   ${WRKSRC}/libraries/clib/awt
+
+BUILD_DIRS=     config
+BUILD_DIRS+=    libraries/javalib
+BUILD_DIRS+=    libraries/clib/classpath
+BUILD_DIRS+=    libraries/clib/awt
+BUILD_DIRS+=	libraries/javalib/external/classpath/native/jni/gtk-peer
+BUILD_DIRS+=	libraries/javalib/external/classpath/native/jawt
+INSTALL_DIRS=   libraries/clib/awt
+INSTALL_DIRS+=	libraries/javalib/external/classpath/native/jni/gtk-peer
+INSTALL_DIRS+=	libraries/javalib/external/classpath/native/jawt
+
+pre-build:
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} BUILD_ENVIRONMENT
 
 PRINT_PLIST_AWK+= /^@dirrm/ { print "@comment in kaffe: " $$0; next; }
 

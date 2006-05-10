@@ -1,21 +1,25 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:09:46 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/10 16:46:21 tonio Exp $
 #
 
 .include "../../lang/kaffe/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/kaffe/kaffe-esound/}
-PKGREVISION=		1
 
 COMMENT+=		(sound support through esound)
 
-CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--without-esd/--with-esd/}
-CONFIGURE_ARGS:=	${CONFIGURE_ARGS:S/--disable-esdtest//}
+CONFIGURE_ARGS+=	--disable-native-awt
+CONFIGURE_ARGS+=	--disable-gtk-peer
+CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS+=	--with-esd
 
-BUILD_DIRS=		  ${WRKSRC}/config
-BUILD_DIRS+=    ${WRKSRC}/libraries/javalib
-BUILD_DIRS+=		${WRKSRC}/include
-BUILD_DIRS+=		${WRKSRC}/libraries/clib/sound/esd
-INSTALL_DIRS=		${WRKSRC}/libraries/clib/sound/esd
+BUILD_DIRS=		config
+BUILD_DIRS+=		libraries/javalib
+BUILD_DIRS+=		libraries/clib/classpath
+BUILD_DIRS+=		libraries/clib/sound/esd
+INSTALL_DIRS=		libraries/clib/sound/esd
+
+pre-build:
+	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} BUILD_ENVIRONMENT
 
 PRINT_PLIST_AWK+=	/^@dirrm/ { print "@comment in kaffe: " $$0; next; }
 
