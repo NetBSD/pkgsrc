@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.757 2006/05/04 09:37:36 minskim Exp $
+# $NetBSD: Makefile,v 1.758 2006/05/11 03:51:11 minskim Exp $
 #
 
 COMMENT=	Development utilities
@@ -200,6 +200,7 @@ SUBDIR+=	intel2gas
 SUBDIR+=	isect
 SUBDIR+=	its4
 SUBDIR+=	jam
+SUBDIR+=	javacc
 SUBDIR+=	javadeps
 SUBDIR+=	jgrasp
 SUBDIR+=	kdbg
