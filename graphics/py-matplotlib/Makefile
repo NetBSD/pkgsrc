@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/04/30 22:30:43 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/05/11 14:15:04 joerg Exp $
 #
 
 DISTNAME=		matplotlib-0.87.2
@@ -11,6 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://matplotlib.sourceforge.net/
 COMMENT=		Matlab-style plotting package for Python
 
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

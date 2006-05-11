@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:09:24 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/11 14:07:51 joerg Exp $
 
 DISTNAME=	xfreecell-1.0.5b
 PKGREVISION=	1
@@ -12,6 +12,7 @@ COMMENT=	Popular freecell card game for X
 
 USE_X11BASE=	yes
 USE_TOOLS+=	gmake
+USE_LANGUAGES=	c++
 MAKEFILE=	makefile
 
 WRKSRC=		${WRKDIR}/xfreecell
