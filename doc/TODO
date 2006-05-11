@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4968 2006/05/11 13:24:21 wiz Exp $
+$NetBSD: TODO,v 1.4969 2006/05/11 14:53:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -643,6 +643,7 @@ Suggested package updates
 	o java-lang-spec-3.0
 	o jgrasp-183
 	o jigdo-0.7.2
+	o john-1.7.1
 	o jove-4.16.0.69
 	o jpegpixi-1.1.1
 	o jpilot-0.99.8
@@ -686,6 +687,7 @@ Suggested package updates
 	o libmilter-8.13.5
 	o libmpeg3-1.6
 	o libnasl-2.3.1
+	o libnids-1.21
 	o libntlm-0.3.10
 	o libpqxx-2.5.5
 	o libprelude-0.9.7.1
@@ -755,6 +757,7 @@ Suggested package updates
 	o mysql5-client-5.0.21
 	o mysql5-server-5.0.21
 	o nagios-2.3
+	o naim-0.11.8.2
 	o nano-1.2.5 [pkg/32859]
 	o nap-1.5.3
 	o nawk-20041222
