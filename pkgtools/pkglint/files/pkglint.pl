@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.579 2006/05/11 11:03:16 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.580 2006/05/11 18:26:51 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2923,7 +2923,14 @@ sub checkline_mk_shelltext($$) {
 
 	if ($rest =~ s/^([-@]*)(?:\$\{_PKG_SILENT\}\$\{_PKG_DEBUG\})?//) {
 		my ($hidden) = ($1);
-		if ($hidden =~ qr"\@" && $rest =~ $regex_shellword) {
+
+		if ($hidden !~ qr"\@") {
+			# Nothing is hidden at all.
+
+		} elsif (defined($mkctx_target) && $mkctx_target =~ qr"^(?:show-.*|.*-message)$") {
+			# In some targets commands may be hidden.
+
+		} elsif ($rest =~ $regex_shellword) {
 			my ($cmd) = ($1);
 
 			if (!exists(hidden_shell_commands->{$cmd})) {
