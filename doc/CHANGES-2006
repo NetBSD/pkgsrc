@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.184 2006/05/11 06:51:54 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.185 2006/05/11 07:33:26 grant Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2439,3 +2439,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/javacc version 4.0 [minskim 2006-05-11]
 	Updated chat/i2cbd to 2.0_BETA5 [jwise 2006-05-10]
 	Updated www/php4 to 4.4.2nb2 [minskim 2006-05-11]
+	Updated net/nagios-base to 2.3nb1 [grant 2006-05-11]
