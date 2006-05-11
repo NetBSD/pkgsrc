@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/12/29 06:21:34 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/11 21:42:43 seb Exp $
 #
 
-DISTNAME=	conserver-8.1.11
-PKGNAME=	conserver8-8.1.11
-PKGREVISION=	1
+DISTNAME=	conserver-8.1.14
+PKGNAME=	conserver8-8.1.14
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.conserver.com/conserver/
 
@@ -22,7 +21,7 @@ CONFIGURE_ARGS+=	--with-master=${CONSERVER_DEFAULTHOST:Q}
 CONFIGURE_ARGS+=	--with-port=${CONSERVER_DEFAULTPORT:Q}
 CONFIGURE_ARGS+=	--with-regex
 CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}
-CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/log/conserver
+CONFIGURE_ARGS+=	--with-logfile=${VARBASE:Q}/log/conserver
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.conserver8
 PKG_SUPPORTED_OPTIONS=	pam ssl uds
@@ -65,9 +64,8 @@ pre-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/conserver/convert ${PREFIX}/bin/conserverconvert
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	for File in INSTALL README PROTOCOL; do				\
+	set -e; for File in INSTALL README PROTOCOL; do			\
 		${INSTALL_DATA} ${WRKSRC}/$${File} ${DOCDIR}/$${File};	\
 	done
 
