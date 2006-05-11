@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/17 13:46:05 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/05/11 11:19:44 smb Exp $
 
 DISTNAME=	qca-1.0
 PKGREVISION=	3
@@ -13,6 +13,7 @@ COMMENT=	Cross-platform crypto API for QT
 USE_TOOLS+= gmake
 USE_LIBTOOL=	yes
 HAS_CONFIGURE=	yes
+USE_LANGUAGES=	c++
 
 INSTALLATION_DIRS=	include lib
 
