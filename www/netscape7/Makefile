@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/04/22 09:22:16 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2006/05/11 18:10:19 gdt Exp $
 #
 
 DISTNAME=		netscape-i686-pc-linux-gnu-sea
@@ -17,6 +17,7 @@ COMMENT=		Netscape Browser, Mail and Newsreader suite, version 7
 
 #BUILD_DEPENDS=		binpatch>=1.0:../../pkgtools/binpatch
 
+LICENSE=		netcape-license
 RESTRICTED=		No re-distribution without agreement from Netscape
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
