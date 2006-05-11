@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4969 2006/05/11 14:53:23 wiz Exp $
+$NetBSD: TODO,v 1.4970 2006/05/11 15:35:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -422,6 +422,7 @@ Suggested package updates
 	o cstream-2.6.0
 	o cue-20051114 [pkg/33153]
 	o cuetools-1.3.1
+	o cups-1.2.0
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsweb-3.0.6
 	o cweb-3.64a
