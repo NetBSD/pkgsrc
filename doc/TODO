@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4964 2006/05/10 21:04:44 adam Exp $
+$NetBSD: TODO,v 1.4965 2006/05/11 06:43:03 grant Exp $
 
 Suggested new packages
 ======================
@@ -1184,6 +1184,7 @@ Suggested package updates
 	o vice-1.19
 	o vifm-0.3a
 	o visual-regexp-3.1
+	o vim-7.0
 	o vlc-0.8.4a
 	o vmware-module-3.2.2
 	o vmware-5.5
