@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/03/27 21:18:06 wiz Exp $
+$NetBSD: distinfo,v 1.2 2006/05/11 10:58:52 rillig Exp $
 
 SHA1 (shapelib-1.2.10.tar.gz) = 436b09b6a90f403e4568460d67560d5730725651
 RMD160 (shapelib-1.2.10.tar.gz) = 9dcd90d5197aa7d6063a703a369a530f6aa1f1c3
 Size (shapelib-1.2.10.tar.gz) = 167219 bytes
-SHA1 (patch-aa) = 7f32b90a974ab4a605f44f735df3b1697860a59b
+SHA1 (patch-aa) = 2739348bb5fa55d5ec68b793c0ee136a3678c55a
