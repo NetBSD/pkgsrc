@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4970 2006/05/11 15:35:04 wiz Exp $
+$NetBSD: TODO,v 1.4971 2006/05/11 21:45:00 seb Exp $
 
 Suggested new packages
 ======================
@@ -412,7 +412,6 @@ Suggested package updates
 	o columba-1.0RC1
 	o compface-1.5.2
 	o conglomerate-0.9.1
-	o conserver-8.1.14
 	o cook-2.26
 	o coreutils-5.94
 	o cqcam-0.91
