@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.186 2006/05/11 07:53:31 adam Exp $
+$NetBSD: CHANGES-2006,v 1.187 2006/05/11 09:25:51 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2447,3 +2447,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added games/crossfire-client-gtk2 version 1.9.0 [adam 2006-05-11]
 	Added games/crossfire-server version 1.9.0 [adam 2006-05-11]
 	Added games/crossfire-maps version 1.9.0.1 [adam 2006-05-11]
+	Updated editors/vim-lang to 7.0.0nb1 [martti 2006-05-11]
