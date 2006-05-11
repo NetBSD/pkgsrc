@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.180 2006/05/11 02:37:55 jwise Exp $
+$NetBSD: CHANGES-2006,v 1.181 2006/05/11 03:51:11 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2436,3 +2436,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/kaffe-esound to 1.1.7 [tonio 2006-05-10]
 	Updated www/dillo to 0.8.6 [adam 2006-05-10]
 	Updated chat/i2cbd to 2.0_BETA4 [jwise 2006-05-10]
+	Addedd devel/javacc [minskim 2006-05-11]
