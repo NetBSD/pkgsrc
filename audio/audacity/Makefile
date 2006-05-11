@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/05/09 08:01:07 rillig Exp $
+# $NetBSD: Makefile,v 1.47 2006/05/11 10:06:09 rillig Exp $
 
 DISTNAME=	audacity-src-1.2.4b
 PKGNAME=	audacity-1.2.4b
@@ -25,9 +25,9 @@ CONFIGURE_ARGS+=	--with-portaudio=system
 CONFIGURE_ARGS+=	--with-vorbis=system
 LTCONFIG_OVERRIDE+=	${WRKSRC}/ltconfig
 
-CONFIG_GUESS_OVERRIDE?=		\
+CONFIG_GUESS_OVERRIDE=		\
 	config.guess */config.guess */*/config.guess */*/*/config.guess
-CONFIG_SUB_OVERRIDE?=		\
+CONFIG_SUB_OVERRIDE=		\
 	config.sub */config.sub */*/config.sub */*/*/config.sub
 
 .include "../../audio/flac/buildlink3.mk"
