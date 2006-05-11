@@ -1,13 +1,9 @@
-$NetBSD: distinfo,v 1.11 2006/05/10 20:31:50 christos Exp $
+$NetBSD: distinfo,v 1.12 2006/05/11 02:36:15 jwise Exp $
 
-SHA1 (i2cbd-2.0_BETA3.tar.gz) = 10f68eda9891d1f2e07de7e1f9de12b60e6862f0
-RMD160 (i2cbd-2.0_BETA3.tar.gz) = 25825fa0b22aa34764193c678269dd97e3daf032
-Size (i2cbd-2.0_BETA3.tar.gz) = 59259 bytes
+SHA1 (i2cbd-2.0_BETA4.tar.gz) = 6a0e55344a59461795f39f9bba08b0c47f5e4187
+RMD160 (i2cbd-2.0_BETA4.tar.gz) = 0fef06c70d6fcec53235fd2d7385c0bb780cad3b
+Size (i2cbd-2.0_BETA4.tar.gz) = 58969 bytes
 SHA1 (patch-aa) = 0151f8e68be11e759425d2e9569df3d465c50931
 SHA1 (patch-ab) = bca8ecb0f41be6405333f2bcf7722dc725ffc777
 SHA1 (patch-ac) = ca8e6b7324a22fb9ecabf2374e34febb55196e28
-SHA1 (patch-ad) = 4a5c9276b10905d7487e3191f5008fc9418743ae
-SHA1 (patch-af) = 7b5257dc24f0b34a3205bd1accd83a068210a5fc
-SHA1 (patch-ag) = b354e4ed7dce00e13f87579b252650d7b921b1aa
-SHA1 (patch-ah) = 94ee816e45d2f26e94a22678cc090fa4fb4f0daa
-SHA1 (patch-ai) = eaed09ca42829c3f6fb2724ef7eb12d16d8a0a91
+SHA1 (patch-aj) = 6a4a5d1a5d8ac9cad977b6315c86db7bd02fe5ef
