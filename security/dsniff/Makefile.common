@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2006/04/06 06:22:38 reed Exp $
+# $NetBSD: Makefile.common,v 1.5 2006/05/11 15:39:20 joerg Exp $
 
 DISTNAME=	dsniff-${VERS}
 VERS=		2.3
@@ -12,8 +12,8 @@ GNU_CONFIGURE=	yes
 
 BUILDLINK_API_DEPENDS.libnet+=	libnet-1.0.*
 
-PATCHDIR=	${.CURDIR}/../dsniff/patches
-DISTINFO_FILE=	${.CURDIR}/../dsniff/distinfo
+PATCHDIR=	${.CURDIR}/../../security/dsniff/patches
+DISTINFO_FILE=	${.CURDIR}/../../security/dsniff/distinfo
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../devel/libnet/buildlink3.mk"
