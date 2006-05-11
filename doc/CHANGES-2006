@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.190 2006/05/11 15:02:10 seb Exp $
+$NetBSD: CHANGES-2006,v 1.191 2006/05/11 19:01:19 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2462,3 +2462,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/liferea to 1.0.12 [drochner 2006-05-11]
 	Updated misc/stellarium to 0.8.0 [drochner 2006-05-11]
 	Updated sysutils/ups-nut-cgi to 2.0.3 [seb 2006-05-11]
+	Updated graphics/aqsis to 0.6.4nb6 [joerg 2006-05-11]
