@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/05/10 16:45:35 gdt Exp $
+# $NetBSD: Makefile,v 1.39 2006/05/11 15:07:24 gdt Exp $
 
 DISTNAME=	xephem-3.7.1
 CATEGORIES=	x11
@@ -10,11 +10,21 @@ HOMEPAGE=	http://www.clearskyinstitute.com/xephem/
 COMMENT=	Interactive astronomical ephemeris program
 
 LICENSE=		xephem-license
-RESTRICTED=		No permission to distribute distfile or binary package.
-NO_SRC_ON_FTP=		${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
+
+# Pending adjustment of license wording to clarify the copyright
+# holder's intent, permission has been granted to distribute the
+# distfile and binary packages without functional changes.
+#
+# From: "Elwood C. Downey" <ecdowney@clearskyinstitute.com>
+# Subject: Re: license terms, tarball mirroring, binary packages
+# To: "Greg Troxel" <gdt@ir.bbn.com>
+# Date: Wed, 10 May 2006 18:41:01 -0600 (MDT)
+# [rest omitted]
+# In the mean time, please consider this email to grant permissions for
+# the NetBSD distros to make available both through online download and
+# physical media both the original XEphem tarball and a binary built
+# from the original tarball (including possible changes for porting but
+# not changes in functionality).
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/GUI/xephem
 USE_TOOLS+=	gmake perl:run
