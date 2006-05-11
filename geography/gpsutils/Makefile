@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:56 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/11 11:05:54 rillig Exp $
 #
 
 DISTNAME=		gpsutils-0.4.0
@@ -13,8 +13,8 @@ WRKSRC=			${WRKDIR}/gpsutils-0.4.0/src
 INSTALLATION_DIRS=	bin
 
 do-install:
-.for PROGRAM in capture switchmode gbindiff
-	${INSTALL_PROGRAM} ${WRKSRC}/${PROGRAM} ${PREFIX}/bin
+.for f in capture switchmode gbindiff
+	${INSTALL_PROGRAM} ${WRKSRC}/${f:Q} ${PREFIX}/bin
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
