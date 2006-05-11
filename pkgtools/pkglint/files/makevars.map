@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.88 2006/05/10 17:14:08 rillig Exp $
+# $NetBSD: makevars.map,v 1.89 2006/05/11 09:16:53 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -227,7 +227,7 @@ EXTRACT_OPTS_RAR	List of ShellWord [m:as,c:as]
 EXTRACT_OPTS_TAR	List of ShellWord [m:as,c:as]
 EXTRACT_OPTS_ZIP	List of ShellWord [m:as,c:as]
 EXTRACT_OPTS_ZOO	List of ShellWord [m:as,c:as]
-EXTRACT_SUFX		DistSuffix [c:s,m:s]
+EXTRACT_SUFX		DistSuffix [c:s,m:s,Makefile.*:s]
 FAMBASE			Unchecked []
 FAM_ACCEPTED		List of { fam gamin }
 FAM_DEFAULT		Unchecked []
@@ -253,7 +253,7 @@ INFO_DIR		Pathname
 # ^^ relative to PREFIX
 INFO_FILES		List of Pathmask [m:s]
 INSTALL			ShellCommand []
-INSTALLATION_DIRS	List of Pathname [m:as,c:a]
+INSTALLATION_DIRS	List of Pathname [m:as,c:as]
 INSTALL_DATA		ShellCommand []
 INSTALL_DATA_DIR	ShellCommand []
 INSTALL_DIRS		List of WrksrcSubdirectory [m:as,c:as]
@@ -324,7 +324,7 @@ MASTER_SITE_SUSE	List of URL
 MASTER_SITE_TEX_CTAN	List of URL
 MASTER_SITE_XCONTRIB	List of URL
 MASTER_SITE_XEMACS	List of URL
-MESSAGE_SRC		List of Pathname [m:as,o:ads]
+MESSAGE_SRC		List of Pathname [m:as,c:a,o:ads]
 MESSAGE_SUBST		List of ShellWord [c:a,m:a,o:a]
 MYSQL_VERSIONS_ACCEPTED	List of { 40 41 50 } [m:s]
 MYSQL_VERSION_DEFAULT	Unchecked []
@@ -462,7 +462,15 @@ UNLIMIT_RESOURCES	List of { datasize stacksize memorysize } [m:as,c:a]
 UNWRAP_FILES		List of Pathmask [m:a,c:a]
 USE_BUILTIN		YesNoFromCommand [builtin.mk:s]
 USE_CROSSBASE		Yes [m:s]
-USE_DIRS		List of { xdg-1.1 gnome2-1.5 gnome1-1.5 xdg-1.2 gnome1-1.0 texmf-1.0 texmf-1.1 xdg-1.3 XFree86-1.0 xorg-1.0 texmf-dirs-1.0 gnome2-1.6 gnome2-1.3 theme-1.0 XFree86-1.1 } [m:a,c:a]
+USE_DIRS		List of {					\
+				XFree86-1.0 XFree86-1.1			\
+				gnome1-1.0 gnome1-1.5			\
+				gnome2-1.3 gnome2-1.5 gnome2-1.6	\
+				texmf-1.0 texmf-1.1 texmf-1.2		\
+				theme-1.0 theme-1.1			\
+				xdg-1.1 xdg-1.2 xdg-1.3			\
+				xorg-1.0				\
+			} [m:a,c:a]
 USE_GNU_CONFIGURE_HOST	YesNo
 USE_GNU_ICONV		Yes [m:s,c:s]
 USE_GNU_READLINE	Yes [m:s]
