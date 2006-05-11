@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/27 02:57:06 wulf Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/05/11 11:14:19 rillig Exp $
 ${PYSITELIB}/gnuradio/__init__.py
 ${PYSITELIB}/gnuradio/__init__.pyc
 ${PYSITELIB}/gnuradio/__init__.pyo
@@ -174,8 +174,8 @@ include/gnuradio/gr_complex.h
 include/gnuradio/gr_complex_to_interleaved_short.h
 include/gnuradio/gr_complex_to_xxx.h
 include/gnuradio/gr_conjugate_cc.h
-include/gnuradio/gr_count_bits.h
 include/gnuradio/gr_costas_loop_cc.h
+include/gnuradio/gr_count_bits.h
 include/gnuradio/gr_cpu.h
 include/gnuradio/gr_crc32.h
 include/gnuradio/gr_dd_mpsk_sync_cc.h
@@ -285,17 +285,17 @@ include/gnuradio/gr_null_source.h
 include/gnuradio/gr_oscope_guts.h
 include/gnuradio/gr_oscope_sink_f.h
 include/gnuradio/gr_oscope_sink_x.h
-include/gnuradio/gr_packet_sink.h
-include/gnuradio/gr_pagesize.h
 include/gnuradio/gr_pa_2x2_phase_combiner.h
 include/gnuradio/gr_packed_to_unpacked_bb.h
+include/gnuradio/gr_packet_sink.h
+include/gnuradio/gr_pagesize.h
 include/gnuradio/gr_phase_modulator_fc.h
-include/gnuradio/gr_prefix.h
-include/gnuradio/gr_prefs.h
 include/gnuradio/gr_pll_carriertracking_cc.h
 include/gnuradio/gr_pll_freqdet_cf.h
 include/gnuradio/gr_pll_refout_cc.h
 include/gnuradio/gr_preferences.h
+include/gnuradio/gr_prefix.h
+include/gnuradio/gr_prefs.h
 include/gnuradio/gr_probe_avg_mag_sqrd_c.h
 include/gnuradio/gr_probe_avg_mag_sqrd_f.h
 include/gnuradio/gr_probe_signal_f.h
@@ -339,8 +339,8 @@ include/gnuradio/gr_single_zero_rec.h
 include/gnuradio/gr_single_zero_rec_filter_ff.h
 include/gnuradio/gr_skiphead.h
 include/gnuradio/gr_stream_to_streams.h
-include/gnuradio/gr_streams_to_stream.h
 include/gnuradio/gr_stream_to_vector.h
+include/gnuradio/gr_streams_to_stream.h
 include/gnuradio/gr_streams_to_vector.h
 include/gnuradio/gr_sub_cc.h
 include/gnuradio/gr_sub_ff.h
@@ -372,9 +372,9 @@ include/gnuradio/gr_vector_source_s.h
 include/gnuradio/gr_vector_to_stream.h
 include/gnuradio/gr_vector_to_streams.h
 include/gnuradio/gr_vmcircbuf.h
+include/gnuradio/gri_add_const_ss.h
 include/gnuradio/gri_agc.h
 include/gnuradio/gri_agc_cc.h
-include/gnuradio/gri_add_const_ss.h
 include/gnuradio/gri_char_to_float.h
 include/gnuradio/gri_debugger_hook.h
 include/gnuradio/gri_fft.h
@@ -451,8 +451,8 @@ include/gnuradio/swig/gr_complex_to_xxx.i
 include/gnuradio/swig/gr_conjugate_cc.i
 include/gnuradio/swig/gr_costas_loop_cc.i
 include/gnuradio/swig/gr_crc32.i
-include/gnuradio/swig/gr_deinterleave.i
 include/gnuradio/swig/gr_dd_mpsk_sync_cc.i
+include/gnuradio/swig/gr_deinterleave.i
 include/gnuradio/swig/gr_dispatcher.i
 include/gnuradio/swig/gr_divide_cc.i
 include/gnuradio/swig/gr_divide_ff.i
@@ -532,8 +532,8 @@ include/gnuradio/swig/gr_null_sink.i
 include/gnuradio/swig/gr_null_source.i
 include/gnuradio/swig/gr_oscope_sink.i
 include/gnuradio/swig/gr_pa_2x2_phase_combiner.i
-include/gnuradio/swig/gr_packet_sink.i
 include/gnuradio/swig/gr_packed_to_unpacked_bb.i
+include/gnuradio/swig/gr_packet_sink.i
 include/gnuradio/swig/gr_phase_modulator_fc.i
 include/gnuradio/swig/gr_pll_carriertracking_cc.i
 include/gnuradio/swig/gr_pll_freqdet_cf.i
@@ -662,6 +662,14 @@ share/doc/gnuradio-core-2.8/html/ccsds_8h-source.html
 share/doc/gnuradio-core-2.8/html/ccsds_8h.html
 share/doc/gnuradio-core-2.8/html/char_8h-source.html
 share/doc/gnuradio-core-2.8/html/char_8h.html
+share/doc/gnuradio-core-2.8/html/classSwigDirector__gr__prefs-members.html
+share/doc/gnuradio-core-2.8/html/classSwigDirector__gr__prefs.html
+share/doc/gnuradio-core-2.8/html/classSwigDirector__gr__prefs__coll__graph.map
+share/doc/gnuradio-core-2.8/html/classSwigDirector__gr__prefs__coll__graph.md5
+share/doc/gnuradio-core-2.8/html/classSwigDirector__gr__prefs__coll__graph.png
+share/doc/gnuradio-core-2.8/html/classSwigDirector__gr__prefs__inherit__graph.map
+share/doc/gnuradio-core-2.8/html/classSwigDirector__gr__prefs__inherit__graph.md5
+share/doc/gnuradio-core-2.8/html/classSwigDirector__gr__prefs__inherit__graph.png
 share/doc/gnuradio-core-2.8/html/class__internal__omni__thread__dummy-members.html
 share/doc/gnuradio-core-2.8/html/class__internal__omni__thread__dummy.html
 share/doc/gnuradio-core-2.8/html/class__internal__omni__thread__dummy__coll__graph.map
@@ -675,14 +683,6 @@ share/doc/gnuradio-core-2.8/html/class__internal__omni__thread__helper.html
 share/doc/gnuradio-core-2.8/html/class__internal__omni__thread__helper__coll__graph.map
 share/doc/gnuradio-core-2.8/html/class__internal__omni__thread__helper__coll__graph.md5
 share/doc/gnuradio-core-2.8/html/class__internal__omni__thread__helper__coll__graph.png
-share/doc/gnuradio-core-2.8/html/classSwigDirector__gr__prefs-members.html
-share/doc/gnuradio-core-2.8/html/classSwigDirector__gr__prefs.html
-share/doc/gnuradio-core-2.8/html/classSwigDirector__gr__prefs__coll__graph.map
-share/doc/gnuradio-core-2.8/html/classSwigDirector__gr__prefs__coll__graph.md5
-share/doc/gnuradio-core-2.8/html/classSwigDirector__gr__prefs__coll__graph.png
-share/doc/gnuradio-core-2.8/html/classSwigDirector__gr__prefs__inherit__graph.map
-share/doc/gnuradio-core-2.8/html/classSwigDirector__gr__prefs__inherit__graph.md5
-share/doc/gnuradio-core-2.8/html/classSwigDirector__gr__prefs__inherit__graph.png
 share/doc/gnuradio-core-2.8/html/classboost_1_1shared__ptr-members.html
 share/doc/gnuradio-core-2.8/html/classboost_1_1shared__ptr.html
 share/doc/gnuradio-core-2.8/html/classboost_1_1shared__ptr__coll__graph.map
@@ -1887,14 +1887,6 @@ share/doc/gnuradio-core-2.8/html/classgr__pa__2x2__phase__combiner__coll__graph.
 share/doc/gnuradio-core-2.8/html/classgr__pa__2x2__phase__combiner__inherit__graph.map
 share/doc/gnuradio-core-2.8/html/classgr__pa__2x2__phase__combiner__inherit__graph.md5
 share/doc/gnuradio-core-2.8/html/classgr__pa__2x2__phase__combiner__inherit__graph.png
-share/doc/gnuradio-core-2.8/html/classgr__packet__sink-members.html
-share/doc/gnuradio-core-2.8/html/classgr__packet__sink.html
-share/doc/gnuradio-core-2.8/html/classgr__packet__sink__coll__graph.map
-share/doc/gnuradio-core-2.8/html/classgr__packet__sink__coll__graph.md5
-share/doc/gnuradio-core-2.8/html/classgr__packet__sink__coll__graph.png
-share/doc/gnuradio-core-2.8/html/classgr__packet__sink__inherit__graph.map
-share/doc/gnuradio-core-2.8/html/classgr__packet__sink__inherit__graph.md5
-share/doc/gnuradio-core-2.8/html/classgr__packet__sink__inherit__graph.png
 share/doc/gnuradio-core-2.8/html/classgr__packed__to__unpacked__bb-members.html
 share/doc/gnuradio-core-2.8/html/classgr__packed__to__unpacked__bb.html
 share/doc/gnuradio-core-2.8/html/classgr__packed__to__unpacked__bb__coll__graph.map
@@ -1903,6 +1895,14 @@ share/doc/gnuradio-core-2.8/html/classgr__packed__to__unpacked__bb__coll__graph.
 share/doc/gnuradio-core-2.8/html/classgr__packed__to__unpacked__bb__inherit__graph.map
 share/doc/gnuradio-core-2.8/html/classgr__packed__to__unpacked__bb__inherit__graph.md5
 share/doc/gnuradio-core-2.8/html/classgr__packed__to__unpacked__bb__inherit__graph.png
+share/doc/gnuradio-core-2.8/html/classgr__packet__sink-members.html
+share/doc/gnuradio-core-2.8/html/classgr__packet__sink.html
+share/doc/gnuradio-core-2.8/html/classgr__packet__sink__coll__graph.map
+share/doc/gnuradio-core-2.8/html/classgr__packet__sink__coll__graph.md5
+share/doc/gnuradio-core-2.8/html/classgr__packet__sink__coll__graph.png
+share/doc/gnuradio-core-2.8/html/classgr__packet__sink__inherit__graph.map
+share/doc/gnuradio-core-2.8/html/classgr__packet__sink__inherit__graph.md5
+share/doc/gnuradio-core-2.8/html/classgr__packet__sink__inherit__graph.png
 share/doc/gnuradio-core-2.8/html/classgr__phase__modulator__fc-members.html
 share/doc/gnuradio-core-2.8/html/classgr__phase__modulator__fc.html
 share/doc/gnuradio-core-2.8/html/classgr__phase__modulator__fc__coll__graph.map
@@ -1935,13 +1935,13 @@ share/doc/gnuradio-core-2.8/html/classgr__pll__refout__cc__coll__graph.png
 share/doc/gnuradio-core-2.8/html/classgr__pll__refout__cc__inherit__graph.map
 share/doc/gnuradio-core-2.8/html/classgr__pll__refout__cc__inherit__graph.md5
 share/doc/gnuradio-core-2.8/html/classgr__pll__refout__cc__inherit__graph.png
+share/doc/gnuradio-core-2.8/html/classgr__preferences-members.html
+share/doc/gnuradio-core-2.8/html/classgr__preferences.html
 share/doc/gnuradio-core-2.8/html/classgr__prefs-members.html
 share/doc/gnuradio-core-2.8/html/classgr__prefs.html
 share/doc/gnuradio-core-2.8/html/classgr__prefs__inherit__graph.map
 share/doc/gnuradio-core-2.8/html/classgr__prefs__inherit__graph.md5
 share/doc/gnuradio-core-2.8/html/classgr__prefs__inherit__graph.png
-share/doc/gnuradio-core-2.8/html/classgr__preferences-members.html
-share/doc/gnuradio-core-2.8/html/classgr__preferences.html
 share/doc/gnuradio-core-2.8/html/classgr__probe__avg__mag__sqrd__c-members.html
 share/doc/gnuradio-core-2.8/html/classgr__probe__avg__mag__sqrd__c.html
 share/doc/gnuradio-core-2.8/html/classgr__probe__avg__mag__sqrd__c__coll__graph.map
@@ -2131,10 +2131,10 @@ share/doc/gnuradio-core-2.8/html/classgr__single__pole__avg__filter__ff__coll__g
 share/doc/gnuradio-core-2.8/html/classgr__single__pole__avg__filter__ff__inherit__graph.map
 share/doc/gnuradio-core-2.8/html/classgr__single__pole__avg__filter__ff__inherit__graph.md5
 share/doc/gnuradio-core-2.8/html/classgr__single__pole__avg__filter__ff__inherit__graph.png
-share/doc/gnuradio-core-2.8/html/classgr__single__pole__iir_3_01gr__complex_00_01i__type_00_01double_01_4-members.html
-share/doc/gnuradio-core-2.8/html/classgr__single__pole__iir_3_01gr__complex_00_01i__type_00_01double_01_4.html
 share/doc/gnuradio-core-2.8/html/classgr__single__pole__iir-members.html
 share/doc/gnuradio-core-2.8/html/classgr__single__pole__iir.html
+share/doc/gnuradio-core-2.8/html/classgr__single__pole__iir_3_01gr__complex_00_01i__type_00_01double_01_4-members.html
+share/doc/gnuradio-core-2.8/html/classgr__single__pole__iir_3_01gr__complex_00_01i__type_00_01double_01_4.html
 share/doc/gnuradio-core-2.8/html/classgr__single__pole__iir__coll__graph.map
 share/doc/gnuradio-core-2.8/html/classgr__single__pole__iir__coll__graph.md5
 share/doc/gnuradio-core-2.8/html/classgr__single__pole__iir__coll__graph.png
@@ -2886,29 +2886,11 @@ share/doc/gnuradio-core-2.8/html/globals_type_0x74.html
 share/doc/gnuradio-core-2.8/html/globals_vars.html
 share/doc/gnuradio-core-2.8/html/gnuradio__swig__bug__workaround_8h-source.html
 share/doc/gnuradio-core-2.8/html/gnuradio__swig__bug__workaround_8h.html
+share/doc/gnuradio-core-2.8/html/gnuradio__swig__python_8h-source.html
+share/doc/gnuradio-core-2.8/html/gnuradio__swig__python_8h.html
 share/doc/gnuradio-core-2.8/html/gnuradio__swig__python_8h__incl.map
 share/doc/gnuradio-core-2.8/html/gnuradio__swig__python_8h__incl.md5
 share/doc/gnuradio-core-2.8/html/gnuradio__swig__python_8h__incl.png
-share/doc/gnuradio-core-2.8/html/gnuradio__swig__python_8h-source.html
-share/doc/gnuradio-core-2.8/html/gnuradio__swig__python_8h.html
-share/doc/gnuradio-core-2.8/html/gr__agc__cc_8cc.html
-share/doc/gnuradio-core-2.8/html/gr__agc__cc_8cc__incl.map
-share/doc/gnuradio-core-2.8/html/gr__agc__cc_8cc__incl.md5
-share/doc/gnuradio-core-2.8/html/gr__agc__cc_8cc__incl.png
-share/doc/gnuradio-core-2.8/html/gr__agc__cc_8h-source.html
-share/doc/gnuradio-core-2.8/html/gr__agc__cc_8h.html
-share/doc/gnuradio-core-2.8/html/gr__agc__cc_8h__incl.map
-share/doc/gnuradio-core-2.8/html/gr__agc__cc_8h__incl.md5
-share/doc/gnuradio-core-2.8/html/gr__agc__cc_8h__incl.png
-share/doc/gnuradio-core-2.8/html/gr__agc__ff_8cc.html
-share/doc/gnuradio-core-2.8/html/gr__agc__ff_8cc__incl.map
-share/doc/gnuradio-core-2.8/html/gr__agc__ff_8cc__incl.md5
-share/doc/gnuradio-core-2.8/html/gr__agc__ff_8cc__incl.png
-share/doc/gnuradio-core-2.8/html/gr__agc__ff_8h-source.html
-share/doc/gnuradio-core-2.8/html/gr__agc__ff_8h.html
-share/doc/gnuradio-core-2.8/html/gr__agc__ff_8h__incl.map
-share/doc/gnuradio-core-2.8/html/gr__agc__ff_8h__incl.md5
-share/doc/gnuradio-core-2.8/html/gr__agc__ff_8h__incl.png
 share/doc/gnuradio-core-2.8/html/gr__add__cc_8cc.html
 share/doc/gnuradio-core-2.8/html/gr__add__cc_8cc__incl.map
 share/doc/gnuradio-core-2.8/html/gr__add__cc_8cc__incl.md5
@@ -2990,6 +2972,24 @@ share/doc/gnuradio-core-2.8/html/gr__add__ss_8h.html
 share/doc/gnuradio-core-2.8/html/gr__add__ss_8h__incl.map
 share/doc/gnuradio-core-2.8/html/gr__add__ss_8h__incl.md5
 share/doc/gnuradio-core-2.8/html/gr__add__ss_8h__incl.png
+share/doc/gnuradio-core-2.8/html/gr__agc__cc_8cc.html
+share/doc/gnuradio-core-2.8/html/gr__agc__cc_8cc__incl.map
+share/doc/gnuradio-core-2.8/html/gr__agc__cc_8cc__incl.md5
+share/doc/gnuradio-core-2.8/html/gr__agc__cc_8cc__incl.png
+share/doc/gnuradio-core-2.8/html/gr__agc__cc_8h-source.html
+share/doc/gnuradio-core-2.8/html/gr__agc__cc_8h.html
+share/doc/gnuradio-core-2.8/html/gr__agc__cc_8h__incl.map
+share/doc/gnuradio-core-2.8/html/gr__agc__cc_8h__incl.md5
+share/doc/gnuradio-core-2.8/html/gr__agc__cc_8h__incl.png
+share/doc/gnuradio-core-2.8/html/gr__agc__ff_8cc.html
+share/doc/gnuradio-core-2.8/html/gr__agc__ff_8cc__incl.map
+share/doc/gnuradio-core-2.8/html/gr__agc__ff_8cc__incl.md5
+share/doc/gnuradio-core-2.8/html/gr__agc__ff_8cc__incl.png
+share/doc/gnuradio-core-2.8/html/gr__agc__ff_8h-source.html
+share/doc/gnuradio-core-2.8/html/gr__agc__ff_8h.html
+share/doc/gnuradio-core-2.8/html/gr__agc__ff_8h__incl.map
+share/doc/gnuradio-core-2.8/html/gr__agc__ff_8h__incl.md5
+share/doc/gnuradio-core-2.8/html/gr__agc__ff_8h__incl.png
 share/doc/gnuradio-core-2.8/html/gr__align__on__samplenumbers__ss_8cc.html
 share/doc/gnuradio-core-2.8/html/gr__align__on__samplenumbers__ss_8cc__incl.map
 share/doc/gnuradio-core-2.8/html/gr__align__on__samplenumbers__ss_8cc__incl.md5
@@ -3024,11 +3024,11 @@ share/doc/gnuradio-core-2.8/html/gr__buffer_8cc.html
 share/doc/gnuradio-core-2.8/html/gr__buffer_8cc__incl.map
 share/doc/gnuradio-core-2.8/html/gr__buffer_8cc__incl.md5
 share/doc/gnuradio-core-2.8/html/gr__buffer_8cc__incl.png
+share/doc/gnuradio-core-2.8/html/gr__buffer_8h-source.html
+share/doc/gnuradio-core-2.8/html/gr__buffer_8h.html
 share/doc/gnuradio-core-2.8/html/gr__buffer_8h__dep__incl.map
 share/doc/gnuradio-core-2.8/html/gr__buffer_8h__dep__incl.md5
 share/doc/gnuradio-core-2.8/html/gr__buffer_8h__dep__incl.png
-share/doc/gnuradio-core-2.8/html/gr__buffer_8h-source.html
-share/doc/gnuradio-core-2.8/html/gr__buffer_8h.html
 share/doc/gnuradio-core-2.8/html/gr__buffer_8h__incl.map
 share/doc/gnuradio-core-2.8/html/gr__buffer_8h__incl.md5
 share/doc/gnuradio-core-2.8/html/gr__buffer_8h__incl.png
@@ -3145,12 +3145,6 @@ share/doc/gnuradio-core-2.8/html/gr__conjugate__cc_8h.html
 share/doc/gnuradio-core-2.8/html/gr__conjugate__cc_8h__incl.map
 share/doc/gnuradio-core-2.8/html/gr__conjugate__cc_8h__incl.md5
 share/doc/gnuradio-core-2.8/html/gr__conjugate__cc_8h__incl.png
-share/doc/gnuradio-core-2.8/html/gr__count__bits_8cc.html
-share/doc/gnuradio-core-2.8/html/gr__count__bits_8cc__incl.map
-share/doc/gnuradio-core-2.8/html/gr__count__bits_8cc__incl.md5
-share/doc/gnuradio-core-2.8/html/gr__count__bits_8cc__incl.png
-share/doc/gnuradio-core-2.8/html/gr__count__bits_8h-source.html
-share/doc/gnuradio-core-2.8/html/gr__count__bits_8h.html
 share/doc/gnuradio-core-2.8/html/gr__costas__loop__cc_8cc.html
 share/doc/gnuradio-core-2.8/html/gr__costas__loop__cc_8cc__incl.map
 share/doc/gnuradio-core-2.8/html/gr__costas__loop__cc_8cc__incl.md5
@@ -3160,6 +3154,12 @@ share/doc/gnuradio-core-2.8/html/gr__costas__loop__cc_8h.html
 share/doc/gnuradio-core-2.8/html/gr__costas__loop__cc_8h__incl.map
 share/doc/gnuradio-core-2.8/html/gr__costas__loop__cc_8h__incl.md5
 share/doc/gnuradio-core-2.8/html/gr__costas__loop__cc_8h__incl.png
+share/doc/gnuradio-core-2.8/html/gr__count__bits_8cc.html
+share/doc/gnuradio-core-2.8/html/gr__count__bits_8cc__incl.map
+share/doc/gnuradio-core-2.8/html/gr__count__bits_8cc__incl.md5
+share/doc/gnuradio-core-2.8/html/gr__count__bits_8cc__incl.png
+share/doc/gnuradio-core-2.8/html/gr__count__bits_8h-source.html
+share/doc/gnuradio-core-2.8/html/gr__count__bits_8h.html
 share/doc/gnuradio-core-2.8/html/gr__cpu_8cc.html
 share/doc/gnuradio-core-2.8/html/gr__cpu_8cc__incl.map
 share/doc/gnuradio-core-2.8/html/gr__cpu_8cc__incl.md5
@@ -4781,6 +4781,15 @@ share/doc/gnuradio-core-2.8/html/gr__stream__to__streams_8h.html
 share/doc/gnuradio-core-2.8/html/gr__stream__to__streams_8h__incl.map
 share/doc/gnuradio-core-2.8/html/gr__stream__to__streams_8h__incl.md5
 share/doc/gnuradio-core-2.8/html/gr__stream__to__streams_8h__incl.png
+share/doc/gnuradio-core-2.8/html/gr__stream__to__vector_8cc.html
+share/doc/gnuradio-core-2.8/html/gr__stream__to__vector_8cc__incl.map
+share/doc/gnuradio-core-2.8/html/gr__stream__to__vector_8cc__incl.md5
+share/doc/gnuradio-core-2.8/html/gr__stream__to__vector_8cc__incl.png
+share/doc/gnuradio-core-2.8/html/gr__stream__to__vector_8h-source.html
+share/doc/gnuradio-core-2.8/html/gr__stream__to__vector_8h.html
+share/doc/gnuradio-core-2.8/html/gr__stream__to__vector_8h__incl.map
+share/doc/gnuradio-core-2.8/html/gr__stream__to__vector_8h__incl.md5
+share/doc/gnuradio-core-2.8/html/gr__stream__to__vector_8h__incl.png
 share/doc/gnuradio-core-2.8/html/gr__streams__to__stream_8cc.html
 share/doc/gnuradio-core-2.8/html/gr__streams__to__stream_8cc__incl.map
 share/doc/gnuradio-core-2.8/html/gr__streams__to__stream_8cc__incl.md5
@@ -4799,15 +4808,6 @@ share/doc/gnuradio-core-2.8/html/gr__streams__to__vector_8h.html
 share/doc/gnuradio-core-2.8/html/gr__streams__to__vector_8h__incl.map
 share/doc/gnuradio-core-2.8/html/gr__streams__to__vector_8h__incl.md5
 share/doc/gnuradio-core-2.8/html/gr__streams__to__vector_8h__incl.png
-share/doc/gnuradio-core-2.8/html/gr__stream__to__vector_8cc.html
-share/doc/gnuradio-core-2.8/html/gr__stream__to__vector_8cc__incl.map
-share/doc/gnuradio-core-2.8/html/gr__stream__to__vector_8cc__incl.md5
-share/doc/gnuradio-core-2.8/html/gr__stream__to__vector_8cc__incl.png
-share/doc/gnuradio-core-2.8/html/gr__stream__to__vector_8h-source.html
-share/doc/gnuradio-core-2.8/html/gr__stream__to__vector_8h.html
-share/doc/gnuradio-core-2.8/html/gr__stream__to__vector_8h__incl.map
-share/doc/gnuradio-core-2.8/html/gr__stream__to__vector_8h__incl.md5
-share/doc/gnuradio-core-2.8/html/gr__stream__to__vector_8h__incl.png
 share/doc/gnuradio-core-2.8/html/gr__sub__cc_8cc.html
 share/doc/gnuradio-core-2.8/html/gr__sub__cc_8cc__incl.map
 share/doc/gnuradio-core-2.8/html/gr__sub__cc_8cc__incl.md5
@@ -5113,6 +5113,12 @@ share/doc/gnuradio-core-2.8/html/gr__vmcircbuf__sysv__shm_8h__incl.png
 share/doc/gnuradio-core-2.8/html/graph_legend.dot
 share/doc/gnuradio-core-2.8/html/graph_legend.html
 share/doc/gnuradio-core-2.8/html/graph_legend.png
+share/doc/gnuradio-core-2.8/html/gri__add__const__ss_8h-source.html
+share/doc/gnuradio-core-2.8/html/gri__add__const__ss_8h.html
+share/doc/gnuradio-core-2.8/html/gri__add__const__ss__generic_8cc.html
+share/doc/gnuradio-core-2.8/html/gri__add__const__ss__generic_8cc__incl.map
+share/doc/gnuradio-core-2.8/html/gri__add__const__ss__generic_8cc__incl.md5
+share/doc/gnuradio-core-2.8/html/gri__add__const__ss__generic_8cc__incl.png
 share/doc/gnuradio-core-2.8/html/gri__agc_8h-source.html
 share/doc/gnuradio-core-2.8/html/gri__agc_8h.html
 share/doc/gnuradio-core-2.8/html/gri__agc_8h__dep__incl.map
@@ -5129,12 +5135,6 @@ share/doc/gnuradio-core-2.8/html/gri__agc__cc_8h__dep__incl.png
 share/doc/gnuradio-core-2.8/html/gri__agc__cc_8h__incl.map
 share/doc/gnuradio-core-2.8/html/gri__agc__cc_8h__incl.md5
 share/doc/gnuradio-core-2.8/html/gri__agc__cc_8h__incl.png
-share/doc/gnuradio-core-2.8/html/gri__add__const__ss_8h-source.html
-share/doc/gnuradio-core-2.8/html/gri__add__const__ss_8h.html
-share/doc/gnuradio-core-2.8/html/gri__add__const__ss__generic_8cc.html
-share/doc/gnuradio-core-2.8/html/gri__add__const__ss__generic_8cc__incl.map
-share/doc/gnuradio-core-2.8/html/gri__add__const__ss__generic_8cc__incl.md5
-share/doc/gnuradio-core-2.8/html/gri__add__const__ss__generic_8cc__incl.png
 share/doc/gnuradio-core-2.8/html/gri__char__to__float_8cc.html
 share/doc/gnuradio-core-2.8/html/gri__char__to__float_8cc__incl.map
 share/doc/gnuradio-core-2.8/html/gri__char__to__float_8cc__incl.md5
@@ -5341,6 +5341,9 @@ share/doc/gnuradio-core-2.8/html/inherit__graph__108.png
 share/doc/gnuradio-core-2.8/html/inherit__graph__109.map
 share/doc/gnuradio-core-2.8/html/inherit__graph__109.md5
 share/doc/gnuradio-core-2.8/html/inherit__graph__109.png
+share/doc/gnuradio-core-2.8/html/inherit__graph__11.map
+share/doc/gnuradio-core-2.8/html/inherit__graph__11.md5
+share/doc/gnuradio-core-2.8/html/inherit__graph__11.png
 share/doc/gnuradio-core-2.8/html/inherit__graph__110.map
 share/doc/gnuradio-core-2.8/html/inherit__graph__110.md5
 share/doc/gnuradio-core-2.8/html/inherit__graph__110.png
@@ -5356,9 +5359,6 @@ share/doc/gnuradio-core-2.8/html/inherit__graph__113.png
 share/doc/gnuradio-core-2.8/html/inherit__graph__114.map
 share/doc/gnuradio-core-2.8/html/inherit__graph__114.md5
 share/doc/gnuradio-core-2.8/html/inherit__graph__114.png
-share/doc/gnuradio-core-2.8/html/inherit__graph__11.map
-share/doc/gnuradio-core-2.8/html/inherit__graph__11.md5
-share/doc/gnuradio-core-2.8/html/inherit__graph__11.png
 share/doc/gnuradio-core-2.8/html/inherit__graph__12.map
 share/doc/gnuradio-core-2.8/html/inherit__graph__12.md5
 share/doc/gnuradio-core-2.8/html/inherit__graph__12.png
@@ -6128,15 +6128,15 @@ share/doc/gnuradio-core-2.8/html/vxWorks_8cc__incl.map
 share/doc/gnuradio-core-2.8/html/vxWorks_8cc__incl.md5
 share/doc/gnuradio-core-2.8/html/vxWorks_8cc__incl.png
 share/examples/gnuradio/conf.d/gnuradio-core.conf
-@dirrm ${PYSITELIB}/gnuradio/blks
-@dirrm ${PYSITELIB}/gnuradio/blksimpl
-@dirrm ${PYSITELIB}/gnuradio/gr
-@dirrm ${PYSITELIB}/gnuradio/gru
-@dirrm ${PYSITELIB}/gnuradio/gruimpl
-@dirrm ${PYSITELIB}/gnuradio
-@dirrm include/gnuradio/swig
-@dirrm include/gnuradio
-@dirrm share/doc/gnuradio-core-2.8/html
-@dirrm share/doc/gnuradio-core-2.8
 @dirrm share/examples/gnuradio/conf.d
 @dirrm share/examples/gnuradio
+@dirrm share/doc/gnuradio-core-2.8/html
+@dirrm share/doc/gnuradio-core-2.8
+@dirrm include/gnuradio/swig
+@dirrm include/gnuradio
+@dirrm ${PYSITELIB}/gnuradio/gruimpl
+@dirrm ${PYSITELIB}/gnuradio/gru
+@dirrm ${PYSITELIB}/gnuradio/gr
+@dirrm ${PYSITELIB}/gnuradio/blksimpl
+@dirrm ${PYSITELIB}/gnuradio/blks
+@dirrm ${PYSITELIB}/gnuradio
