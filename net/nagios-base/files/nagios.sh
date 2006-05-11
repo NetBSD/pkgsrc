@@ -1,13 +1,11 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: nagios.sh,v 1.1.1.1 2006/02/18 17:12:20 bouyer Exp $
+# $NetBSD: nagios.sh,v 1.2 2006/05/11 07:32:02 grant Exp $
 #
 # PROVIDE: nagios
 # REQUIRE: DAEMON
 
-if [ -f /etc/rc.subr ]; then
-	. /etc/rc.subr
-fi
+. /etc/rc.subr
 
 name="nagios"
 rcvar=$name
