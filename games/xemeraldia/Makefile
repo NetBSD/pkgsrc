@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:09:24 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/11 14:04:16 joerg Exp $
 
 DISTNAME=	xemeraldia-0.3
 PKGNAME=	xemeraldia-0.31
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.lab.kdd.co.jp/Usenet/fj.sources/1995/mar/
 
@@ -20,9 +20,7 @@ GAMES_DIR=	share/games
 MAKE_ENV+=	GAMES_DIR=${GAMES_DIR:Q}
 PLIST_SUBST=	GAMES_DIR=${GAMES_DIR:Q}
 
-post-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/${GAMES_DIR}/xemeraldia
-	@${TOUCH} ${PREFIX}/${GAMES_DIR}/xemeraldia/xemeraldia.scores
-	@${CHMOD} 666 ${PREFIX}/${GAMES_DIR}/xemeraldia/xemeraldia.scores
+CONF_FILES_PERMS+=	/dev/null ${PREFIX}/${GAMES_DIR}/xemeraldia/xemeraldia.scores \
+			${ROOT_USER} games 664
 
 .include "../../mk/bsd.pkg.mk"
