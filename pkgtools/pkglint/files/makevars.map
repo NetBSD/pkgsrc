@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.90 2006/05/11 10:10:12 rillig Exp $
+# $NetBSD: makevars.map,v 1.91 2006/05/11 18:26:51 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -159,7 +159,7 @@ CHECK_INTERPRETER_SKIP	List of Pathmask [m:a,c:a]
 CHECK_SHLIBS		YesNo [m:s]
 CHECK_WRKREF_SKIP	List of Pathmask [m:a,c:a]
 COMMENT			Comment [m:as,c:as]			# m:a?, c:a?
-CONFIGURE_ARGS		List of ShellWord [c:a,m:a,o:a,h:a,builtin.mk:a]
+CONFIGURE_ARGS		List of ShellWord [*:a]
 CONFIGURE_DIRS		List of WrksrcSubdirectory [m:s,c:s]
 CONFIGURE_ENV		List of ShellWord [*:a]
 CONFIGURE_HAS_INFODIR	YesNo
@@ -186,8 +186,8 @@ DEVOSSAUDIO		Pathname
 DEVOSSSOUND		Pathname
 DISTFILES		List of Filename [m:as,c:ads]
 DISTINFO_FILE		RelativePkgPath [m:s,c:ds]
-DISTNAME		Filename [m:s,c:ads, Makefile.*:s]
-DIST_SUBDIR		Filename [m:s,c:ds]
+DISTNAME		Filename [m:s,c:ads, Makefile.*:ds]
+DIST_SUBDIR		Filename [m:s,c:ds,Makefile.*:ds]
 DJB_BUILD_TARGETS	List of Identifier
 DJB_CONFIG_CMDS		List of ShellWord
 # ^^ ShellCommand, terminated by a semicolon
@@ -271,9 +271,9 @@ INSTALL_SCRIPT		ShellCommand []
 INSTALL_SCRIPTS_ENV	List of ShellWord
 INSTALL_SCRIPT_DIR	ShellCommand []
 INSTALL_SRC		List of Pathname [m:s,c:ds]
-INSTALL_TARGET		List of Identifier [m:as,c:as]
+INSTALL_TARGET		List of Identifier [m:as,c:as,b:,ruby*.mk:d]
 INSTALL_TEMPLATE	List of Pathname
-INSTALL_UNSTRIPPED	YesNo [m:s]
+INSTALL_UNSTRIPPED	YesNo [m:s,c:s]
 INTERACTIVE_STAGE	List of { fetch extract configure build install } [m:s]
 IS_BUILTIN		YesNoFromCommand [builtin.mk:s]
 JAVA_CLASSPATH		ShellWord
@@ -284,9 +284,9 @@ KRB5BASE		Unchecked []
 KRB5_ACCEPTED		List of { heimdal mit-krb5 }
 KRB5_DEFAULT		Unchecked []
 KRB5_TYPE		Unchecked []
-LDFLAGS			List of LdFlag [m:a,c:a,h:a]
+LDFLAGS			List of LdFlag [b:,builtin.mk:,*:a]
 LIBOSSAUDIO		Pathname
-LIBS			List of LdFlag [m:a,o:a,h:a]
+LIBS			List of LdFlag [m:a,o:a,h:a,c:a]
 LIBTOOL_OVERRIDE	List of Pathmask [m:as]
 LICENCE			License
 LICENSE			License [m:s,c:s]
@@ -332,7 +332,7 @@ NOT_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc } [m
 NOT_FOR_PLATFORM	List of PlatformTriple [m:as,c:a]
 NO_BIN_ON_CDROM		Restricted [m:s,c:s]
 NO_BIN_ON_FTP		Restricted [m:s,c:s]
-NO_BUILD		Yes [m:s,c:s]
+NO_BUILD		Yes [m:s,c:s,Makefile.*:ds]
 NO_CHECKSUM		Yes [m:s]
 NO_CONFIGURE		Yes [m:s,c:s]
 NO_EXPORT_CPP		Yes [m:s]
@@ -368,7 +368,7 @@ PGSQL_VERSION_DEFAULT	Unchecked []
 PKGBASE			Unchecked []
 PKGCONFIG_OVERRIDE	List of Pathmask [m:as,c:a]
 PKGDIR			RelativePkgDir
-PKGNAME			PkgName [m:s,c:s]
+PKGNAME			PkgName [m:s,c:s,Makefile.*:ds]
 PKGNAME_NOREV		Unchecked []
 PKGREPOSITORY		Unchecked []
 PKGREVISION		PkgRevision [m:s]
@@ -416,7 +416,7 @@ PKG_SYSCONFVAR		Identifier
 PKG_UID			Unchecked [m:s]
 PKG_USERS		List of ShellWord [m:as]
 PLIST_SRC		List of RelativePkgPath [m:as,o:a,c:ads]
-PLIST_SUBST		List of ShellWord [c:a,o:a,m:a]
+PLIST_SUBST		List of ShellWord [*:a]
 PLIST_TYPE		{ dynamic static }
 PREPEND_PATH		List of Pathname
 PRINT_PLIST_AWK		AwkCommand [*:a]
@@ -438,17 +438,17 @@ SCRIPTS_ENV		List of ShellWord
 SHLIB_HANDLING		{ YES NO no }
 SPECIAL_PERMS		List of ShellWord [m:as]
 SHLIBTOOL_OVERRIDE	List of Pathmask [m:as,c:a]
-SITES			List of URL [m:as,c:as]
-SUBST_CLASSES		List of Identifier [m:a,c:a,h:a]
-SUBST_FILES		List of Pathmask [m:as,c:as,h:as,o:as]
-SUBST_FILTER_CMD	ShellCommand [m:s,c:s,h:s,o:s]
-SUBST_MESSAGE		Message [m:s,c:s,h:s,o:s]
-SUBST_SED		SedCommands [m:as,c:as,h:as,o:as]
-SUBST_STAGE		Stage [m:s,c:s,h:s,o:s]
+SITES			List of URL [m:as,c:as,o:as]
+SUBST_CLASSES		List of Identifier [m:a,c:a,h:a,Makefile.*:a]
+SUBST_FILES		List of Pathmask [m:as,c:as,h:as,o:as,Makefile.*:as]
+SUBST_FILTER_CMD	ShellCommand [m:s,c:s,h:s,o:s,Makefile.*:as]
+SUBST_MESSAGE		Message [m:s,c:s,h:s,o:s,Makefile.*:as]
+SUBST_SED		SedCommands [m:as,c:as,h:as,o:as,Makefile.*:as]
+SUBST_STAGE		Stage [m:s,c:s,h:s,o:s,Makefile.*:as]
 SVR4_PKGNAME		SVR4PkgName [m:s]
 TEST_DIRS		List of WrksrcSubdirectory [m:as,c:as]
 TEST_ENV		List of ShellWord
-TEST_TARGET		List of Identifier [m:s]
+TEST_TARGET		List of Identifier [m:s,c:ds]
 TEX_ACCEPTED		List of { teTeX1 teTeX2 teTeX3 } [m:s,c:s]
 TEX_DEPMETHOD		{ build run } [m:s,c:s]
 TEXINFO_REQD		List of Version [*:a]
@@ -481,7 +481,7 @@ USE_LANGUAGES		List of { c c++ fortran java objc } [m:as,c:as,o:a]
 USE_LIBTOOL		Yes [m:s,c:s]
 USE_MAKEINFO		Yes
 USE_MSGFMT_PLURALS	Yes
-USE_NCURSES		Yes [m:s]
+USE_NCURSES		Yes [m:s,o:s]
 USE_OLD_DES_API		YesNo [m:s,c:s]
 USE_PKGINSTALL		Yes
 USE_PKGLOCALEDIR	YesNo [m:s,c:s]
@@ -491,7 +491,7 @@ USE_X11			Yes [m:s,c:s]
 USE_X11BASE		Yes [m:s,c:s]
 WRAPPER_REORDER_CMDS	List of WrapperReorder [b:a,c:a,m:a]
 WRAPPER_TRANSFORM_CMDS	List of WrapperTransform [b:a,c:a,m:a]
-WRKSRC			WrkdirSubdirectory [m:s,c:ds]
+WRKSRC			WrkdirSubdirectory [m:s,c:ds,Makefile.*:ds]
 X11_PKGSRCDIR		Unchecked []
 XAW_TYPE		{ 3d neXtaw standard xpm }
 XMKMF_FLAGS		List of ShellWord
