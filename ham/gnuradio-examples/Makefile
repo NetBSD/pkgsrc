@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/27 03:07:42 wulf Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/11 11:09:53 rillig Exp $
 
 DISTNAME=	gnuradio-examples-0.7
 COMMENT=	GUI framework for GNU Radio based on wxPython
@@ -13,14 +13,14 @@ PYTHON_PATCH_SCRIPTS+=	python/audio/multi_tone.py
 PYTHON_PATCH_SCRIPTS+=	python/audio/spectrum_inversion.py
 PYTHON_PATCH_SCRIPTS+=	python/audio/test_resampler.py
 PYTHON_PATCH_SCRIPTS+=	python/digital_voice/encdec.py
-PYTHON_PATCH_SCRIPTS+=  python/gmsk2/benchmark_gmsk_rx.py
-PYTHON_PATCH_SCRIPTS+=  python/gmsk2/benchmark_gmsk_tx.py
-PYTHON_PATCH_SCRIPTS+=  python/gmsk2/gen_whitener.py
-PYTHON_PATCH_SCRIPTS+=  python/gmsk2/gmsk_test.py
-PYTHON_PATCH_SCRIPTS+=  python/gmsk2/pick_bitrate.py
-PYTHON_PATCH_SCRIPTS+=  python/gmsk2/receive_path.py
-PYTHON_PATCH_SCRIPTS+=  python/gmsk2/transmit_path.py
-PYTHON_PATCH_SCRIPTS+=  python/gmsk2/tunnel_ip_null_mac.py
+PYTHON_PATCH_SCRIPTS+=	python/gmsk2/benchmark_gmsk_rx.py
+PYTHON_PATCH_SCRIPTS+=	python/gmsk2/benchmark_gmsk_tx.py
+PYTHON_PATCH_SCRIPTS+=	python/gmsk2/gen_whitener.py
+PYTHON_PATCH_SCRIPTS+=	python/gmsk2/gmsk_test.py
+PYTHON_PATCH_SCRIPTS+=	python/gmsk2/pick_bitrate.py
+PYTHON_PATCH_SCRIPTS+=	python/gmsk2/receive_path.py
+PYTHON_PATCH_SCRIPTS+=	python/gmsk2/transmit_path.py
+PYTHON_PATCH_SCRIPTS+=	python/gmsk2/tunnel_ip_null_mac.py
 PYTHON_PATCH_SCRIPTS+=	python/mc4020/fm_demod.py
 PYTHON_PATCH_SCRIPTS+=	python/mc4020/mc4020_fft.py
 PYTHON_PATCH_SCRIPTS+=	python/usrp/am_rcv.py
@@ -31,9 +31,9 @@ PYTHON_PATCH_SCRIPTS+=	python/usrp/fsk_loopback.py
 PYTHON_PATCH_SCRIPTS+=	python/usrp/fsk_rx.py
 PYTHON_PATCH_SCRIPTS+=	python/usrp/fsk_tx.py
 PYTHON_PATCH_SCRIPTS+=	python/usrp/max_power.py
-PYTHON_PATCH_SCRIPTS+=  python/usrp/test_counting.py
-PYTHON_PATCH_SCRIPTS+=  python/usrp/test_dft_analysis.py
-PYTHON_PATCH_SCRIPTS+=  python/usrp/test_dft_synth.py
+PYTHON_PATCH_SCRIPTS+=	python/usrp/test_counting.py
+PYTHON_PATCH_SCRIPTS+=	python/usrp/test_dft_analysis.py
+PYTHON_PATCH_SCRIPTS+=	python/usrp/test_dft_synth.py
 PYTHON_PATCH_SCRIPTS+=	python/usrp/test_digital_loopback_counting.py
 PYTHON_PATCH_SCRIPTS+=	python/usrp/test_digital_loopback_lfsr.py
 PYTHON_PATCH_SCRIPTS+=	python/usrp/tvrx_am_rcv_gui.py
@@ -57,11 +57,12 @@ PYTHON_PATCH_SCRIPTS+=	python/usrp/wfm_rcv_file.py
 EXAMPLE_DIR=	${LOCALBASE}/share/examples/gnuradio/python
 
 do-install:
-	for file in audio digital_voice gmsk2 mc4020 usrp;		\
+	set -e; \
+	for d in audio digital_voice gmsk2 mc4020 usrp;			\
 	do								\
-		${INSTALL_SCRIPT_DIR} ${EXAMPLE_DIR}/$${file};		\
-		${INSTALL_SCRIPT} ${WRKSRC}/python/$${file}/*\.py	\
-		  ${EXAMPLE_DIR}/$${file};				\
+		${INSTALL_SCRIPT_DIR} ${EXAMPLE_DIR}/"$$d";		\
+		${INSTALL_SCRIPT} ${WRKSRC}/python/"$$d"/*.py		\
+		  ${EXAMPLE_DIR}/"$$d";					\
 	done
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"

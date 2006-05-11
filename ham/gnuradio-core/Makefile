@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/04/27 02:57:06 wulf Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/11 11:14:18 rillig Exp $
 
 DISTNAME=	gnuradio-core-2.8
-COMMENT=        Runtime system and DSP blocks for GNU Radio
+COMMENT=	Runtime system and DSP blocks for GNU Radio
 
 PYTHON_PATCH_SCRIPTS+=		src/lib/filter/generate_all.py
 PYTHON_PATCH_SCRIPTS+=		src/lib/general/generate_all.py
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/examples
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"
 
-CONF_FILES+=    ${EGDIR}/gnuradio-core.conf ${PKG_SYSCONFDIR}/gnuradio-core.conf
+CONF_FILES+=	${EGDIR}/gnuradio-core.conf ${PKG_SYSCONFDIR}/gnuradio-core.conf
 
 .include "../../devel/swig/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
