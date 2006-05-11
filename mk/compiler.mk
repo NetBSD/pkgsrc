@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.48 2006/05/06 15:20:05 tv Exp $
+# $NetBSD: compiler.mk,v 1.49 2006/05/11 22:13:19 jlam Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -150,12 +150,25 @@ _WRAP_EXTRA_ARGS.LD+=	${_LINKER_ABI_FLAG.${ABI}}
 # If the languages are not requested, force them not to be available
 # in the generated wrappers.
 #
+_FAIL_WRAPPER.CXX=	${TOOLS_DIR}/bin/c++-fail-wrapper
+_FAIL_WRAPPER.FC=	${TOOLS_DIR}/bin/fortran-fail-wrapper
+
+${_FAIL_WRAPPER.CXX}: fail-wrapper
+${_FAIL_WRAPPER.FC}: fail-wrapper
+
+.PHONY: fail-wrapper
+fail-wrapper: .USE
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${ECHO:Q}" 1>&2 \"===>\"; "${ECHO:Q}" 1>&2 \"===> Please add USE_LANGUAGES+="${.TARGET:T:S/-fail-wrapper//:Q}" to the package Makefile.\"; "${ECHO:Q}" 1>&2 \"===>\"; exit 1" > ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
+
 .if empty(USE_LANGUAGES:Mc++)
-PKG_CXX:=		${FALSE}
+PKG_CXX:=		${TOOLS_DIR}/bin/c++-fail-wrapper
 ALL_ENV+=		CXXCPP=${CPP:Q} # to make some Autoconf scripts happy
+override-tools: ${_FAIL_WRAPPER.CXX}
 .endif
 .if empty(USE_LANGUAGES:Mfortran)
-PKG_FC:=		${FALSE}
+PKG_FC:=		${TOOLS_DIR}/bin/fortran-fail-wrapper
+override-tools: ${_FAIL_WRAPPER.FC}
 .endif
 
 .endif	# BSD_COMPILER_MK
