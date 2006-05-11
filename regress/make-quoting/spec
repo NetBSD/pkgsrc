@@ -1,7 +1,7 @@
-# $NetBSD: spec,v 1.2 2005/05/19 10:59:10 rillig Exp $
+# $NetBSD: spec,v 1.3 2006/05/11 23:10:50 rillig Exp $
 #
 
-MAKEARGS_TEST=do-regress
+MAKEARGS_TEST=build
 MAKEARGS_CLEAN=clean
 
 check_result() {
