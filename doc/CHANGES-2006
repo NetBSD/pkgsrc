@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.188 2006/05/11 11:29:46 drochner Exp $
+$NetBSD: CHANGES-2006,v 1.189 2006/05/11 13:22:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2368,6 +2368,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Added textproc/p5-XML-Dumper version 0.81 [tv 2006-05-03]
 	Updated devel/bison to 2.1nb1 [minskim 2006-05-03]
 	Updated x11/gnome-screensaver to 2.14.1 [drochner 2006-05-03]
+	Updated graphics/dia to 0.95 [drochner 2006-05-03]
 	Updated databases/gramps2 to 2.0.11 [drochner 2006-05-03]
 	Updated graphics/eog2 to 2.14.1 [drochner 2006-05-03]
 	Updated games/gnome2-games to 2.14.1 [drochner 2006-05-03]
@@ -2376,6 +2377,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/libxslt to 1.1.16 [drochner 2006-05-03]
 	Updated wm/metacity to 2.14.3 [drochner 2006-05-03]
 	Updated x11/gnome-session to 2.14.1 [drochner 2006-05-03]
+	Updated x11/gnome-panel to 2.14.1 [drochner 2006-05-03]
+	Updated x11/gnome2-control-center to 2.14.1 [drochner 2006-05-03]
 	Updated multimedia/gxine to 0.5.6 [drochner 2006-05-03]
 	Added devel/ruby-rgl version 0.2.3 [minskim 2006-05-03]
 	Added devel/ruby-stream version 0.5 [minskim 2006-05-04]
@@ -2385,6 +2388,10 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/mtr to 0.71nb1 [tron 2006-05-04]
 	Added devel/sgb version 0pre20050409 [minskim 2006-05-04]
 	Updated pkgtools/pkg_chk to 1.72 [dillo 2006-05-04]
+	Updated cad/MyHDL-gplcver to 0.5.1 [drochner 2006-05-04]
+	Updated cad/MyHDL-iverilog to 0.5.1 [drochner 2006-05-04]
+	Updated cad/py-MyHDL to 0.5.1 [drochner 2006-05-04]
+	Added multimedia/vlc08 version 0.8.4 [drochner 2006-05-04]
 	Updated mail/ja-squirrelmail to 1.4.6 [taca 2006-05-05]
 	Updated mail/qpopper to 4.0.9 [taca 2006-05-05]
 	Updated mail/poppassd to 4.0.9 [taca 2006-05-05]
@@ -2401,6 +2408,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-File-Slurp to 9999.12 [abs 2006-05-05]
 	Added net/gt-itm version 0pre19961004 [minskim 2006-05-05]
 	Updated archivers/libzip to 0.7 [dillo 2006-05-05]
+	Updated x11/gdm to 2.14.5 [drochner 2006-05-05]
+	Updated multimedia/libdvdread to 0.9.6 [drochner 2006-05-05]
 	Updated lang/python23 to 2.3.5nb8 [minskim 2006-05-06]
 	Updated mail/dspam to 3.6.5 [xtraeme 2006-05-06]
 	Updated x11/gtkmm to 2.8.5 [adam 2006-05-06]
@@ -2426,6 +2435,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/xlockmore to 5.22 [hubertf 2006-05-08]
 	Updated x11/xlockmore-lite to 5.22 [hubertf 2006-05-08]
 	Added mail/up-imapproxy version 1.2.4 [adrianp 2006-05-08]
+	Updated www/browser-bookmarks-menu to 0.6 [drochner 2006-05-08]
 	Updated graphics/optipng to 0.5.2 [adam 2006-05-09]
 	Updated editors/vim-share to 7.0.0 [martti 2006-05-09]
 	Updated net/nagios-base to 2.3 [bouyer 2006-05-09]
@@ -2436,6 +2446,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/kaffe-esound to 1.1.7 [tonio 2006-05-10]
 	Updated www/dillo to 0.8.6 [adam 2006-05-10]
 	Updated chat/i2cbd to 2.0_BETA4 [jwise 2006-05-10]
+	Updated multimedia/vlc08 to 0.8.5 [drochner 2006-05-10]
 	Added devel/javacc version 4.0 [minskim 2006-05-11]
 	Updated chat/i2cbd to 2.0_BETA5 [jwise 2006-05-10]
 	Updated www/php4 to 4.4.2nb2 [minskim 2006-05-11]
