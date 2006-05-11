@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2006/04/22 07:32:24 lukem Exp $
+# $NetBSD: Makefile,v 1.41 2006/05/11 15:01:00 seb Exp $
 
-DISTNAME=		nut-2.0.1
-PKGNAME=		ups-nut-cgi-2.0.1
-PKGREVISION=		2
+DISTNAME=		nut-2.0.3
+PKGNAME=		ups-nut-cgi-2.0.3
 CATEGORIES=		sysutils
 MASTER_SITES=		http://random.networkupstools.org/source/2.0/
 
