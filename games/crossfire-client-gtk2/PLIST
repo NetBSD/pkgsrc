@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/11 05:58:41 adam Exp $
+bin/gcfclient2
