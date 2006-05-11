@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.187 2006/05/11 09:25:51 martti Exp $
+$NetBSD: CHANGES-2006,v 1.188 2006/05/11 11:29:46 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2448,3 +2448,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added games/crossfire-server version 1.9.0 [adam 2006-05-11]
 	Added games/crossfire-maps version 1.9.0.1 [adam 2006-05-11]
 	Updated editors/vim-lang to 7.0.0nb1 [martti 2006-05-11]
+	Updated www/liferea to 1.0.12 [drochner 2006-05-11]
+	Updated misc/stellarium to 0.8.0 [drochner 2006-05-11]
