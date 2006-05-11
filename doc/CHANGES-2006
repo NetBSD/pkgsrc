@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.189 2006/05/11 13:22:01 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.190 2006/05/11 15:02:10 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2461,3 +2461,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated editors/vim-lang to 7.0.0nb1 [martti 2006-05-11]
 	Updated www/liferea to 1.0.12 [drochner 2006-05-11]
 	Updated misc/stellarium to 0.8.0 [drochner 2006-05-11]
+	Updated sysutils/ups-nut-cgi to 2.0.3 [seb 2006-05-11]
