@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/03/27 21:18:06 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2006/05/11 10:58:52 rillig Exp $
 
 --- Makefile.orig	2003-04-07 15:03:22.000000000 +0200
 +++ Makefile
@@ -43,7 +43,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/03/27 21:18:06 wiz Exp $
 +	${LIBTOOL} --mode=compile gcc -DPACKAGE=\"libshp\" -DVERSION=\"$(SHPLIB_VERSION)\" -DSTDC_HEADERS=1  -I. -I. -I/usr/local/include    -g -O2 -c shpopen.c
 +	${LIBTOOL} --mode=compile gcc -DPACKAGE=\"libshp\" -DVERSION=\"$(SHPLIB_VERSION)\" -DSTDC_HEADERS=1  -I. -I. -I/usr/local/include    -g -O2 -c shptree.c
 +	${LIBTOOL} --mode=compile gcc -DPACKAGE=\"libshp\" -DVERSION=\"$(SHPLIB_VERSION)\" -DSTDC_HEADERS=1  -I. -I. -I/usr/local/include    -g -O2 -c dbfopen.c
-+	${LIBTOOL} --mode=link gcc  -g -O2  -o libshp.la -rpath /usr/local/lib -version-info 1:1:0 shpopen.lo shptree.lo dbfopen.lo  
++	${LIBTOOL} --mode=link gcc  -g -O2  -o libshp.la -rpath ${PREFIX}/lib -version-info 1:1:0 shpopen.lo shptree.lo dbfopen.lo
  
  lib_install:
 -	cp .libs/libshp.la .libs/libshp.lai
