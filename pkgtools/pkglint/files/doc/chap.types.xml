@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.types.xml,v 1.8 2006/05/10 17:14:08 rillig Exp $ -->
+<!-- $NetBSD: chap.types.xml,v 1.9 2006/05/11 09:05:33 rillig Exp $ -->
 
 <chapter id="types">
 <title>The &pkglint; type system</title>
@@ -146,6 +146,45 @@
 	are allowed on it. Otherwise exactly those operations of the
 	first ACL entry whose subject matches the current filename are
 	allowed. If no entry matches, nothing is allowed.</para>
+
+	<para>For determining if a variable is used in the correct
+	place, the filename is only one part of the whole decision. The
+	other one is the context in which the variable appears. There
+	are many factors that influence whether the variable is used
+	correctly.</para>
+
+	<itemizedlist>
+
+	<listitem>The variable may be either used at preprocessing time
+	or at runtime. Some variables are defined in
+	<filename>bsd.pkg.mk</filename> and thus are not available until
+	that file has been included. As this should always be the very
+	last thing a package includes, it practically means that these
+	variables are only available at runtime.</listitem>
+
+	<listitem>The variable may appear as the whole right hand side
+	of an assignment, as a single word, or even as part of a word.
+	First, the types on the right and left side should be
+	compatible. Second, some variables need to be quoted correctly,
+	depending on whether they are part of a word or not.</listitem>
+
+	<listitem>In shell commands, the variable may also appear as a
+	whole word or as part of a word. This is similar to the case
+	above.</listitem>
+
+	<listitem>The variable may appear inside some sort of quotes.
+	For some variables this is acceptable, as they are assumed to
+	never contain special characters. For others it
+	isn't.</listitem>
+
+	<listitem>The various operators in conditional statements like
+	<literal>.if</literal> may further restrict the valid values.
+	For example, the <varname>OPSYS</varname> variable should only
+	be compared to well-known operating system names. The
+	<varname>exists()</varname> function should only be called on
+	pathnames.</listitem>
+
+	</itemizedlist>
 
 <sect2 id="types.acls.future">
 <title>Future Directions</title>
