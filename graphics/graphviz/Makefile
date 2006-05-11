@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/04/17 13:45:58 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2006/05/11 21:51:40 jmc Exp $
 
 DISTNAME=	graphviz-2.6
 PKGREVISION=	5
@@ -12,6 +12,7 @@ COMMENT=	Graph Drawing Programs from AT&T Research and Lucent Bell Labs
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
+USE_LANGUAGES=          c c++
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 XAW_TYPE=		standard
