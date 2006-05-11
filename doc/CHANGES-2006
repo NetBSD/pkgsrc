@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.185 2006/05/11 07:33:26 grant Exp $
+$NetBSD: CHANGES-2006,v 1.186 2006/05/11 07:53:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2440,3 +2440,10 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/i2cbd to 2.0_BETA5 [jwise 2006-05-10]
 	Updated www/php4 to 4.4.2nb2 [minskim 2006-05-11]
 	Updated net/nagios-base to 2.3nb1 [grant 2006-05-11]
+	Removed games/crossfire-cli [adam 2006-05-11]
+	Removed games/crossfire-srv [adam 2006-05-11]
+	Added games/crossfire-client version 1.9.0 [adam 2006-05-11]
+	Added games/crossfire-client-gtk version 1.9.0 [adam 2006-05-11]
+	Added games/crossfire-client-gtk2 version 1.9.0 [adam 2006-05-11]
+	Added games/crossfire-server version 1.9.0 [adam 2006-05-11]
+	Added games/crossfire-maps version 1.9.0.1 [adam 2006-05-11]
