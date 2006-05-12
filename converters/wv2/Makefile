@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/03/06 00:18:13 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/05/12 20:48:37 rillig Exp $
 #
 
 DISTNAME=		wv2-0.2.2
@@ -16,6 +16,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+USE_LANGUAGES=		c c++
 
 CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
