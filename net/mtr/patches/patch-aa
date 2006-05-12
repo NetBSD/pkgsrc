@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.6 2006/05/12 07:51:05 joerg Exp $
+
+--- configure.orig	2006-05-12 07:46:21.000000000 +0000
++++ configure
+@@ -6882,6 +6882,7 @@ _ACEOF
+   LIBS="-lresolv $LIBS"
+ 
+ else
++  LIBS="$ac_check_lib_save_LIBS"
+ 
+ echo "$as_me:$LINENO: checking for __res_mkquery in -lresolv" >&5
+ echo $ECHO_N "checking for __res_mkquery in -lresolv... $ECHO_C" >&6
+@@ -6965,8 +6966,6 @@ fi
+ 
+ fi
+ 
+-LIBS="$LIBS -lresolv"
+-
+ echo "$as_me:$LINENO: checking for herror" >&5
+ echo $ECHO_N "checking for herror... $ECHO_C" >&6
+ if test "${ac_cv_func_herror+set}" = set; then
