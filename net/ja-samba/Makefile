@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/04/23 00:12:39 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2006/05/12 23:07:14 minskim Exp $
 
 DISTNAME=		samba-${SAMBA_VERSION}-ja-${JA_VERSION}
 PKGNAME=		ja-samba-${SAMBA_VERSION}.${JA_PKG_VERSION}
@@ -157,6 +157,8 @@ SUBST_SED.paths+=	-e 's,@AWK@,${AWK},g' -e 's,@CAT@,${CAT},g'
 SUBST_SED.paths+=	-e 's,@MKTEMP@,${MKTEMP},g' -e 's,@RM@,${RM},g'
 SUBST_SED.paths+=	-e 's,@PWD_MKDB@,${PWD_MKDB},g' -e 's,@SH@,${SH},g'
 SUBST_STAGE.paths=	post-patch
+
+INSTALLATION_DIRS+=	bin include lib
 
 # Remove irrelevant files for this package.
 post-extract:
