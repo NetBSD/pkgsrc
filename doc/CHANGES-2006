@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.198 2006/05/12 14:48:06 tonio Exp $
+$NetBSD: CHANGES-2006,v 1.199 2006/05/12 17:47:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2470,3 +2470,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/dovecot to 1.0beta8 [grant 2006-05-12]
 	Updated graphics/p5-Image-ExifTool to 6.17 [gdt 2006-05-12]
 	Updated security/caff to 0.4.6 [tonio 2006-05-12]
+	Updated databases/qdbm to 1.8.51 [wiz 2006-05-12]
+	Updated textproc/hyperestraier to 1.2.5 [wiz 2006-05-12]
