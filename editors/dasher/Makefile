@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/04/28 13:45:10 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2006/05/12 18:08:55 wiz Exp $
 #
 
 DISTNAME=	dasher-4.0.0
@@ -13,6 +13,7 @@ COMMENT=	Easy typing without using keyboard
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
+USE_LANGUAGES+=		c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
