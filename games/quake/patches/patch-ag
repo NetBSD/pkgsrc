@@ -1,13 +1,17 @@
-$NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
+$NetBSD: patch-ag,v 1.3 2006/05/12 12:40:10 joerg Exp $
 
---- winquake/cd_linux.c	Tue Dec 21 18:40:50 1999
-+++ ../work/winquake/cd_linux.c	Sat Jan 15 10:52:27 2000
-@@ -31,7 +31,19 @@
+--- winquake/cd_linux.c.orig	1999-12-21 18:40:50.000000000 +0000
++++ winquake/cd_linux.c
+@@ -31,7 +31,23 @@ Foundation, Inc., 59 Temple Place - Suit
  #include <time.h>
  #include <errno.h>
  
 +#ifdef __linux__
  #include <linux/cdrom.h>
++#endif
++
++#if defined(__DragonFly__)
++#include <sys/cdio.h>
 +#endif
 +
 +#ifdef __NetBSD__
@@ -22,7 +26,7 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
  
  #include "quakedef.h"
  
-@@ -46,165 +58,289 @@
+@@ -46,165 +62,296 @@ static byte 	remap[100];
  static byte		playTrack;
  static byte		maxTrack;
  
@@ -39,6 +43,10 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
 +#ifdef __NetBSD__
 +static char cd_dev[64] = "/dev/rcd0d";
 +#endif
++
++#ifdef __DragonFly__
++static char cd_dev[64] = "/dev/cd0d";
++#endif
  
  static void CDAudio_Eject(void)
  {
@@ -47,7 +55,7 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
 -
 -	if ( ioctl(cdfile, CDROMEJECT) == -1 ) 
 -		Con_DPrintf("ioctl cdromeject failed\n");
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +  int arg=0;
 +#endif
 +
@@ -57,12 +65,15 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
 +#ifdef __linux__
 +  if ( ioctl(cdfile, CDROMEJECT) == -1 ) 
 +    Con_DPrintf("ioctl cdromeject failed\n");
-+#endif
-+#ifdef __NetBSD__
++#elif defined(__NetBSD__)
 +  if(ioctl(cdfile, DIOCLOCK, &arg) == -1)
 +    Con_DPrintf("ioctl cdromunlock failed\n");
 +  arg = 1;
 +  if ( ioctl(cdfile, DIOCEJECT, &arg) == -1 ) 
++    Con_DPrintf("ioctl cdromeject failed\n");
++#elif defined(__DragonFly__)
++  ioctl(cdfile, CDIOCALLOW);
++  if ( ioctl(cdfile, CDIOCEJECT) == -1 ) 
 +    Con_DPrintf("ioctl cdromeject failed\n");
 +#endif
  }
@@ -81,7 +92,7 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
 +  if ( ioctl(cdfile, CDROMCLOSETRAY) == -1 ) 
 +    Con_DPrintf("ioctl cdromclosetray failed\n");
 +#endif
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +  if(ioctl(cdfile, CDIOCCLOSE, NULL) == -1) {
 +    Con_DPrintf("ioctl cdromclosetray failed\n");
 +  }
@@ -91,21 +102,17 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
  static int CDAudio_GetAudioDiskInfo(void)
  {
 -	struct cdrom_tochdr tochdr;
+-
+-	cdValid = false;
 +#ifdef __linux__
 +struct cdrom_tochdr tochdr;
 +#endif
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +struct ioc_toc_header tochdr;
 +#endif
- 
--	cdValid = false;
++
 +cdValid = false;
- 
--	if ( ioctl(cdfile, CDROMREADTOCHDR, &tochdr) == -1 ) 
--    {
--      Con_DPrintf("ioctl cdromreadtochdr failed\n");
--	  return -1;
--    }
++
 +#ifdef __linux
 +if ( ioctl(cdfile, CDROMREADTOCHDR, &tochdr) == -1 ) 
 +{
@@ -113,22 +120,15 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
 +  return -1;
 +}
 +#endif
- 
--	if (tochdr.cdth_trk0 < 1)
--	{
--		Con_DPrintf("CDAudio: no music tracks\n");
--		return -1;
--	}
-+#ifdef __NetBSD__
++
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +if ( ioctl(cdfile, CDIOREADTOCHEADER, &tochdr) == -1 ) 
 +{
 +  Con_DPrintf("ioctl cdromreadtochdr failed\n");
 +  return -1;
 +}
 +#endif
- 
--	cdValid = true;
--	maxTrack = tochdr.cdth_trk1;
++
 +#ifdef __linux__
 +if (tochdr.cdth_trk0 < 1)
 +  {
@@ -136,7 +136,7 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
 +    return -1;
 +  }
 +#endif
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +if (tochdr.starting_track < 1)
 +  {
 +    Con_DPrintf("CDAudio: no music tracks\n");
@@ -148,10 +148,25 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
 +#ifdef __linux__
 +maxTrack = tochdr.cdth_trk1;
 +#endif
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +maxTrack = tochdr.ending_track;
 +#endif
  
+-	if ( ioctl(cdfile, CDROMREADTOCHDR, &tochdr) == -1 ) 
+-    {
+-      Con_DPrintf("ioctl cdromreadtochdr failed\n");
+-	  return -1;
+-    }
+-
+-	if (tochdr.cdth_trk0 < 1)
+-	{
+-		Con_DPrintf("CDAudio: no music tracks\n");
+-		return -1;
+-	}
+-
+-	cdValid = true;
+-	maxTrack = tochdr.cdth_trk1;
+-
 -	return 0;
 +return 0;
  }
@@ -166,7 +181,7 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
 +  struct cdrom_ti ti;
 +#endif
 +
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +  struct ioc_read_toc_entry entry;
 +  struct ioc_play_track ti;
 +  int arg=1;
@@ -271,7 +286,7 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
 +    Con_DPrintf("ioctl cdromresume failed\n");
 +#endif
 +
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +  ti.start_track = track;
 +  ti.end_track = track;
 +  ti.start_index = 1;
@@ -318,7 +333,7 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
 +  if ( ioctl(cdfile, CDROMSTOP) == -1 )
 +    Con_DPrintf("ioctl cdromstop failed (%d)\n", errno);
 +#endif
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +  if ( ioctl(cdfile, CDIOCSTOP) == -1 )
 +    Con_DPrintf("ioctl cdromstop failed (%d)\n", errno);
 +#endif
@@ -336,6 +351,9 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
 -
 -	if (!playing)
 -		return;
+-
+-	if ( ioctl(cdfile, CDROMPAUSE) == -1 ) 
+-		Con_DPrintf("ioctl cdrompause failed\n");
 +#ifdef PAUSE_BY_STOPPING
 +  qboolean t;
 +#endif
@@ -352,7 +370,7 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
 +    Con_DPrintf("ioctl cdrompause failed\n");
 +#endif
 +
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +  if ( ioctl(cdfile, CDIOCPAUSE) == -1 ) 
 +    Con_DPrintf("ioctl cdrompause failed\n");
 +#endif
@@ -364,9 +382,6 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
 +  playing=t;
 +#endif
  
--	if ( ioctl(cdfile, CDROMPAUSE) == -1 ) 
--		Con_DPrintf("ioctl cdrompause failed\n");
--
 -	wasPlaying = playing;
 -	playing = false;
 +  wasPlaying = playing;
@@ -400,7 +415,7 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
 +    Con_DPrintf("ioctl cdromresume failed\n");
 +#endif
 +
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +  if ( ioctl(cdfile, CDIOCRESUME) == -1 ) 
 +    Con_DPrintf("ioctl cdromresume failed\n");
 +#endif
@@ -412,7 +427,7 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
  }
  
  static void CD_f (void)
-@@ -327,43 +463,72 @@
+@@ -327,43 +474,72 @@ static void CD_f (void)
  
  void CDAudio_Update(void)
  {
@@ -421,7 +436,7 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
 +#ifdef __linux__
 +  struct cdrom_subchnl subchnl;
 +#endif
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +  struct ioc_read_subchannel subchnl;
 +  struct cd_sub_channel_info data;
 +#endif
@@ -493,7 +508,7 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
 +	CDAudio_Play(playTrack, true);
 +    }
 +#endif
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +    subchnl.address_format = CD_MSF_FORMAT;
 +    subchnl.data_format = CD_CURRENT_POSITION;
 +    subchnl.data_len = sizeof(data);
@@ -517,7 +532,7 @@ $NetBSD: patch-ag,v 1.2 2002/01/02 10:01:35 hubertf Exp $
  }
  
  int CDAudio_Init(void)
-@@ -382,9 +547,9 @@
+@@ -382,9 +558,9 @@ int CDAudio_Init(void)
  	}
  
  	if ((cdfile = open(cd_dev, O_RDONLY)) == -1) {
