@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2006/04/14 09:06:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.43 2006/05/12 20:53:36 adam Exp $
 bin/bin2res
 bin/fnt2bdf
 bin/function_grep.pl
@@ -237,6 +237,7 @@ include/wine/windows/mmreg.h
 include/wine/windows/mmstream.h
 include/wine/windows/mmstream.idl
 include/wine/windows/mmsystem.h
+include/wine/windows/mprapi.h
 include/wine/windows/msacm.h
 include/wine/windows/msacmdlg.h
 include/wine/windows/msacmdrv.h
@@ -348,6 +349,7 @@ include/wine/windows/tchar.h
 include/wine/windows/textserv.h
 include/wine/windows/tlhelp32.h
 include/wine/windows/tmschema.h
+include/wine/windows/twain.h
 include/wine/windows/unknwn.h
 include/wine/windows/unknwn.idl
 include/wine/windows/urlmon.h
@@ -475,6 +477,7 @@ lib/wine/gdi.exe16
 lib/wine/gdi32.dll.so
 ${WINE_OPENGL}lib/wine/glu32.dll.so
 ${WINE_OPENGL}lib/wine/glut32.dll.so
+lib/wine/gphoto2.ds.so
 lib/wine/hh.exe.so
 lib/wine/hhctrl.ocx.so
 lib/wine/iccvid.dll.so
@@ -541,6 +544,7 @@ lib/wine/liblz32.def
 lib/wine/libmapi32.def
 lib/wine/libmlang.def
 lib/wine/libmpr.def
+lib/wine/libmprapi.def
 lib/wine/libmsacm32.def
 lib/wine/libmscms.def
 lib/wine/libmsdmo.def
@@ -616,7 +620,7 @@ lib/wine/mapi32.dll.so
 lib/wine/mciavi32.dll.so
 lib/wine/mcicda.dll.so
 lib/wine/mciseq.dll.so
-lib/wine/mciwave.drv.so
+lib/wine/mciwave.dll.so
 lib/wine/midimap.dll.so
 lib/wine/mlang.dll.so
 lib/wine/mmdevldr.vxd.so
@@ -624,9 +628,10 @@ lib/wine/mmsystem.dll16
 lib/wine/monodebg.vxd.so
 lib/wine/mouse.drv16
 lib/wine/mpr.dll.so
+lib/wine/mprapi.dll.so
 lib/wine/msacm.dll16
-lib/wine/msacm.drv.so
 lib/wine/msacm32.dll.so
+lib/wine/msacm32.drv.so
 lib/wine/msadp32.acm.so
 lib/wine/mscms.dll.so
 lib/wine/msdmo.dll.so
@@ -687,6 +692,7 @@ lib/wine/rpcss.exe.so
 lib/wine/rsabase.dll.so
 lib/wine/rsaenh.dll.so
 lib/wine/rundll32.exe.so
+lib/wine/sane.ds.so
 lib/wine/secur32.dll.so
 lib/wine/security.dll.so
 lib/wine/sensapi.dll.so
