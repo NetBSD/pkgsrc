@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/04/04 09:38:46 ghen Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/05/12 15:47:39 jwise Exp $
 lib/dovecot/imap/lib01_acl_plugin.so
 lib/dovecot/imap/lib01_convert_plugin.so
 lib/dovecot/imap/lib01_quota_plugin.so
@@ -14,6 +14,7 @@ lib/dovecot/lib01_convert_plugin.la
 lib/dovecot/lib01_quota_plugin.la
 lib/dovecot/lib02_trash_plugin.la
 lib/dovecot/pop3/lib01_convert_plugin.so
+lib/dovecot/pop3/lib01_quota_plugin.so
 libexec/dovecot/checkpassword-reply
 libexec/dovecot/dict
 libexec/dovecot/dovecot-auth
