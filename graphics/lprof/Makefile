@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/17 13:46:33 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/05/12 10:53:14 joerg Exp $
 #
 
 DISTNAME=		lprof-1.10.1
@@ -15,8 +15,11 @@ USE_TOOLS+=	gmake
 MAKE_ENV+=	BASEDIR=${PREFIX:Q} QTDIR=${PREFIX}/qt3
 MAKE_ENV+=	LDFLAGS=${LDFLAGS:M*:Q}
 
+PTHREAD_AUTO_VARS=	yes
+
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
