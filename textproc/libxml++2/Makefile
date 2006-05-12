@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:11:03 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/12 10:41:54 joerg Exp $
 #
 
 DISTNAME=		libxml++-2.10.0
@@ -13,6 +13,7 @@ HOMEPAGE=		http://libxmlplusplus.sourceforge.net/
 COMMENT=		C++ wrapper for the libxml XML parser library
 
 USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/libxml++-2.6.pc.in
 GNU_CONFIGURE=		yes
