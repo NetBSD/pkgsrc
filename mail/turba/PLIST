@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/03/19 16:55:04 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/05/12 21:12:28 adrianp Exp $
 share/doc/turba/INSTALL
 share/doc/turba/LDAP
 share/doc/turba/README
@@ -19,7 +19,6 @@ share/horde/turba/delete.php
 share/horde/turba/display.php
 share/horde/turba/edit.php
 share/horde/turba/index.php
-share/horde/turba/lib/AbstractObject.php
 share/horde/turba/lib/Block/minisearch.php
 share/horde/turba/lib/Block/tree_menu.php
 share/horde/turba/lib/Driver.php
@@ -137,8 +136,9 @@ share/horde/turba/scripts/sql/turba_objects.oci8.sql
 share/horde/turba/scripts/sql/turba_objects.pgsql.sql
 share/horde/turba/scripts/sql/turba_objects.sql
 share/horde/turba/scripts/sql/turba_weddingguests.sql
+share/horde/turba/scripts/upgrades/1.2_to_2.0.oci8.sql
 share/horde/turba/scripts/upgrades/1.2_to_2.0.sql
-share/horde/turba/scripts/upgrades/2004-10-26_create_default_histories.php
+share/horde/turba/scripts/upgrades/create_default_histories.php
 share/horde/turba/scripts/upgrades/public_to_horde_share.php
 share/horde/turba/search.php
 share/horde/turba/templates/addressbooks.inc
