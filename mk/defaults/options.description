@@ -247,6 +247,7 @@ spamassassin-taint-checks	Enable Perl taint checks to improve security.
 spamassassin-test-awl-sql	Enable tests of the SQL module for the automatic whitelist.
 spamassassin-test-bayes-sql	Enable tests of the SQL module for Bayes data.
 spamassassin-test-prefork	Enable spamd prefork test (kills processes containing "spam child").
+spoof			Spoof the original source address of forwarded packets
 sqlite			Enable SQLite support.
 ssl			Enable SSL support.
 starttls		Enable TLS support.
@@ -256,7 +257,7 @@ streamtuner-xiph	Enable the Xiph plugin
 subshell	
 suexec	
 sun-jre-jce		Use unlimited strength cryptograpy extension.
-svn	
+svn			Enable subversion support
 syncdir			Force synchronous link() and related syscalls.
 tcpd	
 tcpwrappers	
