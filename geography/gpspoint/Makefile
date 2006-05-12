@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/05/11 11:05:54 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/12 06:50:16 joerg Exp $
 
 DISTNAME=		gpspoint-2.030521
 PKGREVISION=		1
@@ -12,6 +12,7 @@ COMMENT=		Program to download and upload waypoints to and from your GPS device
 DEPENDS+=		dialog>=0.6:../../misc/dialog
 
 USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
