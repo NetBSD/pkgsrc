@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.199 2006/05/12 17:47:18 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.200 2006/05/12 20:53:05 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2472,3 +2472,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/caff to 0.4.6 [tonio 2006-05-12]
 	Updated databases/qdbm to 1.8.51 [wiz 2006-05-12]
 	Updated textproc/hyperestraier to 1.2.5 [wiz 2006-05-12]
+	Updated mail/ingo to 1.1.1 [adrianp 2006-05-12]
