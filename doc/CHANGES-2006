@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.204 2006/05/12 22:32:37 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.205 2006/05/12 23:37:02 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2478,3 +2478,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/turba to 2.1.1 [adrianp 2006-05-12]
 	Updated mail/sendmail to 8.13.6 [adrianp 2006-05-12]
 	Updated security/base to 1.2.4 [adrianp 2006-05-12]
+	Updated security/hydra to 5.3 [adrianp 2006-05-12]
