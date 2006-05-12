@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2006/04/20 08:15:48 adrianp Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/12 23:35:55 adrianp Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-src
-PKGNAME=	hydra-5.2
-PKGREVISION=	1
+PKGNAME=	hydra-5.3
 CATEGORIES=	security
 MASTER_SITES=	http://www.thc.org/releases/
 
@@ -23,11 +22,11 @@ LICENSE+=	hydra-license
 SUBST_CLASSES+=		build
 SUBST_STAGE.build=	post-patch
 SUBST_FILES.build=	Makefile.am configure hydra-gtk/src/main.c
-SUBST_SED.build=	-e "s|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g" \
-			-e "s|@PREFIX@|${PREFIX}|g" \
-			-e "s|uname|${UNAME}|g" \
-			-e "s|\\./hydra|${PREFIX}/bin/hydra|g" \
-			-e "s|LIBS=-lm|LIBS=-lm ${COMPILER_RPATH_FLAG}${PREFIX}/lib ${COMPILER_RPATH_FLAG}/usr/lib|g"
+SUBST_SED.build=	-e "s|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g"
+SUBST_SED.build+=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_SED.build+=	-e "s|uname|${UNAME}|g"
+SUBST_SED.build+=	-e "s|\\./hydra|${PREFIX}/bin/hydra|g"
+SUBST_SED.build+=	-e "s|LIBS=-lm|LIBS=-lm ${COMPILER_RPATH_FLAG}${PREFIX}/lib ${COMPILER_RPATH_FLAG}/usr/lib|g"
 SUBST_MESSAGE.build=	Patching build files.
 
 USE_OLD_DES_API=	YES
@@ -37,34 +36,13 @@ BUILDLINK_API_DEPENDS.libssh+=	libssh-0.11
 
 INSTALLATION_DIRS=	bin
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.hydra
-PKG_SUPPORTED_OPTIONS=	gtkfe
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mgtkfe)
-
-.include "../../x11/gtk2/buildlink3.mk"
-
-post-configure:
-	cd ${WRKSRC}/hydra-gtk && \
-	${SETENV} ${CONFIGURE_ENV} ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
-
-post-build:
-	cd ${WRKSRC}/hydra-gtk && \
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
-
-post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/hydra-gtk/src/xhydra ${PREFIX}/bin
-
-PLIST_SRC+=	${PKGDIR}/PLIST.xhydra
-.endif
+.include "options.mk"
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/libssh/buildlink3.mk"
 
 pre-build:
-	 @${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
+	 @${CP:Q} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/hydra ${PREFIX}/bin
