@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2006/04/22 17:32:34 joerg Exp $
+# $NetBSD: Makefile,v 1.54 2006/05/12 20:43:54 adam Exp $
 
-DISTNAME=	gtk-gnutella-0.96
-PKGREVISION=	4
+DISTNAME=	gtk-gnutella-0.96.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk-gnutella/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,20 +13,22 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
-CONFIGURE_ARGS+=	-d -e -r -s \
-			-D prefix=${PREFIX:Q} \
-			-D privlib="${PREFIX}/share/gtk-gnutella" \
-			-D sysman="${PREFIX}/man" \
-			-D locale="${PREFIX}/${PKGLOCALEDIR}/locale" \
-			-D cc=${CC:Q} \
-			-D ccflags="${CFLAGS:Unone}" \
-			-D gtkversion=2 \
-			-D yacc="yacc" \
-			-D official="true" \
-			-U optimize
+CONFIGURE_ARGS+=	-d -e -r -s
+CONFIGURE_ARGS+=	-D prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	-D privlib="${PREFIX}/share/gtk-gnutella"
+CONFIGURE_ARGS+=	-D sysman="${PREFIX}/man"
+CONFIGURE_ARGS+=	-D locale="${PREFIX}/${PKGLOCALEDIR}/locale"
+CONFIGURE_ARGS+=	-D cc=${CC:Q}
+CONFIGURE_ARGS+=	-D ccflags="${CFLAGS:Unone}"
+CONFIGURE_ARGS+=	-D yacc="yacc"
+CONFIGURE_ARGS+=	-D official="true"
+CONFIGURE_ARGS+=	-U optimize
+
+.include "options.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
