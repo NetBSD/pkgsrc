@@ -1,14 +1,18 @@
-$NetBSD: patch-ad,v 1.3 2002/01/02 10:01:35 hubertf Exp $
+$NetBSD: patch-ad,v 1.4 2006/05/12 12:40:10 joerg Exp $
 
---- qw/client/snd_linux.c	Mon Jul  7 20:08:00 1997
-+++ ../work/QW/client/snd_linux.c	Sun Jan 16 19:35:45 2000
-@@ -6,15 +6,33 @@
+--- qw/client/snd_linux.c.orig	1997-07-07 20:08:00.000000000 +0000
++++ qw/client/snd_linux.c
+@@ -6,15 +6,42 @@
  #include <sys/mman.h>
  #include <sys/shm.h>
  #include <sys/wait.h>
 +
 +#ifdef __NetBSD__
 +#include <soundcard.h>
++#endif
++
++#if defined(__DragonFly__)
++#include <sys/soundcard.h>
 +#endif
 +
 +#ifdef __linux__
@@ -25,19 +29,24 @@ $NetBSD: patch-ad,v 1.3 2002/01/02 10:01:35 hubertf Exp $
  static int tryrates[] = { 11025, 22051, 44100, 8000 };
  
 +#ifdef __linux__
-+char *audio_device="/dev/dsp";
++const char *audio_device="/dev/dsp";
 +#define MMAP_PROTECTION PROT_WRITE
 +#endif
 +
 +#ifdef __NetBSD__
-+char *audio_device="/dev/audio";
++const char *audio_device="/dev/audio";
++#define MMAP_PROTECTION PROT_WRITE|PROT_READ
++#endif
++
++#if defined(__DragonFly__)
++const char *audio_device="/dev/audio";
 +#define MMAP_PROTECTION PROT_WRITE|PROT_READ
 +#endif
 +
  qboolean SNDDMA_Init(void)
  {
  
-@@ -28,28 +46,29 @@
+@@ -28,28 +55,29 @@ qboolean SNDDMA_Init(void)
  
  	snd_inited = 0;
  
@@ -74,7 +83,7 @@ $NetBSD: patch-ad,v 1.3 2002/01/02 10:01:35 hubertf Exp $
          Con_Printf("Sound driver too old\n");
  		close(audio_fd);
  		return 0;
-@@ -111,11 +130,11 @@
+@@ -111,11 +139,11 @@ qboolean SNDDMA_Init(void)
  // memory map the dma buffer
  
  	shm->buffer = (unsigned char *) mmap(NULL, info.fragstotal
@@ -89,7 +98,7 @@ $NetBSD: patch-ad,v 1.3 2002/01/02 10:01:35 hubertf Exp $
  		close(audio_fd);
  		return 0;
  	}
-@@ -126,8 +145,8 @@
+@@ -126,8 +154,8 @@ qboolean SNDDMA_Init(void)
      rc = ioctl(audio_fd, SNDCTL_DSP_STEREO, &tmp);
      if (rc < 0)
      {
@@ -100,7 +109,7 @@ $NetBSD: patch-ad,v 1.3 2002/01/02 10:01:35 hubertf Exp $
  		close(audio_fd);
          return 0;
      }
-@@ -139,8 +158,8 @@
+@@ -139,8 +167,8 @@ qboolean SNDDMA_Init(void)
      rc = ioctl(audio_fd, SNDCTL_DSP_SPEED, &shm->speed);
      if (rc < 0)
      {
@@ -111,7 +120,7 @@ $NetBSD: patch-ad,v 1.3 2002/01/02 10:01:35 hubertf Exp $
  		close(audio_fd);
          return 0;
      }
-@@ -151,7 +170,7 @@
+@@ -151,7 +179,7 @@ qboolean SNDDMA_Init(void)
          rc = ioctl(audio_fd, SNDCTL_DSP_SETFMT, &rc);
          if (rc < 0)
  		{
@@ -120,7 +129,7 @@ $NetBSD: patch-ad,v 1.3 2002/01/02 10:01:35 hubertf Exp $
  			Con_Printf("Could not support 16-bit data.  Try 8-bit.\n");
  			close(audio_fd);
  			return 0;
-@@ -163,7 +182,7 @@
+@@ -163,7 +191,7 @@ qboolean SNDDMA_Init(void)
          rc = ioctl(audio_fd, SNDCTL_DSP_SETFMT, &rc);
          if (rc < 0)
  		{
@@ -129,7 +138,7 @@ $NetBSD: patch-ad,v 1.3 2002/01/02 10:01:35 hubertf Exp $
  			Con_Printf("Could not support 8-bit data.\n");
  			close(audio_fd);
  			return 0;
-@@ -171,7 +190,7 @@
+@@ -171,7 +199,7 @@ qboolean SNDDMA_Init(void)
      }
  	else
  	{
@@ -138,7 +147,7 @@ $NetBSD: patch-ad,v 1.3 2002/01/02 10:01:35 hubertf Exp $
  		Con_Printf("%d-bit sound not supported.", shm->samplebits);
  		close(audio_fd);
  		return 0;
-@@ -183,7 +202,7 @@
+@@ -183,7 +211,7 @@ qboolean SNDDMA_Init(void)
      rc  = ioctl(audio_fd, SNDCTL_DSP_SETTRIGGER, &tmp);
  	if (rc < 0)
  	{
@@ -147,7 +156,7 @@ $NetBSD: patch-ad,v 1.3 2002/01/02 10:01:35 hubertf Exp $
  		Con_Printf("Could not toggle.\n");
  		close(audio_fd);
  		return 0;
-@@ -192,7 +211,7 @@
+@@ -192,7 +220,7 @@ qboolean SNDDMA_Init(void)
      rc = ioctl(audio_fd, SNDCTL_DSP_SETTRIGGER, &tmp);
  	if (rc < 0)
  	{
@@ -156,7 +165,7 @@ $NetBSD: patch-ad,v 1.3 2002/01/02 10:01:35 hubertf Exp $
  		Con_Printf("Could not toggle.\n");
  		close(audio_fd);
  		return 0;
-@@ -214,7 +233,7 @@
+@@ -214,7 +242,7 @@ int SNDDMA_GetDMAPos(void)
  
  	if (ioctl(audio_fd, SNDCTL_DSP_GETOPTR, &count)==-1)
  	{
