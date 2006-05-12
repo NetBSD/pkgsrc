@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.193 2006/05/12 03:15:16 simonb Exp $
+$NetBSD: CHANGES-2006,v 1.194 2006/05/12 08:26:12 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2465,3 +2465,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/aqsis to 0.6.4nb6 [joerg 2006-05-11]
 	Updated comms/conserver8 to 8.1.14 [seb 2006-05-11]
 	Updated benchmarks/nttcp to 1.47nb1 [simonb 2006-05-12]
+	Updated net/miredo to 0.8.4nb1 [joerg 2006-05-12]
