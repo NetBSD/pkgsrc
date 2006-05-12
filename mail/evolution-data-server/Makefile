@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/04/17 13:46:38 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2006/05/12 17:00:58 wiz Exp $
 #
 
 DISTNAME=	evolution-data-server-1.6.1
@@ -16,6 +16,7 @@ BUILDLINK_API_DEPENDS.libsoup-devel+=	libsoup-devel>=2.2.3
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		bison gmake msgfmt pkg-config
+USE_LANGUAGES+=		c++
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
