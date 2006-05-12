@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2006/04/22 17:32:34 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2006/05/12 20:43:54 adam Exp $
 
---- Configure.orig	2006-04-22 16:51:13.000000000 +0000
+--- Configure.orig	2006-02-22 17:50:18.000000000 +0100
 +++ Configure
-@@ -4575,6 +4575,11 @@ done'
+@@ -4576,6 +4576,11 @@ done'
  set libintl.h i_libintl
  eval $inhdr
  
