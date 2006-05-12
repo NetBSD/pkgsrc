@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.201 2006/05/12 20:55:52 adam Exp $
+$NetBSD: CHANGES-2006,v 1.202 2006/05/12 21:13:31 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2475,3 +2475,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/ingo to 1.1.1 [adrianp 2006-05-12]
 	Updated net/gtk-gnutella to 0.96.1 [adam 2006-05-12]
 	Updated emulators/wine to 0.9.13 [adam 2006-05-12]
+	Updated mail/turba to 2.1.1 [adrianp 2006-05-12]
