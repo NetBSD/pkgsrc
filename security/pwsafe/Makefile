@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:10:46 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/12 22:57:26 dan Exp $
 #
 
 DISTNAME=		pwsafe-0.2.0
@@ -12,6 +12,7 @@ HOMEPAGE=		http://nsd.dyndns.org/pwsafe/
 COMMENT=		CLI based PasswordSafe compatible password manager
 
 GNU_CONFIGURE=		yes
+USE_LANGUAGES+=		c++
 USE_TOOLS+=		gmake
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
