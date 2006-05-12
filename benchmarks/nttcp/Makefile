@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2004/07/30 15:50:38 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/12 03:07:14 simonb Exp $
 
 DISTNAME=	nttcp-1.47
+PKGREVISION=	1
 CATEGORIES=	benchmarks net
 MASTER_SITES=	http://www.leo.org/~elmar/nttcp/
 
