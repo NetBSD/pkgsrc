@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/09 16:46:07 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/12 22:43:46 minskim Exp $
 #
 
 DISTNAME=	ladspa_sdk_1.12
@@ -19,6 +19,8 @@ USE_LANGUAGES=	c c++
 MAKEFILE=	makefile
 
 BUILDLINK_LIBS.dl+=	${BUILDLINK_LDADD.dl}
+
+INSTALLATION_DIRS+=	bin include lib
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
