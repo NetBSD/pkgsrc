@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.10 2006/03/01 00:04:30 reed Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.11 2006/05/12 23:03:22 rillig Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -105,36 +105,27 @@
   <sect1 id="overview">
     <title>Overview</title>
 
-    <para>This document is divided into two parts.  The first,
-      <link linkend="users-guide" endterm="users-guide.title"/>,
-      describes how one can use one of the packages in the Package
-      Collection, either by installing a precompiled binary package, or
-      by building one's own copy using the &os; package system.  The
-      second part,
-      <link linkend="developers-guide" endterm="developers-guide.title"/>,
-      explains how to prepare
-      a package so it can be easily built by other &os; users without
-      knowing about the package's building details.</para>
+	<para>This document is divided into three parts. The first,
+	<link linkend="users-guide" endterm="users-guide.title"/>,
+	describes how one can use one of the packages in the Package
+	Collection, either by installing a precompiled binary package,
+	or by building one's own copy using the &os; package system. 
+	The second part, <link linkend="developers-guide"
+	endterm="developers-guide.title"/>, explains how to prepare a
+	package so it can be easily built by other &os; users without
+	knowing about the package's building details. The third part,
+	<link linkend="infrastructure" endterm="infrastructure.title"/>
+	is intended for those who want to understand how pkgsrc is
+	implemented.</para>
 
-    <para>This document is available in various formats:</para>
+	<para>This document is available in various formats:
+	<simplelist type="inline">
+	<member><ulink url="index.html">HTML</ulink></member>
+	<member><ulink url="pkgsrc.pdf">PDF</ulink></member>
+	<member><ulink url="pkgsrc.ps">PS</ulink></member>
+	<member><ulink url="pkgsrc.txt">TXT</ulink></member>
+	</simplelist>.</para>
 
-    <itemizedlist>
-      <listitem>
-	<para><ulink url="index.html">HTML</ulink></para>
-      </listitem>
-
-      <listitem>
-	<para><ulink url="pkgsrc.pdf">PDF</ulink></para>
-      </listitem>
-
-      <listitem>
-	<para><ulink url="pkgsrc.ps">PS</ulink></para>
-      </listitem>
-
-      <listitem>
-	<para><ulink url="pkgsrc.txt">TXT</ulink></para>
-      </listitem>
-    </itemizedlist>
   </sect1>
 
   <sect1 id="terminology">
