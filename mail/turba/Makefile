@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/29 09:23:19 adrianp Exp $
+# $NetBSD: Makefile,v 1.16 2006/05/12 21:12:28 adrianp Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
@@ -18,7 +18,7 @@ DOCDIR=		${PREFIX}/share/doc/turba
 EGDIR=		${PREFIX}/share/examples/turba
 HORDEDIR=	${PREFIX}/share/horde
 TURBADIR=	${HORDEDIR}/turba
-TURBAVER=	2.1
+TURBAVER=	2.1.1
 PAXDIRS=	lib locale po scripts templates themes
 USE_TOOLS+=	perl:run
 
@@ -71,11 +71,11 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/UPGRADING ${DOCDIR}
 
 .	for d in ${PAXDIRS}
-		${INSTALL_DATA_DIR} ${TURBADIR}/${d}
+		${INSTALL_DATA_DIR} ${TURBADIR}/${d:Q}
 .	endfor
 
 .	for d in ${PAXDIRS}
-		@cd ${WRKSRC}/${d} && ${PAX} -rwpma . ${TURBADIR}/${d}
+		@cd ${WRKSRC}/${d:Q} && ${PAX} -rwpma . ${TURBADIR}/${d:Q}
 .	endfor
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${TURBADIR}/config
