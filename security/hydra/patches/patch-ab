@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2006/02/05 00:18:29 adrianp Exp $
+$NetBSD: patch-ab,v 1.4 2006/05/12 23:35:55 adrianp Exp $
 
 --- configure.orig	2006-01-20 13:44:15.000000000 +0000
 +++ configure
@@ -21,6 +21,24 @@ $NetBSD: patch-ab,v 1.3 2006/02/05 00:18:29 adrianp Exp $
  do
      if [ "X" = "X$SSL_IPATH" ]; then
          if [ -f "$i/openssl/ssl.h" ]; then
+@@ -97,7 +98,7 @@ if [ "$SSL_IPATH" = "/usr/include" ]; th
+ fi
+ 
+ echo "Checking for Postgres (libpq) ..."
+-for i in  $LIBDIRS /lib  /usr/lib /usr/local/lib /opt/local/lib .
++for i in  $LIBDIRS /lib  /usr/lib /usr/local/lib /opt/local/lib @PREFIX@/lib .
+ do
+     if [ "X" = "X$POSTGRES_PATH" ]; then
+         if [ -f "$i/libpq.so" -o -f "$i/libpq.dylib" ]; then
+@@ -119,7 +120,7 @@ if [ "X" = "X$POSTGRES_PATH" ]; then
+ fi
+ 
+ echo "Checking for SVN (ibsvn_client-1 libapr-0.so libaprutil-0.so) ..."
+-for i in  $LIBDIRS /lib  /usr/lib /usr/local/lib /opt/local/lib .
++for i in  $LIBDIRS /lib  /usr/lib /usr/local/lib /opt/local/lib @PREFIX@/lib .
+ do
+     if [ "X" = "X$SVN_PATH" ]; then
+         if [ -f "$i/libsvn_client-1.so" ]&&[ -f "$i/libapr-0.so" ]&&[ -f "$i/libaprutil-0.so" ]; then
 @@ -183,7 +184,7 @@ if [ "$SAPR3_IPATH" = "/usr/include" ]; 
  fi
  
