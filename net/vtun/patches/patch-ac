@@ -1,8 +1,16 @@
-$NetBSD: patch-ac,v 1.1 2004/09/06 07:00:29 cjs Exp $
+$NetBSD: patch-ac,v 1.2 2006/05/12 09:48:09 joerg Exp $
 
---- auth.c.orig	2004-09-06 15:52:51.000000000 +0900
-+++ auth.c	2004-09-06 15:53:30.000000000 +0900
-@@ -589,7 +589,7 @@
+--- auth.c.orig	2006-05-12 09:45:20.000000000 +0000
++++ auth.c
+@@ -68,6 +68,7 @@ static EPAS_HANDLE ePass;
+ 
+ #ifndef __APPLE_CC__
+ #include <openssl/md5.h>
++#include <openssl/sha.h>
+ #include <openssl/hmac.h>
+ #include <openssl/blowfish.h>
+ #include <openssl/rand.h>
+@@ -589,7 +590,7 @@ struct vtun_host * auth_server(int fd)
  
  		   response_to_chal (chalsrv, h, chal_res, chal_resh);
  
