@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2006/04/29 09:23:19 adrianp Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/12 20:52:03 adrianp Exp $
 
 DISTNAME=	ingo-h3-${INGOVER}
-PKGREVISION=	1
 PKGNAME=	ingo-${INGOVER}
 CATEGORIES=	mail www
 MASTER_SITES=	http://ftp.horde.org/pub/ingo/ \
@@ -19,7 +18,7 @@ DOCDIR=		${PREFIX}/share/doc/ingo
 EGDIR=		${PREFIX}/share/examples/ingo
 HORDEDIR=	${PREFIX}/share/horde
 INGODIR=	${HORDEDIR}/ingo
-INGOVER=	1.1
+INGOVER=	1.1.1
 PAXDIRS=	lib locale po scripts templates themes
 
 MESSAGE_SUBST+=	INGODIR=${INGODIR:Q}
@@ -67,11 +66,11 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/UPGRADING ${DOCDIR}
 
 .	for d in ${PAXDIRS}
-		${INSTALL_DATA_DIR} ${INGODIR}/${d}
+		${INSTALL_DATA_DIR} ${INGODIR}/${d:Q}
 .	endfor
 
 .	for d in ${PAXDIRS}
-		@cd ${WRKSRC}/${d} && ${PAX} -rwpma . ${INGODIR}/${d}
+		@cd ${WRKSRC}/${d:Q} && ${PAX} -rwpma . ${INGODIR}/${d:Q}
 .	endfor
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${INGODIR}/config
