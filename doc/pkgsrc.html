@@ -66,8 +66,8 @@ alink="#0000FF">
         </div>
 
         <div xmlns="http://www.w3.org/TR/xhtml1/transitional">
-          <p xmlns="" class="pubdate">$NetBSD: pkgsrc.xml,v 1.14
-          2006/05/10 20:56:00 rillig Exp $</p>
+          <p xmlns="" class="pubdate">$NetBSD: pkgsrc.xml,v 1.16
+          2006/05/12 23:03:22 rillig Exp $</p>
         </div>
 
         <div>
@@ -1029,52 +1029,90 @@ alink="#0000FF">
         </dd>
 
         <dt><span class="part"><a href="#infrastructure">III. The
-        pkgsrc infrastructure</a></span></dt>
+        pkgsrc infrastructure internals</a></span></dt>
 
         <dd>
           <dl>
-            <dt><span class="chapter"><a href="#regression">20.
+            <dt><span class="chapter"><a href="#infr.design">20.
+            Design of the pkgsrc infrastructure</a></span></dt>
+
+            <dd>
+              <dl>
+                <dt><span class="sect1"><a href="#infr.var">20.1.
+                Variable evaluation</a></span></dt>
+
+                <dd>
+                  <dl>
+                    <dt><span class="sect2"><a href=
+                    "#infr.var.load">20.1.1. At load
+                    time</a></span></dt>
+
+                    <dt><span class="sect2"><a href=
+                    "#infr.var.run">20.1.2. At
+                    runtime</a></span></dt>
+                  </dl>
+                </dd>
+
+                <dt><span class="sect1"><a href=
+                "#infr.design.intf">20.2. Designing interfaces for
+                Makefile fragments</a></span></dt>
+
+                <dd>
+                  <dl>
+                    <dt><span class="sect2"><a href=
+                    "#infr.design.intf.proc">20.2.1. Procedures
+                    with parameters</a></span></dt>
+
+                    <dt><span class="sect2"><a href=
+                    "#infr.design.intf.action">20.2.2. Actions
+                    taken on behalf of parameters</a></span></dt>
+                  </dl>
+                </dd>
+              </dl>
+            </dd>
+
+            <dt><span class="chapter"><a href="#regression">21.
             Regression tests</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect1"><a href=
-                "#regression.descr">20.1. The regression tests
+                "#regression.descr">21.1. The regression tests
                 framework</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#regression.run">20.2. Running the regression
+                "#regression.run">21.2. Running the regression
                 tests</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#regression.new">20.3. Adding a new regression
+                "#regression.new">21.3. Adding a new regression
                 test</a></span></dt>
 
                 <dd>
                   <dl>
                     <dt><span class="sect2"><a href=
-                    "#regression.fun.override">20.3.1. Overridable
+                    "#regression.fun.override">21.3.1. Overridable
                     functions</a></span></dt>
 
                     <dt><span class="sect2"><a href=
-                    "#regression.fun.helper">20.3.2. Helper
+                    "#regression.fun.helper">21.3.2. Helper
                     functions</a></span></dt>
                   </dl>
                 </dd>
               </dl>
             </dd>
 
-            <dt><span class="chapter"><a href="#porting">21.
+            <dt><span class="chapter"><a href="#porting">22.
             Porting pkgsrc</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect1"><a href=
-                "#porting.opsys">21.1. Porting pkgsrc to a new
+                "#porting.opsys">22.1. Porting pkgsrc to a new
                 operating system</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#porting.compiler">21.2. Adding support for a new
+                "#porting.compiler">22.2. Adding support for a new
                 compiler</a></span></dt>
               </dl>
             </dd>
@@ -1320,7 +1358,7 @@ alink="#0000FF">
           </div>
         </div>
 
-        <p>This document is divided into two parts. The first,
+        <p>This document is divided into three parts. The first,
         <a href="#users-guide" title=
         "Part&nbsp;I.&nbsp;The pkgsrc user's guide">The pkgsrc
         user's guide</a>, describes how one can use one of the
@@ -1331,29 +1369,17 @@ alink="#0000FF">
         "Part&nbsp;II.&nbsp;The pkgsrc developer's guide">The
         pkgsrc developer's guide</a>, explains how to prepare a
         package so it can be easily built by other NetBSD users
-        without knowing about the package's building details.</p>
+        without knowing about the package's building details. The
+        third part, <a href="#infrastructure" title=
+        "Part&nbsp;III.&nbsp;The pkgsrc infrastructure internals">The
+        pkgsrc infrastructure internals</a> is intended for those
+        who want to understand how pkgsrc is implemented.</p>
 
-        <p>This document is available in various formats:</p>
-
-        <div class="itemizedlist">
-          <ul type="disc">
-            <li>
-              <p><a href="index.html" target="_top">HTML</a></p>
-            </li>
-
-            <li>
-              <p><a href="pkgsrc.pdf" target="_top">PDF</a></p>
-            </li>
-
-            <li>
-              <p><a href="pkgsrc.ps" target="_top">PS</a></p>
-            </li>
-
-            <li>
-              <p><a href="pkgsrc.txt" target="_top">TXT</a></p>
-            </li>
-          </ul>
-        </div>
+        <p>This document is available in various formats:
+        <span class="simplelist"><a href="index.html" target=
+        "_top">HTML</a>, <a href="pkgsrc.pdf" target=
+        "_top">PDF</a>, <a href="pkgsrc.ps" target="_top">PS</a>,
+        <a href="pkgsrc.txt" target="_top">TXT</a></span>.</p>
       </div>
 
       <div class="sect1" lang="en">
@@ -10418,21 +10444,21 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           "http://www.w3.org/TR/xhtml1/transitional" class=
           "filename">Makefile</code>.</p>
           <pre class="programlisting">
-    PKG_OPTIONS_VAR=            PKG_OPTIONS.wibble
-    PKG_SUPPORTED_OPTIONS=              wibble-foo ldap
-    PKG_OPTIONS_OPTIONAL_GROUPS=        database
-    PKG_OPTIONS_GROUP.database= mysql pgsql
-    PKG_SUGGESTED_OPTIONS=              wibble-foo
-    PKG_OPTIONS_LEGACY_VARS+=   WIBBLE_USE_OPENLDAP:ldap
-    PKG_OPTIONS_LEGACY_OPTS+=   foo:wibble-foo
+    PKG_OPTIONS_VAR=                PKG_OPTIONS.wibble
+    PKG_SUPPORTED_OPTIONS=          wibble-foo ldap
+    PKG_OPTIONS_OPTIONAL_GROUPS=    database
+    PKG_OPTIONS_GROUP.database=     mysql pgsql
+    PKG_SUGGESTED_OPTIONS=          wibble-foo
+    PKG_OPTIONS_LEGACY_VARS+=       WIBBLE_USE_OPENLDAP:ldap
+    PKG_OPTIONS_LEGACY_OPTS+=       foo:wibble-foo
 
     .include "../../mk/bsd.prefs.mk"
 
     # this package was previously named wibble2
     .if defined(PKG_OPTIONS.wibble2)
-    PKG_LEGACY_OPTIONS+=  ${PKG_OPTIONS.wibble2}
+    PKG_LEGACY_OPTIONS+=            ${PKG_OPTIONS.wibble2}
     PKG_OPTIONS_DEPRECATED_WARNINGS+= \
-            "Deprecated variable PKG_OPTIONS.wibble2 used, use "${PKG_OPTIONS_VAR:Q}" instead."
+            "Deprecated variable PKG_OPTIONS.wibble2 used, use ${PKG_OPTIONS_VAR instead."
     .endif
 
     .include "../../mk/bsd.options.mk"
@@ -15466,20 +15492,20 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 
         <div class="qandaset">
           <dl>
-            <dt>19.1. <a href="#id2654337">What is the difference
+            <dt>19.1. <a href="#id2654342">What is the difference
             between MAKEFLAGS, .MAKEFLAGS and MAKE_FLAGS?</a></dt>
 
-            <dt>19.2. <a href="#id2654373">What is the difference
+            <dt>19.2. <a href="#id2654378">What is the difference
             between MAKE, GMAKE and MAKE_PROGRAM?</a></dt>
 
-            <dt>19.3. <a href="#id2654411">What is the difference
+            <dt>19.3. <a href="#id2654417">What is the difference
             between CC, PKG_CC and PKGSRC_COMPILER?</a></dt>
 
-            <dt>19.4. <a href="#id2654449">What is the difference
+            <dt>19.4. <a href="#id2654454">What is the difference
             between BUILDLINK_LDFLAGS, BUILDLINK_LDADD and
             BUILDLINK_LIBS?</a></dt>
 
-            <dt>19.5. <a href="#id2654467">Why does make show-var
+            <dt>19.5. <a href="#id2654472">Why does make show-var
             VARNAME=BUILDLINK_PREFIX.foo say it's empty?</a></dt>
           </dl>
 
@@ -15489,8 +15515,8 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             <tbody>
               <tr class="question">
                 <td align="left" valign="top"><a name=
-                "id2654337"></a><a name=
-                "id2654338"></a><b>19.1.</b></td>
+                "id2654342"></a><a name=
+                "id2654343"></a><b>19.1.</b></td>
 
                 <td align="left" valign="top">
                   <p>What is the difference between <code class=
@@ -15519,8 +15545,8 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 
               <tr class="question">
                 <td align="left" valign="top"><a name=
-                "id2654373"></a><a name=
-                "id2654374"></a><b>19.2.</b></td>
+                "id2654378"></a><a name=
+                "id2654379"></a><b>19.2.</b></td>
 
                 <td align="left" valign="top">
                   <p>What is the difference between <code class=
@@ -15551,8 +15577,8 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 
               <tr class="question">
                 <td align="left" valign="top"><a name=
-                "id2654411"></a><a name=
-                "id2654412"></a><b>19.3.</b></td>
+                "id2654417"></a><a name=
+                "id2654418"></a><b>19.3.</b></td>
 
                 <td align="left" valign="top">
                   <p>What is the difference between <code class=
@@ -15583,8 +15609,8 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 
               <tr class="question">
                 <td align="left" valign="top"><a name=
-                "id2654449"></a><a name=
-                "id2654450"></a><b>19.4.</b></td>
+                "id2654454"></a><a name=
+                "id2654455"></a><b>19.4.</b></td>
 
                 <td align="left" valign="top">
                   <p>What is the difference between <code class=
@@ -15604,8 +15630,8 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 
               <tr class="question">
                 <td align="left" valign="top"><a name=
-                "id2654467"></a><a name=
-                "id2654468"></a><b>19.5.</b></td>
+                "id2654472"></a><a name=
+                "id2654473"></a><b>19.5.</b></td>
 
                 <td align="left" valign="top">
                   <p>Why does <span><strong class="command">make
@@ -15640,61 +15666,106 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
           <div>
             <h1 class="title"><a name=
             "infrastructure"></a>Part&nbsp;III.&nbsp;The pkgsrc
-            infrastructure</h1>
+            infrastructure internals</h1>
           </div>
         </div>
       </div>
 
-      <div class="toc">
-        <p><b>Table of Contents</b></p>
+      <div class="partintro" lang="en">
+        <p>This part of the guide deals with everything from the
+        infrastructure that is behind the interfaces described in
+        the developer's guide. A casual package maintainer should
+        not need anything from this part.</p>
 
-        <dl>
-          <dt><span class="chapter"><a href="#regression">20.
-          Regression tests</a></span></dt>
+        <div class="toc">
+          <p><b>Table of Contents</b></p>
 
-          <dd>
-            <dl>
-              <dt><span class="sect1"><a href=
-              "#regression.descr">20.1. The regression tests
-              framework</a></span></dt>
+          <dl>
+            <dt><span class="chapter"><a href="#infr.design">20.
+            Design of the pkgsrc infrastructure</a></span></dt>
 
-              <dt><span class="sect1"><a href=
-              "#regression.run">20.2. Running the regression
-              tests</a></span></dt>
+            <dd>
+              <dl>
+                <dt><span class="sect1"><a href="#infr.var">20.1.
+                Variable evaluation</a></span></dt>
 
-              <dt><span class="sect1"><a href=
-              "#regression.new">20.3. Adding a new regression
-              test</a></span></dt>
+                <dd>
+                  <dl>
+                    <dt><span class="sect2"><a href=
+                    "#infr.var.load">20.1.1. At load
+                    time</a></span></dt>
 
-              <dd>
-                <dl>
-                  <dt><span class="sect2"><a href=
-                  "#regression.fun.override">20.3.1. Overridable
-                  functions</a></span></dt>
+                    <dt><span class="sect2"><a href=
+                    "#infr.var.run">20.1.2. At
+                    runtime</a></span></dt>
+                  </dl>
+                </dd>
 
-                  <dt><span class="sect2"><a href=
-                  "#regression.fun.helper">20.3.2. Helper
-                  functions</a></span></dt>
-                </dl>
-              </dd>
-            </dl>
-          </dd>
+                <dt><span class="sect1"><a href=
+                "#infr.design.intf">20.2. Designing interfaces for
+                Makefile fragments</a></span></dt>
 
-          <dt><span class="chapter"><a href="#porting">21. Porting
-          pkgsrc</a></span></dt>
+                <dd>
+                  <dl>
+                    <dt><span class="sect2"><a href=
+                    "#infr.design.intf.proc">20.2.1. Procedures
+                    with parameters</a></span></dt>
 
-          <dd>
-            <dl>
-              <dt><span class="sect1"><a href=
-              "#porting.opsys">21.1. Porting pkgsrc to a new
-              operating system</a></span></dt>
+                    <dt><span class="sect2"><a href=
+                    "#infr.design.intf.action">20.2.2. Actions
+                    taken on behalf of parameters</a></span></dt>
+                  </dl>
+                </dd>
+              </dl>
+            </dd>
 
-              <dt><span class="sect1"><a href=
-              "#porting.compiler">21.2. Adding support for a new
-              compiler</a></span></dt>
-            </dl>
-          </dd>
-        </dl>
+            <dt><span class="chapter"><a href="#regression">21.
+            Regression tests</a></span></dt>
+
+            <dd>
+              <dl>
+                <dt><span class="sect1"><a href=
+                "#regression.descr">21.1. The regression tests
+                framework</a></span></dt>
+
+                <dt><span class="sect1"><a href=
+                "#regression.run">21.2. Running the regression
+                tests</a></span></dt>
+
+                <dt><span class="sect1"><a href=
+                "#regression.new">21.3. Adding a new regression
+                test</a></span></dt>
+
+                <dd>
+                  <dl>
+                    <dt><span class="sect2"><a href=
+                    "#regression.fun.override">21.3.1. Overridable
+                    functions</a></span></dt>
+
+                    <dt><span class="sect2"><a href=
+                    "#regression.fun.helper">21.3.2. Helper
+                    functions</a></span></dt>
+                  </dl>
+                </dd>
+              </dl>
+            </dd>
+
+            <dt><span class="chapter"><a href="#porting">22.
+            Porting pkgsrc</a></span></dt>
+
+            <dd>
+              <dl>
+                <dt><span class="sect1"><a href=
+                "#porting.opsys">22.1. Porting pkgsrc to a new
+                operating system</a></span></dt>
+
+                <dt><span class="sect1"><a href=
+                "#porting.compiler">22.2. Adding support for a new
+                compiler</a></span></dt>
+              </dl>
+            </dd>
+          </dl>
+        </div>
       </div>
 
       <div class="chapter" lang="en">
@@ -15702,7 +15773,259 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
           <div>
             <div>
               <h2 class="title"><a name=
-              "regression"></a>Chapter&nbsp;20.&nbsp;Regression
+              "infr.design"></a>Chapter&nbsp;20.&nbsp;Design of the
+              pkgsrc infrastructure</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="toc">
+          <p><b>Table of Contents</b></p>
+
+          <dl>
+            <dt><span class="sect1"><a href="#infr.var">20.1.
+            Variable evaluation</a></span></dt>
+
+            <dd>
+              <dl>
+                <dt><span class="sect2"><a href=
+                "#infr.var.load">20.1.1. At load
+                time</a></span></dt>
+
+                <dt><span class="sect2"><a href=
+                "#infr.var.run">20.1.2. At runtime</a></span></dt>
+              </dl>
+            </dd>
+
+            <dt><span class="sect1"><a href=
+            "#infr.design.intf">20.2. Designing interfaces for
+            Makefile fragments</a></span></dt>
+
+            <dd>
+              <dl>
+                <dt><span class="sect2"><a href=
+                "#infr.design.intf.proc">20.2.1. Procedures with
+                parameters</a></span></dt>
+
+                <dt><span class="sect2"><a href=
+                "#infr.design.intf.action">20.2.2. Actions taken on
+                behalf of parameters</a></span></dt>
+              </dl>
+            </dd>
+          </dl>
+        </div>
+
+        <p>The pkgsrc infrastructure consists of many small
+        Makefile fragments. Each such fragment needs a properly
+        specified interface. This chapter explains how such an
+        interface looks like.</p>
+
+        <div class="sect1" lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "infr.var"></a>20.1.&nbsp;Variable evaluation</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="sect2" lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h3 class="title"><a name=
+                  "infr.var.load"></a>20.1.1.&nbsp;At load
+                  time</h3>
+                </div>
+              </div>
+            </div>
+
+            <p>Variable evaluation takes place either at load time
+            or at runtime, depending on the context in which they
+            occur. The contexts where variables are evaluated at
+            load time are:</p>
+
+            <div class="itemizedlist">
+              <ul type="disc">
+                <li>
+                  <p>The right hand side of the <code class=
+                  "literal">:=</code> and <code class=
+                  "literal">!=</code> operators,</p>
+                </li>
+
+                <li>
+                  <p>Make directives like <code class=
+                  "literal">.if</code> or <code class=
+                  "literal">.for</code>,</p>
+                </li>
+
+                <li>
+                  <p>Dependency lines.</p>
+                </li>
+              </ul>
+            </div>
+
+            <p>A special exception are references to the iteration
+            variables of <code class="literal">.for</code> loops,
+            which are expanded inline, no matter in which context
+            they appear.</p>
+
+            <p>As the values of variables may change during load
+            time, care must be taken not to evaluate them by
+            accident. Typical examples for variables that should
+            not be evaluated at load time are <code class=
+            "varname">DEPENDS</code> and <code class=
+            "varname">CONFIGURE_ARGS</code>. To make the effect
+            more clear, here is an example:</p>
+            <pre class="programlisting">
+    CONFIGURE_ARGS=         # none
+    CFLAGS=                 -O
+    CONFIGURE_ARGS+=        CFLAGS=${CFLAGS:Q}
+
+    CONFIGURE_ARGS:=        ${CONFIGURE_ARGS}
+
+    CFLAGS+=                -Wall
+        
+</pre>
+
+            <p>This code shows how the use of the <code class=
+            "literal">:=</code> operator can quickly lead to
+            unexpected results. The first paragraph is fairly
+            common code. The second paragraph evaluates the
+            <code class="varname">CONFIGURE_ARGS</code> variable,
+            which results in <code class=
+            "literal">CFLAGS=-O</code>. In the third paragraph, the
+            <code class="literal">-Wall</code> is appended to the
+            <code class="varname">CFLAGS</code>, but this addition
+            will not appear in <code class=
+            "varname">CONFIGURE_ARGS</code>. In actual code, the
+            three paragraphs from above typically occur in
+            completely unrelated files.</p>
+          </div>
+
+          <div class="sect2" lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h3 class="title"><a name=
+                  "infr.var.run"></a>20.1.2.&nbsp;At runtime</h3>
+                </div>
+              </div>
+            </div>
+
+            <p>After all the files have been loaded, the values of
+            the variables cannot be changed anymore. Variables that
+            are used in the shell commands are expanded at this
+            point.</p>
+          </div>
+        </div>
+
+        <div class="sect1" lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "infr.design.intf"></a>20.2.&nbsp;Designing
+                interfaces for Makefile fragments</h2>
+              </div>
+            </div>
+          </div>
+
+          <p>Most of the <code xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" class=
+          "filename">.mk</code> files fall into one of the
+          following classes. Cases where a file falls into more
+          than one class should be avoided as it often leads to
+          subtle bugs.</p>
+
+          <div class="sect2" lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h3 class="title"><a name=
+                  "infr.design.intf.proc"></a>20.2.1.&nbsp;Procedures
+                  with parameters</h3>
+                </div>
+              </div>
+            </div>
+
+            <p>In a traditional imperative programming language
+            some of the <code xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" class=
+            "filename">.mk</code> files could be described as
+            procedures. They take some input parameters
+            and&#8212;after inclusion&#8212;provide a result in
+            output parameters. Since all variables in <code xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" class=
+            "filename">Makefile</code>s have global scope care must
+            be taken not to use parameter names that have already
+            another meaning. For example, <code class=
+            "varname">PKGNAME</code> is a bad choice for a
+            parameter name.</p>
+
+            <p>Procedures are completely evaluated at preprocessing
+            time. That is, when calling a procedure all input
+            parameters must be completely resolvable. For example,
+            <code class="varname">CONFIGURE_ARGS</code> should
+            never be an input parameter since it is very likely
+            that further text will be added after calling the
+            procedure, which would effectively apply the procedure
+            to only a part of the variable. Also, references to
+            other variables wit will be modified after calling the
+            procedure.</p>
+
+            <p>A procedure can declare its output parameters either
+            as suitable for use in preprocessing directives or as
+            only available at runtime. The latter alternative is
+            for variables that contain references to other runtime
+            variables.</p>
+
+            <p>Procedures shall be written such that it is possible
+            to call the procedure more than once. That is, the file
+            must not contain multiple-inclusion guards.</p>
+
+            <p>Examples for procedures are <code xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" class=
+            "filename">mk/bsd.options.mk</code> and <code xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" class=
+            "filename">mk/buildlink3/bsd.builtin.mk</code>. To
+            express that the parameters are evaluated at load time,
+            they should be assigned using the <code class=
+            "literal">:=</code> operator, which should be used only
+            for this purpose.</p>
+          </div>
+
+          <div class="sect2" lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h3 class="title"><a name=
+                  "infr.design.intf.action"></a>20.2.2.&nbsp;Actions
+                  taken on behalf of parameters</h3>
+                </div>
+              </div>
+            </div>
+
+            <p>Action files take some input parameters and may
+            define runtime variables. They shall not define
+            loadtime variables. There are action files that are
+            included implicitly by the pkgsrc infrastructure, while
+            other must be included explicitly.</p>
+
+            <p>An example for action files is <code xmlns=
+            "http://www.w3.org/TR/xhtml1/transitional" class=
+            "filename">mk/subst.mk</code>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="chapter" lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title"><a name=
+              "regression"></a>Chapter&nbsp;21.&nbsp;Regression
               tests</h2>
             </div>
           </div>
@@ -15713,23 +16036,23 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 
           <dl>
             <dt><span class="sect1"><a href=
-            "#regression.descr">20.1. The regression tests
+            "#regression.descr">21.1. The regression tests
             framework</a></span></dt>
 
-            <dt><span class="sect1"><a href="#regression.run">20.2.
+            <dt><span class="sect1"><a href="#regression.run">21.2.
             Running the regression tests</a></span></dt>
 
-            <dt><span class="sect1"><a href="#regression.new">20.3.
+            <dt><span class="sect1"><a href="#regression.new">21.3.
             Adding a new regression test</a></span></dt>
 
             <dd>
               <dl>
                 <dt><span class="sect2"><a href=
-                "#regression.fun.override">20.3.1. Overridable
+                "#regression.fun.override">21.3.1. Overridable
                 functions</a></span></dt>
 
                 <dt><span class="sect2"><a href=
-                "#regression.fun.helper">20.3.2. Helper
+                "#regression.fun.helper">21.3.2. Helper
                 functions</a></span></dt>
               </dl>
             </dd>
@@ -15750,7 +16073,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "regression.descr"></a>20.1.&nbsp;The regression
+                "regression.descr"></a>21.1.&nbsp;The regression
                 tests framework</h2>
               </div>
             </div>
@@ -15762,7 +16085,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "regression.run"></a>20.2.&nbsp;Running the
+                "regression.run"></a>21.2.&nbsp;Running the
                 regression tests</h2>
               </div>
             </div>
@@ -15786,7 +16109,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "regression.new"></a>20.3.&nbsp;Adding a new
+                "regression.new"></a>21.3.&nbsp;Adding a new
                 regression test</h2>
               </div>
             </div>
@@ -15808,7 +16131,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "regression.fun.override"></a>20.3.1.&nbsp;Overridable
+                  "regression.fun.override"></a>21.3.1.&nbsp;Overridable
                   functions</h3>
                 </div>
               </div>
@@ -15871,7 +16194,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
               <div>
                 <div>
                   <h3 class="title"><a name=
-                  "regression.fun.helper"></a>20.3.2.&nbsp;Helper
+                  "regression.fun.helper"></a>21.3.2.&nbsp;Helper
                   functions</h3>
                 </div>
               </div>
@@ -15924,7 +16247,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
           <div>
             <div>
               <h2 class="title"><a name=
-              "porting"></a>Chapter&nbsp;21.&nbsp;Porting
+              "porting"></a>Chapter&nbsp;22.&nbsp;Porting
               pkgsrc</h2>
             </div>
           </div>
@@ -15934,12 +16257,12 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
           <p><b>Table of Contents</b></p>
 
           <dl>
-            <dt><span class="sect1"><a href="#porting.opsys">21.1.
+            <dt><span class="sect1"><a href="#porting.opsys">22.1.
             Porting pkgsrc to a new operating
             system</a></span></dt>
 
             <dt><span class="sect1"><a href=
-            "#porting.compiler">21.2. Adding support for a new
+            "#porting.compiler">22.2. Adding support for a new
             compiler</a></span></dt>
           </dl>
         </div>
@@ -15954,7 +16277,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "porting.opsys"></a>21.1.&nbsp;Porting pkgsrc to a
+                "porting.opsys"></a>22.1.&nbsp;Porting pkgsrc to a
                 new operating system</h2>
               </div>
             </div>
@@ -16077,7 +16400,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "porting.compiler"></a>21.2.&nbsp;Adding support
+                "porting.compiler"></a>22.2.&nbsp;Adding support
                 for a new compiler</h2>
               </div>
             </div>
