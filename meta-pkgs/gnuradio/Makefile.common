@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2006/04/27 03:20:34 wulf Exp $
+# $NetBSD: Makefile.common,v 1.3 2006/05/12 19:24:41 gdt Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
@@ -12,6 +12,7 @@ HOMEPAGE?=	http://www.gnu.org/software/gnuradio/
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake automake autoconf pkg-config
 
 BUILD_DEPENDS+=doxygen>=1.4.3nb1:../../devel/doxygen
