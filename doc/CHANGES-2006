@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.214 2006/05/13 18:30:15 adam Exp $
+$NetBSD: CHANGES-2006,v 1.215 2006/05/13 19:01:30 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2489,3 +2489,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/pkglint to 4.61 [rillig 2006-05-13]
 	Updated audio/freepats to 20060219 [wiz 2006-05-13]
 	Updated graphics/librsvg2 to 2.14.4 [adam 2006-05-13]
+	Updated devel/libgphoto2 to 2.1.6nb2 [minskim 2006-05-13]
