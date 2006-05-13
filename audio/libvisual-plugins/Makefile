@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/04/17 13:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/05/13 12:47:36 joerg Exp $
 #
 
 DISTNAME=		libvisual-plugins-0.2.0
@@ -13,6 +13,7 @@ COMMENT=		Plugins for libvisual
 CONFLICTS=		libvisual-nebulus-[0-9]* libvisual-gforce-[0-9]*
 
 USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
