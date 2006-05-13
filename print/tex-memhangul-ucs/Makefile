@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/09 22:07:54 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/13 05:36:52 minskim Exp $
 
-DISTNAME=	memhangul-ucs-1.44c
+DISTNAME=	memhangul-ucs-1.4.4f
 PKGNAME=	tex-${DISTNAME}
 CATEGORIES=	print
 MASTER_SITES=	http://my.ktug.or.kr/~karnes/testtest/
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://faq.ktug.or.kr/faq/MemhangulClass
@@ -12,7 +13,6 @@ COMMENT=	Korean support in memoir
 DEPENDS+=	tex-dhucs>=2.6:../../print/tex-dhucs
 DEPENDS+=	tex-memoir>=1.618:../../print/tex-memoir
 
-WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 USE_DIRS+=	texmf-1.2
@@ -21,7 +21,7 @@ USE_DIRS+=	texmf-1.2
 
 do-install:
 	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/doc/latex/memhangul
-.for f in appendixtest.tex doeunbike.bb doeunbike.jpg memucstest.tex
+.for f in appendixtest.tex doeun.bb doeun.png memucstest.tex
 	${INSTALL_DATA} ${WRKSRC}/doc/memhangul-ucs/${f} \
 		${PKG_LOCALTEXMFPREFIX}/doc/latex/memhangul
 .endfor
