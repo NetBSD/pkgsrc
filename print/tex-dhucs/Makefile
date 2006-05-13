@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2006/04/14 14:38:14 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/13 05:03:54 minskim Exp $
 
-DISTNAME=	dhucs-2.7.1cvs-20060413
+DISTNAME=	dhucs-3.0.0cvs-20060427
 PKGNAME=	tex-${DISTNAME:C/cvs-.*//}
 CATEGORIES=	print
 MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/hangul-ucs/current/
@@ -38,6 +38,8 @@ do-install:
 	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs/contrib
 	${INSTALL_DATA} ${WRKSRC}/tex-latex-dhucs/contrib/*.* \
 		${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs/contrib
+	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/ucsplain
+	${INSTALL_DATA} ${WRKSRC}/ucsplain/*.* ${PKG_LOCALTEXMFPREFIX}/tex/ucsplain
 	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs/unttf
 	${INSTALL_DATA} ${WRKDIR}/fonts-unttf/tex/latex/dhucs/unttf/*.* \
 		${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs/unttf/
