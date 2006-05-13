@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/14 14:38:14 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/05/13 05:03:54 minskim Exp $
 bin/makeindex-dhucs
 ${PKG_LOCALTEXMFPREFIX}/makeindex/dhucs.ist
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs/contrib/dhucs-fixenumitem.sty
@@ -31,8 +31,12 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs/unttf/LUCunpn.fd
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs/unttf/LUCunsh.fd
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs/unttf/LUCuntz.fd
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs/unttf/LUCunyt.fd
+${PKG_LOCALTEXMFPREFIX}/tex/ucsplain/cwbucsol.tex
+${PKG_LOCALTEXMFPREFIX}/tex/ucsplain/ucsplain.tex
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/ucsplain
 @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs/unttf
 @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs/contrib
 @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs
 @comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex
+@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex
 @comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/makeindex
