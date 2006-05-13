@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/04/22 09:22:15 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2006/05/13 14:41:51 jmmv Exp $
 #
 
 DISTNAME=	grub-0.97
@@ -31,8 +31,8 @@ BUILD_DEFS+=		GRUB_SCAN_ARGS
 CONFIGURE_ARGS+=	--enable-diskless
 PLIST_SUBST+=		NETBOOT=
 
-.for GRUB_NETWORK_CARD in ${GRUB_NETWORK_CARDS}
-CONFIGURE_ARGS+=	--enable-${GRUB_NETWORK_CARD}
+.for nic in ${GRUB_NETWORK_CARDS}
+CONFIGURE_ARGS+=	--enable-${nic}
 .endfor
 
 post-install: grub-netboot-install
@@ -60,8 +60,8 @@ SUBST_CLASSES+=		grubterm
 SUBST_STAGE.grubterm=	post-patch
 SUBST_MESSAGE.grubterm=	Changing references to <term.h> to <grubterm.h>
 SUBST_FILES.grubterm=	grub/*.c stage2/Makefile.in stage2/*.c
-SUBST_SED.grubterm=	-e "s,<term.h>,<grubterm.h>,g"			\
-			-e "s, term.h , grubterm.h ,g"
+SUBST_SED.grubterm=	-e "s,<term.h>,<grubterm.h>,g"
+SUBST_SED.grubterm+=	-e "s, term.h , grubterm.h ,g"
 
 post-extract:
 	${MV} ${WRKSRC}/stage2/term.h ${WRKSRC}/stage2/grubterm.h
