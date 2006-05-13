@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:08:19 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/05/13 03:44:23 minskim Exp $
 #
 
 DISTNAME=	skampi4
@@ -14,7 +14,7 @@ HOMEPAGE=	http://liinwww.ira.uka.de/~skampi/
 COMMENT=	MPI (Message Passing Interface) benchmarks
 
 DEPENDS+=	gnuplot>=3.7.1:../../graphics/gnuplot
-TEX_ACCEPTED= teTeX1 teTeX2 teTeX3
+TEX_ACCEPTED=	teTeX2 teTeX3
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 

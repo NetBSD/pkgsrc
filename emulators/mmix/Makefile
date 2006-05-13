@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/03/04 21:29:35 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/05/13 03:44:23 minskim Exp $
 
 DISTNAME=	mmix-20030622
 PKGREVISION=	3
@@ -10,17 +10,14 @@ HOMEPAGE=	http://www-cs-faculty.stanford.edu/~knuth/mmix.html
 COMMENT=	Simulators for Knuth's MMIX RISC architecture
 
 TEX_DEPMETHOD=	build
-TEX_ACCEPTED=	teTeX1 teTeX2 teTeX3
-.include "../../mk/tex.buildlink3.mk"
-.if (${TEX_TYPE} == "teTeX1")
-# mmix depends on cweb, so we need to also provide it when using teTeX1
-BUILD_DEPENDS+= cweb-[0-9]*:../../devel/cweb
-.endif
+TEX_ACCEPTED=	teTeX2 teTeX3
 
 WRKSRC=		${WRKDIR}
 BUILD_TARGET=	all doc
 
 INSTALLATION_DIRS=	bin
+
+.include "../../mk/tex.buildlink3.mk"
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} abstime mmix mmixal 		\
