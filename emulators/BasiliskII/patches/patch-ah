@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 2005/11/17 16:56:39 joerg Exp $
+$NetBSD: patch-ah,v 1.2 2006/05/13 20:52:35 adam Exp $
 
---- src/Unix/serial_unix.cpp.orig	2005-11-17 14:28:47.000000000 +0000
+--- src/Unix/serial_unix.cpp.orig	2005-12-04 16:03:11.000000000 +0100
 +++ src/Unix/serial_unix.cpp
-@@ -201,7 +201,7 @@ int16 XSERDPort::open(uint16 config)
+@@ -212,7 +212,7 @@ int16 XSERDPort::open(uint16 config)
  		if (fstat(fd, &st) == 0)
  			if (S_ISCHR(st.st_mode))
  				protocol = ((MAJOR(st.st_rdev) == LP_MAJOR) ? parallel : serial);
