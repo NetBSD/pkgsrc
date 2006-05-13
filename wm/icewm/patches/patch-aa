@@ -1,13 +1,14 @@
-$NetBSD: patch-aa,v 1.6 2006/03/06 21:53:04 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2006/05/13 09:24:21 ghen Exp $
 
---- src/ylocale.cc.orig	2006-02-03 06:24:27.000000000 +0000
+--- src/ylocale.cc.orig	2006-05-13 11:05:31.000000000 +0200
 +++ src/ylocale.cc
 @@ -152,7 +152,11 @@ YUChar *YLocale::unicodeString(const YLC
      char * inbuf((char *) lStr), * outbuf((char *) uStr);
      size_t inlen(lLen), outlen(4 * lLen);
  
+-    if (0 > (int) iconv(instance->toUnicode, const_cast<char **>(&inbuf), &inlen, &outbuf, &outlen))
 +#if defined(__NetBSD__)
-     if (0 > (int) iconv(instance->toUnicode, const_cast<const char **>(&inbuf), &inlen, &outbuf, &outlen))
++    if (0 > (int) iconv(instance->toUnicode, const_cast<const char **>(&inbuf), &inlen, &outbuf, &outlen))
 +#else
 +    if (0 > (int) iconv(instance->toUnicode, &inbuf, &inlen, &outbuf, &outlen))
 +#endif
