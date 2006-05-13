@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2006/04/26 07:30:10 tonio Exp $
+# $NetBSD: Makefile,v 1.18 2006/05/13 08:37:52 tonio Exp $
 
-DISTNAME=	bibtex2html-1.80
+DISTNAME=	bibtex2html-1.81
 CATEGORIES=	converters
 MASTER_SITES=	http://www.lri.fr/~filliatr/ftp/bibtex2html/
 
