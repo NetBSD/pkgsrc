@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4975 2006/05/13 19:17:50 adam Exp $
+$NetBSD: TODO,v 1.4976 2006/05/13 20:54:45 adam Exp $
 
 Suggested new packages
 ======================
@@ -300,7 +300,6 @@ Suggested package updates
 
 	o 0verkill-0.16
 	o 9base-2 [pkg/32635]
-	o BasiliskII-1.0.20060501
 	o Cenon-3.71
 	o Chinput-3.0.1
 	o GMT-4.0
