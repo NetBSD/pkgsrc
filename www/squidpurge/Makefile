@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:11:29 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/13 14:12:31 gdt Exp $
 #
 
 DISTNAME=	purge-${PURGEVERSION}-src
@@ -16,6 +16,7 @@ PURGEVERSION=	20040201
 WRKSRC=		${WRKDIR}/purge
 
 USE_TOOLS+=	gmake
+USE_LANGUAGES+=	c++
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/purge ${PREFIX}/bin/squidpurge
