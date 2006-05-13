@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.207 2006/05/13 05:37:30 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.208 2006/05/13 08:38:38 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2481,3 +2481,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/hydra to 5.3 [adrianp 2006-05-12]
 	Updated print/tex-dhucs to 3.0.0 [minskim 2006-05-13]
 	Updated print/tex-memhangul-ucs to 1.4.4f [minskim 2006-05-13]
+	Updated converters/bibtex2html to 1.81 [tonio 2006-05-13]
