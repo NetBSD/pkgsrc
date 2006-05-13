@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.580 2006/05/11 18:26:51 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.581 2006/05/13 11:24:28 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -110,14 +110,14 @@ package PkgLint::Logging;
 # common format. The subroutines all have the parameters C<$fname>,
 # C<$lineno> and C<$message>. In case there's no appropriate filename for
 # the message, NO_FILE may be passed, likewise for C<$lineno> and
-# NO_LINE_NUMBER. Before printing, the filename is normalized, that is,
+# NO_LINES. Before printing, the filename is normalized, that is,
 # "/foo/bar/../../" components are removed, as well as "." components.
 # At the end of the program, the subroutine print_summary_and_exit should
 # be called.
 #
 # Examples:
-#   log_error(NO_FILE, NO_LINE_NUMBER, "Invalid command line.");
-#   log_warning($fname, NO_LINE_NUMBER, "Not found.");
+#   log_error(NO_FILE, NO_LINES, "Invalid command line.");
+#   log_warning($fname, NO_LINES, "Not found.");
 #   log_info($fname, $lineno, sprintf("invalid character (0x%02x).", $c));
 #==========================================================================
 
@@ -128,9 +128,9 @@ BEGIN {
 	use vars qw(@ISA @EXPORT_OK);
 	@ISA = qw(Exporter);
 	@EXPORT_OK = qw(
-		NO_FILE NO_LINE_NUMBER
+		NO_FILE NO_LINE_NUMBER NO_LINES
 		log_fatal log_error log_warning log_note log_info log_debug
-		explain
+		explain_error explain_warning explain_info
 		print_summary_and_exit set_verbosity get_verbosity
 		set_explain set_gcc_output_format
 		get_show_source_flag set_show_source_flag
@@ -143,6 +143,7 @@ BEGIN {
 
 use constant NO_FILE		=> undef;
 use constant NO_LINE_NUMBER	=> undef;
+use constant NO_LINES		=> undef;
 
 use constant LL_FATAL		=> 0;
 use constant LL_ERROR		=> 1;
@@ -251,12 +252,27 @@ sub log_debug($$$) {
 }
 
 sub explain($$@) {
-	my ($fname, $lines, @texts) = @_;
+	my ($loglevel, $fname, $lines, @texts) = @_;
+	my $out = ($loglevel == LL_FATAL) ? *STDERR : *STDOUT;
 
 	if ($explain_flag) {
 		foreach my $text (@texts) {
-			print STDOUT ("\t${text}\n");
+			print $out ("\t${text}\n");
 		}
+	}
+}
+sub explain_error($$@) {
+	my ($fname, $lines, @texts) = @_;
+	explain(LL_ERROR, $fname, $lines, @texts);
+}
+sub explain_warning($$@) {
+	my ($fname, $lines, @texts) = @_;
+	explain(LL_WARNING, $fname, $lines, @texts);
+}
+sub explain_info($$@) {
+	my ($fname, $lines, @texts) = @_;
+	if ($verbosity >= 1) {
+		explain(LL_INFO, $fname, $lines, @texts);
 	}
 }
 
@@ -534,9 +550,17 @@ sub log_debug($$) {
 	}
 	PkgLint::Logging::log_debug($self->fname, $self->[LINES], $text);
 }
-sub explain($@) {
+sub explain_error($@) {
 	my ($self, @texts) = @_;
-	PkgLint::Logging::explain($self->fname, $self->[LINES], @texts);
+	PkgLint::Logging::explain_error($self->fname, $self->[LINES], @texts);
+}
+sub explain_warning($@) {
+	my ($self, @texts) = @_;
+	PkgLint::Logging::explain_warning($self->fname, $self->[LINES], @texts);
+}
+sub explain_info($@) {
+	my ($self, @texts) = @_;
+	PkgLint::Logging::explain_info($self->fname, $self->[LINES], @texts);
 }
 
 sub to_string($) {
@@ -1182,9 +1206,9 @@ BEGIN {
 		array_to_hash false true
 	);
 	import PkgLint::Logging qw(
-		NO_FILE NO_LINE_NUMBER
+		NO_FILE NO_LINE_NUMBER NO_LINES
 		log_fatal log_error log_warning log_note log_info log_debug
-		explain
+		explain_error explain_warning explain_info
 	);
 	import PkgLint::FileUtil qw(
 		load_file load_lines
@@ -1600,7 +1624,8 @@ sub get_vartypes_map() {
 	}
 
 	use constant re_vartypedef => qr"^
-		([\w\d_.]+) \s+				# variable name
+		([\w\d_.]+?)				# variable name
+		(\*|\.\*|) \s+				# parameterized?
 		(?:(InternalList|List) \s+ of \s+)?	# kind of list
 		(?:([\w\d_]+) | \{\s*([\w\d_.+\-\s]+?)\s*\}) # basic type
 		(?:\s+ \[ ([^\]]*) \])?			# optional ACL
@@ -1616,7 +1641,7 @@ sub get_vartypes_map() {
 				# ignore empty and comment lines
 
 			} elsif ($line->text =~ re_vartypedef) {
-				my ($varname, $kind_of_list_text, $typename, $enums, $acltext) = ($1, $2, $3, $4, $5);
+				my ($varname, $par, $kind_of_list_text, $typename, $enums, $acltext) = ($1, $2, $3, $4, $5, $6);
 				my $kind_of_list = !defined($kind_of_list_text) ? LK_NONE
 				    : ($kind_of_list_text eq "List") ? LK_EXTERNAL
 				    : LK_INTERNAL;
@@ -1651,7 +1676,13 @@ sub get_vartypes_map() {
 				$basic_type = defined($enums)
 				    ? array_to_hash(split(qr"\s+", $enums))
 				    : $typename;
-				$vartypes->{$varname} = PkgLint::Type->new($kind_of_list, $basic_type, $acls);
+				my $type = PkgLint::Type->new($kind_of_list, $basic_type, $acls);
+				if ($par eq "" || $par eq "*") {
+					$vartypes->{$varname} = $type;
+				}
+				if ($par eq "*" || $par eq ".*") {
+					$vartypes->{"${varname}.*"} = $type;
+				}
 
 			} else {
 				$line->log_fatal("Unknown line format.");
@@ -2338,7 +2369,7 @@ sub readmakefile($$$$) {
 		if ($is_include_line) {
 			if ($includefile =~ qr"^\.\./[^./][^/]*/[^/]+") {
 				$line->log_warning("Relative directories should look like \"../../category/package\", not \"../package\".");
-				$line->explain(expl_relative_dirs);
+				$line->explain_warning(expl_relative_dirs);
 			}
 			if ($includefile =~ qr"(?:^|/)Makefile.common$"
 			    || ($includefile =~ qr"^(?:\.\./(\.\./[^/]+/)?[^/]+/)?([^/]+)$"
@@ -2444,7 +2475,7 @@ sub checkline_length($$) {
 
 	if (length($line->text) > $maxlength) {
 		$line->log_warning("Line too long (should be no more than $maxlength characters).");
-		$line->explain(
+		$line->explain_warning(
 			"Back in the old time, terminals with 80x25 characters were common.",
 			"And this is still the default size of many terminal emulators.",
 			"Moderately short lines also make reading easier.");
@@ -2534,7 +2565,7 @@ sub checkline_relative_pkgdir($$) {
 
 	if ($path !~ qr"^(?:\./)?\.\./\.\./[^/]+/[^/]+$") {
 		$line->log_warning("\"${path}\" is not a valid relative package directory.");
-		$line->explain(
+		$line->explain_warning(
 			"A relative pathname always starts with \"../../\", followed",
 			"by a category, a slash and a the directory name of the package.",
 			"For example, \"../../misc/screen\" is a valid relative pathname.");
@@ -2546,7 +2577,7 @@ sub checkline_spellcheck($) {
 
 	if ($line->text =~ qr"existant") {
 		$line->log_warning("The word \"existant\" is nonexistent in the m-w dictionary.");
-		$line->explain("Please use \"existent\" instead.");
+		$line->explain_warning("Please use \"existent\" instead.");
 	}
 }
 
@@ -2593,7 +2624,7 @@ sub checkline_cpp_macro_names($$) {
 			$line->log_debug("Found good macro \"${macro}\".");
 		} elsif (exists(bad_macros->{$macro})) {
 			$line->log_warning("The macro \"${macro}\" is not portable enough. Please use \"".bad_macros->{$macro}."\" instead.");
-			$line->explain("See the pkgsrc guide, section \"CPP defines\" for details.");
+			$line->explain_warning("See the pkgsrc guide, section \"CPP defines\" for details.");
 		} else {
 			$line->log_info("Found unknown macro \"${macro}\".");
 		}
@@ -2678,7 +2709,7 @@ sub checkline_mk_shellword($$$) {
 			my $mod = ($vname =~ regex_gnu_configure_volatile_vars) ? ":M*:Q" : ":Q";
 			my $fixed_vexpr = "\${${vname}${mod}}";
 			$line->log_warning("Please use ${fixed_vexpr} instead of ${vexpr}.");
-			$line->explain("See the pkgsrc guide, section \"quoting guideline\", for details.");
+			$line->explain_warning("See the pkgsrc guide, section \"quoting guideline\", for details.");
 			$line->replace($shellword, "${key}=${fixed_vexpr}");
 		}
 
@@ -2687,7 +2718,7 @@ sub checkline_mk_shellword($$$) {
 		my $fixed_vexpr = "\${${vname}:M*:Q}";
 		if ($vname =~ regex_gnu_configure_volatile_vars) {
 			$line->log_warning("Please use ${fixed_vexpr} instead of ${vexpr}.");
-			$line->explain("See the pkgsrc guide, section \"quoting guideline\", for details.");
+			$line->explain_warning("See the pkgsrc guide, section \"quoting guideline\", for details.");
 			$line->replace($shellword, "${key}=${fixed_vexpr}");
 		}
 
@@ -2740,7 +2771,7 @@ sub checkline_mk_shellword($$$) {
 
 			} elsif ($state == SWST_DQUOT && defined($mod) && $mod =~ qr":Q$") {
 				$line->log_warning("Please don't use the :Q operator in double quotes.");
-				$line->explain(
+				$line->explain_warning(
 					"Either remove the :Q or the double quotes. In most cases, it is more",
 					"appropriate to remove the double quotes.");
 
@@ -2773,7 +2804,7 @@ sub checkline_mk_shellword($$$) {
 				}
 			} elsif ($rest =~ s/\$\$\(/(/) {
 				$line->log_warning("Invoking subshells via \$(...) is not portable enough.");
-				$line->explain(
+				$line->explain_warning(
 					"The Solaris /bin/sh does not know this way to execute a command in a",
 					"subshell. Please use backticks (\`...\`) as a replacement.");
 
@@ -2804,7 +2835,7 @@ sub checkline_mk_shellword($$$) {
 			} elsif ($rest =~ s/^\\([\(\)*\-.0-9n])//) {
 				my ($char) = ($1);
 				$line->log_warning("Please use \"\\\\${char}\" instead of \"\\${char}\".");
-				$line->explain(
+				$line->explain_warning(
 					"Although the current code may work, it is not good style to rely on",
 					"the shell passing \"\\${char}\" exactly as is, and not discarding the",
 					"backslash. Alternatively you can use single quotes instead of double",
@@ -2978,7 +3009,7 @@ sub checkline_mk_shelltext($$) {
 
 		if (($state != SCST_PAX_S && $state != SCST_SED_E && $state != SCST_CASE_LABEL) && $shellword =~ qr"^/" && $shellword ne "/dev/null") {
 			$line->log_warning("Found absolute pathname: ${shellword}");
-			$line->explain(
+			$line->explain_warning(
 				"Absolute pathnames are often an indicator for unportable code. As",
 				"pkgsrc aims to be a portable system, absolute pathnames should be",
 				"avoided whenever possible.");
@@ -2988,7 +3019,7 @@ sub checkline_mk_shelltext($$) {
 			$line->log_warning("Please use one of the INSTALL_*_DIR commands instead of "
 				. (($state == SCST_MKDIR) ? "\${MKDIR}" : "\${INSTALL} -d")
 				. ".");
-			$line->explain(
+			$line->explain_warning(
 				"Choose one of INSTALL_PROGRAM_DIR, INSTALL_SCRIPT_DIR, INSTALL_LIB_DIR,",
 				"INSTALL_MAN_DIR, INSTALL_DATA_DIR.");
 		}
@@ -2996,7 +3027,7 @@ sub checkline_mk_shelltext($$) {
 		if ($state == SCST_PAX_S || $state == SCST_SED_E) {
 			if (false && $shellword !~ qr"^[\"\'].*[\"\']$") {
 				$line->log_warning("Substitution commands like \"${shellword}\" should always be quoted.");
-				$line->explain(
+				$line->explain_warning(
 					"Usually these substitution commands contain characters like '*' or",
 					"other shell metacharacters that might lead to lookup of matching",
 					"filenames and then expand to more than one word.");
@@ -3005,14 +3036,14 @@ sub checkline_mk_shelltext($$) {
 
 		if ($opt_warn_extra && $shellword eq "|") {
 			$line->log_warning("The exitcode of the left-hand-side command of the pipe operator is ignored.");
-			$line->explain(
+			$line->explain_warning(
 				"If you need to detect the failure of the left-hand-side command, use",
 				"temporary files to save the output of the command.");
 		}
 
 		if ($opt_warn_extra && $shellword eq ";" && $state != SCST_COND_CONT && $state != SCST_FOR_CONT && !$set_e_mode) {
 			$line->log_warning("A semicolon should only be used to separate commands after switching to \"set -e\" mode.");
-			$line->explain(
+			$line->explain_warning(
 				"Older versions of the NetBSD make(1) had run the shell commands using",
 				"the \"-e\" option of /bin/sh. In 2004, this behavior has been changed to",
 				"follow the POSIX conventions, which is to not use the \"-e\" option.",
@@ -3210,7 +3241,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 
 			} elsif ($macval =~ regex_unresolved && $macval =~ qr"[\"']") {
 				$line->log_warning("Unusual macro value ${macval}.");
-				$line->explain(
+				$line->explain_warning(
 					"String macro definitions should start and end with an escaped quote",
 					"(\\\"). Between these quotes, there should be quoted variables in the",
 					"form \${VARNAME:Q} or arbitrary non-dollar characters.");
@@ -3262,7 +3293,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 	} elsif ($type eq "Dependency") {
 		if ($value eq $value_novar && $value !~ qr"^[-*+,.0-9<=>\?\@A-Z_a-z\[\]\{\}]+$") {
 			$line->log_warning("\"${value}\" is not a valid dependency.");
-			$line->explain(
+			$line->explain_warning(
 				"Typical dependencies have the form \"package>=2.5\", \"package-[0-9]*\"",
 				"or \"package-3.141\".");
 		}
@@ -3292,11 +3323,11 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 
 		} elsif ($value =~ qr":\.\./[^/]+$") {
 			$line->log_warning("Dependencies should have the form \"../../category/package\".");
-			$line->explain(expl_relative_dirs);
+			$line->explain_warning(expl_relative_dirs);
 
 		} else {
 			$line->log_warning("Unknown dependency format.");
-			$line->explain(
+			$line->explain_warning(
 				"Examples for valid dependencies are:",
 				"  package-[0-9]*:../../category/package",
 				"  package>=3.41:../../category/package",
@@ -3411,7 +3442,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 
 			if (!exists(get_pkg_options()->{$optname})) {
 				$line->log_warning("Unknown option \"${value}\".");
-				$line->explain(
+				$line->explain_warning(
 					"This option is not documented in the mk/defaults/options.description",
 					"file. If this is not a typo, please think of a brief but precise",
 					"description and ask on the tech-pkg\@NetBSD.org for inclusion in the",
@@ -3458,7 +3489,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 		checkline_mk_vartype_basic($line, $varname, "Varname", $op, $value, $comment, false);
 		if ($value =~ qr"\$\{PKGBASE[:\}]") {
 			$line->log_error("PKGBASE must not be used in PKG_OPTIONS_VAR.");
-			$line->explain(
+			$line->explain_error(
 				"PKGBASE is defined in bsd.pkg.mk, which is included as the",
 				"very last file, but PKG_OPTIONS_VAR is evaluated earlier.",
 				"Use \${PKGNAME:C/-[0-9].*//} instead.");
@@ -3487,7 +3518,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 
 		} else {
 			$line->log_warning("\"${value}\" is not a valid platform triple.");
-			$line->explain(
+			$line->explain_warning(
 				"A platform triple has the form <OPSYS>-<OS_VERSION>-<MACHINE_ARCH>.",
 				"Each of these components may be a shell globbing expression.",
 				"Examples: NetBSD-*-i386, *-*-*, Linux-*-*.");
@@ -3862,7 +3893,7 @@ sub checkline_mk_varassign($$$$$) {
 
 	if ($value =~ qr"^[^=]\@comment") {
 		$line->log_warning("Please don't use \@comment in ${varname}.");
-		$line->explain(
+		$line->explain_warning(
 			"Here you are defining a variable containing \@comment. As this value",
 			"typically includes a space as the last character you probably also used",
 			"quotes around the variable. This can lead to confusion when adding this",
@@ -4086,7 +4117,7 @@ sub checklines_mk($) {
 
 			if ($includefile =~ qr"../Makefile$") {
 				$line->log_error("Other Makefiles must not be included.");
-				$line->explain(
+				$line->explain_warning(
 					"If you want to include portions of another Makefile, extract",
 					"the common parts and put them into a Makefile.common. After",
 					"that, both this one and the other package should include the",
@@ -4210,7 +4241,7 @@ sub checklines_mk($) {
 
 		} elsif ($text =~ qr"^ ") {
 			$line->log_warning("Makefile lines should not start with space characters.");
-			$line->explain(
+			$line->explain_warning(
 				"If you want this line to contain a shell program, use a tab",
 				"character for indentation. Otherwise please remove the leading",
 				"white-space.");
@@ -4295,8 +4326,10 @@ sub checkfile_buildlink3_mk($) {
 	expect_empty_line($lines, \$lineno);
 
 	# Second paragraph: Adding the dependency.
-	if (!expect_text($lines, \$lineno, ".if !empty(BUILDLINK_DEPTH:M+)")) {
-		return;
+	if (!expect($lines, \$lineno, qr"^\.if !empty\(BUILDLINK_DEPTH:M\+\)$")) {
+		if (!expect_text($lines, \$lineno, ".if \${BUILDLINK_DEPTH} == \"+\"")) {
+			return;
+		}
 	}
 	if (($m = expect($lines, \$lineno, qr"^BUILDLINK_DEPENDS\+=\t+(\S+)$"))) {
 		$bl_pkgbase = $m->text(1);
@@ -4322,8 +4355,10 @@ sub checkfile_buildlink3_mk($) {
 	expect_empty_line($lines, \$lineno);
 
 	# Fourth paragraph: Package information.
-	if (!expect_text($lines, \$lineno, ".if !empty(${bl_PKGBASE}_BUILDLINK3_MK:M+)")) {
-		return;
+	if (!expect($lines, \$lineno, qr"^\.if !empty\(\Q${bl_PKGBASE}\E_BUILDLINK3_MK:M\+\)$")) {
+		if (!expect_text($lines, \$lineno, ".if \${${bl_PKGBASE}_BUILDLINK3_MK} == \"+\"")) {
+			return;
+		}
 	}
 	while ($lineno <= $#{$lines} && !expect($lines, \$lineno, qr"^\.endif.*$")) {
 		if (expect($lines, \$lineno, regex_varassign)) {
@@ -4399,7 +4434,7 @@ sub checkfile_DESCR($) {
 		my $line = $descr->[$maxlines];
 
 		$line->log_warning("File too long (should be no more than $maxlines lines).");
-		$line->explain(
+		$line->explain_warning(
 			"A common terminal size is 80x25 characters. The DESCR file should",
 			"fit on one screen. It is also intended to give a _brief_ summary",
 			"about the package's contents.");
@@ -4447,7 +4482,7 @@ sub checkfile_distinfo($) {
 
 		if ($alg eq "MD5") {
 			$line->log_warning("MD5 checksums are deprecated.");
-			$line->explain(
+			$line->explain_warning(
 				"Run \"".conf_make." makedistinfo\" to regenerate the distinfo file.");
 			next;
 		}
@@ -4505,7 +4540,7 @@ sub checkfile_distinfo($) {
 				}
 			} elsif (!$hack_php_patches) {
 				$line->log_warning("${chksum_fname} does not exist.");
-				$line->explain(
+				$line->explain_warning(
 					"All patches that are mentioned in a distinfo file should actually exist.",
 					"What's the use of a checksum if there is no file to check?");
 			}
@@ -4960,7 +4995,8 @@ sub checkfile_patch($) {
 			$check_text->($line->text);
 			if ($line->text =~ qr"\r$") {
 				$line->log_error("The hunk header must not end with a CR character.");
-				$line->explain("The MacOS X patch utility cannot handle these.");
+				$line->explain_warning(
+					"The MacOS X patch utility cannot handle these.");
 			}
 			$hunks++;
 			$context_scanning_leading = (($m->has(1) && $m->text(1) ne "1") ? true : undef);
