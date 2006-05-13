@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.211 2006/05/13 11:30:13 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.212 2006/05/13 11:58:48 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2486,3 +2486,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated wm/icewm-imlib to 1.2.26 [ghen 2006-05-13]
 	Updated databases/phpmyadmin to 2.8.0.4 [tron 2006-05-13]
 	Updated pkgtools/createbuildlink to 3.12 [rillig 2006-05-13]
+	Updated pkgtools/pkglint to 4.61 [rillig 2006-05-13]
