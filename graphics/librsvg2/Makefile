@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2006/04/17 13:46:07 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.51 2006/05/13 18:29:05 adam Exp $
 
-DISTNAME=	librsvg-2.14.3
+DISTNAME=	librsvg-2.14.4
 PKGNAME=	${DISTNAME:S/-/2-/}
-PKGREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.14/}
 EXTRACT_SUFX=	.tar.bz2
@@ -26,10 +24,13 @@ CONFIGURE_ARGS+=	--with-gimp=no
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/librsvg2
 CONFIGURE_ARGS+=	--with-tags=
 
-CFLAGS.Darwin+=		-flat_namespace -undefined suppress
-LDFLAGS.Darwin+=	-lfreetype -lfontconfig
-
 GTK2_LOADERS=		yes
+
+SUBST_CLASSES+=		tabs
+SUBST_STAGE.tabs=	post-patch
+SUBST_MESSAGE.tabs=	Removing tabs from librsvg.def
+SUBST_FILES.tabs=	librsvg.def
+SUBST_FILTER_CMD.tabs=	${TR} -d '\t'
 
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
