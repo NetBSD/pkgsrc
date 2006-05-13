@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.52 2006/05/10 21:37:15 rillig Exp $
+# $NetBSD: Makefile.common,v 1.53 2006/05/13 09:24:21 ghen Exp $
 
-DISTNAME=		icewm-1.2.25
+DISTNAME=		icewm-1.2.26
 CATEGORIES=		x11 wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=icewm/}
 
