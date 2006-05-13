@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:29:10 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/13 00:47:36 minskim Exp $
 
 MODNAME=		mysql
 PKGREVISION=		2
@@ -11,6 +11,7 @@ USE_PHP_EXT_PATCHES=	yes
 
 EVAL_PREFIX+=		MYSQLDIR=mysql-client
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${MYSQLDIR}
+CONFIGURE_ENV+=		CPP=${CPP:Q}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${LOCALBASE}/lib/mysql
 
 .include "../../lang/php/ext.mk"
