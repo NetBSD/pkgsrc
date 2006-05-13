@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.209 2006/05/13 09:25:31 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.210 2006/05/13 09:56:58 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2484,3 +2484,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated converters/bibtex2html to 1.81 [tonio 2006-05-13]
 	Updated wm/icewm to 1.2.26 [ghen 2006-05-13]
 	Updated wm/icewm-imlib to 1.2.26 [ghen 2006-05-13]
+	Updated databases/phpmyadmin to 2.8.0.4 [tron 2006-05-13]
