@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4973 2006/05/12 17:47:18 wiz Exp $
+$NetBSD: TODO,v 1.4974 2006/05/13 09:26:12 ghen Exp $
 
 Suggested new packages
 ======================
@@ -607,8 +607,6 @@ Suggested package updates
 	o icdprog-0.5
 	o icecast-2.3.1
 	o icepref-2.3
-	o icewm-1.2.26
-	o icewm-gnome-1.2.26
 	o icsi-finger-1.0.29
 	o id-utils-4.0
 	o idesk-0.7.3
