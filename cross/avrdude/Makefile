@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/22 18:41:09 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/05/13 03:44:23 minskim Exp $
 
 DISTNAME=	avrdude-4.1.0
 PKGREVISION=	3
@@ -11,7 +11,7 @@ COMMENT=	Downloader/uploader for Atmel AVR 8-bit RISC microcontrollers
 
 USE_GNU_READLINE=	YES
 TEX_DEPMETHOD=		build
-TEX_ACCEPTED=		teTeX1 teTeX2 teTeX3
+TEX_ACCEPTED=		teTeX2 teTeX3
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	makeinfo texi2html

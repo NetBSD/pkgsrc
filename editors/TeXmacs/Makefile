@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2006/03/11 10:07:49 ghen Exp $
+# $NetBSD: Makefile,v 1.57 2006/05/13 03:44:23 minskim Exp $
 
 DISTNAME=		TeXmacs-1.0.6-src
 PKGNAME=		${DISTNAME:S/-src//}
@@ -15,7 +15,7 @@ BUILD_TARGET=		TEXMACS
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
-TEX_ACCEPTED=		teTeX1 teTeX2 teTeX3
+TEX_ACCEPTED=		teTeX2 teTeX3
 
 PYTHON_PATCH_SCRIPTS=	plugins/python/bin/tm_python
 

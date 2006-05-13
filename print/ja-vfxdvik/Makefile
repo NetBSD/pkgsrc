@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/04/17 13:46:46 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2006/05/13 03:44:24 minskim Exp $
 
 DISTNAME=	xdvik-${XDVIK_ORIGINAL_VERS}
 PKGNAME=	ja-vfxdvik-${XDVIK_ORIGINAL_VERS}.${XDVIK_JP_PATCH_VERS}
@@ -17,15 +17,9 @@ COMMENT=	Xdvik with vflib
 XDVIK_ORIGINAL_VERS=	22.40v
 XDVIK_JP_PATCH_VERS=	j1.14
 
-.if defined(USE_TEXFAMILY)
-DEPENDS+=	TeXfamily>=1.2.1:../../print/texfamily
-#TEX_ACCEPTED=	teTeX1
-.include "../../print/teTeX1-bin/buildlink3.mk"
-.else
 DEPENDS+=	ja-ptex-bin>=3.1.2:../../print/ja-ptex-bin
 #TEX_ACCEPTED=	teTeX2
 .include "../../print/teTeX-bin/buildlink3.mk"
-.endif
 
 XDVI_DIR=	${WRKDIR}/${DISTNAME}/texk/xdvik
 
