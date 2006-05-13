@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.213 2006/05/13 13:39:01 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.214 2006/05/13 18:30:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2488,3 +2488,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/createbuildlink to 3.12 [rillig 2006-05-13]
 	Updated pkgtools/pkglint to 4.61 [rillig 2006-05-13]
 	Updated audio/freepats to 20060219 [wiz 2006-05-13]
+	Updated graphics/librsvg2 to 2.14.4 [adam 2006-05-13]
