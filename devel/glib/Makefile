@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2006/03/30 03:44:43 jlam Exp $
+# $NetBSD: Makefile,v 1.80 2006/05/13 11:31:11 rillig Exp $
 
 DISTNAME=		glib-1.2.10
 PKGREVISION=		9
@@ -51,7 +51,8 @@ GLIB_MICRO_VERSION=	${GLIB_VERSION:C/.*\.//}
 # one derived from the package name.
 #
 pre-configure:
-	@cd ${WRKSRC};							\
+	set -e;								\
+	cd ${WRKSRC};							\
 	files="glib-config.in docs/glib-config.1.in glib.pc.in gmodule.pc.in gthread.pc.in"; \
 	for f in $${files}; do						\
 		${SED}	-e "s|@GLIB_VERSION@|${GLIB_VERSION}|g"		\
@@ -61,18 +62,20 @@ pre-configure:
 	done
 
 post-configure:
-	@cd ${WRKSRC};							\
-	files="config.status config.h glibconfig.h";		\
+	set -e;								\
+	cd ${WRKSRC};							\
+	files="config.status config.h glibconfig.h";			\
 	for f in $${files}; do						\
-		${SED}	-e "s|^\(#define.*GLIB_MAJOR_VERSION\).*|\1	${GLIB_MAJOR_VERSION}|" \
-			-e "s|^\(#define.*GLIB_MINOR_VERSION\).*|\1	${GLIB_MINOR_VERSION}|" \
-			-e "s|^\(#define.*GLIB_MICRO_VERSION\).*|\1	${GLIB_MICRO_VERSION}|" \
+		${SED}	-e "s|^\\(#define.*GLIB_MAJOR_VERSION\\).*|\\1	${GLIB_MAJOR_VERSION}|" \
+			-e "s|^\\(#define.*GLIB_MINOR_VERSION\\).*|\\1	${GLIB_MINOR_VERSION}|" \
+			-e "s|^\\(#define.*GLIB_MICRO_VERSION\\).*|\\1	${GLIB_MICRO_VERSION}|" \
 			$${f} > $${f}.fixed;				\
 		${MV} $${f}.fixed $${f};				\
 	done;								\
 	${CHMOD} +x config.status
 .if exists(/usr/include/sys/null.h)
-	@cd ${WRKSRC};							\
+	set -e;								\
+	cd ${WRKSRC};							\
 	files="glib.h";							\
 	for f in $${files}; do						\
 		${SED}	-e "s|^#define.NULL.*|#include <sys/null.h>|"	\
