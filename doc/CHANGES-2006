@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.208 2006/05/13 08:38:38 tonio Exp $
+$NetBSD: CHANGES-2006,v 1.209 2006/05/13 09:25:31 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2482,3 +2482,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/tex-dhucs to 3.0.0 [minskim 2006-05-13]
 	Updated print/tex-memhangul-ucs to 1.4.4f [minskim 2006-05-13]
 	Updated converters/bibtex2html to 1.81 [tonio 2006-05-13]
+	Updated wm/icewm to 1.2.26 [ghen 2006-05-13]
+	Updated wm/icewm-imlib to 1.2.26 [ghen 2006-05-13]
