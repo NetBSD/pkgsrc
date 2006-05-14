@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.6 2004/11/19 14:54:55 jlam Exp $
+$NetBSD: patch-ah,v 1.7 2006/05/14 19:58:04 minskim Exp $
 
---- modules/Simple.Rules.orig	2001-12-09 17:15:11.000000000 -0500
+--- modules/Simple.Rules.orig	2001-12-09 22:15:11.000000000 +0000
 +++ modules/Simple.Rules
 @@ -18,8 +18,13 @@ LIBSRC = $(addsuffix .c,$(LIBFILES))
  LIBOBJ = $(addsuffix .o,$(LIBFILES))
@@ -46,7 +46,7 @@ $NetBSD: patch-ah,v 1.6 2004/11/19 14:54:55 jlam Exp $
  	$(CC) $(CFLAGS) $(INCLUDE_PAMMODUTILS) $(STATIC) $(TARGET_ARCH) -c $< -o $@
  
 +%.lo : %.c
-+	$(SHLIBTOOL) --mode=compile $(CC) $(CFLAGS) $(INCLUDE_PAMMODUTILS) $(LTCFLAGS) $(TARGET_ARCH) -c $<
++	$(SHLIBTOOL) --mode=compile $(CC) $(CFLAGS) $(INCLUDE_PAMMODUTILS) $(LTCFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c $<
 +
  dirs:
  ifdef DYNAMIC
