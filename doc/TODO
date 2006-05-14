@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4978 2006/05/14 14:36:19 wiz Exp $
+$NetBSD: TODO,v 1.4979 2006/05/14 16:47:33 gdt Exp $
 
 Suggested new packages
 ======================
@@ -1330,6 +1330,14 @@ Suggested pkgsrc enhancements
 
 	o Use libarchive in pkg_install instead of forking tar or pax.
 	  http://people.freebsd.org/~kientzle/libarchive/
+
+	o Add a facility to execute a makefile fragment if a variable
+	  is or is not a member of a list (e.g., ${OPSYS} in a list of
+	  Open Source OSes).
+
+	o Consider defining a list of Open Source operating systems,
+	  to be used for packages like x11/openmotif that set
+	  NO_*_ON_* for non-open-source systems.
 
 Suggested other platform enhancements
 =====================================
