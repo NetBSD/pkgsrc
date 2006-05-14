@@ -1,0 +1,19 @@
+$NetBSD: patch-ag,v 1.16 2006/05/14 16:39:05 wiz Exp $
+
+--- converter/ppm/picttoppm.c.orig	2005-12-22 08:51:46.000000000 +0000
++++ converter/ppm/picttoppm.c
+@@ -1715,12 +1715,12 @@ unpackbits(struct Rect* const bounds, 
+         rowBytes = rowBytesArg & 0x7fff;
+     else
+         rowBytes = rowBytesArg;
+-    if (rowBytes == 0)
+-        rowBytes = pixwidth;
+ 
+     stage = "unpacking packbits";
+ 
+     pixwidth = bounds->right - bounds->left;
++    if (rowBytes == 0)
++        rowBytes = pixwidth;
+ 
+     pkpixsize = 1;
+     if (pixelSize == 16) {

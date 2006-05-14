@@ -1,0 +1,18 @@
+$NetBSD: patch-ai,v 1.9 2006/05/14 16:39:05 wiz Exp $
+
+--- converter/ppm/ppmtogif.c.orig	2006-02-15 19:46:41.000000000 +0000
++++ converter/ppm/ppmtogif.c
+@@ -705,11 +705,9 @@ output(code_int const code) {
+        if we want to use the compressor more than once per invocation
+        (e.g. we want to create a multi-image gif).
+     */
+-    static unsigned long curAccum;
+-    static int curBits;
++    static unsigned long curAccum = 0;
++    static int curBits = 0;
+ 
+-    curBits = 0;  /* initial value */
+-    curAccum = 0;  /* initial value */
+     curAccum &= masks[curBits];
+ 
+     if (curBits > 0)
