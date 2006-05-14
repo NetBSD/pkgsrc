@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.47 2006/05/14 14:20:20 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.48 2006/05/14 14:23:41 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -97,3 +97,5 @@ Pullup ticket 1571 - requested by tron
 security update for phpmyadmin
 Pullup ticket 1573 - requested by ghen
 portability fix for icewm
+Pullup ticket 1562 - requested by schmonz
+update checksum for qmail Darwin patch
