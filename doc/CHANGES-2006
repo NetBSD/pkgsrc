@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.221 2006/05/14 18:23:13 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.222 2006/05/14 18:56:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2497,3 +2497,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/wApua to 0.05.1 [wiz 2006-05-14]
 	Updated graphics/netpbm to 10.33nb3 [wiz 2006-05-14]
 	Updated graphics/gd to 2.0.33nb4 [minskim 2006-05-14]
+	Updated x11/xscreensaver to 4.22nb4 [wiz 2006-05-14]
