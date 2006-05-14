@@ -341,6 +341,7 @@ xorg-server-vga
 xorg-server-via	
 xorg-server-vmware	
 xrender			Enable Xrender support.
+xscreensaver-webcollage	Install webcollage screensaver.
 xterm-256color		Enable 256 color support.
 xterm-88color		Enable 88 color support.
 xterm-luit		Enable locale <> UTF encoding translation.
