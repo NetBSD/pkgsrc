@@ -1,9 +1,8 @@
-$NetBSD: patch-ci,v 1.2 2006/03/07 06:29:04 joerg Exp $
+$NetBSD: patch-ci,v 1.3 2006/05/14 21:31:01 minskim Exp $
 
---- interface/interface.c.orig	2000-04-20 08:41:04.000000000 +1000
+--- interface/interface.c.orig	2000-04-19 22:41:04.000000000 +0000
 +++ interface/interface.c
-@@ -29,13 +29,26 @@ int cdda_close(cdrom_drive *d){
-       d->enable_cdda(d,0);
+@@ -30,12 +30,25 @@ int cdda_close(cdrom_drive *d){
  
      _clean_messages(d);
      if(d->cdda_device_name)free(d->cdda_device_name);
