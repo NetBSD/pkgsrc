@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:39 wiz Exp $
+$NetBSD: distinfo,v 1.3 2006/05/14 14:35:49 wiz Exp $
 
-SHA1 (wApua-0.05.tar.gz) = 2455bcdfc6af1999f4642dd6ec8106762f202fa0
-RMD160 (wApua-0.05.tar.gz) = 8052f9b7eb41c42a66b0481abba1528b1ffb7ae9
-Size (wApua-0.05.tar.gz) = 35109 bytes
+SHA1 (wApua-0.05.1.tar.gz) = 140a8a2b3cbe1273f9e61dde056cf6424665ceda
+RMD160 (wApua-0.05.1.tar.gz) = 4db283a75454fc19fc7d1d761994142d64ffe3e9
+Size (wApua-0.05.1.tar.gz) = 35663 bytes
