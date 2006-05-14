@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4977 2006/05/14 11:28:12 wiz Exp $
+$NetBSD: TODO,v 1.4978 2006/05/14 14:36:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1185,7 +1185,6 @@ Suggested package updates
 	o vobcopy-1.0.0
 	o vp-1.6
 	o w32api-3.2
-	o wApua-0.05.1
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o wcalc-2.2
