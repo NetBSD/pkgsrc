@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.45 2006/05/10 10:23:10 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.46 2006/05/14 13:18:16 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -93,3 +93,5 @@ Pullup ticket 1538 - requested by tron
 security fix for xorg
 Pullup ticket 1548 - requested by bouyer
 security update for nagios
+Pullup ticket 1571 - requested by tron
+security update for phpmyadmin
