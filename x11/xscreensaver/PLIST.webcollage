@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST.webcollage,v 1.1 2006/05/14 18:55:50 wiz Exp $
+libexec/xscreensaver/config/webcollage.xml
+libexec/xscreensaver/webcollage
+man/man1/webcollage.1
