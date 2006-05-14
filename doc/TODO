@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4979 2006/05/14 16:47:33 gdt Exp $
+$NetBSD: TODO,v 1.4980 2006/05/14 21:09:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1000,7 +1000,6 @@ Suggested package updates
 	o py-gnome2-extras-2.14.0
 	o py-gnutls-0.2.1
 	o py-kenosis-0.96
-	o py-ldap-2.2.0
 	o py-logging-0.4.9.6
 	o py-mad-0.5.4
 	o py-mysqldb-1.1.7
