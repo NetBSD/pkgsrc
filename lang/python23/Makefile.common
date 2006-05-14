@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2006/05/07 15:15:27 tv Exp $
+# $NetBSD: Makefile.common,v 1.33 2006/05/14 20:46:37 minskim Exp $
 #
 
 DISTNAME=	Python-2.3.5
@@ -18,6 +18,14 @@ CONFIGURE_ARGS+=	OPT=${CFLAGS:M*:Q}
 
 # fdatasync()
 LIBS.SunOS+=		-lrt
+
+REPLACE_INTERPRETER+=	python
+REPLACE.python.old=	.*python
+REPLACE.python.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
+REPLACE_FILES.python=	Lib/cgi.py Lib/bsddb/dbshelve.py Lib/idlelib/idle \
+			Lib/idlelib/idle.py Lib/test/test_bz2.py \
+			Lib/test/test_largefile.py Lib/test/test_optparse.py
+CHECK_INTERPRETER_SKIP=	lib/python${PY_VER_SUFFIX}/test/test_pep263.py
 
 .include "../../mk/bsd.prefs.mk"
 
