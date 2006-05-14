@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2006/04/17 07:07:54 jlam Exp $
+@comment $NetBSD: PLIST,v 1.28 2006/05/14 18:55:50 wiz Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-getimage
@@ -224,7 +224,6 @@ libexec/xscreensaver/config/vermiculate.xml
 libexec/xscreensaver/config/vidwhacker.xml
 libexec/xscreensaver/config/vines.xml
 libexec/xscreensaver/config/wander.xml
-libexec/xscreensaver/config/webcollage.xml
 libexec/xscreensaver/config/whirlwindwarp.xml
 libexec/xscreensaver/config/whirlygig.xml
 libexec/xscreensaver/config/worm.xml
@@ -391,7 +390,6 @@ libexec/xscreensaver/vermiculate
 libexec/xscreensaver/vidwhacker
 libexec/xscreensaver/vines
 libexec/xscreensaver/wander
-libexec/xscreensaver/webcollage
 libexec/xscreensaver/whirlwindwarp
 libexec/xscreensaver/whirlygig
 libexec/xscreensaver/worm
@@ -590,7 +588,6 @@ man/man1/vermiculate.1
 man/man1/vidwhacker.1
 man/man1/vines.1
 man/man1/wander.1
-man/man1/webcollage.1
 man/man1/whirlwindwarp.1
 man/man1/whirlygig.1
 man/man1/worm.1
@@ -612,7 +609,7 @@ man/man1/xspirograph.1
 man/man1/xsublim.1
 man/man1/xteevee.1
 man/man1/zoom.1
-${OLD_GETTEXT}share/locale/ca/LC_MESSAGES/xscreensaver.mo
+share/locale/ca/LC_MESSAGES/xscreensaver.mo
 share/locale/da/LC_MESSAGES/xscreensaver.mo
 share/locale/de/LC_MESSAGES/xscreensaver.mo
 share/locale/es/LC_MESSAGES/xscreensaver.mo
@@ -628,7 +625,7 @@ share/locale/nl/LC_MESSAGES/xscreensaver.mo
 share/locale/no/LC_MESSAGES/xscreensaver.mo
 share/locale/pl/LC_MESSAGES/xscreensaver.mo
 share/locale/pt/LC_MESSAGES/xscreensaver.mo
-${OLD_GETTEXT}share/locale/pt_BR/LC_MESSAGES/xscreensaver.mo
+share/locale/pt_BR/LC_MESSAGES/xscreensaver.mo
 share/locale/ru/LC_MESSAGES/xscreensaver.mo
 share/locale/sk/LC_MESSAGES/xscreensaver.mo
 share/locale/sv/LC_MESSAGES/xscreensaver.mo
