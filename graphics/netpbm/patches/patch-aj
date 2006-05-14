@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.9 2006/05/14 16:39:05 wiz Exp $
+
+--- lib/Makefile.orig	2006-03-18 20:17:20.000000000 +0000
++++ lib/Makefile
+@@ -184,7 +184,7 @@ standardppmdfont.c:standard.ppmdfont
+ compile.h:
+ 	$(SRCDIR)/buildtools/stamp-date >$@ || rm $@
+ 
+-util/shhopt.o util/nstring.o: FORCE
++util/shhopt.o util/nstring.o util/filename.o: FORCE
+ 	@if [ ! -d $(dir $@) ] ; then mkdir $(dir $@) ; fi
+ 	$(MAKE) -C $(dir $@) -f $(SRCDIR)/$(SUBDIR)/$(dir $@)Makefile \
+ 		SRCDIR=$(SRCDIR) BUILDDIR=$(BUILDDIR) $(notdir $@) 
