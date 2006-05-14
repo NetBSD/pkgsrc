@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/05/14 14:52:56 tv Exp $
+# $NetBSD: Makefile,v 1.46 2006/05/14 16:35:58 gdt Exp $
 
 PKGVER=		2.2.3
 DISTNAME=	openMotif-${PKGVER}
@@ -11,7 +11,26 @@ MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://www.opengroup.org/openmotif/
 COMMENT=		The Open Group Motif toolkit for the X Window System
 
-NOT_FOR_PLATFORM+=	Interix-*-* # not Open Source, prohibited by license
+LICENSE=		openmotif-licenes
+RESTRICTED=		Only for Open Source OS; complex terms for commercial
+# List OSes known to be Open Source; default to not acceptable for new ones.
+_OPSYS_OK=	NO
+_OPSYS_OK_LIST=	DragonFly FreeBSD Linux NetBSD OpenBSD
+.for __tmp__ in ${_OPSYS_OK_LIST}
+.  if !empty(${OPSYS:M${__tmp__}})
+.    _OPSYS_OK=YES
+.  endif
+.endfor
+# Open Source OS ==> non-commercial distribution acceptable
+# Other OS ==> no distribution
+.if empty(_OPSYS_OK:MYES)
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+.endif
+# License seems to require indemnification for "commercial product offering",
+# but doesn't define that.
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_PKG_ON_CDROM=	${RESTRICTED}
 
 CONFLICTS+=		lesstif-[0-9]*
 
