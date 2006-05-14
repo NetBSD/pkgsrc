@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2006/04/22 09:22:10 rillig Exp $
+# $NetBSD: Makefile,v 1.65 2006/05/14 21:16:00 schwarz Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	12
-CATEGORIES=     graphics x11
+CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://ftp.cis.upenn.edu/pub/xv/
 #DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -27,6 +27,10 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 LICENSE=	xv-license
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !empty(LOWER_OPSYS:Mirix5*)
+CPPFLAGS+=	-DNEED_ALLOCA_H
+.endif
 
 pre-configure:
 	${MV} ${WRKSRC}/config.h ${WRKSRC}/config.h.orig &&		\
