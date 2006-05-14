@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4976 2006/05/13 20:54:45 adam Exp $
+$NetBSD: TODO,v 1.4977 2006/05/14 11:28:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -309,7 +309,8 @@ Suggested package updates
 	o PAM-0.80
 	o REminiscence-0.1.8
 	o SmartEiffel-2.1
-	o XFree86-4.5.0
+	o TeXmacs-1.0.6.1
+	o XFree86-4.6.0
 	o XaoS-3.1.1
 	o YoSucker-75
 	o aap-0.144
@@ -525,6 +526,7 @@ Suggested package updates
 	o gcpio-2.6
 	o gdal-lib-1.3.2
 	o gdb6-6.3.0
+	o gdm-2.14.6
 	o gdsreader-0.3.2
 	o ggiterm-0.7.1
 	o gifsicle-1.44
@@ -540,6 +542,7 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glabels-2.0.4
 	o gld-1.7
+	o glpk-4.10
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-backgrounds-2.14.1
@@ -553,7 +556,7 @@ Suggested package updates
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o goffice-0.3.0
 	o gogo-3.11p1
-	o gok-1.0.8
+	o gok-1.0.9
 	o gossip-0.11
 	o gpgme-1.1.0 [pkg/32761]
 	o gpsdrive-2.09
@@ -1182,6 +1185,7 @@ Suggested package updates
 	o vobcopy-1.0.0
 	o vp-1.6
 	o w32api-3.2
+	o wApua-0.05.1
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o wcalc-2.2
@@ -1265,7 +1269,7 @@ Suggested package updates
 	o zile-2.2.13
 	o zircon-1.18.256
 	o zope-2.8.6
-	o zope-2.9.2
+	o zope-2.9.3
 	o zope25-AbracadabraObject-2.0.0
 	o zope25-BTreeFolder2-1.0.1
 	o zope25-CMF-1.5.4
