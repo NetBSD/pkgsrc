@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.223 2006/05/14 20:00:05 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.224 2006/05/14 20:47:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2499,3 +2499,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/gd to 2.0.33nb4 [minskim 2006-05-14]
 	Updated x11/xscreensaver to 4.22nb4 [wiz 2006-05-14]
 	Added sysutils/syslog-ng version 1.6.11 [adrianp 2006-05-14]
+	Updated lang/python23 to 2.3.5nb9 [minskim 2006-05-14]
+	Updated lang/python23-nth to 2.3.5nb6 [minskim 2006-05-14]
