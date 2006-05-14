@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:08:35 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/14 17:16:46 joerg Exp $
 
 DISTNAME=	dbxml-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/db/bdb-/}
@@ -15,6 +15,8 @@ CONFLICTS=	${PYPKGPREFIX}-dbxml<=1.2.1
 WRKSRC=		${WRKDIR}/${DISTNAME}/src/python
 PYDISTUTILSPKG=	YES
 NO_CONFIGURE=	YES
+
+USE_LANGUAGES=	c c++
 
 .include "../../lang/python/extension.mk"
 PYSETUPBUILDARGS+=	--with-berkeleydb=${BUILDLINK_PREFIX.db4} \
