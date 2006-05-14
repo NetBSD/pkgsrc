@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2006/05/14 18:19:08 minskim Exp $
+# $NetBSD: Makefile,v 1.69 2006/05/14 18:22:38 minskim Exp $
 
 DISTNAME=	gd-2.0.33
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.boutell.com/gd/http/
 
@@ -12,6 +12,7 @@ COMMENT=	Graphics library for the dynamic creation of images
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		YES
+USE_TOOLS+=		perl:run
 GNU_CONFIGURE=		YES
 REPLACE_PERL+=		bdftogd
 PTHREAD_AUTO_VARS=	yes
