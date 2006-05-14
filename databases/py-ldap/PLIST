@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/08/04 11:17:04 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/05/14 21:09:20 wiz Exp $
 ${PYSITELIB}/_ldap.so
 ${PYSITELIB}/dsml.py
 ${PYSITELIB}/dsml.pyc
@@ -51,5 +51,30 @@ ${PYSITELIB}/ldapurl.pyo
 ${PYSITELIB}/ldif.py
 ${PYSITELIB}/ldif.pyc
 ${PYSITELIB}/ldif.pyo
+share/doc/py-ldap/CHANGES
+share/doc/py-ldap/Demo/Lib/ldapurl/urlsearch.py
+share/doc/py-ldap/Demo/Lib/ldif/ldifcopy.py
+share/doc/py-ldap/Demo/initialize.py
+share/doc/py-ldap/Demo/ldapcontrols.py
+share/doc/py-ldap/Demo/options.py
+share/doc/py-ldap/Demo/passwd_ext_op.py
+share/doc/py-ldap/Demo/pickle_ldapobject.py
+share/doc/py-ldap/Demo/reconnect.py
+share/doc/py-ldap/Demo/rename.py
+share/doc/py-ldap/Demo/sasl_bind.py
+share/doc/py-ldap/Demo/schema.py
+share/doc/py-ldap/Demo/schema_tree.py
+share/doc/py-ldap/Demo/simple.py
+share/doc/py-ldap/Demo/simplebrowse.py
+share/doc/py-ldap/INSTALL
+share/doc/py-ldap/README
+share/doc/py-ldap/TODO
+@dirrm share/doc/py-ldap/Demo/Lib/ldif
+@dirrm share/doc/py-ldap/Demo/Lib/ldapurl
+@dirrm share/doc/py-ldap/Demo/Lib/ldap/res
+@dirrm share/doc/py-ldap/Demo/Lib/ldap
+@dirrm share/doc/py-ldap/Demo/Lib
+@dirrm share/doc/py-ldap/Demo
+@dirrm share/doc/py-ldap/
 @dirrm ${PYSITELIB}/ldap/schema
 @dirrm ${PYSITELIB}/ldap
