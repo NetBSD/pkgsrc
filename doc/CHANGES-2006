@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.224 2006/05/14 20:47:23 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.225 2006/05/14 21:09:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2501,3 +2501,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/syslog-ng version 1.6.11 [adrianp 2006-05-14]
 	Updated lang/python23 to 2.3.5nb9 [minskim 2006-05-14]
 	Updated lang/python23-nth to 2.3.5nb6 [minskim 2006-05-14]
+	Updated databases/py-ldap to 2.2.0 [wiz 2006-05-14]
