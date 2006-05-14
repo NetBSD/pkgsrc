@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.7 2006/05/09 21:37:33 minskim Exp $
+# $NetBSD: print-plist.mk,v 1.8 2006/05/14 14:27:41 seb Exp $
 
 ###
 ### Automatic PLIST generation
@@ -153,6 +153,7 @@ print-PLIST:
 			| ${SORT} -r					\
 			| ${AWK} '					\
 				/emul\/linux\/proc/ { next; }		\
+				/${PREFIX:S|/|\\/|g}\/\.$$/ { next; }	\
 				/${PKG_DBDIR:S|/|\\/|g}\// { next; }	\
 				{ sub("${PREFIX}/\\\\./", ""); }	\
 				{ sub("^${PKGINFODIR}/", "info/"); }	\
