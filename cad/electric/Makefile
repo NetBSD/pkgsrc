@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:08:21 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/05/14 15:27:20 joerg Exp $
 #
 
 DISTNAME=	electric-7.00
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.gnu.org/software/electric/electric.html
 COMMENT=	Electrical CAD system
 
 GNU_CONFIGURE=		YES
+USE_LANGUAGES=		c++
 
 post-patch:
 	${MV} ${WRKSRC}/src/include/config.h ${WRKSRC}/src/include/config.h.bak
