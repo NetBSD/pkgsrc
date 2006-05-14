@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/03/14 14:09:34 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2006/05/14 14:40:36 seb Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
@@ -12,12 +12,12 @@ SHORT_NAME=	JRE
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-//:S/_/./:S/_/./:S/-linux-i586//}
 JAVA_WRAPPERS=	java javaws keytool orbd policytool rmid rmiregistry \
 		servertool tnameserv
-OWN_DIRS=	${JAVA_HOME}
-OWN_DIRS+=	${JAVA_HOME}/lib
-OWN_DIRS+=	${JAVA_HOME}/lib/applet
-OWN_DIRS+=	${JAVA_HOME}/lib/images
-OWN_DIRS+=	${JAVA_HOME}/lib/images/cursors
-OWN_DIRS+=	${JAVA_HOME}/lib/security
+REQD_DIRS=	${JAVA_HOME}
+REQD_DIRS+=	${JAVA_HOME}/lib
+REQD_DIRS+=	${JAVA_HOME}/lib/applet
+REQD_DIRS+=	${JAVA_HOME}/lib/images
+REQD_DIRS+=	${JAVA_HOME}/lib/images/cursors
+REQD_DIRS+=	${JAVA_HOME}/lib/security
 CONF_FILES=	# empty
 .sinclude "sfiles.mk"
 .for FILE in ${SFILES}
@@ -34,6 +34,8 @@ INSTALL_TEMPLATE+=	${PKGDIR}/INSTALL.tmpl
 DEINSTALL_TEMPLATE+=	${PKGDIR}/DEINSTALL.tmpl
 FILES_SUBST+=		JAVA_HOME=${JAVA_HOME:Q}
 FILES_SUBST+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
+
+CHECK_FILES_SKIP+=	${JAVA_HOME}/lib/${MACHINE_ARCH}/client/classes.jsa
 
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-1_5_0.zip
