@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.218 2006/05/13 21:05:12 perry Exp $
+$NetBSD: CHANGES-2006,v 1.219 2006/05/14 14:36:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2494,3 +2494,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/gtkmm to 2.8.7 [adam 2006-05-13]
 	Updated emulators/BasiliskII to 1.0.20060501 [adam 2006-05-13]
 	Updated net/p5-NetAddr-IP to 3.33 [perry 2006-05-13]
+	Updated www/wApua to 0.05.1 [wiz 2006-05-14]
