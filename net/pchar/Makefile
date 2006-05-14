@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2005/12/05 20:50:48 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2006/05/14 18:45:25 seb Exp $
 
 DISTNAME=		pchar-1.4
 PKGREVISION=		4
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.employees.org/~bmah/Software/pchar/
 COMMENT=		Tool for measuring Internet path characteristics
 
 GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
 
 BUILD_DEFS+=		USE_INET6
 
