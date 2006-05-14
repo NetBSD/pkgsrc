@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.222 2006/05/14 18:56:25 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.223 2006/05/14 20:00:05 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2498,3 +2498,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/netpbm to 10.33nb3 [wiz 2006-05-14]
 	Updated graphics/gd to 2.0.33nb4 [minskim 2006-05-14]
 	Updated x11/xscreensaver to 4.22nb4 [wiz 2006-05-14]
+	Added sysutils/syslog-ng version 1.6.11 [adrianp 2006-05-14]
