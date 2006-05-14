@@ -1,15 +1,24 @@
-$NetBSD: patch-aa,v 1.3 2005/10/25 17:09:33 drochner Exp $
+$NetBSD: patch-aa,v 1.4 2006/05/14 21:09:20 wiz Exp $
 
---- setup.cfg.orig	2005-10-25 16:40:19.000000000 +0200
+--- setup.cfg.orig	2005-07-28 21:56:49.000000000 +0900
 +++ setup.cfg
 @@ -7,8 +7,8 @@
  # for wrapping OpenLDAP 2 libs
  [_ldap]
  
--library_dirs = /opt/openldap-OPENLDAP_REL_ENG_2_3/lib /opt/sasl/lib
--include_dirs = /opt/openldap-OPENLDAP_REL_ENG_2_3/include /opt/sasl/include/sasl /usr/include/sasl
-+library_dirs = @EXTRALIBS@
-+include_dirs = @EXTRAINCS@
- #library_dirs = /opt/openldap-HEAD/lib /opt/sasl/lib
- #include_dirs = /opt/openldap-HEAD/include /opt/sasl/include/sasl /usr/include/sasl
+-library_dirs = /usr/local/openldap-REL_ENG_2_1/lib /usr/local/cyrus-sasl/lib
+-include_dirs = /usr/local/openldap-REL_ENG_2_1/include /usr/local/cyrus-sasl/include
++library_dirs = @PY_LDAP_LIBRARY_DIRS@
++include_dirs = @PY_LDAP_INCLUDE_DIRS@
  
+ extra_compile_args = 
+ extra_objects = 
+@@ -23,7 +23,7 @@ extra_objects = 
+ # Support for StartTLS/LDAPS, SASL bind and reentrant libldap_r.
+ # This needs recent OpenLDAP 2.0.26+ or 2.1.3+ built with
+ # ./configure --with-cyrus-sasl --with-tls
+-libs = ldap_r lber sasl2 ssl crypto
++libs = @PY_LDAP_LIBS@
+ 
+ # Installation options
+ [install]

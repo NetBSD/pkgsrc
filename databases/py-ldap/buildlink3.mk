@@ -1,6 +1,6 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:05 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/05/14 21:09:20 wiz Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PY_LDAP_BUILDLINK3_MK:=	${PY_LDAP_BUILDLINK3_MK}+
 
 .include "../../lang/python/pyversion.mk"
@@ -13,8 +13,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npyldap}
 BUILDLINK_PACKAGES+=	pyldap
 
 .if !empty(PY_LDAP_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.pyldap+=	${PYPKGPREFIX}-ldap>=2.0.10nb1
-BUILDLINK_ABI_DEPENDS.pyldap?=	${PYPKGPREFIX}-ldap>=2.0.10nb2
+BUILDLINK_API_DEPENDS.pyldap+=	${PYPKGPREFIX}-ldap>=2.2.0
+BUILDLINK_ABI_DEPENDS.pyldap?=	${PYPKGPREFIX}-ldap>=2.2.0
 BUILDLINK_PKGSRCDIR.pyldap?=	../../databases/py-ldap
 .endif	# PY_LDAP_BUILDLINK3_MK
 
