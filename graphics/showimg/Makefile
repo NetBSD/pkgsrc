@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/17 13:46:36 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/05/14 16:19:45 seb Exp $
 #
 
 DISTNAME=	showimg-0.9.4-1
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.jalix.org/projects/showimg/
 COMMENT=	Feature-rich image viewer for KDE including an image management system
 
 USE_TOOLS+=	gmake pkg-config
-USE_LANGUAGE=	c c++
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
