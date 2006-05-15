@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/04/17 13:46:29 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/05/15 23:33:22 joerg Exp $
 
 DISTNAME=		quakeforge-0.5.5
 PKGREVISION=		5
@@ -13,6 +13,7 @@ CONFIGURE_ARGS+=	--with-cpp="${CPP} %d %i %o"
 CONFIGURE_ARGS+=	--disable-ogg
 CONFIGURE_ARGS+=	--disable-xmms
 GNU_CONFIGURE=		YES
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison gmake
 USE_LIBTOOL=		YES
 
@@ -27,6 +28,12 @@ BUILD_DEFS+=		USE_INET6
 .include "../../mk/bsd.prefs.mk"
 .if !(defined(USE_INET6) && ${USE_INET6} == "YES")
 CONFIGURE_ARGS+=	--without-ipv6
+.endif
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
+PLIST_SUBST+=		COND_SUN=""
+.else
+PLIST_SUBST+=		COND_SUN="@comment "
 .endif
 
 pre-install:
