@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.232 2006/05/15 12:28:13 markd Exp $
+$NetBSD: CHANGES-2006,v 1.233 2006/05/15 15:06:44 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2512,3 +2512,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/ap-auth-kerb version 5.0rc7 [markd 2006-05-15]
 	Added print/kbibtex version 0.1.4 [markd 2006-05-15]
 	Updated editors/kile to 1.9 [markd 2006-05-15]
+	Added devel/p5-ExtUtils-CBuilder version 0.18 [seb 2006-05-15]
+	Added devel/p5-ExtUtils-ParseXS version 2.15 [seb 2006-05-15]
+	Added devel/p5-Module-Install version 0.62 [seb 2006-05-15]
+	Added devel/p5-Module-Install-RTx version 0.11 [seb 2006-05-15]
