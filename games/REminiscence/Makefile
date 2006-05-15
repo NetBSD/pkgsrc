@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/22 09:22:08 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/15 20:10:57 joerg Exp $
 #
 
 DISTNAME=		REminiscence-0.1.6
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		dillo@NetBSD.org
 HOMEPAGE=		http://membres.lycos.fr/cyxdown/reminiscence/
 COMMENT=		Engine to play Flashback by Delphine Software
+
+USE_LANGUAGES=		c++
 
 BUILD_TARGET=		rs
 MAKE_ENV+=		DEFINES=${DEFINES:Q}
