@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.581 2006/05/13 11:24:28 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.582 2006/05/15 07:20:45 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3198,7 +3198,15 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 		}
 
 	} elsif ($type eq "BuildlinkPackages") {
-		if ($value !~ qr"^(?:\$\{BUILDLINK_PACKAGES:N[+\-.0-9A-Z_a-z]+\}|[+\-.0-9A-Z_a-z]+)$") {
+		my $re_del = qr"\$\{BUILDLINK_PACKAGES:N[+\-.0-9A-Z_a-z]+\}";
+		my $re_add = qr"[+\-.0-9A-Z_a-z]+";
+
+		if (($op eq ":=" && $value =~ qr"^${re_del}$") ||
+		    ($op eq ":=" && $value =~ qr"^${re_del}\s+${re_add}$") ||
+		    ($op eq "+" && $value =~ qr"^${re_add}$")) {
+			# Fine.
+
+		} else {
 			$line->log_warning("Invalid value for ${varname}.");
 		}
 
@@ -4344,13 +4352,18 @@ sub checkfile_buildlink3_mk($) {
 	expect_empty_line($lines, \$lineno);
 
 	# Third paragraph: Duplicate elimination.
-	if (!expect($lines, \$lineno, qr"^BUILDLINK_PACKAGES:=\t+\$\{BUILDLINK_PACKAGES:N\Q${bl_pkgbase}\E\}$")) {
-		$lines->[$lineno]->log_warning("Expected duplicate elimination line.");
-		return;
-	}
-	if (!expect($lines, \$lineno, qr"^BUILDLINK_PACKAGES\+=\t+\Q${bl_pkgbase}\E$")) {
-		$lines->[$lineno]->log_warning("Expected package addition line.");
-		return;
+	if (expect($lines, \$lineno, qr"^BUILDLINK_PACKAGES:=\t+\$\{BUILDLINK_PACKAGES:N\Q${bl_pkgbase}\E\}\s+\Q${bl_pkgbase}\E$")) {
+		# The compressed form of duplicate elimination.
+
+	} else {
+		if (!expect($lines, \$lineno, qr"^BUILDLINK_PACKAGES:=\t+\$\{BUILDLINK_PACKAGES:N\Q${bl_pkgbase}\E\}$")) {
+			$lines->[$lineno]->log_warning("Expected duplicate elimination line.");
+			return;
+		}
+		if (!expect($lines, \$lineno, qr"^BUILDLINK_PACKAGES\+=\t+\Q${bl_pkgbase}\E$")) {
+			$lines->[$lineno]->log_warning("Expected package addition line.");
+			return;
+		}
 	}
 	expect_empty_line($lines, \$lineno);
 
