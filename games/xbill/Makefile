@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/02/05 23:09:23 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/05/15 21:01:56 joerg Exp $
 #
 
 DISTNAME=		xbill-2.0
@@ -13,6 +13,7 @@ COMMENT=		Stop the dreaded Windows virus from infecting computers
 
 CONFLICTS+=		gnome-games-[0-9]*
 
+USE_LANGUAGES=		c c++
 USE_IMAKE=		YES
 NO_INSTALL_MANPAGES=	YES
 
