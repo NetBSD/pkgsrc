@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2006/03/30 03:44:43 jlam Exp $
+# $NetBSD: Makefile.common,v 1.8 2006/05/15 11:48:12 markd Exp $
 
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 MAINTAINER=	markd@NetBSD.org
@@ -69,6 +69,10 @@ post-extract:
 	${CP} ${FILESDIR}/darwin.h ${WRKSRC}/src/s
 	${CP} ${FILESDIR}/unexmacosx.c ${WRKSRC}/src
 	${CP} ${FILESDIR}/sh3el.h ${WRKSRC}/src/m
+
+# for patch-ba
+post-build:
+	(cd ${WRKSRC}/lisp; ${MAKE_PROGRAM} sort.elc)
 
 pre-install:
 	@${FIND} ${WRKSRC} -type f -name "*.orig" -print | ${XARGS} ${RM} -f
