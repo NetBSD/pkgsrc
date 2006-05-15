@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/04/17 13:46:23 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2006/05/15 19:59:16 joerg Exp $
 #
 
 DISTNAME=		zsnes142src
@@ -19,6 +19,7 @@ BUILD_TARGET=		zsnes
 
 WRKSRC=			${WRKDIR}/zsnes_1_42/src
 GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 
 .include "../../devel/SDL/buildlink3.mk"
