@@ -1,16 +1,17 @@
-$NetBSD: patch-ag,v 1.1.1.1 2000/12/15 00:36:38 wiz Exp $
+$NetBSD: patch-ag,v 1.2 2006/05/15 15:33:00 christos Exp $
 
---- icb/print.c.orig	Fri Feb 24 22:20:25 1995
-+++ icb/print.c	Sat Nov 27 00:01:04 1999
-@@ -5,6 +5,7 @@
+--- icb/print.c.orig	1995-02-24 16:20:25.000000000 -0500
++++ icb/print.c	2006-05-15 10:51:05.000000000 -0400
+@@ -5,6 +5,8 @@
  
  #include "icb.h"
  #include "externs.h"
 +#include <time.h>
++#include <string.h>
  
  extern FILE *logfp;
  
-@@ -17,12 +18,22 @@
+@@ -17,16 +19,26 @@
  	char printbuf[1024];
  	char *p = printbuf;
  	char *t = s;
@@ -33,7 +34,12 @@ $NetBSD: patch-ag,v 1.1.1.1 2000/12/15 00:36:38 wiz Exp $
  	if (flags & PL_SCR) {
  		/* if paging in effect, do paging */
  		if (gv.pagesize && (++linenumber >= gv.pagesize)) {
-@@ -35,6 +46,8 @@
+-			pauseprompt("[=More=]", 1, 0, 1, (int) " ");
++			pauseprompt("[=More=]", 1, 0, 1, " ");
+ 			linenumber = 0;
+ 		}
+ 
+@@ -35,6 +47,8 @@
  			*p++ = *t++;
  		*p++ = '\r';
  		*p++ = '\n';
@@ -42,3 +48,20 @@ $NetBSD: patch-ag,v 1.1.1.1 2000/12/15 00:36:38 wiz Exp $
  		write(1, printbuf, p - printbuf);
  	}
  
+@@ -61,7 +75,7 @@
+ int Erase;
+ char c;
+ int unget;
+-int except;
++char *except;
+ {
+ 	char uc, *p;
+ 
+@@ -89,6 +103,6 @@
+ 
+ 	/* push character back onto stream if requested */
+ 	if (unget)
+-		if (!except || !index(except,uc))
++		if (!except || !strchr(except,uc))
+ 			pushback(uc);
+ }
