@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.231 2006/05/15 11:25:26 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.232 2006/05/15 12:28:13 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2507,3 +2507,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/libxml2 to 2.6.24nb1 [minskim 2006-05-15]
 	Updated security/heimdal to 0.7.2nb1 [minskim 2006-05-15]
 	Added devel/qconf version 1.2 [rillig 2006-05-15]
+	Added security/p5-GSSAPI version 0.21 [markd 2006-05-15]
+	Added www/p5-LWP-Authen-Negotiate version 0.06 [markd 2006-05-15]
+	Added www/ap-auth-kerb version 5.0rc7 [markd 2006-05-15]
+	Added print/kbibtex version 0.1.4 [markd 2006-05-15]
+	Updated editors/kile to 1.9 [markd 2006-05-15]
