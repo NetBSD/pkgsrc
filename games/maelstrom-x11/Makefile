@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/09 21:04:43 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/05/15 20:21:38 joerg Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-x11-2.0.6
@@ -22,6 +22,7 @@ CONFLICTS=		maelstrom-[0-9]* maelstrom-sdl-[0-9]*
 EXTRACT_ONLY=		${DISTNAME}
 
 WRKSRC=			${WRKDIR}/Maelstrom
+USE_LANGUAGES=		c++
 USE_X11BASE=		YES
 MAKE_ENV+=		BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q} XPMDIR=${BUILDLINK_PREFIX.xpm}
 
