@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.227 2006/05/15 07:45:35 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.228 2006/05/15 08:28:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2504,3 +2504,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/py-ldap to 2.2.0 [wiz 2006-05-14]
 	Updated audio/mserv to 0.35nb12 [minskim 2006-05-14]
 	Updated math/mathomatic to 12.5.13 [minskim 2006-05-15]
+	Updated textproc/libxml2 to 2.6.24nb1 [minskim 2006-05-15]
