@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.237 2006/05/15 19:02:20 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.238 2006/05/15 19:49:37 tv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2521,3 +2521,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated editors/elvis-x11 to 2.2.0nb5 [joerg 2006-05-15]
 	Updated lang/python21 to 2.1.3nb13 [minskim 2006-05-15]
 	Updated databases/openldap to 2.3.21 [ghen 2006-05-15]
+	Added lang/scsl-jdk15 version 1.5.0p3.1 [tv 2006-05-15]
+	Added lang/scsl-jre15 version 1.5.0p3.1 [tv 2006-05-15]
