@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.324 2006/05/03 14:07:21 tv Exp $
+# $NetBSD: Makefile,v 1.325 2006/05/15 21:54:26 tonio Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -129,6 +129,7 @@ SUBDIR+=	makeztxt
 SUBDIR+=	namazu2
 SUBDIR+=	nbsed
 SUBDIR+=	ndtpd
+SUBDIR+=	nxml-mode
 SUBDIR+=	openjade
 SUBDIR+=	opensp
 SUBDIR+=	p5-Convert-ASCII-Armour
