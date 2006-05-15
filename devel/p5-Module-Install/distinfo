@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/05/15 14:59:52 seb Exp $
+
+SHA1 (Module-Install-0.62.tar.gz) = e92555ad110bbf762ffe4fa88b7a6a57f62d81fb
+RMD160 (Module-Install-0.62.tar.gz) = 4ff5c2ed55368ecbec6d168bd21f566f0c17454d
+Size (Module-Install-0.62.tar.gz) = 76096 bytes
