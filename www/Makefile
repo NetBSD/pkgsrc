@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.452 2006/05/03 14:02:30 tv Exp $
+# $NetBSD: Makefile,v 1.453 2006/05/15 12:07:55 markd Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -12,6 +12,7 @@ SUBDIR+=	analog
 SUBDIR+=	ap-Embperl
 SUBDIR+=	ap-access-referer
 SUBDIR+=	ap-auth-cookie
+SUBDIR+=	ap-auth-kerb
 SUBDIR+=	ap-auth-ldap
 SUBDIR+=	ap-auth-mysql
 SUBDIR+=	ap-auth-pam
@@ -248,6 +249,7 @@ SUBDIR+=	p5-Kwiki-Users-Remote
 SUBDIR+=	p5-Kwiki-Weather
 SUBDIR+=	p5-Kwiki-Wikiwyg
 SUBDIR+=	p5-Kwiki-Zipcode
+SUBDIR+=	p5-LWP-Authen-Negotiate
 SUBDIR+=	p5-LWP-Authen-Wsse
 SUBDIR+=	p5-MasonX-Request-WithApacheSession
 SUBDIR+=	p5-SVN-Web
