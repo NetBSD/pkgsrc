@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.19 2005/10/23 11:25:58 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.20 2006/05/15 16:28:19 reed Exp $ -->
 
 <!-- based on:
 pkgsrc/bootstrap/bmake/for.c 1.1.1.1
@@ -41,7 +41,7 @@ pkgsrc/bootstrap/bmake/var.c 1.2
     followed by a newline, any whitespace immediately in front of the
     backslash, the backslash, the newline, and any whitespace
     immediately behind the newline are replaced with a single space. A
-    backspace character and an immediately following hash character are
+    backslash character and an immediately following hash character are
     replaced with a single hash character. Otherwise, the backslash is
     passed as is. In a variable assignment, any hash character that is
     not preceded by a backslash starts a comment that continues upto the
