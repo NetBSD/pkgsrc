@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2006/04/17 13:46:02 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2006/05/15 11:03:17 markd Exp $
 
 DISTNAME=	koffice-1.5.0
 PKGREVISION=	1
@@ -15,6 +15,7 @@ CONFLICTS+=	koffice3-[0-9]*
 # to unpack krita/plugins/convolutionfilters properly on NetBSD 1.6
 ## EXTRACT_USING=		gtar
 
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl pkg-config
 GNU_CONFIGURE=		yes
