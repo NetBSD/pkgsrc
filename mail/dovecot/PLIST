@@ -1,16 +1,20 @@
-@comment $NetBSD: PLIST,v 1.8 2006/02/08 13:43:49 ghen Exp $
+@comment $NetBSD: PLIST,v 1.8.2.1 2006/05/15 16:08:41 salo Exp $
+lib/dovecot/imap/lib01_acl_plugin.so
 lib/dovecot/imap/lib01_convert_plugin.so
 lib/dovecot/imap/lib01_quota_plugin.so
 lib/dovecot/imap/lib01_zlib_plugin.la
 lib/dovecot/imap/lib02_imap_quota_plugin.la
 lib/dovecot/imap/lib02_trash_plugin.so
+lib/dovecot/lda/lib01_acl_plugin.so
 lib/dovecot/lda/lib01_convert_plugin.so
 lib/dovecot/lda/lib01_quota_plugin.so
 lib/dovecot/lda/lib02_trash_plugin.so
+lib/dovecot/lib01_acl_plugin.la
 lib/dovecot/lib01_convert_plugin.la
 lib/dovecot/lib01_quota_plugin.la
 lib/dovecot/lib02_trash_plugin.la
 lib/dovecot/pop3/lib01_convert_plugin.so
+lib/dovecot/pop3/lib01_quota_plugin.so
 libexec/dovecot/checkpassword-reply
 libexec/dovecot/dict
 libexec/dovecot/dovecot-auth
