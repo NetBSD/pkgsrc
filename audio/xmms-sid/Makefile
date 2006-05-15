@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:08:19 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/15 18:41:49 joerg Exp $
 #
 
 DISTNAME=	xmms-sid-0.7.4
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.tnsp.org/
 COMMENT=	XMMS plugin for SID (Commodore 64) music
 
 GNU_CONFIGURE=		YES
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 
 .include "../../audio/libsidplay/buildlink3.mk"
