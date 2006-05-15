@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.240 2006/05/15 21:56:29 tonio Exp $
+$NetBSD: CHANGES-2006,v 1.241 2006/05/15 22:14:34 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2525,3 +2525,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added lang/scsl-jre15 version 1.5.0p3.1 [tv 2006-05-15]
 	Updated graphics/ImageMagick to 6.2.7.5nb1 [joerg 2006-05-15]
 	Added textproc/nxml-mode version 20041004 [tonio 2006-05-15]
+	Updated wm/pekwm to 0.1.5 [xtraeme 2006-05-15]
