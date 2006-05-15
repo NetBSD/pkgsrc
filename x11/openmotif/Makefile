@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2006/05/14 16:35:58 gdt Exp $
+# $NetBSD: Makefile,v 1.47 2006/05/15 13:26:40 gdt Exp $
 
 PKGVER=		2.2.3
 DISTNAME=	openMotif-${PKGVER}
@@ -11,26 +11,14 @@ MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://www.opengroup.org/openmotif/
 COMMENT=		The Open Group Motif toolkit for the X Window System
 
-LICENSE=		openmotif-licenes
-RESTRICTED=		Only for Open Source OS; complex terms for commercial
-# List OSes known to be Open Source; default to not acceptable for new ones.
-_OPSYS_OK=	NO
-_OPSYS_OK_LIST=	DragonFly FreeBSD Linux NetBSD OpenBSD
-.for __tmp__ in ${_OPSYS_OK_LIST}
-.  if !empty(${OPSYS:M${__tmp__}})
-.    _OPSYS_OK=YES
-.  endif
-.endfor
-# Open Source OS ==> non-commercial distribution acceptable
-# Other OS ==> no distribution
-.if empty(_OPSYS_OK:MYES)
-NO_SRC_ON_FTP=		${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-.endif
-# License seems to require indemnification for "commercial product offering",
-# but doesn't define that.
+LICENSE=		openmotif-license
+RESTRICTED=		Only for Open Source OS; complex terms for commercial distribution.
+# See end of file for setting NO_*_ON_FTP.
+# NO_*_ON_CDROM: License seems to require indemnification for
+# "commercial product offering", but doesn't define commercial product
+# offering.  Err on the side of caution and mark restricted.
 NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_PKG_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 CONFLICTS+=		lesstif-[0-9]*
 
@@ -86,3 +74,18 @@ post-build:
 
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+# XXX This fragment is at the end because OPSYS is defined via bsd.pkg.mk.
+OPSYS_OK=	NO
+# List OSes known to be Open Source; default to not acceptable for new ones.
+OPSYS_OK_LIST=	DragonFly FreeBSD Linux NetBSD OpenBSD
+.if !empty(OPSYS_OK_LIST:M${OPSYS})
+OPSYS_OK=YES
+.  endif
+.if !empty(OPSYS_OK:MYES)
+# Open Source OS ==> non-commercial distribution acceptable
+.else
+# other than Open Source OS ==> no distribution
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+.endif
