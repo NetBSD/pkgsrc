@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/30 03:44:42 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/05/15 19:41:49 joerg Exp $
 
 DISTNAME=		gcvs-1.0
 PKGREVISION=		3
@@ -13,6 +13,7 @@ COMMENT=		GTK interface for CVS
 
 CONFLICTS=		cvs-[0-9]*
 
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake makeinfo
 GNU_CONFIGURE=		yes
 INFO_FILES=		# PLIST
