@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/05/10 22:34:27 snj Exp $
+# $NetBSD: Makefile,v 1.15 2006/05/15 22:49:53 joerg Exp $
 #
 
 DISTNAME=		stellarium-0.8.0
@@ -9,6 +9,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.stellarium.org/
 COMMENT=		Generate photorealistic skies with OpenGL
 
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
