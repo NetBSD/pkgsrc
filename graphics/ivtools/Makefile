@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:09:34 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/05/15 21:55:32 joerg Exp $
 
 DISTNAME=	ivtools-1.2.2
 PKGREVISION=	2
@@ -14,6 +14,8 @@ CONFLICTS+=	dclock-[0-9]*
 
 DEPENDS+=	pstoedit>=3.0:../../graphics/pstoedit
 DEPENDS+=	wget>=1.0:../../net/wget
+
+USE_LANGUAGES=	c c++
 
 WRKSRC=		${WRKDIR}/ivtools-1.2
 GNU_CONFIGURE=	YES
