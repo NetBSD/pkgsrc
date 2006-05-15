@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2004/09/24 21:16:02 dmcmahill Exp $
+$NetBSD: patch-ae,v 1.2 2006/05/15 23:26:18 joerg Exp $
 
 --- iwidgets/Makefile.in.orig	Wed Sep 25 23:12:59 2002
 +++ iwidgets/Makefile.in
@@ -11,3 +11,12 @@ $NetBSD: patch-ae,v 1.1.1.1 2004/09/24 21:16:02 dmcmahill Exp $
  
  # Directory in which to install the archive libtcl.a:
  LIB_INSTALL_DIR = $(INSTALL_ROOT)$(libdir)
+@@ -164,7 +164,7 @@ install-doc:
+ 	@echo "Installing man pages from $(TOP_DIR)/doc into $(MAN_INSTALL_DIR)"
+ 	@cd $(TOP_DIR)/doc; for i in *.n; \
+ 	    do \
+-	    rm -f $(MAN_INSTALL_DIR)/`basename $$i`; \
++	    [ $$i != panedwindow.n ] && rm -f $(MAN_INSTALL_DIR)/`basename $$i`; \
+ 	    rm -f $(MAN_INSTALL_DIR)/`basename iwidgets_$$i`; \
+ 	    sed -e '/man\.macros/r man.macros' -e '/man\.macros/d' \
+ 	        $$i > $(MAN_INSTALL_DIR)/`basename iwidgets_$$i`; \
