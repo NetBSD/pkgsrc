@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/04/17 13:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2006/05/15 22:48:10 joerg Exp $
 #
 
 DISTNAME=		3ddesktop-0.2.8
@@ -11,6 +11,8 @@ HOMEPAGE=		http://desk3d.sourceforge.net/
 COMMENT=		3D Virtual Desktop Switcher
 
 GNU_CONFIGURE=		yes
+
+USE_LANGUAGES=		c c++
 
 EGDIR=			${PREFIX}/share/examples/3ddesktop
 CONF_FILES=		${EGDIR}/3ddesktop.conf ${PKG_SYSCONFDIR}/3ddesktop.conf
