@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4981 2006/05/15 19:04:12 ghen Exp $
+$NetBSD: TODO,v 1.4982 2006/05/15 19:44:06 ghen Exp $
 
 Suggested new packages
 ======================
@@ -791,6 +791,7 @@ Suggested package updates
 	o openal-0.0.8
 	o opencobol-0.31
 	o openh323-1.17.2
+	o openoffice-2.0.2
 	o openpam-20050616
 	o openssh-4.3p2 [pkg/32858]
 	o openssl-0.9.8a
