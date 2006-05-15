@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2006/04/17 13:46:22 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2006/05/15 11:14:02 markd Exp $
 
-DISTNAME=		kile-1.8.1
-PKGREVISION=		4
+DISTNAME=		kile-1.9
 CATEGORIES=		editors kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kile/}
 EXTRACT_SUFX=		.tar.bz2
@@ -17,7 +16,9 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 REPLACE_PERL=		src/kile1.6_upd.pl \
-			src/kile1.7_upd.pl
+			src/kile1.7_upd.pl \
+			src/kile1.9_upd.pl \
+			src/kile1.9-1_upd.pl
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/kdegraphics3/buildlink3.mk"
