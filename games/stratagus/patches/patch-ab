@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2006/05/15 21:30:00 joerg Exp $
+
+--- configure.orig	2006-05-15 21:03:08.000000000 +0000
++++ configure
+@@ -3050,7 +3050,7 @@ if test "`uname -a | grep -is cygwin`" -
+     ARCH=win32
+     OBJDIR=winobj
+     PLATFORM="-DUSE_WIN32"
+-elif test "`uname -a | grep -is bsd`"; then
++elif test "`uname -a | grep -is bsd`" || test `uname -s` = "DragonFly"; then
+     ARCH=bsd
+     PLATFORM="-DBSD"
+ elif test "`uname -a | grep -is beos`"; then
