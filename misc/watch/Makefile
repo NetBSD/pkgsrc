@@ -1,12 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2006/02/12 18:57:21 rillig Exp $
-#
+# $NetBSD: Makefile,v 1.6 2006/05/15 16:01:03 tron Exp $
 
-DISTNAME=	procps-2.0.2
-PKGNAME=	watch-2.0.2
-PKGREVISION=	1
+DISTNAME=	procps-3.2.6
+PKGNAME=	${DISTNAME:S/procps/watch/}
 CATEGORIES=	misc
-MASTER_SITES=	ftp://ftp.slackware.org/pub/linux/slackware/source/a/procps/ \
-		${MASTER_SITE_SUNSITE:=slackware/source/a/procps/}
+MASTER_SITES=	http://procps.sourceforge.net/
 
 MAINTAINER=	simonb@NetBSD.org
 COMMENT=	Watch a program with update intervals
@@ -14,5 +11,7 @@ COMMENT=	Watch a program with update intervals
 MAKEFILE=	${FILESDIR}/Makefile
 MAKE_ENV+=	BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q}
 MAKE_ENV+=	MANOWN=${MANOWN:Q} MANGRP=${MANGRP:Q}
+
+.include "../../devel/ncurses/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
