@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/04/04 18:07:16 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/05/15 21:55:28 joerg Exp $
 
 DISTNAME=		gri-2.12.5
 PKGREVISION=	3
@@ -13,6 +13,7 @@ COMMENT=		Language for scientific graphics applications
 BUILD_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake gs:run makeinfo perl
 REPLACE_PERL+=		gri_merge gri_unpage
 INFO_FILES=		# PLIST
