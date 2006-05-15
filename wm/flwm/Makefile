@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/03/04 21:30:54 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/05/15 22:48:35 joerg Exp $
 #
 
 DISTNAME=	flwm-1.00
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://flwm.sourceforge.net/
 COMMENT=	The Fast, Light Window Manager
 
-
+USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	X_LIBS="-lGL"
 MAKE_ENV+=	CXXFLAGS=${CXXFLAGS:M*:Q}
