@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/14 01:09:07 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/05/15 19:41:45 joerg Exp $
 #
 
 DISTNAME=		jgrasp170
@@ -26,6 +26,9 @@ do-build:
 		-L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib -lX11 \
 		-o ${WRKSRC}/bin/${LOWER_OPSYS}/jgrasp 			\
 		${WRKSRC}/src/linux_exec.c
+
+pre-install:
+	${RM} -f ${WRKSRC}/src/linux_exec.c.orig
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/${PKGNAME_NOREV}
