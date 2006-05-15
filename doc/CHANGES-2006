@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.233 2006/05/15 15:06:44 seb Exp $
+$NetBSD: CHANGES-2006,v 1.234 2006/05/15 16:01:18 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2516,3 +2516,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/p5-ExtUtils-ParseXS version 2.15 [seb 2006-05-15]
 	Added devel/p5-Module-Install version 0.62 [seb 2006-05-15]
 	Added devel/p5-Module-Install-RTx version 0.11 [seb 2006-05-15]
+	Updated misc/watch to 3.2.6 [tron 2006-05-15]
