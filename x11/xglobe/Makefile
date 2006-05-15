@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/04/17 13:47:01 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2006/05/15 22:04:36 joerg Exp $
 #
 
 DISTNAME=	xglobe-0.5
@@ -24,6 +24,7 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_X11BASE=	YES
 USE_TOOLS+=	gmake
+USE_LANGUAGES=	c++
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/xglobe
