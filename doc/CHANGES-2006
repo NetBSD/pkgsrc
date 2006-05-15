@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.238 2006/05/15 19:49:37 tv Exp $
+$NetBSD: CHANGES-2006,v 1.239 2006/05/15 21:33:12 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2523,3 +2523,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/openldap to 2.3.21 [ghen 2006-05-15]
 	Added lang/scsl-jdk15 version 1.5.0p3.1 [tv 2006-05-15]
 	Added lang/scsl-jre15 version 1.5.0p3.1 [tv 2006-05-15]
+	Updated graphics/ImageMagick to 6.2.7.5nb1 [joerg 2006-05-15]
