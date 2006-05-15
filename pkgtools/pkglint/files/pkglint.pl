@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.582 2006/05/15 07:20:45 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.583 2006/05/15 21:37:04 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -268,6 +268,10 @@ sub explain_error($$@) {
 sub explain_warning($$@) {
 	my ($fname, $lines, @texts) = @_;
 	explain(LL_WARNING, $fname, $lines, @texts);
+}
+sub explain_note($$@) {
+	my ($fname, $lines, @texts) = @_;
+	explain(LL_NOTE, $fname, $lines, @texts);
 }
 sub explain_info($$@) {
 	my ($fname, $lines, @texts) = @_;
@@ -557,6 +561,10 @@ sub explain_error($@) {
 sub explain_warning($@) {
 	my ($self, @texts) = @_;
 	PkgLint::Logging::explain_warning($self->fname, $self->[LINES], @texts);
+}
+sub explain_note($@) {
+	my ($self, @texts) = @_;
+	PkgLint::Logging::explain_note($self->fname, $self->[LINES], @texts);
 }
 sub explain_info($@) {
 	my ($self, @texts) = @_;
@@ -4235,7 +4243,7 @@ sub checklines_mk($) {
 
 				} elsif (!exists($allowed_targets->{$target})) {
 					$line->log_warning("Unusual target \"${target}\".");
-					$line->explain(
+					$line->explain_warning(
 						"If you really want to define your own targets, you can \"declare\"",
 						"them by inserting a \".PHONY: my-target\" line before this line. This",
 						"will tell make(1) to not interpret this target's name as a filename.");
@@ -4479,8 +4487,8 @@ sub checkfile_distinfo($) {
 
 	checkline_rcsid($lines->[0], "");
 	if (1 <= $#{$lines} && $lines->[1]->text ne "") {
-		$lines->[1]->log_warning("Empty line expected.");
-		$lines->[1]->explain("This is merely for aesthetical purposes.");
+		$lines->[1]->log_note("Empty line expected.");
+		$lines->[1]->explain_note("This is merely for aesthetical purposes.");
 	}
 
 	$current_fname = undef;
