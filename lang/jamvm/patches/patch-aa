@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2006/05/02 08:59:30 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2006/05/16 21:33:03 tonio Exp $
 
---- configure.orig	2006-01-18 10:08:36.000000000 +0000
+--- configure.orig	2006-01-18 11:08:36.000000000 +0100
 +++ configure
 @@ -1943,19 +1943,25 @@ host_os=`echo $ac_cv_host | sed 's/^\([^
  
@@ -30,6 +30,15 @@ $NetBSD: patch-aa,v 1.1 2006/05/02 08:59:30 joerg Exp $
  powerpc-*-darwin*) host_os=darwin ;;
  *) { { echo "$as_me:$LINENO: error: $host not supported" >&5
  echo "$as_me: error: $host not supported" >&2;}
+@@ -1984,7 +1990,7 @@ if test "${enable_int_caching+set}" = se
+   enableval="$enable_int_caching"
+ 
+ else
+-  if test "$host_cpu" == i386; then
++  if test "$host_cpu" = i386; then
+          enable_int_caching=no
+      fi
+ fi;
 @@ -3289,13 +3295,13 @@ done
  
  
