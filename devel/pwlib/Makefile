@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2006/04/12 18:30:04 joerg Exp $
+# $NetBSD: Makefile,v 1.55 2006/05/16 15:56:43 joerg Exp $
 
 DISTNAME=	pwlib-v1_8_3-src
 PKGNAME=	pwlib-1.8.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES+=	http://www.voxgratia.org/releases/
 EXTRACT_SUFX=	-tar.gz
