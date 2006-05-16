@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.352 2006/05/16 17:36:43 jlam Exp $
+# $NetBSD: Makefile,v 1.353 2006/05/16 21:45:32 jlam Exp $
 #
 
 COMMENT=	System utilities
@@ -231,12 +231,24 @@ SUBDIR+=	vidc-tools
 SUBDIR+=	vifm
 SUBDIR+=	vip
 SUBDIR+=	vobcopy
+SUBDIR+=	wbm-apache
+SUBDIR+=	wbm-at
 SUBDIR+=	wbm-bandwidth
 SUBDIR+=	wbm-bind8
 SUBDIR+=	wbm-change-user
+SUBDIR+=	wbm-cluster-copy
+SUBDIR+=	wbm-cluster-cron
+SUBDIR+=	wbm-cluster-passwd
+SUBDIR+=	wbm-cluster-shell
+SUBDIR+=	wbm-cluster-useradmin
+SUBDIR+=	wbm-cluster-webmin
+SUBDIR+=	wbm-custom
 SUBDIR+=	wbm-cyrus-imapd
 SUBDIR+=	wbm-dhcpd
+SUBDIR+=	wbm-dovecot
+SUBDIR+=	wbm-fetchmail
 SUBDIR+=	wbm-file
+SUBDIR+=	wbm-htaccess-htpasswd
 SUBDIR+=	wbm-inetd
 SUBDIR+=	wbm-ipfilter
 SUBDIR+=	wbm-ldap-useradmin
@@ -246,8 +258,11 @@ SUBDIR+=	wbm-mount
 SUBDIR+=	wbm-mysql
 SUBDIR+=	wbm-net
 SUBDIR+=	wbm-net
+SUBDIR+=	wbm-openslp
+SUBDIR+=	wbm-passwd
 SUBDIR+=	wbm-postfix
 SUBDIR+=	wbm-postgresql
+SUBDIR+=	wbm-qmailadmin
 SUBDIR+=	wbm-quota
 SUBDIR+=	wbm-sendmail
 SUBDIR+=	wbm-shell
