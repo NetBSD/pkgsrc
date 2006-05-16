@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.583 2006/05/15 21:37:04 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.584 2006/05/16 22:17:46 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3211,7 +3211,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 
 		if (($op eq ":=" && $value =~ qr"^${re_del}$") ||
 		    ($op eq ":=" && $value =~ qr"^${re_del}\s+${re_add}$") ||
-		    ($op eq "+" && $value =~ qr"^${re_add}$")) {
+		    ($op eq "+=" && $value =~ qr"^${re_add}$")) {
 			# Fine.
 
 		} else {
