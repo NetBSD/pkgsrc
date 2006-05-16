@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/13 01:20:32 rillig Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/05/16 22:01:18 joerg Exp $
 bin/clog2alog
 bin/clog_print
 bin/mpicc
@@ -24,6 +24,13 @@ bin/mpirun_dbg.xxgdb
 bin/serv_p4
 bin/tarch
 bin/tdevice
+include/basex11.h
+include/mpe.h
+include/mpe_graphics.h
+include/mpe_log.h
+include/mpeexten.h
+include/mpef.h
+include/mpetools.h
 include/mpi.h
 include/mpi2c++/comm.h
 include/mpi2c++/comm_inln.h
@@ -1012,6 +1019,10 @@ share/doc/mpi-ch/mpichman-globus2.pdf
 share/doc/mpi-ch/mpichman-globus2.ps.gz
 share/doc/mpi-ch/mpiman.ps
 share/doc/mpi-ch/romio-users.ps.gz
+share/examples/mpi-ch/mpichconf.h.dat
+share/examples/mpi-ch/mpichlib.conf
+share/examples/mpi-ch/mpichversion.c
+share/examples/mpi-ch/mpif77.conf
 share/examples/mpi-ch/MPI-2-C++/Makefile
 share/examples/mpi-ch/MPI-2-C++/Makefile.in
 share/examples/mpi-ch/MPI-2-C++/README

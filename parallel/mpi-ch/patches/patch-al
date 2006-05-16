@@ -1,7 +1,8 @@
-$NetBSD: patch-al,v 1.7 2005/03/03 12:01:30 garbled Exp $
---- util/mpiinstall.in.orig	2004-07-02 10:34:43.000000000 -0700
-+++ util/mpiinstall.in	2005-03-03 02:43:21.000000000 -0700
-@@ -172,7 +172,7 @@
+$NetBSD: patch-al,v 1.8 2006/05/16 22:01:19 joerg Exp $
+
+--- util/mpiinstall.in.orig	2004-07-02 17:34:43.000000000 +0000
++++ util/mpiinstall.in
+@@ -172,7 +172,7 @@ if [ "$prefix_override" = 1 ] ; then
      bindir=$prefix/bin
      sbindir=$prefix/sbin
      includedir=$prefix/include
@@ -10,9 +11,12 @@ $NetBSD: patch-al,v 1.7 2005/03/03 12:01:30 garbled Exp $
      libdir=$prefix/lib
      sharedlib_dir=$libdir/shared
      messagecat_dir=$libdir
-@@ -453,9 +453,11 @@
+@@ -451,11 +451,13 @@ MkDir $sbindir
+ MkDir $includedir
+ MkDir $datadir
  MkDir $docdir
- MkDir $sysconfdir
+-MkDir $sysconfdir
++#MkDir $sysconfdir
  
 -MkDir $prefix/examples
 +MkDir $prefix/share/util
@@ -24,7 +28,68 @@ $NetBSD: patch-al,v 1.7 2005/03/03 12:01:30 garbled Exp $
      MkDir $includedir/mpi2c++
  fi
  
-@@ -697,7 +699,7 @@
+@@ -478,14 +480,14 @@ chmod +x $UNINSTALLFILE
+ if [ -z "$libonly" ] ; then
+     CopyFile ${top_srcdir}/bin/tarch $bindir $XMODE
+     CopyFile ${top_srcdir}/bin/tdevice $bindir $XMODE
+-    CopyFile util/mpichlib.conf ${sysconfdir} 
++    CopyFile util/mpichlib.conf ${prefix}/share/examples/mpi-ch
+     if [ -x "bin/mpichversion.exe" ] ; then
+         CopyFile bin/mpichversion.exe $bindir $XMODE
+     else 
+         CopyFile bin/mpichversion $bindir $XMODE
+     fi
+     # Copy the source file for mpichversion to the sysconfdir
+-    CopyFile ${top_srcdir}/util/mpichversion.c ${sysconfdir}
++    CopyFile ${top_srcdir}/util/mpichversion.c ${prefix}/share/examples/mpi-ch
+     #
+     # mpiman
+     $Show /bin/rm -f $DESTDIR$bindir/mpiman
+@@ -566,12 +568,12 @@ if [ -z "$libonly" ] ; then
+     FixupFile2 bin/mpicc $bindir/mpicc $XMODE
+     if [ -x src/fortran/src/mpif77 -a "@NOF77@" = "0" ] ; then
+         CopyFile src/fortran/src/mpif77 $bindir/mpif77 $XMODE
+-        CopyFile src/fortran/src/mpif77.conf $sysconfdir
++        CopyFile src/fortran/src/mpif77.conf ${prefix}/share/examples/mpi-ch
+         CopyFile $includebuild_dir/mpif.h $includedir
+     fi
+     if [ -x src/fortran/src/mpif90 -a "@NO_F90@" = "0" ] ; then
+         CopyFile src/fortran/src/mpif90 $bindir/mpif90 $XMODE
+-	CopyFile src/fortran/src/mpif90.conf $sysconfdir
++	CopyFile src/fortran/src/mpif90.conf ${prefix}/share/examples/mpi-ch
+     fi
+     #
+     # mpiCC, if C++ selected
+@@ -623,23 +625,23 @@ else
+     else 
+         CopyFile bin/mpichversion $bindir $XMODE
+     fi
+-    CopyFile util/mpichlib.conf ${sysconfdir}
++    CopyFile util/mpichlib.conf ${prefix}/share/examples/mpi-ch
+     # Copy the source file for mpichversion to the sysconfdir
+-    CopyFile $top_srcdir/util/mpichversion.c ${sysconfdir}
++    CopyFile $top_srcdir/util/mpichversion.c ${prefix}/share/examples/mpi-ch
+     FixupFile $top_srcdir/util/mpireconfig.in $bindir/mpireconfig $XMODE
+     # No user include uses mpichconf.h
+-    CopyFile $includebuild_dir/mpichconf.h $sysconfdir/mpichconf.h.dat
++    CopyFile $includebuild_dir/mpichconf.h ${prefix}/share/examples/mpi-ch/mpichconf.h.dat
+     CopyFile $includebuild_dir/mpidefs.h $includedir 
+     CopyFile $includebuild_dir/mpi.h $includedir
+     if [ -s $includebuild_dir/mpif.h -a "@NOF77@" = "0" ] ; then
+         CopyFile $includebuild_dir/mpi_fortdefs.h $includedir
+         CopyFile src/fortran/src/mpif77 $bindir/mpif77 $XMODE
+-	CopyFile src/fortran/src/mpif77.conf $sysconfdir
++	CopyFile src/fortran/src/mpif77.conf ${prefix}/share/examples/mpi-ch
+         CopyFile $includebuild_dir/mpif.h $includedir
+     fi
+     if [ -x src/fortran/src/mpif90 -a "@NO_F90@" = "0" ] ; then
+         CopyFile src/fortran/src/mpif90 $bindir/mpif90 $XMODE
+-	CopyFile src/fortran/src/mpif90.conf $sysconfdir
++	CopyFile src/fortran/src/mpif90.conf ${prefix}/share/examples/mpi-ch
+     fi
+     if [ -s romio/include/mpio.h ] ; then
+         CopyFile romio/include/mpio.h $includedir
+@@ -697,7 +699,7 @@ if [ -z "$libonly" ] ; then
      #	$CPRP -r util/machines $prefix/util/machines.anl
      for file in util/machines/machines* ; do
          if [ -s $file ] ; then 
@@ -33,7 +98,16 @@ $NetBSD: patch-al,v 1.7 2005/03/03 12:01:30 garbled Exp $
  	fi
      done
      #
-@@ -994,6 +996,8 @@
+@@ -710,7 +712,7 @@ if [ -z "$libonly" ] ; then
+     #CopyFile include/protofix.h $includedir
+     #CopyFile include/patchlevel.h $includedir
+     # No user include uses mpichconf.h
+-    CopyFile $includebuild_dir/mpichconf.h $sysconfdir/mpichconf.h.dat
++    CopyFile $includebuild_dir/mpichconf.h ${prefix}/share/examples/mpi-ch/mpichconf.h.dat
+     CopyFile $includebuild_dir/mpidefs.h $includedir
+     # Install ROMIO files
+     if [ -s romio/include/mpio.h ] ; then
+@@ -994,6 +996,8 @@ fi
  CopyFile $top_srcdir/util/cleanipcs $sbindir $XMODE
  #
  # Example programs
@@ -42,7 +116,7 @@ $NetBSD: patch-al,v 1.7 2005/03/03 12:01:30 garbled Exp $
  CopyFile $top_srcdir/installtest/Makefile.in $prefix/examples
  #
  # This SHOULD use mpireconfig...
-@@ -1027,14 +1031,16 @@
+@@ -1027,14 +1031,16 @@ CopyFile $top_srcdir/installtest/README 
  $Show "(cd $DESTDIR$prefix/examples ; /bin/rm -f mpirun ; \
  	  ln -s ../bin/mpirun mpirun )"
  echo "/bin/rm -f $prefix/examples/mpirun" >> $UNINSTALLFILE
@@ -61,7 +135,7 @@ $NetBSD: patch-al,v 1.7 2005/03/03 12:01:30 garbled Exp $
    fi
  fi
  #
-@@ -1043,39 +1049,40 @@
+@@ -1043,39 +1049,40 @@ Savevar=$prefix
  if [ -n "$CPP_DIR" -a "$buildcpp" = 1 ] ; then 
  # Removed the installation of these extra examples.  
      # C++ Example programs 

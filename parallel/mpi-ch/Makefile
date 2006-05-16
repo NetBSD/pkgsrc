@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2006/04/13 01:20:32 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2006/05/16 22:01:18 joerg Exp $
 
 DISTNAME=		mpich-1.2.6
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		parallel
 MASTER_SITES=		ftp://ftp.mcs.anl.gov/pub/mpi/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} mpich-docs.tgz
@@ -16,6 +16,7 @@ DEPENDS+=		{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/openssh
 
 BUILD_TARGET=		ALL examples
 INSTALL_TARGET=		install-all
+USE_LANGUAGES=		c c++ fortran
 USE_TOOLS+=		perl:run
 HAS_CONFIGURE=		yes
 USE_FORTRAN=		yes
@@ -41,6 +42,13 @@ CONFIGURE_ENV+=		PERLFULLPATH=${PERL5:Q}
 
 # build PATH in the config file is not a problem
 CHECK_WRKREF_SKIP+=	${PREFIX}/share/examples/mpi-ch/perftest/config.system
+
+PKG_SYSCONFSUBDIR=	mpi-ch
+EGDIR=			${PREFIX}/share/examples/mpi-ch
+CONF_FILES+=		${EGDIR}/mpichconf.h.dat ${PKG_SYSCONFDIR}/mpichconf.h.dat
+CONF_FILES+=		${EGDIR}/mpichlib.conf ${PKG_SYSCONFDIR}/mpichlib.conf
+CONF_FILES+=		${EGDIR}/mpichversion.c ${PKG_SYSCONFDIR}/mpichversion.c
+CONF_FILES+=		${EGDIR}/mpif77.conf ${PKG_SYSCONFDIR}/mpif77.conf
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-arch=netbsd
