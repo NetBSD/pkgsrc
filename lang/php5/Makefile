@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2006/05/07 09:54:55 martti Exp $
+# $NetBSD: Makefile,v 1.33 2006/05/16 19:54:02 adrianp Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
-#PKGREVISION=		# empty
+PKGREVISION=		1
 CATEGORIES=		lang
 
 HOMEPAGE=		http://www.php.net/
@@ -31,20 +31,8 @@ EGDIR=			${PREFIX}/share/examples/php
 CONF_FILES=		${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 OWN_DIRS=		${PREFIX}/${PHP_EXTENSION_DIR}
 
-# fetch pear PHAR explicitly; the PHP installation tries to wget it if it's not
-# present; use DIST_SUBDIR, since the pear file is not versioned
+# This can be removed once 5.1.5 is released
 DIST_SUBDIR=		${PKGNAME}
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
-			install-pear-nozlib.phar
-
-# do not checksum the pear file - it's not versioned and might (and
-# very probably will) change over time
-IGNOREFILES=		install-pear-nozlib.phar
-
-SITES.install-pear-nozlib.phar =	http://pear.php.net/
-
-post-extract:
-	${CP} ${DISTDIR}/${DIST_SUBDIR}/install-pear-nozlib.phar ${WRKSRC}/pear/
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/sapi/cli/php ${PREFIX}/bin/php
