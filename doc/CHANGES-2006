@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.253 2006/05/16 17:36:53 jlam Exp $
+$NetBSD: CHANGES-2006,v 1.254 2006/05/16 18:02:32 tv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2560,3 +2560,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/wbm-cyrus-imapd version 1.4.3 [jlam 2006-05-16]
 	Updated finance/gnucash-devel to 1.9.6 [wiz 2006-05-16]
 	Added sysutils/wbm-change-user version 1.270 [jlam 2006-05-16]
+	Updated net/freenet-tools to 0.2.25 [tv 2006-05-16]
