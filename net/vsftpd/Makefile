@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/04/23 00:12:41 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/05/16 21:08:50 joerg Exp $
 #
 
 DISTNAME=	vsftpd-2.0.4
@@ -35,6 +35,12 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	vsftpd.8 vsftpd.conf.5 vsftpd.conf
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_STAGE.paths=	post-patch
+
+MAKE_ENV+=		LIBS=${LIBS:M*:Q}
+
+.include "../../mk/bsd.prefs.mk"
+
+LIBS.SunOS=	-lsocket -lnsl -lrt -lsendfile
 
 .include "options.mk"
 
