@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/05/16 21:22:55 tonio Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/16 21:26:46 tonio Exp $
 #
 
 DISTNAME=		jamvm-1.4.2
@@ -16,8 +16,6 @@ GNU_CONFIGURE_PREFIX=	${JAVA_HOME}
 GNU_CONFIGURE_MANDIR=	${PREFIX}/${PKGMANDIR}
 USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--with-classpath-install-dir=${PREFIX}/
-
-.include "../../mk/bsd.prefs.mk"
 
 JAVA_NAME=		jamvm
 JAVA_HOME=		${PREFIX}/java/jamvm
