@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/04/01 14:35:17 ben Exp $
+$NetBSD: patch-aa,v 1.2 2006/05/16 13:41:57 ben Exp $
 
---- makefile.orig	2005-10-15 15:28:45.000000000 -0700
+--- makefile.orig	2006-04-01 11:02:46.000000000 -0800
 +++ makefile
 @@ -31,9 +31,8 @@
  # cure the problem, change this file from using PC-style end-of-line (carriage 
@@ -11,6 +11,6 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/04/01 14:35:17 ben Exp $
 -LNK=gcc
 +CFLAGS+=-DANSILIBS
 +LNK=${CC}
+ INSTALL=install
  
- all : abc2midi midi2abc abc2abc mftext yaps midicopy abcmatch
- 
+ prefix=/usr/local
