@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2006/03/14 16:00:42 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/05/16 04:01:28 jlam Exp $
 
-DISTNAME=	webmin-1.170-minimal
+DISTNAME=	webmin-1.270-minimal
 PKGNAME=	${DISTNAME:S/-minimal$//}
-PKGREVISION=	2
 CATEGORIES=	sysutils www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=webadmin/}
 
@@ -17,60 +16,82 @@ USE_LANGUAGES=	# empty
 NO_BUILD=	yes
 
 USE_TOOLS+=	perl:run
-REPLACE_PERL+=	*.cgi */*.cgi *.pl */*.pl
 
-WEBMIN_DIR=		${PREFIX}/${WEBMIN_SUBDIR}
-WEBMIN_SUBDIR=		share/webmin
-WEBMIN_ETCDIR?=		${PKG_SYSCONFDIR}/webmin
-WEBMIN_LOGDIR?=		${VARBASE}/log/webmin
+WEBMIN_DIR=		${PREFIX}/share/webmin
+WEBMIN_EGDIR=		${PREFIX}/share/examples/webmin
+WEBMIN_ETCDIR=		${PKG_SYSCONFDIR}
+WEBMIN_VARDIR=		${VARBASE}/webmin
 FILES_SUBST+=		WEBMIN_DIR=${WEBMIN_DIR:Q}
+FILES_SUBST+=		WEBMIN_EGDIR=${WEBMIN_EGDIR:Q}
 FILES_SUBST+=		WEBMIN_ETCDIR=${WEBMIN_ETCDIR:Q}
-FILES_SUBST+=		WEBMIN_LOGDIR=${WEBMIN_LOGDIR:Q}
+FILES_SUBST+=		WEBMIN_VARDIR=${WEBMIN_VARDIR:Q}
 MESSAGE_SUBST+=		WEBMIN_DIR=${WEBMIN_DIR:Q}
 
+PKG_SYSCONFSUBDIR=	webmin
+OWN_DIRS_PERMS+=	${WEBMIN_VARDIR} ${ROOT_USER} ${ROOT_GROUP} 0700
+.for _file_ in		config install-dir perl-path var-path version
+CONF_FILES+=		${WEBMIN_EGDIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_}
+.endfor
+.for _module_ in	acl cron init inittab man proc servers webmin	\
+			webminlog
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/${_module_}			\
+			${ROOT_USER} ${ROOT_GROUP} 0700
+CONF_FILES_PERMS+=	${WEBMIN_EGDIR}/${_module_}/config		\
+			${PKG_SYSCONFDIR}/${_module_}/config		\
+			${ROOT_USER} ${ROOT_GROUP} 0600
+.endfor
+.for _file_ in		miniserv.pem
+CONF_FILES_PERMS+=	${WEBMIN_DIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_} \
+			${ROOT_USER} ${ROOT_GROUP} 0600
+.endfor
+.for _file_ in		miniserv.conf miniserv.users webmin.acl
+CONF_FILES_PERMS+=	${WEBMIN_EGDIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_} \
+			${ROOT_USER} ${ROOT_GROUP} 0600
+.endfor
+.for _file_ in		reload restart start stop
+CONF_FILES_PERMS+=	${WEBMIN_EGDIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_} \
+			${ROOT_USER} ${ROOT_GROUP} 0755
+.endfor
 RCD_SCRIPTS=		webmin
-OWN_DIRS=		${WEBMIN_LOGDIR}
-
-# Dynamically generate the Webmin PLIST from the installed files.
-WEBMIN_PLIST_FILES_CMD= \
-	( cd ${PREFIX}; ${FIND} ${WEBMIN_SUBDIR} \! -type d -print )	\
-	| ${SORT} -u
-WEBMIN_PLIST_DIRS_CMD= \
-	( cd ${PREFIX}; ${FIND} ${WEBMIN_SUBDIR} -type d -print )	\
-	| ${SED} -e "s,^,@unexec ${RMDIR} -p %D/,"			\
-		 -e "s,\$$, 2>/dev/null || ${TRUE},"			\
-	| ${SORT} -ur
-GENERATE_PLIST+=	${WEBMIN_PLIST_FILES_CMD}; ${WEBMIN_PLIST_DIRS_CMD};
-
-do-configure:
-	for file in ${WRKSRC}/setup.sh; do				\
-		${SED}	-e "s|/etc/webmin|${WEBMIN_ETCDIR}|g"		\
-			-e "s|/var/webmin|${WEBMIN_LOGDIR}|g"		\
-			-e "s|/usr/bin/perl|${PERL5}|g"			\
-			-e "/chown.*root/s|root|${ROOT_USER}|g"		\
-			-e "/chgrp.*bin/s|bin|${ROOT_GROUP}|g"		\
-			$$file > $$file.new;				\
-		if [ -x $$file ]; then					\
-			${CHMOD} +x $$file.new;				\
-		fi;							\
-		${MV} -f $$file.new $$file;				\
-	done
-	case "${USE_BUILTIN.openssl}" in				\
-	[nN][oO])							\
-		for file in ${WRKSRC}/acl/config ${WRKSRC}/acl/config-*; do \
-			${SED}	-e "s|^ssleay=.*|ssleay=${SSLBASE}/bin/openssl|" \
-				$$file > $$file.new;			\
-			${MV} -f $$file.new $$file;			\
-		done;							\
-		;;							\
-	esac
-
-pre-install:
-	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
-
-do-install:
-	${INSTALL_DATA_DIR} ${WEBMIN_DIR}
-	${CP} -R ${WRKSRC}/* ${WEBMIN_DIR}
 
 .include "../../security/openssl/buildlink3.mk"
+
+do-configure:
+	${SED}	-e "s,@WEBMIN_EGDIR@,${WEBMIN_EGDIR},g"			\
+		-e "s,@WEBMIN_VARDIR@,${WEBMIN_VARDIR},g"		\
+		-e "s,@PERL5@,"${PERL5:Q}",g"				\
+		${FILESDIR}/setup-pre.sh > ${WRKSRC}/setup-pre.sh
+	cd ${WRKSRC}; for file in acl/config acl/config-*; do		\
+		${SED} -e "s,^ssleay=.*,ssleay=${SSLBASE}/bin/openssl,"	\
+			"$$file" > "$$file.new";			\
+		${MV} -f "$$file.new" "$$file";				\
+	done
+	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
+
+# Fix up the path to the config directory in the installed example config
+# files.
+#
+do-install:
+	${SH} ${WRKSRC}/setup.sh ${WEBMIN_DIR}
+	${SED}	-e "/^env_WEBMIN_CONFIG=/s,${WEBMIN_EGDIR},${WEBMIN_ETCDIR}," \
+		-e "/^logout=/s,${WEBMIN_EGDIR},${WEBMIN_ETCDIR},"	\
+		-e "/^userfile=/s,${WEBMIN_EGDIR},${WEBMIN_ETCDIR},"	\
+		-e "/^keyfile=/s,${WEBMIN_EGDIR},${WEBMIN_ETCDIR},"	\
+		${WEBMIN_EGDIR}/miniserv.conf > ${WRKDIR}/miniserv.conf
+	for file in reload start stop; do				\
+		${SED}	-e "s,${WEBMIN_EGDIR}/miniserv.conf,${WEBMIN_ETCDIR}/miniserv.conf," \
+			${WEBMIN_EGDIR}/$$file > ${WRKDIR}/$$file;	\
+	done
+	cd ${WEBMIN_EGDIR} && ${RM} -f miniserv.conf reload start stop
+	for file in miniserv.conf; do					\
+		${INSTALL_DATA} ${WRKDIR}/$$file ${WEBMIN_EGDIR}/$$file; \
+		${RM} -f ${WRKDIR}/$$file;				\
+	done
+	for file in reload start stop; do				\
+		${INSTALL_SCRIPT} ${WRKDIR}/$$file ${WEBMIN_EGDIR}/$$file; \
+		${RM} -f ${WRKDIR}/$$file;				\
+	done
+	${RM} -f ${WEBMIN_EGDIR}/miniserv.pem ${WEBMIN_EGDIR}/module.infos.cache
+	cd ${WEBMIN_DIR} && ${CHMOD} 0400 setup.pl setup.sh setup-pre.sh
+
 .include "../../mk/bsd.pkg.mk"
