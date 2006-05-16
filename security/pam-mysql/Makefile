@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/07 01:22:16 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/16 14:34:44 joerg Exp $
 
 DISTNAME=	pam_mysql-0.7RC1
 PKGNAME=	${DISTNAME:S/_/-/:S/RC/rc/}
@@ -13,6 +13,7 @@ DOCDIR=		${PREFIX}/share/doc/pam-mysql
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client:Q}
 CONFIGURE_ARGS+=	--with-pam-mods-dir=${PREFIX:Q}/lib/security
