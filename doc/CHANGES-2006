@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.247 2006/05/16 14:57:58 tron Exp $
+$NetBSD: CHANGES-2006,v 1.248 2006/05/16 15:46:19 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2539,3 +2539,20 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/classpath-gui to 0.91 [tonio 2006-05-16]
 	Updated audio/abcmidi to 2006-04-22 [ben 2006-05-16]
 	Updated misc/kdeartwork3 to 3.5.2nb2 [tron 2006-05-16]
+	Added sysutils/wbm-bandwidth version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-bind8 version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-inetd version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-ldap-useradmin version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-lpadmin version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-mailboxes version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-mount version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-mysql version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-quota version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-sendmail version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-sshd version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-status version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-syslog version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-telnet version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-time version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-tunnel version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-useradmin version 1.270 [jlam 2006-05-16]
