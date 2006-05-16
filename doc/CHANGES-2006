@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.244 2006/05/16 04:17:20 jlam Exp $
+$NetBSD: CHANGES-2006,v 1.245 2006/05/16 13:28:39 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2535,3 +2535,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/wbm-postfix version 1.270 [jlam 2006-05-16]
 	Added sysutils/wbm-shell version 1.270 [jlam 2006-05-16]
 	Added sysutils/wbm-postgresql version 1.270 [jlam 2006-05-16]
+	Updated lang/classpath to 0.91 [tonio 2006-05-16]
+	Updated lang/classpath-gui to 0.91 [tonio 2006-05-16]
