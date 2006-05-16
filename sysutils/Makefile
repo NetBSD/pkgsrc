@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.348 2006/05/16 04:04:49 jlam Exp $
+# $NetBSD: Makefile,v 1.349 2006/05/16 04:17:00 jlam Exp $
 #
 
 COMMENT=	System utilities
@@ -236,6 +236,7 @@ SUBDIR+=	wbm-file
 SUBDIR+=	wbm-ipfilter
 SUBDIR+=	wbm-net
 SUBDIR+=	wbm-postfix
+SUBDIR+=	wbm-postgresql
 SUBDIR+=	wbm-shell
 SUBDIR+=	webmin
 SUBDIR+=	whowatch
