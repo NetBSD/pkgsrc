@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/29 02:01:19 minskim Exp $
+$NetBSD: distinfo,v 1.2 2006/05/16 22:37:27 wiz Exp $
 
-SHA1 (gsoap_2.7.6c.tar.gz) = 84163c5589fa5c61be98981d312a202f4582e2d3
-RMD160 (gsoap_2.7.6c.tar.gz) = ab47ee4c766bc6227804545aefd11fa1aab98b52
-Size (gsoap_2.7.6c.tar.gz) = 5998670 bytes
+SHA1 (gsoap_2.7.7.tar.gz) = 5808aa51ee12b50683c12a4d20941a2a6cc490b6
+RMD160 (gsoap_2.7.7.tar.gz) = 420cafdbbeede58e191f94f25013fe8387ac51d6
+Size (gsoap_2.7.7.tar.gz) = 5935586 bytes
