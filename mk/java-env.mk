@@ -1,4 +1,4 @@
-# $NetBSD: java-env.mk,v 1.7 2005/12/29 06:22:26 jlam Exp $
+# $NetBSD: java-env.mk,v 1.8 2006/05/16 21:25:38 rillig Exp $
 #
 # This Makefile fragment handles Java wrappers and is meant to be included
 # by packages that provide a Java build-time and/or run-time environment.
@@ -34,6 +34,8 @@ JAVA_HOME?=		# undefined
 JAVA_CLASSPATH?=	# empty
 JAVA_UNLIMIT?=		# empty
 JAVA_WRAPPERS?=		# empty
+
+.include "../../mk/bsd.prefs.mk"
 
 .if !empty(JAVA_WRAPPERS)
 INSTALLATION_DIRS+=	bin
