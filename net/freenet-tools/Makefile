@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2006/03/22 22:50:32 tv Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/16 18:02:04 tv Exp $
 #
 
-DISTNAME=		ft-0.2.23
+DISTNAME=		ft-0.2.25
 PKGNAME=		${DISTNAME:S/ft-/freenet-tools-/}
 WRKSRC=			${WRKDIR}/ft
-PKGREVISION=		1
 CATEGORIES=		net www
 MASTER_SITES=		http://entropy.stop1984.com/files/
 EXTRACT_SUFX=		.tgz
@@ -16,13 +15,14 @@ COMMENT=		Freenet Tools, freesite manipulation tools for Freenet and Entropy
 USE_TOOLS+=		gmake
 
 MAKE_FLAGS+=		CC=${CC:Q} LD=${CC:Q} CFLAGS=${CFLAGS:M*:Q} LDFLAGS=${LDFLAGS:M*:Q}
-CFLAGS+=		-DFT_BIN=\"${PREFIX}/bin\"
+CFLAGS+=		-DFT_BIN=\"${PREFIX}/bin\" -D_DEBUG
 
 INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ft ${PREFIX}/bin/ft
-.for f in fcpchk fcpget fcpgetsite fcphello fcpinv fcpkey fcpput fcpputsite
+.for f in fcpbroadcast fcpchk fcpget fcpgetsite fcphello fcpinv fcpkey \
+	  fcpput fcpputsite fcpreceive
 	${LN} -s -f ft ${PREFIX}/bin/${f}
 .endfor
 
