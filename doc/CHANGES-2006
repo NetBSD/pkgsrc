@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.246 2006/05/16 13:43:38 ben Exp $
+$NetBSD: CHANGES-2006,v 1.247 2006/05/16 14:57:58 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2538,3 +2538,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/classpath to 0.91 [tonio 2006-05-16]
 	Updated lang/classpath-gui to 0.91 [tonio 2006-05-16]
 	Updated audio/abcmidi to 2006-04-22 [ben 2006-05-16]
+	Updated misc/kdeartwork3 to 3.5.2nb2 [tron 2006-05-16]
