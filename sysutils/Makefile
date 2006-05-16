@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.351 2006/05/16 16:31:53 jlam Exp $
+# $NetBSD: Makefile,v 1.352 2006/05/16 17:36:43 jlam Exp $
 #
 
 COMMENT=	System utilities
@@ -233,6 +233,7 @@ SUBDIR+=	vip
 SUBDIR+=	vobcopy
 SUBDIR+=	wbm-bandwidth
 SUBDIR+=	wbm-bind8
+SUBDIR+=	wbm-change-user
 SUBDIR+=	wbm-cyrus-imapd
 SUBDIR+=	wbm-dhcpd
 SUBDIR+=	wbm-file
