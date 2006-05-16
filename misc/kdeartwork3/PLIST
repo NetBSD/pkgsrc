@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2006/03/30 02:55:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.22 2006/05/16 14:57:06 tron Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -243,7 +243,6 @@ share/kde/applnk/System/ScreenSavers/vermiculate.desktop
 share/kde/applnk/System/ScreenSavers/vidwhacker.desktop
 share/kde/applnk/System/ScreenSavers/vines.desktop
 share/kde/applnk/System/ScreenSavers/wander.desktop
-share/kde/applnk/System/ScreenSavers/webcollage.desktop
 share/kde/applnk/System/ScreenSavers/whirlwindwarp.desktop
 share/kde/applnk/System/ScreenSavers/whirlygig.desktop
 share/kde/applnk/System/ScreenSavers/worm.desktop
