@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.7 2006/04/15 19:52:27 tonio Exp $
+# $NetBSD: Makefile.common,v 1.8 2006/05/16 13:27:33 tonio Exp $
 
-DISTNAME=		classpath-0.90
+DISTNAME=		classpath-0.91
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gnu.org/gnu/classpath/
 
