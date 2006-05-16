@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.91 2006/05/11 18:26:51 rillig Exp $
+# $NetBSD: makevars.map,v 1.92 2006/05/16 22:18:17 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -393,7 +393,7 @@ PKG_JVMS_ACCEPTED	List of { blackdown-jdk13 jdk jdk14 kaffe sun-jdk13 sun-jdk14 
 PKG_JVM_DEFAULT		Unchecked []
 PKG_LEGACY_OPTIONS	List of Option
 PKG_LIBTOOL		Pathname
-PKG_OPTIONS		List of Option [o:,m:,c:]
+PKG_OPTIONS		List of Option [o:,m:,c:,bsd.options.mk:s]
 PKG_OPTIONS_DEPRECATED_WARNINGS	List of ShellWord
 PKG_OPTIONS_GROUP	List of Option [o:s,m:s]
 PKG_OPTIONS_LEGACY_OPTS	List of Unchecked [m:a,c:a,o:a]
