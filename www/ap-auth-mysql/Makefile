@@ -1,26 +1,23 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:30:56 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/05/16 02:35:37 ben Exp $
 #
 
 DISTNAME=		libapache-mod-auth-mysql_4.3.1
 PKGNAME=		${DISTNAME:S/libapache-mod/ap/:S/_/-/}
-PKGREVISION=		4
+PKGREVISION=		5
 WRKSRC=			${WRKDIR}/${DISTNAME:S/_/-/}
 CATEGORIES=		www databases security
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/liba/libapache-mod-auth-mysql/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://packages.debian.org/unstable/web/libapache-mod-auth-mysql.html
-COMMENT=		Apache (${PKG_APACHE}) module to allow authentication against a MySQL database
+COMMENT=		Module to allow apache authentication against a MySQL database
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--with-mysql-includes=${BUILDLINK_PREFIX.mysql-client}/include/mysql	\
 			--with-mysql-libs=${BUILDLINK_PREFIX.mysql-client}/lib/mysql
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.mysql-client}/include/mysql
-LDFLAGS+=		-L${BUILDLINK_PREFIX.mysql-client}/lib/mysql	\
-			-lmysqlclient					\
-			${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
+LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 
 .include "../../mk/apache.mk"
 
