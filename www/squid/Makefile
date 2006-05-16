@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.175 2006/04/23 00:12:42 jlam Exp $
+# $NetBSD: Makefile,v 1.176 2006/05/16 05:47:53 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE13
 PKGNAME=	squid-2.5.13
@@ -89,24 +89,30 @@ OPTIONAL_FILES+= libexec/wb_ntlmauth man/man8/squid_unix_group.8
 #
 OPTIONAL_FILES+= libexec/ip_user_check libexec/squid_unix_group
 
+SUBST_CLASSES+=		confs
+SUBST_STAGE.confs=	pre-configure
+SUBST_FILES.confs=	src/cf.data.pre
+SUBST_SED.confs=	-e "s/@USER@/${SQUID_USER}/"
+SUBST_MESSAGE.confs=	Fixing configuration files.
+
 pre-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid/errors
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/squid/icons
+	${INSTALL_DATA_DIR} ${PREFIX}/share/squid
+	${INSTALL_DATA_DIR} ${PREFIX}/share/squid/errors
+	${INSTALL_DATA_DIR} ${PREFIX}/share/squid/icons
 
 post-install:
-	@${INSTALL_DATA_DIR} ${EXAMPLESDIR}
+	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 .for f in ${EXAMPLES_FILES}
 	cd ${WRKSRC} && \
 	${INSTALL_DATA}	${f} ${EXAMPLESDIR}/`basename ${f} .default`
 .endfor
-	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	@cd ${WRKSRC};						\
 	for i in ${DOCFILES}; do				\
 		${INSTALL_DATA} $$i ${DOCDIR};			\
 	done
-	@(							\
+	(							\
 	for i in ${OPTIONAL_FILES}; do				\
 	  ${TEST} ! -r ${PREFIX}/$$i || ${ECHO} $$i;		\
 	done;							\
