@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: webmin.sh,v 1.2 2005/01/23 04:36:27 jlam Exp $
+# $NetBSD: webmin.sh,v 1.3 2006/05/16 04:01:28 jlam Exp $
 #
 
 # PROVIDE: webmin
@@ -12,23 +12,26 @@ name="webmin"
 rcvar=${name}
 command="@WEBMIN_DIR@/miniserv.pl"
 command_interpreter="@PERL5@"
-webmin_etcdir="@WEBMIN_ETCDIR@"
-required_files="@WEBMIN_ETCDIR@/miniserv.conf"
+webmin_etcdir="@PKG_SYSCONFDIR@"
+required_files="@PKG_SYSCONFDIR@/miniserv.conf"
+extra_commands="reload"
 
+reload_cmd="webmin_doit reload"
+restart_cmd="webmin_doit restart"
 start_cmd="webmin_doit start"
 stop_cmd="webmin_doit stop"
 
 webmin_doit()
 {
-	case $1 in
-	start)	script="${webmin_etcdir}/start" ;;
-	stop)	script="${webmin_etcdir}/stop" ;;
-	*)
+	case "$1" in
+	reload|restart|start|stop)	;;
+	*)				return 1 ;;
 	esac
+	script="${webmin_etcdir}/$1"
 	required_files="$required_files $script"
 	for f in $required_files; do
 		if [ ! -r "$f" ]; then
-			@ECHO@ 1>&2 "$0: WARNING: $f is not readable"
+			echo 1>&2 "$0: WARNING: $f is not readable"
 			if [ -z $rc_force ]; then
 				return 1
 			fi
