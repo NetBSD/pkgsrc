@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/29 20:38:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/05/16 17:32:50 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -237,10 +237,10 @@ lib/libcore-utils.la
 lib/libgnc-backend-file.la
 lib/libgncgnome.la
 lib/libgncmodule.la
+lib/libgncqof-backend-qsf.la
+lib/libgncqof.la
 lib/libgw-core-utils.la
 lib/libgw-gnc.la
-lib/libqof-backend-qsf.la
-lib/libqof.la
 libexec/gnucash/overrides/gnucash-env
 libexec/gnucash/overrides/gnucash-make-guids
 libexec/gnucash/overrides/guile
@@ -281,6 +281,14 @@ share/gnucash/accounts/da/acctchrt_car.gnucash-xea
 share/gnucash/accounts/da/acctchrt_common.gnucash-xea
 share/gnucash/accounts/da/acctchrt_homeloan.gnucash-xea
 share/gnucash/accounts/da/acctchrt_homeown.gnucash-xea
+share/gnucash/accounts/de_AT/acctchrt_auto.gnucash-xea
+share/gnucash/accounts/de_AT/acctchrt_autoloan.gnucash-xea
+share/gnucash/accounts/de_AT/acctchrt_brokerage.gnucash-xea
+share/gnucash/accounts/de_AT/acctchrt_business.gnucash-xea
+share/gnucash/accounts/de_AT/acctchrt_common.gnucash-xea
+share/gnucash/accounts/de_AT/acctchrt_houseown.gnucash-xea
+share/gnucash/accounts/de_AT/acctchrt_investment.gnucash-xea
+share/gnucash/accounts/de_AT/acctchrt_kids.gnucash-xea
 share/gnucash/accounts/de_CH/acctchrt_brokerage.gnucash-xea
 share/gnucash/accounts/de_CH/acctchrt_chkmu.gnucash-xea
 share/gnucash/accounts/de_CH/acctchrt_common.gnucash-xea
@@ -316,6 +324,22 @@ share/gnucash/accounts/es_ES/acctchrt_renter.gnucash-xea
 share/gnucash/accounts/es_ES/acctchrt_retiremt.gnucash-xea
 share/gnucash/accounts/es_ES/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/es_ES/acctchrt_spouseretire.gnucash-xea
+share/gnucash/accounts/fr_CH/acctchrt_brokerage.gnucash-xea
+share/gnucash/accounts/fr_CH/acctchrt_business.gnucash-xea
+share/gnucash/accounts/fr_CH/acctchrt_carloan.gnucash-xea
+share/gnucash/accounts/fr_CH/acctchrt_cdmoneymkt.gnucash-xea
+share/gnucash/accounts/fr_CH/acctchrt_childcare.gnucash-xea
+share/gnucash/accounts/fr_CH/acctchrt_common.gnucash-xea
+share/gnucash/accounts/fr_CH/acctchrt_currency.gnucash-xea
+share/gnucash/accounts/fr_CH/acctchrt_eduloan.gnucash-xea
+share/gnucash/accounts/fr_CH/acctchrt_fixedassets.gnucash-xea
+share/gnucash/accounts/fr_CH/acctchrt_homeloan.gnucash-xea
+share/gnucash/accounts/fr_CH/acctchrt_homeown.gnucash-xea
+share/gnucash/accounts/fr_CH/acctchrt_otherloan.gnucash-xea
+share/gnucash/accounts/fr_CH/acctchrt_renter.gnucash-xea
+share/gnucash/accounts/fr_CH/acctchrt_retiremt.gnucash-xea
+share/gnucash/accounts/fr_CH/acctchrt_spouseinc.gnucash-xea
+share/gnucash/accounts/fr_CH/acctchrt_spouseretire.gnucash-xea
 share/gnucash/accounts/fr_FR/acctchrt_brokerage.gnucash-xea
 share/gnucash/accounts/fr_FR/acctchrt_business.gnucash-xea
 share/gnucash/accounts/fr_FR/acctchrt_carloan.gnucash-xea
@@ -606,25 +630,37 @@ share/gnucash/guile-modules/gnucash/report/view-column.scm
 share/gnucash/guile-modules/gnucash/report/welcome-to-gnucash.scm
 share/gnucash/guile-modules/gnucash/tax/de_DE.scm
 share/gnucash/guile-modules/gnucash/tax/us.scm
-share/gnucash/pixmaps/account-16.png
-share/gnucash/pixmaps/account.png
 share/gnucash/pixmaps/appicon.png
-share/gnucash/pixmaps/delete-account-16.png
-share/gnucash/pixmaps/delete-account.png
-share/gnucash/pixmaps/edit-account-16.png
-share/gnucash/pixmaps/edit-account.png
+share/gnucash/pixmaps/gnc-account-16.png
+share/gnucash/pixmaps/gnc-account-delete-16.png
+share/gnucash/pixmaps/gnc-account-delete.png
+share/gnucash/pixmaps/gnc-account-edit-16.png
+share/gnucash/pixmaps/gnc-account-edit.png
+share/gnucash/pixmaps/gnc-account-new-16.png
+share/gnucash/pixmaps/gnc-account-new.png
+share/gnucash/pixmaps/gnc-account-open-16.png
+share/gnucash/pixmaps/gnc-account-open.png
+share/gnucash/pixmaps/gnc-account.png
+share/gnucash/pixmaps/gnc-invoice-16.png
+share/gnucash/pixmaps/gnc-invoice-edit-16.png
+share/gnucash/pixmaps/gnc-invoice-edit.png
+share/gnucash/pixmaps/gnc-invoice-post-16.png
+share/gnucash/pixmaps/gnc-invoice-post.png
+share/gnucash/pixmaps/gnc-invoice-unpost-16.png
+share/gnucash/pixmaps/gnc-invoice-unpost.png
+share/gnucash/pixmaps/gnc-invoice.png
+share/gnucash/pixmaps/gnc-jumpto-16.png
+share/gnucash/pixmaps/gnc-jumpto.png
+share/gnucash/pixmaps/gnc-split-trans-16.png
+share/gnucash/pixmaps/gnc-split-trans.png
+share/gnucash/pixmaps/gnc-sx-new-16.png
+share/gnucash/pixmaps/gnc-sx-new.png
+share/gnucash/pixmaps/gnc-transfer-16.png
+share/gnucash/pixmaps/gnc-transfer.png
 share/gnucash/pixmaps/gnucash-icon.png
 share/gnucash/pixmaps/gnucash_splash.png
-share/gnucash/pixmaps/new-account-16.png
-share/gnucash/pixmaps/new-account.png
-share/gnucash/pixmaps/open-account-16.png
-share/gnucash/pixmaps/open-account.png
-share/gnucash/pixmaps/split-transaction-16.png
-share/gnucash/pixmaps/split-transaction.png
 share/gnucash/pixmaps/stock_split_title.png
 share/gnucash/pixmaps/stock_split_watermark.png
-share/gnucash/pixmaps/transfer-16.png
-share/gnucash/pixmaps/transfer.png
 share/gnucash/scm/build-config.scm
 share/gnucash/scm/business-options.scm
 share/gnucash/scm/business-prefs.scm
@@ -700,6 +736,10 @@ share/gnucash/ui/gnc-reconcile-window-ui.xml
 share/gnucash/ui/gnc-sxed-to-create-window-ui.xml
 share/gnucash/ui/gnc-sxed-window-ui-full.xml
 share/gnucash/ui/gnc-sxed-window-ui.xml
+share/gnucash/xml/qsf/pilot-qsf-GnuCashInvoice.xml
+share/gnucash/xml/qsf/pilot-qsf-gncCustomer.xml
+share/gnucash/xml/qsf/qsf-map.xsd.xml
+share/gnucash/xml/qsf/qsf-object.xsd.xml
 share/locale/ca/LC_MESSAGES/gnucash.mo
 share/locale/cs/LC_MESSAGES/gnucash.mo
 share/locale/da/LC_MESSAGES/gnucash.mo
@@ -736,15 +776,12 @@ share/xml/gnucash/xsl/gnucash-gnccustomer-vcard2.xsl
 share/xml/gnucash/xsl/gnucash-std.xsl
 share/xml/gnucash/xsl/string.xsl
 share/xml/gnucash/xsl/vcard-gnccustomer.pl
-share/xml/qsf/pilot-qsf-GnuCashInvoice.xml
-share/xml/qsf/pilot-qsf-gncCustomer.xml
-share/xml/qsf/qsf-map.xsd.xml
-share/xml/qsf/qsf-object.xsd.xml
-@dirrm share/xml/qsf
 @dirrm share/xml/gnucash/xsl
 @dirrm share/xml/gnucash
 @comment in xmlcatmgr: @dirrm share/xml
 @comment in xdg-dirs: @dirrm share/mime-info
+@dirrm share/gnucash/xml/qsf
+@dirrm share/gnucash/xml
 @dirrm share/gnucash/ui
 @dirrm share/gnucash/scm/qif-import
 @dirrm share/gnucash/scm/printing
@@ -772,10 +809,12 @@ share/xml/qsf/qsf-object.xsd.xml
 @dirrm share/gnucash/accounts/it
 @dirrm share/gnucash/accounts/hu_HU
 @dirrm share/gnucash/accounts/fr_FR
+@dirrm share/gnucash/accounts/fr_CH
 @dirrm share/gnucash/accounts/es_ES
 @dirrm share/gnucash/accounts/el_GR
 @dirrm share/gnucash/accounts/de_DE
 @dirrm share/gnucash/accounts/de_CH
+@dirrm share/gnucash/accounts/de_AT
 @dirrm share/gnucash/accounts/da
 @dirrm share/gnucash/accounts/C
 @dirrm share/gnucash/accounts
