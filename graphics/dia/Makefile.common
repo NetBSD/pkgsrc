@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2006/05/02 16:23:30 drochner Exp $
+# $NetBSD: Makefile.common,v 1.11 2006/05/16 21:15:23 abs Exp $
 #
 
 DISTNAME=	dia-0.95
@@ -17,6 +17,7 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
+USE_LANGUAGES+=		c++
 
 CONFIGURE_ARGS+=	--without-python
 
