@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/14 19:56:05 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/16 22:54:08 adrianp Exp $
 
 DISTNAME=	syslog-ng-1.6.11
 CATEGORIES=	sysutils
@@ -32,14 +32,16 @@ SUBST_MESSAGE.conf=	Fixing configuration file paths.
 BUILDLINK_API_DEPENDS.libol+=	libol>=0.3.0
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.syslog-ng
-PKG_SUPPORTED_OPTIONS=	spoof
+PKG_SUPPORTED_OPTIONS=	syslogng-spoof
+
+PKG_OPTIONS_LEGACY_OPTS+=	spoof:syslogng-spoof
 
 .include "../../mk/bsd.options.mk"
 
 #
 # spoof the original source address of forwarded syslog packets
 #
-.if !empty(PKG_OPTIONS:Mspoof)
+.if !empty(PKG_OPTIONS:Msyslogng-spoof)
 CONFIGURE_ARGS+=	--enable-spoof-source
 .include "../../devel/libnet11/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libnet+=	libnet>=1.1.2.1
