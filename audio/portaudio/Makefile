@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/09 21:04:41 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/05/16 08:09:42 minskim Exp $
 
 DISTNAME=	portaudio_v18_1
 PKGNAME=	portaudio-18.1
@@ -16,6 +16,8 @@ NOT_FOR_PLATFORM=	Interix-*-*
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+CFLAGS.Darwin=		-Ipablio
 
 EXTRACT_OPTS_ZIP=	-aqo
 
