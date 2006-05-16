@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.8 2006/04/15 19:52:27 tonio Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/05/16 13:27:33 tonio Exp $
 include/jawt.h
 include/jawt_md.h
 include/jni.h
 include/jni_md.h
 info/hacking.info
+info/tools.info
 info/vmintegration.info
 lib/classpath/libjavaio.la
 lib/classpath/libjavalang.la
@@ -13,6 +14,7 @@ lib/classpath/libjavanio.la
 lib/classpath/libjavautil.la
 lib/logging.properties
 lib/security/classpath.security
+share/classpath/README
 share/classpath/examples/Makefile.jawt
 share/classpath/examples/README
 share/classpath/examples/examples.zip
@@ -54,9 +56,11 @@ share/classpath/examples/gnu/classpath/examples/CORBA/swing/x5/_GameManagerImpl_
 share/classpath/examples/gnu/classpath/examples/CORBA/swing/x5/_GameManager_Stub.java
 share/classpath/examples/gnu/classpath/examples/CORBA/swing/x5/_PlayerImpl_Tie.java
 share/classpath/examples/gnu/classpath/examples/CORBA/swing/x5/_Player_Stub.java
+share/classpath/examples/gnu/classpath/examples/awt/AnimationApplet.java
 share/classpath/examples/gnu/classpath/examples/awt/Demo.java
 share/classpath/examples/gnu/classpath/examples/datatransfer/Demo.java
 share/classpath/examples/gnu/classpath/examples/html/Demo.java
+share/classpath/examples/gnu/classpath/examples/icons/badge.png
 share/classpath/examples/gnu/classpath/examples/icons/big-fullscreen.png
 share/classpath/examples/gnu/classpath/examples/icons/big-home.png
 share/classpath/examples/gnu/classpath/examples/icons/big-warning.png
@@ -76,67 +80,31 @@ share/classpath/examples/gnu/classpath/examples/icons/stock-spell-check.png
 share/classpath/examples/gnu/classpath/examples/jawt/DemoJAWT.c
 share/classpath/examples/gnu/classpath/examples/jawt/DemoJAWT.java
 share/classpath/examples/gnu/classpath/examples/midi/Demo.java
+share/classpath/examples/gnu/classpath/examples/print/Demo.java
 share/classpath/examples/gnu/classpath/examples/swing/ButtonDemo.java
 share/classpath/examples/gnu/classpath/examples/swing/ComboBoxDemo.java
 share/classpath/examples/gnu/classpath/examples/swing/Demo.java
+share/classpath/examples/gnu/classpath/examples/swing/DemoDesktop.java
+share/classpath/examples/gnu/classpath/examples/swing/DemoFactory.java
+share/classpath/examples/gnu/classpath/examples/swing/DocumentFilterDemo.java
 share/classpath/examples/gnu/classpath/examples/swing/FileChooserDemo.java
-share/classpath/examples/gnu/classpath/examples/swing/GNULookAndFeel.java
+share/classpath/examples/gnu/classpath/examples/swing/ListDemo.java
+share/classpath/examples/gnu/classpath/examples/swing/MetalThemeEditor.java
 share/classpath/examples/gnu/classpath/examples/swing/MiniDemo.java
+share/classpath/examples/gnu/classpath/examples/swing/NavigationFilterDemo.java
 share/classpath/examples/gnu/classpath/examples/swing/ProgressBarDemo.java
 share/classpath/examples/gnu/classpath/examples/swing/ScrollBarDemo.java
 share/classpath/examples/gnu/classpath/examples/swing/SliderDemo.java
 share/classpath/examples/gnu/classpath/examples/swing/SpinnerDemo.java
+share/classpath/examples/gnu/classpath/examples/swing/TabbedPaneDemo.java
 share/classpath/examples/gnu/classpath/examples/swing/TableDemo.java
+share/classpath/examples/gnu/classpath/examples/swing/TextAreaDemo.java
 share/classpath/examples/gnu/classpath/examples/swing/TextFieldDemo.java
+share/classpath/examples/gnu/classpath/examples/swing/TreeDemo.java
 share/classpath/glibj.zip
-share/classpath/tools/gnu/classpath/tools/AbstractMethodGenerator.java
-share/classpath/tools/gnu/classpath/tools/HelpPrinter.java
-share/classpath/tools/gnu/classpath/tools/giop/GRMIC.java
-share/classpath/tools/gnu/classpath/tools/giop/GRMIC.txt
-share/classpath/tools/gnu/classpath/tools/giop/IorParser.java
-share/classpath/tools/gnu/classpath/tools/giop/IorParser.txt
-share/classpath/tools/gnu/classpath/tools/giop/NameService.java
-share/classpath/tools/gnu/classpath/tools/giop/NameServicePersistent.java
-share/classpath/tools/gnu/classpath/tools/giop/NameServicePersistent.txt
-share/classpath/tools/gnu/classpath/tools/giop/NamingService.txt
-share/classpath/tools/gnu/classpath/tools/giop/README
-share/classpath/tools/gnu/classpath/tools/giop/grmic/CompilationError.java
-share/classpath/tools/gnu/classpath/tools/giop/grmic/Generator.java
-share/classpath/tools/gnu/classpath/tools/giop/grmic/GiopIo.java
-share/classpath/tools/gnu/classpath/tools/giop/grmic/GiopRmicCompiler.java
-share/classpath/tools/gnu/classpath/tools/giop/grmic/HashFinder.java
-share/classpath/tools/gnu/classpath/tools/giop/grmic/MethodGenerator.java
-share/classpath/tools/gnu/classpath/tools/giop/grmic/templates/ImplTie.jav
-share/classpath/tools/gnu/classpath/tools/giop/grmic/templates/Stub.jav
-share/classpath/tools/gnu/classpath/tools/giop/grmic/templates/StubMethod.jav
-share/classpath/tools/gnu/classpath/tools/giop/grmic/templates/StubMethodVoid.jav
-share/classpath/tools/gnu/classpath/tools/giop/grmic/templates/Tie.jav
-share/classpath/tools/gnu/classpath/tools/giop/grmic/templates/TieMethod.jav
-share/classpath/tools/gnu/classpath/tools/giop/grmic/templates/TieMethodVoid.jav
-share/classpath/tools/gnu/classpath/tools/giop/nameservice/PersistentContext.java
-share/classpath/tools/gnu/classpath/tools/giop/nameservice/PersistentContextMap.java
-share/classpath/tools/gnu/classpath/tools/giop/nameservice/PersistentMap.java
-share/classpath/tools/gnu/classpath/tools/rmi/RMIC.java
-share/classpath/tools/gnu/classpath/tools/rmi/RMIC.txt
-share/classpath/tools/gnu/classpath/tools/rmi/rmic/RmiMethodGenerator.java
-share/classpath/tools/gnu/classpath/tools/rmi/rmic/RmicCompiler.java
-share/classpath/tools/gnu/classpath/tools/rmi/rmic/WrapUnWrapper.java
-share/classpath/tools/gnu/classpath/tools/rmi/rmic/templates/Stub_12.jav
-share/classpath/tools/gnu/classpath/tools/rmi/rmic/templates/Stub_12Method.jav
-share/classpath/tools/gnu/classpath/tools/rmi/rmic/templates/Stub_12MethodVoid.jav
-share/classpath/tools/tools.zip
-@dirrm share/classpath/tools/gnu/classpath/tools/rmi/rmic/templates
-@dirrm share/classpath/tools/gnu/classpath/tools/rmi/rmic
-@dirrm share/classpath/tools/gnu/classpath/tools/rmi
-@dirrm share/classpath/tools/gnu/classpath/tools/giop/nameservice
-@dirrm share/classpath/tools/gnu/classpath/tools/giop/grmic/templates
-@dirrm share/classpath/tools/gnu/classpath/tools/giop/grmic
-@dirrm share/classpath/tools/gnu/classpath/tools/giop
-@dirrm share/classpath/tools/gnu/classpath/tools
-@dirrm share/classpath/tools/gnu/classpath
-@dirrm share/classpath/tools/gnu
-@dirrm share/classpath/tools
+share/classpath/tools.zip
 @dirrm share/classpath/examples/gnu/classpath/examples/swing
+@dirrm share/classpath/examples/gnu/classpath/examples/print
 @dirrm share/classpath/examples/gnu/classpath/examples/midi
 @dirrm share/classpath/examples/gnu/classpath/examples/jawt
 @dirrm share/classpath/examples/gnu/classpath/examples/icons
