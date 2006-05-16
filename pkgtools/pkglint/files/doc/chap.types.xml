@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.types.xml,v 1.9 2006/05/11 09:05:33 rillig Exp $ -->
+<!-- $NetBSD: chap.types.xml,v 1.10 2006/05/16 22:18:17 rillig Exp $ -->
 
 <chapter id="types">
 <title>The &pkglint; type system</title>
@@ -182,7 +182,9 @@
 	For example, the <varname>OPSYS</varname> variable should only
 	be compared to well-known operating system names. The
 	<varname>exists()</varname> function should only be called on
-	pathnames.</listitem>
+	pathnames. The <varname>defined()</varname> operator only checks
+	if the variable is defined and does not access its
+	value.</listitem>
 
 	</itemizedlist>
 
