@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2006/05/15 13:26:40 gdt Exp $
+# $NetBSD: Makefile,v 1.48 2006/05/16 13:11:59 gdt Exp $
 
 PKGVER=		2.2.3
 DISTNAME=	openMotif-${PKGVER}
@@ -11,9 +11,22 @@ MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://www.opengroup.org/openmotif/
 COMMENT=		The Open Group Motif toolkit for the X Window System
 
+.include "../../mk/bsd.prefs.mk"
+
 LICENSE=		openmotif-license
 RESTRICTED=		Only for Open Source OS; complex terms for commercial distribution.
-# See end of file for setting NO_*_ON_FTP.
+
+# License grants permission to reproduce distfile for use on Open
+# Source OSes.  Therefore, do not set NO_SRC_ON_FTP, since the
+# distfile is thereby provided with the intent of it being used
+# according to the license.  Set NO_BIN_ON_FTP if the operating system
+# for which the package is built is not known to be open source.
+# List OSes known to be Open Source; default to not acceptable for new ones.
+OPSYS_OK_LIST=	DragonFly FreeBSD Linux NetBSD OpenBSD
+.if empty(OPSYS_OK_LIST:M${OPSYS})
+NO_BIN_ON_FTP=		${RESTRICTED}
+.endif
+
 # NO_*_ON_CDROM: License seems to require indemnification for
 # "commercial product offering", but doesn't define commercial product
 # offering.  Err on the side of caution and mark restricted.
@@ -74,18 +87,3 @@ post-build:
 
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
-# XXX This fragment is at the end because OPSYS is defined via bsd.pkg.mk.
-OPSYS_OK=	NO
-# List OSes known to be Open Source; default to not acceptable for new ones.
-OPSYS_OK_LIST=	DragonFly FreeBSD Linux NetBSD OpenBSD
-.if !empty(OPSYS_OK_LIST:M${OPSYS})
-OPSYS_OK=YES
-.  endif
-.if !empty(OPSYS_OK:MYES)
-# Open Source OS ==> non-commercial distribution acceptable
-.else
-# other than Open Source OS ==> no distribution
-NO_SRC_ON_FTP=		${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-.endif
