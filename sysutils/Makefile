@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.349 2006/05/16 04:17:00 jlam Exp $
+# $NetBSD: Makefile,v 1.350 2006/05/16 15:51:05 jlam Exp $
 #
 
 COMMENT=	System utilities
@@ -231,13 +231,31 @@ SUBDIR+=	vidc-tools
 SUBDIR+=	vifm
 SUBDIR+=	vip
 SUBDIR+=	vobcopy
+SUBDIR+=	wbm-bandwidth
+SUBDIR+=	wbm-bind8
 SUBDIR+=	wbm-dhcpd
 SUBDIR+=	wbm-file
+SUBDIR+=	wbm-inetd
 SUBDIR+=	wbm-ipfilter
+SUBDIR+=	wbm-ldap-useradmin
+SUBDIR+=	wbm-lpadmin
+SUBDIR+=	wbm-mailboxes
+SUBDIR+=	wbm-mount
+SUBDIR+=	wbm-mysql
+SUBDIR+=	wbm-net
 SUBDIR+=	wbm-net
 SUBDIR+=	wbm-postfix
 SUBDIR+=	wbm-postgresql
+SUBDIR+=	wbm-quota
+SUBDIR+=	wbm-sendmail
 SUBDIR+=	wbm-shell
+SUBDIR+=	wbm-sshd
+SUBDIR+=	wbm-status
+SUBDIR+=	wbm-syslog
+SUBDIR+=	wbm-telnet
+SUBDIR+=	wbm-time
+SUBDIR+=	wbm-tunnel
+SUBDIR+=	wbm-useradmin
 SUBDIR+=	webmin
 SUBDIR+=	whowatch
 SUBDIR+=	wipe
