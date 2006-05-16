@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.255 2006/05/16 18:15:04 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.256 2006/05/16 21:43:37 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2562,3 +2562,18 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/wbm-change-user version 1.270 [jlam 2006-05-16]
 	Updated net/freenet-tools to 0.2.25 [tv 2006-05-16]
 	Updated www/awstats to 6.6 [minskim 2006-05-16]
+	Added sysutils/wbm-apache version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-at version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-cluster-copy version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-cluster-cron version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-cluster-passwd version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-cluster-shell version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-cluster-useradmin version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-cluster-webmin version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-custom version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-dovecot version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-fetchmail version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-htaccess-htpasswd version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-openslp version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-passwd version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-qmailadmin version 1.270 [jlam 2006-05-16]
