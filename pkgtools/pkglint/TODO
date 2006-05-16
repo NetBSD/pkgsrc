@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.45 2006/05/10 09:01:15 rillig Exp $
+$NetBSD: TODO,v 1.46 2006/05/16 22:18:59 rillig Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
@@ -29,4 +29,7 @@ include the name of an example package where a warning should occur.
   happened in the file before that line.
 * Add checks for binary packages. See Debian/lintian for ideas.
 * Check that USE_LIBTOOL=yes, when the PLIST contains *.la.
-* In the vartypes.map, distinguish FOO and FOO.*.
+* In the vartypes.map, distinguish FOO and FOO.*:
+  FOO		Matches only FOO
+  FOO*		Matches FOO and FOO.*
+  FOO.*		Matches FOO with an extension.
