@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.242 2006/05/16 02:37:06 ben Exp $
+$NetBSD: CHANGES-2006,v 1.243 2006/05/16 04:05:13 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2527,3 +2527,10 @@ Changes to the packages collection and infrastructure in 2006:
 	Added textproc/nxml-mode version 20041004 [tonio 2006-05-15]
 	Updated wm/pekwm to 0.1.5 [xtraeme 2006-05-15]
 	Updated ap-auth-mysql to 4.3.1nb5 [ben 2006-05-15]
+	Updated sysutils/webmin to 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-dhcpd version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-file version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-ipfilter version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-net version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-postfix version 1.270 [jlam 2006-05-16]
+	Added sysutils/wbm-shell version 1.270 [jlam 2006-05-16]
