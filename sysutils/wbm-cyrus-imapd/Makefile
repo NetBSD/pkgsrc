@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/16 16:31:27 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/16 16:38:46 jlam Exp $
 
 DISTNAME=	cyrus-imapd-mod-1.4.3
+WBMNAME=	cyrus-imapd
 PKGNAME=	wbm-${DISTNAME:S/-mod-/-/}
 MASTER_SITES=	http://www.tecchio.net/webmin/cyrus/
 
