@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.249 2006/05/16 15:57:21 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.250 2006/05/16 16:32:12 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2557,3 +2557,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/wbm-tunnel version 1.270 [jlam 2006-05-16]
 	Added sysutils/wbm-useradmin version 1.270 [jlam 2006-05-16]
 	Updated devel/pwlib to 1.8.3nb5 [joerg 2006-05-16]
+	Added sysutils/wbm-cyrus-imapd version 1.4.3 [jlam 2006-05-16]
