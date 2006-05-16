@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/10 16:46:21 tonio Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/16 19:11:34 joerg Exp $
 #
 
 .include "../../lang/kaffe/Makefile.common"
@@ -14,7 +14,6 @@ CONFIGURE_ARGS+=	--with-esd
 
 BUILD_DIRS=		config
 BUILD_DIRS+=		libraries/javalib
-BUILD_DIRS+=		libraries/clib/classpath
 BUILD_DIRS+=		libraries/clib/sound/esd
 INSTALL_DIRS=		libraries/clib/sound/esd
 
