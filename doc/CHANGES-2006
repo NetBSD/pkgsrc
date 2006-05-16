@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.256 2006/05/16 21:43:37 jlam Exp $
+$NetBSD: CHANGES-2006,v 1.257 2006/05/16 22:19:39 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2577,3 +2577,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/wbm-openslp version 1.270 [jlam 2006-05-16]
 	Added sysutils/wbm-passwd version 1.270 [jlam 2006-05-16]
 	Added sysutils/wbm-qmailadmin version 1.270 [jlam 2006-05-16]
+	Updated pkgtools/pkglint to 4.62 [rillig 2006-05-16]
