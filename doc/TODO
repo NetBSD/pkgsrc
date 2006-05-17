@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4990 2006/05/17 17:58:37 drochner Exp $
+$NetBSD: TODO,v 1.4991 2006/05/17 21:55:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -557,7 +557,6 @@ Suggested package updates
 	o gnomeicu-0.99.10
 	o gnus-5.10.8
 	o gnustep-objc-1.4.0
-	o gnutls-1.4.0
 	o gob2-2.0.14
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o goffice-0.3.0
@@ -697,7 +696,6 @@ Suggested package updates
 	o libsigsegv-2.3
 	o libsmi-0.4.3
 	o libstatgrab-0.13
-	o libtasn1-0.3.4
 	o libtcl-nothread-8.4.9
 	o libtorrent-0.9.0
 	o licq-core-1.3.0
@@ -868,13 +866,11 @@ Suggested package updates
 	o p5-Locale-Maketext-Lexicon-0.61
 	o p5-Log-Agent-0.307
 	o p5-MARC-1.38
-	o p5-MIME-tools-5.420
 	o p5-MLDBM-Sync-0.30
 	o p5-MP3-Info-1.13
 	o p5-Mac-Macbinary-0.06
 	o p5-Mail-Mbox-MessageParser-1.4001
 	o p5-Mail-Sendmail-0.79
-	o p5-MailTools-1.74
 	o p5-Math-Bezier-0.02
 	o p5-Math-FFT-1.28
 	o p5-Math-MatrixReal-1.9
@@ -968,7 +964,6 @@ Suggested package updates
 	o pnetC-0.7.4
 	o pnetlib-0.7.2 [pkg/31950]
 	o pnetlib-0.7.4
-	o png-1.2.10
 	o popa3d-1.0.1
 	o poppy-4.01
 	o poptop-1.3.0
@@ -1173,7 +1168,6 @@ Suggested package updates
 	o ucarp-1.2
 	o ucblogo-5.5
 	o unix2dos-1.3
-	o unrar-3.6.3
 	o userppp-030706
 	o valgrind-3.0.1
 	o vfu-4.03
