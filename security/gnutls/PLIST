@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/04/17 07:07:33 jlam Exp $
+@comment $NetBSD: PLIST,v 1.21 2006/05/17 21:50:22 wiz Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
@@ -137,6 +137,7 @@ man/man3/gnutls_hex_decode.3
 man/man3/gnutls_hex_encode.3
 man/man3/gnutls_ia_allocate_client_credentials.3
 man/man3/gnutls_ia_allocate_server_credentials.3
+man/man3/gnutls_ia_enable.3
 man/man3/gnutls_ia_endphase_send.3
 man/man3/gnutls_ia_extract_inner_secret.3
 man/man3/gnutls_ia_free_client_credentials.3
@@ -148,7 +149,6 @@ man/man3/gnutls_ia_handshake.3
 man/man3/gnutls_ia_handshake_p.3
 man/man3/gnutls_ia_permute_inner_secret.3
 man/man3/gnutls_ia_recv.3
-man/man3/gnutls_ia_require_inner_phase.3
 man/man3/gnutls_ia_send.3
 man/man3/gnutls_ia_set_client_avp_function.3
 man/man3/gnutls_ia_set_client_avp_ptr.3
