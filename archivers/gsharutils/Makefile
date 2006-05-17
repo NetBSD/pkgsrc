@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/04/13 18:23:29 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2006/05/17 06:12:27 rillig Exp $
 
 DISTNAME=	sharutils-4.2.1
 PKGNAME=	g${DISTNAME}
@@ -45,7 +45,7 @@ PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
 post-patch:
-	@${TOUCH} ${TOUCH_FLAGS} ${WRKSRC}/po/sharutils.pot
+	${TOUCH} ${TOUCH_FLAGS} ${WRKSRC}/po/sharutils.pot
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
