@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/03 22:27:44 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/17 06:12:27 rillig Exp $
 #
 
 DISTNAME=	linunace25
@@ -13,8 +13,9 @@ COMMENT=	Extract, list and test files in ACE archives (Linux binary)
 
 ONLY_FOR_PLATFORM=	*-*-i386
 
-NO_BIN_ON_FTP=		Only original file distribution.
-NO_BIN_ON_CDROM=	Only original file distribution.
+RESTRICTED=		Only original file distribution.
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}
 

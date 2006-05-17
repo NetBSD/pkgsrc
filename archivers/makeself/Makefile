@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/23 10:04:41 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/17 06:12:27 rillig Exp $
 
 DISTNAME=	makeself-2.1.4
 CATEGORIES=	archivers
@@ -18,9 +18,9 @@ INSTALLATION_DIRS=	bin
 # The DISPLAY thing is to prevent the script from trying to launch a xterm
 # just to extract the source.
 pre-patch:
-	(cd ${WRKDIR} && ${SETENV} DISPLAY="" ${SH} ${DISTFILES})
+	cd ${WRKDIR} && ${SETENV} DISPLAY="" ${SH} ${DISTFILES}
 
 do-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/makeself.sh ${PREFIX}/bin/makeself
+	${INSTALL_SCRIPT} ${WRKSRC}/makeself.sh ${PREFIX}/bin/makeself
 
 .include "../../mk/bsd.pkg.mk"
