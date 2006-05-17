@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.79 2006/05/09 22:28:18 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2006/05/17 21:48:57 wiz Exp $
 
-DISTNAME=	libpng-1.2.9
+DISTNAME=	libpng-1.2.10
 PKGNAME=	${DISTNAME:S/lib//}
-PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 		http://www.libpng.org/pub/png/src/ \
@@ -31,18 +30,8 @@ CPPFLAGS+=	-DPNG_NO_ASSEMBLER_CODE
 SUBST_CLASSES+=		rpathfix
 SUBST_FILES.rpathfix=	scripts/libpng-config.in
 SUBST_MESSAGE.rpathfix=	Adding rpath to libpng-config.
-SUBST_SED.rpathfix=	'/^L_opts=/s|-L\([	 ]*[^	 ]*\)"|${COMPILER_RPATH_FLAG}\1 -L\1"|g'
+SUBST_SED.rpathfix=	-e '/^L_opts=/s|-L\([	 ]*[^	 ]*\)"|${COMPILER_RPATH_FLAG}\1 -L\1"|g'
 SUBST_STAGE.rpathfix=	pre-configure
-
-# highly version dependent -- fix up libtool .la file contents, since
-# just copying a .la file to a new filename is not enough
-# PLIST breakage will show when it needs updating :)
-post-install:
-	cd ${PREFIX}/lib && \
-		${SED} -e 's/png12/png/g' -e 's/0.9.0/3.9.0/' -e 's/so\.0/so\.3/g' \
-			-e 's/libpng.0.dylib/libpng.3.dylib/g' \
-			libpng.la > libpng.la.out && \
-		${MV} libpng.la.out libpng.la
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
