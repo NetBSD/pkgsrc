@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/04/17 13:46:41 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2006/05/17 10:45:21 drochner Exp $
 #
 
 DISTNAME=		yelp-2.14.1
@@ -20,6 +20,7 @@ USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+USE_LANGUAGES+=		c++
 
 CONFIGURE_ARGS+=	--with-html-widget=gtkhtml2
 
