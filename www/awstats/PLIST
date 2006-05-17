@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/05/16 18:13:55 minskim Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/05/17 16:39:47 minskim Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_configure.pl
 awstats/bin/awstats_exportlib.pl
@@ -113,7 +113,7 @@ awstats/cgi-bin/plugins/geoip_isp_maxmind.pm
 awstats/cgi-bin/plugins/geoip_org_maxmind.pm
 awstats/cgi-bin/plugins/geoip_region_maxmind.pm
 awstats/cgi-bin/plugins/geoipfree.pm
-awstats/cgi-bin/plugins/graph${LOWER_VENDOR}t.pm
+awstats/cgi-bin/plugins/graphapplet.pm
 awstats/cgi-bin/plugins/hashfiles.pm
 awstats/cgi-bin/plugins/hostinfo.pm
 awstats/cgi-bin/plugins/ipv6.pm
@@ -123,7 +123,7 @@ awstats/cgi-bin/plugins/timezone.pm
 awstats/cgi-bin/plugins/tooltips.pm
 awstats/cgi-bin/plugins/urlalias.pm
 awstats/cgi-bin/plugins/userinfo.pm
-awstats/classes/awgraph${LOWER_VENDOR}t.jar
+awstats/classes/awgraphapplet.jar
 awstats/classes/src/AWGraphApplet.java
 awstats/classes/src/Makefile.pl
 awstats/css/awstats_bw.css
@@ -542,7 +542,7 @@ awstats/icon/mime/wmv.png
 awstats/icon/os/.cvsignore
 awstats/icon/os/aix.png
 awstats/icon/os/amigaos.png
-awstats/icon/os/${LOWER_VENDOR}.png
+awstats/icon/os/apple.png
 awstats/icon/os/atari.png
 awstats/icon/os/beos.png
 awstats/icon/os/bsd.png
