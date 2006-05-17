@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/04/17 07:07:17 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2006/05/17 17:21:41 drochner Exp $
 bin/gsf-office-thumbnailer
 include/libgsf-1/gsf-gnome/gsf-input-bonobo.h
 include/libgsf-1/gsf-gnome/gsf-input-gnomevfs.h
@@ -54,7 +54,6 @@ lib/libgsf-gnome-1.la
 lib/pkgconfig/libgsf-1.pc
 lib/pkgconfig/libgsf-gnome-1.pc
 man/man1/gsf-office-thumbnailer.1
-share/doc/libgsf/gsf/GsfBlob.html
 share/doc/libgsf/gsf/GsfClipData.html
 share/doc/libgsf/gsf/api.html
 share/doc/libgsf/gsf/dependencies.html
@@ -65,14 +64,14 @@ share/doc/libgsf/gsf/gsf-GnomeVFS.html
 share/doc/libgsf/gsf/gsf-Infile-reading-structed-files.html
 share/doc/libgsf/gsf/gsf-Input-from-unstructured-files.html
 share/doc/libgsf/gsf/gsf-MS-OLE2.html
+share/doc/libgsf/gsf/gsf-OASIS-Open-Document.html
 share/doc/libgsf/gsf/gsf-Outfile-writing-structed-files.html
 share/doc/libgsf/gsf/gsf-Output-to-unstructured-files.html
 share/doc/libgsf/gsf/gsf-Reading-and-Writing-from-local-files-and-directories.html
-share/doc/libgsf/gsf/gsf-Structured-Blobs.html
 share/doc/libgsf/gsf/gsf-Text.html
 share/doc/libgsf/gsf/gsf-XML-and-libxml.html
 share/doc/libgsf/gsf/gsf-Zip.html
-share/doc/libgsf/gsf/gsf-gsf-opendoc-utils.html
+share/doc/libgsf/gsf/gsf-blobs.html
 share/doc/libgsf/gsf/gsf-memory.html
 share/doc/libgsf/gsf/gsf-metadata.html
 share/doc/libgsf/gsf/gsf-users.html
