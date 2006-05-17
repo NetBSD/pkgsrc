@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/03/04 21:28:52 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/05/17 06:12:27 rillig Exp $
 
 DISTNAME=       hpack79src
 PKGNAME=        hpack-0.79
@@ -40,7 +40,7 @@ CONF_FILES=	${PREFIX}/share/hpack/hpack.cfg.example	\
 INSTALLATION_DIRS=	bin man/man1
 
 post-build:
-	@cd ${WRKSRC}/keycvt && ${MAKE} CFLAGS="-c -D__UNIX__ ${CFLAGS}" \
+	cd ${WRKSRC}/keycvt && ${MAKE} CFLAGS="-c -D__UNIX__ ${CFLAGS}" \
 		-f ${MAKEFILE} keycvt
 
 do-install:
