@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.35 2006/02/07 22:41:26 ghen Exp $
+$NetBSD: distinfo,v 1.36 2006/05/17 17:32:22 drochner Exp $
 
-SHA1 (TeXmacs-1.0.6-src.tar.gz) = 8ff6d97880f529d85575b792df778cb856f00c21
-RMD160 (TeXmacs-1.0.6-src.tar.gz) = c7825cd81eee2f76864ae6559fecb2e8ac45ebd5
-Size (TeXmacs-1.0.6-src.tar.gz) = 3617687 bytes
+SHA1 (TeXmacs-1.0.6.1-src.tar.gz) = 4fe06e96f02058bfbc2fed46ad6e77403c4ba868
+RMD160 (TeXmacs-1.0.6.1-src.tar.gz) = b2c8463f24f76c849130282756593bc9ab842f15
+Size (TeXmacs-1.0.6.1-src.tar.gz) = 3759921 bytes
 SHA1 (patch-aa) = 95b9e42fe1ff343e891fe299382c3647636eec99
 SHA1 (patch-ab) = d459a4e848a97ea919cde29433a3a4ce733a2950
 SHA1 (patch-ac) = 21810d4f9d5e6525a86ec2d0c347dcfd1c9e31c8

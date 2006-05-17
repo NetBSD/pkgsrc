@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2006/05/13 03:44:23 minskim Exp $
+# $NetBSD: Makefile,v 1.58 2006/05/17 17:32:22 drochner Exp $
 
-DISTNAME=		TeXmacs-1.0.6-src
+DISTNAME=		TeXmacs-1.0.6.1-src
 PKGNAME=		${DISTNAME:S/-src//}
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.texmacs.org/pub/TeXmacs/targz/
@@ -41,7 +41,8 @@ REPLACE_FILES.bash+=	plugins/reduce/bin/tm_reduce
 REPLACE_FILES.bash+=	plugins/xypic/bin/tm_xypic
 
 pre-install:
-	${FIND} ${WRKSRC}/plugins/ . -name '*.orig' | ${XARGS} ${RM}
+	${RM} -f ${WRKSRC}/TeXmacs/doc/devel/format/.log
+	${FIND} ${WRKSRC}/plugins/ -name '*.orig' | ${XARGS} ${RM}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
