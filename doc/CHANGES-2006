@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.260 2006/05/17 17:56:00 drochner Exp $
+$NetBSD: CHANGES-2006,v 1.261 2006/05/17 20:51:09 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2584,3 +2584,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/libgsf to 1.14.1 [drochner 2006-05-17]
 	Updated editors/TeXmacs to 1.0.6 [drochner 2006-05-17]
 	Updated graphics/gimp-ufraw to 0.8.1 [drochner 2006-05-17]
+	Updated net/nagios-base to 2.3.1 [bouyer 2006-05-17]
