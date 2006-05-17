@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.2 2006/04/11 08:34:34 drochner Exp $
+$NetBSD: patch-aa,v 1.3 2006/05/17 11:13:45 drochner Exp $
 
---- kye/common.py.orig	2006-04-10 15:30:09.000000000 +0200
+--- kye/common.py.orig	2006-04-28 21:50:01.000000000 +0200
 +++ kye/common.py
 @@ -24,7 +24,7 @@ ysize = 20
  
- version = "0.7"
+ version = "0.9"
  
 -kyepaths = ("levels","/usr/local/share/kye","/usr/share/kye")
 +kyepaths = ("levels","@PREFIX@/share/kye")
