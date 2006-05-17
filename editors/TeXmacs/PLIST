@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2006/02/07 22:41:26 ghen Exp $
+@comment $NetBSD: PLIST,v 1.28 2006/05/17 17:32:22 drochner Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -577,6 +577,7 @@ share/TeXmacs/doc/main/config/man-intro.es.tm
 share/TeXmacs/doc/main/config/man-intro.fr.tm
 share/TeXmacs/doc/main/config/man-intro.it.tm
 share/TeXmacs/doc/main/config/man-intro.pl.tm
+share/TeXmacs/doc/main/config/man-oriental.en.tm
 share/TeXmacs/doc/main/config/man-russian.de.tm
 share/TeXmacs/doc/main/config/man-russian.en.tm
 share/TeXmacs/doc/main/config/man-russian.fr.tm
@@ -1348,6 +1349,7 @@ share/TeXmacs/fonts/enc/cork-pl.scm
 share/TeXmacs/fonts/enc/enr-math.enc
 share/TeXmacs/fonts/enc/enr.enc
 share/TeXmacs/fonts/enc/italic.enc
+share/TeXmacs/fonts/enc/larm.enc
 share/TeXmacs/fonts/enc/line.enc
 share/TeXmacs/fonts/enc/math-bbb.enc
 share/TeXmacs/fonts/enc/math-bold-1.enc
@@ -1518,6 +1520,7 @@ share/TeXmacs/langs/encoding/unicode-symbol-oneway.scm
 share/TeXmacs/langs/mathematical/syntax/texmath.syx
 share/TeXmacs/langs/natural/dic/english-british.scm
 share/TeXmacs/langs/natural/dic/english-bulgarian.scm
+share/TeXmacs/langs/natural/dic/english-chinese.scm
 share/TeXmacs/langs/natural/dic/english-czech.scm
 share/TeXmacs/langs/natural/dic/english-danish.scm
 share/TeXmacs/langs/natural/dic/english-dutch.scm
@@ -1527,6 +1530,9 @@ share/TeXmacs/langs/natural/dic/english-german.scm
 share/TeXmacs/langs/natural/dic/english-greek.scm
 share/TeXmacs/langs/natural/dic/english-hungarian.scm
 share/TeXmacs/langs/natural/dic/english-italian.scm
+share/TeXmacs/langs/natural/dic/english-japanese.scm
+share/TeXmacs/langs/natural/dic/english-korean-orig.scm
+share/TeXmacs/langs/natural/dic/english-korean.scm
 share/TeXmacs/langs/natural/dic/english-new.scm
 share/TeXmacs/langs/natural/dic/english-polish.scm
 share/TeXmacs/langs/natural/dic/english-portuguese.scm
@@ -1535,6 +1541,7 @@ share/TeXmacs/langs/natural/dic/english-russian.scm
 share/TeXmacs/langs/natural/dic/english-slovene.scm
 share/TeXmacs/langs/natural/dic/english-spanish.scm
 share/TeXmacs/langs/natural/dic/english-swedish.scm
+share/TeXmacs/langs/natural/dic/english-taiwanese.scm
 share/TeXmacs/langs/natural/dic/english-ukrainian.scm
 share/TeXmacs/langs/natural/hyphen/hyphen.bulgarian
 share/TeXmacs/langs/natural/hyphen/hyphen.czech
@@ -2067,6 +2074,7 @@ share/TeXmacs/progs/doc/help-funcs.scm
 share/TeXmacs/progs/doc/help-menu.scm
 share/TeXmacs/progs/doc/tmdoc.scm
 share/TeXmacs/progs/doc/tmweb.scm
+share/TeXmacs/progs/doc/translate.scm
 share/TeXmacs/progs/dynamic/dynamic-drd.scm
 share/TeXmacs/progs/dynamic/fold-edit.scm
 share/TeXmacs/progs/dynamic/fold-kbd.scm
@@ -2078,6 +2086,7 @@ share/TeXmacs/progs/dynamic/scripts-menu.scm
 share/TeXmacs/progs/dynamic/session-edit.scm
 share/TeXmacs/progs/dynamic/session-menu.scm
 share/TeXmacs/progs/fonts/fonts-adobe.scm
+share/TeXmacs/progs/fonts/fonts-composite.scm
 share/TeXmacs/progs/fonts/fonts-ec.scm
 share/TeXmacs/progs/fonts/fonts-foreign.scm
 share/TeXmacs/progs/fonts/fonts-math.scm
@@ -2221,37 +2230,18 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/progs/utils/misc
 @dirrm share/TeXmacs/progs/utils/library
 @dirrm share/TeXmacs/progs/utils/edit
-@exec ${MKDIR} %D/share/TeXmacs/progs/utils/cursor
-@dirrm share/TeXmacs/progs/utils/cursor
 @dirrm share/TeXmacs/progs/utils/cas
 @dirrm share/TeXmacs/progs/utils/base
 @dirrm share/TeXmacs/progs/utils
 @dirrm share/TeXmacs/progs/text/cyrillic
 @dirrm share/TeXmacs/progs/text
-@exec ${MKDIR} %D/share/TeXmacs/progs/texmacs/tools
-@dirrm share/TeXmacs/progs/texmacs/tools
 @dirrm share/TeXmacs/progs/texmacs/texmacs
-@exec ${MKDIR} %D/share/TeXmacs/progs/texmacs/plugin
-@dirrm share/TeXmacs/progs/texmacs/plugin
 @dirrm share/TeXmacs/progs/texmacs/menus
-@exec ${MKDIR} %D/share/TeXmacs/progs/texmacs/library
-@dirrm share/TeXmacs/progs/texmacs/library
-@exec ${MKDIR} %D/share/TeXmacs/progs/texmacs/keyboard/cyrillic
-@dirrm share/TeXmacs/progs/texmacs/keyboard/cyrillic
 @dirrm share/TeXmacs/progs/texmacs/keyboard
-@exec ${MKDIR} %D/share/TeXmacs/progs/texmacs/edit
-@dirrm share/TeXmacs/progs/texmacs/edit
 @dirrm share/TeXmacs/progs/texmacs
 @dirrm share/TeXmacs/progs/table
 @dirrm share/TeXmacs/progs/source
-@exec ${MKDIR} %D/share/TeXmacs/progs/menus
-@dirrm share/TeXmacs/progs/menus
 @dirrm share/TeXmacs/progs/math
-@exec ${MKDIR} %D/share/TeXmacs/progs/keyboard/cyrillic
-@dirrm share/TeXmacs/progs/keyboard/cyrillic
-@dirrm share/TeXmacs/progs/keyboard
-@exec ${MKDIR} %D/share/TeXmacs/progs/kernel/tools
-@dirrm share/TeXmacs/progs/kernel/tools
 @dirrm share/TeXmacs/progs/kernel/texmacs
 @dirrm share/TeXmacs/progs/kernel/regexp
 @dirrm share/TeXmacs/progs/kernel/library
@@ -2263,9 +2253,6 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/progs/generic
 @dirrm share/TeXmacs/progs/fonts
 @dirrm share/TeXmacs/progs/dynamic
-@exec ${MKDIR} %D/share/TeXmacs/progs/drd/latex
-@dirrm share/TeXmacs/progs/drd/latex
-@dirrm share/TeXmacs/progs/drd
 @dirrm share/TeXmacs/progs/doc
 @dirrm share/TeXmacs/progs/convert/tools
 @dirrm share/TeXmacs/progs/convert/tmml
@@ -2274,8 +2261,6 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/progs/convert/latex
 @dirrm share/TeXmacs/progs/convert/images
 @dirrm share/TeXmacs/progs/convert/html
-@exec ${MKDIR} %D/share/TeXmacs/progs/convert/doc
-@dirrm share/TeXmacs/progs/convert/doc
 @dirrm share/TeXmacs/progs/convert
 @dirrm share/TeXmacs/progs
 @dirrm share/TeXmacs/plugins/yacas/progs
@@ -2390,14 +2375,8 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/plugins
 @dirrm share/TeXmacs/packages/test
 @dirrm share/TeXmacs/packages/standard
-@exec ${MKDIR} %D/share/TeXmacs/packages/section/mathematics
-@dirrm share/TeXmacs/packages/section/mathematics
 @dirrm share/TeXmacs/packages/section
 @dirrm share/TeXmacs/packages/program
-@exec ${MKDIR} %D/share/TeXmacs/packages/number
-@dirrm share/TeXmacs/packages/number
-@exec ${MKDIR} %D/share/TeXmacs/packages/header/mathematics
-@dirrm share/TeXmacs/packages/header/mathematics
 @dirrm share/TeXmacs/packages/header
 @dirrm share/TeXmacs/packages/example
 @dirrm share/TeXmacs/packages/environment
@@ -2427,8 +2406,6 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/fonts/tfm/la
 @dirrm share/TeXmacs/fonts/tfm/ec
 @dirrm share/TeXmacs/fonts/tfm
-@exec ${MKDIR} %D/share/TeXmacs/fonts/pk
-@dirrm share/TeXmacs/fonts/pk
 @dirrm share/TeXmacs/fonts/enc
 @dirrm share/TeXmacs/fonts
 @dirrm share/TeXmacs/examples/texts
