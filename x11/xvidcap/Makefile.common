@@ -1,13 +1,15 @@
-# $NetBSD: Makefile.common,v 1.4 2006/05/17 01:53:18 reed Exp $
+# $NetBSD: Makefile.common,v 1.5 2006/05/17 05:06:28 reed Exp $
 #
 
-# Note: when upgrading version, be sure to update distinfo in xvidcap-gtk2 also
 DISTNAME=		xvidcap-1.1.3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xvidcap/}
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://xvidcap.sourceforge.net/
+
+PATCHDIR=		${.CURDIR}/../../x11/xvidcap/patches
+DISTINFO_FILE=		${.CURDIR}/../../x11/xvidcap/distinfo
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-forced-embedded-ffmpeg
