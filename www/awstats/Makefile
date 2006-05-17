@@ -1,21 +1,18 @@
-# $NetBSD: Makefile,v 1.23 2005/12/29 06:22:21 jlam Exp $
+# $NetBSD: Makefile,v 1.23.2.1 2006/05/17 21:26:40 salo Exp $
 #
 
-DISTNAME=	awstats-6.4
-PKGREVISION=	2
+DISTNAME=	awstats-6.6
 CATEGORIES=	www
 MASTER_SITES=	http://awstats.sourceforge.net/files/
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://awstats.sourceforge.net/
 COMMENT=	Free real-time logfile analyzer to get advanced web statistics
 
-DIST_SUBDIR=	${PKGNAME_NOREV}nb2
 NO_BUILD=	YES
 
 USE_TOOLS+=	perl:run
-REPLACE_PERL=	tools/*.pl		\
+REPLACE_PERL+=	tools/*.pl		\
 		wwwroot/cgi-bin/*.pl
 
 APACHE_USER?=	www
@@ -30,11 +27,11 @@ SUBST_STAGE.conf=	post-patch
 SUBST_FILES.conf=	tools/awstats_configure.pl \
 			wwwroot/cgi-bin/awstats.model.conf \
 			wwwroot/cgi-bin/awstats.pl
-SUBST_SED.conf=		-e "s|@PREFIX@|${PREFIX}|g" \
-			-e "s|@VARBASE@|${VARBASE}|g" \
-			-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g" \
-			-e "s|/var/log/httpd/mylog.log|${VARBASE}/log/httpd/access_log|g" \
-			-e "s|\"/etc/opt/awstats\"|\"/etc/opt/awstats\",\"${PKG_SYSCONFDIR}\"|g"
+SUBST_SED.conf=		-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_SED.conf+=	-e "s|@VARBASE@|${VARBASE}|g"
+SUBST_SED.conf+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_SED.conf+=	-e "s|/var/log/httpd/mylog.log|${VARBASE}/log/httpd/access_log|g"
+SUBST_SED.conf+=	-e "s|\"/etc/opt/awstats\"|\"/etc/opt/awstats\",\"${PKG_SYSCONFDIR}\"|g"
 SUBST_MESSAGE.conf=	"Fixing configuration files and scripts."
 
 CONF_FILES+=	${PREFIX}/share/examples/awstats/awstats.conf \
@@ -45,7 +42,7 @@ do-install:
 	${INSTALL_SCRIPT_DIR} ${PREFIX}/awstats/bin
 	${INSTALL_SCRIPT_DIR} ${PREFIX}/awstats/cgi-bin
 	${INSTALL_DATA_DIR} ${PREFIX}/awstats/cgi-bin/plugins
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/awstats
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/awstats
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/awstats
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/*.pl ${PREFIX}/awstats/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/wwwroot/cgi-bin/*.pl		\
@@ -73,11 +70,11 @@ do-install:
 	${FIND} ${PREFIX}/awstats/${d} -type f -print	\
 		| ${XARGS} ${CHMOD} ${SHAREMODE}
 .endfor
-	cd ${WRKSRC}/docs && ${PAX} -rwpppm . ${PREFIX}/share/doc/html/awstats/
-	${CHOWN} -R ${DOCOWN}:${DOCGRP} ${PREFIX}/share/doc/html/awstats/
-	${FIND} ${PREFIX}/share/doc/html/awstats/ -type d -print	\
+	cd ${WRKSRC}/docs && ${PAX} -rwpppm . ${PREFIX}/share/doc/awstats/
+	${CHOWN} -R ${DOCOWN}:${DOCGRP} ${PREFIX}/share/doc/awstats/
+	${FIND} ${PREFIX}/share/doc/awstats/ -type d -print	\
 		| ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${PREFIX}/share/doc/html/awstats/ -type f -print	\
+	${FIND} ${PREFIX}/share/doc/awstats/ -type f -print	\
 		| ${XARGS} ${CHMOD} ${DOCMODE}
 
 .include "../../mk/bsd.pkg.mk"
