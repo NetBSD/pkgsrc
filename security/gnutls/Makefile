@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2006/04/06 06:22:38 reed Exp $
+# $NetBSD: Makefile,v 1.49 2006/05/17 21:50:22 wiz Exp $
 
-DISTNAME=	gnutls-1.3.5
+DISTNAME=	gnutls-1.4.0
 CATEGORIES=	security devel
 MASTER_SITES=	http://josefsson.org/gnutls/releases/ \
 		ftp://ftp.gnutls.org/pub/gnutls/ \
@@ -25,7 +25,7 @@ PKGCONFIG_OVERRIDE=	lib/gnutls.pc.in
 PKGCONFIG_OVERRIDE+=	libextra/gnutls-extra.pc.in
 
 BUILDLINK_API_DEPENDS.opencdk+=	opencdk>=0.5.5
-BUILDLINK_API_DEPENDS.libtasn1+=	libtasn1>=0.3.1
+BUILDLINK_API_DEPENDS.libtasn1+=	libtasn1>=0.3.4
 BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.2.2
 
 MAKE_ENV+=		RM=${RM:Q}
