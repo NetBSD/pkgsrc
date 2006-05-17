@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.25 2006/05/17 21:48:57 wiz Exp $
+
+Install old library .la file so that PLIST is correct.
+
+--- Makefile.in.orig	2006-04-23 18:46:00.000000000 +0000
++++ Makefile.in
+@@ -1264,6 +1264,7 @@ install-exec-hook:
+ 	cd $(DESTDIR)$(bindir); $(LN_S) $(PNGLIB_BASENAME)-config libpng-config
+ 	@set -x;\
+ 	cd $(DESTDIR)$(libdir);\
++	mv libpng.la libpngcompat.la;\
+ 	for ext in a la so; do\
+ 		rm -f libpng.$$ext;\
+ 		$(LN_S) $(PNGLIB_BASENAME).$$ext libpng.$$ext;\
