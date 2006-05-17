@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/19 11:30:47 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/17 06:12:27 rillig Exp $
 #
 
 DISTNAME=	ppmdi1
@@ -25,7 +25,7 @@ SUBST_CLASSES+=		d2u
 SUBST_MESSAGE.d2u=	Converting CRLF to LF.
 SUBST_STAGE.d2u=	post-extract
 SUBST_FILES.d2u=	*
-SUBST_FILTER_CMD.d2u=	tr -d '\015'
+SUBST_FILTER_CMD.d2u=	${TR} -d '\015'
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/ppmd ${PREFIX:Q}/bin
