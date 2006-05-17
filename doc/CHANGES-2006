@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.261 2006/05/17 20:51:09 bouyer Exp $
+$NetBSD: CHANGES-2006,v 1.262 2006/05/17 21:55:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2585,3 +2585,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated editors/TeXmacs to 1.0.6 [drochner 2006-05-17]
 	Updated graphics/gimp-ufraw to 0.8.1 [drochner 2006-05-17]
 	Updated net/nagios-base to 2.3.1 [bouyer 2006-05-17]
+	Updated graphics/png to 1.2.10 [wiz 2006-05-17]
+	Updated archivers/unrar to 3.6.3 [wiz 2006-05-17]
+	Updated security/libtasn1 to 0.3.4 [wiz 2006-05-17]
+	Updated mail/p5-MailTools to 1.74 [wiz 2006-05-17]
+	Updated mail/p5-MIME-tools to 5.420 [wiz 2006-05-17]
