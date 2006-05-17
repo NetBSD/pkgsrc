@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.49 2006/05/15 16:09:05 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.50 2006/05/17 21:27:33 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -101,3 +101,5 @@ Pullup ticket 1562 - requested by schmonz
 update checksum for qmail Darwin patch
 Pullup ticket 1585 - requested by ghen
 security update for dovecot
+Pullup ticket 1596 - requested by minskim
+security update for awstats
