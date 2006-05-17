@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.258 2006/05/16 22:37:59 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.259 2006/05/17 04:29:38 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2579,3 +2579,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/wbm-qmailadmin version 1.270 [jlam 2006-05-16]
 	Updated pkgtools/pkglint to 4.62 [rillig 2006-05-16]
 	Updated devel/gsoap to 2.7.7 [wiz 2006-05-16]
+	Updated textproc/tcl-expat to 1.1nb4 [minskim 2006-05-17]
