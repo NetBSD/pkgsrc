@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.262 2006/05/17 21:55:03 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.263 2006/05/17 22:10:41 reed Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2590,3 +2590,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/libtasn1 to 0.3.4 [wiz 2006-05-17]
 	Updated mail/p5-MailTools to 1.74 [wiz 2006-05-17]
 	Updated mail/p5-MIME-tools to 5.420 [wiz 2006-05-17]
+	Updated multimedia/avidemux to 2.1.2 [reed 2006-05-17]
