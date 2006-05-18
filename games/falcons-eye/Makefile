@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2006/04/22 09:22:08 rillig Exp $
+# $NetBSD: Makefile,v 1.33 2006/05/18 16:22:26 joerg Exp $
 #
 
 DISTNAME=		nethack_source_331_jtp_193
 PKGNAME=		falcons-eye-1.9.3
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=falconseye/}
 EXTRACT_SUFX=		.zip
@@ -43,6 +43,22 @@ SUBST_SED.unixconf=	-e 's,^\/\* \#define BSD 1 \*\/,\#define BSD 1,' \
 			-e 's,^\#define SYSV,\/\* \#define SYSV \*\/,' \
 			-e 's,^\#define LINUX,\/\* \#define LINUX \*\/,'
 .endif
+
+EGDIR=			${PREFIX}/share/examples/falcons-eye
+SHAREDIR=		${PREFIX}/share/falcons-eye-dir
+
+CONF_FILES_PERMS+=	/dev/null ${SHAREDIR}/logfile ${ROOT_USER} games 664
+CONF_FILES_PERMS+=	/dev/null ${SHAREDIR}/record ${ROOT_USER} games 664
+CONF_FILES_PERM+=	${EGDIR}/jtp_intr.txt ${SHAREDIR}/config/jtp_intr.txt \
+	${ROOT_USER} games 664
+CONF_FILES_PERM+=	${EGDIR}/jtp_keys.txt ${SHAREDIR}/config/jtp_keys.txt \
+	${ROOT_USER} games 664
+CONF_FILES_PERM+=	${EGDIR}/jtp_lit1.dat ${SHAREDIR}/config/jtp_lit1.dat \
+	${ROOT_USER} games 664
+CONF_FILES_PERM+=	${EGDIR}/jtp_opts.txt ${SHAREDIR}/config/jtp_opts.txt \
+	${ROOT_USER} games 664
+CONF_FILES_PERM+=	${EGDIR}/jtp_snds.txt ${SHAREDIR}/config/jtp_snds.txt \
+	${ROOT_USER} games 664
 
 pre-configure:
 	${CP} ${WRKSRC}/src/fe-config.in ${WRKSRC}/src/fe-config

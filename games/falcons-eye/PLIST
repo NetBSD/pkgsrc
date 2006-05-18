@@ -1,8 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/01/21 11:56:16 pooka Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/05/18 16:22:26 joerg Exp $
 bin/falcons-eye
 bin/fe-config
 bin/recover-falcons-eye
 share/doc/falcons-eye/Guidebook.txt
+share/examples/falcons-eye/jtp_intr.txt
+share/examples/falcons-eye/jtp_keys.txt
+share/examples/falcons-eye/jtp_lit1.dat
+share/examples/falcons-eye/jtp_opts.txt
+share/examples/falcons-eye/jtp_snds.txt
 share/falcons-eye-dir/Arc-fila.lev
 share/falcons-eye-dir/Arc-filb.lev
 share/falcons-eye-dir/Arc-goal.lev
@@ -256,6 +261,7 @@ share/falcons-eye-dir/wizard2.lev
 share/falcons-eye-dir/wizard3.lev
 share/falcons-eye-dir/wizhelp
 @dirrm share/doc/falcons-eye
+@dirrm share/examples/falcons-eye
 @dirrm share/falcons-eye-dir/graphics
 @dirrm share/falcons-eye-dir/manual
 @dirrm share/falcons-eye-dir/sound
