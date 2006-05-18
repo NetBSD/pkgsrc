@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/03/04 21:30:51 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/05/18 19:55:35 wiz Exp $
 
 DISTNAME=		unroff-1.0
 PKGNAME=		unroff-1.0.2
@@ -12,8 +12,6 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www-rn.informatik.uni-bremen.de/software/unroff/
 COMMENT=		Programmable troff translator with backend for HTML
-
-BROKEN_IN=		pkgsrc-2005Q4
 
 DIST_SUBDIR=		unroff
 
