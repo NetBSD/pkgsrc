@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4991 2006/05/17 21:55:03 wiz Exp $
+$NetBSD: TODO,v 1.4992 2006/05/18 01:30:34 taca Exp $
 
 Suggested new packages
 ======================
@@ -347,7 +347,7 @@ Suggested package updates
 	o ap-xslt-1.3.8
 	o ap2-chroot-0.5
 	o ap2-transform-0.6.0
-	o apache-1.3.35
+	o apache-1.3.36
 	o apache-tomcat55-5.5.16
 	o apcupsd-3.10.16 [requires threads, doesn't work with pth on 1.6]
 	o aqsis-1.0.1 [heinz]
