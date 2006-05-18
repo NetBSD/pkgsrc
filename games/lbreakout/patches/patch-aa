@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2006/03/28 22:03:42 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2006/05/18 12:10:12 rillig Exp $
 
 --- configure.orig	Thu Mar 15 10:05:08 2001
 +++ configure	Tue Aug 14 20:05:05 2001
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.5 2006/03/28 22:03:42 joerg Exp $
  
  sdir=$datadir/games/lbreakout
 -hdir=/var/lib/games
-+hdir=/var/games
++hdir=${VARBASE}/games
  inst_flag="-DSRC_DIR=\\\"$sdir/\\\""
  hi_inst_flag="-DHI_DIR=\\\"$hdir/\\\""
  
