@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/05/06 00:03:04 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/05/18 19:12:41 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBZIP_BUILDLINK3_MK:=	${LIBZIP_BUILDLINK3_MK}+
@@ -11,8 +11,7 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibzip}
 BUILDLINK_PACKAGES+=	libzip
 
 .if !empty(LIBZIP_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.libzip+=	libzip>=0.6
-BUILDLINK_ABI_DEPENDS.libzip+=	libzip>=0.7
+BUILDLINK_API_DEPENDS.libzip+=	libzip>=0.7.1
 BUILDLINK_PKGSRCDIR.libzip?=	../../archivers/libzip
 .endif	# LIBZIP_BUILDLINK3_MK
 
