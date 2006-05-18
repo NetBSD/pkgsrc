@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/02/05 23:10:13 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/05/18 20:30:00 wiz Exp $
 
 DISTNAME=		root_v2.23.08.source
 PKGNAME=		root-2.23
@@ -10,7 +10,7 @@ MAINTAINER=		drochner@NetBSD.org
 HOMEPAGE=		http://root.cern.ch/
 COMMENT=		OO framework for data analysis and visualisation
 
-BROKEN_IN=		pkgsrc-2005Q4
+BROKEN_IN=		pkgsrc-2005Q4 pkgsrc-2006Q1
 
 BUILD_DEPENDS+=		cint-5.14.40:../../lang/cint
 

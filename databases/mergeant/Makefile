@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/04/17 13:46:19 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2006/05/18 20:29:58 wiz Exp $
 #
 
 DISTNAME=		mergeant-0.62
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome-db.org/
 COMMENT=		GNOME2 GNOME-DB database front-end
+
+BROKEN_IN=		pkgsrc-2006Q1
 
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake perl pkg-config

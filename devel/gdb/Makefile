@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/03/30 03:44:42 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/05/18 20:29:58 wiz Exp $
 #
 
 DISTNAME=       gdb-5.3
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gdb/gdb.html
 COMMENT=	Symbolic debugger for multiple language frontends
 
-BROKEN_IN=	pkgsrc-2005Q4
+BROKEN_IN=	pkgsrc-2005Q4 pkgsrc-2006Q1
 
 NOT_FOR_PLATFORM=	Darwin-*-*
 

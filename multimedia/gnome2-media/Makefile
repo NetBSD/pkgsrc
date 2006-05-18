@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/04/17 13:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2006/05/18 20:30:00 wiz Exp $
 
 DISTNAME=		gnome-media-2.14.0
 PKGREVISION=		1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Set of audio/multimedia applications for GNOME2
+
+BROKEN_IN=		pkgsrc-2006Q1
 
 DEPENDS+=		gst-plugins0.10-esound>=0.10.0:../../audio/gst-plugins0.10-esound
 
