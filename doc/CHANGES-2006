@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.266 2006/05/18 12:05:58 dillo Exp $
+$NetBSD: CHANGES-2006,v 1.267 2006/05/18 16:12:39 cube Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2594,3 +2594,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/bozohttpd to 20060517 [rpaulo 2006-05-17]
 	Updated www/squid to 2.5.13nb1 [taca 2006-05-18]
 	Updated archivers/libzip to 0.7.1 [dillo 2006-05-18]
+	Updated databases/mysql5-server to 5.0.21 [cube 2006-05-18]
+	Updated databases/mysql5-client to 5.0.21 [cube 2006-05-18]
