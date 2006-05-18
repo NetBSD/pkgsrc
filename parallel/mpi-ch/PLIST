@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/05/16 22:01:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/05/18 14:26:48 joerg Exp $
 bin/clog2alog
 bin/clog_print
 bin/mpicc
@@ -82,6 +82,7 @@ include/mpidefs.h
 include/mpif.h
 include/mpio.h
 include/mpiof.h
+include/protofix.h
 lib/libampe.a
 lib/libfmpich.a
 lib/liblmpe.a
