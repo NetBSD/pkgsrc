@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/05/18 21:49:31 adrianp Exp $
+
+SHA1 (konversation-0.19.tar.bz2) = d4463fc8413f6a6c35448ab9e600da6464bd6adf
+RMD160 (konversation-0.19.tar.bz2) = c260ca76b4fee1f7dec460caaea52c17f11e45ef
+Size (konversation-0.19.tar.bz2) = 5452000 bytes
+SHA1 (patch-aa) = 1143627dbe906f77a8d16195b403653e1ab2d232
