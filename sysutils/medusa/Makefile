@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/04/17 13:46:05 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2006/05/18 19:55:35 wiz Exp $
 #
 
 DISTNAME=		medusa-0.5.1
@@ -10,8 +10,6 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/medusa/0.5/}	\
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.eazel.com/
 COMMENT=		File system indexing engine
-
-BROKEN_IN=		pkgsrc-2005Q4
 
 DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 
