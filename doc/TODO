@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4992 2006/05/18 01:30:34 taca Exp $
+$NetBSD: TODO,v 1.4993 2006/05/18 16:12:40 cube Exp $
 
 Suggested new packages
 ======================
@@ -757,8 +757,6 @@ Suggested package updates
 	o muse-0.9.1
 	o mysql4-client-4.1.19
 	o mysql4-server-4.1.19
-	o mysql5-client-5.0.21
-	o mysql5-server-5.0.21
 	o nagios-2.3
 	o naim-0.11.8.2
 	o nano-1.2.5 [pkg/32859]
