@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/04/17 13:46:20 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/05/18 18:04:10 joerg Exp $
 
 PKGNAME=		unixodbc-DataManager-${ODBC_BASE_VERS}
 PKGREVISION=		3
@@ -16,6 +16,8 @@ CONFIGURE_ENV+=		UIC="${QTDIR}/bin/uic"
 CONFIGURE_ENV+=		USER_LDFLAGS=${LDFLAGS:M*:Q}
 CONFIGURE_ENV+=		ac_cv_have_x=${_AC_CV_HAVE_X:Q}
 CONFIGURE_ENV+=		ac_cv_have_qt=${_AC_CV_HAVE_QT:Q}
+
+USE_LANGUAGES=		c c++
 
 MAKE_FLAGS+=		DataManager_DEPENDENCIES=""
 
