@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:09:48 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/05/18 20:32:22 wiz Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -28,8 +28,6 @@ DISTFILES=	MLRISC.tgz			\
 MAINTAINER=	richards+netbsd@CS.Princeton.EDU
 HOMEPAGE=	http://www.smlnj.org/index.html
 COMMENT=	Popular functional language from Bell Labs
-
-BROKEN_IN=	pkgsrc-2005Q4
 
 SML_VERSION=	110.42
 
