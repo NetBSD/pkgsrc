@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:37 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/18 20:30:00 wiz Exp $
 
 DISTNAME=	ja-ptex-1.0
 PKGREVISION=	2
@@ -8,6 +8,8 @@ DISTFILES=	# empty
 
 MAINTAINER=	kei@NetBSD.org
 COMMENT=	Meta-package for pTeX et al, supports Japanese language
+
+BROKEN_IN=	pkgsrc-2006Q1
 
 DEPENDS+=	ja-ptex-bin>=3.1.2:../../print/ja-ptex-bin
 DEPENDS+=	ja-jsclasses>=0.0.0.20021127:../../print/ja-jsclasses

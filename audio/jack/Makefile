@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/19 15:25:09 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/18 20:29:58 wiz Exp $
 #
 
 DISTNAME=		jack-audio-connection-kit-0.100.0
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jackit/}
 MAINTAINER=		chriswareham@chriswareham.demon.co.uk
 HOMEPAGE=		http://jackit.sourceforge.net/
 COMMENT=		Low-latency audio server
+
+BROKEN_IN=		pkgsrc-2006Q1
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

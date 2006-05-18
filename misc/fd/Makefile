@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/01/04 04:29:07 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2006/05/18 20:29:59 wiz Exp $
 #
 
 DISTNAME=	FD-1.03u
@@ -9,7 +9,7 @@ MASTER_SITES=	http://hp.vector.co.jp/authors/VA012337/soft/fd/
 MAINTAINER=	nobu@psrc.isac.co.jp
 COMMENT=	File and directory management tool
 
-BROKEN_IN=	pkgsrc-2005Q4
+BROKEN_IN=	pkgsrc-2005Q4 pkgsrc-2006Q1
 
 MANLANG=	ja
 MAKE_ENV+=	LANG=${MANLANG:Q}

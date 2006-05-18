@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/05/18 15:25:08 abs Exp $
+# $NetBSD: Makefile,v 1.29 2006/05/18 20:30:00 wiz Exp $
 #
 
 DISTNAME=	transcode-1.0.2
@@ -12,6 +12,8 @@ MASTER_SITES=	http://dl.fkb.wormulon.net/transcode/ \
 MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.transcoding.org/
 COMMENT=	Command line video-stream processing tool
+
+BROKEN_IN=	pkgsrc-2006Q1
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
