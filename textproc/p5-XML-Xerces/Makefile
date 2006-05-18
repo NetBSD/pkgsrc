@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/04/06 06:22:51 reed Exp $
+# $NetBSD: Makefile,v 1.18 2006/05/18 20:30:01 wiz Exp $
 #
 
 DISTNAME=	XML-Xerces-2.3.0-4
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_APACHE:=xml/xerces-p/}
 MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	http://xml.apache.org/xerces-p/
 COMMENT=	Validating XML parser API for Perl
+
+BROKEN_IN=	pkgsrc-2006Q1
 
 CONFLICTS+=	XML-Xerces-[0-9]*
 

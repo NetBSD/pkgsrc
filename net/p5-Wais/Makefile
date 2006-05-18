@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/01/04 04:29:07 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2006/05/18 20:30:00 wiz Exp $
 #
 
 DISTNAME=	Wais-2.311
@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Wais/}
 MAINTAINER=	bad@NetBSD.org
 COMMENT=	Perl5 module for accessing WAIS servers
 
-BROKEN_IN=	pkgsrc-2005Q4
+BROKEN_IN=	pkgsrc-2005Q4 pkgsrc-2006Q1
 
 DEPENDS+=	p5-Curses>=1.02:../../devel/p5-Curses
 

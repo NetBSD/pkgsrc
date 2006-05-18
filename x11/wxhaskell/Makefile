@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/04/17 13:47:01 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2006/05/18 20:30:02 wiz Exp $
 
 DISTNAME=		wxhaskell-src-0.9.4
 PKGNAME=		${DISTNAME:S/-src//}
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		augustss@NetBSD.org
 HOMEPAGE=		http://wxhaskell.sourceforge.net/index.html
 COMMENT=		wxGTK binding for Haskell
+
+BROKEN_IN=		pkgsrc-2006Q1
 
 USE_TOOLS+=		gmake
 

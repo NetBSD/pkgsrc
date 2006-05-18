@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2006/04/04 08:03:09 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/18 20:30:01 wiz Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+
+BROKEN_IN=	pkgsrc-2006Q1
 
 PYTHON_VERSIONS_ACCEPTED= 24
 

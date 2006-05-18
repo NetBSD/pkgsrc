@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2006/04/17 13:46:51 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2006/05/18 20:30:01 wiz Exp $
 #
 
 DISTNAME=		galeon-1.3.21
@@ -11,7 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://galeon.sourceforge.net/
 COMMENT=		GNOME2 Web browser based on gecko
 
-BROKEN_IN=		pkgsrc-2005Q4
+BROKEN_IN=		pkgsrc-2005Q4 pkgsrc-2006Q1
 
 CONFLICTS+=		galeon-devel-[0-9]*
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/18 22:18:30 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/18 20:29:59 wiz Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-0.9.1
@@ -11,7 +11,7 @@ MAINTAINER=		jonb@NetBSD.org
 HOMEPAGE=		http://www.sbcl.org/
 COMMENT=		SBCL, a Common Lisp implementation
 
-BROKEN_IN=		pkgsrc-2005Q4
+BROKEN_IN=		pkgsrc-2005Q4 pkgsrc-2006Q1
 
 ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
 # It should be possible to have SBCL working on amd64, powerpc,

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/04 13:16:42 shannonjr Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/18 20:30:00 wiz Exp $
 #
 
 DISTNAME=		prewikka-0.9.5
@@ -8,6 +8,8 @@ MASTER_SITES=		http://prelude-ids.org/download/releases/
 MAINTAINER=		shannonjr@NetBSD.org
 HOMEPAGE=		http://prelude-ids.org/download/releases/
 COMMENT=		Prelude-IDS console
+
+BROKEN_IN=		pkgsrc-2006Q1
 
 .include "../../mk/bsd.prefs.mk"
 

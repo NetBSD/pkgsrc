@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/17 13:46:47 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/18 20:30:01 wiz Exp $
 #
 
 DISTNAME=	burn-0.4.0
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gsburn/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gsburn.sourceforge.net/
 COMMENT=	GNUstep based CD burning program
+
+BROKEN_IN=	pkgsrc-2006Q1
 
 DEPENDS+=	cdparanoia>=3.0.9.8:../../audio/cdparanoia
 DEPENDS+=	cdrtools>=1.10:../../sysutils/cdrtools
