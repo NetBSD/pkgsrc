@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/05/18 22:13:46 adrianp Exp $
+# $NetBSD: Makefile,v 1.20 2006/05/18 22:22:37 adrianp Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
 CATEGORIES=	databases www
@@ -11,6 +11,7 @@ COMMENT=	Set of PHP-scripts to administer an LDAP directory over the WWW
 .include "../../lang/php/phpversion.mk"
 
 DEPENDS+=	php-ldap>=4.1.2:../../databases/php-ldap
+DEPENDS+=	php-gettext>=4.1.2:../../devel/php-gettext
 .if ${PKG_PHP_VERSION} == "4"
 DEPENDS+=	php-domxml>=4.1.2:../../textproc/php4-domxml
 .elif ${PKG_PHP_VERSION} == "5"
