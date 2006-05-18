@@ -1,8 +1,29 @@
-$NetBSD: distinfo,v 1.115 2006/05/16 05:47:53 taca Exp $
+$NetBSD: distinfo,v 1.116 2006/05/18 05:17:35 taca Exp $
 
 SHA1 (squid-2.5.13/squid-2.5.STABLE13.tar.bz2) = b28320d22e17524d2a8442317394f667e108ade7
 RMD160 (squid-2.5.13/squid-2.5.STABLE13.tar.bz2) = 53649274787a6c1157dc0e465637b3371c5cec12
 Size (squid-2.5.13/squid-2.5.STABLE13.tar.bz2) = 1074112 bytes
+SHA1 (squid-2.5.13/squid-2.5.STABLE13-libaio-2.patch) = 1d5e5ccb37abc9a09145bbe4abaac9bcc7cefcdd
+RMD160 (squid-2.5.13/squid-2.5.STABLE13-libaio-2.patch) = 9914f873fcc6242f78745b9ceccd8c559d8c4b2e
+Size (squid-2.5.13/squid-2.5.STABLE13-libaio-2.patch) = 3256 bytes
+SHA1 (squid-2.5.13/squid-2.5.STABLE13-header_leak.patch) = db0e57cc22683916bb1604c469f6953ffd468b99
+RMD160 (squid-2.5.13/squid-2.5.STABLE13-header_leak.patch) = 75dcbc17b31431b5f4f03eea20296eb1ea9a2621
+Size (squid-2.5.13/squid-2.5.STABLE13-header_leak.patch) = 718 bytes
+SHA1 (squid-2.5.13/squid-2.5.STABLE13-ident_leak.patch) = 03decf9061b88e41af363b9bd2a942baa7129482
+RMD160 (squid-2.5.13/squid-2.5.STABLE13-ident_leak.patch) = 0c22c55901e9dbaa403c0e4bd4bc4f1a28898c79
+Size (squid-2.5.13/squid-2.5.STABLE13-ident_leak.patch) = 723 bytes
+SHA1 (squid-2.5.13/squid-2.5.STABLE13-htcp_leak.patch) = 892c5d121e141f1bb83a37cbfb40c4e6594fbaea
+RMD160 (squid-2.5.13/squid-2.5.STABLE13-htcp_leak.patch) = d85f6fe7d278020587fb71f7c18c1f73f83ad91c
+Size (squid-2.5.13/squid-2.5.STABLE13-htcp_leak.patch) = 827 bytes
+SHA1 (squid-2.5.13/squid-2.5.STABLE13-icons.patch) = c9a6420aabe9c85580a6bb2b1989f1bd280ef8ab
+RMD160 (squid-2.5.13/squid-2.5.STABLE13-icons.patch) = 6b3789a0a95aae03a74a68fe1e7f38a872ebeb5f
+Size (squid-2.5.13/squid-2.5.STABLE13-icons.patch) = 942 bytes
+SHA1 (squid-2.5.13/squid-2.5.STABLE13-hostnamelen.patch) = 10fa3873fd45e7fa7d7aac17f89d29f65963e2ab
+RMD160 (squid-2.5.13/squid-2.5.STABLE13-hostnamelen.patch) = 0a7adc48619926436f93547bb36b31cc6875d640
+Size (squid-2.5.13/squid-2.5.STABLE13-hostnamelen.patch) = 1057 bytes
+SHA1 (squid-2.5.13/squid-2.5.STABLE13-stable13.patch) = de66c0a6968e8fb06e92f59c238239a2858f5be9
+RMD160 (squid-2.5.13/squid-2.5.STABLE13-stable13.patch) = 0b07290fd44d38cd92337e68246ce591facd3cf2
+Size (squid-2.5.13/squid-2.5.STABLE13-stable13.patch) = 841 bytes
 SHA1 (patch-aa) = 49032ad1c2ece5c88805276ddd76d0f9ac09cd02
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
