@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2005/09/06 21:47:46 adrianp Exp $
+$NetBSD: MESSAGE,v 1.5 2006/05/18 22:13:46 adrianp Exp $
 
-You will need to edit ${PREFIX}/share/phpldapadmin/config.php to
+You will need to edit ${PREFIX}/share/phpldapadmin/config/config.php to
 initially setup your site.
 
 You will also need to make phpLDAPAdmin accessible through your HTTP server.
