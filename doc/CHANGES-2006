@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.264 2006/05/18 02:50:29 rpaulo Exp $
+$NetBSD: CHANGES-2006,v 1.265 2006/05/18 05:18:31 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2592,3 +2592,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/p5-MIME-tools to 5.420 [wiz 2006-05-17]
 	Updated multimedia/avidemux to 2.1.2 [reed 2006-05-17]
 	Updated www/bozohttpd to 20060517 [rpaulo 2006-05-17]
+	Updated www/squid to 2.5.13nb1 [taca 2006-05-18]
