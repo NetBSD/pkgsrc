@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4993 2006/05/18 16:12:40 cube Exp $
+$NetBSD: TODO,v 1.4994 2006/05/18 18:48:15 tron Exp $
 
 Suggested new packages
 ======================
@@ -1212,7 +1212,6 @@ Suggested package updates
 	o xfe-0.72
 	o xfmail-1.5.4
 	o xfstt-1.7
-	o xine-lib-1.1.1
 	o xkbset-0.5
 	o xlispstat-3.52.20
 	o xm7-303
