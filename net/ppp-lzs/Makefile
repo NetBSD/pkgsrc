@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/01/04 04:29:07 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/18 20:30:00 wiz Exp $
 
 DISTNAME=	ppp-lzs-1.2
 CATEGORIES=	net
@@ -8,7 +8,7 @@ MAINTAINER=	plunky@rya-online.net
 HOMEPAGE=	http://homepages.rya-online.net/plunky/lzs.html
 COMMENT=	PPP daemon and LKM with Stac LZS decompression
 
-BROKEN_IN=	pkgsrc-2005Q4
+BROKEN_IN=	pkgsrc-2005Q4 pkgsrc-2006Q1
 
 CONFLICTS+=		ppp-* ppp-mppe-*
 ONLY_FOR_PLATFORM= 	NetBSD-*-*

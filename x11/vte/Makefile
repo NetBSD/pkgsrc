@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/05/06 03:17:55 minskim Exp $
+# $NetBSD: Makefile,v 1.36 2006/05/18 20:30:02 wiz Exp $
 #
 
 DISTNAME=	vte-0.12.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Terminal widget with improved accessibility and I18N support
+
+BROKEN_IN=		pkgsrc-2006Q1
 
 USE_DIRS+=		gnome2-1.2
 USE_PKGLOCALEDIR=	yes

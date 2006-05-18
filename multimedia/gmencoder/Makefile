@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/05/07 14:05:15 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/05/18 20:30:00 wiz Exp $
 #
 
 DISTNAME=	gmencoder-0.1.0
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gmencoder.sourceforge.net/
 COMMENT=	GNOME2 frontend to mencoder
+
+BROKEN_IN=		pkgsrc-2006Q1
 
 DEPENDS+=       	mencoder>=0.90:../../multimedia/mencoder
 DEPENDS+=       	mplayer>=0.90:../../multimedia/mplayer
