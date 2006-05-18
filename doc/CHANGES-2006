@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.267 2006/05/18 16:12:39 cube Exp $
+$NetBSD: CHANGES-2006,v 1.268 2006/05/18 16:23:19 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2596,3 +2596,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated archivers/libzip to 0.7.1 [dillo 2006-05-18]
 	Updated databases/mysql5-server to 5.0.21 [cube 2006-05-18]
 	Updated databases/mysql5-client to 5.0.21 [cube 2006-05-18]
+	Updated games/falcons-eye to 1.9.3nb8 [joerg 2006-05-18]
