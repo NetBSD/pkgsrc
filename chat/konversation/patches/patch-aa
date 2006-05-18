@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/05/18 21:49:31 adrianp Exp $
+
+--- configure.orig	2006-01-30 08:48:56.000000000 +0000
++++ configure
+@@ -30948,7 +30948,7 @@ if test "$ac_use_path_checking" = "defau
+     kde_datadir='\${datadir}/apps'
+   fi
+   if test -z "$kde_locale"; then
+-    kde_locale='\${datadir}/locale'
++    kde_locale='\${prefix}/share/locale'
+   fi
+   if test -z "$kde_cgidir"; then
+     kde_cgidir='\${exec_prefix}/cgi-bin'
