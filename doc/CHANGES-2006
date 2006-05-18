@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.270 2006/05/18 19:13:46 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.271 2006/05/18 21:52:13 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2599,3 +2599,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated games/falcons-eye to 1.9.3nb8 [joerg 2006-05-18]
 	Updated multimedia/xine-lib to 1.0.3anb8 [tron 2006-05-18]
 	Updated emulators/ckmame to 0.8 [wiz 2006-05-18]
+	Added chat/konversation version 0.19 [adrianp 2006-05-18]
