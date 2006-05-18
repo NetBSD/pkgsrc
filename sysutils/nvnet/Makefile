@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/22 09:22:15 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/18 20:30:01 wiz Exp $
 #
 
 PKGNAME=		nvnet-20050620nb1
@@ -13,6 +13,8 @@ EXTRACT_SUFX=
 MAINTAINER=		manu@NetBSD.org
 HOMEPAGE=		http://www.morgart.com/NetBSD/nVidia/nvnet/
 COMMENT=		Driver for nVidia ethernet
+
+BROKEN_IN=		pkgsrc-2006Q1
 
 LICENSE=                nvidia-license
 
