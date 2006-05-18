@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.265 2006/05/18 05:18:31 taca Exp $
+$NetBSD: CHANGES-2006,v 1.266 2006/05/18 12:05:58 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2593,3 +2593,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/avidemux to 2.1.2 [reed 2006-05-17]
 	Updated www/bozohttpd to 20060517 [rpaulo 2006-05-17]
 	Updated www/squid to 2.5.13nb1 [taca 2006-05-18]
+	Updated archivers/libzip to 0.7.1 [dillo 2006-05-18]
