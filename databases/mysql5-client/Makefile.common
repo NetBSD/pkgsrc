@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2006/05/18 16:11:15 cube Exp $
+# $NetBSD: Makefile.common,v 1.12 2006/05/19 23:01:02 tron Exp $
 
 DISTNAME=		mysql-5.0.21
 CATEGORIES=		databases
@@ -118,6 +118,14 @@ SUBST_CLASSES+=		sem
 SUBST_STAGE.sem=	post-patch
 SUBST_FILES.sem=	configure
 SUBST_SED.sem=		-e "s|-lposix4|-lrt|g"
+.endif
+
+# Fix broken shared library detection under Mac OS X
+.if ${OPSYS} == Darwin
+SUBST_CLASSES+=		dylib
+SUBST_STAGE.dylib=	post-patch
+SUBST_FILES.dylib=	configure
+SUBST_SED.dylib=	-e "s|\\\$$shrext_cmds|\\.dylib|g"
 .endif
 
 .include "../../security/openssl/buildlink3.mk"
