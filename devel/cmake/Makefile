@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2006/03/04 21:29:13 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/05/19 21:32:52 rillig Exp $
 
-DISTNAME=	cmake-2.0.5
-PKGREVISION=	2
+DISTNAME=	cmake-2.4.2
 CATEGORIES=	devel
-MASTER_SITES=	http://www.cmake.org/files/v2.0/
+MASTER_SITES=	http://www.cmake.org/files/v2.4/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cmake.org/
@@ -17,15 +16,15 @@ CONFIGURE_HAS_MANDIR=	no
 CONFIGURE_ARGS+=	--mandir=/${PKGMANDIR}
 BUILD_TARGET=		default_target
 
+SUBST_CLASSES+=		cmake
+SUBST_STAGE.cmake=	pre-configure
+SUBST_MESSAGE.cmake=	Fixing hard-coded prefix.
+SUBST_FILES.cmake=	Modules/FindCurses.cmake
+SUBST_SED.cmake=	-e "s|@prefix@|${PREFIX}|g"
+
 post-extract:
 	${CP} ${WRKSRC}/Modules/Platform/FreeBSD.cmake \
 		${WRKSRC}/Modules/Platform/DragonFly.cmake
-
-post-patch:
-	for file in ${WRKSRC}/Modules/FindCurses.cmake; do		\
-		${MV} -f $$file $$file.bak;				\
-		${SED} "s|@prefix@|${PREFIX}|g" $$file.bak > $$file;	\
-	done
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
