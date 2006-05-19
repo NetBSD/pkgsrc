@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/04/17 13:46:15 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2006/05/19 07:32:29 joerg Exp $
 #
 
 DISTNAME=		paragui-1.0.4
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.paragui.org/
 COMMENT=		Cross-platform high-level application framework and GUI library
 
 USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	paragui.pc.in
 GNU_CONFIGURE=		yes
