@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.2.10.1 2006/05/19 13:32:55 salo Exp $
+
+--- src/xine-utils/list.c.orig	2004-12-20 21:38:24.000000000 +0000
++++ src/xine-utils/list.c	2006-05-18 12:04:23.000000000 +0100
+@@ -229,6 +229,8 @@
+   xine_node_t *node_cur;
+ 
+   node_cur = l->cur;
++  if (node_cur == NULL)
++    return;
+ 
+   if(node_cur->prev) {
+     node_cur->prev->next = node_cur->next;
