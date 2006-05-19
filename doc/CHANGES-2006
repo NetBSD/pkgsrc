@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.273 2006/05/19 07:49:18 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.274 2006/05/19 12:32:15 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2602,3 +2602,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added chat/konversation version 0.19 [adrianp 2006-05-18]
 	Updated databases/phpldapadmin to 0.9.8.3 [adrianp 2006-05-18]
 	Added lang/spl version 0.9h [rillig 2006-05-19]
+	Added games/eboard version 0.9.5 [rillig 2006-05-19]
