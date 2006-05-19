@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.584 2006/05/16 22:17:46 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.585 2006/05/19 09:05:59 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1997,14 +1997,8 @@ sub get_varname_to_toolname() {
 	return $load_tool_names_varname_to_toolname;
 }
 
-my $get_doc_TODO_updates_result = undef;
-sub get_doc_TODO_updates() {
-
-	if (defined($get_doc_TODO_updates_result)) {
-		return $get_doc_TODO_updates_result;
-	}
-
-	my ($fname) = ("${current_dir}/${pkgsrcdir}/doc/TODO");
+sub load_doc_TODO_updates($) {
+	my ($fname) = @_;
 	my ($lines, $updates, $state, $re_suggested_update);
 
 	if (!($lines = load_file($fname))) {
@@ -2040,7 +2034,32 @@ sub get_doc_TODO_updates() {
 		}
 	}
 
-	return ($get_doc_TODO_updates_result = $updates);
+	return $updates;
+}
+
+my $get_doc_TODO_updates_result = undef;
+sub get_doc_TODO_updates() {
+
+	if (!defined($get_doc_TODO_updates_result)) {
+		$get_doc_TODO_updates_result = load_doc_TODO_updates("${current_dir}/${pkgsrcdir}/doc/TODO");
+	}
+	return $get_doc_TODO_updates_result;
+}
+
+my $get_wip_TODO_updates_result = undef;
+sub get_wip_TODO_updates() {
+
+	if (!defined($get_wip_TODO_updates_result)) {
+		$get_wip_TODO_updates_result = load_doc_TODO_updates("${current_dir}/${pkgsrcdir}/wip/TODO");
+	}
+	return $get_wip_TODO_updates_result;
+}
+
+sub get_suggested_package_updates() {
+
+	return ($is_wip)
+	    ? get_wip_TODO_updates()
+	    : get_doc_TODO_updates();
 }
 
 #
@@ -4626,12 +4645,12 @@ sub checkfile_MESSAGE($) {
 
 	if (@{$message} < 3) {
 		log_warning($fname, NO_LINE_NUMBER, "File too short.");
-		explain($fname, NO_LINE_NUMBER, @explanation);
+		explain_warning($fname, NO_LINE_NUMBER, @explanation);
 		return;
 	}
 	if ($message->[0]->text ne "=" x 75) {
 		$message->[0]->log_warning("Expected a line of exactly 75 \"=\" characters.");
-		explain($fname, NO_LINE_NUMBER, @explanation);
+		explain_warning($fname, NO_LINE_NUMBER, @explanation);
 	}
 	checkline_rcsid($message->[1], "");
 	foreach my $line (@{$message}) {
@@ -4642,7 +4661,7 @@ sub checkfile_MESSAGE($) {
 	}
 	if ($message->[-1]->text ne "=" x 75) {
 		$message->[-1]->log_warning("Expected a line of exactly 75 \"=\" characters.");
-		explain($fname, NO_LINE_NUMBER, @explanation);
+		explain_warning($fname, NO_LINE_NUMBER, @explanation);
 	}
 	checklines_trailing_empty_lines($message);
 }
@@ -4744,7 +4763,7 @@ sub checkfile_package_Makefile($$$) {
 
 	if (defined($effective_pkgbase)) {
 
-		foreach my $suggested_update (@{get_doc_TODO_updates()}) {
+		foreach my $suggested_update (@{get_suggested_package_updates()}) {
 			my ($line, $suggbase, $suggver, $suggcomm) = @{$suggested_update};
 			my $comment = (defined($suggcomm) ? " (${suggcomm})" : "");
 
