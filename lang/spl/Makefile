@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/05/19 08:13:25 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/19 13:44:50 rillig Exp $
 #
 
 DISTNAME=	spl-0.9h
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://www.clifford.at/spl/releases/
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.clifford.at/spl
 COMMENT=	The SPL Programming Language
 
 USE_LANGUAGES=	c
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake gawk
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-patch
@@ -23,6 +23,7 @@ SUBST_SED.prefix+=	-e 's,^  cgibin_libdir.*,  cgibin_libdir = ${PREFIX}/libexec/
 _SUBST_IS_TEXT_FILE=true
 
 MAKEFILE=	GNUmakefile
+BUILD_TARGET=	all spldoc
 EGDIR=		${PREFIX}/share/examples/spl
 DOCDIR=		${PREFIX}/share/doc/spl
 
@@ -31,7 +32,7 @@ post-install:
 	${CHMOD} a+rwx ${PREFIX}/libexec/cgi-bin/webspl_cache
 	${LN} -s ${PREFIX}/lib/spl_modules ${PREFIX}/libexec/cgi-bin/spl_modules
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKSRC} && ${PAX} -rw -p am README* webspl_demo webspltut ${DOCDIR}
+	cd ${WRKSRC} && ${PAX} -rw -p am README* manual.tex spldoc webspl_demo webspltut ${DOCDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC}/examples && ${INSTALL_DATA} example* ${EGDIR}
 
