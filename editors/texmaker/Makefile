@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/17 13:46:22 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/19 12:45:12 joerg Exp $
 
 DISTNAME=	texmaker-1.3
 PKGREVISION=	1
@@ -10,6 +10,7 @@ MAINTAINER=	ghen@NetBSD.org
 HOMEPAGE=	http://www.xm1math.net/texmaker/
 COMMENT=	LaTeX editor and front end
 
+USE_LANGUAGES=	c++
 USE_LIBTOOL=	yes
 
 do-configure:
