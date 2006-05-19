@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/05/19 09:11:49 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2006/05/19 09:12:25 joerg Exp $
 #
 
 DISTNAME=	transcode-1.0.2
@@ -18,7 +18,7 @@ BROKEN_IN=	pkgsrc-2006Q1
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
-USE_LANGUAGES+=	c c++
+USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--disable-libpostproc
 CONFIGURE_ARGS+=	--with-libavcodec-prefix=${BUILDLINK_PREFIX.ffmpeg}
