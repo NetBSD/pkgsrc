@@ -1,0 +1,43 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/19 07:49:09 rillig Exp $
+bin/spl-config
+bin/splrun
+include/spl.h
+lib/libspl.a
+lib/spl_modules/mod_array.so
+lib/spl_modules/mod_bits.so
+lib/spl_modules/mod_cgi.so
+lib/spl_modules/mod_crypt.so
+lib/spl_modules/mod_encode_int.splb
+lib/spl_modules/mod_encode_js.splb
+lib/spl_modules/mod_encode_regex.splb
+lib/spl_modules/mod_encode_url.splb
+lib/spl_modules/mod_encode_xml.so
+lib/spl_modules/mod_environ.so
+lib/spl_modules/mod_file.so
+lib/spl_modules/mod_format_ini.splb
+lib/spl_modules/mod_prime.so
+lib/spl_modules/mod_sql.so
+lib/spl_modules/mod_sql_utils.splb
+lib/spl_modules/mod_system.so
+lib/spl_modules/mod_task.so
+lib/spl_modules/mod_termio.so
+lib/spl_modules/mod_time.so
+lib/spl_modules/mod_w2t.splb
+lib/spl_modules/mod_webdebug.so
+lib/spl_modules/mod_wsf.splb
+lib/spl_modules/mod_wsf_action.splb
+lib/spl_modules/mod_wsf_debug.splb
+lib/spl_modules/mod_wsf_dialog.splb
+lib/spl_modules/mod_wsf_display.splb
+lib/spl_modules/mod_wsf_edit.splb
+lib/spl_modules/mod_wsf_edit_sql.splb
+lib/spl_modules/mod_wsf_graph.splb
+lib/spl_modules/mod_wsf_menu.splb
+lib/spl_modules/mod_wsf_switch.splb
+libexec/cgi-bin/spl_modules
+libexec/cgi-bin/webspl.cgi
+share/aclocal/spl.m4
+@dirrm share/aclocal
+@dirrm libexec/cgi-bin/webspl_cache
+@dirrm libexec/cgi-bin
+@dirrm lib/spl_modules
