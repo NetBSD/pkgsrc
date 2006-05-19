@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/09 21:04:41 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/05/19 16:18:53 rillig Exp $
 
 DISTNAME=		mpd-0.11.5
 PKGNAME=		${DISTNAME:S/mpd/musicpd/}
@@ -32,7 +32,7 @@ SUBST_FILES.paths=	mpd.conf
 SUBST_SED.paths=	-e 's,@DEVOSSAUDIO@,${DEVOSSAUDIO},'
 
 post-extract:
-	@${CP} ${FILESDIR}/mpd.conf ${WRKSRC}/mpd.conf
+	${CP} ${FILESDIR}/mpd.conf ${WRKSRC}/mpd.conf
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}

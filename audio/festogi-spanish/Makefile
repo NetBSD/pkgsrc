@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:08:06 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/05/19 16:18:52 rillig Exp $
 
 DISTNAME=	OGIspanish-2.0.1
 PKGNAME=	festogi-spanish-2.0.1
@@ -20,9 +20,9 @@ NO_BUILD=	yes
 FHOME=		${PREFIX}/share/festival
 
 post-extract:
-	@ ${CHMOD} -R a+r ${WRKSRC}
-	@ ${FIND} ${WRKSRC} -type d -print | ${XARGS} ${CHMOD} 755
-	@ ${RM} -R ${WRKSRC}/lib/ogi_spanish/CVS
+	${CHMOD} -R a+r ${WRKSRC}
+	${FIND} ${WRKSRC} -type d -print | ${XARGS} ${CHMOD} 755
+	${RM} -r ${WRKSRC}/lib/ogi_spanish/CVS
 
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}

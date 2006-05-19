@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/05 23:08:07 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/05/19 16:18:52 rillig Exp $
 
 DISTNAME=	festvox_ellpc11k
 PKGNAME=	festvox-el11-1.4.0
@@ -21,8 +21,8 @@ NO_BUILD=	yes
 FHOME=		${PREFIX}/share/festival
 
 post-extract:
-	@ ${CHMOD} -R a+r ${WRKSRC}
-	@ ${FIND} ${WRKSRC} -type d -print | ${XARGS} ${CHMOD} 755
+	${CHMOD} -R a+r ${WRKSRC}
+	${FIND} ${WRKSRC} -type d -print | ${XARGS} ${CHMOD} 755
 
 do-install:
 	${INSTALL_DATA_DIR} ${FHOME}
