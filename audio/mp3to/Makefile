@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/22 09:22:06 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/19 16:18:53 rillig Exp $
 
 DISTNAME=	mp3to
 PKGNAME=	${DISTNAME}-1.0.1
@@ -21,8 +21,8 @@ NO_BUILD=	YES
 INSTALLATION_DIRS=	bin
 
 do-extract:
-	@${MKDIR} ${WRKSRC}
-	@${GZCAT} ${DISTDIR}/${DISTFILES} >${WRKSRC}/${DISTFILES:S/.gz//}
+	${MKDIR} ${WRKSRC}
+	${GZCAT} ${DISTDIR}/${DISTFILES} >${WRKSRC}/${DISTFILES:S/.gz//}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/mp3to ${PREFIX}/bin
