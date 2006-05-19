@@ -1,67 +1,56 @@
-<!-- $NetBSD: submit.xml,v 1.10 2006/03/02 23:08:40 rillig Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.11 2006/05/19 21:08:42 rillig Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
 
-<sect1 id="submitting-your-package">
-<title>Submitting your packages</title>
-<para>
-You have to separate between binary and <quote>normal</quote> (source)
-packages here:
-</para>
+<sect1 id="submitting-binary-packages">
+<title>Submitting binary packages</title>
 
-<itemizedlist>
-<listitem>
-<para>precompiled binary packages</para>
-<para>
-  Our policy is that we accept binaries only from pkgsrc developers to
-  guarantee that the packages don't contain any trojan horses etc.
-  This is not to annoy anyone but rather to protect our users!
-  You're still free to put up your home-made binary packages and tell
-  the world where to get them. NetBSD developers doing bulk builds and
-  wanting to upload them please see <xref linkend="bulk-upload"/>.
-</para>
-</listitem>
-
-<listitem>
-<para>packages</para>
-<para>
-  First, check that your package is complete, compiles and runs well;
-  see <xref linkend="debug"/> and the rest of this document. Next,
-  generate an uuencoded gzipped &man.tar.1; archive, preferably with all files
-  in a single directory.
-  Finally, <command>send-pr</command> with category <quote>pkg</quote>, a
-  synopsis which includes the package name and version number, a short
-  description of your package (contents of the COMMENT variable or DESCR
-  file are OK) and attach the archive to your PR.
-</para>
-
-<para>
-  If you want to submit several packages, please send a separate PR for
-  each one, it's easier for us to track things that way.
-</para>
-
-<para>
-  Alternatively, you can also import new packages into pkgsrc-wip
-  (<quote>pkgsrc work-in-progress</quote>); see the homepage at <ulink
-  url="http://pkgsrc-wip.sourceforge.net/"/> for details.
-</para>
-</listitem>
-</itemizedlist>
+	<para>Our policy is that we accept binaries only from pkgsrc
+	developers to guarantee that the packages don't contain any
+	trojan horses etc. This is not to annoy anyone but rather to
+	protect our users! You're still free to put up your home-made
+	binary packages and tell the world where to get them. NetBSD
+	developers doing bulk builds and wanting to upload them please
+	see <xref linkend="bulk-upload"/>.</para>
 
 </sect1>
+<sect1 id="submitting-your-package">
+<title>Submitting source packages (for non-NetBSD-developers)</title>
 
+	<para>First, check that your package is complete, compiles and
+	runs well; see <xref linkend="debug"/> and the rest of this
+	document. Next, generate an uuencoded gzipped &man.tar.1;
+	archive, preferably with all files in a single directory.
+	Finally, <command>send-pr</command> with category
+	<quote>pkg</quote>, a synopsis which includes the package name
+	and version number, a short description of your package
+	(contents of the COMMENT variable or DESCR file are OK) and
+	attach the archive to your PR.</para>
+
+	<para>If you want to submit several packages, please send a
+	separate PR for each one, it's easier for us to track things
+	that way.</para>
+
+	<para>Alternatively, you can also import new packages into
+	pkgsrc-wip (<quote>pkgsrc work-in-progress</quote>); see the
+	homepage at <ulink url="http://pkgsrc-wip.sourceforge.net/"/>
+	for details.</para>
+
+</sect1>
 <sect1 id="general-notes-for-changes">
 <title>General notes when adding, updating, or removing packages</title>
-<para>Please note all package additions, updates, moves, and removals
-  in <filename>pkgsrc/doc/CHANGES</filename>. It's very important
-  to keep this file up to date and conforming to the existing
-  format, because it will be used by scripts to automatically update
-  pages on <ulink url="http://www.NetBSD.org/">www.NetBSD.org</ulink>
-  and other sites. Additionally, check the
-  <filename>pkgsrc/doc/TODO</filename> file and remove the entry
-  for the package you updated or removed, in case it was mentioned
-  there.</para>
+
+	<para>Please note all package additions, updates, moves, and
+	removals in <filename>pkgsrc/doc/CHANGES</filename>. It's very
+	important to keep this file up to date and conforming to the
+	existing format, because it will be used by scripts to
+	automatically update pages on <ulink
+	url="http://www.NetBSD.org/">www.NetBSD.org</ulink> and other
+	sites. Additionally, check the
+	<filename>pkgsrc/doc/TODO</filename> file and remove the entry
+	for the package you updated or removed, in case it was mentioned
+	there.</para>
 
 	<para>When the <varname>PKGREVISION</varname> of a package is
 	bumped, the change should appear in
