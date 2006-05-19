@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/17 13:46:28 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/05/19 07:03:54 joerg Exp $
 #
 
 DISTNAME=		interLOGIC-src-0.30
@@ -14,6 +14,7 @@ COMMENT=		Logic/puzzle game based on the old Amiga game "Balls"
 
 WRKSRC=			${WRKDIR}/interlogic
 USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
