@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/05/19 21:32:52 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2006/05/19 21:35:01 rillig Exp $
 
 DISTNAME=	cmake-2.4.2
 CATEGORIES=	devel
