@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/22 09:22:05 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/05/19 16:18:52 rillig Exp $
 #
 
 DISTNAME=		gogo239b
@@ -34,8 +34,8 @@ MAKE_FLAGS+=	ASFLAGS="-f elf -D__unix__ ${E3DN}"
 INSTALLATION_DIRS=	bin
 
 do-install:
-	@ ${INSTALL_PROGRAM} ${WRKSRC}/gogo ${PREFIX}/bin
-	@ ${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gogo
-	@ ${INSTALL_DATA} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/gogo
+	${INSTALL_PROGRAM} ${WRKSRC}/gogo ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gogo
+	${INSTALL_DATA} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/gogo
 
 .include "../../mk/bsd.pkg.mk"
