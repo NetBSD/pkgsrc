@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/05/10 16:28:43 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/05/19 20:53:34 joerg Exp $
 bin/vlc
 bin/vlc-config
 bin/wxvlc
@@ -21,10 +21,12 @@ lib/vlc/access/libaccess_http_plugin.so
 lib/vlc/access/libaccess_mms_plugin.so
 lib/vlc/access/libaccess_tcp_plugin.so
 lib/vlc/access/libaccess_udp_plugin.so
+lib/vlc/access/libcdda_plugin.so
 lib/vlc/access/libcddax_plugin.so
 lib/vlc/access/libdvdnav_plugin.so
 lib/vlc/access/libdvdread_plugin.so
 lib/vlc/access/libscreen_plugin.so
+lib/vlc/access/libvcd_plugin.so
 lib/vlc/access_filter/libaccess_filter_record_plugin.so
 lib/vlc/access_filter/libaccess_filter_timeshift_plugin.so
 lib/vlc/access_output/libaccess_output_dummy_plugin.so
