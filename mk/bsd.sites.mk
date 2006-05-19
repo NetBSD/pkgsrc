@@ -1,4 +1,4 @@
-# $NetBSD: bsd.sites.mk,v 1.62 2006/04/12 11:37:18 markd Exp $
+# $NetBSD: bsd.sites.mk,v 1.63 2006/05/19 02:21:24 perry Exp $
 #
 # Default MASTER_SITES
 
@@ -395,6 +395,7 @@ MASTER_SITE_FREEBSD_LOCAL+= \
 MASTER_SITE_BACKUP?=	\
 	http://ftp.fi.NetBSD.org/pub/NetBSD/packages/distfiles/ \
 	ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/ \
+	http://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/ \
 	ftp://ftp.FreeBSD.org/pub/FreeBSD/distfiles/
 
 .endif # BSD_SITES_MK
