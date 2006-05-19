@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2005/10/14 21:51:19 jmmv Exp $
+$NetBSD: patch-aa,v 1.3 2006/05/19 13:14:06 joerg Exp $
 
---- configure.orig	2005-09-05 14:06:07.000000000 +0200
+--- configure.orig	2006-03-13 19:38:11.000000000 +0000
 +++ configure
-@@ -3953,13 +3953,13 @@ darwin* | rhapsody*)
+@@ -3999,13 +3999,13 @@ darwin* | rhapsody*)
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.2 2005/10/14 21:51:19 jmmv Exp $
        lt_cv_file_magic_cmd=/usr/bin/file
        lt_cv_file_magic_test_file=`echo /usr/lib/libc.so.*`
        ;;
-@@ -7620,7 +7620,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -7666,7 +7666,7 @@ if test -z "$aix_libpath"; then aix_libp
        ;;
  
      # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.2 2005/10/14 21:51:19 jmmv Exp $
        archive_cmds='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
        hardcode_libdir_flag_spec='-R$libdir'
        hardcode_direct=yes
-@@ -8198,7 +8198,7 @@ kfreebsd*-gnu)
+@@ -8244,7 +8244,7 @@ kfreebsd*-gnu)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -36,7 +36,7 @@ $NetBSD: patch-aa,v 1.2 2005/10/14 21:51:19 jmmv Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -10581,7 +10581,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -10627,7 +10627,7 @@ if test -z "$aix_libpath"; then aix_libp
    freebsd-elf*)
      archive_cmds_need_lc_CXX=no
      ;;
@@ -45,7 +45,7 @@ $NetBSD: patch-aa,v 1.2 2005/10/14 21:51:19 jmmv Exp $
      # FreeBSD 3 and later use GNU C++ and GNU ld with standard ELF
      # conventions
      ld_shlibs_CXX=yes
-@@ -11288,7 +11288,7 @@ echo $ECHO_N "checking for $compiler opt
+@@ -11334,7 +11334,7 @@ echo $ECHO_N "checking for $compiler opt
  	    ;;
  	esac
  	;;
@@ -54,7 +54,7 @@ $NetBSD: patch-aa,v 1.2 2005/10/14 21:51:19 jmmv Exp $
  	# FreeBSD uses GNU C++
  	;;
        hpux9* | hpux10* | hpux11*)
-@@ -11902,7 +11902,7 @@ kfreebsd*-gnu)
+@@ -11948,7 +11948,7 @@ kfreebsd*-gnu)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -63,3 +63,12 @@ $NetBSD: patch-aa,v 1.2 2005/10/14 21:51:19 jmmv Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
+@@ -24086,7 +24086,7 @@ fi
+ 
+ 
+ GTK2BUILD_CFLAGS="$GTK2_CFLAGS $SETTINGS_CFLAGS $gthread_CFLAGS $gnome_speech_CFLAGS $gnome_a11y_CFLAGS $glade_CFLAGS $gnome_CFLAGS $wnck_CFLAGS $hildon_CFLAGS"
+-GTK2BUILD_LIBS="$X_LIBS $GTK2_LIBS $SETTINGS_LIBS $gthread_LIBS $gnome_speech_LIBS $gnome_a11y_LIBS $glade_LIBS $gnome_LIBS $wnck_LIBS $hildon_LIBS  -Wl,--export-dynamic,"
++GTK2BUILD_LIBS="$X_LIBS $GTK2_LIBS $SETTINGS_LIBS $gthread_LIBS $gnome_speech_LIBS $gnome_a11y_LIBS $glade_LIBS $gnome_LIBS $wnck_LIBS $hildon_LIBS  -Wl,--export-dynamic"
+ 
+ 
+ 
