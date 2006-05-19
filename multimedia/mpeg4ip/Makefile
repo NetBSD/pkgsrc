@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/05/19 12:21:52 adrianp Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/19 18:11:59 abs Exp $
 #
 
 DISTNAME=		mpeg4ip-1.4.1
@@ -9,7 +9,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mpeg4ip.sourceforge.net/
 COMMENT=		Tools for streaming video and audio
 
-CONFLICTS+		faad2-[0-9]*
+CONFLICTS+=		faad2-[0-9]*
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
