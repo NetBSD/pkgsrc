@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.12 2006/05/19 21:43:23 rillig Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.13 2006/05/19 22:04:19 rillig Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -223,9 +223,14 @@
 
 	<variablelist>
 
-	<varlistentry><term>pkgsrc users</term><listitem><para>There are
-	two kinds of pkgsrc users: Some users only want to install
-	pre-built binary packages. The other users build the pkgsrc
+	<varlistentry><term>pkgsrc users</term><listitem><para>The
+	pkgsrc users are people who use the packages provided by pkgsrc.
+	Typically they are system administrators. The people using the
+	software that is inside the packages (maybe called <quote>end
+	users</quote>) are not covered by the pkgsrc guide.</para>
+
+	<para>There are two kinds of pkgsrc users: Some only want to
+	install pre-built binary packages. Others build the pkgsrc
 	packages from source, either for installing them directly or for
 	building binary packages themselves. For pkgsrc users <xref
 	linkend="users-guide"/> should provide all necessary
