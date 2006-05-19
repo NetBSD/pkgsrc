@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.4 2006/05/03 12:47:47 drochner Exp $
+$NetBSD: patch-ak,v 1.5 2006/05/19 19:09:18 joerg Exp $
 
---- configure.orig	2006-03-16 18:38:37.000000000 +0100
+--- configure.orig	2006-04-29 23:44:54.000000000 +0000
 +++ configure
-@@ -24585,6 +24585,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -24730,6 +24730,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
    ac_cv_lib_Xinerama_XineramaQueryExtension=yes
@@ -10,3 +10,22 @@ $NetBSD: patch-ak,v 1.4 2006/05/03 12:47:47 drochner Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
+@@ -24923,14 +24924,14 @@ case $host in
+     LDFLAGS="$LDFLAGS -L/usr/local/lib"
+     ;;
+   *)
+-   THREAD_LIBS="-lpthread"
+-    echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
+-echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
++   THREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
++    echo "$as_me:$LINENO: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
++echo $ECHO_N "checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6
+ if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpthread  $LIBS"
++LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
