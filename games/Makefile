@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.268 2006/05/11 07:53:51 adam Exp $
+# $NetBSD: Makefile,v 1.269 2006/05/19 19:57:26 rillig Exp $
 #
 
 COMMENT=	Games
@@ -58,6 +58,7 @@ SUBDIR+=	defendguin
 SUBDIR+=	digger
 SUBDIR+=	dipmap
 SUBDIR+=	dopewars
+SUBDIR+=	eboard
 SUBDIR+=	enigma
 SUBDIR+=	et
 SUBDIR+=	eus-demo
@@ -141,6 +142,7 @@ SUBDIR+=	majesty-demo
 SUBDIR+=	minami
 SUBDIR+=	mirrormagic
 SUBDIR+=	mirrormagic-sdl
+SUBDIR+=	moon-buggy
 SUBDIR+=	moria
 SUBDIR+=	nagi
 SUBDIR+=	nethack
