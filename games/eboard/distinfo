@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/05/19 12:32:06 rillig Exp $
+
+SHA1 (eboard-0.9.5.tar.bz2) = 14047899f4e8009b4823e24b3ec2227ba43d1147
+RMD160 (eboard-0.9.5.tar.bz2) = 585a89ba80bc22d9d53f0657600a7a7b9d378a3f
+Size (eboard-0.9.5.tar.bz2) = 360241 bytes
