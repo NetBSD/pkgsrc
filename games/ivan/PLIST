@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/08/18 17:52:25 ben Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/05/19 07:15:24 joerg Exp $
 bin/ivan
 share/ivan/Graphics/Char.pcx
 share/ivan/Graphics/Cursor.pcx
@@ -20,5 +20,7 @@ share/ivan/Script/glterra.dat
 share/ivan/Script/item.dat
 share/ivan/Script/material.dat
 share/ivan/Script/olterra.dat
+@dirrm share/ivan/Bone
 @dirrm share/ivan/Graphics
 @dirrm share/ivan/Script
+@dirrm share/ivan
