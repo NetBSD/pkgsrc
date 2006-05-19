@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.11 2006/05/12 23:03:22 rillig Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.12 2006/05/19 21:43:23 rillig Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -217,6 +217,34 @@
 	</listitem>
       </varlistentry>
     </variablelist>
+
+  <sect2 id="term.people">
+  <title>People involved in pkgsrc</title>
+
+	<variablelist>
+
+	<varlistentry><term>pkgsrc users</term><listitem><para>There are
+	two kinds of pkgsrc users: Some users only want to install
+	pre-built binary packages. The other users build the pkgsrc
+	packages from source, either for installing them directly or for
+	building binary packages themselves. For pkgsrc users <xref
+	linkend="users-guide"/> should provide all necessary
+	documentation.</para></listitem></varlistentry>
+
+	<varlistentry><term>package maintainers</term><listitem><para>A
+	package maintainer creates packages as described in <xref
+	linkend="developers-guide"/>.</para></listitem></varlistentry>
+
+	<varlistentry><term>infrastructure developers</term>
+	<listitem><para>These people are involved in all those files
+	that live in the <filename>mk/</filename> directory and below.
+	Only these people should need to read through <xref
+	linkend="infrastructure"/>, though others might be curious,
+	too.</para></listitem></varlistentry>
+
+	</variablelist>
+
+  </sect2>
   </sect1>
 
   <sect1 id="typography">
