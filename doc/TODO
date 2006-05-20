@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.4997 2006/05/19 21:35:59 rillig Exp $
+$NetBSD: TODO,v 1.4998 2006/05/20 00:24:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -492,6 +492,7 @@ Suggested package updates
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.1
+	o etherape-0.9.6
 	o eukleides-1.0.3
 	o euler-1.61
 	o evince-0.5.3
@@ -553,6 +554,7 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glabels-2.0.4
 	o gld-1.7
+	o glibmm-2.10.3
 	o glpk-4.10
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -1038,6 +1040,7 @@ Suggested package updates
 	o qt2-docs-2.3.2
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
+	o qt4-libs-4.1.3
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o qwt-0.4.0
@@ -1161,6 +1164,7 @@ Suggested package updates
 	o tmake-1.13
 	o tob-0.26
 	o top-3.6beta1
+	o totem-1.4.1
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trio-1.4
