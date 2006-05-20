@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.17 2006/05/20 22:10:18 jlam Exp $
+# $NetBSD: msgfmt.sh,v 1.18 2006/05/20 22:13:23 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -265,7 +265,7 @@ BEGIN {
 		# old format only supported a single translation per
 		# plural form.
 		#
-		MSGSTRN_RE = OBSOLETE_RE "msgstr[[]([2-9]|[1-9][0-9]+)[]][ 	]+"
+		MSGSTRN_RE = OBSOLETE_RE "msgstr[[][0-9]+[]][ 	]+"
 		if ($0 ~ MSGSTRN_RE) {
 			while (result = getline) {
 				if ($0 !~ MSG_CONTINUATION_RE) break
