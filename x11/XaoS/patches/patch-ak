@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2006/05/20 18:09:50 joerg Exp $
+
+--- src/engine/plane.c.orig	2006-05-20 17:57:12.000000000 +0000
++++ src/engine/plane.c
+@@ -52,7 +52,7 @@ CONST char *CONST planename[] = {
+   NULL
+ };
+ 
+-
++REGISTERS(3)
+ void
+ recalculate (int plane, number_t * x1, number_t * y1)
+ {

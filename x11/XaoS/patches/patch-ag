@@ -1,0 +1,31 @@
+$NetBSD: patch-ag,v 1.1 2006/05/20 18:09:49 joerg Exp $
+
+--- src/ui-hlp/save.c.orig	2006-05-20 17:40:43.000000000 +0000
++++ src/ui-hlp/save.c
+@@ -293,8 +293,6 @@ ndecimals (struct uih_context *uih)
+ }
+ static void
+ savepos (struct uih_context *uih)
+-REGISTERS (3);
+-     static void savepos (struct uih_context *uih)
+ {
+   int n = ndecimals (uih);
+   start_save (uih, "view");
+@@ -307,8 +305,6 @@ REGISTERS (3);
+ }
+ static void
+ savepos2 (struct uih_context *uih)
+-REGISTERS (3);
+-     static void savepos2 (struct uih_context *uih)
+ {
+   int n = ndecimals (uih);
+   start_save (uih, "animateview");
+@@ -321,8 +317,6 @@ REGISTERS (3);
+ }
+ static void
+ savepos3 (struct uih_context *uih)
+-REGISTERS (3);
+-     static void savepos3 (struct uih_context *uih)
+ {
+   int n = ndecimals (uih);
+   start_save (uih, "morphview");

@@ -1,0 +1,100 @@
+$NetBSD: patch-ah,v 1.1 2006/05/20 18:09:49 joerg Exp $
+
+--- src/engine/docalc.c.orig	2006-05-20 17:48:28.000000000 +0000
++++ src/engine/docalc.c
+@@ -115,21 +115,15 @@
+ #ifdef UNCOMPRESS
+ /*uncompressed version of loop */
+ #ifdef SMOOTHMODE
++CONSTF REGISTERS (3)
+ static unsigned int FUNCTYPE
+ SCALC (register number_t zre, register number_t zim, register number_t pre,
+        register number_t pim)
+-     CONSTF REGISTERS (3);
+-     static unsigned int FUNCTYPE
+-       SCALC (register number_t zre, register number_t zim,
+-	      register number_t pre, register number_t pim)
+ #else
++CONSTF REGISTERS (3)
+ static unsigned int FUNCTYPE
+ CALC (register number_t zre, register number_t zim, register number_t pre,
+       register number_t pim)
+-     CONSTF REGISTERS (3);
+-     static unsigned
+-       CALC (register number_t zre, register number_t zim,
+-	     register number_t pre, register number_t pim)
+ #endif
+ {
+   register unsigned int iter = cfractalc.maxiter;
+@@ -252,21 +246,15 @@ CALC (register number_t zre, register nu
+ }
+ #else
+ #ifdef SMOOTHMODE
++CONSTF REGISTERS (3)
+ static unsigned int FUNCTYPE
+ SCALC (register number_t zre, register number_t zim, register number_t pre,
+        register number_t pim)
+-     CONSTF REGISTERS (3);
+-     static unsigned int FUNCTYPE
+-       SCALC (register number_t zre, register number_t zim,
+-	      register number_t pre, register number_t pim)
+ #else
++CONSTF REGISTERS (3)
+ static unsigned int FUNCTYPE
+ CALC (register number_t zre, register number_t zim, register number_t pre,
+       register number_t pim)
+-     CONSTF REGISTERS (3);
+-     static unsigned int FUNCTYPE
+-       CALC (register number_t zre, register number_t zim,
+-	     register number_t pre, register number_t pim)
+ #endif
+ {
+   register unsigned int iter = cfractalc.maxiter /*& (~(int) 3) */ ;
+@@ -344,21 +332,15 @@ CALC (register number_t zre, register nu
+ #ifndef UNCOMPRESS
+ 
+ #ifdef SMOOTHMODE
++CONSTF REGISTERS (3)
+ static unsigned int FUNCTYPE
+ SPERI (register number_t zre, register number_t zim, register number_t pre,
+        register number_t pim)
+-     CONSTF REGISTERS (3);
+-     static unsigned int FUNCTYPE
+-       SPERI (register number_t zre, register number_t zim,
+-	      register number_t pre, register number_t pim)
+ #else
++CONSTF REGISTERS (3)
+ static unsigned int FUNCTYPE
+ PERI (register number_t zre, register number_t zim, register number_t pre,
+       register number_t pim)
+-     CONSTF REGISTERS (3);
+-     static unsigned int FUNCTYPE
+-       PERI (register number_t zre, register number_t zim,
+-	     register number_t pre, register number_t pim)
+ #endif
+ {
+   register unsigned int iter = cfractalc.maxiter /*& (~(int) 3) */ , iter1 =
+@@ -467,21 +449,15 @@ end:
+ /*F. : this macros definitions are really strange, but after a while, it's good */
+ 
+ #ifdef SMOOTHMODE
++CONSTF REGISTERS (3)
+ static unsigned int FUNCTYPE
+ SPERI (register number_t zre, register number_t zim, register number_t pre,
+        register number_t pim)
+-     CONSTF REGISTERS (3);
+-     static unsigned int FUNCTYPE
+-       SPERI (register number_t zre, register number_t zim,
+-	      register number_t pre, register number_t pim)
+ #else
++CONSTF REGISTERS (3)
+ static unsigned int FUNCTYPE
+ PERI (register number_t zre, register number_t zim, register number_t pre,
+       register number_t pim)
+-     CONSTF REGISTERS (3);
+-     static unsigned int FUNCTYPE
+-       PERI (register number_t zre, register number_t zim,
+-	     register number_t pre, register number_t pim)
+ #endif
+ {
+   register unsigned int iter = cfractalc.maxiter /*& (~(int) 3) */ ;
