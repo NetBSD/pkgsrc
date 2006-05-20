@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2006/04/14 08:45:06 adam Exp $
+$NetBSD: patch-ab,v 1.8 2006/05/20 23:34:40 jlam Exp $
 
 --- po/ja.po.orig	2006-04-09 18:27:13.000000000 +0200
 +++ po/ja.po
@@ -20,21 +20,3 @@ $NetBSD: patch-ab,v 1.7 2006/04/14 08:45:06 adam Exp $
  msgstr "マラヤーラム文字"
  
  msgid "Script|Mongolian"
-@@ -13568,7 +13568,7 @@ msgstr ""
- msgid "Namelist contains non-ASCII names"
- msgstr "名前リストに非ASCIIの名前が含まれています"
- 
--msgid""
-+msgid ""
- "Glyph names should be limited to characters in the ASCII character set,\n"
- "but there are names in this namelist which use characters outside\n"
- "that range."
-@@ -13577,7 +13577,7 @@ msgstr ""
- "この名前リストにはその範囲に含まれない文字を使用している\n"
- "名前があります."
- 
--msgid""
-+msgid ""
- "Glyph names should be limited to characters in the ASCII character set, "
- "but there are names in this namelist which use characters outside that range."
- msgstr ""
