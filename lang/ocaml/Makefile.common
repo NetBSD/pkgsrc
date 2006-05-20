@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2006/04/25 04:58:32 hiramatsu Exp $
+# $NetBSD: Makefile.common,v 1.16 2006/05/20 09:10:51 rillig Exp $
 
 DISTNAME=	ocaml-3.09.2
 CATEGORIES=	lang
@@ -33,11 +33,11 @@ post-extract: cp-power-bsd cp-gnu-config
 
 .PHONY: cp-power-bsd
 cp-power-bsd:
-	@${CP} ${WRKSRC:Q}/asmrun/power-elf.S ${WRKSRC:Q}/asmrun/power-bsd.S
+	${CP} ${WRKSRC:Q}/asmrun/power-elf.S ${WRKSRC:Q}/asmrun/power-bsd.S
 
 .PHONY: cp-gnu-config
 cp-gnu-config:
-	@${CP} ${PKGSRCDIR:Q}/mk/gnu-config/config.guess ${WRKSRC:Q}/config/gnu/
-	@${CP} ${PKGSRCDIR:Q}/mk/gnu-config/config.sub ${WRKSRC:Q}/config/gnu/
+	${CP} ${PKGSRCDIR:Q}/mk/gnu-config/config.guess ${WRKSRC:Q}/config/gnu/
+	${CP} ${PKGSRCDIR:Q}/mk/gnu-config/config.sub ${WRKSRC:Q}/config/gnu/
 
 .include "../../mk/pthread.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2006/04/06 06:22:12 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2006/05/20 09:10:51 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OCAML_BUILDLINK3_MK:=	${OCAML_BUILDLINK3_MK}+
@@ -9,17 +9,17 @@ BUILDLINK_DEPENDS+=	ocaml
 
 BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Nocaml}
 BUILDLINK_PACKAGES+=		ocaml
-BUILDLINK_DEPMETHOD.ocaml?=	build
 
 .if !empty(OCAML_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.08.2
-BUILDLINK_ABI_DEPENDS.ocaml?=	ocaml>=3.09.1nb2
+BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=3.09.1nb2
 BUILDLINK_PKGSRCDIR.ocaml?=	../../lang/ocaml
+BUILDLINK_DEPMETHOD.ocaml?=	build
 
-. include "../../mk/bsd.prefs.mk"
-. if ${OPSYS} == "Darwin"
+.  include "../../mk/bsd.prefs.mk"
+.  if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=		yes
-. endif
+.  endif
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/ocaml$$/ \
 				{ print "@comment in ocaml: " $$0; next }
@@ -33,10 +33,10 @@ OCAMLBIN_WRAPPERS=	ocaml
 ocaml-wrappers:
 	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
 	for w in ${OCAML_WRAPPERS}; do					\
-		${SED}  -e 's|@SH@|${SH}|g'				\
+		${SED}  -e 's|@SH@|'${SH:Q}'|g'				\
 			-e 's|@OCAML_PREFIX@|${BUILDLINK_PREFIX.ocaml}|g' \
-			-e 's|@CFLAGS@|${CFLAGS}|g'			\
-			-e 's|@LDFLAGS@|${LDFLAGS}|g'			\
+			-e 's|@CFLAGS@|'${CFLAGS:Q}'|g'			\
+			-e 's|@LDFLAGS@|'${LDFLAGS:Q}'|g'		\
 			< ${.CURDIR:Q}/../../lang/ocaml/files/wrapper.sh \
 			> ${BUILDLINK_DIR:Q}/bin/"$$w";			\
 		${CHMOD} +x ${BUILDLINK_DIR:Q}/bin/"$$w";		\
