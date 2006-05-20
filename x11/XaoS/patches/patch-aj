@@ -1,0 +1,16 @@
+$NetBSD: patch-aj,v 1.1 2006/05/20 18:09:50 joerg Exp $
+
+--- src/engine/zoom.c.orig	2006-05-20 17:56:29.000000000 +0000
++++ src/engine/zoom.c
+@@ -1324,10 +1324,9 @@ calculatenew (void /*@unused@ */ *data, 
+ 	frames2 += 1);
+ }
+ 
++REGISTERS (3)
+ static void
+ addprices (realloc_t * r, realloc_t * r2)
+-REGISTERS (3);
+-     static void addprices (realloc_t * r, realloc_t * r2)
+ {
+   realloc_t *r3;
+   while (r < r2)
