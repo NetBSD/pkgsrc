@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2006/04/23 00:12:42 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/20 19:12:32 joerg Exp $
 #
 
 DISTNAME=		prelude-lml-0.9.4
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.org/download/releases/
 
@@ -44,6 +45,26 @@ SUBST_FILES.code=       run-prelude-lml.c
 SUBST_SED.code=         -e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.code+=        -e 's,@PRELUDE_USER@,${PRELUDE_USER},g'
 
+PKG_SYSCONFSUBDIR=	prelude-lml
+EGDIR=		share/examples/prelude-lml/
+CONF_FILES_PERM+=	${EGDIR}/plugins.rules ${PKG_SYSCONFDIR}/plugins.rules \
+			${ROOT_USER} ${ROOT_GROUP} 0600
+CONF_FILES_PERM+=	${EGDIR}/prelude-lml.conf ${PKG_SYSCONFDIR}/prelude-lml.conf \
+			${ROOT_USER} ${ROOT_GROUP} 0600
+.for f in apc-emu.rules arbor.rules arpwatch.rules checkpoint.rules \
+	cisco-pix.rules cisco-router.rules cisco-vpn.rules clamav.rules \
+	dell-om.rules f5-bigip.rules grsecurity.rules honeyd.rules \
+	httpd.rules ipchains.rules ipfw.rules ipso.rules linksys-wap11.rules \
+	modsecurity.rules ms-sql.rules nagios.rules navce.rules \
+	netapp-ontap.rules netfilter.rules netscreen.rules ntsyslog.rules \
+	openhostapd.rules pam.rules pcanywhere.rules pcre.rules \
+	portsentry.rules postfix.rules proftpd.rules qpopper.rules \
+	selinux.rules sendmail.rules shadow-utils.rules single.rules \
+	squid.rules ssh.rules sudo.rules tripwire.rules vigor.rules \
+	vpopmail.rules webmin.rules wu-ftp.rules zywall.rules zyxel.rules
+CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+.endfor
+
 pre-patch:
 	${CP} ${FILESDIR}/run-prelude-lml.c ${WRKSRC}
 
@@ -52,7 +73,6 @@ post-build:
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/run-prelude-lml ${PREFIX}/sbin/run-prelude-lml
-	${CHMOD} 755 ${PKG_SYSCONFDIR}/prelude-lml
 	${CHOWN} -R ${PRELUDE_USER}:${PRELUDE_GROUP} ${PRELUDE_HOME}
 
 .include "../../security/libprelude/buildlink3.mk"
