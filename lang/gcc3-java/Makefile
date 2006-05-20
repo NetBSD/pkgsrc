@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2006/04/09 01:11:31 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/05/20 08:39:08 rillig Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-java-${GCC_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	GNU Compiler Collection, v3 - Java compiler
 
 BUILDLINK_API_DEPENDS.gcc3cxx+=	gcc3${GCC3_PKGMODIF}-c++-${GCC_VERSION}{,nb*}
@@ -20,6 +20,12 @@ CONFIGURE_ARGS+=	--with-system-zlib
 
 # done manually in do-build
 #UNLIMIT_RESOURCES=	datasize
+
+USE_TOOLS+=		awk:run
+REPLACE_INTERPRETER+=	awk
+REPLACE.awk.old=	/bin/awk
+REPLACE.awk.new=	${AWK}
+REPLACE_FILES.awk+=	libjava/addr2name.awk
 
 do-build:
 	cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} java
