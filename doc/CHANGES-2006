@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.279 2006/05/20 11:28:52 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.280 2006/05/20 12:26:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2608,3 +2608,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/findlib version 1.1.2pl1 [rillig 2006-05-20]
 	Added devel/ocaml-findlib version 1.1.2pl1 [rillig 2006-05-20]
 	Added sysutils/vxargs version 0.3.3 [jmmv 2006-05-20]
+	Updated devel/Gorm to 1.0.8 [adam 2006-05-20]
