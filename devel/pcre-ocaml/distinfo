@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/05/20 14:22:04 rillig Exp $
+
+SHA1 (pcre-ocaml-5.10.3.tar.bz2) = 5c255ea0562f7690f8a8b86aeb902a89b76a07cd
+RMD160 (pcre-ocaml-5.10.3.tar.bz2) = 4b6c37ad220f75d04ce5f2baee590e44c1fc72e9
+Size (pcre-ocaml-5.10.3.tar.bz2) = 46354 bytes
