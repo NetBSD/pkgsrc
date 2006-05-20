@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.18 2006/05/20 22:13:23 jlam Exp $
+# $NetBSD: msgfmt.sh,v 1.19 2006/05/20 23:29:42 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -122,6 +122,9 @@ fi
 
 ${CAT} $pofile | ${AWK} '
 BEGIN {
+	EMPTY = "^$"
+	SPACE = "[ 	]*"
+	KEYWORD_SEP = "([ 	]+|[ 	]*\")"
 	OBSOLETE = "#~ "
 	OBSOLETE_RE = "^(#~[ 	]+)?"
 	OBSOLETE_RE_MATCH = "^#~[ 	]+"
@@ -136,11 +139,12 @@ BEGIN {
 
 	while (result == 1) {
 		# Buffer any "msgid" statements into the singular array.
-		MSGID_RE = OBSOLETE_RE "msgid[ 	]+"
-		if ($0 ~ MSGID_RE) {
+		MSGID_RE = OBSOLETE_RE "msgid"
+		if ($0 ~ MSGID_RE KEYWORD_SEP) {
 			if ($0 ~ OBSOLETE_RE_MATCH) obsolete = OBSOLETE
-			sub(MSGID_RE, "");
+			sub(MSGID_RE SPACE, "");
 			s = 0
+			if ($0 ~ EMPTY) $0 = "\"\""
 			singular[s++] = $0
 			while (result = getline) {
 				if ($0 ~ OBSOLETE_RE "$") continue
@@ -153,11 +157,12 @@ BEGIN {
 		}
 
 		# Buffer any "msgid_plural" statements into the plural array.
-		MSGID_PLURAL_RE = OBSOLETE_RE "msgid_plural[ 	]+"
-		if ($0 ~ MSGID_PLURAL_RE) {
+		MSGID_PLURAL_RE = OBSOLETE_RE "msgid_plural"
+		if ($0 ~ MSGID_PLURAL_RE KEYWORD_SEP) {
 			if ($0 ~ OBSOLETE_RE_MATCH) obsolete = OBSOLETE
-			sub(MSGID_PLURAL_RE, "");
+			sub(MSGID_PLURAL_RE SPACE, "");
 			p = 0
+			if ($0 ~ EMPTY) $0 = "\"\""
 			plural[p++] = $0
 			while (result = getline) {
 				if ($0 ~ OBSOLETE_RE "$") continue
@@ -174,15 +179,17 @@ BEGIN {
 		# the contents of the singular array and output the
 		# "msgstr" translation.
 		#
-		MSGSTR_RE = OBSOLETE_RE "msgstr[ 	]*\""
-		if ($0 ~ MSGSTR_RE) {
+		MSGSTR_RE = OBSOLETE_RE "msgstr"
+		if ($0 ~ MSGSTR_RE KEYWORD_SEP) {
 			if (s > 0) {
 				print obsolete "msgid " singular[0]
 				for (i = 1; i < s; i++)
 					print obsolete singular[i]
 			}
+			sub(MSGSTR_RE SPACE, "")
+			if ($0 ~ EMPTY) $0 = "\"\""
+			print obsolete "msgstr " $0
 			obsolete = ""
-			print $0
 			while (result = getline) {
 				if ($0 !~ MSG_CONTINUATION_RE) break
 				print $0
@@ -196,14 +203,15 @@ BEGIN {
 		# the contents of the singular array and output the
 		# "msgstr[0]" translation.
 		#
-		MSGSTR0_RE = OBSOLETE_RE "msgstr[[]0[]][ 	]+"
-		if ($0 ~ MSGSTR0_RE) {
+		MSGSTR0_RE = OBSOLETE_RE "msgstr[[]0[]]"
+		if ($0 ~ MSGSTR0_RE KEYWORD_SEP) {
 			if (s > 0) {
 				print obsolete "msgid " singular[0]
 				for (i = 1; i < s; i++)
 					print obsolete singular[i]
 			}
-			sub(MSGSTR0_RE, "");
+			sub(MSGSTR0_RE SPACE, "");
+			if ($0 ~ EMPTY) $0 = "\"\""
 			print obsolete "msgstr " $0
 			obsolete = ""
 			while (result = getline) {
@@ -219,8 +227,8 @@ BEGIN {
 		# the contents of the plural array and output the
 		# "msgstr[1]" translation.
 		#
-		MSGSTR1_RE = OBSOLETE_RE "msgstr[[]1[]][ 	]+"
-		if ($0 ~ MSGSTR1_RE) {
+		MSGSTR1_RE = OBSOLETE_RE "msgstr[[]1[]]"
+		if ($0 ~ MSGSTR1_RE KEYWORD_SEP) {
 			#
 			# Check if the singular and plural arrays are equal.
 			# If they are, then we do not need to output an
@@ -250,7 +258,8 @@ BEGIN {
 				for (i = 1; i < p; i++)
 					print obsolete plural[i]
 			}
-			sub(MSGSTR1_RE, "");
+			sub(MSGSTR1_RE SPACE, "");
+			if ($0 ~ EMPTY) $0 = "\"\""
 			print obsolete "msgstr " $0
 			obsolete = ""
 			while (result = getline) {
@@ -265,8 +274,8 @@ BEGIN {
 		# old format only supported a single translation per
 		# plural form.
 		#
-		MSGSTRN_RE = OBSOLETE_RE "msgstr[[][0-9]+[]][ 	]+"
-		if ($0 ~ MSGSTRN_RE) {
+		MSGSTRN_RE = OBSOLETE_RE "msgstr[[][0-9]+[]]"
+		if ($0 ~ MSGSTRN_RE KEYWORD_SEP) {
 			while (result = getline) {
 				if ($0 !~ MSG_CONTINUATION_RE) break
 				print $0
