@@ -1,0 +1,40 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/05/20 23:38:16 wiz Exp $
+
+--- Makefile.in.orig	2005-07-24 09:19:45.000000000 -0500
++++ Makefile.in
+@@ -184,6 +184,8 @@ libdir = @libdir@
+ libexecdir = @libexecdir@
+ localstatedir = @localstatedir@
+ mandir = @mandir@
++exampledir = $(prefix)/share/examples/@PACKAGE@
++docdir = $(prefix)/share/doc/@PACKAGE@
+ mkdir_p = @mkdir_p@
+ oldincludedir = @oldincludedir@
+ prefix = @prefix@
+@@ -763,17 +765,19 @@ uninstall-man: uninstall-man5 uninstall-
+ 
+ 
+ #  install configuration files
+-install-data-local: install-configfile install-initscript
++install-data-local: install-configfile install-readme
++
++install-readme:
++	if [ ! -d $(DESTDIR)$(docdir) ]; then \
++	    $(mkinstalldirs) $(DESTDIR)$(docdir); \
++	fi
++	$(INSTALL_DATA) $(srcdir)/README $(DESTDIR)$(docdir)
+ 
+ install-configfile:
+ 	if [ ! -d $(DESTDIR)$(sysconfdir)/cvsd ]; then \
+-	  $(mkinstalldirs) $(DESTDIR)$(sysconfdir)/cvsd;\
+-	fi
+-	if [ ! -f $(DESTDIR)$(CONFIGFILE) ]; then \
+-	  $(INSTALL_DATA) $(srcdir)/cvsd.conf-dist $(DESTDIR)$(CONFIGFILE); \
+-	else \
+-	  echo "$(DESTDIR)$(CONFIGFILE) already exists, install will not overwrite"; \
++	  $(mkinstalldirs) $(DESTDIR)$(sysconfdir);\
+ 	fi
++	$(INSTALL_DATA) $(srcdir)/cvsd.conf-dist $(DESTDIR)$(exampledir)/cvsd.conf.example
+ 
+ install-initscript:
+ 	if [ ! -d $(DESTDIR)$(sysconfdir)/init.d ]; then \
