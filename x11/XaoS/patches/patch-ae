@@ -1,0 +1,47 @@
+$NetBSD: patch-ae,v 1.1 2006/05/20 18:09:49 joerg Exp $
+
+--- src/engine/formulas.c.orig	2003-01-10 10:26:12.000000000 +0000
++++ src/engine/formulas.c
+@@ -247,13 +247,10 @@ hsv_to_rgb (int h, int s, int v, int *re
+     }
+ }
+ 
++CONSTF REGISTERS (3)
+ static unsigned int
+ truecolor_output (number_t zre, number_t zim, number_t pre, number_t pim,
+ 		  int mode, int inset)
+-     CONSTF REGISTERS (3);
+-     static unsigned int
+-       truecolor_output (number_t zre, number_t zim, number_t pre,
+-			 number_t pim, int mode, int inset)
+ {
+   /*WARNING r and b fiends are swapped for HISTORICAL REASONS (BUG :) */
+   int r = 0, g = 0, b = 0, w = 0;
+@@ -441,11 +438,9 @@ truecolor_output (number_t zre, number_t
+ #ifdef __alpha__
+ #define __TEST__
+ #endif
++CONSTF REGISTERS (3)
+ static unsigned int
+ color_output (number_t zre, number_t zim, unsigned int iter)
+-     CONSTF REGISTERS (3);
+-     static unsigned int
+-       color_output (number_t zre, number_t zim, unsigned int iter)
+ {
+   int i;
+   iter <<= SHIFT;
+@@ -525,13 +520,10 @@ color_output (number_t zre, number_t zim
+ 
+ }
+ 
++CONSTF REGISTERS (3)
+ static unsigned int
+ incolor_output (number_t zre, number_t zim, number_t pre, number_t pim,
+ 		unsigned int iter)
+-     CONSTF REGISTERS (3);
+-     static unsigned int
+-       incolor_output (number_t zre, number_t zim, number_t pre, number_t pim,
+-		       unsigned int iter)
+ {
+   int i = iter;
+   switch (cfractalc.incoloringmode)

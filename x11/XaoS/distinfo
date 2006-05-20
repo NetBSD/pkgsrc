@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2006/04/08 05:02:39 jlam Exp $
+$NetBSD: distinfo,v 1.9 2006/05/20 18:09:49 joerg Exp $
 
 SHA1 (XaoS-3.1.tar.gz) = c9956dbea463040efc46c67f32b3d0e6b3bc4bfe
 RMD160 (XaoS-3.1.tar.gz) = b9761e160dbbbbc5c6aea1cb0f47e0efeac4e9de
@@ -7,3 +7,10 @@ SHA1 (patch-aa) = edace84b4c18ca5b596c79a6f4e77d2879f3fc3b
 SHA1 (patch-ab) = 537dedf39e3c5ae50a91f31715fcb28e30f002ee
 SHA1 (patch-ac) = 51329d932053b4f46acef29837f5648c8cb81589
 SHA1 (patch-ad) = e783ed91ba611af333256a660d537bcf77992893
+SHA1 (patch-ae) = b775be83c1c52483382d046e77a61f51ab4294eb
+SHA1 (patch-af) = e6f22d72957099fcec643053ebbdc9fee1713fcc
+SHA1 (patch-ag) = e8d1b883a51f280f87bb9fb9ef527cf0a727f922
+SHA1 (patch-ah) = c95feb77f3a904ca82df3af7208590eeec2fbc8a
+SHA1 (patch-ai) = 96061838c91e33cfb01068303ac96231de392a4b
+SHA1 (patch-aj) = 300fd90a11abc846449504904e5cc48879a748b5
+SHA1 (patch-ak) = 1eb210b672e18b437f400fde40fc18b23d850e0e
