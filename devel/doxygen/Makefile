@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2006/05/13 03:44:23 minskim Exp $
+# $NetBSD: Makefile,v 1.48 2006/05/20 13:12:00 rillig Exp $
 
 DISTNAME=	doxygen-1.4.5.src
 PKGNAME=	doxygen-1.4.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.stack.nl/pub/users/dimitri/
 
@@ -12,7 +12,7 @@ COMMENT=	Documentation system for C++, Java, IDL and C
 
 TEX_ACCEPTED=	teTeX2 teTeX3
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_TOOLS+=		gmake gs:run perl flex
+USE_TOOLS+=		gmake gs:run perl:run flex
 USE_LANGUAGES=		c c++
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--make ${GMAKE}
@@ -33,6 +33,12 @@ SUBST_CLASSES+=		pybin
 SUBST_STAGE.pybin=	pre-configure
 SUBST_FILES.pybin=	doc/Makefile.in
 SUBST_SED.pybin=	-e "s|@PYTHONBIN@|${PYTHONBIN}|g"
+
+SUBST_CLASSES+=		perlbin
+SUBST_STAGE.perlbin=	pre-configure
+SUBST_MESSAGE.perlbin=	Fixing hardcoded path to the Perl interpreter
+SUBST_FILES.perlbin=	examples/tag.cfg
+SUBST_SED.perlbin=	-e 's,^PERL_PATH.*,PERL_PATH = ${PERL5},'
 
 .include "../../mk/bsd.prefs.mk"
 
