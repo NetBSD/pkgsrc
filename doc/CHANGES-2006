@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.281 2006/05/20 14:22:14 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.282 2006/05/20 23:53:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2610,3 +2610,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/vxargs version 0.3.3 [jmmv 2006-05-20]
 	Updated devel/Gorm to 1.0.8 [adam 2006-05-20]
 	Added devel/pcre-ocaml version 5.10.3 [rillig 2006-05-20]
+	Added devel/cvsd version 1.0.10 [wiz 2006-05-20]
