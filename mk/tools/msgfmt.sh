@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.15 2006/05/10 22:03:07 rillig Exp $
+# $NetBSD: msgfmt.sh,v 1.16 2006/05/20 22:06:34 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -174,7 +174,8 @@ BEGIN {
 		# the contents of the singular array and output the
 		# "msgstr" translation.
 		#
-		if ($0 ~ (ORE "msgstr[ 	]*\"")) {
+		MSGSTR_RE = ORE "msgstr[ 	]*\""
+		if ($0 ~ MSGSTR_RE) {
 			if (s > 0) {
 				print obsolete "msgid " singular[0]
 				for (i = 1; i < s; i++)
