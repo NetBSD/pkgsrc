@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/05/20 23:38:16 wiz Exp $
+
+--- cvsd-buildroot.in.orig	2004-07-29 22:53:14.000000000 +0300
++++ cvsd-buildroot.in	2004-09-13 14:26:18.000000000 +0300
+@@ -51,2 +51,4 @@
+ EXTRALIBS="$EXTRALIBS /usr/libexec/ld.so"
++# for NetBSD
++EXTRALIBS="$EXTRALIBS /usr/libexec/ld.elf_so /libexec/ld.elf_so"
+ # for Solaris:
+@@ -294,3 +296,3 @@
+ 
+-# for systems with strange password files (OpenBSD)
++# for systems with strange password files (OpenBSD/NetBSD/FreeBSD)
+ if [ -r /etc/master.passwd ] && [ -r /etc/pwd.db ] && [ -x /usr/sbin/pwd_mkdb ]
+@@ -301,3 +303,5 @@
+     < "$ROOT/etc/passwd" > "$ROOT/etc/master.passwd"
+-  /usr/sbin/pwd_mkdb -p -d "$ROOT/etc" "$ROOT/etc/master.passwd"
++  # NetBSD expects -d to be the new root directory.
++  /usr/sbin/pwd_mkdb -p -d "$ROOT/etc" "$ROOT/etc/master.passwd" 2>/dev/null|| \
++  /usr/sbin/pwd_mkdb -p -d "$ROOT" "$ROOT/etc/master.passwd" 2>/dev/null
+   echo "done."

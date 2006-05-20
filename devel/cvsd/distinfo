@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/05/20 23:38:16 wiz Exp $
+
+SHA1 (cvsd-1.0.10.tar.gz) = f615a8830bb2a4f415b3267dc628b64561b53d9f
+RMD160 (cvsd-1.0.10.tar.gz) = 9a7129d9fa9b200bfeb8c54abeaae5e9c563cbcc
+Size (cvsd-1.0.10.tar.gz) = 206048 bytes
+SHA1 (patch-aa) = adfcecc2412aa30828c5b5cec1b0763bca599abb
+SHA1 (patch-ab) = f24f3ceac0c5e5d156c3ffc094b679d165e45e21
+SHA1 (patch-ac) = 02f4caa955d88eeadef14a05dd6e4ec19b9ee4b9
+SHA1 (patch-ad) = 2da407e6037ee3cd187b48d8ee668df281ae6907
