@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/20 10:19:35 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/05/20 13:47:43 rillig Exp $
 bin/ocamlfind
 bin/safe_camlp4
 lib/ocaml/site-lib/bigarray/META
@@ -28,6 +28,7 @@ lib/ocaml/site-lib/str/META
 lib/ocaml/site-lib/threads/META
 lib/ocaml/site-lib/unix/META
 lib/ocaml/topfind
+libexec/ocaml-findlib-register
 man/man1/ocamlfind.1
 man/man5/META.5
 man/man5/findlib.conf.5
