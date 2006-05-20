@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.code.xml,v 1.2 2006/02/28 23:22:49 rillig Exp $ -->
+<!-- $NetBSD: chap.code.xml,v 1.3 2006/05/20 08:53:19 rillig Exp $ -->
 
 <chapter id="code">
 <title>Code structure</title>
@@ -281,6 +281,10 @@
 	a regular expression against a reference. It will simply compute
 	a string representation of the reference and match the regular
 	expression against that.</para>
+
+	<para>Switching to C++ is not an option, since the typing
+	overhead would be more than twice the current amount. As a
+	consequence the code would become much less readable.</para>
 
 </sect1>
 </chapter>
