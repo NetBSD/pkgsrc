@@ -1,7 +1,9 @@
-$NetBSD: patch-ab,v 1.9 2003/12/06 18:26:36 wiz Exp $
+$NetBSD: patch-ab,v 1.10 2006/05/21 09:43:07 rillig Exp $
 
---- doc/autoconf.info.orig	Tue Nov  4 09:47:35 2003
-+++ doc/autoconf.info
+It's AC_INCLUDES_DEFAULT, not AC_DEFAULT_INCLUDES.
+
+--- doc/autoconf.info.orig	2003-11-06 10:36:30.000000000 +0100
++++ doc/autoconf.info	2006-05-21 11:07:47.000000000 +0200
 @@ -27,7 +27,7 @@ START-INFO-DIR-ENTRY
  * Autoconf: (autoconf).         Create source code configuration scripts.
  END-INFO-DIR-ENTRY
@@ -11,3 +13,28 @@ $NetBSD: patch-ab,v 1.9 2003/12/06 18:26:36 wiz Exp $
  START-INFO-DIR-ENTRY
  * autoscan: (autoconf)autoscan Invocation.
                                  Semi-automatic `configure.ac' writing
+@@ -2598,7 +2598,7 @@ include beforehand (*note Header Files::
+    Most generic macros use the following macro to provide the default
+ set of includes:
+ 
+- - Macro: AC_DEFAULT_INCLUDES ([INCLUDE-DIRECTIVES])
++ - Macro: AC_INCLUDES_DEFAULT ([INCLUDE-DIRECTIVES])
+      Expand to INCLUDE-DIRECTIVES if defined, otherwise to:
+ 
+           #include <stdio.h>
+@@ -14106,7 +14106,6 @@ This is an alphabetical list of the Auto
+ * AC_CYGWIN:                             Obsolete Macros.
+ * AC_DECL_SYS_SIGLIST:                   Obsolete Macros.
+ * AC_DECL_YYTEXT:                        Obsolete Macros.
+-* AC_DEFAULT_INCLUDES:                   Default Includes.
+ * AC_DEFINE:                             Defining Symbols.
+ * AC_DEFINE_UNQUOTED:                    Defining Symbols.
+ * AC_DEFUN <1>:                          Obsoleting Macros.
+@@ -14189,6 +14188,7 @@ This is an alphabetical list of the Auto
+ * AC_HEADER_TIOCGWINSZ:                  Particular Headers.
+ * AC_HELP_STRING <1>:                    Obsolete Macros.
+ * AC_HELP_STRING:                        Pretty Help Strings.
++* AC_INCLUDES_DEFAULT:                   Default Includes.
+ * AC_INIT <1>:                           Obsolete Macros.
+ * AC_INIT:                               Initializing configure.
+ * AC_INLINE:                             Obsolete Macros.
