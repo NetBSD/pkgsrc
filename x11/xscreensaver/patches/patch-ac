@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.15 2005/06/28 10:03:14 wiz Exp $
+$NetBSD: patch-ac,v 1.16 2006/05/21 23:31:14 jlam Exp $
 
---- configure.orig	2005-06-23 03:02:21.000000000 +0200
+--- configure.orig	2005-06-22 21:02:21.000000000 -0400
 +++ configure
 @@ -2856,6 +2856,9 @@ echo "${ECHO_T}Turning on SGI compiler w
      esac
@@ -20,6 +20,15 @@ $NetBSD: patch-ac,v 1.15 2005/06/28 10:03:14 wiz Exp $
  
  if test -n "$GCC"; then
     if test -n "$GCC"; then
+@@ -7307,7 +7311,7 @@ _ACEOF
+ 
+ 
+ 
+-ALL_LINGUAS="ca da de es et fi fr hu it ja ko nb nl no pl pt pt_BR ru sk sv vi wa zh_CN zh_TW"
++ALL_LINGUAS="da de es et fi fr hu it ja ko nb nl no pl pt ru sk sv vi wa zh_CN zh_TW"
+ if test -n "$ac_tool_prefix"; then
+   # Extract the first word of "${ac_tool_prefix}ranlib", so it can be a program name with args.
+ set dummy ${ac_tool_prefix}ranlib; ac_word=$2
 @@ -12972,7 +12976,7 @@ if test "${ac_cv_lib_krb4_krb_get_tf_rea
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
