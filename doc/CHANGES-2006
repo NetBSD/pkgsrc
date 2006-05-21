@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.290 2006/05/21 13:34:47 martti Exp $
+$NetBSD: CHANGES-2006,v 1.291 2006/05/21 13:49:35 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2617,3 +2617,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/dpkg to 1.10.28 [rillig 2006-05-21]
 	Updated security/audit-packages to 1.43 [adrianp 2006-05-21]
 	Updated editors/vim-share to 7.0.17 [martti 2006-05-21]
+	Updated mail/dovecot to 1.0beta8nb1 [ghen 2006-05-21]
