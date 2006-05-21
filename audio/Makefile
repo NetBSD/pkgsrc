@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.313 2006/05/21 22:33:03 ben Exp $
+# $NetBSD: Makefile,v 1.314 2006/05/21 22:35:48 ben Exp $
 #
 
 COMMENT=	Audio tools
@@ -33,6 +33,7 @@ SUBDIR+=	cplay
 SUBDIR+=	cripple
 SUBDIR+=	cs4235
 SUBDIR+=	csound4
+SUBDIR+=	csound4-manual
 SUBDIR+=	daapd
 SUBDIR+=	dap
 SUBDIR+=	darkice
