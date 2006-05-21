@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.585 2006/05/19 09:05:59 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.586 2006/05/21 15:46:43 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2284,7 +2284,7 @@ sub type_should_be_quoted($) {
 sub variable_needs_quoting($) {
 	my ($varname) = @_;
 
-	return !($varname =~ qr"^(?:.*DIR|.*_GROUP|(?:BIN|LIB|MAN|GAMES|SHARE)(?:GRP|OWN|MODE)|.*_USER|BUILDLINK_PREFIX\..*|DISTNAME|LOCALBASE|PKGNAME|PREFIX|WRKSRC)$");
+	return !($varname =~ qr"^(?:.*DIR|.*_GROUP|.*_HOME|(?:BIN|LIB|MAN|GAMES|SHARE)(?:GRP|OWN|MODE)|.*_USER|BUILDLINK_PREFIX\..*|DISTNAME|LOCALBASE|PKGNAME|PREFIX|WRKSRC)$");
 }
 
 my $check_pkglint_version_done = false;
@@ -3800,7 +3800,7 @@ sub checkline_mk_vartype($$$$$) {
 			# Guess the datatype of the variable based on
 			# naming conventions.
 			$type =	  ($varname =~ qr"DIRS$") ? PkgLint::Type->new(LK_EXTERNAL, "Pathmask", [])
-				: ($varname =~ qr"DIR$") ? PkgLint::Type->new(LK_NONE, "Pathname", [])
+				: ($varname =~ qr"(?:DIR|_HOME)$") ? PkgLint::Type->new(LK_NONE, "Pathname", [])
 				: ($varname =~ qr"FILES$") ? PkgLint::Type->new(LK_EXTERNAL, "Pathmask", [])
 				: ($varname =~ qr"FILE$") ? PkgLint::Type->new(LK_NONE, "Pathname", [])
 				: ($varname =~ qr"PATH$") ? PkgLint::Type->new(LK_NONE, "Pathlist", [])
@@ -5288,6 +5288,12 @@ sub checkfile_PLIST($) {
 			}
 			if ($text =~ qr"\.orig$") {
 				$line->log_warning(".orig files should not be in the PLIST.");
+			}
+			if ($text =~ qr"/perllocal\.pod$") {
+				$line->log_warning("perllocal.pod files should not be in the PLIST.");
+				$line->explain_warning(
+					"This file is handled automatically by the INSTALL/DEINSTALL scripts,",
+					"since its contents changes frequently.");
 			}
 
 			if ($text =~ qr"^(.*)(\.a|\.so[0-9.]*)$") {
