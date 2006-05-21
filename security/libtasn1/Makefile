@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2006/05/17 21:49:54 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2006/05/21 00:45:13 tonio Exp $
 
 DISTNAME=	libtasn1-0.3.4
+PKGREVISION=	1
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/libtasn1/ \
 		ftp://ftp.gnupg.org/gcrypt/alpha/gnutls/libtasn1/ \
@@ -26,6 +27,7 @@ INFO_FILES=		# PLIST
 # succeeds.
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ENV+=		ac_cv_func_getopt_long=no
+CFLAGS+=	-fno-common
 .endif
 
 .include "../../mk/bsd.pkg.mk"
