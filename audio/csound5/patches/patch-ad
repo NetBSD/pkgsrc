@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/05/21 22:46:22 ben Exp $
+
+--- Top/csound.c.orig	2006-03-10 08:37:48.000000000 -0800
++++ Top/csound.c
+@@ -613,7 +613,7 @@ static const CSOUND cenviron_ = {
+     csound_free_string_database();
+   }
+ 
+-#if !defined(LINUX) && !defined(SGI) && !defined(__BEOS__) && !defined(__MACH__)
++#if !defined(__NetBSD__) && !defined(LINUX) && !defined(SGI) && !defined(__BEOS__) && !defined(__MACH__)
+   static char *signal_to_string(int sig)
+   {
+     switch(sig) {
