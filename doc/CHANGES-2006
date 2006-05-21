@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.297 2006/05/21 22:36:54 ben Exp $
+$NetBSD: CHANGES-2006,v 1.298 2006/05/21 22:47:29 ben Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2626,3 +2626,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/csound4 to 4.23.13.0nb2 [ben 2006-05-21]
 	Removed audio/csound-manual [ben 2006-05-21]
 	Added audio/csound4-manual version 4.23 [ben 2006-05-21]
+	Added audio/csound5 version 5.01 [ben 2006-05-21]
