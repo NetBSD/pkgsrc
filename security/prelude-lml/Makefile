@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/20 19:12:32 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/21 15:05:57 joerg Exp $
 #
 
 DISTNAME=		prelude-lml-0.9.4
@@ -18,7 +18,7 @@ PRELUDE_GROUP?=         _prelude
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_GNU_TOOLS+=		make
+USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--disable-fam
@@ -26,8 +26,8 @@ CONFIGURE_ARGS+=        --localstatedir=${VARBASE:Q}
 RCD_SCRIPTS=		preludelml
 PRELUDE_USER?=		_prelude
 PRELUDE_GROUP?=		_prelude
-PRELUDE_LML_PID_DIR=	${VARBASE:Q}/run/prelude-lml
-PRELUDE_HOME=		${VARBASE:Q}/prelude-lml
+PRELUDE_LML_PID_DIR=	${VARBASE}/run/prelude-lml
+PRELUDE_HOME=		${VARBASE}/prelude-lml
 
 PKG_GROUPS=	${PRELUDE_GROUP}
 PKG_USERS=	${PRELUDE_USER}:${PRELUDE_GROUP}
@@ -47,9 +47,9 @@ SUBST_SED.code+=        -e 's,@PRELUDE_USER@,${PRELUDE_USER},g'
 
 PKG_SYSCONFSUBDIR=	prelude-lml
 EGDIR=		share/examples/prelude-lml/
-CONF_FILES_PERM+=	${EGDIR}/plugins.rules ${PKG_SYSCONFDIR}/plugins.rules \
+CONF_FILES_PERMS+=	${EGDIR}/plugins.rules ${PKG_SYSCONFDIR}/plugins.rules \
 			${ROOT_USER} ${ROOT_GROUP} 0600
-CONF_FILES_PERM+=	${EGDIR}/prelude-lml.conf ${PKG_SYSCONFDIR}/prelude-lml.conf \
+CONF_FILES_PERMS+=	${EGDIR}/prelude-lml.conf ${PKG_SYSCONFDIR}/prelude-lml.conf \
 			${ROOT_USER} ${ROOT_GROUP} 0600
 .for f in apc-emu.rules arbor.rules arpwatch.rules checkpoint.rules \
 	cisco-pix.rules cisco-router.rules cisco-vpn.rules clamav.rules \
