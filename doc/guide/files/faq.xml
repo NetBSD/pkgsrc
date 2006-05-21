@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.23 2006/04/22 05:43:51 lukem Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.24 2006/05/21 12:23:29 rillig Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -573,6 +573,31 @@ audit-packages</userinput>.</para>
 a security check before building any package.  See
 <xref linkend="variables-affecting-build"/> for ways to control this check.
 </para>
+
+</sect1>
+
+<sect1 id="ufaq-cflags">
+<title>Why do some packages ignore my <varname>CFLAGS</varname>?</title>
+
+	<para>When you add your own preferences to the
+	<varname>CFLAGS</varname> variable in your
+	<filename>mk.conf</filename>, these flags are passed in
+	environment variables to the <filename>./configure</filename>
+	scripts and to &man.make.1;. Some package authors ignore the
+	<varname>CFLAGS</varname> from the environment variable by
+	overriding them in the <filename>Makefile</filename>s of their
+	package.</para>
+
+	<para>Currently there is no solution to this problem. If you
+	really need the package to use your <varname>CFLAGS</varname>
+	you should run <command>make patch</command> in the package
+	directory and then inspect any <filename>Makefile</filename> and
+	<filename>Makefile.in</filename> for whether they define
+	<varname>CFLAGS</varname> explicitly. Usually you can remove
+	these lines. But be aware that some <quote>smart</quote>
+	programmers write so bad code that it only works for the
+	specific combination of <varname>CFLAGS</varname> they have
+	chosen.</para>
 
 </sect1>
 
