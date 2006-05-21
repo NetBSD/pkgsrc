@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.311 2006/05/21 22:21:38 ben Exp $
+# $NetBSD: Makefile,v 1.312 2006/05/21 22:26:30 ben Exp $
 #
 
 COMMENT=	Audio tools
@@ -302,7 +302,6 @@ SUBDIR+=	xmms-jess
 SUBDIR+=	xmms-liveice
 SUBDIR+=	xmms-mad
 SUBDIR+=	xmms-madspin
-SUBDIR+=	xmms-meta-csound
 SUBDIR+=	xmms-meta-input
 SUBDIR+=	xmms-meta-timidity
 SUBDIR+=	xmms-modplug
