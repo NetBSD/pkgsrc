@@ -1,4 +1,4 @@
-$NetBSD: patch-bm,v 1.1 2006/05/15 15:33:00 christos Exp $ 
+$NetBSD: patch-bm,v 1.2 2006/05/21 10:52:08 rillig Exp $
 
 --- icb/s_bump.c.orig	1995-02-24 16:20:27.000000000 -0500
 +++ icb/s_bump.c	2006-05-15 10:59:10.000000000 -0400
