@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.7 2006/03/28 20:42:48 joerg Exp $
+$NetBSD: distinfo,v 1.8 2006/05/21 15:57:43 rillig Exp $
 
 SHA1 (boolean-6.7/boolean_6_7.zip) = c0d5dd7963e2f02be1ebe97eeddfb6a7377feaa3
 RMD160 (boolean-6.7/boolean_6_7.zip) = 5a1a926dd130312ea8255576993b92f826b2e30d
 Size (boolean-6.7/boolean_6_7.zip) = 3841104 bytes
 SHA1 (patch-aa) = d2287a7271b7aa0a50b1ef9d87bf5e5ba8a6db6e
 SHA1 (patch-ab) = 19bf76826a67bd640451c558e8e36d830c23ebf5
-SHA1 (patch-ac) = d76d86f827b745d2cb66c295fcf77eb8e99f7ba1
-SHA1 (patch-ad) = 1720ef30fa0c284f6eb4f70be0033e5d3a3cf383
-SHA1 (patch-ae) = 05bc774fe8f4651fa596de28cf7af1fce5868549
+SHA1 (patch-ac) = a8973d02b73d13c0cf07d766324d33f5161b98aa
+SHA1 (patch-ad) = 5934a12e35d6977721c979557cf33bf069001443
+SHA1 (patch-ae) = c5b69b5f7f4732fa184d2bcf0359caeb67082693
