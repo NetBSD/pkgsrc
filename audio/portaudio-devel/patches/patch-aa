@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/05/21 22:21:10 ben Exp $
+
+--- configure.in.orig	2006-05-19 09:20:07.000000000 -0700
++++ configure.in
+@@ -79,7 +79,8 @@ dnl that then requires pkg-config availa
+ dnl MinGW systems and can be a pain to install.
+ dnl AC_CANONICAL_HOST
+ 
+-PKG_CHECK_MODULES(JACK, jack, have_jack=yes, have_jack=no)
++dnl PKG_CHECK_MODULES(JACK, jack, have_jack=yes, have_jack=no)
++have_jack=no
+ 
+ dnl sizeof checks: we will need a 16-bit and a 32-bit type
+ 
