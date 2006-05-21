@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.293 2006/05/21 22:17:54 ben Exp $
+$NetBSD: CHANGES-2006,v 1.294 2006/05/21 22:23:00 ben Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2621,3 +2621,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/py-gobject-shared version 2.10.1 [joerg 2006-05-21]
 	Updated devel/py-gobject to 2.10.1nb1 [joerg 2006-05-21]
 	Updated x11/fltk to 1.1.7nb3 [ben 2006-05-21]
+	Added audio/portaudio-devel version 20060521 [ben 2006-05-21]
