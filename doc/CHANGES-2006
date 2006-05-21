@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.295 2006/05/21 22:27:22 ben Exp $
+$NetBSD: CHANGES-2006,v 1.296 2006/05/21 22:30:19 ben Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2623,3 +2623,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/fltk to 1.1.7nb3 [ben 2006-05-21]
 	Added audio/portaudio-devel version 20060521 [ben 2006-05-21]
 	Removed audio/xmms-meta-csound [ben 2006-05-21]
+	Updated audio/csound4 to 4.23.13.0nb2 [ben 2006-05-21]
