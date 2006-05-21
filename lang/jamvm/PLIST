@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/16 22:16:36 tonio Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/05/21 15:43:09 joerg Exp $
+bin/jamvm-java
 java/jamvm/bin/jamvm
 java/jamvm/include/jni.h
 java/jamvm/share/jamvm/classes.zip
