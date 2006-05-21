@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/05/06 19:13:55 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/05/21 08:00:50 rillig Exp $
 bin/iverilog
 bin/iverilog-vpi
 bin/vvp
@@ -7,8 +7,6 @@ include/acc_user.h
 include/ivl_target.h
 include/veriuser.h
 include/vpi_user.h
-lib/libveriuser.a
-lib/libvpi.a
 lib/ivl/cadpli.vpl
 lib/ivl/edif-s.conf
 lib/ivl/edif.conf
@@ -28,8 +26,10 @@ lib/ivl/vvp.conf
 lib/ivl/vvp.tgt
 lib/ivl/xnf-s.conf
 lib/ivl/xnf.conf
-man/man1/iverilog.1
+lib/libveriuser.a
+lib/libvpi.a
 man/man1/iverilog-fpga.1
 man/man1/iverilog-vpi.1
+man/man1/iverilog.1
 man/man1/vvp.1
 @dirrm lib/ivl
