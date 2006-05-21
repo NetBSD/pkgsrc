@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.288 2006/05/19 19:57:26 rillig Exp $
+# $NetBSD: Makefile,v 1.289 2006/05/21 17:00:59 xtraeme Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -23,7 +23,6 @@ SUBDIR+=	courier-maildir
 SUBDIR+=	courier-mta
 SUBDIR+=	cucipop
 SUBDIR+=	cue
-SUBDIR+=	cyrus
 SUBDIR+=	cyrus-imapd
 SUBDIR+=	cyrus-imapd21
 SUBDIR+=	dbmail
