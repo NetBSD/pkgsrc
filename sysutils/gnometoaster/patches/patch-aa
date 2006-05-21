@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2006/03/06 22:16:53 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2006/05/21 23:02:29 wiz Exp $
 
---- cdromlow.c.orig	Sat Mar 23 19:48:00 2002
-+++ cdromlow.c	Sat Mar 23 20:10:30 2002
+--- cdromlow.c.orig	2001-10-27 09:23:21.000000000 +0000
++++ cdromlow.c
 @@ -9,7 +9,7 @@
  #include <fcntl.h>
  #include <signal.h>
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.2 2006/03/06 22:16:53 joerg Exp $
  #elif __svr4__
  # define CD_FRAMESIZE 2048
  # define CD_FRAMESIZE_RAW 2352
-@@ -138,6 +154,11 @@
+@@ -138,6 +154,11 @@ int cdromlow_hasdatatrack(int handle)
  
     int x;
     int hasdatatrack=-1;
@@ -68,7 +68,8 @@ $NetBSD: patch-aa,v 1.2 2006/03/06 22:16:53 joerg Exp $
  
     if (info->filedescriptor!=-1)
       {
-@@ -148,7 +169,11 @@
+@@ -147,8 +168,12 @@ int cdromlow_hasdatatrack(int handle)
+ 	       entry.cdromlow_tocent_track=x;
  	       entry.cdromlow_tocent_format=CDROM_LBA;
  	       ioctl(info->filedescriptor,CDROMREADTOCENTRY,&entry);
 -#ifndef __FreeBSD__
@@ -81,7 +82,7 @@ $NetBSD: patch-aa,v 1.2 2006/03/06 22:16:53 joerg Exp $
  #else
  		 if (entry.entry.control & CDROM_DATA_TRACK)
  #endif
-@@ -191,6 +216,11 @@
+@@ -191,6 +216,11 @@ int cdromlow_trackoffset(int handle,int 
     cdromlow_tochandle *info=(cdromlow_tochandle*)handle;
     cdromlow_definecdromhentry entry;
     int offset=-1;
@@ -93,7 +94,7 @@ $NetBSD: patch-aa,v 1.2 2006/03/06 22:16:53 joerg Exp $
  
     if (info->filedescriptor!=-1)
       {
-@@ -223,6 +253,13 @@
+@@ -223,6 +253,13 @@ int cdromlow_tracksize_sectors(int handl
     cdromlow_definecdromhentry tracknext;
     int tracksize;
     int ok=1;
@@ -107,7 +108,7 @@ $NetBSD: patch-aa,v 1.2 2006/03/06 22:16:53 joerg Exp $
  
     tracksize=0;
     if (info->filedescriptor!=-1)
-@@ -278,6 +315,11 @@
+@@ -278,6 +315,11 @@ int cdromlow_cddbnumber(int handle)
     cdromlow_definecdromhentry entry;
     int x,secs;
     int cddbnum=0;
@@ -119,7 +120,7 @@ $NetBSD: patch-aa,v 1.2 2006/03/06 22:16:53 joerg Exp $
  
     cddbnum=0;
     if (info->filedescriptor!=-1)
-@@ -317,6 +359,11 @@
+@@ -317,6 +359,11 @@ cdromlow_tracktype cdromlow_gettracktype
     cdromlow_definecdromhentry track;
     int ok=1;
     cdromlow_tracktype result=TRACKTYPE_UNKNOWN;
@@ -131,7 +132,8 @@ $NetBSD: patch-aa,v 1.2 2006/03/06 22:16:53 joerg Exp $
  
     if (info->filedescriptor!=-1)
       {
-@@ -325,7 +372,11 @@
+@@ -324,8 +371,12 @@ cdromlow_tracktype cdromlow_gettracktype
+ 	track.cdromlow_tocent_format=CDROM_LBA;
  	if (ioctl(info->filedescriptor,CDROMREADTOCENTRY,&track)==-1)
  	  ok=0;
 -#ifndef __FreeBSD__
