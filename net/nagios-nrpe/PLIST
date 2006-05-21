@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/21 10:28:40 grant Exp $
+sbin/nrpe
+libexec/nagios/check_nrpe
+share/examples/nagios/nrpe.cfg
