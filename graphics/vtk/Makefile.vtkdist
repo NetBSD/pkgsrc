@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.vtkdist,v 1.5 2005/04/11 21:46:10 tv Exp $
+# $NetBSD: Makefile.vtkdist,v 1.6 2006/05/21 09:28:55 rillig Exp $
 
 .include "../../graphics/vtk/Makefile.common"
 
@@ -27,4 +27,4 @@ do-configure:
 VTK_CMAKE_OPT+=		-DBUILD_SHARED_LIBS:BOOL=ON
 .endif
 
-.include "../../devel/cmake/buildlink3.mk"
+BUILD_DEPENDS+=		cmake-[0-9]*:../../devel/cmake
