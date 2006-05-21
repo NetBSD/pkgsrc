@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.282 2006/05/20 23:53:16 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.283 2006/05/21 09:22:54 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2605,7 +2605,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Added games/eboard version 0.9.5 [rillig 2006-05-19]
 	Updated databases/openldap to 2.3.23 [joerg 2006-05-19]
 	Updated devel/cmake to 2.4.2 [rillig 2006-05-19]
-	Added devel/findlib version 1.1.2pl1 [rillig 2006-05-20]
 	Added devel/ocaml-findlib version 1.1.2pl1 [rillig 2006-05-20]
 	Added sysutils/vxargs version 0.3.3 [jmmv 2006-05-20]
 	Updated devel/Gorm to 1.0.8 [adam 2006-05-20]
