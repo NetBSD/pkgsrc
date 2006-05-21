@@ -1,4 +1,4 @@
-# $NetBSD: deinstall,v 1.40 2006/04/25 19:54:39 jlam Exp $
+# $NetBSD: deinstall,v 1.1 2006/05/21 23:50:15 jlam Exp $
 
 case ${STAGE} in
 VIEW-DEINSTALL)

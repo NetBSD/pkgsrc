@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.53 2006/04/29 04:36:13 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.1 2006/05/21 23:50:15 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -33,29 +33,29 @@ _PKGINSTALL_DIR=	${WRKDIR}/.pkginstall
 # point to additional script fragments.  These bits are included after
 # the main install/deinstall script fragments.
 #
-_HEADER_TMPL?=		${.CURDIR}/../../mk/install/header
+_HEADER_TMPL?=		${.CURDIR}/../../mk/pkginstall/header
 HEADER_TEMPLATE?=	# empty
 .if exists(${PKGDIR}/HEADER) && \
     empty(HEADER_TEMPLATE:M${PKGDIR}/HEADER)
 HEADER_TEMPLATE+=	${PKGDIR}/HEADER
 .endif
-_DEINSTALL_PRE_TMPL?=	${.CURDIR}/../../mk/install/deinstall-pre
+_DEINSTALL_PRE_TMPL?=	${.CURDIR}/../../mk/pkginstall/deinstall-pre
 DEINSTALL_TEMPLATE?=	# empty
 .if exists(${PKGDIR}/DEINSTALL) && \
     empty(DEINSTALL_TEMPLATE:M${PKGDIR}/DEINSTALL)
 DEINSTALL_TEMPLATE+=	${PKGDIR}/DEINSTALL
 .endif
-_DEINSTALL_TMPL?=	${.CURDIR}/../../mk/install/deinstall
+_DEINSTALL_TMPL?=	${.CURDIR}/../../mk/pkginstall/deinstall
 _INSTALL_UNPACK_TMPL?=	# empty
-_INSTALL_TMPL?=		${.CURDIR}/../../mk/install/install
+_INSTALL_TMPL?=		${.CURDIR}/../../mk/pkginstall/install
 INSTALL_TEMPLATE?=	# empty
 .if exists(${PKGDIR}/INSTALL) && \
     empty(INSTALL_TEMPLATE:M${PKGDIR}/INSTALL)
 INSTALL_TEMPLATE+=	${PKGDIR}/INSTALL
 .endif
-_INSTALL_POST_TMPL?=	${.CURDIR}/../../mk/install/install-post
+_INSTALL_POST_TMPL?=	${.CURDIR}/../../mk/pkginstall/install-post
 _INSTALL_DATA_TMPL?=	# empty
-_FOOTER_TMPL?=		${.CURDIR}/../../mk/install/footer
+_FOOTER_TMPL?=		${.CURDIR}/../../mk/pkginstall/footer
 
 # _DEINSTALL_TEMPLATES and _INSTALL_TEMPLATES are the list of source
 #	files that are concatenated to form the DEINSTALL/INSTALL
@@ -173,10 +173,10 @@ DEPENDS+=		${_USER_DEPENDS}
 .endif
 
 _INSTALL_USERGROUP_FILE=	${_PKGINSTALL_DIR}/usergroup
-.if exists(../../mk/install/usergroupfuncs.${OPSYS})
-_INSTALL_USERGROUPFUNCS_FILE?=	../../mk/install/usergroupfuncs.${OPSYS}
+.if exists(../../mk/pkginstall/usergroupfuncs.${OPSYS})
+_INSTALL_USERGROUPFUNCS_FILE?=	../../mk/pkginstall/usergroupfuncs.${OPSYS}
 .else
-_INSTALL_USERGROUPFUNCS_FILE?=	../../mk/install/usergroupfuncs
+_INSTALL_USERGROUPFUNCS_FILE?=	../../mk/pkginstall/usergroupfuncs
 .endif
 _INSTALL_USERGROUP_DATAFILE=	${_PKGINSTALL_DIR}/usergroup-data
 _INSTALL_UNPACK_TMPL+=		${_INSTALL_USERGROUP_FILE}
@@ -228,11 +228,11 @@ ${_INSTALL_USERGROUP_DATAFILE}:
 
 ${_INSTALL_USERGROUP_FILE}: ${_INSTALL_USERGROUP_DATAFILE}
 ${_INSTALL_USERGROUP_FILE}:						\
-		../../mk/install/usergroup				\
+		../../mk/pkginstall/usergroup				\
 		${INSTALL_USERGROUPFUNCS_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${SED}	-e "/^# platform-specific adduser\/addgroup functions/r${_INSTALL_USERGROUPFUNCS_FILE}" ../../mk/install/usergroup |			\
+	${SED}	-e "/^# platform-specific adduser\/addgroup functions/r${_INSTALL_USERGROUPFUNCS_FILE}" ../../mk/pkginstall/usergroup |			\
 	${SED} ${FILES_SUBST_SED} > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${_ZERO_FILESIZE_P} ${_INSTALL_USERGROUP_DATAFILE}; then	\
@@ -272,7 +272,7 @@ pre-build: do-su-create-usergroup
 
 _INSTALL_USERGROUP_CHECK=						\
 	${SETENV} PERL5=${PERL5:Q}					\
-	${SH} ${PKGSRCDIR}/mk/install/usergroup-check
+	${SH} ${PKGSRCDIR}/mk/pkginstall/usergroup-check
 
 .PHONY: do-su-create-usergroup
 do-su-create-usergroup:
@@ -342,10 +342,10 @@ ${_INSTALL_PERMS_DATAFILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 ${_INSTALL_PERMS_FILE}: ${_INSTALL_PERMS_DATAFILE}
-${_INSTALL_PERMS_FILE}: ../../mk/install/perms
+${_INSTALL_PERMS_FILE}: ../../mk/pkginstall/perms
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${SED} ${FILES_SUBST_SED} ../../mk/install/perms > ${.TARGET}
+	${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/perms > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${_ZERO_FILESIZE_P} ${_INSTALL_PERMS_DATAFILE}; then		\
 		${RM} -f ${.TARGET};					\
@@ -455,10 +455,10 @@ ${_INSTALL_FILES_DATAFILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 ${_INSTALL_FILES_FILE}: ${_INSTALL_FILES_DATAFILE}
-${_INSTALL_FILES_FILE}: ../../mk/install/files
+${_INSTALL_FILES_FILE}: ../../mk/pkginstall/files
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${SED} ${FILES_SUBST_SED} ../../mk/install/files > ${.TARGET}
+	${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/files > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${_ZERO_FILESIZE_P} ${_INSTALL_FILES_DATAFILE}; then		\
 		${RM} -f ${.TARGET};					\
@@ -579,10 +579,10 @@ ${_INSTALL_DIRS_DATAFILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 ${_INSTALL_DIRS_FILE}: ${_INSTALL_DIRS_DATAFILE}
-${_INSTALL_DIRS_FILE}: ../../mk/install/dirs
+${_INSTALL_DIRS_FILE}: ../../mk/pkginstall/dirs
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${SED} ${FILES_SUBST_SED} ../../mk/install/dirs > ${.TARGET}
+	${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/dirs > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${_ZERO_FILESIZE_P} ${_INSTALL_DIRS_DATAFILE}; then		\
 		${RM} -f ${.TARGET};					\
@@ -611,10 +611,10 @@ ${_INSTALL_INFO_FILES_DATAFILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
 
 ${_INSTALL_INFO_FILES_FILE}: ${_INSTALL_INFO_FILES_DATAFILE}
-${_INSTALL_INFO_FILES_FILE}: ../../mk/install/info-files
+${_INSTALL_INFO_FILES_FILE}: ../../mk/pkginstall/info-files
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${SED} ${FILES_SUBST_SED} ../../mk/install/info-files > ${.TARGET}
+	${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/info-files > ${.TARGET}
 .if !defined(INFO_FILES)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${_ZERO_FILESIZE_P} ${_INSTALL_INFO_FILES_DATAFILE}; then	\
@@ -672,10 +672,10 @@ ${_INSTALL_SHELL_DATAFILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 ${_INSTALL_SHELL_FILE}: ${_INSTALL_SHELL_DATAFILE}
-${_INSTALL_SHELL_FILE}: ../../mk/install/shell
+${_INSTALL_SHELL_FILE}: ../../mk/pkginstall/shell
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${SED} ${FILES_SUBST_SED} ../../mk/install/shell > ${.TARGET}
+	${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/shell > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${_ZERO_FILESIZE_P} ${_INSTALL_SHELL_DATAFILE}; then		\
 		${RM} -f ${.TARGET};					\
@@ -749,10 +749,10 @@ ${_INSTALL_FONTS_DATAFILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 ${_INSTALL_FONTS_FILE}: ${_INSTALL_FONTS_DATAFILE}
-${_INSTALL_FONTS_FILE}: ../../mk/install/fonts
+${_INSTALL_FONTS_FILE}: ../../mk/pkginstall/fonts
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${SED} ${FILES_SUBST_SED} ../../mk/install/fonts > ${.TARGET}
+	${SED} ${FILES_SUBST_SED} ../../mk/pkginstall/fonts > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${_ZERO_FILESIZE_P} ${_INSTALL_FONTS_DATAFILE}; then		\
 		${RM} -f ${.TARGET};					\
