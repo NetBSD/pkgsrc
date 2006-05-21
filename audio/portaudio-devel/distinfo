@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/05/21 22:21:10 ben Exp $
+
+SHA1 (portaudio-devel-20060521/pa_snapshot_v19.tar.gz) = 05c35c7add9f95c79491fbacb80b057be339ed6f
+RMD160 (portaudio-devel-20060521/pa_snapshot_v19.tar.gz) = dea1e921189bd788815c3012498fc035f3df8bad
+Size (portaudio-devel-20060521/pa_snapshot_v19.tar.gz) = 722148 bytes
+SHA1 (patch-aa) = f46283bc89b788e5e639cf9004b81e31d089ce6d
+SHA1 (patch-ab) = 22ffb8f52d4fde3f74793b81905aa5a1865ce01a
+SHA1 (patch-ac) = 79f6c5e206689c30e1dff4985462d3272ed43a1a
