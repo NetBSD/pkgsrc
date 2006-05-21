@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.286 2006/05/21 10:28:10 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.287 2006/05/21 10:30:43 grant Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2613,3 +2613,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/netbsd-iscsi to 20060520 [agc 2006-05-20]
 	Added audio/twolame version 0.3.7 [xtraeme 2006-05-21]
 	Updated audio/darkice to 0.17.1 [xtraeme 2006-05-21]
+	Added net/nagios-nrpe version 2.5.1 [grant 2006-05-21]
