@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/12 21:12:48 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/05/21 10:27:01 xtraeme Exp $
 bin/darkice
 man/man1/darkice.1
 man/man5/darkice.conf.5
+share/doc/darkice/AacEncoder_8cpp-source.html
+share/doc/darkice/AacEncoder_8cpp.html
+share/doc/darkice/AacEncoder_8h-source.html
+share/doc/darkice/AacEncoder_8h.html
 share/doc/darkice/AlsaDspSource_8cpp-source.html
 share/doc/darkice/AlsaDspSource_8cpp.html
 share/doc/darkice/AlsaDspSource_8h-source.html
@@ -40,6 +44,10 @@ share/doc/darkice/Exception_8cpp-source.html
 share/doc/darkice/Exception_8cpp.html
 share/doc/darkice/Exception_8h-source.html
 share/doc/darkice/Exception_8h.html
+share/doc/darkice/FaacEncoder_8cpp-source.html
+share/doc/darkice/FaacEncoder_8cpp.html
+share/doc/darkice/FaacEncoder_8h-source.html
+share/doc/darkice/FaacEncoder_8h.html
 share/doc/darkice/FileCast_8cpp-source.html
 share/doc/darkice/FileCast_8cpp.html
 share/doc/darkice/FileCast_8h-source.html
@@ -96,6 +104,10 @@ share/doc/darkice/TcpSocket_8cpp-source.html
 share/doc/darkice/TcpSocket_8cpp.html
 share/doc/darkice/TcpSocket_8h-source.html
 share/doc/darkice/TcpSocket_8h.html
+share/doc/darkice/TwoLameLibEncoder_8cpp-source.html
+share/doc/darkice/TwoLameLibEncoder_8cpp.html
+share/doc/darkice/TwoLameLibEncoder_8h-source.html
+share/doc/darkice/TwoLameLibEncoder_8h.html
 share/doc/darkice/Util_8cpp-source.html
 share/doc/darkice/Util_8cpp.html
 share/doc/darkice/Util_8h-source.html
@@ -117,6 +129,8 @@ share/doc/darkice/aflibDebug_8cc.html
 share/doc/darkice/aflibDebug_8h-source.html
 share/doc/darkice/aflibDebug_8h.html
 share/doc/darkice/annotated.html
+share/doc/darkice/classAacEncoder-members.html
+share/doc/darkice/classAacEncoder.html
 share/doc/darkice/classAlsaDspSource-members.html
 share/doc/darkice/classAlsaDspSource.html
 share/doc/darkice/classAudioEncoder-members.html
@@ -139,6 +153,8 @@ share/doc/darkice/classDebugInitFromEnv-members.html
 share/doc/darkice/classDebugInitFromEnv.html
 share/doc/darkice/classException-members.html
 share/doc/darkice/classException.html
+share/doc/darkice/classFaacEncoder-members.html
+share/doc/darkice/classFaacEncoder.html
 share/doc/darkice/classFileCast-members.html
 share/doc/darkice/classFileCast.html
 share/doc/darkice/classFileSink-members.html
@@ -171,6 +187,8 @@ share/doc/darkice/classSource-members.html
 share/doc/darkice/classSource.html
 share/doc/darkice/classTcpSocket-members.html
 share/doc/darkice/classTcpSocket.html
+share/doc/darkice/classTwoLameLibEncoder-members.html
+share/doc/darkice/classTwoLameLibEncoder.html
 share/doc/darkice/classUtil-members.html
 share/doc/darkice/classUtil.html
 share/doc/darkice/classVorbisLibEncoder-members.html
@@ -200,6 +218,6 @@ share/doc/darkice/index.html
 share/doc/darkice/inherits.html
 share/doc/darkice/main_8cpp-source.html
 share/doc/darkice/main_8cpp.html
-share/examples/darkice/darkice.conf.default
+share/examples/darkice/darkice.conf
 @dirrm share/examples/darkice
 @dirrm share/doc/darkice
