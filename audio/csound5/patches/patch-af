@@ -1,0 +1,31 @@
+$NetBSD: patch-af,v 1.1.1.1 2006/05/21 22:46:22 ben Exp $
+
+--- Engine/namedins.c.orig	2006-03-11 08:30:35.000000000 -0800
++++ Engine/namedins.c
+@@ -1342,7 +1342,7 @@ PUBLIC int csoundGetControlChannelParams
+ 
+ int csoundCheckOpcodePluginFile(CSOUND *csound, const char *fname)
+ {
+-#if !(defined(LINUX) || defined(__unix__) || defined(__MACH__))
++#if !(defined(LINUX) || defined(__unix__) || defined(__MACH__) || defined(__NetBSD__))
+     char                        buf[512];
+     size_t                      i;
+ #endif
+@@ -1352,7 +1352,7 @@ int csoundCheckOpcodePluginFile(CSOUND *
+ 
+     if (fname == NULL || fname[0] == (char) 0)
+       return 0;
+-#if !(defined(LINUX) || defined(__unix__) || defined(__MACH__))
++#if !(defined(LINUX) || defined(__unix__) || defined(__MACH__) || defined(__NetBSD__))
+     /* on some platforms, file names are case insensitive */
+     i = (size_t) 0;
+     do {
+@@ -1502,7 +1502,7 @@ int csoundLoadOpcodeDB(CSOUND *csound, c
+           }
+           opcodeCnt++;
+         }
+-#if !(defined(LINUX) || defined(__unix__) || defined(__MACH__))
++#if !(defined(LINUX) || defined(__unix__) || defined(__MACH__) || defined(__NetBSD__))
+         else {
+           size_t  j;
+           /* on some platforms, file names are case insensitive */
