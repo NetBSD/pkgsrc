@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1822 2006/05/10 17:53:34 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1823 2006/05/21 14:41:29 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1966,9 +1966,9 @@ real-su-install: ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install-fake-pkg
 .endif # !NO_PKG_REGISTER
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install-script
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} do-install
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} pre-install PKG_PHASE=install
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} do-install PKG_PHASE=install
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} post-install PKG_PHASE=install
 	${_PKG_SILENT}${DO_NADA} \
 		#							\
 		# PLIST must be generated at this late point (instead of \
