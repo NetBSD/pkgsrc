@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/04/17 13:46:17 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2006/05/21 15:57:42 rillig Exp $
 #
 
 DISTNAME=	boolean_6_7
@@ -29,11 +29,12 @@ INSTALLATION_DIRS=	bin
 # the zip archive messes up the case of these files which breaks
 # cmake.
 post-patch:
+	set -e; \
 	for f in `${FIND} ${WRKSRC} -name cmakelists.txt -print`; do \
-		d=`${DIRNAME} $$f` ; \
+		d=`${DIRNAME} "$$f"` ; \
 		n="$$d/CMakeLists.txt" ; \
 		${ECHO} "$$f -> $$n" ; \
-		${MV} $$f $$n ; done
+		${MV} "$$f" "$$n"; done
 		${MV} ${WRKSRC}/bin/checkmsvc.cmake ${WRKSRC}/bin/CheckMSVC.cmake
 		${MV} ${WRKSRC}/bin/findpkgconfig.cmake ${WRKSRC}/bin/FindPkgConfig.cmake
 		${MV} ${WRKSRC}/bin/findwxwin.cmake ${WRKSRC}/bin/FindwxWin.cmake
@@ -49,11 +50,11 @@ do-configure:
 
 do-install:
 	${INSTALL_DATA_DIR}  ${PREFIX}/share/boolean
-	cd ${WRKSRC}/apps/edit && \
-		${TAR} cf - default gdsuser | ${TAR} -xvf - -C ${PREFIX}/share/boolean
-	cd ${WRKSRC}/docs && \
-		${TAR} cf - html | ${TAR} -xvf - -C ${PREFIX}/share/boolean
-	${CHOWN} -R ${BINOWN}.${BINGRP} ${PREFIX}/share/boolean
+	cd ${WRKSRC}/apps/edit						\
+	&& ${PAX} -rw default gdsuser ${PREFIX}/share/boolean
+	cd ${WRKSRC}/docs						\
+	&& ${PAX} -rw html ${PREFIX}/share/boolean
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/boolean
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/boolean  ${PREFIX}/bin/boolean
 	${INSTALL_PROGRAM} ${WRKSRC}/apps/edit/edit  ${PREFIX}/bin/edit
 

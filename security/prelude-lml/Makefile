@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/05/21 15:05:57 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/21 15:50:18 rillig Exp $
 #
 
 DISTNAME=		prelude-lml-0.9.4
@@ -12,8 +12,8 @@ COMMENT=		Log analyzer monitoring your logfile and received syslog messages
 
 .include "../../mk/bsd.prefs.mk"
 
-PRELUDE_USER?=          _prelude
-PRELUDE_GROUP?=         _prelude
+PRELUDE_USER?=		_prelude
+PRELUDE_GROUP?=		_prelude
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -22,7 +22,7 @@ USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--disable-fam
-CONFIGURE_ARGS+=        --localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 RCD_SCRIPTS=		preludelml
 PRELUDE_USER?=		_prelude
 PRELUDE_GROUP?=		_prelude
@@ -39,11 +39,11 @@ FILES_SUBST+=	PRELUDE_LML_PID_DIR=${PRELUDE_LML_PID_DIR:Q}
 FILES_SUBST+=	PRELUDE_USER=${PRELUDE_USER:Q}
 FILES_SUBST+=	PRELUDE_GROUP=${PRELUDE_GROUP:Q}
 
-SUBST_CLASSES+=         code
-SUBST_STAGE.code=       post-patch
-SUBST_FILES.code=       run-prelude-lml.c
-SUBST_SED.code=         -e 's,@PREFIX@,${PREFIX},g'
-SUBST_SED.code+=        -e 's,@PRELUDE_USER@,${PRELUDE_USER},g'
+SUBST_CLASSES+=		code
+SUBST_STAGE.code=	post-patch
+SUBST_FILES.code=	run-prelude-lml.c
+SUBST_SED.code=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.code+=	-e 's,@PRELUDE_USER@,${PRELUDE_USER},g'
 
 PKG_SYSCONFSUBDIR=	prelude-lml
 EGDIR=		share/examples/prelude-lml/
@@ -62,7 +62,7 @@ CONF_FILES_PERMS+=	${EGDIR}/prelude-lml.conf ${PKG_SYSCONFDIR}/prelude-lml.conf 
 	selinux.rules sendmail.rules shadow-utils.rules single.rules \
 	squid.rules ssh.rules sudo.rules tripwire.rules vigor.rules \
 	vpopmail.rules webmin.rules wu-ftp.rules zywall.rules zyxel.rules
-CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+CONF_FILES+=	${EGDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q}
 .endfor
 
 pre-patch:
