@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/13 13:32:53 wulf Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/05/21 16:34:19 rillig Exp $
 bin/swig
 share/doc/swig/SWIGDocumentation.html
 share/doc/swig/SWIGDocumentation.pdf
@@ -622,8 +622,8 @@ share/examples/swig/php4/reference/Makefile
 share/examples/swig/php4/reference/example.cxx
 share/examples/swig/php4/reference/example.h
 share/examples/swig/php4/reference/example.i
-share/examples/swig/php4/reference/runme.php4
 share/examples/swig/php4/reference/runme-proxy.php4
+share/examples/swig/php4/reference/runme.php4
 share/examples/swig/php4/shadow/Makefile
 share/examples/swig/php4/shadow/example.cxx
 share/examples/swig/php4/shadow/example.h
@@ -1187,12 +1187,12 @@ share/examples/swig/test-suite/cpp_typedef.i
 share/examples/swig/test-suite/csharp/Makefile
 share/examples/swig/test-suite/csharp/README
 share/examples/swig/test-suite/csharp/aggregate_runme.cs
-share/examples/swig/test-suite/csharp/csharp_attributes_runme.cs
-share/examples/swig/test-suite/csharp/csharp_exceptions_runme.cs
-share/examples/swig/test-suite/csharp/csharp_typemaps_runme.cs
 share/examples/swig/test-suite/csharp/bools_runme.cs
 share/examples/swig/test-suite/csharp/char_strings_runme.cs
 share/examples/swig/test-suite/csharp/constover_runme.cs
+share/examples/swig/test-suite/csharp/csharp_attributes_runme.cs
+share/examples/swig/test-suite/csharp/csharp_exceptions_runme.cs
+share/examples/swig/test-suite/csharp/csharp_typemaps_runme.cs
 share/examples/swig/test-suite/csharp/default_args_runme.cs
 share/examples/swig/test-suite/csharp/default_constructor_runme.cs
 share/examples/swig/test-suite/csharp/enum_thorough_runme.cs
@@ -1371,6 +1371,8 @@ share/examples/swig/test-suite/guile/typename_runme.scm
 share/examples/swig/test-suite/guile/unions_runme.scm
 share/examples/swig/test-suite/guilescm/Makefile
 share/examples/swig/test-suite/ignore_parameter.i
+share/examples/swig/test-suite/ignore_template_constructor.i
+share/examples/swig/test-suite/immutable.i
 share/examples/swig/test-suite/import_nomodule.h
 share/examples/swig/test-suite/import_nomodule.i
 share/examples/swig/test-suite/imports.list
@@ -1379,8 +1381,6 @@ share/examples/swig/test-suite/imports_a.i
 share/examples/swig/test-suite/imports_b.h
 share/examples/swig/test-suite/imports_b.i
 share/examples/swig/test-suite/inctest.i
-share/examples/swig/test-suite/ignore_template_constructor.i
-share/examples/swig/test-suite/immutable.i
 share/examples/swig/test-suite/inherit.i
 share/examples/swig/test-suite/inherit_missing.i
 share/examples/swig/test-suite/inherit_same_name.i
@@ -1440,8 +1440,8 @@ share/examples/swig/test-suite/java/overload_template_runme.java
 share/examples/swig/test-suite/java/pointer_reference_runme.java
 share/examples/swig/test-suite/java/primitive_ref_runme.java
 share/examples/swig/test-suite/java/profiletest_runme.java
-share/examples/swig/test-suite/java/rname_runme.java
 share/examples/swig/test-suite/java/ret_by_value_runme.java
+share/examples/swig/test-suite/java/rname_runme.java
 share/examples/swig/test-suite/java/template_classes_runme.java
 share/examples/swig/test-suite/java/template_default_arg_runme.java
 share/examples/swig/test-suite/java/typemap_namespace_runme.java
@@ -1561,8 +1561,8 @@ share/examples/swig/test-suite/overload_extendc.i
 share/examples/swig/test-suite/overload_rename.i
 share/examples/swig/test-suite/overload_simple.i
 share/examples/swig/test-suite/overload_subtype.i
-share/examples/swig/test-suite/overload_template_fast.i
 share/examples/swig/test-suite/overload_template.i
+share/examples/swig/test-suite/overload_template_fast.i
 share/examples/swig/test-suite/perl5/Makefile
 share/examples/swig/test-suite/perl5/README
 share/examples/swig/test-suite/perl5/Test/Builder.pm
@@ -1570,9 +1570,9 @@ share/examples/swig/test-suite/perl5/Test/More.pm
 share/examples/swig/test-suite/perl5/default_args_runme.pl
 share/examples/swig/test-suite/perl5/disown_runme.pl
 share/examples/swig/test-suite/perl5/enum_thorough_runme.pl
+share/examples/swig/test-suite/perl5/global_vars_runme.pl
 share/examples/swig/test-suite/perl5/import_nomodule_runme.pl
 share/examples/swig/test-suite/perl5/imports_runme.pl
-share/examples/swig/test-suite/perl5/global_vars_runme.pl
 share/examples/swig/test-suite/perl5/inherit_runme.pl
 share/examples/swig/test-suite/perl5/li_std_list.i
 share/examples/swig/test-suite/perl5/li_std_string_runme.pl
@@ -1699,8 +1699,6 @@ share/examples/swig/test-suite/python/hugemod.pl
 share/examples/swig/test-suite/python/iadd.h
 share/examples/swig/test-suite/python/iadd.i
 share/examples/swig/test-suite/python/iadd_runme.py
-share/examples/swig/test-suite/python/input.i
-share/examples/swig/test-suite/python/input_runme.py
 share/examples/swig/test-suite/python/implicittest.i
 share/examples/swig/test-suite/python/import_nomodule_runme.py
 share/examples/swig/test-suite/python/imports_runme.py
@@ -1710,6 +1708,8 @@ share/examples/swig/test-suite/python/inout.i
 share/examples/swig/test-suite/python/inout_runme.py
 share/examples/swig/test-suite/python/inplaceadd.i
 share/examples/swig/test-suite/python/inplaceadd_runme.py
+share/examples/swig/test-suite/python/input.i
+share/examples/swig/test-suite/python/input_runme.py
 share/examples/swig/test-suite/python/kwargs.i
 share/examples/swig/test-suite/python/kwargs_runme.py
 share/examples/swig/test-suite/python/langobj_runme.py
@@ -1835,11 +1835,11 @@ share/examples/swig/test-suite/refcount.h
 share/examples/swig/test-suite/refcount.i
 share/examples/swig/test-suite/reference_global_vars.i
 share/examples/swig/test-suite/register_par.i
+share/examples/swig/test-suite/rename_camel.i
 share/examples/swig/test-suite/rename_scope.i
 share/examples/swig/test-suite/ret_by_value.i
 share/examples/swig/test-suite/return_const_value.i
 share/examples/swig/test-suite/return_value_scope.i
-share/examples/swig/test-suite/rename_camel.i
 share/examples/swig/test-suite/rname.i
 share/examples/swig/test-suite/ruby/Makefile
 share/examples/swig/test-suite/ruby/README
@@ -1853,8 +1853,8 @@ share/examples/swig/test-suite/ruby/aggregate_runme.rb
 share/examples/swig/test-suite/ruby/array_member_runme.rb
 share/examples/swig/test-suite/ruby/arrays_global_runme.rb
 share/examples/swig/test-suite/ruby/bools_runme.rb
-share/examples/swig/test-suite/ruby/class_ignore_runme.rb
 share/examples/swig/test-suite/ruby/char_constant_runme.rb
+share/examples/swig/test-suite/ruby/class_ignore_runme.rb
 share/examples/swig/test-suite/ruby/constover_runme.rb
 share/examples/swig/test-suite/ruby/cpp_namespace_runme.rb
 share/examples/swig/test-suite/ruby/default_constructor_runme.rb
@@ -2027,8 +2027,8 @@ share/examples/swig/test-suite/tcl/primitive_ref_runme.tcl
 share/examples/swig/test-suite/tcl/primitive_types_runme.tcl
 share/examples/swig/test-suite/tcl/profiletest_runme.tcl
 share/examples/swig/test-suite/tcl/reference_global_vars_runme.tcl
-share/examples/swig/test-suite/tcl/union_runme.tcl
 share/examples/swig/test-suite/tcl/union.i
+share/examples/swig/test-suite/tcl/union_runme.tcl
 share/examples/swig/test-suite/tcl/unions_runme.tcl
 share/examples/swig/test-suite/template.i
 share/examples/swig/test-suite/template_arg_replace.i
@@ -2246,9 +2246,9 @@ share/swig/1.3/java/enumtypeunsafe.swg
 share/swig/1.3/java/java.swg
 share/swig/1.3/java/javahead.swg
 share/swig/1.3/java/javakw.swg
+share/swig/1.3/java/std_common.i
 share/swig/1.3/java/std_deque.i
 share/swig/1.3/java/std_except.i
-share/swig/1.3/java/std_common.i
 share/swig/1.3/java/std_map.i
 share/swig/1.3/java/std_pair.i
 share/swig/1.3/java/std_string.i
@@ -2305,8 +2305,6 @@ share/swig/1.3/ocaml/typecheck.i
 share/swig/1.3/ocaml/typemaps.i
 share/swig/1.3/ocaml/typeregister.swg
 share/swig/1.3/perl5/Makefile.pl
-share/swig/1.3/perl5/noembed.h
-share/swig/1.3/perl5/perl5.swg
 share/swig/1.3/perl5/attribute.i
 share/swig/1.3/perl5/carrays.i
 share/swig/1.3/perl5/cdata.i
@@ -2317,6 +2315,8 @@ share/swig/1.3/perl5/cstring.i
 share/swig/1.3/perl5/exception.i
 share/swig/1.3/perl5/factory.i
 share/swig/1.3/perl5/jstring.i
+share/swig/1.3/perl5/noembed.h
+share/swig/1.3/perl5/perl5.swg
 share/swig/1.3/perl5/perlerrors.swg
 share/swig/1.3/perl5/perlfragments.swg
 share/swig/1.3/perl5/perlhead.swg
@@ -2467,9 +2467,9 @@ share/swig/1.3/ruby/rubykw.swg
 share/swig/1.3/ruby/rubymacros.swg
 share/swig/1.3/ruby/rubyopers.swg
 share/swig/1.3/ruby/rubyprimtypes.swg
-share/swig/1.3/ruby/rubystrings.swg
 share/swig/1.3/ruby/rubyrun.swg
 share/swig/1.3/ruby/rubyruntime.swg
+share/swig/1.3/ruby/rubystrings.swg
 share/swig/1.3/ruby/rubytracking.swg
 share/swig/1.3/ruby/rubytypemaps.swg
 share/swig/1.3/ruby/rubyuserdir.swg
@@ -2535,13 +2535,13 @@ share/swig/1.3/tcl/exception.i
 share/swig/1.3/tcl/factory.i
 share/swig/1.3/tcl/jstring.i
 share/swig/1.3/tcl/std_common.i
+share/swig/1.3/tcl/std_deque.i
+share/swig/1.3/tcl/std_except.i
 share/swig/1.3/tcl/std_map.i
 share/swig/1.3/tcl/std_pair.i
 share/swig/1.3/tcl/std_string.i
-share/swig/1.3/tcl/std_deque.i
-share/swig/1.3/tcl/std_except.i
-share/swig/1.3/tcl/std_wstring.i
 share/swig/1.3/tcl/std_vector.i
+share/swig/1.3/tcl/std_wstring.i
 share/swig/1.3/tcl/stl.i
 share/swig/1.3/tcl/tcl8.swg
 share/swig/1.3/tcl/tclapi.swg
@@ -2559,9 +2559,9 @@ share/swig/1.3/tcl/tclruntime.swg
 share/swig/1.3/tcl/tclsh.i
 share/swig/1.3/tcl/tclstrings.swg
 share/swig/1.3/tcl/tcltypemaps.swg
-share/swig/1.3/tcl/typemaps.i
 share/swig/1.3/tcl/tcluserdir.swg
 share/swig/1.3/tcl/tclwstrings.swg
+share/swig/1.3/tcl/typemaps.i
 share/swig/1.3/tcl/wish.i
 share/swig/1.3/typemaps/attribute.swg
 share/swig/1.3/typemaps/carrays.swg
