@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.616 2006/05/05 23:16:46 minskim Exp $
+# $NetBSD: Makefile,v 1.617 2006/05/21 10:29:09 grant Exp $
 #
 
 COMMENT=	Networking tools
@@ -208,6 +208,7 @@ SUBDIR+=	nagios-plugin-mysql
 SUBDIR+=	nagios-plugin-pgsql
 SUBDIR+=	nagios-plugin-snmp
 SUBDIR+=	nagios-plugins
+SUBDIR+=	nagios-nrpe
 SUBDIR+=	nam
 SUBDIR+=	nap
 SUBDIR+=	napshare
