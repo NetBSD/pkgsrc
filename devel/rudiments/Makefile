@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/05/18 20:29:58 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/05/21 13:59:04 joerg Exp $
 #
 
 DISTNAME=		rudiments-0.29
@@ -14,6 +14,7 @@ BROKEN_IN=		pkgsrc-2006Q1
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
