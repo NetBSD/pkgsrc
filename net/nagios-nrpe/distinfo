@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2006/05/21 10:28:40 grant Exp $
+
+SHA1 (nrpe-2.5.1.tar.gz) = 1beab9dc5fe77b722a12161b23b536ac5e28a6a4
+RMD160 (nrpe-2.5.1.tar.gz) = 757eb92cde878d8a0d3e483149d8969728ed7e03
+Size (nrpe-2.5.1.tar.gz) = 100382 bytes
