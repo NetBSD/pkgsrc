@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.289 2006/05/21 13:33:20 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.290 2006/05/21 13:34:47 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2616,3 +2616,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added net/nagios-nrpe version 2.5.1 [grant 2006-05-21]
 	Updated misc/dpkg to 1.10.28 [rillig 2006-05-21]
 	Updated security/audit-packages to 1.43 [adrianp 2006-05-21]
+	Updated editors/vim-share to 7.0.17 [martti 2006-05-21]
