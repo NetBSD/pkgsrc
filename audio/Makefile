@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.309 2006/04/13 18:56:13 wiz Exp $
+# $NetBSD: Makefile,v 1.310 2006/05/21 10:19:10 xtraeme Exp $
 #
 
 COMMENT=	Audio tools
@@ -254,6 +254,7 @@ SUBDIR+=	tremor
 SUBDIR+=	tremor-tools
 SUBDIR+=	trm
 SUBDIR+=	tunesbrowser
+SUBDIR+=	twolame
 SUBDIR+=	ubs
 SUBDIR+=	vorbis-tools
 SUBDIR+=	vorbisgain
