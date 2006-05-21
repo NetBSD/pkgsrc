@@ -1,0 +1,24 @@
+# $NetBSD: Makefile.common,v 1.1 2006/05/21 18:44:46 joerg Exp $
+#
+
+DISTNAME=		pygobject-2.10.1
+CATEGORIES=		devel
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pygobject/2.10/}
+
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://www.pygtk.org/
+COMMENT=		Python bindings for glib2 gobject
+
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
+
+PATCHDIR=		${.CURDIR}/../../devel/py-gobject/patches
+DISTINFO_FILE=		${.CURDIR}/../../devel/py-gobject/distinfo
+
+PKGCONFIG_OVERRIDE+=	pygobject-2.0.pc.in
+PYTHON_VERSIONS_ACCEPTED= 24 23
+PY_PATCHPLIST=		yes
+CONFLICTS+=		${PYPKGPREFIX}-gtk2<2.8.4
