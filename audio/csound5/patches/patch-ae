@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2006/05/21 22:46:22 ben Exp $
+
+--- Engine/linevent.c.orig	2005-12-06 14:58:54.000000000 -0800
++++ Engine/linevent.c
+@@ -30,7 +30,7 @@
+ #include "linevent.h"
+ 
+ #ifdef PIPES
+-# if defined(SGI) || defined(LINUX) || defined(NeXT) || defined(__MACH__)
++# if defined(SGI) || defined(LINUX) || defined(NeXT) || defined(__MACH__) || defined(__NetBSD__)
+ #  define _popen popen
+ #  define _pclose pclose
+ # elif defined(__BEOS__) || defined(__MACH__)

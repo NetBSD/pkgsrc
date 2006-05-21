@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 2006/05/21 22:46:22 ben Exp $
+
+--- InOut/libsnd.c.orig	2006-02-13 09:05:46.000000000 -0800
++++ InOut/libsnd.c
+@@ -47,7 +47,7 @@ typedef struct {
+ 
+ #ifdef PIPES
+ # if defined(SGI) || defined(LINUX) || defined(__BEOS__) || defined(NeXT) ||  \
+-     defined(__MACH__)
++     defined(__MACH__) || defined(__NetBSD__)
+ #  define _popen popen
+ #  define _pclose pclose
+ # endif

@@ -1,0 +1,22 @@
+$NetBSD: patch-al,v 1.1.1.1 2006/05/21 22:46:22 ben Exp $
+
+--- InOut/winFLTK.c.orig	2005-12-30 07:21:18.000000000 -0800
++++ InOut/winFLTK.c
+@@ -29,7 +29,7 @@
+ #include <stdio.h>
+ #include "cwindow.h"
+ 
+-#ifdef LINUX
++#if defined(LINUX) || defined(__NetBSD__)
+ #include <X11/Xlib.h>
+ #endif
+ 
+@@ -54,7 +54,7 @@ static void KillGraph_FLTK(CSOUND *csoun
+ 
+ void set_display_callbacks(CSOUND *csound)
+ {
+-#ifdef LINUX
++#if defined(LINUX) || defined(__NetBSD__)
+     Display *dpy = XOpenDisplay(NULL);
+     if (dpy == NULL)
+       return;
