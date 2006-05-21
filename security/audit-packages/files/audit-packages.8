@@ -1,4 +1,4 @@
-.\" $NetBSD: audit-packages.8,v 1.18 2006/04/15 15:02:10 salo Exp $
+.\" $NetBSD: audit-packages.8,v 1.19 2006/05/21 13:31:27 adrianp Exp $
 .\"
 .\" Copyright (c) 2003 Jeremy C. Reed.  All rights reserved.
 .\"
@@ -186,6 +186,10 @@ Specifies the directory containing the
 file.
 .It Ev FETCH_ARGS
 Specifies optional arguments for the ftp client.
+.It Ev FETCH_PROTO
+Specifies the protocol to use when fetching the 
+.Pa pkg-vulnerabilities
+file. Currently supports only http and ftp. The default is ftp.
 .El
 .Sh FILES
 @PKGVULNDIR@/pkg-vulnerabilities
@@ -214,6 +218,16 @@ command can be forced to use IPv4 with the following setting in
 @PKG_SYSCONFDIR@/audit-packages.conf :
 .Pp
 export FETCH_ARGS="-4"
+.Pp
+The
+.Nm download-vulnerability-list
+command can be forced to use http to download the
+.Pa pkg-vulnerabilities
+file with the following setting in
+@PKG_SYSCONFDIR@/audit-packages.conf :
+.Pp
+export FETCH_PROTO="http"
+.Pp
 .Sh DIAGNOSTICS
 The following errors can occur:
 .Bl -tag -width 10n
