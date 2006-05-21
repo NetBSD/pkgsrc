@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2006/04/22 17:07:19 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2006/05/21 13:23:31 rillig Exp $
 
 DISTNAME=		camlimages-2.2.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		graphics
 MASTER_SITES=		ftp://ftp.inria.fr/INRIA/caml-light/bazar-ocaml/
 EXTRACT_SUFX=		.tgz
@@ -28,7 +28,7 @@ BUILD_TARGET+=	all
 PLIST_SRC+=	${PKGDIR}/PLIST.opt
 .endif
 
-.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Darwin"
+.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Darwin" || ${OPSYS} == "NetBSD"
 PLIST_SUBST+=	COND_DLL=""
 .else
 PLIST_SUBST+=	COND_DLL="@comment "
