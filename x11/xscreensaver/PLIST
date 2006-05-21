@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2006/05/14 18:55:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2006/05/21 15:19:31 jlam Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-getimage
@@ -609,7 +609,6 @@ man/man1/xspirograph.1
 man/man1/xsublim.1
 man/man1/xteevee.1
 man/man1/zoom.1
-share/locale/ca/LC_MESSAGES/xscreensaver.mo
 share/locale/da/LC_MESSAGES/xscreensaver.mo
 share/locale/de/LC_MESSAGES/xscreensaver.mo
 share/locale/es/LC_MESSAGES/xscreensaver.mo
@@ -625,7 +624,6 @@ share/locale/nl/LC_MESSAGES/xscreensaver.mo
 share/locale/no/LC_MESSAGES/xscreensaver.mo
 share/locale/pl/LC_MESSAGES/xscreensaver.mo
 share/locale/pt/LC_MESSAGES/xscreensaver.mo
-share/locale/pt_BR/LC_MESSAGES/xscreensaver.mo
 share/locale/ru/LC_MESSAGES/xscreensaver.mo
 share/locale/sk/LC_MESSAGES/xscreensaver.mo
 share/locale/sv/LC_MESSAGES/xscreensaver.mo
