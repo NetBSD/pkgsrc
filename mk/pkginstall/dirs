@@ -1,4 +1,4 @@
-# $NetBSD: dirs,v 1.15 2006/05/01 14:56:23 jlam Exp $
+# $NetBSD: dirs,v 1.1 2006/05/21 23:50:15 jlam Exp $
 #
 # Generate a +DIRS script that reference counts directories that are
 # required for the proper functioning of the package.
