@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/04/17 13:46:22 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2006/05/21 02:28:27 wiz Exp $
 #
 
 DISTNAME=	poedit-1.3.4
@@ -14,6 +14,7 @@ DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.2 gnome2-1.5
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 CONFIGURE_ENV+=		WX_CONFIG_NAME=${BUILDLINK_PREFIX.wxGTK}/bin/wx-config
