@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2006/05/11 03:55:04 jwise Exp $
+# $NetBSD: Makefile,v 1.23 2006/05/21 16:08:32 rillig Exp $
 #
 
 DISTNAME=	i2cbd-2.0_BETA5
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_LOCAL} \
 		http://www.draga.com/~jwise/i2cb/
@@ -9,7 +10,6 @@ MASTER_SITES=	${MASTER_SITE_LOCAL} \
 MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.draga.com/~jwise/i2cb/
 COMMENT=	Next generation Internet Citizens Band chat server
-
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -22,11 +22,12 @@ EGDIR=			${PREFIX}/share/examples/i2cbd
 EGFILES=		motd icbd_help icbd.deny news.1
 CONF_FILES_PERMS=	# empty
 .for f in ${EGFILES}
-CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
+CONF_FILES_PERMS+=	${EGDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} \
 			${ICBD_OWNER} ${ROOT_GROUP} 644
 .endfor
 CONF_FILES_PERMS+=	/dev/null /var/log/icbd.log \
 			${ICBD_OWNER} ${ROOT_GROUP} 644
+RCD_SCRIPTS=		icbd
 
 post-extract:
 	-${RM} -f ${WRKSRC}/*/.depend
@@ -38,8 +39,8 @@ post-build:
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 .for f in ${EGFILES}
-	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/${f:Q} ${EGDIR}
 .endfor
-	${INSTALL_SCRIPT} ${WRKDIR}/icbd.sh ${PREFIX}/etc/rc.d/icbd
+	${INSTALL_SCRIPT} ${WRKDIR}/icbd.sh ${PREFIX}/share/examples/rc.d/icbd
 
 .include "../../mk/bsd.pkg.mk"
