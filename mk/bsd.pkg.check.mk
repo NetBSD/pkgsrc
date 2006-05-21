@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.32 2006/05/10 16:09:08 rillig Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.33 2006/05/21 13:24:44 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the various install-time "check"
@@ -180,11 +180,11 @@ check-files-post: ${_CHECK_FILES_POST}
 
 .PHONY: check-files-pre-message check-files-post-message
 check-files-pre-message:
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}>"		\
+	${_PKG_SILENT}${_PKG_DEBUG}${STEP_MSG}				\
 		"Generating pre-install file lists"
 
 check-files-post-message:
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG} "${_PKGSRC_IN}>"		\
+	${_PKG_SILENT}${_PKG_DEBUG}${STEP_MSG}				\
 		"Generating post-install file lists"
 
 ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix}:
@@ -225,8 +225,8 @@ check-files-varbase: ${_CHECK_FILES_COOKIE.varbase}
 #
 .PHONY: check-files
 check-files: ${_CHECK_FILES_COOKIES}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG}				\
-		"${_PKGSRC_IN}> Checking file-check results for ${PKGNAME}"
+	${_PKG_SILENT}${_PKG_DEBUG}${STEP_MSG}				\
+		"Checking file-check results for ${PKGNAME}"
 .for _cookie_ in ${_CHECK_FILES_COOKIES}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${_cookie_}
 .endfor
@@ -390,8 +390,8 @@ _CHECK_WRKREF:=		work		# "work" is the "max" option
 .PHONY: check-wrkref
 check-wrkref:
 .if !defined(NO_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG}				\
-		"${_PKGSRC_IN}> Checking for work-directory references in ${PKGNAME}"
+	${_PKG_SILENT}${_PKG_DEBUG}${STEP_MSG}				\
+		"Checking for work-directory references in ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${PKG_INFO} -qL ${PKGNAME:Q} | ${SORT} |			\
 	{ while read file; do						\
@@ -444,8 +444,8 @@ _CHECK_INTERP_SKIP_FILTER+=	esac
 #
 .PHONY: check-interpreter
 check-interpreter:
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG}				\
-		"${_PKGSRC_IN}> Checking for non-existent script interpreters in ${PKGNAME}"
+	${_PKG_SILENT}${_PKG_DEBUG}${STEP_MSG}				\
+		"Checking for non-existent script interpreters in ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${PKG_INFO} -qL ${PKGNAME:Q} | ${SORT} | ${SED} 's,\\,\\\\,g' |	\
 	{ exitcode=0;							\
