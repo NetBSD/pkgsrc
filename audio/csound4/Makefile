@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2006/05/15 18:42:32 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/05/21 22:29:09 ben Exp $
 #
 
 DISTNAME=		csound-4.23f13gbs.0
 PKGNAME=		csound4-4.23.13.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=csound/}
 
@@ -19,10 +19,14 @@ USE_TOOLS+=		gmake makeinfo
 GNU_CONFIGURE=		yes
 TEXINFO_REQD=		4.2
 CONFIGURE_ARGS+=	--enable-debug
+CONFIGURE_ARGS+=	--bindir=${PREFIX}/lib/csound4
 CFLAGS+=		-g
 INFO_FILES=		# PLIST
 
 NOT_FOR_PLATFORM=	*-*-alpha *-*-sparc64	# Severe LP64 problems
+
+post-install:
+	cd ${PREFIX} && ${LN} -s ../lib/csound4/csound bin/csound4
 
 .include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
