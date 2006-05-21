@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2006/04/17 13:46:20 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2006/05/21 13:20:46 wiz Exp $
 #
 
 DISTNAME=		mysqlcc-0.9.4-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_MYSQL:=MySQLCC/}
 
@@ -11,6 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mysql.com/
 COMMENT=		MySQL Control Center
 
+USE_LANGUAGES=		c++
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		automake
 GNU_CONFIGURE=		YES
@@ -34,9 +35,5 @@ do-install:
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
-# XXX Please verify whether qt3-tools is really needed at run-time.
-# If it is, then remove this comment.  If it is not, then remove
-# this comment and the line below, and bump PKGREVISION.
-BUILDLINK_DEPMETHOD.qt3-tools=	full
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
