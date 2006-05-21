@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/17 13:46:27 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/21 21:32:22 rillig Exp $
 
 DISTNAME=	cube_2004_05_22
 PKGNAME=	cube-20040522
@@ -13,33 +13,33 @@ COMMENT=	Cube is a 3D First Person Shooter that uses OpenGL and SDL
 BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
 WRKSRC=		${WRKDIR}/cube
-CUBE_SRC=	${WRKSRC}/source/src
-CUBE_DATA=	${PREFIX}/share/cube
+CUBE_SRC_DIR=	${WRKSRC}/source/src
+CUBE_DATA_DIR=	${PREFIX}/share/cube
 
 NO_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake unzip
 
 INSTALLATION_DIRS=	bin
 
 post-extract:
-	@unzip -q -a -o ${WRKSRC}/source/${DISTNAME}_src.zip -d ${WRKSRC}/source/
+	${UNZIP_CMD} -q -a -o ${WRKSRC}/source/${DISTNAME}_src.zip -d ${WRKSRC}/source/
 
 post-patch:
-	@${ECHO} '#define DATADIR "${CUBE_DATA}"' >> ${CUBE_SRC}/cube.h
+	@${ECHO} '#define DATADIR "${CUBE_DATA_DIR}"' >> ${CUBE_SRC_DIR}/cube.h
 
 do-build:
-	@cd ${WRKSRC}/source/enet && ${SH} configure
-	@cd ${CUBE_SRC} && ${GMAKE} all
+	cd ${WRKSRC}/source/enet && ${SH} configure
+	cd ${CUBE_SRC_DIR} && ${GMAKE} all
 
 pre-install:
-	@${INSTALL_DATA_DIR} ${CUBE_DATA}/savegames
+	${INSTALL_DATA_DIR} ${CUBE_DATA_DIR}/savegames
 
 do-install:
-	${INSTALL_PROGRAM} ${CUBE_SRC}/cube_client ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${CUBE_SRC}/cube_server ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/autoexec.cfg ${CUBE_DATA}
-	${CP} -Rp ${WRKSRC}/data ${CUBE_DATA}
-	${CP} -Rp ${WRKSRC}/packages ${CUBE_DATA}
+	${INSTALL_PROGRAM} ${CUBE_SRC_DIR}/cube_client ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${CUBE_SRC_DIR}/cube_server ${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/autoexec.cfg ${CUBE_DATA_DIR}
+	${CP} -Rp ${WRKSRC}/data ${CUBE_DATA_DIR}
+	${CP} -Rp ${WRKSRC}/packages ${CUBE_DATA_DIR}
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
