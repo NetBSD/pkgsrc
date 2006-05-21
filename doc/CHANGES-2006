@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.284 2006/05/21 09:53:15 agc Exp $
+$NetBSD: CHANGES-2006,v 1.285 2006/05/21 10:19:10 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2611,3 +2611,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/pcre-ocaml version 5.10.3 [rillig 2006-05-20]
 	Added devel/cvsd version 1.0.10 [wiz 2006-05-20]
 	Updated devel/netbsd-iscsi to 20060520 [agc 2006-05-20]
+	Added audio/twolame version 0.3.7 [xtraeme 2006-05-21]
