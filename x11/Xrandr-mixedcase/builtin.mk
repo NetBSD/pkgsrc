@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.16 2006/04/18 19:47:20 reed Exp $
+# $NetBSD: builtin.mk,v 1.17 2006/05/21 11:46:29 rillig Exp $
 
 BUILTIN_PKG:=	Xrandr
 
@@ -28,11 +28,11 @@ MAKEVARS+=	IS_BUILTIN.Xrandr
 .if !defined(BUILTIN_PKG.Xrandr) && \
     !empty(IS_BUILTIN.Xrandr:M[yY][eE][sS]) && \
     empty(H_XRANDR:M__nonexistent__)
-#                                                                              
-# Xrandr doesn't provide a method of discovering the version number of         
-# the software.  Match up Xrandr versions with X11 versions for an         
-# approximate determination of the Xrandr version.                             
-#                                                                              
+#
+# Xrandr doesn't provide a method of discovering the version number of
+# the software.  Match up Xrandr versions with X11 versions for an
+# approximate determination of the Xrandr version.
+#
 _BLTN_XRANDR_VERSIONS=		1.0.2  1.0.1  1.0  0.99
 _BLTN_XRANDR_0.99.XFree86=	4.2 4.2.*
 _BLTN_XRANDR_1.0.XFree86=	4.3 4.3.[0-9] 4.3.[0-9].*		\
