@@ -1,4 +1,4 @@
-# $NetBSD: usergroupfuncs,v 1.9 2006/05/01 14:56:23 jlam Exp $
+# $NetBSD: usergroupfuncs,v 1.1 2006/05/21 23:50:15 jlam Exp $
 #
 # Default implementations of user_exists() and group_exists() shell
 # functions for checking the existence of users and groups, and of
@@ -8,7 +8,7 @@
 #
 # Platform-specific replacements for this file should be located at:
 #
-#	pkgsrc/mk/install/usergroupfuncs.${OPSYS}
+#	pkgsrc/mk/pkginstall/usergroupfuncs.${OPSYS}
 #
 
 # group_exists group [groupid]
