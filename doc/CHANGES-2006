@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.287 2006/05/21 10:30:43 grant Exp $
+$NetBSD: CHANGES-2006,v 1.288 2006/05/21 11:27:49 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2614,3 +2614,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added audio/twolame version 0.3.7 [xtraeme 2006-05-21]
 	Updated audio/darkice to 0.17.1 [xtraeme 2006-05-21]
 	Added net/nagios-nrpe version 2.5.1 [grant 2006-05-21]
+	Updated misc/dpkg to 1.10.28 [rillig 2006-05-21]
