@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/12 09:18:47 itohy Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/21 14:18:38 joerg Exp $
 
 DISTNAME=		kyopon-0.3
 CATEGORIES=		comms
@@ -8,7 +8,7 @@ MAINTAINER=		itohy@NetBSD.org
 #HOMEPAGE=
 COMMENT=		tool to manipulate data of Kyocera AIR-EDGE PHONE
 
-ONLY_FOR_PLATFORM=	NetBSD-*-*
+ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-*
 
 MAKE_FLAGS+=		BINDIR="${PREFIX}/bin"
 MAKE_FLAGS+=		MANDIR="${PREFIX}/man"
