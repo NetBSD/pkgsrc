@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.420 2006/05/19 19:57:26 rillig Exp $
+# $NetBSD: Makefile,v 1.421 2006/05/21 16:59:48 xtraeme Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -297,7 +297,6 @@ SUBDIR+=	vtk-python
 SUBDIR+=	wmphoto
 SUBDIR+=	wxsvg
 SUBDIR+=	x11rec
-SUBDIR+=	xanim
 SUBDIR+=	xart
 SUBDIR+=	xbmbrowser
 SUBDIR+=	xdvipresent
