@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.32 2006/04/13 18:45:01 jlam Exp $
+# $NetBSD: tools.Linux.mk,v 1.33 2006/05/21 16:55:23 jlam Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -67,6 +67,9 @@ TOOLS_PLATFORM.gmake?=		/usr/bin/make
 TOOLS_PLATFORM.grep?=		/bin/grep
 .elif exists(/usr/bin/grep)
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
+.endif
+.if exists(/usr/bin/groff)
+TOOLS_PLATFORM.groff?=		/usr/bin/groff
 .endif
 .if exists(/bin/sed)
 TOOLS_PLATFORM.gsed?=		/bin/sed
