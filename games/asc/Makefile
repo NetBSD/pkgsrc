@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/04/17 13:46:24 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2006/05/21 22:58:23 wiz Exp $
 
 DISTNAME=	asc-source+music-1.16.3.0
 PKGNAME=	${DISTNAME:S/-source+music//}
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.asc-hq.org/
 COMMENT=	Turn based strategy game
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+USE_LANGUAGES=		c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
