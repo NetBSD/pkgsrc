@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2006/04/24 22:03:06 agc Exp $
+$NetBSD: distinfo,v 1.10 2006/05/21 09:51:01 agc Exp $
 
-SHA1 (netbsd-iscsi-20060424.tar.gz) = 20b2c621902ebbcc0143588c52492aed7d743b71
-RMD160 (netbsd-iscsi-20060424.tar.gz) = 8f36529629c1a97d42b27f1543664eadfc11ffa5
-Size (netbsd-iscsi-20060424.tar.gz) = 237549 bytes
+SHA1 (netbsd-iscsi-20060520.tar.gz) = 998ed68b869133892318a169a16c651112faa9c6
+RMD160 (netbsd-iscsi-20060520.tar.gz) = ec6d15c6921f5bcc8a3d6fb5d104f29aba8b5aaa
+Size (netbsd-iscsi-20060520.tar.gz) = 239515 bytes
