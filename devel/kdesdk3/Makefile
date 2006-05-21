@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2006/04/17 13:46:06 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2006/05/21 07:06:19 rillig Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 COMMENT=	Support applications and tools used by KDE developers
 
@@ -42,16 +42,20 @@ REPLACE_PERL+=	cervisia/change_colors.pl \
 		scripts/includemocs \
 		scripts/kde-spellcheck.pl \
 		scripts/kdemangen.pl \
+		scripts/kdesvn-build \
 		scripts/licensecheck \
 		scripts/noncvslist \
 		scripts/png2mng.pl \
-		scripts/rc2kcfgxt.pl
+		scripts/rc2kcfgxt.pl \
+		kunittest/kunittest_debughelper
 
 REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	/bin/bash
 REPLACE.bash.new=	${SH}
 REPLACE_FILES.bash=	scripts/cvs2dist scripts/makeobj \
-		scripts/package_crystalsvg
+		scripts/package_crystalsvg \
+		kunittest/kunittest \
+		kunittest/kunittestmod
 
 .include "../../mk/bsd.prefs.mk"
 
