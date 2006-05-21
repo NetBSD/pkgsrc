@@ -1,4 +1,4 @@
-# $NetBSD: shell,v 1.6 2006/03/19 23:58:14 jlam Exp $
+# $NetBSD: shell,v 1.1 2006/05/21 23:50:15 jlam Exp $
 #
 # Generate a +SHELL script that handles shell registration for the package.
 #

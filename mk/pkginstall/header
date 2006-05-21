@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: header,v 1.36 2006/03/19 23:58:14 jlam Exp $
+# $NetBSD: header,v 1.1 2006/05/21 23:50:15 jlam Exp $
 
 SELF="$0"
 PKGNAME="$1"
