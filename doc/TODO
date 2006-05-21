@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5000 2006/05/21 11:28:09 rillig Exp $
+$NetBSD: TODO,v 1.5001 2006/05/21 18:52:31 ghen Exp $
 
 Suggested new packages
 ======================
@@ -1133,6 +1133,7 @@ Suggested package updates
 	o strace-4.5.8
 	o stunnel-4.15
 	o subtitleripper-0.3.4
+	o sunbird-0.3alpha2
 	o suse100_base-10.1
 	o svk-1.07
 	o sweep-0.9.1
