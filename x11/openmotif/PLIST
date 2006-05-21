@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/12/12 19:55:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/05/21 11:41:59 rillig Exp $
 bin/mwm
 bin/uil
 bin/xmbind
@@ -280,7 +280,6 @@ man/man1/xmbind.1
 man/man3/ApplicationShell.3
 man/man3/Composite.3
 man/man3/Constraint.3
-man/man3/XCore.3
 man/man3/MrmCloseHierarchy.3
 man/man3/MrmFetchBitmapLiteral.3
 man/man3/MrmFetchColorLiteral.3
@@ -296,10 +295,8 @@ man/man3/MrmOpenHierarchyPerDisplay.3
 man/man3/MrmRegisterClass.3
 man/man3/MrmRegisterNames.3
 man/man3/MrmRegisterNamesInHierarchy.3
-man/man3/XObject.3
 man/man3/OverrideShell.3
 man/man3/RectObj.3
-man/man3/XShell.3
 man/man3/TopLevelShell.3
 man/man3/TransientShell.3
 man/man3/Uil.3
@@ -307,6 +304,9 @@ man/man3/UilDumpSymbolTable.3
 man/man3/VendorShell.3
 man/man3/VirtualBindings.3
 man/man3/WMShell.3
+man/man3/XCore.3
+man/man3/XObject.3
+man/man3/XShell.3
 man/man3/XmActivateProtocol.3
 man/man3/XmActivateWMProtocol.3
 man/man3/XmAddProtocolCallback.3
@@ -856,10 +856,10 @@ man/man3/XmVaCreateSimplePulldownMenu.3
 man/man3/XmVaCreateSimpleRadioBox.3
 man/man3/XmWidgetGetBaselines.3
 man/man3/XmWidgetGetDisplayRect.3
-man/man5/mwmrc.5
 man/man5/Traits.5
 man/man5/UIL.5
 man/man5/WML.5
+man/man5/mwmrc.5
 @dirrm include/Mrm
 @dirrm include/X11/bitmaps
 @dirrm include/Xm
