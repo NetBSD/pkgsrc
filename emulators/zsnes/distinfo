@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2006/03/28 18:06:10 joerg Exp $
+$NetBSD: distinfo,v 1.9 2006/05/21 17:09:53 joerg Exp $
 
 SHA1 (zsnes142src.tar.gz) = d38ca8c1b4168edc5bb5815f504b52654100bc4b
 RMD160 (zsnes142src.tar.gz) = d794c69e876265715e141c26ecb6ed1802ffc27d
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = fdcec7ca532199189821bb89ea9baaa3908bd449
 SHA1 (patch-ac) = 76e640aec3816eb4cbbfbe0dff1fcd2fa52f7876
 SHA1 (patch-ad) = 3c79a4c3ffe65151cd4d299b9837c6d20c8f8522
 SHA1 (patch-ae) = 81236ed52fe7095f6317f655374234ce17cf30dd
+SHA1 (patch-af) = a0a4da051a7370671c17160bca91a12e630cdb6a
