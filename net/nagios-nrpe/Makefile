@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/21 10:28:40 grant Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/21 10:46:13 grant Exp $
 #
 
 DISTNAME=		nrpe-2.5.1
@@ -37,5 +37,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/check_nrpe ${PREFIX}/libexec/nagios
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/nagios
 	${INSTALL_DATA} ${WRKSRC}/sample-config/nrpe.cfg ${PREFIX}/share/examples/nagios
+	${INSTALL_SCRIPT} ${WRKDIR}/nrpe ${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}
 
 .include "../../mk/bsd.pkg.mk"
