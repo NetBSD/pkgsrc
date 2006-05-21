@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/05/16 13:11:59 gdt Exp $
+# $NetBSD: Makefile,v 1.49 2006/05/21 11:41:59 rillig Exp $
 
 PKGVER=		2.2.3
 DISTNAME=	openMotif-${PKGVER}
@@ -46,8 +46,9 @@ SUBST_CLASSES+=			man_rename
 SUBST_STAGE.man_rename=		pre-configure
 SUBST_MESSAGE.man_rename=	Fixing hardcoded paths.
 SUBST_FILES.man_rename=		doc/man/man3/Makefile.in
-SUBST_SED.man_rename=		-e 's: Core.3: XCore.3:g' \
-	-e 's: Object.3: XObject.3:g' -e 's: Shell.3: XShell.3:g'
+SUBST_SED.man_rename=		-e 's: Core.3: XCore.3:g'
+SUBST_SED.man_rename+=		-e 's: Object.3: XObject.3:g'
+SUBST_SED.man_rename+=		-e 's: Shell.3: XShell.3:g'
 
 
 # 1) Fix the man pages to refer to the correct sections.
@@ -55,6 +56,7 @@ SUBST_SED.man_rename=		-e 's: Core.3: XCore.3:g' \
 #    avoid manpage conflicts with other packages.
 #
 post-patch:
+	set -e; \
 	cd ${WRKSRC}/doc/man;						\
 	for manpage in man1/*.1 man3/*.3 man4/*.4 man5/*.5; do		\
 		${SED}	-e "s|user cmd|1|g"				\
@@ -65,13 +67,14 @@ post-patch:
 		${MV} -f $${manpage}.fixed $${manpage};			\
 	done;								\
 	${CP} -f man4/mwmrc.4 man5/mwmrc.5
+	set -e; \
 	cd ${WRKSRC}/doc/man/man3;					\
 	for name in Core Object Shell; do                               \
 		${MV} -f $${name}.3 X$${name}.3;			\
 		files=`${GREP} -l ".fB$${name}.fP(3)" *.3`;		\
 		for manpage in $${files}; do				\
 			${MV} -f $${manpage} $${manpage}.presubst;	\
-			${SED} "s|\(.fB\)$${name}\(.fP(3)\)|\1X$${name}\2|g" \
+			${SED} "s|\\(.fB\\)$${name}\\(.fP(3)\\)|\\1X$${name}\\2|g" \
 				$${manpage}.presubst > $${manpage};	\
 			${RM} -f $${manpage}.presubst;			\
 		done;							\
@@ -79,6 +82,7 @@ post-patch:
 
 # Filter the manpages through tbl.
 post-build:
+	set -e; \
 	cd ${WRKSRC}/doc/man;						\
 	for manpage in man1/*.1 man3/*.3 man4/*.4 man5/*.5; do		\
 		${TBL} $${manpage} > $${manpage}.tblized;		\
