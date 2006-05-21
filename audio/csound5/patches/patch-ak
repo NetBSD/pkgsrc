@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 2006/05/21 22:46:22 ben Exp $
+
+--- InOut/winEPS.c.orig	2005-12-29 05:49:04.000000000 -0800
++++ InOut/winEPS.c
+@@ -146,7 +146,7 @@ void PS_MakeGraph(CSOUND *csound, WINDAT
+      *  Get the current time and date
+      */
+     lt = time(NULL);
+-#ifndef LINUX
++#if !defined(LINUX) && !defined(__NetBSD__)
+     {
+       struct tm *date_ptr;
+       char      *date;

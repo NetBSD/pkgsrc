@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1.1.1 2006/05/21 22:46:22 ben Exp $
+
+--- Top/threads.c.orig	2005-12-26 09:27:07.000000000 -0800
++++ Top/threads.c
+@@ -109,7 +109,7 @@ PUBLIC void csoundSleep(size_t milliseco
+     Sleep((DWORD) milliseconds);
+ }
+ 
+-#elif defined(LINUX) || defined(__MACH__)
++#elif defined(LINUX) || defined(__MACH__) || defined(__NetBSD__)
+ 
+ #include <pthread.h>
+ #include <time.h>
