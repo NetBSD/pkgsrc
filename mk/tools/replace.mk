@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.166 2006/04/13 19:24:29 jlam Exp $
+# $NetBSD: replace.mk,v 1.167 2006/05/21 16:55:21 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -825,17 +825,21 @@ TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${GNU_PROGRAM_PREFIX}${_t_}
 # These tools are all supplied by the textproc/groff package if there is
 # no native tool available.
 #
-_TOOLS.groff=	nroff soelim tbl
+_TOOLS.groff=	groff nroff soelim tbl
 
 .for _t_ in ${_TOOLS.groff}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
 .    if !empty(PKGPATH:Mtextproc/groff)
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
-TOOLS_DEPENDS.${_t_}?=	groff>=1.19nb4:../../textproc/groff
+TOOLS_DEPENDS.${_t_}?=	groff>=1.19.2nb3:../../textproc/groff
 TOOLS_CREATE+=		${_t_}
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=groff
+.      if ${OPSYS} == "SunOS"
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/g${_t_}
+.      else
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
+.      endif
 .    endif
 .  endif
 .endfor
@@ -850,7 +854,11 @@ MAKEFLAGS+=		TOOLS_IGNORE.gsoelim=
 TOOLS_DEPENDS.gsoelim?=	groff>=1.19nb4:../../textproc/groff
 TOOLS_CREATE+=		gsoelim
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.gsoelim=groff
+.    if ${OPSYS} == "SunOS"
+TOOLS_PATH.gsoelim=	${TOOLS_PREFIX.gsoelim}/bin/gsoelim
+.    else
 TOOLS_PATH.gsoelim=	${TOOLS_PREFIX.gsoelim}/bin/soelim
+.    endif
 .  endif
 TOOLS_ALIASES.gsoelim=	soelim
 .endif
