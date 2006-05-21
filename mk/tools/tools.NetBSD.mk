@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.29 2006/05/21 16:55:23 jlam Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.30 2006/05/21 16:57:07 jlam Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -35,7 +35,6 @@ TOOLS_PLATFORM.gawk?=		${TOOLS_PLATFORM.awk}
 TOOLS_PLATFORM.grep?=		/usr/bin/grep
 TOOLS_PLATFORM.groff?=		/usr/bin/groff
 TOOLS_PLATFORM.gsed?=		${TOOLS_PLATFORM.sed}	# GNUish
-TOOLS_PLATFORM.gsoelim?=	${TOOLS_PLATFORM.soelim}
 TOOLS_PLATFORM.gunzip?=		/usr/bin/gunzip -f
 TOOLS_PLATFORM.gzcat?=		/usr/bin/gzcat
 TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
