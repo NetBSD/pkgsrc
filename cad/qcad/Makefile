@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/04/17 13:46:18 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2006/05/22 23:51:13 wiz Exp $
 
 DISTNAME=		qcad-1.5.4-src
 PKGNAME=		qcad-1.5.4
@@ -14,6 +14,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
 MAKE_ENV+=		QTDIR=${BUILDLINK_PREFIX.qt3}
 INSTALLATION_DIRS=	bin
+USE_LANGUAGES=		c++
 
 .include "../../mk/bsd.prefs.mk"
 
