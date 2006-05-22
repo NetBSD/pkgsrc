@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/05/21 08:00:49 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2006/05/22 19:58:48 joerg Exp $
 #
 
 DISTNAME=	verilog-0.8.2
@@ -16,7 +16,7 @@ CONFLICTS+=	verilog-current-[0-9]*
 USE_LANGUAGES=	c c++
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake bison
 CONFIGURE_ARGS+=	--without-ipal
 TEST_TARGET=		check
 
