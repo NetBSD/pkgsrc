@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/17 13:46:21 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/22 16:51:42 wiz Exp $
 
 DISTNAME=		lincvs-1.4.4-0-generic-src
 PKGNAME=		${DISTNAME:S/-0-generic-src//}
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://lincvs.org/
 COMMENT=		Nice GUI front-end to CVS (using Qt)
+
+USE_LANGUAGES=		c c++
 
 SUBST_CLASSES+=		qmake
 SUBST_STAGE.qmake=	post-patch
