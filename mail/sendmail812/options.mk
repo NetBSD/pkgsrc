@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2006/04/13 21:45:14 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2006/05/22 07:08:50 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
 PKG_OPTIONS_OPTIONAL_GROUPS=	database
@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS=	tcpwrappers
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-PKG_SUGGEST_OPTIONS+=	db2
+PKG_SUGGESTED_OPTIONS+=	db2
 .endif
 
 .include "../../mk/bsd.options.mk"
