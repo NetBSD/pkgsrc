@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/04/22 09:22:09 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2006/05/22 06:45:08 rillig Exp $
 
 DISTNAME=	quake106
 PKGNAME=	quakedata-1.0
@@ -14,7 +14,7 @@ COMMENT=	Game data files for Quake
 
 BUILD_DEPENDS+=	lha-[0-9]*:../../archivers/lha
 
-LICENSE+=		quakedata-license
+LICENSE=		quakedata-license
 RESTRICTED=		This software is shareware.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
@@ -25,10 +25,11 @@ EXTRACT_OPTS_ZIP=	-qo
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	YES
+USE_TOOLS+=	lha
 
 post-extract:
-	cd ${WRKSRC}; ${CAT} resource.dat resource.1 > resource.exe
-	cd ${WRKDIR}; lha xfq resource.exe id1/pak0.pak
+	cd ${WRKSRC} && ${CAT} resource.dat resource.1 > resource.exe
+	cd ${WRKDIR} && ${LHA} xfq resource.exe id1/pak0.pak
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/quake/id1
