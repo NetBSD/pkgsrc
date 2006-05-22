@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.8 2004/07/15 04:00:47 dmcmahill Exp $
+$NetBSD: patch-ah,v 1.9 2006/05/22 19:20:04 wiz Exp $
 
---- routines/pvm/pvm_proc_ctrl.c.orig	Sat Feb 28 13:50:09 2004
+--- routines/pvm/pvm_proc_ctrl.c.orig	2005-01-07 20:49:25.000000000 +0000
 +++ routines/pvm/pvm_proc_ctrl.c
-@@ -381,7 +381,8 @@ void C2F(scipvmspawn)(char *task,  int *
+@@ -388,7 +388,8 @@ void C2F(scipvmspawn)(char *task,  int *
    char cmd[256];
    char *arg[4];
    int nargs= -1;
@@ -12,7 +12,7 @@ $NetBSD: patch-ah,v 1.8 2004/07/15 04:00:47 dmcmahill Exp $
    arg[0] = NULL;
     
    cmd[0] = 0;
-@@ -394,7 +395,13 @@ void C2F(scipvmspawn)(char *task,  int *
+@@ -401,7 +402,13 @@ void C2F(scipvmspawn)(char *task,  int *
    strcpy(cmd, "scilex.exe");
  #else
    /* I really need scilab here for gtk -version */
