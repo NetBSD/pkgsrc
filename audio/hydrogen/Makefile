@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/17 13:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/22 22:44:44 wiz Exp $
 
 DISTNAME=	hydrogen-0.8.0
 PKGREVISION=	5
@@ -9,6 +9,7 @@ MAINTAINER=	chris.wareham@btinternet.com
 HOMEPAGE=	http://hydrogen.sourceforge.net/
 COMMENT=	Real time drum machine/sequencer
 
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
