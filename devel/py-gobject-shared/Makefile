@@ -1,14 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2006/05/22 14:56:53 tron Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/22 17:02:48 drochner Exp $
 
 PKGNAME=		py-gobject-shared-2.10.1
-
-.include "../../lang/python/application.mk"
-
-.if defined(_PYTHON_VERSION)
-PYTHON_VERSION_REQD=	${_PYTHON_VERSION}
-.else
-PYTHON_VERSION_REQD=	${PYTHON_VERSION_DEFAULT}
-.endif
 
 .include "../../devel/py-gobject/Makefile.common"
 
@@ -23,6 +15,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/pkgconfig
 	${INSTALL_DATA} ${WRKSRC}/pygobject-2.0.pc ${PREFIX}/lib/pkgconfig
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
