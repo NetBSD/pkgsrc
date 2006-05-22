@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.54 2006/05/22 12:59:43 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.55 2006/05/22 14:15:46 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -111,3 +111,5 @@ Pullup ticket 1624 - requested by cube
 security update for mysql5
 Pullup ticket 1632 - requested by ghen
 security update for openldap
+Pullup ticket 1644 - requested by adrianp
+sync sendmail with HEAD
