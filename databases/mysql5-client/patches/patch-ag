@@ -1,26 +1,26 @@
-$NetBSD: patch-ag,v 1.1.1.1 2005/10/31 09:21:40 xtraeme Exp $
+$NetBSD: patch-ag,v 1.1.1.1.4.1 2006/05/22 12:18:25 salo Exp $
 
---- strings/Makefile.in.orig	2004-12-27 17:48:04.000000000 +0100
-+++ strings/Makefile.in	2005-01-11 23:29:03.000000000 +0100
-@@ -599,7 +599,6 @@
+--- strings/Makefile.in.orig	2006-04-26 20:32:24.000000000 +0200
++++ strings/Makefile.in
+@@ -609,7 +609,6 @@ install-pkglibLIBRARIES: $(pkglib_LIBRAR
  	  if test -f $$p; then \
- 	    f="`echo $$p | sed -e 's|^.*/||'`"; \
+ 	    f=$(am__strip_dir) \
  	    echo " $(pkglibLIBRARIES_INSTALL) '$$p' '$(DESTDIR)$(pkglibdir)/$$f'"; \
 -	    $(pkglibLIBRARIES_INSTALL) "$$p" "$(DESTDIR)$(pkglibdir)/$$f"; \
  	  else :; fi; \
  	done
  	@$(POST_INSTALL)
-@@ -607,7 +606,6 @@
+@@ -617,7 +616,6 @@ install-pkglibLIBRARIES: $(pkglib_LIBRAR
  	  if test -f $$p; then \
- 	    p="`echo $$p | sed -e 's|^.*/||'`"; \
+ 	    p=$(am__strip_dir) \
  	    echo " $(RANLIB) '$(DESTDIR)$(pkglibdir)/$$p'"; \
 -	    $(RANLIB) "$(DESTDIR)$(pkglibdir)/$$p"; \
  	  else :; fi; \
  	done
  
-@@ -616,7 +614,6 @@
+@@ -626,7 +624,6 @@ uninstall-pkglibLIBRARIES:
  	@list='$(pkglib_LIBRARIES)'; for p in $$list; do \
- 	  p="`echo $$p | sed -e 's|^.*/||'`"; \
+ 	  p=$(am__strip_dir) \
  	  echo " rm -f '$(DESTDIR)$(pkglibdir)/$$p'"; \
 -	  rm -f "$(DESTDIR)$(pkglibdir)/$$p"; \
  	done
