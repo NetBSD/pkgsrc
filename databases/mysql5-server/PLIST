@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4.2.1 2006/04/17 21:58:38 salo Exp $
+@comment $NetBSD: PLIST,v 1.4.2.2 2006/05/22 12:18:25 salo Exp $
 bin/comp_err
 bin/innochecksum
 bin/my_print_defaults
@@ -42,6 +42,7 @@ share/mysql-test/include/ctype_like_escape.inc
 share/mysql-test/include/endspace.inc
 share/mysql-test/include/federated.inc
 share/mysql-test/include/federated_cleanup.inc
+share/mysql-test/include/get_binlog_dump_thread_id.inc
 share/mysql-test/include/gis_generic.inc
 share/mysql-test/include/have_archive.inc
 share/mysql-test/include/have_bdb.inc
@@ -114,6 +115,7 @@ share/mysql-test/lib/mtr_report.pl
 share/mysql-test/lib/mtr_stress.pl
 share/mysql-test/lib/mtr_timer.pl
 share/mysql-test/mysql-test-run
+share/mysql-test/mysql-test-run.pl
 share/mysql-test/r/alias.result
 share/mysql-test/r/alter_table.result
 share/mysql-test/r/analyse.result
@@ -312,6 +314,7 @@ share/mysql-test/r/innodb.result
 share/mysql-test/r/innodb_cache.result
 share/mysql-test/r/innodb_gis.result
 share/mysql-test/r/innodb_handler.result
+share/mysql-test/r/innodb_mysql.result
 share/mysql-test/r/innodb_notembedded.result
 share/mysql-test/r/innodb_unsafe_binlog.result
 share/mysql-test/r/insert.result
@@ -361,6 +364,7 @@ share/mysql-test/r/mysqldump.result
 share/mysql-test/r/mysqlshow.result
 share/mysql-test/r/mysqltest.result
 share/mysql-test/r/ndb_alter_table.result
+share/mysql-test/r/ndb_alter_table2.result
 share/mysql-test/r/ndb_autodiscover.result
 share/mysql-test/r/ndb_autodiscover2.result
 share/mysql-test/r/ndb_basic.result
@@ -543,7 +547,6 @@ share/mysql-test/r/sp-code.result
 share/mysql-test/r/sp-destruct.result
 share/mysql-test/r/sp-dynamic.result
 share/mysql-test/r/sp-error.result
-share/mysql-test/r/sp-goto.result
 share/mysql-test/r/sp-prelocking.result
 share/mysql-test/r/sp-security.result
 share/mysql-test/r/sp-threads.result
@@ -824,6 +827,7 @@ share/mysql-test/t/innodb_cache-master.opt
 share/mysql-test/t/innodb_cache.test
 share/mysql-test/t/innodb_gis.test
 share/mysql-test/t/innodb_handler.test
+share/mysql-test/t/innodb_mysql.test
 share/mysql-test/t/innodb_notembedded.test
 share/mysql-test/t/innodb_unsafe_binlog-master.opt
 share/mysql-test/t/innodb_unsafe_binlog.test
@@ -885,6 +889,7 @@ share/mysql-test/t/mysqldump.test
 share/mysql-test/t/mysqlshow.test
 share/mysql-test/t/mysqltest.test
 share/mysql-test/t/ndb_alter_table.test
+share/mysql-test/t/ndb_alter_table2.test
 share/mysql-test/t/ndb_autodiscover.test
 share/mysql-test/t/ndb_autodiscover2-master.opt
 share/mysql-test/t/ndb_autodiscover2.test
@@ -1105,6 +1110,7 @@ share/mysql-test/t/rpl_user_variables.test
 share/mysql-test/t/rpl_variables-master.opt
 share/mysql-test/t/rpl_variables.test
 share/mysql-test/t/rpl_view.test
+share/mysql-test/t/rpl_view-slave.opt
 share/mysql-test/t/schema.test
 share/mysql-test/t/select.test
 share/mysql-test/t/select_found.test
@@ -1119,7 +1125,6 @@ share/mysql-test/t/sp-code.test
 share/mysql-test/t/sp-destruct.test
 share/mysql-test/t/sp-dynamic.test
 share/mysql-test/t/sp-error.test
-share/mysql-test/t/sp-goto.test
 share/mysql-test/t/sp-prelocking.test
 share/mysql-test/t/sp-security.test
 share/mysql-test/t/sp-threads.test

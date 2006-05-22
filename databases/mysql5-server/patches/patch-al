@@ -1,13 +1,13 @@
-$NetBSD: patch-al,v 1.1.1.1 2005/10/31 09:22:26 xtraeme Exp $
+$NetBSD: patch-al,v 1.1.1.1.4.1 2006/05/22 12:18:25 salo Exp $
 
---- myisam/Makefile.in.orig	2005-01-10 16:19:12.000000000 +0100
-+++ myisam/Makefile.in	2005-01-10 16:19:21.000000000 +0100
-@@ -172,7 +172,7 @@
- LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) \
+--- myisam/Makefile.in.orig	2006-04-26 20:31:56.000000000 +0200
++++ myisam/Makefile.in
+@@ -157,7 +157,7 @@ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUD
+ LTCOMPILE = $(LIBTOOL) --tag=CC --mode=compile $(CC) $(DEFS) \
  	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
  	$(AM_CFLAGS) $(CFLAGS)
 -CCLD = $(CC)
 +CCLD = $(CXX)
- LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+ LINK = $(LIBTOOL) --tag=CC --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  SOURCES = $(libmyisam_a_SOURCES) mi_test1.c mi_test2.c mi_test3.c \
