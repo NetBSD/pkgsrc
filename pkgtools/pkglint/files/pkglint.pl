@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.586 2006/05/21 15:46:43 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.587 2006/05/22 07:41:03 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -23,10 +23,11 @@
 #	Freely redistributable.  Absolutely no warranty.
 
 #==========================================================================
-# Some comments on the overall structure: The @EXPORT clauses in the pack-
-# ages must be in a BEGIN block, because otherwise the names starting with
-# an uppercase letter are not recognized as subroutines but as file handles.
+# Note: The @EXPORT clauses in the packages must be in a BEGIN block,
+# because otherwise the names starting with an uppercase letter are not
+# recognized as subroutines but as file handles.
 #==========================================================================
+
 use strict;
 use warnings;
 
@@ -44,6 +45,7 @@ BEGIN {
 	use vars qw(@ISA @EXPORT_OK);
 	@ISA = qw(Exporter);
 	@EXPORT_OK = qw(
+		assert
 		false true
 		min max
 		array_to_hash print_table
@@ -52,6 +54,25 @@ BEGIN {
 
 use constant false	=> 0;
 use constant true	=> 1;
+
+sub assert($) {
+	my ($cond) = @_;
+	my (@callers, $n);
+
+	if (!$cond) {
+		print STDERR ("FATAL: Assertion failed.\n");
+
+		for ($n = 0; my @info = caller($n); $n++) {
+			push(@callers, [$info[2], $info[3]]);
+		}
+
+		for (my $i = $#callers; $i >= 0; $i--) {
+			my $info = $callers[$i];
+			printf STDERR ("  at line %4d in %s\n", $info->[0], $info->[1]);
+		}
+		exit(1);
+	}
+}
 
 sub min($$) {
 	my ($a, $b) = @_;
@@ -1121,6 +1142,9 @@ BEGIN {
 	import PkgLint::Util qw(
 		false true
 	);
+	import PkgLint::Logging qw(
+		log_warning NO_LINES
+	);
 	use Exporter;
 	use vars qw(@ISA @EXPORT_OK);
 	@ISA = qw(Exporter);
@@ -1149,23 +1173,15 @@ sub kind_of_list($)	{ return shift(@_)->[KIND_OF_LIST]; }
 sub basic_type($)	{ return shift(@_)->[BASIC_TYPE]; }
 
 sub perms($$) {
-	my ($self, $fname) = @_;
+	my ($self, $fname, $varcanon) = @_;
 	my ($perms);
 
-	# If there is no ACL defined at all, everything is allowed.
-	if (!defined($self->[ACLS])) {
-		return "adpsu";
-	}
-
-	# By default, nothing is allowed.
-	$perms = "";
 	foreach my $acl_entry (@{$self->[ACLS]}) {
 		if ($fname =~ $acl_entry->[0]) {
-			$perms = $acl_entry->[1];
-			last;
+			return $acl_entry->[1];
 		}
 	}
-	return $perms;
+	return undef;
 }
 
 #== End of PkgLint::Type ==================================================
@@ -1211,7 +1227,7 @@ use pkgsrc::Dewey;
 
 BEGIN {
 	import PkgLint::Util qw(
-		array_to_hash false true
+		array_to_hash assert false true
 	);
 	import PkgLint::Logging qw(
 		NO_FILE NO_LINE_NUMBER NO_LINES
@@ -1265,10 +1281,10 @@ my (%checks) = (
 );
 
 my $opt_warn_absname	= true;
-my $opt_warn_acl	= false;
 my $opt_warn_directcmd	= true;
 my $opt_warn_extra	= false;
 my $opt_warn_order	= true;
+my $opt_warn_perm	= false;
 my $opt_warn_plist_depr	= false;
 my $opt_warn_plist_sort	= false;
 my $opt_warn_quoting	= false;
@@ -1278,10 +1294,10 @@ my $opt_warn_types	= true;
 my $opt_warn_varorder	= false;
 my (%warnings) = (
 	"absname"	=> [\$opt_warn_absname, "warn about use of absolute file names"],
-	"acl"		=> [\$opt_warn_acl, "enable ACLs for restricting variable definitions"],
 	"directcmd"	=> [\$opt_warn_directcmd, "warn about use of direct command names instead of Make variables"],
 	"extra"		=> [\$opt_warn_extra, "enable some extra warnings"],
 	"order"		=> [\$opt_warn_order, "warn if Makefile entries are unordered"],
+	"perm"		=> [\$opt_warn_perm, "warn about unforeseen variable definition and use"],
 	"plist-depr"	=> [\$opt_warn_plist_depr, "warn about deprecated paths in PLISTs"],
 	"plist-sort"	=> [\$opt_warn_plist_sort, "warn about unsorted entries in PLISTs"],
 	"quoting"	=> [\$opt_warn_quoting, "warn about quoting issues"],
@@ -2226,20 +2242,6 @@ sub backtrace() {
 	}
 }
 
-sub determine_used_variables($) {
-	my ($lines) = @_;
-	my ($rest);
-
-	foreach my $line (@{$lines}) {
-		$rest = $line->text;
-		while ($rest =~ s/(?:\$\{|defined\(|empty\()([0-9+.A-Z_a-z]+)[:})]//) {
-			my ($varname) = ($1);
-			$varuse->{$varname} = $line;
-			$line->log_debug("Variable ${varname} is used.");
-		}
-	}
-}
-
 sub tablen($) {
 	my ($s) = @_;
 	my ($len);
@@ -2266,6 +2268,18 @@ sub shell_split($) {
 	return (($text =~ qr"^\s*$") ? $words : false);
 }
 
+sub varname_base($) {
+	my ($varname) = @_;
+
+	return ($varname =~ qr"^(.*?)\..*$") ? $1 : $varname;
+}
+
+sub varname_canon($) {
+	my ($varname) = @_;
+
+	return ($varname =~ qr"^(.*?)\..*$") ? "$1.*" : $varname;
+}
+
 sub type_should_be_quoted($) {
 	my ($type) = @_;
 
@@ -2284,7 +2298,22 @@ sub type_should_be_quoted($) {
 sub variable_needs_quoting($) {
 	my ($varname) = @_;
 
-	return !($varname =~ qr"^(?:.*DIR|.*_GROUP|.*_HOME|(?:BIN|LIB|MAN|GAMES|SHARE)(?:GRP|OWN|MODE)|.*_USER|BUILDLINK_PREFIX\..*|DISTNAME|LOCALBASE|PKGNAME|PREFIX|WRKSRC)$");
+	return !($varname =~ qr"^(?:.*DIR|.*_GROUP|.*_HOME|(?:BIN|LIB|MAN|GAMES|SHARE)(?:GRP|OWN|MODE)|.*_USER|BUILDLINK_PREFIX\..*|DISTNAME|EXTRACT_SUFX|LOCALBASE|PKGNAME|PREFIX|VARBASE|WRKSRC)$");
+}
+
+sub determine_used_variables($) {
+	my ($lines) = @_;
+	my ($rest);
+
+	foreach my $line (@{$lines}) {
+		$rest = $line->text;
+		while ($rest =~ s/(?:\$\{|defined\(|empty\()([0-9+.A-Z_a-z]+)[:})]//) {
+			my ($varname) = ($1);
+			$varuse->{$varname} = $line;
+			$varuse->{varname_canon($varname)} = $line;
+			$line->log_debug("Variable ${varname} is used.");
+		}
+	}
 }
 
 my $check_pkglint_version_done = false;
@@ -2348,6 +2377,39 @@ sub expect_text($$$) {
 		$lines->[${$lineno_ref}]->log_warning("Expected \"${text}\".");
 		return false;
 	}
+}
+
+sub get_variable_type($$) {
+	my ($line, $varname) = @_;
+
+	if (exists(get_vartypes_map()->{$varname})) {
+		return get_vartypes_map()->{$varname};
+	}
+
+	my $varcanon = varname_canon($varname);
+	if (exists(get_vartypes_map()->{$varcanon})) {
+		return get_vartypes_map()->{$varcanon};
+	}
+
+	$opt_debug and $line->log_warning("No type definition found for ${varcanon}.");
+	return undef;
+}
+
+sub get_variable_perms($$) {
+	my ($line, $varname) = @_;
+
+	my $type = get_variable_type($line, $varname);
+	if (!defined($type)) {
+		$opt_debug and $line->log_warning("No type definition found for ${varname}.");
+		return "adpsu";
+	}
+
+	my $perms = $type->perms($line->fname, $varname);
+	if (!defined($perms)) {
+		$opt_debug and $line->log_warning("No permissions specified for ${varname}.");
+		return "?";
+	}
+	return $perms;
 }
 
 #
@@ -3154,32 +3216,34 @@ sub checkline_mk_shellcmd($$) {
 
 sub checkline_mk_vardef($$$) {
 	my ($line, $varname, $op) = @_;
-	my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
 
-	if (!$opt_warn_acl) {
-		# Skip this check.
+	return unless $opt_warn_perm;
 
-	} elsif (exists(get_vartypes_map()->{$varbase})) {
-		my $perms = get_vartypes_map()->{$varbase}->perms($line->fname);
-		my $needed = { "=" => "s", "!=" => "s", "?=" => "d", "+=" => "a", ":=" => "s" }->{$op};
+	my $perms = get_variable_perms($line, $varname);
+	my $needed = { "=" => "s", "!=" => "s", "?=" => "d", "+=" => "a", ":=" => "s" }->{$op};
 
-		if (!defined($perms)) {
-			$opt_debug and $line->log_warning("No ACL definition for ${varname}.");
-		} elsif (index($perms, $needed) != -1) {
-			# Fine.
-		} else {
-			$line->log_warning("ACL mismatch for ${varname}: [${needed}] requested, but only [${perms}] is allowed.");
-		}
-	} else {
-		$opt_debug and $line->log_warning("No data type for ${varname}.");
+	if (index($perms, $needed) == -1) {
+		$line->log_warning("Permission [${needed}] requested for ${varname}, but only [${perms}] is allowed.");
+		$line->explain_warning(
+			"The available permissions are:",
+			"\ta\tappend something using +=",
+			"\td\tset a default value using ?=",
+			"\ts\tset a variable using :=, =, !=",
+			"\tp\tuse a variable during preprocessing",
+			"\tu\tuse a variable at runtime",
+			"",
+			"A \"?\" means that it is not yet clear which permissions",
+			"are allowed and which aren't.");
 	}
 }
 
 sub checkline_mk_varuse($$$) {
 	my ($line, $varname, $context) = @_;
 
-	# TODO: ACL checks
-	$line->log_info("varuse: ${varname}");
+	return unless $opt_warn_perm;
+
+	my $perms = get_variable_perms($line, $varname);
+	# TODO: Check something.
 }
 
 sub checkline_mk_vartype_basic($$$$$$$);
@@ -3767,9 +3831,9 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 			$line->log_warning("${varname} should be set to YES, yes, NO, or no.");
 		}
 
-	} elsif ($type eq "YesNoFromCommand") {
-		if ($op ne "!=") {
-			checkline_mk_vartype_basic($line, $varname, "YesNo", $op, $value, $comment, false);
+	} elsif ($type eq "YesNo_Indirectly") {
+		if ($value_novar ne "" && $value !~ qr"^(?:YES|yes|NO|no)(?:\s+#.*)?$") {
+			$line->log_warning("${varname} should be set to YES, yes, NO, or no.");
 		}
 
 	} else {
@@ -3779,21 +3843,23 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 
 sub checkline_mk_vartype($$$$$) {
 	my ($line, $varname, $op, $value, $comment) = @_;
-	my ($vartypes, $guessed);
+	my ($guessed);
 
 	return unless $opt_warn_types;
 
-	$vartypes = get_vartypes_map();
-		my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
-		my $type = exists($vartypes->{$varname}) ? $vartypes->{$varname}
-			: exists($vartypes->{$varbase}) ? $vartypes->{$varbase}
-			: undef;
+	my $vartypes = get_vartypes_map();
+	my $varbase = varname_base($varname);
+	my $varcanon = varname_canon($varname);
 
-		if ($op eq "+=") {
-			if ($varbase !~ qr"^_" && $varbase !~ get_regex_plurals()) {
-				$line->log_warning("As ${varname} is modified using \"+=\", its name should indicate plural.");
-			}
+	my $type = exists($vartypes->{$varname}) ? $vartypes->{$varname}
+		: exists($vartypes->{$varcanon}) ? $vartypes->{$varcanon}
+		: undef;
+
+	if ($op eq "+=") {
+		if ($varbase !~ qr"^_" && $varbase !~ get_regex_plurals()) {
+			$line->log_warning("As ${varname} is modified using \"+=\", its name should indicate plural.");
 		}
+	}
 
 		$guessed = false;
 		if (!defined($type)) {
@@ -3881,10 +3947,10 @@ sub checkline_mk_varassign($$$$$) {
 
 	# If the variable is not used and is untyped, it may be a
 	# spelling mistake.
-	if (defined($varuse) && !exists($varuse->{$varname})) {
+	if (defined($varuse) && !exists($varuse->{$varname}) && !exists($varuse->{varname_canon($varname)})) {
 		my $vt = get_vartypes_map();
-		if (!exists($vt->{$varname}) && !exists($vt->{$varbase})) {
-			$line->log_warning("[experimental] ${varname} is defined, but not used.");
+		if (!exists($vt->{$varname}) && !exists($vt->{varname_canon($varname)})) {
+			$line->log_warning("${varname} is defined, but not used. Spelling mistake?");
 		}
 	}
 
