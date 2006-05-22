@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.application,v 1.18 2006/03/09 20:42:38 tonio Exp $
+# $NetBSD: Makefile.application,v 1.19 2006/05/22 22:22:03 jlam Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -28,4 +28,10 @@ USE_NATIVE_LINUX=		# empty
 SUSE_DIR_PREFIX=		suse
 SUSE_VERSION=			0
 PKG_SKIP_REASON+=		"${PKGNAME} requires compat_linux, which is not available for ${MACHINE_PLATFORM}"
+#
+# By default, we can't check for missing shared libraries nor note which
+# shared libraries are provided and/or required by the package since the
+# library support is via syscall emulation.
+#
+CHECK_SHLIBS_SUPPORTED?=	no
 .endif

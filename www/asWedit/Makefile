@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/04/22 09:22:16 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2006/05/22 22:22:05 jlam Exp $
 
 DISTNAME=		asWedit-4.0.1-i386.linux
 PKGNAME=		${DISTNAME:S/-i386.linux//}
@@ -28,7 +28,6 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 NO_BUILD=		yes
 
-CHECK_SHLIBS=		no
 INSTALLATION_DIRS=	bin libdata
 
 do-configure:

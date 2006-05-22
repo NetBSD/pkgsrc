@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/04/22 09:22:13 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2006/05/22 22:22:04 jlam Exp $
 
 DISTNAME=	acroread	# Overridden below
 PKGNAME=	acroread-4.05
@@ -18,9 +18,8 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 LICENSE=	adobe-acrobat-license
 
-CHECK_SHLIBS=	NO
-NO_BUILD=	YES
-SHLIB_HANDLING=	NO
+CHECK_SHLIBS_SUPPORTED=	no
+NO_BUILD=		yes
 
 .include "../../mk/bsd.prefs.mk"
 

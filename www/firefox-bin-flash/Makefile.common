@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2006/04/22 09:22:16 rillig Exp $
+# $NetBSD: Makefile.common,v 1.13 2006/05/22 22:22:05 jlam Exp $
 
 DISTNAME=		install_flash_player_7_${DISTUNAME}
 PKGNAME=		${MOZ_BIN}-flash-${FLASH_VERS:S/r/./}
@@ -29,7 +29,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
-CHECK_SHLIBS=		no
+CHECK_SHLIBS_SUPPORTED=	no
 CRYPTO=			yes
 
 MOZ_NAME?=		firefox-linux
