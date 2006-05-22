@@ -1,17 +1,17 @@
-$NetBSD: patch-ae,v 1.1.1.1 2003/12/04 16:06:32 xtraeme Exp $
+$NetBSD: patch-ae,v 1.2 2006/05/22 03:44:55 ben Exp $
 
---- sarg.conf.orig	2003-04-25 20:20:55.000000000 +0300
+--- sarg.conf.orig	2005-11-29 08:39:45.000000000 -0800
 +++ sarg.conf
-@@ -29,7 +29,7 @@
+@@ -32,7 +32,7 @@
  #       Where is the access.log file
  #       sarg -l file
  #
 -#access_log /usr/local/squid/var/logs/access.log
 +#access_log @SQUID_ACCESSLOG@
  
- # TAG:	title
- # 	Especify the title for html page.
-@@ -120,7 +120,7 @@
+ # TAG: graphs yes|no
+ #	Use graphics where is possible.
+@@ -139,7 +139,7 @@
  #       The reports will be saved in that directory
  #       sarg -o dir
  #
@@ -20,7 +20,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2003/12/04 16:06:32 xtraeme Exp $
  
  # TAG:  output_email
  #       Email address to send the reports. If you use this tag, no html reports will be generated.
-@@ -244,7 +244,7 @@
+@@ -269,7 +269,7 @@
  # TAG: exclude_codes file
  #      Ignore records with these codes. Eg.: NONE/400
  #

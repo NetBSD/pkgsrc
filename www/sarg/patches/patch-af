@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2003/12/04 16:06:32 xtraeme Exp $
+$NetBSD: patch-af,v 1.2 2006/05/22 03:44:55 ben Exp $
 
---- splitlog.c.orig	2003-04-25 20:20:55.000000000 +0300
+--- splitlog.c.orig	2005-11-29 08:39:45.000000000 -0800
 +++ splitlog.c
-@@ -19,7 +19,7 @@ void splitlog(char *arq, char *df, int d
+@@ -39,7 +39,7 @@ void splitlog(char *arq, char *df, int d
     struct tm *t;
  
     if(arq[0] == '\0')

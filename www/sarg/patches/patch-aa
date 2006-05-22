@@ -1,18 +1,20 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/04 16:06:32 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2006/05/22 03:44:55 ben Exp $
 
---- Makefile.in.orig	2003-04-25 20:20:55.000000000 +0300
+--- Makefile.in.orig	2005-11-29 08:39:45.000000000 -0800
 +++ Makefile.in
-@@ -4,10 +4,10 @@ CC 		= @CC@
+@@ -4,12 +4,12 @@ CC 		= @CC@
  BINDIR   	= @BINDIR@
  IBINDIR   	= -DBINDIR=\"@BINDIR@\"
  MANDIR		= @MANDIR@
 -SYSCONFDIR	= @SYSCONFDIR@
 +SYSCONFDIR	= ${EGDIR}
+ HTMLDIR		= @HTMLDIR@
  ISYSCONFDIR	= -DSYSCONFDIR=\"@SYSCONFDIR@\"
+ IHTMLDIR	= -DHTMLDIR=\"@HTMLDIR@\"
 -CFLAGS 		= @CFLAGS@
 -LDFLAGS 	= @LDFLAGS@
 +CFLAGS 		+= @CFLAGS@ ${PKG_FLAGS}
 +LDFLAGS 	+= @LDFLAGS@
  DEFS            = @DEFS@ 
+ LIBS            = @LIBS@ 
  SRCDIR 		= .
- VPATH 		= .

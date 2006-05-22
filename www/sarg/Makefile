@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2006/04/22 09:22:17 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/22 03:44:55 ben Exp $
 
-DISTNAME=		sarg-1.4.1
+DISTNAME=		sarg-2.1
 CATEGORIES=		www
-MASTER_SITES=		http://web.onda.com.br/orso/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sarg/}
 
-PATCH_SITES=		http://web.onda.com.br/orso/patches/
-PATCHFILES=		sarg-1.4.1-index.sort.patch
+PATCH_SITES=		http://sarg.sourceforge.net/
+PATCHFILES=		datafile.patch lastlog.patch
 
 MAINTAINER=		mishka@terabyte.com.ua
-HOMEPAGE=		http://web.onda.com.br/orso/
+HOMEPAGE=		http://sarg.sourceforge.net/sarg.php
 COMMENT=		Squid-Cache proxy server Analysis Report Generator
 
 GNU_CONFIGURE=		yes
@@ -52,6 +52,7 @@ CONF_FILES=		${EGDIR}/sarg.conf ${PKG_SYSCONFDIR}/sarg.conf	\
 			${EGLNG}/English ${CFLNG}/English		\
 			${EGLNG}/French ${CFLNG}/French			\
 			${EGLNG}/German ${CFLNG}/German			\
+			${EGLNG}/Greek ${CFLNG}/Greek			\
 			${EGLNG}/Hungarian ${CFLNG}/Hungarian		\
 			${EGLNG}/Indonesian ${CFLNG}/Indonesian		\
 			${EGLNG}/Italian ${CFLNG}/Italian		\
@@ -61,9 +62,11 @@ CONF_FILES=		${EGDIR}/sarg.conf ${PKG_SYSCONFDIR}/sarg.conf	\
 			${EGLNG}/Portuguese ${CFLNG}/Portuguese		\
 			${EGLNG}/Romanian ${CFLNG}/Romanian		\
 			${EGLNG}/Russian_koi8 ${CFLNG}/Russian_koi8	\
+			${EGLNG}/Russian_UTF8 ${CFLNG}/Russian_UTF8	\
 			${EGLNG}/Russian_windows1251			\
 				${CFLNG}/Russian_windows1251		\
 			${EGLNG}/Serbian ${CFLNG}/Serbian		\
+			${EGLNG}/Slovak ${CFLNG}/Slovak			\
 			${EGLNG}/Spanish ${CFLNG}/Spanish		\
 			${EGLNG}/Turkish ${CFLNG}/Turkish		\
 			${EGLNG}/Ukrainian_windows1251			\
@@ -73,4 +76,5 @@ post-extract:
 			@${FIND} ${WRKSRC} -type d -exec ${CHMOD} +x {} \;
 			@${RM} ${WRKSRC}/languages/.new
 
+.include "../../graphics/gd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
