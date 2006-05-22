@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2006/03/08 10:05:52 martin Exp $
+$NetBSD: distinfo,v 1.13 2006/05/22 16:39:00 drochner Exp $
 
 SHA1 (kphone-4.2.tar.gz) = 10c7559b79fb13f42714008cd89a3981f66df2cf
 RMD160 (kphone-4.2.tar.gz) = 6176a97d19fe05741503f5b81dfd21e6130193e1
@@ -15,3 +15,4 @@ SHA1 (patch-ai) = bba9c0f8ab9c34e65b43e283e4d29e78aecd642c
 SHA1 (patch-aj) = 600f96693fcf6f00f0b23a76923cdf0046116936
 SHA1 (patch-ak) = 4c3f498fe64df8dfbb5a93210d3eda8ac08c1f84
 SHA1 (patch-al) = 6c7a4017f8872769271b8660eb5c947620e76fb9
+SHA1 (patch-am) = 8012521be35d3e28a4632e70f0f19d5ff05b1a62
