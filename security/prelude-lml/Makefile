@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2006/05/21 15:50:18 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/22 11:49:51 shannonjr Exp $
 #
 
-DISTNAME=		prelude-lml-0.9.4
-PKGREVISION=		1
+DISTNAME=		prelude-lml-0.9.5
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.org/download/releases/
 
@@ -48,9 +47,9 @@ SUBST_SED.code+=	-e 's,@PRELUDE_USER@,${PRELUDE_USER},g'
 PKG_SYSCONFSUBDIR=	prelude-lml
 EGDIR=		share/examples/prelude-lml/
 CONF_FILES_PERMS+=	${EGDIR}/plugins.rules ${PKG_SYSCONFDIR}/plugins.rules \
-			${ROOT_USER} ${ROOT_GROUP} 0600
+			${ROOT_USER} ${ROOT_GROUP} 0644
 CONF_FILES_PERMS+=	${EGDIR}/prelude-lml.conf ${PKG_SYSCONFDIR}/prelude-lml.conf \
-			${ROOT_USER} ${ROOT_GROUP} 0600
+			${ROOT_USER} ${ROOT_GROUP} 0644
 .for f in apc-emu.rules arbor.rules arpwatch.rules checkpoint.rules \
 	cisco-pix.rules cisco-router.rules cisco-vpn.rules clamav.rules \
 	dell-om.rules f5-bigip.rules grsecurity.rules honeyd.rules \
