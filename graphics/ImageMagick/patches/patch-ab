@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.19 2006/05/08 11:39:07 adam Exp $
+$NetBSD: patch-ab,v 1.20 2006/05/22 11:30:20 adam Exp $
 
---- Makefile.in.orig	2006-05-07 17:10:38.000000000 +0200
+--- Makefile.in.orig	2006-05-21 04:25:57.000000000 +0200
 +++ Makefile.in
-@@ -3263,8 +3263,6 @@ WAND_CLEANFILES = \
+@@ -3267,8 +3267,6 @@ WAND_CLEANFILES = \
  @WITH_MAGICK_PLUS_PLUS_TRUE@MAGICKPP_SCRPTS = \
  @WITH_MAGICK_PLUS_PLUS_TRUE@	Magick++/bin/Magick++-config
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.19 2006/05/08 11:39:07 adam Exp $
  
  @WITH_MAGICK_PLUS_PLUS_TRUE@MAGICKPP_PKGCONFIG = \
  @WITH_MAGICK_PLUS_PLUS_TRUE@	Magick++/lib/ImageMagick++.pc
-@@ -3314,7 +3312,6 @@ WAND_CLEANFILES = \
+@@ -3318,7 +3316,6 @@ WAND_CLEANFILES = \
  @WITH_MAGICK_PLUS_PLUS_TRUE@	Magick++/INSTALL \
  @WITH_MAGICK_PLUS_PLUS_TRUE@	Magick++/NEWS \
  @WITH_MAGICK_PLUS_PLUS_TRUE@	Magick++/README \
@@ -19,7 +19,7 @@ $NetBSD: patch-ab,v 1.19 2006/05/08 11:39:07 adam Exp $
  @WITH_MAGICK_PLUS_PLUS_TRUE@	Magick++/bin/Magick++-config.in \
  @WITH_MAGICK_PLUS_PLUS_TRUE@	Magick++/lib/ImageMagick++.pc.in \
  @WITH_MAGICK_PLUS_PLUS_TRUE@	Magick++/demo/model.miff \
-@@ -4582,7 +4579,6 @@ pkgconfig_DATA = \
+@@ -4586,7 +4583,6 @@ pkgconfig_DATA = \
  # Manual pages to install
  man_MANS = \
  	$(MAGICK_MANS) \
