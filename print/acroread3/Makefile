@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/05/22 08:19:06 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2006/05/22 22:22:04 jlam Exp $
 
 PKGNAME=	acroread3-3.01
 PKGREVISION=	2
@@ -16,8 +16,9 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 LICENSE=		adobe-acrobat-license
 
-WRKSRC=		${WRKDIR}
-NO_BUILD=	YES
+WRKSRC=			${WRKDIR}
+CHECK_SHLIBS_SUPPORTED=	no
+NO_BUILD=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -28,7 +29,6 @@ DEPENDS+=	suse_libc5>=6.3:../../emulators/${SUSE_DIR_PREFIX}_libc5
 DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DISTNAME=	acroread_linux_301
 PLATFORM=	intellinux
-CHECK_SHLIBS=	no
 .  elif (${MACHINE_ARCH} == "alpha")
 .    if !exists(/emul/osf1/sbin/loader)
 PKG_FAIL_REASON+=	"${PKGNAME} requires Digital UNIX libraries - see compat_osf1(8)"

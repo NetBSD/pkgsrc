@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1824 2006/05/21 23:50:15 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1825 2006/05/22 22:22:02 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -58,12 +58,10 @@ build-defs-message: ${WRKDIR}
 # Transform package Makefile variables and set defaults
 ############################################################################
 
-CHECK_SHLIBS?=		YES	# run check-shlibs after install
 DEINSTALLDEPENDS?=	NO	# add -R to pkg_delete
 MKCRYPTO?=		YES	# build crypto packages by default
 NOCLEAN?=		NO	# don't clean up after update
 REINSTALL?=		NO	# reinstall upon update
-SHLIB_HANDLING?=	YES	# do automatic shared lib handling
 CREATE_WRKDIR_SYMLINK?=	yes	# create a symlink to WRKOBJDIR
 
 ##### Variant spellings
@@ -2010,7 +2008,7 @@ real-su-install: ${MESSAGE}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} register-pkg
 .endif # !NO_PKG_REGISTER
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${_INSTALL_COOKIE}
-.if defined(PKG_DEVELOPER) && (${CHECK_SHLIBS} == "YES")
+.if empty(CHECK_SHLIBS:M[nN][oO])
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} check-shlibs
 .endif
 .if empty(CHECK_WRKREF:M[nN][oO])
@@ -2022,47 +2020,6 @@ real-su-install: ${MESSAGE}
 .if empty(CHECK_INTERPRETER:M[nN][oO])
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} check-interpreter
 .endif
-
-# Check if all binaries and shlibs find their needed libs
-# Must be run after "make install", so that files are installed, and
-# ${PLIST} exists.
-#
-.PHONY: check-shlibs
-check-shlibs:
-.if !defined(NO_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	bins=`${PKG_INFO} -qL ${PKGNAME} | { ${EGREP} -h '/(bin|sbin|libexec)/' || ${TRUE}; }`; \
-	if [ "${OBJECT_FMT}" = "ELF" ]; then				\
-		shlibs=`${PKG_INFO} -qL ${PKGNAME} | { ${EGREP} -h '/lib/lib.*.so' || ${TRUE}; }`; \
-	elif [ "${OBJECT_FMT}" = "Mach-O" ]; then			\
-		shlibs=`${PKG_INFO} -qL ${PKGNAME} | { ${EGREP} -h '/lib/lib.*.dylib' || ${TRUE}; }`; \
-	else								\
-		shlibs="";						\
-	fi;								\
-	if [ "X${LDD}" = X ]; then					\
-		ldd=`${TYPE} ldd 2>/dev/null | ${AWK} '{ print $$NF }'`;\
-	else								\
-		ldd="${LDD}";						\
-	fi;								\
-	if [ -x "$$ldd" ]; then						\
-		for i in $${bins} $${shlibs}; do			\
-			err=`{ $$ldd $$i 2>&1 || ${TRUE}; } | { ${GREP} "not found" || ${TRUE}; }`; \
-			if [ "${PKG_VERBOSE}" != "" ]; then		\
-				${ECHO} "$$ldd $$i";			\
-			fi;						\
-			if [ "$$err" != "" ]; then			\
-				${ECHO} "$${i}: $$err";			\
-				error=1;				\
-			fi;						\
-		done;							\
-	fi;								\
-	if [ "$$error" = 1 ]; then					\
-		${ECHO} "*** The above programs/libs will not find the listed shared libraries"; \
-		${ECHO} "    at runtime. Please fix the package (add -Wl,-R.../lib in the right places)!"; \
-		${SHCOMMENT} Might not error-out for non-pkg-developers; \
-		exit 1;							\
-	fi
-.endif # NO_PKG_REGISTER
 
 .PHONY: acquire-tools-lock
 .PHONY: acquire-wrapper-lock acquire-configure-lock acquire-build-lock
@@ -3582,7 +3539,7 @@ post-install-fake-pkg: ${PLIST} ${DESCR} ${MESSAGE}
 	pkgview)	${TOUCH} ${PKG_DB_TMPDIR}/+VIEWS ;;		\
 	esac
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${SIZE_PKG_FILE} ${SIZE_ALL_FILE}
-.  if ${SHLIB_HANDLING} == "YES" && ${CHECK_SHLIBS} == "YES"
+.  if !empty(CHECK_SHLIBS_SUPPORTED:M[yY][eE][sS])
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	case "${LDD}" in						\
 	"")	ldd=`${TYPE} ldd 2>/dev/null | ${AWK} '{ print $$NF }'`;; \

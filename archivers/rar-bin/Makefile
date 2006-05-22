@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/03 22:36:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/22 22:22:02 jlam Exp $
 #
 
 DISTNAME=		rarlinux-3.5.1
@@ -28,7 +28,6 @@ DEPENDS+=	suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
 
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
-CHECK_SHLIBS=	NO
 
 INSTALLATION_DIRS=	bin lib
 
