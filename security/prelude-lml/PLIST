@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/05/21 15:50:18 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/05/22 14:01:54 shannonjr Exp $
 bin/prelude-lml
 include/prelude-lml/prelude-lml.h
 lib/prelude-lml/debug.la
@@ -43,6 +43,8 @@ share/examples/prelude-lml/ruleset/selinux.rules
 share/examples/prelude-lml/ruleset/sendmail.rules
 share/examples/prelude-lml/ruleset/shadow-utils.rules
 share/examples/prelude-lml/ruleset/single.rules
+share/examples/prelude-lml/ruleset/sonicwall.rules
+share/examples/prelude-lml/ruleset/spamassassin.rules
 share/examples/prelude-lml/ruleset/squid.rules
 share/examples/prelude-lml/ruleset/ssh.rules
 share/examples/prelude-lml/ruleset/sudo.rules
