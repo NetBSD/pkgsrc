@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.301 2006/05/22 11:06:01 adam Exp $
+$NetBSD: CHANGES-2006,v 1.302 2006/05/22 11:31:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2631,3 +2631,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/sarg to version 2.1 [ben 2006-05-21]
 	Updated devel/glibmm to 2.10.3 [adam 2006-05-22]
 	Updated x11/gtkmm to 2.8.8 [adam 2006-05-22]
+	Updated graphics/ImageMagick to 6.2.7.7 [adam 2006-05-22]
