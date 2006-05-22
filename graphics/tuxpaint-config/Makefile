@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.7 2006/03/04 21:29:52 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/22 20:21:59 wiz Exp $
 #
 
 DISTNAME=		tuxpaint-config-0.0.5
 PKGREVISION=		1
 CATEGORIES=		graphics
-MASTER_SITES=		ftp://ftp.sonic.net/pub/users/nbs/unix/x/tuxpaint/config/
+MASTER_SITES=		ftp://ftp.billsgames.com/unix/x/tuxpaint/config/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		ftp://ftp.sonic.net/pub/users/nbs/unix/x/tuxpaint/config/
+HOMEPAGE=		ftp://ftp.billsgames.com/unix/x/tuxpaint/config/
 COMMENT=		Configuration program for tuxpaint
 
+USE_LANGUAGES=		c++
 USE_TOOLS+=		gmake
 
 post-install:
