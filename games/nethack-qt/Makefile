@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/04/17 13:46:29 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2006/05/22 22:01:31 wiz Exp $
 #
 
 .include "../../games/nethack-lib/Makefile.common"
@@ -11,7 +11,7 @@ COMMENT=		The QT-Enhanced X11 version of NetHack
 
 DEPENDS+=		nethack-lib-${NETHACK_VERSION}nb1:../../games/nethack-lib
 
-
+USE_LANGUAGES=		c c++
 BUILD_TARGET=		x11tiles nethack
 INSTALL_TARGET=		binfiles
 MAKE_ENV+=		GTYPE=-qt

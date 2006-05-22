@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/04 21:29:43 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/05/22 21:58:33 wiz Exp $
 #
 
 DISTNAME=	Maelstrom-3.0.5
@@ -14,6 +14,7 @@ COMMENT=	High resolution version of Asteroids (SDL version)
 CONFLICTS=		maelstrom-x11-[0-9]* maelstrom-[0-9]*
 
 GNU_CONFIGURE=		YES
+USE_LANGUAGES=		c c++
 
 MAKE_ENV+=		CP=${CP:Q}
 
