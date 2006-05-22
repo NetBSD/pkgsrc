@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/19 12:46:21 adam Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/22 19:06:28 wiz Exp $
 
 DISTNAME=	f4l-0.2.1
 CATEGORIES=	graphics
@@ -10,6 +10,7 @@ HOMEPAGE=	http://f4l.sourceforge.net/
 COMMENT=	Development environment for Macromedia Flash
 
 NO_CONFIGURE=		yes
+USE_LANGUAGES=		c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 
