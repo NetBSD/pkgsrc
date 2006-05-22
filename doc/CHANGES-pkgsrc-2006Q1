@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.55 2006/05/22 14:15:46 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.56 2006/05/22 14:22:07 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -113,3 +113,5 @@ Pullup ticket 1632 - requested by ghen
 security update for openldap
 Pullup ticket 1644 - requested by adrianp
 sync sendmail with HEAD
+Pullup ticket 1646 - requested by ghen
+portability build fix for dovecot
