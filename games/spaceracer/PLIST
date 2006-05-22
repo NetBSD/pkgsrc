@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/09 14:08:44 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/05/22 17:45:42 wiz Exp $
 bin/spaceracer
 include/stk_admctrl.h
 include/stk_control.h
@@ -33,3 +33,4 @@ share/spaceracer/texture3.png
 share/spaceracer/texture4.png
 share/spaceracer/uranus.png
 share/spaceracer/venus.png
+@dirrm share/spaceracer
