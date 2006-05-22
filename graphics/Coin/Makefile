@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/17 13:46:02 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/22 16:46:54 wiz Exp $
 
 DISTNAME=		Coin-2.4.4
 PKGREVISION=		2
@@ -9,6 +9,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.coin3d.org/
 COMMENT=		Free, portable, Open Inventor API implementation
 
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-3ds-import
 CONFIGURE_ARGS+=	--disable-debug
