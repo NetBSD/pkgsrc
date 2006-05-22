@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2006/04/13 18:23:35 jlam Exp $
+# $NetBSD: Makefile,v 1.140 2006/05/22 07:00:55 rillig Exp $
 
 DISTNAME=		mutt-1.4.2.1i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -97,9 +97,8 @@ post-install:
 .if (${PKG_INSTALLATION_TYPE} == "pkgviews")
 	${MV} ${PREFIX}/man/man5/mutt-mbox.5 ${PREFIX}/man/man5/mbox.5
 .endif
-	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	@if [ -f ${PREFIX}/bin/mutt_dotlock ]; then \
-		${ECHO} "bin/mutt_dotlock" >> ${PLIST_SRC}; \
-	fi
+	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	${TEST} ! -f ${PREFIX}/bin/mutt_dotlock				\
+	|| ${ECHO} "bin/mutt_dotlock" >> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
