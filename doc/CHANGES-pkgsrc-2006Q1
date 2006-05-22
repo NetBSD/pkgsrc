@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.52 2006/05/19 13:33:24 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.53 2006/05/22 12:19:01 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -107,3 +107,5 @@ Pullup ticket 1605 - requested by bouyer
 security update for nagios
 Pullup ticket 1613 - requested by tron
 security fix for xine-lib
+Pullup ticket 1624 - requested by cube
+security update for mysql5
