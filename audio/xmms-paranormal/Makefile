@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/04 21:29:00 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/05/22 05:42:59 rillig Exp $
 #
 
 DISTNAME=	paranormal-0.2.0
@@ -12,23 +12,12 @@ HOMEPAGE=	http://paranormal.sourceforge.net/
 COMMENT=	Extremely customizable (pseudo-programmable) XMMS plugin
 
 GNU_CONFIGURE=	yes
-USE_BUILDLINK_ONLY=	YES
 USE_LIBTOOL=	yes
 CPPFLAGS+=	-D_POSIX_THREAD_SYSCALL_SOFT=1
 
 # Might be better in textproc/libxml2/buildlink.mk:
 CPPFLAGS+=	-I${BUILDLINK_DIR}/include/libxml2
 CPPFLAGS+=	-I${BUILDLINK_DIR}/include/libxml2/libxml
-
-post-extract:
-		cd ${WRKSRC} ; \
-		if [ ! -f configure.orig ]; then \
-			${MV} configure configure.orig ; \
-		fi ; \
-		${SED} \
-			-e 's|XML_CONFIG|XML2_CONFIG|g' \
-			<configure.orig >configure ; \
-		${CHMOD} +x configure
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
