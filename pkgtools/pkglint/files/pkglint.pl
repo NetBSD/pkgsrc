@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.587 2006/05/22 07:41:03 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.588 2006/05/22 10:22:36 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5718,7 +5718,7 @@ sub checkdir_package() {
 	# Determine the used variables before checking any of the
 	# Makefile fragments.
 	foreach my $fname (@files) {
-		if ($fname =~ qr"\.mk$"
+		if ($fname =~ qr"^((?:.*/)?Makefile\..*|.*\.mk)$"
 		&& (defined(my $lines = load_lines($fname, true)))) {
 			determine_used_variables($lines);
 		}
