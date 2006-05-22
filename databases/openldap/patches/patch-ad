@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.6 2005/10/26 15:08:13 jlam Exp $
+$NetBSD: patch-ad,v 1.6.4.1 2006/05/22 12:58:24 salo Exp $
 
---- libraries/liblutil/sha1.c.orig	2005-01-20 13:03:52.000000000 -0500
+--- libraries/liblutil/sha1.c.orig	2006-01-04 07:16:11.000000000 +0900
 +++ libraries/liblutil/sha1.c
 @@ -50,10 +50,16 @@
  #define SHA1HANDSOFF		/* Copies data before messing with it. */
@@ -49,11 +49,11 @@ $NetBSD: patch-ad,v 1.6 2005/10/26 15:08:13 jlam Exp $
 +void do_R01(uint32 *a, uint32 *b, uint32 *c, uint32 *d, uint32 *e, CHAR64LONG16
 +*);
 +void do_R2(uint32 *a, uint32 *b, uint32 *c, uint32 *d, uint32 *e, CHAR64LONG16 
-+);
++*);
 +void do_R3(uint32 *a, uint32 *b, uint32 *c, uint32 *d, uint32 *e, CHAR64LONG16 
-+);
++*);
 +void do_R4(uint32 *a, uint32 *b, uint32 *c, uint32 *d, uint32 *e, CHAR64LONG16 
-+);
++*);
 +
 +#define nR0(v,w,x,y,z,i) R0(*v,*w,*x,*y,*z,i)
 +#define nR1(v,w,x,y,z,i) R1(*v,*w,*x,*y,*z,i)

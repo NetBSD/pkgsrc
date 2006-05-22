@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.10 2005/11/19 18:41:16 joerg Exp $
+$NetBSD: patch-ac,v 1.10.4.1 2006/05/22 12:58:24 salo Exp $
 
---- libraries/libldap_r/thr_posix.c.orig	2005-09-28 00:30:29.000000000 +0000
+--- libraries/libldap_r/thr_posix.c.orig	2006-05-13 11:47:50.000000000 +0200
 +++ libraries/libldap_r/thr_posix.c
 @@ -19,6 +19,7 @@
  #if defined( HAVE_PTHREADS )
@@ -8,9 +8,9 @@ $NetBSD: patch-ac,v 1.10 2005/11/19 18:41:16 joerg Exp $
  #include <ac/errno.h>
 +#include <ac/unistd.h>
  
- #include "ldap_pvt_thread.h" /* Get the thread interface */
- #define LDAP_THREAD_IMPLEMENTATION
-@@ -132,9 +133,11 @@ ldap_pvt_thread_create( ldap_pvt_thread_
+ #ifdef REPLACE_BROKEN_YIELD
+ #ifndef HAVE_NANOSLEEP
+@@ -139,9 +140,11 @@ ldap_pvt_thread_create( ldap_pvt_thread_
  #endif
  
  #ifdef LDAP_PVT_THREAD_SET_STACK_SIZE
