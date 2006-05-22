@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/04/27 21:22:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/05/22 18:03:50 drochner Exp $
 bin/epiphany
 include/epiphany/2.14/epiphany/ephy-adblock-manager.h
 include/epiphany/2.14/epiphany/ephy-adblock.h
@@ -41,6 +41,32 @@ share/aclocal/epiphany.m4
 share/applications/bme.desktop
 share/applications/epiphany.desktop
 share/dbus-1/services/org.gnome.Epiphany.service
+share/doc/epiphany/EphyCommandManager.html
+share/doc/epiphany/EphyEmbed.html
+share/doc/epiphany/EphyNodeDb.html
+share/doc/epiphany/EphyTab.html
+share/doc/epiphany/EphyWindow.html
+share/doc/epiphany/ch01.html
+share/doc/epiphany/ch02.html
+share/doc/epiphany/epiphany-EphyEmbedFactory.html
+share/doc/epiphany/epiphany-EphyEmbedPersist.html
+share/doc/epiphany/epiphany-EphyEmbedSingle.html
+share/doc/epiphany/epiphany-EphyExtensionsManager.html
+share/doc/epiphany/epiphany-EphyGlade.html
+share/doc/epiphany/epiphany-EphyPermissionManager.html
+share/doc/epiphany/epiphany-ephy-cookie-manager.html
+share/doc/epiphany/epiphany-ephy-password-manager.html
+share/doc/epiphany/epiphany-ephy-session.html
+share/doc/epiphany/epiphany-ephy-shell.html
+share/doc/epiphany/epiphany.devhelp
+share/doc/epiphany/epiphany.devhelp2
+share/doc/epiphany/home.png
+share/doc/epiphany/index.html
+share/doc/epiphany/index.sgml
+share/doc/epiphany/left.png
+share/doc/epiphany/right.png
+share/doc/epiphany/style.css
+share/doc/epiphany/up.png
 share/epiphany/art/epiphany-bookmarks.png
 share/epiphany/art/epiphany-download.png
 share/epiphany/art/epiphany-entry.png
