@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2005/06/01 20:08:00 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2006/05/22 18:21:10 wiz Exp $
 #
 
 DISTNAME=		cal3d-${CAL3D_VERSION}
@@ -12,6 +12,7 @@ HOMEPAGE=		http://cal3d.sourceforge.net/
 COMMENT=	        Skeletal based 3d character animation library in C++
 
 EXTRACT_SUFX=		.tar.bz2
+USE_LANGUAGES=		c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		automake
 GNU_CONFIGURE=		yes
