@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/04 21:29:07 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/05/22 22:22:02 jlam Exp $
 #
 
 DISTVERSION=		2.0.7.1
@@ -12,7 +12,7 @@ COMMENT=		Cross-compile environment for iX86 Linux, libc v6
 
 BUILD_DEPENDS+=		rpm-[0-9]*:../../misc/rpm
 
-CHECK_SHLIBS=		no
+CHECK_SHLIBS_SUPPORTED=	no
 
 WRKSRC=			${WRKDIR}
 USE_CROSS_BINUTILS=	yes
