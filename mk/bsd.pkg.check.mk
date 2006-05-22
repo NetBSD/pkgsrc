@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.33 2006/05/21 13:24:44 rillig Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.34 2006/05/22 16:54:54 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the various install-time "check"
@@ -189,7 +189,7 @@ check-files-post-message:
 
 ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${FIND} ${PREFIX}/. \( -type f -or -type l \) -print 2>/dev/null \
+	${FIND} ${PREFIX}/. \( -type f -o -type l \) -print 2>/dev/null \
 		| ${SED} -e 's,/\./,/,'					\
 		| ${_CHECK_FILES_SKIP_FILTER} > ${.TARGET}		\
                 || ${TRUE}
