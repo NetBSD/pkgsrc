@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/04/17 13:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2006/05/22 19:26:10 wiz Exp $
 
 DISTNAME=	madman-0.93
 PKGREVISION=	6
@@ -11,6 +11,7 @@ COMMENT=	Powerful audio manager for large collections
 
 BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
 
+USE_LANGUAGES=		c c++
 GCC_REQD+=		3.0
 
 INSTALLATION_DIRS=	bin
