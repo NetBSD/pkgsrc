@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/04/22 09:22:06 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2006/05/22 10:01:02 rillig Exp $
 
 DISTNAME=	moss-0.1.13
 PKGREVISION=	2
@@ -24,8 +24,8 @@ SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Fixing hardcoded paths.
 SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	moss.conf.sample
-SUBST_SED.path=		-e 's,$${PREFIX}/var,${VARBASE},g'	\
-			-e 's,$${PREFIX}/share,${PREFIX}/share,g'
+SUBST_SED.path=		-e 's,$${PREFIX}/var,${VARBASE},g'
+SUBST_SED.path+=	-e 's,$${PREFIX}/share,${PREFIX}/share,g'
 
 FILES_SUBST+=	INTERPRETER=${PYTHONBIN:Q}
 
