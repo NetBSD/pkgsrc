@@ -1,14 +1,14 @@
-$NetBSD: patch-ah,v 1.4 2005/10/26 15:08:13 jlam Exp $
+$NetBSD: patch-ah,v 1.4.4.1 2006/05/22 12:58:24 salo Exp $
 
---- libraries/libldap/init.c.orig	2005-10-05 14:41:32.000000000 -0400
+--- libraries/libldap/init.c.orig	2006-05-13 11:47:50.000000000 +0200
 +++ libraries/libldap/init.c
-@@ -529,6 +529,9 @@ void ldap_int_initialize( struct ldapopt
- 
+@@ -544,6 +544,9 @@ void ldap_int_initialize( struct ldapopt
  #if defined(LDAP_API_FEATURE_X_OPENLDAP_V2_KBIND) \
  	|| defined(HAVE_TLS) || defined(HAVE_CYRUS_SASL)
+ 	{
 +#if defined(LDAP_R_COMPILE)
-+	ldap_pvt_thread_initialize();
++		ldap_pvt_thread_initialize();
 +#endif
- 	ldap_int_hostname = ldap_pvt_get_fqdn( ldap_int_hostname );
- #endif
+ 		char	*name = ldap_int_hostname;
  
+ 		ldap_int_hostname = ldap_pvt_get_fqdn( name );
