@@ -1,19 +1,19 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/12/04 16:06:32 xtraeme Exp $
+$NetBSD: patch-ac,v 1.2 2006/05/22 03:44:55 ben Exp $
 
---- log.c.orig	2003-04-25 20:20:55.000000000 +0300
+--- log.c.orig	2005-11-29 08:39:45.000000000 -0800
 +++ log.c
-@@ -133,7 +133,7 @@ int main(argc,argv)
-    ReportType[0]='\0';
-    UserTabFile[0]='\0';
+@@ -148,7 +148,7 @@ int main(argc,argv)
+    SquidGuardLogFormat[0]='\0';
+    SquidGuardLogAlternate[0]='\0';
  
 -   strcpy(AccessLog,"/usr/local/squid/var/logs/access.log");
 +   strcpy(AccessLog,SQUID_ACCESSLOG);
     sprintf(ExcludeCodes,"%s/exclude_codes",SYSCONFDIR);
-    strcpy(BgColor,"white");
-    strcpy(TxColor,"black");
-@@ -146,7 +146,7 @@ int main(argc,argv)
-    strcpy(HeaderBgColor,"blanchedalmond");
-    strcpy(FontSize,"-1");
+    strcpy(GraphDaysBytesBarColor,"orange");
+    strcpy(BgColor,"#ffffff");
+@@ -163,7 +163,7 @@ int main(argc,argv)
+    strcpy(LogoTextColor,"#006699");
+    strcpy(FontSize,"9px");
     strcpy(TempDir,"/tmp");
 -   strcpy(OutputDir,"/usr/local/etc/httpd/htdocs/squid-reports");
 +   strcpy(OutputDir,SARG_REPORTSDIR);
