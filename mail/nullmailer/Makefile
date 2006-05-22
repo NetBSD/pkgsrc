@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2006/03/14 01:14:30 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/05/22 07:05:27 rillig Exp $
 
 DISTNAME=		nullmailer-1.02
 CATEGORIES=		mail
-MASTER_SITES=		${HOMEPAGE}
+MASTER_SITES=		${HOMEPAGE:Q}
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://untroubled.org/nullmailer/
@@ -10,7 +10,7 @@ COMMENT=		Simple relay-only mail transport agent
 
 USE_LANGUAGES=		c++
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+= 	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/spool
 CONFIGURE_ARGS+=	--bindir=${PREFIX}/libexec/nullmailer
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/libexec/nullmailer
@@ -21,8 +21,8 @@ INSTALL_TARGET=		install install-data-local install-root
 
 NULLMAILER_GROUP?=	nullmail
 NULLMAILER_USER?=	nullmail
-PKG_GROUPS?=		${NULLMAILER_GROUP}
-PKG_USERS?=		${NULLMAILER_USER}:${NULLMAILER_GROUP}
+PKG_GROUPS=		${NULLMAILER_GROUP}
+PKG_USERS=		${NULLMAILER_USER}:${NULLMAILER_GROUP}
 
 MAKE_ENV+=		NULLMAILER_GROUP=${NULLMAILER_GROUP:Q}
 MAKE_ENV+=		NULLMAILER_USER=${NULLMAILER_USER:Q}
