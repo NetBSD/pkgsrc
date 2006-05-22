@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/04/22 09:22:13 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2006/05/22 22:22:04 jlam Exp $
 
 DISTNAME=	acroread5	# Overridden below
 PKGNAME=	acroread5-5.10
@@ -15,17 +15,16 @@ CONFLICTS+=	acroread-5.*
 CONFLICTS+=	acroread-7.*
 CONFLICTS+=	acroread7-7.*
 
-RESTRICTED=	Original installer required to redistribute.
+RESTRICTED=		Original installer required to redistribute.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
-NO_SRC_ON_FTP=	${RESTRICTED}
-LICENSE=	adobe-acrobat-license
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+LICENSE=		adobe-acrobat-license
 
-WRKSRC=		${WRKDIR}/installers
-CHECK_SHLIBS=	NO
-NO_BUILD=	YES
-SHLIB_HANDLING=	NO
+WRKSRC=			${WRKDIR}/installers
+CHECK_SHLIBS_SUPPORTED=	no
+NO_BUILD=		yes
 
 .include "../../mk/bsd.prefs.mk"
 

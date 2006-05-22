@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/04/22 09:22:06 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2006/05/22 22:22:02 jlam Exp $
 #
 
 DISTNAME=		eagle-lin-eng-4.14
@@ -19,7 +19,6 @@ DEPENDS+=		suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
 
 ONLY_FOR_PLATFORM=	*-*-i386
-CHECK_SHLIBS=		NO		# this is Linux software
 
 RESTRICTED=		Redistribution not permitted
 LICENSE=		fee-based-commercial-use
