@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/04/22 09:22:15 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2006/05/22 22:22:05 jlam Exp $
 
 DISTNAME=		sm_linux_v314_install
 PKGNAME=		storage-manager-3.14
@@ -29,7 +29,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/sm_linux_v314_install
-CHECK_SHLIBS=		NO
 _STRIPFLAG_INSTALL=	# defined
 NO_CONFIGURE=		yes
 NO_BUILD=		yes

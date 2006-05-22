@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/13 21:37:29 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/22 22:22:04 jlam Exp $
 #
 
 DISTNAME=		mit-scheme-7.7.1-ix86-gnu-linux
@@ -12,11 +12,7 @@ COMMENT=		MIT/GNU Scheme (Linux binary)
 
 DEPENDS+=		suse_base>=6.0:../../emulators/${SUSE_DIR_PREFIX}_base
 
-WRKSRC=		${WRKDIR}
-
-CHECK_SHLIBS=	NO
-SHLIB_HANDLING=	NO
-
+WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS=	bin
 
 do-build:

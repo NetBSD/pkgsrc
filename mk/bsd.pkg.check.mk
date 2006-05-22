@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.check.mk,v 1.34 2006/05/22 16:54:54 joerg Exp $
+# $NetBSD: bsd.pkg.check.mk,v 1.35 2006/05/22 22:22:02 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the various install-time "check"
@@ -13,6 +13,10 @@
 #    CHECK_FILES_STRICT makes the file checks very strict on errors if
 #	it is any value other than "no".  Defaults to "no".
 #
+#    CHECK_SHLIBS checks that all shared libraries that are used by
+#	binaries and shared libraries within the package can be found
+#	at run-time.  Defaults to "no".
+#
 #    CHECK_WRKREF is a list of options that trigger the checks for
 #	${WRKDIR} or ${TOOLS_DIR} in the package's installed files.
 #	Valid values are "work", which checks for ${WRKDIR}, and
@@ -20,6 +24,13 @@
 #
 #    CHECK_INTERPRETER can be set to "yes" to check that installed
 #	#!-scripts will find their interpreter.
+#
+# The following variables may be set by a package and control which
+# checks can be run:
+#
+#    CHECK_SHLIBS_SUPPORTED notes whether the package supports running
+#	the check-shlibs target.  Defaults to "yes", but is often set
+#	to "no" for syscall-emulation packages.
 #
 # The following targets are defined by bsd.pkg.check.mk:
 #
@@ -39,13 +50,15 @@
 
 # For PKG_DEVELOPERs, cause some checks to be run automatically by default.
 .if defined(PKG_DEVELOPER)
-CHECK_WRKREF?=		tools
 CHECK_FILES?=		yes
+CHECK_WRKREF?=		tools
+CHECK_SHLIBS?=		yes
 .endif
 
 CHECK_FILES?=		no
 CHECK_FILES_STRICT?=	no
 CHECK_WRKREF?=		no
+CHECK_SHLIBS?=		no
 CHECK_INTERPRETER?=	no
 
 USE_TOOLS+=		awk cat cmp diff echo find grep rm sed test	\
@@ -469,3 +482,45 @@ check-interpreter:
 		fi;							\
 	  done;								\
 	  exit $$exitcode; }
+
+###########################################################################
+### check-shlibs ##########################################################
+###########################################################################
+
+# All binaries and shared libraries.
+_CHECK_SHLIBS_ERE=	/(bin/|sbin/|libexec/|lib/lib.*\.so|lib/lib.*\.dylib)
+
+CHECK_SHLIBS_SUPPORTED?=	yes
+
+###########################################################################
+# check-shlibs target
+#
+.PHONY: check-shlibs
+check-shlibs:
+.if !empty(CHECK_SHLIBS_SUPPORTED:M[yY][eE][sS]) && !defined(NO_PKG_REGISTER)
+	${_PKG_SILENT}${_PKG_DEBUG}${STEP_MSG}				\
+		"Checking for missing run-time search paths in ${PKGNAME}"
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	case ${LDD:Q}"" in						\
+	"")	ldd=`${TYPE} ldd 2>/dev/null | ${AWK} '{ print $$NF }'` ;; \
+	*)	ldd=${LDD:Q} ;;						\
+	esac;								\
+	${TEST} -x "$$ldd" || exit 0;					\
+	${PKG_INFO} -qL ${PKGNAME} |					\
+	{ ${EGREP} -h ${_CHECK_SHLIBS_ERE:Q} || ${TRUE}; } |		\
+	{ while read file; do						\
+		${TEST} -z ${PKG_VERBOSE:Q}"" || ${ECHO} "$$ldd $$file"; \
+		err=`{ $$ldd $$file 2>&1 || ${TRUE}; } | { ${GREP} "not found" || ${TRUE}; }`; \
+		if ${TEST} -n "$$err"; then				\
+			${ECHO} "$$file: $$err";			\
+			error=1;					\
+		fi;							\
+	  done;								\
+	  if ${TEST} "$$error" = 1; then				\
+		${ECHO} "*** The above programs/libs will not find the listed shared libraries"; \
+		${ECHO} "    at runtime.  Please fix the package (add -Wl,-R.../lib in the right"; \
+		${ECHO} "    places)!";					\
+		${SHCOMMENT} Might not error-out for non-pkg-developers; \
+		exit 1;							\
+          fi; }
+.endif

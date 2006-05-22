@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2006/04/22 09:22:10 rillig Exp $
+# $NetBSD: Makefile,v 1.48 2006/05/22 22:22:04 jlam Exp $
 #
 
 VERSION=	1.1.8
@@ -34,8 +34,7 @@ PLIST_SRC+=	${PKGDIR}/PLIST
 
 MESSAGE_SUBST+=	JAVA_HOME=${JAVA_HOME:Q}
 
-CHECK_SHLIBS=	no
-
+CHECK_SHLIBS_SUPPORTED=	no
 
 ONLY_FOR_PLATFORM= NetBSD-*-i386 Linux-*-i[3-6]86
 RESTRICTED=	No redistribution of the Java(tm) Development Kit

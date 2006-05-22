@@ -1,4 +1,4 @@
-# $NetBSD: openwin.mk,v 1.3 2005/02/20 07:48:48 grant Exp $
+# $NetBSD: openwin.mk,v 1.4 2006/05/22 22:22:04 jlam Exp $
 
 FILES_LIST=	${FILESDIR}/openwin
 
@@ -23,4 +23,5 @@ CREATE_X11LINK=	case $$file in						\
 # disable checking of shared library dependencies, as openwin/dt can
 # have some libraries missing in a "normal" installation and this
 # shouldn't break the package.
-CHECK_SHLIBS=		no
+#
+CHECK_SHLIBS_SUPPORTED=	no

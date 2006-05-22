@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/02/05 23:09:01 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/05/22 22:22:03 jlam Exp $
 
 DISTNAME=		linuxppc_lib-2000.4.6
 PKGREVISION=		1
@@ -27,8 +27,7 @@ ONLY_FOR_PLATFORM=	NetBSD-1.5[U-Z]-powerpc NetBSD-1.5Z[A-Z]-powerpc \
 			NetBSD-1.6*-powerpc NetBSD-[2-9]*-powerpc
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
-SHLIB_HANDLING=		NO
-CHECK_SHLIBS=		NO
+CHECK_SHLIBS_SUPPORTED=	no
 DIST_SUBDIR=		linuxppc_lib
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
