@@ -1,11 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/21 18:40:20 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.2 2006/05/22 14:38:16 tron Exp $
 
 PKGNAME=		py-gobject-shared-2.10.1
 
-PYTHON_VERSION_REQD=	${PYTHON_VERSION_DEFAULT}
-
 .include "../../devel/py-gobject/Makefile.common"
+
+.if defined(_PYTHON_VERSION)
+PYTHON_VERSION_REQD=	${_PYTHON_VERSION}
+else
+PYTHON_VERSION_REQD=	${PYTHON_VERSION_DEFAULT}
+.endif
 
 PYTHON_FOR_BUILD_ONLY=	yes
 INSTALLATION_DIRS=	include/pygtk-2.0 lib/pkgconfig
