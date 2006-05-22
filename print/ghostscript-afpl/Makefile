@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2006/04/17 13:46:46 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/22 17:20:39 drochner Exp $
 
-DISTNAME=	ghostscript-8.53
-PKGNAME=	ghostscript-afpl-8.53
-#PKGREVISION=	1
-PKGREVISION=	2
+DISTNAME=	ghostscript-8.54
+PKGNAME=	ghostscript-afpl-8.54
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,22 +21,14 @@ GS_SRCS=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES=		${GS_SRCS}
 EXTRACT_ONLY=		${GS_SRCS}
 
-# Adobe's JPEG implementation in their PDF/PS documents is non-standard,
-# so we can't use an already installed libjpeg.so.
-#
-JPEG_SRCS=		jpegsrc.v6b.tar.gz
-JPEG_WRKSRC=		${WRKDIR}/jpeg-6b
-SITES_${JPEG_SRCS}=	ftp://ftp.uu.net/graphics/jpeg/
-DISTFILES+=		${JPEG_SRCS}
-EXTRACT_ONLY+=		${JPEG_SRCS}
-
 GS_RESOURCEDIR=		${PREFIX}/share/ghostscript/Resource
 
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MKDIR} ${WRKSRC}/obj
-	${LN} -fs ${JPEG_WRKSRC} ${WRKSRC}/jpeg
 	${MV} ${WRKSRC}/jasper ${WRKSRC}/jasper.dontuse
+	${MV} ${WRKSRC}/libpng ${WRKSRC}/libpng.dontuse
+	${MV} ${WRKSRC}/zlib ${WRKSRC}/zlib.dontuse
 	cd ${WRKSRC}/lib; for file in gs_res.ps; do			\
 		${SED}  -e "s|/Resource/|${GS_RESOURCEDIR}/|g"		\
 			$${file} > $${file}.fixed;			\
