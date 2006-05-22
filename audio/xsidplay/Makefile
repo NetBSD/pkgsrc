@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/04/17 13:46:17 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2006/05/22 22:58:19 wiz Exp $
 #
 
 DISTNAME=	xsidplay-1.6.5.1a
@@ -11,9 +11,9 @@ MAINTAINER=	pooka@NetBSD.org
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/
 COMMENT=	Commodore 64 music player and SID chip emulator for X11
 
-USE_LIBTOOL=		yes
-
 GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
 
