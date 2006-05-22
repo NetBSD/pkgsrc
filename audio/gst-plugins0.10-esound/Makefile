@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/30 21:20:59 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2006/05/22 16:32:37 drochner Exp $
 #
 
 GST_PLUGINS0.10_NAME=	esound
 GST_PLUGINS0.10_DIRS=	ext/esd
-GST_PLUGINS0.10_FLAG=	esd
+GST_PLUGINS0.10_FLAGS=	esd
 
 .include "../../multimedia/gst-plugins0.10-good/Makefile.common"
 
