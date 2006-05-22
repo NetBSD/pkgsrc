@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/17 13:46:29 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/22 19:28:07 wiz Exp $
 #
 
 DISTNAME=		orbital_eunuchs_sniper-1.29
@@ -13,6 +13,7 @@ COMMENT=		Overhead shooting game
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-games-dir=${PREFIX}/libexec
 
+USE_LANGUAGES=		c c++
 REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	.*/bin/bash
 REPLACE.bash.new=	${SH}
