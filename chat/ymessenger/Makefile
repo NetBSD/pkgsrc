@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/05/02 14:13:11 gdt Exp $
+# $NetBSD: Makefile,v 1.16 2006/05/22 22:22:02 jlam Exp $
 
 DISTNAME=		ymessenger-1.0.4
 CATEGORIES=		chat
@@ -22,8 +22,6 @@ DEPENDS+=		suse_gdk-pixbuf>=6.4:../../emulators/${SUSE_DIR_PREFIX}_gdk-pixbuf
 .endif
 
 ONLY_FOR_PLATFORM=	*-*-i386
-
-CHECK_SHLIBS=		no
 
 DIST_SUBDIR=		.
 

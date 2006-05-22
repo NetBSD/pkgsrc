@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/03/11 04:36:59 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2006/05/22 22:22:03 jlam Exp $
 
 DISTNAME=	Rollemup
 PKGNAME=	rollemup-1.0
@@ -39,7 +39,6 @@ ONLY_FOR_PLATFORM=	*-*-i386
 .if ${OPSYS} == "NetBSD"
 DEPENDS+=	suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=	suse_x11>=6.1:../../emulators/${SUSE_DIR_PREFIX}_x11
-CHECK_SHLIBS=	no
 .endif
 
 INSTALLATION_DIRS=	bin

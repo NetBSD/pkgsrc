@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/04 21:29:37 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/05/22 22:22:03 jlam Exp $
 
 DISTNAME=	VMware-2.0.4-1142
 PKGNAME=	vmware-2.0.4
@@ -25,7 +25,6 @@ DEPENDS+=	suse_vmware>=6.4nb1:../../emulators/${SUSE_DIR_PREFIX}_vmware
 LICENSE=	vmware-license
 
 WRKSRC=		${WRKDIR}/vmware-distrib
-CHECK_SHLIBS=	NO
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 

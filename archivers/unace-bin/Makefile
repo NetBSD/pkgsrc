@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/05/17 06:12:27 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/22 22:22:02 jlam Exp $
 #
 
 DISTNAME=	linunace25
@@ -28,7 +28,6 @@ DEPENDS+=	suse_compat>=6.1:../../emulators/${SUSE_DIR_PREFIX}_compat
 
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
-CHECK_SHLIBS=	NO
 
 INSTALLATION_DIRS=	bin
 
