@@ -1,0 +1,35 @@
+$NetBSD: patch-af,v 1.1.2.2 2006/05/22 14:21:47 salo Exp $
+
+From dovecot CVS: fix problem with non-C99 compilers.
+
+--- src/master/master-settings.c.orig	2006-04-25 11:00:07.000000000 +0900
++++ src/master/master-settings.c
+@@ -366,7 +366,6 @@ struct settings default_settings = {
+ 	MEMBER(pop3_logout_format) "top=%t/%p, retr=%r/%b, del=%d/%m, size=%s",
+ 
+ 	/* .. */
+-	MEMBER(login_uid) 0,
+ 	MEMBER(listen_fd) -1,
+ 	MEMBER(ssl_listen_fd) -1
+ };
+--- src/master/master-settings.h.orig	2006-04-15 11:00:07.000000000 +0900
++++ src/master/master-settings.h
+@@ -116,14 +116,15 @@ struct settings {
+ 	const char *pop3_logout_format;
+ 
+ 	/* .. */
+-	uid_t login_uid;
++	int listen_fd, ssl_listen_fd;
+ 
+-	const char *imap_generated_capability;
++	uid_t login_uid;
+ 
+-	int listen_fd, ssl_listen_fd;
+ 	struct ip_addr listen_ip, ssl_listen_ip;
+ 	unsigned int listen_port, ssl_listen_port;
+ 
++	const char *imap_generated_capability;
++
+ 	array_t ARRAY_DEFINE(plugin_envs, const char *);
+ };
+ 
