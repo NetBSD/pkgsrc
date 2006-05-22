@@ -1,9 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/01/29 15:56:42 shannonjr Exp $
+$NetBSD: patch-aa,v 1.2 2006/05/22 11:49:51 shannonjr Exp $
 
---- configure.orig	2005-11-24 04:46:20.000000000 -0700
+--- configure.orig	2006-05-17 08:14:52.000000000 -0600
 +++ configure
-@@ -30610,7 +30610,7 @@ _ACEOF
- configdir=$sysconfdir/prelude-lml
+@@ -30584,10 +30584,10 @@ _ACEOF
+ 
+ 
+ 
+-configdir=$sysconfdir/prelude-lml
++configdir=$sysconfdir
  prelude_lml_conf=$configdir/prelude-lml.conf
  regex_conf=$configdir/plugins.rules
 -metadata_dir=$localstatedir/lib/prelude-lml
@@ -11,3 +15,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/01/29 15:56:42 shannonjr Exp $
  plugindir=$libdir/prelude-lml
  log_plugin_dir=$plugindir
  
+@@ -31971,6 +31971,8 @@ do
+ _ACEOF
+ cat >>$CONFIG_STATUS <<\_ACEOF
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++    # Avoid regenerating for rechecks on pkgsrc
++    exit 0
+     ac_cs_recheck=: ;;
+   --version | --vers* | -V )
+     echo "$ac_cs_version"; exit 0 ;;
