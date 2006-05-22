@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2006/03/26 15:58:51 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.33.2.1 2006/05/22 14:15:25 salo Exp $
 #
 # Makefile fragment shared with libmilter
 #
@@ -10,9 +10,6 @@ MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/ \
 		ftp://ftp.ayamura.org/pub/sendmail/
 
-PATCH_SITES=	${MASTER_SITES}
-PATCHFILES=	8.13.5.p0
-
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.sendmail.org/
 
@@ -22,7 +19,7 @@ DISTINFO_FILE?=	${.CURDIR}/../../mail/sendmail/distinfo
 FILESDIR?=	${.CURDIR}/../../mail/sendmail/files
 PATCHDIR?=	${.CURDIR}/../../mail/sendmail/patches
 
-DIST_VERS=	8.13.5
+DIST_VERS=	8.13.6
 
 MAKE_ENV+=	BSD_BINOWN=${BINOWN:Q} BSD_BINGRP=${BINGRP:Q} \
 		BSD_MANOWN=${MANOWN:Q} BSD_MANGRP=${MANGRP:Q} \
