@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/04/22 09:22:13 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2006/05/22 08:19:06 rillig Exp $
 
 PKGNAME=	acroread3-3.01
 PKGREVISION=	2
@@ -22,31 +22,31 @@ NO_BUILD=	YES
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
-.if (${MACHINE_ARCH} == "i386")
+.  if (${MACHINE_ARCH} == "i386")
 SUSE_PREFER=	7.3	# Does not work with 9.1
 DEPENDS+=	suse_libc5>=6.3:../../emulators/${SUSE_DIR_PREFIX}_libc5
 DEPENDS+=	suse_x11>=6.3:../../emulators/${SUSE_DIR_PREFIX}_x11
 DISTNAME=	acroread_linux_301
 PLATFORM=	intellinux
 CHECK_SHLIBS=	no
-.elif (${MACHINE_ARCH} == "alpha")
-.if !exists(/emul/osf1/sbin/loader)
+.  elif (${MACHINE_ARCH} == "alpha")
+.    if !exists(/emul/osf1/sbin/loader)
 PKG_FAIL_REASON+=	"${PKGNAME} requires Digital UNIX libraries - see compat_osf1(8)"
-.endif
+.    endif
 DISTNAME=	acroread_osf_301
 PLATFORM=	alphaosf
 LDD?=		${TRUE}
-.elif (${MACHINE_ARCH} == "sparc")
-.if !exists(/emul/sunos/usr/lib/ld.so)
+.  elif (${MACHINE_ARCH} == "sparc")
+.    if !exists(/emul/sunos/usr/lib/ld.so)
 PKG_FAIL_REASON+=	"${PKGNAME} requires SunOS libraries - see compat_sunos(8)"
-.endif
+.    endif
 DISTNAME=	acroread_sunos_301
 PLATFORM=	sparcsun
 LDD?=		${TRUE}
-.else
+.  else
 DISTNAME=	${PKGNAME}
 LDD?=		${TRUE}
-.endif
+.  endif
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc # *-*-alpha
 .elif ${OPSYS} == "SunOS"
 DISTNAME=	acroread_solaris_301
@@ -67,15 +67,15 @@ pre-install:
 #	${SED} -e 's|@PLATFORM@|${PLATFORM}|g' ${PKGDIR}/PLIST > ${PLIST_SRC}
 
 do-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/Acrobat3
-	@${ECHO} accept | PAGER=${CAT} ReadInstallDir=${PREFIX}/Acrobat3 ${WRKSRC}/INSTALL
+	${INSTALL_DATA_DIR} ${PREFIX}/Acrobat3
+	${ECHO} accept | PAGER=${CAT:Q} ReadInstallDir=${PREFIX}/Acrobat3 ${WRKSRC}/INSTALL
 
 post-install:
-	@cd ${PREFIX}/Acrobat3/bin && \
+	cd ${PREFIX}/Acrobat3/bin && \
 	  ${PATCH} ${_PATCH_BACKUP_ARG} .orig --quiet < ${FILESDIR}/acroread.diff && \
 	  ${INSTALL_SCRIPT} ${PREFIX}/Acrobat3/bin/acroread \
 	     ${PREFIX}/bin/acroread3 && ${RM} acroread.orig
-	@${CHMOD} +x ${PREFIX}/bin/acroread3
+	${CHMOD} +x ${PREFIX}/bin/acroread3
 	@${ECHO_MSG} "Be sure to read the license agreement in"
 	@${ECHO_MSG} "${PREFIX}/Acrobat3/Reader/License.pdf"
 
