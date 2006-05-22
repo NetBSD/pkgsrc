@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/04/28 16:19:08 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/05/22 16:47:05 wiz Exp $
 #
 
 DISTNAME=	tuxracer-0.61
@@ -20,6 +20,7 @@ CFLAGS+=	-DGLX_GLXEXT_PROTOTYPES
 CONFIGURE_ARGS+=	--with-data-dir=${PREFIX}/share/tuxracer
 CONFIGURE_ARGS+=	--with-tcl-libs=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:Q}
+USE_LANGUAGES=	c c++
 
 post-install:
 	@-${MKDIR} ${PREFIX}/share/doc/html/tuxracer ${PREFIX}/share/examples/tuxracer ${PREFIX}/share/tuxracer
