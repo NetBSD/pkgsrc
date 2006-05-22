@@ -8,11 +8,7 @@ SSYYNNOOPPSSIISS
 
 DDEESSCCRRIIPPTTIIOONN
      ppkkgglliinntt attempts to detect features of the named pkgsrc packages that are
-     likely to be bugs, or that are simply deprecated.  The pkgsrc system is
-     changing rapidly towards even more portability.  The job of ppkkgglliinntt is to
-     define the rules that make up ``good'' packages and to allow automatic
-     conformance tests.  Packages following these rules are assumed to make
-     future changes to the pkgsrc infrastructure easier.
+     likely to be bugs, or that are simply deprecated.
 
    OOppttiioonnss
      --CC{{[[nnoo--]]cchheecckk,,......}}  Enable or disable specific checks.  For a list of
@@ -170,4 +166,4 @@ BBUUGGSS
      If you don't understand the messages, feel free to ask on the
      <tech-pkg@NetBSD.org> mailing list.
 
-pkgsrc                         February 18, 2006                        pkgsrc
+NetBSD 3.0                     February 28, 2006                    NetBSD 3.0
