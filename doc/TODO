@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5001 2006/05/21 18:52:31 ghen Exp $
+$NetBSD: TODO,v 1.5002 2006/05/22 11:06:01 adam Exp $
 
 Suggested new packages
 ======================
@@ -554,7 +554,6 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glabels-2.0.4
 	o gld-1.7
-	o glibmm-2.10.3
 	o glpk-4.10
 	o gnet1-1.1.9
 	o gnetman-20050429
