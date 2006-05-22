@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:29:43 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/05/22 06:47:44 rillig Exp $
 
 DISTNAME=	rocksndiamonds-levels-1.0
 PKGREVISION=	2
@@ -7,7 +7,6 @@ MASTER_SITES=	http://www.artsoft.org/RELEASES/unix/rocksndiamonds/levels/
 DISTFILES=	rockslevels-dx-1.0.tar.gz \
 		rockslevels-emc-1.0.tar.gz \
 		rockslevels-sp-1.0.tar.gz
-WRKSRC=		${WRKDIR}/levels
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.artsoft.org/rocksndiamonds/levels.html
@@ -17,7 +16,8 @@ DEPENDS+=	rocksndiamonds{,-sdl}>=1.4.0:../../games/rocksndiamonds
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-LANGUAGES=	# none
+USE_LANGUAGES=	# none
+WRKSRC=		${WRKDIR}/levels
 
 PLIST_SRC=	${WRKDIR}/PLIST PLIST
 
