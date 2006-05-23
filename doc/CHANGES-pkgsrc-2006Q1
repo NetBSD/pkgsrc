@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.57 2006/05/23 18:44:55 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.58 2006/05/23 23:34:12 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -117,3 +117,5 @@ Pullup ticket 1646 - requested by ghen
 portability build fix for dovecot
 Pullup ticket 1664 - requested by salo
 security update for libextractor
+Pullup ticket 1643 - requested by adrianp
+security update for phpldapadmin
