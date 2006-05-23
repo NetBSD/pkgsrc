@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2006/05/10 16:46:20 tonio Exp $
+# $NetBSD: Makefile.common,v 1.15 2006/05/23 10:30:32 rumble Exp $
 
 DISTNAME=		kaffe-1.1.7
 CATEGORIES=		lang java
@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=	--without-alsa
 CONFIGURE_ARGS+=	--without-esd
 CONFIGURE_ARGS+=	--disable-esdtest
 CONFIGURE_ARGS+=	--disable-fastjar
+CONFIGURE_ARGS+=	--disable-binreloc
 
 .include "../../mk/bsd.prefs.mk"
 
