@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5003 2006/05/22 16:47:46 wiz Exp $
+$NetBSD: TODO,v 1.5004 2006/05/23 08:39:16 tonio Exp $
 
 Suggested new packages
 ======================
@@ -398,7 +398,6 @@ Suggested package updates
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.3
 	o cal3d-0.10.0
-	o camlimages-2.12
 	o capc-calc-2.11.11
 	o catdoc-0.94
 	o catdoc-tk-0.94
