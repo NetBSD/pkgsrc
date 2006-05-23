@@ -10,7 +10,7 @@
   <meta name="generator" content=
   "DocBook XSL Stylesheets VX.X.X" />
   <meta name="description" content=
-  "Information about using the NetBSD package system (pkgsrc) from both a user view for installing packages as well as from a pkgsrc developers' view for creating new packages." />
+  "pkgsrc is a centralized package management system for Unix-like operating systems. This guide provides information for users and developers of pkgsrc. It covers installation of binary and source packages, creation of binary and source packages and a high-level overview about the infrastructure." />
   </head>
 
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084"
@@ -61,23 +61,25 @@ alink="#0000FF">
         </div>
 
         <div>
-          <p class="copyright">Copyright &#169; 1994-2005 The
+          <p class="copyright">Copyright &#169; 1994-2006 The
           NetBSD Foundation, Inc</p>
         </div>
 
         <div xmlns="http://www.w3.org/TR/xhtml1/transitional">
-          <p xmlns="" class="pubdate">$NetBSD: pkgsrc.xml,v 1.16
-          2006/05/12 23:03:22 rillig Exp $</p>
+          <p xmlns="" class="pubdate">$NetBSD: pkgsrc.xml,v 1.18
+          2006/05/19 22:05:09 rillig Exp $</p>
         </div>
 
         <div>
           <div class="abstract">
             <p class="title"><b>Abstract</b></p>
 
-            <p>Information about using the NetBSD package system
-            (pkgsrc) from both a user view for installing packages
-            as well as from a pkgsrc developers' view for creating
-            new packages.</p>
+            <p>pkgsrc is a centralized package management system
+            for Unix-like operating systems. This guide provides
+            information for users and developers of pkgsrc. It
+            covers installation of binary and source packages,
+            creation of binary and source packages and a high-level
+            overview about the infrastructure.</p>
           </div>
         </div>
       </div>
@@ -102,6 +104,14 @@ alink="#0000FF">
 
             <dt><span class="sect1"><a href="#terminology">1.3.
             Terminology</a></span></dt>
+
+            <dd>
+              <dl>
+                <dt><span class="sect2"><a href=
+                "#term.people">1.3.1. People involved in
+                pkgsrc</a></span></dt>
+              </dl>
+            </dd>
 
             <dt><span class="sect1"><a href="#typography">1.4.
             Typography</a></span></dt>
@@ -383,6 +393,11 @@ alink="#0000FF">
                 <dt><span class="sect1"><a href=
                 "#audit-packages">7.15. Automated security
                 checks</a></span></dt>
+
+                <dt><span class="sect1"><a href=
+                "#ufaq-cflags">7.16. Why do some packages ignore my
+                <code class=
+                "varname">CFLAGS</code>?</a></span></dt>
               </dl>
             </dd>
           </dl>
@@ -1001,24 +1016,29 @@ alink="#0000FF">
             <dd>
               <dl>
                 <dt><span class="sect1"><a href=
-                "#submitting-your-package">18.1. Submitting your
-                packages</a></span></dt>
+                "#submitting-binary-packages">18.1. Submitting
+                binary packages</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#general-notes-for-changes">18.2. General notes
+                "#submitting-your-package">18.2. Submitting source
+                packages (for
+                non-NetBSD-developers)</a></span></dt>
+
+                <dt><span class="sect1"><a href=
+                "#general-notes-for-changes">18.3. General notes
                 when adding, updating, or removing
                 packages</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#committing-importing">18.3. Committing: Importing
+                "#committing-importing">18.4. Committing: Importing
                 a package into CVS</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#updating-package">18.4. Updating a package to a
+                "#updating-package">18.5. Updating a package to a
                 newer version</a></span></dt>
 
                 <dt><span class="sect1"><a href=
-                "#moving-package">18.5. Moving a package in
+                "#moving-package">18.6. Moving a package in
                 pkgsrc</a></span></dt>
               </dl>
             </dd>
@@ -1205,6 +1225,13 @@ alink="#0000FF">
 
           <dt><span class="sect1"><a href="#terminology">1.3.
           Terminology</a></span></dt>
+
+          <dd>
+            <dl>
+              <dt><span class="sect2"><a href="#term.people">1.3.1.
+              People involved in pkgsrc</a></span></dt>
+            </dl>
+          </dd>
 
           <dt><span class="sect1"><a href="#typography">1.4.
           Typography</a></span></dt>
@@ -1478,6 +1505,69 @@ alink="#0000FF">
               the actions defined in the corresponding package.</p>
             </dd>
           </dl>
+        </div>
+
+        <div class="sect2" lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title"><a name=
+                "term.people"></a>1.3.1.&nbsp;People involved in
+                pkgsrc</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="variablelist">
+            <dl>
+              <dt><span class="term">pkgsrc users</span></dt>
+
+              <dd>
+                <p>The pkgsrc users are people who use the packages
+                provided by pkgsrc. Typically they are system
+                administrators. The people using the software that
+                is inside the packages (maybe called
+                &#8220;<span class="quote">end users</span>&#8221;)
+                are not covered by the pkgsrc guide.</p>
+
+                <p>There are two kinds of pkgsrc users: Some only
+                want to install pre-built binary packages. Others
+                build the pkgsrc packages from source, either for
+                installing them directly or for building binary
+                packages themselves. For pkgsrc users <a href=
+                "#users-guide" title=
+                "Part&nbsp;I.&nbsp;The pkgsrc user's guide">Part&nbsp;I,
+                &#8220;The pkgsrc user's guide&#8221;</a> should
+                provide all necessary documentation.</p>
+              </dd>
+
+              <dt><span class="term">package
+              maintainers</span></dt>
+
+              <dd>
+                <p>A package maintainer creates packages as
+                described in <a href="#developers-guide" title=
+                "Part&nbsp;II.&nbsp;The pkgsrc developer's guide">Part&nbsp;II,
+                &#8220;The pkgsrc developer's guide&#8221;</a>.</p>
+              </dd>
+
+              <dt><span class="term">infrastructure
+              developers</span></dt>
+
+              <dd>
+                <p>These people are involved in all those files
+                that live in the <code xmlns=
+                "http://www.w3.org/TR/xhtml1/transitional" class=
+                "filename">mk/</code> directory and below. Only
+                these people should need to read through <a href=
+                "#infrastructure" title=
+                "Part&nbsp;III.&nbsp;The pkgsrc infrastructure internals">
+                Part&nbsp;III, &#8220;The pkgsrc infrastructure
+                internals&#8221;</a>, though others might be
+                curious, too.</p>
+              </dd>
+            </dl>
+          </div>
         </div>
       </div>
 
@@ -1782,6 +1872,10 @@ alink="#0000FF">
               <dt><span class="sect1"><a href=
               "#audit-packages">7.15. Automated security
               checks</a></span></dt>
+
+              <dt><span class="sect1"><a href="#ufaq-cflags">7.16.
+              Why do some packages ignore my <code class=
+              "varname">CFLAGS</code>?</a></span></dt>
             </dl>
           </dd>
         </dl>
@@ -5385,6 +5479,10 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
 
             <dt><span class="sect1"><a href="#audit-packages">7.15.
             Automated security checks</a></span></dt>
+
+            <dt><span class="sect1"><a href="#ufaq-cflags">7.16.
+            Why do some packages ignore my <code class=
+            "varname">CFLAGS</code>?</a></span></dt>
           </dl>
         </div>
 
@@ -6276,6 +6374,49 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           &#8220;Variables affecting the build process&#8221;</a>
           for ways to control this check.</p>
         </div>
+
+        <div class="sect1" lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "ufaq-cflags"></a>7.16.&nbsp;Why do some packages
+                ignore my <code class="varname">CFLAGS</code>?</h2>
+              </div>
+            </div>
+          </div>
+
+          <p>When you add your own preferences to the <code class=
+          "varname">CFLAGS</code> variable in your <code xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" class=
+          "filename">mk.conf</code>, these flags are passed in
+          environment variables to the <code xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" class=
+          "filename">./configure</code> scripts and to <a href=
+          "http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current">
+          <span class="citerefentry"><span class=
+          "refentrytitle">make</span>(1)</span></a>. Some package
+          authors ignore the <code class="varname">CFLAGS</code>
+          from the environment variable by overriding them in the
+          <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
+          class="filename">Makefile</code>s of their package.</p>
+
+          <p>Currently there is no solution to this problem. If you
+          really need the package to use your <code class=
+          "varname">CFLAGS</code> you should run
+          <span><strong class="command">make patch</strong></span>
+          in the package directory and then inspect any
+          <code xmlns="http://www.w3.org/TR/xhtml1/transitional"
+          class="filename">Makefile</code> and <code xmlns=
+          "http://www.w3.org/TR/xhtml1/transitional" class=
+          "filename">Makefile.in</code> for whether they define
+          <code class="varname">CFLAGS</code> explicitly. Usually
+          you can remove these lines. But be aware that some
+          &#8220;<span class="quote">smart</span>&#8221;
+          programmers write so bad code that it only works for the
+          specific combination of <code class=
+          "varname">CFLAGS</code> they have chosen.</p>
+        </div>
       </div>
     </div>
 
@@ -6887,24 +7028,28 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           <dd>
             <dl>
               <dt><span class="sect1"><a href=
-              "#submitting-your-package">18.1. Submitting your
+              "#submitting-binary-packages">18.1. Submitting binary
               packages</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#general-notes-for-changes">18.2. General notes when
+              "#submitting-your-package">18.2. Submitting source
+              packages (for non-NetBSD-developers)</a></span></dt>
+
+              <dt><span class="sect1"><a href=
+              "#general-notes-for-changes">18.3. General notes when
               adding, updating, or removing
               packages</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#committing-importing">18.3. Committing: Importing a
+              "#committing-importing">18.4. Committing: Importing a
               package into CVS</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#updating-package">18.4. Updating a package to a
+              "#updating-package">18.5. Updating a package to a
               newer version</a></span></dt>
 
               <dt><span class="sect1"><a href=
-              "#moving-package">18.5. Moving a package in
+              "#moving-package">18.6. Moving a package in
               pkgsrc</a></span></dt>
             </dl>
           </dd>
@@ -7748,7 +7893,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
           backslash is followed by a newline, any whitespace
           immediately in front of the backslash, the backslash, the
           newline, and any whitespace immediately behind the
-          newline are replaced with a single space. A backspace
+          newline are replaced with a single space. A backslash
           character and an immediately following hash character are
           replaced with a single hash character. Otherwise, the
           backslash is passed as is. In a variable assignment, any
@@ -13252,21 +13397,14 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             <p>If the download can't be automated, because the user
             must submit personal information to apply for a
             password, or must pay for the source, or whatever, you
-            can set <code class="varname">_FETCH_MESSAGE</code> to
-            a macro which displays a message explaining the
-            situation. <code class="varname">_FETCH_MESSAGE</code>
-            must be executable shell commands, not just a message.
-            (Generally, it executes <code class=
-            "varname">${ECHO}</code>). See one of the following
-            packages for an example: <a xmlns=
-            "http://www.w3.org/TR/xhtml1/transitional" href=
-            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/fonts/acroread-jpnfont/README.html"
-            target="_top"><code xmlns="" class=
-            "filename">fonts/acroread-jpnfont</code></a>, <a xmlns=
-            "http://www.w3.org/TR/xhtml1/transitional" href=
-            "ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/storage-manager/README.html"
-            target="_top"><code xmlns="" class=
-            "filename">sysutils/storage-manager</code></a>.</p>
+            can set <code class="varname">FETCH_MESSAGE</code> to a
+            list of lines that are displayed to the user before
+            aborting the build. Example:</p>
+            <pre class="programlisting">
+    FETCH_MESSAGE=  "Please download the files"
+    FETCH_MESSAGE+= "    "${DISTFILES:Q}
+    FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
+</pre>
           </div>
 
           <div class="sect2" lang="en">
@@ -15129,22 +15267,26 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 
           <dl>
             <dt><span class="sect1"><a href=
-            "#submitting-your-package">18.1. Submitting your
+            "#submitting-binary-packages">18.1. Submitting binary
             packages</a></span></dt>
 
             <dt><span class="sect1"><a href=
-            "#general-notes-for-changes">18.2. General notes when
+            "#submitting-your-package">18.2. Submitting source
+            packages (for non-NetBSD-developers)</a></span></dt>
+
+            <dt><span class="sect1"><a href=
+            "#general-notes-for-changes">18.3. General notes when
             adding, updating, or removing packages</a></span></dt>
 
             <dt><span class="sect1"><a href=
-            "#committing-importing">18.3. Committing: Importing a
+            "#committing-importing">18.4. Committing: Importing a
             package into CVS</a></span></dt>
 
             <dt><span class="sect1"><a href=
-            "#updating-package">18.4. Updating a package to a newer
+            "#updating-package">18.5. Updating a package to a newer
             version</a></span></dt>
 
-            <dt><span class="sect1"><a href="#moving-package">18.5.
+            <dt><span class="sect1"><a href="#moving-package">18.6.
             Moving a package in pkgsrc</a></span></dt>
           </dl>
         </div>
@@ -15154,68 +15296,22 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "submitting-your-package"></a>18.1.&nbsp;Submitting
-                your packages</h2>
+                "submitting-binary-packages"></a>18.1.&nbsp;Submitting
+                binary packages</h2>
               </div>
             </div>
           </div>
 
-          <p>You have to separate between binary and
-          &#8220;<span class="quote">normal</span>&#8221; (source)
-          packages here:</p>
-
-          <div class="itemizedlist">
-            <ul type="disc">
-              <li>
-                <p>precompiled binary packages</p>
-
-                <p>Our policy is that we accept binaries only from
-                pkgsrc developers to guarantee that the packages
-                don't contain any trojan horses etc. This is not to
-                annoy anyone but rather to protect our users!
-                You're still free to put up your home-made binary
-                packages and tell the world where to get them.
-                NetBSD developers doing bulk builds and wanting to
-                upload them please see <a href="#bulk-upload"
-                title="6.3.8.&nbsp;Uploading results of a bulk build">
-                Section&nbsp;6.3.8, &#8220;Uploading results of a
-                bulk build&#8221;</a>.</p>
-              </li>
-
-              <li>
-                <p>packages</p>
-
-                <p>First, check that your package is complete,
-                compiles and runs well; see <a href="#debug" title=
-                "Chapter&nbsp;17.&nbsp;Debugging">Chapter&nbsp;17,
-                <i>Debugging</i></a> and the rest of this document.
-                Next, generate an uuencoded gzipped <a href=
-                "http://netbsd.gw.com/cgi-bin/man-cgi?tar+1+NetBSD-current">
-                <span class="citerefentry"><span class=
-                "refentrytitle">tar</span>(1)</span></a> archive,
-                preferably with all files in a single directory.
-                Finally, <span><strong class=
-                "command">send-pr</strong></span> with category
-                &#8220;<span class="quote">pkg</span>&#8221;, a
-                synopsis which includes the package name and
-                version number, a short description of your package
-                (contents of the COMMENT variable or DESCR file are
-                OK) and attach the archive to your PR.</p>
-
-                <p>If you want to submit several packages, please
-                send a separate PR for each one, it's easier for us
-                to track things that way.</p>
-
-                <p>Alternatively, you can also import new packages
-                into pkgsrc-wip (&#8220;<span class="quote">pkgsrc
-                work-in-progress</span>&#8221;); see the homepage
-                at <a href="http://pkgsrc-wip.sourceforge.net/"
-                target=
-                "_top">http://pkgsrc-wip.sourceforge.net/</a> for
-                details.</p>
-              </li>
-            </ul>
-          </div>
+          <p>Our policy is that we accept binaries only from pkgsrc
+          developers to guarantee that the packages don't contain
+          any trojan horses etc. This is not to annoy anyone but
+          rather to protect our users! You're still free to put up
+          your home-made binary packages and tell the world where
+          to get them. NetBSD developers doing bulk builds and
+          wanting to upload them please see <a href="#bulk-upload"
+          title=
+          "6.3.8.&nbsp;Uploading results of a bulk build">Section&nbsp;6.3.8,
+          &#8220;Uploading results of a bulk build&#8221;</a>.</p>
         </div>
 
         <div class="sect1" lang="en">
@@ -15223,7 +15319,46 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "general-notes-for-changes"></a>18.2.&nbsp;General
+                "submitting-your-package"></a>18.2.&nbsp;Submitting
+                source packages (for non-NetBSD-developers)</h2>
+              </div>
+            </div>
+          </div>
+
+          <p>First, check that your package is complete, compiles
+          and runs well; see <a href="#debug" title=
+          "Chapter&nbsp;17.&nbsp;Debugging">Chapter&nbsp;17,
+          <i>Debugging</i></a> and the rest of this document. Next,
+          generate an uuencoded gzipped <a href=
+          "http://netbsd.gw.com/cgi-bin/man-cgi?tar+1+NetBSD-current">
+          <span class="citerefentry"><span class=
+          "refentrytitle">tar</span>(1)</span></a> archive,
+          preferably with all files in a single directory. Finally,
+          <span><strong class="command">send-pr</strong></span>
+          with category &#8220;<span class=
+          "quote">pkg</span>&#8221;, a synopsis which includes the
+          package name and version number, a short description of
+          your package (contents of the COMMENT variable or DESCR
+          file are OK) and attach the archive to your PR.</p>
+
+          <p>If you want to submit several packages, please send a
+          separate PR for each one, it's easier for us to track
+          things that way.</p>
+
+          <p>Alternatively, you can also import new packages into
+          pkgsrc-wip (&#8220;<span class="quote">pkgsrc
+          work-in-progress</span>&#8221;); see the homepage at
+          <a href="http://pkgsrc-wip.sourceforge.net/" target=
+          "_top">http://pkgsrc-wip.sourceforge.net/</a> for
+          details.</p>
+        </div>
+
+        <div class="sect1" lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h2 class="title" style="clear: both"><a name=
+                "general-notes-for-changes"></a>18.3.&nbsp;General
                 notes when adding, updating, or removing
                 packages</h2>
               </div>
@@ -15285,7 +15420,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "committing-importing"></a>18.3.&nbsp;Committing:
+                "committing-importing"></a>18.4.&nbsp;Committing:
                 Importing a package into CVS</h2>
               </div>
             </div>
@@ -15334,7 +15469,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "updating-package"></a>18.4.&nbsp;Updating a
+                "updating-package"></a>18.5.&nbsp;Updating a
                 package to a newer version</h2>
               </div>
             </div>
@@ -15385,7 +15520,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             <div>
               <div>
                 <h2 class="title" style="clear: both"><a name=
-                "moving-package"></a>18.5.&nbsp;Moving a package in
+                "moving-package"></a>18.6.&nbsp;Moving a package in
                 pkgsrc</h2>
               </div>
             </div>
@@ -15492,20 +15627,20 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 
         <div class="qandaset">
           <dl>
-            <dt>19.1. <a href="#id2654342">What is the difference
+            <dt>19.1. <a href="#id2654583">What is the difference
             between MAKEFLAGS, .MAKEFLAGS and MAKE_FLAGS?</a></dt>
 
-            <dt>19.2. <a href="#id2654378">What is the difference
+            <dt>19.2. <a href="#id2654619">What is the difference
             between MAKE, GMAKE and MAKE_PROGRAM?</a></dt>
 
-            <dt>19.3. <a href="#id2654417">What is the difference
+            <dt>19.3. <a href="#id2654658">What is the difference
             between CC, PKG_CC and PKGSRC_COMPILER?</a></dt>
 
-            <dt>19.4. <a href="#id2654454">What is the difference
+            <dt>19.4. <a href="#id2654763">What is the difference
             between BUILDLINK_LDFLAGS, BUILDLINK_LDADD and
             BUILDLINK_LIBS?</a></dt>
 
-            <dt>19.5. <a href="#id2654472">Why does make show-var
+            <dt>19.5. <a href="#id2654781">Why does make show-var
             VARNAME=BUILDLINK_PREFIX.foo say it's empty?</a></dt>
           </dl>
 
@@ -15515,8 +15650,8 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             <tbody>
               <tr class="question">
                 <td align="left" valign="top"><a name=
-                "id2654342"></a><a name=
-                "id2654343"></a><b>19.1.</b></td>
+                "id2654583"></a><a name=
+                "id2654584"></a><b>19.1.</b></td>
 
                 <td align="left" valign="top">
                   <p>What is the difference between <code class=
@@ -15545,8 +15680,8 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 
               <tr class="question">
                 <td align="left" valign="top"><a name=
-                "id2654378"></a><a name=
-                "id2654379"></a><b>19.2.</b></td>
+                "id2654619"></a><a name=
+                "id2654620"></a><b>19.2.</b></td>
 
                 <td align="left" valign="top">
                   <p>What is the difference between <code class=
@@ -15577,8 +15712,8 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 
               <tr class="question">
                 <td align="left" valign="top"><a name=
-                "id2654417"></a><a name=
-                "id2654418"></a><b>19.3.</b></td>
+                "id2654658"></a><a name=
+                "id2654659"></a><b>19.3.</b></td>
 
                 <td align="left" valign="top">
                   <p>What is the difference between <code class=
@@ -15609,8 +15744,8 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 
               <tr class="question">
                 <td align="left" valign="top"><a name=
-                "id2654454"></a><a name=
-                "id2654455"></a><b>19.4.</b></td>
+                "id2654763"></a><a name=
+                "id2654764"></a><b>19.4.</b></td>
 
                 <td align="left" valign="top">
                   <p>What is the difference between <code class=
@@ -15630,8 +15765,8 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 
               <tr class="question">
                 <td align="left" valign="top"><a name=
-                "id2654472"></a><a name=
-                "id2654473"></a><b>19.5.</b></td>
+                "id2654781"></a><a name=
+                "id2654782"></a><b>19.5.</b></td>
 
                 <td align="left" valign="top">
                   <p>Why does <span><strong class="command">make
