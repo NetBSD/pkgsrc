@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/04/22 09:22:07 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/05/23 10:57:15 rillig Exp $
 
 DISTNAME=	crosspkg-netbsd1-acorn26-1.6.2
-CATEGORIES=     crosspkgtools
+CATEGORIES=	crosspkgtools
 MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-1.6.2/acorn26/binary/sets/
 EXTRACT_SUFX=	.tgz
 DISTFILES=	base.tgz comp.tgz etc.tgz games.tgz kern-GENERIC.tgz man.tgz \
@@ -29,15 +29,16 @@ NO_BUILD=	YES
 NO_PACKAGE=	needs work to function properly as a binary package
 
 # Dynamically generate the PLIST from the installed files.
-CROSSFS_PLIST_FILES= \
-	(cd ${PREFIX};  ${FIND} crossfs/netbsd1-acorn26 \! -type d -print ) \
+CROSSFS_PLIST_FILES_CMD= \
+	(cd ${PREFIX} && ${FIND} crossfs/netbsd1-acorn26 \! -type d -print ) \
 	| ${SORT} -u
-CROSSFS_PLIST_DIRS= \
-	(cd ${PREFIX};  ${FIND} crossfs/netbsd1-acorn26 -type d -print ) \
+CROSSFS_PLIST_DIRS_CMD= \
+	(cd ${PREFIX} && ${FIND} crossfs/netbsd1-acorn26 -type d -print ) \
 	| ${SED} -e "s,^,@unexec ${RMDIR} -p %D/,"			\
-		 -e "s,$$, 2>/dev/null || ${TRUE},"			\
+		 -e "s,\$$, 2>/dev/null || ${TRUE},"			\
 	| ${SORT} -ur
-GENERATE_PLIST+=	${CROSSFS_PLIST_FILES}; ${CROSSFS_PLIST_DIRS};
+GENERATE_PLIST+=	${CROSSFS_PLIST_FILES_CMD};
+GENERATE_PLIST+=	${CROSSFS_PLIST_DIRS_CMD};
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/crossfs/netbsd1-acorn26
