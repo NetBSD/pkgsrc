@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2006/05/18 22:13:46 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/05/23 20:51:44 adrianp Exp $
 share/doc/phpldapadmin/INSTALL
 share/doc/phpldapadmin/LICENSE
 share/examples/phpldapadmin/config.php.example
 share/examples/phpldapadmin/phpldapadmin.conf
 share/phpldapadmin/VERSION
+share/phpldapadmin/config/config.php.example
 share/phpldapadmin/doc/README-translation.txt
 share/phpldapadmin/doc/pla-test-i18n.ldif
 share/phpldapadmin/htdocs/add_attr.php
@@ -532,7 +533,7 @@ share/phpldapadmin/tools/unit_test.php
 @dirrm share/phpldapadmin/htdocs/css
 @dirrm share/phpldapadmin/htdocs
 @dirrm share/phpldapadmin/doc
-@dirrm share/phpldapadmin/config
+@unexec ${RMDIR} %D/share/phpldapadmin/config 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/phpldapadmin 2>/dev/null || ${TRUE}
 @dirrm share/examples/phpldapadmin
 @dirrm share/doc/phpldapadmin
