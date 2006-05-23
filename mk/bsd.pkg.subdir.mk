@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.62 2006/05/22 17:10:41 joerg Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.63 2006/05/23 15:20:17 joerg Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -201,7 +201,7 @@ show-distfiles:
 
 .PHONY: show-subdir-var
 show-subdir-var:
-	@${ECHO} ${SUBDIR:Q}
+	@${ECHO} ${${VARNAME}:Q}
 
 # Print out a script to fetch all needed files (no checksumming).
 #
