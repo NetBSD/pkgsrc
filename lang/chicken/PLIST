@@ -1,19 +1,17 @@
-@comment $NetBSD: PLIST,v 1.12 2006/04/05 06:27:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/05/23 10:25:47 tonio Exp $
 bin/chicken
-bin/chicken-config
 bin/chicken-profile
 bin/chicken-setup
 bin/chicken-static
 bin/csc
 bin/csi
 bin/csi-static
-include/c_defaults.h
 include/chicken-config.h
+include/chicken-defaults.h
 include/chicken.h
 info/chicken.info
 lib/libchicken.la
 lib/libuchicken.la
-man/man1/chicken-config.1
 man/man1/chicken-profile.1
 man/man1/chicken-setup.1
 man/man1/chicken.1
