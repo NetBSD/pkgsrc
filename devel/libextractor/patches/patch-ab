@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2006/05/01 21:06:56 adam Exp $
+$NetBSD: patch-ab,v 1.5 2006/05/23 10:52:22 adam Exp $
 
---- src/main/extractor.c.orig	2006-04-29 07:26:04.000000000 +0200
+--- src/main/extractor.c.orig	2006-05-17 05:01:12.000000000 +0200
 +++ src/main/extractor.c
-@@ -206,7 +206,6 @@ libextractor_id3v24:\
+@@ -211,7 +211,6 @@ libextractor_id3v24:\
  libextractor_mime:\
  libextractor_tar:\
  libextractor_dvi:\
