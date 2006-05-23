@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2006/05/01 21:06:56 adam Exp $
+# $NetBSD: Makefile,v 1.17 2006/05/23 10:52:22 adam Exp $
 
-DISTNAME=	libextractor-0.5.13
+DISTNAME=	libextractor-0.5.14
 CATEGORIES=	devel
 MASTER_SITES=	http://gnunet.org/libextractor/download/
 
@@ -9,6 +9,7 @@ HOMEPAGE=	http://gnunet.org/libextractor/
 COMMENT=	Metadata extractor for various file data types
 
 USE_LIBTOOL=		yes
+USE_LANGUAGES=		c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
@@ -26,6 +27,7 @@ SHLIBTOOL_OVERRIDE+=	${WRKSRC}/libtool
 .include "../../devel/libltdl/convenience.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
