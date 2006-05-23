@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2006/02/04 11:54:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/05/23 10:17:20 adam Exp $
 bin/glpsol
 bin/tspsol
 include/glpavl.h
+include/glpbfi.h
 include/glpdmp.h
 include/glphbm.h
 include/glpiet.h
