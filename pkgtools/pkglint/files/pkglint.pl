@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.590 2006/05/23 09:12:35 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.591 2006/05/23 11:12:25 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1161,16 +1161,19 @@ use constant BASIC_TYPE		=> 1;
 use constant ACLS		=> 2; # Array of ACL entries
 use constant   ACL_SUBJECT_RE	=> 0;
 use constant   ACL_PERMS	=> 1;
+use constant IS_GUESSED		=> 3;
 
 sub new($$$) {
-	my ($class, $kind_of_list, $basic_type, $acls) = @_;
-	my ($self) = ([$kind_of_list, $basic_type, $acls]);
+	my ($class, $kind_of_list, $basic_type, $acls, $guessed) = @_;
+	my ($self) = ([$kind_of_list, $basic_type, $acls, $guessed]);
 	bless($self, $class);
 	return $self;
 }
 
 sub kind_of_list($)	{ return shift(@_)->[KIND_OF_LIST]; }
 sub basic_type($)	{ return shift(@_)->[BASIC_TYPE]; }
+# no getter method for acls
+sub is_guessed($)	{ return shift(@_)->[IS_GUESSED]; }
 
 sub perms($$) {
 	my ($self, $fname, $varcanon) = @_;
@@ -1182,6 +1185,12 @@ sub perms($$) {
 		}
 	}
 	return undef;
+}
+
+sub to_string($) {
+	my ($self) = @_;
+
+	return (["", "InternalList of ", "List of "]->[$self->kind_of_list]) . $self->basic_type;
 }
 
 #== End of PkgLint::Type ==================================================
@@ -1701,7 +1710,7 @@ sub get_vartypes_map() {
 				$basic_type = defined($enums)
 				    ? array_to_hash(split(qr"\s+", $enums))
 				    : $typename;
-				my $type = PkgLint::Type->new($kind_of_list, $basic_type, $acls);
+				my $type = PkgLint::Type->new($kind_of_list, $basic_type, $acls, false);
 				if ($par eq "" || $par eq "*") {
 					$vartypes->{$varname} = $type;
 				}
@@ -2382,6 +2391,7 @@ sub expect_text($$$) {
 
 sub get_variable_type($$) {
 	my ($line, $varname) = @_;
+	my ($type);
 
 	if (exists(get_vartypes_map()->{$varname})) {
 		return get_vartypes_map()->{$varname};
@@ -2390,6 +2400,30 @@ sub get_variable_type($$) {
 	my $varcanon = varname_canon($varname);
 	if (exists(get_vartypes_map()->{$varcanon})) {
 		return get_vartypes_map()->{$varcanon};
+	}
+
+	use constant allow_all => [[ qr".*", "adpsu" ]];
+
+	# Guess the datatype of the variable based on
+	# naming conventions.
+	$type =	  ($varname =~ qr"DIRS$") ? PkgLint::Type->new(LK_EXTERNAL, "Pathmask", allow_all, true)
+		: ($varname =~ qr"(?:DIR|_HOME)$") ? PkgLint::Type->new(LK_NONE, "Pathname", allow_all, true)
+		: ($varname =~ qr"FILES$") ? PkgLint::Type->new(LK_EXTERNAL, "Pathmask", allow_all, true)
+		: ($varname =~ qr"FILE$") ? PkgLint::Type->new(LK_NONE, "Pathname", allow_all, true)
+		: ($varname =~ qr"PATH$") ? PkgLint::Type->new(LK_NONE, "Pathlist", allow_all, true)
+		: ($varname =~ qr"PATHS$") ? PkgLint::Type->new(LK_EXTERNAL, "List of Pathname", allow_all, true)
+		: ($varname =~ qr"_USER$") ? PkgLint::Type->new(LK_NONE, "UserGroupName", allow_all, true)
+		: ($varname =~ qr"_GROUP$") ? PkgLint::Type->new(LK_NONE, "UserGroupName", allow_all, true)
+		: ($varname =~ qr"_ENV$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", allow_all, true)
+		: ($varname =~ qr"_CMD$") ? PkgLint::Type->new(LK_NONE, "ShellCommand", allow_all, true)
+		: ($varname =~ qr"_ARGS$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", allow_all, true)
+		: ($varname =~ qr"_FLAGS$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", allow_all, true)
+		: ($varname =~ qr"_MK$") ? PkgLint::Type->new(LK_NONE, "Unchecked", allow_all, true)
+		: undef;
+
+	if (defined($type)) {
+		$line->log_info("The guessed type of ${varname} is \"" . $type->to_string . "\".");
+		return $type;
 	}
 
 	$opt_debug and $line->log_warning("No type definition found for ${varcanon}.");
@@ -3845,7 +3879,6 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 
 sub checkline_mk_vartype($$$$$) {
 	my ($line, $varname, $op, $value, $comment) = @_;
-	my ($guessed);
 
 	return unless $opt_warn_types;
 
@@ -3853,42 +3886,13 @@ sub checkline_mk_vartype($$$$$) {
 	my $varbase = varname_base($varname);
 	my $varcanon = varname_canon($varname);
 
-	my $type = exists($vartypes->{$varname}) ? $vartypes->{$varname}
-		: exists($vartypes->{$varcanon}) ? $vartypes->{$varcanon}
-		: undef;
+	my $type = get_variable_type($line, $varname);
 
 	if ($op eq "+=") {
 		if ($varbase !~ qr"^_" && $varbase !~ get_regex_plurals()) {
 			$line->log_warning("As ${varname} is modified using \"+=\", its name should indicate plural.");
 		}
 	}
-
-		$guessed = false;
-		if (!defined($type)) {
-			# Guess the datatype of the variable based on
-			# naming conventions.
-			$type =	  ($varname =~ qr"DIRS$") ? PkgLint::Type->new(LK_EXTERNAL, "Pathmask", [])
-				: ($varname =~ qr"(?:DIR|_HOME)$") ? PkgLint::Type->new(LK_NONE, "Pathname", [])
-				: ($varname =~ qr"FILES$") ? PkgLint::Type->new(LK_EXTERNAL, "Pathmask", [])
-				: ($varname =~ qr"FILE$") ? PkgLint::Type->new(LK_NONE, "Pathname", [])
-				: ($varname =~ qr"PATH$") ? PkgLint::Type->new(LK_NONE, "Pathlist", [])
-				: ($varname =~ qr"PATHS$") ? PkgLint::Type->new(LK_EXTERNAL, "List of Pathname", [])
-				: ($varname =~ qr"_USER$") ? PkgLint::Type->new(LK_NONE, "UserGroupName", [])
-				: ($varname =~ qr"_GROUP$") ? PkgLint::Type->new(LK_NONE, "UserGroupName", [])
-				: ($varname =~ qr"_ENV$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", [])
-				: ($varname =~ qr"_CMD$") ? PkgLint::Type->new(LK_NONE, "ShellCommand", [])
-				: ($varname =~ qr"_ARGS$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", [])
-				: ($varname =~ qr"_FLAGS$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", [])
-				: $type;
-			if (defined($type)) {
-				$line->log_info("The guessed type of ${varname} is \"${type}\"."); # FIXME
-			}
-			$guessed = true;
-		}
-
-		if ((!defined($type) || $guessed) && $varname !~ qr"^_MK$") {
-			$opt_debug and $line->log_warning("[checkline_mk_vartype] Untyped variable ${varname}.");
-		}
 
 		if (!defined($type)) {
 			# Cannot check anything if the type is not known.
@@ -3961,7 +3965,7 @@ sub checkline_mk_varassign($$$$$) {
 		} elsif (exists($deprecated->{$varname}) || exists($deprecated->{$varcanon})) {
 			# Ok
 		} else {
-			$line->log_warning("${varname} is defined but not used. Spelling mistake?");
+			$line->log_warning("${varname} is defined, but not used. Spelling mistake?");
 		}
 	}
 
