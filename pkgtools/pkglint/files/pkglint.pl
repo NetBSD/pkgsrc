@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.589 2006/05/23 08:59:47 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.590 2006/05/23 09:12:35 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1581,6 +1581,7 @@ sub get_regex_plurals() {
 		BUILDLINK_LDADD
 		COMMENT
 		EXTRACT_ONLY
+		FETCH_MESSAGE
 		GENERATE_PLIST
 		PLIST_CAT
 		PLIST_PRE
