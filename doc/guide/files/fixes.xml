@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.52 2006/05/10 22:43:15 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.53 2006/05/23 09:09:13 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -478,14 +478,14 @@
 	<para>If the download can't be automated, because the user must
 	submit personal information to apply for a password, or must pay
 	for the source, or whatever, you can set
-	<varname>_FETCH_MESSAGE</varname> to a macro which displays a
-	message explaining the situation.
-	<varname>_FETCH_MESSAGE</varname> must be executable shell
-	commands, not just a message. (Generally, it executes
-	<varname>${ECHO}</varname>). See one of the following packages
-	for an example:
-	<filename role="pkg">fonts/acroread-jpnfont</filename>,
-	<filename role="pkg">sysutils/storage-manager</filename>.</para>
+	<varname>FETCH_MESSAGE</varname> to a list of lines that are
+	displayed to the user before aborting the build. Example:</para>
+
+<programlisting>
+    FETCH_MESSAGE=  "Please download the files"
+    FETCH_MESSAGE+= "    "${DISTFILES:Q}
+    FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
+</programlisting>
 
     </sect2>
 
