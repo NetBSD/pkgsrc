@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1825 2006/05/22 22:22:02 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1826 2006/05/23 07:39:22 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -1292,7 +1292,16 @@ do-fetch:
 	${MAKE} ${MAKEFLAGS} batch-check-distfiles
 .    else
 .      for fetchfile in ${_ALLFILES}
-.        if defined(_FETCH_MESSAGE)
+.        if defined(FETCH_MESSAGE) && !empty(FETCH_MESSAGE)
+	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	${TEST} -f ${DISTDIR:Q}/${fetchfile:Q} || {			\
+		h="==============="; h="$$h$$h$$h$$h$$h";		\
+		${ECHO} "$$h"; ${ECHO} "";				\
+		for l in ${FETCH_MESSAGE}; do ${ECHO} "$$l"; done;	\
+		${ECHO} ""; ${ECHO} "$$h";				\
+		exit 1;							\
+	}
+.        elif defined(_FETCH_MESSAGE)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	file="${fetchfile}";						\
 	if [ ! -f ${DISTDIR}/$$file ]; then				\
