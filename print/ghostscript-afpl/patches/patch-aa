@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/08/12 19:20:20 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2006/05/23 09:37:46 adam Exp $
 
---- src/Makefile.in.orig	Fri Apr 19 15:23:09 2002
+--- src/Makefile.in.orig	2006-05-15 19:35:26.000000000 +0200
 +++ src/Makefile.in
-@@ -63,8 +63,8 @@ datadir = @datadir@
+@@ -60,8 +60,8 @@ datadir = @datadir@
  gsdir = $(datadir)/ghostscript
  gsdatadir = $(gsdir)/$(GS_DOT_VERSION)
  
 -docdir=$(gsdatadir)/doc
 -exdir=$(gsdatadir)/examples
-+docdir=$(datadir)/doc/html/ghostscript
++docdir=$(datadir)/doc/ghostscript
 +exdir=$(datadir)/examples/ghostscript
  GS_DOCDIR=$(docdir)
  
