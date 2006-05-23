@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/04/22 09:22:08 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2006/05/23 20:25:40 wiz Exp $
 
 DISTNAME=	ccgo-0.3.6.2
 PKGREVISION=	3
@@ -11,6 +11,7 @@ COMMENT=	Go board with IGS and gnugo interface
 
 DEPENDS+=	gnugo>=3.4:../../games/gnugo
 
+USE_LANGUAGES=		c c++
 USE_TOOLS+=		msgfmt pkg-config
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
