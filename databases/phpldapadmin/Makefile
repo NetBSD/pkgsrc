@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.20 2006/05/18 22:22:37 adrianp Exp $
+# $NetBSD: Makefile,v 1.21 2006/05/23 20:51:44 adrianp Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
 CATEGORIES=	databases www
+PKGREVISION=	1
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpldapadmin/}
 
 MAINTAINER=	rasputnik@hellooperator.net
 HOMEPAGE=	http://phpldapadmin.sourceforge.net/
 COMMENT=	Set of PHP-scripts to administer an LDAP directory over the WWW
 
+.include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"
 
 DEPENDS+=	php-ldap>=4.1.2:../../databases/php-ldap
@@ -20,23 +22,13 @@ DEPENDS+=	php-dom-[0-9]*:../../textproc/php5-dom
 
 VERSION=	0.9.8.3
 NO_BUILD=	YES
-BUILD_DEFS+=	WWW_USER
 
-CONF_FILES=	${PREFIX}/share/examples/phpldapadmin/config.php.example \
-		${PREFIX}/share/phpldapadmin/config/config.php
+CONF_FILES_PERMS+=  ${PREFIX}/share/examples/phpldapadmin/config.php.example \
+		${PREFIX}/share/phpldapadmin/config/config.php		 \
+		${ROOT_USER} ${ROOT_GROUP} 0644
 CONF_FILES+=	${PREFIX}/share/examples/phpldapadmin/phpldapadmin.conf \
 		${PKG_SYSCONFDIR}/phpldapadmin.conf
-SPECIAL_PERMS=	${PREFIX}/share/phpldapadmin/config/config.php \
-		${WWW_USER} ${ROOT_GROUP} 0600
 PAX_DIRS=	config doc htdocs lib locale templates tools
-
-# NOTE: If you're running apache under an account other than www or
-# are running a different web server under a specific user account
-# you should set WWW_USER in your mk.conf.
-#
-.if !defined(WWW_USER)
-WWW_USER=	${APACHE_USER}
-.endif
 
 do-configure:
 	${SED} -e "s|@LDAPADMINDIR@|${PREFIX}/share/phpldapadmin/htdocs|g" \
@@ -46,15 +38,15 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/phpldapadmin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/phpldapadmin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/phpldapadmin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/phpldapadmin/config
 
 	${INSTALL_DATA} ${WRKSRC}/config/config.php.example \
-		${PREFIX}/share/examples/phpldapadmin
+		${PREFIX}/share/examples/phpldapadmin/config.php.example
 	${INSTALL_DATA} ${WRKDIR}/phpldapadmin.conf \
-		${PREFIX}/share/examples/phpldapadmin
+		${PREFIX}/share/examples/phpldapadmin/phpldapadmin.conf
 
 	${RM} ${WRKSRC}/.cvsignore
 	${RM} ${WRKSRC}/config/.cvsignore
-	${RM} ${WRKSRC}/config/config.php.example
 
 	${INSTALL_DATA} ${WRKSRC}/index.php ${PREFIX}/share/phpldapadmin
 
