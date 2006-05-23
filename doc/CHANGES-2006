@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.306 2006/05/22 20:02:31 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.307 2006/05/23 10:18:52 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2636,3 +2636,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed net/p5-Wais [wiz 2006-05-22]
 	Updated games/exult to 1.2nb4 [wiz 2006-05-22]
 	Updated games/moon-buggy to 1.0nb2 [joerg 2006-05-22]
+	Updated math/glpk to 4.10 [adam 2006-05-22]
