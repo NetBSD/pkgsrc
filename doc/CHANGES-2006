@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.310 2006/05/23 10:54:12 adam Exp $
+$NetBSD: CHANGES-2006,v 1.311 2006/05/23 16:07:26 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2642,3 +2642,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/epiphany to 2.14.1.1 [drochner 2006-05-23]
 	Updated www/epiphany-extensions to 2.14.1.1 [drochner 2006-05-23]
 	Updated devel/libextractor to 0.5.14 [adam 2006-05-23]
+	Updated devel/noweb to 2.9anb3 [joerg 2006-05-23]
