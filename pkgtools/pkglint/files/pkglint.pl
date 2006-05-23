@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.588 2006/05/22 10:22:36 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.589 2006/05/23 08:59:47 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2748,9 +2748,10 @@ sub checkline_mk_text($$) {
 	while ($rest =~ s/(?:^|[^\$])\$\{([-A-Z0-9a-z_]+)(\.[\-0-9A-Z_a-z]+)?(?::[^\}]+)?\}//) {
 		my ($varbase, $varext) = ($1, $2);
 		my $varname = $varbase . (defined($varext) ? $varext : "");
+		my $varcanon = varname_canon($varname);
 		my $instead =
 		      (exists($depr_map->{$varname})) ? $depr_map->{$varname}
-		    : (exists($depr_map->{$varbase})) ? $depr_map->{$varbase}
+		    : (exists($depr_map->{$varcanon})) ? $depr_map->{$varcanon}
 		    : undef;
 
 		if (defined($instead)) {
@@ -3928,7 +3929,8 @@ sub checkline_mk_vartype($$$$$) {
 
 sub checkline_mk_varassign($$$$$) {
 	my ($line, $varname, $op, $value, $comment) = @_;
-	my $varbase = ($varname =~ qr"(.+?)\..*") ? $1 : $varname;
+	my $varbase = varname_base($varname);
+	my $varcanon = varname_canon($varname);
 
 	checkline_mk_vardef($line, $varname, $op);
 
@@ -3947,10 +3949,18 @@ sub checkline_mk_varassign($$$$$) {
 
 	# If the variable is not used and is untyped, it may be a
 	# spelling mistake.
-	if (defined($varuse) && !exists($varuse->{$varname}) && !exists($varuse->{varname_canon($varname)})) {
-		my $vt = get_vartypes_map();
-		if (!exists($vt->{$varname}) && !exists($vt->{varname_canon($varname)})) {
-			$line->log_warning("${varname} is defined, but not used. Spelling mistake?");
+	if (defined($varuse)) {
+		my $vartypes = get_vartypes_map();
+		my $deprecated = get_deprecated_map();
+
+		if (exists($varuse->{$varname}) || exists($varuse->{$varcanon})) {
+			# Ok
+		} elsif (exists($vartypes->{$varname}) || exists($vartypes->{$varcanon})) {
+			# Ok
+		} elsif (exists($deprecated->{$varname}) || exists($deprecated->{$varcanon})) {
+			# Ok
+		} else {
+			$line->log_warning("${varname} is defined but not used. Spelling mistake?");
 		}
 	}
 
@@ -3986,6 +3996,8 @@ sub checkline_mk_varassign($$$$$) {
 
 	if (exists(get_deprecated_map()->{$varname})) {
 		$line->log_warning("Definition of ${varname} is deprecated. ".get_deprecated_map()->{$varname});
+	} elsif (exists(get_deprecated_map()->{$varcanon})) {
+		$line->log_warning("Definition of ${varname} is deprecated. ".get_deprecated_map()->{$varcanon});
 	}
 
 	if ($varname =~ qr"^SITES_") {

@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.93 2006/05/22 07:41:03 rillig Exp $
+# $NetBSD: makevars.map,v 1.94 2006/05/23 08:59:47 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -332,6 +332,7 @@ MASTER_SITE_SUSE	List of URL
 MASTER_SITE_TEX_CTAN	List of URL
 MASTER_SITE_XCONTRIB	List of URL
 MASTER_SITE_XEMACS	List of URL
+MESSAGE			Unchecked []
 MESSAGE_SRC		List of Pathname [m:as,c:a,o:ads]
 MESSAGE_SUBST		List of ShellWord [c:a,m:a,o:a]
 MYSQL_VERSIONS_ACCEPTED	List of { 40 41 50 } [m:s]
@@ -417,7 +418,7 @@ PKG_PRESERVE		Yes [m:s]
 PKG_SHELL		Pathname [m:s,c:s]
 PKG_SHELL.*		Pathname [m:s,c:s]
 PKG_SHLIBTOOL		Pathname
-PKG_SKIP_REASON		List of ShellWord
+PKG_SKIP_REASON		List of ShellWord [*:a]
 PKG_SUGGESTED_OPTIONS	List of Option [o:as,m:as,c:s]
 PKG_SUPPORTED_OPTIONS	List of Option [o:as,m:as,c:s]
 PKG_SYSCONFDIR		Pathname
