@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/05/23 13:00:50 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/23 14:50:20 joerg Exp $
 
 DISTNAME=		gettext-0.14.5
 PKGNAME=		gettext-asprintf-0.14.5
@@ -20,6 +20,6 @@ GNU_CONFIGURE=		yes
 
 BUILD_DIRS=		libasprintf
 
-INFO_DIRS=		# PLIST
+INFO_FILES=		# PLIST
 
 .include "../../mk/bsd.pkg.mk"
