@@ -11,9 +11,10 @@
 	<!ENTITY chap.types SYSTEM "chap.types.xml">
 	<!ENTITY chap.code SYSTEM "chap.code.xml">
 	<!ENTITY chap.statemachines SYSTEM "chap.statemachines.xml">
+	<!ENTITY chap.future SYSTEM "chap.future.xml">
 ]>
 
-<!-- $NetBSD: pkglint.xml,v 1.2 2006/02/28 11:40:15 rillig Exp $ -->
+<!-- $NetBSD: pkglint.xml,v 1.3 2006/05/23 08:10:37 rillig Exp $ -->
 
 <book>
 <title>Design and implementation of &pkglint;</title>
@@ -32,5 +33,6 @@
 &chap.types;
 &chap.code;
 &chap.statemachines;
+&chap.future;
 
 </book>
