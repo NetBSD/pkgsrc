@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.309 2006/05/23 10:32:05 drochner Exp $
+$NetBSD: CHANGES-2006,v 1.310 2006/05/23 10:54:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2641,3 +2641,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/ghostscript-afpl to 8.54 [drochner 2006-05-23]
 	Updated www/epiphany to 2.14.1.1 [drochner 2006-05-23]
 	Updated www/epiphany-extensions to 2.14.1.1 [drochner 2006-05-23]
+	Updated devel/libextractor to 0.5.14 [adam 2006-05-23]
