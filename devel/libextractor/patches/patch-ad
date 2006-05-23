@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2006/03/28 16:42:50 joerg Exp $
+$NetBSD: patch-ad,v 1.5.2.1 2006/05/23 18:42:43 ghen Exp $
 
---- src/plugins/exiv2/Makefile.in.orig	2006-03-28 16:17:07.000000000 +0000
+--- src/plugins/exiv2/Makefile.in.orig	2006-05-17 11:07:31.000000000 +0200
 +++ src/plugins/exiv2/Makefile.in
-@@ -275,11 +275,11 @@ libextractor_exiv2_la_LINK = \
+@@ -292,11 +292,11 @@ libextractor_exiv2_la_LINK = \
    /bin/sh ../../../libtool --mode=link $(CXXLD) -o libextractor_exiv2.la
  
  libextractor_exiv2_la_LDFLAGS = \
