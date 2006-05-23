@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2006/04/17 14:52:12 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2006/05/23 20:43:52 joerg Exp $
 
 DISTNAME=	tetex-src-${TETEX_BIN_VERS}
 PKGNAME=	teTeX-bin-${TETEX_BIN_VERS}
@@ -16,6 +16,7 @@ CONFLICTS+=	teTeX2-bin-[0-9]* omega<0.90.4nb1
 DEPENDS+=	teTeX-share>=2.0.2:../../print/teTeX-share
 DEPENDS+=	dialog>=0.6z:../../misc/dialog
 
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	bison
 INFO_FILES=	# PLIST
 
