@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/05/22 17:20:39 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2006/05/23 09:37:46 adam Exp $
 
 DISTNAME=	ghostscript-8.54
 PKGNAME=	ghostscript-afpl-8.54
@@ -23,17 +23,18 @@ EXTRACT_ONLY=		${GS_SRCS}
 
 GS_RESOURCEDIR=		${PREFIX}/share/ghostscript/Resource
 
+SUBST_CLASSES+=		resdir
+SUBST_STAGE.resdir=	post-extract
+SUBST_MESSAGE.resdir=	Fixing resource directory path
+SUBST_FILES.resdir=	lib/gs_res.ps
+SUBST_SED.resdir=	-e "s|/Resource/|${GS_RESOURCEDIR}/|g"
+
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MKDIR} ${WRKSRC}/obj
 	${MV} ${WRKSRC}/jasper ${WRKSRC}/jasper.dontuse
 	${MV} ${WRKSRC}/libpng ${WRKSRC}/libpng.dontuse
 	${MV} ${WRKSRC}/zlib ${WRKSRC}/zlib.dontuse
-	cd ${WRKSRC}/lib; for file in gs_res.ps; do			\
-		${SED}  -e "s|/Resource/|${GS_RESOURCEDIR}/|g"		\
-			$${file} > $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
-	done
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
