@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.94 2006/05/23 08:59:47 rillig Exp $
+# $NetBSD: makevars.map,v 1.95 2006/05/23 09:12:35 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -241,6 +241,7 @@ FAM_ACCEPTED		List of { fam gamin }
 FAM_DEFAULT		Unchecked []
 FAM_TYPE		Unchecked []
 FETCH_BEFORE_ARGS	List of ShellWord [m:as]
+FETCH_MESSAGE		List of ShellWord [m:as,c:as,o:as]
 FILESDIR		RelativePkgPath [m:s,c:ds]
 FILES_SUBST		List of ShellWord [*:a]
 FILES_SUBST_SED		List of ShellWord
@@ -288,6 +289,7 @@ JAVA_CLASSPATH		ShellWord
 JAVA_NAME		Filename
 JAVA_UNLIMIT		List of { cmdsize datasize stacksize }
 JAVA_WRAPPERS		InternalList of Filename
+JAVA_WRAPPER_BIN.*	Pathname [m:s,c:ds]
 KRB5BASE		Unchecked []
 KRB5_ACCEPTED		List of { heimdal mit-krb5 }
 KRB5_DEFAULT		Unchecked []
