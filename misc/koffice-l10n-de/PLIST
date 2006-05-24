@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/05/24 12:57:52 markd Exp $
 share/doc/kde/HTML/de/kchart/common
 share/doc/kde/HTML/de/kchart/index.cache.bz2
 share/doc/kde/HTML/de/kchart/index.docbook
@@ -75,6 +75,7 @@ share/doc/kde/HTML/de/kword/Tut3.png
 share/doc/kde/HTML/de/kword/Tut4.png
 share/doc/kde/HTML/de/kword/Tut7.png
 share/doc/kde/HTML/de/kword/Tut8.png
+share/doc/kde/HTML/de/kword/a11y.docbook
 share/doc/kde/HTML/de/kword/auto1.png
 share/doc/kde/HTML/de/kword/auto2.png
 share/doc/kde/HTML/de/kword/auto3.png
