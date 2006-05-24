@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2006/05/15 11:03:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.20 2006/05/24 12:54:45 markd Exp $
 bin/karbon
 bin/kchart
 bin/kexi
@@ -136,6 +136,7 @@ include/kexiutils/kexiutils_export.h
 include/kexiutils/tristate.h
 include/kexiutils/utils.h
 include/kexiutils/validator.h
+include/kis_abstract_colorspace.h
 include/kis_adjustment_layer.h
 include/kis_alpha_mask.h
 include/kis_annotation.h
@@ -145,8 +146,12 @@ include/kis_background.h
 include/kis_basic_histogram_producers.h
 include/kis_boundary.h
 include/kis_brush.h
+include/kis_button_event.h
+include/kis_button_press_event.h
+include/kis_button_release_event.h
 include/kis_canvas_controller.h
 include/kis_canvas_observer.h
+include/kis_canvas_painter.h
 include/kis_canvas_subject.h
 include/kis_channelinfo.h
 include/kis_cmb_composite.h
@@ -154,6 +159,7 @@ include/kis_cmb_idlist.h
 include/kis_color.h
 include/kis_color_cup.h
 include/kis_colorspace.h
+include/kis_colorspace_factory_registry.h
 include/kis_command.h
 include/kis_composite_op.h
 include/kis_config.h
@@ -163,6 +169,7 @@ include/kis_doc.h
 include/kis_doc_iface.h
 include/kis_double_click_event.h
 include/kis_double_widget.h
+include/kis_event.h
 include/kis_exif_info.h
 include/kis_exif_value.h
 include/kis_f16half_base_colorspace.h
@@ -198,6 +205,7 @@ include/kis_iteratorpixeltrait.h
 include/kis_iterators_pixel.h
 include/kis_label_zoom.h
 include/kis_layer.h
+include/kis_layer_visitor.h
 include/kis_layerbox.h
 include/kis_layerlist.h
 include/kis_matrix_widget.ui.h
@@ -207,8 +215,10 @@ include/kis_multi_bool_filter_widget.h
 include/kis_multi_double_filter_widget.h
 include/kis_multi_integer_filter_widget.h
 include/kis_nameserver.h
+include/kis_opengl_image_context.h
 include/kis_paint_device.h
 include/kis_paint_device_iface.h
+include/kis_paint_layer.h
 include/kis_painter.h
 include/kis_paintop.h
 include/kis_paintop_box.h
@@ -349,7 +359,6 @@ lib/kde3/kritahistogramdocker.la
 lib/kde3/kritaimageenhancement.la
 lib/kde3/kritaimagesize.la
 lib/kde3/kritaoilpaintfilter.la
-lib/kde3/kritaperftest.la
 lib/kde3/kritapixelizefilter.la
 lib/kde3/kritaraindropsfilter.la
 lib/kde3/kritargbplugin.la
@@ -3934,7 +3943,6 @@ share/kde/apps/kritaplugins/imageseparate.rc
 share/kde/apps/kritaplugins/imagesize.rc
 share/kde/apps/kritaplugins/kritafiltersgallery.rc
 share/kde/apps/kritaplugins/kritahistogramdocker.rc
-share/kde/apps/kritaplugins/perftest.rc
 share/kde/apps/kritaplugins/rotateimage.rc
 share/kde/apps/kritaplugins/screenshot-krita.rc
 share/kde/apps/kritaplugins/scripting.rc
@@ -4529,7 +4537,6 @@ share/kde/services/kritaimageenhancement.desktop
 share/kde/services/kritaimagesize.desktop
 share/kde/services/kritaoilpaintfilter.desktop
 share/kde/services/kritapart.desktop
-share/kde/services/kritaperftest.desktop
 share/kde/services/kritapixelizefilter.desktop
 share/kde/services/kritaraindropsfilter.desktop
 share/kde/services/kritargbplugin.desktop
