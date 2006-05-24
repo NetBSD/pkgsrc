@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2006/04/12 13:01:41 markd Exp $
+$NetBSD: distinfo,v 1.2 2006/05/24 12:57:53 markd Exp $
 
-SHA1 (koffice-l10n-en_GB-1.5.0.tar.bz2) = 7edeb1f7c3fde2bd4b0c7bdeb9519ab5ac75088e
-RMD160 (koffice-l10n-en_GB-1.5.0.tar.bz2) = 7a060523241db5097abada9756b45c669fdf3cdb
-Size (koffice-l10n-en_GB-1.5.0.tar.bz2) = 343378 bytes
+SHA1 (koffice-l10n-en_GB-1.5.1.tar.bz2) = 71adc9196830aad894364758556948bbe5bb5021
+RMD160 (koffice-l10n-en_GB-1.5.1.tar.bz2) = 2a5a55a20c0cc81b320453ce8d16e24ce58b9750
+Size (koffice-l10n-en_GB-1.5.1.tar.bz2) = 340890 bytes
