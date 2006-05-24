@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.2.2 2006/05/24 00:05:17 salo Exp $
+
+--- elisp/noweb-mode.el.orig	1999-02-16 22:12:21.000000000 +0100
++++ elisp/noweb-mode.el
+@@ -213,7 +213,7 @@ Misc:
+   (add-hook 'isearch-mode-hook 'noweb-note-isearch-mode)
+   (add-hook 'isearch-mode-end-hook 'noweb-note-isearch-mode-end)
+   (run-hooks 'noweb-mode-hook)
+-  (message "nobweb mode: use `M-x noweb-describe-mode' for further information"))
++  (message "noweb mode: use `M-x noweb-describe-mode' for further information"))
+ 
+ (defun noweb-setup-keymap ()
+   "Setup the noweb-mode keymap.  This function is rerun every time the
