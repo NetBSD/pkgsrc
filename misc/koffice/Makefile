@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.81 2006/05/18 20:30:00 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2006/05/24 12:54:45 markd Exp $
 
-DISTNAME=	koffice-1.5.0
-PKGREVISION=	1
+DISTNAME=	koffice-1.5.1
 CATEGORIES=	misc kde
-MASTER_SITES=	${MASTER_SITE_KDE:=koffice-1.5.0/src/}
+MASTER_SITES=	${MASTER_SITE_KDE:=koffice-1.5.1/src/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org
@@ -11,8 +10,6 @@ HOMEPAGE=	http://www.koffice.org/
 COMMENT=	KDE Office Suite
 
 CONFLICTS+=	koffice3-[0-9]*
-
-BROKEN_IN=	pkgsrc-2006Q1
 
 # to unpack krita/plugins/convolutionfilters properly on NetBSD 1.6
 ## EXTRACT_USING=		gtar
