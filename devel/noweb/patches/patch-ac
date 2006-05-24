@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.2.2 2006/05/24 00:05:17 salo Exp $
+
+--- awkname.orig	1995-05-26 02:49:07.000000000 +0200
++++ awkname
+@@ -5,7 +5,7 @@ case $# in
+ esac
+ 
+ rc=0
+-new=/tmp/$$.new; old=/tmp/$$.old
++new=$(@MKTEMP@ -t noweb_new) || exit 1; old=$(@MKTEMP@ -t noweb_old) || exit 1
+ 
+ for file in lib/emptydefn lib/unmarkup lib/toascii \
+                         awk/noidx awk/totex awk/tohtml awk/noindex \
