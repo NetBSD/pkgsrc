@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.311 2006/05/23 16:07:26 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.312 2006/05/24 13:00:52 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2643,3 +2643,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/epiphany-extensions to 2.14.1.1 [drochner 2006-05-23]
 	Updated devel/libextractor to 0.5.14 [adam 2006-05-23]
 	Updated devel/noweb to 2.9anb3 [joerg 2006-05-23]
+	Updated misc/koffice to 1.5.1 [markd 2006-05-24]
+	Updated misc/koffice-l10n-de to 1.5.1 [markd 2006-05-24]
+	Updated misc/koffice-l10n-en_GB to 1.5.1 [markd 2006-05-24]
