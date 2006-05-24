@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.12 2006/03/11 23:32:44 wiz Exp $
+$NetBSD: patch-aa,v 1.12.2.1 2006/05/24 16:55:00 ghen Exp $
 
 --- src/makemake.in.orig	2006-01-23 21:07:27.000000000 +0000
 +++ src/makemake.in
@@ -15,3 +15,12 @@ $NetBSD: patch-aa,v 1.12 2006/03/11 23:32:44 wiz Exp $
    MANDIR="$mandir"
  fi
  if [ $HOS = unix ] ; then
+@@ -1334,7 +1334,7 @@ if [ "${with_dynamic_modules}" != no ]; 
+     freebsd2* | netbsd* | openbsd*)
+       XCC_CREATESHARED='ld -Bshareable -o $lib $libs'
+       ;;
+-    freebsd3* | gnu* | linux* | cygwin* )
++    freebsd3* | gnu* | linux* | cygwin* | dragonfly*)
+       XCC_CREATESHARED='$CC $CFLAGS $CLFLAGS -shared -o $lib $libs'
+       ;;
+     hpux9* | hpux10*)
