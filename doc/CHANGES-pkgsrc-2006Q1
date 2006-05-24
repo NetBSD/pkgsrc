@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.58 2006/05/23 23:34:12 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.59 2006/05/24 00:05:43 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -119,3 +119,5 @@ Pullup ticket 1664 - requested by salo
 security update for libextractor
 Pullup ticket 1643 - requested by adrianp
 security update for phpldapadmin
+Pullup ticket 1665 - requested by joerg
+security fix for noweb
