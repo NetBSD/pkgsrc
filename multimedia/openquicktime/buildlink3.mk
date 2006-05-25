@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:28 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/05/25 09:17:27 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 OPENQUICKTIME_BUILDLINK3_MK:=	${OPENQUICKTIME_BUILDLINK3_MK}+
@@ -17,6 +17,7 @@ BUILDLINK_PKGSRCDIR.openquicktime?=	../../multimedia/openquicktime
 .endif	# OPENQUICKTIME_BUILDLINK3_MK
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
