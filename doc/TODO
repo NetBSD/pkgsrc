@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5007 2006/05/24 19:25:41 adam Exp $
+$NetBSD: TODO,v 1.5008 2006/05/25 10:44:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1063,7 +1063,6 @@ Suggested package updates
 	o rhythmbox-0.9.4.1
 	o rio500-0.8.1
 	o ripmime-1.4.0.6
-	o rman-3.2
 	o robodoc-4.99.6
 	o root-5.04.00
 	o root-tail-1.2
