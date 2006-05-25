@@ -1,18 +1,20 @@
-# $NetBSD: Makefile,v 1.6 2006/04/17 13:46:19 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/25 11:07:04 markd Exp $
 #
 
-DISTNAME=		krecipes-0.8.1
-PKGREVISION=		3
-CATEGORIES=		databases
+DISTNAME=		krecipes-0.9.1
+CATEGORIES=		databases kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=krecipes/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://krecipes.sourceforge.net/
 COMMENT=		Recipe manager
 
-USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_TOOLS+=		msgfmt
+
+CONFIGURE_ARGS+=	--without-mysql --without-postgresql
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"

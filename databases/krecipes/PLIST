@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/05/25 11:07:04 markd Exp $
 bin/krecipes
 share/doc/kde/HTML/da/krecipes/common
 share/doc/kde/HTML/da/krecipes/index.cache.bz2
 share/doc/kde/HTML/da/krecipes/index.docbook
+share/doc/kde/HTML/en/krecipes/1leftarrow.png
+share/doc/kde/HTML/en/krecipes/1rightarrow.png
+share/doc/kde/HTML/en/krecipes/2leftarrow.png
+share/doc/kde/HTML/en/krecipes/2rightarrow.png
 share/doc/kde/HTML/en/krecipes/adv-cat-search.png
 share/doc/kde/HTML/en/krecipes/adv-recipe-found.png
 share/doc/kde/HTML/en/krecipes/adv-search-parts.png
@@ -13,12 +17,14 @@ share/doc/kde/HTML/en/krecipes/categories.png
 share/doc/kde/HTML/en/krecipes/clear_left.png
 share/doc/kde/HTML/en/krecipes/common
 share/doc/kde/HTML/en/krecipes/computer3.png
+share/doc/kde/HTML/en/krecipes/config-email.png
 share/doc/kde/HTML/en/krecipes/configure-shortcuts-adv.png
 share/doc/kde/HTML/en/krecipes/configure-shortcuts-basic.png
 share/doc/kde/HTML/en/krecipes/configure-shortcuts.png
 share/doc/kde/HTML/en/krecipes/configure-toolbars.png
 share/doc/kde/HTML/en/krecipes/diet-help.png
 share/doc/kde/HTML/en/krecipes/down.png
+share/doc/kde/HTML/en/krecipes/editpaste.png
 share/doc/kde/HTML/en/krecipes/enter-recipe-tabs.png
 share/doc/kde/HTML/en/krecipes/filenew.png
 share/doc/kde/HTML/en/krecipes/formatting.png
@@ -37,17 +43,62 @@ share/doc/kde/HTML/en/krecipes/locationbar_erase.png
 share/doc/kde/HTML/en/krecipes/menu.png
 share/doc/kde/HTML/en/krecipes/no.png
 share/doc/kde/HTML/en/krecipes/page-setup.png
+share/doc/kde/HTML/en/krecipes/parser.png
 share/doc/kde/HTML/en/krecipes/performance.png
 share/doc/kde/HTML/en/krecipes/prep-method.png
 share/doc/kde/HTML/en/krecipes/properties.png
+share/doc/kde/HTML/en/krecipes/ratings.png
 share/doc/kde/HTML/en/krecipes/recipe-description-tab.png
 share/doc/kde/HTML/en/krecipes/recipe-ingredients-tab.png
 share/doc/kde/HTML/en/krecipes/recipe-instructions-tab.png
+share/doc/kde/HTML/en/krecipes/restore-msg.png
 share/doc/kde/HTML/en/krecipes/server-settings.png
 share/doc/kde/HTML/en/krecipes/shop-list.png
+share/doc/kde/HTML/en/krecipes/smiley.png
+share/doc/kde/HTML/en/krecipes/submit-bug.png
 share/doc/kde/HTML/en/krecipes/unit-conversions.png
 share/doc/kde/HTML/en/krecipes/units.png
 share/doc/kde/HTML/en/krecipes/up.png
+share/doc/kde/HTML/es/krecipes/adv-cat-search.png
+share/doc/kde/HTML/es/krecipes/adv-search-parts.png
+share/doc/kde/HTML/es/krecipes/adv-srch-multi.png
+share/doc/kde/HTML/es/krecipes/authors-adding.png
+share/doc/kde/HTML/es/krecipes/back.png
+share/doc/kde/HTML/es/krecipes/categories.png
+share/doc/kde/HTML/es/krecipes/clear_left.png
+share/doc/kde/HTML/es/krecipes/configure-shortcuts-adv.png
+share/doc/kde/HTML/es/krecipes/configure-shortcuts-basic.png
+share/doc/kde/HTML/es/krecipes/configure-shortcuts.png
+share/doc/kde/HTML/es/krecipes/configure-toolbars.png
+share/doc/kde/HTML/es/krecipes/diet-help.png
+share/doc/kde/HTML/es/krecipes/down.png
+share/doc/kde/HTML/es/krecipes/enter-recipe-tabs.png
+share/doc/kde/HTML/es/krecipes/filenew.png
+share/doc/kde/HTML/es/krecipes/formatting.png
+share/doc/kde/HTML/es/krecipes/forward.png
+share/doc/kde/HTML/es/krecipes/import-other-sql.png
+share/doc/kde/HTML/es/krecipes/import-recipe-screen.png
+share/doc/kde/HTML/es/krecipes/import-settings.png
+share/doc/kde/HTML/es/krecipes/import-sqlite.png
+share/doc/kde/HTML/es/krecipes/ingredient-match.png
+share/doc/kde/HTML/es/krecipes/ingredients.png
+share/doc/kde/HTML/es/krecipes/krecipes-main.png
+share/doc/kde/HTML/es/krecipes/krectip.png
+share/doc/kde/HTML/es/krecipes/locationbar_erase.png
+share/doc/kde/HTML/es/krecipes/menu.png
+share/doc/kde/HTML/es/krecipes/no.png
+share/doc/kde/HTML/es/krecipes/page-setup.png
+share/doc/kde/HTML/es/krecipes/performance.png
+share/doc/kde/HTML/es/krecipes/prep-method.png
+share/doc/kde/HTML/es/krecipes/properties.png
+share/doc/kde/HTML/es/krecipes/recipe-description-tab.png
+share/doc/kde/HTML/es/krecipes/recipe-ingredients-tab.png
+share/doc/kde/HTML/es/krecipes/recipe-instructions-tab.png
+share/doc/kde/HTML/es/krecipes/server-settings.png
+share/doc/kde/HTML/es/krecipes/shop-list.png
+share/doc/kde/HTML/es/krecipes/unit-conversions.png
+share/doc/kde/HTML/es/krecipes/units.png
+share/doc/kde/HTML/es/krecipes/up.png
 share/doc/kde/HTML/et/krecipes/common
 share/doc/kde/HTML/et/krecipes/index.cache.bz2
 share/doc/kde/HTML/et/krecipes/index.docbook
@@ -90,12 +141,14 @@ share/kde/apps/krecipes/data/abbrev.txt
 share/kde/apps/krecipes/data/data.sql
 share/kde/apps/krecipes/data/samples-cs_CZ.kreml
 share/kde/apps/krecipes/data/samples-en_US.kreml
+share/kde/apps/krecipes/icons/crystalsvg/128x128/mimetypes/krecipes_file.png
 share/kde/apps/krecipes/icons/crystalsvg/16x16/actions/categories.png
 share/kde/apps/krecipes/icons/crystalsvg/16x16/actions/diet.png
 share/kde/apps/krecipes/icons/crystalsvg/16x16/actions/ingredients.png
 share/kde/apps/krecipes/icons/crystalsvg/16x16/actions/properties.png
 share/kde/apps/krecipes/icons/crystalsvg/16x16/actions/trolley.png
 share/kde/apps/krecipes/icons/crystalsvg/16x16/actions/units.png
+share/kde/apps/krecipes/icons/crystalsvg/16x16/mimetypes/krecipes_file.png
 share/kde/apps/krecipes/icons/crystalsvg/22x22/actions/categories.png
 share/kde/apps/krecipes/icons/crystalsvg/22x22/actions/diet.png
 share/kde/apps/krecipes/icons/crystalsvg/22x22/actions/ingredients.png
@@ -109,28 +162,46 @@ share/kde/apps/krecipes/icons/crystalsvg/32x32/actions/krectip.png
 share/kde/apps/krecipes/icons/crystalsvg/32x32/actions/properties.png
 share/kde/apps/krecipes/icons/crystalsvg/32x32/actions/trolley.png
 share/kde/apps/krecipes/icons/crystalsvg/32x32/actions/units.png
+share/kde/apps/krecipes/icons/crystalsvg/32x32/mimetypes/krecipes_file.png
 share/kde/apps/krecipes/icons/crystalsvg/48x48/actions/categories.png
 share/kde/apps/krecipes/icons/crystalsvg/48x48/actions/diet.png
 share/kde/apps/krecipes/icons/crystalsvg/48x48/actions/ingredients.png
 share/kde/apps/krecipes/icons/crystalsvg/48x48/actions/properties.png
 share/kde/apps/krecipes/icons/crystalsvg/48x48/actions/trolley.png
 share/kde/apps/krecipes/icons/crystalsvg/48x48/actions/units.png
+share/kde/apps/krecipes/icons/crystalsvg/64x64/mimetypes/krecipes_file.png
 share/kde/apps/krecipes/krecipesui.rc
 share/kde/apps/krecipes/layouts/default.klo
+share/kde/apps/krecipes/layouts/default_print.klo
 share/kde/apps/krecipes/layouts/one_column.klo
 share/kde/apps/krecipes/pics/dbpermissions.png
 share/kde/apps/krecipes/pics/menubg.png
 share/kde/apps/krecipes/pics/network.png
+share/kde/apps/krecipes/pics/rating0.png
+share/kde/apps/krecipes/pics/rating1.png
+share/kde/apps/krecipes/pics/rating2.png
+share/kde/apps/krecipes/pics/rating3.png
+share/kde/apps/krecipes/pics/rating4.png
+share/kde/apps/krecipes/pics/rating5.png
 share/kde/apps/krecipes/pics/recipes.png
 share/kde/apps/krecipes/pics/save.png
+share/kde/apps/krecipes/pics/star_half.png
+share/kde/apps/krecipes/pics/star_off.png
+share/kde/apps/krecipes/pics/star_on.png
 share/kde/apps/krecipes/pics/startlogo.png
 share/kde/apps/krecipes/pics/wizard.png
+share/kde/icons/crystalsvg/128x128/mimetypes/krecipes_file.png
+share/kde/icons/crystalsvg/16x16/mimetypes/krecipes_file.png
+share/kde/icons/crystalsvg/32x32/mimetypes/krecipes_file.png
+share/kde/icons/crystalsvg/64x64/mimetypes/krecipes_file.png
 share/kde/icons/hicolor/128x128/apps/krecipes.png
 share/kde/icons/hicolor/16x16/apps/krecipes.png
 share/kde/icons/hicolor/22x22/apps/krecipes.png
 share/kde/icons/hicolor/32x32/apps/krecipes.png
 share/kde/icons/hicolor/48x48/apps/krecipes.png
 share/kde/icons/hicolor/64x64/apps/krecipes.png
+share/kde/mimelnk/application/x-krecipes-backup.desktop
+share/kde/mimelnk/application/x-krecipes-recipes.desktop
 share/locale/az/LC_MESSAGES/krecipes.mo
 share/locale/bg/LC_MESSAGES/krecipes.mo
 share/locale/br/LC_MESSAGES/krecipes.mo
@@ -164,22 +235,48 @@ share/locale/sr@Latn/LC_MESSAGES/krecipes.mo
 share/locale/sv/LC_MESSAGES/krecipes.mo
 share/locale/ta/LC_MESSAGES/krecipes.mo
 share/locale/tr/LC_MESSAGES/krecipes.mo
+@comment in kde: @dirrm share/kde/mimelnk/application
+@comment in kde: @dirrm share/kde/icons/hicolor/64x64/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/48x48/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/32x32/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
+@comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
+@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/mimetypes
+@comment in kde: @dirrm share/kde/icons/crystalsvg/32x32/mimetypes
+@comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/mimetypes
+@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/mimetypes
 @dirrm share/kde/apps/krecipes/pics
 @dirrm share/kde/apps/krecipes/layouts
+@dirrm share/kde/apps/krecipes/icons/crystalsvg/64x64/mimetypes
+@dirrm share/kde/apps/krecipes/icons/crystalsvg/64x64
 @dirrm share/kde/apps/krecipes/icons/crystalsvg/48x48/actions
 @dirrm share/kde/apps/krecipes/icons/crystalsvg/48x48
+@dirrm share/kde/apps/krecipes/icons/crystalsvg/32x32/mimetypes
 @dirrm share/kde/apps/krecipes/icons/crystalsvg/32x32/actions
 @dirrm share/kde/apps/krecipes/icons/crystalsvg/32x32
 @dirrm share/kde/apps/krecipes/icons/crystalsvg/22x22/actions
 @dirrm share/kde/apps/krecipes/icons/crystalsvg/22x22
+@dirrm share/kde/apps/krecipes/icons/crystalsvg/16x16/mimetypes
 @dirrm share/kde/apps/krecipes/icons/crystalsvg/16x16/actions
 @dirrm share/kde/apps/krecipes/icons/crystalsvg/16x16
+@dirrm share/kde/apps/krecipes/icons/crystalsvg/128x128/mimetypes
+@dirrm share/kde/apps/krecipes/icons/crystalsvg/128x128
 @dirrm share/kde/apps/krecipes/icons/crystalsvg
 @dirrm share/kde/apps/krecipes/icons
 @dirrm share/kde/apps/krecipes/data
 @dirrm share/kde/apps/krecipes
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde/applnk/Utilities
 @dirrm share/doc/kde/HTML/sv/krecipes
+@comment in kde: @dirrm share/doc/kde/HTML/sv
 @dirrm share/doc/kde/HTML/pt/krecipes
+@comment in kde: @dirrm share/doc/kde/HTML/pt
 @dirrm share/doc/kde/HTML/et/krecipes
+@comment in kde: @dirrm share/doc/kde/HTML/et
+@dirrm share/doc/kde/HTML/es/krecipes
+@comment in kde: @dirrm share/doc/kde/HTML/es
 @dirrm share/doc/kde/HTML/en/krecipes
+@comment in kde: @dirrm share/doc/kde/HTML/en
 @dirrm share/doc/kde/HTML/da/krecipes
+@comment in kde: @dirrm share/doc/kde/HTML/da
