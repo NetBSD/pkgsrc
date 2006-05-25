@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.315 2006/05/25 11:38:58 markd Exp $
+$NetBSD: CHANGES-2006,v 1.316 2006/05/25 12:51:41 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2651,3 +2651,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/tkman to 2.2nb1 [wiz 2006-05-25]
 	Updated databases/krecipes to 0.9.1 [markd 2006-05-25]
 	Updated chat/kmess to 1.4.3 [markd 2006-05-25]
+	Updated sysutils/krusader to 1.70.0 [markd 2006-05-25]
