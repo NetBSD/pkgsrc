@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2006/05/23 20:43:52 joerg Exp $
+# $NetBSD: Makefile,v 1.71 2006/05/25 13:38:57 seb Exp $
 
 DISTNAME=	tetex-src-${TETEX_BIN_VERS}
 PKGNAME=	teTeX-bin-${TETEX_BIN_VERS}
@@ -19,6 +19,8 @@ DEPENDS+=	dialog>=0.6z:../../misc/dialog
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bison
 INFO_FILES=	# PLIST
+
+CHECK_FILES_SKIP+=	${PREFIX}/share/texmf/ls-R
 
 REPLACE_PERL=	texk/xdvik/t1mapper \
 		texk/oxdvik/t1mapper
