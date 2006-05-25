@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2006/03/04 21:31:11 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2006/05/25 10:43:38 wiz Exp $
 
 DISTNAME=		tkman-2.2
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tkman/}
 
@@ -9,11 +10,8 @@ HOMEPAGE=		http://tkman.sourceforge.net/
 COMMENT=		Tcl/Tk based manual browser
 
 DEPENDS+=		glimpse>=4.1:../../textproc/glimpse
+DEPENDS+=		rman>=3.1:../../textproc/rman
 DEPENDS+=		tk>=8.4:../../x11/tk
-
-USE_RMAN=		yes
-
-.include "../../mk/x11.buildlink3.mk"
 
 post-extract:
 .for f in Makefile manpath.tcl
@@ -28,4 +26,5 @@ post-install:
 		${FILESDIR}/mkindex > ${WRKDIR}/mkindex
 	${INSTALL_SCRIPT} ${WRKDIR}/mkindex ${PREFIX}/libexec
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
