@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/04/23 00:12:41 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/05/25 22:49:23 seb Exp $
 #
 
 DISTNAME=		dirmngr-0.9.3
@@ -19,7 +19,7 @@ DIRMNGR_GROUP?=		dirmngr
 PKG_GROUPS=		${DIRMNGR_GROUP}
 PKG_USERS=		${DIRMNGR_USER}:${DIRMNGR_GROUP}
 
-PKG_SHELL.${DIRMNGR_USER}=	${VARBASE}/dirmngr
+PKG_HOME.${DIRMNGR_USER}=	${VARBASE}/dirmngr
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gawk
