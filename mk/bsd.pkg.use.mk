@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.32 2006/04/13 18:23:36 jlam Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.33 2006/05/25 11:00:39 wiz Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -94,18 +94,6 @@ BUILD_DEPENDS+=		libtool-base>=${_OPSYS_LIBTOOL_REQD:U${LIBTOOL_REQD}}:../../dev
 CONFIGURE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 MAKE_ENV+=		LIBTOOL="${LIBTOOL} ${LIBTOOL_FLAGS}"
 LIBTOOL_OVERRIDE?=	libtool */libtool */*/libtool
-.endif
-
-### USE_RMAN
-
-# Check if we got "rman" with XFree86, for packages that need "rman".
-.if defined(USE_RMAN)
-.  if !exists(${X11BASE}/bin/rman)
-DEPENDS+=		rman-3.0.9:../../textproc/rman
-RMAN?=			${LOCALBASE}/bin/rman
-.  else
-RMAN?=			${X11BASE}/bin/rman
-.  endif
 .endif
 
 ### USE_XPKGWEDGE
