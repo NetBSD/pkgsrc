@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.313 2006/05/24 19:25:41 adam Exp $
+$NetBSD: CHANGES-2006,v 1.314 2006/05/25 10:44:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2647,3 +2647,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/koffice-l10n-de to 1.5.1 [markd 2006-05-24]
 	Updated misc/koffice-l10n-en_GB to 1.5.1 [markd 2006-05-24]
 	Updated math/fftw to 3.1.1 [adam 2006-05-24]
+	Updated textproc/rman to 3.2 [wiz 2006-05-25]
+	Updated x11/tkman to 2.2nb1 [wiz 2006-05-25]
