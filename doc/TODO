@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5011 2006/05/25 15:32:05 wiz Exp $
+$NetBSD: TODO,v 1.5012 2006/05/25 15:34:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -369,7 +369,6 @@ Suggested package updates
 	o astyle-1.15.3
 	o autogen-5.8.4
 	o avcheck-0.91
-	o avidemux-2.1.2
 	o avl-2.0.1
 	o avr-libc-1.4.1
 	o avrdude-5.1
@@ -486,9 +485,7 @@ Suggested package updates
 	o enchant-1.2.6
 	o enlightenment-0.16.8.1
 	o enscript-1.6.4
-	o epiphany-2.14.1.1
 	o epiphany-extensions-2.14.0.1 [jmmv]
-	o epiphany-extensions-2.14.1.1
 	o epstool-3.08
 	o eric3-3.9.0
 	o erlang-11
@@ -987,7 +984,6 @@ Suggested package updates
 	o postgresql_autodoc-1.25
 	o powermanga-0.80
 	o prayer-1.0.15
-	o prelude-lml-0.9.5
 	o proj-4.4.9
 	o projclock-0.9
 	o proxsmtp-1.2.1
