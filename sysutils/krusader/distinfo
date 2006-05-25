@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 13:40:54 agc Exp $
+$NetBSD: distinfo,v 1.5 2006/05/25 12:49:39 markd Exp $
 
-SHA1 (krusader-1.51.tar.gz) = f6d3197e8157e1cc91d742c97b6d1f5bc257364c
-RMD160 (krusader-1.51.tar.gz) = c96fcd737f7753f967806d1a49b77c74356a9413
-Size (krusader-1.51.tar.gz) = 2898752 bytes
-SHA1 (patch-aa) = 558c4fef0f14958a6c380e4703c501f86c6d8592
+SHA1 (krusader-1.70.0.tar.gz) = 2fdf0bcc477a698526657a3cc573ae31063c93c2
+RMD160 (krusader-1.70.0.tar.gz) = 12d4f35093113973440870cfa877d8dc4bb62627
+Size (krusader-1.70.0.tar.gz) = 4065460 bytes
