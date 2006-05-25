@@ -1,10 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/12/27 22:17:15 joerg Exp $
+$NetBSD: distinfo,v 1.5 2006/05/25 11:00:25 markd Exp $
 
-SHA1 (kmess-1.1.tar.gz) = b014367b98d73b50dddb4d53aac53f1a2c07e844
-RMD160 (kmess-1.1.tar.gz) = 237b45372b91b377b3b01d3519feebfe003c2015
-Size (kmess-1.1.tar.gz) = 1496331 bytes
-SHA1 (patch-aa) = 7880277aeca41cc8ab1d76e16eacbbd2b41d64fa
-SHA1 (patch-ab) = c2651282f604a35ff12799f75c804507c25bf4b5
-SHA1 (patch-ac) = 3eae828907715fbd54115d5d628ca80d921431f8
-SHA1 (patch-ad) = c7c0ed92ed99648764517b6873494c88cf2c9d82
-SHA1 (patch-ae) = 82495747fe7d34ee3fce91882eadfd330c15b552
+SHA1 (kmess-1.4.3.tar.gz) = 1613c65c7b9ffaa6a1f55396297d25ab7ee3103d
+RMD160 (kmess-1.4.3.tar.gz) = 280bab4275903389d2f7d5b3884df937a83addf7
+Size (kmess-1.4.3.tar.gz) = 1869940 bytes
