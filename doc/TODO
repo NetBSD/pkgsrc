@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5010 2006/05/25 12:51:40 markd Exp $
+$NetBSD: TODO,v 1.5011 2006/05/25 15:32:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -319,13 +319,14 @@ Suggested package updates
 	o XaoS-3.1.1
 	o YoSucker-75
 	o aap-0.144
+	o abcm2ps-4.12.18
 	o acpi-iasl-20040715
 	o adocman-0.13
 	o adodb-4.81
 	o adtool-1.3
 	o aegis-4.22
 	o aewm++-1.0.27
-	o afterstep-2.2.1
+	o afterstep-2.2.2
 	o album-3.11
 	o ald-0.1.6 [pkg/26552]
 	o algae-4.3.6
@@ -418,7 +419,9 @@ Suggested package updates
 	o compface-1.5.2
 	o conglomerate-0.9.1
 	o cook-2.26
-	o coreutils-5.95
+	o coreutils-5.96
+	o courier-imap-4.1.1
+	o courier-mta-0.53.2
 	o cqcam-0.91
 	o crafty-19.5
 	o criticalmass-1.0.0
@@ -426,8 +429,9 @@ Suggested package updates
 	o cstream-2.6.0
 	o cue-20051114 [pkg/33153]
 	o cuetools-1.3.1
-	o cups-1.2.0
+	o cups-1.2.1
 	o cvs2p4-2.5.5 [schmonz]
+	o cvsd-1.0.11
 	o cvsweb-3.0.6
 	o cweb-3.64a
 	o cy-login-1.5.28
@@ -706,6 +710,7 @@ Suggested package updates
 	o libtorrent-0.9.0
 	o licq-core-1.3.0
 	o lilypond-2.8.0
+	o lincvs-1.5.0 [now called CrossVC]
 	o linuxsms-0.77
 	o lmbench-2.5
 	o lout-3.31
@@ -723,7 +728,7 @@ Suggested package updates
 	o manedit-0.6.1
 	o mantis-1.0.3
 	o mapserver-4.2.5
-	o maradns-1.27.0.2
+	o maradns-1.2.07.4
 	o matchbox-1.0
 	o matchbox-panel-0.9.3
 	o md-whois-4.7.8
@@ -760,7 +765,7 @@ Suggested package updates
 	o mserv-devel-0.41
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
-	o multitail-4.0.0
+	o multitail-4.0.4
 	o muse-0.9.1
 	o mysql4-client-4.1.19
 	o mysql4-server-4.1.19
@@ -771,7 +776,7 @@ Suggested package updates
 	o nawk-20041222
 	o ncftp2-2.8.2
 	o ncview-1.92e
-	o neon-0.26.0
+	o neon-0.26.1
 	o netatalk1-1.6.4
 	o netcdf-4.0.0a
 	o netperf-2.4.0
@@ -807,6 +812,7 @@ Suggested package updates
 	o openssh-4.3p2 [pkg/32858]
 	o openssl-0.9.8a
 	o openttd-0.4.7
+	o oregano-0.50.0
 	o oroborus-2.0.15
 	o osh-050219
 	o otpCalc-0.97
@@ -972,7 +978,7 @@ Suggested package updates
 	o pnetC-0.7.4
 	o pnetlib-0.7.2 [pkg/31950]
 	o pnetlib-0.7.4
-	o popa3d-1.0.1
+	o popa3d-1.0.2
 	o poppy-4.01
 	o poptop-1.3.0
 	o posh-0.4.3
@@ -1039,6 +1045,7 @@ Suggested package updates
 	o qt2-docs-2.3.2
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
+	o qt4-4.1.3
 	o qt4-libs-4.1.3
 	o qvplay-0.95
 	o qwspritefield-1.7
@@ -1073,7 +1080,8 @@ Suggested package updates
 	o rpm-4.4.6
 	o rsnapshot-1.2.3
 	o rtcw-1.41.3
-	o rtorrent-0.5.0
+	o rtorrent-0.5.3
+	o ruby-RMagick-1.11.0 [pkg/33538]
 	o ruby-cmd-0.8.0
 	o rxvt-unicode-7.7
 	o sablecc-3.2
@@ -1090,7 +1098,7 @@ Suggested package updates
 	o sendfile-20010424
 	o sharity-light-1.3
 	o shc-3.8
-	o shmux-1.0b6
+	o shmux-1.0b7
 	o siag-3.6.0
 	o sign-1.0.7
 	o silc-client-1.0.3
@@ -1163,6 +1171,7 @@ Suggested package updates
 	o tmake-1.13
 	o tob-0.26
 	o top-3.6beta1
+	o tor-0.1.1.20 [wip]
 	o totem-1.4.1
 	o tpasm-1.2
 	o tpb-0.6.4
@@ -1171,6 +1180,7 @@ Suggested package updates
 	o tsclient-0.140
 	o ttyrec-1.0.6
 	o tuxpaint-0.9.15
+	o tuxpaint-config-0.0.6
 	o tuxpaint-stamps-20051125
 	o twelf-1.5
 	o txt2html-2.44
@@ -1197,7 +1207,7 @@ Suggested package updates
 	o wap-utils-1.4.1
 	o wcalc-2.2
 	o wdm-1.28
-	o weechat-0.1.8
+	o weechat-0.1.9
 	o weewm-0.01
 	o winbind-3.0.13
 	o wmctrl-1.07
@@ -1211,6 +1221,7 @@ Suggested package updates
 	o xbindkeys-1.7.2
 	o xblast-2.10.0
 	o xboard-4.2.7
+	o xchm-1.8
 	o xcircuit-3.4.0
 	o xdaliclock-2.23
 	o xdelta-3.0e
@@ -1257,7 +1268,7 @@ Suggested package updates
 	o xpuyopuyo-0.9.5
 	o xrmap-2.33
 	o xrn-9.02
-	o xscreensaver-4.24
+	o xscreensaver-5.00
 	o xskat-4.0
 	o xterm-213
 	o xtide-2.8.2
