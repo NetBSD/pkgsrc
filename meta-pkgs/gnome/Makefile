@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2006/04/02 09:56:37 jmmv Exp $
+# $NetBSD: Makefile,v 1.59 2006/05/26 13:46:50 wiz Exp $
 
 DISTNAME=	gnome-2.14.0
 CATEGORIES=	meta-pkgs x11 gnome
@@ -27,7 +27,7 @@ DEPENDS+=	gtksourceview>=1.6.0:../../x11/gtksourceview
 DEPENDS+=	zenity>=2.14.0:../../x11/zenity
 DEPENDS+=	gdm>=2.14.0nb1:../../x11/gdm
 DEPENDS+=	gnome-screensaver>=2.14.0:../../x11/gnome-screensaver
-DEPENDS+=	fast-user-switch-applet-2.14.0:../../x11/fast-user-switch-applet
+DEPENDS+=	fast-user-switch-applet>=2.14.0:../../x11/fast-user-switch-applet
 DEPENDS+=	epiphany>=2.14.0:../../www/epiphany
 DEPENDS+=	yelp>=2.14.0:../../misc/yelp
 DEPENDS+=	bug-buddy>=2.14.0:../../net/bug-buddy
