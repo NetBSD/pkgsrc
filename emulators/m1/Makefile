@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2006/05/22 22:22:03 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/05/26 19:15:34 joerg Exp $
 #
 
 DISTNAME=	m1074b2-lnx
 PKGNAME=	m1-0.7.4c
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators audio
 MASTER_SITES=	http://www.emuhype.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +15,7 @@ COMMENT=	Arcade video and pinball game sound emulator (Linux binary)
 .include "../../emulators/suse_linux/Makefile.application"
 
 .if !defined(USE_NATIVE_LINUX)
-DEPENDS+=	suse_base>=6.4:../../emulators/${SUSE_DIR_PREFIX}_compat
+DEPENDS+=	suse_compat>=6.4:../../emulators/${SUSE_DIR_PREFIX}_compat
 .endif
 
 ONLY_FOR_PLATFORM=	*-*-i386
