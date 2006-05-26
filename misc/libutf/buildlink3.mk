@@ -1,18 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:27 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/05/26 21:13:01 agc Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBUTF_BUILDLINK3_MK:=	${LIBUTF_BUILDLINK3_MK}+
 
-.if !empty(BUILDLINK_DEPTH:M+)
+.if ${BUILDLINK_DEPTH} == "+"
 BUILDLINK_DEPENDS+=	libutf
 .endif
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibutf}
 BUILDLINK_PACKAGES+=	libutf
 
-.if !empty(LIBUTF_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.libutf+=	libutf>=2.10nb1
-BUILDLINK_ABI_DEPENDS.libutf+=	libutf>=2.10nb2
+.if ${LIBUTF_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.libutf+=	libutf>=3.0
 BUILDLINK_PKGSRCDIR.libutf?=	../../misc/libutf
 .endif	# LIBUTF_BUILDLINK3_MK
 
