@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.763 2006/05/20 23:52:36 wiz Exp $
+# $NetBSD: Makefile,v 1.764 2006/05/26 19:40:54 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -578,6 +578,7 @@ SUBDIR+=	py-expect
 SUBDIR+=	py-game
 SUBDIR+=	py-generate
 SUBDIR+=	py-gobject
+SUBDIR+=	py-gobject-shared
 SUBDIR+=	py-idle
 SUBDIR+=	py-kjbuckets
 SUBDIR+=	py-kqueue
