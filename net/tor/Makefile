@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.28 2006/04/23 00:12:41 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/05/26 02:21:41 jschauma Exp $
 #
 
-DISTNAME=		tor-0.1.0.17
+DISTNAME=		tor-0.1.1.20
 CATEGORIES=		net security
 MASTER_SITES=		http://tor.eff.org/dist/
 
-MAINTAINER=		jschauma@NetBSD.org
+MAINTAINER=		tv@NetBSD.org
 HOMEPAGE=		http://tor.eff.org/
 COMMENT=		Anonymizing overlay network for TCP
 
@@ -20,9 +20,7 @@ PKG_HOME?=		/var/chroot/tor
 
 RCD_SCRIPTS=            tor
 PKG_GROUPS=		${TOR_GROUP}
-PKG_USERS=              ${TOR_USER}:${TOR_GROUP}
-PKG_GECOS.${TOR_USER}=	Torifier
-PKG_HOME.${TOR_USER}=	${PKG_HOME}
+PKG_USERS=              ${TOR_USER}:${TOR_GROUP}::Torifier:${PKG_HOME}
 USER_GROUP=		${TOR_USER} ${TOR_GROUP}
 
 OWN_DIR_PERMS+=		${PKG_HOME} ${USER_GROUP} 0755
