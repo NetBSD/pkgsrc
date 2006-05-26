@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2002/12/23 08:03:04 jmmv Exp $
+$NetBSD: patch-aa,v 1.3 2006/05/26 21:13:01 agc Exp $
 
 Patches to use NetBSD's libtool and PKG_SYSCONFDIR.
 
@@ -17,7 +17,7 @@ Patches to use NetBSD's libtool and PKG_SYSCONFDIR.
  
  $(LIBS) : $(OBJS)
 -	$(AR) $(ARFLAGS) $(LIBS) $(OBJS)
-+	${LIBTOOL} --mode=link cc -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 2:10
++	${LIBTOOL} --mode=link cc -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 3:0
  
  ci:
  	ci -l ure.c ure.h urelang.c utf.c utf.h
