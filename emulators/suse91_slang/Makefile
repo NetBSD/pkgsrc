@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:29:36 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/26 19:01:18 joerg Exp $
 
 DISTNAME=		suse_slang-${SUSE_VERSION}
 PKGREVISION=		1
@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for slang library
 
-DEPENDS+=		suse_base>=${SUSE_VERSION}:../../emulators/suse_base
+DEPENDS+=		suse_base>=${SUSE_VERSION}:../../emulators/suse91_base
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
