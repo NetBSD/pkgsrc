@@ -70,11 +70,18 @@ int main (int argc, char **argv )
     pid_t pidwait;
     int waitstat;
     int maxfd;
+    int s;
 
     /* Sanity check */
     if (argc > MAX_ARGS)
     {
         error_sys("arg buffer too small");
+        exit(-1);
+    }
+
+    if (geteuid() != 0)
+    {
+        error_sys("must be called by root");
         exit(-1);
     }
 
@@ -98,8 +105,22 @@ int main (int argc, char **argv )
             /* Become session leader */
             setsid();
 
+            /* Change working directory to root directory.
+               The current working directory could be a mounted
+               filesystem; if the daemon stays on a mounted
+               filesystem it could prevent the filesystem from
+               being umounted. */
+            chdir("/");
+
             /* Clear out file creation mask */
             umask(0);
+
+            /* Close unneeded file descriptors */
+            maxfd = (int) sysconf(_SC_OPEN_MAX);
+            if (maxfd == -1)
+                maxfd = getdtablesize();
+            for (s = 3; s < maxfd; s++)
+                (void) close(s);
 
             /* Increase limit on number of open file descriptors if necessary */
             maxfd = fdlim_get(1);
