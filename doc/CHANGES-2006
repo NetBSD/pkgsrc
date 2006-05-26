@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.317 2006/05/26 08:45:34 adam Exp $
+$NetBSD: CHANGES-2006,v 1.318 2006/05/26 08:51:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2653,3 +2653,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/kmess to 1.4.3 [markd 2006-05-25]
 	Updated sysutils/krusader to 1.70.0 [markd 2006-05-25]
 	Updated archivers/dact to 0.8.41 [adam 2006-05-26]
+	Updated net/dante to 1.1.19 [adam 2006-05-26]
