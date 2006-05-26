@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2006/03/04 21:30:40 jlam Exp $
+# $NetBSD: Makefile.common,v 1.21 2006/05/26 13:19:38 joerg Exp $
 #
 # common make file fragment shared by all amanda-* pkgs.
 #
@@ -31,7 +31,6 @@ LTCONFIG_OVERRIDE=	${WRKSRC}/config/ltconfig
 USE_TOOLS+=		gzip:run gtar:run
 CONFIGURE_ENV+=		ac_cv_path_GZIP=${TOOLS_GZIP_CMD:Q}
 CONFIGURE_ENV+=		GNUTAR=${TOOLS_GTAR:Q}
-TOOLS_DEPENDS.gtar=	{gtar,gtar-base}>=1.12:../../archivers/gtar-base
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-user=${AMANDA_USER:Q}
