@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/17 13:46:04 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/05/26 12:36:19 joerg Exp $
 #
 
 DISTNAME=	wxPython-src-2.6.1.0
@@ -12,6 +12,7 @@ HOMEPAGE=	http://wxpython.org/
 COMMENT=	Python bindings for wxWidgets
 
 WRKSRC=		${WRKDIR}/wxPython-src-2.6.1.0/wxPython
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 
 # previous name of the package
