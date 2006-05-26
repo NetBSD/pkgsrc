@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/22 09:22:06 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2006/05/26 07:47:03 joerg Exp $
 
 DISTNAME=	qsynth-0.2.4
 PKGREVISION=	4
@@ -11,8 +11,11 @@ COMMENT=	Qt GUI Interface to FluidSynth
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+PTHREAD_AUTO_VARS=	yes
 
 # a fix for qt-3.3.5, please remove if qt-3.3.6 (or newer) solves the problem
 SUBST_CLASSES+=		hints
@@ -27,4 +30,5 @@ do-install:
 
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
