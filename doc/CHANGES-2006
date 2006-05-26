@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.319 2006/05/26 09:21:25 adam Exp $
+$NetBSD: CHANGES-2006,v 1.320 2006/05/26 09:41:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2655,3 +2655,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated archivers/dact to 0.8.41 [adam 2006-05-26]
 	Updated net/dante to 1.1.19 [adam 2006-05-26]
 	Updated net/irrd to 2.2.8 [adam 2006-05-26]
+	Updated emulators/wine to 0.9.14 [adam 2006-05-26]
