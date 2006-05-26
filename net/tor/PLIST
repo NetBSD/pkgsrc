@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/08/09 15:16:39 salo Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/05/26 02:21:41 jschauma Exp $
 bin/tor
 bin/tor-resolve
 bin/torify
