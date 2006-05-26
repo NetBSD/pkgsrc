@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/05/22 22:22:03 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2006/05/26 19:10:43 joerg Exp $
 
 DISTNAME=		linuxppc_lib-2000.4.6
 PKGREVISION=		1
@@ -19,7 +19,7 @@ MAINTAINER=		p99dreyf@criens.u-psud.fr
 HOMEPAGE=		http://www.linuxppc.org/
 COMMENT=		Libraries to run Linux binaries on NetBSD/powerpc (includes X11)
 
-BUILD_DEPENDS+=		rpm2pkg-1.2:../../pkgtools/rpm2pkg
+BUILD_DEPENDS+=		rpm2pkg>=1.2:../../pkgtools/rpm2pkg
 
 CONFLICTS=		suse_base-[0-9]*
 
