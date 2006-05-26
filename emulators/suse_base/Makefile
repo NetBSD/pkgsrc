@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2006/03/14 01:14:28 jlam Exp $
+# $NetBSD: Makefile,v 1.60 2006/05/26 11:45:24 joerg Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE:=a1/} \
 			${MASTER_SITE_SUSE_UPD:=a1/}
@@ -20,6 +20,15 @@ PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 
 RPMFILES=		aaa_dir.rpm gppshare.rpm ncurses.rpm \
 			readline.rpm bash.rpm sh-utils.rpm
+
+# these files are handled by manually during de-/installation/pkg_add
+CHECK_FILES_SKIP+=      ${PREFIX}/${EMULSUBDIR}/dev/.*
+CHECK_FILES_SKIP+=      ${PREFIX}/${EMULSUBDIR}/etc/ld.so.cache
+CHECK_FILES_SKIP+=      ${PREFIX}/${EMULSUBDIR}/etc/rc.d
+CHECK_FILES_SKIP+=      ${PREFIX}/${EMULSUBDIR}/cdrom
+CHECK_FILES_SKIP+=      ${PREFIX}/${EMULSUBDIR}/floppy
+CHECK_FILES_SKIP+=      ${PREFIX}/${EMULSUBDIR}/usr/lib/X11
+CHECK_FILES_SKIP+=      ${PREFIX}/${EMULSUBDIR}/usr/spool
 
 .include "../../emulators/suse_linux/arch.mk"
 
