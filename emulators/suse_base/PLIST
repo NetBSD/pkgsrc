@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/09/10 21:53:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/05/26 11:45:24 joerg Exp $
 sbin/linux-mkpwd
 @unexec ${RM} -f %D/@@EMULSUBDIR@@/etc/ld.so.cache
 @@EMULSUBDIR@@/etc/SuSE-release
@@ -8,5 +8,6 @@ sbin/linux-mkpwd
 @exec cp -p /dev/MAKEDEV  %D/@@EMULSUBDIR@@/dev
 @exec cd %D/@@EMULSUBDIR@@/dev && sh ./MAKEDEV std audio
 @exec cd %D/@@EMULSUBDIR@@/dev && ln -s sound dsp
+@unexec ${RMDIR} %D/@@EMULSUBDIR@@/dev/fd || ${TRUE}
 @unexec ${RM} -f %D/@@EMULSUBDIR@@/dev/*
 @dirrm @@EMULSUBDIR@@/dev
