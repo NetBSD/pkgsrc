@@ -1,13 +1,13 @@
-$NetBSD: patch-aw,v 1.2 2005/01/10 15:47:18 xtraeme Exp $
+$NetBSD: patch-aw,v 1.3 2006/05/26 18:25:34 seb Exp $
 
---- isam/Makefile.in.orig	2005-01-10 16:18:20.000000000 +0100
-+++ isam/Makefile.in	2005-01-10 16:18:31.000000000 +0100
-@@ -134,7 +134,7 @@
- LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) \
+--- isam/Makefile.in.orig	2006-04-29 05:36:29.000000000 +0000
++++ isam/Makefile.in
+@@ -119,7 +119,7 @@ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUD
+ LTCOMPILE = $(LIBTOOL) --tag=CC --mode=compile $(CC) $(DEFS) \
  	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
  	$(AM_CFLAGS) $(CFLAGS)
 -CCLD = $(CC)
 +CCLD = $(CXX)
- LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+ LINK = $(LIBTOOL) --tag=CC --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
  	$(AM_LDFLAGS) $(LDFLAGS) -o $@
  SOURCES = $(libnisam_a_SOURCES) $(isamchk_SOURCES) isamlog.c \
