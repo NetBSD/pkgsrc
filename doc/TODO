@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5016 2006/05/26 09:21:25 adam Exp $
+$NetBSD: TODO,v 1.5017 2006/05/26 10:11:22 adam Exp $
 
 Suggested new packages
 ======================
@@ -436,7 +436,6 @@ Suggested package updates
 	o cy-login-1.5.28
 	o cygwin_lib-1.5.19
 	o dap-2.1.5
-	o dar-2.3.0
 	o dasher-4.1.0
 	o dbxml-2.1.8
 	o dc_gui2-0.80

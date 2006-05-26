@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.321 2006/05/26 10:06:43 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.322 2006/05/26 10:11:22 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2657,3 +2657,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/irrd to 2.2.8 [adam 2006-05-26]
 	Updated emulators/wine to 0.9.14 [adam 2006-05-26]
 	Updated devel/libusb to 0.1.12nb1 [joerg 2006-05-26]
+	Updated archivers/dar to 2.3.0 [adam 2006-05-26]
