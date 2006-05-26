@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2006/05/26 09:20:02 joerg Exp $
+# $NetBSD: Makefile,v 1.48 2006/05/26 18:09:57 dmcmahill Exp $
 #
 
 DISTNAME=	ViPEC-3.2.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vipec/}
 
@@ -26,8 +26,4 @@ post-install:
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
-# XXX Please verify whether qt3-tools is really needed at run-time.
-# If it is, then remove this comment.  If it is not, then remove
-# this comment and the line below, and bump PKGREVISION.
-BUILDLINK_DEPMETHOD.qt3-tools=	full
 .include "../../mk/bsd.pkg.mk"
