@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.329 2006/05/26 18:53:49 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.330 2006/05/26 20:59:57 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -1466,6 +1466,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/clisp to 2.38 [wiz 2006-03-11]
 	Updated net/p5-Net-DNS to 0.57 [heinz 2006-03-12]
 	Updated security/p5-Crypt-CBC to 2.17 [heinz 2006-03-12]
+	Updated security/p5-Net-SSLeay to 1.30 [heinz 2006-03-12]
 	Updated graphics/ruby-RMagick to 1.10.1 [taca 2006-03-12]
 	Updated x11/qt3-tools to 3.3.5nb5 [minskim 2006-03-12]
 	Updated security/libfwbuilder to 2.0.10nb5 [minskim 2006-03-12]
@@ -1510,6 +1511,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/spamassassin to 3.1.1 [heinz 2006-03-13]
 	Updated x11/qt3-tools to 3.3.5nb6 [minskim 2006-03-13]
 	Updated misc/kdeaddons3 to 3.5.1nb2 [minskim 2006-03-13]
+	Added sysutils/ipmitool version 1.8.6 [heinz 2006-03-13]
 	Updated devel/kdesdk3 to 3.5.1nb2 [minskim 2006-03-14]
 	Updated x11/kdelibdocs3 to 3.5.1nb2 [minskim 2006-03-14]
 	Updated security/john to 1.7.0.1 [martti 2006-03-14]
@@ -2698,3 +2700,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/mysql4-client to 4.1.19 [seb 2006-05-26]
 	Updated databases/mysql4-server to 4.1.19 [seb 2006-05-26]
 	Updated net/nagios-nrpe to 2.5.1nb1 [wiz 2006-05-26]
+	Updated mail/spamassassin to 3.1.2 [heinz 2006-05-26]
