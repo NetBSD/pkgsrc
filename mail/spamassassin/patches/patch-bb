@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1 2006/05/26 20:53:00 heinz Exp $
+
+--- rules/v312.pre.orig	2006-05-24 22:07:29.000000000 +0200
++++ rules/v312.pre
+@@ -3,7 +3,7 @@
+ # See 'perldoc Mail::SpamAssassin::Conf' for details of what can be
+ # tweaked.
+ #
+-# This file was installed during the installation of SpamAssassin 3.2.0,
++# This file was installed during the installation of SpamAssassin 3.1.2,
+ # and contains plugin loading commands for the new plugins added in that
+ # release.  It will not be overwritten during future SpamAssassin installs,
+ # so you can modify it to enable some disabled-by-default plugins below,
