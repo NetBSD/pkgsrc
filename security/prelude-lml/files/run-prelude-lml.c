@@ -62,6 +62,8 @@ int main (int argc, char **argv )
     gid_t GID;
     pid_t pidwait;
     int waitstat;
+    int s;
+    int max_fd;
 
     /* Sanity check */
     if (argc > MAX_ARGS)
@@ -69,13 +71,12 @@ int main (int argc, char **argv )
         error_sys("arg buffer too small");
         exit(-1);
     }
-/*
-    if (getpid() != 0)
+
+    if (geteuid() != 0)
     {
         error_sys("must be called by root");
         exit(-1);
     }
-*/
 
     /* fork child that will become prelude-lml */
     if ((pid = fork()) < 0)
@@ -97,8 +98,22 @@ int main (int argc, char **argv )
             /* Become session leader */
             setsid();
 
+            /* Change working directory to root directory.
+               The current working directory could be a mounted
+               filesystem; if the daemon stays on a mounted
+               filesystem it could prevent the filesystem from
+               being umounted. */
+            chdir("/");
+
             /* Clear out file creation mask */
             umask(0);
+
+            /* Close unneeded file descriptors */
+            max_fd = (int) sysconf(_SC_OPEN_MAX);
+            if (max_fd == -1)
+                max_fd = getdtablesize();
+            for (s = 3; s < max_fd; s++)
+                (void) close(s);
 
             if (!obtainUIDandGID(PRELUDE_LML_USER, &UID, &GID))
                 exit(-1);

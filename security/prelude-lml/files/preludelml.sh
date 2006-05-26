@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: preludelml.sh,v 1.3 2006/01/31 18:25:43 shannonjr Exp $
+# $NetBSD: preludelml.sh,v 1.4 2006/05/26 11:25:22 shannonjr Exp $
 #
 
 # PROVIDE: preludelml
@@ -13,7 +13,7 @@ procname="@PREFIX@/bin/prelude-lml"
 rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/prelude-lml/prelude-lml.conf"
 start_precmd="preludelml_precommand"
-start_cmd="@PREFIX@/sbin/run-prelude-lml -d --pidfile @PRELUDE_LML_PID_DIR@/prelude-lml.pid"
+start_cmd="@PREFIX@/sbin/run-prelude-lml --pidfile @PRELUDE_LML_PID_DIR@/prelude-lml.pid"
 pidfile="@PRELUDE_LML_PID_DIR@/prelude-lml.pid"
 
 preludelml_precommand()
