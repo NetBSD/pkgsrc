@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2006/01/19 18:52:59 joerg Exp $
+$NetBSD: distinfo,v 1.12 2006/05/26 08:50:13 adam Exp $
 
-SHA1 (dante-1.1.17.tar.gz) = 25d4dd85de93e65e519d498085c12eee597a5a83
-RMD160 (dante-1.1.17.tar.gz) = ab8f37dd5d141d35258916eecfe9e8d0393dc207
-Size (dante-1.1.17.tar.gz) = 845155 bytes
+SHA1 (dante-1.1.19.tar.gz) = e366a60a880ceff6205f7cd87249c7322b844d3c
+RMD160 (dante-1.1.19.tar.gz) = 3649207b061b95fdd5b0950ea1ece9219eb8af4c
+Size (dante-1.1.19.tar.gz) = 895713 bytes
 SHA1 (patch-aa) = 856884522529122afe037fff610ce89a978d2a2b
-SHA1 (patch-ab) = 586825b1da2c73c382f27d299f795a336be32a86
+SHA1 (patch-ab) = f8ce5b9b9e90136a1dfd670ddf637127aa9c59be
