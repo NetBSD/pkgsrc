@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/05/31 16:40:31 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/05/26 12:30:15 drochner Exp $
 bin/cint
 bin/makecint
 cint/G__ci.h
@@ -305,6 +305,24 @@ cint/stl/vector
 cint/stl/vector.dll
 cint/stl/vector.h
 cint/stl/vectorbool.dll
+share/doc/cint/bytecode.txt
+share/doc/cint/cint.txt
+share/doc/cint/cintapi.txt
+share/doc/cint/extlib.txt
+share/doc/cint/ifdef.txt
+share/doc/cint/limitati.txt
+share/doc/cint/limitnum.txt
+share/doc/cint/makecint.txt
+share/doc/cint/message.txt
+share/doc/cint/ref.txt
+man/man1/cint.1
+man/man1/makecint.1
+man/man2/garbage.2
+man/man2/security.2
+man/man2/unique.2
+man/man3/array.h.3
+man/man3/fft.h.3
+man/man3/statistics.h.3
 @dirrm cint/stl
 @dirrm cint/lib/prec_stl
 @dirrm cint/lib
@@ -313,3 +331,4 @@ cint/stl/vectorbool.dll
 @dirrm cint/include/GL
 @dirrm cint/include
 @dirrm cint
+@dirrm share/doc/cint
