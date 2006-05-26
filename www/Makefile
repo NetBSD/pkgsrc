@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.453 2006/05/15 12:07:55 markd Exp $
+# $NetBSD: Makefile,v 1.454 2006/05/26 23:54:54 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -376,7 +376,6 @@ SUBDIR+=	zope25-ZNavigator
 SUBDIR+=	zope25-ZPhotoSlides
 SUBDIR+=	zope25-ZPsycopgDA
 SUBDIR+=	zope25-ZWeather
-SUBDIR+=	zope25-ZWeatherApplet
 SUBDIR+=	zope25-ZWiki
 SUBDIR+=	zope25-Zippy
 SUBDIR+=	zope25-colorz
