@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2006/05/12 20:53:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.44 2006/05/26 09:40:33 adam Exp $
 bin/bin2res
 bin/fnt2bdf
 bin/function_grep.pl
@@ -174,6 +174,7 @@ include/wine/windows/dxerr8.h
 include/wine/windows/dxerr9.h
 include/wine/windows/dxfile.h
 include/wine/windows/dyngraph.idl
+include/wine/windows/errors.h
 include/wine/windows/evcode.h
 include/wine/windows/evntrace.h
 include/wine/windows/excpt.h
@@ -266,6 +267,7 @@ include/wine/windows/nspapi.h
 include/wine/windows/ntddcdrm.h
 include/wine/windows/ntddscsi.h
 include/wine/windows/ntddstor.h
+include/wine/windows/ntdsapi.h
 include/wine/windows/ntsecapi.h
 include/wine/windows/ntstatus.h
 include/wine/windows/oaidl.h
@@ -560,6 +562,7 @@ lib/wine/libmswsock.def
 lib/wine/libnetapi32.def
 lib/wine/libnewdev.def
 lib/wine/libntdll.def
+lib/wine/libntdsapi.def
 lib/wine/libodbc32.def
 lib/wine/libodbccp32.def
 lib/wine/libole32.def
@@ -657,6 +660,7 @@ lib/wine/netapi32.dll.so
 lib/wine/newdev.dll.so
 lib/wine/notepad.exe.so
 lib/wine/ntdll.dll.so
+lib/wine/ntdsapi.dll.so
 lib/wine/objsel.dll.so
 lib/wine/odbc32.dll.so
 lib/wine/odbccp32.dll.so
