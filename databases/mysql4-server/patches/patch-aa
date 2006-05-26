@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.9 2005/07/29 21:02:35 xtraeme Exp $
+$NetBSD: patch-aa,v 1.10 2006/05/26 18:25:34 seb Exp $
 
---- Makefile.in.orig	2005-07-29 22:35:34.000000000 +0200
-+++ Makefile.in	2005-07-29 22:36:03.000000000 +0200
-@@ -344,12 +344,8 @@
+--- Makefile.in.orig	2006-04-29 05:36:56.000000000 +0000
++++ Makefile.in
+@@ -352,12 +352,8 @@ AUTOMAKE_OPTIONS = foreign
+ EXTRA_DIST = INSTALL-SOURCE INSTALL-WIN-SOURCE \
+ 			README COPYING EXCEPTIONS-CLIENT
  
- # These are built from source in the Docs directory
- EXTRA_DIST = INSTALL-SOURCE README COPYING EXCEPTIONS-CLIENT
 -SUBDIRS = . include @docs_dirs@ @zlib_dir@ \
 -			@readline_topdir@ sql-common \
 -			@thread_dirs@ pstack \
