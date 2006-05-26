@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.327 2006/05/26 17:48:28 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.328 2006/05/26 18:27:41 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2695,3 +2695,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/tcl-postgresql73 to 7.3.15 [joerg 2006-05-26]
 	Updated databases/tcl-postgresql74 to 7.4.13 [joerg 2006-05-26]
 	Updated databases/tk-postgresql73 to 7.3.15 [joerg 2006-05-26]
+	Updated databases/mysql4-client to 4.1.19 [seb 2006-05-26]
+	Updated databases/mysql4-server to 4.1.19 [seb 2006-05-26]
