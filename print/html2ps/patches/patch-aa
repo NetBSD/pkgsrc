@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2005/12/04 17:02:54 kim Exp $
+$NetBSD: patch-aa,v 1.4 2006/05/26 18:19:15 wiz Exp $
 
---- install.orig	2005-03-03 14:25:29.000000000 +0200
-+++ install	2005-12-04 18:54:52.000000000 +0200
-@@ -17,7 +17,7 @@
+--- install.orig	2005-03-03 12:25:29.000000000 +0000
++++ install
+@@ -17,7 +17,7 @@ if(-e '/dev/null') {
      $pathsep = ':';
      $dirsep = '/';
      $sys = 'unix';
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.3 2005/12/04 17:02:54 kim Exp $
  } elsif (-e 'nul') {
      $pathsep = ';';
      $dirsep = '\\';
-@@ -57,8 +57,8 @@
+@@ -57,8 +57,8 @@ where the abovementioned packages are. Y
  the directories where the files should be placed.
  EOD
  
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.3 2005/12/04 17:02:54 kim Exp $
  
  print "\n";
  for $req (@perl) {
-@@ -134,19 +134,22 @@
+@@ -134,19 +134,22 @@ if(@reqpath) {
  
  chop ($cd = `pwd`);
  
@@ -57,7 +57,7 @@ $NetBSD: patch-aa,v 1.3 2005/12/04 17:02:54 kim Exp $
  
  if($def) {
      $bindir = "$prefix${dirsep}bin";
-@@ -159,9 +162,9 @@
+@@ -159,9 +162,9 @@ if($def) {
  &makedir($bindir,$def);
  
  if($def) {
@@ -69,16 +69,16 @@ $NetBSD: patch-aa,v 1.3 2005/12/04 17:02:54 kim Exp $
       "\nEnter the the directory where the global configuration file for\n"
      ."html2ps should be put");
      $glob =~ s|/$||g;
-@@ -198,7 +201,7 @@
+@@ -198,7 +201,7 @@ $cophy = 1;
  if($exist{'TeX'}) {
      $hfile = "";
      ($texdir = $dir{'TeX'}) =~ s|/bin$||;
 -    SW:for("texmf/tex/generic/hyphen","macros","inputs","lib/macros",
-+    SW:for("share/texmf/tex/generic/hyphen","macros","inputs","lib/macros",
++    SW:for("share/texmf-dist/tex/generic/hyphen","macros","inputs","lib/macros",
          "lib/inputs","lib/tex/macros","lib/tex/inputs") {
          if(-f "$texdir/$_/ushyph1.tex") {
              $hyph = "$texdir/$_";
-@@ -212,15 +215,15 @@
+@@ -212,15 +215,15 @@ if($exist{'TeX'}) {
          }
      }
      if($hfile) {
@@ -102,7 +102,7 @@ $NetBSD: patch-aa,v 1.3 2005/12/04 17:02:54 kim Exp $
      } else {
          &getval($hfile, "", "$ht I cannot find the pattern\nfile for English "
           ."in your TeX installation. (It should be called\n'hyphen.tex', "
-@@ -236,9 +239,9 @@
+@@ -236,9 +239,9 @@ if($exist{'TeX'}) {
      }
      if(!$hfile) {
          if($def) {
@@ -114,7 +114,7 @@ $NetBSD: patch-aa,v 1.3 2005/12/04 17:02:54 kim Exp $
               "\nOK, I will use the supplied pattern file for English. Enter "
              ."the directory\nwhere this file should be put");
              &fixdir($hyph);
-@@ -246,9 +249,9 @@
+@@ -246,9 +249,9 @@ if($exist{'TeX'}) {
      }
  } else {
      if($def) {
@@ -126,7 +126,7 @@ $NetBSD: patch-aa,v 1.3 2005/12/04 17:02:54 kim Exp $
       ."included with html2ps (see the documentation how to install pattern\n"
       ."files for other languages). Enter the directory where this file\n"
       ."should be put");
-@@ -260,20 +263,21 @@
+@@ -260,20 +263,21 @@ if($cophy) {
  }
  
  if($def) {
@@ -156,7 +156,7 @@ $NetBSD: patch-aa,v 1.3 2005/12/04 17:02:54 kim Exp $
  if($format !~ /^other$/i) {
      $paper .= "    type: $format;";
  } else {
-@@ -431,7 +435,7 @@
+@@ -431,7 +435,7 @@ sub inst {
      copy $from => $_[0].$dirsep.$_[1] or die "*** Cannot write to $_[0]\n";
  }
  sub goodprefix {
