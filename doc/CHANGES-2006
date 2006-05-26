@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.331 2006/05/26 21:13:56 agc Exp $
+$NetBSD: CHANGES-2006,v 1.332 2006/05/26 22:48:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2702,3 +2702,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/nagios-nrpe to 2.5.1nb1 [wiz 2006-05-26]
 	Updated mail/spamassassin to 3.1.2 [heinz 2006-05-26]
 	Updated misc/libutf to 3.0 [agc 2006-05-26]
+	Updated games/boson to 0.8nb11 [wiz 2006-05-26]
