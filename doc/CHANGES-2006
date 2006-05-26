@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.330 2006/05/26 20:59:57 heinz Exp $
+$NetBSD: CHANGES-2006,v 1.331 2006/05/26 21:13:56 agc Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2701,3 +2701,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/mysql4-server to 4.1.19 [seb 2006-05-26]
 	Updated net/nagios-nrpe to 2.5.1nb1 [wiz 2006-05-26]
 	Updated mail/spamassassin to 3.1.2 [heinz 2006-05-26]
+	Updated misc/libutf to 3.0 [agc 2006-05-26]
