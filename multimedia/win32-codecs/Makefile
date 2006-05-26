@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/04/22 09:22:12 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2006/05/26 18:33:15 joerg Exp $
 #
 
 DISTNAME=	windows-all-20050412
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www4.mplayerhq.hu/MPlayer/releases/codecs/ \
 		http://ftp5.mplayerhq.hu/mplayer/releases/codecs/ \
 		ftp://ftp2.mplayerhq.hu/MPlayer/releases/codecs/ \
 		http://www1.mplayerhq.hu/MPlayer/releases/codecs/ \
+		http://www2.mplayerhq.hu/MPlayer/releases/codecs/ \
 		ftp://ftp5.mplayerhq.hu/mplayer/releases/codecs/
 EXTRACT_SUFX=	.zip
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
