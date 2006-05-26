@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.323 2006/05/26 13:21:39 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.324 2006/05/26 14:12:32 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2662,3 +2662,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/amanda-common to 2.4.4p4nb4 [joerg 2006-05-26]
 	Updated sysutils/amanda-plot to 2.4.4p4nb3 [joerg 2006-05-26]
 	Updated sysutils/amanda-server to 2.4.4p4nb4 [joerg 2006-05-26]
+	Updated shells/bash to 3.1pl1nb2 [joerg 2006-05-26]
