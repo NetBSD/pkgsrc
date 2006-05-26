@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.333 2006/05/26 23:39:20 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.334 2006/05/26 23:54:54 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2704,3 +2704,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/libutf to 3.0 [agc 2006-05-26]
 	Updated games/boson to 0.8nb11 [wiz 2006-05-26]
 	Updated math/qalculate to 0.9.3nb2 [wiz 2006-05-26]
+	Removed www/zope25-ZWeatherApplet [joerg 2006-05-26]
