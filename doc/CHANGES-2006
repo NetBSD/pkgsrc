@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.325 2006/05/26 16:42:20 agc Exp $
+$NetBSD: CHANGES-2006,v 1.326 2006/05/26 16:57:51 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2664,3 +2664,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/amanda-server to 2.4.4p4nb4 [joerg 2006-05-26]
 	Updated shells/bash to 3.1pl1nb2 [joerg 2006-05-26]
 	Updated devel/netbsd-iscsi to 20060526 [agc 2006-05-26]
+	Updated www/drupal to 4.6.7 [adrianp 2006-05-26]
