@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.9 2005/09/04 04:59:36 jlam Exp $
+$NetBSD: patch-aa,v 1.10 2006/05/26 18:29:27 reed Exp $
 
---- config.orig	Fri Apr 11 14:00:41 2003
-+++ config
+--- config.orig	2003-04-11 07:00:41.000000000 -0700
++++ config	2006-05-26 11:22:14.000000000 -0700
 @@ -25,7 +25,7 @@ USERCONF=
  # interface (e.g., Linux, Solaris, IRIX, BSD, AIX, HPUX, and probably others),
  # uncomment the next two lines.
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.9 2005/09/04 04:59:36 jlam Exp $
  #MYCFLAGS= -O3 -fomit-frame-pointer # -fPIC
  
  # Write here any options you may need for your C linker.
-@@ -148,7 +148,7 @@ STRIP= strip
+@@ -148,11 +148,11 @@ STRIP= strip
  
  # Locations for "make install". You may need to be root do "make install".
  #
@@ -49,6 +49,11 @@ $NetBSD: patch-aa,v 1.9 2005/09/04 04:59:36 jlam Exp $
  INSTALL_BIN= $(INSTALL_ROOT)/bin
  INSTALL_INC= $(INSTALL_ROOT)/include
  INSTALL_LIB= $(INSTALL_ROOT)/lib
+-INSTALL_MAN= $(INSTALL_ROOT)/man/man1
++INSTALL_MAN= $(INSTALL_ROOT)/$(PKGMANDIR)/man1
+ 
+ # You may prefer to use "install" instead of "cp" if you have it.
+ # If you use "install", you may also want to change the permissions after -m.
 @@ -165,6 +165,7 @@ INSTALL_DATA= cp
  # == END OF USER SETTINGS. NO NEED TO CHANGE ANYTHING BELOW THIS LINE =========
  
@@ -63,9 +68,9 @@ $NetBSD: patch-aa,v 1.9 2005/09/04 04:59:36 jlam Exp $
  
 +CCLD= $(LIBTOOL) --mode=link $(CC)
  CFLAGS= $(MYCFLAGS) $(WARN) $(INCS) $(DEFS)
-+
+ 
 +.SUFFIXES:	.lo
 +.c.lo:
 +	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c $<
- 
++
  # (end of config)
