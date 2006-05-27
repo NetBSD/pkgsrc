@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2006/05/18 20:30:00 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2006/05/27 12:38:27 drochner Exp $
 
-DISTNAME=		root_v2.23.08.source
-PKGNAME=		root-2.23
-PKGREVISION=		1
+DISTNAME=		root_v5.10.00.source
+PKGNAME=		root-5.10
 CATEGORIES=		misc
 MASTER_SITES=		ftp://root.cern.ch/root/
 
@@ -10,16 +9,12 @@ MAINTAINER=		drochner@NetBSD.org
 HOMEPAGE=		http://root.cern.ch/
 COMMENT=		OO framework for data analysis and visualisation
 
-BROKEN_IN=		pkgsrc-2005Q4 pkgsrc-2006Q1
-
-BUILD_DEPENDS+=		cint-5.14.40:../../lang/cint
-
-WRKSRC=			${WRKDIR}
-BUILDLINK_PASSTHRU_DIRS=${PREFIX}/root/lib
+WRKSRC=			${WRKDIR}/root
 USE_TOOLS+=		gmake
+USE_LANGUAGES+=		c++
+#USE_LANGUAGES+=	fortran
 
-BUILD_TARGET=		netbsd
-MAKE_ENV+=		LD_LIBRARY_PATH=${WRKDIR:Q}/lib ROOTSYS=${WRKDIR:Q}
+BUILD_TARGET=
 
 .if (${MACHINE_ARCH} == "arm")
 BROKEN= 	Compilation stops due to internal compiler error
@@ -27,20 +22,31 @@ BROKEN= 	Compilation stops due to internal compiler error
 
 INSTALLATION_DIRS=	bin
 
-do-configure:
-	${CP} ${FILESDIR}/Makefile.netbsd ${WRKDIR}/src
-	${MKDIR} ${WRKDIR}/bin
-	${MKDIR} ${WRKDIR}/lib
-	${CP} ${PREFIX}/cint/MAKEINFO ${WRKDIR}/cint
-	${CP} ${PREFIX}/cint/include/iosenum.h ${WRKDIR}/cint/include
+HAS_CONFIGURE=		yes
+CONFIGURE_ARGS+=	${LOWER_OPSYS}
+CONFIGURE_ARGS+=	--prefix=${PREFIX} --mandir=${PREFIX}/man/man1
+CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
+CONFIGURE_ARGS+=	--enable-soversion
+CONFIGURE_ARGS+=	--disable-builtin-pcre
+CONFIGURE_ARGS+=	--disable-builtin-freetype
 
-do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/root
-	${INSTALL_DATA_DIR} ${PREFIX}/root/include
-	(cd ${WRKDIR}/src; ${CP} *.h MAIN_rmain.cxx ${PREFIX}/root/include)
-	(cd ${WRKDIR}; tar cf - lib bin cint)|(cd ${PREFIX}/root;tar xf -)
-	${SED} "s;XXXPREFIXXXX;${PREFIX};g" <${FILESDIR}/root.sh >${PREFIX}/bin/root
-	${CHMOD} +x ${PREFIX}/bin/root
+# option, requires libxml2
+CONFIGURE_ARGS+=	--disable-xml
+#.include "../../textproc/libxml2/buildlink3.mk"
+
+# might be optional
+#CONFIGURE_ARGS+=	--disable-asimage
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/libungif/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+
+post-extract:
+	${CP} ${FILESDIR}/Makefile.netbsd ${WRKSRC}/config
 
 .include "../../graphics/xpm/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
