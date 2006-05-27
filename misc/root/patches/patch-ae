@@ -1,28 +1,13 @@
-$NetBSD: patch-ae,v 1.1.1.1 1999/11/17 16:17:03 drochner Exp $
---- src/ROOTD_daemon.cxx.orig	Sat Nov  6 22:42:10 1999
-+++ src/ROOTD_daemon.cxx	Sat Nov  6 22:44:40 1999
-@@ -41,13 +41,13 @@
- #define USE_SIGCHLD
- #endif
- 
--#if defined(__FreeBSD__)
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
- #define USE_SIGCHLD
- #define	SIGCLD SIGCHLD
- #endif
- 
- #if defined(__linux) || defined(__hpux) || defined(__sun) || defined(__sgi) || \
--    defined(_AIX) || defined(__FreeBSD__)
-+    defined(_AIX) || defined(__FreeBSD__) || defined(__NetBSD__)
- #define USE_SETSID
- #endif
- 
-@@ -61,7 +61,7 @@
- static void SigChild(int)
- {
-    int         pid;
--#if defined(__hpux) || defined(__FreeBSD__)
-+#if defined(__hpux) || defined(__FreeBSD__) || defined(__NetBSD__)
-    int status;
- #else
-    union wait  status;
+$NetBSD: patch-ae,v 1.2 2006/05/27 12:38:27 drochner Exp $
+
+--- eg/inc/cfortran.h.orig	2006-05-26 18:20:11.000000000 +0200
++++ eg/inc/cfortran.h
+@@ -89,7 +89,7 @@ only C calling FORTRAN subroutines will 
+ #if !(defined(mipsFortran)||defined(DECFortran)||defined(vmsFortran)||defined(CONVEXFortran)||defined(PowerStationFortran)||defined(AbsoftUNIXFortran)||defined(AbsoftProFortran)||defined(SXFortran))
+ /* If no Fortran compiler is given, we choose one for the machines we know.   */
+ #if defined(lynx) || defined(VAXUltrix) || defined(linux) || defined(_HIUX_SOURCE) || \
+-    defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__APPLE__)
++    defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__APPLE__) || defined(__NetBSD__)
+ #define f2cFortran    /* Lynx:      Only support f2c at the moment.
+                          VAXUltrix: f77 behaves like f2c.
+                            Support f2c or f77 with gcc, vcc with f2c.

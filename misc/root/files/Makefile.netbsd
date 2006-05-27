@@ -1,37 +1,49 @@
-# Makefile of ROOT for NetBSD
+# -*- mode: makefile -*-
+#
+# Makefile of ROOT for NetBSD (derived from freebsd5)
 
-# XXX
 PLATFORM      = fbsd
 
+DEBUGFLAGS    = -g
+OPTFLAGS      = -O
+ifeq (debug,$(findstring debug,$(ROOTBUILD)))
+OPT           = $(DEBUGFLAGS)
+NOOPT         =
+else
+OPT           = $(OPTFLAGS)
+NOOPT         =
+endif
+
+# Compiler:
 CXX           = g++
 CC            = gcc
-CXXFLAGS      = -g -pipe -W -Wall -fPIC -I/usr/X11R6/include
-CFLAGS        = -g -pipe -W -Wall -fPIC -I/usr/X11R6/include
-CINTCXXFLAGS  = -g -pipe -W -Wall -fPIC -DG__REGEXP \
+CXXFLAGS      = -pipe -W -Wall -fPIC -I${X11BASE}/include $(EXTRA_CXXFLAGS)
+CFLAGS        = -pipe -W -Wall -fPIC -I${X11BASE}/include $(EXTRA_CFLAGS)
+CINTCXXFLAGS  = -pipe -W -Wall -fPIC -DG__REGEXP $(EXTRA_CXXFLAGS) \
                 -DG__UNIX -DG__SHAREDLIB -DG__ROOT -DG__REDIRECTIO -DG__OSFDLL
-CINTCFLAGS    = -g -pipe -W -Wall -fPIC -DG__REGEXP -DG__UNIX -DG__SHAREDLIB \
-                -DG__ROOT -DG__REDIRECTIO -DG__OSFDLL
-OPT           = -O
-NOOPT         =
+CINTCFLAGS    = -pipe -W -Wall -fPIC -DG__REGEXP -DG__UNIX -DG__SHAREDLIB \
+                -DG__ROOT -DG__REDIRECTIO -DG__OSFDLL $(EXTRA_CFLAGS)
+COMPILER      = gnu
+
+# Linker:
 LD            = g++
-LDFLAGS       = $(OPT) -g -Wl,-R$(PREFIX)/root/lib
-SOFLAGS       = -shared -Wl,-x
+LDFLAGS       = $(OPT) $(EXTRA_LDFLAGS) -Wl,-R$(DESTDIR)$(LIBDIR)
+SOFLAGS       = -shared -Wl,-x -Wl,-soname,
 SOEXT         = so
-SYSLIBS       = -lstdc++ -lm
-XLIBS         = -L/usr/X11R6/lib -Wl,-R/usr/X11R6/lib -lXpm -lX11 -lstdc++
+
+# System libraries:
+SYSLIBS       = -lstdc++ -lm $(OSTHREADLIBDIR) $(OSTHREADLIB)
+XLIBS         = $(XPMLIBDIR) $(XPMLIB) $(X11LIBDIR) -lX11 -lstdc++ -Wl,-R$(X11BASE)/lib
 CILIBS        = -lm -ltermcap -lstdc++
 CRYPTLIBS     = -lcrypt
+
+# Fortran:
 F77           = f77
 F77FLAGS      = $(OPT)
 F77LIBS       = -lg2c
 
+# Extras
 
-##### MACROS and TARGETS #####
-
-include Make-macros
-
-
-##### DEPENDENCIES #####
-
-include Make-depend
-
+# Override default in Makefile.config
+INSTALL        := cp -pR
+INSTALLDATA    := cp -pR

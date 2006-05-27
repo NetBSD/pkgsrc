@@ -1,13 +1,17 @@
-$NetBSD: patch-al,v 1.1 2000/12/28 02:16:27 wiz Exp $
+$NetBSD: patch-al,v 1.2 2006/05/27 12:38:27 drochner Exp $
 
---- src/PROOFD_proofd.cxx.orig	Tue Nov  2 11:45:22 1999
-+++ src/PROOFD_proofd.cxx
-@@ -57,7 +57,7 @@
- extern "C" char *crypt(const char *, const char *);
- #endif
- 
--#ifdef __alpha
-+#if defined(__alpha) && !defined(__NetBSD__)
- extern "C" int initgroups(char *name, int basegid);
- #endif
- 
+--- config/root-config.in.orig	2006-05-26 22:50:42.000000000 +0200
++++ config/root-config.in
+@@ -276,6 +276,12 @@ freebsd5)
+    auxcflags=
+    auxlibs="-lm -lstdc++"
+    ;;
++netbsd)
++   # NetBSD with libc
++   auxcflags=
++   auxlibs="-lm -lstdc++"
++   rootlibs="${rootlibs} -Wl,-R${libdir}"
++   ;;
+ openbsd)
+    # OpenBSD with libc
+    auxcflags=
