@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/17 13:46:35 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/05/27 00:01:57 joerg Exp $
 #
 
 DISTNAME=		matplotlib-0.87.2
@@ -14,6 +14,8 @@ COMMENT=		GTK frontend for matplotlib
 USE_TOOLS+=		pkg-config
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
+
+PYTHON_VERSIONS_ACCEPTED=	24 23
 
 .include "../../lang/python/extension.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"
