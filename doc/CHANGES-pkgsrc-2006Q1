@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.60 2006/05/24 16:55:32 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.61 2006/05/27 11:24:32 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -123,3 +123,5 @@ Pullup ticket 1665 - requested by joerg
 security fix for noweb
 Pullup ticket 1670 - requested by joerg
 build and other fixes for clisp
+Pullup ticket 1673 - requested by drochner
+security fix for mpg123
