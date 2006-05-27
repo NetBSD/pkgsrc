@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/05/21 11:27:23 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/05/27 20:54:41 wiz Exp $
 #
 
 DISTNAME=	dpkg_1.10.28
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--with-sgml-doc=no
 CONFIGURE_ARGS+=	--with-admindir=${ADMIN_DIR:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/dpkg
 
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
