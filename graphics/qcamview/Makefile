@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/17 13:46:35 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/27 02:44:12 hamajima Exp $
 #
 
 DISTNAME=	qce-ga-0.40d
@@ -19,6 +19,7 @@ COMMENT=	Logitech Quickcam Express USB Utilities
 do-build:
 	for f in qcamshot qcamview ; do				\
 		cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}		\
+		NOGCCERROR=					\
 		${MAKE_PROGRAM} -f ${MAKEFILE}.$$f ;		\
 	done
 
