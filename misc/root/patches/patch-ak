@@ -1,13 +1,13 @@
-$NetBSD: patch-ak,v 1.1 2000/12/28 02:16:27 wiz Exp $
+$NetBSD: patch-ak,v 1.2 2006/05/27 12:38:27 drochner Exp $
 
---- src/ROOTD_rootd.cxx.orig	Tue Nov  2 11:45:18 1999
-+++ src/ROOTD_rootd.cxx
-@@ -128,7 +128,7 @@
- extern "C" char *crypt(const char *, const char *);
- #endif
+--- clib/src/Getline.c.orig	2006-05-26 22:33:35.000000000 +0200
++++ clib/src/Getline.c
+@@ -331,7 +331,7 @@ static void     search_forw(int s);     
+ #endif /* WIN32 */
  
--#ifdef __alpha
-+#if defined(__alpha) && !defined(__NetBSD__)
- extern "C" int initgroups(char *name, int basegid);
+ #if defined(_AIX) || defined(__Lynx__) || defined(__APPLE__) || \
+-	defined(__OpenBSD__)
++	defined(__OpenBSD__) || defined(__NetBSD__)
+ #define unix
  #endif
  

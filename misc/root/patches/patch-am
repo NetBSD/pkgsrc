@@ -1,33 +1,39 @@
-$NetBSD: patch-am,v 1.1 2002/03/08 05:18:12 jmc Exp $
+$NetBSD: patch-am,v 1.2 2006/05/27 12:38:27 drochner Exp $
 
---- src/ROOTD_net.cxx.orig	Fri Mar  8 04:26:20 2002
-+++ src/ROOTD_net.cxx	Fri Mar  8 04:28:52 2002
-@@ -33,6 +33,10 @@
- #include <netdb.h>
- #include <errno.h>
+--- configure.orig	2006-05-26 23:29:18.000000000 +0200
++++ configure
+@@ -1982,21 +1982,20 @@ if test ! "x$enable_asimage" = "xno" ; t
+     # for a system library, then see if we have various headers needed.
+     if test "x$enable_builtin_afterimage" = "xyes" ; then
+        check_header "jpeglib.h" "" $ASIMAGE $ASIMAGE/include \
+-          /usr/local/include /usr/include /opt/include
++          ${LOCALBASE}/include
+        asjpegincdir=$found_dir
+        check_header "png.h" "" $ASIMAGE $ASIMAGE/include \
+-          /usr/local/include /usr/include /usr/local/include/libpng \
+-          /opt/include
++          ${LOCALBASE}/include
+        aspngincdir=$found_dir
+        if test ! "x$enable_astiff" = "xno" ; then
+            check_header "tiffio.h" "" $ASIMAGE $ASIMAGE/include \
+-               /usr/local/include /usr/include /opt/include
++               ${LOCALBASE}/include
+            astiffincdir=$found_dir
+        else
+            astiffincdir="--with-tiff=no"
+        fi
+        check_header "gif_lib.h" "" $ASIMAGE $ASIMAGE/include \
+-          /usr/local/include /usr/include /opt/include
++          ${LOCALBASE}/include
+        asgifincdir=$found_dir
  
-+#ifdef __NetBSD__
-+#include <sys/param.h>
-+#endif
-+
- //*KEEP,rootdp,T=C++.
- #include "rootdp.h"
- //*KEND.
-@@ -176,7 +180,7 @@
-       if (gDebug > 0) {
- #ifdef _AIX
-          size_t clilen = sizeof(tcp_cli_addr);
--#elif defined(R__GLIBC)
-+#elif defined(R__GLIBC) || (defined(__NetBSD__) && __NetBSD_Version__ >= 103100000)
-          socklen_t clilen = sizeof(tcp_cli_addr);
- #else
-          int clilen = sizeof(tcp_cli_addr);
-@@ -206,7 +210,7 @@
- again:
- #ifdef _AIX
-    size_t clilen = sizeof(tcp_cli_addr);
--#elif defined(R__GLIBC)
-+#elif defined(R__GLIBC) || (defined(__NetBSD__) && __NetBSD_Version__ >= 103100000)
-    socklen_t clilen = sizeof(tcp_cli_addr);
- #else
-    int clilen = sizeof(tcp_cli_addr);
+        asextralib=""
+@@ -2014,7 +2013,7 @@ if test ! "x$enable_asimage" = "xno" ; t
+        fi
+        for k in $aslibs ; do
+            check_library $k "$enable_shared" "" \
+-             $ASIMAGE $ASIMAGE/lib /usr/local/lib /usr/lib /opt/lib
++             $ASIMAGE $ASIMAGE/lib ${LOCALBASE}/lib /usr/lib
+            if test "x$k" = "xlibz" ; then
+                found_libz=$found_lib
+                found_dirz=$found_dir

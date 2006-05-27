@@ -1,12 +1,13 @@
-$NetBSD: patch-ai,v 1.1.1.1 1999/11/17 16:17:03 drochner Exp $
---- src/C_Getline.c.orig	Sun Nov  7 01:48:21 1999
-+++ src/C_Getline.c	Sun Nov  7 01:49:21 1999
-@@ -342,7 +342,7 @@
- #define unix
+$NetBSD: patch-ai,v 1.2 2006/05/27 12:38:27 drochner Exp $
+
+--- rpdutils/src/daemon.cxx.orig	2006-05-26 19:23:53.000000000 +0200
++++ rpdutils/src/daemon.cxx
+@@ -212,7 +212,7 @@ out:
+ #elif defined(__sun)
+       sigignore(SIGCHLD);
+ #else
+-      signal(SIGCLD, SIG_IGN);
++      signal(SIGCHLD, SIG_IGN);
  #endif
- 
--#if defined(__hpux) || defined(__osf__)       /* W.Karig@gsi.de */
-+#if defined(__hpux) || defined(__osf__) || defined(__NetBSD__) /* W.Karig@gsi.de */
- #ifndef unix
- #define unix
  #endif
+    }

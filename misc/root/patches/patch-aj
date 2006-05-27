@@ -1,40 +1,12 @@
-$NetBSD: patch-aj,v 1.1 2000/12/28 02:16:27 wiz Exp $
+$NetBSD: patch-aj,v 1.2 2006/05/27 12:38:27 drochner Exp $
 
---- src/UNIX_UnixSystem.cxx.orig	Tue Nov  2 11:38:04 1999
-+++ src/UNIX_UnixSystem.cxx
-@@ -1353,9 +1353,9 @@
-    // Get Internet Protocol (IP) address of host and port #.
- 
-    struct sockaddr_in addr;
--#if defined(R__AIX) || defined(R__FBSD)
-+#if defined(R__AIX)
-    size_t len = sizeof(addr);
--#elif defined(R__GLIBC)
-+#elif defined(R__GLIBC) || defined(R__FBSD)
-    socklen_t len = sizeof(addr);
- #else
-    int len = sizeof(addr);
-@@ -1391,9 +1391,9 @@
-    // Get Internet Protocol (IP) address of remote host and port #.
- 
-    struct sockaddr_in addr;
--#if defined(R__AIX) || defined(R__FBSD)
-+#if defined(R__AIX)
-    size_t len = sizeof(addr);
--#elif defined(R__GLIBC)
-+#elif defined(R__GLIBC) || defined(R__FBSD)
-    socklen_t len = sizeof(addr);
- #else
-    int len = sizeof(addr);
-@@ -1718,10 +1718,8 @@
- 
-    if (sock < 0) return -1;
- 
--#if defined(R__GLIBC) || defined(_AIX43)
-+#if defined(R__GLIBC) || defined(_AIX43) || defined(R__FBSD)
-    socklen_t optlen = sizeof(*val);
--#elif defined(R__FBSD)
--   size_t optlen = sizeof(*val);
- #else
-    int optlen = sizeof(*val);
- #endif
+--- config/ARCHS.orig	2006-05-26 19:54:56.000000000 +0200
++++ config/ARCHS
+@@ -35,6 +35,7 @@ macosxicc            for MacOS X with In
+ macosx64             for MacOS X with gcc 4.0 64 bit mode
+ macosxxlc            for MacOS X with IBM xl compilers
+ mklinux              for MkLinux gcc and glibc
++netbsd		     for NetBSD
+ openbsd              for OpenBSD >= 3.7
+ sgicc                for SGI IRIX 6.x CC
+ sgicc64              for SGI IRIX 6.x CC 64 bits

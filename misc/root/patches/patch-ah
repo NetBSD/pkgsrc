@@ -1,20 +1,47 @@
-$NetBSD: patch-ah,v 1.1.1.1 1999/11/17 16:17:03 drochner Exp $
---- src/BASE_MapFile.cxx.orig	Sun Nov  7 01:08:03 1999
-+++ src/BASE_MapFile.cxx	Sun Nov  7 01:08:18 1999
-@@ -140,14 +140,14 @@
- #include <sys/sem.h>
- #if defined(R__HPUX) || defined (R__ALPHA) || defined (R__SOLARIS) || \
-     defined(R__AIX) || defined(R__HIUX) || defined (R__MKLINUX) || \
--    __GLIBC_MINOR__ > 0
-+    __GLIBC_MINOR__ > 0 || defined (R__FBSD) /* XXX */
- union semun {
-    int val;                      // value for SETVAL
-    struct semid_ds *buf;         // buffer for IPC_STAT & IPC_SET
-    ushort *array;                // array for GETALL & SETALL
- };
+$NetBSD: patch-ah,v 1.2 2006/05/27 12:38:27 drochner Exp $
+
+--- rootd/src/rootd.cxx.orig	2006-05-26 19:22:55.000000000 +0200
++++ rootd/src/rootd.cxx
+@@ -242,7 +242,7 @@ extern "C" int fstatfs(int file_descript
+ extern "C" int fstatfs(int file_descriptor, struct statfs *buffer);
+ #elif defined(linux) || defined(__hpux) || defined(cygwingcc)
+ #include <sys/vfs.h>
+-#elif defined(__FreeBSD__) || defined(__OpenBSD__)
++#elif defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
+ #include <sys/param.h>
+ #include <sys/mount.h>
+ #else
+@@ -251,7 +251,7 @@ extern "C" int fstatfs(int file_descript
+ 
+ #if defined(linux) || defined(__hpux) || defined(_AIX) || defined(__alpha) || \
+     defined(__sun) || defined(__sgi) || defined(__FreeBSD__) || \
+-    defined(__APPLE__) || defined(cygwingcc) || defined(__OpenBSD__)
++    defined(__APPLE__) || defined(cygwingcc) || defined(__OpenBSD__) || defined(__NetBSD__)
+ #define HAVE_MMAP
  #endif
--#ifdef R__LINUX
-+#ifndef SEM_A
- #  define       SEM_A   0200     // alter permission
- #  define       SEM_R   0400     // read permission
- #endif
+ 
+@@ -293,7 +293,7 @@ static int fcntl_lockf(int fd, int op, o
+ 
+ #if defined(linux) || defined(__sun) || defined(__sgi) || \
+     defined(_AIX) || defined(__FreeBSD__) || defined(__APPLE__) || \
+-    defined(__MACH__) || defined(cygwingcc) || defined(__OpenBSD__)
++    defined(__MACH__) || defined(cygwingcc) || defined(__OpenBSD__) || defined(__NetBSD__)
+ #include <grp.h>
+ #include <sys/types.h>
+ #include <signal.h>
+@@ -1369,6 +1369,7 @@ void RootdPutFile(const char *msg)
+       }
+    }
+ 
++#if 0
+    // check file system space
+    if (strcmp(gFile, "/dev/null")) {
+       struct statfs statfsbuf;
+@@ -1386,6 +1387,7 @@ void RootdPutFile(const char *msg)
+          }
+       }
+    }
++#endif
+ 
+    // seek to restartat position
+    if (restartat) {
