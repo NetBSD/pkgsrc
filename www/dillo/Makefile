@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2006/05/10 21:03:41 adam Exp $
+# $NetBSD: Makefile,v 1.40 2006/05/27 03:22:32 reed Exp $
 
 DISTNAME=	dillo-0.8.6
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.dillo.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,14 +19,7 @@ EGDIR=		${PREFIX}/share/examples/dillo
 CONF_FILES=	${EGDIR}/dillorc.default ${PKG_SYSCONFDIR}/dillorc
 CONF_FILES+=	${EGDIR}/dpidrc ${PKG_SYSCONFDIR}/dpidrc
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.dillo
-PKG_SUPPORTED_OPTIONS=	inet6
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--enable-ipv6
-.endif
+.include "options.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dillo
@@ -36,7 +30,6 @@ post-install:
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
