@@ -1,0 +1,13 @@
+$NetBSD: patch-ci,v 1.1 2006/05/27 10:55:52 drochner Exp $
+
+--- ./cdda2wav/local.cnf.in.orig	2006-05-24 14:18:40.000000000 +0200
++++ ./cdda2wav/local.cnf.in
+@@ -43,7 +43,7 @@ HAVE_IOCTL=	$(__HAVE_IOCTL:$(_UNIQ)$(HAV
+ 
+ ############# Sound device support
+ #to disable sound support comment out the corresponding line with HAVE_SOUND
+-OSS_SOUND_DEV=	'"/dev/dsp"'
++OSS_SOUND_DEV=	'"${DEVOSSSOUND}"'
+ SUN_SOUND_DEV=	'"/dev/audio"'
+ 
+ HAVE_OSS=	@HAVE_OSS@
