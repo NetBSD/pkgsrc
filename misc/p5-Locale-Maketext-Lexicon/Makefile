@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/01/03 18:29:21 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/27 02:55:38 wiz Exp $
 #
 
 DISTNAME=		Locale-Maketext-Lexicon-0.53
@@ -10,7 +10,7 @@ MAINTAINER=		dieter.NetBSD@pandora.be
 HOMEPAGE=		http://search.cpan.org/~autrijus/Locale-Maketext-Lexicon/
 COMMENT=		Use other catalog formats in Maketext
 
-DEPENDS+=		{perl>=5.8.0,perl-thread>=5.8.0,p5-Locale-Maketext-[0-8]*}:../../misc/p5-Locale-Maketext
+DEPENDS+=		{perl>=5.8.0,p5-Locale-Maketext-[0-8]*}:../../misc/p5-Locale-Maketext
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
