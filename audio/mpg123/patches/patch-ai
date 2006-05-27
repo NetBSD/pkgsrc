@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
+$NetBSD: patch-ai,v 1.3.28.1 2006/05/27 11:24:06 ghen Exp $
 
---- layer3.c.orig	Thu Apr 22 01:25:18 1999
+--- layer3.c.orig	1999-04-21 17:25:18.000000000 +0200
 +++ layer3.c
-@@ -109,54 +109,54 @@
+@@ -109,54 +109,54 @@ void init_layer3(int down_sample_sblimit
    int i,j,k,l;
  
    for(i=-256;i<118+4;i++)
@@ -81,7 +81,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
    }
  
    for(j=0;j<4;j++) {
-@@ -169,10 +169,10 @@
+@@ -169,10 +169,10 @@ void init_layer3(int down_sample_sblimit
  
    for(i=0;i<16;i++) {
      double t = tan( (double) i * M_PI / 12.0 );
@@ -96,7 +96,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
  
      for(j=0;j<2;j++) {
        double base = pow(2.0,-0.25*(j+1.0));
-@@ -183,10 +183,10 @@
+@@ -183,10 +183,10 @@ void init_layer3(int down_sample_sblimit
          else
            p2 = pow(base,i*0.5);
        }
@@ -111,7 +111,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
      }
    }
  
-@@ -608,7 +608,7 @@
+@@ -608,7 +608,7 @@ static int pretab2[22] = {0,0,0,0,0,0,0,
   * Dequantize samples (includes huffman decoding)
   */
  /* 24 is enough because tab13 has max. a 19 bit huffvector */
@@ -120,7 +120,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
  #define REFRESH_MASK \
    while(num < BITSHIFT) { \
      mask |= getbyte()<<(BITSHIFT-num); \
-@@ -625,7 +625,7 @@
+@@ -625,7 +625,7 @@ static int III_dequantize_sample(real xr
    int *me;
  
    int num=getbitoffset();
@@ -129,7 +129,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
    part2remain -= num;
  
    {
-@@ -709,50 +709,50 @@
+@@ -709,50 +709,50 @@ static int III_dequantize_sample(real xr
          if(x == 15 && h->linbits) {
            max[lwin] = cb;
            REFRESH_MASK;
@@ -192,7 +192,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
          xrpnt += step;
        }
      }
-@@ -804,7 +804,7 @@
+@@ -804,7 +804,7 @@ static int III_dequantize_sample(real xr
            mask <<= 1;
          }
          else
@@ -201,7 +201,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
          xrpnt += step;
        }
      }
-@@ -812,8 +812,8 @@
+@@ -812,8 +812,8 @@ static int III_dequantize_sample(real xr
      if(lwin < 3) { /* short band? */
        while(1) {
          for(;mc > 0;mc--) {
@@ -212,7 +212,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
          }
          if(m >= me)
            break;
-@@ -883,50 +883,50 @@
+@@ -883,50 +883,50 @@ static int III_dequantize_sample(real xr
          if (x == 15 && h->linbits) {
            max = cb;
  	  REFRESH_MASK;
@@ -275,7 +275,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
        }
      }
  
-@@ -974,7 +974,7 @@
+@@ -974,7 +974,7 @@ static int III_dequantize_sample(real xr
            mask <<= 1;
          }
          else
@@ -284,7 +284,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
        }
      }
  
-@@ -987,7 +987,7 @@
+@@ -987,7 +987,7 @@ static int III_dequantize_sample(real xr
    num = 0;
  
    while(xrpnt < &xr[SBLIMIT][0]) 
@@ -293,7 +293,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
  
    while( part2remain > 16 ) {
      getbits(16); /* Dismiss stuffing Bits */
-@@ -1065,8 +1065,8 @@
+@@ -1065,8 +1065,8 @@ static void III_i_stereo(real xr_buf[2][
                 t1  = tab1[is_p]; t2 = tab2[is_p];
                 for (; sb > 0; sb--,idx+=3) {
                   real v = xr[0][idx];
@@ -304,7 +304,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
                 }
               }
             }
-@@ -1087,8 +1087,8 @@
+@@ -1087,8 +1087,8 @@ maybe still wrong??? (copy 12 to 13?) */
               t1 = tab1[is_p]; t2 = tab2[is_p];
               for ( ; sb > 0; sb--,idx+=3 ) {  
                 real v = xr[0][idx];
@@ -315,7 +315,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
               }
             }
           } /* end for(lwin; .. ; . ) */
-@@ -1108,8 +1108,8 @@
+@@ -1108,8 +1108,8 @@ maybe still wrong??? (copy 12 to 13?) */
                 t1 = tab1[is_p]; t2 = tab2[is_p];
                 for ( ; sb > 0; sb--,idx++) {
                   real v = xr[0][idx];
@@ -326,7 +326,19 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
                 }
               }
               else 
-@@ -1128,8 +1128,8 @@
+@@ -1119,7 +1119,10 @@ maybe still wrong??? (copy 12 to 13?) */
+       } 
+       else { /* ((gr_info->block_type != 2)) */
+         int sfb = gr_info->maxbandl;
+-        int is_p,idx = bi->longIdx[sfb];
++        int is_p,idx;
++	if (sfb > 21)
++		return;
++	idx = bi->longIdx[sfb];
+         for ( ; sfb<21; sfb++) {
+           int sb = bi->longDiff[sfb];
+           is_p = scalefac[sfb]; /* scale: 0-15 */
+@@ -1128,8 +1131,8 @@ maybe still wrong??? (copy 12 to 13?) */
              t1 = tab1[is_p]; t2 = tab2[is_p];
              for ( ; sb > 0; sb--,idx++) {
                 real v = xr[0][idx];
@@ -337,7 +349,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
              }
            }
            else
-@@ -1143,8 +1143,8 @@
+@@ -1143,8 +1146,8 @@ maybe still wrong??? (copy 12 to 13?) */
  
            for ( sb = bi->longDiff[21]; sb > 0; sb--,idx++ ) {
              real v = xr[0][idx];
@@ -348,7 +360,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
            }
          }
        } /* ... */
-@@ -1177,8 +1177,8 @@
+@@ -1177,8 +1180,8 @@ static void III_antialias(real xr[SBLIMI
         for(ss=7;ss>=0;ss--)
         {       /* upper and lower butterfly inputs */
           register real bu = *--xr2,bd = *xr1;
@@ -359,7 +371,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
         }
       }
    }
-@@ -1252,8 +1252,8 @@
+@@ -1252,8 +1255,8 @@ static void dct36(real *inbuf,real *o1,r
       { 
        real t0, t1, t2;
  
@@ -370,7 +382,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
  
        t3 = in[0];
        t2 = t3 - t1 - t1;
-@@ -1261,16 +1261,16 @@
+@@ -1261,16 +1264,16 @@ static void dct36(real *inbuf,real *o1,r
        tmp[4]          = t2 + t0 + t0;
        t3 += t1;
  
@@ -391,7 +403,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
  
        tmp[2] = tmp[6] = t3 - t0      - t2;
        tmp[0] = tmp[8] = t3 + t0 + t1;
-@@ -1280,9 +1280,9 @@
+@@ -1280,9 +1283,9 @@ static void dct36(real *inbuf,real *o1,r
      {
        real t1, t2, t3;
  
@@ -404,7 +416,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
  
        {
          real t0 = t1 + t2 + t3;
-@@ -1293,7 +1293,7 @@
+@@ -1293,7 +1296,7 @@ static void dct36(real *inbuf,real *o1,r
        t2 -= t3;
        t1 -= t3;
  
@@ -413,7 +425,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
  
        t1 += t3;
        tmp[3] += t1;
-@@ -1308,35 +1308,35 @@
+@@ -1308,35 +1311,35 @@ static void dct36(real *inbuf,real *o1,r
      {
        real t0, t1, t2, t3, t4, t5, t6, t7;
  
@@ -459,7 +471,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
        tmp[5] = t3 - t2;
  
        t4 -= t1 + t7;
-@@ -1351,53 +1351,53 @@
+@@ -1351,53 +1354,53 @@ static void dct36(real *inbuf,real *o1,r
      {
        real t0, t1, t2, t3, t4, t5, t6, t7;
  
@@ -536,7 +548,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
  
  {
     register real *out2 = o2;
-@@ -1422,20 +1422,20 @@
+@@ -1422,20 +1425,20 @@ static void dct36(real *inbuf,real *o1,r
  
  #define MACRO0(v) { \
      real tmp; \
@@ -563,7 +575,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
  	MACRO0(v); }
  
      register const real *c = COS9;
-@@ -1446,17 +1446,17 @@
+@@ -1446,17 +1449,17 @@ static void dct36(real *inbuf,real *o1,r
  
      real ta33,ta66,tb33,tb66;
  
@@ -589,7 +601,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
  
        MACRO1(0);
        MACRO2(8);
-@@ -1464,10 +1464,10 @@
+@@ -1464,10 +1467,10 @@ static void dct36(real *inbuf,real *o1,r
  
      {
        real tmp1a,tmp2a,tmp1b,tmp2b;
@@ -604,7 +616,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
  
        MACRO1(1);
        MACRO2(7);
-@@ -1475,10 +1475,10 @@
+@@ -1475,10 +1478,10 @@ static void dct36(real *inbuf,real *o1,r
  
      {
        real tmp1a,tmp2a,tmp1b,tmp2b;
@@ -619,7 +631,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
  
        MACRO1(2);
        MACRO2(6);
-@@ -1486,10 +1486,10 @@
+@@ -1486,10 +1489,10 @@ static void dct36(real *inbuf,real *o1,r
  
      {
        real tmp1a,tmp2a,tmp1b,tmp2b;
@@ -634,7 +646,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
  
        MACRO1(3);
        MACRO2(5);
-@@ -1498,7 +1498,7 @@
+@@ -1498,7 +1501,7 @@ static void dct36(real *inbuf,real *o1,r
  	{
  		real sum0,sum1;
      	sum0 =  in[2*0+0] - in[2*2+0] + in[2*4+0] - in[2*6+0] + in[2*8+0];
@@ -643,7 +655,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
  		MACRO0(4);
  	}
    }
-@@ -1522,19 +1522,19 @@
+@@ -1522,19 +1525,19 @@ static void dct12(real *in,real *rawout1
                               \
       in5 += in3; in3 += in1; \
                               \
@@ -669,7 +681,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
                           \
       in3 = in4 + in5;    \
       in4 -= in5;         \
-@@ -1554,27 +1554,27 @@
+@@ -1554,27 +1557,27 @@ static void dct12(real *in,real *rawout1
       {
         real tmp0,tmp1 = (in0 - in4);
         {
@@ -711,7 +723,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
    }
  
    in++;
-@@ -1588,27 +1588,27 @@
+@@ -1588,27 +1591,27 @@ static void dct12(real *in,real *rawout1
       {
         real tmp0,tmp1 = (in0 - in4);
         {
@@ -753,7 +765,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
    }
  
    in++; 
-@@ -1623,27 +1623,27 @@
+@@ -1623,27 +1626,27 @@ static void dct12(real *in,real *rawout1
       {
         real tmp0,tmp1 = (in0 - in4);
         {
@@ -795,7 +807,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
    }
  }
  
-@@ -1693,7 +1693,7 @@
+@@ -1693,7 +1696,7 @@ static void III_hybrid(real fsIn[SBLIMIT
       int i;
       for(i=0;i<SSLIMIT;i++) {
         tspnt[i*SBLIMIT] = *rawout1++;
@@ -804,7 +816,7 @@ $NetBSD: patch-ai,v 1.3 2002/02/22 13:17:54 simonb Exp $
       }
     }
  }
-@@ -1865,5 +1865,3 @@
+@@ -1865,5 +1868,3 @@ int do_layer3(struct frame *fr,int outmo
    
    return clip;
  }
