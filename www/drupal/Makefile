@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2006/05/26 17:14:35 adrianp Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/27 15:52:54 adrianp Exp $
 
 DISTNAME=	drupal-4.6.7
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
@@ -46,6 +47,8 @@ do-install:
 		${PREFIX}/share/examples/drupal
 	${INSTALL_DATA} ${WRKSRC}/sites/default/settings.php \
 		${PREFIX}/share/examples/drupal
+	${INSTALL_DATA} ${WRKSRC}/sites/default/settings.php \
+		${DRUPAL}/sites/default/settings.php.example
 	${INSTALL_DATA} ${WRKSRC}/.htaccess ${DRUPAL}
 	${INSTALL_DATA} ${WRKSRC}/*.ico ${DRUPAL}
 	${INSTALL_DATA} ${WRKSRC}/*.php ${DRUPAL}
