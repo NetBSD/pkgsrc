@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2006/05/26 16:41:09 agc Exp $
+# $NetBSD: Makefile,v 1.13 2006/05/27 21:32:30 agc Exp $
 
-DISTNAME=	netbsd-iscsi-20060526
+DISTNAME=	netbsd-iscsi-20060527
 CATEGORIES=	devel
 MASTER_SITES=	http://www.alistaircrooks.co.uk/src/
 
@@ -8,7 +8,7 @@ MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://www.alistaircrooks.co.uk/software.html
 COMMENT=	NetBSD's iSCSI target (per iSCSI RFC 3720)
 
-WRKSRC=		${WRKDIR}/iscsi/src
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 GNU_CONFIGURE=	yes
 
