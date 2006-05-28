@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/05/01 13:00:40 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/05/28 15:17:47 adrianp Exp $
 share/doc/mantis/CUSTOMIZATION
 share/doc/mantis/INSTALL
 share/doc/mantis/README
@@ -554,6 +554,6 @@ share/mantis/view_filters_page.php
 @dirrm share/mantis/admin/upgrades
 @dirrm share/mantis/admin/css
 @dirrm share/mantis/admin
-@dirrm share/mantis
+@unexec ${RMDIR} %D/share/mantis 2>/dev/null || ${TRUE}
 @dirrm share/examples/mantis
 @dirrm share/doc/mantis
