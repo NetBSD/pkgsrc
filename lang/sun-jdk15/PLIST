@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/08 16:13:46 abs Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/05/28 02:24:49 tv Exp $
 bin/sun15-appletviewer
 bin/sun15-apt
 bin/sun15-extcheck
@@ -801,6 +801,9 @@ java/sun-1.5/demo/management/FullThreadDump/README.txt
 java/sun-1.5/demo/management/FullThreadDump/src/Deadlock.java
 java/sun-1.5/demo/management/FullThreadDump/src/FullThreadDump.java
 java/sun-1.5/demo/management/FullThreadDump/src/ThreadMonitor.java
+java/sun-1.5/demo/management/JTop/JTop.jar
+java/sun-1.5/demo/management/JTop/README.txt
+java/sun-1.5/demo/management/JTop/src/JTop.java
 java/sun-1.5/demo/management/MemoryMonitor/MemoryMonitor.jar
 java/sun-1.5/demo/management/MemoryMonitor/README.txt
 java/sun-1.5/demo/management/MemoryMonitor/src/MemoryMonitor.java
@@ -1820,6 +1823,8 @@ java/sun-1.5/src.zip
 @dirrm java/sun-1.5/demo/management/VerboseGC
 @dirrm java/sun-1.5/demo/management/MemoryMonitor/src
 @dirrm java/sun-1.5/demo/management/MemoryMonitor
+@dirrm java/sun-1.5/demo/management/JTop/src
+@dirrm java/sun-1.5/demo/management/JTop
 @dirrm java/sun-1.5/demo/management/FullThreadDump/src
 @dirrm java/sun-1.5/demo/management/FullThreadDump
 @dirrm java/sun-1.5/demo/management
