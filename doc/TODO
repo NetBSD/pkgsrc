@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5020 2006/05/28 15:00:05 wiz Exp $
+$NetBSD: TODO,v 1.5021 2006/05/28 15:25:09 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -720,7 +720,6 @@ Suggested package updates
 	o makeztxt-1.60
 	o malsync-2.2.0
 	o manedit-0.6.1
-	o mantis-1.0.3
 	o mapserver-4.2.5
 	o maradns-1.2.07.4
 	o matchbox-1.0
