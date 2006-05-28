@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2006/05/28 17:28:17 joerg Exp $
+
+--- src/lib/io/gr_file_sink.cc.orig	2006-05-28 16:44:28.000000000 +0000
++++ src/lib/io/gr_file_sink.cc
+@@ -30,6 +30,7 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <fcntl.h>
++#include <unistd.h>
+ #include <stdexcept>
+ 
+ // win32 (mingw/msvc) specific
