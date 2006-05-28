@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/05/25 17:36:50 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2006/05/28 13:17:45 joerg Exp $
 
 DISTNAME=	anjuta-1.2.3
 PKGREVISION=	8
@@ -16,6 +16,8 @@ DEPENDS+=	glade>=2.6.0:../../devel/glade
 DEPENDS+=	gnome2-terminal>=2.4.2:../../x11/gnome2-terminal
 DEPENDS+=	libtool>=1.5.2:../../devel/libtool
 DEPENDS+=	yelp>=2.4.2:../../misc/yelp
+
+BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 USE_DIRS+=		gnome2-1.5
 USE_LANGUAGES=		c c++

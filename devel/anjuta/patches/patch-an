@@ -1,13 +1,17 @@
-$NetBSD: patch-an,v 1.4 2005/08/01 17:17:14 drochner Exp $
+$NetBSD: patch-an,v 1.5 2006/05/28 13:17:45 joerg Exp $
 
 --- src/launcher.c.orig	2005-04-06 11:05:44.000000000 +0200
 +++ src/launcher.c
-@@ -37,6 +37,10 @@
+@@ -37,6 +37,14 @@
  #include "anjuta-marshalers.h"
  #include "anjuta.h"
  
 +#ifndef B460800
 +#define B460800 460800
++#endif
++
++#if (defined(__DragonFly__) || defined(__FreeBSD__)) && !defined(O_SYNC)
++#define O_SYNC O_FSYNC
 +#endif
 +
  #define FILE_BUFFER_SIZE 1024
