@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2006/03/07 03:22:31 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2006/05/28 14:16:34 joerg Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
 DISTNAME=	j2re-1_4_2_11-linux-i586
 PKGNAME=	sun-jre14-2.11
+PKGREVISION=	1
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) 2 Runtime Environment 1.4.2
@@ -13,12 +14,12 @@ SHORT=		JRE
 WRKSRC=		${WRKDIR}/j2re1.4.2_11
 JAVA_WRAPPERS=	java keytool orbd policytool rmid rmiregistry \
 		servertool tnameserv
-OWN_DIRS=	${JAVA_HOME}
-OWN_DIRS+=	${JAVA_HOME}/lib
-OWN_DIRS+=	${JAVA_HOME}/lib/applet
-OWN_DIRS+=	${JAVA_HOME}/lib/images
-OWN_DIRS+=	${JAVA_HOME}/lib/images/cursors
-OWN_DIRS+=	${JAVA_HOME}/lib/security
+REQD_DIRS=	${JAVA_HOME}
+REQD_DIRS+=	${JAVA_HOME}/lib
+REQD_DIRS+=	${JAVA_HOME}/lib/applet
+REQD_DIRS+=	${JAVA_HOME}/lib/images
+REQD_DIRS+=	${JAVA_HOME}/lib/images/cursors
+REQD_DIRS+=	${JAVA_HOME}/lib/security
 SFILES=		content-types.properties	flavormap.properties
 SFILES+=	font.properties.Redhat6.1	font.properties
 SFILES+=	font.properties.ja.Redhat6.1	font.properties.ja.Redhat6.2
