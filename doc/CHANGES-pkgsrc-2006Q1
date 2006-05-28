@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.61 2006/05/27 11:24:32 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.62 2006/05/28 21:28:49 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -125,3 +125,5 @@ Pullup ticket 1670 - requested by joerg
 build and other fixes for clisp
 Pullup ticket 1673 - requested by drochner
 security fix for mpg123
+Pullup ticket 1672 - requested by adrianp
+security update for drupal
