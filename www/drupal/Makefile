@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2006/03/14 20:43:23 jlam Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2006/05/28 21:27:20 salo Exp $
 
-DISTNAME=	drupal-4.6.6
+DISTNAME=	drupal-4.6.7
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
@@ -31,7 +32,7 @@ SUBST_MESSAGE.conf=     Fixing configuration files.
 .include "options.mk"
 
 post-extract:
-	@${CP} ${FILESDIR}/drupal.conf ${WRKSRC}
+	${CP} ${FILESDIR}/drupal.conf ${WRKSRC}
 
 do-install:
 	${INSTALL_DATA_DIR} ${DRUPAL}
@@ -46,6 +47,9 @@ do-install:
 		${PREFIX}/share/examples/drupal
 	${INSTALL_DATA} ${WRKSRC}/sites/default/settings.php \
 		${PREFIX}/share/examples/drupal
+	${INSTALL_DATA} ${WRKSRC}/sites/default/settings.php \
+		${DRUPAL}/sites/default/settings.php.example
+	${INSTALL_DATA} ${WRKSRC}/.htaccess ${DRUPAL}
 	${INSTALL_DATA} ${WRKSRC}/*.ico ${DRUPAL}
 	${INSTALL_DATA} ${WRKSRC}/*.php ${DRUPAL}
 
@@ -53,7 +57,7 @@ do-install:
 		cd ${WRKSRC}/${i} && ${PAX} -rw . ${DRUPAL}/${i}
 .	endfor
 
-	@${CHOWN} ${APACHE_USER}:${APACHE_GROUP} ${DRUPAL}/files
-	@${CHMOD} 0770 ${DRUPAL}/files
+	${CHOWN} ${APACHE_USER}:${APACHE_GROUP} ${DRUPAL}/files
+	${CHMOD} 0770 ${DRUPAL}/files
 
 .include "../../mk/bsd.pkg.mk"
