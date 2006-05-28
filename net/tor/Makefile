@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/05/26 02:21:41 jschauma Exp $
+# $NetBSD: Makefile,v 1.30 2006/05/28 17:50:23 rillig Exp $
 #
 
 DISTNAME=		tor-0.1.1.20
@@ -18,12 +18,12 @@ TOR_USER?=		tor
 TOR_GROUP?=		tor
 PKG_HOME?=		/var/chroot/tor
 
-RCD_SCRIPTS=            tor
+RCD_SCRIPTS=		tor
 PKG_GROUPS=		${TOR_GROUP}
-PKG_USERS=              ${TOR_USER}:${TOR_GROUP}::Torifier:${PKG_HOME}
+PKG_USERS=		${TOR_USER}:${TOR_GROUP}::Torifier:${PKG_HOME}
 USER_GROUP=		${TOR_USER} ${TOR_GROUP}
 
-OWN_DIR_PERMS+=		${PKG_HOME} ${USER_GROUP} 0755
+OWN_DIRS_PERMS+=	${PKG_HOME} ${USER_GROUP} 0755
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 
@@ -31,8 +31,6 @@ CONF_FILES+=		${PREFIX}/share/examples/tor/tor-tsocks.conf 	\
 				${PKG_SYSCONFDIR}/tor/tor-tsocks.conf
 CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample 	\
 				${PKG_SYSCONFDIR}/tor/torrc
-
-RCD_SCRIPT=		tor
 
 FILES_SUBST+=		PKG_HOME=${PKG_HOME:Q}
 FILES_SUBST+=		TOR_USER=${TOR_USER:Q} TOR_GROUP=${TOR_GROUP:Q}
@@ -47,7 +45,7 @@ post-patch:
 		-e 's|@PKG_HOME@|${PKG_HOME}|g'				\
 		-e 's|@TOR_USER@|${TOR_USER}|g'				\
 		-e 's|@TOR_GROUP@|${TOR_GROUP}|g'			\
-		-e 's|@RCD_SCRIPTS_SHELL@|${RCD_SCRIPTS_SHELL}|g'	\
+		-e 's|@RCD_SCRIPTS_SHELL@|'${RCD_SCRIPTS_SHELL:Q}'|g'	\
 		${FILESDIR}/tor.in > ${WRKSRC}/tor.pkgsrc.rc
 
 post-install:
