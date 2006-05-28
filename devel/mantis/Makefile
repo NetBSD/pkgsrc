@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2006/05/01 13:00:40 adrianp Exp $
+# $NetBSD: Makefile,v 1.21 2006/05/28 15:17:47 adrianp Exp $
 
-DISTNAME=	mantis-1.0.2
+DISTNAME=	mantis-1.0.3
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
 
@@ -43,7 +43,7 @@ SUBST_SED.conf=		-e "s|@MANTIS_HOME@|${MANTIS_HOME}|g"
 SUBST_MESSAGE.conf=	Fixing configuration files.
 
 post-extract:
-	@${CP} ${FILESDIR}/mantis.conf ${WRKSRC}
+	${CP} ${FILESDIR}/mantis.conf ${WRKSRC}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mantis
