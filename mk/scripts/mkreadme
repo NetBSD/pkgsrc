@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.8 2005/06/01 18:16:20 wiz Exp $
+# $NetBSD: mkreadme,v 1.9 2006/05/28 16:34:09 dmcmahill Exp $
 #
 # Script for README.html generation
 #
@@ -322,7 +322,7 @@ if [ "x$restart" = "xno" ] ; then
     rm -fr $DATABASEFILE
 
     cd ${PKGSRCDIR}
-    list=`${GREP} '^[ \t]*'SUBDIR */Makefile | ${GREP} -v regress/ | ${SED} 's,/Makefile.*=[[:space:]]*,/,'`
+    list=`${GREP} '^[ \t]*'SUBDIR */Makefile | ${GREP} -v regress/ | ${SED} -e 's,/Makefile.*=[[:space:]]*,/,' -e 's;#.*;;g' `
     for pkgdir in $list
     do
 	    if [ ! -d $pkgdir ]; then
