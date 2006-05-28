@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/05/21 18:40:20 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/05/28 17:38:50 rillig Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 PY_GOBJECT_SHARED_BUILDLINK3_MK:=	${PY_GOBJECT_SHARED_BUILDLINK3_MK}+
@@ -12,10 +12,9 @@ BUILDLINK_PACKAGES+=	py-gobject-shared
 
 .if ${PY_GOBJECT_SHARED_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.py-gobject-shared+=	py-gobject-shared>=2.10.1
-BUILDLINK_PKGSRCDIR.py-gobject-shared?=	../../devel/py-gobject-shared
+BUILDLINK_PKGSRCDIR.py-gobject-shared?=		../../devel/py-gobject-shared
+BUILDLINK_DEPMETHOD.py-gobject-shared?=		build
 .endif	# PY_GOBJECT_SHARED_BUILDLINK3_MK
-
-BUILDLINK_DEPMETHOD.py-gobject-shared?=	build
 
 .include "../../devel/glib2/buildlink3.mk"
 
