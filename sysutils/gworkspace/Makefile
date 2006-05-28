@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/04/17 13:46:48 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2006/05/28 00:26:27 rh Exp $
 #
 
 DISTNAME=	gworkspace-0.7.1
@@ -15,6 +15,7 @@ CONFLICTS+=	GWLib-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/gw/GW/}
 USE_TOOLS+=	gs:run file:run sh:run
+USE_LANGUAGES=	objc
 CONFIGURE_ARGS+=	--with-sh=${TOOLS_PATH.sh:Q}
 CONFIGURE_ARGS+=	--with-file=${TOOLS_PATH.file:Q}
 
