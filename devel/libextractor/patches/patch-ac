@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.6 2006/05/28 14:11:24 joerg Exp $
+
+--- src/main/Makefile.in.orig	2006-05-28 13:27:06.000000000 +0000
++++ src/main/Makefile.in
+@@ -280,7 +280,7 @@ AM_CFLAGS = \
+ extract_LDADD = \
+   $(top_builddir)/src/main/libextractor.la 
+ 
+-@MINGW_FALSE@@SOMEBSD_FALSE@dlflag = -ldl
++dlflag = ${DL_LDFLAGS} ${DL_LIBS}
+ @HAVE_ZLIB_TRUE@zlib = -lz
+ @HAVE_BZ2_TRUE@bz2lib = -lbz2
+ libextractor_la_LDFLAGS = \
