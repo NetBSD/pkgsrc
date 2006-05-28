@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/05 00:02:43 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.2.1 2006/05/28 21:27:20 salo Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/INSTALL.txt
 share/doc/drupal/LICENSE.txt
 share/doc/drupal/MAINTAINERS.txt
+share/drupal/.htaccess
 share/drupal/cron.php
 share/drupal/database/database.mysql
 share/drupal/database/database.pgsql
@@ -84,6 +85,7 @@ share/drupal/scripts/code-style.pl
 share/drupal/scripts/cron-curl.sh
 share/drupal/scripts/cron-lynx.sh
 share/drupal/scripts/prefix.sh
+share/drupal/sites/default/settings.php.example
 share/drupal/themes/bluemarine/logo.png
 share/drupal/themes/bluemarine/screenshot.png
 share/drupal/themes/bluemarine/style.css
