@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:24 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/05/28 19:12:52 joerg Exp $
 bin/sylpheed
 share/examples/sylpheed/mime.types
 share/locale/bg/LC_MESSAGES/sylpheed.mo
@@ -27,6 +27,7 @@ share/locale/sr/LC_MESSAGES/sylpheed.mo
 share/locale/sv/LC_MESSAGES/sylpheed.mo
 share/locale/tr/LC_MESSAGES/sylpheed.mo
 share/locale/uk/LC_MESSAGES/sylpheed.mo
+share/locale/vi/LC_MESSAGES/sylpheed.mo
 share/locale/zh_CN/LC_MESSAGES/sylpheed.mo
 share/locale/zh_TW/LC_MESSAGES/sylpheed.mo
 share/sylpheed/faq/de/sylpheed-faq-1.html
@@ -83,6 +84,7 @@ share/sylpheed/manual/ja/sylpheed-18.html
 share/sylpheed/manual/ja/sylpheed-19.html
 share/sylpheed/manual/ja/sylpheed-2.html
 share/sylpheed/manual/ja/sylpheed-20.html
+share/sylpheed/manual/ja/sylpheed-21.html
 share/sylpheed/manual/ja/sylpheed-3.html
 share/sylpheed/manual/ja/sylpheed-4.html
 share/sylpheed/manual/ja/sylpheed-5.html
