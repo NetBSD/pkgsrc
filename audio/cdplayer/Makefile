@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/17 13:46:15 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/05/28 00:26:26 rh Exp $
 #
 
 DISTNAME=	cdplayer-0.4.2
@@ -11,6 +11,7 @@ HOMEPAGE=	http://gsburn.sourceforge.net/
 COMMENT=	GNUstep CD player with CDDB support
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
+USE_LANGUAGES=	objc
 USE_TOOLS+=	gmake
 MAKEFILE=	GNUmakefile
 MAKE_ENV+=	ADDITIONAL_CPPFLAGS="-Wno-import"
