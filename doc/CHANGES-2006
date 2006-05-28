@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.336 2006/05/28 02:25:32 tv Exp $
+$NetBSD: CHANGES-2006,v 1.337 2006/05/28 14:52:47 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2708,3 +2708,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/netbsd-iscsi to 20060527 [agc 2006-05-27]
 	Updated lang/sun-jdk15 to 5.0.7 [tv 2006-05-28]
 	Updated lang/sun-jre15 to 5.0.7 [tv 2006-05-28]
+	Updated www/drupal to 4.7.1 [adrianp 2006-05-28]
