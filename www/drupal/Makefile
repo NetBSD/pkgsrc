@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2006/05/27 15:52:54 adrianp Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/28 14:46:47 adrianp Exp $
 
-DISTNAME=	drupal-4.6.7
-PKGREVISION=	1
+DISTNAME=	drupal-4.7.1
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://drupal.org/
 COMMENT=	Open source content management system
+
+.include "../../lang/php/phpversion.mk"
 
 DEPENDS+=	ap-php>=4.3.3:../../www/ap-php
 DEPENDS+=	php-gd>=4.3.3:../../graphics/php-gd
@@ -49,8 +50,6 @@ do-install:
 		${PREFIX}/share/examples/drupal
 	${INSTALL_DATA} ${WRKSRC}/sites/default/settings.php \
 		${DRUPAL}/sites/default/settings.php.example
-	${INSTALL_DATA} ${WRKSRC}/.htaccess ${DRUPAL}
-	${INSTALL_DATA} ${WRKSRC}/*.ico ${DRUPAL}
 	${INSTALL_DATA} ${WRKSRC}/*.php ${DRUPAL}
 
 .	for i in ${PAX_DIRS}
