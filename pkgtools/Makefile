@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2006/05/26 19:58:47 joerg Exp $
+# $NetBSD: Makefile,v 1.73 2006/05/28 09:48:48 wiz Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -12,8 +12,8 @@ SUBDIR+=	digest
 SUBDIR+=	genrpm
 SUBDIR+=	gensolpkg
 #SUBDIR+=	libkver		# Only under instruction of user
-SUBDIR+=	libnbcompat	# Only for non-NetBSD systems
-SUBDIR+=	mtree		# Only for non-NetBSD systems
+SUBDIR+=	libnbcompat
+SUBDIR+=	mtree
 SUBDIR+=	p5-pkgsrc-Dewey
 SUBDIR+=	pkg_alternatives
 SUBDIR+=	pkg_chk
