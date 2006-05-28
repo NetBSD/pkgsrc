@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/17 13:46:03 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/05/28 00:26:27 rh Exp $
 #
 
 DISTNAME=		Addresses-0.4.6
@@ -9,6 +9,8 @@ MASTER_SITES=		http://giesler.biz/bjoern/downloads/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://giesler.biz/bjoern/en/sw_addr.html
 COMMENT=		Address book for GNUstep
+
+USE_LANGUAGES=		objc
 
 NO_CONFIGURE=		yes
 MAKE_ENV+=		Addresses_OBJCFLAGS=-I..

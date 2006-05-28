@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/04/17 13:46:03 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2006/05/28 00:26:27 rh Exp $
 
 DISTNAME=	gnustep-back-0.10.3
 PKGREVISION=	1
@@ -9,9 +9,10 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	X11 AppKit backend for GNUstep
 
-USE_TOOLS+=		pkg-config
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
+USE_LANGUAGES=	objc
+USE_TOOLS+=	pkg-config
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=--exec-prefix=${PREFIX}/libexec/GNUstep
 
 pre-install:
 	${INSTALL_DATA_DIR} ${GNUSTEP_SYSTEM_ROOT}/Library/Fonts
