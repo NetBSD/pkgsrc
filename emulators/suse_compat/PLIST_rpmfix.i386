@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST_rpmfix.i386,v 1.1 2006/05/28 14:33:20 joerg Exp $
+/usr/lib/libncurses.so.2.1
