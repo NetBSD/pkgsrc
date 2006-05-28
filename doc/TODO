@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5019 2006/05/28 14:53:05 adrianp Exp $
+$NetBSD: TODO,v 1.5020 2006/05/28 15:00:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -255,7 +255,7 @@ Suggested new packages
 	Simple SMTP mail server and client.
 
 	kplayer
-	http://kplayer.sourceforge.net/ 
+	http://kplayer.sourceforge.net/
 	KDE media player based on MPlayer.
 
 	kaffeine
@@ -272,7 +272,7 @@ Suggested new packages
 
 	PostScript::MailLabels perl module
 	http://oplink.net/~ajackson/software/maillabels
-	Perl module (at CPAN) for printing mailing labels on   
+	Perl module (at CPAN) for printing mailing labels on
 	standard label stock. Also has postal barcodes support.
 
 	FUSE [reinoud]
@@ -389,7 +389,7 @@ Suggested package updates
 	o bochs-2.2.6
 	o bogofilter-1.0.1
 	o boolean-6.8
-	o boson-0.11
+	o boson-0.12
 	o browser-bookmarks-menu-0.4
 	o bsdiff-4.3
 	o bugzilla-2.22
@@ -444,7 +444,7 @@ Suggested package updates
 	o dejavu-ttf-2.6
 	o delegate-9.1.1
 	o denemo-0.7.5
-	o deskbar-applet-2.14.1.1
+	o deskbar-applet-2.14.2
 	o devIL-1.6.7
 	o devhelp-0.10
 	o devtodo-0.1.19
@@ -613,7 +613,7 @@ Suggested package updates
 	o httptunnel-3.3
 	o hugs-200503 [pkg/30071]
 	o hydrogen-0.9.2
-	o hyperestraier-1.2.7
+	o hyperestraier-1.2.7 [pkg/33486]
 	o i2ocfg-1.1
 	o icdprog-0.5
 	o icecast-2.3.1
@@ -827,6 +827,7 @@ Suggested package updates
 	o p5-Business-ISBN-Data-1.10
 	o p5-CDDB-1.16
 	o p5-CGI-Minimal-1.24
+	o p5-Cache-Cache-1.05
 	o p5-Class-Autouse-1.26
 	o p5-Class-DBI-AbstractSearch-0.07
 	o p5-Class-Inspector-1.16
@@ -928,6 +929,7 @@ Suggested package updates
 	o p5-sybperl-2.18
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
+	o pango-1.12.3
 	o pari-2.1.7
 	o patchutils-0.2.31
 	o pcal-4.8
@@ -973,6 +975,7 @@ Suggested package updates
 	o pnetlib-0.7.2 [pkg/31950]
 	o pnetlib-0.7.4
 	o popa3d-1.0.2
+	o poppler-0.5.2
 	o poppy-4.01
 	o poptop-1.3.0
 	o posh-0.4.3
@@ -1025,7 +1028,7 @@ Suggested package updates
 	o py-sqlite2-2.2.0
 	o py-sybase-0.37
 	o py-textile-2.0.10
-	o py-twisted-2.0.0 
+	o py-twisted-2.4.0
 	o py-urwid-0.8.8
 	o py-wxWidgets-2.6.3.0
 	o py-xmltools-1.4.0
@@ -1035,6 +1038,7 @@ Suggested package updates
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
 	o qcad-2.0.4.0 [pkgsrc-wip]
+	o qdbm-1.8.58 [pkg/33485]
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-docs-2.3.2
@@ -1046,7 +1050,7 @@ Suggested package updates
 	o qwspritefield-1.7
 	o qwt-0.4.0
 	o radiance-3.7.2
-	o raine-0.43.2
+	o raine-0.43.3
 	o randread-0.2
 	o rapidsvn-0.9.2
 	o raptor-1.4.5
@@ -1143,7 +1147,7 @@ Suggested package updates
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.2
 	o sysinfo-4.2.2
-	o tailor-0.9.22
+	o tailor-0.9.23
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
@@ -1186,6 +1190,7 @@ Suggested package updates
 	o ucarp-1.2
 	o ucblogo-5.5
 	o unix2dos-1.3
+	o unrar-3.6.4
 	o userppp-030706
 	o valgrind-3.0.1
 	o vfu-4.03
@@ -1199,6 +1204,7 @@ Suggested package updates
 	o vnc2swf-0.8.2
 	o vobcopy-1.0.0
 	o vp-1.6
+	o vte-0.12.2
 	o w32api-3.2
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
@@ -1206,6 +1212,7 @@ Suggested package updates
 	o wdm-1.28
 	o weechat-0.1.9
 	o weewm-0.01
+	o win32-codecs-20060501
 	o winbind-3.0.13
 	o wmctrl-1.07
 	o wmii-2.5.1 [pkg/32522]
@@ -1238,10 +1245,10 @@ Suggested package updates
 	o xlispstat-3.52.20
 	o xm7-303
 	o xmahjongg-3.7
-	o xmame-0.105
+	o xmame-0.106
 	o xmbdfed-4.6
 	o xmcd-3.3.0
-	o xmess-0.105
+	o xmess-0.106
 	o xmlsec1-1.2.9
 	o xmms-alarm-0.3.7
 	o xmms-crossfade-1.3.10
@@ -1341,7 +1348,7 @@ Suggested pkgsrc enhancements
 		- MANCOMPRESSED
 
 	o Add an install time check that examines installed files for references
-	  to ${WRKDIR}.  In particular this should help catch packages which 
+	  to ${WRKDIR}.  In particular this should help catch packages which
 	  pickup the tools directory with AC_PATH_PROG.  This is in a similar
 	  spirit as the runtime path checks which already exist.
 
