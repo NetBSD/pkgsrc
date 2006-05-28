@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:31:03 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/28 00:26:27 rh Exp $
 #
 
 DISTNAME=		sope-4.5.4-nevermind-r878
@@ -13,6 +13,8 @@ HOMEPAGE=		http://sope.opengroupware.org/
 COMMENT=		Set of frameworks for a complete web application server environment
 
 BUILD_DEPENDS+=		bash-[0-9]*:../../shells/bash
+
+USE_LANGUAGES=		objc
 
 WRKSRC=			${WRKDIR}/sope
 USE_PKGLOCALEDIR=	yes
