@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/05/25 14:39:56 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/05/28 15:16:10 joerg Exp $
 #
 
 DISTNAME=		vis5d+-1.2.1
@@ -10,7 +10,7 @@ MAINTAINER=		hdp@nmsu.edu
 HOMEPAGE=		http://vis5d.sourceforge.net/
 COMMENT=		Volumetric Visualization program for scientific datasets
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++ fortran
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt
