@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5018 2006/05/27 10:56:33 wiz Exp $
+$NetBSD: TODO,v 1.5019 2006/05/28 14:53:05 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -456,7 +456,6 @@ Suggested package updates
 	o docbook-xsl-1.70.1
 	o doxygen-1.4.6
 	o dropbear-0.48
-	o drupal-4.7.1
 	o dspam-3.6.6
 	o dvd+rw-tools-6.1
 	o dvdauthor-0.6.11
