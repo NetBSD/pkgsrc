@@ -1,0 +1,11 @@
+--- src/command.c.orig	2002-07-29 13:37:49.000000000 +0100
++++ src/command.c	2006-05-29 14:34:26.000000000 +0100
+@@ -718,7 +718,7 @@
+ 				
+ 				/* make sure it can be changed */
+ 				if (access(newfile, WRITE) != 0) {
+-					(void) sprintf(msg, "Cannot write to file %s", newfile);
++					(void) snprintf(msg, sizeof(msg), "Cannot write to file %s", newfile);
+ 					postmsg(msg);
+ 					anymarked = NO;
+ 					break;
