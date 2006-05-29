@@ -122,6 +122,7 @@ imapuw-whoson		Enable whoson support.
 imlib			Use imlib as imaging library.
 imlib2			Use imlib2 as imaging library.
 inet6			Enable support for IPv6.
+iodbc			Enable ODBC support via iODBC.
 ipfilter	
 iptables	
 irssi-perl		Enable Perl support in irssi.
@@ -271,6 +272,7 @@ trn-nntpclnt		Use nntpclnt as NNTP client.
 truetype	
 ucspi-ssl-perl		Enable Perl support in ucspi-ssl.
 unicode	
+unixodbc		Enable ODBC support via unixODBC.
 unrealircd-chroot	Enable support for running in a chroot jail.
 unrealircd-disableusermod	Disable /sethost, /setident, /chgname, /chghost, and /chgident.
 unrealircd-hub		IRC hub server.
