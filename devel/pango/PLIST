@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2006/03/13 18:26:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2006/05/29 17:08:43 drochner Exp $
 bin/pango-querymodules
 bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
@@ -85,6 +85,7 @@ share/doc/pango/pango-X-Fonts-and-Rendering.html
 share/doc/pango/pango-Xft-Fonts-and-Rendering.html
 share/doc/pango/pango-querymodules.html
 share/doc/pango/pango.devhelp
+share/doc/pango/pango.devhelp2
 share/doc/pango/pango.html
 share/doc/pango/rendering.html
 share/doc/pango/right.png
