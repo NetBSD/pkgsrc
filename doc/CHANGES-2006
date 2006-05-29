@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.342 2006/05/29 14:04:27 tron Exp $
+$NetBSD: CHANGES-2006,v 1.343 2006/05/29 16:14:12 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2714,3 +2714,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated editors/dasher to 4.0.2 [adam 2006-05-29]
 	Updated devel/cscope to 15.5nb1 [tron 2006-05-29]
 	Updated www/firefox-bin-java to 1.2 [tron 2006-05-29]
+	Updated lang/py-pyrex to 0.9.4.1 [joerg 2006-05-29]
