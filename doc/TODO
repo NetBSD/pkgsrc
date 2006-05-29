@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5025 2006/05/29 20:49:29 wiz Exp $
+$NetBSD: TODO,v 1.5026 2006/05/29 22:09:06 tron Exp $
 
 Suggested new packages
 ======================
@@ -768,8 +768,6 @@ Suggested package updates
 	o mplayer-plugin-firefox-3.25
 	o mpop-0.8.3 [pkg/32511]
 	o mrproject-0.9.1
-	o mrtg-2.13.2 [pkg/32811]
-	o mrtg-2.14.0
 	o mserv-devel-0.41
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
