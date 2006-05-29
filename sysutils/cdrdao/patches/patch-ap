@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2006/05/29 15:22:29 drochner Exp $
+
+--- xdao/ProgressDialog.h.orig	2006-05-29 10:39:33.000000000 +0200
++++ xdao/ProgressDialog.h
+@@ -62,7 +62,7 @@ private:
+   bool leadTimeFilled_;
+ 
+   struct timeval time_;
+-  bool ProgressDialog::time();
++  bool time();
+ 
+   Gtk::Button *cancelButton_;
+   Gtk::Button *closeButton_;
