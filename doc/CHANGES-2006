@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.343 2006/05/29 16:14:12 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.344 2006/05/29 16:15:50 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2710,8 +2710,10 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/sun-jre15 to 5.0.7 [tv 2006-05-28]
 	Updated www/drupal to 4.7.1 [adrianp 2006-05-28]
 	Updated devel/mantis to 1.0.3 [adrianp 2006-05-28]
+	Updated ham/gnuradio-core to 2.8nb1 [joerg 2006-05-28]
 	Updated comms/efax-gtk to 3.0.9 [adam 2006-05-29]
 	Updated editors/dasher to 4.0.2 [adam 2006-05-29]
 	Updated devel/cscope to 15.5nb1 [tron 2006-05-29]
 	Updated www/firefox-bin-java to 1.2 [tron 2006-05-29]
 	Updated lang/py-pyrex to 0.9.4.1 [joerg 2006-05-29]
+	Updated net/irrd to 2.2.8nb1 [joerg 2006-05-29]
