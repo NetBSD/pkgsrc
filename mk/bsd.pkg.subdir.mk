@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.63 2006/05/23 15:20:17 joerg Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.64 2006/05/29 14:26:33 joerg Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -160,8 +160,7 @@ README.html: .PRECIOUS
 			-e '/%%SUBDIR%%/r$@.tmp2' \
 			-e '/%%SUBDIR%%/d' \
 		> $@.tmp5
-	@if [ ! -f $@ ]; then ${TOUCH} $@ ; fi
-	@if ${CMP} -s $@.tmp5 $@ ; then \
+	@if [ -f $@ ] && ${CMP} -s $@.tmp5 $@ ; then \
 		${RM} $@.tmp5 ; \
 	else \
 		${ECHO_MSG} "===>  Creating README.html for ${_THISDIR_}${.CURDIR:T}" ; \
