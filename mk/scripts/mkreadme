@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.9 2006/05/28 16:34:09 dmcmahill Exp $
+# $NetBSD: mkreadme,v 1.10 2006/05/29 02:41:26 dmcmahill Exp $
 #
 # Script for README.html generation
 #
@@ -322,35 +322,46 @@ if [ "x$restart" = "xno" ] ; then
     rm -fr $DATABASEFILE
 
     cd ${PKGSRCDIR}
-    list=`${GREP} '^[ \t]*'SUBDIR */Makefile | ${GREP} -v regress/ | ${SED} -e 's,/Makefile.*=[[:space:]]*,/,' -e 's;#.*;;g' `
-    for pkgdir in $list
-    do
-	    if [ ! -d $pkgdir ]; then
-		    echo " "
-		    echo "WARNING:  the package directory $pkgdir is listed in" > /dev/stderr
-		    echo $pkgdir | ${SED} 's;/.*;/Makefile;g' > /dev/stderr
-		    echo "but the directory does not exist.  Please fix this!" > /dev/stderr
-	    else
-		    cd $pkgdir
-		    l=`${BMAKE} print-summary-data`
-		    if [ $? != 0 ]; then
-			    echo "WARNING (printdepends):  the package in $pkgdir had problem with" \
-				> /dev/stderr
-			    echo "    ${BMAKE} print-summary-data" > /dev/stderr
-			    echo "    database information for this package" > /dev/stderr
-			    echo "    will be dropped." > /dev/stderr
-			    ${BMAKE} print-summary-data  2>&1 > /dev/stderr
-		    else
-			    echo "$l" >> $DATABASEFILE
-		    fi
-	    fi
-	    ${ECHO} -n "."
-	    if [ `${EXPR} $npkg % 100 = 0` -eq 1 ]; then
+    cats=`${BMAKE} show-subdir-var VARNAME=SUBDIR`
+    for c in ${cats} ; do
+	if [ ! -d ${PKGSRCDIR}/${c} ]; then
+		echo "WARNING:  The category directory ${c} does not seem to" > /dev/stderr
+		echo "          exist under ${PKGSRCDIR}" > /dev/stderr
+	else
 		echo " "
-		echo "$npkg"
-	    fi
-	    npkg=`${EXPR} $npkg + 1`
-	    cd $PKGSRCDIR
+		echo "Extracting data for category ${c}"
+		cd ${PKGSRCDIR}/${c}
+		list=`${BMAKE} show-subdir-var VARNAME=SUBDIR`
+    		for pkgdir in $list ; do
+			cd ${PKGSRCDIR}/${c}
+	    		if [ ! -d $pkgdir ]; then
+		    		echo " "
+		    		echo "WARNING:  the package directory $pkgdir is listed in" > /dev/stderr
+		    		echo "          ${PKGSRCDIR}/${c}/Makefile" > /dev/stderr
+		    		echo "          but the directory does not exist.  Please fix this!" > /dev/stderr
+	    		else
+		    		cd ${PKGSRCDIR}/${c}/${pkgdir}
+		    		l=`${BMAKE} print-summary-data`
+		    		if [ $? != 0 ]; then
+			    		echo "WARNING (printdepends):  the package in ${c}/${pkgdir} had problem with" \
+						> /dev/stderr
+			    		echo "    ${BMAKE} print-summary-data" > /dev/stderr
+			    		echo "    database information for this package" > /dev/stderr
+			    		echo "    will be dropped." > /dev/stderr
+			    		${BMAKE} print-summary-data  2>&1 > /dev/stderr
+		    		else
+			    		echo "$l" >> $DATABASEFILE
+		    		fi
+	    		fi
+	    		${ECHO} -n "."
+	    		if [ `${EXPR} $npkg % 100 = 0` -eq 1 ]; then
+				echo " "
+				echo "$npkg"
+	    		fi
+	  		npkg=`${EXPR} $npkg + 1`
+	    		cd ${PKGSRCDIR}
+    		done
+	fi
     done
     echo " "
     echo "Finished extracting data for ${npkg} packages at: `date` "
