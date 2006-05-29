@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/17 07:07:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/05/29 06:41:38 adam Exp $
 bin/efax-gtk
 man/man1/efax-gtk.1
 share/applications/efax-gtk.desktop
 share/examples/efax-gtkrc
 share/locale/bg/LC_MESSAGES/efax-gtk.mo
+share/locale/ca/LC_MESSAGES/efax-gtk.mo
 share/locale/de/LC_MESSAGES/efax-gtk.mo
 share/locale/el/LC_MESSAGES/efax-gtk.mo
 share/locale/en_GB/LC_MESSAGES/efax-gtk.mo
@@ -13,4 +14,5 @@ share/locale/it/LC_MESSAGES/efax-gtk.mo
 share/locale/pl/LC_MESSAGES/efax-gtk.mo
 share/locale/ru/LC_MESSAGES/efax-gtk.mo
 share/locale/sq/LC_MESSAGES/efax-gtk.mo
+share/locale/sv/LC_MESSAGES/efax-gtk.mo
 share/locale/zh_CN/LC_MESSAGES/efax-gtk.mo
