@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.32 2006/04/17 13:46:48 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2006/05/29 15:22:29 drochner Exp $
 
 .include "../../sysutils/cdrdao/Makefile.common"
-
-PKGREVISION=	9
 
 PKGNAME=	gcdmaster-${CDRDAO_VER}
 COMMENT=	Gnome UI frontend to cdrdao
@@ -16,6 +14,7 @@ USE_DIRS+=		gnome1-1.5
 CONFIGURE_ARGS+=	--without-posix-threads
 CONFIGURE_ARGS+=	--with-xdao
 INSTALLATION_DIRS=	bin man/man1 share/applications share/pixmaps
+USE_TOOLS+=		pkg-config
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xdao/gcdmaster ${PREFIX}/bin
@@ -29,5 +28,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/xdao/glade/ProjectChooser.glade \
 		${PREFIX}/share/gcdmaster/glade
 
+.include "../../devel/libsigc++2/buildlink3.mk"
+.include "../../x11/gtkmm/buildlink3.mk"
 .include "../../devel/libgnomeuimm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
