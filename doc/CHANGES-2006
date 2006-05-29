@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.347 2006/05/29 22:09:06 tron Exp $
+$NetBSD: CHANGES-2006,v 1.348 2006/05/29 22:39:02 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2720,3 +2720,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/spl to 0.9hnb3 [joerg 2006-05-29]
 	Updated graphics/freetype2 to 2.2.1 [tron 2006-05-29]
 	Updated net/mrtg to 2.12.2nb4 [tron 2006-05-29]
+	Updated fonts/fontconfig to 2.3.2nb3 [tron 2006-05-29]
