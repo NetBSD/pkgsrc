@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.340 2006/05/29 07:12:06 adam Exp $
+$NetBSD: CHANGES-2006,v 1.341 2006/05/29 13:49:52 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2712,3 +2712,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/mantis to 1.0.3 [adrianp 2006-05-28]
 	Updated comms/efax-gtk to 3.0.9 [adam 2006-05-29]
 	Updated editors/dasher to 4.0.2 [adam 2006-05-29]
+	Updated devel/cscope to 15.5nb1 [tron 2006-05-29]
