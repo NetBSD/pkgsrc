@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/05/10 16:46:21 tonio Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/29 17:47:10 joerg Exp $
 #
 
 .include "../../lang/kaffe/Makefile.common"
@@ -14,13 +14,13 @@ CONFIGURE_ARGS+=  --without-esd
 CONFIGURE_ARGS+=  --disable-esdtest
 
 
-BUILD_DIRS=     config
-BUILD_DIRS+=    libraries/javalib
-BUILD_DIRS+=    libraries/clib/classpath
-BUILD_DIRS+=    libraries/clib/awt
-BUILD_DIRS+=	libraries/javalib/external/classpath/native/jni/gtk-peer
-BUILD_DIRS+=	libraries/javalib/external/classpath/native/jawt
-INSTALL_DIRS=   libraries/clib/awt
+BUILD_DIRS=	config
+BUILD_DIRS+=	libraries/javalib/external/classpath
+BUILD_DIRS+=	libraries/javalib/external/classpath
+BUILD_DIRS+=	include
+BUILD_DIRS+=	libraries/javalib
+BUILD_DIRS+=	libraries/clib/awt
+INSTALL_DIRS=	libraries/clib/awt
 INSTALL_DIRS+=	libraries/javalib/external/classpath/native/jni/gtk-peer
 INSTALL_DIRS+=	libraries/javalib/external/classpath/native/jawt
 
