@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.344 2006/05/29 16:15:50 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.345 2006/05/29 16:32:04 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2717,3 +2717,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/firefox-bin-java to 1.2 [tron 2006-05-29]
 	Updated lang/py-pyrex to 0.9.4.1 [joerg 2006-05-29]
 	Updated net/irrd to 2.2.8nb1 [joerg 2006-05-29]
+	Updated lang/spl to 0.9hnb3 [joerg 2006-05-29]
