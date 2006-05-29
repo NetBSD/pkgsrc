@@ -1,0 +1,11 @@
+--- src/exec.c.orig	2002-07-29 13:37:49.000000000 +0100
++++ src/exec.c	2006-05-29 14:34:26.000000000 +0100
+@@ -124,7 +124,7 @@
+ 
+ 	/* execute the program or shell script */
+ 	(void) execvp(a, args);	/* returns only on failure */
+-	(void) sprintf(msg, "\nCannot exec %s", a);
++	(void) snprintf(msg, sizeof(msg), "\nCannot exec %s", a);
+ 	perror(msg);		/* display the reason */
+ 	askforreturn();		/* wait until the user sees the message */
+ 	myexit(1);		/* exit the child */
