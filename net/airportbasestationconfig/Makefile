@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/05/22 13:03:25 tron Exp $
+# $NetBSD: Makefile,v 1.32 2006/05/29 14:06:20 tron Exp $
 
 DISTNAME=	configurator_152-128
 PKGNAME=	${BINNAME}-1.5.2
@@ -21,7 +21,7 @@ JARNAME=	AirportConfig128Bit.jar
 LIBDIR=		${PREFIX}/lib/${BINNAME}
 
 USE_JAVA=		run
-PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 sun-jdk15 blackdown-jdk13 jdk14
+PKG_JVMS_ACCEPTED=	sun-jdk15 sun-jdk14 sun-jdk13 blackdown-jdk13 jdk14
 
 INSTALLATION_DIRS=	bin
 
