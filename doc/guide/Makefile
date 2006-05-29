@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2006/05/10 22:43:51 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2006/05/29 08:55:31 rillig Exp $
 #
 
-DISTNAME=		htdocs-share-20060114
-PKGNAME=		pkgsrc-guide-${PKGVERSION}
+DISTNAME=		pkgsrc-guide-${PKGVERSION}
 CATEGORIES=		# empty
 MASTER_SITES=		${MASTER_SITE_LOCAL}
+DISTFILES=		htdocs-share-20060529.tar.gz
 
 MAINTAINER=		packages@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/Documentation/pkgsrc/
@@ -18,8 +18,6 @@ DIST_SUBDIR=		${PKGBASE}
 NO_CONFIGURE=		yes
 NO_MTREE=		yes
 USE_LANGUAGES=		# empty
-
-WRKSRC=			${WRKDIR}/${PKGNAME}
 
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 DOCDIR=			${PREFIX}/share/doc/pkgsrc
@@ -47,7 +45,7 @@ _GUIDE_OUTPUTS=		${OUTPUTS}
 # be easily modified, should the "lint" phase fail.
 pre-extract:
 	${MKDIR} ${WRKSRC}
-	@${LN} -s ${FILESDIR}/* ${WRKSRC}
+	${LN} -s ${FILESDIR}/* ${WRKSRC}
 
 do-build:
 .for _output_ in ${OUTPUTS}
@@ -72,10 +70,10 @@ do-install:
 .endif
 
 post-install:
-	@${FIND} ${DOCDIR} \( -type f -o -type l \) -print		\
+	${FIND} ${DOCDIR} \( -type f -o -type l \) -print		\
 		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"			\
 		>> ${PLIST_SRC}
-	@${FIND} ${DOCDIR} -type d -print				\
+	${FIND} ${DOCDIR} -type d -print				\
 		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
 		>> ${PLIST_SRC}
 
