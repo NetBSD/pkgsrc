@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5024 2006/05/29 20:06:02 wiz Exp $
+$NetBSD: TODO,v 1.5025 2006/05/29 20:49:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -418,6 +418,7 @@ Suggested package updates
 	o columba-1.0RC1
 	o compface-1.5.2
 	o conglomerate-0.9.1
+	o control-center-2.14.2
 	o cook-2.26
 	o coreutils-5.96
 	o courier-imap-4.1.1
@@ -493,8 +494,9 @@ Suggested package updates
 	o eukleides-1.0.3
 	o euler-1.61
 	o evince-0.5.3
-	o evolution-2.6.1
-	o evolution-exchange-2.6.1
+	o evolution-2.6.2
+	o evolution-data-server-1.6.2
+	o evolution-exchange-2.6.2
 	o ex-050325 [pkg/32043]
 	o exim-4.62
 	o exmh-2.7.2
@@ -555,9 +557,12 @@ Suggested package updates
 	o gnetman-20050429
 	o gnome-applets-2.14.2
 	o gnome-backgrounds-2.14.1
+	o gnome-games-2.14.2
 	o gnome-mag-0.12.5
+	o gnome-media-2.14.2
 	o gnome-pilot-2.0.13
 	o gnome-spell-1.0.7
+	o gnome-themes-2.14.2
 	o gnome-vfsmm-2.14.0
 	o gnome2-terminal-2.14.2
 	o gnomeicu-0.99.10
@@ -595,9 +600,11 @@ Suggested package updates
 	o gtk-systrace-20030623
 	o gtk2+-2.8.18
 	o gtkam-0.1.13
+	o gtkhtml-3.10.2
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
 	o gtranscript-0.2.0
+	o guile-1.6.8
 	o guile-1.8.0
 	o guile-oops-1.0.2
 	o gworkspace-0.8.2
