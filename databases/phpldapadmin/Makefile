@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18.2.1 2006/05/23 23:33:47 salo Exp $
+# $NetBSD: Makefile,v 1.18.2.2 2006/05/29 11:32:33 salo Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
 CATEGORIES=	databases www
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpldapadmin/}
 
 MAINTAINER=	rasputnik@hellooperator.net
@@ -59,7 +59,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/share/doc/phpldapadmin
 	${INSTALL_DATA} ${WRKSRC}/VERSION ${PREFIX}/share/phpldapadmin
 
-	${FIND} ${PREFIX}/share/doc/phpldapadmin -type d | \
+	${FIND} ${PREFIX}/share/phpldapadmin -type d | \
 		${XARGS} ${CHMOD} ${PKGDIRMODE}
 
 .include "../../mk/bsd.pkg.mk"
