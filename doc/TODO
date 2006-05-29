@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5023 2006/05/29 07:12:06 adam Exp $
+$NetBSD: TODO,v 1.5024 2006/05/29 20:06:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -340,6 +340,7 @@ Suggested package updates
 	o amavis-0.3.12
 	o amavisd-new-2.4.1
 	o amaya-9.5
+	o amule-2.1.2
 	o anjuta-2.0.1
 	o anomy-sanitizer-1.74
 	o ap-Embperl-1.3.6
@@ -481,6 +482,7 @@ Suggested package updates
 	o enlightenment-0.16.8.1
 	o enscript-1.6.4
 	o eog2-2.14.2
+	o epiphany-2.14.2
 	o epstool-3.08
 	o eric3-3.9.0
 	o erlang-11
@@ -532,7 +534,7 @@ Suggested package updates
 	o gcpio-2.6
 	o gdal-lib-1.3.2
 	o gdb6-6.3.0
-	o gdm-2.14.6
+	o gdm-2.14.7
 	o gdsreader-0.3.2
 	o ggiterm-0.7.1
 	o gifsicle-1.44
@@ -551,12 +553,15 @@ Suggested package updates
 	o glib-2.10.3
 	o gnet1-1.1.9
 	o gnetman-20050429
+	o gnome-applets-2.14.2
 	o gnome-backgrounds-2.14.1
 	o gnome-mag-0.12.5
 	o gnome-pilot-2.0.13
 	o gnome-spell-1.0.7
 	o gnome-vfsmm-2.14.0
+	o gnome2-terminal-2.14.2
 	o gnomeicu-0.99.10
+	o gnopernicus-1.0.5
 	o gnus-5.10.8
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14
@@ -571,6 +576,7 @@ Suggested package updates
 	o gpsim-devel-20041104
 	o grace-5.1.19
 	o gramofile-1.6P
+	o gramps-2.0.11
 	o grap-1.36
 	o grep-2.5.1a
 	o grepmail-5.3032
@@ -626,6 +632,7 @@ Suggested package updates
 	o inform-6.31.1
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
+	o intltool-0.35.0
 	o ion3-20060519
 	o ion3-devel-20060305
 	o iozone-3.263
@@ -659,6 +666,7 @@ Suggested package updates
 	o kapooka-0.3
 	o kazehakase-0.3.7
 	o kbarcode-2.0.2
+	o kdbg-2.0.4
 	o kdrill-6.4
 	o kinput2-3.1
 	o kmp-0.5
@@ -727,6 +735,7 @@ Suggested package updates
 	o mdf2iso-0.3.0
 	o memcached-1.2
 	o memtest86-3.2
+	o mercurial-0.9
 	o mftrace-1.1.17
 	o mgetty-1.1.35
 	o micro_httpd-20050629
@@ -925,6 +934,7 @@ Suggested package updates
 	o p5-gtk2-2.14.0
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
+	o p7zip-4.42
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pango-1.12.3
@@ -957,7 +967,7 @@ Suggested package updates
 	o pine-pgp-filters-1.2
 	o pinentry-0.7.2
 	o pinfo-0.6.9
-	o pioneers-0.9.61
+	o pioneers-0.9.62
 	o pircbot-1.4.4
 	o plan-1.9
 	o plib-1.8.4
@@ -1063,6 +1073,7 @@ Suggested package updates
 	o resize_image-0.7
 	o rhythmbox-0.9.3.1 [jmmv]
 	o rhythmbox-0.9.4.1
+	o riece-3.0.0
 	o rio500-0.8.1
 	o ripmime-1.4.0.6
 	o robodoc-4.99.6
@@ -1078,7 +1089,7 @@ Suggested package updates
 	o rsnapshot-1.2.3
 	o rtcw-1.41.3
 	o rtorrent-0.5.3
-	o ruby-RMagick-1.11.0 [pkg/33538]
+	o ruby-RMagick-1.11.1 [pkg/33538]
 	o ruby-cmd-0.8.0
 	o rxvt-unicode-7.7
 	o sablecc-3.2
@@ -1086,7 +1097,7 @@ Suggested package updates
 	o sather-1.2.2
 	o sawfish-1.3
 	o sawfish-replibs-1.3
-	o sbcl-0.9.5
+	o sbcl-0.9.13 [pkg/33580]
 	o scew-0.4.0
 	o sch-3.8.3
 	o sdig-0.40
