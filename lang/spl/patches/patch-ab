@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2006/05/29 16:31:43 joerg Exp $
+
+--- GNUmakefile.orig	2006-05-29 15:40:44.000000000 +0000
++++ GNUmakefile
+@@ -22,7 +22,7 @@
+ BUILDING_FOR_MACOSX := $(shell uname | grep -qvi darwin; echo $$?)
+ BUILDING_FOR_CYGWIN := $(shell uname | grep -qvi cygwin; echo $$?)
+ BUILDING_FOR_MINGW  := $(shell uname | grep -qvi mingw;  echo $$?)
+-BUILDING_FOR_BSD    := $(shell uname | grep -qvi bsd;    echo $$?)
++BUILDING_FOR_BSD    := $(shell uname | egrep -qvi \(bsd\|dragonfly\);    echo $$?)
+ BUILDING_FOR_IRIX   := $(shell uname | grep -qvi irix;   echo $$?)
+ 
+ 
+@@ -159,7 +159,7 @@ else
+ endif
+ 
+ ifeq ($(ENABLE_REGEX_SUPPORT),1)
+-  LDLIBS += $(shell pcre-config --libs)
++  LDLIBS += $(shell pcre-config --libs) -R${PREFIX}/lib
+   DLL_LIBS += $(shell pcre-config --libs)
+   CFLAGS += $(shell pcre-config --cflags) -DENABLE_REGEX_SUPPORT
+ endif

@@ -1,0 +1,46 @@
+$NetBSD: patch-aa,v 1.1 2006/05/29 16:31:43 joerg Exp $
+
+--- clib.c.orig	2006-05-15 09:49:19.000000000 +0000
++++ clib.c
+@@ -366,13 +366,40 @@ static inline void DO_UNLOCK() {
+ 
+ #  else
+ 
+-static pthread_mutex_t load_unload_lck = PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP;
++static int load_unload_initialised;
++static pthread_mutex_t load_unload_init_lck = PTHREAD_MUTEX_INITIALIZER;
++static pthread_mutex_t load_unload_lck;
++
++static void DO_LOCK_INIT(void)
++{
++	pthread_mutexattr_t mattr;
++
++	pthread_mutex_lock(&load_unload_init_lck);
++
++	if (load_unload_initialised) {
++		pthread_mutex_unlock(&load_unload_init_lck);
++		return;
++	}
++
++	pthread_mutexattr_init(&mattr);
++	pthread_mutexattr_settype(&mattr, PTHREAD_MUTEX_RECURSIVE);
++	pthread_mutex_init(&load_unload_lck, &mattr);
++	pthread_mutexattr_destroy(&mattr);
++
++	load_unload_initialised = 1;
++
++	pthread_mutex_unlock(&load_unload_init_lck);
++}
+ 
+ static inline void DO_LOCK() {
++	if (!load_unload_initialised)
++		DO_LOCK_INIT();
+ 	pthread_mutex_lock(&load_unload_lck);
+ }
+ 
+ static inline void DO_UNLOCK() {
++	if (!load_unload_initialised)
++		DO_LOCK_INIT();
+ 	pthread_mutex_unlock(&load_unload_lck);
+ }
+ 
