@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2006/04/23 14:06:08 schwarz Exp $
+# $NetBSD: Makefile,v 1.90 2006/05/29 16:58:18 drochner Exp $
 
 #
 # NOTE: Please do not enable the lynxcgi feature unless it is lynx
@@ -8,6 +8,7 @@
 
 DISTNAME=	lynx2.8.5
 PKGNAME=	lynx-2.8.5.5
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://lynx.isc.org/${DISTNAME}/ \
 		ftp://ftp.nl.uu.net/pub/unix/www/lynx/${DISTNAME}/ \
