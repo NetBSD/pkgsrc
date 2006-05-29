@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2006/04/23 13:29:04 adrianp Exp $
+# $NetBSD: Makefile,v 1.69 2006/05/29 22:08:54 tron Exp $
 
 DISTNAME=	mrtg-2.12.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/ \
 		http://people.ee.ethz.ch/~oetiker/webtools/mrtg/pub/old/ \
@@ -31,7 +31,7 @@ USE_TOOLS+=	perl
 GNU_CONFIGURE=	YES
 
 BUILD_DEFS+=	USE_INET6
-LDFLAGS+=	-lgd -lttf -lintl -ljpeg
+LDFLAGS+=	-lgd -lintl -ljpeg
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -60,7 +60,6 @@ SUBST_MESSAGE.files=	Fixing default configuration files.
 
 INSTALLATION_DIRS=	bin libexec man/man1
 
-.include "../../graphics/freetype-lib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 
 post-extract:
