@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.339 2006/05/29 06:43:09 adam Exp $
+$NetBSD: CHANGES-2006,v 1.340 2006/05/29 07:12:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2711,3 +2711,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/drupal to 4.7.1 [adrianp 2006-05-28]
 	Updated devel/mantis to 1.0.3 [adrianp 2006-05-28]
 	Updated comms/efax-gtk to 3.0.9 [adam 2006-05-29]
+	Updated editors/dasher to 4.0.2 [adam 2006-05-29]
