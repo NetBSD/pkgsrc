@@ -1,0 +1,13 @@
+$NetBSD: patch-bc,v 1.1 2006/05/29 16:58:18 drochner Exp $
+
+--- src/HTForms.h.orig	2003-06-02 03:16:28.000000000 +0200
++++ src/HTForms.h
+@@ -40,7 +40,7 @@ typedef struct _InputFieldData {
+ 	CONST char *md;
+ 	CONST char *min;
+ 	CONST char *name;
+-	CONST char *size;
++	int   size;
+ 	CONST char *src;
+ 	CONST char *type;
+ 	char *value;
