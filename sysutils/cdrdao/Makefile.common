@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2005/07/19 16:33:57 drochner Exp $
+# $NetBSD: Makefile.common,v 1.4 2006/05/29 15:22:29 drochner Exp $
 
 DISTNAME=		cdrdao-${CDRDAO_VER}
 CATEGORIES=		sysutils
@@ -15,7 +15,7 @@ DISTINFO_FILE=		${CDRDAODIR}/distinfo
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-CDRDAO_VER=		1.2.0
+CDRDAO_VER=		1.2.1
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
