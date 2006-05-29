@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1.1.1 2006/05/21 22:46:22 ben Exp $
+$NetBSD: patch-ag,v 1.2 2006/05/29 19:44:24 joerg Exp $
 
 --- frontends/CsoundVST/System.cpp.orig	2005-12-22 09:06:21.000000000 -0800
 +++ frontends/CsoundVST/System.cpp
@@ -7,7 +7,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2006/05/21 22:46:22 ben Exp $
    }
  
 -#elif defined(LINUX) || defined(MACOSX)
-+#elif defined(LINUX) || defined(MACOSX) || defined(__NetBSD__)
++#elif defined(LINUX) || defined(MACOSX) || defined(__NetBSD__) || defined(__DragonFly__)
  
  #include <dlfcn.h>
  #include <dirent.h>
