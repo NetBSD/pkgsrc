@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/02/24 23:41:56 cube Exp $
+$NetBSD: patch-ac,v 1.2 2006/05/29 14:06:27 joerg Exp $
 
---- pinger.c.orig	2003-01-22 17:12:53.000000000 +0100
+--- pinger.c.orig	2004-01-16 07:48:09.000000000 +0000
 +++ pinger.c
 @@ -27,6 +27,7 @@ ________________________________________
  #include <sys/signal.h>
@@ -10,7 +10,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/02/24 23:41:56 cube Exp $
  #include <netinet/ip.h>
  #include <netinet/ip_icmp.h>
  #include <arpa/inet.h>
-@@ -220,42 +221,44 @@ static gchar *pr_icmph(struct icmp *icp)
+@@ -239,42 +240,48 @@ static gchar *pr_icmph(struct icmp *icp)
  	g_string_assign(s, "Echo Reply");
  	/* XXX ID + Seq + Data */
  	break;
@@ -62,12 +62,16 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/02/24 23:41:56 cube Exp $
 +	case ICMP_UNREACH_TOSHOST:
  	    g_string_assign(s, "Destination Host Unreachable At This TOS");
  	    break;
++#if defined(__DragonFly__)
++	case ICMP_UNREACH_FILTER_PROHIB:
++#else
 +	case ICMP_UNREACH_ADMIN_PROHIBIT:
++#endif
 +	    g_string_assign(s, "Packet Prohibited");
  #ifdef ICMP_PKT_FILTERED
  	case ICMP_PKT_FILTERED:
  	    g_string_assign(s, "Packet Filtered");
-@@ -277,21 +280,21 @@ static gchar *pr_icmph(struct icmp *icp)
+@@ -296,21 +303,21 @@ static gchar *pr_icmph(struct icmp *icp)
  	    break;
  	}
  	break;
@@ -94,7 +98,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/02/24 23:41:56 cube Exp $
  	    g_string_assign(s, "Redirect Type of Service and Host");
  	    break;
  	default:
-@@ -305,12 +308,12 @@ static gchar *pr_icmph(struct icmp *icp)
+@@ -324,12 +331,12 @@ static gchar *pr_icmph(struct icmp *icp)
  	g_string_assign(s, "Echo Request");
  	/* XXX ID + Seq + Data */
  	break;
@@ -110,7 +114,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/02/24 23:41:56 cube Exp $
  	    g_string_assign(s, "Frag reassembly time exceeded");
  	    break;
  	default:
-@@ -319,23 +322,23 @@ static gchar *pr_icmph(struct icmp *icp)
+@@ -338,23 +345,23 @@ static gchar *pr_icmph(struct icmp *icp)
  	    break;
  	}
  	break;
@@ -139,7 +143,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/02/24 23:41:56 cube Exp $
  	g_string_assign(s, "Information Reply");
  	/* XXX ID + Seq */
  	break;
-@@ -430,11 +433,11 @@ void pr_pack(char *buf, int cc, struct s
+@@ -448,11 +455,11 @@ void pr_pack(char *buf, int cc, struct s
  	switch (icp->icmp_type) {
  	case ICMP_ECHO:
  	    return;
@@ -155,7 +159,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2004/02/24 23:41:56 cube Exp $
  	    {
  		struct ip *iph = (struct ip *) (&icp->icmp_data);
  		struct icmp *icp1 =
-@@ -447,7 +450,7 @@ void pr_pack(char *buf, int cc, struct s
+@@ -465,7 +472,7 @@ void pr_pack(char *buf, int cc, struct s
  		    icp1->icmp_id != ident)
  		    return;
  		error_pkt = (icp->icmp_type != ICMP_REDIRECT &&
