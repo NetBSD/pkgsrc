@@ -1,40 +1,62 @@
-$NetBSD: patch-af,v 1.5 2005/10/03 15:00:12 wiz Exp $
-
---- src/main.c.orig	2003-08-14 16:36:18.000000000 +0200
-+++ src/main.c
-@@ -330,9 +330,32 @@ lastarg:
+--- src/main.c.orig	2003-08-14 15:36:18.000000000 +0100
++++ src/main.c	2006-05-29 14:34:26.000000000 +0100
+@@ -330,9 +330,31 @@
  	}
  
  	/* create the temporary file names */
 -	pid = getpid();
 -	(void) sprintf(temp1, "%s/cscope%d.1", tmpdir, pid);
 -	(void) sprintf(temp2, "%s/cscope%d.2", tmpdir, pid);
-+	do {
-+		char *tempfile = tempnam(tmpdir, "cscope1");
-+		if (!tempfile) {
-+			fprintf (stderr, "Can't create tempfile\n");
-+			exit(1);
-+		}
-+		if (strlen(tempfile) >= sizeof(temp1)) {
-+			fprintf (stderr, "TMPDIR path is too long\n");
-+			exit(1);
-+		}
-+		strncpy (temp1, tempfile, sizeof (temp1));
-+		free (tempfile);
-+	} while (open (temp1, O_CREAT|O_EXCL|O_WRONLY, S_IREAD|S_IWRITE) < 0);
-+	do {
-+		char *tempfile = tempnam(tmpdir, "cscope2");
-+		if (!tempfile) {
-+			fprintf (stderr, "Can't create tempfile\n");
-+			exit(1);
-+		}
-+		if (strlen(tempfile) >= sizeof(temp2)) {
-+			fprintf (stderr, "TMPDIR path is too long\n");
-+			exit(1);
-+		}
-+		strncpy (temp2, tempfile, sizeof (temp2));
-+		free (tempfile);
-+	} while (open (temp2, O_CREAT|O_EXCL|O_WRONLY, S_IREAD|S_IWRITE) < 0);
++        do {
++                char *tempfile = tempnam(tmpdir, "cscope1");
++                if (!tempfile) {
++                        fputs ("Can't create tempfile\n", stderr);
++                        exit (1);
++                }
++                if (strlen(tempfile) >= sizeof(temp1)) {
++                        fputs ("TMPDIR path is too long\n", stderr);
++                        exit(1);
++                }
++                strncpy (temp1, tempfile, sizeof (temp1));
++        } while (open (temp1, O_CREAT|O_EXCL|O_WRONLY, 0600) < 0);
++        do {
++                char *tempfile = tempnam(tmpdir, "cscope2");
++                if (!tempfile) {
++                        fputs ("Can't create tempfile\n", stderr);
++                        exit (1);
++                }
++                if (strlen(tempfile) >= sizeof(temp2)) {
++                        fputs ("TMPDIR path is too long\n", stderr);
++                        exit(1);
++                }
++                strncpy (temp2, tempfile, sizeof (temp2));
++        } while (open (temp2, O_CREAT|O_EXCL|O_WRONLY, 0600) < 0);
++
  
  	/* if running in the foreground */
  	if (signal(SIGINT, SIG_IGN) != SIG_IGN) {
+@@ -352,12 +374,12 @@
+ 		 * used instead of failing to open a non-existant database in
+ 		 * the home directory
+ 		 */
+-		(void) sprintf(path, "%s/%s", home, reffile);
++		(void) snprintf(path, sizeof(path), "%s/%s", home, reffile);
+ 		if (isuptodate == NO || access(path, READ) == 0) {
+ 			reffile = stralloc(path);
+-			(void) sprintf(path, "%s/%s", home, invname);
++			(void) snprintf(path, sizeof(path), "%s/%s", home, invname);
+ 			invname = stralloc(path);
+-			(void) sprintf(path, "%s/%s", home, invpost);
++			(void) snprintf(path, sizeof(path), "%s/%s", home, invpost);
+ 			invpost = stralloc(path);
+ 		}
+ 	}
+@@ -692,7 +714,7 @@
+ #else
+ 	char *msg = mymalloc(50+strlen(file));
+ 
+-	(void) sprintf(msg, "Removed file %s because write failed", file);
++	(void) snprintf(msg, sizeof(msg), "Removed file %s because write failed", file);
+ #endif
+ 
+ 	myperror(msg);	/* display the reason */
