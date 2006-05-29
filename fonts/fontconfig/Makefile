@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.52 2006/04/14 07:08:07 heinz Exp $
-#
+# $NetBSD: Makefile,v 1.53 2006/05/29 22:38:06 tron Exp $
 
 DISTNAME=	fontconfig-2.3.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fontconfig.org/release/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fontconfig.org/
 COMMENT=	Library for configuring and customizing font access
+
+PATCH_SITES=    http://www.freetype.org/freetype2/patches/
+PATCHFILES=	fontconfig-2.3.2-noftinternals.patch
+PATCH_DIST_STRIP=	-p1
 
 # This can use 2.0.5 but things which use it (ala pango) require 2.0.9 so make
 # sure to keep in step
