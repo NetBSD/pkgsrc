@@ -1,18 +1,18 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/21 22:46:22 ben Exp $
+$NetBSD: distinfo,v 1.2 2006/05/29 19:44:24 joerg Exp $
 
 SHA1 (Csound5.01_src.tar.gz) = b387da9b6c24961397e89ddcedd1229cdfebffe7
 RMD160 (Csound5.01_src.tar.gz) = 24652f8f650464d886f6d537ae991654f475ad4a
 Size (Csound5.01_src.tar.gz) = 2031426 bytes
-SHA1 (patch-ac) = 12c410532ece80a9f226ffcb4c986eaaa84e2006
-SHA1 (patch-ad) = 756308bc40378738794469fca72c3e249b314150
-SHA1 (patch-ae) = 8878e9927811b4c46deb473724a4e19631e326e9
-SHA1 (patch-af) = 7d885796ee6794ff88fb4b22aee7fe8b3084864c
-SHA1 (patch-ag) = 76a7283a2da202a866ef416f4cac4d581dca39ec
-SHA1 (patch-ah) = 9ecda7d9a8b4ff41dd84ce826a0d0ede0c09b15d
-SHA1 (patch-ai) = 10571cb1d5e579d36f7c60e0651cfde71fc5498e
-SHA1 (patch-aj) = e2661124db32cf3831c23f128e6d8edc628cafbc
-SHA1 (patch-ak) = 5837eb03a8950ea0d6fc6718f99070bdda015a86
-SHA1 (patch-al) = accb874d07de58b075e909efb7578d3f59372b6b
-SHA1 (patch-am) = 3e981f6e15fea1d94f4d87276b4c7840ed381ee7
-SHA1 (patch-an) = 5131a8e880bdb1cd4996c75e9579b591e2925c97
-SHA1 (patch-ao) = 22c845f281e1cacdda7c2334100c7ca54771cdc3
+SHA1 (patch-ac) = 0488928265427da9ee292130088ac5a48448ea07
+SHA1 (patch-ad) = 343b5767584cf4ddfbc7664e3234577fe22ff03a
+SHA1 (patch-ae) = 705d56ce7a03cd10763542a9ec71b393474c0595
+SHA1 (patch-af) = 4444b8efe47a401e01718c21197c2b6e19ec548c
+SHA1 (patch-ag) = 2771fdce6a054d96e51dd70df1264fe2cfdcdf58
+SHA1 (patch-ah) = e9978da3a14140f072ca12ca25b4c9a67ea4ede4
+SHA1 (patch-ai) = 4c86c1cd8c6c9ff48cd890255523b08848d56764
+SHA1 (patch-aj) = c22d25d55387c232187259690a43512457e18c54
+SHA1 (patch-ak) = 1f3a7ec113a5185a81fe219d99061afb025bc13b
+SHA1 (patch-al) = 7da1e82a280b6803e2f0f75b8fb1eafbc3206636
+SHA1 (patch-am) = 9770973e54770b9eebcf66c17f90f459e71a71c6
+SHA1 (patch-an) = 7dfbd38a4eca8c7767a53c2b93bb4967344c0f0e
+SHA1 (patch-ao) = 64ee0a2a70dd317c992088212bc3f241f6296113

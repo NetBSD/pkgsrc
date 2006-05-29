@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2006/05/21 22:46:22 ben Exp $
+$NetBSD: patch-ad,v 1.2 2006/05/29 19:44:24 joerg Exp $
 
 --- Top/csound.c.orig	2006-03-10 08:37:48.000000000 -0800
 +++ Top/csound.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2006/05/21 22:46:22 ben Exp $
    }
  
 -#if !defined(LINUX) && !defined(SGI) && !defined(__BEOS__) && !defined(__MACH__)
-+#if !defined(__NetBSD__) && !defined(LINUX) && !defined(SGI) && !defined(__BEOS__) && !defined(__MACH__)
++#if !defined(__NetBSD__) && !defined(LINUX) && !defined(SGI) && !defined(__BEOS__) && !defined(__MACH__) && !defined(__DragonFly__)
    static char *signal_to_string(int sig)
    {
      switch(sig) {
