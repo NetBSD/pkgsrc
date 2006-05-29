@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/04/17 07:07:18 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/05/29 07:10:23 adam Exp $
 bin/dasher
 man/man1/dasher.1
 share/applications/dasher.desktop
@@ -77,6 +77,7 @@ share/dasher/alphabet.dtd
 share/dasher/alphabet.dutch.xml
 share/dasher/alphabet.english.xml
 share/dasher/alphabet.englishC.xml
+share/dasher/alphabet.englishLC.xml
 share/dasher/alphabet.ethiopic.xml
 share/dasher/alphabet.ewe.xml
 share/dasher/alphabet.faroese.xml
@@ -141,6 +142,7 @@ share/dasher/alphabet.xsl
 share/dasher/colour.blue.xml
 share/dasher/colour.dtd
 share/dasher/colour.euroasian.xml
+share/dasher/colour.euroasian2.xml
 share/dasher/colour.jamie.xml
 share/dasher/colour.rainbow.xml
 share/dasher/colour.vowels.xml
@@ -203,12 +205,14 @@ share/locale/az/LC_MESSAGES/dasher.mo
 share/locale/be/LC_MESSAGES/dasher.mo
 share/locale/bg/LC_MESSAGES/dasher.mo
 share/locale/bn/LC_MESSAGES/dasher.mo
+share/locale/br/LC_MESSAGES/dasher.mo
 share/locale/bs/LC_MESSAGES/dasher.mo
 share/locale/ca/LC_MESSAGES/dasher.mo
 share/locale/cs/LC_MESSAGES/dasher.mo
 share/locale/cy/LC_MESSAGES/dasher.mo
 share/locale/da/LC_MESSAGES/dasher.mo
 share/locale/de/LC_MESSAGES/dasher.mo
+share/locale/dz/LC_MESSAGES/dasher.mo
 share/locale/el/LC_MESSAGES/dasher.mo
 share/locale/en_CA/LC_MESSAGES/dasher.mo
 share/locale/en_GB/LC_MESSAGES/dasher.mo
