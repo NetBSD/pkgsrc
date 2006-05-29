@@ -1,4 +1,4 @@
-# $NetBSD: plist-info.awk,v 1.12 2006/04/14 13:23:42 jlam Exp $
+# $NetBSD: plist-info.awk,v 1.13 2006/05/29 20:01:39 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -108,11 +108,11 @@ BEGIN {
 	sub("^info/", PKGINFODIR "/")
 	cmd = TEST " -f " PREFIX "/" $0 " -o -f " PREFIX "/" $0 ".gz"
 	if (system(cmd) == 0) {
-		base = $0
-		cmd = "cd " PREFIX " && " LS " -1 " base "*"
+		len = length
+		cmd = "cd " PREFIX " && " LS " -1 " $0 "*"
 		while (cmd | getline) {
 			# Filter out unrelated info files
-			if ($0 !~ "^" base "(-[0-9]+)?(\.gz)?$") {
+			if (substr($0, len + 1) !~ "^(-[0-9]+)?(\.gz)?$") {
 				continue
 			}
 			#if ((MANZ ~ /[yY][eE][sS]/) && ($0 !~ /\.gz$/)) {
