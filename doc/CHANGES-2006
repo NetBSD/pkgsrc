@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.351 2006/05/30 19:25:01 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.352 2006/05/30 19:25:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2724,3 +2724,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/riece to 3.0.0 [uebayasi 2006-05-30]
 	Updated www/awstats to 6.6nb1 [minskim 2006-05-30]
 	Updated devel/cvsd to 1.0.11 [wiz 2006-05-30]
+	Updated devel/bison to 2.2 [wiz 2006-05-30]
