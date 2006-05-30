@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/03/30 03:31:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/05/30 00:26:15 uebayasi Exp $
 ${EMACS_INFOPREFIX}/riece-en.info
 ${EMACS_INFOPREFIX}/riece-ja.info
 ${EMACS_LISPPREFIX}/riece/aproxy.rb
@@ -50,6 +50,8 @@ ${EMACS_LISPPREFIX}/riece/riece-doctor.el
 ${EMACS_LISPPREFIX}/riece/riece-doctor.elc
 ${EMACS_LISPPREFIX}/riece/riece-${EMACS_FLAVOR}.el
 ${EMACS_LISPPREFIX}/riece/riece-${EMACS_FLAVOR}.elc
+${EMACS_LISPPREFIX}/riece/riece-epg.el
+${EMACS_LISPPREFIX}/riece/riece-epg.elc
 ${EMACS_LISPPREFIX}/riece/riece-eval-ruby.el
 ${EMACS_LISPPREFIX}/riece/riece-eval-ruby.elc
 ${EMACS_LISPPREFIX}/riece/riece-eval.el
