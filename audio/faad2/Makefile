@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.33 2006/05/19 12:21:52 adrianp Exp $
-#
+# $NetBSD: Makefile,v 1.34 2006/05/30 20:23:32 tron Exp $
 
 DISTNAME=	faad2-2.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=faac/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.audiocoding.com/
 COMMENT=	AAC decoding library
-
-CONFLICTS=	mpeg4ip-[0-9]*
 
 RESTRICTED=	Dolby doesn't allow binary distributions
 NO_BIN_ON_FTP=	${RESTRICTED}
@@ -24,7 +21,6 @@ USE_LIBTOOL=	YES
 AUTOCONF_REQD=	2.50
 GNU_CONFIGURE=	YES
 
-CONFIGURE_ARGS+=	--with-mp4v2
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/faad2
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE:Q}
@@ -44,4 +40,6 @@ pre-configure:
 		autoconf;						\
 	done
 
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../multimedia/mpeg4ip/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
