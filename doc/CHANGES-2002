@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2002,v 1.11 2006/05/11 15:31:58 wiz Exp $
+$NetBSD: CHANGES-2002,v 1.12 2006/05/30 19:23:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2002:
 
@@ -1074,7 +1074,7 @@ Changes to the packages collection and infrastructure in 2002:
 	Updated ghostscript to 6.01nb4 [itohy 2002-03-17]
 	Updated ghostscript-nox11 to 6.01nb4 [itohy 2002-03-17]
 	Added gpgme 0.3.0 [uebayasi 2002-03-17]
-	Updated sylpheed to 7.4 [uebayasi 2002-03-17]
+	Updated sylpheed to 0.7.4 [uebayasi 2002-03-17]
 	Updated mmix to 20000918nb2 [fredb 2002-03-17]
 	Updated pkgchk to 1.25 [abs 2002-03-17]
 	Updated pkgchk to 1.26 [abs 2002-03-17]
