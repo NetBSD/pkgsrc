@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5033 2006/05/30 21:17:20 wiz Exp $
+$NetBSD: TODO,v 1.5034 2006/05/30 21:27:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1205,7 +1205,6 @@ Suggested package updates
 	o ucarp-1.2
 	o ucblogo-5.5
 	o unix2dos-1.3
-	o unrar-3.6.4
 	o userppp-030706
 	o valgrind-3.0.1
 	o vfu-4.03

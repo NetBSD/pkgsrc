@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.360 2006/05/30 21:17:19 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.361 2006/05/30 21:27:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2734,3 +2734,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/faad2 to 2.0nb7 [tron 2006-05-30]
 	Updated devel/mercurial to 0.9 [wiz 2006-05-30]
 	Updated devel/tailor to 0.9.23 [wiz 2006-05-30]
+	Updated archivers/unrar to 3.6.4 [wiz 2006-05-30]
