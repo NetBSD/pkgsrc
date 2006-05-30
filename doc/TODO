@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5035 2006/05/30 22:14:55 wiz Exp $
+$NetBSD: TODO,v 1.5036 2006/05/30 22:20:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -639,7 +639,6 @@ Suggested package updates
 	o inform-6.31.1
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
-	o intltool-0.35.0
 	o ion3-20060519
 	o ion3-devel-20060305
 	o iozone-3.263
