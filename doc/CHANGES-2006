@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.358 2006/05/30 20:54:24 tron Exp $
+$NetBSD: CHANGES-2006,v 1.359 2006/05/30 21:11:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2732,3 +2732,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/mpeg4ip to 1.5 [tron 2006-05-30]
 	Updated audio/faad2 to 2.0nb6 [tron 2006-05-30]
 	Updated audio/faad2 to 2.0nb7 [tron 2006-05-30]
+	Updated devel/mercurial to 0.9 [wiz 2006-05-30]
