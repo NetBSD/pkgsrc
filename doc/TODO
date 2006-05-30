@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5031 2006/05/30 19:44:53 joerg Exp $
+$NetBSD: TODO,v 1.5032 2006/05/30 21:11:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -745,7 +745,6 @@ Suggested package updates
 	o mdf2iso-0.3.0
 	o memcached-1.2
 	o memtest86-3.2
-	o mercurial-0.9
 	o mftrace-1.1.17
 	o mgetty-1.1.35
 	o micro_httpd-20050629
