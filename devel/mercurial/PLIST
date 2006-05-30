@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/08 23:21:38 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/05/30 21:10:56 wiz Exp $
 bin/hg
 bin/hgmerge
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
 ${PYSITELIB}/hgext/__init__.pyo
+${PYSITELIB}/hgext/bugzilla.py
+${PYSITELIB}/hgext/bugzilla.pyc
+${PYSITELIB}/hgext/bugzilla.pyo
 ${PYSITELIB}/hgext/gpg.py
 ${PYSITELIB}/hgext/gpg.pyc
 ${PYSITELIB}/hgext/gpg.pyo
@@ -13,6 +16,9 @@ ${PYSITELIB}/hgext/hbisect.pyo
 ${PYSITELIB}/hgext/mq.py
 ${PYSITELIB}/hgext/mq.pyc
 ${PYSITELIB}/hgext/mq.pyo
+${PYSITELIB}/hgext/notify.py
+${PYSITELIB}/hgext/notify.pyc
+${PYSITELIB}/hgext/notify.pyo
 ${PYSITELIB}/hgext/patchbomb.py
 ${PYSITELIB}/hgext/patchbomb.pyc
 ${PYSITELIB}/hgext/patchbomb.pyo
@@ -28,6 +34,9 @@ ${PYSITELIB}/mercurial/__version__.pyo
 ${PYSITELIB}/mercurial/appendfile.py
 ${PYSITELIB}/mercurial/appendfile.pyc
 ${PYSITELIB}/mercurial/appendfile.pyo
+${PYSITELIB}/mercurial/archival.py
+${PYSITELIB}/mercurial/archival.pyc
+${PYSITELIB}/mercurial/archival.pyo
 ${PYSITELIB}/mercurial/bdiff.so
 ${PYSITELIB}/mercurial/bundlerepo.py
 ${PYSITELIB}/mercurial/bundlerepo.pyc
@@ -105,6 +114,9 @@ ${PYSITELIB}/mercurial/sshrepo.pyo
 ${PYSITELIB}/mercurial/statichttprepo.py
 ${PYSITELIB}/mercurial/statichttprepo.pyc
 ${PYSITELIB}/mercurial/statichttprepo.pyo
+${PYSITELIB}/mercurial/templater.py
+${PYSITELIB}/mercurial/templater.pyc
+${PYSITELIB}/mercurial/templater.pyo
 ${PYSITELIB}/mercurial/templates/changelog-gitweb.tmpl
 ${PYSITELIB}/mercurial/templates/changelog-rss.tmpl
 ${PYSITELIB}/mercurial/templates/changelog.tmpl
@@ -127,7 +139,6 @@ ${PYSITELIB}/mercurial/templates/filelog.tmpl
 ${PYSITELIB}/mercurial/templates/filelogentry-rss.tmpl
 ${PYSITELIB}/mercurial/templates/filelogentry.tmpl
 ${PYSITELIB}/mercurial/templates/filerevision-gitweb.tmpl
-${PYSITELIB}/mercurial/templates/filerevision-raw.tmpl
 ${PYSITELIB}/mercurial/templates/filerevision.tmpl
 ${PYSITELIB}/mercurial/templates/footer-gitweb.tmpl
 ${PYSITELIB}/mercurial/templates/footer.tmpl
@@ -149,17 +160,14 @@ ${PYSITELIB}/mercurial/templates/notfound.tmpl
 ${PYSITELIB}/mercurial/templates/search-gitweb.tmpl
 ${PYSITELIB}/mercurial/templates/search.tmpl
 ${PYSITELIB}/mercurial/templates/shortlog-gitweb.tmpl
+${PYSITELIB}/mercurial/templates/static/hgicon.png
+${PYSITELIB}/mercurial/templates/static/style-gitweb.css
+${PYSITELIB}/mercurial/templates/static/style.css
 ${PYSITELIB}/mercurial/templates/summary-gitweb.tmpl
 ${PYSITELIB}/mercurial/templates/tagentry-rss.tmpl
 ${PYSITELIB}/mercurial/templates/tags-gitweb.tmpl
 ${PYSITELIB}/mercurial/templates/tags-rss.tmpl
 ${PYSITELIB}/mercurial/templates/tags.tmpl
-${PYSITELIB}/mercurial/templates/static/hgicon.png
-${PYSITELIB}/mercurial/templates/static/style-gitweb.css
-${PYSITELIB}/mercurial/templates/static/style.css
-${PYSITELIB}/mercurial/templater.py
-${PYSITELIB}/mercurial/templater.pyc
-${PYSITELIB}/mercurial/templater.pyo
 ${PYSITELIB}/mercurial/transaction.py
 ${PYSITELIB}/mercurial/transaction.pyc
 ${PYSITELIB}/mercurial/transaction.pyo
@@ -169,11 +177,15 @@ ${PYSITELIB}/mercurial/ui.pyo
 ${PYSITELIB}/mercurial/util.py
 ${PYSITELIB}/mercurial/util.pyc
 ${PYSITELIB}/mercurial/util.pyo
+${PYSITELIB}/mercurial/util_win32.py
+${PYSITELIB}/mercurial/util_win32.pyc
+${PYSITELIB}/mercurial/util_win32.pyo
 ${PYSITELIB}/mercurial/version.py
 ${PYSITELIB}/mercurial/version.pyc
 ${PYSITELIB}/mercurial/version.pyo
 man/man1/hg.1
 man/man1/hgmerge.1
+man/man5/hgignore.5
 man/man5/hgrc.5
 share/doc/mercurial/README
 share/doc/mercurial/comparison.txt
