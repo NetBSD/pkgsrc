@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5030 2006/05/30 19:26:42 wiz Exp $
+$NetBSD: TODO,v 1.5031 2006/05/30 19:44:53 joerg Exp $
 
 Suggested new packages
 ======================
@@ -416,7 +416,6 @@ Suggested package updates
 	o cocoon-2.1.9
 	o columba-1.0RC1
 	o compface-1.5.2
-	o conglomerate-0.9.1
 	o control-center-2.14.2
 	o cook-2.26
 	o coreutils-5.96
