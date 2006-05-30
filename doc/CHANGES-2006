@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.355 2006/05/30 20:03:51 tron Exp $
+$NetBSD: CHANGES-2006,v 1.356 2006/05/30 20:21:10 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2729,3 +2729,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/mldonkey-gui to 2.7.6 [wiz 2006-05-30]
 	Updated editors/conglomerate to 0.9.1 [joerg 2006-05-30]
 	Updated print/xpdf to 3.01pl2nb1 [tron 2006-05-30]
+	Updated multimedia/mpeg4ip to 1.5 [tron 2006-05-30]
