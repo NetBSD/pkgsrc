@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2006/03/04 21:31:12 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/05/30 19:49:24 reed Exp $
 
 DISTNAME=	wmavgload-0.7.0
 PKGREVISION=	1
 CATEGORIES=	x11 windowmaker
-MASTER_SITES=	ftp://ftp.windowmaker.org/pub/contrib/srcs/utils/
+MASTER_SITES=	ftp://ftp.windowmaker.info/pub/contrib/srcs/utils/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Another WindowMaker load gauge
