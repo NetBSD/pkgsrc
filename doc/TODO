@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5027 2006/05/30 19:23:48 wiz Exp $
+$NetBSD: TODO,v 1.5028 2006/05/30 19:25:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -432,7 +432,6 @@ Suggested package updates
 	o cuetools-1.3.1
 	o cups-1.2.1
 	o cvs2p4-2.5.5 [schmonz]
-	o cvsd-1.0.11
 	o cvsweb-3.0.6
 	o cweb-3.64a
 	o cy-login-1.5.28
