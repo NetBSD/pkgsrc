@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5029 2006/05/30 19:25:45 wiz Exp $
+$NetBSD: TODO,v 1.5030 2006/05/30 19:26:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -756,7 +756,6 @@ Suggested package updates
 	o miredo-0.8.5
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-1.7.0
-	o mldonkey-2.7.6
 	o mlview-0.9.0
 	o mmix-20050922
 	o molden-4.4
