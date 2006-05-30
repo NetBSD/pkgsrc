@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2006/05/30 20:23:32 tron Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/05/30 20:53:48 tron Exp $
 bin/faad
 include/faad2/faad2-config.h
 include/faad2/faad.h
 include/faad2/mp4ff.h
 lib/libfaad.la
+lib/libmp4ff.la
+lib/mp4player_plugin/faad2_plugin.la
 @dirrm include/faad2
