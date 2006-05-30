@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2006/04/08 23:21:38 minskim Exp $
+$NetBSD: distinfo,v 1.5 2006/05/30 21:10:56 wiz Exp $
 
-SHA1 (mercurial-0.8.1.tar.gz) = 7d71b6d0f73ec8b90d774b5251e69023e1ca7857
-RMD160 (mercurial-0.8.1.tar.gz) = 0dca740eb32297813489162f9564ba349747be35
-Size (mercurial-0.8.1.tar.gz) = 284529 bytes
+SHA1 (mercurial-0.9.tar.gz) = d633a9fee89ed8aee22d5a52138c673e01feed7f
+RMD160 (mercurial-0.9.tar.gz) = 4ab0646abeea17bebf2262457448ef39959b5311
+Size (mercurial-0.9.tar.gz) = 326107 bytes
