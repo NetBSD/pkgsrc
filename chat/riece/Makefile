@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2006/03/30 03:31:13 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/05/30 00:26:15 uebayasi Exp $
 #
 
-DISTNAME=	riece-2.0.2
+DISTNAME=	riece-3.0.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	chat japanese
 MASTER_SITES=	http://savannah.nongnu.org/download/riece/
 
