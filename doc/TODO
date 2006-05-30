@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5028 2006/05/30 19:25:01 wiz Exp $
+$NetBSD: TODO,v 1.5029 2006/05/30 19:25:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -383,7 +383,6 @@ Suggested package updates
 	o bind-8.4.7
 	o bind-9.3.2
 	o bioperl-1.5.0
-	o bison-2.2
 	o blackbox-0.70
 	o blur6ex-0.3.462
 	o bmon-2.1.0
