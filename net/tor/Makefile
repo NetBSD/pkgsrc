@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2006/03/14 01:14:31 jlam Exp $
+# $NetBSD: Makefile,v 1.26.2.1 2006/05/30 22:58:11 salo Exp $
 #
 
-DISTNAME=		tor-0.1.0.17
+DISTNAME=		tor-0.1.1.20
 CATEGORIES=		net security
 MASTER_SITES=		http://tor.eff.org/dist/
 
-MAINTAINER=		jschauma@NetBSD.org
+MAINTAINER=		tv@NetBSD.org
 HOMEPAGE=		http://tor.eff.org/
 COMMENT=		Anonymizing overlay network for TCP
 
