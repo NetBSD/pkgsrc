@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.353 2006/05/30 19:26:42 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.354 2006/05/30 19:43:02 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2727,3 +2727,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/bison to 2.2 [wiz 2006-05-30]
 	Updated net/mldonkey to 2.7.6 [wiz 2006-05-30]
 	Updated net/mldonkey-gui to 2.7.6 [wiz 2006-05-30]
+	Updated editors/conglomerate to 0.9.1 [joerg 2006-05-30]
