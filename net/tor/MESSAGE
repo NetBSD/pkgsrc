@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2006/01/16 16:52:31 jschauma Exp $
+$NetBSD: MESSAGE,v 1.3.2.1 2006/05/30 22:58:11 salo Exp $
 
 You probably want to install www/privoxy to torify your browsers.  Please
 see http://tor.eff.org/cvs/tor/doc/tor-doc.html for details.
@@ -11,21 +11,4 @@ ${PREFIX}/share/examples/tor/tor-tsocks.conf.
 If you wish to chroot tor, you may find the following URLs helpful:
   http://pestilenz.org/~bauerm/tor-openbsd-howto.html
   http://wiki.noreply.org/wiki/TheOnionRouter/TorInChroot
-
-===========================================================================
-
-Security Note:
-
-If you offer a Tor hidden service, an adversary who can run a fast Tor server
-and who knows some basic statistics can find the location of your hidden
-service in a matter of minutes to hours.
-
-See http://archives.seul.org/or/announce/Jan-2006/msg00001.html
-for details.
-
-To prevent this information disclosure, manually configure a half dozen
-EntryNodes.
-
-See http://wiki.noreply.org/noreply/TheOnionRouter/TorFAQ#ChooseEntryExit
-
 ===========================================================================
