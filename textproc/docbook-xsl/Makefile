@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2006/04/18 20:53:34 minskim Exp $
+# $NetBSD: Makefile,v 1.40 2006/05/30 22:13:52 wiz Exp $
 #
 
-DISTNAME=	docbook-xsl-1.69.1
-PKGREVISION=	6
+DISTNAME=	docbook-xsl-1.70.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +18,6 @@ NO_BUILD=	YES
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	fo/pdf2index
 
-DOCDIR=		${PREFIX}/share/doc/docbook-xsl
 EGDIR=		${PREFIX}/share/examples/docbook-xsl
 XSLDIR=		${PREFIX}/share/xsl/docbook
 XSLMODS=	common extensions fo html htmlhelp images javahelp \
@@ -33,7 +31,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${XSLDIR}
 	${INSTALL_DATA} ${WRKSRC}/VERSION ${XSLDIR}
 	${INSTALL_DATA} ${WRKSRC}/catalog.xml ${XSLDIR}/catalog.xml
-	@for d in ${XSLMODS}; do \
+	for d in ${XSLMODS}; do \
 	    ${ECHO} "${INSTALL_DATA_DIR} ${XSLDIR}/$$d"; \
 	    ${ECHO} "cd ${WRKSRC} && ${PAX} -rw -pp -pm $$d ${XSLDIR}/"; \
 	    cd ${WRKSRC} && ${PAX} -rw -pp -pm $$d ${XSLDIR}/; \
