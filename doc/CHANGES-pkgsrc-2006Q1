@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.63 2006/05/29 11:33:00 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.64 2006/05/30 20:19:20 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -129,3 +129,5 @@ Pullup ticket 1672 - requested by adrianp
 security update for drupal
 Pullup ticket 1674 - requested by adrianp
 install fix for phpldapadmin
+Pullup ticket 1675 - requested by tron
+security fix for cscope
