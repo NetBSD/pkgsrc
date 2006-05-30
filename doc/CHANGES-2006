@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.349 2006/05/30 00:27:14 uebayasi Exp $
+$NetBSD: CHANGES-2006,v 1.350 2006/05/30 04:33:33 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2722,3 +2722,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/mrtg to 2.12.2nb4 [tron 2006-05-29]
 	Updated fonts/fontconfig to 2.3.2nb3 [tron 2006-05-29]
 	Updated chat/riece to 3.0.0 [uebayasi 2006-05-30]
+	Updated www/awstats to 6.6nb1 [minskim 2006-05-30]
