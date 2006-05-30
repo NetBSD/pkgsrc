@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.21 2006/01/23 14:43:50 rillig Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.22 2006/05/30 23:51:38 wiz Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -72,6 +72,7 @@ _EXTRACT_PATTERNS=	${EXTRACT_ONLY} ${EXTRACT_SUFX}
     !empty(_EXTRACT_PATTERNS:M*.tbz) || \
     !empty(_EXTRACT_PATTERNS:M*.tbz2) || \
     !empty(_EXTRACT_PATTERNS:M*.tgz) || \
+    !empty(_EXTRACT_PATTERNS:M*-tar.gz) || \
     !empty(_EXTRACT_PATTERNS:M*_tar.gz)
 .  if !empty(EXTRACT_USING:Mgtar)
 USE_TOOLS+=	gtar
