@@ -1,0 +1,11 @@
+--- src/find.c.orig	2003-09-04 16:58:52.000000000 +0100
++++ src/find.c	2006-05-29 14:34:26.000000000 +0100
+@@ -666,7 +666,7 @@
+ 		/* must be an exact match */
+ 		/* note: regcomp doesn't recognize ^*keypad$ as a syntax error
+ 		         unless it is given as a single arg */
+-		(void) sprintf(buf, "^%s$", s);
++		(void) snprintf(buf, sizeof(buf), "^%s$", s);
+ 		if (regcomp (&regexp, buf, REG_EXTENDED | REG_NOSUB) != 0) {
+ 			return(REGCMPERROR);
+ 		}

@@ -1,0 +1,62 @@
+--- src/display.c.orig	2003-09-04 16:54:02.000000000 +0100
++++ src/display.c	2006-05-29 14:34:26.000000000 +0100
+@@ -473,24 +473,24 @@
+ 	/* see if it is empty */
+ 	if ((c = getc(refsfound)) == EOF) {
+ 		if (findresult != NULL) {
+-			(void) sprintf(lastmsg, "Egrep %s in this pattern: %s", 
++			(void) snprintf(lastmsg, sizeof(lastmsg), "Egrep %s in this pattern: %s", 
+ 				findresult, pattern);
+ 		}
+ 		else if (rc == NOTSYMBOL) {
+-			(void) sprintf(lastmsg, "This is not a C symbol: %s", 
++			(void) snprintf(lastmsg, sizeof(lastmsg), "This is not a C symbol: %s", 
+ 				pattern);
+ 		}
+ 		else if (rc == REGCMPERROR) {
+-			(void) sprintf(lastmsg, "Error in this regcomp(3) regular expression: %s", 
++			(void) snprintf(lastmsg, sizeof(lastmsg), "Error in this regcomp(3) regular expression: %s", 
+ 				pattern);
+ 			
+ 		}
+ 		else if (funcexist == NO) {
+-			(void) sprintf(lastmsg, "Function definition does not exist: %s", 
++			(void) snprintf(lastmsg, sizeof(lastmsg), "Function definition does not exist: %s", 
+ 				pattern);
+ 		}
+ 		else {
+-			(void) sprintf(lastmsg, "Could not find the %s: %s", 
++			(void) snprintf(lastmsg, sizeof(lastmsg), "Could not find the %s: %s", 
+ 				fields[field].text2, pattern);
+ 		}
+ 		return(NO);
+@@ -555,17 +555,17 @@
+ 			move(MSGLINE, 0);
+ 			clrtoeol();
+ 			addstr(what);
+-			sprintf(msg, "%ld", current);
++			snprintf(msg, sizeof(msg), "%ld", current);
+ 			move(MSGLINE, (COLS / 2) - (strlen(msg) / 2));
+ 			addstr(msg);
+-			sprintf(msg, "%ld", max);
++			snprintf(msg, sizeof(msg), "%ld", max);
+ 			move(MSGLINE, COLS - strlen(msg));
+ 			addstr(msg);
+ 			refresh();
+ 		}
+ 		else if (verbosemode == YES)
+ 		{
+-			sprintf(msg, "> %s %ld of %ld", what, current, max);
++			snprintf(msg, sizeof(msg), "> %s %ld of %ld", what, current, max);
+ 		}
+ 
+ 		start = now;
+@@ -603,7 +603,7 @@
+ 		s = sys_errlist[errno];
+ 	}
+ #endif
+-	(void) sprintf(msg, "%s: %s", text, s);
++	(void) snprintf(msg, sizeof(msg), "%s: %s", text, s);
+ 	postmsg(msg);
+ }
+ 
