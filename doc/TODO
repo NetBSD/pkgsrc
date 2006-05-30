@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5032 2006/05/30 21:11:27 wiz Exp $
+$NetBSD: TODO,v 1.5033 2006/05/30 21:17:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1163,7 +1163,6 @@ Suggested package updates
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.2
 	o sysinfo-4.2.2
-	o tailor-0.9.23
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
