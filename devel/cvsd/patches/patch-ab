@@ -1,9 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/05/20 23:38:16 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2006/05/30 19:24:27 wiz Exp $
 
---- configure.orig	2004-08-07 23:11:20.000000000 +0300
-+++ configure	2004-09-13 14:25:34.000000000 +0300
-@@ -9983,3 +9983,3 @@
+--- configure.orig	2006-05-24 20:25:24.000000000 +0000
++++ configure
+@@ -10610,7 +10610,7 @@ fi
+ 
+ # where to find the configuration file
  # TODO: this should probably be fixed to be nicer
 -CONFIGFILE=`eval echo $sysconfdir/cvsd/cvsd.conf | \
 +CONFIGFILE=`eval echo $sysconfdir/cvsd.conf | \
              sed "s%^NONE/%${prefix}/%" | \
+             sed "s%^NONE/%${ac_default_prefix}/%"`
+ 
