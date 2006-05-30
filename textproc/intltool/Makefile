@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2006/05/06 03:54:17 reed Exp $
+# $NetBSD: Makefile,v 1.36 2006/05/30 22:19:53 wiz Exp $
 #
 
-DISTNAME=		intltool-0.34.2
+DISTNAME=		intltool-0.35.0
 CATEGORIES=		textproc devel gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/intltool/0.34/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/intltool/0.35/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
