@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5026 2006/05/29 22:09:06 tron Exp $
+$NetBSD: TODO,v 1.5027 2006/05/30 19:23:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -314,7 +314,7 @@ Suggested package updates
 	o SDL_net-1.2.6
 	o SDL_ttf-2.0.8
 	o SmartEiffel-2.1
-	o TeXmacs-1.0.6.1
+	o TeXmacs-1.0.6.2
 	o XFree86-4.6.0
 	o XaoS-3.1.1
 	o YoSucker-75
@@ -509,6 +509,7 @@ Suggested package updates
 	o fetchmail-6.3.4
 	o fhist-1.14
 	o file-4.17
+	o file-roller-2.14.3
 	o findutils-4.2.27
 	o flashplayer-0.4.13
 	o fmsx-3.0
@@ -538,6 +539,7 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdm-2.14.7
 	o gdsreader-0.3.2
+	o gedit-2.14.3
 	o ggiterm-0.7.1
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
@@ -557,10 +559,12 @@ Suggested package updates
 	o gnetman-20050429
 	o gnome-applets-2.14.2
 	o gnome-backgrounds-2.14.1
+	o gnome-desktop-2.14.2
 	o gnome-games-2.14.2
 	o gnome-mag-0.12.5
 	o gnome-media-2.14.2
 	o gnome-pilot-2.0.13
+	o gnome-session-2.14.2
 	o gnome-spell-1.0.7
 	o gnome-themes-2.14.2
 	o gnome-vfsmm-2.14.0
@@ -671,7 +675,7 @@ Suggested package updates
 	o jwhois-3.2.3
 	o kajaani-kombat-0.7
 	o kapooka-0.3
-	o kazehakase-0.3.7
+	o kazehakase-0.3.8
 	o kbarcode-2.0.2
 	o kdbg-2.0.4
 	o kdrill-6.4
@@ -713,9 +717,11 @@ Suggested package updates
 	o libshout-2.2
 	o libsigsegv-2.3
 	o libsmi-0.4.3
+	o libsoup-devel-2.2.93
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
 	o libtorrent-0.9.0
+	o libwnck-2.14.2
 	o licq-core-1.3.0
 	o lilypond-2.8.0
 	o lincvs-1.5.0 [now called CrossVC]
@@ -735,7 +741,7 @@ Suggested package updates
 	o malsync-2.2.0
 	o manedit-0.6.1
 	o mapserver-4.2.5
-	o maradns-1.2.07.4
+	o maradns-1.2.07.5
 	o matchbox-1.0
 	o matchbox-panel-0.9.3
 	o md-whois-4.7.8
@@ -1157,6 +1163,7 @@ Suggested package updates
 	o sweep-0.9.1
 	o swfdec-0.3.6
 	o swi-prolog-5.5.33
+	o sylpheed-2.2.5
 	o sylpheed-claws-2.2.0
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.2
@@ -1297,6 +1304,7 @@ Suggested package updates
 	o xzip-182
 	o yafc-1.1
 	o yaz-2.1.8
+	o yelp-2.14.2
 	o yencode-0.46
 	o yodl-2.01.02
 	o ysm-2.9.8
@@ -1305,7 +1313,7 @@ Suggested package updates
 	o zenity-2.14.2
 	o zile-2.2.13
 	o zircon-1.18.256
-	o zope-2.8.6
+	o zope-2.8.7
 	o zope-2.9.3
 	o zope25-AbracadabraObject-2.0.0
 	o zope25-BTreeFolder2-1.0.1
