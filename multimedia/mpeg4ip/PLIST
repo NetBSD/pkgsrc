@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/12 21:39:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/05/30 20:20:53 tron Exp $
 bin/avi2raw
 bin/avidump
 bin/h264_parse
@@ -63,6 +63,7 @@ lib/libmpeg4ip_gnu.la
 lib/libmpeg4ip_mpeg4_iso.la
 lib/libmsg_queue.la
 lib/libsdp.la
+lib/libsrtpif.la
 lib/mp4player_plugin/aac_plugin.la
 lib/mp4player_plugin/celp_plugin.la
 lib/mp4player_plugin/g711_audio_plugin.la
