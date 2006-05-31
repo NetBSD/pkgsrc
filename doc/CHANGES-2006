@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.376 2006/05/31 18:25:20 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.377 2006/05/31 18:45:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2755,3 +2755,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added databases/openldap-server version 2.3.23 [ghen 2006-05-31]
 	Added databases/openldap-doc version 2.3.23 [ghen 2006-05-31]
 	Updated databases/openldap to 2.3.23nb1 [ghen 2006-05-31]
+	Updated comms/asterisk to 1.2.8 [adam 2006-05-31]
