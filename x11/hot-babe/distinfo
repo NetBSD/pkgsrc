@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2006/05/31 11:42:45 rillig Exp $
+$NetBSD: distinfo,v 1.6 2006/05/31 12:03:53 rillig Exp $
 
 SHA1 (hot-babe-0.2.2.tar.gz) = 403a8f14322c5ca5187daed5050392468c114ec5
 RMD160 (hot-babe-0.2.2.tar.gz) = 4981fdf346937d0a89f249dd967f7e33a32e05e0
 Size (hot-babe-0.2.2.tar.gz) = 408991 bytes
-SHA1 (patch-aa) = ecb2b043d7eb78ee532005d57010a1d372a62378
+SHA1 (patch-aa) = 109e842c1e32515eeb89158eec397ec7bf4ded2f
 SHA1 (patch-ab) = fc67f595280a8fdeb302ed91829c8973459cb6ad
