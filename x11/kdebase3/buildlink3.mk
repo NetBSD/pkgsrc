@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2006/04/17 13:46:06 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2006/05/31 18:22:26 ghen Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 KDEBASE_BUILDLINK3_MK:=	${KDEBASE_BUILDLINK3_MK}+
@@ -26,7 +26,7 @@ MAKEVARS+=	PKG_BUILD_OPTIONS.kdebase
 
 BUILDLINK_API_DEPENDS.Xrandr+=      Xrandr>=1.0
 
-.include "../../databases/openldap/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"

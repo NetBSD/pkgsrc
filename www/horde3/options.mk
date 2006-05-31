@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2005/08/29 13:36:06 tv Exp $
+# $NetBSD: options.mk,v 1.5 2006/05/31 18:22:26 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.horde
 PKG_SUPPORTED_OPTIONS=	ldap pgsql mysql
@@ -10,7 +10,7 @@ PKG_SUGGESTED_OPTIONS=	mysql
 ### Use OpenLDAP for storing user details
 ###
 .if !empty(PKG_OPTIONS:Mldap)
-.	include "../../databases/openldap/buildlink3.mk"
+.	include "../../databases/openldap-client/buildlink3.mk"
 DEPENDS+=	php-ldap>=4.3.3:../../databases/php-ldap
 .endif
 
