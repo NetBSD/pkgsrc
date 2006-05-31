@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/05/22 19:26:10 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/05/31 10:25:19 joerg Exp $
 
 DISTNAME=	madman-0.93
 PKGREVISION=	6
@@ -21,7 +21,7 @@ post-extract:
 	${SED} -e 's,#! /usr/bin/env python,#!${PYTHONBIN},' ${WRKSRC}/httpd/make_webdata.org > ${WRKSRC}/httpd/make_webdata
 	${CHMOD} 755 ${WRKSRC}/httpd/make_webdata
 	${MV} ${WRKSRC}/main/SConscript ${WRKSRC}/main/SConscript.org
-	${AWK} '{print} NR == 20 {print "myenv.Append(LINKFLAGS = \"-Wl,-R${X11BASE}/lib,-R${LOCALBASE}/lib,-R${LOCALBASE}${QTDIR}/lib\")"}' ${WRKSRC}/main/SConscript.org > ${WRKSRC}/main/SConscript
+	${AWK} '{print} NR == 20 {print "myenv.Append(LINKFLAGS = \"${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} -Wl,-R${X11BASE}/lib,-R${LOCALBASE}/lib,-R${LOCALBASE}${QTDIR}/lib\")"}' ${WRKSRC}/main/SConscript.org > ${WRKSRC}/main/SConscript
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons -C ${WRKSRC} prefix=${PREFIX} \
@@ -42,4 +42,5 @@ do-install:
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
