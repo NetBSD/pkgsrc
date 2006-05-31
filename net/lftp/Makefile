@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2006/05/31 13:41:39 salo Exp $
+# $NetBSD: Makefile,v 1.70 2006/05/31 13:44:14 salo Exp $
 
 DISTNAME=		lftp-3.4.7
 CATEGORIES=		net
@@ -19,7 +19,7 @@ USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	# uses GNU readline internal _rl_mark_modified_lines
 
-SHLIBTOOL_OVERRIDE=	libtool
+SHLIBTOOL_OVERRIDE+=	libtool
 
 .include "options.mk"
 
