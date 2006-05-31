@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5052 2006/05/31 22:51:51 wiz Exp $
+$NetBSD: TODO,v 1.5053 2006/05/31 22:52:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -564,7 +564,6 @@ Suggested package updates
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
-	o goffice-0.3.0
 	o gogo-3.11p1
 	o gok-1.0.10
 	o gossip-0.11.1
