@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.363 2006/05/30 22:20:17 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.364 2006/05/31 00:19:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2737,3 +2737,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated archivers/unrar to 3.6.4 [wiz 2006-05-30]
 	Updated textproc/docbook-xsl to 1.70.1 [wiz 2006-05-30]
 	Updated textproc/intltool to 0.35.0 [wiz 2006-05-30]
+	Updated mail/imapfilter to 1.2.1 [wiz 2006-05-31]
