@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2006/04/16 11:56:26 wiz Exp $
+$NetBSD: distinfo,v 1.22 2006/05/31 22:07:18 wiz Exp $
 
-SHA1 (gnome-desktop-2.14.1.1.tar.bz2) = 7daa0c613eee5fe0a7f35578c6eaad39cf458442
-RMD160 (gnome-desktop-2.14.1.1.tar.bz2) = fbf4f362024126c0441ac7ec461862951ef019f2
-Size (gnome-desktop-2.14.1.1.tar.bz2) = 1173965 bytes
+SHA1 (gnome-desktop-2.14.2.tar.bz2) = 21212ade9ad886c6e960383862bf0d65a0835be0
+RMD160 (gnome-desktop-2.14.2.tar.bz2) = 3ce584f3675e915be8aaf86909cd05cc8c1b3454
+Size (gnome-desktop-2.14.2.tar.bz2) = 1186900 bytes

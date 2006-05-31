@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2006/04/17 13:46:10 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2006/05/31 22:07:18 wiz Exp $
 #
 
-DISTNAME=		gnome-desktop-2.14.1.1
-PKGREVISION=		1
+DISTNAME=		gnome-desktop-2.14.2
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.14/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,6 +19,7 @@ USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--with-gnome-distributor="The NetBSD Foundation"
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.0
 
 post-install:
 .for f in netbsd-logo-icon.png netbsd-logo-icon-transparent.png
