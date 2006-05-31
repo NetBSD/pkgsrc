@@ -1,5 +1,5 @@
 # RCSid:
-#	$Id: makefile.boot.in,v 1.2 2005/11/10 00:09:34 reed Exp $
+#	$Id: makefile.boot.in,v 1.3 2006/05/31 09:47:01 joerg Exp $
 
 #
 # modify MACHINE and MACHINE_ARCH as appropriate for your target architecture
@@ -13,14 +13,14 @@ MKDEP=$(srcdir)/mkdeps.sh -n -i/usr/include
 MKDEP_OPTS=-A
 MK=${prefix}/share/mk
 MKSRC=@mksrc@
-DEFAULT_MAKESYSPATH=/usr/share/mk:/usr/local/share/mk:/opt/share/mk
+DEFAULT_MAKESYSPATH=@default_sys_path@
 CFLAGS=-I. -I$(srcdir) @DEFS@ @CPPFLAGS@ ${XDEFS} -D_PATH_DEFSYSPATH=\"@default_sys_path@\"
 MDEFS="-D@force_machine@MACHINE=\"@machine@\"" "-DMACHINE_ARCH=\"@machine_arch@\""
 
 OBJ=arch.o buf.o compat.o cond.o dir.o for.o hash.o job.o main.o make.o \
     parse.o str.o suff.o targ.o trace.o var.o util.o getopt.o sigcompat.o @LIBOBJS@
 
-BMAKE_ENV= CC="$(CC)" LIBC= MAKEFLAGS= MAKESYSPATH=`pwd`/mk:${MKSRC}:${MK}:${DEFAULT_MAKESYSPATH}
+BMAKE_ENV= CC="$(CC)" LIBC= MAKEFLAGS= MAKESYSPATH=${DEFAULT_MAKESYSPATH}
 
 bootstrap:	bmake.boot .mk.done
 	${BMAKE_ENV} ./bmake.boot -f Makefile 
