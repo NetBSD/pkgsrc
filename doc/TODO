@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5047 2006/05/31 20:38:23 wiz Exp $
+$NetBSD: TODO,v 1.5048 2006/05/31 21:32:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1209,7 +1209,6 @@ Suggested package updates
 	o wdm-1.28
 	o weechat-0.1.9
 	o weewm-0.01
-	o win32-codecs-20060501
 	o winbind-3.0.13
 	o wmctrl-1.07
 	o wmii-2.5.1 [pkg/32522]
