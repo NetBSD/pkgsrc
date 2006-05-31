@@ -1,17 +1,14 @@
-# $NetBSD: Makefile,v 1.20 2006/05/18 20:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2006/05/31 04:32:28 taca Exp $
 
-DISTNAME=	RMagick-1.10.1
+DISTNAME=	RMagick-1.11.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	graphics ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/8854/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/10727/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	obata@lins.jp
 HOMEPAGE=	http://rmagick.rubyforge.org/
 COMMENT=	Ruby ImageMagick extension
-
-BROKEN_IN=	pkgsrc-2006Q1
 
 RUBY_HAS_ARCHLIB=	yes
 GNU_CONFIGURE=		yes
