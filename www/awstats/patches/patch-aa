@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.3.6.2 2006/05/31 00:03:03 salo Exp $
+
+--- wwwroot/cgi-bin/awstats.pl.orig	2006-05-06 03:42:26.000000000 +0100
++++ wwwroot/cgi-bin/awstats.pl
+@@ -10,8 +10,8 @@
+ require 5.005;
+ 
+ #$|=1;
+-use warnings;		# Must be used in test mode only. This reduce a little process speed
+-use diagnostics;	# Must be used in test mode only. This reduce a lot of process speed
++#use warnings;		# Must be used in test mode only. This reduce a little process speed
++#use diagnostics;	# Must be used in test mode only. This reduce a lot of process speed
+ use strict;no strict "refs";
+ use Time::Local;	# use Time::Local 'timelocal_nocheck' is faster but not supported by all Time::Local modules
+ use Socket;
+@@ -1131,7 +1131,7 @@ sub Read_Config {
+ 	my $configdir=shift;
+ 	my @PossibleConfigDir=();
+ 
+-	if ($configdir)
++	if ($configdir && $ENV{"AWSTATS_ENABLE_CONFIG_DIR"})
+ 	{
+ 		# If from CGI, overwriting of configdir is only possible if AWSTATS_ENABLE_CONFIG_DIR defined
+ 		#if ($ENV{'GATEWAY_INTERFACE'} && ! $ENV{"AWSTATS_ENABLE_CONFIG_DIR"})
