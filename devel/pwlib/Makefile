@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/05/16 15:56:43 joerg Exp $
+# $NetBSD: Makefile,v 1.56 2006/05/31 00:16:22 wiz Exp $
 
 DISTNAME=	pwlib-v1_8_3-src
 PKGNAME=	pwlib-1.8.3
@@ -36,7 +36,6 @@ SUBST_SED.paths+=	-e 's,@LIBOSSAUDIO@,${LIBOSSAUDIO},g'
 SUBST_STAGE.paths=	post-patch
 
 post-extract:
-	cd ${WRKDIR}; ${TAR} -xf ${DISTNAME:S/$/-tar/}
 	mkdir ${WRKSRC}/share
 	${LN} -s ../../pwlib ${WRKSRC}/share/pwlib
 
