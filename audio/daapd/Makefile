@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2006/04/23 18:25:27 tonio Exp $
+# $NetBSD: Makefile,v 1.19 2006/05/31 07:56:20 tonio Exp $
 
 DISTNAME=		daapd-0.2.4b
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.tgz
@@ -16,14 +17,14 @@ MAKEFILE=		makefile
 RCD_SCRIPTS=		daapd
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
-CONF_FILES=    		${EGDIR}/daapd.conf ${PKG_SYSCONFDIR}/daapd.conf
+CONF_FILES=		${EGDIR}/daapd.conf ${PKG_SYSCONFDIR}/daapd.conf
 
 PKG_OPTIONS_VAR=PKG_OPTIONS.daapd
-PKG_SUPPORTED_OPTIONS=faad
+PKG_SUPPORTED_OPTIONS=mpeg4ip
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mfaad)
-.include "../../audio/faad2/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mmpeg4ip)
+.include "../../multimedia/mpeg4ip/buildlink3.mk"
 MAKE_ENV+= WITH_FAAD=1
 .else
 MAKE_ENV+= WITH_FAAD=0
