@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/04/17 13:45:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/31 19:18:07 adam Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-libs-${QTVERSION}
-PKGREVISION=	1
 COMMENT=	C++ X GUI toolkit
 
 BUILD_TARGET=		sub-src
@@ -40,12 +39,6 @@ do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/plugins/accessible/lib${plug}.la \
 		${QTPREFIX}/plugins/accessible/
-.endfor
-	${INSTALL_LIB_DIR} ${QTPREFIX}/plugins/codecs
-.for plug in qcncodecs qjpcodecs qkrcodecs qtwcodecs
-	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-		${WRKSRC}/plugins/codecs/lib${plug}.la \
-		${QTPREFIX}/plugins/codecs/
 .endfor
 	${INSTALL_LIB_DIR} ${QTPREFIX}/plugins/imageformats/
 .for plug in qgif qjpeg qmng
