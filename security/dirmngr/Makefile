@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/05/25 22:49:23 seb Exp $
+# $NetBSD: Makefile,v 1.23 2006/05/31 18:22:25 ghen Exp $
 #
 
 DISTNAME=		dirmngr-0.9.3
@@ -29,7 +29,7 @@ INFO_FILES=		# PLIST
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sharedstatedir=${VARBASE:Q}
-CONFIGURE_ENV+=		BUILDLINK_PREFIX_openldap=${BUILDLINK_PREFIX.openldap}
+CONFIGURE_ENV+=		BUILDLINK_PREFIX_openldap-client=${BUILDLINK_PREFIX.openldap-client}
 CONFIGURE_ARGS+=	--with-pth-prefix=${WRKDIR}/pth
 
 SUBST_FILES+=		VARBASE=${VARBASE}
@@ -62,7 +62,7 @@ post-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/runDirmngr ${PREFIX}/sbin
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../databases/openldap/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../security/libassuan/buildlink3.mk"

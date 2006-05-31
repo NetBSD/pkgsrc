@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.27 2006/04/06 06:22:40 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2006/05/31 18:22:26 ghen Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 HEIMDAL_BUILDLINK3_MK:=	${HEIMDAL_BUILDLINK3_MK}+
@@ -28,7 +28,7 @@ MAKEFLAGS+=	PKG_BUILD_OPTIONS.heimdal=${PKG_BUILD_OPTIONS.heimdal:Q}
 MAKEVARS+=	PKG_BUILD_OPTIONS.heimdal
 
 .if !empty(PKG_BUILD_OPTIONS.heimdal:Mldap)
-.  include "../../databases/openldap/buildlink3.mk"
+.  include "../../databases/openldap-client/buildlink3.mk"
 .endif
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"

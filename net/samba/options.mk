@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2006/04/20 11:44:07 grant Exp $
+# $NetBSD: options.mk,v 1.16 2006/05/31 18:22:25 ghen Exp $
 
 # Recommended package options for various setups:
 #
@@ -68,7 +68,7 @@ CONFIGURE_ARGS+=	--with-ldapsam
 ### Support LDAP authentication and storage of Samba account information.
 ###
 .if !empty(PKG_OPTIONS:Mldap)
-.  include "../../databases/openldap/buildlink3.mk"
+.  include "../../databases/openldap-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ldap
 .else
 CONFIGURE_ARGS+=	--without-ldap

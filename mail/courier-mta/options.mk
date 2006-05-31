@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2006/05/31 18:22:24 ghen Exp $
 
 # Global and legacy options
 
@@ -116,7 +116,7 @@ PKG_FAIL_REASON+=	"[courier/options.mk] No mail transports specified."
 ### LDAP alias lookup support
 ###
 .if !empty(PKG_OPTIONS:Mldap)
-.  include "../../databases/openldap/buildlink3.mk"
+.  include "../../databases/openldap-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ldapaliasd
 PLIST_SRC+=		${PKGDIR}/PLIST.ldap
 

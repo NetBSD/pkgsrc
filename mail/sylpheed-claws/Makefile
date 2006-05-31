@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2006/04/17 13:46:38 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2006/05/31 18:22:24 ghen Exp $
 
 .include "Makefile.common"
 
@@ -53,7 +53,7 @@ CONFIGURE_ARGS+=	--enable-jpilot
 
 .if !empty(PKG_OPTIONS:Mldap)
 CONFIGURE_ARGS+=	--enable-ldap
-.  include "../../databases/openldap/buildlink3.mk"
+.  include "../../databases/openldap-client/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)

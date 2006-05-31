@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2005/12/05 23:55:14 rillig Exp $
+# $NetBSD: options.mk,v 1.6 2006/05/31 18:22:24 ghen Exp $
 
 # Global and legacy options
 
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	--disable-cups
 ### Support LDAP password and account databases.
 ###
 .if !empty(PKG_OPTIONS:Mldap-compat)
-.  include "../../databases/openldap/buildlink3.mk"
+.  include "../../databases/openldap-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ldapsam
 PLIST_SUBST+=		SAMBA_LDAP=""
 .else

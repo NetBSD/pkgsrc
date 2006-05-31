@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2005/05/31 10:01:38 dillo Exp $
+# $NetBSD: options.mk,v 1.4 2006/05/31 18:22:24 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.teapop
 PKG_SUPPORTED_OPTIONS=	drac mysql apop vpop tcpd pgsql ldap inet6
@@ -44,10 +44,10 @@ LDFLAGS+=		${BUILDLINK_LDFLAGS.postgresql-lib}
 .endif
 
 .if !empty(PKG_OPTIONS:Mldap)
-.  include "../../databases/openldap/buildlink3.mk"
+.  include "../../databases/openldap-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ldap=openldap
-CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap}
-LDFLAGS+=		${BUILDLINK_LDFLAGS.openldap}
+CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap-client}
+LDFLAGS+=		${BUILDLINK_LDFLAGS.openldap-client}
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)

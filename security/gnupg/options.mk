@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2006/04/05 10:04:12 drochner Exp $
+# $NetBSD: options.mk,v 1.8 2006/05/31 18:22:25 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg
 PKG_SUPPORTED_OPTIONS=	curl idea ldap
@@ -40,7 +40,7 @@ pre-configure:
 .endif
 
 .if !empty(PKG_OPTIONS:Mldap)
-.include "../../databases/openldap/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 PLIST_SUBST+=	OPENLDAP=""
 .else
 CONFIGURE_ARGS+=--disable-ldap
