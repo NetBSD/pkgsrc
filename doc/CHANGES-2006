@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.384 2006/05/31 21:52:39 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.385 2006/05/31 22:07:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2775,3 +2775,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/win32-codecs to 060501 [wiz 2006-05-31]
 	Updated misc/xchm to 1.8 [wiz 2006-05-31]
 	Updated devel/libwnck to 2.14.2 [wiz 2006-05-31]
+	Updated x11/gnome-desktop to 2.14.2 [wiz 2006-05-31]
