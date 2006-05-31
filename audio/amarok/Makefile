@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2006/04/17 13:46:15 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2006/05/31 17:59:57 wiz Exp $
 
-DISTNAME=		amarok-1.3.9
-PKGREVISION=		2
+DISTNAME=		amarok-1.4.0a
 CATEGORIES=		audio kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amarok/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,6 +9,7 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://amarok.kde.org/
 COMMENT=		KDE audio player
 
+WRKSRC=			${WRKDIR}/amarok-1.4.0
 USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++
@@ -19,9 +19,32 @@ USE_LIBTOOL=		yes
 CONFIGURE_ARGS+=	--without-nmm
 CONFIGURE_ARGS+=	--without-mas
 CONFIGURE_ARGS+=	--without-helix
-CONFIGURE_ARGS+=	--without-arts	# disable aRts engine
+CONFIGURE_ARGS+=	--with-mp4v2
+CONFIGURE_ARGS+=	--with-mp4v2-dir=${LOCALBASE}
 
 LIBS+=			${LIBOSSAUDIO}
+
+PYTHON_PATCH_SCRIPTS= \
+	amarok/src/scripts/amarok_live/amarok_live.py \
+	amarok/src/scripts/common/Publisher.py \
+	amarok/src/scripts/common/Zeroconf.py \
+	amarok/src/scripts/playlist2html/Playlist.py \
+	amarok/src/scripts/webcontrol/Playlist.py \
+	amarok/src/scripts/playlist2html/PlaylistServer.py \
+	amarok/src/scripts/playlist2html/playlist2html.py \
+	amarok/src/scripts/templates/python_qt_template.py \
+	amarok/src/scripts/webcontrol/Globals.py \
+	amarok/src/scripts/playlist2html/Playlist.py \
+	amarok/src/scripts/webcontrol/Playlist.py \
+	amarok/src/scripts/webcontrol/RequestHandler.py \
+	amarok/src/scripts/webcontrol/WebControl.py \
+	amarok/src/scripts/webcontrol/WebPublisher.py
+REPLACE_RUBY= \
+	amarok/src/scripts/lyrics_astraweb/lyrics_astraweb.rb \
+	amarok/src/scripts/lyrics_lyrc/lyrics_lyrc.rb \
+	amarok/src/scripts/ruby_debug/debug.rb \
+	amarok/src/scripts/templates/amarok.rb \
+	amarok/src/scripts/templates/ruby_qt_template.rb
 
 BUILDLINK_API_DEPENDS.kdebase+=	kdebase>=3.3.0
 BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs>=3.3.0
@@ -31,11 +54,13 @@ BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.4
 .include "../../audio/libvisual/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/ruby/buildlink3.mk"
+.include "../../lang/ruby/replace.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../mk/oss.buildlink3.mk"
-.include "../../multimedia/gst-plugins0.8/buildlink3.mk"
-.include "../../multimedia/gstreamer0.8/buildlink3.mk"
 .include "../../multimedia/kdemultimedia3/buildlink3.mk"
+.include "../../multimedia/mpeg4ip/buildlink3.mk"
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
