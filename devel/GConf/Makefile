@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.55 2006/04/17 13:46:04 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2006/05/31 13:31:34 rillig Exp $
 #
 
 DISTNAME=		GConf-1.0.9
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/GConf/1.0/}
 EXTRACT_SUFX=		.tar.bz2
@@ -23,9 +23,14 @@ PKGCONFIG_OVERRIDE=	gconf.pc.in
 
 PLIST_SUBST+=		LOCALBASE=${LOCALBASE:Q}
 
+EGDIR=			${PREFIX}/share/examples/gconf
 REQD_DIRS+=		${PKG_SYSCONFDIR}/gconf ${PKG_SYSCONFDIR}/gconf/1
-CONF_FILES+=		${PREFIX}/share/examples/gconf/default.path \
-			${PKG_SYSCONFDIR}/gconf/1/path
+REQD_DIRS+=		${PKG_SYSCONFDIR}/gconf/schemas
+CONF_FILES+=		${EGDIR}/default.path ${PKG_SYSCONFDIR}/gconf/1/path
+CONF_FILES+=		${EGDIR}/desktop.schemas \
+			${PKG_SYSCONFDIR}/gconf/schemas/desktop.schemas
+
+INSTALL_MAKE_FLAGS+=	schemadir=${EGDIR}
 
 pre-build:
 	${RM} -f ${WRKSRC}/gconf/libxml
