@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5041 2006/05/31 11:43:22 rillig Exp $
+$NetBSD: TODO,v 1.5042 2006/05/31 17:37:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -479,7 +479,7 @@ Suggested package updates
 	o enlightenment-0.16.8.1
 	o enscript-1.6.4
 	o eog2-2.14.2
-	o epiphany-2.14.2
+	o epiphany-2.14.2.1
 	o epstool-3.08
 	o eric3-3.9.0
 	o erlang-11
@@ -498,7 +498,7 @@ Suggested package updates
 	o exmh-2.7.2
 	o f2c-20031025
 	o faces-1.7.7
-	o fast-user-switch-applet-2.14.1
+	o fast-user-switch-applet-2.14.2
 	o fceu-0.98.15
 	o fd-2.08a
 	o fdgw-20040609
@@ -554,15 +554,18 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-applets-2.14.2
-	o gnome-backgrounds-2.14.1
+	o gnome-backgrounds-2.14.2
 	o gnome-desktop-2.14.2
 	o gnome-games-2.14.2
 	o gnome-mag-0.12.5
 	o gnome-media-2.14.2
+	o gnome-panel-2.14.2
 	o gnome-pilot-2.0.13
+	o gnome-screensaver-2.14.2
 	o gnome-session-2.14.2
 	o gnome-spell-1.0.7
 	o gnome-themes-2.14.2
+	o gnome-vfs2-2.14.2
 	o gnome-vfsmm-2.14.0
 	o gnome2-terminal-2.14.2
 	o gnomeicu-0.99.10
@@ -574,7 +577,7 @@ Suggested package updates
 	o goffice-0.3.0
 	o gogo-3.11p1
 	o gok-1.0.10
-	o gossip-0.11
+	o gossip-0.11.1
 	o gpgme-1.1.0 [pkg/32761]
 	o gpsdrive-2.09
 	o gpsim-0.21.4
@@ -599,6 +602,7 @@ Suggested package updates
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
 	o gtk2+-2.8.18
+	o gtk2-engines-2.6.9
 	o gtkam-0.1.13
 	o gtkhtml-3.10.2
 	o gtksee-0.6.0b
@@ -662,6 +666,7 @@ Suggested package updates
 	o java-lang-spec-3.0
 	o jgrasp-183
 	o jigdo-0.7.2
+	o joe-3.4
 	o john-1.7.2
 	o jove-4.16.0.69
 	o jpegpixi-1.1.1
@@ -742,6 +747,7 @@ Suggested package updates
 	o mdf2iso-0.3.0
 	o memcached-1.2
 	o memtest86-3.2
+	o metacity-2.14.5
 	o mftrace-1.1.17
 	o mgetty-1.1.35
 	o micro_httpd-20050629
@@ -777,6 +783,7 @@ Suggested package updates
 	o naim-0.11.8.2
 	o nano-1.2.5 [pkg/32859]
 	o nap-1.5.3
+	o nautilus-cd-burner-2.14.2
 	o nawk-20041222
 	o ncftp2-2.8.2
 	o ncview-1.92e
