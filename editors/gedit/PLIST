@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2006/04/17 07:07:18 jlam Exp $
+@comment $NetBSD: PLIST,v 1.23 2006/05/31 18:37:47 drochner Exp $
 bin/gedit
 bin/gnome-text-editor
 include/gedit-2.14/gedit/gedit-app.h
@@ -232,6 +232,7 @@ share/locale/uk/LC_MESSAGES/gedit.mo
 share/locale/vi/LC_MESSAGES/gedit.mo
 share/locale/wa/LC_MESSAGES/gedit.mo
 share/locale/zh_CN/LC_MESSAGES/gedit.mo
+share/locale/zh_HK/LC_MESSAGES/gedit.mo
 share/locale/zh_TW/LC_MESSAGES/gedit.mo
 share/omf/gedit/gedit-C.omf
 share/omf/gedit/gedit-bg.omf
