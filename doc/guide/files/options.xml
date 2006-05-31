@@ -1,4 +1,4 @@
-<!-- $NetBSD: options.xml,v 1.18 2006/05/10 22:43:15 rillig Exp $ -->
+<!-- $NetBSD: options.xml,v 1.19 2006/05/31 18:54:32 ghen Exp $ -->
 
 <!-- based on: pkgsrc/mk/bsd.options.mk 1.42 -->
 
@@ -68,8 +68,8 @@ main package <filename>Makefile</filename>.</para>
     ### LDAP support
     ###
     .if !empty(PKG_OPTIONS:Mldap)
-    .  include "../../databases/openldap/buildlink3.mk"
-    CONFIGURE_ARGS+=    --enable-ldap=${BUILDLINK_PREFIX.openldap}
+    .  include "../../databases/openldap-client/buildlink3.mk"
+    CONFIGURE_ARGS+=    --enable-ldap=${BUILDLINK_PREFIX.openldap-client}
     .endif
 
     ###
