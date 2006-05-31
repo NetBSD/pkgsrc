@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.12 2006/05/31 13:52:54 tron Exp $
+
+--- ksvg/impl/libs/libtext2path/src/GlyphTracer.cpp.orig	2005-10-11 03:56:48.000000000 +1300
++++ ksvg/impl/libs/libtext2path/src/GlyphTracer.cpp
+@@ -36,22 +36,22 @@ GlyphTracer::~GlyphTracer()
+ 	delete m_outlineMethods;
+ }
+ 
+-void GlyphTracer::setMoveto(int (funcPtr)(FT_Vector *, void *))
++void GlyphTracer::setMoveto(FT_Outline_MoveToFunc funcPtr)
+ {
+ 	m_moveTo = funcPtr;
+ }
+ 
+-void GlyphTracer::setLineto(int (funcPtr)(FT_Vector *, void *))
++void GlyphTracer::setLineto(FT_Outline_LineToFunc funcPtr)
+ {
+ 	m_lineTo = funcPtr;
+ }
+ 
+-void GlyphTracer::setConicBezier(int (funcPtr)(FT_Vector *, FT_Vector *, void *))
++void GlyphTracer::setConicBezier(FT_Outline_ConicToFunc funcPtr)
+ {
+ 	m_conicBezier = funcPtr;
+ }
+ 
+-void GlyphTracer::setCubicBezier(int (funcPtr)(FT_Vector *, FT_Vector *, FT_Vector *, void *))
++void GlyphTracer::setCubicBezier(FT_Outline_CubicToFunc funcPtr)
+ {
+ 	m_cubicBezier = funcPtr;
+ }
