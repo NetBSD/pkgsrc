@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.369 2006/05/31 11:17:26 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.370 2006/05/31 11:43:22 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2745,3 +2745,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/ruby-RMagick to 1.11.1 [taca 2006-05-31]
 	Updated audio/daapd to 0.2.4bnb1 [tonio 2006-05-31]
 	Updated www/paros to 3.2.12 [adrianp 2006-05-31]
+	Updated x11/hot-babe to 0.2.2 [rillig 2006-05-31]

@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5040 2006/05/31 04:42:24 taca Exp $
+$NetBSD: TODO,v 1.5041 2006/05/31 11:43:22 rillig Exp $
 
 Suggested new packages
 ======================
@@ -616,7 +616,6 @@ Suggested package updates
 	o hercules-3.02
 	o hobbitmon-4.0.4 [pkg/30484]
 	o honeyd-1.5a
-	o hot-babe-0.2.2
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2wml-0.4.11
 	o htmldoc-1.8.26
