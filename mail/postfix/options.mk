@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2006/04/13 21:45:13 wiz Exp $
+# $NetBSD: options.mk,v 1.22 2006/05/31 18:22:24 ghen Exp $
 
 # Global and legacy options
 
@@ -46,10 +46,10 @@ CCARGS+=	-DNO_PCRE
 ### Support LDAP directories for table lookups.
 ###
 .if !empty(PKG_OPTIONS:Mldap)
-.  include "../../databases/openldap/buildlink3.mk"
+.  include "../../databases/openldap-client/buildlink3.mk"
 CCARGS+=	-DHAS_LDAP
-AUXLIBS+=	-L${BUILDLINK_PREFIX.openldap}/lib			\
-		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openldap}/lib	\
+AUXLIBS+=	-L${BUILDLINK_PREFIX.openldap-client}/lib			\
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openldap-client}/lib	\
 		-lldap -llber
 .endif
 
