@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.97 2006/05/31 06:35:52 rillig Exp $
+# $NetBSD: makevars.map,v 1.98 2006/05/31 08:46:00 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -123,7 +123,7 @@ BUILDLINK_CFLAGS.*	List of CFlag []
 BUILDLINK_CPPFLAGS.*	List of CFlag []
 BUILDLINK_DEPENDS	InternalList of Dependency [b:a]
 BUILDLINK_DEPMETHOD.*	BuildlinkDepmethod [b:d,m:as,c:a,*.mk:a]
-BUILDLINK_DEPTH		BuildlinkDepth [b:s]
+BUILDLINK_DEPTH		BuildlinkDepth [b:ps, builtin.mk:ps]
 BUILDLINK_FILES.*	List of Pathmask [b:a, builtin.mk:a]
 BUILDLINK_FILES_CMD.*	List of ShellWord []
 # ^^ ShellCommand
@@ -133,7 +133,7 @@ BUILDLINK_LDADD.*	List of LdFlag [builtin.mk:ads]
 BUILDLINK_LDFLAGS.*	List of LdFlag []
 BUILDLINK_LIBDIRS.*	List of Pathname [b:a]
 BUILDLINK_LIBS.*	List of LdFlag [b:a]
-BUILDLINK_PACKAGES	BuildlinkPackages [b:as]
+BUILDLINK_PACKAGES	BuildlinkPackages [b:aps]
 BUILDLINK_PASSTHRU_DIRS	List of Pathname [m:a,c:a,b:a,h:a]
 BUILDLINK_PASSTHRU_RPATHDIRS	List of Pathname [m:a,c:a,b:a,h:a]
 BUILDLINK_PKGSRCDIR.*	RelativePkgDir [b:d]
@@ -425,7 +425,7 @@ PKG_JVMS_ACCEPTED	List of { blackdown-jdk13 jdk jdk14 kaffe sun-jdk13 sun-jdk14 
 PKG_JVM_DEFAULT		Unchecked []
 PKG_LEGACY_OPTIONS	List of Option
 PKG_LIBTOOL		Pathname [m:s]
-PKG_OPTIONS		List of Option [bsd.options.mk:s,*:]
+PKG_OPTIONS		List of Option [bsd.options.mk:s,*:pu]
 PKG_OPTIONS.*		List of Option [*:]
 PKG_OPTIONS_DEPRECATED_WARNINGS	List of ShellWord
 PKG_OPTIONS_GROUP.*	List of Option [o:s,m:s]
