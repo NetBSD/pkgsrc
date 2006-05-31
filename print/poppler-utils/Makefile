@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2006/04/06 18:25:39 reed Exp $
+# $NetBSD: Makefile,v 1.4 2006/05/31 18:13:54 drochner Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=		poppler-utils-${POPPLER_VERS}
-PKGREVISION=		1
 
 COMMENT=		PDF utilities (from poppler)
 
@@ -30,7 +29,7 @@ CONFIGURE_ARGS+=        --enable-utils	# the default
 
 BUILD_DIRS=		utils # implies INSTALL_DIRS too
 
-BUILDLINK_API_DEPENDS.poppler+=     poppler>=${POPPLER_VERS}nb3
+BUILDLINK_API_DEPENDS.poppler+=     poppler>=${POPPLER_VERS}
 .include "../../print/poppler/buildlink3.mk"
 
 .include "../../mk/bsd.prefs.mk"
