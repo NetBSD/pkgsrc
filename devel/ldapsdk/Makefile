@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/03/04 21:29:16 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/05/31 19:09:15 ghen Exp $
 
 DISTNAME=	ldapsdk_12311998
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozilla.org/directory/
 COMMENT=	LDAP C-SDK from the Mozilla project
 
-CONFLICTS+=	openldap-[0-9]*
+CONFLICTS+=	openldap-client-[0-9]*
 
 WRKSRC=		${WRKDIR}/mozilla
 USE_TOOLS+=	gmake perl
