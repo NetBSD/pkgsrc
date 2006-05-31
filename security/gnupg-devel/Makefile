@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/06 06:22:38 reed Exp $
+# $NetBSD: Makefile,v 1.16 2006/05/31 18:22:25 ghen Exp $
 #
 
 DISTNAME=		gnupg-1.9.20
@@ -56,7 +56,7 @@ pre-configure:
 
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
 
-.include "../../databases/openldap/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

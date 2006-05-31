@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/04/22 09:22:16 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/05/31 18:22:26 ghen Exp $
 
 DISTNAME=	mod_auth_ldap3.05
 PKGNAME=	ap2-auth-ldap-3.05
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www databases
 MASTER_SITES=	http://www.muquit.com/muquit/software/mod_auth_ldap/
 
@@ -19,7 +19,7 @@ CPPFLAGS+=		-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -lldap -llber
 BUILDLINK_API_DEPENDS.apache+=	apache>=2.0.47
 
 CONFIGURE_ARGS+=	--with-apxs=${APXS:Q}
-CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap}
+CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap-client}
 CONFIGURE_ARGS+=	--with-apache-dir=${PREFIX:Q}
 CONFIGURE_ARGS+=	--with-apache-ver=2
 
@@ -33,7 +33,7 @@ SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 do-install:
 	cd ${WRKSRC} && ${APXS} -i -n ${APACHE_MODULE_NAME} mod_auth_ldap.la
 
-.include "../../databases/openldap/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/apache2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

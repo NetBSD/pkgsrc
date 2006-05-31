@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2005/06/02 20:39:16 dillo Exp $
+# $NetBSD: options.mk,v 1.11 2006/05/31 18:22:23 ghen Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.jabberd2
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=        --enable-pgsql
 
 .if !empty(PKG_OPTIONS:Mldap)
 CONFIGURE_ARGS+=        --enable-ldap
-.  include "../../databases/openldap/buildlink3.mk"
+.  include "../../databases/openldap-client/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mpam)
