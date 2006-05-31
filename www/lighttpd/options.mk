@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2005/12/05 23:55:23 rillig Exp $
+# $NetBSD: options.mk,v 1.4 2006/05/31 18:22:26 ghen Exp $
 
 PKG_OPTIONS_VAR =       PKG_OPTIONS.lighttpd
 PKG_SUPPORTED_OPTIONS=  bzip fam gdbm inet6 ldap lua mysql ssl memcache
@@ -43,7 +43,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 ### Allow using LDAP for "basic" authentication.
 ###
 .if !empty(PKG_OPTIONS:Mldap)
-.  include "../../databases/openldap/buildlink3.mk"
+.  include "../../databases/openldap-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ldap
 .endif
 

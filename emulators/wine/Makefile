@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.106 2006/05/26 09:40:33 adam Exp $
+# $NetBSD: Makefile,v 1.107 2006/05/31 18:22:23 ghen Exp $
 
 DISTNAME=	wine-0.9.14
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wine/} \
 		http://ibiblio.org/pub/linux/system/emulators/wine/
@@ -45,7 +46,7 @@ post-install:
 .endfor
 
 .include "../../audio/esound/buildlink3.mk"
-.include "../../databases/openldap/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
