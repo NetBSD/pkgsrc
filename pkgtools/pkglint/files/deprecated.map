@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.35 2006/05/23 08:59:47 rillig Exp $
+# $NetBSD: deprecated.map,v 1.36 2006/05/31 02:15:11 rillig Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -84,3 +84,5 @@ NO_EXTRACT		It doesn't exist anymore.
 _FETCH_MESSAGE		Use FETCH_MESSAGE (different format) instead.
 BUILDLINK_DEPENDS.*	Use BUILDLINK_API_DEPENDS.* instead.
 BUILDLINK_RECOMMENDED.*	Use BUILDLINK_ABI_DEPENDS.* instead.
+SHLIB_HANDLING		Use CHECK_SHLIBS_SUPPORTED instead.
+USE_RMAN		It has been removed.
