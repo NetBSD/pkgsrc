@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.592 2006/05/31 06:35:52 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.593 2006/05/31 08:10:45 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4062,42 +4062,42 @@ sub checkline_mk_vartype($$$$$) {
 		}
 	}
 
-		if (!defined($type)) {
-			# Cannot check anything if the type is not known.
+	if (!defined($type)) {
+		# Cannot check anything if the type is not known.
 
-		} elsif ($op eq "!=") {
-			$opt_debug and $line->log_info("Use of !=: ${value}");
+	} elsif ($op eq "!=") {
+		$opt_debug and $line->log_info("Use of !=: ${value}");
 
-		} elsif ($type->kind_of_list != LK_NONE) {
-			my (@words, $rest);
+	} elsif ($type->kind_of_list != LK_NONE) {
+		my (@words, $rest);
 
-			if ($type->kind_of_list == LK_INTERNAL) {
-				@words = split(qr"\s+", $value);
-				$rest = "";
-			} else {
-				@words = ();
-				$rest = $value;
-				while ($rest =~ s/^$regex_shellword//) {
-					my ($word) = ($1);
-					last if ($word =~ qr"^#");
-					push(@words, $1);
-				}
-			}
-
-			foreach my $word (@words) {
-				checkline_mk_vartype_basic($line, $varname, $type->basic_type, $op, $word, $comment, true);
-				if ($type->kind_of_list != LK_INTERNAL) {
-					checkline_mk_shellword($line, $word, true);
-				}
-			}
-
-			if ($rest !~ qr"^\s*$") {
-				$opt_debug and $line->log_warning("Invalid shell word \"${value}\" at the end.");
-			}
-
+		if ($type->kind_of_list == LK_INTERNAL) {
+			@words = split(qr"\s+", $value);
+			$rest = "";
 		} else {
-			checkline_mk_vartype_basic($line, $varname, $type->basic_type, $op, $value, $comment, !type_should_be_quoted($type));
+			@words = ();
+			$rest = $value;
+			while ($rest =~ s/^$regex_shellword//) {
+				my ($word) = ($1);
+				last if ($word =~ qr"^#");
+				push(@words, $1);
+			}
 		}
+
+		foreach my $word (@words) {
+			checkline_mk_vartype_basic($line, $varname, $type->basic_type, $op, $word, $comment, true);
+			if ($type->kind_of_list != LK_INTERNAL) {
+				checkline_mk_shellword($line, $word, true);
+			}
+		}
+
+		if ($rest !~ qr"^\s*$") {
+			$opt_debug and $line->log_warning("Invalid shell word \"${value}\" at the end.");
+		}
+
+	} else {
+		checkline_mk_vartype_basic($line, $varname, $type->basic_type, $op, $value, $comment, !type_should_be_quoted($type));
+	}
 }
 
 sub checkline_mk_varassign($$$$$) {
