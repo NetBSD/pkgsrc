@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.65 2006/05/30 22:58:33 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.66 2006/05/31 00:03:26 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -133,3 +133,5 @@ Pullup ticket 1675 - requested by tron
 security fix for cscope
 Pullup ticket 1676 - requested by jschauma
 security update for tor
+Pullup ticket 1677 - requested by minskim
+security fix for awstats
