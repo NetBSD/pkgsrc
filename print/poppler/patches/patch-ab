@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2006/04/03 21:20:06 reed Exp $
+$NetBSD: patch-ab,v 1.5 2006/05/31 18:13:54 drochner Exp $
 
---- utils/Makefile.in.orig	2006-02-28 14:51:35.000000000 -0800
-+++ utils/Makefile.in	2006-04-03 14:10:58.000000000 -0700
-@@ -52,7 +52,7 @@
+--- utils/Makefile.in.orig	2006-05-22 22:15:21.000000000 +0200
++++ utils/Makefile.in
+@@ -52,7 +52,7 @@ mkinstalldirs = $(install_sh) -d
  CONFIG_HEADER = $(top_builddir)/config.h \
  	$(top_builddir)/poppler/poppler-config.h
  CONFIG_CLEAN_FILES =
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.4 2006/04/03 21:20:06 reed Exp $
  am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)"
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  PROGRAMS = $(bin_PROGRAMS)
-@@ -61,41 +61,41 @@
+@@ -61,41 +61,41 @@ am_pdffonts_OBJECTS = pdffonts.$(OBJEXT)
  pdffonts_OBJECTS = $(am_pdffonts_OBJECTS)
  pdffonts_LDADD = $(LDADD)
  am__DEPENDENCIES_1 =
@@ -62,7 +62,7 @@ $NetBSD: patch-ab,v 1.4 2006/04/03 21:20:06 reed Exp $
  	$(am__DEPENDENCIES_1)
  DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir) -I$(top_builddir)/poppler
  depcomp = $(SHELL) $(top_srcdir)/depcomp
-@@ -281,12 +281,12 @@
+@@ -283,12 +283,12 @@ sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
  sysconfdir = @sysconfdir@
  target_alias = @target_alias@
@@ -80,7 +80,7 @@ $NetBSD: patch-ab,v 1.4 2006/04/03 21:20:06 reed Exp $
  INCLUDES = \
  	-I$(top_srcdir)				\
  	-I$(top_srcdir)/utils			\
-@@ -294,8 +294,8 @@
+@@ -296,8 +296,8 @@ INCLUDES = \
  	$(UTILS_CFLAGS)
  
  LDADD = \
@@ -89,5 +89,5 @@ $NetBSD: patch-ab,v 1.4 2006/04/03 21:20:06 reed Exp $
 +	$(prefix)/lib/libpoppler.la	\
 +	$(UTILS_LIBS) $(PTHREAD_STUBLIB)
  
- 
- # Yay, automake!  It should be able to figure out that it has to dist
+ dist_man1_MANS = \
+ 	pdffonts.1				\
