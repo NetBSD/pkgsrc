@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2006/05/15 09:17:14 minskim Exp $
+# $NetBSD: Makefile,v 1.59 2006/05/31 18:22:26 ghen Exp $
 
 DISTNAME=	heimdal-0.7.2
 PKGREVISION=	1
@@ -60,8 +60,8 @@ PKG_SUPPORTED_OPTIONS=	kerberos-prefix-cmds ldap
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mldap)
-.  include "../../databases/openldap/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-openldap=${BUILDLINK_PREFIX.openldap}
+.  include "../../databases/openldap-client/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-openldap=${BUILDLINK_PREFIX.openldap-client}
 PLIST_SUBST+=		LDAP=""
 
 post-install: heimdal-ldap-schema

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2006/03/15 19:23:47 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2006/05/31 18:22:23 ghen Exp $
 #
 
 DISTNAME=		nss_ldap-240
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		databases
 MASTER_SITES=		http://www.padl.com/download/
 
@@ -29,5 +29,5 @@ pre-build:
 	${CP} ${FILESDIR}/netbsd.c  ${FILESDIR}/netbsd.h ${WRKSRC}
 	${LN} -fs /usr/include/nsswitch.h ${BUILDLINK_DIR}/include/nss.h
 
-.include "../../databases/openldap/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
