@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2006/04/13 08:47:06 adam Exp $
+$NetBSD: patch-aa,v 1.9 2006/05/31 18:43:15 adam Exp $
 
---- Makefile.orig	2006-04-11 23:58:47.000000000 +0200
+--- Makefile.orig	2006-04-30 16:27:56.000000000 +0200
 +++ Makefile
 @@ -46,7 +46,6 @@ ifneq ($(findstring dont-optimize,$(MAKE
  #K6OPT  = -DK6OPT
@@ -65,7 +65,7 @@ $NetBSD: patch-aa,v 1.8 2006/04/13 08:47:06 adam Exp $
    MODULES_DIR=$(ASTLIBDIR)/modules
    AGI_DIR=$(ASTVARLIBDIR)/agi-bin
  endif
-@@ -226,7 +226,7 @@ ASTCFLAGS+=$(OPTIMIZE)
+@@ -225,7 +225,7 @@ ASTCFLAGS+=$(OPTIMIZE)
  ASTOBJ=-o asterisk
  
  ifeq ($(findstring BSD,$(OSARCH)),BSD)
@@ -74,7 +74,7 @@ $NetBSD: patch-aa,v 1.8 2006/04/13 08:47:06 adam Exp $
    ASTCFLAGS+=-I$(CROSS_COMPILE_TARGET)/usr/local/include -L$(CROSS_COMPILE_TARGET)/usr/local/lib
  endif
  
-@@ -257,24 +257,24 @@ ifeq ($(OSARCH),FreeBSD)
+@@ -256,24 +256,24 @@ ifeq ($(OSARCH),FreeBSD)
  
    # XXX FreeBSD paths
    PREFIX?=/usr/local
@@ -111,7 +111,7 @@ $NetBSD: patch-aa,v 1.8 2006/04/13 08:47:06 adam Exp $
    MPG123TARG=netbsd
  endif
  
-@@ -293,7 +293,7 @@ ifeq ($(findstring CYGWIN,$(OSARCH)),CYG
+@@ -292,7 +292,7 @@ ifeq ($(findstring CYGWIN,$(OSARCH)),CYG
    ASTOBJ=-shared -o asterisk.dll -Wl,--out-implib=libasterisk.dll.a -Wl,--export-all-symbols
    ASTLINK=
    LIBS+=-lpthread -lncurses -lm -lresolv
@@ -120,7 +120,7 @@ $NetBSD: patch-aa,v 1.8 2006/04/13 08:47:06 adam Exp $
    PROC=$(shell uname -m)
  endif
  
-@@ -370,7 +370,8 @@ ifeq ($(OSARCH),Darwin)
+@@ -369,7 +369,8 @@ ifeq ($(OSARCH),Darwin)
    AUDIO_LIBS=-framework CoreAudio
    ASTLINK=-Wl,-dynamic
    SOLINK=-dynamic -bundle -undefined suppress -force_flat_namespace
@@ -130,7 +130,7 @@ $NetBSD: patch-aa,v 1.8 2006/04/13 08:47:06 adam Exp $
    ASTCFLAGS+=-DPOLLCOMPAT
  else
  #These are used for all but Darwin
-@@ -382,8 +383,12 @@ ifeq ($(OSARCH),FreeBSD)
+@@ -381,8 +382,12 @@ ifeq ($(OSARCH),FreeBSD)
    LIBS+=-lcrypto
  endif
  
@@ -144,7 +144,7 @@ $NetBSD: patch-aa,v 1.8 2006/04/13 08:47:06 adam Exp $
  endif
  
  ifeq ($(OSARCH),OpenBSD)
-@@ -719,31 +724,31 @@ install: all datafiles bininstall
+@@ -720,31 +725,31 @@ install: all datafiles bininstall instal
  upgrade: all bininstall
  
  adsi:
@@ -185,7 +185,7 @@ $NetBSD: patch-aa,v 1.8 2006/04/13 08:47:06 adam Exp $
  		( \
  		echo "[directories]" ; \
  		echo "astetcdir => $(ASTETCDIR)" ; \
-@@ -760,7 +765,7 @@ samples: adsi
+@@ -761,7 +766,7 @@ samples: adsi
  		echo ";astctlowner = root" ; \
  		echo ";astctlgroup = apache" ; \
  		echo ";astctl = asterisk.ctl" ; \
