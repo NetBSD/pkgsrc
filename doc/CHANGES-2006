@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.382 2006/05/31 21:32:41 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.383 2006/05/31 21:39:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2773,3 +2773,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/qt4-tools to 4.1.3 [adam 2006-05-31]
 	Added x11/qt4-psql version 4.1.3 [adam 2006-05-31]
 	Updated multimedia/win32-codecs to 060501 [wiz 2006-05-31]
+	Updated misc/xchm to 1.8 [wiz 2006-05-31]
