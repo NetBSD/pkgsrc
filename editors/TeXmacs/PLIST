@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2006/05/17 17:32:22 drochner Exp $
+@comment $NetBSD: PLIST,v 1.29 2006/05/31 18:21:24 drochner Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -1531,7 +1531,6 @@ share/TeXmacs/langs/natural/dic/english-greek.scm
 share/TeXmacs/langs/natural/dic/english-hungarian.scm
 share/TeXmacs/langs/natural/dic/english-italian.scm
 share/TeXmacs/langs/natural/dic/english-japanese.scm
-share/TeXmacs/langs/natural/dic/english-korean-orig.scm
 share/TeXmacs/langs/natural/dic/english-korean.scm
 share/TeXmacs/langs/natural/dic/english-new.scm
 share/TeXmacs/langs/natural/dic/english-polish.scm
@@ -1775,6 +1774,7 @@ share/TeXmacs/misc/pixmaps/tm_table_arow.xpm
 share/TeXmacs/misc/pixmaps/tm_table_bbottom.xpm
 share/TeXmacs/misc/pixmaps/tm_table_bhcenter.xpm
 share/TeXmacs/misc/pixmaps/tm_table_bleft.xpm
+share/TeXmacs/misc/pixmaps/tm_table_border.xpm
 share/TeXmacs/misc/pixmaps/tm_table_bottom.xpm
 share/TeXmacs/misc/pixmaps/tm_table_bright.xpm
 share/TeXmacs/misc/pixmaps/tm_table_brow.xpm
@@ -1790,6 +1790,7 @@ share/TeXmacs/misc/pixmaps/tm_table_left.xpm
 share/TeXmacs/misc/pixmaps/tm_table_pos.xpm
 share/TeXmacs/misc/pixmaps/tm_table_rcol.xpm
 share/TeXmacs/misc/pixmaps/tm_table_right.xpm
+share/TeXmacs/misc/pixmaps/tm_table_size.xpm
 share/TeXmacs/misc/pixmaps/tm_table_special.xpm
 share/TeXmacs/misc/pixmaps/tm_table_top.xpm
 share/TeXmacs/misc/pixmaps/tm_table_vbase.xpm
@@ -1862,6 +1863,7 @@ share/TeXmacs/packages/standard/std-symbol.ts
 share/TeXmacs/packages/standard/std-utils.ts
 share/TeXmacs/packages/standard/std.ts
 share/TeXmacs/packages/test/algo.ts
+share/TeXmacs/packages/utilities/chat.ts
 share/TeXmacs/plugins/axiom/packages/session/axiom.ts
 share/TeXmacs/plugins/axiom/progs/axiom-input.scm
 share/TeXmacs/plugins/axiom/progs/init-axiom.scm
@@ -2074,7 +2076,8 @@ share/TeXmacs/progs/doc/help-funcs.scm
 share/TeXmacs/progs/doc/help-menu.scm
 share/TeXmacs/progs/doc/tmdoc.scm
 share/TeXmacs/progs/doc/tmweb.scm
-share/TeXmacs/progs/doc/translate.scm
+share/TeXmacs/progs/dynamic/chat-edit.scm
+share/TeXmacs/progs/dynamic/chat-menu.scm
 share/TeXmacs/progs/dynamic/dynamic-drd.scm
 share/TeXmacs/progs/dynamic/fold-edit.scm
 share/TeXmacs/progs/dynamic/fold-kbd.scm
@@ -2189,6 +2192,9 @@ share/TeXmacs/progs/utils/library/tree.scm
 share/TeXmacs/progs/utils/misc/markup-funcs.scm
 share/TeXmacs/progs/utils/plugins/plugin-cmd.scm
 share/TeXmacs/progs/utils/plugins/plugin-convert.scm
+share/TeXmacs/progs/utils/remote/client.scm
+share/TeXmacs/progs/utils/remote/crypt.scm
+share/TeXmacs/progs/utils/remote/remote-menu.scm
 share/TeXmacs/styles/article.ts
 share/TeXmacs/styles/book.ts
 share/TeXmacs/styles/documentation/browser.ts
@@ -2226,6 +2232,7 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/styles/elsevier
 @dirrm share/TeXmacs/styles/documentation
 @dirrm share/TeXmacs/styles
+@dirrm share/TeXmacs/progs/utils/remote
 @dirrm share/TeXmacs/progs/utils/plugins
 @dirrm share/TeXmacs/progs/utils/misc
 @dirrm share/TeXmacs/progs/utils/library
@@ -2373,6 +2380,7 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/plugins/axiom/packages
 @dirrm share/TeXmacs/plugins/axiom
 @dirrm share/TeXmacs/plugins
+@dirrm share/TeXmacs/packages/utilities
 @dirrm share/TeXmacs/packages/test
 @dirrm share/TeXmacs/packages/standard
 @dirrm share/TeXmacs/packages/section
@@ -2530,8 +2538,6 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/doc/devel/style
 @dirrm share/TeXmacs/doc/devel/source
 @dirrm share/TeXmacs/doc/devel/scheme/utils
-@exec ${MKDIR} %D/share/TeXmacs/doc/devel/scheme/process
-@dirrm share/TeXmacs/doc/devel/scheme/process
 @dirrm share/TeXmacs/doc/devel/scheme/overview
 @dirrm share/TeXmacs/doc/devel/scheme/edit
 @dirrm share/TeXmacs/doc/devel/scheme
@@ -2539,10 +2545,6 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/doc/devel/interface
 @dirrm share/TeXmacs/doc/devel/format/stylesheet
 @dirrm share/TeXmacs/doc/devel/format/regular
-@exec ${MKDIR} %D/share/TeXmacs/doc/devel/format/primitives
-@dirrm share/TeXmacs/doc/devel/format/primitives
-@exec ${MKDIR} %D/share/TeXmacs/doc/devel/format/language
-@dirrm share/TeXmacs/doc/devel/format/language
 @dirrm share/TeXmacs/doc/devel/format/environment
 @dirrm share/TeXmacs/doc/devel/format/basics
 @dirrm share/TeXmacs/doc/devel/format
