@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.17 2006/05/29 22:05:21 tron Exp $
+$NetBSD: distinfo,v 1.18 2006/05/31 10:24:54 tron Exp $
 
 SHA1 (freetype-2.2.1.tar.bz2) = 4aa7d5ce2198fad586cf09ef7c9d3a6277320167
 RMD160 (freetype-2.2.1.tar.bz2) = 1c7eb4a43501c8fd5e89d0399e184847351ee160
 Size (freetype-2.2.1.tar.bz2) = 1212258 bytes
-SHA1 (patch-aa) = 0f05ebbb7c1264dd58f01916560278cd4c3dce08
