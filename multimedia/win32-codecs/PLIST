@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/04/17 12:14:13 salo Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/05/31 21:32:09 wiz Exp $
 lib/win32/3ivX.qtx
 lib/win32/ACTLComponent.qtx
 lib/win32/AvidQTAVUICodec.qtx
@@ -14,6 +14,7 @@ lib/win32/QuickTimeEssentials.qtx
 lib/win32/QuickTimeInternetExtras.qtx
 lib/win32/Readme.txt
 lib/win32/VDODEC32.dll
+lib/win32/ViVD2.dll
 lib/win32/ZyGoVideo.qtx
 lib/win32/acelpdec.ax
 lib/win32/alf2cd.acm
@@ -100,6 +101,7 @@ lib/win32/vp6vfw.dll
 lib/win32/vssh264.dll
 lib/win32/vssh264core.dll
 lib/win32/vssh264dec.dll
+lib/win32/vsshdsd.dll
 lib/win32/vsslight.dll
 lib/win32/vsswlt.dll
 lib/win32/wma9dmod.dll
@@ -113,4 +115,5 @@ lib/win32/wmvdmod.dll
 lib/win32/wmvds32.ax
 lib/win32/wnvplay1.dll
 lib/win32/wnvwinx.dll
+lib/win32/zmbv.dll
 @dirrm lib/win32
