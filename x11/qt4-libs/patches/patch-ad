@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.2 2006/03/02 06:45:46 minskim Exp $
+$NetBSD: patch-ad,v 1.3 2006/05/31 19:18:07 adam Exp $
 
---- src/corelib/global/qglobal.h.orig	2006-02-16 02:51:07.000000000 -0800
+--- src/corelib/global/qglobal.h.orig	2006-05-14 12:46:59.000000000 +0200
 +++ src/corelib/global/qglobal.h
 @@ -55,6 +55,7 @@
       NETBSD   - NetBSD
@@ -32,7 +32,7 @@ $NetBSD: patch-ad,v 1.2 2006/03/02 06:45:46 minskim Exp $
  #if defined(Q_OS_MSDOS) || defined(Q_OS_OS2) || defined(Q_OS_WIN)
  #  undef Q_OS_UNIX
  #elif !defined(Q_OS_UNIX)
-@@ -532,10 +531,7 @@
+@@ -530,10 +529,7 @@
  #  define Q_WS_PM
  #  error "Qt does not work with OS/2 Presentation Manager or Workplace Shell"
  #elif defined(Q_OS_UNIX)

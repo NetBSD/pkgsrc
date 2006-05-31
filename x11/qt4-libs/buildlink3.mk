@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/17 13:45:59 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/05/31 19:18:07 adam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 QT4_LIBS_BUILDLINK3_MK:=	${QT4_LIBS_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	qt4-libs
 
 .if !empty(QT4_LIBS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.qt4-libs+=	qt4-libs>=4.1.0
-BUILDLINK_ABI_DEPENDS.qt4-libs?=	qt4-libs>=4.1.2nb1
+BUILDLINK_ABI_DEPENDS.qt4-libs+=	qt4-libs>=4.1.2nb1
 BUILDLINK_PKGSRCDIR.qt4-libs?=	../../x11/qt4-libs
 
 BUILDLINK_INCDIRS.qt4-libs+=	qt4/include
