@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.375 2006/05/31 18:00:52 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.376 2006/05/31 18:25:20 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2751,3 +2751,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/getmail to 4.6.1 [schmonz 2006-05-31]
 	Updated mail/openvmps to 1.3nb2 [bouyer 2006-05-31]
 	Updated audio/amarok to 1.4.0a [wiz 2006-05-31]
+	Added databases/openldap-client version 2.3.23 [ghen 2006-05-31]
+	Added databases/openldap-server version 2.3.23 [ghen 2006-05-31]
+	Added databases/openldap-doc version 2.3.23 [ghen 2006-05-31]
+	Updated databases/openldap to 2.3.23nb1 [ghen 2006-05-31]
