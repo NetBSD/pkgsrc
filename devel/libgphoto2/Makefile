@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/05/13 19:00:56 minskim Exp $
+# $NetBSD: Makefile,v 1.30 2006/05/31 04:38:14 markd Exp $
 #
 
 DISTNAME=	libgphoto2-2.1.6
@@ -29,7 +29,7 @@ SUBST_SED.libexif-update=	s,exif-,libexif/exif-,g
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .if ${OPSYS} == "SunOS"
-PLIST_SUBST+=		HAVE_LIBUSB="@comment"
+PLIST_SUBST+=		HAVE_LIBUSB="@comment "
 .else
 .include "../../devel/libusb/buildlink3.mk"
 PLIST_SUBST+=		HAVE_LIBUSB=""
