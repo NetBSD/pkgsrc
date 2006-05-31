@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.377 2006/05/31 18:45:37 adam Exp $
+$NetBSD: CHANGES-2006,v 1.378 2006/05/31 18:49:26 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2756,3 +2756,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Added databases/openldap-doc version 2.3.23 [ghen 2006-05-31]
 	Updated databases/openldap to 2.3.23nb1 [ghen 2006-05-31]
 	Updated comms/asterisk to 1.2.8 [adam 2006-05-31]
+	Updated graphics/dia to 0.95.1 [drochner 2006-05-31]
+	Updated print/poppler to 0.5.3 [drochner 2006-05-31]
+	Updated print/evince to 0.5.3 [drochner 2006-05-31]
+	Updated editors/TeXmacs to 1.0.6.2 [drochner 2006-05-31]
+	Updated sysutils/gnome-vfs2 to 2.14.2 [drochner 2006-05-31]
+	Updated editors/gedit to 2.14.3 [drochner 2006-05-31]
