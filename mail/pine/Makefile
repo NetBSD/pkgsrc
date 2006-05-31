@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2006/04/06 06:22:19 reed Exp $
+# $NetBSD: Makefile,v 1.111 2006/05/31 18:22:24 ghen Exp $
 
 DISTNAME=	pine4.64
 PKGNAME=	pine-4.64
@@ -50,7 +50,7 @@ PKG_SUPPORTED_OPTIONS=	ldap
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mldap)
-.  include "../../databases/openldap/buildlink3.mk"
+.  include "../../databases/openldap-client/buildlink3.mk"
 PINE_LDAPCFLAGS=	LDAPCFLAGS="-DENABLE_LDAP"
 PINE_LDAPLIBS=		LDAPLIBS="-lldap -llber"
 .endif

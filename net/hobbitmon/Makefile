@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2006/04/23 00:12:39 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/05/31 18:22:24 ghen Exp $
 #
 
 DISTNAME=	hobbit-4.0-beta6
 PKGNAME=	hobbit-4.0b6
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hobbitmon/}
 
@@ -74,7 +74,7 @@ do-install:
 	fi
 
 .include "../../databases/rrdtool/buildlink3.mk"
-.include "../../databases/openldap/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"

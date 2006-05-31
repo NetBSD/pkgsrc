@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2006/05/22 07:08:50 rillig Exp $
+# $NetBSD: options.mk,v 1.6 2006/05/31 18:22:24 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sendmail
 PKG_OPTIONS_OPTIONAL_GROUPS=	database
@@ -27,7 +27,7 @@ PKG_SUGGESTED_OPTIONS+=	db2
 ### Use OpenLDAP for remote database access
 ###
 .if !empty(PKG_OPTIONS:Mldap)
-.  include "../../databases/openldap/buildlink3.mk"
+.  include "../../databases/openldap-client/buildlink3.mk"
 .endif
 
 ###

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/11/19 10:46:11 xtraeme Exp $
+# $NetBSD: options.mk,v 1.2 2006/05/31 18:22:24 ghen Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sylpheed-devel
@@ -22,7 +22,7 @@ FACES_IS_INSTALLED!=	${PKG_INFO} -e faces || ${ECHO}
 
 .if !empty(PKG_OPTIONS:Mldap)
 CONFIGURE_ARGS+=	--enable-ldap
-.include "../../databases/openldap/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mjpilot)

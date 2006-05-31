@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.112 2006/04/17 13:46:06 wiz Exp $
+# $NetBSD: Makefile,v 1.113 2006/05/31 18:22:26 ghen Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -28,7 +28,7 @@ REQD_DIRS+=		${PREFIX}/share/kde/fonts
 REQD_DIRS+=		${PREFIX}/share/kde/fonts/override
 
 CONFIGURE_ARGS+=	--with-ssl-dir="${BUILDLINK_PREFIX.openssl}"
-CONFIGURE_ARGS+=	--with-ldap="${BUILDLINK_PREFIX.openldap}"
+CONFIGURE_ARGS+=	--with-ldap="${BUILDLINK_PREFIX.openldap-client}"
 CONFIGURE_ARGS+=	--without-composite
 CONFIGURE_ARGS+=	--without-java
 CONFIGURE_ARGS+=	--without-pam
@@ -196,7 +196,7 @@ CONFIGURE_ENV+= kde_cv_path_fontconfig_config='NONE'
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 
-.include "../../databases/openldap/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .if ${OPSYS} != "SunOS"
 .include "../../devel/libusb/buildlink3.mk"
 .endif

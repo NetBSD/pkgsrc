@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.108 2006/04/17 13:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2006/05/31 18:22:23 ghen Exp $
 
 DISTNAME=		evolution-2.6.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		mail time gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -113,7 +113,7 @@ BUILDLINK_API_DEPENDS.libsoup-devel+=		libsoup-devel>=2.2.3
 LDFLAGS+=	-lsemaphore
 .include "../../devel/pthread-sem/buildlink3.mk"
 .endif
-.include "../../databases/openldap/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

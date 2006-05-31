@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2006/05/15 06:23:26 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2006/05/31 18:22:23 ghen Exp $
 
 DISTNAME=	python-ldap-2.2.0
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
+PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=python-ldap/}
 
@@ -12,8 +13,8 @@ COMMENT=	LDAP client API for Python
 PYTHON_VERSIONS_ACCEPTED=	23 24
 PYDISTUTILSPKG=			yes
 
-PY_LDAP_LIBRARY_DIRS=		${BUILDLINK_PREFIX.openldap}/lib
-PY_LDAP_INCLUDE_DIRS=		${BUILDLINK_PREFIX.openldap}/include
+PY_LDAP_LIBRARY_DIRS=		${BUILDLINK_PREFIX.openldap-client}/lib
+PY_LDAP_INCLUDE_DIRS=		${BUILDLINK_PREFIX.openldap-client}/include
 PY_LDAP_LIBS=			ldap_r lber ssl crypto
 
 .include "options.mk"
@@ -32,7 +33,7 @@ post-install:
 	cd ${WRKSRC} && ${PAX} -rw CHANGES README INSTALL TODO Demo \
 		${PY_LDAP_DOCDIR}
 
-.include "../../databases/openldap/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2006/04/13 18:27:24 jlam Exp $
+# $NetBSD: options.mk,v 1.10 2006/05/31 18:22:25 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.courier-authlib
 PKG_SUPPORTED_OPTIONS=	pam bdb ldap mysql pgsql
@@ -62,7 +62,7 @@ PLIST_SUBST+=		BDB="@comment "
 ### LDAP authentication
 ###
 .if !empty(PKG_OPTIONS:Mldap)
-.  include "../../databases/openldap/buildlink3.mk"
+.  include "../../databases/openldap-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-authldap
 AUTHLIB_PLIST+=		${AUTHLIBDIR}/libauthldap.la
 AUTHLIB_PLIST+=		${AUTHEXAMPLEDIR}/authldaprc.dist
