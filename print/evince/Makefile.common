@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.4 2006/05/22 16:33:49 drochner Exp $
+# $NetBSD: Makefile.common,v 1.5 2006/05/31 18:17:23 drochner Exp $
 #
 
-DISTNAME=		evince-0.5.2
+DISTNAME=		evince-0.5.3
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evince/0.5/}
 EXTRACT_SUFX=		.tar.bz2
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/evince/
 
-#PATCHDIR=		${.CURDIR}/../evince/patches
+PATCHDIR=		${.CURDIR}/../evince/patches
 DISTINFO_FILE=		${.CURDIR}/../evince/distinfo
 
 GNU_CONFIGURE=		yes
@@ -30,6 +30,7 @@ pre-configure:
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
+BUILDLINK_API_DEPENDS.poppler-glib+=	poppler-glib>=0.5.2
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
