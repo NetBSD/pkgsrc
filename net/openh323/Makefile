@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/05/16 22:01:54 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2006/05/31 00:16:22 wiz Exp $
 
 DISTNAME=	openh323-v1_15_2-src
 PKGNAME=	openh323-1.15.2
@@ -21,9 +21,6 @@ CONFIGURE_ARGS+=	PWLIBDIR=${PREFIX:Q}
 BUILD_TARGET=		opt apps
 MAKE_ENV+=		PWLIBDIR=${PREFIX}/share/pwlib OPENH323DIR=${WRKSRC:Q}
 MAKE_ENV+=		SYSLIBDIR=${PREFIX}/lib
-
-post-extract:
-	cd ${WRKDIR}; ${TAR} -xf ${DISTNAME:S/$/-tar/}
 
 post-patch:
 	cd ${WRKSRC}/include; ${LN} -s . openh323
