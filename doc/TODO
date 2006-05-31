@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5044 2006/05/31 18:00:33 wiz Exp $
+$NetBSD: TODO,v 1.5045 2006/05/31 18:45:37 adam Exp $
 
 Suggested new packages
 ======================
@@ -549,7 +549,6 @@ Suggested package updates
 	o gkrellm1-xmms-0.5.8
 	o glabels-2.0.4
 	o gld-1.7
-	o glib-2.10.3
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-applets-2.14.2
@@ -600,7 +599,6 @@ Suggested package updates
 	o gthumb-2.7.7
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
-	o gtk2+-2.8.18
 	o gtk2-engines-2.6.9
 	o gtkam-0.1.13
 	o gtkhtml-3.10.2
@@ -946,7 +944,6 @@ Suggested package updates
 	o p7zip-4.42
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
-	o pango-1.12.3
 	o pari-2.1.7
 	o patchutils-0.2.31
 	o pcal-4.8
