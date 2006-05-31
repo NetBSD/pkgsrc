@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.96 2006/05/31 02:15:50 rillig Exp $
+# $NetBSD: makevars.map,v 1.97 2006/05/31 06:35:52 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -109,6 +109,9 @@ BDB_ACCEPTED		List of { db1 db2 db3 db4 }
 BDB_DEFAULT		Unchecked []
 BDB_LIBS		Unchecked []
 BDB_TYPE		Unchecked []
+BINGRP			UserGroupName []
+BINMODE			FileMode []
+BINOWN			UserGroupName []
 BROKEN			Message []
 BROKEN_GETTEXT_DETECTION	YesNo [m:s,c:s]
 BROKEN_IN		List of BrokenIn [m:s]
@@ -248,6 +251,9 @@ FILESDIR		RelativePkgPath [m:s,c:ds]
 FILES_SUBST		List of ShellWord [*:a]
 FILES_SUBST_SED		List of ShellWord
 FONTS_DIRS.*		List of Pathname [m:as,c:a]
+GAMEGRP			UserGroupName []
+GAMEMODE		FileMode []
+GAMEOWN			UserGroupName []
 GCC_REQD		List of Version [*:a]
 GENERATE_PLIST		List of ShellWord [m:a,c:a]
 # ^^ List of Shellcommand, terminated with a semicolon
@@ -263,24 +269,24 @@ INCOMPAT_ICONV		List of PlatformTriple
 INFO_DIR		Pathname
 # ^^ relative to PREFIX
 INFO_FILES		List of Pathmask [m:s,c:ads]
-INSTALL			ShellCommand []
+INSTALL			ShellCommand [*:u]
 INSTALLATION_DIRS	List of Pathname [m:as,c:as]
-INSTALL_DATA		ShellCommand []
-INSTALL_DATA_DIR	ShellCommand []
+INSTALL_DATA		ShellCommand [*:u]
+INSTALL_DATA_DIR	ShellCommand [*:u]
 INSTALL_DIRS		List of WrksrcSubdirectory [m:as,c:as]
 INSTALL_FILE		Pathname [m:s]
-INSTALL_GAME		ShellCommand []
-INSTALL_GAME_DATA	ShellCommand []
-INSTALL_LIB		ShellCommand []
-INSTALL_LIB_DIR		ShellCommand []
+INSTALL_GAME		ShellCommand [*:u]
+INSTALL_GAME_DATA	ShellCommand [*:u]
+INSTALL_LIB		ShellCommand [*:u]
+INSTALL_LIB_DIR		ShellCommand [*:u]
 INSTALL_MAKE_FLAGS	List of ShellWord [m:as,*:a]
-INSTALL_MAN		ShellCommand []
-INSTALL_MAN_DIR		ShellCommand []
-INSTALL_PROGRAM		ShellCommand []
-INSTALL_PROGRAM_DIR	ShellCommand []
-INSTALL_SCRIPT		ShellCommand []
+INSTALL_MAN		ShellCommand [*:u]
+INSTALL_MAN_DIR		ShellCommand [*:u]
+INSTALL_PROGRAM		ShellCommand [*:u]
+INSTALL_PROGRAM_DIR	ShellCommand [*:u]
+INSTALL_SCRIPT		ShellCommand [*:u]
 INSTALL_SCRIPTS_ENV	List of ShellWord
-INSTALL_SCRIPT_DIR	ShellCommand []
+INSTALL_SCRIPT_DIR	ShellCommand [*:u]
 INSTALL_SRC		List of Pathname [m:s,c:ds]
 INSTALL_TARGET		List of Identifier [m:as,c:as,b:,ruby*.mk:d,o:as]
 INSTALL_TEMPLATE	List of Pathname [m:as,c:ads]
@@ -297,13 +303,18 @@ KRB5_ACCEPTED		List of { heimdal mit-krb5 }
 KRB5_DEFAULT		Unchecked []
 KRB5_TYPE		Unchecked []
 LDFLAGS*		List of LdFlag [b:,builtin.mk:,*:a]
+LIBGRP			UserGroupName []
+LIBMODE			FileMode []
+LIBOWN			UserGroupName []
 LIBOSSAUDIO		Pathname
 LIBS*			List of LdFlag [m:a,o:a,h:a,c:a]
+LIBTOOL			ShellCommand []
 LIBTOOL_OVERRIDE	List of Pathmask [m:as]
 LICENCE			License [m:s,c:s,o:s]
 LICENSE			License [m:s,c:s,o:s]
 LTCONFIG_OVERRIDE	List of Pathmask [m:as,c:a]
 MAINTAINER		Mail_Address [m:s,c:ds]
+MAKE			ShellCommand [*:u]
 MAKEFILE		Pathname [m:s,c:s]
 MAKEFLAGS		List of ShellWord [m:a,c:a,b:a,h:a]
 MAKEVARS		List of Varname [builtin.mk:a,b:a,h:a]
@@ -311,8 +322,12 @@ MAKE_DIRS		List of Pathname [m:as,c:a]
 MAKE_DIRS_PERMS		List of ShellWord [m:as,c:a]
 MAKE_ENV		List of ShellWord [*:a]
 MAKE_FLAGS		List of ShellWord [*:a]
+MAKE_PROGRAM		ShellCommand []
 MANCOMPRESSED		YesNo [m:s,c:ds]
 MANCOMPRESSED_IF_MANZ	Yes [m:s,c:ds]
+MANGRP			UserGroupName []
+MANMODE			FileMode []
+MANOWN			UserGroupName []
 MASTER_SITES		List of URL [c:ads,m:as]
 MASTER_SITE_APACHE	List of URL
 MASTER_SITE_BACKUP	List of URL
@@ -324,6 +339,7 @@ MASTER_SITE_GNOME	List of URL
 MASTER_SITE_GNU		List of URL
 MASTER_SITE_GNUSTEP	List of URL
 MASTER_SITE_IFARCHIVE	List of URL
+MASTER_SITE_LOCAL	List of URL
 MASTER_SITE_MOZILLA	List of URL
 MASTER_SITE_MYSQL	List of URL
 MASTER_SITE_OPENOFFICE	List of URL
@@ -341,6 +357,7 @@ MESSAGE_SRC		List of Pathname [m:as,c:a,o:ads]
 MESSAGE_SUBST		List of ShellWord [c:a,m:a,o:a]
 MYSQL_VERSIONS_ACCEPTED	List of { 40 41 50 } [m:s]
 MYSQL_VERSION_DEFAULT	Unchecked []
+NM			ShellCommand [*:u]
 NOT_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc } [m:as,c:a]
 NOT_FOR_PLATFORM	List of PlatformTriple [m:as,c:a]
 NO_BIN_ON_CDROM		Restricted [m:s,c:s]
@@ -359,6 +376,7 @@ NO_SRC_ON_CDROM		Restricted [m:s,c:s]
 NO_SRC_ON_FTP		Restricted [m:s,c:s]
 ONLY_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc } [m:as,c:a]
 ONLY_FOR_PLATFORM	List of PlatformTriple [m:as,c:a]
+OPSYS			Identifier [*:u]
 OPSYSVARS		List of Varname [m:a,c:a]
 OSVERSION_SPECIFIC	Yes [m:s,c:s]
 OWN_DIRS		List of Pathname [m:as,c:a]
@@ -425,7 +443,7 @@ PKG_SHLIBTOOL		Pathname
 PKG_SKIP_REASON		List of ShellWord [*:a]
 PKG_SUGGESTED_OPTIONS	List of Option [o:as,m:as,c:s]
 PKG_SUPPORTED_OPTIONS	List of Option [o:as,m:as,c:s]
-PKG_SYSCONFDIR		Pathname
+PKG_SYSCONFDIR		Pathname [m:s,c:ds]
 PKG_SYSCONFSUBDIR	Pathname [m:s,c:s]
 PKG_SYSCONFVAR		Identifier
 # ^^ FIXME: name/type mismatch.
@@ -436,6 +454,7 @@ PLIST_SRC		List of RelativePkgPath [m:as,o:a,c:ads]
 PLIST_SUBST		List of ShellWord [*:a]
 PLIST_TYPE		{ dynamic static }
 PREPEND_PATH		List of Pathname
+PREFIX			Pathname [*:u]
 PRINT_PLIST_AWK		AwkCommand [*:a]
 PTHREAD_AUTO_VARS	YesNo [m:s]
 PTHREAD_OPTS		List of { native optional require } [m:as,c:a,b:a]
@@ -454,10 +473,14 @@ REQD_FILES		List of Pathname [m:as]
 REQD_FILES_MODE		{ 0644 0640 0600 0400 } [m:as]
 RESTRICTED		Message [m:s,c:ds]
 SCRIPTS_ENV		List of ShellWord [m:a,c:a]
+SHAREGRP		UserGroupName []
+SHAREMODE		FileMode []
+SHAREOWN		UserGroupName []
 SHLIB_HANDLING		{ YES NO no }
-SPECIAL_PERMS		List of ShellWord [m:as]
+SHLIBTOOL		ShellCommand []
 SHLIBTOOL_OVERRIDE	List of Pathmask [m:as,c:a]
 SITES.*			List of URL [m:as,c:as,o:as]
+SPECIAL_PERMS		List of ShellWord [m:as]
 SUBST_CLASSES		List of Identifier [m:a,c:a,h:a,Makefile.*:a]
 SUBST_FILES.*		List of Pathmask [m:as,c:as,h:as,o:as,Makefile.*:as]
 SUBST_FILTER_CMD.*	ShellCommand [m:s,c:s,h:s,o:s,Makefile.*:as]
