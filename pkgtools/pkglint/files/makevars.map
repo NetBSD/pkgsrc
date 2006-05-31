@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.95 2006/05/23 09:12:35 rillig Exp $
+# $NetBSD: makevars.map,v 1.96 2006/05/31 02:15:50 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -102,6 +102,7 @@ APACHE_MODULE		Yes
 AUTOCONF_REQD		List of Version [*:a]
 AUTOMAKE_OVERRIDE	List of Pathmask
 AUTOMAKE_REQD		List of Version [*:a]
+BATCH			Yes []
 BDB185_DEFAULT		Unchecked []
 BDBBASE			Unchecked []
 BDB_ACCEPTED		List of { db1 db2 db3 db4 }
@@ -162,6 +163,7 @@ CHECK_BUILTIN		YesNo [builtin.mk:d,m:s]
 CHECK_FILES_SKIP	List of Pathmask [m:a,c:a]
 CHECK_INTERPRETER_SKIP	List of Pathmask [m:a,c:a]
 CHECK_SHLIBS		YesNo [m:s]
+CHECK_SHLIBS_SUPPORTED	YesNo [m:s]
 CHECK_WRKREF_SKIP	List of Pathmask [m:a,c:a]
 COMMENT			Comment [m:as,c:as]			# m:a?, c:a?
 CONFIGURE_ARGS		List of ShellWord [*:a]
@@ -220,7 +222,7 @@ EMACS_PKGNAME_PREFIX	Unchecked []
 EMACS_TYPE		Unchecked []
 EMACS_USE_LEIM		Yes
 EMACS_VERSIONS_ACCEPTED	List of { emacs21 emacs21nox emacs20 xemacs215 xemacs214 } [m:s]
-EMACS_VERSION_REQD	List of Version
+EMACS_VERSION_REQD	List of { emacs21 emacs21nox emacs20 xemacs215 xemacs214 } [m:as]
 # ^^ of Version
 EVAL_PREFIX		InternalList of ShellWord [m:a,c:a]
 # ^^ FIXME: Looks like a type mismatch.
@@ -260,7 +262,7 @@ INCOMPAT_CURSES		List of PlatformTriple [m:as]
 INCOMPAT_ICONV		List of PlatformTriple
 INFO_DIR		Pathname
 # ^^ relative to PREFIX
-INFO_FILES		List of Pathmask [m:s]
+INFO_FILES		List of Pathmask [m:s,c:ads]
 INSTALL			ShellCommand []
 INSTALLATION_DIRS	List of Pathname [m:as,c:as]
 INSTALL_DATA		ShellCommand []
