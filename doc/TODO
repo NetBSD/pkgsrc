@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5053 2006/05/31 22:52:55 wiz Exp $
+$NetBSD: TODO,v 1.5054 2006/05/31 22:55:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -704,7 +704,6 @@ Suggested package updates
 	o libshout-2.2
 	o libsigsegv-2.3
 	o libsmi-0.4.3
-	o libsoup-devel-2.2.93
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
 	o libtorrent-0.9.0
