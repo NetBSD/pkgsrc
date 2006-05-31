@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: awk-test.sh,v 1.7 2005/11/24 19:20:18 rillig Exp $
+# $NetBSD: awk-test.sh,v 1.8 2006/05/31 13:10:49 rillig Exp $
 #
 
 set -e
@@ -48,6 +48,7 @@ test_assignment "cmd.3" \
 line="a"
 for i in 0 1 2 3 4 5 6 7 8 9 10 11 12; do
 	test_assignment "cmd.2^${i}" "${line}" "${line}"
+	line="${line}${line}"
 done
 
 #
