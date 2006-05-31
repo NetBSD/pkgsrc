@@ -1,31 +1,37 @@
-$NetBSD: patch-aa,v 1.3 2004/03/29 22:44:29 snj Exp $
+$NetBSD: patch-aa,v 1.4 2006/05/31 11:42:45 rillig Exp $
 
---- hot-babe.c.orig	Sat Sep 21 16:53:24 2002
-+++ hot-babe.c
-@@ -74,6 +74,18 @@
- /* returns current CPU load in percent, 0 to 256 */
+--- hot-babe.c.orig	2004-12-05 23:59:38.000000000 +0100
++++ hot-babe.c	2006-05-31 13:36:52.000000000 +0200
+@@ -68,20 +68,15 @@ typedef struct
+ 
+ HotBabeData bm;
+ 
+-#if 0
++#if defined(__NetBSD__)
+ /* FIXME New BSD and Solaris code.. to check.
+  * doesn't work with Linux (getloadavg return 1.000) */
  static int system_cpu(void)
  {
-+#ifdef __NetBSD__
-+	double l;
-+	int i;
-+	if (getloadavg(&l, 1) < 0)
-+		return 0;
-+	i = (l - 0.5) * (256/4);
-+	if (i < 0)
-+	    i = 0;
-+	if (i > 256)
-+	    i = 256;
-+	return i;
+-  int rc;
+-  double loadavg[15];
+-  rc=getloadavg(loadavg, 1); 
+-  while( rc-- )
+-    printf( "load = %f\n", loadavg[rc] );
+-  rc=100*loadavg[0];
+-  return rc;
++  double loadavg;
++  return ((getloadavg(&loadavg, 1) == -1) ? 0 : (100 * loadavg));
+ }
+-#endif
 +#else
-   unsigned int  cpuload;
-   u_int64_t     load, total, oload, ototal;
-   u_int64_t     ab, ac, ad, ae;
-@@ -111,6 +123,7 @@
-     cpuload = (256 * (load - oload)) / (total - ototal);
+ 
+ /* returns current CPU load in percent, 0 to 256 */
+ static int system_cpu(void)
+@@ -144,6 +139,7 @@ static int system_cpu(void)
  
    return cpuload;
-+#endif 
  }
++#endif
  
- 
+ GdkPixmap     *pixmap;
+ GdkGC *gc;

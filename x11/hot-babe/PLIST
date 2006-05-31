@@ -1,3 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/24 18:57:05 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/05/31 11:42:45 rillig Exp $
 bin/hot-babe
 man/man1/hot-babe.1
+share/hot-babe/hb01/descr
+share/hot-babe/hb01/hb01_0.png
+share/hot-babe/hb01/hb01_1.png
+share/hot-babe/hb01/hb01_2.png
+share/hot-babe/hb01/hb01_3.png
+share/hot-babe/hb01/hb01_4.png
