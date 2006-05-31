@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2006/03/09 21:04:39 jlam Exp $
+# $NetBSD: Makefile.common,v 1.20 2006/05/31 09:12:18 rillig Exp $
 #
 
 DISTNAME=	bmp-0.9.7
@@ -22,8 +22,14 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 
+BMP_USE_ESD?=		no
+
 CONFIGURE_ARGS+=	--disable-alsa
+.if !empty(BMP_USE_ESD:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-esd
+.else
 CONFIGURE_ARGS+=	--disable-esd
+.endif
 CONFIGURE_ARGS+=	--disable-opengl
 .if defined(BMP_ENABLE_ENCODERS) && !empty(BMP_ENABLE_ENCODERS:M[Yy][Ee][Ss])
 CONFIGURE_ARGS+=	--enable-mp3
