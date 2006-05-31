@@ -1,13 +1,16 @@
-$NetBSD: patch-aa,v 1.13 2006/04/15 12:24:36 adam Exp $
+$NetBSD: patch-aa,v 1.14 2006/05/31 23:15:11 wiz Exp $
 
---- makefile.machine.orig	2006-04-19 11:08:28.000000000 +0200
+--- makefile.machine.orig	2006-05-28 13:00:07.000000000 +0000
 +++ makefile.machine
-@@ -2,15 +2,15 @@
- # makefile for Linux (x86, PPC, alpha ...)
+@@ -3,17 +3,17 @@
  # LITTLE_ENDIAN and BIG_ENDIAN are already defined by the system headers
  #
--ALLFLAGS=-O1 -s -fPIC \
-+ALLFLAGS=-Wall \
+ 
+-OPTFLAGS=-O
++OPTFLAGS=
+ 
+-ALLFLAGS=${OPTFLAGS} -s -fPIC \
++ALLFLAGS=${OPTFLAGS} -Wall \
      	-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE \
  	-DNDEBUG -D_REENTRANT -DENV_UNIX \
  	$(LOCAL_FLAGS)
