@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2006/05/03 11:19:23 drochner Exp $
+# $NetBSD: Makefile,v 1.74 2006/05/31 22:51:27 wiz Exp $
 #
 
-DISTNAME=		gnome-panel-2.14.1
+DISTNAME=		gnome-panel-2.14.2
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.14/}
 EXTRACT_SUFX=		.tar.bz2
@@ -33,10 +33,11 @@ GCONF2_SCHEMAS+=	workspace-switcher.schemas
 GCONF2_SCHEMAS+=	window-list.schemas
 GCONF2_ENTRIES=		panel-default-setup.entries
 
-BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.10.0
+BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.14.2
+BUILDLINK_API_DEPENDS.intltool+=	intltool>=0.35
 BUILDLINK_API_DEPENDS.libglade2+=	libglade2>=2.5.0
 BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.13.0
-BUILDLINK_API_DEPENDS.libwnck+=	libwnck>=2.13.5
+BUILDLINK_API_DEPENDS.libwnck+=		libwnck>=2.13.5
 
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

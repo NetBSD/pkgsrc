@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2006/05/03 11:19:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.28 2006/05/31 22:51:27 wiz Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/panel-test-applets
@@ -287,6 +287,7 @@ share/locale/ky/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/li/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/lv/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/mg/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/mi/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/mk/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ml/LC_MESSAGES/gnome-panel-2.0.mo
@@ -297,7 +298,6 @@ share/locale/nb/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ne/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/nl/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/nn/LC_MESSAGES/gnome-panel-2.0.mo
-share/locale/no/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/nso/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/or/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/pa/LC_MESSAGES/gnome-panel-2.0.mo
@@ -369,6 +369,7 @@ share/omf/window-list/window-list-es.omf
 share/omf/window-list/window-list-fr.omf
 share/omf/window-list/window-list-it.omf
 share/omf/window-list/window-list-uk.omf
+share/omf/window-list/window-list-zh_CN.omf
 share/omf/workspace-switcher/workspace-switcher-C.omf
 share/omf/workspace-switcher/workspace-switcher-es.omf
 share/omf/workspace-switcher/workspace-switcher-fr.omf
