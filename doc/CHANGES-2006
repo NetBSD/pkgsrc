@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.368 2006/05/31 07:57:30 tonio Exp $
+$NetBSD: CHANGES-2006,v 1.369 2006/05/31 11:17:26 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2744,3 +2744,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/ruby-priority-queue to 0.1.2nb1 [taca 2006-05-31]
 	Updated graphics/ruby-RMagick to 1.11.1 [taca 2006-05-31]
 	Updated audio/daapd to 0.2.4bnb1 [tonio 2006-05-31]
+	Updated www/paros to 3.2.12 [adrianp 2006-05-31]
