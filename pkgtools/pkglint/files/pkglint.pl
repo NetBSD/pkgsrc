@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.591 2006/05/23 11:12:25 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.592 2006/05/31 06:35:52 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -46,14 +46,16 @@ BEGIN {
 	@ISA = qw(Exporter);
 	@EXPORT_OK = qw(
 		assert
-		false true
+		false true dont_know doesnt_matter
 		min max
 		array_to_hash print_table
 	);
 }
 
-use constant false	=> 0;
-use constant true	=> 1;
+use constant false		=> 0;
+use constant true		=> 1;
+use constant dont_know		=> 2;
+use constant doesnt_matter	=> 3;
 
 sub assert($) {
 	my ($cond) = @_;
@@ -1150,6 +1152,7 @@ BEGIN {
 	@ISA = qw(Exporter);
 	@EXPORT_OK = qw(
 		LK_NONE LK_INTERNAL LK_EXTERNAL
+		GUESSED NOT_GUESSED
 	);
 }
 
@@ -1162,6 +1165,8 @@ use constant ACLS		=> 2; # Array of ACL entries
 use constant   ACL_SUBJECT_RE	=> 0;
 use constant   ACL_PERMS	=> 1;
 use constant IS_GUESSED		=> 3;
+use constant   GUESSED		=> true;
+use constant   NOT_GUESSED	=> false;
 
 sub new($$$) {
 	my ($class, $kind_of_list, $basic_type, $acls, $guessed) = @_;
@@ -1187,6 +1192,16 @@ sub perms($$) {
 	return undef;
 }
 
+sub is_practically_a_list($) {
+	my ($self) = @_;
+
+	return ($self->kind_of_list == LK_EXTERNAL) ? true
+	    : ($self->kind_of_list == LK_INTERNAL) ? false
+	    : ($self->basic_type eq "ShellCommand") ? true
+	    : ($self->basic_type eq "SedCommands") ? true
+	    : false;
+}
+
 sub to_string($) {
 	my ($self) = @_;
 
@@ -1194,6 +1209,82 @@ sub to_string($) {
 }
 
 #== End of PkgLint::Type ==================================================
+
+package PkgLint::VarUseContext;
+
+BEGIN {
+	import PkgLint::Util qw(
+		false true
+	);
+	import PkgLint::Logging qw(
+		log_warning NO_LINES
+	);
+	use Exporter;
+	use vars qw(@ISA @EXPORT_OK);
+	@ISA = qw(Exporter);
+	@EXPORT_OK = qw(
+		VUC_TIME_UNKNOWN VUC_TIME_LOAD VUC_TIME_RUN
+		VUC_TYPE_UNKNOWN
+		VUC_SHELLWORD_UNKNOWN VUC_SHELLWORD_PLAIN VUC_SHELLWORD_DQUOT
+		  VUC_SHELLWORD_SQUOT VUC_SHELLWORD_BACKT
+		VUC_EXTENT_UNKOWN VUC_EXTENT_FULL VUC_EXTENT_WORD
+		  VUC_EXTENT_WORD_PART
+	);
+}
+
+use constant TIME		=> 0;
+use constant TYPE		=> 1;
+use constant SHELLWORD		=> 2;
+use constant EXTENT		=> 3;
+
+use constant VUC_TIME_UNKNOWN		=> 0;
+use constant VUC_TIME_LOAD		=> 1;
+use constant VUC_TIME_RUN		=> 2;
+use constant VUC_TYPE_UNKNOWN		=> undef;
+use constant VUC_SHELLWORD_UNKNOWN	=> 0;
+use constant VUC_SHELLWORD_PLAIN	=> 1;
+use constant VUC_SHELLWORD_DQUOT	=> 2;
+use constant VUC_SHELLWORD_SQUOT	=> 3;
+use constant VUC_SHELLWORD_BACKT	=> 4;
+use constant VUC_EXTENT_UNKNOWN		=> 0;
+use constant VUC_EXTENT_FULL		=> 1;
+use constant VUC_EXTENT_WORD		=> 2;
+use constant VUC_EXTENT_WORD_PART	=> 3;
+
+my $pool = {};
+
+sub new($$$$$) {
+	my ($class, $time, $type, $shellword, $extent) = @_;
+	my ($self) = ([$time, $type, $shellword, $extent]);
+	bless($self, $class);
+	return $self;
+}
+sub new_from_pool($$$$$) {
+	my ($class, $time, $type, $shellword, $extent) = @_;
+	my $key = "${time}-${type}-${shellword}-${extent}";
+
+	if (!exists($pool->{$key})) {
+		$pool->{$key} = $class->new($time, $type, $shellword, $extent);
+	}
+	return $pool->{$key};
+}
+
+sub time($)		{ return shift(@_)->[TIME]; }
+sub type($)		{ return shift(@_)->[TYPE]; }
+sub shellword($)	{ return shift(@_)->[SHELLWORD]; }
+sub extent($)		{ return shift(@_)->[EXTENT]; }
+
+sub to_string($) {
+	my ($self) = @_;
+
+	return sprintf("(%s %s %s %s)",
+	    ["unknown-time", "load-time", "run-time"]->[$self->time],
+	    (defined($self->type) ? $self->type->to_string() : "no-type"),
+	    ["none", "plain", "squot", "dquot", "backt"]->[$self->shellword],
+	    ["unknown", "full", "word", "word-part"]->[$self->extent]);
+}
+
+#== End of PkgLint::VarUseContext =========================================
 
 package main;
 #==========================================================================
@@ -1236,7 +1327,8 @@ use pkgsrc::Dewey;
 
 BEGIN {
 	import PkgLint::Util qw(
-		array_to_hash assert false true
+		array_to_hash assert
+		false true dont_know doesnt_matter
 	);
 	import PkgLint::Logging qw(
 		NO_FILE NO_LINE_NUMBER NO_LINES
@@ -1249,6 +1341,15 @@ BEGIN {
 	);
 	import PkgLint::Type qw(
 		LK_NONE LK_INTERNAL LK_EXTERNAL
+		GUESSED NOT_GUESSED
+	);
+	import PkgLint::VarUseContext qw(
+		VUC_TIME_UNKNOWN VUC_TIME_LOAD VUC_TIME_RUN
+		VUC_TYPE_UNKNOWN
+		VUC_SHELLWORD_UNKNOWN VUC_SHELLWORD_PLAIN VUC_SHELLWORD_DQUOT
+		  VUC_SHELLWORD_SQUOT VUC_SHELLWORD_BACKT
+		VUC_EXTENT_UNKOWN VUC_EXTENT_FULL VUC_EXTENT_WORD
+		  VUC_EXTENT_WORD_PART
 	);
 }
 
@@ -1710,7 +1811,7 @@ sub get_vartypes_map() {
 				$basic_type = defined($enums)
 				    ? array_to_hash(split(qr"\s+", $enums))
 				    : $typename;
-				my $type = PkgLint::Type->new($kind_of_list, $basic_type, $acls, false);
+				my $type = PkgLint::Type->new($kind_of_list, $basic_type, $acls, NOT_GUESSED);
 				if ($par eq "" || $par eq "*") {
 					$vartypes->{$varname} = $type;
 				}
@@ -2305,12 +2406,6 @@ sub type_should_be_quoted($) {
 	return true;
 }
 
-sub variable_needs_quoting($) {
-	my ($varname) = @_;
-
-	return !($varname =~ qr"^(?:.*DIR|.*_GROUP|.*_HOME|(?:BIN|LIB|MAN|GAMES|SHARE)(?:GRP|OWN|MODE)|.*_USER|BUILDLINK_PREFIX\..*|DISTNAME|EXTRACT_SUFX|LOCALBASE|PKGNAME|PREFIX|VARBASE|WRKSRC)$");
-}
-
 sub determine_used_variables($) {
 	my ($lines) = @_;
 	my ($rest);
@@ -2402,23 +2497,27 @@ sub get_variable_type($$) {
 		return get_vartypes_map()->{$varcanon};
 	}
 
+	if (exists(get_varname_to_toolname()->{$varname})) {
+		return PkgLint::Type->new(LK_NONE, "ShellCommand", [[ qr".*", "u" ]], NOT_GUESSED);
+	}
+
 	use constant allow_all => [[ qr".*", "adpsu" ]];
 
 	# Guess the datatype of the variable based on
 	# naming conventions.
-	$type =	  ($varname =~ qr"DIRS$") ? PkgLint::Type->new(LK_EXTERNAL, "Pathmask", allow_all, true)
-		: ($varname =~ qr"(?:DIR|_HOME)$") ? PkgLint::Type->new(LK_NONE, "Pathname", allow_all, true)
-		: ($varname =~ qr"FILES$") ? PkgLint::Type->new(LK_EXTERNAL, "Pathmask", allow_all, true)
-		: ($varname =~ qr"FILE$") ? PkgLint::Type->new(LK_NONE, "Pathname", allow_all, true)
-		: ($varname =~ qr"PATH$") ? PkgLint::Type->new(LK_NONE, "Pathlist", allow_all, true)
-		: ($varname =~ qr"PATHS$") ? PkgLint::Type->new(LK_EXTERNAL, "List of Pathname", allow_all, true)
-		: ($varname =~ qr"_USER$") ? PkgLint::Type->new(LK_NONE, "UserGroupName", allow_all, true)
-		: ($varname =~ qr"_GROUP$") ? PkgLint::Type->new(LK_NONE, "UserGroupName", allow_all, true)
-		: ($varname =~ qr"_ENV$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", allow_all, true)
-		: ($varname =~ qr"_CMD$") ? PkgLint::Type->new(LK_NONE, "ShellCommand", allow_all, true)
-		: ($varname =~ qr"_ARGS$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", allow_all, true)
-		: ($varname =~ qr"_FLAGS$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", allow_all, true)
-		: ($varname =~ qr"_MK$") ? PkgLint::Type->new(LK_NONE, "Unchecked", allow_all, true)
+	$type =	  ($varname =~ qr"DIRS$") ? PkgLint::Type->new(LK_EXTERNAL, "Pathmask", allow_all, GUESSED)
+		: ($varname =~ qr"(?:DIR|_HOME)$") ? PkgLint::Type->new(LK_NONE, "Pathname", allow_all, GUESSED)
+		: ($varname =~ qr"FILES$") ? PkgLint::Type->new(LK_EXTERNAL, "Pathmask", allow_all, GUESSED)
+		: ($varname =~ qr"FILE$") ? PkgLint::Type->new(LK_NONE, "Pathname", allow_all, GUESSED)
+		: ($varname =~ qr"PATH$") ? PkgLint::Type->new(LK_NONE, "Pathlist", allow_all, GUESSED)
+		: ($varname =~ qr"PATHS$") ? PkgLint::Type->new(LK_EXTERNAL, "List of Pathname", allow_all, GUESSED)
+		: ($varname =~ qr"_USER$") ? PkgLint::Type->new(LK_NONE, "UserGroupName", allow_all, GUESSED)
+		: ($varname =~ qr"_GROUP$") ? PkgLint::Type->new(LK_NONE, "UserGroupName", allow_all, GUESSED)
+		: ($varname =~ qr"_ENV$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", allow_all, GUESSED)
+		: ($varname =~ qr"_CMD$") ? PkgLint::Type->new(LK_NONE, "ShellCommand", allow_all, GUESSED)
+		: ($varname =~ qr"_ARGS$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", allow_all, GUESSED)
+		: ($varname =~ qr"_(?:C|CPP|CXX|LD|)FLAGS$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", allow_all, GUESSED)
+		: ($varname =~ qr"_MK$") ? PkgLint::Type->new(LK_NONE, "Unchecked", allow_all, GUESSED)
 		: undef;
 
 	if (defined($type)) {
@@ -2426,7 +2525,7 @@ sub get_variable_type($$) {
 		return $type;
 	}
 
-	$opt_debug and $line->log_warning("No type definition found for ${varcanon}.");
+	$opt_debug and $line->log_note("No type definition found for ${varcanon}.");
 	return undef;
 }
 
@@ -2435,16 +2534,74 @@ sub get_variable_perms($$) {
 
 	my $type = get_variable_type($line, $varname);
 	if (!defined($type)) {
-		$opt_debug and $line->log_warning("No type definition found for ${varname}.");
+		$opt_debug and $line->log_note("No type definition found for ${varname}.");
 		return "adpsu";
 	}
 
 	my $perms = $type->perms($line->fname, $varname);
 	if (!defined($perms)) {
-		$opt_debug and $line->log_warning("No permissions specified for ${varname}.");
+		$opt_debug and $line->log_note("No permissions specified for ${varname}.");
 		return "?";
 	}
 	return $perms;
+}
+
+# This function returns whether a variable needs the :Q operator in a
+# certain context. There are four possible outcomes:
+#
+# false:	The variable should not be quoted.
+# true:		The variable should be quoted.
+# doesnt_matter:
+#		Since the values of the variable usually don't contain
+#		special characters, it does not matter whether the
+#		variable is quoted or not.
+# dont_know:	pkglint cannot say whether the variable should be quoted
+#		or not, most likely because type information is missing.
+#
+sub variable_needs_quoting($$$) {
+	my ($line, $varname, $context) = @_;
+	my $type = get_variable_type($line, $varname);
+	my ($want_list, $have_list);
+
+	if (!defined($type)) {
+		return dont_know;
+	}
+
+	# Determine whether the context expects a list of shell words or
+	# not.
+	$want_list = $context->type->is_practically_a_list() && ($context->shellword == VUC_SHELLWORD_BACKT || $context->extent != VUC_EXTENT_WORD_PART);
+	$have_list = $type->is_practically_a_list();
+
+	if ($type->kind_of_list == LK_NONE && $type->basic_type =~ qr"^(?:Filename|Pathname|FileMode|UserGroupName|DistSuffix|PkgName|WrkdirSubdirectory|RelativePkgDir|RelativePkgPath)$") {
+		return doesnt_matter;
+	}
+
+	$opt_debug and $line->log_note("[variable_needs_quoting] varname $varname context " . $context->to_string() . " type " . $type->to_string());
+	$opt_debug and $line->log_note(sprintf("[%s] want_list=%d have_list=%d", "variable_needs_quoting", $want_list, $have_list));
+	backtrace();
+
+	# Assigning lists to lists does not need additional quoting.
+	if ($want_list && $have_list && ($context->extent == VUC_EXTENT_WORD || $context->extent == VUC_EXTENT_FULL)) {
+		return false;
+	}
+
+	# Appending elements to a list requires quoting, as well as
+	# assigning a list value to a non-list variable.
+	if ($want_list != $have_list) {
+		return true;
+	}
+
+	# Assume that the tool definitions don't include a backslash, so
+	# they can safely be used inside backticks.
+	if (exists(get_varname_to_toolname()->{$varname}) && (($context->shellword == VUC_SHELLWORD_PLAIN && $context->extent != VUC_EXTENT_WORD_PART) || $context->shellword == VUC_SHELLWORD_BACKT)) {
+		return false;
+	}
+
+	$opt_debug and $line->log_note("Don't know whether :Q is needed for ${varname}.");
+
+	# For all other variables, assume that quoting is necessary.
+	# XXX: This can be improved.
+	return true;
 }
 
 #
@@ -2755,6 +2912,38 @@ sub checkline_cpp_macro_names($$) {
 	}
 }
 
+sub checkline_mk_varuse($$$$) {
+	my ($line, $varname, $mod, $context) = @_;
+
+	if ($opt_warn_perm) {
+		my $perms = get_variable_perms($line, $varname);
+
+		if ($context->time == VUC_TIME_LOAD && index($perms, "p") == -1) {
+			$line->log_warning("${varname} should not be used at load time.");
+		}
+	}
+
+	my $needs_quoting = variable_needs_quoting($line, $varname, $context);
+	if ($context->shellword != VUC_SHELLWORD_UNKNOWN && $needs_quoting != dont_know) {
+		my $stripped_mod = ($mod =~ qr"(.*?)(?::M\*)?(?::Q)?$") ? $1 : $mod;
+		my $correct_mod = $stripped_mod . (($varname =~ regex_gnu_configure_volatile_vars) ? ":M*:Q" : ":Q");
+
+		if ($mod ne $correct_mod && $needs_quoting == true) {
+			if ($context->shellword == VUC_SHELLWORD_PLAIN) {
+				$line->log_warning("Please use \${${varname}${correct_mod}} instead of \${${varname}${mod}}.");
+				#$line->replace("\${${varname}}", "\${${varname}:Q}");
+			} else {
+				$line->log_warning("Please use \${${varname}${correct_mod}} instead of \${${varname}${mod}} and make sure the variable appears outside of any quoting characters.");
+			}
+			$line->explain_warning("See the pkgsrc guide, section \"quoting guideline\", for details.");
+		}
+
+		if ($needs_quoting == false && $mod =~ qr":Q$") {
+			$line->log_warning("The :Q operator should not be used for \${${varname}} here.");
+		}
+	}
+}
+
 sub checkline_mk_text($$) {
 	my ($line, $text) = @_;
 	my ($rest, $state, $vartools, $depr_map);
@@ -2807,48 +2996,21 @@ sub checkline_mk_shellword($$$) {
 	my ($line, $shellword, $check_quoting) = @_;
 	my ($rest, $state);
 
-	if ($opt_warn_quoting && $shellword =~ qr"^\$\{(${regex_varname})(:[^}]+)?\}$") {
+	use constant shellcommand_context_type => PkgLint::Type->new(
+		LK_NONE, "ShellCommand", allow_all, NOT_GUESSED
+	);
+	use constant shellword_vuc => PkgLint::VarUseContext->new(
+		VUC_TIME_UNKNOWN,
+		shellcommand_context_type,
+		VUC_SHELLWORD_PLAIN,
+		VUC_EXTENT_WORD
+	);
+
+	if ($shellword =~ qr"^\$\{(${regex_varname})(:[^{}]+)?\}$") {
 		my ($varname, $mod) = ($1, $2);
 
-		if (exists(get_vartypes_map()->{$varname}) && !(defined($mod) && $mod =~ qr":Q$")) {
-			my $vartype = get_vartypes_map()->{$varname};
-
-			if (variable_needs_quoting($varname) && type_should_be_quoted($vartype)) {
-				$line->log_warning("[experimental] Please use \${${varname}:Q} instead of \${${varname}}.");
-			}
-		} elsif (exists(get_varname_to_toolname()->{$varname})) {
-			if (defined($mod) && $mod =~ qr":Q$") {
-				$line->log_warning("The :Q operator should not be used for tools.");
-			}
-
-		} else {
-			$opt_debug and $line->log_warning("Not sure whether the variable ${varname} needs quoting.");
-		}
+		$opt_warn_quoting and checkline_mk_varuse($line, $varname, defined($mod) ? $mod : "", shellword_vuc);
 		return;
-	}
-
-	if ($shellword =~ qr"^([\w_\-]+)=(([\"']?)\$\{([\w_]+)\}\3)$") {
-		my ($key, $vexpr, undef, $vname) = ($1, $2, $3, $4);
-		
-		if (variable_needs_quoting($vname)) {
-			my $mod = ($vname =~ regex_gnu_configure_volatile_vars) ? ":M*:Q" : ":Q";
-			my $fixed_vexpr = "\${${vname}${mod}}";
-			$line->log_warning("Please use ${fixed_vexpr} instead of ${vexpr}.");
-			$line->explain_warning("See the pkgsrc guide, section \"quoting guideline\", for details.");
-			$line->replace($shellword, "${key}=${fixed_vexpr}");
-		}
-
-	} elsif ($shellword =~ qr"^([\w_\-]+)=(\$\{([\w_]+):Q\})$") {
-		my ($key, $vexpr, $vname) = ($1, $2, $3);
-		my $fixed_vexpr = "\${${vname}:M*:Q}";
-		if ($vname =~ regex_gnu_configure_volatile_vars) {
-			$line->log_warning("Please use ${fixed_vexpr} instead of ${vexpr}.");
-			$line->explain_warning("See the pkgsrc guide, section \"quoting guideline\", for details.");
-			$line->replace($shellword, "${key}=${fixed_vexpr}");
-		}
-
-	} elsif ($shellword ne "" && $shellword !~ qr"^${regex_shellword}$") {
-		$line->log_warning("Invalid shell word \"${shellword}\".");
 	}
 
 	# Note: SWST means [S]hell[W]ord [ST]ate
@@ -2900,17 +3062,19 @@ sub checkline_mk_shellword($$$) {
 					"Either remove the :Q or the double quotes. In most cases, it is more",
 					"appropriate to remove the double quotes.");
 
-			} elsif ($opt_warn_quoting) {
-				if (!variable_needs_quoting($varname)) {
-					# These variables don't need to be quoted.
-
-				} elsif ($state == SWST_PLAIN) {
-					$line->log_warning("Please use \${${varname}:Q} instead of \${${varname}}.");
-					$line->replace("\${${varname}}", "\${${varname}:Q}");
-				} else {
-					$line->log_warning("Please use \${${varname}:Q} instead of \${${varname}} and make sure the variable appears outside of any quoting characters.");
-				}
 			}
+
+			my $ctx = PkgLint::VarUseContext->new_from_pool(
+				VUC_TIME_UNKNOWN,
+				shellcommand_context_type,
+				  ($state == SWST_PLAIN) ? VUC_SHELLWORD_PLAIN
+				: ($state == SWST_DQUOT) ? VUC_SHELLWORD_DQUOT
+				: ($state == SWST_SQUOT) ? VUC_SHELLWORD_SQUOT
+				: ($state == SWST_BACKT) ? VUC_SHELLWORD_BACKT
+				: VUC_SHELLWORD_UNKNOWN,
+				VUC_EXTENT_WORD_PART
+			);
+			checkline_mk_varuse($line, $varname, defined($mod) ? $mod : "", $ctx);
 
 		} elsif ($state == SWST_PLAIN) {
 			if ($rest =~ s/^[!\%&\(\)*+,\-.\/0-9:;<=>?\@A-Z\[\]^_a-z{|}~]+//) {
@@ -2953,8 +3117,8 @@ sub checkline_mk_shellword($$$) {
 			} elsif ($rest =~ s/^\\(?:[\\\"\`]|\$\$)//) {
 			} elsif ($rest =~ s/^\$\$\{([0-9A-Za-z_]+)\}//
 			    || $rest =~ s/^\$\$([0-9A-Z_a-z]+|[\$!#?\@])//) {
-				my ($varname) = ($1);
-				$line->log_debug("[checkline_mk_shellword] Found double-quoted variable ${varname}.");
+				my ($shvarname) = ($1);
+				$line->log_debug("[checkline_mk_shellword] Found double-quoted variable ${shvarname}.");
 			} elsif ($rest =~ s/^\$\$//) {
 				$line->log_warning("Unquoted \$ or strange shell variable found.");
 			} elsif ($rest =~ s/^\\([\(\)*\-.0-9n])//) {
@@ -3273,15 +3437,6 @@ sub checkline_mk_vardef($$$) {
 	}
 }
 
-sub checkline_mk_varuse($$$) {
-	my ($line, $varname, $context) = @_;
-
-	return unless $opt_warn_perm;
-
-	my $perms = get_variable_perms($line, $varname);
-	# TODO: Check something.
-}
-
 sub checkline_mk_vartype_basic($$$$$$$);
 sub checkline_mk_vartype_basic($$$$$$$) {
 	my ($line, $varname, $type, $op, $value, $comment, $list_context) = @_;
@@ -3301,7 +3456,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 		}
 
 	} elsif ($type eq "AwkCommand") {
-		$opt_debug and $line->log_warning("Unchecked AWK command: ${value}");
+		$opt_debug and $line->log_note("Unchecked AWK command: ${value}");
 
 	} elsif ($type eq "BrokenIn") {
 		if ($value ne $value_novar) {
@@ -3372,7 +3527,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 				# Everything's fine.
 
 			} elsif ($macval =~ qr"^\"\\\"[^\$]*\$\{[A-Z0-9_]+\}.*\\\"\"") {
-				$opt_debug and $line->log_warning("Not the best style for CPP macros, but accepted.");
+				$opt_debug and $line->log_note("Not the best style for CPP macros, but accepted.");
 
 			} elsif ($macval =~ regex_unresolved && $macval =~ qr"[\"']") {
 				$line->log_warning("Unusual macro value ${macval}.");
@@ -3484,6 +3639,15 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 			$line->log_warning("\"${value}\" is not a valid filename mask.");
 		}
 
+	} elsif ($type eq "FileMode") {
+		if ($value ne "" && $value_novar eq "") {
+			# Fine.
+		} elsif ($value =~ qr"^[0-7]{3,4}") {
+			# Fine.
+		} else {
+			$line->log_warning("Invalid file mode ${value}.");
+		}
+		
 	} elsif ($type eq "Identifier") {
 		if ($value ne $value_novar) {
 			#$line->log_warning("Identifiers should be given directly.");
@@ -3843,7 +4007,11 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 		}
 
 	} elsif ($type eq "WrkdirSubdirectory") {
-		$opt_debug and $line->log_warning("Unchecked subdirectory \"${value}\" of \${WRKSRC}.");
+		if ($value eq "\${WRKDIR}") {
+			# Fine.
+		} else {
+			$opt_debug and $line->log_note("Unchecked subdirectory \"${value}\" of \${WRKDIR}.");
+		}
 
 	} elsif ($type eq "WrksrcSubdirectory") {
 		if ($value =~ qr"^(\$\{WRKSRC\})(?:/(.*))?") {
