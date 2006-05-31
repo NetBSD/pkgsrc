@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5046 2006/05/31 19:25:01 adam Exp $
+$NetBSD: TODO,v 1.5047 2006/05/31 20:38:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -314,7 +314,6 @@ Suggested package updates
 	o SDL_net-1.2.6
 	o SDL_ttf-2.0.8
 	o SmartEiffel-2.1
-	o TeXmacs-1.0.6.2
 	o XFree86-4.6.0
 	o XaoS-3.1.1
 	o YoSucker-75
@@ -403,7 +402,6 @@ Suggested package updates
 	o cbrowser-0.8 [pkg/30972]
 	o ccd2iso-0.2
 	o cdl3-1.2.6
-	o cdrdao-1.2.1
 	o cfengine2-2.1.20
 	o cfengine2-doc-2.1.14
 	o cfitsio-2.510
@@ -488,7 +486,6 @@ Suggested package updates
 	o etherape-0.9.6
 	o eukleides-1.0.3
 	o euler-1.61
-	o evince-0.5.3
 	o evolution-2.6.2
 	o evolution-data-server-1.6.2
 	o evolution-exchange-2.6.2
@@ -527,14 +524,12 @@ Suggested package updates
 	o gcalctool-5.8.10
 	o gcc-3.3.6
 	o gcc-4.1.0
-	o gcdmaster-1.2.1
 	o gcombust-0.1.55
 	o gcpio-2.6
 	o gdal-lib-1.3.2
 	o gdb6-6.3.0
 	o gdm-2.14.7
 	o gdsreader-0.3.2
-	o gedit-2.14.3
 	o ggiterm-0.7.1
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
@@ -563,7 +558,6 @@ Suggested package updates
 	o gnome-session-2.14.2
 	o gnome-spell-1.0.7
 	o gnome-themes-2.14.2
-	o gnome-vfs2-2.14.2
 	o gnome-vfsmm-2.14.0
 	o gnome2-terminal-2.14.2
 	o gnomeicu-0.99.10
@@ -774,8 +768,6 @@ Suggested package updates
 	o multi-gnome-terminal-1.6.2
 	o multitail-4.0.4
 	o muse-0.9.1
-	o mysql4-client-4.1.19
-	o mysql4-server-4.1.19
 	o nagios-2.3
 	o naim-0.11.8.2
 	o nano-1.2.5 [pkg/32859]
@@ -989,14 +981,10 @@ Suggested package updates
 	o pnetlib-0.7.2 [pkg/31950]
 	o pnetlib-0.7.4
 	o popa3d-1.0.2
-	o poppler-0.5.2
 	o poppy-4.01
 	o poptop-1.3.0
 	o posh-0.4.3
 	o postgresql-8.1.4
-	o postgresql73-7.3.15
-	o postgresql74-7.4.13
-	o postgresql80-8.0.8
 	o postgresql_autodoc-1.25
 	o powermanga-0.80
 	o prayer-1.0.15
@@ -1077,7 +1065,6 @@ Suggested package updates
 	o resize_image-0.7
 	o rhythmbox-0.9.3.1 [jmmv]
 	o rhythmbox-0.9.4.1
-	o riece-3.0.0
 	o rio500-0.8.1
 	o ripmime-1.4.0.6
 	o robodoc-4.99.6
