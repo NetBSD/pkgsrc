@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5039 2006/05/31 04:14:17 taca Exp $
+$NetBSD: TODO,v 1.5040 2006/05/31 04:42:24 taca Exp $
 
 Suggested new packages
 ======================
@@ -1093,7 +1093,6 @@ Suggested package updates
 	o rsnapshot-1.2.3
 	o rtcw-1.41.3
 	o rtorrent-0.5.3
-	o ruby-RMagick-1.11.1 [pkg/33538]
 	o ruby-cmd-0.8.0
 	o rxvt-unicode-7.7
 	o sablecc-3.2
