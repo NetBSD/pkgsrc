@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.594 2006/05/31 08:46:00 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.595 2006/05/31 08:59:13 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2944,7 +2944,11 @@ sub checkline_mk_varuse($$$$) {
 				"incrementally. Therefore it is generally unsafe to rely on their value",
 				"until it is clear that it will never change again. This point is",
 				"reached when the whole package Makefile is loaded and execution of the",
-				"shell commands starts.");
+				"shell commands starts.",
+				"",
+				"Additionally, each \$\$ is replaced with a single \$, so variables",
+				"that have references to shell variables or regular expressions are",
+				"modified in a subtle way.");
 		}
 	}
 
