@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/04/25 14:16:24 salo Exp $
+$NetBSD: distinfo,v 1.4 2006/05/31 11:16:29 adrianp Exp $
 
-SHA1 (paros-3.2.10-unix.zip) = a873fe4bef3c40bc094088619a03f03a8c50faa9
-RMD160 (paros-3.2.10-unix.zip) = 4fd4379b28b3a01cce4d230d2e027266ce5ac79f
-Size (paros-3.2.10-unix.zip) = 2400650 bytes
+SHA1 (paros-3.2.12-unix.zip) = 72bf193ce7ce72d117105d964204deaa13357d0e
+RMD160 (paros-3.2.12-unix.zip) = 2cab8afbffe0b7a2edb391468ea5f0fbb62fe8f0
+Size (paros-3.2.12-unix.zip) = 2406324 bytes
