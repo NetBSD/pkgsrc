@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.365 2006/05/31 02:32:49 tron Exp $
+$NetBSD: CHANGES-2006,v 1.366 2006/05/31 04:13:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2739,3 +2739,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated textproc/intltool to 0.35.0 [wiz 2006-05-30]
 	Updated mail/imapfilter to 1.2.1 [wiz 2006-05-31]
 	Updated sysutils/aperture to 2.0nb7 [tron 2006-05-31]
+	Updated www/squid to 2.5.13nb1 [taca 2006-05-31]
+	Updated x11/ruby-tk to 1.8.4nb2 [taca 2006-05-31]
+	Updated devel/ruby-priority-queue to 0.1.2nb1 [taca 2006-05-31]
