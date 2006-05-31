@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/04/17 07:07:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/05/31 22:07:18 wiz Exp $
 bin/gnome-about
 include/gnome-desktop-2.0/libgnome/gnome-desktop-item.h
 include/gnome-desktop-2.0/libgnomeui/gnome-ditem-edit.h
@@ -109,6 +109,7 @@ share/locale/nl/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/nn/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/no/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/nso/LC_MESSAGES/gnome-desktop-2.0.mo
+share/locale/or/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/pa/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/pl/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/pt/LC_MESSAGES/gnome-desktop-2.0.mo
