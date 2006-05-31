@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5050 2006/05/31 21:52:39 wiz Exp $
+$NetBSD: TODO,v 1.5051 2006/05/31 22:07:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -548,7 +548,6 @@ Suggested package updates
 	o gnetman-20050429
 	o gnome-applets-2.14.2
 	o gnome-backgrounds-2.14.2
-	o gnome-desktop-2.14.2
 	o gnome-games-2.14.2
 	o gnome-mag-0.12.5
 	o gnome-media-2.14.2
