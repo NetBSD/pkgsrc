@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5051 2006/05/31 22:07:45 wiz Exp $
+$NetBSD: TODO,v 1.5052 2006/05/31 22:51:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -551,7 +551,6 @@ Suggested package updates
 	o gnome-games-2.14.2
 	o gnome-mag-0.12.5
 	o gnome-media-2.14.2
-	o gnome-panel-2.14.2
 	o gnome-pilot-2.0.13
 	o gnome-screensaver-2.14.2
 	o gnome-session-2.14.2
