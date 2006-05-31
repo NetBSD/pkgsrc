@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.10 2006/05/28 20:37:52 rillig Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.11 2006/05/31 11:44:07 rillig Exp $ -->
 
 <chapter id="getting">
 <title>Where to get pkgsrc and how to keep it up-to-date</title>
@@ -114,10 +114,13 @@
 <sect2 id="uptodate-tar">
 <title>Via tar files</title>
 
-	<warning><para>Updating from tar file cannot detect or preserve
-	any changes you have done to your local copy of pkgsrc.
-	Therefore updating via CVS is strongly
-	recommended.</para></warning>
+	<warning><para>When updating from a tar file, you first need to
+	completely remove the old pkgsrc directory. Otherwise those
+	files that have been removed from pkgsrc in the mean time will
+	not be removed on your local disk, resulting in inconsistencies.
+	When removing the old files, any changes that you have done to
+	the pkgsrc files will be lost after updating. Therefore updating
+	via CVS is strongly recommended.</para></warning>
 	
 	<para>To update pkgsrc from a tar file, download the tar file as
 	explained above. Then, make sure that you have not made any
@@ -131,11 +134,7 @@
 	<para>To update pkgsrc via CVS, make sure the environment
 	variable <varname>CVS_RSH</varname> is set as above. Then,
 	change to the pkgsrc directory and run <command>cvs -q update
-	-dP</command>. The <quote>-q</quote> option tells cvs to only
-	report those files that have changed. The <quote>-d</quote>
-	option fetches new packages (which is curiously not done by
-	default), and the <quote>-P</quote> option removes empty
-	directories after everything has been updated.</para>
+	-dP</command>.</para>
 
 <sect3 id="uptodate-cvs-switch">
 <title>Switching between different pkgsrc branches</title>
