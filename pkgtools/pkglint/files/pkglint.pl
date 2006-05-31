@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.593 2006/05/31 08:10:45 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.594 2006/05/31 08:46:00 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1227,7 +1227,7 @@ BEGIN {
 		VUC_TYPE_UNKNOWN
 		VUC_SHELLWORD_UNKNOWN VUC_SHELLWORD_PLAIN VUC_SHELLWORD_DQUOT
 		  VUC_SHELLWORD_SQUOT VUC_SHELLWORD_BACKT
-		VUC_EXTENT_UNKOWN VUC_EXTENT_FULL VUC_EXTENT_WORD
+		VUC_EXTENT_UNKNOWN VUC_EXTENT_FULL VUC_EXTENT_WORD
 		  VUC_EXTENT_WORD_PART
 	);
 }
@@ -1348,7 +1348,7 @@ BEGIN {
 		VUC_TYPE_UNKNOWN
 		VUC_SHELLWORD_UNKNOWN VUC_SHELLWORD_PLAIN VUC_SHELLWORD_DQUOT
 		  VUC_SHELLWORD_SQUOT VUC_SHELLWORD_BACKT
-		VUC_EXTENT_UNKOWN VUC_EXTENT_FULL VUC_EXTENT_WORD
+		VUC_EXTENT_UNKNOWN VUC_EXTENT_FULL VUC_EXTENT_WORD
 		  VUC_EXTENT_WORD_PART
 	);
 }
@@ -2347,9 +2347,7 @@ sub backtrace() {
 
 	for (my $i = $#callers; $i >= 0; $i--) {
 		my $info = $callers[$i];
-		log_debug(NO_FILE, NO_LINE_NUMBER,
-		    sprintf("%sline %4d in %s", ("  " x ($n - 1 - $i)),
-		        $info->[0], $info->[1]));
+		log_debug(NO_FILE, NO_LINE_NUMBER, sprintf("  at line %4d in %s", $info->[0], $info->[1]));
 	}
 }
 
@@ -2419,6 +2417,27 @@ sub determine_used_variables($) {
 			$line->log_debug("Variable ${varname} is used.");
 		}
 	}
+}
+
+sub extract_used_variables($$) {
+	my ($line, $text) = @_;
+	my ($rest, $result);
+
+	$rest = $text;
+	$result = [];
+	while ($rest =~ s/^(?:[^\$]+|\$[\$*<>?\@]|\$\{([0-9A-Z_a-z]+)(?::(?:[^\${}]|\$[^{])+)?\})//) {
+		my ($varname) = ($1);
+
+		if (defined($varname)) {
+			push(@{$result}, $varname);
+		}
+	}
+
+	if ($rest ne "") {
+		$opt_debug and $line->log_warning("Could not extract variables: ${rest}");
+	}
+
+	return $result;
 }
 
 my $check_pkglint_version_done = false;
@@ -2563,7 +2582,7 @@ sub variable_needs_quoting($$$) {
 	my $type = get_variable_type($line, $varname);
 	my ($want_list, $have_list);
 
-	if (!defined($type)) {
+	if (!defined($type) || !defined($context->type)) {
 		return dont_know;
 	}
 
@@ -2919,7 +2938,13 @@ sub checkline_mk_varuse($$$$) {
 		my $perms = get_variable_perms($line, $varname);
 
 		if ($context->time == VUC_TIME_LOAD && index($perms, "p") == -1) {
-			$line->log_warning("${varname} should not be used at load time.");
+			$line->log_warning("${varname} should not be evaluated at load time.");
+			$line->explain_warning(
+				"Many variables, especially lists of something, get their values",
+				"incrementally. Therefore it is generally unsafe to rely on their value",
+				"until it is clear that it will never change again. This point is",
+				"reached when the whole package Makefile is loaded and execution of the",
+				"shell commands starts.");
 		}
 	}
 
@@ -3647,7 +3672,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 		} else {
 			$line->log_warning("Invalid file mode ${value}.");
 		}
-		
+
 	} elsif ($type eq "Identifier") {
 		if ($value ne $value_novar) {
 			#$line->log_warning("Identifiers should be given directly.");
@@ -4102,6 +4127,7 @@ sub checkline_mk_vartype($$$$$) {
 
 sub checkline_mk_varassign($$$$$) {
 	my ($line, $varname, $op, $value, $comment) = @_;
+	my ($used_vars);
 	my $varbase = varname_base($varname);
 	my $varcanon = varname_canon($varname);
 
@@ -4190,6 +4216,25 @@ sub checkline_mk_varassign($$$$$) {
 			"directly use PLIST_SUBST+= ${varname}=${value} or use any other",
 			"variable for collecting the list of PLIST substitutions and later",
 			"append that variable with PLIST_SUBST+= \${MY_PLIST_SUBST}.");
+	}
+
+	use constant op_to_use_time => {
+		":="	=> VUC_TIME_LOAD,
+		"!="	=> VUC_TIME_LOAD,
+		"="	=> VUC_TIME_RUN,
+		"+="	=> VUC_TIME_RUN,
+		"?="	=> VUC_TIME_RUN
+	};
+	
+	$used_vars = extract_used_variables($line, $value);
+	my $vuc = PkgLint::VarUseContext->new(
+		op_to_use_time->{$op},
+		get_variable_type($line, $varname),
+		VUC_SHELLWORD_UNKNOWN,
+		VUC_EXTENT_UNKNOWN
+	);
+	foreach my $used_var (@{$used_vars}) {
+		checkline_mk_varuse($line, $used_var, "", $vuc);
 	}
 }
 
