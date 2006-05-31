@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5054 2006/05/31 22:55:48 wiz Exp $
+$NetBSD: TODO,v 1.5055 2006/05/31 23:15:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -928,7 +928,6 @@ Suggested package updates
 	o p5-gtk2-2.14.0
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
-	o p7zip-4.42
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pari-2.1.7
