@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2006/04/22 09:22:14 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2006/06/01 23:14:34 joerg Exp $
 #
 
 DISTNAME=	p0f-2.0.5
+PKGREVISION=	1
 CATEGORIES=	security net
 MASTER_SITES=	http://lcamtuf.coredump.cx/p0f/
 EXTRACT_SUFX=	.tgz
@@ -24,16 +25,15 @@ SUBST_FILES.paths=	config.h p0f.1
 SUBST_SED.paths=	-e "s|/etc/p0f|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin man/man1 share/doc/p0f share/examples/p0f
 
 post-patch:
 	${LN} -s NetBSD ${WRKSRC}/mk/DragonFly
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/p0f ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/doc/README ${PREFIX}/share/doc/p0f.README
-	${INSTALL_DATA} ${WRKSRC}/p0frep ${PREFIX}/share/doc/p0frep
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/p0f
+	${INSTALL_DATA} ${WRKSRC}/doc/README ${PREFIX}/share/doc/p0f/p0f.README
+	${INSTALL_DATA} ${WRKSRC}/p0frep ${PREFIX}/share/doc/p0f/p0frep
 	${INSTALL_DATA} ${WRKSRC}/p0f.fp ${PREFIX}/share/examples/p0f
 	${INSTALL_DATA} ${WRKSRC}/p0fa.fp ${PREFIX}/share/examples/p0f
 	${INSTALL_DATA} ${WRKSRC}/p0fr.fp ${PREFIX}/share/examples/p0f
