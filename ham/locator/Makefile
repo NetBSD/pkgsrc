@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/16 06:57:59 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/06/01 22:15:59 joerg Exp $
 #
 
 DISTNAME=	locator-0.1
@@ -12,6 +12,8 @@ COMMENT=	Longitudes, latitudes to HAM locator converter
 NO_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	bin
+
+USE_LANGUAGES=	c++
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/locator ${PREFIX}/bin
