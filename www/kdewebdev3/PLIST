@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/03/30 02:42:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/06/01 13:50:47 markd Exp $
 bin/kfilereplace
 bin/kimagemapeditor
 bin/klinkstatus
@@ -1320,6 +1320,7 @@ share/kde/apps/quanta/templates/text/others/demo.txt
 share/kde/apps/quanta/templates/text/scripts/demo.php
 share/kde/apps/quanta/tips
 share/kde/apps/quanta/toolbar/ball.png
+share/kde/apps/quanta/toolbar/button.png
 share/kde/apps/quanta/toolbar/check.png
 share/kde/apps/quanta/toolbar/check_clear.png
 share/kde/apps/quanta/toolbar/check_grey.png
