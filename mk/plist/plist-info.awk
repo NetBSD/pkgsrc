@@ -1,4 +1,4 @@
-# $NetBSD: plist-info.awk,v 1.13 2006/05/29 20:01:39 jlam Exp $
+# $NetBSD: plist-info.awk,v 1.14 2006/06/01 06:12:48 rillig Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -74,7 +74,7 @@ BEGIN {
 ### Canonicalize info page entries by converting ${PKGINFODIR}/ to info/.
 ###
 /^[^@]/ && ($0 !~ "^" IGNORE_INFO_REGEXP "/") && \
-($0 ~ "^" PKGINFODIR "\/[^\/]+(\.info)?(-[0-9]+)?(\.gz)?$") {
+($0 ~ "^" PKGINFODIR "\/[^\/]+(\\.info)?(-[0-9]+)?(\\.gz)?$") {
 	sub("^" PKGINFODIR "/", "info/")
 }
 ($0 !~ "^@dirrm " IGNORE_INFO_REGEXP "$") && \
@@ -87,7 +87,7 @@ BEGIN {
 ###
 /^[^@]/ && ($0 !~ "^" IGNORE_INFO_REGEXP "/") && \
 /^([^\/]*\/)*(info\/[^\/]+(\.info)?|[^\/]+\.info)(-[0-9]+)?\.gz$/ {
-	sub("\.gz$", "")
+	sub("\\.gz$", "")
 }
 
 ###
@@ -112,7 +112,7 @@ BEGIN {
 		cmd = "cd " PREFIX " && " LS " -1 " $0 "*"
 		while (cmd | getline) {
 			# Filter out unrelated info files
-			if (substr($0, len + 1) !~ "^(-[0-9]+)?(\.gz)?$") {
+			if (substr($0, len + 1) !~ "^(-[0-9]+)?(\\.gz)?$") {
 				continue
 			}
 			#if ((MANZ ~ /[yY][eE][sS]/) && ($0 !~ /\.gz$/)) {
