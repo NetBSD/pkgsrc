@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.9 2005/04/11 11:18:06 schwarz Exp $
+$NetBSD: patch-aa,v 1.10 2006/06/01 23:11:29 joerg Exp $
 
---- Makefile.orig	Fri Feb  8 05:14:41 2002
-+++ Makefile	Sat Apr  9 00:48:08 2005
+--- Makefile.orig	2002-02-08 04:14:41.000000000 +0000
++++ Makefile
 @@ -18,16 +18,16 @@
  #
  # Use /lib/cpp or /usr/ccs/lib/cpp for CPP on Solaris or SVR4 machines.
@@ -9,7 +9,8 @@ $NetBSD: patch-aa,v 1.9 2005/04/11 11:18:06 schwarz Exp $
 -CC =		cc
 +#CC =		cc
  
- CPP =		$(CC) -E
+-CPP =		$(CC) -E
++#CPP =		$(CC) -E
  #CPP =		/lib/cpp
  #CPP =		/usr/bin/cpp -no-cpp-precomp	# for MacOS X
  
@@ -22,7 +23,7 @@ $NetBSD: patch-aa,v 1.9 2005/04/11 11:18:06 schwarz Exp $
  
  
  SHELL = /bin/sh
-@@ -97,3 +97,5 @@
+@@ -97,3 +97,5 @@ split: tar
  man/nn.1.D: man/nn.1
  	sh SPLITNN1
  
