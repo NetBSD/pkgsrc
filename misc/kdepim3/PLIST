@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2006/03/30 02:52:17 markd Exp $
+@comment $NetBSD: PLIST,v 1.24 2006/06/01 14:04:01 markd Exp $
 bin/akregator
 bin/egroupwarewizard
 bin/exchangewizard
@@ -1186,6 +1186,7 @@ share/kde/apps/libical/zoneinfo/America/Cordoba.ics
 share/kde/apps/libical/zoneinfo/America/Costa_Rica.ics
 share/kde/apps/libical/zoneinfo/America/Cuiaba.ics
 share/kde/apps/libical/zoneinfo/America/Curacao.ics
+share/kde/apps/libical/zoneinfo/America/Danmarkshavn.ics
 share/kde/apps/libical/zoneinfo/America/Dawson.ics
 share/kde/apps/libical/zoneinfo/America/Dawson_Creek.ics
 share/kde/apps/libical/zoneinfo/America/Denver.ics
@@ -1242,6 +1243,7 @@ share/kde/apps/libical/zoneinfo/America/New_York.ics
 share/kde/apps/libical/zoneinfo/America/Nipigon.ics
 share/kde/apps/libical/zoneinfo/America/Nome.ics
 share/kde/apps/libical/zoneinfo/America/Noronha.ics
+share/kde/apps/libical/zoneinfo/America/North_Dakota/Center.ics
 share/kde/apps/libical/zoneinfo/America/Panama.ics
 share/kde/apps/libical/zoneinfo/America/Pangnirtung.ics
 share/kde/apps/libical/zoneinfo/America/Paramaribo.ics
@@ -1302,6 +1304,8 @@ share/kde/apps/libical/zoneinfo/Asia/Beirut.ics
 share/kde/apps/libical/zoneinfo/Asia/Bishkek.ics
 share/kde/apps/libical/zoneinfo/Asia/Brunei.ics
 share/kde/apps/libical/zoneinfo/Asia/Calcutta.ics
+share/kde/apps/libical/zoneinfo/Asia/Choibalsan.ics
+share/kde/apps/libical/zoneinfo/Asia/Chongqing.ics
 share/kde/apps/libical/zoneinfo/Asia/Chungking.ics
 share/kde/apps/libical/zoneinfo/Asia/Colombo.ics
 share/kde/apps/libical/zoneinfo/Asia/Damascus.ics
@@ -1341,6 +1345,7 @@ share/kde/apps/libical/zoneinfo/Asia/Qatar.ics
 share/kde/apps/libical/zoneinfo/Asia/Rangoon.ics
 share/kde/apps/libical/zoneinfo/Asia/Riyadh.ics
 share/kde/apps/libical/zoneinfo/Asia/Saigon.ics
+share/kde/apps/libical/zoneinfo/Asia/Sakhalin.ics
 share/kde/apps/libical/zoneinfo/Asia/Samarkand.ics
 share/kde/apps/libical/zoneinfo/Asia/Seoul.ics
 share/kde/apps/libical/zoneinfo/Asia/Shanghai.ics
@@ -1936,8 +1941,6 @@ share/kde/servicetypes/kpilotconduit.desktop
 @comment in kde: @dirrm share/kde/icons/hicolor/22x22/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
 @comment in kde: @dirrm share/kde/icons/hicolor/128x128/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/scalable/apps
-@comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/64x64/actions
 @comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/48x48/actions
@@ -1947,7 +1950,6 @@ share/kde/servicetypes/kpilotconduit.desktop
 @comment in kde: @dirrm share/kde/icons/crystalsvg/22x22/actions
 @comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/apps
 @comment in kde: @dirrm share/kde/icons/crystalsvg/16x16/actions
-@comment in kde: @dirrm share/kde/icons/crystalsvg/128x128/apps
 @comment in kde: @dirrm share/kde/config.kcfg
 @comment in kde: @dirrm share/kde/config
 @comment in kde: @dirrm share/kde/autostart
@@ -1975,6 +1977,7 @@ share/kde/servicetypes/kpilotconduit.desktop
 @dirrm share/kde/apps/libical/zoneinfo/Asia
 @dirrm share/kde/apps/libical/zoneinfo/Arctic
 @dirrm share/kde/apps/libical/zoneinfo/Antarctica
+@dirrm share/kde/apps/libical/zoneinfo/America/North_Dakota
 @dirrm share/kde/apps/libical/zoneinfo/America/Kentucky
 @dirrm share/kde/apps/libical/zoneinfo/America/Indiana
 @dirrm share/kde/apps/libical/zoneinfo/America
@@ -2119,7 +2122,6 @@ share/kde/servicetypes/kpilotconduit.desktop
 @dirrm share/kde/apps/akregator
 @comment in kde: @dirrm share/kde/apps
 @comment in kde: @dirrm share/kde/applnk/Utilities
-@comment in kde: @dirrm share/kde/applnk/Internet
 @comment in kde: @dirrm share/kde/applnk/Applications
 @comment in kde: @dirrm share/kde/applnk/.hidden
 @dirrm share/doc/kde/HTML/en/multisynk
@@ -2221,8 +2223,16 @@ share/kde/servicetypes/kpilotconduit.desktop
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/certmanager/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/certmanager/html
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs/certmanager
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/akregator/src/librss/html
+@dirrm share/doc/kde/HTML/en/kdepim-apidocs/akregator/src/librss/html
+@dirrm share/doc/kde/HTML/en/kdepim-apidocs/akregator/src/librss
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/akregator/src/html
+@dirrm share/doc/kde/HTML/en/kdepim-apidocs/akregator/src/html
+@dirrm share/doc/kde/HTML/en/kdepim-apidocs/akregator/src
+@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/akregator/html
+@dirrm share/doc/kde/HTML/en/kdepim-apidocs/akregator/html
+@dirrm share/doc/kde/HTML/en/kdepim-apidocs/akregator
 @dirrm share/doc/kde/HTML/en/kdepim-apidocs
-@comment in kde: @dirrm share/doc/kde/HTML/en/kcontrol
 @dirrm share/doc/kde/HTML/en/karm
 @dirrm share/doc/kde/HTML/en/kandy
 @dirrm share/doc/kde/HTML/en/kalarm
