@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.82 2006/04/22 09:22:16 rillig Exp $
+# $NetBSD: Makefile.common,v 1.83 2006/06/01 15:31:27 joerg Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -156,6 +156,8 @@ PKGNAME?=	${BINNAME}-${NS_VERS}
 DISTNAME?=	${BINNAME}-v${NS_VERS_SHORT}-${NS_ENCRYPTION}.${DISTUNAME}
 
 .if (${OPSYS} != "Linux" && ((${MACHINE_ARCH} == "i386" && !defined(NS_USE_BSDI)) || ${MACHINE_ARCH} == "powerpc"))
+.include "../../emulators/suse_linux/Makefile.application"
+
 DEPENDS+=	suse_compat>=6.4:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=	suse_x11>=6.4:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
