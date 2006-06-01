@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2006/03/30 02:40:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.24 2006/06/01 13:48:02 markd Exp $
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/arts.tag
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/annotated.html
 share/doc/kde/HTML/en/kdelibs-apidocs/arts/html/artsmessage_8cc-source.html
@@ -7350,7 +7350,6 @@ share/doc/kde/HTML/en/kdelibs-apidocs/kresources/html/tabs.css
 share/doc/kde/HTML/en/kdelibs-apidocs/kresources/html/testresources_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kresources/kresources.tag
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/annotated.html
-share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/classDCOP.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/classKCModuleContainer-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/classKCModuleContainer.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/classKCModuleContainer.png
@@ -7414,7 +7413,6 @@ share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/classKSettings_1_1Dispatcher.p
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/classKSettings_1_1PluginPage-members.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/classKSettings_1_1PluginPage.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/classKSettings_1_1PluginPage.png
-share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/classLoads.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/classes.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/componentsdialog_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/componentsdialog_8h-source.html
@@ -7479,6 +7477,13 @@ share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/functions_func_0x7e.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/functions_rela.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/functions_type.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/functions_vars.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/group__findreplace.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/group__internal.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/group__kcmodule.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/group__main.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/group__multitabbar.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/group__plugin.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/group__settings.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/hierarchy.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/index.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/installdox
@@ -7509,6 +7514,7 @@ share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/kreplace_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/kreplace_8h-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/kreplacedialog_8cpp-source.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/kreplacedialog_8h-source.html
+share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/modules.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/namespaceKSettings.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/namespacemembers.html
 share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html/namespacemembers_vars.html
