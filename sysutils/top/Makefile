@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2005/03/24 21:13:01 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2006/06/01 21:55:28 joerg Exp $
 
 DISTNAME=       top-3.6alpha7
 PKGNAME=	top-3.6a7
@@ -10,5 +10,8 @@ HOMEPAGE=	http://www.groupsys.com/topinfo/
 COMMENT=	The ubiquitous system monitoring utility
 
 GNU_CONFIGURE=		yes
+
+post-extract:
+	${CP} ${FILESDIR}/m_dragonfly.c ${WRKSRC}/machine
 
 .include "../../mk/bsd.pkg.mk"
