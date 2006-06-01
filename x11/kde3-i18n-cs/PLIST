@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/04/17 07:07:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/06/01 14:37:30 markd Exp $
 share/doc/kde/HTML/cs/common/fdl-translated.html
 share/doc/kde/HTML/cs/common/gpl-translated.html
 share/doc/kde/HTML/cs/common/kde-localised.css
@@ -482,6 +482,7 @@ share/locale/cs/LC_MESSAGES/kio_smtp.mo
 share/locale/cs/LC_MESSAGES/kio_svn.mo
 share/locale/cs/LC_MESSAGES/kio_system.mo
 share/locale/cs/LC_MESSAGES/kio_tar.mo
+share/locale/cs/LC_MESSAGES/kio_thumbnail.mo
 share/locale/cs/LC_MESSAGES/kio_trash.mo
 share/locale/cs/LC_MESSAGES/kio_zeroconf.mo
 share/locale/cs/LC_MESSAGES/kioexec.mo
