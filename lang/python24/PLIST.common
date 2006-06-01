@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2006/04/12 20:21:48 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2006/06/01 15:25:03 jlam Exp $
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 bin/smtpd${PY_VER_SUFFIX}.py
@@ -1272,7 +1272,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_ssl.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_testcapi.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_weakref.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/array.so
-${EXTRA_SO}lib/python${PY_VER_SUFFIX}/lib-dynload/audioop.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/audioop.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/binascii.so
 ${BSDDBMODULE}lib/python${PY_VER_SUFFIX}/lib-dynload/bsddb185.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/bz2.so
