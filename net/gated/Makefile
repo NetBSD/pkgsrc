@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2006/04/22 09:22:12 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2006/06/01 22:40:19 joerg Exp $
 
 DISTNAME=       gated-3-5-11
 PKGNAME=        gated-3.5.11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.rge.com/pub/networking/gated/ \
 		http://www.zcu.cz/ftp/pub/security/merit/gated/ \
@@ -28,6 +28,8 @@ BUILD_TARGET=	gated
 post-extract:
 	@${SED} -e 's#@PREFIX@#${PREFIX}#' <${FILESDIR}/configuration \
 	    >${WRKSRC}/src/configs/netbsd
+	@${SED} -e 's#@PREFIX@#${PREFIX}#' <${FILESDIR}/configuration \
+	    >${WRKSRC}/src/configs/dragonfly
 
 do-configure:
 	cd ${WRKSRC}/src; 						\
