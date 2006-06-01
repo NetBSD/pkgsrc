@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2005/09/04 04:59:36 jlam Exp $
+$NetBSD: patch-ac,v 1.5 2006/06/01 06:52:28 rillig Exp $
 
---- src/Makefile.orig	Fri Dec 13 12:12:11 2002
-+++ src/Makefile
+--- src/Makefile.orig	2002-12-13 12:12:11.000000000 +0000
++++ src/Makefile	2006-06-01 07:25:02.604386400 +0100
 @@ -26,6 +26,8 @@ OBJS=	\
  	lvm.o \
  	lzio.o
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.4 2005/09/04 04:59:36 jlam Exp $
  SRCS=	\
  	lapi.c \
  	lcode.c \
-@@ -68,12 +70,16 @@ SRCS=	\
+@@ -68,13 +70,17 @@ SRCS=	\
  	lzio.h
  
  T= $(LIB)/liblua.a
@@ -23,9 +23,10 @@ $NetBSD: patch-ac,v 1.4 2005/09/04 04:59:36 jlam Exp $
  $T:	$(OBJS)
  	$(AR) $@ $(OBJS)
  	$(RANLIB) $@
-+
-+$(LT):	$(LOBJS)
-+	$(LIBTOOL) --mode=link $(CC) -o $@ $(LOBJS) -rpath $(INSTALL_LIB) -version-info $(LV)
  
++$(LT):	$(LOBJS)
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ $(LOBJS) -rpath $(INSTALL_LIB) -version-info $(LV) $(DLLIB)
++
  clean:
  	rm -f $(OBJS) $T
+ 
