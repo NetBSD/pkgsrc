@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/05/05 02:52:33 taca Exp $
+# $NetBSD: Makefile,v 1.23 2006/06/01 22:27:17 joerg Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
@@ -22,7 +22,7 @@ MAKE_ENV+=	ROOT_USER=${ROOT_USER:Q} ROOT_GROUP=${ROOT_GROUP:Q}
 
 .include "options.mk"
 
-INSTALLATION_DIRS=	man/man8 share/doc
+INSTALLATION_DIRS=	man/man8 share/doc libexec
 
 do-build:
 .for DIR in common password
