@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2006/04/17 07:07:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.20 2006/06/01 14:37:31 markd Exp $
 share/doc/kde/HTML/es/KRegExpEditor/altn.png
 share/doc/kde/HTML/es/KRegExpEditor/altntool.png
 share/doc/kde/HTML/es/KRegExpEditor/anychar.png
@@ -308,11 +308,14 @@ share/doc/kde/HTML/es/kaudiocreator/cdconfiguration.png
 share/doc/kde/HTML/es/kaudiocreator/cddbconfigurationlookup.png
 share/doc/kde/HTML/es/kaudiocreator/cddbconfigurationsubmit.png
 share/doc/kde/HTML/es/kaudiocreator/cdinserted.png
+share/doc/kde/HTML/es/kaudiocreator/common
 share/doc/kde/HTML/es/kaudiocreator/confirmartistcarryover.png
 share/doc/kde/HTML/es/kaudiocreator/encoderconfiguration.png
 share/doc/kde/HTML/es/kaudiocreator/encodernotfound.png
 share/doc/kde/HTML/es/kaudiocreator/entersong1.png
 share/doc/kde/HTML/es/kaudiocreator/generalconfiguration.png
+share/doc/kde/HTML/es/kaudiocreator/index.cache.bz2
+share/doc/kde/HTML/es/kaudiocreator/index.docbook
 share/doc/kde/HTML/es/kaudiocreator/jobcontrol.png
 share/doc/kde/HTML/es/kaudiocreator/jobshavestarted.png
 share/doc/kde/HTML/es/kaudiocreator/kaudiocreatormainwindow800.png
@@ -798,6 +801,7 @@ share/doc/kde/HTML/es/kedit/index.docbook
 share/doc/kde/HTML/es/keduca/common
 share/doc/kde/HTML/es/keduca/index.cache.bz2
 share/doc/kde/HTML/es/keduca/index.docbook
+share/doc/kde/HTML/es/keduca/man-keduca.1.docbook
 share/doc/kde/HTML/es/keduca/screenshot.png
 share/doc/kde/HTML/es/kenolaba/common
 share/doc/kde/HTML/es/kenolaba/index.cache.bz2
@@ -960,6 +964,7 @@ share/doc/kde/HTML/es/khelpcenter/userguide/amarok.png
 share/doc/kde/HTML/es/khelpcenter/userguide/base-kde-applications.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/browser-fine-tuning.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/burning-cds.docbook
+share/doc/kde/HTML/es/khelpcenter/userguide/common
 share/doc/kde/HTML/es/khelpcenter/userguide/control-center.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/creating-graphics.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/credits-and-license.docbook
@@ -974,6 +979,8 @@ share/doc/kde/HTML/es/khelpcenter/userguide/getting-started.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/glossary.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/groupware-kontact.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/history.docbook
+share/doc/kde/HTML/es/khelpcenter/userguide/index.cache.bz2
+share/doc/kde/HTML/es/khelpcenter/userguide/index.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/installation.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/internet-shortcuts.docbook
 share/doc/kde/HTML/es/khelpcenter/userguide/intro.docbook
@@ -3568,7 +3575,6 @@ share/locale/es/flag.png
 @dirrm share/doc/kde/HTML/es/kaboodle
 @dirrm share/doc/kde/HTML/es/juk
 @dirrm share/doc/kde/HTML/es/flashkard
-@dirrm share/doc/kde/HTML/es/es
 @dirrm share/doc/kde/HTML/es/common
 @dirrm share/doc/kde/HTML/es/cervisia
 @dirrm share/doc/kde/HTML/es/blinken
