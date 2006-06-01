@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/01/08 21:42:41 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/06/01 23:15:39 joerg Exp $
 #
 
 DISTNAME=	waste-source
@@ -23,6 +23,8 @@ NO_SRC_ON_FTP=          ${RESTRICTED}
 NO_BIN_ON_FTP=          ${RESTRICTED}
 NO_SRC_ON_CDROM=        ${RESTRICTED}
 NO_BIN_ON_CDROM=        ${RESTRICTED}
+
+USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.prefs.mk"
 
