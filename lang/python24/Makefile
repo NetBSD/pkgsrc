@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/05/07 15:11:44 tv Exp $
+# $NetBSD: Makefile,v 1.26 2006/06/01 15:25:03 jlam Exp $
 #
 
 DISTNAME=	Python-2.4.3
@@ -54,33 +54,38 @@ PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
 PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
 
-# the dl module isn't built for 64 bit archs and Darwin
-.if ${MACHINE_ARCH} == "alpha" || ${MACHINE_ARCH} == "amd64" \
-	|| ${MACHINE_ARCH} == "sparc64" || ${MACHINE_ARCH} == "x86_64" \
-	|| ${OPSYS} == "Darwin" || ( ${OPSYS} == "IRIX" && ${ABI} == "64" )
-PLIST_SUBST+=  DLMODULE="@comment "
+.if (${MACHINE_ARCH} == "alpha") || (${MACHINE_ARCH} == "amd64") || \
+    (${MACHINE_ARCH} == "sparc64") || (${MACHINE_ARCH} == "x86_64") || \
+    (defined(ABI) && ${ABI} == "64")
+IS_64BIT_PLATFORM?=	yes
 .else
-PLIST_SUBST+=  DLMODULE=
+IS_64BIT_PLATFORM?=	no
 .endif
 
-EXTRA_SO_SUBST=		"@comment "
-OSSAUDIODEV_SUBST=	"@comment "
+# the dl module isn't built for 64 bit archs and Darwin
+.if !empty(IS_64BIT_PLATFORM:M[yY][eE][sS]) || (${OPSYS} == "Darwin")
+PLIST_SUBST+=	DLMODULE="@comment "
+.else
+PLIST_SUBST+=	DLMODULE=
+.endif
 
-# activate extra modules
-.if ${MACHINE_ARCH} == "i386"
-EXTRA_SO_SUBST=
+# setup.py causes some modules to be built if the platform is *not* 64bit.
+.if !empty(IS_64BIT_PLATFORM:M[nN][oO])
+PLIST_SUBST+=	EXTRA_SO=
+.else
+PLIST_SUBST+=	EXTRA_SO="@comment "
+.endif
+
 # ossaudiodev is only available on x86 for the following platforms
-.  if ${PY_PLATNAME} == "linux2" || ${PY_PLATNAME} == "freebsd4" \
-	|| ${PY_PLATNAME} == "freebsd5"
-OSSAUDIODEV_SUBST=
-.   endif
-.elif ${OPSYS} == "SunOS" || ( ${OPSYS} == "IRIX" && ${ABI} != "64" ) \
-	|| ${OPSYS} == "Darwin"
-EXTRA_SO_SUBST=
+.if (${MACHINE_ARCH} == "i386") && \
+    (${PY_PLATNAME} == "linux2" || ${PY_PLATNAME} == "freebsd4" || \
+     ${PY_PLATNAME} == "freebsd5")
+PLIST_SUBST+=	OSSAUDIODEV=
+.elif (${MACHINE_ARCH} == "x86_64") && (${PY_PLATNAME} == "linux2")
+PLIST_SUBST+=	OSSAUDIODEV=
+.else
+PLIST_SUBST+=	OSSAUDIODEV="@comment "
 .endif
-
-PLIST_SUBST+=	EXTRA_SO=${EXTRA_SO_SUBST}
-PLIST_SUBST+=	OSSAUDIODEV=${OSSAUDIODEV_SUBST}
 
 # Make sure python modules can link correctly
 .if ${OPSYS} == "Darwin"
