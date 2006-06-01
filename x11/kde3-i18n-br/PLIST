@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/06/01 14:37:30 markd Exp $
 share/locale/br/LC_MESSAGES/akregator.mo
 share/locale/br/LC_MESSAGES/akregator_konqplugin.mo
 share/locale/br/LC_MESSAGES/alsaplayerui.mo
@@ -371,6 +371,7 @@ share/locale/br/LC_MESSAGES/konnector_qtopia.mo
 share/locale/br/LC_MESSAGES/konnector_remote.mo
 share/locale/br/LC_MESSAGES/konqsidebar_delicious.mo
 share/locale/br/LC_MESSAGES/konqsidebar_mediaplayer.mo
+share/locale/br/LC_MESSAGES/konqsidebar_metabar.mo
 share/locale/br/LC_MESSAGES/konqsidebar_news.mo
 share/locale/br/LC_MESSAGES/konqueror.mo
 share/locale/br/LC_MESSAGES/konquest.mo
