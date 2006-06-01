@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:10:49 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/06/01 20:56:33 joerg Exp $
 #
 
 DISTNAME=	cpuburn_1_4
 PKGNAME=	cpuburn-1.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://pages.sbcglobal.net/redelm/
 EXTRACT_SUFX=	_tar.gz
@@ -18,7 +18,7 @@ USE_TOOLS+=	gtar
 
 WRKSRC=         ${WRKDIR}/${PKGNAME_NOREV}
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/cpuburn
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/burnBX ${PREFIX}/bin/burnBX
@@ -27,6 +27,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/burnMMX ${PREFIX}/bin/burnMMX
 	${INSTALL_PROGRAM} ${WRKSRC}/burnP5 ${PREFIX}/bin/burnP5
 	${INSTALL_PROGRAM} ${WRKSRC}/burnP6 ${PREFIX}/bin/burnP6
-	${INSTALL_DATA}	${WRKSRC}/README ${PREFIX}/share/doc/cpuburn.README
+	${INSTALL_DATA}	${WRKSRC}/README ${PREFIX}/share/doc/cpuburn/README
 
 .include "../../mk/bsd.pkg.mk"
