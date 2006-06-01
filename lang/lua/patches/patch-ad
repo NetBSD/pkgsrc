@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2005/09/04 04:59:36 jlam Exp $
+$NetBSD: patch-ad,v 1.5 2006/06/01 06:52:28 rillig Exp $
 
---- src/lib/Makefile.orig	Fri Mar 28 12:49:56 2003
-+++ src/lib/Makefile
-@@ -7,15 +7,20 @@ include $(LUA)/config
+--- src/lib/Makefile.orig	2003-03-28 12:49:56.000000000 +0000
++++ src/lib/Makefile	2006-06-01 07:25:02.631381504 +0100
+@@ -7,16 +7,21 @@ include $(LUA)/config
  EXTRA_DEFS= $(POPEN) $(TMPNAM) $(DEGREES) $(LOADLIB)
  
  OBJS= lauxlib.o lbaselib.o ldblib.o liolib.o lmathlib.o ltablib.o lstrlib.o loadlib.o
@@ -18,9 +18,10 @@ $NetBSD: patch-ad,v 1.4 2005/09/04 04:59:36 jlam Exp $
  $T:	$(OBJS)
  	$(AR) $@ $(OBJS)
  	$(RANLIB) $@
-+
-+$(LT):	$(LOBJS)
-+	$(LIBTOOL) --mode=link $(CC) -o $@ $(LOBJS) -rpath $(INSTALL_LIB) -version-info $(LV)
  
++$(LT):	$(LOBJS)
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o $@ $(LOBJS) -rpath $(INSTALL_LIB) -version-info $(LV) $(DLLIB)
++
  clean:
  	rm -f $(OBJS) $T
+ 
