@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.53 2006/05/23 09:09:13 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.54 2006/06/01 09:31:18 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -460,8 +460,8 @@
   </sect1>
 
 
-  <sect1 id="downloading-issues">
-    <title>Possible downloading issues</title>
+<sect1 id="fixes.fetch">
+<title>Fixing problems in the <emphasis>fetch</emphasis> phase</title>
 
     <sect2 id="no-plain-download">
       <title>Packages whose distfiles aren't available for plain downloading</title>
@@ -517,8 +517,8 @@
   </sect1>
 
 
-  <sect1 id="configuration-gotchas">
-    <title>Configuration gotchas</title>
+<sect1 id="fixes.configure">
+<title>Fixing problems in the <emphasis>configure</emphasis> phase</title>
 
     <sect2 id="fixes.libtool">
       <title>Shared libraries - libtool</title>
@@ -777,50 +777,55 @@
     </sect2>
   </sect1>
 
+<sect1 id="fixes.build">
+<title>Fixing problems in the <emphasis>build</emphasis> phase</title>
 
-  <sect1 id="fixes-build">
-    <title>Building the package</title>
+	<para>The most common failures when building a package are that
+	some platforms do not provide certain header files, functions or
+	libraries, or they provide the functions in a library that the
+	original package author didn't know. To work around this, you
+	can rewrite the source code in most cases so that it does not
+	use the missing functions or provides a replacement function.</para>
 
-    <sect2 id="cpp-defines">
-      <title>CPP defines</title>
+<sect2 id="fixes.build.cpp">
+<title>Compiling C and C++ code conditionally</title>
 
-      <para>Sometimes you need to compile different code depending on
-      the target platform. The C preprocessor has a set of predefined
-      macros that can be queried by using <varname>#ifdef FOO</varname>
-      or <varname>#if defined(FOO)</varname>. Among these macros are
-      usually ones that describe the target CPU and operating system.
-      Depending of which of the macros are defined, you can write code
-      that uses features unique to a specific platform. Generally you
-      should rather use the GNU autotools (automake, autoconf, etc.) to
-      check for specific features (like the existence of a header file,
-      a function or a library), but sometimes this is not possible or
-      desired.</para>
+	<para>If a package already comes with a GNU configure script, the
+	preferred way to fix the build failure is to change the
+	configure script, not the code. In the other cases, you can
+	utilize the C preprocessor, which defines certain macros
+	depending on the operating system and hardware architecture it
+	compiles for. These macros can be queried using for example
+	<varname>#if defined(__i386)</varname>. Almost every operating
+	system, hardware architecture and compiler has its own macro.
+	For example, if the macros <varname>__GNUC__</varname>,
+	<varname>__i386__</varname> and <varname>__NetBSD__</varname>
+	are all defined, you know that you are using NetBSD on an i386
+	compatible CPU, and your compiler is GCC.</para>
 
-      <para>In that case you can use the predefined macros
-      below to configure your code to the platform it runs on. Almost
-      every operating system, hardware architecture and compiler has its
-      own macro. For example, if the macros <varname>__GNUC__</varname>,
-      <varname>__i386__</varname> and <varname>__NetBSD__</varname> are
-      all defined, you know that you are using NetBSD on an i386
-      compatible CPU, and your compiler is GCC.</para>
+	<para>The list of the following macros for hardware and
+	operating system depends on the compiler that is used. For
+	example, if you want to conditionally compile code on Solaris,
+	don't use <varname>__sun__</varname>, as the SunPro compiler
+	does not define it. Use <varname>__sun</varname> instead.</para>
 
-      <sect3 id="fixes-build-cpp-opsys">
-        <title>CPP defines for operating systems</title>
+<sect3 id="fixes.build.cpp.os">
+<title>C preprocessor macros to identify the operating system</title>
 
         <para>To distinguish between 4.4 BSD-derived systems and the
         rest of the world, you should use the following code.</para>
 
-<programlisting><![CDATA[
-    #include <sys/param.h>
-    #if (defined(BSD) && BSD >= 199306)
+<programlisting>
+    #include &lt;sys/param.h&gt;
+    #if (defined(BSD) &amp;&amp; BSD &gt;= 199306)
       /* BSD-specific code goes here */
     #else
       /* non-BSD-specific code goes here */
     #endif
-]]></programlisting>
+</programlisting>
 
-        <para>If this distinction is not fine enough, you can also use
-        the following defines.</para>
+        <para>If this distinction is not fine enough, you can also test
+	for the following macros.</para>
 
 <programlisting>
     FreeBSD     __FreeBSD__
@@ -832,8 +837,9 @@
     Solaris     sun, __sun
 </programlisting>
 
-      </sect3><sect3 id="fixes-build-cpp-cpu">
-        <title>CPP defines for CPUs</title>
+</sect3>
+<sect3 id="fixes.build.cpp.arch">
+<title>C preprocessor macros to identify the hardware architecture</title>
 
 <programlisting>
     i386        i386, __i386, __i386__
@@ -841,72 +847,18 @@
     SPARC       sparc, __sparc
 </programlisting>
 
-      </sect3><sect3 id="fixes-build-cpp-compiler">
-        <title>CPP defines for compilers</title>
+</sect3>
+<sect3 id="fixes.build.cpp.compiler">
+<title>C preprocessor macros to identify the compiler</title>
 
 <programlisting>
     GCC         __GNUC__ (major version), __GNUC_MINOR__
     SunPro      __SUNPRO_C (0x570 for version 5.7)
 </programlisting>
 
-      </sect3>
-    </sect2>
-
-    <sect2 id="cpp-list-examples">
-      <title>Examples of CPP defines for some platforms</title>
-
-      <para>The list of the CPP identification macros for hardware and
-      operating system may depend on the compiler that is used. The
-      following list contains some examples that may help you to choose
-      the right ones. For example, if you want to conditionally compile
-      code on Solaris, don't use <varname>__sun__</varname>, as the
-      SunPro compiler does not define it. Use <varname>__sun</varname>
-      instead.</para>
-
-      <variablelist>
-	<varlistentry><term>GCC 3.3.3 + SuSE Linux 9.1 + i386</term>
-        <listitem><para>__ELF__, __gnu_linux__, __i386, __i386__,
-        __linux, __linux__, __unix, __unix__, i386, linux,
-        unix.</para></listitem></varlistentry>
-
-	<varlistentry><term>GCC 2.95 + NetBSD 1.6.2 + i386</term>
-        <listitem><para>__ELF__, __NetBSD__, __i386, __i386__,
-        i386.</para></listitem></varlistentry>
-
-	<varlistentry><term>GCC 3.3.3 + NetBSD 2.0 + i386</term>
-        <listitem><para>__ELF__, __NetBSD__, __i386, __i386__,
-        i386.</para></listitem></varlistentry>
-
-	<varlistentry><term>GCC 4 + Solaris 8 + SPARC</term>
-        <listitem><para>__ELF__, __sparc, __sparc__, __sun, __sun__,
-        __SVR4, __svr4__, __unix, __unix__, sparc, sun,
-        unix.</para></listitem></varlistentry>
-
-	<varlistentry><term>SunPro 5.7 + Solaris 8 + SPARC</term>
-        <listitem><para>__SVR4, __sparc, __sun, __unix, sparc, sun,
-        unix.</para></listitem></varlistentry>
-
-      </variablelist>
-    </sect2>
-
-    <sect2 id="cpp-list">
-      <title>Getting a list of CPP defines</title>
-
-      <para>If your system uses the GNU C Compiler, you can get a list
-      of symbols that are defined by default, e.g. to identify  the
-      platform, with the following command:</para>
-
-<programlisting>
-    <![CDATA[gcc -E -dM - < /dev/null ]]>
-</programlisting>
-
-      <para>On other systems you may get the list by using the system's
-      syscall trace utility (ktrace, truss, strace) to have a look which
-      arguments are passed to the actual compiler.</para>
-
-    </sect2>
-  </sect1>
-
+</sect3>
+</sect2>
+</sect1>
 
   <sect1 id="package-specific-actions">
     <title>Package specific actions</title>
@@ -1032,6 +984,10 @@
 	  be inappropriate when e.g. one accepts a particular license to
 	  indicate to pkgsrc that a fee has been paid.</para>
     </sect2>
+</sect1>
+
+<sect1 id="fixes.install">
+<title>Fixing problems in the <emphasis>install</emphasis> phase</title>
 
     <sect2 id="installing-score-files">
       <title>Installing score files</title>
