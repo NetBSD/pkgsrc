@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2006/03/30 03:02:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.28 2006/06/01 14:19:08 markd Exp $
 bin/kcolorchooser
 bin/kcoloredit
 bin/kdvi
@@ -1139,6 +1139,7 @@ share/kde/services/kfile_tga.desktop
 share/kde/services/kfile_tiff.desktop
 share/kde/services/kfile_xbm.desktop
 share/kde/services/kfile_xpm.desktop
+share/kde/services/kghostview_part.desktop
 share/kde/services/kpdf_part.desktop
 share/kde/services/ksvglibartcanvas.desktop
 share/kde/services/ksvgplugin.desktop
