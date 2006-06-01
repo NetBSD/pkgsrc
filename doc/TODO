@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5055 2006/05/31 23:15:32 wiz Exp $
+$NetBSD: TODO,v 1.5056 2006/06/01 23:36:39 taca Exp $
 
 Suggested new packages
 ======================
@@ -451,6 +451,7 @@ Suggested package updates
 	o dnstracer-1.8
 	o doxygen-1.4.6
 	o dropbear-0.48
+	o drupal-4.7.2 [security fix: DRUPAL-SA-2006-008]
 	o dspam-3.6.6
 	o dvd+rw-tools-6.1
 	o dvdauthor-0.6.11
@@ -936,14 +937,18 @@ Suggested package updates
 	o pchar-1.5
 	o pciutils-2.2.0
 	o pdmenu-1.2.87
-	o pear-Date-1.4.4
+	o pear-Date-1.4.6
 	o pear-HTML_Common-1.2.2
-	o pear-HTTP_Request-1.2.4
-	o pear-Mail-1.1.9
+	o pear-HTTP_Request-1.3.0
+	o pear-Image_Canvas-0.3.0
+	o pear-Image_Graph-0.7.2
+	o pear-Log-1.9.6
+	o pear-Mail-1.1.10
 	o pear-Mail_Mime-1.3.1
-	o pear-Net_SMTP-1.2.7
+	o pear-Net_SMTP-1.2.8
+	o pear-Net_Sieve-1.1.3
 	o pear-Net_Socket-1.0.6
-	o pear-SOAP-0.9.1
+	o pear-SOAP-0.9.4
 	o pfqueue-0.5.2
 	o pfstat-1.8
 	o phoon-20050629
