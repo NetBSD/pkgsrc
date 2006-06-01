@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/05/31 21:53:49 hubertf Exp $
+# $NetBSD: Makefile,v 1.42 2006/06/01 15:21:29 tv Exp $
 
 DISTNAME=	mailman-2.1.8rc1
 PKGREVISION=	1
@@ -28,7 +28,7 @@ MAILMAN_USER?= 		mailman
 MAILMAN_GROUP?= 	mailman
 MAILMAN_CGIGROUP?= 	${APACHE_GROUP}
 MAILMAN_MAILGROUP?= 	daemon	# group sendmail runs under;
-				# use 'nobody' for postfix
+                                # use 'nobody' for postfix
 MAILMAN_CGIEXT?=	.cgi
 
 MESSAGE_SUBST+=		EXECDIR=${EXECDIR}
