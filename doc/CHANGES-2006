@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.392 2006/06/01 18:00:59 jlam Exp $
+$NetBSD: CHANGES-2006,v 1.393 2006/06/01 22:45:00 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2868,3 +2868,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/kdevelop-base to 3.3.3 [markd 2006-06-01]
 	Updated devel/kdevelop to 3.3.3 [markd 2006-06-01]
 	Updated www/php-eaccelerator to 0.9.5beta2 [jlam 2006-06-01]
+	Updated x11/xorg-libs to 6.9.0nb3 [tron 2006-06-01]
