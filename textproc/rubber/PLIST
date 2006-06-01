@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/08 22:55:59 tonio Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/06/01 09:09:52 tonio Exp $
 bin/rubber
 bin/rubber-info
 bin/rubber-pipe
@@ -10,7 +10,14 @@ man/fr/man1/rubber.1
 man/man1/rubber-info.1
 man/man1/rubber-pipe.1
 man/man1/rubber.1
-share/rubber/rules.ini
+share/rubber/modules/aleph.rub
+share/rubber/modules/beamer.rub
+share/rubber/modules/etex.rub
+share/rubber/modules/hyperref.rub
+share/rubber/modules/minitoc-hyper.rub
+share/rubber/modules/ntheroem.rub
+share/rubber/modules/omega.rub
+share/rubber/modules/revtex4.rub
 share/rubber/rubber/__init__.py
 share/rubber/rubber/__init__.pyc
 share/rubber/rubber/cmd_info.py
@@ -47,6 +54,8 @@ share/rubber/rubber/rules/latex/graphicx.py
 share/rubber/rubber/rules/latex/graphicx.pyc
 share/rubber/rubber/rules/latex/gz.py
 share/rubber/rubber/rules/latex/gz.pyc
+share/rubber/rubber/rules/latex/import.py
+share/rubber/rubber/rules/latex/import.pyc
 share/rubber/rubber/rules/latex/index.py
 share/rubber/rubber/rules/latex/index.pyc
 share/rubber/rubber/rules/latex/listings.py
@@ -84,14 +93,7 @@ share/rubber/rubber/util.pyc
 share/rubber/rubber/version.py
 share/rubber/rubber/version.py
 share/rubber/rubber/version.pyc
-share/rubber/modules/aleph.rub
-share/rubber/modules/beamer.rub
-share/rubber/modules/etex.rub
-share/rubber/modules/hyperref.rub
-share/rubber/modules/minitoc-hyper.rub
-share/rubber/modules/ntheroem.rub
-share/rubber/modules/omega.rub
-share/rubber/modules/revtex4.rub
+share/rubber/rules.ini
 @dirrm share/rubber/rubber/rules/latex
 @dirrm share/rubber/rubber/rules
 @dirrm share/rubber/rubber

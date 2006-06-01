@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/05/13 03:44:24 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2006/06/01 09:09:52 tonio Exp $
 #
 
 DISTNAME=		rubber-1.1
+PKGREVISION=		1
 CATEGORIES=		textproc
 MASTER_SITES=		http://ebeffara.free.fr/pub/
 
@@ -17,7 +18,7 @@ TEXINFO_REQD=		4.6
 PYTHON_VERSIONS_ACCEPTED=	24 23
 TEX_ACCEPTED=		teTeX2 teTeX3
 
-CONFIGURE_ARGS+=	--python=${PYTHONBIN:Q}				
+CONFIGURE_ARGS+=	--python=${PYTHONBIN:Q}
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--datadir=${PREFIX:Q}/share
 CONFIGURE_ARGS+=	--mandir=${PREFIX:Q}/${PKGMANDIR:Q}
