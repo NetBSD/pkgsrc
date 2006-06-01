@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/13 12:15:16 ghen Exp $
+# $NetBSD: Makefile,v 1.4 2006/06/01 21:03:43 joerg Exp $
 
 DISTNAME=	wsbasic-1_2_5
 PKGNAME=	${DISTNAME:S/_/./g}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wsbasic/}
 MAINTAINER=	ghen@NetBSD.org
 HOMEPAGE=	http://wsbasic.sourceforge.net/
 COMMENT=	Simple BASIC interpreter
+
+USE_LANGUAGES=	c++
 
 SUBST_CLASSES+=			interpreter
 SUBST_STAGE.interpreter=	pre-install
