@@ -1,8 +1,17 @@
-$NetBSD: patch-ap,v 1.3 2002/07/08 02:21:20 kim Exp $
+$NetBSD: patch-ap,v 1.4 2006/06/01 23:11:29 joerg Exp $
 
---- global.h.orig	Sun Feb  3 22:53:13 2002
-+++ global.h	Sun Jul  7 21:33:09 2002
-@@ -374,12 +374,12 @@
+--- global.h.orig	2002-02-04 03:53:13.000000000 +0000
++++ global.h
+@@ -146,8 +146,6 @@ extern gid_t    group_id;
+ extern int
+     process_id;
+ 
+-extern int errno;
+-
+ /*
+  *	Storage management
+  */
+@@ -374,12 +372,12 @@ void	db_read_group	__APROTO((group_heade
  void	db_read_group	__APROTO((group_header *gh));
  #endif
  void	db_write_group	__APROTO((group_header *gh));
