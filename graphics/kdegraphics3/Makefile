@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2006/05/31 13:37:46 tron Exp $
+# $NetBSD: Makefile,v 1.67 2006/06/01 14:19:08 markd Exp $
 
 DISTNAME=	kdegraphics-${_KDE_VERSION}
-PKGREVISION=	2
 CATEGORIES=	graphics
 COMMENT=	Graphics programs for the KDE integrated X11 desktop
 
@@ -11,7 +10,6 @@ USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gs:run pkg-config
 
 BUILDLINK_API_DEPENDS.lcms+=	lcms>=1.12
-BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.2.1
 
 REPLACE_PERL+=	kghostview/update-to-xt-names.pl
 
