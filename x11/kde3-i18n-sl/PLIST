@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/04/17 07:07:47 jlam Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/06/01 14:37:34 markd Exp $
 share/doc/kde/HTML/sl/common/fdl-translated.html
 share/doc/kde/HTML/sl/common/gpl-translated.html
 share/doc/kde/HTML/sl/common/kde-localised.css
@@ -314,6 +314,7 @@ share/locale/sl/LC_MESSAGES/audiocd_encoder_vorbis.mo
 share/locale/sl/LC_MESSAGES/audiorename_plugin.mo
 share/locale/sl/LC_MESSAGES/autorefresh.mo
 share/locale/sl/LC_MESSAGES/babelfish.mo
+share/locale/sl/LC_MESSAGES/blinken.mo
 share/locale/sl/LC_MESSAGES/cervisia.mo
 share/locale/sl/LC_MESSAGES/charlatanui.mo
 share/locale/sl/LC_MESSAGES/clockapplet.mo
@@ -647,6 +648,7 @@ share/locale/sl/LC_MESSAGES/kmouth.mo
 share/locale/sl/LC_MESSAGES/kmplot.mo
 share/locale/sl/LC_MESSAGES/kmrml.mo
 share/locale/sl/LC_MESSAGES/knetattach.mo
+share/locale/sl/LC_MESSAGES/knetwalk.mo
 share/locale/sl/LC_MESSAGES/knewsticker.mo
 share/locale/sl/LC_MESSAGES/knode.mo
 share/locale/sl/LC_MESSAGES/knotes.mo
@@ -793,6 +795,7 @@ share/locale/sl/LC_MESSAGES/libkaddrbk_geo_xxport.mo
 share/locale/sl/LC_MESSAGES/libkaddrbk_gmx_xxport.mo
 share/locale/sl/LC_MESSAGES/libkcal.mo
 share/locale/sl/LC_MESSAGES/libkcddb.mo
+share/locale/sl/LC_MESSAGES/libkdeedu.mo
 share/locale/sl/LC_MESSAGES/libkdegames.mo
 share/locale/sl/LC_MESSAGES/libkdepim.mo
 share/locale/sl/LC_MESSAGES/libkfaximgage.mo

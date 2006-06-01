@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2006/04/17 07:07:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.23 2006/06/01 14:37:32 markd Exp $
 share/doc/kde/HTML/it/KRegExpEditor/common
 share/doc/kde/HTML/it/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/it/KRegExpEditor/index.docbook
@@ -13,7 +13,9 @@ share/doc/kde/HTML/it/ark/common
 share/doc/kde/HTML/it/ark/index.cache.bz2
 share/doc/kde/HTML/it/ark/index.docbook
 share/doc/kde/HTML/it/ark/man-ark.1.docbook
+share/doc/kde/HTML/it/artsbuilder/apis.docbook
 share/doc/kde/HTML/it/artsbuilder/digitalaudio.docbook
+share/doc/kde/HTML/it/artsbuilder/future.docbook
 share/doc/kde/HTML/it/artsbuilder/glossary.docbook
 share/doc/kde/HTML/it/artsbuilder/helping.docbook
 share/doc/kde/HTML/it/artsbuilder/midiintro.docbook
@@ -107,6 +109,9 @@ share/doc/kde/HTML/it/kate/plugins.docbook
 share/doc/kde/HTML/it/katomic/common
 share/doc/kde/HTML/it/katomic/index.cache.bz2
 share/doc/kde/HTML/it/katomic/index.docbook
+share/doc/kde/HTML/it/kaudiocreator/common
+share/doc/kde/HTML/it/kaudiocreator/index.cache.bz2
+share/doc/kde/HTML/it/kaudiocreator/index.docbook
 share/doc/kde/HTML/it/kbabel/catman.docbook
 share/doc/kde/HTML/it/kbabel/common
 share/doc/kde/HTML/it/kbabel/dictionaries.docbook
@@ -328,7 +333,12 @@ share/doc/kde/HTML/it/kdelirc/irkick/index.docbook
 share/doc/kde/HTML/it/kdelirc/kcmlirc/common
 share/doc/kde/HTML/it/kdelirc/kcmlirc/index.cache.bz2
 share/doc/kde/HTML/it/kdelirc/kcmlirc/index.docbook
+share/doc/kde/HTML/it/kdeprint/add-printer-wiz.docbook
 share/doc/kde/HTML/it/kdeprint/cups-config.docbook
+share/doc/kde/HTML/it/kdeprint/cupsaddprinterwizard1.png
+share/doc/kde/HTML/it/kdeprint/cupsaddprinterwizard2_backendselection.png
+share/doc/kde/HTML/it/kdeprint/cupsaddprinterwizard3_networkscan.png
+share/doc/kde/HTML/it/kdeprint/cupsaddprinterwizard4_networkscan_config.png
 share/doc/kde/HTML/it/kdeprint/extensions.docbook
 share/doc/kde/HTML/it/kdeprint/external-command.docbook
 share/doc/kde/HTML/it/kdeprint/getting-started.docbook
@@ -531,6 +541,7 @@ share/doc/kde/HTML/it/khelpcenter/userguide/glossary.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/history.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/installation.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/intro.docbook
+share/doc/kde/HTML/it/khelpcenter/userguide/kde-edutainment.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/kdeadmin-apps.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/kdebase-apps.docbook
 share/doc/kde/HTML/it/khelpcenter/userguide/kdeedu-apps.docbook
@@ -789,6 +800,7 @@ share/doc/kde/HTML/it/knode/faq.docbook
 share/doc/kde/HTML/it/knode/gloss.docbook
 share/doc/kde/HTML/it/knode/install.docbook
 share/doc/kde/HTML/it/knode/introduction.docbook
+share/doc/kde/HTML/it/knode/more.docbook
 share/doc/kde/HTML/it/knotes/common
 share/doc/kde/HTML/it/knotes/index.cache.bz2
 share/doc/kde/HTML/it/knotes/index.docbook
@@ -918,6 +930,9 @@ share/doc/kde/HTML/it/korn/index.docbook
 share/doc/kde/HTML/it/kpackage/common
 share/doc/kde/HTML/it/kpackage/index.cache.bz2
 share/doc/kde/HTML/it/kpackage/index.docbook
+share/doc/kde/HTML/it/kpager/common
+share/doc/kde/HTML/it/kpager/index.cache.bz2
+share/doc/kde/HTML/it/kpager/index.docbook
 share/doc/kde/HTML/it/kpat/common
 share/doc/kde/HTML/it/kpat/index.cache.bz2
 share/doc/kde/HTML/it/kpat/index.docbook
@@ -939,13 +954,41 @@ share/doc/kde/HTML/it/kpercentage/using.docbook
 share/doc/kde/HTML/it/kpf/common
 share/doc/kde/HTML/it/kpf/index.cache.bz2
 share/doc/kde/HTML/it/kpf/index.docbook
+share/doc/kde/HTML/it/kpilot/address-app.png
 share/doc/kde/HTML/it/kpilot/common
+share/doc/kde/HTML/it/kpilot/conduit-knotes.png
+share/doc/kde/HTML/it/kpilot/conduit-mal.png
+share/doc/kde/HTML/it/kpilot/conduit-palmdoc.png
+share/doc/kde/HTML/it/kpilot/conduit-popmail-kmail.png
+share/doc/kde/HTML/it/kpilot/conduit-sysinfo.png
+share/doc/kde/HTML/it/kpilot/conduit-vcal.png
 share/doc/kde/HTML/it/kpilot/configuration.docbook
+share/doc/kde/HTML/it/kpilot/daemon-menu.png
+share/doc/kde/HTML/it/kpilot/db-app.png
 share/doc/kde/HTML/it/kpilot/faq.docbook
+share/doc/kde/HTML/it/kpilot/file-app.png
 share/doc/kde/HTML/it/kpilot/index.cache.bz2
 share/doc/kde/HTML/it/kpilot/index.docbook
+share/doc/kde/HTML/it/kpilot/main-app.png
+share/doc/kde/HTML/it/kpilot/memo-app.png
+share/doc/kde/HTML/it/kpilot/setup-address.png
+share/doc/kde/HTML/it/kpilot/setup-conduit.png
+share/doc/kde/HTML/it/kpilot/setup-dbspecial.png
+share/doc/kde/HTML/it/kpilot/setup-general.png
+share/doc/kde/HTML/it/kpilot/setup-hotsync.png
+share/doc/kde/HTML/it/kpilot/setup-items.png
+share/doc/kde/HTML/it/kpilot/setup-startup-exit.png
+share/doc/kde/HTML/it/kpilot/setup-tabs.png
+share/doc/kde/HTML/it/kpilot/setup-viewer.png
+share/doc/kde/HTML/it/kpilot/sidebar.png
 share/doc/kde/HTML/it/kpilot/sync.docbook
+share/doc/kde/HTML/it/kpilot/todo-app.png
+share/doc/kde/HTML/it/kpilot/toolbar_backup.png
+share/doc/kde/HTML/it/kpilot/toolbar_hotsync.png
 share/doc/kde/HTML/it/kpilot/usage.docbook
+share/doc/kde/HTML/it/kpilot/wizard-conduits.png
+share/doc/kde/HTML/it/kpilot/wizard-connection.png
+share/doc/kde/HTML/it/kpilot/wizard-general.png
 share/doc/kde/HTML/it/kpoker/common
 share/doc/kde/HTML/it/kpoker/index.cache.bz2
 share/doc/kde/HTML/it/kpoker/index.docbook
@@ -954,6 +997,8 @@ share/doc/kde/HTML/it/kppp/callback.docbook
 share/doc/kde/HTML/it/kppp/chap.docbook
 share/doc/kde/HTML/it/kppp/getting-online.docbook
 share/doc/kde/HTML/it/kppp/global-settings.docbook
+share/doc/kde/HTML/it/kppp/kppp-dialler-tab.png
+share/doc/kde/HTML/it/kppp/kppp-wizard.png
 share/doc/kde/HTML/it/kppp/security.docbook
 share/doc/kde/HTML/it/kppp/tricks.docbook
 share/doc/kde/HTML/it/kppp/wizard.docbook
@@ -1286,6 +1331,8 @@ share/doc/kde/HTML/it/scripts/man-cvscheck.1.docbook
 share/doc/kde/HTML/it/scripts/man-cvslastchange.1.docbook
 share/doc/kde/HTML/it/scripts/man-cvslastlog.1.docbook
 share/doc/kde/HTML/it/scripts/man-cvsrevertlast.1.docbook
+share/doc/kde/HTML/it/scripts/man-cxxmetric.1.docbook
+share/doc/kde/HTML/it/scripts/man-demangle.1.docbook
 share/doc/kde/HTML/it/scripts/man-extend_dmalloc.1.docbook
 share/doc/kde/HTML/it/scripts/man-extractrc.1.docbook
 share/doc/kde/HTML/it/scripts/man-fixincludes.1.docbook
@@ -2115,6 +2162,7 @@ share/locale/it/flag.png
 @dirrm share/doc/kde/HTML/it/kpercentage
 @dirrm share/doc/kde/HTML/it/kpdf
 @dirrm share/doc/kde/HTML/it/kpat
+@dirrm share/doc/kde/HTML/it/kpager
 @dirrm share/doc/kde/HTML/it/kpackage
 @dirrm share/doc/kde/HTML/it/korn
 @dirrm share/doc/kde/HTML/it/korganizer
@@ -2285,6 +2333,7 @@ share/locale/it/flag.png
 @dirrm share/doc/kde/HTML/it/kbattleship
 @dirrm share/doc/kde/HTML/it/kbackgammon
 @dirrm share/doc/kde/HTML/it/kbabel
+@dirrm share/doc/kde/HTML/it/kaudiocreator
 @dirrm share/doc/kde/HTML/it/katomic
 @dirrm share/doc/kde/HTML/it/kate-plugins
 @dirrm share/doc/kde/HTML/it/kate

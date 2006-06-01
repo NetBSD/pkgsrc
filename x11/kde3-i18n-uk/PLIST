@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/04/17 07:07:48 jlam Exp $
+@comment $NetBSD: PLIST,v 1.21 2006/06/01 14:37:35 markd Exp $
 share/doc/kde/HTML/uk/common/kde-localised.css
 share/doc/kde/HTML/uk/common/logotp3.png
 share/doc/kde/HTML/uk/kbabel/catman.docbook
@@ -75,6 +75,7 @@ share/locale/uk/LC_MESSAGES/kaccess.mo
 share/locale/uk/LC_MESSAGES/kaddressbook.mo
 share/locale/uk/LC_MESSAGES/kalarm.mo
 share/locale/uk/LC_MESSAGES/kalzium.mo
+share/locale/uk/LC_MESSAGES/kanagram.mo
 share/locale/uk/LC_MESSAGES/kandy.mo
 share/locale/uk/LC_MESSAGES/kappfinder.mo
 share/locale/uk/LC_MESSAGES/karm.mo

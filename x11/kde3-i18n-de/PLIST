@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/04/17 07:07:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.21 2006/06/01 14:37:30 markd Exp $
 share/doc/kde/HTML/de/KRegExpEditor/common
 share/doc/kde/HTML/de/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/de/KRegExpEditor/index.docbook
@@ -61,16 +61,35 @@ share/doc/kde/HTML/de/kalarm/common
 share/doc/kde/HTML/de/kalarm/index.cache.bz2
 share/doc/kde/HTML/de/kalarm/index.docbook
 share/doc/kde/HTML/de/kalzium/common
+share/doc/kde/HTML/de/kalzium/gradient.png
 share/doc/kde/HTML/de/kalzium/index.cache.bz2
 share/doc/kde/HTML/de/kalzium/index.docbook
+share/doc/kde/HTML/de/kalzium/infodialog_bohr.png
+share/doc/kde/HTML/de/kalzium/infodialog_chemicaldata.png
+share/doc/kde/HTML/de/kalzium/infodialog_energies.png
+share/doc/kde/HTML/de/kalzium/infodialog_misc.png
+share/doc/kde/HTML/de/kalzium/infodialog_overview.png
+share/doc/kde/HTML/de/kalzium/infodialog_picture.png
+share/doc/kde/HTML/de/kalzium/infodialog_spectrum.png
 share/doc/kde/HTML/de/kalzium/man-kalzium.1.docbook
+share/doc/kde/HTML/de/kalzium/plottingdialog.png
+share/doc/kde/HTML/de/kalzium/quick-1.png
 share/doc/kde/HTML/de/kalzium/screenshot1.png
 share/doc/kde/HTML/de/kalzium/screenshot2.png
 share/doc/kde/HTML/de/kalzium/screenshot3.png
 share/doc/kde/HTML/de/kalzium/screenshot4.png
 share/doc/kde/HTML/de/kalzium/screenshot5.png
 share/doc/kde/HTML/de/kalzium/screenshot6.png
+share/doc/kde/HTML/de/kalzium/screenshot7.png
+share/doc/kde/HTML/de/kalzium/screenshoteqsolver.png
 share/doc/kde/HTML/de/kalzium/settings.png
+share/doc/kde/HTML/de/kalzium/settings1.png
+share/doc/kde/HTML/de/kalzium/settings2.png
+share/doc/kde/HTML/de/kalzium/settings3.png
+share/doc/kde/HTML/de/kalzium/sidebar1.png
+share/doc/kde/HTML/de/kalzium/sidebar2.png
+share/doc/kde/HTML/de/kalzium/sidebar3.png
+share/doc/kde/HTML/de/kalzium/timeline.png
 share/doc/kde/HTML/de/kamera/common
 share/doc/kde/HTML/de/kamera/index.cache.bz2
 share/doc/kde/HTML/de/kamera/index.docbook
@@ -91,11 +110,13 @@ share/doc/kde/HTML/de/kasteroids/common
 share/doc/kde/HTML/de/kasteroids/index.cache.bz2
 share/doc/kde/HTML/de/kasteroids/index.docbook
 share/doc/kde/HTML/de/kate-plugins/common
+share/doc/kde/HTML/de/kate-plugins/configure_insertcommand.png
 share/doc/kde/HTML/de/kate-plugins/filetemplates.docbook
 share/doc/kde/HTML/de/kate-plugins/htmltools.docbook
 share/doc/kde/HTML/de/kate-plugins/index.cache.bz2
 share/doc/kde/HTML/de/kate-plugins/index.docbook
 share/doc/kde/HTML/de/kate-plugins/insertcommand.docbook
+share/doc/kde/HTML/de/kate-plugins/insertcommand.png
 share/doc/kde/HTML/de/kate-plugins/openheader.docbook
 share/doc/kde/HTML/de/kate-plugins/textfilter.docbook
 share/doc/kde/HTML/de/kate-plugins/xmlcheck.docbook
@@ -150,6 +171,7 @@ share/doc/kde/HTML/de/kbruch/factorize.png
 share/doc/kde/HTML/de/kbruch/gui_main.png
 share/doc/kde/HTML/de/kbruch/index.cache.bz2
 share/doc/kde/HTML/de/kbruch/index.docbook
+share/doc/kde/HTML/de/kbruch/man-kbruch.1.docbook
 share/doc/kde/HTML/de/kbruch/reduced.png
 share/doc/kde/HTML/de/kbruch/settings.png
 share/doc/kde/HTML/de/kbugbuster/common
@@ -814,6 +836,7 @@ share/doc/kde/HTML/de/kmplot/index.docbook
 share/doc/kde/HTML/de/kmplot/install.docbook
 share/doc/kde/HTML/de/kmplot/introduction.docbook
 share/doc/kde/HTML/de/kmplot/main.png
+share/doc/kde/HTML/de/kmplot/man-kmplot.1.docbook
 share/doc/kde/HTML/de/kmplot/menu.docbook
 share/doc/kde/HTML/de/kmplot/reference.docbook
 share/doc/kde/HTML/de/kmplot/settingsdlg.png
@@ -1006,12 +1029,23 @@ share/doc/kde/HTML/de/kopete/index.cache.bz2
 share/doc/kde/HTML/de/kopete/index.docbook
 share/doc/kde/HTML/de/kopete/menus.docbook
 share/doc/kde/HTML/de/korganizer/common
+share/doc/kde/HTML/de/korganizer/event-attachments.png
+share/doc/kde/HTML/de/korganizer/event-attendees.png
+share/doc/kde/HTML/de/korganizer/event-freebusy.png
+share/doc/kde/HTML/de/korganizer/event-general.png
+share/doc/kde/HTML/de/korganizer/event-recurrence.png
 share/doc/kde/HTML/de/korganizer/exchange-plugin.docbook
 share/doc/kde/HTML/de/korganizer/group-scheduling.docbook
 share/doc/kde/HTML/de/korganizer/index.cache.bz2
 share/doc/kde/HTML/de/korganizer/index.docbook
+share/doc/kde/HTML/de/korganizer/korganizer-resource.png
+share/doc/kde/HTML/de/korganizer/o2v_importing1.png
+share/doc/kde/HTML/de/korganizer/o2v_importing2.png
+share/doc/kde/HTML/de/korganizer/o2v_importing3.png
 share/doc/kde/HTML/de/korganizer/outlook-to-vcalendar.docbook
 share/doc/kde/HTML/de/korganizer/plugins-chapter.docbook
+share/doc/kde/HTML/de/korganizer/remotefile-resource.png
+share/doc/kde/HTML/de/korganizer/todo-general.png
 share/doc/kde/HTML/de/korn/common
 share/doc/kde/HTML/de/korn/index.cache.bz2
 share/doc/kde/HTML/de/korn/index.docbook
@@ -1171,7 +1205,6 @@ share/doc/kde/HTML/de/ksokoban/index.docbook
 share/doc/kde/HTML/de/kspaceduel/common
 share/doc/kde/HTML/de/kspaceduel/index.cache.bz2
 share/doc/kde/HTML/de/kspaceduel/index.docbook
-share/doc/kde/HTML/de/kspaceduel/kspaceduel1.png
 share/doc/kde/HTML/de/kspaceduel/kspaceduel3.png
 share/doc/kde/HTML/de/kspell/common
 share/doc/kde/HTML/de/kspell/index.cache.bz2
@@ -1518,6 +1551,9 @@ share/doc/kde/HTML/de/quanta/q-and-a.docbook
 share/doc/kde/HTML/de/quanta/quanta-menus.docbook
 share/doc/kde/HTML/de/quanta/quanta-projects.docbook
 share/doc/kde/HTML/de/quanta/working-with-quanta.docbook
+share/doc/kde/HTML/de/superkaramba/common
+share/doc/kde/HTML/de/superkaramba/index.cache.bz2
+share/doc/kde/HTML/de/superkaramba/index.docbook
 share/doc/kde/HTML/de/umbrello/activity-diagram.png
 share/doc/kde/HTML/de/umbrello/add-remove-languages.png
 share/doc/kde/HTML/de/umbrello/aggregation.png
@@ -2150,6 +2186,7 @@ share/locale/de/flag.png
 @comment in kde: @dirrm share/kde/apps/khangman
 @comment in kde: @dirrm share/kde/apps/katepart/syntax
 @dirrm share/doc/kde/HTML/de/umbrello
+@dirrm share/doc/kde/HTML/de/superkaramba
 @dirrm share/doc/kde/HTML/de/quanta
 @dirrm share/doc/kde/HTML/de/noatun
 @dirrm share/doc/kde/HTML/de/lskat
