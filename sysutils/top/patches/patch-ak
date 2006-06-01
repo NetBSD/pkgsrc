@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.2 2004/07/12 08:14:44 cube Exp $
+$NetBSD: patch-ak,v 1.3 2006/06/01 21:55:28 joerg Exp $
 
 --- configure.orig	2004-04-21 04:02:42.000000000 +0000
 +++ configure
-@@ -3470,6 +3470,10 @@ else
+@@ -3470,6 +3470,11 @@ else
  	dec-osf*)	MODULE=decosf1;;
  	osf1*)		MODULE=decosf1;;
          freebsd*)	MODULE=freebsd;;
@@ -10,6 +10,7 @@ $NetBSD: patch-ak,v 1.2 2004/07/12 08:14:44 cube Exp $
 +        netbsd10)	MODULE=netbsd10;;
 +        netbsd13*)	MODULE=netbsd132;;
 +        netbsd*)	MODULE=netbsd20;;
++        dragonfly*)	MODULE=dragonfly; LIBS="$LIBS -lkinfo";;
  	hpux7*)		MODULE=hpux7;;
  	hpux8*)		MODULE=hpux8;;
  	hpux9*)		MODULE=hpux9;;
