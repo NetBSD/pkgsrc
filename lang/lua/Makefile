@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2006/03/04 21:29:54 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/06/01 06:52:27 rillig Exp $
 
 DISTNAME=	lua-5.0.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/lua/ \
 		ftp://ftp.ntua.gr/pub/lang/lua/ \
@@ -23,11 +23,9 @@ COMMENT=	Powerful light-weight language for extending applications
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=	yes
-DL_AUTO_VARS=	yes
-LIBS+=		${BUILDLINK_LDADD.dl}
-LUA_CFLAGS=	${CFLAGS}
-LUA_LDFLAGS=	${LDFLAGS} ${LIBS}
-MAKE_ENV+=	MYCFLAGS=${LUA_CFLAGS:Q} MYLDFLAGS=${LUA_LDFLAGS:Q}
+MAKE_ENV+=	MYCFLAGS=${CFLAGS:M*:Q}
+MAKE_ENV+=	MYLDFLAGS=${LDFLAGS:M*:Q}\ ${LIBS:M*:Q}
+MAKE_ENV+=	DLLIB=${BUILDLINK_LDADD.dl:Q}
 
 DOCDIR=		${PREFIX}/share/doc/lua
 EGDIR=		${PREFIX}/share/examples/lua
@@ -39,19 +37,23 @@ post-build:
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
+	set -e; \
 	cd ${WRKSRC}; for f in README COPYRIGHT HISTORY; do		\
-		${INSTALL_DATA} $$f ${DOCDIR};				\
+		${INSTALL_DATA} "$$f" ${DOCDIR};			\
 	done
+	set -e; \
 	cd ${WRKSRC}/doc; for f in *.html *.gif; do			\
-		${INSTALL_DATA} $$f ${DOCDIR};				\
+		${INSTALL_DATA} "$$f" ${DOCDIR};			\
 	done
 	${INSTALL_DATA_DIR} ${EGDIR}
+	set -e; \
 	cd ${WRKSRC}/test; for f in README *.lua; do			\
-		${INSTALL_DATA} $$f ${EGDIR};				\
+		${INSTALL_DATA} "$$f" ${EGDIR};				\
 	done
 	${INSTALL_DATA_DIR} ${EGDIR}/etc
+	set -e; \
 	cd ${WRKSRC}/etc; for f in README *.c *.h *.lua lua.magic lua.xpm; do \
-		${INSTALL_DATA} $$f ${EGDIR}/etc;			\
+		${INSTALL_DATA} "$$f" ${EGDIR}/etc;			\
 	done
 	${INSTALL_PROGRAM} ${WRKSRC}/etc/bin2c ${PREFIX}/bin
 
