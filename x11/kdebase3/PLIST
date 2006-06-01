@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2006/04/17 07:07:48 jlam Exp $
+@comment $NetBSD: PLIST,v 1.43 2006/06/01 13:46:31 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -13,6 +13,7 @@ bin/kbookmarkmerger
 bin/kcheckpass
 bin/kcheckrunning
 bin/kcminit
+bin/kcminit_startup
 bin/kcontrol
 bin/kcontroledit
 bin/kdcop
@@ -217,6 +218,7 @@ ${HAVE_USBVIEW}lib/kde3/kcm_usb.la
 lib/kde3/kcm_useraccount.la
 lib/kde3/kcm_xinerama.la
 lib/kde3/kcminit.la
+lib/kde3/kcminit_startup.la
 lib/kde3/kcontrol.la
 lib/kde3/kcontroledit.la
 lib/kde3/kded_favicons.la
@@ -351,6 +353,7 @@ lib/libkdeinit_extensionproxy.la
 lib/libkdeinit_kaccess.la
 lib/libkdeinit_kate.la
 lib/libkdeinit_kcminit.la
+lib/libkdeinit_kcminit_startup.la
 lib/libkdeinit_kcontrol.la
 lib/libkdeinit_kcontroledit.la
 lib/libkdeinit_kdesktop.la
@@ -1161,7 +1164,6 @@ share/kde/applnk/Settings/LookNFeel/panel_appearance.desktop
 share/kde/applnk/Settings/WebBrowsing/khtml_appearance.desktop
 share/kde/applnk/Settings/WebBrowsing/nsplugin.desktop
 share/kde/applnk/Settings/WebBrowsing/smb.desktop
-share/kde/applnk/Settingsmenu/printmgr.desktop
 share/kde/applnk/System/ScreenSavers/KBlankscreen.desktop
 share/kde/applnk/System/ScreenSavers/KRandom.desktop
 share/kde/applnk/System/kappfinder.desktop
