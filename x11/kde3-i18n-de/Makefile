@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2006/04/17 13:46:54 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2006/06/01 14:37:30 markd Exp $
 
 DISTNAME=	kde-i18n-de-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_KDE_I18N}
 
@@ -15,7 +14,7 @@ SUBST_CLASSES+=		common
 SUBST_STAGE.common=	post-patch
 SUBST_MESSAGE.common=	Fix common documentation path.
 SUBST_FILES.common=	docs/common/Makefile.in
-SUBST_SED.common=	-e s:de/docs/common:common:
+SUBST_SED.common=	-e s:/docs/common:/common:
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"

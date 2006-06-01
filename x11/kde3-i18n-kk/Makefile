@@ -1,0 +1,15 @@
+# $NetBSD: Makefile,v 1.1 2006/06/01 14:37:32 markd Exp $
+
+DISTNAME=	kde-i18n-kk-${_KDE_VERSION}
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_KDE_I18N}
+
+COMMENT=	Language bindings for the KDE desktop
+
+.include "../../meta-pkgs/kde3/Makefile.kde3"
+
+USE_TOOLS+=		msgfmt
+
+.include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../x11/kdelibs3/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

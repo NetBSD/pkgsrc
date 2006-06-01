@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/04/17 07:07:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/06/01 14:37:31 markd Exp $
 share/doc/kde/HTML/et/KRegExpEditor/common
 share/doc/kde/HTML/et/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/et/KRegExpEditor/index.docbook
@@ -1334,6 +1334,11 @@ share/doc/kde/HTML/et/xsldbg/index.cache.bz2
 share/doc/kde/HTML/et/xsldbg/index.docbook
 share/doc/kde/HTML/et/xsldbg/introduction.docbook
 share/doc/kde/HTML/et/xsldbg/usage.docbook
+share/kde/apps/khangman/data/et/animals.kvtml
+share/kde/apps/khangman/data/et/easy.kvtml
+share/kde/apps/khangman/data/et/hard.kvtml
+share/kde/apps/khangman/data/et/medium.kvtml
+share/kde/apps/khangman/et.txt
 share/locale/et/LC_MESSAGES/akregator.mo
 share/locale/et/LC_MESSAGES/akregator_konqplugin.mo
 share/locale/et/LC_MESSAGES/alsaplayerui.mo
@@ -1898,6 +1903,8 @@ share/locale/et/LC_MESSAGES/webarchiver.mo
 share/locale/et/charset
 share/locale/et/entry.desktop
 share/locale/et/flag.png
+@dirrm share/kde/apps/khangman/data/et
+@comment in kde: @dirrm share/kde/apps/khangman
 @dirrm share/doc/kde/HTML/et/xsldbg
 @dirrm share/doc/kde/HTML/et/umbrello
 @dirrm share/doc/kde/HTML/et/superkaramba

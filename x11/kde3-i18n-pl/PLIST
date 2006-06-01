@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2006/04/17 07:07:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.20 2006/06/01 14:37:33 markd Exp $
 share/doc/kde/HTML/pl/ark/common
 share/doc/kde/HTML/pl/ark/index.cache.bz2
 share/doc/kde/HTML/pl/ark/index.docbook
@@ -45,6 +45,26 @@ share/doc/kde/HTML/pl/kcalc/commands.docbook
 share/doc/kde/HTML/pl/kcalc/common
 share/doc/kde/HTML/pl/kcalc/index.cache.bz2
 share/doc/kde/HTML/pl/kcalc/index.docbook
+share/doc/kde/HTML/pl/kdeprint/add-printer-wiz.docbook
+share/doc/kde/HTML/pl/kdeprint/common
+share/doc/kde/HTML/pl/kdeprint/cups-config.docbook
+share/doc/kde/HTML/pl/kdeprint/cupsoptions.docbook
+share/doc/kde/HTML/pl/kdeprint/extensions.docbook
+share/doc/kde/HTML/pl/kdeprint/external-command.docbook
+share/doc/kde/HTML/pl/kdeprint/final-word.docbook
+share/doc/kde/HTML/pl/kdeprint/getting-started.docbook
+share/doc/kde/HTML/pl/kdeprint/highlights.docbook
+share/doc/kde/HTML/pl/kdeprint/index.cache.bz2
+share/doc/kde/HTML/pl/kdeprint/index.docbook
+share/doc/kde/HTML/pl/kdeprint/lpd.docbook
+share/doc/kde/HTML/pl/kdeprint/lpr-bsd.docbook
+share/doc/kde/HTML/pl/kdeprint/lprng.docbook
+share/doc/kde/HTML/pl/kdeprint/rlpr.docbook
+share/doc/kde/HTML/pl/kdeprint/tech-overview.docbook
+share/doc/kde/HTML/pl/kdeprint/theory.docbook
+share/doc/kde/HTML/pl/kdesu/common
+share/doc/kde/HTML/pl/kdesu/index.cache.bz2
+share/doc/kde/HTML/pl/kdesu/index.docbook
 share/doc/kde/HTML/pl/kdevelop/tip.database
 share/doc/kde/HTML/pl/keduca/common
 share/doc/kde/HTML/pl/keduca/index.cache.bz2
@@ -71,16 +91,43 @@ share/doc/kde/HTML/pl/kgeography/index.docbook
 share/doc/kde/HTML/pl/kgeography/kgeography.png
 share/doc/kde/HTML/pl/kgeography/river.png
 share/doc/kde/HTML/pl/kgeography/zoom.png
+share/doc/kde/HTML/pl/kget/common
+share/doc/kde/HTML/pl/kget/index.cache.bz2
+share/doc/kde/HTML/pl/kget/index.docbook
 share/doc/kde/HTML/pl/khangman/common
 share/doc/kde/HTML/pl/khangman/index.cache.bz2
 share/doc/kde/HTML/pl/khangman/index.docbook
 share/doc/kde/HTML/pl/khangman/khangman1.png
 share/doc/kde/HTML/pl/khangman/khangman2.png
+share/doc/kde/HTML/pl/khangman/man-khangman.6.docbook
 share/doc/kde/HTML/pl/khangman/settings1.png
 share/doc/kde/HTML/pl/khangman/settings2.png
 share/doc/kde/HTML/pl/khangman/settings3.png
 share/doc/kde/HTML/pl/khelpcenter/common
 share/doc/kde/HTML/pl/khelpcenter/contact.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/about.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/common
+share/doc/kde/HTML/pl/khelpcenter/faq/configkde.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/contrib.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/desktop.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/filemng.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/getkde.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/index.cache.bz2
+share/doc/kde/HTML/pl/khelpcenter/faq/index.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/install.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/intro.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/kdeapps.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/misc.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/moreinfo.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/nonkdeapps.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/notrelated.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/panel.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/qt.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/questions.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/sound.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/tips.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/webbrowse.docbook
+share/doc/kde/HTML/pl/khelpcenter/faq/winmng.docbook
 share/doc/kde/HTML/pl/khelpcenter/help.docbook
 share/doc/kde/HTML/pl/khelpcenter/index.cache.bz2
 share/doc/kde/HTML/pl/khelpcenter/index.docbook
@@ -164,6 +211,9 @@ share/doc/kde/HTML/pl/khelpcenter/userguide/windows-how-to.docbook
 share/doc/kde/HTML/pl/khelpcenter/userguide/your-kde-account.docbook
 share/doc/kde/HTML/pl/khelpcenter/welcome.docbook
 share/doc/kde/HTML/pl/khelpcenter/whatiskde.docbook
+share/doc/kde/HTML/pl/kicker/common
+share/doc/kde/HTML/pl/kicker/index.cache.bz2
+share/doc/kde/HTML/pl/kicker/index.docbook
 share/doc/kde/HTML/pl/kig/common
 share/doc/kde/HTML/pl/kig/index.cache.bz2
 share/doc/kde/HTML/pl/kig/index.docbook
@@ -234,6 +284,9 @@ share/doc/kde/HTML/pl/konqueror/save-settings.docbook
 share/doc/kde/HTML/pl/konqueror/shortcut1.png
 share/doc/kde/HTML/pl/konqueror/shortcut2.png
 share/doc/kde/HTML/pl/konqueror/sidebar.docbook
+share/doc/kde/HTML/pl/konquest/common
+share/doc/kde/HTML/pl/konquest/index.cache.bz2
+share/doc/kde/HTML/pl/konquest/index.docbook
 share/doc/kde/HTML/pl/konsole/common
 share/doc/kde/HTML/pl/konsole/index.cache.bz2
 share/doc/kde/HTML/pl/konsole/index.docbook
@@ -260,6 +313,9 @@ share/doc/kde/HTML/pl/kpercentage/install.docbook
 share/doc/kde/HTML/pl/kpercentage/introduction.docbook
 share/doc/kde/HTML/pl/kpercentage/using.docbook
 share/doc/kde/HTML/pl/kpercentage/welcome.png
+share/doc/kde/HTML/pl/ksame/common
+share/doc/kde/HTML/pl/ksame/index.cache.bz2
+share/doc/kde/HTML/pl/ksame/index.docbook
 share/doc/kde/HTML/pl/ksirc/common
 share/doc/kde/HTML/pl/ksirc/index.cache.bz2
 share/doc/kde/HTML/pl/ksirc/index.docbook
@@ -889,11 +945,13 @@ share/locale/pl/flag.png
 @dirrm share/doc/kde/HTML/pl/ksysguard
 @dirrm share/doc/kde/HTML/pl/kspell
 @dirrm share/doc/kde/HTML/pl/ksirc
+@dirrm share/doc/kde/HTML/pl/ksame
 @dirrm share/doc/kde/HTML/pl/kpercentage
 @dirrm share/doc/kde/HTML/pl/kpdf
 @dirrm share/doc/kde/HTML/pl/kpat
 @dirrm share/doc/kde/HTML/pl/kontact
 @dirrm share/doc/kde/HTML/pl/konsole
+@dirrm share/doc/kde/HTML/pl/konquest
 @dirrm share/doc/kde/HTML/pl/konqueror
 @dirrm share/doc/kde/HTML/pl/knotes
 @dirrm share/doc/kde/HTML/pl/kmplot
@@ -902,13 +960,18 @@ share/locale/pl/flag.png
 @dirrm share/doc/kde/HTML/pl/kmail
 @dirrm share/doc/kde/HTML/pl/klettres
 @dirrm share/doc/kde/HTML/pl/kig
+@dirrm share/doc/kde/HTML/pl/kicker
 @dirrm share/doc/kde/HTML/pl/khelpcenter/userguide
+@dirrm share/doc/kde/HTML/pl/khelpcenter/faq
 @dirrm share/doc/kde/HTML/pl/khelpcenter
 @dirrm share/doc/kde/HTML/pl/khangman
+@dirrm share/doc/kde/HTML/pl/kget
 @dirrm share/doc/kde/HTML/pl/kgeography
 @dirrm share/doc/kde/HTML/pl/kfind
 @dirrm share/doc/kde/HTML/pl/keduca
 @dirrm share/doc/kde/HTML/pl/kdevelop
+@dirrm share/doc/kde/HTML/pl/kdesu
+@dirrm share/doc/kde/HTML/pl/kdeprint
 @dirrm share/doc/kde/HTML/pl/kcalc
 @dirrm share/doc/kde/HTML/pl/kbruch
 @dirrm share/doc/kde/HTML/pl/kanagram
@@ -918,4 +981,3 @@ share/locale/pl/flag.png
 @dirrm share/doc/kde/HTML/pl/blinken
 @dirrm share/doc/kde/HTML/pl/ark
 @dirrm share/doc/kde/HTML/pl
-@comment in kde: @dirrm share/doc/kde/HTML
