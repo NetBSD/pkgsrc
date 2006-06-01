@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2006/03/30 02:47:01 markd Exp $
+@comment $NetBSD: PLIST,v 1.23 2006/06/01 13:54:09 markd Exp $
 bin/dsirc
 bin/feedbrowser
 bin/kdict
@@ -1008,8 +1008,6 @@ share/kde/apps/kppp/Provider/Germany/Netsurf
 share/kde/apps/kppp/Provider/Irland/.directory
 share/kde/apps/kppp/Provider/Irland/Eircom
 share/kde/apps/kppp/Provider/Irland/IOL
-share/kde/apps/kppp/Provider/Irland/UTV
-share/kde/apps/kppp/Provider/Irland/UVT
 share/kde/apps/kppp/Provider/Netherlands/.directory
 share/kde/apps/kppp/Provider/Netherlands/12Move
 share/kde/apps/kppp/Provider/Netherlands/Bart
@@ -1113,6 +1111,7 @@ share/kde/apps/kppp/Provider/United_Kingdom/UK%032Free%032Software%032Network%03
 share/kde/apps/kppp/Provider/United_Kingdom/UK%032Free%032Software%032Network%032Modem
 share/kde/apps/kppp/Provider/United_Kingdom/UKPOST%032ISDN
 share/kde/apps/kppp/Provider/United_Kingdom/UKPOST%032Modem
+share/kde/apps/kppp/Provider/United_Kingdom/UTV
 share/kde/apps/kppp/Provider/Yugoslavia/041Net
 share/kde/apps/kppp/Provider/Yugoslavia/BeoTelNet
 share/kde/apps/kppp/Provider/Yugoslavia/CG.Bar.yu
