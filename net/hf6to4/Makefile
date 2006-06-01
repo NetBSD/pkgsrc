@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2006/01/19 01:46:56 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/01 22:09:52 joerg Exp $
 #
 
 DISTNAME=		hf6to4-1.3
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -22,7 +23,7 @@ NO_BUILD=	yes
 
 CONF_FILES+=	${PREFIX}/share/examples/hf6to4/hf6to4.conf ${PKG_SYSCONFDIR}/hf6to4.conf
 
-INSTALLATION_DIRS=	man/man8 sbin
+INSTALLATION_DIRS=	man/man8 sbin share/examples/hf6to4 share/doc/hf6to4
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	hf6to4
@@ -34,10 +35,9 @@ post-extract:
 	${CP} ${FILESDIR}/hf6to4 ${WRKSRC}/hf6to4
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/hf6to4
 	${INSTALL_SCRIPT} ${WRKSRC}/hf6to4 ${PREFIX}/sbin/hf6to4
 	${INSTALL_MAN} ${FILESDIR}/hf6to4.8 ${PREFIX}/man/man8
-	${INSTALL_DATA} ${FILESDIR}/hf6to4.html ${PREFIX}/share/doc/hf6to4.html
+	${INSTALL_DATA} ${FILESDIR}/hf6to4.html ${PREFIX}/share/doc/hf6to4/hf6to4.html
 	${INSTALL_DATA} ${FILESDIR}/hf6to4.conf ${PREFIX}/share/examples/hf6to4
 
 .include "../../mk/bsd.pkg.mk"
