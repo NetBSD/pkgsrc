@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkgsrc.xml,v 1.18 2006/05/19 22:05:09 rillig Exp $ -->
+<!-- $NetBSD: pkgsrc.xml,v 1.19 2006/06/01 08:39:03 rillig Exp $ -->
 
 
 <?xml version="1.0"?>
@@ -45,7 +45,7 @@
       <holder role="mailto:www@NetBSD.org">The NetBSD Foundation, Inc</holder>
     </copyright>
 
-    <pubdate>$NetBSD: pkgsrc.xml,v 1.18 2006/05/19 22:05:09 rillig Exp $</pubdate>
+    <pubdate>$NetBSD: pkgsrc.xml,v 1.19 2006/06/01 08:39:03 rillig Exp $</pubdate>
 
     <abstract>
 
@@ -75,6 +75,12 @@
   <part id="developers-guide"> <?dbhtml filename="developers-guide.html"?>
     <title id="developers-guide.title">The pkgsrc developer's guide</title>
 
+	<partintro><para>This part of the book deals with creating and
+	modifying packages. It starts with a <quote>HOWTO</quote>-like
+	guide on creating a new package. The remaining chapters are more
+	like a reference manual for pkgsrc.</para></partintro>
+
+    &chap.creating;
     &chap.components;
     &chap.makefile;
     &chap.plist;
