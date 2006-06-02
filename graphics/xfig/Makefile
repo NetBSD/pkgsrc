@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2006/04/17 13:46:36 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2006/06/02 12:13:03 rillig Exp $
 
 DISTNAME=	xfig.3.2.5-alpha5.full
 PKGNAME=	xfig-3.2.5alpha5
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://epb.lbl.gov/xfig/alpha/
 
@@ -25,29 +25,30 @@ CFLAGS+=		-I${X11PREFIX}/include/X11
 
 .include "../../mk/bsd.prefs.mk"
 
-pre-configure:
+post-extract:
+	cd ${WRKSRC} && ${RM} -f Doc/*.orig Doc/*/*.orig Doc/*/*/*.orig
+
+SUBST_CLASSES+=		xaw
+SUBST_STAGE.xaw=	post-configure
+SUBST_MESSAGE.xaw=	Fixing Imakefile
+SUBST_FILES.xaw=	IMakefile
 .if defined(XAW_TYPE) && ${XAW_TYPE} == "3d"
-	# define XAW3D and XAW3D1_5E
-	cd ${WRKSRC} &&	\
-	  if [ ! -f Imakefile.bak ]; then ${MV} Imakefile Imakefile.bak; fi && \
-	  ${SED} -e 's/.*\(#define.XAW3D\)/\1/' Imakefile.bak > Imakefile
+# define XAW3D and XAW3D1_5E
+SUBST_SED.xaw+=		-e 's/.*\(\#define.XAW3D\)/\1/'
 .elif defined(XAW_TYPE) && ${XAW_TYPE} == "xpm"
-	#  define XAW3D, undef XAW3D1_5E
-	cd ${WRKSRC} &&	\
-	  if [ ! -f Imakefile.bak ]; then ${MV} Imakefile Imakefile.bak; fi && \
-	  ${SED} -e 's/.*\(#define.XAW3D1_5E\)/XCOMM \1/' -e t \
-	  	 -e 's/.*\(#define.XAW3D\)/\1/' Imakefile.bak > Imakefile
+#  define XAW3D, undef XAW3D1_5E
+SUBST_SED.xaw+=		-e 's/.*\(\#define.XAW3D1_5E\)/XCOMM \1/'
+SUBST_SED.xaw+=		-e t
+SUBST_SED.xaw+=		-e 's/.*\(\#define.XAW3D\)/\1/'
 .else
-	# undef XAW3D and XAW3D1_5E
-	cd ${WRKSRC} &&	\
-	  if [ ! -f Imakefile.bak ]; then ${MV} Imakefile Imakefile.bak; fi && \
-	  ${SED} 's/.*\(#define.XAW3D\)/XCOMM \1/' Imakefile.bak > Imakefile
+# undef XAW3D and XAW3D1_5E
+SUBST_SED.xaw+=		-e 's/.*\(\#define.XAW3D\)/XCOMM \1/'
 .endif
 
 XFIGDOCDIR=		${PREFIX}/share/doc/xfig
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/Doc/FORMAT* ${XFIGDOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/Doc/FORMAT?.? ${XFIGDOCDIR}
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
