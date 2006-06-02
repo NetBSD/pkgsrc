@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/06/02 08:23:01 tron Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/02 13:44:55 joerg Exp $
 #
 
 DISTNAME=	mpgtx-1.3.1
@@ -12,7 +12,7 @@ COMMENT=	Split and join MPEG files in various ways
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}	\
 			--manprefix=${PREFIX:Q}
-USE_LANGUAGES+=	c++
+USE_LANGUAGES=	c c++
 
 BUILD_TARGET=	mpgtx
 PLINKS=		mpgjoin mpgcat mpgsplit mpginfo mpgdemux tagmp3
