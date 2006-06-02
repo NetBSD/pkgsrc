@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:08:36 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/02 23:32:10 joerg Exp $
 
 DISTNAME=	pysqlite-1.0.1
 PKGNAME=	${PYPKGPREFIX}-sqlite-1.0.1
@@ -12,6 +12,7 @@ COMMENT=	SQLite database adapter for Python
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
+PYTHON_VERSIONS_ACCEPTED=	24 23 22 21
 WRKSRC=		${WRKDIR}/pysqlite
 
 .include "../../databases/sqlite/buildlink3.mk"
