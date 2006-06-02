@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5056 2006/06/01 23:36:39 taca Exp $
+$NetBSD: TODO,v 1.5057 2006/06/02 02:24:40 taca Exp $
 
 Suggested new packages
 ======================
@@ -504,6 +504,7 @@ Suggested package updates
 	o file-4.17
 	o file-roller-2.14.3
 	o findutils-4.2.27
+	o firefox-1.5.0.4
 	o flashplayer-0.4.13
 	o fmsx-3.0
 	o fondu-040927
