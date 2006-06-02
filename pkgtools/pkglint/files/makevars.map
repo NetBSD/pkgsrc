@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.99 2006/06/02 21:33:22 rillig Exp $
+# $NetBSD: makevars.map,v 1.100 2006/06/02 21:54:00 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -400,7 +400,7 @@ PGSQL_VERSION_DEFAULT	Unchecked []
 PKGBASE			Unchecked []
 PKGCONFIG_OVERRIDE	List of Pathmask [m:as,c:a]
 PKGDIR			RelativePkgDir
-PKGNAME			PkgName [m:s,c:s,Makefile.*:ds]
+PKGNAME			PkgName [m:s,c:s,Makefile.*:ds,*:ds]
 PKGNAME_NOREV		Unchecked []
 PKGREPOSITORY		Unchecked []
 PKGREVISION		PkgRevision [m:s]
@@ -440,7 +440,7 @@ PKG_OPTIONS_NONEMPTY_SETS	List of Option
 PKG_OPTIONS_OPTIONAL_GROUPS	List of Identifier [o:as]
 PKG_OPTIONS_REQUIRED_GROUPS	List of Identifier [o:s,m:s]
 PKG_OPTIONS_SET.*	List of Option
-PKG_OPTIONS_VAR		PkgOptionsVar [o:s,m:s,c:s]
+PKG_OPTIONS_VAR		PkgOptionsVar [o:s,m:s,c:s, bsd.options.mk:p]
 PKG_PRESERVE		Yes [m:s]
 PKG_SHELL		Pathname [m:s,c:s]
 PKG_SHELL.*		Pathname [m:s,c:s]
