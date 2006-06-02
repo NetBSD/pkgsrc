@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2006/05/28 14:46:47 adrianp Exp $
+# $NetBSD: options.mk,v 1.3 2006/06/02 18:28:00 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.drupal
 
@@ -15,13 +15,13 @@ PKG_SUGGESTED_OPTIONS=	mysql drupal-xmlservices
 ###
 .if !empty(PKG_OPTIONS:Mpgsql)
 .	include "../../mk/pgsql.buildlink3.mk"
-DEPENDS+=	php-pgsql-[0-9]*:../../databases/php-pgsql
+DEPENDS+=	${PHP_PKG_PREFIX}-pgsql-[0-9]*:../../databases/php-pgsql
 .elif !empty(PKG_OPTIONS:Mmysql)
 ###
 ### Use MySQL for storing Drupal data
 ###
 .	include "../../mk/mysql.buildlink3.mk"
-DEPENDS+=	php-mysql>=4.3.3:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
 .endif
 
 ###
@@ -30,8 +30,8 @@ DEPENDS+=	php-mysql>=4.3.3:../../databases/php-mysql
 ###
 .if !empty(PKG_OPTIONS:Mdrupal-xmlservices)
 .	if ${PKG_PHP_VERSION} == "4"
-DEPENDS+=	php-domxml>=4.3.3:../../textproc/php4-domxml
+DEPENDS+=	${PHP_PKG_PREFIX}-domxml>=4.3.3:../../textproc/php4-domxml
 .	elif ${PKG_PHP_VERSION} == "5"
-DEPENDS+=	php-dom-[0-9]*:../../textproc/php5-dom
+DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php5-dom
 .	endif
 .endif

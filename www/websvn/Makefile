@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2006/03/04 21:31:04 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/06/02 18:28:01 joerg Exp $
 #
 
 DISTNAME=	WebSVN_161
 PKGNAME=	websvn-1.61
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	http://websvn.tigris.org/files/documents/1380/14334/
 
@@ -11,8 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://websvn.tigris.org/
 COMMENT=	Subversion repository web frontend
 
-DEPENDS+=	ap{,2}-php>=4.0.0:../../www/ap-php
-DEPENDS+=	php-zlib-[0-9]*:../../archivers/php-zlib
+DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.0.0:../../www/ap-php
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib-[0-9]*:../../archivers/php-zlib
 
 WRKSRC=		${WRKDIR}/WebSVN
 NO_BUILD=	yes
@@ -40,4 +40,6 @@ do-install:
 post-install:
 	${RM} ${PREFIX}/${HTTPD_ROOT}/websvn/include/distconfig.inc
 
+.include "../../mk/apachever.mk"
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"

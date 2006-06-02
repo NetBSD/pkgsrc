@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2006/02/05 23:11:17 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2006/06/02 18:27:59 joerg Exp $
 #
 
 DISTNAME=	mod_ruby-${VERSION}
-PKGNAME=	ap-${RUBY_PKGPREFIX}-${VERSION}
-PKGREVISION=	5
+PKGNAME=	ap13-${RUBY_PKGPREFIX}-${VERSION}
 CATEGORIES=	www ruby
 MASTER_SITES=	http://www.modruby.net/archive/
 
@@ -11,7 +10,7 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.modruby.net/
 COMMENT=	Apache module that embeds Ruby interpreter within
 
-CONFLICTS+=		ap2-ruby*
+CONFLICTS=	ap-ruby* ap2-ruby*
 
 RUBY_HAS_ARCHLIB=	yes
 APACHE_MODULE=		yes

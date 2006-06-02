@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:30:56 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/02 18:27:58 joerg Exp $
 #
 
 DISTNAME=	mod_access_referer-1.0.2
-PKGNAME=	ap-access-referer-1.0.2
-PKGREVISION=	2
+PKGNAME=	ap13-access-referer-1.0.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=accessreferer/}
 
@@ -11,6 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://accessreferer.sourceforge.net/
 COMMENT=	Apache module for referer-based access control
 
+CONFLICTS=	ap-access-referer-[0-9]*
 
 APACHE_MODULE_NAME=	mod_access_referer.so
 

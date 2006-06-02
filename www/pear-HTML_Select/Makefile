@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:11:27 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/02 18:28:00 joerg Exp $
 
 DISTNAME=	HTML_Select-1.2.1
-PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	jdolecek@NetBSD.org
 COMMENT=	PHP class for generating HTML form select elements
 
-DEPENDS+=	pear-HTML_Common>=1.1:../../www/pear-HTML_Common
+CONFLICTS=	php-pear-HTML_Select-[0-9]
+
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-HTML_Common>=1.1:../../www/pear-HTML_Common
 
 .include "../../lang/php/pear.mk"
 .include "../../mk/bsd.pkg.mk"

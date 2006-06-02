@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:11:17 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/06/02 18:27:59 joerg Exp $
 
 DISTNAME=	rivet_0.4.0-1
-PKGNAME=	ap-rivet-0.4.0.1
-PKGREVISION=	3
+PKGNAME=	ap13-rivet-0.4.0.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=tcl/rivet/}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://tcl.apache.org/rivet/
 COMMENT=	System for creating dynamic web content via Tcl
+
+CONFLICTS=	ap-rivet-[0-9]*
 
 WRKSRC=		${WRKDIR}/tcl-rivet
 HAS_CONFIGURE=	yes

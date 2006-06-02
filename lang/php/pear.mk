@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.8 2005/09/28 21:46:24 rillig Exp $
+# $NetBSD: pear.mk,v 1.9 2006/06/02 18:27:56 joerg Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -18,7 +18,7 @@ _PEAR_PACKAGE_MK=       # defined
 
 EXTRACT_SUFX=	.tgz
 
-PKGNAME=	pear-${DISTNAME}
+PKGNAME=	${PHP_PKG_PREFIX}-pear-${DISTNAME}
 CATEGORIES+=	www
 
 MASTER_SITE_PEAR_PACKAGE+= \

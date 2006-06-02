@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:11:17 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/06/02 18:27:59 joerg Exp $
 #
 
 DISTNAME=	mod_layout-3.2
-PKGNAME=	${DISTNAME:C|mod_|ap-|}
-PKGREVISION=	2
+PKGNAME=	${DISTNAME:C|mod_|ap13-|}
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.tangent.org/pub/apache/ \
 		http://software.tangent.org/download/
@@ -12,6 +11,7 @@ MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://software.tangent.org/
 COMMENT=	Apache module to wrap static or dynamic content
 
+CONFLICTS=	ap-layout-[0-9]*
 
 APACHE_MODULE_NAME=	mod_layout.so
 

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2006/04/06 06:22:52 reed Exp $
+# $NetBSD: Makefile,v 1.20 2006/06/02 18:27:59 joerg Exp $
 
 DISTNAME=		mod_dav-1.0.3-1.3.6
-PKGNAME=		ap-dav-1.0.3
-PKGREVISION=		4
+PKGNAME=		ap13-dav-1.0.3
 CATEGORIES=		www
 MASTER_SITES=		http://www.webdav.org/mod_dav/
 
@@ -10,8 +9,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.webdav.org/mod_dav/
 COMMENT=		Apache WebDAV module
 
-# Ugly mess that says apache>=1.3.9 and apache<2.0.
-BUILDLINK_API_DEPENDS.apache+=	{apache-1.3.9*,apache-1.3.[1-9][0-9]*,apache6-1.3.9*,apache6-1.3.[1-9][0-9]*}
+CONFLICTS=	ap-dav-[0-9]*
 
 APACHE_MODULE=		YES
 GNU_CONFIGURE=		YES
