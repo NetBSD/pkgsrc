@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.396 2006/06/01 23:41:52 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.397 2006/06/02 11:22:17 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2873,3 +2873,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added net/synergy1.2 version 1.2.7 [minskim 2006-06-01]
 	Updated net/synergy to 1.3.1 [minskim 2006-06-01]
 	Updated math/mathomatic to 12.5.14 [minskim 2006-06-01]
+	Updated wm/pwm to 1.0.20060517 [salo 2006-06-02]
