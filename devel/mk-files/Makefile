@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2005/06/27 20:28:12 erh Exp $
+# $NetBSD: Makefile,v 1.19 2006/06/02 13:20:56 joerg Exp $
 #
 
 DISTNAME=	mk-20050405
@@ -16,6 +16,11 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/mk
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${PKGSRC_LOCKTYPE} == sleep
+PKG_FAIL_REASON=	"Recurses against itself"
+.endif
+
 
 PLIST_SRC=${WRKDIR}/.PLIST_SRC
 
