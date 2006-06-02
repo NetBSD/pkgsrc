@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/02/04 13:17:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/06/02 12:13:03 rillig Exp $
 bin/xfig
 lib/X11/app-defaults/Fig
 lib/X11/app-defaults/Fig-color
@@ -2505,12 +2505,10 @@ share/doc/xfig/FORMAT2.1
 share/doc/xfig/FORMAT3.0
 share/doc/xfig/FORMAT3.1
 share/doc/xfig/FORMAT3.2
-share/doc/xfig/FORMAT3.2.orig
 share/doc/xfig/html/accelerators.html
 share/doc/xfig/html/animate.js
 share/doc/xfig/html/attributes.html
 share/doc/xfig/html/authors.html
-share/doc/xfig/html/authors.html.orig
 share/doc/xfig/html/bugs_fixed.3.2.1.html
 share/doc/xfig/html/bugs_fixed.3.2.2.html
 share/doc/xfig/html/bugs_fixed.3.2.3.html
@@ -2677,7 +2675,6 @@ share/doc/xfig/html/images/export-panel-jpeg.png
 share/doc/xfig/html/images/export-panel-postscript.png
 share/doc/xfig/html/images/export-panel.png
 share/doc/xfig/html/images/file-accel.png
-share/doc/xfig/html/images/file-accel.png.orig
 share/doc/xfig/html/images/file-menu-button.png
 share/doc/xfig/html/images/file-panel.png
 share/doc/xfig/html/images/fill-color-button.png
@@ -2814,7 +2811,6 @@ share/doc/xfig/html/images/vertical-align-edge-even.png
 share/doc/xfig/html/images/vertical-align-none.png
 share/doc/xfig/html/images/vertical-align-top.png
 share/doc/xfig/html/images/view-accel.png
-share/doc/xfig/html/images/view-accel.png.orig
 share/doc/xfig/html/images/view-menu-button.png
 share/doc/xfig/html/images/watch.png
 share/doc/xfig/html/images/watch_sm.png
