@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.595 2006/05/31 08:59:13 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.596 2006/06/02 21:32:33 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1838,7 +1838,7 @@ if (false) {
 			if ($line->text =~ qr"^#?([\w_]+)\?=") {
 				my ($varname) = ($1);
 				$line->log_info("Found user-definable variable ${varname}.");
-				$vartypes->{$varname} = "Userdefined";
+				$vartypes->{$varname} = "Userdefined"; # FIXME: type error
 			}
 		}
 	} else {
@@ -2389,21 +2389,6 @@ sub varname_canon($) {
 	return ($varname =~ qr"^(.*?)\..*$") ? "$1.*" : $varname;
 }
 
-sub type_should_be_quoted($) {
-	my ($type) = @_;
-
-	if ($type->kind_of_list == PkgLint::Type::LK_INTERNAL) {
-		return true;
-	}
-	if ($type->kind_of_list == LK_EXTERNAL) {
-		return false;
-	}
-	if ($type->basic_type =~ qr"^(?:ShellCommand|SedCommands)$") {
-		return false;
-	}
-	return true;
-}
-
 sub determine_used_variables($) {
 	my ($lines) = @_;
 	my ($rest);
@@ -2425,7 +2410,7 @@ sub extract_used_variables($$) {
 
 	$rest = $text;
 	$result = [];
-	while ($rest =~ s/^(?:[^\$]+|\$[\$*<>?\@]|\$\{([0-9A-Z_a-z]+)(?::(?:[^\${}]|\$[^{])+)?\})//) {
+	while ($rest =~ s/^(?:[^\$]+|\$[\$*<>?\@]|\$\{([.0-9A-Z_a-z]+)(?::(?:[^\${}]|\$[^{])+)?\})//) {
 		my ($varname) = ($1);
 
 		if (defined($varname)) {
@@ -2595,8 +2580,8 @@ sub variable_needs_quoting($$$) {
 		return doesnt_matter;
 	}
 
-	$opt_debug and $line->log_note("[variable_needs_quoting] varname $varname context " . $context->to_string() . " type " . $type->to_string());
-	$opt_debug and $line->log_note(sprintf("[%s] want_list=%d have_list=%d", "variable_needs_quoting", $want_list, $have_list));
+	$opt_debug and $line->log_debug("[variable_needs_quoting] varname $varname context " . $context->to_string() . " type " . $type->to_string());
+	$opt_debug and $line->log_debug(sprintf("[%s] want_list=%d have_list=%d", "variable_needs_quoting", $want_list, $have_list));
 	backtrace();
 
 	# Assigning lists to lists does not need additional quoting.
@@ -4125,7 +4110,7 @@ sub checkline_mk_vartype($$$$$) {
 		}
 
 	} else {
-		checkline_mk_vartype_basic($line, $varname, $type->basic_type, $op, $value, $comment, !type_should_be_quoted($type));
+		checkline_mk_vartype_basic($line, $varname, $type->basic_type, $op, $value, $comment, $type->is_practically_a_list());
 	}
 }
 
@@ -4479,6 +4464,8 @@ sub checklines_mk($) {
 			if ($directive =~ qr"^(?:endif|endfor|elif|else)$") {
 				if ($#{$mkctx_indentations} >= 1) {
 					pop(@{$mkctx_indentations});
+				} else {
+					$line->log_error("Unmatched .${directive}.");
 				}
 			}
 
