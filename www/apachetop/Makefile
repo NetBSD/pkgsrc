@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/10/06 11:33:52 sketch Exp $
+# $NetBSD: Makefile,v 1.8 2006/06/02 13:14:22 joerg Exp $
 #
 
 DISTNAME=	apachetop-0.12.5
@@ -13,6 +13,8 @@ COMMENT=	Real time apache log display
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--with-logfile=${VARBASE}/log/httpd/access_log
+
+USE_LANGUAGES=		c++
 
 # NetBSD releases which do not include wattr_on() et al.
 INCOMPAT_CURSES=	NetBSD-1.5*-*
