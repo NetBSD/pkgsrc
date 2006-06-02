@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.35 2006/04/22 09:22:16 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2006/06/02 18:27:59 joerg Exp $
 
 DISTNAME=	jakarta-tomcat-connectors-${JK_VERSION}-src
-PKGNAME=	ap-jk-${JK_VERSION}
+PKGNAME=	ap13-jk-${JK_VERSION}
 JK_VERSION=	1.2.15
-PKGREVISION=	1
 CATEGORIES=	www java
 MASTER_SITES=	http://www.apache.org/dist/jakarta/tomcat-connectors/jk/source/jk-${JK_VERSION}/
 
 MAINTAINER=	erh@NetBSD.org
 HOMEPAGE=	http://jakarta.apache.org/tomcat/connectors-doc/
 COMMENT=	Apache connector for accessing Jakarta Tomcat
+
+CONFLICTS=	ap-jk-[0-9]*
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/jk/native
 APACHE_MODULE=	YES

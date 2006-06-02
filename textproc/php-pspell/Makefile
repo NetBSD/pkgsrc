@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2006/02/05 23:11:06 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/06/02 18:27:58 joerg Exp $
 
 MODNAME=		pspell
-PKGREVISION=		1
 CATEGORIES+=		textproc
 COMMENT=		PHP extension for pspell support
 
+CONFLICTS=	php-pspell-[0-9]
 
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_PREFIX.aspell}
 
