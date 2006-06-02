@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/02/05 23:10:30 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/06/02 16:17:08 joerg Exp $
 
 DISTNAME=	dnspython-1.3.3
 PKGNAME=	${PYPKGPREFIX}-dns-1.3.3
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.dnspython.org/
 COMMENT=	Python DNS toolkit
 
 PYDISTUTILSPKG=	yes
+
+PYTHON_VERSIONS_ACCEPTED=       24 23 22
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
