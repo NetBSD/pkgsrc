@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.28 2006/03/28 10:56:52 joerg Exp $
+# $NetBSD: upload,v 1.29 2006/06/02 22:01:46 dillo Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -68,6 +68,7 @@ upload_vulnerable="$TMP"/upload_vulnerable
 pkgsrcdir=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=_PKGSRCDIR`
 packages=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=PACKAGES`
 distdir=`cd pkgtools/pkglint ; ${BMAKE} show-var VARNAME=DISTDIR`
+gzip_cmd=`cd pkgtools/pkglint; make show-var VARNAME=GZIP_CMD USE_TOOLS=gzip`
 
 # Pull in some pkgs needed
 ( cd pkgtools/pkglint ;        ${BMAKE} bulk-install )
@@ -157,9 +158,10 @@ if [ "${MKSUMS}" = "yes" -o "${MKSUMS}" = "YES" ]; then
 fi
 
 if [ "${MKSUMMARY}" = "yes" -o "${MKSUMMARY}" = "YES" ]; then
-	echo "Creating pkg_chk index..."
-	( cd ${pkgsrcdir}/pkgtools/pkg_chk; ${BMAKE} bulk-install )
-	pkg_chk -P "${packages}" -bS
+	echo "Creating summary file..."
+	(cd "${packages}/All" \
+		&& ls -t *.t[gb]z | while read n; do pkg_info -X "$n"; done) \
+		| ${gzip_cmd} > "${packages}"/All/pkg_summary.gz
 fi
 
 echo "#!/bin/sh" > "$upload"
