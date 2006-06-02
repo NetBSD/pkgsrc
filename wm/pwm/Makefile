@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2006/03/31 00:29:16 salo Exp $
+# $NetBSD: Makefile,v 1.26 2006/06/02 11:21:28 salo Exp $
 #
 
-DISTNAME=	pwm-20030617
+DISTNAME=	pwm-20060517
 PKGNAME=	${DISTNAME:S/-/-1.0./}
-PKGREVISION=	2
 CATEGORIES=	wm x11
 MASTER_SITES=	http://modeemi.fi/~tuomov/pwm/dl/
 
@@ -29,9 +28,13 @@ CONFS+=		keys-default.conf
 CONFS+=		menus-default.conf
 CONFS+=		look-beoslike.conf
 CONFS+=		look-brownsteel.conf
-.for FILE in ${CONFS}
-CONF_FILES+=	${EGDIR}/${FILE} ${PKG_SYSCONFDIR}/${FILE}
+CONFS+=		look-cdelike.conf
+.for f in ${CONFS}
+CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
+
+post-install:
+	${INSTALL_DATA} ${FILESDIR}/look-cdelike.conf ${EGDIR}
 
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

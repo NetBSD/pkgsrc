@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.6 2004/04/10 20:42:11 salo Exp $
+$NetBSD: patch-ag,v 1.7 2006/06/02 11:21:29 salo Exp $
 
---- system.mk.orig	Thu Dec 28 15:08:05 2000
-+++ system.mk	Thu Jul 10 21:30:50 2003
+--- system.mk.orig	2006-05-17 08:50:33.000000000 +0200
++++ system.mk	2006-06-02 12:55:38.000000000 +0200
 @@ -7,13 +7,13 @@
  ## Installation paths
  ##
@@ -19,7 +19,7 @@ $NetBSD: patch-ag,v 1.6 2004/04/10 20:42:11 salo Exp $
  # Not used
  INCDIR=$(PREFIX)/include
  LIBDIR=$(PREFIX)/lib
-@@ -23,7 +23,7 @@
+@@ -23,7 +23,7 @@ LIBDIR=$(PREFIX)/lib
  ## X libraries, includes and options
  ##
  
@@ -28,7 +28,7 @@ $NetBSD: patch-ag,v 1.6 2004/04/10 20:42:11 salo Exp $
  
  # SunOS/Solaris
  #X11_PREFIX=/usr/openwin
-@@ -40,7 +40,7 @@
+@@ -40,7 +40,7 @@ X11_DEFINES=
  ## C compiler
  ##
  
@@ -37,7 +37,7 @@ $NetBSD: patch-ag,v 1.6 2004/04/10 20:42:11 salo Exp $
  
  # The POSIX_SOURCE, XOPEN_SOURCE and WARN options should not be necessary,
  # they're mainly for development use. So, if they cause trouble (not
-@@ -49,7 +49,7 @@
+@@ -49,26 +49,26 @@ CC=gcc
  
  # libtu/ uses POSIX_SOURCE
  
@@ -46,7 +46,6 @@ $NetBSD: patch-ag,v 1.6 2004/04/10 20:42:11 salo Exp $
  
  # and . (ion) XOPEN_SOURCE.
  # There is variation among systems what should be used and how they interpret
-@@ -56,19 +56,19 @@
  # it so it is perhaps better not using anything at all.
  
  # Most systems
@@ -60,8 +59,8 @@ $NetBSD: patch-ag,v 1.6 2004/04/10 20:42:11 salo Exp $
 -WARN=	-W -Wimplicit -Wreturn-type -Wswitch -Wcomment \
 +#WARN=	-W -Wimplicit -Wreturn-type -Wswitch -Wcomment \
  	-Wtrigraphs -Wformat -Wchar-subscripts \
- 	-Wparentheses -pedantic-errors -Wuninitialized
- 
+ 	-Wparentheses -Wuninitialized
+ #       -pedantic-errors
  
 -CFLAGS=-g -O2 $(WARN) $(DEFINES) $(INCLUDES) $(EXTRA_INCLUDES)
 -LDFLAGS=-g $(LIBS) $(EXTRA_LIBS)
