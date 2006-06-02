@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/12 09:04:16 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/02 14:57:13 joerg Exp $
 #
 
 DISTNAME=		pbzip2-0.9.6
@@ -12,11 +12,13 @@ COMMENT=		Parallel implementation of the bzip2 block-sorting file compressor
 PTHREAD_AUTO_VARS=	yes
 PTHREAD_OPTS+=		require
 
+USE_LANGUAGES=		c++
+
 CPPFLAGS+=		-D_LARGEFILE_SOURCE=1
 CPPFLAGS+=		-D_FILE_OFFSET_BITS=64
 LIBS+=			-lbz2
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/pbzip2
 
 do-build:
 	cd ${WRKSRC}; \
@@ -25,7 +27,6 @@ do-build:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pbzip2 ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/pbzip2.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pbzip2
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/pbzip2
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/pbzip2
 
