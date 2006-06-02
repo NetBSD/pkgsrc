@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.596 2006/06/02 21:32:33 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.597 2006/06/02 21:54:00 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1181,7 +1181,7 @@ sub basic_type($)	{ return shift(@_)->[BASIC_TYPE]; }
 sub is_guessed($)	{ return shift(@_)->[IS_GUESSED]; }
 
 sub perms($$) {
-	my ($self, $fname, $varcanon) = @_;
+	my ($self, $fname) = @_;
 	my ($perms);
 
 	foreach my $acl_entry (@{$self->[ACLS]}) {
@@ -1190,6 +1190,17 @@ sub perms($$) {
 		}
 	}
 	return undef;
+}
+
+sub perms_union($) {
+	my ($self) = @_;
+	my ($perms);
+
+	$perms = "";
+	foreach my $acl_entry(@{$self->[ACLS]}) {
+		$perms .= $acl_entry->[1];
+	}
+	return $perms;
 }
 
 sub is_practically_a_list($) {
@@ -2934,6 +2945,17 @@ sub checkline_mk_varuse($$$$) {
 				"Additionally, each \$\$ is replaced with a single \$, so variables",
 				"that have references to shell variables or regular expressions are",
 				"modified in a subtle way.");
+		}
+
+		my $lhs_type = $context->type;
+		my $rhs_type = get_variable_type($line, $varname);
+		if (defined($lhs_type) && defined($rhs_type) && $lhs_type->perms_union() =~ qr"p" && $rhs_type->perms($line->fname) !~ qr"p") {
+			$line->log_warning("${varname} should not be used in a load-time variable.");
+			$line->explain_warning(
+				"The variable on the left-hand side may be evaluated at load time, but",
+				"the variable on the right-hand side may not. Due to this assignment, it",
+				"might be used indirectly at load-time, when it is not guaranteed to be",
+				"properly defined.");
 		}
 	}
 
