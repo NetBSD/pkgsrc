@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/31 18:18:34 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/02 22:02:33 joerg Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
 COMMENT=		Lightweight Directory Access Protocol libraries and client programs
@@ -15,6 +15,8 @@ MAKE_DIRS=		${OPENLDAP_ETCDIR}
 BUILD_DEFS+=		OPENLDAP_ETCDIR
 
 CNFS=			ldap.conf
+
+.include "options.mk"
 
 .include "../../databases/openldap/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
