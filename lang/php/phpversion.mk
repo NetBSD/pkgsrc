@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.4 2006/05/09 10:06:34 tron Exp $
+# $NetBSD: phpversion.mk,v 1.5 2006/06/02 18:27:56 joerg Exp $
 # PHP wrapper, for module builds
 
 .if !defined(PHPVERSION_MK)
@@ -71,9 +71,11 @@ PHP_VERSION_REQD:=	${PKG_PHP_VERSION}
 # set variables for the version we decided to use:
 #
 .if ${_PHP_VERSION} == "4"
-PHPPKGSRCDIR=	../../www/php4
+PHPPKGSRCDIR=		../../www/php4
+PHP_PKG_PREFIX=		php4
 .elif ${_PHP_VERSION} == "5"
-PHPPKGSRCDIR=	../../lang/php5
+PHPPKGSRCDIR=		../../lang/php5
+PHP_PKG_PREFIX=		php5
 .else
 # force an error
 PKG_SKIP_REASON+=	"${PKG_PHP} is not a valid package"
