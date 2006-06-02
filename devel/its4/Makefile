@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/04 21:29:16 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/06/02 14:14:31 joerg Exp $
 #
 
 DISTNAME=	its4-1.1.1
@@ -17,6 +17,8 @@ HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/its4
 INSTALLATION_DIRS=	bin man/man1
+
+USE_LANGUAGES=		c++
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/its4 ${PREFIX}/bin
