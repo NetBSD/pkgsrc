@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5058 2006/06/02 11:51:55 ghen Exp $
+$NetBSD: TODO,v 1.5059 2006/06/02 12:37:29 ghen Exp $
 
 Suggested new packages
 ======================
@@ -504,7 +504,7 @@ Suggested package updates
 	o file-4.17
 	o file-roller-2.14.3
 	o findutils-4.2.27
-	o firefox-1.5.0.4
+	o firefox-1.5.0.4 [ghen]
 	o flashplayer-0.4.13
 	o fmsx-3.0
 	o fondu-040927
@@ -1092,7 +1092,7 @@ Suggested package updates
 	o sch-3.8.3
 	o sdig-0.40
 	o seahorse-0.9.1
-	o seamoneky-1.0.2
+	o seamoneky-1.0.2 [ghen]
 	o semantic-1.4.4
 	o sendfile-20010424
 	o sharity-light-1.3
@@ -1159,7 +1159,7 @@ Suggested package updates
 	o ted-2.17
 	o tet3-3.6b
 	o tfmxplay-1.1.6
-	o thunderbird-1.5.0.4
+	o thunderbird-1.5.0.4 [ghen]
 	o tin-1.8.2
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
