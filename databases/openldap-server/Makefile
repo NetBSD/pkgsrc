@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/31 18:18:36 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/02 22:02:33 joerg Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 COMMENT=		Lightweight Directory Access Protocol server suite
@@ -69,6 +69,8 @@ MESSAGE_SUBST+=		OPENLDAP_VARDIR=${OPENLDAP_VARDIR:Q}
 MESSAGE_SUBST+=		OPENLDAP_ETCDIR=${OPENLDAP_ETCDIR:Q}
 MESSAGE_SUBST+=		CHOWN=${CHOWN}
 MESSAGE_SUBST+=		CHMOD=${CHMOD}
+
+.include "options.mk"
 
 .include "../../databases/openldap/Makefile.common"
 
