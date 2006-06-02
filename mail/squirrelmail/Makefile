@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2006/04/11 05:24:20 martti Exp $
+# $NetBSD: Makefile,v 1.72 2006/06/02 18:27:56 joerg Exp $
 
 DISTNAME=	squirrelmail-1.4.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +15,7 @@ CONFLICTS+=	sq-squirrelspell-[0-9]*
 CONFLICTS+=	ja-squirrelspell-[0-9]*
 CONFLICTS+=	ja-squirrelmail-[0-9]*
 
-DEPENDS+=	php-gettext>=4.3.3:../../devel/php-gettext
+DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=4.3.3:../../devel/php-gettext
 
 USE_LANGUAGES=	# empty
 NO_BUILD=	yes
@@ -77,4 +77,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC:Q}/data/index.php ${USER_PREFS_DIR:Q}/
 	${INSTALL_DATA} ${WRKSRC:Q}/data/.htaccess ${USER_PREFS_DIR:Q}/
 
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
