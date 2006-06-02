@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:11:06 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/06/02 18:27:58 joerg Exp $
 
 MODNAME=		xsl
-PKGREVISION=		1
 CATEGORIES+=		textproc
 COMMENT=		PHP5 extension for XSLT functions
 
+CONFLICTS=	php-xsl-[0-9]
 
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_PREFIX.libxslt}
 
@@ -12,7 +12,7 @@ CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_PREFIX.libxslt}
 EXTRACT_ELEMENTS=	${DISTNAME}/ext/${MODNAME} ${DISTNAME}/ext/dom
 WRKSRC=			${WRKDIR}/${DISTNAME}/ext/${MODNAME}
 
-PHP_VERSION_REQD=	5
+PHP_VERSIONS_ACCEPTED=	5
 .include "../../lang/php/ext.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

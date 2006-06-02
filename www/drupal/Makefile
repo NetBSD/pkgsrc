@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2006/05/28 14:46:47 adrianp Exp $
+# $NetBSD: Makefile,v 1.12 2006/06/02 18:28:00 joerg Exp $
 
 DISTNAME=	drupal-4.7.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://drupal.org/files/projects/
 
@@ -8,10 +9,8 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://drupal.org/
 COMMENT=	Open source content management system
 
-.include "../../lang/php/phpversion.mk"
-
-DEPENDS+=	ap-php>=4.3.3:../../www/ap-php
-DEPENDS+=	php-gd>=4.3.3:../../graphics/php-gd
+DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.3:../../www/ap-php
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.3.3:../../graphics/php-gd
 
 NO_BUILD=	YES
 DRUPAL=		${PREFIX}/share/drupal
@@ -29,6 +28,9 @@ SUBST_STAGE.conf=	pre-install
 SUBST_FILES.conf=	drupal.conf
 SUBST_SED.conf=		-e "s|@DRUPAL@|${DRUPAL}|g"
 SUBST_MESSAGE.conf=     Fixing configuration files.
+
+.include "../../mk/apachever.mk"
+.include "../../lang/php/phpversion.mk"
 
 .include "options.mk"
 
