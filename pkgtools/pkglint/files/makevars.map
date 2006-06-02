@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.98 2006/05/31 08:46:00 rillig Exp $
+# $NetBSD: makevars.map,v 1.99 2006/06/02 21:33:22 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -329,29 +329,29 @@ MANGRP			UserGroupName []
 MANMODE			FileMode []
 MANOWN			UserGroupName []
 MASTER_SITES		List of URL [c:ads,m:as]
-MASTER_SITE_APACHE	List of URL
-MASTER_SITE_BACKUP	List of URL
-MASTER_SITE_CYGWIN	List of URL
-MASTER_SITE_DEBIAN	List of URL
-MASTER_SITE_FREEBSD	List of URL
-MASTER_SITE_FREEBSD_LOCAL	List of URL
-MASTER_SITE_GNOME	List of URL
-MASTER_SITE_GNU		List of URL
-MASTER_SITE_GNUSTEP	List of URL
-MASTER_SITE_IFARCHIVE	List of URL
-MASTER_SITE_LOCAL	List of URL
-MASTER_SITE_MOZILLA	List of URL
-MASTER_SITE_MYSQL	List of URL
-MASTER_SITE_OPENOFFICE	List of URL
-MASTER_SITE_PERL_CPAN	List of URL
-MASTER_SITE_R_CRAN	List of URL
-MASTER_SITE_SOURCEFORGE	List of URL
-MASTER_SITE_SOURCEFORGE_JP	List of URL
-MASTER_SITE_SUNSITE	List of URL
-MASTER_SITE_SUSE	List of URL
-MASTER_SITE_TEX_CTAN	List of URL
-MASTER_SITE_XCONTRIB	List of URL
-MASTER_SITE_XEMACS	List of URL
+MASTER_SITE_APACHE	List of URL [*:u]
+MASTER_SITE_BACKUP	List of URL [*:u]
+MASTER_SITE_CYGWIN	List of URL [*:u]
+MASTER_SITE_DEBIAN	List of URL [*:u]
+MASTER_SITE_FREEBSD	List of URL [*:u]
+MASTER_SITE_FREEBSD_LOCAL	List of URL [*:u]
+MASTER_SITE_GNOME	List of URL [*:u]
+MASTER_SITE_GNU		List of URL [*:u]
+MASTER_SITE_GNUSTEP	List of URL [*:u]
+MASTER_SITE_IFARCHIVE	List of URL [*:u]
+MASTER_SITE_LOCAL	List of URL [*:u]
+MASTER_SITE_MOZILLA	List of URL [*:u]
+MASTER_SITE_MYSQL	List of URL [*:u]
+MASTER_SITE_OPENOFFICE	List of URL [*:u]
+MASTER_SITE_PERL_CPAN	List of URL [*:u]
+MASTER_SITE_R_CRAN	List of URL [*:u]
+MASTER_SITE_SOURCEFORGE	List of URL [*:u]
+MASTER_SITE_SOURCEFORGE_JP	List of URL [*:u]
+MASTER_SITE_SUNSITE	List of URL [*:u]
+MASTER_SITE_SUSE	List of URL [*:u]
+MASTER_SITE_TEX_CTAN	List of URL [*:u]
+MASTER_SITE_XCONTRIB	List of URL [*:u]
+MASTER_SITE_XEMACS	List of URL [*:u]
 MESSAGE			Unchecked []
 MESSAGE_SRC		List of Pathname [m:as,c:a,o:ads]
 MESSAGE_SUBST		List of ShellWord [c:a,m:a,o:a]
@@ -419,9 +419,14 @@ PKG_GROUPS		List of ShellWord [m:as]
 PKG_HOME.*		Pathname [m:s]
 PKG_HACKS		List of Identifier [h:a]
 PKG_INSTALLATION_TYPES	List of { overwrite pkgviews } [m:s,c:s]
-PKG_JAVA_HOME		Unchecked []
+PKG_JAVA_HOME		Pathname [*:u]
 PKG_JVM			Unchecked []
-PKG_JVMS_ACCEPTED	List of { blackdown-jdk13 jdk jdk14 kaffe sun-jdk13 sun-jdk14 sun-jdk15 }
+PKG_JVMS_ACCEPTED	List of {					\
+				blackdown-jdk13				\
+				jdk jdk14				\
+				kaffe					\
+				sun-jdk13 sun-jdk14 sun-jdk15		\
+			} [m:s,c:ds]
 PKG_JVM_DEFAULT		Unchecked []
 PKG_LEGACY_OPTIONS	List of Option
 PKG_LIBTOOL		Pathname [m:s]
