@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/06/02 13:51:48 uebayasi Exp $
+# $NetBSD: Makefile,v 1.7 2006/06/02 17:09:03 joerg Exp $
 #
 
 DISTNAME=	elscreen-1.4.3
@@ -13,7 +13,6 @@ COMMENT=	Window manager within Emacs
 
 .include "../../mk/emacs.mk"
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}apel-[0-9]*:../../devel/apel
-.endif
 
 NO_BUILD=	yes
 
