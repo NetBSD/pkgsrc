@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2005/12/05 20:50:35 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2006/06/02 13:55:47 joerg Exp $
 
 DISTNAME=	smtpfeed-1.18
 PKGREVISION=	1
@@ -24,9 +24,10 @@ CONFIGURE_ARGS+=	--libexecdir=${PREFIX:Q}/libexec
 DOCS=	COPYRIGHT FEATURES FEATURES.j FYI FYI.j INSTALL INSTALL.j \
 	ML-ADMIN ML-ADMIN.j OPTIONS OPTIONS.j README README.j \
 	RELEASE.NOTE SIGNAL SIGNAL.j TODO
-DOCDIR=	${PREFIX}/share/doc/smtpfeed
 
 BUILD_DEFS+=    USE_INET6
+
+INSTALLATION_DIRS=	libexec man/man8 share/doc/smtpfeed
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,9 +37,8 @@ CONFIGURE_ARGS+=--enable-ipv6
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/smtpfeed.8 ${PREFIX}/man/man8
-	${INSTALL_DATA_DIR} ${DOCDIR}
 	for i in ${DOCS}; do \
-		${INSTALL_DATA} ${WRKSRC}/$$i ${DOCDIR}; \
+		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/doc/smtpfeed; \
 	done
 
 .include "../../devel/sysexits/buildlink3.mk"
