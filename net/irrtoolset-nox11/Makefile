@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/22 22:36:13 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/06/02 15:41:30 joerg Exp $
 #
 
 DISTNAME=		IRRToolSet-4.8.2
@@ -9,6 +9,10 @@ MASTER_SITES=	ftp://ftp.isc.org/isc/IRRToolSet/IRRToolSet-4.8.2/
 MAINTAINER=		spz@NetBSD.org
 HOMEPAGE=		http://www.isc.org/index.pl?/sw/IRRToolSet/
 COMMENT=		The Internet Routing Registry Toolset - client to IRRd
+
+USE_LANGUAGES=		c c++
+
+INSTALLATION_DIRS=	bin man/man1 man/man3
 
 LICENSE=		no-commercial-use
 
