@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:11:23 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/06/02 18:28:00 joerg Exp $
 #
 
 DISTNAME=	ganglia-3.0.1
 PKGNAME=	ganglia-webfrontend-3.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www parallel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ganglia/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +12,7 @@ MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://ganglia.sourceforge.net/
 COMMENT=	PHP based frontend for the Ganglia Cluster Monitor
 
-DEPENDS+=	ap-php>=4.1:../../www/ap-php
+DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.1:../../www/ap-php
 DEPENDS+=	ganglia-monitor-core>=3.0.1:../../parallel/ganglia-monitor-core
 
 NO_BUILD=	YES
@@ -31,4 +31,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${DOCROOT}
 	cd ${WRKSRC} && ${PAX} -rw . ${DOCROOT}/
 
+.include "../../mk/apachever.mk"
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"

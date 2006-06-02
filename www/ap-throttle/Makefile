@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:11:18 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/02 18:27:59 joerg Exp $
 
 DISTNAME=	mod_throttle312
-PKGNAME=	ap-throttle-3.1.2
-PKGREVISION=	3
+PKGNAME=	ap13-throttle-3.1.2
 CATEGORIES=	www
 MASTER_SITES=	http://www.snert.com/Software/mod_throttle/
 EXTRACT_SUFX=	.tgz
@@ -10,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	eric@cirr.com
 HOMEPAGE=	${MASTER_SITES}
 COMMENT=	Apache module for limiting bandwidth usage
+
+CONFLICTS=	ap-throttle-[0-9]*
 
 WRKSRC=         ${WRKDIR}/${PKGNAME_NOREV:S/ap-/mod_/}
 

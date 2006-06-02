@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:10:46 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/06/02 18:27:58 joerg Exp $
 
 MODNAME=		mhash
-PKGREVISION=		1
 CATEGORIES+=		security
 COMMENT=		PHP extension for the mhash hash algorithms library
 
+CONFLICTS=	php-mhash-[0-9]
 
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_PREFIX.mhash}
 

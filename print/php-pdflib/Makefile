@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2006/04/17 13:46:46 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/06/02 18:27:57 joerg Exp $
 
 MODNAME=		pdflib
 PKGMODNAME=		pdf
 PECL_VERSION=		2.0.3
-PKGREVISION=		3
 CATEGORIES+=		print
 COMMENT=		PHP extension for PDFlib on-the-fly PDF generation
 
+CONFLICTS=	php-pdf-[0-9]
 
 CONFIGURE_ARGS+=	--with-pdflib=shared,${BUILDLINK_PREFIX.pdflib}
 

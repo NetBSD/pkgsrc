@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2006/03/04 21:31:03 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/02 18:28:00 joerg Exp $
 
 DISTNAME=	FastTemplate-1_1_0
-PKGNAME=	php-FastTemplate-1.1.0
-PKGREVISION=	1
+PKGNAME=	${PHP_PKG_PREFIX}-FastTemplate-1.1.0
 CATEGORIES=	www php4
 MASTER_SITES=	http://www.thewebmasters.net/php/
 
@@ -13,7 +12,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.thewebmasters.net/php/FastTemplate.phtml
 COMMENT=	PHP extension for managing templates and variable interpolation
 
-DEPENDS+=	php>=3.0.18:../../www/php4
+CONFLICTS=	php-FastTemplate-[0-9]
+
+PHP_VERSIONS_ACCEPTED=	4
 
 WRKSRC=		${WRKDIR}/FastTemplate
 DIST_SUBDIR=	${PKGBASE}
@@ -40,4 +41,5 @@ do-install:
 	done
 	${INSTALL_DATA} ${WRKSRC}/templates/*.tpl ${EGDIR}/templates
 
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2006/04/29 09:23:19 adrianp Exp $
+# $NetBSD: Makefile,v 1.21 2006/06/02 18:27:56 joerg Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
+PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	http://ftp.horde.org/pub/imp/ \
-		ftp://ftp.horde.org/pub/imp/ 
+		ftp://ftp.horde.org/pub/imp/
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.horde.org/imp/
@@ -13,8 +14,8 @@ COMMENT=	Internet Messaging Program
 CONFLICTS+=	imp-3.*
 
 DEPENDS+=	horde>=3.0.2:../../www/horde3
-DEPENDS+=	php-imap>4.3.3:../../mail/php-imap
-DEPENDS+=	pear-Mail-[0-9]*:../../mail/pear-Mail
+DEPENDS+=	${PHP_PKG_PREFIX}-imap>4.3.3:../../mail/php-imap
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail-[0-9]*:../../mail/pear-Mail
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -97,4 +98,5 @@ do-install:
 	@${CHOWN} ${APACHE_USER}:${ROOT_GROUP} ${IMPDIR}/config
 	@${CHMOD} 0750 ${IMPDIR}/config
 
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"

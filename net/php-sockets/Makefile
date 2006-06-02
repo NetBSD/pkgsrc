@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:10:29 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/06/02 18:27:57 joerg Exp $
 
 MODNAME=		sockets
-PKGREVISION=		1
 CATEGORIES+=		net
 COMMENT=		PHP extension for sockets support
 
+CONFLICTS=	php-sockets-[0-9]
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}=shared,${BUILDLINK_DIR}
 

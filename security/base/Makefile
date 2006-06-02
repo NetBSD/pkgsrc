@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2006/05/12 22:31:38 adrianp Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/02 18:27:57 joerg Exp $
 #
 
 DISTNAME=	base-1.2.4
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=secureideas/}
 
@@ -10,15 +11,15 @@ HOMEPAGE=	http://secureideas.sourceforge.net/
 COMMENT=	Analysis engine to process a database of security events
 
 DEPENDS+=	adodb>=1.2:../../databases/adodb
-DEPENDS+=	ap-php>=4.0.4:../../www/ap-php
-DEPENDS+=	php-gd>=4.0.4:../../graphics/php-gd
-DEPENDS+=	php-sockets>=4.0.4:../../net/php-sockets
-DEPENDS+=	php-mysql>=4.0.4:../../databases/php-mysql
-DEPENDS+=	pear-Log-[0-9]*:../../sysutils/pear-Log
-DEPENDS+=	pear-Numbers_Words-[0-9]*:../../math/pear-Numbers_Words
-DEPENDS+=	pear-Numbers_Roman-[0-9]*:../../math/pear-Numbers_Roman
-DEPENDS+=	pear-Image_Color-[0-9]*:../../graphics/pear-Image_Color
-DEPENDS+=	pear-Image_Graph-[0-9]*:../../graphics/pear-Image_Graph
+DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.0.4:../../www/ap-php
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.0.4:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-sockets>=4.0.4:../../net/php-sockets
+DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.0.4:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-Log-[0-9]*:../../sysutils/pear-Log
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-Numbers_Words-[0-9]*:../../math/pear-Numbers_Words
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-Numbers_Roman-[0-9]*:../../math/pear-Numbers_Roman
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-Image_Color-[0-9]*:../../graphics/pear-Image_Color
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-Image_Graph-[0-9]*:../../graphics/pear-Image_Graph
 
 NO_BUILD=	YES
 
@@ -72,4 +73,6 @@ do-install:
 
 	@${CHOWN} ${WWW_USER} ${BASE_DIR}
 
+.include "../../mk/apachever.mk"
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"

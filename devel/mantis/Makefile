@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2006/05/28 15:17:47 adrianp Exp $
+# $NetBSD: Makefile,v 1.22 2006/06/02 18:27:55 joerg Exp $
 
 DISTNAME=	mantis-1.0.3
+PKGREVISION=	1
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mantisbt/}
 
@@ -8,8 +9,8 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.mantisdb.org/
 COMMENT=	PHP/MySQL/web based bugtracking system
 
-DEPENDS+=	ap-php>=4.0.6:../../www/ap-php
-DEPENDS+=	php-mysql>=4.0.6:../../databases/php-mysql
+DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.0.6:../../www/ap-php
+DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.0.6:../../databases/php-mysql
 
 NO_BUILD=	YES
 
@@ -21,7 +22,7 @@ PKG_SUPPORTED_OPTIONS=	charts
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mcharts)
-DEPENDS+=	php-jpgraph-[0-9]*:../../graphics/php-jpgraph
+DEPENDS+=	${PHP_PKG_PREFIX}-jpgraph-[0-9]*:../../graphics/php-jpgraph
 .endif
 
 APACHE_USER?=	www
