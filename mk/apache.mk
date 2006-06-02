@@ -1,4 +1,4 @@
-# $NetBSD: apache.mk,v 1.11 2006/05/09 10:05:04 tron Exp $
+# $NetBSD: apache.mk,v 1.12 2006/06/02 18:27:57 joerg Exp $
 #
 # This Makefile fragment handles Apache dependencies and make variables,
 # and is meant to be included by packages that require Apache either at
@@ -32,93 +32,7 @@
 .if !defined(APACHE_MK)
 APACHE_MK=	# defined
 
-.include "../../mk/bsd.prefs.mk"
-
-PKG_APACHE_DEFAULT?=	# empty
-
-_PKG_APACHES?=	apache13 apache2
-
-.if defined(PKG_APACHE_ACCEPTED)
-.  for _ap_ in ${PKG_APACHE_ACCEPTED}
-.    if !empty(_PKG_APACHES:M${_ap_})
-_PKG_APACHE_ACCEPTED+=	${PKG_APACHE_ACCEPTED:M${_ap_}}
-.    endif
-.  endfor
-.endif
-
-_PKG_APACHE_ACCEPTED?=	${_PKG_APACHES}
-
-# Set the default apache for this platform.
-#
-.if !empty(PKG_APACHE_DEFAULT)
-_PKG_APACHE_DEFAULT=	${PKG_APACHE_DEFAULT}
-.endif
-.if !defined(_PKG_APACHE_DEFAULT)
-_PKG_APACHE_DEFAULT?=	apache2
-.endif
-
-_APACHE_PKGBASE.apache13=	apache-1\*
-_APACHE_PKGBASE.apache2=	apache-2\*
-
-# Mark the acceptable apaches and check which apache packages are installed.
-.for _ap_ in ${_PKG_APACHE_ACCEPTED}
-_PKG_APACHE_OK.${_ap_}=	yes
-_PKG_APACHE_INSTALLED.${_ap_}!= \
-	if ${PKG_INFO} -qe ${_APACHE_PKGBASE.${_ap_}}; then		\
-		${ECHO} yes;						\
-	else								\
-		${ECHO} no;						\
-	fi
-.endfor
-
-# Use one of the installed apaches,...
-#
-.if !defined(_PKG_APACHE)
-.  for _ap_ in ${_PKG_APACHE_ACCEPTED}
-.    if !empty(_PKG_APACHE_INSTALLED.${_ap_}:M[yY][eE][sS])
-_PKG_APACHE?=			${_ap_}
-.    else
-_PKG_APACHE_FIRSTACCEPTED?=	${_ap_}
-.    endif
-.  endfor
-.endif
-#
-# ...otherwise, prefer the default one if it's accepted,...
-#
-.if !defined(_PKG_APACHE)
-.  if defined(_PKG_APACHE_OK.${_PKG_APACHE_DEFAULT}) && \
-      !empty(_PKG_APACHE_OK.${_PKG_APACHE_DEFAULT}:M[yY][eE][sS])
-_PKG_APACHE=	${_PKG_APACHE_DEFAULT}
-.  endif
-.endif
-#
-# ...otherwise, just use the first accepted apache.
-#
-.if !defined(_PKG_APACHE)
-.  if defined(_PKG_APACHE_FIRSTACCEPTED)
-_PKG_APACHE=	${_PKG_APACHE_FIRSTACCEPTED}
-.  endif
-.endif
-#
-# If there are no acceptable apaches, then generate an error.
-#
-.if !defined(_PKG_APACHE)
-# force an error
-PKG_FAIL_REASON=	"no acceptable apache found"
-_PKG_APACHE=		"none"
-.endif
-
-BUILDLINK_API_DEPENDS.apache13?=	apache-1.3*
-BUILDLINK_API_DEPENDS.apache2?=	apache-2*
-
-.if ${_PKG_APACHE} == "apache13"
-_APACHE_PKGSRCDIR=	../../www/apache
-.elif ${_PKG_APACHE} == "apache2"
-_APACHE_PKGSRCDIR=	../../www/apache2
-_APACHE_BL_SRCDIR=	${_APACHE_PKGSRCDIR}
-.endif
-
-_APACHE_BL_SRCDIR?=	../../www/apache
+.include "../../mk/apachever.mk"
 
 # Add a runtime dependency on the apache server.
 # This may or may not create an actual dependency depending on
@@ -136,11 +50,5 @@ _APACHE_BL_SRCDIR?=	../../www/apache
 .    include "../../devel/apr/buildlink3.mk"
 .  endif
 .endif
-
-# PKG_APACHE is a publicly readable variable containing the name of the server
-#	we will be using.
-#
-PKG_APACHE:=		${_PKG_APACHE}
-BUILD_DEFS+=		PKG_APACHE
 
 .endif	# APACHE_MK

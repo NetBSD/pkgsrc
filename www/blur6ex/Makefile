@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2006/03/04 21:30:57 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/02 18:28:00 joerg Exp $
 #
 
 DISTNAME=	blur6ex-0.1.198
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://www.blursoft.com/releases/
 
@@ -10,8 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.blursoft.com/
 COMMENT=	Weblog and content framework
 
-DEPENDS+=	ap{,2}-php>=4.0.0:../../www/ap-php
-DEPENDS+=	php-mysql-[0-9]*:../../databases/php-mysql
+DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.0.0:../../www/ap-php
+DEPENDS+=	${PHP_PKG_PREFIX}-mysql-[0-9]*:../../databases/php-mysql
 DEPENDS+=	mysql-server>=4.1:../../databases/mysql5-server
 
 NO_CONFIGURE=	yes
@@ -51,4 +51,6 @@ do-install:
 		'-s|./engine/core/db.php$$||' .			\
 		${PREFIX}/${HTTPD_ROOT}/blog
 
+.include "../../mk/apachever.mk"
+.include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
