@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.67 2006/05/31 11:54:30 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.68 2006/06/02 15:50:44 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -137,3 +137,5 @@ Pullup ticket 1677 - requested by minskim
 security fix for awstats
 Pullup ticket 1680 - requested by joerg
 security updates for postgresql
+Pullup ticket 1681 - requested by salo
+security update for firefox-bin
