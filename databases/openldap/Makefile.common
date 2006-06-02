@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2006/05/31 18:17:49 ghen Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/06/02 22:02:33 joerg Exp $
 
 DISTNAME=		openldap-2.3.23
 CATEGORIES=		databases
@@ -30,8 +30,6 @@ OPENLDAP_VARDIR?=	${VARBASE}/openldap
 SLAPD_USER?=		slapd
 SLURPD_USER?=		slurpd
 LDAP_GROUP?=		ldap
-
-.include "${.CURDIR}/options.mk"
 
 # the internal avl_* prototypes conflict with those in <sys/avl.h> which
 # is included by another system header file on Solaris, so subst them.
