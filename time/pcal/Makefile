@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2005/12/05 20:51:09 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2006/06/02 13:55:11 joerg Exp $
 #
 
 DISTNAME=	pcal-4.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time
 MASTER_SITES=	http://membled.com/work/mirror/pcal/
 EXTRACT_SUFX=	.tar.bz2
@@ -22,7 +22,7 @@ MAKE_ENV+=	CC=${CC:Q} HOST_CC=${CC:Q}
 
 BUILD_TARGET=	pcal
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin man/man1 share/doc/pcal ${HTDOCS}
 
 pre-install:
 	${MV} ${WRKSRC}/pcal.cgi ${WRKSRC}/pcal.cgi.tmp
@@ -40,8 +40,7 @@ do-install:
 	${INSTALL_SCRIPT_DIR} ${CGIBINDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/pcal.cgi ${CGIBINDIR}
 	${INSTALL_MAN} ${WRKSRC}/pcal.man ${PREFIX}/man/man1/pcal.1
-	${INSTALL_DATA} ${WRKSRC}/ReadMe ${PREFIX}/share/doc/ReadMe.pcal
-	${INSTALL_DATA_DIR} ${HTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/ReadMe ${PREFIX}/share/doc/pcal/ReadMe
 	${INSTALL_DATA} ${WRKSRC}/pcal.html ${HTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/pcalw.html ${HTDOCS}
 
