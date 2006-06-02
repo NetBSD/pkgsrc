@@ -1,4 +1,4 @@
-# $NetBSD: build.conf-example,v 1.35 2006/03/28 10:56:52 joerg Exp $
+# $NetBSD: build.conf-example,v 1.36 2006/06/02 22:01:46 dillo Exp $
 #
 # This is an example configuration file for pkgsrc bulk builds.
 # Actually it's a shell script that is sourced in by the pre-build,
@@ -93,7 +93,7 @@ PRUNEPACKAGES=yes
 # Whether or not to create checksum files.
 MKSUMS=yes
 
-# Whether or not to create the pkg_chk summary file.
+# Whether or not to create the summary file.
 MKSUMMARY=no
 
 # If you want to PGP sign the checksum files, set and correct.
