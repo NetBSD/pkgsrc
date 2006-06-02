@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:08:51 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/06/02 17:29:30 joerg Exp $
 
 DISTNAME=	py-kqueue-2.0
 PKGNAME=	${PYPKGPREFIX}-kqueue-2.0
@@ -10,6 +10,7 @@ MAINTAINER=	jdolecek@NetBSD.org
 COMMENT=	Python interface to kqueue(2) and kevent(2) system calls
 
 PYDISTUTILSPKG= # defined
+PYTHON_VERSIONS_ACCEPTED= 24 23 22
 
 # need to get definition of PKG_HAVE_KQUEUE
 .include "../../mk/bsd.prefs.mk"
