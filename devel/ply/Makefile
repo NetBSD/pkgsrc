@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:08:50 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/06/03 00:13:07 joerg Exp $
 
 DISTNAME=	ply-1.5
 PKGREVISION=	1
@@ -10,8 +10,6 @@ HOMEPAGE=	http://systems.cs.uchicago.edu/ply/
 COMMENT=	Python Lex-Yacc
 
 PYDISTUTILSPKG=	yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=	15 # 2.0 or greater
 
 DOCDIR=	${PREFIX}/share/doc/ply
 EGDIR=	${PREFIX}/share/examples/ply
