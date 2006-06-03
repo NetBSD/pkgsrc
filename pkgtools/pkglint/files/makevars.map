@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.102 2006/06/03 07:06:23 rillig Exp $
+# $NetBSD: makevars.map,v 1.103 2006/06/03 07:10:25 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -26,7 +26,10 @@
 # excludes buildlink3.mk and builtin.mk, since they are very special-
 # purpose. Because at the beginning, all lists are empty, in the
 # primary Makefile a direct assignment may be used instead of appending.
-acl list = [m:as, c:a, b:, builtin.mk:, *.mk:a]
+# Since Makefile.common files are usually used by packages that know
+# what they are doing, they may set variables directly, too. This rule
+# can be removed to show a lot of possible problems in pkgsrc.
+acl list = [m:as, c:as, b:, builtin.mk:, *.mk:a]
 
 # A simple value is similar to $list above, just without allowing to
 # append to it.
