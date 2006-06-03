@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.4 2006/02/05 14:43:14 ghen Exp $
-
-If you have ever run another version of firefox or firefox-gtk1, you
-must remove compreg.dat under your firefox profile before you run firefox.
-
-     e.g. rm ~/.mozilla/firefox/*/compreg.dat
-
-===========================================================================

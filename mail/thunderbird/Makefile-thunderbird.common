@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-thunderbird.common,v 1.13 2006/05/21 23:18:35 jlam Exp $
+# $NetBSD: Makefile-thunderbird.common,v 1.14 2006/06/03 07:57:31 ghen Exp $
 
 MOZILLA_BIN=		thunderbird-bin
 MOZ_VER=		1.5.0.2
@@ -15,7 +15,6 @@ MAKE_ENV+=		MOZ_THUNDERBIRD=1
 
 DISTINFO_FILE=		${.CURDIR}/../../mail/thunderbird/distinfo
 PATCHDIR=		${.CURDIR}/../../mail/thunderbird/patches
-MESSAGE_SRC+=		${.CURDIR}/../../mail/thunderbird/MESSAGE
 
 CONFIGURE_ARGS+=	--enable-application=mail
 CONFIGURE_ARGS+=	--enable-extensions=wallet,spellcheck,xmlextras
