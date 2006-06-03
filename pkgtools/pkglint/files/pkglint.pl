@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.600 2006/06/03 07:06:23 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.601 2006/06/03 07:27:25 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -279,7 +279,7 @@ sub explain($$@) {
 	my $out = ($loglevel == LL_FATAL) ? *STDERR : *STDOUT;
 
 	if ($explain_flag) {
-		foreach my $text (@texts) {
+		foreach my $text ("", @texts, "") {
 			print $out ("\t${text}\n");
 		}
 	}
@@ -3950,6 +3950,14 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 						$ncommands++;
 						if ($ncommands > 1) {
 							$line->log_warning("Each sed command should appear in an assignment of its own.");
+							$line->explain_warning(
+								"For example, instead of",
+								"    SUBST_SED.foo+=        -e s,command1,, -e s,command2,,",
+								"use",
+								"    SUBST_SED.foo+=        -e s,command1,,",
+								"    SUBST_SED.foo+=        -e s,command2,,",
+								"",
+								"This way, short sed commands cannot be hidden at the end of a line.");
 						}
 						checkline_mk_shellword($line, $word, true);
 					} else {
