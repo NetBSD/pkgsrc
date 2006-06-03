@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.407 2006/06/03 23:11:42 jlam Exp $
+$NetBSD: CHANGES-2006,v 1.408 2006/06/03 23:31:17 rh Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2893,3 +2893,4 @@ Changes to the packages collection and infrastructure in 2006:
 	mk/bsd.pkg.mk: refactored depends, install, and package phases to
 		support additional package system flavors via PKG_FLAVOR
 		[jlam 2006-06-03]
+	Added net/libupnp version 1.3.1 [rh 2006-06-03]
