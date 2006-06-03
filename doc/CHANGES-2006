@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.401 2006/06/03 08:06:56 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.402 2006/06/03 10:41:21 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2884,3 +2884,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/seamonkey to 1.0.2 [ghen 2006-06-03]
 	Updated www/seamonkey-gtk1 to 1.0.2 [ghen 2006-06-03]
 	Updated www/seamonkey-bin to 1.0.2 [ghen 2006-06-03]
+	Updated devel/rt3 to 3.4.5nb1 [seb 2006-06-03]
