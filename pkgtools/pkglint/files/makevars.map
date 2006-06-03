@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.101 2006/06/03 06:04:37 rillig Exp $
+# $NetBSD: makevars.map,v 1.102 2006/06/03 07:06:23 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -16,6 +16,21 @@
 # this variable should only be initialized to the empty list or have some
 # values appended using the "+=" operator. All other operations will
 # generate a warning.
+
+#
+# Some commonly used ACLs. For further documentation, see the chapter
+# ``The pkglint type system'' in the pkglint developer documentation.
+#
+
+# A list may be appended to in all "normal" Makefile fragments. This
+# excludes buildlink3.mk and builtin.mk, since they are very special-
+# purpose. Because at the beginning, all lists are empty, in the
+# primary Makefile a direct assignment may be used instead of appending.
+acl list = [m:as, c:a, b:, builtin.mk:, *.mk:a]
+
+# A simple value is similar to $list above, just without allowing to
+# append to it.
+acl simple = [m:s, c:ds, b:, builtin.mk:, *.mk:ds]
 
 # The following variables are taken from mk/defaults/mk.conf, 1.118
 
@@ -144,10 +159,10 @@ BUILDLINK_TRANSFORM.*	SedCommands [m:a,builtin.mk:a,h:a,b:a]
 BUILDLINK_TRANSFORM	List of WrapperTransform [*:a]
 BUILD_DEFS		List of Varname [m:a,c:a,o:a]
 BUILD_DEPENDS		InternalList of DependencyWithPath [c:a,m:a,o:a,*.mk:a]
-BUILD_DIRS		List of WrksrcSubdirectory [m:as,c:as]
+BUILD_DIRS		List of WrksrcSubdirectory [$list]
 BUILD_ENV		List of ShellWord [*:a]
 BUILD_MAKE_FLAGS	List of ShellWord [*:a]
-BUILD_TARGET		List of Identifier [m:as,c:as,o:as]
+BUILD_TARGET		List of Identifier [$simple]
 BUILD_USES_MSGFMT	Yes
 BUILTIN_PKG		Identifier [builtin.mk:s]
 BUILTIN_FIND_FILES_VAR	List of Varname [builtin.mk:s]
@@ -179,10 +194,10 @@ CONFIG_GUESS_OVERRIDE	List of Pathmask [m:as,c:as]
 CONFIG_STATUS_OVERRIDE	List of Pathmask [m:as,c:as]
 CONFIG_SHELL		ShellWord [m:s,c:s]
 CONFIG_SUB_OVERRIDE	List of Pathmask [m:as,c:as]
-CONFLICTS		List of Dependency [m:as,c:a]
-CONF_FILES		List of ShellWord [m:as,c:a]
-CONF_FILES_MODE		{ 0644 0640 0600 0400 } [m:as,c:a]
-CONF_FILES_PERMS	List of ShellWord [m:as,c:a,o:a]
+CONFLICTS		List of Dependency [$list]
+CONF_FILES		List of ShellWord [$list]
+CONF_FILES_MODE		{ 0644 0640 0600 0400 } [$simple]
+CONF_FILES_PERMS	List of ShellWord [$list]
 CPPFLAGS*		List of CFlag [m:a,h:a,c:a,o:a]
 CRYPTO			Yes [m:s]
 CXX			ShellCommand [m:]
@@ -194,7 +209,7 @@ DEPENDS			InternalList of DependencyWithPath [*:a]
 DESCR_SRC		List of Pathname [m:s,c:ds]
 DEVOSSAUDIO		Pathname
 DEVOSSSOUND		Pathname
-DISTFILES		List of Filename [m:as,c:ads]
+DISTFILES		List of Filename [$list]
 DISTINFO_FILE		RelativePkgPath [m:s,c:ds]
 DISTNAME		Filename [m:s,c:ads, Makefile.*:ds]
 DIST_SUBDIR		Filename [m:s,c:ds,Makefile.*:ds]
@@ -246,7 +261,7 @@ FAM_ACCEPTED		List of { fam gamin }
 FAM_DEFAULT		Unchecked []
 FAM_TYPE		Unchecked []
 FETCH_BEFORE_ARGS	List of ShellWord [m:as]
-FETCH_MESSAGE		List of ShellWord [m:as,c:as,o:as]
+FETCH_MESSAGE		List of ShellWord [$list]
 FILESDIR		RelativePkgPath [m:s,c:ds]
 FILES_SUBST		List of ShellWord [*:a]
 FILES_SUBST_SED		List of ShellWord
@@ -270,16 +285,16 @@ INFO_DIR		Pathname
 # ^^ relative to PREFIX
 INFO_FILES		List of Pathmask [m:s,c:ads]
 INSTALL			ShellCommand [*:u]
-INSTALLATION_DIRS	List of Pathname [m:as,c:as]
+INSTALLATION_DIRS	List of Pathname [$list]
 INSTALL_DATA		ShellCommand [*:u]
 INSTALL_DATA_DIR	ShellCommand [*:u]
-INSTALL_DIRS		List of WrksrcSubdirectory [m:as,c:as]
+INSTALL_DIRS		List of WrksrcSubdirectory [$list]
 INSTALL_FILE		Pathname [m:s]
 INSTALL_GAME		ShellCommand [*:u]
 INSTALL_GAME_DATA	ShellCommand [*:u]
 INSTALL_LIB		ShellCommand [*:u]
 INSTALL_LIB_DIR		ShellCommand [*:u]
-INSTALL_MAKE_FLAGS	List of ShellWord [m:as,*:a]
+INSTALL_MAKE_FLAGS	List of ShellWord [$list]
 INSTALL_MAN		ShellCommand [*:u]
 INSTALL_MAN_DIR		ShellCommand [*:u]
 INSTALL_PROGRAM		ShellCommand [*:u]
@@ -288,7 +303,7 @@ INSTALL_SCRIPT		ShellCommand [*:u]
 INSTALL_SCRIPTS_ENV	List of ShellWord
 INSTALL_SCRIPT_DIR	ShellCommand [*:u]
 INSTALL_SRC		List of Pathname [m:s,c:ds]
-INSTALL_TARGET		List of Identifier [m:as,c:as,b:,ruby*.mk:d,o:as]
+INSTALL_TARGET		List of Identifier [ruby*.mk:d, $simple]
 INSTALL_TEMPLATE	List of Pathname [m:as,c:ads]
 INSTALL_UNSTRIPPED	YesNo [m:s,c:s]
 INTERACTIVE_STAGE	List of { fetch extract configure build install } [m:s]
@@ -319,8 +334,8 @@ MAKE			ShellCommand [*:u]
 MAKEFILE		Pathname [m:s,c:s]
 MAKEFLAGS		List of ShellWord [m:a,c:a,b:a,h:a]
 MAKEVARS		List of Varname [builtin.mk:a,b:a,h:a]
-MAKE_DIRS		List of Pathname [m:as,c:a]
-MAKE_DIRS_PERMS		List of ShellWord [m:as,c:a]
+MAKE_DIRS		List of Pathname [$list]
+MAKE_DIRS_PERMS		List of ShellWord [$list]
 MAKE_ENV		List of ShellWord [*:a]
 MAKE_FLAGS		List of ShellWord [*:a]
 MAKE_PROGRAM		ShellCommand []
@@ -354,13 +369,13 @@ MASTER_SITE_TEX_CTAN	List of URL [*:u]
 MASTER_SITE_XCONTRIB	List of URL [*:u]
 MASTER_SITE_XEMACS	List of URL [*:u]
 MESSAGE			Unchecked []
-MESSAGE_SRC		List of Pathname [m:as,c:a,o:ads]
+MESSAGE_SRC		List of Pathname [$list]
 MESSAGE_SUBST		List of ShellWord [c:a,m:a,o:a]
 MYSQL_VERSIONS_ACCEPTED	List of { 40 41 50 } [m:s]
 MYSQL_VERSION_DEFAULT	Unchecked []
 NM			ShellCommand [*:u]
-NOT_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc } [m:as,c:a]
-NOT_FOR_PLATFORM	List of PlatformTriple [m:as,c:a]
+NOT_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc } [$simple]
+NOT_FOR_PLATFORM	List of PlatformTriple [$list]
 NO_BIN_ON_CDROM		Restricted [m:s,c:s]
 NO_BIN_ON_FTP		Restricted [m:s,c:s]
 NO_BUILD		Yes [m:s,c:s,Makefile.*:ds]
@@ -375,23 +390,23 @@ NO_PKGTOOLS_REQD_CHECK	Yes [m:s]
 NO_PKG_REGISTER		Yes [m:s]
 NO_SRC_ON_CDROM		Restricted [m:s,c:s]
 NO_SRC_ON_FTP		Restricted [m:s,c:s]
-ONLY_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc } [m:as,c:a]
-ONLY_FOR_PLATFORM	List of PlatformTriple [m:as,c:a]
+ONLY_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc } [$list]
+ONLY_FOR_PLATFORM	List of PlatformTriple [$list]
 OPSYS			Identifier [*:u]
 OPSYSVARS		List of Varname [m:a,c:a]
 OSVERSION_SPECIFIC	Yes [m:s,c:s]
-OWN_DIRS		List of Pathname [m:as,c:a]
-OWN_DIRS_PERMS		List of ShellWord [m:as,o:a]
+OWN_DIRS		List of Pathname [$list]
+OWN_DIRS_PERMS		List of ShellWord [$list]
 PAMBASE			Unchecked []
 PAM_ACCEPTED		List of { linux-pam openpam solaris-pam }
 PAM_DEFAULT		Unchecked []
 PAM_TYPE		Unchecked []
 PATCHDIR		RelativePkgPath [m:s,c:ds]
-PATCHFILES		List of Filename [m:as,o:as,c:as]
+PATCHFILES		List of Filename [$list]
 PATCH_ARGS		List of ShellWord
 PATCH_DIST_ARGS		List of ShellWord [m:as]
 PATCH_DIST_CAT		ShellCommand
-PATCH_DIST_STRIP	ShellWord [o:s,c:a,m:as]
+PATCH_DIST_STRIP*	ShellWord [o:s,c:a,m:as]
 PATCH_SITES		List of URL [m:s,o:s,c:s]
 PATCH_STRIP		ShellWord
 PERL5_PACKLIST		List of Perl5Packlist [m:s,o:sa]
@@ -456,7 +471,7 @@ PKG_SYSCONFVAR		Identifier
 PKG_UID			Unchecked [m:s]
 PKG_USERS		List of ShellWord [m:as]
 PKG_USE_KERBEROS	Yes [m:s,c:s]
-PLIST_SRC		List of RelativePkgPath [m:as,o:a,c:ads]
+PLIST_SRC		List of RelativePkgPath [$list]
 PLIST_SUBST		List of ShellWord [*:a]
 PLIST_TYPE		{ dynamic static }
 PREPEND_PATH		List of Pathname
@@ -465,18 +480,18 @@ PRINT_PLIST_AWK		AwkCommand [*:a]
 PTHREAD_AUTO_VARS	YesNo [m:s]
 PTHREAD_OPTS		List of { native optional require } [m:as,c:a,b:a]
 PTHREAD_TYPE		Unchecked []
-PYTHON_PATCH_SCRIPTS	List of Pathmask [m:as,*:a]
-RCD_SCRIPTS		List of Filename [m:s,c:as]
+PYTHON_PATCH_SCRIPTS	List of Pathmask [$list]
+RCD_SCRIPTS		List of Filename [$list]
 RCD_SCRIPT_SRC.*	List of Pathname [m:s]
 REPLACE.*		String [m:s]
 REPLACE_EMACS		List of Pathmask
 REPLACE_FILES.*		List of Pathmask [m:as,c:as]
 REPLACE_INTERPRETER	List of Identifier [m:a,c:a]
-REPLACE_PERL		List of Pathmask [m:as,c:a,o:a]
-REQD_DIRS		List of Pathname [m:as]
-REQD_DIRS_PERMS		List of ShellWord [m:as,c:a]
-REQD_FILES		List of Pathname [m:as]
-REQD_FILES_MODE		{ 0644 0640 0600 0400 } [m:as]
+REPLACE_PERL		List of Pathmask [$list]
+REQD_DIRS		List of Pathname [$list]
+REQD_DIRS_PERMS		List of ShellWord [$list]
+REQD_FILES		List of Pathname [$list]
+REQD_FILES_MODE		{ 0644 0640 0600 0400 } [$simple]
 RESTRICTED		Message [m:s,c:ds]
 SCRIPTS_ENV		List of ShellWord [m:a,c:a]
 SHAREGRP		UserGroupName []
@@ -486,7 +501,7 @@ SHLIB_HANDLING		{ YES NO no }
 SHLIBTOOL		ShellCommand []
 SHLIBTOOL_OVERRIDE	List of Pathmask [m:as,c:a]
 SITES.*			List of URL [m:as,c:as,o:as]
-SPECIAL_PERMS		List of ShellWord [m:as]
+SPECIAL_PERMS		List of ShellWord [$list]
 SUBST_CLASSES		List of Identifier [m:a,c:a,h:a,Makefile.*:a]
 SUBST_FILES.*		List of Pathmask [m:as,c:as,h:as,o:as,Makefile.*:as]
 SUBST_FILTER_CMD.*	ShellCommand [m:s,c:s,h:s,o:s,Makefile.*:as]

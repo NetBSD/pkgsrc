@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.599 2006/06/03 06:04:37 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.600 2006/06/03 07:06:23 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1761,6 +1761,51 @@ sub get_regex_plurals() {
 # Loading pkglint-specific data from files.
 #
 
+# The symbol table for ACL definitions maps ACL names to ACLs.
+my $acl_definitions = {};
+
+sub parse_acls($$) {
+	my ($line, $acltext) = @_;
+	my ($acls);
+
+	use constant ACL_shortcuts => {
+		"b" => qr"(?:^|/)buildlink3\.mk$",
+		"c" => qr"(?:^|/)Makefile\.common$",
+		"h" => qr"(?:^|/)hacks\.mk$",
+		"m" => qr"(?:^|/)Makefile$",
+		"o" => qr"(?:^|/)options\.mk$",
+	};
+
+	if (!defined($acltext)) {
+		return undef;
+	}
+
+	$acls = [];
+	while ($acltext =~ s,^(?:\$(\w+)|([\w.*]+|_):([adpsu]*))(?:\,\s*|$),,) {
+		my ($acldef, $subject, $perms) = ($1, $2, $3);
+
+		if (defined($acldef)) {
+			if (!exists($acl_definitions->{$acldef})) {
+				$line->log_fatal("ACL definition ${acldef} not found.");
+			} else {
+				push(@{$acls}, @{$acl_definitions->{$acldef}});
+			}
+
+		} else {
+			# Transform $subject to a regular expression.
+			$subject =~ s/\./[.]/g;
+			$subject =~ s/\*/.*/g;
+
+			push(@{$acls}, [exists(ACL_shortcuts->{$subject}) ? ACL_shortcuts->{$subject} : qr"(?:^|/)${subject}$", $perms]);
+		}
+	}
+	if ($acltext ne "") {
+		$line->log_fatal("Invalid ACL: ${acltext}.");
+	}
+
+	return $acls;
+}
+
 my $get_vartypes_map_result = undef;
 sub get_vartypes_map() {
 	my ($fname, $vartypes);
@@ -1768,6 +1813,14 @@ sub get_vartypes_map() {
 	if (defined($get_vartypes_map_result)) {
 		return $get_vartypes_map_result;
 	}
+
+	use constant re_acl_def => qr"^
+		acl \s+
+		(\w+) \s+				# ACL name
+		= \s+
+		\[ ([^\]]*) \]				# ACL value
+		(?:\s*\#.*)?				# optional comment
+		$"x;
 
 	use constant re_vartypedef => qr"^
 		([\w\d_.]+?)				# variable name
@@ -1786,43 +1839,21 @@ sub get_vartypes_map() {
 			if ($line->text =~ qr"^(?:#.*|\s*)$") {
 				# ignore empty and comment lines
 
+			} elsif ($line->text =~ re_acl_def) {
+				my ($aclname, $aclvalue) = ($1, $2);
+
+				$acl_definitions->{$aclname} = parse_acls($line, $aclvalue);
+
 			} elsif ($line->text =~ re_vartypedef) {
 				my ($varname, $par, $kind_of_list_text, $typename, $enums, $acltext) = ($1, $2, $3, $4, $5, $6);
 				my $kind_of_list = !defined($kind_of_list_text) ? LK_NONE
 				    : ($kind_of_list_text eq "List") ? LK_EXTERNAL
 				    : LK_INTERNAL;
-				my $acls = [];
-				my $basic_type;
 
-				if (!defined($acltext)) {
-					$acltext = "";
-					$acls = undef;
-				}
-
-				while ($acltext =~ s,^([\w.*]+|_):([adpsu]*)(?:\,\s*|$),,) {
-					my ($subject, $perms) = ($1, $2);
-
-					use constant ACL_shortcuts => {
-						"b" => qr"(?:^|/)buildlink3\.mk$",
-						"c" => qr"(?:^|/)Makefile\.common$",
-						"h" => qr"(?:^|/)hacks\.mk$",
-						"m" => qr"(?:^|/)Makefile$",
-						"o" => qr"(?:^|/)options\.mk$",
-					};
-
-					# Transform $subject to a regular expression.
-					$subject =~ s/\./[.]/g;
-					$subject =~ s/\*/.*/g;
-
-					push(@{$acls}, [exists(ACL_shortcuts->{$subject}) ? ACL_shortcuts->{$subject} : qr"(?:^|/)${subject}$", $perms]);
-				}
-				if ($acltext ne "") {
-					$line->log_fatal("Invalid ACL: ${acltext}.");
-				}
-				$basic_type = defined($enums)
+				my $basic_type = defined($enums)
 				    ? array_to_hash(split(qr"\s+", $enums))
 				    : $typename;
-				my $type = PkgLint::Type->new($kind_of_list, $basic_type, $acls, NOT_GUESSED);
+				my $type = PkgLint::Type->new($kind_of_list, $basic_type, parse_acls($line, $acltext), NOT_GUESSED);
 				if ($par eq "" || $par eq "*") {
 					$vartypes->{$varname} = $type;
 				}
