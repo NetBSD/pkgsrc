@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.47 2006/06/03 00:12:38 rillig Exp $
+$NetBSD: TODO,v 1.48 2006/06/03 00:25:34 joerg Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
@@ -31,3 +31,5 @@ include the name of an example package where a warning should occur.
 * Check that USE_LIBTOOL=yes, when the PLIST contains *.la.
 * Of the user-defined variables, some may be used at load-time and some
   don't. Find out how pkglint can distinguish them.
+* PYTHON_VERSIONS_INCOMPATIBLE should be treated as platform flag only,
+  the user or packages should not alter or use it
