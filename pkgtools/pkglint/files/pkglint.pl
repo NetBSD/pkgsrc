@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.597 2006/06/02 21:54:00 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.598 2006/06/03 00:12:38 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2517,21 +2517,22 @@ sub get_variable_type($$) {
 	}
 
 	use constant allow_all => [[ qr".*", "adpsu" ]];
+	use constant allow_runtime => [[ qr".*", "adsu" ]];
 
 	# Guess the datatype of the variable based on
 	# naming conventions.
-	$type =	  ($varname =~ qr"DIRS$") ? PkgLint::Type->new(LK_EXTERNAL, "Pathmask", allow_all, GUESSED)
-		: ($varname =~ qr"(?:DIR|_HOME)$") ? PkgLint::Type->new(LK_NONE, "Pathname", allow_all, GUESSED)
-		: ($varname =~ qr"FILES$") ? PkgLint::Type->new(LK_EXTERNAL, "Pathmask", allow_all, GUESSED)
-		: ($varname =~ qr"FILE$") ? PkgLint::Type->new(LK_NONE, "Pathname", allow_all, GUESSED)
-		: ($varname =~ qr"PATH$") ? PkgLint::Type->new(LK_NONE, "Pathlist", allow_all, GUESSED)
-		: ($varname =~ qr"PATHS$") ? PkgLint::Type->new(LK_EXTERNAL, "List of Pathname", allow_all, GUESSED)
+	$type =	  ($varname =~ qr"DIRS$") ? PkgLint::Type->new(LK_EXTERNAL, "Pathmask", allow_runtime, GUESSED)
+		: ($varname =~ qr"(?:DIR|_HOME)$") ? PkgLint::Type->new(LK_NONE, "Pathname", allow_runtime, GUESSED)
+		: ($varname =~ qr"FILES$") ? PkgLint::Type->new(LK_EXTERNAL, "Pathmask", allow_runtime, GUESSED)
+		: ($varname =~ qr"FILE$") ? PkgLint::Type->new(LK_NONE, "Pathname", allow_runtime, GUESSED)
+		: ($varname =~ qr"PATH$") ? PkgLint::Type->new(LK_NONE, "Pathlist", allow_runtime, GUESSED)
+		: ($varname =~ qr"PATHS$") ? PkgLint::Type->new(LK_EXTERNAL, "List of Pathname", allow_runtime, GUESSED)
 		: ($varname =~ qr"_USER$") ? PkgLint::Type->new(LK_NONE, "UserGroupName", allow_all, GUESSED)
 		: ($varname =~ qr"_GROUP$") ? PkgLint::Type->new(LK_NONE, "UserGroupName", allow_all, GUESSED)
-		: ($varname =~ qr"_ENV$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", allow_all, GUESSED)
-		: ($varname =~ qr"_CMD$") ? PkgLint::Type->new(LK_NONE, "ShellCommand", allow_all, GUESSED)
-		: ($varname =~ qr"_ARGS$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", allow_all, GUESSED)
-		: ($varname =~ qr"_(?:C|CPP|CXX|LD|)FLAGS$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", allow_all, GUESSED)
+		: ($varname =~ qr"_ENV$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", allow_runtime, GUESSED)
+		: ($varname =~ qr"_CMD$") ? PkgLint::Type->new(LK_NONE, "ShellCommand", allow_runtime, GUESSED)
+		: ($varname =~ qr"_ARGS$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", allow_runtime, GUESSED)
+		: ($varname =~ qr"_(?:C|CPP|CXX|LD|)FLAGS$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", allow_runtime, GUESSED)
 		: ($varname =~ qr"_MK$") ? PkgLint::Type->new(LK_NONE, "Unchecked", allow_all, GUESSED)
 		: undef;
 
@@ -2932,8 +2933,21 @@ sub checkline_mk_varuse($$$$) {
 
 	if ($opt_warn_perm) {
 		my $perms = get_variable_perms($line, $varname);
+		my ($is_load_time, $is_indirect);
 
-		if ($context->time == VUC_TIME_LOAD && index($perms, "p") == -1) {
+		if ($context->time == VUC_TIME_LOAD && $perms !~ qr"p") {
+			$is_load_time = true;
+			$is_indirect = false;
+
+		} elsif (defined($context->type) && $context->type->perms_union() =~ qr"p" && $perms !~ qr"p") {
+			$is_load_time = true;
+			$is_indirect = true;
+
+		} else {
+			$is_load_time = false;
+		}
+
+		if ($is_load_time && !$is_indirect) {
 			$line->log_warning("${varname} should not be evaluated at load time.");
 			$line->explain_warning(
 				"Many variables, especially lists of something, get their values",
@@ -2946,11 +2960,8 @@ sub checkline_mk_varuse($$$$) {
 				"that have references to shell variables or regular expressions are",
 				"modified in a subtle way.");
 		}
-
-		my $lhs_type = $context->type;
-		my $rhs_type = get_variable_type($line, $varname);
-		if (defined($lhs_type) && defined($rhs_type) && $lhs_type->perms_union() =~ qr"p" && $rhs_type->perms($line->fname) !~ qr"p") {
-			$line->log_warning("${varname} should not be used in a load-time variable.");
+		if ($is_load_time && $is_indirect) {
+			$line->log_warning("${varname} should not be evaluated indirectly at load time.");
 			$line->explain_warning(
 				"The variable on the left-hand side may be evaluated at load time, but",
 				"the variable on the right-hand side may not. Due to this assignment, it",
@@ -3033,7 +3044,7 @@ sub checkline_mk_shellword($$$) {
 	my ($rest, $state);
 
 	use constant shellcommand_context_type => PkgLint::Type->new(
-		LK_NONE, "ShellCommand", allow_all, NOT_GUESSED
+		LK_NONE, "ShellCommand", [[ qr".*", "adsu" ]], NOT_GUESSED
 	);
 	use constant shellword_vuc => PkgLint::VarUseContext->new(
 		VUC_TIME_UNKNOWN,
