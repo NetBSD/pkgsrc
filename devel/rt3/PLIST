@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/05/01 09:38:08 cube Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/06/03 10:40:34 seb Exp $
 bin/mason_handler.fcgi
 bin/mason_handler.scgi
 bin/mason_handler.svc
@@ -213,6 +213,7 @@ lib/rt3/t/regression/22search_tix_by_txn.t
 lib/rt3/t/regression/22search_tix_by_watcher.t
 lib/rt3/t/regression/mime_tests
 lib/rt3/t/setup_regression.t
+sbin/rt-dump-database
 sbin/rt-setup-database
 sbin/rt-test-dependencies
 share/doc/rt3/README
