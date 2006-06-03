@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.install,v 1.5 2006/05/01 09:38:08 cube Exp $
+# $NetBSD: Makefile.install,v 1.6 2006/06/03 10:40:34 seb Exp $
 
 .include "dirs.mk"
 
@@ -71,7 +71,8 @@ do-install:
 		${WRKSRC}/bin/standalone_httpd ${WRKSRC}/bin/mason_handler.svc		\
 		${WRKSRC}/bin/rt ${WRKSRC}/bin/webmux.pl ${WRKSRC}/bin/rt-crontool	\
 		${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/sbin/rt-setup-database				\
+	${INSTALL_SCRIPT} ${WRKSRC}/sbin/rt-dump-database		\
+		${WRKSRC}/sbin/rt-setup-database			\
 		${WRKSRC}/sbin/rt-test-dependencies ${PREFIX}/sbin
 	@${ECHO} "=> HTML documents"
 	${INSTALL_DATA_DIR} ${RT_HTML_DIR}
