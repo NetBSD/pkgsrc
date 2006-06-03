@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.100 2006/06/02 21:54:00 rillig Exp $
+# $NetBSD: makevars.map,v 1.101 2006/06/03 06:04:37 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -128,7 +128,7 @@ BUILDLINK_FILES.*	List of Pathmask [b:a, builtin.mk:a]
 BUILDLINK_FILES_CMD.*	List of ShellWord []
 # ^^ ShellCommand
 BUILDLINK_INCDIRS.*	List of Pathname [b:ad]			# b:d?
-BUILDLINK_JAVA_PREFIX	Pathname []
+BUILDLINK_JAVA_PREFIX	Pathname [b:s]
 BUILDLINK_LDADD.*	List of LdFlag [builtin.mk:ads]
 BUILDLINK_LDFLAGS.*	List of LdFlag []
 BUILDLINK_LIBDIRS.*	List of Pathname [b:a]
@@ -260,7 +260,7 @@ GENERATE_PLIST		List of ShellWord [m:a,c:a]
 GNU_ARCH		{ mips }
 GNU_CONFIGURE		Yes [c:s,m:s]
 GNU_CONFIGURE_MANDIR	Pathname [m:s,c:s]
-GNU_CONFIGURE_PREFIX	Pathname
+GNU_CONFIGURE_PREFIX	Pathname [m:s]
 HAS_CONFIGURE		Yes [m:s,c:s]
 HEADER_TEMPLATE		List of Pathname
 HOMEPAGE		URL [m:s,c:ds]
@@ -293,10 +293,11 @@ INSTALL_TEMPLATE	List of Pathname [m:as,c:ads]
 INSTALL_UNSTRIPPED	YesNo [m:s,c:s]
 INTERACTIVE_STAGE	List of { fetch extract configure build install } [m:s]
 IS_BUILTIN.*		YesNo_Indirectly [builtin.mk:s]
-JAVA_CLASSPATH		ShellWord
-JAVA_NAME		Filename
+JAVA_CLASSPATH		ShellWord [m:s]
+JAVA_HOME		Pathname [m:s]
+JAVA_NAME		Filename [m:s]
 JAVA_UNLIMIT		List of { cmdsize datasize stacksize }
-JAVA_WRAPPERS		InternalList of Filename
+JAVA_WRAPPERS		InternalList of Filename [m:as]
 JAVA_WRAPPER_BIN.*	Pathname [m:s,c:ds]
 KRB5BASE		Unchecked []
 KRB5_ACCEPTED		List of { heimdal mit-krb5 }
@@ -420,7 +421,7 @@ PKG_HOME.*		Pathname [m:s]
 PKG_HACKS		List of Identifier [h:a]
 PKG_INSTALLATION_TYPES	List of { overwrite pkgviews } [m:s,c:s]
 PKG_JAVA_HOME		Pathname [*:u]
-PKG_JVM			Unchecked []
+PKG_JVM			Unchecked [*:u]
 PKG_JVMS_ACCEPTED	List of {					\
 				blackdown-jdk13				\
 				jdk jdk14				\
