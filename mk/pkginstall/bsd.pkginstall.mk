@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.1 2006/05/21 23:50:15 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.2 2006/06/03 23:11:43 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -26,6 +26,11 @@ _FUNC_STRIP_PREFIX= \
 _ZERO_FILESIZE_P=	${AWK} 'END { exit NR ? 1 : 0; }'
 
 _PKGINSTALL_DIR=	${WRKDIR}/.pkginstall
+
+# XXX This should not be duplicated from the install module, but we
+# XXX need this until pkginstall is refactored.
+# XXX
+PKG_DB_TMPDIR?=		${WRKDIR}/.pkgdb/${PKGNAME}
 
 # These are the template scripts for the INSTALL/DEINSTALL scripts.
 # Packages may do additional work in the INSTALL/DEINSTALL scripts by

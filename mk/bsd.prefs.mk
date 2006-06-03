@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.220 2006/03/08 01:56:46 minskim Exp $
+# $NetBSD: bsd.prefs.mk,v 1.221 2006/06/03 23:11:42 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -486,63 +486,6 @@ DIGEST_VERSION!= 	${DIGEST} -V 2>/dev/null
 MAKEFLAGS+=		DIGEST_VERSION=${DIGEST_VERSION:Q}
 .endif
 
-# This is the package database directory for the default view.
-PKG_DBDIR?=		${DESTDIR}/var/db/pkg
-
-# _PKG_DBDIR is the actual packages database directory where we register
-# packages.
-#
-.if ${PKG_INSTALLATION_TYPE} == "overwrite"
-_PKG_DBDIR=		${PKG_DBDIR}
-.elif ${PKG_INSTALLATION_TYPE} == "pkgviews"
-_PKG_DBDIR=		${DEPOTBASE}
-.endif
-
-PKG_ADD_CMD?=		${PKG_TOOLS_BIN}/pkg_add
-PKG_ADMIN_CMD?=		${PKG_TOOLS_BIN}/pkg_admin
-PKG_CREATE_CMD?=	${PKG_TOOLS_BIN}/pkg_create
-PKG_DELETE_CMD?=	${PKG_TOOLS_BIN}/pkg_delete
-PKG_INFO_CMD?=		${PKG_TOOLS_BIN}/pkg_info
-PKG_VIEW_CMD?=		${PKG_TOOLS_BIN}/pkg_view
-LINKFARM_CMD?=		${PKG_TOOLS_BIN}/linkfarm
-
-.if !defined(PKGTOOLS_VERSION)
-PKGTOOLS_VERSION!=	${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302
-MAKEFLAGS+=		PKGTOOLS_VERSION=${PKGTOOLS_VERSION:Q}
-.endif
-
-# The binary pkg_install tools all need to consistently to refer to the
-# correct package database directory.
-#
-.if ${PKGTOOLS_VERSION} < 20030823
-PKGTOOLS_ENV?=		PKG_DBDIR=${_PKG_DBDIR:Q}
-PKGTOOLS_ARGS?=		# empty
-.else
-PKGTOOLS_ENV?=		# empty
-PKGTOOLS_ARGS?=		-K ${_PKG_DBDIR:Q}
-.endif
-
-# Views are rooted in ${LOCALBASE}, all packages are depoted in
-# ${DEPOTBASE}, and the package database directory for the default view
-# is in ${PKG_DBDIR}.
-#
-PKG_VIEW_ARGS?=		-W ${LOCALBASE} -d ${DEPOTBASE} -k ${PKG_DBDIR}
-
-PKG_ADD?=		${SETENV} ${PKGTOOLS_ENV} ${PKG_ADD_CMD} ${PKGTOOLS_ARGS}
-PKG_ADMIN?=		${SETENV} ${PKGTOOLS_ENV} ${PKG_ADMIN_CMD} ${PKGTOOLS_ARGS}
-PKG_CREATE?=		${SETENV} ${PKGTOOLS_ENV} ${PKG_CREATE_CMD} ${PKGTOOLS_ARGS}
-PKG_DELETE?=		${SETENV} ${PKGTOOLS_ENV} ${PKG_DELETE_CMD} ${PKGTOOLS_ARGS}
-PKG_INFO?=		${SETENV} ${PKGTOOLS_ENV} ${PKG_INFO_CMD} ${PKGTOOLS_ARGS}
-PKG_VIEW?=		${SETENV} ${PKGTOOLS_ENV} ${PKG_VIEW_CMD} ${PKG_VIEW_ARGS}
-LINKFARM?=		${LINKFARM_CMD}
-
-# "${PKG_BEST_EXISTS} pkgpattern" prints out the name of the installed
-# package that best matches pkgpattern.  Use this instead of
-# "${PKG_INFO} -e pkgpattern" if the latter would return more than one
-# package name.
-#
-PKG_BEST_EXISTS?=	${PKG_ADMIN} -b -d ${_PKG_DBDIR} -S lsbest
-
 .if exists(${LOCALBASE}/bsd/share/mk/zoularis.mk)
 PKG_FAIL_REASON+=	'You appear to have a deprecated Zoularis installation.'
 PKG_FAIL_REASON+=	'Please update your system to bootstrap-pkgsrc and remove the'
@@ -611,6 +554,11 @@ PREPEND_PATH+=		${USE_X11:D${X11BASE}/bin} ${LOCALBASE}/bin
 
 # Make variable definitions cache
 .include "${PKGSRCDIR}/mk/bsd.makevars.mk"
+
+.include "${PKGSRCDIR}/mk/flavor/bsd.flavor-vars.mk"
+.include "${PKGSRCDIR}/mk/check/bsd.check-vars.mk"
+.include "${PKGSRCDIR}/mk/depends/bsd.depends-vars.mk"
+.include "${PKGSRCDIR}/mk/install/bsd.install-vars.mk"
 
 USE_TOOLS+=		awk:pkgsrc cut:pkgsrc echo:pkgsrc pwd:pkgsrc	\
 			sed:pkgsrc tr:pkgsrc uname:pkgsrc

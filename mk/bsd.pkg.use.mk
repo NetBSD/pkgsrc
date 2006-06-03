@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.33 2006/05/25 11:00:39 wiz Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.34 2006/06/03 23:11:42 jlam Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -26,7 +26,6 @@ PLIST_SUBST+=		IMAKE_MANNEWSUFFIX=${IMAKE_MANNEWSUFFIX:Q}
 
 .if defined(USE_IMAKE)
 USE_X11BASE?=		implied
-INSTALL_TARGET+=	${NO_INSTALL_MANPAGES:D:Uinstall.man}
 MAKE_FLAGS+=		CC=${CC:Q} CXX=${CXX:Q}
 .endif
 
@@ -37,7 +36,6 @@ MTREE_FILE?=		${PKGSRCDIR}/mk/platform/${OPSYS}.x11.dist
 
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
 PREFIX=			${DEPOTBASE}/${PKGNAME}
-NO_MTREE=		yes
 .elif ${PKG_INSTALLATION_TYPE} == "overwrite"
 .  if defined(INSTALLATION_PREFIX)
 PREFIX=			${INSTALLATION_PREFIX}
@@ -45,7 +43,6 @@ PREFIX=			${INSTALLATION_PREFIX}
 PREFIX=			${X11PREFIX}
 .  elif defined(USE_CROSSBASE)
 PREFIX=			${CROSSBASE}
-NO_MTREE=		yes
 .  else
 PREFIX=			${LOCALBASE}
 .  endif
