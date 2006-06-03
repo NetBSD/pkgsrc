@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.598 2006/06/03 00:12:38 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.599 2006/06/03 06:04:37 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2579,6 +2579,17 @@ sub variable_needs_quoting($$$) {
 	my $type = get_variable_type($line, $varname);
 	my ($want_list, $have_list);
 
+	use constant safe_types => array_to_hash(qw(
+		DistSuffix
+		FileMode Filename
+		Identifier
+		Pathname
+		PkgName
+		RelativePkgDir RelativePkgPath
+		URL UserGroupName
+		WrkdirSubdirectory
+	));
+
 	if (!defined($type) || !defined($context->type)) {
 		return dont_know;
 	}
@@ -2588,7 +2599,7 @@ sub variable_needs_quoting($$$) {
 	$want_list = $context->type->is_practically_a_list() && ($context->shellword == VUC_SHELLWORD_BACKT || $context->extent != VUC_EXTENT_WORD_PART);
 	$have_list = $type->is_practically_a_list();
 
-	if ($type->kind_of_list == LK_NONE && $type->basic_type =~ qr"^(?:Filename|Pathname|FileMode|UserGroupName|DistSuffix|PkgName|WrkdirSubdirectory|RelativePkgDir|RelativePkgPath)$") {
+	if ($type->kind_of_list == LK_NONE && exists(safe_types->{$type->basic_type})) {
 		return doesnt_matter;
 	}
 
@@ -4181,7 +4192,7 @@ sub checkline_mk_varassign($$$$$) {
 		} elsif (exists($deprecated->{$varname}) || exists($deprecated->{$varcanon})) {
 			# Ok
 		} else {
-			$line->log_warning("${varname} is defined, but not used. Spelling mistake?");
+			$line->log_warning("${varname} is defined but not used. Spelling mistake?");
 		}
 	}
 
