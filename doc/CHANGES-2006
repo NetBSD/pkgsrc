@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.399 2006/06/02 15:07:34 adam Exp $
+$NetBSD: CHANGES-2006,v 1.400 2006/06/03 06:10:04 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2876,3 +2876,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated wm/pwm to 1.0.20060517 [salo 2006-06-02]
 	Updated www/firefox-bin to 1.5.0.4 [salo 2006-06-02]
 	Added databases/slony1 version 1.1.5 [adam 2006-06-02]
+	Updated pkgtools/pkglint to 4.63 [rillig 2006-06-03]
