@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.405 2006/06/03 15:30:51 tron Exp $
+$NetBSD: CHANGES-2006,v 1.406 2006/06/03 22:26:04 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2889,3 +2889,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added databases/p5-DB_File-Lock version 0.05 [gavan 2006-06-03]
 	Updated databases/mysql5-client to 5.0.22 [tron 2006-06-03]
 	Updated databases/mysql5-server to 5.0.22 [tron 2006-06-03]
+	Updated www/drupal to 4.7.2 [adrianp 2006-06-03]
