@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/06/02 13:55:47 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2006/06/03 00:45:15 joerg Exp $
 
 DISTNAME=	smtpfeed-1.18
 PKGREVISION=	1
@@ -18,6 +18,8 @@ COMMENT=	SMTP Fast Exploding External Deliverer for Sendmail
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX:Q}/libexec
+# configure tries to be clever, so force our setting
+CONFIGURE_ENV+=	my_cv_path_lib_exec=${PREFIX:Q}/libexec
 # use bind8?
 #CONFIGURE_ARGS+=	--with-bind8
 
