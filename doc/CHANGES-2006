@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.406 2006/06/03 22:26:04 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.407 2006/06/03 23:11:42 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2890,3 +2890,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/mysql5-client to 5.0.22 [tron 2006-06-03]
 	Updated databases/mysql5-server to 5.0.22 [tron 2006-06-03]
 	Updated www/drupal to 4.7.2 [adrianp 2006-06-03]
+	mk/bsd.pkg.mk: refactored depends, install, and package phases to
+		support additional package system flavors via PKG_FLAVOR
+		[jlam 2006-06-03]

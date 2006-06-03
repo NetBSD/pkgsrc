@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.22 2006/05/30 23:51:38 wiz Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.23 2006/06/03 23:11:42 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -165,7 +165,7 @@ _EXTRACT_COOKIE=	${WRKDIR}/.extract_done
 
 _EXTRACT_TARGETS+=	checksum
 _EXTRACT_TARGETS+=	${WRKDIR}
-_EXTRACT_TARGETS+=	${PKG_DB_TMPDIR}
+_EXTRACT_TARGETS+=	depends
 _EXTRACT_TARGETS+=	acquire-extract-lock
 _EXTRACT_TARGETS+=	${_EXTRACT_COOKIE}
 _EXTRACT_TARGETS+=	release-extract-lock
@@ -193,7 +193,6 @@ ${_EXTRACT_COOKIE}:
 
 _REAL_EXTRACT_TARGETS+=	extract-message
 _REAL_EXTRACT_TARGETS+=	extract-vars
-_REAL_EXTRACT_TARGETS+=	install-depends
 _REAL_EXTRACT_TARGETS+=	pre-extract
 _REAL_EXTRACT_TARGETS+=	do-extract
 _REAL_EXTRACT_TARGETS+=	post-extract

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.54 2006/06/03 08:44:46 seb Exp $
+# $NetBSD: bsd.options.mk,v 1.55 2006/06/03 23:11:42 jlam Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -393,7 +393,7 @@ show-options:
 
 .if defined(PKG_SUPPORTED_OPTIONS)
 .PHONY: supported-options-message
-pre-install-depends: supported-options-message
+pre-depends-hook: supported-options-message
 supported-options-message:
 .  if !empty(PKG_SUPPORTED_OPTIONS)
 	@${ECHO} "=========================================================================="

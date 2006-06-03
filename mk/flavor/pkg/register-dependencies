@@ -1,0 +1,54 @@
+#!/bin/sh
+#
+# $NetBSD: register-dependencies,v 1.1 2006/06/03 23:11:42 jlam Exp $
+#
+######################################################################
+#
+# NAME
+#	register-dependencies -- register package dependencies
+#
+# SYNOPSIS
+#	register-dependencies pkgname
+#
+# DESCRIPTION
+#	register-dependencies registers a dependency relationship from
+#	the named package pkgname and the dependencies passed in via
+#	standard input.  The dependencies may be wildcard patterns.
+#
+# ENVIRONMENT
+#	PKG_ADMIN
+#		This is the path to the pkg_admin command.
+#
+#	PKG_DBDIR
+#		This is the package meta-data directory in which the
+#		packages are registered.  By default, this is /var/db/pkg.
+#
+######################################################################
+
+: ${AWK:=awk}
+: ${ECHO:=echo}
+: ${PKG_ADMIN:=pkg_admin}
+: ${PKG_DBDIR:=/var/db/pkg}
+: ${TEST:=test}
+: ${TOUCH:=touch}
+: ${TRUE:=true}
+
+PKGNAME="$1"
+
+while read dependency; do
+	pkg=`${PKG_ADMIN} -b -d ${PKG_DBDIR} -S lsbest "$dependency" || ${TRUE}`
+	pkgdir="${PKG_DBDIR}/$pkg"
+	if ${TEST} -z "$pkg" -o ! -d "$pkgdir"; then
+		${ECHO} 1>&2 "$dependency not found - dependency NOT registered"
+		continue
+	fi
+	req="$pkgdir/+REQUIRED_BY"
+	tmpreq="$pkgdir/+REQUIRED_BY.$$"
+	${TOUCH} $req
+	${AWK} -v PKGNAME="${PKGNAME}" \
+		'BEGIN { found = 0 }
+		$0 == PKGNAME { found = 1 } { print }
+		END { if (!found) print PKGNAME }' $req > $tmpreq
+	${CP} -f $tmpreq $req; ${RM} -f $tmpreq
+	${ECHO} "${PKGNAME} requires installed package $pkg"
+done
