@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/06/03 01:28:45 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/06/04 20:06:37 joerg Exp $
 
 DISTNAME=	pexpect-0.999
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ HOMEPAGE=	http://pexpect.sourceforge.net/
 COMMENT=	Pure Python Expect-like module
 
 PYDISTUTILSPKG= yes
-PYTHON_VERSION_ACCEPTED=	24 23 22 21
+PYTHON_VERSIONS_ACCEPTED=	24 23 22 21
 NO_CONFIGURE=   yes
 
 .include "../../lang/python/extension.mk"
