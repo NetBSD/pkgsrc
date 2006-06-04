@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2006/06/02 18:27:57 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/06/04 16:26:54 joerg Exp $
 
 MODNAME=		mbstring
 CATEGORIES+=		misc
 COMMENT=		PHP extension for multibyte characters support (currently, Japanese only)
 
-CONFLICTS=	php-mbstring-[0-9]
+CONFLICTS=	php-mbstring-[0-9]*
 
 USE_PHP_EXT_PATCHES=	yes
 
