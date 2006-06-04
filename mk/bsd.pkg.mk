@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1833 2006/06/04 08:25:52 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1834 2006/06/04 20:10:12 tv Exp $
 #
 # This file is in the public domain.
 #
@@ -1706,8 +1706,8 @@ su-target: .USE
 		*) ${ECHO} "*** WARNING *** Running: "${PRE_ROOT_CMD:Q} ;; \
 		esac;							\
 		${PRE_ROOT_CMD};					\
-		${ECHO_MSG} "${_PKGSRC_IN}> Becoming \`\`${ROOT_USER}'' to make su-${.TARGET} (`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'`)"; \
-		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH='$${PATH}:${SU_CMD_PATH_APPEND}' ${MAKE} ${MAKEFLAGS} PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL} su-${.TARGET} ${MAKEFLAGS.su-${.TARGET}}"; \
+		${ECHO_MSG} "${_PKGSRC_IN}> Becoming \`\`${ROOT_USER}'' to make su-${.TARGET} (`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'`)" && \
+		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH='$${PATH}:${SU_CMD_PATH_APPEND}' ${MAKE} ${MAKEFLAGS} PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL} su-${.TARGET} ${MAKEFLAGS.su-${.TARGET}}" && \
 		${ECHO_MSG} "${_PKGSRC_IN}> Dropping \`\`${ROOT_USER}'' privileges."; \
 	fi
 
