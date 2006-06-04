@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1829 2006/06/04 04:31:47 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1830 2006/06/04 05:25:08 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1196,18 +1196,15 @@ release-lock: .USE
 ${WRKDIR}:
 .if !defined(KEEP_WRKDIR)
 .  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
-.    if !exists(${LOCKFILE})
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -rf ${WRKDIR}
-.    endif
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${TEST} -f ${LOCKFILE} || ${RM} -fr ${WRKDIR}
 .  endif
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${WRKDIR}
 .if defined(WRKOBJDIR)
 .  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
-.    if !exists(${LOCKFILE})
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${RM} -f ${WRKDIR_BASENAME} || ${TRUE}
-.    endif
+	${TEST} -f ${LOCKFILE} || ${RM} -f ${WRKDIR_BASENAME}
 .  endif
 .  if !empty(CREATE_WRKDIR_SYMLINK:M[Yy][Ee][Ss])
 	${_PKG_SILENT}${_PKG_DEBUG}					\
