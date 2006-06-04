@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:08:26 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/04 13:42:10 joerg Exp $
 #
 
 DISTNAME=	zephyr-20010518
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	chat net
 MASTER_SITES=	ftp://athena-dist.mit.edu/pub/ATHENA/zephyr/
 
@@ -13,8 +13,10 @@ COMMENT=	Project Athena's original Instant Messaging system
 WRKSRC=		${WRKDIR}/zephyr
 GNU_CONFIGURE=	YES
 
-CPPFLAGS.NetBSD+=	-I/usr/include/kerberosIV -I/usr/include/krb5
-LDFLAGS.NetBSD+=	-lroken -lcrypto -lcom_err -ledit -lcurses
+.include "../../mk/bsd.prefs.mk"
+
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.kth-krb4}/include/kerberosIV
+CPPFLAGS.NetBSD+=	-I${BUILDLINK_PREFIX.kth-krb4}/include/kerberosIV/ss
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-krb4
 CONFIGURE_ARGS+=	--with-hesiod
@@ -41,5 +43,6 @@ pre-install:
 .include "../../devel/readline/buildlink3.mk"
 .include "../../net/hesiod/buildlink3.mk"
 .include "../../net/libares/buildlink3.mk"
+.include "../../security/kth-krb4/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
