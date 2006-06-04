@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:08:29 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/04 12:10:49 joerg Exp $
 
 DISTNAME=	JapaneseCodecs-1.4.11
 PKGNAME=	${PYPKGPREFIX}-jpCodecs-1.4.11
@@ -13,6 +13,7 @@ COMMENT=	Python Unicode codecs for Japanese charsets
 
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
+PYTHON_VERSIONS_ACCEPTED= 24 23 22 21
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
