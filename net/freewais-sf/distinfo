@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2005/12/27 14:00:53 joerg Exp $
+$NetBSD: distinfo,v 1.8 2006/06/04 13:25:44 joerg Exp $
 
 SHA1 (freeWAIS-sf-2.2.12.tar.gz) = a18ec82b773e0114c3c2b15aa3fbeadc21b2cd47
 RMD160 (freeWAIS-sf-2.2.12.tar.gz) = 3b25c10f0cb62d69ce7001affe53c18bfaf9cede
 Size (freeWAIS-sf-2.2.12.tar.gz) = 1002974 bytes
-SHA1 (patch-aa) = 1f80d5c7462069ebd1797d83ad53f7385702957f
+SHA1 (patch-aa) = 6368ee37ad5b7d3de487f72b2bffc5816c5f52ad
 SHA1 (patch-ab) = e1e59cf668abe1ff7ec4c951ac50e38ceffaa0dd
 SHA1 (patch-ac) = 65736e07c191638cab4975f3cea398850e5158e9
 SHA1 (patch-ad) = 6302c42f5c0a0119e694fd0594dd5b24c77c2bc4
