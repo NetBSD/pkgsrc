@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2003/05/30 11:53:17 salo Exp $
+$NetBSD: patch-aa,v 1.10 2006/06/04 22:21:27 joerg Exp $
 
---- Makefile.orig	2003-04-08 21:18:15.000000000 +0200
-+++ Makefile	2003-05-30 13:15:24.000000000 +0200
-@@ -38,7 +38,7 @@
+--- Makefile.orig	2003-11-11 10:24:34.000000000 +0000
++++ Makefile
+@@ -38,7 +38,7 @@ CC?=		/usr/bin/cc
  #	-Ox   - optimize;
  #	-g    - produce debugging information.
  #
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.9 2003/05/30 11:53:17 salo Exp $
  
  #
  # PREFIX - prefix for all below listed paths
-@@ -58,7 +58,7 @@
+@@ -58,7 +58,7 @@ DST_MAN_DIR=	${PREFIX}/man
  #
  # DST_ETC_DIR - where to install template configuration
  #
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.9 2003/05/30 11:53:17 salo Exp $
  
  #
  # DST_RC_DIR - where to install sample rc-script
-@@ -81,10 +81,10 @@
+@@ -81,10 +81,10 @@ MKDIR?=		/bin/mkdir
  #
  # INSTALL_* variables
  #
@@ -35,7 +35,34 @@ $NetBSD: patch-aa,v 1.9 2003/05/30 11:53:17 salo Exp $
  INSTALL_MAN_DIR=	${INSTALL} -d -m 0555 -g wheel -o root
  INSTALL_DATA_DIR=	${INSTALL} -d -m 0555 -g wheel -o root
  
-@@ -207,21 +207,8 @@
+@@ -98,7 +98,7 @@ IPASTAT=	ipastat.o common.o
+ .MAIN: checkos ${OS}
+ 
+ checkos:
+-.if ${OS} != "FreeBSD" && ${OS} != "NetBSD" && ${OS} != "OpenBSD"
++.if ${OS} != "FreeBSD" && ${OS} != "NetBSD" && ${OS} != "OpenBSD" && ${OS} != "DragonFly"
+ 	@${ECHO}
+ 	@${ECHO} ">> IPA-`${CAT} Version` is designed for FreeBSD, NetBSD and OpenBSD."
+ 	@${ECHO} ">> Your operating system is ${OS}."
+@@ -139,7 +139,7 @@ CFLAGS+=	-I${PF_INCLUDE_DIR}
+ .endif
+ .endif
+ 
+-.ifmake FreeBSD
++.if make(FreeBSD) || make(DragonFly)
+ IPA+=		kipfw.o kip6fw.o
+ .endif
+ 
+@@ -147,7 +147,7 @@ IPA+=		kipfw.o kip6fw.o
+ IPA+=		kpf.o
+ .endif
+ 
+-FreeBSD NetBSD OpenBSD: ipa ipastat
++DragonFly FreeBSD NetBSD OpenBSD: ipa ipastat
+ 
+ ipa: ${IPA}
+ 	${CC} -o ${.TARGET} ${IPA}
+@@ -214,21 +214,8 @@ install:
  	${INSTALL_PROGRAM} ipa ipastat ${DST_BIN_DIR}
  	${INSTALL_MAN} man/ipa.5 man/ipa.conf.5 ${DST_MAN_DIR}/man5
  	${INSTALL_MAN} man/ipa.8 man/ipastat.8 ${DST_MAN_DIR}/man8
