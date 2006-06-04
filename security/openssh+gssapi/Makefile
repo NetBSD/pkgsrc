@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/05/09 17:58:33 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2006/06/04 14:56:37 joerg Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -47,8 +47,6 @@ MESSAGE_SRC=		${.CURDIR}/MESSAGE
 PKG_GROUPS=		${OPENSSH_GROUP}
 PKG_USERS=		${OPENSSH_USER}:${OPENSSH_GROUP}
 
-PKG_GID.${OPENSSH_GROUP}=	${OPENSSH_GID}
-PKG_UID.${OPENSSH_USER}=	${OPENSSH_UID}
 PKG_GECOS.${OPENSSH_USER}=	sshd privsep pseudo-user
 PKG_HOME.${OPENSSH_USER}=	${OPENSSH_CHROOT}
 
