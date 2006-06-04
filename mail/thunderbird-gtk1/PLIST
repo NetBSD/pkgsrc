@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/02/06 22:17:59 ghen Exp $
+@comment $NetBSD: PLIST,v 1.4.2.1 2006/06/04 00:54:05 salo Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -2685,7 +2685,7 @@ include/${MOZILLA}/nss/swfortt.h
 include/${MOZILLA}/nss/watcomfx.h
 @comment end INCLUDE-PUBLIC
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
-@unexec ${RM} %D/lib/${MOZILLA}/chrome/app-chrome.manifest
+@unexec ${RM} -f %D/lib/${MOZILLA}/chrome/app-chrome.manifest
 @unexec ${RM} %D/lib/${MOZILLA}/components/compreg.dat
 @unexec ${RM} %D/lib/${MOZILLA}/components/xpti.dat
 @comment begin DIRS
