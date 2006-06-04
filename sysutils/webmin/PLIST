@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/05/16 04:01:28 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/06/04 14:44:13 joerg Exp $
 share/examples/rc.d/webmin
 share/examples/webmin/acl/config
 share/examples/webmin/config
@@ -97,6 +97,7 @@ share/webmin/acl/cert_issue_ie.cgi
 share/webmin/acl/cert_output.cgi
 share/webmin/acl/config
 share/webmin/acl/config-*-linux
+share/webmin/acl/config-dragonfly
 share/webmin/acl/config-freebsd
 share/webmin/acl/config-macos
 share/webmin/acl/config-netbsd
@@ -585,6 +586,7 @@ share/webmin/init/config-cobalt-linux-5.0-*
 share/webmin/init/config-coherent-linux
 share/webmin/init/config-corel-linux
 share/webmin/init/config-debian-linux
+share/webmin/init/config-dragonfly
 share/webmin/init/config-freebsd
 share/webmin/init/config-freebsd-5.0-*
 share/webmin/init/config-generic-linux
@@ -814,6 +816,7 @@ share/webmin/man/config-cobalt-linux
 share/webmin/man/config-coherent-linux
 share/webmin/man/config-corel-linux
 share/webmin/man/config-debian-linux
+share/webmin/man/config-dragonfly
 share/webmin/man/config-freebsd
 share/webmin/man/config-generic-linux
 share/webmin/man/config-gentoo-linux
@@ -942,6 +945,7 @@ share/webmin/proc/Util.java
 share/webmin/proc/acl_security.pl
 share/webmin/proc/config-*-linux
 share/webmin/proc/config-aix
+share/webmin/proc/config-dragonfly
 share/webmin/proc/config-freebsd
 share/webmin/proc/config-hpux
 share/webmin/proc/config-irix
