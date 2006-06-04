@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.413 2006/06/04 13:53:33 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.414 2006/06/04 15:23:56 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2900,3 +2900,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/squirrelmail to 1.4.6nb3 [tron 2006-06-04]
 	Updated chat/zephyr to 20010518nb5 [joerg 2006-06-04]
 	Updated lang/japhar to 0.08nb3 [joerg 2006-06-04]
+	Updated mail/qmail-run to 20060604 [schmonz 2006-06-04]
