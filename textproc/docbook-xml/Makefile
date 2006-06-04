@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/04/18 14:11:29 jmmv Exp $
+# $NetBSD: Makefile,v 1.29 2006/06/04 14:04:33 schwarz Exp $
 #
 
 DISTNAME=	docbook-xml-4.4
@@ -13,12 +13,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.oasis-open.org/docbook/
 COMMENT=	XML DTD designed for computer documentation
 
-BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
-
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# empty
+USE_TOOLS+=	unzip
 NO_BUILD=	YES
 EXTRACT_ONLY=	# empty
 
@@ -53,7 +52,7 @@ pre-install:
 
 do-install:
 .for ver in ${VER}
-	@(cd ${DTDDIR}/${ver}; unzip ${DISTDIR}/docbook-xml-${ver}.zip)
+	@(cd ${DTDDIR}/${ver}; ${UNZIP_CMD} ${DISTDIR}/docbook-xml-${ver}.zip)
 	@(cd ${DTDDIR}/${ver}; ${MV} catalog.xml catalog)
 .endfor
 	@${SED} -e 's|V4.2|V4.1.2|g' <${DTDDIR}/4.2/catalog \
