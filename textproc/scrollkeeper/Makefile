@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/04/13 18:23:38 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2006/06/04 21:09:30 schwarz Exp $
 #
 
 DISTNAME=		scrollkeeper-0.3.14
@@ -50,6 +50,21 @@ XML_ENTRIES+=	public "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" \
 		${PREFIX}/share/xml/scrollkeeper/dtds/scrollkeeper-omf.dtd
 XML_ENTRIES+=	public "-//Open Source Metadata Framework (OMF) //DTD OMF.dtd V1.1//EN" \
 		${PREFIX}/share/xml/scrollkeeper/dtds/scrollkeeper-omf.dtd
+
+SUBST_CLASSES+=		sk-config sc-gtfd
+SUBST_STAGE.sk-config=	post-patch
+SUBST_FILES.sk-config=  scripts/scrollkeeper-get-index-from-docpath.in \
+			scripts/scrollkeeper-get-toc-from-docpath.in \
+			scripts/scrollkeeper-get-toc-from-id.in \
+			scripts/scrollkeeper-rebuilddb.in \
+			cl/src/get-cl.c \
+			cl/src/update.c \
+			cl/src/scrollkeeper-install.c \
+			cl/src/scrollkeeper-uninstall.c
+SUBST_SED.sk-config=    -e s,scrollkeeper-config\ ,${PREFIX}/bin/scrollkeeper-config\ ,
+SUBST_STAGE.sc-gtfd=	post-patch
+SUBST_FILES.sc-gtfd=	libs/install.c
+SUBST_SED.sc-gtfd=	-e s,scrollkeeper-get-toc-from-docpath\ ,${PREFIX}/bin/scrollkeeper-get-toc-from-docpath\ ,
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
