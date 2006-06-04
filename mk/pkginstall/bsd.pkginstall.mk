@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.2 2006/06/03 23:11:43 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.3 2006/06/04 00:39:05 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -269,9 +269,9 @@ ${_INSTALL_USERGROUP_UNPACKER}:						\
 
 .if defined(USERGROUP_PHASE)
 .  if !empty(USERGROUP_PHASE:M*configure)
-pre-configure: do-su-create-usergroup
+pre-configure: create-usergroup
 .  elif !empty(USERGROUP_PHASE:M*build)
-pre-build: do-su-create-usergroup
+pre-build: create-usergroup
 .  endif
 .endif
 
@@ -279,20 +279,18 @@ _INSTALL_USERGROUP_CHECK=						\
 	${SETENV} PERL5=${PERL5:Q}					\
 	${SH} ${PKGSRCDIR}/mk/pkginstall/usergroup-check
 
-.PHONY: do-su-create-usergroup
-do-su-create-usergroup:
+.PHONY: create-usergroup
+create-usergroup: su-target
 	@${ECHO_MSG} "${_PKGSRC_IN}> Requiring users and groups for ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+
+PRE_CMD.su-create-usergroup=						\
 	if ${_INSTALL_USERGROUP_CHECK} -g ${_PKG_GROUPS:C/\:*$//} &&	\
 	   ${_INSTALL_USERGROUP_CHECK} -u ${_PKG_USERS:C/\:*$//}; then	\
 		exit 0;							\
-	fi;								\
-	realtarget="create-usergroup";					\
-	action="create-usergroup";					\
-	${_SU_TARGET}
+	fi
 
-.PHONY: create-usergroup
-create-usergroup: ${_INSTALL_USERGROUP_UNPACKER}
+.PHONY: su-create-usergroup
+su-create-usergroup: ${_INSTALL_USERGROUP_UNPACKER}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	cd ${_PKGINSTALL_DIR} &&					\
 	${SH} ${_INSTALL_USERGROUP_UNPACKER};				\
