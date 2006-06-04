@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: register-dependencies,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: register-dependencies,v 1.2 2006/06/04 05:43:56 jlam Exp $
 #
 ######################################################################
 #
@@ -26,9 +26,11 @@
 ######################################################################
 
 : ${AWK:=awk}
+: ${CP:=cp}
 : ${ECHO:=echo}
 : ${PKG_ADMIN:=pkg_admin}
 : ${PKG_DBDIR:=/var/db/pkg}
+: ${RM:=rm}
 : ${TEST:=test}
 : ${TOUCH:=touch}
 : ${TRUE:=true}
