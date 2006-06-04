@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.23 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.24 2006/06/04 04:31:47 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -176,10 +176,8 @@ _EXTRACT_TARGETS+=	release-extract-lock
 extract: ${_EXTRACT_TARGETS}
 
 .PHONY: acquire-extract-lock release-extract-lock
-acquire-extract-lock:
-	${_ACQUIRE_LOCK}
-release-extract-lock:
-	${_RELEASE_LOCK}
+acquire-extract-lock: acquire-lock
+release-extract-lock: release-lock
 
 ${_EXTRACT_COOKIE}:
 .if !empty(INTERACTIVE_STAGE:Mextract) && defined(BATCH)
