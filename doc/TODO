@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5059 2006/06/02 12:37:29 ghen Exp $
+$NetBSD: TODO,v 1.5060 2006/06/04 06:14:38 dogcow Exp $
 
 Suggested new packages
 ======================
@@ -571,8 +571,6 @@ Suggested package updates
 	o gossip-0.11.1
 	o gpgme-1.1.0 [pkg/32761]
 	o gpsdrive-2.09
-	o gpsim-0.21.4
-	o gpsim-devel-20041104
 	o grace-5.1.19
 	o gramofile-1.6P
 	o gramps-2.0.11
