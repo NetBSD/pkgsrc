@@ -1,7 +1,10 @@
-# $NetBSD: depends.mk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: depends.mk,v 1.2 2006/06/04 13:48:51 jlam Exp $
 
 _DEPENDS_FILE=		${WRKDIR}/.depends
-_REDUCE_DEPENDS_CMD=	${AWK} -f ${PKGSRCDIR}/mk/flavor/pkg/reduce-depends.awk
+_REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
+				PKG_ADMIN=${PKG_ADMIN_CMD:Q}		\
+				PWD_CMD=${PWD_CMD:Q} TEST=${TEST:Q}	\
+			${AWK} -f ${PKGSRCDIR}/mk/flavor/pkg/reduce-depends.awk
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
