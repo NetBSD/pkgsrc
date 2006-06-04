@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.39 2006/04/06 06:22:13 reed Exp $
+# $NetBSD: pyversion.mk,v 1.40 2006/06/04 16:26:54 joerg Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -26,64 +26,36 @@ _PYTHON_VERSION_${pv}_OK=	yes
 .endif
 .endfor
 
-# check what is installed
-.if exists(${LOCALBASE}/bin/python2.4)
-_PYTHON_VERSION_24_INSTALLED=	yes
-.endif
-.if exists(${LOCALBASE}/bin/python2.3)
-_PYTHON_VERSION_23_INSTALLED=	yes
-.endif
-.if exists(${LOCALBASE}/bin/python2.2)
-_PYTHON_VERSION_22_INSTALLED=	yes
-.endif
-.if exists(${LOCALBASE}/bin/python2.1)
-_PYTHON_VERSION_21_INSTALLED=	yes
-.endif
-.if exists(${LOCALBASE}/bin/python2.0)
-_PYTHON_VERSION_20_INSTALLED=	yes
-.endif
-.if exists(${LOCALBASE}/bin/python1.5)
-_PYTHON_VERSION_15_INSTALLED=	yes
-.endif
-
 #
 # choose a python version where to add,
 # try to be intelligent
 #
 # if a version is explicitely required, take it
 .if defined(PYTHON_VERSION_REQD)
+# but check if it is acceptable first, error out otherwise
+. if defined(_PYTHON_VERSION_${PYTHON_VERSION_REQD}_OK)
 _PYTHON_VERSION=	${PYTHON_VERSION_REQD}
-.endif
-# if the default is already installed, it is first choice
-.if !defined(_PYTHON_VERSION)
-.if defined(_PYTHON_VERSION_${PYTHON_VERSION_DEFAULT}_OK)
-.if defined(_PYTHON_VERSION_${PYTHON_VERSION_DEFAULT}_INSTALLED)
-_PYTHON_VERSION=	${PYTHON_VERSION_DEFAULT}
-.endif
-.endif
-.endif
-# prefer an already installed version, in order of "accepted"
-.if !defined(_PYTHON_VERSION)
-.for pv in ${PYTHON_VERSIONS_ACCEPTED}
-.if defined(_PYTHON_VERSION_${pv}_OK)
-.if defined(_PYTHON_VERSION_${pv}_INSTALLED)
-_PYTHON_VERSION?=	${pv}
+. endif
 .else
-# keep information as last resort - see below
-_PYTHON_VERSION_FIRSTACCEPTED?=	${pv}
-.endif
-.endif
-.endfor
-.endif
-# if the default is OK for the addon pkg, take this
-.if !defined(_PYTHON_VERSION)
-.if defined(_PYTHON_VERSION_${PYTHON_VERSION_DEFAULT}_OK)
+# if the default is accepted, it is first choice
+. if !defined(_PYTHON_VERSION)
+. if defined(_PYTHON_VERSION_${PYTHON_VERSION_DEFAULT}_OK)
 _PYTHON_VERSION=	${PYTHON_VERSION_DEFAULT}
+. endif
+. endif
+# prefer an already installed version, in order of "accepted"
+. if !defined(_PYTHON_VERSION)
+. for pv in ${PYTHON_VERSIONS_ACCEPTED}
+. if defined(_PYTHON_VERSION_${pv}_OK)
+_PYTHON_VERSION?=	${pv}
+. endif
+. endfor
+. endif
 .endif
-.endif
-# take the first one accepted by the package
+
+# No supported version found, annotate to simplify statements below.
 .if !defined(_PYTHON_VERSION)
-_PYTHON_VERSION=	${_PYTHON_VERSION_FIRSTACCEPTED}
+_PYTHON_VERSION=	none
 .endif
 
 #
