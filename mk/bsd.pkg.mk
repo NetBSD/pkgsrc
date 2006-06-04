@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1828 2006/06/04 00:39:05 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1829 2006/06/04 04:31:47 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1134,63 +1134,64 @@ show-distfiles:
 
 # Extract
 
-# pkgsrc coarse-grained locking definitions and targets
-acquire-lock: .USE
-	${_ACQUIRE_LOCK}
-release-lock: .USE
-	${_RELEASE_LOCK}
-
-.if ${PKGSRC_LOCKTYPE} == "none"
-_ACQUIRE_LOCK=	@${DO_NADA}
-_RELEASE_LOCK=	@${DO_NADA}
-.else
+# acquire-lock, release-lock are .USE macro targets for acquiring and
+# release coarse-grained locks.
+#
 LOCKFILE=	${WRKDIR}/.lockfile
 
-_ACQUIRE_LOCK=								\
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	SHLOCK=${SHLOCK:Q};						\
-	if ${TEST} ! -f "$$SHLOCK" || ${TEST} ! -x "$$SHLOCK"; then	\
-		{ ${ECHO} "The \"$$SHLOCK\" utility does not exist, and is necessary for locking."; \
-		  ${ECHO} "Please \""${MAKE:Q}" install\" in ../../pkgtools/shlock."; \
-		} 1>&2;							\
-		${FALSE};						\
-	fi;								\
-	if ${TEST} x${OBJHOSTNAME:Ddefined} != x"defined"; then		\
-		${ECHO} "PKGSRC_LOCKTYPE needs OBJHOSTNAME defined." 1>&2; \
-		${FALSE};						\
-	fi;								\
+acquire-lock: .USE
+.if ${PKGSRC_LOCKTYPE} == "none"
+	@${DO_NADA}
+.else
+	@if ${TEST} ! -x ${SHLOCK:Q}""; then				\
+		${ERROR_MSG} "The ${SHLOCK:Q} utility does not exist, and is necessary for locking."; \
+		${ERROR_MSG} "Please \""${MAKE:Q}" install\" in ../../pkgtools/shlock."; \
+		exit 1;							\
+	fi
+.  if !defined(OBJHOSTNAME)
+	@${ERROR_MSG} "PKGSRC_LOCKTYPE needs OBJHOSTNAME defined.";	\
+	exit 1
+.  endif
+	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	ppid=`${PS} -p $$$$ -o ppid | ${AWK} 'NR == 2 { print $$1 }'`;	\
-	if ${TEST} "$$ppid" = ""; then					\
-		${ECHO} "No parent process ID found.";			\
-		${FALSE};						\
+	if ${TEST} -z "$$ppid"; then					\
+		${ERROR_MSG} "No parent process ID found.";		\
+		exit 1;							\
 	fi;								\
-	while true; do							\
-		: "Remove lock files older than the last reboot";	\
+	while ${TRUE}; do						\
 		if ${TEST} -f /var/run/dmesg.boot -a -f ${LOCKFILE}; then \
 			rebooted=`${FIND} /var/run/dmesg.boot -newer ${LOCKFILE} -print`; \
-			if ${TEST} x"$$rebooted" != x; then		\
-				${ECHO} "=> Removing stale ${LOCKFILE}"; \
-				${RM} ${LOCKFILE};			\
+			if ${TEST} -n "$$rebooted"; then		\
+				${STEP_MSG} "Removing stale ${LOCKFILE}"; \
+				${RM} -f ${LOCKFILE};			\
 			fi;						\
 		fi;							\
-		${SHLOCK} -f ${LOCKFILE} -p $$ppid && break;		\
-		${ECHO} "=> Lock is held by pid `cat ${LOCKFILE}`";	\
-		case "${PKGSRC_LOCKTYPE}" in				\
-		once)	exit 1 ;;					\
-		sleep)	${SLEEP} ${PKGSRC_SLEEPSECS} ;;			\
-		esac							\
-	done;								\
-	if [ "${PKG_VERBOSE}" != "" ]; then				\
-		${ECHO_MSG} "=> Lock acquired on behalf of process $$ppid"; \
-	fi
+		if ${SHLOCK} -f ${LOCKFILE} -p $$ppid; then		\
+			break;						\
+		fi;							\
+		case ${PKGSRC_LOCKTYPE:Q}"" in				\
+		once)	${ERROR_MSG} "Lock is held by pid `${CAT} ${LOCKFILE}`"; \
+			exit 1;						\
+			;;						\
+		sleep)	${STEP_MSG} "Lock is held by pid `${CAT} ${LOCKFILE}`"; \
+			${SLEEP} ${PKGSRC_SLEEPSECS};			\
+			;;						\
+		esac;							\
+	done
+.  if defined(PKG_VERBOSE)
+	@${STEP_MSG} "Lock acquired for ${.TARGET:S/^acquire-//:S/-lock$//} on behalf of process `${CAT} ${LOCKFILE}`"
+.  endif
+.endif
 
-_RELEASE_LOCK=								\
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ "${PKG_VERBOSE}" != "" ]; then				\
-		${ECHO_MSG} "=> Lock released on behalf of process `${CAT} ${LOCKFILE}`"; \
-	fi;								\
-	${RM} ${LOCKFILE}
-.endif # PKGSRC_LOCKTYPE
+release-lock: .USE
+.if ${PKGSRC_LOCKTYPE} == "none"
+	@${DO_NADA}
+.else
+.  if defined(PKG_VERBOSE)
+	@${STEP_MSG} "Lock released for ${.TARGET:S/^release-//:S/-lock$//} on behalf of process `${CAT} ${LOCKFILE}`"
+.  endif
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${LOCKFILE}
+.endif
 
 ${WRKDIR}:
 .if !defined(KEEP_WRKDIR)
@@ -1525,25 +1526,17 @@ do-test:
 
 .PHONY: acquire-tools-lock
 .PHONY: acquire-wrapper-lock acquire-configure-lock acquire-build-lock
-acquire-tools-lock:
-	${_ACQUIRE_LOCK}
-acquire-wrapper-lock:
-	${_ACQUIRE_LOCK}
-acquire-configure-lock:
-	${_ACQUIRE_LOCK}
-acquire-build-lock:
-	${_ACQUIRE_LOCK}
+acquire-tools-lock: acquire-lock
+acquire-wrapper-lock: acquire-lock
+acquire-configure-lock: acquire-lock
+acquire-build-lock: acquire-lock
 
 .PHONY: release-tools-lock
 .PHONY: release-wrapper-lock release-configure-lock release-build-lock
-release-tools-lock:
-	${_RELEASE_LOCK}
-release-wrapper-lock:
-	${_RELEASE_LOCK}
-release-configure-lock:
-	${_RELEASE_LOCK}
-release-build-lock:
-	${_RELEASE_LOCK}
+release-tools-lock: release-lock
+release-wrapper-lock: release-lock
+release-configure-lock: release-lock
+release-build-lock: release-lock
 
 ################################################################
 # Skeleton targets start here

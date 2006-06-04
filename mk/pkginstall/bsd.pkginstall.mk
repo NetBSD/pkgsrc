@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.3 2006/06/04 00:39:05 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.4 2006/06/04 04:31:47 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -1007,10 +1007,8 @@ _PKGINSTALL_TARGETS+=	release-pkginstall-lock
 pkginstall: ${_PKGINSTALL_TARGETS}
 
 .PHONY: acquire-pkginstall-lock release-pkginstall-lock
-acquire-pkginstall-lock:
-	${_ACQUIRE_LOCK}
-release-pkginstall-lock:
-	${_RELEASE_LOCK}
+acquire-pkginstall-lock: acquire-lock
+release-pkginstall-lock: release-lock
 
 .PHONY: real-pkginstall
 real-pkginstall: generate-rcd-scripts generate-install-scripts
