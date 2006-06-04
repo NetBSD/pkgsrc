@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2006/02/05 23:09:01 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/06/04 06:14:11 dogcow Exp $
 #
 
-DISTNAME=	gpsim-0.21.2
-PKGREVISION=	3
+DISTNAME=	gpsim-0.21.11
 CATEGORIES=	emulators
-MASTER_SITES=	http://www.dattalo.com/gnupic/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gpsim/}
 
 MAINTAINER=	snoonan@tbearsiberians.com
 HOMEPAGE=	http://www.dattalo.com/gnupic/gpsim.html
@@ -15,15 +14,15 @@ USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	YES
+USE_GNU_READLINE=	YES
 
-USE_GNU_READLINE=	# rl_callback_read_char, rl_copy_text,
-# rl_callback_handler_remove, rl_forced_update_display,
-# rl_callback_handler_install
-
-CONFLICTS=	eXdbm-[0-9]*
+post-install:
+	${INSTALL_DATA_DIR}  ${PREFIX}/share/doc/gpsim
+	${INSTALL_DATA} ${WRKSRC}/doc/gpsim.pdf ${PREFIX}/share/doc/gpsim
+	${INSTALL_DATA} ${WRKSRC}/doc/gpsim.ps ${PREFIX}/share/doc/gpsim
 
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
-.include "../../x11/gtk+extra/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtk2+extra/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
