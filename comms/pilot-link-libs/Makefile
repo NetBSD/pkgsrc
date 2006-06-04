@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/04/11 21:45:07 tv Exp $
+# $NetBSD: Makefile,v 1.16 2006/06/04 16:26:52 joerg Exp $
 #
 
 .include "../../comms/pilot-link/Makefile.common"
@@ -7,7 +7,7 @@ PKGNAME=		pilot-link-libs-${PILOT_LINK_VERS}
 PKGREVISION=		3
 COMMENT=		Libraries for talking to the 3Com Pilot PDA
 
-CONFLICTS+=		pilot-link-0.8.* pilot-link-0.9.[0-3]
+CONFLICTS+=		pilot-link<0.9.5
 
 
 MAKE_ENV+=		PILIB="libsock/libpisock.la"
