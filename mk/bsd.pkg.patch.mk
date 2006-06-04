@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.patch.mk,v 1.21 2006/01/19 20:32:17 jlam Exp $
+# $NetBSD: bsd.pkg.patch.mk,v 1.22 2006/06/04 04:31:47 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
@@ -292,10 +292,8 @@ _PATCH_TARGETS+=	release-patch-lock
 patch: ${_PATCH_TARGETS}
 
 .PHONY: acquire-patch-lock release-patch-lock
-acquire-patch-lock:
-	${_ACQUIRE_LOCK}
-release-patch-lock:
-	${_RELEASE_LOCK}
+acquire-patch-lock: acquire-lock
+release-patch-lock: release-lock
 
 ${_PATCH_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-patch PKG_PHASE=patch
