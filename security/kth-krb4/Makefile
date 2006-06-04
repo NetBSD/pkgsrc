@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2006/04/12 19:43:31 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2006/06/04 13:41:10 joerg Exp $
 #
 
 DISTNAME=		krb4-1.2.1
 PKGNAME=		kth-krb4-1.2.1
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.pdc.kth.se/pub/krb/src/
 
@@ -11,7 +11,6 @@ MAINTAINER=		wennmach@NetBSD.org
 HOMEPAGE=		http://www.pdc.kth.se/kth-krb/
 COMMENT=		Kerberos IV distribution from KTH
 
-CONFLICTS+=		zephyr-[0-9]*
 CONFLICTS+=		libdes-[0-9]*
 
 CRYPTO=			yes
