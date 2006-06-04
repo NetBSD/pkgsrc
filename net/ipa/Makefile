@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/04/22 09:22:12 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2006/06/04 22:21:27 joerg Exp $
 #
 
 DISTNAME=	ipa-1.3.6
@@ -33,10 +33,14 @@ OWN_DIRS_PERMS=		/var/ipa ${ROOT_USER} ${ROOT_GROUP} 0555
 
 RCD_SCRIPTS=		ipa
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
 RCD_SCRIPT_SRC.ipa=	${FILESDIR}/ipa.sh
 .else
 RCD_SCRIPT_SRC.ipa=	${FILESDIR}/ipa.generic
+.endif
+
+.if ${OPSYS} == "DragonFly"
+MAKE_ENV+=	WITH_PF=1 WITHOUT_IP6FW=1 WITHOUT_IPFW=1
 .endif
 
 SUBST_CLASSES+=		paths
