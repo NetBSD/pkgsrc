@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2006/06/02 18:27:58 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/06/04 16:26:55 joerg Exp $
 
 MODNAME=		dom
 CATEGORIES+=		textproc
 COMMENT=		PHP5 extension for DOM support
 
-CONFLICTS=	php-dom-[0-9]
+CONFLICTS=	php-dom-[0-9]*
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 CONFIGURE_ARGS+=	--with-libxml-dir=${BUILDLINK_PREFIX.libxml2}

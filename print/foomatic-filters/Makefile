@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.11 2006/03/14 01:14:32 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/06/04 16:26:55 joerg Exp $
 
 .include "Makefile.common"
 
 DISTNAME=	foomatic-filters-${FOOMATIC_FILTERS_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 MASTER_SITES=	http://www.linuxprinting.org/download/foomatic/
 
 MAINTAINER=	jlam@pkgsrc.org
 COMMENT=	Spooler-independent PostScript printing filter
 
-CONFLICTS+=	foomatic-gswrapper-[0-9]
+CONFLICTS+=	foomatic-gswrapper-[0-9]*
 
 USE_TOOLS+=	gmake gs:run perl:run
 INSTALL_TARGET=	install-bin install-man

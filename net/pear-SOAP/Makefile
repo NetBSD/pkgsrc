@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/06/02 18:27:57 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/06/04 16:26:55 joerg Exp $
 
 DISTNAME=	SOAP-0.8.1
 CATEGORIES+=	net
@@ -6,7 +6,7 @@ CATEGORIES+=	net
 MAINTAINER=	jdolecek@NetBSD.org
 COMMENT=	SOAP Client/Server for PHP
 
-CONFLICTS=	php-pear-SOAP-[0-9]
+CONFLICTS=	php-pear-SOAP-[0-9]*
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime>=1.2:../../mail/pear-Mail_Mime
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-HTTP_Request>=1.2:../../www/pear-HTTP_Request
