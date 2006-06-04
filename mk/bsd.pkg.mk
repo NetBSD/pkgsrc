@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1827 2006/06/03 23:11:42 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1828 2006/06/04 00:39:05 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1697,35 +1697,17 @@ real-configure: configure-message configure-vars pre-configure pre-configure-ove
 real-build: build-message build-vars pre-build do-build post-build build-cookie
 real-test: test-message pre-test do-test post-test test-cookie
 
-_SU_TARGET=								\
-	if [ `${ID} -u` = `${ID} -u ${ROOT_USER}` ]; then		\
-		${MAKE} ${MAKEFLAGS} $$realtarget;			\
-	elif [ "X${BATCH}" != X"" ]; then				\
-		${ECHO_MSG} "Warning: Batch mode, not superuser, can't run $$action for ${PKGNAME}."; \
-		${ECHO_MSG} "Become ${ROOT_USER} and try again to ensure correct permissions."; \
-	else								\
-		args="";						\
-		if [ "X${FORCE_PKG_REGISTER}" != X"" ]; then		\
-			args="FORCE_PKG_REGISTER=1";			\
-		fi;							\
-		if [ "X${PKG_DEBUG_LEVEL}" != X"" ]; then		\
-			args="$$args PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL}"; \
-		fi;							\
-		if [ "X${PRE_ROOT_CMD}" != "X${TRUE}" ]; then		\
-			${ECHO} "*** WARNING *** Running: ${PRE_ROOT_CMD}"; \
-			${PRE_ROOT_CMD};				\
-		fi;                                             	\
-		${ECHO_MSG} "${_PKGSRC_IN}> Becoming ${ROOT_USER}@`${HOSTNAME_CMD}` to $$action ${PKGBASE}."; \
-		${ECHO_N} "`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'` ";\
-		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH='$${PATH}:${SU_CMD_PATH_APPEND}' ${MAKE} $$args ${MAKEFLAGS} $$realtarget $$realflags"; \
-	fi
-
 # su-target is a macro target that does just-in-time su-to-root before
-# reinvoking the make process as root.
+# reinvoking the make process as root.  It acquires root privileges and
+# invokes a new make process with the target named "su-${.TARGET}".
 #
 .PHONY: su-target
 su-target: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}					\
+	case ${PRE_CMD.su-${.TARGET}:Q}"" in				\
+	"")	;;							\
+	*)	${PRE_CMD.su-${.TARGET}} ;;				\
+	esac;								\
 	if ${TEST} `${ID} -u` = `${ID} -u ${ROOT_USER}`; then		\
 		${MAKE} ${MAKEFLAGS} PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL:Q} su-${.TARGET} ${MAKEFLAGS.${.TARGET}}; \
 	else								\
@@ -2068,8 +2050,8 @@ _BIN_INSTALL_FLAGS+=	${PKG_ARGS_ADD}
 _SHORT_UNAME_R=	${:!${UNAME} -r!:C@\.([0-9]*)[_.].*@.\1@} # n.n[_.]anything => n.n
 
 # Install binary pkg, without strict uptodate-check first
-.PHONY: real-su-bin-install
-real-su-bin-install:
+.PHONY: su-bin-install
+su-bin-install:
 	@found="`${PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`";	\
 	if [ "$$found" != "" ]; then					\
 		${ECHO_MSG} "${_PKGSRC_IN}> $$found is already installed - perhaps an older version?"; \
@@ -2094,13 +2076,8 @@ real-su-bin-install:
 	fi
 
 .PHONY: bin-install
-bin-install:
+bin-install: su-target
 	@${ECHO_MSG} "${_PKGSRC_IN}> Binary install for "${PKGNAME_REQD:U${PKGNAME}:Q}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	realtarget="real-su-bin-install";				\
-	action="binary install";					\
-	${_SU_TARGET}
-
 
 
 ################################################################
