@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.update.mk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: bsd.pkg.update.mk,v 1.2 2006/06/04 08:25:53 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and contains the targets
 # and variables for "make update".
@@ -7,6 +7,9 @@
 # an attempt to separate the magic into a separate module that can be
 # reimplemented later.
 #
+
+NOCLEAN?=	NO	# don't clean up after update
+REINSTALL?=	NO	# reinstall upon update
 
 # The 'update' target can be used to update a package and all
 # currently installed packages that depend upon this package.

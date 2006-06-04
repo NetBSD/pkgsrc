@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1832 2006/06/04 06:09:36 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1833 2006/06/04 08:25:52 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -59,8 +59,6 @@ build-defs-message: ${WRKDIR}
 ############################################################################
 
 MKCRYPTO?=		YES	# build crypto packages by default
-NOCLEAN?=		NO	# don't clean up after update
-REINSTALL?=		NO	# reinstall upon update
 CREATE_WRKDIR_SYMLINK?=	yes	# create a symlink to WRKOBJDIR
 
 ##### Variant spellings
