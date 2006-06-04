@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/05/19 17:14:53 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/06/04 14:44:13 joerg Exp $
 
 DISTNAME=	webmin-1.270-minimal
 PKGNAME=	${DISTNAME:S/-minimal$//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=webadmin/}
 
@@ -56,6 +56,13 @@ CONF_FILES_PERMS+=	${WEBMIN_EGDIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_} \
 RCD_SCRIPTS=		webmin
 
 .include "../../security/openssl/buildlink3.mk"
+
+post-extract:
+	${CP} ${FILESDIR}/acl_config-dragonfly ${WRKSRC}/acl/config-dragonfly
+	${CP} ${FILESDIR}/init_config-dragonfly ${WRKSRC}/init/config-dragonfly
+	${CP} ${FILESDIR}/man_config-dragonfly ${WRKSRC}/man/config-dragonfly
+	${CP} ${FILESDIR}/proc_config-dragonfly ${WRKSRC}/proc//config-dragonfly
+
 
 do-configure:
 	${SED}	-e "s,@WEBMIN_EGDIR@,${WEBMIN_EGDIR},g"			\

@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2006/06/04 14:44:14 joerg Exp $
+
+--- os_list.txt.orig	2006-06-04 14:15:28.000000000 +0000
++++ os_list.txt
+@@ -217,9 +217,8 @@ Caixa Magica			10.0	suse-linux	9.2	`cat 
+ # All FreeBSD versions
+ FreeBSD				$1	freebsd		$1	$uname =~ /FreeBSD.*?\s([0-9\.]+)/i
+ 
+-# FreeBSD clones
+-DragonFly BSD			1.0	freebsd		4.8	$uname =~ /DragonFly.*?\s1\.0A/i
+-DragonFly BSD			1.2	freebsd		4.10	$uname =~ /DragonFly.*?\s1\.2A/i
++# DragonFly
++DragonFly			$1	dragonfly	$1	$uname =~ /DragonFly.*?\s([0-9\.]+)/i
+ 
+ # All OpenBSD versions
+ OpenBSD				$1	openbsd		$1	$uname =~ /OpenBSD.*?\s([0-9\.]+)/i
