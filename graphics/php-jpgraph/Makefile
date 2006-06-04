@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/02 18:27:56 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/06/04 16:26:54 joerg Exp $
 
 DISTNAME=	jpgraph-1.18
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE= 	http://www.aditus.nu/jpgraph/index.php
 COMMENT=	Object Oriented class library for PHP
 
-CONFLICTS=	php-jgraph-[0-9]
+CONFLICTS=	php-jgraph-[0-9]*
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.3.1:../../graphics/php-gd
 
