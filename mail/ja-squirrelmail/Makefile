@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.26 2006/02/17 07:04:25 martti Exp $
+# $NetBSD: Makefile,v 1.26.2.1 2006/06/04 13:55:57 salo Exp $
 
-DISTNAME=	squirrelmail-1.4.5
+DISTNAME=	squirrelmail-1.4.6
 PKGNAME=	ja-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	3
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
 EXTRACT_SUFX=	.tar.bz2
 
-PATCH_SITES=	http://www.yamaai-tech.com/~masato/Download/
-PATCHFILES=	squirrelmail-1.4.5-ja-20050714-patch.gz
-PATCH_DIST_STRIP=	-p1
+#PATCH_SITES=	http://www.yamaai-tech.com/~masato/Download/
+PATCH_SITES=	ftp://ftp.back-street.net/pub/squirrelmail/
+PATCHFILES=	squirrelmail-1.4.6-ja-20060504-patch
 
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.squirrelmail.jp/
@@ -25,7 +25,7 @@ DEPENDS+=	php-mbstring>=4.3.3:../../misc/php-mbstring
 USE_LANGUAGES=	# empty
 NO_BUILD=	yes
 USE_TOOLS+=	perl:run
-REPLACE_PERL+=	config/conf.pl config/ri_once.pl
+REPLACE_PERL+=	config/conf.pl
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -55,7 +55,8 @@ OWN_DIRS_PERMS=		${ATTACHMENTS_DIR} ${ROOT_USER} ${APACHE_GROUP} 730
 OWN_DIRS_PERMS+=	${USER_PREFS_DIR} ${APACHE_USER} ${APACHE_GROUP} 755
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	${WRKDIR}/squirrelmail.conf.dist config/config_default.php
+SUBST_FILES.paths=	${WRKDIR:Q}/squirrelmail.conf.dist
+SUBST_FILES.paths+=	config/config_default.php
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@ATTACHMENTS_DIR@,${ATTACHMENTS_DIR},g'
 SUBST_SED.paths+=	-e 's,@USER_PREFS_DIR@,${USER_PREFS_DIR},g'

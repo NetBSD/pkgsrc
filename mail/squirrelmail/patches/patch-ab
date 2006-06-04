@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.6.1 2006/06/04 13:55:57 salo Exp $
+$NetBSD: patch-ab,v 1.11.2.1 2006/06/04 13:55:57 salo Exp $
 
 --- functions/i18n.php.orig	2006-02-10 22:30:31.000000000 +0200
 +++ functions/i18n.php	2006-04-11 08:15:24.000000000 +0300
