@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/03/30 03:44:44 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/06/04 16:26:55 joerg Exp $
 
 DISTNAME=	texi2html-1.76
 CATEGORIES=	textproc
@@ -8,7 +8,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/texi2html/
 COMMENT=	Texinfo-to-HTML direct translator
 
-CONFLICTS=	teTeX-bin-1.0 teTeX-bin-1.0.[1234567]
+CONFLICTS=	teTeX-bin-1.*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
