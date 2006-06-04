@@ -1,5 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2005/07/20 15:43:39 taca Exp $
+$NetBSD: MESSAGE,v 1.2.6.1 2006/06/04 13:55:57 salo Exp $
+
+In order to use ja-squirrelmail package, you need to install these
+packages, too:
+
+	mail/squirrelmail-decode
+	mail/squirrelmail-locales
 
 Please run the SquirrelMail configuration script:
 
