@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.411 2006/06/04 12:34:08 tron Exp $
+$NetBSD: CHANGES-2006,v 1.412 2006/06/04 13:43:17 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2898,3 +2898,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/sdist to 1.7 [kim 2006-06-04]
 	Updated mail/ja-squirrelmail to 1.4.6nb3 [tron 2006-06-04]
 	Updated mail/squirrelmail to 1.4.6nb3 [tron 2006-06-04]
+	Updated chat/zephyr to 20010518nb5 [joerg 2006-06-04]
