@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2006/06/02 18:27:56 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/06/04 16:26:54 joerg Exp $
 
 MODNAME=		gd
 CATEGORIES+=		graphics
 COMMENT=		PHP extension for GD graphics library
 
-CONFLICTS=	php-gd-[0-9]
+CONFLICTS=	php-gd-[0-9]*
 
 # XXX we use bundled GD so that extension is usable also by non-threaded
 # PHP, such as CLI/CGI version or ap-php on Apache 1.x.
