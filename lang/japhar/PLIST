@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/05 06:27:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/06/04 13:52:57 joerg Exp $
 info/japhar.info
 lib/libarch.la
-lib/libffi.la
 lib/libjni.la
 lib/libjvmdi.la
 lib/libruntime.la
@@ -16,8 +15,6 @@ lib/libjaphar_zip.la
 lib/libjaphar_sysresource.la
 lib/libjaphar_agent.la
 lib/libjaphar_mmedia.la
-lib/libjaphar_awt.la
-lib/libjaphar_fontmanager.la
 bin/japhar
 bin/japharh
 bin/japhard
@@ -70,8 +67,5 @@ include/japhar/jni.h
 include/japhar/jniint.h
 include/japhar/jvmdi.h
 include/japhar/jvmdiint.h
-include/fficonfig.h
-include/ffi.h
-include/ffi_mips.h
 @dirrm include/japhar/private
 @dirrm include/japhar
