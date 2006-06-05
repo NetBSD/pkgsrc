@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: package.mk,v 1.2 2006/06/05 22:49:44 jlam Exp $
 
 PKG_SUFX?=		.tgz
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
@@ -16,7 +16,7 @@ package-check-installed:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${PKG_INFO} -qe ${PKGNAME};					\
 	if ${TEST} $$? -ne 0; then					\
-		${ECHO_MSG} "=> ${PKGNAME} is not installed.";		\
+		${ERROR_MSG} "${PKGNAME} is not installed.";		\
 		exit 1;							\
 	fi
 
@@ -41,7 +41,7 @@ ${PKGFILE}: ${_CONTENTS_TARGETS}
 	${PKG_CREATE} ${_PKG_ARGS_PACKAGE} ${.TARGET};			\
 	exitcode=$$?;							\
 	if ${TEST} $$exitcode -ne 0; then				\
-		${ECHO} "(${PKG_CREATE:T}: exitcode $$exitcode)";	\
+		${ERROR_MSG} "(${PKG_CREATE:T}: exitcode $$exitcode)";	\
 		${RM} -f ${.TARGET};					\
 		exit 1;							\
 	fi
@@ -67,7 +67,7 @@ package-links: delete-package-links
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_dir_:Q}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${TEST} ! -d ${_dir_:Q}; then				\
-		${ECHO_MSG} "=> Can't create directory "${_dir_:Q}".";	\
+		${ERROR_MSG} "Can't create directory "${_dir_:Q}".";	\
 		exit 1;							\
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_dir_:Q}/${PKGFILE:T}

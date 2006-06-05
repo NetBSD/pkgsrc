@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: metadata.mk,v 1.2 2006/06/05 22:49:44 jlam Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -230,7 +230,7 @@ ${_MESSAGE_FILE}: ${MESSAGE_SRC}
 .PHONY: install-display-message
 register-pkg: install-display-message
 install-display-message: ${_MESSAGE_FILE}
-	@${ECHO_MSG} "${_PKGSRC_IN}> Please note the following:"
+	@${PHASE_MSG} "Please note the following:"
 	@${ECHO_MSG} ""
 	@${CAT} ${_MESSAGE_FILE}
 	@${ECHO_MSG} ""
