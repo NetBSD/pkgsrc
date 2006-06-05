@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.2 2006/06/04 19:04:57 seb Exp $
+# $NetBSD: depends.mk,v 1.3 2006/06/05 14:11:39 jlam Exp $
 
 ######################################################################
 ### depends (PUBLIC)
@@ -17,7 +17,7 @@ depends: ${_DEPENDS_TARGETS}
 acquire-depends-lock: acquire-lock
 release-depends-lock: release-lock
 
-.if !target(${_DEPENDS_COOKIE})
+.if !exists(${_DEPENDS_COOKIE})
 ${_DEPENDS_COOKIE}: pre-depends-hook depends-install depends-cookie
 .else
 ${_DEPENDS_COOKIE}:
