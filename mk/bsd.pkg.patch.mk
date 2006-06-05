@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.patch.mk,v 1.22 2006/06/04 04:31:47 jlam Exp $
+# $NetBSD: bsd.pkg.patch.mk,v 1.23 2006/06/05 22:49:44 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "patch" phase.
@@ -189,12 +189,12 @@ _GENERATE_PATCH_COOKIE=	\
 .PHONY: distribution-patch-message do-distribution-patch
 
 distribution-patch-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Applying distribution patches for ${PKGNAME}"
+	@${PHASE_MSG} "Applying distribution patches for ${PKGNAME}"
 
 .if !target(do-distribution-patch)
 do-distribution-patch:
 .  for i in ${PATCHFILES}
-	@${ECHO_PATCH_MSG} "${_PKGSRC_IN}> Applying distribution patch ${i}"
+	@${ECHO_PATCH_MSG} "Applying distribution patch ${i}"
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR};			\
 	${PATCH_DIST_CAT.${i:S/=/--/}} |				\
 	${PATCH} ${PATCH_DIST_ARGS.${i:S/=/--/}}			\
@@ -214,7 +214,7 @@ _PKGSRC_PATCHES+=	${LOCALPATCHES}/${PKGPATH}/*
 .PHONY: pkgsrc-patch-message do-pkgsrc-patch
 
 pkgsrc-patch-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Applying pkgsrc patches for ${PKGNAME}"
+	@${PHASE_MSG} "Applying pkgsrc patches for ${PKGNAME}"
 
 .if !target(do-pkgsrc-patch)
 do-pkgsrc-patch:
@@ -230,7 +230,7 @@ do-pkgsrc-patch:
 		${TEST} -f "$$i" || continue;				\
 		case "$$i" in						\
 		*.orig|*.rej|*~)					\
-			${ECHO_MSG} "${_PKGSRC_IN}> Ignoring patchfile $$i"; \
+			${STEP_MSG} "Ignoring patchfile $$i";		\
 			continue;					\
 			;;						\
 		${PATCHDIR}/patch-local-*) 				\
@@ -258,7 +258,7 @@ do-pkgsrc-patch:
 			fi;						\
 			;;						\
 		esac;							\
-		${ECHO_PATCH_MSG} "${_PKGSRC_IN}> Applying pkgsrc patch $$i"; \
+		${ECHO_PATCH_MSG} "Applying pkgsrc patch $$i";		\
 		fuzz_flags=;						\
 		if ${PATCH} -v >/dev/null 2>&1; then			\
 			fuzz_flags=${PATCH_FUZZ_FACTOR:Q};		\
@@ -309,7 +309,7 @@ _REAL_PATCH_TARGETS+=	patch-cookie
 
 .PHONY: patch-message
 patch-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Patching for ${PKGNAME}"
+	@${PHASE_MSG} "Patching for ${PKGNAME}"
 
 .PHONY: patch-cookie
 patch-cookie:

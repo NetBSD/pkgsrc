@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.clean.mk,v 1.3 2006/01/19 16:24:51 jlam Exp $
+# $NetBSD: bsd.pkg.clean.mk,v 1.4 2006/06/05 22:49:44 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "clean" phase.
@@ -51,13 +51,13 @@ post-clean:
 .PHONY: do-clean
 .if !target(do-clean)
 do-clean:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Cleaning for ${PKGNAME}"
+	@${PHASE_MSG} "Cleaning for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${TEST} -d ${WRKDIR:Q}; then					\
 		if ${TEST} -w ${WRKDIR:Q}; then				\
 			${RM} -fr ${WRKDIR:Q};				\
 		else							\
-			${ECHO_MSG} "${_PKGSRC_IN}> "${WRKDIR:Q}" not writable, skipping"; \
+			${STEP_MSG} ${WRKDIR:Q}" not writable, skipping"; \
 		fi;							\
         fi
 .  if defined(WRKOBJDIR)

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.24 2006/06/04 04:31:47 jlam Exp $
+# $NetBSD: bsd.pkg.extract.mk,v 1.25 2006/06/05 22:49:44 jlam Exp $
 #
 # This Makefile fragment is included to bsd.pkg.mk and defines the
 # relevant variables and targets for the "extract" phase.
@@ -200,7 +200,7 @@ _REAL_EXTRACT_TARGETS+=	extract-cookie
 
 .PHONY: extract-message
 extract-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Extracting for ${PKGNAME}"
+	@${PHASE_MSG} "Extracting for ${PKGNAME}"
 
 .PHONY: extract-cookie
 extract-cookie:

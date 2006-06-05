@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.2 2006/06/05 17:41:11 jlam Exp $
+# $NetBSD: install.mk,v 1.3 2006/06/05 22:49:44 jlam Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -22,8 +22,8 @@ release-install-lock: release-lock
 
 ${_INSTALL_COOKIE}:
 .if !empty(INTERACTIVE_STAGE:Minstall) && defined(BATCH)
-	@${ECHO} "*** The installation stage of this package requires user interaction"
-	@${ECHO} "*** Please install manually with \"cd ${.CURDIR} && ${MAKE} install\""
+	@${ERROR_MSG} "The installation stage of this package requires user interaction"
+	@${ERROR_MSG} "Please install manually with \"cd ${.CURDIR} && ${MAKE} install\""
 	@${TOUCH} ${_INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
@@ -48,7 +48,7 @@ real-install: ${_REAL_INSTALL_TARGETS}
 
 .PHONY: install-message
 install-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Installing for ${PKGNAME}"
+	@${PHASE_MSG} "Installing for ${PKGNAME}"
 
 ######################################################################
 ### unprivileged-install-hook (PRIVATE, override, hook)
@@ -75,11 +75,11 @@ install-check-version: ${_EXTRACT_COOKIE}
 	extractname=`${CAT} ${_EXTRACT_COOKIE}`;			\
 	pkgname=${PKGNAME};						\
 	case "$$extractname" in						\
-	"")	${ECHO_MSG} "*** Warning: ${WRKDIR} may contain an older version of ${PKGBASE}" ;; \
+	"")	${WARNING_MSG} "Warning: ${WRKDIR} may contain an older version of ${PKGBASE}" ;; \
 	"$$pkgname")	;;						\
-	*)	${ECHO_MSG} "*** Warning: Package version $$extractname in ${WRKDIR}"; \
-		${ECHO_MSG} "*** Current version $$pkgname in ${PKG_PATH}"; \
-		${ECHO_MSG} "*** Cleaning and rebuilding $$pkgname...";	\
+	*)	${WARNING_MSG} "Warning: Package version $$extractname in ${WRKDIR}"; \
+		${WARNING_MSG} "         Current version $$pkgname in ${PKG_PATH}"; \
+		${WARNING_MSG} "         Cleaning and rebuilding $$pkgname...";	\
 		${MAKE} clean && ${MAKE} build ;;			\
 	esac
 
@@ -173,9 +173,9 @@ install-check-umask:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	umask=`${SH} -c umask`;						\
 	if ${TEST} "$$umask" -ne ${DEF_UMASK}; then			\
-		${ECHO_MSG} "${_PKGSRC_IN}> Warning: your umask is \`\`$$umask''."; \
-		${ECHO_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK}) and install"; \
-		${ECHO_MSG} "this package again by \`\`${MAKE} deinstall reinstall''."; \
+		${WARNING_MSG} "Warning: your umask is \`\`$$umask''.";	\
+		${WARNING_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK}) and install"; \
+		${WARNING_MSG} "this package again by \`\`${MAKE} deinstall reinstall''."; \
         fi
 
 ######################################################################
@@ -197,7 +197,7 @@ install-makedirs:
 		${MTREE} ${MTREE_ARGS} ${PREFIX}/
 .endif
 .if defined(INSTALLATION_DIRS) && !empty(INSTALLATION_DIRS)
-	@${ECHO_MSG} "${_PKGSRC_IN}> Creating installation directories"
+	@${STEP_MSG} "Creating installation directories"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	for dir in ${INSTALLATION_DIRS}; do				\
 		case "$$dir" in						\
@@ -267,7 +267,7 @@ _DOC_COMPRESS=								\
 
 .PHONY: install-doc-handling
 install-doc-handling: plist
-	@${ECHO_MSG} "${_PKGSRC_IN}> [Automatic manual page handling]"
+	@${STEP_MSG} "Automatic manual page handling"
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${PLIST} | ${GREP} -v "^@" |	\
 	${EGREP} ${_PLIST_REGEXP.man:Q} | ${_DOC_COMPRESS}
 

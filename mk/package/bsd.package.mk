@@ -1,4 +1,4 @@
-# $NetBSD: bsd.package.mk,v 1.2 2006/06/05 17:41:11 jlam Exp $
+# $NetBSD: bsd.package.mk,v 1.3 2006/06/05 22:49:44 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to binary packages.
@@ -22,7 +22,7 @@ package: install
 .    if defined(SKIP_SILENT)
 	@${DO_NADA}
 .    else
-	@${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} may not be packaged: "${NO_PACKAGE:Q}"."
+	@${PHASE_MSG} "${PKGNAME} may not be packaged: "${NO_PACKAGE:Q}"."
 .    endif
 .  endif
 .else
