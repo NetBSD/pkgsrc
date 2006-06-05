@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.416 2006/06/04 20:58:35 he Exp $
+$NetBSD: CHANGES-2006,v 1.417 2006/06/05 12:35:23 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2903,3 +2903,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/qmail-run to 20060604 [schmonz 2006-06-04]
 	Updated audio/csound5-manual to 5.01nb1 [ben 2006-06-04]
 	Added sysutils/munin-node version 1.3.1 [he 2006-06-04]
+	Updated security/msf to 2.6 [adrianp 2006-06-05]
