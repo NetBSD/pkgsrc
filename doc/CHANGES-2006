@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.422 2006/06/05 18:39:45 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.423 2006/06/05 19:05:05 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2909,3 +2909,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/awstats to 6.6nb2 [minskim 2006-06-05]
 	Updated textproc/p5-Text-Reform to 1.11nb3 [minskim 2006-06-05]
 	Updated textproc/p5-Lingua-EN-Inflect to 1.88nb3 [minskim 2006-06-05]
+	Updated archivers/gcpio to 2.6nb4 [minskim 2006-06-05]
