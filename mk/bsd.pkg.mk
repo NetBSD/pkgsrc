@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1837 2006/06/05 17:21:54 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1838 2006/06/05 17:56:10 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1099,8 +1099,6 @@ show-distfiles:
 	done
 .  endif
 .endif
-
-# Extract
 
 # acquire-lock, release-lock are .USE macro targets for acquiring and
 # release coarse-grained locks.
