@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2006/06/05 14:27:40 tv Exp $
+
+If you wish to use the IP::Country::MaxMind wrapper for the MexMind GeoIP
+database, the package net/p5-Geo-IP must also be installed.  No additional
+packages are required in order to use the builtin IP::Country::Fast and
+IP::Country::Medium modules.
+
+===========================================================================
