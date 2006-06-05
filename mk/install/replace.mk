@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: replace.mk,v 1.2 2006/06/05 17:21:55 jlam Exp $
 
 ######################################################################
 ### replace (PUBLIC)
@@ -18,7 +18,7 @@ replace-message:
         @${WARNING_MSG} "experimental target - DATA LOSS MAY OCCUR."
 
 su-replace: replace-pkg
-MAKEFLAGS.su-replace=	UPDATE_RUNNING=yes
+MAKEFLAGS.su-replace=	_UPDATE_RUNNING=yes
 
 ######################################################################
 ### undo-replace (PUBLIC)
@@ -34,7 +34,7 @@ undo-replace-message:
         @${WARNING_MSG} "experimental target - DATA LOSS MAY OCCUR."
 
 su-undo-replace: undo-replace-pkg
-MAKEFLAGS.su-undo-replace=	UPDATE_RUNNING=yes
+MAKEFLAGS.su-undo-replace=	_UPDATE_RUNNING=yes
 
 ######################################################################
 ### replace-pkg (PRIVATE, override)
