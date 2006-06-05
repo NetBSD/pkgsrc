@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.421 2006/06/05 18:34:16 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.422 2006/06/05 18:39:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2908,3 +2908,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/dspam to 3.6.7 [xtraeme 2006-06-05]
 	Updated www/awstats to 6.6nb2 [minskim 2006-06-05]
 	Updated textproc/p5-Text-Reform to 1.11nb3 [minskim 2006-06-05]
+	Updated textproc/p5-Lingua-EN-Inflect to 1.88nb3 [minskim 2006-06-05]
