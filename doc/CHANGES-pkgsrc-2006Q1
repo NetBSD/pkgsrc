@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.71 2006/06/04 13:56:19 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.72 2006/06/05 12:06:55 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -145,3 +145,5 @@ Pullup ticket 1683 - requested by tron
 security update for mysql5
 Pullup ticket 1684 - requested by tron
 security fix for squirrelmail
+Pullup ticket 1685 - requested by adrianp
+security update for drupal
