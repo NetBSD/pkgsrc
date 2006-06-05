@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.update.mk,v 1.2 2006/06/04 08:25:53 jlam Exp $
+# $NetBSD: bsd.pkg.update.mk,v 1.3 2006/06/05 17:21:54 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and contains the targets
 # and variables for "make update".
@@ -10,6 +10,21 @@
 
 NOCLEAN?=	NO	# don't clean up after update
 REINSTALL?=	NO	# reinstall upon update
+
+# UPDATE_TARGET is the target that is invoked when updating packages during
+# a "make update".  This variable is user-settable within /etc/mk.conf.
+#
+.if !defined(UPDATE_TARGET)
+.  if defined(DEPENDS_TARGET) && (${DEPENDS_TARGET} == "update")
+.    if make(package)
+UPDATE_TARGET=	package
+.    else
+UPDATE_TARGET=	install
+.    endif
+.  else
+UPDATE_TARGET=	${DEPENDS_TARGET}
+.  endif
+.endif
 
 # The 'update' target can be used to update a package and all
 # currently installed packages that depend upon this package.
@@ -28,7 +43,7 @@ update:
 		"${_PKGSRC_IN}> Resuming update for ${PKGNAME}"
 .  if ${REINSTALL} != "NO" && ${UPDATE_TARGET} != "replace"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-		${MAKE} ${MAKEFLAGS} deinstall UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL
+		${MAKE} ${MAKEFLAGS} deinstall _UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL
 .  endif
 .else
 RESUMEUPDATE?=	NO
@@ -38,7 +53,7 @@ update:
 	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} ${MAKEFLAGS} ${_DDIR}
 .  if ${UPDATE_TARGET} != "replace"
 	${_PKG_SILENT}${_PKG_DEBUG}if ${PKG_INFO} -qe ${PKGBASE}; then	\
-		${MAKE} ${MAKEFLAGS} deinstall UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL \
+		${MAKE} ${MAKEFLAGS} deinstall _UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL \
 		|| (${RM} ${_DDIR} && ${FALSE});			\
 	fi
 .  endif
@@ -53,7 +68,7 @@ update:
 			if [ "(" "${RESUMEUPDATE}" = "NO" -o 		\
 			     "${REINSTALL}" != "NO" ")" -a		\
 			     "${UPDATE_TARGET}" != "replace" ] ; then	\
-				${MAKE} ${MAKEFLAGS} deinstall UPDATE_RUNNING=YES; \
+				${MAKE} ${MAKEFLAGS} deinstall _UPDATE_RUNNING=YES; \
 			fi &&						\
 			${MAKE} ${MAKEFLAGS} ${UPDATE_TARGET}		\
 				DEPENDS_TARGET=${DEPENDS_TARGET:Q} ;	\
