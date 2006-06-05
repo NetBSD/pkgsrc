@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.39 2006/05/22 06:05:46 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.40 2006/06/05 22:34:40 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -27,6 +27,9 @@ to be bugs, or that are simply deprecated.
 .It Fl C{[no-]check,...}
 Enable or disable specific checks.
 For a list of checks, see below.
+.It Fl D{[no-]debug,...}
+Enable or disable debugging categories.
+For a list of categories, see below.
 .It Fl F Ns | Ns Fl -autofix
 Repair trivial things automatically.
 .It Fl I
@@ -110,6 +113,31 @@ Check remaining files in the package directory.
 Check Makefile fragments besides buildlink3.
 .It Cm [no-]patches
 Check the pkgsrc specific patch files.
+.El
+.Pp
+.\" =======================================================================
+.Ss Debugging Options
+.Bl -tag -width 18n
+.It Cm all
+Enable all debugging options.
+.It Cm none
+Disable all debugging options.
+.It Cm [no-]include
+Show the pathnames of the included Makefiles.
+.It Cm [no-]misc
+Some debugging stuff that hasn't made it into its own category.
+.It Cm [no-]patches
+Print the states of the patch file parser.
+.It Cm [no-]quoting
+Additional information about why variables should be quoted or not.
+.It Cm [no-]shell
+Parser information from the shell word and the shell command parsers.
+.It Cm [no-]tools
+Additional information about the tools from the tools framework.
+.It Cm [no-]vartypes
+Additional information about the variable types.
+.It Cm [no-]varuse
+Information about used and unused variables.
 .El
 .Pp
 .\" =======================================================================
