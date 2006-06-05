@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1835 2006/06/05 01:42:58 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1836 2006/06/05 02:22:49 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1164,6 +1164,7 @@ acquire-lock: .USE
 				${RM} -f ${_LOCKFILE};			\
 			fi;						\
 		fi;							\
+		${MKDIR} ${_LOCKFILE:H};				\
 		if ${SHLOCK} -f ${_LOCKFILE} -p $$ppid; then		\
 			break;						\
 		fi;							\
