@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5061 2006/06/04 07:21:57 schwarz Exp $
+$NetBSD: TODO,v 1.5062 2006/06/05 12:41:14 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -452,7 +452,6 @@ Suggested package updates
 	o dnstracer-1.8
 	o doxygen-1.4.6
 	o dropbear-0.48
-	o drupal-4.7.2 [security fix: DRUPAL-SA-2006-008]
 	o dspam-3.6.6
 	o dvd+rw-tools-6.1
 	o dvdauthor-0.6.11
