@@ -1,4 +1,4 @@
-# $NetBSD: x11.version.mk,v 1.3 2005/11/09 01:07:37 reed Exp $
+# $NetBSD: x11.version.mk,v 1.4 2006/06/05 17:11:37 joerg Exp $
 #
 # The following variables may be set in /etc/mk.conf:
 #
@@ -24,7 +24,6 @@
 #	X11 distribution detected on the system.
 #
 
-X11_TYPE?=		native
 X11_PKGSRCDIR.native=	../../pkgtools/x11-links
 X11_PKGSRCDIR.XFree86=	../../x11/XFree86-libs
 X11_PKGSRCDIR.xorg=	../../x11/xorg-libs
