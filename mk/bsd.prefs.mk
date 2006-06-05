@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.221 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.222 2006/06/05 17:11:37 joerg Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -388,6 +388,7 @@ USE_INET6=		NO
 .endif
 
 LOCALBASE?=		${DESTDIR}/usr/pkg
+X11_TYPE?=		native
 .if !defined(X11_TYPE) || defined(X11_TYPE) && !empty(X11_TYPE:Mnative)
 .  if ${OPSYS} == "SunOS"
 # On Solaris, we default to using OpenWindows for X11.
