@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.2 2006/06/04 13:48:51 jlam Exp $
+# $NetBSD: depends.mk,v 1.3 2006/06/05 22:49:44 jlam Exp $
 
 _DEPENDS_FILE=		${WRKDIR}/.depends
 _REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
@@ -77,11 +77,11 @@ depends-install: ${_DEPENDS_FILE}
 		pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;	\
 		case "$$pkg" in						\
 		"")							\
-			${ECHO_MSG} "${_PKGSRC_IN}> Required installed package $$pattern: NOT found"; \
+			${PHASE_MSG} "Required installed package $$pattern: NOT found"; \
 			target=${DEPENDS_TARGET};			\
-			${ECHO_MSG} "${_PKGSRC_IN}> Verifying $$target for $$dir"; \
+			${PHASE_MSG} "Verifying $$target for $$dir";	\
 			if ${TEST} ! -d "$$dir"; then			\
-				${ERROR_MSG} "=> [depends.mk] The directory \`\`$$dir'' does not exist."; \
+				${ERROR_MSG} "[depends.mk] The directory \`\`$$dir'' does not exist."; \
 				exit 1;					\
 			fi;						\
 			cd $$dir;					\
@@ -93,7 +93,7 @@ depends-install: ${_DEPENDS_FILE}
 				${ERROR_MSG} "    stale work directory for $$dir?"; \
 				exit 1;					\
 			esac;						\
-			${ECHO_MSG} "${_PKGSRC_IN}> Returning to build of ${PKGNAME}"; \
+			${PHASE_MSG} "Returning to build of ${PKGNAME}"; \
 			;;						\
 		*)							\
 			objfmt=`${PKG_INFO} -Q OBJECT_FMT "$$pkg"`;	\
@@ -106,7 +106,7 @@ depends-install: ${_DEPENDS_FILE}
 				exit 1;					\
 				;;					\
 			esac;						\
-			${ECHO_MSG} "${_PKGSRC_IN}> Required installed package $$pattern: $$pkg found"; \
+			${PHASE_MSG} "Required installed package $$pattern: $$pkg found"; \
 			;;						\
 		esac;							\
 	done
