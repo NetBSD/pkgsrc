@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2006/04/12 21:31:51 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/06/05 12:33:52 adrianp Exp $
 #
 
-DISTNAME=	framework-2.5
-PKGNAME=	msf-2.5
-PKGREVISION=	1
+DISTNAME=	framework-2.6
+PKGNAME=	msf-2.6
 CATEGORIES=	security
 MASTER_SITES=	http://www.metasploit.com/tools/
 
