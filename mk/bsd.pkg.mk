@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1838 2006/06/05 17:56:10 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1839 2006/06/05 22:49:44 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -723,7 +723,7 @@ update depends do-check-pkg-fail-or-skip-reason:
 	@${DO_NADA}
 .    else
 	@for str in ${PKG_FAIL_REASON} ${PKG_SKIP_REASON}; do		\
-		${ECHO} "${_PKGSRC_IN}> $$str";				\
+		${PHASE_MSG} "$$str";					\
 	done
 .    endif
 .    if defined(PKG_FAIL_REASON)
@@ -1011,13 +1011,13 @@ batch-check-distfiles:
 		esac;							\
 	done;								\
 	case "$$gotfiles" in						\
-	no)	${ECHO} "*** This package requires user intervention to download the distfiles"; \
-		${ECHO} "*** Please fetch the distfiles manually and place them in"; \
-		${ECHO} "*** ${DISTDIR}";				\
+	no)	${ERROR_MSG} "This package requires user intervention to download the distfiles"; \
+		${ERROR_MSG} "Please fetch the distfiles manually and place them in"; \
+		${ERROR_MSG} "${DISTDIR}";				\
 		[ ! -z "${MASTER_SITES}" ] &&				\
-			${ECHO} "*** The distfiles are available from ${MASTER_SITES}";	\
+			${ERROR_MSG} "The distfiles are available from ${MASTER_SITES}"; \
 		[ ! -z "${HOMEPAGE}" ] && 				\
-			${ECHO} "*** See ${HOMEPAGE} for more details";	\
+			${ERROR_MSG} "See ${HOMEPAGE} for more details"; \
 		${ECHO};						\
 		${TOUCH} ${_INTERACTIVE_COOKIE};			\
 		${FALSE} ;;						\
@@ -1029,7 +1029,7 @@ do-fetch:
 .  if !defined(ALLOW_VULNERABLE_PACKAGES)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then		\
-		${ECHO_MSG} "${_PKGSRC_IN}> Checking for vulnerabilities in ${PKGNAME}"; \
+		${PHASE_MSG} "Checking for vulnerabilities in ${PKGNAME}"; \
 		vul=`${MAKE} ${MAKEFLAGS} check-vulnerable`;		\
 		case "$$vul" in						\
 		"")	;;						\
@@ -1038,10 +1038,10 @@ do-fetch:
 			${FALSE} ;;					\
 		esac;							\
 	else								\
-		${ECHO_MSG} "${_PKGSRC_IN}> *** No ${PKGVULNDIR}/pkg-vulnerabilities file found,"; \
-		${ECHO_MSG} "${_PKGSRC_IN}> *** skipping vulnerability checks. To fix, install"; \
-		${ECHO_MSG} "${_PKGSRC_IN}> *** the pkgsrc/security/audit-packages package and run"; \
-		${ECHO_MSG} "${_PKGSRC_IN}> *** '${LOCALBASE}/sbin/download-vulnerability-list'."; \
+		${WARNING_MSG} "No ${PKGVULNDIR}/pkg-vulnerabilities file found,"; \
+		${WARNING_MSG} "skipping vulnerability checks. To fix, install"; \
+		${WARNING_MSG} "the pkgsrc/security/audit-packages package and run"; \
+		${WARNING_MSG} "'${LOCALBASE}/sbin/download-vulnerability-list'."; \
 	fi
 .  endif
 .  if !empty(_ALLFILES)
@@ -1576,8 +1576,8 @@ PKG_ERROR_MSG.configure+=						\
 .endif
 ${_CONFIGURE_COOKIE}:
 .if !empty(INTERACTIVE_STAGE:Mconfigure) && defined(BATCH)
-	@${ECHO} "*** The configuration stage of this package requires user interaction"
-	@${ECHO} "*** Please configure manually with \"cd ${PKGDIR} && ${MAKE} configure\""
+	@${ERROR_MSG} "The configuration stage of this package requires user interaction"
+	@${ERROR_MSG} "Please configure manually with \"cd ${PKGDIR} && ${MAKE} configure\""
 	@${TOUCH} ${_INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
@@ -1599,8 +1599,8 @@ PKG_ERROR_MSG.build+=							\
 .endif
 ${_BUILD_COOKIE}:
 .if !empty(INTERACTIVE_STAGE:Mbuild) && defined(BATCH)
-	@${ECHO} "*** The build stage of this package requires user interaction"
-	@${ECHO} "*** Please build manually with \"cd ${PKGDIR} && ${MAKE} build\""
+	@${ERROR_MSG} "The build stage of this package requires user interaction"
+	@${ERROR_MSG} "Please build manually with \"cd ${PKGDIR} && ${MAKE} build\""
 	@${TOUCH} ${_INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
@@ -1613,15 +1613,15 @@ ${_TEST_COOKIE}:
 .PHONY: tools-message wrapper-message
 .PHONY: configure-message build-message test-message
 tools-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Overriding tools for ${PKGNAME}"
+	@${PHASE_MSG} "Overriding tools for ${PKGNAME}"
 wrapper-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Creating toolchain wrappers for ${PKGNAME}"
+	@${PHASE_MSG} "Creating toolchain wrappers for ${PKGNAME}"
 configure-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Configuring for ${PKGNAME}"
+	@${PHASE_MSG} "Configuring for ${PKGNAME}"
 build-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Building for ${PKGNAME}"
+	@${PHASE_MSG} "Building for ${PKGNAME}"
 test-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Testing for ${PKGNAME}"
+	@${PHASE_MSG} "Testing for ${PKGNAME}"
 
 .PHONY: tools-cookie wrapper-cookie
 .PHONY: configure-cookie build-cookie test-cookie
@@ -1672,12 +1672,12 @@ su-target: .USE
 	else								\
 		case ${PRE_ROOT_CMD:Q}"" in				\
 		${TRUE:Q}"")	;;					\
-		*) ${ECHO} "*** WARNING *** Running: "${PRE_ROOT_CMD:Q} ;; \
+		*) ${WARNING_MSG} "Running: "${PRE_ROOT_CMD:Q} ;;	\
 		esac;							\
 		${PRE_ROOT_CMD};					\
-		${ECHO_MSG} "${_PKGSRC_IN}> Becoming \`\`${ROOT_USER}'' to make su-${.TARGET} (`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'`)"; \
+		${PHASE_MSG} "Becoming \`\`${ROOT_USER}'' to make su-${.TARGET} (`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'`)"; \
 		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH='$${PATH}:${SU_CMD_PATH_APPEND}' ${MAKE} ${MAKEFLAGS} PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL} su-${.TARGET} ${MAKEFLAGS.su-${.TARGET}}"; \
-		${ECHO_MSG} "${_PKGSRC_IN}> Dropping \`\`${ROOT_USER}'' privileges."; \
+		${PHASE_MSG} "Dropping \`\`${ROOT_USER}'' privileges."; \
 	fi
 
 # Empty pre-* and post-* targets
@@ -1726,7 +1726,7 @@ pre-distclean:
 .PHONY: distclean
 .if !target(distclean)
 distclean: pre-distclean clean
-	${_PKG_SILENT}${ECHO_MSG} "${_PKGSRC_IN}> Dist cleaning for ${PKGNAME}"
+	@${PHASE_MSG} "Dist cleaning for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}if [ -d ${_DISTDIR} ]; then		\
 		cd ${_DISTDIR} &&					\
 		${TEST} -z "${DISTFILES}" || ${RM} -f ${DISTFILES};	\
@@ -2013,10 +2013,9 @@ _SHORT_UNAME_R=	${:!${UNAME} -r!:C@\.([0-9]*)[_.].*@.\1@} # n.n[_.]anything => n
 su-bin-install:
 	@found="`${PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`";	\
 	if [ "$$found" != "" ]; then					\
-		${ECHO_MSG} "${_PKGSRC_IN}> $$found is already installed - perhaps an older version?"; \
-		${ECHO_MSG} "*** If so, you may wish to \`\`pkg_delete $$found'' and install"; \
-		${ECHO_MSG} "*** this package again by \`\`${MAKE} bin-install'' to upgrade it properly."; \
-		${SHCOMMENT} ${ECHO_MSG} "*** or use \`\`${MAKE} bin-update'' to upgrade it and all of its dependencies."; \
+		${ERROR_MSG} "$$found is already installed - perhaps an older version?"; \
+		${ERROR_MSG} "If so, you may wish to \`\`pkg_delete $$found'' and install"; \
+		${ERROR_MSG} "this package again by \`\`${MAKE} bin-install'' to upgrade it properly."; \
 		exit 1;							\
 	fi
 	@rel=${_SHORT_UNAME_R:Q} ; \
@@ -2036,7 +2035,7 @@ su-bin-install:
 
 .PHONY: bin-install
 bin-install: su-target
-	@${ECHO_MSG} "${_PKGSRC_IN}> Binary install for "${PKGNAME_REQD:U${PKGNAME}:Q}
+	@${PHASE_MSG} "Binary install for "${PKGNAME_REQD:U${PKGNAME}:Q}
 
 
 ################################################################
@@ -2445,7 +2444,7 @@ tags:
 PKG_ERROR_HANDLER.${_class_}?=	{					\
 		ec=$$?;							\
 		for str in ${PKG_ERROR_MSG.${_class_}}; do		\
-			${ECHO} "${_PKGSRC_IN}> $$str";			\
+			${PHASE_MSG} "$$str";				\
 		done;							\
 		exit $$ec;						\
 	}

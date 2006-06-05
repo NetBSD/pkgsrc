@@ -1,4 +1,4 @@
-# $NetBSD: views.mk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: views.mk,v 1.2 2006/06/05 22:49:44 jlam Exp $
 
 # By default, all packages attempt to link into the views.
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
@@ -33,7 +33,7 @@ privileged-install-hook: build-views
 ###
 .PHONY: build-views su-build-views
 build-views: su-target
-	@${ECHO_MSG} "${_PKGSRC_IN}> Building views for ${PKGNAME}"
+	@${PHASE_MSG} "Building views for ${PKGNAME}"
 
 su-build-views:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -76,7 +76,7 @@ su-build-views:
 ###
 .PHONY: remove-views su-remove-views
 remove-views: su-target
-	@${ECHO_MSG} "${_PKGSRC_IN}> Removing ${PKGNAME} from views"
+	@${PHASE_MSG} "Removing ${PKGNAME} from views"
 
 su-remove-views:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
