@@ -1,4 +1,4 @@
-# $NetBSD: bsd.depends.mk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: bsd.depends.mk,v 1.2 2006/06/05 17:21:55 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to dependencies.
@@ -9,6 +9,25 @@
 #
 
 _DEPENDS_COOKIE=	${WRKDIR}/.depends_done
+
+# DEPENDS_TARGET is the target that is invoked to satisfy missing
+# dependencies.  This variable is user-settable in /etc/mk.conf.
+#
+.if !defined(DEPENDS_TARGET)
+.  if make(package)
+DEPENDS_TARGET=		package
+.  elif make(update)
+.    if defined(UPDATE_TARGET) && (${UPDATE_TARGET} == "replace")
+DEPENDS_TARGET=		${UPDATE_TARGET}
+.    else
+DEPENDS_TARGET=		update
+.    endif
+.  elif make(bin-install) || make(real-su-bin-install)
+DEPENDS_TARGET=		bin-install
+.  else
+DEPENDS_TARGET=		reinstall
+.  endif
+.endif
 
 ######################################################################
 ### depends (PUBLIC)
