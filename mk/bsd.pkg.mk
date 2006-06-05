@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1836 2006/06/05 02:22:49 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1837 2006/06/05 17:21:54 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -760,36 +760,6 @@ BUILD_DEFS+=	OSVERSION_SPECIFIC
 .if !target(all)
 all: ${_PKGSRC_BUILD_TARGETS}
 .endif
-
-.if !defined(DEPENDS_TARGET)
-.  if make(package)
-DEPENDS_TARGET=	package
-.  elif make(update)
-.    if defined(UPDATE_TARGET) && ${UPDATE_TARGET} == "replace"
-DEPENDS_TARGET=	${UPDATE_TARGET}
-.    else
-DEPENDS_TARGET=	update
-.    endif
-.  elif make(bin-install) || make(real-su-bin-install)
-DEPENDS_TARGET=	bin-install
-.  else
-DEPENDS_TARGET=	reinstall
-.  endif
-.endif
-
-.if !defined(UPDATE_TARGET)
-.  if ${DEPENDS_TARGET} == "update"
-.    if make(package)
-UPDATE_TARGET=	package
-.    else
-UPDATE_TARGET=	install
-.    endif
-.  else
-UPDATE_TARGET=	${DEPENDS_TARGET}
-.  endif
-.endif
-
-UPDATE_RUNNING?=	NO
 
 ################################################################
 # The following are used to create easy dummy targets for
