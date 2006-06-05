@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.103 2006/06/03 07:10:25 rillig Exp $
+# $NetBSD: makevars.map,v 1.104 2006/06/05 22:24:12 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -281,7 +281,7 @@ GNU_CONFIGURE_MANDIR	Pathname [m:s,c:s]
 GNU_CONFIGURE_PREFIX	Pathname [m:s]
 HAS_CONFIGURE		Yes [m:s,c:s]
 HEADER_TEMPLATE		List of Pathname
-HOMEPAGE		URL [m:s,c:ds]
+HOMEPAGE		URL [$simple]
 INCOMPAT_CURSES		List of PlatformTriple [m:as]
 INCOMPAT_ICONV		List of PlatformTriple
 INFO_DIR		Pathname
@@ -409,7 +409,7 @@ PATCHFILES		List of Filename [$list]
 PATCH_ARGS		List of ShellWord
 PATCH_DIST_ARGS		List of ShellWord [m:as]
 PATCH_DIST_CAT		ShellCommand
-PATCH_DIST_STRIP*	ShellWord [o:s,c:a,m:as]
+PATCH_DIST_STRIP*	ShellWord [m:s, c:s, b:, builtin.mk:, *.mk:s]
 PATCH_SITES		List of URL [m:s,o:s,c:s]
 PATCH_STRIP		ShellWord
 PERL5_PACKLIST		List of Perl5Packlist [m:s,o:sa]
