@@ -1,4 +1,4 @@
-# $NetBSD: bsd.package.mk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: bsd.package.mk,v 1.2 2006/06/05 17:41:11 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to binary packages.
@@ -17,11 +17,13 @@ _PACKAGE_COOKIE=	${WRKDIR}/.package_done
 ###
 .if defined(NO_PACKAGE)
 .PHONY: package
+.  if !target(package)
 package: install
-.  if defined(SKIP_SILENT)
+.    if defined(SKIP_SILENT)
 	@${DO_NADA}
-.  else
+.    else
 	@${ECHO_MSG} "${_PKGSRC_IN}> ${PKGNAME} may not be packaged: "${NO_PACKAGE:Q}"."
+.    endif
 .  endif
 .else
 .  include "${PKGSRCDIR}/mk/package/package.mk"
@@ -33,7 +35,9 @@ package: install
 ### repackage is a special target to re-run the package target.
 ###
 .PHONY: repackage
+.if !target(repackage)
 repackage: package-clean package
+.endif
 
 ######################################################################
 ### package-clean (PRIVATE)
