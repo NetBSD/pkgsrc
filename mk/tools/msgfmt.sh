@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.20 2006/06/04 23:18:38 jlam Exp $
+# $NetBSD: msgfmt.sh,v 1.21 2006/06/05 13:36:14 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -213,9 +213,7 @@ BEGIN {
 			while ((t > 1) && (translation[t-1] ~ /^""$/)) t--
 			if ((singular[s-1] ~ /\\n"$/) &&
 			    (translation[t-1] !~ /\\n"$/)) {
-				if (translation[t-1] ~ /""/)
-					translation[t-1] = "\" \\n\""
-				else
+				if (translation[t-1] !~ /""/)
 					sub("\"$", "\\n\"", translation[t-1])
 			}
 			if (t > 0) {
@@ -254,9 +252,7 @@ BEGIN {
 			while ((t > 1) && (translation[t-1] ~ /^""$/)) t--
 			if ((singular[s-1] ~ /\\n"$/) &&
 			    (translation[t-1] !~ /\\n"$/)) {
-				if (translation[t-1] ~ /""/)
-					translation[t-1] = "\" \\n\""
-				else
+				if (translation[t-1] !~ /""/)
 					sub("\"$", "\\n\"", translation[t-1])
 			}
 			if (t > 0) {
@@ -319,9 +315,7 @@ BEGIN {
 			while ((t > 1) && (translation[t-1] ~ /^""$/)) t--
 			if ((plural[p-1] ~ /\\n"$/) &&
 			    (translation[t-1] !~ /\\n"$/)) {
-				if (translation[t-1] ~ /""/)
-					translation[t-1] = "\" \\n\""
-				else
+				if (translation[t-1] !~ /""/)
 					sub("\"$", "\\n\"", translation[t-1])
 			}
 			if (t > 0) {
