@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.4 2006/06/04 04:31:47 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.5 2006/06/05 22:49:44 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -281,7 +281,7 @@ _INSTALL_USERGROUP_CHECK=						\
 
 .PHONY: create-usergroup
 create-usergroup: su-target
-	@${ECHO_MSG} "${_PKGSRC_IN}> Requiring users and groups for ${PKGNAME}"
+	@${PHASE_MSG} "Requiring users and groups for ${PKGNAME}"
 
 PRE_CMD.su-create-usergroup=						\
 	if ${_INSTALL_USERGROUP_CHECK} -g ${_PKG_GROUPS:C/\:*$//} &&	\
@@ -977,7 +977,7 @@ RCD_SCRIPT_WRK.${_script_}?=	${WRKDIR}/${_script_}
 .    if exists(${RCD_SCRIPT_SRC.${_script_}})
 generate-rcd-scripts: ${RCD_SCRIPT_WRK.${_script_}}
 ${RCD_SCRIPT_WRK.${_script_}}: ${RCD_SCRIPT_SRC.${_script_}}
-	@${ECHO_MSG} "${_PKGSRC_IN}> Creating ${.TARGET}"
+	@${STEP_MSG} "Creating ${.TARGET}"
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} |			\
 		${SED} ${FILES_SUBST_SED} > ${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}

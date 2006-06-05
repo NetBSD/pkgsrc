@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.2 2006/06/05 17:41:11 jlam Exp $
+# $NetBSD: package.mk,v 1.3 2006/06/05 22:49:44 jlam Exp $
 
 _PACKAGE_COOKIE=	${WRKDIR}/.package_done
 
@@ -36,7 +36,7 @@ real-package: package-message package-all package-cookie
 
 .PHONY: package-message
 package-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Building binary package for ${PKGNAME}"
+	@${PHASE_MSG} "Building binary package for ${PKGNAME}"
 
 ######################################################################
 ### package-cookie (PRIVATE)
@@ -97,15 +97,15 @@ package-create:
 .PHONY: package-warnings
 package-warnings:
 .if defined(NO_BIN_ON_CDROM)
-	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ${PKGNAME} may not be put on a CD-ROM:"
-	@${ECHO_MSG} "${_PKGSRC_IN}>         " ${NO_BIN_ON_CDROM:Q}
+	@${WARNING_MSG} "Warning: ${PKGNAME} may not be put on a CD-ROM:"
+	@${wARN_MSG} "        " ${NO_BIN_ON_CDROM:Q}
 .endif
 .if defined(NO_BIN_ON_FTP)
-	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ${PKGNAME} may not be made available through FTP:"
-	@${ECHO_MSG} "${_PKGSRC_IN}>         " ${NO_BIN_ON_FTP:Q}
+	@${WARNING_MSG} "Warning: ${PKGNAME} may not be made available through FTP:"
+	@${WARNING_MSG} "        " ${NO_BIN_ON_FTP:Q}
 .endif
 .if defined(ABI_DEPENDS) && !empty(USE_ABI_DEPENDS:M[Nn][Oo])
-	@${ECHO_MSG} "${_PKGSRC_IN}> Warning: ABI dependency recommendations are being ignored!"
-	@${ECHO_MSG} "${_PKGSRC_IN}>          ${PKGNAME} should not be uploaded nor"
-	@${ECHO_MSG} "${_PKGSRC_IN}>          otherwise be used as a binary package!"
+	@${WARNING_MSG} "Warning: ABI dependency recommendations are being ignored!"
+	@${WARNING_MSG} "          ${PKGNAME} should not be uploaded nor"
+	@${WARNING_MSG} "          otherwise be used as a binary package!"
 .endif

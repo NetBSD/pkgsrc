@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.update.mk,v 1.3 2006/06/05 17:21:54 jlam Exp $
+# $NetBSD: bsd.pkg.update.mk,v 1.4 2006/06/05 22:49:44 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and contains the targets
 # and variables for "make update".
@@ -39,8 +39,7 @@ RESUMEUPDATE?=	YES
 CLEAR_DIRLIST?=	NO
 
 update:
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG}				\
-		"${_PKGSRC_IN}> Resuming update for ${PKGNAME}"
+	@${PHASE_MSG} "Resuming update for ${PKGNAME}"
 .  if ${REINSTALL} != "NO" && ${UPDATE_TARGET} != "replace"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 		${MAKE} ${MAKEFLAGS} deinstall _UPDATE_RUNNING=YES DEINSTALLDEPENDS=ALL
@@ -64,7 +63,7 @@ update:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	[ ! -s ${_DDIR} ] || for dep in `${CAT} ${_DDIR}` ; do		\
 		(if cd ../.. && cd "$${dep}" ; then			\
-			${ECHO_MSG} "${_PKGSRC_IN}> Installing in $${dep}" && \
+			${PHASE_MSG} "Installing in $${dep}" &&		\
 			if [ "(" "${RESUMEUPDATE}" = "NO" -o 		\
 			     "${REINSTALL}" != "NO" ")" -a		\
 			     "${UPDATE_TARGET}" != "replace" ] ; then	\
@@ -73,7 +72,7 @@ update:
 			${MAKE} ${MAKEFLAGS} ${UPDATE_TARGET}		\
 				DEPENDS_TARGET=${DEPENDS_TARGET:Q} ;	\
 		else							\
-			${ECHO_MSG} "${_PKGSRC_IN}> Skipping removed directory $${dep}"; \
+			${PHASE_MSG} "Skipping removed directory $${dep}"; \
 		fi) ;							\
 	done
 .if ${NOCLEAN} == "NO"
@@ -91,7 +90,7 @@ clean-update:
 			(if cd ../.. && cd "$${dep}" ; then		\
 				${MAKE} ${MAKEFLAGS} clean ;		\
 			else						\
-				${ECHO_MSG} "${_PKGSRC_IN}> Skipping removed directory $${dep}";\
+				${PHASE_MSG} "Skipping removed directory $${dep}";\
 			fi) ;						\
 		done ;							\
 	fi
@@ -101,10 +100,9 @@ clean-update:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 		${MAKE} ${MAKEFLAGS} clean update-dirlist		\
 		DIRLIST="`${CAT} ${_DDIR}`" PKGLIST="`${CAT} ${_DLIST}`"
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO_MSG}				\
-		"${_PKGSRC_IN}> Warning: preserved leftover directory list.  Your next";\
-		${ECHO_MSG} "${_PKGSRC_IN}>          \`\`${MAKE} update'' may fail.  It is advised to use";\
-		${ECHO_MSG} "${_PKGSRC_IN}>          \`\`${MAKE} update REINSTALL=YES'' instead!"
+	@${WARNING_MSG} "Warning: preserved leftover directory list.  Your next"
+	@${WARNING_MSG} "         \`\`${MAKE} update'' may fail.  It is advised to use"
+	@${WARNING_MSG} "         \`\`${MAKE} update REINSTALL=YES'' instead!"
 .endif
 
 .endif	# !target(update)

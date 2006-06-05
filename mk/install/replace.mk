@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.3 2006/06/05 17:41:11 jlam Exp $
+# $NetBSD: replace.mk,v 1.4 2006/06/05 22:49:44 jlam Exp $
 
 ######################################################################
 ### replace (PUBLIC)
@@ -16,7 +16,7 @@ replace: ${_REPLACE_TARGETS} su-target
 .endif
 
 replace-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Replacing for ${PKGNAME}"
+	@${PHASE_MSG} "Replacing for ${PKGNAME}"
         @${WARNING_MSG} "experimental target - DATA LOSS MAY OCCUR."
 
 su-replace: replace-pkg
@@ -34,7 +34,7 @@ undo-replace: undo-replace-message su-target
 .endif
 
 undo-replace-message:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Undoing replacement for ${PKGNAME}"
+	@${PHASE_MSG} "Undoing replacement for ${PKGNAME}"
         @${WARNING_MSG} "experimental target - DATA LOSS MAY OCCUR."
 
 su-undo-replace: undo-replace-pkg

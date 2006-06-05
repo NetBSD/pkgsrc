@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: replace.mk,v 1.2 2006/06/05 22:49:44 jlam Exp $
 
 ######################################################################
 ### replace-pkg (PRIVATE, pkgsrc/mk/install/replace.mk)
@@ -74,7 +74,7 @@ replace-tarup:
 ###
 .PHONY: undo-replace-install
 undo-replace-install:
-	@${ECHO_MSG} "${_PKGSRC_IN}> Re-adding ${PKGNAME} from saved tar-up package."
+	@${PHASE_MSG} "Re-adding ${PKGNAME} from saved tar-up package."
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TEST} -f ${_REPLACE_NEWNAME_FILE} || exit 0;			\
 	newname=`${CAT} ${_REPLACE_NEWNAME_FILE}`;			\

@@ -1,11 +1,13 @@
-# $NetBSD: check-vulnerable.mk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: check-vulnerable.mk,v 1.2 2006/06/05 22:49:44 jlam Exp $
 
 ###########################################################################
-# check-vulnerable checks for vulnerabilities in the package.  This should
-# be overridden per package system flavor.
+### check-vulnerable (PRIVATE, override)
+###########################################################################
+### check-vulnerable checks for vulnerabilities in the package.  This
+### should be overridden per package system flavor.
 #
 .PHONY: check-vulnerable
 .if !target(check-vulnerable)
 check-vulnerable:
-	@${ECHO_MSG} "${_PKGSRC_IN} *** Skipping vulnerability checks."
+	@${PHASE_MSG} "Skipping vulnerability checks."
 .endif
