@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.601 2006/06/03 07:27:25 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.602 2006/06/05 22:34:40 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -269,9 +269,7 @@ sub log_info($$$) {
 }
 sub log_debug($$$) {
 	my ($fname, $lineno, $msg) = @_;
-	if ($verbosity >= 2) {
-		log_message(LL_DEBUG, $fname, $lineno, $msg);
-	}
+	log_message(LL_DEBUG, $fname, $lineno, $msg);
 }
 
 sub explain($$@) {
@@ -572,9 +570,7 @@ sub log_info($$) {
 }
 sub log_debug($$) {
 	my ($self, $text) = @_;
-	if (PkgLint::Logging::get_verbosity() >= 2) {
-		$self->show_source(*STDOUT);
-	}
+	$self->show_source(*STDOUT);
 	PkgLint::Logging::log_debug($self->fname, $self->[LINES], $text);
 }
 sub explain_error($@) {
@@ -1401,6 +1397,25 @@ my (%checks) = (
 	"PLIST"		=> [\$opt_check_PLIST, "check PLIST files"],
 );
 
+my $opt_debug_include	= false;
+my $opt_debug_misc	= false;
+my $opt_debug_patches	= false;
+my $opt_debug_quoting	= false;
+my $opt_debug_shell	= false;
+my $opt_debug_tools	= false;
+my $opt_debug_vartypes	= false;
+my $opt_debug_varuse	= false;
+my (%debug) = (
+	"include"	=> [\$opt_debug_include, "included files"],
+	"misc"		=> [\$opt_debug_misc, "all things that didn't fit elsewhere"],
+	"patches"	=> [\$opt_debug_patches, "the states of the patch parser"],
+	"quoting"	=> [\$opt_debug_quoting, "additional information about quoting"],
+	"shell"		=> [\$opt_debug_shell, "the parsers for shell words and shell commands"],
+	"tools"		=> [\$opt_debug_tools, "the tools framework"],
+	"vartypes"	=> [\$opt_debug_vartypes, "additional type information"],
+	"varuse"	=> [\$opt_debug_varuse, "used and unused variables"],
+);
+
 my $opt_warn_absname	= true;
 my $opt_warn_directcmd	= true;
 my $opt_warn_extra	= false;
@@ -1443,6 +1458,12 @@ my (@options) = (
 	  sub {
 		my ($opt, $val) = @_;
 		parse_multioption($val, \%checks);
+	  } ],
+	[ "-D{debug,...}", "Enable or disable debugging categories",
+	  "debugging|D=s",
+	  sub ($$) {
+		my ($opt, $val) = @_;
+		parse_multioption($val, \%debug);
 	  } ],
 	[ "-F|--autofix", "Try to automatically fix some errors (experimental)",
 	  "autofix|F", \$opt_autofix ],
@@ -1601,31 +1622,29 @@ sub help($$$) {
 		exit($exitval);
 	}
 
-	my (@checks_table) = (
-		["  ", "all", "", "enable all checks"],
-		["  ", "none", "", "disable all checks"],
-	);
-	foreach my $check (sort keys %checks) {
-		push(@checks_table, [ "  ", $check,
-			(${$checks{$check}->[0]} ? "(enabled)" : "(disabled)"),
-			$checks{$check}->[1]]);
-	}
-	print $out ("checks: (use \"check\" to enable, \"no-check\" to disable)\n");
-	PkgLint::Util::print_table($out, \@checks_table);
-	print $out ("\n");
+	my $categories = [
+		# options, leading text, 
+		[ \%checks, "checks", "check" ],
+		[ \%debug, "debugging options", "debug" ],
+		[ \%warnings, "warnings", "warning" ],
+	];
+	foreach my $category (@{$categories}) {
+		my ($options, $leading, $name) = (@{$category});
+		my $table = [
+			["  ", "all", "", "enable all ".$category->[1]],
+			["  ", "none", "", "disable all ".$category->[1]],
+		];
 
-	my (@warnings_table) = (
-		["  ", "all", "", "enable all warnings"],
-		["  ", "none", "", "disable all warnings"],
-	);
-	foreach my $warning (sort keys %warnings) {
-		push(@warnings_table, [ "  ", $warning,
-			(${$warnings{$warning}->[0]} ? "(enabled)" : "(disabled)"),
-			$warnings{$warning}->[1]]);
+		foreach my $opt (sort keys %{$options}) {
+			push(@{$table}, [ "  ", $opt,
+				(${$options->{$opt}->[0]} ? "(enabled)" : "(disabled)"),
+				$options->{$opt}->[1]]);
+		}
+
+		print $out ("${leading}: (use \"${name}\" to enable, \"no-${name}\" to disable)\n");
+		PkgLint::Util::print_table($out, $table);
+		print $out ("\n");
 	}
-	print $out ("warnings: (use \"warn\" to enable, \"no-warn\" to disable)\n");
-	PkgLint::Util::print_table($out, \@warnings_table);
-	print $out ("\n");
 
 	exit($exitval);
 }
@@ -2103,7 +2122,7 @@ sub load_tool_names() {
 				my ($varname, undef, $value, undef) = ($1, $2, $3, $4);
 
 				if ($varname eq "USE_TOOLS") {
-					$line->log_debug("[cond_depth=${cond_depth}] $value");
+					$opt_debug_tools and $line->log_debug("[cond_depth=${cond_depth}] $value");
 					if ($cond_depth == 0) {
 						foreach my $tool (split(qr"\s+", $value)) {
 							if ($tool !~ regex_unresolved && exists($vartools->{$tool})) {
@@ -2125,10 +2144,10 @@ sub load_tool_names() {
 		}
 	}
 
-	log_debug(NO_FILE, NO_LINE_NUMBER, "Known tools: ".join(" ", sort(keys(%{$tools}))));
-	log_debug(NO_FILE, NO_LINE_NUMBER, "Known vartools: ".join(" ", sort(keys(%{$vartools}))));
-	log_debug(NO_FILE, NO_LINE_NUMBER, "Predefined vartools: " . join(" ", sort(keys(%{$predefined_vartools}))));
-	log_debug(NO_FILE, NO_LINE_NUMBER, "Known varnames: " . join(" ", sort(keys(%{$varname_to_toolname}))));
+	$opt_debug_tools and log_debug(NO_FILE, NO_LINE_NUMBER, "Known tools: ".join(" ", sort(keys(%{$tools}))));
+	$opt_debug_tools and log_debug(NO_FILE, NO_LINE_NUMBER, "Known vartools: ".join(" ", sort(keys(%{$vartools}))));
+	$opt_debug_tools and log_debug(NO_FILE, NO_LINE_NUMBER, "Predefined vartools: " . join(" ", sort(keys(%{$predefined_vartools}))));
+	$opt_debug_tools and log_debug(NO_FILE, NO_LINE_NUMBER, "Known varnames: " . join(" ", sort(keys(%{$varname_to_toolname}))));
 
 	$load_tool_names_tools = $tools;
 	$load_tool_names_vartools = $vartools;
@@ -2441,7 +2460,7 @@ sub determine_used_variables($) {
 			my ($varname) = ($1);
 			$varuse->{$varname} = $line;
 			$varuse->{varname_canon($varname)} = $line;
-			$line->log_debug("Variable ${varname} is used.");
+			$opt_debug_varuse and $line->log_debug("Variable ${varname} is used.");
 		}
 	}
 }
@@ -2634,14 +2653,8 @@ sub variable_needs_quoting($$$) {
 		return doesnt_matter;
 	}
 
-	$opt_debug and $line->log_debug("[variable_needs_quoting] varname $varname context " . $context->to_string() . " type " . $type->to_string());
-	$opt_debug and $line->log_debug(sprintf("[%s] want_list=%d have_list=%d", "variable_needs_quoting", $want_list, $have_list));
-	backtrace();
-
-	# Assigning lists to lists does not need additional quoting.
-	if ($want_list && $have_list && ($context->extent == VUC_EXTENT_WORD || $context->extent == VUC_EXTENT_FULL)) {
-		return false;
-	}
+	$opt_debug_quoting and $line->log_debug("[variable_needs_quoting] varname $varname context " . $context->to_string() . " type " . $type->to_string());
+	$opt_debug_quoting and $line->log_debug(sprintf("[%s] want_list=%d have_list=%d", "variable_needs_quoting", $want_list, $have_list));
 
 	# Appending elements to a list requires quoting, as well as
 	# assigning a list value to a non-list variable.
@@ -2715,7 +2728,7 @@ sub readmakefile($$$$) {
 				&& (!defined($1) || $1 ne "../mk")
 				&& $2 ne "buildlink3.mk"
 				&& $2 ne "options.mk")) {
-				$line->log_debug("including ${includefile} sets seen_Makefile_common.");
+				$opt_debug_include and $line->log_debug("including ${includefile} sets seen_Makefile_common.");
 				$seen_Makefile_common = true;
 			}
 			if ($includefile =~ qr"/mk/") {
@@ -2740,7 +2753,7 @@ sub readmakefile($$$$) {
 			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
 
 			if ($op ne "?=" || !exists($makevar->{$varname})) {
-				$opt_debug and $line->log_debug("varassign(${varname}, ${op}, ${value})");
+				$opt_debug_misc and $line->log_debug("varassign(${varname}, ${op}, ${value})");
 				$makevar->{$varname} = $line;
 			}
 			$contents .= $text . "\n";
@@ -2960,7 +2973,7 @@ sub checkline_cpp_macro_names($$) {
 		my ($macro) = ($1);
 
 		if (exists(good_macros->{$macro})) {
-			$line->log_debug("Found good macro \"${macro}\".");
+			$opt_debug_misc and $line->log_debug("Found good macro \"${macro}\".");
 		} elsif (exists(bad_macros->{$macro})) {
 			$line->log_warning("The macro \"${macro}\" is not portable enough. Please use \"".bad_macros->{$macro}."\" instead.");
 			$line->explain_warning("See the pkgsrc guide, section \"CPP defines\" for details.");
@@ -3126,7 +3139,7 @@ sub checkline_mk_shellword($$$) {
 	$state = SWST_PLAIN;
 	while ($rest ne "") {
 
-		$opt_debug and $line->log_debug("[checkline_mk_shellword] " . statename->[$state] . " ${rest}");
+		$opt_debug_shell and $line->log_debug("[checkline_mk_shellword] " . statename->[$state] . " ${rest}");
 
 		# make variables have the same syntax, no matter in which
 		# state we are currently.
@@ -3207,7 +3220,7 @@ sub checkline_mk_shellword($$$) {
 			} elsif ($rest =~ s/^\$\$\{([0-9A-Za-z_]+)\}//
 			    || $rest =~ s/^\$\$([0-9A-Z_a-z]+|[\$!#?\@])//) {
 				my ($shvarname) = ($1);
-				$line->log_debug("[checkline_mk_shellword] Found double-quoted variable ${shvarname}.");
+				$opt_debug_shell and $line->log_debug("[checkline_mk_shellword] Found double-quoted variable ${shvarname}.");
 			} elsif ($rest =~ s/^\$\$//) {
 				$line->log_warning("Unquoted \$ or strange shell variable found.");
 			} elsif ($rest =~ s/^\\([\(\)*\-.0-9n])//) {
@@ -3353,7 +3366,7 @@ sub checkline_mk_shelltext($$) {
 	while ($rest =~ s/^$regex_shellword//) {
 		my ($shellword) = ($1);
 
-		$line->log_debug("[" . scst_statename->[$state] . "] shellword=${shellword}");
+		$opt_debug_shell and $line->log_debug("[" . scst_statename->[$state] . "] shellword=${shellword}");
 
 		checkline_mk_shellword($line, $shellword, !(
 		       $state == SCST_CASE
@@ -3646,7 +3659,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 			$line->log_warning("Unknown compiler flag \"${value}\".");
 
 		} elsif ($value =~ regex_unresolved) {
-			$line->log_debug("Unresolved CFLAG: ${value}\n");
+			$opt_debug_misc and $line->log_debug("Unresolved CFLAG: ${value}\n");
 
 		} else {
 			$line->log_warning("Compiler flag \"${value}\" does not start with a dash.");
@@ -3776,7 +3789,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 			$line->log_warning("Unknown linker flag \"${value}\".");
 
 		} elsif ($value =~ regex_unresolved) {
-			$line->log_debug("Unresolved LDFLAG: ${value}\n");
+			$opt_debug_misc and $line->log_debug("Unresolved LDFLAG: ${value}\n");
 
 		} else {
 			$line->log_warning("Linker flag \"${value}\" does not start with a dash.");
@@ -3808,8 +3821,8 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 			if ($domain =~ qr"^NetBSD.org"i && $domain ne "NetBSD.org") {
 				$line->log_warning("Please write NetBSD.org instead of ${domain}.");
 			}
-			if ($domain =~ qr"^NetBSD.org"i && $localpart eq "tech-pkg") {
-				$line->log_warning("Unmaintained packages should have pkgsrc-users\@NetBSD.org as maintainer.");
+			if ("${localpart}\@${domain}" =~ qr"^(tech-pkg|packages)\@NetBSD\.org$"i) {
+				$line->log_warning("${localpart}\@${domain} is deprecated. Use pkgsrc-users\@NetBSD.org instead.");
 			}
 
 		} else {
@@ -4302,7 +4315,7 @@ sub checkline_mk_varassign($$$$$) {
 	my $vuc = PkgLint::VarUseContext->new(
 		op_to_use_time->{$op},
 		get_variable_type($line, $varname),
-		VUC_SHELLWORD_UNKNOWN,
+		VUC_SHELLWORD_UNKNOWN,		# XXX: maybe PLAIN?
 		VUC_EXTENT_UNKNOWN
 	);
 	foreach my $used_var (@{$used_vars}) {
@@ -4404,7 +4417,7 @@ sub checklines_package_Makefile_varorder($) {
 		my $line = $lines->[$lineno];
 		my $text = $line->text;
 
-		$line->log_debug("[varorder] section ${sectindex} variable ${varindex}.");
+		$opt_debug_misc and $line->log_debug("[varorder] section ${sectindex} variable ${varindex}.");
 
 		if ($next_section) {
 			$next_section = false;
@@ -4515,7 +4528,7 @@ sub checklines_mk($) {
 		} elsif ($text =~ regex_mk_include) {
 			my ($includefile) = ($1);
 
-			$line->log_debug("includefile=${includefile}");
+			$opt_debug_include and $line->log_debug("includefile=${includefile}");
 			checkline_relative_path($line, $includefile);
 
 			if ($includefile =~ qr"../Makefile$") {
@@ -4618,7 +4631,7 @@ sub checklines_mk($) {
 		} elsif ($text =~ regex_mk_dependency) {
 			my ($targets, $dependencies) = ($1, $2);
 
-			$line->log_debug("targets=${targets}, dependencies=${dependencies}");
+			$opt_debug_misc and $line->log_debug("targets=${targets}, dependencies=${dependencies}");
 			$mkctx_target = $targets;
 
 			foreach my $target (split(/\s+/, $targets)) {
@@ -4723,7 +4736,7 @@ sub checkfile_buildlink3_mk($) {
 	}
 	if (($m = expect($lines, \$lineno, qr"^(.*)_BUILDLINK3_MK:=\t+\$\{\1_BUILDLINK3_MK\}\+$"))) {
 		$bl_PKGBASE = $m->text(1);
-		$lines->[$lineno - 1]->log_debug("bl_PKGBASE=${bl_PKGBASE}");
+		$opt_debug_misc and $lines->[$lineno - 1]->log_debug("bl_PKGBASE=${bl_PKGBASE}");
 	} else {
 		$lines->[$lineno]->log_warning("Expected reference counter incrementing line.");
 		return;
@@ -4738,7 +4751,7 @@ sub checkfile_buildlink3_mk($) {
 	}
 	if (($m = expect($lines, \$lineno, qr"^BUILDLINK_DEPENDS\+=\t+(\S+)$"))) {
 		$bl_pkgbase = $m->text(1);
-		$lines->[$lineno - 1]->log_debug("bl_pkgbase=${bl_pkgbase}");
+		$opt_debug_misc and $lines->[$lineno - 1]->log_debug("bl_pkgbase=${bl_pkgbase}");
 	} else {
 		$lines->[$lineno]->log_warning("BUILDLINK_DEPENDS line expected.");
 		return;
@@ -5119,7 +5132,7 @@ sub checkfile_package_Makefile($$$) {
 		: (defined($distname) && $distname !~ regex_unresolved && $distname =~ regex_pkgname) ? ($distname, $distname_line, $1, $2)
 		: (undef, undef, undef, undef);
 	if (defined($effective_pkgname_line)) {
-		$effective_pkgname_line->log_debug("Effective name=${effective_pkgname} base=${effective_pkgbase} version=${effective_pkgversion}.");
+		$opt_debug_misc and $effective_pkgname_line->log_debug("Effective name=${effective_pkgname} base=${effective_pkgbase} version=${effective_pkgversion}.");
 	}
 
 	if (!exists($makevar->{"COMMENT"})) {
@@ -5457,7 +5470,7 @@ sub checkfile_patch($) {
 		$line = $s->line;
 		my $text = $line->text;
 
-		$opt_debug and $line->log_debug("[${state} ${patched_files}/".($hunks||0)."/-".($dellines||0)."+".($addlines||0)."] $text");
+		$opt_debug_patches and $line->log_debug("[${state} ${patched_files}/".($hunks||0)."/-".($dellines||0)."+".($addlines||0)."] $text");
 
 		my $found = false;
 		foreach my $t (@{$transitions}) {
@@ -5465,7 +5478,7 @@ sub checkfile_patch($) {
 				if (!defined($t->[1])) {
 					$m = undef;
 				} elsif ($text =~ $t->[1]) {
-					$opt_debug and $line->log_debug($t->[1]);
+					$opt_debug_patches and $line->log_debug($t->[1]);
 					$m = PkgLint::SimpleMatch->new($text, \@-, \@+);
 				} else {
 					next;
@@ -5494,7 +5507,7 @@ sub checkfile_patch($) {
 	}
 
 	while ($state != PST_TEXT) {
-		$opt_debug and log_debug($fname, "EOF", "[${state} ${patched_files}/".($hunks||0)."/-".($dellines||0)."+".($addlines||0)."]");
+		$opt_debug_patches and log_debug($fname, "EOF", "[${state} ${patched_files}/".($hunks||0)."/-".($dellines||0)."+".($addlines||0)."]");
 
 		my $found = false;
 		foreach my $t (@{$transitions}) {
