@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/04/17 22:57:00 minskim Exp $
+$NetBSD: distinfo,v 1.5 2006/06/05 16:39:38 tv Exp $
 
-SHA1 (Geo-IP-1.25.tar.gz) = 877c76b75d0707490d879c8d54bb18128b80aaf2
-RMD160 (Geo-IP-1.25.tar.gz) = 00e8396d42fefb56100d727baaed948a1ad826ce
-Size (Geo-IP-1.25.tar.gz) = 12725 bytes
+SHA1 (Geo-IP-1.27.tar.gz) = 565b5418cb8caac22541673cdbe4ca5d428afe25
+RMD160 (Geo-IP-1.27.tar.gz) = 9e242390368fff92b091baae001cdb70ae563844
+Size (Geo-IP-1.27.tar.gz) = 13386 bytes
