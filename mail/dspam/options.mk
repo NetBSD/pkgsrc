@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2006/05/06 08:36:10 xtraeme Exp $
+# $NetBSD: options.mk,v 1.16 2006/06/05 15:49:05 xtraeme Exp $
 
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
@@ -7,7 +7,7 @@ DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dspam
 PKG_SUPPORTED_OPTIONS=	largescale homedir long-usernames graphs \
 			domainscale virtualusers preferences-extension \
-			neural clamav ldap syslog debug verbose-debug
+			clamav ldap syslog debug verbose-debug
 
 .include "../../mk/bsd.options.mk"
 
@@ -166,17 +166,6 @@ CONFIGURE_ARGS+=	--enable-long-usernames
 ###
 .if !empty(PKG_OPTIONS:Mdomainscale)
 CONFIGURE_ARGS+=	--enable-domain-scale
-.endif
-
-###
-### EXPERIMENTAL:
-### Support for neural networking, please take a look at the docs.
-###
-.if !empty(DSPAM_STORAGE_DRIVER:Mmysql) || !empty(DSPAM_STORAGE_DRIVER:Mpgsql)
-PKG_SUPPORTED_OPTIONS+=	neural
-.  if !empty(PKG_OPTIONS:Mneural)
-CONFIGURE_ARGS+=	--enable-neural-networking
-.  endif
 .endif
 
 ###
