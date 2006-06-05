@@ -1,4 +1,4 @@
-# $NetBSD: bsd.depends.mk,v 1.2 2006/06/05 17:21:55 jlam Exp $
+# $NetBSD: bsd.depends.mk,v 1.3 2006/06/05 17:41:11 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to dependencies.
@@ -37,7 +37,9 @@ DEPENDS_TARGET=		reinstall
 ###
 .PHONY: depends
 .if defined(NO_DEPENDS)
+.  if !target(depends)
 depends: depends-cookie
+.  endif
 .else
 .  include "${PKGSRCDIR}/mk/depends/depends.mk"
 .endif
