@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: install.mk,v 1.2 2006/06/05 17:41:11 jlam Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -12,7 +12,9 @@ _INSTALL_TARGETS+=	${_INSTALL_COOKIE}
 _INSTALL_TARGETS+=	release-install-lock
 
 .PHONY: install
+.if !target(install)
 install: ${_INSTALL_TARGETS}
+.endif
 
 .PHONY: acquire-install-lock release-install-lock
 acquire-install-lock: acquire-lock

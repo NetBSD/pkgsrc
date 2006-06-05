@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.2 2006/06/05 17:21:55 jlam Exp $
+# $NetBSD: replace.mk,v 1.3 2006/06/05 17:41:11 jlam Exp $
 
 ######################################################################
 ### replace (PUBLIC)
@@ -11,7 +11,9 @@ _REPLACE_TARGETS+=	replace-message
 _REPLACE_TARGETS+=	unprivileged-install-hook
 
 .PHONY: replace su-replace
+.if !target(replace)
 replace: ${_REPLACE_TARGETS} su-target
+.endif
 
 replace-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Replacing for ${PKGNAME}"
@@ -27,7 +29,9 @@ MAKEFLAGS.su-replace=	_UPDATE_RUNNING=yes
 ### "replace" target.  It will acquire elevated privileges just-in-time.
 ###
 .PHONY: undo-replace su-undo-replace
+.if !target(undo-replace)
 undo-replace: undo-replace-message su-target
+.endif
 
 undo-replace-message:
 	@${ECHO_MSG} "${_PKGSRC_IN}> Undoing replacement for ${PKGNAME}"

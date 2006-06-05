@@ -1,4 +1,4 @@
-# $NetBSD: deinstall.mk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: deinstall.mk,v 1.2 2006/06/05 17:41:11 jlam Exp $
 
 # DEINSTALLDEPENDS controls whether dependencies and dependents are also
 # removed when a package is de-installed.  The valid values are:
@@ -16,8 +16,10 @@ DEINSTALLDEPENDS?=	no
 ### It will acquire elevated privileges just-in-time.
 ###
 .PHONY: deinstall su-deinstall
+.if !target(deinstall)
 deinstall: su-target
 	@${ECHO_MSG} "${_PKGSRC_IN}> Deinstalling for ${PKGNAME}"
+.endif
 
 su-deinstall: deinstall-pkg install-clean
 
@@ -30,7 +32,9 @@ MAKEFLAGS.su-deinstall=	DEINSTALLDEPENDS=${DEINSTALLDEPENDS}
 ### It will acquire elevated privileges just-in-time.
 ###
 .PHONY: reinstall
+.if !target(reinstall)
 reinstall: install-clean install
+.endif
 
 ######################################################################
 ### deinstall-pkg (PRIVATE, override)
