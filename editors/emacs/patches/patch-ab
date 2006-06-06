@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.22 2006/03/25 02:48:22 uebayasi Exp $
+$NetBSD: patch-ab,v 1.23 2006/06/06 16:23:17 minskim Exp $
 
---- configure.orig	2003-03-19 02:19:12.000000000 +1200
+--- configure.orig	2003-03-18 14:19:12.000000000 +0000
 +++ configure
 @@ -822,9 +822,15 @@ case "${canonical}" in
        sparc*-*-netbsd*)	machine=sparc ;;
@@ -18,7 +18,18 @@ $NetBSD: patch-ab,v 1.22 2006/03/25 02:48:22 uebayasi Exp $
    ## OpenBSD ports
    *-*-openbsd* )
      opsys=openbsd
-@@ -1659,6 +1665,7 @@ case "${canonical}" in
+@@ -909,6 +915,10 @@ case "${canonical}" in
+     machine=macppc opsys=gnu-linux
+   ;;
+ 
++  x86_64-*-linux* )
++    machine=amd64 opsys=gnu-linux
++  ;;
++
+   ## Altos 3068
+   m68*-altos-sysv* )
+     machine=altos opsys=usg5-2
+@@ -1659,6 +1669,7 @@ case "${canonical}" in
        *-sysv4.2uw* )	  	opsys=unixware; NON_GNU_CPP=/lib/cpp ;;
        *-386bsd* )	        opsys=386bsd ;;
        *-freebsd* )	        opsys=freebsd ;;
@@ -26,7 +37,7 @@ $NetBSD: patch-ab,v 1.22 2006/03/25 02:48:22 uebayasi Exp $
        *-nextstep* )             opsys=nextstep ;;
        ## Otherwise, we'll fall through to the generic opsys code at the bottom.
      esac
-@@ -9124,6 +9131,22 @@ EOF
+@@ -9124,6 +9135,22 @@ EOF
  fi
  
  
