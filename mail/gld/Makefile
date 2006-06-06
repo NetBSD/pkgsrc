@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2006/04/23 00:12:38 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/06/06 12:33:52 ghen Exp $
 #
 
 DISTNAME=		gld-1.6
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		http://www.gasmi.net/down/
 EXTRACT_SUFX=		.tgz
@@ -22,6 +23,7 @@ GLD_GROUP?=		gld
 PKG_GROUPS=             ${GLD_GROUP}
 PKG_USERS=              ${GLD_USER}:${GLD_GROUP}
 PKG_GECOS.${GLD_USER}=	Greylisting Daemon user
+BUILD_DEFS+=		GLD_USER GLD_GROUP
 
 SUBST_CLASSES+=		gld users
 SUBST_STAGE.gld=	post-patch
@@ -30,8 +32,8 @@ SUBST_SED.gld=		-e "s,/etc,${PKG_SYSCONFDIR},"
 SUBST_MESSAGE.gld=	Fixing harcoded paths.
 SUBST_STAGE.users=	post-patch
 SUBST_FILES.users=	gld.conf
-SUBST_SED.users+=	-e "s|\#USER=nobody|USER=${GLD_USER}|"
-SUBST_SED.users+=	-e "s|\#GROUP=nobody|GROUP=${GLD_GROUP}|"
+SUBST_SED.users+=	-e "s|^USER=nobody|USER=${GLD_USER}|"
+SUBST_SED.users+=	-e "s|^GROUP=nobody|GROUP=${GLD_GROUP}|"
 SUBST_MESSAGE.users=	Adjusting user/group in configuration file.
 
 .include "options.mk"
