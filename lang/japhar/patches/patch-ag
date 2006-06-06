@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2003/07/07 13:56:27 seb Exp $
+$NetBSD: patch-ag,v 1.2 2006/06/06 15:40:15 joerg Exp $
 
---- progs/japhar/Makefile.in.orig	2003-07-07 13:52:37.110749000 +0200
+--- progs/japhar/Makefile.in.orig	1999-03-16 03:25:08.000000000 +0000
 +++ progs/japhar/Makefile.in
 @@ -10,6 +10,8 @@
  # even the implied warranty of MERCHANTABILITY or FITNESS FOR A
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.1 2003/07/07 13:56:27 seb Exp $
  
  SHELL = @SHELL@
  
-@@ -81,10 +83,7 @@ PACKAGE = @PACKAGE@
+@@ -81,14 +83,11 @@ PACKAGE = @PACKAGE@
  RANLIB = @RANLIB@
  VERSION = @VERSION@
  
@@ -23,7 +23,12 @@ $NetBSD: patch-ag,v 1.1 2003/07/07 13:56:27 seb Exp $
  @NEED_ZLIB_TRUE@ZLIB = $(top_builddir)/lib/zlib/libzlib.la
  @NEED_ZLIB_FALSE@ZLIB = @ZLIB@
  
-@@ -110,156 +109,157 @@ CONFIG_CLEAN_FILES = 
+-@LIBFFI_SUPPORT_TRUE@LIBFFI = $(top_builddir)/lib/libffi/src/libffi.la
++@LIBFFI_SUPPORT_TRUE@LIBFFI = -lffi
+ 
+ @ENABLE_JVMDI_TRUE@JVMDI_LIB = $(top_builddir)/lib/libjvmdi/src/libjvmdi.la
+ 
+@@ -110,156 +109,149 @@ CONFIG_CLEAN_FILES = 
  PROGRAMS =  $(bin_PROGRAMS)
  
  CPPFLAGS = @CPPFLAGS@
@@ -202,8 +207,7 @@ $NetBSD: patch-ag,v 1.1 2003/07/07 13:56:27 seb Exp $
 +@ENABLE_JVMDI_TRUE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libnative/java.util/libjaphar_util.la \
 +@ENABLE_JVMDI_TRUE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libnative/java.util.zip/libjaphar_zip.la \
 +@ENABLE_JVMDI_TRUE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libnative/java.security/libjaphar_security.la \
-+@ENABLE_JVMDI_TRUE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libnative/sysresource/libjaphar_sysresource.la \
-+@ENABLE_JVMDI_TRUE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libffi/src/libffi.la
++@ENABLE_JVMDI_TRUE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libnative/sysresource/libjaphar_sysresource.la
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_FALSE@@PROFILING_FALSE@japhar_DEPENDENCIES =  \
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_FALSE@@PROFILING_FALSE@$(top_builddir)/lib/libjni/src/libjni.la \
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_FALSE@@PROFILING_FALSE@$(top_builddir)/lib/libruntime/libruntime.la \
@@ -212,14 +216,12 @@ $NetBSD: patch-ag,v 1.1 2003/07/07 13:56:27 seb Exp $
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@japhar_DEPENDENCIES =  \
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/lib/libjni/src/libjni.la \
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/lib/libruntime/libruntime.la \
-+@ENABLE_JVMDI_FALSE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/arch/libarch.la \
-+@ENABLE_JVMDI_FALSE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/lib/libffi/src/libffi.la
++@ENABLE_JVMDI_FALSE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/arch/libarch.la
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@japhar_DEPENDENCIES =  \
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/lib/libjni/src/libjni.la \
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/lib/libruntime/libruntime.la \
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/arch/libarch.la \
-+@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/lib/zlib/libzlib.la \
-+@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/lib/libffi/src/libffi.la
++@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/lib/zlib/libzlib.la
 +@ENABLE_JVMDI_TRUE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_FALSE@@PROFILING_TRUE@japhar_DEPENDENCIES =  \
 +@ENABLE_JVMDI_TRUE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_FALSE@@PROFILING_TRUE@$(top_builddir)/lib/libjni/src/libjni.la \
 +@ENABLE_JVMDI_TRUE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_FALSE@@PROFILING_TRUE@$(top_builddir)/lib/libruntime/libruntime.la \
@@ -243,8 +245,7 @@ $NetBSD: patch-ag,v 1.1 2003/07/07 13:56:27 seb Exp $
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libnative/java.util.zip/libjaphar_zip.la \
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libnative/java.security/libjaphar_security.la \
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libnative/sysresource/libjaphar_sysresource.la \
-+@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/zlib/libzlib.la \
-+@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libffi/src/libffi.la
++@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/zlib/libzlib.la
 +@ENABLE_JVMDI_TRUE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@japhar_DEPENDENCIES =  \
 +@ENABLE_JVMDI_TRUE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libjni/src/libjni.la \
 +@ENABLE_JVMDI_TRUE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libruntime/libruntime.la \
@@ -257,8 +258,7 @@ $NetBSD: patch-ag,v 1.1 2003/07/07 13:56:27 seb Exp $
 +@ENABLE_JVMDI_TRUE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libnative/java.util.zip/libjaphar_zip.la \
 +@ENABLE_JVMDI_TRUE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libnative/java.security/libjaphar_security.la \
 +@ENABLE_JVMDI_TRUE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libnative/sysresource/libjaphar_sysresource.la \
-+@ENABLE_JVMDI_TRUE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/zlib/libzlib.la \
-+@ENABLE_JVMDI_TRUE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libffi/src/libffi.la
++@ENABLE_JVMDI_TRUE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/zlib/libzlib.la
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_FALSE@@PROFILING_TRUE@japhar_DEPENDENCIES =  \
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_FALSE@@PROFILING_TRUE@$(top_builddir)/lib/libjni/src/libjni.la \
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_FALSE@@PROFILING_TRUE@$(top_builddir)/lib/libruntime/libruntime.la \
@@ -280,8 +280,7 @@ $NetBSD: patch-ag,v 1.1 2003/07/07 13:56:27 seb Exp $
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libnative/java.util/libjaphar_util.la \
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libnative/java.util.zip/libjaphar_zip.la \
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libnative/java.security/libjaphar_security.la \
-+@ENABLE_JVMDI_FALSE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libnative/sysresource/libjaphar_sysresource.la \
-+@ENABLE_JVMDI_FALSE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libffi/src/libffi.la
++@ENABLE_JVMDI_FALSE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_TRUE@$(top_builddir)/lib/libnative/sysresource/libjaphar_sysresource.la
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_FALSE@@PROFILING_TRUE@japhar_DEPENDENCIES =  \
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_FALSE@@PROFILING_TRUE@$(top_builddir)/lib/libjni/src/libjni.la \
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_FALSE@@PROFILING_TRUE@$(top_builddir)/lib/libruntime/libruntime.la \
@@ -299,8 +298,7 @@ $NetBSD: patch-ag,v 1.1 2003/07/07 13:56:27 seb Exp $
 +@ENABLE_JVMDI_TRUE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/lib/libruntime/libruntime.la \
 +@ENABLE_JVMDI_TRUE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/lib/libjvmdi/src/libjvmdi.la \
 +@ENABLE_JVMDI_TRUE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/arch/libarch.la \
-+@ENABLE_JVMDI_TRUE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/lib/zlib/libzlib.la \
-+@ENABLE_JVMDI_TRUE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/lib/libffi/src/libffi.la
++@ENABLE_JVMDI_TRUE@@NEED_ZLIB_TRUE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/lib/zlib/libzlib.la
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_FALSE@@PROFILING_FALSE@japhar_DEPENDENCIES =  \
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_FALSE@@PROFILING_FALSE@$(top_builddir)/lib/libjni/src/libjni.la \
 +@ENABLE_JVMDI_FALSE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_FALSE@@PROFILING_FALSE@$(top_builddir)/lib/libruntime/libruntime.la \
@@ -320,12 +318,11 @@ $NetBSD: patch-ag,v 1.1 2003/07/07 13:56:27 seb Exp $
 +@ENABLE_JVMDI_TRUE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/lib/libjni/src/libjni.la \
 +@ENABLE_JVMDI_TRUE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/lib/libruntime/libruntime.la \
 +@ENABLE_JVMDI_TRUE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/lib/libjvmdi/src/libjvmdi.la \
-+@ENABLE_JVMDI_TRUE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/arch/libarch.la \
-+@ENABLE_JVMDI_TRUE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/lib/libffi/src/libffi.la
++@ENABLE_JVMDI_TRUE@@NEED_ZLIB_FALSE@@LIBFFI_SUPPORT_TRUE@@PROFILING_FALSE@$(top_builddir)/arch/libarch.la
  japhar_LDFLAGS = 
  CFLAGS = @CFLAGS@
  COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-@@ -397,10 +397,6 @@ distdir: $(DISTFILES)
+@@ -397,10 +389,6 @@ distdir: $(DISTFILES)
  	    || cp -p $$d/$$file $(distdir)/$$file || :; \
  	  fi; \
  	done
