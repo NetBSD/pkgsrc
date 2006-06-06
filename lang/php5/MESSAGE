@@ -1,6 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2005/12/05 20:50:26 rillig Exp $
+$NetBSD: MESSAGE,v 1.6 2006/06/06 16:42:02 jlam Exp $
 
-Note php-openssl has been removed as separate package as of 5.0.5nb1, the
-main PHP5 package has it built-in now.
+To process PHP scripts, you will need a PHP-enabled HTTP server.  You may
+either configure the HTTP server to use the PHP CGI binary located in
+
+        ${CGIDIR}/php
+
+or you may install a PHP module for your HTTP server, e.g. ap-php5.
+
+Note that php-openssl is no longer a separate package as of version
+5.0.5nb1 because the main PHP5 package has it built-in now.
 ===========================================================================
