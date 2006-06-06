@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.433 2006/06/06 13:05:59 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.434 2006/06/06 17:33:00 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2920,3 +2920,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/gld to 1.6nb1 [geert 2006-06-06]
 	Updated chat/ircservices to 5.0.57 [adrianp 2006-06-06]
 	Updated chat/ircd-hybrid to 7.2.1 [adrianp 2006-06-06]
+	Updated mail/gld to 1.6nb2 [ghen 2006-06-06]
