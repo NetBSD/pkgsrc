@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:10:05 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/06 15:17:28 joerg Exp $
 #
 
 DISTNAME=	src-mdp-1.9a5
@@ -13,6 +13,7 @@ HOMEPAGE=	http://manimac.itd.nrl.navy.mil/MDP/
 COMMENT=	Multicast file transfer
 
 WRKSRC=		${WRKDIR}/mdp/unix
+USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 BUILD_TARGET=	mdp
 
