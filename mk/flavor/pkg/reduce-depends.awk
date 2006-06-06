@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: reduce-depends.awk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: reduce-depends.awk,v 1.2 2006/06/06 14:19:10 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -126,10 +126,15 @@ BEGIN {
 			if (match_all == 0) continue
 			reduced[N++] = dep ":" pkgsrcdirs[pkgpath]
 		}
-		# This should theoretically never happen.
-		if (match_all == "no") {
-			print "ERROR: [" PROGNAME "] conflicting dependencies" | ERRCAT
-			exit 1
+		#
+		# If there are conflicting dependencies, then just pass them
+		# through and let the rest of the pkgsrc machinery handle it.
+		#
+		if (match_all == 0) {
+			for (d = 1; d <= D; d++) {
+				dep = depends[pkgpath, d]
+				reduced[N++] = dep ":" pkgsrcdirs[pkgpath]
+			}
 		}
 		for (dep in ge_depends)
 			delete ge_depends[dep]
