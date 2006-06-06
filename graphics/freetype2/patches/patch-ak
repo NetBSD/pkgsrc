@@ -1,0 +1,15 @@
+$NetBSD: patch-ak,v 1.1.2.1 2006/06/06 07:51:29 snj Exp $
+
+--- src/sfnt/ttcmap.c.orig	2005-05-11 16:37:40.000000000 +0200
++++ src/sfnt/ttcmap.c	2006-06-05 23:39:06.000000000 +0200
+@@ -2144,9 +2144,7 @@
+       charmap.encoding    = FT_ENCODING_NONE;  /* will be filled later */
+       offset              = TT_NEXT_ULONG( p );
+ 
+-      if ( offset                     &&
+-           table + offset + 2 < limit &&
+-           table + offset >= table    )
++      if ( offset && offset <= face->cmap_size - 2 )
+       {
+         FT_Byte*                       cmap   = table + offset;
+         volatile FT_UInt               format = TT_PEEK_USHORT( cmap );

@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1.2.1 2006/06/06 07:51:29 snj Exp $
+
+--- src/cff/cfftypes.h.orig	2003-12-20 08:30:05.000000000 +0100
++++ src/cff/cfftypes.h	2006-06-05 23:35:33.000000000 +0200
+@@ -84,6 +84,7 @@
+     FT_UShort*  sids;
+     FT_UShort*  cids;       /* the inverse mapping of `sids'; only needed */
+                             /* for CID-keyed fonts                        */
++    FT_UInt	max_cid;
+   } CFF_CharsetRec, *CFF_Charset;
+ 
+ 

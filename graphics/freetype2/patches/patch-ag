@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.2.1 2006/06/06 07:51:29 snj Exp $
+
+--- src/cff/cffgload.h.orig	2004-05-13 23:59:17.000000000 +0200
++++ src/cff/cffgload.h	2006-06-05 23:25:58.000000000 +0200
+@@ -196,7 +196,7 @@
+   FT_LOCAL( FT_Error )
+   cff_slot_load( CFF_GlyphSlot  glyph,
+                  CFF_Size       size,
+-                 FT_Int         glyph_index,
++                 FT_UInt         glyph_index,
+                  FT_Int32       load_flags );
+ 
+ 

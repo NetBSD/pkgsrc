@@ -1,0 +1,14 @@
+$NetBSD: patch-al,v 1.1.2.1 2006/06/06 07:51:29 snj Exp $
+
+--- src/type1/t1load.c.orig	2005-04-14 13:39:28.000000000 +0200
++++ src/type1/t1load.c	2006-06-05 23:40:02.000000000 +0200
+@@ -1990,6 +1990,9 @@
+     if ( error )
+       goto Exit;
+ 
++   /* ensure even-ness of 'num_blue_values' */
++   priv->num_blue_values &= ~1;
++
+ #ifndef T1_CONFIG_OPTION_NO_MM_SUPPORT
+ 
+     /* the following can happen for MM instances; we then treat the */
