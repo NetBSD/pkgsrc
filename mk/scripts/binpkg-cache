@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: binpkg-cache,v 1.7 2006/01/05 22:19:42 dmcmahill Exp $
+# $NetBSD: binpkg-cache,v 1.8 2006/06/06 11:10:31 dmcmahill Exp $
 #
 # Script for generating a cache file with information about
 # all binary packages contained in a directory.
@@ -54,7 +54,7 @@ SORT=${SORT:-sort}
 STAT=${STAT:-stat}
 
 cachefile=.pkgcache
-cacheversion=20050428
+cacheversion=20060203
 
 prompt="----> "
 tab="      "
@@ -210,7 +210,15 @@ process_binpkg_dir(){
 			if test "X${DEBUG}" = "Xyes" ; then
 				echo "${PKG_INFO} -q -B ${f}"
 			fi
-			${PKG_INFO} -q -B ${f} >> ${tmpd}/${cachefile}
+			# The output of pkg_info contains the dependency information first
+			# (from the -n) followed by all the build definitions (-B).
+			# To make the dependency information easier to parse later, we
+			# want to prefix it with DEPENDS+=.  Right now the only way I see
+			# to figure out when the DEPENDS section ends in the pkg_info output
+			# is by looking for a blank line.
+			${PKG_INFO} -q -Bn ${f} | \
+				${AWK} '/^$/ {x=1; print; next;} x==0 {printf("DEPENDS+=");} {print}' \
+				>> ${tmpd}/${cachefile}
 			echo "pkgcache_end ${fn}" >> ${tmpd}/${cachefile}
 		done
 		mv -f ${tmpd}/${cachefile} ${d}/${cachefile}
@@ -305,6 +313,7 @@ do
 		# Version
 		-V|--version)
 			${AWK} '/^#[ \t]*\$NetBSD/ {gsub(/,v/,"",$3);printf("%s:  Version %s, %s\n",$3,$4,$5); exit 0;}' $prog
+			echo "Generating version ${cacheversion} of the cache files."
 			exit 0
 	    		;;
 
@@ -339,7 +348,7 @@ fi
 
 # put a trailing / after ${PACKAGES} in case ${PACKAGES} is 
 # a link.
-for d in `${FIND} ${PACKAGES}/ -type d -print` ; do
+for d in `${FIND} ${PACKAGES}/ -type d -follow -print` ; do
 	if test "X${DEBUG}" = "Xyes" ; then
 		echo "${prompt}Processing directory ${d}"
 	fi
