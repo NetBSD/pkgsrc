@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.606 2006/06/06 09:56:22 seb Exp $
+# $NetBSD: pkglint.pl,v 1.607 2006/06/06 11:39:25 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1800,7 +1800,7 @@ sub parse_acls($$) {
 	}
 
 	$acls = [];
-	while ($acltext =~ s,^(?:\$(\w+)|([\w.*]+|_):([adpsu]*))(?:\,\s*|$),,) {
+	while ($acltext =~ s,^(?:\$([\w_]+)|([\w.*]+|_):([adpsu]*))(?:\,\s*|$),,) {
 		my ($acldef, $subject, $perms) = ($1, $2, $3);
 
 		if (defined($acldef)) {
@@ -2675,9 +2675,13 @@ sub variable_needs_quoting($$$) {
 		return true;
 	}
 
-	# Assigning lists to lists does not require any quoting.
+	# Assigning lists to lists does not require any quoting, though
+	# there may be cases like "CONFIGURE_ARGS+= -libs ${LDFLAGS:Q}"
+	# where quoting is necessary. So let's hope that no developer
+	# ever makes the mistake of using :Q when appending a list to
+	# a list.
 	if ($want_list && $have_list) {
-		return false;
+		return doesnt_matter;
 	}
 
 	# Appending elements to a list requires quoting, as well as
