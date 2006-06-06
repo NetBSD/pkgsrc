@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.1 2006/06/06 03:05:48 jlam Exp $
+# $NetBSD: extract.mk,v 1.2 2006/06/06 06:30:29 jlam Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -45,6 +45,7 @@ _EXTRACT_COOKIE=	${WRKDIR}/.extract_done
 _EXTRACT_TARGETS+=	checksum
 _EXTRACT_TARGETS+=	${WRKDIR}
 _EXTRACT_TARGETS+=	depends
+_EXTRACT_TARGETS+=	tools
 _EXTRACT_TARGETS+=	acquire-extract-lock
 _EXTRACT_TARGETS+=	${_EXTRACT_COOKIE}
 _EXTRACT_TARGETS+=	release-extract-lock
