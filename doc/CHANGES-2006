@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.438 2006/06/06 19:20:50 gdt Exp $
+$NetBSD: CHANGES-2006,v 1.439 2006/06/06 19:43:26 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2935,3 +2935,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Deleted databases/postgresql73-server [joerg 2006-06-06]
 	Deleted databases/tcl-postgresql73 [joerg 2006-06-06]
 	Deleted databases/tk-postgresql73 [joerg 2006-06-06]
+	Updated security/base to 1.2.5 [adrianp 2006-06-06]
