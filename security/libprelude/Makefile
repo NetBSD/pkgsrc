@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2006/05/04 13:13:17 shannonjr Exp $
+# $NetBSD: Makefile,v 1.12 2006/06/06 12:19:30 shannonjr Exp $
 #
-DISTNAME=		libprelude-0.9.8
+DISTNAME=		libprelude-0.9.9
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.org/download/releases/
 
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 PRELUDE_USER?=		_prelude
 PRELUDE_GROUP?=		_prelude
-PRELUDE_HOME?=		${VARBASE:Q}/spool/prelude
+PRELUDE_HOME?=		${VARBASE}/spool/prelude
 
 PKG_GROUPS=	${PRELUDE_GROUP}
 PKG_USERS=	${PRELUDE_USER}:${PRELUDE_GROUP}
