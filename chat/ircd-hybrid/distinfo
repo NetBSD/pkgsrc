@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2006/01/10 22:26:32 adrianp Exp $
+$NetBSD: distinfo,v 1.7 2006/06/06 13:04:55 adrianp Exp $
 
-SHA1 (ircd-hybrid-7.2.0.tgz) = 55c727d92ed4416f72372cc47c3af39904172322
-RMD160 (ircd-hybrid-7.2.0.tgz) = 2d5ba31343a1ff844eaf68f523d430b840fe7ee0
-Size (ircd-hybrid-7.2.0.tgz) = 990320 bytes
+SHA1 (ircd-hybrid-7.2.1.tgz) = c5683c1fac984d210a79a8742e9c2ef31a249db8
+RMD160 (ircd-hybrid-7.2.1.tgz) = c8f859f7e6e956c6d738641b1993423212fbd377
+Size (ircd-hybrid-7.2.1.tgz) = 1013005 bytes
 SHA1 (patch-aa) = 5ffdd9e30835e026ac900b1d83469c205b9d1bac
 SHA1 (patch-ab) = da98233fe21eb7054f6f9011f6dfbe2db04be0d5
 SHA1 (patch-ac) = ae725440d32bcf24e09ef368ef5e0fc0f236bf8a
