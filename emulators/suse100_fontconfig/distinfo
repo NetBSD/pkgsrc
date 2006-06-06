@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.1 2006/04/03 18:17:55 ghen Exp $
+$NetBSD: distinfo,v 1.2 2006/06/06 14:53:06 salo Exp $
 
-SHA1 (suse100/i586/fontconfig-2.3.2.20050721-10.i586.rpm) = 48b459d11fbed7a4b983382439bac1eaf9a3ac94
-RMD160 (suse100/i586/fontconfig-2.3.2.20050721-10.i586.rpm) = 08eb586aac97764b36583be57b5969e547226002
-Size (suse100/i586/fontconfig-2.3.2.20050721-10.i586.rpm) = 182073 bytes
-SHA1 (suse100/ppc/fontconfig-2.3.2.20050721-10.ppc.rpm) = cdf6aa3482e4505af0f2b6f54637c26ccc92508c
-RMD160 (suse100/ppc/fontconfig-2.3.2.20050721-10.ppc.rpm) = 4e26271b92d94766613db19d48dfcbd137e2509f
-Size (suse100/ppc/fontconfig-2.3.2.20050721-10.ppc.rpm) = 203893 bytes
-SHA1 (suse100/x86_64/fontconfig-2.3.2.20050721-10.x86_64.rpm) = 6bb32bae48b9c332fa23ef5f82c602a7b1c214a6
-RMD160 (suse100/x86_64/fontconfig-2.3.2.20050721-10.x86_64.rpm) = a949ffc28985644134121c8cda17392fef751440
-Size (suse100/x86_64/fontconfig-2.3.2.20050721-10.x86_64.rpm) = 191756 bytes
+SHA1 (suse100/i586/fontconfig-2.3.2.20050721-10.2.i586.rpm) = ac30bcb7b46e52d6c8ef973d3c122ef39b4e6367
+RMD160 (suse100/i586/fontconfig-2.3.2.20050721-10.2.i586.rpm) = c30fcdeb1dca430f3e2cdfb3849a719cac4e5f16
+Size (suse100/i586/fontconfig-2.3.2.20050721-10.2.i586.rpm) = 182183 bytes
+SHA1 (suse100/ppc/fontconfig-2.3.2.20050721-10.2.ppc.rpm) = 2ed1a2fdcd62d2505c13231edd5852a5313f1470
+RMD160 (suse100/ppc/fontconfig-2.3.2.20050721-10.2.ppc.rpm) = 3ac4ffde0cd136419daf4cb94a60f772e359494d
+Size (suse100/ppc/fontconfig-2.3.2.20050721-10.2.ppc.rpm) = 204018 bytes
+SHA1 (suse100/x86_64/fontconfig-2.3.2.20050721-10.2.x86_64.rpm) = d29e6828a51c637d1e67834617ea3bbe8468875f
+RMD160 (suse100/x86_64/fontconfig-2.3.2.20050721-10.2.x86_64.rpm) = 8559de45f740da334dc0df8eedb54f44c5dc5b87
+Size (suse100/x86_64/fontconfig-2.3.2.20050721-10.2.x86_64.rpm) = 191908 bytes
