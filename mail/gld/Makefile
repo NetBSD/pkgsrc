@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2006/06/06 12:33:52 ghen Exp $
+# $NetBSD: Makefile,v 1.19 2006/06/06 17:32:20 ghen Exp $
 #
 
 DISTNAME=		gld-1.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		http://www.gasmi.net/down/
 EXTRACT_SUFX=		.tgz
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		yes
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES_PERMS=	${EGDIR}/gld.conf ${PKG_SYSCONFDIR}/gld.conf	\
-			${BINOWN} ${GLD_GROUP} 0740
+			${BINOWN} ${GLD_GROUP} 0640
 
 RCD_SCRIPTS=		gld
 GLD_USER?=		gld
