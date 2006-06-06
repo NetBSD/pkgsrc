@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2006/06/04 13:52:57 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/06/06 15:40:15 joerg Exp $
 #
 
 DISTNAME=		japhar-0.08
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_BACKUP}
 
@@ -21,6 +21,10 @@ INFO_FILES=	# PLIST
 # The japhar tar archive uses ././@LongLink GNU tar hacks
 EXTRACT_USING=		nbtar
 
+post-extract:
+	${RM} -r ${WRKSRC}/lib/libffi
+
 .include "../../devel/readline/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
