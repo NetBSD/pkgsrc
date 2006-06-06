@@ -1,8 +1,8 @@
-# $NetBSD: bsd.extract-vars.mk,v 1.1 2006/06/06 03:05:48 jlam Exp $
+# $NetBSD: bsd.extract-vars.mk,v 1.2 2006/06/06 15:28:52 jlam Exp $
 #
-# This Makefile fragment is included to bsd.prefs.mk and defines some
-# variables which must be defined earlier than where bsd.extract.mk
-# is included.
+# This Makefile fragment is included separately by bsd.pkg.mk and
+# defines some variables which must be defined earlier than where
+# bsd.extract.mk is included.
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
