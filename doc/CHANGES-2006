@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.435 2006/06/06 18:52:55 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.436 2006/06/06 18:59:36 kim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2922,3 +2922,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/ircd-hybrid to 7.2.1 [adrianp 2006-06-06]
 	Updated mail/gld to 1.6nb2 [ghen 2006-06-06]
 	Updated net/snort to 2.4.5 [adrianp 2006-06-06]
+	Updated audio/mstream to 1.1 [kim 2006-06-06]
