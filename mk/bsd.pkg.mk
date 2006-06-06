@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1841 2006/06/06 04:48:19 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1842 2006/06/06 06:30:29 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -290,7 +290,6 @@ CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN_CMD:sh}
 .  endif
 .endif
 
-_TOOLS_COOKIE=		${WRKDIR}/.tools_done
 _WRAPPER_COOKIE=	${WRKDIR}/.wrapper_done
 _CONFIGURE_COOKIE=	${WRKDIR}/.configure_done
 _BUILD_COOKIE=		${WRKDIR}/.build_done
@@ -738,7 +737,7 @@ checksum: fetch
 # Disable wrapper
 .PHONY: wrapper
 .if defined(NO_BUILD) && !target(wrapper)
-wrapper: tools
+wrapper: patch
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${_WRAPPER_COOKIE}
 .endif
 
@@ -1163,16 +1162,12 @@ do-test:
 
 .include "${PKGSRCDIR}/mk/bsd.pkg.update.mk"
 
-.PHONY: acquire-tools-lock
 .PHONY: acquire-wrapper-lock acquire-configure-lock acquire-build-lock
-acquire-tools-lock: acquire-lock
 acquire-wrapper-lock: acquire-lock
 acquire-configure-lock: acquire-lock
 acquire-build-lock: acquire-lock
 
-.PHONY: release-tools-lock
 .PHONY: release-wrapper-lock release-configure-lock release-build-lock
-release-tools-lock: release-lock
 release-wrapper-lock: release-lock
 release-configure-lock: release-lock
 release-build-lock: release-lock
@@ -1186,14 +1181,9 @@ release-build-lock: release-lock
 # call the necessary targets/scripts.
 ################################################################
 
-.PHONY: tools
-.if !target(tools)
-tools: patch acquire-tools-lock ${_TOOLS_COOKIE} release-tools-lock
-.endif
-
 .PHONY: wrapper
 .if !target(wrapper)
-wrapper: tools acquire-wrapper-lock ${_WRAPPER_COOKIE} release-wrapper-lock
+wrapper: patch acquire-wrapper-lock ${_WRAPPER_COOKIE} release-wrapper-lock
 .endif
 
 .PHONY: configure
@@ -1213,9 +1203,6 @@ build: pkginstall
 .if !target(test)
 test: build ${_TEST_COOKIE}
 .endif
-
-${_TOOLS_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-tools PKG_PHASE=tools
 
 ${_WRAPPER_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-wrapper PKG_PHASE=wrapper
@@ -1277,10 +1264,8 @@ ${_BUILD_COOKIE}:
 ${_TEST_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-test PKG_PHASE=test
 
-.PHONY: tools-message wrapper-message
+.PHONY: wrapper-message
 .PHONY: configure-message build-message test-message
-tools-message:
-	@${PHASE_MSG} "Overriding tools for ${PKGNAME}"
 wrapper-message:
 	@${PHASE_MSG} "Creating toolchain wrappers for ${PKGNAME}"
 configure-message:
@@ -1290,10 +1275,8 @@ build-message:
 test-message:
 	@${PHASE_MSG} "Testing for ${PKGNAME}"
 
-.PHONY: tools-cookie wrapper-cookie
+.PHONY: wrapper-cookie
 .PHONY: configure-cookie build-cookie test-cookie
-tools-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${_TOOLS_COOKIE}
 wrapper-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${_WRAPPER_COOKIE}
 configure-cookie:
@@ -1303,7 +1286,6 @@ build-cookie:
 test-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${_TEST_COOKIE}
 
-.ORDER: tools-message tools-vars pre-tools do-tools post-tools tools-cookie
 .ORDER: wrapper-message wrapper-vars pre-wrapper do-wrapper post-wrapper wrapper-cookie
 .ORDER: configure-message configure-vars pre-configure pre-configure-override do-configure post-configure configure-cookie
 .ORDER: build-message build-vars pre-build do-build post-build build-cookie
@@ -1312,9 +1294,8 @@ test-cookie:
 # Please note that the order of the following targets is important, and
 # should not be modified (.ORDER is not recognised by make(1) in a serial
 # make i.e. without -j n)
-.PHONY: real-tools real-wrapper
+.PHONY: real-wrapper
 .PHONY: real-configure real-build real-test
-real-tools: tools-message tools-vars pre-tools do-tools post-tools tools-cookie
 real-wrapper: wrapper-message wrapper-vars pre-wrapper do-wrapper post-wrapper wrapper-cookie
 real-configure: configure-message configure-vars pre-configure pre-configure-override do-configure post-configure configure-cookie
 real-build: build-message build-vars pre-build do-build post-build build-cookie
@@ -1346,7 +1327,7 @@ su-target: .USE
 
 # Empty pre-* and post-* targets
 
-.for name in tools wrapper configure build test
+.for name in wrapper configure build test
 
 .  if !target(pre-${name})
 pre-${name}:

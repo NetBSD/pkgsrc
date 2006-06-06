@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.167 2006/05/21 16:55:21 jlam Exp $
+# $NetBSD: replace.mk,v 1.168 2006/06/06 06:30:29 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1011,7 +1011,7 @@ TOOLS_PATH.xmkmf=	${TOOLS_PREFIX.xpkgwedge}/bin/pkgxmkmf
 
 # Compute the locations of the pkgsrc-supplied tools.
 FIND_PREFIX:=	${TOOLS_FIND_PREFIX}
-.include "../../mk/find-prefix.mk"
+.include "${PKGSRCDIR}/mk/find-prefix.mk"
 
 ######################################################################
 
