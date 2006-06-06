@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/29 16:00:44 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/06/06 12:28:01 shannonjr Exp $
 bin/prewikka-httpd
-${PYSITELIB}/__init__.py
-${PYSITELIB}/__init__.pyc
-${PYSITELIB}/__init__.pyo
 ${PYSITELIB}/prewikka/Auth.pyc
 ${PYSITELIB}/prewikka/Auth.pyo
 ${PYSITELIB}/prewikka/CheetahFilters.pyc
