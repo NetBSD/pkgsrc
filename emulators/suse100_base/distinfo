@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2006/04/03 18:17:54 ghen Exp $
+$NetBSD: distinfo,v 1.2 2006/06/06 14:53:06 salo Exp $
 
 SHA1 (suse100/i586/aaa_base-10.0-28.i586.rpm) = 5581a95f8026ea96d112945fae6011e251687043
 RMD160 (suse100/i586/aaa_base-10.0-28.i586.rpm) = d6b4fb4675c7ccfb8eabc7ab55b703926f31c82b
@@ -6,9 +6,9 @@ Size (suse100/i586/aaa_base-10.0-28.i586.rpm) = 305412 bytes
 SHA1 (suse100/i586/bash-3.0-17.i586.rpm) = da1c7dadd994ec05517e244fa6d146efa532c280
 RMD160 (suse100/i586/bash-3.0-17.i586.rpm) = 13a8711d7dead670c937e78ba131ea4f208537f3
 Size (suse100/i586/bash-3.0-17.i586.rpm) = 723927 bytes
-SHA1 (suse100/i586/coreutils-5.3.0-20.i586.rpm) = b02b7efbbc2b667853bc28a083ce8ff2589f3906
-RMD160 (suse100/i586/coreutils-5.3.0-20.i586.rpm) = 1bd65aede5544a7b71ccf0830b2f06043b7096b1
-Size (suse100/i586/coreutils-5.3.0-20.i586.rpm) = 1838998 bytes
+SHA1 (suse100/i586/coreutils-5.3.0-20.2.i586.rpm) = d75698247495ea4efd3e803fabe28eb346c9c2d2
+RMD160 (suse100/i586/coreutils-5.3.0-20.2.i586.rpm) = 0ad0fe0695446a23fe1226a64288289c51007bed
+Size (suse100/i586/coreutils-5.3.0-20.2.i586.rpm) = 1839309 bytes
 SHA1 (suse100/i586/glibc-2.3.5-40.i586.rpm) = f640f4e2b1c8743b0c07368450ad25493a681cbe
 RMD160 (suse100/i586/glibc-2.3.5-40.i586.rpm) = e5ec89f76b3275790f9185af582f14e39ea58ede
 Size (suse100/i586/glibc-2.3.5-40.i586.rpm) = 2477929 bytes
@@ -42,9 +42,9 @@ Size (suse100/ppc/aaa_base-10.0-28.ppc.rpm) = 305698 bytes
 SHA1 (suse100/ppc/bash-3.0-17.ppc.rpm) = 8bd1b97f51812ad66e91e254267b943eddd8ccf1
 RMD160 (suse100/ppc/bash-3.0-17.ppc.rpm) = c72f9c7a750a0f4866c83deef0b3b12446f2d3ad
 Size (suse100/ppc/bash-3.0-17.ppc.rpm) = 762907 bytes
-SHA1 (suse100/ppc/coreutils-5.3.0-20.ppc.rpm) = 70949e038544459958c9af9b8e3c2143ee047d03
-RMD160 (suse100/ppc/coreutils-5.3.0-20.ppc.rpm) = 069a8693dbbbc62f11789ad67c3a1f402be36678
-Size (suse100/ppc/coreutils-5.3.0-20.ppc.rpm) = 2076132 bytes
+SHA1 (suse100/ppc/coreutils-5.3.0-20.2.ppc.rpm) = fc4c4d8e86490052ba0fc184eb47fc4690fc5784
+RMD160 (suse100/ppc/coreutils-5.3.0-20.2.ppc.rpm) = 47653cdab713e2ae320cdeb8db1cef655eeb8a4b
+Size (suse100/ppc/coreutils-5.3.0-20.2.ppc.rpm) = 2077205 bytes
 SHA1 (suse100/ppc/glibc-2.3.5-40.ppc.rpm) = 95d25c9eb893f764b7acb3ec3b536a94f5637c1d
 RMD160 (suse100/ppc/glibc-2.3.5-40.ppc.rpm) = 08dad873481db095160cdc6839145dab0bad5e47
 Size (suse100/ppc/glibc-2.3.5-40.ppc.rpm) = 2940751 bytes
@@ -78,9 +78,9 @@ Size (suse100/x86_64/aaa_base-10.0-28.x86_64.rpm) = 305666 bytes
 SHA1 (suse100/x86_64/bash-3.0-17.x86_64.rpm) = a66b8f27af5adbac37c25e099d8932835ea23414
 RMD160 (suse100/x86_64/bash-3.0-17.x86_64.rpm) = 7244e533f36965e09b29745e5a33ba5a4bfdd33b
 Size (suse100/x86_64/bash-3.0-17.x86_64.rpm) = 752807 bytes
-SHA1 (suse100/x86_64/coreutils-5.3.0-20.x86_64.rpm) = f9c8f688de7b1ecd621645bc4f4a05614e90694f
-RMD160 (suse100/x86_64/coreutils-5.3.0-20.x86_64.rpm) = 783ac94109abe7f4a71a530377fafe6700c47eb2
-Size (suse100/x86_64/coreutils-5.3.0-20.x86_64.rpm) = 1871880 bytes
+SHA1 (suse100/x86_64/coreutils-5.3.0-20.2.x86_64.rpm) = 5c158fa3bf842f69a6873be3e92200667f2120f4
+RMD160 (suse100/x86_64/coreutils-5.3.0-20.2.x86_64.rpm) = 95638f5e4c03b829c286ed8ee0a6dcc29ec7798c
+Size (suse100/x86_64/coreutils-5.3.0-20.2.x86_64.rpm) = 1871264 bytes
 SHA1 (suse100/x86_64/glibc-2.3.5-40.x86_64.rpm) = a52b969a6307fd3d2d25204675687ff319aa05dd
 RMD160 (suse100/x86_64/glibc-2.3.5-40.x86_64.rpm) = bb0ab8fb0d1d7e438d44ccb5df5873c359155919
 Size (suse100/x86_64/glibc-2.3.5-40.x86_64.rpm) = 2749726 bytes
