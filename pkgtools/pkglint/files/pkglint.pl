@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.607 2006/06/06 11:39:25 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.608 2006/06/06 11:41:40 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1985,7 +1985,7 @@ sub load_dist_sites() {
 		}
 	}
 
-	# Explicitly allowed, although not defined in mk/bsd.sites.mk.
+	# Explicitly allowed, although not defined in mk/fetch/sites.mk.
 	$names->{"MASTER_SITE_SUSE_UPD"} = true;
 	$names->{"MASTER_SITE_LOCAL"} = true;
 
