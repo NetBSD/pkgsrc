@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.225 2006/06/06 06:30:29 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.226 2006/06/06 15:28:52 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -502,9 +502,11 @@ MAKEFLAGS+=		_PKGSRCDIR=${_PKGSRCDIR:Q}
 .endif
 PKGSRCDIR=		${_PKGSRCDIR}
 
+DISTDIR?=		${PKGSRCDIR}/distfiles
 PACKAGES?=		${PKGSRCDIR}/packages
 TEMPLATES?=		${PKGSRCDIR}/templates
 
+PATCHDIR?=		${.CURDIR}/patches
 SCRIPTDIR?=		${.CURDIR}/scripts
 FILESDIR?=		${.CURDIR}/files
 PKGDIR?=		${.CURDIR}
@@ -551,16 +553,11 @@ PREPEND_PATH+=		${USE_X11:D${X11BASE}/bin} ${LOCALBASE}/bin
 # Wrapper framework definitions
 .include "${PKGSRCDIR}/mk/wrapper/wrapper-defs.mk"
 
+# Package system flavor definitions
+.include "${PKGSRCDIR}/mk/flavor/bsd.flavor-vars.mk"
+
 # Make variable definitions cache
 .include "${PKGSRCDIR}/mk/bsd.makevars.mk"
-
-.include "${PKGSRCDIR}/mk/flavor/bsd.flavor-vars.mk"
-.include "${PKGSRCDIR}/mk/check/bsd.check-vars.mk"
-.include "${PKGSRCDIR}/mk/depends/bsd.depends-vars.mk"
-.include "${PKGSRCDIR}/mk/fetch/bsd.fetch-vars.mk"
-.include "${PKGSRCDIR}/mk/extract/bsd.extract-vars.mk"
-.include "${PKGSRCDIR}/mk/patch/bsd.patch-vars.mk"
-.include "${PKGSRCDIR}/mk/install/bsd.install-vars.mk"
 
 USE_TOOLS+=		awk:pkgsrc cut:pkgsrc echo:pkgsrc pwd:pkgsrc	\
 			sed:pkgsrc tr:pkgsrc uname:pkgsrc
