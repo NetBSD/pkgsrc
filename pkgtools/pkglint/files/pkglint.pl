@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.604 2006/06/06 06:48:16 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.605 2006/06/06 07:04:56 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2645,7 +2645,9 @@ sub variable_needs_quoting($$$) {
 		return dont_know;
 	}
 
-	if ($type->kind_of_list == LK_NONE && exists(safe_types->{$type->basic_type})) {
+	# Variables of certain predefined types, as well as all
+	# enumerations, are expected to not require the :Q operator.
+	if ($type->kind_of_list == LK_NONE && (ref($type->basic_type) eq "HASH" || exists(safe_types->{$type->basic_type}))) {
 		return doesnt_matter;
 	}
 
