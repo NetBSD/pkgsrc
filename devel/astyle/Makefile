@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:29:12 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/06/06 21:38:34 joerg Exp $
 #
 
 DISTNAME=	astyle_1.13.6.1
@@ -13,6 +13,8 @@ HOMEPAGE=	http://astyle.sourceforge.net/
 COMMENT=	Reindenter and reformatter of C++, C and Java source code
 
 HTMLDIR=	${PREFIX}/share/doc/html/astyle
+
+USE_LANGUAGES=	c++
 
 .include "../../mk/compiler.mk"
 
