@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/04/12 10:55:49 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2006/06/06 00:02:54 minskim Exp $
 
 DISTNAME=       bonnie
 PKGNAME=	bonnie-2.06
@@ -18,6 +18,8 @@ NO_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}
 
 USE_TOOLS+=		expr
+MAKE_ENV+=		BINOWN=${BINOWN} BINGRP=${BINGRP} BINMODE=${BINMODE}
+MAKE_ENV+=		MANOWN=${MANOWN} MANGRP=${MANGRP} MANMODE=${MANMODE}
 MANCOMPRESSED_IF_MANZ=	yes
 
 INSTALLATION_DIRS=	bin man/cat1 man/man1
