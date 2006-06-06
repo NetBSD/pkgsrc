@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.87 2006/05/12 22:23:09 adrianp Exp $
+# $NetBSD: Makefile,v 1.88 2006/06/06 22:03:36 adrianp Exp $
 
 .include "../../mail/sendmail/Makefile.common"
 
 PKGNAME=	sendmail-${DIST_VERS}
+PKGREVISION=	1
 COMMENT=	The well known Mail Transport Agent
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 postfix-[0-9]*
@@ -12,47 +13,48 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 SMRSH_CMDDIR?=	${PREFIX}/libexec/sm.bin
 PLIST_SUBST+=	SMRSH_CMDDIR=${SMRSH_CMDDIR:Q}
+RCD_SCRIPTS=	sendmail smmsp
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-build
 SUBST_FILES.paths=	../mailer.conf include/sm/conf.h smrsh/smrsh.8
-SUBST_SED.paths=	-e "s|@@PREFIX@@|${PREFIX}|g" \
-			-e "s|@@SMRSH_CMDDIR@@|${SMRSH_CMDDIR}|g"
+SUBST_SED.paths=	-e "s|@@PREFIX@@|${PREFIX}|g"
+SUBST_SED.paths+=	-e "s|@@SMRSH_CMDDIR@@|${SMRSH_CMDDIR}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
 
 post-patch: make-sendmail-siteconfig
 .if !empty(PKG_OPTIONS:Mtcpwrappers)
-	@${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >>${SITECONFIG}
+	${CAT} ${FILESDIR}/site.config.m4-tcpwrappers >>${SITECONFIG}
 .endif
 .if !empty(PKG_OPTIONS:Mldap)
-	@${CAT} ${FILESDIR}/site.config.m4-ldap >>${SITECONFIG}
+	${CAT} ${FILESDIR}/site.config.m4-ldap >>${SITECONFIG}
 .endif
 .if !empty(PKG_OPTIONS:Mdb2)
-	@${CAT} ${FILESDIR}/site.config.m4-db2 >>${SITECONFIG}
+	${CAT} ${FILESDIR}/site.config.m4-db2 >>${SITECONFIG}
 .endif
 .if !empty(PKG_OPTIONS:Mdb4)
-	@${CAT} ${FILESDIR}/site.config.m4-db4 >>${SITECONFIG}
+	${CAT} ${FILESDIR}/site.config.m4-db4 >>${SITECONFIG}
 .endif
 .if !empty(PKG_OPTIONS:Mtls)
-	@${CAT} ${FILESDIR}/site.config.m4-starttls >>${SITECONFIG}
+	${CAT} ${FILESDIR}/site.config.m4-starttls >>${SITECONFIG}
 .endif
 .if !empty(PKG_OPTIONS:Msasl)
-	@${CAT} ${FILESDIR}/site.config.m4-sasl2 >>${SITECONFIG}
+	${CAT} ${FILESDIR}/site.config.m4-sasl2 >>${SITECONFIG}
 .endif
 .if !empty(PKG_OPTIONS:Msendmail-socketmap)
-	@${CAT} ${FILESDIR}/site.config.m4-socketmap >>${SITECONFIG}
+	${CAT} ${FILESDIR}/site.config.m4-socketmap >>${SITECONFIG}
 PLIST_SRC+=	${PKGDIR}/PLIST.socketmap
 .endif
 
 post-extract:
-	@${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
+	${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
 
 do-build:
-	@(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ./Build)
+	(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ./Build)
 
 post-build:
-	@${CP} ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
-	@${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
+	${CP} ${PKGDIR}/MESSAGE ${MESSAGE_SRC}
+	${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/libexec/sendmail
