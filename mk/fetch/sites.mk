@@ -1,9 +1,8 @@
-# $NetBSD: bsd.sites.mk,v 1.63 2006/05/19 02:21:24 perry Exp $
+# $NetBSD: sites.mk,v 1.1 2006/06/06 03:05:48 jlam Exp $
 #
-# Default MASTER_SITES
-
-.if !defined(BSD_SITES_MK)
-BSD_SITES_MK=	1
+# This Makefile fragment defines read-only MASTER_SITE_* variables
+# representing some well-known master distribution sites for software.
+#
 
 MASTER_SITE_XCONTRIB+=  \
 	ftp://ftp.gwdg.de/pub/x11/x.org/contrib/ \
@@ -397,5 +396,3 @@ MASTER_SITE_BACKUP?=	\
 	ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/ \
 	http://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/ \
 	ftp://ftp.FreeBSD.org/pub/FreeBSD/distfiles/
-
-.endif # BSD_SITES_MK

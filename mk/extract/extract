@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.21 2006/05/30 23:51:38 wiz Exp $
+# $NetBSD: extract,v 1.1 2006/06/06 03:05:48 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.

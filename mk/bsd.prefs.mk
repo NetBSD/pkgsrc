@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.222 2006/06/05 17:11:37 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.223 2006/06/06 03:05:48 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -502,7 +502,6 @@ MAKEFLAGS+=		_PKGSRCDIR=${_PKGSRCDIR:Q}
 .endif
 PKGSRCDIR=		${_PKGSRCDIR}
 
-DISTDIR?=		${PKGSRCDIR}/distfiles
 PACKAGES?=		${PKGSRCDIR}/packages
 TEMPLATES?=		${PKGSRCDIR}/templates
 
@@ -559,6 +558,8 @@ PREPEND_PATH+=		${USE_X11:D${X11BASE}/bin} ${LOCALBASE}/bin
 .include "${PKGSRCDIR}/mk/flavor/bsd.flavor-vars.mk"
 .include "${PKGSRCDIR}/mk/check/bsd.check-vars.mk"
 .include "${PKGSRCDIR}/mk/depends/bsd.depends-vars.mk"
+.include "${PKGSRCDIR}/mk/fetch/bsd.fetch-vars.mk"
+.include "${PKGSRCDIR}/mk/extract/bsd.extract-vars.mk"
 .include "${PKGSRCDIR}/mk/install/bsd.install-vars.mk"
 
 USE_TOOLS+=		awk:pkgsrc cut:pkgsrc echo:pkgsrc pwd:pkgsrc	\
