@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2006/03/02 22:58:49 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/06/06 20:44:50 hubertf Exp $
 bin/xdaemon
 bin/xdaemon2
+bin/xnetbsd-flag
+bin/xnetbsd-flag2
 share/doc/xdaemon.README
 share/xteddy/pixmaps/xdaemon2_bw.xbm
 share/xteddy/pixmaps/xdaemon2_color.xpm
