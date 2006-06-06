@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2006/04/22 09:22:14 rillig Exp $
+# $NetBSD: Makefile.common,v 1.16 2006/06/06 21:49:35 minskim Exp $
 #
 
 DBUS_VERSION=	0.61
@@ -15,7 +15,7 @@ DISTINFO_FILE=	${.CURDIR}/../../sysutils/dbus/distinfo
 PATCHDIR=	${.CURDIR}/../../sysutils/dbus/patches
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		YES
 
 PKGCONFIG_OVERRIDE=	dbus-1.pc.in
