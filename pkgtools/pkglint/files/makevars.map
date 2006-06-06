@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.107 2006/06/06 08:22:41 rillig Exp $
+# $NetBSD: makevars.map,v 1.108 2006/06/06 11:37:31 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -131,7 +131,7 @@ AUTOMAKE_REQD		List of Version [*:a]
 BATCH			Yes []
 BDB185_DEFAULT		Unchecked []
 BDBBASE			Pathname [*:u]
-BDB_ACCEPTED		List of { db1 db2 db3 db4 }
+BDB_ACCEPTED		List of { db1 db2 db3 db4 } [$simple]
 BDB_DEFAULT		{ db1 db2 db3 db4 } []
 BDB_LIBS		List of LdFlag [*:u]
 BDB_TYPE		{ db1 db2 db3 db4 } [*:u]
@@ -141,8 +141,8 @@ BINOWN			UserGroupName []
 BROKEN			Message []
 BROKEN_GETTEXT_DETECTION	YesNo [m:s,c:s]
 BROKEN_IN		List of BrokenIn [m:s]
-BUILDLINK_ABI_DEPENDS.*	List of Dependency [b:a,m:a]
-BUILDLINK_API_DEPENDS.*	List of Dependency [b:a,m:a,builtin.mk:a]
+BUILDLINK_ABI_DEPENDS.*	List of Dependency [b:a, $list]
+BUILDLINK_API_DEPENDS.*	List of Dependency [b:a, builtin.mk:a, $list]
 BUILDLINK_CONTENTS_FILTER	List of ShellWord []
 # ^^ ShellCommand
 BUILDLINK_CFLAGS.*	List of CFlag []
@@ -203,7 +203,7 @@ CONFIGURE_HAS_MANDIR	YesNo [m:s]
 CONFIGURE_SCRIPT	Pathname [m:s]
 CONFIG_GUESS_OVERRIDE	List of Pathmask [m:as,c:as]
 CONFIG_STATUS_OVERRIDE	List of Pathmask [m:as,c:as]
-CONFIG_SHELL		ShellWord [m:s,c:s]
+CONFIG_SHELL		Pathname [m:s,c:s]
 CONFIG_SUB_OVERRIDE	List of Pathmask [m:as,c:as]
 CONFLICTS		List of Dependency [$list]
 CONF_FILES		List of ShellWord [$list]
