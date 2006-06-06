@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.211 2006/06/03 11:45:56 gavan Exp $
+# $NetBSD: Makefile,v 1.212 2006/06/06 19:16:20 joerg Exp $
 #
 
 COMMENT=	Databases
@@ -27,7 +27,6 @@ SUBDIR+=	guile-pg
 SUBDIR+=	iodbc
 SUBDIR+=	java-db3
 SUBDIR+=	jdb
-SUBDIR+=	jdbc-postgresql73
 SUBDIR+=	jdbc-postgresql74
 SUBDIR+=	jdbc-postgresql80
 SUBDIR+=	jdbc-postgresql81
@@ -119,13 +118,6 @@ SUBDIR+=	php5-mysqli
 SUBDIR+=	phpldapadmin
 SUBDIR+=	phpmyadmin
 SUBDIR+=	phppgadmin
-SUBDIR+=	postgresql73
-SUBDIR+=	postgresql73-client
-SUBDIR+=	postgresql73-docs
-SUBDIR+=	postgresql73-lib
-SUBDIR+=	postgresql73-plperl
-SUBDIR+=	postgresql73-pltcl
-SUBDIR+=	postgresql73-server
 SUBDIR+=	postgresql74
 SUBDIR+=	postgresql74-client
 SUBDIR+=	postgresql74-contrib
@@ -194,11 +186,9 @@ SUBDIR+=	sqsh-motif
 SUBDIR+=	sqsh-x11
 SUBDIR+=	tcl-fbsql
 SUBDIR+=	tcl-gdbm
-SUBDIR+=	tcl-postgresql73
 SUBDIR+=	tcl-postgresql74
 SUBDIR+=	tdb
 SUBDIR+=	tinycdb
-SUBDIR+=	tk-postgresql73
 SUBDIR+=	unixodbc
 SUBDIR+=	unixodbc-DataManager
 SUBDIR+=	unixodbc-ODBCConfig
