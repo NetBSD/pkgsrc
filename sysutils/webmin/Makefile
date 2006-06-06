@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/06/04 14:44:13 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/06/06 22:01:25 minskim Exp $
 
 DISTNAME=	webmin-1.270-minimal
 PKGNAME=	${DISTNAME:S/-minimal$//}
@@ -54,6 +54,8 @@ CONF_FILES_PERMS+=	${WEBMIN_EGDIR}/${_file_} ${PKG_SYSCONFDIR}/${_file_} \
 			${ROOT_USER} ${ROOT_GROUP} 0755
 .endfor
 RCD_SCRIPTS=		webmin
+
+CHECK_INTERPRETER_SKIP+=	share/webmin/webmin-gentoo-init
 
 .include "../../security/openssl/buildlink3.mk"
 
