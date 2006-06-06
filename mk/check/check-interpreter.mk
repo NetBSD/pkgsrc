@@ -1,4 +1,4 @@
-# $NetBSD: check-interpreter.mk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: check-interpreter.mk,v 1.2 2006/06/06 23:43:10 rillig Exp $
 
 CHECK_INTERPRETER?=	no
 
@@ -28,7 +28,7 @@ check-interpreter:
 	  while read file; do						\
 		${_CHECK_INTERP_SKIP_FILTER};				\
 		${SHCOMMENT} "[$$file]";				\
-		interp=`${SED} -n -e '1s/^#! *\([^ ]*\).*/\1/p' -e '2q' < "$$file"` \
+		interp=`${SED} -n -e '1s/^#![[:space:]]*\([^[:space:]]*\).*/\1/p' -e '1q' < "$$file"` \
 		|| {	${ECHO} "[check-interpreter.mk] WARNING: sed(1) failed for \"$$file\"." 1>&2; \
 			continue;					\
 		};							\
