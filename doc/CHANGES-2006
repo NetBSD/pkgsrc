@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.436 2006/06/06 18:59:36 kim Exp $
+$NetBSD: CHANGES-2006,v 1.437 2006/06/06 19:18:06 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2923,3 +2923,14 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/gld to 1.6nb2 [ghen 2006-06-06]
 	Updated net/snort to 2.4.5 [adrianp 2006-06-06]
 	Updated audio/mstream to 1.1 [kim 2006-06-06]
+	Deleted databases/jdbc-postgresql73 [joerg 2006-06-06]
+	Deleted databases/pgaccess [joerg 2006-06-06]
+	Deleted databases/postgresql73 [joerg 2006-06-06]
+	Deleted databases/postgresql73-client [joerg 2006-06-06]
+	Deleted databases/postgresql73-docs [joerg 2006-06-06]
+	Deleted databases/postgresql73-lib [joerg 2006-06-06]
+	Deleted databases/postgresql73-plperl [joerg 2006-06-06]
+	Deleted databases/postgresql73-pltcl [joerg 2006-06-06]
+	Deleted databases/postgresql73-server [joerg 2006-06-06]
+	Deleted databases/tcl-postgresql73 [joerg 2006-06-06]
+	Deleted databases/tk-postgresql73 [joerg 2006-06-06]
