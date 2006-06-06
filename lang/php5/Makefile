@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/06/05 17:22:39 minskim Exp $
+# $NetBSD: Makefile,v 1.36 2006/06/06 16:42:02 jlam Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
 PKGREVISION=		1
@@ -27,6 +27,7 @@ CONFIGURE_ARGS+=	--enable-fastcgi
 
 CGIDIR=			${PREFIX}/libexec/cgi-bin
 EGDIR=			${PREFIX}/share/examples/php
+MESSAGE_SUBST+=		CGIDIR=${CGIDIR:Q}
 
 CONF_FILES=		${EGDIR}/php.ini-recommended ${PKG_SYSCONFDIR}/php.ini
 OWN_DIRS=		${PREFIX}/${PHP_EXTENSION_DIR}
