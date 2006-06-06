@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1.1.1 2004/03/28 21:02:15 martin Exp $
+$NetBSD: patch-ae,v 1.2 2006/06/06 01:30:26 minskim Exp $
 
---- support_files/Makefile.in.orig	Sun Jul  6 23:42:05 2003
+--- support_files/Makefile.in.orig	2003-07-06 14:42:05.000000000 -0700
 +++ support_files/Makefile.in
 @@ -36,11 +36,11 @@ clean:
  	@rm -f ../*.rpm
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2004/03/28 21:02:15 martin Exp $
 -	${INSTALL} -m 0555 -g root -o root pulsar.init   ${sup_dir}
 -	${INSTALL} -m 0444 -g root -o root pulsar.pamd   ${sup_dir}
 -	${INSTALL} -m 0444 -g root -o root pulsar.xinetd ${sup_dir}
-+	${INSTALL} -m 0555 -d            ${sup_dir}
++	${BSD_INSTALL_DATA_DIR} ${sup_dir}
 +	${INSTALL} -m 0644 pulsar.conf   ${sup_dir}
 +	${INSTALL} -m 0555 pulsar.init   ${sup_dir}
 +	${INSTALL} -m 0444 pulsar.pamd   ${sup_dir}

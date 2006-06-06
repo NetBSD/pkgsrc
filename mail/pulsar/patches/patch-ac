@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.2 2004/07/07 19:19:54 schmonz Exp $
+$NetBSD: patch-ac,v 1.3 2006/06/06 01:30:26 minskim Exp $
 
---- man/Makefile.in.orig	2002-09-05 20:08:49.000000000 -0400
+--- man/Makefile.in.orig	2002-09-05 17:08:49.000000000 -0700
 +++ man/Makefile.in
 @@ -22,7 +22,7 @@
  .PHONY: all install clean distclean
@@ -21,10 +21,10 @@ $NetBSD: patch-ac,v 1.2 2004/07/07 19:19:54 schmonz Exp $
 -	${INSTALL} -m 0444 -g root -o root *.1.gz ${mandir}/man1/
 -	${INSTALL} -m 0444 -g root -o root *.5.gz ${mandir}/man5/
 -	${INSTALL} -m 0444 -g root -o root *.8.gz ${mandir}/man8/
-+	${INSTALL} -m 0555 -d ${mandir}/man1/
-+	${INSTALL} -m 0555 -d ${mandir}/man5/
-+	${INSTALL} -m 0555 -d ${mandir}/man8/
-+	${INSTALL} -m 0444 *.1.gz ${mandir}/man1/
-+	${INSTALL} -m 0444 *.5.gz ${mandir}/man5/
-+	${INSTALL} -m 0444 *.8.gz ${mandir}/man8/
++	${BSD_INSTALL_MAN_DIR} ${mandir}/man1/
++	${BSD_INSTALL_MAN_DIR} ${mandir}/man5/
++	${BSD_INSTALL_MAN_DIR} ${mandir}/man8/
++	${BSD_INSTALL_MAN} *.1.gz ${mandir}/man1/
++	${BSD_INSTALL_MAN} *.5.gz ${mandir}/man5/
++	${BSD_INSTALL_MAN} *.8.gz ${mandir}/man8/
  
