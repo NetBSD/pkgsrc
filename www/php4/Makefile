@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2006/06/05 18:19:55 minskim Exp $
+# $NetBSD: Makefile,v 1.66 2006/06/06 16:42:02 jlam Exp $
 
 PKGNAME=		php-${PHP_BASE_VERS}
 PKGREVISION=		2
@@ -29,6 +29,7 @@ CONFIGURE_ARGS+=	--enable-fastcgi
 
 CGIDIR=			${PREFIX}/libexec/cgi-bin
 EGDIR=			${PREFIX}/share/examples/php
+MESSAGE_SUBST+=		CGIDIR=${CGIDIR:Q}
 
 # On NetBSD ELF platforms, we need to link libgcc.a whole-archive so that
 # certain symbols from the C++ implementation (__get_eh_context, etc.)
