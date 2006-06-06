@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1840 2006/06/06 03:05:48 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1841 2006/06/06 04:48:19 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -535,9 +535,6 @@ USE_TOOLS+=	tee tsort
 .if ${PKGSRC_LOCKTYPE} != "none"
 USE_TOOLS+=	shlock sleep
 .endif
-
-# Patch
-.include "../../mk/bsd.pkg.patch.mk"
 
 # Tools
 .include "../../mk/tools/bsd.tools.mk"
@@ -1154,6 +1151,9 @@ do-test:
 
 # Extract
 .include "${PKGSRCDIR}/mk/extract/bsd.extract.mk"
+
+# Patch
+.include "${PKGSRCDIR}/mk/patch/bsd.patch.mk"
 
 # Install
 .include "${PKGSRCDIR}/mk/install/bsd.install.mk"
