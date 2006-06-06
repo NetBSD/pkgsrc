@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.105 2006/06/06 06:48:16 rillig Exp $
+# $NetBSD: makevars.map,v 1.106 2006/06/06 07:04:56 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -420,7 +420,7 @@ PKGBASE			Identifier []
 PKGCONFIG_OVERRIDE	List of Pathmask [m:as,c:a]
 PKGDIR			RelativePkgDir
 PKGNAME			PkgName [m:s,c:s,Makefile.*:ds,*:ds]
-PKGNAME_NOREV		Unchecked []
+PKGNAME_NOREV		PkgName []
 PKGREPOSITORY		Unchecked []
 PKGREVISION		PkgRevision [m:s]
 PKGTOOLS_ENV		List of ShellWord
