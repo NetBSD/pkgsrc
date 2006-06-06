@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/27 00:53:10 heinz Exp $
+# $NetBSD: Makefile,v 1.5 2006/06/06 16:54:47 minskim Exp $
 #
 
 DISTNAME=	NeTraMet44
@@ -12,6 +12,9 @@ COMMENT=	NEtwork TRaffic METer
 GNU_CONFIGURE=	YES
 
 CONFIGURE_ARGS+=--without-x
+MAKE_ENV+=	PCAP_LIB=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libpcap}/lib
+
+.include "../../net/libpcap/buildlink3.mk"
 
 post-patch:
 	for i in `${FIND} ${WRKSRC} -name Makefile.in -print`; do	\
