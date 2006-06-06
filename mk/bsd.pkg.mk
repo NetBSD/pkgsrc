@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1842 2006/06/06 06:30:29 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1843 2006/06/06 15:28:51 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -19,6 +19,15 @@
 ############################################################################
 
 .include "../../mk/bsd.prefs.mk"
+
+.include "${PKGSRCDIR}/mk/flavor/bsd.flavor-vars.mk"
+.include "${PKGSRCDIR}/mk/check/bsd.check-vars.mk"
+.include "${PKGSRCDIR}/mk/depends/bsd.depends-vars.mk"
+.include "${PKGSRCDIR}/mk/fetch/bsd.fetch-vars.mk"
+.include "${PKGSRCDIR}/mk/extract/bsd.extract-vars.mk"
+.include "${PKGSRCDIR}/mk/patch/bsd.patch-vars.mk"
+.include "${PKGSRCDIR}/mk/install/bsd.install-vars.mk"
+
 .include "../../mk/bsd.hacks.mk"
 
 # This has to come first to avoid showing all BUILD_DEFS added by this

@@ -1,8 +1,8 @@
-# $NetBSD: bsd.patch-vars.mk,v 1.1 2006/06/06 04:48:19 jlam Exp $
+# $NetBSD: bsd.patch-vars.mk,v 1.2 2006/06/06 15:28:52 jlam Exp $
 #
-# This Makefile fragment is included to bsd.prefs.mk and defines some
-# variables which must be defined earlier than where bsd.patch.mk is
-# included.
+# This Makefile fragment is included separately by bsd.pkg.mk and
+# defines some variables which must be defined earlier than where
+# bsd.patch.mk is included.
 #
 # The following variables may be set in a package Makefile:
 #
@@ -22,7 +22,8 @@
 #	the patches in ${PATCHDIR}.
 #
 
-PATCHDIR?=	${.CURDIR}/patches
+# The default PATCHDIR is currently set in bsd.prefs.mk
+#PATCHDIR?=	${.CURDIR}/patches
 
 .if (defined(PATCHFILES) && !empty(PATCHFILES)) || \
     (defined(PATCHDIR) && exists(${PATCHDIR})) || \
