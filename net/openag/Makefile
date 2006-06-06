@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/04 21:30:21 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/06/06 18:02:48 joerg Exp $
 #
 
 DISTNAME=	OpenAG-1.1.1
@@ -14,6 +14,7 @@ COMMENT=	Open Audio Galaxy client
 DEPENDS+=	wget-[0-9]*:../../net/wget
 
 GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c c++
 
 post-install:
 		${INSTALL_MAN_DIR} ${PREFIX}/share/doc/OpenAG
