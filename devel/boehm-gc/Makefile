@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/04/14 18:14:34 heinz Exp $
+# $NetBSD: Makefile,v 1.56 2006/06/06 17:33:28 rillig Exp $
 
 DISTNAME=	gc6.7
 PKGNAME=	${DISTNAME:S/gc/boehm-gc-/}
@@ -47,7 +47,7 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/gc.man ${PREFIX}/${PKGMANDIR}/man3/gc.3
 
 do-test:
-	@cd ${WRKSRC}; \
+	cd ${WRKSRC} && \
 	${RM} -f gctest && ${MAKE_PROGRAM} gctest && ./gctest && \
 	${RM} -f test_cpp && ${MAKE_PROGRAM} test_cpp && ./test_cpp 10
 
