@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.430 2006/06/06 10:26:46 seb Exp $
+$NetBSD: CHANGES-2006,v 1.431 2006/06/06 12:34:31 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2917,3 +2917,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/pkglint to 4.64 [rillig 2006-06-06]
 	Added devel/p5-Test-File-Contents version 0.03 [seb 2006-06-06]
 	Added devel/p5-Module-Install-Substitute version 0.02 [seb 2006-06-06]
+	Updated mail/gld to 1.6nb1 [geert 2006-06-06]
