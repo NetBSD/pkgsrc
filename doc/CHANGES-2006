@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.429 2006/06/06 09:59:57 seb Exp $
+$NetBSD: CHANGES-2006,v 1.430 2006/06/06 10:26:46 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2916,3 +2916,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/pulsar to 0.1.1nb4 [minskim 2006-06-06]
 	Updated pkgtools/pkglint to 4.64 [rillig 2006-06-06]
 	Added devel/p5-Test-File-Contents version 0.03 [seb 2006-06-06]
+	Added devel/p5-Module-Install-Substitute version 0.02 [seb 2006-06-06]
