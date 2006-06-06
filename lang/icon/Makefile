@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2006/03/19 15:57:36 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2006/06/06 17:28:02 rillig Exp $
 
-DISTNAME=       	icon.v942src
+DISTNAME=		icon.v942src
 PKGNAME=		icon-9.4.2
 PKGREVISION=		1
 CATEGORIES=		lang
@@ -39,8 +39,8 @@ NAME=	sun_gcc
 .  elif !empty(CC_VERSION:MSun)
 NAME=	sun_sunc
 .  else
-PKG_FAIL_REASON+=	"${PKGNAME} does not know about ${CC_VERSION}"
-. endif
+PKG_FAIL_REASON+=	"${PKGNAME} does not know about "${CC_VERSION:Q}
+.  endif
 
 .  if ${MACHINE_ARCH} == "sparc"
 .  else
@@ -58,12 +58,12 @@ pre-build:
 	${MKDIR} ${WRKSRC}/lib/icon
 
 do-configure:
-	cd ${WRKSRC}/config/netbsd; \
+	cd ${WRKSRC}/config/netbsd && \
 	${SED} -e 's:@X11BASE@:${X11BASE}:g' define.h.in \
 		> define.h
-	cd ${WRKSRC}; ${MAKE} ${CONFIGURE_TARGET} name=${NAME}
+	cd ${WRKSRC} && ${MAKE} ${CONFIGURE_TARGET} name=${NAME}
 
 do-install:
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE} dest=${PREFIX} Install
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} dest=${PREFIX} Install
 
 .include "../../mk/bsd.pkg.mk"
