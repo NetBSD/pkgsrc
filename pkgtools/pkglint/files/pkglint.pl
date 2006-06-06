@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.608 2006/06/06 11:41:40 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.609 2006/06/06 16:00:49 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2060,12 +2060,13 @@ sub load_tool_names() {
 		foreach my $line (@{$lines}) {
 			if ($line->text =~ regex_mk_include) {
 				my ($includefile) = ($1);
-				if ($includefile =~ qr"^\.\./\.\./mk/tools/(.*)$") {
+				if ($includefile =~ qr"^\$\{PKGSRCDIR\}/mk/tools/(.*)$") {
 					push(@tool_files, $1);
 				}
 			}
 		}
 	}
+	assert(scalar(@tool_files) > 1);
 
 	#
 	# Scan the tool files for the actual definitions of the tools.
