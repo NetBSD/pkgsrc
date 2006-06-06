@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/06/02 18:27:59 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/06/06 16:45:31 rillig Exp $
 #
 
 DISTNAME=		mod_rpaf-0.5
@@ -12,9 +12,10 @@ COMMENT=		Remaps reverse-proxied connections to "real" requesting IPs
 
 CONFLICTS=	ap-rpaf-[0-9]*
 
-APACHE_MODULE=		# defined
+APACHE_MODULE=		yes
 INSTALLATION_DIRS=	share/doc
 
+.include "../../mk/bsd.prefs.mk"
 .include "../../mk/apache.mk"
 
 do-build:
