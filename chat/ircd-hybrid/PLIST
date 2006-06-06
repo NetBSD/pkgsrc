@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/01/10 22:26:32 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/06/06 13:04:55 adrianp Exp $
 bin/encspeed
 bin/ircd
 bin/ircd-hybrid-mkpasswd
@@ -6,6 +6,7 @@ bin/servlink
 lib/ircd-hybrid/modules/autoload/m_accept.so
 lib/ircd-hybrid/modules/autoload/m_admin.so
 lib/ircd-hybrid/modules/autoload/m_away.so
+lib/ircd-hybrid/modules/autoload/m_cap.so
 lib/ircd-hybrid/modules/autoload/m_capab.so
 lib/ircd-hybrid/modules/autoload/m_cburst.so
 lib/ircd-hybrid/modules/autoload/m_challenge.so
@@ -49,7 +50,7 @@ lib/ircd-hybrid/modules/autoload/m_rxline.so
 lib/ircd-hybrid/modules/autoload/m_set.so
 lib/ircd-hybrid/modules/autoload/m_stats.so
 lib/ircd-hybrid/modules/autoload/m_svinfo.so
-lib/ircd-hybrid/modules/autoload/m_tb.so
+lib/ircd-hybrid/modules/autoload/m_tburst.so
 lib/ircd-hybrid/modules/autoload/m_testline.so
 lib/ircd-hybrid/modules/autoload/m_testmask.so
 lib/ircd-hybrid/modules/autoload/m_time.so
@@ -100,6 +101,7 @@ share/doc/ircd-hybrid/doc/serverhide.txt
 share/doc/ircd-hybrid/doc/technical/Persistent_Clients.txt
 share/doc/ircd-hybrid/doc/technical/README.openssl
 share/doc/ircd-hybrid/doc/technical/cryptlink.txt
+share/doc/ircd-hybrid/doc/technical/draft-mitchell-irc-capabilities-01.txt
 share/doc/ircd-hybrid/doc/technical/event.txt
 share/doc/ircd-hybrid/doc/technical/fd-management.txt
 share/doc/ircd-hybrid/doc/technical/file-management.txt
