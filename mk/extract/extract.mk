@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.2 2006/06/06 06:30:29 jlam Exp $
+# $NetBSD: extract.mk,v 1.3 2006/06/06 16:33:48 rillig Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -6,10 +6,6 @@
 #    EXTRACT_CMD is a shell command list that extracts the contents of
 #	an archive named by the variable ${DOWNLOADED_DISTFILE} to the
 #	current working directory.  The default is ${EXTRACT_CMD_DEFAULT}.
-#
-#    EXTRACT_CMD_DEFAULT uses the "extract" script to unpack archives.  The
-#	precise manner in which extraction occurs may be tweaked by setting
-#	EXTRACT_OPTS, EXTRACT_USING and EXTRACT_ELEMENTS.
 #
 #    EXTRACT_OPTS is a list of options to pass to the "extract" script
 #	when using EXTRACT_CMD_DEFAULT.  See the comments at the head of
@@ -33,6 +29,10 @@
 #	overrides, e.g.
 #
 #	    EXTRACT_CMD= ${TAIL} +25 ${DOWNLOADED_DISTFILE} > foo.pl
+#
+#    EXTRACT_CMD_DEFAULT uses the "extract" script to unpack archives.  The
+#	precise manner in which extraction occurs may be tweaked by setting
+#	EXTRACT_OPTS, EXTRACT_USING and EXTRACT_ELEMENTS.
 #
 
 _EXTRACT_COOKIE=	${WRKDIR}/.extract_done
