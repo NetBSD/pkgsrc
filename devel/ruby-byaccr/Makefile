@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/03/24 21:12:53 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/06/06 00:15:28 minskim Exp $
 
 DISTNAME=	byaccr-0.1
 PKGNAME=	ruby-${DISTNAME}
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.idaemons.org/pub/distfiles/ruby/
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	# not available
 COMMENT=	Parser generator for ruby based on 'Berkeley Yacc/Yacc for Java'
+
+MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP} BINMODE=${BINMODE}
 EXAMPLES=	Makefile cal.y calfunc.rb main.rb
 
 post-install:
