@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.605 2006/06/06 07:04:56 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.606 2006/06/06 09:56:22 seb Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1941,7 +1941,7 @@ sub get_deprecated_map() {
 my $load_dist_sites_url2name = undef;
 my $load_dist_sites_names = undef;
 sub load_dist_sites() {
-	my ($fname) = ("${current_dir}/${pkgsrcdir}/mk/bsd.sites.mk");
+	my ($fname) = ("${current_dir}/${pkgsrcdir}/mk/fetch/sites.mk");
 	my ($lines) = load_file($fname);
 	my ($varname) = undef;
 	my ($ignoring) = false;
