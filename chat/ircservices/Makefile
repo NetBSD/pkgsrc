@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2006/04/22 09:22:06 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2006/06/06 12:35:04 adrianp Exp $
 #
 
-DISTNAME=	ircservices-5.0.56
-PKGREVISION=	2
+DISTNAME=	ircservices-5.0.57
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.esper.net/ircservices/ \
 		ftp://ftp.esper.net/ircservices/old/ \
@@ -23,28 +22,28 @@ CONFIGURE_ARGS+=	-prefix ${PREFIX:Q}
 SUBST_CLASSES+=		install
 SUBST_STAGE.install=	post-patch
 SUBST_FILES.install=	install-script tools/ircservices-chk.in
-SUBST_SED.install=	-e "s|/bin/cp|${CP}|g" \
-			-e "s|/bin/chown|${CHOWN}|g" \
-			-e "s|/bin/chgrp|${CHGRP}|g" \
-			-e "s|/bin/chmod|${CHMOD}|g" \
-			-e "s|@DATDEST@|${VARBASE}/run|g"
+SUBST_SED.install=	-e "s|/bin/cp|${CP}|g"
+SUBST_SED.install+=	-e "s|/bin/chown|${CHOWN}|g"
+SUBST_SED.install+=	-e "s|/bin/chgrp|${CHGRP}|g"
+SUBST_SED.install+= 	-e "s|/bin/chmod|${CHMOD}|g"
+SUBST_SED.install+= 	-e "s|@DATDEST@|${VARBASE}/run|g"
 SUBST_MESSAGE.install=	Fixing scripts.
 
 SUBST_CLASSES+=		utils
 SUBST_STAGE.utils=	post-patch
 SUBST_FILES.utils=	data/Makefile tools/Makefile
-SUBST_SED.utils= 	-e "s|chgrp|${CHGRP}|g" \
-			-e "s|chmod|${CHMOD}|g" \
-			-e "s|find|${FIND}|g"
+SUBST_SED.utils= 	-e "s|chgrp|${CHGRP}|g"
+SUBST_SED.utils+=	-e "s|chmod|${CHMOD}|g"
+SUBST_SED.utils+=	-e "s|find|${FIND}|g"
 SUBST_MESSAGE.utils=	Fixing paths of hard-coded utilities.
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	post-patch
 SUBST_FILES.conf=	data/example-ircservices.conf data/example-modules.conf
-SUBST_SED.conf=		-e "s|/usr/local|${PREFIX}|g" \
-			-e "s|ircservices.log|${VARBASE}/log/ircservices.log|g"\
-			-e "s|ircservices.pid|${VARBASE}/run/ircservices.pid|g"\
-			-e "s|/usr/lib/sendmail|/usr/sbin/sendmail|g"
+SUBST_SED.conf=		-e "s|/usr/local|${PREFIX}|g"
+SUBST_SED.conf+=	-e "s|ircservices.log|${VARBASE}/log/ircservices.log|g"
+SUBST_SED.conf+=	-e "s|ircservices.pid|${VARBASE}/run/ircservices.pid|g"
+SUBST_SED.conf+=	-e "s|/usr/lib/sendmail|/usr/sbin/sendmail|g"
 SUBST_MESSAGE.conf=	Fixing configuration files.
 
 CONF_FILES_PERMS=	${PREFIX}/share/examples/ircservices/ircservices.conf \
@@ -75,7 +74,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/*.html \
 		${PREFIX}/share/doc/html/ircservices
 	${INSTALL_MAN} ${WRKSRC}/docs/*.8 ${PREFIX}/man/man8
-	@${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/services/helpfiles
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/services/helpfiles
 	${INSTALL_DATA} ${WRKSRC}/data/example-ircservices.conf \
 		${PREFIX}/share/examples/ircservices/ircservices.conf
 	${INSTALL_DATA} ${WRKSRC}/data/example-modules.conf \
