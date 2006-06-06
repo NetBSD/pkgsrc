@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/10/13 20:42:48 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/06/06 15:34:31 joerg Exp $
 #
 
 DISTNAME=		synce-rra-0.9.1
@@ -13,6 +13,7 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://synce.sourceforge.net/
 COMMENT=		Remote Replication Agent Connection protocol library
 
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
