@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.427 2006/06/06 01:09:43 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.428 2006/06/06 05:37:17 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2914,3 +2914,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated biology/bioperl to 0.7.0nb2 [minskim 2006-06-05]
 	Updated math/mathomatic to 12.5.15 [minskim 2006-06-05]
 	Updated mail/pulsar to 0.1.1nb4 [minskim 2006-06-06]
+	Updated pkgtools/pkglint to 4.64 [rillig 2006-06-06]
