@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.73 2006/06/06 07:51:44 snj Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.74 2006/06/06 23:46:58 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -149,3 +149,5 @@ Pullup ticket 1685 - requested by adrianp
 security update for drupal
 Pullup ticket 1686 - requested by salo
 security fix for freetype2
+Pullup ticket 1688 - requested by adrianp
+security update for snort
