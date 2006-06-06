@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: check-wrkref.mk,v 1.2 2006/06/06 18:07:50 jlam Exp $
 
 .if defined(PKG_DEVELOPER)
 CHECK_WRKREF?=		tools
@@ -9,22 +9,21 @@ CHECK_WRKREF?=		no
 # CHECK_WRKREF_SKIP is a list of shell globs.  Installed files that
 # match these globs are skipped when running the check-wrkref target.
 #
-.if make(check-wrkref)
-.  if !defined(_CHECK_WRKREF_SKIP_FILTER)
+.if !defined(_CHECK_WRKREF_SKIP_FILTER)
 _CHECK_WRKREF_SKIP_FILTER=	${TRUE}
-.    if defined(CHECK_WRKREF_SKIP) && !empty(CHECK_WRKREF_SKIP)
+.  if defined(CHECK_WRKREF_SKIP) && !empty(CHECK_WRKREF_SKIP)
 _CHECK_WRKREF_SKIP_FILTER=	case "$$file" in
-.      for _pattern_ in ${CHECK_WRKREF_SKIP}
-_CHECK_WRKREF_SKIP_FILTER+=	${_pattern_}) continue ;;
-.      endfor
+_CHECK_WRKREF_SKIP_FILTER+=	${_CHECK_WRKREF_SKIP_FILTER_BODY}
 _CHECK_WRKREF_SKIP_FILTER+=	*) ;;
 _CHECK_WRKREF_SKIP_FILTER+=	esac
-.    endif
 .  endif
-MAKEVARS+=	_CHECK_WRKREF_SKIP_FILTER
-.else
-_CHECK_WRKREF_SKIP_FILTER=	${TRUE}
 .endif
+.if !defined(_CHECK_WRKREF_SKIP_FILTER_BODY)
+.  for _pattern_ in ${CHECK_WRKREF_SKIP}
+_CHECK_WRKREF_SKIP_FILTER_BODY+=	${_pattern_}) continue ;;
+.  endfor
+.endif
+MAKEVARS+=	_CHECK_WRKREF_SKIP_FILTER_BODY
 
 _CHECK_WRKREF:=		${CHECK_WRKREF}
 .if !empty(_CHECK_WRKREF:Mwork)
