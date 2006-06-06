@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.1 2006/06/06 03:05:48 jlam Exp $
+# $NetBSD: fetch.mk,v 1.2 2006/06/06 03:36:00 jlam Exp $
 
 ######################################################################
 ### fetch (PUBLIC)
@@ -274,10 +274,10 @@ do-fetch:
 			${FALSE} ;;					\
 		esac;							\
 	else								\
-		${WARNING_MSG} "No ${PKGVULNDIR}/pkg-vulnerabilities file found,"; \
-		${WARNING_MSG} "skipping vulnerability checks. To fix, install"; \
-		${WARNING_MSG} "the pkgsrc/security/audit-packages package and run"; \
-		${WARNING_MSG} "\`\`${LOCALBASE}/sbin/download-vulnerability-list''."; \
+		${PHASE_MSG} "Skipping vulnerability checks.";		\
+		${WARNING_MSG} "No ${PKGVULNDIR}/pkg-vulnerabilities file found."; \
+		${WARNING_MSG} "To fix, install the pkgsrc/security/audit-packages"; \
+		${WARNING_MSG} "package and run: \`\`${LOCALBASE}/sbin/download-vulnerability-list''."; \
 	fi
 .  endif
 .  if !empty(_ALLFILES)
