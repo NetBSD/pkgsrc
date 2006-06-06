@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2006/04/23 00:12:36 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2006/06/06 13:04:55 adrianp Exp $
 
-DISTNAME=	ircd-hybrid-7.2.0
-EXTRACT_SUFX=	.tgz
-PKGREVISION=	1
+DISTNAME=	ircd-hybrid-7.2.1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ircd-hybrid/}
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://ircd-hybrid.com/
@@ -46,21 +45,21 @@ SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	etc/example.conf etc/example.efnet.conf \
 			etc/example.conf.quick doc/ircd.8
-SUBST_SED.paths=	-e "s|/usr/local/ircd/etc|${PKG_SYSCONFDIR}|g" \
-			-e "s|/usr/local/ircd/bin|${PREFIX}/bin|g" \
-			-e "s|/usr/local/ircd/modules|${PREFIX}/lib/ircd-hybrid/modules|g" \
-			-e "s|/usr/share/ircd|${PKG_SYSCONFDIR}|g" \
-			-e "s|/var/log|${VARBASE}/log/ircd-hybrid/logs|g"
+SUBST_SED.paths=	-e "s|/usr/local/ircd/etc|${PKG_SYSCONFDIR}|g"
+SUBST_SED.paths+=	-e "s|/usr/local/ircd/bin|${PREFIX}/bin|g"
+SUBST_SED.paths+=	-e "s|/usr/local/ircd/modules|${PREFIX}/lib/ircd-hybrid/modules|g"
+SUBST_SED.paths+=	-e "s|/usr/share/ircd|${PKG_SYSCONFDIR}|g"
+SUBST_SED.paths+=	-e "s|/var/log|${VARBASE}/log/ircd-hybrid/logs|g"
 
 SUBST_CLASSES+=		bpaths
 SUBST_MESSAGE.bpaths=	Fixing hardcoded build paths.
 SUBST_STAGE.bpaths=	post-configure
 SUBST_FILES.bpaths=	include/defaults.h
-SUBST_SED.bpaths=	-e "s|etc|etc/ircd-hybrid|g" \
-			-e "s|modules|lib/ircd-hybrid/modules|g" \
-			-e "s|IRCD_PREFIX \"/logs\"|\"${VARBASE}/log/ircd-hybrid/logs\"|g" \
-			-e "s|ETCPATH \"/ircd.pid\"|\"${VARBASE}/run/ircd-hybrid/ircd.pid\"|g" \
-			-e "s|messages|share/ircd-hybrid/messages|g"
+SUBST_SED.bpaths=	-e "s|etc|etc/ircd-hybrid|g"
+SUBST_SED.bpaths+=	-e "s|modules|lib/ircd-hybrid/modules|g"
+SUBST_SED.bpaths+=	-e "s|IRCD_PREFIX \"/logs\"|\"${VARBASE}/log/ircd-hybrid/logs\"|g"
+SUBST_SED.bpaths+=	-e "s|ETCPATH \"/ircd.pid\"|\"${VARBASE}/run/ircd-hybrid/ircd.pid\"|g"
+SUBST_SED.bpaths+=	-e "s|messages|share/ircd-hybrid/messages|g"
 
 CONFIGURE_ARGS+=	--with-nicklen=${IRCD_HYBRID_NICLEN:Q}
 CONFIGURE_ARGS+=	--with-topiclen=${IRCD_HYBRID_TOPICLEN:Q}
@@ -101,8 +100,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/tools/README.mkpasswd \
 		${HYBRID_DOC}/README.ircd-hybrid-mkpasswd
 
-	@${RM} ${WRKSRC}/doc/Makefile
-	@${RM} ${WRKSRC}/doc/Makefile.in
+	${RM} ${WRKSRC}/doc/Makefile
+	${RM} ${WRKSRC}/doc/Makefile.in
 	cd ${WRKSRC}/doc && ${PAX} -rwppm . ${HYBRID_DOC}/doc
 
 	cd ${WRKSRC}/messages && \
