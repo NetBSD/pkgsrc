@@ -1,16 +1,7 @@
-# $NetBSD: bsd.pkg.extract.mk,v 1.25 2006/06/05 22:49:44 jlam Exp $
-#
-# This Makefile fragment is included to bsd.pkg.mk and defines the
-# relevant variables and targets for the "extract" phase.
+# $NetBSD: extract.mk,v 1.1 2006/06/06 03:05:48 jlam Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
-#
-#    EXTRACT_ONLY is a list of distfiles relative to ${_DISTDIR} to
-#	extract and defaults to ${DISTFILES}.
-#
-#    EXTRACT_SUFX is the suffix for the default distfile to be
-#	extracted.  The default suffix is ".tar.gz".
 #
 #    EXTRACT_CMD is a shell command list that extracts the contents of
 #	an archive named by the variable ${DOWNLOADED_DISTFILE} to the
@@ -43,68 +34,96 @@
 #
 #	    EXTRACT_CMD= ${TAIL} +25 ${DOWNLOADED_DISTFILE} > foo.pl
 #
-# The following targets are defined by bsd.pkg.extract.mk:
-#
-#    extract is the target that is invoked by the user to perform
-#	extraction.
-#
-#    do-extract is the target that causes the actual extraction of
-#	the distfiles to occur during the "extract" phase.  This target
-#	may be overridden in a package Makefile.
-#
-#    {pre,post}-extract are the targets that are invoked before and after
-#	do-extract, and may be overridden in a package Makefile.
-#
 
-EXTRACT_ONLY?=		${DISTFILES}
-EXTRACT_SUFX?=		.tar.gz
+_EXTRACT_COOKIE=	${WRKDIR}/.extract_done
+
+######################################################################
+### extract (PUBLIC)
+######################################################################
+### extract is a public target to perform extraction.
+###
+_EXTRACT_TARGETS+=	checksum
+_EXTRACT_TARGETS+=	${WRKDIR}
+_EXTRACT_TARGETS+=	depends
+_EXTRACT_TARGETS+=	acquire-extract-lock
+_EXTRACT_TARGETS+=	${_EXTRACT_COOKIE}
+_EXTRACT_TARGETS+=	release-extract-lock
+
+.PHONY: extract
+.if !target(extract)
+extract: ${_EXTRACT_TARGETS}
+.endif
+
+.PHONY: acquire-extract-lock release-extract-lock
+acquire-extract-lock: acquire-lock
+release-extract-lock: release-lock
+
+.if !exists(${_EXTRACT_COOKIE})
+${_EXTRACT_COOKIE}: real-extract
+.else
+${_EXTRACT_COOKIE}:
+	@${DO_NADA}
+.endif
+
+######################################################################
+### real-extract (PRIVATE)
+######################################################################
+### real-extract is a helper target onto which one can hook all of the
+### targets that do the actual extraction work.
+###
+_REAL_EXTRACT_TARGETS+=	extract-check-interactive
+_REAL_EXTRACT_TARGETS+=	extract-message
+_REAL_EXTRACT_TARGETS+=	extract-vars
+_REAL_EXTRACT_TARGETS+=	pre-extract
+_REAL_EXTRACT_TARGETS+=	do-extract
+_REAL_EXTRACT_TARGETS+=	post-extract
+_REAL_EXTRACT_TARGETS+=	extract-cookie
+
+.PHONY: real-extract
+real-extract: ${_REAL_EXTRACT_TARGETS}
+
+.PHONY: extract-message
+extract-message:
+	@${PHASE_MSG} "Extracting for ${PKGNAME}"
+
+######################################################################
+### extract-check-interactive (PRIVATE)
+######################################################################
+### extract-check-interactive checks whether we can do an interactive
+### extraction or not.
+###
+extract-check-interactive:
+.if !empty(INTERACTIVE_STAGE:Mextract) && defined(BATCH)
+	@${ERROR_MSG} "The extract stage of this package requires user interaction"
+	@${ERROR_MSG} "Please extract manually with:"
+	@${ERROR_MSG} "	\"cd ${PKGSRCDIR}/${PKGPATH} && ${MAKE} extract\""
+	@${TOUCH} ${_INTERACTIVE_COOKIE}
+	@${FALSE}
+.else
+	@${DO_NADA}
+.endif
+
+######################################################################
+### extract-cookie (PRIVATE)
+######################################################################
+### extract-cookie creates the "extract" cookie file.  The contents
+### are the name of the package.
+###
+.PHONY: extract-cookie
+extract-cookie:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_EXTRACT_COOKIE:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${_EXTRACT_COOKIE}
+
+######################################################################
+### pre-extract, do-extract, post-extract (PUBLIC, override)
+######################################################################
+### {pre,do,post}-extract are the heart of the package-customizable
+### extract targets, and may be overridden within a package Makefile.
+###
+.PHONY: pre-extract do-extract post-extract
+
 EXTRACT_USING?=		nbtar
 EXTRACT_ELEMENTS?=	# empty
-
-###
-### Discover which tools we need based on the file extensions of the
-### distfiles.
-###
-_EXTRACT_PATTERNS=	${EXTRACT_ONLY} ${EXTRACT_SUFX}
-
-.if !empty(_EXTRACT_PATTERNS:M*.tar) || \
-    !empty(_EXTRACT_PATTERNS:M*.tar.*) || \
-    !empty(_EXTRACT_PATTERNS:M*.tbz) || \
-    !empty(_EXTRACT_PATTERNS:M*.tbz2) || \
-    !empty(_EXTRACT_PATTERNS:M*.tgz) || \
-    !empty(_EXTRACT_PATTERNS:M*-tar.gz) || \
-    !empty(_EXTRACT_PATTERNS:M*_tar.gz)
-.  if !empty(EXTRACT_USING:Mgtar)
-USE_TOOLS+=	gtar
-.  elif !empty(EXTRACT_USING:Mnbtar)
-USE_TOOLS+=	tar
-.  else
-USE_TOOLS+=	pax
-.  endif
-.endif
-.if !empty(_EXTRACT_PATTERNS:M*.bz2) || \
-    !empty(_EXTRACT_PATTERNS:M*.tbz) || \
-    !empty(_EXTRACT_PATTERNS:M*.tbz2)
-USE_TOOLS+=	bzcat
-.endif
-.if !empty(_EXTRACT_PATTERNS:M*.zip)
-USE_TOOLS+=	unzip
-.endif
-.if !empty(_EXTRACT_PATTERNS:M*.lzh) || \
-    !empty(_EXTRACT_PATTERNS:M*.lha)
-USE_TOOLS+=	lha
-.endif
-.if !empty(_EXTRACT_PATTERNS:M*.gz) || \
-    !empty(_EXTRACT_PATTERNS:M*.tgz) || \
-    !empty(_EXTRACT_PATTERNS:M*.Z)
-USE_TOOLS+=	gzcat
-.endif
-.if !empty(_EXTRACT_PATTERNS:M*.zoo)
-USE_TOOLS+=	unzoo
-.endif
-.if !empty(_EXTRACT_PATTERNS:M*.rar)
-USE_TOOLS+=	unrar
-.endif
 
 ###
 ### Build the default extraction command
@@ -143,7 +162,7 @@ EXTRACT_OPTS+=	${TOOLS_PAX:D	-t ${TOOLS_PAX}}
 
 EXTRACT_CMD_DEFAULT=							\
 	${SETENV} ${_EXTRACT_ENV}					\
-	${SH} ${.CURDIR}/../../mk/scripts/extract			\
+	${SH} ${PKGSRCDIR}//mk/extract/extract				\
 		${EXTRACT_OPTS}						\
 		${DOWNLOADED_DISTFILE} ${EXTRACT_ELEMENTS}
 
@@ -151,7 +170,6 @@ EXTRACT_CMD?=	${EXTRACT_CMD_DEFAULT}
 
 DOWNLOADED_DISTFILE=	$${extract_file}
 
-.PHONY: do-extract
 .if !target(do-extract)
 do-extract: ${WRKDIR}
 .  for __file__ in ${EXTRACT_ONLY}
@@ -161,55 +179,6 @@ do-extract: ${WRKDIR}
 .  endfor
 .endif
 
-_EXTRACT_COOKIE=	${WRKDIR}/.extract_done
-
-_EXTRACT_TARGETS+=	checksum
-_EXTRACT_TARGETS+=	${WRKDIR}
-_EXTRACT_TARGETS+=	depends
-_EXTRACT_TARGETS+=	acquire-extract-lock
-_EXTRACT_TARGETS+=	${_EXTRACT_COOKIE}
-_EXTRACT_TARGETS+=	release-extract-lock
-
-.ORDER: ${_EXTRACT_TARGETS}
-
-.PHONY: extract
-extract: ${_EXTRACT_TARGETS}
-
-.PHONY: acquire-extract-lock release-extract-lock
-acquire-extract-lock: acquire-lock
-release-extract-lock: release-lock
-
-${_EXTRACT_COOKIE}:
-.if !empty(INTERACTIVE_STAGE:Mextract) && defined(BATCH)
-	@${ECHO} "*** The extract stage of this package requires user interaction"
-	@${ECHO} "*** Please extract manually with \"cd ${PKGDIR} && ${MAKE} extract\""
-	@${TOUCH} ${_INTERACTIVE_COOKIE}
-	@${FALSE}
-.else
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-extract DEPENDS_TARGET=${DEPENDS_TARGET:Q} PKG_PHASE=extract
-.endif
-
-_REAL_EXTRACT_TARGETS+=	extract-message
-_REAL_EXTRACT_TARGETS+=	extract-vars
-_REAL_EXTRACT_TARGETS+=	pre-extract
-_REAL_EXTRACT_TARGETS+=	do-extract
-_REAL_EXTRACT_TARGETS+=	post-extract
-_REAL_EXTRACT_TARGETS+=	extract-cookie
-
-.ORDER: ${_REAL_EXTRACT_TARGETS}
-
-.PHONY: extract-message
-extract-message:
-	@${PHASE_MSG} "Extracting for ${PKGNAME}"
-
-.PHONY: extract-cookie
-extract-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${_EXTRACT_COOKIE}
-
-.PHONY: real-extract
-real-extract: ${_REAL_EXTRACT_TARGETS}
-
-.PHONY: pre-extract post-extract
 .if !target(pre-extract)
 pre-extract:
 	@${DO_NADA}
