@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/18 15:17:46 salo Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/06 14:53:06 salo Exp $
 
 DISTNAME=		suse_gdk-pixbuf-${SUSE_VERSION}
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE100}
 DISTFILES=		${RPMFILES}
