@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/30 05:00:05 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/06/06 20:58:28 joerg Exp $
 
 DISTNAME=		binutils-2.12.1
 PKGNAME=		cross-h8300-hms-binutils-2.12.1
@@ -28,6 +28,11 @@ INSTALLATION_DIRS=	${H8300_PREFIX}
 
 post-extract:
 	${MKDIR} ${WRKSRC}
+
+pre-configure:
+	${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${SRCDIR}
+	${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${SRCDIR}
+
 
 post-install:
 	for f in h8300-hms-size      h8300-hms-objdump h8300-hms-ar \
