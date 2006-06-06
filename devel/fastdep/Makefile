@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:29:14 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/06 14:11:46 joerg Exp $
 #
 
 DISTNAME=	fastdep-0.16
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.irule.be/bvh/c++/fastdep/
 COMMENT=	Dependency generator for C/C++ files
 
 GNU_CONFIGURE=	YES
+USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin
