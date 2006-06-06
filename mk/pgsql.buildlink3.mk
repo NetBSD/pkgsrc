@@ -1,4 +1,4 @@
-# $NetBSD: pgsql.buildlink3.mk,v 1.15 2006/03/20 14:48:45 uebayasi Exp $
+# $NetBSD: pgsql.buildlink3.mk,v 1.16 2006/06/06 19:43:43 joerg Exp $
 
 .if !defined(PGVERSION_MK)
 PGVERSION_MK=	defined
@@ -6,7 +6,7 @@ PGVERSION_MK=	defined
 .include "../../mk/bsd.prefs.mk"
 
 PGSQL_VERSION_DEFAULT?=		80
-PGSQL_VERSIONS_ACCEPTED?=	81 80 74 73
+PGSQL_VERSIONS_ACCEPTED?=	81 80 74
 
 # transform the list into individual variables
 .for pv in ${PGSQL_VERSIONS_ACCEPTED}
@@ -91,9 +91,6 @@ PGPKGSRCDIR=	../../databases/postgresql80-client
 .elif ${_PGSQL_VERSION} == "74"
 PGSQL_TYPE=	postgresql74-lib
 PGPKGSRCDIR=	../../databases/postgresql74-lib
-.elif ${_PGSQL_VERSION} == "73"
-PGSQL_TYPE=	postgresql73-lib
-PGPKGSRCDIR=	../../databases/postgresql73-lib
 .else
 # force an error
 PGSQL_TYPE=		none
