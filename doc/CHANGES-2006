@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.432 2006/06/06 12:36:13 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.433 2006/06/06 13:05:59 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2919,3 +2919,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added devel/p5-Module-Install-Substitute version 0.02 [seb 2006-06-06]
 	Updated mail/gld to 1.6nb1 [geert 2006-06-06]
 	Updated chat/ircservices to 5.0.57 [adrianp 2006-06-06]
+	Updated chat/ircd-hybrid to 7.2.1 [adrianp 2006-06-06]
