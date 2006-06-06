@@ -1,8 +1,8 @@
-# $NetBSD: bsd.install-vars.mk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: bsd.install-vars.mk,v 1.2 2006/06/06 15:28:52 jlam Exp $
 #
-# This Makefile fragment is included by bsd.prefs.mk and defines some
-# variables which must be defined earlier than where bsd.install.mk
-# is included.
+# This Makefile fragment is included separately by bsd.pkg.mk and
+# defines some variables which must be defined earlier than where
+# bsd.install.mk is included.
 #
 
 # If a package sets INSTALLATION_DIRS, then it's known to pre-create
