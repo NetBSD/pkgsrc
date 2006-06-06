@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.2 2006/06/05 22:49:44 jlam Exp $
+# $NetBSD: metadata.mk,v 1.3 2006/06/06 19:49:52 jlam Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -9,7 +9,7 @@
 ### Temporary package meta-data directory.  The contents of this directory
 ### are copied directly into the real package meta-data directory.
 ###
-PKG_DB_TMPDIR=	${WRKDIR}/.pkgdb/${PKGNAME}
+PKG_DB_TMPDIR=	${WRKDIR}/.pkgdb
 
 unprivileged-install-hook: ${PKG_DB_TMPDIR}
 ${PKG_DB_TMPDIR}:

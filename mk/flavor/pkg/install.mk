@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.2 2006/06/05 22:49:44 jlam Exp $
+# $NetBSD: install.mk,v 1.3 2006/06/06 19:49:52 jlam Exp $
 
 ######################################################################
 ### install-check-conflicts (PRIVATE, pkgsrc/mk/install/install.mk)
@@ -67,7 +67,8 @@ _REGISTER_DEPENDENCIES=							\
 register-pkg: generate-metadata ${_DEPENDS_COOKIE}
 	@${PHASE_MSG} "Registering installation for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -fr ${_PKG_DBDIR}/${PKGNAME}
-	${_PKG_SILENT}${_PKG_DEBUG}${CP} -R ${PKG_DB_TMPDIR} ${_PKG_DBDIR}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_PKG_DBDIR}/${PKGNAME}
+	${_PKG_SILENT}${_PKG_DEBUG}${CP} ${PKG_DB_TMPDIR}/* ${_PKG_DBDIR}/${PKGNAME}
 	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} add ${PKGNAME}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	case ${_AUTOMATIC:Q}"" in					\
