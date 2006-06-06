@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.602 2006/06/05 22:34:40 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.603 2006/06/06 05:18:56 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2668,11 +2668,8 @@ sub variable_needs_quoting($$$) {
 		return false;
 	}
 
-	$opt_debug and $line->log_note("Don't know whether :Q is needed for ${varname}.");
-
-	# For all other variables, assume that quoting is necessary.
-	# XXX: This can be improved.
-	return true;
+	$opt_debug_quoting and $line->log_debug("Don't know whether :Q is needed for ${varname}.");
+	return dont_know;
 }
 
 #
