@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.603 2006/06/06 05:18:56 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.604 2006/06/06 06:48:16 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2637,6 +2637,7 @@ sub variable_needs_quoting($$$) {
 		PkgName
 		RelativePkgDir RelativePkgPath
 		URL UserGroupName
+		Version
 		WrkdirSubdirectory
 	));
 
@@ -2644,17 +2645,38 @@ sub variable_needs_quoting($$$) {
 		return dont_know;
 	}
 
+	if ($type->kind_of_list == LK_NONE && exists(safe_types->{$type->basic_type})) {
+		return doesnt_matter;
+	}
+
 	# Determine whether the context expects a list of shell words or
 	# not.
 	$want_list = $context->type->is_practically_a_list() && ($context->shellword == VUC_SHELLWORD_BACKT || $context->extent != VUC_EXTENT_WORD_PART);
 	$have_list = $type->is_practically_a_list();
 
-	if ($type->kind_of_list == LK_NONE && exists(safe_types->{$type->basic_type})) {
-		return doesnt_matter;
+	$opt_debug_quoting and $line->log_debug("[variable_needs_quoting]"
+		. " varname=$varname"
+		. " context=" . $context->to_string()
+		. " type=" . $type->to_string()
+		. " want_list=" . ($want_list ? "yes" : "no")
+		. " have_list=" . ($have_list ? "yes" : "no")
+		. ".");
+
+	# Variables that appear as parts of shell words generally need
+	# to be quoted. An exception is in the case of backticks,
+	# because the whole backticks expression is parsed as a single
+	# shell word.
+	#
+	# XXX: When the shell word parser gets rewritten the next time,
+	# this test can be refined.
+	if ($context->extent == VUC_EXTENT_WORD_PART && $context->shellword != VUC_SHELLWORD_BACKT) {
+		return true;
 	}
 
-	$opt_debug_quoting and $line->log_debug("[variable_needs_quoting] varname $varname context " . $context->to_string() . " type " . $type->to_string());
-	$opt_debug_quoting and $line->log_debug(sprintf("[%s] want_list=%d have_list=%d", "variable_needs_quoting", $want_list, $have_list));
+	# Assigning lists to lists does not require any quoting.
+	if ($want_list && $have_list) {
+		return false;
+	}
 
 	# Appending elements to a list requires quoting, as well as
 	# assigning a list value to a non-list variable.
@@ -3108,7 +3130,7 @@ sub checkline_mk_shellword($$$) {
 	if ($shellword =~ qr"^\$\{(${regex_varname})(:[^{}]+)?\}$") {
 		my ($varname, $mod) = ($1, $2);
 
-		$opt_warn_quoting and checkline_mk_varuse($line, $varname, defined($mod) ? $mod : "", shellword_vuc);
+		checkline_mk_varuse($line, $varname, defined($mod) ? $mod : "", shellword_vuc);
 		return;
 	}
 
