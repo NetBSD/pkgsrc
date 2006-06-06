@@ -1,6 +1,17 @@
-$NetBSD: distinfo,v 1.16 2006/02/25 00:35:41 reed Exp $
+$NetBSD: distinfo,v 1.16.2.1 2006/06/06 07:51:29 snj Exp $
 
 SHA1 (freetype-2.1.10.tar.bz2) = f9e5c52e466c3e41483d5d6d44b4f3135a9c4b16
 RMD160 (freetype-2.1.10.tar.bz2) = 3d31d548632f14784283c97ece64c7425efc3975
 Size (freetype-2.1.10.tar.bz2) = 1037107 bytes
 SHA1 (patch-aa) = 0f05ebbb7c1264dd58f01916560278cd4c3dce08
+SHA1 (patch-ab) = 405ec4f5e95f3acae343d735732575040c193fd5
+SHA1 (patch-ac) = b825e918b1b6bd299db178faca615a9d72dbe934
+SHA1 (patch-ad) = 5e3492d24b4b2a12dea60c36d625fe5d4877ba18
+SHA1 (patch-ae) = 56da93184890ff7320e3fd8dc97738b43de53658
+SHA1 (patch-af) = 461408c2f48682c4a8c42630b55e08a901b7d408
+SHA1 (patch-ag) = 6af93a9a46c0d8003b360c984bc4162b44c1bd69
+SHA1 (patch-ah) = 82afa08b90cf832e07448e39e29db063dcf90d43
+SHA1 (patch-ai) = 3465ebf6434f5fa2a363275af1880f551961684e
+SHA1 (patch-aj) = 22bbcc7607b94aafd8be32c17a3d21c82126e879
+SHA1 (patch-ak) = 9b732b78e265bb314d6d71676ff0af309c51ba99
+SHA1 (patch-al) = 51b057984c4a011d173beca53f5b8654db800d3c

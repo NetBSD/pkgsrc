@@ -1,0 +1,32 @@
+$NetBSD: patch-ah,v 1.1.2.1 2006/06/06 07:51:29 snj Exp $
+
+--- src/cff/cffload.c.orig	2005-05-06 07:49:46.000000000 +0200
++++ src/cff/cffload.c	2006-06-05 23:34:29.000000000 +0200
+@@ -1235,7 +1235,7 @@
+       }
+ 
+       /* access element */
+-      if ( off1 )
++      if ( off1 && off2 > off1 )
+       {
+         *pbyte_len = off2 - off1;
+ 
+@@ -1688,6 +1688,8 @@
+ 
+       for ( i = 0; i < num_glyphs; i++ )
+         charset->cids[charset->sids[i]] = (FT_UShort)i;
++
++      charset->max_cid = max_cid;
+     }
+ 
+   Exit:
+@@ -2042,6 +2044,9 @@
+         goto Exit;
+     }
+ 
++    /* ensure that 'num_blue_values' is even */
++    priv->num_blue_values &= ~1;
++
+     /* read the local subrs, if any */
+     if ( priv->local_subrs_offset )
+     {

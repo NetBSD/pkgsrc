@@ -1,0 +1,48 @@
+$NetBSD: patch-ad,v 1.1.2.1 2006/06/06 07:51:29 snj Exp $
+
+--- src/base/ftutil.c.orig	2005-03-03 23:59:06.000000000 +0100
++++ src/base/ftutil.c	2006-06-05 23:18:40.000000000 +0200
+@@ -52,6 +52,8 @@
+             FT_Long    size,
+             void*     *P )
+   {
++    FT_Error	error = FT_Err_Ok;
++
+     FT_ASSERT( P != 0 );
+ 
+     if ( size > 0 )
+@@ -67,6 +69,11 @@
+       }
+       FT_MEM_ZERO( *P, size );
+     }
++    else if (size < 0)
++    {
++      /* may help catch/prevent nasty security issues */
++      error = FT_Err_Invalid_Argument;
++    }
+     else
+       *P = NULL;
+ 
+@@ -74,7 +81,7 @@
+     FT_TRACE7(( " size = %ld, block = 0x%08p, ref = 0x%08p\n",
+                 size, *P, P ));
+ 
+-    return FT_Err_Ok;
++    return error;
+   }
+ 
+ 
+@@ -127,8 +134,12 @@
+     if ( !*P )
+       return FT_Alloc( memory, size, P );
+ 
++    if (size < 0 || current < 0)
++    {
++      return FT_Err_Invalid_Argument;
++    }
++    else if ( size == 0 )
+     /* if the new block if zero-sized, clear the current one */
+-    if ( size <= 0 )
+     {
+       FT_Free( memory, P );
+       return FT_Err_Ok;
