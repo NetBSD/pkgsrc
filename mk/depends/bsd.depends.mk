@@ -1,4 +1,4 @@
-# $NetBSD: bsd.depends.mk,v 1.3 2006/06/05 17:41:11 jlam Exp $
+# $NetBSD: bsd.depends.mk,v 1.4 2006/06/06 18:24:44 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to dependencies.
@@ -22,7 +22,7 @@ DEPENDS_TARGET=		${UPDATE_TARGET}
 .    else
 DEPENDS_TARGET=		update
 .    endif
-.  elif make(bin-install) || make(real-su-bin-install)
+.  elif make(bin-install) || make(su-bin-install)
 DEPENDS_TARGET=		bin-install
 .  else
 DEPENDS_TARGET=		reinstall
