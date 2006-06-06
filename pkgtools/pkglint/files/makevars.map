@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.106 2006/06/06 07:04:56 rillig Exp $
+# $NetBSD: makevars.map,v 1.107 2006/06/06 08:22:41 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -34,6 +34,14 @@ acl list = [m:as, c:as, b:, builtin.mk:, *.mk:a]
 # A simple value is similar to $list above, just without allowing to
 # append to it.
 acl simple = [m:s, c:ds, b:, builtin.mk:, *.mk:ds]
+
+# A user-defined or system-defined variable must not be set by any
+# package file. It also must not be used in buildlink3.mk and
+# builtin.mk files or at load-time, since the system/user preferences
+# may not have been loaded when these files are included.
+acl user = [b:, builtin.mk:, *:u]
+acl system = [b:, builtin.mk:, *:u]
+acl cmdline = [b:, builtin.mk:, *:pu]
 
 # The following variables are taken from mk/defaults/mk.conf, 1.118
 
@@ -122,11 +130,11 @@ AUTOMAKE_OVERRIDE	List of Pathmask
 AUTOMAKE_REQD		List of Version [*:a]
 BATCH			Yes []
 BDB185_DEFAULT		Unchecked []
-BDBBASE			Unchecked []
+BDBBASE			Pathname [*:u]
 BDB_ACCEPTED		List of { db1 db2 db3 db4 }
-BDB_DEFAULT		Unchecked []
-BDB_LIBS		Unchecked []
-BDB_TYPE		Unchecked []
+BDB_DEFAULT		{ db1 db2 db3 db4 } []
+BDB_LIBS		List of LdFlag [*:u]
+BDB_TYPE		{ db1 db2 db3 db4 } [*:u]
 BINGRP			UserGroupName []
 BINMODE			FileMode []
 BINOWN			UserGroupName []
@@ -177,7 +185,7 @@ BUILTIN_IMAKE_CHECK.*	YesNo []
 BUILTIN_X11_TYPE	Unchecked []
 BUILTIN_X11_VERSION	Unchecked []
 CATEGORIES		List of Category [m:as,c:as]
-CC_VERSION		Unchecked []
+CC_VERSION		Message []
 CC			ShellCommand [m:]
 CFLAGS*			List of CFlag [m:a,c:a,o:a,h:a]
 CHECK_BUILTIN		YesNo [builtin.mk:d,m:s]
@@ -233,18 +241,20 @@ DL_LIBS			List of LdFlag
 EGDIR			Pathname [m:s,c:s]
 # ^^ This variable is not defined by the system, but has been established
 # as a convention.
-EMACS_BIN		Unchecked []
-EMACS_ETCPREFIX		Unchecked []
-EMACS_FLAVOR		Unchecked []
-EMACS_INFOPREFIX	Unchecked []
-EMACS_LISPPREFIX	Unchecked []
+EMACS_BIN		Pathname [*:u]
+EMACS_ETCPREFIX		Pathname [*:u]
+EMACS_FLAVOR		{ emacs xemacs } [*:u]
+EMACS_INFOPREFIX	Pathname [*:u]
+EMACS_LISPPREFIX	Pathname []
 EMACS_MODULES		List of Identifier [m:as,c:as]
-EMACS_PKGNAME_PREFIX	Unchecked []
-EMACS_TYPE		Unchecked []
+EMACS_PKGNAME_PREFIX	Identifier [*:u]
+# ^^ or the empty string.
+EMACS_TYPE		{ emacs xemacs } [*:u]
 EMACS_USE_LEIM		Yes
 EMACS_VERSIONS_ACCEPTED	List of { emacs21 emacs21nox emacs20 xemacs215 xemacs214 } [m:s]
+EMACS_VERSION_MAJOR	Integer [*:u]
+EMACS_VERSION_MINOR	Integer [*:u]
 EMACS_VERSION_REQD	List of { emacs21 emacs21nox emacs20 xemacs215 xemacs214 } [m:as]
-# ^^ of Version
 EVAL_PREFIX		InternalList of ShellWord [m:a,c:a]
 # ^^ FIXME: Looks like a type mismatch.
 EXTRACT_CMD		ShellCommand [m:s]
@@ -259,10 +269,10 @@ EXTRACT_OPTS_TAR	List of ShellWord [m:as,c:as]
 EXTRACT_OPTS_ZIP	List of ShellWord [m:as,c:as]
 EXTRACT_OPTS_ZOO	List of ShellWord [m:as,c:as]
 EXTRACT_SUFX		DistSuffix [c:s,m:s,Makefile.*:s]
-FAMBASE			Unchecked []
-FAM_ACCEPTED		List of { fam gamin }
-FAM_DEFAULT		Unchecked []
-FAM_TYPE		Unchecked []
+FAMBASE			Pathname [*:u]
+FAM_ACCEPTED		List of { fam gamin } [$simple]
+FAM_DEFAULT		{ fam gamin } [$user]
+FAM_TYPE		{ fam gamin } [$system]
 FETCH_BEFORE_ARGS	List of ShellWord [m:as]
 FETCH_MESSAGE		List of ShellWord [$list]
 FILESDIR		RelativePkgPath [m:s,c:ds]
@@ -317,10 +327,10 @@ JAVA_NAME		Filename [m:s]
 JAVA_UNLIMIT		List of { cmdsize datasize stacksize }
 JAVA_WRAPPERS		InternalList of Filename [m:as]
 JAVA_WRAPPER_BIN.*	Pathname [m:s,c:ds]
-KRB5BASE		Unchecked []
+KRB5BASE		Pathname [$system]
 KRB5_ACCEPTED		List of { heimdal mit-krb5 }
-KRB5_DEFAULT		Unchecked []
-KRB5_TYPE		Unchecked []
+KRB5_DEFAULT		{ heimdal mit-krb5 } [$user]
+KRB5_TYPE		Unchecked [$system]
 LDFLAGS*		List of LdFlag [b:,builtin.mk:,*:a]
 LIBGRP			UserGroupName []
 LIBMODE			FileMode []
@@ -371,11 +381,11 @@ MASTER_SITE_SUSE	List of URL [*:u]
 MASTER_SITE_TEX_CTAN	List of URL [*:u]
 MASTER_SITE_XCONTRIB	List of URL [*:u]
 MASTER_SITE_XEMACS	List of URL [*:u]
-MESSAGE			Unchecked []
+MESSAGE			Pathname [*:u]
 MESSAGE_SRC		List of Pathname [$list]
 MESSAGE_SUBST		List of ShellWord [c:a,m:a,o:a]
 MYSQL_VERSIONS_ACCEPTED	List of { 40 41 50 } [m:s]
-MYSQL_VERSION_DEFAULT	Unchecked []
+MYSQL_VERSION_DEFAULT	Version [$user]
 NM			ShellCommand [*:u]
 NOT_FOR_COMPILER	List of { ccc gcc icc ido mipspro mipspro-ucode sunpro xlc } [$simple]
 NOT_FOR_PLATFORM	List of PlatformTriple [$list]
@@ -400,10 +410,10 @@ OPSYSVARS		List of Varname [m:a,c:a]
 OSVERSION_SPECIFIC	Yes [m:s,c:s]
 OWN_DIRS		List of Pathname [$list]
 OWN_DIRS_PERMS		List of ShellWord [$list]
-PAMBASE			Unchecked []
+PAMBASE			Pathname [$system]
 PAM_ACCEPTED		List of { linux-pam openpam solaris-pam }
-PAM_DEFAULT		Unchecked []
-PAM_TYPE		Unchecked []
+PAM_DEFAULT		{ linux-pam openpam solaris-pam } [$user]
+PAM_TYPE		{ linux-pam openpam solaris-pam } [$system]
 PATCHDIR		RelativePkgPath [m:s,c:ds]
 PATCHFILES		List of Filename [$list]
 PATCH_ARGS		List of ShellWord
@@ -415,7 +425,7 @@ PATCH_STRIP		ShellWord
 PERL5_PACKLIST		List of Perl5Packlist [m:s,o:sa]
 PERL5_PACKLIST_DIR	Pathname []
 PGSQL_VERSIONS_ACCEPTED	List of { 73 74 80 }
-PGSQL_VERSION_DEFAULT	Unchecked []
+PGSQL_VERSION_DEFAULT	Version [$user]
 PKGBASE			Identifier []
 PKGCONFIG_OVERRIDE	List of Pathmask [m:as,c:a]
 PKGDIR			RelativePkgDir
@@ -425,28 +435,38 @@ PKGREPOSITORY		Unchecked []
 PKGREVISION		PkgRevision [m:s]
 PKGTOOLS_ENV		List of ShellWord
 PKGVERSION		Version [m:,c:]
-PKGWILDCARD		Unchecked []
-PKG_APACHE		Unchecked []
+PKGWILDCARD		FileMask [$system]
+PKG_APACHE		{ apache13 apache2 } [$system]
 PKG_APACHE_ACCEPTED	List of { apache13 apache2 }
-PKG_APACHE_DEFAULT	Unchecked []
-PKG_DEBUG_LEVEL		Unchecked []
-PKG_DEFAULT_OPTIONS	Unchecked []
+PKG_APACHE_DEFAULT	{ apache13 apache2 } [$user]
+PKG_DEBUG_LEVEL		Integer [$cmdline]
+PKG_DEFAULT_OPTIONS	List of Option [$user]
 PKG_FAIL_REASON		List of ShellWord [*:a]
-PKG_GECOS.*		Unchecked [m:s]
-PKG_GID.*		Unchecked [m:s]
+PKG_GECOS.*		Message [m:s]
+PKG_GID.*		Integer [m:s]
 PKG_GROUPS		List of ShellWord [m:as]
 PKG_HOME.*		Pathname [m:s]
 PKG_HACKS		List of Identifier [h:a]
 PKG_INSTALLATION_TYPES	List of { overwrite pkgviews } [m:s,c:s]
 PKG_JAVA_HOME		Pathname [*:u]
-PKG_JVM			Unchecked [*:u]
+PKG_JVM			{						\
+				blackdown-jdk13				\
+				jdk jdk14				\
+				kaffe					\
+				sun-jdk13 sun-jdk14 sun-jdk15		\
+			} [$system]
 PKG_JVMS_ACCEPTED	List of {					\
 				blackdown-jdk13				\
 				jdk jdk14				\
 				kaffe					\
 				sun-jdk13 sun-jdk14 sun-jdk15		\
 			} [m:s,c:ds]
-PKG_JVM_DEFAULT		Unchecked []
+PKG_JVM_DEFAULT		{						\
+				blackdown-jdk13				\
+				jdk jdk14				\
+				kaffe					\
+				sun-jdk13 sun-jdk14 sun-jdk15		\
+			} [$user]
 PKG_LEGACY_OPTIONS	List of Option
 PKG_LIBTOOL		Pathname [m:s]
 PKG_OPTIONS		List of Option [bsd.options.mk:s,*:pu]
@@ -471,7 +491,7 @@ PKG_SYSCONFDIR		Pathname [m:s,c:ds]
 PKG_SYSCONFSUBDIR	Pathname [m:s,c:s]
 PKG_SYSCONFVAR		Identifier
 # ^^ FIXME: name/type mismatch.
-PKG_UID			Unchecked [m:s]
+PKG_UID			Integer [m:s]
 PKG_USERS		List of ShellWord [m:as]
 PKG_USE_KERBEROS	Yes [m:s,c:s]
 PLIST_SRC		List of RelativePkgPath [$list]
@@ -482,7 +502,8 @@ PREFIX			Pathname [*:u]
 PRINT_PLIST_AWK		AwkCommand [*:a]
 PTHREAD_AUTO_VARS	YesNo [m:s]
 PTHREAD_OPTS		List of { native optional require } [m:as,c:a,b:a]
-PTHREAD_TYPE		Unchecked []
+PTHREAD_TYPE		Identifier [$system]
+# ^^ or "native" or "none".
 PYTHON_PATCH_SCRIPTS	List of Pathmask [$list]
 RCD_SCRIPTS		List of Filename [$list]
 RCD_SCRIPT_SRC.*	List of Pathname [m:s]
@@ -551,13 +572,13 @@ USE_NCURSES		Yes [m:s,o:s]
 USE_OLD_DES_API		YesNo [m:s,c:s]
 USE_PKGINSTALL		Yes
 USE_PKGLOCALEDIR	YesNo [m:s,c:s]
-USE_PKGSRC_GCC		Unchecked []
+USE_PKGSRC_GCC		Yes [$user]
 USE_TOOLS		List of Tool [m:a,c:a,o:a]
 USE_X11			Yes [m:s,c:s]
 USE_X11BASE		Yes [m:s,c:s]
 WRAPPER_REORDER_CMDS	List of WrapperReorder [b:a,c:a,m:a]
 WRAPPER_TRANSFORM_CMDS	List of WrapperTransform [b:a,c:a,m:a]
 WRKSRC			WrkdirSubdirectory [m:s,c:ds,Makefile.*:ds]
-X11_PKGSRCDIR		Unchecked []
+X11_PKGSRCDIR.*		Pathname [$system]
 XAW_TYPE		{ 3d neXtaw standard xpm }
 XMKMF_FLAGS		List of ShellWord
