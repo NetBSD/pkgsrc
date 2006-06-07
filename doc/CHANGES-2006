@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.447 2006/06/07 21:32:45 heinz Exp $
+$NetBSD: CHANGES-2006,v 1.448 2006/06/07 21:37:41 hira Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2956,3 +2956,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated time/sunbird to 0.3alpha2 [ghen 2006-06-07]
 	Updated security/p5-Digest-SHA to 5.41 [heinz 2006-06-07]
 	Updated mail/p5-Mail-DKIM to 0.17 [heinz 2006-06-07]
+	Updated benchmarks/bonnie++ to 1.03anb3 [hira 2006-06-07]
