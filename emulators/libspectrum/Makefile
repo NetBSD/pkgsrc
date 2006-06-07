@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/02/05 23:09:01 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/06/07 12:36:15 joerg Exp $
 
 DISTNAME=	libspectrum-0.2.2
 PKGREVISION=	2
@@ -9,7 +9,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://fuse-emulator.sourceforge.net/libspectrum.php
 COMMENT=	ZX Spectrum emulator file format library
 
-USE_TOOLS+=		perl
+USE_TOOLS+=		perl pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
