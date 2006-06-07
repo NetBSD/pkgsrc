@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2006/03/24 19:46:10 heinz Exp $
+# $NetBSD: Makefile,v 1.70.2.1 2006/06/07 21:28:47 salo Exp $
 
-DISTNAME=	Mail-SpamAssassin-3.1.1
-PKGNAME=	spamassassin-3.1.1
-PKGREVISION=	1
+DISTNAME=	Mail-SpamAssassin-3.1.3
+PKGNAME=	spamassassin-3.1.3
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
@@ -16,7 +15,7 @@ COMMENT=	Mail filter to identify spam
 DEPENDS+=	p5-Net-DNS>=0.34:../../net/p5-Net-DNS
 DEPENDS+=	p5-HTML-Parser>=3.31:../../www/p5-HTML-Parser
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
-DEPENDS+=	{p5-MIME-Base64>=2.11,perl{,-thread}>=5.8.0}:../../converters/p5-MIME-Base64
+DEPENDS+=	{p5-MIME-Base64>=2.11,perl>=5.8.0}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-Archive-Tar-[0-9]*:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-IO-Zlib-[0-9]*:../../devel/p5-IO-Zlib
@@ -53,11 +52,12 @@ PERL5_CONFIGURE=	NO # we need the default "do-configure" target
 PERL5_CONFIGURE_DIRS=	${WRKSRC}
 
 # test t/meta needs this
-REPLACE_PERL=		masses/parse-rules-for-masses
+REPLACE_PERL+=		masses/parse-rules-for-masses
 
 MAKE_PARAMS+=		CONTACT_ADDRESS=${SPAMASSASSIN_CONTACT_ADDRESS:Q}
 MAKE_PARAMS+=		DEFRULESDIR="${RULESDIR}"
 MAKE_PARAMS+=		LOCALRULESDIR="${PKG_SYSCONFDIR}"
+MAKE_PARAMS+=		LOCALSTATEDIR="${VARBASE}"
 MAKE_PARAMS+=		PERL_BIN="${PERL5}"
 MAKE_PARAMS+=		SYSCONFDIR="${PKG_SYSCONFDIR}"
 
@@ -71,21 +71,26 @@ DOCDIR=			${PREFIX}/${DOC_SUBDIR}
 RULE_SUBDIR=		share/spamassassin
 RULESDIR=		${PREFIX}/${RULE_SUBDIR}
 
+PRE_FILES=		init.pre v310.pre v312.pre
+.for p in ${PRE_FILES}
+CONF_FILES+=		${EGDIR}/${p}  ${PKG_SYSCONFDIR}/${p}
+.endfor
 CONF_FILES+=		${EGDIR}/local.cf  ${PKG_SYSCONFDIR}/local.cf	\
-			${EGDIR}/init.pre  ${PKG_SYSCONFDIR}/init.pre	\
-			${EGDIR}/v310.pre  ${PKG_SYSCONFDIR}/v310.pre	\
 			${RULESDIR}/user_prefs.template		\
 		 	  ${PKG_SYSCONFDIR}/user_prefs.template
 
 INSTALLATION_DIRS+=	${EG_SUBDIR} ${DOC_SUBDIR} ${DOC_SUBDIR}/spamc\
-			${DOC_SUBDIR}/spamd
+			${DOC_SUBDIR}/spamd ${RULE_SUBDIR}
+
+OWN_DIRS+=		${VARBASE}/spamassassin
+OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/sa-update-keys ${SHAREOWN} ${SHAREGRP} 0700
 
 SUBST_CLASSES+=		sa2 sa3
 
 SUBST_STAGE.sa2=	pre-configure
 SUBST_FILES.sa2=	README spamd/spamd.raw
-SUBST_SED.sa2=		-e s!@@PREFIX@@!${PREFIX}!g			\
-			-e s!@PKG_SYSCONFDIR@!${PKG_SYSCONFDIR}!g
+SUBST_SED.sa2=		-e s!@@PREFIX@@!${PREFIX}!g
+SUBST_SED.sa2+=		-e s!@PKG_SYSCONFDIR@!${PKG_SYSCONFDIR}!g
 
 SUBST_STAGE.sa3=	pre-configure
 SUBST_FILES.sa3=	INSTALL UPGRADE USAGE ldap/README		\
@@ -94,11 +99,11 @@ SUBST_FILES.sa3=	INSTALL UPGRADE USAGE ldap/README		\
 			lib/Mail/SpamAssassin/Plugin/Test.pm		\
 			spamd/README spamd/README.vpopmail sql/README	\
 			sql/README.awl sa-update.raw
-SUBST_SED.sa3=		-e s!/usr/share!${PREFIX}/share!g		\
-			-e s!/usr/bin!${PREFIX}/bin!g			\
-			-e s!/usr/local/bin!${PREFIX}/bin!g		\
-			-e s!/usr/lib!${PREFIX}/lib!g			\
-			-e s!/etc/mail/spamassassin!${PKG_SYSCONFDIR}!g
+SUBST_SED.sa3=		-e s!/usr/share!${PREFIX}/share!g
+SUBST_SED.sa3+=		-e s!/usr/bin!${PREFIX}/bin!g
+SUBST_SED.sa3+=		-e s!/usr/local/bin!${PREFIX}/bin!g
+SUBST_SED.sa3+=		-e s!/usr/lib!${PREFIX}/lib!g
+SUBST_SED.sa3+=		-e s!/etc/mail/spamassassin!${PKG_SYSCONFDIR}!g
 
 .if (${OPSYS} == "NetBSD") || (${OPSYS} == "DragonFly")
 #  the 'spamd' RCD_SCRIPT behaves differently if we run NetBSD 1.6 or later
@@ -135,7 +140,7 @@ post-install:
 .endfor
 .for f in STATISTICS-set0.txt STATISTICS-set1.txt STATISTICS-set2.txt	\
 	  STATISTICS-set3.txt
-	@${INSTALL_DATA} ${WRKSRC}/rules/${f} ${DOCDIR}/
+	@${INSTALL_DATA} ${WRKSRC}/rules/${f} ${DOCDIR}
 	@${ECHO} "${DOC_SUBDIR}/${f}" >> ${PLIST_ADD}
 .endfor
 .for dir in masses sql ldap tools
@@ -162,20 +167,35 @@ post-install:
 	@cd ${WRKSRC}/rules;						\
 	for f in [0-9]*.cf; do						\
 		${ECHO} "${RULE_SUBDIR}/$$f" >> ${PLIST_ADD};		\
+	done;								\
+	for f in ${PRE_FILES}; do					\
+		${INSTALL_DATA} $$f ${EGDIR} &&				\
+		${ECHO} ${EG_SUBDIR}/$$f >> ${PLIST_ADD};		\
 	done
-	@${ECHO} "@dirrm ${RULE_SUBDIR}" >> ${PLIST_ADD}
 	@# examples are in the static PLIST
-	@${INSTALL_DATA} ${WRKSRC}/procmailrc.example ${EGDIR}/
-	@${INSTALL_DATA} ${WRKSRC}/rules/init.pre ${EGDIR}/
-	@${INSTALL_DATA} ${WRKSRC}/rules/v310.pre ${EGDIR}/
-	@${INSTALL_DATA} ${WRKSRC}/rules/local.cf ${EGDIR}/
-	@${INSTALL_DATA} ${FILESDIR}/netbsd_lists.cf ${EGDIR}/
+	@${INSTALL_DATA} ${WRKSRC}/procmailrc.example ${EGDIR}
+	@${INSTALL_DATA} ${WRKSRC}/rules/local.cf ${EGDIR}
+	@${INSTALL_DATA} ${FILESDIR}/netbsd_lists.cf ${EGDIR}
 	@${CHOWN} ${SHAREOWN} ${RULESDIR}/*
 	@${CHGRP} ${SHAREGRP} ${RULESDIR}/*
 	@${CHMOD} a=r ${RULESDIR}/*
 	@{ for d in ${INSTALLATION_DIRS}; do				\
 		${ECHO} "@dirrm $$d";					\
 	done; } | ${SORT} -r >> ${PLIST_ADD};
+
+# make sure we install the patched version of init.pre but can run the
+# tests with the original file
+pre-patch:
+	@${CP} ${WRKSRC}/rules/init.pre ${WRKDIR}/init.pre.notpatched
+
+post-patch:
+	@${CP} ${WRKSRC}/rules/init.pre ${WRKDIR}/init.pre.patched
+
+pre-test:
+	@${CP} ${WRKDIR}/init.pre.notpatched ${WRKSRC}/rules/init.pre
+
+post-test:
+	@${CP} ${WRKDIR}/init.pre.patched ${WRKSRC}/rules/init.pre
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
