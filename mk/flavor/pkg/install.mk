@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.3 2006/06/06 19:49:52 jlam Exp $
+# $NetBSD: install.mk,v 1.4 2006/06/07 17:09:52 ghen Exp $
 
 ######################################################################
 ### install-check-conflicts (PRIVATE, pkgsrc/mk/install/install.mk)
@@ -20,7 +20,7 @@ install-check-conflicts:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TEST} -f ${WRKDIR}/.CONFLICTS || exit 0;			\
 	${ERROR_MSG} "${PKGNAME} conflicts with installed package(s):";	\
-	while read line; do ${ERROR_MSG} "	$line";	done		\
+	while read line; do ${ERROR_MSG} "	$$line";	done	\
 		< ${WRKDIR}/.CONFLICTS;					\
 	${ERROR_MSG} "They install the same files into the same place."; \
 	${ERROR_MSG} "Please remove conflicts first with pkg_delete(1)."; \
