@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.11 2005/11/13 22:48:32 heinz Exp $
+$NetBSD: patch-ab,v 1.11.4.1 2006/06/07 21:28:47 salo Exp $
 
---- Makefile.PL.orig	Fri Aug 12 02:38:58 2005
+--- Makefile.PL.orig	2006-05-24 22:07:30.000000000 +0200
 +++ Makefile.PL
-@@ -158,6 +158,7 @@ my %makefile = (
+@@ -163,6 +163,7 @@ my %makefile = (
        'spamassassin.raw' => 'spamassassin',
        'sa-learn.raw'     => 'sa-learn',
        'sa-update.raw'    => 'sa-update',
@@ -10,26 +10,26 @@ $NetBSD: patch-ab,v 1.11 2005/11/13 22:48:32 heinz Exp $
        'spamc/spamc.c'    => 'spamc/spamc$(EXE_EXT)',
        'spamd/spamd.raw'  => 'spamd/spamd',
      },
-@@ -1087,16 +1088,17 @@ qmail/qmail-spamc$(EXE_EXT): spamc/qmail
- #        # $(SYMLINK) $(INST_SCRIPT)/sa-filter $(B_SCRIPTDIR)/spamassassin
+@@ -1146,16 +1147,18 @@ qmail/qmail-spamc$(EXE_EXT): spamc/qmail
  
  conf__install:
--	-$(MKPATH) $(B_CONFDIR)
+ 	-$(MKPATH) $(B_CONFDIR)
 -	$(PERL) -MFile::Copy -e "copy(q{rules/local.cf}, q{$(B_CONFDIR)/local.cf}) unless -f q{$(B_CONFDIR)/local.cf}"
 -	$(PERL) -MFile::Copy -e "copy(q{rules/init.pre}, q{$(B_CONFDIR)/init.pre}) unless -f q{$(B_CONFDIR)/init.pre}"
 -	$(PERL) -MFile::Copy -e "copy(q{rules/v310.pre}, q{$(B_CONFDIR)/v310.pre}) unless -f q{$(B_CONFDIR)/v310.pre}"
-+	-$(BSD_INSTALL_DATA_DIR) $(B_CONFDIR)
+-	$(PERL) -MFile::Copy -e "copy(q{rules/v312.pre}, q{$(B_CONFDIR)/v312.pre}) unless -f q{$(B_CONFDIR)/v312.pre}"
 +	@ # manage local.cf and *.pre through pkgsrc .mk files
 +	@ # $(PERL) -MFile::Copy -e "copy(q{rules/local.cf}, q{$(B_CONFDIR)/local.cf}) unless -f q{$(B_CONFDIR)/local.cf}"
 +	@ # $(PERL) -MFile::Copy -e "copy(q{rules/init.pre}, q{$(B_CONFDIR)/init.pre}) unless -f q{$(B_CONFDIR)/init.pre}"
 +	@ # $(PERL) -MFile::Copy -e "copy(q{rules/v310.pre}, q{$(B_CONFDIR)/v310.pre}) unless -f q{$(B_CONFDIR)/v310.pre}"
++	@ # $(PERL) -MFile::Copy -e "copy(q{rules/v312.pre}, q{$(B_CONFDIR)/v312.pre}) unless -f q{$(B_CONFDIR)/v312.pre}"
  
  data__install:
--	-$(MKPATH) $(B_DATADIR)
-+	-$(BSD_INSTALL_DATA_DIR) $(B_DATADIR)
+ 	-$(MKPATH) $(B_DATADIR)
  	$(PERL) -e "map unlink, <$(B_DATADIR)/*>"
  	$(PREPROCESS) $(FIXVARS) -m$(PERM_RW) -Irules -O$(B_DATADIR) $(DATAFILES)
 -	$(CHMOD) $(PERM_RWX) $(B_DATADIR)
++	@ # no change of directory created by pkgsrc
 +	@ # $(CHMOD) $(PERM_RWX) $(B_DATADIR)
  
  text_html_doc: made-doc-stamp

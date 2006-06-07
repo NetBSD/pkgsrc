@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2006/03/13 21:11:57 heinz Exp $
+# $NetBSD: options.mk,v 1.5.2.1 2006/06/07 21:28:47 salo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.spamassassin
 PKG_SUPPORTED_OPTIONS=	\
@@ -31,11 +31,10 @@ PKG_SUGGESTED_OPTIONS=	spamassassin-taint-checks \
 SUBST_CLASSES+=		satests
 SUBST_STAGE.satests=	post-configure
 SUBST_FILES.satests=	t/config
-SUBST_SED.satests=	\
-	-e s!awl_sql_tests=n!awl_sql_tests=${AWL_SQL_TEST}! \
-	-e s!bayes_sql_tests=n!bayes_sql_tests=${BAYES_SQL_TEST}! \
-	-e s!run_net_tests=n!run_net_tests=${NET_TEST}! \
-	-e s!prefork_stress_test=n!prefork_stress_test=${PREFORK_TEST}!
+SUBST_SED.satests=	-e s!awl_sql_tests=n!awl_sql_tests=${AWL_SQL_TEST}!
+SUBST_SED.satests+=	-e s!bayes_sql_tests=n!bayes_sql_tests=${BAYES_SQL_TEST}!
+SUBST_SED.satests+=	-e s!run_net_tests=n!run_net_tests=${NET_TEST}!
+SUBST_SED.satests+=	-e s!prefork_stress_test=n!prefork_stress_test=${PREFORK_TEST}!
 
 #
 # Enable tests of the SQL storage module for the automatic whitelist
