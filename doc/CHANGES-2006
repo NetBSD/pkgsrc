@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.446 2006/06/07 19:30:36 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.447 2006/06/07 21:32:45 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2954,3 +2954,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/openldap to 2.3.24 [ghen 2006-06-07]
 	Updated pkgtools/pkg_chk to 1.74 [abs 2006-06-07]
 	Updated time/sunbird to 0.3alpha2 [ghen 2006-06-07]
+	Updated security/p5-Digest-SHA to 5.41 [heinz 2006-06-07]
+	Updated mail/p5-Mail-DKIM to 0.17 [heinz 2006-06-07]
