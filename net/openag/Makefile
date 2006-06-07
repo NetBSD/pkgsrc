@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/06/06 18:02:48 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/07 21:01:15 minskim Exp $
 #
 
 DISTNAME=	OpenAG-1.1.1
@@ -15,6 +15,8 @@ DEPENDS+=	wget-[0-9]*:../../net/wget
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+
+.include "../../devel/zlib/buildlink3.mk"
 
 post-install:
 		${INSTALL_MAN_DIR} ${PREFIX}/share/doc/OpenAG
