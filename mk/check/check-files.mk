@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.1 2006/06/03 23:11:42 jlam Exp $
+# $NetBSD: check-files.mk,v 1.2 2006/06/07 20:28:59 jlam Exp $
 
 .if defined(PKG_DEVELOPER)
 CHECK_FILES?=		yes
@@ -140,22 +140,25 @@ ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${FIND} ${PREFIX}/. \( -type f -o -type l \) -print 2>/dev/null \
 		| ${SED} -e 's,/\./,/,'					\
-		| ${_CHECK_FILES_SKIP_FILTER} > ${.TARGET}		\
+		| ${_CHECK_FILES_SKIP_FILTER} > ${.TARGET}.tmp		\
                 || ${TRUE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 ${_CHECK_FILES_PRE.sysconfdir} ${_CHECK_FILES_POST.sysconfdir}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${FIND} ${PKG_SYSCONFDIR}/. -print 2>/dev/null			\
 		| ${SED} -e 's,/\./,/,'					\
-		| ${_CHECK_FILES_SKIP_FILTER} > ${.TARGET}		\
+		| ${_CHECK_FILES_SKIP_FILTER} > ${.TARGET}.tmp		\
 		|| ${TRUE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 ${_CHECK_FILES_PRE.varbase} ${_CHECK_FILES_POST.varbase}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${FIND} ${VARBASE}/. -print 2>/dev/null				\
 		| ${SED} -e 's,/\./,/,'					\
-		| ${_CHECK_FILES_SKIP_FILTER} > ${.TARGET}		\
+		| ${_CHECK_FILES_SKIP_FILTER} > ${.TARGET}.tmp		\
 		|| ${TRUE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 ###########################################################################
 # check-files targets and subtargets
@@ -174,132 +177,173 @@ check-files-varbase: ${_CHECK_FILES_COOKIE.varbase}
 check-files: ${_CHECK_FILES_COOKIES}
 	${_PKG_SILENT}${_PKG_DEBUG}${STEP_MSG}				\
 		"Checking file-check results for ${PKGNAME}"
-.for _cookie_ in ${_CHECK_FILES_COOKIES}
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${_cookie_}
-.endfor
+	@${CAT} ${_CHECK_FILES_COOKIES} | ${ERROR_CAT}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${CAT} ${_CHECK_FILES_COOKIES} | ${AWK} 'END { if (NR > 0) exit 1; }'
+	${_ZERO_FILESIZE_P} ${_CHECK_FILES_COOKIES} || exit 1
 
 # Check ${PREFIX} for files which are not listed in the generated ${PLIST}
 # and vice-versa.
 #
-${_CHECK_FILES_COOKIE.prefix}:
-.if !defined(NO_PKG_REGISTER)
+_CHECK_FILES_DIFF=		${WRKDIR}/.check_files_diff
+_CHECK_FILES_ADDED=		${WRKDIR}/.check_files_added
+_CHECK_FILES_DELETED=		${WRKDIR}/.check_files_deleted
+_CHECK_FILES_EXPECTED=		${WRKDIR}/.check_files_expected
+_CHECK_FILES_MISSING=		${WRKDIR}/.check_files_missing
+_CHECK_FILES_MISSING_SKIP=	${WRKDIR}/.check_files_missing_skip
+_CHECK_FILES_MISSING_REAL=	${WRKDIR}/.check_files_missing_real
+_CHECK_FILES_EXTRA=		${WRKDIR}/.check_files_extra
+
+${_CHECK_FILES_DIFF}: ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if ${TEST} ! -f ${_CHECK_FILES_PRE.prefix} -o			\
-		   ! -f ${_CHECK_FILES_POST.prefix};			\
-	then								\
-		{ exit 0; };						\
-	fi;								\
-	f_added=${WRKDIR}/.files.added;					\
-	f_deleted=${WRKDIR}/.files.deleted;				\
-	f_expected=${WRKDIR}/.files.expected;				\
-	f_missing=${WRKDIR}/.files.missing;				\
-	f_missing_real=${WRKDIR}/.files.missing.real;			\
-	f_missing_skip=${WRKDIR}/.files.missing.skip;			\
-	f_extra=${WRKDIR}/.files.extra;					\
-	${DIFF} -u ${_CHECK_FILES_PRE.prefix} ${_CHECK_FILES_POST.prefix} \
-		> ${WRKDIR}/.files.diff || ${TRUE};			\
-	${GREP} '^+/' ${WRKDIR}/.files.diff | ${SED} "s|^+||" | ${SORT}	\
-		> $$f_added;						\
-	${GREP} '^-/' ${WRKDIR}/.files.diff | ${SED} "s|^-||" | ${SORT}	\
-		> $$f_deleted;						\
-	${GREP} '^[A-Za-z]' ${PLIST} | ${SED} "s|^|${PREFIX}/|" | ${SORT} \
-		> $$f_expected;						\
-	${DIFF} -u ${WRKDIR}/.files.expected ${WRKDIR}/.files.added	\
-		| ${GREP} '^-[^-]' | ${SED} "s|^-||"			\
-		> $$f_missing;						\
-	${DIFF} -u ${WRKDIR}/.files.expected ${WRKDIR}/.files.added	\
-		| ${GREP} '^+[^+]' | ${SED} "s|^+||"			\
-		> $$f_extra;						\
-	if ${AWK} 'END { if (NR == 0) exit 1; }' $$f_deleted; then	\
-		{ ${ECHO} "*** The following files have been deleted"	\
-			  "from ${PREFIX}!";				\
-		  ${SED} "s|^|        |" $$f_deleted;			\
-		} > ${.TARGET};						\
-	fi;								\
-	if ${AWK} 'END { if (NR == 0) exit 1; }' $$f_missing $$f_extra;	\
-	then								\
-		{ ${ECHO} "*** The PLIST does not match installed files!"; \
-		  ${CAT} $$f_missing | ${_CHECK_FILES_SKIP_FILTER}	\
-			> $$f_missing_real;				\
-		  ${DIFF} -u $$f_missing $$f_missing_real		\
-			| ${GREP} '^-[^-]' | ${SED} "s|^-||"		\
-			> $$f_missing_skip;				\
-		  if ${AWK} 'END { if (NR == 0) exit 1; }' $$f_missing_real; \
-		  then \
-		  	${ECHO} "*** The following files are in the"	\
-				"PLIST but not in ${PREFIX}:";		\
-			${SED} "s|^|        |" $$f_missing_real;	\
-		  fi;							\
-		  if ${AWK} 'END { if (NR == 0) exit 1; }' $$f_extra; then \
-		  	${ECHO} "*** The following files are in"	\
-				"${PREFIX} but not in the PLIST:";	\
-			${SED} "s|^|        |" $$f_extra;		\
-		  fi;							\
-		  if ${AWK} 'END { if (NR == 0) exit 1; }' $$f_missing_skip; \
-		  then \
-		  	${ECHO} "*** The following files are in both"	\
-				"the PLIST and CHECK_FILES_SKIP:";	\
-			 ${SED} "s|^|        |" $$f_missing_skip;	\
-		  fi;							\
-		} >> ${.TARGET};					\
-	fi;								\
-	${RM} -f ${WRKDIR}/.files.diff $$f_added $$f_deleted		\
-		 $$f_expected $$f_missing $$f_extra			\
-		 $$f_missing_real $$f_missing_skip
-.endif
+	${DIFF} -u ${_CHECK_FILES_PRE.prefix}				\
+		  ${_CHECK_FILES_POST.prefix}				\
+		> ${.TARGET}.tmp || ${TRUE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+
+${_CHECK_FILES_ADDED}: ${_CHECK_FILES_DIFF}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${GREP} '^+/' ${_CHECK_FILES_DIFF} | ${SED} "s|^+||" | ${SORT}	\
+		> ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+
+${_CHECK_FILES_DELETED}: ${_CHECK_FILES_DIFF}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${GREP} '^-/' ${_CHECK_FILES_DIFF} | ${SED} "s|^-||" | ${SORT}	\
+		> ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+
+${_CHECK_FILES_EXPECTED}: plist
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${GREP} '^[^@]' ${PLIST} | ${SED} "s|^|${PREFIX}/|" | ${SORT}	\
+		> ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+
+${_CHECK_FILES_MISSING}: ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${DIFF} -u ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED} |	\
+	${GREP} '^-[^-]' | ${SED} "s|^-||" |				\
+	while read file; do						\
+		${TEST} -f "$$file" || ${ECHO} "$$file";		\
+	done > ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+
+${_CHECK_FILES_MISSING_REAL}: ${_CHECK_FILES_MISSING}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${CAT} ${_CHECK_FILES_MISSING} | ${_CHECK_FILES_SKIP_FILTER}	\
+		> ${.TARGET}.tmp || ${TRUE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+
+${_CHECK_FILES_MISSING_SKIP}:						\
+		${_CHECK_FILES_MISSING}					\
+		${_CHECK_FILES_MISSING_REAL}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${DIFF} -u ${_CHECK_FILES_MISSING}				\
+		   ${_CHECK_FILES_MISSING_REAL} |			\
+	${GREP} '^-[^-]' | ${SED} "s|^-||"				\
+		> ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+	
+${_CHECK_FILES_EXTRA}: ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${DIFF} -u  ${_CHECK_FILES_EXPECTED} ${_CHECK_FILES_ADDED} |	\
+	${GREP} '^+[^+]' | ${SED} "s|^+||" |				\
+	while read file; do						\
+		${TEST} ! -f "$$file" || ${ECHO} "$$file";		\
+	done > ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+
+.if defined(NO_PKG_REGISTER)
+${_CHECK_FILES_COOKIE.prefix}:
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+.else
+${_CHECK_FILES_COOKIE.prefix}:						\
+		${_CHECK_FILES_DELETED}					\
+		${_CHECK_FILES_MISSING}					\
+		${_CHECK_FILES_MISSING_REAL}				\
+		${_CHECK_FILES_MISSING_SKIP}				\
+		${_CHECK_FILES_EXTRA}
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if ${_NONZERO_FILESIZE_P} ${_CHECK_FILES_DELETED}; then		\
+		${ECHO} "The following files have been deleted"		\
+			"from ${PREFIX}!";				\
+		${SED} "s|^|        |" ${_CHECK_FILES_DELETED};		\
+	fi >> ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if ${_NONZERO_FILESIZE_P} ${_CHECK_FILES_MISSING_REAL}; then	\
+		${ECHO} "************************************************************"; \
+		${ECHO} "The following files are in the"		\
+			"PLIST but not in ${PREFIX}:";			\
+		${SED} "s|^|        |" ${_CHECK_FILES_MISSING_REAL};	\
+	fi >> ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if ${_NONZERO_FILESIZE_P} ${_CHECK_FILES_EXTRA}; then		\
+		${ECHO} "************************************************************"; \
+		${ECHO} "The following files are in"			\
+			"${PREFIX} but not in the PLIST:";		\
+		${SED} "s|^|        |" ${_CHECK_FILES_EXTRA};		\
+	fi >> ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if ${_NONZERO_FILESIZE_P} ${_CHECK_FILES_MISSING_SKIP}; then	\
+		${ECHO} "************************************************************"; \
+		${ECHO} "The following files are in both the"		\
+			"PLIST and CHECK_FILES_SKIP:";			\
+		${SED} "s|^|        |" ${_CHECK_FILES_MISSING_SKIP};	\
+	fi >> ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+.endif
 
 # Check ${SYSCONFDIR} for files which are not in the PLIST and are also
 # not copied into place by the INSTALL scripts.
 #
+.if defined(NO_PKG_REGISTER)
 ${_CHECK_FILES_COOKIE.sysconfdir}:
-.if !defined(NO_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if ${TEST} ! -f ${_CHECK_FILES_PRE.sysconfdir} -o		\
-		   ! -f ${_CHECK_FILES_POST.sysconfdir};		\
-	then								\
-		{ exit 0; };						\
-	fi;								\
-	if ! ${CMP} -s ${_CHECK_FILES_PRE.sysconfdir}			\
-		       ${_CHECK_FILES_POST.sysconfdir};			\
-	then								\
-		{ ${ECHO} "*** The package has modified ${PKG_SYSCONFDIR}" \
-			  "contents directly!";				\
-		  ${ECHO} "    The offending files/directories are:";	\
-		  ${DIFF} -u ${_CHECK_FILES_PRE.sysconfdir}		\
-			     ${_CHECK_FILES_POST.sysconfdir}		\
-			| ${GREP} '^+[^+]' | ${SED} "s|^+|	|";	\
-		} > ${.TARGET};						\
-	fi
-.endif
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+.else
+${_CHECK_FILES_COOKIE.sysconfdir}:					\
+		${_CHECK_FILES_PRE.sysconfdir}				\
+		${_CHECK_FILES_POST.sysconfdir}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if ${CMP} -s ${_CHECK_FILES_PRE.sysconfdir}			\
+		     ${_CHECK_FILES_POST.sysconfdir}; then		\
+		${DO_NADA};						\
+	else
+		${ECHO} "************************************************************"; \
+		${ECHO} "The package has modified ${PKG_SYSCONFDIR}"	\
+			"contents directly!";				\
+		${ECHO} "    The offending files/directories are:";	\
+		${DIFF} -u ${_CHECK_FILES_PRE.sysconfdir}		\
+			   ${_CHECK_FILES_POST.sysconfdir} |		\
+		${GREP} '^+[^+]' | ${SED} "s|^+|	|";		\
+	fi > ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+.endif
 
 # Check ${VARBASE} for files which are not in the PLIST and are also
 # not created by the INSTALL scripts.
 #
+.if defined(NO_PKG_REGISTER)
 ${_CHECK_FILES_COOKIE.varbase}:
-.if !defined(NO_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if ${TEST} ! -f ${_CHECK_FILES_PRE.varbase} -o			\
-		   ! -f ${_CHECK_FILES_POST.varbase};			\
-	then								\
-		{ exit 0; };						\
-	fi;								\
-	if ! ${CMP} -s ${_CHECK_FILES_PRE.varbase}			\
-		       ${_CHECK_FILES_POST.varbase};			\
-	then								\
-		{ ${ECHO} "*** The package has modified ${VARBASE}"	\
-			  "contents directly!";				\
-		  ${ECHO} "    The offending files/directories are:";	\
-		  ${DIFF} -u ${_CHECK_FILES_PRE.varbase}		\
-			     ${_CHECK_FILES_POST.varbase}		\
-			| ${GREP} '^+[^+]' | ${SED} "s|^+|	|";	\
-		} > ${.TARGET};						\
-	fi
-.endif
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
+.else
+${_CHECK_FILES_COOKIE.varbase}:						\
+		${_CHECK_FILES_PRE.varbase}				\
+		${_CHECK_FILES_POST.varbase}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if ${CMP} -s ${_CHECK_FILES_PRE.varbase}			\
+		       ${_CHECK_FILES_POST.varbase}; then		\
+		${DO_NADA};						\
+	else								\
+		${ECHO} "************************************************************"; \
+		${ECHO} "The package has modified ${VARBASE}"		\
+			"contents directly!";				\
+		${ECHO} "    The offending files/directories are:";	\
+		${DIFF} -u ${_CHECK_FILES_PRE.varbase}			\
+			   ${_CHECK_FILES_POST.varbase}	|		\
+		${GREP} '^+[^+]' | ${SED} "s|^+|	|";		\
+	fi > ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+.endif
 
 ###########################################################################
 # check-files-clean removes the state files related to the "check-files"
@@ -310,4 +354,8 @@ check-clean: check-files-clean
 check-files-clean:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${RM} -f ${_CHECK_FILES_COOKIES}				\
-		${_CHECK_FILES_PRE} ${_CHECK_FILES_POST}
+		${_CHECK_FILES_PRE} ${_CHECK_FILES_POST}		\
+		${_CHECK_FILES_DIFF} ${_CHECK_FILES_ADDED}		\
+		${_CHECK_FILES_DELETED} ${_CHECK_FILES_EXPECTED}	\
+		${_CHECK_FILES_MISSING} ${_CHECK_FILES_MISSING_SKIP}	\
+		${_CHECK_FILES_MISSING_REAL} ${_CHECK_FILES_EXTRA}
