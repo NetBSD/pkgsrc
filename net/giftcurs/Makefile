@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/13 18:23:36 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/06/07 12:47:15 joerg Exp $
 #
 
 DISTNAME=	giFTcurs-0.6.2
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/giftcurs/
 COMMENT=	Curses frontend to the giFT daemon
 
-USE_TOOLS+=		msgfmt
+USE_TOOLS+=		msgfmt pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
