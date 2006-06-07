@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2006/03/04 21:29:45 jlam Exp $
+# $NetBSD: Makefile.common,v 1.48 2006/06/07 11:43:34 joerg Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -16,7 +16,9 @@ HOMEPAGE=	http://www.mesa3d.org/
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_TOOLS+=		makedepend
 
 BUILDING_MESA=		yes
 NO_CONFIGURE=		yes
