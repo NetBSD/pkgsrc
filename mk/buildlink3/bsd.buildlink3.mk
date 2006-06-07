@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.177 2006/06/06 06:44:01 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.178 2006/06/07 17:35:49 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -590,8 +590,8 @@ ${_BLNK_COOKIE.${_pkg_}}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	case ${BUILDLINK_PREFIX.${_pkg_}} in				\
 	*not_found)							\
-		${ECHO} "${_pkg_} is not installed; can't buildlink files."; \
-		${FALSE};						\
+		${ERROR_MSG} "${_pkg_} is not installed; can't buildlink files."; \
+		exit 1;							\
 		;;							\
 	esac
 	${_PKG_SILENT}${_PKG_DEBUG}					\
