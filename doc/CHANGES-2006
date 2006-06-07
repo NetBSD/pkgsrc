@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.445 2006/06/07 16:28:32 abs Exp $
+$NetBSD: CHANGES-2006,v 1.446 2006/06/07 19:30:36 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2953,3 +2953,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated databases/openldap-doc to 2.3.24 [ghen 2006-06-07]
 	Updated databases/openldap to 2.3.24 [ghen 2006-06-07]
 	Updated pkgtools/pkg_chk to 1.74 [abs 2006-06-07]
+	Updated time/sunbird to 0.3alpha2 [ghen 2006-06-07]
