@@ -1,12 +1,12 @@
-# $NetBSD: Makefile-sunbird.common,v 1.4 2006/03/29 07:47:14 ghen Exp $
+# $NetBSD: Makefile-sunbird.common,v 1.5 2006/06/07 19:29:59 ghen Exp $
 
 MOZILLA_BIN=		sunbird-bin
-MOZ_VER=		0.3a1
+MOZ_VER=		0.3alpha2
 EXTRACT_SUFX=		.tar.bz2
-DISTNAME=		sunbird-${MOZ_VER}-source
+DISTNAME=		sunbird-${MOZ_VER:S/alpha/a/}-source
 CATEGORIES=		time
-MASTER_SITES=		http://ftp.mozilla.org/pub/mozilla.org/sunbird/new-directory/releases/${MOZ_VER}/source/
-MASTER_SITES+=		ftp://ftp.mozilla.org/pub/mozilla.org/sunbird/new-directory/releases/${MOZ_VER}/source/
+MASTER_SITES=		http://ftp.mozilla.org/pub/mozilla.org/calendar/sunbird/releases/${MOZ_VER:S/alpha/a/}/source/
+MASTER_SITES+=		ftp://ftp.mozilla.org/pub/mozilla.org/calendar/sunbird/releases/${MOZ_VER:S/alpha/a/}/source/
 
 HOMEPAGE=		http://www.mozilla.org/projects/calendar/sunbird.html
 
@@ -22,12 +22,6 @@ CONFIGURE_ENV+=		ac_cv_visibility_pragma=no ac_cv_visibility_hidden=no
 CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/chrome/app-chrome.manifest
 CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/compreg.dat
 CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/xpti.dat
-
-pre-install:
-	${CP} -r ${WRKSRC}/dist/bin/defaults/profile/extensions \
-							${WRKSRC}/dist/bin
-	${MV} ${WRKSRC}/dist/bin/extensions/installed-extensions.txt \
-		${WRKSRC}/dist/bin/extensions/installed-extensions-processed.txt
 
 post-install:
 	cd ${PREFIX}/lib/${MOZILLA} && \
