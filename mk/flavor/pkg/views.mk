@@ -1,4 +1,4 @@
-# $NetBSD: views.mk,v 1.2 2006/06/05 22:49:44 jlam Exp $
+# $NetBSD: views.mk,v 1.3 2006/06/07 17:28:33 jlam Exp $
 
 # By default, all packages attempt to link into the views.
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
@@ -44,28 +44,28 @@ su-build-views:
 		"")	dbdir=${PKG_DBDIR}; viewname=standard ;;	\
 		*)	dbdir=${LOCALBASE}/$$v/.dbdir; viewname=$$v ;;	\
 		esac;							\
-		${ECHO} "=> Performing package view clash check for ${PKGNAME} in $$viewname view"; \
+		${STEP_MSG} "Performing package view clash check for ${PKGNAME} in $$viewname view"; \
 		pkg=`${PKG_INFO_CMD} -K $$dbdir -e ${PKGBASE} || ${TRUE}`; \
 		case "$$pkg" in						\
 		"")	;;						\
-		*)	${ECHO} "*** ${PKGBASE} exists in $$viewname view - package $$pkg ***"; \
-			${ECHO} "*** Not hoisting ${PKGNAME} into $$viewname view"; \
+		*)	${WARNING_MSG} "${PKGBASE} exists in $$viewname view - package $$pkg ***"; \
+			${WARNING_MSG} "Not hoisting ${PKGNAME} into $$viewname view"; \
 			continue;					\
 			;;						\
 		esac;							\
-		${ECHO} "=> Performing package view overwrite check for ${PKGNAME} in $$viewname view"; \
+		${STEP_MSG} "Performing package view overwrite check for ${PKGNAME} in $$viewname view"; \
 		dups=`${SETENV} PLIST_IGNORE_FILES=${_PLIST_IGNORE_FILES:Q} ${PKG_VIEW} --view=$$v check ${PKGNAME} || ${TRUE}`; \
 		case "$$dups" in					\
 		"")	;;						\
-		*)	${ECHO} "***********************************************************"; \
-			${ECHO} "**** The following symbolic links will be overwritten *****"; \
+		*)	${WARNING_MSG} "***********************************************************"; \
+			${WARNING_MSG} "**** The following symbolic links will be overwritten *****"; \
 			for f in $$dups; do				\
-				${LS} -l ${LOCALBASE}/$$v/$$f;		\
+				${LS} -l ${LOCALBASE}/$$v/$$f | ${WARNING_CAT}; \
 			done;						\
-			${ECHO} "***********************************************************"; \
+			${WARNING_MSG} "***********************************************************"; \
 			;;						\
 		esac;							\
-		${ECHO} "=> Linking package into $$viewname view";	\
+		${STEP_MSG} "Linking package into $$viewname view";	\
 		${SETENV} PLIST_IGNORE_FILES=${_PLIST_IGNORE_FILES:Q} ${PKG_VIEW} --view=$$v add ${PKGNAME}; \
 	done
 
@@ -86,6 +86,6 @@ su-remove-views:
 		"")	dbdir=${PKG_DBDIR}; viewname=standard ;;	\
 		*)	dbdir=${LOCALBASE}/$$v/.dbdir; viewname=$$v ;;	\
 		esac;							\
-		${ECHO} "=> Removing package from $$viewname view";	\
+		${STEP_MSG} "Removing package from $$viewname view";	\
 		${SETENV} PLIST_IGNORE_FILES=${_PLIST_IGNORE_FILES:Q} ${PKG_VIEW} --view=$$v delete ${PKGNAME}; \
 	done
