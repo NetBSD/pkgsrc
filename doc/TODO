@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5066 2006/06/06 20:36:17 ghen Exp $
+$NetBSD: TODO,v 1.5067 2006/06/07 05:12:16 ghen Exp $
 
 Suggested new packages
 ======================
@@ -806,6 +806,7 @@ Suggested package updates
 	o openal-0.0.8
 	o opencobol-0.31
 	o openh323-1.17.2
+	o openldap-2.3.24 [ghen]
 	o openntpd-3.9p1
 	o openoffice-2.0.2
 	o openpam-20050616
