@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5067 2006/06/07 05:12:16 ghen Exp $
+$NetBSD: TODO,v 1.5068 2006/06/07 19:32:11 ghen Exp $
 
 Suggested new packages
 ======================
@@ -806,7 +806,6 @@ Suggested package updates
 	o openal-0.0.8
 	o opencobol-0.31
 	o openh323-1.17.2
-	o openldap-2.3.24 [ghen]
 	o openntpd-3.9p1
 	o openoffice-2.0.2
 	o openpam-20050616
@@ -1142,7 +1141,6 @@ Suggested package updates
 	o strace-4.5.8
 	o stunnel-4.15
 	o subtitleripper-0.3.4
-	o sunbird-0.3alpha2 [ghen]
 	o suse100_base-10.1
 	o svk-1.07
 	o sweep-0.9.1
