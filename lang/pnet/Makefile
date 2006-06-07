@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/31 23:56:28 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/06/07 13:03:59 joerg Exp $
 
 DISTNAME=	pnet-0.6.6
 PKGREVISION=	2
@@ -14,6 +14,7 @@ BUILD_DEPENDS+=	treecc>=0.2.6:../../devel/treecc
 CONFLICTS=	mono-[0-9]*
 
 USE_TOOLS+=	gmake makeinfo
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 INFO_FILES=	# PLIST
