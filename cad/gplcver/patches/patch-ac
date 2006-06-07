@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2006/02/10 16:37:51 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2006/06/07 23:52:17 minskim Exp $
 
---- src/makefile.freebsd.orig	2006-02-10 17:10:16.000000000 +0100
+--- src/makefile.freebsd.orig	2005-07-06 17:53:09.000000000 +0000
 +++ src/makefile.freebsd
-@@ -45,7 +45,7 @@ CC=cc
+@@ -45,10 +45,10 @@ CC=cc
  # select loader
  LD=ld
  # needed for dynamic PLI loading
@@ -10,4 +10,8 @@ $NetBSD: patch-ac,v 1.1.1.1 2006/02/10 16:37:51 drochner Exp $
 +LFLAGS=-export-dynamic -Wl,-R${PREFIX}/lib/gplcver
  
  # system libs
- LIBS= -lm
+-LIBS= -lm
++LIBS= -lm ${DL_LIBS}
+ 
+ # rule for making the cver binary
+ cver:	$(MAINOBJ) $(CVER_OBJS)
