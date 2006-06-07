@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.77 2006/06/07 16:31:39 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.78 2006/06/07 18:24:15 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -157,3 +157,5 @@ Pullup ticket 1691 - requested by gdt
 security update for quagga-devel
 Pullup ticket 1692 - requested by gdt
 security update for quagga
+Pullup ticket 1687 - requested by salo
+security update for miredo
