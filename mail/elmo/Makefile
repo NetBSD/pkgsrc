@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/22 09:22:10 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/06/07 12:24:50 joerg Exp $
 #
 
 DISTNAME=		elmo-1.3.2
@@ -10,6 +10,7 @@ MAINTAINER=		pkg@burningsoda.com
 HOMEPAGE=		http://elmo.sourceforge.net/
 COMMENT=		The ELectronic Mail Operator MUA
 
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
