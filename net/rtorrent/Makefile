@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/05/28 12:36:39 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/07 13:03:01 joerg Exp $
 
 DISTNAME=	rtorrent-0.4.5
 CATEGORIES=	net
@@ -11,7 +11,7 @@ COMMENT=	Ncurses based torrent client with support for sessions
 USE_LANGUAGES=		c++
 USE_LIBTOOL=		yes
 USE_NCURSES=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 GCC_REQD+=		3.3
 
