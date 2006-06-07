@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.2 2006/03/14 01:58:47 joerg Exp $
+$NetBSD: distinfo,v 1.2.2.1 2006/06/07 18:23:42 ghen Exp $
 
-SHA1 (miredo-0.8.0.tar.bz2) = 806a96730ef2687e8fbaea7c5bce7a9ffc2e7367
-RMD160 (miredo-0.8.0.tar.bz2) = ef9cc7c8db0188c5e5f364dbc8d24112e75a106f
-Size (miredo-0.8.0.tar.bz2) = 397357 bytes
-SHA1 (patch-aa) = a5d3876d3e23681a3dae58867619c75434cbd0a9
-SHA1 (patch-ab) = 88d38658f43c65206bd5c65cf23de596affcd150
-SHA1 (patch-ac) = b9bd7176a9a89956447b5cf4ae4e48d2c262f37b
-SHA1 (patch-ad) = 67f36caf1eca4909eb3a9c9d0c769d962cf1247c
-SHA1 (patch-ae) = 67341ce2087881d22b8f6a95666cd12c1a1c07ab
-SHA1 (patch-af) = d25bdc8544abd5fa3579c7901673e560447afa40
+SHA1 (miredo-0.8.4.tar.bz2) = 57b2f3880c2e6ec0342478fd6fd329f457250de9
+RMD160 (miredo-0.8.4.tar.bz2) = f72409d4f63800e7f9adc833a1916c7a2939db07
+Size (miredo-0.8.4.tar.bz2) = 407550 bytes
+SHA1 (patch-aa) = 864290fea0303cf82bacace2cf955408983bbf18
+SHA1 (patch-ab) = 9299baae1f7741ddec743159aa871999eff8228a
+SHA1 (patch-ac) = 884e1d2fdadb3aebf096ab99afa1dc8fea2346e9
+SHA1 (patch-ad) = 0b6170f8bb8e3f501de6773e68fd0657036a17bd
+SHA1 (patch-ae) = d6deef1b94ed3e33bb0b0659ba0615416ca2be38
