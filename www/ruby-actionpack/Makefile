@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 14:48:39 taca Exp $
+# $NetBSD: Makefile,v 1.4 2006/06/07 21:28:39 minskim Exp $
 
 DISTNAME=	actionpack-1.10.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -13,9 +13,14 @@ COMMENT=	Two-step approach to web response generation
 DEPENDS+=	${RUBY_PKGPREFIX}-activesupport-[0-9]*:../../devel/ruby-activesupport
 
 NO_BUILD=		yes
-NO_CONFIGURE=		yes
 USE_RUBY_INSTALL=	yes
 EXAMPLESDIR=		${RUBY_EXAMPLESDIR}/actionpack
+
+REPLACE_RUBY+=	lib/action_controller/session/drb_server.rb
+REPLACE_RUBY+=	examples/*.cgi examples/*.fcgi examples/*.rbx
+
+.include "../../lang/ruby/modules.mk"
+.include "../../lang/ruby/replace.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${RUBY_SITELIBDIR}/action_controller/support
@@ -26,5 +31,4 @@ post-install:
 	${CP} -R ${WRKSRC}/examples/* ${EXAMPLESDIR}
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${EXAMPLESDIR}
 
-.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
