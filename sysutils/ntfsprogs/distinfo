@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.8 2006/03/03 10:15:46 adam Exp $
+$NetBSD: distinfo,v 1.9 2006/06/07 23:30:34 joerg Exp $
 
 SHA1 (ntfsprogs-1.13.0.tar.gz) = 14dc4c6e47974d1c9d9cd2175557e30819054b41
 RMD160 (ntfsprogs-1.13.0.tar.gz) = 17f1f185f68ce77c538058dfb05fbfb56985f3eb
 Size (ntfsprogs-1.13.0.tar.gz) = 860532 bytes
+SHA1 (patch-aa) = 2acb065ae42bbbdb960ea1e217f775bbcea7081b
 SHA1 (patch-ab) = cde641aad8d76e2b7abe14b9634c5d23c459f4a6
 SHA1 (patch-ac) = e8205fc7e2e3acc18c1289a2d99800507779b89e
 SHA1 (patch-ae) = 7c3f009489a97673e2f1c7667b7650d1da70cd52
