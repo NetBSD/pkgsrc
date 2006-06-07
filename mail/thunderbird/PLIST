@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/06/03 08:04:36 ghen Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/06/07 15:23:21 ghen Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -617,6 +617,7 @@ include/${MOZILLA}/content/nsIDragDropHandler.h
 include/${MOZILLA}/content/nsIEventListenerManager.h
 include/${MOZILLA}/content/nsIEventStateManager.h
 include/${MOZILLA}/content/nsIFIXptr.h
+include/${MOZILLA}/content/nsIFileControlElement.h
 include/${MOZILLA}/content/nsIForm.h
 include/${MOZILLA}/content/nsIFormControl.h
 include/${MOZILLA}/content/nsIFormProcessor.h
@@ -764,6 +765,7 @@ include/${MOZILLA}/dom/nsIDOMChromeWindow.h
 include/${MOZILLA}/dom/nsIDOMClassInfo.h
 include/${MOZILLA}/dom/nsIDOMComment.h
 include/${MOZILLA}/dom/nsIDOMCompositionListener.h
+include/${MOZILLA}/dom/nsIDOMConstructor.h
 include/${MOZILLA}/dom/nsIDOMContextMenuListener.h
 include/${MOZILLA}/dom/nsIDOMCounter.h
 include/${MOZILLA}/dom/nsIDOMCrypto.h
@@ -2307,6 +2309,7 @@ include/${MOZILLA}/widget/nsWidgetsCID.h
 include/${MOZILLA}/widget/widgetCore.h
 include/${MOZILLA}/windowwatcher/nsIAuthPromptWrapper.h
 include/${MOZILLA}/windowwatcher/nsIDialogParamBlock.h
+include/${MOZILLA}/windowwatcher/nsINonBlockingAlertService.h
 include/${MOZILLA}/windowwatcher/nsIPromptService.h
 include/${MOZILLA}/windowwatcher/nsIWindowWatcher.h
 include/${MOZILLA}/windowwatcher/nsPIPromptService.h
