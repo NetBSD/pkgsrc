@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.441 2006/06/07 12:04:36 abs Exp $
+$NetBSD: CHANGES-2006,v 1.442 2006/06/07 13:53:15 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2947,3 +2947,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added time/p5-DateTime-Format-ISO8601-0.0403 [abs 2006-06-07]
 	Added time/p5-DateTime-Format-Strptime-1.0700 [abs 2006-06-07]
 	Added www/p5-FCGI-ProcManager-0.17 [abs 2006-06-07]
+	Updated pkgtools/pkg_chk to 1.73 [abs 2006-06-07]

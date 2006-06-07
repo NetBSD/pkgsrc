@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.33 2006/05/04 22:08:05 dillo Exp $
+# $Id: pkg_chk.sh,v 1.34 2006/06/07 13:52:39 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -65,8 +65,9 @@ check_packages_installed()
 	    msg
 	else
 	    if [ -n "$opt_B" ];then
-		current_build_ver=$(get_build_ver)
-		installed_build_ver=$(${SED} "s|^[^:]*/[^:]*:||" $PKG_DBDIR/$PKGNAME/+BUILD_VERSION)
+		# sort here temporarily to handle older +BUILD_VERSION
+		current_build_ver=$(get_build_ver | ${SED} "s|.*\$NetBSD: pkg_chk.sh,v 1.34 2006/06/07 13:52:39 abs Exp ${SORT} -u)
+		installed_build_ver=$(${SED} "s|.*\$NetBSD: pkg_chk.sh,v 1.34 2006/06/07 13:52:39 abs Exp $PKG_DBDIR/$PKGNAME/+BUILD_VERSION | ${SORT} -u)
 		if [ x"$current_build_ver" != x"$installed_build_ver" ];then
 		    msg "$PKGNAME: build-version mismatch"
 		    verbose "--current--"
@@ -83,6 +84,13 @@ check_packages_installed()
 	    fi
 	fi
     done
+    }
+
+cleanup_and_exit()
+    {
+    rm -f $TMPFILE
+    rmdir $TMPDIR
+    exit "$@"
     }
 
 delete_pkgs()
@@ -189,14 +197,15 @@ extract_variables()
 fatal()
     {
     msg "*** $@"
-    exit 1
+    cleanup_and_exit 1
     }
 
 fatal_maybe()
     {
-    msg "$@"
     if [ -z "$opt_k" ];then
-	exit 1
+	fatal "@"
+    else
+	msg "$@"
     fi
     }
 
@@ -213,32 +222,14 @@ generate_conf_from_installed()
 get_build_ver()
     {
     if [ -n "$opt_b" -a -z "$opt_s" ] ; then
-	${PKG_INFO} -. -q -b $PACKAGES/$PKGNAME.tgz | ${SED} "s|^[^:]*/[^:]*:||" | ${GREP} .
+	${PKG_INFO} -. -q -b $PACKAGES/$PKGNAME.tgz | ${GREP} .
 	return
     fi
-    files=""
-    for f in Makefile ${FILESDIR}/* ${PKGDIR}/*; do
-	if [ -f $f ];then
-	    files="$files $f"
-	fi
-    done
-    if [ -f ${DISTINFO_FILE} ]; then
-	for f in $(${AWK} 'NF == 4 && $3 == "=" { gsub("[()]", "", $2); print $2 }' < ${DISTINFO_FILE}); do 
-	    if [ -f ${PATCHDIR}/$f ]; then
-		files="$files ${PATCHDIR}/$f";
-	    fi;
-	done
-    fi
-    if [ -d ${PATCHDIR} ]; then
-	for f in ${PATCHDIR}/patch-*; do
-	    case $f in
-	    *.orig|*.rej|*~) ;;
-	    ${PATCHDIR}/patch-local-*)
-		files="$files $f" ;;
-	    esac
-	done
-    fi
-    cat $files | ${GREP} '\$NetBSD'
+    # Unfortunately pkgsrc always outputs to a file, but it does helpfully
+    # allows # us to specify the name
+    rm -f $TMPFILE
+    ${MAKE} _BUILD_VERSION_FILE=$TMPFILE $TMPFILE
+    cat $TMPFILE
     }
 
 list_packages()
@@ -523,7 +514,7 @@ run_cmd()
 			tail -40
 	    fi
             if [ "$FAILOK" != 1 ]; then
-                exit 1
+                fatal "** '$1' failed"
             fi
         fi
     fi
@@ -633,6 +624,9 @@ fi
 if [ -n "$opt_h" -o $# != 0 ];then
     usage
 fi
+
+TMPDIR=`mktemp -d /tmp/${0##*/}.XXXXXX`
+TMPFILE=$TMPDIR/tmp
 
 # Hide PKG_PATH to avoid breakage in 'make' calls
 saved_PKG_PATH=$PKG_PATH
@@ -801,6 +795,10 @@ fi
 
 [ -n "$MISS_DONE" ] &&		msg "Missing:$MISS_DONE"
 [ -n "$INSTALL_DONE" ] &&	msg "Installed:$INSTALL_DONE"
-[ -n "$FAIL_DONE" ] &&		msg "Failed:$FAIL_DONE"
 
-[ -z "$FAIL_DONE" ]
+if [ -n "$FAIL_DONE" ] ; then
+   msg "Failed:$FAIL_DONE"
+   cleanup_and_exit 1
+fi
+
+cleanup_and_exit
