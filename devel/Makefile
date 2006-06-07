@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.766 2006/06/06 10:24:24 seb Exp $
+# $NetBSD: Makefile,v 1.767 2006/06/07 12:03:13 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -424,6 +424,7 @@ SUBDIR+=	p5-IO-LockedFile
 SUBDIR+=	p5-IO-Multiplex
 SUBDIR+=	p5-IO-Null
 SUBDIR+=	p5-IO-Pager
+SUBDIR+=	p5-IO-Prompt
 SUBDIR+=	p5-IO-String
 SUBDIR+=	p5-IO-Stty
 SUBDIR+=	p5-IO-Tee
@@ -437,6 +438,7 @@ SUBDIR+=	p5-IPC-Shareable
 SUBDIR+=	p5-IPC-SharedCache
 SUBDIR+=	p5-Inline
 SUBDIR+=	p5-LDAP
+SUBDIR+=	p5-List-MoreUtils
 SUBDIR+=	p5-Log-Agent
 SUBDIR+=	p5-Log-Dispatch
 SUBDIR+=	p5-Log-Dispatch-Config
@@ -473,6 +475,8 @@ SUBDIR+=	p5-Parse-Yapp
 SUBDIR+=	p5-PatchReader
 SUBDIR+=	p5-PathTools
 SUBDIR+=	p5-Perl-Tidy
+SUBDIR+=	p5-Perl6-Export
+SUBDIR+=	p5-Perl6-Slurp
 SUBDIR+=	p5-PerlIO-eol
 SUBDIR+=	p5-PerlIO-via-dynamic
 SUBDIR+=	p5-PerlIO-via-symlink
@@ -532,6 +536,7 @@ SUBDIR+=	p5-glib2
 SUBDIR+=	p5-perl-headers
 SUBDIR+=	p5-prefork
 SUBDIR+=	p5-subversion
+SUBDIR+=	p5-version
 SUBDIR+=	palmpower
 SUBDIR+=	pango
 SUBDIR+=	papaya
