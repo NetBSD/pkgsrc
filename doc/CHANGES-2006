@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.440 2006/06/07 03:10:39 taca Exp $
+$NetBSD: CHANGES-2006,v 1.441 2006/06/07 12:04:36 abs Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2937,3 +2937,13 @@ Changes to the packages collection and infrastructure in 2006:
 	Deleted databases/tk-postgresql73 [joerg 2006-06-06]
 	Updated security/base to 1.2.5 [adrianp 2006-06-06]
 	Updated graphics/ruby-RMagick to 1.12.0 [taca 2006-06-07]
+	Added devel/p5-IO-Prompt-0.99.4 [abs 2006-06-07]
+	Added devel/p5-List-MoreUtils-0.19 [abs 2006-06-07]
+	Added devel/p5-Perl6-Export-0.07 [abs 2006-06-07]
+	Added devel/p5-Perl6-Slurp-0.03 [abs 2006-06-07]
+	Added devel/p5-version-0.63 [abs 2006-06-07]
+	Added graphics/p5-RRDTool-OO-0.14 [abs 2006-06-07]
+	Added time/p5-DateTime-Format-Builder-0.7807 [abs 2006-06-07]
+	Added time/p5-DateTime-Format-ISO8601-0.0403 [abs 2006-06-07]
+	Added time/p5-DateTime-Format-Strptime-1.0700 [abs 2006-06-07]
+	Added www/p5-FCGI-ProcManager-0.17 [abs 2006-06-07]
