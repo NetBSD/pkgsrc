@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.update.mk,v 1.4 2006/06/05 22:49:44 jlam Exp $
+# $NetBSD: bsd.pkg.update.mk,v 1.5 2006/06/07 10:04:03 tron Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and contains the targets
 # and variables for "make update".
@@ -100,9 +100,9 @@ clean-update:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 		${MAKE} ${MAKEFLAGS} clean update-dirlist		\
 		DIRLIST="`${CAT} ${_DDIR}`" PKGLIST="`${CAT} ${_DLIST}`"
-	@${WARNING_MSG} "Warning: preserved leftover directory list.  Your next"
-	@${WARNING_MSG} "         \`\`${MAKE} update'' may fail.  It is advised to use"
-	@${WARNING_MSG} "         \`\`${MAKE} update REINSTALL=YES'' instead!"
+	@${WARNING_MSG} "preserved leftover directory list.  Your next"
+	@${WARNING_MSG} "\`\`${MAKE} update'' may fail.  It is advised to use"
+	@${WARNING_MSG} "\`\`${MAKE} update REINSTALL=YES'' instead!"
 .endif
 
 .endif	# !target(update)

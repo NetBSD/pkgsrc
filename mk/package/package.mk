@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.3 2006/06/05 22:49:44 jlam Exp $
+# $NetBSD: package.mk,v 1.4 2006/06/07 10:04:04 tron Exp $
 
 _PACKAGE_COOKIE=	${WRKDIR}/.package_done
 
@@ -97,15 +97,15 @@ package-create:
 .PHONY: package-warnings
 package-warnings:
 .if defined(NO_BIN_ON_CDROM)
-	@${WARNING_MSG} "Warning: ${PKGNAME} may not be put on a CD-ROM:"
-	@${wARN_MSG} "        " ${NO_BIN_ON_CDROM:Q}
+	@${WARNING_MSG} "${PKGNAME} may not be put on a CD-ROM:"
+	@${WARNING_MSG} ${NO_BIN_ON_CDROM:Q}
 .endif
 .if defined(NO_BIN_ON_FTP)
-	@${WARNING_MSG} "Warning: ${PKGNAME} may not be made available through FTP:"
-	@${WARNING_MSG} "        " ${NO_BIN_ON_FTP:Q}
+	@${WARNING_MSG} "${PKGNAME} may not be made available through FTP:"
+	@${WARNING_MSG} ${NO_BIN_ON_FTP:Q}
 .endif
 .if defined(ABI_DEPENDS) && !empty(USE_ABI_DEPENDS:M[Nn][Oo])
-	@${WARNING_MSG} "Warning: ABI dependency recommendations are being ignored!"
-	@${WARNING_MSG} "          ${PKGNAME} should not be uploaded nor"
-	@${WARNING_MSG} "          otherwise be used as a binary package!"
+	@${WARNING_MSG} "ABI dependency recommendations are being ignored!"
+	@${WARNING_MSG} "${PKGNAME} should not be uploaded nor"
+	@${WARNING_MSG} "otherwise be used as a binary package!"
 .endif
