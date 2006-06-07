@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.34 2006/06/07 13:52:39 abs Exp $
+# $Id: pkg_chk.sh,v 1.35 2006/06/07 16:27:14 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -66,8 +66,8 @@ check_packages_installed()
 	else
 	    if [ -n "$opt_B" ];then
 		# sort here temporarily to handle older +BUILD_VERSION
-		current_build_ver=$(get_build_ver | ${SED} "s|.*\$NetBSD: pkg_chk.sh,v 1.34 2006/06/07 13:52:39 abs Exp ${SORT} -u)
-		installed_build_ver=$(${SED} "s|.*\$NetBSD: pkg_chk.sh,v 1.34 2006/06/07 13:52:39 abs Exp $PKG_DBDIR/$PKGNAME/+BUILD_VERSION | ${SORT} -u)
+		current_build_ver=$(get_build_ver | ${SED} 's|.*\$NetBSD\: ||' | ${SORT} -u)
+		installed_build_ver=$(${SED} 's|.*\$NetBSD\: ||' $PKG_DBDIR/$PKGNAME/+BUILD_VERSION | ${SORT} -u)
 		if [ x"$current_build_ver" != x"$installed_build_ver" ];then
 		    msg "$PKGNAME: build-version mismatch"
 		    verbose "--current--"
