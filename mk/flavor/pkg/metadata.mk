@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.3 2006/06/06 19:49:52 jlam Exp $
+# $NetBSD: metadata.mk,v 1.4 2006/06/07 17:05:25 jlam Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -131,7 +131,11 @@ ${_BUILD_VERSION_FILE}:
 		esac;							\
 	done
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${CAT} ${.TARGET}.tmp | ${XARGS} ${GREP} -H '\$$NetBSD' |	\
+	${CAT} ${.TARGET}.tmp |						\
+	while read file; do						\
+		${GREP} '\$$NetBSD' $$file 2>/dev/null |		\
+		${SED} -e "s|^|$$file:|";				\
+	done |								\
 	${AWK} '{ sub("^${PKGSRCDIR}/", "");				\
 		  sub(":.*[$$]NetBSD", ":	$$NetBSD");		\
 		  sub("[$$][^$$]*$$", "$$");				\
