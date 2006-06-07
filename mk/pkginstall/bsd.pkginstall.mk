@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.6 2006/06/06 19:49:52 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.7 2006/06/07 17:44:29 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -19,11 +19,6 @@ _FUNC_STRIP_PREFIX= \
 	      print s;							\
 	    }' s="$$1" prefix=${PREFIX:Q}/ /dev/null;			\
 	}
-
-# This is a command that exits with a zero status if the given file
-# is zero-length.
-#
-_ZERO_FILESIZE_P=	${AWK} 'END { exit NR ? 1 : 0; }'
 
 _PKGINSTALL_DIR=	${WRKDIR}/.pkginstall
 

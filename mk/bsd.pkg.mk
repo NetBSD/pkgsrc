@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1844 2006/06/07 17:00:03 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1845 2006/06/07 17:44:29 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -283,6 +283,11 @@ BUILD_DEFS+=            PKG_OPTIONS
 .if empty(DEPOT_SUBDIR)
 PKG_FAIL_REASON+=	"DEPOT_SUBDIR may not be empty."
 .endif
+
+# This is a command that exits with a zero status if the given file
+# is zero-length, e.g. if ${_ZERO_FILESIZE_P} $$file; then ...; fi
+#
+_ZERO_FILESIZE_P=       ${AWK} 'END { exit NR ? 1 : 0; }'
 
 # Automatically increase process limit where necessary for building.
 _ULIMIT_CMD=		${UNLIMIT_RESOURCES:@_lim_@${ULIMIT_CMD_${_lim_}};@}
