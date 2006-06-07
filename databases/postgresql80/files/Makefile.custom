@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.custom,v 1.2 2005/08/05 19:43:45 jlam Exp $
+# $NetBSD: Makefile.custom,v 1.3 2006/06/07 08:33:44 adam Exp $
 #
 # This file is included at the end of Makefile.global, which is included
 # by every sub-Makefile in the build tree.  Makefiles for shared
@@ -21,6 +21,9 @@ ifdef INSTALLED_LIBPQ
 libpq = -lpq
 else
 ifdef LIBTOOL
+libpq = $(libpq_builddir)/libpq.la
+endif
+ifdef PGFILEDESC
 libpq = -L$(libpq_builddir)/.libs -lpq
 endif
 endif
