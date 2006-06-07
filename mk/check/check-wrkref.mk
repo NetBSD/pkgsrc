@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.2 2006/06/06 18:07:50 jlam Exp $
+# $NetBSD: check-wrkref.mk,v 1.3 2006/06/07 17:05:25 jlam Exp $
 
 .if defined(PKG_DEVELOPER)
 CHECK_WRKREF?=		tools
@@ -33,37 +33,48 @@ _CHECK_WRKREF:=		work		# "work" is the "max" option
 ###########################################################################
 # check-wrkref target
 #
+_CHECK_WRKREF_FOUND=	${WRKDIR}/.check_wrkref_found
+
 .PHONY: check-wrkref
-check-wrkref:
-.if !defined(NO_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}${STEP_MSG}				\
-		"Checking for work-directory references in ${PKGNAME}"
+check-wrkref: check-wrkref-message check-wrkref-clean ${_CHECK_WRKREF_FOUND}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	if ${_ZERO_FILESIZE_P} ${_CHECK_WRKREF_FOUND}; then		\
+		${DO_NADA};						\
+	else								\
+		${ERROR_MSG} "The following files still have references to the build directory."; \
+		${ERROR_MSG} "This is possibly an error that should be fixed by unwrapping"; \
+		${ERROR_MSG} "the files or adding missing tools to the package makefile!"; \
+		${ERROR_MSG} "";					\
+		${CAT} ${_CHECK_WRKREF_FOUND} | ${ERROR_CAT};		\
+		exit 1;							\
+	fi
+
+.PHONY: check-wrkref-message
+check-wrkref-message:
+	@${STEP_MSG} "Checking for work-directory references in ${PKGNAME}"
+
+check-clean: check-wrkref-clean
+.PHONY: check-wrkref-clean
+check-wrkref-clean:
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_CHECK_WRKREF_FOUND}
+
+${_CHECK_WRKREF_FOUND}:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${PKG_FILELIST_CMD} | ${SORT} |					\
-	{ while read file; do						\
+	while read file; do						\
 		${_CHECK_WRKREF_SKIP_FILTER};				\
 		${SHCOMMENT} [$$file];					\
 		case ${_CHECK_WRKREF:Mwork:Q}"" in			\
 		work)							\
-			if ${GREP} -H ${WRKDIR} "$$file" 2>/dev/null; then \
-				found=1;				\
-			fi;						\
+			${GREP} ${WRKDIR} "$$file" 2>/dev/null |	\
+			${SED} -e "s|^|$$file:	|";			\
 			;;						\
 		esac;							\
 		case ${_CHECK_WRKREF:Mtools:Q}"" in			\
 		tools)							\
-			if ${GREP} -H ${TOOLS_DIR} "$$file" 2>/dev/null; then \
-				found=1;				\
-			fi;						\
+			${GREP} ${TOOLS_DIR} "$$file" 2>/dev/null |	\
+			${SED} -e "s|^|$$file:	|";			\
 			;;						\
 		esac;							\
-	  done;								\
-	  if ${TEST} "$$found" = 1; then				\
-		${ECHO} "***";						\
-		${ECHO} "*** The above files still have references to the build directory."; \
-		${ECHO} "*** This is possibly an error that should be fixed by unwrapping"; \
-		${ECHO} "*** the files or adding missing tools to the package makefile!"; \
-		${ECHO} "***";						\
-		exit 1;							\
-	  fi; }
-.endif
+	done > ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
