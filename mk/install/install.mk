@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.3 2006/06/05 22:49:44 jlam Exp $
+# $NetBSD: install.mk,v 1.4 2006/06/07 10:04:04 tron Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -75,11 +75,11 @@ install-check-version: ${_EXTRACT_COOKIE}
 	extractname=`${CAT} ${_EXTRACT_COOKIE}`;			\
 	pkgname=${PKGNAME};						\
 	case "$$extractname" in						\
-	"")	${WARNING_MSG} "Warning: ${WRKDIR} may contain an older version of ${PKGBASE}" ;; \
+	"")	${WARNING_MSG} "${WRKDIR} may contain an older version of ${PKGBASE}" ;; \
 	"$$pkgname")	;;						\
-	*)	${WARNING_MSG} "Warning: Package version $$extractname in ${WRKDIR}"; \
-		${WARNING_MSG} "         Current version $$pkgname in ${PKG_PATH}"; \
-		${WARNING_MSG} "         Cleaning and rebuilding $$pkgname...";	\
+	*)	${WARNING_MSG} "Package version $$extractname in ${WRKDIR}"; \
+		${WARNING_MSG} "Current version $$pkgname in ${PKG_PATH}"; \
+		${WARNING_MSG} "Cleaning and rebuilding $$pkgname...";	\
 		${MAKE} clean && ${MAKE} build ;;			\
 	esac
 
@@ -173,7 +173,7 @@ install-check-umask:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	umask=`${SH} -c umask`;						\
 	if ${TEST} "$$umask" -ne ${DEF_UMASK}; then			\
-		${WARNING_MSG} "Warning: your umask is \`\`$$umask''.";	\
+		${WARNING_MSG} "Your umask is \`\`$$umask''.";	\
 		${WARNING_MSG} "If this is not desired, set it to an appropriate value (${DEF_UMASK}) and install"; \
 		${WARNING_MSG} "this package again by \`\`${MAKE} deinstall reinstall''."; \
         fi
