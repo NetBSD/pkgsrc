@@ -1,14 +1,12 @@
-$NetBSD: patch-ae,v 1.1 2006/03/14 01:59:19 joerg Exp $
+$NetBSD: patch-ae,v 1.1.2.1 2006/06/07 18:23:42 ghen Exp $
 
---- config.h.in.orig	2006-03-14 01:37:13.000000000 +0000
-+++ config.h.in
-@@ -31,6 +31,9 @@
- /* Define to 1 if the host kernel is FreeBSD. */
- #undef HAVE_FREEBSD
- 
-+/* Define to 1 if the host kernel is DragonFly. */
-+#undef HAVE_DRAGONFLY
-+
- /* Define to 1 if you have the <getopt.h> header file. */
- #undef HAVE_GETOPT_H
+--- configure.orig	2006-05-12 08:09:32.000000000 +0000
++++ configure
+@@ -20607,6 +20607,7 @@ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
++#include <sys/types.h>
+ #include <sys/socket.h>
+ #include <net/if.h>
  
