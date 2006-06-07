@@ -1,4 +1,4 @@
-# $NetBSD: check-interpreter.mk,v 1.2 2006/06/06 23:43:10 rillig Exp $
+# $NetBSD: check-interpreter.mk,v 1.3 2006/06/07 17:41:14 jlam Exp $
 
 CHECK_INTERPRETER?=	no
 
@@ -29,7 +29,7 @@ check-interpreter:
 		${_CHECK_INTERP_SKIP_FILTER};				\
 		${SHCOMMENT} "[$$file]";				\
 		interp=`${SED} -n -e '1s/^#![[:space:]]*\([^[:space:]]*\).*/\1/p' -e '1q' < "$$file"` \
-		|| {	${ECHO} "[check-interpreter.mk] WARNING: sed(1) failed for \"$$file\"." 1>&2; \
+		|| {	${WARNING_MSG} "[check-interpreter.mk] sed(1) failed for \"$$file\"."; \
 			continue;					\
 		};							\
 		case $$interp in					\
@@ -37,10 +37,10 @@ check-interpreter:
 		esac;							\
 		if ${TEST} ! -f "$$interp"; then			\
 			if ${TEST} -x "$$file"; then			\
-				${ECHO} "[check-interpreter.mk] ERROR: The interpreter \"$$interp\" of \"$$file\" does not exist." 1>&2; \
+				${ERROR_MSG} "[check-interpreter.mk] The interpreter \"$$interp\" of \"$$file\" does not exist."; \
 				exitcode=1;				\
 			else						\
-				${ECHO} "[check-interpreter.mk] WARNING: The interpreter \"$$interp\" of \"$$file\" does not exist." 1>&2; \
+				${WARNING_MSG} "[check-interpreter.mk] The interpreter \"$$interp\" of \"$$file\" does not exist."; \
 			fi;						\
 		fi;							\
 	  done;								\
