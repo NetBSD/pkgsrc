@@ -1,33 +1,21 @@
-$NetBSD: patch-aa,v 1.2 2006/03/14 01:58:47 joerg Exp $
+$NetBSD: patch-aa,v 1.2.2.1 2006/06/07 18:23:42 ghen Exp $
 
---- libteredo/server.c	2006-02-28 00:48:07.000000000 +0000
-+++ libteredo/server.c.new	2006-02-28 00:47:56.000000000 +0000
-@@ -39,6 +39,7 @@
- #include <stdlib.h>
+--- Makefile.in.orig	2006-05-01 13:58:04.000000000 +0100
++++ Makefile.in	2006-05-02 16:10:03.000000000 +0100
+@@ -215,7 +215,7 @@ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ ACLOCAL_AMFLAGS = -I m4
+-SUBDIRS = po doc misc compat libtun6 libteredo src
++SUBDIRS = po doc compat libtun6 libteredo src
+ DIST_SUBDIRS = m4 $(SUBDIRS)
+ noinst_HEADERS = include/gettext.h
+ EXTRA_DIST = bootstrap autopackage/default.apspec.in
+@@ -615,7 +615,6 @@ info-am:
  
- #include <sys/types.h>
-+#include <sys/uio.h>
- #include <unistd.h> // close()
- #include <sys/socket.h>
- #include <netinet/in.h> // struct in6_addr
-@@ -49,6 +50,10 @@
- #include <pthread.h>
- #include <syslog.h>
+ install-data-am:
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
  
-+#ifdef __NetBSD__
-+#include <machine/limits.h>
-+#endif
-+
- #include "server.h"
- #include "v4global.h"
- #include "checksum.h"
-@@ -253,7 +258,9 @@ libteredo_send_ipv6 (const void *p, size
- 				               /* ICMPv6 time exceeded */
- 			case ECONNREFUSED: /* ICMPv6 unreach port unreachable */
- 			case EMSGSIZE: /* ICMPv6 packet too big */
-+#ifdef EPROTO
- 			case EPROTO: /* ICMPv6 param prob (and other errors) */
-+#endif
- 				break;
+ install-exec-am:
  
- 			default:
