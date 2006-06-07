@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1843 2006/06/06 15:28:51 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1844 2006/06/07 17:00:03 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -431,6 +431,9 @@ PHASE_MSG?=		${ECHO_MSG} ${_PKGSRC_IN:Q}\>
 STEP_MSG?=		${ECHO_MSG} "=>"
 WARNING_MSG?=		${ECHO_MSG} 1>&2 "WARNING:"
 ERROR_MSG?=		${ECHO_MSG} 1>&2 "ERROR:"
+
+WARNING_CAT?=		${SED} -e "s|^|WARNING: |" 1>&2
+ERROR_CAT?=		${SED} -e "s|^|ERROR: |" 1>&2
 
 # How to do nothing.  Override if you, for some strange reason, would rather
 # do something.
