@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2006/03/14 20:43:23 jlam Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2006/06/07 00:14:26 salo Exp $
 #
 
-DISTNAME=	base-1.2.2
+DISTNAME=	base-1.2.5
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=secureideas/}
 
 MAINTAINER=	adrianp@NetBSD.org
-HOMEPAGE= 	http://secureideas.sourceforge.net/
+HOMEPAGE=	http://secureideas.sourceforge.net/
 COMMENT=	Analysis engine to process a database of security events
 
 DEPENDS+=	adodb>=1.2:../../databases/adodb
@@ -21,6 +21,8 @@ DEPENDS+=	pear-Image_Color-[0-9]*:../../graphics/pear-Image_Color
 DEPENDS+=	pear-Image_Graph-[0-9]*:../../graphics/pear-Image_Graph
 
 NO_BUILD=	YES
+
+.include "../../mk/bsd.prefs.mk"
 
 DOC_FILES=	CHANGELOG CREDITS README README.mssql TODO UPGRADE base_faq.rtf
 BASE_DIR=	${PREFIX}/share/base
@@ -61,11 +63,11 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/*.php ${BASE_DIR}
 
 .	for f in ${DOC_FILES}
-		${INSTALL_DATA} ${WRKSRC}/docs/${f} ${PREFIX}/share/doc/base
+		${INSTALL_DATA} ${WRKSRC}/docs/${f:Q} ${PREFIX}/share/doc/base
 .	endfor
 
 .	for i in ${PAX_DIRS}
-		cd ${WRKSRC}/${i} && ${PAX} -rw . ${BASE_DIR}/${i}
+		cd ${WRKSRC}/${i:Q} && ${PAX} -rw . ${BASE_DIR}/${i:Q}
 .	endfor
 
 	@${CHOWN} ${WWW_USER} ${BASE_DIR}
