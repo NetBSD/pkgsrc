@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/04 21:28:57 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/06/07 12:37:38 joerg Exp $
 
 DISTNAME=		ncmpc-0.11.1
 PKGREVISION=		1
@@ -13,7 +13,7 @@ COMMENT=		Curses client for Music Player Daemon
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config msgfmt
 
 INCOMPAT_CURSES=	NetBSD-1.4*-* NetBSD-1.5*-*
 INCOMPAT_CURSES+=	NetBSD-1.6.*-* NetBSD-1.6_*-*
