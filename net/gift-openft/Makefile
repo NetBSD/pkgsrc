@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/01/06 15:10:06 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/07 12:42:39 joerg Exp $
 #
 
 DISTNAME=	gift-openft-0.2.1.3
@@ -11,6 +11,7 @@ HOMEPAGE=	http://gift.sourceforge.net/
 COMMENT=	OpenFT Plugin for the gift daemon
 
 USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	yes
 
 PTHREAD_AUTO_VARS=	yes
