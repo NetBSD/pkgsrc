@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/05/03 15:46:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6.8.1 2006/06/07 16:31:21 salo Exp $
 include/quagga/buffer.h
 include/quagga/command.h
 include/quagga/distribute.h
@@ -57,6 +57,12 @@ sbin/ospfd
 sbin/ripd
 sbin/watchquagga
 sbin/zebra
+share/doc/quagga/BGP-TypeCode
+share/doc/quagga/draft-zebra-00.txt
+share/doc/quagga/mpls/ChangeLog.opaque.txt
+share/doc/quagga/mpls/cli_summary.txt
+share/doc/quagga/mpls/opaque_lsa.txt
+share/doc/quagga/mpls/ospfd.conf
 share/examples/quagga/bgpd.conf.sample
 share/examples/quagga/bgpd.conf.sample2
 share/examples/quagga/log_syslog.conf
@@ -69,6 +75,8 @@ share/examples/rc.d/ospfd
 share/examples/rc.d/ripd
 share/examples/rc.d/ripngd
 share/examples/rc.d/zebra
+@dirrm share/doc/quagga/mpls
+@dirrm share/doc/quagga
 @dirrm share/examples/quagga
 @dirrm include/quagga/ospfd
 @dirrm include/quagga
