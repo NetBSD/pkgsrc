@@ -1,4 +1,4 @@
-# $NetBSD: plist.mk,v 1.12 2006/06/03 23:11:43 jlam Exp $
+# $NetBSD: plist.mk,v 1.13 2006/06/08 03:11:17 jlam Exp $
 #
 # This Makefile fragment handles the creation of PLISTs for use by
 # pkg_create(8).
@@ -68,9 +68,9 @@ PLIST=		${WRKDIR}/.PLIST
 ######################################################################
 
 .if (defined(USE_IMAKE) || !empty(USE_TOOLS:Mimake))
-_IMAKE_MANINSTALL=	# empty
-.else
 _IMAKE_MANINSTALL=	${IMAKE_MANINSTALL}
+.else
+_IMAKE_MANINSTALL=	# empty
 .endif
 
 _LIBTOOL_EXPAND=							\
