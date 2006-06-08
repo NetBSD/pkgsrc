@@ -1,4 +1,4 @@
-# $NetBSD: transform-solaris-gcc,v 1.1 2005/07/23 04:45:30 grant Exp $
+# $NetBSD: transform-solaris-gcc,v 1.2 2006/06/08 06:29:44 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -36,6 +36,11 @@ case $arg in
 # -Kpic to -fPIC.
 -Kpic|-KPIC)
 	arg=-fPIC
+	msg_log $wrapperlog "   (transform-solaris-gcc) to: $arg"
+	addtocache=yes
+	;;
+-mt)	# (from SunPro)
+	arg=-threads
 	msg_log $wrapperlog "   (transform-solaris-gcc) to: $arg"
 	addtocache=yes
 	;;
