@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:09:40 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/06/08 15:54:55 joerg Exp $
 #
 
 DISTNAME=		vnc2swf-0.5.0
@@ -15,7 +15,7 @@ DEPENDS+=               x11vnc-[0-9]*:../../x11/x11vnc
 GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c++
 
-INSTALLATION_DIRS=	share/doc/html/vnc2swf
+INSTALLATION_DIRS=	bin lib/X11/app-defaults share/doc/html/vnc2swf
 
 SUBST_CLASSES+=         x11base
 SUBST_STAGE.x11base=    pre-configure
