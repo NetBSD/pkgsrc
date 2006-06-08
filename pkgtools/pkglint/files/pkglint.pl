@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.611 2006/06/08 07:15:27 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.612 2006/06/08 15:56:00 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1564,7 +1564,7 @@ my $regex_shellword		=  qr"\s*(
 	|	\$\$\(			# POSIX-style backticks replacement
 	|	[^\(\)'\"\\\s;&\|<>\#\`\$] # non-special character
 	|	\$\{[^\s\"'`]+		# HACK: nested make(1) variables
-	)+ | ;;? | &&? | \|\|? | \( | \) | <<? | >>? | \#.*)"sx;
+	)+ | ;;? | &&? | \|\|? | \( | \) | >& | <<? | >>? | \#.*)"sx;
 my $regex_varname		= qr"[-*+.0-9A-Z_a-z{}\[]+";
 
 #
@@ -3378,7 +3378,7 @@ sub checkline_mk_shelltext($$) {
 		${DO_NADA}
 		${ECHO} ${ECHO_MSG} ${ECHO_N} ${ERROR_CAT} ${ERROR_MSG}
 		${PHASE_MSG}
-		${STEP_MSG}
+		${SHCOMMENT} ${STEP_MSG}
 		${WARNING_CAT} ${WARNING_MSG}
 	));
 
@@ -3397,6 +3397,14 @@ sub checkline_mk_shelltext($$) {
 			if (!exists(hidden_shell_commands->{$cmd})) {
 				$line->log_warning("The shell command \"${cmd}\" should not be hidden.");
 			}
+		}
+
+		if ($hidden =~ qr"-") {
+			$line->log_warning("The use of a leading \"-\" to suppress errors is deprecated.");
+			$line->explain_warning(
+				"If you really want to ignore any errors from this command (including",
+				"all errors you never thought of), append \"|| \${TRUE}\" to the",
+				"command.");
 		}
 	}
 
@@ -3421,7 +3429,7 @@ sub checkline_mk_shelltext($$) {
 		if ($state == SCST_START && exists($vartools->{$shellword})) {
 			my $addition = "";
 
-			if (!exists(get_predefined_vartool_names->{$shellword})) {
+			if (!exists(get_predefined_vartool_names()->{$shellword})) {
 				my $toolvarname = get_vartool_names->{$shellword};
 				my $toolname = get_varname_to_toolname->{$toolvarname};
 				$addition = " and add USE_TOOLS+=${toolname} before this line";
@@ -3429,8 +3437,56 @@ sub checkline_mk_shelltext($$) {
 			$line->log_warning("Direct use of tool \"${shellword}\". Please use \$\{$vartools->{$shellword}\} instead${addition}.");
 		}
 
-		if ($state == SCST_START && exists(forbidden_commands->{$shellword})) {
-			$line->log_error("${shellword} is forbidden and must not be used.");
+		if ($state == SCST_START) {
+			if (exists(forbidden_commands->{$shellword})) {
+				$line->log_error("${shellword} is forbidden and must not be used.");
+
+			} elsif (exists(get_tool_names()->{$shellword})) {
+				# Fine.
+
+			} elsif ($shellword =~ qr"^\$\{([\w_]+)\}$" && (exists($vartools->{$1}) || defined(get_variable_type($line, $1)))) {
+				# Fine.
+
+			} elsif ($shellword =~ qr"^(?:\(|\)|:|;|;;|&&|\|\||\{|\}|break|case|cd|continue|do|done|elif|else|esac|eval|exit|export|fi|for|if|set|shift|then|unset|while)$") {
+				# Shell builtins are fine.
+
+			} elsif ($shellword =~ qr"^[\w_]+=.*$") {
+				# Variable assignment.
+
+			} elsif ($shellword =~ qr"^\./.*$") {
+				# All commands from the current directory are fine.
+
+			} elsif ($shellword =~ qr"^#") {
+				my $semicolon = ($shellword =~ qr";");
+				my $multiline = ($line->lines =~ qr"--");
+
+				if ($semicolon) {
+					$line->log_warning("A shell comment should not contain semicolons.");
+				}
+				if ($multiline) {
+					$line->log_warning("A shell comment does not stop at the end of line.");
+				}
+
+				if ($semicolon || $multiline) {
+					$line->explain_warning(
+						"When you split a shell command into multiple lines that are continues",
+						"with a backslash, they will nevertheless be converted to a single line",
+						"before the shell sees them. That means that even if it _looks_ like that",
+						"the comment only spans one line in the Makefile, in fact it spans until",
+						"the end of the whole shell command. To insert a comment into shell code,",
+						"you can pass it as an argument to the \${SHCOMMENT} macro, which expands",
+						"to a command doing nothing. Note that any special characters are",
+						"nevertheless interpreted by the shell.");
+				}
+
+			} else {
+				$line->log_warning("Unknown shell command \"${shellword}\".");
+				$line->explain_warning(
+					"If you want your package to be portable to all platforms that pkgsrc",
+					"supports, you should only use shell commands that are covered by the",
+					"tools framework.");
+
+			}
 		}
 
 		if ($state == SCST_COND && $shellword eq "cd") {
@@ -3494,6 +3550,8 @@ sub checkline_mk_shelltext($$) {
 		}
 
 		$state =  ($shellword eq ";;") ? SCST_CASE_LABEL
+			# Note: The order of the following two lines is important.
+			: ($state == SCST_CASE_LABEL_CONT && $shellword eq "|") ? SCST_CASE_LABEL
 			: ($shellword =~ qr"^[;&\|]+$") ? SCST_START
 			: ($state == SCST_START) ? (
 				  ($shellword eq "\${INSTALL}") ? SCST_INSTALL
@@ -3529,7 +3587,6 @@ sub checkline_mk_shelltext($$) {
 			: ($state == SCST_CASE_IN && $shellword eq "in") ? SCST_CASE_LABEL
 			: ($state == SCST_CASE_LABEL && $shellword eq "esac") ? SCST_CONT
 			: ($state == SCST_CASE_LABEL) ? SCST_CASE_LABEL_CONT
-			: ($state == SCST_CASE_LABEL_CONT && $shellword eq "|") ? SCST_CASE_LABEL
 			: ($state == SCST_CASE_LABEL_CONT && $shellword eq ")") ? SCST_START
 			: ($state == SCST_CONT) ? SCST_CONT
 			: ($state == SCST_COND) ? SCST_COND_CONT
