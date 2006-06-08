@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.111 2006/06/08 15:56:00 rillig Exp $
+# $NetBSD: makevars.map,v 1.112 2006/06/08 18:21:14 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -303,7 +303,7 @@ INCOMPAT_CURSES		List of PlatformTriple [m:as]
 INCOMPAT_ICONV		List of PlatformTriple
 INFO_DIR		Pathname
 # ^^ relative to PREFIX
-INFO_FILES		List of Pathmask [m:s,c:ads]
+INFO_FILES		Yes [$simple]
 INSTALL			ShellCommand [*:u]
 INSTALLATION_DIRS	List of Pathname [$list]
 INSTALL_DATA		ShellCommand [*:u]
