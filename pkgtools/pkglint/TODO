@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.48 2006/06/03 00:25:34 joerg Exp $
+$NetBSD: TODO,v 1.49 2006/06/08 15:14:22 rillig Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
@@ -13,11 +13,8 @@ include the name of an example package where a warning should occur.
 * Find a reliable, secure way to delete all CVS directories inside
   ${WRKSRC}. When that is finished, add a warning that using ${XARGS}
   is insecure.
-* detect spelling errors (like CONFLICT => CONFLICTS)
 * warn about the use of ${WRKDIR:=...}, as this construct should only
   be used with lists.
-* mention the SUBST framework whenever ${SED} is used.
-* check that Index: entries match the rest of the patch
 * record with each substring its source location to be able to make
   even more precise diagnostics
 * check wether CONFIG* override match, e.g. CONFIGURE_DIRS most likely
@@ -31,5 +28,3 @@ include the name of an example package where a warning should occur.
 * Check that USE_LIBTOOL=yes, when the PLIST contains *.la.
 * Of the user-defined variables, some may be used at load-time and some
   don't. Find out how pkglint can distinguish them.
-* PYTHON_VERSIONS_INCOMPATIBLE should be treated as platform flag only,
-  the user or packages should not alter or use it
