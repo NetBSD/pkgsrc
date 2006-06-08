@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.4 2006/06/05 17:41:11 jlam Exp $
+# $NetBSD: depends.mk,v 1.5 2006/06/08 08:55:10 rillig Exp $
 
 ######################################################################
 ### depends (PUBLIC)
@@ -7,6 +7,7 @@
 ### the package.
 ###
 _DEPENDS_TARGETS+=	acquire-depends-lock
+_DEPENDS_TARGETS+=	depends-message
 _DEPENDS_TARGETS+=	${_DEPENDS_COOKIE}
 _DEPENDS_TARGETS+=	release-depends-lock
 
@@ -18,6 +19,10 @@ depends: ${_DEPENDS_TARGETS}
 .PHONY: acquire-depends-lock release-depends-lock
 acquire-depends-lock: acquire-lock
 release-depends-lock: release-lock
+
+.PHONY: depends-message
+depends-message:
+	@${PHASE_MSG} "Installing dependencies for ${PKGNAME}"
 
 .if !exists(${_DEPENDS_COOKIE})
 ${_DEPENDS_COOKIE}: pre-depends-hook depends-install depends-cookie
