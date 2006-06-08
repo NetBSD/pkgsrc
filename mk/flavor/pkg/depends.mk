@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.3 2006/06/05 22:49:44 jlam Exp $
+# $NetBSD: depends.mk,v 1.4 2006/06/08 07:04:49 rillig Exp $
 
 _DEPENDS_FILE=		${WRKDIR}/.depends
 _REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
@@ -78,7 +78,7 @@ depends-install: ${_DEPENDS_FILE}
 		case "$$pkg" in						\
 		"")							\
 			${PHASE_MSG} "Required installed package $$pattern: NOT found"; \
-			target=${DEPENDS_TARGET};			\
+			target=${DEPENDS_TARGET:Q};			\
 			${PHASE_MSG} "Verifying $$target for $$dir";	\
 			if ${TEST} ! -d "$$dir"; then			\
 				${ERROR_MSG} "[depends.mk] The directory \`\`$$dir'' does not exist."; \
