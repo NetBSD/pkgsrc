@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.108 2006/06/06 11:37:31 rillig Exp $
+# $NetBSD: makevars.map,v 1.109 2006/06/08 07:10:19 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -124,10 +124,10 @@ LOCALPATCHES			Pathname [*:]
 ALL_ENV			List of ShellWord
 ALTERNATIVES_FILE	Filename
 ALTERNATIVES_SRC	List of Pathname
-APACHE_MODULE		Yes
-AUTOCONF_REQD		List of Version [*:a]
+APACHE_MODULE		Yes [$simple]
+AUTOCONF_REQD		List of Version [$list]
 AUTOMAKE_OVERRIDE	List of Pathmask
-AUTOMAKE_REQD		List of Version [*:a]
+AUTOMAKE_REQD		List of Version [$list]
 BATCH			Yes []
 BDB185_DEFAULT		Unchecked []
 BDBBASE			Pathname [*:u]
@@ -171,8 +171,8 @@ BUILDLINK_TRANSFORM	List of WrapperTransform [*:a]
 BUILD_DEFS		List of Varname [m:a,c:a,o:a]
 BUILD_DEPENDS		InternalList of DependencyWithPath [c:a,m:a,o:a,*.mk:a]
 BUILD_DIRS		List of WrksrcSubdirectory [$list]
-BUILD_ENV		List of ShellWord [*:a]
-BUILD_MAKE_FLAGS	List of ShellWord [*:a]
+BUILD_ENV		List of ShellWord [$list]
+BUILD_MAKE_FLAGS	List of ShellWord [$list]
 BUILD_TARGET		List of Identifier [$simple]
 BUILD_USES_MSGFMT	Yes
 BUILTIN_PKG		Identifier [builtin.mk:s]
@@ -195,7 +195,7 @@ CHECK_SHLIBS		YesNo [m:s]
 CHECK_SHLIBS_SUPPORTED	YesNo [m:s]
 CHECK_WRKREF_SKIP	List of Pathmask [m:a,c:a]
 COMMENT			Comment [m:as,c:as]			# m:a?, c:a?
-CONFIGURE_ARGS		List of ShellWord [*:a]
+CONFIGURE_ARGS		List of ShellWord [$list]
 CONFIGURE_DIRS		List of WrksrcSubdirectory [m:s,c:s]
 CONFIGURE_ENV		List of ShellWord [*:a]
 CONFIGURE_HAS_INFODIR	YesNo
@@ -216,7 +216,8 @@ CXXFLAGS*		List of CFlag [m:a,c:a,o:a,h:a]
 DEINSTALL_FILE		Pathname [m:s]
 DEINSTALL_SRC		List of Pathname [m:s,c:ds]
 DEINSTALL_TEMPLATE	List of Pathname [m:as,c:ads]
-DEPENDS			InternalList of DependencyWithPath [*:a]
+DEPENDS			InternalList of DependencyWithPath [$list]
+DEPENDS_TARGET		List of Identifier
 DESCR_SRC		List of Pathname [m:s,c:ds]
 DEVOSSAUDIO		Pathname
 DEVOSSSOUND		Pathname
@@ -276,13 +277,13 @@ FAM_TYPE		{ fam gamin } [$system]
 FETCH_BEFORE_ARGS	List of ShellWord [m:as]
 FETCH_MESSAGE		List of ShellWord [$list]
 FILESDIR		RelativePkgPath [m:s,c:ds]
-FILES_SUBST		List of ShellWord [*:a]
+FILES_SUBST		List of ShellWord [$list]
 FILES_SUBST_SED		List of ShellWord
 FONTS_DIRS.*		List of Pathname [m:as,c:a]
 GAMEGRP			UserGroupName []
 GAMEMODE		FileMode []
 GAMEOWN			UserGroupName []
-GCC_REQD		List of Version [*:a]
+GCC_REQD		List of Version [$list]
 GENERATE_PLIST		List of ShellWord [m:a,c:a]
 # ^^ List of Shellcommand, terminated with a semicolon
 GNU_ARCH		{ mips }
@@ -349,8 +350,8 @@ MAKEFLAGS		List of ShellWord [m:a,c:a,b:a,h:a]
 MAKEVARS		List of Varname [builtin.mk:a,b:a,h:a]
 MAKE_DIRS		List of Pathname [$list]
 MAKE_DIRS_PERMS		List of ShellWord [$list]
-MAKE_ENV		List of ShellWord [*:a]
-MAKE_FLAGS		List of ShellWord [*:a]
+MAKE_ENV		List of ShellWord [$list]
+MAKE_FLAGS		List of ShellWord [$list]
 MAKE_PROGRAM		ShellCommand []
 MANCOMPRESSED		YesNo [m:s,c:ds]
 MANCOMPRESSED_IF_MANZ	Yes [m:s,c:ds]
@@ -441,7 +442,7 @@ PKG_APACHE_ACCEPTED	List of { apache13 apache2 }
 PKG_APACHE_DEFAULT	{ apache13 apache2 } [$user]
 PKG_DEBUG_LEVEL		Integer [$cmdline]
 PKG_DEFAULT_OPTIONS	List of Option [$user]
-PKG_FAIL_REASON		List of ShellWord [*:a]
+PKG_FAIL_REASON		List of ShellWord [$list]
 PKG_GECOS.*		Message [m:s]
 PKG_GID.*		Integer [m:s]
 PKG_GROUPS		List of ShellWord [m:as]
@@ -484,7 +485,7 @@ PKG_PRESERVE		Yes [m:s]
 PKG_SHELL		Pathname [m:s,c:s]
 PKG_SHELL.*		Pathname [m:s,c:s]
 PKG_SHLIBTOOL		Pathname
-PKG_SKIP_REASON		List of ShellWord [*:a]
+PKG_SKIP_REASON		List of ShellWord [$list]
 PKG_SUGGESTED_OPTIONS	List of Option [o:as,m:as,c:s]
 PKG_SUPPORTED_OPTIONS	List of Option [o:as,m:as,c:s]
 PKG_SYSCONFDIR		Pathname [m:s,c:ds]
@@ -495,7 +496,7 @@ PKG_UID			Integer [m:s]
 PKG_USERS		List of ShellWord [m:as]
 PKG_USE_KERBEROS	Yes [m:s,c:s]
 PLIST_SRC		List of RelativePkgPath [$list]
-PLIST_SUBST		List of ShellWord [*:a]
+PLIST_SUBST		List of ShellWord [$list]
 PLIST_TYPE		{ dynamic static }
 PREPEND_PATH		List of Pathname
 PREFIX			Pathname [*:u]
@@ -538,7 +539,7 @@ TEST_ENV		List of ShellWord
 TEST_TARGET		List of Identifier [m:s,c:ds]
 TEX_ACCEPTED		List of { teTeX1 teTeX2 teTeX3 } [m:s,c:s]
 TEX_DEPMETHOD		{ build run } [m:s,c:s]
-TEXINFO_REQD		List of Version [*:a]
+TEXINFO_REQD		List of Version [$list]
 TOOLS_ALIASES		List of Filename
 TOOLS_BROKEN		List of Tool
 TOOLS_CREATE		List of Tool
