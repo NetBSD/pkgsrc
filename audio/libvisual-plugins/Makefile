@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/05/13 12:47:36 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/08 21:41:22 joerg Exp $
 #
 
 DISTNAME=		libvisual-plugins-0.2.0
@@ -16,7 +16,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config mkdirhier
 
 # sigsegfaults in 0.2.0 because of:
 # sorry, but the bug with strtof has come, please report..
