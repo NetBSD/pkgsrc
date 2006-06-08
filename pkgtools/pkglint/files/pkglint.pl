@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.615 2006/06/08 17:59:23 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.616 2006/06/08 18:22:46 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4928,7 +4928,7 @@ sub checkfile_buildlink3_mk($) {
 
 	# Sixth paragraph: Reference counter.
 	if (!expect($lines, \$lineno, qr"^BUILDLINK_DEPTH:=\t+\$\{BUILDLINK_DEPTH:S/\+\$//\}$")) {
-		$lines->[$lineno]->log_warning("Expected BUILDLINK_DEPTH:= \${BUILDLINK_DEPTH:S/+$//}.");
+		$lines->[$lineno]->log_warning("Expected BUILDLINK_DEPTH:= \${BUILDLINK_DEPTH:S/+\$//}.");
 		$lines->[$lineno]->explain_warning(
 			"Everything besides the .include lines for the buildlink3.mk files of",
 			"dependencies should go between the .if !empty({PKGNAME}_BUILDLINK3_MK)",
@@ -5661,7 +5661,7 @@ sub checkfile_patch($) {
 
 sub checkfile_PLIST($) {
 	my ($fname) = @_;
-	my ($lines, $last_file_seen, $libtool_libs);
+	my ($lines, $last_file_seen, $all_files);
 
 	log_info($fname, NO_LINE_NUMBER, "[checkfile_PLIST]");
 
@@ -5676,13 +5676,13 @@ sub checkfile_PLIST($) {
 	}
 	checkline_rcsid($lines->[0], "\@comment ");
 
-	# Get all libtool libraries from the PLIST.
-	$libtool_libs = {};
+	# Get the list of all files from the PLIST.
+	$all_files = {};
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
 
-		if ($text =~ qr"^(.*)\.la$") {
-			$libtool_libs->{$1} = $line;
+		if ($text =~ qr"^\w" && $text !~ regex_unresolved) {
+			$all_files->{$text} = $line;
 		}
 	}
 
@@ -5760,6 +5760,12 @@ sub checkfile_PLIST($) {
 			} elsif ($text =~ qr"^lib/[^/]+\.(?:so|a|la)$") {
 				# Fine.
 
+			} elsif ($text =~ qr"^man/cat(\d)/(.*)\.\d$") {
+				my ($cat, $manpage) = ($1, $2);
+				if (!exists($all_files->{"man/man${cat}/${manpage}.${cat}"})) {
+					$line->log_warning("Preformatted manual page without unformatted one.");
+				}
+
 			} elsif ($text =~ qr"^share/doc/html/") {
 				$opt_warn_plist_depr and $line->log_warning("Use of \"share/doc/html\" is deprecated. Use \"share/doc/\${PKGBASE}\" instead.");
 
@@ -5802,8 +5808,8 @@ sub checkfile_PLIST($) {
 			if ($text =~ qr"^(.*)(\.a|\.so[0-9.]*)$") {
 				my ($basename, $ext) = ($1, $2);
 
-				if (exists($libtool_libs->{$basename})) {
-					$line->log_warning("Redundant library found. The libtool library is in line " . $libtool_libs->{$basename}->lines . ".");
+				if (exists($all_files->{"${basename}.la"})) {
+					$line->log_warning("Redundant library found. The libtool library is in line " . $all_files->{"${basename}.la"}->lines . ".");
 				}
 			}
 		} else {
