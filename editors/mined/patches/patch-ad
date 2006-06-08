@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2006/06/08 16:17:30 minskim Exp $
+
+--- src/mined1.c.orig	2003-05-25 20:28:23.000000000 +0000
++++ src/mined1.c
+@@ -2367,7 +2367,7 @@ VIEWmode ()
+   }
+ }
+ 
+-extern FLAG viewing_help;
++static FLAG viewing_help;
+ static void end_view_help ();
+ 
+ void
