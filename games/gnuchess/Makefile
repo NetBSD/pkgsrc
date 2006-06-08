@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/04/22 09:22:09 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2006/06/08 04:15:59 jlam Exp $
 
 DISTNAME=	gnuchess-5.07
 PKGREVISION=	3
@@ -12,7 +12,7 @@ COMMENT=	GNU chess engine
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	flex gmake
 
 BOOKDIR=	${PREFIX}/lib/gnuchess
 DOCDIR=		${PREFIX}/share/doc/gnuchess
