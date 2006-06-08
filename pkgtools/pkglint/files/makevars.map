@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.112 2006/06/08 18:21:14 rillig Exp $
+# $NetBSD: makevars.map,v 1.113 2006/06/08 22:31:25 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -12,10 +12,7 @@
 #
 # Type type List is used for lists of things. There are two types of lists,
 # InternalList and List, which are described in the pkgsrc guide, chapter
-# "Makefiles". When a "+" is appended to the List keyword, it means that
-# this variable should only be initialized to the empty list or have some
-# values appended using the "+=" operator. All other operations will
-# generate a warning.
+# "Makefiles".
 
 #
 # Some commonly used ACLs. For further documentation, see the chapter
