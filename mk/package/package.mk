@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.4 2006/06/07 10:04:04 tron Exp $
+# $NetBSD: package.mk,v 1.5 2006/06/08 15:48:42 jlam Exp $
 
 _PACKAGE_COOKIE=	${WRKDIR}/.package_done
 
@@ -22,8 +22,13 @@ package: ${_PACKAGE_TARGETS}
 acquire-package-lock: acquire-lock
 release-package-lock: release-lock
 
+.if !exists(${_PACKAGE_COOKIE})
 ${_PACKAGE_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-package PKG_PHASE=package
+.else
+${_PACKAGE_COOKIE}:
+	@${DO_NADA}
+.endif
 
 ######################################################################
 ### real-package (PRIVATE)
@@ -31,8 +36,12 @@ ${_PACKAGE_COOKIE}:
 ### real-package is a helper target to set the PKG_PHASE explicitly to
 ### "package" before running the remainder of the package targets.
 ###
+_REAL_PACKAGE_TARGETS+=	package-message
+_REAL_PACKAGE_TARGETS+=	package-all
+_REAL_PACKAGE_TARGETS+=	package-cookie
+
 .PHONY: real-package
-real-package: package-message package-all package-cookie
+real-package: ${_REAL_PACKAGE_TARGETS}
 
 .PHONY: package-message
 package-message:
