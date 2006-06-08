@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2005/07/12 20:16:00 hubertf Exp $
+$NetBSD: patch-aa,v 1.5 2006/06/08 15:39:25 joerg Exp $
 
---- xdu.c.orig	2005-07-11 23:15:31.000000000 +0200
-+++ xdu.c	2005-07-11 23:19:59.000000000 +0200
-@@ -19,13 +19,15 @@
+--- xdu.c.orig	2006-06-08 15:35:16.000000000 +0000
++++ xdu.c
+@@ -19,13 +19,13 @@
   * limitation a license to do the foregoing actions under any patents of
   * the party supplying this software to the X Consortium.
   */
@@ -11,8 +11,8 @@ $NetBSD: patch-aa,v 1.4 2005/07/12 20:16:00 hubertf Exp $
 +#include <string.h>
  #include "version.h"
  
- extern char *malloc(), *calloc();
- 
+-extern char *malloc(), *calloc();
+-
 -#define	MAXDEPTH	80	/* max elements in a path */
 -#define	MAXNAME		1024	/* max pathname element length */
 +#define	MAXDEPTH	1024	/* max elements in a path */
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.4 2005/07/12 20:16:00 hubertf Exp $
  #define	MAXPATH		4096	/* max total pathname length */
  #define	NCOLS		5	/* default number of columns in display */
  
-@@ -96,6 +98,10 @@
+@@ -96,6 +96,10 @@ int size;
  	struct	node	*np;
  
  	np = (struct node *)calloc(1,sizeof(struct node));
@@ -31,27 +31,24 @@ $NetBSD: patch-aa,v 1.4 2005/07/12 20:16:00 hubertf Exp $
  	np->name = strdup(name);
  	np->size = size;
  	np->num = nnodes;
-@@ -610,6 +616,7 @@
+@@ -610,20 +614,6 @@ pwd()
  		100.0*topp->size/rootp->size);
  }
  
-+#if !defined(__NetBSD__) && !defined(SVR4) /* == Solaris etc. */
- char *
- strdup(s)
- char *s;
-@@ -619,10 +626,15 @@
- 
- 	n = strlen(s);
- 	cp = malloc(n+1);
-+	if (cp == NULL) {
-+		fprintf(stderr, "Out of memory! (#2)\n");
-+		exit(1);
-+	}
- 	strcpy(cp,s);
- 
- 	return	cp;
- }
-+#endif /* __NetBSD__ */
- 
+-char *
+-strdup(s)
+-char *s;
+-{
+-	int	n;
+-	char	*cp;
+-
+-	n = strlen(s);
+-	cp = malloc(n+1);
+-	strcpy(cp,s);
+-
+-	return	cp;
+-}
+-
  /**************** External Entry Points ****************/
  
+ int
