@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.109 2006/06/08 07:10:19 rillig Exp $
+# $NetBSD: makevars.map,v 1.110 2006/06/08 15:50:54 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -162,7 +162,7 @@ BUILDLINK_LIBS.*	List of LdFlag [b:a]
 BUILDLINK_PACKAGES	BuildlinkPackages [b:aps]
 BUILDLINK_PASSTHRU_DIRS	List of Pathname [m:a,c:a,b:a,h:a]
 BUILDLINK_PASSTHRU_RPATHDIRS	List of Pathname [m:a,c:a,b:a,h:a]
-BUILDLINK_PKGSRCDIR.*	RelativePkgDir [b:d]
+BUILDLINK_PKGSRCDIR.*	RelativePkgDir [b:dp]
 BUILDLINK_PREFIX.*	Pathname [builtin.mk:s]
 BUILDLINK_RPATHDIRS	List of Pathname []
 BUILDLINK_TARGETS	List of Identifier []
@@ -506,6 +506,7 @@ PTHREAD_OPTS		List of { native optional require } [m:as,c:a,b:a]
 PTHREAD_TYPE		Identifier [$system]
 # ^^ or "native" or "none".
 PYTHON_PATCH_SCRIPTS	List of Pathmask [$list]
+PYTHON_VERSIONS_INCOMPATIBLE List of Version [pyversion.mk:ad, $system]
 RCD_SCRIPTS		List of Filename [$list]
 RCD_SCRIPT_SRC.*	List of Pathname [m:s]
 REPLACE.*		String [m:s]
