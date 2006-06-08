@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/05/10 16:50:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/06/08 15:39:38 adam Exp $
 bin/gimp-2.3
 bin/gimp-console-2.3
 bin/gimp-remote-2.3
@@ -100,6 +100,7 @@ include/gimp-2.0/libgimpbase/gimpbase.h
 include/gimp-2.0/libgimpbase/gimpbaseenums.h
 include/gimp-2.0/libgimpbase/gimpbasetypes.h
 include/gimp-2.0/libgimpbase/gimpchecks.h
+include/gimp-2.0/libgimpbase/gimpcpuaccel.h
 include/gimp-2.0/libgimpbase/gimpdatafiles.h
 include/gimp-2.0/libgimpbase/gimpenv.h
 include/gimp-2.0/libgimpbase/gimplimits.h
@@ -323,6 +324,7 @@ lib/gimp/2.0/plug-ins/psp
 lib/gimp/2.0/plug-ins/randomize
 lib/gimp/2.0/plug-ins/raw
 lib/gimp/2.0/plug-ins/rcm
+lib/gimp/2.0/plug-ins/redeye
 lib/gimp/2.0/plug-ins/retinex
 lib/gimp/2.0/plug-ins/ripple
 lib/gimp/2.0/plug-ins/rotate
@@ -470,6 +472,7 @@ share/doc/${PKGNAME}/libgimp/libgimp-gimpvectors.html
 share/doc/${PKGNAME}/libgimp/libgimp-image.html
 share/doc/${PKGNAME}/libgimp/libgimp-selectors.html
 share/doc/${PKGNAME}/libgimp/libgimp.devhelp
+share/doc/${PKGNAME}/libgimp/libgimp.devhelp2
 share/doc/${PKGNAME}/libgimp/libgimp.html
 share/doc/${PKGNAME}/libgimp/libgimpui-hierarchy.html
 share/doc/${PKGNAME}/libgimp/libgimpui.html
@@ -487,6 +490,7 @@ share/doc/${PKGNAME}/libgimpbase/left.png
 share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimpbaseenums.html
 share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimpbasetypes.html
 share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimpchecks.html
+share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimpcpuaccel.html
 share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimpdatafiles.html
 share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimpenv.html
 share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimplimits.html
@@ -499,6 +503,7 @@ share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimpunit.html
 share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimputils.html
 share/doc/${PKGNAME}/libgimpbase/libgimpbase-gimpversion.html
 share/doc/${PKGNAME}/libgimpbase/libgimpbase.devhelp
+share/doc/${PKGNAME}/libgimpbase/libgimpbase.devhelp2
 share/doc/${PKGNAME}/libgimpbase/libgimpbase.html
 share/doc/${PKGNAME}/libgimpbase/right.png
 share/doc/${PKGNAME}/libgimpbase/style.css
@@ -518,6 +523,7 @@ share/doc/${PKGNAME}/libgimpcolor/libgimpcolor-GimpColorSpace.html
 share/doc/${PKGNAME}/libgimpcolor/libgimpcolor-GimpHSV.html
 share/doc/${PKGNAME}/libgimpcolor/libgimpcolor-GimpRGB.html
 share/doc/${PKGNAME}/libgimpcolor/libgimpcolor.devhelp
+share/doc/${PKGNAME}/libgimpcolor/libgimpcolor.devhelp2
 share/doc/${PKGNAME}/libgimpcolor/libgimpcolor.html
 share/doc/${PKGNAME}/libgimpcolor/right.png
 share/doc/${PKGNAME}/libgimpcolor/style.css
@@ -541,6 +547,7 @@ share/doc/${PKGNAME}/libgimpconfig/libgimpconfig-gimpconfig-serialize.html
 share/doc/${PKGNAME}/libgimpconfig/libgimpconfig-gimpconfig-utils.html
 share/doc/${PKGNAME}/libgimpconfig/libgimpconfig-hierarchy.html
 share/doc/${PKGNAME}/libgimpconfig/libgimpconfig.devhelp
+share/doc/${PKGNAME}/libgimpconfig/libgimpconfig.devhelp2
 share/doc/${PKGNAME}/libgimpconfig/libgimpconfig.html
 share/doc/${PKGNAME}/libgimpconfig/right.png
 share/doc/${PKGNAME}/libgimpconfig/style.css
@@ -573,6 +580,7 @@ share/doc/${PKGNAME}/libgimpmodule/ix03.html
 share/doc/${PKGNAME}/libgimpmodule/ix04.html
 share/doc/${PKGNAME}/libgimpmodule/left.png
 share/doc/${PKGNAME}/libgimpmodule/libgimpmodule.devhelp
+share/doc/${PKGNAME}/libgimpmodule/libgimpmodule.devhelp2
 share/doc/${PKGNAME}/libgimpmodule/libgimpmodule.html
 share/doc/${PKGNAME}/libgimpmodule/right.png
 share/doc/${PKGNAME}/libgimpmodule/style.css
@@ -590,6 +598,7 @@ share/doc/${PKGNAME}/libgimpthumb/libgimpthumb-gimpthumb-enums.html
 share/doc/${PKGNAME}/libgimpthumb/libgimpthumb-gimpthumb-error.html
 share/doc/${PKGNAME}/libgimpthumb/libgimpthumb-gimpthumb-utils.html
 share/doc/${PKGNAME}/libgimpthumb/libgimpthumb.devhelp
+share/doc/${PKGNAME}/libgimpthumb/libgimpthumb.devhelp2
 share/doc/${PKGNAME}/libgimpthumb/libgimpthumb.html
 share/doc/${PKGNAME}/libgimpthumb/right.png
 share/doc/${PKGNAME}/libgimpthumb/style.css
@@ -676,6 +685,7 @@ share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-hierarchy.html
 share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-utils.html
 share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets-widgets.html
 share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets.devhelp
+share/doc/${PKGNAME}/libgimpwidgets/libgimpwidgets.devhelp2
 share/doc/${PKGNAME}/libgimpwidgets/right.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-anchor-16.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-cap-butt-16.png
@@ -862,6 +872,8 @@ share/doc/${PKGNAME}/libgimpwidgets/stock-toilet-paper-16.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-toilet-paper-24.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-tool-airbrush-16.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-tool-airbrush-22.png
+share/doc/${PKGNAME}/libgimpwidgets/stock-tool-align-16.png
+share/doc/${PKGNAME}/libgimpwidgets/stock-tool-align-22.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-tool-blend-16.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-tool-blend-22.png
 share/doc/${PKGNAME}/libgimpwidgets/stock-tool-blur-16.png
@@ -1444,6 +1456,7 @@ share/gimp/2.0/scripts/perspective-shadow.scm
 share/gimp/2.0/scripts/predator.scm
 share/gimp/2.0/scripts/pupi-button.scm
 share/gimp/2.0/scripts/rendermap.scm
+share/gimp/2.0/scripts/reverse-layers.scm
 share/gimp/2.0/scripts/ripply-anim.scm
 share/gimp/2.0/scripts/round-corners.scm
 share/gimp/2.0/scripts/script-fu-util.scm
@@ -1691,6 +1704,8 @@ share/gimp/2.0/themes/Default/images/stock-toilet-paper-16.png
 share/gimp/2.0/themes/Default/images/stock-toilet-paper-24.png
 share/gimp/2.0/themes/Default/images/stock-tool-airbrush-16.png
 share/gimp/2.0/themes/Default/images/stock-tool-airbrush-22.png
+share/gimp/2.0/themes/Default/images/stock-tool-align-16.png
+share/gimp/2.0/themes/Default/images/stock-tool-align-22.png
 share/gimp/2.0/themes/Default/images/stock-tool-blend-16.png
 share/gimp/2.0/themes/Default/images/stock-tool-blend-22.png
 share/gimp/2.0/themes/Default/images/stock-tool-blur-16.png
@@ -1941,11 +1956,6 @@ share/locale/nl/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/nl/LC_MESSAGES/gimp20-std-plug-ins.mo
 share/locale/nl/LC_MESSAGES/gimp20-tips.mo
 share/locale/nl/LC_MESSAGES/gimp20.mo
-share/locale/no/LC_MESSAGES/gimp20-libgimp.mo
-share/locale/no/LC_MESSAGES/gimp20-script-fu.mo
-share/locale/no/LC_MESSAGES/gimp20-std-plug-ins.mo
-share/locale/no/LC_MESSAGES/gimp20-tips.mo
-share/locale/no/LC_MESSAGES/gimp20.mo
 share/locale/pa/LC_MESSAGES/gimp20-libgimp.mo
 share/locale/pa/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/pa/LC_MESSAGES/gimp20-std-plug-ins.mo

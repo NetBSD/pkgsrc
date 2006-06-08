@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2006/04/14 10:49:59 adam Exp $
+$NetBSD: patch-ac,v 1.2 2006/06/08 15:39:38 adam Exp $
 
---- app/plug-in/plug-in-run.h.orig	2006-04-14 10:19:49.000000000 +0200
-+++ app/plug-in/plug-in-run.h
-@@ -22,7 +22,7 @@
- #define __PLUG_IN_RUN_H__
+--- libgimp/gimp.c.orig	2006-06-07 17:56:19.000000000 +0200
++++ libgimp/gimp.c
+@@ -23,6 +23,8 @@
  
- #ifndef __YES_I_NEED_PLUG_IN_RUN__
--#error Don't use plug_in_run*(), use gimp_procedure_execute*() instead.
-+#error Do not use plug_in_run*(), use gimp_procedure_execute*() instead.
- #endif
+ #define _POSIX_SOURCE  /* all the sigaction stuff is POSIX */
+ #define _SVID_SOURCE   /* except for SA_RESTART, it seems  */
++#define _XOPEN_SOURCE
++#define _XOPEN_SOURCE_EXTENDED
  
- 
+ #include <errno.h>
+ #include <stdarg.h>

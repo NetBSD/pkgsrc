@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.2 2006/02/09 12:00:37 adam Exp $
+$NetBSD: patch-ad,v 1.3 2006/06/08 15:39:38 adam Exp $
 
---- app/base/cpu-accel.c.orig	2006-01-23 15:45:59.000000000 +0100
-+++ app/base/cpu-accel.c
-@@ -427,7 +427,7 @@ arch_accel (void)
-   canjump = 1;
+--- app/main.c.orig	2006-06-07 18:23:05.000000000 +0200
++++ app/main.c
+@@ -20,6 +20,8 @@
  
-   asm volatile ("mtspr 256, %0\n\t"
--                "vand %%v0, %%v0, %%v0"
-+                "vand v0, v0, v0"
-                 :
-                 : "r" (-1));
+ #define _POSIX_SOURCE  /* all the sigaction stuff is POSIX */
+ #define _SVID_SOURCE   /* except for SA_RESTART, it seems  */
++#define _XOPEN_SOURCE
++#define _XOPEN_SOURCE_EXTENDED
  
+ #include <stdio.h>
+ #include <stdlib.h>
