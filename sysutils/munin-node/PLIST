@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/06/04 20:53:57 he Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/06/08 18:59:25 he Exp $
 lib/munin/plugins/acpi
 lib/munin/plugins/amavis
 lib/munin/plugins/apache_accesses
@@ -106,31 +106,13 @@ lib/munin/plugins/swap
 lib/munin/plugins/sybase_space
 lib/munin/plugins/uptime
 lib/munin/plugins/vmstat
-man/man5/munin-node.conf.5
-man/man5/munin.conf.5
-man/man8/munin-cron.8
-man/man8/munin-graph.8
-man/man8/munin-html.8
-man/man8/munin-limits.8
-man/man8/munin-node.8
-man/man8/munin-run.8
-man/man8/munin-update.8
 sbin/munin-node
 sbin/munin-node-configure
 sbin/munin-node-configure-snmp
 sbin/munin-run
-share/doc/munin/COPYING
-share/doc/munin/README.api
-share/doc/munin/README.plugins
-share/doc/munin/munin-doc.html
-share/doc/munin/munin-doc.pdf
-share/doc/munin/munin-doc.txt
-share/doc/munin/munin-faq.html
-share/doc/munin/munin-faq.pdf
-share/doc/munin/munin-faq.txt
 share/examples/munin/munin-node.conf
 share/examples/rc.d/munin-node
 @comment pkg-specific directories:
-@dirrm share/doc/munin
 @dirrm lib/munin/plugins
-@dirrm lib/munin
+@comment shared with munin-server
+@unexec ${RMDIR} %D/lib/munin 2>/dev/null || ${TRUE}

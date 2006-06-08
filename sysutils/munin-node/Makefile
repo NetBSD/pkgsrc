@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/06/04 20:53:56 he Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/08 18:59:25 he Exp $
 #
 
-DISTNAME=	${PKGNAME:S:-node-:_:}
-PKGNAME=	munin-node-1.3.1
+DISTNAME=	munin_${VER}
+VER=		1.3.1
+PKGNAME=	munin-node-${VER}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=munin/}
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://munin.sourceforge.net/
@@ -12,8 +14,7 @@ COMMENT=	System monitoring tool, client version
 
 DEPENDS+=	p5-Net-Server>=0:../../net/p5-Net-Server
 DEPENDS+=	p5-Net-SSLeay>=0:../../security/p5-Net-SSLeay
-BUILD_DEPENDS+=	htmldoc>=0:../../www/htmldoc
-BUILD_DEPENDS+= html2text>=0:../../textproc/html2text
+#DEPENDS+=	munin-doc>=1.3.1:../../sysutils/munin-doc
 
 USE_TOOLS+=	perl
 USE_TOOLS+=	gmake
@@ -44,12 +45,10 @@ OWN_DIRS_PERMS+=${VARBASE}/run/munin ${MUNIN_USER} ${MUNIN_GROUP} 0755
 OWN_DIRS_PERMS+=${VARBASE}/log/munin ${MUNIN_USER} ${MUNIN_GROUP} 0755
 OWN_DIRS_PERMS+=${VARBASE}/munin/plugin-state ${MUNIN_USER} ${MUNIN_GROUP} 0775
 
-INSTALL_TARGET=	install-doc install-man
-INSTALL_TARGET+=install-node install-node-plugins
+INSTALL_TARGET=	install-node install-node-plugins
 
-BUILD_TARGET=	build build-doc build-man
+BUILD_TARGET=	build
 
-#MAKE_ENV+=	PERL=${PERL5:Q}
 #MAKE_ENV+=	PERL5_SITELIB=${PERL5_SITELIB}
 MAKE_ENV+=	MUNIN_USER=${MUNIN_USER}
 MAKE_ENV+=	MUNIN_GROUP=${MUNIN_GROUP}
@@ -72,13 +71,6 @@ pre-configure:
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/build/node/munin-node.conf ${EGDIR}
-
-#pre-install:
-#	sed -e "s!@PKG_SYSCONFDIR@!${PKG_SYSCONFDIR}!;	\
-#		s!@PERL@!${PERL5}!;			\
-#		s!@PREFIX@!${PREFIX}!;"			\
-#		<${WRKSRC}/munin-node.sh \
-#		> ${WRKSRC}/rc.d/munin-node
 
 .include "../../mk/bsd.pkg.mk"
 .include "../../lang/python/application.mk"
