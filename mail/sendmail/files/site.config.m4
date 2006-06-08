@@ -1,4 +1,4 @@
-# $NetBSD: site.config.m4,v 1.4 2006/06/07 14:48:28 joerg Exp $
+# $NetBSD: site.config.m4,v 1.5 2006/06/08 02:26:32 jlam Exp $
 
 # pathnames specific to pkgsrc
 #
@@ -11,5 +11,10 @@ define(`confINSTALL_RAWMAN', 'yes')
 define(`confDONT_INSTALL_CATMAN', 'yes')
 define(`confMANROOT', `${PREFIX}/${PKGMANDIR}/man')
 define(`confMANROOTMAN', `${PREFIX}/${PKGMANDIR}/man')
+define(`confMAN1EXT', `1')
+define(`confMAN3EXT', `3')
+define(`confMAN4EXT', `4')
+define(`confMAN5EXT', `5')
+define(`confMAN8EXT', `8')
 APPENDDEF(`confENVDEF', `-I${PREFIX}/include')
 APPENDDEF(`confLIBS', `-L${PREFIX}/lib')
