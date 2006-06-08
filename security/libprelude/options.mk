@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2006/06/06 12:19:30 shannonjr Exp $
+# $NetBSD: options.mk,v 1.5 2006/06/08 22:07:24 shannonjr Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libprelude
 PKG_SUPPORTED_OPTIONS=	perl python
@@ -13,10 +13,7 @@ PKG_SUPPORTED_OPTIONS=	perl python
 
 .if !empty(PKG_OPTIONS:Mperl)
 CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
-CONFIGURE_ARGS+=	--with-swig=/usr/pkg/bin/swig
 USE_TOOLS+=		perl:run
-#REPLACE_PERL+=		${WRKSRC}/bindings/perl/Makefile.PL
-.include "../../devel/swig/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--with-perl=no
 .endif
