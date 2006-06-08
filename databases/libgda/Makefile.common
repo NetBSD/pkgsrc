@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2006/04/02 22:46:55 wiz Exp $
+# $NetBSD: Makefile.common,v 1.40 2006/06/08 09:48:40 joerg Exp $
 #
 
 DISTNAME=		libgda-1.9.102
@@ -13,7 +13,7 @@ COMMENT=		GNU database access library
 DISTINFO_FILE=		${.CURDIR}/../../databases/libgda/distinfo
 PATCHDIR=		${.CURDIR}/../../databases/libgda/patches
 
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config msgfmt
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
