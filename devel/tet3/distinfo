@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.4 2006/01/09 15:55:02 joerg Exp $
+$NetBSD: distinfo,v 1.5 2006/06/08 16:57:59 rillig Exp $
 
-SHA1 (tet3.3h-unsup.src.tgz) = bfd582f272735a7da53c32e0e2289f8b4993bf9f
-RMD160 (tet3.3h-unsup.src.tgz) = 041b1e65a8f18775171944a7d245290af97d9437
-Size (tet3.3h-unsup.src.tgz) = 779995 bytes
-SHA1 (patch-aa) = 68cc1beed72dade766b73d69a971ad60e445d840
-SHA1 (patch-ab) = 8d51e5fdcbe761ecf33563217dc85188b1c4c418
-SHA1 (patch-ac) = 6eac08e21997c6b57345aa68490924ae45d664b9
-SHA1 (patch-ad) = 019b5ac7eb403598678b2bf92c7769a24582780d
-SHA1 (patch-ae) = b300578d5437f9dd199fe3e2331bf00f56bd923e
-SHA1 (patch-ag) = 7780c4531e573653928c67c126a11d4d28b91291
-SHA1 (patch-ah) = 604d223c6ed9c3826ea659befa47b3b544f1679e
-SHA1 (patch-ai) = 04e9f3413178060d1c2778249cef49677f3a44f0
-SHA1 (patch-aj) = f32eb2bbf66e033ca46570082b1c85c6fd0c1295
+SHA1 (tet3.7-unsup.src.tgz) = 43a3720d0472b6d3261b1b1cd7fa5192a2911b73
+RMD160 (tet3.7-unsup.src.tgz) = 7e266fc77e2a01ece7cd1b041d3ee28426d1bd3d
+Size (tet3.7-unsup.src.tgz) = 953406 bytes
+SHA1 (patch-aa) = 6b67991e3deed46ef7a3451e3ff94dee286d1d65
+SHA1 (patch-ab) = a18d1928e58ea8e5eef7fd797641f802e99cc02d
+SHA1 (patch-ac) = 19167238815d7393b6e3565a14e4f6a7f9674f6a
+SHA1 (patch-ad) = ba0bb07f74a70691cf62d72502a3d608e522e2c0
+SHA1 (patch-ae) = adb90e2ce7ad8429a701718ec4a79ddb2f93d509
+SHA1 (patch-ah) = aaee593e861966595ef71ab59b535372facc1115
+SHA1 (patch-ai) = 256d4903ec91f4a4ffe147accb5d7e80740e6c46
+SHA1 (patch-aj) = 28bd55c8a55d60cbf4e2b2456c488090782babc5
