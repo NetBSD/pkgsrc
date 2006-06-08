@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2005/12/29 06:21:34 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2006/06/08 03:56:21 jlam Exp $
 
 DISTNAME=	libiconv-1.10
 PKGREVISION=	3
@@ -17,6 +17,12 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+# Explicitly disable NLS since libiconv is a dependency for gettext-lib
+# and we don't want libiconv to pick up any NLS functions from libc
+# if they exist.
+#
+CONFIGURE_ARGS+=	--disable-nls
 
 TEST_TARGET=		check
 
