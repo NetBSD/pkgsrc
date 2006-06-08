@@ -1,13 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2006/04/23 18:29:39 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2006/06/08 15:39:38 adam Exp $
 
---- plug-ins/common/png.c.orig	2005-11-04 21:19:00.000000000 +0100
+--- plug-ins/common/png.c.orig	2006-06-05 16:51:24.000000000 +0200
 +++ plug-ins/common/png.c
-@@ -1095,12 +1095,10 @@ load_image (const gchar *filename,
-    * Done with the file...
-    */
- 
--  png_read_destroy (pp, info, NULL);
-+  png_destroy_read_struct (&pp, &info, NULL);
+@@ -1072,8 +1072,6 @@ load_image (const gchar *filename,
  
    g_free (pixel);
    g_free (pixels);
@@ -16,16 +11,7 @@ $NetBSD: patch-ae,v 1.1 2006/04/23 18:29:39 wiz Exp $
  
    fclose (fp);
  
-@@ -1553,7 +1551,7 @@ save_image (const gchar *filename,
-     }
- 
-   png_write_end (pp, info);
--  png_write_destroy (pp);
-+  png_destroy_read_struct (&pp, &info, NULL);
- 
-   g_free (pixel);
-   g_free (pixels);
-@@ -1568,9 +1566,6 @@ save_image (const gchar *filename,
+@@ -1531,9 +1529,6 @@ save_image (const gchar *filename,
        g_free (text);
      }
  
