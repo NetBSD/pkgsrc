@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.5 2006/06/07 17:21:23 jlam Exp $
+# $NetBSD: install.mk,v 1.6 2006/06/08 08:01:53 rillig Exp $
 
 ######################################################################
 ### install-check-conflicts (PRIVATE, pkgsrc/mk/install/install.mk)
@@ -64,7 +64,7 @@ _REGISTER_DEPENDENCIES=							\
 
 .PHONY: register-pkg
 register-pkg: generate-metadata ${_DEPENDS_COOKIE}
-	@${PHASE_MSG} "Registering installation for ${PKGNAME}"
+	@${STEP_MSG} "Registering installation for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -fr ${_PKG_DBDIR}/${PKGNAME}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_PKG_DBDIR}/${PKGNAME}
 	${_PKG_SILENT}${_PKG_DEBUG}${CP} ${PKG_DB_TMPDIR}/* ${_PKG_DBDIR}/${PKGNAME}

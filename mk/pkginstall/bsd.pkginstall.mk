@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.8 2006/06/08 03:30:37 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.9 2006/06/08 08:01:53 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -276,7 +276,7 @@ _INSTALL_USERGROUP_CHECK=						\
 
 .PHONY: create-usergroup
 create-usergroup: su-target
-	@${PHASE_MSG} "Requiring users and groups for ${PKGNAME}"
+	@${STEP_MSG} "Requiring users and groups for ${PKGNAME}"
 
 PRE_CMD.su-create-usergroup=						\
 	if ${_INSTALL_USERGROUP_CHECK} -g ${_PKG_GROUPS:C/\:*$//} &&	\

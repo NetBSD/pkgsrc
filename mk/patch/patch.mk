@@ -1,4 +1,4 @@
-# $NetBSD: patch.mk,v 1.2 2006/06/08 07:30:40 rillig Exp $
+# $NetBSD: patch.mk,v 1.3 2006/06/08 08:01:53 rillig Exp $
 #
 # The following variables may be set in a package Makefile and control
 # how pkgsrc patches are applied.
@@ -223,7 +223,7 @@ PATCH_DIST_CAT.${i:S/=/--/}?=	{ patchfile=${i}; ${PATCH_DIST_CAT}; }
 .endfor
 
 distribution-patch-message:
-	@${PHASE_MSG} "Applying distribution patches for ${PKGNAME}"
+	@${STEP_MSG} "Applying distribution patches for ${PKGNAME}"
 
 do-distribution-patch:
 .for i in ${PATCHFILES}
