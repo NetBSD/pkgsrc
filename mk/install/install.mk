@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.4 2006/06/07 10:04:04 tron Exp $
+# $NetBSD: install.mk,v 1.5 2006/06/08 15:47:10 jlam Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -20,14 +20,12 @@ install: ${_INSTALL_TARGETS}
 acquire-install-lock: acquire-lock
 release-install-lock: release-lock
 
-${_INSTALL_COOKIE}:
-.if !empty(INTERACTIVE_STAGE:Minstall) && defined(BATCH)
-	@${ERROR_MSG} "The installation stage of this package requires user interaction"
-	@${ERROR_MSG} "Please install manually with \"cd ${.CURDIR} && ${MAKE} install\""
-	@${TOUCH} ${_INTERACTIVE_COOKIE}
-	@${FALSE}
-.else
+.if !exists(${_INSTALL_COOKIE})
+${_INSTALL_COOKIE}: install-check-interactive
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-install PKG_PHASE=install
+.else
+${_INSTALL_COOKIE}:
+	@${DO_NADA}
 .endif
 
 ######################################################################
@@ -49,6 +47,23 @@ real-install: ${_REAL_INSTALL_TARGETS}
 .PHONY: install-message
 install-message:
 	@${PHASE_MSG} "Installing for ${PKGNAME}"
+
+######################################################################
+### install-check-interactive (PRIVATE)
+######################################################################
+### install-check-interactive checks whether we must do an interactive
+### install or not.
+###
+install-check-interactive:
+.if !empty(INTERACTIVE_STAGE:Minstall) && defined(BATCH)
+	@${ERROR_MSG} "The installation stage of this package requires user interaction"
+	@${ERROR_MSG} "Please install manually with:"
+	@${ERROR_MSG} "	\"cd ${.CURDIR} && ${MAKE} install\""
+	@${TOUCH} ${_INTERACTIVE_COOKIE}
+	@${FALSE}
+.else
+	@${DO_NADA}
+.endif
 
 ######################################################################
 ### unprivileged-install-hook (PRIVATE, override, hook)
