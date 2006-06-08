@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/04/17 13:46:35 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/06/08 21:40:21 joerg Exp $
 
 DISTNAME=	rayshade.4.0
 PKGNAME=	rayshade-4.0
@@ -13,15 +13,8 @@ COMMENT=	Extensible system for creating ray-traced images
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
-CONFIGURE_ARGS+=	< ${WRKDIR}/config.ans
 BUILD_TARGET=
-INSTALLATION_DIRS=	bin lib
-
-pre-configure:
-	${SED} -e 's|@CFLAGS@|${CFLAGS}|g' 			\
-		-e 's|\$${PREFIX}|${PREFIX}|g'			\
-		-e 's|\$${LOCALBASE}|${LOCALBASE}|g'			\
-		${FILESDIR}/config.ans > ${WRKDIR}/config.ans
+INSTALLATION_DIRS=	bin lib share/doc/rayshade share/examples/rayshade
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/rayshade/rayshade ${PREFIX}/bin
@@ -29,10 +22,8 @@ do-install:
 	${RANLIB} ${PREFIX}/lib/libray.a
 	${INSTALL_DATA} ${WRKSRC}/libshade/libshade.a ${PREFIX}/lib
 	${RANLIB} ${PREFIX}/lib/libshade.a
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rayshade
 	${INSTALL_DATA} ${WRKSRC}/Doc/Guide/* ${PREFIX}/share/doc/rayshade
 	${INSTALL_DATA} ${WRKSRC}/Doc/quickref.txt ${PREFIX}/share/doc/rayshade
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/rayshade
 	${INSTALL_DATA} ${WRKSRC}/Examples/* ${PREFIX}/share/examples/rayshade
 
 .include "../../graphics/urt/buildlink3.mk"
