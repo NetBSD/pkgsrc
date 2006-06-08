@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.5 2006/06/08 08:55:10 rillig Exp $
+# $NetBSD: depends.mk,v 1.6 2006/06/08 15:45:06 jlam Exp $
 
 ######################################################################
 ### depends (PUBLIC)
@@ -7,7 +7,6 @@
 ### the package.
 ###
 _DEPENDS_TARGETS+=	acquire-depends-lock
-_DEPENDS_TARGETS+=	depends-message
 _DEPENDS_TARGETS+=	${_DEPENDS_COOKIE}
 _DEPENDS_TARGETS+=	release-depends-lock
 
@@ -20,16 +19,30 @@ depends: ${_DEPENDS_TARGETS}
 acquire-depends-lock: acquire-lock
 release-depends-lock: release-lock
 
-.PHONY: depends-message
-depends-message:
-	@${PHASE_MSG} "Installing dependencies for ${PKGNAME}"
-
 .if !exists(${_DEPENDS_COOKIE})
-${_DEPENDS_COOKIE}: pre-depends-hook depends-install depends-cookie
+${_DEPENDS_COOKIE}: real-depends
 .else
 ${_DEPENDS_COOKIE}:
 	@${DO_NADA}
 .endif
+
+######################################################################
+### real-depends (PRIVATE)
+######################################################################
+### real-depends is a helper target onto which one can hook all of the
+### targets that do the actual dependency installation.
+###
+_REAL_DEPENDS_TARGETS+=	depends-message
+_REAL_DEPENDS_TARGETS+=	pre-depends-hook
+_REAL_DEPENDS_TARGETS+=	depends-install
+_REAL_DEPENDS_TARGETS+=	depends-cookie
+
+.PHONY: real-depends
+real-depends: ${_REAL_DEPENDS_TARGETS}
+
+.PHONY: depends-message
+depends-message:
+	@${PHASE_MSG} "Installing dependencies for ${PKGNAME}"
 
 ######################################################################
 ### depends-install (PRIVATE, override)
