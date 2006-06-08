@@ -1,6 +1,6 @@
-<!-- $NetBSD: options.xml,v 1.19 2006/05/31 18:54:32 ghen Exp $ -->
+<!-- $NetBSD: options.xml,v 1.20 2006/06/08 08:45:45 rillig Exp $ -->
 
-<!-- based on: pkgsrc/mk/bsd.options.mk 1.42 -->
+<!-- based on: pkgsrc/mk/bsd.options.mk 1.56 -->
 
 <chapter id="options">
 <title>Options handling</title>
@@ -50,7 +50,7 @@ main package <filename>Makefile</filename>.</para>
     .if defined(PKG_OPTIONS.wibble2)
     PKG_LEGACY_OPTIONS+=            ${PKG_OPTIONS.wibble2}
     PKG_OPTIONS_DEPRECATED_WARNINGS+= \
-            "Deprecated variable PKG_OPTIONS.wibble2 used, use ${PKG_OPTIONS_VAR instead."
+            "Deprecated variable PKG_OPTIONS.wibble2 used, use ${PKG_OPTIONS_VAR} instead."
     .endif
 
     .include "../../mk/bsd.options.mk"
@@ -92,9 +92,9 @@ if needed.</para>
 <listitem><para><varname>PKG_OPTIONS_VAR</varname> is the name of the
 &man.make.1; variable that the user can set to override the default
 options.  It should be set to
-PKG_OPTIONS.<replaceable>pkgbase</replaceable>.  Do not set it to
-PKG_OPTIONS.${PKGBASE}, since <varname>PKGBASE</varname> is set after
-<varname>PKG_OPTIONS_VAR</varname> is used.</para></listitem>
+PKG_OPTIONS.<replaceable>pkgbase</replaceable>. Do not set it to
+PKG_OPTIONS.${PKGBASE}, since <varname>PKGBASE</varname> is not defined
+at the point where the options are processed.</para></listitem>
 
 <listitem><para><varname>PKG_SUPPORTED_OPTIONS</varname> is a list of
 build options supported by the package.</para></listitem>
