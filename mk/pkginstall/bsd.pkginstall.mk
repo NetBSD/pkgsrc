@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.7 2006/06/07 17:44:29 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.8 2006/06/08 03:30:37 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -203,7 +203,7 @@ PKG_UID.${_entry_:C/\:.*//}_cmd=					\
 	${PERL5} -le 'print scalar getpwnam shift' ${_entry_:C/\:.*//}
 PKG_UID.${_entry_:C/\:.*//}?=	${PKG_UID.${_entry_:C/\:.*//}_cmd:sh:M*}
 .  endif
-_PKG_USERS+=	${_user_::=${_entry_:C/\:.*//}}${_entry_}:${PKG_UID.${_user_}}:${PKG_GECOS.${_user_}:Q}:${PKG_HOME.${_user_}:Q}:${PKG_SHELL.${_user_}:Q}
+_PKG_USERS+=	${_entry_}:${PKG_UID.${_entry_:C/\:.*//}}:${PKG_GECOS.${_entry_:C/\:.*//}:Q}:${PKG_HOME.${_entry_:C/\:.*//}:Q}:${PKG_SHELL.${_entry_:C/\:.*//}:Q}
 .endfor
 
 ${_INSTALL_USERGROUP_DATAFILE}:
