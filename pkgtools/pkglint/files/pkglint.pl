@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.610 2006/06/08 07:11:26 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.611 2006/06/08 07:15:27 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2346,8 +2346,8 @@ sub resolve_relative_path($$) {
 	$relpath =~ s,\$\{PHPPKGSRCDIR\},../../lang/php5,;
 	$relpath =~ s,\$\{SUSE_DIR_PREFIX\},suse91,;
 	$relpath =~ s,\$\{PYPKGSRCDIR\},../../lang/python23,;
-	if ($adjust_depth) {
-		$relpath =~ s,\.\./\.\.,$pkgsrcdir,;
+	if ($adjust_depth && $relpath =~ qr"^\.\./\.\./([^.].*)$") {
+		$relpath = "../../$1";
 	}
 	if (defined($pkgdir)) {
 		$relpath =~ s,\$\{PKGDIR\},$pkgdir,g;
