@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2006/04/17 07:48:51 adam Exp $
+$NetBSD: patch-ab,v 1.6 2006/06/08 12:00:04 joerg Exp $
 
 --- configure.orig	2006-03-11 11:28:32.000000000 +0100
 +++ configure
@@ -41,3 +41,17 @@ $NetBSD: patch-ab,v 1.5 2006/04/17 07:48:51 adam Exp $
  fi
  
  
+@@ -23143,11 +23141,11 @@ extern "C"
+ #endif
+ /* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+-char dgettext ();
++char dgettext (const char *, const char *);
+ int
+ main ()
+ {
+-dgettext ();
++dgettext ("", "");
+   ;
+   return 0;
+ }
