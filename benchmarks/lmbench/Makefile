@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/02/05 23:08:19 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/06/08 14:58:38 rillig Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
@@ -20,36 +20,36 @@ MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
 INSTALLATION_DIRS=	man/man1 man/man3 man/man8
 
 post-configure:
-	@cd ${WRKSRC};						\
+	cd ${WRKSRC};						\
 	for f in src/Makefile; do				\
-		${SED} -e "s|^\(CC.*\)|#\1|g" $$f > $$f.new;	\
+		${SED} -e "s|^\\(CC.*\\)|#\\1|g" $$f > $$f.new;	\
 		${MV} -f $$f.new $$f;				\
 	done
-	@cd ${WRKSRC};						\
+	cd ${WRKSRC};						\
 	for f in scripts/os scripts/results scripts/config-run	\
 		 scripts/lmbench results/Makefile; do		\
 		${SED} -e 's|@PREFIX@|${PREFIX}|g' $$f > $$f.new; \
 		${MV} -f $$f.new $$f;				\
 	done
-	@${CHMOD} 0755 ${WRKSRC}/scripts/config-run
-	@${CHMOD} 0755 ${WRKSRC}/scripts/os
-	@${CHMOD} 0755 ${WRKSRC}/scripts/results
-	@${CHMOD} 0755 ${WRKSRC}/scripts/lmbench
+	${CHMOD} 0755 ${WRKSRC}/scripts/config-run
+	${CHMOD} 0755 ${WRKSRC}/scripts/os
+	${CHMOD} 0755 ${WRKSRC}/scripts/results
+	${CHMOD} 0755 ${WRKSRC}/scripts/lmbench
 
 do-install:
-	@${SETENV} PREFIX=${PREFIX} WRKSRC=${WRKSRC} \
-		INSTALL_PROGRAM=${INSTALL} ${FILESDIR}/do-install
+	${SETENV} PREFIX=${PREFIX} WRKSRC=${WRKSRC} \
+		INSTALL_PROGRAM=${INSTALL:Q} ${FILESDIR}/do-install
 
 .include "../../mk/bsd.prefs.mk"
 benchmark:
-	if [ ! -f ${PREFIX}/bin/lmbench/hello ]; then \
-		@${ECHO} "*** This benchmark must be installed to run" ; \
-		exit 1 ; \
+	if [ ! -f ${PREFIX}/bin/lmbench/hello ]; then			\
+		${ECHO} "*** This benchmark must be installed to run";	\
+		exit 1;							\
 	fi
 .if defined(BATCH)
 	@${ECHO} "*** This benchmark should only be run in non-batch mode" ; \
 	if [ `id -u` != 0 ]; then ${ECHO} "This benchmark must be run as root!" ; exit 1 ; fi ; \
-	@${SED} -e 's|@wrksrc@|${WRKSRC}|' < ${FILESDIR}/setup.answers | \
+	${SED} -e 's|@wrksrc@|${WRKSRC}|' < ${FILESDIR}/setup.answers | \
 	(cd ${WRKSRC}/src; ${GMAKE} results)
 .else
 	@if [ `id -u` != 0 ]; then ${ECHO} "This benchmark must be run as root!" ; exit 1 ; fi
@@ -58,7 +58,7 @@ benchmark:
 
 results:
 	@${MKDIR} /tmp/benches/`domainname`
-	-@cd ${PREFIX}/share/lmbench ; \
-	tar -cf /tmp/benches/`domainname`/lmbench.`uname`-`uname -m`-`uname -r`.`hostname`.tar results
+	cd ${PREFIX}/share/lmbench					\
+	&& ${TAR} -cf /tmp/benches/`domainname`/lmbench.`uname`-`uname -m`-`uname -r`.`hostname`.tar results
 
 .include "../../mk/bsd.pkg.mk"
