@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2006/04/13 18:23:34 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/06/08 14:14:11 ben Exp $
 
 .include "Makefile.common"
 COMMENT=	API for access to scanners, digitals camera, frame grabbers etc.
 
 DISTNAME=       sane-backends-${SANE_VERSION}
-PKGREVISION=	1
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+PKGREVISION=	2
 
 USE_TOOLS+=		msgfmt
 USE_PKGLOCALEDIR=	YES
@@ -47,6 +48,7 @@ CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/sane.d/${f}
 .endfor
 .endif
 
+.include "options.mk"
 .if (${OPSYS} != "SunOS")
 . include "../../devel/libusb/buildlink3.mk"
 .endif
