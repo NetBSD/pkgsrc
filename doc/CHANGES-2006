@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.450 2006/06/08 11:28:49 salo Exp $
+$NetBSD: CHANGES-2006,v 1.451 2006/06/08 14:15:26 ben Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2959,3 +2959,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated benchmarks/bonnie++ to 1.03anb3 [hira 2006-06-07]
 	Updated multimedia/mpeg4ip to 1.5nb1 [hira 2006-06-08]
 	Updated graphics/tiff to 3.8.2nb2 [salo 2006-06-08]
+	Updated graphics/sane-backends to 1.0.17nb2 [ben 2006-06-08]
