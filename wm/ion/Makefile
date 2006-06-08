@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/02/05 23:11:13 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2006/06/08 09:47:14 joerg Exp $
 #
 
 DISTNAME=	ion-2-20040729
@@ -13,6 +13,7 @@ COMMENT=	Keyboard friendly tiling window manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
 
