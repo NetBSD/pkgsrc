@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/06/17 17:39:03 agc Exp $
+$NetBSD: patch-aa,v 1.2 2006/06/08 16:57:59 rillig Exp $
 
 --- /dev/null	2003-06-16 16:02:04.000000000 +0100
-+++ ../contrib/configtool/defines/netbsd.mk	2003-06-16 16:01:30.000000000 +0100
++++ contrib/configtool/defines/netbsd.mk	2003-06-16 16:01:30.000000000 +0100
 @@ -0,0 +1,144 @@
 +#
 +#      SCCS:  @(#)netbsd.mk	1.1 (2003/06/16) 
