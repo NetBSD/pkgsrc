@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.451 2006/06/08 14:15:26 ben Exp $
+$NetBSD: CHANGES-2006,v 1.452 2006/06/08 15:36:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2960,3 +2960,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/mpeg4ip to 1.5nb1 [hira 2006-06-08]
 	Updated graphics/tiff to 3.8.2nb2 [salo 2006-06-08]
 	Updated graphics/sane-backends to 1.0.17nb2 [ben 2006-06-08]
+	Updated devel/p5-IO-Stty to 0.02nb3 [minskim 2006-06-08]
