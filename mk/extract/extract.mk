@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.3 2006/06/06 16:33:48 rillig Exp $
+# $NetBSD: extract.mk,v 1.4 2006/06/08 15:45:52 jlam Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -90,7 +90,7 @@ extract-message:
 ######################################################################
 ### extract-check-interactive (PRIVATE)
 ######################################################################
-### extract-check-interactive checks whether we can do an interactive
+### extract-check-interactive checks whether we must do an interactive
 ### extraction or not.
 ###
 extract-check-interactive:
