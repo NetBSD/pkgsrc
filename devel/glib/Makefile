@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2006/05/13 11:31:11 rillig Exp $
+# $NetBSD: Makefile,v 1.81 2006/06/08 21:13:38 tron Exp $
 
 DISTNAME=		glib-1.2.10
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v1.2/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/gtk/v1.2/ \
@@ -22,7 +22,7 @@ PKGCONFIG_OVERRIDE=	glib.pc.in
 PKGCONFIG_OVERRIDE+=	gmodule.pc.in
 PKGCONFIG_OVERRIDE+=	gthread.pc.in
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/glib
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 TEST_TARGET=		check
 
@@ -45,43 +45,31 @@ GLIB_MAJOR_VERSION=	${GLIB_VERSION:C/\..*//}
 GLIB_MINOR_VERSION=	${GLIB_VERSION:C/[^.]*\.//:C/\..*//}
 GLIB_MICRO_VERSION=	${GLIB_VERSION:C/.*\.//}
 
-# We patch the version info in the configure scripts for reasons related to
-# shared library numbering, but we don't want it to leak into the various
-# installed files.  Explicitly replace the version number with the correct
-# one derived from the package name.
-#
-pre-configure:
-	set -e;								\
-	cd ${WRKSRC};							\
-	files="glib-config.in docs/glib-config.1.in glib.pc.in gmodule.pc.in gthread.pc.in"; \
-	for f in $${files}; do						\
-		${SED}	-e "s|@GLIB_VERSION@|${GLIB_VERSION}|g"		\
-			-e "s|@VERSION@|${GLIB_VERSION}|g"		\
-			$${f} > $${f}.fixed;				\
-		${MV} -f $${f}.fixed $${f};				\
-	done
+SUBST_CLASSES+=		shlib1
+SUBST_MESSAGE.shlib1=	Fixing shared library versions (part 1)
+SUBST_STAGE.shlib1=	pre-configure
+SUBST_FILES.shlib1=	glib-config.in docs/glib-config.1.in glib.pc.in \
+			gmodule.pc.in gthread.pc.in
+SUBST_SED.shlib1=	-e "s|@GLIB_VERSION@|${GLIB_VERSION}|g"
+SUBST_SED.shlib1+=	-e "s|@VERSION@|${GLIB_VERSION}|g"
 
-post-configure:
-	set -e;								\
-	cd ${WRKSRC};							\
-	files="config.status config.h glibconfig.h";			\
-	for f in $${files}; do						\
-		${SED}	-e "s|^\\(#define.*GLIB_MAJOR_VERSION\\).*|\\1	${GLIB_MAJOR_VERSION}|" \
-			-e "s|^\\(#define.*GLIB_MINOR_VERSION\\).*|\\1	${GLIB_MINOR_VERSION}|" \
-			-e "s|^\\(#define.*GLIB_MICRO_VERSION\\).*|\\1	${GLIB_MICRO_VERSION}|" \
-			$${f} > $${f}.fixed;				\
-		${MV} $${f}.fixed $${f};				\
-	done;								\
-	${CHMOD} +x config.status
+SUBST_CLASSES+=		shlib2
+SUBST_MESSAGE.shlib2=	Fixing shared library versions (part 2)
+SUBST_STAGE.shlib2=	post-configure
+SUBST_FILES.shlib2=	config.status config.h glibconfig.h
+SUBST_SED.shlib2=	-e "s|^\\(\#define.*GLIB_MAJOR_VERSION\\).*|\\1	${GLIB_MAJOR_VERSION}|"
+SUBST_SED.shlib2+=	-e "s|^\\(\#define.*GLIB_MINOR_VERSION\\).*|\\1	${GLIB_MINOR_VERSION}|"
+SUBST_SED.shlib2+=	-e "s|^\\(\#define.*GLIB_MICRO_VERSION\\).*|\\1	${GLIB_MICRO_VERSION}|"
+
+#post-configure:
+#	${CHMOD} +x config.status
+
 .if exists(/usr/include/sys/null.h)
-	set -e;								\
-	cd ${WRKSRC};							\
-	files="glib.h";							\
-	for f in $${files}; do						\
-		${SED}	-e "s|^#define.NULL.*|#include <sys/null.h>|"	\
-			$${f} > $${f}.fixed;				\
-		${MV} $${f}.fixed $${f};				\
-	done
+SUBST_CLASSES+=		null
+SUBST_MESSAGE.null=	Using "sys/null.h" to get definition of NULL.
+SUBST_STAGE.null=	post-configure
+SUBST_FILES.null=	glib.h
+SUBST_SED.null=		-e "s|^\#define.NULL.*|\#include <sys/null.h>|"
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"
