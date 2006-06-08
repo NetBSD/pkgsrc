@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/06/08 18:59:25 he Exp $
+# $NetBSD: Makefile,v 1.3 2006/06/08 19:19:05 he Exp $
 #
 
 DISTNAME=	munin_${VER}
@@ -14,7 +14,7 @@ COMMENT=	System monitoring tool, client version
 
 DEPENDS+=	p5-Net-Server>=0:../../net/p5-Net-Server
 DEPENDS+=	p5-Net-SSLeay>=0:../../security/p5-Net-SSLeay
-#DEPENDS+=	munin-doc>=1.3.1:../../sysutils/munin-doc
+DEPENDS+=	munin-doc>=1.3.1:../../sysutils/munin-doc
 
 USE_TOOLS+=	perl
 USE_TOOLS+=	gmake
