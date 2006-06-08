@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.614 2006/06/08 17:38:56 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.615 2006/06/08 17:59:23 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4946,30 +4946,30 @@ sub checkfile_buildlink3_mk($) {
 sub checkfile_DESCR($) {
 	my ($fname) = @_;
 	my ($maxchars, $maxlines) = (80, 24);
-	my ($descr);
+	my ($lines);
 
 	log_info($fname, NO_LINE_NUMBER, "[checkfile_DESCR]");
 
 	checkperms($fname);
-	if (!($descr = load_file($fname))) {
+	if (!($lines = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return;
 	}
-	if (@{$descr} == 0) {
+	if (@{$lines} == 0) {
 		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
 		return;
 	}
 
-	foreach my $line (@{$descr}) {
+	foreach my $line (@{$lines}) {
 		checkline_length($line, $maxchars);
 		checkline_trailing_whitespace($line);
 		checkline_valid_characters($line, regex_validchars);
 		checkline_spellcheck($line);
 	}
-	checklines_trailing_empty_lines($descr);
+	checklines_trailing_empty_lines($lines);
 
-	if (@{$descr} > $maxlines) {
-		my $line = $descr->[$maxlines];
+	if (@{$lines} > $maxlines) {
+		my $line = $lines->[$maxlines];
 
 		$line->log_warning("File too long (should be no more than $maxlines lines).");
 		$line->explain_warning(
@@ -4977,7 +4977,7 @@ sub checkfile_DESCR($) {
 			"fit on one screen. It is also intended to give a _brief_ summary",
 			"about the package's contents.");
 	}
-	autofix($descr);
+	autofix($lines);
 }
 
 sub checkfile_distinfo($) {
@@ -5125,7 +5125,7 @@ sub checkfile_INSTALL($) {
 
 sub checkfile_MESSAGE($) {
 	my ($fname) = @_;
-	my ($message);
+	my ($lines);
 
 	my @explanation = (
 		"A MESSAGE file should consist of a header line, having 75 \"=\"",
@@ -5136,32 +5136,32 @@ sub checkfile_MESSAGE($) {
 	log_info($fname, NO_LINE_NUMBER, "[checkfile_MESSAGE]");
 
 	checkperms($fname);
-	if (!($message = load_file($fname))) {
+	if (!($lines = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return;
 	}
 
-	if (@{$message} < 3) {
+	if (@{$lines} < 3) {
 		log_warning($fname, NO_LINE_NUMBER, "File too short.");
 		explain_warning($fname, NO_LINE_NUMBER, @explanation);
 		return;
 	}
-	if ($message->[0]->text ne "=" x 75) {
-		$message->[0]->log_warning("Expected a line of exactly 75 \"=\" characters.");
+	if ($lines->[0]->text ne "=" x 75) {
+		$lines->[0]->log_warning("Expected a line of exactly 75 \"=\" characters.");
 		explain_warning($fname, NO_LINE_NUMBER, @explanation);
 	}
-	checkline_rcsid($message->[1], "");
-	foreach my $line (@{$message}) {
+	checkline_rcsid($lines->[1], "");
+	foreach my $line (@{$lines}) {
 		checkline_length($line, 80);
 		checkline_trailing_whitespace($line);
 		checkline_valid_characters($line, regex_validchars);
 		checkline_spellcheck($line);
 	}
-	if ($message->[-1]->text ne "=" x 75) {
-		$message->[-1]->log_warning("Expected a line of exactly 75 \"=\" characters.");
+	if ($lines->[-1]->text ne "=" x 75) {
+		$lines->[-1]->log_warning("Expected a line of exactly 75 \"=\" characters.");
 		explain_warning($fname, NO_LINE_NUMBER, @explanation);
 	}
-	checklines_trailing_empty_lines($message);
+	checklines_trailing_empty_lines($lines);
 }
 
 sub checkfile_mk($) {
@@ -5661,24 +5661,24 @@ sub checkfile_patch($) {
 
 sub checkfile_PLIST($) {
 	my ($fname) = @_;
-	my ($plist, $last_file_seen, $libtool_libs);
+	my ($lines, $last_file_seen, $libtool_libs);
 
 	log_info($fname, NO_LINE_NUMBER, "[checkfile_PLIST]");
 
 	checkperms($fname);
-	if (!($plist = load_file($fname))) {
+	if (!($lines = load_file($fname))) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return;
 	}
-	if (@{$plist} == 0) {
+	if (@{$lines} == 0) {
 		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
 		return;
 	}
-	checkline_rcsid($plist->[0], "\@comment ");
+	checkline_rcsid($lines->[0], "\@comment ");
 
 	# Get all libtool libraries from the PLIST.
 	$libtool_libs = {};
-	foreach my $line (@{$plist}) {
+	foreach my $line (@{$lines}) {
 		my $text = $line->text;
 
 		if ($text =~ qr"^(.*)\.la$") {
@@ -5686,7 +5686,7 @@ sub checkfile_PLIST($) {
 		}
 	}
 
-	foreach my $line (@{$plist}) {
+	foreach my $line (@{$lines}) {
 		my $text = $line->text;
 
 		checkline_trailing_whitespace($line);
@@ -5810,7 +5810,7 @@ sub checkfile_PLIST($) {
 			$line->log_error("Unknown line type.");
 		}
 	}
-	checklines_trailing_empty_lines($plist);
+	checklines_trailing_empty_lines($lines);
 }
 
 sub checkfile($) {
