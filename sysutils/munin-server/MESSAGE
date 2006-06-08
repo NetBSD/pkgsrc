@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/06/08 19:16:24 he Exp $
+
+You can start the collection of statistics and production of graphs by
+installing a crontab for the ${MUNIN_USER} user of the form
+
+*/5 * * * * ${PREFIX}/bin/munin-cron
+
+You may need to give ${MUNIN_USER} a valid shell to do so.
+===========================================================================
