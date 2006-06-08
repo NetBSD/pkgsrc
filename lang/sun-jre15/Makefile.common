@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2006/04/22 09:22:10 rillig Exp $
+# $NetBSD: Makefile.common,v 1.13 2006/06/08 21:21:21 rillig Exp $
 
 CATEGORIES=	lang java
 COMMENT=	Sun's Java(tm) 2 Standard Edition, ${DOWNLOAD_NAME}
@@ -46,20 +46,16 @@ DEPENDS+=	suse_compat-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_compat
 DEPENDS+=	suse_x11-[0-9]*:../../emulators/${SUSE_DIR_PREFIX}_x11
 .endif
 
-_FETCH_MESSAGE= 							\
-	${ECHO} "======================================================================"; \
-	${ECHO} ; 							\
-	${ECHO} " The file ${DISTNAME}${EXTRACT_SUFX} containing ${DOWNLOAD_NAME}"; 	\
-	${ECHO} " must be fetched into:";				\
-	${ECHO} "	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"; 	\
-	${ECHO} " from:"; 						\
-	${ECHO} "	${DOWNLOAD}";					\
-	${ECHO} "	or ${ARCHIVE}"; 				\
-	${ECHO} ; \
-	${ECHO} " Click 'Download ${DOWNLOAD_NAME}', read and accept the"; \
-	${ECHO} " license, then choose 'Linux self-extracting file'."; 	\
-	${ECHO} ; 							\
-	${ECHO} "======================================================================"
+FETCH_MESSAGE+=	" The file ${DISTNAME}${EXTRACT_SUFX} containing ${DOWNLOAD_NAME}"
+FETCH_MESSAGE+=	""
+FETCH_MESSAGE+=	" must be fetched into:"
+FETCH_MESSAGE+=	"	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"
+FETCH_MESSAGE+=	" from:"
+FETCH_MESSAGE+=	"	${DOWNLOAD}"
+FETCH_MESSAGE+=	"	or ${ARCHIVE}"
+FETCH_MESSAGE+=	""
+FETCH_MESSAGE+=	" Click 'Download ${DOWNLOAD_NAME}', read and accept the"
+FETCH_MESSAGE+=	" license, then choose 'Linux self-extracting file'."
 
 post-fetch:
 	@if [ ! -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
