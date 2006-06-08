@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2006/04/15 09:30:45 adam Exp $
+# $NetBSD: Makefile.common,v 1.27 2006/06/08 16:06:50 minskim Exp $
 
 DISTNAME=	freeciv-${FC_VERS}
 FC_VERS=	2.0.8
@@ -31,4 +31,5 @@ SUBST_SED.data+=	-e "s|@SERVER_TRUE@|@MAKE_DATA_TRUE@|g"
 SUBST_MESSAGE.data=	Fixing installation of data files.
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
