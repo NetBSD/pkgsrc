@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/06 06:21:49 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/06/08 21:13:38 tron Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLIB_BUILDLINK3_MK:=	${GLIB_BUILDLINK3_MK}+
@@ -14,9 +14,9 @@ BUILDLINK_PACKAGES+=	glib
 BUILDLINK_API_DEPENDS.glib+=	glib>=1.2.10nb5
 BUILDLINK_ABI_DEPENDS.glib+=	glib>=1.2.10nb7
 BUILDLINK_PKGSRCDIR.glib?=	../../devel/glib
-.endif	# GLIB_BUILDLINK3_MK
 
 PTHREAD_OPTS+=	require
+.endif	# GLIB_BUILDLINK3_MK
 
 .include "../../mk/pthread.buildlink3.mk"
 
