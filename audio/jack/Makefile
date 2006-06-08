@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/05/18 20:29:58 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/06/08 04:48:35 jlam Exp $
 #
 
 DISTNAME=		jack-audio-connection-kit-0.100.0
@@ -17,6 +17,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		ac_cv_header_readline_chardefs_h=yes
 
 PKGCONFIG_OVERRIDE+=	jack.pc.in
 
