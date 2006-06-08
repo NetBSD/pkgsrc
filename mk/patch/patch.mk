@@ -1,4 +1,4 @@
-# $NetBSD: patch.mk,v 1.1 2006/06/06 04:48:19 jlam Exp $
+# $NetBSD: patch.mk,v 1.2 2006/06/08 07:30:40 rillig Exp $
 #
 # The following variables may be set in a package Makefile and control
 # how pkgsrc patches are applied.
@@ -251,7 +251,7 @@ _PKGSRC_PATCHES+=	${LOCALPATCHES}/${PKGPATH}/*
 .endif
 
 pkgsrc-patch-message:
-	@${PHASE_MSG} "Applying pkgsrc patches for ${PKGNAME}"
+	@${STEP_MSG} "Applying pkgsrc patches for ${PKGNAME}"
 
 do-pkgsrc-patch:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
