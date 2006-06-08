@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.41 2005/11/16 17:42:20 tv Exp $
+# $NetBSD: mksandbox,v 1.42 2006/06/08 01:11:43 minskim Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -45,7 +45,7 @@ xsrc=/usr/xsrc
 
 kernel=""
 sandboxMountDirs="/bin /sbin /lib /libexec /usr/X11R6 /usr/bin /usr/games /usr/include /usr/lib /usr/libdata /usr/libexec /usr/lkm /usr/share /usr/sbin /var/mail"
-sandboxEmptyDirs="/var/run /var/log /var/spool/mqueue"
+sandboxEmptyDirs="/var/run /var/log /var/spool/lock /var/spool/mqueue"
 sandboxEmptyFiles="/var/run/utmp /var/run/utmpx /var/log/wtmp /var/log/wtmpx /var/log/lastlog /var/log/lastlogx"
 
 usage()
