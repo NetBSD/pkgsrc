@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.455 2006/06/08 19:19:49 he Exp $
+$NetBSD: CHANGES-2006,v 1.456 2006/06/08 21:13:53 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2966,3 +2966,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/munin-node to 1.3.1nb1 [he 2006-06-08]
 	Added sysutils/munin-doc version 1.3.1 [he 2006-06-08]
 	Added sysutils/munin-server version 1.3.1 [he 2006-06-08]
+	Updated devel/glib to 1.2.10nb10 [tron 2006-06-08]
