@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/04 21:29:48 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/06/08 16:03:13 minskim Exp $
 
 DISTNAME=	grap-1.30
 PKGREVISION=	1
@@ -13,5 +13,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c++
+USE_TOOLS+=	lex yacc
 
 .include "../../mk/bsd.pkg.mk"
