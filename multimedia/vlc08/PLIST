@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/05/26 15:21:44 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/06/08 18:03:13 drochner Exp $
 bin/vlc
 bin/vlc-config
 bin/wxvlc
@@ -75,6 +75,7 @@ lib/vlc/codec/libcmml_plugin.so
 lib/vlc/codec/libcvdsub_plugin.so
 lib/vlc/codec/libdts_plugin.so
 lib/vlc/codec/libdvbsub_plugin.so
+lib/vlc/codec/libfaad_plugin.so
 lib/vlc/codec/libfake_plugin.so
 lib/vlc/codec/libflacdec_plugin.so
 lib/vlc/codec/liblibmpeg2_plugin.so
