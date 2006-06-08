@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5068 2006/06/07 19:32:11 ghen Exp $
+$NetBSD: TODO,v 1.5069 2006/06/08 16:59:20 rillig Exp $
 
 Suggested new packages
 ======================
@@ -1161,7 +1161,6 @@ Suggested package updates
 	o tdir-1.67
 	o tds-1.6.2
 	o ted-2.17
-	o tet3-3.6b
 	o tfmxplay-1.1.6
 	o tin-1.8.2
 	o tinyproxy-1.7.0
