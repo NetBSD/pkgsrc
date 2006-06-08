@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/04/17 07:07:22 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/06/08 14:14:11 ben Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -28,6 +28,7 @@ lib/sane/libsane-fujitsu.la
 lib/sane/libsane-genesys.la
 lib/sane/libsane-gt68xx.la
 lib/sane/libsane-hp.la
+${SANE_HP3900}lib/sane/libsane-hp3900.la
 lib/sane/libsane-hp4200.la
 lib/sane/libsane-hp5400.la
 lib/sane/libsane-ibm.la
@@ -96,6 +97,7 @@ man/man5/sane-genesys.5
 man/man5/sane-gphoto2.5
 man/man5/sane-gt68xx.5
 man/man5/sane-hp.5
+${SANE_HP3900}man/man5/sane-hp3900.5
 man/man5/sane-hp5400.5
 man/man5/sane-hpsj5s.5
 man/man5/sane-ibm.5
@@ -244,6 +246,7 @@ share/examples/sane/fujitsu.conf
 share/examples/sane/genesys.conf
 share/examples/sane/gt68xx.conf
 share/examples/sane/hp.conf
+${SANE_HP3900}share/examples/sane/hp3900.conf
 share/examples/sane/hp4200.conf
 share/examples/sane/hp5400.conf
 share/examples/sane/ibm.conf
