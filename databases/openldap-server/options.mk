@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2006/05/31 18:18:36 ghen Exp $
+# $NetBSD: options.mk,v 1.2 2006/06/08 15:30:03 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap-server
 PKG_SUPPORTED_OPTIONS=	bdb kerberos sasl slp inet6
@@ -22,6 +22,7 @@ BDB_ACCEPTED=		db4 # db3?
 BDB_TYPE?=		none
 .if ${BDB_TYPE} != "none"
 CONFIGURE_ARGS+=	--enable-bdb --enable-hdb
+TEST_TARGET=		test
 .else
 CONFIGURE_ARGS+=	--disable-bdb --disable-hdb
 .endif
