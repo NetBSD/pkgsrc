@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/05/26 15:21:44 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/06/08 18:03:13 drochner Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VER}/
 EXTRACT_SUFX=		.tar.bz2
@@ -43,6 +43,7 @@ CONFIGURE_ARGS+=	--with-ffmpeg-tree=${BUILDLINK_PREFIX.ffmpeg}/lib
 CONFIGURE_ARGS+=	--with-ffmpeg-zlib
 CONFIGURE_ARGS+=	--enable-cddax
 CONFIGURE_ARGS+=	--enable-dvdread
+CONFIGURE_ARGS+=	--enable-faad
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/dialogs
@@ -94,6 +95,7 @@ PLIST_SUBST+=		COND_CDDA=""
 PLIST_SUBST+=		COND_VCD=""
 .endif
 
+.include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
 .include "../../audio/libcddb/buildlink3.mk"
