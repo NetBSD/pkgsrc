@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.19 2006/01/12 01:21:27 joerg Exp $
+$NetBSD: distinfo,v 1.20 2006/06/08 14:14:11 ben Exp $
 
 SHA1 (sane-backends-1.0.17.tar.gz) = a73e01575458a5fb7dc265cea50c6740555e1711
 RMD160 (sane-backends-1.0.17.tar.gz) = 43e440712e9da676e235dc6148c5dda347c30e22
 Size (sane-backends-1.0.17.tar.gz) = 3588993 bytes
+SHA1 (hp3900-sane1017_src_0.5.tar.gz) = 4a45100faae2572b2763253659f5cbfc8f5d31ea
+RMD160 (hp3900-sane1017_src_0.5.tar.gz) = d37163c66888de11fff41a0d0af09b9439dda34e
+Size (hp3900-sane1017_src_0.5.tar.gz) = 119430 bytes
 SHA1 (patch-aa) = fe4f9771d72512ac6a6c246971cb5940fba184cb
 SHA1 (patch-ab) = e9ed0b400458308a5c6a2631bda475c59e9a4abd
