@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.454 2006/06/08 16:59:20 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.455 2006/06/08 19:19:49 he Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2963,3 +2963,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/p5-IO-Stty to 0.02nb3 [minskim 2006-06-08]
 	Updated graphics/gimp24 to 2.3.9 [adam 2006-06-08]
 	Updated devel/tet3 to 3.7 [rillig 2006-06-08]
+	Updated sysutils/munin-node to 1.3.1nb1 [he 2006-06-08]
+	Added sysutils/munin-doc version 1.3.1 [he 2006-06-08]
+	Added sysutils/munin-server version 1.3.1 [he 2006-06-08]
