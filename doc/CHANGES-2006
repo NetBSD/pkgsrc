@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.452 2006/06/08 15:36:17 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.453 2006/06/08 15:41:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2961,3 +2961,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/tiff to 3.8.2nb2 [salo 2006-06-08]
 	Updated graphics/sane-backends to 1.0.17nb2 [ben 2006-06-08]
 	Updated devel/p5-IO-Stty to 0.02nb3 [minskim 2006-06-08]
+	Updated graphics/gimp24 to 2.3.9 [adam 2006-06-08]
