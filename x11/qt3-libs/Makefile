@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2006/04/22 09:22:17 rillig Exp $
+# $NetBSD: Makefile,v 1.53 2006/06/08 01:27:27 minskim Exp $
 
 PKGNAME=	qt3-libs-${QTVERSION}
 PKGREVISION=	1
@@ -11,6 +11,12 @@ LIBQT=			${WRKSRC}/lib/libqt-mt.la
 # XXX: hack - work round an ICE with GCC 3.3 on sparc
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc"
 GCC_REQD+=		3.4
+.endif
+
+.include "../../mk/compiler.mk"
+.if ${OPSYS} == "Darwin" && !empty(CC_VERSION:Mgcc-4.0.0)
+PKG_FAIL_REASON=	"Apple's gcc 4.0.0 yields an internal compiler error."
+PKG_FAIL_REASON+=	"Please update gcc to a later version."
 .endif
 
 .include "../../x11/qt3-libs/Makefile.common"
