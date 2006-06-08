@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.609 2006/06/06 16:00:49 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.610 2006/06/08 07:11:26 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1135,6 +1135,11 @@ sub save_autofix_changes($) {
 #== End of PkgLint::FileUtil ==============================================
 
 package PkgLint::Type;
+#==========================================================================
+# A Type in pkglint is a combination of a data type and a permission
+# specification. Further details can be found in the chapter ``The pkglint
+# type system'' of the pkglint book.
+#==========================================================================
 
 BEGIN {
 	import PkgLint::Util qw(
@@ -1218,6 +1223,11 @@ sub to_string($) {
 #== End of PkgLint::Type ==================================================
 
 package PkgLint::VarUseContext;
+#==========================================================================
+# This class represents the various contexts in which make(1) variables can
+# appear in pkgsrc. Further details can be found in the chapter ``The
+# pkglint type system'' of the pkglint book.
+#==========================================================================
 
 BEGIN {
 	import PkgLint::Util qw(
@@ -2635,7 +2645,7 @@ sub variable_needs_quoting($$$) {
 		FileMode Filename
 		Identifier
 		Pathname
-		PkgName
+		PkgName PkgRevision
 		RelativePkgDir RelativePkgPath
 		URL UserGroupName
 		Version
@@ -3366,7 +3376,10 @@ sub checkline_mk_shelltext($$) {
 
 	use constant hidden_shell_commands => array_to_hash(qw(
 		${DO_NADA}
-		${ECHO} ${ECHO_MSG} ${ECHO_N}
+		${ECHO} ${ECHO_MSG} ${ECHO_N} ${ERROR_CAT} ${ERROR_MSG}
+		${PHASE_MSG}
+		${STEP_MSG}
+		${WARNING_CAT} ${WARNING_MSG}
 	));
 
 	if ($rest =~ s/^([-@]*)(?:\$\{_PKG_SILENT\}\$\{_PKG_DEBUG\})?//) {
