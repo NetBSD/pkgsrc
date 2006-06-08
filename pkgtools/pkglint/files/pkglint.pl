@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.613 2006/06/08 17:21:28 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.614 2006/06/08 17:38:56 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5745,6 +5745,11 @@ sub checkfile_PLIST($) {
 
 			} elsif ($text eq "info/dir") {
 				$line->log_error("\"info/dir\" must not be listed. Use install-info to add/remove an entry.");
+
+			} elsif ($text =~ qr"^info/.+$") {
+				if (defined($varuse) && !exists($makevar->{"INFO_FILES"})) {
+					$line->log_warning("Packages that install info files should set INFO_FILES.");
+				}
 
 			} elsif (defined($effective_pkgbase) && $text =~ qr"^lib/\Q${effective_pkgbase}\E/") {
 				# Fine.
