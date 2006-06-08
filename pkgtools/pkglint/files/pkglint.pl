@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.612 2006/06/08 15:56:00 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.613 2006/06/08 17:21:28 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3363,6 +3363,16 @@ sub checkline_mk_shelltext($$) {
 
 	if ($text =~ qr"\$\{SED\}" && $text =~ qr"\$\{MV\}") {
 		$line->log_note("Please use the SUBST framework instead of \${SED} and \${MV}.");
+		$line->explain_note(
+			"When converting things, pay attention to \"#\" characters. In shell",
+			"commands make(1) does not interpret them as comment character, but",
+			"in other lines it does. Therefore, instead of the shell command",
+			"",
+			"\tsed -e 's,#define foo,,'",
+			"",
+			"you need to write",
+			"",
+			"\tSUBST_SED.foo+=\t's,\\#define foo,,'");
 	}
 
 	if ($text =~ qr"^\@*-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)") {
@@ -4043,6 +4053,11 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 		my $words = shell_split($value);
 		if (!$words) {
 			$line->log_error("Invalid shell words in sed commands.");
+			$line->explain_error(
+				"If your sed commands have embedded \"#\" characters, you need to escape",
+				"them with a backslash, otherwise make(1) will interpret them as a",
+				"comment, no matter if they occur in single or double quotes or",
+				"whatever.");
 
 		} else {
 			my $nwords = scalar(@{$words});
@@ -4827,14 +4842,14 @@ sub checkfile_buildlink3_mk($) {
 
 	# First paragraph: Reference counters.
 	if (!expect($lines, \$lineno, qr"^BUILDLINK_DEPTH:=\t+\$\{BUILDLINK_DEPTH\}\+$")) {
-		$lines->[$lineno]->log_warning("BUILDLINK_DEPTH line expected.");
+		$lines->[$lineno]->log_warning("Expected BUILDLINK_DEPTH:= \${BUILDLINK_DEPTH}+.");
 		return;
 	}
 	if (($m = expect($lines, \$lineno, qr"^(.*)_BUILDLINK3_MK:=\t+\$\{\1_BUILDLINK3_MK\}\+$"))) {
 		$bl_PKGBASE = $m->text(1);
 		$opt_debug_misc and $lines->[$lineno - 1]->log_debug("bl_PKGBASE=${bl_PKGBASE}");
 	} else {
-		$lines->[$lineno]->log_warning("Expected reference counter incrementing line.");
+		$lines->[$lineno]->log_warning("Expected {PKGNAME}_BUILDLINK3_MK:= \${{PKGNAME}_BUILDLINK3_MK}+.");
 		return;
 	}
 	expect_empty_line($lines, \$lineno);
@@ -4913,7 +4928,11 @@ sub checkfile_buildlink3_mk($) {
 
 	# Sixth paragraph: Reference counter.
 	if (!expect($lines, \$lineno, qr"^BUILDLINK_DEPTH:=\t+\$\{BUILDLINK_DEPTH:S/\+\$//\}$")) {
-		$lines->[$lineno]->log_warning("Expected reference counter decrementing line.");
+		$lines->[$lineno]->log_warning("Expected BUILDLINK_DEPTH:= \${BUILDLINK_DEPTH:S/+$//}.");
+		$lines->[$lineno]->explain_warning(
+			"Everything besides the .include lines for the buildlink3.mk files of",
+			"dependencies should go between the .if !empty({PKGNAME}_BUILDLINK3_MK)",
+			"and the corresponding .endif.");
 		return;
 	}
 
