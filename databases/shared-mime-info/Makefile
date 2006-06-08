@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/05/21 16:13:34 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2006/06/08 09:56:43 joerg Exp $
 #
 
 DISTNAME=	shared-mime-info-0.17
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config msgfmt
 
 CONFIGURE_ARGS+=	--disable-update-mimedb
 
