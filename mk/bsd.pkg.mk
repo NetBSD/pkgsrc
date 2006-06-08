@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1846 2006/06/07 18:37:06 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1847 2006/06/08 08:01:53 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -1340,9 +1340,9 @@ su-target: .USE
 		*) ${WARNING_MSG} "Running: "${PRE_ROOT_CMD:Q} ;;	\
 		esac;							\
 		${PRE_ROOT_CMD};					\
-		${PHASE_MSG} "Becoming \`\`${ROOT_USER}'' to make su-${.TARGET} (`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'`)"; \
+		${STEP_MSG} "Becoming \`\`${ROOT_USER}'' to make su-${.TARGET} (`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'`)"; \
 		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH='$${PATH}:${SU_CMD_PATH_APPEND}' ${MAKE} ${MAKEFLAGS} PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL} su-${.TARGET} ${MAKEFLAGS.su-${.TARGET}}"; \
-		${PHASE_MSG} "Dropping \`\`${ROOT_USER}'' privileges."; \
+		${STEP_MSG} "Dropping \`\`${ROOT_USER}'' privileges."; \
 	fi
 
 # Empty pre-* and post-* targets
