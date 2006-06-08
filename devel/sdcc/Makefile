@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/05/11 13:55:38 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2006/06/08 15:52:49 minskim Exp $
 
 DISTNAME=	sdcc-2.4.0
 PKGNAME=	${DISTNAME:S/-src//}
@@ -17,13 +17,11 @@ USE_LANGUAGES=	c c++
 #
 USE_TOOLS+=	bison
 
-USE_TOOLS+=	perl:run
-
 BUILD_TARGET=	dep all
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-2.4.0//}
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake lex perl:run
 
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/sdcc
 
