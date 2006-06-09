@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/04/05 16:41:34 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/06/09 16:04:00 minskim Exp $
 #
 
 DISTNAME=		mairix-0.16.1
@@ -12,7 +12,7 @@ COMMENT=		Program for indexing and searching email messages
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
-USE_TOOLS+=		bison makeinfo
+USE_TOOLS+=		bison flex makeinfo
 INFO_FILES=		# PLIST
 
 BINDIR=			${PREFIX}/bin

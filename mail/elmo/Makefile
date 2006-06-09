@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/07 12:24:50 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/06/09 16:03:23 minskim Exp $
 #
 
 DISTNAME=		elmo-1.3.2
@@ -12,6 +12,7 @@ COMMENT=		The ELectronic Mail Operator MUA
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		flex
 GNU_CONFIGURE=		yes
 
 REPLACE_PERL=		elmoconf.pl
