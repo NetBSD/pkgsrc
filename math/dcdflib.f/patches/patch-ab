@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/04/17 00:19:57 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2006/06/09 10:26:05 rillig Exp $
 
 --- /dev/null	Tue Apr 17 00:09:25 2001
-+++ Makefile
++++ src/Makefile
 @@ -0,0 +1,26 @@
 +LIB= dcdflib_f
 +
