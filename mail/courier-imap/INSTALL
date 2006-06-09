@@ -1,22 +1,22 @@
-# $NetBSD: INSTALL,v 1.4 2006/04/28 18:15:20 jlam Exp $
+# $NetBSD: INSTALL,v 1.5 2006/06/09 22:12:10 jlam Exp $
 
 case ${STAGE} in
 POST-INSTALL)
 	TLS_CERTFILE=
-	oldcert="@SSLCERT@/imapd.pem"
+	oldcert="@SSLCERTS@/imapd.pem"
 	newcert="@PKG_SYSCONFDIR@/imapd.pem"
 	if ${TEST} -f @PKG_SYSCONFDIR@/imapd-ssl; then
 		. @PKG_SYSCONFDIR@/imapd-ssl
-		if "$TLS_CERTFILE" != "$newcert"; then
+		if ${TEST} "$TLS_CERTFILE" != "$newcert"; then
 			imapdmsg="$oldcert	-> $newcert"
 		fi
 	fi
 	TLS_CERTFILE=
-	oldcert="@SSLCERT@/pop3d.pem"
+	oldcert="@SSLCERTS@/pop3d.pem"
 	newcert="@PKG_SYSCONFDIR@/pop3d.pem"
 	if ${TEST} -f @PKG_SYSCONFDIR@/pop3d-ssl; then
 		. @PKG_SYSCONFDIR@/pop3d-ssl
-		if "$TLS_CERTFILE" != "$newcert"; then
+		if ${TEST} "$TLS_CERTFILE" != "$newcert"; then
 			pop3dmsg="$oldcert	-> $newcert"
 		fi
 	fi
