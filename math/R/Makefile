@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2006/04/17 13:46:39 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2006/06/09 11:15:32 rillig Exp $
 
 DISTNAME=		R-2.2.1
 PKGREVISION=		3
@@ -17,7 +17,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 TEST_TARGET=		check
 USE_TOOLS+=		gmake gzip:run makeinfo perl:run sed xmkmf
-USE_GNU_READLINE=	# uses callback interface
+USE_GNU_READLINE=	yes		# uses callback interface
 USE_LANGUAGES=		c fortran
 USE_LIBTOOL=		yes
 TEXINFO_REQD=		4.5
@@ -110,14 +110,14 @@ post-install:
 	) | ${GREP} -v "lib/R/doc/html/packages.html" |			\
 	${GREP} -v "lib/R/doc/html/search/index.txt" | 			\
 	${SORT} -u >> ${PLIST_SRC}
-	${ECHO} "@unexec ${RM} -f %D/lib/R/doc/html/packages.html" >> ${PLIST_SRC}
-	${ECHO} "@unexec ${RM} -f %D/lib/R/doc/html/search/index.txt" >> ${PLIST_SRC}
-	( cd ${PREFIX};							\
+	${ECHO} "@unexec "${RM:Q}" -f %D/lib/R/doc/html/packages.html" >> ${PLIST_SRC}
+	${ECHO} "@unexec "${RM:Q}" -f %D/lib/R/doc/html/search/index.txt" >> ${PLIST_SRC}
+	( cd ${PREFIX} &&						\
 	  for dir in ${R_INSTALL_DIRS}; do				\
 		${FIND} $${dir#${PREFIX}/} -type d -print;		\
 	  done;								\
 	) | ${SORT} -ur | ${SED} -e "s|^|@dirrm |" >> ${PLIST_SRC}
-	${ECHO} "@exec R CMD ${PERL5} %D/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null" >> ${PLIST_SRC}
-	${ECHO} "@exec ${CAT} %D/lib/R/library/*/CONTENTS > %D/lib/R/doc/html/search/index.txt 2>/dev/null" >> ${PLIST_SRC}
+	${ECHO} "@exec R CMD "${PERL5:Q}" %D/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null" >> ${PLIST_SRC}
+	${ECHO} "@exec "${CAT:Q}" %D/lib/R/library/*/CONTENTS > %D/lib/R/doc/html/search/index.txt 2>/dev/null" >> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
