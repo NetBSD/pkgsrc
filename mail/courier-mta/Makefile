@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2006/05/01 02:57:58 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2006/06/09 22:12:18 jlam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,6 +12,7 @@ COMMENT=	Courier mail transport agent
 HOMEPAGE=	http://www.courier-mta.org/
 
 DEPENDS+=	courier-maildir>=${COURIER_VERSION}:../../mail/courier-maildir
+DEPENDS+=	couriertcpd>=${COURIER_VERSION}:../../net/couriertcpd
 DEPENDS+=	maildrop>=2.0.2:../../mail/maildrop
 
 USE_TOOLS+=		gmake perl:run
