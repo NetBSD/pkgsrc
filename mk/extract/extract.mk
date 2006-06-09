@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.6 2006/06/09 08:20:30 jlam Exp $
+# $NetBSD: extract.mk,v 1.7 2006/06/09 13:59:08 jlam Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -79,6 +79,7 @@ _REAL_EXTRACT_TARGETS+=	pre-extract
 _REAL_EXTRACT_TARGETS+=	do-extract
 _REAL_EXTRACT_TARGETS+=	post-extract
 _REAL_EXTRACT_TARGETS+=	extract-cookie
+_REAL_EXTRACT_TARGETS+=	error-check
 
 .PHONY: real-extract
 real-extract: ${_REAL_EXTRACT_TARGETS}

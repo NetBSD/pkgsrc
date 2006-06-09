@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1848 2006/06/08 16:21:51 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1849 2006/06/09 13:59:06 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -27,6 +27,7 @@
 .include "${PKGSRCDIR}/mk/extract/bsd.extract-vars.mk"
 .include "${PKGSRCDIR}/mk/patch/bsd.patch-vars.mk"
 .include "${PKGSRCDIR}/mk/install/bsd.install-vars.mk"
+.include "${PKGSRCDIR}/mk/bsd.pkg.error.mk"
 
 .include "../../mk/bsd.hacks.mk"
 
@@ -311,7 +312,7 @@ _WRAPPER_COOKIE=	${WRKDIR}/.wrapper_done
 _CONFIGURE_COOKIE=	${WRKDIR}/.configure_done
 _BUILD_COOKIE=		${WRKDIR}/.build_done
 _TEST_COOKIE=		${WRKDIR}/.test_done
-_INTERACTIVE_COOKIE=	.interactive_stage
+_INTERACTIVE_COOKIE=	${.CURDIR}/.interactive_stage
 _NULL_COOKIE=		${WRKDIR}/.null
 
 # Miscellaneous overridable commands:
@@ -1319,10 +1320,10 @@ test-cookie:
 # make i.e. without -j n)
 .PHONY: real-wrapper
 .PHONY: real-configure real-build real-test
-real-wrapper: wrapper-message wrapper-vars pre-wrapper do-wrapper post-wrapper wrapper-cookie
-real-configure: configure-message configure-vars pre-configure pre-configure-override do-configure post-configure configure-cookie
-real-build: build-message build-vars pre-build do-build post-build build-cookie
-real-test: test-message pre-test do-test post-test test-cookie
+real-wrapper: wrapper-message wrapper-vars pre-wrapper do-wrapper post-wrapper wrapper-cookie error-check
+real-configure: configure-message configure-vars pre-configure pre-configure-override do-configure post-configure configure-cookie error-check
+real-build: build-message build-vars pre-build do-build post-build build-cookie error-check
+real-test: test-message pre-test do-test post-test test-cookie error-check
 
 # su-target is a macro target that does just-in-time su-to-root before
 # reinvoking the make process as root.  It acquires root privileges and

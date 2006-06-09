@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.50 2006/05/12 21:37:08 jlam Exp $
+# $NetBSD: compiler.mk,v 1.51 2006/06/09 13:59:08 jlam Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -159,7 +159,13 @@ ${_FAIL_WRAPPER.FC}: fail-wrapper
 .PHONY: fail-wrapper
 fail-wrapper: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${ECHO:Q}" 1>&2 \"===>\"; "${ECHO:Q}" 1>&2 \"===> Please add USE_LANGUAGES+="${.TARGET:T:S/-fail-wrapper//:Q}" to the package Makefile.\"; "${ECHO:Q}" 1>&2 \"===>\"; exit 1" > ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	exec 1>${.TARGET};						\
+	${ECHO} '#!'${TOOLS_SHELL:Q};					\
+	${ECHO} 'wrapperlog="$${TOOLS_WRAPPER_LOG-'${_TOOLS_WRAP_LOG:Q}'}"'; \
+	${ECHO} ${ECHO:Q} '"*** Please add USE_LANGUAGES+='${.TARGET:T:S/-fail-wrapper//:Q}' to the package Makefile." >> $$wrapperlog'; \
+	${ECHO} ${ECHO:Q} '"*** Please add USE_LANGUAGES+='${.TARGET:T:S/-fail-wrapper//:Q}' to the package Makefile." > ${WARNING_DIR}/${.TARGET:T}'; \
+	${ECHO} 'exit 1'
 	${_PKG_SILENT}${_PKG_DEBUG}${CHMOD} +x ${.TARGET}
 
 .if empty(USE_LANGUAGES:Mc++)

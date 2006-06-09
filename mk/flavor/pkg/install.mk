@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.6 2006/06/08 08:01:53 rillig Exp $
+# $NetBSD: install.mk,v 1.7 2006/06/09 13:59:08 jlam Exp $
 
 ######################################################################
 ### install-check-conflicts (PRIVATE, pkgsrc/mk/install/install.mk)
@@ -7,7 +7,7 @@
 ### and and installed packages.
 ###
 .PHONY: install-check-conflicts
-install-check-conflicts:
+install-check-conflicts: error-check
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${WRKDIR}/.CONFLICTS
 .for _conflict_ in ${CONFLICTS}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
@@ -19,12 +19,12 @@ install-check-conflicts:
 .endfor
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TEST} -f ${WRKDIR}/.CONFLICTS || exit 0;			\
-	${ERROR_MSG} "${PKGNAME} conflicts with installed package(s):";	\
-	${CAT} ${WRKDIR}/.CONFLICTS | ${SED} -e "s|^|    |" | ${ERROR_CAT}; \
-	${ERROR_MSG} "They install the same files into the same place."; \
-	${ERROR_MSG} "Please remove conflicts first with pkg_delete(1)."; \
-	${RM} -f ${WRKDIR}/.CONFLICTS;					\
-	exit 1
+	exec 1>${ERROR_DIR}/${.TARGET};					\
+	${ECHO} "${PKGNAME} conflicts with installed package(s):";	\
+	${CAT} ${WRKDIR}/.CONFLICTS | ${SED} -e "s|^|    |";		\
+	${ECHO} "They install the same files into the same place.";	\
+	${ECHO} "Please remove conflicts first with pkg_delete(1).";	\
+	${RM} -f ${WRKDIR}/.CONFLICTS
 
 ######################################################################
 ### install-check-installed (PRIVATE, pkgsrc/mk/install/install.mk)
@@ -33,22 +33,19 @@ install-check-conflicts:
 ### version) is already installed on the system.
 ###
 .PHONY: install-check-installed
-install-check-installed:
+install-check-installed: error-check
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	found="`${_PKG_BEST_EXISTS} ${PKGWILDCARD:Q} || ${TRUE}`";	\
-	case "$$found" in						\
-	"")	;;							\
-	*)	${ERROR_MSG} "$$found is already installed - perhaps an older version?"; \
-		${ERROR_MSG} "If so, you may use either of:";	\
-		${ERROR_MSG} "    - \"pkg_delete $$found\" and \"${MAKE} reinstall\""; \
-		${ERROR_MSG} "      to upgrade properly"; \
-		${ERROR_MSG} "    - \"${MAKE} update\" to rebuild the package and all"; \
-		${ERROR_MSG} "      of its dependencies"; \
-		${ERROR_MSG} "    - \"${MAKE} replace\" to replace only the package without"; \
-		${ERROR_MSG} "      re-linking dependencies, risking various problems."; \
-		exit 1;							\
-		;;							\
-	esac
+	${TEST} -n "$$found" || exit 0;					\
+	exec 1>${ERROR_DIR}/${.TARGET};					\
+	${ECHO} "$$found is already installed - perhaps an older version?"; \
+	${ECHO} "If so, you may use either of:";			\
+	${ECHO} "    - \"pkg_delete $$found\" and \"${MAKE} reinstall\""; \
+	${ECHO} "      to upgrade properly";				\
+	${ECHO} "    - \"${MAKE} update\" to rebuild the package and all"; \
+	${ECHO} "      of its dependencies";				\
+	${ECHO} "    - \"${MAKE} replace\" to replace only the package without"; \
+	${ECHO} "      re-linking dependencies, risking various problems."
 
 ######################################################################
 ### register-pkg (PRIVATE, pkgsrc/mk/install/install.mk)

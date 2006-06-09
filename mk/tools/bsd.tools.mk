@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.35 2006/06/06 06:30:29 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.36 2006/06/09 13:59:08 jlam Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -82,6 +82,7 @@ release-tools-lock: release-lock
 _REAL_TOOLS_TARGETS+=	tools-message
 _REAL_TOOLS_TARGETS+=	tools-vars
 _REAL_TOOLS_TARGETS+=	override-tools
+_REAL_TOOLS_TARGETS+=	error-check
 
 .PHONY: real-tools
 real-tools: ${_REAL_TOOLS_TARGETS}
