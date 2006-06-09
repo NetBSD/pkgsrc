@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2006/05/22 18:03:50 drochner Exp $
+# $NetBSD: Makefile,v 1.58 2006/06/09 07:28:06 jnemeth Exp $
 #
 
 DISTNAME=	epiphany-2.14.1.1
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/epiphany/
 COMMENT=	The web browser for the GNOME Desktop
-
-BROKEN_IN=		pkgsrc-2006Q1
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
