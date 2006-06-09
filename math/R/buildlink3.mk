@@ -1,5 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:25 rillig Exp $
-# XXX	BUILDLINK_DEPMETHOD.R?=	build
+# $NetBSD: buildlink3.mk,v 1.5 2006/06/09 11:15:32 rillig Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 R_BUILDLINK3_MK:=	${R_BUILDLINK3_MK}+
