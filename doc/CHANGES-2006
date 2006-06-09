@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.459 2006/06/09 18:21:02 jschauma Exp $
+$NetBSD: CHANGES-2006,v 1.460 2006/06/09 20:09:28 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2974,3 +2974,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed www/netscape7-acroread3 [jschauma 2006-06-09]
 	Removed www/netscape7-acroread5 [jschauma 2006-06-09]
 	Removed www/netscape7-acroread7 [jschauma 2006-06-09]
+	Updated graphics/exiv2 to 0.10 [gdt 2006-06-09]
