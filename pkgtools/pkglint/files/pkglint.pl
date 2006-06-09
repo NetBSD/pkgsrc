@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.616 2006/06/08 18:22:46 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.617 2006/06/09 08:53:28 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3436,7 +3436,7 @@ sub checkline_mk_shelltext($$) {
 		# and the symbol on the "input tape".
 		#
 
-		if ($state == SCST_START && exists($vartools->{$shellword})) {
+		if (($state == SCST_START || $state == SCST_COND) && exists($vartools->{$shellword})) {
 			my $addition = "";
 
 			if (!exists(get_predefined_vartool_names()->{$shellword})) {
@@ -3447,7 +3447,7 @@ sub checkline_mk_shelltext($$) {
 			$line->log_warning("Direct use of tool \"${shellword}\". Please use \$\{$vartools->{$shellword}\} instead${addition}.");
 		}
 
-		if ($state == SCST_START) {
+		if ($state == SCST_START || $state == SCST_COND) {
 			if (exists(forbidden_commands->{$shellword})) {
 				$line->log_error("${shellword} is forbidden and must not be used.");
 
