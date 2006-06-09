@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/03/04 21:30:19 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/06/09 06:37:51 joerg Exp $
 
 DISTNAME=	gtk_wicontrol-0.17
 PKGREVISION=	4
@@ -13,7 +13,7 @@ ONLY_FOR_PLATFORM=	*BSD-*-* DragonFly-*-*
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
