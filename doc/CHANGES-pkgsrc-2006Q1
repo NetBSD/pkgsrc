@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.80 2006/06/07 22:44:30 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.81 2006/06/09 07:29:58 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -163,3 +163,5 @@ Pullup ticket 1693 - requested by heinz
 security update for spamassassin
 Pullup ticket 1679 - requested by taca
 runtime fix for ruby-tk
+Pullup ticket 1694 - requested by salo
+update and security fix for tiff
