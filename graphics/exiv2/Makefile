@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/06/09 20:04:23 gdt Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/09 20:37:53 drochner Exp $
 #
 
 DISTNAME=		exiv2-0.10
@@ -15,5 +15,6 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
+PKGCONFIG_OVERRIDE=	config/exiv2.pc.in
 
 .include "../../mk/bsd.pkg.mk"
