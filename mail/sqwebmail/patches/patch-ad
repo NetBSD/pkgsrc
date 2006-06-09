@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.6 2006/04/28 18:16:25 jlam Exp $
+$NetBSD: patch-ad,v 1.7 2006/06/09 22:12:01 jlam Exp $
 
---- sqwebmail/Makefile.in.orig	2006-03-04 09:18:53.000000000 -0500
+--- sqwebmail/Makefile.in.orig	2006-05-24 19:48:14.000000000 -0400
 +++ sqwebmail/Makefile.in
-@@ -991,7 +991,7 @@ install-perms-local: install-perms-cache
+@@ -992,7 +992,7 @@ install-perms-local: install-perms-cache
  
  htmllibdir.h: config.status
  	echo '#define HTMLLIBDIR "@htmldir@"' >htmllibdir.h
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.6 2006/04/28 18:16:25 jlam Exp $
  	echo '#define CALENDARMODE "$(sysconfdir)/calendarmode"' >>htmllibdir.h
  	echo '#define LOGINDOMAINLIST "$(sysconfdir)/logindomainlist"' >>htmllibdir.h
  	echo '#define MAXMSGSIZE @MAXMSGSIZE@' >>htmllibdir.h
-@@ -999,7 +999,7 @@ htmllibdir.h: config.status
+@@ -1000,7 +1000,7 @@ htmllibdir.h: config.status
  	echo '#define SOCKDIR "$(localstatedir)"' >>htmllibdir.h
  	echo '#define SHAREDINDEXFILE "$(sysconfdir)/shared/index"' >>htmllibdir.h
  	echo '#define SQWEBPASSWD "$(pkglibexecdir)/sqwebpasswd"' >>htmllibdir.h
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.6 2006/04/28 18:16:25 jlam Exp $
  		; then \
  		echo '#define HOSTNAMEFILE "$(sysconfdir)/defaultdomain"' >>htmllibdir.h \
  		; echo '#define MAKEMIME "$(bindir)/makemime"' >>htmllibdir.h \
-@@ -1008,7 +1008,7 @@ htmllibdir.h: config.status
+@@ -1009,7 +1009,7 @@ htmllibdir.h: config.status
  		; echo '#define MAKEMIME "$(pkglibexecdir)/makemime"' >>htmllibdir.h \
  		; fi
  	echo '#define LDAPADDRESSBOOK "$(sysconfdir)/ldapaddressbook"' >>htmllibdir.h
@@ -29,7 +29,7 @@ $NetBSD: patch-ad,v 1.6 2006/04/28 18:16:25 jlam Exp $
  	echo '#define AUTHCHARSET "$(sysconfdir)/authcharset"' >>htmllibdir.h
  
  ldapsearch: ../ldapaddressbook/ldapsearch
-@@ -1036,9 +1036,6 @@ install-perms-cache:
+@@ -1037,9 +1037,6 @@ install-perms-cache:
  	@echo "@cachedir@ 700 @cacheowner@ bin" >>permissions.dat
  
  cache-reminder:
