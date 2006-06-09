@@ -1,4 +1,4 @@
-# $NetBSD: packlist.mk,v 1.6 2006/05/02 02:28:24 jlam Exp $
+# $NetBSD: packlist.mk,v 1.7 2006/06/09 08:50:24 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # create packlist files.  This file is automatically included by
@@ -43,23 +43,23 @@ FILES_SUBST+=		PERL5_PACKLIST=${_PERL5_PACKLIST:Q}
 
 # Generate the PLIST from the files listed in PERL5_PACKLIST.
 .if defined(_PERL5_PACKLIST)
-PERL5_PLIST_COMMENT= \
+PERL5_PLIST_COMMENT_CMD= \
 	{ ${ECHO} "@comment The following lines are automatically generated"; \
 	  ${ECHO} "@comment from the installed .packlist files."; }
-PERL5_PLIST_FILES= \
+PERL5_PLIST_FILES_CMD= \
 	{ ${CAT} ${_PERL5_PACKLIST}; for f in ${_PERL5_PACKLIST}; do ${TEST} ! -f "$$f" || ${ECHO} "$$f"; done; } \
-	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,," \
+	| ${SED} -e "s,[ 	].*,," -e "s,/\\./,/,g" -e "s,${PREFIX}/,," \
 	| ${SORT} -u
-PERL5_PLIST_DIRS= \
+PERL5_PLIST_DIRS_CMD= \
 	{ ${CAT} ${_PERL5_PACKLIST}; for f in ${_PERL5_PACKLIST}; do ${TEST} ! -f "$$f" || ${ECHO} "$$f"; done; } \
-	| ${SED} -e "s,[ 	].*,," -e "s,/\./,/,g" -e "s,${PREFIX}/,," \
-		-e "s,^,@unexec \${RMDIR} -p %D/," \
-		-e "s,/[^/]*$$, 2>/dev/null || ${TRUE}," \
+	| ${SED} -e "s,[ 	].*,," -e "s,/\\./,/,g" -e "s,${PREFIX}/,," \
+		-e "s,^,@unexec "${RMDIR:Q}" -p %D/," \
+		-e "s,/[^/]*\$$, 2>/dev/null || "${TRUE:Q}"," \
 	| ${SORT} -ur
-PERL5_GENERATE_PLIST=	${PERL5_PLIST_COMMENT}; \
-			${PERL5_PLIST_FILES}; \
-			${PERL5_PLIST_DIRS}
-GENERATE_PLIST+=	${PERL5_GENERATE_PLIST};
+PERL5_GENERATE_PLIST=	${PERL5_PLIST_COMMENT_CMD}; \
+			${PERL5_PLIST_FILES_CMD}; \
+			${PERL5_PLIST_DIRS_CMD};
+GENERATE_PLIST+=	${PERL5_GENERATE_PLIST}
 .endif
 
 ###########################################################################
@@ -84,6 +84,7 @@ _PERL5_PACKLIST_AWK_ADD_MANZ.yes=					\
 post-install: perl-packlist
 .endif
 
+.PHONY: perl-packlist
 perl-packlist:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TEST} -n ${_PERL5_PACKLIST:Q}"" || exit 0;			\
