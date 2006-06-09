@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.5 2006/06/08 08:01:53 rillig Exp $
+# $NetBSD: metadata.mk,v 1.6 2006/06/09 16:41:09 jlam Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -93,9 +93,8 @@ ${_BUILD_INFO_FILE}: plist
 		${ECHO} "REQUIRES=$$req" >> ${.TARGET}.tmp;		\
 	done
 .endif
-	${_PKG_SILENT}${_PKG_DEBUG}${SORT} ${.TARGET}.tmp > ${.TARGET}.tmp2
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp2 ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${SORT} ${.TARGET}.tmp > ${.TARGET} && ${RM} -f ${.TARGET}.tmp
 
 ######################################################################
 ###
@@ -110,11 +109,13 @@ _METADATA_TARGETS+=	${_BUILD_VERSION_FILE}
 ${_BUILD_VERSION_FILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}exec 1>>${.TARGET}.tmp;		\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	exec 1>>${.TARGET}.tmp;						\
 	for f in ${.CURDIR}/Makefile ${FILESDIR}/* ${PKGDIR}/*; do	\
 		${TEST} ! -f "$$f" || ${ECHO} "$$f";			\
 	done
-	${_PKG_SILENT}${_PKG_DEBUG}exec 1>>${.TARGET}.tmp;		\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	exec 1>>${.TARGET}.tmp;						\
 	${TEST} -f ${DISTINFO_FILE:Q} || exit 0;			\
 	${CAT} ${DISTINFO_FILE} |					\
 	${AWK} 'NF == 4 && $$3 == "=" { gsub("[()]", "", $$2); print $$2 }' | \
@@ -122,7 +123,8 @@ ${_BUILD_VERSION_FILE}:
 		${TEST} ! -f "${PATCHDIR}/$$file" ||			\
 			${ECHO} "${PATCHDIR}/$$file";			\
 	done
-	${_PKG_SILENT}${_PKG_DEBUG}exec 1>>${.TARGET}.tmp;		\
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	exec 1>>${.TARGET}.tmp;						\
 	${TEST} -d ${PATCHDIR} || exit 0;				\
 	cd ${PATCHDIR}; for f in *; do					\
 		case "$$f" in						\
@@ -139,9 +141,8 @@ ${_BUILD_VERSION_FILE}:
 	${AWK} '{ sub("^${PKGSRCDIR}/", "");				\
 		  sub(":.*[$$]NetBSD", ":	$$NetBSD");		\
 		  sub("[$$][^$$]*$$", "$$");				\
-		  print; }' | ${SORT} -u > ${.TARGET}.tmp1 &&		\
-	${RM} -f ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp1 ${.TARGET}
+		  print; }' |						\
+	${SORT} -u > ${.TARGET} && ${RM} -f ${.TARGET}.tmp
 
 ######################################################################
 ###
@@ -154,8 +155,7 @@ _METADATA_TARGETS+=	${_COMMENT_FILE}
 
 ${_COMMENT_FILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${COMMENT:Q} > ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${COMMENT:Q} > ${.TARGET}
 
 ######################################################################
 ###
@@ -168,14 +168,13 @@ _METADATA_TARGETS+=	${_DESCR_FILE}
 
 ${_DESCR_FILE}: ${DESCR_SRC}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} > ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} > ${.TARGET}
 .if defined(HOMEPAGE)
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "Homepage:" >> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ""${HOMEPAGE:Q} >> ${.TARGET}.tmp
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} >> ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} "Homepage:" >> ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ""${HOMEPAGE:Q} >> ${.TARGET}
 .endif
-	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
 
 ######################################################################
 ###
@@ -222,11 +221,8 @@ _MESSAGE_SUBST_SED=	${MESSAGE_SUBST:S/=/}!/:S/$/!g/:S/^/ -e s!\\\${/}
 
 ${_MESSAGE_FILE}: ${MESSAGE_SRC}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}.tmp
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC} |			\
-		${SED} ${_MESSAGE_SUBST_SED} > ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
-
+		${SED} ${_MESSAGE_SUBST_SED} > ${.TARGET}
 
 # Display MESSAGE file and optionally mail the contents to
 # PKGSRC_MESSAGE_RECIPIENTS.
@@ -263,8 +259,7 @@ _METADATA_TARGETS+=	${_PRESERVE_FILE}
 
 ${_PRESERVE_FILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${DATE} > ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}${DATE} > ${.TARGET}
 .endif
 
 ######################################################################
@@ -284,8 +279,7 @@ ${_SIZE_ALL_FILE}: ${_DEPENDS_COOKIE}
 	${XARGS} -n 1 ${_PKG_BEST_EXISTS} | ${SORT} -u |		\
 	${XARGS} -n 256 ${PKG_INFO} -qs |				\
 	${AWK} 'BEGIN { s = 0 } /^[0-9]+$$/ { s += $$1 } END { print s }' \
-		> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+		> ${.TARGET}
 
 ######################################################################
 ###
@@ -308,8 +302,7 @@ ${_SIZE_PKG_FILE}: plist
 	${SED} -e "s/'/'\\\\''/g" -e "s/.*/'&'/" |			\
 	${XARGS} -n 256 ${LS} -ld 2>/dev/null |				\
 	${AWK} 'BEGIN { s = 0 } { s += $$5 } END { print s }'		\
-		> ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+		> ${.TARGET}
 
 ######################################################################
 ###
@@ -372,8 +365,7 @@ _CONTENTS_TARGETS+=	${NO_MTREE:D:U${MTREE_FILE}}
 ${_CONTENTS_FILE}: ${_CONTENTS_TARGETS}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${PKG_CREATE} ${_PKG_ARGS_INSTALL} -O ${PKGFILE:T} > ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+	${PKG_CREATE} ${_PKG_ARGS_INSTALL} -O ${PKGFILE:T} > ${.TARGET}
 
 ######################################################################
 ### generate-metadata (PRIVATE)
