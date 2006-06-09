@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/05/07 12:35:27 tron Exp $
+# $NetBSD: Makefile,v 1.45 2006/06/09 07:04:48 rillig Exp $
 
 .include "../../www/apache2/Makefile.common"
 
@@ -46,9 +46,9 @@ SUBST_MESSAGE.conf=	Fixing hardcoded paths.
 TEST_TARGET=		check
 
 do-configure:
-	@cd ${WRKSRC}/apr && ${SETENV} ${CONFIGURE_ENV} ./configure \
+	cd ${WRKSRC}/apr && ${SETENV} ${CONFIGURE_ENV} ./configure \
 		${APR_CONFIGURE_ARGS}
-	@cd ${WRKSRC}/apr-util && ${SETENV} ${CONFIGURE_ENV} ./configure \
+	cd ${WRKSRC}/apr-util && ${SETENV} ${CONFIGURE_ENV} ./configure \
 		${APU_CONFIGURE_ARGS}
 
 post-install:
@@ -57,8 +57,8 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/include/apr-0/arch/unix
 	${INSTALL_DATA} ${WRKSRC}/apr/include/arch/*.h ${PREFIX}/include/apr-0/arch
 	${INSTALL_DATA} ${WRKSRC}/apr/include/arch/unix/*.h ${PREFIX}/include/apr-0/arch/unix/
-	@${CHMOD} ${SHAREMODE} ${PREFIX}/include/apr-0/*.h
-	@${CHMOD} ${PKGDIRMODE} ${PREFIX}/include/apr-0
-	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/include/apr-0/
+	${CHMOD} ${SHAREMODE} ${PREFIX}/include/apr-0/*.h
+	${CHMOD} ${PKGDIRMODE} ${PREFIX}/include/apr-0
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/include/apr-0/
 
 .include "../../mk/bsd.pkg.mk"
