@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.5 2006/06/08 16:21:51 jlam Exp $
+# $NetBSD: extract.mk,v 1.6 2006/06/09 08:20:30 jlam Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -97,7 +97,7 @@ extract-check-interactive:
 .if !empty(INTERACTIVE_STAGE:Mextract) && defined(BATCH)
 	@${ERROR_MSG} "The extract stage of this package requires user interaction"
 	@${ERROR_MSG} "Please extract manually with:"
-	@${ERROR_MSG} "	\"cd ${PKGSRCDIR}/${PKGPATH} && ${MAKE} extract\""
+	@${ERROR_MSG} "    \"cd ${.CURDIR} && ${MAKE} extract\""
 	@${TOUCH} ${_INTERACTIVE_COOKIE}
 	@${FALSE}
 .else
