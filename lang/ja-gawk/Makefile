@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/05 06:27:41 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/09 16:14:17 minskim Exp $
 
 DISTNAME=	gawk-3.0.6
 PKGNAME=	ja-gawk-3.0.6
@@ -18,6 +18,7 @@ CONFLICTS=	gawk-[0-9]*
 INFO_FILES=	# PLIST
 
 GNU_CONFIGURE=	yes
+USE_TOOLS+=	yacc
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ja-gawk
