@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/03/04 21:29:13 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/06/09 15:50:35 minskim Exp $
 #
 
 DISTNAME=	cdecl-2.5
@@ -15,6 +15,7 @@ COMMENT=	Utility to explain and compose C and C++ declarations
 BUILD_TARGET=		cdecl
 # missing rl_completion_matches
 USE_GNU_READLINE=	yes
+USE_TOOLS+=		lex yacc
 
 EGDIR=			${PREFIX}/share/examples/cdecl
 
