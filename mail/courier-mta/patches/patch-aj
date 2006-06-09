@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
+$NetBSD: patch-aj,v 1.2 2006/06/09 22:12:18 jlam Exp $
 
---- courier/perms.sh.in.orig	2005-01-27 21:53:58.000000000 -0500
+--- courier/perms.sh.in.orig	2006-04-12 20:21:48.000000000 -0400
 +++ courier/perms.sh.in
-@@ -10,114 +10,44 @@ prefix="@prefix@"
+@@ -10,115 +10,45 @@ prefix="@prefix@"
  exec_prefix="@exec_prefix@"
  
  PERMS="
@@ -72,6 +72,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
 -@sbindir@/imapd-ssl		555
 -@sbindir@/sharedindexsplit	555
 -@sbindir@/sharedindexinstall	555
+ @sbindir@/aliaslookup		555
 -@sbindir@/webmaild		555
 -@datadir@/imapd			555	x	bin	bin
 -@datadir@/imapd-ssl		555	x	bin	bin
@@ -119,7 +120,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
  @datadir@/couriermlm		755
  
  @datadir@/couriermlm/adminrequest.tmpl	644
-@@ -167,11 +97,20 @@ do
+@@ -168,11 +98,20 @@ do
  	if test "$USER" = ""
  	then
  		USER="@mailuser@"
@@ -140,7 +141,7 @@ $NetBSD: patch-aj,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
  	fi
  
  	case $FILE in
-@@ -192,26 +131,7 @@ do
+@@ -193,26 +132,7 @@ do
  	echo $FILE $MODE $USER $GROUP $SPECIAL
  done
  

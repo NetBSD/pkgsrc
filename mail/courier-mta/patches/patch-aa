@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2006/06/09 22:12:18 jlam Exp $
 
---- courier/Makefile.in.orig	2006-02-25 12:28:53.000000000 -0500
+--- courier/Makefile.in.orig	2006-06-09 14:58:20.000000000 -0400
 +++ courier/Makefile.in
-@@ -52,16 +52,16 @@ build_triplet = @build@
+@@ -52,17 +52,17 @@ build_triplet = @build@
  host_triplet = @host@
  target_triplet = @target@
  pkglibexec_PROGRAMS = aliasexp$(EXEEXT) aliascombine$(EXEEXT) \
@@ -18,14 +18,15 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
 -	courier-config$(EXEEXT) @couriertls@ @EXTRABIN@
 +	courier-config$(EXEEXT)
  sbin_PROGRAMS = courier$(EXEEXT) showconfig$(EXEEXT) \
--	showmodules$(EXEEXT) @COURIERLDAPALIASD@ @EXTRASBIN@
+ 	showmodules$(EXEEXT) aliaslookup$(EXEEXT) @COURIERLDAPALIASD@ \
+-	@EXTRASBIN@ $(am__empty)
 -cmdlib_PROGRAMS = submitmkdir$(EXEEXT) courierd$(EXEEXT) @EXTRACMDLIB@
-+	showmodules$(EXEEXT) @COURIERLDAPALIASD@
++	$(am__empty)
 +cmdlib_PROGRAMS = submitmkdir$(EXEEXT) courierd$(EXEEXT)
  DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
  	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
  	$(srcdir)/courier.h.in $(srcdir)/courierctl.start.in \
-@@ -397,7 +397,7 @@ RFCERRTXTIN = rfcerrheader.txt
+@@ -402,7 +402,7 @@ RFCERRTXTIN = rfcerrheader.txt
  RFCERRTXTNOIN = rfcerr2045.txt rfcerr2046.txt rfcerr2047.txt
  extrapkglib = makedatprog courierpop3login pcpd
  pkglibexecdir = $(libexecdir)/courier
@@ -34,7 +35,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
  webmail_SOURCES = 
  sqwebmaild_SOURCES = 
  
-@@ -408,16 +408,14 @@ extrabin = maildrop lockmail reformail r
+@@ -413,16 +413,14 @@ extrabin = maildrop lockmail reformail r
  
  extrasbin = couriertcpd$(EXEEXT)
  sbinscripts = sharedindexsplit sharedindexinstall webmaild
@@ -55,7 +56,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
  
  mlmdatadir = $(datadir)/couriermlm
  mlmdata_DATA = adminrequest.tmpl confsubj.tmpl digestsubj.tmpl fetch.tmpl \
-@@ -1657,27 +1655,10 @@ install-exec-hook:
+@@ -1673,27 +1671,10 @@ install-exec-hook:
  		$(localstatedir)/track\
  		$(localstatedir)/msgs $(localstatedir)/msgq ; do \
  			$(mkinstalldirs) $(DESTDIR)$$d || :; done
@@ -85,7 +86,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
  
  install-data-hook:
  	-$(mkinstalldirs) $(DESTDIR)$(sysconfdir)/aliases
-@@ -1695,10 +1676,6 @@ install-data-hook:
+@@ -1711,10 +1692,6 @@ install-data-hook:
  	rm -f $(DESTDIR)$(bindir)/rmail
  	$(LN_S) sendmail $(DESTDIR)$(bindir)/rmail
  	-$(mkinstalldirs) $(DESTDIR)@mandir@/man8
