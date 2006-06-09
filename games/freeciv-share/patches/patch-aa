@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2005/08/24 10:36:41 adam Exp $
+$NetBSD: patch-aa,v 1.4.6.1 2006/06/09 22:00:04 ghen Exp $
 
---- configure.orig	2005-08-23 16:22:20.000000000 +0000
+--- configure.orig	2006-03-06 08:04:47.000000000 +0100
 +++ configure
-@@ -12203,13 +12203,13 @@ echo "${ECHO_T}yes" >&6
+@@ -13758,13 +13758,13 @@ echo "${ECHO_T}yes" >&6
  
  
  
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.4 2005/08/24 10:36:41 adam Exp $
        cat >>confdefs.h <<_ACEOF
  #define $ac_tr_lib 1
  _ACEOF
-@@ -12316,13 +12316,13 @@ echo "${ECHO_T}yes" >&6
+@@ -13871,13 +13871,13 @@ echo "${ECHO_T}yes" >&6
  
  
  
@@ -44,7 +44,7 @@ $NetBSD: patch-aa,v 1.4 2005/08/24 10:36:41 adam Exp $
        cat >>confdefs.h <<_ACEOF
  #define $ac_tr_lib 1
  _ACEOF
-@@ -12425,13 +12425,13 @@ echo "${ECHO_T}yes" >&6
+@@ -13980,13 +13980,13 @@ echo "${ECHO_T}yes" >&6
  
  
  
@@ -65,7 +65,7 @@ $NetBSD: patch-aa,v 1.4 2005/08/24 10:36:41 adam Exp $
        cat >>confdefs.h <<_ACEOF
  #define $ac_tr_lib 1
  _ACEOF
-@@ -12530,13 +12530,13 @@ echo "${ECHO_T}yes" >&6
+@@ -14085,13 +14085,13 @@ echo "${ECHO_T}yes" >&6
  
  
  
@@ -86,7 +86,7 @@ $NetBSD: patch-aa,v 1.4 2005/08/24 10:36:41 adam Exp $
        cat >>confdefs.h <<_ACEOF
  #define $ac_tr_lib 1
  _ACEOF
-@@ -12641,13 +12641,13 @@ echo "${ECHO_T}yes" >&6
+@@ -14196,13 +14196,13 @@ echo "${ECHO_T}yes" >&6
  
  
  
@@ -107,7 +107,7 @@ $NetBSD: patch-aa,v 1.4 2005/08/24 10:36:41 adam Exp $
        cat >>confdefs.h <<_ACEOF
  #define $ac_tr_lib 1
  _ACEOF
-@@ -12749,13 +12749,13 @@ echo "${ECHO_T}yes" >&6
+@@ -14304,13 +14304,13 @@ echo "${ECHO_T}yes" >&6
  
  
  
@@ -128,7 +128,7 @@ $NetBSD: patch-aa,v 1.4 2005/08/24 10:36:41 adam Exp $
        cat >>confdefs.h <<_ACEOF
  #define $ac_tr_lib 1
  _ACEOF
-@@ -12858,13 +12858,13 @@ echo "${ECHO_T}yes" >&6
+@@ -14413,13 +14413,13 @@ echo "${ECHO_T}yes" >&6
  
  
  
@@ -149,7 +149,7 @@ $NetBSD: patch-aa,v 1.4 2005/08/24 10:36:41 adam Exp $
        cat >>confdefs.h <<_ACEOF
  #define $ac_tr_lib 1
  _ACEOF
-@@ -12967,13 +12967,13 @@ echo "${ECHO_T}yes" >&6
+@@ -14522,13 +14522,13 @@ echo "${ECHO_T}yes" >&6
  
  
  
@@ -170,7 +170,7 @@ $NetBSD: patch-aa,v 1.4 2005/08/24 10:36:41 adam Exp $
        cat >>confdefs.h <<_ACEOF
  #define $ac_tr_lib 1
  _ACEOF
-@@ -13074,13 +13074,13 @@ echo "${ECHO_T}yes" >&6
+@@ -14629,13 +14629,13 @@ echo "${ECHO_T}yes" >&6
  
  
  
