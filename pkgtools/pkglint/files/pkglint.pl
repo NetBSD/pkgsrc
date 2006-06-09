@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.617 2006/06/09 08:53:28 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.618 2006/06/09 16:21:26 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1536,6 +1536,9 @@ my (@options) = (
 # Commonly used regular expressions.
 #
 
+use constant regex_dependency_gt => qr"^((?:\$\{[\w_]+\}|[\w_]|-[^\d])+)>=(.*)$";
+use constant regex_dependency_wildcard
+				=> qr"^((?:\$\{[\w_]+\}|[\w_]|-[^\d\[])+)-(?:\[0-9\]|\d.*)$";
 use constant regex_gnu_configure_volatile_vars
 				=> qr"^(?:CFLAGS||CPPFLAGS|CXXFLAGS|FFLAGS|LDFLAGS|LIBS)$";
 use constant regex_mk_cond	=> qr"^\.(\s*)(if|ifdef|ifndef|else|elif|endif|for|endfor|undef)(?:\s+([^\s#][^#]*?))?\s*(?:#.*)?$";
@@ -3097,6 +3100,9 @@ sub checkline_mk_text($$) {
 
 	if ($text =~ qr"\$\{WRKSRC\}/\.\./") {
 		$line->log_warning("Using \"\${WRKSRC}/..\" is conceptually wrong. Please use a combination of WRKSRC, CONFIGURE_DIRS and BUILD_DIRS instead.");
+		$line->explain_warning(
+			"You should define WRKSRC such that all of CONFIGURE_DIRS, BUILD_DIRS",
+			"and INSTALL_DIRS are subdirectories of it.");
 	}
 
 	if ($text =~ qr"\b(-Wl,--rpath,|-Wl,-rpath-link,|-Wl,-rpath,|-Wl,-R)\b") {
@@ -3457,7 +3463,7 @@ sub checkline_mk_shelltext($$) {
 			} elsif ($shellword =~ qr"^\$\{([\w_]+)\}$" && (exists($vartools->{$1}) || defined(get_variable_type($line, $1)))) {
 				# Fine.
 
-			} elsif ($shellword =~ qr"^(?:\(|\)|:|;|;;|&&|\|\||\{|\}|break|case|cd|continue|do|done|elif|else|esac|eval|exit|export|fi|for|if|set|shift|then|unset|while)$") {
+			} elsif ($shellword =~ qr"^(?:\(|\)|:|;|;;|&&|\|\||\{|\}|break|case|cd|continue|do|done|elif|else|esac|eval|exit|export|fi|for|if|read|set|shift|then|unset|while)$") {
 				# Shell builtins are fine.
 
 			} elsif ($shellword =~ qr"^[\w_]+=.*$") {
@@ -4810,6 +4816,8 @@ sub checkfile_ALTERNATIVES($) {
 sub checkfile_buildlink3_mk($) {
 	my ($fname) = @_;
 	my ($lines, $lineno, $m, $bl_PKGBASE, $bl_pkgbase);
+	my ($abi_line, $abi_pkg, $abi_version);
+	my ($api_line, $api_pkg, $api_version);
 
 	log_info($fname, NO_LINE_NUMBER, "[checkfile_buildlink3_mk]");
 
@@ -4878,11 +4886,11 @@ sub checkfile_buildlink3_mk($) {
 
 	} else {
 		if (!expect($lines, \$lineno, qr"^BUILDLINK_PACKAGES:=\t+\$\{BUILDLINK_PACKAGES:N\Q${bl_pkgbase}\E\}$")) {
-			$lines->[$lineno]->log_warning("Expected duplicate elimination line.");
+			$lines->[$lineno]->log_warning("Expected BUILDLINK_PACKAGES:= \${BUILDLINK_PACKAGES:N[...]} line.");
 			return;
 		}
 		if (!expect($lines, \$lineno, qr"^BUILDLINK_PACKAGES\+=\t+\Q${bl_pkgbase}\E$")) {
-			$lines->[$lineno]->log_warning("Expected package addition line.");
+			$lines->[$lineno]->log_warning("Expected BUILDLINK_PACKAGES+= [...] line.");
 			return;
 		}
 	}
@@ -4895,8 +4903,48 @@ sub checkfile_buildlink3_mk($) {
 		}
 	}
 	while ($lineno <= $#{$lines} && !expect($lines, \$lineno, qr"^\.endif.*$")) {
-		if (expect($lines, \$lineno, regex_varassign)) {
-			# TODO: Stricter checks.
+		my $line = $lines->[$lineno];
+
+		if (($m = expect($lines, \$lineno, regex_varassign))) {
+			my ($varname, $value) = ($m->text(1), $m->text(3));
+			my $do_check = false;
+
+			if ($varname eq "BUILDLINK_ABI_DEPENDS.${bl_pkgbase}") {
+				$abi_line = $line;
+				if ($value =~ regex_dependency_gt) {
+					($abi_pkg, $abi_version) = ($1, $2);
+				} elsif ($value =~ regex_dependency_wildcard) {
+					($abi_pkg) = ($1);
+				} else {
+					$opt_debug_misc and $line->log_debug("Invalid dependency pattern: ${value}");
+				}
+				$do_check = true;
+			}
+			if ($varname eq "BUILDLINK_API_DEPENDS.${bl_pkgbase}") {
+				$api_line = $line;
+				if ($value =~ regex_dependency_gt) {
+					($api_pkg, $api_version) = ($1, $2);
+				} elsif ($value =~ regex_dependency_wildcard) {
+					($api_pkg) = ($1);
+				} else {
+					$opt_debug_misc and $line->log_debug("Invalid dependency pattern: ${value}");
+				}
+				$do_check = true;
+			}
+			if ($do_check && defined($abi_pkg) && defined($api_pkg)) {
+				if ($abi_pkg ne $api_pkg) {
+					$abi_line->log_warning("Package name mismatch between here (${abi_pkg}) ...");
+					$api_line->log_warning("... and here (${api_pkg}).");
+				}
+			}
+			if ($do_check && defined($abi_version) && defined($api_version)) {
+				if (!dewey_cmp($abi_version, ">=", $api_version)) {
+					$abi_line->log_warning("ABI version (${abi_version}) should be at least ...");
+					$api_line->log_warning("... API version (${api_version}).");
+				}
+			}
+
+			# TODO: More checks.
 
 		} elsif (expect($lines, \$lineno, qr"^(?:#.*)?$")) {
 			# Comments and empty lines are fine here.
