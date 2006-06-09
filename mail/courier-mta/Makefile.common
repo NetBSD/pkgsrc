@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/06/09 22:12:18 jlam Exp $
 #
 # Package Makefiles should include this file after setting PKGNAME and
 # PKG_SUPPORTED_OPTIONS.
 
-COURIER_VERSION=	0.53.1
+COURIER_VERSION=	0.53.2
 
 .if !defined(PKGNAME)
 PKG_FAIL_REASON+=	"[courier/Makefile.common] PKGNAME must be set."

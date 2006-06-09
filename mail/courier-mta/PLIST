@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/30 18:20:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/06/09 22:12:18 jlam Exp $
 bin/cancelmsg
 bin/courier-config
 bin/couriermlm
@@ -27,6 +27,7 @@ man/man1/sendmail.1
 man/man1/testmxlookup.1
 man/man5/dot-courier.5
 man/man7/localmailfilter.7
+man/man8/aliaslookup.8
 man/man8/courier.8
 man/man8/courierfilter.8
 man/man8/courierldapaliasd.8
@@ -44,6 +45,7 @@ man/man8/makesmtpaccess.8
 man/man8/mkesmtpdcert.8
 man/man8/pop3d.8
 man/man8/submit.8
+sbin/aliaslookup
 sbin/courier
 sbin/courierfilter
 sbin/filterctl
@@ -136,6 +138,7 @@ share/courier/makehosteddomains
 share/courier/perlfilter-wrapper.pl
 share/courier/perlfilter-example.pl
 share/doc/courier/FAQ.html
+share/doc/courier/aliaslookup.html
 share/doc/courier/aliases.html
 share/doc/courier/bg.gif
 share/doc/courier/cancelmsg.html
