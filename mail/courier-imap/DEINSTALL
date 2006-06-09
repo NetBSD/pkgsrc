@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.7 2006/04/28 18:15:20 jlam Exp $
+# $NetBSD: DEINSTALL,v 1.8 2006/06/09 22:12:10 jlam Exp $
 
 case ${STAGE} in
 DEINSTALL)
@@ -15,16 +15,6 @@ DEINSTALL)
 		do
 			${ECHO} "# FILE: $file . /dev/null" >> ./+FILES
 		done
-	fi
-	;;
-
-POST-DEINSTALL)
-	couriersslcache="@COURIER_STATEDIR@/couriersslcache"
-	if ${TEST} -f "$couriersslcache"; then
-		# Unconditionally remove the SSL cache file.
-		${ECHO} "Removing Courier SSL cache file:"
-		${ECHO} "	$couriersslcache"
-		${RM} -f $couriersslcache
 	fi
 	;;
 esac

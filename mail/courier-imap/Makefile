@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2006/06/09 16:35:04 reed Exp $
+# $NetBSD: Makefile,v 1.55 2006/06/09 22:12:10 jlam Exp $
 
-DISTNAME=	courier-imap-4.1.0
-PKGREVISION=	1
+DISTNAME=	courier-imap-4.1.1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,6 +10,7 @@ COMMENT=	IMAP server for access to maildir-style mailboxes
 HOMEPAGE=	http://www.courier-mta.org/imap/
 
 DEPENDS+=	courier-maildir>=0.53.1:../../mail/courier-maildir
+DEPENDS+=	couriertcpd>=0.53.2:../../net/couriertcpd
 
 USE_TOOLS+=		env gmake perl
 USE_LANGUAGES=		c c++
@@ -37,7 +37,6 @@ INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} AM_MAKEFLAGS=${INSTALL_AM_MAKEFLAGS:Q}
 FILES_SUBST+=		SSLCERTS=${SSLCERTS:Q}
 
 REQD_DIRS+=		${DATADIR} ${DOCDIR} ${EGDIR} ${LIBEXECDIR}
-MAKE_DIRS+=		${VARBASE}/run ${COURIER_STATEDIR}
 
 .for _file_ in		imapd.cnf imapd.dist imapd-ssl.dist		\
 			pop3d.cnf pop3d.dist pop3d-ssl.dist
@@ -83,8 +82,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/imap/imapd.html ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/imap/mkimapdcert.html ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/imap/mkpop3dcert.html ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/tcpd/couriertcpd.html ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/tcpd/couriertls.html ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/imap/imapd.pam ${EGDIR}/imap.authpam
 	${INSTALL_DATA} ${WRKSRC}/imap/pop3d.pam ${EGDIR}/pop3.authpam
 
