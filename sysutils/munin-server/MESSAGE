@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2006/06/08 19:16:24 he Exp $
+$NetBSD: MESSAGE,v 1.2 2006/06/09 13:24:20 he Exp $
 
 You can start the collection of statistics and production of graphs by
 installing a crontab for the ${MUNIN_USER} user of the form
@@ -7,4 +7,15 @@ installing a crontab for the ${MUNIN_USER} user of the form
 */5 * * * * ${PREFIX}/bin/munin-cron
 
 You may need to give ${MUNIN_USER} a valid shell to do so.
+
+
+You may also want to add lines like
+
+${VARBASE}/log/munin/munin-graph.log  munin:munin 644 7 *    24   Z  
+${VARBASE}/log/munin/munin-html.log   munin:munin 644 7 *    24   Z  
+${VARBASE}/log/munin/munin-limits.log munin:munin 644 7 *    24   Z  
+${VARBASE}/log/munin/munin-update.log munin:munin 644 7 *    24   Z  
+
+to your /etc/newsyslog.conf file to have the logs rotated.
+
 ===========================================================================

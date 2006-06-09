@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/06/08 19:16:24 he Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/09 13:24:20 he Exp $
 #
 
 DISTNAME=	${PKGNAME:S:-server-:_:}
@@ -62,6 +62,7 @@ FILES_SUBST+=	STATEDIR=${STATEDIR}
 PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SITELIB:Q}
 
 MESSAGE_SUBST+=	MUNIN_USER=${MUNIN_USER:Q}
+MESSAGE_SUBST+=	VARBASE=${VARBASE:Q}
 
 EGDIR=		${PREFIX}/share/examples/munin
 TMPL_EGDIR=	${EGDIR}/templates
