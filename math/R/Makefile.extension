@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.7 2005/11/03 12:00:32 rillig Exp $
+# $NetBSD: Makefile.extension,v 1.8 2006/06/09 11:15:32 rillig Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -29,16 +29,16 @@ do-install:
 R_LIB=			lib/R/library
 R_INST_DIRS?=		${R_PKGNAME}
 
-R_PACKLIST_FILES=	( cd ${PREFIX}; for dir in ${R_INST_DIRS}; do \
+R_PACKLIST_FILES_CMD=	( cd ${PREFIX}; for dir in ${R_INST_DIRS}; do \
 	${FIND} ${R_LIB}/$${dir} \( -type f -o -type l \) -print; done ) | ${SORT} -u
-R_PACKLIST_DIRS=	( cd ${PREFIX}; for dir in ${R_INST_DIRS}; do \
+R_PACKLIST_DIRS_CMD=	( cd ${PREFIX}; for dir in ${R_INST_DIRS}; do \
 	${FIND} ${R_LIB}/$${dir} -type d -print; done ) | ${SORT} -ur | ${SED} -e "s|^|@dirrm |"
-R_PACKLIST_CMDS=	( ${ECHO} '@exec R CMD ${PERL5} %D/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null'; \
-	${ECHO} '@exec ${CAT} %D/lib/R/library/*/CONTENTS > %D/lib/R/doc/html/search/index.txt 2>/dev/null'; \
-	${ECHO} '@unexec R CMD ${PERL5} %D/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null'; \
-	${ECHO} '@unexec ${CAT} %D/lib/R/library/*/CONTENTS > %D/lib/R/doc/html/search/index.txt 2>/dev/null' )
+R_PACKLIST_CMDS_CMD=	( ${ECHO} '@exec R CMD '${PERL5:Q}' %D/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null'; \
+	${ECHO} '@exec '${CAT:Q}' %D/lib/R/library/*/CONTENTS > %D/lib/R/doc/html/search/index.txt 2>/dev/null'; \
+	${ECHO} '@unexec R CMD '${PERL5:Q}' %D/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null'; \
+	${ECHO} '@unexec '${CAT:Q}' %D/lib/R/library/*/CONTENTS > %D/lib/R/doc/html/search/index.txt 2>/dev/null' )
 
-R_GENERATE_PLIST=	${R_PACKLIST_FILES}; \
-			${R_PACKLIST_DIRS}; \
-			${R_PACKLIST_CMDS}
-GENERATE_PLIST+=	${R_GENERATE_PLIST};
+R_GENERATE_PLIST=	${R_PACKLIST_FILES_CMD}; \
+			${R_PACKLIST_DIRS_CMD}; \
+			${R_PACKLIST_CMDS_CMD};
+GENERATE_PLIST+=	${R_GENERATE_PLIST}
