@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.458 2006/06/09 16:45:40 abs Exp $
+$NetBSD: CHANGES-2006,v 1.459 2006/06/09 18:21:02 jschauma Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2969,3 +2969,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/glib to 1.2.10nb10 [tron 2006-06-08]
 	Updated audio/libsidplay2 to 2.1.1nb1 [minskim 2006-06-09]
 	Updated pkgtools/pkg_chk to 1.75 [abs 2006-06-08]
+	Removed www/netscape7 [jschauma 2006-06-09]
+	Removed www/netscape7-acroread [jschauma 2006-06-09]
+	Removed www/netscape7-acroread3 [jschauma 2006-06-09]
+	Removed www/netscape7-acroread5 [jschauma 2006-06-09]
+	Removed www/netscape7-acroread7 [jschauma 2006-06-09]
