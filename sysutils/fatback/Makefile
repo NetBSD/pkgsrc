@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/06/02 16:47:39 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2006/06/09 16:07:38 minskim Exp $
 
 DISTNAME=	fatback-1.3
 PKGREVISION=	1
@@ -13,5 +13,6 @@ GNU_CONFIGURE=	yes
 INFO_FILES=	# PLIST
 
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	lex
 
 .include "../../mk/bsd.pkg.mk"
