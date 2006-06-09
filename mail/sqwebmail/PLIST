@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/28 18:16:25 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/06/09 22:12:01 jlam Exp $
 bin/mimegpg
 libexec/courier/cgi-bin/sqwebmail
 libexec/courier/pcpd
@@ -43,6 +43,7 @@ share/courier/sqwebmail/html/en-us/keyimport.html
 share/courier/sqwebmail/html/en-us/ldaplist.html
 share/courier/sqwebmail/html/en-us/ldapsearch.html
 share/courier/sqwebmail/html/en-us/login.html
+share/courier/sqwebmail/html/en-us/loginform.inc.html
 share/courier/sqwebmail/html/en-us/navbar.inc.html
 share/courier/sqwebmail/html/en-us/navbar2.inc.html
 share/courier/sqwebmail/html/en-us/navbar3.inc.html
@@ -55,6 +56,7 @@ share/courier/sqwebmail/html/en-us/printredirect.html
 share/courier/sqwebmail/html/en-us/quickadd.html
 share/courier/sqwebmail/html/en-us/readmsg.html
 share/courier/sqwebmail/html/en-us/redirect.html
+share/courier/sqwebmail/html/en-us/refreshfr.html
 share/courier/sqwebmail/html/en-us/smileys.txt
 share/courier/sqwebmail/html/en-us/spellchk.html
 share/courier/sqwebmail/images/bg.png
