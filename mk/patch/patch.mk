@@ -1,4 +1,4 @@
-# $NetBSD: patch.mk,v 1.3 2006/06/08 08:01:53 rillig Exp $
+# $NetBSD: patch.mk,v 1.4 2006/06/09 13:59:08 jlam Exp $
 #
 # The following variables may be set in a package Makefile and control
 # how pkgsrc patches are applied.
@@ -83,6 +83,7 @@ _REAL_PATCH_TARGETS+=	pre-patch
 _REAL_PATCH_TARGETS+=	do-patch
 _REAL_PATCH_TARGETS+=	post-patch
 _REAL_PATCH_TARGETS+=	patch-cookie
+_REAL_PATCH_TARGETS+=	error-check
 
 .PHONY: real-patch
 real-patch: ${_REAL_PATCH_TARGETS}
