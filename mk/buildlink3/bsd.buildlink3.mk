@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.178 2006/06/07 17:35:49 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.179 2006/06/09 06:02:33 rillig Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -109,7 +109,7 @@ BUILDLINK_BUILTIN_MK.${_pkg_}?=	${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk
 .  sinclude "${BUILDLINK_BUILTIN_MK.${_pkg_}}"
 .endfor
 
-# Set IGNORE_PKG.<pkg> if <pkg> is the current package we're building.  
+# Set IGNORE_PKG.<pkg> if <pkg> is the current package we're building.
 # We can then check for this value to avoid build loops.
 #
 .for _pkg_ in ${BUILDLINK_PACKAGES}
@@ -149,7 +149,7 @@ _BLNK_RECURSIVE_DEPENDS+=	${_pkg_}
 # the built-in software and hence need to add a dependency.
 #
 _BLNK_DEPENDS=	# empty
-.for _pkg_ in ${BUILDLINK_DEPENDS}   
+.for _pkg_ in ${BUILDLINK_DEPENDS}
 USE_BUILTIN.${_pkg_}?=	no
 .  if empty(_BLNK_DEPENDS:M${_pkg_}) && !defined(IGNORE_PKG.${_pkg_}) && \
       !empty(_BLNK_PACKAGES:M${_pkg_}) && \
@@ -1028,17 +1028,17 @@ _WRAP_EXTRA_ARGS.SHLIBTOOL+=	${_BLNK_LDFLAGS}
 ${WRAPPER_TMPDIR}/libtool-fix-la: ${BUILDLINK_SRCDIR}/libtool-fix-la
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${SED} -e "s|@_BLNK_WRAP_LT_UNTRANSFORM_SED@|${_BLNK_WRAP_LT_UNTRANSFORM_SED:Q}|g" \
-			 -e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR:Q}|g"	\
-			 -e "s|@DEPOTBASE@|${DEPOTBASE:Q}|g"		\
-			 -e "s|@LOCALBASE@|${LOCALBASE:Q}|g"		\
-			 -e "s|@WRKSRC@|${WRKSRC:Q}|g"			\
-			 -e "s|@BASENAME@|${BASENAME:Q}|g"		\
-			 -e "s|@DIRNAME@|${DIRNAME:Q}|g"		\
-			 -e "s|@EGREP@|${EGREP:Q}|g"			\
-			 -e "s|@MV@|${MV:Q}|g"				\
-			 -e "s|@PWD@|${PWD_CMD:Q}|g"			\
-			 -e "s|@RM@|${RM:Q}|g"				\
+		| ${SED} -e "s|@_BLNK_WRAP_LT_UNTRANSFORM_SED@|"${_BLNK_WRAP_LT_UNTRANSFORM_SED:Q}"|g" \
+			 -e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"	\
+			 -e "s|@DEPOTBASE@|${DEPOTBASE}|g"		\
+			 -e "s|@LOCALBASE@|${LOCALBASE}|g"		\
+			 -e "s|@WRKSRC@|${WRKSRC}|g"			\
+			 -e "s|@BASENAME@|"${BASENAME:Q}"|g"		\
+			 -e "s|@DIRNAME@|"${DIRNAME:Q}"|g"		\
+			 -e "s|@EGREP@|"${EGREP:Q}"|g"			\
+			 -e "s|@MV@|"${MV:Q}"|g"			\
+			 -e "s|@PWD@|"${PWD_CMD:Q}"|g"			\
+			 -e "s|@RM@|"${RM:Q}"|g"			\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 
 ${WRAPPER_TMPDIR}/buildcmd-libtool: ${BUILDLINK_SRCDIR}/buildcmd-libtool
@@ -1052,7 +1052,7 @@ ${WRAPPER_TMPDIR}/cleanup-libtool:					\
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${CAT} ${BUILDLINK_SRCDIR}/cleanup-libtool			\
-		| ${SED} -e "s|@_BLNK_LIBTOOL_FIX_LA@|${_BLNK_LIBTOOL_FIX_LA:Q}|g" \
+		| ${SED} -e "s|@_BLNK_LIBTOOL_FIX_LA@|"${_BLNK_LIBTOOL_FIX_LA:Q}"|g" \
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 
 ${WRAPPER_TMPDIR}/cmd-sink-libtool: ${BUILDLINK_SRCDIR}/cmd-sink-libtool
@@ -1068,11 +1068,11 @@ ${WRAPPER_TMPDIR}/scan-libtool: ${BUILDLINK_SRCDIR}/scan-libtool
 ${WRAPPER_TMPDIR}/transform-libtool: ${BUILDLINK_SRCDIR}/transform-libtool
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${CAT} ${.ALLSRC}			\
-		| ${SED} -e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR:Q}|g"	\
-			 -e "s|@WRKSRC@|${WRKSRC:Q}|g"			\
-			 -e "s|@BASENAME@|${BASENAME:Q}|g"		\
-			 -e "s|@DIRNAME@|${DIRNAME:Q}|g"		\
-			 -e "s|@PWD@|${PWD_CMD:Q}|g"			\
+		| ${SED} -e "s|@BUILDLINK_DIR@|${BUILDLINK_DIR}|g"	\
+			 -e "s|@WRKSRC@|${WRKSRC}|g"			\
+			 -e "s|@BASENAME@|"${BASENAME:Q}"|g"		\
+			 -e "s|@DIRNAME@|"${DIRNAME:Q}"|g"		\
+			 -e "s|@PWD@|"${PWD_CMD:Q}"|g"			\
 		| ${_WRAP_SH_CRUNCH_FILTER} > ${.TARGET}
 
 WRAPPER_TARGETS+=	do-buildlink
