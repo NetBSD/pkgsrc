@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.5 2006/06/08 15:47:10 jlam Exp $
+# $NetBSD: install.mk,v 1.6 2006/06/09 13:59:08 jlam Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -133,6 +133,7 @@ _INSTALL_ALL_TARGETS+=		post-install-script
 _INSTALL_ALL_TARGETS+=		register-pkg
 .endif
 _INSTALL_ALL_TARGETS+=		privileged-install-hook
+_INSTALL_ALL_TARGETS+=		error-check
 
 .if empty(CHECK_SHLIBS:M[nN][oO])
 privileged-install-hook: check-shlibs
