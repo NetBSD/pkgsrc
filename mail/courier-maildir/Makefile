@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/04/28 18:13:25 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/06/09 22:11:42 jlam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-maildir-/}
@@ -43,8 +43,7 @@ INSTALLATION_DIRS=	bin			sbin			\
 			${PKGMANDIR}/man5	${PKGMANDIR}/man8	\
 			${DOCDIR}		${EGDIR}
 
-REQD_DIRS=		${PREFIX}/share/doc/courier
-REQD_DIRS+=		${PREFIX}/share/examples/courier
+REQD_DIRS=		${DOCDIR} ${EGDIR}
 OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/shared			\
 			${COURIER_DIR_PERMS}
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/shared.tmp			\

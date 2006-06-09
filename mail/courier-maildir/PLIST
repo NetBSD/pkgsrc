@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/18 22:12:50 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/06/09 22:11:42 jlam Exp $
 bin/courier-maildiracl
 bin/courier-maildirkw
 bin/courier-maildirmake
@@ -17,5 +17,3 @@ share/doc/courier/README.maildirquota.html
 share/doc/courier/README.sharedfolders.html
 share/examples/courier/quotawarnmsg
 share/examples/courier/sharedindexupdate
-@unexec ${RMDIR} -p %D/share/examples/courier 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} -p %D/share/doc/courier 2>/dev/null || ${TRUE}
