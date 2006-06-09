@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.3 2006/06/07 17:05:25 jlam Exp $
+# $NetBSD: check-wrkref.mk,v 1.4 2006/06/09 13:59:08 jlam Exp $
 
 .if defined(PKG_DEVELOPER)
 CHECK_WRKREF?=		tools
@@ -30,36 +30,19 @@ _CHECK_WRKREF:=		${CHECK_WRKREF}
 _CHECK_WRKREF:=		work		# "work" is the "max" option
 .endif
 
-###########################################################################
-# check-wrkref target
-#
-_CHECK_WRKREF_FOUND=	${WRKDIR}/.check_wrkref_found
-
+######################################################################
+### check-wrkref (PRIVATE)
+######################################################################
+### check-wrkref verifies that the installed files are free of
+### hard-coded references to the work directory.
+###
 .PHONY: check-wrkref
-check-wrkref: check-wrkref-message check-wrkref-clean ${_CHECK_WRKREF_FOUND}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if ${_ZERO_FILESIZE_P} ${_CHECK_WRKREF_FOUND}; then		\
-		${DO_NADA};						\
-	else								\
-		${ERROR_MSG} "The following files still have references to the build directory."; \
-		${ERROR_MSG} "This is possibly an error that should be fixed by unwrapping"; \
-		${ERROR_MSG} "the files or adding missing tools to the package makefile!"; \
-		${ERROR_MSG} "";					\
-		${CAT} ${_CHECK_WRKREF_FOUND} | ${ERROR_CAT};		\
-		exit 1;							\
-	fi
-
-.PHONY: check-wrkref-message
-check-wrkref-message:
+check-wrkref: error-check
 	@${STEP_MSG} "Checking for work-directory references in ${PKGNAME}"
-
-check-clean: check-wrkref-clean
-.PHONY: check-wrkref-clean
-check-wrkref-clean:
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_CHECK_WRKREF_FOUND}
-
-${_CHECK_WRKREF_FOUND}:
+.if !defined(NO_PKG_REGISTER)
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${ERROR_DIR}/${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
+	exec 1>${ERROR_DIR}/${.TARGET};					\
 	${PKG_FILELIST_CMD} | ${SORT} |					\
 	while read file; do						\
 		${_CHECK_WRKREF_SKIP_FILTER};				\
@@ -76,5 +59,12 @@ ${_CHECK_WRKREF_FOUND}:
 			${SED} -e "s|^|$$file:	|";			\
 			;;						\
 		esac;							\
-	done > ${.TARGET}.tmp
-	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${.TARGET}.tmp ${.TARGET}
+	done
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	exec 1>${ERROR_DIR}/${.TARGET};					\
+	if ${_NONZERO_FILESIZE_P} ${ERROR_DIR}/${.TARGET}; then		\
+		${ECHO} "*** The above files still have references to the build directory."; \
+		${ECHO} "    This is possibly an error that should be fixed by unwrapping"; \
+		${ECHO} "    the files or adding missing tools to the package makefile!"; \
+	fi
+.endif
