@@ -1,7 +1,7 @@
-$NetBSD: patch-al,v 1.1 2001/11/03 09:59:36 seb Exp $
+$NetBSD: patch-al,v 1.2 2006/06/09 22:30:58 dbj Exp $
 
---- src/Makefile.in.orig	Fri Nov  2 01:48:54 2001
-+++ src/Makefile.in
+--- src/Makefile.in.orig	1996-08-06 23:27:21.000000000 -0400
++++ src/Makefile.in	2006-06-09 17:24:46.000000000 -0400
 @@ -4,6 +4,9 @@
  # This Makefile.in is free software; the Free Software Foundation
  # gives unlimited permission to copy, distribute and modify it.
@@ -20,12 +20,24 @@ $NetBSD: patch-al,v 1.1 2001/11/03 09:59:36 seb Exp $
  mkinstalldirs = $(top_srcdir)/mkinstalldirs
  CONFIG_HEADER = ../config.h
  PROGRAMS = $(bin_PROGRAMS)
-@@ -337,7 +315,7 @@
+@@ -109,6 +113,9 @@
+ SOURCES = mkid.c lid.c fid.c fnid.c xtokid.c
+ OBJECTS = mkid$o lid$o fid$o fnid$o xtokid$o
+ 
++.SUFFIXES:
++.SUFFIXES: .c .o ._c ._o
++
+ default: all
+ 
+ 
+@@ -337,9 +344,7 @@
  maintainer-clean
  
  
 -$(PROGRAMS): $(LDADD)
+-.SUFFIXES:
+-.SUFFIXES: .c .o ._c ._o
 +$(PROGRAMS): $(DEPLIBS)
- .SUFFIXES:
- .SUFFIXES: .c .o ._c ._o
  
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
