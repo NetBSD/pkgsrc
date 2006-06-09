@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.3 2006/06/09 13:59:08 jlam Exp $
+# $NetBSD: check-files.mk,v 1.4 2006/06/09 16:12:08 jlam Exp $
 
 .if defined(PKG_DEVELOPER)
 CHECK_FILES?=		yes
@@ -174,7 +174,12 @@ check-files-varbase: ${_CHECK_FILES_ERRMSG.varbase}
 # subtarget.
 #
 .PHONY: check-files
+.if !empty(CHECK_FILES_SUPPORTED:M[nN][oO])
+check-files:
+	@${DO_NADA}
+.else
 check-files: check-files-message ${_CHECK_FILES_ERRMSGS} error-check
+.endif
 
 .PHONY: check-files-message
 check-files-message:
