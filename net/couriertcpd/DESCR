@@ -1,0 +1,3 @@
+This package contains couriertcpd(1), used to daemonize the Courier
+services, and couriertls(1) used to provide TLS support for the Courier
+services that support them.
