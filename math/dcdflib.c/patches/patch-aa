@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2001/01/29 21:43:14 jtb Exp $
+$NetBSD: patch-aa,v 1.3 2006/06/09 09:58:57 rillig Exp $
 
---- ipmpar.c.orig	Mon Jan 29 05:01:11 2001
-+++ ipmpar.c
+--- src/ipmpar.c.orig	Mon Jan 29 05:01:11 2001
++++ src/ipmpar.c
 @@ -1,3 +1,6 @@
 +#include <float.h>
 +#include <limits.h>
