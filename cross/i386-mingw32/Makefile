@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/03/04 21:29:07 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2006/06/09 15:50:03 minskim Exp $
 
 DISTNAME=		cross-${TARGET_ARCH}-3.2
 CROSS_DISTFILES=
@@ -26,7 +26,7 @@ CROSS_DISTFILES+=	mingw-runtime-3.2.tar.gz
 MINGW_WRKSRC=		${WRKDIR}/mingw-runtime-3.2
 CROSS_DISTFILES+=	w32api-2.5.tar.gz
 W32_WRKSRC=		${WRKDIR}/w32api-2.5
-USE_TOOLS+=		gmake perl tar
+USE_TOOLS+=		gmake lex perl tar yacc
 
 WRKSRC=			${WRKDIR} # for the patch target
 AS_FOR_TARGET=		${BINUTILS_WRKSRC}/gas/as-new
