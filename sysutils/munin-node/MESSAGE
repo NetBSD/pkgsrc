@@ -1,6 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2006/06/04 20:53:57 he Exp $
+$NetBSD: MESSAGE,v 1.2 2006/06/09 13:22:44 he Exp $
 
 Plugins can be auto-configured with "munin-node-configure --shell | sh"
+
+
+You may also want to add an entry such as
+
+${VARBASE}/log/munin/munin-node.log   munin:munin 644 7 *    24   Z
+
+to /etc/newsyslog.conf to have the node log rotated.
 
 ===========================================================================
