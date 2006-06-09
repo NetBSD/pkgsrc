@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/14 01:14:30 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2006/06/09 08:59:01 rillig Exp $
 
 DISTNAME=		majordomo-1.94.5
 PKGREVISION=		1
@@ -50,7 +50,8 @@ FILES_SUBST+=		HOME=${MAJORDOMO_HOMEDIR:Q}			\
 			MAJORDOMO_USER=${MAJORDOMO_USER}		\
 			MAJORDOMO_GROUP=${MAJORDOMO_GROUP}		\
 			ADDUSER=${ADDUSER} ADDGROUP=${ADDGROUP}		\
-			CHGRP=${CHGRP} ID=${ID} TOUCH=${TOUCH} RM=${RM}
+			CHGRP=${CHGRP:Q} ID=${ID:Q}			\
+			TOUCH=${TOUCH:Q} RM=${RM:Q}
 
 DOCDIR=			${PREFIX}/share/doc/majordomo
 DOCFILES=		Changelog FUTURE INSTALL LICENSE NEWLIST README
@@ -65,24 +66,26 @@ EXLISTS=		example-l example-l-digest
 
 BUILD_DEFS+=		MAJORDOMO_USER MAJORDOMO_GROUP MAJORDOMO_TMPDIR
 
+.PHONY: require-uid
 require-uid:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ! ${ID} ${MAJORDOMO_USER} >/dev/null 2>&1; then		\
-		${TOUCH} "/tmp/grouptestmajordomo1.$$";			\
+		${TOUCH} "/tmp/grouptestmajordomo1.$$$$";		\
 		if ! ${CHGRP} ${MAJORDOMO_GROUP}			\
-			"/tmp/grouptestmajordomo1.$$" >/dev/null 2>&1; then \
+			"/tmp/grouptestmajordomo1.$$$$" >/dev/null 2>&1; then \
 			realtarget="root-require-uid";			\
 			action="create user for";			\
 			${_SU_TARGET};					\
 		fi;							\
-		${RM} -f "/tmp/grouptestmajordomo1.$$";			\
+		${RM} -f "/tmp/grouptestmajordomo1.$$$$";		\
 	fi
 
+.PHONY: root-require-uid
 root-require-uid: pre-install-script
 
 do-configure: generate-install-scripts
-	@${MAKE} ${.MAKEFLAGS} require-uid
-	@${SED} \
+	${MAKE} ${.MAKEFLAGS} require-uid
+	${SED} \
 		-e 's:@PREFIX@:${PREFIX}:g' \
 		-e 's:@LOCALBASE@:${LOCALBASE}:g' \
 		-e 's|@HOME@|${MAJORDOMO_HOMEDIR}|g' \
@@ -91,48 +94,48 @@ do-configure: generate-install-scripts
 		-e "s:@GID@:`${ID} -rg ${MAJORDOMO_USER}`:g" \
 		-e 's:@TMPDIR@:${MAJORDOMO_TMPDIR}:g' \
 		< ${WRKSRC}/Makefile > ${WRKSRC}/Makefile.netbsd
-	@${SED} \
+	${SED} \
 		-e 's:@PREFIX@:${PREFIX}:g' \
 		-e 's:@HOME@:${MAJORDOMO_HOMEDIR}:g' \
 		-e 's:@MAJORDOMO_USER@:${MAJORDOMO_USER}:g' \
 		-e 's:@TMPDIR@:${MAJORDOMO_TMPDIR}:g' \
 		< ${WRKSRC}/sample.cf > ${WRKSRC}/majordomo.cf
-	@${SED} \
+	${SED} \
 		-e 's:@PREFIX@:${PREFIX}:g' \
 		-e 's:@HOME@:${MAJORDOMO_HOMEDIR}:g' \
 		-e 's:@MAJORDOMO_USER@:${MAJORDOMO_USER}:g' \
 		< ${FILESDIR}/aliases.majordomo > ${WRKSRC}/aliases.majordomo
 
 post-install:
-	@${LN} -sf archive2.pl ${PREFIX}/libexec/majordomo/archive
+	${LN} -sf archive2.pl ${PREFIX}/libexec/majordomo/archive
 	${INSTALL_DATA_DIR} ${DOCDIR}
 .for file in ${DOCFILES}
 	@${INSTALL_DATA} ${WRKSRC}/${file} ${DOCDIR}/${file}
 .endfor
 .for file in ${DOCDOCFILES}
-	@${INSTALL_DATA} ${WRKSRC}/Doc/${file} ${DOCDIR}/${file}
+	${INSTALL_DATA} ${WRKSRC}/Doc/${file} ${DOCDIR}/${file}
 .endfor
-	@${INSTALL_DATA} ${MESSAGE} ${DOCDIR}/post-install-notes
+	${INSTALL_DATA} ${MESSAGE} ${DOCDIR}/post-install-notes
 	${INSTALL} -d -m 775 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} ${EXDIR}
 .for dir in ${EXDIRS}
-	@${INSTALL} -d -m 775 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} ${EXDIR}/${dir}
+	${INSTALL} -d -m 775 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} ${EXDIR}/${dir}
 .endfor
-	@${INSTALL_DATA} -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
+	${INSTALL_DATA} -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
 		${WRKSRC}/aliases.majordomo ${EXDIR}/aliases.majordomo
-	@${INSTALL_DATA} -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
+	${INSTALL_DATA} -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
 		${FILESDIR}/keep_me ${EXDIR}/archives/example-l/.keep_me
-	@${INSTALL_DATA} -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
+	${INSTALL_DATA} -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
 		${FILESDIR}/keep_me ${EXDIR}/digests/example-l-digest/.keep_me
 .for file in ${EXFILES}
-	@${INSTALL_DATA} -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
+	${INSTALL_DATA} -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
 		${FILESDIR}/${file} ${EXDIR}/lists/${file}
 .endfor
 .for file in ${EXLISTS}
-	@${INSTALL} -m 664 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
+	${INSTALL} -m 664 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
 		/dev/null ${EXDIR}/lists/${file}
 .endfor
-	@${LN} -sf example-l.info ${EXDIR}/lists/example-l-digest.info
-	@${LN} -sf example-l.passwd ${EXDIR}/lists/example-l-digest.passwd
+	${LN} -sf example-l.info ${EXDIR}/lists/example-l-digest.info
+	${LN} -sf example-l.passwd ${EXDIR}/lists/example-l-digest.passwd
 	${INSTALL_DATA} -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} \
 		${WRKSRC}/majordomo.cf ${EXDIR}/majordomo.cf
 
