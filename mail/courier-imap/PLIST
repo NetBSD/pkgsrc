@@ -1,15 +1,12 @@
-@comment $NetBSD: PLIST,v 1.14 2006/04/28 18:15:20 jlam Exp $
-bin/couriertls
+@comment $NetBSD: PLIST,v 1.15 2006/06/09 22:12:10 jlam Exp $
 bin/imapd
 libexec/courier/courierpop3d
 libexec/courier/courierpop3login
 libexec/courier/imaplogin
-man/man1/couriertcpd.1
 man/man8/courierimapd.8
 man/man8/courierpop3d.8
 man/man8/mkimapdcert.8
 man/man8/mkpop3dcert.8
-sbin/couriertcpd
 sbin/imapd
 sbin/imapd-ssl
 sbin/mkimapdcert
@@ -23,8 +20,6 @@ share/courier/mkpop3dcert
 share/courier/pop3d
 share/courier/pop3d-ssl
 share/doc/courier/courierpop3d.html
-share/doc/courier/couriertcpd.html
-share/doc/courier/couriertls.html
 share/doc/courier/imap/BUGS.html
 share/doc/courier/imap/README.html
 share/doc/courier/imap/README.proxy.html

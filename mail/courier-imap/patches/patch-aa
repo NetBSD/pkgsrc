@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.12 2006/04/28 18:15:20 jlam Exp $
+$NetBSD: patch-aa,v 1.13 2006/06/09 22:12:10 jlam Exp $
 
---- Makefile.in.orig	2006-02-25 12:16:41.000000000 -0500
+--- Makefile.in.orig	2006-05-24 19:51:00.000000000 -0400
 +++ Makefile.in
 @@ -246,10 +246,11 @@ DIST_SUBDIRS = numlib md5 sha1 bdbobj gd
  
@@ -16,9 +16,9 @@ $NetBSD: patch-aa,v 1.12 2006/04/28 18:15:20 jlam Exp $
 +databin_SCRIPTS = mkimapdcert mkpop3dcert \
 +	imapd.rc imapd-ssl.rc pop3d.rc pop3d-ssl.rc
 +binPROGRAMS = imapd
-+sbinPROGRAMS = couriertcpd
++sbinPROGRAMS = 
 +libexecPROGRAMS = imaplogin courierpop3login courierpop3d
-+man_MANS = couriertcpd.1 courierimapd.8 courierpop3d.8 mkimapdcert.8 mkpop3dcert.8
++man_MANS = courierimapd.8 courierpop3d.8 mkimapdcert.8 mkpop3dcert.8
  
 @@ -264,5 +265,5 @@ EXTRA_DIST = 00README.NOW.OR.SUFFER READ
  sysconf_DATA = imapd.dist imapd-ssl.dist pop3d.dist pop3d-ssl.dist \
@@ -50,12 +50,15 @@ $NetBSD: patch-aa,v 1.12 2006/04/28 18:15:20 jlam Exp $
 +courierpop3d.8: imap/courierpop3d.8
 +	cp imap/courierpop3d.8 .
  
-@@ -1109,3 +1113,3 @@ install-exec-local:
+@@ -1106,6 +1110,4 @@ install-exec-local:
+ 	$(mkinstalldirs) $(DESTDIR)$(bindir)
+-	test ! -x tcpd/couriertls || $(INSTALL_PROGRAM) $(INSTALL_STRIP_FLAG) \
+-		tcpd/couriertls $(DESTDIR)$(bindir)/couriertls
  	$(mkinstalldirs) $(DESTDIR)$(sbindir)
 -	for f in mkimapdcert mkpop3dcert ; \
 +	for f in imapd-ssl imapd mkimapdcert mkpop3dcert pop3d pop3d-ssl ; \
  		do rm -f $(DESTDIR)$(sbindir)/$$f ; \
-@@ -1115,17 +1119,4 @@ install-exec-local:
+@@ -1115,17 +1117,4 @@ install-exec-local:
  install-exec-hook:
 -	chmod 444 $(DESTDIR)$(sysconfdir)/quotawarnmsg.example
 -	mkdir -p $(DESTDIR)$(sysconfdir)/shared
@@ -73,3 +76,7 @@ $NetBSD: patch-aa,v 1.12 2006/04/28 18:15:20 jlam Exp $
 -		$(INSTALL_DATA) $(srcdir)/imap/pop3d.pam \
 -		$(DESTDIR)/etc/pam.d/pop3 || exit 1
  	for f in $(man_MANS); do chmod a+r $(DESTDIR)$(mandir)/*/$$f; done
+@@ -1136,3 +1125,2 @@ uninstall-local:
+ 		do rm -f $(DESTDIR)$(sbindir)/$$f ; done
+-	rm -f $(DESTDIR)$(bindir)/couriertls
+ 
