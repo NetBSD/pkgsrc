@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courierimaps.sh,v 1.13 2006/04/28 18:15:20 jlam Exp $
+# $NetBSD: courierimaps.sh,v 1.14 2006/06/09 16:35:04 reed Exp $
 #
 # Courier IMAP/SSL services daemon
 #
@@ -41,7 +41,7 @@ courier_doit()
 			return 1
 		fi
 		if [ ! -f "$f" ] && \
-		   [ "$f" = "@PKG_SYSCONFDIR@/imapd.pem ]; then
+		   [ "$f" = "@PKG_SYSCONFDIR@/imapd.pem" ]; then
 			@ECHO@ "Generating IMAP SSL certificate in $f."
 			@PREFIX@/sbin/mkimapdcert >/dev/null 2>&1
 		fi
