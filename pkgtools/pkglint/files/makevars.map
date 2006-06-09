@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.113 2006/06/08 22:31:25 rillig Exp $
+# $NetBSD: makevars.map,v 1.114 2006/06/09 07:29:15 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -27,6 +27,7 @@
 # what they are doing, they may set variables directly, too. This rule
 # can be removed to show a lot of possible problems in pkgsrc.
 acl list = [m:as, c:as, b:, builtin.mk:, *.mk:a]
+acl bl_list = [b:a, builtin.mk:a]
 
 # A simple value is similar to $list above, just without allowing to
 # append to it.
@@ -138,23 +139,26 @@ BINOWN			UserGroupName []
 BROKEN			Message []
 BROKEN_GETTEXT_DETECTION	YesNo [m:s,c:s]
 BROKEN_IN		List of BrokenIn [m:s]
-BUILDLINK_ABI_DEPENDS.*	List of Dependency [b:a, $list]
-BUILDLINK_API_DEPENDS.*	List of Dependency [b:a, builtin.mk:a, $list]
+BUILDLINK_ABI_DEPENDS.*	List of Dependency [*:a]
+BUILDLINK_API_DEPENDS.*	List of Dependency [*:a]
 BUILDLINK_CONTENTS_FILTER	List of ShellWord []
 # ^^ ShellCommand
-BUILDLINK_CFLAGS.*	List of CFlag []
-BUILDLINK_CPPFLAGS.*	List of CFlag []
+BUILDLINK_CFLAGS	List of CFlag [$system]
+BUILDLINK_CFLAGS.*	List of CFlag [$bl_list]
+BUILDLINK_CPPFLAGS	List of CFlag [$system]
+BUILDLINK_CPPFLAGS.*	List of CFlag [$bl_list]
 BUILDLINK_DEPENDS	InternalList of Dependency [b:a]
 BUILDLINK_DEPMETHOD.*	BuildlinkDepmethod [b:d,m:as,c:a,*.mk:a]
 BUILDLINK_DEPTH		BuildlinkDepth [b:ps, builtin.mk:ps]
-BUILDLINK_FILES.*	List of Pathmask [b:a, builtin.mk:a]
+BUILDLINK_FILES.*	List of Pathmask [$bl_list]
 BUILDLINK_FILES_CMD.*	List of ShellWord []
 # ^^ ShellCommand
 BUILDLINK_INCDIRS.*	List of Pathname [b:ad]			# b:d?
 BUILDLINK_JAVA_PREFIX	Pathname [b:s]
 BUILDLINK_LDADD.*	List of LdFlag [builtin.mk:ads]
-BUILDLINK_LDFLAGS.*	List of LdFlag []
-BUILDLINK_LIBDIRS.*	List of Pathname [b:a]
+BUILDLINK_LDFLAGS	List of LdFlag [$system]
+BUILDLINK_LDFLAGS.*	List of LdFlag [$bl_list]
+BUILDLINK_LIBDIRS.*	List of Pathname [$bl_list]
 BUILDLINK_LIBS.*	List of LdFlag [b:a]
 BUILDLINK_PACKAGES	BuildlinkPackages [b:aps]
 BUILDLINK_PASSTHRU_DIRS	List of Pathname [m:a,c:a,b:a,h:a]
@@ -214,7 +218,7 @@ DEINSTALL_FILE		Pathname [m:s]
 DEINSTALL_SRC		List of Pathname [m:s,c:ds]
 DEINSTALL_TEMPLATE	List of Pathname [m:as,c:ads]
 DEPENDS			InternalList of DependencyWithPath [$list]
-DEPENDS_TARGET		List of Identifier
+DEPENDS_TARGET		List of Identifier [$user]
 DESCR_SRC		List of Pathname [m:s,c:ds]
 DEVOSSAUDIO		Pathname
 DEVOSSSOUND		Pathname
