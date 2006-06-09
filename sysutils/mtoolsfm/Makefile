@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/16 22:46:30 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/06/09 09:50:37 joerg Exp $
 #
 
 DISTNAME=	MToolsFM-1.9-3
@@ -15,6 +15,7 @@ DEPENDS+=	mtools>=3.9.7:../../sysutils/mtools
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		msgfmt
 CONFIGURE_ARGS+=	--with-conffile=${PKG_SYSCONFDIR}/mtoolsfm.conf
 
 post-extract:
