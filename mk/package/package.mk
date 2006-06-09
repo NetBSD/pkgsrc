@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.5 2006/06/08 15:48:42 jlam Exp $
+# $NetBSD: package.mk,v 1.6 2006/06/09 13:59:08 jlam Exp $
 
 _PACKAGE_COOKIE=	${WRKDIR}/.package_done
 
@@ -69,6 +69,7 @@ package-cookie:
 _PACKAGE_ALL_TARGETS+=	package-check-installed
 _PACKAGE_ALL_TARGETS+=	package-create
 _PACKAGE_ALL_TARGETS+=	package-warnings
+_PACKAGE_ALL_TARGETS+=	error-check
 
 .PHONY: package-all su-package-all
 package-all: su-target
