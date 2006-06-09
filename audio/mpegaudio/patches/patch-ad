@@ -1,12 +1,14 @@
-$NetBSD: patch-ad,v 1.1.1.1 2002/05/12 00:54:04 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2006/06/09 15:08:08 minskim Exp $
 
---- musicout.c.orig	Wed Jan  5 05:39:27 1994
+--- musicout.c.orig	1994-01-05 04:39:27.000000000 +0000
 +++ musicout.c
-@@ -58,6 +58,8 @@
+@@ -58,6 +58,10 @@ musicout.c
  #include        "common.h"
  #include        "decoder.h"
  
 +#include <stdlib.h>
++
++static void usage();
 +
  /********************************************************************
  /*
