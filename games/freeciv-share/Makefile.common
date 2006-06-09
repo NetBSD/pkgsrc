@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.24 2006/03/04 21:29:41 jlam Exp $
+# $NetBSD: Makefile.common,v 1.24.2.1 2006/06/09 22:00:04 ghen Exp $
 
 DISTNAME=	freeciv-${FC_VERS}
-FC_VERS=	2.0.7
+FC_VERS=	2.0.8
 CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.freeciv.org/pub/freeciv/stable/ \
 		http://www.freeciv.org/ftp/stable/ \
@@ -28,7 +28,8 @@ SUBST_SED.data+=	-e "s|@CLIENT_FALSE@|@MAKE_DATA_FALSE@|g"
 SUBST_SED.data+=	-e "s|@CLIENT_TRUE@|@MAKE_DATA_TRUE@|g"
 SUBST_SED.data+=	-e "s|@SERVER_FALSE@|@MAKE_DATA_FALSE@|g"
 SUBST_SED.data+=	-e "s|@SERVER_TRUE@|@MAKE_DATA_TRUE@|g"
-SUBST_MESSAGE.data=	"Fixing installation of data files."
+SUBST_MESSAGE.data=	Fixing installation of data files.
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
