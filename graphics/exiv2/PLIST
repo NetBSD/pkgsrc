@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/07 21:52:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/06/09 20:04:23 gdt Exp $
 bin/exiv2
 bin/exiv2-config
 include/exiv2/basicio.hpp
@@ -7,6 +7,7 @@ include/exiv2/crwimage.hpp
 include/exiv2/datasets.hpp
 include/exiv2/error.hpp
 include/exiv2/exif.hpp
+include/exiv2/exiv2_version.h
 include/exiv2/exv_conf.h
 include/exiv2/exv_msvc.h
 include/exiv2/fujimn.hpp
@@ -16,8 +17,11 @@ include/exiv2/image.hpp
 include/exiv2/iptc.hpp
 include/exiv2/jpgimage.hpp
 include/exiv2/makernote.hpp
+include/exiv2/makernote2.hpp
 include/exiv2/metadatum.hpp
+include/exiv2/minoltamn.hpp
 include/exiv2/mn.hpp
+include/exiv2/mrwimage.hpp
 include/exiv2/nikonmn.hpp
 include/exiv2/olympusmn.hpp
 include/exiv2/panasonicmn.hpp
@@ -25,8 +29,13 @@ include/exiv2/rcsid.hpp
 include/exiv2/sigmamn.hpp
 include/exiv2/sonymn.hpp
 include/exiv2/tags.hpp
+include/exiv2/tiffcomposite.hpp
+include/exiv2/tiffimage.hpp
+include/exiv2/tiffparser.hpp
+include/exiv2/tiffvisitor.hpp
 include/exiv2/types.hpp
 include/exiv2/value.hpp
 lib/libexiv2.la
+lib/pkgconfig/exiv2.pc
 man/man1/exiv2.1
 @dirrm include/exiv2
