@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2005/10/10 20:25:07 joerg Exp $
+$NetBSD: patch-ag,v 1.2 2006/06/09 20:36:31 dbj Exp $
 
---- src/libsoup/soup-private.h.orig	2005-07-10 16:03:45.000000000 +0000
+--- src/libsoup/soup-private.h.orig	2003-01-02 14:04:09.000000000 -0500
 +++ src/libsoup/soup-private.h
 @@ -31,7 +31,9 @@
  #      pragma alloca
@@ -12,3 +12,11 @@ $NetBSD: patch-ag,v 1.1 2005/10/10 20:25:07 joerg Exp $
  #      endif
  #    endif
  #  endif
+@@ -68,7 +70,6 @@ extern "C" {
+ #define RESPONSE_BLOCK_SIZE 8192
+ 
+ extern gboolean    soup_initialized;
+-extern GSList     *soup_active_requests; /* CONTAINS: SoupMessage */
+ extern GHashTable *soup_hosts;           /* KEY: uri->host, VALUE: SoupHost */
+ 
+ extern SoupAuthorizeFn soup_auth_fn;
