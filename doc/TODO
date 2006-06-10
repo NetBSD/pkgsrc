@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5070 2006/06/10 08:35:30 wiz Exp $
+$NetBSD: TODO,v 1.5071 2006/06/10 16:18:40 tonio Exp $
 
 Suggested new packages
 ======================
@@ -1217,7 +1217,6 @@ Suggested package updates
 	o wap-utils-1.4.1
 	o wcalc-2.2
 	o wdm-1.28
-	o weechat-0.1.9
 	o weewm-0.01
 	o winbind-3.0.13
 	o wine-0.9.15
