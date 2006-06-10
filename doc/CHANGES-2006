@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.468 2006/06/10 16:47:19 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.469 2006/06/10 17:04:32 reed Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2984,3 +2984,8 @@ Changes to the packages collection and infrastructure in 2006:
 	Added meta-pkgs/suse100 version 10.0 [salo 2006-06-10]
 	Updated chat/weechat to 0.1.9 [tonio 2006-06-10]
 	Updated archivers/unalz to 0.55 [adrianp 2006-06-10]
+	Removed x11/xextensions [reed 2006-06-10]
+	Removed x11/renderext [reed 2006-06-10]
+	Removed x11/randrext [reed 2006-06-10]
+	Removed x11/fixesext [reed 2006-06-10]
+	Removed x11/compositeext [reed 2006-06-10]
