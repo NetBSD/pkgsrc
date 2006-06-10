@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.467 2006/06/10 16:18:40 tonio Exp $
+$NetBSD: CHANGES-2006,v 1.468 2006/06/10 16:47:19 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2983,3 +2983,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/pngcrush to 1.6.4 [adam 2006-06-10]
 	Added meta-pkgs/suse100 version 10.0 [salo 2006-06-10]
 	Updated chat/weechat to 0.1.9 [tonio 2006-06-10]
+	Updated archivers/unalz to 0.55 [adrianp 2006-06-10]
