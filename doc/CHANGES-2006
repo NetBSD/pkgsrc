@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.461 2006/06/09 22:13:07 jlam Exp $
+$NetBSD: CHANGES-2006,v 1.462 2006/06/10 07:44:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2980,3 +2980,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/sqwebmail to 5.1.2 [jlam 2006-06-09]
 	Updated mail/courier-imap to 4.1.1 [jlam 2006-06-09]
 	Updated mail/courier-mta to 0.53.2 [jlam 2006-06-09]
+	Updated graphics/pngcrush to 1.6.4 [adam 2006-06-10]
