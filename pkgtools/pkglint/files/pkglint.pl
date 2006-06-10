@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.618 2006/06/09 16:21:26 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.619 2006/06/10 17:13:11 adrianp Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5287,7 +5287,7 @@ sub checkfile_package_Makefile($$$) {
 	}
 
 	if (!defined($pkgname) && defined($distname) && $distname !~ regex_unresolved && $distname !~ regex_pkgname) {
-		$distname_line->log_warning("As DISTNAME ist not a valid package name, please define the PKGNAME explicitly.");
+		$distname_line->log_warning("As DISTNAME is not a valid package name, please define the PKGNAME explicitly.");
 	}
 
 	($effective_pkgname, $effective_pkgname_line, $effective_pkgbase, $effective_pkgversion)
