@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.469 2006/06/10 17:04:32 reed Exp $
+$NetBSD: CHANGES-2006,v 1.470 2006/06/10 19:44:22 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2989,3 +2989,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed x11/randrext [reed 2006-06-10]
 	Removed x11/fixesext [reed 2006-06-10]
 	Removed x11/compositeext [reed 2006-06-10]
+	Updated www/qDecoder to 7.0.1nb1 [minskim 2006-06-10]
