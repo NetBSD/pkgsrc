@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.471 2006/06/10 19:59:14 heinz Exp $
+$NetBSD: CHANGES-2006,v 1.472 2006/06/10 23:39:41 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2991,3 +2991,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed x11/compositeext [reed 2006-06-10]
 	Updated www/qDecoder to 7.0.1nb1 [minskim 2006-06-10]
 	Added graphics/pdiff version 0.9b [heinz 2006-06-10]
+	Updated mail/sylpheed to 2.2.6 [xtraeme 2006-06-10]
