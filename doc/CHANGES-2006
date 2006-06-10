@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.466 2006/06/10 15:10:21 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.467 2006/06/10 16:18:40 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2982,3 +2982,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/courier-mta to 0.53.2 [jlam 2006-06-09]
 	Updated graphics/pngcrush to 1.6.4 [adam 2006-06-10]
 	Added meta-pkgs/suse100 version 10.0 [salo 2006-06-10]
+	Updated chat/weechat to 0.1.9 [tonio 2006-06-10]
