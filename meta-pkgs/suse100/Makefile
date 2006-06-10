@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/06/10 14:24:33 salo Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/10 20:27:10 salo Exp $
 #
 
 DISTNAME=	suse-10.0
@@ -24,7 +24,6 @@ DEPENDS+=	suse_gtk>=10.0:../../emulators/suse100_gtk
 DEPENDS+=	suse_libjpeg>=10.0:../../emulators/suse100_libjpeg
 DEPENDS+=	suse_libpng>=10.0:../../emulators/suse100_libpng
 DEPENDS+=	suse_libtiff>=10.0:../../emulators/suse100_libtiff
-DEPENDS+=	suse_locale>=10.0:../../emulators/suse100_locale
 DEPENDS+=	suse_locale>=10.0:../../emulators/suse100_locale
 DEPENDS+=	suse_openmotif>=10.0:../../emulators/suse100_openmotif
 DEPENDS+=	suse_slang>=10.0:../../emulators/suse100_slang
