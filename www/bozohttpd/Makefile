@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2006/05/18 02:48:53 rpaulo Exp $
+# $NetBSD: Makefile,v 1.54 2006/06/10 19:56:35 minskim Exp $
 #
 
 DISTNAME=	bozohttpd-20060517
@@ -13,6 +13,9 @@ COMMENT=	Bozotic HTTP server; small and secure
 BUILD_DEFS+=	USE_INET6
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP} BINMODE=${BINMODE}
+MAKE_ENV+=	MANOWN=${BINOWN} MANGRP=${BINGRP} MANMODE=${BINMODE}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bozohttpd
 PKG_SUPPORTED_OPTIONS=	bozohttpd-do-htpasswd
