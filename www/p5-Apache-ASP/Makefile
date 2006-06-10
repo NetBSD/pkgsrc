@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/06/02 18:28:00 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2006/06/10 19:53:13 minskim Exp $
 #
 
 DISTNAME=	Apache-ASP-2.21
@@ -23,6 +23,8 @@ DEPENDS+=	p5-MLDBM-Sync>=0.15:../../databases/p5-MLDBM-Sync
 DEPENDS+=	p5-Time-HiRes>=01.20:../../time/p5-Time-HiRes
 DEPENDS+=	p5-XML-XSLT>=0.32:../../textproc/p5-XML-XSLT
 DEPENDS+=	p5-libwww>=5.48:../../www/p5-libwww
+
+REPLACE_PERL+=	ASP.pm
 
 PERL5_PACKLIST=		auto/Apache/ASP/.packlist
 
