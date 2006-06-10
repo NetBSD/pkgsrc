@@ -1,10 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/04 00:53:51 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/06/10 19:43:24 minskim Exp $
 include/qDecoder.h
-lib/libqDecoder.a
-lib/libqDecoder.so
-lib/libqDecoder.so.0
-lib/libqDecoder.so.0.0
-lib/libqDecoder_pic.a
+lib/libqDecoder.la
 share/doc/qDecoder/AUTHORS
 share/doc/qDecoder/CHANGES
 share/doc/qDecoder/COPYING
