@@ -1,11 +1,11 @@
-	$NetBSD: CHANGES-1999,v 1.1 2002/09/19 12:45:29 lukem Exp $
+	$NetBSD: CHANGES-1999,v 1.2 2006/06/10 08:32:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 1999:
 
 	Updated lsof to 4.39 [frueauf 1999-01-01]
 	Updated fetchmail to 4.7.3 [frueauf 1999-01-02]
 	Added xtermset-0.1 [hubertf 1999-01-02]
-	Updated libgtop to version 0.99.0 [tron 1999-01-02]
+	Updated libgtop to 0.99.0 [tron 1999-01-02]
 	Updated ImageMagick to 4.1.7 [tron 1999-01-02]
 	Updated gnome-core to 0.99.0 [tron 1999-01-02]
 	Updated postgresql to 6.4.2 [frueauf 1999-01-04]
@@ -199,7 +199,7 @@ Changes to the packages collection and infrastructure in 1999:
 	Updated gtk to 1.2.0 [tron 1999-03-04]
 	Updated nmh to 1.0 [kim 1999-03-04]
 	Updated png to 1.0.3 [tron 1999-03-04]
-	Updated ORBit to version 0.4.0 [tron 1999-03-05]
+	Updated ORBit to 0.4.0 [tron 1999-03-05]
 	Updated vfu to 1.45 [hubertf 1999-03-05]
 	Updated pload to 0.9.4 [hubertf 1999-03-05]
 	Updated siag to 3.1.7 [hubertf 1999-03-05]
@@ -281,7 +281,7 @@ Changes to the packages collection and infrastructure in 1999:
 	Updated tclX80 to 8.0.4 [tron 1999-04-03]
 	Updated nmap to 2.11 [hubertf 1999-04-04]
 	Updated gimp to 1.0.3 [tron 1999-04-04]
-	Updated ORBit to version 0.4.2 [tron 1999-04-04]
+	Updated ORBit to 0.4.2 [tron 1999-04-04]
 	Added ucblogo [proff 1999-04-04]
 	Added festdoc [proff 1999-04-05]
 	Added festival [proff 1999-04-05]
