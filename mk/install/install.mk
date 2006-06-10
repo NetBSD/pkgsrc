@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.6 2006/06/09 13:59:08 jlam Exp $
+# $NetBSD: install.mk,v 1.7 2006/06/10 03:23:46 jlam Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -22,7 +22,7 @@ release-install-lock: release-lock
 
 .if !exists(${_INSTALL_COOKIE})
 ${_INSTALL_COOKIE}: install-check-interactive
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${MAKE} ${MAKEFLAGS} real-install PKG_PHASE=install
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-install PKG_PHASE=install
 .else
 ${_INSTALL_COOKIE}:
 	@${DO_NADA}
