@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.477 2006/06/11 13:28:00 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.478 2006/06/11 14:00:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2997,3 +2997,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added print/tex-igo version 0 [minskim 2006-06-11]
 	Updated chat/cgiirc to 0.59 [adrianp 2006-06-11]
 	Updated graphics/dxsamples to 4.3.2nb3 [joerg 2006-06-11]
+	Updated devel/bison to 2.3 [wiz 2006-06-11]
