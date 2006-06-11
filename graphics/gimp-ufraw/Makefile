@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2006/06/10 17:03:43 gdt Exp $
+# $NetBSD: Makefile,v 1.27 2006/06/11 00:19:04 gdt Exp $
 
 DISTNAME=		ufraw-0.8.1
 PKGNAME=		gimp-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufraw/}
 
@@ -11,7 +11,6 @@ HOMEPAGE=		http://ufraw.sourceforge.net/
 COMMENT=		GIMP plug-in for raw digicam import
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-libexif --with-exiv2
 
 USE_TOOLS+=		gmake pkg-config
 USE_TOOLS+=		perl:run pod2man
@@ -22,10 +21,24 @@ USE_LANGUAGES+=		c++
 GCC_REQD+=		3.0
 BUILDLINK_TRANSFORM+=	rm:-std=gnu99
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gimp-ufraw
+PKG_SUPPORTED_OPTIONS=	exiv2 libexif
+PKG_SUGGESTED_OPTIONS=	exiv2
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mexiv2)
+CONFIGURE_ARGS+=	--with-exiv2 
+.include "../../graphics/exiv2/buildlink3.mk"
+.endif
+
+# libexif has been reported to cause crashes with ufraw.  It is needed for Fuji RAF.
+.if !empty(PKG_OPTIONS:Mlibexif)
+CONFIGURE_ARGS+=	--with-libexif
+.include "../../graphics/exiv2/buildlink3.mk"
+.endif
+
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
-.include "../../graphics/libexif/buildlink3.mk"
-.include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/gimp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
