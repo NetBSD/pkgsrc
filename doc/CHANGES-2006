@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.474 2006/06/11 02:00:06 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.475 2006/06/11 06:15:43 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2994,3 +2994,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/sylpheed to 2.2.6 [xtraeme 2006-06-10]
 	Updated databases/py-postgresql to 3.8.1 [darcy 2006-06-10]
 	Updated chat/jabberd2 to 2.0s11 [xtraeme 2006-06-11]
+	Added print/tex-igo version 0 [minskim 2006-06-11]
