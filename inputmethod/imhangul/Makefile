@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/21 06:00:46 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/06/11 14:26:01 joerg Exp $
 
 DISTNAME=	imhangul-0.9.13
 PKGREVISION=	3
@@ -10,7 +10,7 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://imhangul.kldp.net/
 COMMENT=	GTK+-2.0 Hangul Input Module
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config msgfmt
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 SHLIBTOOL_OVERRIDE=	libtool
