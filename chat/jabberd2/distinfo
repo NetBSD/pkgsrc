@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2006/04/21 09:18:37 rillig Exp $
+$NetBSD: distinfo,v 1.10 2006/06/11 01:57:27 xtraeme Exp $
 
-SHA1 (jabberd-2.0s10.tar.gz) = 7ad894c51c59bb7c47c620398f68f14ccdee6415
-RMD160 (jabberd-2.0s10.tar.gz) = 8d38d851fd2c2de4edbaa30a6364b4076732d92c
-Size (jabberd-2.0s10.tar.gz) = 772817 bytes
+SHA1 (jabberd-2.0s11.tar.gz) = c938d95fc17634b889ba9b1d7d27115593b13e3d
+RMD160 (jabberd-2.0s11.tar.gz) = 7e89790abb5ff4e84a0a38ac5afbc0c365d60b3d
+Size (jabberd-2.0s11.tar.gz) = 777466 bytes
 SHA1 (patch-aa) = 2a3f7a9e9b9ecc248b5e05b54c6c7e08e9ca0183
 SHA1 (patch-ab) = de1c8ec12b55117223bcca2071499c42ab145a34
 SHA1 (patch-ac) = 312a07fa6772956297789e15025e0ca0fad9ebb7
