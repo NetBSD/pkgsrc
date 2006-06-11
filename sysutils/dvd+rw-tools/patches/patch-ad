@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.1 2006/01/31 19:01:28 xtraeme Exp $
+$NetBSD: patch-ad,v 1.2 2006/06/11 15:22:21 wiz Exp $
 
---- mp.h.orig	2006-01-31 19:44:51.000000000 +0100
-+++ mp.h	2006-01-31 19:47:56.000000000 +0100
-@@ -39,7 +39,9 @@
-   pthread_attr_t attr;
+--- mp.h.orig	2006-01-26 13:13:32.000000000 +0000
++++ mp.h
+@@ -40,7 +40,9 @@ static void *__thread_create(int (*func)
  
      if (pthread_attr_init(&attr)==0 &&
+ 	pthread_attr_setstacksize(&attr,64*1024)==0 &&
 +#ifndef __NetBSD__
  	pthread_attr_setscope(&attr,PTHREAD_SCOPE_SYSTEM)==0 &&
 +#endif

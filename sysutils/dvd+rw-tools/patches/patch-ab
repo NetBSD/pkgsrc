@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2006/02/01 12:51:27 xtraeme Exp $
+$NetBSD: patch-ab,v 1.5 2006/06/11 15:22:21 wiz Exp $
 
---- Makefile.m4.orig	2006-01-16 11:23:53.000000000 +0100
-+++ Makefile.m4	2006-02-01 12:35:14.000000000 +0100
-@@ -14,6 +14,7 @@
+--- Makefile.m4.orig	2006-01-20 08:08:22.000000000 +0000
++++ Makefile.m4
+@@ -14,6 +14,7 @@ ifelse(substr(OS,0,7),[MINGW32],[define(
  ifelse(OS,NetBSD,[define([OS],[BSD])CXXFLAGS+=-D__unix])
  ifelse(OS,OpenBSD,[define([OS],[BSD])])
  ifelse(OS,FreeBSD,[define([OS],[BSD])LDLIBS=-lcam])
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.4 2006/02/01 12:51:27 xtraeme Exp $
  ifelse(OS,IRIX64,[define([OS],[IRIX])])
  
  ifelse(OS,MINGW32,[
-@@ -34,7 +35,7 @@
+@@ -34,7 +35,7 @@ ifelse(OS,BSD,[
  CC	?=gcc
  CFLAGS	+=$(WARN) -O2 -pthread -D_THREAD_SAFE -D_REENTRANT
  CXX	?=g++

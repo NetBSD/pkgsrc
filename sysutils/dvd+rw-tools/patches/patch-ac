@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2006/03/22 15:26:30 joerg Exp $
+$NetBSD: patch-ac,v 1.5 2006/06/11 15:22:21 wiz Exp $
 
---- growisofs.c.orig	2006-01-16 12:09:41.000000000 +0100
-+++ growisofs.c	2006-02-01 12:34:24.000000000 +0100
-@@ -358,7 +358,7 @@
+--- growisofs.c.orig	2006-01-26 21:16:54.000000000 +0000
++++ growisofs.c
+@@ -372,7 +372,7 @@
  # ifndef _GNU_SOURCE
  #  define _GNU_SOURCE
  # endif
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.4 2006/03/22 15:26:30 joerg Exp $
  # define off64_t	off_t
  # define stat64		stat
  # define fstat64	fstat
-@@ -804,7 +804,7 @@
+@@ -856,7 +856,7 @@ char *setup_fds (char *device)
      goto open_rw;
  }
  
@@ -20,16 +20,13 @@ $NetBSD: patch-ac,v 1.4 2006/03/22 15:26:30 joerg Exp $
  
  #include <sys/cdio.h>
  #include <camlib.h>
-@@ -2194,9 +2194,12 @@
-     nice(-20);
-     /* I'd rather do it right after I allocate ring buffer and fire off
-      * threads, but I'll be running without extra privileges by then:-( */
-+#if !defined(__NetBSD__) && !defined(__DragonFly__)
-     mlockall(MCL_CURRENT|MCL_FUTURE);
+@@ -2266,7 +2266,9 @@ int main (int argc, char *argv[])
+ # ifdef __FreeBSD__
+ 	syscall(SYS_mlockall,3);
+ # else
++#  if !defined(__NetBSD__) && !defined(__DragonFly__)
+ 	mlockall(MCL_CURRENT|MCL_FUTURE);
++#  endif
+ # endif
+     } while (0);
  #endif
- 
-+#endif
-+
-     mkisofs_argv = malloc ((argc+3)*sizeof(char *));
-     if (mkisofs_argv == NULL)
-         fprintf (stderr,":-( unable to allocate %lu bytes: ",
