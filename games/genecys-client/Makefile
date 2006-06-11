@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/17 13:46:28 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/06/11 21:45:43 joerg Exp $
 #
 
 DISTNAME=		genecys-0.2
@@ -20,6 +20,7 @@ LIBS+=			-lm
 CONFIGURE_ARGS+=	--disable-server --disable-metaserver --disable-utils
 CONFIGURE_ARGS+=	--with-cal3d=${BUILDLINK_PREFIX.cal3d}
 CONFIGURE_ARGS+=	--with-openrm=${BUILDLINK_PREFIX.OpenRM}
+USE_TOOLS+=		pkg-config
 
 .include "../../graphics/cal3d/buildlink3.mk"
 .include "../../graphics/OpenRM/buildlink3.mk"
