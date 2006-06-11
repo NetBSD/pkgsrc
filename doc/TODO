@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5081 2006/06/11 14:37:46 wiz Exp $
+$NetBSD: TODO,v 1.5082 2006/06/11 15:06:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -490,7 +490,6 @@ Suggested package updates
 	o eukleides-1.0.3
 	o euler-1.61
 	o evolution-2.6.2
-	o evolution-data-server-1.6.2
 	o evolution-exchange-2.6.2
 	o ex-050325 [pkg/32043]
 	o exim-4.62
