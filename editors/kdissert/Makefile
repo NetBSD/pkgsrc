@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/05/24 22:32:17 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/11 21:46:19 joerg Exp $
 #
 
 DISTNAME=		kdissert-1.0.5
@@ -13,6 +13,7 @@ COMMENT=		Mindmapping-like tool to generate text templates
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		msgfmt
 NO_CONFIGURE=		yes
 
 BUILD_DEPENDS+=	scons>=0.96.1nb1:../../devel/scons
