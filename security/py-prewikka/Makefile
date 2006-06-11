@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.7 2006/05/18 20:30:00 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/06/11 23:44:23 joerg Exp $
 #
 
 DISTNAME=		prewikka-0.9.5
+PKGNAME=		${PYPKGPREFIX}-prewikka-0.9.5
 CATEGORIES=		security
 MASTER_SITES=		http://prelude-ids.org/download/releases/
+
+CONFLICTS=		prewikka-[0-9]*
 
 MAINTAINER=		shannonjr@NetBSD.org
 HOMEPAGE=		http://prelude-ids.org/download/releases/
 COMMENT=		Prelude-IDS console
 
-BROKEN_IN=		pkgsrc-2006Q1
+DEPENDS+=		${PYPKGPREFIX}-cheetah-[0-9]*:../../devel/py-cheetah
 
 .include "../../mk/bsd.prefs.mk"
 
