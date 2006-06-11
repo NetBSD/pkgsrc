@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/05/22 22:22:04 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/11 13:38:42 markd Exp $
 
 DISTNAME=	acroread7	# Overridden below
 PKGNAME=	acroread7-7.0.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/7x/7.0.5/enu/
 
@@ -36,6 +36,7 @@ PLATFORM=	unknown
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
 . if (${MACHINE_ARCH} == "i386")
 DEPENDS+=	suse_gtk2>=10.0:../../emulators/${SUSE_DIR_PREFIX}_gtk2
+DEPENDS+=	suse_libcups>=10.0:../../emulators/${SUSE_DIR_PREFIX}_libcups
 DEPENDS+=	suse_locale>=10.0:../../emulators/${SUSE_DIR_PREFIX}_locale
 DEPENDS+=	suse_compat>=10.0:../../emulators/${SUSE_DIR_PREFIX}_compat
 DISTNAME=	AdobeReader_enu-7.0.5-1.i386
