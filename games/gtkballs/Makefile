@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/04/17 13:46:28 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2006/06/11 14:22:51 joerg Exp $
 
 DISTNAME=	gtkballs-3.1.5
 PKGREVISION=	3
@@ -13,7 +13,7 @@ COMMENT=	GTK+ clone of "Color Lines"
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-included-gettext
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/games
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes
 
 PLIST_SUBST+=	VARBASE=${VARBASE:Q}
