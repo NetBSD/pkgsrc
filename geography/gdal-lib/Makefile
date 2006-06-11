@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/05/15 22:44:28 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/06/11 20:42:49 wiz Exp $
 #
 
 DISTNAME=		gdal-1.3.1
@@ -38,6 +38,7 @@ CONFIGURE_ARGS+=	--with-xerces-lib=-L${PREFIX:Q}/lib\ -lxerces-c
 CONFIGURE_ARGS+=	--with-geos
 CONFIGURE_ARGS+=	--without-python
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../misc/proj/buildlink3.mk"
 .include "../../geography/geos/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
