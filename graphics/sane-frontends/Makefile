@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/04/17 13:46:35 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2006/06/11 14:17:30 gdt Exp $
 
 .include "../../graphics/sane-backends/Makefile.common"
 
@@ -12,7 +12,15 @@ BUILDLINK_API_DEPENDS.sane+=	sane-backends>=${SANE_VERSION}
 
 USE_X11BASE=	YES
 
-.include "../../graphics/sane-backends/buildlink3.mk"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.sane-frontends
+PKG_SUPPORTED_OPTIONS=	gimp
+PKG_SUGGESTED_OPTIONS=	gimp
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mgimp)
 .include "../../graphics/gimp/buildlink3.mk"
+.endif
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../graphics/sane-backends/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
