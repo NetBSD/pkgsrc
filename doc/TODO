@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5072 2006/06/10 23:39:41 xtraeme Exp $
+$NetBSD: TODO,v 1.5073 2006/06/11 00:07:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -383,6 +383,7 @@ Suggested package updates
 	o bind-8.4.7
 	o bind-9.3.2
 	o bioperl-1.5.0
+	o bison-2.3
 	o blackbox-0.70
 	o blur6ex-0.3.462
 	o bmon-2.1.0
@@ -565,6 +566,8 @@ Suggested package updates
 	o gnome2-terminal-2.14.2
 	o gnomeicu-0.99.10
 	o gnopernicus-1.0.5
+	o gnucash-devel-1.9.7
+	o gnucash-docs-1.9.0
 	o gnus-5.10.8
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14
@@ -584,7 +587,7 @@ Suggested package updates
 	o grig-0.6.0
 	o gsasl-0.2.12 [pkg/33638]
 	o gsed-4.1.4
-	o gsharutils-4.6
+	o gsharutils-4.6.3
 	o gss-0.0.17
 	o gst-plugins0.10-base-0.10.7
 	o gst-plugins0.10-good-0.10.3
