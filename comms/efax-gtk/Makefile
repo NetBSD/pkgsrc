@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/05/29 06:41:38 adam Exp $
+# $NetBSD: Makefile,v 1.32 2006/06/11 13:33:17 joerg Exp $
 
 DISTNAME=	efax-gtk-3.0.9.src
 PKGNAME=	efax-gtk-3.0.9
@@ -15,6 +15,7 @@ DEPENDS+=	efax>=0.9:../../comms/efax
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-spooldir=${VARBASE}/spool/efax
