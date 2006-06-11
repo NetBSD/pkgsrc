@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/17 13:46:20 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/06/11 13:07:09 joerg Exp $
 
 PKGNAME=	${DISTNAME:S/-/-gtk-/}
 PKGREVISION=	3
@@ -7,6 +7,8 @@ COMMENT=	Graphical monitor for distcc, the distributed C/C++ compiler
 .include "../../devel/distcc/Makefile.common"
 
 CONFIGURE_ARGS+=	--with-gtk
+
+USE_TOOLS+=	pkg-config
 
 SUBST_CLASSES+=		gtk
 SUBST_STAGE.gtk=	post-patch
