@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.472 2006/06/10 23:39:41 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.473 2006/06/11 01:00:13 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2992,3 +2992,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/qDecoder to 7.0.1nb1 [minskim 2006-06-10]
 	Added graphics/pdiff version 0.9b [heinz 2006-06-10]
 	Updated mail/sylpheed to 2.2.6 [xtraeme 2006-06-10]
+	Updated databases/py-postgresql to 3.8.1 [darcy 2006-06-10]
