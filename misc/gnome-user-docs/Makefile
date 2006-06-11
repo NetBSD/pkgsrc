@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/12 20:06:13 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2006/06/11 13:58:48 joerg Exp $
 #
 
 DISTNAME=	gnome-user-docs-2.14.2
@@ -13,7 +13,7 @@ COMMENT=	The GNOME 2 users guide
 CONFLICTS+=		gnome2-user-docs-[0-9]*
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config msgfmt
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
