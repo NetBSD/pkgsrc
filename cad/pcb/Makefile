@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/04/25 00:51:11 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.36 2006/06/11 14:55:31 joerg Exp $
 #
 
 DISTNAME=	pcb-${SNAPDATE}
@@ -16,7 +16,7 @@ CONFLICTS+=	pcb-current-[0-9]*
 SNAPDATE=		20060422
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		WISH=${TOOLS_PATH.wish}
-USE_TOOLS+=		bison gm4:run gmake lex wish:run
+USE_TOOLS+=		bison gm4:run gmake lex wish:run pkg-config
 INFO_FILES=		# PLIST
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pcb
