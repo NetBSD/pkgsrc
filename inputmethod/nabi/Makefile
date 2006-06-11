@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/04/17 13:46:38 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2006/06/11 14:45:04 joerg Exp $
 #
 
 DISTNAME=		nabi-0.15
@@ -10,7 +10,7 @@ MAINTAINER=		minskim@NetBSD.org
 HOMEPAGE=		http://nabi.kldp.net/
 COMMENT=		X Input Method for Korean
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config msgfmt
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 
