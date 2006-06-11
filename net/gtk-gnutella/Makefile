@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2006/05/12 20:43:54 adam Exp $
+# $NetBSD: Makefile,v 1.55 2006/06/11 14:22:01 joerg Exp $
 
 DISTNAME=	gtk-gnutella-0.96.1
 CATEGORIES=	net
@@ -10,7 +10,7 @@ HOMEPAGE=	http://gtk-gnutella.sourceforge.net/
 COMMENT=	GTK-based gnutella client
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt
+USE_TOOLS+=		gmake msgfmt pkg-config
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 CONFIGURE_ARGS+=	-d -e -r -s
