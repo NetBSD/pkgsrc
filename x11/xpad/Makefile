@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/04/17 13:47:01 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2006/06/11 14:52:23 joerg Exp $
 #
 
 DISTNAME=	xpad-1.12
@@ -13,7 +13,7 @@ COMMENT=	Sticky notes application in GTK 2
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake msgfmt
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 
 LIBS.SunOS+=		-lX11
