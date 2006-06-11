@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.481 2006/06/11 14:23:29 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.482 2006/06/11 14:26:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3004,3 +3004,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added sysutils/915resolution version 0.5.2 [markd 2006-06-11]
 	Updated multimedia/libtheora to 1.0alpha6 [wiz 2006-06-11]
 	Updated databases/adodb to 4.81 [adrianp 2006-06-11]
+	Updated misc/xchm to 1.9 [wiz 2006-06-11]
