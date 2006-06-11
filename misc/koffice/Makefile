@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2006/05/24 12:54:45 markd Exp $
+# $NetBSD: Makefile,v 1.83 2006/06/11 13:50:19 markd Exp $
 
 DISTNAME=	koffice-1.5.1
 CATEGORIES=	misc kde
@@ -50,8 +50,6 @@ post-install:
 .include "../../lang/python/pyversion.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
 
-.include "../../converters/libwpd/buildlink3.mk"
-.include "../../converters/wv2/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
