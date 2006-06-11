@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.483 2006/06/11 14:35:13 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.484 2006/06/11 14:37:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3007,3 +3007,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/xchm to 1.9 [wiz 2006-06-11]
 	Updated www/links to 2.1.0.21 [wiz 2006-06-11]
 	Updated www/links-gui to 2.1.0.22 [wiz 2006-06-11]
+	Updated devel/cvsd to 1.0.12 [wiz 2006-06-11]
