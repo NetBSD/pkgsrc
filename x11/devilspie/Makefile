@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/04/17 13:46:52 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2006/06/11 13:06:19 joerg Exp $
 
 DISTNAME=		devilspie-0.17.1
 PKGREVISION=		1
@@ -11,7 +11,7 @@ COMMENT=		Window-matching utility to customize window behavior
 
 BUILD_DEPENDS+=		libxslt>=1.0:../../textproc/libxslt
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config msgfmt
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 TEST_TARGET=		check
