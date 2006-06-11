@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2006/05/08 17:07:57 hira Exp $
+# $NetBSD: Makefile,v 1.22 2006/06/11 15:22:21 wiz Exp $
 #
 
-DISTNAME=	dvd+rw-tools-6.0
-PKGREVISION=	2
+DISTNAME=	dvd+rw-tools-6.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://fy.chalmers.se/~appro/linux/DVD+RW/tools/
 
