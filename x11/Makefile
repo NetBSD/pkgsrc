@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.436 2006/06/09 06:31:02 wiz Exp $
+# $NetBSD: Makefile,v 1.437 2006/06/11 13:58:42 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -24,7 +24,6 @@ SUBDIR+=	asnap
 SUBDIR+=	aterm
 SUBDIR+=	bbapm
 SUBDIR+=	blt
-SUBDIR+=	compositeext
 SUBDIR+=	compositeproto
 SUBDIR+=	control-center
 SUBDIR+=	devilspie
@@ -39,7 +38,6 @@ SUBDIR+=	eterm
 SUBDIR+=	fast-user-switch-applet
 SUBDIR+=	fbdesk
 SUBDIR+=	filerunner
-SUBDIR+=	fixesext
 SUBDIR+=	fixesproto
 SUBDIR+=	fltk
 SUBDIR+=	fox
@@ -226,7 +224,6 @@ SUBDIR+=	qt4-tools
 SUBDIR+=	qtarch
 SUBDIR+=	qwspritefield
 SUBDIR+=	qwt
-SUBDIR+=	randrext
 SUBDIR+=	randrproto
 SUBDIR+=	ratmen
 SUBDIR+=	renderext
@@ -289,7 +286,6 @@ SUBDIR+=	xdialog
 SUBDIR+=	xdm3d
 SUBDIR+=	xearth
 SUBDIR+=	xephem
-SUBDIR+=	xextensions
 SUBDIR+=	xextproto
 SUBDIR+=	xfce3
 SUBDIR+=	xfce4-clipman-plugin
