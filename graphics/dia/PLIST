@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/05/02 16:23:30 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/06/11 16:55:35 drochner Exp $
 bin/dia
 lib/dia/libaadl_objects.la
 lib/dia/libbondgraph_objects.la
@@ -1542,34 +1542,34 @@ share/dia/xslt/dia-uml2java.xsl
 share/dia/xslt/dia-uml2owl.xsl
 share/dia/xslt/dia-uml2python.xsl
 share/dia/xslt/stylesheets.xml
-share/gnome/help/dia/C
-share/gnome/help/dia/en/authors.xml
-share/gnome/help/dia/en/dia.xml
-share/gnome/help/dia/en/entities.xml
-share/gnome/help/dia/en/graphics/greendots.png
-share/gnome/help/dia/en/graphics/home_network.png
-share/gnome/help/dia/en/graphics/line_icon.png
-share/gnome/help/dia/en/graphics/line_props.png
-share/gnome/help/dia/en/intro.xml
-share/gnome/help/dia/en/license.xml
-share/gnome/help/dia/en/usage-canvas.xml
-share/gnome/help/dia/en/usage-customization.xml
-share/gnome/help/dia/en/usage-layers.xml
-share/gnome/help/dia/en/usage-loadsave.xml
-share/gnome/help/dia/en/usage-objects-basic.xml
-share/gnome/help/dia/en/usage-objects-selecting.xml
-share/gnome/help/dia/en/usage-objects-special.xml
-share/gnome/help/dia/en/usage-objects.xml
-share/gnome/help/dia/en/usage-quickstart.xml
-share/gnome/help/dia/eu/dia.xml
-share/gnome/help/dia/eu/graphics/greendots.png
-share/gnome/help/dia/eu/graphics/home_network.png
-share/gnome/help/dia/eu/graphics/line_icon.png
-share/gnome/help/dia/eu/graphics/line_props.png
-share/gnome/help/dia/pl/dia.xml
-share/gnome/help/dia/pl/graphics/greendots.png
-share/gnome/help/dia/pl/graphics/home_network.png
-share/gnome/help/dia/pl/graphics/line_props.png
+${DIA_HELPDIR}/C
+${DIA_HELPDIR}/en/authors.xml
+${DIA_HELPDIR}/en/dia.xml
+${DIA_HELPDIR}/en/entities.xml
+${DIA_HELPDIR}/en/graphics/greendots.png
+${DIA_HELPDIR}/en/graphics/home_network.png
+${DIA_HELPDIR}/en/graphics/line_icon.png
+${DIA_HELPDIR}/en/graphics/line_props.png
+${DIA_HELPDIR}/en/intro.xml
+${DIA_HELPDIR}/en/license.xml
+${DIA_HELPDIR}/en/usage-canvas.xml
+${DIA_HELPDIR}/en/usage-customization.xml
+${DIA_HELPDIR}/en/usage-layers.xml
+${DIA_HELPDIR}/en/usage-loadsave.xml
+${DIA_HELPDIR}/en/usage-objects-basic.xml
+${DIA_HELPDIR}/en/usage-objects-selecting.xml
+${DIA_HELPDIR}/en/usage-objects-special.xml
+${DIA_HELPDIR}/en/usage-objects.xml
+${DIA_HELPDIR}/en/usage-quickstart.xml
+${DIA_HELPDIR}/eu/dia.xml
+${DIA_HELPDIR}/eu/graphics/greendots.png
+${DIA_HELPDIR}/eu/graphics/home_network.png
+${DIA_HELPDIR}/eu/graphics/line_icon.png
+${DIA_HELPDIR}/eu/graphics/line_props.png
+${DIA_HELPDIR}/pl/dia.xml
+${DIA_HELPDIR}/pl/graphics/greendots.png
+${DIA_HELPDIR}/pl/graphics/home_network.png
+${DIA_HELPDIR}/pl/graphics/line_props.png
 share/locale/am/LC_MESSAGES/dia.mo
 share/locale/az/LC_MESSAGES/dia.mo
 share/locale/be/LC_MESSAGES/dia.mo
@@ -1631,13 +1631,13 @@ share/pixmaps/dia_gnome_icon.png
 @exec ${MKDIR} %D/share/oaf
 @dirrm share/oaf
 @comment in xdg-dirs: @dirrm share/mime-info
-@dirrm share/gnome/help/dia/pl/graphics
-@dirrm share/gnome/help/dia/pl
-@dirrm share/gnome/help/dia/eu/graphics
-@dirrm share/gnome/help/dia/eu
-@dirrm share/gnome/help/dia/en/graphics
-@dirrm share/gnome/help/dia/en
-@dirrm share/gnome/help/dia
+@dirrm ${DIA_HELPDIR}/pl/graphics
+@dirrm ${DIA_HELPDIR}/pl
+@dirrm ${DIA_HELPDIR}/eu/graphics
+@dirrm ${DIA_HELPDIR}/eu
+@dirrm ${DIA_HELPDIR}/en/graphics
+@dirrm ${DIA_HELPDIR}/en
+@dirrm ${DIA_HELPDIR}
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/dia/xslt
 @dirrm share/dia/sheets/UML
