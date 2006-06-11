@@ -1,10 +1,10 @@
-$NetBSD: patch-ak,v 1.3 2005/04/12 01:18:42 rillig Exp $
+$NetBSD: patch-ak,v 1.4 2006/06/11 15:05:39 wiz Exp $
 
 Needed to have a NULL macro in the program that follows these includes.
 
---- configure.orig	Tue Mar 15 23:06:58 2005
-+++ configure	Tue Apr 12 02:30:53 2005
-@@ -10010,6 +10010,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+--- configure.orig	2006-05-29 13:25:13.000000000 +0000
++++ configure
+@@ -26341,6 +26341,7 @@ cat >>conftest.$ac_ext <<_ACEOF
  		#include <sys/socket.h>
  		#include <netinet/in.h>
  		#include <netdb.h>
