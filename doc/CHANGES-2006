@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.485 2006/06/11 14:39:11 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.486 2006/06/11 15:06:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3008,3 +3008,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/links to 2.1.0.21 [wiz 2006-06-11]
 	Updated www/links-gui to 2.1.0.22 [wiz 2006-06-11]
 	Updated devel/cvsd to 1.0.12 [wiz 2006-06-11]
+	Updated mail/evolution-data-server to 1.6.2 [wiz 2006-06-11]
