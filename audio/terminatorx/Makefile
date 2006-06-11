@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/05/15 18:37:20 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/06/11 14:34:17 joerg Exp $
 #
 
 DISTNAME=	terminatorX-3.82
@@ -18,6 +18,7 @@ DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 
 LIBS+=			${LIBOSSAUDIO}
