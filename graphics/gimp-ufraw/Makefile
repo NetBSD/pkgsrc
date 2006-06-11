@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/06/11 00:19:04 gdt Exp $
+# $NetBSD: Makefile,v 1.28 2006/06/11 00:46:50 gdt Exp $
 
 DISTNAME=		ufraw-0.8.1
 PKGNAME=		gimp-${DISTNAME}
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=	--with-exiv2
 # libexif has been reported to cause crashes with ufraw.  It is needed for Fuji RAF.
 .if !empty(PKG_OPTIONS:Mlibexif)
 CONFIGURE_ARGS+=	--with-libexif
-.include "../../graphics/exiv2/buildlink3.mk"
+.include "../../graphics/libexif/buildlink3.mk"
 .endif
 
 .include "../../graphics/jpeg/buildlink3.mk"
