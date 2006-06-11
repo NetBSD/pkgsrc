@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5079 2006/06/11 14:26:36 wiz Exp $
+$NetBSD: TODO,v 1.5080 2006/06/11 14:35:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -717,7 +717,6 @@ Suggested package updates
 	o licq-core-1.3.0
 	o lilypond-2.8.0
 	o lincvs-1.5.0 [now called CrossVC]
-	o links-gui-2.1.0.22
 	o linuxsms-0.77
 	o lmbench-2.5
 	o lout-3.31
