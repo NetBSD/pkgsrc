@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.473 2006/06/11 01:00:13 darcy Exp $
+$NetBSD: CHANGES-2006,v 1.474 2006/06/11 02:00:06 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2993,3 +2993,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added graphics/pdiff version 0.9b [heinz 2006-06-10]
 	Updated mail/sylpheed to 2.2.6 [xtraeme 2006-06-10]
 	Updated databases/py-postgresql to 3.8.1 [darcy 2006-06-10]
+	Updated chat/jabberd2 to 2.0s11 [xtraeme 2006-06-11]
