@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/04/17 13:46:23 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2006/06/11 14:36:33 joerg Exp $
 
 DISTNAME=	uae-0.8.25
 PKGREVISION=	3
@@ -11,7 +11,7 @@ COMMENT=	The UAE Amiga Emulator
 
 DEPENDS+=	unzip>=5.40:../../archivers/unzip
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--enable-dga --enable-vidmode
