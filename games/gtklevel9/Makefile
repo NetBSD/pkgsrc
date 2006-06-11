@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/19 09:40:06 dillo Exp $
+# $NetBSD: Makefile,v 1.7 2006/06/11 14:23:23 joerg Exp $
 
 DISTNAME=		Level9_4.0_Source
 PKGNAME=		gtklevel9-4.0
@@ -16,6 +16,7 @@ WRKSRC=			${WRKDIR}/Gtk
 
 INSTALLATION_DIRS=	bin
 BUILD_TARGET=		gtklevel9
+USE_TOOLS+=		pkg-config
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gtklevel9
