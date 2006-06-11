@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5077 2006/06/11 14:22:11 wiz Exp $
+$NetBSD: TODO,v 1.5078 2006/06/11 14:23:29 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -322,7 +322,6 @@ Suggested package updates
 	o abcm2ps-4.12.18
 	o acpi-iasl-20040715
 	o adocman-0.13
-	o adodb-4.81
 	o adtool-1.3
 	o aegis-4.22
 	o aewm++-1.0.27
