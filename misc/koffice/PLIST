@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2006/05/24 12:54:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.21 2006/06/11 13:50:19 markd Exp $
 bin/karbon
 bin/kchart
 bin/kexi
@@ -477,7 +477,7 @@ lib/kde3/libkugarpart.la
 lib/kde3/libkwordkword1dot3import.la
 lib/kde3/libkwordlatexexport.la
 lib/kde3/libkwordpart.la
-lib/kde3/libmswordimport.la
+${HAVE_WV2}lib/kde3/libmswordimport.la
 lib/kde3/libmswriteexport.la
 lib/kde3/libmswriteimport.la
 lib/kde3/liboodrawimport.la
@@ -500,7 +500,7 @@ lib/kde3/libwmfimport.la
 lib/kde3/libwmlexport.la
 lib/kde3/libwmlimport.la
 lib/kde3/libwpexport.la
-lib/kde3/libwpimport.la
+${HAVE_WPD}lib/kde3/libwpimport.la
 lib/kde3/libxsltexport.la
 lib/kde3/libxsltimport.la
 lib/kde3/straight_connector.la
@@ -4588,7 +4588,7 @@ share/kde/services/kword_html_export.desktop
 share/kde/services/kword_html_import.desktop
 share/kde/services/kword_kword1dot3_import.desktop
 share/kde/services/kword_latex_export.desktop
-share/kde/services/kword_msword_import.desktop
+${HAVE_WV2}share/kde/services/kword_msword_import.desktop
 share/kde/services/kword_mswrite_export.desktop
 share/kde/services/kword_mswrite_import.desktop
 share/kde/services/kword_oowriter_export.desktop
@@ -4601,7 +4601,7 @@ share/kde/services/kword_rtf_import.desktop
 share/kde/services/kword_wml_export.desktop
 share/kde/services/kword_wml_import.desktop
 share/kde/services/kword_wp_export.desktop
-share/kde/services/kword_wp_import.desktop
+${HAVE_WPD}share/kde/services/kword_wp_import.desktop
 share/kde/services/kwordpart.desktop
 share/kde/services/kwserialletter_classic.desktop
 share/kde/services/kwserialletter_qtsqldb_power.desktop
