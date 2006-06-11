@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/04/17 13:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2006/06/11 22:48:13 joerg Exp $
 #
 
 DISTNAME=	gail-1.8.11
@@ -12,7 +12,7 @@ HOMEPAGE=	http://developer.gnome.org/projects/gap/
 COMMENT=	GNOME Accessibility Implementation Library
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config msgfmt
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
