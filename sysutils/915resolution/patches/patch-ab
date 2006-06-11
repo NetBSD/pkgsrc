@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/06/11 14:03:58 markd Exp $
+
+--- Makefile.orig	2006-02-03 03:01:38.000000000 +1300
++++ Makefile
+@@ -1,9 +1,13 @@
+ PRG=915resolution
+ 
++PREFIX?=/usr
+ SRCS=915resolution.c 
+ OBJS=${SRCS:.c=.o}
+ 
+-CFLAGS:=-s -Wall -ggdb 
++#CFLAGS:=-s -Wall -ggdb 
++LDLIBS=-li386
++
++all: ${PRG}
+ 
+ ${PRG}: ${OBJS}
+ 
+@@ -11,5 +15,5 @@ clean:
+ 	rm -f ${OBJS} ${PRG} *~ 
+ 
+ install: ${PRG}
+-	cp ${PRG} /usr/sbin
++	install -m 555 ${PRG} ${PREFIX}/sbin
+ 
