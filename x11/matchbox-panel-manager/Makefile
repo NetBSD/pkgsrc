@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/17 13:46:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/06/11 14:44:00 joerg Exp $
 #
 
 DISTNAME=	matchbox-panel-manager-0.1
@@ -12,6 +12,7 @@ HOMEPAGE=	http://projects.o-hand.com/matchbox/
 COMMENT=	Manager panel for the Matchbox desktop
 
 USE_DIRS+=	gnome2-1.5
+USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	yes
 
 .include "../../devel/libmatchbox/buildlink3.mk"
