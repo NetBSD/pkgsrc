@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.478 2006/06/11 14:00:27 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.479 2006/06/11 14:11:12 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -2998,3 +2998,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated chat/cgiirc to 0.59 [adrianp 2006-06-11]
 	Updated graphics/dxsamples to 4.3.2nb3 [joerg 2006-06-11]
 	Updated devel/bison to 2.3 [wiz 2006-06-11]
+	Added emulators/suse_openssl version 10.0 [markd 2006-06-11]
+	Added emulators/suse_libcups version 10.0 [markd 2006-06-11]
+	Updated print/acroread7 to 7.0.5nb2 [markd 2006-06-11]
+	Added sysutils/915resolution version 0.5.2 [markd 2006-06-11]
