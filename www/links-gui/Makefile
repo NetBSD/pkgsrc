@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2006/04/20 18:34:07 is Exp $
+# $NetBSD: Makefile,v 1.42 2006/06/11 14:34:43 wiz Exp $
 #
 
-PKGNAME=	links-gui-2.1.0.21
-PKGREVISION=	2
+PKGNAME=	links-gui-2.1.0.22
 
 COMMENT=	Lynx-like text and graphics WWW browser
 
