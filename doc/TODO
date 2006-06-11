@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5082 2006/06/11 15:06:07 wiz Exp $
+$NetBSD: TODO,v 1.5083 2006/06/11 15:23:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -454,7 +454,6 @@ Suggested package updates
 	o doxygen-1.4.6
 	o dropbear-0.48
 	o dspam-3.6.8
-	o dvd+rw-tools-6.1
 	o dvdauthor-0.6.11
 	o dvdrip-0.52.7
 	o dvipng-1.8
