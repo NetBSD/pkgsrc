@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2006/04/22 09:22:17 rillig Exp $
+# $NetBSD: Makefile,v 1.44 2006/06/11 14:44:36 joerg Exp $
 
 DISTNAME=	mlterm-2.9.2
 PKGREVISION=	4
@@ -12,7 +12,7 @@ COMMENT=	Multilingual terminal emulator
 # CODESET is only supported on NetBSD in 1.5T and later - see <langinfo.h>
 NOT_FOR_PLATFORM=	NetBSD-1.[0-4]*-* NetBSD-1.5[A-S]-*
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config msgfmt
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
