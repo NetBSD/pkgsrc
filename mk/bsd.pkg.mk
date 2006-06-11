@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1849 2006/06/09 13:59:06 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1850 2006/06/11 02:14:45 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -69,7 +69,6 @@ build-defs-message: ${WRKDIR}
 ############################################################################
 
 MKCRYPTO?=		YES	# build crypto packages by default
-CREATE_WRKDIR_SYMLINK?=	yes	# create a symlink to WRKOBJDIR
 
 ##### Variant spellings
 
@@ -855,18 +854,25 @@ ${WRKDIR}:
 .  endif
 .endif
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${WRKDIR}
-.if defined(WRKOBJDIR)
+
+# Create a symlink from ${WRKDIR} to the package directory if
+# CREATE_WRKDIR_SYMLINK is "yes".
+#
+CREATE_WRKDIR_SYMLINK?=	yes
+
+.if defined(WRKOBJDIR) && !empty(CREATE_WRKDIR_SYMLINK:M[Yy][Ee][Ss])
+makedirs: ${.CURDIR}/${WRKDIR_BASENAME}
+ ${.CURDIR}/${WRKDIR_BASENAME}:
 .  if ${PKGSRC_LOCKTYPE} == "sleep" || ${PKGSRC_LOCKTYPE} == "once"
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${TEST} -f ${_LOCKFILE} || ${RM} -f ${WRKDIR_BASENAME}
+	${TEST} -f ${_LOCKFILE} || ${RM} -f ${.TARGET}
 .  endif
-.  if !empty(CREATE_WRKDIR_SYMLINK:M[Yy][Ee][Ss])
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if ${LN} -s ${WRKDIR} ${WRKDIR_BASENAME} 2>/dev/null; then	\
-		${ECHO} "${WRKDIR_BASENAME} -> ${WRKDIR}";		\
+	if ${LN} -s ${WRKDIR} ${.TARGET} 2>/dev/null; then		\
+		${ECHO} "${.TARGET:T} -> ${WRKDIR}";			\
 	fi
-.  endif
-.endif # WRKOBJDIR
+.endif
+
 
 # Configure
 
