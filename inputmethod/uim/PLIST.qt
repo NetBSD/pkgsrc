@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST.qt,v 1.2 2006/03/09 18:04:32 wiz Exp $
+@comment $NetBSD: PLIST.qt,v 1.3 2006/06/12 16:35:20 wiz Exp $
 bin/uim-chardict-qt
 bin/uim-im-switcher-qt
 bin/uim-pref-qt
 bin/uim-toolbar-qt
 libexec/uim-candwin-qt
 share/uim/helperdata/bushu.t
+share/locale/ja/LC_MESSAGES/uim-chardict-qt.mo
 @dirrm share/uim/helperdata
