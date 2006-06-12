@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/06/10 20:27:10 salo Exp $
+# $NetBSD: Makefile,v 1.3 2006/06/12 13:01:22 salo Exp $
 #
 
 DISTNAME=	suse-10.0
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs emulators
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -21,11 +22,13 @@ DEPENDS+=	suse_gdk-pixbuf>=10.0:../../emulators/suse100_gdk-pixbuf
 DEPENDS+=	suse_glx>=10.0:../../emulators/suse100_glx
 DEPENDS+=	suse_gtk2>=10.0:../../emulators/suse100_gtk2
 DEPENDS+=	suse_gtk>=10.0:../../emulators/suse100_gtk
+DEPENDS+=	suse_libcups>=10.0:../../emulators/suse100_libcups
 DEPENDS+=	suse_libjpeg>=10.0:../../emulators/suse100_libjpeg
 DEPENDS+=	suse_libpng>=10.0:../../emulators/suse100_libpng
 DEPENDS+=	suse_libtiff>=10.0:../../emulators/suse100_libtiff
 DEPENDS+=	suse_locale>=10.0:../../emulators/suse100_locale
 DEPENDS+=	suse_openmotif>=10.0:../../emulators/suse100_openmotif
+DEPENDS+=	suse_openssl>=10.0:../../emulators/suse100_openssl
 DEPENDS+=	suse_slang>=10.0:../../emulators/suse100_slang
 DEPENDS+=	suse_x11>=10.0:../../emulators/suse100_x11
 
