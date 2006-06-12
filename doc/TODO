@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5084 2006/06/12 09:15:25 adam Exp $
+$NetBSD: TODO,v 1.5085 2006/06/12 12:30:51 tonio Exp $
 
 Suggested new packages
 ======================
@@ -366,7 +366,6 @@ Suggested package updates
 	o aspell-faroese-0.2.25
 	o aspell-norwegian-2.0.6
 	o astyle-1.15.3
-	o auctex-11.83
 	o autogen-5.8.4
 	o avcheck-0.91
 	o avl-2.0.1
