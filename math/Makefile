@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.148 2006/03/09 17:16:18 wiz Exp $
+# $NetBSD: Makefile,v 1.149 2006/06/12 16:34:32 wiz Exp $
 #
 
 COMMENT=	Mathematics
@@ -141,6 +141,7 @@ SUBDIR+=	tochnog
 SUBDIR+=	udunits
 SUBDIR+=	vista
 SUBDIR+=	xeukleides
+SUBDIR+=	xfractint
 SUBDIR+=	xgap
 SUBDIR+=	xldlas
 SUBDIR+=	xlife
