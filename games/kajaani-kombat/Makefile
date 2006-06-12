@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2006/05/22 19:38:14 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/06/12 16:28:09 wiz Exp $
 #
 
 DISTNAME=		kajaani-kombat-0.6
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		games
 MASTER_SITES=		http://kombat.kajaani.net/dl/
 
