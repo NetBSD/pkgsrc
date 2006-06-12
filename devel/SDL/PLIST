@@ -1,10 +1,18 @@
-@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:23 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/06/12 16:20:44 wiz Exp $
 bin/sdl-config
 include/SDL/SDL.h
 include/SDL/SDL_active.h
 include/SDL/SDL_audio.h
 include/SDL/SDL_byteorder.h
 include/SDL/SDL_cdrom.h
+include/SDL/SDL_config.h
+include/SDL/SDL_config_amiga.h
+include/SDL/SDL_config_dreamcast.h
+include/SDL/SDL_config_macos.h
+include/SDL/SDL_config_macosx.h
+include/SDL/SDL_config_minimal.h
+include/SDL/SDL_config_os2.h
+include/SDL/SDL_config_win32.h
 include/SDL/SDL_copying.h
 include/SDL/SDL_cpuinfo.h
 include/SDL/SDL_endian.h
@@ -20,8 +28,10 @@ include/SDL/SDL_mouse.h
 include/SDL/SDL_mutex.h
 include/SDL/SDL_name.h
 include/SDL/SDL_opengl.h
+include/SDL/SDL_platform.h
 include/SDL/SDL_quit.h
 include/SDL/SDL_rwops.h
+include/SDL/SDL_stdinc.h
 include/SDL/SDL_syswm.h
 include/SDL/SDL_thread.h
 include/SDL/SDL_timer.h
