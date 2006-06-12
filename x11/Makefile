@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.437 2006/06/11 13:58:42 wiz Exp $
+# $NetBSD: Makefile,v 1.438 2006/06/12 02:16:40 joerg Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -226,7 +226,6 @@ SUBDIR+=	qwspritefield
 SUBDIR+=	qwt
 SUBDIR+=	randrproto
 SUBDIR+=	ratmen
-SUBDIR+=	renderext
 SUBDIR+=	renderproto
 SUBDIR+=	rep-gtk
 SUBDIR+=	rox-session
