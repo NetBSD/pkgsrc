@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/06/12 14:13:55 rillig Exp $
+
+Solaris does not define __sighandler_t.
+
+--- unixscr.c.orig	1999-04-29 06:12:03.000000000 +0200
++++ unixscr.c	2006-06-12 16:01:41.382816500 +0200
+@@ -44,6 +44,10 @@
+ # define FNDELAY O_NONBLOCK
+ #endif
+ 
++#if defined(__sun)
++typedef int (*__sighandler_t)(int);
++#endif
++
+ /* Check if there is a character waiting for us.  */
+ #define input_pending() (ioctl(0,FIONREAD,&iocount),(int)iocount)
+ 
