@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.13 2006/04/13 21:45:13 wiz Exp $
+# $NetBSD: options.mk,v 1.14 2006/06/12 18:50:29 joerg Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
-PKG_SUPPORTED_OPTIONS=	slang ncurses ssl sasl mutt-hcache idn
+PKG_SUPPORTED_OPTIONS=	slang ncurses ssl sasl mutt-hcache idn mutt-compressed-mbox
 PKG_SUGGESTED_OPTIONS=	ssl
 
 .include "../../mk/bsd.options.mk"
@@ -56,6 +56,16 @@ CONFIGURE_ENV+=		BDB_LIB_DIR=${BUILDLINK_PREFIX.db4}/lib
 CONFIGURE_ENV+=		BDB_LIB=${BUILDLINK_LDADD.db4:S/^-l//}
 .else
 CONFIGURE_ARGS+=	--disable-hcache
+.endif
+
+###
+### Compressed mail boxes
+###
+.if !empty(PKG_OPTIONS:Mmutt-compressed-mbox)
+PATCH_SITES+=		http://www.spinnaker.de/mutt/compressed/
+PATCHFILES+=		patch-1.5.11.rr.compressed.1.gz
+PATCH_DIST_STRIP=	-p1
+CONFIGURE_ARGS+=	--enable-compressed
 .endif
 
 ###
