@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5086 2006/06/12 16:16:24 wiz Exp $
+$NetBSD: TODO,v 1.5087 2006/06/12 16:32:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -309,11 +309,7 @@ Suggested package updates
 	o PAM-0.80
 	o R-2.3.1
 	o REminiscence-0.1.8
-	o SDL-1.2.10
-	o SDL_image-1.2.5
 	o SDL_mixer-1.2.7
-	o SDL_net-1.2.6
-	o SDL_ttf-2.0.8
 	o SmartEiffel-2.1
 	o XFree86-4.6.0
 	o XaoS-3.1.1
