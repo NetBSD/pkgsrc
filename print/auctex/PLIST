@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/04/06 03:32:50 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/06/12 12:30:05 tonio Exp $
 ${EMACS_INFOPREFIX}/auctex.info
 ${EMACS_LISPPREFIX}/auctex.el
 ${EMACS_LISPPREFIX}/auctex/bib-cite.el
@@ -163,6 +163,8 @@ ${EMACS_LISPPREFIX}/auctex/style/nicefrac.el
 ${EMACS_LISPPREFIX}/auctex/style/nicefrac.elc
 ${EMACS_LISPPREFIX}/auctex/style/paralist.el
 ${EMACS_LISPPREFIX}/auctex/style/paralist.elc
+${EMACS_LISPPREFIX}/auctex/style/pdfsync.el
+${EMACS_LISPPREFIX}/auctex/style/pdfsync.elc
 ${EMACS_LISPPREFIX}/auctex/style/plfonts.el
 ${EMACS_LISPPREFIX}/auctex/style/plfonts.elc
 ${EMACS_LISPPREFIX}/auctex/style/plhb.el
