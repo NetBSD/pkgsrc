@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/01/20 23:13:32 reed Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/06/12 00:36:25 joerg Exp $
 ${X11ROOT_PREFIX}/include/DPS/ColorSB.h
 ${X11ROOT_PREFIX}/include/DPS/ColorSBP.h
 ${X11ROOT_PREFIX}/include/DPS/DPSScrollW.h
@@ -1001,7 +1001,7 @@ ${X11ROOT_PREFIX}/lib/libI810XvMC.so.1
 ${X11ROOT_PREFIX}/lib/libI810XvMC.so.1.0
 ${X11ROOT_PREFIX}/lib/libICE.so
 ${X11ROOT_PREFIX}/lib/libICE.so.6
-${X11ROOT_PREFIX}/lib/libICE.so.6.3
+${X11ROOT_PREFIX}/lib/libICE.so.6.4
 ${X11ROOT_PREFIX}/lib/libOSMesa.a
 ${X11ROOT_PREFIX}/lib/libOSMesa.so
 ${X11ROOT_PREFIX}/lib/libOSMesa.so.4
@@ -1019,6 +1019,9 @@ ${X11ROOT_PREFIX}/lib/libXTrap.so
 ${X11ROOT_PREFIX}/lib/libXTrap.so.6
 ${X11ROOT_PREFIX}/lib/libXTrap.so.6.4
 ${X11ROOT_PREFIX}/lib/libXau.a
+${X11ROOT_PREFIX}/lib/libXau.so
+${X11ROOT_PREFIX}/lib/libXau.so.6
+${X11ROOT_PREFIX}/lib/libXau.so.6.0
 ${X11ROOT_PREFIX}/lib/libXaw.so
 ${X11ROOT_PREFIX}/lib/libXaw.so.6
 ${X11ROOT_PREFIX}/lib/libXaw.so.6.1
@@ -1046,6 +1049,9 @@ ${X11ROOT_PREFIX}/lib/libXcomposite.so.1.0
 ${X11ROOT_PREFIX}/lib/libXdamage.so
 ${X11ROOT_PREFIX}/lib/libXdamage.so.1
 ${X11ROOT_PREFIX}/lib/libXdamage.so.1.0
+${X11ROOT_PREFIX}/lib/libXdmcp.so
+${X11ROOT_PREFIX}/lib/libXdmcp.so.6
+${X11ROOT_PREFIX}/lib/libXdmcp.so.6.0
 ${X11ROOT_PREFIX}/lib/libXevie.so
 ${X11ROOT_PREFIX}/lib/libXevie.so.1
 ${X11ROOT_PREFIX}/lib/libXevie.so.1.0
