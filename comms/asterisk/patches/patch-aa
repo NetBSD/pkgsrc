@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2006/05/31 18:43:15 adam Exp $
+$NetBSD: patch-aa,v 1.10 2006/06/12 14:35:35 joerg Exp $
 
---- Makefile.orig	2006-04-30 16:27:56.000000000 +0200
+--- Makefile.orig	2006-04-30 14:27:56.000000000 +0000
 +++ Makefile
 @@ -46,7 +46,6 @@ ifneq ($(findstring dont-optimize,$(MAKE
  #K6OPT  = -DK6OPT
@@ -65,7 +65,7 @@ $NetBSD: patch-aa,v 1.9 2006/05/31 18:43:15 adam Exp $
    MODULES_DIR=$(ASTLIBDIR)/modules
    AGI_DIR=$(ASTVARLIBDIR)/agi-bin
  endif
-@@ -225,7 +225,7 @@ ASTCFLAGS+=$(OPTIMIZE)
+@@ -225,10 +225,14 @@ ASTCFLAGS+=$(OPTIMIZE)
  ASTOBJ=-o asterisk
  
  ifeq ($(findstring BSD,$(OSARCH)),BSD)
@@ -74,7 +74,14 @@ $NetBSD: patch-aa,v 1.9 2006/05/31 18:43:15 adam Exp $
    ASTCFLAGS+=-I$(CROSS_COMPILE_TARGET)/usr/local/include -L$(CROSS_COMPILE_TARGET)/usr/local/lib
  endif
  
-@@ -256,24 +256,24 @@ ifeq ($(OSARCH),FreeBSD)
++ifeq ($(OSARCH),DragonFly)
++  PROC=$(shell uname -p)
++endif
++
+ ifneq ($(PROC),ultrasparc)
+   ASTCFLAGS+=$(shell if $(CC) -march=$(PROC) -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo "-march=$(PROC)"; fi)
+ endif
+@@ -256,24 +260,24 @@ ifeq ($(OSARCH),FreeBSD)
  
    # XXX FreeBSD paths
    PREFIX?=/usr/local
@@ -111,7 +118,7 @@ $NetBSD: patch-aa,v 1.9 2006/05/31 18:43:15 adam Exp $
    MPG123TARG=netbsd
  endif
  
-@@ -292,7 +292,7 @@ ifeq ($(findstring CYGWIN,$(OSARCH)),CYG
+@@ -292,7 +296,7 @@ ifeq ($(findstring CYGWIN,$(OSARCH)),CYG
    ASTOBJ=-shared -o asterisk.dll -Wl,--out-implib=libasterisk.dll.a -Wl,--export-all-symbols
    ASTLINK=
    LIBS+=-lpthread -lncurses -lm -lresolv
@@ -120,7 +127,7 @@ $NetBSD: patch-aa,v 1.9 2006/05/31 18:43:15 adam Exp $
    PROC=$(shell uname -m)
  endif
  
-@@ -369,7 +369,8 @@ ifeq ($(OSARCH),Darwin)
+@@ -369,7 +373,8 @@ ifeq ($(OSARCH),Darwin)
    AUDIO_LIBS=-framework CoreAudio
    ASTLINK=-Wl,-dynamic
    SOLINK=-dynamic -bundle -undefined suppress -force_flat_namespace
@@ -130,7 +137,7 @@ $NetBSD: patch-aa,v 1.9 2006/05/31 18:43:15 adam Exp $
    ASTCFLAGS+=-DPOLLCOMPAT
  else
  #These are used for all but Darwin
-@@ -381,8 +382,12 @@ ifeq ($(OSARCH),FreeBSD)
+@@ -381,8 +386,12 @@ ifeq ($(OSARCH),FreeBSD)
    LIBS+=-lcrypto
  endif
  
@@ -144,7 +151,7 @@ $NetBSD: patch-aa,v 1.9 2006/05/31 18:43:15 adam Exp $
  endif
  
  ifeq ($(OSARCH),OpenBSD)
-@@ -720,31 +725,31 @@ install: all datafiles bininstall instal
+@@ -720,31 +729,31 @@ install: all datafiles bininstall instal
  upgrade: all bininstall
  
  adsi:
@@ -185,7 +192,7 @@ $NetBSD: patch-aa,v 1.9 2006/05/31 18:43:15 adam Exp $
  		( \
  		echo "[directories]" ; \
  		echo "astetcdir => $(ASTETCDIR)" ; \
-@@ -761,7 +766,7 @@ samples: adsi
+@@ -761,7 +770,7 @@ samples: adsi
  		echo ";astctlowner = root" ; \
  		echo ";astctlgroup = apache" ; \
  		echo ";astctl = asterisk.ctl" ; \
