@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.494 2006/06/12 15:37:12 taca Exp $
+$NetBSD: CHANGES-2006,v 1.495 2006/06/12 16:32:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3019,3 +3019,10 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/xfractint to 3.10 [rillig 2006-06-12]
 	Updated net/tor to 0.1.1.21 [tv 2006-06-12]
 	Updated www/squid to 2.5.14nb1 [taca 2006-06-12]
+	Updated devel/SDL to 1.2.10 [wiz 2006-06-12]
+	Removed audio/SDL-arts [wiz 2006-06-11]
+	Removed audio/SDL-esound [wiz 2006-06-11]
+	Removed audio/SDL-nas [wiz 2006-06-11]
+	Updated devel/SDL_ttf to 2.0.8 [wiz 2006-06-12]
+	Updated graphics/SDL_image to 1.2.5 [wiz 2006-06-12]
+	Updated net/SDL_net to 1.2.6 [wiz 2006-06-12]
