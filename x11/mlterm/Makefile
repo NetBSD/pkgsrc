@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/06/11 14:44:36 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2006/06/12 10:37:24 hira Exp $
 
 DISTNAME=	mlterm-2.9.2
 PKGREVISION=	4
@@ -19,9 +19,9 @@ USE_PKGLOCALEDIR=	yes
 
 PKG_SYSCONFSUBDIR=	mlterm
 EGDIR=			${PREFIX}/share/examples/mlterm
-.for _f in aafont color font key main menu taafont termcap tfont vaafont vfont \
+.for f in aafont color font key main menu taafont termcap tfont vaafont vfont \
 	xim
-CONF_FILES+=		${EGDIR}/${_f} ${PKG_SYSCONFDIR}/${_f}
+CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 .include "../../mk/bsd.prefs.mk"
@@ -41,10 +41,10 @@ SUBST_FILES.link=	Makefile.in */Makefile.in */*/Makefile.in \
 			tool/mlconfig/mc_im.c tool/mlconfig/mc_sb_view.c \
 			tool/mlmenu/main.c xwindow/x_im.c \
 			xwindow/x_sb_view_factory.c xwindow/x_screen.c
-SUBST_SED.link=		-e 's|(LIBTOOL_LINK).*(LIBS)|& -R${X11BASE}/lib|g' \
-			-e 's|(LIBTOOL_LINK).*(LIBDIR)|& -R${X11BASE}/lib|g' \
-			-e 's|/usr/local/|${PREFIX}/|g' \
-			-e 's|/usr/X11R6/|${X11BASE}/|g'
+SUBST_SED.link=		-e 's|(LIBTOOL_LINK).*(LIBS)|& -R${X11BASE}/lib|g'
+SUBST_SED.link+=	-e 's|(LIBTOOL_LINK).*(LIBDIR)|& -R${X11BASE}/lib|g'
+SUBST_SED.link+=	-e 's|/usr/local/|${PREFIX}/|g'
+SUBST_SED.link+=	-e 's|/usr/X11R6/|${X11BASE}/|g'
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
