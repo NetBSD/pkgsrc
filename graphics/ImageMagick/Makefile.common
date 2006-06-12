@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.56 2006/05/22 11:30:19 adam Exp $
+# $NetBSD: Makefile.common,v 1.57 2006/06/12 09:13:27 adam Exp $
 
 ###########################################################################
 #
@@ -9,8 +9,8 @@
 #
 ###########################################################################
 
-IM_MAJOR_VER=		6.2.7
-IM_MINOR_VER=		7
+IM_MAJOR_VER=		6.2.8
+IM_MINOR_VER=		0
 IM_MAJOR_LIB_VER=	${IM_MAJOR_VER}
 
 .if (${IM_MINOR_VER} != NONE)
@@ -39,4 +39,5 @@ CONFIGURE_ARGS+=	--without-dps
 CONFIGURE_ARGS+=	--without-fpx
 CONFIGURE_ARGS+=	--without-hdf
 CONFIGURE_ARGS+=	--without-jbig
+CONFIGURE_ARGS+=	--without-modules
 CONFIGURE_ARGS+=	--without-threads
