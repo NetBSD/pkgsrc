@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/04/17 13:46:02 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/06/12 16:28:05 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 OGRE_BUILDLINK3_MK:=	${OGRE_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	ogre
 
 .if !empty(OGRE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.ogre+=	ogre>=0.12.1nb1
-BUILDLINK_ABI_DEPENDS.ogre+=	ogre>=0.12.1nb7
+BUILDLINK_ABI_DEPENDS.ogre+=	ogre>=0.12.1nb8
 BUILDLINK_PKGSRCDIR.ogre?=	../../devel/ogre
 .endif	# OGRE_BUILDLINK3_MK
 
