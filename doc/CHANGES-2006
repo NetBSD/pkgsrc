@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.488 2006/06/12 00:37:26 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.489 2006/06/12 09:15:25 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3012,3 +3012,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/dvd+rw-tools to 6.1 [wiz 2006-06-11]
 	Updated x11/xorg-imake to 6.9.0nb2 [joerg 2006-06-12]
 	Updated x11/xorg-libs to 6.9.0nb4 [joerg 2006-06-12]
+	Updated graphics/ImageMagick to 6.2.8.0 [adam 2006-06-12]
+	Updated emulators/wine to 0.9.15 [adam 2006-06-12]
+	Updated comms/efax-gtk to 3.0.10 [adam 2006-06-12]
