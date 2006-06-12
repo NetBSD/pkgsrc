@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.489 2006/06/12 09:15:25 adam Exp $
+$NetBSD: CHANGES-2006,v 1.490 2006/06/12 12:30:51 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3015,3 +3015,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/ImageMagick to 6.2.8.0 [adam 2006-06-12]
 	Updated emulators/wine to 0.9.15 [adam 2006-06-12]
 	Updated comms/efax-gtk to 3.0.10 [adam 2006-06-12]
+	Updated print/auctex to 11.83 [tonio 2006-06-12]
