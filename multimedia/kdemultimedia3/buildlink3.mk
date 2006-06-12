@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2006/04/17 13:46:06 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2006/06/12 16:28:12 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 KDEMULTIMEDIA_BUILDLINK3_MK:=	${KDEMULTIMEDIA_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	kdemultimedia
 
 .if !empty(KDEMULTIMEDIA_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.kdemultimedia+=	kdemultimedia>=3.5.0nb2
-BUILDLINK_ABI_DEPENDS.kdemultimedia?=	kdemultimedia>=3.5.2nb2
+BUILDLINK_ABI_DEPENDS.kdemultimedia?=	kdemultimedia>=3.5.3nb1
 BUILDLINK_PKGSRCDIR.kdemultimedia?=	../../multimedia/kdemultimedia3
 .endif	# KDEMULTIMEDIA_BUILDLINK3_MK
 
