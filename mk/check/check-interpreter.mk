@@ -1,4 +1,4 @@
-# $NetBSD: check-interpreter.mk,v 1.4 2006/06/09 13:59:08 jlam Exp $
+# $NetBSD: check-interpreter.mk,v 1.5 2006/06/12 03:42:02 jlam Exp $
 
 CHECK_INTERPRETER?=	no
 
@@ -26,15 +26,17 @@ check-interpreter: error-check
 	@${STEP_MSG} "Checking for non-existent script interpreters"	\
 		     "in ${PKGNAME}"
 .if !defined(NO_PKG_REGISTER)
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${ERROR_DIR}/${.TARGET}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	exec 1>${ERROR_DIR}/${.TARGET};					\
+	${RM} -f ${ERROR_DIR}/${.TARGET} ${WARNING_DIR}/${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${TOUCH} ${TOUCH_ARGS} ${ERROR_DIR}/${.TARGET} ${WARNING_DIR}/${.TARGET}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${PKG_FILELIST_CMD} | ${SORT} | ${SED} 's,\\,\\\\,g' |		\
 	while read file; do						\
 		${_CHECK_INTERP_SKIP_FILTER};				\
 		${SHCOMMENT} "[$$file]";				\
 		interp=`${SED} -n -e '1s/^#![[:space:]]*\([^[:space:]]*\).*/\1/p' -e '1q' < "$$file"` \
-		|| {	${WARNING_MSG} "[check-interpreter.mk] sed(1) failed for \"$$file\"."; \
+		|| {	${ECHO} "[check-interpreter.mk] sed(1) failed for \"$$file\"." >> ${WARNING_DIR}/${.TARGET}; \
 			continue;					\
 		};							\
 		case $$interp in					\
@@ -42,9 +44,9 @@ check-interpreter: error-check
 		esac;							\
 		if ${TEST} ! -f "$$interp"; then			\
 			if ${TEST} -x "$$file"; then			\
-				${ECHO} "[check-interpreter.mk] The interpreter \"$$interp\" of \"$$file\" does not exist."; \
+				${ECHO} "[check-interpreter.mk] The interpreter \"$$interp\" of \"$$file\" does not exist." >> ${ERROR_DIR}/${.TARGET}; \
 			else						\
-				${WARNING_MSG} "[check-interpreter.mk] The interpreter \"$$interp\" of \"$$file\" does not exist."; \
+				${ECHO} "[check-interpreter.mk] The interpreter \"$$interp\" of \"$$file\" does not exist." >> ${WARNING_DIR}/${.TARGET}; \
 			fi;						\
 		fi;							\
 	done
