@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.496 2006/06/12 16:35:40 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.497 2006/06/12 17:04:38 reed Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3027,3 +3027,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/SDL_image to 1.2.5 [wiz 2006-06-12]
 	Updated net/SDL_net to 1.2.6 [wiz 2006-06-12]
 	Updated inputmethod/uim to 1.1.0 [wiz 2006-06-12]
+	Updated pkgtools/url2pkg to 1.34 [reed 2006-06-12]
