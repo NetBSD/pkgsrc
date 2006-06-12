@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2006/05/10 12:47:01 tonio Exp $
+@comment $NetBSD: PLIST,v 1.48 2006/06/12 09:13:27 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/Wand-config
@@ -158,6 +158,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/images/arc.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/background.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/button.gif
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/configure.jpg
+share/doc/ImageMagick-${IM_MAJOR_VER}/images/definitive-guide.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/difference.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/dogwaffle.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/donate.png
@@ -182,6 +183,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/images/smile.gif
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/sponsor.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/sprite.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/travelsur.gif
+share/doc/ImageMagick-${IM_MAJOR_VER}/images/tricks.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/wand.ico
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/white-highlight.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/index.html
@@ -287,6 +289,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/display.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/download.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/examples.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/formats.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/history.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/identify.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/import.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/index.html
