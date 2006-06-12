@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1 2006/06/08 16:17:30 minskim Exp $
+$NetBSD: patch-ad,v 1.2 2006/06/12 13:05:11 joerg Exp $
 
---- src/mined1.c.orig	2003-05-25 20:28:23.000000000 +0000
-+++ src/mined1.c
+--- mined1.c.orig	2003-05-25 20:28:23.000000000 +0000
++++ mined1.c
 @@ -2367,7 +2367,7 @@ VIEWmode ()
    }
  }
