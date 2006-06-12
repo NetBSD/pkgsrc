@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.492 2006/06/12 14:32:28 tv Exp $
+$NetBSD: CHANGES-2006,v 1.493 2006/06/12 14:33:13 tv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3016,5 +3016,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/wine to 0.9.15 [adam 2006-06-12]
 	Updated comms/efax-gtk to 3.0.10 [adam 2006-06-12]
 	Updated print/auctex to 11.83 [tonio 2006-06-12]
-	Updated math/xfractint to 3.10 [1illig 2006-06-12]
+	Updated math/xfractint to 3.10 [rillig 2006-06-12]
 	Updated net/tor to 0.1.1.21 [tv 2006-06-12]
