@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: url2pkg,v 1.37 2006/01/25 05:10:00 xtraeme Exp $
+# $NetBSD: url2pkg,v 1.38 2006/06/12 17:02:23 reed Exp $
 #
 # url2pkg
 # (c) 1999-2002 Hubert Feyrer <hubert@feyrer.de>
@@ -40,7 +40,7 @@ if [ ! -f w*/.extract_done ]; then
 	fi
 
 	found=0
-	for A in `cat ../../mk/bsd.sites.mk`; do
+	for A in `cat ../../mk/fetch/sites.mk`; do
 		if [ "`expr "$A" : ".*+="`" -gt 0 ]; then
 			master_site="`echo $A|cut -f1 -d +`"
 		fi
