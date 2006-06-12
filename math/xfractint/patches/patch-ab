@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2006/06/12 14:54:55 rillig Exp $
+
+Solaris 5.8 does not have the "long double" functions in libm.
+
+--- soi.c.orig	1999-09-06 17:38:10.000000000 +0200
++++ soi.c	2006-06-12 16:38:49.362108867 +0200
+@@ -17,9 +17,15 @@
+ #include "port.h"
+ #include "prototyp.h"
+ 
++#if defined(__sun) && defined(__SunOS_5_8)
++#define DBLS		double
++#define FREXP(x,y)	frexp((x), (y))
++#define FABS(x)		fabs((x))
++#else
+ #define DBLS LDBL
+ #define FABS(x)  fabsl(x)
+ #define FREXP(x,y) frexpl(x,y)
++#endif
+ 
+ #define TRUE 1
+ #define FALSE 0
