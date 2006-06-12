@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST.gtk,v 1.3 2006/03/09 18:04:32 wiz Exp $
-bin/uim-helper-toolbar-gtk
-bin/uim-helper-toolbar-gtk-systray
+@comment $NetBSD: PLIST.gtk,v 1.4 2006/06/12 16:35:20 wiz Exp $
 bin/uim-im-switcher-gtk
 bin/uim-input-pad-ja
 bin/uim-pref-gtk
