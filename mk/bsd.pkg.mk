@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1850 2006/06/11 02:14:45 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1851 2006/06/12 16:30:03 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1335,6 +1335,12 @@ real-test: test-message pre-test do-test post-test test-cookie error-check
 # reinvoking the make process as root.  It acquires root privileges and
 # invokes a new make process with the target named "su-${.TARGET}".
 #
+_ROOT_CMD=	cd ${.CURDIR} &&					\
+		${SETENV} PATH="$${PATH}:"${SU_CMD_PATH_APPEND:Q}	\
+		${MAKE} ${MAKEFLAGS}					\
+			PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL:Q}		\
+			su-${.TARGET} ${MAKEFLAGS.${.TARGET}}
+
 .PHONY: su-target
 su-target: .USE
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
@@ -1343,7 +1349,7 @@ su-target: .USE
 	*)	${PRE_CMD.su-${.TARGET}} ;;				\
 	esac;								\
 	if ${TEST} `${ID} -u` = `${ID} -u ${ROOT_USER}`; then		\
-		${MAKE} ${MAKEFLAGS} PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL:Q} su-${.TARGET} ${MAKEFLAGS.${.TARGET}}; \
+		${_ROOT_CMD};						\
 	else								\
 		case ${PRE_ROOT_CMD:Q}"" in				\
 		${TRUE:Q}"")	;;					\
@@ -1351,8 +1357,8 @@ su-target: .USE
 		esac;							\
 		${PRE_ROOT_CMD};					\
 		${STEP_MSG} "Becoming \`\`${ROOT_USER}'' to make su-${.TARGET} (`${ECHO} ${SU_CMD} | ${AWK} '{ print $$1 }'`)"; \
-		${SU_CMD} "cd ${.CURDIR}; ${SETENV} PATH='$${PATH}:${SU_CMD_PATH_APPEND}' ${MAKE} ${MAKEFLAGS} PKG_DEBUG_LEVEL=${PKG_DEBUG_LEVEL} su-${.TARGET} ${MAKEFLAGS.su-${.TARGET}}"; \
-		${STEP_MSG} "Dropping \`\`${ROOT_USER}'' privileges."; \
+		${SU_CMD} ${_ROOT_CMD:Q};				\
+		${STEP_MSG} "Dropping \`\`${ROOT_USER}'' privileges.";	\
 	fi
 
 # Empty pre-* and post-* targets
