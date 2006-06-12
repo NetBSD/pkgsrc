@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.487 2006/06/11 15:23:18 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.488 2006/06/12 00:37:26 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3010,3 +3010,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/cvsd to 1.0.12 [wiz 2006-06-11]
 	Updated mail/evolution-data-server to 1.6.2 [wiz 2006-06-11]
 	Updated sysutils/dvd+rw-tools to 6.1 [wiz 2006-06-11]
+	Updated x11/xorg-imake to 6.9.0nb2 [joerg 2006-06-12]
+	Updated x11/xorg-libs to 6.9.0nb4 [joerg 2006-06-12]
