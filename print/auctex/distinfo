@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2006/01/13 22:59:44 tonio Exp $
+$NetBSD: distinfo,v 1.11 2006/06/12 12:30:05 tonio Exp $
 
-SHA1 (auctex-11.82.tar.gz) = 30362e622bb085a4b593088b5084f329111c4d4a
-RMD160 (auctex-11.82.tar.gz) = baeeb39ce7638edbfd12eee24fb58bf1c8673e4c
-Size (auctex-11.82.tar.gz) = 873084 bytes
+SHA1 (auctex-11.83.tar.gz) = c8f60579d07c34b1a364494d8a16f450b1322a7a
+RMD160 (auctex-11.83.tar.gz) = 3329c1910b00a699e19779fbf00035ce0c059d95
+Size (auctex-11.83.tar.gz) = 889524 bytes
