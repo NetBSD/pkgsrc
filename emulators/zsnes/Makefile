@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2006/05/21 17:09:53 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2006/06/12 16:28:07 wiz Exp $
 #
 
 DISTNAME=		zsnes142src
 PKGNAME=		zsnes-1.42
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=zsnes/}
 

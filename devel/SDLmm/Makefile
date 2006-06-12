@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/05/15 19:27:55 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/06/12 16:28:05 wiz Exp $
 #
 
 DISTNAME=	SDLmm-0.1.8
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sdlmm/}
 
