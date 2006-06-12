@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5083 2006/06/11 15:23:18 wiz Exp $
+$NetBSD: TODO,v 1.5084 2006/06/12 09:15:25 adam Exp $
 
 Suggested new packages
 ======================
@@ -465,7 +465,6 @@ Suggested package updates
 	o eclipse-3.1.1
 	o edb-1.0.5
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o efax-gtk-3.0.10
 	o egtk-0.3.6.2
 	o electricfence-2.4.16
 	o elf-0.5.4p1
@@ -1218,7 +1217,6 @@ Suggested package updates
 	o wdm-1.28
 	o weewm-0.01
 	o winbind-3.0.13
-	o wine-0.9.15
 	o wmctrl-1.07
 	o wmii-2.5.1 [pkg/32522]
 	o wmweather-2.4.3
