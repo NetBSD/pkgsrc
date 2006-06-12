@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/05/08 20:01:21 jschauma Exp $
+# $NetBSD: Makefile,v 1.50 2006/06/12 20:43:20 joerg Exp $
 #
 
 DISTNAME=		atk-1.11.4
@@ -12,7 +12,7 @@ COMMENT=		Set of interfaces for accessibility
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config msgfmt
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
