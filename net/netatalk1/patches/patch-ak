@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2006/06/12 15:24:08 joerg Exp $
+
+--- etc/afpd/unix.h.orig	2006-06-12 14:53:46.000000000 +0000
++++ etc/afpd/unix.h
+@@ -30,7 +30,7 @@ typedef int	mode_t;
+ #if defined(TRU64)
+ #define f_frsize f_fsize
+ #else /* TRU64 */
+-#if defined(HAVE_SYS_STATVFS_H) || defined(__svr4__)
++#if (defined(HAVE_SYS_STATVFS_H) && !defined(__DragonFly__)) || defined(__svr4__)
+ #include <sys/statvfs.h>
+ #define statfs statvfs
+ #else /* HAVE_SYS_STATVFS || __svr4__ */
