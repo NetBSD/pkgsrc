@@ -1,140 +1,31 @@
-$NetBSD: patch-aj,v 1.24 2006/02/07 18:15:50 wiz Exp $
+$NetBSD: patch-aj,v 1.25 2006/06/12 16:20:44 wiz Exp $
 
---- configure.in.orig	2005-08-28 06:31:18.000000000 +0000
+--- configure.in.orig	2006-05-17 03:16:07.000000000 +0000
 +++ configure.in
-@@ -28,9 +28,9 @@ AC_SUBST(SDL_VERSION)
- 
- # libtool versioning
- LT_RELEASE=$SDL_MAJOR_VERSION.$SDL_MINOR_VERSION
--LT_CURRENT=`expr $SDL_MICRO_VERSION - $SDL_INTERFACE_AGE`
--LT_REVISION=$SDL_INTERFACE_AGE
--LT_AGE=`expr $SDL_BINARY_AGE - $SDL_INTERFACE_AGE`
-+LT_CURRENT=$SDL_INTERFACE_AGE
-+LT_REVISION=$SDL_BINARY_AGE
-+LT_AGE=0
- 
- AC_SUBST(LT_RELEASE)
- AC_SUBST(LT_CURRENT)
-@@ -267,6 +267,8 @@ CheckOSS()
-         AC_MSG_RESULT($have_oss)
-         if test x$have_oss = xyes; then
-             CFLAGS="$CFLAGS -DOSS_SUPPORT"
-+	    LDFLAGS="$LDFLAGS $LIBOSSAUDIO"
-+	    SDL_LIBS="$SDL_LIBS $LIBOSSAUDIO"
-             AUDIO_SUBDIRS="$AUDIO_SUBDIRS dsp"
-             AUDIO_DRIVERS="$AUDIO_DRIVERS dsp/libaudio_dsp.la"
-             AUDIO_SUBDIRS="$AUDIO_SUBDIRS dma"
-@@ -456,9 +458,9 @@ CheckNAS()
+@@ -512,10 +512,10 @@ AC_HELP_STRING([--enable-nas], [support 
      if test x$enable_audio = xyes -a x$enable_nas = xyes; then
          AC_MSG_CHECKING(for NAS audio support)
          have_nas=no
 -        if test -r /usr/X11R6/include/audio/audiolib.h; then
 +        if true; then
              have_nas=yes
--            CFLAGS="$CFLAGS -DNAS_SUPPORT -I/usr/X11R6/include/"
-+            CFLAGS="$CFLAGS -DNAS_SUPPORT"
-             SYSTEM_LIBS="$SYSTEM_LIBS -laudio -lXt"
-             AUDIO_SUBDIRS="$AUDIO_SUBDIRS nas"
-             AUDIO_DRIVERS="$AUDIO_DRIVERS nas/libaudio_nas.la"
-@@ -539,7 +541,7 @@ CheckNASM()
-                   NASMFLAGS="-f aoutb"
-                   ;;
-               *)
--                  NASMFLAGS="-f elf"
-+                  test -n "$NASMFLAGS" || NASMFLAGS="-f elf"
-                   ;;
-             esac
-             AC_SUBST(NASMFLAGS)
-@@ -1202,12 +1204,13 @@ CheckPTH()
- [  --enable-pth            use GNU pth library for multi-threading [default=yes]],
-                   , enable_pth=yes)
-     if test x$enable_threads = xyes -a x$enable_pth = xyes; then
--        AC_PATH_PROG(PTH_CONFIG, pth-config, no)
--        if test "$PTH_CONFIG" = "no"; then
-+        # Use the libpthread version of the pth library.
-+        AC_PATH_PROG(PTHREAD_CONFIG, pthread-config, no)
-+        if test "$PTHREAD_CONFIG" = "no"; then
-             use_pth=no
-         else
--            PTH_CFLAGS=`$PTH_CONFIG --cflags`
--            PTH_LIBS=`$PTH_CONFIG --libs --all`
-+            PTH_CFLAGS=`$PTHREAD_CONFIG --cflags`
-+            PTH_LIBS=`$PTHREAD_CONFIG --libs --all`
-             SDL_CFLAGS="$SDL_CFLAGS $PTH_CFLAGS"
-             SDL_LIBS="$SDL_LIBS $PTH_LIBS"
-             CFLAGS="$CFLAGS -DENABLE_PTH"
-@@ -1247,9 +1250,13 @@ CheckPTHREAD()
-             pthread_cflags="-D_REENTRANT -D_THREAD_SAFE"
-             pthread_lib="-pthread"
+-            NAS_CFLAGS="-I/usr/X11R6/include/"
+-            NAS_LIBS="-L/usr/X11R6/lib -laudio -lXt"
++            NAS_CFLAGS=""
++            NAS_LIBS="-laudio -lXt"
+ 
+         dnl On IRIX, the NAS includes are in a different directory,
+         dnl and libnas must be explicitly linked in
+@@ -1642,7 +1642,7 @@ AC_HELP_STRING([--enable-pthread-sem], [
              ;;
-+        *-*-dragonfly*)
-+            pthread_cflags="-D_REENTRANT"
-+            pthread_lib="-pthread"
-+            ;;
          *-*-netbsd*)
--            pthread_cflags="-I/usr/pkg/include -D_REENTRANT"
--            pthread_lib="-L/usr/pkg/lib -lpthread -lsem"
-+            pthread_cflags="-D_REENTRANT"
+             pthread_cflags="-D_REENTRANT -D_THREAD_SAFE"
+-            pthread_lib="-L/usr/lib -lpthread"
 +            pthread_lib="-lpthread"
              ;;
          *-*-openbsd*)
              pthread_cflags="-D_REENTRANT"
-@@ -1723,29 +1730,31 @@ CheckUSBHID()
-         have_libusbhid=no
-         have_libusb=no
-         AC_CHECK_LIB(usbhid, hid_init, have_libusbhid=yes)
--        AC_CHECK_LIB(usb, hid_init, have_libusb=yes)
-         if test x$have_libusbhid = xyes; then
-             SYSTEM_LIBS="$SYSTEM_LIBS -lusbhid"
-+
-+            AC_CHECK_HEADER(usbhid.h, have_usbhid_h=yes)
-+            AC_CHECK_HEADER(libusbhid.h, have_libusbhid_h=yes)
-+            if test x$have_usbhid_h = xyes; then
-+                CFLAGS="$CFLAGS -DHAVE_USBHID_H"
-+            fi
-+            if test x$have_libusbhid_h = xyes; then
-+                CFLAGS="$CFLAGS -DHAVE_LIBUSBHID_H"
-         fi
-+	else
-+            AC_CHECK_LIB(usb, hid_init, have_libusb=yes)
-         if test x$have_libusb = xyes; then
-             SYSTEM_LIBS="$SYSTEM_LIBS -lusb"
--        fi
- 
-         AC_CHECK_HEADER(usb.h, have_usb_h=yes)
--        AC_CHECK_HEADER(usbhid.h, have_usbhid_h=yes)
-         AC_CHECK_HEADER(libusb.h, have_libusb_h=yes)
--        AC_CHECK_HEADER(libusbhid.h, have_libusbhid_h=yes)
-         if test x$have_usb_h = xyes; then
-             CFLAGS="$CFLAGS -DHAVE_USB_H"
-         fi
--        if test x$have_usbhid_h = xyes; then
--            CFLAGS="$CFLAGS -DHAVE_USBHID_H"
--        fi
-         if test x$have_libusb_h = xyes; then
-             CFLAGS="$CFLAGS -DHAVE_LIBUSB_H"
-         fi
--        if test x$have_libusbhid_h = xyes; then
--            CFLAGS="$CFLAGS -DHAVE_LIBUSBHID_H"
-+            fi
-         fi
- 
-         AC_MSG_CHECKING(for usbhid)
-@@ -1755,8 +1764,13 @@ CheckUSBHID()
-           #if defined(HAVE_USB_H)
-           #include <usb.h>
-           #endif
-+	  #ifdef __DragonFly__
-+          #include <bus/usb/usb.h>
-+          #include <bus/usb/usbhid.h>
-+	  #else
-           #include <dev/usb/usb.h>
-           #include <dev/usb/usbhid.h>
-+	  #endif
-           #if defined(HAVE_USBHID_H)
-           #include <usbhid.h>
-           #elif defined(HAVE_LIBUSB_H)
-@@ -1781,8 +1795,13 @@ CheckUSBHID()
+@@ -1985,8 +1985,13 @@ CheckUSBHID()
                #if defined(HAVE_USB_H)
                #include <usb.h>
                #endif
@@ -148,95 +39,3 @@ $NetBSD: patch-aj,v 1.24 2006/02/07 18:15:50 wiz Exp $
                #if defined(HAVE_USBHID_H)
                #include <usbhid.h>
                #elif defined(HAVE_LIBUSB_H)
-@@ -1808,8 +1827,13 @@ CheckUSBHID()
-               #if defined(HAVE_USB_H)
-               #include <usb.h>
-               #endif
-+	      #ifdef __DragonFly__
-+              #include <bus/usb/usb.h>
-+              #include <bus/usb/usbhid.h>
-+	      #else
-               #include <dev/usb/usb.h>
-               #include <dev/usb/usbhid.h>
-+	      #endif
-               #if defined(HAVE_USBHID_H)
-               #include <usbhid.h>
-               #elif defined(HAVE_LIBUSB_H)
-@@ -1834,6 +1858,26 @@ CheckUSBHID()
-     fi
- }
- 
-+dnl Check for the NetBSD machine/joystick.h
-+CheckMachineJoystick()
-+{
-+    if test x$enable_joystick = xyes; then
-+        AC_MSG_CHECKING(whether struct joystick is defined in machine/joystick.h)
-+        have_machine_joystick=no
-+        AC_TRY_COMPILE([
-+          #include <machine/joystick.h>
-+        ],[
-+          struct joystick t;
-+        ],[
-+        have_machine_joystick=yes
-+        ])
-+        AC_MSG_RESULT($have_machine_joystick)
-+        if test x$have_machine_joystick = xyes; then
-+            CFLAGS="$CFLAGS -DHAVE_MACHINE_JOYSTICK"
-+        fi
-+    fi
-+}    
-+
- dnl Check for altivec instruction support using gas syntax
- CheckAltivec()
- {
-@@ -2013,7 +2057,7 @@ case "$target" in
-             COPY_ARCH_SRC(src/timer, linux, SDL_systimer.c)
-         fi
-         ;;
--    *-*-freebsd*)
-+    *-*-freebsd* | *-*-dragonfly*)
-         ARCH=freebsd
-         CheckDummyVideo
-         CheckDiskAudio
-@@ -2065,17 +2109,19 @@ case "$target" in
-         CheckESD
-         CheckNAS
-         CheckX11
-+	CheckDGA
-         CheckAAlib
-         CheckOpenGL
-         CheckPTHREAD
-         CheckSIGACTION
-         CheckUSBHID
-         CheckRPATH
-+	CheckMachineJoystick
-         # Set up files for the audio library
-         if test x$enable_audio = xyes; then
--            CFLAGS="$CFLAGS -DSUNAUDIO_SUPPORT"
--            AUDIO_SUBDIRS="$AUDIO_SUBDIRS sun"
--            AUDIO_DRIVERS="$AUDIO_DRIVERS sun/libaudio_sun.la"
-+            CFLAGS="$CFLAGS -DOPENBSD_AUDIO_SUPPORT"
-+            AUDIO_SUBDIRS="$AUDIO_SUBDIRS openbsd"
-+            AUDIO_DRIVERS="$AUDIO_DRIVERS openbsd/libaudio_openbsd.la"
-         fi
-         # Set up files for the cdrom library
-         if test x$enable_cdrom = xyes; then
-@@ -2084,9 +2130,6 @@ case "$target" in
-         fi
-         # Set up files for the thread library
-         if test x$enable_threads = xyes; then
--            if test x$use_pthreads = xyes; then
--                CFLAGS="$CFLAGS -D_POSIX_THREAD_SYSCALL_SOFT=1"
--            fi
-             CopyUnixThreadSource
-         fi
-         # Set up files for the timer library
-@@ -2755,7 +2798,7 @@ AM_CONDITIONAL([ENABLE_STATIC], [test "$
- # Set runtime shared library paths as needed
- 
- if test "x$enable_rpath" = "xyes"; then
--  if test $ARCH = linux -o $ARCH = freebsd -o $ARCH = bsdi; then
-+  if test $ARCH = linux -o $ARCH = freebsd -o $ARCH = bsdi -o $ARCH = netbsd; then
-     SDL_RLD_FLAGS="-Wl,-rpath,\${exec_prefix}/lib"
-   fi
-   if test $ARCH = solaris; then
