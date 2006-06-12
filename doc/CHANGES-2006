@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.493 2006/06/12 14:33:13 tv Exp $
+$NetBSD: CHANGES-2006,v 1.494 2006/06/12 15:37:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3018,3 +3018,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/auctex to 11.83 [tonio 2006-06-12]
 	Updated math/xfractint to 3.10 [rillig 2006-06-12]
 	Updated net/tor to 0.1.1.21 [tv 2006-06-12]
+	Updated www/squid to 2.5.14nb1 [taca 2006-06-12]
