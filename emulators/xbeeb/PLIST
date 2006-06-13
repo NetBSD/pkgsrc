@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/17 19:27:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/06/13 13:24:35 dsainty Exp $
 bin/xbeeb
 lib/X11/fonts/xbeeb/ttext-grc-ldh.pcf
 lib/X11/fonts/xbeeb/ttext-std-udh.pcf
@@ -10,8 +10,10 @@ lib/X11/fonts/xbeeb/ttext-grc.pcf
 lib/X11/fonts/xbeeb/ttext-grc-udh.pcf
 lib/X11/fonts/xbeeb/ttext-std.pcf
 man/man1/xbeeb.1
-${XBEEBROOT}/roms/xdfs0.70.rom
+${XBEEBROOT}/roms/xdfs0.90.rom
 ${XBEEBROOT}/docs/64doc
+${XBEEBROOT}/docs/Changes-v0.3
+${XBEEBROOT}/docs/Changes-v0.4
 ${XBEEBROOT}/docs/Configuration
 ${XBEEBROOT}/docs/DataXfer
 ${XBEEBROOT}/docs/DiskEmulation
@@ -25,7 +27,6 @@ ${XBEEBROOT}/docs/RomPatches
 ${XBEEBROOT}/docs/SnapshotFormat
 ${XBEEBROOT}/docs/Thanks
 ${XBEEBROOT}/docs/WWWSites
-${XBEEBROOT}/docs/WorkingSoftware
 @dirrm ${XBEEBROOT}/docs
 @dirrm ${XBEEBROOT}/roms
 @dirrm ${XBEEBROOT}
