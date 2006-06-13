@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.500 2006/06/13 10:29:18 salo Exp $
+$NetBSD: CHANGES-2006,v 1.501 2006/06/13 11:32:58 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3031,3 +3031,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated converters/bibtex2html to 1.82 [tonio 2006-06-13]
 	Updated devel/cpuflags to 1.00 [abs 2006-06-13]
 	Updated print/acroread7 to 7.0.8 [salo 2006-06-13]
+	Added emulators/suse100_libxml2 version 10.0 [salo 2006-06-13]
