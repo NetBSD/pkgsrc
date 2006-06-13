@@ -1,26 +1,9 @@
-$NetBSD: distinfo,v 1.27 2006/04/13 14:05:34 drochner Exp $
+$NetBSD: distinfo,v 1.28 2006/06/13 17:25:00 drochner Exp $
 
-SHA1 (mplayer-1.0rc7/MPlayer-1.0pre7try2.tar.bz2) = dcaced128167f15d094c9b63ca8b3dfd8f583e32
-RMD160 (mplayer-1.0rc7/MPlayer-1.0pre7try2.tar.bz2) = d1da9b34f4c3de67a3a41f9117f32d2ee88c6e54
-Size (mplayer-1.0rc7/MPlayer-1.0pre7try2.tar.bz2) = 6868786 bytes
-SHA1 (patch-aa) = 708128dde21b8de799aa26d75335da76543e2373
-SHA1 (patch-ab) = 1a08f717e326d83b355eee26e1be9c0636b735c5
-SHA1 (patch-ac) = 3b9ae32e6e656ec4b58b7e51a1c2eaa280384f3e
-SHA1 (patch-ad) = d705dd315e913593223b83e533c60a9620d34cc8
-SHA1 (patch-ae) = 601808d8c89cba68156fb3c95fe9fcfb8da4fca0
-SHA1 (patch-af) = 6eab8572b239f6ac7afc03ad6254a7c97f90663e
-SHA1 (patch-ah) = 744f073e791257768e5ec7da8e321d2f25d1fb2c
-SHA1 (patch-ai) = a884b7a23ff8b2c31e6190d2ba9989a8f0057a0c
-SHA1 (patch-aj) = cb1f5451f9614cc39255fc5ce2afef7d68c31298
-SHA1 (patch-da) = be092da4f854708c1ef47f10c26e361c095a6799
-SHA1 (patch-dc) = b11ef06a89f13e2ae5e013d569aa5acc99c770aa
-SHA1 (patch-dd) = e5b23b73a1e53e3185ecbac26042432395cd5e63
-SHA1 (patch-de) = 923814d978a3ed2b00494cf7f7fd17acd72aa610
-SHA1 (patch-df) = 0a85d1d8fbbbc1a86436e7364b72619a9a32e2d7
-SHA1 (patch-dg) = 1633dfd61c83796ce148ede22bafbe01f67d2bd4
-SHA1 (patch-dh) = 639638d871af2462945d8c5e454cae291a15e939
-SHA1 (patch-di) = 5b4c7d96537882422fb648181a93ec9ba9e13c7e
-SHA1 (patch-dj) = e72e08dda9f3eb97bf5e63751bf18999f1689434
-SHA1 (patch-dk) = 744911451794b554f9754b4cd77cf24520ed0f8e
-SHA1 (patch-dm) = b57da36cce0b896b51ca1ff2eef3c58ed95e2b68
-SHA1 (patch-do) = dbd4705c81ee4e6fa7cefc93dc187733a739d710
+SHA1 (mplayer-1.0rc8/MPlayer-1.0pre8.tar.bz2) = 8a0929b84dcb37d47c062230ce693b64b3e30921
+RMD160 (mplayer-1.0rc8/MPlayer-1.0pre8.tar.bz2) = 23fd13fe75a5c4029ead043aa4b3b08fe5fe44f0
+Size (mplayer-1.0rc8/MPlayer-1.0pre8.tar.bz2) = 8166628 bytes
+SHA1 (patch-aa) = 4b80c0d18f0c9ae3f65d572965222db709a2a6b3
+SHA1 (patch-ab) = 29bf59ecb3d283708ae1c5002d1fa71cac627cc9
+SHA1 (patch-ac) = 6d0de4bd41d9842ea1bf46e9fbe60bf6a943b913
+SHA1 (patch-ah) = 2960a9f44b9173cd9e7a82c0dbc2379a13ed6307
