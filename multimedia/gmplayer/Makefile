@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/04/13 14:05:34 drochner Exp $
+# $NetBSD: Makefile,v 1.45 2006/06/13 17:25:00 drochner Exp $
 
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
@@ -9,7 +9,6 @@
 #
 
 PKGNAME=	gmplayer-${MPLAYER_PKG_VERSION}
-PKGREVISION=	6
 
 SKIN_SITES=	http://www1.mplayerhq.hu/MPlayer/Skin/		\
 		ftp://ftp1.mplayerhq.hu/MPlayer/Skin/		\
@@ -75,7 +74,7 @@ do-install:
 
 .include "../../multimedia/mplayer-share/Makefile.depends"
 
-.include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
 .include "../../multimedia/mplayer-share/Makefile.cflags"
