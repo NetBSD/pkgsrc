@@ -1,8 +1,8 @@
-$NetBSD: acroread.diff,v 1.3 2006/04/09 09:53:59 wiz Exp $
+$NetBSD: acroread.diff,v 1.4 2006/06/13 14:04:35 salo Exp $
 
---- acroread.orig	2005-11-07 12:05:17.000000000 +0000
-+++ acroread
-@@ -214,7 +214,7 @@ else
+--- acroread.orig	2006-05-23 01:33:35.000000000 +0000
++++ acroread	2006-06-13 13:55:00.000000000 +0000
+@@ -233,7 +233,7 @@ else
   ScriptDirectory="`/bin/pwd 2> /dev/null`"
   cd "$cwd"
  fi
@@ -11,7 +11,7 @@ $NetBSD: acroread.diff,v 1.3 2006/04/09 09:53:59 wiz Exp $
  
  
  #
-@@ -439,18 +439,18 @@ check_gtk_ver_and_set_lib_path()
+@@ -476,18 +476,18 @@ check_gtk_ver_and_set_lib_path()
      OLD_IFS=""
  
      # This checks for libs in cache /etc/ld.so.cache
@@ -42,27 +42,27 @@ $NetBSD: acroread.diff,v 1.3 2006/04/09 09:53:59 wiz Exp $
  
      return 1
  }
-@@ -577,6 +577,19 @@ case "$os_name" in
+@@ -614,6 +614,19 @@ case "$os_name" in
      ACRO_CONFIG=intellinux
      export ACRO_CONFIG
      ;;
-+   NetBSD | DragonFly)
-+     machine_type=`uname -p`
-+     case "$machine_type" in
-+       i386)
-+         ACRO_CONFIG=intellinux
-+         export ACRO_CONFIG
-+         ;;
-+       sparc*)
-+         ACRO_CONFIG=sparcsolaris
-+         export ACRO_CONFIG
-+         ;;
-+     esac
-+     ;;
- esac
- 
- if [ -z "$ACRO_CONFIG" ] ; then
-@@ -611,7 +624,7 @@ case "$ACRO_CONFIG" in
++  NetBSD | DragonFly)
++    machine_type=`uname -p`
++    case "$machine_type" in
++      i386)
++        ACRO_CONFIG=intellinux
++        export ACRO_CONFIG
++        ;;
++      sparc*)
++        ACRO_CONFIG=sparcsolaris
++        export ACRO_CONFIG
++        ;;
++    esac
++    ;;
+   AIX)
+     ACRO_CONFIG=rs6000aix
+     export ACRO_CONFIG
+@@ -668,7 +681,7 @@ case "$ACRO_CONFIG" in
      ;;
  esac
  
