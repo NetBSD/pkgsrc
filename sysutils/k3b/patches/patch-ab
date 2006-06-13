@@ -1,14 +1,14 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
+$NetBSD: patch-ab,v 1.2 2006/06/13 12:36:16 markd Exp $
 
---- libk3bdevice/k3bdevice.cpp.orig	2005-12-16 02:08:38.000000000 +1300
+--- libk3bdevice/k3bdevice.cpp.orig	2006-04-12 05:26:45.000000000 +1200
 +++ libk3bdevice/k3bdevice.cpp
 @@ -63,6 +63,10 @@ typedef unsigned char u8;
  #define CD_FRAMESIZE_RAW 2352
  #endif
  
-+// #ifdef Q_OS_NETBSD
-+// #include <sys/scsiio.h>
-+// #endif
++#ifdef Q_OS_NETBSD
++#include <sys/cdio.h>
++#endif
 +
  #ifdef HAVE_RESMGR
  extern "C" {
@@ -42,52 +42,86 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
  #ifdef Q_OS_FREEBSD
    struct cam_device *cam;
  #endif
-@@ -1466,15 +1482,7 @@ bool K3bDevice::Device::fixupToc( K3bDev
+@@ -1465,6 +1475,19 @@ bool K3bDevice::Device::fixupToc( K3bDev
+ 
  bool K3bDevice::Device::block( bool b ) const
  {
++#ifdef Q_OS_NETBSD
++  bool success = false;
++  bool needToClose = !isOpen();
++  int arg = b ? 1 : 0;
++
++  if( open() ) {
++    if ( ::ioctl( d->deviceFd, DIOCLOCK, &arg ) >= 0)
++      success = true;
++    if( needToClose )
++      close();
++  }
++  return success;
++#else
    ScsiCommand cmd( this );
--  cmd[0] = MMC_PREVENT_ALLOW_MEDIUM_REMOVAL;
--  if( b )
--    cmd[4] = 0x01;
--  int r = cmd.transport();
--
--  if( r )
--    kdDebug() << "(K3bDevice::Device) MMC ALLOW MEDIA REMOVAL failed." << endl;
--
--  return ( r == 0 );
-+  return cmd.traylock( b );
+   cmd[0] = MMC_PREVENT_ALLOW_MEDIUM_REMOVAL;
+   if( b )
+@@ -1475,6 +1498,7 @@ bool K3bDevice::Device::block( bool b ) 
+     kdDebug() << "(K3bDevice::Device) MMC ALLOW MEDIA REMOVAL failed." << endl;
+ 
+   return ( r == 0 );
++#endif
  }
  
  bool K3bDevice::Device::rewritable() const
-@@ -1497,25 +1505,14 @@ bool K3bDevice::Device::rewritable() con
+@@ -1496,6 +1520,19 @@ bool K3bDevice::Device::rewritable() con
+ 
  bool K3bDevice::Device::eject() const
  {
++#ifdef Q_OS_NETBSD
++  bool success = false;
++  bool needToClose = !isOpen();
++  int arg = 0;
++
++  if( open() ) {
++    if ( ::ioctl( d->deviceFd, DIOCEJECT, &arg ) >= 0)
++      success = true;
++    if( needToClose )
++      close();
++  }
++  return success;
++#else
    ScsiCommand cmd( this );
--  cmd[0] = MMC_START_STOP_UNIT;
--
--  // Since all other eject methods I saw also start the unit before ejecting
--  // we do it also although I don't know why...
--  cmd[4] = 0x1;      // Start unit
--  cmd.transport();
--
--  cmd[4] = 0x2;    // LoEj = 1, Start = 0
--
--  return !cmd.transport();
-+  return cmd.eject( true );
+   cmd[0] = MMC_START_STOP_UNIT;
+ 
+@@ -1507,15 +1544,30 @@ bool K3bDevice::Device::eject() const
+   cmd[4] = 0x2;    // LoEj = 1, Start = 0
+ 
+   return !cmd.transport();
++#endif
  }
  
  
  bool K3bDevice::Device::load() const
  {
++#ifdef Q_OS_NETBSD
++  bool success = false;
++  bool needToClose = !isOpen();
++  int arg = 0;
++
++  if( open() ) {
++    if ( ::ioctl( d->deviceFd, CDIOCCLOSE, &arg ) >= 0)
++      success = true;
++    if( needToClose )
++      close();
++  }
++  return success;
++#else
    ScsiCommand cmd( this );
--  cmd[0] = MMC_START_STOP_UNIT;
--  cmd[4] = 0x3;    // LoEj = 1, Start = 1
--  return !cmd.transport();
-+  return !cmd.eject( false );
+   cmd[0] = MMC_START_STOP_UNIT;
+   cmd[4] = 0x3;    // LoEj = 1, Start = 1
+   return !cmd.transport();
++#endif
  }
  
  
-@@ -1557,7 +1554,7 @@ bool K3bDevice::Device::open( bool write
+@@ -1557,7 +1609,7 @@ bool K3bDevice::Device::open( bool write
    }
    return (d->cam != 0);
  #endif
@@ -96,7 +130,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
    if( d->deviceFd == -1 )
      d->deviceFd = openDevice( QFile::encodeName(devicename()), write );
  
-@@ -1574,7 +1571,7 @@ void K3bDevice::Device::close() const
+@@ -1574,7 +1626,7 @@ void K3bDevice::Device::close() const
      d->cam = 0;
    }
  #endif
@@ -105,7 +139,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
    if( d->deviceFd != -1 ) {
      ::close( d->deviceFd );
      d->deviceFd = -1;
-@@ -1588,7 +1585,7 @@ bool K3bDevice::Device::isOpen() const
+@@ -1588,7 +1640,7 @@ bool K3bDevice::Device::isOpen() const
  #ifdef Q_OS_FREEBSD
    return d->cam;
  #endif
