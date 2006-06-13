@@ -1,4 +1,4 @@
-# $Id: optimize_gcc.mk,v 1.28 2006/02/09 13:45:04 abs Exp $
+# $Id: optimize_gcc.mk,v 1.29 2006/06/13 09:56:00 abs Exp $
 
 # This file is 'experimental' - which is doublespeak for unspeakably
 # ugly, and quite broken by design.
@@ -27,7 +27,7 @@ PKG_EXCLUDE_FAST_MATH+=qt3-libs     # gcc3.3.3, NetBSD i386/3.0, breaks kde3
 PKG_EXCLUDE_FAST_MATH+=perl         # perl5 '49/49!=1'
 
 CPUFLAGS_PKGNAME:=${PKGNAME:?${PKGNAME}:${DISTNAME}}
-CPUFLAGS_PKGBASE:=${PKGBASE:?${PKGBASE}:${CPUFLAGS_PKGNAME:C/-[^-]*$//}}
+CPUFLAGS_PKGBASE:=${PKGBASE:?${PKGBASE}:${CPUFLAGS_PKGNAME:C/-[^-}]*$//}}
 
 .if !empty(PKG_EXCLUDE_OMIT_FRAME_POINTER:M${CPUFLAGS_PKGBASE})
 COPT_FLAGS:=    ${COPT_FLAGS:S/-fomit-frame-pointer//}
