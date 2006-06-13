@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/05/16 17:32:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/06/13 19:54:35 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -54,7 +54,6 @@ include/gnucash/dialog-style-sheet.h
 include/gnucash/dialog-totd.h
 include/gnucash/dialog-transfer.h
 include/gnucash/dialog-utils.h
-include/gnucash/druid-commodity.h
 include/gnucash/druid-gconf-setup.h
 include/gnucash/druid-gnc-xml-import.h
 include/gnucash/druid-utils.h
@@ -196,7 +195,6 @@ include/gnucash/window-report.h
 info/gnucash-design.info
 lib/gnucash/libgnc-business-ledger.la
 lib/gnucash/libgncmod-app-utils.la
-lib/gnucash/libgncmod-binary-import.la
 lib/gnucash/libgncmod-business-backend-file.la
 lib/gnucash/libgncmod-business-core.la
 lib/gnucash/libgncmod-business-gnome.la
@@ -234,6 +232,7 @@ lib/gnucash/libgw-register-core.la
 lib/gnucash/libgw-report-gnome.la
 lib/gnucash/libgw-report-system.la
 lib/libcore-utils.la
+lib/libgnc-backend-file-utils.la
 lib/libgnc-backend-file.la
 lib/libgncgnome.la
 lib/libgncmodule.la
@@ -500,7 +499,6 @@ share/gnucash/doc/projects.html
 share/gnucash/glade/account.glade
 share/gnucash/glade/acctperiod.glade
 share/gnucash/glade/billterms.glade
-share/gnucash/glade/binary-import.glade
 share/gnucash/glade/budget.glade
 share/gnucash/glade/businessprefs.glade
 share/gnucash/glade/chart-export.glade
@@ -678,7 +676,6 @@ share/gnucash/scm/gnc-menu-extensions.scm
 share/gnucash/scm/gnc-numeric.scm
 share/gnucash/scm/gnumeric/gnumeric-utilities.scm
 share/gnucash/scm/gnumeric/table-utils.scm
-share/gnucash/scm/help-topics-index.scm
 share/gnucash/scm/hooks.scm
 share/gnucash/scm/html-acct-table.scm
 share/gnucash/scm/html-barchart.scm
@@ -759,6 +756,7 @@ share/locale/nl/LC_MESSAGES/gnucash.mo
 share/locale/pl/LC_MESSAGES/gnucash.mo
 share/locale/pt/LC_MESSAGES/gnucash.mo
 share/locale/pt_BR/LC_MESSAGES/gnucash.mo
+share/locale/ro/LC_MESSAGES/gnucash.mo
 share/locale/ru/LC_MESSAGES/gnucash.mo
 share/locale/rw/LC_MESSAGES/gnucash.mo
 share/locale/sk/LC_MESSAGES/gnucash.mo
@@ -768,8 +766,7 @@ share/locale/tr/LC_MESSAGES/gnucash.mo
 share/locale/uk/LC_MESSAGES/gnucash.mo
 share/locale/zh_CN/LC_MESSAGES/gnucash.mo
 share/locale/zh_TW/LC_MESSAGES/gnucash.mo
-share/mime-info/gnucash.keys
-share/mime-info/gnucash.mime
+share/pixmaps/gnucash-icon.png
 share/xml/gnucash/xsl/README
 share/xml/gnucash/xsl/date-time.xsl
 share/xml/gnucash/xsl/gnucash-gnccustomer-vcard2.xsl
