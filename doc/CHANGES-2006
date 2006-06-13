@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.504 2006/06/13 16:02:09 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.505 2006/06/13 16:52:13 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3043,3 +3043,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated sysutils/bacula-gnome-console to 1.38.10 [ghen 2006-06-13]
 	Updated sysutils/bacula-tray-monitor to 1.38.10 [ghen 2006-06-13]
 	Updated sysutils/bacula-wx-console to 1.38.10 [ghen 2006-06-13]
+	Updated mail/dovecot to 1.0beta9 [ghen 2006-06-13]
