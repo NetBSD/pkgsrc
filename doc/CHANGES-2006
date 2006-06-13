@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.508 2006/06/13 18:08:06 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.509 2006/06/13 19:55:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3047,3 +3047,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/awstats to 6.6nb3 [minskim 2006-06-13]
 	Updated www/ap2-python to 3.2.8 [darcy 2006-06-13]
 	Updated net/aiccu to 20050131nb2 [ghen 2006-06-13]
+	Updated finance/gnucash-devel to 1.9.7 [wiz 2006-06-13]
