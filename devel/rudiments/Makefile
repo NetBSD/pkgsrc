@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/05/21 13:59:04 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/06/13 19:23:24 joerg Exp $
 #
 
 DISTNAME=		rudiments-0.29
@@ -10,13 +10,19 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://rudiments.sourceforge.net/
 COMMENT=		C++ class library for client/server/daemon applications
 
-BROKEN_IN=		pkgsrc-2006Q1
-
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+PLIST_SUBST+=		COND_SHM="@comment "
+.else
+PLIST_SUBST+=		COND_SHM=""
+.endif
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

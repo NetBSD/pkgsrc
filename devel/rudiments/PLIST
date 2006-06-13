@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/06/13 17:36:17 darcy Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/06/13 19:23:24 joerg Exp $
 bin/rudiments-config
 include/rudiments/character.h
 include/rudiments/charstring.h
@@ -143,6 +143,8 @@ include/rudiments/private/serviceentry.h
 include/rudiments/private/serviceentryincludes.h
 include/rudiments/private/sharedmemory.h
 include/rudiments/private/sharedmemoryincludes.h
+${COND_SHM}include/rudiments/private/shmfile.h
+${COND_SHM}include/rudiments/private/shmfileincludes.h
 include/rudiments/private/signalclassesincludes.h
 include/rudiments/private/signalhandler.h
 include/rudiments/private/signalset.h
@@ -181,6 +183,7 @@ include/rudiments/server.h
 include/rudiments/serversocket.h
 include/rudiments/serviceentry.h
 include/rudiments/sharedmemory.h
+${COND_SHM}include/rudiments/shmfile.h
 include/rudiments/signalclasses.h
 include/rudiments/snooze.h
 include/rudiments/stringbuffer.h
