@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/09 09:53:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/06/13 10:28:24 salo Exp $
 Acrobat7/Browser/HowTo/ENU/Browser_Plugin_HowTo.txt
 Acrobat7/Browser/install_browser_plugin
 Acrobat7/Browser/${PLATFORM}/nppdf.so
@@ -155,6 +155,7 @@ Acrobat7/Reader/${PLATFORM}/lib/libcrypto.so.0.9.6
 Acrobat7/Reader/${PLATFORM}/lib/libcurl.so
 Acrobat7/Reader/${PLATFORM}/lib/libcurl.so.2
 Acrobat7/Reader/${PLATFORM}/lib/libcurl.so.2.0.2
+Acrobat7/Reader/${PLATFORM}/lib/librt3d.so
 Acrobat7/Reader/${PLATFORM}/lib/libssl.so
 Acrobat7/Reader/${PLATFORM}/lib/libssl.so.0
 Acrobat7/Reader/${PLATFORM}/lib/libssl.so.0.9.6
@@ -181,6 +182,11 @@ Acrobat7/Reader/${PLATFORM}/plug_ins/Spelling.api
 Acrobat7/Reader/${PLATFORM}/plug_ins/checkers.api
 Acrobat7/Reader/${PLATFORM}/plug_ins/ewh.api
 Acrobat7/Reader/${PLATFORM}/plug_ins/wwwlink.api
+Acrobat7/Reader/${PLATFORM}/plug_ins3d/2d.x3d
+Acrobat7/Reader/${PLATFORM}/plug_ins3d/3difr.x3d
+Acrobat7/Reader/${PLATFORM}/plug_ins3d/drvOpenGL.x3d
+Acrobat7/Reader/${PLATFORM}/plug_ins3d/drvSOFT.x3d
+Acrobat7/Reader/${PLATFORM}/plug_ins3d/tesselate.x3d
 Acrobat7/Reader/${PLATFORM}/res
 Acrobat7/Resource/CMap/Identity-H
 Acrobat7/Resource/CMap/Identity-V
@@ -260,11 +266,12 @@ Acrobat7/Resource/Linguistics/Providers/Proximity/brt0401.lex
 Acrobat7/Resource/Linguistics/Providers/Proximity/brt0402.lex
 Acrobat7/Resource/Linguistics/Providers/Proximity/brt32.clx
 Acrobat7/Resource/Linguistics/Providers/Proximity/brtphon.env
-Acrobat7/Resource/Linguistics/Providers/Proximity/can112.lex
+Acrobat7/Resource/Linguistics/Providers/Proximity/can129.lex
 Acrobat7/Resource/Linguistics/Providers/Proximity/can32.clx
 Acrobat7/Resource/Linguistics/Providers/Proximity/canphon.env
 Acrobat7/Resource/Linguistics/Providers/Proximity/eng32.clx
 Acrobat7/Resource/Linguistics/Providers/Proximity/engphon.env
+Acrobat7/Resource/Linguistics/Providers/Proximity/usa03.lex
 Acrobat7/Resource/Linguistics/Providers/Proximity/usa86.lex
 Acrobat7/Resource/Linguistics/Providers/Proximity/usa8601.lex
 Acrobat7/Resource/Linguistics/Providers/Proximity/usa8602.lex
@@ -305,6 +312,7 @@ bin/acroread7
 @dirrm Acrobat7/Reader/${PLATFORM}/plug_ins/Annotations/Stamps
 @dirrm Acrobat7/Reader/${PLATFORM}/plug_ins/Annotations
 @dirrm Acrobat7/Reader/${PLATFORM}/plug_ins/AcroForm
+@dirrm Acrobat7/Reader/${PLATFORM}/plug_ins3d
 @dirrm Acrobat7/Reader/${PLATFORM}/plug_ins
 @dirrm Acrobat7/Reader/${PLATFORM}/lib
 @dirrm Acrobat7/Reader/${PLATFORM}/bin
