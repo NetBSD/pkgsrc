@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5093 2006/06/13 17:00:39 wiz Exp $
+$NetBSD: TODO,v 1.5094 2006/06/13 19:55:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -558,7 +558,6 @@ Suggested package updates
 	o gnome2-terminal-2.14.2
 	o gnomeicu-0.99.10
 	o gnopernicus-1.0.5
-	o gnucash-devel-1.9.7
 	o gnucash-docs-1.9.0
 	o gnus-5.10.8
 	o gnustep-objc-1.4.0
