@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.9 2005/05/02 16:57:19 drochner Exp $
+$NetBSD: patch-ad,v 1.10 2006/06/13 12:28:09 markd Exp $
 
---- src/main/Makefile.in.orig	2005-04-18 23:29:59.000000000 +0200
+--- src/main/Makefile.in.orig	2006-04-10 10:19:51.000000000 +1200
 +++ src/main/Makefile.in
-@@ -144,7 +144,7 @@ R: Makefile
+@@ -103,7 +103,7 @@ COMMON_DEPENDENCIES = \
+ R_binary = R.bin
+ R_bin_OBJECTS = Rmain.o @WANT_R_SHLIB_FALSE@$(OBJECTS)
+ @WANT_R_SHLIB_FALSE@R_bin_LDADD = $(RLIBS) $(EXTRA_LIBS)
+-@WANT_R_SHLIB_TRUE@R_bin_LDADD = -L../../lib@R_ARCH@ -lR
++@WANT_R_SHLIB_TRUE@R_bin_LDADD = -L../../lib@R_ARCH@ ${COMPILER_RPATH_FLAG}$(Rexeclibdir) -lR
+ R_bin_DEPENDENCIES =@WANT_R_SHLIB_FALSE@ $(RLIBS) $(COMMON_DEPENDENCIES)
  
- $(R_binary): $(R_bin_OBJECTS) $(R_bin_DEPENDENCIES)
- @WANT_R_SHLIB_FALSE@	$(MAIN_LINK) -o $@ $(R_bin_LDFLAGS) $(R_bin_OBJECTS) $(R_bin_LDADD) $(READLINE_LIBS) $(LIBS)
--@WANT_R_SHLIB_TRUE@	$(MAIN_LINK) -o $@ $(R_bin_LDFLAGS) $(R_bin_OBJECTS) -L../../lib -lR
-+@WANT_R_SHLIB_TRUE@	$(MAIN_LINK) -o $@ $(R_bin_LDFLAGS) $(R_bin_OBJECTS) -L../../lib ${COMPILER_RPATH_FLAG}$(Rexeclibdir) -lR
- 
- install-bin-local: $(R_binary)
- 	@$(MAKE) rhome="$(abs_top_builddir)" install-bin
+ libR_la = libR$(DYLIB_EXT)

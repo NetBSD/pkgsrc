@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.84 2006/06/09 11:15:32 rillig Exp $
+# $NetBSD: Makefile,v 1.85 2006/06/13 12:28:09 markd Exp $
 
-DISTNAME=		R-2.2.1
-PKGREVISION=		3
+DISTNAME=		R-2.3.1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-2/}
 
