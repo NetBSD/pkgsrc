@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.14.2.1 2006/04/06 00:37:03 snj Exp $
+$NetBSD: distinfo,v 1.14.2.2 2006/06/13 21:29:05 salo Exp $
 
-SHA1 (dia-0.94.tar.gz) = a55128bd56e76295c9bc8217f25b6ec079727e25
-RMD160 (dia-0.94.tar.gz) = f7e20b294b7b739d5f408c34e0fbc533def5e3b9
-Size (dia-0.94.tar.gz) = 5241128 bytes
+SHA1 (dia-0.95-1.tar.gz) = eb00a1a2a2b7b3dd966e4375557b770cf75ffb34
+RMD160 (dia-0.95-1.tar.gz) = c903b34fa4f7f2e2ff7e9ec8497608d92c76d7b1
+Size (dia-0.95-1.tar.gz) = 6035584 bytes
 SHA1 (patch-aa) = f556878638291a696894181c5a6907e688589530
-SHA1 (patch-ab) = f419cc82faa524ac1f02e88ae3264fcb9b453e09
-SHA1 (patch-ac) = ecc4ed32089980cf5fa1697c278386fe5856f8bb
-SHA1 (patch-ad) = 7e3874ebcaa1781e5d2ad406258a3e7ab1285503
 SHA1 (patch-be) = dab7626daefcd702b31f54d198311d9be921e1ff
+SHA1 (patch-ca) = 48617d334d852253f858176bbe9222f61d379c37
+SHA1 (patch-cb) = fab6a63d25781fa9ab7c6a4f6e5ff43ff29aec6e
+SHA1 (patch-cc) = f2c58551d31ec577d25f9dfc62f48f28845d2dd7

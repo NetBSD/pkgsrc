@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.8 2005/08/10 20:56:17 jlam Exp $
+# $NetBSD: Makefile.common,v 1.8.6.1 2006/06/13 21:29:04 salo Exp $
 #
 
-DISTNAME=	dia-0.94
-PKGNAME=	${DISTNAME:S/dia-/dia${DIA_SUBPKG}-/}
+DISTNAME=	dia-0.95-1
+DIAPKGNAME=	dia-0.95.1
+PKGNAME=	${DIAPKGNAME:S/dia-/dia${DIA_SUBPKG}-/}
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dia/0.94/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dia/0.95/}
 
 MAINTAINER=	jmcneill@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/dia/
@@ -17,6 +18,7 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
+USE_LANGUAGES+=		c++
 
 CONFIGURE_ARGS+=	--without-python
 
