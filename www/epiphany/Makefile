@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2006/06/09 07:28:06 jnemeth Exp $
+# $NetBSD: Makefile,v 1.59 2006/06/13 17:27:44 drochner Exp $
 #
 
-DISTNAME=	epiphany-2.14.1.1
+DISTNAME=	epiphany-2.14.2.1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/2.14/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,7 +17,7 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES+=		c++
 
-PKGCONFIG_OVERRIDE=	data/epiphany-1.8.pc.in
+PKGCONFIG_OVERRIDE=	data/epiphany-2.14.pc
 
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
@@ -45,6 +45,7 @@ CFLAGS+=		-I${BUILDLINK_PREFIX.mozilla-gtk2}/include/mozilla-gtk2/pref
 .endif
 
 GCONF2_SCHEMAS=		epiphany.schemas
+GCONF2_SCHEMAS+=	epiphany-fonts.schemas
 GCONF2_SCHEMAS+=	epiphany-lockdown.schemas
 GCONF2_SCHEMAS+=	epiphany-pango.schemas
 
