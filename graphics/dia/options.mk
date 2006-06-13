@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2005/05/31 10:01:36 dillo Exp $
+# $NetBSD: options.mk,v 1.3.8.1 2006/06/13 21:29:05 salo Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dia
 #PKG_SUPPORTED_OPTIONS=	gnome cairo
@@ -13,9 +13,11 @@ CONFIGURE_ARGS+=	--enable-gnome
 .  include "../../devel/libgnome/buildlink3.mk"
 .  include "../../devel/libgnomeui/buildlink3.mk"
 PLIST_SUBST+=		GNOME_OPTION=
+PLIST_SUBST+=		DIA_HELPDIR=share/gnome/help/dia
 .else
 CONFIGURE_ARGS+=	--disable-gnome
 PLIST_SUBST+=		GNOME_OPTION='@comment '
+PLIST_SUBST+=		DIA_HELPDIR=share/dia/help
 .endif
 
 # Disabled, freedesktop is down.
@@ -27,4 +29,3 @@ PLIST_SUBST+=		CAIRO_OPTION=
 CONFIGURE_ARGS+=	--without-cairo
 PLIST_SUBST+=		CAIRO_OPTION='@comment '
 .endif
-
