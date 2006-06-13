@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5090 2006/06/13 12:41:03 markd Exp $
+$NetBSD: TODO,v 1.5091 2006/06/13 13:33:50 dsainty Exp $
 
 Suggested new packages
 ======================
@@ -1219,7 +1219,6 @@ Suggested package updates
 	o x11vnc-0.8.1 [pkg/33700]
 	o x2vnc-1.7.1
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
-	o xbeeb-0.4.1
 	o xbindkeys-1.7.2
 	o xblast-2.10.0
 	o xboard-4.2.7
