@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.501 2006/06/13 11:32:58 salo Exp $
+$NetBSD: CHANGES-2006,v 1.502 2006/06/13 12:41:03 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3032,3 +3032,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/cpuflags to 1.00 [abs 2006-06-13]
 	Updated print/acroread7 to 7.0.8 [salo 2006-06-13]
 	Added emulators/suse100_libxml2 version 10.0 [salo 2006-06-13]
+	Updated devel/kdbg to 2.0.4 [markd 2006-06-13]
+	Updated multimedia/kmplayer to 0.9.2a [markd 2006-06-13]
+	Updated math/R to 2.3.1 [markd 2006-06-13]
+	Updated sysutils/k3b to 0.12.15nb1 [markd 2006-06-13]
