@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.499 2006/06/13 09:58:54 abs Exp $
+$NetBSD: CHANGES-2006,v 1.500 2006/06/13 10:29:18 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3030,3 +3030,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/url2pkg to 1.34 [reed 2006-06-12]
 	Updated converters/bibtex2html to 1.82 [tonio 2006-06-13]
 	Updated devel/cpuflags to 1.00 [abs 2006-06-13]
+	Updated print/acroread7 to 7.0.8 [salo 2006-06-13]
