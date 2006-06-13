@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5089 2006/06/13 10:29:18 salo Exp $
+$NetBSD: TODO,v 1.5090 2006/06/13 12:41:03 markd Exp $
 
 Suggested new packages
 ======================
@@ -307,7 +307,6 @@ Suggested package updates
 	o GWLib-0.7.0
 	o GridSim-3.3
 	o PAM-0.80
-	o R-2.3.1
 	o REminiscence-0.1.8
 	o SDL_mixer-1.2.7
 	o SmartEiffel-2.1
@@ -662,7 +661,6 @@ Suggested package updates
 	o kapooka-0.3
 	o kazehakase-0.3.8
 	o kbarcode-2.0.2
-	o kdbg-2.0.4
 	o kdrill-6.4
 	o kinput2-3.1
 	o kmp-0.5
