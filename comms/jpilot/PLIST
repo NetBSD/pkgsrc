@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/17 07:07:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/06/13 21:52:11 bad Exp $
 bin/jpilot
 bin/jpilot-dump
 bin/jpilot-sync
@@ -11,7 +11,6 @@ lib/jpilot/plugins/libsynctime.la
 man/man1/jpilot-dial.1
 man/man1/jpilot-dump.1
 man/man1/jpilot-sync.1
-man/man1/jpilot-upgrade-99.1
 man/man1/jpilot.1
 share/doc/${PKGNAME}/AUTHORS
 share/doc/${PKGNAME}/BUGS
@@ -26,20 +25,27 @@ share/doc/${PKGNAME}/icons/jpilot-icon1.xpm
 share/doc/${PKGNAME}/icons/jpilot-icon2.xpm
 share/doc/${PKGNAME}/icons/jpilot-icon3.xpm
 share/doc/${PKGNAME}/icons/jpilot-icon4.xpm
-share/doc/${PKGNAME}/jpilot-address.png
-share/doc/${PKGNAME}/jpilot-datebook.png
-share/doc/${PKGNAME}/jpilot-expense.png
-share/doc/${PKGNAME}/jpilot-install.png
-share/doc/${PKGNAME}/jpilot-memo.png
-share/doc/${PKGNAME}/jpilot-prefs.png
-share/doc/${PKGNAME}/jpilot-print.png
-share/doc/${PKGNAME}/jpilot-search.png
-share/doc/${PKGNAME}/jpilot-todo.png
-share/doc/${PKGNAME}/jpilot-toplogo.jpg
-share/doc/${PKGNAME}/manual.html
-share/doc/${PKGNAME}/plugin.html
+share/doc/${PKGNAME}/manual/jpilot-address.png
+share/doc/${PKGNAME}/manual/jpilot-datebook.png
+share/doc/${PKGNAME}/manual/jpilot-expense.png
+share/doc/${PKGNAME}/manual/jpilot-install.png
+share/doc/${PKGNAME}/manual/jpilot-memo.png
+share/doc/${PKGNAME}/manual/jpilot-prefs-1.png
+share/doc/${PKGNAME}/manual/jpilot-prefs-2.png
+share/doc/${PKGNAME}/manual/jpilot-prefs-3.png
+share/doc/${PKGNAME}/manual/jpilot-prefs-4.png
+share/doc/${PKGNAME}/manual/jpilot-prefs-5.png
+share/doc/${PKGNAME}/manual/jpilot-prefs-6.png
+share/doc/${PKGNAME}/manual/jpilot-prefs-7.png
+share/doc/${PKGNAME}/manual/jpilot-prefs-8.png
+share/doc/${PKGNAME}/manual/jpilot-print.png
+share/doc/${PKGNAME}/manual/jpilot-search.png
+share/doc/${PKGNAME}/manual/jpilot-todo.png
+share/doc/${PKGNAME}/manual/jpilot-toplogo.jpg
+share/doc/${PKGNAME}/manual/manual.html
+share/doc/${PKGNAME}/manual/plugin.html
 share/doc/jpilot/BUGS
-share/gnome/apps/Applications/jpilot.desktop
+share/applications/jpilot.desktop
 share/jpilot/AddressDB.pdb
 share/jpilot/DatebookDB.pdb
 share/jpilot/ExpenseDB.pdb
@@ -62,14 +68,15 @@ share/locale/ja/LC_MESSAGES/jpilot.mo
 share/locale/nl/LC_MESSAGES/jpilot.mo
 share/locale/no/LC_MESSAGES/jpilot.mo
 share/locale/ru/LC_MESSAGES/jpilot.mo
+share/locale/rw/LC_MESSAGES/jpilot.mo
 share/locale/sv/LC_MESSAGES/jpilot.mo
 share/locale/tr/LC_MESSAGES/jpilot.mo
 share/locale/vi/LC_MESSAGES/jpilot.mo
 share/locale/zh_CN/LC_MESSAGES/jpilot.mo
 share/locale/zh_TW/LC_MESSAGES/jpilot.mo
 @dirrm share/jpilot
-@dirrm share/gnome/apps/Applications
 @dirrm share/doc/${PKGNAME}/icons
+@dirrm share/doc/${PKGNAME}/manual
 @dirrm share/doc/${PKGNAME}
 @dirrm share/doc/jpilot
 @dirrm lib/jpilot/plugins
