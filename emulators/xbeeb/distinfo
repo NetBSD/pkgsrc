@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 18:49:22 agc Exp $
+$NetBSD: distinfo,v 1.4 2006/06/13 13:24:35 dsainty Exp $
 
-SHA1 (xbeeb-0.3.6.tgz) = 233f9a3bacfdcb4b6e17ee8e22c712a1c05983d6
-RMD160 (xbeeb-0.3.6.tgz) = 8dfe86613f1e678ad257134c4fdf3d17a0e0a378
-Size (xbeeb-0.3.6.tgz) = 270231 bytes
+SHA1 (xbeeb-0.4.1.tgz) = 5e2fccfabd0aa5a656758b2ea0536570a790dabe
+RMD160 (xbeeb-0.4.1.tgz) = 67dba3262f7e5886a86e5656288d807fea540d9b
+Size (xbeeb-0.4.1.tgz) = 351715 bytes
 SHA1 (patch-aa) = 68b91908397147aecf1e1644f597802d6380aa96
-SHA1 (patch-ab) = 96ad3aa048ed224757ca51e0abe43baeaaceacdb
+SHA1 (patch-ab) = 7bcdfb9b15e8ef2349325bf2b23a662cba914a5c
 SHA1 (patch-ac) = 72622acf9671ac0f72bd9b8271fc17f25d3655f1
-SHA1 (patch-ad) = 120be917d8b0ffa83c537e7a4b9a86f354e46886
+SHA1 (patch-ad) = 733916029e94e65ee7702778ce344468ab3cf658
+SHA1 (patch-ae) = 00906d13e5dd9ec03f011053e7399fac581efc3d
+SHA1 (patch-af) = 62c888cc324742142d7a95c9db55067daba4dacd

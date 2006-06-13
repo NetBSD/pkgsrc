@@ -1,19 +1,16 @@
-# $NetBSD: Makefile,v 1.17 2006/02/17 19:27:33 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2006/06/13 13:24:35 dsainty Exp $
 #
 
-DISTNAME=	xbeeb-0.3.6
-PKGREVISION=	2
+DISTNAME=	xbeeb-0.4.1
 CATEGORIES=	emulators x11
-MASTER_SITES=	ftp://ftp.netcom.net.uk/pub/Micros/BBC/Emulators/Xbeeb/
-# for 0.4.1
-#MASTER_SITES=	http://www.getafile.com/cgi-bin/merlot/get/james/xbeeb/
+MASTER_SITES=	http://bbc.nvg.org/emul/Xbeeb/ \
+		http://www.getafile.com/cgi-bin/merlot/get/james/xbeeb/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	skrll@NetBSD.org
+MAINTAINER=	dsainty@NetBSD.org
 HOMEPAGE=	http://www.cloud9.co.uk/james/BBCMicro/Xbeeb/
 COMMENT=	Acorn BBC Micro emulator with an X based interface
 
-WRKSRC=		${WRKDIR}/xbeeb
 USE_IMAKE=	yes
 MAN_PAGE=	${WRKDIR}/xbeeb.1
 
@@ -26,14 +23,39 @@ REQD_DIRS=	${PREFIX}/lib/X11/fonts/xbeeb
 
 INSTALLATION_DIRS=	bin man/man1
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.xbeeb
+PKG_SUPPORTED_OPTIONS=	mitshm
+PKG_SUGGESTED_OPTIONS=
+
+.include "../../mk/bsd.options.mk"
+
+# The emulator can be compiled either to use MIT-SHM, or to not.
+# Unfortunately it doesn't support both at once.
+.if empty(PKG_OPTIONS:Mmitshm)
+SUBST_CLASSES+=		nomitshm
+SUBST_STAGE.nomitshm=	post-patch
+SUBST_MESSAGE.nomitshm=	Disabling MIT-SHM
+SUBST_FILES.nomitshm=	src/Config.h
+SUBST_SED.nomitshm=	-e "s|\#define	*MITSHM|\#undef MITSHM|"
+.endif
+
+SUBST_CLASSES+=		dsp
+SUBST_STAGE.dsp=	post-patch
+SUBST_MESSAGE.dsp=	Adjusting sound device path.
+SUBST_FILES.dsp=	src/SoundOSS.c
+SUBST_SED.dsp=		-e "s|\"/dev/dsp\"|\"${DEVOSSAUDIO}\"|"
+
+SUBST_CLASSES+=		beebroot
+SUBST_STAGE.beebroot=	post-patch
+SUBST_MESSAGE.beebroot=	Adjusting XBEEBROOT path.
+SUBST_FILES.beebroot=	src/Config.h
+SUBST_SED.beebroot=	-e "s|^\(\#define[	 ]*XBEEBROOT[	 ]*\)[^	 ].*$$|\1\"${PREFIX}/${XBEEBROOT}/\"|"
+
 # xbeeb build starts in the source directory
 do-configure:
-	cd ${WRKSRC}/src && ${XMKMF}
+	cd ${WRKSRC}/src && ${XMKMF_CMD}
 
 post-patch:
-	(cd ${WRKSRC}/src && \
-	${MV} Config.h Config.h.dist && \
-	${SED} 's+^\(#define[	 ]*XBEEBROOT[	 ]*\)[^	 ].*$$+\1"${PREFIX}/${XBEEBROOT}/"+' Config.h.dist > Config.h)
 	${SED} -e 's+@XBEEBROOT@+${XBEEBROOT}+g' \
 		-e 's+@PREFIX@+${PREFIX}+g' \
 		${FILESDIR}/xbeeb.1 > ${MAN_PAGE}
@@ -53,11 +75,13 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${XBEEBROOT}/roms
 	${INSTALL_DATA_DIR} ${PREFIX}/${XBEEBROOT}/docs
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fonts/xbeeb
-	${INSTALL_DATA} ${WRKSRC}/roms/xdfs0.70.rom ${PREFIX}/${XBEEBROOT}/roms/xdfs0.70.rom
+	${INSTALL_DATA} ${WRKSRC}/roms/xdfs0.90.rom ${PREFIX}/${XBEEBROOT}/roms/xdfs0.90.rom
 	for docfile in ${WRKSRC}/doc/*; do \
 		${INSTALL_DATA} $$docfile ${PREFIX}/${XBEEBROOT}/docs; \
 	done
 	${CP} ${WRKSRC}/fonts/*.pcf ${PREFIX}/lib/X11/fonts/xbeeb
 	mkfontdir ${PREFIX}/lib/X11/fonts/xbeeb
 
+.include "../../mk/oss.buildlink3.mk"
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

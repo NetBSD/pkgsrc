@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2003/05/06 17:41:11 jmmv Exp $
+$NetBSD: MESSAGE,v 1.4 2006/06/13 13:24:35 dsainty Exp $
 
 You must copy the BBC "BASIC2" ROM image to
 
@@ -8,6 +8,16 @@ You must copy the BBC "BASIC2" ROM image to
 and the BBC "OS1.2" ROM image to
 
 	${PREFIX}/${XBEEBROOT}/roms/OS1.2.rom
+
+As an alternative to extracting these ROM images from your own BBC hardware,
+archives of these ROM images may also be found at:
+
+	http://bbc.nvg.org/rom/Acorn/lang/BASIC2.rom
+	http://bbc.nvg.org/rom/Acorn/os/OS-1.2.rom
+
+The emulator expects files in the chosen directory to have matching
+<filename>.inf files containing the BBC file attributes.  This is the style
+that many archives found on the Internet use.
 
 You also need to ensure that your X session can access the fonts
 needed. This can be done with:
