@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.21 2006/06/05 13:36:14 jlam Exp $
+# $NetBSD: msgfmt.sh,v 1.22 2006/06/13 13:30:40 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -96,6 +96,10 @@ while test $# -gt 0; do
 		;;
 	-[aDo]|--alignment|--directory|--output-file)
 		cmd="$cmd $1 $2"; shift; shift;
+		;;
+	-c)
+		# skip all checks
+		shift
 		;;
 	[!-]*)
 		pofile="$1"
