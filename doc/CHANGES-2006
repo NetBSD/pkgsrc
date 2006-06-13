@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.503 2006/06/13 13:32:39 dsainty Exp $
+$NetBSD: CHANGES-2006,v 1.504 2006/06/13 16:02:09 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3037,3 +3037,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/R to 2.3.1 [markd 2006-06-13]
 	Updated sysutils/k3b to 0.12.15nb1 [markd 2006-06-13]
 	Updated emulators/xbeeb to 0.4.1 [dsainty 2006-06-13]
+	Updated sysutils/bacula to 1.38.10 [ghen 2006-06-13]
+	Updated sysutils/bacula-clientonly to 1.38.10 [ghen 2006-06-13]
+	Updated sysutils/bacula-doc to 1.38.10 [ghen 2006-06-13]
+	Updated sysutils/bacula-gnome-console to 1.38.10 [ghen 2006-06-13]
+	Updated sysutils/bacula-tray-monitor to 1.38.10 [ghen 2006-06-13]
+	Updated sysutils/bacula-wx-console to 1.38.10 [ghen 2006-06-13]
