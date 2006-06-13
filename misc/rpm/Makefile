@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2006/04/13 18:23:35 jlam Exp $
+# $NetBSD: Makefile,v 1.60 2006/06/13 14:43:21 jlam Exp $
 
 DISTNAME=	rpm-2.5.4
 PKGREVISION=	5
@@ -37,6 +37,11 @@ pre-install:
 post-install:
 	$(RANLIB) ${PREFIX}/lib/librpm.a
 .endif
+
+# The configure script doesn't detect whether libintl.so has any
+# library dependencies.
+#
+BROKEN_GETTEXT_DETECTION=	yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
