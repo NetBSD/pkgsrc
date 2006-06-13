@@ -1,17 +1,28 @@
-$NetBSD: patch-ad,v 1.1.1.1 2000/05/22 22:13:12 skrll Exp $
+$NetBSD: patch-ad,v 1.2 2006/06/13 13:24:36 dsainty Exp $
 
---- src/Config.h.orig	Thu Oct 10 00:19:08 1996
-+++ src/Config.h	Sun May 21 21:18:55 2000
-@@ -256,7 +256,7 @@
+The R65C02 is a generally more capable processor than the M6502, and a BBC B
+can run almost all software with a R65C02 replacing its standard CPU.  In
+addition, the R65C02 allows running some software intended for the Master
+series of microcomputer, making the R65C02 the more interesting CPU to
+emulate.
+
+Since patch-ac modifies the OS1.2.rom on the fly, it is no longer necessary to
+patch the ROM externally for EMUL_FS, so keep OS_ROM the same.
+
+--- src/Config.h.orig	2002-01-16 04:46:43.000000000 +1300
++++ src/Config.h	2006-06-04 12:44:23.000000000 +1200
+@@ -290,8 +290,8 @@
+  * Processor type
   */
  
- #ifndef	XBEEBROOT
--#define		XBEEBROOT		"/home/james/beeb/"
-+#define		XBEEBROOT		"/usr/X11R6/share/xbeeb/"
- #endif
- #define		XBEEBROMS		XBEEBROOT"roms/"
- #define		XBEEBSNAPS		XBEEBROOT"snaps/"
-@@ -282,11 +282,7 @@
+-#define		M6502
+-#undef		R65C02
++#undef		M6502
++#define		R65C02
+ #undef		R65C12
+ 
+ /*
+@@ -344,11 +344,7 @@
   * Names of ROMs to load by default
   */
    
@@ -20,6 +31,6 @@ $NetBSD: patch-ad,v 1.1.1.1 2000/05/22 22:13:12 skrll Exp $
 -#else
  #define		OS_ROM			"OS1.2.rom"
 -#endif
- #define		LANG_ROM		"BASIC2.rom"
  
- #ifdef	XDFS
+ #ifdef	M6502
+ #define		LANG_ROM		"BASIC2.rom"
