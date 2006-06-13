@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2005/04/18 12:15:31 wiz Exp $
+$NetBSD: distinfo,v 1.6 2006/06/13 16:50:59 joerg Exp $
 
 SHA1 (glibc-2.0.7-13.i386.rpm) = 6ac4eb9bac93509f5f788792f623f9930282ffe0
 RMD160 (glibc-2.0.7-13.i386.rpm) = d29bcd1bb5cea1b341511e2fa119cdf2e0e837a2
@@ -19,4 +19,4 @@ SHA1 (egcs-1.1.1-NetBSD-19980104.diff.gz) = 85ebc334bf9472b9595c4348a6bc440e836b
 RMD160 (egcs-1.1.1-NetBSD-19980104.diff.gz) = 29c48af46979cc4337d89fe7c4b0b98f20659671
 Size (egcs-1.1.1-NetBSD-19980104.diff.gz) = 59770 bytes
 SHA1 (patch-aa) = 5d229e0148adc27274e38d41aa9f260d4d0c9fc6
-SHA1 (patch-ab) = 92ab3ee01a4080186a7449decc5ea1f5500d09b5
+SHA1 (patch-ab) = f2918f127143980491e70fae35f48aee61cabbfc
