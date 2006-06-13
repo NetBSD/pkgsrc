@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/04/28 01:58:35 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/06/13 12:16:37 markd Exp $
 bin/kmplayer
 bin/kxineplayer
 bin/kxvplayer
@@ -69,12 +69,14 @@ share/locale/et/LC_MESSAGES/kmplayer.mo
 share/locale/fi/LC_MESSAGES/kmplayer.mo
 share/locale/fr/LC_MESSAGES/kmplayer.mo
 share/locale/ga/LC_MESSAGES/kmplayer.mo
+share/locale/gl/LC_MESSAGES/kmplayer.mo
 share/locale/he/LC_MESSAGES/kmplayer.mo
 share/locale/hi/LC_MESSAGES/kmplayer.mo
 share/locale/hu/LC_MESSAGES/kmplayer.mo
 share/locale/is/LC_MESSAGES/kmplayer.mo
 share/locale/it/LC_MESSAGES/kmplayer.mo
 share/locale/ja/LC_MESSAGES/kmplayer.mo
+share/locale/ka/LC_MESSAGES/kmplayer.mo
 share/locale/lt/LC_MESSAGES/kmplayer.mo
 share/locale/mt/LC_MESSAGES/kmplayer.mo
 share/locale/nb/LC_MESSAGES/kmplayer.mo
