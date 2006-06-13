@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/04/17 07:07:16 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/06/13 12:11:44 markd Exp $
 bin/kdbg
 share/applications/kde/kdbg.desktop
 share/doc/kde/HTML/de/kdbg/argspwdenv.html
@@ -61,7 +61,6 @@ share/kde/apps/kdbg/icons/hicolor/16x16/actions/pgmstep.png
 share/kde/apps/kdbg/icons/hicolor/16x16/actions/pgmstepi.png
 share/kde/apps/kdbg/icons/hicolor/22x22/actions/brkpt.png
 share/kde/apps/kdbg/icons/hicolor/22x22/actions/execopen.png
-share/kde/apps/kdbg/icons/hicolor/22x22/actions/hi22/action-pulse.pngseq
 share/kde/apps/kdbg/icons/hicolor/22x22/actions/pgmfinish.png
 share/kde/apps/kdbg/icons/hicolor/22x22/actions/pgmnext.png
 share/kde/apps/kdbg/icons/hicolor/22x22/actions/pgmnexti.png
@@ -124,7 +123,6 @@ share/locale/tr/LC_MESSAGES/kdbg.mo
 @comment in kde: @dirrm share/kde/icons/hicolor/16x16/apps
 @dirrm share/kde/apps/kdbg/types
 @dirrm share/kde/apps/kdbg/pics
-@dirrm share/kde/apps/kdbg/icons/hicolor/22x22/actions/hi22
 @dirrm share/kde/apps/kdbg/icons/hicolor/22x22/actions
 @dirrm share/kde/apps/kdbg/icons/hicolor/22x22
 @dirrm share/kde/apps/kdbg/icons/hicolor/16x16/actions
@@ -133,7 +131,6 @@ share/locale/tr/LC_MESSAGES/kdbg.mo
 @dirrm share/kde/apps/kdbg/icons
 @dirrm share/kde/apps/kdbg
 @comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde/applnk/Development
 @dirrm share/doc/kde/HTML/ru/kdbg
 @comment in kde: @dirrm share/doc/kde/HTML/ru
 @dirrm share/doc/kde/HTML/en/kdbg
