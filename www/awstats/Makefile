@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2006/06/05 18:04:25 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2006/06/13 17:02:04 minskim Exp $
 #
 
 DISTNAME=	awstats-6.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://awstats.sourceforge.net/files/
 
@@ -25,15 +25,18 @@ OWN_DIRS_PERMS+= 	${VARBASE}/awstats ${APACHE_USER} ${APACHE_GROUP} 0700
 PKG_SYSCONFSUBDIR=	awstats
 
 SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
+SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	tools/awstats_configure.pl \
+			tools/awstats_buildstaticpages.pl \
+			tools/awstats_updateall.pl \
 			wwwroot/cgi-bin/awstats.model.conf \
 			wwwroot/cgi-bin/awstats.pl
 SUBST_SED.conf=		-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_SED.conf+=	-e "s|@VARBASE@|${VARBASE}|g"
 SUBST_SED.conf+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_SED.conf+=	-e "s|\"/etc/awstats|\"${PKG_SYSCONFDIR}|g"
+SUBST_SED.conf+=	-e "s|\"/usr/local/awstats/wwwroot|\"${PREFIX}/awstats|g"
 SUBST_SED.conf+=	-e "s|/var/log/httpd/mylog.log|${VARBASE}/log/httpd/access_log|g"
-SUBST_SED.conf+=	-e "s|\"/etc/opt/awstats\"|\"/etc/opt/awstats\",\"${PKG_SYSCONFDIR}\"|g"
 SUBST_MESSAGE.conf=	Fixing configuration files and scripts.
 
 CONF_FILES+=	${PREFIX}/share/examples/awstats/awstats.conf \
