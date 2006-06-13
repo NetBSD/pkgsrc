@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
+$NetBSD: patch-af,v 1.2 2006/06/13 12:36:16 markd Exp $
 
 --- /dev/null	2006-01-31 00:47:43.000000000 +1300
-+++ libk3bdevice/k3bscsicommand_netbsd.cpp	2006-01-31 00:08:25.000000000 +1300
-@@ -0,0 +1,136 @@
++++ libk3bdevice/k3bscsicommand_netbsd.cpp
+@@ -0,0 +1,89 @@
 +/*
 + *
 + */
@@ -14,8 +14,8 @@ $NetBSD: patch-af,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
 +
 +#include <sys/ioctl.h>
 +#include <sys/scsiio.h>
-+#include <sys/cdio.h>
-+#include <sys/dkio.h>
++// #include <sys/cdio.h>
++// #include <sys/dkio.h>
 +
 +#include <unistd.h>
 +#include <sys/types.h>
@@ -91,51 +91,4 @@ $NetBSD: patch-af,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
 +  }
 +  else
 +    return 0;
-+}
-+
-+bool K3bDevice::ScsiCommand::eject ( bool open )
-+{
-+  unsigned long request = open ? DIOCEJECT : CDIOCCLOSE;
-+  int arg = 0;
-+  bool needToClose = false;
-+  if( m_device ) {
-+    if( !m_device->isOpen() ) {
-+      needToClose = true;
-+    }
-+    m_device->open( false );
-+    m_deviceHandle = m_device->handle();
-+  }
-+
-+  if( m_deviceHandle == -1 )
-+    return false;
-+
-+  int i = ::ioctl( m_deviceHandle, request, &arg );
-+
-+  if( needToClose )
-+    m_device->close();
-+
-+  return i >= 0;
-+}
-+
-+bool K3bDevice::ScsiCommand::traylock ( bool on )
-+{
-+  int arg = on ? 1 : 0;
-+  bool needToClose = false;
-+  if( m_device ) {
-+    if( !m_device->isOpen() ) {
-+      needToClose = true;
-+    }
-+    m_device->open( false );
-+    m_deviceHandle = m_device->handle();
-+  }
-+
-+  if( m_deviceHandle == -1 )
-+    return false;
-+
-+  int i = ::ioctl( m_deviceHandle, DIOCLOCK, &arg );
-+
-+  if( needToClose )
-+    m_device->close();
-+
-+  return i >= 0;
 +}
