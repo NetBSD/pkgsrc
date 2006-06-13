@@ -167,6 +167,7 @@ metarefresh
 mex			Enable matlab mex support (Linux and Solaris only).
 mhash	
 milter
+mitshm			Enable MIT-SHM X extension support.
 mjpegtools-simd		Enable MMX/3DNOW/SSE/Altivec support.
 mlib			Enable usage of medialib (SunOS only).
 mmx			Enable MMX support (i386 only).
