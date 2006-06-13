@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.511 2006/06/13 22:26:58 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.512 2006/06/13 23:47:14 reed Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3050,3 +3050,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated finance/gnucash-devel to 1.9.7 [wiz 2006-06-13]
 	Updated comms/jpilot to 0.99.8 [bad 2006-06-13]
 	Updated textproc/db2latex to 0.8pre1nb4 [minskim 2006-06-13]
+	Added graphics/glx-utils version 6.4.2 [reed 2006-06-13]
