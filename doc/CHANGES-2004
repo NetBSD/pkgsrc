@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2004,v 1.17 2006/05/07 10:19:55 wiz Exp $
+$NetBSD: CHANGES-2004,v 1.18 2006/06/13 17:00:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -4096,7 +4096,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated bogofilter to 0.92.6 [snj 2004-08-29]
 	Updated python20 to 2.0.1nb8 [recht 2004-08-29]
 	Updated python21 to 2.1.3nb4 [recht 2004-08-29]
-	Updated python21 to pth-2.1.3nb6 [recht 2004-08-29]
+	Updated python21-pth to 2.1.3nb6 [recht 2004-08-29]
 	Updated python22 to 2.2.3nb2 [recht 2004-08-29]
 	Updated python22-pth to 2.2.3nb3 [recht 2004-08-29]
 	Added qgreylist-0.2 [schmonz 2004-08-29]
