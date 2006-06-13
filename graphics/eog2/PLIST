@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/05/02 17:15:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2006/06/13 17:30:08 drochner Exp $
 bin/eog
 share/applications/eog.desktop
 share/eog/eog-gtk-ui.xml
@@ -49,6 +49,7 @@ share/locale/az/LC_MESSAGES/eog.mo
 share/locale/be/LC_MESSAGES/eog.mo
 share/locale/bg/LC_MESSAGES/eog.mo
 share/locale/bn/LC_MESSAGES/eog.mo
+share/locale/br/LC_MESSAGES/eog.mo
 share/locale/bs/LC_MESSAGES/eog.mo
 share/locale/ca/LC_MESSAGES/eog.mo
 share/locale/cs/LC_MESSAGES/eog.mo
