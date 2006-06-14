@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/06/09 22:12:18 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/06/14 17:01:08 jlam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +16,7 @@ DEPENDS+=	courier-maildir>=${COURIER_VERSION}:../../mail/courier-maildir
 DEPENDS+=	couriertcpd>=${COURIER_VERSION}:../../net/couriertcpd
 DEPENDS+=	maildrop>=2.0.2:../../mail/maildrop
 
-USE_TOOLS+=		gmake perl:run
+USE_TOOLS+=		gmake openssl:run perl:run
 USE_LANGUAGES=		c c++
 
 PKGNAME=		${DISTNAME:S/-/-mta-/}
@@ -29,7 +30,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 
 USERGROUP_PHASE=	configure
 
-CONFIGURE_ENV+=		OPENSSL=${SSLBASE:Q}/bin/openssl
+CONFIGURE_ENV+=		OPENSSL=${TOOLS_OPENSSL:Q}
 CONFIGURE_ENV+=		PROCMAIL=${LOCALBASE:Q}/bin/procmail
 
 CONFIGURE_ARGS+=	--datadir=${DATADIR:Q}
@@ -81,7 +82,6 @@ SUBST_STAGE.paths=	post-patch
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../security/courier-authlib/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 
 post-extract:
 	${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
