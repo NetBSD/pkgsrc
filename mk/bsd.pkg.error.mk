@@ -1,7 +1,14 @@
-# $NetBSD: bsd.pkg.error.mk,v 1.1 2006/06/09 13:59:06 jlam Exp $
+# $NetBSD: bsd.pkg.error.mk,v 1.2 2006/06/14 15:09:34 jlam Exp $
 
 ERROR_DIR=	${WRKDIR}/.error
 WARNING_DIR=	${WRKDIR}/.warning
+
+# Macros for outputting delayed error and warning messages that are
+# picked up by the error-check target and can be used in place of
+# ${ECHO}.  We output to files that are named without leading dots.
+#
+DELAYED_ERROR_MSG?=	${ECHO} >> ${ERROR_DIR}/${.TARGET:T:C/^[.]*//:Q}
+DELAYED_WARNING_MSG?=	${ECHO} >> ${WARNING_DIR}/${.TARGET:T:C/^[.]*//:Q}
 
 makedirs: ${ERROR_DIR} ${WARNING_DIR}
 ${ERROR_DIR} ${WARNING_DIR}:
