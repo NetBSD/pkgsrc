@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.9 2006/06/14 19:21:54 adam Exp $
+
+--- modules/filter/nroff.cpp.orig	2006-06-14 21:01:52.000000000 +0200
++++ modules/filter/nroff.cpp
+@@ -73,7 +73,7 @@ namespace {
+       return false;
+     }
+     
+-    bool NroffFilter::process_char (FilterChar::Chr c);
++    bool process_char (FilterChar::Chr c);
+       
+   public:
+ 
