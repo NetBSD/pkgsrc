@@ -1,6 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/11 13:53:25 wiz Exp $
---- date.c.orig	Tue Jan  4 14:24:18 2000
-+++ date.c	Tue Jan  4 14:24:24 2000
+$NetBSD: patch-aa,v 1.2 2006/06/14 10:25:01 rillig Exp $
+
+--- Src/date.c.orig	Tue Jan  4 14:24:18 2000
++++ Src/date.c	Tue Jan  4 14:24:24 2000
 @@ -162,6 +162,8 @@
  		yr assumed w/in +/- 50 years from current time if < 100.
  		gives clean method for handling 2-digit year input.
