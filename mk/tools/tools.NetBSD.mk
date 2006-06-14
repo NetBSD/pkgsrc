@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.31 2006/05/21 17:25:27 jlam Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.32 2006/06/14 16:57:07 jlam Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -67,6 +67,7 @@ TOOLS_PLATFORM.mtree?=		/usr/sbin/mtree
 TOOLS_PLATFORM.mv?=		/bin/mv
 TOOLS_PLATFORM.nice?=		/usr/bin/nice
 TOOLS_PLATFORM.nroff?=		/usr/bin/nroff
+TOOLS_PLATFORM.openssl?=	/usr/bin/openssl
 TOOLS_PLATFORM.patch?=		/usr/bin/patch
 TOOLS_PLATFORM.pax?=		/bin/pax
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
