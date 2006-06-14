@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.23 2006/04/17 13:46:33 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2006/06/14 10:30:34 rillig Exp $
 #
 
-DISTNAME=       mgl2-alpha-020
-PKGNAME=        mgl-0.2.0a
+DISTNAME=	mgl2-alpha-020
+PKGNAME=	mgl-0.2.0a
 PKGREVISION=	4
-CATEGORIES=     graphics
-MASTER_SITES=   http://at.sakura.ne.jp/~suz/arc/
+CATEGORIES=	graphics
+MASTER_SITES=	http://at.sakura.ne.jp/~suz/arc/
 
-MAINTAINER=     fk200329@fsinet.or.jp
+MAINTAINER=	fk200329@fsinet.or.jp
 HOMEPAGE=	http://www.NetBSD.org/Ports/hpcmips/mgl2.html
 COMMENT=	Graphics library for NEC Mobilegear/PocketBSD, NetBSD/hpcmips
 
@@ -41,67 +41,66 @@ pre-configure:
 
 post-configure:
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "mipsel"
-	@${MV} -f ${WRKSRC}/conf/config.mk-hpcmips ${WRKSRC}/conf/config.mk.tmp
+	${MV} -f ${WRKSRC}/conf/config.mk-hpcmips ${WRKSRC}/conf/config.mk.tmp
 .else
-	@${MV} -f ${WRKSRC}/conf/config.mk-netbsd-i386-x ${WRKSRC}/conf/config.mk.tmp
+	${MV} -f ${WRKSRC}/conf/config.mk-netbsd-i386-x ${WRKSRC}/conf/config.mk.tmp
 .endif
 .if ${OBJECT_FMT} == "a.out"
-	@${SED} -e "s/ELFENV=1/ELFENV=0/" ${WRKSRC}/conf/NetBSD.mk > ${WRKSRC}/conf/NetBSD.mk.tmp
-	@${MV} -f ${WRKSRC}/conf/NetBSD.mk.tmp ${WRKSRC}/conf/NetBSD.mk
-	@${SED} \
+	${SED} -e "s/ELFENV=1/ELFENV=0/" ${WRKSRC}/conf/NetBSD.mk > ${WRKSRC}/conf/NetBSD.mk.tmp
+	${MV} -f ${WRKSRC}/conf/NetBSD.mk.tmp ${WRKSRC}/conf/NetBSD.mk
+	${SED} \
 		-e "s@-Wl,-rpath,${PREFIX}/lib@@" \
 		${WRKSRC}/conf/config.mk.tmp > ${WRKSRC}/conf/config.mk
 .else
-	@${MV} -f ${WRKSRC}/conf/config.mk.tmp ${WRKSRC}/conf/config.mk
+	${MV} -f ${WRKSRC}/conf/config.mk.tmp ${WRKSRC}/conf/config.mk
 .endif
 
 post-install:
 .for i in ${MGLUTILS}
-	@${INSTALL_SCRIPT} ${WRKSRC}/utils/${i} ${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/utils/${i} ${PREFIX}/bin/
 	${CHMOD} +x ${PREFIX}/bin/${i}
 .endfor
 	${LN} -s mglcons.sh ${PREFIX}/bin/start_mgl.sh
 
-	@if ${TEST} -r ${PREFIX}/bin/mglsvrcons; \
-		then ${MV} -f ${PREFIX}/bin/mglsvrcons ${PREFIX}/sbin/; \
-	fi
+	${TEST} ! -r ${PREFIX}/bin/mglsvrcons				\
+	|| ${MV} -f ${PREFIX}/bin/mglsvrcons ${PREFIX}/sbin/
 	# The following three commands are only present on hpcmips:
-	@${TOUCH} ${PREFIX}/sbin/mglcalibrate
-	@${TOUCH} ${PREFIX}/sbin/calibconf
-	@${TOUCH} ${PREFIX}/sbin/calibdata-update
+	${TOUCH} ${PREFIX}/sbin/mglcalibrate
+	${TOUCH} ${PREFIX}/sbin/calibconf
+	${TOUCH} ${PREFIX}/sbin/calibdata-update
 	#
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/mgl2
+	${INSTALL_DATA_DIR} ${PREFIX}/share/mgl2
 .for i in ${MGLFONTUTILS}
-	@${INSTALL_DATA} ${WRKSRC}/bin/${i} ${PREFIX}/share/mgl2
+	${INSTALL_DATA} ${WRKSRC}/bin/${i} ${PREFIX}/share/mgl2
 .endfor
-	@${RM} -f -r ${PREFIX}/share/doc/mgl2
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/memo
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/mgterm
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/mil
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/nine
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/bin
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/doc
+	${RM} -f -r ${PREFIX}/share/doc/mgl2
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/memo
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/mgterm
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/mil
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/nine
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/bin
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgl2/doc
 .for i in ${MGLDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/doc/${i} ${PREFIX}/share/doc/mgl2/doc/
+	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${PREFIX}/share/doc/mgl2/doc/
 .endfor
 .for i in ${MGL2DOCS}
-	@${INSTALL_DATA} ${WRKSRC}/${i} ${PREFIX}/share/doc/mgl2/
+	${INSTALL_DATA} ${WRKSRC}/${i} ${PREFIX}/share/doc/mgl2/
 .endfor
 .for i in ${MGL2MEMOS}
-	@${INSTALL_DATA} ${WRKSRC}/memo/${i} ${PREFIX}/share/doc/mgl2/memo/
+	${INSTALL_DATA} ${WRKSRC}/memo/${i} ${PREFIX}/share/doc/mgl2/memo/
 .endfor
 .for i in ${BINDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/bin/${i} ${PREFIX}/share/doc/mgl2/bin/
+	${INSTALL_DATA} ${WRKSRC}/bin/${i} ${PREFIX}/share/doc/mgl2/bin/
 .endfor
 .for i in ${MGTERMDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/mgterm/${i} ${PREFIX}/share/doc/mgl2/mgterm/
+	${INSTALL_DATA} ${WRKSRC}/mgterm/${i} ${PREFIX}/share/doc/mgl2/mgterm/
 .endfor
 .for i in ${MILDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/mil/${i} ${PREFIX}/share/doc/mgl2/mil/
+	${INSTALL_DATA} ${WRKSRC}/mil/${i} ${PREFIX}/share/doc/mgl2/mil/
 .endfor
 .for i in ${NINEDOCS}
-	@${INSTALL_DATA} ${WRKSRC}/nine/${i} ${PREFIX}/share/doc/mgl2/nine/
+	${INSTALL_DATA} ${WRKSRC}/nine/${i} ${PREFIX}/share/doc/mgl2/nine/
 .endfor
 
 .include "../../graphics/jpeg/buildlink3.mk"

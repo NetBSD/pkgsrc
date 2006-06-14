@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/02/23 21:05:02 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/06/14 10:32:35 rillig Exp $
 
 DISTNAME=	vcg.1.30.r3.17
 PKGNAME=	vcg-1.30
@@ -16,16 +16,16 @@ USE_X11BASE=	yes
 .include "../../mk/x11.buildlink3.mk"
 
 pre-patch:
-	@${MKDIR} ${WRKSRC}/preconf/X11ccNetBSD
-	@${CP} ${FILESDIR}/conf ${WRKSRC}/preconf/X11ccNetBSD
-	@${CP} ${FILESDIR}/demo.csh ${WRKSRC}/preconf/X11ccNetBSD
-	@${CP} ${FILESDIR}/globals.h ${WRKSRC}/preconf/X11ccNetBSD
-	@${CP} ${FILESDIR}/tMakefile ${WRKSRC}/preconf/X11ccNetBSD
-	@${MKDIR} ${WRKSRC}/preconf/X11ccDragonFly
-	@${CP} ${FILESDIR}/conf ${WRKSRC}/preconf/X11ccDragonFly
-	@${CP} ${FILESDIR}/demo.csh ${WRKSRC}/preconf/X11ccDragonFly
-	@${CP} ${FILESDIR}/globals.h ${WRKSRC}/preconf/X11ccDragonFly
-	@${CP} ${FILESDIR}/tMakefile ${WRKSRC}/preconf/X11ccDragonFly
+	${MKDIR} ${WRKSRC}/preconf/X11ccNetBSD
+	${CP} ${FILESDIR}/conf ${WRKSRC}/preconf/X11ccNetBSD
+	${CP} ${FILESDIR}/demo.csh ${WRKSRC}/preconf/X11ccNetBSD
+	${CP} ${FILESDIR}/globals.h ${WRKSRC}/preconf/X11ccNetBSD
+	${CP} ${FILESDIR}/tMakefile ${WRKSRC}/preconf/X11ccNetBSD
+	${MKDIR} ${WRKSRC}/preconf/X11ccDragonFly
+	${CP} ${FILESDIR}/conf ${WRKSRC}/preconf/X11ccDragonFly
+	${CP} ${FILESDIR}/demo.csh ${WRKSRC}/preconf/X11ccDragonFly
+	${CP} ${FILESDIR}/globals.h ${WRKSRC}/preconf/X11ccDragonFly
+	${CP} ${FILESDIR}/tMakefile ${WRKSRC}/preconf/X11ccDragonFly
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vcg
