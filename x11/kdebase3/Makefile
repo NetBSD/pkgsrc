@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2006/06/01 13:46:31 markd Exp $
+# $NetBSD: Makefile,v 1.115 2006/06/14 12:37:10 joerg Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -113,6 +113,11 @@ INSTALL_UNSTRIPPED=	yes
 .if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pam
+.endif
+
+# Solaris 10 has libusb only for 32 bit ABI (see PR 33727).
+.if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "x86_64"
+CONFIGURE_ARGS+=       --without-libusb
 .endif
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
