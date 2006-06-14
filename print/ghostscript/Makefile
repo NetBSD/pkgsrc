@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/04/23 14:39:33 schwarz Exp $
+# $NetBSD: Makefile,v 1.22 2006/06/14 10:39:01 rillig Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 PKGREVISION=		8
@@ -35,7 +35,7 @@ EXTRACT_ONLY=		${GS_SRCS}
 #
 JPEG_SRCS=		jpegsrc.v6b.tar.gz
 JPEG_WRKSRC=		${WRKDIR}/jpeg-6b
-SITES_${JPEG_SRCS}=	ftp://ftp.uu.net/graphics/jpeg/ \
+SITES.${JPEG_SRCS}=	ftp://ftp.uu.net/graphics/jpeg/ \
 			ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/3rdparty/
 DISTFILES+=		${JPEG_SRCS}
 EXTRACT_ONLY+=		${JPEG_SRCS}
@@ -47,14 +47,14 @@ PATCH_DIST_STRIP=	-p1
 
 # PostScript source to decode encrypted PDF files
 PDF_SEC=		pdf_sec.ps
-SITES_${PDF_SEC}=	http://www.ozemail.com.au/~geoffk/pdfencrypt/
+SITES.${PDF_SEC}=	http://www.ozemail.com.au/~geoffk/pdfencrypt/
 DISTFILES+=		${PDF_SEC}
 
 # Gimp-print/STP drivers for photo-quality inkjet output
 GIMPPRINT=		gimp-print-4.2.0
 GIMPPRINT_SRCS=		${GIMPPRINT}.tar.gz
 GIMPPRINT_WRKSRC=	${WRKDIR}/${GIMPPRINT}
-SITES_${GIMPPRINT_SRCS}=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
+SITES.${GIMPPRINT_SRCS}=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
 DISTFILES+=			${GIMPPRINT_SRCS}
 EXTRACT_ONLY+=			${GIMPPRINT_SRCS}
 GIMPPRINT_CONFIGURE_ARGS=	${CONFIGURE_ARGS} --without-gimp --with-ghost
@@ -66,20 +66,20 @@ HPIJS_WRKSRC=		${WRKDIR}/${HPIJS_DRV}
 HPIJS_GSFILES=		gdevijs.c gdevijs.h
 HPIJS_GSFILES+=		ijs.c ijs.h ijs_client.c ijs_client.h ijs_exec_unix.c
 HPIJS_GSFILES+=		unistd_.h
-SITES_${HPIJS_SRCS}=	${MASTER_SITE_SOURCEFORGE:=hpinkjet/}
+SITES.${HPIJS_SRCS}=	${MASTER_SITE_SOURCEFORGE:=hpinkjet/}
 DISTFILES+=		${HPIJS_SRCS}
 EXTRACT_ONLY+=		${HPIJS_SRCS}
 HPIJS_CONFIGURE_ARGS=	${CONFIGURE_ARGS}
 
 # Additional driver for several HP deskjets
 HPDJ_DRV=		hpdj-2.6
-SITES_${HPDJ_DRV}.tar.gz=	ftp://ftp.sbs.de/pub/graphics/ghostscript/pcl3/
+SITES.${HPDJ_DRV}.tar.gz=	ftp://ftp.sbs.de/pub/graphics/ghostscript/pcl3/
 DISTFILES+=		${HPDJ_DRV}.tar.gz
 EXTRACT_ONLY+=		${HPDJ_DRV}.tar.gz
 
 # I don't know the primary destribution sites of these drivers....
 DMPRT_DRV=		dmprt-2.01
-SITES_${DMPRT_DRV}.tar.gz=	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/
+SITES.${DMPRT_DRV}.tar.gz=	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles/
 DISTFILES+=		${DMPRT_DRV}.tar.gz
 EXTRACT_ONLY+=		${DMPRT_DRV}.tar.gz
 
@@ -99,31 +99,31 @@ EXTRACT_ONLY+=		${MD5000_DRV}.tar.gz
 
 # Alps MD-2000/2010/4000/1300/1500/5000
 MD2000_DRV=		gdevmd2k-0.2a
-SITES_${MD2000_DRV}.tar.gz=	http://plaza26.mbn.or.jp/~higamasa/gdevmd2k/
+SITES.${MD2000_DRV}.tar.gz=	http://plaza26.mbn.or.jp/~higamasa/gdevmd2k/
 DISTFILES+=		${MD2000_DRV}.tar.gz
 EXTRACT_ONLY+=		${MD2000_DRV}.tar.gz
 
 # Canon LIPS II+, III, IV; EPSON ESC/Page; NEC NPDL drivers
 LIPS_DRV=		gdevlips-2.3.6
-SITES_${LIPS_DRV}.tar.gz=	http://www.bukka.p.chiba-u.ac.jp/~ohmori/gs/
+SITES.${LIPS_DRV}.tar.gz=	http://www.bukka.p.chiba-u.ac.jp/~ohmori/gs/
 DISTFILES+=		${LIPS_DRV}.tar.gz
 EXTRACT_ONLY+=		${LIPS_DRV}.tar.gz
 
 # Ricoh RPDL
 RPDL_DRV=		gdevrpdl
-SITES_${RPDL_DRV}.tar.gz=	http://home.jp.FreeBSD.org/~mita/LOCAL_PORTS/
+SITES.${RPDL_DRV}.tar.gz=	http://home.jp.FreeBSD.org/~mita/LOCAL_PORTS/
 DISTFILES+=		${RPDL_DRV}.tar.gz
 EXTRACT_ONLY+=		${RPDL_DRV}.tar.gz
 
 # Kyocera Prescribe
 PRESCR_DRV=		gdevprsc-0.4
-SITES_${PRESCR_DRV}.tar.gz=	${MASTER_SITE_LOCAL}
+SITES.${PRESCR_DRV}.tar.gz=	${MASTER_SITE_LOCAL}
 DISTFILES+=		${PRESCR_DRV}.tar.gz
 EXTRACT_ONLY+=		${PRESCR_DRV}.tar.gz
 
 # Samsung SmartGDI laser printers
 GDI_DRV=		samsung-gdi-driver
-SITES_${GDI_DRV}.tar.gz=	http://www.linuxprinting.org/download/printing/
+SITES.${GDI_DRV}.tar.gz=	http://www.linuxprinting.org/download/printing/
 DISTFILES+=		${GDI_DRV}.tar.gz
 EXTRACT_ONLY+=		${GDI_DRV}.tar.gz
 
@@ -210,14 +210,14 @@ post-patch:
 	if [ ! -f ${WRKDIR}/dmp_site.ps.bak ]; then			\
 		${MV} ${WRKDIR}/dmp_site.ps ${WRKDIR}/dmp_site.ps.bak;	\
 	fi
-	${SED}	-e "s|epsimage\.src|${GSDATADIR}/lib/escp_24.src|g"	\
+	${SED}	-e "s|epsimage\\.src|${GSDATADIR}/lib/escp_24.src|g"	\
 		${WRKDIR}/dmp_site.ps.bak > ${WRKDIR}/dmp_site.ps
 
 GS_CONF_PREREQ+=	hpijs-configure
 .PHONY: hpijs-configure
 hpijs-configure:
 	cd ${HPIJS_WRKSRC} &&						\
-	${SETENV} CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}"	\
+	${SETENV} CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q} CPPFLAGS=${CPPFLAGS:M*:Q} \
 		${CONFIGURE_ENV}					\
 		${CONFIGURE_SCRIPT} ${HPIJS_CONFIGURE_ARGS} &&		\
 	${CP} ${HPIJS_GSFILES} ${WRKSRC}/src &&				\
@@ -239,11 +239,11 @@ GS_CONF_PREREQ+=	gimpprint-configure
 .PHONY: gimpprint-configure
 gimpprint-configure:
 	cd ${GIMPPRINT_WRKSRC} &&					\
-	${SETENV} CC="${CC}" CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}"	\
+	${SETENV} CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q} CPPFLAGS=${CPPFLAGS:M*:Q} \
 		${GIMPPRINT_CONFIGURE_ENV}				\
 		${CONFIGURE_SCRIPT} ${GIMPPRINT_CONFIGURE_ARGS} &&	\
 	cd ${GIMPPRINT_WRKSRC}/src/ghost &&				\
-	${SETENV} ${MAKE_ENV} SED=${SED} ${MAKE_PROGRAM} all-local &&		\
+	${SETENV} ${MAKE_ENV} SED=${SED:Q} ${MAKE_PROGRAM} all-local &&	\
 	( ${ECHO} '#ifndef GIMPPRINT_VERSION_FIX';			\
 	  ${ECHO} '#define GIMPPRINT_VERSION_FIX';			\
 	  ${EGREP} '#define (VERSION|RELEASE_DATE)' ../../config.h;	\
@@ -269,7 +269,7 @@ do-configure: ${GS_CONF_PREREQ}
 	#
 	# Prepend device list to unix-gcc.mak
 	#
-	( if [ -n "${GS_DISPLAY_DEVICE:Q}" ]; then			\
+	( if [ -n ${GS_DISPLAY_DEVICE:Q}"" ]; then			\
 		${ECHO} 'DEVICE_DEVS=	$$(DD)${GS_DISPLAY_DEVICE}';	\
 		${ECHO} '';						\
 	  fi;								\
