@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.619 2006/06/10 17:13:11 adrianp Exp $
+# $NetBSD: pkglint.pl,v 1.620 2006/06/14 07:44:30 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3524,6 +3524,14 @@ sub checkline_mk_shelltext($$) {
 			$line->explain_warning(
 				"Choose one of INSTALL_PROGRAM_DIR, INSTALL_SCRIPT_DIR, INSTALL_LIB_DIR,",
 				"INSTALL_MAN_DIR, INSTALL_DATA_DIR.");
+		}
+
+		if ($state == SCST_PAX && $shellword eq "-pe") {
+			$line->log_warning("Please use the -pp option to pax(1) instead of -pe.");
+			$line->explain_warning(
+				"The -pe option tells pax to preserve the ownership of the files, which",
+				"means that the installed files will belong to the user that has built",
+				"the package. That's a Bad Thing.");
 		}
 
 		if ($state == SCST_PAX_S || $state == SCST_SED_E) {
