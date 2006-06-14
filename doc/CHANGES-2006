@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.518 2006/06/14 14:32:22 tv Exp $
+$NetBSD: CHANGES-2006,v 1.519 2006/06/14 15:55:33 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3063,3 +3063,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/doxygen to 1.4.7 [adam 2006-06-14]
 	Updated converters/wv2 to 0.2.3 [markd 2006-06-14]
 	Updated mail/mailman to 2.1.8 [tv 2006-06-14]
+	Renamed x11/qt3-psql to x11/qt3-pgsql [adam 2006-06-14]
+	Renamed x11/qt4-psql to x11/qt4-pgsql [adam 2006-06-14]
