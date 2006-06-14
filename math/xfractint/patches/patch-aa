@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/06/12 14:13:55 rillig Exp $
+$NetBSD: patch-aa,v 1.2 2006/06/14 09:07:45 rillig Exp $
 
-Solaris does not define __sighandler_t.
+Some systems do not define __sighandler_t.
 
 --- unixscr.c.orig	1999-04-29 06:12:03.000000000 +0200
-+++ unixscr.c	2006-06-12 16:01:41.382816500 +0200
++++ unixscr.c	2006-06-15 08:43:15.000000000 +0200
 @@ -44,6 +44,10 @@
  # define FNDELAY O_NONBLOCK
  #endif
  
-+#if defined(__sun)
++#if defined(__sun) || defined(__NetBSD__)
 +typedef int (*__sighandler_t)(int);
 +#endif
 +
