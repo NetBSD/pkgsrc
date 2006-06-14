@@ -1,0 +1,12 @@
+$NetBSD: patch-bz,v 1.1 2006/06/14 16:57:52 joerg Exp $
+
+--- conf/X86SOL2.def.orig	2006-06-14 16:52:38.000000000 +0000
++++ conf/X86SOL2.def
+@@ -1,5 +1,6 @@
+ ARCHCFLAGS	=	-DSYSVBFUNC -DSYSVSTR -DNOGETDTBLSIZ -DSYSVSIGNAL \
+-				-DNOWAIT3 -DNOUNIXDOM -DRSHCOMMAND=\"/usr/bin/rsh\"
++				-DNOWAIT3 -DHASERRORVARS -DRSHCOMMAND=\"/usr/bin/rsh\" -DUSESTRERROR \
++				-DHASSTDLIB -KPIC
+ ARCHDLIB	=	-lnsl -lsocket
+ ARCHDOBJ	=
+ ARCHLIB		=	-lnsl -lsocket
