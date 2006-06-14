@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.7 2006/06/10 03:23:46 jlam Exp $
+# $NetBSD: package.mk,v 1.8 2006/06/14 07:51:47 jlam Exp $
 
 _PACKAGE_COOKIE=	${WRKDIR}/.package_done
 
@@ -36,9 +36,11 @@ ${_PACKAGE_COOKIE}:
 ### real-package is a helper target to set the PKG_PHASE explicitly to
 ### "package" before running the remainder of the package targets.
 ###
+.if !exists(${_PACKAGE_COOKIE})
 _REAL_PACKAGE_TARGETS+=	package-message
 _REAL_PACKAGE_TARGETS+=	package-all
 _REAL_PACKAGE_TARGETS+=	package-cookie
+.endif
 
 .PHONY: real-package
 real-package: ${_REAL_PACKAGE_TARGETS}
