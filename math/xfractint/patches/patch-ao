@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.1 2006/06/14 09:07:45 rillig Exp $
+$NetBSD: patch-ao,v 1.2 2006/06/14 14:34:10 joerg Exp $
 
 --- port.h.orig	1999-09-06 17:38:10.000000000 +0200
 +++ port.h	2006-06-15 08:52:47.000000000 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-ao,v 1.1 2006/06/14 09:07:45 rillig Exp $
  /* but if you have this file, it can make it more fool proof. */
  #if (defined(XFRACT) && !defined(__sun))
 -#if defined(sgi)
-+#if defined(sgi) || defined(__NetBSD__)
++#if defined(sgi) || defined(__NetBSD__) || defined(__DragonFly__)
  #include <sys/endian.h>
  #else
  #include <endian.h>
@@ -15,7 +15,7 @@ $NetBSD: patch-ao,v 1.1 2006/06/14 09:07:45 rillig Exp $
  #ifdef sun
  #define DO_NOT_USE_LONG_DOUBLE
  #endif
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +#define DO_NOT_USE_LONG_DOUBLE
 +#endif
  
