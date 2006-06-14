@@ -1,4 +1,4 @@
-$NetBSD: patch-bq,v 1.1 2004/07/19 22:41:16 dmcmahill Exp $
+$NetBSD: patch-bq,v 1.2 2006/06/14 16:57:52 joerg Exp $
 
 --- src/Makefile.aimk.orig	Fri May 11 18:58:10 2001
 +++ src/Makefile.aimk	Wed Mar 24 18:42:04 2004
@@ -27,7 +27,7 @@ $NetBSD: patch-bq,v 1.1 2004/07/19 22:41:16 dmcmahill Exp $
 -	rm -f $(LIBPVM).a
 -	$(AR) cr $(LIBPVM).a $(LOBJ) $(LPVMSOCK) $(SOCKLOBJ)
 -	case x$(HASRANLIB) in xt ) echo ranlib; ranlib $(LIBPVM).a ;; esac
-+	${LIBTOOL} --mode=link ${CC} ${PVM_STATIC} -o ${.TARGET:.a=.la} ${LOBJ:.o=.lo} \
++	${LIBTOOL} --mode=link ${CC} ${PVM_STATIC} -o ${@:.a=.la} ${LOBJ:.o=.lo} \
 +		${LPVMSOCK:.o=.lo} ${SOCKLOBJ:.o=.lo} \
 +		-rpath ${PVM_DIR}/lib/$(PVM_ARCH) \
 +		-version-info ${PVMLIB_VER}
