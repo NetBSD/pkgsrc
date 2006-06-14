@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.87 2006/01/15 11:32:06 adrianp Exp $
+# $NetBSD: Makefile,v 1.88 2006/06/14 00:06:27 reed Exp $
 #
 
 DISTNAME=		sudo-1.6.8p12
 PKGNAME=		sudo-1.6.8pl12
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		http://www.courtesan.com/sudo/dist/ \
 			ftp://ftp.courtesan.com/pub/sudo/ \
@@ -19,12 +19,16 @@ COMMENT=		Allow others to run commands as root
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
+OWN_DIRS+=		${VARBASE}/run
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
+CONFIGURE_ENV+=		NROFFPROG=${CAT} # to always install man instead of cat
 CONFIGURE_ARGS+=	--disable-root-mailer
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-timedir=${VARBASE:Q}/run/sudo
+CONFIGURE_ARGS+=	--with-logpath=${VARBASE:Q}/log/sudo.log
 
 .include "options.mk"
 
