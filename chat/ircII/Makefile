@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/03/04 21:29:03 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2006/06/14 14:23:32 jlam Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -32,8 +32,6 @@ CONFIGURE_ARGS+=	--with-default-server=${DEFAULT_IRC_SERVER:Q}
 # (Leave the line in to still get it into the README-IPv6.html!)
 BUILD_DEFS+=		USE_INET6
 
-PLIST_SRC=		${WRKDIR}/PLIST.tmp
-
 .include "options.mk"
 
 # Allow customizations from ${MAKECONF}
@@ -46,16 +44,19 @@ LDFLAGS.SunOS+=	-lsocket -lnsl
 CONFIGURE_ARGS+=	--with-non-blocking=none
 .endif
 
-pre-install:
-	@(if [ "X${MANZ}" != X"" ]; then \
-		GZSUFFIX=.gz; \
-	fi; \
-	${SED} -e 's|@.GZ@|'$$GZSUFFIX'|g' ${PKGDIR}/PLIST > ${PLIST_SRC})
+# Optionally install compressed help files if MANZ is defined.
+.if defined(MANZ)
+PLIST_SUBST+=		GZSUFFIX=".gz"
+DOC_COMPRESS_ARGS=	-z ${PREFIX}
+.else
+PLIST_SUBST+=		GZSUFFIX=
+DOC_COMPRESS_ARGS=	${PREFIX}
+.endif
 
 post-install:
-	@if [ "X${MANZ}" != X"" ]; then \
-		${ECHO} Compressing help files; \
-		${FIND} ${PREFIX}/share/irc/help -type f -print | ${XARGS} ${GZIP_CMD}; \
-	fi
+	${AWK} '/^share\/irc\/help\// { sub("\\$${GZSUFFIX}$$", ""); print }' \
+		${PLIST_SRC} |						\
+	${SETENV} PATH=${PATH:Q} PKG_VERBOSE=${PKG_VERBOSE:Q}		\
+	${SH} ${PKGSRCDIR}/mk/plist/doc-compress ${DOC_COMPRESS_ARGS}
 
 .include "../../mk/bsd.pkg.mk"
