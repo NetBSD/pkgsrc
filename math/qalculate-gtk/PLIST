@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/28 18:35:06 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/06/14 20:14:21 adam Exp $
 bin/qalculate-gtk
 share/applications/qalculate-gtk.desktop
 share/gnome/help/qalculate-gtk/C/appendixa.xml
@@ -24,13 +24,16 @@ share/gnome/help/qalculate-gtk/C/figures/mainwindow-screen.png
 share/gnome/help/qalculate-gtk/C/figures/mainwindow.png
 share/gnome/help/qalculate-gtk/C/figures/plot-data.png
 share/gnome/help/qalculate-gtk/C/figures/plot-settings.png
+share/gnome/help/qalculate-gtk/C/figures/rpn-mode.png
 share/gnome/help/qalculate-gtk/C/figures/store-variable.png
 share/gnome/help/qalculate-gtk/C/figures/unit-manager.png
 share/gnome/help/qalculate-gtk/C/figures/variable-manager.png
 share/gnome/help/qalculate-gtk/C/legal.xml
 share/gnome/help/qalculate-gtk/C/qalculate-gtk.xml
+share/locale/nl/LC_MESSAGES/qalculate-gtk.mo
 share/locale/sv/LC_MESSAGES/qalculate-gtk.mo
 share/omf/qalculate-gtk/qalculate-gtk-C.omf
+share/pixmaps/qalculate.png
 share/qalculate-gtk/glade/about.glade
 share/qalculate-gtk/glade/argumentrules.glade
 share/qalculate-gtk/glade/csvexport.glade
@@ -41,14 +44,15 @@ share/qalculate-gtk/glade/decimals.glade
 share/qalculate-gtk/glade/functionedit.glade
 share/qalculate-gtk/glade/functions.glade
 share/qalculate-gtk/glade/main.glade
+share/qalculate-gtk/glade/matrix.glade
 share/qalculate-gtk/glade/matrixedit.glade
 share/qalculate-gtk/glade/namesedit.glade
 share/qalculate-gtk/glade/nbases.glade
-share/qalculate-gtk/glade/nbexpression.glade
 share/qalculate-gtk/glade/periodictable.glade
 share/qalculate-gtk/glade/plot.glade
 share/qalculate-gtk/glade/precision.glade
 share/qalculate-gtk/glade/preferences.glade
+share/qalculate-gtk/glade/setbase.glade
 share/qalculate-gtk/glade/unit.glade
 share/qalculate-gtk/glade/unitedit.glade
 share/qalculate-gtk/glade/units.glade
