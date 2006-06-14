@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2006/06/08 12:00:04 joerg Exp $
+$NetBSD: patch-ab,v 1.7 2006/06/14 20:14:21 adam Exp $
 
---- configure.orig	2006-03-11 11:28:32.000000000 +0100
+--- configure.orig	2006-06-01 22:14:56.000000000 +0200
 +++ configure
-@@ -21158,12 +21158,10 @@ LIBTOOL='$(SHELL) $(top_builddir)/libtoo
+@@ -20042,12 +20042,10 @@ LIBTOOL='$(SHELL) $(top_builddir)/libtoo
  if test "x$GCC" = "xyes"; then
  	case $CFLAGS in
  	*-Os*)
@@ -15,7 +15,7 @@ $NetBSD: patch-ab,v 1.6 2006/06/08 12:00:04 joerg Exp $
  		;;
  	esac
  fi
-@@ -21189,13 +21187,13 @@ QALCULATE_AGE=0
+@@ -20073,13 +20071,13 @@ QALCULATE_AGE=0
  
  
  
@@ -32,7 +32,7 @@ $NetBSD: patch-ab,v 1.6 2006/06/08 12:00:04 joerg Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -21254,7 +21252,7 @@ fi
+@@ -20138,7 +20136,7 @@ fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
  echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6
  if test $ac_cv_lib_pthread_pthread_create = yes; then
@@ -41,7 +41,7 @@ $NetBSD: patch-ab,v 1.6 2006/06/08 12:00:04 joerg Exp $
  fi
  
  
-@@ -23143,11 +23141,11 @@ extern "C"
+@@ -22058,11 +22056,11 @@ extern "C"
  #endif
  /* We use char because int might match the return type of a gcc2
     builtin and then its argument prototype would still apply.  */
