@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:30 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/06/14 11:16:31 drochner Exp $
 bin/gst-feedback-0.10
 bin/gst-inspect-0.10
 bin/gst-launch-0.10
-bin/gst-md5sum-0.10
 bin/gst-typefind-0.10
 bin/gst-xmlinspect-0.10
 bin/gst-xmllaunch-0.10
@@ -84,7 +83,6 @@ lib/pkgconfig/gstreamer-net-0.10.pc
 man/man1/gst-feedback-0.10.1
 man/man1/gst-inspect-0.10.1
 man/man1/gst-launch-0.10.1
-man/man1/gst-md5sum-0.10.1
 man/man1/gst-typefind-0.10.1
 man/man1/gst-xmlinspect-0.10.1
 man/man1/gst-xmllaunch-0.10.1
