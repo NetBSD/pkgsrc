@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.521 2006/06/14 19:13:37 tron Exp $
+$NetBSD: CHANGES-2006,v 1.522 2006/06/14 20:17:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3068,3 +3068,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/sendmail to sendmail-8.13.6nb3 [adrianp 2006-06-14]
 	Updated mail/sendmail812 to sendmail-8.12.11nb3 [adrianp 2006-06-14]
 	Updated mail/milter-regex to 1.6nb1 [tron 2006-06-14]
+	Updated math/qalculate to 0.9.4 [adam 2006-06-14]
+	Updated math/qalculate-gtk to 0.9.4 [adam 2006-06-14]
+	Updated math/qalculate-kde to 0.9.4 [adam 2006-06-14]
+	Updated math/qalculate-bases to 0.9.4 [adam 2006-06-14]
+	Updated math/qalculate-currency to 0.9.4 [adam 2006-06-14]
+	Updated math/qalculate-units to 0.9.4 [adam 2006-06-14]
