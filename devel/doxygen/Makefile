@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2006/05/20 13:12:00 rillig Exp $
+# $NetBSD: Makefile,v 1.49 2006/06/14 10:24:53 adam Exp $
 
-DISTNAME=	doxygen-1.4.5.src
-PKGNAME=	doxygen-1.4.5
-PKGREVISION=	5
+DISTNAME=	doxygen-1.4.7.src
+PKGNAME=	doxygen-1.4.7
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.stack.nl/pub/users/dimitri/
 
@@ -43,7 +42,7 @@ SUBST_SED.perlbin=	-e 's,^PERL_PATH.*,PERL_PATH = ${PERL5},'
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=        -platform freebsd-g++
+CONFIGURE_ARGS+=	-platform freebsd-g++
 .endif
 
 post-patch:
