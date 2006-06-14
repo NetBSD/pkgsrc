@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5096 2006/06/14 10:26:09 adam Exp $
+$NetBSD: TODO,v 1.5097 2006/06/14 20:17:19 adam Exp $
 
 Suggested new packages
 ======================
@@ -1041,7 +1041,6 @@ Suggested package updates
 	o pysol-4.82
 	o pytraffic-2.5.3
 	o qDecoder-7.1.1
-	o qalculate-0.9.4
 	o qcad-2.0.4.0 [pkgsrc-wip]
 	o qdbm-1.8.59 [pkg/33485]
 	o qt1-1.45
