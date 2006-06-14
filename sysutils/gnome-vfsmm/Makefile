@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2006/03/06 00:18:11 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/06/14 07:27:57 adam Exp $
 
-DISTNAME=	gnome-vfsmm-2.12.0
-PKGREVISION=	4
+DISTNAME=	gnome-vfsmm-2.14.0
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-vfsmm/2.12/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-vfsmm/2.14/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
