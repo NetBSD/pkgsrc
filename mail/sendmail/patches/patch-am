@@ -1,0 +1,8 @@
+$NetBSD: patch-am,v 1.1.2.2 2006/06/14 21:06:26 salo Exp $
+
+--- sendmail/version.c.orig	2006-03-08 19:21:21.000000000 +0000
++++ sendmail/version.c
+@@ -17,2 +17,2 @@ SM_RCSID("@(#)$Id: version.c,v 8.160 200
+ 
+-char	Version[] = "8.13.6";
++char	Version[] = "8.13.6.20060614";
