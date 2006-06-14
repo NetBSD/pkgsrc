@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/06/14 11:23:17 drochner Exp $
 lib/gstreamer-0.10/libgstalaw.la
 lib/gstreamer-0.10/libgstalpha.la
 lib/gstreamer-0.10/libgstalphacolor.la
+lib/gstreamer-0.10/libgstannodex.la
 lib/gstreamer-0.10/libgstapetag.la
 lib/gstreamer-0.10/libgstauparse.la
 lib/gstreamer-0.10/libgstautodetect.la
@@ -13,6 +14,7 @@ lib/gstreamer-0.10/libgstflxdec.la
 lib/gstreamer-0.10/libgstgconfelements.la
 lib/gstreamer-0.10/libgstgoom.la
 lib/gstreamer-0.10/libgstid3demux.la
+lib/gstreamer-0.10/libgsticydemux.la
 lib/gstreamer-0.10/libgstlevel.la
 lib/gstreamer-0.10/libgstmatroska.la
 lib/gstreamer-0.10/libgstmulaw.la
@@ -22,6 +24,7 @@ lib/gstreamer-0.10/libgstrtp.la
 lib/gstreamer-0.10/libgstrtsp.la
 lib/gstreamer-0.10/libgstsmpte.la
 lib/gstreamer-0.10/libgstudp.la
+lib/gstreamer-0.10/libgstvideobalance.la
 lib/gstreamer-0.10/libgstvideobox.la
 lib/gstreamer-0.10/libgstvideoflip.la
 lib/gstreamer-0.10/libgstvideomixer.la
