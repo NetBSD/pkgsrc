@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2006/06/09 22:12:10 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2006/06/14 17:01:08 jlam Exp $
 
 DISTNAME=	courier-imap-4.1.1
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +13,7 @@ HOMEPAGE=	http://www.courier-mta.org/imap/
 DEPENDS+=	courier-maildir>=0.53.1:../../mail/courier-maildir
 DEPENDS+=	couriertcpd>=0.53.2:../../net/couriertcpd
 
-USE_TOOLS+=		env gmake perl
+USE_TOOLS+=		env gmake openssl:run perl
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
@@ -28,7 +29,7 @@ CONFIGURE_ARGS+=	--libexecdir=${LIBEXECDIR:Q}
 CONFIGURE_ARGS+=	--with-mailuser=${ROOT_USER:Q}
 CONFIGURE_ARGS+=	--with-piddir=${VARBASE:Q}/run
 CONFIGURE_ARGS+=	--program-transform-name='s/\.rc$$//'
-CONFIGURE_ENV+=		OPENSSL=${SSLBASE:Q}/bin/openssl
+CONFIGURE_ENV+=		OPENSSL=${TOOLS_OPENSSL:Q}
 
 INSTALL_AM_MAKEFLAGS=	sysconfdir=${EGDIR:Q}
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} AM_MAKEFLAGS=${INSTALL_AM_MAKEFLAGS:Q}
@@ -70,7 +71,6 @@ SUBST_SED.courier=	-e "s|^IMAPDSTART=.*|IMAPDSTART=YES|g"		\
 SUBST_STAGE.courier=	pre-configure
 
 .include "../../security/courier-authlib/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
