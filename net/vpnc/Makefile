@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/03/14 20:43:23 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/14 21:14:32 ghen Exp $
 #
 
 DISTNAME=		vpnc-0.3.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net security
 MASTER_SITES=		http://www.unix-ag.uni-kl.de/~massar/vpnc/
 
@@ -18,8 +18,7 @@ INSTALLATION_DIRS=	bin man/man8
 
 EGDIR=                  ${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES+=		${EGDIR}/vpnc.conf ${PKG_SYSCONFDIR}/vpnc.conf
-CONF_FILES+=		${EGDIR}/vpnc-script ${PKG_SYSCONFDIR}/vpnc-script
-CONF_FILES_MODE=	755	# vpn-script must be executable!
+CONF_FILES_PERMS+=	${EGDIR}/vpnc-script ${PKG_SYSCONFDIR}/vpnc-script ${ROOT_USER} ${ROOT_GROUP} 755
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vpnc
