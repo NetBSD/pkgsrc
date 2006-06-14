@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.169 2006/06/06 19:25:59 jlam Exp $
+# $NetBSD: replace.mk,v 1.170 2006/06/14 16:57:07 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -529,6 +529,17 @@ MAKEFLAGS+=			TOOLS_IGNORE.mtree=
 TOOLS_CREATE+=			mtree
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mtree=mtree
 TOOLS_PATH.mtree=		${TOOLS_PREFIX.mtree}/bin/mtree
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.openssl) && !empty(_USE_TOOLS:Mopenssl)
+.  if !empty(PKGPATH:Msecurity/openssl)
+MAKEFLAGS+=			TOOLS_IGNORE.openssl=
+.  elif !empty(_TOOLS_USE_PKGSRC.openssl:M[yY][eE][sS])
+TOOLS_DEPENDS.openssl?=		openssl>=0.9.6:../../security/openssl
+TOOLS_CREATE+=			openssl
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.openssl=openssl
+TOOLS_PATH.openssl=		${TOOLS_PREFIX.openssl}/bin/openssl
 .  endif
 .endif
 
