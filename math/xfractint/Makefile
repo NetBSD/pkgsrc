@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/06/12 14:54:27 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/06/14 09:07:45 rillig Exp $
 #
 
 DISTNAME=		xfrac310
@@ -23,4 +23,5 @@ BUILDLINK_TRANSFORM+=	l:ncurses:curses
 INSTALLATION_DIRS=	share/xfractint
 
 .include "../../mk/curses.buildlink3.mk"
+.include "../../pkgtools/x11-links/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

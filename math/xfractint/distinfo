@@ -1,7 +1,18 @@
-$NetBSD: distinfo,v 1.2 2006/06/12 14:54:27 rillig Exp $
+$NetBSD: distinfo,v 1.3 2006/06/14 09:07:45 rillig Exp $
 
 SHA1 (xfrac310.zip) = 420de4ca20623b4fe6b6367a269e5525b6bff3af
 RMD160 (xfrac310.zip) = ede481d77f8f5b71a6cef9d7ec4b2e09d9662f5b
 Size (xfrac310.zip) = 1074760 bytes
-SHA1 (patch-aa) = c3635fc834ab66888fae6bb6daf8d61864a53641
-SHA1 (patch-ab) = e6145260728fd00359ef5af1411f40c8e03d19a0
+SHA1 (patch-aa) = e5aa3ca9908871fbf59a7b0eee6be5c53c4b1a2e
+SHA1 (patch-af) = d95099b13cdef7421fd09be09627e4db5646e948
+SHA1 (patch-ag) = db99fc9b6753bd5a4256a6275a4493bc67cd09a1
+SHA1 (patch-ah) = f0599bb9f59921938784a866d27205abaef6a964
+SHA1 (patch-ai) = e6b4ef5637cc8d05d6dd9b0f1e098d51bc692310
+SHA1 (patch-aj) = 578a8a0dcff9021f65bd5368ae8232c89a325081
+SHA1 (patch-ak) = 2d128d7575070d3452702f219aa51c468928f38a
+SHA1 (patch-al) = 1954f3243be20ceb03c0e9d6dba86c2fd101ce89
+SHA1 (patch-am) = ae214e36ff64009d18724e80638f1fa55544d19e
+SHA1 (patch-an) = 5c4728b4d4ffa4ddd1ff904943af1484d75308f1
+SHA1 (patch-ao) = a432f9dbea726fe91c84ea77b246a3985e58108d
+SHA1 (patch-ap) = 87f6bc9db67554f600428e3369f83849b81d23fa
+SHA1 (patch-aq) = 8202b8a7adc3e3badee6de0b395d912910aa6710
