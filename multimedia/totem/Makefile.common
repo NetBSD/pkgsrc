@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.17 2006/05/10 16:41:00 drochner Exp $
+# $NetBSD: Makefile.common,v 1.18 2006/06/14 11:28:53 drochner Exp $
 #
 
-DISTNAME=	totem-1.4.0
+DISTNAME=	totem-1.4.1
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/1.4/}
 
