@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.516 2006/06/14 10:26:09 adam Exp $
+$NetBSD: CHANGES-2006,v 1.517 2006/06/14 12:50:04 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3061,3 +3061,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/eog2 to 2.14.2 [drochner 2006-06-14]
 	Updated archivers/file-roller to 2.14.3 [drochner 2006-06-14]
 	Updated devel/doxygen to 1.4.7 [adam 2006-06-14]
+	Updated converters/wv2 to 0.2.3 [markd 2006-06-14]
