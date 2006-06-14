@@ -1,17 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:01:13 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/06/14 10:25:01 rillig Exp $
 bin/xfinans
-share/examples/Xfinans/hyperhelp
-share/examples/Xfinans/hyperhelp.index
-share/examples/Xfinans/finans.bkd
-share/examples/Xfinans/variables
+lib/X11/app-defaults/XFinans/XFinans.defaults
+share/doc/Xfinans/INSTALL
+share/doc/Xfinans/README
+share/doc/Xfinans/xfin.ps
 share/examples/Xfinans/categories
 share/examples/Xfinans/category_engine
 share/examples/Xfinans/check.acc
+share/examples/Xfinans/finans.bkd
 share/examples/Xfinans/giro.acc
+share/examples/Xfinans/hyperhelp
+share/examples/Xfinans/hyperhelp.index
 share/examples/Xfinans/savings.acc
-share/doc/Xfinans/xfin.ps
-share/doc/Xfinans/README
-share/doc/Xfinans/INSTALL
-lib/X11/app-defaults/XFinans
+share/examples/Xfinans/variables
 @dirrm share/examples/Xfinans
 @dirrm share/doc/Xfinans
+@dirrm lib/X11/app-defaults/XFinans
