@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.7 2006/06/10 03:23:46 jlam Exp $
+# $NetBSD: install.mk,v 1.8 2006/06/14 07:51:47 jlam Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -34,12 +34,14 @@ ${_INSTALL_COOKIE}:
 ### real-install is a helper target to set the PKG_PHASE explicitly to
 ### "install" before running the remainder of the install targets.
 ###
+.if !exists(${_INSTALL_COOKIE})
 _REAL_INSTALL_TARGETS+=	install-check-version
 _REAL_INSTALL_TARGETS+=	install-message
 _REAL_INSTALL_TARGETS+=	install-vars
 _REAL_INSTALL_TARGETS+=	unprivileged-install-hook
 _REAL_INSTALL_TARGETS+=	install-all
 _REAL_INSTALL_TARGETS+=	install-cookie
+.endif
 
 .PHONY: real-install
 real-install: ${_REAL_INSTALL_TARGETS}
