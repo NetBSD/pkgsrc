@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5094 2006/06/13 19:55:15 wiz Exp $
+$NetBSD: TODO,v 1.5095 2006/06/14 07:29:41 adam Exp $
 
 Suggested new packages
 ======================
@@ -554,7 +554,6 @@ Suggested package updates
 	o gnome-session-2.14.2
 	o gnome-spell-1.0.7
 	o gnome-themes-2.14.2
-	o gnome-vfsmm-2.14.0
 	o gnome2-terminal-2.14.2
 	o gnomeicu-0.99.10
 	o gnopernicus-1.0.5
