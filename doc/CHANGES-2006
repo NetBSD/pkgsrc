@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.519 2006/06/14 15:55:33 adam Exp $
+$NetBSD: CHANGES-2006,v 1.520 2006/06/14 19:00:23 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3065,3 +3065,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/mailman to 2.1.8 [tv 2006-06-14]
 	Renamed x11/qt3-psql to x11/qt3-pgsql [adam 2006-06-14]
 	Renamed x11/qt4-psql to x11/qt4-pgsql [adam 2006-06-14]
+	Updated mail/sendmail to sendmail-8.13.6nb3 [adrianp 2006-06-14]
+	Updated mail/sendmail812 to sendmail-8.12.11nb3 [adrianp 2006-06-14]
