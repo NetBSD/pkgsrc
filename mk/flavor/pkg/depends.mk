@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.6 2006/06/09 16:41:09 jlam Exp $
+# $NetBSD: depends.mk,v 1.7 2006/06/14 03:00:03 jlam Exp $
 
 _DEPENDS_FILE=		${WRKDIR}/.depends
 _REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
@@ -67,8 +67,9 @@ ${_DEPENDS_FILE}:
 .PHONY: depends-install
 depends-install: ${_DEPENDS_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
-	${CAT} ${_DEPENDS_FILE} |					\
-	while read type pattern dir; do					\
+	set -- dummy `${CAT} ${_DEPENDS_FILE}`; shift;			\
+	while ${TEST} $$# -gt 0; do					\
+		type="$$1"; pattern="$$2"; dir="$$3"; shift 3;		\
 		pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;	\
 		case "$$pkg" in						\
 		"")							\
