@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.54 2006/06/01 09:31:18 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.55 2006/06/14 21:20:16 darcy Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -432,6 +432,33 @@
 <programlisting>
     DISTNAME=       foo-17.43
 </programlisting>
+
+    <para>PKGREVISION should be incremented for any non-trivial change in the
+    resulting binary package.  Without a PKGREVISION bump, someone with
+    the previous version installed has no way of knowing that their
+    package is out of date.  Thus, changes without increasing PKGREVISION
+    are essentially labeled "this is so trivial that no reasonable person
+    would want to upgrade", and this is the rough test for when increasing
+    PKGREVISION is appropriate.  Examples of changes that do not merit
+    increasing PKGREVISION are:</para>
+
+<programlisting>
+Changing HOMEPAGE, MAINTAINER, or comments in Makefile.
+Changing build variables if the resulting binary package is the same.
+Changing DESCR.
+Adding PKG_OPTIONS if the default options don't change.
+</programlisting>
+
+    <para>Examples of changes that do merit an increase to PKGREVISION
+    include:</para>
+<programlisting>
+Security fixes
+Changes or additions to a patch file
+Changes to the PLIST
+</programlisting>
+
+    <para>PKGREVISION must also be incremented when dependencies have ABI
+    changes.</para>
     </sect2>
 
 
