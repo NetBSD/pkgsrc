@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2006/04/30 17:11:25 joerg Exp $
+$NetBSD: distinfo,v 1.7 2006/06/14 19:15:12 tron Exp $
 
 SHA1 (milter-regex-1.6.tar.gz) = 4035f9ed20b54bc9c8409b1e7ffffde86dfc61af
 RMD160 (milter-regex-1.6.tar.gz) = 1cb60a063ac3e7cada2c9800710c6a0cc4862174
 Size (milter-regex-1.6.tar.gz) = 16969 bytes
-SHA1 (patch-aa) = 1d081605f5ade07ffa6f5680c7e4888f0510c1d0
+SHA1 (patch-aa) = fdeaa835b6827f7deced58bf0c26a69e8bfca1f6
 SHA1 (patch-ab) = 07054cd076dfd54e1536ad1bf4dcbf7faa383f51
