@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.24 2006/03/09 20:51:13 kristerw Exp $
+$NetBSD: patch-aa,v 1.25 2006/06/15 11:40:00 dillo Exp $
 
---- makefile.unix.orig	2006-03-09 19:41:47.000000000 +0100
-+++ makefile.unix	2006-03-09 19:46:38.000000000 +0100
+--- makefile.unix.orig	2006-05-15 18:53:34.000000000 +0200
++++ makefile.unix
 @@ -33,7 +33,7 @@
  ###########################################################################
  
@@ -15,11 +15,11 @@ $NetBSD: patch-aa,v 1.24 2006/03/09 20:51:13 kristerw Exp $
  # just as well.  However, stay away from the `cc' Ultrix compiler if 
  # possible.
  
--CC	= gcc
-+# CC	= gcc
- # CC    = cc
- # CC	= icc
- # CC	= c89
+-CC	= @gcc
++# CC	= @gcc
+ # CC    = @cc
+ # CC	= @icc
+ # CC	= @c89
 @@ -118,7 +118,7 @@
  
  # If you want to use whatever CFLAGS are currently set in your 
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.24 2006/03/09 20:51:13 kristerw Exp $
  
  # GCC on x86 with some optimizations
  # CFLAGS = -O2 -mtune=i686 -fomit-frame-pointer -fstrength-reduce -ffast-math
-@@ -183,13 +183,13 @@
+@@ -181,13 +181,13 @@
    #########################################################################
    
    # Check for C89 + GNU extensions compliance.
@@ -103,7 +103,7 @@ $NetBSD: patch-aa,v 1.24 2006/03/09 20:51:13 kristerw Exp $
    # Sparc only, uncomment to do loop restructuring optimizations
    # and speculative prefetch for v8plusa and above
 -  EXTRA_OPTS += -xdepend  -xsafe=mem
-+  #EXTRA_OPTS += -xdepend  -xsafe=mem
++  # EXTRA_OPTS += -xdepend  -xsafe=mem
  
    #################################################
    # Additional options for glx builds
@@ -113,20 +113,20 @@ $NetBSD: patch-aa,v 1.24 2006/03/09 20:51:13 kristerw Exp $
  
 -  CFLAGS= $(XOPT) $(XTARGET) $(XPARALLEL) $(EXTRA_OPTS)
 -  LDFLAGS=$(XOPT) $(XTARGET) $(XPARALLEL) $(EXTRA_OPTS)
-+  #CFLAGS= $(XOPT) $(XTARGET) $(XPARALLEL) $(EXTRA_OPTS)
-+  #LDFLAGS=$(XOPT) $(XTARGET) $(XPARALLEL) $(EXTRA_OPTS)
++  # CFLAGS= $(XOPT) $(XTARGET) $(XPARALLEL) $(EXTRA_OPTS)
++  # LDFLAGS=$(XOPT) $(XTARGET) $(XPARALLEL) $(EXTRA_OPTS)
  
    # uncomment for silence...
 -  CFLAGS += -erroff
-+  #CFLAGS += -erroff
-   # Tell xmame that we really are in fact elf.  If not supplied, SHARED_PREFIX 
-   # is set causing dlopen()'s to fail.
++  # CFLAGS += -erroff
+   # Tell xmame that we really are in fact elf.  If not supplied, 
+   # SHARED_PREFIX is set causing dlopen()'s to fail.
 -  CFLAGS += -D__ELF__ 
-+  #CFLAGS += -D__ELF__ 
++  # CFLAGS += -D__ELF__ 
  endif
  endif
  endif
-@@ -589,7 +589,7 @@
+@@ -614,7 +614,7 @@
  ###########################################################################
  
  # Linux 
@@ -135,7 +135,7 @@ $NetBSD: patch-aa,v 1.24 2006/03/09 20:51:13 kristerw Exp $
  
  # FreeBSD
  # ARCH  = freebsd
-@@ -701,7 +701,7 @@
+@@ -727,7 +727,7 @@
  # use SDL.
  
  # X11 (including Glide & OpenGL if enabled below)
@@ -144,7 +144,7 @@ $NetBSD: patch-aa,v 1.24 2006/03/09 20:51:13 kristerw Exp $
  
  # SDL library 
  # DISPLAY_METHOD = SDL
-@@ -732,7 +732,7 @@
+@@ -758,7 +758,7 @@
  X11_MITSHM = 1
  
  # Use Xv extension for hardware scaling.
@@ -153,7 +153,7 @@ $NetBSD: patch-aa,v 1.24 2006/03/09 20:51:13 kristerw Exp $
  
  # Enable XFree86 DGA.  This also causes "make install" to set the suid bit 
  # on the executable.
-@@ -756,8 +756,8 @@
+@@ -782,8 +782,8 @@
  # X11LIB		= -L/usr/lib/X11
  
  # Standard location for XFree86
