@@ -1,77 +1,10 @@
-$NetBSD: patch-ac,v 1.4 2006/01/05 16:24:37 joerg Exp $
+$NetBSD: patch-ac,v 1.5 2006/06/15 08:26:59 chap Exp $
 
---- rprgdef.h.orig	2002-09-20 17:26:57.000000000 +0000
-+++ rprgdef.h
-@@ -22,16 +22,27 @@
- //#define DEF_LESS_DIALOGS    // Don't show the startup dialog
+--- mkspecs/defs.pro.orig  2006-02-27 15:34:20.000000000 -0500
++++ mkspecs/defs.pro	   2006-02-27 15:36:41.000000000 -0500
+@@ -2,5 +2,3 @@
+-QMAKE_CXXFLAGS_DEBUG += -pedantic
+-QMAKE_CXXFLAGS += -pedantic
  
- 
-+// Define one of
-+//  DEF_LINUX
-+//  DEF_SOLARIS
-+//  DEF_WINDOWS
-+//  DEF_BSD
-+//  DEF_IRIX
-+
-+#define DEF_@OPSYS@
-+
- // Uncomment for Linux
--#define DEF_LINUX           // Are we running Linux?
-+#ifdef DEF_LINUX           // Are we running Linux?
- #define RUNNING_LINUX   true
- #define RUNNING_WINDOWS false
- #define RUNNING_SOLARIS false
- #define RUNNING_IRIX    false
--#define DATADIR         "/usr/share"
-+#endif
- 
-+#define DATADIR         "@PREFIX@/share"
- 
--#ifdef __FreeBSD__
-+
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
- #define DEF_FREEBSD
- #undef DEF_LINUX
- #define RUNNING_LINUX   true    // close enough
-@@ -42,35 +53,30 @@
- 
- 
- // Uncomment for Solaris
--/*
--#define DEF_SOLARIS           // Are we running Solaris?
-+#ifdef DEF_SOLARIS           // Are we running Solaris?
- #define RUNNING_SOLARIS true
- #define RUNNING_WINDOWS false
- #define RUNNING_LINUX   false
- #define RUNNING_IRIX    false
--*/
-+#endif
- 
- 
- // Uncomment for Windoze
--/*
--#define DEF_WINDOWS           // Iiiik - we're running windoze!!!
-+#ifdef DEF_WINDOWS           // Iiiik - we're running windoze!!!
- #define RUNNING_WINDOWS true
- #define RUNNING_LINUX   false
- #define RUNNING_SOLARIS false
- #define RUNNING_IRIX    false
--*/
--
-+#endif
- 
- 
- // Uncomment for IRIX
--/*
--#define DEF_SGI               // Are we running IRIX?
-+#ifdef DEF_SGI               // Are we running IRIX?
- #define RUNNING_SOLARIS false
- #define RUNNING_WINDOWS false
- #define RUNNING_LINUX   false
- #define RUNNING_IRIX    true
--*/
--
-+#endif
- 
- #ifdef DEF_SOLARIS
- #define true 1
+ win32 {
+   QMAKE_CFLAGS_THREAD -= -mthreads
