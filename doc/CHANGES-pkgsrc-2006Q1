@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.86 2006/06/14 21:08:09 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.87 2006/06/15 12:06:30 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -177,3 +177,5 @@ Pullup ticket 1700 - requested by adrianp
 security fix for sendmail
 Pullup ticket 1701 - requested by adrianp
 security fix for sendmail812
+Pullup ticket 1703 - requested by markd
+security fix for arts
