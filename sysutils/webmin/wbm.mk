@@ -1,4 +1,4 @@
-# $NetBSD: wbm.mk,v 1.4 2006/05/19 17:14:53 jlam Exp $
+# $NetBSD: wbm.mk,v 1.5 2006/06/15 22:13:59 jlam Exp $
 #
 # Makefile fragment for Webmin modules
 
@@ -32,7 +32,7 @@ FILES_SUBST+=		WBMNAME=${WBMNAME:Q}
 FILES_SUBST+=		WEBMIN_DIR=${WEBMIN_DIR:Q}
 FILES_SUBST+=		WEBMIN_VARDIR=${WEBMIN_VARDIR:Q}
 
-DEINSTALL_TEMPLATE+=	${PKGSRCDIR}/sysutils/webmin/files/wbm-deinstall.tmpl
+DEINSTALL_TEMPLATES+=	${PKGSRCDIR}/sysutils/webmin/files/wbm-deinstall.tmpl
 
 # WBMNAME is the name of the module directory
 WBMNAME?=		${DISTNAME}

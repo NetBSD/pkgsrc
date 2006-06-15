@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/17 13:46:10 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/15 22:13:58 jlam Exp $
 #
 
 DISTNAME=	hicolor-icon-theme-0.9
@@ -20,8 +20,8 @@ USE_TOOLS+=	gmake
 
 FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${BUILDLINK_PREFIX.gtk2}/bin/gtk-update-icon-cache"
 FILES_SUBST+=		ICON_THEME_DIR="${PREFIX}/share/icons/hicolor"
-INSTALL_TEMPLATE+=	../../graphics/hicolor-icon-theme/files/icon-cache.tmpl
-DEINSTALL_TEMPLATE+=	../../graphics/hicolor-icon-theme/files/icon-cache.tmpl
+INSTALL_TEMPLATES+=	../../graphics/hicolor-icon-theme/files/icon-cache.tmpl
+DEINSTALL_TEMPLATES+=	../../graphics/hicolor-icon-theme/files/icon-cache.tmpl
 PRINT_PLIST_AWK+=	/^share\/icons\/hicolor\/icon-theme.cache$$/ { next; }
 
 .include "../../x11/gtk2/buildlink3.mk"

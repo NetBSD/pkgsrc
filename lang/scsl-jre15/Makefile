@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/05/15 19:44:07 tv Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/15 22:13:59 jlam Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
@@ -28,9 +28,9 @@ PKG_SUPPORTED_OPTIONS=	sun-jre-jce
 
 .include "../../mk/bsd.options.mk"
 
-HEADER_TEMPLATE+=	${WRKDIR}/HEADER.tmpl
-INSTALL_TEMPLATE+=	${PKGDIR}/INSTALL.tmpl
-DEINSTALL_TEMPLATE+=	${PKGDIR}/DEINSTALL.tmpl
+HEADER_TEMPLATES+=	${WRKDIR}/HEADER.tmpl
+INSTALL_TEMPLATES+=	${PKGDIR}/INSTALL.tmpl
+DEINSTALL_TEMPLATES+=	${PKGDIR}/DEINSTALL.tmpl
 FILES_SUBST+=		JAVA_HOME=${JAVA_HOME:Q}
 FILES_SUBST+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
 
@@ -52,7 +52,7 @@ do-configure:
 	cd ${WRKSRC}/lib; for file in ${SFILES}; do			\
 		${MV} -f $$file $$file.default;				\
 	done
-	@${ECHO} 'CONF_FILES="${CONF_FILES}"' >${HEADER_TEMPLATE}
+	@${ECHO} 'CONF_FILES="${CONF_FILES}"' >${WRKDIR}/HEADER.tmpl
 
 pre-install:
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
