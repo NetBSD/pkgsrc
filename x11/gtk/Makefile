@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2006/04/29 16:58:45 jschauma Exp $
+# $NetBSD: Makefile,v 1.119 2006/06/15 20:40:16 jlam Exp $
 
 DISTNAME=		gtk+-1.2.10
 PKGREVISION=		9
@@ -43,10 +43,6 @@ GTK_VERSION=		${DISTNAME:S/gtk+-//}
 GTK_MAJOR_VERSION=	${GTK_VERSION:C/\..*//}
 GTK_MINOR_VERSION=	${GTK_VERSION:C/[^.]*\.//:C/\..*//}
 GTK_MICRO_VERSION=	${GTK_VERSION:C/.*\.//}
-
-.if ${PKG_INSTALLATION_TYPE} == "overwrite"
-DEINSTALL_TEMPLATE+=	${PKGDIR}/INSTALL
-.endif
 
 .include "../../mk/compiler.mk"
 
