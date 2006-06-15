@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2006/04/22 09:22:13 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2006/06/15 20:03:25 jlam Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 PKGNAME=	ghostscript-esp-${GS_VERS}
-PKGREVISION=	4
+PKGREVISION=	5
 BASEGS_VERS=	8.15
 GS_VERS=	${BASEGS_VERS}.1
 CATEGORIES=	print
@@ -34,6 +34,14 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ijs
 CONFIGURE_ARGS+=	--without-omni
 CONFIGURE_ARGS+=	--with-drivers=ALL
+CONFIGURE_ARGS+=	${CONFIGURE_ARGS_ICONV.${USE_BUILTIN.iconv}}
+
+# Force the configure script to select the correct iconv library.  The
+# "maybe" setting looks for iconv in libc first, then falls back to
+# checking -liconv, while "gnu" looks directly in -liconv.
+#
+CONFIGURE_ARGS_ICONV.yes=	--with-libiconv=maybe
+CONFIGURE_ARGS_ICONV.no=	--with-libiconv=gnu
 
 DIST_SUBDIR=		ghostscript
 GS_SRCS=		${DISTNAME}${EXTRACT_SUFX}
@@ -68,6 +76,7 @@ DOCDIR=			${PREFIX}/share/doc/ghostscript
 
 PLIST_SUBST+=		GS_VERS=${BASEGS_VERS:Q}
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../print/gimp-print-lib/buildlink3.mk"
