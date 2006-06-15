@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1852 2006/06/15 02:24:41 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1853 2006/06/15 02:39:19 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -154,11 +154,11 @@ PKG_FAIL_REASON+=	"This package doesn't support PKG_INSTALLATION_TYPE=${PKG_INST
 # Check that we are using up-to-date pkg_* tools with this file.
 .if !defined(NO_PKGTOOLS_REQD_CHECK)
 .  if ${PKGTOOLS_VERSION} < ${PKGTOOLS_REQD}
-PKG_FAIL_REASON+='Error: The package tools installed on this system are out of date.'
-PKG_FAIL_REASON+='The installed package tools are dated ${PKGTOOLS_VERSION:C|(....)(..)(..)|\1/\2/\3|} and you must update'
-PKG_FAIL_REASON+='them to at least ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} using the following command:'
+PKG_FAIL_REASON+='The package tools installed on this system are out of date.'
+PKG_FAIL_REASON+='The installed package tools are dated ${PKGTOOLS_VERSION:C|(....)(..)(..)|\1/\2/\3|} and you must'
+PKG_FAIL_REASON+='update them to at least ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} using the following command:'
 PKG_FAIL_REASON+=''
-PKG_FAIL_REASON+='	(cd ${PKGSRCDIR}/pkgtools/pkg_install && ${MAKE} clean && ${MAKE} update)'
+PKG_FAIL_REASON+='    (cd ${PKGSRCDIR}/pkgtools/pkg_install && ${MAKE} clean && ${MAKE} update)'
 .  endif
 .endif # !NO_PKGTOOLS_REQD_CHECK
 
@@ -699,8 +699,11 @@ update depends do-check-pkg-fail-or-skip-reason:
 .    if defined(SKIP_SILENT)
 	@${DO_NADA}
 .    else
-	@for str in ${PKG_FAIL_REASON} ${PKG_SKIP_REASON}; do		\
-		${PHASE_MSG} "$$str";					\
+	@for str in ${PKG_FAIL_REASON}; do				\
+		${ERROR_MSG} "$$str";					\
+	done
+	@for str in ${PKG_SKIP_REASON}; do				\
+		${WARNING_MSG} "$$str";					\
 	done
 .    endif
 .    if defined(PKG_FAIL_REASON)
