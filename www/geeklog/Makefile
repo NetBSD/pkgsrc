@@ -1,0 +1,110 @@
+# $NetBSD: Makefile,v 1.1.1.1 2006/06/15 13:26:42 taca Exp $
+#
+
+DISTNAME=	geeklog-${VER}
+PKGNAME=	geeklog-${VER:S/sr/./}
+CATEGORIES=	www
+MASTER_SITES=	http://www.geeklog.net/filemgmt/upload_dir/
+
+MAINTAINER=	taca@NetBSD.org
+HOMEPAGE=	http://www.geeklog.net/
+COMMENT=	PHP/MySQL based application for managing dynamic web content
+
+DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.3:../../www/ap-php
+DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.0:../../databases/php-mysql
+
+VER=		1.4.0sr3
+NO_BUILD=	YES
+
+GEEKLOG_SYS=		emailgeeklogstories language plugins readme sql system
+GEEKLOG_TMPL_SUB=	backend images/articles images/library \
+			images/topics images/userphotos
+
+GEEKLOG_CONF_FILES=	config.php plugins/links/config.php \
+			plugins/polls/config.php plugins/spamx/config.php \
+			plugins/staticpages/config.php
+
+CONF_FILES+=		${GEEKLOG_EXAMPLESDIR}/geeklog.conf \
+			${PKG_SYSCONFDIR}/geeklog.conf
+
+.for f in ${GEEKLOG_CONF_FILES}
+CONF_FILES_PERMS+=	${GEEKLOG_EXAMPLESDIR}/${f} \
+			${GEEKLOG_DIR}/${f} \
+			${BINOWN} ${APACHE_GROUP} 0640
+.endfor
+
+OWN_DIRS_PERMS+=	${GEEKLOG_DIR}/backups ${BINOWN} ${APACHE_GROUP} 0770 \
+			${GEEKLOG_DIR}/data ${BINOWN} ${APACHE_GROUP} 0770 \
+			${GEEKLOG_DIR}/logs ${BINOWN} ${APACHE_GROUP} 0775
+
+FILES_SUBST+=		APACHE_GROUP=${APACHE_GROUP:Q} \
+			GEEKLOG_DIR=${GEEKLOG_DIR:Q} \
+			GEEKLOG_EXAMPLESDIR=${GEEKLOG_EXAMPLESDIR:Q} \
+			GEEKLOG_PUBDIR=${GEEKLOG_PUBDIR:Q} \
+			GEEKLOG_TMPL_SUB=${GEEKLOG_TMPL_SUB:Q} \
+			GEEKLOG_TMPL_DIR=${GEEKLOG_TMPL_DIR:Q}
+
+MESSAGE_SUBST+=		GEEKLOG_DIR=${GEEKLOG_DIR:Q} \
+			GEEKLOG_EXAMPLESDIR=${GEEKLOG_EXAMPLESDIR:Q}
+
+PLIST_SUBST+=		GEEKLOG_BASE=${GEEKLOG_BASE:Q} \
+			GEEKLOG_PUB=${GEEKLOG_PUB:Q} \
+			GEEKLOG_TMPL=${GEEKLOG_TMPL:Q}
+
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths+=	${WRKDIR}/createdb.php
+SUBST_FILES.paths+=	${WRKSRC}/config.php ${WRKSRC}/emailgeeklogstories
+SUBST_FILES.paths+=	${WRKSRC}/public_html/lib-common.php
+SUBST_SED.paths+=       -e 's,@GEEKLOG_DIR@,${GEEKLOG_DIR:Q},g'
+SUBST_SED.paths+=       -e 's,@GEEKLOG_PUBDIR@,${GEEKLOG_PUBDIR:Q},g'
+SUBST_SED.paths+=       -e 's,@GEEKLOG_SITESUBDIR@,${GEEKLOG_SITESUBDIR:Q},g'
+SUBST_SED.paths+=       -e 's,@PREFIX@,${PREFIX:Q},g'
+SUBST_STAGE.paths=      post-configure
+
+SUBST_CLASSES+=		conf
+SUBST_FILES.conf+=	${WRKDIR}/geeklog.conf
+SUBST_SED.conf+=	-e 's,@GEEKLOG_DIR@,${GEEKLOG_DIR:Q},g'
+SUBST_SED.conf+=	-e 's,@GEEKLOG_PUBDIR@,${GEEKLOG_PUBDIR:Q},g'
+SUBST_STAGE.conf=	post-configure
+
+INSTALLATION_DIRS=	${GEEKLOG_BASE} ${GEEKLOG_PUB} ${GEEKLOG_TMPL}/images \
+			share/examples/geeklog
+
+.include "../../WORK/geeklog/Makefile.common"
+
+APACHE_GROUP?=		www
+PKG_SYSCONFSUBDIR?=	geeklog
+
+.if empty(GEEKLOG_SITEBASE)
+SUBST_SED.conf+=	-e '/^Alias/s,^,\#,'
+.endif
+
+post-extract:
+	${CP} ${FILESDIR}/createdb.php ${FILESDIR}/geeklog.conf ${WRKDIR}
+
+pre-install:
+	${FIND} ${WRKSRC:Q} -name "*.orig*" -exec ${RM} -f {} \;
+	cd ${WRKSRC}/public_html; \
+		${FIND} ${GEEKLOG_TMPL_SUB} -type f -exec ${CHMOD} -x {} \;
+
+do-install:
+.for f in ${GEEKLOG_CONF_FILES}
+	${INSTALL_DATA_DIR} ${GEEKLOG_EXAMPLESDIR}/${f:H}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${GEEKLOG_EXAMPLESDIR}/${f}
+	${INSTALL_DATA} ${WRKDIR}/createdb.php ${GEEKLOG_EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKDIR}/geeklog.conf ${GEEKLOG_EXAMPLESDIR}
+	${RM} ${WRKSRC}/${f}
+.endfor
+	cd ${WRKSRC}; ${CP} -R ${GEEKLOG_SYS} ${GEEKLOG_DIR}
+.for d in ${GEEKLOG_TMPL_SUB}
+	cd ${WRKSRC}/public_html; \
+		if [ -d ${d} ]; then \
+			${PAX} -rw ${d} ${GEEKLOG_TMPL_DIR}; \
+			${RM} -rf ${d}; \
+		fi
+.endfor
+	cd ${WRKSRC}/public_html; ${PAX} -rw . ${GEEKLOG_PUBDIR}
+
+.include "../../mk/apachever.mk"
+.include "../../lang/php/phpversion.mk"
+.include "../../mk/bsd.pkg.mk"
