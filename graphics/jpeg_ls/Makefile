@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/16 06:57:58 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2006/06/15 13:31:29 wiz Exp $
 #
 
 DISTNAME=		jpeg_ls_v2.2
@@ -6,7 +6,7 @@ PKGNAME=		jpeg_ls-2.2
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.ece.ubc.ca/spmg/research/jpeg/jpeg_ls/ver-2.2/
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ece.ubc.ca/spmg/research/jpeg/jpeg_ls/jpegls.html
 COMMENT=		JPEG-LS codec (lossless/near-lossless codec)
 

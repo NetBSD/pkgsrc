@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2005/07/16 01:19:15 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/06/15 13:31:29 wiz Exp $
 
 DISTNAME=	reed-5.4
 PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://www.sacredchao.net/software/reed/
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sacredchao.net/software/reed/index.shtml
 COMMENT=	Auto-scrolling file viewer
 

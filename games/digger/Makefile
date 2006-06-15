@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/06/12 16:28:08 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/06/15 13:31:28 wiz Exp $
 #
 
 DISTNAME=		digger-20020314
@@ -6,7 +6,7 @@ PKGREVISION=		5
 CATEGORIES=		games
 MASTER_SITES=		http://www.digger.org/
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.digger.org/
 COMMENT=		Digger Remastered
 
