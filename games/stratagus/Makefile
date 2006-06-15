@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/12 16:28:11 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2006/06/15 13:31:29 wiz Exp $
 #
 
 DISTNAME=		stratagus-2.1-src
@@ -7,7 +7,7 @@ PKGREVISION=		7
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=stratagus/}
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://stratagus.sourceforge.net/
 COMMENT=		Real-time strategy engine
 
