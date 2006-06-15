@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/17 13:46:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/06/15 22:13:58 jlam Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 HICOLOR_ICON_THEME_BUILDLINK3_MK:=	${HICOLOR_ICON_THEME_BUILDLINK3_MK}+
@@ -29,8 +29,8 @@ PRINT_PLIST_AWK+=	/^@dirrm ${d:S/\//\\\//g}$$/ \
 .include  "../../x11/gtk2/buildlink3.mk"
 FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${BUILDLINK_PREFIX.gtk2}/bin/gtk-update-icon-cache"
 FILES_SUBST+=		ICON_THEME_DIR="${BUILDLINK_PREFIX.hicolor-icon-theme}/share/icons/hicolor"
-INSTALL_TEMPLATE+=	../../graphics/hicolor-icon-theme/files/icon-cache.tmpl
-DEINSTALL_TEMPLATE+=	../../graphics/hicolor-icon-theme/files/icon-cache.tmpl
+INSTALL_TEMPLATES+=	../../graphics/hicolor-icon-theme/files/icon-cache.tmpl
+DEINSTALL_TEMPLATES+=	../../graphics/hicolor-icon-theme/files/icon-cache.tmpl
 PRINT_PLIST_AWK+=	/^share\/icons\/hicolor\/icon-theme.cache$$/ { next; }
 
 BUILDLINK_TARGETS+=	guic-buildlink-fake

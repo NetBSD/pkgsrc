@@ -1,4 +1,4 @@
-# $NetBSD: packlist.mk,v 1.7 2006/06/09 08:50:24 rillig Exp $
+# $NetBSD: packlist.mk,v 1.8 2006/06/15 22:13:59 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # create packlist files.  This file is automatically included by
@@ -30,8 +30,8 @@ _PERL5_PACKLIST=	${PERL5_PACKLIST:S/^/${PERL5_PACKLIST_DIR}\//}
 ### INSTALL/DEINSTALL scripts to manage symlinks
 ###
 
-INSTALL_TEMPLATE+=	${.CURDIR}/../../lang/perl5/files/install.tmpl
-DEINSTALL_TEMPLATE+=	${.CURDIR}/../../lang/perl5/files/deinstall.tmpl
+INSTALL_TEMPLATES+=	${.CURDIR}/../../lang/perl5/files/install.tmpl
+DEINSTALL_TEMPLATES+=	${.CURDIR}/../../lang/perl5/files/deinstall.tmpl
 FILES_SUBST+=		PERL5_COMMENT=
 FILES_SUBST+=		PERL5_PACKLIST=${_PERL5_PACKLIST:Q}
 
