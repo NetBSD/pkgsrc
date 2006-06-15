@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.40 2006/06/04 16:26:54 joerg Exp $
+# $NetBSD: pyversion.mk,v 1.41 2006/06/15 16:16:12 joerg Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -121,7 +121,7 @@ BUILDLINK_DEPMETHOD.python?=	build
 
 PYTHONBIN=	${LOCALBASE}/bin/python${PYVERSSUFFIX}
 
-.if exists(${PYTHONBIN})
+.if exists(${PYTHONBIN}) && !defined(PYTHON_DISTUTILS_BOOTSTRAP)
 PYINC!=	${PYTHONBIN} -c "import distutils.sysconfig; \
 	print distutils.sysconfig.get_python_inc(0, \"\")" || ${ECHO} ""
 PYLIB!=	${PYTHONBIN} -c "import distutils.sysconfig; \
