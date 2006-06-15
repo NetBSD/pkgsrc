@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.529 2006/06/15 12:41:09 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.530 2006/06/15 13:29:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3082,3 +3082,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/pear-HTTP version 1.4.0 [adrianp 2006-06-15]
 	Updated emulators/xmame to 0.106 [dillo 2006-06-15]
 	Updated emulators/xmess to 0.106 [dillo 2006-06-15]
+	Added www/geeklog version 1.4.0.3 [taca 2006-06-15]
