@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/14 01:14:29 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/06/15 13:31:29 wiz Exp $
 #
 
 DISTNAME=	xscavenger-1.4.4
@@ -7,7 +7,7 @@ CATEGORIES=	games x11
 MASTER_SITES=	http://www.xdr.com/dash/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xdr.com/dash/scavenger.html
 COMMENT=	Loderunner clone with sound for X11
 

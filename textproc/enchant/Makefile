@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/05/09 02:01:11 hira Exp $
+# $NetBSD: Makefile,v 1.18 2006/06/15 13:31:30 wiz Exp $
 #
 
 DISTNAME=		enchant-1.1.6
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.abisource.com/downloads/enchant/1.1.6/
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.abisource.com/enchant/
 COMMENT=		Generic spell checking library
 
