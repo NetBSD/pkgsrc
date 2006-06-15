@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.85 2006/04/22 09:22:08 rillig Exp $
+# $NetBSD: Makefile,v 1.86 2006/06/15 11:40:00 dillo Exp $
 #
 
-DISTNAME=		xmame-0.104
-PKGNAME=		xmess-0.104
+DISTNAME=		xmame-0.106
+PKGNAME=		xmess-0.106
 CATEGORIES=		emulators games x11
 MASTER_SITES=		http://x.mame.net/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -27,8 +27,6 @@ ROMPATH=		${PREFIX}/share/${TARGET}
 SPOOLDIR=		${VARBASE}/games/${TARGET}
 
 MAKE_FLAGS+=		TARGET="${TARGET:S/x//}"
-MAKE_FLAGS+=		LIBS="${LDFLAGS} ${LIBS}"
-MAKE_FLAGS+=		CFLAGS=${CFLAGS:M*:Q}
 MAKE_FLAGS+=		X11INC= X11LIB=
 
 # Network support is broken since xmame-0.85
@@ -105,7 +103,7 @@ do-install:
 # Pragma once is not needed, and case warnings/errors on gcc
 SUBST_CLASSES+=		pragma
 SUBST_STAGE.pragma=	pre-configure
-SUBST_FILES.pragma=	src/*.h
+SUBST_FILES.pragma=	src/*.h src/*/*.h
 SUBST_SED.pragma=	-e "s|\#pragma once||g"
 
 .include "../../devel/zlib/buildlink3.mk"
