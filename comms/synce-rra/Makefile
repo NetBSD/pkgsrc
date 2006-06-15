@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/06/06 15:34:31 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2006/06/15 13:26:56 wiz Exp $
 #
 
 DISTNAME=		synce-rra-0.9.1
@@ -9,7 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=synce/}
 PATCHFILES=		rra-fixes-after-V0_9_1.diff
 PATCH_SITES=		http://synce.sourceforge.net/tmp/
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://synce.sourceforge.net/
 COMMENT=		Remote Replication Agent Connection protocol library
 
