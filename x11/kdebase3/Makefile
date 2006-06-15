@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.107 2006/02/24 21:54:23 wiz Exp $
+# $NetBSD: Makefile,v 1.107.2.1 2006/06/15 14:51:48 salo Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
+
+PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/
+PATCHFILES=	post-3.5.0-kdebase-kdm.diff
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
