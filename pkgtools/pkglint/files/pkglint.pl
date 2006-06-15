@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.621 2006/06/15 22:22:13 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.622 2006/06/15 22:50:31 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3463,7 +3463,7 @@ sub checkline_mk_shelltext($$) {
 			} elsif ($shellword =~ qr"^\$\{([\w_]+)\}$" && (exists($vartools->{$1}) || defined(get_variable_type($line, $1)))) {
 				# Fine.
 
-			} elsif ($shellword =~ qr"^(?:\(|\)|:|;|;;|&&|\|\||\{|\}|break|case|cd|continue|do|done|elif|else|esac|eval|exit|export|fi|for|if|read|set|shift|then|unset|while)$") {
+			} elsif ($shellword =~ qr"^(?:\(|\)|:|;|;;|&&|\|\||\{|\}|break|case|cd|continue|do|done|elif|else|esac|eval|exec|exit|export|fi|for|if|read|set|shift|then|unset|while)$") {
 				# Shell builtins are fine.
 
 			} elsif ($shellword =~ qr"^[\w_]+=.*$") {
