@@ -1,23 +1,9 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.1 2002/11/26 11:26:32 jmmv Exp $
-
-PREFIX="@PREFIX@"
+# $NetBSD: INSTALL,v 1.2 2006/06/15 20:40:16 jlam Exp $
 
 case ${STAGE} in
 POST-INSTALL)
-	${LN} -s ${PREFIX}/share/apsfilter ${PKG_SYSCONFDIR}/basedir
-	;;
-DEINSTALL)
-	${RM} ${PKG_SYSCONFDIR}/basedir
-
-	cat << EOF
-===========================================================================
-If you will not be using apsfilter any longer, you may want to remove
-apsfilter's configuration directory (${PKG_SYSCONFDIR}) and the
-SETUP.cfg configuration file from apsfilter's directory
-(${PREFIX}/share/apsfilter/SETUP.cfg).
-===========================================================================
-EOF
+	${LN} -s ${PKG_PREFIX}/share/apsfilter ${PKG_SYSCONFDIR}/basedir
 	;;
 esac

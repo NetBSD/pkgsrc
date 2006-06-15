@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/03/14 01:14:32 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2006/06/15 20:40:16 jlam Exp $
 #
 
 DISTNAME=	apsfilter-7.2.6
@@ -31,8 +31,6 @@ CONFIGURE_ARGS+=--with-awk=${TOOLS_AWK:Q}
 PKG_SYSCONFSUBDIR?=	apsfilter
 CONF_FILES=	${PREFIX}/share/apsfilter/template/apsfilterrc \
 		${PKG_SYSCONFDIR}/apsfilterrc
-
-DEINSTALL_TEMPLATE+=	${PKGDIR}/INSTALL
 
 post-patch:
 	for i in bin/apsfilter.in SETUP.in tools/prtmgmt; do		\

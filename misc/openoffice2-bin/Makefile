@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/05/22 22:22:04 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/06/15 20:40:16 jlam Exp $
 
 PKGNAME=		openoffice-bin-2.0.2
 CATEGORIES=		misc
@@ -41,8 +41,6 @@ PLIST_SRC+=		${WRKDIR}/PLIST
 # group together i386, i486, i586 and i686 (for Linux)
 #
 ARCH=	${MACHINE_ARCH:C/i[3-6]86/i386/g}
-
-DEINSTALL_TEMPLATE+=	${PKGDIR}/INSTALL
 
 .if ${OPSYS} == "NetBSD"
 .  if ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64"

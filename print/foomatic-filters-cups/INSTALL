@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.1.1.1 2005/12/17 18:26:15 jlam Exp $
+# $NetBSD: INSTALL,v 1.2 2006/06/15 20:40:16 jlam Exp $
 
 CUPS_FILTERDIR="@CUPS_FILTERDIR@"
 
@@ -8,11 +8,5 @@ POST-INSTALL)
 	${TEST} -f ${CUPS_FILTERDIR}/foomatic-rip ||
 	{ ${ECHO} "Adding foomatic-rip filter to CUPS.";
 	  ${LN} -s ${PKG_PREFIX}/bin/foomatic-rip ${CUPS_FILTERDIR}; }
-	  
-	;;
-
-DEINSTALL)
-	${ECHO} "Removing foomatic-rip filter from CUPS."
-	${RM} -f ${CUPS_FILTERDIR}/foomatic-rip
 	;;
 esac
