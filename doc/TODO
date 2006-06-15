@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5099 2006/06/15 14:24:29 wiz Exp $
+$NetBSD: TODO,v 1.5100 2006/06/15 14:27:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -322,7 +322,7 @@ Suggested package updates
 	o aegis-4.22
 	o aewm++-1.0.27
 	o afterstep-2.2.2
-	o album-3.11
+	o album-3.12
 	o ald-0.1.6 [pkg/26552]
 	o algae-4.3.6
 	o aliados-0.2.0
@@ -361,6 +361,7 @@ Suggested package updates
 	o aspell-danish-1.4.53
 	o aspell-faroese-0.2.25
 	o aspell-norwegian-2.0.6
+	o asterisk-1.2.9.1
 	o astyle-1.15.3
 	o autogen-5.8.4
 	o avcheck-0.91
@@ -392,7 +393,7 @@ Suggested package updates
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.3
 	o cal3d-0.10.0
-	o capc-calc-2.12.0.2
+	o capc-calc-2.12.0.3
 	o catdoc-0.94
 	o catdoc-tk-0.94
 	o cbrowser-0.8 [pkg/30972]
@@ -439,7 +440,7 @@ Suggested package updates
 	o devIL-1.6.7
 	o devhelp-0.10
 	o devtodo-0.1.19
-	o dirac-0.5.4
+	o dirac-0.6.0
 	o dirdiff-2.1
 	o dmidecode-2.8
 	o dnsmasq-2.31
@@ -462,6 +463,7 @@ Suggested package updates
 	o electricfence-2.4.16
 	o elf-0.5.4p1
 	o elfsh-0.65rc1
+	o elk-3.99.7
 	o elm-me-2.4pl122i
 	o elscreen-1.3.3
 	o emacs-w3m-1.4.4
@@ -495,12 +497,13 @@ Suggested package updates
 	o file-4.17
 	o findutils-4.2.27
 	o flashplayer-0.4.13
+	o fluxbox-1.0rc
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
 	o fort77-1.18
 	o fortunes-de-0.20
-	o fox-1.6.4
+	o fox-1.6.6
 	o freeglut-2.4.0
 	o freesci-0.3.5
 	o fugu-1.2.3
@@ -727,7 +730,7 @@ Suggested package updates
 	o mined-2000.12
 	o mini_sendmail-1.3.5
 	o minivmac-2.6.1
-	o miredo-0.8.5
+	o miredo-0.9.3
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-1.7.0
 	o mlview-0.9.0
@@ -768,6 +771,7 @@ Suggested package updates
 	o newmail-1.0.2
 	o newmat-11
 	o ng-1.4.4
+	o nmap-4.10
 	o nmh-1.2.1
 	o nn-6.7.2
 	o ns-plugger-common-5.1.3
@@ -790,6 +794,7 @@ Suggested package updates
 	o openal-0.0.8
 	o opencobol-0.31
 	o openh323-1.17.2
+	o openmortal-0.7.1
 	o openntpd-3.9p1
 	o openoffice-2.0.2
 	o openpam-20050616
@@ -924,6 +929,7 @@ Suggested package updates
 	o pam-mysql-0.6.2
 	o pam-smbpass-3.0.13
 	o pari-2.1.7
+	o parrot-0.4.4 [pkg/33736]
 	o patchutils-0.2.31
 	o pcal-4.8
 	o pchar-1.5
@@ -979,6 +985,7 @@ Suggested package updates
 	o postgresql_autodoc-1.25
 	o powermanga-0.80
 	o prayer-1.0.15
+	o prelude-manager-0.9.5
 	o proj-4.4.9
 	o projclock-0.9
 	o proxsmtp-1.2.1
@@ -1086,6 +1093,7 @@ Suggested package updates
 	o seahorse-0.9.1
 	o semantic-1.4.4
 	o sendfile-20010424
+	o sendmail-8.13.7
 	o sharity-light-1.3
 	o shc-3.8
 	o shmux-1.0b7
@@ -1110,7 +1118,7 @@ Suggested package updates
 	o smlnj-110.51 [pkgsrc-wip]
 	o smlnj-110.59
 	o snd-8.1
-	o solfege-3.2.1
+	o solfege-3.3.1
 	o sope-4.5.5
 	o source-highlight-2.3 [pkg/32325]
 	o sox-12.18.1
@@ -1147,6 +1155,7 @@ Suggested package updates
 	o tds-1.6.2
 	o ted-2.17
 	o tfmxplay-1.1.6
+	o tgif-4.1.45
 	o tin-1.8.2
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
@@ -1203,7 +1212,7 @@ Suggested package updates
 	o www6to4-1.6
 	o wwwoffle-2.9
 	o x11vnc-0.8.1 [pkg/33700]
-	o x2vnc-1.7.1
+	o x2vnc-1.7.2
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xbindkeys-1.7.2
 	o xboard-4.2.7
