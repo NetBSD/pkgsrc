@@ -1,15 +1,11 @@
-# $NetBSD: INSTALL,v 1.2 2006/01/04 15:29:41 ghen Exp $
-
-# This file contains the contents of the OOo rpm 
-# pre-install, post-install, pre-uninstall and post-uninstall scripts
+# $NetBSD: INSTALL,v 1.3 2006/06/15 20:40:16 jlam Exp $
+#
+# This file contains the contents of the OOo rpm pre-install, post-install
+# scripts.
 
 PRODUCTINSTALLLOCATION=${PKG_PREFIX}/openoffice.org@VER@
 
 case ${STAGE} in
-PRE-INSTALL)
-	# nothing to do
-	;;
-
 POST-INSTALL)
 	if [ ! -f $PRODUCTINSTALLLOCATION/program/libfreetype.so.6 ]
 	then
@@ -19,12 +15,4 @@ POST-INSTALL)
 	  fi
 	fi
 	;;
-
-DEINSTALL)
-	if [ -h $PRODUCTINSTALLLOCATION/program/libfreetype.so.6 ]
-	then
-	  ${RM} $PRODUCTINSTALLLOCATION/program/libfreetype.so.6 >/dev/null 2>&1
-	fi
-	;;
-
 esac
