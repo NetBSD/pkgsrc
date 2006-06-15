@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:09:16 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/15 13:31:29 wiz Exp $
 #
 
 DISTNAME=	golddigC3.0
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.NetBSD.org/~chuck/gz/
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Fast action game designed for use with X
 
 USE_X11BASE=	yes
