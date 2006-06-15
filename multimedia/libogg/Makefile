@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2006/04/22 07:32:24 lukem Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/15 13:38:51 wiz Exp $
 #
 
 DISTNAME=	libogg-1.1.3
 CATEGORIES=	multimedia devel
 MASTER_SITES=	http://downloads.xiph.org/releases/ogg/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.xiph.org/ogg/
 COMMENT=	Ogg project codecs library
 
