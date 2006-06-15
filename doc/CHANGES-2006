@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.532 2006/06/15 15:25:11 salo Exp $
+$NetBSD: CHANGES-2006,v 1.533 2006/06/15 22:06:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3094,3 +3094,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/geeklog version 1.4.0.3 [taca 2006-06-15]
 	Updated net/nmap to 4.10 [salo 2006-06-15]
 	Updated net/nmapfe to 0.9.5nb29 [salo 2006-06-15]
+	Updated fonts/adobe-cmaps to 20060615 [minskim 2006-06-15]
