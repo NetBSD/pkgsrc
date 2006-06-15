@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.13 2006/03/14 11:35:00 tron Exp $
+# $NetBSD: modules.mk,v 1.14 2006/06/15 22:13:59 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # GTK2 modules.  It takes care of rebuilding the corresponding databases at
@@ -25,16 +25,16 @@ GTK2_LOADERS=		YES
 FILES_SUBST+=		GTK_IMMODULES_DB=${GTK_IMMODULES_DB:Q}
 FILES_SUBST+=		GTK_QUERY_IMMODULES=${GTK_QUERY_IMMODULES:Q}
 GTK_IMMODULES_DB=	${BUILDLINK_PREFIX.gtk2}/libdata/gtk-2.0/gtk.immodules
-INSTALL_TEMPLATE+=	../../x11/gtk2/files/immodules.tmpl
-DEINSTALL_TEMPLATE+=	../../x11/gtk2/files/immodules.tmpl
+INSTALL_TEMPLATES+=	../../x11/gtk2/files/immodules.tmpl
+DEINSTALL_TEMPLATES+=	../../x11/gtk2/files/immodules.tmpl
 .endif
 
 .if defined(GTK2_LOADERS) && !empty(GTK2_LOADERS:M[Yy][Ee][Ss])
 FILES_SUBST+=		GDK_PIXBUF_LOADERS_DB=${GDK_PIXBUF_LOADERS_DB:Q}
 FILES_SUBST+=		GDK_PIXBUF_QUERY_LOADERS=${GDK_PIXBUF_QUERY_LOADERS:Q}
 GDK_PIXBUF_LOADERS_DB=	${BUILDLINK_PREFIX.gtk2}/libdata/gtk-2.0/gdk-pixbuf.loaders
-INSTALL_TEMPLATE+=	../../x11/gtk2/files/loaders.tmpl
-DEINSTALL_TEMPLATE+=	../../x11/gtk2/files/loaders.tmpl
+INSTALL_TEMPLATES+=	../../x11/gtk2/files/loaders.tmpl
+DEINSTALL_TEMPLATES+=	../../x11/gtk2/files/loaders.tmpl
 .endif
 
 PRINT_PLIST_AWK+=	/^libdata\/gtk-2.0/ { next; }
