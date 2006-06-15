@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.88 2006/06/15 12:57:46 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.89 2006/06/15 14:52:13 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -181,3 +181,5 @@ Pullup ticket 1703 - requested by markd
 security fix for arts
 Pullup ticket 1702 - requested by salo
 security fix for gd
+Pullup ticket 1704 - requested by markd
+security fix for kdebase3
