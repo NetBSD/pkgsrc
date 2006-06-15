@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.54 2006/03/09 21:04:39 jlam Exp $
+# $NetBSD: Makefile,v 1.54.2.1 2006/06/15 12:06:01 salo Exp $
 
 DISTNAME=	arts-1.5.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 HOMEPAGE=	http://www.kde.org/areas/multimedia/
 COMMENT=	Analog Real-Time Synthesizer
+
+PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/
+PATCHFILES=	arts-1.2.x.diff
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
