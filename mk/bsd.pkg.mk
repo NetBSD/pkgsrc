@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1851 2006/06/12 16:30:03 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1852 2006/06/15 02:24:41 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -769,7 +769,7 @@ configure: wrapper
 .endif
 
 # Disable build
-.PHONY: build
+.PHONY: _build
 .if defined(NO_BUILD)
 _build: configure
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${_BUILD_COOKIE}
@@ -1227,7 +1227,9 @@ _build: configure acquire-build-lock ${_BUILD_COOKIE} release-build-lock
 .endif
 
 .PHONY: build
+.if !target(build)
 build: pkginstall
+.endif
 
 .PHONY: test
 .if !target(test)
