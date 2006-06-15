@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.531 2006/06/15 14:23:45 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.532 2006/06/15 15:25:11 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3092,3 +3092,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/xmame to 0.106 [dillo 2006-06-15]
 	Updated emulators/xmess to 0.106 [dillo 2006-06-15]
 	Added www/geeklog version 1.4.0.3 [taca 2006-06-15]
+	Updated net/nmap to 4.10 [salo 2006-06-15]
+	Updated net/nmapfe to 0.9.5nb29 [salo 2006-06-15]
