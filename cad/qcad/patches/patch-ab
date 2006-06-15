@@ -1,13 +1,19 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/03/26 20:53:53 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2006/06/15 08:26:58 chap Exp $
 
---- rappwin.cpp.orig	Tue Feb 20 21:27:18 2001
-+++ rappwin.cpp
-@@ -3292,7 +3292,7 @@
-     case 0:
-       if(true) {
-         if(!QFileInfo(manualStr).exists()) {
--          manualStr = "	/usr/share/doc/qcad/html/index.html";
-+          manualStr = "	@PREFIX@/share/qcad/doc/en/index.html";
+--- qcadlib/src/engine/rs_system.cpp.orig	2005-11-22 06:52:36.000000000 -0500
++++ qcadlib/src/engine/rs_system.cpp
+@@ -333,13 +333,7 @@ RS_StringList RS_System::getDirectoryLis
+             dirList.append(appDir + "/" + subDirectory);
          }
  
-         RLOG("\nEXEC:");
+-        // Redhat style:
+-        dirList.append("/usr/share/" + appDirName + "/" + subDirectory);
+-
+-        // SuSE style:
+-        dirList.append("/usr/X11R6/" + appDirName + "/" + subDirectory);
+-
+-        dirList.append("/usr/X11R6/share/" + appDirName + "/" + subDirectory);
++        dirList.append("@PREFIX@/share/" + appDirName + "/" + subDirectory);
+         dirList.append(getHomeDir() + "/." + appDirName + "/" + subDirectory);
+ 
+ #ifdef __APPLE__

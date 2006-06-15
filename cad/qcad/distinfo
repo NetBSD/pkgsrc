@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.13 2006/01/10 10:54:31 joerg Exp $
+$NetBSD: distinfo,v 1.14 2006/06/15 08:26:58 chap Exp $
 
-SHA1 (qcad-1.5.4-src.tar.gz) = d28f31bb392cdcd5d7ea9396647e07851757c790
-RMD160 (qcad-1.5.4-src.tar.gz) = 3afa9e1e8ff7e3dc3c064310c1ad586cd0a9cfc1
-Size (qcad-1.5.4-src.tar.gz) = 2884049 bytes
-SHA1 (patch-aa) = eb8288507af50870ac8d49c9feb69e7a37edf4e2
-SHA1 (patch-ab) = cea24c43b1d9187f8b55c2c831e26ac8d7a6efe7
-SHA1 (patch-ac) = 7c809b65c999d14613e93d36570dd496ee1c9008
-SHA1 (patch-ad) = 873961829011b8717c154d4c4caf7e8c428a848e
-SHA1 (patch-af) = 61b18b29e50246dce977bc7cee24aaa2b78d4a95
+SHA1 (qcad-2.0.5.0-1-community.src.tar.gz) = aff563389d1285740f6bf7e28f93b8df0f902e0c
+RMD160 (qcad-2.0.5.0-1-community.src.tar.gz) = 85f0b6d3c1edaa0c19494436413521316e803429
+Size (qcad-2.0.5.0-1-community.src.tar.gz) = 4470033 bytes
+SHA1 (patch-aa) = ca5744c2bc24735db1d671c797470d7a324d83ef
+SHA1 (patch-ab) = c72f33035d2d7b0aefd9b193028ef8a6df459d1a
+SHA1 (patch-ac) = d0d7b89ab730019081f3b9b55b9ad5d613abe6f0
