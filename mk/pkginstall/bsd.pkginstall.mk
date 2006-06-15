@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.10 2006/06/09 16:41:09 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.11 2006/06/15 22:13:59 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -29,29 +29,29 @@ PKG_DB_TMPDIR?=		${WRKDIR}/.pkgdb
 
 # These are the template scripts for the INSTALL/DEINSTALL scripts.
 # Packages may do additional work in the INSTALL/DEINSTALL scripts by
-# overriding the variables DEINSTALL_TEMPLATE and INSTALL_TEMPLATE to
+# overriding the variables DEINSTALL_TEMPLATES and INSTALL_TEMPLATES to
 # point to additional script fragments.  These bits are included after
 # the main install/deinstall script fragments.
 #
 _HEADER_TMPL?=		${.CURDIR}/../../mk/pkginstall/header
-HEADER_TEMPLATE?=	# empty
+HEADER_TEMPLATES?=	# empty
 .if exists(${PKGDIR}/HEADER) && \
-    empty(HEADER_TEMPLATE:M${PKGDIR}/HEADER)
-HEADER_TEMPLATE+=	${PKGDIR}/HEADER
+    empty(HEADER_TEMPLATES:M${PKGDIR}/HEADER)
+HEADER_TEMPLATES+=	${PKGDIR}/HEADER
 .endif
 _DEINSTALL_PRE_TMPL?=	${.CURDIR}/../../mk/pkginstall/deinstall-pre
-DEINSTALL_TEMPLATE?=	# empty
+DEINSTALL_TEMPLATES?=	# empty
 .if exists(${PKGDIR}/DEINSTALL) && \
-    empty(DEINSTALL_TEMPLATE:M${PKGDIR}/DEINSTALL)
-DEINSTALL_TEMPLATE+=	${PKGDIR}/DEINSTALL
+    empty(DEINSTALL_TEMPLATES:M${PKGDIR}/DEINSTALL)
+DEINSTALL_TEMPLATES+=	${PKGDIR}/DEINSTALL
 .endif
 _DEINSTALL_TMPL?=	${.CURDIR}/../../mk/pkginstall/deinstall
 _INSTALL_UNPACK_TMPL?=	# empty
 _INSTALL_TMPL?=		${.CURDIR}/../../mk/pkginstall/install
-INSTALL_TEMPLATE?=	# empty
+INSTALL_TEMPLATES?=	# empty
 .if exists(${PKGDIR}/INSTALL) && \
-    empty(INSTALL_TEMPLATE:M${PKGDIR}/INSTALL)
-INSTALL_TEMPLATE+=	${PKGDIR}/INSTALL
+    empty(INSTALL_TEMPLATES:M${PKGDIR}/INSTALL)
+INSTALL_TEMPLATES+=	${PKGDIR}/INSTALL
 .endif
 _INSTALL_POST_TMPL?=	${.CURDIR}/../../mk/pkginstall/install-post
 _INSTALL_DATA_TMPL?=	# empty
@@ -64,15 +64,15 @@ _FOOTER_TMPL?=		${.CURDIR}/../../mk/pkginstall/footer
 # _DEINSTALL_TEMPLATES_DFLT and _INSTALL_TEMPLATES_DFLT are the list of
 #	template files minus any user-supplied templates.
 #
-_DEINSTALL_TEMPLATES=	${_HEADER_TMPL} ${HEADER_TEMPLATE}		\
+_DEINSTALL_TEMPLATES=	${_HEADER_TMPL} ${HEADER_TEMPLATES}		\
 			${_DEINSTALL_PRE_TMPL}				\
-			${DEINSTALL_TEMPLATE}				\
+			${DEINSTALL_TEMPLATES}				\
 			${_DEINSTALL_TMPL}				\
 			${_FOOTER_TMPL}
-_INSTALL_TEMPLATES=	${_HEADER_TMPL} ${HEADER_TEMPLATE}		\
+_INSTALL_TEMPLATES=	${_HEADER_TMPL} ${HEADER_TEMPLATES}		\
 			${_INSTALL_UNPACK_TMPL}				\
 			${_INSTALL_TMPL}				\
-			${INSTALL_TEMPLATE}				\
+			${INSTALL_TEMPLATES}				\
 			${_INSTALL_POST_TMPL}				\
 			${_FOOTER_TMPL}					\
 			${_INSTALL_DATA_TMPL}				\
