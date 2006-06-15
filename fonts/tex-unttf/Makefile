@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2006/04/07 04:47:20 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2006/06/15 02:34:48 minskim Exp $
 #
 
 DISTNAME=	fonts-unttf-20060215
 PKGNAME=	${DISTNAME:S/fonts-unttf-/tex-unttf-1.0.1./}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 MASTER_SITES=	http://ftp.ktug.or.kr/KTUG/hangul-ucs/fonts/
 
@@ -41,7 +41,7 @@ do-install:
 	${LN} -sf ${SYSTTFDIR}/UnDotumBold.ttf ${TEXTTFDIR}/ungt/
 	${INSTALL_DATA_DIR} ${TEXTTFDIR}/ungr
 	${LN} -sf ${SYSTTFDIR}/UnGraphic.ttf ${TEXTTFDIR}/ungr/
-	${LN} -sf ${SYSTTFDIR}/UnGraphixBold.ttf ${TEXTTFDIR}/ungr/
+	${LN} -sf ${SYSTTFDIR}/UnGraphicBold.ttf ${TEXTTFDIR}/ungr/
 	${INSTALL_DATA_DIR} ${TEXTTFDIR}/ungs
 	${LN} -sf ${SYSTTFDIR}/UnGungseo.ttf ${TEXTTFDIR}/ungs/
 	${INSTALL_DATA_DIR} ${TEXTTFDIR}/unbm
@@ -55,6 +55,8 @@ do-install:
 	${LN} -sf ${SYSTTFDIR}/UnPilgiBold.ttf ${TEXTTFDIR}/unpg/
 	${INSTALL_DATA_DIR} ${TEXTTFDIR}/unsh
 	${LN} -sf ${SYSTTFDIR}/UnShinmun.ttf ${TEXTTFDIR}/unsh/
+	${INSTALL_DATA_DIR} ${TEXTTFDIR}/untz
+	${LN} -sf ${SYSTTFDIR}/UnTaza.ttf ${TEXTTFDIR}/untz/
 	${INSTALL_DATA_DIR} ${TEXTTFDIR}/unyt
 	${LN} -sf ${SYSTTFDIR}/UnYetgul.ttf ${TEXTTFDIR}/unyt/
 	${INSTALL_DATA_DIR} ${TEXTTFDIR}/unjbt
