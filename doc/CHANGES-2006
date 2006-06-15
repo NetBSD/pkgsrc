@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.524 2006/06/14 21:43:24 salo Exp $
+$NetBSD: CHANGES-2006,v 1.525 2006/06/15 01:45:54 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3076,3 +3076,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/qalculate-units to 0.9.4 [adam 2006-06-14]
 	Updated net/vpnc to 0.3.3nb2 [ghen 2006-06-14]
 	Updated graphics/gd to 2.0.33nb5 [salo 2006-06-14]
+	Updated audio/arts to 1.5.3nb1 [markd 2006-06-15]
+	Updated x11/kdebase3 to 3.5.3nb1 [markd 2006-06-15]
