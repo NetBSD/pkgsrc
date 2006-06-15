@@ -1,0 +1,29 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2006/06/15 13:26:44 taca Exp $
+
+To complete the setup, check and edit ${GEEKLOG_DIR}/config.php.
+
+Then you will need to create a MySQL database for geeklog if you install
+Geeklog for the first time:
+
+	# ${PREFIX}/php ${GEEKLOG_EXAMPLESDIR}
+
+You will need to make Geeklog accessible through your HTTP server.
+If you are running Apache then you may add the following lines to
+httpd.conf:
+
+	Include ${PKG_SYSCONFDIR}/geeklog.conf
+
+This geeklog.conf assumes that Geeklog would be accessed with "/geeklog"
+sub directory.  Since you had better limit the access until complete
+Geeklog setup, geeklog.conf limit access to "localhost".
+
+And complete install with:
+
+	http://localhost/geeklog/admin/install/install.php
+
+You can read documentation for install Geeklog:
+
+	http://localhost/geeklog/docs/install.html
+
+===========================================================================
