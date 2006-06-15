@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/05/17 17:21:41 drochner Exp $
+# $NetBSD: Makefile,v 1.38 2006/06/15 16:54:56 joerg Exp $
 #
 
 DISTNAME=	libgsf-1.14.1
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME2 structured file library
 
-USE_TOOLS+=		pkg-config gmake
+USE_TOOLS+=		pkg-config gmake msgfmt
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	yes
