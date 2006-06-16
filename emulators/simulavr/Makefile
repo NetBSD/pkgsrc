@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/04 21:29:36 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/16 16:17:02 jlam Exp $
 #
 
 DISTNAME=		simulavr-0.1.2.1
@@ -19,6 +19,7 @@ CONFIGURE_ARGS+=	--disable-tests
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+INFO_FILES=		# PLIST
 
 # gcc 2.95 gives warnings that it cannot inline all functions.
 BUILDLINK_TRANSFORM+=	rm:-Werror
