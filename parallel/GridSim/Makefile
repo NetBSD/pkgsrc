@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:34 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/16 14:15:15 joerg Exp $
 #
 
 DISTNAME=		gridsimtoolkit-3.0
 PKGNAME=		GridSim-3.0.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		parallel devel java
 MASTER_SITES=		http://www.gridbus.org/gridsim/download/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}-patch2${EXTRACT_SUFX}
