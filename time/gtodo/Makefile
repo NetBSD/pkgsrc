@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/04/17 13:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2006/06/16 14:21:38 joerg Exp $
 #
 
 DISTNAME=	gtodo-0.14
@@ -12,7 +12,7 @@ COMMENT=	To-do list manager for the GNOME desktop
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config msgfmt
 USE_PKGLOCALEDIR=	YES
 
 GCONF2_SCHEMAS=		gtodo.schemas
