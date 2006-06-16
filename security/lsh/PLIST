@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/04/30 12:23:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/06/16 18:43:18 jlam Exp $
 bin/lsftp
 bin/lsh
 bin/lsh-authorize
@@ -43,6 +43,8 @@ man/man5/SPKI.5
 man/man5/secsh.5
 man/man8/lshd.8
 sbin/lsh-execuv
+${KERBEROS}sbin/lsh-krb-checkpw
+${PAM}sbin/lsh-pam-checkpw
 sbin/lsh_proxy
 sbin/lshd
 sbin/sftp-server
