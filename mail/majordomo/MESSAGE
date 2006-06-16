@@ -1,8 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2003/02/24 13:10:58 seb Exp $
-
-Post-Install Notes for Majordomo
-===========================================================================
+$NetBSD: MESSAGE,v 1.4 2006/06/16 16:43:37 jlam Exp $
 
 Before you can use Majordomo, you will need to complete a few steps
 manually:
@@ -54,5 +51,4 @@ manually:
 	  ${HOME}/${MAJORDOMO_USER}/Log if necessary.
 
 Enjoy Majordomo!
-
 ===========================================================================
