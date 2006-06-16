@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/04/12 19:49:26 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/06/16 16:15:42 jlam Exp $
 #
 
 DISTNAME=	p11-2.10a
@@ -16,11 +16,28 @@ USE_TOOLS+=		gmake
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "DragonFly"
-PLIST_SUBST+=		HAS_TAP=
-CONFIGURE_ENV+=	ac_cv_epp_bpf=yes ac_cv_epp_tun=yes ac_cv_epp_tap=yes
+# bfp, tap, and tun tests taken from p11 configure script
+.if exists(/dev/bpf0)
+PLIST_SUBST+=		BPF=
 .else
-PLIST_SUBST+=		HAS_TAP="@comment "
+PLIST_SUBST+=		BPF="@comment "
+.endif
+.if exists(/dev/tap0) || exists(/dev/net/tun)
+PLIST_SUBST+=		TAP=
+.elif ${OPSYS} == "DragonFly"
+PLIST_SUBST+=		TAP=		# DragonFly has TAP
+.else
+PLIST_SUBST+=		TAP="@comment "
+.endif
+.if exists(/dev/tun) || exists(/dev/tun0) || exists(/dev/net/tun)
+PLIST_SUBST+=		TUN=
+.else
+PLIST_SUBST+=		TUN="@comment "
+.endif
+
+# Force the bpf, tun, and tap epp backends to be built on DragonFly.
+.if ${OPSYS} == "DragonFly"
+CONFIGURE_ENV+=		ac_cv_epp_bpf=yes ac_cv_epp_tun=yes ac_cv_epp_tap=yes
 .endif
 
 # override MAKEFLAGS in the build and install stages
