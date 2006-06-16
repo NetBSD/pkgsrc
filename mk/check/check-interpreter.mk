@@ -1,4 +1,4 @@
-# $NetBSD: check-interpreter.mk,v 1.6 2006/06/14 15:09:34 jlam Exp $
+# $NetBSD: check-interpreter.mk,v 1.7 2006/06/16 12:03:38 rillig Exp $
 
 CHECK_INTERPRETER?=	no
 
@@ -27,9 +27,14 @@ check-interpreter: error-check
 		     "in ${PKGNAME}"
 .if !defined(NO_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
+	set -e;								\
 	${PKG_FILELIST_CMD} | ${SORT} | ${SED} 's,\\,\\\\,g' |		\
 	while read file; do						\
 		${_CHECK_INTERP_SKIP_FILTER};				\
+		if ${TEST} ! -r "$$file"; then				\
+			${DELAYED_WARNING_MSG} "[check-interpreter.mk] File \"$$file\" cannot be read."; \
+			continue;					\
+		fi;							\
 		${SHCOMMENT} "[$$file]";				\
 		interp=`${SED} -n -e '1s/^#![[:space:]]*\([^[:space:]]*\).*/\1/p' -e '1q' < "$$file"` \
 		|| {	${DELAYED_WARNING_MSG} "[check-interpreter.mk] sed(1) failed for \"$$file\"."; \
