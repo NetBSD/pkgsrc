@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/06/15 13:26:42 taca Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/16 08:41:12 taca Exp $
 #
 
 DISTNAME=	geeklog-${VER}
@@ -70,7 +70,7 @@ SUBST_STAGE.conf=	post-configure
 INSTALLATION_DIRS=	${GEEKLOG_BASE} ${GEEKLOG_PUB} ${GEEKLOG_TMPL}/images \
 			share/examples/geeklog
 
-.include "../../WORK/geeklog/Makefile.common"
+.include "../../www/geeklog/Makefile.common"
 
 APACHE_GROUP?=		www
 PKG_SYSCONFSUBDIR?=	geeklog
