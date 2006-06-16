@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2003/05/16 00:47:41 mason Exp $
+$NetBSD: MESSAGE,v 1.7 2006/06/16 09:24:36 adrianp Exp $
 
 Please refer to the file:
 
@@ -7,21 +7,15 @@ Please refer to the file:
 
 on how to setup your IMP installation. You need to at least edit
 
-	${IMPDIR}/config/conf.php
+	${PREFIX}/share/horde/config/registry.php
 
-You will also need to make IMP accessible through your HTTP server.  If
+to enable IMP in the horde framework.  You will also need to configure IMP
+by using the Horde administrative interface.
+
+Finally you will also need to make IMP accessible through your HTTP server.  If
 you are running Apache and ap-php, then you can add the following lines
 to httpd.conf:
 
-	Include ${PKG_SYSCONFDIR}/horde.conf
 	Include ${PKG_SYSCONFDIR}/imp.conf
-
-and then you have to edit
-	${PREFIX}/share/horde/config/registry.php
-to enable IMP in the horde framework.
-
-If you are updating from IMP 2.2.x, use the script
-	${PREFIX}/share/horde/imp/scripts/imp2horde.pl
-to convert the IMP 2.2.x user preference database to the new format.
 
 ===========================================================================
