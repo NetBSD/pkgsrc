@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2006/06/13 14:43:21 jlam Exp $
+# $NetBSD: Makefile,v 1.61 2006/06/16 14:04:11 joerg Exp $
 
 DISTNAME=	rpm-2.5.4
 PKGREVISION=	5
@@ -13,10 +13,11 @@ CONFLICTS+=		rpm2cpio<1.0nb1
 
 NOT_FOR_PLATFORM+=	Interix-*-* # getmntent() is nonpublic; needs porting
 
+USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
 
-# this is needed instead of USE_PKGLOCALEDIR
+# this is needed in addition of USE_PKGLOCALEDIR
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/${PKGLOCALEDIR}
 
 # The rpm databases are kept under ${RPM_DB_PREFIX}/lib/rpm.
