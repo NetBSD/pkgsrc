@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/02/05 23:08:35 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2006/06/16 10:58:23 rillig Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-gdbm-0
@@ -22,10 +22,11 @@ PY_SETUP_SUBST+= GDBMPREFIX=${GDBMDIR}
 
 # ignore errors due to missing files (EXTRACT_ELEMENTS!)
 do-patch:
-	(cd ${WRKSRC}; \
-	for f in ${PATCHDIR}/patch-*;do \
-	${PATCH} --batch <$$f || true; \
-	done)
+	set -e;								\
+	cd ${WRKSRC};							\
+	for f in ${PATCHDIR}/patch-*; do				\
+		${PATCH} --batch < "$$f" || ${TRUE};			\
+	done
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../lang/python/extension.mk"

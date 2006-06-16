@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.47 2006/06/11 00:58:39 darcy Exp $
+# $NetBSD: Makefile,v 1.48 2006/06/16 10:58:23 rillig Exp $
 
 DISTNAME=		PyGreSQL-3.8.1
 PKGNAME=		${PYPKGPREFIX}-postgresql-3.8.1
 CATEGORIES=		databases python
-MASTER_SITES=	ftp://ftp.druid.net/pub/distrib/
-EXTRACT_SUFX=	.tgz
+MASTER_SITES=		ftp://ftp.druid.net/pub/distrib/
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		darcy@NetBSD.org
 HOMEPAGE=		http://www.PyGreSQL.org/
@@ -12,27 +12,31 @@ COMMENT=		Python interface to PostgreSQL
 
 MAKE_ENV+=		MANDIR=${LOCALBASE}/man
 MAKE_ENV+=		BINDIR=${LOCALBASE}/bin
-USE_TOOLS+=	gmake
+USE_TOOLS+=		gmake
 
 MAKEFILE=		GNUmakefile
 MAKE_ENV+=		INSTALLED_LIBPQ=1
 
-PY_PATCHPLIST=	yes
-PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX:Q}
+PY_PATCHPLIST=		yes
+PLIST_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX:Q}
 PYTHON_VERSIONS_ACCEPTED=	24 23 22
 
-PYDISTUTILSPKG=	yes
-PYBINMODULE=	yes
+PYDISTUTILSPKG=		yes
+PYBINMODULE=		yes
 DOCDIR=			${PREFIX}/share/doc/${PYPKGPREFIX}-postgresql
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}/tutorial
 	${INSTALL_DATA_DIR} ${DOCDIR}/docs
-	for inst_file in ${WRKSRC}/tutorial/*.py; do   \
-		${INSTALL_DATA} $${inst_file} ${DOCDIR}/tutorial;        \
+	set -e;								\
+	cd ${WRKSRC}/tutorial;						\
+	for f in *.py; do						\
+		${INSTALL_DATA} "$$f" ${DOCDIR}/tutorial;		\
 	done
-	for inst_file in ${WRKSRC}/docs/*; do   \
-		${INSTALL_DATA} $${inst_file} ${DOCDIR}/docs;        \
+	set -e;								\
+	cd ${WRKSRC}/docs;						\
+	for f in *; do							\
+		${INSTALL_DATA} "$$f" ${DOCDIR}/docs;			\
 	done
 
 .include "../../lang/python/extension.mk"
