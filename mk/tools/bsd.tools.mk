@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.36 2006/06/09 13:59:08 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.37 2006/06/16 19:15:19 jlam Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -54,6 +54,8 @@ _TOOLS_WRAP_LOG=	${WRKLOG}
 
 USE_TOOLS?=		# empty
 
+_TOOLS_COOKIE=	${WRKDIR}/.tools_done
+
 ######################################################################
 ### tools (PUBLIC)
 ######################################################################
@@ -61,7 +63,7 @@ USE_TOOLS?=		# empty
 ### specified by USE_TOOLS.
 ###
 _TOOLS_TARGETS+=	acquire-tools-lock
-_TOOLS_TARGETS+=	real-tools
+_TOOLS_TARGETS+=	${_TOOLS_COOKIE}
 _TOOLS_TARGETS+=	release-tools-lock
 
 .PHONY: tools
@@ -73,6 +75,13 @@ tools: ${_TOOLS_TARGETS}
 acquire-tools-lock: acquire-lock
 release-tools-lock: release-lock
 
+.if !exists(${_TOOLS_COOKIE})
+${_TOOLS_COOKIE}: real-tools
+.else
+${_TOOLS_COOKIE}:
+	@${DO_NADA}
+.endif
+
 ######################################################################
 ### real-tools (PRIVATE)
 ######################################################################
@@ -82,6 +91,8 @@ release-tools-lock: release-lock
 _REAL_TOOLS_TARGETS+=	tools-message
 _REAL_TOOLS_TARGETS+=	tools-vars
 _REAL_TOOLS_TARGETS+=	override-tools
+_REAL_TOOLS_TARGETS+=	post-tools
+_REAL_TOOLS_TARGETS+=	tools-cookie
 _REAL_TOOLS_TARGETS+=	error-check
 
 .PHONY: real-tools
@@ -91,8 +102,40 @@ real-tools: ${_REAL_TOOLS_TARGETS}
 tools-message:
 	@${PHASE_MSG} "Overriding tools for ${PKGNAME}"
 
+######################################################################
+### tools-cookie (PRIVATE)
+######################################################################
+### tools-cookie creates the "tools" cookie file.  The contents
+### are the names of the tools in USE_TOOLS.
+###
+.PHONY: tools-cookie
+tools-cookie:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_TOOLS_COOKIE:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${USE_TOOLS:Q} >> ${_TOOLS_COOKIE}
+
+######################################################################
+### override-tools (PRIVATE)
+######################################################################
+### override-tools is a helper target onto which one can hook all of
+### the targets that create tools so they are generated at the proper
+### time.
+###
 .PHONY: override-tools
-override-tools: .OPTIONAL
+override-tools:
+	@${DO_NADA}
+
+######################################################################
+### post-tools (PUBLIC, override)
+######################################################################
+### post-tools may be overridden within a package Makefile and can be
+### used to directly modify the contents of the tools directory after
+### the tools are generated.
+###
+.PHONY: post-tools
+.if !target(post-tools)
+post-tools:
+	@${DO_NADA}
+.endif
 
 .include "${PKGSRCDIR}/mk/tools/automake.mk"
 .include "${PKGSRCDIR}/mk/tools/autoconf.mk"
