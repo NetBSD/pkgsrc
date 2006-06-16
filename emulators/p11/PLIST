@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/12 19:49:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/06/16 16:15:42 jlam Exp $
 bin/p11
-libexec/p11/epp_bpf
+${BPF}libexec/p11/epp_bpf
 libexec/p11/epp_fifo
-${HAS_TAP}libexec/p11/epp_tap
-libexec/p11/epp_tun
+${TAP}libexec/p11/epp_tap
+${TUN}libexec/p11/epp_tun
 libexec/p11/fmt
 libexec/p11/lp_file
 libexec/p11/tty_fifo
