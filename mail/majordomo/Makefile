@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2006/06/09 08:59:01 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2006/06/16 17:11:25 jlam Exp $
 
 DISTNAME=		majordomo-1.94.5
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.sgi.com/other/majordomo/1.94.5/ \
 			ftp://ftp-europe.sgi.com/other/majordomo/1.94.5/
@@ -13,27 +13,12 @@ COMMENT=		The Majordomo mailing list manager
 
 LICENSE=		majordomo-license
 
-.if exists(/usr/sbin/user)
-ADDUSER=		/usr/sbin/useradd
-ADDGROUP=		/usr/sbin/groupadd
-.else
-DEPENDS+=		user>=20000313:../../sysutils/user
-ADDUSER=		${LOCALBASE}/sbin/useradd
-ADDGROUP=		${LOCALBASE}/sbin/groupadd
-.endif
-
 CONFLICTS+=		bounce-*
 
 USE_TOOLS+=		perl:run
 
-NO_BIN_ON_FTP=		requires compiled-in hardcoded uid/gid
-NO_BIN_ON_CDROM=	${NO_BIN_ON_FTP}
-
 BUILD_TARGET=		wrapper
 INSTALL_TARGET=		install install-wrapper
-
-DEINSTALL_SRC=		${PKGDIR}/DEINSTALL
-INSTALL_SRC=		${PKGDIR}/INSTALL
 MAKEFILE=		Makefile.netbsd
 
 MAJORDOMO_TMPDIR?=	/var/tmp
@@ -41,17 +26,9 @@ MAJORDOMO_HOMEDIR?=	/home
 MAJORDOMO_USER?=	majordom
 MAJORDOMO_GROUP?=	majordom
 
-PLIST_SUBST+=		HOME=${MAJORDOMO_HOMEDIR:Q}			\
-			MAJORDOMO_USER=${MAJORDOMO_USER:Q}
 MESSAGE_SUBST+=		HOME=${MAJORDOMO_HOMEDIR}			\
 			MAJORDOMO_USER=${MAJORDOMO_USER}		\
 			MAJORDOMO_GROUP=${MAJORDOMO_GROUP}
-FILES_SUBST+=		HOME=${MAJORDOMO_HOMEDIR:Q}			\
-			MAJORDOMO_USER=${MAJORDOMO_USER}		\
-			MAJORDOMO_GROUP=${MAJORDOMO_GROUP}		\
-			ADDUSER=${ADDUSER} ADDGROUP=${ADDGROUP}		\
-			CHGRP=${CHGRP:Q} ID=${ID:Q}			\
-			TOUCH=${TOUCH:Q} RM=${RM:Q}
 
 DOCDIR=			${PREFIX}/share/doc/majordomo
 DOCFILES=		Changelog FUTURE INSTALL LICENSE NEWLIST README
@@ -66,45 +43,43 @@ EXLISTS=		example-l example-l-digest
 
 BUILD_DEFS+=		MAJORDOMO_USER MAJORDOMO_GROUP MAJORDOMO_TMPDIR
 
-.PHONY: require-uid
-require-uid:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if ! ${ID} ${MAJORDOMO_USER} >/dev/null 2>&1; then		\
-		${TOUCH} "/tmp/grouptestmajordomo1.$$$$";		\
-		if ! ${CHGRP} ${MAJORDOMO_GROUP}			\
-			"/tmp/grouptestmajordomo1.$$$$" >/dev/null 2>&1; then \
-			realtarget="root-require-uid";			\
-			action="create user for";			\
-			${_SU_TARGET};					\
-		fi;							\
-		${RM} -f "/tmp/grouptestmajordomo1.$$$$";		\
-	fi
+USERGROUP_PHASE=	configure
+PKG_GROUPS=		${MAJORDOMO_GROUP}
+PKG_USERS=		${MAJORDOMO_USER}:${MAJORDOMO_GROUP}
+OWN_DIRS_PERMS+=	${MAJORDOMO_HOMEDIR}/${MAJORDOMO_USER}		\
+			${MAJORDOMO_USER} ${MAJORDOMO_GROUP} 0775
+OWN_DIRS_PERMS+=	${MAJORDOMO_HOMEDIR}/${MAJORDOMO_USER}/archives	\
+			${MAJORDOMO_USER} ${MAJORDOMO_GROUP} 0775
+OWN_DIRS_PERMS+=	${MAJORDOMO_HOMEDIR}/${MAJORDOMO_USER}/digests	\
+			${MAJORDOMO_USER} ${MAJORDOMO_GROUP} 0775
+OWN_DIRS_PERMS+=	${MAJORDOMO_HOMEDIR}/${MAJORDOMO_USER}/lists	\
+			${MAJORDOMO_USER} ${MAJORDOMO_GROUP} 0775
 
-.PHONY: root-require-uid
-root-require-uid: pre-install-script
+CONFIGURE_SED=		-e "s|@PREFIX@|${PREFIX}|g"			\
+			-e "s|@PERL@|${PERL5}|g"			\
+			-e "s|@HOME@|${MAJORDOMO_HOMEDIR}|g"		\
+			-e "s|@MAJORDOMO_USER@|${MAJORDOMO_USER}|g"	\
+			-e "s|@UID@|${PKG_UID.${MAJORDOMO_USER}}|g"	\
+			-e "s|@GID@|${PKG_GID.${MAJORDOMO_GROUP}}|g"	\
+			-e "s|@TMPDIR@|${MAJORDOMO_TMPDIR}|g"
 
-do-configure: generate-install-scripts
-	${MAKE} ${.MAKEFLAGS} require-uid
-	${SED} \
-		-e 's:@PREFIX@:${PREFIX}:g' \
-		-e 's:@LOCALBASE@:${LOCALBASE}:g' \
-		-e 's|@HOME@|${MAJORDOMO_HOMEDIR}|g' \
-		-e 's:@MAJORDOMO_USER@:${MAJORDOMO_USER}:g' \
-		-e "s:@UID@:`${ID} -ru ${MAJORDOMO_USER}`:g" \
-		-e "s:@GID@:`${ID} -rg ${MAJORDOMO_USER}`:g" \
-		-e 's:@TMPDIR@:${MAJORDOMO_TMPDIR}:g' \
-		< ${WRKSRC}/Makefile > ${WRKSRC}/Makefile.netbsd
-	${SED} \
-		-e 's:@PREFIX@:${PREFIX}:g' \
-		-e 's:@HOME@:${MAJORDOMO_HOMEDIR}:g' \
-		-e 's:@MAJORDOMO_USER@:${MAJORDOMO_USER}:g' \
-		-e 's:@TMPDIR@:${MAJORDOMO_TMPDIR}:g' \
-		< ${WRKSRC}/sample.cf > ${WRKSRC}/majordomo.cf
-	${SED} \
-		-e 's:@PREFIX@:${PREFIX}:g' \
-		-e 's:@HOME@:${MAJORDOMO_HOMEDIR}:g' \
-		-e 's:@MAJORDOMO_USER@:${MAJORDOMO_USER}:g' \
-		< ${FILESDIR}/aliases.majordomo > ${WRKSRC}/aliases.majordomo
+MESSAGE_SED=		-e 's|$${PREFIX}|${PREFIX}|g'			\
+			-e 's|$${HOME}|${HOME}|g'			\
+			-e 's|$${MAJORDOMO_USER}|${MAJORDOMO_USER}|g'	\
+			-e 's|$${MAJORDOMO_GROUP}|${MAJORDOMO_GROUP}|g'	\
+
+do-configure:
+	${SED} ${CONFIGURE_SED} ${WRKSRC}/Makefile > ${WRKSRC}/Makefile.netbsd
+
+post-build:
+	${SED} ${CONFIGURE_SED} ${WRKSRC}/sample.cf > ${WRKSRC}/majordomo.cf
+	${SED} ${CONFIGURE_SED} ${FILESDIR}/aliases.majordomo		\
+		> ${WRKSRC}/aliases.majordomo
+	${SED}	-e 's|$${PREFIX}|${PREFIX}|g'				\
+		-e 's|$${HOME}|${HOME}|g'				\
+		-e 's|$${MAJORDOMO_USER}|${MAJORDOMO_USER}|g'		\
+		-e 's|$${MAJORDOMO_GROUP}|${MAJORDOMO_GROUP}|g'		\
+		${PKGDIR}/MESSAGE > ${WRKSRC}/post-install-notes
 
 post-install:
 	${LN} -sf archive2.pl ${PREFIX}/libexec/majordomo/archive
@@ -115,7 +90,7 @@ post-install:
 .for file in ${DOCDOCFILES}
 	${INSTALL_DATA} ${WRKSRC}/Doc/${file} ${DOCDIR}/${file}
 .endfor
-	${INSTALL_DATA} ${MESSAGE} ${DOCDIR}/post-install-notes
+	${INSTALL_DATA} ${WRKSRC}/post-install-notes ${DOCDIR}/post-install-notes
 	${INSTALL} -d -m 775 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} ${EXDIR}
 .for dir in ${EXDIRS}
 	${INSTALL} -d -m 775 -o ${MAJORDOMO_USER} -g ${MAJORDOMO_GROUP} ${EXDIR}/${dir}
