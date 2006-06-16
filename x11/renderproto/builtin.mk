@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2006/04/19 12:25:15 reed Exp $
+# $NetBSD: builtin.mk,v 1.3 2006/06/16 14:35:54 rillig Exp $
 
 BUILTIN_PKG:=	renderproto
 
@@ -17,12 +17,12 @@ IS_BUILTIN.renderproto=	no
 # Here, we skip checking whether the files are under ${LOCALBASE} since
 # we'll consider this X11 package to be built-in even if it's a part
 # of one of the pkgsrc-installed X11 distributions.
-#  
+#
 .  if empty(H_RENDER:M__nonexistent__)
 IS_BUILTIN.renderproto=	yes
 .  endif
 .endif
-MAKEVARS+=      IS_BUILTIN.renderproto
+MAKEVARS+=		IS_BUILTIN.renderproto
 
 ###
 ### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
@@ -52,10 +52,10 @@ USE_BUILTIN.renderproto=	${IS_BUILTIN.renderproto}
 .    if defined(BUILTIN_PKG.renderproto) && \
         !empty(IS_BUILTIN.renderproto:M[yY][eE][sS])
 USE_BUILTIN.renderproto=	yes
-.      for _dep_ in ${BUILDLINK_API_DEPENDS.renderproto}
+.      for dep in ${BUILDLINK_API_DEPENDS.renderproto}
 .        if !empty(USE_BUILTIN.renderproto:M[yY][eE][sS])
 USE_BUILTIN.renderproto!=							\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.renderproto:Q}; then \
+	if ${PKG_ADMIN} pmatch ${dep:Q} ${BUILTIN_PKG.renderproto:Q}; then \
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
@@ -92,12 +92,15 @@ CHECK_BUILTIN.renderproto?=	no
 # this is temporary and can be removed once not used
 BUILDLINK_TARGETS+=	render-symlink-pc
 
+.PHONY: render-symlink-pc
 render-symlink-pc:
-	src=${BUILDLINK_PREFIX.renderproto}/lib/pkgconfig/renderproto.pc \
-	dst=${BUILDLINK_DIR}/lib/pkgconfig/render.pc; \
-	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
-	if ${TEST} -f $${src}; then \
-		${LN} -sf $${src} $${dst}; \
+	set -e;								\
+	src=${BUILDLINK_PREFIX.renderproto}/lib/pkgconfig/renderproto.pc; \
+	dst=${BUILDLINK_DIR}/lib/pkgconfig/render.pc;			\
+	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig;			\
+	if ${TEST} -f "$$src"; then					\
+		${RM} -f "$$dst";					\
+		${LN} -sf "$$src" "$$dst";				\
 	fi
 
 .endif	# CHECK_BUILTIN.renderproto
