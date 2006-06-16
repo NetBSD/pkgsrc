@@ -1,4 +1,4 @@
-The Horde Application Framework provides classes for dealing with preferences,
-compression, browser detection, connection tracking, MIME, and more.
-This is the previous stable branch of Horde.  A version of Horde using the
-current stable branch is available as www/horde3.
+The Horde Application Framework is a modular, general-purpose web application
+framework written in PHP.  It provides an extensive array of classes that are
+targeted at the common problems and tasks involved in developing modern web
+applications.
