@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2005/07/16 01:19:14 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/06/16 17:48:47 rillig Exp $
 #
 
 DISTNAME=	colorize_0.3.0
 PKGNAME=	colorize-0.3.0
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://nrg.martos.bme.hu/release/colorize/download/bz2/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,22 +18,26 @@ NO_BUILD=	yes
 USE_TOOLS+=		gunzip perl:run
 INSTALLATION_DIRS=	bin man/man1
 
-post-patch:
-	${SED}	-e "s,/usr/bin/perl,${LOCALBASE}/bin/perl,"		\
-		-e "s,/etc/colorizerc,${PREFIX}/etc/colorizerc,"	\
-		${WRKSRC}/colorize.pl > ${WRKSRC}/colorize.pl.done
-	${MV} ${WRKSRC}/colorize.pl.done ${WRKSRC}/colorize.pl
+SUBST_CLASSES+=		color
+SUBST_STAGE.color=	pre-configure
+SUBST_MESSAGE.color=	Fixing hard-coded paths.
+SUBST_FILES.color=	colorize.pl examples/*.sh
+SUBST_SED.color+=	-e "s,/usr/bin/perl,${LOCALBASE}/bin/perl,"
+SUBST_SED.color+=	-e "s,/etc/colorizerc,${PKG_SYSCONFDIR}/colorizerc,"
+SUBST_SED.color+=	-e "s,/bin/bash,"${SH:Q}","
+
+post-extract:
+	${GUNZIP_CMD} ${WRKSRC}/colorize.pl.1.gz
+	${GUNZIP_CMD} ${WRKSRC}/examples/colorize-fifo.sh.gz
+	${GUNZIP_CMD} ${WRKSRC}/examples/colorize-tail.sh.gz
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/colorize.pl ${PREFIX}/bin/colorize
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/colorize
 	${INSTALL_DATA} ${WRKSRC}/colorizerc ${PREFIX}/share/examples/colorize
-	${GUNZIP_CMD} ${WRKSRC}/colorize.pl.1.gz
 	${INSTALL_MAN} ${WRKSRC}/colorize.pl.1 ${PREFIX}/man/man1/colorize.1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/colorize
 	cd ${WRKSRC} && ${INSTALL_DATA} README TIPS ${PREFIX}/share/doc/colorize
-	${GUNZIP_CMD} ${WRKSRC}/examples/colorize-fifo.sh.gz
-	${GUNZIP_CMD} ${WRKSRC}/examples/colorize-tail.sh.gz
 	${INSTALL_SCRIPT} ${WRKSRC}/examples/colorize-fifo.sh		\
 		${PREFIX}/share/examples/colorize
 	${INSTALL_SCRIPT} ${WRKSRC}/examples/colorize-tail.sh		\
