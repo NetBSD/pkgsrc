@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/03/04 21:29:11 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2006/06/16 10:58:23 rillig Exp $
 #
 
 DISTNAME=	sybase-0.36
@@ -19,10 +19,11 @@ PYDISTUTILSPKG=		yes
 SYBASE=		${BUILDLINK_PREFIX.freetds}
 MAKE_ENV+=	SYBASE=${SYBASE:Q}
 
-post-patch:
-	${SED} "s|\(runtime_library_dirs = \)None|\1['${SYBASE}'+'/lib']|" \
-		<${WRKSRC}/setup.py >${WRKSRC}/setup.py.tmp
-	${MV} ${WRKSRC}/setup.py.tmp ${WRKSRC}/setup.py
+SUBST_CLASSES+=		sybase
+SUBST_STAGE.sybase=	pre-configure
+SUBST_MESSAGE.sybase=	Fixing runtime_library_dirs.
+SUBST_FILES.sybase=	setup.py
+SUBST_SED.sybase=	-e "s|\\(runtime_library_dirs = \\)None|\\1['${SYBASE}/lib']|"
 
 .include "../../databases/freetds/buildlink3.mk"
 .include "../../lang/python/extension.mk"
