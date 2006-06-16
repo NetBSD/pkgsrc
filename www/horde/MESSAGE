@@ -1,30 +1,18 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.7 2005/05/15 21:39:07 salo Exp $
+$NetBSD: MESSAGE,v 1.8 2006/06/16 09:23:21 adrianp Exp $
 
 Please refer to the file:
 
 	${PREFIX}/share/doc/horde/INSTALL
 
-to setup Horde to access its database properly.  The short summary is to
-edit:
-
-	${HORDEDIR}/config/horde.php
-
-to specify the correct backend database, and run the appropriate scripts
-in:
+to setup Horde to access its user preferences store properly.  The short
+summary is to run the appropriate scripts in:
 
 	${HORDEDIR}/scripts/db
 
-to setup the horde database.  You will also need to install the appropriate
-php module, such as databases/php4-mysql or databases/php4-pgsql.  Horde is
-setup by default to access MySQL.  It's recommended that you change the
-password of the 'hordemgr' user used to connect to the horde database.  For
-localhost security, the file
-
-	${HORDEDIR}/config/horde.php
-
-should be accessible only to the webserver process as it contains the
-horde database password.
+to setup the horde preferences store.  Horde is setup by default to access
+MySQL.  It's recommended that you change the password of the 'horde' user used
+to connect to the horde database.
 
 You will also need to make Horde accessible through your HTTP server.  If
 you are running Apache and ap-php, then you can add the following line
