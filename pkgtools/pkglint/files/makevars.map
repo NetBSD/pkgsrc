@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.115 2006/06/16 09:34:19 rillig Exp $
+# $NetBSD: makevars.map,v 1.116 2006/06/16 12:01:38 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -217,6 +217,8 @@ CXXFLAGS*		List of CFlag [m:a,c:a,o:a,h:a]
 DEINSTALL_FILE		Pathname [m:s]
 DEINSTALL_SRC		List of Pathname [m:s,c:ds]
 DEINSTALL_TEMPLATE	List of Pathname [m:as,c:ads]
+DELAYED_ERROR_MSG	ShellCommand [*:u]
+DELAYED_WARNING_MSG	ShellCommand [*:u]
 DEPENDS			InternalList of DependencyWithPath [$list]
 DEPENDS_TARGET		List of Identifier [$user]
 DESCR_SRC		List of Pathname [m:s,c:ds]
@@ -531,6 +533,7 @@ SCRIPTS_ENV		List of ShellWord [m:a,c:a]
 SHAREGRP		UserGroupName []
 SHAREMODE		FileMode []
 SHAREOWN		UserGroupName []
+SHCOMMENT		ShellCommand [*:u]
 SHLIB_HANDLING		{ YES NO no }
 SHLIBTOOL		ShellCommand []
 SHLIBTOOL_OVERRIDE	List of Pathmask [m:as,c:a]
