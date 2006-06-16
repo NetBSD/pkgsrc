@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/21 20:23:49 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/16 09:12:35 rillig Exp $
 
 PKGNAME=		tcl-postgresql74-${BASE_VERS}
 COMMENT=		Tcl interface to PostgreSQL
@@ -12,9 +12,9 @@ CONFIGURE_ENV+=		TCLSH=${TCLSH:Q}
 TCLSH=			${BUILDLINK_PREFIX.tcl}/bin/tclsh
 MAKE_ENV+=		INSTALLED_LIBPQ=1
 
-BUILD_DIRS=		${WRKSRC}/src/port
-BUILD_DIRS+=		${WRKSRC}/src/interfaces/libpgtcl
-BUILD_DIRS+=		${WRKSRC}/src/bin/pgtclsh
+BUILD_DIRS=		src/port
+BUILD_DIRS+=		src/interfaces/libpgtcl
+BUILD_DIRS+=		src/bin/pgtclsh
 
 post-install:
 	cd ${PREFIX}/man && ${TAR} -zxf ${WRKSRC}/doc/man.tar.gz		\
