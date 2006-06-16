@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/06/05 18:06:42 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/16 09:30:59 rillig Exp $
 
 DISTNAME=	dbxml-1.2.1
 PKGNAME=	${DISTNAME:S/db/bdb-/}
@@ -10,7 +10,7 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.sleepycat.com/products/xml.shtml
 COMMENT=	Native XML data manager built on Berkeley DB
 
-CONFLITCS=	dbxml<=1.2.1
+CONFLICTS=	dbxml<=1.2.1
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/build_unix
 GNU_CONFIGURE=		YES
