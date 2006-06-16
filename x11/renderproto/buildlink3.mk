@@ -1,6 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/04/18 17:16:06 reed Exp $
-
-BUILDLINK_DEPMETHOD.renderproto?=	build
+# $NetBSD: buildlink3.mk,v 1.2 2006/06/16 14:35:54 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 RENDERPROTO_BUILDLINK3_MK:=	${RENDERPROTO_BUILDLINK3_MK}+
@@ -15,6 +13,7 @@ BUILDLINK_PACKAGES+=	renderproto
 .if !empty(RENDERPROTO_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.renderproto+=	renderproto>=0.9.1
 BUILDLINK_PKGSRCDIR.renderproto?=	../../x11/renderproto
+BUILDLINK_DEPMETHOD.renderproto?=	build
 .endif	# RENDERPROTO_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
