@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/06/11 14:20:26 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2006/06/16 14:25:36 joerg Exp $
 #
 
 DISTNAME=	gwave-20030804
@@ -12,6 +12,7 @@ COMMENT=	Viewer for spice-like simulator output and other analog data
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	yes
+USE_TOOLS+=	perl
 
 EVAL_PREFIX+=	GRAPHDIR=plotutils
 CONFIGURE_ENV+=	GRAPH=${GRAPHDIR}/bin/graph
