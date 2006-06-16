@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2006/04/13 02:26:54 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2006/06/16 23:28:36 rillig Exp $
 #
 
 DISTNAME=	Python-2.0.1
 PKGNAME=	python20-2.0.1
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	lang python
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.0.1/
 EXTRACT_SUFX=	.tgz
@@ -46,6 +46,11 @@ ZOULARIS?=	${PREFIX}/bsd
 MODADD=		-I${ZOULARIS}/include -L${ZOULARIS}/lib ${COMPILER_RPATH_FLAG}${ZOULARIS}/lib
 FIX_RPATH+=	MODADD
 .endif
+
+REPLACE_INTERPRETER+=	py
+REPLACE.py.old=		.*python
+REPLACE.py.new=		${PREFIX}/bin/python2.0
+REPLACE_FILES.py=	Lib/cgi.py
 
 post-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
