@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/04/23 00:12:36 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2006/06/16 09:32:33 rillig Exp $
 
 DISTNAME=	gnats-4.1.0
 PKGREVISION=	2
@@ -23,9 +23,11 @@ CONFIGURE_ARGS+=	--with-gnats-dblist-file=${GNATS_DB_FILE:Q}
 CONFIGURE_ARGS+=	--with-gnats-default-db=${GNATS_DBHOME:Q}
 CONFIGURE_ARGS+=	--with-lispdir=${PREFIX}/share/gnats
 
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 PKG_SYSCONFSUBDIR=	gnats
+
+.include "../../mk/bsd.prefs.mk"
 
 GNATS_USER?=	gnats
 GNATS_GROUP?=	daemon
