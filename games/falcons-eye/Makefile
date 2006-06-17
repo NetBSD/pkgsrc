@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2006/06/17 19:00:08 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2006/06/17 19:26:11 rillig Exp $
 #
 
 DISTNAME=		nethack_source_331_jtp_193
 PKGNAME=		falcons-eye-1.9.3
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=falconseye/}
 EXTRACT_SUFX=		.zip
@@ -22,8 +22,6 @@ USE_TOOLS+=		bison lex
 MAKE_ENV+=		YACC=${TOOLS_CMDLINE_YACC:Q}
 MAKE_FLAGS+=		GAMEUID=${GAMEOWN}
 MAKE_FLAGS+=		GAMEGRP=${GAMEGRP}
-DEINSTALL_SRC=		${PKGDIR}/DEINSTALL
-INSTALL_SRC=		# empty
 
 LIBS.SunOS+=		-lm
 
