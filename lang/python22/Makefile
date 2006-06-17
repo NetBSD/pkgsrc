@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2006/04/13 02:26:54 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2006/06/17 22:07:33 rillig Exp $
 #
 
 DISTNAME=	Python-2.2.3
 PKGNAME=	python22-2.2.3
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	lang python
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.2.3/
 EXTRACT_SUFX=	.tgz
@@ -46,6 +46,14 @@ PLIST_SUBST+=	PY_PLATNAME=${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX:Q}
 
 INSTALL_TARGET=	altinstall
+
+SUBST_CLASSES+=		py22
+SUBST_STAGE.py22=	pre-configure
+SUBST_MESSAGE.py22=	Fixing path to the Python interpreter.
+SUBST_FILES.py22=	Lib/encodings/rot_13.py
+SUBST_FILES.py22+=	Lib/test/test_largefile.py
+SUBST_FILES.py22+=	Lib/cgi.py
+SUBST_SED.py22=		-e '1s,^\#!.*,\#! ${PREFIX}/bin/python2.2,'
 
 post-extract:
 	${MV} ${WRKSRC}/Tools/scripts/pydoc ${WRKSRC}/Tools/scripts/pydoc${PY_VER_SUFFIX}
