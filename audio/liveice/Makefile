@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/09 21:04:40 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/06/17 10:46:45 rillig Exp $
 #
 
 DISTNAME=	liveice
@@ -21,20 +21,19 @@ LIBS+=		${LIBOSSAUDIO}
 
 INSTALLATION_DIRS=	bin
 
+REPLACE_INTERPRETER+=	wish
+REPLACE.wish.old=	/usr/bin/wish
+REPLACE.wish.new=	${LOCALBASE}/bin/wish
+REPLACE_FILES.wish=	liveiceconfigure.tk
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/liveice ${PREFIX}/bin
-	( ${ECHO} '#!${LOCALBASE}/bin/wish' ; \
-	  ${TAIL} +2 ${WRKSRC}/liveiceconfigure.tk \
-	) >${PREFIX}/bin/liveiceconfigure.tk
-	${CHGRP} ${BINGRP}	${PREFIX}/bin/liveiceconfigure.tk
-	${CHOWN} ${BINOWN}	${PREFIX}/bin/liveiceconfigure.tk
-	${CHMOD} ${BINMODE}	${PREFIX}/bin/liveiceconfigure.tk
+	${INSTALL_SCRIPT} ${WRKSRC}/liveiceconfigure.tk ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/liveice
-	for i in README.frontend README.liveice README.quickstart \
-		README.xingmp3enc README_new_mixer.txt ; \
-	do \
-		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/doc/liveice ; \
-	done
+.for f in README.frontend README.liveice README.quickstart \
+		README.xingmp3enc README_new_mixer.txt
+	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/liveice
+.endfor
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
