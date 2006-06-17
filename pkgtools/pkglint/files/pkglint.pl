@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.625 2006/06/17 16:17:12 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.626 2006/06/17 17:09:48 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3003,6 +3003,7 @@ sub checkline_cpp_macro_names($$) {
 	));
 	use constant bad_macros  => {
 		"__sparc__" => "__sparc",
+		"__sparc_v9__" => "__sparcv9",
 		"__sun__" => "__sun",
 		"__svr4__" => "__SVR4",
 	};
@@ -3441,9 +3442,10 @@ sub checkline_mk_shelltext($$) {
 	$rest = $text;
 
 	use constant hidden_shell_commands => array_to_hash(qw(
+		${DELAYED_ERROR_MSG} ${DELAYED_WARNING_MSG}
 		${DO_NADA}
 		${ECHO} ${ECHO_MSG} ${ECHO_N} ${ERROR_CAT} ${ERROR_MSG}
-		${PHASE_MSG}
+		${PHASE_MSG} ${PRINTF}
 		${SHCOMMENT} ${STEP_MSG}
 		${WARNING_CAT} ${WARNING_MSG}
 	));
@@ -4202,7 +4204,7 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 		if ($value eq "" && defined($comment) && $comment =~ qr"^#") {
 			# Ok
 
-		} elsif ($value =~ qr"\$\{(MASTER_SITE_.*):=(.*)\}$") {
+		} elsif ($value =~ qr"\$\{(MASTER_SITE_[^:]*).*:=(.*)\}$") {
 			my ($name, $subdir) = ($1, $2);
 
 			if (!exists(get_dist_sites_names()->{$name})) {
