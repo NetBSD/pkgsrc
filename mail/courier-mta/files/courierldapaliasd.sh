@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courierldapaliasd.sh,v 1.2 2006/06/17 19:26:48 jlam Exp $
+# $NetBSD: courierldapaliasd.sh,v 1.3 2006/06/17 19:38:43 jlam Exp $
 #
 # Courier LDAP mail aliasing daemon
 #
@@ -22,7 +22,7 @@ start_cmd="courierldapaliasd_doit start"
 stop_cmd="courierldapaliasd_doit stop"
 
 mkdir_perms() {
-	dir="$1"; owner="$2"; group="$3"; mode="$4"
+	dir="$1"; user="$2"; group="$3"; mode="$4"
 	@TEST@ -d $dir || @MKDIR@ $dir
 	@CHOWN@ $user $dir
 	@CHGRP@ $group $dir
