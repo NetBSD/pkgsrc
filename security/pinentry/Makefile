@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/04/17 13:46:47 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/06/17 13:46:34 rillig Exp $
 #
 
 DISTNAME=		pinentry-0.7.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/gcrypt/pinentry/
 
@@ -13,30 +13,9 @@ COMMENT=		Applications for entering PINs or Passphrases
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
-# XXX This usage of bsd.options.mk is wrong and has to be fixed.  The
-# package has to be splitted into different packages, such as pinentry-gtk
-# and pinentry-qt, so that the frontends can be built on their own and
-# can be distributed in different binary packages.
-PKG_OPTIONS_VAR=	PKG_OPTIONS.pinentry
-PKG_SUPPORTED_OPTIONS=	gtk qt
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mgtk)
-PLIST_SUBST+=		USE_GTK=
-.  include "../../x11/gtk/buildlink3.mk"
-.else
-PLIST_SUBST+=		USE_GTK='@comment '
-.endif
-
-.if !empty(PKG_OPTIONS:Mqt)
-USE_TOOLS+=		gmake
-PLIST_SUBST+=		USE_QT=
-.  include "../../x11/qt3-libs/buildlink3.mk"
-.else
-PLIST_SUBST+=		USE_QT='@comment '
-.endif
+.include "options.mk"
 
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.0.0
 
