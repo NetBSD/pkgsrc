@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2006/05/02 12:26:30 gdt Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/17 17:45:41 rillig Exp $
 #
 
-DISTNAME=	tmake-1.11
+DISTNAME=	tmake-1.13
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.trolltech.com/freebies/tmake/
 
@@ -16,22 +16,23 @@ GLBASE=		${X11BASE}
 
 INSTALLATION_DIRS=	bin
 
+SUBST_CLASSES+=		tmake
+SUBST_STAGE.tmake=	do-build
+SUBST_FILES.tmake=	bin/tmake
+SUBST_SED.tmake+=	-e 's;@TMAKEPATH@;'${TMAKEPATH:Q}';g'
+
+SUBST_CLASSES+=		tmakeconf
+SUBST_STAGE.tmakeconf=	do-build
+SUBST_FILES.tmakeconf=	lib/netbsd-g++/tmake.conf
+SUBST_SED.tmakeconf=	-e 's;@LOCALBASE@;${LOCALBASE};g'
+SUBST_SED.tmakeconf+=	-e 's;@X11BASE@;${X11BASE};g'
+SUBST_SED.tmakeconf+=	-e 's;@GLBASE@;${GLBASE};g'
+
+REPLACE_PERL+=		bin/tmake bin/progen
+
+# Nothing but the substitutions above.
 do-build:
-	${MV} ${WRKSRC}/bin/tmake ${WRKSRC}/bin/tmake.BAK
-	${SED}  -e 's;@PERL5@;${PERL5};g' \
-		-e 's;@TMAKEPATH@;${TMAKEPATH};g' \
-		${WRKSRC}/bin/tmake.BAK > ${WRKSRC}/bin/tmake
-	${RM} -f ${WRKSRC}/bin/tmake.BAK
-	${MV} ${WRKSRC}/lib/netbsd-g++/tmake.conf ${WRKSRC}/lib/netbsd-g++/tmake.conf.BAK
-	${SED}  -e 's;@LOCALBASE@;${LOCALBASE};g' \
-		-e 's;@X11BASE@;${X11BASE};g' \
-		-e 's;@GLBASE@;${GLBASE};g' \
-		${WRKSRC}/lib/netbsd-g++/tmake.conf.BAK > ${WRKSRC}/lib/netbsd-g++/tmake.conf
-	${RM} -f ${WRKSRC}/lib/netbsd-g++/tmake.conf.BAK
-	${MV} ${WRKSRC}/bin/progen ${WRKSRC}/bin/progen.BAK
-	${SED} 's;/usr/bin/perl;${PERL5};g' \
-		${WRKSRC}/bin/progen.BAK > ${WRKSRC}/bin/progen
-	${RM} -f ${WRKSRC}/bin/progen.BAK
+	@${DO_NADA}
 
 # avoid installing .orig files
 pre-install:
