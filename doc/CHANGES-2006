@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.541 2006/06/17 17:46:11 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.542 2006/06/17 19:27:32 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3105,3 +3105,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/pkg_comp to 1.29 [seb 2006-06-17]
 	Added misc/dtach version 0.7 [minskim 2006-06-17]
 	Updated devel/tmake to 1.13 [rillig 2006-06-17]
+	Updated devel/semantic to 1.4.4 [rillig 2006-06-17]
