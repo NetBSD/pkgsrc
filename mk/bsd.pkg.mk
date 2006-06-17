@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1853 2006/06/15 02:39:19 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1854 2006/06/17 21:27:30 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -979,7 +979,7 @@ do-ltconfig-override:
 _CONFIGURE_PREREQ+=	do-config-star-override
 .PHONY: do-config-star-override
 do-config-star-override:
-.if defined(GNU_CONFIGURE)
+.if defined(GNU_CONFIGURE) || defined(OVERRIDE_GNU_CONFIG_SCRIPTS)
 .  if !empty(CONFIG_GUESS_OVERRIDE)
 .    for _pattern_ in ${CONFIG_GUESS_OVERRIDE}
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
