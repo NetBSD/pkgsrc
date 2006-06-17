@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.260 2006/04/12 13:01:41 markd Exp $
+# $NetBSD: Makefile,v 1.261 2006/06/17 14:28:30 minskim Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -41,6 +41,7 @@ SUBDIR+=	dnetc
 SUBDIR+=	dotfile
 SUBDIR+=	dpkg
 SUBDIR+=	dt
+SUBDIR+=	dtach
 SUBDIR+=	dvorakng
 SUBDIR+=	dync
 SUBDIR+=	easymenu
