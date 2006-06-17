@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.358 2006/06/11 14:05:35 markd Exp $
+# $NetBSD: Makefile,v 1.359 2006/06/17 09:08:47 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -146,7 +146,9 @@ SUBDIR+=	mktemp
 SUBDIR+=	mtools
 SUBDIR+=	mtoolsfm
 SUBDIR+=	mtscan
+SUBDIR+=	munin-doc
 SUBDIR+=	munin-node
+SUBDIR+=	munin-server
 SUBDIR+=	nautilus
 SUBDIR+=	nautilus-cd-burner
 SUBDIR+=	news
