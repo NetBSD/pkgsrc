@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2006/05/11 14:55:17 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2006/06/17 17:17:00 rillig Exp $
 
 DISTNAME=		nspr-4.6.1
 PKGREVISION=		1
 CATEGORIES=		devel
-MASTER_SITES?=		${MASTER_SITE_MOZILLA:S/mozilla\//nspr\//g:=v4.6.1/src/}
+MASTER_SITES=		${MASTER_SITE_MOZILLA:S/mozilla\//nspr\//g:=v4.6.1/src/}
 
 MAINTAINER=		mjl@luckie.org.nz
 HOMEPAGE=		http://www.mozilla.org/projects/nspr/index.html
@@ -48,13 +48,14 @@ do-install:
 	(cd ${WRKSRC}/dist/lib && ${PAX} -Lrwpe . ${PREFIX}/lib/nspr/ )
 	${INSTALL_SCRIPT} ${WRKSRC}/config/nspr-config ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/pkgconfig
+	set -e; \
 	{ ${ECHO} "Name: NSPR"; \
 	  ${ECHO} "Description: The Netscape Portable Runtime"; \
 	  ${ECHO} "Version: ${PKGVERSION}"; \
 	  ${ECHO} "Cflags: -I${PREFIX}/include/nspr"; \
 	  ${ECHO} "Libs: -L${PREFIX}/lib/nspr" \
 	      "${COMPILER_RPATH_FLAG}${PREFIX}/lib/nspr" \
-	      "-lplds4 -lplc4 -lnspr4 ${BUILDLINK_LIBS.pthread}"; \
+	      "-lplds4 -lplc4 -lnspr4 "${BUILDLINK_LIBS.pthread:Q}; \
 	} >${PREFIX}/lib/pkgconfig/nspr.pc
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
