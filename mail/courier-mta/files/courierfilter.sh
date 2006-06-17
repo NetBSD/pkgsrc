@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courierfilter.sh,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
+# $NetBSD: courierfilter.sh,v 1.2 2006/06/17 19:26:48 jlam Exp $
 #
 # Courier mail filter daemon
 #
@@ -15,12 +15,32 @@ rcvar=${name}
 command="@PREFIX@/sbin/${name}"
 pidfile="@VARBASE@/run/${name}.pid"
 
-restart_cmd="courier_doit restart"
+restart_cmd="courierfilter_doit restart"
 start_precmd="courierfilter_prestart"
-start_cmd="courier_doit start"
-stop_cmd="courier_doit stop"
+start_cmd="courierfilter_doit start"
+stop_cmd="courierfilter_doit stop"
 
-courier_doit()
+mkdir_perms() {
+	dir="$1"; owner="$2"; group="$3"; mode="$4"
+	@TEST@ -d $dir || @MKDIR@ $dir
+	@CHOWN@ $user $dir
+	@CHGRP@ $group $dir
+	@CHMOD@ $mode $dir
+}
+
+courierfilter_prestart() {
+	# Courier filter directories
+	mkdir_perms @COURIER_STATEDIR@/allfilters \
+			@COURIER_USER@ @COURIER_GROUP@ 0750
+	mkdir_perms @COURIER_STATEDIR@/filters \
+			@COURIER_USER@ @COURIER_GROUP@ 0750
+	mkdir_perms @PKG_SYSCONFDIR@/filters \
+			@COURIER_USER@ @COURIER_GROUP@ 0750
+	mkdir_perms @PKG_SYSCONFDIR@/filters/active \
+			@COURIER_USER@ @COURIER_GROUP@ 0750
+}
+
+courierfilter_doit()
 {
 	action=$1
 

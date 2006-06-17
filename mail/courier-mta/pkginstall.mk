@@ -1,4 +1,4 @@
-# $NetBSD: pkginstall.mk,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
+# $NetBSD: pkginstall.mk,v 1.2 2006/06/17 19:26:48 jlam Exp $
 
 # Convenience definition used below for a file or directory owned by the
 # courier user and group.
@@ -42,7 +42,8 @@ OWN_DIRS_PERMS+=	${COURIER_STATEDIR}/webadmin/removed		\
 SPECIAL_PERMS+=		bin/cancelmsg			${COURIER_OWNED} 6555
 SPECIAL_PERMS+=		bin/mailq			${COURIER_OWNED} 2555
 SPECIAL_PERMS+=		bin/sendmail			${SETUID_ROOT_PERMS}
-SPECIAL_PERMS+=		libexec/cgi-bin/courierwebadmin	${SETUID_ROOT_PERMS}
+SPECIAL_PERMS+=		libexec/courier/cgi-bin/courierwebadmin		\
+							${SETUID_ROOT_PERMS}
 SPECIAL_PERMS+=		libexec/courier/submitmkdir	${COURIER_OWNED} 4550
 
 ###
