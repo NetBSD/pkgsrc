@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courierimaps.sh,v 1.14 2006/06/09 16:35:04 reed Exp $
+# $NetBSD: courierimaps.sh,v 1.15 2006/06/17 19:26:48 jlam Exp $
 #
 # Courier IMAP/SSL services daemon
 #
@@ -17,10 +17,10 @@ ctl_command="@PREFIX@/sbin/imapd-ssl"
 pidfile="@VARBASE@/run/imapd-ssl.pid"
 required_files="@PKG_SYSCONFDIR@/imapd @PKG_SYSCONFDIR@/imapd-ssl"
 
-start_cmd="courier_doit start"
-stop_cmd="courier_doit stop"
+start_cmd="courierimaps_doit start"
+stop_cmd="courierimaps_doit stop"
 
-courier_doit()
+courierimaps_doit()
 {
 	action=$1
 	case $action in
