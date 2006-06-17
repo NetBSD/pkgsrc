@@ -1,46 +1,46 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/24 19:57:53 jschauma Exp $
-share/doc/html/nspr/Prtyp.html
-share/doc/html/nspr/graphics/prlonga.gif
-share/doc/html/nspr/index.html
-share/doc/html/nspr/layer.html
-share/doc/html/nspr/plhash.html
-share/doc/html/nspr/plstr.html
-share/doc/html/nspr/pratom.html
-share/doc/html/nspr/prbit.html
-share/doc/html/nspr/prclist.html
-share/doc/html/nspr/prcmon.html
-share/doc/html/nspr/prcountr.html
-share/doc/html/nspr/prcvar.html
-share/doc/html/nspr/prdtoa.html
-share/doc/html/nspr/prerr.html
-share/doc/html/nspr/prinit.html
-share/doc/html/nspr/prinrvl.html
-share/doc/html/nspr/printro.html
-share/doc/html/nspr/priofnc.html
-share/doc/html/nspr/priotyp.html
-share/doc/html/nspr/pripcsem.html
-share/doc/html/nspr/prlayer.html
-share/doc/html/nspr/prlink.html
-share/doc/html/nspr/prlock.html
-share/doc/html/nspr/prlog.html
-share/doc/html/nspr/prlong.html
-share/doc/html/nspr/prmem2.html
-share/doc/html/nspr/prmon.html
-share/doc/html/nspr/prmwait.html
-share/doc/html/nspr/prntdb.html
-share/doc/html/nspr/prprf.html
-share/doc/html/nspr/prprocess.html
-share/doc/html/nspr/prrng.html
-share/doc/html/nspr/prshm.html
-share/doc/html/nspr/prshma.html
-share/doc/html/nspr/prswitch.html
-share/doc/html/nspr/prsystem.html
-share/doc/html/nspr/prthrd.html
-share/doc/html/nspr/prtime.html
-share/doc/html/nspr/prtpool.html
-share/doc/html/nspr/samples/layer.c
-share/doc/html/nspr/samples/switch.c
-share/doc/html/nspr/switch.html
-@dirrm share/doc/html/nspr/samples
-@dirrm share/doc/html/nspr/graphics
-@dirrm share/doc/html/nspr
+@comment $NetBSD: PLIST,v 1.2 2006/06/17 20:41:17 rillig Exp $
+share/doc/nspr/html/Prtyp.html
+share/doc/nspr/html/graphics/prlonga.gif
+share/doc/nspr/html/index.html
+share/doc/nspr/html/layer.html
+share/doc/nspr/html/plhash.html
+share/doc/nspr/html/plstr.html
+share/doc/nspr/html/pratom.html
+share/doc/nspr/html/prbit.html
+share/doc/nspr/html/prclist.html
+share/doc/nspr/html/prcmon.html
+share/doc/nspr/html/prcountr.html
+share/doc/nspr/html/prcvar.html
+share/doc/nspr/html/prdtoa.html
+share/doc/nspr/html/prerr.html
+share/doc/nspr/html/prinit.html
+share/doc/nspr/html/prinrvl.html
+share/doc/nspr/html/printro.html
+share/doc/nspr/html/priofnc.html
+share/doc/nspr/html/priotyp.html
+share/doc/nspr/html/pripcsem.html
+share/doc/nspr/html/prlayer.html
+share/doc/nspr/html/prlink.html
+share/doc/nspr/html/prlock.html
+share/doc/nspr/html/prlog.html
+share/doc/nspr/html/prlong.html
+share/doc/nspr/html/prmem2.html
+share/doc/nspr/html/prmon.html
+share/doc/nspr/html/prmwait.html
+share/doc/nspr/html/prntdb.html
+share/doc/nspr/html/prprf.html
+share/doc/nspr/html/prprocess.html
+share/doc/nspr/html/prrng.html
+share/doc/nspr/html/prshm.html
+share/doc/nspr/html/prshma.html
+share/doc/nspr/html/prswitch.html
+share/doc/nspr/html/prsystem.html
+share/doc/nspr/html/prthrd.html
+share/doc/nspr/html/prtime.html
+share/doc/nspr/html/prtpool.html
+share/doc/nspr/html/samples/layer.c
+share/doc/nspr/html/samples/switch.c
+share/doc/nspr/html/switch.html
+@dirrm share/doc/nspr/html/samples
+@dirrm share/doc/nspr/html/graphics
+@dirrm share/doc/nspr/html
