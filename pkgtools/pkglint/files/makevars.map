@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.116 2006/06/16 12:01:38 rillig Exp $
+# $NetBSD: makevars.map,v 1.117 2006/06/17 16:16:26 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -446,7 +446,7 @@ PKGREPOSITORY		Unchecked []
 PKGREVISION		PkgRevision [m:s]
 PKGTOOLS_ENV		List of ShellWord
 PKGVERSION		Version [m:,c:]
-PKGWILDCARD		FileMask [$system]
+PKGWILDCARD		Filemask [$system]
 PKG_APACHE		{ apache13 apache2 } [$system]
 PKG_APACHE_ACCEPTED	List of { apache13 apache2 }
 PKG_APACHE_DEFAULT	{ apache13 apache2 } [$user]
