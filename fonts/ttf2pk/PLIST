@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/06 17:01:15 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/06/17 19:50:09 minskim Exp $
 bin/ttf2pk
 bin/ttf2tfm
 man/man1/ttf2pk.1
@@ -10,8 +10,8 @@ ${PKG_LOCALTEXMFPREFIX}/doc/ttf2pk/ttf2pk.doc
 ${PKG_LOCALTEXMFPREFIX}/doc/ttf2pk/ttfonts.map
 ${PKG_LOCALTEXMFPREFIX}/ttf2pk
 ${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/Big5.sfd
-${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/ET5.enc
 ${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/EUC.sfd
+${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/KS-HLaTeX.sfd
 ${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/SJIS.sfd
 ${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/T1-WGL4.enc
 ${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/UBg5plus.sfd
@@ -19,6 +19,7 @@ ${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/UBig5.sfd
 ${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/UGB.sfd
 ${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/UGBK.sfd
 ${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/UJIS.sfd
+${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/UKS-HLaTeX.sfd
 ${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/UKS.sfd
 ${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/Unicode.sfd
 ${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/VPS.rpl
@@ -26,3 +27,4 @@ ${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base/ttfonts.map
 @dirrm ${PKG_LOCALTEXMFPREFIX}/ttf2tfm/base
 @dirrm ${PKG_LOCALTEXMFPREFIX}/ttf2tfm
 @dirrm ${PKG_LOCALTEXMFPREFIX}/doc/ttf2pk
+@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/doc
