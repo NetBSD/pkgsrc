@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.622 2006/06/15 22:50:31 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.623 2006/06/17 09:51:19 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3325,6 +3325,45 @@ sub checkline_mk_shellword($$$) {
 	}
 }
 
+# Some shell commands should not be used in the install phase.
+#
+sub checkline_mk_shellcmd_use($$) {
+	my ($line, $shellcmd) = @_;
+
+	use constant allowed_install_commands => array_to_hash(qw(
+		${INSTALL}
+		${INSTALL_DATA} ${INSTALL_DATA_DIR}
+		${INSTALL_LIB} ${INSTALL_LIB_DIR}
+		${INSTALL_MAN} ${INSTALL_MAN_DIR}
+		${INSTALL_PROGRAM} ${INSTALL_PROGRAM_DIR}
+		${INSTALL_SCRIPT}
+		${LIBTOOL}
+		${LN}
+		${PAX}
+	));
+	use constant discouraged_install_commands => array_to_hash(qw(
+		${SED}
+		${TR}
+	));
+
+	if (defined($mkctx_target) && $mkctx_target =~ qr"^(?:pre|do|post)-install") {
+
+		if (exists(allowed_install_commands->{$shellcmd})) {
+			# Fine.
+
+		} elsif (exists(discouraged_install_commands->{$shellcmd})) {
+			$line->log_warning("The shell command \"${shellcmd}\" should not be used in the install phase.");
+			$line->explain_warning(
+				"In the install phase, the only thing that should be done is to install",
+				"the prepared files to their final location. The file's contents should",
+				"not be changed anymore.");
+
+		} else {
+			$opt_debug_misc and $line->log_debug("May \"${shellcmd}\" be used in the install phase?");
+		}
+	}
+}
+
 sub checkline_mk_shelltext($$) {
 	my ($line, $text) = @_;
 	my ($vartools, $state, $rest, $set_e_mode);
@@ -3458,10 +3497,10 @@ sub checkline_mk_shelltext($$) {
 				$line->log_error("${shellword} is forbidden and must not be used.");
 
 			} elsif (exists(get_tool_names()->{$shellword})) {
-				# Fine.
+				checkline_mk_shellcmd_use($line, $shellword);
 
 			} elsif ($shellword =~ qr"^\$\{([\w_]+)\}$" && (exists($vartools->{$1}) || defined(get_variable_type($line, $1)))) {
-				# Fine.
+				checkline_mk_shellcmd_use($line, $shellword);
 
 			} elsif ($shellword =~ qr"^(?:\(|\)|:|;|;;|&&|\|\||\{|\}|break|case|cd|continue|do|done|elif|else|esac|eval|exec|exit|export|fi|for|if|read|set|shift|then|unset|while)$") {
 				# Shell builtins are fine.
