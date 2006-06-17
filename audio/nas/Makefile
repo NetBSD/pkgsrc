@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2006/04/02 02:07:38 markd Exp $
+# $NetBSD: Makefile,v 1.61 2006/06/17 11:47:47 markd Exp $
 
-DISTNAME=	nas-1.7b.src
+DISTNAME=	nas-1.8.src
 PKGNAME=	${DISTNAME:S/.src//}
-PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://nas.codebrilliance.com/nas/ \
 		ftp://ftp.uni-duisburg.de/Sound/NAS/
@@ -41,7 +40,7 @@ SUBST_SED.mungeman=	-e 's|^ *\#|\#|g'
 
 .if ${OPSYS} == "SunOS"
 post-install:
-	${LN} -s ${PREFIX}/lib/libaudio.so.2.3 ${PREFIX}/lib/libaudio.so.2
+	${LN} -s ${PREFIX}/lib/libaudio.so.2.4 ${PREFIX}/lib/libaudio.so.2
 .endif
 
 PLIST_SRC=	${PKGDIR}/PLIST.clients
