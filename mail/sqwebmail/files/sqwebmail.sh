@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sqwebmail.sh,v 1.5 2006/06/17 19:26:48 jlam Exp $
+# $NetBSD: sqwebmail.sh,v 1.6 2006/06/17 19:38:43 jlam Exp $
 #
 # Courier SqWebMail services daemon
 #
@@ -22,7 +22,7 @@ start_cmd="sqwebmail_doit start"
 stop_cmd="sqwebmail_doit stop"
 
 mkdir_perms() {
-	dir="$1"; owner="$2"; group="$3"; mode="$4"
+	dir="$1"; user="$2"; group="$3"; mode="$4"
 	@TEST@ -d $dir || @MKDIR@ $dir
 	@CHOWN@ $user $dir
 	@CHGRP@ group $dir

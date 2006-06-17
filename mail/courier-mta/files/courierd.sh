@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courierd.sh,v 1.2 2006/06/17 19:26:48 jlam Exp $
+# $NetBSD: courierd.sh,v 1.3 2006/06/17 19:38:43 jlam Exp $
 #
 # Courier core processes 
 #
@@ -21,7 +21,7 @@ start_cmd="courierd_doit start"
 stop_cmd="courierd_doit stop"
 
 mkdir_perms() {
-	dir="$1"; owner="$2"; group="$3"; mode="$4"
+	dir="$1"; user="$2"; group="$3"; mode="$4"
 	@TEST@ -d $dir || @MKDIR@ $dir
 	@CHOWN@ $user $dir
 	@CHGRP@ $group $dir
