@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.536 2006/06/16 09:47:55 shannonjr Exp $
+$NetBSD: CHANGES-2006,v 1.537 2006/06/17 06:42:06 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3100,3 +3100,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Moved mail/imp4 to mail/imp [adrianp 2006-06-16]
 	Updated www/horde to 3.1.1nb2 [adrianp 2006-06-16]
 	Updated security/prelude-manager to 0.9.5 [shannonjr 2006-06-16]
+	Updated emulators/xbeeb to 0.4.1nb1 [dsainty 2006-06-17]
