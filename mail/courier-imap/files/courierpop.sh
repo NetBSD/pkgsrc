@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courierpop.sh,v 1.12 2006/04/28 18:15:20 jlam Exp $
+# $NetBSD: courierpop.sh,v 1.13 2006/06/17 19:26:48 jlam Exp $
 #
 # Courier POP3 services daemon
 #
@@ -17,10 +17,10 @@ ctl_command="@PREFIX@/sbin/pop3d"
 pidfile="@VARBASE@/run/pop3d.pid"
 required_files="@PKG_SYSCONFDIR@/pop3d @PKG_SYSCONFDIR@/pop3d-ssl"
 
-start_cmd="courier_doit start"
-stop_cmd="courier_doit stop"
+start_cmd="courierpop_doit start"
+stop_cmd="courierpop_doit stop"
 
-courier_doit()
+courierpop_doit()
 {
 	action=$1
 	case $action in
