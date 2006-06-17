@@ -1,9 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:12 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/06/17 16:50:27 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 NBITOOLS_BUILDLINK3_MK:=	${NBITOOLS_BUILDLINK3_MK}+
-
-.include "../../mk/bsd.prefs.mk"
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	nbitools
@@ -21,9 +19,10 @@ BUILDLINK_FILES.nbitools+=	lib/itools/X11/config/*
 
 XMKMF_CMD=	${BUILDLINK_PREFIX.nbitools}/libexec/itools/xmkmf
 
-.if ${OPSYS} == "Linux"
+.  include "../../mk/bsd.prefs.mk"
+.  if ${OPSYS} == "Linux"
 USE_TOOLS+=	gmake
-.endif
+.  endif
 
 .endif	# NBITOOLS_BUILDLINK3_MK
 
