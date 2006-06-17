@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2006/04/06 06:22:02 reed Exp $
+# $NetBSD: Makefile,v 1.20 2006/06/17 19:41:33 minskim Exp $
 
 .include "../../graphics/freetype-lib/Makefile.common"
 
 PKGNAME=	freetype-utils-${FT_VERS}
-PKGREVISION=	2
 COMMENT=	Utilities for manipulating TrueType fonts
 
 BUILDLINK_API_DEPENDS.freetype=	freetype-lib>=${FT_VERS}
