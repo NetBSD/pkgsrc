@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.623 2006/06/17 09:51:19 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.624 2006/06/17 10:03:09 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3357,6 +3357,17 @@ sub checkline_mk_shellcmd_use($$) {
 				"In the install phase, the only thing that should be done is to install",
 				"the prepared files to their final location. The file's contents should",
 				"not be changed anymore.");
+
+		} elsif ($shellcmd eq "\${CP}") {
+			$line->log_warning("\${CP} should not be used to install files.");
+			$line->explain_warning(
+				"The \${CP} command is highly platform dependent and cannot overwrite",
+				"files that don't have write permission. Please use \${PAX} instead.",
+				"",
+				"For example, instead of",
+				"\t\${CP} -R \${WRKSRC}/* \${PREFIX}/foodir",
+				"you should use",
+				"\tcd \${WRKSRC} && \${PAX} -wr * \${PREFIX}/foodir");
 
 		} else {
 			$opt_debug_misc and $line->log_debug("May \"${shellcmd}\" be used in the install phase?");
