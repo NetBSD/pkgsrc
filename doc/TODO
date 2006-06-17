@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5101 2006/06/15 15:25:11 salo Exp $
+$NetBSD: TODO,v 1.5102 2006/06/17 11:50:48 markd Exp $
 
 Suggested new packages
 ======================
@@ -757,7 +757,6 @@ Suggested package updates
 	o naim-0.11.8.2
 	o nano-1.2.5 [pkg/32859]
 	o nap-1.5.3
-	o nas-1.8
 	o nautilus-cd-burner-2.14.2
 	o nawk-20041222
 	o ncftp2-2.8.2
