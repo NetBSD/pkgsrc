@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/20 23:03:57 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/06/17 20:39:36 rillig Exp $
 bin/libnet-config
 include/libnet.h
 include/libnet/libnet-asn1.h
@@ -18,38 +18,38 @@ share/doc/libnet/DESIGN_NOTES
 share/doc/libnet/MIGRATION
 share/doc/libnet/PACKET_BUILDING
 share/doc/libnet/RAWSOCKET_NON_SEQUITUR
-share/doc/html/libnet/acconfig_8h-source.html
-share/doc/html/libnet/annotated.html
-share/doc/html/libnet/bpf_8h-source.html
-share/doc/html/libnet/config_8h-source.html
-share/doc/html/libnet/doxygen.css
-share/doc/html/libnet/doxygen.png
-share/doc/html/libnet/files.html
-share/doc/html/libnet/functions.html
-share/doc/html/libnet/functions_vars.html
-share/doc/html/libnet/getopt_8h-source.html
-share/doc/html/libnet/globals.html
-share/doc/html/libnet/globals_defs.html
-share/doc/html/libnet/globals_func.html
-share/doc/html/libnet/gnuc_8h-source.html
-share/doc/html/libnet/graph_legend.dot
-share/doc/html/libnet/graph_legend.html
-share/doc/html/libnet/ifaddrlist_8h-source.html
-share/doc/html/libnet/in__systm_8h-source.html
-share/doc/html/libnet/index.html
-share/doc/html/libnet/libnet-asn1_8h-source.html
-share/doc/html/libnet/libnet-functions_8h-source.html
-share/doc/html/libnet/libnet-functions_8h.html
-share/doc/html/libnet/libnet-headers_8h-source.html
-share/doc/html/libnet/libnet-headers_8h.html
-share/doc/html/libnet/libnet-macros_8h-source.html
-share/doc/html/libnet/libnet-macros_8h.html
-share/doc/html/libnet/libnet-structures_8h-source.html
-share/doc/html/libnet/libnet-types_8h-source.html
-share/doc/html/libnet/libnet_8h-source.html
-share/doc/html/libnet/libnet_8h.html
-share/doc/html/libnet/structlibnet__802__1q__hdr.html
-share/doc/html/libnet/structlibnet__802__1x__hdr.html
+share/doc/libnet/html/acconfig_8h-source.html
+share/doc/libnet/html/annotated.html
+share/doc/libnet/html/bpf_8h-source.html
+share/doc/libnet/html/config_8h-source.html
+share/doc/libnet/html/doxygen.css
+share/doc/libnet/html/doxygen.png
+share/doc/libnet/html/files.html
+share/doc/libnet/html/functions.html
+share/doc/libnet/html/functions_vars.html
+share/doc/libnet/html/getopt_8h-source.html
+share/doc/libnet/html/globals.html
+share/doc/libnet/html/globals_defs.html
+share/doc/libnet/html/globals_func.html
+share/doc/libnet/html/gnuc_8h-source.html
+share/doc/libnet/html/graph_legend.dot
+share/doc/libnet/html/graph_legend.html
+share/doc/libnet/html/ifaddrlist_8h-source.html
+share/doc/libnet/html/in__systm_8h-source.html
+share/doc/libnet/html/index.html
+share/doc/libnet/html/libnet-asn1_8h-source.html
+share/doc/libnet/html/libnet-functions_8h-source.html
+share/doc/libnet/html/libnet-functions_8h.html
+share/doc/libnet/html/libnet-headers_8h-source.html
+share/doc/libnet/html/libnet-headers_8h.html
+share/doc/libnet/html/libnet-macros_8h-source.html
+share/doc/libnet/html/libnet-macros_8h.html
+share/doc/libnet/html/libnet-structures_8h-source.html
+share/doc/libnet/html/libnet-types_8h-source.html
+share/doc/libnet/html/libnet_8h-source.html
+share/doc/libnet/html/libnet_8h.html
+share/doc/libnet/html/structlibnet__802__1q__hdr.html
+share/doc/libnet/html/structlibnet__802__1x__hdr.html
 share/examples/libnet/arp-new.c
 share/examples/libnet/arp.c
 share/examples/libnet/bgp4_hdr.c
@@ -95,6 +95,6 @@ share/examples/libnet/tring_tcp2.c
 share/examples/libnet/udp1.c
 share/examples/libnet/udp2.c
 @dirrm share/examples/libnet
-@dirrm share/doc/html/libnet
+@dirrm share/doc/libnet/html
 @dirrm share/doc/libnet
 @dirrm include/libnet
