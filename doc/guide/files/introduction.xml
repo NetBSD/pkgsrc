@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.13 2006/05/19 22:04:19 rillig Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.14 2006/06/17 10:26:53 rillig Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -217,6 +217,18 @@
 	</listitem>
       </varlistentry>
     </variablelist>
+
+<sect2 id="term.abbrev">
+<title>Commonly used abbreviations</title>
+
+	<variablelist>
+
+	<varlistentry><term>ICE</term><listitem><para>Internal Compiler
+	Error</para></listitem></varlistentry>
+
+	</variablelist>
+
+</sect2>
 
   <sect2 id="term.people">
   <title>People involved in pkgsrc</title>
