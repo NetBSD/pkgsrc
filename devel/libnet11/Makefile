@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:45:27 tv Exp $
+# $NetBSD: Makefile,v 1.4 2006/06/17 20:39:36 rillig Exp $
 
 DISTNAME=	libnet-1.1.2.1
+PKGREVISION=	1
 CATEGORIES=	devel net
 MASTER_SITES=	http://www.packetfactory.net/libnet/dist/
 
@@ -20,18 +21,18 @@ LNDOCS=		DESIGN_NOTES MIGRATION PACKET_BUILDING RAWSOCKET_NON_SEQUITUR
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/libnet
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/libnet
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/libnet/html
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/libnet
 	${INSTALL_MAN_DIR} ${PREFIX}/man/man3
 
 	${INSTALL_DATA} ${WRKSRC}/doc/html/*.html \
-		${PREFIX}/share/doc/html/libnet
+		${PREFIX}/share/doc/libnet/html
 	${INSTALL_DATA} ${WRKSRC}/doc/html/*.css \
-		${PREFIX}/share/doc/html/libnet
+		${PREFIX}/share/doc/libnet/html
 	${INSTALL_DATA} ${WRKSRC}/doc/html/*.png\
-		${PREFIX}/share/doc/html/libnet
+		${PREFIX}/share/doc/libnet/html
 	${INSTALL_DATA} ${WRKSRC}/doc/html/*.dot\
-		${PREFIX}/share/doc/html/libnet
+		${PREFIX}/share/doc/libnet/html
 
 	${INSTALL_DATA} ${WRKSRC}/sample/*.c \
 		${PREFIX}/share/examples/libnet
