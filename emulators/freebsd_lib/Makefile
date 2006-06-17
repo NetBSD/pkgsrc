@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2006/03/14 01:14:28 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/06/17 19:30:12 rillig Exp $
 #
 
 DISTNAME=		freebsd_lib-2.2.7
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.flame.org/NetBSD/
 
@@ -13,8 +13,6 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
-INSTALL_SRC=		${PKGDIR}/INSTALL
-DEINSTALL_SRC=		# empty
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/emul/freebsd
