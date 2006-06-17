@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/06/11 21:46:19 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/17 17:59:10 rillig Exp $
 #
 
 DISTNAME=		kdissert-1.0.5
@@ -19,12 +19,12 @@ NO_CONFIGURE=		yes
 BUILD_DEPENDS+=	scons>=0.96.1nb1:../../devel/scons
 
 do-build:
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC} \
-		&& ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons
 
 do-install:
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}cd ${WRKSRC} \
-		&& ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons install
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons install
 
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
