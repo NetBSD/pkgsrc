@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2006/06/08 11:05:14 salo Exp $
+# $NetBSD: Makefile,v 1.83 2006/06/17 20:25:23 reed Exp $
 
 DISTNAME=	tiff-3.8.2
 PKGREVISION=	2
@@ -21,6 +21,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--enable-cxx
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/tiff
+CONFIGURE_ARGS+=	--without-x # just in case detects gl to build tiffgt
 
 TEST_TARGET=		check
 
