@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/04 21:29:34 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/17 17:56:10 rillig Exp $
 #
 
 DISTNAME=	xwpe-1.5.29a
@@ -12,9 +12,9 @@ COMMENT=	Programming environment for UNIX systems
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
-USE_NCURSES=		# tigetstr()
+USE_NCURSES=		yes # tigetstr()
 
-BUILD_TARGET=		# defined
+BUILD_TARGET=		# the one from the Makefile
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
