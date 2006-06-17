@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.117 2006/06/17 16:16:26 rillig Exp $
+# $NetBSD: makevars.map,v 1.118 2006/06/17 17:09:48 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -165,7 +165,7 @@ BUILDLINK_PASSTHRU_DIRS	List of Pathname [m:a,c:a,b:a,h:a]
 BUILDLINK_PASSTHRU_RPATHDIRS	List of Pathname [m:a,c:a,b:a,h:a]
 BUILDLINK_PKGSRCDIR.*	RelativePkgDir [b:dp]
 BUILDLINK_PREFIX.*	Pathname [builtin.mk:s]
-BUILDLINK_RPATHDIRS	List of Pathname []
+BUILDLINK_RPATHDIRS.*	List of Pathname [b:a]
 BUILDLINK_TARGETS	List of Identifier []
 BUILDLINK_TRANSFORM.*	SedCommands [m:a,builtin.mk:a,h:a,b:a]
 BUILDLINK_TRANSFORM	List of WrapperTransform [*:a]
@@ -442,6 +442,7 @@ PKGCONFIG_OVERRIDE	List of Pathmask [m:as,c:a]
 PKGDIR			RelativePkgDir
 PKGNAME			PkgName [m:s,c:s,Makefile.*:ds,*:ds]
 PKGNAME_NOREV		PkgName []
+PKGPATH			Pathname [$system]
 PKGREPOSITORY		Unchecked []
 PKGREVISION		PkgRevision [m:s]
 PKGTOOLS_ENV		List of ShellWord
