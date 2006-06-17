@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/06/26 14:57:31 recht Exp $
-bin/awiki
+@comment $NetBSD: PLIST,v 1.6 2006/06/17 21:41:07 rillig Exp $
 bin/tla
 share/doc/tla/COPYING.html
 share/doc/tla/COPYING.txt
