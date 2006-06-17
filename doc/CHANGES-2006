@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.540 2006/06/17 14:28:30 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.541 2006/06/17 17:46:11 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3104,3 +3104,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/nas to 1.8 [markd 2006-06-17]
 	Updated pkgtools/pkg_comp to 1.29 [seb 2006-06-17]
 	Added misc/dtach version 0.7 [minskim 2006-06-17]
+	Updated devel/tmake to 1.13 [rillig 2006-06-17]
