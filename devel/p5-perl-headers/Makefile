@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/06/07 15:44:52 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2006/06/17 20:52:07 rillig Exp $
 
 DISTNAME=		p5-perl-headers
 PKGNAME=		${DISTNAME}-${OS_VERSION}
@@ -20,7 +20,7 @@ PERL5_PACKLIST=		.packlist.h2ph
 EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
-OSVERSION_SPECIFIC=     yes
+OSVERSION_SPECIFIC=	yes
 
 # Since this package will be named, for instance, p5-perl-headers-1.5.1,
 # binary packages on a FTP server (where only "1.5" is used as the directory
@@ -32,13 +32,13 @@ NO_BIN_ON_FTP=		FTP servers do not distinguish A.B.X revisions of versions
 do-build:
 	${MKDIR} ${WRKSRC}/h2ph
 	${RM} -f ${WRKSRC}/h2ph_log ${WRKSRC}/packlist
-	( cd /usr/include; \
+	( cd "/usr/include" && \
 	  ${BUILDLINK_PREFIX.perl}/bin/h2ph -d ${WRKSRC}/h2ph -r -l . ) \
 		> ${WRKSRC}/h2ph_log
-	( ${ECHO} "${PERL5_INSTALLVENDORARCH}/_h2ph_pre.ph"; \
+	( ${ECHO} "${PERL5_INSTALLVENDORARCH}/_h2ph_pre.ph" && \
 	  ${CAT} ${WRKSRC}/h2ph_log \
 		| ${GREP} -- "->" \
-		| ${SED} -e "s,.*\./,${PERL5_INSTALLVENDORARCH}/,g" ) \
+		| ${SED} -e 's,.*\./,${PERL5_INSTALLVENDORARCH}/,g' ) \
 		| ${SORT} -u \
 		> ${WRKSRC}/packlist
 
