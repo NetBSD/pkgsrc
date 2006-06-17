@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.32 2006/01/08 01:07:35 rillig Exp $
+# $NetBSD: subst.mk,v 1.33 2006/06/17 22:42:00 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -32,7 +32,7 @@
 #	Command to clean up after sed(1). Defaults to ${RM} -f
 #	$$file${_SUBST_BACKUP_SUFFIX}. For debugging, set it to ${DO_NADA}.
 
-ECHO_SUBST_MSG?=	${ECHO}
+ECHO_SUBST_MSG?=	${STEP_MSG}
 
 # _SUBST_IS_TEXT_FILE returns 0 if $${file} is a text file.
 _SUBST_IS_TEXT_FILE?= \
@@ -50,32 +50,21 @@ SUBST_FILTER_CMD.${_class_}?=	${SED} ${SUBST_SED.${_class_}}
 SUBST_POSTCMD.${_class_}?=	${RM} -f "$$tmpfile"
 
 SUBST_TARGETS+=			subst-${_class_}
-_SUBST_TARGETS.${_class_}=	subst-${_class_}-message
-_SUBST_TARGETS.${_class_}+=	${_SUBST_COOKIE.${_class_}}
-_SUBST_TARGETS.${_class_}+=	subst-${_class_}-cookie
-
-.ORDER: ${_SUBST_TARGETS.${_class_}}
 
 .  if defined(SUBST_STAGE.${_class_})
 ${SUBST_STAGE.${_class_}}: subst-${_class_}
+.  else
+PKG_FAIL_REASON+=	"SUBST_STAGE missing for ${_class_}."
 .  endif
 
 .PHONY: subst-${_class_}
-subst-${_class_}: ${_SUBST_TARGETS.${_class_}}
-
-.PHONY: subst-${_class_}-message
-subst-${_class_}-message:
-.  if defined(SUBST_MESSAGE.${_class_})
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${ECHO_SUBST_MSG} "=> "${SUBST_MESSAGE.${_class_}:Q}
-.  endif
-
-.PHONY: subst-${_class_}-cookie
-subst-${_class_}-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${TOUCH} ${TOUCH_FLAGS} ${_SUBST_COOKIE.${_class_}:Q}
+subst-${_class_}: ${_SUBST_COOKIE.${_class_}}
 
 ${_SUBST_COOKIE.${_class_}}:
+.  if defined(SUBST_MESSAGE.${_class_})
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${ECHO_SUBST_MSG} ${SUBST_MESSAGE.${_class_}:Q}
+.  endif
 	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
 	cd ${WRKSRC:Q};							\
 	files=${SUBST_FILES.${_class_}:Q};				\
@@ -97,9 +86,11 @@ ${_SUBST_COOKIE.${_class_}}:
 				${ECHO} "$$file" >> ${.TARGET};		\
 			fi;						\
 		elif ${TEST} -f "$$file"; then				\
-			${ECHO_SUBST_MSG} "[subst.mk] WARNING: Ignoring non-text file \"$$file\"." 1>&2; \
+			${WARNING_MSG} "[subst.mk] Ignoring non-text file \"$$file\"." 1>&2; \
 		else							\
-			${ECHO_SUBST_MSG} "[subst.mk] WARNING: Ignoring non-existent file \"$$file\"." 1>&2; \
+			${WARNING_MSG} "[subst.mk] Ignoring non-existent file \"$$file\"." 1>&2; \
 		fi;							\
 	done
+	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	${TOUCH} ${TOUCH_FLAGS} ${.TARGET:Q}
 .endfor
