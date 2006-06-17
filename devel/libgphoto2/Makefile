@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/05/31 04:38:14 markd Exp $
+# $NetBSD: Makefile,v 1.31 2006/06/17 19:05:33 rillig Exp $
 #
 
 DISTNAME=	libgphoto2-2.1.6
@@ -22,7 +22,7 @@ SUBST_CLASSES+=		libexif-update
 SUBST_STAGE.libexif-update=	pre-configure
 SUBST_MESSAGE.libexif-update=	Fix configure script checks for libexif-0.6.13
 SUBST_FILES.libexif-update=	configure
-SUBST_SED.libexif-update=	s,exif-,libexif/exif-,g
+SUBST_SED.libexif-update=	-e s,exif-,libexif/exif-,g
 
 .include "../../mk/bsd.prefs.mk"
 
