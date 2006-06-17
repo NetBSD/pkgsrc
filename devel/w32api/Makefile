@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.25 2006/03/14 01:14:27 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2006/06/17 17:51:18 rillig Exp $
 
 DISTNAME=	w32api-2.5-src
 PKGNAME=	w32api-2.5
-#PKGREVISION=	2
 PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mingw/}
 DISTFILES+=	${DISTNAME}.tar.gz pe-crt-1.2.1.tar.gz
-SITES_pe-crt-1.2.1.tar.gz=http://www.hauN.org/kent/
 
 MAINTAINER=	peace-sacrifice@hauN.org
 HOMEPAGE=	http://www.mingw.org/
 COMMENT=	Free headers and libraries for the Win32 API
 
 BUILD_DEPENDS+=	cross-i386-netbsdpe>=3.3:../../cross/i386-netbsdpe
+
+SITES.pe-crt-1.2.1.tar.gz=	http://www.hauN.org/kent/
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 PE_CC=		${CROSSBASE}/bin/i386-netbsdpe-cc -I${WRKSRC}/include
@@ -29,7 +29,8 @@ do-build:
 		&& ${PE_CC} -c -o uuid.o uuid.c \
 		&& ${PE_AR} r libdxguid.a dxguid.o \
 		&& ${PE_AR} r libuuid.a uuid.o
-	${_PKG_SILENT}cd ${CRTWRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cd ${CRTWRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
 
 do-install:
 	${INSTALL_DATA_DIR} ${CROSSBASE}/i386-netbsdpe/include
@@ -40,6 +41,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/include/ddk/*.h ${CROSSBASE}/i386-netbsdpe/include/ddk
 	${INSTALL_DATA_DIR} ${CROSSBASE}/i386-netbsdpe/lib
 	${INSTALL_DATA} ${WRKSRC}/lib/lib*.a ${CROSSBASE}/i386-netbsdpe/lib
-	${_PKG_SILENT}cd ${CRTWRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install
+	${_PKG_SILENT}${_PKG_DEBUG}					\
+	cd ${CRTWRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install
 
 .include "../../mk/bsd.pkg.mk"
