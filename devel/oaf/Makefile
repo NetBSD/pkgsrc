@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2006/06/11 14:46:56 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2006/06/17 17:29:12 rillig Exp $
 #
 
 DISTNAME=		oaf-0.6.10
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/oaf/0.6/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,6 +20,11 @@ USE_LIBTOOL=		YES
 BROKEN_GETTEXT_DETECTION=	YES
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
+
+EGDIR=			${PREFIX}/share/examples/oaf
+INSTALL_MAKE_FLAGS+=	oafconfigdir=${EGDIR}
+PKG_SYSCONFSUBDIR=	oaf
+CONF_FILES+=		${EGDIR}/oaf-config.xml ${PKG_SYSCONFDIR}/oaf-config.xml
 
 .include "../../devel/popt/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
