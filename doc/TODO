@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5104 2006/06/17 19:27:55 rillig Exp $
+$NetBSD: TODO,v 1.5105 2006/06/17 20:58:42 rillig Exp $
 
 Suggested new packages
 ======================
@@ -928,7 +928,6 @@ Suggested package updates
 	o pam-smbpass-3.0.13
 	o pari-2.1.7
 	o parrot-0.4.4 [pkg/33736]
-	o patchutils-0.2.31
 	o pcal-4.8
 	o pchar-1.5
 	o pciutils-2.2.0
