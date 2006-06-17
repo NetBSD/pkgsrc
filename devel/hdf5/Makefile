@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2006/03/04 21:29:16 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2006/06/17 20:36:26 rillig Exp $
 
 DISTNAME=	hdf5-1.6.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.ncsa.uiuc.edu/HDF/HDF5/hdf5-1.6.5/src/
 
@@ -32,11 +32,10 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/hdf5
 	cd ${WRKSRC} && ${INSTALL_DATA} COPYING release_docs/HISTORY.txt \
 		release_docs/RELEASE.txt ${PREFIX}/share/doc/hdf5
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/hdf5
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/hdf5/html
 	# avoid installing the Makefile and Makefile.in's  They are not needed
-	cd ${WRKSRC}/doc/html && ${PAX} -s '/.*Makefile.*//' -rwpm . ${PREFIX}/share/doc/html/hdf5
-	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/doc/html/hdf5
-	${CHGRP} -R ${SHAREGRP} ${PREFIX}/share/doc/html/hdf5
+	cd ${WRKSRC}/doc/html && ${PAX} -s '/.*Makefile.*//' -rwpm . ${PREFIX}/share/doc/hdf5/html
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/html/hdf5
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
