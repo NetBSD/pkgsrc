@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2005/09/28 22:38:11 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2006/06/17 20:41:17 rillig Exp $
 #
 
 DISTNAME=		nspr-reference
 PKGNAME=		${DISTNAME}-0.1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_MOZILLA:=../../nspr/doc/}
 
@@ -16,7 +17,7 @@ NO_BUILD=		YES
 WRKSRC=			${WRKDIR}/nspr/reference/html
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/nspr
-	cd ${WRKSRC} && ${PAX}  -s,.*/CVS.*,, -rwvpe . ${PREFIX}/share/doc/html/nspr/
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nspr/html
+	cd ${WRKSRC} && ${PAX}  -s,.*/CVS.*,, -rwvpe . ${PREFIX}/share/doc/nspr/html
 
 .include "../../mk/bsd.pkg.mk"
