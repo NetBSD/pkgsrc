@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:35 agc Exp $
+$NetBSD: distinfo,v 1.4 2006/06/17 17:45:41 rillig Exp $
 
-SHA1 (tmake-1.11.tar.gz) = 163283e922158f13760ce7855f8422b92f3c57a5
-RMD160 (tmake-1.11.tar.gz) = 29357d749feb166db0b55ce68ba03603226c0fce
-Size (tmake-1.11.tar.gz) = 65982 bytes
+SHA1 (tmake-1.13.tar.gz) = df6c525d18b17da33bc0bf6a38bf178649e0c2cb
+RMD160 (tmake-1.13.tar.gz) = ddcf02c190d5c25086178a2f24a5850d61d0c36b
+Size (tmake-1.13.tar.gz) = 64191 bytes
 SHA1 (patch-aa) = daa9e10c3ae1dce66620657919e06b2db07049d1
 SHA1 (patch-ab) = b81f6022a9103a9ae0fe3d9adddbf57d374d51d9
-SHA1 (patch-ac) = 14c1cd48a8facdced5249c4ca0513b6b2a1c7799
+SHA1 (patch-ac) = f5d2d9466946d7be9ef717eb1b32dfc985f8c27e
