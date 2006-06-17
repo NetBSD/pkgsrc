@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.542 2006/06/17 19:27:32 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.543 2006/06/17 19:52:25 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3106,3 +3106,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Added misc/dtach version 0.7 [minskim 2006-06-17]
 	Updated devel/tmake to 1.13 [rillig 2006-06-17]
 	Updated devel/semantic to 1.4.4 [rillig 2006-06-17]
+	Updated graphics/freetype-lib to 1.5 [minskim 2006-06-17]
+	Updated graphics/freetype-utils to 1.5 [minskim 2006-06-17]
+	Updated graphics/freetype to 1.5 [minskim 2006-06-17]
+	Updated fonts/ttf2pk to 1.5 [minskim 2006-06-17]
