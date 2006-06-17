@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sqwebmail.sh,v 1.4 2006/04/28 18:16:25 jlam Exp $
+# $NetBSD: sqwebmail.sh,v 1.5 2006/06/17 19:26:48 jlam Exp $
 #
 # Courier SqWebMail services daemon
 #
@@ -17,10 +17,34 @@ ctl_command="@PREFIX@/sbin/sqwebmaild"
 pidfile="@VARBASE@/run/sqwebmaild.pid"
 required_files="@PKG_SYSCONFDIR@/calendarmode @PKG_SYSCONFDIR@/sqwebmaild"
 
-start_cmd="courier_doit start"
-stop_cmd="courier_doit stop"
+start_precmd="sqwebmail_prestart"
+start_cmd="sqwebmail_doit start"
+stop_cmd="sqwebmail_doit stop"
 
-courier_doit()
+mkdir_perms() {
+	dir="$1"; owner="$2"; group="$3"; mode="$4"
+	@TEST@ -d $dir || @MKDIR@ $dir
+	@CHOWN@ $user $dir
+	@CHGRP@ group $dir
+	@CHMOD@ $mode $dir
+}
+
+sqwebmail_prestart()
+{
+	# Courier webmail and calendar (pcp) directories
+	@MKDIR@ @SQWEBMAIL_STATEDIR@
+	@MKDIR@ @SQWEBMAIL_CACHEDIR@
+	mkdir_perms @SQWEBMAIL_CALENDARDIR@ \
+			@ROOT_USER@ @COURIER_GROUP@ 0755
+	mkdir_perms @SQWEBMAIL_CALENDARDIR@/public \
+			@ROOT_USER@ @COURIER_GROUP@ 0755
+	mkdir_perms @SQWEBMAIL_CALENDARDIR@/private \
+			@ROOT_USER@ @COURIER_GROUP@ 0750
+	mkdir_perms @SQWEBMAIL_CALENDARDIR@/localcache \
+			@ROOT_USER@ @COURIER_GROUP@ 0750
+}
+
+sqwebmail_doit()
 {
 	action=$1
 	case $action in

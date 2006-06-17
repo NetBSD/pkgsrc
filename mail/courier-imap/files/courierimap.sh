@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courierimap.sh,v 1.12 2006/04/28 18:15:20 jlam Exp $
+# $NetBSD: courierimap.sh,v 1.13 2006/06/17 19:26:48 jlam Exp $
 #
 # Courier IMAP services daemon
 #
@@ -17,10 +17,10 @@ ctl_command="@PREFIX@/sbin/imapd"
 pidfile="@VARBASE@/run/imapd.pid"
 required_files="@PKG_SYSCONFDIR@/imapd @PKG_SYSCONFDIR@/imapd-ssl"
 
-start_cmd="courier_doit start"
-stop_cmd="courier_doit stop"
+start_cmd="courierimap_doit start"
+stop_cmd="courierimap_doit stop"
 
-courier_doit()
+courierimap_doit()
 {
 	action=$1
 	case $action in
