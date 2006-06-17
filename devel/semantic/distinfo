@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/08/28 04:25:29 uebayasi Exp $
+$NetBSD: distinfo,v 1.7 2006/06/17 19:27:04 rillig Exp $
 
-SHA1 (semantic-1.4.2.tar.gz) = a8898745055319de676c61a5d529d4dfb6eb2878
-RMD160 (semantic-1.4.2.tar.gz) = 38243d5b84443430565100d2cfb1add45383e92f
-Size (semantic-1.4.2.tar.gz) = 313881 bytes
-SHA1 (patch-aa) = 28b97231dadb920be67d853de531f0b273e1b870
+SHA1 (semantic-1.4.4.tar.gz) = 65a3826d47d9deaf936c2564425aa4e970ad11c2
+RMD160 (semantic-1.4.4.tar.gz) = e67bed991b9c1d0ade548304a47fad7019d2f912
+Size (semantic-1.4.4.tar.gz) = 322819 bytes
+SHA1 (patch-aa) = 1def5dec1947b0def770b6228688792116b46bf1

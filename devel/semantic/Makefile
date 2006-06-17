@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2006/03/20 05:34:27 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/06/17 19:27:04 rillig Exp $
 #
 
-DISTNAME=	semantic-1.4.2
+DISTNAME=	semantic-1.4.4
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 
@@ -20,7 +19,7 @@ BUILD_ENV+=	EMACS=${EMACS_FLAVOR}
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 MAKE_ENV+=	EMACS=${EMACS_FLAVOR:Q}
 
@@ -48,6 +47,7 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} 	\
 			${EMACS_LISPPREFIX}/semantic
 	cd ${WRKSRC} && ${INSTALL_DATA} ${AUXFILES} ${EMACS_LISPPREFIX}/semantic
+	set -e;								\
 	cd ${WRKSRC}; for f in semantic.info semantic.info-[0-9]*; do	\
 		${TEST} ! -f "$$f" ||					\
 		${INSTALL_DATA} "$$f" ${EMACS_INFOPREFIX};		\
