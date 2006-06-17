@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.31 2006/03/12 19:36:01 jmmv Exp $
+# $NetBSD: pkg_comp.sh,v 1.32 2006/06/17 12:18:24 seb Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -838,18 +838,31 @@ EOF
 #
 pkg_chroot()
 {
+    local prefix script
+
     [ -d $DESTDIR ] || err "$DESTDIR does not exist"
 
     copy_vulnerabilities
 
     fsmount
     echo "PKG_COMP ==> Entering sandbox \`$DESTDIR'"
+    prefix=`mktemp $DESTDIR/pkg_comp/tmp/pkg_comp-XXXX`
+    rm $prefix
+    script="$prefix.sh"
+    init_script $script
     if [ $# -eq 0 ]; then
-        ENV=/etc/shrc chroot $DESTDIR $ROOTSHELL
+        cat >> $script <<EOF
+ENV=/etc/shrc $ROOTSHELL
+EOF
     else
-        ENV=/etc/shrc chroot $DESTDIR $*
+        cat >> $script <<EOF
+$*
+EOF
     fi
+    chmod +x $script
+    ENV=/etc/shrc chroot $DESTDIR /pkg_comp/tmp/`basename $script`
     echo
+    rm $script
     fsumount
 }
 
