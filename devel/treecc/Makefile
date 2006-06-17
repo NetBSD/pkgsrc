@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/06/09 16:01:23 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/17 17:37:21 rillig Exp $
 #
 
 DISTNAME=	treecc-0.3.6
@@ -12,6 +12,6 @@ COMMENT=	DotGNU Portable.NET aspect-oriented programming tool
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake lex makeinfo
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 .include "../../mk/bsd.pkg.mk"
