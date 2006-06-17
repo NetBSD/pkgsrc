@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/22 09:22:08 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2006/06/17 21:42:31 rillig Exp $
 #
 
 DISTNAME=		uno_v28
@@ -37,8 +37,8 @@ USE_TOOLS+=	bison gmake flex
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
-SUBST_FILES.prefix=     makefile
-SUBST_SED.prefix=       -e "s,/usr/bin,${PREFIX}/bin,g"
-SUBST_MESSAGE.prefix=   Fixing hardcoded paths.
+SUBST_FILES.prefix=	makefile
+SUBST_SED.prefix=	-e "s,/usr/bin,${PREFIX}/bin,g"
+SUBST_MESSAGE.prefix=	Fixing hardcoded paths.
 
 .include "../../mk/bsd.pkg.mk"
