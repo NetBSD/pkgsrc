@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/06/14 10:25:01 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/17 18:01:17 rillig Exp $
 #
 
 DISTNAME=		xfinans-5.9
@@ -20,17 +20,17 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/app-defaults/XFinans
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/Xfinans
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/Xfinans
-	${CP} ${WRKSRC}/XFinans.defaults ${PREFIX}/lib/X11/app-defaults/XFinans
-	${CP} ${WRKSRC}/*.acc ${PREFIX}/share/examples/Xfinans
-	${CP} ${WRKSRC}/xfin.ps ${PREFIX}/share/doc/Xfinans
-	${CP} ${WRKSRC}/README ${PREFIX}/share/doc/Xfinans
-	${CP} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/Xfinans
-	${CP} ${WRKSRC}/hyperhelp ${PREFIX}/share/examples/Xfinans
-	${CP} ${WRKSRC}/hyperhelp.index ${PREFIX}/share/examples/Xfinans
-	${CP} ${WRKSRC}/finans.bkd ${PREFIX}/share/examples/Xfinans
-	${CP} ${WRKSRC}/variables ${PREFIX}/share/examples/Xfinans
-	${CP} ${WRKSRC}/categories ${PREFIX}/share/examples/Xfinans
-	${CP} ${WRKSRC}/category_engine ${PREFIX}/share/examples/Xfinans
+	${INSTALL_DATA} ${WRKSRC}/XFinans.defaults ${PREFIX}/lib/X11/app-defaults/XFinans
+	${INSTALL_DATA} ${WRKSRC}/*.acc ${PREFIX}/share/examples/Xfinans
+	${INSTALL_DATA} ${WRKSRC}/xfin.ps ${PREFIX}/share/doc/Xfinans
+	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/Xfinans
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/Xfinans
+	${INSTALL_DATA} ${WRKSRC}/hyperhelp ${PREFIX}/share/examples/Xfinans
+	${INSTALL_DATA} ${WRKSRC}/hyperhelp.index ${PREFIX}/share/examples/Xfinans
+	${INSTALL_DATA} ${WRKSRC}/finans.bkd ${PREFIX}/share/examples/Xfinans
+	${INSTALL_DATA} ${WRKSRC}/variables ${PREFIX}/share/examples/Xfinans
+	${INSTALL_DATA} ${WRKSRC}/categories ${PREFIX}/share/examples/Xfinans
+	${INSTALL_DATA} ${WRKSRC}/category_engine ${PREFIX}/share/examples/Xfinans
 	${RM} -f ${PREFIX}/man/cat1/xfinans.0
 
 .include "../../mk/bsd.pkg.mk"
