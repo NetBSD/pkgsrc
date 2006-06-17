@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.626 2006/06/17 17:09:48 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.627 2006/06/17 22:46:45 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4847,7 +4847,6 @@ sub checklines_mk($) {
 	}
 
 	checklines_trailing_empty_lines($lines);
-	autofix($lines);
 
 	if ($#{$mkctx_indentations} != 0) {
 		$lines->[-1]->log_error("Directive indentation is not 0, but ".$mkctx_indentations->[-1]." at EOF.");
@@ -5285,6 +5284,7 @@ sub checkfile_mk($) {
 	}
 
 	checklines_mk($lines);
+	autofix($lines);
 }
 
 sub checkfile_package_Makefile($$$) {
@@ -5925,6 +5925,7 @@ sub checkfile_PLIST($) {
 		}
 	}
 	checklines_trailing_empty_lines($lines);
+	autofix($lines);
 }
 
 sub checkfile($) {
