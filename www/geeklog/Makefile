@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/06/16 08:41:12 taca Exp $
+# $NetBSD: Makefile,v 1.3 2006/06/17 01:48:23 taca Exp $
 #
 
 DISTNAME=	geeklog-${VER}
@@ -72,7 +72,6 @@ INSTALLATION_DIRS=	${GEEKLOG_BASE} ${GEEKLOG_PUB} ${GEEKLOG_TMPL}/images \
 
 .include "../../www/geeklog/Makefile.common"
 
-APACHE_GROUP?=		www
 PKG_SYSCONFSUBDIR?=	geeklog
 
 .if empty(GEEKLOG_SITEBASE)
