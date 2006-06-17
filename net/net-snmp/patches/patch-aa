@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.5 2006/06/17 17:20:56 christos Exp $
+
+--- agent/mibgroup/host/hr_filesys.c.orig	2005-02-28 07:52:58.000000000 -0500
++++ agent/mibgroup/host/hr_filesys.c	2006-06-17 12:21:40.000000000 -0400
+@@ -88,6 +88,7 @@
+ 
+ #elif defined(HAVE_STATVFS) && defined(__NetBSD__)
+ 
++#define getfsstat getvfsstat
+ static struct statvfs	*fsstats = NULL;
+ struct statvfs		*HRFS_entry;
+ static int		fscount;
