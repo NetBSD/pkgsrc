@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.27 2006/03/04 21:29:26 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2006/06/17 20:53:09 rillig Exp $
 #
 
 DISTNAME=	patch-2.5.4
 PKGREVISION=	2
 CATEGORIES=	devel
-
 # We keep an uncompressed tar archive of the sources on
 # ${MASTER_SITE_LOCAL} so that we won't need gzcat to extract the
 # sources, which could potentially cause a circular dependency on
 # archivers/gzip-base.
 #
 #MASTER_SITES=   ${MASTER_SITE_GNU:=patch/}
-MASTER_SITES=   ${MASTER_SITE_LOCAL}
+MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
