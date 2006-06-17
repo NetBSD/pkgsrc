@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.537 2006/06/17 06:42:06 dsainty Exp $
+$NetBSD: CHANGES-2006,v 1.538 2006/06/17 11:50:48 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3101,3 +3101,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/horde to 3.1.1nb2 [adrianp 2006-06-16]
 	Updated security/prelude-manager to 0.9.5 [shannonjr 2006-06-16]
 	Updated emulators/xbeeb to 0.4.1nb1 [dsainty 2006-06-17]
+	Updated audio/nas to 1.8 [markd 2006-06-17]
