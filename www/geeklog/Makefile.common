@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2006/06/15 13:26:44 taca Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/06/18 08:34:05 taca Exp $
 #
 
 GEEKLOG_BASE=		share/geeklog
@@ -11,7 +11,7 @@ GEEKLOG_DIR=		${PREFIX}/${GEEKLOG_BASE}
 # Geeklog public area
 GEEKLOG_PUBDIR=		${PREFIX}/${GEEKLOG_PUB}
 
-#GEEKLOG_DOCDIR= 	${PREFIX}/share/doc/geeklog
+GEEKLOG_DOCDIR= 	${PREFIX}/share/doc/geeklog
 GEEKLOG_EXAMPLESDIR=	${PREFIX}/share/examples/geeklog
 GEEKLOG_TMPL_DIR=	${PREFIX}/${GEEKLOG_TMPL}
 
