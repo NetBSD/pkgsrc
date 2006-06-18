@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/04/17 13:46:30 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/06/18 00:59:17 rillig Exp $
 #
 
 DISTNAME=	aview-1.3.0rc1
@@ -22,9 +22,9 @@ USE_LIBTOOL=	yes
 .include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=		programs
-SUBST_FILES.programs=	Makefile.in
 SUBST_STAGE.programs=	post-patch
-
+SUBST_MESSAGE.programs=	Filling @placeholders@.
+SUBST_FILES.programs=	Makefile.in
 .if (${MACHINE_ARCH} == "i386")
 SUBST_SED.programs+=	-e 's,@BIN_PROGRAMS@,aview aaflip,g'
 .else
@@ -37,7 +37,7 @@ REPLACE.bash.new=	${SH}
 REPLACE_FILES.bash=	asciiview
 
 post-install:
-	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/aview/
 	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${PREFIX}/share/doc/aview/
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/aview/
