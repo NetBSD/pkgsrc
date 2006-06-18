@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/06/05 15:49:05 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.15 2006/06/18 08:29:00 xtraeme Exp $
 ${HASH}bin/cssstat
 ${HASH}bin/csscompress
 ${HASH}bin/cssclean
@@ -21,6 +21,7 @@ include/dspam/decode.h
 include/dspam/diction.h
 include/dspam/error.h
 include/dspam/heap.h
+include/dspam/ldap_client.h
 include/dspam/libdspam.h
 include/dspam/libdspam_objects.h
 include/dspam/nodetree.h
