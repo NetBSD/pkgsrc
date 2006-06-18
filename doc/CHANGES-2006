@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.550 2006/06/18 08:34:57 taca Exp $
+$NetBSD: CHANGES-2006,v 1.551 2006/06/18 09:01:28 agc Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3117,3 +3117,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/mathomatic to 12.5.17 [minskim 2006-06-18]
 	Updated mail/dspam to 3.6.8 [xtraeme 2006-06-18]
 	Updated www/geeklog to 1.4.0.3nb1 [taca 2006-06-18]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2006Q2 branch [agc 2006-06-18]
