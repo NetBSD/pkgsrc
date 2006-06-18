@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.11 2005/05/03 21:42:53 kristerw Exp $
+# $NetBSD: Makefile,v 1.12 2006/06/18 21:52:48 rillig Exp $
 #
 
 DISTNAME=	bsdgrep-200405051607
 PKGNAME=	bsdgrep-devel-20040505
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils textproc
 MASTER_SITES=	http://www.fawlty.net/software/
 
 MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	# none
 COMMENT=	BSD version of grep as in NetBSD src/usr.bin/grep
+
+MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}
+MAKE_ENV+=	MANOWN=${MANOWN} MANGRP=${MANGRP}
 
 post-patch:
 	@${SED} -e 's|grep|bgrep|g' ${WRKSRC}/grep.1 > ${WRKSRC}/bgrep.1
