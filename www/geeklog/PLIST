@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/06/15 13:26:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/06/18 08:34:05 taca Exp $
 ${GEEKLOG_BASE}/emailgeeklogstories
 ${GEEKLOG_BASE}/language/bosnian.php
 ${GEEKLOG_BASE}/language/bosnian_utf-8.php
@@ -1362,7 +1362,6 @@ ${GEEKLOG_BASE}/system/databases/mysql.class.php
 ${GEEKLOG_BASE}/system/install_templates/databasesettings.tpl
 ${GEEKLOG_BASE}/system/lib-admin.php
 ${GEEKLOG_BASE}/system/lib-comment.php
-${GEEKLOG_BASE}/system/lib-custom.php
 ${GEEKLOG_BASE}/system/lib-database.php
 ${GEEKLOG_BASE}/system/lib-pingback.php
 ${GEEKLOG_BASE}/system/lib-plugins.php
@@ -1571,6 +1570,7 @@ ${GEEKLOG_BASE}/system/pear/scripts/pecl.bat
 ${GEEKLOG_BASE}/system/pear/scripts/pecl.sh
 ${GEEKLOG_BASE}/system/pear/scripts/peclcmd.php
 ${GEEKLOG_BASE}/system/pear/template.spec
+share/doc/geeklog/README
 share/examples/geeklog/config.php
 share/examples/geeklog/createdb.php
 share/examples/geeklog/geeklog.conf
@@ -1578,6 +1578,9 @@ share/examples/geeklog/plugins/links/config.php
 share/examples/geeklog/plugins/polls/config.php
 share/examples/geeklog/plugins/spamx/config.php
 share/examples/geeklog/plugins/staticpages/config.php
+share/examples/geeklog/system/lib-custom.php
+@dirrm share/doc/geeklog
+@dirrm share/examples/geeklog/system
 @dirrm share/examples/geeklog/plugins/links
 @dirrm share/examples/geeklog/plugins/polls
 @dirrm share/examples/geeklog/plugins/spamx
