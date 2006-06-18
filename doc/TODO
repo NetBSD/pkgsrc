@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5110 2006/06/18 09:02:25 wiz Exp $
+$NetBSD: TODO,v 1.5111 2006/06/18 18:25:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -428,6 +428,7 @@ Suggested package updates
 	o cweb-3.64a
 	o cy-login-1.5.28
 	o cygwin_lib-1.5.19
+	o cyrus-sasl-2.1.22
 	o dap-2.1.5
 	o dasher-4.1.0 [unstable]
 	o dasher-4.1.4
@@ -450,7 +451,7 @@ Suggested package updates
 	o dnstracer-1.8
 	o dropbear-0.48
 	o dvdauthor-0.6.11
-	o dvdrip-0.52.7
+	o dvdrip-0.97.11
 	o dvipng-1.8
 	o dx-4.3.3
 	o e16menuedit2-0.0.3
@@ -520,7 +521,7 @@ Suggested package updates
 	o gcc-3.3.6
 	o gcc-4.1.0
 	o gcombust-0.1.55
-	o gconfmm-2.14.1
+	o gconfmm-2.14.2
 	o gcpio-2.6
 	o gdal-lib-1.3.2
 	o gdb6-6.3.0
@@ -754,6 +755,7 @@ Suggested package updates
 	o mpop-0.8.3 [pkg/32511]
 	o mrproject-0.9.1
 	o mserv-devel-0.41
+	o msmtp-1.4.6
 	o mtail-1.1.1
 	o multi-gnome-terminal-1.6.2
 	o multitail-4.0.5
@@ -1063,8 +1065,7 @@ Suggested package updates
 	o remind-3.00.24
 	o rep-gtk-0.18
 	o resize_image-0.7
-	o rhythmbox-0.9.3.1 [jmmv]
-	o rhythmbox-0.9.4.1
+	o rhythmbox-0.9.5
 	o rio500-0.8.1
 	o ripmime-1.4.0.6
 	o robodoc-4.99.6
@@ -1184,6 +1185,7 @@ Suggested package updates
 	o ucarp-1.2
 	o ucblogo-5.5
 	o unix2dos-1.3
+	o unrar-3.6.5
 	o userppp-030706
 	o valgrind-3.0.1
 	o vfu-4.03
@@ -1204,6 +1206,7 @@ Suggested package updates
 	o wcalc-2.2
 	o wdm-1.28
 	o weewm-0.01
+	o win32-codecs-20060611
 	o winbind-3.0.13
 	o wmctrl-1.07
 	o wmii-2.5.1 [pkg/32522]
@@ -1214,6 +1217,7 @@ Suggested package updates
 	o x2vnc-1.7.2
 	o xalan-c-1.9.0 [requires xerces-c-2.6.0]
 	o xbindkeys-1.7.2
+	o xblast-2.10.4
 	o xboard-4.2.7
 	o xcircuit-3.4.0
 	o xdaliclock-2.23
