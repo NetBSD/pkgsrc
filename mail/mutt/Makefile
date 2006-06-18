@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2006/06/15 20:40:16 jlam Exp $
+# $NetBSD: Makefile,v 1.142 2006/06/18 00:23:59 rillig Exp $
 
 DISTNAME=		mutt-1.4.2.1i
 PKGNAME=		${DISTNAME:C/i$//}
@@ -57,6 +57,7 @@ SUBST_MESSAGE.mgroup=	Configuring mail group.
 SUBST_STAGE.mgroup=	post-patch
 SUBST_FILES.mgroup=	configure
 SUBST_SED.mgroup=	-e "s,DOTLOCK_GROUP='mail',DOTLOCK_GROUP='+Administrators',"
+
 CPPFLAGS+=		-D__BROKEN_INTERIX_FORK
 .endif
 
