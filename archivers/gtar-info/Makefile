@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2006/03/20 18:15:37 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2006/06/18 07:04:16 rillig Exp $
 #
 
-DISTNAME=       tar-1.15.1
+DISTNAME=	tar-1.15.1
 PKGNAME=	gtar-info-1.15.1
-SVR4_PKGNAME=	gtari
 PKGREVISION=	1
+SVR4_PKGNAME=	gtari
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU:=tar/}
 
@@ -16,7 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 INSTALLATION_DIRS=	${PKGINFODIR}
 
