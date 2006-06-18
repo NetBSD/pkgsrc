@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2006/05/13 03:44:24 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2006/06/18 00:30:10 rillig Exp $
 
 DISTNAME=		advi-1.6.0
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		print
 MASTER_SITES=		ftp://ftp.inria.fr/INRIA/Projects/cristal/advi/
-EXTRACT_SUFX=           .tgz
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pauillac.inria.fr/advi/
@@ -27,20 +27,20 @@ SUBST_STAGE.gspath=	pre-configure
 SUBST_FILES.gspath=	config.ml.in
 SUBST_SED.gspath=	-e "s,@PATH_GS@,${PREFIX}/bin/gs,g"
 
-SUBST_CLASSES+=		conf
-SUBST_MESSAGE.paths=	Fixing config file path
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	Fixing config file path.
 SUBST_STAGE.paths=	post-configure
 SUBST_FILES.paths=	userfile.ml
 SUBST_SED.paths=	-e "s:/etc/advirc:${PKG_SYSCONFDIR}/advirc:g"
 
-USE_DIRS+=      texmf-1.0
+USE_DIRS+=		texmf-1.0
 .include "../../print/teTeX/module.mk"
 
 post-extract:
-	@${CP} ${WRKSRC}/tex/*.eps ${WRKSRC}/doc
-	@${CP} ${WRKSRC}/doc/eng.htm ${WRKSRC}/doc/index.html
-	@${MKDIR} ${WRKSRC}/doc.orig
-	@${CP} ${WRKSRC}/doc/*.dvi ${WRKSRC}/doc.orig
+	${CP} ${WRKSRC}/tex/*.eps ${WRKSRC}/doc
+	${CP} ${WRKSRC}/doc/eng.htm ${WRKSRC}/doc/index.html
+	${MKDIR} ${WRKSRC}/doc.orig
+	${CP} ${WRKSRC}/doc/*.dvi ${WRKSRC}/doc.orig
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/advi
