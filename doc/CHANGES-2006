@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.549 2006/06/18 08:30:10 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.550 2006/06/18 08:34:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3116,3 +3116,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/abcm2ps to 4.12.19 [minskim 2006-06-18]
 	Updated math/mathomatic to 12.5.17 [minskim 2006-06-18]
 	Updated mail/dspam to 3.6.8 [xtraeme 2006-06-18]
+	Updated www/geeklog to 1.4.0.3nb1 [taca 2006-06-18]
