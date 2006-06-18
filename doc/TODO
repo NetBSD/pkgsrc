@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5108 2006/06/18 03:02:43 minskim Exp $
+$NetBSD: TODO,v 1.5109 2006/06/18 08:30:10 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -446,7 +446,6 @@ Suggested package updates
 	o dnstop-20050405
 	o dnstracer-1.8
 	o dropbear-0.48
-	o dspam-3.6.8
 	o dvdauthor-0.6.11
 	o dvdrip-0.52.7
 	o dvipng-1.8
