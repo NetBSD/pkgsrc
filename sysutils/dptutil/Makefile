@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/28 14:26:19 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/18 16:04:28 rillig Exp $
 
 DISTNAME=		raidmgt-3.31
 PKGNAME=		dptutil-3.31
@@ -14,6 +14,7 @@ COMMENT=		DPT/Adaptec Storage Management software (dptutil)
 # may have problems.
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
+USE_LANGUAGES=		c++
 USE_TOOLS+=		makedepend
 INSTALLATION_DIRS=	bin
 
