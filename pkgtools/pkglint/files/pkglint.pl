@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.631 2006/06/18 01:08:08 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.632 2006/06/18 08:20:19 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4195,10 +4195,16 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 		if ($value_novar !~ qr"^[-0-9A-Za-z._~+%*?/\[\]]*$") {
 			$line->log_warning("\"${value}\" is not a valid pathname mask.");
 		}
+		if ($value =~ qr"^/") {
+			$line->log_warning("Found absolute pathname: ${value}.");
+		}
 
 	} elsif ($type eq "Pathname") {
 		if ($value_novar !~ qr"^[-0-9A-Za-z._~+%/]*$") {
 			$line->log_warning("\"${value}\" is not a valid pathname.");
+		}
+		if ($value =~ qr"^/") {
+			$line->log_warning("Found absolute pathname: ${value}.");
 		}
 
 	} elsif ($type eq "Perl5Packlist") {
