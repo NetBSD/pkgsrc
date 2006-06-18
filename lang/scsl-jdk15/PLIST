@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/05/15 19:44:07 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/06/18 08:51:11 rillig Exp $
 bin/scsl15-appletviewer
 bin/scsl15-apt
 bin/scsl15-extcheck
@@ -544,9 +544,9 @@ java/scsl-1.5/demo/jvmti/hprof/src/hprof_tracker.c
 java/scsl-1.5/demo/jvmti/hprof/src/hprof_tracker.h
 java/scsl-1.5/demo/jvmti/hprof/src/hprof_util.c
 java/scsl-1.5/demo/jvmti/hprof/src/hprof_util.h
-java/scsl-1.5/demo/jvmti/hprof/src/jvm.hprof.txt
 java/scsl-1.5/demo/jvmti/hprof/src/bsd/hprof_md.c
 java/scsl-1.5/demo/jvmti/hprof/src/bsd/hprof_md.c.orig
+java/scsl-1.5/demo/jvmti/hprof/src/jvm.hprof.txt
 java/scsl-1.5/demo/jvmti/hprof/src/manual.html
 java/scsl-1.5/demo/jvmti/index.html
 java/scsl-1.5/demo/jvmti/java_crw_demo/README.txt
