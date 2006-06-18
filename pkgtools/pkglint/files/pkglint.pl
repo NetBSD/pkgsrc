@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.629 2006/06/18 00:51:34 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.630 2006/06/18 01:01:40 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4837,8 +4837,11 @@ sub checklines_mk($) {
 		checkline_trailing_whitespace($line);
 		checkline_spellcheck($line);
 
-		if ($text =~ qr"^\s*$" || $text =~ qr"^#") {
+		if ($text =~ qr"^\s*$") {
 			$substcontext->check_end($line);
+
+		} elsif ($text =~ qr"^#") {
+			# No further checks.
 
 		} elsif ($text =~ regex_varassign) {
 			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
