@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.630 2006/06/18 01:01:40 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.631 2006/06/18 01:08:08 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1359,9 +1359,6 @@ sub check_end($$) {
 
 	if (!defined($self->subst_stage)) {
 		$line->log_warning("Incomplete SUBST block: SUBST_STAGE missing.");
-	}
-	if (!defined($self->subst_message)) {
-		$line->log_note("Incomplete SUBST block: SUBST_MESSAGE missing.");
 	}
 	if (@{$self->subst_files} == 0) {
 		$line->log_warning("Incomplete SUBST block: SUBST_FILES missing.");
