@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2005/12/29 06:22:16 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/06/18 16:00:41 rillig Exp $
 #
 
 DISTNAME=	bkpupsd-2.1.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.jone-system.com/pub/misc/ \
 		ftp://ftp.back-street.net/pub/misc/
@@ -21,6 +21,8 @@ ONLY_FOR_PLATFORM= NetBSD-*-*
 DOCDIR=		${PREFIX}/share/doc/bkpupsd
 MAKE_ENV+=	DEFAULT_DEVICE=${DEFAULT_SERIAL_DEVICE:Q} DOCDIR=${DOCDIR:Q} \
 		RCD_SCRIPTS_EXAMPLEDIR=${RCD_SCRIPTS_EXAMPLEDIR:Q}
+MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}
+MAKE_ENV+=	MANOWN=${MANOWN} MANGRP=${MANGRP}
 
 MESSAGE_SUBST+=	DOCDIR=${DOCDIR}
 
