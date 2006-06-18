@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.632 2006/06/18 08:20:19 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.633 2006/06/18 08:43:35 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4185,7 +4185,9 @@ sub checkline_mk_vartype_basic($$$$$$$) {
 		}
 
 	} elsif ($type eq "Pathlist") {
-		my (@paths) = split(qr":", $value_novar);
+		# XXX: The splitting will fail if $value contains any
+		# variables with modifiers, for example :Q or :S/././.
+		my (@paths) = split(qr":", $value);
 
 		foreach my $p (@paths) {
 			checkline_mk_vartype_basic($line, $varname, "Pathname", $op, $p, $comment, false);
