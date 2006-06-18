@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.120 2006/06/18 08:18:18 rillig Exp $
+# $NetBSD: makevars.map,v 1.121 2006/06/18 08:42:16 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -154,7 +154,7 @@ BUILDLINK_FILES.*	List of Pathmask [$bl_list]
 BUILDLINK_FILES_CMD.*	List of ShellWord []
 # ^^ ShellCommand
 BUILDLINK_INCDIRS.*	List of Pathname [b:ad]			# b:d?
-BUILDLINK_JAVA_PREFIX	Pathname [b:s]
+BUILDLINK_JAVA_PREFIX.*	Pathname [b:s]
 BUILDLINK_LDADD.*	List of LdFlag [builtin.mk:ads]
 BUILDLINK_LDFLAGS	List of LdFlag [$system]
 BUILDLINK_LDFLAGS.*	List of LdFlag [$bl_list]
@@ -300,7 +300,7 @@ GNU_CONFIGURE		Yes [c:s,m:s]
 GNU_CONFIGURE_MANDIR	Pathname [m:s,c:s]
 GNU_CONFIGURE_PREFIX	Pathname [m:s]
 HAS_CONFIGURE		Yes [m:s,c:s]
-HEADER_TEMPLATE		List of Pathname
+HEADER_TEMPLATES	List of Pathname [$list]
 HOMEPAGE		URL [$simple]
 INCOMPAT_CURSES		List of PlatformTriple [m:as]
 INCOMPAT_ICONV		List of PlatformTriple
@@ -329,14 +329,14 @@ INSTALL_SRC		List of Pathname [m:s,c:ds]
 INSTALL_TARGET		List of Identifier [ruby*.mk:d, $simple]
 INSTALL_TEMPLATES	List of Pathname [m:as,c:ads]
 INSTALL_UNSTRIPPED	YesNo [m:s,c:s]
-INTERACTIVE_STAGE	List of { fetch extract configure build install } [m:s]
+INTERACTIVE_STAGE	List of { fetch extract configure build install } [$simple]
 IS_BUILTIN.*		YesNo_Indirectly [builtin.mk:s]
-JAVA_CLASSPATH		ShellWord [m:s]
-JAVA_HOME		Pathname [m:s]
-JAVA_NAME		Filename [m:s]
-JAVA_UNLIMIT		List of { cmdsize datasize stacksize }
-JAVA_WRAPPERS		InternalList of Filename [m:as]
-JAVA_WRAPPER_BIN.*	Pathname [m:s,c:ds]
+JAVA_CLASSPATH		ShellWord [$simple]
+JAVA_HOME		Pathname [$simple]
+JAVA_NAME		Filename [$simple]
+JAVA_UNLIMIT		List of { cmdsize datasize stacksize } [$list]
+JAVA_WRAPPERS		InternalList of Filename [$list]
+JAVA_WRAPPER_BIN.*	Pathname [$simple]
 KRB5BASE		Pathname [$system]
 KRB5_ACCEPTED		List of { heimdal mit-krb5 }
 KRB5_DEFAULT		{ heimdal mit-krb5 } [$user]
@@ -407,7 +407,7 @@ NO_CONFIGURE		Yes [m:s,c:s]
 NO_EXPORT_CPP		Yes [m:s]
 NO_EXTRACT		Yes
 NO_INSTALL_MANPAGES	Yes [m:s]
-NO_MTREE		Yes [m:s]
+NO_MTREE		Yes [$simple]
 NO_PACKAGE		Message [m:s]
 NO_PKGTOOLS_REQD_CHECK	Yes [m:s]
 NO_PKG_REGISTER		Yes [m:s]
