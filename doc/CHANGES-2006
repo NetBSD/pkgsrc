@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.551 2006/06/18 09:01:28 agc Exp $
+$NetBSD: CHANGES-2006,v 1.552 2006/06/18 12:53:59 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3118,3 +3118,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/dspam to 3.6.8 [xtraeme 2006-06-18]
 	Updated www/geeklog to 1.4.0.3nb1 [taca 2006-06-18]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2006Q2 branch [agc 2006-06-18]
+	Updated devel/monotone to 0.27 [jmmv 2006-06-18]
+	Updated devel/monotone-server to 0.27 [jmmv 2006-06-18]
