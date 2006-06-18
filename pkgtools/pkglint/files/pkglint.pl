@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.628 2006/06/18 00:48:47 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.629 2006/06/18 00:51:34 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1422,16 +1422,16 @@ sub check_varassign($$$$$) {
 			if ($op ne "+=") {
 				$line->log_warning("All but the first SUBST_FILES line should use the \"+=\" operator.");
 			}
-			push(@{$self->subst_files}, $value);
 		}
+		push(@{$self->subst_files}, $value);
 
 	} elsif ($varbase eq "SUBST_SED") {
 		if (@{$self->subst_sed} > 0) {
 			if ($op ne "+=") {
 				$line->log_warning("All but the first SUBST_SED line should use the \"+=\" operator.");
 			}
-			push(@{$self->subst_sed}, $value);
 		}
+		push(@{$self->subst_sed}, $value);
 
 	} elsif ($varbase eq "SUBST_FILTER_CMD") {
 		if (defined($self->subst_filter_cmd)) {
