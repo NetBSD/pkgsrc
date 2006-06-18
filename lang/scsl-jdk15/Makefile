@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/05/15 19:44:07 tv Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/18 08:51:10 rillig Exp $
 
 DISTNAME=	jdk-${DIST_VER}-${DIST_ARCH}
 PKGNAME=	scsl-jdk15-${PKG_VER}
@@ -15,14 +15,17 @@ JAVA_WRAPPERS=	appletviewer apt extcheck idlj jar jarsigner \
 # Remove parts that are in common with the JRE
 #
 post-extract:
+	set -e;								\
+	cd ${WRKSRC};							\
 	common=`${AWK} '/^#.*/ { next } /^$$/ { next } { print }' ${FILESDIR}/common`; \
-	cd ${WRKSRC}; for i in $$common; do				\
-		if [ -d $$i ]; then					\
-			${RM} -rf $$i;					\
+	for i in $$common; do						\
+		if [ -d "$$i" ]; then					\
+			${RM} -rf "$$i";				\
 		else							\
-			${RM} -f $$i;					\
+			${RM} -f "$$i";					\
 		fi;							\
 	done
-	${LN} -sf . ${WRKSRC}/jre
+	${RM} -f ${WRKSRC}/jre
+	${LN} -s . ${WRKSRC}/jre
 
 .include "../../lang/scsl-jre15/Makefile.common"
