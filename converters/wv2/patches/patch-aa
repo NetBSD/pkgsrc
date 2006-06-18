@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2005/11/08 13:52:58 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2006/06/18 19:38:51 joerg Exp $
 
---- configure.orig	2004-05-09 14:23:32.000000000 -0600
+--- configure.orig	2006-06-12 17:12:24.000000000 +0000
 +++ configure
-@@ -3120,7 +3120,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+@@ -3261,7 +3261,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
    if test "$GXX" = "yes" || test "$CXX" = "KCC"; then
      if test "$kde_use_debug_code" != "no"; then
        if test "$CXX" = "KCC"; then
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2005/11/08 13:52:58 joerg Exp $
        else
          if test "$kde_use_debug_code" = "full"; then
            CXXFLAGS="-g3 $CXXFLAGS"
-@@ -3453,8 +3453,8 @@ fi
+@@ -3634,8 +3634,8 @@ fi
        if test "$GCC" = "yes"; then
          case $host in
            *-*-linux-gnu)
@@ -22,7 +22,7 @@ $NetBSD: patch-aa,v 1.2 2005/11/08 13:52:58 joerg Exp $
  
  echo "$as_me:$LINENO: checking whether $CXX supports -Wmissing-format-attribute" >&5
  echo $ECHO_N "checking whether $CXX supports -Wmissing-format-attribute... $ECHO_C" >&6
-@@ -3532,7 +3532,7 @@ fi
+@@ -3723,7 +3723,7 @@ fi
  
            ;;
          esac
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.2 2005/11/08 13:52:58 joerg Exp $
  
  echo "$as_me:$LINENO: checking whether $CXX supports -Wundef" >&5
  echo $ECHO_N "checking whether $CXX supports -Wundef... $ECHO_C" >&6
-@@ -13961,6 +13961,7 @@ _ACEOF
+@@ -25945,6 +25946,7 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.2 2005/11/08 13:52:58 joerg Exp $
  
  /* Override any gcc2 internal prototype to avoid an error.  */
  #ifdef __cplusplus
-@@ -13968,13 +13969,12 @@ extern "C"
+@@ -25952,13 +25954,12 @@ extern "C"
  #endif
  /* We use char because int might match the return type of a gcc2
     builtin and then its argument prototype would still apply.  */
