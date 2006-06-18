@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.119 2006/06/18 00:45:45 rillig Exp $
+# $NetBSD: makevars.map,v 1.120 2006/06/18 08:18:18 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -216,7 +216,7 @@ CXX			ShellCommand [m:]
 CXXFLAGS*		List of CFlag [m:a,c:a,o:a,h:a]
 DEINSTALL_FILE		Pathname [m:s]
 DEINSTALL_SRC		List of Pathname [m:s,c:ds]
-DEINSTALL_TEMPLATE	List of Pathname [m:as,c:ads]
+DEINSTALL_TEMPLATES	List of Pathname [m:as,c:ads]
 DELAYED_ERROR_MSG	ShellCommand [*:u]
 DELAYED_WARNING_MSG	ShellCommand [*:u]
 DEPENDS			InternalList of DependencyWithPath [$list]
@@ -327,7 +327,7 @@ INSTALL_SCRIPTS_ENV	List of ShellWord
 INSTALL_SCRIPT_DIR	ShellCommand [*:u]
 INSTALL_SRC		List of Pathname [m:s,c:ds]
 INSTALL_TARGET		List of Identifier [ruby*.mk:d, $simple]
-INSTALL_TEMPLATE	List of Pathname [m:as,c:ads]
+INSTALL_TEMPLATES	List of Pathname [m:as,c:ads]
 INSTALL_UNSTRIPPED	YesNo [m:s,c:s]
 INTERACTIVE_STAGE	List of { fetch extract configure build install } [m:s]
 IS_BUILTIN.*		YesNo_Indirectly [builtin.mk:s]
