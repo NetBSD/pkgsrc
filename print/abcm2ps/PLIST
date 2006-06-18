@@ -1,7 +1,26 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/02 23:19:12 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/06/18 03:00:33 minskim Exp $
 bin/abcm2ps
+share/doc/abcm2ps/Changes
+share/doc/abcm2ps/License
+share/doc/abcm2ps/README
+share/doc/abcm2ps/deco.abc
+share/doc/abcm2ps/features.txt
+share/doc/abcm2ps/format.txt
+share/doc/abcm2ps/journey.abc
+share/doc/abcm2ps/mtunes1.abc
+share/doc/abcm2ps/mtunes2.abc
+share/doc/abcm2ps/multilang.abc
+share/doc/abcm2ps/newfeatures.abc
+share/doc/abcm2ps/options.txt
+share/doc/abcm2ps/sample.abc
+share/doc/abcm2ps/sample2.abc
+share/doc/abcm2ps/sample3.abc
+share/doc/abcm2ps/sample3.eps
+share/doc/abcm2ps/sample4.abc
+share/doc/abcm2ps/voices.abc
 share/abcm2ps/fbook.fmt
 share/abcm2ps/fonts.fmt
 share/abcm2ps/landscape.fmt
 share/abcm2ps/tight.fmt
 @dirrm share/abcm2ps
+@dirrm share/doc/abcm2ps
