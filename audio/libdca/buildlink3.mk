@@ -1,7 +1,5 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:01 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/06/18 07:55:42 rillig Exp $
 #
-
-BUILDLINK_DEPMETHOD.libdca?=	build
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBDTS_BUILDLINK3_MK:=	${LIBDTS_BUILDLINK3_MK}+
@@ -16,6 +14,7 @@ BUILDLINK_PACKAGES+=	libdca
 .if !empty(LIBDTS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libdca+=	libdca>=0.0.2
 BUILDLINK_PKGSRCDIR.libdca?=	../../audio/libdca
+BUILDLINK_DEPMETHOD.libdca?=	build
 .endif	# LIBDTS_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
