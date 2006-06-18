@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2006/03/19 22:36:03 kristerw Exp $
+# $NetBSD: Makefile,v 1.37 2006/06/18 10:07:09 rillig Exp $
 
 DISTNAME=		hbench-OS-1.0
 PKGNAME=		hbench-1.0
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		benchmarks
 MASTER_SITES=	http://www.eecs.harvard.edu/vino/perf/hbench/
 
@@ -18,6 +18,7 @@ WRKSRC=			${WRKDIR}/hbench-OS
 OSVERSION_SPECIFIC=	YES
 BUILD_TARGET=		build
 USE_TOOLS+=		perl:run
+OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
 
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
@@ -25,26 +26,21 @@ GET_ARCH_CMD=		${PKGSRCDIR:Q}/mk/gnu-config/config.guess | ${SED} -e 's/-.*-.*$$
 GET_OS_CMD=		${PKGSRCDIR:Q}/mk/gnu-config/config.guess | ${SED} -e 's/^.*-.*-//'
 PLIST_SUBST+=		PLATFORM=${GET_OS_CMD:sh:Q}-${GET_ARCH_CMD:sh:Q}
 
-pre-configure:
-	${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/scripts
-	${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/scripts
+post-extract:
+	${CP} ${FILESDIR}/do-install ${WRKSRC}
 
-post-configure:
-	cd ${WRKSRC};							\
-	for f in scripts/create-all-analyses				\
-		scripts/create-all-latgraphs				\
-		scripts/create-all-summaries scripts/gen-analysis	\
-		scripts/gen-latgraph scripts/gen-summary 		\
-		scripts/interactive-setup scripts/maindriver		\
-		Results/Makefile; do					\
-		${MV} $$f $$f.in;					\
-		${SED} -e 's|@PREFIX@|${PREFIX}|g' $$f.in > $$f;	\
-	done
-	${CHMOD} 0755 ${WRKSRC}/scripts/*
+SUBST_CLASSES+=		hb
+SUBST_STAGE.hb=		pre-configure
+SUBST_MESSAGE.hb=	Replacing bin with libexec.
+SUBST_FILES.hb=		do-install
+SUBST_FILES.hb+=	scripts/*
+SUBST_FILES.hb+=	Results/Makefile
+SUBST_SED.hb=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.hb+=		-e 's,/bin/hbench,/libexec/hbench,g'
 
 do-install:
 	${SETENV} ${MAKE_ENV} WRKSRC=${WRKSRC} BINOWN=${BINOWN} \
-		BINGRP=${BINGRP} ${FILESDIR}/do-install
+		BINGRP=${BINGRP} ${WRKSRC}/do-install
 
 benchmark:
 	@if [ `id -u` != 0 ]; then ${ECHO} "This benchmark must be run as root!" ; exit 1 ; fi
