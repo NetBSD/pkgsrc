@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/05/15 19:51:53 tv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/06/18 08:51:11 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SCSL_JDK15_BUILDLINK3_MK:=	${SCSL_JDK15_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_PACKAGES+=	scsl-jdk15
 .if !empty(SCSL_JDK15_BUILDLINK3_MK:M+)
 
 BUILDLINK_API_DEPENDS.scsl-jdk15+=	scsl-jdk15-[0-9]*
-BUILDLINK_ABI_DEPENDS.scsl-jdk15?=	scsl-jdk15>=1.5.0
+BUILDLINK_ABI_DEPENDS.scsl-jdk15+=	scsl-jdk15>=1.5.0
 BUILDLINK_PKGSRCDIR.scsl-jdk15?=	../../lang/scsl-jdk15
 BUILDLINK_DEPMETHOD.scsl-jdk15?= build
 
