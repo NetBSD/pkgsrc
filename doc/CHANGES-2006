@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.552 2006/06/18 12:53:59 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.553 2006/06/18 13:18:42 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3120,3 +3120,4 @@ Changes to the packages collection and infrastructure in 2006:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2006Q2 branch [agc 2006-06-18]
 	Updated devel/monotone to 0.27 [jmmv 2006-06-18]
 	Updated devel/monotone-server to 0.27 [jmmv 2006-06-18]
+	Updated graphics/glitz to 0.4.4nb4 [minskim 2006-06-18]
