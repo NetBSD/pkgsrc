@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.627 2006/06/17 22:46:45 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.628 2006/06/18 00:48:47 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1302,6 +1302,162 @@ sub to_string($) {
 }
 
 #== End of PkgLint::VarUseContext =========================================
+
+package PkgLint::SubstContext;
+#==========================================================================
+# This class records the state of a block of variable assignments that make
+# up a SUBST class. As these variable assignments are not easy to get right
+# unless you do it every day, and the possibility of typos is high, pkglint
+# provides additional checks for them.
+#==========================================================================
+
+BEGIN {
+	import PkgLint::Util qw(
+		false true
+	);
+	import PkgLint::Logging qw(
+		log_warning
+	);
+}
+
+use constant SUBST_CLASS	=> 0;
+use constant SUBST_STAGE	=> 1;
+use constant SUBST_MESSAGE	=> 2;
+use constant SUBST_FILES	=> 3;
+use constant SUBST_SED		=> 4;
+use constant SUBST_FILTER_CMD	=> 5;
+
+sub new($) {
+	my ($class) = @_;
+	my ($self) = ([undef, undef, undef, [], [], undef]);
+	bless($self, $class);
+	return $self;
+}
+
+sub subst_class($)		{ return shift(@_)->[SUBST_CLASS]; }
+sub subst_stage($)		{ return shift(@_)->[SUBST_STAGE]; }
+sub subst_message($)		{ return shift(@_)->[SUBST_MESSAGE]; }
+sub subst_files($)		{ return shift(@_)->[SUBST_FILES]; }
+sub subst_sed($)		{ return shift(@_)->[SUBST_SED]; }
+sub subst_filter_cmd($)		{ return shift(@_)->[SUBST_FILTER_CMD]; }
+
+sub init($) {
+	my ($self) = @_;
+
+	$self->[SUBST_CLASS] = undef;
+	$self->[SUBST_STAGE] = undef;
+	$self->[SUBST_MESSAGE] = undef;
+	$self->[SUBST_FILES] = [];
+	$self->[SUBST_SED] = [];
+	$self->[SUBST_FILTER_CMD] = undef;
+}
+
+sub check_end($$) {
+	my ($self, $line) = @_;
+
+	return unless defined($self->subst_class);
+
+	if (!defined($self->subst_stage)) {
+		$line->log_warning("Incomplete SUBST block: SUBST_STAGE missing.");
+	}
+	if (!defined($self->subst_message)) {
+		$line->log_note("Incomplete SUBST block: SUBST_MESSAGE missing.");
+	}
+	if (@{$self->subst_files} == 0) {
+		$line->log_warning("Incomplete SUBST block: SUBST_FILES missing.");
+	}
+	if (@{$self->subst_sed} == 0 && !defined($self->subst_filter_cmd)) {
+		$line->log_warning("Incomplete SUBST block: SUBST_SED missing.");
+	}
+	$self->init();
+}
+
+sub check_varassign($$$$$) {
+	my ($self, $line, $varname, $op, $value) = @_;
+
+	if ($varname eq "SUBST_CLASSES") {
+		$self->check_end($line);
+
+		if ($value =~ qr"\s") {
+			$line->log_warning("Please add only one class at a time to SUBST_CLASSES.");
+		} else {
+			$self->[SUBST_CLASS] = $value;
+		}
+		return;
+	}
+
+	my $class = $self->subst_class;
+	if (!defined($class)) {
+		# XXX: Later, a check may be added that SUBST_* variables
+		# are not assigned in other paragraphs.
+		return;
+	}
+
+	if ($varname !~ qr"^(SUBST_(?:STAGE|MESSAGE|FILES|SED|FILTER_CMD))\.([\-\w_]+)$") {
+		$line->log_warning("Foreign variable in SUBST block.");
+		return;
+	}
+	my ($varbase, $varparam) = ($1, $2);
+
+	if ($varparam ne $class) {
+		$line->log_warning("Variable parameter \"${varparam}\" does not match SUBST class \"${class}\".");
+	}
+
+	if ($varbase eq "SUBST_STAGE") {
+		if (defined($self->subst_stage)) {
+			$line->log_warning("Duplicate definition of SUBST_STAGE.${class}.");
+		} else {
+			$self->[SUBST_STAGE] = $value;
+		}
+
+	} elsif ($varbase eq "SUBST_MESSAGE") {
+		if (defined($self->subst_message)) {
+			$line->log_warning("Duplicate definition of SUBST_MESSAGE.${class}.");
+		} else {
+			$self->[SUBST_MESSAGE] = $value;
+		}
+
+	} elsif ($varbase eq "SUBST_FILES") {
+		if (@{$self->subst_files} > 0) {
+			if ($op ne "+=") {
+				$line->log_warning("All but the first SUBST_FILES line should use the \"+=\" operator.");
+			}
+			push(@{$self->subst_files}, $value);
+		}
+
+	} elsif ($varbase eq "SUBST_SED") {
+		if (@{$self->subst_sed} > 0) {
+			if ($op ne "+=") {
+				$line->log_warning("All but the first SUBST_SED line should use the \"+=\" operator.");
+			}
+			push(@{$self->subst_sed}, $value);
+		}
+
+	} elsif ($varbase eq "SUBST_FILTER_CMD") {
+		if (defined($self->subst_filter_cmd)) {
+			$line->log_warning("Duplicate definition of SUBST_FILTER_CMD.${class}.");
+		} else {
+			$self->[SUBST_FILTER_CMD] = $value;
+		}
+
+	} else {
+		$line->log_warning("Foreign variable in SUBST block.");
+	}
+}
+
+sub to_string($) {
+	my ($self) = @_;
+
+	return sprintf("SubstContext(%s %s %s %s %s)",
+	    (defined($self->subst_class) ? $self->subst_class : "(undef)"),
+	    (defined($self->subst_stage) ? $self->subst_stage : "(undef)"),
+	    (defined($self->subst_message) ? $self->subst_message : "(undef)"),
+	    scalar(@{$self->subst_files}),
+	    scalar(@{$self->subst_sed}));
+}
+
+
+#== End of PkgLint::SubstContext ==========================================
 
 package main;
 #==========================================================================
@@ -4663,6 +4819,7 @@ sub checklines_package_Makefile_varorder($) {
 sub checklines_mk($) {
 	my ($lines) = @_;
 	my ($allowed_targets, $for_variables) = ({}, {});
+	my ($substcontext) = PkgLint::SubstContext->new();
 
 	# Define global variables for the Makefile context.
 	$mkctx_indentations = [0];
@@ -4681,7 +4838,7 @@ sub checklines_mk($) {
 		checkline_spellcheck($line);
 
 		if ($text =~ qr"^\s*$" || $text =~ qr"^#") {
-			# Ignore empty lines and comments
+			$substcontext->check_end($line);
 
 		} elsif ($text =~ regex_varassign) {
 			my ($varname, $op, $value, $comment) = ($1, $2, $3, $4);
@@ -4697,6 +4854,7 @@ sub checklines_mk($) {
 				}
 			}
 			checkline_mk_varassign($line, $varname, $op, $value, $comment);
+			$substcontext->check_varassign($line, $varname, $op, $value);
 
 		} elsif ($text =~ regex_shellcmd) {
 			my ($shellcmd) = ($1);
@@ -4844,6 +5002,9 @@ sub checklines_mk($) {
 		} else {
 			$line->log_error("[Internal] Unknown line format: $text");
 		}
+	}
+	if (@{$lines} > 0) {
+		$substcontext->check_end($lines->[-1]);
 	}
 
 	checklines_trailing_empty_lines($lines);
