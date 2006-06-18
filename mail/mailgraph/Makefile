@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/19 00:39:06 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/06/18 01:02:45 rillig Exp $
 #
 
 DISTNAME=	mailgraph-1.12
@@ -27,7 +27,6 @@ REPLACE_PERL+=	${MG_SCRIPTS}
 RCD_SCRIPTS=	mailgraph
 
 SUBST_CLASSES+=		defs
-
 SUBST_STAGE.defs=	pre-build
 SUBST_FILES.defs=	${MG_SCRIPTS}
 # Database
