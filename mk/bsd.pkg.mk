@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1854 2006/06/17 21:27:30 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1855 2006/06/18 09:34:07 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -464,11 +464,11 @@ CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
 # that subdirectory.
 #
 CONFIGURE_HAS_INFODIR?=	yes
-.if ${GNU_CONFIGURE_PREFIX} == ${PREFIX}
+.  if ${GNU_CONFIGURE_PREFIX} == ${PREFIX}
 GNU_CONFIGURE_INFODIR?=	${GNU_CONFIGURE_PREFIX}/${PKGINFODIR}
-.else
+.  else
 GNU_CONFIGURE_INFODIR?=	${GNU_CONFIGURE_PREFIX}/info
-.endif
+.  endif
 .  if defined(INFO_FILES) && !empty(CONFIGURE_HAS_INFODIR:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--infodir=${GNU_CONFIGURE_INFODIR:Q}
 .  endif
