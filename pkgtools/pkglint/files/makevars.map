@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.118 2006/06/17 17:09:48 rillig Exp $
+# $NetBSD: makevars.map,v 1.119 2006/06/18 00:45:45 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -418,6 +418,7 @@ ONLY_FOR_PLATFORM	List of PlatformTriple [$list]
 OPSYS			Identifier [*:u]
 OPSYSVARS		List of Varname [m:a,c:a]
 OSVERSION_SPECIFIC	Yes [m:s,c:s]
+OVERRIDE_GNU_CONFIG_SCRIPTS	Yes [$simple]
 OWN_DIRS		List of Pathname [$list]
 OWN_DIRS_PERMS		List of ShellWord [$list]
 PAMBASE			Pathname [$system]
@@ -516,6 +517,7 @@ PTHREAD_AUTO_VARS	YesNo [m:s]
 PTHREAD_OPTS		List of { native optional require } [m:as,c:a,b:a]
 PTHREAD_TYPE		Identifier [$system]
 # ^^ or "native" or "none".
+PYPKGPREFIX		{ py15 py20 py21 py22 py23 py24 } [*:pu, pyversion.mk:s, *:]
 PYTHON_PATCH_SCRIPTS	List of Pathmask [$list]
 PYTHON_VERSIONS_INCOMPATIBLE List of Version [pyversion.mk:ad, $system]
 RCD_SCRIPTS		List of Filename [$list]
