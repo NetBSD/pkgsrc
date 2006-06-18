@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2006/06/17 01:48:23 taca Exp $
+# $NetBSD: Makefile,v 1.4 2006/06/18 08:34:05 taca Exp $
 #
 
 DISTNAME=	geeklog-${VER}
 PKGNAME=	geeklog-${VER:S/sr/./}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.geeklog.net/filemgmt/upload_dir/
 
@@ -22,7 +23,8 @@ GEEKLOG_TMPL_SUB=	backend images/articles images/library \
 
 GEEKLOG_CONF_FILES=	config.php plugins/links/config.php \
 			plugins/polls/config.php plugins/spamx/config.php \
-			plugins/staticpages/config.php
+			plugins/staticpages/config.php \
+			system/lib-custom.php
 
 CONF_FILES+=		${GEEKLOG_EXAMPLESDIR}/geeklog.conf \
 			${PKG_SYSCONFDIR}/geeklog.conf
@@ -44,20 +46,19 @@ FILES_SUBST+=		APACHE_GROUP=${APACHE_GROUP:Q} \
 			GEEKLOG_TMPL_SUB=${GEEKLOG_TMPL_SUB:Q} \
 			GEEKLOG_TMPL_DIR=${GEEKLOG_TMPL_DIR:Q}
 
-MESSAGE_SUBST+=		GEEKLOG_DIR=${GEEKLOG_DIR:Q} \
-			GEEKLOG_EXAMPLESDIR=${GEEKLOG_EXAMPLESDIR:Q}
-
 PLIST_SUBST+=		GEEKLOG_BASE=${GEEKLOG_BASE:Q} \
 			GEEKLOG_PUB=${GEEKLOG_PUB:Q} \
 			GEEKLOG_TMPL=${GEEKLOG_TMPL:Q}
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths+=	${WRKDIR}/createdb.php
+SUBST_FILES.paths+=	${WRKDIR}/README ${WRKDIR}/createdb.php
 SUBST_FILES.paths+=	${WRKSRC}/config.php ${WRKSRC}/emailgeeklogstories
 SUBST_FILES.paths+=	${WRKSRC}/public_html/lib-common.php
 SUBST_SED.paths+=       -e 's,@GEEKLOG_DIR@,${GEEKLOG_DIR:Q},g'
+SUBST_SED.paths+=       -e 's,@GEEKLOG_EXAMPLESDIR@,${GEEKLOG_EXAMPLESDIR:Q},g'
 SUBST_SED.paths+=       -e 's,@GEEKLOG_PUBDIR@,${GEEKLOG_PUBDIR:Q},g'
 SUBST_SED.paths+=       -e 's,@GEEKLOG_SITESUBDIR@,${GEEKLOG_SITESUBDIR:Q},g'
+SUBST_SED.paths+=       -e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR:Q},g'
 SUBST_SED.paths+=       -e 's,@PREFIX@,${PREFIX:Q},g'
 SUBST_STAGE.paths=      post-configure
 
@@ -79,7 +80,8 @@ SUBST_SED.conf+=	-e '/^Alias/s,^,\#,'
 .endif
 
 post-extract:
-	${CP} ${FILESDIR}/createdb.php ${FILESDIR}/geeklog.conf ${WRKDIR}
+	${CP} ${FILESDIR}/README ${FILESDIR}/createdb.php \
+		${FILESDIR}/geeklog.conf ${WRKDIR}
 
 pre-install:
 	${FIND} ${WRKSRC:Q} -name "*.orig*" -exec ${RM} -f {} \;
@@ -87,13 +89,15 @@ pre-install:
 		${FIND} ${GEEKLOG_TMPL_SUB} -type f -exec ${CHMOD} -x {} \;
 
 do-install:
+	${INSTALL_DATA_DIR} ${GEEKLOG_DOCDIR}
+	${INSTALL_DATA} ${WRKDIR}/README ${GEEKLOG_DOCDIR}
 .for f in ${GEEKLOG_CONF_FILES}
 	${INSTALL_DATA_DIR} ${GEEKLOG_EXAMPLESDIR}/${f:H}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${GEEKLOG_EXAMPLESDIR}/${f}
-	${INSTALL_DATA} ${WRKDIR}/createdb.php ${GEEKLOG_EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKDIR}/geeklog.conf ${GEEKLOG_EXAMPLESDIR}
 	${RM} ${WRKSRC}/${f}
 .endfor
+	${INSTALL_DATA} ${WRKDIR}/createdb.php ${GEEKLOG_EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKDIR}/geeklog.conf ${GEEKLOG_EXAMPLESDIR}
 	cd ${WRKSRC}; ${CP} -R ${GEEKLOG_SYS} ${GEEKLOG_DIR}
 .for d in ${GEEKLOG_TMPL_SUB}
 	cd ${WRKSRC}/public_html; \
