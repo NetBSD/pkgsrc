@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/04/17 13:46:46 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/18 10:35:42 rillig Exp $
 
 DISTNAME=	ghostscript-${GS_VERS}
 PKGNAME=	ghostscript-gnu-${GS_VERS}
-PKGREVISION=	3
+PKGREVISION=	4
 GS_VERS=	8.15
 CATEGORIES=	print
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=ghostscript/} \
@@ -64,6 +64,7 @@ MAKE_FLAGS+=		XCFLAGS=${CFLAGS:M*:Q}
 MAKE_FLAGS+=		XLDFLAGS=${LDFLAGS:M*:Q}
 
 REPLACE_PERL=		lib/fixmswrd.pl
+USE_TOOLS+=		perl:run
 
 GS_RESOURCEDIR=		${PREFIX}/share/ghostscript/Resource
 GSDATADIR=		${PREFIX}/share/ghostscript/${GS_VERS}
