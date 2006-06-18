@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2005/09/28 20:52:18 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2006/06/18 12:02:00 rillig Exp $
 
 DISTNAME=	jdb-1.13
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://www.isi.edu/~johnh/SOFTWARE/JDB/
 
@@ -13,5 +14,7 @@ USE_TOOLS+=		perl:run
 
 CONFIGURE_ARGS+=	--with-perl=${LOCALBASE}/bin
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/jdb
+
+REPLACE_PERL+=		crl_to_db *.pm dblib.pl
 
 .include "../../mk/bsd.pkg.mk"
