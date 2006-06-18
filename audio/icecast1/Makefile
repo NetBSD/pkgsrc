@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2006/04/30 21:26:54 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2006/06/18 11:07:36 rillig Exp $
 #
 
 DISTNAME=	icecast-1.3.12
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	audio
 MASTER_SITES=	http://www.icecast.org/releases/
 
@@ -10,11 +10,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.icecast.org/
 COMMENT=	Internet broadcasting system using Mpeg Layer III streaming
 
-GNU_CONFIGURE=		yes
-
 RCD_SCRIPTS=		icecast
 PKG_SYSCONFSUBDIR=	icecast
 
+GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		VARBASE=${VARBASE}
 CONFIGURE_ARGS+=	--with-readline \
 			--with-libwrap \
 			--with-python \
