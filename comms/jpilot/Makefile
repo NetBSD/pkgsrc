@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/06/13 21:52:11 bad Exp $
+# $NetBSD: Makefile,v 1.56 2006/06/18 12:26:31 smb Exp $
 #
 
 DISTNAME=		jpilot-0.99.8
@@ -32,6 +32,7 @@ PLUGINSDIR=		${PREFIX}/lib/jpilot/plugins
 .include "../../comms/pilot-link-libs/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 post-extract:
