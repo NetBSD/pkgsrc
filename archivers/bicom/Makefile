@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/05/10 17:12:00 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/06/18 07:04:15 rillig Exp $
 #
 
 DISTNAME=		bicom101
@@ -27,11 +27,12 @@ USE_LANGUAGES=		c++
 INSTALLATION_DIRS=	bin
 
 do-build:
+	set -e;								\
 	for i in bialib bicom; do					\
-		cd ${WRKSRC}/$$i &&					\
+		cd ${WRKSRC}/"$$i" &&					\
 		for f in *.cpp; do					\
 			${CXX} ${CXXFLAGS} -I./ -I../bialib		\
-				-c $$f;				\
+				-c "$$f";				\
 		done;							\
 	done
 	cd ${WRKSRC}/bicom &&						\

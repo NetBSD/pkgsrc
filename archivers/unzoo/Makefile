@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/10/16 15:02:36 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/18 07:04:16 rillig Exp $
 #
 
 DISTNAME=	unzoo.c
@@ -18,7 +18,7 @@ NO_CONFIGURE=	YES
 INSTALLATION_DIRS=	bin
 
 do-extract:
-	${CP} ${DISTDIR}/${DISTFILES} ${WRKSRC}
+	cd ${DISTDIR} && ${CP} ${DISTFILES} ${WRKSRC}
 
 do-build:
 	cd ${WRKSRC} &&	${CC} ${CFLAGS} -DSYS_IS_UNIX -DSYS_HAS_MKDIR -o unzoo unzoo.c
