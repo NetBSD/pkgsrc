@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/05/21 16:34:19 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2006/06/18 10:45:06 rillig Exp $
 
 DISTNAME=	swig-1.3.29
 CATEGORIES=	devel
@@ -20,7 +20,7 @@ USE_LIBTOOL=		YES
 
 INSTALLATION_DIRS+=	share/doc/swig share/examples/swig
 
-CHECK_INTERPRETER_SKIP+=	share/examples/swig/guile/matrix/matrix.scm
+CHECK_INTERPRETER_SKIP+=	share/examples/swig/*
 
 post-install:
 	cd ${WRKSRC:Q}/Doc/Manual && \
