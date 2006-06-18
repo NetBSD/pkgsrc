@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/06/15 22:13:59 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/06/18 08:45:56 rillig Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
@@ -19,8 +19,8 @@ REQD_DIRS+=	${JAVA_HOME}/lib/images/cursors
 REQD_DIRS+=	${JAVA_HOME}/lib/security
 CONF_FILES=	# empty
 .sinclude "sfiles.mk"
-.for FILE in ${SFILES}
-CONF_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
+.for f in ${SFILES}
+CONF_FILES+=	${JAVA_HOME}/lib/${f}.default ${JAVA_HOME}/lib/${f}
 .endfor
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.scsl-jre15
@@ -49,19 +49,21 @@ post-extract:
 	${TOUCH} ${WRKSRC}/.systemPrefs/.systemRootModFile
 
 do-configure:
+	set -e;								\
 	cd ${WRKSRC}/lib; for file in ${SFILES}; do			\
-		${MV} -f $$file $$file.default;				\
+		${MV} -f "$$file" "$$file".default;			\
 	done
-	@${ECHO} 'CONF_FILES="${CONF_FILES}"' >${WRKDIR}/HEADER.tmpl
+	@${ECHO} "CONF_FILES="${CONF_FILES:Q:Q} >${WRKDIR}/HEADER.tmpl
 
 pre-install:
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
-	cd ${WRKDIR}/jce ; ${PAX} -rw -pe -v . ${WRKSRC}/lib/security
+	cd ${WRKDIR}/jce && ${PAX} -rw -pp -v . ${WRKSRC}/lib/security
 .endif
 
 #
 # re-create sfiles.mk from properties and config files
 #
+.PHONY: makesfiles
 makesfiles:
 	${ECHO} >  sfiles.mk '#	$$Net''BSD$$'
 	${ECHO} >> sfiles.mk '#'

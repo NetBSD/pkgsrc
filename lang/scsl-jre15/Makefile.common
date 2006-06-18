@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2006/05/15 19:44:07 tv Exp $
+# $NetBSD: Makefile.common,v 1.2 2006/06/18 08:45:56 rillig Exp $
 
 DIST_VER=	1_5_0-p3-bin-duh1
 PKG_VER=	${DIST_VER:S/_/./g:S/-p/p/:S/-bin-duh/./}
@@ -38,24 +38,18 @@ EXTRACT_ENV+=	UNPACK200_FLAGS=-Htrue
 
 NO_MTREE=	yes	# since we change PREFIX
 
-_FETCH_MESSAGE= 							\
-	${ECHO} "======================================================================"; \
-	${ECHO} ; 							\
-	${ECHO} " The file ${DISTNAME}${EXTRACT_SUFX} containing";	\
-	${ECHO} " ${DOWNLOAD_NAME} must be fetched into:";		\
-	${ECHO} "	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"; 	\
-	${ECHO} " from:"; 						\
-	${ECHO} "	${DOWNLOAD}";					\
-	${ECHO} ; \
-	${ECHO} " Click ${SHORT_NAME} in the ${OPSYS}/${MACHINE_ARCH} row for version ${DIST_VER:S/_/./g:S/-bin-/-/},";	\
-	${ECHO} " then read and accept the license to start the download."; \
-	${ECHO} ; 							\
-	${ECHO} "======================================================================"
+FETCH_MESSAGE=	"The file ${DISTNAME}${EXTRACT_SUFX} containing"
+FETCH_MESSAGE+=	"${DOWNLOAD_NAME} must be fetched into:"
+FETCH_MESSAGE+=	"	${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}"
+FETCH_MESSAGE+=	"from:"
+FETCH_MESSAGE+=	"	${DOWNLOAD}"
+FETCH_MESSAGE+=	""
+FETCH_MESSAGE+=	"Click ${SHORT_NAME} in the ${OPSYS}/${MACHINE_ARCH} row for version ${DIST_VER:S/_/./g:S/-bin-/-/},"
+FETCH_MESSAGE+=	"then read and accept the license to start the download."
 
 post-fetch:
-	@if [ ! -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
-		${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX};	\
-	fi
+	${TEST} -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}		\
+	|| ${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 
 do-build:	# nothing
 
