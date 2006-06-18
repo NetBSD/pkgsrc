@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.38 2006/06/18 08:19:39 rillig Exp $
+# $NetBSD: deprecated.map,v 1.39 2006/06/18 08:42:16 rillig Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -91,4 +91,5 @@ USE_RMAN		It has been removed.
 DEINSTALL_SRC		Use the pkginstall framework instead.
 INSTALL_SRC		Use the pkginstall framework instead.
 DEINSTALL_TEMPLATE	Use DEINSTALL_TEMPLATES instead.
-INSTALL_TEMPLATE	Use INSTALL_TEMPLATE instead.
+INSTALL_TEMPLATE	Use INSTALL_TEMPLATES instead.
+HEADER_TEMPLATE		Use HEADER_TEMPLATES instead.
