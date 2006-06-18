@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.141 2006/05/14 16:39:05 wiz Exp $
+# $NetBSD: Makefile,v 1.142 2006/06/18 16:18:11 minskim Exp $
 
 DISTNAME=	netpbm-10.33
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz
@@ -47,6 +47,12 @@ REPLACE_FILES.bash+=	other/ppmtomap
 # Fiasco fails to compile on Darwin-8.x.
 .if !empty(MACHINE_PLATFORM:MDarwin-8.*-*)
 MAKE_ENV+=	BUILD_FIASCO=N
+.endif
+
+.if ${OPSYS} == "Darwin"
+MAKE_ENV+=	NETPBMLIBTYPE="dylib" NETPBMLIBSUFFIX="dylib"
+.else
+MAKE_ENV+=	NETPBMLIBTYPE="unixshared" NETPBMLIBSUFFIX="so"
 .endif
 
 MAKE_ENV+=	JASPERLIB="${LDFLAGS} -ljasper"
