@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2006/03/14 01:14:28 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/06/19 23:25:48 jlam Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
-PKGREVISION=		9
+PKGREVISION=		10
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE91}
 DISTFILES=		${RPMFILES}
@@ -17,8 +17,6 @@ CHECK_FILES_SKIP+=      ${PREFIX}/${EMULSUBDIR}/dev/.*
 CHECK_FILES_SKIP+=      ${PREFIX}/${EMULSUBDIR}/etc/ld.so.cache
 
 EXTRACT_ONLY=		# empty
-DEINSTALL_SRC=		# empty
-INSTALL_SRC=		${PKGDIR}/INSTALL
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 PLIST_SUBST+=		EMULSUBDIR=${EMULSUBDIR:Q} LINUX_LIB=${LINUX_LIB:Q}
 
@@ -77,7 +75,6 @@ do-install:
 		< ${LINUX_LDD} > ${LINUX_LDD}.new
 	${MV} ${LINUX_LDD}.new ${LINUX_LDD}
 	${CHMOD} +x ${LINUX_LDD}
-	@${SETENV} PKG_PREFIX="${PREFIX}" ${SH} ${INSTALL_FILE} - POST-INSTALL
 
 .include "../../emulators/suse91_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
