@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/04/22 09:22:08 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2006/06/19 12:23:02 joerg Exp $
 
 DISTNAME=	X11R${XORG_VER}-src1
 PKGNAME=	xorg-fontsType1-${XORG_VER}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_XORG}
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.x.org/
 COMMENT=	X.org Type1 fonts
+
+USE_TOOLS+=	imake
 
 DEPENDS+=	xorg-fontsEncodings>=${XORG_VER}:../../fonts/xorg-fontsEncodings
 
