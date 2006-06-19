@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/17 13:46:29 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/06/19 19:45:18 joerg Exp $
 #
 
 DISTNAME=	pioneers-0.9.55
@@ -12,7 +12,7 @@ COMMENT=	GNOME version of the Settlers of Catan board game
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config msgfmt
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
