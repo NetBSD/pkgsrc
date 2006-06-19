@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:56 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/06/19 02:28:52 rillig Exp $
 
 DISTNAME=		siod
 PKGNAME=		siod-3.0
+PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		ftp://ftp.std.com/pub/gjc/
 EXTRACT_SUFX=		.tgz
@@ -15,6 +16,11 @@ MAKEFILE=		makefile
 BUILD_TARGET=		${OPSYS}
 MAKE_ENV+=		CC=${CC:Q}
 CPPFLAGS+=		-Dunix=1
+
+REPLACE_INTERPRETER+=	siod
+REPLACE.siod.old=	/usr/local/bin/siod
+REPLACE.siod.new=	${PREFIX}/bin/siod
+REPLACE_FILES.siod=	*.scm
 
 .include "../../mk/bsd.prefs.mk"
 
