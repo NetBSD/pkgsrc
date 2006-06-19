@@ -1,0 +1,18 @@
+$NetBSD: patch-ah,v 1.1 2006/06/19 08:28:05 ghen Exp $
+
+1.0beta9 didn't start when ssl_listen wasn't explicitly set in the config file.
+This fix is from Dovecot's CVS so it will be in the next release.
+
+--- src/master/main.c.orig	2006-06-11 19:43:41.000000000 +0200
++++ src/master/main.c
+@@ -355,7 +355,9 @@ static void listen_protocols(struct sett
+ 	resolve_ip(set->listen, &set->listen_ip, &set->listen_port);
+ 	resolve_ip(set->ssl_listen, &set->ssl_listen_ip, &set->ssl_listen_port);
+ 
+-	if (set->ssl_listen_ip.family == 0 && set->ssl_listen == NULL)
++	/* if ssl_listen wasn't explicitly set in the config file,
++	   use the non-ssl IP settings for the ssl listener, too. */
++	if (set->ssl_listen_ip.family == 0 && *set->ssl_listen == '\0')
+ 		set->ssl_listen_ip = set->listen_ip;
+ 
+ 	/* register wanted protocols */
