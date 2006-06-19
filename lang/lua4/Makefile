@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:29:55 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/19 00:09:01 rillig Exp $
 
 DISTNAME=	lua-4.0.1
 PKGNAME=	lua4-4.01
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/lua/ \
 		ftp://ftp.ntua.gr/pub/lang/lua/ \
@@ -22,6 +23,8 @@ COMMENT=	Powerful light-weight language for extending applications
 
 
 BUILD_DIRS=	${WRKSRC}/objdir
+MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}
+MAKE_ENV+=	MANOWN=${MANOWN} MANGRP=${MANGRP}
 
 post-extract:
 	${MKDIR} ${BUILD_DIRS}
