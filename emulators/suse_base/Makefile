@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2006/06/17 19:30:55 rillig Exp $
+# $NetBSD: Makefile,v 1.62 2006/06/19 23:27:34 jlam Exp $
 
 DISTNAME=		suse_base-${SUSE_VERSION}
 PKGREVISION=		10
@@ -85,7 +85,6 @@ do-install:
 		< ${LINUX_LDD} > ${LINUX_LDD}.new
 	${MV} ${LINUX_LDD}.new ${LINUX_LDD}
 	${CHMOD} +x ${LINUX_LDD}
-	@${SETENV} PKG_PREFIX="${PREFIX}" ${SH} ${INSTALL_FILE} - POST-INSTALL
 
 .include "../../emulators/suse_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
