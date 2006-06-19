@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2006/06/19 16:48:49 minskim Exp $
+
+--- configure.orig	2006-06-19 09:29:36.000000000 -0700
++++ configure
+@@ -8401,7 +8401,7 @@ PILOT_LIBS="-lpisock"
+ 
+ for pilot_libs in $pilot_prefix/lib /usr/lib /usr/local/lib/ \
+   /usr/extra/pilot/lib ; do
+-   if test -r "$pilot_libs/libpisock.so" ; then
++   if test -r "$pilot_libs/libpisock.so" -o -r "$pilot_libs/libpisock.dylib" ; then
+       pilotlibs=yes
+       PILOT_LIBS="-L$pilot_libs $PILOT_LIBS"
+       break
