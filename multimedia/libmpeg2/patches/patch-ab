@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2006/04/21 07:15:38 wulf Exp $
+$NetBSD: patch-ab,v 1.2 2006/06/19 13:21:14 adam Exp $
 
---- libmpeg2/cpu_accel.c.orig	2006-04-20 16:42:06.000000000 +0930
-+++ libmpeg2/cpu_accel.c	2006-04-20 17:04:24.000000000 +0930
-@@ -37,7 +37,7 @@
+--- libmpeg2/cpu_accel.c.orig	2003-10-06 04:31:52.000000000 +0200
++++ libmpeg2/cpu_accel.c
+@@ -37,7 +37,7 @@ static inline uint32_t arch_accel (void)
      int AMD;
      uint32_t caps;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.1 2006/04/21 07:15:38 wulf Exp $
  #define cpuid(op,eax,ebx,ecx,edx)	\
      __asm__ ("cpuid"			\
  	     : "=a" (eax),		\
-@@ -46,7 +46,7 @@
+@@ -46,7 +46,7 @@ static inline uint32_t arch_accel (void)
  	       "=d" (edx)		\
  	     : "a" (op)			\
  	     : "cc")
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.1 2006/04/21 07:15:38 wulf Exp $
  #define cpuid(op,eax,ebx,ecx,edx)	\
      __asm__ ("push %%ebx\n\t"		\
  	     "cpuid\n\t"		\
-@@ -60,6 +60,7 @@
+@@ -60,6 +60,7 @@ static inline uint32_t arch_accel (void)
  	     : "cc")
  #endif
  
@@ -28,7 +28,7 @@ $NetBSD: patch-ab,v 1.1 2006/04/21 07:15:38 wulf Exp $
      __asm__ ("pushf\n\t"
  	     "pushf\n\t"
  	     "pop %0\n\t"
-@@ -77,6 +78,7 @@
+@@ -77,6 +78,7 @@ static inline uint32_t arch_accel (void)
  
      if (eax == ebx)		/* no cpuid */
  	return 0;
@@ -36,3 +36,12 @@ $NetBSD: patch-ab,v 1.1 2006/04/21 07:15:38 wulf Exp $
  
      cpuid (0x00000000, eax, ebx, ecx, edx);
      if (!eax)			/* vendor string only */
+@@ -127,7 +129,7 @@ static RETSIGTYPE sigill_handler (int si
+ }
+ 
+ #ifdef ARCH_PPC
+-static inline uint32_t arch_accel (void)
++static uint32_t arch_accel (void)
+ {
+     static RETSIGTYPE (* oldsig) (int);
+ 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/06/12 16:28:12 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/06/19 13:21:14 adam Exp $
 
 DISTNAME=	mpeg2dec-0.4.0b
 PKGNAME=	libmpeg2-0.4.0b
@@ -19,8 +19,8 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LIBTOOL=	yes
 
-PKGCONFIG_OVERRIDE+=    libmpeg2/convert/libmpeg2convert.pc.in
-PKGCONFIG_OVERRIDE+=    libmpeg2/libmpeg2.pc.in
+PKGCONFIG_OVERRIDE+=	libmpeg2/convert/libmpeg2convert.pc.in
+PKGCONFIG_OVERRIDE+=	libmpeg2/libmpeg2.pc.in
 
 CONFIGURE_ARGS+=	--enable-shared
 
@@ -30,6 +30,10 @@ CONFIGURE_ARGS+=	--enable-shared
 .  if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux"
 CONFIGURE_ENV+=		LIBMPEG2_CFLAGS=-prefer-non-pic
 .  endif
+.endif
+
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ENV+=		ac_cv_header_altivec_h=no
 .endif
 
 .include "../../devel/SDL/buildlink3.mk"
