@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2006/05/13 03:44:23 minskim Exp $
+# $NetBSD: Makefile.common,v 1.39 2006/06/19 22:38:38 joerg Exp $
 #
 
 DISTNAME=		lyx-1.4.1
@@ -11,6 +11,7 @@ MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/ \
 			ftp://ftp.lip6.fr/pub/lyx/stable/ \
 			ftp://ftp.ntua.gr/pub/X11/LyX/stable/
 EXTRACT_SUFX=		.tar.bz2
+EXTRACT_USING=		gtar
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.lyx.org/
