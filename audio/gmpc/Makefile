@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/04/17 13:46:15 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2006/06/19 21:45:54 joerg Exp $
 #
 
 DISTNAME=		gmpc-0.13.0
@@ -12,7 +12,7 @@ COMMENT=		GNOME client for the Music Player Daemon
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pkg-config msgfmt
 PKGCONFIG_OVERRIDE=	data/gmpc.pc.in
 
 USE_DIRS+=		xdg-1.1
