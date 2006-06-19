@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2006/05/31 12:03:53 rillig Exp $
+$NetBSD: patch-aa,v 1.6 2006/06/19 19:32:41 joerg Exp $
 
---- hot-babe.c.orig	2004-12-05 23:59:38.000000000 +0100
-+++ hot-babe.c	2006-05-31 13:55:39.481545673 +0200
+--- hot-babe.c.orig	2004-12-05 22:59:38.000000000 +0000
++++ hot-babe.c
 @@ -29,6 +29,12 @@
  #endif
  #endif                                                                         
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.5 2006/05/31 12:03:53 rillig Exp $
  HotBabeData bm;
  
 -#if 0
-+#if defined(__NetBSD__) || defined(__sun)
++#if defined(__NetBSD__) || defined(__sun) || defined(__DragonFly__)
  /* FIXME New BSD and Solaris code.. to check.
   * doesn't work with Linux (getloadavg return 1.000) */
  static int system_cpu(void)
