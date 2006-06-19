@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.555 2006/06/19 07:54:22 seb Exp $
+$NetBSD: CHANGES-2006,v 1.556 2006/06/19 08:28:57 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3124,3 +3124,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/netpbm to 10.33nb4 [minskim 2006-06-18]
 	Updated databases/mysql4-client to 4.1.20 [seb 2006-06-19]
 	Updated databases/mysql4-server to 4.1.20 [seb 2006-06-19]
+	Updated mail/dovecot to 1.0beta9nb2 [geert 2006-06-19]
