@@ -1,8 +1,24 @@
-$NetBSD: patch-ag,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
+$NetBSD: patch-ag,v 1.2 2006/06/20 19:08:13 joerg Exp $
 
---- configure.in.orig	2005-12-16 02:26:31.000000000 +1300
+--- configure.in.orig	2006-03-07 15:04:21.000000000 +0000
 +++ configure.in
-@@ -186,6 +186,10 @@ dnl - check the byte order -
+@@ -170,11 +170,13 @@ AC_TRY_COMPILE([
+ 	[linux_scsi=yes])
+ AC_MSG_RESULT($linux_scsi)
+ 
+-if test "FreeBSD" = `uname -s` ; then
++case "$host_os" in
++freebsd*|dragonfly*)
+ 	# I'll be damned if lousy coding prevents us from running
+ 	# this application.
+ 	linux_scsi=yes
+-fi
++	;;
++esac
+ 
+ if test "x$linux_scsi" = "xno" ; then
+ 	DO_NOT_COMPILE="$DO_NOT_COMPILE k3b"
+@@ -186,6 +188,10 @@ dnl - check the byte order -
  dnl this will define WORDS_BIGENDIAN or do nothing
  AC_C_BIGENDIAN()
  
@@ -13,3 +29,21 @@ $NetBSD: patch-ag,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
  dnl === Ogg Vorbis Test - Begin ===
  AC_ARG_WITH(
  	oggvorbis, 
+@@ -438,10 +444,14 @@ AM_CONDITIONAL(with_k3bsetup1, [test x$c
+ # Extra SCSI support libs can go in CAM_LIB, and are linked into
+ # libk3bdevice. For Linux, nothing is needed. FreeBSD requires -lcam
+ # (which is in base, so no test is needed).
+-CAM_LIB=""
+-if test "FreeBSD" = `uname -s` ; then
++case "$host_os" in
++freebsd* | dragonfly*)
+ 	CAM_LIB="-lcam"
+-fi
++	;;
++*)
++	CAM_LIB=""
++	;;
++esac
+ AC_SUBST(CAM_LIB)
+ 
+ 
