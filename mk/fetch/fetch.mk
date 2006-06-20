@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.3 2006/06/20 14:50:27 jlam Exp $
+# $NetBSD: fetch.mk,v 1.4 2006/06/20 14:54:03 jlam Exp $
 
 ######################################################################
 ### fetch (PUBLIC)
@@ -261,7 +261,7 @@ batch-check-distfiles:
 
 .PHONY: do-fetch
 .if !target(do-fetch)
-do-fetch:
+do-fetch: ${FAILOVER_FETCH:Duptodate-digest}
 .  if !defined(ALLOW_VULNERABLE_PACKAGES)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then		\
