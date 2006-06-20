@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2006/06/20 21:14:12 joerg Exp $
+
+--- configure.orig	2006-06-20 20:52:37.000000000 +0000
++++ configure
+@@ -1423,6 +1423,7 @@ case $host_os in
+   darwin*) template=darwin ;;
+     dgux*) template=dgux ;;
+  freebsd*) template=freebsd ;;
++ dragonfly*) template=dragonfly ;;
+     hpux*) template=hpux ;;
+     irix*) template=irix ;;
+    linux*|gnu*|k*bsd*-gnu)
