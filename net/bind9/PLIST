@@ -1,33 +1,10 @@
-@comment $NetBSD: PLIST,v 1.17 2005/06/01 22:02:55 tron Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/06/20 13:37:22 abs Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
 bin/nslookup
 bin/nsupdate
 ${IPV6H}include/isc/ipv6.h
-include/bind/arpa/inet.h
-include/bind/arpa/nameser.h
-include/bind/arpa/nameser_compat.h
-include/bind/fd_setsize.h
-include/bind/hesiod.h
-include/bind/irp.h
-include/bind/irs.h
-include/bind/isc/assertions.h
-include/bind/isc/ctl.h
-include/bind/isc/dst.h
-include/bind/isc/eventlib.h
-include/bind/isc/heap.h
-include/bind/isc/irpmarshall.h
-include/bind/isc/list.h
-include/bind/isc/logging.h
-include/bind/isc/memcluster.h
-include/bind/isc/misc.h
-include/bind/isc/tree.h
-include/bind/netdb.h
-include/bind/netgroup.h
-include/bind/res_update.h
-include/bind/resolv.h
-include/bind/sys/bitypes.h
 include/bind9/check.h
 include/bind9/getaddresses.h
 include/bind9/version.h
@@ -324,7 +301,3 @@ share/examples/rc.d/named9
 @dirrm include/dst
 @dirrm include/dns
 @dirrm include/bind9
-@dirrm include/bind/arpa
-@dirrm include/bind/isc
-@dirrm include/bind/sys
-@dirrm include/bind
