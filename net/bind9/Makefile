@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2006/04/25 16:19:40 tron Exp $
+# $NetBSD: Makefile,v 1.78 2006/06/20 13:37:22 abs Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 CATEGORIES=	net
@@ -36,6 +36,7 @@ PTHREAD_OPTS+=	native
 
 FILES_SUBST+=	BIND_GROUP=${BIND_GROUP:Q} BIND_USER=${BIND_USER:Q} PAX=${PAX:Q}
 MESSAGE_SUBST+=	BIND_DIR=${BIND_DIR} BIND_USER=${BIND_USER}
+
 # include/isc/ipv6.h is installed on non-ipv6 platforms
 .if defined(USE_INET6) && (${USE_INET6} == "YES")
 PLIST_SUBST+=	IPV6H="@comment "
@@ -60,6 +61,9 @@ post-install:
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	(cd ${PREFIX}; ${FIND} share/doc/bind9 -type f -print ) >> ${PLIST_SRC}
 	(cd ${PREFIX}; ${FIND} share/doc/bind9 -type d -print ) | \
+		${SED} -e 's/^/@dirrm /' | ${SORT} -r >> ${PLIST_SRC}
+	(cd ${PREFIX}; ${FIND} include/bind -type f -print ) >> ${PLIST_SRC}
+	(cd ${PREFIX}; ${FIND} include/bind -type d -print ) | \
 		${SED} -e 's/^/@dirrm /' | ${SORT} -r >> ${PLIST_SRC}
 
 .include "../../mk/pthread.buildlink3.mk"
