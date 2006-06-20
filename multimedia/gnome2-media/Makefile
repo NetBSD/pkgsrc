@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2006/06/09 07:30:31 jnemeth Exp $
+# $NetBSD: Makefile,v 1.38 2006/06/20 15:51:29 jmmv Exp $
 
 DISTNAME=		gnome-media-2.14.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.14/}
 EXTRACT_SUFX=		.tar.bz2
@@ -49,6 +49,7 @@ BUILDLINK_API_DEPENDS.libgnomeui+=		libgnomeui>=2.13.2
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
+.include "../../multimedia/gst-plugins0.10-good/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
