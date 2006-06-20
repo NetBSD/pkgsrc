@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.565 2006/06/20 20:27:49 jnemeth Exp $
+$NetBSD: CHANGES-2006,v 1.566 2006/06/20 21:14:53 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3134,3 +3134,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/teTeX3-texmf to 3.0nb4 [minskim 2006-06-20]
 	Updated math/py-rpy to 0.4.6nb4 [joerg 2006-06-20]
 	Updated mail/clamav to 0.88.2nb1 [jnemeth 2006-06-20]
+	Updated databases/slony1 to 1.1.5nb1 [joerg 2006-06-20]
