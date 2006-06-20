@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.561 2006/06/20 15:52:26 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.562 2006/06/20 17:24:57 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3130,3 +3130,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/mutt-devel to 1.5.11nb5 [tonio 2006-06-20]
 	Updated emulators/peace to 0.0.20060620 [kent 2006-06-20]
 	Updated multimedia/gnome2-media to 2.14.0nb2 [jmmv 2006-06-20]
+	Updated x11/kdelibdocs3 to 3.5.3 [joerg 2006-06-20]
