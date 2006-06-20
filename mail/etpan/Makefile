@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/17 23:40:13 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/06/20 22:14:07 minskim Exp $
 #
 
 DISTNAME=	etpan-ng-0.7.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://libetpan.sourceforge.net/etpan/
 COMMENT=	Mail console client with S/MIME and PGP support
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		perl:run yacc
 GNU_CONFIGURE=		yes
 
 DOCDIR=			${LOCALBASE}/share/doc/etpan

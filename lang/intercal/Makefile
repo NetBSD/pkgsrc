@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2004/04/25 11:40:56 dillo Exp $
+# $NetBSD: Makefile,v 1.6 2006/06/20 22:12:59 minskim Exp $
 #
 
 DISTNAME=	intercal-0.20
@@ -8,5 +8,7 @@ MASTER_SITES=	http://www.catb.org/~esr/intercal/
 MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.catb.org/~esr/intercal/
 COMMENT=	The ultimate language for obfuscation and job security
+
+USE_TOOLS+=	yacc
 
 .include "../../mk/bsd.pkg.mk"
