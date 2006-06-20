@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2006/06/19 23:27:34 jlam Exp $
+# $NetBSD: Makefile.common,v 1.24 2006/06/20 20:36:38 joerg Exp $
 
 .include "../../emulators/suse_linux/vars.mk"
 .include "../../emulators/suse_linux/arch.mk"
@@ -60,6 +60,9 @@ do-install:
 	else \
 	  ${RM} -f ${PLIST_SRC}; \
 	  ${CP} ${PKGSRCDIR}/emulators/suse_linux/PLIST_dynamic ${PLIST_SRC} ; \
+	fi
+	@if [ -f ${PKGDIR}/PLIST_rpmfix.${MACHINE_ARCH} ]; then \
+	    ${SED} -e 's,^/,${EMULSUBDIR}/,' ${PKGDIR}/PLIST_rpmfix.${MACHINE_ARCH} >> ${PLIST_SRC}; \
 	fi
 	${RPM2PKG} ${RPM2PKGARGS}
 	@if ${GREP} -q 'lib.*\.so' ${PLIST_SRC}; then \
