@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.23 2006/06/20 22:35:25 jlam Exp $
+# $NetBSD: msgfmt.sh,v 1.24 2006/06/20 23:11:36 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -122,6 +122,21 @@ if test -z "$debug"; then
 	debug="${CAT}"
 else
 	debug="${TEE} $pofile.debug"
+fi
+
+# If the input file cannot be found as named, then also search for a file
+# with the same name that ends in ".po".
+#
+if test ! -f "$pofile"; then
+	case "$pofile" in
+	*.po)	popofile=$pofile ;;
+	*)	popofile=${pofile}.po ;;
+	esac
+	if test ! -f "$popofile"; then
+		echo 1>&2 "$0: error while opening \"$pofile\" for reading: No such file or directory"
+		exit 1
+	fi
+	pofile="$popofile"
 fi
 
 ${CAT} $pofile | ${AWK} '
