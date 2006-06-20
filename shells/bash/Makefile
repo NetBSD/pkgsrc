@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/06/15 13:42:36 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2006/06/20 22:21:20 minskim Exp $
 
 DISTNAME=	bash-3.1
 PKGNAME=	bash-3.1pl1
@@ -18,7 +18,7 @@ CONFLICTS=	static-bash-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=		makeinfo
+USE_TOOLS+=		makeinfo yacc
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
