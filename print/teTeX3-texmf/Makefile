@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/04/07 16:19:15 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/20 16:06:53 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
-PKGREVISION=	3
+PKGREVISION=	4
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
@@ -15,7 +15,6 @@ COMMENT=	Machine-independent part of teTeX
 CONFLICTS+=	teTeX-share-[0-9]*
 
 WRKSRC=		${WRKDIR}
-DIST_SUBDIR=	teTeX
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
