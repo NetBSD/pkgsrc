@@ -1,12 +1,13 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: freshclamd.sh,v 1.2 2004/11/02 00:55:20 xtraeme Exp $
+# $NetBSD: freshclamd.sh,v 1.3 2006/06/20 20:24:45 jnemeth Exp $
 #
 # PROVIDE: freshclamd
 # REQUIRE: DAEMON LOGIN clamd
 
 
 name="freshclamd"
+rcvar=$name
 command="@PREFIX@/bin/freshclam"
 required_files="@PKG_SYSCONFDIR@/freshclam.conf"
 pidfile="@VARBASE@/run/${name}.pid"
