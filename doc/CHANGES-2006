@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.559 2006/06/20 14:09:08 tonio Exp $
+$NetBSD: CHANGES-2006,v 1.560 2006/06/20 14:25:56 kent Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3128,3 +3128,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated lang/python24 to 2.4.3nb3 [minskim 2006-06-19]
 	Updated mail/mutt to 1.4.2.1nb7 [tron 2006-06-20]
 	Updated mail/mutt-devel to 1.5.11nb5 [tonio 2006-06-20]
+	Updated emulators/peace to 0.0.20060620 [kent 2006-06-20]
