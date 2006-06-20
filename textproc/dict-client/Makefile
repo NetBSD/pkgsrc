@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/03/04 21:30:45 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2006/06/20 22:38:32 minskim Exp $
 
 DISTNAME=       dictd-1.9.15
 PKGNAME=        dict-client-1.9.15
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dict.org/
 COMMENT=	Dictionary Service Protocol client
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake yacc
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-cflags=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR:Q}
