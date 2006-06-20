@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/02/05 23:09:38 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2006/06/20 23:32:36 minskim Exp $
 
 DISTNAME=	Imaging-1.1.5
 PKGNAME=	${PYPKGPREFIX}-imaging-1.1.5
@@ -20,6 +20,7 @@ post-install:
 		ImPlatform.h Imaging.h \
 		${PREFIX}/${PYINC}/PIL )
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
