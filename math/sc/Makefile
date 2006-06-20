@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/03/24 21:12:56 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/20 22:15:15 minskim Exp $
 
 DISTNAME=               sc-6.21
 CATEGORIES=             math
@@ -9,5 +9,6 @@ MAINTAINER=             eric@fox.phoenix.az.us
 COMMENT=		Curses-based spreadsheet program
 
 WRKSRC=			${WRKDIR}
+USE_TOOLS+=		yacc
 
 .include "../../mk/bsd.pkg.mk"
