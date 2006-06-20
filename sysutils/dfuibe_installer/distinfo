@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2006/04/18 19:48:11 joerg Exp $
+$NetBSD: distinfo,v 1.3 2006/06/20 22:57:12 jlam Exp $
 
 SHA1 (dfuibe_installer-1.1.7.tar.gz) = 5f6d2937642f443e015e6e4acaa4953f769a3cd7
 RMD160 (dfuibe_installer-1.1.7.tar.gz) = 8642f721a43c91b42150c98d54eed2b6e70cdf77
 Size (dfuibe_installer-1.1.7.tar.gz) = 59792 bytes
+SHA1 (patch-aa) = 7e5b3d242ed4191502d7d3c39c328d33778cbed4
