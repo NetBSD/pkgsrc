@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2006/02/18 14:55:48 rillig Exp $
+# $NetBSD: Makefile.common,v 1.31 2006/06/20 12:25:51 joerg Exp $
 
 MASTER_SITES=		http://www.xfce.org/archive/xfce-4.2.3.2/src/ \
 			http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-4.2.3.2/src/
@@ -13,7 +13,7 @@ XFCE4_VERSION=		4.2.3
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config msgfmt
 
 .if ${MACHINE_ARCH} == "alpha"
 GCC_REQD+=		3.0
