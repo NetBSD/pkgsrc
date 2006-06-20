@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
+$NetBSD: patch-ak,v 1.2 2006/06/20 19:08:13 joerg Exp $
 
 --- libk3b/projects/datacd/k3bfileitem.h.orig	2005-12-16 02:09:02.000000000 +1300
 +++ libk3b/projects/datacd/k3bfileitem.h
@@ -6,7 +6,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2006/02/01 00:53:00 markd Exp $
  #include <qstring.h>
  
  #include <sys/stat.h>
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +#define stat64 stat
 +#define lstat64 lstat
 +#endif
