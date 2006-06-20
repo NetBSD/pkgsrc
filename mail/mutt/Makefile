@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.142 2006/06/18 00:23:59 rillig Exp $
+# $NetBSD: Makefile,v 1.143 2006/06/20 09:14:46 tron Exp $
 
 DISTNAME=		mutt-1.4.2.1i
 PKGNAME=		${DISTNAME:C/i$//}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.mutt.org/mutt/ \
 			ftp://ftp.stealth.net/pub/mirrors/ftp.mutt.org/pub/mutt/ \
@@ -79,7 +79,13 @@ CONF_FILES+=		${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 FILES_SUBST+=		DOCDIR=${DOCDIR:Q}
 
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
-PLIST_SRC=		${WRKDIR}/PLIST
+
+.if exists(${WRKSRC}/mutt_dotlock)
+PLIST_SUBST+=		MUTT_DOTLOCK=
+.else
+PLIST_SUBST+=		MUTT_DOTLOCK="@comment "
+.endif
+INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -97,8 +103,5 @@ post-install:
 .if (${PKG_INSTALLATION_TYPE} == "pkgviews")
 	${MV} ${PREFIX}/man/man5/mutt-mbox.5 ${PREFIX}/man/man5/mbox.5
 .endif
-	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	${TEST} ! -f ${PREFIX}/bin/mutt_dotlock				\
-	|| ${ECHO} "bin/mutt_dotlock" >> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
