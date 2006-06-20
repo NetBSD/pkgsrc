@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:11:31 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/06/20 22:11:52 jlam Exp $
 # based on
 #    FreeBSD port:
 #    ID: ports/x11-wm/bbapm/Makefile,v 1.5 2002/09/02 01:30:15 lioux Exp
@@ -15,6 +15,7 @@ HOMEPAGE=	http://bbtools.windsofstorm.net/
 COMMENT=	APM monitor for Blackbox
 
 GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c c++
 
 # For now:
 # We use i386/apmvar.h; other architectures will require modification
@@ -22,7 +23,9 @@ GNU_CONFIGURE=	yes
 # patch-ak
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-*
 
-INSTALLATION_DIRS=	bin man/man1
+LDFLAGS.Linux+=		-lapm
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/x11.buildlink3.mk"
 
@@ -32,14 +35,10 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bbapm ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/data/bbapm.1 ${PREFIX}/man/man1/
+	${INSTALL_MAN} ${WRKSRC}/data/bbapm.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/bbtools
 .for a in README.bbapm bbapm.conf bbapm.nobb bbapm.style
 	${INSTALL_DATA} ${WRKSRC}/data/${a} ${PREFIX}/share/bbtools
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
-
-.if ${OPSYS} == "Linux"
-LDFLAGS+=	-lapm
-.endif
