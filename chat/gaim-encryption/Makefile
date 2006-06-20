@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/17 13:46:18 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/20 21:43:31 joerg Exp $
 
 DISTNAME=	gaim-encryption-2.38
 PKGREVISION=	3
@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gaim-encryption.sourceforge.net/
 COMMENT=	Plugin for gaim to add TLS/SSL via nss/nspr
 
-USE_TOOLS+=		gmake msgfmt
+USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
