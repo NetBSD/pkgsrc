@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2006/06/20 22:57:12 jlam Exp $
+
+--- Makefile.orig	2005-12-08 10:58:02.000000000 -0500
++++ Makefile
+@@ -33,7 +33,7 @@ all: ${PROG} mo
+ 
+ mo:
+ 	for _language in ${LANGUAGES}; do \
+-		${MSGFMT} -o po/$${_language}.mo po/$${_language}; \
++		${MSGFMT} -o po/$${_language}.mo po/$${_language}.po; \
+ 	done
+ 
+ clean:
