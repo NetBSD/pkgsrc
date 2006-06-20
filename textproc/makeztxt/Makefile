@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/11/08 19:38:04 tv Exp $
+# $NetBSD: Makefile,v 1.12 2006/06/20 23:41:14 minskim Exp $
 #
 
 DISTNAME=	${PKGNAME}b-src
@@ -22,4 +22,5 @@ do-install:
 .endfor
 
 .include "../../devel/libgetopt/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
