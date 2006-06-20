@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/04/22 09:22:13 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2006/06/20 22:20:49 minskim Exp $
 #
 
 DISTNAME=	tin-1.8.1
@@ -22,7 +22,7 @@ RESTRICTED=	Profit from use, sale, trade, or reproduction disallowed
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR=yes
 # for tinews.pl
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	perl:run yacc
 REPLACE_PERL=	tools/tinews.pl
 BUILD_TARGET=	build
 
