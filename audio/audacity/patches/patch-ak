@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.3 2006/06/21 18:09:28 drochner Exp $
+
+--- src/effects/ToneGen.cpp.orig	2006-06-21 12:45:24.000000000 +0200
++++ src/effects/ToneGen.cpp
+@@ -265,7 +265,7 @@ wxSizer *CreateToneGenDialog(wxWindow * 
+    item2->Add(item3, 0, wxALIGN_CENTRE | wxALL, 5);
+ 
+    wxChoice *item4 = new wxChoice(parent, ID_WAVEFORM, wxDefaultPosition,
+-                                  wxSize(80, -1), 0, NULL);
++                                  wxSize(80, -1), 0, NULL, 0);
+    item2->Add(item4, 0, wxALIGN_CENTRE | wxALL, 5);
+ 
+    item0->Add(item2, 1, wxALIGN_CENTRE | wxALL, 5);
