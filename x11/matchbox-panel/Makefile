@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/06/11 14:44:00 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/06/21 22:05:02 joerg Exp $
 #
 
 DISTNAME=		matchbox-panel-0.9.2
@@ -23,6 +23,14 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-small-icons
 CONFIGURE_ARGS+=	--enable-startup-notification
 CONFIGURE_ARGS+=	--enable-nls
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "DragonFly"
+PLIST_SUBST+=	COND_APM="@comment "
+.else
+PLIST_SUBST+=	COND_APM=""
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
