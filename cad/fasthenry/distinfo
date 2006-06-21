@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2005/02/23 14:59:24 agc Exp $
+$NetBSD: distinfo,v 1.9 2006/06/21 14:56:51 minskim Exp $
 
 SHA1 (fasthenry-3.0.19961112/fasthenry-3.0-12Nov96.tar.Z) = 7117fdbaad95929a8d98944dced48cfb3a9e39d0
 RMD160 (fasthenry-3.0.19961112/fasthenry-3.0-12Nov96.tar.Z) = 7059c9642c2246abf8101658027df1c89b7cab74
@@ -27,3 +27,8 @@ SHA1 (patch-au) = 6bb6f94c221d12aeb8ea3a98f9cadfb8b813e0ce
 SHA1 (patch-av) = fa677024bdb612d46c1d6dde43c677a127b77399
 SHA1 (patch-aw) = f3c23565502045d21518a40981c4e3170364df54
 SHA1 (patch-ax) = 0d63ac982956c51a1f731e879e3a3330fdc3e27a
+SHA1 (patch-ay) = a1bec67321d965bc28bb7ac6aa665ce736ae7960
+SHA1 (patch-az) = 0c4a7175c3623063ef1e2b45336cc17b3b294525
+SHA1 (patch-ba) = 7d123f59922c3fc2ef5e9b9d54654bfd4fc6f75d
+SHA1 (patch-bb) = e9549c67f4a0c807deb73c1284fcae7d130de0ea
+SHA1 (patch-bc) = 6a1eb5a47344e097a84754e12c80867eebf53483
