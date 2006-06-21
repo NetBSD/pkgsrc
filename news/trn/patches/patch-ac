@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2005/07/08 20:42:35 kristerw Exp $
+$NetBSD: patch-ac,v 1.5 2006/06/21 15:52:33 joerg Exp $
 
---- Configure.orig	2001-02-22 20:17:39.000000000 +0100
-+++ Configure	2005-07-08 22:38:46.000000000 +0200
-@@ -2540,7 +2540,7 @@
+--- Configure.orig	2001-02-22 19:17:39.000000000 +0000
++++ Configure
+@@ -2540,7 +2540,7 @@ EOM
      esac
      ;;
  *)  case "$d_inews" in
@@ -11,7 +11,17 @@ $NetBSD: patch-ac,v 1.4 2005/07/08 20:42:35 kristerw Exp $
      "$define")
  	set dflt installinews bin
  	eval $prefixit
-@@ -6223,14 +6223,14 @@
+@@ -4412,6 +4412,9 @@ case "$nm_so_opt" in
+ 			nm_so_opt='--dynamic'
+ 		fi
+ 		;;
++	*dragonfly*)
++		nm_so_opt='-D'
++		;;
+ 	esac
+ 	;;
+ esac
+@@ -6223,14 +6226,14 @@ active='$active'
  acttimes='$acttimes'
  aphostcmd='$aphostcmd'
  archobjs='$archobjs'
@@ -29,7 +39,7 @@ $NetBSD: patch-ac,v 1.4 2005/07/08 20:42:35 kristerw Exp $
  cc='$cc'
  ccflags='$ccflags'
  cf_by='$cf_by'
-@@ -6240,7 +6240,7 @@
+@@ -6240,7 +6243,7 @@ cntrydist='$cntrydist'
  comm='$comm'
  contains='$contains'
  contdist='$contdist'
@@ -38,7 +48,7 @@ $NetBSD: patch-ac,v 1.4 2005/07/08 20:42:35 kristerw Exp $
  cpp='$cpp'
  cppflags='$cppflags'
  cpplast='$cpplast'
-@@ -6305,21 +6305,21 @@
+@@ -6305,21 +6308,21 @@ d_xenix='$d_xenix'
  d_xthread='$d_xthread'
  date='$date'
  defeditor='$defeditor'
@@ -65,7 +75,7 @@ $NetBSD: patch-ac,v 1.4 2005/07/08 20:42:35 kristerw Exp $
  groupdesc='$groupdesc'
  hint='$hint'
  hostbits='$hostbits'
-@@ -6376,10 +6376,10 @@
+@@ -6376,10 +6379,10 @@ mboxchar='$mboxchar'
  mimecap='$mimecap'
  mips='$mips'
  mips_type='$mips_type'
@@ -78,7 +88,7 @@ $NetBSD: patch-ac,v 1.4 2005/07/08 20:42:35 kristerw Exp $
  myactive='$myactive'
  myuname='$myuname'
  n='$n'
-@@ -6417,11 +6417,11 @@
+@@ -6417,11 +6420,11 @@ prefixexp='$prefixexp'
  prefshell='$prefshell'
  privlib='$privlib'
  privlibexp='$privlibexp'
@@ -92,7 +102,7 @@ $NetBSD: patch-ac,v 1.4 2005/07/08 20:42:35 kristerw Exp $
  sendmail='$sendmail'
  servername='$servername'
  sharpbang='$sharpbang'
-@@ -6442,7 +6442,7 @@
+@@ -6442,7 +6445,7 @@ strings='$strings'
  strn='$strn'
  subscriptions='$subscriptions'
  sysman='$sysman'
@@ -101,7 +111,7 @@ $NetBSD: patch-ac,v 1.4 2005/07/08 20:42:35 kristerw Exp $
  tee='$tee'
  termlib='$termlib'
  test='$test'
-@@ -6450,7 +6450,7 @@
+@@ -6450,7 +6453,7 @@ threaddir='$threaddir'
  tk='$tk'
  tkinc='$tkinc'
  tklibs='$tklibs'
