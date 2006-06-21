@@ -1,8 +1,19 @@
-$NetBSD: patch-ag,v 1.4 2005/12/30 21:51:23 joerg Exp $
+$NetBSD: patch-ag,v 1.5 2006/06/21 15:15:16 minskim Exp $
 
---- Wnn/jlib/js.c.orig	Mon May 17 12:04:45 1999
-+++ Wnn/jlib/js.c	Wed Sep 22 18:37:26 1999
-@@ -85,7 +85,6 @@ extern	char	*malloc();
+--- Wnn/jlib/js.c.orig	1999-05-17 03:04:45.000000000 +0000
++++ Wnn/jlib/js.c
+@@ -70,9 +70,8 @@ extern	Variables
+ */
+ 
+ 
+-extern	char	*malloc();
+-
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <ctype.h>
+ #ifdef UX386
+ #include <X11/Xos.h>
+@@ -85,7 +84,6 @@ extern	char	*malloc();
  #endif
  #include <sys/stat.h>
  #include <errno.h>
@@ -10,7 +21,16 @@ $NetBSD: patch-ag,v 1.4 2005/12/30 21:51:23 joerg Exp $
  #include <signal.h>
  #include "jd_sock.h"
  #include "commonhd.h"
-@@ -220,11 +219,11 @@ register char *lang;
+@@ -103,8 +101,6 @@ extern int errno;
+ #include "../etc/bdic.c"
+ #include "../etc/pwd.c"
+ 
+-char *malloc();
+-
+ #ifdef SYSVR2
+ #define	bzero(adr,n)	memset((adr),0,(n))
+ #endif
+@@ -220,11 +216,11 @@ register char *lang;
  #endif
  	return -1;
      }
