@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: binpkg-cache,v 1.9 2006/06/08 11:18:04 dmcmahill Exp $
+# $NetBSD: binpkg-cache,v 1.10 2006/06/21 14:13:27 dmcmahill Exp $
 #
 # Script for generating a cache file with information about
 # all binary packages contained in a directory.
@@ -67,6 +67,7 @@ if test $? -ne 0 ; then
 	echo "${tmpd} already exists"
 	exit 1
 fi
+all_dirs=${tmpd}/all_dirs
 
 prog=$0
 
@@ -132,6 +133,7 @@ all_cache_files=""
 #
 
 process_binpkg_dir(){
+	rdir=`${GREP} "^${d} " ${all_dirs} | ${AWK} '{print $2}'`
 	need_update=no
 	if test -f ${d}/${cachefile} ; then
 		stale_entries=`${FIND} ${d} -type f -name \*${PKG_SUFX} -newer ${d}/${cachefile} -print`
@@ -149,7 +151,7 @@ process_binpkg_dir(){
 		# get the list of what pkgs belong in the cache
 		rm -f ${tmpd}/pkg_list ${tmpd}/cache_pkg_list
 		${FIND} ${d}/ -name \*${PKG_SUFX} -print | \
-			${SED} -e "s;^${PACKAGES}/*;;g" -e 's;//;/;g' | \
+			${SED} -e "s;^${d}/*;${rdir}/;g" -e 's;//;/;g' | \
 			${SORT} > ${tmpd}/pkg_list
 
 		# and get the list of what is in the cache
@@ -161,6 +163,12 @@ process_binpkg_dir(){
 				echo "      No extra cache entries in ${d}/${cachefile}"
 			fi
 		else
+			if test "X${DEBUG}" = "Xyes" ; then
+				echo "Package list:"
+				cat  ${tmpd}/pkg_list
+				echo "Cache list:"
+				cat ${tmpd}/cache_pkg_list
+			fi
 			echo "      Entries found in ${d}/${cachefile} but no packages found"
 			need_update=yes
 		fi
@@ -197,7 +205,7 @@ process_binpkg_dir(){
 	if test "X${need_update}" = "Xyes" ; then
 		echo "pkgcache_version ${cacheversion}" > ${tmpd}/${cachefile}
 		for f in ${d}/*${PKG_SUFX} ; do
-			fn=`echo $f | ${SED} "s;^${PACKAGES}/*;;g"`
+			fn=`grep "^${d} " ${all_dirs} | ${AWK} '{print $2}'`"/"`basename ${f}`
 			if test "X${DEBUG}" = "Xyes" ; then
 				echo "     Adding ${fn} (${f}) to the cache"
 			fi
@@ -339,7 +347,25 @@ fi
 
 # put a trailing / after ${PACKAGES} in case ${PACKAGES} is 
 # a link.
+
+# pass 1, we find all directories under PACKAGES.  Note that this
+# may contain some directories more than once depending on what sort
+# of soft links may be in place
+rm -f ${all_dirs}.tmp
 for d in `${FIND} ${PACKAGES}/ -type d -follow -print` ; do
+	cname=`(cd ${d} && pwd -P)`
+	rname=`echo ${d} | ${SED} "s;^${PACKAGES}/*;;g"`
+	echo "${cname} ${rname}" >> ${all_dirs}.tmp
+done
+${SORT} -u -k1,1 ${all_dirs}.tmp > ${all_dirs}
+if test "X${DEBUG}" = "Xyes" ; then
+	echo "Full directory list:"
+	cat ${all_dirs}.tmp
+	echo "Unique directory list:"
+	cat ${all_dirs}
+fi
+
+for d in `${AWK} '{print $1}' ${all_dirs}` ; do
 	if test "X${DEBUG}" = "Xyes" ; then
 		echo "${prompt}Processing directory ${d}"
 	fi
