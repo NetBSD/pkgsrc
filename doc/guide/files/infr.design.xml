@@ -1,4 +1,4 @@
-<!-- $NetBSD: infr.design.xml,v 1.1 2006/05/12 23:03:22 rillig Exp $ -->
+<!-- $NetBSD: infr.design.xml,v 1.2 2006/06/21 08:50:40 rillig Exp $ -->
 
 <chapter id="infr.design"> <?dbhtml filename="infr.design.html"?>
 <title>Design of the pkgsrc infrastructure</title>
@@ -78,6 +78,17 @@
 	the shell commands are expanded at this point.</para>
 
 </sect2>
+</sect1>
+
+<sect1 id="infr.varspec">
+<title>How can variables be specified?</title>
+
+	<para>There are many ways in which the definition and use of a
+	variable can be restricted in order to detect bugs and
+	violations of the (mostly unwritten) policies. See the
+	<literal>pkglint</literal> developer's documentation for further
+	details.</para>
+
 </sect1>
 
 <sect1 id="infr.design.intf">
