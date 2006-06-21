@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2004/12/20 23:24:02 christos Exp $
+$NetBSD: patch-ab,v 1.2 2006/06/21 21:27:30 joerg Exp $
 
---- src/dns.c.orig	2003-04-06 09:45:41.000000000 -0400
-+++ src/dns.c	2004-12-20 18:15:45.000000000 -0500
-@@ -60,6 +60,17 @@
+--- src/dns.c.orig	2003-04-06 13:45:41.000000000 +0000
++++ src/dns.c
+@@ -38,7 +38,6 @@
+ #include <sys/time.h>
+ #include <sys/select.h>
+ #include <sys/stat.h>
+-#include <sys/errno.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+@@ -60,11 +59,19 @@ extern char *sys_errlist[];
  #define strerror(errno) (((errno) >= 0 && (errno) < sys_nerr) ? sys_errlist[errno] : "unlisted error")
  #endif
  
@@ -19,8 +27,13 @@ $NetBSD: patch-ab,v 1.1 2004/12/20 23:24:02 christos Exp $
 +#endif
  
  
- /*  Hmm, it seems Irix requires this  */
-@@ -432,15 +443,15 @@
+-/*  Hmm, it seems Irix requires this  */
+-extern int errno;
+-
+ /* Defined in main.c - non zero if you want to activate DNS resolving, zero to disable*/
+ extern int dns;
+ 
+@@ -432,15 +439,15 @@ void
  dns_open (void)
  {
    int option, i;
@@ -41,7 +54,7 @@ $NetBSD: patch-ab,v 1.1 2004/12/20 23:24:02 christos Exp $
    resfd = socket (AF_INET, SOCK_DGRAM, 0);
    if (resfd == -1)
      {
-@@ -755,7 +766,7 @@
+@@ -755,7 +762,7 @@ dorequest (char *s, int type, word id)
    int r, i;
    int buf[(MaxPacketsize / sizeof (int)) + 1];
  
@@ -50,7 +63,7 @@ $NetBSD: patch-ab,v 1.1 2004/12/20 23:24:02 christos Exp $
  		   MaxPacketsize);
    if (r == -1)
      {
-@@ -764,9 +775,9 @@
+@@ -764,9 +771,9 @@ dorequest (char *s, int type, word id)
      }
    hp = (packetheader *) buf;
    hp->id = id;			/* htons() deliberately left out (redundant) */
@@ -62,7 +75,7 @@ $NetBSD: patch-ab,v 1.1 2004/12/20 23:24:02 christos Exp $
  		   sizeof (struct sockaddr));
  }
  
-@@ -1279,15 +1290,15 @@
+@@ -1279,15 +1286,15 @@ dns_ack ()
        /* Check to see if this server is actually one we sent to */
        if (from.sin_addr.s_addr == localhost)
  	{
