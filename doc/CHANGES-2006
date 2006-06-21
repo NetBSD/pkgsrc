@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.571 2006/06/21 19:02:35 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.572 2006/06/21 20:53:33 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3141,3 +3141,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/squid to 2.5.14nb2 [taca 2006-06-21]
 	Updated sysutils/burn to 0.4.0nb5 [joerg 2006-06-21]
 	Updated biology/mummer to 3.18nb2 [minskim 2006-06-21]
+	Updated games/kdegames3 to 3.5.3nb1 [joerg 2006-06-21]
