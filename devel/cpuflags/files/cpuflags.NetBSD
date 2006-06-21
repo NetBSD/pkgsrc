@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.NetBSD,v 1.64 2006/05/16 16:43:10 dogcow Exp $
+# $NetBSD: cpuflags.NetBSD,v 1.65 2006/06/21 11:15:14 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 AWK=awk
@@ -138,10 +138,12 @@ case $hw_machine_arch in
 	604ev\ *)		FLAGS='-mcpu=604e'	;; # usually 604e
 	620\ *)			FLAGS='-mcpu=620'	;; # Untested
 	7400\ *)		FLAGS='-mcpu=7400'	;; # AGP G4/400 Mac
-	7410\ *)		FLAGS='-mcpu=7400'	;; # powerbook g4
 	740\ *)			FLAGS='-mcpu=740'	;; # Untested
+	7410\ *)		FLAGS='-mcpu=7400'	;; # powerbook g4
+	7447A\ *)		FLAGS='-mcpu=7450'	;; # 
 	7450\ *)		FLAGS='-mcpu=7450'	;; # tibook 550
 	750\ *)			FLAGS='-mcpu=750'	;; # Untested
+
     esac ;;
 
     sparc | sparc64) case " $hw_model" in			   # Examples
