@@ -1,8 +1,16 @@
-$NetBSD: patch-ad,v 1.4 2005/12/13 15:12:59 joerg Exp $
+$NetBSD: patch-ad,v 1.5 2006/06/21 14:27:28 minskim Exp $
 
 --- nettestd.c.orig	1992-11-05 21:52:58.000000000 +0000
 +++ nettestd.c
-@@ -107,7 +107,12 @@ union {
+@@ -42,6 +42,7 @@ char copyright[] =
+ 
+ #include <errno.h>
+ #include <signal.h>
++#include <stdlib.h>
+ #ifdef	WAIT3CODE
+ #include <sys/wait.h>
+ #endif
+@@ -107,7 +108,12 @@ union {
  } name;
  int namesize;
  
@@ -16,7 +24,7 @@ $NetBSD: patch-ad,v 1.4 2005/12/13 15:12:59 joerg Exp $
  int (*rfunc)() = read;
  
  main(argc, argv)
-@@ -271,7 +276,11 @@ char **argv;
+@@ -271,7 +277,11 @@ char **argv;
  # endif
  #endif
  	if (daemon) {
@@ -28,7 +36,7 @@ $NetBSD: patch-ad,v 1.4 2005/12/13 15:12:59 joerg Exp $
  			perror("setpgrp");
  		if ((c = open(_PATH_TTY, O_RDWR)) >= 0) {
  			(void)ioctl(c, TIOCNOTTY, (char *)0);
-@@ -416,7 +425,7 @@ char **argv;
+@@ -416,7 +426,7 @@ char **argv;
  			    )
  			error("setsockopt (IP_OPTIONS)");
  #endif
@@ -37,7 +45,7 @@ $NetBSD: patch-ad,v 1.4 2005/12/13 15:12:59 joerg Exp $
  			error("bind");
  			exit(1);
  		}
-@@ -447,12 +456,11 @@ register int s;
+@@ -447,12 +457,11 @@ register int s;
  #endif
  	listen(s, 5);
  
@@ -52,7 +60,25 @@ $NetBSD: patch-ad,v 1.4 2005/12/13 15:12:59 joerg Exp $
  			if (errno == EINTR)
  				continue;
  			error("accept");
-@@ -707,7 +715,9 @@ int s;
+@@ -516,7 +525,7 @@ register in, out;
+ {
+ 	register int	i, t, offset = 0;
+ 	register char	*cp, *data;
+-	char		buf[128], *malloc();
++	char		buf[128];
+ 	int		chunks = 0, chunksize = 0, fullbuf = 0, kbufsize = 0;
+ 	int		tos = 0, nodelay = 0, seqdata = 0, waitall = 0;
+ 	register unsigned long hival, loval;
+@@ -684,7 +693,7 @@ int s;
+ 	register int		t, t2;
+ 	register char		*cp, *data;
+ 	register struct hostent	*hp;
+-	char			*inet_ntoa(), *malloc();
++	char			*inet_ntoa();
+ 	register char		*errmsg;
+ #ifdef	CMSG_DATA
+ 	struct msghdr		inmsg;
+@@ -707,7 +716,9 @@ int s;
  		inmsg.msg_iovlen = 1;
  		inmsg.msg_name = (caddr_t)&name.d_inet;
  		inmsg.msg_control = (caddr_t)control;
@@ -62,7 +88,7 @@ $NetBSD: patch-ad,v 1.4 2005/12/13 15:12:59 joerg Exp $
  		errmsg = "recvmsg";
  	} else
  #endif /* CMSG_DATA */
-@@ -723,7 +733,7 @@ int s;
+@@ -723,7 +734,7 @@ int s;
  #endif
  		{
  			namesize = sizeof(name.d_inet);
