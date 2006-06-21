@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: squid.sh,v 1.18 2005/04/25 15:39:14 taca Exp $
+# $NetBSD: squid.sh,v 1.19 2006/06/21 12:10:35 taca Exp $
 #
 
 # PROVIDE: squid
@@ -16,7 +16,6 @@ pidfile="@VARBASE@/run/${name}.pid"
 required_files="${conf_file} @PKG_SYSCONFDIR@/mime.conf"
 command_args="-Y -f $conf_file"
 
-start_cmd="${command} ${command_args}"
 stop_cmd="stop_nicely"
 kill_command="${command} -k shutdown"
 reload_cmd="${command} -k reconfigure"
