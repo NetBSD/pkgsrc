@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2006/05/31 18:17:23 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2006/06/21 16:12:14 jlam Exp $
 #
 
 .include "../../print/evince/Makefile.common"
 
+PKGREVISION=		1
 COMMENT=		Document viewer for the GNOME Desktop
 
 GCONF2_SCHEMAS=		evince.schemas
@@ -24,6 +25,7 @@ PLIST_SUBST+=		DVI="@comment "
 .endif
 
 .include "../../devel/GConf2/schemas.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
