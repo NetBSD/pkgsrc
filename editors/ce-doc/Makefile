@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:09 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/06/21 23:52:45 rillig Exp $
 #
 
 .include "../../editors/ce/Makefile.common"
 
 PKGNAME=		ce-doc-${VERSION}
+PKGREVISION=		1
 COMMENT+=		, documentation
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -18,5 +19,6 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	do-configure
 SUBST_FILES.paths=	teach-ce.in
 SUBST_SED.paths=	-e 's|@LN@|${LN}|g'
+SUBST_SED.paths+=	-e '1s,/bin/bash,'${SH:Q}','
 
 .include "../../mk/bsd.pkg.mk"
