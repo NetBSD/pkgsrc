@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/05/18 20:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/06/21 18:33:18 jlam Exp $
 #
 
 DISTNAME=	hanzim-1.3
@@ -11,22 +11,25 @@ MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://zakros.ucsd.edu/~arobert/hanzim.html
 COMMENT=	Chinese character learning-aid program
 
-BROKEN_IN=	pkgsrc-2006Q1
-
 WRKSRC=		${WRKDIR}/Hanzim
 
 BUILD_TARGET=	hanzim
 
-pre-install:
-	@if [ "$$DISPLAY" = "" ]; then \
-		${ECHO} "${DISTNAME} can only be installed under X11."; \
-		exit 1; \
-	 else \
-		${SETENV} SHELL=${SH:Q}; export LC_CTYPE=en_US.ISO8859-1; \
-	 fi
+# XXX This is presumably needed during installation according to revision
+# XXX 1.1 of this Makefile, but needs to be tested.
+# XXX
+#MAKE_ENV+=	SHELL=${SH:Q} LC_CTYPE=en_US.ISO8859-1
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
+
+pre-install:
+	@if ${TEST} -z "$$DISPLAY"; then				\
+		${ERROR_MSG} "${PKGNAME} runs a binary during installation"; \
+		${ERROR_MSG} "that requires an Xserver to be running.";	\
+		exit 1;							\
+	fi
+
 .include "../../mk/bsd.pkg.mk"
