@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/04/17 13:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2006/06/21 19:48:31 joerg Exp $
 
 DISTNAME=	liteamp-0.2.4.2
 PKGREVISION=	7
@@ -11,7 +11,7 @@ COMMENT=	Light-weight Music Player for GNOME2
 
 USE_DIRS+=		gnome2-1.5
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake perl pkg-config
+USE_TOOLS+=		gmake perl pkg-config msgfmt
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 
