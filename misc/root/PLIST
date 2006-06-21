@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/05/27 12:38:27 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/06/21 18:10:40 jlam Exp $
 bin/cint
 bin/hadd
 bin/makecint
@@ -1509,6 +1509,7 @@ man/man1/xrdcp.1
 man/man1/xrdgsiproxy.1
 man/man1/xrdpwdadmin.1
 man/man1/xrootd.1
+share/aclocal/root.m4
 share/doc/root/BUILDSYSTEM
 share/doc/root/CREDITS
 share/doc/root/ChangeLog-2-24
