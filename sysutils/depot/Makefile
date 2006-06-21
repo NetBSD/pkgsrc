@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/06/20 22:22:23 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2006/06/21 18:34:42 minskim Exp $
 #
 
 DISTNAME=       depot-5.14
@@ -10,7 +10,7 @@ HOMEPAGE=	http://asg.web.cmu.edu/depot/
 COMMENT=	Maps several separate packages into a tree without merging them
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	yacc
+USE_TOOLS+=	lex yacc
 
 CONFIGURE_ENV+=	INSTALL="" CC=${CC:Q}
 MAKE_ENV+=	CC=${CC:Q}
