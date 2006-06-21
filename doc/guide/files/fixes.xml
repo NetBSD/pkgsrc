@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.55 2006/06/14 21:20:16 darcy Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.56 2006/06/21 08:42:21 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -7,45 +7,31 @@
     <title>General operation</title>
 
     <sect2 id="pulling-vars-from-etc-mk.conf">
-      <title>How to pull in variables from /etc/mk.conf</title>
+      <title>How to pull in user-settable variables from <filename>mk.conf</filename></title>
 
-      <para>The problem with package-defined variables that can be
-        overridden via <varname>MAKECONF</varname> or
-        <filename>/etc/mk.conf</filename> is that &man.make.1; expands a
-        variable as it is used, but evaluates preprocessor-like
-        statements (.if, .ifdef and .ifndef) as they are read.  So, to
-        use any variable (which may be set in
-        <filename>/etc/mk.conf</filename>) in one of the .if*
-        statements, the file <filename>/etc/mk.conf</filename> must be
-        included before that .if* statement.</para>
+	<para>The pkgsrc user can configure pkgsrc by overriding several
+	variables in the file pointed to by <varname>MAKECONF</varname>,
+	which is <filename>/etc/mk.conf</filename> by default. When you
+	want to use those variables in the preprocessor directives of
+	&man.make.1; (for example <literal>.if</literal> or
+	<literal>.for</literal>), you need to include the file
+	<filename>../../mk/bsd.prefs.mk</filename> before, which in turn
+	loads the user preferences.</para>
 
-      <para>Rather than having a number of ad-hoc ways of including
-        <filename>/etc/mk.conf</filename>, should it exist, or
-        <varname>MAKECONF</varname>, should it exist, include the
-        <filename>pkgsrc/mk/bsd.prefs.mk</filename> file in the package
-        Makefile before any preprocessor-like .if, .ifdef, or .ifndef
-        statements:</para>
+	<para>But note that some variables may not be completely defined
+	after <filename>../../mk/bsd.prefs.mk</filename> has been
+	included, as they may contain references to variables that are
+	not yet defined. In shell commands this is no problem, since
+	variables are actually macros, which are only expanded when they
+	are used. But in the preprocessor directives mentioned above and
+	in dependency lines (of the form <literal>target:
+	dependencies</literal>) the variables are expanded at load
+	time.</para>
 
-<programlisting>
-    .include "../../mk/bsd.prefs.mk"
+	<note><para>Currently there is no exhaustive list of all
+	variables that tells you whether they can be used at load time
+	or only at run time, but it is in preparation.</para></note>
 
-    .if defined(USE_MENUS)
-    # ...
-    .endif
-</programlisting>
-
-      <para>If you wish to set the <varname>CFLAGS</varname> variable
-        in <filename>/etc/mk.conf</filename>, please make sure to use:
-
-<programlisting>
-    CFLAGS+=  -your -flags
-</programlisting>
-
-        Using <varname>CFLAGS=</varname> (i.e. without the
-        <quote>+</quote>) may lead to problems with packages that need
-        to add their own flags.  Also, you may want to take a look at
-        the <filename role="pkg">devel/cpuflags</filename> package if
-	you're interested in optimization for the current CPU.</para>
     </sect2>
 
     <sect2 id="where-to-install-documentation">
@@ -897,9 +883,9 @@ Changes to the PLIST
         in a number of ways:</para>
 
       <itemizedlist>
-        <listitem>
-          <para>help in fetching the distfiles</para>
-        </listitem>
+	<listitem>
+	  <para>When extracting the distfiles, some packages may ask for passwords.</para>
+	</listitem>
 
         <listitem>
           <para>help to configure the package before it is built</para>
