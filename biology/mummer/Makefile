@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:08:20 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/21 19:02:03 minskim Exp $
 #
 
 DISTNAME=		MUMmer3.18
 PKGNAME=		mummer-3.18
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mummer/}
 
@@ -12,7 +12,7 @@ HOMEPAGE=		http://mummer.sourceforge.net/
 COMMENT=		System for aligning whole genome sequences
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
-USE_TOOLS+=		gmake perl:run
+USE_TOOLS+=		csh:run gmake perl:run
 USE_LANGUAGES=		c c++
 
 MAKE_ENV+=		SH=${SH:Q}
