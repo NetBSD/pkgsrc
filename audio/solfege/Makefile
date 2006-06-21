@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/17 13:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/06/21 13:22:27 joerg Exp $
 #
 
 DISTNAME=		solfege-3.0.7
@@ -17,7 +17,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--disable-oss-sound
 
-USE_TOOLS+=		gmake gm4 makeinfo pkg-config
+USE_TOOLS+=		gmake gm4 makeinfo pkg-config msgfmt
 
 PYTHON_VERSIONS_ACCEPTED=	24 23
 PYTHON_PATCH_SCRIPTS=	*.py *.py.in */*.py */*.py.in
