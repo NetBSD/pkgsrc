@@ -1,59 +1,27 @@
 #!/bin/sh
 #
-# $NetBSD: LPRng.sh,v 1.3 2004/09/06 10:44:44 martti Exp $
+# $NetBSD: LPRng.sh,v 1.4 2006/06/21 13:50:46 jlam Exp $
 #
-# PROVIDE: lpd
+# PROVIDE: LPRng lpd
 # REQUIRE: DAEMON
 
-name="lpd"
-command=@PREFIX@/sbin/${name}
-pidfile="/var/run/${name}.pid"
+. /etc/rc.subr
 
-if [ -f ${pidfile} ]
-then
-	pid=`head -1 ${pidfile}`
-else
-	pid=`ps -ax | awk '{print $1,$5}' | grep ${name} | awk '{print $1}'`
-fi
+name="LPRng"
+rcvar=$name
+command="@PREFIX@/sbin/lpd"
+pidfile="/var/run/lpd.pid"
+required_files="@PKG_SYSCONFDIR@/lpd/lpd.conf"
 
-cmd=${1:-start}
+LPRng_prestart()
+{
+	# Verify permissions of spool directories for existing printcap
+	# entries.
+	#
+	@TEST@ ! -x @PREFIX@/sbin/checkpc || @PREFIX@/sbin/checkpc -f
+}
 
-case ${cmd} in
-start)
-	if [ "$pid" = "" -a -x ${command} ]
-	then
-		echo "Starting LPRng."
-		@PREFIX@/sbin/checkpc -f
-		${command}
-	fi
-	;;
+start_precmd="LPRng_prestart"
 
-stop)
-	if [ "$pid" != "" ]
-	then
-		echo "Stopping LPRng."
-		kill $pid
-	fi
-	;;
-
-restart)
-	( $0 stop )
-	sleep 5
-	$0 start
-	;;
-
-status)
-	if [ "$pid" != "" ]
-	then
-		echo "LPRng is running as pid ${pid}."
-	else
-		echo "LPRng is not running."
-	fi
-	;;
-
-*)
-	echo 1>&2 "Usage: ${name} [restart|start|stop|status]"
-	exit 1
-	;;
-esac
-exit 0
+load_rc_config $name
+run_rc_command "$1"
