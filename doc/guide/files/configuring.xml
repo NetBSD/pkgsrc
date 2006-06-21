@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.13 2006/04/06 06:21:57 reed Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.14 2006/06/21 08:42:21 rillig Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -92,9 +92,30 @@
     </para>
   </sect1>
 
-  <!-- Compiler settings -->
+<sect1 id="conf.compiler">
+<title>Selecting and configuring the compiler</title>
+
   <!--	PKGSRC_COMPILER -->
-  <!--	CFLAGS -->
+
+<sect2 id="conf.cflags">
+<title>Additional flags to the compiler (<varname>CFLAGS</varname>)</title>
+
+	<para>If you wish to set the <varname>CFLAGS</varname> variable,
+	please make sure to use the <literal>+=</literal> operator
+	instead of the <literal>=</literal> operator:</para>
+
+<programlisting>
+    CFLAGS+=        -your -flags
+</programlisting>
+
+	<para>Using <varname>CFLAGS=</varname> (i.e. without the
+	<quote>+</quote>) may lead to problems with packages that need
+	to add their own flags.  Also, you may want to take a look at
+	the <filename role="pkg">devel/cpuflags</filename> package if
+	you're interested in optimization for the current CPU.</para>
+
+</sect2>
+</sect1>
 
   <!-- Configuration files -->
   <!--	PKG_SYSCONFBASE -->
