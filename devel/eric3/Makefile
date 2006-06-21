@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/05/08 12:43:56 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2006/06/21 17:16:34 joerg Exp $
 #
 
 DISTNAME=	eric-3.8.1
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	-d ${PREFIX:Q}/${PYSITELIB:Q}
 do-install:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PYTHONBIN} install.py ${CONFIGURE_ARGS})
+	${PYTHONBIN} -c "import sitecustomize"
 
 .include "../../lang/python/extension.mk"
 .include "../../textproc/py-xml/buildlink3.mk"
