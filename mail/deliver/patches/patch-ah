@@ -1,10 +1,29 @@
-$NetBSD: patch-ah,v 1.1 2003/02/08 17:23:08 dmcmahill Exp $
+$NetBSD: patch-ah,v 1.2 2006/06/21 15:18:42 minskim Exp $
 
---- header.c.orig	Wed Dec  1 21:16:21 1999
-+++ header.c	Sat Feb  8 12:16:25 2003
-@@ -38,4 +38,5 @@
+--- header.c.orig	1999-12-02 02:16:21.000000000 +0000
++++ header.c
+@@ -36,7 +36,9 @@
+  */
+ 
  #include <stdio.h>
++#include <stdlib.h>
  #include <ctype.h>
 +#include <string.h>
  
  /*
+  * Manifest constants
+@@ -80,14 +82,6 @@ extern int optind, opterr;
+ extern char *optarg;
+ 
+ /*
+- * Library functions.
+- */
+-
+-extern char *malloc();
+-extern char *realloc();
+-extern void free();
+-
+-/*
+  * Global data
+  */
+ 
