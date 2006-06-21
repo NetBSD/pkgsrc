@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.5 2006/06/21 18:31:14 drochner Exp $
+
+--- src/input/input_cdda.c.orig	2006-06-21 13:33:04.000000000 +0200
++++ src/input/input_cdda.c
+@@ -32,7 +32,7 @@
+ #include <unistd.h>
+ 
+ #include <sys/types.h>
+-#ifdef SYS_PARAM_H
++#ifdef HAVE_SYS_PARAM_H
+ #include <sys/param.h>
+ #endif
+ #ifdef HAVE_DIRENT_H
