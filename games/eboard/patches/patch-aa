@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1 2006/06/21 14:59:36 joerg Exp $
+
+--- configure.orig	2006-06-21 14:27:15.000000000 +0000
++++ configure
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl
++#!/usr/pkg/bin/perl
+ 
+ use IO::Handle;
+ 
+@@ -237,7 +237,11 @@ sub header_check {
+ 	print "  $x";
+ 	$y = spaces(20 - length($x));
+ 	print "$y";
+-	$program = "#include <$x>\nint main() { return 0; }\n";
++	if ($x == "sys/socket.h") {
++	    $program = "#include <sys/types.h>\n#include <$x>\nint main() { return 0; }\n";
++	} else {
++	    $program = "#include <$x>\nint main() { return 0; }\n";
++	}
+ 	if (!open(TESTCC,">test.cc")) {
+ 	    print "cannot write test program, FAIL\n";
+ 	    return 0;
