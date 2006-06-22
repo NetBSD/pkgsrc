@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2005/12/29 06:21:32 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/06/22 21:50:38 rillig Exp $
 
 DISTNAME=		unixbench-4.1.0
 PKGNAME=		${DISTNAME:S/unix/byte/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		benchmarks
 MASTER_SITES=		http://www.tux.org/pub/tux/benchmarks/System/unixbench/
 EXTRACT_SUFX=		.tgz
@@ -22,6 +22,9 @@ BENCHMARK_ENV+=		TESTDIR=${WRKSRC}/tmp
 OWN_DIRS=		/var/bytebench
 
 INSTALLATION_DIRS=	bin
+
+REPLACE_PERL+=		pgms/perlbench
+USE_TOOLS+=		perl:run
 
 post-extract:
 	${RM} -f ${WRKSRC}/pgms/select
