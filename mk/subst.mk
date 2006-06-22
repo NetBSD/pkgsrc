@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.33 2006/06/17 22:42:00 rillig Exp $
+# $NetBSD: subst.mk,v 1.34 2006/06/22 20:45:48 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -54,7 +54,8 @@ SUBST_TARGETS+=			subst-${_class_}
 .  if defined(SUBST_STAGE.${_class_})
 ${SUBST_STAGE.${_class_}}: subst-${_class_}
 .  else
-PKG_FAIL_REASON+=	"SUBST_STAGE missing for ${_class_}."
+# SUBST_STAGE.* does not need to be defined.
+#PKG_FAIL_REASON+=	"SUBST_STAGE missing for ${_class_}."
 .  endif
 
 .PHONY: subst-${_class_}
