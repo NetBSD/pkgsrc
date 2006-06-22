@@ -1,86 +1,49 @@
-$NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
+$NetBSD: patch-aa,v 1.1 2006/06/22 18:52:00 jlam Exp $
 
---- configure.orig	2006-06-01 16:14:56.000000000 -0400
+--- configure.orig	2006-06-02 01:51:11.000000000 -0400
 +++ configure
-@@ -20042,12 +20042,10 @@ LIBTOOL='$(SHELL) $(top_builddir)/libtoo
- if test "x$GCC" = "xyes"; then
- 	case $CFLAGS in
- 	*-Os*)
--		CFLAGS="$CFLAGS -O2"
- 		;;
- 	esac
- 	case $CXXFLAGS in
- 	*-Os*)
--		CXXFLAGS="$CXXFLAGS -O2"
- 		;;
- 	esac
+@@ -20064,32 +20064,184 @@ if test "x$GCC" = "xyes"; then
  fi
-@@ -20073,13 +20071,206 @@ QALCULATE_AGE=0
  
  
++GETTEXT_PACKAGE=qalculate-bases
  
 -echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
 -echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
 -if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
 +
-+QALCULATE_TEXT=""
-+LN_QALCULATE=""
-+USE_READLINE="yes"
-+READLINE_LIBS=""
-+if test "x$enable_textport" = "xyes" ; then
-+  QALCULATE_TEXT="qalc"
-+  LN_QALCULATE="qalc"
++cat >>confdefs.h <<_ACEOF
++#define GETTEXT_PACKAGE "$GETTEXT_PACKAGE"
++_ACEOF
 +
-+  echo "$as_me:$LINENO: checking whether to use readline" >&5
-+echo $ECHO_N "checking whether to use readline... $ECHO_C" >&6
 +
-+# Check whether --with-readline or --without-readline was given.
-+if test "${with_readline+set}" = set; then
-+  withval="$with_readline"
-+  case "${withval}" in
-+      yes) USE_READLINE="yes" ; echo "$as_me:$LINENO: result: yes" >&5
-+echo "${ECHO_T}yes" >&6 ;;
-+      no) USE_READLINE="no" ; echo "$as_me:$LINENO: result: no" >&5
-+echo "${ECHO_T}no" >&6 ;;
-+      only) USE_READLINE="yes"
-+            EXTRA_LIBREADLINE_DEPS=" "
-+            echo "$as_me:$LINENO: result: yes (using only readline)" >&5
-+echo "${ECHO_T}yes (using only readline)" >&6 ;;
-+      *) USE_READLINE="yes"
-+         EXTRA_LIBREADLINE_DEPS="${withval}"
-+         echo "$as_me:$LINENO: result: yes (using extra libraries ${withval})" >&5
-+echo "${ECHO_T}yes (using extra libraries ${withval})" >&6 ;;
-+    esac
-+else
-+  echo "$as_me:$LINENO: result: ${USE_READLINE}" >&5
-+echo "${ECHO_T}${USE_READLINE}" >&6
-+fi;
-+
-+          if test "$USE_READLINE" = yes ; then
++ALL_LINGUAS="nl sv"
 +
 +
 +
-+for ac_header in readline/readline.h readline/history.h
++for ac_header in locale.h
 +do
 +as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
 +if eval "test \"\${$as_ac_Header+set}\" = set"; then
 +  echo "$as_me:$LINENO: checking for $ac_header" >&5
 +echo $ECHO_N "checking for $ac_header... $ECHO_C" >&6
 +if eval "test \"\${$as_ac_Header+set}\" = set"; then
-+  echo $ECHO_N "(cached) $ECHO_C" >&6
+   echo $ECHO_N "(cached) $ECHO_C" >&6
 +fi
 +echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_Header'}'`" >&5
 +echo "${ECHO_T}`eval echo '${'$as_ac_Header'}'`" >&6
-+else
+ else
+-  ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpthread  $LIBS"
 +  # Is the header compilable?
 +echo "$as_me:$LINENO: checking $ac_header usability" >&5
 +echo $ECHO_N "checking $ac_header usability... $ECHO_C" >&6
-+cat >conftest.$ac_ext <<_ACEOF
-+/* confdefs.h.  */
-+_ACEOF
-+cat confdefs.h >>conftest.$ac_ext
-+cat >>conftest.$ac_ext <<_ACEOF
-+/* end confdefs.h.  */
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
 +$ac_includes_default
 +#include <$ac_header>
 +_ACEOF
@@ -110,7 +73,14 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +else
 +  echo "$as_me: failed program was:" >&5
 +sed 's/^/| /' conftest.$ac_ext >&5
-+
+ 
+-/* Override any gcc2 internal prototype to avoid an error.  */
+-#ifdef __cplusplus
+-extern "C"
+-#endif
+-/* We use char because int might match the return type of a gcc2
+-   builtin and then its argument prototype would still apply.  */
+-char pthread_create ();
 +ac_header_compiler=no
 +fi
 +rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
@@ -209,38 +179,28 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +
 +done
 +
-+   if test "x${ac_cv_header_readline_readline_h}" != "xyes" -o "x${ac_cv_header_readline_history_h}" != "xyes"; then
-+     { echo "$as_me:$LINENO: WARNING: Could not find the headers for libreadline." >&5
-+echo "$as_me: WARNING: Could not find the headers for libreadline." >&2;}
-+   else
-+    if test "$EXTRA_LIBREADLINE_DEPS" = "" ; then
-+      unset ac_cv_lib_readline_readline
-+      echo "$as_me:$LINENO: checking for readline in -lreadline" >&5
-+echo $ECHO_N "checking for readline in -lreadline... $ECHO_C" >&6
-+if test "${ac_cv_lib_readline_readline+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-lpthread  $LIBS"
-+LIBS="-lreadline -lncurses $LIBS"
- cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
- _ACEOF
-@@ -20093,11 +20284,11 @@ extern "C"
- #endif
- /* We use char because int might match the return type of a gcc2
-    builtin and then its argument prototype would still apply.  */
--char pthread_create ();
-+char readline ();
++    if test $ac_cv_header_locale_h = yes; then
++    echo "$as_me:$LINENO: checking for LC_MESSAGES" >&5
++echo $ECHO_N "checking for LC_MESSAGES... $ECHO_C" >&6
++if test "${am_cv_val_LC_MESSAGES+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#include <locale.h>
  int
  main ()
  {
 -pthread_create ();
-+readline ();
++return LC_MESSAGES
    ;
    return 0;
  }
-@@ -20111,7 +20302,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -20103,7 +20255,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -249,38 +209,35 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
  			 || test ! -s conftest.err'
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
-@@ -20124,259 +20315,140 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -20116,885 +20268,361 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
 -  ac_cv_lib_pthread_pthread_create=yes
-+  ac_cv_lib_readline_readline=yes
++  am_cv_val_LC_MESSAGES=yes
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
 -ac_cv_lib_pthread_pthread_create=no
-+ac_cv_lib_readline_readline=no
++am_cv_val_LC_MESSAGES=no
  fi
  rm -f conftest.err conftest.$ac_objext \
        conftest$ac_exeext conftest.$ac_ext
- LIBS=$ac_check_lib_save_LIBS
- fi
+-LIBS=$ac_check_lib_save_LIBS
+-fi
 -echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
 -echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6
 -if test $ac_cv_lib_pthread_pthread_create = yes; then
 -  LIBS="$LIBS -lpthread"
-+echo "$as_me:$LINENO: result: $ac_cv_lib_readline_readline" >&5
-+echo "${ECHO_T}$ac_cv_lib_readline_readline" >&6
-+if test $ac_cv_lib_readline_readline = yes; then
-+  HAVE_LIBREADLINE=true
-+else
-+  HAVE_LIBREADLINE=false
  fi
++echo "$as_me:$LINENO: result: $am_cv_val_LC_MESSAGES" >&5
++echo "${ECHO_T}$am_cv_val_LC_MESSAGES" >&6
++    if test $am_cv_val_LC_MESSAGES = yes; then
  
-+      if test x${HAVE_LIBREADLINE} = xtrue ; then
-+        echo "  Using -lreadline -lncurses"
-+        EXTRA_LIBREADLINE_DEPS=-lncurses
++cat >>confdefs.h <<\_ACEOF
++#define HAVE_LC_MESSAGES 1
++_ACEOF
  
 -ac_ext=cc
 -ac_cpp='$CXXCPP $CPPFLAGS'
@@ -289,31 +246,17 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
 -
 -
-+cat >>confdefs.h <<\_ACEOF
-+#define HAVE_LIBREADLINE 1
-+_ACEOF
- 
+-
 -# Check whether --with-cln-prefix or --without-cln-prefix was given.
 -if test "${with_cln_prefix+set}" = set; then
 -  withval="$with_cln_prefix"
 -  cln_config_prefix="$withval"
-+      else
-+        unset ac_cv_lib_readline_readline
-+        echo "$as_me:$LINENO: checking for readline in -lreadline" >&5
-+echo $ECHO_N "checking for readline in -lreadline... $ECHO_C" >&6
-+if test "${ac_cv_lib_readline_readline+set}" = set; then
-+  echo $ECHO_N "(cached) $ECHO_C" >&6
- else
+-else
 -  cln_config_prefix=""
 -fi;
-+  ac_check_lib_save_LIBS=$LIBS
-+LIBS="-lreadline -lcurses $LIBS"
-+cat >conftest.$ac_ext <<_ACEOF
-+/* confdefs.h.  */
-+_ACEOF
-+cat confdefs.h >>conftest.$ac_ext
-+cat >>conftest.$ac_ext <<_ACEOF
-+/* end confdefs.h.  */
++    fi
++  fi
++     USE_NLS=yes
  
 -# Check whether --with-cln-exec-prefix or --without-cln-exec-prefix was given.
 -if test "${with_cln_exec_prefix+set}" = set; then
@@ -325,11 +268,12 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -# Check whether --enable-clntest or --disable-clntest was given.
 -if test "${enable_clntest+set}" = set; then
 -  enableval="$enable_clntest"
--
+ 
 -else
 -  enable_clntest=yes
 -fi;
--
++    gt_cv_have_gettext=no
+ 
 -if test x$cln_config_exec_prefix != x ; then
 -    cln_config_args="$cln_config_args --exec-prefix=$cln_config_exec_prefix"
 -    if test x${CLN_CONFIG+set} != xset ; then
@@ -342,14 +286,24 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -        CLN_CONFIG=$cln_config_prefix/bin/cln-config
 -    fi
 -fi
--
++    CATOBJEXT=NONE
++    XGETTEXT=:
++    INTLLIBS=
+ 
 -# Extract the first word of "cln-config", so it can be a program name with args.
 -set dummy cln-config; ac_word=$2
 -echo "$as_me:$LINENO: checking for $ac_word" >&5
 -echo $ECHO_N "checking for $ac_word... $ECHO_C" >&6
 -if test "${ac_cv_path_CLN_CONFIG+set}" = set; then
--  echo $ECHO_N "(cached) $ECHO_C" >&6
--else
++    if test "${ac_cv_header_libintl_h+set}" = set; then
++  echo "$as_me:$LINENO: checking for libintl.h" >&5
++echo $ECHO_N "checking for libintl.h... $ECHO_C" >&6
++if test "${ac_cv_header_libintl_h+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
++fi
++echo "$as_me:$LINENO: result: $ac_cv_header_libintl_h" >&5
++echo "${ECHO_T}$ac_cv_header_libintl_h" >&6
+ else
 -  case $CLN_CONFIG in
 -  [\\/]* | ?:[\\/]*)
 -  ac_cv_path_CLN_CONFIG="$CLN_CONFIG" # Let the user override the test with a path.
@@ -436,11 +390,15 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -  echo $ac_n "cross compiling; assumed OK... $ac_c"
 -else
 -  cat >conftest.$ac_ext <<_ACEOF
--/* confdefs.h.  */
--_ACEOF
--cat confdefs.h >>conftest.$ac_ext
--cat >>conftest.$ac_ext <<_ACEOF
--/* end confdefs.h.  */
++  # Is the header compilable?
++echo "$as_me:$LINENO: checking libintl.h usability" >&5
++echo $ECHO_N "checking libintl.h usability... $ECHO_C" >&6
++cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
 -
 -#include <stdio.h>
 -#include <string.h>
@@ -451,16 +409,7 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -extern "C" int system(const char *);
 -
 -int main(void)
-+/* Override any gcc2 internal prototype to avoid an error.  */
-+#ifdef __cplusplus
-+extern "C"
-+#endif
-+/* We use char because int might match the return type of a gcc2
-+   builtin and then its argument prototype would still apply.  */
-+char readline ();
-+int
-+main ()
- {
+-{
 -    system("touch conf.clntest");
 -
 -    if ((CL_VERSION_MAJOR != $cln_config_major_version) ||
@@ -482,17 +431,17 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -        return 1;
 -    }
 -    return 0;
-+readline ();
-+  ;
-+  return 0;
- }
+-}
 -
++$ac_includes_default
++#include <libintl.h>
  _ACEOF
 -rm -f conftest$ac_exeext
-+rm -f conftest.$ac_objext conftest$ac_exeext
- if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
+-if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
 -  (eval $ac_link) 2>&5
-+  (eval $ac_link) 2>conftest.er1
++rm -f conftest.$ac_objext
++if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
++  (eval $ac_compile) 2>conftest.er1
    ac_status=$?
 +  grep -v '^ *+' conftest.er1 >conftest.err
 +  rm -f conftest.er1
@@ -507,14 +456,14 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +  ac_status=$?
 +  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 +  (exit $ac_status); }; } &&
-+	 { ac_try='test -s conftest$ac_exeext'
++	 { ac_try='test -s conftest.$ac_objext'
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
 -  :
-+  ac_cv_lib_readline_readline=yes
++  ac_header_compiler=yes
  else
 -  echo "$as_me: program exited with status $ac_status" >&5
 -echo "$as_me: failed program was:" >&5
@@ -523,19 +472,9 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
  
 -( exit $ac_status )
 -no_cln=yes
-+ac_cv_lib_readline_readline=no
- fi
+-fi
 -rm -f core *.core gmon.out bb.out conftest$ac_exeext conftest.$ac_objext conftest.$ac_ext
-+rm -f conftest.err conftest.$ac_objext \
-+      conftest$ac_exeext conftest.$ac_ext
-+LIBS=$ac_check_lib_save_LIBS
-+fi
-+echo "$as_me:$LINENO: result: $ac_cv_lib_readline_readline" >&5
-+echo "${ECHO_T}$ac_cv_lib_readline_readline" >&6
-+if test $ac_cv_lib_readline_readline = yes; then
-+  HAVE_LIBREADLINE=true
-+else
-+  HAVE_LIBREADLINE=false
++ac_header_compiler=no
  fi
 -            CPPFLAGS="$ac_save_CPPFLAGS"
 -            LIBS="$ac_save_LIBS"
@@ -543,20 +482,19 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -        if test "x$no_cln" = x ; then
 -            echo "$as_me:$LINENO: result: yes, $cln_config_version" >&5
 -echo "${ECHO_T}yes, $cln_config_version" >&6
- 
+-
 -     	LIBS="$LIBS $CLN_LIBS"
 -     	CPPFLAGS="$CPPFLAGS $CLN_CPPFLAGS"
-+        if test x${HAVE_LIBREADLINE} = xtrue ; then
-+          echo "  Using -lreadline -lcurses"
-+          EXTRA_LIBREADLINE_DEPS=-lcurses
- 
- cat >>confdefs.h <<\_ACEOF
--#define HAVE_LIBCLN 1
-+#define HAVE_LIBREADLINE 1
- _ACEOF
- 
 -
-         else
+-cat >>confdefs.h <<\_ACEOF
+-#define HAVE_LIBCLN 1
+-_ACEOF
+-
++rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
++echo "$as_me:$LINENO: result: $ac_header_compiler" >&5
++echo "${ECHO_T}$ac_header_compiler" >&6
+ 
+-        else
 -            echo "$as_me:$LINENO: result: no" >&5
 -echo "${ECHO_T}no" >&6
 -            if test ! -f conf.clntest ; then
@@ -564,741 +502,23 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -                CPPFLAGS="$CFLAGS $CLN_CPPFLAGS"
 -                LIBS="$LIBS $CLN_LIBS"
 -                cat >conftest.$ac_ext <<_ACEOF
-+          unset ac_cv_lib_readline_readline
-+          echo "$as_me:$LINENO: checking for readline in -lreadline" >&5
-+echo $ECHO_N "checking for readline in -lreadline... $ECHO_C" >&6
-+if test "${ac_cv_lib_readline_readline+set}" = set; then
-+  echo $ECHO_N "(cached) $ECHO_C" >&6
-+else
-+  ac_check_lib_save_LIBS=$LIBS
-+LIBS="-lreadline -ltermcap $LIBS"
-+cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
- _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
- 
--#include <stdio.h>
--#include <cln/version.h>
--
-+/* Override any gcc2 internal prototype to avoid an error.  */
-+#ifdef __cplusplus
-+extern "C"
-+#endif
-+/* We use char because int might match the return type of a gcc2
-+   builtin and then its argument prototype would still apply.  */
-+char readline ();
- int
- main ()
- {
-- return 0;
-+readline ();
-   ;
-   return 0;
- }
-@@ -20403,328 +20475,230 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--   echo "*** The test program compiled, but did not run. This usually means"
--                  echo "*** that the run-time linker is not finding CLN or finding the wrong"
--                  echo "*** version of CLN. If it is not finding CLN, you'll need to set your"
--                  echo "*** LD_LIBRARY_PATH environment variable, or edit /etc/ld.so.conf to point"
--                  echo "*** to the installed location. Also, make sure you have run ldconfig if that"
--                  echo "*** is required on your system."
-+  ac_cv_lib_readline_readline=yes
- else
-   echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
- 
-- echo "*** The test program failed to compile or link. See the file config.log for the"
--                  echo "*** exact error that occured. This usually means CLN was incorrectly installed"
--                  echo "*** or that you have moved CLN since it was installed. In the latter case, you"
--                  echo "*** may want to edit the cln-config script: $CLN_CONFIG."
-+ac_cv_lib_readline_readline=no
- fi
- rm -f conftest.err conftest.$ac_objext \
-       conftest$ac_exeext conftest.$ac_ext
--                CPPFLAGS="$ac_save_CPPFLAGS"
--                LIBS="$ac_save_LIBS"
--            fi
--            CLN_CPPFLAGS=""
--            CLN_LIBS=""
--            { { echo "$as_me:$LINENO: error: No suitable installed version of CLN could be found." >&5
--echo "$as_me: error: No suitable installed version of CLN could be found." >&2;}
--   { (exit 1); exit 1; }; }
--        fi
--    fi
-+LIBS=$ac_check_lib_save_LIBS
-+fi
-+echo "$as_me:$LINENO: result: $ac_cv_lib_readline_readline" >&5
-+echo "${ECHO_T}$ac_cv_lib_readline_readline" >&6
-+if test $ac_cv_lib_readline_readline = yes; then
-+  HAVE_LIBREADLINE=true
-+else
-+  HAVE_LIBREADLINE=false
- fi
- 
-+          if test x${HAVE_LIBREADLINE} = xtrue ; then
-+            echo "  Using -lreadline -ltermcap"
-+            EXTRA_LIBREADLINE_DEPS=-ltermcap
- 
--rm -f conf.clntest
--
--
--
--
-+cat >>confdefs.h <<\_ACEOF
-+#define HAVE_LIBREADLINE 1
-+_ACEOF
- 
--if test "x$ac_cv_env_PKG_CONFIG_set" != "xset"; then
--	if test -n "$ac_tool_prefix"; then
--  # Extract the first word of "${ac_tool_prefix}pkg-config", so it can be a program name with args.
--set dummy ${ac_tool_prefix}pkg-config; ac_word=$2
--echo "$as_me:$LINENO: checking for $ac_word" >&5
--echo $ECHO_N "checking for $ac_word... $ECHO_C" >&6
--if test "${ac_cv_path_PKG_CONFIG+set}" = set; then
-+          else
-+            unset ac_cv_lib_readline_readline
-+            echo "$as_me:$LINENO: checking for readline in -lreadline" >&5
-+echo $ECHO_N "checking for readline in -lreadline... $ECHO_C" >&6
-+if test "${ac_cv_lib_readline_readline+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
--  case $PKG_CONFIG in
--  [\\/]* | ?:[\\/]*)
--  ac_cv_path_PKG_CONFIG="$PKG_CONFIG" # Let the user override the test with a path.
--  ;;
--  *)
--  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
--for as_dir in $PATH
--do
--  IFS=$as_save_IFS
--  test -z "$as_dir" && as_dir=.
--  for ac_exec_ext in '' $ac_executable_extensions; do
--  if $as_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
--    ac_cv_path_PKG_CONFIG="$as_dir/$ac_word$ac_exec_ext"
--    echo "$as_me:$LINENO: found $as_dir/$ac_word$ac_exec_ext" >&5
--    break 2
--  fi
--done
--done
--
--  ;;
--esac
--fi
--PKG_CONFIG=$ac_cv_path_PKG_CONFIG
--
--if test -n "$PKG_CONFIG"; then
--  echo "$as_me:$LINENO: result: $PKG_CONFIG" >&5
--echo "${ECHO_T}$PKG_CONFIG" >&6
--else
--  echo "$as_me:$LINENO: result: no" >&5
--echo "${ECHO_T}no" >&6
--fi
-+  ac_check_lib_save_LIBS=$LIBS
-+LIBS="-lreadline  $LIBS"
-+cat >conftest.$ac_ext <<_ACEOF
-+/* confdefs.h.  */
-+_ACEOF
-+cat confdefs.h >>conftest.$ac_ext
-+cat >>conftest.$ac_ext <<_ACEOF
-+/* end confdefs.h.  */
- 
--fi
--if test -z "$ac_cv_path_PKG_CONFIG"; then
--  ac_pt_PKG_CONFIG=$PKG_CONFIG
--  # Extract the first word of "pkg-config", so it can be a program name with args.
--set dummy pkg-config; ac_word=$2
--echo "$as_me:$LINENO: checking for $ac_word" >&5
--echo $ECHO_N "checking for $ac_word... $ECHO_C" >&6
--if test "${ac_cv_path_ac_pt_PKG_CONFIG+set}" = set; then
--  echo $ECHO_N "(cached) $ECHO_C" >&6
-+/* Override any gcc2 internal prototype to avoid an error.  */
-+#ifdef __cplusplus
-+extern "C"
-+#endif
-+/* We use char because int might match the return type of a gcc2
-+   builtin and then its argument prototype would still apply.  */
-+char readline ();
-+int
-+main ()
-+{
-+readline ();
-+  ;
-+  return 0;
-+}
-+_ACEOF
-+rm -f conftest.$ac_objext conftest$ac_exeext
-+if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
-+  (eval $ac_link) 2>conftest.er1
-+  ac_status=$?
-+  grep -v '^ *+' conftest.er1 >conftest.err
-+  rm -f conftest.er1
-+  cat conftest.err >&5
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); } &&
-+	 { ac_try='test -z "$ac_cxx_werror_flag"
-+			 || test ! -s conftest.err'
-+  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-+  (eval $ac_try) 2>&5
-+  ac_status=$?
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); }; } &&
-+	 { ac_try='test -s conftest$ac_exeext'
-+  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-+  (eval $ac_try) 2>&5
-+  ac_status=$?
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); }; }; then
-+  ac_cv_lib_readline_readline=yes
- else
--  case $ac_pt_PKG_CONFIG in
--  [\\/]* | ?:[\\/]*)
--  ac_cv_path_ac_pt_PKG_CONFIG="$ac_pt_PKG_CONFIG" # Let the user override the test with a path.
--  ;;
--  *)
--  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
--for as_dir in $PATH
--do
--  IFS=$as_save_IFS
--  test -z "$as_dir" && as_dir=.
--  for ac_exec_ext in '' $ac_executable_extensions; do
--  if $as_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
--    ac_cv_path_ac_pt_PKG_CONFIG="$as_dir/$ac_word$ac_exec_ext"
--    echo "$as_me:$LINENO: found $as_dir/$ac_word$ac_exec_ext" >&5
--    break 2
--  fi
--done
--done
-+  echo "$as_me: failed program was:" >&5
-+sed 's/^/| /' conftest.$ac_ext >&5
- 
--  ;;
--esac
-+ac_cv_lib_readline_readline=no
- fi
--ac_pt_PKG_CONFIG=$ac_cv_path_ac_pt_PKG_CONFIG
--
--if test -n "$ac_pt_PKG_CONFIG"; then
--  echo "$as_me:$LINENO: result: $ac_pt_PKG_CONFIG" >&5
--echo "${ECHO_T}$ac_pt_PKG_CONFIG" >&6
--else
--  echo "$as_me:$LINENO: result: no" >&5
--echo "${ECHO_T}no" >&6
-+rm -f conftest.err conftest.$ac_objext \
-+      conftest$ac_exeext conftest.$ac_ext
-+LIBS=$ac_check_lib_save_LIBS
- fi
--
--  PKG_CONFIG=$ac_pt_PKG_CONFIG
-+echo "$as_me:$LINENO: result: $ac_cv_lib_readline_readline" >&5
-+echo "${ECHO_T}$ac_cv_lib_readline_readline" >&6
-+if test $ac_cv_lib_readline_readline = yes; then
-+  HAVE_LIBREADLINE=true
- else
--  PKG_CONFIG="$ac_cv_path_PKG_CONFIG"
-+  HAVE_LIBREADLINE=false
- fi
- 
--fi
--if test -n "$PKG_CONFIG"; then
--	_pkg_min_version=0.9.0
--	echo "$as_me:$LINENO: checking pkg-config is at least version $_pkg_min_version" >&5
--echo $ECHO_N "checking pkg-config is at least version $_pkg_min_version... $ECHO_C" >&6
--	if $PKG_CONFIG --atleast-pkgconfig-version $_pkg_min_version; then
--		echo "$as_me:$LINENO: result: yes" >&5
--echo "${ECHO_T}yes" >&6
--	else
--		echo "$as_me:$LINENO: result: no" >&5
--echo "${ECHO_T}no" >&6
--		PKG_CONFIG=""
--	fi
--
--fi
-+            if test x${HAVE_LIBREADLINE} = xtrue ; then
- 
--pkg_failed=no
--echo "$as_me:$LINENO: checking for GLIB" >&5
--echo $ECHO_N "checking for GLIB... $ECHO_C" >&6
-+cat >>confdefs.h <<\_ACEOF
-+#define HAVE_LIBREADLINE 1
-+_ACEOF
- 
--if test -n "$PKG_CONFIG"; then
--    if test -n "$GLIB_CFLAGS"; then
--        pkg_cv_GLIB_CFLAGS="$GLIB_CFLAGS"
-+            fi
-+          fi
-+        fi
-+      fi
-     else
--        if test -n "$PKG_CONFIG" && \
--    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"
--	glib-2.0
--	libxml-2.0 >= 2.3.8
--	\"") >&5
--  ($PKG_CONFIG --exists --print-errors "
--	glib-2.0
--	libxml-2.0 >= 2.3.8
--	") 2>&5
--  ac_status=$?
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); }; then
--  pkg_cv_GLIB_CFLAGS=`$PKG_CONFIG --cflags "
--	glib-2.0
--	libxml-2.0 >= 2.3.8
--	" 2>/dev/null`
--else
--  pkg_failed=yes
--fi
--    fi
-+      unset ac_cv_lib_readline_readline
-+      echo "$as_me:$LINENO: checking for readline in -lreadline" >&5
-+echo $ECHO_N "checking for readline in -lreadline... $ECHO_C" >&6
-+if test "${ac_cv_lib_readline_readline+set}" = set; then
-+  echo $ECHO_N "(cached) $ECHO_C" >&6
- else
--	pkg_failed=untried
--fi
--if test -n "$PKG_CONFIG"; then
--    if test -n "$GLIB_LIBS"; then
--        pkg_cv_GLIB_LIBS="$GLIB_LIBS"
--    else
--        if test -n "$PKG_CONFIG" && \
--    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"
--	glib-2.0
--	libxml-2.0 >= 2.3.8
--	\"") >&5
--  ($PKG_CONFIG --exists --print-errors "
--	glib-2.0
--	libxml-2.0 >= 2.3.8
--	") 2>&5
-+  ac_check_lib_save_LIBS=$LIBS
-+LIBS="-lreadline ${EXTRA_LIBREADLINE_DEPS} $LIBS"
-+cat >conftest.$ac_ext <<_ACEOF
-+/* confdefs.h.  */
-+_ACEOF
-+cat confdefs.h >>conftest.$ac_ext
-+cat >>conftest.$ac_ext <<_ACEOF
-+/* end confdefs.h.  */
-+
-+/* Override any gcc2 internal prototype to avoid an error.  */
-+#ifdef __cplusplus
-+extern "C"
-+#endif
-+/* We use char because int might match the return type of a gcc2
-+   builtin and then its argument prototype would still apply.  */
-+char readline ();
-+int
-+main ()
-+{
-+readline ();
-+  ;
-+  return 0;
-+}
-+_ACEOF
-+rm -f conftest.$ac_objext conftest$ac_exeext
-+if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
-+  (eval $ac_link) 2>conftest.er1
-+  ac_status=$?
-+  grep -v '^ *+' conftest.er1 >conftest.err
-+  rm -f conftest.er1
-+  cat conftest.err >&5
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); } &&
-+	 { ac_try='test -z "$ac_cxx_werror_flag"
-+			 || test ! -s conftest.err'
-+  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-+  (eval $ac_try) 2>&5
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); }; then
--  pkg_cv_GLIB_LIBS=`$PKG_CONFIG --libs "
--	glib-2.0
--	libxml-2.0 >= 2.3.8
--	" 2>/dev/null`
-+  (exit $ac_status); }; } &&
-+	 { ac_try='test -s conftest$ac_exeext'
-+  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-+  (eval $ac_try) 2>&5
-+  ac_status=$?
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); }; }; then
-+  ac_cv_lib_readline_readline=yes
- else
--  pkg_failed=yes
-+  echo "$as_me: failed program was:" >&5
-+sed 's/^/| /' conftest.$ac_ext >&5
-+
-+ac_cv_lib_readline_readline=no
- fi
--    fi
--else
--	pkg_failed=untried
-+rm -f conftest.err conftest.$ac_objext \
-+      conftest$ac_exeext conftest.$ac_ext
-+LIBS=$ac_check_lib_save_LIBS
- fi
--
--
--
--if test $pkg_failed = yes; then
--
--if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
--        _pkg_short_errors_supported=yes
-+echo "$as_me:$LINENO: result: $ac_cv_lib_readline_readline" >&5
-+echo "${ECHO_T}$ac_cv_lib_readline_readline" >&6
-+if test $ac_cv_lib_readline_readline = yes; then
-+  HAVE_LIBREADLINE=true
- else
--        _pkg_short_errors_supported=no
-+  HAVE_LIBREADLINE=false
- fi
--        if test $_pkg_short_errors_supported = yes; then
--	        GLIB_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "
--	glib-2.0
--	libxml-2.0 >= 2.3.8
--	"`
--        else
--	        GLIB_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "
--	glib-2.0
--	libxml-2.0 >= 2.3.8
--	"`
--        fi
--	# Put the nasty error message in config.log where it belongs
--	echo "$GLIB_PKG_ERRORS" >&5
--
--	{ { echo "$as_me:$LINENO: error: Package requirements (
--	glib-2.0
--	libxml-2.0 >= 2.3.8
--	) were not met:
- 
--$GLIB_PKG_ERRORS
--
--Consider adjusting the PKG_CONFIG_PATH environment variable if you
--installed software in a non-standard prefix.
-+      if test x${HAVE_LIBREADLINE} = xtrue ; then
-+        echo "  Using -lreadline ${EXTRA_LIBREADLINE_DEPS}"
- 
--Alternatively, you may set the environment variables GLIB_CFLAGS
--and GLIB_LIBS to avoid the need to call pkg-config.
--See the pkg-config man page for more details.
--" >&5
--echo "$as_me: error: Package requirements (
--	glib-2.0
--	libxml-2.0 >= 2.3.8
--	) were not met:
-+cat >>confdefs.h <<\_ACEOF
-+#define HAVE_LIBREADLINE 1
-+_ACEOF
- 
--$GLIB_PKG_ERRORS
-+      fi
-+    fi
-+    if test x${HAVE_LIBREADLINE} = xtrue; then
-+      READLINE_LIBS="-lreadline -lhistory ${EXTRA_LIBREADLINE_DEPS}"
-+    else
-+      { echo "$as_me:$LINENO: WARNING: Could not find libreadline." >&5
-+echo "$as_me: WARNING: Could not find libreadline." >&2;}
-+    fi
-+   fi
-+  fi
-+fi
- 
--Consider adjusting the PKG_CONFIG_PATH environment variable if you
--installed software in a non-standard prefix.
- 
--Alternatively, you may set the environment variables GLIB_CFLAGS
--and GLIB_LIBS to avoid the need to call pkg-config.
--See the pkg-config man page for more details.
--" >&2;}
--   { (exit 1); exit 1; }; }
--elif test $pkg_failed = untried; then
--	{ { echo "$as_me:$LINENO: error: The pkg-config script could not be found or is too old.  Make sure it
--is in your PATH or set the PKG_CONFIG environment variable to the full
--path to pkg-config.
- 
--Alternatively, you may set the environment variables GLIB_CFLAGS
--and GLIB_LIBS to avoid the need to call pkg-config.
--See the pkg-config man page for more details.
- 
--To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
--See \`config.log' for more details." >&5
--echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
--is in your PATH or set the PKG_CONFIG environment variable to the full
--path to pkg-config.
- 
--Alternatively, you may set the environment variables GLIB_CFLAGS
--and GLIB_LIBS to avoid the need to call pkg-config.
--See the pkg-config man page for more details.
- 
--To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
--See \`config.log' for more details." >&2;}
--   { (exit 1); exit 1; }; }
--else
--	GLIB_CFLAGS=$pkg_cv_GLIB_CFLAGS
--	GLIB_LIBS=$pkg_cv_GLIB_LIBS
--        echo "$as_me:$LINENO: result: yes" >&5
--echo "${ECHO_T}yes" >&6
--	:
-+QALCULATE_DEFS2DOC=""
-+if test "x$enable_defs2doc" = "xyes" ; then
-+	QALCULATE_DEFS2DOC="defs2doc"
- fi
- 
- 
- 
-+GETTEXT_PACKAGE=libqalculate
- 
--QALCULATE_TEXT=""
--LN_QALCULATE=""
--USE_READLINE="yes"
--READLINE_LIBS=""
--if test "x$enable_textport" = "xyes" ; then
--  QALCULATE_TEXT="qalc"
--  LN_QALCULATE="qalc"
--
--  echo "$as_me:$LINENO: checking whether to use readline" >&5
--echo $ECHO_N "checking whether to use readline... $ECHO_C" >&6
- 
--# Check whether --with-readline or --without-readline was given.
--if test "${with_readline+set}" = set; then
--  withval="$with_readline"
--  case "${withval}" in
--      yes) USE_READLINE="yes" ; echo "$as_me:$LINENO: result: yes" >&5
--echo "${ECHO_T}yes" >&6 ;;
--      no) USE_READLINE="no" ; echo "$as_me:$LINENO: result: no" >&5
--echo "${ECHO_T}no" >&6 ;;
--      only) USE_READLINE="yes"
--            EXTRA_LIBREADLINE_DEPS=" "
--            echo "$as_me:$LINENO: result: yes (using only readline)" >&5
--echo "${ECHO_T}yes (using only readline)" >&6 ;;
--      *) USE_READLINE="yes"
--         EXTRA_LIBREADLINE_DEPS="${withval}"
--         echo "$as_me:$LINENO: result: yes (using extra libraries ${withval})" >&5
--echo "${ECHO_T}yes (using extra libraries ${withval})" >&6 ;;
--    esac
--else
--  echo "$as_me:$LINENO: result: ${USE_READLINE}" >&5
--echo "${ECHO_T}${USE_READLINE}" >&6
--fi;
-+cat >>confdefs.h <<_ACEOF
-+#define GETTEXT_PACKAGE "$GETTEXT_PACKAGE"
-+_ACEOF
- 
--          if test "$USE_READLINE" = yes ; then
- 
-+ALL_LINGUAS="nl sv"
- 
- 
--for ac_header in readline/readline.h readline/history.h
-+for ac_header in locale.h
- do
- as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
- if eval "test \"\${$as_ac_Header+set}\" = set"; then
-@@ -20873,44 +20847,102 @@ fi
- 
- done
- 
--   if test "x${ac_cv_header_readline_readline_h}" != "xyes" -o "x${ac_cv_header_readline_history_h}" != "xyes"; then
--     { echo "$as_me:$LINENO: WARNING: Could not find the headers for libreadline." >&5
--echo "$as_me: WARNING: Could not find the headers for libreadline." >&2;}
--   else
--    if test "$EXTRA_LIBREADLINE_DEPS" = "" ; then
--      unset ac_cv_lib_readline_readline
--      echo "$as_me:$LINENO: checking for readline in -lreadline" >&5
--echo $ECHO_N "checking for readline in -lreadline... $ECHO_C" >&6
--if test "${ac_cv_lib_readline_readline+set}" = set; then
-+    if test $ac_cv_header_locale_h = yes; then
-+    echo "$as_me:$LINENO: checking for LC_MESSAGES" >&5
-+echo $ECHO_N "checking for LC_MESSAGES... $ECHO_C" >&6
-+if test "${am_cv_val_LC_MESSAGES+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
--  ac_check_lib_save_LIBS=$LIBS
--LIBS="-lreadline -lncurses $LIBS"
--cat >conftest.$ac_ext <<_ACEOF
-+  cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
- _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
--
--/* Override any gcc2 internal prototype to avoid an error.  */
--#ifdef __cplusplus
--extern "C"
--#endif
--/* We use char because int might match the return type of a gcc2
--   builtin and then its argument prototype would still apply.  */
--char readline ();
-+#include <locale.h>
- int
- main ()
- {
--readline ();
-+return LC_MESSAGES
-   ;
-   return 0;
- }
- _ACEOF
--rm -f conftest.$ac_objext conftest$ac_exeext
--if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
--  (eval $ac_link) 2>conftest.er1
-+rm -f conftest.$ac_objext conftest$ac_exeext
-+if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
-+  (eval $ac_link) 2>conftest.er1
-+  ac_status=$?
-+  grep -v '^ *+' conftest.er1 >conftest.err
-+  rm -f conftest.er1
-+  cat conftest.err >&5
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); } &&
-+	 { ac_try='test -z "$ac_cxx_werror_flag"
-+			 || test ! -s conftest.err'
-+  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-+  (eval $ac_try) 2>&5
-+  ac_status=$?
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); }; } &&
-+	 { ac_try='test -s conftest$ac_exeext'
-+  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-+  (eval $ac_try) 2>&5
-+  ac_status=$?
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); }; }; then
-+  am_cv_val_LC_MESSAGES=yes
-+else
-+  echo "$as_me: failed program was:" >&5
-+sed 's/^/| /' conftest.$ac_ext >&5
-+
-+am_cv_val_LC_MESSAGES=no
-+fi
-+rm -f conftest.err conftest.$ac_objext \
-+      conftest$ac_exeext conftest.$ac_ext
-+fi
-+echo "$as_me:$LINENO: result: $am_cv_val_LC_MESSAGES" >&5
-+echo "${ECHO_T}$am_cv_val_LC_MESSAGES" >&6
-+    if test $am_cv_val_LC_MESSAGES = yes; then
-+
-+cat >>confdefs.h <<\_ACEOF
-+#define HAVE_LC_MESSAGES 1
-+_ACEOF
-+
-+    fi
-+  fi
-+     USE_NLS=yes
-+
-+
-+    gt_cv_have_gettext=no
-+
-+    CATOBJEXT=NONE
-+    XGETTEXT=:
-+    INTLLIBS=
-+
-+    if test "${ac_cv_header_libintl_h+set}" = set; then
-+  echo "$as_me:$LINENO: checking for libintl.h" >&5
-+echo $ECHO_N "checking for libintl.h... $ECHO_C" >&6
-+if test "${ac_cv_header_libintl_h+set}" = set; then
-+  echo $ECHO_N "(cached) $ECHO_C" >&6
-+fi
-+echo "$as_me:$LINENO: result: $ac_cv_header_libintl_h" >&5
-+echo "${ECHO_T}$ac_cv_header_libintl_h" >&6
-+else
-+  # Is the header compilable?
-+echo "$as_me:$LINENO: checking libintl.h usability" >&5
-+echo $ECHO_N "checking libintl.h usability... $ECHO_C" >&6
-+cat >conftest.$ac_ext <<_ACEOF
-+/* confdefs.h.  */
-+_ACEOF
-+cat confdefs.h >>conftest.$ac_ext
-+cat >>conftest.$ac_ext <<_ACEOF
-+/* end confdefs.h.  */
-+$ac_includes_default
-+#include <libintl.h>
-+_ACEOF
-+rm -f conftest.$ac_objext
-+if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
-+  (eval $ac_compile) 2>conftest.er1
-   ac_status=$?
-   grep -v '^ *+' conftest.er1 >conftest.err
-   rm -f conftest.er1
-@@ -20924,146 +20956,131 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; } &&
--	 { ac_try='test -s conftest$ac_exeext'
-+	 { ac_try='test -s conftest.$ac_objext'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  ac_cv_lib_readline_readline=yes
-+  ac_header_compiler=yes
- else
-   echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
- 
--ac_cv_lib_readline_readline=no
--fi
--rm -f conftest.err conftest.$ac_objext \
--      conftest$ac_exeext conftest.$ac_ext
--LIBS=$ac_check_lib_save_LIBS
--fi
--echo "$as_me:$LINENO: result: $ac_cv_lib_readline_readline" >&5
--echo "${ECHO_T}$ac_cv_lib_readline_readline" >&6
--if test $ac_cv_lib_readline_readline = yes; then
--  HAVE_LIBREADLINE=true
--else
--  HAVE_LIBREADLINE=false
-+ac_header_compiler=no
- fi
-+rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
-+echo "$as_me:$LINENO: result: $ac_header_compiler" >&5
-+echo "${ECHO_T}$ac_header_compiler" >&6
- 
--      if test x${HAVE_LIBREADLINE} = xtrue ; then
--        echo "  Using -lreadline -lncurses"
--        EXTRA_LIBREADLINE_DEPS=-lncurses
--
--cat >>confdefs.h <<\_ACEOF
--#define HAVE_LIBREADLINE 1
--_ACEOF
--
--      else
--        unset ac_cv_lib_readline_readline
--        echo "$as_me:$LINENO: checking for readline in -lreadline" >&5
--echo $ECHO_N "checking for readline in -lreadline... $ECHO_C" >&6
--if test "${ac_cv_lib_readline_readline+set}" = set; then
--  echo $ECHO_N "(cached) $ECHO_C" >&6
--else
--  ac_check_lib_save_LIBS=$LIBS
--LIBS="-lreadline -lcurses $LIBS"
 +# Is the header present?
 +echo "$as_me:$LINENO: checking libintl.h presence" >&5
 +echo $ECHO_N "checking libintl.h presence... $ECHO_C" >&6
- cat >conftest.$ac_ext <<_ACEOF
++cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
 -
--/* Override any gcc2 internal prototype to avoid an error.  */
--#ifdef __cplusplus
--extern "C"
--#endif
--/* We use char because int might match the return type of a gcc2
--   builtin and then its argument prototype would still apply.  */
--char readline ();
+-#include <stdio.h>
+-#include <cln/version.h>
+-
 -int
 -main ()
 -{
--readline ();
+- return 0;
 -  ;
 -  return 0;
 -}
@@ -1328,7 +548,12 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -  ac_status=$?
 -  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); }; }; then
--  ac_cv_lib_readline_readline=yes
+-   echo "*** The test program compiled, but did not run. This usually means"
+-                  echo "*** that the run-time linker is not finding CLN or finding the wrong"
+-                  echo "*** version of CLN. If it is not finding CLN, you'll need to set your"
+-                  echo "*** LD_LIBRARY_PATH environment variable, or edit /etc/ld.so.conf to point"
+-                  echo "*** to the installed location. Also, make sure you have run ldconfig if that"
+-                  echo "*** is required on your system."
 +  (exit $ac_status); } >/dev/null; then
 +  if test -s conftest.err; then
 +    ac_cpp_err=$ac_cxx_preproc_warn_flag
@@ -1345,21 +570,42 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
--ac_cv_lib_readline_readline=no
+- echo "*** The test program failed to compile or link. See the file config.log for the"
+-                  echo "*** exact error that occured. This usually means CLN was incorrectly installed"
+-                  echo "*** or that you have moved CLN since it was installed. In the latter case, you"
+-                  echo "*** may want to edit the cln-config script: $CLN_CONFIG."
 -fi
 -rm -f conftest.err conftest.$ac_objext \
 -      conftest$ac_exeext conftest.$ac_ext
--LIBS=$ac_check_lib_save_LIBS
+-                CPPFLAGS="$ac_save_CPPFLAGS"
+-                LIBS="$ac_save_LIBS"
+-            fi
+-            CLN_CPPFLAGS=""
+-            CLN_LIBS=""
+-            { { echo "$as_me:$LINENO: error: No suitable installed version of CLN could be found." >&5
+-echo "$as_me: error: No suitable installed version of CLN could be found." >&2;}
+-   { (exit 1); exit 1; }; }
+-        fi
+-    fi
 +  ac_header_preproc=no
  fi
--echo "$as_me:$LINENO: result: $ac_cv_lib_readline_readline" >&5
--echo "${ECHO_T}$ac_cv_lib_readline_readline" >&6
--if test $ac_cv_lib_readline_readline = yes; then
--  HAVE_LIBREADLINE=true
 +rm -f conftest.err conftest.$ac_ext
 +echo "$as_me:$LINENO: result: $ac_header_preproc" >&5
 +echo "${ECHO_T}$ac_header_preproc" >&6
-+
+ 
+-
+-rm -f conf.clntest
+-
+-
+-
+-
+-if test "x$ac_cv_env_PKG_CONFIG_set" != "xset"; then
+-	if test -n "$ac_tool_prefix"; then
+-  # Extract the first word of "${ac_tool_prefix}pkg-config", so it can be a program name with args.
+-set dummy ${ac_tool_prefix}pkg-config; ac_word=$2
+-echo "$as_me:$LINENO: checking for $ac_word" >&5
+-echo $ECHO_N "checking for $ac_word... $ECHO_C" >&6
+-if test "${ac_cv_path_PKG_CONFIG+set}" = set; then
 +# So?  What about this header?
 +case $ac_header_compiler:$ac_header_preproc:$ac_cxx_preproc_warn_flag in
 +  yes:no: )
@@ -1395,31 +641,54 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +echo "$as_me:$LINENO: checking for libintl.h" >&5
 +echo $ECHO_N "checking for libintl.h... $ECHO_C" >&6
 +if test "${ac_cv_header_libintl_h+set}" = set; then
-+  echo $ECHO_N "(cached) $ECHO_C" >&6
+   echo $ECHO_N "(cached) $ECHO_C" >&6
  else
--  HAVE_LIBREADLINE=false
+-  case $PKG_CONFIG in
+-  [\\/]* | ?:[\\/]*)
+-  ac_cv_path_PKG_CONFIG="$PKG_CONFIG" # Let the user override the test with a path.
+-  ;;
+-  *)
+-  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+-for as_dir in $PATH
+-do
+-  IFS=$as_save_IFS
+-  test -z "$as_dir" && as_dir=.
+-  for ac_exec_ext in '' $ac_executable_extensions; do
+-  if $as_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+-    ac_cv_path_PKG_CONFIG="$as_dir/$ac_word$ac_exec_ext"
+-    echo "$as_me:$LINENO: found $as_dir/$ac_word$ac_exec_ext" >&5
+-    break 2
+-  fi
+-done
+-done
+-
+-  ;;
+-esac
 +  ac_cv_header_libintl_h=$ac_header_preproc
  fi
+-PKG_CONFIG=$ac_cv_path_PKG_CONFIG
 +echo "$as_me:$LINENO: result: $ac_cv_header_libintl_h" >&5
 +echo "${ECHO_T}$ac_cv_header_libintl_h" >&6
  
--        if test x${HAVE_LIBREADLINE} = xtrue ; then
--          echo "  Using -lreadline -lcurses"
--          EXTRA_LIBREADLINE_DEPS=-lcurses
--
--cat >>confdefs.h <<\_ACEOF
--#define HAVE_LIBREADLINE 1
--_ACEOF
-+fi
+-if test -n "$PKG_CONFIG"; then
+-  echo "$as_me:$LINENO: result: $PKG_CONFIG" >&5
+-echo "${ECHO_T}$PKG_CONFIG" >&6
+-else
+-  echo "$as_me:$LINENO: result: no" >&5
+-echo "${ECHO_T}no" >&6
+ fi
 +if test $ac_cv_header_libintl_h = yes; then
 +  gt_cv_func_dgettext_libintl="no"
 +      libintl_extra_libs=""
  
--        else
--          unset ac_cv_lib_readline_readline
--          echo "$as_me:$LINENO: checking for readline in -lreadline" >&5
--echo $ECHO_N "checking for readline in -lreadline... $ECHO_C" >&6
--if test "${ac_cv_lib_readline_readline+set}" = set; then
+-fi
+-if test -z "$ac_cv_path_PKG_CONFIG"; then
+-  ac_pt_PKG_CONFIG=$PKG_CONFIG
+-  # Extract the first word of "pkg-config", so it can be a program name with args.
+-set dummy pkg-config; ac_word=$2
+-echo "$as_me:$LINENO: checking for $ac_word" >&5
+-echo $ECHO_N "checking for $ac_word... $ECHO_C" >&6
+-if test "${ac_cv_path_ac_pt_PKG_CONFIG+set}" = set; then
 +      #
 +      # First check in libc
 +      #
@@ -1428,164 +697,611 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +if test "${gt_cv_func_ngettext_libc+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
--  ac_check_lib_save_LIBS=$LIBS
--LIBS="-lreadline -ltermcap $LIBS"
--cat >conftest.$ac_ext <<_ACEOF
+-  case $ac_pt_PKG_CONFIG in
+-  [\\/]* | ?:[\\/]*)
+-  ac_cv_path_ac_pt_PKG_CONFIG="$ac_pt_PKG_CONFIG" # Let the user override the test with a path.
+-  ;;
+-  *)
+-  as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+-for as_dir in $PATH
+-do
+-  IFS=$as_save_IFS
+-  test -z "$as_dir" && as_dir=.
+-  for ac_exec_ext in '' $ac_executable_extensions; do
+-  if $as_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+-    ac_cv_path_ac_pt_PKG_CONFIG="$as_dir/$ac_word$ac_exec_ext"
+-    echo "$as_me:$LINENO: found $as_dir/$ac_word$ac_exec_ext" >&5
+-    break 2
+-  fi
+-done
+-done
 +  cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
- _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
  
--/* Override any gcc2 internal prototype to avoid an error.  */
--#ifdef __cplusplus
--extern "C"
--#endif
--/* We use char because int might match the return type of a gcc2
--   builtin and then its argument prototype would still apply.  */
--char readline ();
+-  ;;
+-esac
+-fi
+-ac_pt_PKG_CONFIG=$ac_cv_path_ac_pt_PKG_CONFIG
 +#include <libintl.h>
-+
- int
- main ()
- {
--readline ();
+ 
+-if test -n "$ac_pt_PKG_CONFIG"; then
+-  echo "$as_me:$LINENO: result: $ac_pt_PKG_CONFIG" >&5
+-echo "${ECHO_T}$ac_pt_PKG_CONFIG" >&6
++int
++main ()
++{
 +return !ngettext ("","", 1)
-   ;
-   return 0;
- }
-@@ -21090,60 +21107,39 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  ac_cv_lib_readline_readline=yes
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
++  (eval $ac_link) 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } &&
++	 { ac_try='test -z "$ac_cxx_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest$ac_exeext'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
 +  gt_cv_func_ngettext_libc=yes
  else
-   echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
+-  echo "$as_me:$LINENO: result: no" >&5
+-echo "${ECHO_T}no" >&6
+-fi
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
  
--ac_cv_lib_readline_readline=no
+-  PKG_CONFIG=$ac_pt_PKG_CONFIG
+-else
+-  PKG_CONFIG="$ac_cv_path_PKG_CONFIG"
 +gt_cv_func_ngettext_libc=no
- fi
- rm -f conftest.err conftest.$ac_objext \
-       conftest$ac_exeext conftest.$ac_ext
--LIBS=$ac_check_lib_save_LIBS
--fi
--echo "$as_me:$LINENO: result: $ac_cv_lib_readline_readline" >&5
--echo "${ECHO_T}$ac_cv_lib_readline_readline" >&6
--if test $ac_cv_lib_readline_readline = yes; then
--  HAVE_LIBREADLINE=true
--else
--  HAVE_LIBREADLINE=false
--fi
- 
--          if test x${HAVE_LIBREADLINE} = xtrue ; then
--            echo "  Using -lreadline -ltermcap"
--            EXTRA_LIBREADLINE_DEPS=-ltermcap
--
--cat >>confdefs.h <<\_ACEOF
--#define HAVE_LIBREADLINE 1
--_ACEOF
-+fi
-+echo "$as_me:$LINENO: result: $gt_cv_func_ngettext_libc" >&5
-+echo "${ECHO_T}$gt_cv_func_ngettext_libc" >&6
- 
--          else
--            unset ac_cv_lib_readline_readline
--            echo "$as_me:$LINENO: checking for readline in -lreadline" >&5
--echo $ECHO_N "checking for readline in -lreadline... $ECHO_C" >&6
--if test "${ac_cv_lib_readline_readline+set}" = set; then
-+      if test "$gt_cv_func_ngettext_libc" = "yes" ; then
-+	      echo "$as_me:$LINENO: checking for dgettext in libc" >&5
-+echo $ECHO_N "checking for dgettext in libc... $ECHO_C" >&6
-+if test "${gt_cv_func_dgettext_libc+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
--  ac_check_lib_save_LIBS=$LIBS
--LIBS="-lreadline  $LIBS"
--cat >conftest.$ac_ext <<_ACEOF
-+  cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
- _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
- 
--/* Override any gcc2 internal prototype to avoid an error.  */
--#ifdef __cplusplus
--extern "C"
--#endif
--/* We use char because int might match the return type of a gcc2
--   builtin and then its argument prototype would still apply.  */
--char readline ();
-+#include <libintl.h>
-+
- int
- main ()
- {
--readline ();
-+return !dgettext ("","")
-   ;
-   return 0;
- }
-@@ -21170,62 +21166,78 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  ac_cv_lib_readline_readline=yes
-+  gt_cv_func_dgettext_libc=yes
- else
-   echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
- 
--ac_cv_lib_readline_readline=no
--fi
--rm -f conftest.err conftest.$ac_objext \
--      conftest$ac_exeext conftest.$ac_ext
--LIBS=$ac_check_lib_save_LIBS
--fi
--echo "$as_me:$LINENO: result: $ac_cv_lib_readline_readline" >&5
--echo "${ECHO_T}$ac_cv_lib_readline_readline" >&6
--if test $ac_cv_lib_readline_readline = yes; then
--  HAVE_LIBREADLINE=true
--else
--  HAVE_LIBREADLINE=false
-+gt_cv_func_dgettext_libc=no
  fi
 +rm -f conftest.err conftest.$ac_objext \
 +      conftest$ac_exeext conftest.$ac_ext
  
--            if test x${HAVE_LIBREADLINE} = xtrue ; then
-+fi
+ fi
+-if test -n "$PKG_CONFIG"; then
+-	_pkg_min_version=0.9.0
+-	echo "$as_me:$LINENO: checking pkg-config is at least version $_pkg_min_version" >&5
+-echo $ECHO_N "checking pkg-config is at least version $_pkg_min_version... $ECHO_C" >&6
+-	if $PKG_CONFIG --atleast-pkgconfig-version $_pkg_min_version; then
+-		echo "$as_me:$LINENO: result: yes" >&5
+-echo "${ECHO_T}yes" >&6
+-	else
+-		echo "$as_me:$LINENO: result: no" >&5
+-echo "${ECHO_T}no" >&6
+-		PKG_CONFIG=""
+-	fi
++echo "$as_me:$LINENO: result: $gt_cv_func_ngettext_libc" >&5
++echo "${ECHO_T}$gt_cv_func_ngettext_libc" >&6
+ 
+-fi
++      if test "$gt_cv_func_ngettext_libc" = "yes" ; then
++	      echo "$as_me:$LINENO: checking for dgettext in libc" >&5
++echo $ECHO_N "checking for dgettext in libc... $ECHO_C" >&6
++if test "${gt_cv_func_dgettext_libc+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
+ 
+-pkg_failed=no
+-echo "$as_me:$LINENO: checking for GLIB" >&5
+-echo $ECHO_N "checking for GLIB... $ECHO_C" >&6
++#include <libintl.h>
+ 
+-if test -n "$PKG_CONFIG"; then
+-    if test -n "$GLIB_CFLAGS"; then
+-        pkg_cv_GLIB_CFLAGS="$GLIB_CFLAGS"
+-    else
+-        if test -n "$PKG_CONFIG" && \
+-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"
+-	glib-2.0 >= 2.4
+-	libxml-2.0
+-	\"") >&5
+-  ($PKG_CONFIG --exists --print-errors "
+-	glib-2.0 >= 2.4
+-	libxml-2.0
+-	") 2>&5
++int
++main ()
++{
++return !dgettext ("","")
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
++  (eval $ac_link) 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } &&
++	 { ac_try='test -z "$ac_cxx_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; then
+-  pkg_cv_GLIB_CFLAGS=`$PKG_CONFIG --cflags "
+-	glib-2.0 >= 2.4
+-	libxml-2.0
+-	" 2>/dev/null`
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest$ac_exeext'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++  gt_cv_func_dgettext_libc=yes
+ else
+-  pkg_failed=yes
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++gt_cv_func_dgettext_libc=no
+ fi
+-    fi
+-else
+-	pkg_failed=untried
++rm -f conftest.err conftest.$ac_objext \
++      conftest$ac_exeext conftest.$ac_ext
++
+ fi
+-if test -n "$PKG_CONFIG"; then
+-    if test -n "$GLIB_LIBS"; then
+-        pkg_cv_GLIB_LIBS="$GLIB_LIBS"
+-    else
+-        if test -n "$PKG_CONFIG" && \
+-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"
+-	glib-2.0 >= 2.4
+-	libxml-2.0
+-	\"") >&5
+-  ($PKG_CONFIG --exists --print-errors "
+-	glib-2.0 >= 2.4
+-	libxml-2.0
+-	") 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; then
+-  pkg_cv_GLIB_LIBS=`$PKG_CONFIG --libs "
+-	glib-2.0 >= 2.4
+-	libxml-2.0
+-	" 2>/dev/null`
+-else
+-  pkg_failed=yes
+-fi
+-    fi
+-else
+-	pkg_failed=untried
+-fi
+-
+-
+-
+-if test $pkg_failed = yes; then
+-
+-if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
+-        _pkg_short_errors_supported=yes
+-else
+-        _pkg_short_errors_supported=no
+-fi
+-        if test $_pkg_short_errors_supported = yes; then
+-	        GLIB_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "
+-	glib-2.0 >= 2.4
+-	libxml-2.0
+-	"`
+-        else
+-	        GLIB_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "
+-	glib-2.0 >= 2.4
+-	libxml-2.0
+-	"`
+-        fi
+-	# Put the nasty error message in config.log where it belongs
+-	echo "$GLIB_PKG_ERRORS" >&5
+-
+-	{ { echo "$as_me:$LINENO: error: Package requirements (
+-	glib-2.0 >= 2.4
+-	libxml-2.0
+-	) were not met:
+-
+-$GLIB_PKG_ERRORS
+-
+-Consider adjusting the PKG_CONFIG_PATH environment variable if you
+-installed software in a non-standard prefix.
+-
+-Alternatively, you may set the environment variables GLIB_CFLAGS
+-and GLIB_LIBS to avoid the need to call pkg-config.
+-See the pkg-config man page for more details.
+-" >&5
+-echo "$as_me: error: Package requirements (
+-	glib-2.0 >= 2.4
+-	libxml-2.0
+-	) were not met:
+-
+-$GLIB_PKG_ERRORS
+-
+-Consider adjusting the PKG_CONFIG_PATH environment variable if you
+-installed software in a non-standard prefix.
+-
+-Alternatively, you may set the environment variables GLIB_CFLAGS
+-and GLIB_LIBS to avoid the need to call pkg-config.
+-See the pkg-config man page for more details.
+-" >&2;}
+-   { (exit 1); exit 1; }; }
+-elif test $pkg_failed = untried; then
+-	{ { echo "$as_me:$LINENO: error: The pkg-config script could not be found or is too old.  Make sure it
+-is in your PATH or set the PKG_CONFIG environment variable to the full
+-path to pkg-config.
+-
+-Alternatively, you may set the environment variables GLIB_CFLAGS
+-and GLIB_LIBS to avoid the need to call pkg-config.
+-See the pkg-config man page for more details.
+-
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
+-See \`config.log' for more details." >&5
+-echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
+-is in your PATH or set the PKG_CONFIG environment variable to the full
+-path to pkg-config.
+-
+-Alternatively, you may set the environment variables GLIB_CFLAGS
+-and GLIB_LIBS to avoid the need to call pkg-config.
+-See the pkg-config man page for more details.
+-
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
+-See \`config.log' for more details." >&2;}
+-   { (exit 1); exit 1; }; }
+-else
+-	GLIB_CFLAGS=$pkg_cv_GLIB_CFLAGS
+-	GLIB_LIBS=$pkg_cv_GLIB_LIBS
+-        echo "$as_me:$LINENO: result: yes" >&5
+-echo "${ECHO_T}yes" >&6
+-	:
+-fi
+-
+-
+-
+-
+-pkg_failed=no
+-echo "$as_me:$LINENO: checking for GTK" >&5
+-echo $ECHO_N "checking for GTK... $ECHO_C" >&6
+-
+-if test -n "$PKG_CONFIG"; then
+-    if test -n "$GTK_CFLAGS"; then
+-        pkg_cv_GTK_CFLAGS="$GTK_CFLAGS"
+-    else
+-        if test -n "$PKG_CONFIG" && \
+-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"
+-	gtk+-2.0 >= 2.4
+-	gdk-pixbuf-2.0
+-	\"") >&5
+-  ($PKG_CONFIG --exists --print-errors "
+-	gtk+-2.0 >= 2.4
+-	gdk-pixbuf-2.0
+-	") 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; then
+-  pkg_cv_GTK_CFLAGS=`$PKG_CONFIG --cflags "
+-	gtk+-2.0 >= 2.4
+-	gdk-pixbuf-2.0
+-	" 2>/dev/null`
+-else
+-  pkg_failed=yes
+-fi
+-    fi
+-else
+-	pkg_failed=untried
+-fi
+-if test -n "$PKG_CONFIG"; then
+-    if test -n "$GTK_LIBS"; then
+-        pkg_cv_GTK_LIBS="$GTK_LIBS"
+-    else
+-        if test -n "$PKG_CONFIG" && \
+-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"
+-	gtk+-2.0 >= 2.4
+-	gdk-pixbuf-2.0
+-	\"") >&5
+-  ($PKG_CONFIG --exists --print-errors "
+-	gtk+-2.0 >= 2.4
+-	gdk-pixbuf-2.0
+-	") 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; then
+-  pkg_cv_GTK_LIBS=`$PKG_CONFIG --libs "
+-	gtk+-2.0 >= 2.4
+-	gdk-pixbuf-2.0
+-	" 2>/dev/null`
+-else
+-  pkg_failed=yes
+-fi
+-    fi
+-else
+-	pkg_failed=untried
+-fi
+-
+-
+-
+-if test $pkg_failed = yes; then
+-
+-if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
+-        _pkg_short_errors_supported=yes
+-else
+-        _pkg_short_errors_supported=no
+-fi
+-        if test $_pkg_short_errors_supported = yes; then
+-	        GTK_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "
+-	gtk+-2.0 >= 2.4
+-	gdk-pixbuf-2.0
+-	"`
+-        else
+-	        GTK_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "
+-	gtk+-2.0 >= 2.4
+-	gdk-pixbuf-2.0
+-	"`
+-        fi
+-	# Put the nasty error message in config.log where it belongs
+-	echo "$GTK_PKG_ERRORS" >&5
+-
+-	{ { echo "$as_me:$LINENO: error: Package requirements (
+-	gtk+-2.0 >= 2.4
+-	gdk-pixbuf-2.0
+-	) were not met:
+-
+-$GTK_PKG_ERRORS
+-
+-Consider adjusting the PKG_CONFIG_PATH environment variable if you
+-installed software in a non-standard prefix.
+-
+-Alternatively, you may set the environment variables GTK_CFLAGS
+-and GTK_LIBS to avoid the need to call pkg-config.
+-See the pkg-config man page for more details.
+-" >&5
+-echo "$as_me: error: Package requirements (
+-	gtk+-2.0 >= 2.4
+-	gdk-pixbuf-2.0
+-	) were not met:
+-
+-$GTK_PKG_ERRORS
+-
+-Consider adjusting the PKG_CONFIG_PATH environment variable if you
+-installed software in a non-standard prefix.
+-
+-Alternatively, you may set the environment variables GTK_CFLAGS
+-and GTK_LIBS to avoid the need to call pkg-config.
+-See the pkg-config man page for more details.
+-" >&2;}
+-   { (exit 1); exit 1; }; }
+-elif test $pkg_failed = untried; then
+-	{ { echo "$as_me:$LINENO: error: The pkg-config script could not be found or is too old.  Make sure it
+-is in your PATH or set the PKG_CONFIG environment variable to the full
+-path to pkg-config.
+-
+-Alternatively, you may set the environment variables GTK_CFLAGS
+-and GTK_LIBS to avoid the need to call pkg-config.
+-See the pkg-config man page for more details.
+-
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
+-See \`config.log' for more details." >&5
+-echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
+-is in your PATH or set the PKG_CONFIG environment variable to the full
+-path to pkg-config.
+-
+-Alternatively, you may set the environment variables GTK_CFLAGS
+-and GTK_LIBS to avoid the need to call pkg-config.
+-See the pkg-config man page for more details.
+-
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
+-See \`config.log' for more details." >&2;}
+-   { (exit 1); exit 1; }; }
+-else
+-	GTK_CFLAGS=$pkg_cv_GTK_CFLAGS
+-	GTK_LIBS=$pkg_cv_GTK_LIBS
+-        echo "$as_me:$LINENO: result: yes" >&5
+-echo "${ECHO_T}yes" >&6
+-	:
+-fi
+-
+-
+-
+-
+-pkg_failed=no
+-echo "$as_me:$LINENO: checking for QALCULATE" >&5
+-echo $ECHO_N "checking for QALCULATE... $ECHO_C" >&6
+-
+-if test -n "$PKG_CONFIG"; then
+-    if test -n "$QALCULATE_CFLAGS"; then
+-        pkg_cv_QALCULATE_CFLAGS="$QALCULATE_CFLAGS"
+-    else
+-        if test -n "$PKG_CONFIG" && \
+-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"
+-	libqalculate >= 0.9.4
+-	\"") >&5
+-  ($PKG_CONFIG --exists --print-errors "
+-	libqalculate >= 0.9.4
+-	") 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; then
+-  pkg_cv_QALCULATE_CFLAGS=`$PKG_CONFIG --cflags "
+-	libqalculate >= 0.9.4
+-	" 2>/dev/null`
+-else
+-  pkg_failed=yes
+-fi
+-    fi
+-else
+-	pkg_failed=untried
+-fi
+-if test -n "$PKG_CONFIG"; then
+-    if test -n "$QALCULATE_LIBS"; then
+-        pkg_cv_QALCULATE_LIBS="$QALCULATE_LIBS"
+-    else
+-        if test -n "$PKG_CONFIG" && \
+-    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"
+-	libqalculate >= 0.9.4
+-	\"") >&5
+-  ($PKG_CONFIG --exists --print-errors "
+-	libqalculate >= 0.9.4
+-	") 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; then
+-  pkg_cv_QALCULATE_LIBS=`$PKG_CONFIG --libs "
+-	libqalculate >= 0.9.4
+-	" 2>/dev/null`
+-else
+-  pkg_failed=yes
+-fi
+-    fi
+-else
+-	pkg_failed=untried
+-fi
+-
+-
+-
+-if test $pkg_failed = yes; then
+-
+-if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
+-        _pkg_short_errors_supported=yes
+-else
+-        _pkg_short_errors_supported=no
+-fi
+-        if test $_pkg_short_errors_supported = yes; then
+-	        QALCULATE_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "
+-	libqalculate >= 0.9.4
+-	"`
+-        else
+-	        QALCULATE_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "
+-	libqalculate >= 0.9.4
+-	"`
+-        fi
+-	# Put the nasty error message in config.log where it belongs
+-	echo "$QALCULATE_PKG_ERRORS" >&5
+-
+-	{ { echo "$as_me:$LINENO: error: Package requirements (
+-	libqalculate >= 0.9.4
+-	) were not met:
+-
+-$QALCULATE_PKG_ERRORS
+-
+-Consider adjusting the PKG_CONFIG_PATH environment variable if you
+-installed software in a non-standard prefix.
+-
+-Alternatively, you may set the environment variables QALCULATE_CFLAGS
+-and QALCULATE_LIBS to avoid the need to call pkg-config.
+-See the pkg-config man page for more details.
+-" >&5
+-echo "$as_me: error: Package requirements (
+-	libqalculate >= 0.9.4
+-	) were not met:
+-
+-$QALCULATE_PKG_ERRORS
+-
+-Consider adjusting the PKG_CONFIG_PATH environment variable if you
+-installed software in a non-standard prefix.
+-
+-Alternatively, you may set the environment variables QALCULATE_CFLAGS
+-and QALCULATE_LIBS to avoid the need to call pkg-config.
+-See the pkg-config man page for more details.
+-" >&2;}
+-   { (exit 1); exit 1; }; }
+-elif test $pkg_failed = untried; then
+-	{ { echo "$as_me:$LINENO: error: The pkg-config script could not be found or is too old.  Make sure it
+-is in your PATH or set the PKG_CONFIG environment variable to the full
+-path to pkg-config.
+-
+-Alternatively, you may set the environment variables QALCULATE_CFLAGS
+-and QALCULATE_LIBS to avoid the need to call pkg-config.
+-See the pkg-config man page for more details.
+-
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
+-See \`config.log' for more details." >&5
+-echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
+-is in your PATH or set the PKG_CONFIG environment variable to the full
+-path to pkg-config.
+-
+-Alternatively, you may set the environment variables QALCULATE_CFLAGS
+-and QALCULATE_LIBS to avoid the need to call pkg-config.
+-See the pkg-config man page for more details.
+-
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
+-See \`config.log' for more details." >&2;}
+-   { (exit 1); exit 1; }; }
+-else
+-	QALCULATE_CFLAGS=$pkg_cv_QALCULATE_CFLAGS
+-	QALCULATE_LIBS=$pkg_cv_QALCULATE_LIBS
+-        echo "$as_me:$LINENO: result: yes" >&5
+-echo "${ECHO_T}yes" >&6
+-	:
+-fi
+-
+-
+-
+-
+-GETTEXT_PACKAGE=qalculate-bases
+-
+-
+-cat >>confdefs.h <<_ACEOF
+-#define GETTEXT_PACKAGE "$GETTEXT_PACKAGE"
+-_ACEOF
+-
+-
+-ALL_LINGUAS="nl sv"
+-
 +echo "$as_me:$LINENO: result: $gt_cv_func_dgettext_libc" >&5
 +echo "${ECHO_T}$gt_cv_func_dgettext_libc" >&6
 +      fi
  
--cat >>confdefs.h <<\_ACEOF
--#define HAVE_LIBREADLINE 1
--_ACEOF
 +      if test "$gt_cv_func_ngettext_libc" = "yes" ; then
  
--            fi
--          fi
--        fi
--      fi
--    else
--      unset ac_cv_lib_readline_readline
--      echo "$as_me:$LINENO: checking for readline in -lreadline" >&5
--echo $ECHO_N "checking for readline in -lreadline... $ECHO_C" >&6
--if test "${ac_cv_lib_readline_readline+set}" = set; then
+-for ac_header in locale.h
 +for ac_func in bind_textdomain_codeset
-+do
+ do
+-as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+-if eval "test \"\${$as_ac_Header+set}\" = set"; then
+-  echo "$as_me:$LINENO: checking for $ac_header" >&5
+-echo $ECHO_N "checking for $ac_header... $ECHO_C" >&6
+-if eval "test \"\${$as_ac_Header+set}\" = set"; then
 +as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
 +echo "$as_me:$LINENO: checking for $ac_func" >&5
 +echo $ECHO_N "checking for $ac_func... $ECHO_C" >&6
 +if eval "test \"\${$as_ac_var+set}\" = set"; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
+-fi
+-echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_Header'}'`" >&5
+-echo "${ECHO_T}`eval echo '${'$as_ac_Header'}'`" >&6
  else
--  ac_check_lib_save_LIBS=$LIBS
--LIBS="-lreadline ${EXTRA_LIBREADLINE_DEPS} $LIBS"
+-  # Is the header compilable?
+-echo "$as_me:$LINENO: checking $ac_header usability" >&5
+-echo $ECHO_N "checking $ac_header usability... $ECHO_C" >&6
 -cat >conftest.$ac_ext <<_ACEOF
 +  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
@@ -1593,6 +1309,8 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
+-$ac_includes_default
+-#include <$ac_header>
 +/* Define $ac_func to an innocuous variant, in case <limits.h> declares $ac_func.
 +   For example, HP-UX 11i <limits.h> declares gettimeofday.  */
 +#define $ac_func innocuous_$ac_func
@@ -1609,15 +1327,14 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +#endif
 +
 +#undef $ac_func
- 
- /* Override any gcc2 internal prototype to avoid an error.  */
- #ifdef __cplusplus
- extern "C"
++
++/* Override any gcc2 internal prototype to avoid an error.  */
++#ifdef __cplusplus
++extern "C"
 +{
- #endif
- /* We use char because int might match the return type of a gcc2
-    builtin and then its argument prototype would still apply.  */
--char readline ();
++#endif
++/* We use char because int might match the return type of a gcc2
++   builtin and then its argument prototype would still apply.  */
 +char $ac_func ();
 +/* The GNU C library defines this for functions which it implements
 +    to always fail with ENOSYS.  Some functions are actually named
@@ -1631,112 +1348,76 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +}
 +#endif
 +
- int
- main ()
- {
--readline ();
++int
++main ()
++{
 +return f != $ac_func;
-   ;
-   return 0;
- }
-@@ -21252,94 +21264,67 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
++  ;
++  return 0;
++}
+ _ACEOF
+-rm -f conftest.$ac_objext
+-if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
+-  (eval $ac_compile) 2>conftest.er1
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
++  (eval $ac_link) 2>conftest.er1
+   ac_status=$?
+   grep -v '^ *+' conftest.er1 >conftest.err
+   rm -f conftest.er1
+@@ -21008,132 +20636,131 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest.$ac_objext'
++	 { ac_try='test -s conftest$ac_exeext'
+   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+   (eval $ac_try) 2>&5
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
--  ac_cv_lib_readline_readline=yes
+-  ac_header_compiler=yes
 +  eval "$as_ac_var=yes"
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
--ac_cv_lib_readline_readline=no
+-ac_header_compiler=no
 +eval "$as_ac_var=no"
  fi
- rm -f conftest.err conftest.$ac_objext \
-       conftest$ac_exeext conftest.$ac_ext
--LIBS=$ac_check_lib_save_LIBS
--fi
--echo "$as_me:$LINENO: result: $ac_cv_lib_readline_readline" >&5
--echo "${ECHO_T}$ac_cv_lib_readline_readline" >&6
--if test $ac_cv_lib_readline_readline = yes; then
--  HAVE_LIBREADLINE=true
--else
--  HAVE_LIBREADLINE=false
- fi
--
--      if test x${HAVE_LIBREADLINE} = xtrue ; then
--        echo "  Using -lreadline ${EXTRA_LIBREADLINE_DEPS}"
--
--cat >>confdefs.h <<\_ACEOF
--#define HAVE_LIBREADLINE 1
+-rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+-echo "$as_me:$LINENO: result: $ac_header_compiler" >&5
+-echo "${ECHO_T}$ac_header_compiler" >&6
++rm -f conftest.err conftest.$ac_objext \
++      conftest$ac_exeext conftest.$ac_ext
++fi
 +echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_var'}'`" >&5
 +echo "${ECHO_T}`eval echo '${'$as_ac_var'}'`" >&6
 +if test `eval echo '${'$as_ac_var'}'` = yes; then
 +  cat >>confdefs.h <<_ACEOF
 +#define `echo "HAVE_$ac_func" | $as_tr_cpp` 1
- _ACEOF
++_ACEOF
  
--      fi
--    fi
--    if test x${HAVE_LIBREADLINE} = xtrue; then
--      READLINE_LIBS="-lreadline -lhistory ${EXTRA_LIBREADLINE_DEPS}"
--    else
--      { echo "$as_me:$LINENO: WARNING: Could not find libreadline." >&5
--echo "$as_me: WARNING: Could not find libreadline." >&2;}
--    fi
--   fi
--  fi
--fi
--
--
--
--
--
--
--QALCULATE_DEFS2DOC=""
--if test "x$enable_defs2doc" = "xyes" ; then
--	QALCULATE_DEFS2DOC="defs2doc"
- fi
+-# Is the header present?
+-echo "$as_me:$LINENO: checking $ac_header presence" >&5
+-echo $ECHO_N "checking $ac_header presence... $ECHO_C" >&6
++fi
 +done
- 
++
 +      fi
- 
++
 +      #
 +      # If we don't have everything we want, check in libintl
 +      #
 +      if test "$gt_cv_func_dgettext_libc" != "yes" \
 +	 || test "$gt_cv_func_ngettext_libc" != "yes" \
 +         || test "$ac_cv_func_bind_textdomain_codeset" != "yes" ; then
- 
--GETTEXT_PACKAGE=libqalculate
--
--
--cat >>confdefs.h <<_ACEOF
--#define GETTEXT_PACKAGE "$GETTEXT_PACKAGE"
--_ACEOF
--
--
--ALL_LINGUAS="nl sv"
--
--
--for ac_header in locale.h
--do
--as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
--if eval "test \"\${$as_ac_Header+set}\" = set"; then
--  echo "$as_me:$LINENO: checking for $ac_header" >&5
--echo $ECHO_N "checking for $ac_header... $ECHO_C" >&6
--if eval "test \"\${$as_ac_Header+set}\" = set"; then
++
 +        echo "$as_me:$LINENO: checking for bindtextdomain in -lintl" >&5
 +echo $ECHO_N "checking for bindtextdomain in -lintl... $ECHO_C" >&6
 +if test "${ac_cv_lib_intl_bindtextdomain+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
--fi
--echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_Header'}'`" >&5
--echo "${ECHO_T}`eval echo '${'$as_ac_Header'}'`" >&6
- else
--  # Is the header compilable?
--echo "$as_me:$LINENO: checking $ac_header usability" >&5
--echo $ECHO_N "checking $ac_header usability... $ECHO_C" >&6
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
 +  ac_check_lib_save_LIBS=$LIBS
 +LIBS="-lintl  $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
@@ -1745,7 +1426,6 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
--$ac_includes_default
 -#include <$ac_header>
 +
 +/* Override any gcc2 internal prototype to avoid an error.  */
@@ -1763,55 +1443,16 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +  return 0;
 +}
  _ACEOF
--rm -f conftest.$ac_objext
--if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
--  (eval $ac_compile) 2>conftest.er1
+-if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
+-  (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
 +rm -f conftest.$ac_objext conftest$ac_exeext
 +if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
 +  (eval $ac_link) 2>conftest.er1
    ac_status=$?
    grep -v '^ *+' conftest.er1 >conftest.err
    rm -f conftest.er1
-@@ -21353,132 +21338,51 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
-   ac_status=$?
+   cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; } &&
--	 { ac_try='test -s conftest.$ac_objext'
-+	 { ac_try='test -s conftest$ac_exeext'
-   { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
-   (eval $ac_try) 2>&5
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; }; then
--  ac_header_compiler=yes
--else
--  echo "$as_me: failed program was:" >&5
--sed 's/^/| /' conftest.$ac_ext >&5
--
--ac_header_compiler=no
--fi
--rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
--echo "$as_me:$LINENO: result: $ac_header_compiler" >&5
--echo "${ECHO_T}$ac_header_compiler" >&6
--
--# Is the header present?
--echo "$as_me:$LINENO: checking $ac_header presence" >&5
--echo $ECHO_N "checking $ac_header presence... $ECHO_C" >&6
--cat >conftest.$ac_ext <<_ACEOF
--/* confdefs.h.  */
--_ACEOF
--cat confdefs.h >>conftest.$ac_ext
--cat >>conftest.$ac_ext <<_ACEOF
--/* end confdefs.h.  */
--#include <$ac_header>
--_ACEOF
--if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
--  (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
--  ac_status=$?
--  grep -v '^ *+' conftest.er1 >conftest.err
--  rm -f conftest.er1
--  cat conftest.err >&5
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); } >/dev/null; then
 -  if test -s conftest.err; then
 -    ac_cpp_err=$ac_cxx_preproc_warn_flag
@@ -1870,6 +1511,20 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -echo $ECHO_N "checking for $ac_header... $ECHO_C" >&6
 -if eval "test \"\${$as_ac_Header+set}\" = set"; then
 -  echo $ECHO_N "(cached) $ECHO_C" >&6
++  (exit $ac_status); } &&
++	 { ac_try='test -z "$ac_cxx_werror_flag"
++			 || test ! -s conftest.err'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; } &&
++	 { ac_try='test -s conftest$ac_exeext'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
 +  ac_cv_lib_intl_bindtextdomain=yes
  else
 -  eval "$as_ac_Header=\$ac_header_preproc"
@@ -1931,7 +1586,7 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
    ;
    return 0;
  }
-@@ -21505,59 +21409,52 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -21160,59 +20787,52 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -2020,7 +1675,7 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
    ac_status=$?
    grep -v '^ *+' conftest.er1 >conftest.err
    rm -f conftest.er1
-@@ -21571,131 +21468,129 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
+@@ -21226,131 +20846,129 @@ if { (eval echo "$as_me:$LINENO: \"$ac_c
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; } &&
@@ -2135,8 +1790,8 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +  ac_cv_lib_intl_ngettext=yes
  else
    echo "$as_me: failed program was:" >&5
- sed 's/^/| /' conftest.$ac_ext >&5
- 
+-sed 's/^/| /' conftest.$ac_ext >&5
+-
 -  ac_header_preproc=no
 -fi
 -rm -f conftest.err conftest.$ac_ext
@@ -2184,7 +1839,8 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -fi
 -echo "$as_me:$LINENO: result: $ac_cv_header_libintl_h" >&5
 -echo "${ECHO_T}$ac_cv_header_libintl_h" >&6
--
++sed 's/^/| /' conftest.$ac_ext >&5
+ 
 +ac_cv_lib_intl_ngettext=no
  fi
 -if test $ac_cv_header_libintl_h = yes; then
@@ -2236,7 +1892,7 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
    ;
    return 0;
  }
-@@ -21722,24 +21617,48 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -21377,24 +20995,48 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -2293,7 +1949,7 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -21748,13 +21667,47 @@ _ACEOF
+@@ -21403,13 +21045,47 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
@@ -2343,7 +1999,7 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
    ;
    return 0;
  }
-@@ -21781,24 +21734,94 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -21436,24 +21112,94 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -2444,22 +2100,10 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
  echo "$as_me:$LINENO: checking for $ac_func" >&5
-@@ -21897,42 +21920,96 @@ if test `eval echo '${'$as_ac_var'}'` = 
- _ACEOF
- 
+@@ -21554,40 +21300,94 @@ _ACEOF
  fi
--done
--
--      fi
--
--      #
--      # If we don't have everything we want, check in libintl
--      #
--      if test "$gt_cv_func_dgettext_libc" != "yes" \
--	 || test "$gt_cv_func_ngettext_libc" != "yes" \
--         || test "$ac_cv_func_bind_textdomain_codeset" != "yes" ; then
-+done
-+
+ done
+ 
 +	  # Extract the first word of "gmsgfmt", so it can be a program name with args.
 +set dummy gmsgfmt; ac_word=$2
 +echo "$as_me:$LINENO: checking for $ac_word" >&5
@@ -2519,7 +2163,19 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +      if test -z "`$ac_dir/$ac_word -h 2>&1 | grep '(HELP)'`"; then
 +	ac_cv_path_XGETTEXT="$ac_dir/$ac_word"
 +	break
-+      fi
+       fi
+-
+-      #
+-      # If we don't have everything we want, check in libintl
+-      #
+-      if test "$gt_cv_func_dgettext_libc" != "yes" \
+-	 || test "$gt_cv_func_ngettext_libc" != "yes" \
+-         || test "$ac_cv_func_bind_textdomain_codeset" != "yes" ; then
+-
+-        echo "$as_me:$LINENO: checking for bindtextdomain in -lintl" >&5
+-echo $ECHO_N "checking for bindtextdomain in -lintl... $ECHO_C" >&6
+-if test "${ac_cv_lib_intl_bindtextdomain+set}" = set; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
 +    fi
 +  done
 +  IFS="$ac_save_ifs"
@@ -2531,19 +2187,14 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +if test "$XGETTEXT" != ":"; then
 +  echo "$as_me:$LINENO: result: $XGETTEXT" >&5
 +echo "${ECHO_T}$XGETTEXT" >&6
-+else
-+  echo "$as_me:$LINENO: result: no" >&5
-+echo "${ECHO_T}no" >&6
-+fi
- 
--        echo "$as_me:$LINENO: checking for bindtextdomain in -lintl" >&5
--echo $ECHO_N "checking for bindtextdomain in -lintl... $ECHO_C" >&6
--if test "${ac_cv_lib_intl_bindtextdomain+set}" = set; then
--  echo $ECHO_N "(cached) $ECHO_C" >&6
--else
+ else
 -  ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lintl  $LIBS"
 -cat >conftest.$ac_ext <<_ACEOF
++  echo "$as_me:$LINENO: result: no" >&5
++echo "${ECHO_T}no" >&6
++fi
++
 +	  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
@@ -2567,7 +2218,7 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
    ;
    return 0;
  }
-@@ -21959,45 +22036,66 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -21614,45 +21414,66 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -2652,7 +2303,7 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
    ;
    return 0;
  }
-@@ -22024,105 +22122,176 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -21679,27 +21500,176 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -2663,51 +2314,32 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
  sed 's/^/| /' conftest.$ac_ext >&5
  
 -ac_cv_lib_intl_ngettext=no
-+ac_cv_func_bind_textdomain_codeset=no
- fi
- rm -f conftest.err conftest.$ac_objext \
-       conftest$ac_exeext conftest.$ac_ext
+-fi
+-rm -f conftest.err conftest.$ac_objext \
+-      conftest$ac_exeext conftest.$ac_ext
 -LIBS=$ac_check_lib_save_LIBS
- fi
+-fi
 -echo "$as_me:$LINENO: result: $ac_cv_lib_intl_ngettext" >&5
 -echo "${ECHO_T}$ac_cv_lib_intl_ngettext" >&6
 -if test $ac_cv_lib_intl_ngettext = yes; then
 -  echo "$as_me:$LINENO: checking for dgettext in -lintl" >&5
 -echo $ECHO_N "checking for dgettext in -lintl... $ECHO_C" >&6
 -if test "${ac_cv_lib_intl_dgettext+set}" = set; then
--  echo $ECHO_N "(cached) $ECHO_C" >&6
++ac_cv_func_bind_textdomain_codeset=no
++fi
++rm -f conftest.err conftest.$ac_objext \
++      conftest$ac_exeext conftest.$ac_ext
++fi
 +echo "$as_me:$LINENO: result: $ac_cv_func_bind_textdomain_codeset" >&5
 +echo "${ECHO_T}$ac_cv_func_bind_textdomain_codeset" >&6
 +if test $ac_cv_func_bind_textdomain_codeset = yes; then
 +  CATOBJEXT=.gmo
 +               DATADIRNAME=share
- else
--  ac_check_lib_save_LIBS=$LIBS
--LIBS="-lintl  $LIBS"
--cat >conftest.$ac_ext <<_ACEOF
--/* confdefs.h.  */
--_ACEOF
--cat confdefs.h >>conftest.$ac_ext
--cat >>conftest.$ac_ext <<_ACEOF
--/* end confdefs.h.  */
++else
 +  CATOBJEXT=.mo
 +               DATADIRNAME=lib
 +fi
- 
--/* Override any gcc2 internal prototype to avoid an error.  */
--#ifdef __cplusplus
--extern "C"
--#endif
--/* We use char because int might match the return type of a gcc2
--   builtin and then its argument prototype would still apply.  */
--char dgettext ();
--int
--main ()
--{
--dgettext ();
--  ;
--  return 0;
--}
++
 +	    ;;
 +	    *)
 +	    CATOBJEXT=.mo
@@ -2732,45 +2364,8 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +
 +cat >>confdefs.h <<\_ACEOF
 +#define ENABLE_NLS 1
- _ACEOF
--rm -f conftest.$ac_objext conftest$ac_exeext
--if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
--  (eval $ac_link) 2>conftest.er1
--  ac_status=$?
--  grep -v '^ *+' conftest.er1 >conftest.err
--  rm -f conftest.er1
--  cat conftest.err >&5
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_cxx_werror_flag"
--			 || test ! -s conftest.err'
--  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
--  (eval $ac_try) 2>&5
--  ac_status=$?
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); }; } &&
--	 { ac_try='test -s conftest$ac_exeext'
--  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
--  (eval $ac_try) 2>&5
--  ac_status=$?
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); }; }; then
--  ac_cv_lib_intl_dgettext=yes
--else
--  echo "$as_me: failed program was:" >&5
--sed 's/^/| /' conftest.$ac_ext >&5
- 
--ac_cv_lib_intl_dgettext=no
--fi
--rm -f conftest.err conftest.$ac_objext \
--      conftest$ac_exeext conftest.$ac_ext
--LIBS=$ac_check_lib_save_LIBS
--fi
--echo "$as_me:$LINENO: result: $ac_cv_lib_intl_dgettext" >&5
--echo "${ECHO_T}$ac_cv_lib_intl_dgettext" >&6
--if test $ac_cv_lib_intl_dgettext = yes; then
--  gt_cv_func_dgettext_libintl=yes
--fi
++_ACEOF
++
 +    fi
 +
 +        if test "$XGETTEXT" != ":"; then
@@ -2852,8 +2447,7 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +     MKINSTALLDIRS="\$(top_srcdir)/mkinstalldirs"
 +   fi
 +
- 
--fi
++
 +         test -d po || mkdir po
 +   if test "x$srcdir" != "x."; then
 +     if test "x`echo $srcdir | sed 's@/.*@@'`" = "x"; then
@@ -2867,7 +2461,7 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +   rm -f po/POTFILES
 +   sed -e "/^#/d" -e "/^\$/d" -e "s,.*,	$posrcprefix& \\\\," -e "\$s/\(.*\) \\\\/\1/" \
 +	< $srcdir/po/POTFILES.in > po/POTFILES
- 
++
 +
 +echo "$as_me:$LINENO: checking locale directory" >&5
 +echo $ECHO_N "checking locale directory... $ECHO_C" >&6
@@ -2875,17 +2469,9 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +  PACKAGE_LOCALE_DIR=$ac_default_prefix/share/locale
 +else
 +  PACKAGE_LOCALE_DIR=$prefix/share/locale
- fi
- 
- 
--	if test "$gt_cv_func_dgettext_libintl" != "yes" ; then
--	  echo "$as_me:$LINENO: checking if -liconv is needed to use gettext" >&5
--echo $ECHO_N "checking if -liconv is needed to use gettext... $ECHO_C" >&6
--	  echo "$as_me:$LINENO: result: " >&5
--echo "${ECHO_T}" >&6
--  	  echo "$as_me:$LINENO: checking for ngettext in -lintl" >&5
--echo $ECHO_N "checking for ngettext in -lintl... $ECHO_C" >&6
--if test "${ac_cv_lib_intl_ngettext+set}" = set; then
++fi
++
++
 +cat >>confdefs.h <<_ACEOF
 +#define PACKAGE_LOCALE_DIR "$PACKAGE_LOCALE_DIR"
 +_ACEOF
@@ -2897,32 +2483,32 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +
 +
 +
-+echo "$as_me:$LINENO: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
-+echo $ECHO_N "checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6
++echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
++echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
 +if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
--LIBS="-lintl -liconv $LIBS"
-+LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $LIBS"
+-LIBS="-lintl  $LIBS"
++LIBS="-lpthread  $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -22136,11 +22305,11 @@ extern "C"
+@@ -21713,11 +21683,11 @@ extern "C"
  #endif
  /* We use char because int might match the return type of a gcc2
     builtin and then its argument prototype would still apply.  */
--char ngettext ();
+-char dgettext ();
 +char pthread_create ();
  int
  main ()
  {
--ngettext ();
+-dgettext ();
 +pthread_create ();
    ;
    return 0;
  }
-@@ -22154,7 +22323,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -21731,7 +21701,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    cat conftest.err >&5
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); } &&
@@ -2931,23 +2517,116 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
  			 || test ! -s conftest.err'
    { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
    (eval $ac_try) 2>&5
-@@ -22167,114 +22336,159 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -21744,192 +21714,159 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
--  ac_cv_lib_intl_ngettext=yes
+-  ac_cv_lib_intl_dgettext=yes
 +  ac_cv_lib_pthread_pthread_create=yes
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
  
--ac_cv_lib_intl_ngettext=no
+-ac_cv_lib_intl_dgettext=no
 +ac_cv_lib_pthread_pthread_create=no
  fi
  rm -f conftest.err conftest.$ac_objext \
        conftest$ac_exeext conftest.$ac_ext
  LIBS=$ac_check_lib_save_LIBS
  fi
+-echo "$as_me:$LINENO: result: $ac_cv_lib_intl_dgettext" >&5
+-echo "${ECHO_T}$ac_cv_lib_intl_dgettext" >&6
+-if test $ac_cv_lib_intl_dgettext = yes; then
+-  gt_cv_func_dgettext_libintl=yes
++echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
++echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6
++if test $ac_cv_lib_pthread_pthread_create = yes; then
++  LIBS="$LIBS -lpthread"
+ fi
+ 
+-fi
+ 
+-fi
++ac_ext=cc
++ac_cpp='$CXXCPP $CPPFLAGS'
++ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext >&5'
++ac_link='$CXX -o conftest$ac_exeext $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
++ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+ 
+ 
+-	if test "$gt_cv_func_dgettext_libintl" != "yes" ; then
+-	  echo "$as_me:$LINENO: checking if -liconv is needed to use gettext" >&5
+-echo $ECHO_N "checking if -liconv is needed to use gettext... $ECHO_C" >&6
+-	  echo "$as_me:$LINENO: result: " >&5
+-echo "${ECHO_T}" >&6
+-  	  echo "$as_me:$LINENO: checking for ngettext in -lintl" >&5
+-echo $ECHO_N "checking for ngettext in -lintl... $ECHO_C" >&6
+-if test "${ac_cv_lib_intl_ngettext+set}" = set; then
+-  echo $ECHO_N "(cached) $ECHO_C" >&6
+-else
+-  ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lintl -liconv $LIBS"
+-cat >conftest.$ac_ext <<_ACEOF
+-/* confdefs.h.  */
+-_ACEOF
+-cat confdefs.h >>conftest.$ac_ext
+-cat >>conftest.$ac_ext <<_ACEOF
+-/* end confdefs.h.  */
+ 
+-/* Override any gcc2 internal prototype to avoid an error.  */
+-#ifdef __cplusplus
+-extern "C"
+-#endif
+-/* We use char because int might match the return type of a gcc2
+-   builtin and then its argument prototype would still apply.  */
+-char ngettext ();
+-int
+-main ()
+-{
+-ngettext ();
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-rm -f conftest.$ac_objext conftest$ac_exeext
+-if { (eval echo "$as_me:$LINENO: \"$ac_link\"") >&5
+-  (eval $ac_link) 2>conftest.er1
+-  ac_status=$?
+-  grep -v '^ *+' conftest.er1 >conftest.err
+-  rm -f conftest.er1
+-  cat conftest.err >&5
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); } &&
+-	 { ac_try='test -z "$ac_cxx_werror_flag"
+-			 || test ! -s conftest.err'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; } &&
+-	 { ac_try='test -s conftest$ac_exeext'
+-  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
+-  (eval $ac_try) 2>&5
+-  ac_status=$?
+-  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  (exit $ac_status); }; }; then
+-  ac_cv_lib_intl_ngettext=yes
++# Check whether --with-cln-prefix or --without-cln-prefix was given.
++if test "${with_cln_prefix+set}" = set; then
++  withval="$with_cln_prefix"
++  cln_config_prefix="$withval"
+ else
+-  echo "$as_me: failed program was:" >&5
+-sed 's/^/| /' conftest.$ac_ext >&5
++  cln_config_prefix=""
++fi;
+ 
+-ac_cv_lib_intl_ngettext=no
+-fi
+-rm -f conftest.err conftest.$ac_objext \
+-      conftest$ac_exeext conftest.$ac_ext
+-LIBS=$ac_check_lib_save_LIBS
+-fi
 -echo "$as_me:$LINENO: result: $ac_cv_lib_intl_ngettext" >&5
 -echo "${ECHO_T}$ac_cv_lib_intl_ngettext" >&6
 -if test $ac_cv_lib_intl_ngettext = yes; then
@@ -2955,25 +2634,10 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -echo $ECHO_N "checking for dcgettext in -lintl... $ECHO_C" >&6
 -if test "${ac_cv_lib_intl_dcgettext+set}" = set; then
 -  echo $ECHO_N "(cached) $ECHO_C" >&6
-+echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
-+echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6
-+if test $ac_cv_lib_pthread_pthread_create = yes; then
-+  LIBS="$LIBS ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
-+fi
-+
-+
-+ac_ext=cc
-+ac_cpp='$CXXCPP $CPPFLAGS'
-+ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS conftest.$ac_ext >&5'
-+ac_link='$CXX -o conftest$ac_exeext $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
-+ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
-+
-+
-+
-+# Check whether --with-cln-prefix or --without-cln-prefix was given.
-+if test "${with_cln_prefix+set}" = set; then
-+  withval="$with_cln_prefix"
-+  cln_config_prefix="$withval"
++# Check whether --with-cln-exec-prefix or --without-cln-exec-prefix was given.
++if test "${with_cln_exec_prefix+set}" = set; then
++  withval="$with_cln_exec_prefix"
++  cln_config_exec_prefix="$withval"
  else
 -  ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lintl -liconv $LIBS"
@@ -2983,8 +2647,11 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -cat confdefs.h >>conftest.$ac_ext
 -cat >>conftest.$ac_ext <<_ACEOF
 -/* end confdefs.h.  */
-+  cln_config_prefix=""
++  cln_config_exec_prefix=""
 +fi;
++# Check whether --enable-clntest or --disable-clntest was given.
++if test "${enable_clntest+set}" = set; then
++  enableval="$enable_clntest"
  
 -/* Override any gcc2 internal prototype to avoid an error.  */
 -#ifdef __cplusplus
@@ -3024,37 +2691,21 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -  echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); }; }; then
 -  ac_cv_lib_intl_dcgettext=yes
-+# Check whether --with-cln-exec-prefix or --without-cln-exec-prefix was given.
-+if test "${with_cln_exec_prefix+set}" = set; then
-+  withval="$with_cln_exec_prefix"
-+  cln_config_exec_prefix="$withval"
  else
 -  echo "$as_me: failed program was:" >&5
 -sed 's/^/| /' conftest.$ac_ext >&5
-+  cln_config_exec_prefix=""
-+fi;
-+# Check whether --enable-clntest or --disable-clntest was given.
-+if test "${enable_clntest+set}" = set; then
-+  enableval="$enable_clntest"
- 
--ac_cv_lib_intl_dcgettext=no
-+else
 +  enable_clntest=yes
 +fi;
-+
+ 
+-ac_cv_lib_intl_dcgettext=no
+-fi
+-rm -f conftest.err conftest.$ac_objext \
+-      conftest$ac_exeext conftest.$ac_ext
+-LIBS=$ac_check_lib_save_LIBS
 +if test x$cln_config_exec_prefix != x ; then
 +    cln_config_args="$cln_config_args --exec-prefix=$cln_config_exec_prefix"
 +    if test x${CLN_CONFIG+set} != xset ; then
 +        CLN_CONFIG=$cln_config_exec_prefix/bin/cln-config
-+    fi
- fi
--rm -f conftest.err conftest.$ac_objext \
--      conftest$ac_exeext conftest.$ac_ext
--LIBS=$ac_check_lib_save_LIBS
-+if test x$cln_config_prefix != x ; then
-+    cln_config_args="$cln_config_args --prefix=$cln_config_prefix"
-+    if test x${CLN_CONFIG+set} != xset ; then
-+        CLN_CONFIG=$cln_config_prefix/bin/cln-config
 +    fi
  fi
 -echo "$as_me:$LINENO: result: $ac_cv_lib_intl_dcgettext" >&5
@@ -3062,7 +2713,15 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -if test $ac_cv_lib_intl_dcgettext = yes; then
 -  gt_cv_func_dgettext_libintl=yes
 -			libintl_extra_libs=-liconv
-+
+-else
+-  :
++if test x$cln_config_prefix != x ; then
++    cln_config_args="$cln_config_args --prefix=$cln_config_prefix"
++    if test x${CLN_CONFIG+set} != xset ; then
++        CLN_CONFIG=$cln_config_prefix/bin/cln-config
++    fi
+ fi
+ 
 +# Extract the first word of "cln-config", so it can be a program name with args.
 +set dummy cln-config; ac_word=$2
 +echo "$as_me:$LINENO: checking for $ac_word" >&5
@@ -3071,6 +2730,9 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +  echo $ECHO_N "(cached) $ECHO_C" >&6
  else
 -  :
+-fi
+-
+-        fi
 +  case $CLN_CONFIG in
 +  [\\/]* | ?:[\\/]*)
 +  ac_cv_path_CLN_CONFIG="$CLN_CONFIG" # Let the user override the test with a path.
@@ -3089,24 +2751,7 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +  fi
 +done
 +done
-+
-+  test -z "$ac_cv_path_CLN_CONFIG" && ac_cv_path_CLN_CONFIG="no"
-+  ;;
-+esac
- fi
-+CLN_CONFIG=$ac_cv_path_CLN_CONFIG
  
-+if test -n "$CLN_CONFIG"; then
-+  echo "$as_me:$LINENO: result: $CLN_CONFIG" >&5
-+echo "${ECHO_T}$CLN_CONFIG" >&6
- else
--  :
-+  echo "$as_me:$LINENO: result: no" >&5
-+echo "${ECHO_T}no" >&6
- fi
- 
--        fi
--
 -        #
 -        # If we found libintl, then check in it for bind_textdomain_codeset();
 -        # we'll prefer libc if neither have bind_textdomain_codeset(),
@@ -3116,7 +2761,12 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -          glib_save_LIBS="$LIBS"
 -          LIBS="$LIBS -lintl $libintl_extra_libs"
 -          unset ac_cv_func_bind_textdomain_codeset
--
++  test -z "$ac_cv_path_CLN_CONFIG" && ac_cv_path_CLN_CONFIG="no"
++  ;;
++esac
++fi
++CLN_CONFIG=$ac_cv_path_CLN_CONFIG
+ 
 -for ac_func in bind_textdomain_codeset
 -do
 -as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
@@ -3124,6 +2774,14 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -echo $ECHO_N "checking for $ac_func... $ECHO_C" >&6
 -if eval "test \"\${$as_ac_var+set}\" = set"; then
 -  echo $ECHO_N "(cached) $ECHO_C" >&6
++if test -n "$CLN_CONFIG"; then
++  echo "$as_me:$LINENO: result: $CLN_CONFIG" >&5
++echo "${ECHO_T}$CLN_CONFIG" >&6
++else
++  echo "$as_me:$LINENO: result: no" >&5
++echo "${ECHO_T}no" >&6
++fi
++
 +cln_min_version=1.1.0
 +echo "$as_me:$LINENO: checking for CLN - version >= $cln_min_version" >&5
 +echo $ECHO_N "checking for CLN - version >= $cln_min_version... $ECHO_C" >&6
@@ -3178,7 +2836,7 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
  else
    cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
-@@ -22282,215 +22496,99 @@ _ACEOF
+@@ -21937,215 +21874,99 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
@@ -3409,8 +3067,21 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -#else
 -# include <assert.h>
 -#endif
--
+ 
 -#undef $ac_func
++        else
++            echo "$as_me:$LINENO: result: no" >&5
++echo "${ECHO_T}no" >&6
++            if test ! -f conf.clntest ; then
++                echo "*** Could not run CLN test program, checking why..."
++                CPPFLAGS="$CFLAGS $CLN_CPPFLAGS"
++                LIBS="$LIBS $CLN_LIBS"
++                cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
  
 -/* Override any gcc2 internal prototype to avoid an error.  */
 -#ifdef __cplusplus
@@ -3431,20 +3102,6 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -#ifdef __cplusplus
 -}
 -#endif
-+        else
-+            echo "$as_me:$LINENO: result: no" >&5
-+echo "${ECHO_T}no" >&6
-+            if test ! -f conf.clntest ; then
-+                echo "*** Could not run CLN test program, checking why..."
-+                CPPFLAGS="$CFLAGS $CLN_CPPFLAGS"
-+                LIBS="$LIBS $CLN_LIBS"
-+                cat >conftest.$ac_ext <<_ACEOF
-+/* confdefs.h.  */
-+_ACEOF
-+cat confdefs.h >>conftest.$ac_ext
-+cat >>conftest.$ac_ext <<_ACEOF
-+/* end confdefs.h.  */
-+
 +#include <stdio.h>
 +#include <cln/version.h>
  
@@ -3456,7 +3113,7 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
    ;
    return 0;
  }
-@@ -22517,36 +22615,54 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -22172,36 +21993,53 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -3507,7 +3164,6 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +
 +
 +
-+
 +if test "x$ac_cv_env_PKG_CONFIG_set" != "xset"; then
 +	if test -n "$ac_tool_prefix"; then
 +  # Extract the first word of "${ac_tool_prefix}pkg-config", so it can be a program name with args.
@@ -3526,7 +3182,7 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
    ;;
    *)
    as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
-@@ -22556,349 +22672,231 @@ do
+@@ -22211,350 +22049,509 @@ do
    test -z "$as_dir" && as_dir=.
    for ac_exec_ext in '' $ac_executable_extensions; do
    if $as_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
@@ -3610,18 +3266,144 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -if test "$XGETTEXT" != ":"; then
 -  echo "$as_me:$LINENO: result: $XGETTEXT" >&5
 -echo "${ECHO_T}$XGETTEXT" >&6
--else
--  echo "$as_me:$LINENO: result: no" >&5
--echo "${ECHO_T}no" >&6
--fi
--
++ac_pt_PKG_CONFIG=$ac_cv_path_ac_pt_PKG_CONFIG
++
++if test -n "$ac_pt_PKG_CONFIG"; then
++  echo "$as_me:$LINENO: result: $ac_pt_PKG_CONFIG" >&5
++echo "${ECHO_T}$ac_pt_PKG_CONFIG" >&6
+ else
+   echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6
+ fi
+ 
 -	  cat >conftest.$ac_ext <<_ACEOF
 -/* confdefs.h.  */
 -_ACEOF
 -cat confdefs.h >>conftest.$ac_ext
 -cat >>conftest.$ac_ext <<_ACEOF
 -/* end confdefs.h.  */
--
++  PKG_CONFIG=$ac_pt_PKG_CONFIG
++else
++  PKG_CONFIG="$ac_cv_path_PKG_CONFIG"
++fi
++
++fi
++if test -n "$PKG_CONFIG"; then
++	_pkg_min_version=0.9.0
++	echo "$as_me:$LINENO: checking pkg-config is at least version $_pkg_min_version" >&5
++echo $ECHO_N "checking pkg-config is at least version $_pkg_min_version... $ECHO_C" >&6
++	if $PKG_CONFIG --atleast-pkgconfig-version $_pkg_min_version; then
++		echo "$as_me:$LINENO: result: yes" >&5
++echo "${ECHO_T}yes" >&6
++	else
++		echo "$as_me:$LINENO: result: no" >&5
++echo "${ECHO_T}no" >&6
++		PKG_CONFIG=""
++	fi
++
++fi
++
++pkg_failed=no
++echo "$as_me:$LINENO: checking for GLIB" >&5
++echo $ECHO_N "checking for GLIB... $ECHO_C" >&6
++
++if test -n "$PKG_CONFIG"; then
++    if test -n "$GLIB_CFLAGS"; then
++        pkg_cv_GLIB_CFLAGS="$GLIB_CFLAGS"
++    else
++        if test -n "$PKG_CONFIG" && \
++    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"
++	glib-2.0 >= 2.4
++	libxml-2.0
++	\"") >&5
++  ($PKG_CONFIG --exists --print-errors "
++	glib-2.0 >= 2.4
++	libxml-2.0
++	") 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; then
++  pkg_cv_GLIB_CFLAGS=`$PKG_CONFIG --cflags "
++	glib-2.0 >= 2.4
++	libxml-2.0
++	" 2>/dev/null`
++else
++  pkg_failed=yes
++fi
++    fi
++else
++	pkg_failed=untried
++fi
++if test -n "$PKG_CONFIG"; then
++    if test -n "$GLIB_LIBS"; then
++        pkg_cv_GLIB_LIBS="$GLIB_LIBS"
++    else
++        if test -n "$PKG_CONFIG" && \
++    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"
++	glib-2.0 >= 2.4
++	libxml-2.0
++	\"") >&5
++  ($PKG_CONFIG --exists --print-errors "
++	glib-2.0 >= 2.4
++	libxml-2.0
++	") 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; then
++  pkg_cv_GLIB_LIBS=`$PKG_CONFIG --libs "
++	glib-2.0 >= 2.4
++	libxml-2.0
++	" 2>/dev/null`
++else
++  pkg_failed=yes
++fi
++    fi
++else
++	pkg_failed=untried
++fi
++
++
++
++if test $pkg_failed = yes; then
++
++if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
++        _pkg_short_errors_supported=yes
++else
++        _pkg_short_errors_supported=no
++fi
++        if test $_pkg_short_errors_supported = yes; then
++	        GLIB_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "
++	glib-2.0 >= 2.4
++	libxml-2.0
++	"`
++        else
++	        GLIB_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "
++	glib-2.0 >= 2.4
++	libxml-2.0
++	"`
++        fi
++	# Put the nasty error message in config.log where it belongs
++	echo "$GLIB_PKG_ERRORS" >&5
++
++	{ { echo "$as_me:$LINENO: error: Package requirements (
++	glib-2.0 >= 2.4
++	libxml-2.0
++	) were not met:
++
++$GLIB_PKG_ERRORS
++
++Consider adjusting the PKG_CONFIG_PATH environment variable if you
++installed software in a non-standard prefix.
++
++Alternatively, you may set the environment variables GLIB_CFLAGS
++and GLIB_LIBS to avoid the need to call pkg-config.
++See the pkg-config man page for more details.
++" >&5
++echo "$as_me: error: Package requirements (
++	glib-2.0 >= 2.4
++	libxml-2.0
++	) were not met:
+ 
 -int
 -main ()
 -{
@@ -3658,14 +3440,45 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -else
 -  echo "$as_me: failed program was:" >&5
 -sed 's/^/| /' conftest.$ac_ext >&5
--
++$GLIB_PKG_ERRORS
+ 
 -case $host in
 -	    *-*-solaris*)
 -	    	                	    	                echo "$as_me:$LINENO: checking for bind_textdomain_codeset" >&5
 -echo $ECHO_N "checking for bind_textdomain_codeset... $ECHO_C" >&6
 -if test "${ac_cv_func_bind_textdomain_codeset+set}" = set; then
 -  echo $ECHO_N "(cached) $ECHO_C" >&6
--else
++Consider adjusting the PKG_CONFIG_PATH environment variable if you
++installed software in a non-standard prefix.
++
++Alternatively, you may set the environment variables GLIB_CFLAGS
++and GLIB_LIBS to avoid the need to call pkg-config.
++See the pkg-config man page for more details.
++" >&2;}
++   { (exit 1); exit 1; }; }
++elif test $pkg_failed = untried; then
++	{ { echo "$as_me:$LINENO: error: The pkg-config script could not be found or is too old.  Make sure it
++is in your PATH or set the PKG_CONFIG environment variable to the full
++path to pkg-config.
++
++Alternatively, you may set the environment variables GLIB_CFLAGS
++and GLIB_LIBS to avoid the need to call pkg-config.
++See the pkg-config man page for more details.
++
++To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++See \`config.log' for more details." >&5
++echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
++is in your PATH or set the PKG_CONFIG environment variable to the full
++path to pkg-config.
++
++Alternatively, you may set the environment variables GLIB_CFLAGS
++and GLIB_LIBS to avoid the need to call pkg-config.
++See the pkg-config man page for more details.
++
++To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++See \`config.log' for more details." >&2;}
++   { (exit 1); exit 1; }; }
+ else
 -  cat >conftest.$ac_ext <<_ACEOF
 -/* confdefs.h.  */
 -_ACEOF
@@ -3675,20 +3488,26 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -/* Define bind_textdomain_codeset to an innocuous variant, in case <limits.h> declares bind_textdomain_codeset.
 -   For example, HP-UX 11i <limits.h> declares gettimeofday.  */
 -#define bind_textdomain_codeset innocuous_bind_textdomain_codeset
--
++	GLIB_CFLAGS=$pkg_cv_GLIB_CFLAGS
++	GLIB_LIBS=$pkg_cv_GLIB_LIBS
++        echo "$as_me:$LINENO: result: yes" >&5
++echo "${ECHO_T}yes" >&6
++	:
++fi
+ 
 -/* System header to define __stub macros and hopefully few prototypes,
 -    which can conflict with char bind_textdomain_codeset (); below.
 -    Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
 -    <limits.h> exists even on freestanding compilers.  */
--
+ 
 -#ifdef __STDC__
 -# include <limits.h>
 -#else
 -# include <assert.h>
 -#endif
--
+ 
 -#undef bind_textdomain_codeset
--
+ 
 -/* Override any gcc2 internal prototype to avoid an error.  */
 -#ifdef __cplusplus
 -extern "C"
@@ -3708,7 +3527,9 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -#ifdef __cplusplus
 -}
 -#endif
-+ac_pt_PKG_CONFIG=$ac_cv_path_ac_pt_PKG_CONFIG
++pkg_failed=no
++echo "$as_me:$LINENO: checking for GTK" >&5
++echo $ECHO_N "checking for GTK... $ECHO_C" >&6
  
 -int
 -main ()
@@ -3731,19 +3552,59 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -			 || test ! -s conftest.err'
 -  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
 -  (eval $ac_try) 2>&5
--  ac_status=$?
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++if test -n "$PKG_CONFIG"; then
++    if test -n "$GTK_CFLAGS"; then
++        pkg_cv_GTK_CFLAGS="$GTK_CFLAGS"
++    else
++        if test -n "$PKG_CONFIG" && \
++    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"
++	gtk+-2.0 >= 2.4
++	gdk-pixbuf-2.0
++	\"") >&5
++  ($PKG_CONFIG --exists --print-errors "
++	gtk+-2.0 >= 2.4
++	gdk-pixbuf-2.0
++	") 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); }; } &&
 -	 { ac_try='test -s conftest$ac_exeext'
 -  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
 -  (eval $ac_try) 2>&5
--  ac_status=$?
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; then
++  pkg_cv_GTK_CFLAGS=`$PKG_CONFIG --cflags "
++	gtk+-2.0 >= 2.4
++	gdk-pixbuf-2.0
++	" 2>/dev/null`
++else
++  pkg_failed=yes
++fi
++    fi
++else
++	pkg_failed=untried
++fi
++if test -n "$PKG_CONFIG"; then
++    if test -n "$GTK_LIBS"; then
++        pkg_cv_GTK_LIBS="$GTK_LIBS"
++    else
++        if test -n "$PKG_CONFIG" && \
++    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"
++	gtk+-2.0 >= 2.4
++	gdk-pixbuf-2.0
++	\"") >&5
++  ($PKG_CONFIG --exists --print-errors "
++	gtk+-2.0 >= 2.4
++	gdk-pixbuf-2.0
++	") 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); }; }; then
 -  ac_cv_func_bind_textdomain_codeset=yes
-+if test -n "$ac_pt_PKG_CONFIG"; then
-+  echo "$as_me:$LINENO: result: $ac_pt_PKG_CONFIG" >&5
-+echo "${ECHO_T}$ac_pt_PKG_CONFIG" >&6
++  (exit $ac_status); }; then
++  pkg_cv_GTK_LIBS=`$PKG_CONFIG --libs "
++	gtk+-2.0 >= 2.4
++	gdk-pixbuf-2.0
++	" 2>/dev/null`
  else
 -  echo "$as_me: failed program was:" >&5
 -sed 's/^/| /' conftest.$ac_ext >&5
@@ -3752,20 +3613,18 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -fi
 -rm -f conftest.err conftest.$ac_objext \
 -      conftest$ac_exeext conftest.$ac_ext
-+  echo "$as_me:$LINENO: result: no" >&5
-+echo "${ECHO_T}no" >&6
++  pkg_failed=yes
  fi
 -echo "$as_me:$LINENO: result: $ac_cv_func_bind_textdomain_codeset" >&5
 -echo "${ECHO_T}$ac_cv_func_bind_textdomain_codeset" >&6
 -if test $ac_cv_func_bind_textdomain_codeset = yes; then
 -  CATOBJEXT=.gmo
 -               DATADIRNAME=share
-+
-+  PKG_CONFIG=$ac_pt_PKG_CONFIG
++    fi
  else
 -  CATOBJEXT=.mo
 -               DATADIRNAME=lib
-+  PKG_CONFIG="$ac_cv_path_PKG_CONFIG"
++	pkg_failed=untried
  fi
  
 -	    ;;
@@ -3774,64 +3633,67 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -            DATADIRNAME=lib
 -	    ;;
 -	    esac
++
++
++if test $pkg_failed = yes; then
++
++if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
++        _pkg_short_errors_supported=yes
++else
++        _pkg_short_errors_supported=no
  fi
 -rm -f conftest.err conftest.$ac_objext \
 -      conftest$ac_exeext conftest.$ac_ext
 -          LIBS="$glib_save_LIBS"
 -	  INSTOBJEXT=.mo
-+if test -n "$PKG_CONFIG"; then
-+	_pkg_min_version=0.9.0
-+	echo "$as_me:$LINENO: checking pkg-config is at least version $_pkg_min_version" >&5
-+echo $ECHO_N "checking pkg-config is at least version $_pkg_min_version... $ECHO_C" >&6
-+	if $PKG_CONFIG --atleast-pkgconfig-version $_pkg_min_version; then
-+		echo "$as_me:$LINENO: result: yes" >&5
-+echo "${ECHO_T}yes" >&6
- 	else
+-	else
 -	  gt_cv_have_gettext=no
-+		echo "$as_me:$LINENO: result: no" >&5
-+echo "${ECHO_T}no" >&6
-+		PKG_CONFIG=""
- 	fi
+-	fi
 -      fi
++        if test $_pkg_short_errors_supported = yes; then
++	        GTK_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "
++	gtk+-2.0 >= 2.4
++	gdk-pixbuf-2.0
++	"`
++        else
++	        GTK_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "
++	gtk+-2.0 >= 2.4
++	gdk-pixbuf-2.0
++	"`
++        fi
++	# Put the nasty error message in config.log where it belongs
++	echo "$GTK_PKG_ERRORS" >&5
  
- fi
+-fi
++	{ { echo "$as_me:$LINENO: error: Package requirements (
++	gtk+-2.0 >= 2.4
++	gdk-pixbuf-2.0
++	) were not met:
  
-+pkg_failed=no
-+echo "$as_me:$LINENO: checking for GLIB" >&5
-+echo $ECHO_N "checking for GLIB... $ECHO_C" >&6
++$GTK_PKG_ERRORS
  
--
++Consider adjusting the PKG_CONFIG_PATH environment variable if you
++installed software in a non-standard prefix.
+ 
 -    if test "$gt_cv_have_gettext" = "yes" ; then
--
++Alternatively, you may set the environment variables GTK_CFLAGS
++and GTK_LIBS to avoid the need to call pkg-config.
++See the pkg-config man page for more details.
++" >&5
++echo "$as_me: error: Package requirements (
++	gtk+-2.0 >= 2.4
++	gdk-pixbuf-2.0
++	) were not met:
+ 
 -cat >>confdefs.h <<\_ACEOF
 -#define ENABLE_NLS 1
 -_ACEOF
--
-+if test -n "$PKG_CONFIG"; then
-+    if test -n "$GLIB_CFLAGS"; then
-+        pkg_cv_GLIB_CFLAGS="$GLIB_CFLAGS"
-+    else
-+        if test -n "$PKG_CONFIG" && \
-+    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"
-+	glib-2.0
-+	libxml-2.0 >= 2.3.8
-+	\"") >&5
-+  ($PKG_CONFIG --exists --print-errors "
-+	glib-2.0
-+	libxml-2.0 >= 2.3.8
-+	") 2>&5
-+  ac_status=$?
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); }; then
-+  pkg_cv_GLIB_CFLAGS=`$PKG_CONFIG --cflags "
-+	glib-2.0
-+	libxml-2.0 >= 2.3.8
-+	" 2>/dev/null`
-+else
-+  pkg_failed=yes
-+fi
-     fi
--
++$GTK_PKG_ERRORS
+ 
+-    fi
++Consider adjusting the PKG_CONFIG_PATH environment variable if you
++installed software in a non-standard prefix.
+ 
 -        if test "$XGETTEXT" != ":"; then
 -                  if $XGETTEXT --omit-header /dev/null 2> /dev/null; then
 -        : ;
@@ -3840,48 +3702,101 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -echo "${ECHO_T}found xgettext program is not GNU xgettext; ignore it" >&6
 -        XGETTEXT=":"
 -      fi
-+else
-+	pkg_failed=untried
-+fi
-+if test -n "$PKG_CONFIG"; then
-+    if test -n "$GLIB_LIBS"; then
-+        pkg_cv_GLIB_LIBS="$GLIB_LIBS"
-+    else
-+        if test -n "$PKG_CONFIG" && \
-+    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"
-+	glib-2.0
-+	libxml-2.0 >= 2.3.8
-+	\"") >&5
-+  ($PKG_CONFIG --exists --print-errors "
-+	glib-2.0
-+	libxml-2.0 >= 2.3.8
-+	") 2>&5
-+  ac_status=$?
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
-+  (exit $ac_status); }; then
-+  pkg_cv_GLIB_LIBS=`$PKG_CONFIG --libs "
-+	glib-2.0
-+	libxml-2.0 >= 2.3.8
-+	" 2>/dev/null`
-+else
-+  pkg_failed=yes
-+fi
-     fi
--
+-    fi
++Alternatively, you may set the environment variables GTK_CFLAGS
++and GTK_LIBS to avoid the need to call pkg-config.
++See the pkg-config man page for more details.
++" >&2;}
++   { (exit 1); exit 1; }; }
++elif test $pkg_failed = untried; then
++	{ { echo "$as_me:$LINENO: error: The pkg-config script could not be found or is too old.  Make sure it
++is in your PATH or set the PKG_CONFIG environment variable to the full
++path to pkg-config.
+ 
 -    # We need to process the po/ directory.
 -    POSUB=po
--
++Alternatively, you may set the environment variables GTK_CFLAGS
++and GTK_LIBS to avoid the need to call pkg-config.
++See the pkg-config man page for more details.
+ 
 -              ac_config_commands="$ac_config_commands default-1"
--
--
++To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++See \`config.log' for more details." >&5
++echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
++is in your PATH or set the PKG_CONFIG environment variable to the full
++path to pkg-config.
+ 
++Alternatively, you may set the environment variables GTK_CFLAGS
++and GTK_LIBS to avoid the need to call pkg-config.
++See the pkg-config man page for more details.
++
++To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++See \`config.log' for more details." >&2;}
++   { (exit 1); exit 1; }; }
++else
++	GTK_CFLAGS=$pkg_cv_GTK_CFLAGS
++	GTK_LIBS=$pkg_cv_GTK_LIBS
++        echo "$as_me:$LINENO: result: yes" >&5
++echo "${ECHO_T}yes" >&6
++	:
++fi
+ 
 -                for lang in $ALL_LINGUAS; do
 -      GMOFILES="$GMOFILES $lang.gmo"
 -      POFILES="$POFILES $lang.po"
 -    done
--
--
--
--
+ 
+ 
+ 
++pkg_failed=no
++echo "$as_me:$LINENO: checking for QALCULATE" >&5
++echo $ECHO_N "checking for QALCULATE... $ECHO_C" >&6
+ 
++if test -n "$PKG_CONFIG"; then
++    if test -n "$QALCULATE_CFLAGS"; then
++        pkg_cv_QALCULATE_CFLAGS="$QALCULATE_CFLAGS"
++    else
++        if test -n "$PKG_CONFIG" && \
++    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"
++	libqalculate >= 0.9.4
++	\"") >&5
++  ($PKG_CONFIG --exists --print-errors "
++	libqalculate >= 0.9.4
++	") 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; then
++  pkg_cv_QALCULATE_CFLAGS=`$PKG_CONFIG --cflags "
++	libqalculate >= 0.9.4
++	" 2>/dev/null`
++else
++  pkg_failed=yes
++fi
++    fi
++else
++	pkg_failed=untried
++fi
++if test -n "$PKG_CONFIG"; then
++    if test -n "$QALCULATE_LIBS"; then
++        pkg_cv_QALCULATE_LIBS="$QALCULATE_LIBS"
++    else
++        if test -n "$PKG_CONFIG" && \
++    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"
++	libqalculate >= 0.9.4
++	\"") >&5
++  ($PKG_CONFIG --exists --print-errors "
++	libqalculate >= 0.9.4
++	") 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; then
++  pkg_cv_QALCULATE_LIBS=`$PKG_CONFIG --libs "
++	libqalculate >= 0.9.4
++	" 2>/dev/null`
++else
++  pkg_failed=yes
++fi
++    fi
 +else
 +	pkg_failed=untried
 +fi
@@ -3896,36 +3811,32 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +        _pkg_short_errors_supported=no
 +fi
 +        if test $_pkg_short_errors_supported = yes; then
-+	        GLIB_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "
-+	glib-2.0
-+	libxml-2.0 >= 2.3.8
++	        QALCULATE_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "
++	libqalculate >= 0.9.4
 +	"`
 +        else
-+	        GLIB_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "
-+	glib-2.0
-+	libxml-2.0 >= 2.3.8
++	        QALCULATE_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "
++	libqalculate >= 0.9.4
 +	"`
 +        fi
 +	# Put the nasty error message in config.log where it belongs
-+	echo "$GLIB_PKG_ERRORS" >&5
++	echo "$QALCULATE_PKG_ERRORS" >&5
  
 +	{ { echo "$as_me:$LINENO: error: Package requirements (
-+	glib-2.0
-+	libxml-2.0 >= 2.3.8
++	libqalculate >= 0.9.4
 +	) were not met:
  
-+$GLIB_PKG_ERRORS
++$QALCULATE_PKG_ERRORS
  
 +Consider adjusting the PKG_CONFIG_PATH environment variable if you
 +installed software in a non-standard prefix.
  
-+Alternatively, you may set the environment variables GLIB_CFLAGS
-+and GLIB_LIBS to avoid the need to call pkg-config.
++Alternatively, you may set the environment variables QALCULATE_CFLAGS
++and QALCULATE_LIBS to avoid the need to call pkg-config.
 +See the pkg-config man page for more details.
 +" >&5
 +echo "$as_me: error: Package requirements (
-+	glib-2.0
-+	libxml-2.0 >= 2.3.8
++	libqalculate >= 0.9.4
 +	) were not met:
  
 -   if test "$gt_cv_have_gettext" = "yes"; then
@@ -3960,7 +3871,7 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -       echo "$as_me:$LINENO: result: $LINGUAS" >&5
 -echo "${ECHO_T}$LINGUAS" >&6
 -     fi
-+$GLIB_PKG_ERRORS
++$QALCULATE_PKG_ERRORS
  
 -          if test -n "$LINGUAS"; then
 -       for lang in $LINGUAS; do CATALOGS="$CATALOGS $lang$CATOBJEXT"; done
@@ -3976,8 +3887,8 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -   if test -z "$MKINSTALLDIRS"; then
 -     MKINSTALLDIRS="\$(top_srcdir)/mkinstalldirs"
 -   fi
-+Alternatively, you may set the environment variables GLIB_CFLAGS
-+and GLIB_LIBS to avoid the need to call pkg-config.
++Alternatively, you may set the environment variables QALCULATE_CFLAGS
++and QALCULATE_LIBS to avoid the need to call pkg-config.
 +See the pkg-config man page for more details.
 +" >&2;}
 +   { (exit 1); exit 1; }; }
@@ -3986,8 +3897,8 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +is in your PATH or set the PKG_CONFIG environment variable to the full
 +path to pkg-config.
  
-+Alternatively, you may set the environment variables GLIB_CFLAGS
-+and GLIB_LIBS to avoid the need to call pkg-config.
++Alternatively, you may set the environment variables QALCULATE_CFLAGS
++and QALCULATE_LIBS to avoid the need to call pkg-config.
 +See the pkg-config man page for more details.
  
 -         test -d po || mkdir po
@@ -4009,8 +3920,8 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +is in your PATH or set the PKG_CONFIG environment variable to the full
 +path to pkg-config.
  
-+Alternatively, you may set the environment variables GLIB_CFLAGS
-+and GLIB_LIBS to avoid the need to call pkg-config.
++Alternatively, you may set the environment variables QALCULATE_CFLAGS
++and QALCULATE_LIBS to avoid the need to call pkg-config.
 +See the pkg-config man page for more details.
  
 -echo "$as_me:$LINENO: checking locale directory" >&5
@@ -4022,8 +3933,8 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 +   { (exit 1); exit 1; }; }
  else
 -  PACKAGE_LOCALE_DIR=$prefix/share/locale
-+	GLIB_CFLAGS=$pkg_cv_GLIB_CFLAGS
-+	GLIB_LIBS=$pkg_cv_GLIB_LIBS
++	QALCULATE_CFLAGS=$pkg_cv_QALCULATE_CFLAGS
++	QALCULATE_LIBS=$pkg_cv_QALCULATE_LIBS
 +        echo "$as_me:$LINENO: result: yes" >&5
 +echo "${ECHO_T}yes" >&6
 +	:
@@ -4040,6 +3951,7 @@ $NetBSD: patch-ab,v 1.8 2006/06/22 18:52:00 jlam Exp $
 -INTLTOOL_QALCULATE_DEFINITIONS_RULE='%.xml:       %.xml.in       $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po-defs/*.po) ; LC_ALL=C $(INTLTOOL_MERGE) -x -u -c $(top_builddir)/po-defs/.intltool-merge-cache $(top_srcdir)/po-defs $< $@'
 -
 -
- 
-                                                                                           ac_config_files="$ac_config_files Makefile src/Makefile libqalculate/Makefile data/Makefile po/Makefile.in po-defs/Makefile docs/Makefile docs/reference/Makefile libqalculate.pc"
+-
+                                         ac_config_files="$ac_config_files Makefile data/Makefile src/Makefile po/Makefile.in"
  cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
