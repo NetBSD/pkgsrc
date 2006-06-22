@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/13 18:25:09 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/06/22 19:23:03 joerg Exp $
 #
 
 DISTNAME=		strace-4.5.14
@@ -11,7 +11,8 @@ HOMEPAGE=		http://www.liacs.nl/~wichert/strace/
 COMMENT=		Trace system calls
 
 NOT_FOR_PLATFORM=	NetBSD-[012]*-* NetBSD-3.[0-9][._]*-* \
-			NetBSD-3.99.[0-9]-* NetBSD-3.99.1[0-5]-*
+			NetBSD-3.99.[0-9]-* NetBSD-3.99.1[0-5]-* \
+			DragonFly-*-*
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/${SRCBALL_NAME}
 GNU_CONFIGURE=		yes
