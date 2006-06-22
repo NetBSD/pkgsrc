@@ -1,4 +1,4 @@
-<!-- $NetBSD: devfaq.xml,v 1.2 2006/05/10 16:19:55 rillig Exp $ -->
+<!-- $NetBSD: devfaq.xml,v 1.3 2006/06/22 07:30:38 rillig Exp $ -->
 
 <chapter id="devfaq"> <?dbhtml filename="devfaq.html"?>
 <title>Frequently Asked Questions</title>
@@ -63,7 +63,6 @@
 	<answer><para>[FIXME]</para></answer>
 
 </qandaentry>
-
 <qandaentry>
 
 	<question><para>Why does <command>make show-var
@@ -75,6 +74,27 @@
 	<quote>simulate</quote> the wrapper phase, append
 	<command>PKG_PHASE=wrapper</command> to the above
 	command.</para></answer>
+
+</qandaentry>
+<qandaentry>
+
+	<question><para>What does
+	<literal>${MASTER_SITE_SOURCEFORGE:=package/}</literal> mean? I
+	don't understand the <literal>:=</literal> inside
+	it.</para></question>
+
+	<answer><para>The <literal>:=</literal> is not really an
+	assignment operator, like you might expect at first sight.
+	Instead, it is a degenerate form of
+	<literal>${LIST:<replaceable>old_string</replaceable>=<replaceable>new_string</replaceable>}</literal>,
+	which is documented in the &man.make.1; man page and which you
+	may have seen as in <literal>${SRCS:.c=.o}</literal>. In the
+	case of <varname>MASTER_SITE_*</varname>,
+	<replaceable>old_string</replaceable> is the empty string and
+	<replaceable>new_string</replaceable> is
+	<literal>package/</literal>. That's where the
+	<literal>:</literal> and the <literal>=</literal> fall
+	together.</para></answer>
 
 </qandaentry>
 </qandaset>
