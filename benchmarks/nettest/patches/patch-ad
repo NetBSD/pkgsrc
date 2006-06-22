@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.5 2006/06/21 14:27:28 minskim Exp $
+$NetBSD: patch-ad,v 1.6 2006/06/22 15:00:51 joerg Exp $
 
 --- nettestd.c.orig	1992-11-05 21:52:58.000000000 +0000
 +++ nettestd.c
@@ -10,6 +10,15 @@ $NetBSD: patch-ad,v 1.5 2006/06/21 14:27:28 minskim Exp $
  #ifdef	WAIT3CODE
  #include <sys/wait.h>
  #endif
+@@ -79,7 +80,7 @@ int	ipoptions = 0;
+ int	mesghdr = 0;
+ #define	debug(x)	if(dflag>1)fprintf x
+ int verbose;
+-int daemon = 0;		/* are we running in daemon mode? */
++int is_daemon = 0;		/* are we running in daemon mode? */
+ 
+ #ifdef	TCP_WINSHIFT
+ int	winshift;
 @@ -107,7 +108,12 @@ union {
  } name;
  int namesize;
@@ -24,10 +33,30 @@ $NetBSD: patch-ad,v 1.5 2006/06/21 14:27:28 minskim Exp $
  int (*rfunc)() = read;
  
  main(argc, argv)
-@@ -271,7 +277,11 @@ char **argv;
+@@ -139,7 +145,7 @@ char **argv;
+ 				    "-v flag ignored when -b flag is used\n");
+ 				verbose = 0;
+ 			}
+-			daemon++;
++			is_daemon++;
+ 			break;
+ 		case 'd':	/* turn on socket level debugging */
+ 			++dflag;
+@@ -204,7 +210,7 @@ char **argv;
+ #endif
+ 
+ 		case 'v':	/* print out errors in sequenced data */
+-			if (daemon) {
++			if (is_daemon) {
+ 				fprintf(stderr,
+ 				    "-v flag ignored when -b flag is used\n");
+ 				verbose = 0;
+@@ -270,8 +276,12 @@ char **argv;
+ #  endif
  # endif
  #endif
- 	if (daemon) {
+-	if (daemon) {
++	if (is_daemon) {
 +#ifdef NONVOID_SETPGRP
 +		if (setpgrp(0, getpid()) < 0)
 +#else
@@ -97,3 +126,12 @@ $NetBSD: patch-ad,v 1.5 2006/06/21 14:27:28 minskim Exp $
  				 &namesize);
  		}
  		if (t < 0) {
+@@ -758,7 +769,7 @@ usage()
+ error(string)
+ char *string;
+ {
+-	if (daemon)
++	if (is_daemon)
+ 		syslog(LOG_ERR, "nettestd: %s %m", string);
+ 	else
+ 		perror(string);
