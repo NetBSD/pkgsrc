@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/05 16:13:16 ghen Exp $
+# $NetBSD: Makefile,v 1.7 2006/06/22 10:03:55 joerg Exp $
 
 PKGNAME=		${DISTNAME:S/-/-gnomeconsole-/}
 COMMENT=		Gnome console for Bacula - The Network Backup Solution
@@ -9,6 +9,8 @@ PATCHDIR=		${.CURDIR}/../../sysutils/bacula/patches
 
 CONFIGURE_ARGS+=	--enable-client-only
 CONFIGURE_ARGS+=	--enable-gnome
+
+USE_TOOLS+=		pkg-config
 
 BUILD_DIRS=		src/lib
 BUILD_DIRS+=		src/gnome2-console
