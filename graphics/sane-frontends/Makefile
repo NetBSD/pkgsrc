@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/06/11 14:17:30 gdt Exp $
+# $NetBSD: Makefile,v 1.29 2006/06/22 10:24:25 joerg Exp $
 
 .include "../../graphics/sane-backends/Makefile.common"
 
@@ -10,6 +10,7 @@ COMMENT=	Frontends for access to scanners, digitals camera, frame grabbers etc
 
 BUILDLINK_API_DEPENDS.sane+=	sane-backends>=${SANE_VERSION}
 
+USE_TOOLS+=	pkg-config
 USE_X11BASE=	YES
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sane-frontends
