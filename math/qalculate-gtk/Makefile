@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/06/14 20:14:21 adam Exp $
+# $NetBSD: Makefile,v 1.14 2006/06/22 10:22:59 joerg Exp $
 
 DISTNAME=	qalculate-gtk-0.9.4
 CATEGORIES=	math
@@ -19,5 +19,6 @@ GNU_CONFIGURE=		yes
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../math/qalculate/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
