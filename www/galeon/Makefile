@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2006/05/18 20:30:01 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2006/06/22 21:48:59 jlam Exp $
 #
 
 DISTNAME=		galeon-1.3.21
@@ -15,6 +15,7 @@ BROKEN_IN=		pkgsrc-2005Q4 pkgsrc-2006Q1
 
 CONFLICTS+=		galeon-devel-[0-9]*
 
+USE_LANGUAGES=		c c++
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
