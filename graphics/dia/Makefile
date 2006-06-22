@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.44 2006/05/02 16:23:30 drochner Exp $
+# $NetBSD: Makefile,v 1.45 2006/06/22 10:05:36 joerg Exp $
 #
 
 .include "Makefile.common"
+
+USE_TOOLS+=	msgfmt
 
 USE_DIRS+=	xdg-1.1
 
