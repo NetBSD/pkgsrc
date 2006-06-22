@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.29 2006/06/02 22:01:46 dillo Exp $
+# $NetBSD: upload,v 1.30 2006/06/22 11:09:18 joerg Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -160,7 +160,7 @@ fi
 if [ "${MKSUMMARY}" = "yes" -o "${MKSUMMARY}" = "YES" ]; then
 	echo "Creating summary file..."
 	(cd "${packages}/All" \
-		&& ls -t *.t[gb]z | while read n; do pkg_info -X "$n"; done) \
+		&& ls -t | grep '\.t[gb]z$' | while read n; do pkg_info -X "$n"; done) \
 		| ${gzip_cmd} > "${packages}"/All/pkg_summary.gz
 fi
 
