@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/17 13:46:31 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/22 10:13:43 joerg Exp $
 #
 
 DISTNAME=		gimp-color-manager-0.1.0
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.khk.net/color/color_manager.html
 COMMENT=		Gimp Color Manager plugin
 
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 
 MAKE_ENV+=		mkinstalldirs=${INSTALL_DATA_DIR:Q}
