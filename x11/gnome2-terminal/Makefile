@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2006/04/27 20:45:50 drochner Exp $
+# $NetBSD: Makefile,v 1.55 2006/06/22 10:20:44 joerg Exp $
 #
 
 DISTNAME=		gnome-terminal-2.14.1
@@ -29,6 +29,7 @@ BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.8
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libzvt/buildlink3.mk"
