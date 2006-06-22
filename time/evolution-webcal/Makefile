@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/04/17 13:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/06/22 10:11:18 joerg Exp $
 #
 
 DISTNAME=	evolution-webcal-2.5.90
@@ -13,7 +13,7 @@ COMMENT=	GNOME URL handler for web-published iCal calendar files
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config msgfmt
 USE_PKGLOCALEDIR=	YES
 
 GCONF2_SCHEMAS=		evolution-webcal.schemas
