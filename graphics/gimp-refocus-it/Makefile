@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/04/17 13:46:31 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/22 10:17:07 joerg Exp $
 #
 
 DISTNAME=		refocus-it-2.0.0
@@ -17,4 +17,5 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-cmdline
 
 .include "../../graphics/gimp/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
