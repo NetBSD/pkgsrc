@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5112 2006/06/20 16:40:03 wiz Exp $
+$NetBSD: TODO,v 1.5113 2006/06/22 23:26:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -637,6 +637,7 @@ Suggested package updates
 	o ipa-2.0.1
 	o ipcheck-0.219
 	o ipsec-tools-0.6.5
+	o ircservices-5.0.58
 	o ircu-2.10.12.0
 	o iroffer-1.3b10 [pkg/31859]
 	o iselect-1.3.0
@@ -709,6 +710,7 @@ Suggested package updates
 	o libtorrent-0.9.0
 	o libwpd-0.8.5
 	o licq-core-1.3.0
+	o liferea-1.0.15
 	o lilypond-2.8.0
 	o lincvs-1.5.0 [now called CrossVC]
 	o linuxsms-0.77
@@ -738,6 +740,7 @@ Suggested package updates
 	o mgetty-1.1.35
 	o mhonarc-2.6.16
 	o micro_httpd-20050629
+	o mimedefang-2.57
 	o mined-2000.12
 	o mini_sendmail-1.3.5
 	o minivmac-2.6.1
@@ -1148,7 +1151,7 @@ Suggested package updates
 	o sweep-0.9.1
 	o swfdec-0.3.6
 	o swi-prolog-5.5.33
-	o sylpheed-claws-2.3.0
+	o sylpheed-claws-2.3.1
 	o sylpheed-claws-ghostscript-viewer-0.8
 	o sympa-5.2
 	o sysinfo-4.2.2
