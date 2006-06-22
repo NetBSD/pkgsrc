@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/02/05 23:10:34 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2006/06/22 13:30:24 joerg Exp $
 
 DISTNAME=	LPRng-3.6.28
 PKGREVISION=	2
@@ -10,7 +10,7 @@ MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.lprng.com/
 COMMENT=	"meta-package" for LPRng, Enhanced Printer Spooler
 
-DEPENDS+=	LPRng-core-3.8.28nb2:../../print/LPRng-core
+DEPENDS+=	LPRng-core-3.8.28{,nb*}:../../print/LPRng-core
 DEPENDS+=	LPRng-doc-3.6.13:../../print/LPRng-doc
 
 EXTRACT_ONLY=		# empty
