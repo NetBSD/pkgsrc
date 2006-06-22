@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/04/17 13:46:48 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2006/06/22 10:19:53 joerg Exp $
 #
 
 DISTNAME=	gnome-system-monitor-2.14.0
@@ -13,6 +13,7 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME 2 system monitor program
 
 USE_DIRS+=		gnome2-1.5
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		autoconf gmake msgfmt pkg-config
