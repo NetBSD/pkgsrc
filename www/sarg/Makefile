@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/05/22 03:44:55 ben Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/23 16:23:10 minskim Exp $
 
 DISTNAME=		sarg-2.1
 CATEGORIES=		www
@@ -76,5 +76,6 @@ post-extract:
 			@${FIND} ${WRKSRC} -type d -exec ${CHMOD} +x {} \;
 			@${RM} ${WRKSRC}/languages/.new
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
