@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2006/05/11 15:07:24 gdt Exp $
+# $NetBSD: Makefile,v 1.40 2006/06/23 11:59:53 gdt Exp $
 
 DISTNAME=	xephem-3.7.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://www.clearskyinstitute.com/xephem/ \
 		ftp://iphcip1.physik.uni-mainz.de/pub/xephem/
@@ -30,6 +31,11 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/GUI/xephem
 USE_TOOLS+=	gmake perl:run
 
 BUILD_ENV+=	X11_LDFLAGS=${X11_LDFLAGS:Q}
+
+REPLACE_INTERPRETER+=	perl
+REPLACE.perl.old=	.*/bin/perl
+REPLACE.perl.new=	${PREFIX}/bin/perl
+REPLACE_FILES.perl=	auxil/astorb2edb.pl auxil/mpcorb2edb.pl
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=	2.95.3
