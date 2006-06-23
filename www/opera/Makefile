@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2006/04/07 19:14:04 rpaulo Exp $
+# $NetBSD: Makefile,v 1.56 2006/06/23 14:35:17 salo Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
 CATEGORIES=		www
@@ -26,9 +26,9 @@ USE_LANGUAGES=          # empty
 .include "../../mk/bsd.prefs.mk"
 
 OPERA_LANG=		en
-OPERA_VER_DATE=		20060330
-OPERA_PKG_VERSION=	8.54
-OPERA_PKG_VERSION_DIR=	854
+OPERA_VER_DATE=		20060616
+OPERA_PKG_VERSION=	9.0
+OPERA_PKG_VERSION_DIR=	900
 
 _OPERA_OPSYS?=		${OPSYS}
 _OPERA_MACHINE_ARCH?=	${MACHINE_ARCH}
@@ -60,8 +60,8 @@ OWN_DIRS=		${PREFIX}/share/opera/plugins
 
 .elif (${_OPERA_OPSYS} == SunOS) && (${_OPERA_MACHINE_ARCH} == sparc)
 EXTRACT_SUFX=		.tar.bz2
-OPERA_ARCH=		-sol8-sparc-local
-OPERA_DIR=		unix/solaris/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/static
+OPERA_ARCH=		-sol8-sparc
+OPERA_DIR=		unix/solaris/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/${_OPERA_MACHINE_ARCH}/static
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
 
 WRKSRC=			${WRKDIR}/opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}
@@ -104,25 +104,25 @@ post-install: post-install-manpage
 
 .include "../../emulators/suse_linux/Makefile.application"
 
-.if defined(MANCOMPRESSED) && !empty(MANCOMPRESSED:M[yY][eE][sS])
+.if !defined(MANCOMPRESSED)
 USE_TOOLS+=		gzip
 .endif
 
+.PHONY: post-install-manpage
 post-install-manpage:
 # The SuSE common makefile defines "MANCOMPRESSED=yes".
 .  if defined(MANCOMPRESSED) && !empty(MANCOMPRESSED:M[yY][eE][sS])
-	${GZIP_CMD} ${EMULDIR}/usr/share/man/man1/opera.1
 	${LN} -fs ../../${EMULSUBDIR}/usr/share/man/man1/opera.1.gz \
 		${PREFIX}/man/man1
 .  else
-	${LN} -fs ../../${EMULSUBDIR}/usr/share/man/man1/opera \
-		${PREFIX}/man/man1
+	${GUNZIP_CMD} -c ${EMULDIR}/usr/share/man/man1/opera.1.gz >
+		${PREFIX}/man/man1/opera.1
 .  endif
 .endif
 
 .if (((${_OPERA_OPSYS} == SunOS) && (${_OPERA_MACHINE_ARCH} == sparc)) || (${_OPERA_OPSYS} == FreeBSD))
 do-install:
-	@cd ${WRKSRC} && ${ECHO} "n" | ./install.sh --prefix=${PREFIX}
+	@cd ${WRKSRC} && ${ECHO} "n" | ./install.sh --prefix=${PREFIX:Q}
 	@${ECHO} "=> You can ignore any previous lines about opera6rc"
 	@${ECHO}
 
@@ -131,6 +131,7 @@ post-install:
 .endif
 
 # regenerate distinfo for all ports supported by this package
+.PHONY: opera-distinfo
 opera-distinfo:
 	( ${ECHO} '$$'NetBSD'$$'; \
 	  ${ECHO} ''; \
