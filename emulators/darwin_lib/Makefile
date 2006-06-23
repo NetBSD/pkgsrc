@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:09:00 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/06/23 15:52:34 jlam Exp $
 
 DISTNAME=	darwin_lib-6.6.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.opendarwin.org/downloads/6.6.2/RPMS/ \
 		http://www.opendarwin.org/downloads/6.6.2/RPMS/${DARWIN_ARCH}/
@@ -21,28 +21,25 @@ BUILD_DEPENDS+=	rpm2pkg>=1.3:../../pkgtools/rpm2pkg
 ONLY_FOR_PLATFORM=	NetBSD-1.6Z*-powerpc NetBSD-1.6Z*-i386 \
 			NetBSD-[2-9]*-powerpc NetBSD-[2-9]*-i386
 
-PLIST_SRC=	${WRKDIR}/PLIST_DYNAMIC
+PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 DARWIN_ARCH=	${MACHINE_ARCH:C/powerpc/ppc/}
 
 RPM2PKG=	rpm2pkg
-RPMARGS=	-d ${PREFIX} -f ${PLIST_SRC} -p emul/darwin -i ./Developer \
-		-i ./usr/X11R6/lib/X11/doc/html -i ./usr/share/man \
-		-i ./usr/include -i ./usr/X11R6/man -i ./usr/X11R6/include \
-		-i ./usr/local/include -i ./usr/local/man
-.for TEMP in ${DISTFILES}
-RPMARGS+=	${DISTDIR}/${TEMP}
-.endfor
+RPMARGS=	-d ${PREFIX} -f ${WRKDIR}/PLIST_RPM2PKG -p emul/darwin	\
+		-i ./Developer -i ./usr/X11R6/lib/X11/doc/html		\
+		-i ./usr/share/man -i ./usr/include -i ./usr/X11R6/man	\
+		-i ./usr/X11R6/include -i ./usr/local/include		\
+		-i ./usr/local/man					\
+		${DISTFILES:S/^/${DISTDIR}\//}
 
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
 
 do-install:
-	${RM} -f ${WRKDIR}/PLIST_DYNAMIC
+	${RM} -f ${WRKDIR}/PLIST_RPM2PKG
 	${RPM2PKG} ${RPMARGS}
-	${MKDIR} /emul
-	# Avoid a symlink left from a previous installation
-	${TEST} -L /emul/darwin && ${RM} /emul/darwin || ${TRUE}
-	${LN} -sf ${PREFIX}/emul/darwin /emul/darwin
+	${SED} -e "s|^\./||" -e "s|/\./|/|g" -e "s|/+|/|g"		\
+		${WRKDIR}/PLIST_RPM2PKG > ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
