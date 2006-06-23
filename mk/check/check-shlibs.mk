@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs.mk,v 1.2 2006/06/09 13:59:08 jlam Exp $
+# $NetBSD: check-shlibs.mk,v 1.3 2006/06/23 12:55:15 jlam Exp $
 
 # For PKG_DEVELOPERs, cause some checks to be run automatically by default.
 .if defined(PKG_DEVELOPER)
@@ -34,7 +34,7 @@ check-shlibs: error-check
 	${PKG_FILELIST_CMD} |						\
 	${EGREP} -h ${_CHECK_SHLIBS_ERE:Q} |				\
 	while read file; do						\
-		err=`$$ldd $$file 2>&1 | ${GREP} "not found || ${TRUE}"`; \
+		err=`$$ldd $$file 2>&1 | ${GREP} "not found" || ${TRUE}`; \
 		${TEST} -z "$$err" || ${ECHO} "$$file: $$err";		\
 	done
 	${_PKG_SILENT}${_PKG_DEBUG}					\
