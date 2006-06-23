@@ -1,4 +1,4 @@
-# $NetBSD: INSTALL,v 1.5 2006/06/19 23:27:34 jlam Exp $
+# $NetBSD: INSTALL,v 1.6 2006/06/23 15:48:50 jlam Exp $
 
 case "${STAGE}" in
 POST-INSTALL)
@@ -7,8 +7,8 @@ POST-INSTALL)
 	emuldir="@OPSYS_EMULDIR@"
 	pkgemuldir="${PKG_PREFIX}/emul/$emulsubdir"
 
-	emuldir_pwd=`cd $emulsubdir 2>/dev/null && ${PWD_CMD}`
-	pkgemuldir_pwd=`cd $pkgemulsubdir 2>/dev/null && ${PWD_CMD}`
+	emuldir_pwd=`cd $emuldir 2>/dev/null && ${PWD_CMD}`
+	pkgemuldir_pwd=`cd $pkgemuldir 2>/dev/null && ${PWD_CMD}`
 
 	if ${TEST} "$emuldir_pwd" != "$pkgemuldir_pwd"; then
 		if ${TEST} -e $emuldir -o -L $emuldir; then
