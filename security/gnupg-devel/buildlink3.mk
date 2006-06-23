@@ -1,26 +1,28 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:32 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/06/23 12:28:55 shannonjr Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNUPG_DEVEL_BUILDLINK3_MK:=	${GNUPG_DEVEL_BUILDLINK3_MK}+
 
-.if !empty(BUILDLINK_DEPTH:M+)
+.if ${BUILDLINK_DEPTH} == "+"
 BUILDLINK_DEPENDS+=	gnupg-devel
 .endif
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnupg-devel}
 BUILDLINK_PACKAGES+=	gnupg-devel
 
-.if !empty(GNUPG_DEVEL_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.gnupg-devel+=	gnupg-devel>=1.9.11
-BUILDLINK_ABI_DEPENDS.gnupg-devel+=	gnupg-devel>=1.9.20nb1
+.if ${GNUPG_DEVEL_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.gnupg-devel+=	gnupg-devel>=1.9.20nb2
 BUILDLINK_PKGSRCDIR.gnupg-devel?=	../../security/gnupg-devel
 .endif	# GNUPG_DEVEL_BUILDLINK3_MK
-BUILDLINK_PREFIX.gnupg-devel?=	${LOCALBASE}
 
-.include "../../security/libgpg-error/buildlink3.mk"
-.include "../../security/libgcrypt/buildlink3.mk"
-.include "../../security/libassuan/buildlink3.mk"
-.include "../../security/libksba/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/libassuan/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/libgpg-error/buildlink3.mk"
+.include "../../security/libksba/buildlink3.mk"
+.include "../../security/pinentry/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
