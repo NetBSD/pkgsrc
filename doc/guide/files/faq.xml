@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.24 2006/05/21 12:23:29 rillig Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.25 2006/06/23 10:12:28 rillig Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -18,11 +18,15 @@ it contains items for both pkgsrc users and developers.</para>
 
       <listitem>
 	<para><ulink
-	    url="http://www.NetBSD.org/MailingLists/index.html#pkgsrc-bugs">pkgsrc-bugs</ulink>:
-	  All bug reports in category "pkg" sent with &man.send-pr.1; appear
-	  here. Please do not report your bugs here directly; use one
-	  of the other mailing lists.
-	  discussed.</para>
+	    url="http://www.NetBSD.org/MailingLists/index.html#pkgsrc-users">pkgsrc-users</ulink>:
+	  This is a general purpose list for most issues regarding
+	  pkgsrc, regardless of platform, e.g. soliciting user help
+	  for pkgsrc configuration, unexpected build failures, using
+	  particular packages, upgrading pkgsrc installations,
+	  questions regarding the pkgsrc release branches, etc.  General announcements or
+	  proposals for changes that impact the pkgsrc user community,
+	  e.g. major infrastructure changes, new features, package
+	  removals, etc., may also be posted.</para>
       </listitem>
 
       <listitem>
@@ -42,30 +46,6 @@ it contains items for both pkgsrc users and developers.</para>
 	  source tree in that 24 hour period.</para>
       </listitem>
 
-      <listitem>
-	<para><ulink
-	    url="http://www.NetBSD.org/MailingLists/index.html#tech-pkg">pkgsrc-users</ulink>:
-	  This is a general purpose list for most issues regarding
-	  pkgsrc, regardless of platform, e.g. soliciting user help
-	  for pkgsrc configuration, unexpected build failures, using
-	  particular packages, upgrading pkgsrc installations,
-	  questions regarding the pkgsrc release branches, etc.  General announcements or
-	  proposals for changes that impact the pkgsrc user community,
-	  e.g. major infrastructure changes, new features, package
-	  removals, etc., may also be posted.</para>
-      </listitem>
-
-      <listitem>
-	<para><ulink
-	    url="http://www.NetBSD.org/MailingLists/index.html#tech-pkg">tech-pkg</ulink>:
-	  This is a list for technical discussions related to pkgsrc
-	  development, e.g. soliciting feedback for changes to pkgsrc
-	  infrastructure, proposed new features, questions related
-	  to porting pkgsrc to a new platform, advice for maintaining
-	  a package, patches that affect many packages, help requests
-	  moved from pkgsrc-users when an infrastructure bug is found,
-	  etc.</para>
-      </listitem>
     </itemizedlist>
 
 <para>To subscribe, do:</para>
