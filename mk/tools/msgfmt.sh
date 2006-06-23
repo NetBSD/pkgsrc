@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.24 2006/06/20 23:11:36 jlam Exp $
+# $NetBSD: msgfmt.sh,v 1.25 2006/06/23 21:05:43 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -63,6 +63,22 @@
 # CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
+#
+
+# If you make changes to this file, please test that it can process all
+# of the *.po files in each of the following packages:
+#
+#	databases/libgnomedb
+#	devel/libgnome
+#	fonts/fontforge
+#	multimedia/gmencoder
+#	multimedia/gnome2-media
+#	net/gtk-gnutella
+#	sysutils/gnome-vfs2
+#	wm/icewm
+#	www/epiphany
+#	x11/matchbox-panel
+#
 
 : ${AWK=awk}
 : ${CAT=cat}
@@ -140,6 +156,28 @@ if test ! -f "$pofile"; then
 fi
 
 ${CAT} $pofile | ${AWK} '
+#
+# strip_bad_ctrl_sequences(string)
+#	If we see \c, where c is anything but a legal character as
+#	defined by msgfmt-0.10.35, then replace the backslash with a
+#	'?'.  Yes, this is a hack, but it works around a bug in the
+#	way that older msgfmt mis-identifies some "control" sequences.
+#
+function strip_bad_ctrl_sequences(string,	left, right) {
+	left = ""
+	right = string
+	while (match(right, /\\/) > 0) {
+		if (substr(right, RSTART + 1, 1) ~ /[bfnrtxX0-7"\\]/) {
+			left = left substr(right, 1, RSTART + 1)
+			right = substr(right, RSTART + 2)
+		} else {
+			left = left substr(right, 1, RSTART - 1) "?"
+			right = substr(right, RSTART + 1)
+		}
+	}
+	return left right
+}
+
 BEGIN {
 	EMPTY = "^$"
 	SPACE = "[ 	]*"
@@ -169,11 +207,13 @@ BEGIN {
 			sub(MSGID_RE SPACE, "");
 			s = 0
 			if ($0 ~ EMPTY) $0 = "\"\""
+			$0 = strip_bad_ctrl_sequences($0)
 			singular[s++] = $0
 			while (result = getline) {
 				if ($0 ~ OBSOLETE_RE "$") continue
 				if ($0 !~ MSG_CONTINUATION_RE) break
 				sub(OBSOLETE_RE , "")
+				$0 = strip_bad_ctrl_sequences($0)
 				singular[s++] = $0
 			}
 			if (result < 0) break
@@ -192,11 +232,13 @@ BEGIN {
 			sub(MSGID_PLURAL_RE SPACE, "");
 			p = 0
 			if ($0 ~ EMPTY) $0 = "\"\""
+			$0 = strip_bad_ctrl_sequences($0)
 			plural[p++] = $0
 			while (result = getline) {
 				if ($0 ~ OBSOLETE_RE "$") continue
 				if ($0 !~ MSG_CONTINUATION_RE) break
 				sub(OBSOLETE_RE, "")
+				$0 = strip_bad_ctrl_sequences($0)
 				plural[p++] = $0
 			}
 			if (result < 0) break
@@ -222,10 +264,12 @@ BEGIN {
 			sub(MSGSTR_RE SPACE, "")
 			t = 0
 			if ($0 ~ EMPTY) $0 = "\"\""
+			$0 = strip_bad_ctrl_sequences($0)
 			translation[t++] = $0
 			while (result = getline) {
 				if ($0 !~ MSG_CONTINUATION_RE) break
 				sub(OBSOLETE_RE, "")
+				$0 = strip_bad_ctrl_sequences($0)
 				translation[t++] = $0
 			}
 			if (result < 0) break
@@ -261,10 +305,12 @@ BEGIN {
 			sub(MSGSTR0_RE SPACE, "");
 			t = 0
 			if ($0 ~ EMPTY) $0 = "\"\""
+			$0 = strip_bad_ctrl_sequences($0)
 			translation[t++] = $0
 			while (result = getline) {
 				if ($0 !~ MSG_CONTINUATION_RE) break
 				sub(OBSOLETE_RE, "")
+				$0 = strip_bad_ctrl_sequences($0)
 				translation[t++] = $0
 			}
 			if (result < 0) break
@@ -324,10 +370,12 @@ BEGIN {
 			sub(MSGSTR1_RE SPACE, "");
 			t = 0
 			if ($0 ~ EMPTY) $0 = "\"\""
+			$0 = strip_bad_ctrl_sequences($0)
 			translation[t++] = $0
 			while (result = getline) {
 				if ($0 !~ MSG_CONTINUATION_RE) break
 				sub(OBSOLETE_RE, "")
+				$0 = strip_bad_ctrl_sequences($0)
 				translation[t++] = $0
 			}
 			if (result < 0) break
