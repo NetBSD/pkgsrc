@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.30 2006/03/14 14:04:54 rillig Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.31 2006/06/23 05:00:55 rillig Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -548,8 +548,8 @@
 	<listitem><para>SUNWlibm</para></listitem>
       </itemizedlist>
 
-      <para>Please note the use of GNU binutils on Solaris is
-	<emphasis>not</emphasis> supported.</para>
+      <para>Please note that the use of GNU binutils on Solaris is
+	<emphasis>not</emphasis> supported, as of June 2006.</para>
 
 	<para>Whichever compiler you use, please ensure the compiler tools and
 	  your $prefix are in your <varname>PATH</varname>. This includes
