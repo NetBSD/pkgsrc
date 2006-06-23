@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2006/06/19 23:19:24 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/06/23 15:48:50 jlam Exp $
 #
 
 DISTNAME=		freebsd_lib-2.2.7
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.flame.org/NetBSD/
 
