@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.1 2006/06/06 03:05:48 jlam Exp $
+# $NetBSD: sites.mk,v 1.2 2006/06/23 07:45:49 tron Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -171,12 +171,10 @@ MASTER_SITE_APACHE+=    \
 	http://mirrors.ccs.neu.edu/Apache/dist/ \
 	http://apache.planetmirror.com.au/dist/ \
 	http://www.ibiblio.org/pub/mirrors/apache/ \
-	http://apache.towardex.com/ \
 	http://apache.oregonstate.edu/ \
 	http://www.tux.org/pub/net/apache/dist/ \
 	http://apache.secsup.org/dist/ \
 	http://apache.osuosl.org/ \
-	http://sunsite.tus.ac.jp/pub/apache/ \
 	http://www.mirrorservice.org/sites/ftp.apache.org/ \
 	ftp://ftp.ccs.neu.edu/net/mirrors/Apache/dist/ \
 	ftp://ftp.planetmirror.com.au/pub/apache/dist/ \
