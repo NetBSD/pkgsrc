@@ -1,4 +1,4 @@
-<!-- $NetBSD: devfaq.xml,v 1.3 2006/06/22 07:30:38 rillig Exp $ -->
+<!-- $NetBSD: devfaq.xml,v 1.4 2006/06/23 10:12:28 rillig Exp $ -->
 
 <chapter id="devfaq"> <?dbhtml filename="devfaq.html"?>
 <title>Frequently Asked Questions</title>
@@ -97,5 +97,35 @@
 	together.</para></answer>
 
 </qandaentry>
+<qandaentry>
+
+	<question><para>Which mailing lists are there for package
+	developers?</para></question>
+
+	<answer><variablelist>
+
+	<varlistentry><term><ulink
+	url="http://www.NetBSD.org/MailingLists/index.html#tech-pkg">tech-pkg</ulink></term>
+
+	<listitem><para>This is a list for technical discussions related
+	to pkgsrc development, e.g. soliciting feedback for changes to
+	pkgsrc infrastructure, proposed new features, questions related
+	to porting pkgsrc to a new platform, advice for maintaining a
+	package, patches that affect many packages, help requests moved
+	from pkgsrc-users when an infrastructure bug is found,
+	etc.</para></listitem></varlistentry>
+
+	<varlistentry><term><ulink
+	url="http://www.NetBSD.org/MailingLists/index.html#pkgsrc-bugs">pkgsrc-bugs</ulink></term>
+
+	<listitem><para>All bug reports in category "pkg" sent with
+	&man.send-pr.1; appear here. Please do not report your bugs here
+	directly; use one of the other mailing
+	lists.</para></listitem></varlistentry>
+
+	</variablelist></answer>
+
+</qandaentry>
+
 </qandaset>
 </chapter>
