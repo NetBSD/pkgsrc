@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.573 2006/06/22 07:53:40 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.574 2006/06/23 12:57:34 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3143,3 +3143,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated biology/mummer to 3.18nb2 [minskim 2006-06-21]
 	Updated games/kdegames3 to 3.5.3nb1 [joerg 2006-06-21]
 	Updated pkgtools/pkglint to 4.65 [rillig 2006-06-22]
+	Updated devel/chmlib to 0.38 [salo 2006-06-23]
