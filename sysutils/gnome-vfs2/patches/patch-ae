@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.11 2006/05/31 18:32:40 drochner Exp $
+$NetBSD: patch-ae,v 1.12 2006/06/23 17:27:50 drochner Exp $
 
 --- configure.orig	2006-05-30 12:06:32.000000000 +0200
 +++ configure
@@ -23,6 +23,15 @@ $NetBSD: patch-ae,v 1.11 2006/05/31 18:32:40 drochner Exp $
    return 0;
  }
  _ACEOF
+@@ -33041,7 +33043,7 @@ _ACEOF
+ 
+ 		msg_samba="yes"
+                 if test x$with_samba_libs != x/usr/lib; then
+-                        SAMBA_LIBS="-L$with_samba_libs -lsmbclient"
++                        SAMBA_LIBS="-L$with_samba_libs -Wl,-R$with_samba_libs -lsmbclient"
+                 else
+                 	SAMBA_LIBS="-lsmbclient"
+                 fi
 @@ -36078,12 +36080,12 @@ if test -n "$PKG_CONFIG"; then
          pkg_cv_LIBGNOMEVFS_CFLAGS="$LIBGNOMEVFS_CFLAGS"
      else
