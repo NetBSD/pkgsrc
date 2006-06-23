@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.574 2006/06/23 12:57:34 salo Exp $
+$NetBSD: CHANGES-2006,v 1.575 2006/06/23 14:36:10 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3144,3 +3144,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated games/kdegames3 to 3.5.3nb1 [joerg 2006-06-21]
 	Updated pkgtools/pkglint to 4.65 [rillig 2006-06-22]
 	Updated devel/chmlib to 0.38 [salo 2006-06-23]
+	Updated www/opera to 9.0 [salo 2006-06-23]
