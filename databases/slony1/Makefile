@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/06/20 21:14:12 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/06/24 09:14:56 joerg Exp $
 
 DISTNAME=	slony1-1.1.5
 PKGREVISION=	1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://gborg.postgresql.org/project/slony1/
 COMMENT=	Replication system for PostgreSQL
+
+USE_TOOLS+=	gmake
 
 DEPENDS+=	postgresql${PGSQL_VERSION}-server-[0-9]*:../../databases/postgresql${PGSQL_VERSION}-server
 
