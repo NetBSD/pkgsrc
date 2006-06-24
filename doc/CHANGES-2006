@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.579 2006/06/24 10:55:35 hira Exp $
+$NetBSD: CHANGES-2006,v 1.580 2006/06/24 10:57:25 hira Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3149,3 +3149,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/ja-ptex-share to 2.4 [hira 2006-06-24]
 	Updated print/ja-ptex-bin to 3.1.9 [hira 2006-06-24]
 	Updated print/ja-vfxdvik to 22.40v.j1.14nb9 [hira 2006-06-24]
+	Updated print/ja-jsclasses to 030624nb3 [hira 2006-06-24]
