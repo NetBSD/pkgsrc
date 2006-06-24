@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 cd $WRKSRC
 DIR=`ls -1d bin/*`
@@ -12,19 +13,19 @@ MAN1="bargraph.1 graph.1"
 mkdir -p $PREFIX/bin/lmbench
 mkdir -p $PREFIX/share/lmbench
 for files in $BINS; do
-	$INSTALL_PROGRAM -c -s -o bin -g bin -m 0755 bin/$OSDIR/$files $PREFIX/bin/lmbench
+	$BSD_INSTALL_PROGRAM bin/$OSDIR/$files $PREFIX/bin/lmbench
 done
 for files in $SCRIPTS; do
-	$INSTALL_PROGRAM -c -o bin -g bin -m 0755 scripts/$files $PREFIX/bin/lmbench
+	$BSD_INSTALL_SCRIPT scripts/$files $PREFIX/bin/lmbench
 done
 for files in $MAN1; do
-	$INSTALL_PROGRAM -c -o bin -g bin -m 0444 doc/$files $PREFIX/man/man1
+	$BSD_INSTALL_MAN doc/$files $PREFIX/man/man1
 done
 for files in $MAN8; do
-	$INSTALL_PROGRAM -c -o bin -g bin -m 0444 doc/$files $PREFIX/man/man8
+	$BSD_INSTALL_MAN doc/$files $PREFIX/man/man8
 done
 for files in $MAN3; do
-	$INSTALL_PROGRAM -c -o bin -g bin -m 0444 doc/$files $PREFIX/man/man3
+	$BSD_INSTALL_MAN doc/$files $PREFIX/man/man3
 done
 cat <<EOF >$PREFIX/bin/run-lmbench
 #!/bin/sh
