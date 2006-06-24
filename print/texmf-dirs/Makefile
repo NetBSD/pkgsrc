@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2006/05/13 03:44:24 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2006/06/24 10:39:32 hira Exp $
 
-DISTNAME=	texmf-dirs-1.2
+DISTNAME=	texmf-dirs-1.3
 CATEGORIES=	print
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -17,7 +17,6 @@ USE_LANGUAGES=	# empty
 WRKSRC=		${WRKDIR}
 
 .include "dirs.mk"
-.include "../../mk/bsd.prefs.mk"
 
 .include "../../mk/tex.buildlink3.mk"
 REQD_DIRS+=	${TEXMF_DIRS:O:S/^/${PKG_LOCALTEXMFPREFIX}\//}
