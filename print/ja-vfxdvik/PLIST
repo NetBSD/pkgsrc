@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2003/10/05 02:00:43 kei Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/06/24 10:54:39 hira Exp $
 bin/vfxdvi
 bin/vfxdvi.bin
 bin/vfxdviprint
 bin/vfxdvizilla
 man/man1/vfxdvi.1
 man/man1/vfxdvizilla.1
-share/texmf.local/vfxdvi/vfontmap
-share/texmf.local/vfxdvi/xdvipaper.dvi2ps-j
-share/texmf.local/vfxdvi/xdvipaper.dvips
-share/texmf.local/vfxdvi/xdvipaper.jdvi2kps
-@dirrm share/texmf.local/vfxdvi
+${PKG_LOCALTEXMFPREFIX}/vfxdvi/vfontmap
+${PKG_LOCALTEXMFPREFIX}/vfxdvi/xdvipaper.dvi2ps-j
+${PKG_LOCALTEXMFPREFIX}/vfxdvi/xdvipaper.dvips
+${PKG_LOCALTEXMFPREFIX}/vfxdvi/xdvipaper.jdvi2kps
+@dirrm ${PKG_LOCALTEXMFPREFIX}/vfxdvi
