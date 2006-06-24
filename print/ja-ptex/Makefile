@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2006/05/18 20:30:00 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/06/24 11:01:22 hira Exp $
 
 DISTNAME=	ja-ptex-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	meta-pkgs print japanese
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,7 +11,7 @@ COMMENT=	Meta-package for pTeX et al, supports Japanese language
 
 BROKEN_IN=	pkgsrc-2006Q1
 
-DEPENDS+=	ja-ptex-bin>=3.1.2:../../print/ja-ptex-bin
+DEPENDS+=	ja-ptex-bin>=3.1.9:../../print/ja-ptex-bin
 DEPENDS+=	ja-jsclasses>=0.0.0.20021127:../../print/ja-jsclasses
 DEPENDS+=	ja-vfxdvik>=22.40v.j1.14:../../print/ja-vfxdvik
 DEPENDS+=	dvipdfmx>=0.0.0.20021230nb1:../../print/dvipdfmx
