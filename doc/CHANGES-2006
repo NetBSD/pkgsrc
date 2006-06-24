@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.575 2006/06/23 14:36:10 salo Exp $
+$NetBSD: CHANGES-2006,v 1.576 2006/06/24 10:41:24 hira Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3145,3 +3145,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/pkglint to 4.65 [rillig 2006-06-22]
 	Updated devel/chmlib to 0.38 [salo 2006-06-23]
 	Updated www/opera to 9.0 [salo 2006-06-23]
+	Updated print/texmf-dirs to 1.3 [hira 2006-06-24]
