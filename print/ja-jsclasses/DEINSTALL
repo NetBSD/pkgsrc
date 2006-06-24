@@ -1,7 +1,0 @@
-# $NetBSD: DEINSTALL,v 1.2 2003/08/30 20:23:02 jlam Exp $
-
-case ${STAGE} in
-POST-DEINSTALL)
-	@PREFIX@/bin/mktexlsr
-	;;
-esac
