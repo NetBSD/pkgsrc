@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.7 2006/04/12 17:58:41 minskim Exp $
+# $NetBSD: dirs.mk,v 1.8 2006/06/24 10:39:32 hira Exp $
 #
 # This file is intended to be included by mk/dirs.mk, not directly by packages.
 #
@@ -10,6 +10,7 @@ TEXMF_DIRS=	bibtex
 TEXMF_DIRS+=	bibtex/bib
 TEXMF_DIRS+=	bibtex/bst
 TEXMF_DIRS+=	doc
+TEXMF_DIRS+=	doc/bibtex
 TEXMF_DIRS+=	doc/fonts
 TEXMF_DIRS+=	doc/latex
 TEXMF_DIRS+=	dvipdfm
