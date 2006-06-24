@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:51:43 agc Exp $
+$NetBSD: distinfo,v 1.3 2006/06/24 10:48:06 hira Exp $
 
-SHA1 (teTeX/ptex-texmf-2.1.tar.gz) = 15668bf657db7b1447004aeb548977e29d0a28a9
-RMD160 (teTeX/ptex-texmf-2.1.tar.gz) = eddb0959f94671e4a09e9710cfe5090d90fd96b1
-Size (teTeX/ptex-texmf-2.1.tar.gz) = 1864219 bytes
+SHA1 (teTeX/ptex-texmf-2.4.tar.gz) = f9e6a4eb4d130a0cedf1338b32e469551e601013
+RMD160 (teTeX/ptex-texmf-2.4.tar.gz) = 9669227f577c9ba0651226374bee3cb8bd10282c
+Size (teTeX/ptex-texmf-2.4.tar.gz) = 1866715 bytes
 SHA1 (teTeX/jis.tar.gz) = f71de759a8c518603c6ab612da57f46c3a5b9149
 RMD160 (teTeX/jis.tar.gz) = 2ec9b3736c107349e3d3f60adcb2afba4e4861e8
 Size (teTeX/jis.tar.gz) = 347201 bytes
