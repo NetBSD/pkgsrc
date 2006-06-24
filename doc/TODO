@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5114 2006/06/23 12:57:34 salo Exp $
+$NetBSD: TODO,v 1.5115 2006/06/24 11:03:10 hira Exp $
 
 Suggested new packages
 ======================
@@ -644,8 +644,6 @@ Suggested package updates
 	o ispell-russian-0.99f8
 	o ispell-slovak-0.3.0
 	o ispman-1.2
-	o ja-ptex-bin-3.1.8.1
-	o ja-ptex-share-2.2
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
