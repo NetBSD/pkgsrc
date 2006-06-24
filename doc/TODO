@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5116 2006/06/24 15:42:26 darcy Exp $
+$NetBSD: TODO,v 1.5117 2006/06/24 15:45:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -379,6 +379,7 @@ Suggested package updates
 	o bind-8.4.7
 	o bind-9.3.2
 	o bioperl-1.5.0
+	o bittorrent-4.20
 	o blackbox-0.70
 	o blur6ex-0.3.462
 	o bmon-2.1.0
@@ -394,7 +395,7 @@ Suggested package updates
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.3
 	o cal3d-0.10.0
-	o capc-calc-2.12.0.3
+	o capc-calc-2.12.0.4
 	o catdoc-0.94
 	o catdoc-tk-0.94
 	o cbrowser-0.8 [pkg/30972]
@@ -476,7 +477,7 @@ Suggested package updates
 	o enlightenment-0.16.8.1
 	o enscript-1.6.4
 	o epstool-3.08
-	o eric3-3.9.0
+	o eric3-3.9.1
 	o erlang-11
 	o esh-0.8.5
 	o et-2.60
@@ -529,7 +530,7 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdm-2.14.9
 	o gdsreader-0.3.2
-	o getmail-4.6.2
+	o getmail-4.6.3
 	o ggiterm-0.7.1
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
@@ -598,6 +599,7 @@ Suggested package updates
 	o guile-gtk-0.50
 	o guile-oops-1.0.2
 	o gworkspace-0.8.2
+	o gxemul-0.4.0
 	o gzrecover-0.3
 	o h5utils-1.10
 	o hackbot-2.21
@@ -627,6 +629,7 @@ Suggested package updates
 	o ijs-0.35
 	o imp-4.1.2
 	o inform-6.31.1
+	o inkscape-0.44.1
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
 	o ion3-20060519
@@ -704,6 +707,7 @@ Suggested package updates
 	o libsoup-devel-2.2.94
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
+	o libtheora-1.0alpha7
 	o libtorrent-0.9.0
 	o libwpd-0.8.5
 	o licq-core-1.3.0
@@ -1035,7 +1039,7 @@ Suggested package updates
 	o py-qt3-sip-4.4.4
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.7
-	o py-sqlite2-2.2.0
+	o py-sqlite2-2.3.1
 	o py-sybase-0.37
 	o py-textile-2.0.10
 	o py-twisted-2.4.0
@@ -1054,6 +1058,7 @@ Suggested package updates
 	o qt2-docs-2.3.2
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
+	o qt4-libs-4.1.4
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o qwt-0.4.0
@@ -1175,6 +1180,7 @@ Suggested package updates
 	o tob-0.26
 	o top-3.6beta1
 	o tor-0.1.1.20 [wip]
+	o totem-1.4.2
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trio-1.4
@@ -1212,11 +1218,14 @@ Suggested package updates
 	o wap-utils-1.4.1
 	o wcalc-2.2
 	o wdm-1.28
+	o webmin-1.280
 	o weewm-0.01
 	o win32-codecs-20060611
 	o winbind-3.0.13
+	o wine-0.9.16
 	o wmctrl-1.07
 	o wmii-2.5.1 [pkg/32522]
+	o wmii-2.5.2 [pkg/33285]
 	o wmweather-2.4.3
 	o www6to4-1.6
 	o wwwoffle-2.9
