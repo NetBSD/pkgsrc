@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.1.1.1 2003/03/15 20:00:27 kei Exp $
+$NetBSD: patch-ak,v 1.2 2006/06/24 10:52:23 hira Exp $
 
---- texk/configure.orig	Fri Mar 14 19:35:52 2003
-+++ texk/configure	Fri Mar 14 19:37:12 2003
-@@ -1894,7 +1894,7 @@
+--- texk/configure.orig	2005-02-07 03:27:03.000000000 +0900
++++ texk/configure	2006-05-10 15:24:14.000000000 +0900
+@@ -6595,7 +6595,7 @@
  done
  
  

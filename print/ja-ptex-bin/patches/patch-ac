@@ -1,11 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/03/15 20:00:27 kei Exp $
+$NetBSD: patch-ac,v 1.2 2006/06/24 10:52:23 hira Exp $
 
---- texk/make/paths.mk.orig	Mon Jan 11 00:42:53 1999
-+++ texk/make/paths.mk	Wed May  3 03:48:36 2000
-@@ -47,5 +47,5 @@
+--- texk/make/paths.mk.orig	2006-05-10 15:15:03.000000000 +0900
++++ texk/make/paths.mk	2006-05-10 15:15:18.000000000 +0900
+@@ -47,7 +47,7 @@
+ texmf = @texmfmain@
  
  # The directory used by varfonts.
 -vartexfonts = /var/tmp/texfonts
 +vartexfonts = /var/spool/texfonts
  
  # Regular input files.
+ texinputdir = $(texmf)/tex
