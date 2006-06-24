@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/15 20:00:27 kei Exp $
-bin/iniptex
+@comment $NetBSD: PLIST,v 1.2 2006/06/24 10:52:23 hira Exp $
 bin/mendex
 bin/pdvips
 bin/pdvitype
@@ -8,27 +7,29 @@ bin/platex
 bin/ppltotf
 bin/ptex
 bin/ptftopl
-bin/virptex
-share/texmf.local/dvips/base/color.pro
-share/texmf.local/dvips/base/crop.pro
-share/texmf.local/dvips/base/finclude.pro
-share/texmf.local/dvips/base/hps.pro
-share/texmf.local/dvips/base/psfonts.map
-share/texmf.local/dvips/base/special.pro
-share/texmf.local/dvips/base/tex.pro
-share/texmf.local/dvips/base/texc.pro
-share/texmf.local/dvips/base/texps.pro
-share/texmf.local/web2c/platex-euc.fmt
-share/texmf.local/web2c/platex-jis.fmt
-share/texmf.local/web2c/platex-sjis.fmt
-share/texmf.local/web2c/platex.fmt
-share/texmf.local/web2c/ptex-euc.fmt
-share/texmf.local/web2c/ptex-jis.fmt
-share/texmf.local/web2c/ptex-sjis.fmt
-share/texmf.local/web2c/ptex.fmt
-share/texmf.local/web2c/ptex.pool
-share/texmf.local/web2c/texmf.cnf
-share/texmf/dvips/pstricks/PSTricks.patch
-@dirrm share/texmf.local/web2c
-@dirrm share/texmf.local/dvips/base
-@dirrm share/texmf.local/dvips
+${PKG_LOCALTEXMFPREFIX}/dvips/base/color.pro
+${PKG_LOCALTEXMFPREFIX}/dvips/base/crop.pro
+${PKG_LOCALTEXMFPREFIX}/dvips/base/finclude.pro
+${PKG_LOCALTEXMFPREFIX}/dvips/base/hps.pro
+${PKG_LOCALTEXMFPREFIX}/dvips/base/psfonts.map
+${PKG_LOCALTEXMFPREFIX}/dvips/base/special.pro
+${PKG_LOCALTEXMFPREFIX}/dvips/base/tex.pro
+${PKG_LOCALTEXMFPREFIX}/dvips/base/texc.pro
+${PKG_LOCALTEXMFPREFIX}/dvips/base/texps.pro
+${PKG_LOCALTEXMFPREFIX}/dvips/config/config.ps
+${PKG_LOCALTEXMFPREFIX}/dvips/pstricks/pst-text.pro
+${PKG_LOCALTEXMFPREFIX}/fonts/map/dvips/ptex/psfonts_jp.map
+${PKG_LOCALTEXMFPREFIX}/web2c/platex-euc.fmt
+${PKG_LOCALTEXMFPREFIX}/web2c/platex-jis.fmt
+${PKG_LOCALTEXMFPREFIX}/web2c/platex-sjis.fmt
+${PKG_LOCALTEXMFPREFIX}/web2c/platex.fmt
+${PKG_LOCALTEXMFPREFIX}/web2c/ptex-euc.fmt
+${PKG_LOCALTEXMFPREFIX}/web2c/ptex-jis.fmt
+${PKG_LOCALTEXMFPREFIX}/web2c/ptex-sjis.fmt
+${PKG_LOCALTEXMFPREFIX}/web2c/ptex.fmt
+${PKG_LOCALTEXMFPREFIX}/web2c/ptex.pool
+${PKG_LOCALTEXMFPREFIX}/web2c/texmf.cnf
+@dirrm ${PKG_LOCALTEXMFPREFIX}/dvips/pstricks
+@dirrm ${PKG_LOCALTEXMFPREFIX}/dvips/config
+@dirrm ${PKG_LOCALTEXMFPREFIX}/dvips/base
+@dirrm ${PKG_LOCALTEXMFPREFIX}/dvips

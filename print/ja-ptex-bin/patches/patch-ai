@@ -1,25 +1,25 @@
-$NetBSD: patch-ai,v 1.1.1.1 2003/03/15 20:00:27 kei Exp $
+$NetBSD: patch-ai,v 1.2 2006/06/24 10:52:23 hira Exp $
 
---- texk/kpathsea/texmf.in.orig	Sun Jan 19 20:58:27 2003
-+++ texk/kpathsea/texmf.in	Fri Feb 21 21:31:58 2003
-@@ -58,7 +58,10 @@
- TEXMFMAIN = @texmf@
- 
- % A place for local additions to a "standard" texmf tree.  For example:
+--- texk/kpathsea/texmf.in.orig	2006-05-10 15:20:38.000000000 +0900
++++ texk/kpathsea/texmf.in	2006-05-10 15:22:46.000000000 +0900
+@@ -64,7 +64,10 @@
+ % A place for local additions to a "standard" texmf tree.
+ % This tree is not used for local configuration maintained by
+ % texconfig, it uses TEXMFCONFIG below.
 -TEXMFLOCAL = @texmf@-local
 +TEXMFLOCAL = @texmflocal@
 +
 +% Add site-specific configurations as well as above.
 +TEXMFSITE = @texmfsite@
  
- % If defined, teTeX's texconfig stores modifications here (instead of the
- % TEXMFMAIN tree).
-@@ -74,7 +77,7 @@
- %   - list $VARTEXMF in the TEXMF definition;
- %   - make sure that $VARTEXMF precedes $TEXMFMAIN in the TEXMF definition.
- % TEXMF = $TEXMFMAIN
--TEXMF = {$HOMETEXMF,!!$TEXMFLOCAL,!!$TEXMFMAIN}
-+TEXMF = {$HOMETEXMF,!!$TEXMFSITE,!!$TEXMFLOCAL,!!$TEXMFMAIN}
+ % TEXMFSYSVAR, where texconfig-sys stores variable runtime data.
+ % With teTeX-3.0 or later, this must be set.
+@@ -111,7 +114,7 @@
+ %
+ % For texconfig to work properly, TEXMFCONGIG and TEXMFVAR should be named
+ % explicitly and before all other trees.
+-TEXMF = {!!$TEXMFCONFIG,!!$TEXMFVAR,$TEXMFHOME,!!$TEXMFSYSCONFIG,!!$TEXMFSYSVAR,!!$TEXMFMAIN,!!$TEXMFLOCAL,!!$TEXMFDIST}
++TEXMF = {!!$TEXMFCONFIG,!!$TEXMFVAR,$TEXMFHOME,!!$TEXMFSYSCONFIG,!!$TEXMFSYSVAR,!!$TEXMFSITE,!!$TEXMFLOCAL,!!$TEXMFMAIN,!!$TEXMFDIST}
  
  % The system trees.  These are the trees that are shared by all the users.
- SYSTEXMF = $TEXMF
+ SYSTEXMF = $TEXMFLOCAL;$TEXMFMAIN;$TEXMFDIST
