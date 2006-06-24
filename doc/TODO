@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5115 2006/06/24 11:03:10 hira Exp $
+$NetBSD: TODO,v 1.5116 2006/06/24 15:42:26 darcy Exp $
 
 Suggested new packages
 ======================
@@ -733,7 +733,7 @@ Suggested package updates
 	o memcached-1.2
 	o memtest86-3.2
 	o metacity-2.14.5
-	o mftrace-1.1.17
+	o mftrace-1.2.4
 	o mgetty-1.1.35
 	o mhonarc-2.6.16
 	o micro_httpd-20050629
