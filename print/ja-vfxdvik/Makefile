@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2006/05/13 03:44:24 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2006/06/24 10:54:39 hira Exp $
 
 DISTNAME=	xdvik-${XDVIK_ORIGINAL_VERS}
 PKGNAME=	ja-vfxdvik-${XDVIK_ORIGINAL_VERS}.${XDVIK_JP_PATCH_VERS}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	japanese print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xdvi/} # not xdvik
 
@@ -17,18 +17,18 @@ COMMENT=	Xdvik with vflib
 XDVIK_ORIGINAL_VERS=	22.40v
 XDVIK_JP_PATCH_VERS=	j1.14
 
-DEPENDS+=	ja-ptex-bin>=3.1.2:../../print/ja-ptex-bin
-#TEX_ACCEPTED=	teTeX2
-.include "../../print/teTeX-bin/buildlink3.mk"
+DEPENDS+=	ja-ptex-bin>=3.1.9:../../print/ja-ptex-bin
 
-XDVI_DIR=	${WRKDIR}/${DISTNAME}/texk/xdvik
+.include "../../print/teTeX/module.mk"
+
+BUILD_DIRS=		${WRKDIR}/${DISTNAME}/texk/xdvik
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/config/config
 LIBTOOL_OVERRIDE=	klibtool
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=--enable-local-texmf=${PREFIX}/share/texmf.local \
+CONFIGURE_ARGS+=--enable-local-texmf=${PKG_LOCALTEXMFPREFIX} \
 		--without-texinfo \
 		--without-dialog \
 		--disable-multiplatform \
@@ -41,8 +41,10 @@ CONFIGURE_ARGS+=--enable-local-texmf=${PREFIX}/share/texmf.local \
 		--with-system-pnglib \
 		--with-system-t1lib \
 		--with-system-zlib \
+		--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib \
+		--with-zlib-include=${BUILDLINK_PREFIX.zlib}/include \
 		--enable-xdviprint=${PREFIX}/bin/vfxdviprint \
-		--enable-xdvietcdir=${PREFIX}/share/texmf.local/vfxdvi
+		--enable-xdvietcdir=${PKG_LOCALTEXMFPREFIX}/vfxdvi
 
 .include "../../mk/bsd.prefs.mk"
 .if defined(PAPERSIZE) && ${PAPERSIZE} == "A4"
@@ -50,27 +52,19 @@ CONFIGURE_ARGS+=--enable-a4
 .endif
 
 .if ${OPSYS} != "SunOS"
-CONFIGURE_ARGS+=--enable-auto-core \
-		--with-zlib-libdir=/usr/lib \
-		--with-zlib-include=/usr/include
+CONFIGURE_ARGS+=--enable-auto-core
 .else
-CONFIGURE_ARGS+= --with-zlib-libdir=${PREFIX}/lib \
-		--with-zlib-include=${PREFIX}/include
+USE_BUILTIN.zlib=	no # force use pkgsrc zlib
 .endif
 
 CONFIGURE_ENV+=	INSTALL_PROGRAM=${INSTALL_PROGRAM:Q} \
 		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q} \
 		INSTALL_DATA=${INSTALL_DATA:Q}
 
-do-build:
-	cd ${XDVI_DIR} && ${MAKE_PROGRAM}
-
-do-install:
-	cd ${XDVI_DIR} && ${MAKE_PROGRAM} install
-
-.include "../../www/libwww/buildlink3.mk"
-.include "../../print/ja-vflib-lib/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/t1lib/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../print/ja-vflib-lib/buildlink3.mk"
+.include "../../www/libwww/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
