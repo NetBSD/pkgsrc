@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/03/15 20:00:27 kei Exp $
+$NetBSD: patch-ab,v 1.2 2006/06/24 10:52:23 hira Exp $
 
---- texk/web2c/ptex-3.1.2/configure.orig	Fri Nov 22 14:20:16 2002
-+++ texk/web2c/ptex-3.1.2/configure	Fri Feb 21 21:21:10 2003
+--- texk/web2c/ptex-src-3.1.9/configure.orig	2006-05-10 15:14:20.000000000 +0900
++++ texk/web2c/ptex-src-3.1.9/configure	2006-05-10 15:14:20.000000000 +0900
 @@ -5,7 +5,7 @@
  configopt=
  
