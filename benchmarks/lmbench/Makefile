@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2006/06/08 14:58:38 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2006/06/24 08:44:33 rillig Exp $
 
 DISTNAME=		lmbench-2alpha11
 PKGNAME=		lmbench-2.11a
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		benchmarks
 MASTER_SITES=		ftp://ftp.bitmover.com/lmbench/
 EXTRACT_SUFX=		.tgz
@@ -37,7 +37,7 @@ post-configure:
 	${CHMOD} 0755 ${WRKSRC}/scripts/lmbench
 
 do-install:
-	${SETENV} PREFIX=${PREFIX} WRKSRC=${WRKSRC} \
+	${SETENV} ${MAKE_ENV} PREFIX=${PREFIX} WRKSRC=${WRKSRC} \
 		INSTALL_PROGRAM=${INSTALL:Q} ${FILESDIR}/do-install
 
 .include "../../mk/bsd.prefs.mk"
