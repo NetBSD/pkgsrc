@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.3 2006/06/25 14:53:00 wiz Exp $
+
+Fix gcc4 error:
+error: array type has incomplete element type
+
+--- lib/pki1/oiddata.h.orig	2006-06-25 06:03:14.000000000 +0000
++++ lib/pki1/oiddata.h
+@@ -43,7 +43,7 @@ static const char OIDDATA_CVS_ID[] = "@(
+ #include "nsspki1t.h"
+ #endif /* NSSPKI1T_H */
+ 
+-extern const NSSOID nss_builtin_oids[];
++extern const NSSOID *nss_builtin_oids;
+ extern const PRUint32 nss_builtin_oid_count;
+ 
+ /*extern const nssAttributeTypeAliasTable nss_attribute_type_aliases[];*/
