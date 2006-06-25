@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2005/06/17 03:50:42 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/06/25 09:46:53 rillig Exp $
 #
 
 DISTNAME=	Zope-2.2.2-src
 PKGNAME=	py-pcgi-2.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=   http://www.zope.org/Products/Zope/2.2.2/
 EXTRACT_SUFX=	.tgz
@@ -17,6 +17,7 @@ HAS_CONFIGURE=	yes
 EXTRACT_ELEMENTS=	${DISTNAME}/pcgi
 
 BUILD_TARGET=	all
+PYTHON_PATCH_SCRIPTS=	Util/*.py
 
 INSTALLATION_DIRS=	bin libexec
 
@@ -35,4 +36,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/Util/killpcgi ${PREFIX}/bin
 
 .include "../../lang/python20/Makefile.inc"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
