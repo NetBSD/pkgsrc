@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.23 2006/04/21 07:55:16 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.24 2006/06/25 10:02:10 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -411,6 +411,19 @@
             <filename>MESSAGE</filename>.</para>
         </listitem>
       </varlistentry>
+
+	<varlistentry><term><filename>buildlink3.mk</filename></term>
+	<listitem><para>This file contains the dependency information
+	for the buildlink3 framework (see <xref
+	linkend="buildlink"/>).</para></listitem></varlistentry>
+
+	<varlistentry><term><filename>options.mk</filename></term>
+	<listitem><para>This file contains the code for the
+	package-specific options (see <xref linkend="options"/>) that can be
+	selected by the user. If a package has only one or two options,
+	it is equally acceptable to put the code directly into the
+	<filename>Makefile</filename>.</para></listitem></varlistentry>
+
     </variablelist>
   </sect1>
 
