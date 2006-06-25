@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/02/05 23:09:25 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/25 07:28:05 rillig Exp $
 #
 
 DISTNAME=	xtris-1.15
@@ -20,9 +20,9 @@ INSTALLATION_DIRS=	bin man/man6
 .include "../../mk/x11.buildlink3.mk"
 
 do-install:
-	${INSTALL} -o bin -g games -m 2755 ${WRKSRC}/xtris ${PREFIX}/bin/xtris
-	${INSTALL} -o bin -g games -m 2755 ${WRKSRC}/xtbot ${PREFIX}/bin/xtbot
-	${INSTALL} -o bin -g games -m 2755 ${WRKSRC}/xtserv ${PREFIX}/bin/xtserv
+	${INSTALL_GAME} ${WRKSRC}/xtris ${PREFIX}/bin/xtris
+	${INSTALL_GAME} ${WRKSRC}/xtbot ${PREFIX}/bin/xtbot
+	${INSTALL_GAME} ${WRKSRC}/xtserv ${PREFIX}/bin/xtserv
 	${INSTALL_MAN} ${WRKSRC}/xtris.6 ${PREFIX}/man/man6/xtris.6
 	${INSTALL_MAN} ${WRKSRC}/xtbot.6 ${PREFIX}/man/man6/xtbot.6
 	${INSTALL_MAN} ${WRKSRC}/xtserv.6 ${PREFIX}/man/man6/xtserv.6
