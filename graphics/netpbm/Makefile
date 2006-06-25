@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.142 2006/06/18 16:18:11 minskim Exp $
+# $NetBSD: Makefile,v 1.143 2006/06/25 06:35:58 adam Exp $
 
-DISTNAME=	netpbm-10.33
-PKGREVISION=	4
+DISTNAME=	netpbm-10.34
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz
@@ -61,6 +60,7 @@ MAKE_ENV+=	JASPERHDR_DIR=${CPPFLAGS:M*:Q}
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 
 pre-configure:
 	${CP} ${WRKSRC}/Makefile.config.in ${WRKSRC}/Makefile.config
