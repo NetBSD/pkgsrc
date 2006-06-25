@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5118 2006/06/25 12:05:00 wiz Exp $
+$NetBSD: TODO,v 1.5119 2006/06/25 13:35:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -415,7 +415,7 @@ Suggested package updates
 	o compface-1.5.2
 	o control-center-2.14.2
 	o cook-2.26
-	o coreutils-5.96
+	o coreutils-5.97
 	o cqcam-0.91
 	o crafty-19.5
 	o criticalmass-1.0.0
@@ -790,6 +790,7 @@ Suggested package updates
 	o newmail-1.0.2
 	o newmat-11
 	o ng-1.4.4
+	o nmap-4.11
 	o nmh-1.2.1
 	o nn-6.7.2
 	o ns-plugger-common-5.1.3
