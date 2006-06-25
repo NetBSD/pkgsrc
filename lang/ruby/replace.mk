@@ -1,8 +1,10 @@
-# $NetBSD: replace.mk,v 1.4 2006/01/30 16:30:05 taca Exp $
+# $NetBSD: replace.mk,v 1.5 2006/06/25 09:31:43 rillig Exp $
 #
 
 .if !defined(_RUBY_REPLACE_MK)
 _RUBY_REPLACE_MK=	# defined
+
+.include "${.PARSEDIR}/rubyversion.mk"
 
 # fix shebang line.
 #
