@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.583 2006/06/25 00:02:57 hubertf Exp $
+$NetBSD: CHANGES-2006,v 1.584 2006/06/25 06:36:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3154,3 +3154,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated print/ja-ptex to 1.0nb3 [hira 2006-06-24]
 	Updated security/gnupg to 1.4.3nb1 [salo 2006-06-24]
 	Updated misc/multitail to 4.0.6 [hubertf 2006-06-25]
+	Updated graphics/netpbm to 10.34 [adam 2006-06-25]
