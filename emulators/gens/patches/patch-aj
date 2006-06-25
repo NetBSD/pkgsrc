@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.3 2004/08/22 11:37:28 kristerw Exp $
+$NetBSD: patch-aj,v 1.4 2006/06/25 18:36:28 wiz Exp $
 
---- src/gens/emulator/g_main.c.orig	Tue May 18 22:34:00 2004
-+++ src/gens/emulator/g_main.c	Sun Aug 22 13:28:23 2004
-@@ -55,6 +55,23 @@
+--- src/gens/emulator/g_main.c.orig	2004-05-18 20:34:00.000000000 +0000
++++ src/gens/emulator/g_main.c
+@@ -55,8 +55,27 @@ int Intro_Style = 2;
  int SegaCD_Accurate = 0;
  int Kaillera_Client_Running = 0;
  
@@ -25,8 +25,12 @@ $NetBSD: patch-aj,v 1.3 2004/08/22 11:37:28 kristerw Exp $
 +
  static int Gens_Running = 0;
  
++static int Build_Language_String (void);
++
  void
-@@ -394,6 +411,13 @@
+ SetWindowText (const char *s)
+ {
+@@ -394,6 +413,13 @@ update_SDL_events ()
  
  	      break;
  
@@ -40,7 +44,7 @@ $NetBSD: patch-aj,v 1.3 2004/08/22 11:37:28 kristerw Exp $
  	    case SDLK_v:
  	      if (KMOD_CTRL & mod)
  		{
-@@ -429,14 +453,14 @@
+@@ -429,14 +455,14 @@ update_SDL_events ()
  	case SDL_JOYAXISMOTION:
  	  if (event.jaxis.axis < 2)
  	    {
@@ -57,7 +61,7 @@ $NetBSD: patch-aj,v 1.3 2004/08/22 11:37:28 kristerw Exp $
  		{
  		  joystate[0x100 * event.jaxis.which +
  			   ((event.jaxis.axis == 0) ? 0x4 : 0x2)] = 1;
-@@ -661,11 +685,11 @@
+@@ -661,11 +687,11 @@ idle_loop (gpointer data)
  int
  main (int argc, char *argv[])
  {
@@ -71,11 +75,10 @@ $NetBSD: patch-aj,v 1.3 2004/08/22 11:37:28 kristerw Exp $
    add_pixmap_directory (DATADIR);
    gtk_init (&argc, &argv);
    gens_window = create_gens_window ();
-@@ -849,4 +873,84 @@
-     }
+@@ -850,3 +876,83 @@ Build_Language_String (void)
  
    return (0);
-+}
+ }
 +
 +void PlayMovie()
 +{
@@ -155,4 +158,4 @@ $NetBSD: patch-aj,v 1.3 2004/08/22 11:37:28 kristerw Exp $
 +  MoviePlaying = 0;
 +  free(MovieData);
 +  MovieData = NULL;
- }
++}
