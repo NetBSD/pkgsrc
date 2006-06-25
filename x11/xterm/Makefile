@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/04/26 14:04:57 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2006/06/25 19:37:44 rillig Exp $
 
 DISTNAME=	xterm-212
 CATEGORIES=	x11
@@ -30,7 +30,8 @@ INSTALL_FILE=	${WRKDIR}/INSTALL
 DEINSTALL_FILE=	${INSTALL_FILE}
 
 pre-build:
-	@${SED} -e 's#@MV@#${MV}#g' \
+	${MKDIR} ${INSTALL_FILE:H}
+	${SED} -e 's#@MV@#${MV}#g' \
 	  -e 's#@LOCALBASE@#${LOCALBASE}#g' \
 	  -e 's#@PREFIX@#${PREFIX}#g' \
 	  ${PKGDIR}/INSTALL.openwin >${INSTALL_FILE}
