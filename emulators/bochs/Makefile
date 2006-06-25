@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/03/04 21:29:34 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2006/06/25 18:00:05 wiz Exp $
 
 DISTNAME=		bochs-2.2.1
 PKGREVISION=		1
@@ -15,6 +15,7 @@ USE_TOOLS+=		gunzip gzip
 USE_LANGUAGES=		c c++
 
 ONLY_FOR_COMPILER=	gcc
+CXXFLAGS+=		-DPARANOID
 
 # These options are not enabled by default because they can adversely impact
 # performance. The number of processors can be either 1 (default), 2, or 4.
