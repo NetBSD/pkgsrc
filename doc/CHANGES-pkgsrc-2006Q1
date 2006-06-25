@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.91 2006/06/23 13:46:37 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.92 2006/06/25 08:59:00 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -187,3 +187,5 @@ Pullup ticket 1705 - requested by tron
 security fix for mutt
 Pullup ticket 1708 - requested by salo
 security update for chmlib
+Pullup ticket 1709 - requested by salo
+security update for gnupg
