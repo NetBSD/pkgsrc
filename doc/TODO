@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5117 2006/06/24 15:45:53 wiz Exp $
+$NetBSD: TODO,v 1.5118 2006/06/25 12:05:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -379,6 +379,7 @@ Suggested package updates
 	o bind-8.4.7
 	o bind-9.3.2
 	o bioperl-1.5.0
+	o bitlbee-1.0.3
 	o bittorrent-4.20
 	o blackbox-0.70
 	o blur6ex-0.3.462
@@ -709,6 +710,8 @@ Suggested package updates
 	o libtcl-nothread-8.4.9
 	o libtheora-1.0alpha7
 	o libtorrent-0.9.0
+	o libvisual-0.4.0
+	o libvisual-plugins-0.4.0
 	o libwpd-0.8.5
 	o licq-core-1.3.0
 	o liferea-1.0.15
@@ -1129,7 +1132,7 @@ Suggested package updates
 	o smartmontools-5.33
 	o smlnj-110.51 [pkgsrc-wip]
 	o smlnj-110.59
-	o snd-8.1
+	o snd-8.2
 	o snort-2.6.0
 	o solfege-3.3.1
 	o sope-4.5.5
