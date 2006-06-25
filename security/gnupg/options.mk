@@ -1,7 +1,17 @@
-# $NetBSD: options.mk,v 1.5 2005/12/05 20:50:56 rillig Exp $
+# $NetBSD: options.mk,v 1.5.4.1 2006/06/25 08:58:14 snj Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg
-PKG_SUPPORTED_OPTIONS=	i586-optimized curl idea ldap m68060-optimized
+PKG_SUPPORTED_OPTIONS=	curl idea ldap
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH:Mi386}
+PKG_SUPPORTED_OPTIONS+=	i586-optimized
+.endif
+
+.if ${MACHINE_ARCH:Mm68k}
+PKG_SUPPORTED_OPTIONS+=	m68060-optimized
+.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -13,10 +23,8 @@ MACHINE_GNU_ARCH=	i586
 
 .if !empty(PKG_OPTIONS:Mcurl)
 .include "../../www/curl/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-libcurl
-PLIST_SUBST+=	CURL="" NOCURL="@comment "
 .else
-PLIST_SUBST+=	CURL="@comment " NOCURL=""
+CONFIGURE_ARGS+=	--without-libcurl
 .endif
 
 .if !empty(PKG_OPTIONS:Midea)
