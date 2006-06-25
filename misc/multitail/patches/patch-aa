@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2006/02/23 18:03:57 rillig Exp $
+$NetBSD: patch-aa,v 1.6 2006/06/25 00:01:44 hubertf Exp $
 
---- Makefile.orig	2006-02-17 11:44:46.000000000 +0100
-+++ Makefile	2006-02-23 18:57:30.000000000 +0100
-@@ -1,7 +1,7 @@
- include version
+--- Makefile.orig	2006-06-12 21:45:57.000000000 +0200
++++ Makefile
+@@ -4,7 +4,7 @@ DESTDIR=/
+ CONFIG_FILE=$(DESTDIR)/etc/multitail.conf
  
- DEBUG=-g # -D_DEBUG # -W -pedantic #-pg #-fprofile-arcs
+ DEBUG=-g #  -D_DEBUG  -W -pedantic # -pg #-fprofile-arcs
 -LDFLAGS=-lpanel -lncurses -lutil -lm $(DEBUG)
 +LDFLAGS+=-lpanel -lncurses -lutil -lm $(DEBUG)
- CFLAGS+=-D`uname` -O2 -Wall -DVERSION=\"$(VERSION)\" $(DEBUG)
+ CFLAGS+=-D`uname` -O2 -Wall -DVERSION=\"$(VERSION)\" $(DEBUG) -DCONFIG_FILE=\"$(CONFIG_FILE)\"
  
- OBJS=utils.o mt.o error.o my_pty.o term.o scrollback.o help.o
+ OBJS=utils.o mt.o error.o my_pty.o term.o scrollback.o help.o mem.o cv.o selbox.o stripstring.o color.o misc.o ui.o exec.o diff.o config.o cmdline.o globals.o
