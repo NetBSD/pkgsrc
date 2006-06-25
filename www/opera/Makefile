@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2006/06/23 14:35:17 salo Exp $
+# $NetBSD: Makefile,v 1.57 2006/06/25 12:33:26 tron Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
 CATEGORIES=		www
@@ -47,7 +47,7 @@ OPERA_DIR=		linux/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/${OPERA_ARCH:S/./
 OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
 
 RPMFILES=		${DISTFILES}
-RPM2PKGSTRIP=		0
+RPM2PKGSTRIP=		1
 
 .elif (${_OPERA_OPSYS} == FreeBSD)
 OPERA_ARCH=		.i386.freebsd
