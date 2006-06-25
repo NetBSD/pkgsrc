@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2004/12/25 02:54:13 wiz Exp $
+$NetBSD: patch-aa,v 1.10.10.1 2006/06/25 08:58:14 snj Exp $
 
---- cipher/idea-stub.c.orig	2004-11-17 16:50:56.000000000 +0100
+--- cipher/idea-stub.c.orig	2005-12-08 06:58:36.000000000 +0000
 +++ cipher/idea-stub.c
-@@ -132,9 +132,9 @@ load_module (const char *name)
+@@ -133,9 +133,9 @@ load_module (const char *name)
      }
  
    sym = dlsym (handle, "idea_get_info");
@@ -13,4 +13,4 @@ $NetBSD: patch-aa,v 1.10 2004/12/25 02:54:13 wiz Exp $
 +  if ((sym == NULL) && (err=dlerror())) 
      goto failure;
  
-   return sym;
+   return (INFO_FNC)sym;
