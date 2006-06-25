@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: gdm.sh,v 1.4 2006/03/30 21:25:48 jmmv Exp $
+# $NetBSD: gdm.sh,v 1.5 2006/06/25 17:16:33 jmmv Exp $
 #
 
 # PROVIDE: gdm
@@ -16,7 +16,7 @@ rcvar=${name}
 command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
 procname="@PREFIX@/sbin/gdm-binary"
-required_files="@PKG_SYSCONFDIR@/gdm/custom.conf"
+required_files="@PKG_SYSCONFDIR@/custom.conf"
 extra_commands="reload"
 
 if [ -f /etc/rc.subr ]; then
