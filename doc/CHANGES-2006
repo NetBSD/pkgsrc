@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.584 2006/06/25 06:36:58 adam Exp $
+$NetBSD: CHANGES-2006,v 1.585 2006/06/25 14:30:37 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3155,3 +3155,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/gnupg to 1.4.3nb1 [salo 2006-06-24]
 	Updated misc/multitail to 4.0.6 [hubertf 2006-06-25]
 	Updated graphics/netpbm to 10.34 [adam 2006-06-25]
+	Updated net/nmap to 4.11 [salo 2006-06-25]
+	Updated net/nmapfe to 0.9.5nb30 [salo 2006-06-25]
