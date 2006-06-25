@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2006/06/15 15:24:23 salo Exp $
+# $NetBSD: Makefile,v 1.52 2006/06/25 14:29:14 salo Exp $
 #
 
-DISTNAME=	nmap-4.10
+DISTNAME=	nmap-4.11
 CATEGORIES=	net security
 MASTER_SITES=	http://www.insecure.org/nmap/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,9 +12,10 @@ COMMENT=	Network/port scanner with OS detection
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake
 
 LIBTOOL_OVERRIDE+=	libdnet-stripped/libtool
 
