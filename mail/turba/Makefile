@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2006/06/02 18:27:56 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/06/25 19:53:13 dmcmahill Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
+PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	http://ftp.horde.org/pub/turba/ \
 		ftp://ftp.horde.org/pub/turba/
@@ -10,7 +11,7 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.horde.org/turba/
 COMMENT=	Horde contact management application
 
-DEPENDS+=	horde>=3.0.0:../../www/horde3
+DEPENDS+=	horde>=3.0.0:../../www/horde
 
 .include "../../mk/bsd.prefs.mk"
 
