@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2006/03/04 21:30:16 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/06/25 08:29:20 rillig Exp $
 #
 
 DISTNAME=	arpd
 PKGNAME=	arpd-1.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://subzero.campus.luth.se/pub/arpd/
 
@@ -12,6 +13,7 @@ COMMENT=	ARP daemon
 NOT_FOR_PLATFORM=	Interix-*-* # does not have bpf(4) device
 
 MAKE_ENV+=	BINDIR=${PREFIX}/sbin
+MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/arpd.README
