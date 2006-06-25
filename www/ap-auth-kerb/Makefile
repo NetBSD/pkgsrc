@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/06/08 12:15:57 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2006/06/25 09:11:48 rillig Exp $
 
 DISTNAME=	mod_auth_kerb-5.0rc7
 PKGNAME=	${APACHE_PKG_PREFIX}-auth-kerb-5.0rc7
@@ -13,6 +13,8 @@ CONFLICTS=	ap-auth-kerb-[0-9]*
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-krb4
+CONFIGURE_ARGS+=	--with-apache=${BUILDLINK_PREFIX.apache}
+CONFIGURE_ARGS+=	APXS=${APXS}
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 
