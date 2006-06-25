@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2006/06/15 15:24:24 salo Exp $
+# $NetBSD: Makefile,v 1.42 2006/06/25 14:29:30 salo Exp $
 #
 
-DISTNAME=	nmap-4.10
+DISTNAME=	nmap-4.11
 PKGNAME=	nmapfe-0.9.5
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	net security
 MASTER_SITES=	http://www.insecure.org/nmap/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -20,8 +20,8 @@ USE_TOOLS+=	pkg-config
 PATCHDIR=	${.CURDIR}/../../net/nmap/patches
 DISTINFO_FILE=	${.CURDIR}/../../net/nmap/distinfo
 
-CONFIGURE_DIRS=	${WRKSRC}/nbase ${WRKSRC}/nmapfe
-BUILD_DIRS=	${WRKSRC}/nbase ${WRKSRC}/nmapfe
+CONFIGURE_DIRS=	nbase nmapfe
+BUILD_DIRS=	nbase nmapfe
 
 INSTALLATION_DIRS=	bin man/man1
 
