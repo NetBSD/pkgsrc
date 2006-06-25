@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2006/05/17 16:22:06 tv Exp $
+# $NetBSD: Makefile.common,v 1.8 2006/06/25 17:06:08 rillig Exp $
 #
 
 BOOST_PACKAGE?=		undefined
@@ -30,7 +30,7 @@ CONFLICTS+=		boost<1.32.0
 DISTINFO_FILE=		${.CURDIR}/../../meta-pkgs/boost/distinfo
 PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
 
-USE_LANGUAGES+=		c++
+USE_LANGUAGES+=		c c++
 GCC_REQD+=		3.2 # if using gcc; ignored otherwise
 
 # We can't do this at post-extract because the extract cookie will get a
