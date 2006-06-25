@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.24 2006/06/25 10:02:10 rillig Exp $ -->
+<!-- $NetBSD: components.xml,v 1.25 2006/06/25 10:33:33 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
   <title>Package components - files, directories and contents</title>
@@ -363,6 +363,9 @@
   <sect1 id="components.optional">
     <title>Optional files</title>
 
+<sect2 id="components.optional.bin">
+<title>Files affecting the binary package</title>
+
     <variablelist>
       <varlistentry>
         <term><filename>INSTALL</filename></term>
@@ -412,11 +415,39 @@
         </listitem>
       </varlistentry>
 
+	<varlistentry><term><filename>ALTERNATIVES</filename></term>
+	<listitem><para>FIXME: There is no documentation on the
+	alternatives framework.</para></listitem></varlistentry>
+
+    </variablelist>
+
+</sect2>
+<sect2 id="components.optional.build">
+<title>Files affecting the build process</title>
+
+	<variablelist>
+
+	<varlistentry><term><filename>Makefile.common</filename></term>
+	<listitem><para>This file contains arbitrary things that could
+	also go into a <filename>Makefile</filename>, but its purpose is
+	to be used by more than one package. This file should only be
+	used when the packages that will use the file are known in
+	advance. For other purposes it is often better to write a
+	<filename>*.mk</filename> file and give it a good name that
+	describes what it does.</para></listitem></varlistentry>
+
 	<varlistentry><term><filename>buildlink3.mk</filename></term>
 	<listitem><para>This file contains the dependency information
 	for the buildlink3 framework (see <xref
 	linkend="buildlink"/>).</para></listitem></varlistentry>
 
+	<varlistentry><term><filename>hacks.mk</filename></term>
+	<listitem><para>This file contains workarounds for compiler bugs
+	and similar things. It is included automatically by the pkgsrc
+	infrastructure, so you don't need an extra
+	<literal>.include</literal> line for
+	it.</para></listitem></varlistentry>
+	
 	<varlistentry><term><filename>options.mk</filename></term>
 	<listitem><para>This file contains the code for the
 	package-specific options (see <xref linkend="options"/>) that can be
@@ -424,8 +455,28 @@
 	it is equally acceptable to put the code directly into the
 	<filename>Makefile</filename>.</para></listitem></varlistentry>
 
-    </variablelist>
-  </sect1>
+	</variablelist>
+
+</sect2>
+<sect2 id="components.optional.none">
+<title>Files affecting nothing at all</title>
+
+	<variablelist>
+
+	<varlistentry><term><filename>README*</filename></term>
+	<listitem><para>These files do not take place in the creation of
+	a package and thus are purely informative to the package
+	developer.</para></listitem></varlistentry>
+
+	<varlistentry><term><filename>TODO</filename></term>
+	<listitem><para>This file contains things that need to be done
+	to make the package even
+	better.</para></listitem></varlistentry>
+
+	</variablelist>
+
+</sect2>
+</sect1>
 
   <sect1 id="work-dir">
     <title><filename>work*</filename></title>
