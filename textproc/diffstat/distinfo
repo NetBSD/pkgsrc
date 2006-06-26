@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2006/05/08 06:22:51 snj Exp $
+$NetBSD: distinfo,v 1.6 2006/06/26 11:44:09 rillig Exp $
 
 SHA1 (diffstat-1.41.tgz) = 75545e796ad6b2663170f21dc7d303d3487ad5d8
 RMD160 (diffstat-1.41.tgz) = b152a6061ea5500e969c65c7c8832decac2aa40a
 Size (diffstat-1.41.tgz) = 98321 bytes
+SHA1 (patch-aa) = e163de68cab2141a7d21f73adce552ce9b0fdd16
