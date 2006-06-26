@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.587 2006/06/26 18:05:18 salo Exp $
+$NetBSD: CHANGES-2006,v 1.588 2006/06/26 19:51:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3175,3 +3175,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed emulators/suse_vmware [salo 2006-06-26]
 	Removed emulators/suse_x11 [salo 2006-06-26]
 	Removed emulators/suse_xforms [salo 2006-06-26]
+	Updated textproc/opensp to 1.5.2 [wiz 2006-06-26]
