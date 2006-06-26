@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/11 13:26:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/06/26 08:56:37 rillig Exp $
 bin/Maelstrom
 bin/Maelstrom_netplayd
 bin/Maelstrom_sound
@@ -32,6 +32,7 @@ share/maelstrom/Images/Maelstrom_Titles#999.icon
 share/maelstrom/Maelstrom Fonts
 share/maelstrom/Maelstrom Sounds
 share/maelstrom/Maelstrom Sprites
+share/maelstrom/Maelstrom-Scores
 share/maelstrom/NewSounds/Funky_Sounds
 share/maelstrom/NewSounds/Maelstrom Sounds
 share/maelstrom/NewSounds/Martin_Sounds
