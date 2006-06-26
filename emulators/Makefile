@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2006/06/13 11:31:59 salo Exp $
+# $NetBSD: Makefile,v 1.153 2006/06/26 17:54:18 salo Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -119,24 +119,7 @@ SUBDIR+=	suse91_openmotif
 SUBDIR+=	suse91_slang
 SUBDIR+=	suse91_vmware
 SUBDIR+=	suse91_x11
-SUBDIR+=	suse_audio
-SUBDIR+=	suse_base
-SUBDIR+=	suse_compat
-SUBDIR+=	suse_devel
-SUBDIR+=	suse_fileutils
-SUBDIR+=	suse_freetype2
-SUBDIR+=	suse_glx
-SUBDIR+=	suse_gtk
-SUBDIR+=	suse_libc5
-SUBDIR+=	suse_libjpeg
-SUBDIR+=	suse_libpng
-SUBDIR+=	suse_libtiff
-SUBDIR+=	suse_linux
-SUBDIR+=	suse_openmotif
-SUBDIR+=	suse_slang
-SUBDIR+=	suse_vmware
-SUBDIR+=	suse_x11
-SUBDIR+=	suse_xforms
+#SUBDIR+=	suse_linux		# only contains Makefile fragments
 SUBDIR+=	swarm
 SUBDIR+=	tme
 SUBDIR+=	tuxnes
