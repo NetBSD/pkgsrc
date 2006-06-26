@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.586 2006/06/25 17:18:58 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.587 2006/06/26 18:05:18 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3158,3 +3158,20 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/nmap to 4.11 [salo 2006-06-25]
 	Updated net/nmapfe to 0.9.5nb30 [salo 2006-06-25]
 	Updated x11/gdm to 2.14.5nb1 [jmmv 2006-06-25]
+	Removed emulators/suse_audio [salo 2006-06-26]
+	Removed emulators/suse_base [salo 2006-06-26]
+	Removed emulators/suse_compat [salo 2006-06-26]
+	Removed emulators/suse_devel [salo 2006-06-26]
+	Removed emulators/suse_fileutils [salo 2006-06-26]
+	Removed emulators/suse_freetype2 [salo 2006-06-26]
+	Removed emulators/suse_glx [salo 2006-06-26]
+	Removed emulators/suse_gtk [salo 2006-06-26]
+	Removed emulators/suse_libc5 [salo 2006-06-26]
+	Removed emulators/suse_libjpeg [salo 2006-06-26]
+	Removed emulators/suse_libpng [salo 2006-06-26]
+	Removed emulators/suse_libtiff [salo 2006-06-26]
+	Removed emulators/suse_openmotif [salo 2006-06-26]
+	Removed emulators/suse_slang [salo 2006-06-26]
+	Removed emulators/suse_vmware [salo 2006-06-26]
+	Removed emulators/suse_x11 [salo 2006-06-26]
+	Removed emulators/suse_xforms [salo 2006-06-26]
