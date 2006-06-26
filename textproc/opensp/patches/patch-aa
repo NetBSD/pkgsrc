@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2004/05/19 05:42:38 minskim Exp $
+$NetBSD: patch-aa,v 1.4 2006/06/26 19:50:28 wiz Exp $
 
---- doc/Makefile.in.orig	2003-10-11 04:05:56.000000000 -0500
+--- doc/Makefile.in.orig	2005-12-23 14:15:58.000000000 +0000
 +++ doc/Makefile.in
-@@ -117,7 +117,7 @@ install_sh = @install_sh@
- 
+@@ -216,7 +216,7 @@ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
  docdir = $(datadir)/doc
  pkgdocdir = $(docdir)/@PACKAGE@
 -pkgdochtmldir = $(pkgdocdir)/doc
 +pkgdochtmldir = $(docdir)/@PACKAGE@
- 
  MAINTAINERCLEANFILES = Makefile.in
- 
+ pkgdochtml_DATA = archform.htm build.htm catalog.htm charset.htm \
+ 	features.htm generic.htm ideas.htm index.htm new.htm nsgmls.htm \

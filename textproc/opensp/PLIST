@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:35 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2006/06/26 19:50:28 wiz Exp $
 bin/onsgmls
 bin/osgmlnorm
 bin/ospam
@@ -196,8 +196,6 @@ share/doc/OpenSP/index.htm
 share/doc/OpenSP/new.htm
 share/doc/OpenSP/nsgmls.htm
 share/doc/OpenSP/releasenotes.html
-share/doc/OpenSP/releasenotes.pdf
-share/doc/OpenSP/releasenotes.ps
 share/doc/OpenSP/sgmldecl.htm
 share/doc/OpenSP/sgmlnorm.htm
 share/doc/OpenSP/sgmlsout.htm
@@ -209,10 +207,11 @@ share/doc/OpenSP/sysdecl.htm
 share/doc/OpenSP/sysid.htm
 share/doc/OpenSP/xml.htm
 share/doc/OpenSP/xmlwarn.htm
-share/locale/de/LC_MESSAGES/sp4.mo
-share/locale/fr/LC_MESSAGES/sp4.mo
-share/locale/ja/LC_MESSAGES/sp4.mo
-share/locale/sv/LC_MESSAGES/sp4.mo
+share/locale/de/LC_MESSAGES/sp5.mo
+share/locale/fr/LC_MESSAGES/sp5.mo
+share/locale/ja/LC_MESSAGES/sp5.mo
+share/locale/sv/LC_MESSAGES/sp5.mo
+share/locale/tr/LC_MESSAGES/sp5.mo
 @dirrm share/doc/OpenSP
 @dirrm share/OpenSP
 @dirrm include/OpenSP
