@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.135 2006/03/11 10:07:50 ghen Exp $
+# $NetBSD: Makefile,v 1.135.2.1 2006/06/26 07:06:34 ghen Exp $
 
-DISTNAME=	netpbm-10.32
+DISTNAME=	netpbm-10.34
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netpbm/}
 EXTRACT_SUFX=	.tgz
@@ -48,12 +48,19 @@ REPLACE_FILES.bash+=	other/ppmtomap
 MAKE_ENV+=	BUILD_FIASCO=N
 .endif
 
+.if ${OPSYS} == "Darwin"
+MAKE_ENV+=	NETPBMLIBTYPE="dylib" NETPBMLIBSUFFIX="dylib"
+.else
+MAKE_ENV+=	NETPBMLIBTYPE="unixshared" NETPBMLIBSUFFIX="so"
+.endif
+
 MAKE_ENV+=	JASPERLIB="${LDFLAGS} -ljasper"
 MAKE_ENV+=	JASPERHDR_DIR=${CPPFLAGS:M*:Q}
 
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 
 pre-configure:
 	${CP} ${WRKSRC}/Makefile.config.in ${WRKSRC}/Makefile.config
@@ -73,10 +80,12 @@ post-install:
 	${FIND} * \! -type d -print | ${SORT} >${PLIST_SRC} &&	\
 	${FIND} * -type d -print | 				\
 	while read DIR; do					\
-	  ${TEST} -d "${PREFIX}/$${DIR}" ||			\
-	    ${ECHO} "@dirrm $${DIR}";				\
+		${TEST} -d "${PREFIX}/$${DIR}" ||		\
+			${ECHO} "@dirrm $${DIR}";		\
 	done >>${PLIST_SRC} &&					\
 	${PAX} -rwpppm . ${PREFIX}
 	${RM} -fr ${STAGEDIR}
+	${FIND} ${PREFIX}/share/doc/netpbm -type f -print |	\
+		${XARGS} ${CHMOD} ${NONBINMODE}
 
 .include "../../mk/bsd.pkg.mk"
