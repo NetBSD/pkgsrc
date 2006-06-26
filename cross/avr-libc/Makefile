@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:08:30 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/26 09:45:55 rillig Exp $
 
 DISTNAME=		avr-libc-1.2.5
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		cross
 MASTER_SITES=		http://people.freebsd.org/~joerg/ \
 			http://savannah.nongnu.org/download/avr-libc/
@@ -13,7 +13,7 @@ COMMENT=		C and math library for Atmel AVR 8-bit microcontrollers
 
 BUILD_DEPENDS+=		avr-binutils-*:../../cross/avr-binutils
 BUILD_DEPENDS+=		avr-gcc-*:../../cross/avr-gcc
-BUILD_DEPENDS+=		doxygen-*:../../devel/doxygen
+BUILD_DEPENDS+=		doxygen>=1.4.7:../../devel/doxygen
 BUILD_DEPENDS+=		transfig-*:../../print/transfig
 BUILD_DEPENDS+=		netpbm-*:../../graphics/netpbm
 

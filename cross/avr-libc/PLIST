@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/08/15 08:45:54 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/06/26 09:45:55 rillig Exp $
 avr/include/ctype.h
 avr/include/errno.h
 avr/include/inttypes.h
@@ -140,22 +140,6 @@ share/doc/avr-libc/avr-libc-user-manual/annotated.html
 share/doc/avr-libc/avr-libc-user-manual/assembler.html
 share/doc/avr-libc/avr-libc-user-manual/classes.html
 share/doc/avr-libc/avr-libc-user-manual/demo.png
-share/doc/avr-libc/avr-libc-user-manual/dir_000000.html
-share/doc/avr-libc/avr-libc-user-manual/dir_000001.html
-share/doc/avr-libc/avr-libc-user-manual/dir_000002.html
-share/doc/avr-libc/avr-libc-user-manual/dir_000003.html
-share/doc/avr-libc/avr-libc-user-manual/dir_000004.html
-share/doc/avr-libc/avr-libc-user-manual/dir_000005.html
-share/doc/avr-libc/avr-libc-user-manual/dir_000006.html
-share/doc/avr-libc/avr-libc-user-manual/dir_000007.html
-share/doc/avr-libc/avr-libc-user-manual/dir_000008.html
-share/doc/avr-libc/avr-libc-user-manual/dir_000009.html
-share/doc/avr-libc/avr-libc-user-manual/dir_000010.html
-share/doc/avr-libc/avr-libc-user-manual/dir_000011.html
-share/doc/avr-libc/avr-libc-user-manual/dir_000012.html
-share/doc/avr-libc/avr-libc-user-manual/dir_000013.html
-share/doc/avr-libc/avr-libc-user-manual/dir_000014.html
-share/doc/avr-libc/avr-libc-user-manual/dirs.html
 share/doc/avr-libc/avr-libc-user-manual/dox.css
 share/doc/avr-libc/avr-libc-user-manual/doxygen.png
 share/doc/avr-libc/avr-libc-user-manual/ftv2blank.png
@@ -211,6 +195,7 @@ share/doc/avr-libc/avr-libc-user-manual/release_method.html
 share/doc/avr-libc/avr-libc-user-manual/releases.png
 share/doc/avr-libc/avr-libc-user-manual/structdiv__t.html
 share/doc/avr-libc/avr-libc-user-manual/structldiv__t.html
+share/doc/avr-libc/avr-libc-user-manual/tabs.css
 share/doc/avr-libc/avr-libc-user-manual/todo.html
 share/doc/avr-libc/avr-libc-user-manual/tree.html
 share/doc/avr-libc/avr-libc-user-manual/using_avrprog.html
