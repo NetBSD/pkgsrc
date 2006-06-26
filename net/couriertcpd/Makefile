@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/06/14 17:01:08 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2006/06/26 05:21:17 jlam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/tcpd-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -48,7 +48,7 @@ MAKE_DIRS+=		${VARBASE}/run ${COURIER_STATEDIR}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tcpd/couriertcpd			\
-		${PREFIX}/bin/couriertcpd
+		${PREFIX}/sbin/couriertcpd
 	${INSTALL_MAN} ${WRKSRC}/tcpd/couriertcpd.1			\
 		${PREFIX}/${PKGMANDIR}/man1/couriertcpd.1
 	${INSTALL_DATA} ${WRKSRC}/tcpd/couriertcpd.html			\
