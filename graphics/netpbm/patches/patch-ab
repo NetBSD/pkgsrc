@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.19 2006/02/27 22:01:16 adam Exp $
+$NetBSD: patch-ab,v 1.19.2.1 2006/06/26 07:06:35 ghen Exp $
 
---- converter/other/Makefile.orig	2006-02-25 20:15:20.000000000 +0100
+--- converter/other/Makefile.orig	2006-05-28 01:16:09.000000000 +0200
 +++ converter/other/Makefile
-@@ -108,6 +108,13 @@ all:	$(BINARIES) $(SUBDIRS:%=%/all)
+@@ -126,6 +126,13 @@ all:	$(BINARIES) $(SUBDIRS:%=%/all)
  
  include $(SRCDIR)/Makefile.common
  
