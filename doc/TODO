@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5120 2006/06/25 14:30:37 salo Exp $
+$NetBSD: TODO,v 1.5121 2006/06/26 17:12:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -564,6 +564,7 @@ Suggested package updates
 	o gnopernicus-1.0.5
 	o gnucash-devel-1.9.8
 	o gnucash-docs-1.9.0
+	o gnupg-1.4.4
 	o gnus-5.10.8
 	o gnustep-objc-1.4.0
 	o gob2-2.0.14
@@ -714,7 +715,7 @@ Suggested package updates
 	o libvisual-plugins-0.4.0
 	o libwpd-0.8.5
 	o licq-core-1.3.0
-	o liferea-1.0.15
+	o liferea-1.0.16
 	o lilypond-2.8.0
 	o lincvs-1.5.0 [now called CrossVC]
 	o linuxsms-0.77
@@ -1105,6 +1106,7 @@ Suggested package updates
 	o sbcl-0.9.13 [pkg/33580]
 	o scew-0.4.0
 	o sch-3.8.3
+	o scummvm-0.9.0
 	o sdig-0.40
 	o seahorse-0.9.1
 	o sendfile-20010424
