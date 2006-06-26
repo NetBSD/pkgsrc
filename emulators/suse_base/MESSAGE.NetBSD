@@ -1,7 +1,0 @@
-==============================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.1 2006/06/19 23:27:34 jlam Exp $
-
-Do not forget to include COMPAT_LINUX in your kernel configuration file.
-On NetBSD<1.6, you will also need to include the EXEC_ELF32 option.
-Linux binaries require these options in order to work.
-==============================================================================
