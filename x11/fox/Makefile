@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/04/17 13:45:58 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2006/06/26 13:12:00 joerg Exp $
 
 DISTNAME=	fox-1.4.17
 PKGREVISION=	2
@@ -17,10 +17,12 @@ CONFIGURE_ARGS+=	--with-opengl
 CONFIGURE_ARGS+=	--with-shm
 CONFIGURE_ARGS+=	--with-x
 
+CONFIGURE_ENV+=		REAL_PTHREAD_LIBS=${PTHREAD_LIBS:Q}
+
 .include "../../mk/bsd.prefs.mk"
 
 # NetBSD < 3.0 does not have getpwnam_r() getpwuin_r()
-.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[1-2]*)
+.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[1-2]*) || ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--disable-threadsafe
 .endif
 
@@ -29,5 +31,6 @@ CONFIGURE_ARGS+=	--disable-threadsafe
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
