@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/03/31 11:41:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/06/26 21:54:26 wiz Exp $
 bin/bomberclone
 share/bomberclone/gfx/font0.png
 share/bomberclone/gfx/font1.png
@@ -65,6 +65,7 @@ share/bomberclone/music/slice_me_nice.xm
 share/bomberclone/music/zb-tnt.xm
 share/bomberclone/pixmaps/bomberclone.png
 share/bomberclone/player/dead0.png
+share/bomberclone/player/ghost.png
 share/bomberclone/player/player0.png
 share/bomberclone/player/player1.png
 share/bomberclone/player/player2.png
