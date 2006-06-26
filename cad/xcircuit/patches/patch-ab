@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2004/12/06 16:20:12 minskim Exp $
+$NetBSD: patch-ab,v 1.7 2006/06/26 15:24:34 joerg Exp $
 
---- configure.orig	2004-09-30 23:25:07.000000000 -0500
+--- configure.orig	2004-10-01 04:25:07.000000000 +0000
 +++ configure
 @@ -7629,6 +7629,7 @@ fi
  if test "x$xc_with_tcl" != "x" ; then
@@ -15,10 +15,19 @@ $NetBSD: patch-ab,v 1.6 2004/12/06 16:20:12 minskim Exp $
  if test "x$xc_with_tcl" != "x" ; then
    case $target in
 -    *-sunos4*|*-*-netbsd|NetBSD-*|FreeBSD-*|OpenBSD-*)
-+    *-sunos4*|*-*-netbsd|*-*-netbsdelf|NetBSD-*|FreeBSD-*|OpenBSD-*)
++    *-sunos4*|*-*-netbsd|*-*-netbsdelf|NetBSD-*|FreeBSD-*|OpenBSD-*|*-*-dragonfly*)
        TCL_LIB_NAME="tcl${TCL_MAJOR_VERSION}${TCL_MINOR_VERSION}"
        TK_LIB_NAME="tk${TK_MAJOR_VERSION}${TK_MINOR_VERSION}"
        ;;
+@@ -8105,7 +8106,7 @@ fi
+       EXTRA_LIB_SPECS="-ldl"
+       ;;
+ 
+-    *-netbsd*|*-freebsd*|*-openbsd*)
++    *-netbsd*|*-freebsd*|*-openbsd*|*-*-dragonfly*)
+       # Not available on all versions:  check for include file.
+       if test "${ac_cv_header_dlfcn_h+set}" = set; then
+   echo "$as_me:$LINENO: checking for dlfcn.h" >&5
 @@ -8244,9 +8245,9 @@ fi
  
  
