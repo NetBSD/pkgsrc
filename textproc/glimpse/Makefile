@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/04/22 09:22:15 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2006/06/26 16:23:36 minskim Exp $
 
 DISTNAME=	glimpse-4.18.0
 PKGREVISION=	1
@@ -14,7 +14,7 @@ RESTRICTED=	Restrictive copyright (don't sell for profit)
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake lex
 GNU_CONFIGURE=	yes
 
 post-install:
