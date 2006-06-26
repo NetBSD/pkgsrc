@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/12 13:15:20 kochi Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/26 16:24:53 minskim Exp $
 #
 
 DISTNAME=	acpica-unix-${ACPI_IASL_VERSION}
@@ -16,7 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 INSTALLATION_DIRS=	bin share/doc/acpi-iasl
 
-USE_TOOLS+=	bison gm4 gmake
+USE_TOOLS+=	bison flex gm4 gmake
 
 do-build:
 	@cd ${WRKSRC}/compiler && ${MAKE_PROGRAM}
