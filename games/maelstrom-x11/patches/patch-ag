@@ -1,4 +1,5 @@
-$NetBSD: patch-ag,v 1.1.1.1 2002/07/11 13:26:14 wiz Exp $
+$NetBSD: patch-ag,v 1.2 2006/06/26 08:56:37 rillig Exp $
+
 --- scores.cpp.orig	Mon Sep 14 12:06:20 1998
 +++ scores.cpp	Mon Sep 14 12:08:28 1998
 @@ -11,7 +11,7 @@
@@ -6,7 +7,7 @@ $NetBSD: patch-ag,v 1.1.1.1 2002/07/11 13:26:14 wiz Exp $
  #include "dialog.h"
  
 -#define MAELSTROM_SCORES	"Maelstrom-Scores"
-+#define MAELSTROM_SCORES	"/var/games/Maelstrom-Scores"
++#define MAELSTROM_SCORES	VARBASE"/games/Maelstrom-Scores"
  #define NUM_SCORES		10		// Do not change this!
  
  /* Everyone can write to scores file if defined to 0 */

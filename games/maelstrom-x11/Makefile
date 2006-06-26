@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/05/15 20:21:38 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2006/06/26 08:56:37 rillig Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-x11-2.0.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games x11
 MASTER_SITES+=		ftp://ftp.devolution.com/pub/maelstrom/
 MASTER_SITES+=		ftp://ftp.devolution.com/pub/maelstrom/Maelstrom-binaries/
@@ -22,19 +22,24 @@ CONFLICTS=		maelstrom-[0-9]* maelstrom-sdl-[0-9]*
 EXTRACT_ONLY=		${DISTNAME}
 
 WRKSRC=			${WRKDIR}/Maelstrom
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 USE_X11BASE=		YES
 MAKE_ENV+=		BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q} XPMDIR=${BUILDLINK_PREFIX.xpm}
+MAKE_ENV+=		GAMEOWN=${GAMEOWN} GAMEGRP=${GAMEGRP}
+MAKE_ENV+=		GAMEMODE=${GAMEMODE} GAMEDATAMODE=${GAMEDATAMODE}
+MAKE_ENV+=		VARBASE=${VARBASE}
+
+MAKE_DIRS_PERMS+=	${VARBASE}/games ${GAMEOWN} ${GAMEGRP} ${GAMEDIRMODE}
+CONF_FILES_PERMS+=	${PREFIX}/share/maelstrom/Maelstrom-Scores \
+	${VARBASE}/games/Maelstrom-Scores ${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
 
 post-install:
 	cd ${PREFIX}/share/maelstrom && \
 		${PAX} -O -pm -zrf ${DISTDIR}/${ESOUND} && \
 		${PAX} -O -pm -zrf ${DISTDIR}/${STREK} && \
 		${PAX} -O -pm -zrf ${DISTDIR}/${SWARS}
-	${CHOWN} ${BINOWN}:games ${PREFIX}/bin/Maelstrom
-	${CHMOD} 2755 ${PREFIX}/bin/Maelstrom
-	${CHOWN} ${BINOWN}:games /var/games/Maelstrom-Scores
-	${CHMOD} 0664 /var/games/Maelstrom-Scores
+	${CHOWN} ${GAMEOWN}:${GAMEGRP} ${PREFIX}/bin/Maelstrom
+	${CHMOD} ${GAMEMODE} ${PREFIX}/bin/Maelstrom
 	${INSTALL_DATA} ${WRKSRC}/README.* ${PREFIX}/share/maelstrom
 	${INSTALL_PROGRAM} ${WRKSRC}/netplayd/netplayd ${PREFIX}/bin/Maelstrom_netplayd
 
