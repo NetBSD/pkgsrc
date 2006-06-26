@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1.1.1 2004/01/26 13:03:38 jmmv Exp $
+$NetBSD: patch-ah,v 1.2 2006/06/26 17:13:11 wiz Exp $
 
---- src/xine-engine/video_out.c.orig	2003-04-06 10:23:10.000000000 +1000
+--- src/xine-engine/video_out.c.orig	2005-04-20 17:21:17.000000000 +0000
 +++ src/xine-engine/video_out.c
-@@ -1443,7 +1443,9 @@ xine_video_port_t *vo_new_port (xine_t *
+@@ -1769,7 +1769,9 @@ xine_video_port_t *_x_vo_new_port (xine_
      this->grab_only            = 0;
      
      pthread_attr_init(&pth_attrs);
