@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/06/24 10:52:23 hira Exp $
+# $NetBSD: Makefile,v 1.28 2006/06/26 22:46:38 minskim Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
@@ -41,6 +41,7 @@ TETEX_DIR=		${WRKDIR_}/tetex-src-${TETEX_BIN_VERS}
 WRKSRC=			${TETEX_DIR}
 WRKSRC_PTEX=		${WRKSRC}/texk/web2c/${DISTNAME}
 EXTRACT_ONLY=		# none
+MAKE_ENV+=		TRUE=${TRUE}
 
 pre-extract:
 	if [ ! -r ${WRKSRC} ]; then \
@@ -86,7 +87,7 @@ post-configure:
 
 do-build:
 	cd ${WRKSRC}/texk/web2c; ${MAKE_PROGRAM}
-	cd ${WRKSRC_PTEX}; ${MAKE_PROGRAM}
+	cd ${WRKSRC_PTEX}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
 	cd ${WRKSRC}/texk/dvipsk; ${MAKE_PROGRAM}
 	cd ${WRKSRC}/texk/mendexk${MENDEXK_VERS}; \
 		./configure EUC; ${MAKE_PROGRAM} # This needs libkpathsea.a
