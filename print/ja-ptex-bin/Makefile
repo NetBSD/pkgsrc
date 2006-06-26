@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/06/26 22:46:38 minskim Exp $
+# $NetBSD: Makefile,v 1.29 2006/06/26 22:51:35 minskim Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
@@ -22,6 +22,8 @@ SITES_mendexk2.6d.tar.gz= \
 		ftp://ring.gr.jp/pub/text/TeX/ascii-ptex/mendex/
 
 DEPENDS+=	ja-ptex-share>=2.4:../../print/ja-ptex-share
+
+USE_DIRS+=	texmf-1.3
 
 .include "../../print/teTeX3-bin/buildlink3.mk"
 .include "../../print/teTeX3-bin/Makefile.common"
