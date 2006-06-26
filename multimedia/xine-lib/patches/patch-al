@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.5 2005/09/20 12:10:53 dmcmahill Exp $
+$NetBSD: patch-al,v 1.6 2006/06/26 17:13:11 wiz Exp $
 
---- src/xine-utils/xineutils.h.orig	2004-12-12 08:51:30.000000000 -0500
+--- src/xine-utils/xineutils.h.orig	2005-10-08 13:57:49.000000000 +0000
 +++ src/xine-utils/xineutils.h
-@@ -666,7 +666,13 @@ void xine_strdupa(char *dest, char *src)
+@@ -679,7 +679,13 @@ void xine_strdupa(char *dest, char *src)
  
  /* compatibility macros */
  #define xine_strpbrk(S, ACCEPT) strpbrk((S), (ACCEPT))

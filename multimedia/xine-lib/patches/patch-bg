@@ -1,11 +1,11 @@
-$NetBSD: patch-bg,v 1.1 2005/04/13 16:54:03 rillig Exp $
+$NetBSD: patch-bg,v 1.2 2006/06/26 17:13:11 wiz Exp $
 
 All files in $(DESTDIR) may be marked read-only, so better use the
 INSTALL_HEADER tools to overwrite them correctly.
 
---- include/Makefile.in.orig	Sat Dec 25 23:34:48 2004
-+++ include/Makefile.in	Tue Apr 12 11:04:43 2005
-@@ -727,7 +727,8 @@ maintainer-clean-generic:
+--- include/Makefile.in.orig	2005-10-09 11:27:58.000000000 +0000
++++ include/Makefile.in
+@@ -475,7 +475,8 @@ maintainer-clean-generic:
  	-rm -f Makefile.in
  
  install-data-local: install-includeHEADERS
