@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/06/19 00:09:01 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/26 06:47:43 rillig Exp $
 
 DISTNAME=	lua-4.0.1
 PKGNAME=	lua4-4.01
@@ -38,5 +38,6 @@ pre-install:
 		${SED} -e 's:lua\.h:lua4\.h:g' $$f > $$f.tmp	\
 		&& ${MV} $$f.tmp $$f;				\
 	done
+	${INSTALL_DATA_DIR} ${PREFIX}/${PKGMANDIR}/cat1
 
 .include "../../mk/bsd.pkg.mk"
