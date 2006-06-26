@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2006/04/17 13:46:02 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2006/06/26 17:11:39 wiz Exp $
 
 DISTNAME=	bonobo-1.0.22
 PKGREVISION=	2
@@ -27,9 +27,9 @@ CONFIGURE_ARGS+=	--enable-gtk-doc=no
 PKGCONFIG_OVERRIDE=	libefs/libefs.pc.in
 
 post-install:
-	-@${RMDIR} ${PREFIX}/share/libefs/html/libefs
-	-@${RMDIR} ${PREFIX}/share/libefs/html
-	-@${RMDIR} ${PREFIX}/share/libefs
+	-${RMDIR} ${PREFIX}/share/libefs/html/libefs
+	-${RMDIR} ${PREFIX}/share/libefs/html
+	-${RMDIR} ${PREFIX}/share/libefs
 
 .include "../../graphics/gdk-pixbuf-gnome/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
