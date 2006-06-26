@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/05/18 20:30:00 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2006/06/26 11:20:47 rillig Exp $
 #
 
 DISTNAME=	totd-1.5.1
@@ -8,8 +8,6 @@ MASTER_SITES=	ftp://ftp.pasta.cs.uit.no/pub/Vermicelli/
 MAINTAINER=	feico@pasta.cs.uit.no
 HOMEPAGE=	http://www.vermicelli.pasta.cs.uit.no/ipv6/software.html
 COMMENT=	DNS proxy that supports IPv6 <==> IPv4 record translation
-
-BROKEN_IN=	pkgsrc-2006Q1
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q}
