@@ -1,0 +1,26 @@
+$NetBSD: patch-db,v 1.1 2006/06/27 11:11:52 joerg Exp $
+
+--- config/rules.mk.orig	2006-06-26 13:35:05.000000000 +0000
++++ config/rules.mk
+@@ -464,6 +464,12 @@ EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
+ endif
+ endif
+ 
++ifeq ($(OS_ARCH),DragonFly)
++ifdef IS_COMPONENT
++EXTRA_DSO_LDOPTS += -Wl,-Bsymbolic
++endif
++endif
++
+ ifeq ($(OS_ARCH),NetBSD)
+ ifneq (,$(filter arc cobalt hpcmips mipsco newsmips pmax sgimips,$(OS_TEST)))
+ ifeq ($(MODULE),layout)
+@@ -961,7 +967,7 @@ ifneq (,$(BUILD_STATIC_LIBS)$(FORCE_STAT
+ LOBJS	+= $(SHARED_LIBRARY_LIBS)
+ endif
+ else
+-ifneq (,$(filter OSF1 BSD_OS FreeBSD NetBSD OpenBSD SunOS Darwin,$(OS_ARCH)))
++ifneq (,$(filter OSF1 BSD_OS FreeBSD NetBSD OpenBSD SunOS Darwin DragonFly,$(OS_ARCH)))
+ CLEANUP1	:= | egrep -v '(________64ELEL_|__.SYMDEF)'
+ CLEANUP2	:= rm -f ________64ELEL_ __.SYMDEF
+ else

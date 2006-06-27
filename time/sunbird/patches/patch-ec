@@ -1,0 +1,13 @@
+$NetBSD: patch-ec,v 1.1 2006/06/27 11:11:52 joerg Exp $
+
+--- nsprpub/pr/src/pthreads/ptsynch.c.orig	2006-06-26 14:39:56.000000000 +0000
++++ nsprpub/pr/src/pthreads/ptsynch.c
+@@ -811,7 +811,7 @@ PR_IMPLEMENT(PRStatus) PR_DeleteSemaphor
+  * From the semctl(2) man page in glibc 2.0
+  */
+ #if (defined(__GNU_LIBRARY__) && !defined(_SEM_SEMUN_UNDEFINED)) \
+-    || defined(FREEBSD) || defined(OPENBSD) || defined(BSDI)
++    || defined(FREEBSD) || defined(OPENBSD) || defined(BSDI) || defined(DRAGONFLY)
+ /* union semun is defined by including <sys/sem.h> */
+ #else
+ /* according to X/OPEN we have to define it ourselves */

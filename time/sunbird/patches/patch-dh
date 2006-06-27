@@ -1,0 +1,13 @@
+$NetBSD: patch-dh,v 1.1 2006/06/27 11:11:52 joerg Exp $
+
+--- directory/c-sdk/ldap/libraries/libprldap/ldappr-error.c.orig	2006-06-26 13:46:03.000000000 +0000
++++ directory/c-sdk/ldap/libraries/libprldap/ldappr-error.c
+@@ -233,7 +233,7 @@ struct prldap_errormap_entry {
+ 
+ #if defined(__hpux) || defined(_AIX) || defined(OSF1) || defined(DARWIN) || \
+   defined(BEOS) || defined(FREEBSD) || defined(BSDI) || defined(VMS) || \
+-  defined(OPENBSD) || defined(NETBSD)
++  defined(OPENBSD) || defined(NETBSD) || defined(DRAGONFLY)
+ #define EDEADLOCK       -1
+ #endif
+ 
