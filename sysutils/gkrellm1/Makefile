@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/17 13:46:04 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/27 21:55:04 wiz Exp $
 #
 
 DISTNAME=	gkrellm-1.2.13
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://web.wt.net/~billw/gkrellm/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	anthony.mallet@ficus.yi.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gkrellm.net/
 COMMENT=	GTK based system monitor
 
