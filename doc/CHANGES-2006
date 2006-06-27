@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.591 2006/06/27 16:31:01 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.592 2006/06/27 20:18:08 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3179,3 +3179,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated games/bomberclone to 0.11.6.2 [wiz 2006-06-26]
 	Updated chat/sirc to 2.211nb2 [minskim 2006-06-27]
 	Updated games/dipmap to 1.16nb1 [minskim 2006-06-27]
+	Updated net/gftp to 2.0.18nb5 [joerg 2006-06-27]
+	Updated net/gftp-gtk1 to 2.0.18nb4 [joerg 2006-06-27]
