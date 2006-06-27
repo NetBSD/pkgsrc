@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/06/16 06:57:54 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/06/27 16:30:28 minskim Exp $
 
 DISTNAME=		mapit.v1-16
 PKGNAME=		dipmap-1.16
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.ugcs.caltech.edu/pub/diplomacy/Sources/
 EXTRACT_SUFX=		.tar.Z
@@ -11,9 +12,14 @@ HOMEPAGE=		http://www.diplom.org/Online/mapsoftware.html
 COMMENT=		Generate postscript maps from results of play-by-email Diplomacy games
 
 MAKEFILE=		makefile
-NO_CONFIGURE=		yes
+USE_TOOLS+=		csh:run
 WRKSRC=			${WRKDIR}/mapit
 INSTALLATION_DIRS=	bin libexec
+
+REPLACE_INTERPRETER+=	csh
+REPLACE.csh.old=	/bin/csh
+REPLACE.csh.new=	${CSH}
+REPLACE_FILES.csh=	dipmap
 
 post-patch:
 	${SED} "s,@PREFIX@,${PREFIX},g" ${WRKSRC}/dipmap > ${WRKSRC}/dipmap.new
