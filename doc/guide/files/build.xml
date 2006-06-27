@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.28 2006/06/26 23:28:51 rillig Exp $ -->
+<!-- $NetBSD: build.xml,v 1.29 2006/06/27 11:07:12 rillig Exp $ -->
 
 <chapter id="build">
 <title>The build process</title>
@@ -58,7 +58,11 @@ can be put into place on the system.</para>
 	<para><varname>LOCALBASE</varname> is where all non-X11 pkgs are installed.
 	  If you need to construct a -I or -L argument to the compiler to find
 	  includes and libraries installed by another non-X11 pkg, use
-	  <quote>${LOCALBASE}</quote>.</para>
+	  <quote>${LOCALBASE}</quote>. The name
+	  <varname>LOCALBASE</varname> stems from FreeBSD, which
+	  installed all packages in <filename>/usr/local</filename>. As
+	  pkgsrc leaves <filename>/usr/local</filename> for the system
+	  administrator, this variable is a misnomer.</para>
       </listitem>
 
       <listitem>
