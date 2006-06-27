@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: pkg_view.sh.in,v 1.6 2004/08/20 20:09:53 jlam Exp $
+# $NetBSD: pkg_view.sh.in,v 1.7 2006/06/27 23:36:14 hubertf Exp $
 
 #
 # Copyright (c) 2001 Alistair G. Crooks.  All rights reserved.
@@ -57,7 +57,8 @@ sedprog="@SED@"
 touchprog="@TOUCH@"
 
 usage() {
-	echo 'Usage: pkg_view [-n] [-v] [-i ignore] [-k pkg_dbdir_dflt] [-w viewname] [-d stowdir] [-W viewbase] add|check|delete pkgname...'
+	echo 'Usage: pkg_view [-nVv] [-d stowdir] [-i ignore] [-k pkg_dbdir] [-W viewbase]'
+	echo '                [-w viewname] add|check|delete pkgname...'
 	exit 1
 }
 
