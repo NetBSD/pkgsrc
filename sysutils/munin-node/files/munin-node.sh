@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $NetBSD: munin-node.sh,v 1.1.1.1 2006/06/04 20:53:57 he Exp $
+# $NetBSD: munin-node.sh,v 1.2 2006/06/27 13:05:49 he Exp $
 #
 # PROVIDE: munin-node
 # REQUIRE: DAEMON
@@ -24,7 +24,11 @@ required_files=@PKG_SYSCONFDIR@/munin/munin-node.conf
 
 if [ ! -d @STATEDIR@ ]; then
 	mkdir @STATEDIR@
-	chown munin:munin /var/run/munin
+	chown @MUNIN_USER@:@MUNIN_GROUP@ @STATEDIR@
+fi
+if [ ! -d @MUNIN_RUN@ ]; then
+	mkdir @MUNIN_RUN@
+	chown @MUNIN_USER@:@MUNIN_GROUP@ @MUNIN_RUN@
 fi
 
 if [ -f /etc/rc.subr ]; then
