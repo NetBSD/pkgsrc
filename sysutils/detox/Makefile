@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/29 06:22:17 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2006/06/27 16:06:16 minskim Exp $
 #
 
 DISTNAME=		detox-1.2.0-rc1
@@ -12,6 +12,7 @@ HOMEPAGE=		http://detox.sourceforge.net/
 COMMENT=		Removes non-standard characters from filenames
 
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		lex
 INSTALL_TARGET=		install-base install-unsafe-config
 
 EGDIR=			${PREFIX}/share/examples/detox
