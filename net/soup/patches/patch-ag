@@ -1,8 +1,15 @@
-$NetBSD: patch-ag,v 1.2 2006/06/09 20:36:31 dbj Exp $
+$NetBSD: patch-ag,v 1.3 2006/06/27 14:55:54 wiz Exp $
 
---- src/libsoup/soup-private.h.orig	2003-01-02 14:04:09.000000000 -0500
+--- src/libsoup/soup-private.h.orig	2003-01-02 19:04:09.000000000 +0000
 +++ src/libsoup/soup-private.h
-@@ -31,7 +31,9 @@
+@@ -26,12 +26,16 @@
+ #else
+ #  ifdef HAVE_ALLOCA_H
+ #    include <alloca.h>
++#  elif defined(HAVE_STDLIB_H)
++#    include <stdlib.h>
+ #  else
+ #    ifdef _AIX
  #      pragma alloca
  #    else
  #      ifndef alloca /* predefined by HP cc +Olibcalls */
@@ -12,7 +19,7 @@ $NetBSD: patch-ag,v 1.2 2006/06/09 20:36:31 dbj Exp $
  #      endif
  #    endif
  #  endif
-@@ -68,7 +70,6 @@ extern "C" {
+@@ -68,7 +72,6 @@ extern "C" {
  #define RESPONSE_BLOCK_SIZE 8192
  
  extern gboolean    soup_initialized;
