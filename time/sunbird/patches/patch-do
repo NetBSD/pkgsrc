@@ -1,0 +1,13 @@
+$NetBSD: patch-do,v 1.1 2006/06/27 11:11:52 joerg Exp $
+
+--- embedding/browser/qt/src/config/qtconfig.mk.orig	2006-06-26 14:06:26.000000000 +0000
++++ embedding/browser/qt/src/config/qtconfig.mk
+@@ -4,7 +4,7 @@
+ FULLDIST = `(cd $(DIST); pwd)`
+ DIST_QTDESIGNERPLUGINS = $(FULLDIST)/lib/designer
+ 
+-ifneq (,$(filter Linux FreeBSD SunOS,$(OS_ARCH)))
++ifneq (,$(filter Linux DragonFly FreeBSD SunOS,$(OS_ARCH)))
+ UIC = $(QTDIR)/bin/uic -L $(DIST_QTDESIGNERPLUGINS)
+ endif
+ ifeq ($(OS_ARCH), WINNT)
