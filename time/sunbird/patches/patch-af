@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1.1.1 2006/02/05 21:56:25 ghen Exp $
+$NetBSD: patch-af,v 1.2 2006/06/27 11:11:52 joerg Exp $
 
---- security/nss/lib/freebl/unix_rand.c.orig	2006-02-02 16:57:57.000000000 +0100
+--- security/nss/lib/freebl/unix_rand.c.orig	2006-04-04 01:01:51.000000000 +0000
 +++ security/nss/lib/freebl/unix_rand.c
 @@ -35,6 +35,7 @@
   * ***** END LICENSE BLOCK ***** */
@@ -10,7 +10,17 @@ $NetBSD: patch-af,v 1.1.1.1 2006/02/05 21:56:25 ghen Exp $
  #include <string.h>
  #include <signal.h>
  #include <unistd.h>
-@@ -694,7 +695,11 @@ safe_popen(char *cmd)
+@@ -81,7 +82,8 @@ static size_t CopyLowBits(void *dst, siz
+ }
+ 
+ #if defined(SCO) || defined(UNIXWARE) || defined(BSDI) || defined(FREEBSD) \
+-    || defined(NETBSD) || defined(NTO) || defined(DARWIN) || defined(OPENBSD)
++    || defined(NETBSD) || defined(NTO) || defined(DARWIN) || defined(OPENBSD) \
++    || defined(DRAGONFLY)
+ #include <sys/times.h>
+ 
+ #define getdtablesize() sysconf(_SC_OPEN_MAX)
+@@ -694,7 +696,11 @@ safe_popen(char *cmd)
  	/* dup write-side of pipe to stderr and stdout */
  	if (p[1] != 1) dup2(p[1], 1);
  	if (p[1] != 2) dup2(p[1], 2);

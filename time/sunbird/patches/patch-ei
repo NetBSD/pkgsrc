@@ -1,0 +1,13 @@
+$NetBSD: patch-ei,v 1.1 2006/06/27 11:11:52 joerg Exp $
+
+--- security/coreconf/config.mk.orig	2006-06-26 17:52:20.000000000 +0000
++++ security/coreconf/config.mk
+@@ -63,7 +63,7 @@ endif
+ #######################################################################
+ 
+ TARGET_OSES = FreeBSD BSD_OS NetBSD OpenUNIX OS2 QNX Darwin BeOS OpenBSD \
+-              OpenVMS AIX
++              OpenVMS AIX DragonFly
+ 
+ ifeq (,$(filter-out $(TARGET_OSES),$(OS_TARGET)))
+ include $(CORE_DEPTH)/coreconf/$(OS_TARGET).mk

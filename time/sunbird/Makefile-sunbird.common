@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-sunbird.common,v 1.5 2006/06/07 19:29:59 ghen Exp $
+# $NetBSD: Makefile-sunbird.common,v 1.6 2006/06/27 11:11:52 joerg Exp $
 
 MOZILLA_BIN=		sunbird-bin
 MOZ_VER=		0.3alpha2
@@ -22,6 +22,11 @@ CONFIGURE_ENV+=		ac_cv_visibility_pragma=no ac_cv_visibility_hidden=no
 CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/chrome/app-chrome.manifest
 CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/compreg.dat
 CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/xpti.dat
+
+.include "../../mk/bsd.prefs.mk"
+
+CONFIG_GUESS_OVERRIDE+=	*/*/*/*/config.guess
+CONFIG_SUB_OVERRIDE+=	*/*/*/*/config.sub
 
 post-install:
 	cd ${PREFIX}/lib/${MOZILLA} && \

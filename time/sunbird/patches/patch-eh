@@ -1,0 +1,13 @@
+$NetBSD: patch-eh,v 1.1 2006/06/27 11:11:52 joerg Exp $
+
+--- security/coreconf/nsinstall/pathsub.c.orig	2006-06-26 17:52:04.000000000 +0000
++++ security/coreconf/nsinstall/pathsub.c
+@@ -38,7 +38,7 @@
+ ** Pathname subroutines.
+ */
+ #include <assert.h>
+-#if defined(FREEBSD) || defined(BSDI) || defined(DARWIN)
++#if defined(FREEBSD) || defined(BSDI) || defined(DARWIN) || defined(DRAGONFLY)
+ #include <sys/types.h>
+ #endif /* FREEBSD */
+ #include <dirent.h>
