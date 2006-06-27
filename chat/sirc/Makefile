@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2005/07/16 19:10:38 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2006/06/27 14:47:15 minskim Exp $
 
 DISTNAME=	sirc-2.211
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	http://www.iagora.com/~espel/sirc/ \
 		http://www.iagora.com/~espel/sirc/scripts/
@@ -42,9 +42,10 @@ SIRC_SCRIPTS= \
 		www.pl				\
 		yiff.pl
 
-NO_CONFIGURE=	yes
 NO_BUILD=	yes
 DIST_SUBDIR=	sirc
+
+REPLACE_PERL+=	dsirc
 
 .include "../../mk/bsd.prefs.mk"
 .if defined(DEFAULT_IRC_SERVER)
