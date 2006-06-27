@@ -1,9 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2005/03/14 14:50:48 rillig Exp $
+$NetBSD: patch-ae,v 1.2 2006/06/27 20:11:12 joerg Exp $
 
-NetBSD-1.6.2 does not know about ENOTSUP.
-
---- lib/fsplib/fsplib.c.orig	Wed Jan 19 03:03:45 2005
-+++ lib/fsplib/fsplib.c	Sat Mar 12 11:04:49 2005
+--- lib/fsplib/fsplib.c.orig	2005-01-19 02:03:45.000000000 +0000
++++ lib/fsplib/fsplib.c
 @@ -27,6 +27,10 @@ use of this software.
  #include "fsplib.h"
  #include "lock.h"
@@ -15,3 +13,72 @@ NetBSD-1.6.2 does not know about ENOTSUP.
  /* ************ Internal functions **************** */ 
  
  /* builds filename in packet output buffer, appends password if needed */
+@@ -575,6 +579,7 @@ FSP_DIR * fsp_opendir(FSP_SESSION *s,con
+     return dir;
+ }
+ 
++#if 0
+ int fsp_readdir_r(FSP_DIR *dir,struct dirent *entry, struct dirent **result)
+ {
+     FSP_RDENTRY fentry,*fresult;
+@@ -632,6 +637,7 @@ int fsp_readdir_r(FSP_DIR *dir,struct di
+ 
+     return 0; 
+ }
++#endif
+ 
+ /* native FSP directory reader */
+ int fsp_readdir_native(FSP_DIR *dir,FSP_RDENTRY *entry, FSP_RDENTRY **result)
+@@ -681,25 +687,25 @@ int fsp_readdir_native(FSP_DIR *dir,FSP_
+        dir->dirpos += 9;
+        /* read file name */
+        entry->name[255 + 1] = '\0';
+-       strncpy(entry->name,(char *)( dir->data + dir->dirpos ),MAXNAMLEN);
+        namelen = strlen( (char *) dir->data+dir->dirpos);
++       if (namelen >= sizeof(entry->name) - 1) {
++	    /* skip over file name */
++            dir->dirpos += namelen +1;
++            /* pad to 4 byte boundary */
++            entry->reclen += (4 - dir->dirpos) & 3;
++            dir->dirpos += (4 - dir->dirpos) & 3;
++	    continue;
++       }
++       strncpy(entry->name,(char *)( dir->data + dir->dirpos ), sizeof(entry->name));
+        /* skip over file name */
+        dir->dirpos += namelen +1;
+ 
+        /* set entry namelen field */
+-       if (namelen > 255)
+-           entry->namlen = 255;
+-       else
+-           entry->namlen = namelen;
++       entry->namlen = namelen;
+        /* set record length */	   
+        entry->reclen = 10+namelen;
+ 
+-       /* pad to 4 byte boundary */
+-       while( dir->dirpos & 0x3 )
+-       {
+-         dir->dirpos++;
+-         entry->reclen++;
+-       }
++       dir->dirpos += (4 - dir->dirpos) & 3;
+ 
+        /* and return it */
+        *result=entry;
+@@ -707,6 +713,7 @@ int fsp_readdir_native(FSP_DIR *dir,FSP_
+     }
+ }
+ 
++#if 0
+ struct dirent * fsp_readdir(FSP_DIR *dirp)
+ {
+     static struct dirent entry;
+@@ -719,6 +726,7 @@ struct dirent * fsp_readdir(FSP_DIR *dir
+     else
+         return result;
+ }
++#endif
+ 
+ long fsp_telldir(FSP_DIR *dirp)
+ {

@@ -1,0 +1,20 @@
+$NetBSD: patch-ag,v 1.1 2006/06/27 20:11:12 joerg Exp $
+
+--- lib/fsplib/fsplib.h.orig	2006-06-19 16:18:50.000000000 +0000
++++ lib/fsplib/fsplib.h
+@@ -153,11 +153,15 @@ int fsp_transaction(FSP_SESSION *s,FSP_P
+ 
+ /* directory listing commands */
+ FSP_DIR * fsp_opendir(FSP_SESSION *s,const char *dirname);
++#if 0
+ int fsp_readdir_r(FSP_DIR *dir,struct dirent *entry, struct dirent **result);
++#endif
+ long fsp_telldir(FSP_DIR *dirp);
+ void fsp_seekdir(FSP_DIR *dirp, long loc);
+ void fsp_rewinddir(FSP_DIR *dirp);
++#if 0
+ struct dirent * fsp_readdir(FSP_DIR *dirp);
++#endif
+ int fsp_readdir_native(FSP_DIR *dir,FSP_RDENTRY *entry, FSP_RDENTRY **result);
+ int fsp_closedir(FSP_DIR *dirp);
+ /* high level  file i/o */
