@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 13:10:06 agc Exp $
+$NetBSD: distinfo,v 1.6.10.1 2006/06/28 16:45:46 snj Exp $
 
-SHA1 (hashcash-1.13.tgz) = 045b05e3e1a6422c0c853c6e5eaf21fea3d3c377
-RMD160 (hashcash-1.13.tgz) = 9f628c3281850affc664a3c78d01021caec376dc
-Size (hashcash-1.13.tgz) = 175741 bytes
-SHA1 (patch-aa) = c8e619f2b8ce9a2b656986ff813107eae3aeb584
-SHA1 (patch-ab) = 7c8bafe32f93529f178ba65009dc5638beb47cb1
+SHA1 (hashcash-1.22.tgz) = 0fa03c9f266026e505c0ab7b671ad93aef9310de
+RMD160 (hashcash-1.22.tgz) = 60037d7feebb6ba3d57c900a811a46580bd567be
+Size (hashcash-1.22.tgz) = 195193 bytes
