@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/03/04 21:31:13 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2006/06/28 04:55:49 rillig Exp $
 
 DISTNAME=	xneko
 PKGNAME=	xneko-4.4
@@ -14,14 +14,12 @@ MANCOMPRESSED_IF_MANZ=	yes
 
 PLIST_SRC=	${WRKDIR}/PLIST
 
-.include "../../mk/bsd.prefs.mk"
-
 BUILD_DEFS+=	MANINSTALL
-
-.include "../../mk/x11.buildlink3.mk"
 
 MAKE_ENV+=	BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q}
 MAKE_ENV+=	MANOWN=${MANOWN:Q} MANGRP=${MANGRP:Q}
+
+INSTALLATION_DIRS+=	${PKGMANDIR}/cat6
 
 post-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
@@ -32,4 +30,5 @@ post-install:
 	  esac; \
 	done
 
+.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
