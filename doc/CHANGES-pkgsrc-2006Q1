@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.95 2006/06/27 17:00:04 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q1,v 1.1.2.96 2006/06/28 16:46:02 snj Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q1 branch:
@@ -195,3 +195,5 @@ Pullup ticket 1711 - requested by salo
 security update for netpbm
 Pullup ticket 1713 - requested by salo
 security fix for mutt-devel
+Pullup ticket 1714 - requested by salo
+security update for hashcash
