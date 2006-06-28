@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5124 2006/06/28 16:28:26 cube Exp $
+$NetBSD: TODO,v 1.5125 2006/06/28 21:00:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -308,9 +308,10 @@ Suggested package updates
 	o GridSim-3.3
 	o PAM-0.80
 	o REminiscence-0.1.8
+	o SDL-1.2.11
 	o SDL_mixer-1.2.7
 	o SmartEiffel-2.1
-	o TeXmacs-1.0.6.3
+	o TeXmacs-1.0.6.4
 	o XFree86-4.6.0
 	o XaoS-3.1.1
 	o YoSucker-75
@@ -334,7 +335,7 @@ Suggested package updates
 	o amanda-plot-2.5.0
 	o amanda-server-2.5.0
 	o amavis-0.3.12
-	o amavisd-new-2.4.1
+	o amavisd-new-2.4.2
 	o amaya-9.5
 	o amule-2.1.3
 	o anjuta-2.0.1
@@ -397,7 +398,7 @@ Suggested package updates
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.3
 	o cal3d-0.10.0
-	o capc-calc-2.12.0.4
+	o capc-calc-2.12.0.6
 	o catdoc-0.94
 	o catdoc-tk-0.94
 	o cbrowser-0.8 [pkg/30972]
@@ -433,6 +434,7 @@ Suggested package updates
 	o cygwin_lib-1.5.19
 	o cyrus-sasl-2.1.22
 	o dap-2.1.5
+	o dar-2.3.1
 	o dasher-4.1.0 [unstable]
 	o dasher-4.1.4
 	o dbxml-2.1.8
@@ -620,7 +622,7 @@ Suggested package updates
 	o hugs-200503 [pkg/30071]
 	o hydrogen-0.9.2
 	o hyperestraier-1.2.8 [pkg/33486]
-	o hyperestraier-1.2.9
+	o hyperestraier-1.3.0
 	o i2ocfg-1.1
 	o icdprog-0.5
 	o icecast-2.3.1
@@ -709,6 +711,7 @@ Suggested package updates
 	o libsmi-0.4.3
 	o libsoup-devel-2.2.94
 	o libstatgrab-0.13
+	o libtasn1-0.3.5
 	o libtcl-nothread-8.4.9
 	o libtheora-1.0alpha7
 	o libtorrent-0.9.0
@@ -995,6 +998,7 @@ Suggested package updates
 	o pnetC-0.7.4
 	o pnetlib-0.7.2 [pkg/31950]
 	o pnetlib-0.7.4
+	o png-1.2.12
 	o popa3d-1.0.2
 	o poppy-4.01
 	o poptop-1.3.0
