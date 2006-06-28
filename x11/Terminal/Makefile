@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/17 13:47:01 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/06/28 14:58:00 joerg Exp $
 #
 
 DISTNAME=		Terminal-0.2.4
@@ -14,7 +14,7 @@ COMMENT=		Terminal emulator primarly for the Xfce
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config msgfmt
 USE_DIRS+=		xdg-1.1
 
 .include "../../devel/glib2/buildlink3.mk"
