@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2006/06/15 22:13:59 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2006/06/28 21:23:29 joerg Exp $
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		seamonkey-${MOZ_DIST_VER}.source
@@ -49,6 +49,7 @@ CONFIGURE_ARGS+=	--disable-pedantic
 CONFIGURE_ARGS+=	--with-system-jpeg=${BUILDLINK_PREFIX.jpeg:Q}
 CONFIGURE_ARGS+=	--with-system-png=${BUILDLINK_PREFIX.png:Q}
 CONFIGURE_ARGS+=	--enable-crypto
+CONFIGURE_ENV+=	ac_cv_visibility_pragma=no ac_cv_visibility_hidden=no
 
 SHAREMODE?=		644
 BUILD_TARGET=		# empty
