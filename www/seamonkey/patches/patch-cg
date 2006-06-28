@@ -1,8 +1,9 @@
-$NetBSD: patch-cg,v 1.1.1.1 2006/03/30 19:15:51 ghen Exp $
+$NetBSD: patch-cg,v 1.2 2006/06/28 21:23:29 joerg Exp $
 
---- extensions/transformiix/source/base/Double.cpp.orig	2004-06-17 02:12:42.000000000 +0200
-+++ extensions/transformiix/source/base/Double.cpp
-@@ -49,6 +49,38 @@
+diff -ruN ../Orig/mozilla/extensions/transformiix/source/base/Double.cpp ./extensions/transformiix/source/base/Double.cpp
+--- ../Orig/mozilla/extensions/transformiix/source/base/Double.cpp	2004-06-17 09:12:42.000000000 +0900
++++ ./extensions/transformiix/source/base/Double.cpp	2005-12-04 19:39:05.000000000 +0900
+@@ -49,8 +49,40 @@
   * Utility class for doubles
   */
  
@@ -39,9 +40,12 @@ $NetBSD: patch-cg,v 1.1.1.1 2006/03/30 19:15:51 ghen Exp $
 +#else	/* pre INFINITY C environment */
 +
  //A trick to handle IEEE floating point exceptions on FreeBSD - E.D.
- #ifdef __FreeBSD__
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
  #include <ieeefp.h>
-@@ -128,9 +160,20 @@ const PRUint32 infMask[2] =    {0, TX_DO
+ #ifdef __alpha__
+ fp_except_t allmask = FP_X_INV|FP_X_OFL|FP_X_UFL|FP_X_DZ|FP_X_IMP;
+@@ -128,9 +160,20 @@
  const PRUint32 negInfMask[2] = {0, TX_DOUBLE_HI32_EXPMASK | TX_DOUBLE_HI32_SIGNBIT};
  #endif
  
@@ -65,7 +69,7 @@ $NetBSD: patch-cg,v 1.1.1.1 2006/03/30 19:15:51 ghen Exp $
  
  /*
   * Determines whether the given double represents positive or negative
-@@ -158,6 +201,7 @@ MBool Double::isNeg(double aDbl)
+@@ -158,6 +201,7 @@
  {
      return (TX_DOUBLE_HI32(aDbl) & TX_DOUBLE_HI32_SIGNBIT) != 0;
  }
@@ -73,7 +77,7 @@ $NetBSD: patch-cg,v 1.1.1.1 2006/03/30 19:15:51 ghen Exp $
  
  /*
   * Converts the given String to a double, if the String value does not
-@@ -245,7 +289,7 @@ public:
+@@ -245,7 +289,7 @@
      {
          if (mState == eIllegal || mBuffer.IsEmpty() ||
              (mBuffer.Length() == 1 && mBuffer[0] == '.')) {
