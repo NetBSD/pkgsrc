@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5123 2006/06/27 14:56:42 wiz Exp $
+$NetBSD: TODO,v 1.5124 2006/06/28 16:28:26 cube Exp $
 
 Suggested new packages
 ======================
@@ -1107,6 +1107,7 @@ Suggested package updates
 	o sbcl-0.9.13 [pkg/33580]
 	o scew-0.4.0
 	o sch-3.8.3
+	o scigraphica-2.1.0
 	o scummvm-0.9.0
 	o sdig-0.40
 	o seahorse-0.9.1
