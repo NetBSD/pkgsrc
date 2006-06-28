@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/05/28 00:26:26 rh Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/28 22:33:47 joerg Exp $
 #
 
 DISTNAME=		Cenon-3.67
@@ -11,7 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cenon.info/
 COMMENT=		Vector graphics / CAD / DTP program
 
-USE_LANGUAGES=		objc
+USE_LANGUAGES=		c objc
 
 WRKSRC=			${WRKDIR}/Cenon
 NO_CONFIGURE=		yes
