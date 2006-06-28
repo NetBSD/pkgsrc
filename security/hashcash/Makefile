@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2006/03/22 22:50:33 tv Exp $
+# $NetBSD: Makefile,v 1.8.2.1 2006/06/28 16:45:46 snj Exp $
 #
 
-DISTNAME=		hashcash-1.13
+DISTNAME=		hashcash-1.22
 CATEGORIES=		security
 MASTER_SITES=		http://www.hashcash.org/source/
 EXTRACT_SUFX=		.tgz
