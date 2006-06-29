@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2006/06/04 11:39:11 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/06/29 12:47:19 joerg Exp $
 #
 
 DISTNAME=	4Suite-0.12.0a3
 PKGNAME=	${PYPKGPREFIX}-FourSuite-0.12.0a3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	ftp://ftp.fourthought.com/pub/4Suite/
 
