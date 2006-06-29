@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/04/17 13:46:49 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2006/06/29 18:58:19 joerg Exp $
 
 DISTNAME=	gnotime-2.2.1
 PKGREVISION=	8
@@ -11,7 +11,7 @@ COMMENT=	Time tracker for GNOME2
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config msgfmt
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
