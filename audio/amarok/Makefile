@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/06/12 16:28:05 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2006/06/29 12:17:53 joerg Exp $
 
 DISTNAME=		amarok-1.4.0a
 PKGREVISION=		1
@@ -12,7 +12,7 @@ COMMENT=		KDE audio player
 
 WRKSRC=			${WRKDIR}/amarok-1.4.0
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config msgfmt
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
