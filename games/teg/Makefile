@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/06/22 10:26:10 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/06/29 19:56:16 joerg Exp $
 
 DISTNAME=		teg-0.11.1
 PKGREVISION=		6
@@ -13,6 +13,7 @@ USE_DIRS=		xdg-1.2 gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config msgfmt
 
 GCONF2_SCHEMAS+=	teg.schemas
 
