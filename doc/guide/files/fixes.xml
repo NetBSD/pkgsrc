@@ -1,10 +1,21 @@
-<!-- $NetBSD: fixes.xml,v 1.56 2006/06/21 08:42:21 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.57 2006/06/29 11:29:46 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
 
   <sect1 id="general-operation">
     <title>General operation</title>
+
+<sect2 id="portability-of-packages">
+<title>Portability of packages</title>
+
+	<para>One appealing feature of pkgsrc is that it runs on many
+	different platforms. As a result, it is important to ensure,
+	where possible, that packages in pkgsrc are portable. This
+	chapter mentions some particular details you should pay
+	attention to while working on pkgsrc.</para>
+
+</sect2>
 
     <sect2 id="pulling-vars-from-etc-mk.conf">
       <title>How to pull in user-settable variables from <filename>mk.conf</filename></title>
@@ -34,13 +45,126 @@
 
     </sect2>
 
-    <sect2 id="where-to-install-documentation">
-      <title>Where to install documentation</title>
+    <sect2 id="user-interaction">
+      <title>User interaction</title>
 
-      <para>Documentation should be installed into
-      <filename>${PREFIX}/share/doc/${PKGBASE}</filename> or
-      <filename>${PREFIX}/share/doc/${PKGNAME}</filename> (the
-      latter includes the version number of the package).</para>
+      <para>Occasionally, packages require interaction from the user, and this can be
+        in a number of ways:</para>
+
+      <itemizedlist>
+	<listitem>
+	  <para>When extracting the distfiles, some packages may ask for passwords.</para>
+	</listitem>
+
+        <listitem>
+          <para>help to configure the package before it is built</para>
+        </listitem>
+
+        <listitem>
+          <para>help during the build process</para>
+        </listitem>
+
+        <listitem>
+          <para>help during the installation of a package</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>The <varname>INTERACTIVE_STAGE</varname> definition is provided to notify
+        the pkgsrc mechanism of an interactive stage which will be needed, and
+        this should be set in the package's <filename>Makefile</filename>, e.g.:</para>
+
+<programlisting>
+    INTERACTIVE_STAGE=      build
+</programlisting>
+
+      <para>Multiple interactive stages can be specified:</para>
+
+<programlisting>
+    INTERACTIVE_STAGE=      configure install
+</programlisting>
+    </sect2>
+
+
+    <sect2 id="handling-licenses">
+      <title>Handling licenses</title>
+
+      <para>A package may be covered by a license which the user has
+        or has not agreed to accept.  For these cases, pkgsrc contains
+        a mechanism to note that a package is covered by a particular
+        license, and the package cannot be built unless the user has
+        accepted the license.  (Installation of binary packages are
+        not currently subject to this mechanism.)  Packages with
+        licenses that are either Open Source according to the Open
+        Source Initiative or Free according to the Free Software
+        Foundation will not be marked with a license tag.  Packages
+        with licenses that have not been determined to meet either
+        definition will be marked with a license tag referring to the
+        license.  This will prevent building unless pkgsrc is informed
+        that the license is acceptable, and enables displaying the
+        license.</para>
+
+      <para>The license tag mechanism is intended to address
+	copyright-related issues surrounding building, installing and
+	using a package, and not to address redistribution issues (see
+	<varname>RESTRICTED</varname> and
+	<varname>NO_SRC_ON_FTP</varname>, etc.).  However, the above
+	definition of licenses for which tags are not needed implies
+	that packages with redistribution restrictions should have
+	tags.</para>
+
+      <para>
+        Denoting that a package is covered by a particular license is
+        done by placing the license in
+        <filename>pkgsrc/licenses</filename> and setting the
+        <varname>LICENSE</varname> variable to a string identifying
+        the license, e.g. in
+	<filename role="pkg">graphics/xv</filename>: </para>
+
+<programlisting>
+    LICENSE=        xv-license
+</programlisting>
+
+      <para>
+	When trying to build, the user will get a notice that the
+        package is covered by a license which has not been
+        accepted:</para>
+
+<programlisting>
+    &cprompt; <userinput>make</userinput>
+    ===> xv-3.10anb9 has an unacceptable license: xv-license.
+    ===>     To view the license, enter "/usr/bin/make show-license".
+    ===>     To indicate acceptance, add this line to your /etc/mk.conf:
+    ===>     ACCEPTABLE_LICENSES+=xv-license
+    *** Error code 1
+</programlisting>
+
+        <para>The license can be viewed with <command>make
+          show-license</command>, and if it is considered appropriate,
+          the line printed above can be added to
+          <filename>/etc/mk.conf</filename> to indicate acceptance of
+          the particular license:</para>
+
+<programlisting>
+    ACCEPTABLE_LICENSES+=xv-license
+</programlisting>
+
+	<para>When adding a package with a new license, the license
+          text should be added to <filename>pkgsrc/licenses</filename>
+          for displaying. A list of known licenses can be seen in this
+          directory as well as by looking at the list of (commented
+          out) <varname>ACCEPTABLE_LICENSES</varname> variable
+          settings in
+          <filename>pkgsrc/mk/defaults/mk.conf</filename>.</para>
+
+	<para>The use of <varname>LICENSE=shareware</varname>,
+	  <varname>LICENSE=no-commercial-use</varname>, and similar
+	  language is deprecated because it does not crisply refer to
+	  a particular license text.  Another problem with such usage
+	  is that it does not enable a user to denote acceptance of
+	  the license for a single package without accepting the same
+	  license text for another package.  In particular, this can
+	  be inappropriate when e.g. one accepts a particular license to
+	  indicate to pkgsrc that a fee has been paid.</para>
     </sect2>
 
     <sect2 id="restricted-packages">
@@ -374,24 +498,6 @@
     </sect2>
 
 
-    <sect2 id="compiler-bugs">
-      <title>How to handle compiler bugs</title>
-
-      <para>Some source files trigger bugs in the compiler, based on
-        combinations  of compiler version and architecture and almost
-        always relation to  optimisation being enabled.  Common symptoms
-        are gcc internal errors  or never finishing compiling a file.
-</para>
-
-      <para>Typically, a workaround involves testing the
-        <varname>MACHINE_ARCH</varname>  and compiler version, disabling
-        optimisation for that
-        file/<varname>MACHINE_ARCH</varname>/compiler  combination, and
-        documenting it in  <filename>pkgsrc/doc/HACKS</filename>.  See
-        that file for a number of examples!</para>
-    </sect2>
-
-
     <sect2 id="bumping-pkgrevision">
       <title>How to handle incrementing versions when fixing an existing package</title>
 
@@ -445,30 +551,6 @@ Changes to the PLIST
 
     <para>PKGREVISION must also be incremented when dependencies have ABI
     changes.</para>
-    </sect2>
-
-
-    <sect2 id="portability-of-packages">
-      <title>Portability of packages</title>
-
-      <para>One appealing feature of pkgsrc is that it runs on many different
-        platforms. As a result, it is important to ensure, where possible,
-        that packages in pkgsrc are portable. There are some particular
-        details you should pay attention to while working on pkgsrc.</para>
-
-      <sect3 id="install-scripts">
-        <title>${INSTALL}, ${INSTALL_DATA_DIR}, ...</title>
-
-        <para>The BSD-compatible <command>install</command> supplied with some
-          operating systems will not perform more than one operation at a time.
-          As such, you should call <quote>${INSTALL}</quote>, etc. like this:</para>
-
-<programlisting>
-    ${INSTALL_DATA_DIR} ${PREFIX}/dir1
-    ${INSTALL_DATA_DIR} ${PREFIX}/dir2
-</programlisting>
-      </sect3>
-
     </sect2>
   </sect1>
 
@@ -871,136 +953,77 @@ Changes to the PLIST
 
 </sect3>
 </sect2>
-</sect1>
+<sect2 id="compiler-bugs">
+<title>How to handle compiler bugs</title>
 
-  <sect1 id="package-specific-actions">
-    <title>Package specific actions</title>
+	<para>Some source files trigger bugs in the compiler, based on
+        combinations  of compiler version and architecture and almost
+        always relation to  optimisation being enabled.  Common symptoms
+        are gcc internal errors  or never finishing compiling a
+	file.</para>
 
-    <sect2 id="user-interaction">
-      <title>User interaction</title>
+	<para>Typically, a workaround involves testing the
+        <varname>MACHINE_ARCH</varname> and compiler version, disabling
+        optimisation for that combination of file,
+	<varname>MACHINE_ARCH</varname> and compiler, and documenting it
+	in  <filename>pkgsrc/doc/HACKS</filename>. See that file for a
+	number of examples.</para>
 
-      <para>Occasionally, packages require interaction from the user, and this can be
-        in a number of ways:</para>
+</sect2>
 
-      <itemizedlist>
-	<listitem>
-	  <para>When extracting the distfiles, some packages may ask for passwords.</para>
-	</listitem>
+<sect2 id="undefined-reference">
+<title>Undefined reference to <quote>...</quote></title>
 
-        <listitem>
-          <para>help to configure the package before it is built</para>
-        </listitem>
+	<para>This compiler error often means that a package did not
+	link to a shared library it needs. The following functions are
+	known to cause this error message over and over.</para>
 
-        <listitem>
-          <para>help during the build process</para>
-        </listitem>
+	<informaltable id="undefined-reference-functions">
+	<tgroup cols="3">
+	<thead><row><entry>Function</entry><entry>Library</entry><entry>Affected platforms</entry></row></thead>
+	<tbody>
+	<row><entry>gethost*</entry><entry>-lnsl</entry><entry>Solaris</entry></row>
+	<row><entry>accept, bind, connect</entry><entry>-lsocket</entry><entry>Solaris</entry></row>
+	<row><entry>inet_aton</entry><entry>-lresolv</entry><entry>Solaris</entry></row>
+	<row><entry>dlopen, dlsym</entry><entry>-ldl</entry><entry>Linux</entry></row>
+	</tbody>
+	</tgroup>
+	</informaltable>
 
-        <listitem>
-          <para>help during the installation of a package</para>
-        </listitem>
-      </itemizedlist>
-
-      <para>The <varname>INTERACTIVE_STAGE</varname> definition is provided to notify
-        the pkgsrc mechanism of an interactive stage which will be needed, and
-        this should be set in the package's <filename>Makefile</filename>, e.g.:</para>
-
-<programlisting>
-    INTERACTIVE_STAGE=      build
-</programlisting>
-
-      <para>Multiple interactive stages can be specified:</para>
-
-<programlisting>
-    INTERACTIVE_STAGE=      configure install
-</programlisting>
-    </sect2>
-
-
-    <sect2 id="handling-licenses">
-      <title>Handling licenses</title>
-
-      <para>A package may be covered by a license which the user has
-        or has not agreed to accept.  For these cases, pkgsrc contains
-        a mechanism to note that a package is covered by a particular
-        license, and the package cannot be built unless the user has
-        accepted the license.  (Installation of binary packages are
-        not currently subject to this mechanism.)  Packages with
-        licenses that are either Open Source according to the Open
-        Source Initiative or Free according to the Free Software
-        Foundation will not be marked with a license tag.  Packages
-        with licenses that have not been determined to meet either
-        definition will be marked with a license tag referring to the
-        license.  This will prevent building unless pkgsrc is informed
-        that the license is acceptable, and enables displaying the
-        license.</para>
-
-      <para>The license tag mechanism is intended to address
-	copyright-related issues surrounding building, installing and
-	using a package, and not to address redistribution issues (see
-	<varname>RESTRICTED</varname> and
-	<varname>NO_SRC_ON_FTP</varname>, etc.).  However, the above
-	definition of licenses for which tags are not needed implies
-	that packages with redistribution restrictions should have
-	tags.</para>
-
-      <para>
-        Denoting that a package is covered by a particular license is
-        done by placing the license in
-        <filename>pkgsrc/licenses</filename> and setting the
-        <varname>LICENSE</varname> variable to a string identifying
-        the license, e.g. in
-	<filename role="pkg">graphics/xv</filename>: </para>
-
-<programlisting>
-    LICENSE=        xv-license
-</programlisting>
-
-      <para>
-	When trying to build, the user will get a notice that the
-        package is covered by a license which has not been
-        accepted:</para>
-
-<programlisting>
-    &cprompt; <userinput>make</userinput>
-    ===> xv-3.10anb9 has an unacceptable license: xv-license.
-    ===>     To view the license, enter "/usr/bin/make show-license".
-    ===>     To indicate acceptance, add this line to your /etc/mk.conf:
-    ===>     ACCEPTABLE_LICENSES+=xv-license
-    *** Error code 1
-</programlisting>
-
-        <para>The license can be viewed with <command>make
-          show-license</command>, and if it is considered appropriate,
-          the line printed above can be added to
-          <filename>/etc/mk.conf</filename> to indicate acceptance of
-          the particular license:</para>
-
-<programlisting>
-    ACCEPTABLE_LICENSES+=xv-license
-</programlisting>
-
-	<para>When adding a package with a new license, the license
-          text should be added to <filename>pkgsrc/licenses</filename>
-          for displaying. A list of known licenses can be seen in this
-          directory as well as by looking at the list of (commented
-          out) <varname>ACCEPTABLE_LICENSES</varname> variable
-          settings in
-          <filename>pkgsrc/mk/defaults/mk.conf</filename>.</para>
-
-	<para>The use of <varname>LICENSE=shareware</varname>,
-	  <varname>LICENSE=no-commercial-use</varname>, and similar
-	  language is deprecated because it does not crisply refer to
-	  a particular license text.  Another problem with such usage
-	  is that it does not enable a user to denote acceptance of
-	  the license for a single package without accepting the same
-	  license text for another package.  In particular, this can
-	  be inappropriate when e.g. one accepts a particular license to
-	  indicate to pkgsrc that a fee has been paid.</para>
-    </sect2>
+</sect2>
 </sect1>
 
 <sect1 id="fixes.install">
 <title>Fixing problems in the <emphasis>install</emphasis> phase</title>
+
+<sect2 id="install-scripts">
+<title>Creating needed directories</title>
+
+	<para>The BSD-compatible <command>install</command> supplied
+	with some operating systems cannot create more than one
+	directory at a time. As such, you should call
+	<literal>${INSTALL_*_DIR}</literal> like this:</para>
+
+<programlisting>
+    ${INSTALL_DATA_DIR} ${PREFIX}/dir1
+    ${INSTALL_DATA_DIR} ${PREFIX}/dir2
+</programlisting>
+
+	<para>You can also just append <quote><literal>dir1
+	dir2</literal></quote> to the
+	<varname>INSTALLATION_DIRS</varname> variable, which will
+	automatically do the right thing.</para>
+
+</sect2>
+<sect2 id="where-to-install-documentation">
+<title>Where to install documentation</title>
+
+	<para>Documentation should be installed into
+	<filename>${PREFIX}/share/doc/${PKGBASE}</filename> or
+	<filename>${PREFIX}/share/doc/${PKGNAME}</filename> (the latter
+	includes the version number of the package).</para>
+
+</sect2>
 
     <sect2 id="installing-score-files">
       <title>Installing score files</title>
