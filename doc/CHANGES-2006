@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.593 2006/06/29 22:21:52 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.594 2006/06/29 22:59:05 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3182,3 +3182,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/gftp to 2.0.18nb5 [joerg 2006-06-27]
 	Updated net/gftp-gtk1 to 2.0.18nb4 [joerg 2006-06-27]
 	Updated graphics/png to 1.2.12 [wiz 2006-06-29]
+	Updated emulators/vice to 1.19 [dillo 2006-06-29]
