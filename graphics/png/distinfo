@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.29 2006/05/17 21:48:57 wiz Exp $
+$NetBSD: distinfo,v 1.30 2006/06/29 22:21:18 wiz Exp $
 
-SHA1 (libpng-1.2.10.tar.bz2) = 075fe05e25012470d0351187b57e8256b95d2e89
-RMD160 (libpng-1.2.10.tar.bz2) = 8dbbf8ef709e6b35cc715302a7d3a50bef1a88c8
-Size (libpng-1.2.10.tar.bz2) = 625176 bytes
+SHA1 (libpng-1.2.12.tar.bz2) = 44bd6821607ba09ac500279363871ad5974a01b5
+RMD160 (libpng-1.2.12.tar.bz2) = c5c702869d73732d5e91e53a9e380fcbf89f3ae2
+Size (libpng-1.2.12.tar.bz2) = 621295 bytes
 SHA1 (patch-aa) = 3191c0781894d16be1c914f378f5be221dbc4960
 SHA1 (patch-ab) = 979175c65587686b339a5556e8bcae3be95a07ca
 SHA1 (patch-ae) = b9bf9de3caa32ac78a17685cdd5df5b80d1ccbbf
