@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2006/05/30 19:49:25 reed Exp $
+# $NetBSD: Makefile,v 1.70 2006/06/29 16:23:08 tron Exp $
 
 DISTNAME=	WindowMaker-0.92.0
 PKGNAME=	${DISTNAME:S/WindowMaker/windowmaker/}
@@ -25,14 +25,14 @@ CONFIGURE_ARGS+=	--with-gnustepdir=${PREFIX:Q}/share/GNUstep
 CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX:Q}/${PKGLOCALEDIR:Q}/locale
 CONFIGURE_ENV+=		LINGUAS=yes
 CONFIGURE_ENV+=		CPP_PATH=${CPP:Q}
-.if ${MACHINE_ARCH} != "i386"
-CONFIGURE_ENV+=		ac_cv_c_inline_asm=no
-.endif
-
 REPLACE_PERL+=		util/wkdemenu.pl
 INSTALL_TARGET=		install-strip
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
+
+.if ${MACHINE_ARCH} != "i386" || !empty(CC_VERSION:Mgcc-4.1.*)
+CONFIGURE_ENV+=		ac_cv_c_inline_asm=no
+.endif
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=	3.0
