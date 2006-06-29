@@ -1,4 +1,4 @@
-# $NetBSD: themes.sawfish,v 1.2 2006/02/23 19:22:54 jschauma Exp $
+# $NetBSD: themes.sawfish,v 1.3 2006/06/29 21:00:25 joerg Exp $
 # Themes to be installed
 # If you would like to install a subset, set SAWFISH_THEMES accordingly
 
@@ -159,7 +159,6 @@ SAWFISH_THEMES?=	1_0-0.30.tar.gz 				\
 			swiftbrook_-0.30.tar.gz				\
 			synergy-0.30.tar.gz				\
 			bwm-1.0.tar.gz					\
-			thingradient_-0.30.tar.gz			\
 			tiny_-0.30.tar.gz				\
 			titanium__-0.30.tar.gz 				\
 			triangle-0.30.tar.gz				\
