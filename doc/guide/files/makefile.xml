@@ -1,11 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.20 2006/05/15 16:28:19 reed Exp $ -->
-
-<!-- based on:
-pkgsrc/bootstrap/bmake/for.c 1.1.1.1
-pkgsrc/bootstrap/bmake/make.1 1.3
-pkgsrc/bootstrap/bmake/str.c 1.1.1.1
-pkgsrc/bootstrap/bmake/var.c 1.2
--->
+<!-- $NetBSD: makefile.xml,v 1.21 2006/06/29 13:37:46 rillig Exp $ -->
 
 <chapter id="makefile"> <?dbhtml filename="makefile.html"?>
   <title>Programming in <filename>Makefile</filename>s</title>
@@ -173,6 +166,10 @@ pkgsrc/bootstrap/bmake/var.c 1.2
     <sect2 id="passing-variable-to-shell">
       <title>Passing variables to a shell command</title>
 
+	<para>Sometimes you may want to print an arbitrary string. There
+	are many ways to get it wrong and only few that can handle every
+	nastiness.</para>
+
 <programlisting>
     STRING=         foo bar <    > * `date` $$HOME ' "
     EXT_LIST=       string=${STRING:Q} x=second\ item
@@ -183,6 +180,7 @@ pkgsrc/bootstrap/bmake/var.c 1.2
             echo "${STRING:Q}"              # 3
             echo ${STRING:Q}                # 4
             echo x${STRING:Q} | sed 1s,.,,  # 5
+            printf "%s\\n" ${STRING:Q}""    # 6
             env ${EXT_LIST} /bin/sh -c 'echo "$$string"; echo "$$x"'
 </programlisting>
 
@@ -206,6 +204,10 @@ pkgsrc/bootstrap/bmake/var.c 1.2
 
       <para>Example 5 handles even the case of a leading dash
       correctly.</para>
+
+      <para>Example 6 also works with every string and is the
+      light-weight solution, since it does not involve a pipe, which has
+      its own problems.</para>
 
       <para>The <varname>EXT_LIST</varname> does not need to be quoted
       because the quoting has already been done when adding elements to
