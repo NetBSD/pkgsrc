@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.57 2006/06/29 11:29:46 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.58 2006/06/29 11:41:04 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -982,13 +982,22 @@ Changes to the PLIST
 	<tgroup cols="3">
 	<thead><row><entry>Function</entry><entry>Library</entry><entry>Affected platforms</entry></row></thead>
 	<tbody>
-	<row><entry>gethost*</entry><entry>-lnsl</entry><entry>Solaris</entry></row>
 	<row><entry>accept, bind, connect</entry><entry>-lsocket</entry><entry>Solaris</entry></row>
-	<row><entry>inet_aton</entry><entry>-lresolv</entry><entry>Solaris</entry></row>
+	<row><entry>crypt</entry><entry>-lcrypt</entry><entry>DragonFly, NetBSD</entry></row>
 	<row><entry>dlopen, dlsym</entry><entry>-ldl</entry><entry>Linux</entry></row>
+	<row><entry>gethost*</entry><entry>-lnsl</entry><entry>Solaris</entry></row>
+	<row><entry>inet_aton</entry><entry>-lresolv</entry><entry>Solaris</entry></row>
+	<row><entry>nanosleep, sem_*, timer_*</entry><entry>-lrt</entry><entry>Solaris</entry></row>
+	<row><entry>openpty</entry><entry>-lutil</entry><entry>Linux</entry></row>
 	</tbody>
 	</tgroup>
 	</informaltable>
+
+	<para>To fix these linker errors, it is often sufficient to say
+	<literal>LIBS.<replaceable>OperatingSystem</replaceable>+=
+	-l<replaceable>foo</replaceable></literal> to the package
+	<filename>Makefile</filename> and then say <command>bmake clean;
+	bmake</command>.</para>
 
 </sect2>
 </sect1>
