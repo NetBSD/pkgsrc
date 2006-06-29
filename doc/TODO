@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5127 2006/06/29 22:21:52 wiz Exp $
+$NetBSD: TODO,v 1.5128 2006/06/29 22:59:05 dillo Exp $
 
 Suggested new packages
 ======================
@@ -1214,7 +1214,6 @@ Suggested package updates
 	o userppp-030706
 	o valgrind-3.0.1
 	o vfu-4.03
-	o vice-1.19
 	o vifm-0.3a
 	o visual-regexp-3.1
 	o vlc-0.8.4a
