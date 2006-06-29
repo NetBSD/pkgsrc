@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.future.xml,v 1.1 2006/05/23 08:10:37 rillig Exp $ -->
+<!-- $NetBSD: chap.future.xml,v 1.2 2006/06/29 16:40:53 rillig Exp $ -->
 
 <chapter id="future">
 <title>Future directions</title>
@@ -44,5 +44,28 @@
 	</table>
 
 </sect1>
+<sect1 id="future.vars">
+<title>Even more restricted variables</title>
 
+	<para>Currently there are mainly two restrictions for variables:
+	What values they may contain (data types) and where they may be
+	defined and used, on a per-file basis.</para>
+
+	<para>The <filename>makevars.map</filename> file already
+	contains annotations to distinguish user-defined from
+	system-defined variables, but they are currently only used as
+	abbreviations and not further exploited. Based on these
+	definitions, sequence points may be defined in the pkgsrc
+	infrastructure where the values of these variables must have
+	certain properties, like being defined or being fixed (which
+	means that the variable will not change further).</para>
+
+	<para>For example, user-defined variables may then be specified
+	as follows. They are given default values in
+	<filename>mk/defaults/mk.conf</filename>, may be overridden by
+	any file that is included inside <varname>MAKECONF</varname>,
+	and after that, their value is fixed. They may then be used at
+	both load and run time.</para>
+
+</sect1>
 </chapter>
