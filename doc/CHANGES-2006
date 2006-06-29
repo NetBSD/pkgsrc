@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.592 2006/06/27 20:18:08 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.593 2006/06/29 22:21:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3181,3 +3181,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated games/dipmap to 1.16nb1 [minskim 2006-06-27]
 	Updated net/gftp to 2.0.18nb5 [joerg 2006-06-27]
 	Updated net/gftp-gtk1 to 2.0.18nb4 [joerg 2006-06-27]
+	Updated graphics/png to 1.2.12 [wiz 2006-06-29]
