@@ -55,7 +55,10 @@
 <dt><span class="sect1"><a href="#introduction-section">1.1. Introduction</a></span></dt>
 <dt><span class="sect1"><a href="#overview">1.2. Overview</a></span></dt>
 <dt><span class="sect1"><a href="#terminology">1.3. Terminology</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#term.people">1.3.1. People involved in pkgsrc</a></span></dt></dl></dd>
+<dd><dl>
+<dt><span class="sect2"><a href="#term.abbrev">1.3.1. Commonly used abbreviations</a></span></dt>
+<dt><span class="sect2"><a href="#term.people">1.3.2. People involved in pkgsrc</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#typography">1.4. Typography</a></span></dt>
 </dl></dd>
 <dt><span class="part"><a href="#users-guide">I. The pkgsrc user's guide</a></span></dt>
@@ -108,8 +111,10 @@
 <dd><dl>
 <dt><span class="sect1"><a href="#general-configuration">5.1. General configuration</a></span></dt>
 <dt><span class="sect1"><a href="#variables-affecting-build">5.2. Variables affecting the build process</a></span></dt>
-<dt><span class="sect1"><a href="#developer-advanced-settings">5.3. Developer/advanced settings</a></span></dt>
-<dt><span class="sect1"><a href="#selecting-build-options">5.4. Selecting Build Options</a></span></dt>
+<dt><span class="sect1"><a href="#conf.compiler">5.3. Selecting and configuring the compiler</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="#conf.cflags">5.3.1. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="#developer-advanced-settings">5.4. Developer/advanced settings</a></span></dt>
+<dt><span class="sect1"><a href="#selecting-build-options">5.5. Selecting Build Options</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#binary">6. Creating binary packages</a></span></dt>
 <dd><dl>
@@ -160,6 +165,11 @@
 <dt><span class="sect1"><a href="#components.patches">9.3. patches/*</a></span></dt>
 <dt><span class="sect1"><a href="#other-mandatory-files">9.4. Other mandatory files</a></span></dt>
 <dt><span class="sect1"><a href="#components.optional">9.5. Optional files</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#components.optional.bin">9.5.1. Files affecting the binary package</a></span></dt>
+<dt><span class="sect2"><a href="#components.optional.build">9.5.2. Files affecting the build process</a></span></dt>
+<dt><span class="sect2"><a href="#components.optional.none">9.5.3. Files affecting nothing at all</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#work-dir">9.6. <code class="filename">work*</code></a></span></dt>
 <dt><span class="sect1"><a href="#files-dir">9.7. <code class="filename">files/*</code></a></span></dt>
 </dl></dd>
@@ -258,17 +268,17 @@
 <dd><dl>
 <dt><span class="sect1"><a href="#general-operation">17.1. General operation</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#pulling-vars-from-etc-mk.conf">17.1.1. How to pull in variables from /etc/mk.conf</a></span></dt>
-<dt><span class="sect2"><a href="#where-to-install-documentation">17.1.2. Where to install documentation</a></span></dt>
-<dt><span class="sect2"><a href="#restricted-packages">17.1.3. Restricted packages</a></span></dt>
-<dt><span class="sect2"><a href="#dependencies">17.1.4. Handling dependencies</a></span></dt>
-<dt><span class="sect2"><a href="#conflicts">17.1.5. Handling conflicts with other packages</a></span></dt>
-<dt><span class="sect2"><a href="#not-building-packages">17.1.6. Packages that cannot or should not be built</a></span></dt>
-<dt><span class="sect2"><a href="#undeletable-packages">17.1.7. Packages which should not be deleted, once installed</a></span></dt>
-<dt><span class="sect2"><a href="#security-handling">17.1.8. Handling packages with security problems</a></span></dt>
-<dt><span class="sect2"><a href="#compiler-bugs">17.1.9. How to handle compiler bugs</a></span></dt>
-<dt><span class="sect2"><a href="#bumping-pkgrevision">17.1.10. How to handle incrementing versions when fixing an existing package</a></span></dt>
-<dt><span class="sect2"><a href="#portability-of-packages">17.1.11. Portability of packages</a></span></dt>
+<dt><span class="sect2"><a href="#portability-of-packages">17.1.1. Portability of packages</a></span></dt>
+<dt><span class="sect2"><a href="#pulling-vars-from-etc-mk.conf">17.1.2. How to pull in user-settable variables from <code class="filename">mk.conf</code></a></span></dt>
+<dt><span class="sect2"><a href="#user-interaction">17.1.3. User interaction</a></span></dt>
+<dt><span class="sect2"><a href="#handling-licenses">17.1.4. Handling licenses</a></span></dt>
+<dt><span class="sect2"><a href="#restricted-packages">17.1.5. Restricted packages</a></span></dt>
+<dt><span class="sect2"><a href="#dependencies">17.1.6. Handling dependencies</a></span></dt>
+<dt><span class="sect2"><a href="#conflicts">17.1.7. Handling conflicts with other packages</a></span></dt>
+<dt><span class="sect2"><a href="#not-building-packages">17.1.8. Packages that cannot or should not be built</a></span></dt>
+<dt><span class="sect2"><a href="#undeletable-packages">17.1.9. Packages which should not be deleted, once installed</a></span></dt>
+<dt><span class="sect2"><a href="#security-handling">17.1.10. Handling packages with security problems</a></span></dt>
+<dt><span class="sect2"><a href="#bumping-pkgrevision">17.1.11. How to handle incrementing versions when fixing an existing package</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#fixes.fetch">17.2. Fixing problems in the <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
 <dd><dl>
@@ -282,31 +292,32 @@
 <dt><span class="sect2"><a href="#autoconf-automake">17.3.3. GNU Autoconf/Automake</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#fixes.build">17.4. Fixing problems in the <span class="emphasis"><em>build</em></span> phase</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#fixes.build.cpp">17.4.1. Compiling C and C++ code conditionally</a></span></dt></dl></dd>
-<dt><span class="sect1"><a href="#package-specific-actions">17.5. Package specific actions</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#user-interaction">17.5.1. User interaction</a></span></dt>
-<dt><span class="sect2"><a href="#handling-licenses">17.5.2. Handling licenses</a></span></dt>
+<dt><span class="sect2"><a href="#fixes.build.cpp">17.4.1. Compiling C and C++ code conditionally</a></span></dt>
+<dt><span class="sect2"><a href="#compiler-bugs">17.4.2. How to handle compiler bugs</a></span></dt>
+<dt><span class="sect2"><a href="#undefined-reference">17.4.3. Undefined reference to &#8220;<span class="quote">...</span>&#8221;</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.install">17.6. Fixing problems in the <span class="emphasis"><em>install</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.install">17.5. Fixing problems in the <span class="emphasis"><em>install</em></span> phase</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#installing-score-files">17.6.1. Installing score files</a></span></dt>
-<dt><span class="sect2"><a href="#perl-scripts">17.6.2. Packages containing perl scripts</a></span></dt>
-<dt><span class="sect2"><a href="#hardcoded-paths">17.6.3. Packages with hardcoded paths to other interpreters</a></span></dt>
-<dt><span class="sect2"><a href="#perl-modules">17.6.4. Packages installing perl modules</a></span></dt>
-<dt><span class="sect2"><a href="#faq.info-files">17.6.5. Packages installing info files</a></span></dt>
-<dt><span class="sect2"><a href="#manpages">17.6.6. Packages installing man pages</a></span></dt>
-<dt><span class="sect2"><a href="#gconf2-data-files">17.6.7. Packages installing GConf2 data files</a></span></dt>
-<dt><span class="sect2"><a href="#scrollkeeper-data-files">17.6.8. Packages installing scrollkeeper data files</a></span></dt>
-<dt><span class="sect2"><a href="#x11-fonts">17.6.9. Packages installing X11 fonts</a></span></dt>
-<dt><span class="sect2"><a href="#gtk2-modules">17.6.10. Packages installing GTK2 modules</a></span></dt>
-<dt><span class="sect2"><a href="#sgml-xml-data">17.6.11. Packages installing SGML or XML data</a></span></dt>
-<dt><span class="sect2"><a href="#mime-database">17.6.12. Packages installing extensions to the MIME database</a></span></dt>
-<dt><span class="sect2"><a href="#intltool">17.6.13. Packages using intltool</a></span></dt>
-<dt><span class="sect2"><a href="#startup-scripts">17.6.14. Packages installing startup scripts</a></span></dt>
-<dt><span class="sect2"><a href="#tex-packages">17.6.15. Packages installing TeX modules</a></span></dt>
+<dt><span class="sect2"><a href="#install-scripts">17.5.1. Creating needed directories</a></span></dt>
+<dt><span class="sect2"><a href="#where-to-install-documentation">17.5.2. Where to install documentation</a></span></dt>
+<dt><span class="sect2"><a href="#installing-score-files">17.5.3. Installing score files</a></span></dt>
+<dt><span class="sect2"><a href="#perl-scripts">17.5.4. Packages containing perl scripts</a></span></dt>
+<dt><span class="sect2"><a href="#hardcoded-paths">17.5.5. Packages with hardcoded paths to other interpreters</a></span></dt>
+<dt><span class="sect2"><a href="#perl-modules">17.5.6. Packages installing perl modules</a></span></dt>
+<dt><span class="sect2"><a href="#faq.info-files">17.5.7. Packages installing info files</a></span></dt>
+<dt><span class="sect2"><a href="#manpages">17.5.8. Packages installing man pages</a></span></dt>
+<dt><span class="sect2"><a href="#gconf2-data-files">17.5.9. Packages installing GConf2 data files</a></span></dt>
+<dt><span class="sect2"><a href="#scrollkeeper-data-files">17.5.10. Packages installing scrollkeeper data files</a></span></dt>
+<dt><span class="sect2"><a href="#x11-fonts">17.5.11. Packages installing X11 fonts</a></span></dt>
+<dt><span class="sect2"><a href="#gtk2-modules">17.5.12. Packages installing GTK2 modules</a></span></dt>
+<dt><span class="sect2"><a href="#sgml-xml-data">17.5.13. Packages installing SGML or XML data</a></span></dt>
+<dt><span class="sect2"><a href="#mime-database">17.5.14. Packages installing extensions to the MIME database</a></span></dt>
+<dt><span class="sect2"><a href="#intltool">17.5.15. Packages using intltool</a></span></dt>
+<dt><span class="sect2"><a href="#startup-scripts">17.5.16. Packages installing startup scripts</a></span></dt>
+<dt><span class="sect2"><a href="#tex-packages">17.5.17. Packages installing TeX modules</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#feedback-to-author">17.7. Feedback to the author</a></span></dt>
+<dt><span class="sect1"><a href="#feedback-to-author">17.6. Feedback to the author</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#debug">18. Debugging</a></span></dt>
 <dt><span class="chapter"><a href="#submit">19. Submitting and Committing</a></span></dt>
@@ -329,10 +340,11 @@
 <dt><span class="sect2"><a href="#infr.var.load">21.1.1. At load time</a></span></dt>
 <dt><span class="sect2"><a href="#infr.var.run">21.1.2. At runtime</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#infr.design.intf">21.2. Designing interfaces for Makefile fragments</a></span></dt>
+<dt><span class="sect1"><a href="#infr.varspec">21.2. How can variables be specified?</a></span></dt>
+<dt><span class="sect1"><a href="#infr.design.intf">21.3. Designing interfaces for Makefile fragments</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.design.intf.proc">21.2.1. Procedures with parameters</a></span></dt>
-<dt><span class="sect2"><a href="#infr.design.intf.action">21.2.2. Actions taken on behalf of parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.proc">21.3.1. Procedures with parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.action">21.3.2. Actions taken on behalf of parameters</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#regression">22. Regression tests</a></span></dt>
@@ -394,7 +406,10 @@ source packages</a></span></dt>
 <dt><span class="sect1"><a href="#introduction-section">1.1. Introduction</a></span></dt>
 <dt><span class="sect1"><a href="#overview">1.2. Overview</a></span></dt>
 <dt><span class="sect1"><a href="#terminology">1.3. Terminology</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#term.people">1.3.1. People involved in pkgsrc</a></span></dt></dl></dd>
+<dd><dl>
+<dt><span class="sect2"><a href="#term.abbrev">1.3.1. Commonly used abbreviations</a></span></dt>
+<dt><span class="sect2"><a href="#term.people">1.3.2. People involved in pkgsrc</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#typography">1.4. Typography</a></span></dt>
 </dl>
 </div>
@@ -520,7 +535,16 @@ source packages</a></span></dt>
 </dl></div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="term.people"></a>1.3.1. People involved in pkgsrc</h3></div></div></div>
+<a name="term.abbrev"></a>1.3.1. Commonly used abbreviations</h3></div></div></div>
+<div class="variablelist"><dl>
+<dt><span class="term">ICE</span></dt>
+<dd><p>Internal Compiler
+	Error</p></dd>
+</dl></div>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="term.people"></a>1.3.2. People involved in pkgsrc</h3></div></div></div>
 <div class="variablelist"><dl>
 <dt><span class="term">pkgsrc users</span></dt>
 <dd>
@@ -610,8 +634,10 @@ source packages</a></span></dt>
 <dd><dl>
 <dt><span class="sect1"><a href="#general-configuration">5.1. General configuration</a></span></dt>
 <dt><span class="sect1"><a href="#variables-affecting-build">5.2. Variables affecting the build process</a></span></dt>
-<dt><span class="sect1"><a href="#developer-advanced-settings">5.3. Developer/advanced settings</a></span></dt>
-<dt><span class="sect1"><a href="#selecting-build-options">5.4. Selecting Build Options</a></span></dt>
+<dt><span class="sect1"><a href="#conf.compiler">5.3. Selecting and configuring the compiler</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="#conf.cflags">5.3.1. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="#developer-advanced-settings">5.4. Developer/advanced settings</a></span></dt>
+<dt><span class="sect1"><a href="#selecting-build-options">5.5. Selecting Build Options</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#binary">6. Creating binary packages</a></span></dt>
 <dd><dl>
@@ -1292,8 +1318,8 @@ source packages</a></span></dt>
 <li><p>SUNWtoo</p></li>
 <li><p>SUNWlibm</p></li>
 </ul></div>
-<p>Please note the use of GNU binutils on Solaris is
-	<span class="emphasis"><em>not</em></span> supported.</p>
+<p>Please note that the use of GNU binutils on Solaris is
+	<span class="emphasis"><em>not</em></span> supported, as of June 2006.</p>
 <p>Whichever compiler you use, please ensure the compiler tools and
 	  your $prefix are in your <code class="varname">PATH</code>. This includes
 	  <code class="filename">/usr/ccs/{bin,lib}</code>
@@ -1593,7 +1619,7 @@ source packages</a></span></dt>
 <p>You can overwrite some of the major distribution sites to fit to sites
         that are close to your own.  Have a look at
         <code class="filename">pkgsrc/mk/defaults/mk.conf</code> to find some examples
-        &#8212; in particular, look for the <code class="varname">MASTER_SORT</code>,
+        &mdash; in particular, look for the <code class="varname">MASTER_SORT</code>,
         <code class="varname">MASTER_SORT_REGEX</code> and
         <code class="varname">INET_COUNTRY</code> definitions.  This may save some of your
         bandwidth and time.</p>
@@ -1748,8 +1774,10 @@ source packages</a></span></dt>
 <dl>
 <dt><span class="sect1"><a href="#general-configuration">5.1. General configuration</a></span></dt>
 <dt><span class="sect1"><a href="#variables-affecting-build">5.2. Variables affecting the build process</a></span></dt>
-<dt><span class="sect1"><a href="#developer-advanced-settings">5.3. Developer/advanced settings</a></span></dt>
-<dt><span class="sect1"><a href="#selecting-build-options">5.4. Selecting Build Options</a></span></dt>
+<dt><span class="sect1"><a href="#conf.compiler">5.3. Selecting and configuring the compiler</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="#conf.cflags">5.3.1. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="#developer-advanced-settings">5.4. Developer/advanced settings</a></span></dt>
+<dt><span class="sect1"><a href="#selecting-build-options">5.5. Selecting Build Options</a></span></dt>
 </dl>
 </div>
 <div class="sect1" lang="en">
@@ -1811,7 +1839,7 @@ source packages</a></span></dt>
 	    can be NFS-mounted while <code class="filename">${WRKOBJDIR}</code>
 	    is local to every architecture. (It should be noted that
 	    <code class="varname">PKGSRCDIR</code> should not be set by the user
-	    &#8212; it is an internal definition which refers to the
+	    &mdash; it is an internal definition which refers to the
 	    root of the pkgsrc tree. It is possible to have many
 	    pkgsrc tree instances.)</p></li>
 <li><p><code class="varname">LOCALPATCHES</code>:
@@ -1833,7 +1861,26 @@ source packages</a></span></dt>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="developer-advanced-settings"></a>5.3. Developer/advanced settings</h2></div></div></div>
+<a name="conf.compiler"></a>5.3. Selecting and configuring the compiler</h2></div></div></div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="conf.cflags"></a>5.3.1. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</h3></div></div></div>
+<p>If you wish to set the <code class="varname">CFLAGS</code> variable,
+	please make sure to use the <code class="literal">+=</code> operator
+	instead of the <code class="literal">=</code> operator:</p>
+<pre class="programlisting">
+    CFLAGS+=        -your -flags
+</pre>
+<p>Using <code class="varname">CFLAGS=</code> (i.e. without the
+	&#8220;<span class="quote">+</span>&#8221;) may lead to problems with packages that need
+	to add their own flags.  Also, you may want to take a look at
+	the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/cpuflags/README.html" target="_top"><code class="filename">devel/cpuflags</code></a> package if
+	you're interested in optimization for the current CPU.</p>
+</div>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="developer-advanced-settings"></a>5.4. Developer/advanced settings</h2></div></div></div>
 <p>XXX
       </p>
 <div class="itemizedlist"><ul type="disc">
@@ -1879,7 +1926,7 @@ source packages</a></span></dt>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="selecting-build-options"></a>5.4. Selecting Build Options</h2></div></div></div>
+<a name="selecting-build-options"></a>5.5. Selecting Build Options</h2></div></div></div>
 <p>Some packages have build time options, usually to select between
       different dependencies, enable optional support for big dependencies
       or enable experimental features.</p>
@@ -2274,7 +2321,7 @@ PKG_OPTIONS.apache=     suexec </pre>
 </li>
 <li>
 <p><code class="filename">/usr/src</code> (system sources,
-	  e. g. for <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
+	  e.&nbsp;g. for <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>ln -s ../disk1/cvs .</code></strong>
 <code class="prompt">#</code> <strong class="userinput"><code>ln -s cvs/src-2.0 src</code></strong></pre>
 </li>
@@ -2516,11 +2563,15 @@ it contains items for both pkgsrc users and developers.</p>
 <a name="mailing-list-pointers"></a>7.1. Are there any mailing lists for pkg-related discussion?</h2></div></div></div>
 <p>The following mailing lists may be of interest to pkgsrc users:</p>
 <div class="itemizedlist"><ul type="disc">
-<li><p><a href="http://www.NetBSD.org/MailingLists/index.html#pkgsrc-bugs" target="_top">pkgsrc-bugs</a>:
-	  All bug reports in category "pkg" sent with <a href="http://netbsd.gw.com/cgi-bin/man-cgi?send-pr+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">send-pr</span>(1)</span></a> appear
-	  here. Please do not report your bugs here directly; use one
-	  of the other mailing lists.
-	  discussed.</p></li>
+<li><p><a href="http://www.NetBSD.org/MailingLists/index.html#pkgsrc-users" target="_top">pkgsrc-users</a>:
+	  This is a general purpose list for most issues regarding
+	  pkgsrc, regardless of platform, e.g. soliciting user help
+	  for pkgsrc configuration, unexpected build failures, using
+	  particular packages, upgrading pkgsrc installations,
+	  questions regarding the pkgsrc release branches, etc.  General announcements or
+	  proposals for changes that impact the pkgsrc user community,
+	  e.g. major infrastructure changes, new features, package
+	  removals, etc., may also be posted.</p></li>
 <li><p><a href="http://www.NetBSD.org/MailingLists/index.html#pkgsrc-bulk" target="_top">pkgsrc-bulk</a>:
 	  A list where the results of pkgsrc bulk builds are sent and
 	  discussed.</p></li>
@@ -2530,23 +2581,6 @@ it contains items for both pkgsrc users and developers.</p>
 	  also available in digest form, meaning one daily message
 	  containing all commit messages for changes to the package
 	  source tree in that 24 hour period.</p></li>
-<li><p><a href="http://www.NetBSD.org/MailingLists/index.html#tech-pkg" target="_top">pkgsrc-users</a>:
-	  This is a general purpose list for most issues regarding
-	  pkgsrc, regardless of platform, e.g. soliciting user help
-	  for pkgsrc configuration, unexpected build failures, using
-	  particular packages, upgrading pkgsrc installations,
-	  questions regarding the pkgsrc release branches, etc.  General announcements or
-	  proposals for changes that impact the pkgsrc user community,
-	  e.g. major infrastructure changes, new features, package
-	  removals, etc., may also be posted.</p></li>
-<li><p><a href="http://www.NetBSD.org/MailingLists/index.html#tech-pkg" target="_top">tech-pkg</a>:
-	  This is a list for technical discussions related to pkgsrc
-	  development, e.g. soliciting feedback for changes to pkgsrc
-	  infrastructure, proposed new features, questions related
-	  to porting pkgsrc to a new platform, advice for maintaining
-	  a package, patches that affect many packages, help requests
-	  moved from pkgsrc-users when an infrastructure bug is found,
-	  etc.</p></li>
 </ul></div>
 <p>To subscribe, do:</p>
 <pre class="programlisting">
@@ -2923,6 +2957,11 @@ a security check before building any package.  See
 <dt><span class="sect1"><a href="#components.patches">9.3. patches/*</a></span></dt>
 <dt><span class="sect1"><a href="#other-mandatory-files">9.4. Other mandatory files</a></span></dt>
 <dt><span class="sect1"><a href="#components.optional">9.5. Optional files</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#components.optional.bin">9.5.1. Files affecting the binary package</a></span></dt>
+<dt><span class="sect2"><a href="#components.optional.build">9.5.2. Files affecting the build process</a></span></dt>
+<dt><span class="sect2"><a href="#components.optional.none">9.5.3. Files affecting nothing at all</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#work-dir">9.6. <code class="filename">work*</code></a></span></dt>
 <dt><span class="sect1"><a href="#files-dir">9.7. <code class="filename">files/*</code></a></span></dt>
 </dl></dd>
@@ -3021,17 +3060,17 @@ a security check before building any package.  See
 <dd><dl>
 <dt><span class="sect1"><a href="#general-operation">17.1. General operation</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#pulling-vars-from-etc-mk.conf">17.1.1. How to pull in variables from /etc/mk.conf</a></span></dt>
-<dt><span class="sect2"><a href="#where-to-install-documentation">17.1.2. Where to install documentation</a></span></dt>
-<dt><span class="sect2"><a href="#restricted-packages">17.1.3. Restricted packages</a></span></dt>
-<dt><span class="sect2"><a href="#dependencies">17.1.4. Handling dependencies</a></span></dt>
-<dt><span class="sect2"><a href="#conflicts">17.1.5. Handling conflicts with other packages</a></span></dt>
-<dt><span class="sect2"><a href="#not-building-packages">17.1.6. Packages that cannot or should not be built</a></span></dt>
-<dt><span class="sect2"><a href="#undeletable-packages">17.1.7. Packages which should not be deleted, once installed</a></span></dt>
-<dt><span class="sect2"><a href="#security-handling">17.1.8. Handling packages with security problems</a></span></dt>
-<dt><span class="sect2"><a href="#compiler-bugs">17.1.9. How to handle compiler bugs</a></span></dt>
-<dt><span class="sect2"><a href="#bumping-pkgrevision">17.1.10. How to handle incrementing versions when fixing an existing package</a></span></dt>
-<dt><span class="sect2"><a href="#portability-of-packages">17.1.11. Portability of packages</a></span></dt>
+<dt><span class="sect2"><a href="#portability-of-packages">17.1.1. Portability of packages</a></span></dt>
+<dt><span class="sect2"><a href="#pulling-vars-from-etc-mk.conf">17.1.2. How to pull in user-settable variables from <code class="filename">mk.conf</code></a></span></dt>
+<dt><span class="sect2"><a href="#user-interaction">17.1.3. User interaction</a></span></dt>
+<dt><span class="sect2"><a href="#handling-licenses">17.1.4. Handling licenses</a></span></dt>
+<dt><span class="sect2"><a href="#restricted-packages">17.1.5. Restricted packages</a></span></dt>
+<dt><span class="sect2"><a href="#dependencies">17.1.6. Handling dependencies</a></span></dt>
+<dt><span class="sect2"><a href="#conflicts">17.1.7. Handling conflicts with other packages</a></span></dt>
+<dt><span class="sect2"><a href="#not-building-packages">17.1.8. Packages that cannot or should not be built</a></span></dt>
+<dt><span class="sect2"><a href="#undeletable-packages">17.1.9. Packages which should not be deleted, once installed</a></span></dt>
+<dt><span class="sect2"><a href="#security-handling">17.1.10. Handling packages with security problems</a></span></dt>
+<dt><span class="sect2"><a href="#bumping-pkgrevision">17.1.11. How to handle incrementing versions when fixing an existing package</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#fixes.fetch">17.2. Fixing problems in the <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
 <dd><dl>
@@ -3045,31 +3084,32 @@ a security check before building any package.  See
 <dt><span class="sect2"><a href="#autoconf-automake">17.3.3. GNU Autoconf/Automake</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#fixes.build">17.4. Fixing problems in the <span class="emphasis"><em>build</em></span> phase</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#fixes.build.cpp">17.4.1. Compiling C and C++ code conditionally</a></span></dt></dl></dd>
-<dt><span class="sect1"><a href="#package-specific-actions">17.5. Package specific actions</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#user-interaction">17.5.1. User interaction</a></span></dt>
-<dt><span class="sect2"><a href="#handling-licenses">17.5.2. Handling licenses</a></span></dt>
+<dt><span class="sect2"><a href="#fixes.build.cpp">17.4.1. Compiling C and C++ code conditionally</a></span></dt>
+<dt><span class="sect2"><a href="#compiler-bugs">17.4.2. How to handle compiler bugs</a></span></dt>
+<dt><span class="sect2"><a href="#undefined-reference">17.4.3. Undefined reference to &#8220;<span class="quote">...</span>&#8221;</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.install">17.6. Fixing problems in the <span class="emphasis"><em>install</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.install">17.5. Fixing problems in the <span class="emphasis"><em>install</em></span> phase</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#installing-score-files">17.6.1. Installing score files</a></span></dt>
-<dt><span class="sect2"><a href="#perl-scripts">17.6.2. Packages containing perl scripts</a></span></dt>
-<dt><span class="sect2"><a href="#hardcoded-paths">17.6.3. Packages with hardcoded paths to other interpreters</a></span></dt>
-<dt><span class="sect2"><a href="#perl-modules">17.6.4. Packages installing perl modules</a></span></dt>
-<dt><span class="sect2"><a href="#faq.info-files">17.6.5. Packages installing info files</a></span></dt>
-<dt><span class="sect2"><a href="#manpages">17.6.6. Packages installing man pages</a></span></dt>
-<dt><span class="sect2"><a href="#gconf2-data-files">17.6.7. Packages installing GConf2 data files</a></span></dt>
-<dt><span class="sect2"><a href="#scrollkeeper-data-files">17.6.8. Packages installing scrollkeeper data files</a></span></dt>
-<dt><span class="sect2"><a href="#x11-fonts">17.6.9. Packages installing X11 fonts</a></span></dt>
-<dt><span class="sect2"><a href="#gtk2-modules">17.6.10. Packages installing GTK2 modules</a></span></dt>
-<dt><span class="sect2"><a href="#sgml-xml-data">17.6.11. Packages installing SGML or XML data</a></span></dt>
-<dt><span class="sect2"><a href="#mime-database">17.6.12. Packages installing extensions to the MIME database</a></span></dt>
-<dt><span class="sect2"><a href="#intltool">17.6.13. Packages using intltool</a></span></dt>
-<dt><span class="sect2"><a href="#startup-scripts">17.6.14. Packages installing startup scripts</a></span></dt>
-<dt><span class="sect2"><a href="#tex-packages">17.6.15. Packages installing TeX modules</a></span></dt>
+<dt><span class="sect2"><a href="#install-scripts">17.5.1. Creating needed directories</a></span></dt>
+<dt><span class="sect2"><a href="#where-to-install-documentation">17.5.2. Where to install documentation</a></span></dt>
+<dt><span class="sect2"><a href="#installing-score-files">17.5.3. Installing score files</a></span></dt>
+<dt><span class="sect2"><a href="#perl-scripts">17.5.4. Packages containing perl scripts</a></span></dt>
+<dt><span class="sect2"><a href="#hardcoded-paths">17.5.5. Packages with hardcoded paths to other interpreters</a></span></dt>
+<dt><span class="sect2"><a href="#perl-modules">17.5.6. Packages installing perl modules</a></span></dt>
+<dt><span class="sect2"><a href="#faq.info-files">17.5.7. Packages installing info files</a></span></dt>
+<dt><span class="sect2"><a href="#manpages">17.5.8. Packages installing man pages</a></span></dt>
+<dt><span class="sect2"><a href="#gconf2-data-files">17.5.9. Packages installing GConf2 data files</a></span></dt>
+<dt><span class="sect2"><a href="#scrollkeeper-data-files">17.5.10. Packages installing scrollkeeper data files</a></span></dt>
+<dt><span class="sect2"><a href="#x11-fonts">17.5.11. Packages installing X11 fonts</a></span></dt>
+<dt><span class="sect2"><a href="#gtk2-modules">17.5.12. Packages installing GTK2 modules</a></span></dt>
+<dt><span class="sect2"><a href="#sgml-xml-data">17.5.13. Packages installing SGML or XML data</a></span></dt>
+<dt><span class="sect2"><a href="#mime-database">17.5.14. Packages installing extensions to the MIME database</a></span></dt>
+<dt><span class="sect2"><a href="#intltool">17.5.15. Packages using intltool</a></span></dt>
+<dt><span class="sect2"><a href="#startup-scripts">17.5.16. Packages installing startup scripts</a></span></dt>
+<dt><span class="sect2"><a href="#tex-packages">17.5.17. Packages installing TeX modules</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#feedback-to-author">17.7. Feedback to the author</a></span></dt>
+<dt><span class="sect1"><a href="#feedback-to-author">17.6. Feedback to the author</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#debug">18. Debugging</a></span></dt>
 <dt><span class="chapter"><a href="#submit">19. Submitting and Committing</a></span></dt>
@@ -3180,6 +3220,11 @@ a security check before building any package.  See
 <dt><span class="sect1"><a href="#components.patches">9.3. patches/*</a></span></dt>
 <dt><span class="sect1"><a href="#other-mandatory-files">9.4. Other mandatory files</a></span></dt>
 <dt><span class="sect1"><a href="#components.optional">9.5. Optional files</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="#components.optional.bin">9.5.1. Files affecting the binary package</a></span></dt>
+<dt><span class="sect2"><a href="#components.optional.build">9.5.2. Files affecting the build process</a></span></dt>
+<dt><span class="sect2"><a href="#components.optional.none">9.5.3. Files affecting nothing at all</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#work-dir">9.6. <code class="filename">work*</code></a></span></dt>
 <dt><span class="sect1"><a href="#files-dir">9.7. <code class="filename">files/*</code></a></span></dt>
 </dl>
@@ -3377,7 +3422,7 @@ a security check before building any package.  See
 <li><p>Replace <code class="filename">/usr/local</code> with
           &#8220;<span class="quote">${PREFIX}</span>&#8221; in all files (see patches, below).</p></li>
 <li><p>If the package installs any info files, see
-          <a href="#faq.info-files" title="17.6.5. Packages installing info files">Section 17.6.5, &#8220;Packages installing info files&#8221;</a>.</p></li>
+          <a href="#faq.info-files" title="17.5.7. Packages installing info files">Section 17.5.7, &#8220;Packages installing info files&#8221;</a>.</p></li>
 </ul></div>
 </div>
 <div class="sect1" lang="en">
@@ -3480,6 +3525,9 @@ a security check before building any package.  See
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="components.optional"></a>9.5. Optional files</h2></div></div></div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="components.optional.bin"></a>9.5.1. Files affecting the binary package</h3></div></div></div>
 <div class="variablelist"><dl>
 <dt><span class="term"><code class="filename">INSTALL</code></span></dt>
 <dd><p>This shell script is invoked twice by <a href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a>.
@@ -3511,7 +3559,54 @@ a security check before building any package.  See
 <p>replaces "${SOMEVAR}" with &#8220;<span class="quote">somevalue</span>&#8221; in
             <code class="filename">MESSAGE</code>.</p>
 </dd>
+<dt><span class="term"><code class="filename">ALTERNATIVES</code></span></dt>
+<dd><p>FIXME: There is no documentation on the
+	alternatives framework.</p></dd>
 </dl></div>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="components.optional.build"></a>9.5.2. Files affecting the build process</h3></div></div></div>
+<div class="variablelist"><dl>
+<dt><span class="term"><code class="filename">Makefile.common</code></span></dt>
+<dd><p>This file contains arbitrary things that could
+	also go into a <code class="filename">Makefile</code>, but its purpose is
+	to be used by more than one package. This file should only be
+	used when the packages that will use the file are known in
+	advance. For other purposes it is often better to write a
+	<code class="filename">*.mk</code> file and give it a good name that
+	describes what it does.</p></dd>
+<dt><span class="term"><code class="filename">buildlink3.mk</code></span></dt>
+<dd><p>This file contains the dependency information
+	for the buildlink3 framework (see <a href="#buildlink" title="Chapter 12. Buildlink methodology">Chapter 12, <i>Buildlink methodology</i></a>).</p></dd>
+<dt><span class="term"><code class="filename">hacks.mk</code></span></dt>
+<dd><p>This file contains workarounds for compiler bugs
+	and similar things. It is included automatically by the pkgsrc
+	infrastructure, so you don't need an extra
+	<code class="literal">.include</code> line for
+	it.</p></dd>
+<dt><span class="term"><code class="filename">options.mk</code></span></dt>
+<dd><p>This file contains the code for the
+	package-specific options (see <a href="#options" title="Chapter 14. Options handling">Chapter 14, <i>Options handling</i></a>) that can be
+	selected by the user. If a package has only one or two options,
+	it is equally acceptable to put the code directly into the
+	<code class="filename">Makefile</code>.</p></dd>
+</dl></div>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="components.optional.none"></a>9.5.3. Files affecting nothing at all</h3></div></div></div>
+<div class="variablelist"><dl>
+<dt><span class="term"><code class="filename">README*</code></span></dt>
+<dd><p>These files do not take place in the creation of
+	a package and thus are purely informative to the package
+	developer.</p></dd>
+<dt><span class="term"><code class="filename">TODO</code></span></dt>
+<dd><p>This file contains things that need to be done
+	to make the package even
+	better.</p></dd>
+</dl></div>
+</div>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -3603,7 +3698,7 @@ a security check before building any package.  See
     operate on the words, others operate on the string as a whole. When
     a string is split into words, it is split as you would expect
     it from <a href="http://netbsd.gw.com/cgi-bin/man-cgi?sh+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">sh</span>(1)</span></a>.</p>
-<p>No rule without exception&#8212;the <span><strong class="command">.for</strong></span>
+<p>No rule without exception&mdash;the <span><strong class="command">.for</strong></span>
     loop does not follow the shell quoting rules but splits at sequences
     of whitespace.</p>
 <p>There are several types of variables that should be handled
@@ -4355,7 +4450,7 @@ a security check before building any package.  See
 	dependency and not settle for an older one which will not
 	contain the necessary shared libraries. </p>
 <p>
-	See <a href="#dependencies" title="17.1.4. Handling dependencies">Section 17.1.4, &#8220;Handling dependencies&#8221;</a> for
+	See <a href="#dependencies" title="17.1.6. Handling dependencies">Section 17.1.6, &#8220;Handling dependencies&#8221;</a> for
 	more information about dependencies on other packages,
 	including the <code class="varname">BUILDLINK_ABI_DEPENDS</code> and
 	<code class="varname">ABI_DEPENDS</code> definitions. </p>
@@ -4967,7 +5062,7 @@ main package <code class="filename">Makefile</code>.</p>
     .if defined(PKG_OPTIONS.wibble2)
     PKG_LEGACY_OPTIONS+=            ${PKG_OPTIONS.wibble2}
     PKG_OPTIONS_DEPRECATED_WARNINGS+= \
-            "Deprecated variable PKG_OPTIONS.wibble2 used, use ${PKG_OPTIONS_VAR instead."
+            "Deprecated variable PKG_OPTIONS.wibble2 used, use ${PKG_OPTIONS_VAR} instead."
     .endif
 
     .include "../../mk/bsd.options.mk"
@@ -5006,9 +5101,9 @@ if needed.</p>
 <li><p><code class="varname">PKG_OPTIONS_VAR</code> is the name of the
 <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> variable that the user can set to override the default
 options.  It should be set to
-PKG_OPTIONS.<em class="replaceable"><code>pkgbase</code></em>.  Do not set it to
-PKG_OPTIONS.${PKGBASE}, since <code class="varname">PKGBASE</code> is set after
-<code class="varname">PKG_OPTIONS_VAR</code> is used.</p></li>
+PKG_OPTIONS.<em class="replaceable"><code>pkgbase</code></em>. Do not set it to
+PKG_OPTIONS.${PKGBASE}, since <code class="varname">PKGBASE</code> is not defined
+at the point where the options are processed.</p></li>
 <li><p><code class="varname">PKG_SUPPORTED_OPTIONS</code> is a list of
 build options supported by the package.</p></li>
 <li><p><code class="varname">PKG_OPTIONS_OPTIONAL_GROUPS</code> is a
@@ -5173,7 +5268,11 @@ can be put into place on the system.</p>
 <li><p><code class="varname">LOCALBASE</code> is where all non-X11 pkgs are installed.
 	  If you need to construct a -I or -L argument to the compiler to find
 	  includes and libraries installed by another non-X11 pkg, use
-	  &#8220;<span class="quote">${LOCALBASE}</span>&#8221;.</p></li>
+	  &#8220;<span class="quote">${LOCALBASE}</span>&#8221;. The name
+	  <code class="varname">LOCALBASE</code> stems from FreeBSD, which
+	  installed all packages in <code class="filename">/usr/local</code>. As
+	  pkgsrc leaves <code class="filename">/usr/local</code> for the system
+	  administrator, this variable is a misnomer.</p></li>
 <li><p><code class="varname">X11BASE</code> is where the actual X11 distribution (from
 	  xsrc, etc.) is installed. When looking for
 	  <span class="emphasis"><em>standard</em></span> X11 includes (not
@@ -5546,14 +5645,16 @@ of <code class="varname">MAKEFILE</code> is &#8220;<span class="quote">Makefile<
 <dt><span class="term"><code class="varname">INSTALLATION_DIRS</code></span></dt>
 <dd><p>A list of directories relative to
 		<code class="varname">PREFIX</code> that are created by pkgsrc at
-		the beginning of the <span class="emphasis"><em>install</em></span> phase. If
-		this variable is set,
+		the beginning of the <span class="emphasis"><em>install</em></span> phase.
+		If this variable is set,
 		<code class="varname">NO_MTREE</code>=&#8220;<span class="quote">yes</span>&#8221; is
 		assumed, which means that the package claims to create
 		all needed directories itself before installing files to
 		it. Therefore this variable should only be set in
 		<code class="filename">Makefile</code>s that are under control of
-		the package's author.</p></dd>
+		the package's author. The directories are created with
+		the correct ownership, depending on their
+		name.</p></dd>
 </dl></div>
 </div>
 <div class="sect1" lang="en">
@@ -5912,17 +6013,17 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <dl>
 <dt><span class="sect1"><a href="#general-operation">17.1. General operation</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#pulling-vars-from-etc-mk.conf">17.1.1. How to pull in variables from /etc/mk.conf</a></span></dt>
-<dt><span class="sect2"><a href="#where-to-install-documentation">17.1.2. Where to install documentation</a></span></dt>
-<dt><span class="sect2"><a href="#restricted-packages">17.1.3. Restricted packages</a></span></dt>
-<dt><span class="sect2"><a href="#dependencies">17.1.4. Handling dependencies</a></span></dt>
-<dt><span class="sect2"><a href="#conflicts">17.1.5. Handling conflicts with other packages</a></span></dt>
-<dt><span class="sect2"><a href="#not-building-packages">17.1.6. Packages that cannot or should not be built</a></span></dt>
-<dt><span class="sect2"><a href="#undeletable-packages">17.1.7. Packages which should not be deleted, once installed</a></span></dt>
-<dt><span class="sect2"><a href="#security-handling">17.1.8. Handling packages with security problems</a></span></dt>
-<dt><span class="sect2"><a href="#compiler-bugs">17.1.9. How to handle compiler bugs</a></span></dt>
-<dt><span class="sect2"><a href="#bumping-pkgrevision">17.1.10. How to handle incrementing versions when fixing an existing package</a></span></dt>
-<dt><span class="sect2"><a href="#portability-of-packages">17.1.11. Portability of packages</a></span></dt>
+<dt><span class="sect2"><a href="#portability-of-packages">17.1.1. Portability of packages</a></span></dt>
+<dt><span class="sect2"><a href="#pulling-vars-from-etc-mk.conf">17.1.2. How to pull in user-settable variables from <code class="filename">mk.conf</code></a></span></dt>
+<dt><span class="sect2"><a href="#user-interaction">17.1.3. User interaction</a></span></dt>
+<dt><span class="sect2"><a href="#handling-licenses">17.1.4. Handling licenses</a></span></dt>
+<dt><span class="sect2"><a href="#restricted-packages">17.1.5. Restricted packages</a></span></dt>
+<dt><span class="sect2"><a href="#dependencies">17.1.6. Handling dependencies</a></span></dt>
+<dt><span class="sect2"><a href="#conflicts">17.1.7. Handling conflicts with other packages</a></span></dt>
+<dt><span class="sect2"><a href="#not-building-packages">17.1.8. Packages that cannot or should not be built</a></span></dt>
+<dt><span class="sect2"><a href="#undeletable-packages">17.1.9. Packages which should not be deleted, once installed</a></span></dt>
+<dt><span class="sect2"><a href="#security-handling">17.1.10. Handling packages with security problems</a></span></dt>
+<dt><span class="sect2"><a href="#bumping-pkgrevision">17.1.11. How to handle incrementing versions when fixing an existing package</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#fixes.fetch">17.2. Fixing problems in the <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
 <dd><dl>
@@ -5936,31 +6037,32 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <dt><span class="sect2"><a href="#autoconf-automake">17.3.3. GNU Autoconf/Automake</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#fixes.build">17.4. Fixing problems in the <span class="emphasis"><em>build</em></span> phase</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#fixes.build.cpp">17.4.1. Compiling C and C++ code conditionally</a></span></dt></dl></dd>
-<dt><span class="sect1"><a href="#package-specific-actions">17.5. Package specific actions</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#user-interaction">17.5.1. User interaction</a></span></dt>
-<dt><span class="sect2"><a href="#handling-licenses">17.5.2. Handling licenses</a></span></dt>
+<dt><span class="sect2"><a href="#fixes.build.cpp">17.4.1. Compiling C and C++ code conditionally</a></span></dt>
+<dt><span class="sect2"><a href="#compiler-bugs">17.4.2. How to handle compiler bugs</a></span></dt>
+<dt><span class="sect2"><a href="#undefined-reference">17.4.3. Undefined reference to &#8220;<span class="quote">...</span>&#8221;</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.install">17.6. Fixing problems in the <span class="emphasis"><em>install</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.install">17.5. Fixing problems in the <span class="emphasis"><em>install</em></span> phase</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#installing-score-files">17.6.1. Installing score files</a></span></dt>
-<dt><span class="sect2"><a href="#perl-scripts">17.6.2. Packages containing perl scripts</a></span></dt>
-<dt><span class="sect2"><a href="#hardcoded-paths">17.6.3. Packages with hardcoded paths to other interpreters</a></span></dt>
-<dt><span class="sect2"><a href="#perl-modules">17.6.4. Packages installing perl modules</a></span></dt>
-<dt><span class="sect2"><a href="#faq.info-files">17.6.5. Packages installing info files</a></span></dt>
-<dt><span class="sect2"><a href="#manpages">17.6.6. Packages installing man pages</a></span></dt>
-<dt><span class="sect2"><a href="#gconf2-data-files">17.6.7. Packages installing GConf2 data files</a></span></dt>
-<dt><span class="sect2"><a href="#scrollkeeper-data-files">17.6.8. Packages installing scrollkeeper data files</a></span></dt>
-<dt><span class="sect2"><a href="#x11-fonts">17.6.9. Packages installing X11 fonts</a></span></dt>
-<dt><span class="sect2"><a href="#gtk2-modules">17.6.10. Packages installing GTK2 modules</a></span></dt>
-<dt><span class="sect2"><a href="#sgml-xml-data">17.6.11. Packages installing SGML or XML data</a></span></dt>
-<dt><span class="sect2"><a href="#mime-database">17.6.12. Packages installing extensions to the MIME database</a></span></dt>
-<dt><span class="sect2"><a href="#intltool">17.6.13. Packages using intltool</a></span></dt>
-<dt><span class="sect2"><a href="#startup-scripts">17.6.14. Packages installing startup scripts</a></span></dt>
-<dt><span class="sect2"><a href="#tex-packages">17.6.15. Packages installing TeX modules</a></span></dt>
+<dt><span class="sect2"><a href="#install-scripts">17.5.1. Creating needed directories</a></span></dt>
+<dt><span class="sect2"><a href="#where-to-install-documentation">17.5.2. Where to install documentation</a></span></dt>
+<dt><span class="sect2"><a href="#installing-score-files">17.5.3. Installing score files</a></span></dt>
+<dt><span class="sect2"><a href="#perl-scripts">17.5.4. Packages containing perl scripts</a></span></dt>
+<dt><span class="sect2"><a href="#hardcoded-paths">17.5.5. Packages with hardcoded paths to other interpreters</a></span></dt>
+<dt><span class="sect2"><a href="#perl-modules">17.5.6. Packages installing perl modules</a></span></dt>
+<dt><span class="sect2"><a href="#faq.info-files">17.5.7. Packages installing info files</a></span></dt>
+<dt><span class="sect2"><a href="#manpages">17.5.8. Packages installing man pages</a></span></dt>
+<dt><span class="sect2"><a href="#gconf2-data-files">17.5.9. Packages installing GConf2 data files</a></span></dt>
+<dt><span class="sect2"><a href="#scrollkeeper-data-files">17.5.10. Packages installing scrollkeeper data files</a></span></dt>
+<dt><span class="sect2"><a href="#x11-fonts">17.5.11. Packages installing X11 fonts</a></span></dt>
+<dt><span class="sect2"><a href="#gtk2-modules">17.5.12. Packages installing GTK2 modules</a></span></dt>
+<dt><span class="sect2"><a href="#sgml-xml-data">17.5.13. Packages installing SGML or XML data</a></span></dt>
+<dt><span class="sect2"><a href="#mime-database">17.5.14. Packages installing extensions to the MIME database</a></span></dt>
+<dt><span class="sect2"><a href="#intltool">17.5.15. Packages using intltool</a></span></dt>
+<dt><span class="sect2"><a href="#startup-scripts">17.5.16. Packages installing startup scripts</a></span></dt>
+<dt><span class="sect2"><a href="#tex-packages">17.5.17. Packages installing TeX modules</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#feedback-to-author">17.7. Feedback to the author</a></span></dt>
+<dt><span class="sect1"><a href="#feedback-to-author">17.6. Feedback to the author</a></span></dt>
 </dl>
 </div>
 <div class="sect1" lang="en">
@@ -5968,55 +6070,137 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <a name="general-operation"></a>17.1. General operation</h2></div></div></div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="pulling-vars-from-etc-mk.conf"></a>17.1.1. How to pull in variables from /etc/mk.conf</h3></div></div></div>
-<p>The problem with package-defined variables that can be
-        overridden via <code class="varname">MAKECONF</code> or
-        <code class="filename">/etc/mk.conf</code> is that <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> expands a
-        variable as it is used, but evaluates preprocessor-like
-        statements (.if, .ifdef and .ifndef) as they are read.  So, to
-        use any variable (which may be set in
-        <code class="filename">/etc/mk.conf</code>) in one of the .if*
-        statements, the file <code class="filename">/etc/mk.conf</code> must be
-        included before that .if* statement.</p>
-<p>Rather than having a number of ad-hoc ways of including
-        <code class="filename">/etc/mk.conf</code>, should it exist, or
-        <code class="varname">MAKECONF</code>, should it exist, include the
-        <code class="filename">pkgsrc/mk/bsd.prefs.mk</code> file in the package
-        Makefile before any preprocessor-like .if, .ifdef, or .ifndef
-        statements:</p>
+<a name="portability-of-packages"></a>17.1.1. Portability of packages</h3></div></div></div>
+<p>One appealing feature of pkgsrc is that it runs on many
+	different platforms. As a result, it is important to ensure,
+	where possible, that packages in pkgsrc are portable. This
+	chapter mentions some particular details you should pay
+	attention to while working on pkgsrc.</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="pulling-vars-from-etc-mk.conf"></a>17.1.2. How to pull in user-settable variables from <code class="filename">mk.conf</code></h3></div></div></div>
+<p>The pkgsrc user can configure pkgsrc by overriding several
+	variables in the file pointed to by <code class="varname">MAKECONF</code>,
+	which is <code class="filename">/etc/mk.conf</code> by default. When you
+	want to use those variables in the preprocessor directives of
+	<a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> (for example <code class="literal">.if</code> or
+	<code class="literal">.for</code>), you need to include the file
+	<code class="filename">../../mk/bsd.prefs.mk</code> before, which in turn
+	loads the user preferences.</p>
+<p>But note that some variables may not be completely defined
+	after <code class="filename">../../mk/bsd.prefs.mk</code> has been
+	included, as they may contain references to variables that are
+	not yet defined. In shell commands this is no problem, since
+	variables are actually macros, which are only expanded when they
+	are used. But in the preprocessor directives mentioned above and
+	in dependency lines (of the form <code class="literal">target:
+	dependencies</code>) the variables are expanded at load
+	time.</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>Currently there is no exhaustive list of all
+	variables that tells you whether they can be used at load time
+	or only at run time, but it is in preparation.</p>
+</div>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="user-interaction"></a>17.1.3. User interaction</h3></div></div></div>
+<p>Occasionally, packages require interaction from the user, and this can be
+        in a number of ways:</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>When extracting the distfiles, some packages may ask for passwords.</p></li>
+<li><p>help to configure the package before it is built</p></li>
+<li><p>help during the build process</p></li>
+<li><p>help during the installation of a package</p></li>
+</ul></div>
+<p>The <code class="varname">INTERACTIVE_STAGE</code> definition is provided to notify
+        the pkgsrc mechanism of an interactive stage which will be needed, and
+        this should be set in the package's <code class="filename">Makefile</code>, e.g.:</p>
 <pre class="programlisting">
-    .include "../../mk/bsd.prefs.mk"
-
-    .if defined(USE_MENUS)
-    # ...
-    .endif
+    INTERACTIVE_STAGE=      build
 </pre>
-<p>If you wish to set the <code class="varname">CFLAGS</code> variable
-        in <code class="filename">/etc/mk.conf</code>, please make sure to use:
-
-</p>
+<p>Multiple interactive stages can be specified:</p>
 <pre class="programlisting">
-    CFLAGS+=  -your -flags
+    INTERACTIVE_STAGE=      configure install
+</pre>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="handling-licenses"></a>17.1.4. Handling licenses</h3></div></div></div>
+<p>A package may be covered by a license which the user has
+        or has not agreed to accept.  For these cases, pkgsrc contains
+        a mechanism to note that a package is covered by a particular
+        license, and the package cannot be built unless the user has
+        accepted the license.  (Installation of binary packages are
+        not currently subject to this mechanism.)  Packages with
+        licenses that are either Open Source according to the Open
+        Source Initiative or Free according to the Free Software
+        Foundation will not be marked with a license tag.  Packages
+        with licenses that have not been determined to meet either
+        definition will be marked with a license tag referring to the
+        license.  This will prevent building unless pkgsrc is informed
+        that the license is acceptable, and enables displaying the
+        license.</p>
+<p>The license tag mechanism is intended to address
+	copyright-related issues surrounding building, installing and
+	using a package, and not to address redistribution issues (see
+	<code class="varname">RESTRICTED</code> and
+	<code class="varname">NO_SRC_ON_FTP</code>, etc.).  However, the above
+	definition of licenses for which tags are not needed implies
+	that packages with redistribution restrictions should have
+	tags.</p>
+<p>
+        Denoting that a package is covered by a particular license is
+        done by placing the license in
+        <code class="filename">pkgsrc/licenses</code> and setting the
+        <code class="varname">LICENSE</code> variable to a string identifying
+        the license, e.g. in
+	<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/graphics/xv/README.html" target="_top"><code class="filename">graphics/xv</code></a>: </p>
+<pre class="programlisting">
+    LICENSE=        xv-license
 </pre>
 <p>
-
-        Using <code class="varname">CFLAGS=</code> (i.e. without the
-        &#8220;<span class="quote">+</span>&#8221;) may lead to problems with packages that need
-        to add their own flags.  Also, you may want to take a look at
-        the <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/devel/cpuflags/README.html" target="_top"><code class="filename">devel/cpuflags</code></a> package if
-	you're interested in optimization for the current CPU.</p>
+	When trying to build, the user will get a notice that the
+        package is covered by a license which has not been
+        accepted:</p>
+<pre class="programlisting">
+    <code class="prompt">%</code> <strong class="userinput"><code>make</code></strong>
+    ===&gt; xv-3.10anb9 has an unacceptable license: xv-license.
+    ===&gt;     To view the license, enter "/usr/bin/make show-license".
+    ===&gt;     To indicate acceptance, add this line to your /etc/mk.conf:
+    ===&gt;     ACCEPTABLE_LICENSES+=xv-license
+    *** Error code 1
+</pre>
+<p>The license can be viewed with <span><strong class="command">make
+          show-license</strong></span>, and if it is considered appropriate,
+          the line printed above can be added to
+          <code class="filename">/etc/mk.conf</code> to indicate acceptance of
+          the particular license:</p>
+<pre class="programlisting">
+    ACCEPTABLE_LICENSES+=xv-license
+</pre>
+<p>When adding a package with a new license, the license
+          text should be added to <code class="filename">pkgsrc/licenses</code>
+          for displaying. A list of known licenses can be seen in this
+          directory as well as by looking at the list of (commented
+          out) <code class="varname">ACCEPTABLE_LICENSES</code> variable
+          settings in
+          <code class="filename">pkgsrc/mk/defaults/mk.conf</code>.</p>
+<p>The use of <code class="varname">LICENSE=shareware</code>,
+	  <code class="varname">LICENSE=no-commercial-use</code>, and similar
+	  language is deprecated because it does not crisply refer to
+	  a particular license text.  Another problem with such usage
+	  is that it does not enable a user to denote acceptance of
+	  the license for a single package without accepting the same
+	  license text for another package.  In particular, this can
+	  be inappropriate when e.g. one accepts a particular license to
+	  indicate to pkgsrc that a fee has been paid.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="where-to-install-documentation"></a>17.1.2. Where to install documentation</h3></div></div></div>
-<p>Documentation should be installed into
-      <code class="filename">${PREFIX}/share/doc/${PKGBASE}</code> or
-      <code class="filename">${PREFIX}/share/doc/${PKGNAME}</code> (the
-      latter includes the version number of the package).</p>
-</div>
-<div class="sect2" lang="en">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="restricted-packages"></a>17.1.3. Restricted packages</h3></div></div></div>
+<a name="restricted-packages"></a>17.1.5. Restricted packages</h3></div></div></div>
 <p>Some licenses restrict how software may be re-distributed.
         In order to satisfy these restrictions, the package system
         defines five make variables that can be set to note these
@@ -6064,7 +6248,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="dependencies"></a>17.1.4. Handling dependencies</h3></div></div></div>
+<a name="dependencies"></a>17.1.6. Handling dependencies</h3></div></div></div>
 <p>Your package may depend on some other package being present
         - and there are various ways of expressing this
         dependency. pkgsrc supports the <code class="varname">BUILD_DEPENDS</code>
@@ -6173,7 +6357,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
             should not be used across different systems that may have
             different versions of binary packages installed.</p>
 <p>For security fixes, please update the package
-            vulnerabilities file. See <a href="#security-handling" title="17.1.8. Handling packages with security problems">Section 17.1.8, &#8220;Handling packages with security problems&#8221;</a> for more
+            vulnerabilities file. See <a href="#security-handling" title="17.1.10. Handling packages with security problems">Section 17.1.10, &#8220;Handling packages with security problems&#8221;</a> for more
             information.</p>
 </li>
 <li>
@@ -6208,7 +6392,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="conflicts"></a>17.1.5. Handling conflicts with other packages</h3></div></div></div>
+<a name="conflicts"></a>17.1.7. Handling conflicts with other packages</h3></div></div></div>
 <p>Your package may conflict with other packages a user might
         already have installed on his system, e.g. if your package
         installs the same set of files like another package in our
@@ -6236,7 +6420,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="not-building-packages"></a>17.1.6. Packages that cannot or should not be built</h3></div></div></div>
+<a name="not-building-packages"></a>17.1.8. Packages that cannot or should not be built</h3></div></div></div>
 <p>There are several reasons why a package might be
         instructed to not build under certain circumstances. If the
         package builds and runs on most platforms, the exceptions
@@ -6256,7 +6440,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="undeletable-packages"></a>17.1.7. Packages which should not be deleted, once installed</h3></div></div></div>
+<a name="undeletable-packages"></a>17.1.9. Packages which should not be deleted, once installed</h3></div></div></div>
 <p>To ensure that a package may not be deleted, once it has been
         installed, the <code class="varname">PKG_PRESERVE</code> definition should
         be set in the package Makefile. This will be carried into any
@@ -6267,7 +6451,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="security-handling"></a>17.1.8. Handling packages with security problems</h3></div></div></div>
+<a name="security-handling"></a>17.1.10. Handling packages with security problems</h3></div></div></div>
 <p>When a vulnerability is found, this should be noted in
         <code class="filename">localsrc/security/advisories/pkg-vulnerabilities</code>,
         and after committing that file, use <span><strong class="command">make upload</strong></span>
@@ -6283,22 +6467,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="compiler-bugs"></a>17.1.9. How to handle compiler bugs</h3></div></div></div>
-<p>Some source files trigger bugs in the compiler, based on
-        combinations  of compiler version and architecture and almost
-        always relation to  optimisation being enabled.  Common symptoms
-        are gcc internal errors  or never finishing compiling a file.
-</p>
-<p>Typically, a workaround involves testing the
-        <code class="varname">MACHINE_ARCH</code>  and compiler version, disabling
-        optimisation for that
-        file/<code class="varname">MACHINE_ARCH</code>/compiler  combination, and
-        documenting it in  <code class="filename">pkgsrc/doc/HACKS</code>.  See
-        that file for a number of examples!</p>
-</div>
-<div class="sect2" lang="en">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="bumping-pkgrevision"></a>17.1.10. How to handle incrementing versions when fixing an existing package</h3></div></div></div>
+<a name="bumping-pkgrevision"></a>17.1.11. How to handle incrementing versions when fixing an existing package</h3></div></div></div>
 <p>When making fixes to an existing package it can be useful
         to change the version number in <code class="varname">PKGNAME</code>. To
         avoid conflicting with future versions by the original author, a
@@ -6318,25 +6487,29 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <pre class="programlisting">
     DISTNAME=       foo-17.43
 </pre>
-</div>
-<div class="sect2" lang="en">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="portability-of-packages"></a>17.1.11. Portability of packages</h3></div></div></div>
-<p>One appealing feature of pkgsrc is that it runs on many different
-        platforms. As a result, it is important to ensure, where possible,
-        that packages in pkgsrc are portable. There are some particular
-        details you should pay attention to while working on pkgsrc.</p>
-<div class="sect3" lang="en">
-<div class="titlepage"><div><div><h4 class="title">
-<a name="install-scripts"></a>17.1.11.1. ${INSTALL}, ${INSTALL_DATA_DIR}, ...</h4></div></div></div>
-<p>The BSD-compatible <span><strong class="command">install</strong></span> supplied with some
-          operating systems will not perform more than one operation at a time.
-          As such, you should call &#8220;<span class="quote">${INSTALL}</span>&#8221;, etc. like this:</p>
+<p>PKGREVISION should be incremented for any non-trivial change in the
+    resulting binary package.  Without a PKGREVISION bump, someone with
+    the previous version installed has no way of knowing that their
+    package is out of date.  Thus, changes without increasing PKGREVISION
+    are essentially labeled "this is so trivial that no reasonable person
+    would want to upgrade", and this is the rough test for when increasing
+    PKGREVISION is appropriate.  Examples of changes that do not merit
+    increasing PKGREVISION are:</p>
 <pre class="programlisting">
-    ${INSTALL_DATA_DIR} ${PREFIX}/dir1
-    ${INSTALL_DATA_DIR} ${PREFIX}/dir2
+Changing HOMEPAGE, MAINTAINER, or comments in Makefile.
+Changing build variables if the resulting binary package is the same.
+Changing DESCR.
+Adding PKG_OPTIONS if the default options don't change.
 </pre>
-</div>
+<p>Examples of changes that do merit an increase to PKGREVISION
+    include:</p>
+<pre class="programlisting">
+Security fixes
+Changes or additions to a patch file
+Changes to the PLIST
+</pre>
+<p>PKGREVISION must also be incremented when dependencies have ABI
+    changes.</p>
 </div>
 </div>
 <div class="sect1" lang="en">
@@ -6668,111 +6841,115 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </pre>
 </div>
 </div>
-</div>
-<div class="sect1" lang="en">
-<div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="package-specific-actions"></a>17.5. Package specific actions</h2></div></div></div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="user-interaction"></a>17.5.1. User interaction</h3></div></div></div>
-<p>Occasionally, packages require interaction from the user, and this can be
-        in a number of ways:</p>
-<div class="itemizedlist"><ul type="disc">
-<li><p>help in fetching the distfiles</p></li>
-<li><p>help to configure the package before it is built</p></li>
-<li><p>help during the build process</p></li>
-<li><p>help during the installation of a package</p></li>
-</ul></div>
-<p>The <code class="varname">INTERACTIVE_STAGE</code> definition is provided to notify
-        the pkgsrc mechanism of an interactive stage which will be needed, and
-        this should be set in the package's <code class="filename">Makefile</code>, e.g.:</p>
-<pre class="programlisting">
-    INTERACTIVE_STAGE=      build
-</pre>
-<p>Multiple interactive stages can be specified:</p>
-<pre class="programlisting">
-    INTERACTIVE_STAGE=      configure install
-</pre>
+<a name="compiler-bugs"></a>17.4.2. How to handle compiler bugs</h3></div></div></div>
+<p>Some source files trigger bugs in the compiler, based on
+        combinations  of compiler version and architecture and almost
+        always relation to  optimisation being enabled.  Common symptoms
+        are gcc internal errors  or never finishing compiling a
+	file.</p>
+<p>Typically, a workaround involves testing the
+        <code class="varname">MACHINE_ARCH</code> and compiler version, disabling
+        optimisation for that combination of file,
+	<code class="varname">MACHINE_ARCH</code> and compiler, and documenting it
+	in  <code class="filename">pkgsrc/doc/HACKS</code>. See that file for a
+	number of examples.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="handling-licenses"></a>17.5.2. Handling licenses</h3></div></div></div>
-<p>A package may be covered by a license which the user has
-        or has not agreed to accept.  For these cases, pkgsrc contains
-        a mechanism to note that a package is covered by a particular
-        license, and the package cannot be built unless the user has
-        accepted the license.  (Installation of binary packages are
-        not currently subject to this mechanism.)  Packages with
-        licenses that are either Open Source according to the Open
-        Source Initiative or Free according to the Free Software
-        Foundation will not be marked with a license tag.  Packages
-        with licenses that have not been determined to meet either
-        definition will be marked with a license tag referring to the
-        license.  This will prevent building unless pkgsrc is informed
-        that the license is acceptable, and enables displaying the
-        license.</p>
-<p>The license tag mechanism is intended to address
-	copyright-related issues surrounding building, installing and
-	using a package, and not to address redistribution issues (see
-	<code class="varname">RESTRICTED</code> and
-	<code class="varname">NO_SRC_ON_FTP</code>, etc.).  However, the above
-	definition of licenses for which tags are not needed implies
-	that packages with redistribution restrictions should have
-	tags.</p>
-<p>
-        Denoting that a package is covered by a particular license is
-        done by placing the license in
-        <code class="filename">pkgsrc/licenses</code> and setting the
-        <code class="varname">LICENSE</code> variable to a string identifying
-        the license, e.g. in
-	<a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/graphics/xv/README.html" target="_top"><code class="filename">graphics/xv</code></a>: </p>
-<pre class="programlisting">
-    LICENSE=        xv-license
-</pre>
-<p>
-	When trying to build, the user will get a notice that the
-        package is covered by a license which has not been
-        accepted:</p>
-<pre class="programlisting">
-    <code class="prompt">%</code> <strong class="userinput"><code>make</code></strong>
-    ===&gt; xv-3.10anb9 has an unacceptable license: xv-license.
-    ===&gt;     To view the license, enter "/usr/bin/make show-license".
-    ===&gt;     To indicate acceptance, add this line to your /etc/mk.conf:
-    ===&gt;     ACCEPTABLE_LICENSES+=xv-license
-    *** Error code 1
-</pre>
-<p>The license can be viewed with <span><strong class="command">make
-          show-license</strong></span>, and if it is considered appropriate,
-          the line printed above can be added to
-          <code class="filename">/etc/mk.conf</code> to indicate acceptance of
-          the particular license:</p>
-<pre class="programlisting">
-    ACCEPTABLE_LICENSES+=xv-license
-</pre>
-<p>When adding a package with a new license, the license
-          text should be added to <code class="filename">pkgsrc/licenses</code>
-          for displaying. A list of known licenses can be seen in this
-          directory as well as by looking at the list of (commented
-          out) <code class="varname">ACCEPTABLE_LICENSES</code> variable
-          settings in
-          <code class="filename">pkgsrc/mk/defaults/mk.conf</code>.</p>
-<p>The use of <code class="varname">LICENSE=shareware</code>,
-	  <code class="varname">LICENSE=no-commercial-use</code>, and similar
-	  language is deprecated because it does not crisply refer to
-	  a particular license text.  Another problem with such usage
-	  is that it does not enable a user to denote acceptance of
-	  the license for a single package without accepting the same
-	  license text for another package.  In particular, this can
-	  be inappropriate when e.g. one accepts a particular license to
-	  indicate to pkgsrc that a fee has been paid.</p>
+<a name="undefined-reference"></a>17.4.3. Undefined reference to &#8220;<span class="quote">...</span>&#8221;</h3></div></div></div>
+<p>This compiler error often means that a package did not
+	link to a shared library it needs. The following functions are
+	known to cause this error message over and over.</p>
+<div class="informaltable">
+<a name="undefined-reference-functions"></a><table border="1">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>Function</th>
+<th>Library</th>
+<th>Affected platforms</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>accept, bind, connect</td>
+<td>-lsocket</td>
+<td>Solaris</td>
+</tr>
+<tr>
+<td>crypt</td>
+<td>-lcrypt</td>
+<td>DragonFly, NetBSD</td>
+</tr>
+<tr>
+<td>dlopen, dlsym</td>
+<td>-ldl</td>
+<td>Linux</td>
+</tr>
+<tr>
+<td>gethost*</td>
+<td>-lnsl</td>
+<td>Solaris</td>
+</tr>
+<tr>
+<td>inet_aton</td>
+<td>-lresolv</td>
+<td>Solaris</td>
+</tr>
+<tr>
+<td>nanosleep, sem_*, timer_*</td>
+<td>-lrt</td>
+<td>Solaris</td>
+</tr>
+<tr>
+<td>openpty</td>
+<td>-lutil</td>
+<td>Linux</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>To fix these linker errors, it is often sufficient to say
+	<code class="literal">LIBS.<em class="replaceable"><code>OperatingSystem</code></em>+=
+	-l<em class="replaceable"><code>foo</code></em></code> to the package
+	<code class="filename">Makefile</code> and then say <span><strong class="command">bmake clean;
+	bmake</strong></span>.</p>
 </div>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="fixes.install"></a>17.6. Fixing problems in the <span class="emphasis"><em>install</em></span> phase</h2></div></div></div>
+<a name="fixes.install"></a>17.5. Fixing problems in the <span class="emphasis"><em>install</em></span> phase</h2></div></div></div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="installing-score-files"></a>17.6.1. Installing score files</h3></div></div></div>
+<a name="install-scripts"></a>17.5.1. Creating needed directories</h3></div></div></div>
+<p>The BSD-compatible <span><strong class="command">install</strong></span> supplied
+	with some operating systems cannot create more than one
+	directory at a time. As such, you should call
+	<code class="literal">${INSTALL_*_DIR}</code> like this:</p>
+<pre class="programlisting">
+    ${INSTALL_DATA_DIR} ${PREFIX}/dir1
+    ${INSTALL_DATA_DIR} ${PREFIX}/dir2
+</pre>
+<p>You can also just append &#8220;<span class="quote"><code class="literal">dir1
+	dir2</code></span>&#8221; to the
+	<code class="varname">INSTALLATION_DIRS</code> variable, which will
+	automatically do the right thing.</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="where-to-install-documentation"></a>17.5.2. Where to install documentation</h3></div></div></div>
+<p>Documentation should be installed into
+	<code class="filename">${PREFIX}/share/doc/${PKGBASE}</code> or
+	<code class="filename">${PREFIX}/share/doc/${PKGNAME}</code> (the latter
+	includes the version number of the package).</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="installing-score-files"></a>17.5.3. Installing score files</h3></div></div></div>
 <p>Certain packages, most of them in the games category, install
         a score file that allows all users on the system to record their
         highscores.  In order for this to work, the binaries need to be
@@ -6793,7 +6970,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="perl-scripts"></a>17.6.2. Packages containing perl scripts</h3></div></div></div>
+<a name="perl-scripts"></a>17.5.4. Packages containing perl scripts</h3></div></div></div>
 <p>
         If your package contains interpreted perl scripts, set
         <code class="varname">REPLACE_PERL</code> to ensure that the proper
@@ -6803,7 +6980,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="hardcoded-paths"></a>17.6.3. Packages with hardcoded paths to other interpreters</h3></div></div></div>
+<a name="hardcoded-paths"></a>17.5.5. Packages with hardcoded paths to other interpreters</h3></div></div></div>
 <p>
         Your package may also contain scripts with hardcoded paths to
         other interpreters besides (or as well as) perl.  To correct the
@@ -6826,7 +7003,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="perl-modules"></a>17.6.4. Packages installing perl modules</h3></div></div></div>
+<a name="perl-modules"></a>17.5.6. Packages installing perl modules</h3></div></div></div>
 <p>Makefiles of packages providing perl5 modules should include
         the Makefile fragment
         <code class="filename">../../lang/perl5/module.mk</code>.  It provides a
@@ -6855,7 +7032,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="faq.info-files"></a>17.6.5. Packages installing info files</h3></div></div></div>
+<a name="faq.info-files"></a>17.5.7. Packages installing info files</h3></div></div></div>
 <p>Some packages install info files or use the
         &#8220;<span class="quote">makeinfo</span>&#8221;  or &#8220;<span class="quote">install-info</span>&#8221;
 	commands.  <code class="varname">INFO_FILES</code> should be defined in
@@ -6902,7 +7079,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="manpages"></a>17.6.6. Packages installing man pages</h3></div></div></div>
+<a name="manpages"></a>17.5.8. Packages installing man pages</h3></div></div></div>
 <p>Many packages install manual pages. The man pages
 	are installed under <code class="varname">${PREFIX}/${PKGMANDIR}</code>
 	which is <code class="filename">/usr/pkg/man</code> by default.
@@ -6944,7 +7121,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="gconf2-data-files"></a>17.6.7. Packages installing GConf2 data files</h3></div></div></div>
+<a name="gconf2-data-files"></a>17.5.9. Packages installing GConf2 data files</h3></div></div></div>
 <p>
         If a package installs <code class="filename">.schemas</code> or
         <code class="filename">.entries</code> files, used by GConf2,
@@ -6980,7 +7157,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="scrollkeeper-data-files"></a>17.6.8. Packages installing scrollkeeper data files</h3></div></div></div>
+<a name="scrollkeeper-data-files"></a>17.5.10. Packages installing scrollkeeper data files</h3></div></div></div>
 <p>
         If a package installs <code class="filename">.omf</code> files, used by
         scrollkeeper, you need to take some extra steps to make sure they
@@ -7003,7 +7180,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="x11-fonts"></a>17.6.9. Packages installing X11 fonts</h3></div></div></div>
+<a name="x11-fonts"></a>17.5.11. Packages installing X11 fonts</h3></div></div></div>
 <p>If a package installs font files, you will need to rebuild
         the fonts database in the directory where they get installed at
         installation and deinstallation time.  This can be automatically
@@ -7020,7 +7197,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="gtk2-modules"></a>17.6.10. Packages installing GTK2 modules</h3></div></div></div>
+<a name="gtk2-modules"></a>17.5.12. Packages installing GTK2 modules</h3></div></div></div>
 <p>If a package installs GTK2 immodules or loaders, you need to
         take some extra steps to get them registered in the GTK2 database
         properly:</p>
@@ -7057,7 +7234,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="sgml-xml-data"></a>17.6.11. Packages installing SGML or XML data</h3></div></div></div>
+<a name="sgml-xml-data"></a>17.5.13. Packages installing SGML or XML data</h3></div></div></div>
 <p>If a package installs SGML or XML data files that need to be
         registered in system-wide catalogs (like DTDs, sub-catalogs,
         etc.), you need to take some extra steps:
@@ -7087,7 +7264,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="mime-database"></a>17.6.12. Packages installing extensions to the MIME database</h3></div></div></div>
+<a name="mime-database"></a>17.5.14. Packages installing extensions to the MIME database</h3></div></div></div>
 <p>If a package provides extensions to the MIME database by
         installing <code class="filename">.xml</code> files inside
         <code class="filename">${PREFIX}/share/mime/packages</code>, you
@@ -7118,7 +7295,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="intltool"></a>17.6.13. Packages using intltool</h3></div></div></div>
+<a name="intltool"></a>17.5.15. Packages using intltool</h3></div></div></div>
 <p>If a package uses intltool during its build, include the
         <code class="filename">../../textproc/intltool/buildlink3.mk</code> file,
         which forces it to use the intltool package provided by pkgsrc,
@@ -7131,7 +7308,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="startup-scripts"></a>17.6.14. Packages installing startup scripts</h3></div></div></div>
+<a name="startup-scripts"></a>17.5.16. Packages installing startup scripts</h3></div></div></div>
 <p>If a package contains a rc.d script, it won't be copied into
         the startup directory by default, but you can enable it, by adding
         the option <code class="varname">PKG_RCD_SCRIPTS=YES</code> in
@@ -7142,7 +7319,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="tex-packages"></a>17.6.15. Packages installing TeX modules</h3></div></div></div>
+<a name="tex-packages"></a>17.5.17. Packages installing TeX modules</h3></div></div></div>
 <p>If a package installs TeX packages into the texmf tree,
         the <code class="filename">ls-R</code> database of the tree needs to be
         updated.</p>
@@ -7181,7 +7358,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="feedback-to-author"></a>17.7. Feedback to the author</h2></div></div></div>
+<a name="feedback-to-author"></a>17.6. Feedback to the author</h2></div></div></div>
 <p>If you have found any bugs in the package you make available,
       if you had to do special steps to make it run under NetBSD or
       if you enhanced the software in various other ways, be sure
@@ -7476,26 +7653,34 @@ place.</p></li>
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
 <dl>
-<dt>20.1. <a href="#id2655161">What is the difference between
+<dt>20.1. <a href="#id2654827">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
 </dt>
-<dt>20.2. <a href="#id2655197">What is the difference between
+<dt>20.2. <a href="#id2654864">What is the difference between
 	MAKE, GMAKE and
 	MAKE_PROGRAM?</a>
 </dt>
-<dt>20.3. <a href="#id2655236">What is the difference between
+<dt>20.3. <a href="#id2654902">What is the difference between
 	CC, PKG_CC and
 	PKGSRC_COMPILER?</a>
 </dt>
-<dt>20.4. <a href="#id2655273">What is the difference between
+<dt>20.4. <a href="#id2654939">What is the difference between
 	BUILDLINK_LDFLAGS,
 	BUILDLINK_LDADD and
 	BUILDLINK_LIBS?</a>
 </dt>
-<dt>20.5. <a href="#id2655291">Why does make show-var
+<dt>20.5. <a href="#id2654957">Why does make show-var
 	VARNAME=BUILDLINK_PREFIX.foo
 	say it's empty?</a>
+</dt>
+<dt>20.6. <a href="#id2655053">What does
+	${MASTER_SITE_SOURCEFORGE:=package/} mean? I
+	don't understand the := inside
+	it.</a>
+</dt>
+<dt>20.7. <a href="#id2655128">Which mailing lists are there for package
+	developers?</a>
 </dt>
 </dl>
 <table border="0" summary="Q and A Set">
@@ -7503,7 +7688,7 @@ place.</p></li>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655161"></a><a name="id2655162"></a><b>20.1.</b>
+<a name="id2654827"></a><a name="id2654828"></a><b>20.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -7519,7 +7704,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655197"></a><a name="id2655198"></a><b>20.2.</b>
+<a name="id2654864"></a><a name="id2654865"></a><b>20.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -7537,7 +7722,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655236"></a><a name="id2655237"></a><b>20.3.</b>
+<a name="id2654902"></a><a name="id2654903"></a><b>20.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -7555,7 +7740,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655273"></a><a name="id2655274"></a><b>20.4.</b>
+<a name="id2654939"></a><a name="id2654940"></a><b>20.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -7568,7 +7753,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655291"></a><a name="id2655292"></a><b>20.5.</b>
+<a name="id2654957"></a><a name="id2655027"></a><b>20.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -7581,6 +7766,55 @@ place.</p></li>
 	&#8220;<span class="quote">simulate</span>&#8221; the wrapper phase, append
 	<span><strong class="command">PKG_PHASE=wrapper</strong></span> to the above
 	command.</p></td>
+</tr>
+<tr class="question">
+<td align="left" valign="top">
+<a name="id2655053"></a><a name="id2655054"></a><b>20.6.</b>
+</td>
+<td align="left" valign="top"><p>What does
+	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
+	don't understand the <code class="literal">:=</code> inside
+	it.</p></td>
+</tr>
+<tr class="answer">
+<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top"><p>The <code class="literal">:=</code> is not really an
+	assignment operator, like you might expect at first sight.
+	Instead, it is a degenerate form of
+	<code class="literal">${LIST:<em class="replaceable"><code>old_string</code></em>=<em class="replaceable"><code>new_string</code></em>}</code>,
+	which is documented in the <a href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> man page and which you
+	may have seen as in <code class="literal">${SRCS:.c=.o}</code>. In the
+	case of <code class="varname">MASTER_SITE_*</code>,
+	<em class="replaceable"><code>old_string</code></em> is the empty string and
+	<em class="replaceable"><code>new_string</code></em> is
+	<code class="literal">package/</code>. That's where the
+	<code class="literal">:</code> and the <code class="literal">=</code> fall
+	together.</p></td>
+</tr>
+<tr class="question">
+<td align="left" valign="top">
+<a name="id2655128"></a><a name="id2655129"></a><b>20.7.</b>
+</td>
+<td align="left" valign="top"><p>Which mailing lists are there for package
+	developers?</p></td>
+</tr>
+<tr class="answer">
+<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top"><div class="variablelist"><dl>
+<dt><span class="term"><a href="http://www.NetBSD.org/MailingLists/index.html#tech-pkg" target="_top">tech-pkg</a></span></dt>
+<dd><p>This is a list for technical discussions related
+	to pkgsrc development, e.g. soliciting feedback for changes to
+	pkgsrc infrastructure, proposed new features, questions related
+	to porting pkgsrc to a new platform, advice for maintaining a
+	package, patches that affect many packages, help requests moved
+	from pkgsrc-users when an infrastructure bug is found,
+	etc.</p></dd>
+<dt><span class="term"><a href="http://www.NetBSD.org/MailingLists/index.html#pkgsrc-bugs" target="_top">pkgsrc-bugs</a></span></dt>
+<dd><p>All bug reports in category "pkg" sent with
+	<a href="http://netbsd.gw.com/cgi-bin/man-cgi?send-pr+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">send-pr</span>(1)</span></a> appear here. Please do not report your bugs here
+	directly; use one of the other mailing
+	lists.</p></dd>
+</dl></div></td>
 </tr>
 </tbody>
 </table>
@@ -7606,10 +7840,11 @@ place.</p></li>
 <dt><span class="sect2"><a href="#infr.var.load">21.1.1. At load time</a></span></dt>
 <dt><span class="sect2"><a href="#infr.var.run">21.1.2. At runtime</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#infr.design.intf">21.2. Designing interfaces for Makefile fragments</a></span></dt>
+<dt><span class="sect1"><a href="#infr.varspec">21.2. How can variables be specified?</a></span></dt>
+<dt><span class="sect1"><a href="#infr.design.intf">21.3. Designing interfaces for Makefile fragments</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.design.intf.proc">21.2.1. Procedures with parameters</a></span></dt>
-<dt><span class="sect2"><a href="#infr.design.intf.action">21.2.2. Actions taken on behalf of parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.proc">21.3.1. Procedures with parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.action">21.3.2. Actions taken on behalf of parameters</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#regression">22. Regression tests</a></span></dt>
@@ -7641,10 +7876,11 @@ place.</p></li>
 <dt><span class="sect2"><a href="#infr.var.load">21.1.1. At load time</a></span></dt>
 <dt><span class="sect2"><a href="#infr.var.run">21.1.2. At runtime</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#infr.design.intf">21.2. Designing interfaces for Makefile fragments</a></span></dt>
+<dt><span class="sect1"><a href="#infr.varspec">21.2. How can variables be specified?</a></span></dt>
+<dt><span class="sect1"><a href="#infr.design.intf">21.3. Designing interfaces for Makefile fragments</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.design.intf.proc">21.2.1. Procedures with parameters</a></span></dt>
-<dt><span class="sect2"><a href="#infr.design.intf.action">21.2.2. Actions taken on behalf of parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.proc">21.3.1. Procedures with parameters</a></span></dt>
+<dt><span class="sect2"><a href="#infr.design.intf.action">21.3.2. Actions taken on behalf of parameters</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -7707,18 +7943,27 @@ place.</p></li>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="infr.design.intf"></a>21.2. Designing interfaces for Makefile fragments</h2></div></div></div>
+<a name="infr.varspec"></a>21.2. How can variables be specified?</h2></div></div></div>
+<p>There are many ways in which the definition and use of a
+	variable can be restricted in order to detect bugs and
+	violations of the (mostly unwritten) policies. See the
+	<code class="literal">pkglint</code> developer's documentation for further
+	details.</p>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="infr.design.intf"></a>21.3. Designing interfaces for Makefile fragments</h2></div></div></div>
 <p>Most of the <code class="filename">.mk</code> files fall into one
 	of the following classes. Cases where a file falls into more
 	than one class should be avoided as it often leads to subtle
 	bugs.</p>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="infr.design.intf.proc"></a>21.2.1. Procedures with parameters</h3></div></div></div>
+<a name="infr.design.intf.proc"></a>21.3.1. Procedures with parameters</h3></div></div></div>
 <p>In a traditional imperative programming language some of
 	the <code class="filename">.mk</code> files could be described as
-	procedures. They take some input parameters and&#8212;after
-	inclusion&#8212;provide a result in output parameters. Since all
+	procedures. They take some input parameters and&mdash;after
+	inclusion&mdash;provide a result in output parameters. Since all
 	variables in <code class="filename">Makefile</code>s have global scope
 	care must be taken not to use parameter names that have already
 	another meaning. For example, <code class="varname">PKGNAME</code> is a
@@ -7748,7 +7993,7 @@ place.</p></li>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="infr.design.intf.action"></a>21.2.2. Actions taken on behalf of parameters</h3></div></div></div>
+<a name="infr.design.intf.action"></a>21.3.2. Actions taken on behalf of parameters</h3></div></div></div>
 <p>Action files take some input parameters and may define
 	runtime variables. They shall not define loadtime variables.
 	There are action files that are included implicitly by the
