@@ -1,9 +1,18 @@
-$NetBSD: patch-bk,v 1.1 2006/01/18 23:24:12 rillig Exp $
+$NetBSD: patch-bk,v 1.2 2006/06/29 10:58:26 rillig Exp $
 
 SunPro cannot handle direct initialization of structures.
 
 --- src/rinf_analyze.c.orig	2003-09-06 02:50:16.000000000 +0200
-+++ src/rinf_analyze.c	2006-01-16 14:49:27.617152900 +0100
++++ src/rinf_analyze.c	2006-06-29 12:54:43.000000000 +0200
+@@ -29,7 +29,7 @@ Boston, MA 02111-1307, USA. */
+ static effecttype global_effect = NULL;
+ static effecttype global_env = NULL;
+ static hash_table globals = NULL;
+-static function_decl current_function_decl = NULL;
++/*global*/ function_decl current_function_decl = NULL;
+ static aloctype current_function_ret = NULL;
+ 
+ typedef struct einfo {
 @@ -107,19 +107,27 @@ static bool is_memcpy_fun(const char *na
  
  static inline einfo mkeinfo(alocreftype tau, effecttype eff)
