@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5125 2006/06/28 21:00:49 wiz Exp $
+$NetBSD: TODO,v 1.5126 2006/06/29 22:10:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -816,6 +816,7 @@ Suggested package updates
 	o oo2c-2.1.7
 	o openal-0.0.8
 	o opencobol-0.31
+	o openexr-1.3.0
 	o openh323-1.17.2
 	o openmortal-0.7.1
 	o openntpd-3.9p1
@@ -1032,6 +1033,7 @@ Suggested package updates
 	o py-ZODB-3.2.9
 	o py-bdb-xml-2.1.8
 	o py-checker-0.8.17
+	o py-curl-7.15.4.1
 	o py-gnome2-extras-2.14.0
 	o py-gnutls-0.2.1
 	o py-kenosis-0.96
