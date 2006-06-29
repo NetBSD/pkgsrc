@@ -33,7 +33,8 @@ Table of Contents
     1.2. Overview
     1.3. Terminology
 
-        1.3.1. People involved in pkgsrc
+        1.3.1. Commonly used abbreviations
+        1.3.2. People involved in pkgsrc
 
     1.4. Typography
 
@@ -84,8 +85,12 @@ I. The pkgsrc user's guide
 
         5.1. General configuration
         5.2. Variables affecting the build process
-        5.3. Developer/advanced settings
-        5.4. Selecting Build Options
+        5.3. Selecting and configuring the compiler
+
+            5.3.1. Additional flags to the compiler (CFLAGS)
+
+        5.4. Developer/advanced settings
+        5.5. Selecting Build Options
 
     6. Creating binary packages
 
@@ -136,6 +141,11 @@ II. The pkgsrc developer's guide
         9.3. patches/*
         9.4. Other mandatory files
         9.5. Optional files
+
+            9.5.1. Files affecting the binary package
+            9.5.2. Files affecting the build process
+            9.5.3. Files affecting nothing at all
+
         9.6. work*
         9.7. files/*
 
@@ -239,18 +249,18 @@ II. The pkgsrc developer's guide
 
         17.1. General operation
 
-            17.1.1. How to pull in variables from /etc/mk.conf
-            17.1.2. Where to install documentation
-            17.1.3. Restricted packages
-            17.1.4. Handling dependencies
-            17.1.5. Handling conflicts with other packages
-            17.1.6. Packages that cannot or should not be built
-            17.1.7. Packages which should not be deleted, once installed
-            17.1.8. Handling packages with security problems
-            17.1.9. How to handle compiler bugs
-            17.1.10. How to handle incrementing versions when fixing an
+            17.1.1. Portability of packages
+            17.1.2. How to pull in user-settable variables from mk.conf
+            17.1.3. User interaction
+            17.1.4. Handling licenses
+            17.1.5. Restricted packages
+            17.1.6. Handling dependencies
+            17.1.7. Handling conflicts with other packages
+            17.1.8. Packages that cannot or should not be built
+            17.1.9. Packages which should not be deleted, once installed
+            17.1.10. Handling packages with security problems
+            17.1.11. How to handle incrementing versions when fixing an
                 existing package
-            17.1.11. Portability of packages
 
         17.2. Fixing problems in the fetch phase
 
@@ -267,31 +277,30 @@ II. The pkgsrc developer's guide
         17.4. Fixing problems in the build phase
 
             17.4.1. Compiling C and C++ code conditionally
+            17.4.2. How to handle compiler bugs
+            17.4.3. Undefined reference to "..."
 
-        17.5. Package specific actions
+        17.5. Fixing problems in the install phase
 
-            17.5.1. User interaction
-            17.5.2. Handling licenses
+            17.5.1. Creating needed directories
+            17.5.2. Where to install documentation
+            17.5.3. Installing score files
+            17.5.4. Packages containing perl scripts
+            17.5.5. Packages with hardcoded paths to other interpreters
+            17.5.6. Packages installing perl modules
+            17.5.7. Packages installing info files
+            17.5.8. Packages installing man pages
+            17.5.9. Packages installing GConf2 data files
+            17.5.10. Packages installing scrollkeeper data files
+            17.5.11. Packages installing X11 fonts
+            17.5.12. Packages installing GTK2 modules
+            17.5.13. Packages installing SGML or XML data
+            17.5.14. Packages installing extensions to the MIME database
+            17.5.15. Packages using intltool
+            17.5.16. Packages installing startup scripts
+            17.5.17. Packages installing TeX modules
 
-        17.6. Fixing problems in the install phase
-
-            17.6.1. Installing score files
-            17.6.2. Packages containing perl scripts
-            17.6.3. Packages with hardcoded paths to other interpreters
-            17.6.4. Packages installing perl modules
-            17.6.5. Packages installing info files
-            17.6.6. Packages installing man pages
-            17.6.7. Packages installing GConf2 data files
-            17.6.8. Packages installing scrollkeeper data files
-            17.6.9. Packages installing X11 fonts
-            17.6.10. Packages installing GTK2 modules
-            17.6.11. Packages installing SGML or XML data
-            17.6.12. Packages installing extensions to the MIME database
-            17.6.13. Packages using intltool
-            17.6.14. Packages installing startup scripts
-            17.6.15. Packages installing TeX modules
-
-        17.7. Feedback to the author
+        17.6. Feedback to the author
 
     18. Debugging
     19. Submitting and Committing
@@ -314,10 +323,11 @@ III. The pkgsrc infrastructure internals
             21.1.1. At load time
             21.1.2. At runtime
 
-        21.2. Designing interfaces for Makefile fragments
+        21.2. How can variables be specified?
+        21.3. Designing interfaces for Makefile fragments
 
-            21.2.1. Procedures with parameters
-            21.2.2. Actions taken on behalf of parameters
+            21.3.1. Procedures with parameters
+            21.3.2. Actions taken on behalf of parameters
 
     22. Regression tests
 
@@ -371,7 +381,8 @@ Table of Contents
 1.2. Overview
 1.3. Terminology
 
-    1.3.1. People involved in pkgsrc
+    1.3.1. Commonly used abbreviations
+    1.3.2. People involved in pkgsrc
 
 1.4. Typography
 
@@ -488,7 +499,13 @@ Program
     the files in the distfile by the actions defined in the corresponding
     package.
 
-1.3.1. People involved in pkgsrc
+1.3.1. Commonly used abbreviations
+
+ICE
+
+    Internal Compiler Error
+
+1.3.2. People involved in pkgsrc
 
 pkgsrc users
 
@@ -570,8 +587,12 @@ Table of Contents
 
     5.1. General configuration
     5.2. Variables affecting the build process
-    5.3. Developer/advanced settings
-    5.4. Selecting Build Options
+    5.3. Selecting and configuring the compiler
+
+        5.3.1. Additional flags to the compiler (CFLAGS)
+
+    5.4. Developer/advanced settings
+    5.5. Selecting Build Options
 
 6. Creating binary packages
 
@@ -1184,7 +1205,8 @@ to build packages.
 
   * SUNWlibm
 
-Please note the use of GNU binutils on Solaris is not supported.
+Please note that the use of GNU binutils on Solaris is not supported, as of
+June 2006.
 
 Whichever compiler you use, please ensure the compiler tools and your $prefix
 are in your PATH. This includes /usr/ccs/{bin,lib} and e.g. /usr/pkg/
@@ -1546,8 +1568,12 @@ Table of Contents
 
 5.1. General configuration
 5.2. Variables affecting the build process
-5.3. Developer/advanced settings
-5.4. Selecting Build Options
+5.3. Selecting and configuring the compiler
+
+    5.3.1. Additional flags to the compiler (CFLAGS)
+
+5.4. Developer/advanced settings
+5.5. Selecting Build Options
 
 5.1. General configuration
 
@@ -1601,7 +1627,20 @@ XXX
     Makefile. If this is not set, MAKECONF is set to /dev/null to avoid picking
     up settings used by builds in /usr/src.
 
-5.3. Developer/advanced settings
+5.3. Selecting and configuring the compiler
+
+5.3.1. Additional flags to the compiler (CFLAGS)
+
+If you wish to set the CFLAGS variable, please make sure to use the += operator
+instead of the = operator:
+
+    CFLAGS+=        -your -flags
+
+Using CFLAGS= (i.e. without the "+") may lead to problems with packages that
+need to add their own flags. Also, you may want to take a look at the devel/
+cpuflags package if you're interested in optimization for the current CPU.
+
+5.4. Developer/advanced settings
 
 XXX
 
@@ -1629,7 +1668,7 @@ XXX
     for all packages built. Normally you'll want to use ALLOW_VULNERABILITIES
     instead of this.
 
-5.4. Selecting Build Options
+5.5. Selecting Build Options
 
 Some packages have build time options, usually to select between different
 dependencies, enable optional support for big dependencies or enable
@@ -2146,18 +2185,6 @@ for both pkgsrc users and developers.
 
 The following mailing lists may be of interest to pkgsrc users:
 
-  * pkgsrc-bugs: All bug reports in category "pkg" sent with send-pr(1) appear
-    here. Please do not report your bugs here directly; use one of the other
-    mailing lists. discussed.
-
-  * pkgsrc-bulk: A list where the results of pkgsrc bulk builds are sent and
-    discussed.
-
-  * pkgsrc-changes: This list is for those who are interested in getting a
-    commit message for every change committed to pkgsrc. It is also available
-    in digest form, meaning one daily message containing all commit messages
-    for changes to the package source tree in that 24 hour period.
-
   * pkgsrc-users: This is a general purpose list for most issues regarding
     pkgsrc, regardless of platform, e.g. soliciting user help for pkgsrc
     configuration, unexpected build failures, using particular packages,
@@ -2166,12 +2193,13 @@ The following mailing lists may be of interest to pkgsrc users:
     the pkgsrc user community, e.g. major infrastructure changes, new features,
     package removals, etc., may also be posted.
 
-  * tech-pkg: This is a list for technical discussions related to pkgsrc
-    development, e.g. soliciting feedback for changes to pkgsrc infrastructure,
-    proposed new features, questions related to porting pkgsrc to a new
-    platform, advice for maintaining a package, patches that affect many
-    packages, help requests moved from pkgsrc-users when an infrastructure bug
-    is found, etc.
+  * pkgsrc-bulk: A list where the results of pkgsrc bulk builds are sent and
+    discussed.
+
+  * pkgsrc-changes: This list is for those who are interested in getting a
+    commit message for every change committed to pkgsrc. It is also available
+    in digest form, meaning one daily message containing all commit messages
+    for changes to the package source tree in that 24 hour period.
 
 To subscribe, do:
 
@@ -2487,6 +2515,11 @@ Table of Contents
     9.3. patches/*
     9.4. Other mandatory files
     9.5. Optional files
+
+        9.5.1. Files affecting the binary package
+        9.5.2. Files affecting the build process
+        9.5.3. Files affecting nothing at all
+
     9.6. work*
     9.7. files/*
 
@@ -2590,18 +2623,18 @@ Table of Contents
 
     17.1. General operation
 
-        17.1.1. How to pull in variables from /etc/mk.conf
-        17.1.2. Where to install documentation
-        17.1.3. Restricted packages
-        17.1.4. Handling dependencies
-        17.1.5. Handling conflicts with other packages
-        17.1.6. Packages that cannot or should not be built
-        17.1.7. Packages which should not be deleted, once installed
-        17.1.8. Handling packages with security problems
-        17.1.9. How to handle compiler bugs
-        17.1.10. How to handle incrementing versions when fixing an existing
+        17.1.1. Portability of packages
+        17.1.2. How to pull in user-settable variables from mk.conf
+        17.1.3. User interaction
+        17.1.4. Handling licenses
+        17.1.5. Restricted packages
+        17.1.6. Handling dependencies
+        17.1.7. Handling conflicts with other packages
+        17.1.8. Packages that cannot or should not be built
+        17.1.9. Packages which should not be deleted, once installed
+        17.1.10. Handling packages with security problems
+        17.1.11. How to handle incrementing versions when fixing an existing
             package
-        17.1.11. Portability of packages
 
     17.2. Fixing problems in the fetch phase
 
@@ -2617,31 +2650,30 @@ Table of Contents
     17.4. Fixing problems in the build phase
 
         17.4.1. Compiling C and C++ code conditionally
+        17.4.2. How to handle compiler bugs
+        17.4.3. Undefined reference to "..."
 
-    17.5. Package specific actions
+    17.5. Fixing problems in the install phase
 
-        17.5.1. User interaction
-        17.5.2. Handling licenses
+        17.5.1. Creating needed directories
+        17.5.2. Where to install documentation
+        17.5.3. Installing score files
+        17.5.4. Packages containing perl scripts
+        17.5.5. Packages with hardcoded paths to other interpreters
+        17.5.6. Packages installing perl modules
+        17.5.7. Packages installing info files
+        17.5.8. Packages installing man pages
+        17.5.9. Packages installing GConf2 data files
+        17.5.10. Packages installing scrollkeeper data files
+        17.5.11. Packages installing X11 fonts
+        17.5.12. Packages installing GTK2 modules
+        17.5.13. Packages installing SGML or XML data
+        17.5.14. Packages installing extensions to the MIME database
+        17.5.15. Packages using intltool
+        17.5.16. Packages installing startup scripts
+        17.5.17. Packages installing TeX modules
 
-    17.6. Fixing problems in the install phase
-
-        17.6.1. Installing score files
-        17.6.2. Packages containing perl scripts
-        17.6.3. Packages with hardcoded paths to other interpreters
-        17.6.4. Packages installing perl modules
-        17.6.5. Packages installing info files
-        17.6.6. Packages installing man pages
-        17.6.7. Packages installing GConf2 data files
-        17.6.8. Packages installing scrollkeeper data files
-        17.6.9. Packages installing X11 fonts
-        17.6.10. Packages installing GTK2 modules
-        17.6.11. Packages installing SGML or XML data
-        17.6.12. Packages installing extensions to the MIME database
-        17.6.13. Packages using intltool
-        17.6.14. Packages installing startup scripts
-        17.6.15. Packages installing TeX modules
-
-    17.7. Feedback to the author
+    17.6. Feedback to the author
 
 18. Debugging
 19. Submitting and Committing
@@ -2731,6 +2763,11 @@ Table of Contents
 9.3. patches/*
 9.4. Other mandatory files
 9.5. Optional files
+
+    9.5.1. Files affecting the binary package
+    9.5.2. Files affecting the build process
+    9.5.3. Files affecting nothing at all
+
 9.6. work*
 9.7. files/*
 
@@ -2886,7 +2923,7 @@ Please pay attention to the following gotchas:
 
   * Replace /usr/local with "${PREFIX}" in all files (see patches, below).
 
-  * If the package installs any info files, see Section 17.6.5, "Packages
+  * If the package installs any info files, see Section 17.5.7, "Packages
     installing info files".
 
 9.2. distinfo
@@ -2978,6 +3015,8 @@ PLIST
 
 9.5. Optional files
 
+9.5.1. Files affecting the binary package
+
 INSTALL
 
     This shell script is invoked twice by pkg_add(1). First time after package
@@ -3005,6 +3044,50 @@ MESSAGE
         MESSAGE_SUBST+=  SOMEVAR="somevalue"
 
     replaces "${SOMEVAR}" with "somevalue" in MESSAGE.
+
+ALTERNATIVES
+
+    FIXME: There is no documentation on the alternatives framework.
+
+9.5.2. Files affecting the build process
+
+Makefile.common
+
+    This file contains arbitrary things that could also go into a Makefile, but
+    its purpose is to be used by more than one package. This file should only
+    be used when the packages that will use the file are known in advance. For
+    other purposes it is often better to write a *.mk file and give it a good
+    name that describes what it does.
+
+buildlink3.mk
+
+    This file contains the dependency information for the buildlink3 framework
+    (see Chapter 12, Buildlink methodology).
+
+hacks.mk
+
+    This file contains workarounds for compiler bugs and similar things. It is
+    included automatically by the pkgsrc infrastructure, so you don't need an
+    extra .include line for it.
+
+options.mk
+
+    This file contains the code for the package-specific options (see
+    Chapter 14, Options handling) that can be selected by the user. If a
+    package has only one or two options, it is equally acceptable to put the
+    code directly into the Makefile.
+
+9.5.3. Files affecting nothing at all
+
+README*
+
+    These files do not take place in the creation of a package and thus are
+    purely informative to the package developer.
+
+TODO
+
+    This file contains things that need to be done to make the package even
+    better.
 
 9.6. work*
 
@@ -3659,7 +3742,7 @@ change. This is needed so that binary packages made using it will require the
 correct package dependency and not settle for an older one which will not
 contain the necessary shared libraries.
 
-See Section 17.1.4, "Handling dependencies" for more information about
+See Section 17.1.6, "Handling dependencies" for more information about
 dependencies on other packages, including the BUILDLINK_ABI_DEPENDS and
 ABI_DEPENDS definitions.
 
@@ -4149,7 +4232,7 @@ e.g. options.mk, that is included by the main package Makefile.
     .if defined(PKG_OPTIONS.wibble2)
     PKG_LEGACY_OPTIONS+=            ${PKG_OPTIONS.wibble2}
     PKG_OPTIONS_DEPRECATED_WARNINGS+= \
-            "Deprecated variable PKG_OPTIONS.wibble2 used, use ${PKG_OPTIONS_VAR instead."
+            "Deprecated variable PKG_OPTIONS.wibble2 used, use ${PKG_OPTIONS_VAR} instead."
     .endif
 
     .include "../../mk/bsd.options.mk"
@@ -4186,8 +4269,8 @@ supported by the package, and any default options settings if needed.
 
  1. PKG_OPTIONS_VAR is the name of the make(1) variable that the user can set
     to override the default options. It should be set to PKG_OPTIONS.pkgbase.
-    Do not set it to PKG_OPTIONS.${PKGBASE}, since PKGBASE is set after
-    PKG_OPTIONS_VAR is used.
+    Do not set it to PKG_OPTIONS.${PKGBASE}, since PKGBASE is not defined at
+    the point where the options are processed.
 
  2. PKG_SUPPORTED_OPTIONS is a list of build options supported by the package.
 
@@ -4325,7 +4408,10 @@ When choosing which of these variables to use, follow the following rules:
 
   * LOCALBASE is where all non-X11 pkgs are installed. If you need to construct
     a -I or -L argument to the compiler to find includes and libraries
-    installed by another non-X11 pkg, use "${LOCALBASE}".
+    installed by another non-X11 pkg, use "${LOCALBASE}". The name LOCALBASE
+    stems from FreeBSD, which installed all packages in /usr/local. As pkgsrc
+    leaves /usr/local for the system administrator, this variable is a
+    misnomer.
 
   * X11BASE is where the actual X11 distribution (from xsrc, etc.) is
     installed. When looking for standard X11 includes (not those installed by a
@@ -4657,7 +4743,8 @@ INSTALLATION_DIRS
     assumed, which means that the package claims to create all needed
     directories itself before installing files to it. Therefore this variable
     should only be set in Makefiles that are under control of the package's
-    author.
+    author. The directories are created with the correct ownership, depending
+    on their name.
 
 15.15. The package phase
 
@@ -4973,18 +5060,18 @@ Table of Contents
 
 17.1. General operation
 
-    17.1.1. How to pull in variables from /etc/mk.conf
-    17.1.2. Where to install documentation
-    17.1.3. Restricted packages
-    17.1.4. Handling dependencies
-    17.1.5. Handling conflicts with other packages
-    17.1.6. Packages that cannot or should not be built
-    17.1.7. Packages which should not be deleted, once installed
-    17.1.8. Handling packages with security problems
-    17.1.9. How to handle compiler bugs
-    17.1.10. How to handle incrementing versions when fixing an existing
+    17.1.1. Portability of packages
+    17.1.2. How to pull in user-settable variables from mk.conf
+    17.1.3. User interaction
+    17.1.4. Handling licenses
+    17.1.5. Restricted packages
+    17.1.6. Handling dependencies
+    17.1.7. Handling conflicts with other packages
+    17.1.8. Packages that cannot or should not be built
+    17.1.9. Packages which should not be deleted, once installed
+    17.1.10. Handling packages with security problems
+    17.1.11. How to handle incrementing versions when fixing an existing
         package
-    17.1.11. Portability of packages
 
 17.2. Fixing problems in the fetch phase
 
@@ -5000,69 +5087,139 @@ Table of Contents
 17.4. Fixing problems in the build phase
 
     17.4.1. Compiling C and C++ code conditionally
+    17.4.2. How to handle compiler bugs
+    17.4.3. Undefined reference to "..."
 
-17.5. Package specific actions
+17.5. Fixing problems in the install phase
 
-    17.5.1. User interaction
-    17.5.2. Handling licenses
+    17.5.1. Creating needed directories
+    17.5.2. Where to install documentation
+    17.5.3. Installing score files
+    17.5.4. Packages containing perl scripts
+    17.5.5. Packages with hardcoded paths to other interpreters
+    17.5.6. Packages installing perl modules
+    17.5.7. Packages installing info files
+    17.5.8. Packages installing man pages
+    17.5.9. Packages installing GConf2 data files
+    17.5.10. Packages installing scrollkeeper data files
+    17.5.11. Packages installing X11 fonts
+    17.5.12. Packages installing GTK2 modules
+    17.5.13. Packages installing SGML or XML data
+    17.5.14. Packages installing extensions to the MIME database
+    17.5.15. Packages using intltool
+    17.5.16. Packages installing startup scripts
+    17.5.17. Packages installing TeX modules
 
-17.6. Fixing problems in the install phase
-
-    17.6.1. Installing score files
-    17.6.2. Packages containing perl scripts
-    17.6.3. Packages with hardcoded paths to other interpreters
-    17.6.4. Packages installing perl modules
-    17.6.5. Packages installing info files
-    17.6.6. Packages installing man pages
-    17.6.7. Packages installing GConf2 data files
-    17.6.8. Packages installing scrollkeeper data files
-    17.6.9. Packages installing X11 fonts
-    17.6.10. Packages installing GTK2 modules
-    17.6.11. Packages installing SGML or XML data
-    17.6.12. Packages installing extensions to the MIME database
-    17.6.13. Packages using intltool
-    17.6.14. Packages installing startup scripts
-    17.6.15. Packages installing TeX modules
-
-17.7. Feedback to the author
+17.6. Feedback to the author
 
 17.1. General operation
 
-17.1.1. How to pull in variables from /etc/mk.conf
+17.1.1. Portability of packages
 
-The problem with package-defined variables that can be overridden via MAKECONF
-or /etc/mk.conf is that make(1) expands a variable as it is used, but evaluates
-preprocessor-like statements (.if, .ifdef and .ifndef) as they are read. So, to
-use any variable (which may be set in /etc/mk.conf) in one of the .if*
-statements, the file /etc/mk.conf must be included before that .if* statement.
+One appealing feature of pkgsrc is that it runs on many different platforms. As
+a result, it is important to ensure, where possible, that packages in pkgsrc
+are portable. This chapter mentions some particular details you should pay
+attention to while working on pkgsrc.
 
-Rather than having a number of ad-hoc ways of including /etc/mk.conf, should it
-exist, or MAKECONF, should it exist, include the pkgsrc/mk/bsd.prefs.mk file in
-the package Makefile before any preprocessor-like .if, .ifdef, or .ifndef
-statements:
+17.1.2. How to pull in user-settable variables from mk.conf
 
-    .include "../../mk/bsd.prefs.mk"
+The pkgsrc user can configure pkgsrc by overriding several variables in the
+file pointed to by MAKECONF, which is /etc/mk.conf by default. When you want to
+use those variables in the preprocessor directives of make(1) (for example .if
+or .for), you need to include the file ../../mk/bsd.prefs.mk before, which in
+turn loads the user preferences.
 
-    .if defined(USE_MENUS)
-    # ...
-    .endif
+But note that some variables may not be completely defined after ../../mk/
+bsd.prefs.mk has been included, as they may contain references to variables
+that are not yet defined. In shell commands this is no problem, since variables
+are actually macros, which are only expanded when they are used. But in the
+preprocessor directives mentioned above and in dependency lines (of the form
+target: dependencies) the variables are expanded at load time.
 
-If you wish to set the CFLAGS variable in /etc/mk.conf, please make sure to
-use:
+Note
 
-    CFLAGS+=  -your -flags
+Currently there is no exhaustive list of all variables that tells you whether
+they can be used at load time or only at run time, but it is in preparation.
 
-Using CFLAGS= (i.e. without the "+") may lead to problems with packages that
-need to add their own flags. Also, you may want to take a look at the devel/
-cpuflags package if you're interested in optimization for the current CPU.
+17.1.3. User interaction
 
-17.1.2. Where to install documentation
+Occasionally, packages require interaction from the user, and this can be in a
+number of ways:
 
-Documentation should be installed into ${PREFIX}/share/doc/${PKGBASE} or $
-{PREFIX}/share/doc/${PKGNAME} (the latter includes the version number of the
-package).
+  * When extracting the distfiles, some packages may ask for passwords.
 
-17.1.3. Restricted packages
+  * help to configure the package before it is built
+
+  * help during the build process
+
+  * help during the installation of a package
+
+The INTERACTIVE_STAGE definition is provided to notify the pkgsrc mechanism of
+an interactive stage which will be needed, and this should be set in the
+package's Makefile, e.g.:
+
+    INTERACTIVE_STAGE=      build
+
+Multiple interactive stages can be specified:
+
+    INTERACTIVE_STAGE=      configure install
+
+17.1.4. Handling licenses
+
+A package may be covered by a license which the user has or has not agreed to
+accept. For these cases, pkgsrc contains a mechanism to note that a package is
+covered by a particular license, and the package cannot be built unless the
+user has accepted the license. (Installation of binary packages are not
+currently subject to this mechanism.) Packages with licenses that are either
+Open Source according to the Open Source Initiative or Free according to the
+Free Software Foundation will not be marked with a license tag. Packages with
+licenses that have not been determined to meet either definition will be marked
+with a license tag referring to the license. This will prevent building unless
+pkgsrc is informed that the license is acceptable, and enables displaying the
+license.
+
+The license tag mechanism is intended to address copyright-related issues
+surrounding building, installing and using a package, and not to address
+redistribution issues (see RESTRICTED and NO_SRC_ON_FTP, etc.). However, the
+above definition of licenses for which tags are not needed implies that
+packages with redistribution restrictions should have tags.
+
+Denoting that a package is covered by a particular license is done by placing
+the license in pkgsrc/licenses and setting the LICENSE variable to a string
+identifying the license, e.g. in graphics/xv:
+
+    LICENSE=        xv-license
+
+When trying to build, the user will get a notice that the package is covered by
+a license which has not been accepted:
+
+    % make
+    ===> xv-3.10anb9 has an unacceptable license: xv-license.
+    ===>     To view the license, enter "/usr/bin/make show-license".
+    ===>     To indicate acceptance, add this line to your /etc/mk.conf:
+    ===>     ACCEPTABLE_LICENSES+=xv-license
+    *** Error code 1
+
+The license can be viewed with make show-license, and if it is considered
+appropriate, the line printed above can be added to /etc/mk.conf to indicate
+acceptance of the particular license:
+
+    ACCEPTABLE_LICENSES+=xv-license
+
+When adding a package with a new license, the license text should be added to
+pkgsrc/licenses for displaying. A list of known licenses can be seen in this
+directory as well as by looking at the list of (commented out)
+ACCEPTABLE_LICENSES variable settings in pkgsrc/mk/defaults/mk.conf.
+
+The use of LICENSE=shareware, LICENSE=no-commercial-use, and similar language
+is deprecated because it does not crisply refer to a particular license text.
+Another problem with such usage is that it does not enable a user to denote
+acceptance of the license for a single package without accepting the same
+license text for another package. In particular, this can be inappropriate when
+e.g. one accepts a particular license to indicate to pkgsrc that a fee has been
+paid.
+
+17.1.5. Restricted packages
 
 Some licenses restrict how software may be re-distributed. In order to satisfy
 these restrictions, the package system defines five make variables that can be
@@ -5101,7 +5258,7 @@ Please note that the use of NO_PACKAGE, IGNORE, NO_CDROM, or other generic make
 variables to denote restrictions is deprecated, because they unconditionally
 prevent users from generating binary packages!
 
-17.1.4. Handling dependencies
+17.1.6. Handling dependencies
 
 Your package may depend on some other package being present - and there are
 various ways of expressing this dependency. pkgsrc supports the BUILD_DEPENDS
@@ -5189,7 +5346,7 @@ version numbers recognized by pkg_info(1).
     systems that may have different versions of binary packages installed.
 
     For security fixes, please update the package vulnerabilities file. See
-    Section 17.1.8, "Handling packages with security problems" for more
+    Section 17.1.10, "Handling packages with security problems" for more
     information.
 
  4. If your package needs some executable to be able to run correctly and if
@@ -5214,7 +5371,7 @@ gettext package. The latter adds a build dependency on either an installed
 version of an older gettext package, or if it isn't, installs the devel/
 gettext-m4 package.
 
-17.1.5. Handling conflicts with other packages
+17.1.7. Handling conflicts with other packages
 
 Your package may conflict with other packages a user might already have
 installed on his system, e.g. if your package installs the same set of files
@@ -5236,7 +5393,7 @@ Packages will automatically conflict with other packages with the name prefix
 and a different version string. "Xaw3d-1.5" e.g. will automatically conflict
 with the older version "Xaw3d-1.3".
 
-17.1.6. Packages that cannot or should not be built
+17.1.8. Packages that cannot or should not be built
 
 There are several reasons why a package might be instructed to not build under
 certain circumstances. If the package builds and runs on most platforms, the
@@ -5250,7 +5407,7 @@ functionality already provided by the system), set PKG_SKIP_REASON to a
 descriptive message. If the package should fail because some preconditions are
 not met, set PKG_FAIL_REASON to a descriptive message.
 
-17.1.7. Packages which should not be deleted, once installed
+17.1.9. Packages which should not be deleted, once installed
 
 To ensure that a package may not be deleted, once it has been installed, the
 PKG_PRESERVE definition should be set in the package Makefile. This will be
@@ -5258,7 +5415,7 @@ carried into any binary package that is made from this pkgsrc entry. A
 "preserved" package will not be deleted using pkg_delete(1) unless the "-f"
 option is used.
 
-17.1.8. Handling packages with security problems
+17.1.10. Handling packages with security problems
 
 When a vulnerability is found, this should be noted in localsrc/security/
 advisories/pkg-vulnerabilities, and after committing that file, use make upload
@@ -5274,18 +5431,7 @@ submit a pullup request!
 Binary packages already on ftp.NetBSD.org will be handled semi-automatically by
 a weekly cron job.
 
-17.1.9. How to handle compiler bugs
-
-Some source files trigger bugs in the compiler, based on combinations of
-compiler version and architecture and almost always relation to optimisation
-being enabled. Common symptoms are gcc internal errors or never finishing
-compiling a file.
-
-Typically, a workaround involves testing the MACHINE_ARCH and compiler version,
-disabling optimisation for that file/MACHINE_ARCH/compiler combination, and
-documenting it in pkgsrc/doc/HACKS. See that file for a number of examples!
-
-17.1.10. How to handle incrementing versions when fixing an existing package
+17.1.11. How to handle incrementing versions when fixing an existing package
 
 When making fixes to an existing package it can be useful to change the version
 number in PKGNAME. To avoid conflicting with future versions by the original
@@ -5303,21 +5449,26 @@ like:
 
     DISTNAME=       foo-17.43
 
-17.1.11. Portability of packages
+PKGREVISION should be incremented for any non-trivial change in the resulting
+binary package. Without a PKGREVISION bump, someone with the previous version
+installed has no way of knowing that their package is out of date. Thus,
+changes without increasing PKGREVISION are essentially labeled "this is so
+trivial that no reasonable person would want to upgrade", and this is the rough
+test for when increasing PKGREVISION is appropriate. Examples of changes that
+do not merit increasing PKGREVISION are:
 
-One appealing feature of pkgsrc is that it runs on many different platforms. As
-a result, it is important to ensure, where possible, that packages in pkgsrc
-are portable. There are some particular details you should pay attention to
-while working on pkgsrc.
+Changing HOMEPAGE, MAINTAINER, or comments in Makefile.
+Changing build variables if the resulting binary package is the same.
+Changing DESCR.
+Adding PKG_OPTIONS if the default options don't change.
 
-17.1.11.1. ${INSTALL}, ${INSTALL_DATA_DIR}, ...
+Examples of changes that do merit an increase to PKGREVISION include:
 
-The BSD-compatible install supplied with some operating systems will not
-perform more than one operation at a time. As such, you should call "${INSTALL}
-", etc. like this:
+Security fixes
+Changes or additions to a patch file
+Changes to the PLIST
 
-    ${INSTALL_DATA_DIR} ${PREFIX}/dir1
-    ${INSTALL_DATA_DIR} ${PREFIX}/dir2
+PKGREVISION must also be incremented when dependencies have ABI changes.
 
 17.2. Fixing problems in the fetch phase
 
@@ -5582,89 +5733,65 @@ macros.
     GCC         __GNUC__ (major version), __GNUC_MINOR__
     SunPro      __SUNPRO_C (0x570 for version 5.7)
 
-17.5. Package specific actions
+17.4.2. How to handle compiler bugs
 
-17.5.1. User interaction
+Some source files trigger bugs in the compiler, based on combinations of
+compiler version and architecture and almost always relation to optimisation
+being enabled. Common symptoms are gcc internal errors or never finishing
+compiling a file.
 
-Occasionally, packages require interaction from the user, and this can be in a
-number of ways:
+Typically, a workaround involves testing the MACHINE_ARCH and compiler version,
+disabling optimisation for that combination of file, MACHINE_ARCH and compiler,
+and documenting it in pkgsrc/doc/HACKS. See that file for a number of examples.
 
-  * help in fetching the distfiles
+17.4.3. Undefined reference to "..."
 
-  * help to configure the package before it is built
+This compiler error often means that a package did not link to a shared library
+it needs. The following functions are known to cause this error message over
+and over.
 
-  * help during the build process
++-----------------------------------------------------+
+|        Function         |Library |Affected platforms|
+|-------------------------+--------+------------------|
+|accept, bind, connect    |-lsocket|Solaris           |
+|-------------------------+--------+------------------|
+|crypt                    |-lcrypt |DragonFly, NetBSD |
+|-------------------------+--------+------------------|
+|dlopen, dlsym            |-ldl    |Linux             |
+|-------------------------+--------+------------------|
+|gethost*                 |-lnsl   |Solaris           |
+|-------------------------+--------+------------------|
+|inet_aton                |-lresolv|Solaris           |
+|-------------------------+--------+------------------|
+|nanosleep, sem_*, timer_*|-lrt    |Solaris           |
+|-------------------------+--------+------------------|
+|openpty                  |-lutil  |Linux             |
++-----------------------------------------------------+
 
-  * help during the installation of a package
+To fix these linker errors, it is often sufficient to say LIBS.OperatingSystem+
+= -lfoo to the package Makefile and then say bmake clean; bmake.
 
-The INTERACTIVE_STAGE definition is provided to notify the pkgsrc mechanism of
-an interactive stage which will be needed, and this should be set in the
-package's Makefile, e.g.:
+17.5. Fixing problems in the install phase
 
-    INTERACTIVE_STAGE=      build
+17.5.1. Creating needed directories
 
-Multiple interactive stages can be specified:
+The BSD-compatible install supplied with some operating systems cannot create
+more than one directory at a time. As such, you should call ${INSTALL_*_DIR}
+like this:
 
-    INTERACTIVE_STAGE=      configure install
+    ${INSTALL_DATA_DIR} ${PREFIX}/dir1
+    ${INSTALL_DATA_DIR} ${PREFIX}/dir2
 
-17.5.2. Handling licenses
+You can also just append "dir1 dir2" to the INSTALLATION_DIRS variable, which
+will automatically do the right thing.
 
-A package may be covered by a license which the user has or has not agreed to
-accept. For these cases, pkgsrc contains a mechanism to note that a package is
-covered by a particular license, and the package cannot be built unless the
-user has accepted the license. (Installation of binary packages are not
-currently subject to this mechanism.) Packages with licenses that are either
-Open Source according to the Open Source Initiative or Free according to the
-Free Software Foundation will not be marked with a license tag. Packages with
-licenses that have not been determined to meet either definition will be marked
-with a license tag referring to the license. This will prevent building unless
-pkgsrc is informed that the license is acceptable, and enables displaying the
-license.
+17.5.2. Where to install documentation
 
-The license tag mechanism is intended to address copyright-related issues
-surrounding building, installing and using a package, and not to address
-redistribution issues (see RESTRICTED and NO_SRC_ON_FTP, etc.). However, the
-above definition of licenses for which tags are not needed implies that
-packages with redistribution restrictions should have tags.
+Documentation should be installed into ${PREFIX}/share/doc/${PKGBASE} or $
+{PREFIX}/share/doc/${PKGNAME} (the latter includes the version number of the
+package).
 
-Denoting that a package is covered by a particular license is done by placing
-the license in pkgsrc/licenses and setting the LICENSE variable to a string
-identifying the license, e.g. in graphics/xv:
-
-    LICENSE=        xv-license
-
-When trying to build, the user will get a notice that the package is covered by
-a license which has not been accepted:
-
-    % make
-    ===> xv-3.10anb9 has an unacceptable license: xv-license.
-    ===>     To view the license, enter "/usr/bin/make show-license".
-    ===>     To indicate acceptance, add this line to your /etc/mk.conf:
-    ===>     ACCEPTABLE_LICENSES+=xv-license
-    *** Error code 1
-
-The license can be viewed with make show-license, and if it is considered
-appropriate, the line printed above can be added to /etc/mk.conf to indicate
-acceptance of the particular license:
-
-    ACCEPTABLE_LICENSES+=xv-license
-
-When adding a package with a new license, the license text should be added to
-pkgsrc/licenses for displaying. A list of known licenses can be seen in this
-directory as well as by looking at the list of (commented out)
-ACCEPTABLE_LICENSES variable settings in pkgsrc/mk/defaults/mk.conf.
-
-The use of LICENSE=shareware, LICENSE=no-commercial-use, and similar language
-is deprecated because it does not crisply refer to a particular license text.
-Another problem with such usage is that it does not enable a user to denote
-acceptance of the license for a single package without accepting the same
-license text for another package. In particular, this can be inappropriate when
-e.g. one accepts a particular license to indicate to pkgsrc that a fee has been
-paid.
-
-17.6. Fixing problems in the install phase
-
-17.6.1. Installing score files
+17.5.3. Installing score files
 
 Certain packages, most of them in the games category, install a score file that
 allows all users on the system to record their highscores. In order for this to
@@ -5679,13 +5806,13 @@ SETGIDGAME=YES will set all the other variables accordingly.
 A package should therefor never hard code file ownership or access permissions
 but rely on INSTALL_GAME and INSTALL_GAME_DATA to set these correctly.
 
-17.6.2. Packages containing perl scripts
+17.5.4. Packages containing perl scripts
 
 If your package contains interpreted perl scripts, set REPLACE_PERL to ensure
 that the proper interpreter path is set. REPLACE_PERL should contain a list of
 scripts, relative to WRKSRC, that you want adjusted.
 
-17.6.3. Packages with hardcoded paths to other interpreters
+17.5.5. Packages with hardcoded paths to other interpreters
 
 Your package may also contain scripts with hardcoded paths to other
 interpreters besides (or as well as) perl. To correct the full pathname to the
@@ -5702,7 +5829,7 @@ Note
 
 Before March 2006, these variables were called _REPLACE.* and _REPLACE_FILES.*.
 
-17.6.4. Packages installing perl modules
+17.5.6. Packages installing perl modules
 
 Makefiles of packages providing perl5 modules should include the Makefile
 fragment ../../lang/perl5/module.mk. It provides a do-configure target for the
@@ -5722,7 +5849,7 @@ three locations in which perl5 modules may be installed, and may be used by
 perl5 packages that don't have a packlist. These three variables are also
 substituted for in the PLIST.
 
-17.6.5. Packages installing info files
+17.5.7. Packages installing info files
 
 Some packages install info files or use the "makeinfo" or "install-info"
 commands. INFO_FILES should be defined in the package Makefile so that INSTALL
@@ -5757,7 +5884,7 @@ message. The script overriding makeinfo logs a message and according to the
 value of TEXINFO_REQD either runs the appropriate makeinfo command or exit on
 error.
 
-17.6.6. Packages installing man pages
+17.5.8. Packages installing man pages
 
 Many packages install manual pages. The man pages are installed under ${PREFIX}
 /${PKGMANDIR} which is /usr/pkg/man by default. PKGMANDIR defaults to "man".
@@ -5783,7 +5910,7 @@ use of --mandir, you can set GNU_CONFIGURE_MANDIR as needed.
 See Section 11.5, "Man page compression" for information on installation of
 compressed manual pages.
 
-17.6.7. Packages installing GConf2 data files
+17.5.9. Packages installing GConf2 data files
 
 If a package installs .schemas or .entries files, used by GConf2, you need to
 take some extra steps to make sure they get registered in the database:
@@ -5810,7 +5937,7 @@ take some extra steps to make sure they get registered in the database:
     .entries files installed by the package, if any. Names must not contain any
     directories in them.
 
-17.6.8. Packages installing scrollkeeper data files
+17.5.10. Packages installing scrollkeeper data files
 
 If a package installs .omf files, used by scrollkeeper, you need to take some
 extra steps to make sure they get registered in the database:
@@ -5826,7 +5953,7 @@ extra steps to make sure they get registered in the database:
  3. Remove the share/omf directory from the PLIST. It will be handled by
     scrollkeeper.
 
-17.6.9. Packages installing X11 fonts
+17.5.11. Packages installing X11 fonts
 
 If a package installs font files, you will need to rebuild the fonts database
 in the directory where they get installed at installation and deinstallation
@@ -5840,7 +5967,7 @@ Note that you should not create new directories for fonts; instead use the
 standard ones to avoid that the user needs to manually configure his X server
 to find them.
 
-17.6.10. Packages installing GTK2 modules
+17.5.12. Packages installing GTK2 modules
 
 If a package installs GTK2 immodules or loaders, you need to take some extra
 steps to get them registered in the GTK2 database properly:
@@ -5863,7 +5990,7 @@ steps to get them registered in the GTK2 database properly:
  5. Check the PLIST and remove any entries under the libdata/gtk-2.0 directory,
     as they will be handled automatically.
 
-17.6.11. Packages installing SGML or XML data
+17.5.13. Packages installing SGML or XML data
 
 If a package installs SGML or XML data files that need to be registered in
 system-wide catalogs (like DTDs, sub-catalogs, etc.), you need to take some
@@ -5889,7 +6016,7 @@ extra steps:
     (specifically, arguments recognized by the 'add' action). Note that you
     will normally not use this variable.
 
-17.6.12. Packages installing extensions to the MIME database
+17.5.14. Packages installing extensions to the MIME database
 
 If a package provides extensions to the MIME database by installing .xml files
 inside ${PREFIX}/share/mime/packages, you need to take some extra steps to
@@ -5910,7 +6037,7 @@ ensure that the database is kept consistent with respect to these new files:
  3. Remove any share/mime/* directories from the PLIST. They will be handled by
     the shared-mime-info package.
 
-17.6.13. Packages using intltool
+17.5.15. Packages using intltool
 
 If a package uses intltool during its build, include the ../../textproc/
 intltool/buildlink3.mk file, which forces it to use the intltool package
@@ -5920,7 +6047,7 @@ This tracks intltool's build-time dependencies and uses the latest available
 version; this way, the package benefits of any bug fixes that may have appeared
 since it was released.
 
-17.6.14. Packages installing startup scripts
+17.5.16. Packages installing startup scripts
 
 If a package contains a rc.d script, it won't be copied into the startup
 directory by default, but you can enable it, by adding the option
@@ -5928,7 +6055,7 @@ PKG_RCD_SCRIPTS=YES in /etc/mk.conf. This option will copy the scripts into /
 etc/rc.d when a package is installed, and it will automatically remove the
 scripts when the package is deinstalled.
 
-17.6.15. Packages installing TeX modules
+17.5.17. Packages installing TeX modules
 
 If a package installs TeX packages into the texmf tree, the ls-R database of
 the tree needs to be updated.
@@ -5954,7 +6081,7 @@ into PKG_LOCALTEXMFPREFIX, not PKG_TEXMFPREFIX.
  3. Make sure that none of ls-R databases are included in PLIST, as they will
     be removed only by the teTeX-bin package.
 
-17.7. Feedback to the author
+17.6. Feedback to the author
 
 If you have found any bugs in the package you make available, if you had to do
 special steps to make it run under NetBSD or if you enhanced the software in
@@ -6204,6 +6331,9 @@ pkgsrc-users mailing list.
 20.4. What is the difference between BUILDLINK_LDFLAGS, BUILDLINK_LDADD and
     BUILDLINK_LIBS?
 20.5. Why does make show-var VARNAME=BUILDLINK_PREFIX.foo say it's empty?
+20.6. What does ${MASTER_SITE_SOURCEFORGE:=package/} mean? I don't understand
+    the := inside it.
+20.7. Which mailing lists are there for package developers?
 
 20.1. What is the difference between MAKEFLAGS, .MAKEFLAGS and MAKE_FLAGS?
 
@@ -6236,6 +6366,33 @@ pkgsrc-users mailing list.
       "wrapper" phase and later. To "simulate" the wrapper phase, append
       PKG_PHASE=wrapper to the above command.
 
+20.6. What does ${MASTER_SITE_SOURCEFORGE:=package/} mean? I don't understand
+      the := inside it.
+
+      The := is not really an assignment operator, like you might expect at
+      first sight. Instead, it is a degenerate form of ${LIST:old_string=
+      new_string}, which is documented in the make(1) man page and which you
+      may have seen as in ${SRCS:.c=.o}. In the case of MASTER_SITE_*,
+      old_string is the empty string and new_string is package/. That's where
+      the : and the = fall together.
+
+20.7. Which mailing lists are there for package developers?
+
+      tech-pkg
+
+          This is a list for technical discussions related to pkgsrc
+          development, e.g. soliciting feedback for changes to pkgsrc
+          infrastructure, proposed new features, questions related to porting
+          pkgsrc to a new platform, advice for maintaining a package, patches
+          that affect many packages, help requests moved from pkgsrc-users when
+          an infrastructure bug is found, etc.
+
+      pkgsrc-bugs
+
+          All bug reports in category "pkg" sent with send-pr(1) appear here.
+          Please do not report your bugs here directly; use one of the other
+          mailing lists.
+
 Part III. The pkgsrc infrastructure internals
 
 This part of the guide deals with everything from the infrastructure that is
@@ -6251,10 +6408,11 @@ Table of Contents
         21.1.1. At load time
         21.1.2. At runtime
 
-    21.2. Designing interfaces for Makefile fragments
+    21.2. How can variables be specified?
+    21.3. Designing interfaces for Makefile fragments
 
-        21.2.1. Procedures with parameters
-        21.2.2. Actions taken on behalf of parameters
+        21.3.1. Procedures with parameters
+        21.3.2. Actions taken on behalf of parameters
 
 22. Regression tests
 
@@ -6279,10 +6437,11 @@ Table of Contents
     21.1.1. At load time
     21.1.2. At runtime
 
-21.2. Designing interfaces for Makefile fragments
+21.2. How can variables be specified?
+21.3. Designing interfaces for Makefile fragments
 
-    21.2.1. Procedures with parameters
-    21.2.2. Actions taken on behalf of parameters
+    21.3.1. Procedures with parameters
+    21.3.2. Actions taken on behalf of parameters
 
 The pkgsrc infrastructure consists of many small Makefile fragments. Each such
 fragment needs a properly specified interface. This chapter explains how such
@@ -6332,13 +6491,19 @@ After all the files have been loaded, the values of the variables cannot be
 changed anymore. Variables that are used in the shell commands are expanded at
 this point.
 
-21.2. Designing interfaces for Makefile fragments
+21.2. How can variables be specified?
+
+There are many ways in which the definition and use of a variable can be
+restricted in order to detect bugs and violations of the (mostly unwritten)
+policies. See the pkglint developer's documentation for further details.
+
+21.3. Designing interfaces for Makefile fragments
 
 Most of the .mk files fall into one of the following classes. Cases where a
 file falls into more than one class should be avoided as it often leads to
 subtle bugs.
 
-21.2.1. Procedures with parameters
+21.3.1. Procedures with parameters
 
 In a traditional imperative programming language some of the .mk files could be
 described as procedures. They take some input parameters and?after inclusion?
@@ -6365,7 +6530,7 @@ Examples for procedures are mk/bsd.options.mk and mk/buildlink3/bsd.builtin.mk.
 To express that the parameters are evaluated at load time, they should be
 assigned using the := operator, which should be used only for this purpose.
 
-21.2.2. Actions taken on behalf of parameters
+21.3.2. Actions taken on behalf of parameters
 
 Action files take some input parameters and may define runtime variables. They
 shall not define loadtime variables. There are action files that are included
