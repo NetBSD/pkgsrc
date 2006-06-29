@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/06/21 22:58:04 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/06/29 12:14:43 joerg Exp $
 #
 
 DISTNAME=		glabels-2.0.2
@@ -14,7 +14,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_DIRS+=		gnome2-1.5
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config msgfmt
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
