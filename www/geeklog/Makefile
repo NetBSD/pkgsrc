@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2006/06/18 08:34:05 taca Exp $
+# $NetBSD: Makefile,v 1.5 2006/06/30 17:16:27 taca Exp $
 #
 
 DISTNAME=	geeklog-${VER}
 PKGNAME=	geeklog-${VER:S/sr/./}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.geeklog.net/filemgmt/upload_dir/
 
