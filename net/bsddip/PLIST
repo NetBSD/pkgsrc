@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:55:13 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.1 2006/06/30 16:17:27 tron Exp $
 sbin/dip
 sbin/diplogin
 lib/dip/dialout.dip.sample
