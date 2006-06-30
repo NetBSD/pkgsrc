@@ -1,7 +1,28 @@
-$NetBSD: patch-ab,v 1.1 2003/12/15 17:02:22 agc Exp $
+$NetBSD: patch-ab,v 1.2 2006/06/30 18:25:43 tron Exp $
 
 --- ipw.c.orig	1999-03-30 08:04:12.000000000 +0100
-+++ ipw.c	2003-12-15 16:58:12.000000000 +0000
++++ ipw.c	2006-06-30 19:22:53.000000000 +0100
+@@ -257,7 +257,7 @@
+ static int my_opterr = 1;	/* if error message should be printed */
+ static int my_optind = 1;	/* index into parent argv vector */
+ static int my_optopt;		/* character checked for validity */
+-static int optreset;		/* reset getopt */
++static int my_optreset;		/* reset getopt */
+ static char *my_optarg;		/* argument associated with option */
+ 
+ #define	BADCH	(int)'?'
+@@ -275,9 +275,9 @@
+   static char *place = EMSG;	/* option letter processing */
+   register char *oli = NULL;	/* option letter list index */
+ 
+-  if (optreset || ! *place)
++  if (my_optreset || ! *place)
+     {				/* update scanning pointer */
+-      optreset = 0;
++      my_optreset = 0;
+       if (my_optind >= nargc || *(place = nargv[my_optind]) != '-')
+ 	{
+ 	  place = EMSG;
 @@ -782,7 +782,7 @@
    if (!p)
      return NULL;
