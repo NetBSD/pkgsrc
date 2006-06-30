@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2005/12/04 02:00:56 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2006/06/30 13:03:27 tron Exp $
 
 --- config.h.in.orig	2005-12-04 01:33:41.000000000 +0000
 +++ config.h.in
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.6 2005/12/04 02:00:56 joerg Exp $
  #else
  #  ifdef _AIX
         #pragma alloca
-+#  elif defined(__DragonFly__) || defined(__FreeBSD__)
++#  elif defined(__DragonFly__) || defined(__FreeBSD__) || defined(__NetBSD__)
 +#      include <stdlib.h>
  #  else
  #    ifndef alloca /* predefined by HP cc +Olibcalls */
