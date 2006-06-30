@@ -1,7 +1,7 @@
 <!--
 	Creates entities for each chapter in the pkgsrc book.
 
-	$NetBSD: chapters.ent,v 1.12 2006/06/01 08:39:03 rillig Exp $
+	$NetBSD: chapters.ent,v 1.13 2006/06/30 08:58:16 rillig Exp $
 -->
 
 <!ENTITY chap.intro			SYSTEM "introduction.xml">
@@ -32,6 +32,7 @@
 <!-- The pkgsrc infrastructure -->
 <!ENTITY chap.infr.design		SYSTEM "infr.design.xml">
 <!ENTITY chap.regression		SYSTEM "regression.xml">
+<!ENTITY chap.infr.bulk			SYSTEM "infr.bulk.xml">
 <!ENTITY chap.porting			SYSTEM "porting.xml">
 
 <!-- appendix -->
