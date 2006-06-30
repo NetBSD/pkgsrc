@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2006/06/06 14:53:06 salo Exp $
+# $NetBSD: Makefile,v 1.3 2006/06/30 16:20:23 salo Exp $
 
 DISTNAME=		suse_gdk-pixbuf-${SUSE_VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE100}
 DISTFILES=		${RPMFILES}
@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for gdk-pixbuf binaries
 
-DEPENDS+=		suse_x11>=${SUSE_VERSION}:../../emulators/suse100_x11
+DEPENDS+=		suse_gtk-${SUSE_VERSION}{,nb*}:../../emulators/suse100_gtk
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
