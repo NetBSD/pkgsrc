@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.types.xml,v 1.11 2006/06/30 12:34:44 rillig Exp $ -->
+<!-- $NetBSD: chap.types.xml,v 1.12 2006/06/30 12:46:30 rillig Exp $ -->
 
 <chapter id="types">
 <title>The &pkglint; type system</title>
@@ -519,6 +519,18 @@
 	<para>TODO: What are the general properties of
 	<quote>good</quote> and <quote>bad</quote> variables? How can it
 	be decided of which kind a certain variable is?</para>
+
+	<para>For most lists, the only valid operation is to append
+	something at the end. Therefore it is good practice to warn if a
+	list is assigned using another operator that
+	<literal>+=</literal>. For <varname>SUBST_CLASSES</varname> this
+	fits perfectly. But for <varname>SUBST_FILES.*</varname> it
+	doesn't. Usually all occurences of a
+	<varname>SUBST_FILES.*</varname> variable occur in the same
+	file, and there should be no other file modifying these
+	variables. Therefore it is better to use the
+	<literal>=</literal> operator for the first of the
+	assignments.</para>
 
 </sect1>
 </chapter>
