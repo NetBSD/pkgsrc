@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2006/04/12 19:57:45 joerg Exp $
+# $NetBSD: Makefile.common,v 1.10 2006/06/30 09:56:38 joerg Exp $
 
 DISTNAME=      	rt-2-0-15
 CATEGORIES=	devel
@@ -45,7 +45,7 @@ REPLACE_PERL+=	tools/insertdata \
 
 .if (${RT_DB_TYPE} == "mysql")
 PKGNAME=	${DISTNAME:S/-/./g:S/./-mysql-/}
-DEPENDS+=	p5-DBD-mysql-*:../../databases/p5-DBD-mysql
+DEPENDS+=	p5-DBD-mysql-[0-9]*:../../databases/p5-DBD-mysql
 RT_DB_HOST?=	localhost
 RT_DB_PORT?=
 RT_DB_PATH?=	${PREFIX}/lib/mysql
@@ -53,7 +53,7 @@ RT_DB_DBA?=	root
 RT_DB_DBA_PASSWORD?=
 .elif (${RT_DB_TYPE} == "Pg")
 PKGNAME=	${DISTNAME:S/-/./g:S/./-pgsql-/}
-DEPENDS+=	p5-DBD-postgresql-*:../../databases/p5-DBD-postgresql
+DEPENDS+=	p5-DBD-postgresql-[0-9]*:../../databases/p5-DBD-postgresql
 RT_DB_HOST?=
 RT_DB_PORT?=
 RT_DB_PATH?=	${PREFIX}/lib/postgresql
@@ -65,26 +65,26 @@ RT_DB_DBA_PASSWORD?=
 #
 .endif
 
-DEPENDS+=	p5-Digest-MD5-*:../../security/p5-Digest-MD5
-DEPENDS+=	p5-Storable-*:../../devel/p5-Storable
+DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
+DEPENDS+=	p5-Storable-[0-9]*:../../devel/p5-Storable
 DEPENDS+=	p5-DBI>=1.18:../../databases/p5-DBI
 DEPENDS+=	p5-DBIx-DataSource>=0.02:../../databases/p5-DBIx-Datasource
 DEPENDS+=	p5-DBIx-SearchBuilder>=0.48:../../databases/p5-DBIx-SearchBuilder
-DEPENDS+=	p5-libwww-*:../../www/p5-libwww
-DEPENDS+=	p5-MLDBM-*:../../databases/p5-MLDBM
+DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
+DEPENDS+=	p5-MLDBM-[0-9]*:../../databases/p5-MLDBM
 DEPENDS+=	p5-Params-Validate>=0.02:../../devel/p5-Params-Validate
 DEPENDS+=	p5-HTML-Mason>=1.02:../../www/p5-HTML-Mason
-DEPENDS+=	p5-CGI-*:../../www/p5-CGI
-DEPENDS+=	p5-libapreq-*:../../www/p5-libapreq
+DEPENDS+=	p5-CGI-[0-9]*:../../www/p5-CGI
+DEPENDS+=	p5-libapreq-[0-9]*:../../www/p5-libapreq
 DEPENDS+=	p5-Apache-Session>=1.53:../../www/p5-Apache-Session
-DEPENDS+=	p5-TimeDate-*:../../time/p5-TimeDate
+DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 DEPENDS+=	p5-MIME-tools>=5.108:../../mail/p5-MIME-tools
 DEPENDS+=	p5-MailTools>=1.20:../../mail/p5-MailTools
-DEPENDS+=	p5-Tie-IxHash-*:../../devel/p5-Tie-IxHash
-DEPENDS+=	p5-Text-Wrapper-*:../../textproc/p5-Text-Wrapper
-DEPENDS+=	p5-Text-Template-*:../../textproc/p5-Text-Template
-DEPENDS+=	p5-FreezeThaw-*:../../devel/p5-FreezeThaw
-DEPENDS+=	p5-Log-Dispatch-*:../../devel/p5-Log-Dispatch
+DEPENDS+=	p5-Tie-IxHash-[0-9]*:../../devel/p5-Tie-IxHash
+DEPENDS+=	p5-Text-Wrapper-[0-9]*:../../textproc/p5-Text-Wrapper
+DEPENDS+=	p5-Text-Template-[0-9]*:../../textproc/p5-Text-Template
+DEPENDS+=	p5-FreezeThaw-[0-9]*:../../devel/p5-FreezeThaw
+DEPENDS+=	p5-Log-Dispatch-[0-9]*:../../devel/p5-Log-Dispatch
 DEPENDS+=	p5-Apache-DBI-[0-9]*:../../databases/p5-Apache-DBI
 
 pre-configure:
