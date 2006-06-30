@@ -1,0 +1,34 @@
+$NetBSD: patch-ag,v 1.1 2006/06/30 17:16:27 taca Exp $
+
+Give first aid to file uploader security problem.
+
+--- public_html/fckeditor/fckconfig.js.orig	2006-05-28 18:41:40.000000000 +0900
++++ public_html/fckeditor/fckconfig.js
+@@ -160,17 +160,17 @@ FCKConfig.ImageDlgHideAdvanced    = fals
+ 
+ FCKConfig.FlashDlgHideAdvanced    = false ;
+ 
+-FCKConfig.LinkBrowser = true ;
++FCKConfig.LinkBrowser = false ;
+ FCKConfig.LinkBrowserURL = FCKConfig.BasePath + 'filemanager/browser/mcpuk/browser.html?Connector=connectors/php/connector.php' ;
+ FCKConfig.LinkBrowserWindowWidth    = screen.width * 0.7 ;    // 70%
+ FCKConfig.LinkBrowserWindowHeight    = screen.height * 0.7 ;    // 70%
+ 
+-FCKConfig.ImageBrowser = true ;
++FCKConfig.ImageBrowser = false ;
+ FCKConfig.ImageBrowserURL = FCKConfig.BasePath + 'filemanager/browser/mcpuk/browser.html?Type=Image&Connector=connectors/php/connector.php' ;
+ FCKConfig.ImageBrowserWindowWidth  = screen.width * 0.7 ;    // 70% ;
+ FCKConfig.ImageBrowserWindowHeight = screen.height * 0.7 ;    // 70% ;
+ 
+-FCKConfig.FlashBrowser = true ;
++FCKConfig.FlashBrowser = false ;
+ FCKConfig.FlashBrowserURL = FCKConfig.BasePath + 'filemanager/browser/mcpuk/browser.html?Type=Flash&Connector=connectors/php/connector.php' ;
+ FCKConfig.FlashBrowserWindowWidth  = screen.width * 0.7 ;    //70% ;
+ FCKConfig.FlashBrowserWindowHeight = screen.height * 0.7 ;    //70% ;
+@@ -198,4 +198,4 @@ FCKConfig.SmileyColumns = 8 ;
+ FCKConfig.SmileyWindowWidth        = 320 ;
+ FCKConfig.SmileyWindowHeight    = 240 ;
+ 
+-if( window.console ) window.console.log( 'Config is loaded!' ) ;    // @Packager.Compactor.RemoveLine
+\ No newline at end of file
++if( window.console ) window.console.log( 'Config is loaded!' ) ;    // @Packager.Compactor.RemoveLine
