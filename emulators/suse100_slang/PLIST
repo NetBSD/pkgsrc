@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/18 14:43:27 salo Exp $
-@exec cd %D/${EMULSUBDIR}/usr/lib && ln -sf libslang-utf8.so.1 libslang.so.1
-@unexec ${RM} -f %D/${EMULSUBDIR}/usr/lib/libslang.so.1
+@comment $NetBSD: PLIST,v 1.2 2006/06/30 16:20:24 salo Exp $
+@exec ${LN} -sf %D/${EMULSUBDIR}/usr/lib/libslang-utf8.so.1 %D/${EMULSUBDIR}/usr/lib/libslang.so.1
