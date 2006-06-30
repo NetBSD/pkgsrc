@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/06/15 13:26:42 taca Exp $
+$NetBSD: distinfo,v 1.2 2006/06/30 17:16:27 taca Exp $
 
 SHA1 (geeklog-1.4.0sr3.tar.gz) = e2d2fd41285c0cdad1e09cc935bcdb200179846f
 RMD160 (geeklog-1.4.0sr3.tar.gz) = 70d6b625d61fe954626a29a4860d4a59ce155391
@@ -9,3 +9,4 @@ SHA1 (patch-ac) = a976a962b28a2c40db4d0ef78d4f8472d1ece5ef
 SHA1 (patch-ad) = 674392480791cd99e21982ff61b81257d4e2e765
 SHA1 (patch-ae) = b7e533ff938f192ac08938cff6615ece9e37bd2f
 SHA1 (patch-af) = 2976c0bdb5f892521172a7e4d2e44a66ab386ef5
+SHA1 (patch-ag) = 176a1c279d9cf002dcf01abdce396a95c414dee7
