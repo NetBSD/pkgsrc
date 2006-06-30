@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:08:39 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/30 07:11:00 joerg Exp $
 #
 
 DISTNAME=	acme085_linux
@@ -12,7 +12,7 @@ MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.esw-heim.tu-clausthal.de/~marco/smorbrod/acme/acme.html
 COMMENT=	Cross assembler for 6502, 65c02, and 65816
 
-BUILD_DEPENDS+=	unzip-*:../../archivers/unzip
+USE_TOOLS+=	unzip
 
 WRKSRC=		${WRKTOP}/sources
 LIBDIST=	lib002.zip
