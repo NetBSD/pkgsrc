@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2006/04/23 00:12:40 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/06/30 09:54:42 joerg Exp $
 #
 
 DISTNAME=		netdisco-0.94_with_mibs
 PKGNAME=		netdisco-0.94
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=netdisco/}
 
@@ -11,16 +11,16 @@ MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.netdisco.org/
 COMMENT=		Open Source web-based network management tool
 
-DEPENDS+=		p5-SNMP-Info-*:../../net/p5-SNMP-Info
-DEPENDS+=		p5-Apache-DBI-*:../../databases/p5-Apache-DBI
-DEPENDS+=		p5-Apache-Session-*:../../www/p5-Apache-Session
-DEPENDS+=		p5-DBD-postgresql-*:../../databases/p5-DBD-postgresql
-DEPENDS+=		p5-DB_File-*:../../databases/p5-DB_File
-DEPENDS+=		p5-MasonX-Request-WithApacheSession-*:../../www/p5-MasonX-Request-WithApacheSession
-DEPENDS+=		p5-HTML-Parser-*:../../www/p5-HTML-Parser
-DEPENDS+=		p5-Graph-*:../../devel/p5-Graph
-DEPENDS+=		p5-GraphViz-*:../../graphics/p5-GraphViz
-DEPENDS+=		p5-Compress-Zlib-*:../../devel/p5-Compress-Zlib
+DEPENDS+=		p5-SNMP-Info-[0-9]*:../../net/p5-SNMP-Info
+DEPENDS+=		p5-Apache-DBI-[0-9]*:../../databases/p5-Apache-DBI
+DEPENDS+=		p5-Apache-Session-[0-9]*:../../www/p5-Apache-Session
+DEPENDS+=		p5-DBD-postgresql-[0-9]*:../../databases/p5-DBD-postgresql
+DEPENDS+=		p5-DB_File-[0-9]*:../../databases/p5-DB_File
+DEPENDS+=		p5-MasonX-Request-WithApacheSession-[0-9]*:../../www/p5-MasonX-Request-WithApacheSession
+DEPENDS+=		p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
+DEPENDS+=		p5-Graph-[0-9]*:../../devel/p5-Graph
+DEPENDS+=		p5-GraphViz-[0-9]*:../../graphics/p5-GraphViz
+DEPENDS+=		p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
