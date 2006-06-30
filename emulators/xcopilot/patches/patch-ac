@@ -1,8 +1,22 @@
-$NetBSD: patch-ac,v 1.1.1.1 1999/02/05 07:38:15 nathanw Exp $
+$NetBSD: patch-ac,v 1.2 2006/06/30 22:14:49 tron Exp $
 
---- mc68k/memory.c.orig	Wed Feb  3 14:11:09 1999
-+++ mc68k/memory.c	Fri Feb  5 01:28:39 1999
-@@ -377,6 +377,7 @@
+--- mc68k/memory.c.orig	1998-08-25 05:52:56.000000000 +0100
++++ mc68k/memory.c	2006-06-30 23:09:38.000000000 +0100
+@@ -346,9 +346,11 @@
+ 			       0xff, 0xff, 0x00 };
+ 
+     const unsigned char *bootsign = _bootsign, *bootmask = _bootmask;
+-    
++    char *p;
++
++    p = (const char *)rom;
+     while ((*bootsign & *bootmask) == *bootsign)
+-	if ((*((char *)rom)++ & *bootmask++) != *bootsign++)
++	if ((*p++ & *bootmask++) != *bootsign++)
+ 	    return 0;
+ 
+     return 1;
+@@ -377,6 +379,7 @@
    int i;
    char *rombuf;
    char *resetv;
@@ -10,7 +24,7 @@ $NetBSD: patch-ac,v 1.1.1.1 1999/02/05 07:38:15 nathanw Exp $
    int f;
    struct stat st;
    
-@@ -405,12 +406,24 @@
+@@ -405,12 +408,24 @@
      rom_size = pow_of_2;
    }
    
@@ -39,7 +53,7 @@ $NetBSD: patch-ac,v 1.1.1.1 1999/02/05 07:38:15 nathanw Exp $
    if (!nocheck) {
    /* Check if the reset vector looks plausible */
      resetv = (char *)rommemory +
-@@ -430,23 +443,15 @@
+@@ -430,23 +445,15 @@
  	offset = resetv - find_entrypoint((char *)rommemory);
        }
  
