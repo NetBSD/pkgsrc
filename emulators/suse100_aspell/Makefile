@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/18 14:08:33 salo Exp $
+# $NetBSD: Makefile,v 1.2 2006/06/30 16:20:23 salo Exp $
 
 DISTNAME=		suse_aspell-${SUSE_VERSION}
+PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE100}
 DISTFILES=		${RPMFILES}
@@ -10,7 +11,7 @@ HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for Aspell library
 
 .if !defined(USE_NATIVE_LINUX)
-DEPENDS+=		suse_base>=${SUSE_VERSION}:../../emulators/suse100_base
+DEPENDS+=		suse_base-${SUSE_VERSION}{,nb*}:../../emulators/suse100_base
 .endif
 
 EXTRACT_ONLY=		# empty

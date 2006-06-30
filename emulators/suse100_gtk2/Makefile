@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/06/06 14:53:06 salo Exp $
+# $NetBSD: Makefile,v 1.5 2006/06/30 16:20:23 salo Exp $
 
 DISTNAME=		suse_gtk2-${SUSE_VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE100}
 DISTFILES=		${RPMFILES}
@@ -10,12 +10,12 @@ MAINTAINER=		tonio@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for GTK2 binaries
 
-DEPENDS+=		suse_fontconfig>=${SUSE_VERSION}:../../emulators/suse100_fontconfig
-DEPENDS+=		suse_freetype2>=${SUSE_VERSION}:../../emulators/suse100_freetype2
-DEPENDS+=		suse_libjpeg>=${SUSE_VERSION}:../../emulators/suse100_libjpeg
-DEPENDS+=		suse_libpng>=${SUSE_VERSION}:../../emulators/suse100_libpng
-DEPENDS+=		suse_libtiff>=${SUSE_VERSION}:../../emulators/suse100_libtiff
-DEPENDS+=		suse_x11>=${SUSE_VERSION}:../../emulators/suse100_x11
+DEPENDS+=		suse_fontconfig-${SUSE_VERSION}{,nb*}:../../emulators/suse100_fontconfig
+DEPENDS+=		suse_freetype2-${SUSE_VERSION}{,nb*}:../../emulators/suse100_freetype2
+DEPENDS+=		suse_libjpeg-${SUSE_VERSION}{,nb*}:../../emulators/suse100_libjpeg
+DEPENDS+=		suse_libpng-${SUSE_VERSION}{,nb*}:../../emulators/suse100_libpng
+DEPENDS+=		suse_libtiff-${SUSE_VERSION}{,nb*}:../../emulators/suse100_libtiff
+DEPENDS+=		suse_x11-${SUSE_VERSION}{,nb*}:../../emulators/suse100_x11
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
