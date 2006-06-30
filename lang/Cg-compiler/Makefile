@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2006/05/22 22:22:03 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/06/30 13:47:06 salo Exp $
 #
 
 DISTNAME=	CgLinux-1.3.0408-0400
 PKGNAME=	Cg-compiler-1.3beta2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	ftp://download.nvidia.com/developer/cg/Cg_1.3/Linux/
 
@@ -19,7 +19,7 @@ NO_BUILD=	yes
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Linux"
-DEPENDS+=	suse_base>=7.3:../../emulators/suse_base
+DEPENDS+=	suse_base>=7.3:../../emulators/${SUSE_DIR_PREFIX}_base
 .endif
 
 INSTALLATION_DIRS=	bin lib man/man3 share
