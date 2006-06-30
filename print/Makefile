@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2006/06/11 06:15:43 minskim Exp $
+# $NetBSD: Makefile,v 1.159 2006/06/30 13:44:05 salo Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -10,7 +10,6 @@ SUBDIR+=	a2ps
 SUBDIR+=	abc2ps
 SUBDIR+=	abcm2ps
 SUBDIR+=	acroread
-SUBDIR+=	acroread3
 SUBDIR+=	acroread5
 SUBDIR+=	acroread7
 SUBDIR+=	adobeps-win
