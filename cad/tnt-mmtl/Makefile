@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/05/13 03:44:23 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/30 07:05:16 joerg Exp $
 #
 
 DISTNAME=	tnt-1.2.2
@@ -11,7 +11,7 @@ MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://mmtl.sourceforge.net/
 COMMENT=	Multilayer Multiconductor Transmission Line 2-D and 2.5-D simulator
 
-BUILD_DEPENDS+=	latex2html-*:../../textproc/latex2html
+BUILD_DEPENDS+=	latex2html-[0-9]*:../../textproc/latex2html
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
