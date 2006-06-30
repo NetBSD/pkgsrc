@@ -1,0 +1,51 @@
+<!-- $NetBSD: infr.bulk.xml,v 1.1 2006/06/30 08:58:16 rillig Exp $ -->
+
+<chapter id="infr.bulk">
+<title>The implementation of the pkgsrc bulk builds</title>
+
+<sect1 id="infr.bulk.what">
+<title>Deciding which packages to build</title>
+
+<note><para>This is not yet implemented.</para></note>
+
+	<para>Some of the pkgsrc packages are not usable in a certain
+	build configuration, either because of platform limitations
+	(processor, operating system) or because the build is done by an
+	unprivileged user. This section lists all the conditions that
+	influence whether a package is excluded from a bulk
+	build.</para>
+
+	<itemizedlist>
+
+	<listitem><para><varname>ONLY_FOR_PLATFORM</varname> or
+	<varname>NOT_FOR_PLATFORM</varname> may be defined in the
+	package <filename>Makefile</filename>.</para></listitem>
+
+	<listitem><para><varname>ONLY_FOR_COMPILER</varname> or
+	<varname>NOT_FOR_COMPILER</varname> may be defined in the
+	package <filename>Makefile</filename>.</para></listitem>
+
+	<listitem><para><varname>NOT_FOR_UNPRIVILEGED</varname> (does
+	not exist yet) may be defined in the package
+	<filename>Makefile</filename> (only affects bulk builds in
+	unprivileged mode).</para></listitem>
+
+	<listitem><para><varname>LICENSE</varname> may be defined in the
+	package <filename>Makefile</filename>. This may be overridden by
+	defining <varname>ACCEPTABLE_LICENSES</varname> in
+	<filename>mk.conf</filename>.</para></listitem>
+
+	<listitem><para>The package vulnerability database may list the
+	package as vulnerable. This may be overridden by defining 
+	<varname>ALLOW_VULNERABLE_PACKAGES</varname> in
+	<filename>mk.conf</filename>.</para></listitem>
+
+	<listitem><para>Packages that define
+	<varname>INTERACTIVE_STAGE</varname> cannot be built by the bulk
+	builds, which are by definition
+	non-interactive.</para></listitem>
+
+	</itemizedlist>
+
+</sect1>
+</chapter>
