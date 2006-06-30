@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.622 2006/06/09 22:11:31 jlam Exp $
+# $NetBSD: Makefile,v 1.623 2006/06/30 16:17:27 tron Exp $
 #
 
 COMMENT=	Networking tools
@@ -42,6 +42,7 @@ SUBDIR+=	boinc3-seti
 SUBDIR+=	bounce
 SUBDIR+=	bpalogin
 SUBDIR+=	bridged
+SUBDIR+=	bsddip
 SUBDIR+=	btget
 SUBDIR+=	btpd
 SUBDIR+=	bug-buddy
@@ -67,7 +68,6 @@ SUBDIR+=	delegate
 SUBDIR+=	dgd
 SUBDIR+=	dhid
 SUBDIR+=	dhisd
-SUBDIR+=	dip
 SUBDIR+=	djbdns
 SUBDIR+=	djbdns-run
 SUBDIR+=	dlint
