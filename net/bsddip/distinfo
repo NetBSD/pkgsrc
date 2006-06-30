@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2006/06/30 16:13:47 tron Exp $
+$NetBSD: distinfo,v 1.1 2006/06/30 16:17:27 tron Exp $
 
 SHA1 (bsddip-1.02.tar.Z) = f938ba32fcbb958c6a9632502d6728cb0a8bac4c
 RMD160 (bsddip-1.02.tar.Z) = 799b899cee5ef1b8a49c8a0929a2c4f0d17bcbab
