@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.types.xml,v 1.10 2006/05/16 22:18:17 rillig Exp $ -->
+<!-- $NetBSD: chap.types.xml,v 1.11 2006/06/30 12:34:44 rillig Exp $ -->
 
 <chapter id="types">
 <title>The &pkglint; type system</title>
@@ -484,6 +484,41 @@
 	<literal>!=</literal> operator.</para></listitem></varlistentry>
 
 	</variablelist>
+
+</sect1>
+<sect1 id="types.kinds">
+<title>Different interpretation of the same data types</title>
+
+	<para>As explained above, there are internal lists and external
+	lists in pkgsrc. But that is not the only attribute that a list
+	can have. They also differ in the way they are defined, which
+	files may access them, and what it means to append to append a
+	value to it.</para>
+
+	<para>For example, <varname>NOT_FOR_PLATFORM</varname> is a list
+	that every file may append to without leading to unexpected
+	behavior. Compare this with
+	<varname>ONLY_FOR_PLATFORM</varname>, which should only be set
+	in a single place throughout pkgsrc. Let's say in the package
+	<filename>Makefile</filename> it is set to
+	<literal>NetBSD-*-*</literal>, because this file's author knows
+	for sure that the package is only usable on NetBSD. Now when
+	some <filename>*.mk</filename> file from a dependency package
+	adds <literal>DragonFly-*-*</literal> to it, the intent of the
+	package <filename>Makefile</filename> is undermined by the
+	dependency package, because now it is possible to build the
+	package on DragonFly, too.</para>
+
+	<para>The same problem arises with the various variables that
+	can be either <literal>yes</literal> or undefined. They should
+	always be chosen so that two definitions in different files
+	don't undermine each other. A good example is
+	<varname>USE_LIBTOOL</varname>, a bad example is
+	<varname>NO_BUILD</varname>.</para>
+
+	<para>TODO: What are the general properties of
+	<quote>good</quote> and <quote>bad</quote> variables? How can it
+	be decided of which kind a certain variable is?</para>
 
 </sect1>
 </chapter>
