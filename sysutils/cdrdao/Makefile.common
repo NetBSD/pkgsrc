@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2006/05/29 15:22:29 drochner Exp $
+# $NetBSD: Makefile.common,v 1.5 2006/06/30 01:44:55 joerg Exp $
 
 DISTNAME=		cdrdao-${CDRDAO_VER}
 CATEGORIES=		sysutils
@@ -27,6 +27,9 @@ LDFLAGS+=		-L../paranoia
 
 # override ARCH to avoid picking up a bad ${ARCH} during the build
 MAKE_ENV+=      ARCH=""
+
+post-extract:
+	${CP} ${WRKSRC}/scsilib/RULES/os-freebsd.id ${WRKSRC}/scsilib/RULES/os-dragonfly.id
 
 post-configure:
 	cd ${WRKSRC}/scsilib/RULES ; \
