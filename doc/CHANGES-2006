@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.599 2006/06/30 17:59:14 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.600 2006/06/30 22:50:09 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3189,3 +3189,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated multimedia/xine-lib to 1.0.3anb10 [tron 2006-06-30]
 	Updated www/geeklog to 1.4.0.3nb2 [taca 2006-06-30]
 	Updated misc/openoffice2-bin to 2.0.3 [ghen 2006-06-30]
+	Updated math/R-DAAG to 0.79 [markd 2006-06-30]
+	Updated math/R-GRASS to 0.3.2 [markd 2006-06-30]
+	Updated math/R-pixmap to 0.4.4 [markd 2006-06-30]
