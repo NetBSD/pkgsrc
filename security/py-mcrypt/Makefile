@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:10:46 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/06/30 11:37:56 joerg Exp $
 #
 
 DISTNAME=	python-mcrypt-1.1
@@ -13,6 +13,7 @@ COMMENT=	Python interface to mcrypt library
 
 PYBINMODULE=    yes
 PYDISTUTILSPKG= yes
+PYTHON_VERSIONS_ACCEPTED=	24 23 22
 
 .include "../../lang/python/extension.mk"
 .include "../../security/libmcrypt/buildlink3.mk"
