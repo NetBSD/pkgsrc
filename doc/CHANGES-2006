@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.598 2006/06/30 17:17:27 taca Exp $
+$NetBSD: CHANGES-2006,v 1.599 2006/06/30 17:59:14 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3188,3 +3188,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed www/asWedit [salo 2006-06-30]
 	Updated multimedia/xine-lib to 1.0.3anb10 [tron 2006-06-30]
 	Updated www/geeklog to 1.4.0.3nb2 [taca 2006-06-30]
+	Updated misc/openoffice2-bin to 2.0.3 [ghen 2006-06-30]
