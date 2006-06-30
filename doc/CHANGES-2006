@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.595 2006/06/30 13:45:00 salo Exp $
+$NetBSD: CHANGES-2006,v 1.596 2006/06/30 14:01:46 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3184,3 +3184,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/png to 1.2.12 [wiz 2006-06-29]
 	Updated emulators/vice to 1.19 [dillo 2006-06-29]
 	Removed print/acroread3 [salo 2006-06-30]
+	Removed www/opera-acroread3 [salo 2006-06-30]
+	Removed www/asWedit [salo 2006-06-30]
