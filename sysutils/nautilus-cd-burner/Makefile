@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/05/10 16:40:03 drochner Exp $
+# $NetBSD: Makefile,v 1.41 2006/06/30 02:54:11 joerg Exp $
 #
 
 DISTNAME=	nautilus-cd-burner-2.14.1
@@ -51,5 +51,6 @@ BUILDLINK_API_DEPENDS.nautilus+=	nautilus>=2.13.4
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
+.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
