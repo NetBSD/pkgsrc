@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/03/04 21:28:52 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/06/30 09:51:01 joerg Exp $
 #
 
 DISTNAME=	gzip-1.2.4b
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,7 +12,7 @@ HOMEPAGE=	http://www.gnu.org/software/gzip/gzip.html
 COMMENT=	The "meta-package" for the GZIP compression utility
 
 DEPENDS+=	gzip-base-1.2.4b{,nb[0-9]*}:../../archivers/gzip-base
-DEPENDS+=	gzip-info-1.2.4*:../../archivers/gzip-info
+DEPENDS+=	gzip-info-1.2.4a{,nb[0-9]*}:../../archivers/gzip-info
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
