@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.41 2006/06/15 16:16:12 joerg Exp $
+# $NetBSD: pyversion.mk,v 1.42 2006/06/30 07:15:30 joerg Exp $
 
 .if !defined(PYTHON_PYVERSION_MK)
 PYTHON_PYVERSION_MK=	defined
@@ -102,7 +102,7 @@ PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python15}:${PYPKGSRCDIR}
 PYVERSSUFFIX=	1.5
 PYPKGPREFIX=	py15
 .if !defined(PYTHON_DISTUTILS_BOOTSTRAP)
-BUILD_DEPENDS+=	py15-distutils-*:../../devel/py-distutils
+BUILD_DEPENDS+=	py15-distutils-[0-9]*:../../devel/py-distutils
 .endif
 .else
 # force an error
