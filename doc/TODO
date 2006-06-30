@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5128 2006/06/29 22:59:05 dillo Exp $
+$NetBSD: TODO,v 1.5129 2006/06/30 14:02:23 tron Exp $
 
 Suggested new packages
 ======================
@@ -1260,7 +1260,6 @@ Suggested package updates
 	o xfe-0.72
 	o xfmail-1.5.4
 	o xfstt-1.7
-	o xine-lib-1.1.1
 	o xkbset-0.5
 	o xlispstat-3.52.20
 	o xm7-303
