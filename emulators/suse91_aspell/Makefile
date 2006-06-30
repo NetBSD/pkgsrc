@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2006/06/26 15:10:30 salo Exp $
+# $NetBSD: Makefile,v 1.10 2006/06/30 15:37:22 salo Exp $
 
 DISTNAME=		suse_aspell-${SUSE_VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SUSE91}
 DISTFILES=		${RPMFILES}
@@ -10,7 +10,7 @@ MAINTAINER=		jdolecek@NetBSD.org
 HOMEPAGE=		http://www.suse.com/
 COMMENT=		Linux compatibility package for Aspell library
 
-DEPENDS+=		suse_base>=${SUSE_VERSION}:../../emulators/suse91_base
+DEPENDS+=		suse_base-${SUSE_VERSION}{,nb*}:../../emulators/suse91_base
 
 EXTRACT_ONLY=		# empty
 NO_BUILD=		YES
