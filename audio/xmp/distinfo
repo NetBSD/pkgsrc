@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2005/12/11 20:20:34 joerg Exp $
+$NetBSD: distinfo,v 1.9 2006/06/30 12:54:37 tron Exp $
 
 SHA1 (xmp-2.0.4.tar.bz2) = 35c1578f2f6728aa2ec92f34ada050e328694167
 RMD160 (xmp-2.0.4.tar.bz2) = c1c0c3af63d1f3e43fe6b47ca55725e0922fe2f1
@@ -13,3 +13,7 @@ SHA1 (patch-ag) = 431875a9a1889e0c63620c04a78473116c090fae
 SHA1 (patch-ah) = d6119a1d0ef33bf58bd443b2f18d72cb9ea1956a
 SHA1 (patch-ai) = 7882313a892f2043a051fdc2b49161ae209824ba
 SHA1 (patch-aj) = 5364b5135e8e2bd60bbf6cbcd00adac99611f2ce
+SHA1 (patch-ak) = 93a9abfc66a526d52bd62ece5b9d8cd727f816e7
+SHA1 (patch-al) = 902a0c5311f560d5bf01e3946d785bca932131d3
+SHA1 (patch-am) = 601b55de29ca76ab4671fc3470181544b5770f1a
+SHA1 (patch-an) = bd021634555751a78cc1f5af61aa83c4d1e3287f
