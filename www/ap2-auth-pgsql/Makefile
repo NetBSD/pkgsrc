@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/04 21:30:56 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/06/30 00:25:31 joerg Exp $
 
 DISTNAME=		mod_auth_pgsql-2.0.3
 PKGNAME=		ap2-auth-pgsql-2.0.3
@@ -24,7 +24,7 @@ do-build:
 		-lpq ${DISTNAME:C/-[^-]*$//}.c
 
 do-install:
-	(cd ${WRKSRC} && ${APXS} -A -i ${DISTNAME:C/-[^-]*$//}.la)
+	(cd ${WRKSRC} && ${APXS} -i ${DISTNAME:C/-[^-]*$//}.la)
 	#${MKDIR} ${DOCSDIR}
 	#${INSTALL_DATA} ${WRKSRC}/mod_auth_pgsql.html ${DOCSDIR}
 
