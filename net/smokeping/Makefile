@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2006/04/22 09:22:13 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2006/06/30 10:07:50 joerg Exp $
 
 DISTNAME=	smokeping-2.0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://people.ee.ethz.ch/~oetiker/webtools/smokeping/pub/
 
@@ -36,11 +36,11 @@ BUILD_DEFS+=	USE_SPEEDY
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_INET6) && ${USE_INET6} == "YES"
-DEPENDS+=	p5-Socket6-*:../../net/p5-Socket6
+DEPENDS+=	p5-Socket6-[0-9]*:../../net/p5-Socket6
 .endif
 
 .if defined(USE_SPEEDY) && ${USE_SPEEDY} == "YES"
-DEPENDS+=	SpeedyCGI-*:../../www/SpeedyCGI
+DEPENDS+=	SpeedyCGI-[0-9]*:../../www/SpeedyCGI
 INTERP=		speedy
 .else
 INTERP=		perl
