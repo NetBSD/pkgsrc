@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2006/06/15 20:40:16 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/06/30 15:38:53 ghen Exp $
 
-PKGNAME=		openoffice-bin-2.0.2
+PKGNAME=		openoffice-bin-${OO_RELEASE}
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/2.0.2/}
+MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_RELEASE}/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		mrauch@NetBSD.org
@@ -15,6 +15,7 @@ RPM2PKG=		${PREFIX}/sbin/rpm2pkg
 RPM2PKGARGS=		-d ${PREFIX} -f ${WRKDIR}/PLIST.nouniq -s 1
 
 OO_VER=			2.0
+OO_RELEASE=		2.0.3
 PLIST_SUBST+=		VER=${OO_VER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
@@ -47,33 +48,33 @@ ARCH=	${MACHINE_ARCH:C/i[3-6]86/i386/g}
 .    if !exists(/emul/svr4/usr/lib/ld.so)
 PKG_FAIL_REASON+=	'${PKGNAME} requires Solaris libraries - see compat_svr4(8)'
 .    endif
-DISTNAME=	OOo_2.0.2_SolarisSparc_install
-WRKSRC=		${WRKDIR}/OOB680_m5_native_packed-1_en-US.9011/packages
+DISTNAME=	OOo_${OO_RELEASE}_SolarisSparc_install
+WRKSRC=		${WRKDIR}/OOC680_m7_native_packed-1_en-US.9044/packages
 .  elif ${MACHINE_ARCH} == "i386"
-DISTNAME=	OOo_2.0.2_LinuxIntel_install
-WRKSRC=		${WRKDIR}/OOB680_m5_native_packed-1_en-US.9011/RPMS
+DISTNAME=	OOo_${OO_RELEASE}_LinuxIntel_install
+WRKSRC=		${WRKDIR}/OOC680_m7_native_packed-1_en-US.9044/RPMS
 .  endif
 .endif
 
 .if ${OPSYS} == "DragonFly"
-DISTNAME=	OOo_2.0.2_LinuxIntel_install
-WRKSRC=		${WRKDIR}/OOB680_m5_native_packed-1_en-US.9011/RPMS
+DISTNAME=	OOo_${OO_RELEASE}_LinuxIntel_install
+WRKSRC=		${WRKDIR}/OOC680_m7_native_packed-1_en-US.9044/RPMS
 .endif
 
 .if ${OPSYS} == "Linux"
 .if ${ARCH} == "i386"
-DISTNAME=	OOo_2.0.2_LinuxIntel_install
-WRKSRC=		${WRKDIR}/OOB680_m5_native_packed-1_en-US.9011/RPMS
+DISTNAME=	OOo_${OO_RELEASE}_LinuxIntel_install
+WRKSRC=		${WRKDIR}/OOC680_m7_native_packed-1_en-US.9044/RPMS
 .endif
 .endif
 
 .if ${OPSYS} == "SunOS"
 .if ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64"
-DISTNAME=	OOo_2.0.2_SolarisSparc_install
-WRKSRC=		${WRKDIR}/OOB680_m5_native_packed-1_en-US.9011/packages
+DISTNAME=	OOo_${OO_RELEASE}_SolarisSparc_install
+WRKSRC=		${WRKDIR}/OOC680_m7_native_packed-1_en-US.9044/packages
 .elif ${MACHINE_ARCH} == "i386"
-DISTNAME=	OOo_2.0.2_Solarisx86_install
-WRKSRC=		${WRKDIR}/OOB680_m5_native_packed-1_en-US.9011/packages
+DISTNAME=	OOo_${OO_RELEASE}_Solarisx86_install
+WRKSRC=		${WRKDIR}/OOC680_m7_native_packed-1_en-US.9044/packages
 .endif
 .endif
 
