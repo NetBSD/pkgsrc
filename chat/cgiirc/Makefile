@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2006/06/11 09:40:43 adrianp Exp $
+# $NetBSD: Makefile,v 1.12 2006/06/30 10:06:36 joerg Exp $
 
 DISTNAME=	cgiirc-0.5.9
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cgiirc/}
 
@@ -21,7 +22,7 @@ CONF_FILES+=	${PREFIX}/share/examples/cgiirc/cgiirc.config \
 .include "../../mk/bsd.prefs.mk"
 
 .if defined(USE_INET6) && !empty(USE_INET6:M[Yy][Ee][Ss])
-DEPENDS+=	p5-INET6-*:../../net/p5-INET6
+DEPENDS+=	p5-INET6-[0-9]*:../../net/p5-INET6
 .endif
 
 REPLACE_PERL+=	client-perl.cgi irc.cgi nph-irc.cgi docs/decode.pl \
