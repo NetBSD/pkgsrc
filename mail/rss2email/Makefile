@@ -1,26 +1,22 @@
-# $NetBSD: Makefile,v 1.12 2006/04/09 17:01:55 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2006/07/01 19:32:40 schmonz Exp $
 #
 
-DISTNAME=		rss2email-${RVER}
+DISTNAME=		rss2email-2.59
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.py
-DISTFILES=		r2e-${SVER}.sh ${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		http://www.aaronsw.com/2002/rss2email/
+HOMEPAGE=		http://rss2email.infogami.com/
 COMMENT=		Get RSS feeds emailed to you
 
 DEPENDS+=		${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
 DEPENDS+=		${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
 
-SVER=			2.0
-RVER=			2.57
-
-DIST_SUBDIR=		${PKGNAME_NOREV}
-
+WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
 PYTHON_PATCH_SCRIPTS=	*.py
+PYTHON_VERSIONS_ACCEPTED?=	24 23 22
 
 SUBST_CLASSES+=		bin
 SUBST_STAGE.bin=	do-configure
@@ -35,10 +31,7 @@ INSTALLATION_DIRS=	bin man/man1
 
 do-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${CP} -R ${DISTDIR}/${DIST_SUBDIR} ${WRKSRC};			\
-	cd ${WRKSRC};							\
-	${MV} rss2email-${RVER}.py rss2email.py;			\
-	${MV} r2e-${SVER}.sh r2e
+	${CP} ${DISTDIR}/${DISTFILES:Q} ${WRKSRC}/rss2email.py
 
 do-install:
 	cd ${WRKSRC} &&							\
