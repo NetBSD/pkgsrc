@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.60 2006/07/01 09:26:41 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.61 2006/07/01 12:51:30 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -54,6 +54,12 @@
       <itemizedlist>
 
 	<listitem>
+	  <para>When fetching the distfiles, some packages require user
+	  interaction such as entering username/password or accepting a
+	  license on a web page.</para>
+	</listitem>
+
+	<listitem>
 	  <para>When extracting the distfiles, some packages may ask for passwords.</para>
 	</listitem>
 
@@ -83,16 +89,6 @@
 <programlisting>
     INTERACTIVE_STAGE=      configure install
 </programlisting>
-
-	<para>You should not use <varname>INTERACTIVE_STAGE</varname>
-	when fetching the distfiles needs to be done manually. See <xref
-	linkend="fixes.fetch"/> instead. The reason for this is that
-	fetching the distfiles is only needed once, where the phases in
-	<varname>INTERACTIVE_STAGE</varname> are needed everytime when
-	building the package. This distinction is useful for the bulk
-	builds, where the <quote>interactive</quote> distfiles can be
-	downloaded in advance by a human, and then the build is
-	completely non-interactive.</para>
 
     </sect2>
 
