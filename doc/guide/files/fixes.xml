@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.59 2006/06/30 09:41:39 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.60 2006/07/01 09:26:41 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -89,7 +89,10 @@
 	linkend="fixes.fetch"/> instead. The reason for this is that
 	fetching the distfiles is only needed once, where the phases in
 	<varname>INTERACTIVE_STAGE</varname> are needed everytime when
-	building the package.</para>
+	building the package. This distinction is useful for the bulk
+	builds, where the <quote>interactive</quote> distfiles can be
+	downloaded in advance by a human, and then the build is
+	completely non-interactive.</para>
 
     </sect2>
 
