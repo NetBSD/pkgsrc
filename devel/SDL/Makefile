@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2006/06/15 09:45:05 adam Exp $
+# $NetBSD: Makefile,v 1.66 2006/07/01 18:18:17 jmmv Exp $
 
 DISTNAME=	SDL-1.2.10
+PKGREVISION=	1
 CATEGORIES=	devel games
 MASTER_SITES=	http://www.libsdl.org/release/
 
@@ -14,6 +15,8 @@ USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+CONFIGURE_ARGS+=	--disable-sdl-dlopen
 
 .include "options.mk"
 
