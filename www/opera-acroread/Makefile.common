@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2006/06/30 13:57:16 salo Exp $
+# $NetBSD: Makefile.common,v 1.7 2006/07/01 20:34:11 salo Exp $
 
 PKGNAME=		${DISTNAME:C|MozillaFirebird|firefox|}
 CATEGORIES=		www print
@@ -27,4 +27,5 @@ do-install:
 	${LN} -s ${PREFIX}/${ACROREAD}/${ACRO_SUBDIR}/${PLATFORM}/nppdf.so \
 		${NS_PLUGINS_DIR}/nppdf.so
 
+.include "../../emulators/suse_linux/Makefile.application"
 .include "../../mk/bsd.pkg.mk"
