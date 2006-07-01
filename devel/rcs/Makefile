@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/03/04 21:29:29 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/07/01 22:03:12 heinz Exp $
 #
 
 DISTNAME=		rcs-5.7
@@ -13,7 +13,9 @@ COMMENT=		GNU Revision Control System - version control software
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"
 DEPENDS+=		diffutils>=2.7:../../devel/diffutils
-CONFIGURE_ARGS+=	--with-diffutils=gdiff
+CONFIGURE_ARGS+=	--with-diffutils
+# the native diff/diff3 is not sufficient for rcs
+TOOLS_PLATFORM.diff=	${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}diff
 .endif
 
 GNU_CONFIGURE=		yes
