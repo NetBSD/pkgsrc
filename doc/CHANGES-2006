@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.602 2006/07/01 18:18:56 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.603 2006/07/01 19:09:29 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3194,3 +3194,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated math/R-pixmap to 0.4.4 [markd 2006-06-30]
 	Updated www/geeklog to 1.4.0.4 [taca 2006-07-01]
 	Updated devel/SDL to 1.2.10nb1 [jmmv 2006-07-01]
+	Updated devel/SDL to 1.2.10nb2 [jmmv 2006-07-01]
