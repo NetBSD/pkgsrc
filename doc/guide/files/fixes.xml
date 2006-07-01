@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.61 2006/07/01 12:51:30 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.62 2006/07/01 23:48:16 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -46,7 +46,7 @@
     </sect2>
 
     <sect2 id="user-interaction">
-      <title>User interaction when building the package</title>
+      <title>User interaction</title>
 
       <para>Occasionally, packages require interaction from the user, and this can be
         in a number of ways:</para>
@@ -559,9 +559,76 @@ Changes to the PLIST
     <para>PKGREVISION must also be incremented when dependencies have ABI
     changes.</para>
     </sect2>
-  </sect1>
 
+<sect2 id="fixes.subst">
+<title>Substituting variable text in the package files (the SUBST framework)</title>
 
+	<para>When you want to replace the same text in multiple files
+	or when the replacement text varies, patches alone cannot help.
+	This is where the SUBST framework comes in. It provides an
+	easy-to-use interface for replacing text in files.
+	Example:</para>
+
+<programlisting>
+    SUBST_CLASSES+=                 fix-paths
+    SUBST_STAGE.fix-paths=          pre-configure
+    SUBST_MESSAGE.fix-paths=        Fixing absolute paths.
+    SUBST_FILES.fix-paths=          src/*.c
+    SUBST_FILES.fix-paths+=         scripts/*.sh
+    SUBST_SED.fix-paths=            -e 's,"/usr/local,"${PREFIX},g'
+    SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'
+</programlisting>
+
+	<para><varname>SUBST_CLASSES</varname> is a list of identifiers
+	that are used to identify the different SUBST blocks that are
+	defined. The SUBST framework is heavily used by pkgsrc, so it is
+	important to always use the <literal>+=</literal> operator with
+	this variable. Otherwise some substitutions may be
+	skipped.</para>
+
+	<para>The remaining variables of each SUBST block are
+	parameterized with the identifier from the first line
+	(<literal>fix-paths</literal> in this case.) They can be seen as
+	parameters to a function call.</para>
+
+	<para><varname>SUBST_STAGE.*</varname> specifies the stage at
+	which the replacement will take place. All combinations of
+	<literal>pre-</literal>, <literal>do-</literal> and
+	<literal>post-</literal> together with a phase name are
+	possible, though only few are actually used. Most commonly used
+	are <literal>post-patch</literal> and
+	<literal>pre-configure</literal>. Of these two,
+	<literal>pre-configure</literal> should be preferred because
+	then it is possible to run <command>bmake patch</command> and
+	have the state after applying the patches but before making any
+	other changes. This is especially useful when you are debugging
+	a package in order to create new patches for it. Similarly,
+	<literal>post-build</literal> is preferred over
+	<literal>pre-install</literal>, because the install phase should
+	generally be kept as simple as possible. When you use
+	<literal>post-build</literal>, you have the same files in the
+	working directory that will be installed later, so you can check
+	if the substitution has succeeded.</para>
+
+	<para><varname>SUBST_MESSAGE.*</varname> is an optional text
+	that is printed just before the substitution is done.</para>
+
+	<para><varname>SUBST_FILES.*</varname> is the list of shell
+	globbing patterns that specifies the files in which the
+	substitution will take place. The patterns are interpreted
+	relatively to the <varname>WRKSRC</varname> directory.</para>
+
+	<para><varname>SUBST_SED.*</varname> is a list of arguments to
+	&man.sed.1; that specify the actual substitution. Every sed
+	command should be prefixed with <literal>-e</literal>, so that
+	all SUBST blocks look uniform.</para>
+
+	<para>There are some more variables, but they are so seldomly
+	used that they are only documented in the
+	<filename>mk/subst.mk</filename>.</para>
+
+</sect2>
+</sect1>
 <sect1 id="fixes.fetch">
 <title>Fixing problems in the <emphasis>fetch</emphasis> phase</title>
 
