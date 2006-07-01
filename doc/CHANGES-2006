@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.604 2006/07/01 19:35:11 schmonz Exp $
+$NetBSD: CHANGES-2006,v 1.605 2006/07/01 20:22:29 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3198,3 +3198,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/rss2email to 2.59 [schmonz 2006-07-01]
 	Updated mail/nullmailer to 1.03 [schmonz 2006-07-01]
 	Updated mail/getmail to 4.6.3 [schmonz 2006-07-01]
+	Removed www/firefox-bin-acroread3 [salo 2006-07-01]
