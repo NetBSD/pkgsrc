@@ -14,7 +14,7 @@ The pkgsrc Developers
 
 Copyright   1994-2006 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.19 2006/06/01 08:39:03 rillig Exp $
+$NetBSD: pkgsrc.xml,v 1.20 2006/06/30 08:58:16 rillig Exp $
 
 Abstract
 
@@ -261,6 +261,8 @@ II. The pkgsrc developer's guide
             17.1.10. Handling packages with security problems
             17.1.11. How to handle incrementing versions when fixing an
                 existing package
+            17.1.12. Substituting variable text in the package files (the SUBST
+                framework)
 
         17.2. Fixing problems in the fetch phase
 
@@ -338,10 +340,14 @@ III. The pkgsrc infrastructure internals
             22.3.1. Overridable functions
             22.3.2. Helper functions
 
-    23. Porting pkgsrc
+    23. The implementation of the pkgsrc bulk builds
 
-        23.1. Porting pkgsrc to a new operating system
-        23.2. Adding support for a new compiler
+        23.1. Deciding which packages to build
+
+    24. Porting pkgsrc
+
+        24.1. Porting pkgsrc to a new operating system
+        24.2. Adding support for a new compiler
 
 A. A simple example package: bison
 
@@ -370,7 +376,7 @@ C. Directory layout of the pkgsrc FTP server
 
 D. Editing guidelines for the pkgsrc guide
 
-    D.1. Targets
+    D.1. Make targets
     D.2. Procedure
 
 Chapter 1. What is pkgsrc?
@@ -2635,6 +2641,8 @@ Table of Contents
         17.1.10. Handling packages with security problems
         17.1.11. How to handle incrementing versions when fixing an existing
             package
+        17.1.12. Substituting variable text in the package files (the SUBST
+            framework)
 
     17.2. Fixing problems in the fetch phase
 
@@ -3234,6 +3242,9 @@ reason for appending "" is explained below.
 
 10.2.3. Passing variables to a shell command
 
+Sometimes you may want to print an arbitrary string. There are many ways to get
+it wrong and only few that can handle every nastiness.
+
     STRING=         foo bar <    > * `date` $$HOME ' "
     EXT_LIST=       string=${STRING:Q} x=second\ item
 
@@ -3243,6 +3254,7 @@ reason for appending "" is explained below.
             echo "${STRING:Q}"              # 3
             echo ${STRING:Q}                # 4
             echo x${STRING:Q} | sed 1s,.,,  # 5
+            printf "%s\\n" ${STRING:Q}""    # 6
             env ${EXT_LIST} /bin/sh -c 'echo "$$string"; echo "$$x"'
 
 Example 1 leads to a syntax error in the shell, as the characters are just
@@ -3261,6 +3273,9 @@ long as you can guarantee that your input does not start with a dash, this form
 is appropriate.
 
 Example 5 handles even the case of a leading dash correctly.
+
+Example 6 also works with every string and is the light-weight solution, since
+it does not involve a pipe, which has its own problems.
 
 The EXT_LIST does not need to be quoted because the quoting has already been
 done when adding elements to the list.
@@ -5072,6 +5087,8 @@ Table of Contents
     17.1.10. Handling packages with security problems
     17.1.11. How to handle incrementing versions when fixing an existing
         package
+    17.1.12. Substituting variable text in the package files (the SUBST
+        framework)
 
 17.2. Fixing problems in the fetch phase
 
@@ -5145,6 +5162,9 @@ they can be used at load time or only at run time, but it is in preparation.
 
 Occasionally, packages require interaction from the user, and this can be in a
 number of ways:
+
+  * When fetching the distfiles, some packages require user interaction such as
+    entering username/password or accepting a license on a web page.
 
   * When extracting the distfiles, some packages may ask for passwords.
 
@@ -5469,6 +5489,56 @@ Changes or additions to a patch file
 Changes to the PLIST
 
 PKGREVISION must also be incremented when dependencies have ABI changes.
+
+17.1.12. Substituting variable text in the package files (the SUBST framework)
+
+When you want to replace the same text in multiple files or when the
+replacement text varies, patches alone cannot help. This is where the SUBST
+framework comes in. It provides an easy-to-use interface for replacing text in
+files. Example:
+
+    SUBST_CLASSES+=                 fix-paths
+    SUBST_STAGE.fix-paths=          pre-configure
+    SUBST_MESSAGE.fix-paths=        Fixing absolute paths.
+    SUBST_FILES.fix-paths=          src/*.c
+    SUBST_FILES.fix-paths+=         scripts/*.sh
+    SUBST_SED.fix-paths=            -e 's,"/usr/local,"${PREFIX},g'
+    SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'
+
+SUBST_CLASSES is a list of identifiers that are used to identify the different
+SUBST blocks that are defined. The SUBST framework is heavily used by pkgsrc,
+so it is important to always use the += operator with this variable. Otherwise
+some substitutions may be skipped.
+
+The remaining variables of each SUBST block are parameterized with the
+identifier from the first line (fix-paths in this case.) They can be seen as
+parameters to a function call.
+
+SUBST_STAGE.* specifies the stage at which the replacement will take place. All
+combinations of pre-, do- and post- together with a phase name are possible,
+though only few are actually used. Most commonly used are post-patch and
+pre-configure. Of these two, pre-configure should be preferred because then it
+is possible to run bmake patch and have the state after applying the patches
+but before making any other changes. This is especially useful when you are
+debugging a package in order to create new patches for it. Similarly,
+post-build is preferred over pre-install, because the install phase should
+generally be kept as simple as possible. When you use post-build, you have the
+same files in the working directory that will be installed later, so you can
+check if the substitution has succeeded.
+
+SUBST_MESSAGE.* is an optional text that is printed just before the
+substitution is done.
+
+SUBST_FILES.* is the list of shell globbing patterns that specifies the files
+in which the substitution will take place. The patterns are interpreted
+relatively to the WRKSRC directory.
+
+SUBST_SED.* is a list of arguments to sed(1) that specify the actual
+substitution. Every sed command should be prefixed with -e, so that all SUBST
+blocks look uniform.
+
+There are some more variables, but they are so seldomly used that they are only
+documented in the mk/subst.mk.
 
 17.2. Fixing problems in the fetch phase
 
@@ -6423,10 +6493,14 @@ Table of Contents
         22.3.1. Overridable functions
         22.3.2. Helper functions
 
-23. Porting pkgsrc
+23. The implementation of the pkgsrc bulk builds
 
-    23.1. Porting pkgsrc to a new operating system
-    23.2. Adding support for a new compiler
+    23.1. Deciding which packages to build
+
+24. Porting pkgsrc
+
+    24.1. Porting pkgsrc to a new operating system
+    24.2. Adding support for a new compiler
 
 Chapter 21. Design of the pkgsrc infrastructure
 
@@ -6619,18 +6693,53 @@ output_prohibit(regex...)
     () does not match the extended regular expression. If any of the regular
     expressions matches, the test will fail.
 
-Chapter 23. Porting pkgsrc
+Chapter 23. The implementation of the pkgsrc bulk builds
 
 Table of Contents
 
-23.1. Porting pkgsrc to a new operating system
-23.2. Adding support for a new compiler
+23.1. Deciding which packages to build
+
+23.1. Deciding which packages to build
+
+Note
+
+This is not yet implemented.
+
+Some of the pkgsrc packages are not usable in a certain build configuration,
+either because of platform limitations (processor, operating system) or because
+the build is done by an unprivileged user. This section lists all the
+conditions that influence whether a package is excluded from a bulk build.
+
+  * ONLY_FOR_PLATFORM or NOT_FOR_PLATFORM may be defined in the package
+    Makefile.
+
+  * ONLY_FOR_COMPILER or NOT_FOR_COMPILER may be defined in the package
+    Makefile.
+
+  * NOT_FOR_UNPRIVILEGED (does not exist yet) may be defined in the package
+    Makefile (only affects bulk builds in unprivileged mode).
+
+  * LICENSE may be defined in the package Makefile. This may be overridden by
+    defining ACCEPTABLE_LICENSES in mk.conf.
+
+  * The package vulnerability database may list the package as vulnerable. This
+    may be overridden by defining ALLOW_VULNERABLE_PACKAGES in mk.conf.
+
+  * Packages that define INTERACTIVE_STAGE cannot be built by the bulk builds,
+    which are by definition non-interactive.
+
+Chapter 24. Porting pkgsrc
+
+Table of Contents
+
+24.1. Porting pkgsrc to a new operating system
+24.2. Adding support for a new compiler
 
 The pkgsrc system has already been ported to many operating systems, hardware
 architectures and compilers. This chapter explains the necessary steps to make
 pkgsrc even more portable.
 
-23.1. Porting pkgsrc to a new operating system
+24.1. Porting pkgsrc to a new operating system
 
 To port pkgsrc to a new operating system (called MyOS in this example), you
 need to touch the following files:
@@ -6678,7 +6787,7 @@ mk/tools/MyOS.mk
 Now, you should be able to build some basic packages, like lang/perl5, shells/
 bash.
 
-23.2. Adding support for a new compiler
+24.2. Adding support for a new compiler
 
 TODO
 
@@ -7041,12 +7150,12 @@ Appendix D. Editing guidelines for the pkgsrc guide
 
 Table of Contents
 
-D.1. Targets
+D.1. Make targets
 D.2. Procedure
 
 This section contains information on editing the pkgsrc guide itself.
 
-D.1. Targets
+D.1. Make targets
 
 The pkgsrc guide's source code is stored in pkgsrc/doc/guide/files, and several
 files are created from it:
@@ -7055,13 +7164,10 @@ files are created from it:
 
   * pkgsrc/doc/pkgsrc.html
 
-  * http://www.NetBSD.org/Documentation/pkgsrc/: the documentation on the
-    NetBSD website will be built from pkgsrc and kept up to date on the web
-    server itself. This means you must make sure that your changes haven't
-    broken the build!
+  * http://www.NetBSD.org/Documentation/pkgsrc/
 
-  * http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.pdf: PDF version of the
-    pkgsrc guide.
+  * http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.pdf: The PDF version of
+    the pkgsrc guide.
 
   * http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.ps: PostScript version of
     the pkgsrc guide.
@@ -7070,30 +7176,38 @@ D.2. Procedure
 
 The procedure to edit the pkgsrc guide is:
 
-  * Make sure you have the packages needed to re-generate the pkgsrc guide (and
-    other XML-based NetBSD documentation) installed. These are "netbsd-doc" for
-    creating the ASCII and HTML versions, and "netbsd-doc-print" for the
-    PostScript and PDF versions. You will need both packages installed, to make
-    sure documentation is consistent across all formats. The packages can be
-    found in pkgsrc/meta-pkgs/netbsd-doc and pkgsrc/meta-pkgs/netbsd-doc-print.
+ 1. Make sure you have the packages needed to re-generate the pkgsrc guide (and
+    other XML-based NetBSD documentation) installed. These are meta-pkgs/
+    netbsd-doc for creating the ASCII and HTML versions, and meta-pkgs/
+    netbsd-doc-print for the PostScript and PDF versions. You will need both
+    packages installed, to make sure documentation is consistent across all
+    formats.
 
-  * Edit the XML file(s) in pkgsrc/doc/guide/files.
+ 2. Run cd doc/guide to get to the right directory. All further steps will take
+    place here.
 
-  * Run make extract && make do-lint in pkgsrc/doc/guide to check the XML
-    syntax, and fix it if needed.
+ 3. Edit the XML file(s) in files/.
 
-  * Run make in pkgsrc/doc/guide to build the HTML and ASCII version.
+ 4. Run bmake to check the pkgsrc guide for valid XML and to build the final
+    output files. If you get any errors at this stage, you can just edit the
+    files, as there are only symbolic links in the working directory, pointing
+    to the files in files/.
 
-  * If all is well, run make install-doc to put the generated files into pkgsrc
-    /doc.
+ 5. (cd files && cvs commit)
 
-  * cvs commit pkgsrc/doc/guide/files
+ 6. Run bmake clean && bmake to regenerate the output files with the proper RCS
+    Ids.
 
-  * cvs commit -m re-generate pkgsrc/doc/pkgsrc.{html,txt}
+ 7. Run (cd .. && cvs update pkgsrc.*) && bmake install-doc to put the
+    generated files into pkgsrc/doc.
 
-  * Until the webserver on www.NetBSD.org is really updated automatically to
-    pick up changes to the pkgsrc guide automatically, also run make
-    install-htdocs HTDOCSDIR=../../../htdocs (or similar, adjust HTDOCSDIR!).
+ 8. Run (cd .. && cvs commit -m "regenerated." pkgsrc.{html,txt}) to commit the
+    generated documentation.
 
-  * cvs commit htdocs/Documentation/pkgsrc
+ 9. Run (cd ../../../htdocs/Documentation/pkgsrc && cvs update) && bmake
+    install-htdocs to generate all the files for the web server.
+
+10. Run (cd ../../../htdocs/Documentation/pkgsrc && cvs commit -m
+    "regenerated.") to update the files on the web server. If you have added a
+    chapter, don't forget to run cvs add *.html before you commit the files.
 

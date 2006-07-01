@@ -35,7 +35,7 @@
       </h3>
 </div></div>
 <div><p class="copyright">Copyright © 1994-2006 The NetBSD Foundation, Inc</p></div>
-<div><p class="pubdate">$NetBSD: pkgsrc.xml,v 1.19 2006/06/01 08:39:03 rillig Exp $</p></div>
+<div><p class="pubdate">$NetBSD: pkgsrc.xml,v 1.20 2006/06/30 08:58:16 rillig Exp $</p></div>
 <div><div class="abstract">
 <p class="title"><b>Abstract</b></p>
 <p>pkgsrc is a centralized package management system for
@@ -279,6 +279,7 @@
 <dt><span class="sect2"><a href="#undeletable-packages">17.1.9. Packages which should not be deleted, once installed</a></span></dt>
 <dt><span class="sect2"><a href="#security-handling">17.1.10. Handling packages with security problems</a></span></dt>
 <dt><span class="sect2"><a href="#bumping-pkgrevision">17.1.11. How to handle incrementing versions when fixing an existing package</a></span></dt>
+<dt><span class="sect2"><a href="#fixes.subst">17.1.12. Substituting variable text in the package files (the SUBST framework)</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#fixes.fetch">17.2. Fixing problems in the <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
 <dd><dl>
@@ -357,10 +358,12 @@
 <dt><span class="sect2"><a href="#regression.fun.helper">22.3.2. Helper functions</a></span></dt>
 </dl></dd>
 </dl></dd>
-<dt><span class="chapter"><a href="#porting">23. Porting pkgsrc</a></span></dt>
+<dt><span class="chapter"><a href="#infr.bulk">23. The implementation of the pkgsrc bulk builds</a></span></dt>
+<dd><dl><dt><span class="sect1"><a href="#infr.bulk.what">23.1. Deciding which packages to build</a></span></dt></dl></dd>
+<dt><span class="chapter"><a href="#porting">24. Porting pkgsrc</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#porting.opsys">23.1. Porting pkgsrc to a new operating system</a></span></dt>
-<dt><span class="sect1"><a href="#porting.compiler">23.2. Adding support for a new compiler</a></span></dt>
+<dt><span class="sect1"><a href="#porting.opsys">24.1. Porting pkgsrc to a new operating system</a></span></dt>
+<dt><span class="sect1"><a href="#porting.compiler">24.2. Adding support for a new compiler</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="appendix"><a href="#examples">A. A simple example package: bison</a></span></dt>
@@ -392,7 +395,7 @@ source packages</a></span></dt>
 </dl></dd>
 <dt><span class="appendix"><a href="#editing">D. Editing guidelines for the pkgsrc guide</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#targets">D.1. Targets</a></span></dt>
+<dt><span class="sect1"><a href="#targets">D.1. Make targets</a></span></dt>
 <dt><span class="sect1"><a href="#procedure">D.2. Procedure</a></span></dt>
 </dl></dd>
 </dl>
@@ -3071,6 +3074,7 @@ a security check before building any package.  See
 <dt><span class="sect2"><a href="#undeletable-packages">17.1.9. Packages which should not be deleted, once installed</a></span></dt>
 <dt><span class="sect2"><a href="#security-handling">17.1.10. Handling packages with security problems</a></span></dt>
 <dt><span class="sect2"><a href="#bumping-pkgrevision">17.1.11. How to handle incrementing versions when fixing an existing package</a></span></dt>
+<dt><span class="sect2"><a href="#fixes.subst">17.1.12. Substituting variable text in the package files (the SUBST framework)</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#fixes.fetch">17.2. Fixing problems in the <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
 <dd><dl>
@@ -3785,6 +3789,9 @@ a security check before building any package.  See
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="passing-variable-to-shell"></a>10.2.3. Passing variables to a shell command</h3></div></div></div>
+<p>Sometimes you may want to print an arbitrary string. There
+	are many ways to get it wrong and only few that can handle every
+	nastiness.</p>
 <pre class="programlisting">
     STRING=         foo bar &lt;    &gt; * `date` $$HOME ' "
     EXT_LIST=       string=${STRING:Q} x=second\ item
@@ -3795,6 +3802,7 @@ a security check before building any package.  See
             echo "${STRING:Q}"              # 3
             echo ${STRING:Q}                # 4
             echo x${STRING:Q} | sed 1s,.,,  # 5
+            printf "%s\\n" ${STRING:Q}""    # 6
             env ${EXT_LIST} /bin/sh -c 'echo "$$string"; echo "$$x"'
 </pre>
 <p>Example 1 leads to a syntax error in the shell, as the
@@ -3813,6 +3821,9 @@ a security check before building any package.  See
       appropriate.</p>
 <p>Example 5 handles even the case of a leading dash
       correctly.</p>
+<p>Example 6 also works with every string and is the
+      light-weight solution, since it does not involve a pipe, which has
+      its own problems.</p>
 <p>The <code class="varname">EXT_LIST</code> does not need to be quoted
       because the quoting has already been done when adding elements to
       the list.</p>
@@ -6024,6 +6035,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <dt><span class="sect2"><a href="#undeletable-packages">17.1.9. Packages which should not be deleted, once installed</a></span></dt>
 <dt><span class="sect2"><a href="#security-handling">17.1.10. Handling packages with security problems</a></span></dt>
 <dt><span class="sect2"><a href="#bumping-pkgrevision">17.1.11. How to handle incrementing versions when fixing an existing package</a></span></dt>
+<dt><span class="sect2"><a href="#fixes.subst">17.1.12. Substituting variable text in the package files (the SUBST framework)</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#fixes.fetch">17.2. Fixing problems in the <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
 <dd><dl>
@@ -6110,6 +6122,9 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <p>Occasionally, packages require interaction from the user, and this can be
         in a number of ways:</p>
 <div class="itemizedlist"><ul type="disc">
+<li><p>When fetching the distfiles, some packages require user
+	  interaction such as entering username/password or accepting a
+	  license on a web page.</p></li>
 <li><p>When extracting the distfiles, some packages may ask for passwords.</p></li>
 <li><p>help to configure the package before it is built</p></li>
 <li><p>help during the build process</p></li>
@@ -6511,6 +6526,65 @@ Changes to the PLIST
 <p>PKGREVISION must also be incremented when dependencies have ABI
     changes.</p>
 </div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="fixes.subst"></a>17.1.12. Substituting variable text in the package files (the SUBST framework)</h3></div></div></div>
+<p>When you want to replace the same text in multiple files
+	or when the replacement text varies, patches alone cannot help.
+	This is where the SUBST framework comes in. It provides an
+	easy-to-use interface for replacing text in files.
+	Example:</p>
+<pre class="programlisting">
+    SUBST_CLASSES+=                 fix-paths
+    SUBST_STAGE.fix-paths=          pre-configure
+    SUBST_MESSAGE.fix-paths=        Fixing absolute paths.
+    SUBST_FILES.fix-paths=          src/*.c
+    SUBST_FILES.fix-paths+=         scripts/*.sh
+    SUBST_SED.fix-paths=            -e 's,"/usr/local,"${PREFIX},g'
+    SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'
+</pre>
+<p><code class="varname">SUBST_CLASSES</code> is a list of identifiers
+	that are used to identify the different SUBST blocks that are
+	defined. The SUBST framework is heavily used by pkgsrc, so it is
+	important to always use the <code class="literal">+=</code> operator with
+	this variable. Otherwise some substitutions may be
+	skipped.</p>
+<p>The remaining variables of each SUBST block are
+	parameterized with the identifier from the first line
+	(<code class="literal">fix-paths</code> in this case.) They can be seen as
+	parameters to a function call.</p>
+<p><code class="varname">SUBST_STAGE.*</code> specifies the stage at
+	which the replacement will take place. All combinations of
+	<code class="literal">pre-</code>, <code class="literal">do-</code> and
+	<code class="literal">post-</code> together with a phase name are
+	possible, though only few are actually used. Most commonly used
+	are <code class="literal">post-patch</code> and
+	<code class="literal">pre-configure</code>. Of these two,
+	<code class="literal">pre-configure</code> should be preferred because
+	then it is possible to run <span><strong class="command">bmake patch</strong></span> and
+	have the state after applying the patches but before making any
+	other changes. This is especially useful when you are debugging
+	a package in order to create new patches for it. Similarly,
+	<code class="literal">post-build</code> is preferred over
+	<code class="literal">pre-install</code>, because the install phase should
+	generally be kept as simple as possible. When you use
+	<code class="literal">post-build</code>, you have the same files in the
+	working directory that will be installed later, so you can check
+	if the substitution has succeeded.</p>
+<p><code class="varname">SUBST_MESSAGE.*</code> is an optional text
+	that is printed just before the substitution is done.</p>
+<p><code class="varname">SUBST_FILES.*</code> is the list of shell
+	globbing patterns that specifies the files in which the
+	substitution will take place. The patterns are interpreted
+	relatively to the <code class="varname">WRKSRC</code> directory.</p>
+<p><code class="varname">SUBST_SED.*</code> is a list of arguments to
+	<a href="http://netbsd.gw.com/cgi-bin/man-cgi?sed+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">sed</span>(1)</span></a> that specify the actual substitution. Every sed
+	command should be prefixed with <code class="literal">-e</code>, so that
+	all SUBST blocks look uniform.</p>
+<p>There are some more variables, but they are so seldomly
+	used that they are only documented in the
+	<code class="filename">mk/subst.mk</code>.</p>
+</div>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -6524,8 +6598,7 @@ Changes to the PLIST
         with the name of each file to download as an argument, expecting
         it to output the URL of the directory from which to download
         it. <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/graphics/ns-cult3d/README.html" target="_top"><code class="filename">graphics/ns-cult3d</code></a> is an
-	example of this usage.
-</p>
+	example of this usage.</p>
 <p>If the download can't be automated, because the user must
 	submit personal information to apply for a password, or must pay
 	for the source, or whatever, you can set
@@ -7653,33 +7726,33 @@ place.</p></li>
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
 <dl>
-<dt>20.1. <a href="#id2654827">What is the difference between
+<dt>20.1. <a href="#id2655027">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
 </dt>
-<dt>20.2. <a href="#id2654864">What is the difference between
+<dt>20.2. <a href="#id2655063">What is the difference between
 	MAKE, GMAKE and
 	MAKE_PROGRAM?</a>
 </dt>
-<dt>20.3. <a href="#id2654902">What is the difference between
+<dt>20.3. <a href="#id2655101">What is the difference between
 	CC, PKG_CC and
 	PKGSRC_COMPILER?</a>
 </dt>
-<dt>20.4. <a href="#id2654939">What is the difference between
+<dt>20.4. <a href="#id2655139">What is the difference between
 	BUILDLINK_LDFLAGS,
 	BUILDLINK_LDADD and
 	BUILDLINK_LIBS?</a>
 </dt>
-<dt>20.5. <a href="#id2654957">Why does make show-var
+<dt>20.5. <a href="#id2655157">Why does make show-var
 	VARNAME=BUILDLINK_PREFIX.foo
 	say it's empty?</a>
 </dt>
-<dt>20.6. <a href="#id2655053">What does
+<dt>20.6. <a href="#id2655185">What does
 	${MASTER_SITE_SOURCEFORGE:=package/} mean? I
 	don't understand the := inside
 	it.</a>
 </dt>
-<dt>20.7. <a href="#id2655128">Which mailing lists are there for package
+<dt>20.7. <a href="#id2655259">Which mailing lists are there for package
 	developers?</a>
 </dt>
 </dl>
@@ -7688,7 +7761,7 @@ place.</p></li>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2654827"></a><a name="id2654828"></a><b>20.1.</b>
+<a name="id2655027"></a><a name="id2655028"></a><b>20.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -7704,7 +7777,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2654864"></a><a name="id2654865"></a><b>20.2.</b>
+<a name="id2655063"></a><a name="id2655064"></a><b>20.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -7722,7 +7795,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2654902"></a><a name="id2654903"></a><b>20.3.</b>
+<a name="id2655101"></a><a name="id2655102"></a><b>20.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -7740,7 +7813,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2654939"></a><a name="id2654940"></a><b>20.4.</b>
+<a name="id2655139"></a><a name="id2655140"></a><b>20.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -7753,7 +7826,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2654957"></a><a name="id2655027"></a><b>20.5.</b>
+<a name="id2655157"></a><a name="id2655158"></a><b>20.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -7769,7 +7842,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655053"></a><a name="id2655054"></a><b>20.6.</b>
+<a name="id2655185"></a><a name="id2655186"></a><b>20.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -7793,7 +7866,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655128"></a><a name="id2655129"></a><b>20.7.</b>
+<a name="id2655259"></a><a name="id2655260"></a><b>20.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -7857,10 +7930,12 @@ place.</p></li>
 <dt><span class="sect2"><a href="#regression.fun.helper">22.3.2. Helper functions</a></span></dt>
 </dl></dd>
 </dl></dd>
-<dt><span class="chapter"><a href="#porting">23. Porting pkgsrc</a></span></dt>
+<dt><span class="chapter"><a href="#infr.bulk">23. The implementation of the pkgsrc bulk builds</a></span></dt>
+<dd><dl><dt><span class="sect1"><a href="#infr.bulk.what">23.1. Deciding which packages to build</a></span></dt></dl></dd>
+<dt><span class="chapter"><a href="#porting">24. Porting pkgsrc</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#porting.opsys">23.1. Porting pkgsrc to a new operating system</a></span></dt>
-<dt><span class="sect1"><a href="#porting.compiler">23.2. Adding support for a new compiler</a></span></dt>
+<dt><span class="sect1"><a href="#porting.opsys">24.1. Porting pkgsrc to a new operating system</a></span></dt>
+<dt><span class="sect1"><a href="#porting.compiler">24.2. Adding support for a new compiler</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -8101,12 +8176,58 @@ place.</p></li>
 </div>
 <div class="chapter" lang="en">
 <div class="titlepage"><div><div><h2 class="title">
-<a name="porting"></a>Chapter 23. Porting pkgsrc</h2></div></div></div>
+<a name="infr.bulk"></a>Chapter 23. The implementation of the pkgsrc bulk builds</h2></div></div></div>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl><dt><span class="sect1"><a href="#infr.bulk.what">23.1. Deciding which packages to build</a></span></dt></dl>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="infr.bulk.what"></a>23.1. Deciding which packages to build</h2></div></div></div>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>This is not yet implemented.</p>
+</div>
+<p>Some of the pkgsrc packages are not usable in a certain
+	build configuration, either because of platform limitations
+	(processor, operating system) or because the build is done by an
+	unprivileged user. This section lists all the conditions that
+	influence whether a package is excluded from a bulk
+	build.</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="varname">ONLY_FOR_PLATFORM</code> or
+	<code class="varname">NOT_FOR_PLATFORM</code> may be defined in the
+	package <code class="filename">Makefile</code>.</p></li>
+<li><p><code class="varname">ONLY_FOR_COMPILER</code> or
+	<code class="varname">NOT_FOR_COMPILER</code> may be defined in the
+	package <code class="filename">Makefile</code>.</p></li>
+<li><p><code class="varname">NOT_FOR_UNPRIVILEGED</code> (does
+	not exist yet) may be defined in the package
+	<code class="filename">Makefile</code> (only affects bulk builds in
+	unprivileged mode).</p></li>
+<li><p><code class="varname">LICENSE</code> may be defined in the
+	package <code class="filename">Makefile</code>. This may be overridden by
+	defining <code class="varname">ACCEPTABLE_LICENSES</code> in
+	<code class="filename">mk.conf</code>.</p></li>
+<li><p>The package vulnerability database may list the
+	package as vulnerable. This may be overridden by defining 
+	<code class="varname">ALLOW_VULNERABLE_PACKAGES</code> in
+	<code class="filename">mk.conf</code>.</p></li>
+<li><p>Packages that define
+	<code class="varname">INTERACTIVE_STAGE</code> cannot be built by the bulk
+	builds, which are by definition
+	non-interactive.</p></li>
+</ul></div>
+</div>
+</div>
+<div class="chapter" lang="en">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="porting"></a>Chapter 24. Porting pkgsrc</h2></div></div></div>
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl>
-<dt><span class="sect1"><a href="#porting.opsys">23.1. Porting pkgsrc to a new operating system</a></span></dt>
-<dt><span class="sect1"><a href="#porting.compiler">23.2. Adding support for a new compiler</a></span></dt>
+<dt><span class="sect1"><a href="#porting.opsys">24.1. Porting pkgsrc to a new operating system</a></span></dt>
+<dt><span class="sect1"><a href="#porting.compiler">24.2. Adding support for a new compiler</a></span></dt>
 </dl>
 </div>
 <p>The pkgsrc system has already been ported to many
@@ -8115,7 +8236,7 @@ place.</p></li>
 	portable.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="porting.opsys"></a>23.1. Porting pkgsrc to a new operating system</h2></div></div></div>
+<a name="porting.opsys"></a>24.1. Porting pkgsrc to a new operating system</h2></div></div></div>
 <p>To port pkgsrc to a new operating system (called
 	<code class="literal">MyOS</code> in this example), you need to touch the
 	following files:</p>
@@ -8166,7 +8287,7 @@ place.</p></li>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="porting.compiler"></a>23.2. Adding support for a new compiler</h2></div></div></div>
+<a name="porting.compiler"></a>24.2. Adding support for a new compiler</h2></div></div></div>
 <p>TODO</p>
 </div>
 </div>
@@ -8570,100 +8691,71 @@ source packages</h2></div></div></div>
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl>
-<dt><span class="sect1"><a href="#targets">D.1. Targets</a></span></dt>
+<dt><span class="sect1"><a href="#targets">D.1. Make targets</a></span></dt>
 <dt><span class="sect1"><a href="#procedure">D.2. Procedure</a></span></dt>
 </dl>
 </div>
-<p>
-    This section contains information on editing the pkgsrc guide
-    itself.
-  </p>
+<p>This section contains information on editing the pkgsrc
+	guide itself.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="targets"></a>D.1. Targets</h2></div></div></div>
-<p>
-      The pkgsrc guide's source code is stored in
-      <code class="filename">pkgsrc/doc/guide/files</code>, and several files are
-      created from it:
-    </p>
+<a name="targets"></a>D.1. Make targets</h2></div></div></div>
+<p>The pkgsrc guide's source code is stored in
+	<code class="filename">pkgsrc/doc/guide/files</code>, and several files
+	are created from it:</p>
 <div class="itemizedlist"><ul type="disc">
-<li><p>
-          <code class="filename">pkgsrc/doc/pkgsrc.txt</code>
-        </p></li>
-<li><p>
-          <code class="filename">pkgsrc/doc/pkgsrc.html</code>
-        </p></li>
-<li><p>
-          <code class="filename">http://www.NetBSD.org/Documentation/pkgsrc/</code>:
-  	the documentation on the NetBSD website will be built from
-  	pkgsrc and kept up to date on the web server itself. This
-  	means you <span class="emphasis"><em>must</em></span> make sure that your
-  	changes haven't broken the build!
-        </p></li>
-<li><p>
-          <code class="filename">http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.pdf</code>:
-  	  PDF version of the pkgsrc guide.
-        </p></li>
-<li><p>
-          <code class="filename">http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.ps</code>:
-  	  PostScript version of the pkgsrc guide.
-        </p></li>
+<li><p><code class="filename">pkgsrc/doc/pkgsrc.txt</code></p></li>
+<li><p><code class="filename">pkgsrc/doc/pkgsrc.html</code></p></li>
+<li><p><a href="http://www.NetBSD.org/Documentation/pkgsrc/" target="_top">http://www.NetBSD.org/Documentation/pkgsrc/</a></p></li>
+<li><p><a href="http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.pdf" target="_top">http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.pdf</a>:
+	The PDF version of the pkgsrc guide.</p></li>
+<li><p><a href="http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.ps" target="_top">http://www.NetBSD.org/Documentation/pkgsrc/pkgsrc.ps</a>:
+	PostScript version of the pkgsrc guide.</p></li>
 </ul></div>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="procedure"></a>D.2. Procedure</h2></div></div></div>
-<p>
-      The procedure to edit the pkgsrc guide is:
-    </p>
-<div class="itemizedlist"><ul type="disc">
-<li><p>
-          Make sure you have the packages needed to re-generate the
-          pkgsrc guide (and other XML-based NetBSD documentation)
-          installed. These are &#8220;<span class="quote">netbsd-doc</span>&#8221; for creating the
-          ASCII and HTML versions, and
-          &#8220;<span class="quote">netbsd-doc-print</span>&#8221; for the PostScript and PDF
-          versions. You will need both packages installed, to make sure
-          documentation is consistent across all formats. The packages
-          can be found in
-          <code class="filename">pkgsrc/meta-pkgs/netbsd-doc</code> and
-          <code class="filename">pkgsrc/meta-pkgs/netbsd-doc-print</code>.
-        </p></li>
-<li><p>
-          Edit the XML file(s) in
-          <code class="filename">pkgsrc/doc/guide/files</code>.
-        </p></li>
-<li><p>
-          Run <span><strong class="command">make extract &amp;&amp; make do-lint</strong></span> in
-          <code class="filename">pkgsrc/doc/guide</code> to check the XML
-          syntax, and fix it if needed.
-        </p></li>
-<li><p>
-          Run <span><strong class="command">make</strong></span> in
-          <code class="filename">pkgsrc/doc/guide</code> to build the HTML and
-          ASCII version.
-        </p></li>
-<li><p>
-          If all is well, run <span><strong class="command">make install-doc</strong></span> to put
-          the generated files into <code class="filename">pkgsrc/doc</code>.
-        </p></li>
-<li><p>
-          <span><strong class="command">cvs commit pkgsrc/doc/guide/files</strong></span>
-        </p></li>
-<li><p>
-          <span><strong class="command">cvs commit -m re-generate pkgsrc/doc/pkgsrc.{html,txt}</strong></span>
-        </p></li>
-<li><p>
-          Until the webserver on www.NetBSD.org is really updated
-          automatically to pick up changes to the pkgsrc guide
-          automatically, also run <span><strong class="command">make install-htdocs
-          HTDOCSDIR=../../../htdocs</strong></span> (or similar, adjust
-          <code class="varname">HTDOCSDIR</code>!).
-        </p></li>
-<li><p>
-          <span><strong class="command">cvs commit htdocs/Documentation/pkgsrc</strong></span>
-        </p></li>
-</ul></div>
+<p>The procedure to edit the pkgsrc guide is:</p>
+<div class="procedure"><ol type="1">
+<li><p>Make sure you have the packages needed to
+	re-generate the pkgsrc guide (and other XML-based NetBSD
+	documentation) installed. These are <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/netbsd-doc/README.html" target="_top"><code class="filename">meta-pkgs/netbsd-doc</code></a> for creating the
+	ASCII and HTML versions, and <a href="ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/meta-pkgs/netbsd-doc-print/README.html" target="_top"><code class="filename">meta-pkgs/netbsd-doc-print</code></a> for the
+	PostScript and PDF versions. You will need both packages
+	installed, to make sure documentation is consistent across all
+	formats.</p></li>
+<li><p>Run <span><strong class="command">cd doc/guide</strong></span> to get to the
+	right directory. All further steps will take place
+	here.</p></li>
+<li><p>Edit the XML file(s) in
+	<code class="filename">files/</code>.</p></li>
+<li><p>Run <span><strong class="command">bmake</strong></span> to check the pkgsrc
+	guide for valid XML and to build the final output files. If you
+	get any errors at this stage, you can just edit the files, as
+	there are only symbolic links in the working directory, pointing
+	to the files in <code class="filename">files/</code>.</p></li>
+<li><p><span><strong class="command">(cd files &amp;&amp; cvs
+	commit)</strong></span></p></li>
+<li><p>Run <span><strong class="command">bmake clean &amp;&amp; bmake</strong></span> to
+	regenerate the output files with the proper RCS
+	Ids.</p></li>
+<li><p>Run <span><strong class="command">(cd .. &amp;&amp; cvs update pkgsrc.*)
+	&amp;&amp; bmake install-doc</strong></span> to put the generated
+	files into <code class="filename">pkgsrc/doc</code>.</p></li>
+<li><p>Run <span><strong class="command">(cd .. &amp;&amp; cvs commit -m
+	"regenerated." pkgsrc.{html,txt})</strong></span> to commit the
+	generated documentation.</p></li>
+<li><p>Run <span><strong class="command">(cd
+	../../../htdocs/Documentation/pkgsrc &amp;&amp; cvs update)
+	&amp;&amp; bmake install-htdocs</strong></span> to generate all the
+	files for the web server.</p></li>
+<li><p>Run <span><strong class="command">(cd
+	../../../htdocs/Documentation/pkgsrc &amp;&amp; cvs commit -m
+	"regenerated.")</strong></span> to update the files on the web server.
+	If you have added a chapter, don't forget to run <span><strong class="command">cvs
+	add *.html</strong></span> before you commit the files.</p></li>
+</ol></div>
 </div>
 </div>
 </div></body>
