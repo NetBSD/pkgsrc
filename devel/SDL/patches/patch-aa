@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.13 2006/07/01 19:08:36 jmmv Exp $
+
+--- src/loadso/dlopen/SDL_sysloadso.c.orig	2006-05-01 10:02:37.000000000 +0200
++++ src/loadso/dlopen/SDL_sysloadso.c
+@@ -31,9 +31,31 @@
+ 
+ #include "SDL_loadso.h"
+ 
++const char *libdirs[] = {
++	PREFIX "/lib/",
++	X11BASE "/lib/",
++	NULL
++};
++
+ void *SDL_LoadObject(const char *sofile)
+ {
+-	void *handle = dlopen(sofile, RTLD_NOW);
++	int i;
++	void *handle;
++
++	i = 0;
++	handle = NULL;
++	while (libdirs[i] != NULL && handle == NULL) {
++		char buf[1024];
++
++		strncpy(buf, libdirs[i], sizeof(buf) - 1);
++		buf[sizeof(buf) - 1] = '\0';
++		strncat(buf, sofile, sizeof(buf) - 1);
++		buf[sizeof(buf) - 1] = '\0';
++
++		handle = dlopen(buf, RTLD_NOW);
++
++		i++;
++	}
+ 	const char *loaderror = (char *)dlerror();
+ 	if ( handle == NULL ) {
+ 		SDL_SetError("Failed loading %s: %s", sofile, loaderror);
