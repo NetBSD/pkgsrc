@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.603 2006/07/01 19:09:29 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.604 2006/07/01 19:35:11 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3195,3 +3195,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/geeklog to 1.4.0.4 [taca 2006-07-01]
 	Updated devel/SDL to 1.2.10nb1 [jmmv 2006-07-01]
 	Updated devel/SDL to 1.2.10nb2 [jmmv 2006-07-01]
+	Updated mail/rss2email to 2.59 [schmonz 2006-07-01]
+	Updated mail/nullmailer to 1.03 [schmonz 2006-07-01]
+	Updated mail/getmail to 4.6.3 [schmonz 2006-07-01]
