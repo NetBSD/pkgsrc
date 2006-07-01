@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5133 2006/07/01 13:20:21 schmonz Exp $
+$NetBSD: TODO,v 1.5134 2006/07/01 19:35:10 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -535,7 +535,6 @@ Suggested package updates
 	o gdb6-6.3.0
 	o gdm-2.14.9
 	o gdsreader-0.3.2
-	o getmail-4.6.3 [schmonz]
 	o ggiterm-0.7.1
 	o gifsicle-1.44
 	o gift-gnutella-0.0.10.1
@@ -807,7 +806,6 @@ Suggested package updates
 	o nss_ldap-248
 	o ntp-4.2.2
 	o nulib2-210
-	o nullmailer-1.03 [schmonz]
 	o nut-11.4
 	o obexftp-0.18
 	o objc-3.2.7
@@ -1103,7 +1101,6 @@ Suggested package updates
 	o rpc2-1.28
 	o rpm-4.4.6
 	o rsnapshot-1.2.9
-	o rss2email-2.59 [schmonz]
 	o rtcw-1.41.3
 	o rtorrent-0.5.3
 	o ruby-cmd-0.8.0
