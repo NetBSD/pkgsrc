@@ -113,9 +113,19 @@ DDEESSCCRRIIPPTTIIOONN
      [[nnoo--]]ttoooollss          Additional information about the tools from the tools
                          framework.
 
+     [[nnoo--]]ttrraaccee          Print the names of subroutines and their arguments as
+                         they are entered.
+
+     [[nnoo--]]uunncchheecckkeedd      Show the things that pkglint cannot currently check.
+                         These are mostly due to unresolved make variables.
+
+     [[nnoo--]]uunnuusseedd         Show which variables are detected as used, and so
+                         will not generate an ``unused variable'' warning.
+
      [[nnoo--]]vvaarrttyyppeess       Additional information about the variable types.
 
-     [[nnoo--]]vvaarruussee         Information about used and unused variables.
+     [[nnoo--]]vvaarruussee         Information about the contexts in which variables are
+                         used.
 
    WWaarrnniinnggss
      aallll                 Enable all warnings.
