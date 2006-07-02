@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.614 2006/07/02 11:06:40 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.615 2006/07/02 11:07:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3211,3 +3211,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/ruby-RMagick to 1.13.0 [taca 2006-07-02]
 	Updated net/mldonkey to 2.7.7 [wiz 2006-07-02]
 	Updated net/mldonkey-gui to 2.7.7 [wiz 2006-07-02]
+	Updated finance/gnucash-devel to 1.9.8 [wiz 2006-07-02]
