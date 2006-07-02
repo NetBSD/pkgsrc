@@ -1,9 +1,9 @@
-# $NetBSD: compiler.mk,v 1.51 2006/06/09 13:59:08 jlam Exp $
+# $NetBSD: compiler.mk,v 1.52 2006/07/02 23:09:19 rillig Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
 #
-# The following variables are used by this file:
+# The following variables may be set by the pkgsrc user in mk.conf:
 #
 # PKGSRC_COMPILER
 #	A list of values specifying the chain of compilers to be used by
@@ -30,6 +30,12 @@
 #	compiler.  The chain should always end in a real compiler.
 #	This should only be set in /etc/mk.conf.
 #
+# USE_PKGSRC_GCC
+#	Force using the appropriate version of GCC from pkgsrc based on
+#	GCC_REQD instead of the native compiler.
+#
+# The following variables may be set by a package:
+#
 # GCC_REQD
 #	A list of version numbers used to determine the minimum
 #	version of GCC required by a package.  This value should only
@@ -39,12 +45,6 @@
 #	known not to build on some platforms, e.g. Darwin.  If gcc3 is
 #	required, set GCC_REQD=3.0 so that we do not try to pull in
 #	lang/gcc3 unnecessarily and have it fail.
-#
-# USE_PKGSRC_GCC
-#	Force using the appropriate version of GCC from pkgsrc based on
-#	GCC_REQD instead of the native compiler.  Should only be set in
-#	/etc/mk.conf.
-#
 #
 # USE_LANGUAGES
 #	Lists the languages used in the source code of the package,
