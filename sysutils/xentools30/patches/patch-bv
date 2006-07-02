@@ -1,0 +1,30 @@
+$NetBSD: patch-bv,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- libxc/xenctrl.h.orig	2006-04-10 00:05:53.000000000 +0200
++++ libxc/xenctrl.h	2006-05-05 21:55:22.000000000 +0200
+@@ -10,7 +10,9 @@
+ #define XENCTRL_H
+ 
+ #include <stdint.h>
++#ifndef __NetBSD__
+ #include <sys/ptrace.h>
++#endif
+ #include <xen/xen.h>
+ #include <xen/dom0_ops.h>
+ #include <xen/version.h>
+@@ -94,6 +96,7 @@
+ 
+ #define XC_CORE_MAGIC 0xF00FEBED
+ 
++#ifndef __NetBSD__
+ long xc_ptrace_core(
+     int xc_handle,
+     enum __ptrace_request request, 
+@@ -101,6 +104,7 @@
+     long addr, 
+     long data,
+     vcpu_guest_context_t *ctxt);
++#endif
+ void * map_domain_va_core(
+     unsigned long domfd, 
+     int cpu, 

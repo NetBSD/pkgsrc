@@ -1,0 +1,18 @@
+$NetBSD: patch-ax,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- misc/cpuperf/Makefile.orig	2006-04-14 02:48:38.000000000 +0900
++++ misc/cpuperf/Makefile
+@@ -36,5 +36,5 @@ clean:
+ 
+ cpuperf-xen: cpuperf.c $(HDRS) Makefile
+-	$(CC) $(CFLAGS) -I $(XEN_LIBXC) -L$(XEN_LIBXC) -lxenctrl -DXENO -o $@ $<
++	$(CC) $(CFLAGS) $(LDFLAGS) -I$(XEN_LIBXC) -L$(XEN_LIBXC) -lxenctrl -DXENO -o $@ $<
+ 
+ cpuperf-perfcntr: cpuperf.c $(HDRS) Makefile
+@@ -42,5 +42,5 @@ cpuperf-perfcntr: cpuperf.c $(HDRS) Make
+ 
+ install: all
+-	$(INSTALL_PROG) $(INSTALL_BIN) $(DESTDIR)/usr/bin
++	$(BSD_INSTALL_PROGRAM) $(INSTALL_BIN) $(PREFIX)/bin
+ 
+ 
