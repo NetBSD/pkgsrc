@@ -1,0 +1,9 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/07/02 09:21:57 martti Exp $
+
+--- configure.orig	2004-09-30 19:56:42.000000000 +0300
++++ configure	2004-10-01 12:04:46.000000000 +0300
+@@ -1541,3 +1541,3 @@
+ # Define the identity of the package.
+- PACKAGE=fvwm
++ PACKAGE=fvwm2
+  VERSION=2.4.19
