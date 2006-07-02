@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2006/06/20 23:47:23 minskim Exp $
+# $NetBSD: Makefile.common,v 1.10 2006/07/02 10:03:14 rillig Exp $
 
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 MAINTAINER=	markd@NetBSD.org
@@ -79,3 +79,4 @@ pre-install:
 
 post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/emacs
+	${CHMOD} -R go-w ${PREFIX}/share/emacs
