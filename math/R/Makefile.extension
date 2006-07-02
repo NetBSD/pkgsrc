@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.8 2006/06/09 11:15:32 rillig Exp $
+# $NetBSD: Makefile.extension,v 1.9 2006/07/02 12:52:43 markd Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -16,14 +16,12 @@ CATEGORIES+=		math
 
 R_HOMEPAGE_BASE=	http://cran.r-project.org/src/contrib/Descriptions
 
-R_DEPENDS?=		R>=1.7.0
-DEPENDS+=               ${R_DEPENDS}:../../math/R
-
 WRKSRC=         	${WRKDIR}/${R_PKGNAME}
-NO_BUILD=		YES
+
+do-build:
 
 do-install:
-	R_LIBS= ${LOCALBASE}/bin/R CMD INSTALL ${WRKDIR}/${R_PKGNAME}
+	R_LIBS= ${LOCALBASE}/bin/R CMD INSTALL ${R_PKG_INSTALL_ARGS} ${WRKDIR}/${R_PKGNAME}
 
 # automatically generate the PLIST
 R_LIB=			lib/R/library
@@ -42,3 +40,5 @@ R_GENERATE_PLIST=	${R_PACKLIST_FILES_CMD}; \
 			${R_PACKLIST_DIRS_CMD}; \
 			${R_PACKLIST_CMDS_CMD};
 GENERATE_PLIST+=	${R_GENERATE_PLIST}
+
+.include "../../math/R/buildlink3.mk"
