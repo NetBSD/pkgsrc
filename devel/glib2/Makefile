@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2006/05/29 17:06:49 drochner Exp $
+# $NetBSD: Makefile,v 1.100 2006/07/02 14:22:35 markd Exp $
 
 DISTNAME=		glib-2.10.3
+PKGREVISION=		1
 PKGNAME=		${DISTNAME:S/glib/glib2/}
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.10/ \
@@ -16,6 +17,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt perl:run pkg-config
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 TEST_TARGET=		check
 
