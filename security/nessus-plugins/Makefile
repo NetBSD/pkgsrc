@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/04/25 12:45:57 salo Exp $
+# $NetBSD: Makefile,v 1.31 2006/07/02 17:20:17 rillig Exp $
 
 .include	"../../security/nessus/Makefile.common"
 
@@ -29,6 +29,12 @@ post-install:
 	${RM} -f ${WRKDIR}/PLIST
 	cd ${PREFIX} && \
 	${FIND} lib/nessus/plugins -type f -print >>${WRKDIR}/PLIST
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	--enable-install=${ROOT_USER}
+.endif
 
 .include "../../security/nessus-core/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
