@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.623 2006/07/02 16:52:12 bouyer Exp $
+$NetBSD: CHANGES-2006,v 1.624 2006/07/02 17:05:36 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3228,3 +3228,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/glib2 to 2.10.3nb1 [markd 2006-07-02]
 	Updated benchmarks/netio to 1.26 [tron 2006-07-02]
 	Added sysutils/xentools30 version 3.0.2.2 [bouyer 2006-07-02]
+	Updated editors/vim-share to 7.0.35 [martti 2006-07-02]
