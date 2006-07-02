@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.609 2006/07/02 09:48:02 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.610 2006/07/02 09:49:48 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3205,3 +3205,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Moved wm/fvwm2-themes to wm/fvwm-themes [martti 2006-07-02]
 	Updated wm/fvwm-devel to 2.5.16 [martti 2006-07-02]
 	Updated pkgtools/pkglint to 4.66 [rillig 2006-07-02]
+	Added games/scummvm-tools version 0.9.0 [dillo 2006-07-02]
