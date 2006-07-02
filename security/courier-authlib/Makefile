@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2006/05/09 17:58:46 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2006/07/02 10:34:55 rillig Exp $
 
 .include "Makefile.common"
 
 DISTNAME=	courier-authlib-0.58
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -102,4 +102,5 @@ post-install-authdaemon:
 	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${EGDIR}/authdaemonrc.dist
 	${CHMOD} ${SHAREMODE} ${EGDIR}/authdaemonrc.dist
 
+.include "../../lang/tcl-expect/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
