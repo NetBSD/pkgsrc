@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.269 2006/05/19 19:57:26 rillig Exp $
+# $NetBSD: Makefile,v 1.270 2006/07/02 09:51:31 dillo Exp $
 #
 
 COMMENT=	Games
@@ -191,6 +191,7 @@ SUBDIR+=	scid
 SUBDIR+=	scummvm
 SUBDIR+=	scummvm-bass
 SUBDIR+=	scummvm-fotaq
+SUBDIR+=	scummvm-tools
 SUBDIR+=	sirius
 SUBDIR+=	sjeng
 SUBDIR+=	sl
