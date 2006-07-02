@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2006/03/14 16:00:40 jlam Exp $
+# $NetBSD: Makefile,v 1.71 2006/07/02 10:00:08 rillig Exp $
 
 DISTNAME=	ncurses-${NC_VERS}
 NC_VERS=	5.5
@@ -46,6 +46,16 @@ CONFIGURE_ARGS+=	--with-terminfo-dirs=${PREFIX}/${TERMINFODIR}
 
 INSTALLATION_DIRS=	share/examples
 
+.if ${OPSYS} == "SunOS"
+SUBST_CLASSES+=		ti
+SUBST_STAGE.ti=		post-configure
+SUBST_MESSAGE.ti=	Removing screen entries from the terminfo database.
+SUBST_FILES.ti=		${TERMINFO_SRC}
+SUBST_SED.ti=		-e '/^screen|/,/^$$/d'
+SUBST_SED.ti+=		-e '/^screen-w|/,/^$$/d'
+SUBST_SED.ti+=		-e '/^screen.teraterm|/,/^$$/d'
+.endif
+
 post-configure:
 	cd ${WRKSRC}/man;					\
 	for f in *.1m; do					\
@@ -54,12 +64,6 @@ post-configure:
 	for f in *.3x; do					\
 		${MV} -f $${f} `${BASENAME} $${f} .3x`.3; 	\
 	done
-.if ${OPSYS} == "SunOS"
-	${MV} ${TERMINFO_SRC} ${TERMINFO_SRC}.old
-	${SED} -e "/^screen|/,/^$$/d"  -e "/^screen-w|/,/^$$/d" \
-	    -e "/^screen.teraterm|/,/^$$/d" \
-	   <${TERMINFO_SRC}.old >${TERMINFO_SRC}
-.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/c++/demo.cc \
