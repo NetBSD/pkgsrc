@@ -1,4 +1,4 @@
-<!-- $NetBSD: infr.bulk.xml,v 1.1 2006/06/30 08:58:16 rillig Exp $ -->
+<!-- $NetBSD: infr.bulk.xml,v 1.2 2006/07/02 12:42:39 rillig Exp $ -->
 
 <chapter id="infr.bulk">
 <title>The implementation of the pkgsrc bulk builds</title>
@@ -42,8 +42,10 @@
 
 	<listitem><para>Packages that define
 	<varname>INTERACTIVE_STAGE</varname> cannot be built by the bulk
-	builds, which are by definition
-	non-interactive.</para></listitem>
+	builds, which are by definition non-interactive. The exception
+	is when <varname>INTERACTIVE_STAGE</varname> contains only
+	<literal>fetch</literal> and the distfiles have already been
+	downloaded.</para></listitem>
 
 	</itemizedlist>
 
