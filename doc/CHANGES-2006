@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.607 2006/07/02 09:30:11 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.608 2006/07/02 09:33:54 martti Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3201,3 +3201,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed www/firefox-bin-acroread3 [salo 2006-07-01]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2006Q2 branch [agc 2006-07-02]
 	Updated mail/dovecot to 1.0rc1 [ghen 2006-07-02]
+	Moved wm/fvwm2 to wm/fvwm [martti 2006-07-02]
+	Moved wm/fvwm2-themes to wm/fvwm-themes [martti 2006-07-02]
+	Updated wm/fvwm-devel to 2.5.16 [martti 2006-07-02]
