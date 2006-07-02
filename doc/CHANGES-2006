@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.617 2006/07/02 12:02:01 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.618 2006/07/02 13:32:36 markd Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3214,3 +3214,11 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated finance/gnucash-devel to 1.9.8 [wiz 2006-07-02]
 	Updated emulators/gxemul to 0.4.0.1 [xtraeme 2006-07-02]
 	Updated mail/clamav to 0.88.3 [xtraeme 2006-07-02]
+	Updated math/R-genetics to 1.2.0 [markd 2006-07-02]
+	Updated math/R-clim.pact to 2.2.1 [markd 2006-07-02]
+	Added math/R-akima version 0.5.1 [markd 2006-07-02]
+	Added math/R-combinat version 0.0.6 [markd 2006-07-02]
+	Added math/R-gdata version 2.1.2 [markd 2006-07-02]
+	Added math/R-gtools version 2.2.3 [markd 2006-07-02]
+	Added math/R-mvtnorm version 0.7.2 [markd 2006-07-02]
+	Added math/R-ncdf version 1.5 [markd 2006-07-02]
