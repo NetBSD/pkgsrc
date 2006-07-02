@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2006/07/02 18:16:53 xtraeme Exp $
+
+--- src/obex.h.orig	2006-07-02 19:31:28.000000000 +0200
++++ src/obex.h	2006-07-02 19:31:36.000000000 +0200
+@@ -51,7 +51,7 @@
+ typedef void* obex_object_t;
+ typedef void (*obex_event_t)(obex_t *handle, obex_object_t *obj, int mode, int event, int obex_cmd, int obex_rsp);
+ // This is to workaround compilation without Bluetooth support. - Jean II
+-#ifndef SOL_RFCOMM
++#ifdef SOL_RFCOMM
+ typedef char* bdaddr_t;
+ #endif
+ 
