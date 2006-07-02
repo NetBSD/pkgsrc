@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.622 2006/07/02 15:04:15 tron Exp $
+$NetBSD: CHANGES-2006,v 1.623 2006/07/02 16:52:12 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3227,3 +3227,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/heimdal to 0.7.2nb2 [markd 2006-07-02]
 	Updated devel/glib2 to 2.10.3nb1 [markd 2006-07-02]
 	Updated benchmarks/netio to 1.26 [tron 2006-07-02]
+	Added sysutils/xentools30 version 3.0.2.2 [bouyer 2006-07-02]
