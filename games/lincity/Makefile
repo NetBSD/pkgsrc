@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/04/13 18:23:33 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/07/02 10:11:09 rillig Exp $
 
 DISTNAME=	lincity-1.12.1
 PKGREVISION=	1
@@ -13,6 +13,8 @@ COMMENT=	Free clone of SimCity for X11
 USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+
+CHECK_INTERPRETER_SKIP+=	share/lincity/icons/*
 
 pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/lincity/help
