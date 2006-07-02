@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2006/06/12 09:07:22 adam Exp $
+# $NetBSD: Makefile,v 1.109 2006/07/02 10:09:26 rillig Exp $
 
 DISTNAME=	wine-0.9.15
 CATEGORIES=	emulators
@@ -33,7 +33,7 @@ REPLACE_PERL+=		tools/winemaker tools/winedump/function_grep.pl
 # against the libraries.
 #
 CONFIGURE_ENV+=		X_LIBS=${LDFLAGS:M*:Q}
-CONFIGURE_ENV+=		CFLAGS="${CFLAGS} -DDEVOSSAUDIO=\"${DEVOSSAUDIO}\""
+CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:Q}\ -DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 LIBS+=			${LDFLAGS}
 
 .include "options.mk"
