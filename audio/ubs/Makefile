@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2006/05/19 16:18:53 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/02 09:53:00 rillig Exp $
 #
 
 DISTNAME=		ubs-0.17
-PKGREVISION=	2
+PKGREVISION=		3
 CATEGORIES=		audio
 MASTER_SITES=		http://aboleo.net/software/ubs/downloads/
 
@@ -37,6 +37,12 @@ OWN_DIRS_PERMS+=	${UBS_BASEDIR}/log ${UBS_USER} ${UBS_GROUP} 0750
 EGDIR=			${PREFIX}/share/examples/ubs
 CONF_FILES=		${EGDIR}/help.conf ${PKG_SYSCONFDIR}/help.conf
 CONF_FILES+=		${EGDIR}/ubs.conf.default ${PKG_SYSCONFDIR}/ubs.conf
+
+SUBST_CLASSES+=		ubsconf
+SUBST_STAGE.ubsconf=	pre-configure
+SUBST_MESSAGE.ubsconf=	Fixing path to ubs.conf.
+SUBST_FILES.ubsconf=	include/defaults.h
+SUBST_SED.ubsconf=	-e 's,"etc/ubs.conf","${PKG_SYSCONFDIR}/ubs.conf",'
 
 post-extract:
 	${MV} ${WRKSRC}/config/ubs.conf.default \
