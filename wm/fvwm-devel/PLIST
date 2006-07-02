@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/07/02 09:32:55 martti Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/07/02 15:54:42 martti Exp $
 bin/FvwmCommand
 bin/fvwm
 bin/fvwm-bug
@@ -12,45 +12,45 @@ bin/fvwm-menu-xlock
 bin/fvwm-perllib
 bin/fvwm-root
 bin/fvwm2
-libexec/fvwm/${PKGVERSION}/FvwmAnimate
-libexec/fvwm/${PKGVERSION}/FvwmAudio
-libexec/fvwm/${PKGVERSION}/FvwmAuto
-libexec/fvwm/${PKGVERSION}/FvwmBacker
-libexec/fvwm/${PKGVERSION}/FvwmBanner
-libexec/fvwm/${PKGVERSION}/FvwmButtons
-libexec/fvwm/${PKGVERSION}/FvwmCascade
-libexec/fvwm/${PKGVERSION}/FvwmCommand.pm
-libexec/fvwm/${PKGVERSION}/FvwmCommand.sh
-libexec/fvwm/${PKGVERSION}/FvwmCommandS
-libexec/fvwm/${PKGVERSION}/FvwmConsole
-libexec/fvwm/${PKGVERSION}/FvwmConsoleC
-libexec/fvwm/${PKGVERSION}/FvwmConsoleC.pl
-libexec/fvwm/${PKGVERSION}/FvwmCpp
-libexec/fvwm/${PKGVERSION}/FvwmDebug
-libexec/fvwm/${PKGVERSION}/FvwmDragWell
-libexec/fvwm/${PKGVERSION}/FvwmEvent
-libexec/fvwm/${PKGVERSION}/FvwmForm
-libexec/fvwm/${PKGVERSION}/FvwmGtkDebug
-libexec/fvwm/${PKGVERSION}/FvwmIconBox
-libexec/fvwm/${PKGVERSION}/FvwmIconMan
-libexec/fvwm/${PKGVERSION}/FvwmIdent
-libexec/fvwm/${PKGVERSION}/FvwmM4
-libexec/fvwm/${PKGVERSION}/FvwmPager
-libexec/fvwm/${PKGVERSION}/FvwmPerl
-libexec/fvwm/${PKGVERSION}/FvwmProxy
-libexec/fvwm/${PKGVERSION}/FvwmRearrange
-libexec/fvwm/${PKGVERSION}/FvwmSave
-libexec/fvwm/${PKGVERSION}/FvwmSaveDesk
-libexec/fvwm/${PKGVERSION}/FvwmScript
-libexec/fvwm/${PKGVERSION}/FvwmScroll
-libexec/fvwm/${PKGVERSION}/FvwmTabs
-libexec/fvwm/${PKGVERSION}/FvwmTalk
-libexec/fvwm/${PKGVERSION}/FvwmTaskBar
-libexec/fvwm/${PKGVERSION}/FvwmTheme
-libexec/fvwm/${PKGVERSION}/FvwmTile
-libexec/fvwm/${PKGVERSION}/FvwmWharf
-libexec/fvwm/${PKGVERSION}/FvwmWinList
-libexec/fvwm/${PKGVERSION}/FvwmWindowMenu
+libexec/fvwm/${FVWM_VER}/FvwmAnimate
+libexec/fvwm/${FVWM_VER}/FvwmAudio
+libexec/fvwm/${FVWM_VER}/FvwmAuto
+libexec/fvwm/${FVWM_VER}/FvwmBacker
+libexec/fvwm/${FVWM_VER}/FvwmBanner
+libexec/fvwm/${FVWM_VER}/FvwmButtons
+libexec/fvwm/${FVWM_VER}/FvwmCascade
+libexec/fvwm/${FVWM_VER}/FvwmCommand.pm
+libexec/fvwm/${FVWM_VER}/FvwmCommand.sh
+libexec/fvwm/${FVWM_VER}/FvwmCommandS
+libexec/fvwm/${FVWM_VER}/FvwmConsole
+libexec/fvwm/${FVWM_VER}/FvwmConsoleC
+libexec/fvwm/${FVWM_VER}/FvwmConsoleC.pl
+libexec/fvwm/${FVWM_VER}/FvwmCpp
+libexec/fvwm/${FVWM_VER}/FvwmDebug
+libexec/fvwm/${FVWM_VER}/FvwmDragWell
+libexec/fvwm/${FVWM_VER}/FvwmEvent
+libexec/fvwm/${FVWM_VER}/FvwmForm
+libexec/fvwm/${FVWM_VER}/FvwmGtkDebug
+libexec/fvwm/${FVWM_VER}/FvwmIconBox
+libexec/fvwm/${FVWM_VER}/FvwmIconMan
+libexec/fvwm/${FVWM_VER}/FvwmIdent
+libexec/fvwm/${FVWM_VER}/FvwmM4
+libexec/fvwm/${FVWM_VER}/FvwmPager
+libexec/fvwm/${FVWM_VER}/FvwmPerl
+libexec/fvwm/${FVWM_VER}/FvwmProxy
+libexec/fvwm/${FVWM_VER}/FvwmRearrange
+libexec/fvwm/${FVWM_VER}/FvwmSave
+libexec/fvwm/${FVWM_VER}/FvwmSaveDesk
+libexec/fvwm/${FVWM_VER}/FvwmScript
+libexec/fvwm/${FVWM_VER}/FvwmScroll
+libexec/fvwm/${FVWM_VER}/FvwmTabs
+libexec/fvwm/${FVWM_VER}/FvwmTalk
+libexec/fvwm/${FVWM_VER}/FvwmTaskBar
+libexec/fvwm/${FVWM_VER}/FvwmTheme
+libexec/fvwm/${FVWM_VER}/FvwmTile
+libexec/fvwm/${FVWM_VER}/FvwmWharf
+libexec/fvwm/${FVWM_VER}/FvwmWinList
+libexec/fvwm/${FVWM_VER}/FvwmWindowMenu
 man/man1/FvwmAnimate.1
 man/man1/FvwmAuto.1
 man/man1/FvwmBacker.1
@@ -185,5 +185,5 @@ share/locale/zh_CN/LC_MESSAGES/fvwm.mo
 @dirrm share/fvwm/perllib
 @dirrm share/fvwm
 @dirrm share/examples/fvwm
-@dirrm libexec/fvwm/${PKGVERSION}
+@dirrm libexec/fvwm/${FVWM_VER}
 @dirrm libexec/fvwm

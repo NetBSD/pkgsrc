@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2006/07/02 09:32:55 martti Exp $
+# $NetBSD: Makefile,v 1.12 2006/07/02 15:54:42 martti Exp $
 
-DISTNAME=	fvwm-2.5.16
+DISTNAME=	fvwm-${FVWM_VER}
 #PKGREVISION=	1
 CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://ftp.fvwm.org/pub/fvwm/version-2/
@@ -11,12 +11,15 @@ HOMEPAGE=	http://www.fvwm.org/
 COMMENT=	Development version of X11 Virtual window manager
 
 CONFLICTS=	fvwm1-[0-9]* fvwm2-[0-9]*
+FVWM_VER=	2.5.16
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	YES
+
+PLIST_SUBST+=		FVWM_VER=${FVWM_VER:Q}
 
 CONFIGURE_ARGS+=	--disable-bidi
 CONFIGURE_ARGS+=	--without-gnome
