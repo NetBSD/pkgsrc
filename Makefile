@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2005/09/28 07:49:22 rillig Exp $
+# $NetBSD: Makefile,v 1.77 2006/07/02 12:29:22 rillig Exp $
 #
 
 # tools used by this Makefile
@@ -128,7 +128,7 @@ ${.CURDIR}/PKGDB:
 				echo "$$l" >> $$DB ; \
 			fi ; \
 		fi ; \
-		echo -n "." ; \
+		${ECHO_N} "."; \
 		if [ `${EXPR} $$npkg % 100 = 0` -eq 1 ]; then \
 			echo " " ; \
 			echo "$$npkg" ; \
@@ -174,10 +174,10 @@ readme-all:
 README-all.html:
 	@${RM} -f $@.new
 	@${RM} -f $@.newsorted
-	@${ECHO} -n "Processing categories for $@:"
+	@${ECHO_N} "Processing categories for $@:"
 .for category in ${SUBDIR}
 	@if [ -f ${category}/README.html ]; then \
-		${ECHO} -n ' ${category}' ; \
+		${ECHO_N} ' ${category}' ; \
 		${GREP} '^<TR>' ${category}/README.html \
 		| ${SED} -e 's|"|"${category}/|' \
 		      -e 's| <TD>| <TD>(<A HREF="${category}/README.html">${category}</A>) <TD>|' \
@@ -239,4 +239,4 @@ show-host-specific-pkgs:
 show-deps:
 	@if [ ! -f "${.CURDIR}/INDEX" ]; then ${ECHO} "No index available -- please build it with 'make index'" >&2; ${FALSE}; fi
 	@if [ -z "${PKG}" ]; then ${ECHO} "PKG variable not set" >&2; ${FALSE}; fi
-	@${GREP} -E "^([^|]*\|){7}([^|]* |)${PKG}>=" ${.CURDIR}/INDEX | ${SED} -n "s/^[^|]*|\([^|]*\)|.*/\1/p" | ${SORT}
+	@${GREP} -E "^([^|]*\|){7}([^|]* |)${PKG}>=" ${.CURDIR}/INDEX | ${SED} -n 's/^[^|]*|\([^|]*\)|.*/\1/p' | ${SORT}
