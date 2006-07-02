@@ -1,0 +1,27 @@
+$NetBSD: patch-ap,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- ioemu/target-i386-dm/Makefile.orig	2006-04-10 00:05:53.000000000 +0200
++++ ioemu/target-i386-dm/Makefile	2006-05-05 21:46:45.000000000 +0200
+@@ -4,7 +4,7 @@
+ XEN_ROOT=../../..
+ include $(XEN_ROOT)/tools/Rules.mk
+ 
+-INSTALL_DIR := $(DESTDIR)/usr/$(LIBDIR)/xen/bin
++INSTALL_DIR := $(PREFIX)/libexec
+ TARGET_PATH=$(SRC_PATH)/target-$(TARGET_ARCH)
+ VPATH=$(SRC_PATH):$(TARGET_PATH):$(SRC_PATH)/hw:$(SRC_PATH)/audio
+ DEFINES=-I. -I$(TARGET_PATH) -I$(SRC_PATH)
+@@ -389,11 +389,8 @@
+ distclean: clean
+ 
+ install: all 
+-	if [ ! -d $(INSTALL_DIR) ];then mkdir -p $(INSTALL_DIR);fi
+-	if [ ! -d $(DESTDIR)$(configdir) ];then mkdir -p $(DESTDIR)$(configdir);fi
+-	install -m 755 -s $(PROGS) "$(INSTALL_DIR)"
+-	install -m 755 qemu-dm.debug "$(INSTALL_DIR)"
+-	install -m 755 qemu-ifup "$(DESTDIR)$(configdir)"
++	$(BSD_INSTALL_PROGRAM_DIR) $(INSTALL_DIR)
++	$(BSD_INSTALL_PROGRAM) $(PROGS) $(INSTALL_DIR)
+ ifneq ($(wildcard .depend),)
+ include .depend
+ endif

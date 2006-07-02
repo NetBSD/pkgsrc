@@ -1,0 +1,18 @@
+$NetBSD: patch-bn,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- vtpm_manager/manager/Makefile.orig	2006-01-31 17:09:22.000000000 +0100
++++ vtpm_manager/manager/Makefile
+@@ -8,10 +8,10 @@ all: build
+ build: $(BIN)
+ 
+ install: build
+-	if [ ! -d "$(DESTDIR)/var/vtpm/fifos" ]; \
+-		then mkdir -p $(DESTDIR)/var/vtpm/fifos; \
++	if [ ! -d "/var/vtpm/fifos" ]; \
++		then mkdir -p /var/vtpm/fifos; \
+ 	fi
+-	$(INSTALL_PROG) $(BIN) $(TOOLS_INSTALL_DIR)
++	$(BSD_INSTALL_PROGRAM) $(BIN) $(PREFIX)/bin
+ 
+ clean:
+ 	rm -f *.a *.so *.o *.rpm $(DEP_FILES)

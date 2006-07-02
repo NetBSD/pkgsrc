@@ -1,0 +1,15 @@
+$NetBSD: patch-br,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- xenstat/xentop/Makefile.orig	2006-01-31 17:09:22.000000000 +0100
++++ xenstat/xentop/Makefile
+@@ -35,8 +35,8 @@ all: xentop
+ xentop: xentop.o
+ 
+ install: xentop xentop.1
+-	$(INSTALL_PROG) xentop $(DESTDIR)$(sbindir)/xentop
+-	$(INSTALL_DATA) xentop.1 $(DESTDIR)$(man1dir)/xentop.1
++	$(BSD_INSTALL_PROGRAM) xentop $(PREFIX)/sbin
++	$(BSD_INSTALL_DATA) xentop.1 $(PREFIX)/man/man1
+ 
+ endif
+ 

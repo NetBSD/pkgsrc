@@ -1,0 +1,13 @@
+$NetBSD: patch-bh,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- security/getlabel.sh.orig	2006-01-31 17:09:21.000000000 +0100
++++ security/getlabel.sh
+@@ -49,7 +49,7 @@ policy name : the name of the policy, i.
+               entry of the running system is tried to be read
+               and the policy name determined from there.
+ policy dir  : the directory where the <policy name> policy is located
+-              The default location is '/etc/xen/acm-security/policies'
++              The default location is '@XENDCONFDIR@/acm-security/policies'
+ ssidref     : an ssidref in hex or decimal format, i.e., '0x00010002'
+               or '65538'
+ domid       : id of the domain, i.e., '1'; Use numbers from the 2nd

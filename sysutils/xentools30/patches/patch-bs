@@ -1,0 +1,74 @@
+$NetBSD: patch-bs,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- xenstore/Makefile.orig	2006-04-10 00:05:54.000000000 +0200
++++ xenstore/Makefile	2006-05-05 21:54:15.000000000 +0200
+@@ -30,30 +30,30 @@
+ all: libxenstore.so xenstored $(CLIENTS) xs_tdb_dump xenstore-control xenstore-ls
+ 
+ test_interleaved_transactions: test_interleaved_transactions.o
+-	$(LINK.o) $^ $(LOADLIBES) $(LDLIBS) -L. -lxenstore -o $@
++	$(LINK.o) $^ $(LOADLIBES) $(LDFLAGS) $(LDLIBS) -L. -lxenstore -o $@
+ 
+ testcode: xs_test xenstored_test xs_random
+ 
+ xenstored: xenstored_core.o xenstored_watch.o xenstored_domain.o xenstored_transaction.o xs_lib.o talloc.o utils.o tdb.o hashtable.o
+-	$(LINK.o) $^ $(LOADLIBES) $(LDLIBS) -lxenctrl -o $@
++	$(LINK.o) $^ $(LOADLIBES) $(LDFLAGS) $(LDLIBS) -lxenctrl -o $@
+ 
+ $(CLIENTS): xenstore-%: xenstore_%.o libxenstore.so
+-	$(LINK.o) $< $(LOADLIBES) $(LDLIBS) -L. -lxenstore -o $@
++	$(LINK.o) $< $(LOADLIBES) $(LDFLAGS) $(LDLIBS) -L. -lxenstore -o $@
+ 
+ $(CLIENTS_OBJS): xenstore_%.o: xenstore_client.c
+ 	$(COMPILE.c) -DCLIENT_$(*F) -o $@ $<
+ 
+ xenstore-control: xenstore_control.o libxenstore.so
+-	$(LINK.o) $< $(LOADLIBES) $(LDLIBS) -L. -lxenstore -o $@
++	$(LINK.o) $< $(LOADLIBES) $(LDFLAGS) $(LDLIBS) -L. -lxenstore -o $@
+ 
+ xenstore-ls: xsls.o libxenstore.so
+-	$(LINK.o) $< $(LOADLIBES) $(LDLIBS) -L. -lxenstore -o $@
++	$(LINK.o) $< $(LOADLIBES) $(LDFLAGS) $(LDLIBS) -L. -lxenstore -o $@
+ 
+ xenstored_test: xenstored_core_test.o xenstored_watch_test.o xenstored_domain_test.o xenstored_transaction_test.o xs_lib.o talloc_test.o fake_libxc.o utils.o tdb.o
+-	$(LINK.o) $^ $(LOADLIBES) $(LDLIBS) -o $@
++	$(LINK.o) $^ $(LOADLIBES) $(LDFLAGS) $(LDLIBS) -o $@
+ 
+ xs_tdb_dump: xs_tdb_dump.o utils.o tdb.o talloc.o
+-	$(LINK.o) $^ $(LOADLIBES) $(LDLIBS) -o $@
++	$(LINK.o) $^ $(LOADLIBES) $(LDFLAGS) $(LDLIBS) -o $@
+ 
+ xs_test xs_random xs_stress xs_crashme: LDFLAGS+=-lpthread
+ xs_test: xs_test.o xs_lib.o utils.o
+@@ -137,19 +137,18 @@
+ 	cd .. && tar -c -j -v -h -f xenstore.tar.bz2 xenstore/
+ 
+ install: all
+-	$(INSTALL_DIR) -p $(DESTDIR)/var/run/xenstored
+-	$(INSTALL_DIR) -p $(DESTDIR)/var/lib/xenstored
+-	$(INSTALL_DIR) -p $(DESTDIR)/usr/bin
+-	$(INSTALL_DIR) -p $(DESTDIR)/usr/sbin
+-	$(INSTALL_DIR) -p $(DESTDIR)/usr/include
+-	$(INSTALL_PROG) xenstored $(DESTDIR)/usr/sbin
+-	$(INSTALL_PROG) $(CLIENTS) $(DESTDIR)/usr/bin
+-	$(INSTALL_PROG) xenstore-control $(DESTDIR)/usr/bin
+-	$(INSTALL_PROG) xenstore-ls $(DESTDIR)/usr/bin
+-	$(INSTALL_DIR) -p $(DESTDIR)/usr/$(LIBDIR)
+-	$(INSTALL_DATA) libxenstore.so $(DESTDIR)/usr/$(LIBDIR)
+-	$(INSTALL_DATA) xs.h $(DESTDIR)/usr/include
+-	$(INSTALL_DATA) xs_lib.h $(DESTDIR)/usr/include
++	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/sbin
++	$(BSD_INSTALL_DATA_DIR) -p $(PREFIX)/include
++	$(BSD_INSTALL_PROGRAM) xenstored $(PREFIX)/sbin
++	$(BSD_INSTALL_PROGRAM) $(CLIENTS) $(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM) xenstore-control $(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM) xenstore-ls $(PREFIX)/bin
++	$(BSD_INSTALL_LIB_DIR) $(PREFIX)/lib
++	$(BSD_INSTALL_LIB) libxenstore.so $(PREFIX)/lib
++	$(BSD_INSTALL_DATA) xs.h $(PREFIX)/include
++	$(BSD_INSTALL_DATA) xs_lib.h $(PREFIX)/include
++
+ 
+ -include $(PROG_DEP)
+ 

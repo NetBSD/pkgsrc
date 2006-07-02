@@ -1,0 +1,21 @@
+$NetBSD: patch-ch,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- xenstat/libxenstat/src/xenstat.c.orig 2006-04-13 19:48:39.000000000 +0200
++++ xenstat/libxenstat/src/xenstat.c	2006-07-01 23:20:36.000000000 +0200
+@@ -517,6 +517,8 @@
+ /* Collect information about networks */
+ static int xenstat_collect_networks(xenstat_node * node)
+ {
++#ifndef __NetBSD__
++	/* XXX fixme: implement code to get stats from libkvm ! */
+ 	/* Open and validate /proc/net/dev if we haven't already */
+ 	if (node->handle->procnetdev == NULL) {
+ 		char header[sizeof(PROCNETDEV_HEADER)];
+@@ -592,6 +594,7 @@
+ 		domain->networks[domain->num_networks - 1] = net;
+ 	}
+ 
++#endif
+ 	return 1;
+ }
+ 

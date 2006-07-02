@@ -1,0 +1,13 @@
+$NetBSD: patch-ce,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- python/xen/xend/XendBootloader.py.orig	2006-07-01 21:35:24.000000000 +0200
++++ python/xen/xend/XendBootloader.py	2006-07-01 21:35:57.000000000 +0200
+@@ -38,7 +38,7 @@
+         raise VmError(msg)
+ 
+     while True:
+-        fifo = "/var/lib/xen/xenbl.%s" %(random.randint(0, 32000),)
++        fifo = "/var/run/xend/xenbl.%s" %(random.randint(0, 32000),)
+         if not os.path.exists(fifo):
+             break
+     os.mkfifo(fifo, 0600)

@@ -1,0 +1,32 @@
+$NetBSD: patch-bu,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- xentrace/Makefile.orig	2006-01-31 17:09:22.000000000 +0100
++++ xentrace/Makefile
+@@ -32,20 +32,15 @@ all: build
+ build: $(BIN) $(LIBBIN)
+ 
+ install: build
+-	[ -d $(DESTDIR)/usr/bin ] || $(INSTALL_DIR) $(DESTDIR)/usr/bin
+-	[ -z "$(LIBBIN)" ] || [ -d $(DESTDIR)/usr/$(LIBDIR)/xen/bin ] || \
+-		$(INSTALL_DIR) $(DESTDIR)/usr/$(LIBDIR)/xen/bin
+-	[ -d $(DESTDIR)/usr/share/man/man1 ] || \
+-		$(INSTALL_DIR) $(DESTDIR)/usr/share/man/man1
+-	[ -d $(DESTDIR)/usr/share/man/man8 ] || \
+-		$(INSTALL_DIR) $(DESTDIR)/usr/share/man/man8
+-	$(INSTALL_PROG) $(BIN) $(SCRIPTS) $(DESTDIR)/usr/bin
+-	[ -z "$(LIBBIN)" ] || $(INSTALL_PROG) $(LIBBIN) $(DESTDIR)/usr/$(LIBDIR)/xen/bin
+-	$(INSTALL_DATA) $(MAN1) $(DESTDIR)/usr/share/man/man1
+-	$(INSTALL_DATA) $(MAN8) $(DESTDIR)/usr/share/man/man8
++	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/libexec
++	$(BSD_INSTALL_PROGRAM) $(BIN) $(SCRIPTS) $(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM) $(LIBBIN) $(PREFIX)/libexec
++	$(BSD_INSTALL_DATA) $(MAN1) $(DESTDIR)/man/man1
++	$(BSD_INSTALL_DATA) $(MAN8) $(DESTDIR)/man/man8
+ 
+ clean:
+ 	$(RM) *.a *.so *.o *.rpm $(BIN) $(LIBBIN)
+ 
+ %: %.c $(HDRS) Makefile
+-	$(CC) $(CFLAGS) -o $@ $< -L$(XEN_LIBXC) -lxenctrl
++	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS) -L$(XEN_LIBXC) -lxenctrl

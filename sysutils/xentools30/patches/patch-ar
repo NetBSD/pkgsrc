@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- ioemu/vl.c.orig	2006-01-31 17:09:21.000000000 +0100
++++ ioemu/vl.c
+@@ -81,7 +81,7 @@
+ 
+ //#define DO_TB_FLUSH
+ 
+-#define DEFAULT_NETWORK_SCRIPT "/etc/xen/qemu-ifup"
++#define DEFAULT_NETWORK_SCRIPT "@XENDCONFDIR@/qemu-ifup"
+ 
+ #if !defined(CONFIG_SOFTMMU)
+ #define PHYS_RAM_MAX_SIZE (256 * 1024 * 1024)

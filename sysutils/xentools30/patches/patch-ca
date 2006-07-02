@@ -1,0 +1,14 @@
+$NetBSD: patch-ca,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- misc/mbootpack/buildimage.c.orig	2006-04-15 20:39:39.000000000 +0200
++++ misc/mbootpack/buildimage.c
+@@ -38,7 +38,9 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <sys/mman.h>
++#ifndef __NetBSD__
+ #include <asm/page.h>
++#endif
+ 
+ #include "mbootpack.h"
+ #include "mb_header.h"

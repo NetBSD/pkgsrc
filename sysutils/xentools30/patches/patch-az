@@ -1,0 +1,14 @@
+$NetBSD: patch-az,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- misc/miniterm/Makefile.orig	2006-01-31 17:09:21.000000000 +0100
++++ misc/miniterm/Makefile
+@@ -9,8 +9,7 @@ TARGET = miniterm
+ all: $(TARGET)
+ 
+ install: all
+-	[ -d $(DESTDIR)/usr/bin ] || $(INSTALL_DIR) $(DESTDIR)/usr/bin
+-	$(INSTALL_PROG) $(TARGET) $(DESTDIR)/usr/bin
++	$(BSD_INSTALL_PROGRAM) $(TARGET) $(PREFIX)/bin
+ 
+ clean:
+ 	$(RM) *.o $(TARGET) *~

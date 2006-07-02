@@ -1,0 +1,20 @@
+$NetBSD: patch-bm,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- vnet/libxutil/Makefile.orig	2006-01-31 17:09:21.000000000 +0100
++++ vnet/libxutil/Makefile
+@@ -69,11 +69,10 @@ check-for-zlib:
+ 	fi
+ 
+ install: build
+-	[ -d $(DESTDIR)/usr/$(LIBDIR) ] || $(INSTALL_DIR) -p $(DESTDIR)/usr/$(LIBDIR)
+-	$(INSTALL_PROG) libxutil.so.$(MAJOR).$(MINOR) $(DESTDIR)/usr/$(LIBDIR)
+-	$(INSTALL_DATA) libxutil.a $(DESTDIR)/usr/$(LIBDIR)
+-	ln -sf libxutil.so.$(MAJOR).$(MINOR) $(DESTDIR)/usr/$(LIBDIR)/libxutil.so.$(MAJOR)
+-	ln -sf libxutil.so.$(MAJOR) $(DESTDIR)/usr/$(LIBDIR)/libxutil.so
++	$(BSD_INSTALL_LIB) libxutil.so.$(MAJOR).$(MINOR) $(PREFIX)/lib
++	$(BSD_INSTALL_LIB) libxutil.a $(PREFIX)/lib
++	ln -sf libxutil.so.$(MAJOR).$(MINOR) $(PREFIX)/lib/libxutil.so.$(MAJOR)
++	ln -sf libxutil.so.$(MAJOR) $(PREFIX)/lib/libxutil.so
+ 
+ clean:
+ 	-@$(RM) *.a *.so* *.o *.opic *.rpm 

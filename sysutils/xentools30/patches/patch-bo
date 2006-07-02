@@ -1,0 +1,25 @@
+$NetBSD: patch-bo,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- xcutils/Makefile.orig	2006-01-31 17:09:22.000000000 +0100
++++ xcutils/Makefile
+@@ -28,7 +28,7 @@ PROG_DEP = .*.d
+ 
+ PROGRAMS		= xc_restore xc_save
+ 
+-LDLIBS			= -L$(XEN_LIBXC) -lxenguest -lxenctrl
++LDLIBS			= $(LDFLAGS) -L$(XEN_LIBXC) -lxenguest -lxenctrl
+ 
+ .PHONY: all
+ all: build
+@@ -39,9 +39,8 @@ $(PROGRAMS): %: %.o
+ 
+ .PHONY: install
+ install: build
+-	[ -d $(DESTDIR)$(PROGRAMS_INSTALL_DIR) ] || \
+-		$(INSTALL_DIR) $(DESTDIR)$(PROGRAMS_INSTALL_DIR)
+-	$(INSTALL_PROG) $(PROGRAMS) $(DESTDIR)$(PROGRAMS_INSTALL_DIR)
++	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM) $(PROGRAMS) $(PREFIX)/bin
+ 
+ 
+ clean:

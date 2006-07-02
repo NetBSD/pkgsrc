@@ -1,0 +1,16 @@
+$NetBSD: patch-bx,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- xenstore/xenstored_proc.h.orig	2006-05-06 18:43:30.000000000 +0200
++++ xenstore/xenstored_proc.h	2006-05-06 18:44:08.000000000 +0200
+@@ -20,7 +20,11 @@
+ #ifndef _XENSTORED_PROC_H
+ #define _XENSTORED_PROC_H
+ 
++#ifdef __NetBSD__
++#define XENSTORED_PROC_KVA  "/dev/xsd_kva"
++#else
+ #define XENSTORED_PROC_KVA  "/proc/xen/xsd_kva"
++#endif
+ #define XENSTORED_PROC_PORT "/proc/xen/xsd_port"
+ 
+ 

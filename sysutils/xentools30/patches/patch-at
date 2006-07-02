@@ -1,0 +1,22 @@
+$NetBSD: patch-at,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- libxc/xc_private.c.orig	2006-01-31 17:09:21.000000000 +0100
++++ libxc/xc_private.c
+@@ -13,7 +13,7 @@ void *xc_map_foreign_batch(int xc_handle
+ {
+     privcmd_mmapbatch_t ioctlx; 
+     void *addr;
+-    addr = mmap(NULL, num*PAGE_SIZE, prot, MAP_SHARED, xc_handle, 0);
++    addr = mmap(NULL, num*PAGE_SIZE, prot, MAP_ANON | MAP_SHARED, -1, 0);
+     if ( addr == MAP_FAILED )
+         return NULL;
+ 
+@@ -42,7 +42,7 @@ void *xc_map_foreign_range(int xc_handle
+     privcmd_mmap_t ioctlx; 
+     privcmd_mmap_entry_t entry; 
+     void *addr;
+-    addr = mmap(NULL, size, prot, MAP_SHARED, xc_handle, 0);
++    addr = mmap(NULL, size, prot, MAP_ANON | MAP_SHARED, -1, 0);
+     if ( addr == MAP_FAILED )
+         return NULL;
+ 

@@ -1,0 +1,16 @@
+$NetBSD: patch-bg,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- security/get_decision.c.orig	2006-01-31 17:09:21.000000000 +0100
++++ security/get_decision.c
+@@ -30,7 +30,11 @@
+ #include <netinet/in.h>
+ #include <xen/acm.h>
+ #include <xen/acm_ops.h>
++#ifdef __NetBSD__
++#include <xen/NetBSD/xenio.h>
++#else
+ #include <xen/linux/privcmd.h>
++#endif
+ 
+ #define PERROR(_m, _a...) \
+ fprintf(stderr, "ERROR: " _m " (%d = %s)\n" , ## _a ,	\

@@ -1,0 +1,17 @@
+$NetBSD: patch-cf,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- xenstat/libxenstat/Makefile.orig	2006-07-01 21:47:57.000000000 +0200
++++ xenstat/libxenstat/Makefile	2006-07-01 21:48:21.000000000 +0200
+@@ -84,10 +84,10 @@
+ BINDINGSRC=$(PYSRC) $(PERLSRC)
+ 
+ # The all-bindings target builds all the language bindings
+-all-bindings: perl-bindings python-bindings
++all-bindings: python-bindings
+ 
+ # The install-bindings target installs all the language bindings
+-install-bindings: install-perl-bindings install-python-bindings
++install-bindings: install-python-bindings
+ 
+ $(BINDINGS): $(SHLIB) $(SHLIB_LINKS) src/xenstat.h
+ 

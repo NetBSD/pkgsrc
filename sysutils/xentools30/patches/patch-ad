@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- blktap/ublkback/Makefile.orig	2006-01-31 17:09:20.000000000 +0100
++++ blktap/ublkback/Makefile
+@@ -29,7 +29,7 @@ all: $(IBIN)
+ LINUX_ROOT := $(wildcard $(XEN_ROOT)/linux-2.6.*-xen-sparse)
+ 
+ install:
+-	$(INSTALL_PROG) $(IBIN) $(DESTDIR)$(INSTALL_DIR)
++	$(BSD_INSTALL_PROGRAM) $(IBIN) $(PREFIX)/sbin
+ clean:
+ 	rm -rf *.o*~ $(DEPS) xen TAGS $(IBIN)
+ 
