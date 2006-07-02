@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:36 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/07/02 09:32:55 martti Exp $
 bin/FvwmCommand
 bin/fvwm
 bin/fvwm-bug
@@ -43,6 +43,7 @@ libexec/fvwm/${PKGVERSION}/FvwmSave
 libexec/fvwm/${PKGVERSION}/FvwmSaveDesk
 libexec/fvwm/${PKGVERSION}/FvwmScript
 libexec/fvwm/${PKGVERSION}/FvwmScroll
+libexec/fvwm/${PKGVERSION}/FvwmTabs
 libexec/fvwm/${PKGVERSION}/FvwmTalk
 libexec/fvwm/${PKGVERSION}/FvwmTaskBar
 libexec/fvwm/${PKGVERSION}/FvwmTheme
@@ -76,6 +77,7 @@ man/man1/FvwmSave.1
 man/man1/FvwmSaveDesk.1
 man/man1/FvwmScript.1
 man/man1/FvwmScroll.1
+man/man1/FvwmTabs.1
 man/man1/FvwmTaskBar.1
 man/man1/FvwmTheme.1
 man/man1/FvwmWharf.1
@@ -112,6 +114,7 @@ share/fvwm/ConfigFvwmPager
 share/fvwm/ConfigFvwmProxyDefaults
 share/fvwm/ConfigFvwmScroll
 share/fvwm/ConfigFvwmSetup
+share/fvwm/ConfigFvwmTabs
 share/fvwm/ConfigFvwmTaskBar
 share/fvwm/ConfigFvwmWinList
 share/fvwm/FvwmForm-Capture
@@ -137,6 +140,7 @@ share/fvwm/FvwmScript-ScreenDump
 share/fvwm/FvwmScript-ScreenSetup
 share/fvwm/FvwmScript-Setup95
 share/fvwm/FvwmScript-WidgetDemo
+share/fvwm/FvwmTabs-DefaultSetup
 share/fvwm/fvwm-script-ComExample.pl
 share/fvwm/fvwm-script-setup95.pl
 share/fvwm/perllib/FVWM/Commands.pm
