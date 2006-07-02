@@ -1,4 +1,6 @@
-$NetBSD: patch-cd,v 1.1 2006/06/29 10:58:26 rillig Exp $
+$NetBSD: patch-cd,v 1.2 2006/07/02 09:34:01 rillig Exp $
+
+token_buffer is now a static variable in src/c-lex.c.
 
 --- src/c-lex.h.orig	2002-07-02 19:32:38.000000000 +0200
 +++ src/c-lex.h	2006-06-29 12:49:37.000000000 +0200
