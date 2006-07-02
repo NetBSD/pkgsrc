@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/05/11 14:00:54 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2006/07/02 10:09:56 rillig Exp $
 
 DISTNAME=	craftcc35
 PKGNAME=	craft-3.5
@@ -12,7 +12,7 @@ HOMEPAGE=	http://set.gmd.de/~hua/
 COMMENT=	Warcraft-like game for X11
 
 WRKSRC=		${WRKDIR}
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 USE_X11BASE=	yes
 
