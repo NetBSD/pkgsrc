@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2006/07/02 13:53:28 markd Exp $
+include/krb5/err.h
+include/krb5/glob.h
+include/krb5/ifaddrs.h
+include/krb5/vis.h
