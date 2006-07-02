@@ -1,0 +1,13 @@
+$NetBSD: patch-bl,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- security/setlabel.sh.orig	2006-01-31 17:09:21.000000000 +0100
++++ security/setlabel.sh
+@@ -55,7 +55,7 @@ policy name : the name of the policy, i.
+               If the policy name is omitted, it is attempted
+               to find the current policy's name in grub.conf.
+ policy dir  : the directory where the <policy name> policy is located
+-              The default location is '/etc/xen/acm-security/policies'
++              The default location is '@XENDCONFDIR@/acm-security/policies'
+ "
+ }
+ 

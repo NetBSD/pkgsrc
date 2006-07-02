@@ -1,0 +1,15 @@
+$NetBSD: patch-bw,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- xenstore/list.h.orig	2006-01-31 17:09:22.000000000 +0100
++++ xenstore/list.h
+@@ -3,6 +3,10 @@
+ /* Taken from Linux kernel code, but de-kernelized for userspace. */
+ #include <stddef.h>
+ 
++#undef LIST_HEAD_INIT
++#undef LIST_HEAD
++#undef INIT_LIST_HEAD
++
+ /*
+  * These are non-NULL pointers that will result in page faults
+  * under normal circumstances, used to verify that nobody uses

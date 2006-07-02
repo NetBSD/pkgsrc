@@ -1,0 +1,26 @@
+$NetBSD: patch-al,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- console/Makefile.orig	2006-01-31 17:09:20.000000000 +0100
++++ console/Makefile
+@@ -23,15 +23,15 @@ clean:
+ 	$(RM) client/*.o daemon/*.o
+ 
+ xenconsoled: $(patsubst %.c,%.o,$(wildcard daemon/*.c))
+-	$(CC) $(CFLAGS) $^ -o $@ -L$(XEN_LIBXC) -L$(XEN_XENSTORE) \
++	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS) -L$(XEN_LIBXC) -L$(XEN_XENSTORE) \
+               -lxenctrl -lxenstore
+ 
+ xenconsole: $(patsubst %.c,%.o,$(wildcard client/*.c))
+-	$(CC) $(CFLAGS) $^ -o $@ -L$(XEN_LIBXC) -L$(XEN_XENSTORE) \
++	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS) -L$(XEN_LIBXC) -L$(XEN_XENSTORE) \
+ 	      -lxenctrl -lxenstore
+ 
+ install: $(BIN)
+-	$(INSTALL_DIR) -p $(DESTDIR)/$(DAEMON_INSTALL_DIR)
+-	$(INSTALL_PROG) xenconsoled $(DESTDIR)/$(DAEMON_INSTALL_DIR)
+-	$(INSTALL_DIR) -p $(DESTDIR)/$(CLIENT_INSTALL_DIR)
+-	$(INSTALL_PROG) xenconsole $(DESTDIR)/$(CLIENT_INSTALL_DIR)
++	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/sbin
++	$(BSD_INSTALL_PROGRAM) xenconsoled $(PREFIX)/sbin
++	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM) xenconsole $(PREFIX)/bin
