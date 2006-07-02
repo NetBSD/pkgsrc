@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.40 2006/06/05 22:34:40 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.41 2006/07/02 09:47:17 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -7,7 +7,7 @@
 .\" Roland Illig <roland.illig@gmx.de>, 2004, 2005.
 .\" Roland Illig <rillig@NetBSD.org>, 2005, 2006.
 .\"
-.Dd February 28, 2006
+.Dd June 30, 2006
 .Dt PKGLINT 1
 .Sh NAME
 .Nm pkglint
@@ -80,10 +80,6 @@ line.
 .It Fl s Ns | Ns Fl -source
 For all diagnostics having file and line number information, show the
 source code along with the diagnostics.
-.It Fl v Ns | Ns Fl -verbose
-Be verbose.
-Show the progress report for items that are being checked.
-If given more than once, debugging messages are also shown.
 .El
 .Pp
 .\" =======================================================================
@@ -95,6 +91,8 @@ Enable all checks.
 Disable all checks.
 .It Cm [no-]ALTERNATIVES
 Check the alternatives file.
+.It Cm [no-]DESCR
+Check the DESCR file.
 .It Cm [no-]INSTALL
 Check the INSTALL and DEINSTALL scripts.
 .It Cm [no-]Makefile
@@ -134,10 +132,19 @@ Additional information about why variables should be quoted or not.
 Parser information from the shell word and the shell command parsers.
 .It Cm [no-]tools
 Additional information about the tools from the tools framework.
+.It Cm [no-]trace
+Print the names of subroutines and their arguments as they are entered.
+.It Cm [no-]unchecked
+Show the things that pkglint cannot currently check.
+These are mostly due to unresolved make variables.
+.It Cm [no-]unused
+Show which variables are detected as used, and so will not generate an
+.Dq unused variable
+warning.
 .It Cm [no-]vartypes
 Additional information about the variable types.
 .It Cm [no-]varuse
-Information about used and unused variables.
+Information about the contexts in which variables are used.
 .El
 .Pp
 .\" =======================================================================
@@ -157,6 +164,8 @@ Emit some additional warnings that are not enabled by default,
 for whatever reason.
 .It Cm [no-]order
 Warn if Makefile variables are not in the preferred order.
+.It Cm [no-]perm
+Warn if a variable is used or defined outside its specified scope.
 .It Cm [no-]plist-depr
 Warn if deprecated pathnames are used in
 .Pa PLIST
@@ -216,10 +225,6 @@ Errors should be fixed before a package is committed to pkgsrc.
 .It WARN: ...
 Warnings generally should be fixed, but they are not as critical as
 errors.
-.It OK: ...
-Informational messages are only written in verbose mode
-.Pq Fl v .
-Their main use is to aid debugging.
 .El
 .Sh AUTHORS
 .An Roland Illig Aq rillig@NetBSD.org
