@@ -1,0 +1,32 @@
+$NetBSD: patch-au,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- libxc/xc_private.h.orig	2006-04-13 19:48:38.000000000 +0200
++++ libxc/xc_private.h	2006-05-07 20:33:41.000000000 +0200
+@@ -15,7 +15,11 @@
+ 
+ #include "xenctrl.h"
+ 
+-#include <xen/linux/privcmd.h>
++#ifdef __NetBSD__
++#include <xen/NetBSD/xenio.h>
++#else
++include <xen/linux/privcmd.h>
++#endif
+ 
+ /* valgrind cannot see when a hypercall has filled in some values.  For this
+    reason, we must zero the privcmd_hypercall_t or dom0_op_t instance before a
+@@ -66,9 +70,13 @@
+ static inline int do_xen_hypercall(int xc_handle,
+                                    privcmd_hypercall_t *hypercall)
+ {
+-    return do_privcmd(xc_handle,
++    int err = do_privcmd(xc_handle,
+                       IOCTL_PRIVCMD_HYPERCALL, 
+                       (unsigned long)hypercall);
++    if (err == 0)
++	return 0;
++    else
++        return -errno;
+ }
+ 
+ static inline int do_xen_version(int xc_handle, int cmd, void *dest)

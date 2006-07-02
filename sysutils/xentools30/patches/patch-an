@@ -1,0 +1,24 @@
+$NetBSD: patch-an,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- firmware/Makefile.orig	2006-04-10 00:05:53.000000000 +0200
++++ firmware/Makefile	2006-05-05 21:45:41.000000000 +0200
+@@ -4,7 +4,7 @@
+ # hvmloader is a 32-bit protected mode binary.
+ # It belongs in /usr/lib, not /usr/lib64.
+ TARGET      := hvmloader/hvmloader
+-INSTALL_DIR := $(DESTDIR)/usr/lib/xen/boot
++INSTALL_DIR := $(PREFIX)/lib/xen/boot
+ 
+ SUBDIRS :=
+ SUBDIRS += rombios
+@@ -29,8 +29,8 @@
+ 
+ 
+ install: all
+-	[ -d $(INSTALL_DIR) ] || install -d -m0755 $(INSTALL_DIR)
+-	[ ! -e $(TARGET) ] || install -m0644 $(TARGET) $(INSTALL_DIR)
++#	$(BSD_INSTALL_DATA_DIR) $(INSTALL_DIR)
++#	$(BSD_INSTALL_DATA) $(TARGET) $(INSTALL_DIR)
+ 
+ clean: 
+ 	@set -e; for subdir in $(SUBDIRS); do \

@@ -1,0 +1,22 @@
+$NetBSD: patch-cg,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- xenstat/xentop/xentop.c.orig	2006-04-13 19:48:39.000000000 +0200
++++ xenstat/xentop/xentop.c	2006-07-01 22:12:29.000000000 +0200
+@@ -18,7 +18,8 @@
+  *  along with this program; if not, write to the Free Software
+  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  */
+-#include <curses.h>
++#include <ncurses.h>
++#define vw_printw vwprintw
+ #include <ctype.h>
+ #include <errno.h>
+ #include <stdio.h>
+@@ -27,6 +28,7 @@
+ #include <sys/time.h>
+ #include <time.h>
+ #include <unistd.h>
++#include <stdarg.h>
+ 
+ #include <xenstat.h>
+ 

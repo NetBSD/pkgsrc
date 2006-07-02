@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- blktap/parallax/Makefile.orig	2006-04-10 00:05:52.000000000 +0200
++++ blktap/parallax/Makefile	2006-05-05 21:42:19.000000000 +0200
+@@ -1,7 +1,7 @@
+ XEN_ROOT = ../../..
+ include $(XEN_ROOT)/tools/Rules.mk
+ 
+-PARALLAX_INSTALL_DIR	= /usr/sbin
++PARALLAX_INSTALL_DIR	= $(PREFIX)/sbin
+ 
+ INSTALL         = install
+ INSTALL_PROG    = $(INSTALL) -m0755
+@@ -46,7 +46,7 @@
+ all: $(VDI_TOOLS) parallax blockstored
+ 
+ install: all
+-	$(INSTALL_PROG) $(IBINS) $(DESTDIR)$(PARALLAX_INSTALL_DIR)
++	$(BSD_INSTALL_PROGRAM) $(IBINS) $(PARALLAX_INSTALL_DIR)
+ 
+ clean:
+ 	rm -rf *.o *~ $(DEPS) xen TAGS $(VDI_TOOLS) parallax vdi_unittest
