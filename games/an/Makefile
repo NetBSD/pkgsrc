@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2004/01/20 12:15:39 agc Exp $
+# $NetBSD: Makefile,v 1.5 2006/07/02 14:49:50 joerg Exp $
 #
 
 DISTNAME=	an-0.93
@@ -7,6 +7,8 @@ MASTER_SITES=	ftp://suburbia.net/pub/rmj/
 
 MAINTAINER=	jonb@NetBSD.org
 COMMENT=	Very fast anagram generator
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 WRKSRC=		${WRKDIR}/an-0.93
 
