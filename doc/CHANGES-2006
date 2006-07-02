@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.624 2006/07/02 17:05:36 martti Exp $
+$NetBSD: CHANGES-2006,v 1.625 2006/07/02 18:20:24 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3229,3 +3229,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated benchmarks/netio to 1.26 [tron 2006-07-02]
 	Added sysutils/xentools30 version 3.0.2.2 [bouyer 2006-07-02]
 	Updated editors/vim-share to 7.0.35 [martti 2006-07-02]
+	Added comms/obexapp version 1.4.4 [xtraeme 2006-07-02]
