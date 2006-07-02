@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2006/04/22 18:44:58 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2006/07/02 10:21:14 rillig Exp $
 #
 
-DISTNAME=	scigraphica-0.8.0
-PKGREVISION=	10
+DISTNAME=	scigraphica-2.1.0
 CATEGORIES=	graphics math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scigraphica/}
 
@@ -25,17 +24,9 @@ CONFIGURE_ENV+=		PYTHONBIN=${PYTHONBIN:Q}
 USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
 
-PY_PATCHPLIST=		YES
 PTHREAD_AUTO_VARS=	yes
 
 .include "../../lang/python/application.mk"
-
-.include "../../devel/readline/buildlink3.mk"
-.include "../../graphics/imlib/buildlink3.mk"
-.include "../../math/py-Numeric/buildlink3.mk"
-.include "../../textproc/libxml/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
-.include "../../x11/gtk+extra/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../graphics/libscigraphica/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

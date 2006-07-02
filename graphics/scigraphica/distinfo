@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.8 2006/04/22 18:44:58 joerg Exp $
+$NetBSD: distinfo,v 1.9 2006/07/02 10:21:14 rillig Exp $
 
-SHA1 (scigraphica-0.8.0.tar.gz) = 7a3b932f4e5de39bbf815c0e5629005e3c209421
-RMD160 (scigraphica-0.8.0.tar.gz) = f0f38cdc877ffe6ed16e655efac324c7c36f0f9f
-Size (scigraphica-0.8.0.tar.gz) = 841199 bytes
-SHA1 (patch-aa) = 5cd12c4adaa496bafc6bb68c57575a4e35d3913a
-SHA1 (patch-ab) = f96a2bf4d9ac22e9ec9c467b010f9f9cf4a642d5
-SHA1 (patch-ac) = c105e7f5ac410bbce44df667594b70cfdba825af
-SHA1 (patch-ad) = da24a288074ec93d1c734b57afc92af96a98df49
+SHA1 (scigraphica-2.1.0.tar.gz) = 59574fddfe5a3529c69e1bd84fb62c019b4ef8d0
+RMD160 (scigraphica-2.1.0.tar.gz) = 275790299fcceee41a186b4ec03e1a9e3b3eb125
+Size (scigraphica-2.1.0.tar.gz) = 539549 bytes
+SHA1 (patch-aa) = f683594c3c7361e9d3fe6097d6fb5c9fdf3fa34c
