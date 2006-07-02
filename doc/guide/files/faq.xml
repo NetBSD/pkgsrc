@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.25 2006/06/23 10:12:28 rillig Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.26 2006/07/02 12:42:07 rillig Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -75,7 +75,7 @@ pkgviews User's guide in
 <sect1 id="faq-pkgtools">
 <title>Utilities for package management (pkgtools)</title>
 
-<para>The <filename>pkgsrc/pkgtools</filename> directory pkgtools contains
+<para>The directory <filename>pkgsrc/pkgtools</filename> contains
 a number of useful utilities for both users and developers of pkgsrc.  This
 section attempts only to make the reader aware of the utilities and when
 they might be useful, and not to duplicate the documentation that comes
