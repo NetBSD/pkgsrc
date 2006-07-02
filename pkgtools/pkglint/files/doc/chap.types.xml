@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.types.xml,v 1.12 2006/06/30 12:46:30 rillig Exp $ -->
+<!-- $NetBSD: chap.types.xml,v 1.13 2006/07/02 09:47:17 rillig Exp $ -->
 
 <chapter id="types">
 <title>The &pkglint; type system</title>
@@ -71,10 +71,9 @@
 	<xref linkend="types.predefined"/> for the list of predefined
 	types.</para>
 
-	<para>Enumeration types are defined by writing a
-	<literal>{</literal>, followed by the enumeration items,
-	followed by a <literal>}</literal>. The enumeration items are
-	separated by space characters.</para>
+	<para>An expression of an enumeration type may have either of
+	the enumeration-items as a value. It may not reference other
+	variables.</para>
 
 	<para>A list type can be constructed from a predefined type or
 	an enumeration. It is not possible to construct lists of lists,
@@ -486,7 +485,10 @@
 	</variablelist>
 
 </sect1>
-<sect1 id="types.kinds">
+<sect1 id="types.future">
+<title>Future directions</title>
+
+<sect2 id="types.kinds">
 <title>Different interpretation of the same data types</title>
 
 	<para>As explained above, there are internal lists and external
@@ -532,5 +534,6 @@
 	<literal>=</literal> operator for the first of the
 	assignments.</para>
 
+</sect2>
 </sect1>
 </chapter>
