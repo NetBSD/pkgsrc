@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.608 2006/07/02 09:33:54 martti Exp $
+$NetBSD: CHANGES-2006,v 1.609 2006/07/02 09:48:02 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3204,3 +3204,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Moved wm/fvwm2 to wm/fvwm [martti 2006-07-02]
 	Moved wm/fvwm2-themes to wm/fvwm-themes [martti 2006-07-02]
 	Updated wm/fvwm-devel to 2.5.16 [martti 2006-07-02]
+	Updated pkgtools/pkglint to 4.66 [rillig 2006-07-02]
