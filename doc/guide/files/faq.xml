@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.26 2006/07/02 12:42:07 rillig Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.27 2006/07/02 23:34:03 rillig Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -581,4 +581,31 @@ a security check before building any package.  See
 
 </sect1>
 
+<sect1 id="ufaq-fail">
+<title>A package does not build. What shall I do?</title>
+
+	<procedure>
+
+	<step><para>Make sure that your copy of pkgsrc is consistent. A
+	case that occurs often is that people only update pkgsrc in
+	parts, because of performance reasons. Since pkgsrc is one large
+	system, not a collection of many small systems, there are
+	sometimes changes that only work when the whole pkgsrc tree is
+	updated.</para></step>
+
+	<step><para>Make sure that you don't have any CVS conflicts.
+	Search for <quote>&lt;&lt;&lt;&lt;&lt;&lt;</quote> or
+	<quote>&gt;&gt;&gt;&gt;&gt;&gt;</quote> in all your pkgsrc
+	files.</para></step>
+
+	<step><para>Make sure that you don't have old copies of the packages
+	extracted. Run <command>make clean clean-depends</command> to
+	verify this.</para></step>
+
+	<step><para>If the problem still exists, write a mail to the
+	<literal>pkgsrc-users</literal> mailing list.</para></step>
+
+	</procedure>
+	
+</sect1>
 </chapter>
