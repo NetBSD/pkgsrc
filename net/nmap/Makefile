@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2006/06/25 14:29:14 salo Exp $
+# $NetBSD: Makefile,v 1.53 2006/07/02 17:22:14 rillig Exp $
 #
 
 DISTNAME=	nmap-4.11
@@ -20,7 +20,7 @@ USE_TOOLS+=		gmake
 LIBTOOL_OVERRIDE+=	libdnet-stripped/libtool
 
 CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
-CONFIGURE_ARGS+=	--with-libpcre=${BUILDLINK_PREFIX.libpcre}
+CONFIGURE_ARGS+=	--with-libpcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--without-nmapfe
 
