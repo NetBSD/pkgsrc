@@ -1,0 +1,27 @@
+$NetBSD: patch-al,v 1.1 2006/07/02 12:40:41 rillig Exp $
+
+Since GNU Make 3.81, the backslashes are preserved in the shell commands
+and need to be filtered out explicitly.
+
+--- ../coreconf/rules.mk.orig	2004-03-23 01:56:47.000000000 +0100
++++ ../coreconf/rules.mk	2006-06-24 10:20:21.000000000 +0200
+@@ -882,7 +882,7 @@
+ ifneq (,$(filter-out OpenVMS OS2 WIN%,$(OS_TARGET)))
+ # Can't use sed because of its 4000-char line length limit, so resort to perl
+ .DEFAULT:
+-	@perl -e '                                                            \
++	perlcmd='                                                             \
+ 	    open(MD, "< $(DEPENDENCIES)");                                    \
+ 	    while (<MD>) {                                                    \
+ 		if (m@ \.*/*$< @) {                                           \
+@@ -909,7 +909,9 @@
+ 	    } elsif ("$<" ne "$(DEPENDENCIES)") {                             \
+ 		print "$(MAKE): *** No rule to make target $<.  Stop.\n";     \
+ 		exit(1);                                                      \
+-	    }'
++	    }'; \
++	perlcmd=`echo "$$perlcmd" | sed -e 's,\\\\$$,,'`; \
++	perl -e "$$perlcmd"
+ endif
+ 
+ #############################################################################
