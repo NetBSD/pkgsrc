@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.40 2006/01/16 23:35:29 wiz Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.41 2006/07/02 09:45:23 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -657,7 +657,7 @@ ${_WRAP_UNTRANSFORM_SEDFILE}: ${_WRAP_GEN_TRANSFORM}
 .endif
 
 .for _wrappee_ in ${_WRAPPEES}
-.  if !target$(${_WRAP_EMPTY_FILE})
+.  if !target(${_WRAP_EMPTY_FILE})
 ${_WRAP_EMPTY_FILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${.TARGET}
