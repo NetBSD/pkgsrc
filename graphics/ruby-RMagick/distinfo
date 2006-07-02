@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2006/06/07 03:09:35 taca Exp $
+$NetBSD: distinfo,v 1.15 2006/07/02 11:03:27 taca Exp $
 
-SHA1 (RMagick-1.12.0.tar.gz) = a0cba0469decf6c4aee0cfa69cd24db52110b85d
-RMD160 (RMagick-1.12.0.tar.gz) = 8276f4fadda4f6477c25ba57c3cbdb982417d2a1
-Size (RMagick-1.12.0.tar.gz) = 1009213 bytes
+SHA1 (RMagick-1.13.0.tar.gz) = 49e827409aba59f6ea45fda5a593a5c5b6078eb8
+RMD160 (RMagick-1.13.0.tar.gz) = 8060b11f8ce19e6220caea67e57ea45fc5e1c10b
+Size (RMagick-1.13.0.tar.gz) = 1012178 bytes
