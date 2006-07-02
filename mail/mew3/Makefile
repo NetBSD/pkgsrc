@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/04/05 15:14:10 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2006/07/02 10:26:48 rillig Exp $
 
 DISTNAME=	mew-3.3
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -10,9 +10,9 @@ MAINTAINER=	uebayasi@jp.NetBSD.org
 HOMEPAGE=	http://www.mew.org/
 COMMENT=	Messaging in the Emacs World
 
-CONFLICTS=+	mew-xemacs-[0-9]* incm-[0-9]*
+CONFLICTS+=	mew-xemacs-[0-9]* incm-[0-9]*
 
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 EMACS_VERSIONS_ACCEPTED=	emacs21 emacs21nox emacs20 xemacs214 xemacs215
 EMACS_MODULES+=			base
@@ -32,8 +32,8 @@ SUBST_FILES.local=	Makefile bin/configure info/Makefile
 SUBST_SED.local=	-e 's|/usr/local|${PREFIX}|g'
 
 post-install:
-	@${INSTALL_DATA_DIR} ${MEW_CONTRIB_DIR}
-	@${INSTALL_DATA} ${WRKSRC}/contrib/* ${MEW_CONTRIB_DIR}
+	${INSTALL_DATA_DIR} ${MEW_CONTRIB_DIR}
+	${INSTALL_DATA} ${WRKSRC}/contrib/* ${MEW_CONTRIB_DIR}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/emacs.mk"
