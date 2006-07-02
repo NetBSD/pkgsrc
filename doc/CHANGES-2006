@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.616 2006/07/02 11:36:30 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.617 2006/07/02 12:02:01 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3213,3 +3213,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/mldonkey-gui to 2.7.7 [wiz 2006-07-02]
 	Updated finance/gnucash-devel to 1.9.8 [wiz 2006-07-02]
 	Updated emulators/gxemul to 0.4.0.1 [xtraeme 2006-07-02]
+	Updated mail/clamav to 0.88.3 [xtraeme 2006-07-02]
