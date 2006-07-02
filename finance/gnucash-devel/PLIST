@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/06/13 19:54:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/07/02 11:07:03 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -303,6 +303,7 @@ share/gnucash/accounts/de_DE/acctchrt_investment.gnucash-xea
 share/gnucash/accounts/de_DE/acctchrt_kids.gnucash-xea
 share/gnucash/accounts/de_DE/acctchrt_otherasset.gnucash-xea
 share/gnucash/accounts/de_DE/acctchrt_otherloan.gnucash-xea
+share/gnucash/accounts/de_DE/acctchrt_skr03.gnucash-xea
 share/gnucash/accounts/de_DE/acctchrt_skr04.gnucash-xea
 share/gnucash/accounts/de_DE/acctchrt_studium.gnucash-xea
 share/gnucash/accounts/el_GR/acctchrt_brokerage.gnucash-xea
