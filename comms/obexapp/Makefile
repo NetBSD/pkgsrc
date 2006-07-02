@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/02 18:18:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/02 18:24:18 xtraeme Exp $
 #
 
 DISTNAME=	obexapp-1.4.4
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.geocities.com/m_evmenkin/
 MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://www.geocities.com/m_evmenkin/
 COMMENT=	Obex application to transfer objects to mobile equipment
+
+ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-*
 
 WRKSRC=		${WRKDIR}/obexapp
 
