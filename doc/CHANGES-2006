@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.606 2006/07/02 09:14:54 agc Exp $
+$NetBSD: CHANGES-2006,v 1.607 2006/07/02 09:30:11 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3200,3 +3200,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/getmail to 4.6.3 [schmonz 2006-07-01]
 	Removed www/firefox-bin-acroread3 [salo 2006-07-01]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2006Q2 branch [agc 2006-07-02]
+	Updated mail/dovecot to 1.0rc1 [ghen 2006-07-02]
