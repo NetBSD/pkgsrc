@@ -1,0 +1,91 @@
+$NetBSD: patch-bt,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- xenstore/xenstored_domain.c.orig	2006-01-31 17:09:22.000000000 +0100
++++ xenstore/xenstored_domain.c
+@@ -18,7 +18,9 @@
+ */
+ 
+ #include <stdio.h>
++#ifndef __NetBSD__
+ #include <linux/ioctl.h>
++#endif
+ #include <sys/ioctl.h>
+ #include <sys/mman.h>
+ #include <unistd.h>
+@@ -38,7 +40,11 @@
+ #include "xenstored_test.h"
+ 
+ #include <xenctrl.h>
++#ifdef __NetBSD__
++#include <xen/NetBSD/xenio3.h>
++#else
+ #include <xen/linux/evtchn.h>
++#endif
+ 
+ static int *xc_handle;
+ static evtchn_port_t virq_port;
+@@ -283,7 +289,11 @@ static struct domain *new_domain(void *c
+ 	rc = ioctl(eventchn_fd, IOCTL_EVTCHN_BIND_INTERDOMAIN, &bind);
+ 	if (rc == -1)
+ 	    return NULL;
++#ifdef __NetBSD__
++	domain->port = bind.port;
++#else
+ 	domain->port = rc;
++#endif
+ 
+ 	domain->conn = new_connection(writechn, readchn);
+ 	domain->conn->domain = domain;
+@@ -503,8 +513,11 @@ outfd:
+ }
+ 
+ 
+-
++#ifdef __NetBSD__
++#define EVTCHN_DEV_NAME  "/dev/xenevt"
++#else
+ #define EVTCHN_DEV_NAME  "/dev/xen/evtchn"
++#endif
+ #define EVTCHN_DEV_MAJOR 10
+ #define EVTCHN_DEV_MINOR 201
+ 
+@@ -512,7 +525,9 @@ outfd:
+ /* Returns the event channel handle. */
+ int domain_init(void)
+ {
++#ifndef __NetBSD__
+ 	struct stat st;
++#endif
+ 	struct ioctl_evtchn_bind_virq bind;
+ 	int rc;
+ 
+@@ -530,6 +545,9 @@ int domain_init(void)
+ 	eventchn_fd = fake_open_eventchn();
+ 	(void)&st;
+ #else
++#ifdef __NetBSD__
++	eventchn_fd = open(EVTCHN_DEV_NAME, O_NONBLOCK|O_RDWR);
++#else
+ 	/* Make sure any existing device file links to correct device. */
+ 	if ((lstat(EVTCHN_DEV_NAME, &st) != 0) || !S_ISCHR(st.st_mode) ||
+ 	    (st.st_rdev != makedev(EVTCHN_DEV_MAJOR, EVTCHN_DEV_MINOR)))
+@@ -545,6 +563,7 @@ int domain_init(void)
+ 			goto reopen;
+ 		return -errno;
+ 	}
++#endif /* !__NetBSD__ */
+ #endif
+ 	if (eventchn_fd < 0)
+ 		barf_perror("Failed to open evtchn device");
+@@ -556,7 +575,11 @@ int domain_init(void)
+ 	rc = ioctl(eventchn_fd, IOCTL_EVTCHN_BIND_VIRQ, &bind);
+ 	if (rc == -1)
+ 		barf_perror("Failed to bind to domain exception virq port");
++#ifdef __NetBSD__
++	virq_port = bind.port;
++#else
+ 	virq_port = rc;
++#endif
+ 
+ 	return eventchn_fd;
+ }

@@ -1,0 +1,13 @@
+$NetBSD: patch-bk,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- security/secpol_xml2bin.h.orig	2006-01-31 17:09:21.000000000 +0100
++++ security/secpol_xml2bin.h
+@@ -12,7 +12,7 @@
+  * License.
+  *
+  */
+-#define POLICY_DIR          "/etc/xen/acm-security/policies/"
++#define POLICY_DIR          "@XENDCONFDIR@/acm-security/policies/"
+ #define POLICY_EXTENSION    "-security_policy.xml"
+ #define LABEL_EXTENSION     "-security_label_template.xml"
+ #define BINARY_EXTENSION    ".bin"

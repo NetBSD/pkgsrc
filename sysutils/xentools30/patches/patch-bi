@@ -1,0 +1,13 @@
+$NetBSD: patch-bi,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- security/labelfuncs.sh.orig	2006-01-31 17:09:21.000000000 +0100
++++ security/labelfuncs.sh
+@@ -18,7 +18,7 @@
+ 
+ 
+ #Some global variables for tools using this module
+-ACM_DEFAULT_ROOT="/etc/xen/acm-security"
++ACM_DEFAULT_ROOT="@XENDCONFDIR@/acm-security"
+ 
+ # Set the policy and policydir variables
+ # Parameters:

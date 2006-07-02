@@ -1,0 +1,10 @@
+$NetBSD: patch-af,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- check/check_hotplug.orig	2006-01-31 17:09:20.000000000 +0100
++++ check/check_hotplug
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/ksh
+ # CHECK-INSTALL
+ 
+ function error {

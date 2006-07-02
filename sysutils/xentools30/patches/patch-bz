@@ -1,0 +1,14 @@
+$NetBSD: patch-bz,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- misc/mbootpack/mbootpack.c.orig	2006-01-31 17:09:21.000000000 +0100
++++ misc/mbootpack/mbootpack.c
+@@ -42,7 +42,9 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <sys/mman.h>
++#ifndef __NetBSD__
+ #include <asm/page.h>
++#endif
+ 
+ /* From GNU GRUB */
+ #include "mb_header.h"

@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- blktap/Makefile.orig	2006-01-31 17:09:20.000000000 +0100
++++ blktap/Makefile
+@@ -48,10 +48,10 @@ all: mk-symlinks libblktap.so #blkdump
+ 	done
+ 
+ install: all
+-	$(INSTALL_DIR) -p $(DESTDIR)/usr/$(LIBDIR)
+-	$(INSTALL_DIR) -p $(DESTDIR)/usr/include
+-	$(INSTALL_PROG) $(LIB) $(DESTDIR)/usr/$(LIBDIR)
+-	$(INSTALL_PROG) blktaplib.h $(DESTDIR)/usr/include
++	$(BSD_INSTALL_LIB_DIR) $(PREFIX)/lib
++	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/include
++	$(BSD_INSTALL_LIB) $(LIB) $(PREFIX)/lib
++	$(BSD_INSTALL_DATA) blktaplib.h $(PREFIX)/include
+ 	#$(INSTALL_PROG) $(IBINS) $(DESTDIR)$(BLKTAP_INSTALL_DIR)
+ 	@set -e; for subdir in $(SUBDIRS); do \
+ 		$(MAKE) -C $$subdir $@;       \
+@@ -80,7 +80,7 @@ libblktap.so: $(OBJS) 
+ 	ln -sf libblktap.so.$(MAJOR) $@
+ 
+ blkdump: libblktap.so
+-	$(CC) $(CFLAGS) -o blkdump -L$(XEN_LIBXC) -L. \
++	$(CC) $(CFLAGS) -o blkdump $(LDFLAGS) -L$(XEN_LIBXC) -L. \
+ 	      -l blktap blkdump.c
+ 
+ .PHONY: TAGS clean install mk-symlinks rpm

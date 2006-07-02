@@ -1,0 +1,62 @@
+$NetBSD: patch-bq,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- xenstat/libxenstat/src/xen-interface.c.orig	2006-04-13 19:48:39.000000000 +0200
++++ xenstat/libxenstat/src/xen-interface.c	2006-07-01 23:17:50.000000000 +0200
+@@ -23,7 +23,13 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <unistd.h>
++#include <errno.h>
++#ifdef __NetBSD__
++#include <xen/NetBSD/xenio.h>
++#else
++#error linux
+ #include <xen/linux/privcmd.h>
++#endif
+ 
+ struct xi_handle {
+ 	int fd;
+@@ -39,9 +45,9 @@
+ 	if (handle == NULL)
+ 		return NULL;
+ 
+-	handle->fd = open("/proc/xen/privcmd", O_RDWR);
++	handle->fd = open("/kern/xen/privcmd", O_RDWR);
+ 	if (handle->fd < 0) {
+-		perror("Couldn't open /proc/xen/privcmd");
++		perror("Couldn't open /kern/xen/privcmd");
+ 		free(handle);
+ 		return NULL;
+ 	}
+@@ -78,7 +84,10 @@
+ 	privcmd.arg[0] = (unsigned long)XENVER_version;
+ 	privcmd.arg[1] = 0;
+ 
+-	*vnum = ioctl(handle->fd, IOCTL_PRIVCMD_HYPERCALL, &privcmd);
++	if (ioctl(handle->fd, IOCTL_PRIVCMD_HYPERCALL, &privcmd) == 0)
++		*vnum = 0;
++	else
++		*vnum = -errno;
+ 	if (*vnum < 0) {
+ 		perror("Hypercall failed");
+ 		ret = -1;
+@@ -88,7 +97,8 @@
+ 	privcmd.arg[0] = (unsigned long)XENVER_extraversion;
+ 	privcmd.arg[1] = (unsigned long)ver;
+ 
+-	if (ioctl(handle->fd, IOCTL_PRIVCMD_HYPERCALL, &privcmd) < 0) {
++	if (ioctl(handle->fd, IOCTL_PRIVCMD_HYPERCALL, &privcmd) < 0 &&
++	    errno >= 0) {
+ 		perror("Hypercall failed");
+ 		ret = -1;
+ 	}
+@@ -123,7 +133,8 @@
+ 		return -1;
+ 	}
+ 
+-	if (ioctl( handle->fd, IOCTL_PRIVCMD_HYPERCALL, &privcmd) < 0) {
++	if (ioctl( handle->fd, IOCTL_PRIVCMD_HYPERCALL, &privcmd) < 0 &&
++	    errno >= 0) {
+ 		perror("Hypercall failed");
+ 		ret = -1;
+ 	}

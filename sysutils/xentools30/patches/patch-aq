@@ -1,0 +1,40 @@
+$NetBSD: patch-aq,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- ioemu/target-i386-dm/helper2.c.orig	2006-04-10 00:05:53.000000000 +0200
++++ ioemu/target-i386-dm/helper2.c	2006-05-05 21:48:14.000000000 +0200
+@@ -51,7 +51,11 @@
+ 
+ #include <xenctrl.h>
+ #include <xen/hvm/ioreq.h>
++#ifdef __NetBSD__
++#include <xen/NetBSD/xenio3.h>
++#else
+ #include <xen/linux/evtchn.h>
++#endif
+ 
+ #include "cpu.h"
+ #include "exec-all.h"
+@@ -508,7 +512,11 @@
+         return NULL;
+ 
+     //use nonblock reading not polling, may change in future.
++#ifdef __NetBSD__
++    evtchn_fd = open("/dev/xenevt", O_RDWR|O_NONBLOCK);
++#else
+     evtchn_fd = open("/dev/xen/evtchn", O_RDWR|O_NONBLOCK);
++#endif
+     if (evtchn_fd == -1) {
+         fprintf(logfile, "open evtchn device error %d\n", errno);
+         return NULL;
+@@ -523,7 +531,11 @@
+             fprintf(logfile, "bind interdomain ioctl error %d\n", errno);
+             return NULL;
+         }
++#ifdef __NetBSD__
++        shared_page->vcpu_iodata[i].dm_eport = bind.port;
++#else
+         shared_page->vcpu_iodata[i].dm_eport = rc;
++#endif
+     }
+ 
+     return env;
