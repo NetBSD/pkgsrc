@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2006/03/14 15:48:01 rillig Exp $
+# $NetBSD: Makefile,v 1.59 2006/07/02 10:37:53 rillig Exp $
 
 DISTNAME=	xosview-1.8.3
 CATEGORIES=	sysutils
@@ -11,7 +11,7 @@ COMMENT=	X11 graphical display of OS statistics
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_X11BASE=		YES
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
