@@ -1,9 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/04/12 10:27:26 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/07/02 10:28:50 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_NUMERIC_BUILDLINK3_MK:=	${PY_NUMERIC_BUILDLINK3_MK}+
-
-.include "../../lang/python/pyversion.mk"
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	pynumeric
@@ -13,8 +11,9 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npynumeric}
 BUILDLINK_PACKAGES+=	pynumeric
 
 .if !empty(PY_NUMERIC_BUILDLINK3_MK:M+)
+.  include "../../lang/python/pyversion.mk"
 BUILDLINK_API_DEPENDS.pynumeric+=	${PYPKGPREFIX}-Numeric-[0-9]*
-BUILDLINK_ABI_DEPENDS.pynumeric?=	${PYPKGPREFIX}-Numeric>=23.7nb1
+BUILDLINK_ABI_DEPENDS.pynumeric+=	${PYPKGPREFIX}-Numeric>=23.7nb1
 BUILDLINK_PKGSRCDIR.pynumeric?=	../../math/py-Numeric
 .endif	# PY_NUMERIC_BUILDLINK3_MK
 
