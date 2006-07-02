@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/05/02 13:41:58 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2006/07/02 10:40:13 rillig Exp $
 #
 
 DISTNAME=	gnome-doc-utils-0.6.0
@@ -16,7 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-libxslt>=1.1.12:../../textproc/py-libxslt
 
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		YES
-USE_LANGUAGES=		# empty
 USE_PKGLOCALEDIR=	YES
 
 CONFIGURE_ARGS+=	PYTHON=${PYTHONBIN:Q}
@@ -31,8 +30,8 @@ PYTHON_PATCH_SCRIPTS+=	xml2po/modes/gs.py
 PYTHON_PATCH_SCRIPTS+=	xml2po/xml2po.py
 
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.12
-BUILDLINK_DEPMETHOD.libxslt?=	build
-BUILDLINK_DEPMETHOD.libxml2?=	build
+BUILDLINK_DEPMETHOD.libxslt=	build
+BUILDLINK_DEPMETHOD.libxml2=	build
 
 PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
 
