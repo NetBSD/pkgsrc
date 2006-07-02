@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.34 2006/06/22 20:45:48 rillig Exp $
+# $NetBSD: subst.mk,v 1.35 2006/07/02 09:35:05 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -22,7 +22,8 @@
 #	the filenames are either absolute or relative to ${WRKSRC}.
 #
 # SUBST_SED.<class>
-#	sed(1) substitution expression to run on the specified files.
+#	List of sed(1) arguments to run on the specified files. Multiple
+#	commands can be specified using the -e option of sed.
 #
 # SUBST_FILTER_CMD.<class>
 #	Filter used to perform the actual substitution on the specified
