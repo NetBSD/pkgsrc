@@ -1,20 +1,14 @@
-# $NetBSD: Makefile,v 1.37 2006/04/17 13:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2006/07/02 11:32:40 drochner Exp $
 #
 
-DISTNAME=	rhythmbox-0.8.8
-PKGREVISION=	7
+DISTNAME=	rhythmbox-0.9.5
 CATEGORIES=	audio gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/0.8/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/0.9/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rhythmbox.org/
 COMMENT=	Music management application for GNOME
-
-DEPENDS+=		gst-plugins0.8-esound>=0.8.1:../../audio/gst-plugins0.8-esound
-DEPENDS+=		gst-plugins0.8-gnomevfs>=0.8.1:../../sysutils/gst-plugins0.8-gnomevfs
-DEPENDS+=		gst-plugins0.8-mad>=0.8.1:../../audio/gst-plugins0.8-mad
-DEPENDS+=		gst-plugins0.8-vorbis>=0.8.1:../../audio/gst-plugins0.8-vorbis
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
@@ -22,22 +16,35 @@ USE_TOOLS+=		gmake msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
-PKGCONFIG_OVERRIDE=	data/rhythmbox.pc.in
+CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
+CONFIGURE_ARGS+=	--without-bonobo
+CONFIGURE_ARGS+=	--without-hal
+CONFIGURE_ARGS+=	--without-ipod
+CONFIGURE_ARGS+=	--disable-python
 
 GCONF2_SCHEMAS=		rhythmbox.schemas
 
-.include "../../audio/flac/buildlink3.mk"
-.include "../../audio/libid3tag/buildlink3.mk"
-.include "../../audio/libvorbis/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.5.4
+BUILDLINK_API_DEPENDS.musicbrainz+=	musicbrainz>=2.1.0
+BUILDLINK_API_DEPENDS.totem+=		{totem,totem-xine}>=1.1.5
+
+.include "../../audio/musicbrainz/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../multimedia/gstreamer0.8/buildlink3.mk"
-.include "../../multimedia/gst-plugins0.8/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/libsexy/buildlink3.mk"
+.include "../../multimedia/gstreamer0.10/buildlink3.mk"
+.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
+.include "../../multimedia/totem/buildlink3.mk"
+.include "../../net/libsoup-devel/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
+.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
