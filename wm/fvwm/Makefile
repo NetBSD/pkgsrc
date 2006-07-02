@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/02 09:21:57 martti Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/02 12:32:10 martti Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 PKGREVISION=	2
@@ -14,7 +14,7 @@ COMMENT=	Newer version of X11 Virtual window manager
 
 DEPENDS+=	xpmroot-2.*:../../x11/xpmroot
 
-CONFLICTS=	fvwm1-* fvwm>=1
+CONFLICTS=	fvwm1-[0-9]* fvwm2-[0-9]*
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 FVWM_VER=	2.4.19
 
@@ -23,6 +23,9 @@ GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	YES
 
 PLIST_SUBST+=		FVWM_VER=${FVWM_VER:Q}
+
+INSTALLATION_DIRS+=	lib/X11/fvwm2
+INSTALLATION_DIRS+=	lib/X11/fvwm2/pixmaps
 
 EVAL_PREFIX+=		XPMDIR=xpm
 CONFIGURE_ARGS+=	--without-gnome
@@ -39,11 +42,9 @@ post-extract:
 	cd ${WRKDIR:Q}/icons && ${TAR} -xzf ${DISTDIR:Q}/fvwm_icons.tgz
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/lib/X11/fvwm2/pixmaps
 	${INSTALL_DATA} \
 		${WRKDIR:Q}/icons/fvwm_icons/*.xpm \
 		${PREFIX:Q}/lib/X11/fvwm2/pixmaps
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/lib/X11/fvwm2
 	${INSTALL_DATA} \
 		${WRKSRC:Q}/sample.fvwmrc/decor_examples \
 		${WRKSRC:Q}/sample.fvwmrc/system.fvwm2rc-sample-* \
