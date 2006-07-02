@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/07/02 18:18:34 xtraeme Exp $
+
+--- obexapp.h.orig	2006-07-02 19:32:51.000000000 +0200
++++ obexapp.h	2006-07-02 19:33:45.000000000 +0200
+@@ -71,7 +71,11 @@
+ 
+ struct context
+ {
++#ifdef __NetBSD__
++	struct sockaddr_bt	 addr;		 /* remote address */
++#else
+ 	struct sockaddr_rfcomm	 addr;           /* remote address */
++#endif
+ 	bdaddr_t		 saddr;          /* local address */
+ 	char			*root;           /* root path */
+ 	char			*user;           /* user */
