@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/06/23 15:48:50 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/07/02 10:06:43 rillig Exp $
 
 DISTNAME=	netscape-4.7-3.alpha
 PKGNAME=	osf1_lib-1.1
@@ -41,7 +41,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${EMULDIR}
 	${RPM2PKG} -d ${PREFIX} -p ${EMULSUBDIR} ${RPMARGS}
 	${TOUCH} ${EMULDIR}/etc/hosts
-	(cd ${EMULDIR}; ${MKDIR} usr/lib/X11)
-	(cd ${EMULDIR}/usr/lib/X11; ${LN} -fs ${X11BASE}/lib/X11/locale .)
+	cd ${EMULDIR} && ${MKDIR} usr/lib/X11
+	cd ${EMULDIR}/usr/lib/X11 && ${LN} -fs ${X11BASE}/lib/X11/locale .
 
 .include "../../mk/bsd.pkg.mk"
