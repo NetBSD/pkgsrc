@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.621 2006/07/02 14:50:30 markd Exp $
+$NetBSD: CHANGES-2006,v 1.622 2006/07/02 15:04:15 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3226,3 +3226,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added www/py-jonpy version 0.06 [joerg 2006-07-02]
 	Updated security/heimdal to 0.7.2nb2 [markd 2006-07-02]
 	Updated devel/glib2 to 2.10.3nb1 [markd 2006-07-02]
+	Updated benchmarks/netio to 1.26 [tron 2006-07-02]
