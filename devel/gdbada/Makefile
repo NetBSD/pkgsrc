@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/20 07:26:29 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/07/02 09:58:46 rillig Exp $
 
 DISTNAME=	gdbada-6.3
 PKGREVISION=	2
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	john@johnrshannon.com
 HOMEPAGE=	http://libre.act-europe.fr/GDB/
-COMMENT=        GNAT GDB : An Ada 95 Debugger
+COMMENT=	GNAT GDB : An Ada 95 Debugger
 
 # Not yet ported to AMD 64-bit machines or Darwin
 NOT_FOR_PLATFORM=	*-*-x86_64 Darwin-*-*
@@ -19,14 +19,14 @@ USE_TOOLS+=		gmake makeinfo
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
-GNU_CONFIGURE=          YES
+GNU_CONFIGURE=		YES
 GNU_CONFIGURE_PREFIX=	${PREFIX}/gdbada
 # We don't seem to be able to control where locale data goes, so:
 CONFIGURE_ARGS+=	--disable-nls
-MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}
+MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:M*:Q}
 
-INFO_FILES=		# PLIST
-TEST_TARGET=    	check
+INFO_FILES=		yes
+TEST_TARGET=	check
 
 pre-patch:
 	${CP} ${FILESDIR}/nbsd-nat.c ${WRKSRC}/gdb
