@@ -1,0 +1,15 @@
+$NetBSD: patch-cd,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- python/xen/util/auxbin.py.orig	2006-05-07 21:00:00.000000000 +0200
++++ python/xen/util/auxbin.py	2006-05-07 21:01:06.000000000 +0200
+@@ -16,8 +16,8 @@
+ #============================================================================
+ 
+ 
+-LIB_BIN_32 = "/usr/lib/xen/bin"
+-LIB_BIN_64 = "/usr/lib64/xen/bin"
++LIB_BIN_32 = "@PREFIX@/bin"
++LIB_BIN_64 = "@PREFIX@/bin"
+ 
+ ## The architectures on which the LIB_BIN_64 directory is used.  This
+ # deliberately excludes ia64.
