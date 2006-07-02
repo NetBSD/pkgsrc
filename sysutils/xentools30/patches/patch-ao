@@ -1,0 +1,22 @@
+$NetBSD: patch-ao,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- ioemu/configure.orig	2006-01-31 17:09:20.000000000 +0100
++++ ioemu/configure
+@@ -230,7 +230,7 @@ fi
+ 
+ if test -z "$vnc"; then
+ 
+-if libvncserver-config --version >& /dev/null; then
++if libvncserver-config --version > /dev/null 2>&1; then
+     vnc=yes
+ else
+     vnc=no
+@@ -341,7 +341,7 @@ mandir="$installroot/$prefix/share/man"
+ datadir="$installroot/$prefix/share/xen/qemu"
+ docdir="$installroot/$prefix/share/doc/qemu"
+ bindir="$installroot/$prefix/bin"
+-configdir="$installroot/etc/xen"
++configdir="@XENDCONFDIR@"
+ fi
+ 
+ echo "Install prefix    $prefix"

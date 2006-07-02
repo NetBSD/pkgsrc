@@ -1,0 +1,17 @@
+$NetBSD: patch-aj,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- check/check_zlib_lib.orig	2006-01-31 17:09:20.000000000 +0100
++++ check/check_zlib_lib
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/ksh
+ # CHECK-BUILD CHECK-INSTALL
+ 
+ function error {
+@@ -7,5 +7,6 @@ function error {
+     exit 1
+ }
+ 
++exit 0
+ set -e
+ ldconfig -p | grep -q libz.so || error

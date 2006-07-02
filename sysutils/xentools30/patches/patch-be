@@ -1,0 +1,56 @@
+$NetBSD: patch-be,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- security/Makefile.orig	2006-01-31 17:09:21.000000000 +0100
++++ security/Makefile
+@@ -40,7 +40,7 @@ ACM_NOINST_TOOLS  = get_decision
+ ACM_OBJS          = $(OBJS_TOOL) $(OBJS_XML2BIN) $(OBJS_GETD)
+ ACM_SCRIPTS       = getlabel.sh setlabel.sh updategrub.sh labelfuncs.sh
+ 
+-ACM_CONFIG_DIR    = /etc/xen/acm-security
++ACM_CONFIG_DIR    = $(PREFIX)/share/examples/xen/acm-security
+ ACM_POLICY_DIR    = $(ACM_CONFIG_DIR)/policies
+ ACM_SCRIPT_DIR    = $(ACM_CONFIG_DIR)/scripts
+ 
+@@ -59,26 +59,26 @@ ifeq ($(ACM_SECURITY),y)
+ all: build
+ 
+ install: all $(ACM_CONFIG_FILE)
+-	$(INSTALL_DIR) -p $(DESTDIR)/usr/sbin
+-	$(INSTALL_PROG) -p $(ACM_INST_TOOLS) $(DESTDIR)/usr/sbin
+-	$(INSTALL_DIR) -p $(DESTDIR)$(ACM_CONFIG_DIR)
+-	$(INSTALL_DIR) -p $(DESTDIR)$(ACM_POLICY_DIR)
+-	$(INSTALL_DATA) -p policies/$(ACM_SCHEMA) $(DESTDIR)$(ACM_POLICY_DIR)
++	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/sbin
++	$(BSD_INSTALL_PROGRAM) $(ACM_INST_TOOLS) $(PREFIX)/sbin
++	$(BSD_INSTALL_DATA_DIR) $(ACM_CONFIG_DIR)
++	$(BSD_INSTALL_DATA_DIR) $(ACM_POLICY_DIR)
++	$(BSD_INSTALL_DATA) policies/$(ACM_SCHEMA) $(ACM_POLICY_DIR)
+ 	for i in $(ACM_EXAMPLES); do \
+-		$(INSTALL_DIR) -p $(DESTDIR)$(ACM_POLICY_DIR)/$$i; \
+-		$(INSTALL_DATA) -p policies/$$i/$$i-$(ACM_POLICY_SUFFIX) $(DESTDIR)$(ACM_POLICY_DIR)/$$i; \
+-		$(INSTALL_DATA) -p policies/$$i/$$i-$(ACM_LABEL_SUFFIX) $(DESTDIR)$(ACM_POLICY_DIR)/$$i; \
++		$(BSD_INSTALL_DATA_DIR) $(ACM_POLICY_DIR)/$$i; \
++		$(BSD_INSTALL_DATA) policies/$$i/$$i-$(ACM_POLICY_SUFFIX) $(ACM_POLICY_DIR)/$$i; \
++		$(BSD_INSTALL_DATA) policies/$$i/$$i-$(ACM_LABEL_SUFFIX) $(ACM_POLICY_DIR)/$$i; \
+ 	done
+-	$(INSTALL_DIR) -p $(DESTDIR)$(ACM_SCRIPT_DIR)
+-	$(INSTALL_PROG) -p $(ACM_SCRIPTS) $(DESTDIR)$(ACM_SCRIPT_DIR)
+-	$(INSTALL_DIR) -p $(DESTDIR)$(ACM_SECGEN_HTMLDIR)
+-	$(INSTALL_DATA) -p $(ACM_INST_HTML) $(DESTDIR)$(ACM_SECGEN_HTMLDIR)
+-	$(INSTALL_DIR) -p $(DESTDIR)$(ACM_SECGEN_CGIDIR)
+-	$(INSTALL_PROG) -p $(ACM_INST_CGI) $(DESTDIR)$(ACM_SECGEN_CGIDIR)
++	$(BSD_INSTALL_SCRIPT_DIR) $(ACM_SCRIPT_DIR)
++	$(BSD_INSTALL_SCRIPT) $(ACM_SCRIPTS) $(ACM_SCRIPT_DIR)
++	$(BSD_INSTALL_DATA_DIR) $(ACM_SECGEN_HTMLDIR)
++	$(BSD_INSTALL_DATA) $(ACM_INST_HTML) $(ACM_SECGEN_HTMLDIR)
++	$(BSD_INSTALL_PROGRAM_DIR) $(ACM_SECGEN_CGIDIR)
++	$(BSD_INSTALL_PROGRAM) $(ACM_INST_CGI) $(ACM_SECGEN_CGIDIR)
+ ifndef XEN_PYTHON_NATIVE_INSTALL
+-	python python/setup.py install --home="$(DESTDIR)/usr"
++	python python/setup.py install --home="$(PREFIX)"
+ else
+-	python python/setup.py install --root="$(DESTDIR)"
++	python python/setup.py install --root="$(PREFIX)"
+ endif
+ else
+ all:

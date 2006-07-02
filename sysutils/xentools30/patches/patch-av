@@ -1,0 +1,16 @@
+$NetBSD: patch-av,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- libxc/xg_private.h.orig	2006-01-31 17:09:21.000000000 +0100
++++ libxc/xg_private.h
+@@ -13,7 +13,11 @@
+ #include "xenctrl.h"
+ #include "xenguest.h" 
+ 
++#ifdef __NetBSD__
++#include <xen/NetBSD/xenio.h>
++#else
+ #include <xen/linux/privcmd.h>
++#endif
+ #include <xen/memory.h>
+ 
+ /* valgrind cannot see when a hypercall has filled in some values.  For this

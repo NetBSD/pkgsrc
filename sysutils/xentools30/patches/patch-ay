@@ -1,0 +1,13 @@
+$NetBSD: patch-ay,v 1.1.1.1 2006/07/02 16:49:31 bouyer Exp $
+
+--- misc/mbootpack/Makefile.orig	2006-01-31 17:09:21.000000000 +0100
++++ misc/mbootpack/Makefile
+@@ -12,7 +12,7 @@ all: build
+ build: mbootpack
+ 
+ install: build
+-	$(INSTALL_PROG) mbootpack $(DESTDIR)/usr/bin
++	$(BSD_INSTALL_PROGRAM) mbootpack $(PREFIX)/bin
+ 
+ #  Tools etc.
+ RM 	:= rm -f
