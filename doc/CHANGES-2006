@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.611 2006/07/02 10:18:43 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.612 2006/07/02 10:32:37 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3207,3 +3207,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/pkglint to 4.66 [rillig 2006-07-02]
 	Added games/scummvm-tools version 0.9.0 [dillo 2006-07-02]
 	Added graphics/libscigraphica version 2.1.1 [rillig 2006-07-02]
+	Updated pkgtools/pkg_filecheck to 0.2 [rillig 2006-07-02]
