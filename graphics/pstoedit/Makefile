@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/04/17 13:46:35 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2006/07/02 10:12:52 rillig Exp $
 
 DISTNAME=	pstoedit-3.41
 PKGREVISION=	2
@@ -17,7 +17,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 #USE_TOOLS+=	gs:run
 
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CXXFLAGS="${CFLAGS} -Dunix"
 CONFIGURE_ENV+=	ac_cv_path_GS=${LOCALBASE}/bin/gs
