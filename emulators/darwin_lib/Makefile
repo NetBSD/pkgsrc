@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/06/23 15:52:34 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/07/02 10:05:55 rillig Exp $
 
 DISTNAME=	darwin_lib-6.6.2
 PKGREVISION=	2
@@ -39,7 +39,7 @@ NO_BUILD=	yes
 do-install:
 	${RM} -f ${WRKDIR}/PLIST_RPM2PKG
 	${RPM2PKG} ${RPMARGS}
-	${SED} -e "s|^\./||" -e "s|/\./|/|g" -e "s|/+|/|g"		\
+	${SED} -e 's|^\./||' -e 's|/\./|/|g' -e 's|//*|/|g'		\
 		${WRKDIR}/PLIST_RPM2PKG > ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
