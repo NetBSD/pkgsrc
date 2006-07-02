@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/09/02 16:43:03 agc Exp $
+$NetBSD: patch-aa,v 1.2 2006/07/02 10:23:27 rillig Exp $
 
 BSD-style Makefile (with libtool support)
 
---- /dev/null	Mon Sep  2 13:50:52 2002
-+++ Makefile	Mon Sep  2 14:01:02 2002
+--- Makefile.orig	2006-06-28 14:41:52.000000000 +0200
++++ Makefile	2006-06-28 14:43:01.000000000 +0200
 @@ -0,0 +1,67 @@
 +LIBTOOL= libtool
 +
@@ -48,11 +48,11 @@ BSD-style Makefile (with libtool support)
 +.c.o:
 +	${LIBTOOL} --mode=compile $(CC) $(OPTFLAG) $(CCFLAGS) ${DATE} ${FILEDEFS} -c $*.c
 +
-+INSTALL_DATA= install -c -o root -g wheel -m 444
-+INSTALL_SCRIPT= install -c -o root -g wheel -m 755
-+INSTALL_PROGRAM= ${INSTALL_SCRIPT}
-+INSTALL_MAN= ${INSTALL_DATA}
-+INSTALL_DATA_DIR= mkdir -p
++INSTALL_DATA= ${BSD_INSTALL_DATA}
++INSTALL_SCRIPT= ${BSD_INSTALL_SCRIPT}
++INSTALL_PROGRAM= ${BSD_INSTALL_PROGRAM}
++INSTALL_MAN= ${BSD_INSTALL_MAN}
++INSTALL_DATA_DIR= ${BSD_INSTALL_DATA_DIR}
 +
 +install: ${LIBNAME} rexx rxque rxstack
 +	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} rexx ${PREFIX}/bin
