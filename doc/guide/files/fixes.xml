@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.62 2006/07/01 23:48:16 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.63 2006/07/02 10:01:11 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
   <title>Making your package work</title>
@@ -625,7 +625,7 @@ Changes to the PLIST
 
 	<para>There are some more variables, but they are so seldomly
 	used that they are only documented in the
-	<filename>mk/subst.mk</filename>.</para>
+	<filename>mk/subst.mk</filename> file.</para>
 
 </sect2>
 </sect1>
