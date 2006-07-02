@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2006/07/02 18:16:53 xtraeme Exp $
+
+--- src/obex.c.orig	2006-07-02 18:53:03.000000000 +0200
++++ src/obex.c	2006-07-02 18:53:13.000000000 +0200
+@@ -33,6 +33,7 @@
+ #endif
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include <errno.h>
+ 

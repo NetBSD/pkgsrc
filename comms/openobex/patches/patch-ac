@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1 2006/07/02 18:16:53 xtraeme Exp $
+
+--- src/obex_main.c.orig	2003-10-01 13:17:13.000000000 +0200
++++ src/obex_main.c	2006-07-02 18:56:16.000000000 +0200
+@@ -46,7 +46,11 @@
+ #include <stdio.h>
+ 
+ #ifdef HAVE_BLUETOOTH
++#ifdef __NetBSD__
++#include <bluetooth.h>
++#else
+ #include <bluetooth/bluetooth.h>
++#endif /* __NetBSD__ */
+ #endif /*HAVE_BLUETOOTH*/
+ 
+ #endif /* _WIN32 */
