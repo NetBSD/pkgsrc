@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2006/07/02 17:22:14 rillig Exp $
+# $NetBSD: Makefile,v 1.54 2006/07/02 19:17:26 rillig Exp $
 #
 
 DISTNAME=	nmap-4.11
@@ -35,6 +35,14 @@ MAKE_ENV+=	CPPFLAGS=""
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Msunpro)
 CFLAGS.SunOS+=	-D__FUNCTION__=__FILE__
+.endif
+
+.if empty(PKGSRC_COMPILER:Mgcc)
+# The Makefile uses a hard-coded option -MM to get the dependencies, which
+# is only understood by the GNU compiler. For a normal build the dependen-
+# cies are not needed anyway, only when patching files and fixing bugs.
+pre-build:
+	echo "# ignored" > ${WRKSRC}/makefile.dep
 .endif
 
 .include "../../devel/pcre/buildlink3.mk"
