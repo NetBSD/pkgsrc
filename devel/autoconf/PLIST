@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/03/30 03:44:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/07/03 21:23:29 wiz Exp $
 bin/autoconf
 bin/autoheader
 bin/autom4te
@@ -22,8 +22,8 @@ share/autoconf/Autom4te/ChannelDefs.pm
 share/autoconf/Autom4te/Channels.pm
 share/autoconf/Autom4te/Configure_ac.pm
 share/autoconf/Autom4te/FileUtils.pm
-share/autoconf/Autom4te/Request.pm
 share/autoconf/Autom4te/General.pm
+share/autoconf/Autom4te/Request.pm
 share/autoconf/Autom4te/Struct.pm
 share/autoconf/Autom4te/XFile.pm
 share/autoconf/INSTALL
@@ -34,6 +34,7 @@ share/autoconf/autoconf/autoscan.m4
 share/autoconf/autoconf/autotest.m4
 share/autoconf/autoconf/autoupdate.m4
 share/autoconf/autoconf/c.m4
+share/autoconf/autoconf/erlang.m4
 share/autoconf/autoconf/fortran.m4
 share/autoconf/autoconf/functions.m4
 share/autoconf/autoconf/general.m4
