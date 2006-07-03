@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.318 2006/06/17 09:07:48 wiz Exp $
+# $NetBSD: Makefile,v 1.319 2006/07/03 09:43:03 jmmv Exp $
 #
 
 COMMENT=	Audio tools
@@ -39,6 +39,7 @@ SUBDIR+=	darkice
 SUBDIR+=	disc-cover
 SUBDIR+=	distmp3
 SUBDIR+=	easytag
+SUBDIR+=	easytag-devel
 SUBDIR+=	eawpatches
 SUBDIR+=	emixer
 SUBDIR+=	esound
