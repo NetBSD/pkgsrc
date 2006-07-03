@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2006/07/02 18:16:53 xtraeme Exp $
+$NetBSD: distinfo,v 1.4 2006/07/03 19:18:57 xtraeme Exp $
 
 SHA1 (openobex-1.0.1.tar.gz) = aa73b3f9e345088e8f1c070e0e727f586820d20e
 RMD160 (openobex-1.0.1.tar.gz) = 70dc7d2e38b819af0c35ccb26f806b7aa7682b0e
@@ -8,4 +8,3 @@ SHA1 (patch-ab) = 172cf62a95b8e278c2539d4339b6bb17354e8cd7
 SHA1 (patch-ac) = 8b9ca12b6c84ab743590dc16689ba672ffb5b46b
 SHA1 (patch-ad) = 4a9c02f6e899d1740504ec03bda3301915018ae3
 SHA1 (patch-ae) = c25191fcded6e87d2bcca17a2ae77720c79646a4
-SHA1 (patch-af) = 165602889a3fbc9c3bf98390bbf3d5c85e55bebc
