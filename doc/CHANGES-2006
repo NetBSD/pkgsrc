@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.640 2006/07/03 22:35:43 rpaulo Exp $
+$NetBSD: CHANGES-2006,v 1.641 2006/07/03 23:37:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3251,3 +3251,10 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/curl to 7.15.4 [wiz 2006-07-03]
 	Updated devel/SDL to 1.2.11 [wiz 2006-07-03]
 	Updated audio/gtick to 0.3.10 [rpaulo 2006-07-03]
+	Added audio/libvisual0.2 version 0.2.0 [wiz 2006-07-03]
+	Added audio/libvisual0.2-plugins version 0.2.0 [wiz 2006-07-03]
+	Updated audio/amarok to 1.4.0anb2 [wiz 2006-07-03]
+	Updated audio/libvisual-bmp to 0.2.0nb7 [wiz 2006-07-03]
+	Updated audio/libvisual-xmms to 0.2.0nb5 [wiz 2006-07-03]
+	Updated audio/libvisual to 0.4.0 [wiz 2006-07-03]
+	Updated audio/libvisual-plugins to 0.4.0 [wiz 2006-07-03]
