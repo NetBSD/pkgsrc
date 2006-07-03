@@ -1,4 +1,14 @@
-@comment $NetBSD: PLIST,v 1.8 2006/01/20 13:29:54 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/07/03 21:25:46 wiz Exp $
+share/doc/libsoup/SoupSoapResponse.html
+share/doc/libsoup/SoupXmlrpcMessage.html
+share/doc/libsoup/SoupXmlrpcResponse.html
+share/doc/libsoup/ch02.html
+share/doc/libsoup/ch03.html
+share/doc/libsoup/libsoup-Soup-Miscellaneous-Utilities.html
+share/doc/libsoup/libsoup-SoupMessageFilter.html
+share/doc/libsoup/libsoup-SoupUri.html
+share/doc/libsoup/libsoup-client-howto.html
+share/doc/libsoup/libsoup-server-howto.html
 include/libsoup-2.2/libsoup/soup-address.h
 include/libsoup-2.2/libsoup/soup-connection.h
 include/libsoup-2.2/libsoup/soup-date.h
@@ -47,7 +57,6 @@ share/doc/libsoup/left.png
 share/doc/libsoup/libsoup-soup-dns.html
 share/doc/libsoup/libsoup-soup-ssl.html
 share/doc/libsoup/libsoup-soup-status.html
-share/doc/libsoup/libsoup-soup-uri.html
 share/doc/libsoup/libsoup.devhelp
 share/doc/libsoup/right.png
 share/doc/libsoup/style.css
