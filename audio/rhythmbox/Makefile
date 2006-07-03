@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2006/07/03 10:40:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.40 2006/07/03 13:02:39 jmmv Exp $
 #
 
 DISTNAME=	rhythmbox-0.9.5
+PKGREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/0.9/}
 EXTRACT_SUFX=	.tar.bz2
@@ -35,6 +36,7 @@ BUILDLINK_API_DEPENDS.totem+=		{totem,totem-xine}>=1.1.5
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libsexy/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../multimedia/totem/buildlink3.mk"
