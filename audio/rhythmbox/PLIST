@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/07/02 11:32:40 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/07/03 11:53:56 drochner Exp $
 bin/rhythmbox
 bin/rhythmbox-client
 lib/rhythmbox/plugins/audioscrobbler.rb-plugin
@@ -173,7 +173,6 @@ share/gnome/help/rhythmbox/zh_CN/figures/rb-window-small.png
 share/gnome/help/rhythmbox/zh_CN/figures/rb-window.png
 share/gnome/help/rhythmbox/zh_CN/rhythmbox.xml
 share/icons/hicolor/48x48/apps/rhythmbox.png
-share/icons/hicolor/icon-theme.cache
 share/locale/am/LC_MESSAGES/rhythmbox.mo
 share/locale/ar/LC_MESSAGES/rhythmbox.mo
 share/locale/az/LC_MESSAGES/rhythmbox.mo
