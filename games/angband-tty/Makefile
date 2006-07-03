@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2005/06/16 06:57:52 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2006/07/03 05:15:49 rillig Exp $
 #
 
 DISTNAME=		angband-283
 PKGNAME=		angband-tty-2.8.3
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		ftp://export.andrew.cmu.edu/angband/Source/ \
 			ftp://ftp.greyhelm.com/pub/Games/Angband/Angband-2.7.x/Source/
@@ -29,12 +30,12 @@ INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL} -d -o bin -g games -m 0775 ${PREFIX}/share/angband
-	${CP} -R ${WRKDIR}/${DISTNAME}/lib/* ${PREFIX}/share/angband
+	cd ${WRKDIR}/${DISTNAME}/lib && ${PAX} -wr * ${PREFIX}/share/angband
 	cd ${PREFIX}/share/angband/help && \
 		${PAX} -O -zrf ${DISTDIR}/${SPOILERFILE}
-	${CHOWN} -R bin:games ${PREFIX}/share/angband
-	${CHMOD} -R 0664 ${PREFIX}/share/angband/*
-	cd ${PREFIX}/share/angband && ${CHMOD} 0775 apex bone data edit file help info save user xtra
-	${INSTALL} -c -s -o bin -g games -m 2755 ${WRKSRC}/angband ${PREFIX}/bin
+	${CHOWN} -R ${GAMEOWN}:${GAMEGRP} ${PREFIX}/share/angband
+	cd ${PREFIX}/share/angband && ${CHMOD} ${GAMEDATAMODE} */*
+	cd ${PREFIX}/share/angband && ${CHMOD} ${GAMEDIRMODE} apex bone data edit file help info save user xtra
+	${INSTALL_GAME} ${WRKSRC}/angband ${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
