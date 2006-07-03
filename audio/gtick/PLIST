@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:12 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/07/03 22:34:51 rpaulo Exp $
 bin/gtick
 man/man1/gtick.1
 share/locale/en@quot/LC_MESSAGES/gtick.mo
@@ -18,4 +18,5 @@ share/locale/pt_BR/LC_MESSAGES/gtick.mo
 share/locale/ro/LC_MESSAGES/gtick.mo
 share/locale/ru/LC_MESSAGES/gtick.mo
 share/locale/sv/LC_MESSAGES/gtick.mo
+share/locale/uk/LC_MESSAGES/gtick.mo
 share/locale/vi/LC_MESSAGES/gtick.mo
