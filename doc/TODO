@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5137 2006/07/02 11:36:30 xtraeme Exp $
+$NetBSD: TODO,v 1.5138 2006/07/03 00:14:36 tron Exp $
 
 Suggested new packages
 ======================
@@ -382,7 +382,7 @@ Suggested package updates
 	o bind-9.3.2
 	o bioperl-1.5.0
 	o bitlbee-1.0.3
-	o bittorrent-4.20.1
+	o bittorrent-4.20.2 ["launchmany*" broken, not recommended]
 	o blackbox-0.70
 	o blur6ex-0.3.462
 	o bmon-2.1.0
