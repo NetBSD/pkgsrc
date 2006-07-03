@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2006/05/31 15:11:09 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2006/07/03 18:45:25 drochner Exp $
 
---- disc-cover.orig	2003-11-09 22:45:05.000000000 +0100
+--- disc-cover.orig	2006-06-20 14:16:24.000000000 +0200
 +++ disc-cover
-@@ -39,13 +39,14 @@ my $cvs_id_string = '$Id: disc-cover,v 1
+@@ -39,7 +39,7 @@ my $cvs_id_string = '$Id: disc-cover,v 1
  my ($config_homedir) = "";
  $config_homedir = "$ENV{HOME}" if (defined $ENV{HOME});
  my ($config_tmp_dir) = '/tmp';
@@ -11,27 +11,3 @@ $NetBSD: patch-aa,v 1.4 2006/05/31 15:11:09 drochner Exp $
  my ($config_output_format) = 'ps';
  my ($config_device) = "/dev/cdrom";
  my ($config_cddb_cache_directory) = "$config_homedir/.cddb";
- my ($config_flaptext) = split ',', (getpwuid($<))[6];
- my ($config_version_config) = undef;
--my ($latex_user_packages) = 'isolatin1';
-+my ($latex_user_packages) = '';
-+my ($latex_inputenc) = 'latin1';
- my ($flag_genre) = 0;
- my ($flag_with_extended_track_info) = 0;
- my (%config_latex_colors) = ( title => 'black', artist => 'black', discinfo => 'black', track_number => 'black', track_string => 'black', track_time => 'black', flaptext => 'black', track_extended => 'black', track_artist => 'black', 'genre' => 'black' );
-@@ -1234,6 +1235,7 @@ sub print_latex_head
- 
- 	$return .= '
- \usepackage{'.$latex_global_packages.','.$latex_user_packages.'}
-+\usepackage['.$latex_inputenc.']{inputenc}
- \graphicspath{{'.$config_tmp_dir.'/}}
- \renewcommand{\thepage}{}
- \setlength{\oddsidemargin}{'.$latex_global_oddsidemargin.'}
-@@ -1672,6 +1674,7 @@ sub print_configuration_file
- 
- 	$result .= "\n#############\n# Technical #\n#############\n";
- 	$result .= "\$latex_user_packages = \'$latex_user_packages\';\n";
-+	$result .= "\$latex_inputenc = \'$latex_inputenc\';\n";
- 
- 	$result .= "\n##########\n# Output #\n##########\n";
- 	$result .= "\$config_output_format = \'$config_output_format\';\n";
