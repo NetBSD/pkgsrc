@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.425 2006/06/13 23:45:20 reed Exp $
+# $NetBSD: Makefile,v 1.426 2006/07/03 19:34:02 xtraeme Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -124,6 +124,7 @@ SUBDIR+=	gqview-gtk1
 SUBDIR+=	grap
 SUBDIR+=	graphviz
 SUBDIR+=	gri
+SUBDIR+=	gst-plugins0.10-cairo
 SUBDIR+=	gst-plugins0.8-opengl
 SUBDIR+=	gst-plugins0.8-png
 SUBDIR+=	gthumb
@@ -176,6 +177,7 @@ SUBDIR+=	libkipi
 SUBDIR+=	libpixman
 SUBDIR+=	librsvg
 SUBDIR+=	librsvg2
+SUBDIR+=	libscigraphica
 SUBDIR+=	libungif
 SUBDIR+=	libvideogfx
 SUBDIR+=	libwmf
