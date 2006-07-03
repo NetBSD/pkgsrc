@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:02 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/07/03 23:33:43 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBVISUAL_BUILDLINK3_MK:=	${LIBVISUAL_BUILDLINK3_MK}+
@@ -11,9 +11,8 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibvisual}
 BUILDLINK_PACKAGES+=	libvisual
 
 .if !empty(LIBVISUAL_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.libvisual+=	libvisual>=0.2.0
-BUILDLINK_ABI_DEPENDS.libvisual?=	libvisual>=0.2.0nb1
-BUILDLINK_PKGSRCDIR.libvisual?=	../../audio/libvisual
+BUILDLINK_API_DEPENDS.libvisual+=	libvisual>=0.4.0
+BUILDLINK_PKGSRCDIR.libvisual?=		../../audio/libvisual
 .endif	# LIBVISUAL_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
