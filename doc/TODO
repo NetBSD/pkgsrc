@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5139 2006/07/03 07:36:20 jmmv Exp $
+$NetBSD: TODO,v 1.5140 2006/07/03 11:20:30 adam Exp $
 
 Suggested new packages
 ======================
@@ -1231,7 +1231,6 @@ Suggested package updates
 	o weewm-0.01
 	o win32-codecs-20060611
 	o winbind-3.0.13
-	o wine-0.9.16
 	o wmctrl-1.07
 	o wmii-2.5.1 [pkg/32522]
 	o wmii-2.5.2 [pkg/33285]
