@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/03/30 03:44:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/07/03 04:23:38 kent Exp $
 bin/i386-netbsdpe-addr2line
 bin/i386-netbsdpe-ar
 bin/i386-netbsdpe-as
@@ -10,7 +10,7 @@ bin/i386-netbsdpe-dlltool
 bin/i386-netbsdpe-dllwrap
 bin/i386-netbsdpe-g++
 bin/i386-netbsdpe-gcc
-bin/i386-netbsdpe-gcc-3.3.3
+bin/i386-netbsdpe-gcc-3.3.6
 bin/i386-netbsdpe-gccbug
 bin/i386-netbsdpe-gcov
 bin/i386-netbsdpe-ld
@@ -32,6 +32,7 @@ i386-netbsdpe/bin/g++
 i386-netbsdpe/bin/gcc
 i386-netbsdpe/bin/ld
 i386-netbsdpe/bin/nm
+i386-netbsdpe/bin/objdump
 i386-netbsdpe/bin/ranlib
 i386-netbsdpe/bin/strip
 i386-netbsdpe/lib/ldscripts/i386pe.x
@@ -48,16 +49,17 @@ i386-netbsdpe/share/locale/es/LC_MESSAGES/gcc.mo
 i386-netbsdpe/share/locale/fr/LC_MESSAGES/gcc.mo
 i386-netbsdpe/share/locale/ja/LC_MESSAGES/gcc.mo
 i386-netbsdpe/share/locale/nl/LC_MESSAGES/gcc.mo
+i386-netbsdpe/share/locale/rw/LC_MESSAGES/gcc.mo
 i386-netbsdpe/share/locale/sv/LC_MESSAGES/gcc.mo
 i386-netbsdpe/share/locale/tr/LC_MESSAGES/gcc.mo
 info/bfd.info
-lib/gcc-lib/i386-netbsdpe/3.3.3/cc1
-lib/gcc-lib/i386-netbsdpe/3.3.3/cc1plus
-lib/gcc-lib/i386-netbsdpe/3.3.3/collect2
-lib/gcc-lib/i386-netbsdpe/3.3.3/include/mmintrin.h
-lib/gcc-lib/i386-netbsdpe/3.3.3/include/xmmintrin.h
-lib/gcc-lib/i386-netbsdpe/3.3.3/libgcc.a
-lib/gcc-lib/i386-netbsdpe/3.3.3/specs
+lib/gcc-lib/i386-netbsdpe/3.3.6/cc1
+lib/gcc-lib/i386-netbsdpe/3.3.6/cc1plus
+lib/gcc-lib/i386-netbsdpe/3.3.6/collect2
+lib/gcc-lib/i386-netbsdpe/3.3.6/include/mmintrin.h
+lib/gcc-lib/i386-netbsdpe/3.3.6/include/xmmintrin.h
+lib/gcc-lib/i386-netbsdpe/3.3.6/libgcc.a
+lib/gcc-lib/i386-netbsdpe/3.3.6/specs
 man/man1/i386-netbsdpe-addr2line.1
 man/man1/i386-netbsdpe-ar.1
 man/man1/i386-netbsdpe-as.1
@@ -74,14 +76,16 @@ man/man1/i386-netbsdpe-size.1
 man/man1/i386-netbsdpe-strings.1
 man/man1/i386-netbsdpe-strip.1
 man/man1/i386-netbsdpe-windres.1
-@dirrm lib/gcc-lib/i386-netbsdpe/3.3.3/include
-@dirrm lib/gcc-lib/i386-netbsdpe/3.3.3
+@dirrm lib/gcc-lib/i386-netbsdpe/3.3.6/include
+@dirrm lib/gcc-lib/i386-netbsdpe/3.3.6
 @dirrm lib/gcc-lib/i386-netbsdpe
 @unexec ${RMDIR} %D/lib/gcc-lib 2>/dev/null || ${TRUE}
 @dirrm i386-netbsdpe/share/locale/tr/LC_MESSAGES
 @dirrm i386-netbsdpe/share/locale/tr
 @dirrm i386-netbsdpe/share/locale/sv/LC_MESSAGES
 @dirrm i386-netbsdpe/share/locale/sv
+@dirrm i386-netbsdpe/share/locale/rw/LC_MESSAGES
+@dirrm i386-netbsdpe/share/locale/rw
 @dirrm i386-netbsdpe/share/locale/nl/LC_MESSAGES
 @dirrm i386-netbsdpe/share/locale/nl
 @dirrm i386-netbsdpe/share/locale/ja/LC_MESSAGES
