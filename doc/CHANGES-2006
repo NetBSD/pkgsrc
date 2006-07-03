@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.634 2006/07/03 19:07:59 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.635 2006/07/03 20:36:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3241,3 +3241,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/rhythmbox to 0.9.5nb1 [jmmv 2006-07-03]
 	Updated net/nsd to 2.3.5 [joerg 2006-07-03]
 	Updated devel/gettext-lib to 0.14.5nb1 [minskim 2006-07-03]
+	Updated x11/qt4-libs to 4.1.4 [adam 2006-07-03]
+	Updated x11/qt4-tools to 4.1.4 [adam 2006-07-03]
