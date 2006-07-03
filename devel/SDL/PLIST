@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/06/12 16:20:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/07/03 21:49:13 wiz Exp $
 bin/sdl-config
 include/SDL/SDL.h
 include/SDL/SDL_active.h
@@ -42,6 +42,7 @@ include/SDL/begin_code.h
 include/SDL/close_code.h
 lib/libSDL.la
 lib/libSDLmain.a
+lib/pkgconfig/sdl.pc
 man/man3/SDLKey.3
 man/man3/SDL_ActiveEvent.3
 man/man3/SDL_AddTimer.3
