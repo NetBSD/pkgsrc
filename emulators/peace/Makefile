@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2006/06/20 14:23:45 kent Exp $
+# $NetBSD: Makefile,v 1.23 2006/07/03 04:38:43 kent Exp $
 #
-PEACE_VERSION=	0.0.20060620
+PEACE_VERSION=	0.0.20060701
 DISTNAME=	peace-${PEACE_VERSION}
-SITES_peace-0.0.20060620.tar.gz=http://chiharu.hauN.org/peace/dist/
+SITES_peace-0.0.20060701.tar.gz=http://chiharu.hauN.org/peace/dist/
 CATEGORIES=	emulators
 
 MAINTAINER=	kent@NetBSD.org
@@ -19,7 +19,6 @@ DEPENDS+=	freetype2>=2.2.1:../../graphics/freetype2
 # DEPENDS+=	cross-i386-netbsdpe>=3.3:../../cross/i386-netbsdpe
 
 BUILD_DEPENDS+=	cross-i386-netbsdpe>=3.3:../../cross/i386-netbsdpe
-BUILD_DEPENDS+=	w32api>=2.5:../../devel/w32api
 BUILD_DEPENDS+=	x11-links>=0.30:../../pkgtools/x11-links
 
 # Don't use "+=" here to avoid unexpected link with ELF libraries
