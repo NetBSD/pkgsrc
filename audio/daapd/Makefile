@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/07/03 02:18:15 tron Exp $
+# $NetBSD: Makefile,v 1.22 2006/07/03 13:58:30 tron Exp $
 
 DISTNAME=		daapd-0.2.4b
 PKGREVISION=		1
@@ -41,12 +41,6 @@ SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	daapd.8 daapd.cc
 SUBST_SED.paths=	-e 's,/etc/,${PKG_SYSCONFDIR}/,g'
-
-.include "../../mk/compiler.mk"
-
-.if !empty(CC_VERSION:Mgcc-4.1.*)
-CFLAGS+=		-ffriend-injection
-.endif
 
 post-extract:
 	for FILE in `${FIND} ${WRKSRC}/daaplib -type f -print`; do	\
