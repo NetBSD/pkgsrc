@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.768 2006/07/03 04:43:33 kent Exp $
+# $NetBSD: Makefile,v 1.769 2006/07/03 19:31:19 xtraeme Exp $
 #
 
 COMMENT=	Development utilities
@@ -180,6 +180,7 @@ SUBDIR+=	gobo-eiffel
 SUBDIR+=	gperf
 SUBDIR+=	gputils
 SUBDIR+=	gsoap
+SUBDIR+=	gst-plugins0.10-pango
 SUBDIR+=	gtexinfo
 SUBDIR+=	gtl
 SUBDIR+=	gtoolkit-examples
