@@ -1,10 +1,9 @@
-Cairo is a vector graphics library with cross-device output support. Currently
-supported output targets include the X Window System and in-memory image
-buffers. PostScript and PDF file output is planned. Cairo is designed to
-produce identical output on all output media while taking advantage of display
-hardware acceleration when available (eg. through the X Render Extension).
+GStreamer is a library that allows the construction of graphs of
+media-handling components, ranging from simple mp3 playback to complex
+audio (mixing) and video (non-linear editing) processing.
 
-Cairo provides a stateful user-level API with capabilities similar to the PDF
-1.4 imaging model. Cairo provides operations including stroking and filling
-Bezier cubic splines, transforming and compositing translucent images, and
-antialiased text rendering.
+Applications can take advantage of advances in codec and filter technology
+transparently.  Developers can add new codecs and filters by writing a
+simple plugin with a clean, generic interface.
+
+This package provides the cairo plugin for GStreamer, a graphics library.
