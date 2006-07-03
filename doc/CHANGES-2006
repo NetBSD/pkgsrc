@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.627 2006/07/03 07:30:41 agc Exp $
+$NetBSD: CHANGES-2006,v 1.628 2006/07/03 08:41:26 dogcow Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3234,3 +3234,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/peace to 0.0.20060701 [kent 2006-07-03]
 	Removed devel/w32api [kent 2006-07-03]
 	Added sysutils/xenkernel30 version 3.0.2-2 [agc 2006-07-03]
+	Added net/Transmission version 0.6.1 [dogcow 2006-07-03]
