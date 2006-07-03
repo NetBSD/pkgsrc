@@ -35,7 +35,7 @@
       </h3>
 </div></div>
 <div><p class="copyright">Copyright © 1994-2006 The NetBSD Foundation, Inc</p></div>
-<div><p class="pubdate">$NetBSD: pkgsrc.xml,v 1.20 2006/06/30 08:58:16 rillig Exp $</p></div>
+<div><p class="pubdate">$NetBSD: pkgsrc.xml,v 1.21 2006/07/03 23:51:01 rillig Exp $</p></div>
 <div><div class="abstract">
 <p class="title"><b>Abstract</b></p>
 <p>pkgsrc is a centralized package management system for
@@ -153,6 +153,7 @@
 <dt><span class="sect1"><a href="#faq.conf">7.14. How do I change the location of configuration files?</a></span></dt>
 <dt><span class="sect1"><a href="#audit-packages">7.15. Automated security checks</a></span></dt>
 <dt><span class="sect1"><a href="#ufaq-cflags">7.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-fail">7.17. A package does not build. What shall I do?</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="part"><a href="#developers-guide">II. The pkgsrc developer's guide</a></span></dt>
@@ -358,12 +359,10 @@
 <dt><span class="sect2"><a href="#regression.fun.helper">22.3.2. Helper functions</a></span></dt>
 </dl></dd>
 </dl></dd>
-<dt><span class="chapter"><a href="#infr.bulk">23. The implementation of the pkgsrc bulk builds</a></span></dt>
-<dd><dl><dt><span class="sect1"><a href="#infr.bulk.what">23.1. Deciding which packages to build</a></span></dt></dl></dd>
-<dt><span class="chapter"><a href="#porting">24. Porting pkgsrc</a></span></dt>
+<dt><span class="chapter"><a href="#porting">23. Porting pkgsrc</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#porting.opsys">24.1. Porting pkgsrc to a new operating system</a></span></dt>
-<dt><span class="sect1"><a href="#porting.compiler">24.2. Adding support for a new compiler</a></span></dt>
+<dt><span class="sect1"><a href="#porting.opsys">23.1. Porting pkgsrc to a new operating system</a></span></dt>
+<dt><span class="sect1"><a href="#porting.compiler">23.2. Adding support for a new compiler</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="appendix"><a href="#examples">A. A simple example package: bison</a></span></dt>
@@ -679,6 +678,7 @@ source packages</a></span></dt>
 <dt><span class="sect1"><a href="#faq.conf">7.14. How do I change the location of configuration files?</a></span></dt>
 <dt><span class="sect1"><a href="#audit-packages">7.15. Automated security checks</a></span></dt>
 <dt><span class="sect1"><a href="#ufaq-cflags">7.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-fail">7.17. A package does not build. What shall I do?</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -2556,6 +2556,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong> </pre>
 <dt><span class="sect1"><a href="#faq.conf">7.14. How do I change the location of configuration files?</a></span></dt>
 <dt><span class="sect1"><a href="#audit-packages">7.15. Automated security checks</a></span></dt>
 <dt><span class="sect1"><a href="#ufaq-cflags">7.16. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-fail">7.17. A package does not build. What shall I do?</a></span></dt>
 </dl>
 </div>
 <p>This section contains hints, tips &amp; tricks on special things in
@@ -2602,7 +2603,7 @@ pkgviews User's guide in
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="faq-pkgtools"></a>7.3. Utilities for package management (pkgtools)</h2></div></div></div>
-<p>The <code class="filename">pkgsrc/pkgtools</code> directory pkgtools contains
+<p>The directory <code class="filename">pkgsrc/pkgtools</code> contains
 a number of useful utilities for both users and developers of pkgsrc.  This
 section attempts only to make the reader aware of the utilities and when
 they might be useful, and not to duplicate the documentation that comes
@@ -2937,6 +2938,27 @@ a security check before building any package.  See
 	programmers write so bad code that it only works for the
 	specific combination of <code class="varname">CFLAGS</code> they have
 	chosen.</p>
+</div>
+<div class="sect1" lang="en">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="ufaq-fail"></a>7.17. A package does not build. What shall I do?</h2></div></div></div>
+<div class="procedure"><ol type="1">
+<li><p>Make sure that your copy of pkgsrc is consistent. A
+	case that occurs often is that people only update pkgsrc in
+	parts, because of performance reasons. Since pkgsrc is one large
+	system, not a collection of many small systems, there are
+	sometimes changes that only work when the whole pkgsrc tree is
+	updated.</p></li>
+<li><p>Make sure that you don't have any CVS conflicts.
+	Search for &#8220;<span class="quote">&lt;&lt;&lt;&lt;&lt;&lt;</span>&#8221; or
+	&#8220;<span class="quote">&gt;&gt;&gt;&gt;&gt;&gt;</span>&#8221; in all your pkgsrc
+	files.</p></li>
+<li><p>Make sure that you don't have old copies of the packages
+	extracted. Run <span><strong class="command">make clean clean-depends</strong></span> to
+	verify this.</p></li>
+<li><p>If the problem still exists, write a mail to the
+	<code class="literal">pkgsrc-users</code> mailing list.</p></li>
+</ol></div>
 </div>
 </div>
 </div>
@@ -6583,7 +6605,7 @@ Changes to the PLIST
 	all SUBST blocks look uniform.</p>
 <p>There are some more variables, but they are so seldomly
 	used that they are only documented in the
-	<code class="filename">mk/subst.mk</code>.</p>
+	<code class="filename">mk/subst.mk</code> file.</p>
 </div>
 </div>
 <div class="sect1" lang="en">
@@ -7726,34 +7748,37 @@ place.</p></li>
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
 <dl>
-<dt>20.1. <a href="#id2655027">What is the difference between
+<dt>20.1. <a href="#id2655006">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
 </dt>
-<dt>20.2. <a href="#id2655063">What is the difference between
+<dt>20.2. <a href="#id2655043">What is the difference between
 	MAKE, GMAKE and
 	MAKE_PROGRAM?</a>
 </dt>
-<dt>20.3. <a href="#id2655101">What is the difference between
+<dt>20.3. <a href="#id2655081">What is the difference between
 	CC, PKG_CC and
 	PKGSRC_COMPILER?</a>
 </dt>
-<dt>20.4. <a href="#id2655139">What is the difference between
+<dt>20.4. <a href="#id2655118">What is the difference between
 	BUILDLINK_LDFLAGS,
 	BUILDLINK_LDADD and
 	BUILDLINK_LIBS?</a>
 </dt>
-<dt>20.5. <a href="#id2655157">Why does make show-var
+<dt>20.5. <a href="#id2655137">Why does make show-var
 	VARNAME=BUILDLINK_PREFIX.foo
 	say it's empty?</a>
 </dt>
-<dt>20.6. <a href="#id2655185">What does
+<dt>20.6. <a href="#id2655164">What does
 	${MASTER_SITE_SOURCEFORGE:=package/} mean? I
 	don't understand the := inside
 	it.</a>
 </dt>
-<dt>20.7. <a href="#id2655259">Which mailing lists are there for package
+<dt>20.7. <a href="#id2655239">Which mailing lists are there for package
 	developers?</a>
+</dt>
+<dt>20.8. <a href="#id2655275">Where is the pkgsrc
+	documentation?</a>
 </dt>
 </dl>
 <table border="0" summary="Q and A Set">
@@ -7761,7 +7786,7 @@ place.</p></li>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655027"></a><a name="id2655028"></a><b>20.1.</b>
+<a name="id2655006"></a><a name="id2655008"></a><b>20.1.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -7777,7 +7802,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655063"></a><a name="id2655064"></a><b>20.2.</b>
+<a name="id2655043"></a><a name="id2655044"></a><b>20.2.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -7795,7 +7820,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655101"></a><a name="id2655102"></a><b>20.3.</b>
+<a name="id2655081"></a><a name="id2655082"></a><b>20.3.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -7813,7 +7838,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655139"></a><a name="id2655140"></a><b>20.4.</b>
+<a name="id2655118"></a><a name="id2655120"></a><b>20.4.</b>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -7826,7 +7851,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655157"></a><a name="id2655158"></a><b>20.5.</b>
+<a name="id2655137"></a><a name="id2655138"></a><b>20.5.</b>
 </td>
 <td align="left" valign="top"><p>Why does <span><strong class="command">make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -7842,7 +7867,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655185"></a><a name="id2655186"></a><b>20.6.</b>
+<a name="id2655164"></a><a name="id2655165"></a><b>20.6.</b>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -7866,7 +7891,7 @@ place.</p></li>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="id2655259"></a><a name="id2655260"></a><b>20.7.</b>
+<a name="id2655239"></a><a name="id2655240"></a><b>20.7.</b>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -7888,6 +7913,52 @@ place.</p></li>
 	directly; use one of the other mailing
 	lists.</p></dd>
 </dl></div></td>
+</tr>
+<tr class="question">
+<td align="left" valign="top">
+<a name="id2655275"></a><a name="id2655276"></a><b>20.8.</b>
+</td>
+<td align="left" valign="top"><p>Where is the pkgsrc
+	documentation?</p></td>
+</tr>
+<tr class="answer">
+<td align="left" valign="top"><b></b></td>
+<td align="left" valign="top">
+<p>There are many places where you can find
+	documentation about pkgsrc:</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>The pkgsrc guide (this document) is a collection
+	of chapters that explain large parts of pkgsrc, but some
+	chapters tend to be outdated. Which ones they are is hard to
+	say.</p></li>
+<li><p>On the mailing list archives (see <a href="http://mail-index.NetBSD.org/" target="_top">http://mail-index.NetBSD.org/</a>), you can find discussions
+	about certain features, announcements of new parts of the pkgsrc
+	infrastructure and sometimes even announcements that a certain
+	feature has been marked as obsolete. The benefit here is that
+	each message has a date appended to it.</p></li>
+<li><p>Many of the files in the
+	<code class="filename">mk/</code> directory start with a comment that
+	describes the purpose of the file and how it can be used by the
+	pkgsrc user and package authors.</p></li>
+<li><p>The CVS log messages are a rich source of
+	information, but they tend to be highly abbreviated, especially
+	for actions that occur often. Some contain a detailed
+	description of what has changed, but they are geared towards the
+	other pkgsrc developers, not towards an average pkgsrc user.
+	They also only document <span class="emphasis"><em>changes</em></span>, so if you
+	don't know what has been before, these messages may not be worth
+	too much to you.</p></li>
+<li><p>Some parts of pkgsrc are only &#8220;<span class="quote">implicitly
+	documented</span>&#8221;, that is the documentation exists only in the
+	mind of the developer who wrote the code. To get this
+	information, use the the <span><strong class="command">cvs annotate</strong></span> command
+	to see who has written it and ask on the
+	<code class="literal">tech-pkg</code> mailing list, so that others can
+	find your questions later (see above). To be sure that the
+	developer in charge reads the mail, you may CC him or
+	her.</p></li>
+</ul></div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -7930,12 +8001,10 @@ place.</p></li>
 <dt><span class="sect2"><a href="#regression.fun.helper">22.3.2. Helper functions</a></span></dt>
 </dl></dd>
 </dl></dd>
-<dt><span class="chapter"><a href="#infr.bulk">23. The implementation of the pkgsrc bulk builds</a></span></dt>
-<dd><dl><dt><span class="sect1"><a href="#infr.bulk.what">23.1. Deciding which packages to build</a></span></dt></dl></dd>
-<dt><span class="chapter"><a href="#porting">24. Porting pkgsrc</a></span></dt>
+<dt><span class="chapter"><a href="#porting">23. Porting pkgsrc</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#porting.opsys">24.1. Porting pkgsrc to a new operating system</a></span></dt>
-<dt><span class="sect1"><a href="#porting.compiler">24.2. Adding support for a new compiler</a></span></dt>
+<dt><span class="sect1"><a href="#porting.opsys">23.1. Porting pkgsrc to a new operating system</a></span></dt>
+<dt><span class="sect1"><a href="#porting.compiler">23.2. Adding support for a new compiler</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -8176,58 +8245,12 @@ place.</p></li>
 </div>
 <div class="chapter" lang="en">
 <div class="titlepage"><div><div><h2 class="title">
-<a name="infr.bulk"></a>Chapter 23. The implementation of the pkgsrc bulk builds</h2></div></div></div>
-<div class="toc">
-<p><b>Table of Contents</b></p>
-<dl><dt><span class="sect1"><a href="#infr.bulk.what">23.1. Deciding which packages to build</a></span></dt></dl>
-</div>
-<div class="sect1" lang="en">
-<div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="infr.bulk.what"></a>23.1. Deciding which packages to build</h2></div></div></div>
-<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Note</h3>
-<p>This is not yet implemented.</p>
-</div>
-<p>Some of the pkgsrc packages are not usable in a certain
-	build configuration, either because of platform limitations
-	(processor, operating system) or because the build is done by an
-	unprivileged user. This section lists all the conditions that
-	influence whether a package is excluded from a bulk
-	build.</p>
-<div class="itemizedlist"><ul type="disc">
-<li><p><code class="varname">ONLY_FOR_PLATFORM</code> or
-	<code class="varname">NOT_FOR_PLATFORM</code> may be defined in the
-	package <code class="filename">Makefile</code>.</p></li>
-<li><p><code class="varname">ONLY_FOR_COMPILER</code> or
-	<code class="varname">NOT_FOR_COMPILER</code> may be defined in the
-	package <code class="filename">Makefile</code>.</p></li>
-<li><p><code class="varname">NOT_FOR_UNPRIVILEGED</code> (does
-	not exist yet) may be defined in the package
-	<code class="filename">Makefile</code> (only affects bulk builds in
-	unprivileged mode).</p></li>
-<li><p><code class="varname">LICENSE</code> may be defined in the
-	package <code class="filename">Makefile</code>. This may be overridden by
-	defining <code class="varname">ACCEPTABLE_LICENSES</code> in
-	<code class="filename">mk.conf</code>.</p></li>
-<li><p>The package vulnerability database may list the
-	package as vulnerable. This may be overridden by defining 
-	<code class="varname">ALLOW_VULNERABLE_PACKAGES</code> in
-	<code class="filename">mk.conf</code>.</p></li>
-<li><p>Packages that define
-	<code class="varname">INTERACTIVE_STAGE</code> cannot be built by the bulk
-	builds, which are by definition
-	non-interactive.</p></li>
-</ul></div>
-</div>
-</div>
-<div class="chapter" lang="en">
-<div class="titlepage"><div><div><h2 class="title">
-<a name="porting"></a>Chapter 24. Porting pkgsrc</h2></div></div></div>
+<a name="porting"></a>Chapter 23. Porting pkgsrc</h2></div></div></div>
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl>
-<dt><span class="sect1"><a href="#porting.opsys">24.1. Porting pkgsrc to a new operating system</a></span></dt>
-<dt><span class="sect1"><a href="#porting.compiler">24.2. Adding support for a new compiler</a></span></dt>
+<dt><span class="sect1"><a href="#porting.opsys">23.1. Porting pkgsrc to a new operating system</a></span></dt>
+<dt><span class="sect1"><a href="#porting.compiler">23.2. Adding support for a new compiler</a></span></dt>
 </dl>
 </div>
 <p>The pkgsrc system has already been ported to many
@@ -8236,7 +8259,7 @@ place.</p></li>
 	portable.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="porting.opsys"></a>24.1. Porting pkgsrc to a new operating system</h2></div></div></div>
+<a name="porting.opsys"></a>23.1. Porting pkgsrc to a new operating system</h2></div></div></div>
 <p>To port pkgsrc to a new operating system (called
 	<code class="literal">MyOS</code> in this example), you need to touch the
 	following files:</p>
@@ -8287,7 +8310,7 @@ place.</p></li>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="porting.compiler"></a>24.2. Adding support for a new compiler</h2></div></div></div>
+<a name="porting.compiler"></a>23.2. Adding support for a new compiler</h2></div></div></div>
 <p>TODO</p>
 </div>
 </div>

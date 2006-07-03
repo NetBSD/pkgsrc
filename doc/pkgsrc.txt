@@ -14,7 +14,7 @@ The pkgsrc Developers
 
 Copyright   1994-2006 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.20 2006/06/30 08:58:16 rillig Exp $
+$NetBSD: pkgsrc.xml,v 1.21 2006/07/03 23:51:01 rillig Exp $
 
 Abstract
 
@@ -130,6 +130,7 @@ I. The pkgsrc user's guide
         7.14. How do I change the location of configuration files?
         7.15. Automated security checks
         7.16. Why do some packages ignore my CFLAGS?
+        7.17. A package does not build. What shall I do?
 
 II. The pkgsrc developer's guide
 
@@ -340,14 +341,10 @@ III. The pkgsrc infrastructure internals
             22.3.1. Overridable functions
             22.3.2. Helper functions
 
-    23. The implementation of the pkgsrc bulk builds
+    23. Porting pkgsrc
 
-        23.1. Deciding which packages to build
-
-    24. Porting pkgsrc
-
-        24.1. Porting pkgsrc to a new operating system
-        24.2. Adding support for a new compiler
+        23.1. Porting pkgsrc to a new operating system
+        23.2. Adding support for a new compiler
 
 A. A simple example package: bison
 
@@ -637,6 +634,7 @@ Table of Contents
     7.14. How do I change the location of configuration files?
     7.15. Automated security checks
     7.16. Why do some packages ignore my CFLAGS?
+    7.17. A package does not build. What shall I do?
 
 Chapter 2. Where to get pkgsrc and how to keep it up-to-date
 
@@ -2182,6 +2180,7 @@ Table of Contents
 7.14. How do I change the location of configuration files?
 7.15. Automated security checks
 7.16. Why do some packages ignore my CFLAGS?
+7.17. A package does not build. What shall I do?
 
 This section contains hints, tips & tricks on special things in pkgsrc that we
 didn't find a better place for in the previous chapters, and it contains items
@@ -2221,10 +2220,10 @@ guide in pkgsrc/mk/buildlink3/PKGVIEWS_UG.
 
 7.3. Utilities for package management (pkgtools)
 
-The pkgsrc/pkgtools directory pkgtools contains a number of useful utilities
-for both users and developers of pkgsrc. This section attempts only to make the
-reader aware of the utilities and when they might be useful, and not to
-duplicate the documentation that comes with each package.
+The directory pkgsrc/pkgtools contains a number of useful utilities for both
+users and developers of pkgsrc. This section attempts only to make the reader
+aware of the utilities and when they might be useful, and not to duplicate the
+documentation that comes with each package.
 
 Utilities used by pkgsrc (automatically installed when needed):
 
@@ -2504,6 +2503,22 @@ inspect any Makefile and Makefile.in for whether they define CFLAGS explicitly.
 Usually you can remove these lines. But be aware that some "smart" programmers
 write so bad code that it only works for the specific combination of CFLAGS
 they have chosen.
+
+7.17. A package does not build. What shall I do?
+
+ 1. Make sure that your copy of pkgsrc is consistent. A case that occurs often
+    is that people only update pkgsrc in parts, because of performance reasons.
+    Since pkgsrc is one large system, not a collection of many small systems,
+    there are sometimes changes that only work when the whole pkgsrc tree is
+    updated.
+
+ 2. Make sure that you don't have any CVS conflicts. Search for "<<<<<<" or
+    ">>>>>>" in all your pkgsrc files.
+
+ 3. Make sure that you don't have old copies of the packages extracted. Run
+    make clean clean-depends to verify this.
+
+ 4. If the problem still exists, write a mail to the pkgsrc-users mailing list.
 
 Part II. The pkgsrc developer's guide
 
@@ -5538,7 +5553,7 @@ substitution. Every sed command should be prefixed with -e, so that all SUBST
 blocks look uniform.
 
 There are some more variables, but they are so seldomly used that they are only
-documented in the mk/subst.mk.
+documented in the mk/subst.mk file.
 
 17.2. Fixing problems in the fetch phase
 
@@ -6404,6 +6419,7 @@ pkgsrc-users mailing list.
 20.6. What does ${MASTER_SITE_SOURCEFORGE:=package/} mean? I don't understand
     the := inside it.
 20.7. Which mailing lists are there for package developers?
+20.8. Where is the pkgsrc documentation?
 
 20.1. What is the difference between MAKEFLAGS, .MAKEFLAGS and MAKE_FLAGS?
 
@@ -6463,6 +6479,39 @@ pkgsrc-users mailing list.
           Please do not report your bugs here directly; use one of the other
           mailing lists.
 
+20.8. Where is the pkgsrc documentation?
+
+      There are many places where you can find documentation about pkgsrc:
+
+        * The pkgsrc guide (this document) is a collection of chapters that
+          explain large parts of pkgsrc, but some chapters tend to be outdated.
+          Which ones they are is hard to say.
+
+        * On the mailing list archives (see http://mail-index.NetBSD.org/), you
+          can find discussions about certain features, announcements of new
+          parts of the pkgsrc infrastructure and sometimes even announcements
+          that a certain feature has been marked as obsolete. The benefit here
+          is that each message has a date appended to it.
+
+        * Many of the files in the mk/ directory start with a comment that
+          describes the purpose of the file and how it can be used by the
+          pkgsrc user and package authors.
+
+        * The CVS log messages are a rich source of information, but they tend
+          to be highly abbreviated, especially for actions that occur often.
+          Some contain a detailed description of what has changed, but they are
+          geared towards the other pkgsrc developers, not towards an average
+          pkgsrc user. They also only document changes, so if you don't know
+          what has been before, these messages may not be worth too much to
+          you.
+
+        * Some parts of pkgsrc are only "implicitly documented", that is the
+          documentation exists only in the mind of the developer who wrote the
+          code. To get this information, use the the cvs annotate command to
+          see who has written it and ask on the tech-pkg mailing list, so that
+          others can find your questions later (see above). To be sure that the
+          developer in charge reads the mail, you may CC him or her.
+
 Part III. The pkgsrc infrastructure internals
 
 This part of the guide deals with everything from the infrastructure that is
@@ -6493,14 +6542,10 @@ Table of Contents
         22.3.1. Overridable functions
         22.3.2. Helper functions
 
-23. The implementation of the pkgsrc bulk builds
+23. Porting pkgsrc
 
-    23.1. Deciding which packages to build
-
-24. Porting pkgsrc
-
-    24.1. Porting pkgsrc to a new operating system
-    24.2. Adding support for a new compiler
+    23.1. Porting pkgsrc to a new operating system
+    23.2. Adding support for a new compiler
 
 Chapter 21. Design of the pkgsrc infrastructure
 
@@ -6693,53 +6738,18 @@ output_prohibit(regex...)
     () does not match the extended regular expression. If any of the regular
     expressions matches, the test will fail.
 
-Chapter 23. The implementation of the pkgsrc bulk builds
+Chapter 23. Porting pkgsrc
 
 Table of Contents
 
-23.1. Deciding which packages to build
-
-23.1. Deciding which packages to build
-
-Note
-
-This is not yet implemented.
-
-Some of the pkgsrc packages are not usable in a certain build configuration,
-either because of platform limitations (processor, operating system) or because
-the build is done by an unprivileged user. This section lists all the
-conditions that influence whether a package is excluded from a bulk build.
-
-  * ONLY_FOR_PLATFORM or NOT_FOR_PLATFORM may be defined in the package
-    Makefile.
-
-  * ONLY_FOR_COMPILER or NOT_FOR_COMPILER may be defined in the package
-    Makefile.
-
-  * NOT_FOR_UNPRIVILEGED (does not exist yet) may be defined in the package
-    Makefile (only affects bulk builds in unprivileged mode).
-
-  * LICENSE may be defined in the package Makefile. This may be overridden by
-    defining ACCEPTABLE_LICENSES in mk.conf.
-
-  * The package vulnerability database may list the package as vulnerable. This
-    may be overridden by defining ALLOW_VULNERABLE_PACKAGES in mk.conf.
-
-  * Packages that define INTERACTIVE_STAGE cannot be built by the bulk builds,
-    which are by definition non-interactive.
-
-Chapter 24. Porting pkgsrc
-
-Table of Contents
-
-24.1. Porting pkgsrc to a new operating system
-24.2. Adding support for a new compiler
+23.1. Porting pkgsrc to a new operating system
+23.2. Adding support for a new compiler
 
 The pkgsrc system has already been ported to many operating systems, hardware
 architectures and compilers. This chapter explains the necessary steps to make
 pkgsrc even more portable.
 
-24.1. Porting pkgsrc to a new operating system
+23.1. Porting pkgsrc to a new operating system
 
 To port pkgsrc to a new operating system (called MyOS in this example), you
 need to touch the following files:
@@ -6787,7 +6797,7 @@ mk/tools/MyOS.mk
 Now, you should be able to build some basic packages, like lang/perl5, shells/
 bash.
 
-24.2. Adding support for a new compiler
+23.2. Adding support for a new compiler
 
 TODO
 
