@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.16 2006/07/03 13:58:30 tron Exp $
+$NetBSD: distinfo,v 1.17 2006/07/03 15:51:46 tron Exp $
 
 SHA1 (daapd-0.2.4b.tgz) = 0903303f155c19ae12cdc78be05799508156a16b
 RMD160 (daapd-0.2.4b.tgz) = 899b37b3872623ef918f7faa4eb8bad2dfc5b369
 Size (daapd-0.2.4b.tgz) = 205476 bytes
 SHA1 (patch-aa) = c10564ede45fa92b18926da68a7a9a2d9547627d
-SHA1 (patch-ab) = 4b6e743a4de3f476ad73c13ecc19397d418e2731
 SHA1 (patch-ac) = 0a4e3dfb010bbf2cc01843987c970548cb4c646f
 SHA1 (patch-ad) = 05a61ced18d5b0827ade7e6b3341430ff9b9e89d
 SHA1 (patch-ae) = 3433d7e944999e10690ccdda1d49d3c711671446
