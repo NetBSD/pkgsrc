@@ -1,4 +1,4 @@
-# $NetBSD: check-interpreter.mk,v 1.9 2006/07/02 09:40:37 rillig Exp $
+# $NetBSD: check-interpreter.mk,v 1.10 2006/07/03 06:57:20 rillig Exp $
 
 # This file checks that after installation, all files of the package
 # that start with a "#!" line will find their interpreter. Files that
@@ -30,6 +30,8 @@ _CHECK_INTERP_SKIP_FILTER+=	${_CHECK_INTERP_SKIP:@.pattern.@${PREFIX}/${.pattern
 _CHECK_INTERP_SKIP_FILTER+=	*) ;;
 _CHECK_INTERP_SKIP_FILTER+=	esac
 
+_CHECK_INTERP_FILELIST_CMD?=	${PKG_FILELIST_CMD}
+
 ######################################################################
 ### check-interpreter (PRIVATE)
 ######################################################################
@@ -43,7 +45,7 @@ check-interpreter: error-check
 .if !defined(NO_PKG_REGISTER)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	set -e;								\
-	${PKG_FILELIST_CMD} | ${SORT} | ${SED} 's,\\,\\\\,g' |		\
+	${_CHECK_INTERP_FILELIST_CMD} | ${SORT} | ${SED} 's,\\,\\\\,g' |\
 	while read file; do						\
 		${_CHECK_INTERP_SKIP_FILTER};				\
 		if ${TEST} ! -r "$$file"; then				\
