@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.636 2006/07/03 20:42:21 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.637 2006/07/03 21:02:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3244,3 +3244,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/qt4-libs to 4.1.4 [adam 2006-07-03]
 	Updated x11/qt4-tools to 4.1.4 [adam 2006-07-03]
 	Updated archivers/unrar to 3.6.5 [wiz 2006-07-03]
+	Updated devel/glib2 to 2.12.0 [wiz 2006-07-03]
