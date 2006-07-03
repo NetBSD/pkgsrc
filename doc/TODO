@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5148 2006/07/03 21:39:15 wiz Exp $
+$NetBSD: TODO,v 1.5149 2006/07/03 21:49:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -308,7 +308,6 @@ Suggested package updates
 	o GridSim-3.3
 	o PAM-0.80
 	o REminiscence-0.1.8
-	o SDL-1.2.11
 	o SDL_mixer-1.2.7
 	o SmartEiffel-2.1
 	o TeXmacs-1.0.6.4
