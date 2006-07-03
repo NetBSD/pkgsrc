@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/07/02 11:32:40 drochner Exp $
+# $NetBSD: Makefile,v 1.39 2006/07/03 10:40:28 jmmv Exp $
 #
 
 DISTNAME=	rhythmbox-0.9.5
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--disable-python
 
 GCONF2_SCHEMAS=		rhythmbox.schemas
 
-BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.5.4
+BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.6.0
 BUILDLINK_API_DEPENDS.musicbrainz+=	musicbrainz>=2.1.0
 BUILDLINK_API_DEPENDS.totem+=		{totem,totem-xine}>=1.1.5
 
