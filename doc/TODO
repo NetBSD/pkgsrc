@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5149 2006/07/03 21:49:37 wiz Exp $
+$NetBSD: TODO,v 1.5150 2006/07/03 23:37:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -710,8 +710,6 @@ Suggested package updates
 	o libstatgrab-0.13
 	o libtcl-nothread-8.4.9
 	o libtorrent-0.9.3
-	o libvisual-0.4.0
-	o libvisual-plugins-0.4.0
 	o libwpd-0.8.5
 	o licq-core-1.3.0
 	o liferea-1.0.16
