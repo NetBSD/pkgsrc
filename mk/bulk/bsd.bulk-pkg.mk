@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.bulk-pkg.mk,v 1.119 2006/02/13 14:55:26 rillig Exp $
+#	$NetBSD: bsd.bulk-pkg.mk,v 1.120 2006/07/03 00:00:56 rillig Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -461,6 +461,7 @@ bulk-package:
 			  ${TO_HTML} < ${_BUILDLOG:Q};			\
 			  ${ECHO} "</pre>";				\
 			} > ${_BROKENFILE:Q};				\
+			${RM} -f ${_BUILDLOG:Q};			\
 			if [ -f "${WRKLOG}" ]; then \
 				${CP} ${WRKLOG:Q} ${_BROKENWRKLOG:Q}; \
 			fi; \
