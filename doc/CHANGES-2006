@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.626 2006/07/03 04:46:42 kent Exp $
+$NetBSD: CHANGES-2006,v 1.627 2006/07/03 07:30:41 agc Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3233,3 +3233,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated cross/i386-netbsdpe to 3.3.6 [kent 2006-07-03]
 	Updated emulators/peace to 0.0.20060701 [kent 2006-07-03]
 	Removed devel/w32api [kent 2006-07-03]
+	Added sysutils/xenkernel30 version 3.0.2-2 [agc 2006-07-03]
