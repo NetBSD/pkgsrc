@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2006/03/03 22:26:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2006/07/03 21:32:09 wiz Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -14,12 +14,14 @@ man/man1/curl-config.1
 man/man1/curl.1
 man/man3/curl_easy_cleanup.3
 man/man3/curl_easy_duphandle.3
+man/man3/curl_easy_escape.3
 man/man3/curl_easy_getinfo.3
 man/man3/curl_easy_init.3
 man/man3/curl_easy_perform.3
 man/man3/curl_easy_reset.3
 man/man3/curl_easy_setopt.3
 man/man3/curl_easy_strerror.3
+man/man3/curl_easy_unescape.3
 man/man3/curl_escape.3
 man/man3/curl_formadd.3
 man/man3/curl_formfree.3
@@ -37,7 +39,10 @@ man/man3/curl_multi_info_read.3
 man/man3/curl_multi_init.3
 man/man3/curl_multi_perform.3
 man/man3/curl_multi_remove_handle.3
+man/man3/curl_multi_setopt.3
+man/man3/curl_multi_socket.3
 man/man3/curl_multi_strerror.3
+man/man3/curl_multi_timeout.3
 man/man3/curl_share_cleanup.3
 man/man3/curl_share_init.3
 man/man3/curl_share_setopt.3
@@ -73,6 +78,7 @@ share/examples/curl/ftp3rdparty.c
 share/examples/curl/ftpget.c
 share/examples/curl/ftpgetresp.c
 share/examples/curl/ftpupload.c
+share/examples/curl/ftpuploadresume.c
 share/examples/curl/getinfo.c
 share/examples/curl/getinmemory.c
 share/examples/curl/htmltidy.c
@@ -89,6 +95,7 @@ share/examples/curl/opensslthreadlock.c
 share/examples/curl/persistant.c
 share/examples/curl/post-callback.c
 share/examples/curl/postit2.c
+share/examples/curl/sampleconv.c
 share/examples/curl/sepheaders.c
 share/examples/curl/simple.c
 share/examples/curl/simplepost.c
