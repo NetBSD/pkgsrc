@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.628 2006/07/03 08:41:26 dogcow Exp $
+$NetBSD: CHANGES-2006,v 1.629 2006/07/03 09:43:44 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3235,3 +3235,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Removed devel/w32api [kent 2006-07-03]
 	Added sysutils/xenkernel30 version 3.0.2-2 [agc 2006-07-03]
 	Added net/Transmission version 0.6.1 [dogcow 2006-07-03]
+	Added audio/easytag-devel version 1.99.12 [jmmv 2006-07-03]
