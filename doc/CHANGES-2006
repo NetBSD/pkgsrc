@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.632 2006/07/03 13:03:25 jmmv Exp $
+$NetBSD: CHANGES-2006,v 1.633 2006/07/03 13:34:50 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3239,3 +3239,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/wine to 0.9.16 [adam 2006-07-03]
 	Updated games/scummvm to 0.9.0 [adam 2006-07-03]
 	Updated audio/rhythmbox to 0.9.5nb1 [jmmv 2006-07-03]
+	Updated net/nsd to 2.3.5 [joerg 2006-07-03]
