@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.623 2006/06/30 16:17:27 tron Exp $
+# $NetBSD: Makefile,v 1.624 2006/07/03 08:41:26 dogcow Exp $
 #
 
 COMMENT=	Networking tools
@@ -10,6 +10,7 @@ SUBDIR+=	LaBrea
 SUBDIR+=	ORBit
 SUBDIR+=	ORBit2
 SUBDIR+=	SDL_net
+SUBDIR+=	Transmission
 SUBDIR+=	adns
 SUBDIR+=	aget
 SUBDIR+=	aiccu
