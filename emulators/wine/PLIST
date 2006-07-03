@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2006/06/12 09:07:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.46 2006/07/03 11:19:22 adam Exp $
 bin/bin2res
 bin/fnt2bdf
 bin/function_grep.pl
@@ -124,6 +124,7 @@ include/wine/windows/dciman.h
 include/wine/windows/dde.h
 include/wine/windows/ddeml.h
 include/wine/windows/ddk/cfgmgr32.h
+include/wine/windows/ddk/compstui.h
 include/wine/windows/ddk/ntddcdvd.h
 include/wine/windows/ddk/ntddser.h
 include/wine/windows/ddk/ntddtape.h
@@ -293,6 +294,7 @@ include/wine/windows/oleidl.idl
 include/wine/windows/pktdef.h
 include/wine/windows/poppack.h
 include/wine/windows/powrprof.h
+include/wine/windows/profinfo.h
 include/wine/windows/propidl.h
 include/wine/windows/propidl.idl
 include/wine/windows/prsht.h
@@ -435,6 +437,7 @@ lib/wine/comdlg32.dll.so
 lib/wine/comm.drv16
 lib/wine/commdlg.dll16
 lib/wine/compobj.dll16
+lib/wine/compstui.dll.so
 lib/wine/control.exe.so
 lib/wine/crtdll.dll.so
 lib/wine/crypt32.dll.so
@@ -494,6 +497,7 @@ lib/wine/imaadp32.acm.so
 lib/wine/imagehlp.dll.so
 lib/wine/imm.dll16
 lib/wine/imm32.dll.so
+lib/wine/inseng.dll.so
 lib/wine/iphlpapi.dll.so
 lib/wine/itss.dll.so
 lib/wine/joystick.drv.so
@@ -512,6 +516,7 @@ lib/wine/libcards.def
 lib/wine/libcfgmgr32.def
 lib/wine/libcomctl32.def
 lib/wine/libcomdlg32.def
+lib/wine/libcompstui.def
 lib/wine/libcrtdll.def
 lib/wine/libcrypt32.def
 lib/wine/libcryptdll.def
@@ -683,6 +688,7 @@ lib/wine/olepro32.dll.so
 lib/wine/olesvr.dll16
 lib/wine/olesvr32.dll.so
 ${WINE_OPENGL}lib/wine/opengl32.dll.so
+lib/wine/oleview.exe.so
 lib/wine/powrprof.dll.so
 lib/wine/progman.exe.so
 lib/wine/psapi.dll.so
