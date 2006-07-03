@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.15 2006/06/12 16:28:05 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/07/03 23:32:37 wiz Exp $
 #
 
 DISTNAME=		libvisual-bmp-0.2.0
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libvisual/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://libvisual.sourceforge.net/
+HOMEPAGE=		http://localhost.nl/~synap/libvisual/
 COMMENT=		Libvisual Beep Media Player plugin
 
 USE_PKGLOCALEDIR=	yes
@@ -22,7 +22,7 @@ post-extract:
 		${WRKSRC}/pixmaps/libvisual-bmp-vis.xpm
 
 .include "../../audio/bmp/buildlink3.mk"
-.include "../../audio/libvisual/buildlink3.mk"
+.include "../../audio/libvisual0.2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
