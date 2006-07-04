@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:09:56 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/07/04 09:13:49 rillig Exp $
 #
 
 DISTNAME=		MailScanner-4.30.3-2
@@ -52,13 +52,11 @@ CONF_FILES+=		${EGDIR}/${_f_} ${PKG_SYSCONFDIR}/${_f_}
 
 RCD_SCRIPTS=		mailscanner
 
-SUBST_CLASSES+=		paths sendmail systemdefs
-
+SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	bin/MailScanner etc/MailScanner.conf
 SUBST_FILES.paths+=	etc/virus.scanners.conf bin/update_virus_scanners
 SUBST_FILES.paths+=	lib/MailScanner/ConfigDefs.pl
-
 SUBST_SED.paths=	-e s,/opt/MailScanner/lib/MailScanner/CustomFunctions,${PKG_SYSCONFDIR}/CustomFunctions,g
 SUBST_SED.paths+=	-e s,/opt/MailScanner/lib,${LIBDIR},g
 SUBST_SED.paths+=	-e s,/opt/MailScanner/etc/reports,${EGDIR}/reports,g
@@ -70,6 +68,7 @@ SUBST_SED.paths+=	-e s,/opt/MailScanner/bin,${PREFIX}/bin,g
 
 # XXX this could use some improvement
 .if ${OPSYS} == "NetBSD"
+SUBST_CLASSES+=		sendmail
 SUBST_STAGE.sendmail=	post-patch
 SUBST_FILES.sendmail=	bin/MailScanner etc/MailScanner.conf
 SUBST_FILES.sendmail+=	etc/virus.scanners.conf bin/update_virus_scanners
@@ -77,12 +76,12 @@ SUBST_FILES.sendmail+=	lib/MailScanner/ConfigDefs.pl
 SUBST_SED.sendmail=	-e s,/usr/lib/sendmail,/usr/sbin/mailwrapper,g
 .endif
 
+SUBST_CLASSES+=		systemdefs
 SUBST_STAGE.systemdefs=	post-patch
 SUBST_FILES.systemdefs=	lib/MailScanner/SystemDefs.pm
 SUBST_SED.systemdefs=	-e s,/bin/cat,${CAT},g
 SUBST_SED.systemdefs=	-e s,/bin/cp,${CP},g
 SUBST_SED.systemdefs=	-e s,/bin/rm,${RM},g
-
 # we can't use sed from pkgsrc as it won't be registered as a
 # dependency. XXX tools.mk needs a way to tell us about this dependency.
 .if empty(SED:M${LOCALBASE}*)
