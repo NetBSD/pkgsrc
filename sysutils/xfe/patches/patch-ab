@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1.2.2 2006/07/04 19:02:28 ghen Exp $
+
+--- configure.orig	2005-06-24 08:38:30.000000000 +0000
++++ configure
+@@ -10965,7 +10965,7 @@ if test "${ac_cv_lib_FOX_1_4_fxfindfox+s
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lFOX-1.4  $LIBS"
++LIBS="-lFOX-1.4 ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -11027,7 +11027,7 @@ if test $ac_cv_lib_FOX_1_4_fxfindfox = y
+ #define HAVE_LIBFOX_1_4 1
+ _ACEOF
+ 
+-  LIBS="-lFOX-1.4 $LIBS"
++  LIBS="-lFOX-1.4 ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} $LIBS"
+ 
+ else
+   { { echo "$as_me:$LINENO: error: \"libFOX-1.4 not found\"" >&5
+@@ -13950,6 +13950,8 @@ do
+ _ACEOF
+ cat >>$CONFIG_STATUS <<\_ACEOF
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++    # Avoid regenerating for rechecks on pkgsrc
++    exit 0
+     ac_cs_recheck=: ;;
+   --version | --vers* | -V )
+     echo "$ac_cs_version"; exit 0 ;;
