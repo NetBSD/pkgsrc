@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.643 2006/07/04 06:43:32 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.644 2006/07/04 06:47:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3262,3 +3262,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated misc/JMdict to 2006.03 [wiz 2006-07-04]
 	Updated misc/kanjidic to 20060623 [wiz 2006-07-04]
 	Updated databases/openldap-server to 2.3.24nb1 [ghen 2006-07-04]
+	Updated audio/amarok to 1.4.1 [wiz 2006-07-04]
