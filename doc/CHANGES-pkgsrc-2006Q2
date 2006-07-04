@@ -1,6 +1,9 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.1 2006/07/02 09:13:30 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.2 2006/07/04 10:02:47 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
 
 Created pkgsrc-2006Q2 branch [agc 2006-07-02 08:05 GMT]
+
+Pullup ticket 1717 - requested by ghen
+runtime fix for openldap-server
