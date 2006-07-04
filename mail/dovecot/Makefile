@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2006/07/02 09:29:17 ghen Exp $
+# $NetBSD: Makefile,v 1.57 2006/07/04 06:54:07 ghen Exp $
 
 DISTNAME=		dovecot-1.0.rc1
 PKGNAME=		${DISTNAME:S/.rc/rc/}
@@ -13,6 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
