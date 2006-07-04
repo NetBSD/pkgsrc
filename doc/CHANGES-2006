@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.641 2006/07/03 23:37:11 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.642 2006/07/04 06:23:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3258,3 +3258,6 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/libvisual-xmms to 0.2.0nb5 [wiz 2006-07-03]
 	Updated audio/libvisual to 0.4.0 [wiz 2006-07-03]
 	Updated audio/libvisual-plugins to 0.4.0 [wiz 2006-07-03]
+	Updated misc/edict to 2006.002 [wiz 2006-07-04]
+	Updated misc/JMdict to 2006.03 [wiz 2006-07-04]
+	Updated misc/kanjidic to 20060623 [wiz 2006-07-04]
