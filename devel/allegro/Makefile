@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/03/23 06:43:17 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/07/04 06:30:48 wiz Exp $
 
 DISTNAME=	allegro-4.2.0
 PKGREVISION=	2
@@ -14,7 +14,7 @@ GNU_CONFIGURE=		yes
 
 MAKEFILE=		makefile
 BUILD_TARGET=		# there is no 'all' target for some reason
-INFO_FILES=		# PLIST
+INFO_FILES=		YES
 INSTALL_TARGET=		install install-info
 
 # NetBSD's OSS midi emulation is non-existent.
