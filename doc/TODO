@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5151 2006/07/04 06:47:09 wiz Exp $
+$NetBSD: TODO,v 1.5152 2006/07/04 20:07:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -422,6 +422,7 @@ Suggested package updates
 	o cqcam-0.91
 	o crafty-19.5
 	o criticalmass-1.0.0
+	o crossfire-client-1.9.1
 	o crypto++-523
 	o cstream-2.6.0
 	o cue-20051114 [pkg/33153]
@@ -591,7 +592,7 @@ Suggested package updates
 	o gthumb-2.7.7
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
-	o gtk2+-2.8.20
+	o gtk2+-2.10.0
 	o gtk2-engines-2.6.9
 	o gtkam-0.1.13
 	o gtkhtml-3.10.2
@@ -1214,6 +1215,7 @@ Suggested package updates
 	o vnc2swf-0.8.2
 	o vobcopy-1.0.0
 	o vp-1.6
+	o vsftpd-2.0.5
 	o vte-0.12.2
 	o w32api-3.2
 	o wMosaic-3.8.22
