@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/09 21:04:41 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2006/07/04 20:07:04 rillig Exp $
 
 DISTNAME=		moc-2.4.0
 CATEGORIES=		audio
@@ -16,12 +16,12 @@ USE_NCURSES=		yes
 USE_TOOLS+=		pkg-config
 
 # We require ncurses because with curses arrow key navigation is buggy
-CONFIGURE_ARGS+=        --with-ncurses
+CONFIGURE_ARGS+=	--with-ncurses
 
-SUBST_CLASSES=		oss
+SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	pre-configure
 SUBST_FILES.oss=	config.example options.c
-SUBST_SED.oss=		s,/dev/dsp,${DEVOSSAUDIO},g
+SUBST_SED.oss=		-e s,/dev/dsp,${DEVOSSAUDIO},g
 SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 
 .include "options.mk"
