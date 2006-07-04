@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2005/02/23 17:15:13 agc Exp $
+$NetBSD: distinfo,v 1.18 2006/07/04 17:50:22 rpaulo Exp $
 
 SHA1 (xemacs-packages/Sun-1.15-pkg.tar.gz) = fb227f01bee8ce85fdb64c999393a1c9b936b8a0
 RMD160 (xemacs-packages/Sun-1.15-pkg.tar.gz) = 523658714111aaae8915ae164f98cdc2d39883b6
@@ -6,9 +6,9 @@ Size (xemacs-packages/Sun-1.15-pkg.tar.gz) = 64660 bytes
 SHA1 (xemacs-packages/ada-1.14-pkg.tar.gz) = f023f3dd88b7e2d19779f6aef06e8d6329f22857
 RMD160 (xemacs-packages/ada-1.14-pkg.tar.gz) = 168330e14d6b8a114cb10dfc74cdc2ecf9c086ed
 Size (xemacs-packages/ada-1.14-pkg.tar.gz) = 55836 bytes
-SHA1 (xemacs-packages/apel-1.27-pkg.tar.gz) = 8489c8bae06a6a3d5227ecc5b83bd8bb06e7979d
-RMD160 (xemacs-packages/apel-1.27-pkg.tar.gz) = 573c3f9bd8df88c971305031253d96ae9018ee98
-Size (xemacs-packages/apel-1.27-pkg.tar.gz) = 108585 bytes
+SHA1 (xemacs-packages/apel-1.32-pkg.tar.gz) = dfffbe52bc0b72ab2e629475975568dc23e673f7
+RMD160 (xemacs-packages/apel-1.32-pkg.tar.gz) = 3ea97947651adccd314f09a67c32205ed58730c6
+Size (xemacs-packages/apel-1.32-pkg.tar.gz) = 121589 bytes
 SHA1 (xemacs-packages/auctex-1.36-pkg.tar.gz) = 7cb46a36af9e11af950fac8c1cbe35ec3b23e966
 RMD160 (xemacs-packages/auctex-1.36-pkg.tar.gz) = 636e9a0aa379454ea158851a92b176e6fcd4c397
 Size (xemacs-packages/auctex-1.36-pkg.tar.gz) = 407705 bytes

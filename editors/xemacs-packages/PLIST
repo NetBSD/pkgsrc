@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/02/28 17:43:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/07/04 17:50:22 rpaulo Exp $
 lib/xemacs/xemacs-packages/etc/BABYL
 lib/xemacs/xemacs-packages/etc/app-defaults/de/Emacs
 lib/xemacs/xemacs-packages/etc/app-defaults/fr/Emacs
@@ -1643,6 +1643,7 @@ lib/xemacs/xemacs-packages/lisp/ada/auto-autoloads.elc
 lib/xemacs/xemacs-packages/lisp/ada/custom-load.el${ELSUFX}
 lib/xemacs/xemacs-packages/lisp/ada/custom-load.elc
 lib/xemacs/xemacs-packages/lisp/apel/ChangeLog
+lib/xemacs/xemacs-packages/lisp/apel/ChangeLog.upstream
 lib/xemacs/xemacs-packages/lisp/apel/README.en
 lib/xemacs/xemacs-packages/lisp/apel/README.ja
 lib/xemacs/xemacs-packages/lisp/apel/_pkg.el${ELSUFX}

@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.50 2006/02/28 17:43:08 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2006/07/04 17:50:22 rpaulo Exp $
 
 DISTNAME=	xemacs-packages
-PKGNAME=	xemacs-packages-1.15
-PKGREVISION=	3
+PKGNAME=	xemacs-packages-1.16
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=packages/}
 DISTFILES=	\
 		Sun-1.15-pkg.tar.gz \
 		ada-1.14-pkg.tar.gz \
-		apel-1.27-pkg.tar.gz \
+		apel-1.32-pkg.tar.gz \
 		auctex-1.36-pkg.tar.gz \
 		bbdb-1.24-pkg.tar.gz \
 		build-1.14-pkg.tar.gz \
