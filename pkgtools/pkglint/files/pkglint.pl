@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.634 2006/07/02 09:47:17 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.635 2006/07/04 09:02:16 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1320,10 +1320,11 @@ use constant SUBST_MESSAGE	=> 2;
 use constant SUBST_FILES	=> 3;
 use constant SUBST_SED		=> 4;
 use constant SUBST_FILTER_CMD	=> 5;
+use constant SUBST_ID		=> 6;
 
 sub new($) {
 	my ($class) = @_;
-	my ($self) = ([undef, undef, undef, [], [], undef]);
+	my ($self) = ([undef, undef, undef, [], [], undef, undef]);
 	bless($self, $class);
 	return $self;
 }
@@ -1334,6 +1335,7 @@ sub subst_message($)		{ return shift(@_)->[SUBST_MESSAGE]; }
 sub subst_files($)		{ return shift(@_)->[SUBST_FILES]; }
 sub subst_sed($)		{ return shift(@_)->[SUBST_SED]; }
 sub subst_filter_cmd($)		{ return shift(@_)->[SUBST_FILTER_CMD]; }
+sub subst_id($)			{ return shift(@_)->[SUBST_ID]; }
 
 sub init($) {
 	my ($self) = @_;
@@ -1344,13 +1346,17 @@ sub init($) {
 	$self->[SUBST_FILES] = [];
 	$self->[SUBST_SED] = [];
 	$self->[SUBST_FILTER_CMD] = undef;
+	$self->[SUBST_ID] = undef;
 }
 
 sub check_end($$) {
 	my ($self, $line) = @_;
 
-	return unless defined($self->subst_class);
+	return unless defined($self->subst_id);
 
+	if (!defined($self->subst_class)) {
+		$line->log_warning("Incomplete SUBST block: SUBST_CLASSES missing.");
+	}
 	if (!defined($self->subst_stage)) {
 		$line->log_warning("Incomplete SUBST block: SUBST_STAGE missing.");
 	}
@@ -1363,47 +1369,78 @@ sub check_end($$) {
 	$self->init();
 }
 
+sub is_complete($) {
+	my ($self) = @_;
+
+	return false unless defined($self->subst_id);
+	return false unless defined($self->subst_class);
+	return false unless defined($self->subst_files);
+	return false unless defined($self->subst_sed);
+	return true;
+}
+
 sub check_varassign($$$$$) {
 	my ($self, $line, $varname, $op, $value) = @_;
+	my ($varbase, $varparam, $id);
 
 	if ($varname eq "SUBST_CLASSES") {
-		$self->check_end($line);
 
-		if ($value =~ qr"\s") {
+		if ($value =~ qr"^(\S+)\s") {
 			$line->log_warning("Please add only one class at a time to SUBST_CLASSES.");
+			$self->[SUBST_CLASS] = $1;
+			$self->[SUBST_ID] = $1;
+
 		} else {
+			if (defined($self->subst_class)) {
+				$line->log_warning("SUBST_CLASSES should only appear once in a SUBST block.");
+			}
 			$self->[SUBST_CLASS] = $value;
+			$self->[SUBST_ID] = $value;
 		}
 		return;
 	}
 
-	my $class = $self->subst_class;
-	if (!defined($class)) {
-		# XXX: Later, a check may be added that SUBST_* variables
-		# are not assigned in other paragraphs.
+	$id = $self->subst_id;
+
+	if ($varname =~ qr"^(SUBST_(?:STAGE|MESSAGE|FILES|SED|FILTER_CMD))\.([\-\w_]+)$") {
+		($varbase, $varparam) = ($1, $2);
+
+		if (!defined($id)) {
+			$line->log_note("SUBST_CLASSES should precede the definition of ${varbase}.${varparam}.");
+
+			$id = $self->[SUBST_ID] = $varparam;
+		}
+	} else {
+		if (defined($id)) {
+			$line->log_warning("Foreign variable in SUBST block.");
+		}
 		return;
 	}
 
-	if ($varname !~ qr"^(SUBST_(?:STAGE|MESSAGE|FILES|SED|FILTER_CMD))\.([\-\w_]+)$") {
-		$line->log_warning("Foreign variable in SUBST block.");
-		return;
-	}
-	my ($varbase, $varparam) = ($1, $2);
+	if ($varparam ne $id) {
+		if ($self->is_complete()) {
+			$self->check_end();
 
-	if ($varparam ne $class) {
-		$line->log_warning("Variable parameter \"${varparam}\" does not match SUBST class \"${class}\".");
+			# The following assignment prevents an additional warning,
+			# but from a technically viewpoint, it is incorrect.
+			$self->[SUBST_CLASS] = $varparam;
+			$self->[SUBST_ID] = $varparam;
+			$id = $varparam;
+		} else {
+			$line->log_warning("Variable parameter \"${varparam}\" does not match SUBST class \"${id}\".");
+		}
 	}
 
 	if ($varbase eq "SUBST_STAGE") {
 		if (defined($self->subst_stage)) {
-			$line->log_warning("Duplicate definition of SUBST_STAGE.${class}.");
+			$line->log_warning("Duplicate definition of SUBST_STAGE.${id}.");
 		} else {
 			$self->[SUBST_STAGE] = $value;
 		}
 
 	} elsif ($varbase eq "SUBST_MESSAGE") {
 		if (defined($self->subst_message)) {
-			$line->log_warning("Duplicate definition of SUBST_MESSAGE.${class}.");
+			$line->log_warning("Duplicate definition of SUBST_MESSAGE.${id}.");
 		} else {
 			$self->[SUBST_MESSAGE] = $value;
 		}
@@ -1426,7 +1463,7 @@ sub check_varassign($$$$$) {
 
 	} elsif ($varbase eq "SUBST_FILTER_CMD") {
 		if (defined($self->subst_filter_cmd)) {
-			$line->log_warning("Duplicate definition of SUBST_FILTER_CMD.${class}.");
+			$line->log_warning("Duplicate definition of SUBST_FILTER_CMD.${id}.");
 		} else {
 			$self->[SUBST_FILTER_CMD] = $value;
 		}
@@ -1439,12 +1476,13 @@ sub check_varassign($$$$$) {
 sub to_string($) {
 	my ($self) = @_;
 
-	return sprintf("SubstContext(%s %s %s %s %s)",
+	return sprintf("SubstContext(%s %s %s %s %s %s)",
 	    (defined($self->subst_class) ? $self->subst_class : "(undef)"),
 	    (defined($self->subst_stage) ? $self->subst_stage : "(undef)"),
 	    (defined($self->subst_message) ? $self->subst_message : "(undef)"),
 	    scalar(@{$self->subst_files}),
-	    scalar(@{$self->subst_sed}));
+	    scalar(@{$self->subst_sed}),
+	    (defined($self->subst_id) ? $self->subst_id : "(undef)"));
 }
 
 
@@ -4584,7 +4622,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 				}
 
 				if ($p !~ qr"^[\$/]") {
-					$line->log_warning("All components of ${varname} should be absolute paths.");
+					$line->log_warning("\"${p}\" should be an absolute path.");
 				}
 			}
 		}
