@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/21 00:10:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2006/07/04 16:19:28 drochner Exp $
 bin/calc
 bin/cscript/4dsphere
 bin/cscript/fproduct
@@ -72,6 +72,7 @@ include/calc/zrandom.h
 lib/libcalc.a
 man/man1/calc.1
 share/calc/README
+share/calc/alg_config.cal
 share/calc/beer.cal
 share/calc/bernoulli.cal
 share/calc/bigprime.cal
@@ -90,6 +91,7 @@ share/calc/custom/libcustcalc.a
 share/calc/custom/pmodm127.cal
 share/calc/custom/pzasusb8.cal
 share/calc/deg.cal
+share/calc/dotest.cal
 share/calc/ellip.cal
 share/calc/hello.cal
 share/calc/help/COPYING
@@ -203,6 +205,7 @@ share/calc/help/files
 share/calc/help/floor
 share/calc/help/fopen
 share/calc/help/forall
+share/calc/help/fpathopen
 share/calc/help/fprintf
 share/calc/help/fputc
 share/calc/help/fputs
@@ -284,6 +287,7 @@ share/calc/help/lfactor
 share/calc/help/libcalc
 share/calc/help/list
 share/calc/help/ln
+share/calc/help/log
 share/calc/help/lowbit
 share/calc/help/ltol
 share/calc/help/makelist
@@ -388,14 +392,19 @@ share/calc/help/ssq
 share/calc/help/statement
 share/calc/help/str
 share/calc/help/strcat
+share/calc/help/strcmp
+share/calc/help/strcpy
 share/calc/help/strerror
 share/calc/help/strlen
+share/calc/help/strncmp
+share/calc/help/strncpy
 share/calc/help/strpos
 share/calc/help/strprintf
 share/calc/help/strscan
 share/calc/help/strscanf
 share/calc/help/substr
 share/calc/help/sum
+share/calc/sumtimes.cal
 share/calc/help/swap
 share/calc/help/system
 share/calc/help/tail
@@ -414,6 +423,7 @@ share/calc/help/version
 share/calc/help/wishlist
 share/calc/help/xor
 share/calc/intfile.cal
+share/calc/linear.cal
 share/calc/lucas.cal
 share/calc/lucas_chk.cal
 share/calc/lucas_tbl.cal
@@ -437,7 +447,10 @@ share/calc/randomrun.cal
 share/calc/randrun.cal
 share/calc/regress.cal
 share/calc/repeat.cal
+share/calc/screen.cal
 share/calc/seedrandom.cal
+share/calc/set8700.cal
+share/calc/set8700.line
 share/calc/solve.cal
 share/calc/sumsq.cal
 share/calc/surd.cal
