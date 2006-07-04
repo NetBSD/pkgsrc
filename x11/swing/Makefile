@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/04/12 21:52:15 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2006/07/04 20:17:54 rillig Exp $
 
 DISTNAME=	swing1_1_1
 PKGNAME=	swing-1.1.1
@@ -26,17 +26,12 @@ USE_JAVA=	run
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-_FETCH_MESSAGE= \
-	${ECHO} "======================================================================"; \
-	${ECHO} ; \
-	${ECHO} " The file ${DISTNAME}${EXTRACT_SUFX} containing the"; \
-	${ECHO} " Java(tm) Foundation Classes must be fetched into:"; \
-	${ECHO} ""; \
-	${ECHO} "	${DISTDIR}"; \
-	${ECHO} " from:"; \
-	${ECHO} "	${DOWNLOAD}"; \
-	${ECHO} ; \
-	${ECHO} "======================================================================"
+FETCH_MESSAGE=	" The file ${DISTNAME}${EXTRACT_SUFX} containing the"
+FETCH_MESSAGE+=	" Java(tm) Foundation Classes must be fetched into:"
+FETCH_MESSAGE+=	""
+FETCH_MESSAGE+=	"	${DISTDIR}"
+FETCH_MESSAGE+= " from:"
+FETCH_MESSAGE+= "	${DOWNLOAD}"
 
 SWINGDIR=	${PREFIX}/lib/java/swing
 EGDIR=		${PREFIX}/share/examples/swing
