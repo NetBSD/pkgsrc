@@ -1,0 +1,13 @@
+1;5C$NetBSD: patch-aa,v 1.1.2.2 2006/07/04 21:12:45 ghen Exp $
+
+--- gtop/gtop.c.orig	2006-07-04 15:05:29.000000000 +0000
++++ gtop/gtop.c
+@@ -45,7 +45,7 @@
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <arpa/inet.h>
+-
++#include <netinet/in.h>
+ 
+ typedef struct
+ {
