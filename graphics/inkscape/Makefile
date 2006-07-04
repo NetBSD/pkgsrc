@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2006/04/17 13:46:33 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2006/07/04 15:46:34 drochner Exp $
 
-DISTNAME=	inkscape-0.43
-PKGREVISION=	5
+DISTNAME=	inkscape-0.44
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=inkscape/}
 EXTRACT_SUFX=	.tar.bz2
@@ -27,6 +26,7 @@ BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=6.4
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
+.include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
