@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.269 2006/05/15 11:59:01 markd Exp $
+# $NetBSD: Makefile,v 1.270 2006/07/04 15:37:08 drochner Exp $
 #
 
 COMMENT=	Security tools
@@ -206,6 +206,7 @@ SUBDIR+=	py-gnupg
 SUBDIR+=	py-gnutls
 SUBDIR+=	py-m2crypto
 SUBDIR+=	py-mcrypt
+SUBDIR+=	py-paramiko
 SUBDIR+=	py-prewikka
 SUBDIR+=	pyca
 SUBDIR+=	qca
