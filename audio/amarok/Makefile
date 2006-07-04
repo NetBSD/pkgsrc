@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/07/04 06:45:15 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2006/07/04 06:46:43 wiz Exp $
 
 DISTNAME=		amarok-1.4.1
 CATEGORIES=		audio kde
@@ -52,7 +52,7 @@ BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs>=3.3.0
 BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.4
 
 .include "../../audio/libtunepimp/buildlink3.mk"
-.include "../../audio/libvisual0.2/buildlink3.mk"
+.include "../../audio/libvisual/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../lang/python/application.mk"
