@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.2 2005/10/06 18:46:59 drochner Exp $
+$NetBSD: patch-ab,v 1.3 2006/07/04 15:14:49 drochner Exp $
 
---- test/Makefile.in.orig	2005-10-04 02:48:31.000000000 +0200
+--- test/Makefile.in.orig	2006-07-01 03:25:14.000000000 +0200
 +++ test/Makefile.in
-@@ -43,7 +43,7 @@ host_triplet = @host@
- @CAIRO_HAS_PS_SURFACE_TRUE@am__append_4 = ps-surface
- @CAIRO_HAS_XLIB_SURFACE_TRUE@am__append_5 = xlib-surface
- check_PROGRAMS = $(am__EXEEXT_6)
--@HAVE_PTHREAD_TRUE@am__append_6 = -lpthread
-+@HAVE_PTHREAD_TRUE@am__append_6 = ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
- noinst_PROGRAMS = imagediff$(EXEEXT)
+@@ -57,7 +57,7 @@ check_PROGRAMS = $(am__EXEEXT_9) imagedi
+ @CAIRO_CAN_TEST_GLITZ_EGL_SURFACE_TRUE@am__append_12 = $(GLITZ_EGL_LIBS)
+ @CAIRO_CAN_TEST_GLITZ_GLX_SURFACE_TRUE@am__append_13 = $(GLITZ_GLX_LIBS)
+ @CAIRO_CAN_TEST_GLITZ_WGL_SURFACE_TRUE@am__append_14 = $(GLITZ_WGL_LIBS)
+-@HAVE_PTHREAD_TRUE@am__append_15 = -lpthread
++@HAVE_PTHREAD_TRUE@am__append_15 = ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+ @CAIRO_CAN_TEST_PDF_SURFACE_TRUE@am__append_16 = pdf2png
+ @CAIRO_CAN_TEST_SVG_SURFACE_TRUE@am__append_17 = svg2png
  subdir = test
- DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in
