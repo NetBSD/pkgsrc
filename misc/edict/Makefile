@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:39 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/04 06:23:00 wiz Exp $
 #
 
 DISTNAME=	edict
-PKGNAME=	edict-2004.003
+PKGNAME=	edict-2006.002
 CATEGORIES=	japanese misc
 MASTER_SITES=	ftp://ftp.cc.monash.edu.au/pub/nihongo/ \
 		http://japanology.arts.kuleuven.ac.be/mirrors/monash/ \
@@ -28,6 +28,8 @@ NO_BUILD=	yes
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/edict
 	${INSTALL_DATA} ${WRKSRC}/edict ${PREFIX}/share/edict/
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/edict.gz \
+		${PREFIX}/share/edict
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/edict
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/edict_doc.txt \
 		${PREFIX}/share/doc/edict

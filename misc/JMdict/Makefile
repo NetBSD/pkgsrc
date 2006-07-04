@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2005/09/28 19:23:07 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/07/04 06:23:00 wiz Exp $
 #
 
 DISTNAME=	JMdict
-PKGNAME=	JMdict-2004.03
+PKGNAME=	JMdict-2006.03
 CATEGORIES=	japanese misc
 MASTER_SITES=	ftp://ftp.cc.monash.edu.au/pub/nihongo/ \
 		http://japanology.arts.kuleuven.ac.be/mirrors/monash/ \
@@ -29,6 +29,8 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/JMdict
 	${INSTALL_DATA} ${WRKSRC}/JMdict ${PREFIX}/share/JMdict
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/JMdict.dtd \
+		${PREFIX}/share/JMdict
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/JMdict.gz \
 		${PREFIX}/share/JMdict
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/JMdict
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/jmdict_proj_desc.html \
