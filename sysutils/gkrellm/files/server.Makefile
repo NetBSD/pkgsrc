@@ -50,7 +50,7 @@ ifeq ($(HAVE_GETADDRINFO),1)
 endif
 
 
-override CFLAGS += -Wall -Werror $(FLAGS)
+override CFLAGS += -Wall $(FLAGS)
 
 OBJS =	main.o monitor.o mail.o plugins.o glib.o utils.o sysdeps-unix.o
 

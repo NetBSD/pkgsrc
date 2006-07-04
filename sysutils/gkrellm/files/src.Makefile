@@ -66,7 +66,7 @@ endif
 
 LIBS = $(PKG_LIB) $(GTOP_LIBS) $(SMC_LIBS) $(SYS_LIBS) $(MD5_LIBS) $(SSL_LIBS)
 
-override CFLAGS += -Wall -Werror $(FLAGS)
+override CFLAGS += -Wall $(FLAGS)
 
 OBJS =	main.o alerts.o battery.o base64.o clock.o cpu.o disk.o fs.o \
 	hostname.o inet.o mail.o mem.o net.o proc.o sensors.o uptime.o \
