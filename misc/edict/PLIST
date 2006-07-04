@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/02 03:13:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/07/04 06:23:00 wiz Exp $
 share/doc/edict/edict_doc.txt
 share/edict/edict
+share/edict/edict.gz
 @dirrm share/edict
 @dirrm share/doc/edict
