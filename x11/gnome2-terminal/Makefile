@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2006/06/22 10:20:44 joerg Exp $
+# $NetBSD: Makefile,v 1.56 2006/07/04 16:06:11 drochner Exp $
 #
 
-DISTNAME=		gnome-terminal-2.14.1
+DISTNAME=		gnome-terminal-2.14.2
 PKGNAME=		${DISTNAME:S/-/2-/}
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.14/}
