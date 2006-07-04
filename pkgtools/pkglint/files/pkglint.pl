@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.635 2006/07/04 09:02:16 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.636 2006/07/04 09:29:54 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1418,6 +1418,9 @@ sub check_varassign($$$$$) {
 	}
 
 	if ($varparam ne $id) {
+
+		# XXX: This code sometimes produces weird warnings. See
+		# meta-pkgs/xorg/Makefile.common 1.41 for an example.
 		if ($self->is_complete()) {
 			$self->check_end();
 
@@ -4622,7 +4625,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 				}
 
 				if ($p !~ qr"^[\$/]") {
-					$line->log_warning("\"${p}\" should be an absolute path.");
+					$line->log_warning("All components of ${varname} (in this case \"${p}\")should be an absolute path.");
 				}
 			}
 		}
