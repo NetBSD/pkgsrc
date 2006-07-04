@@ -1,12 +1,13 @@
-$NetBSD: patch-ae,v 1.3 2006/07/01 09:59:49 wiz Exp $
+$NetBSD: patch-ae,v 1.4 2006/07/04 06:27:40 wiz Exp $
 
---- include/allegro/platform/al386gcc.h.orig	2005-03-09 21:49:46.000000000 +0000
-+++ include/allegro/platform/al386gcc.h
-@@ -208,14 +208,13 @@ AL_INLINE(fixed, fixsub, (fixed x, fixed
+--- include/allegro/platform/al386gcc.h.orig	2005-03-09 13:49:46.000000000 -0800
++++ include/allegro/platform/al386gcc.h	2006-07-01 05:39:49.000000000 -0700
+@@ -208,29 +208,29 @@
   */
  AL_INLINE(fixed, fixmul, (fixed x, fixed y),
  {
 -   fixed edx __attribute__ ((__unused__));
++   long edx;
     fixed result;
  
     __PRECALCULATE_CONSTANTS(x / 65536.0 * y)
@@ -14,13 +15,16 @@ $NetBSD: patch-ae,v 1.3 2006/07/01 09:59:49 wiz Exp $
        __asm__ (
 -	 "  movl %2, %%eax ; "
 -	 "  imull %3 ; "                  /* do the multiply */
+-	 "  shrdl $16, %%edx, %%eax ; "
 +	 "  movl %1, %%eax ; "
 +	 "  imull %2 ; "                  /* do the multiply */
- 	 "  shrdl $16, %%edx, %%eax ; "
++	 "  shrdl $16, %5, %%eax ; "
  
- 	 "  sarl $15, %%edx ; "           /* check for overflow */
-@@ -223,14 +222,14 @@ AL_INLINE(fixed, fixmul, (fixed x, fixed
- 	 "  cmpl $-1, %%edx ; "
+-	 "  sarl $15, %%edx ; "           /* check for overflow */
++	 "  sarl $15, %5 ; "           /* check for overflow */
+ 	 "  jz 0f ; "
+-	 "  cmpl $-1, %%edx ; "
++	 "  cmpl $-1, %5 ; "
  	 "  je 0f ; "
  
 -	 "  movl %5, %%eax ; "            /* on overflow, set errno */
@@ -38,7 +42,7 @@ $NetBSD: patch-ae,v 1.3 2006/07/01 09:59:49 wiz Exp $
  	 "  jge 0f ; "
  	 "  negl %%eax ; "
  
-@@ -238,8 +237,7 @@ AL_INLINE(fixed, fixmul, (fixed x, fixed
+@@ -238,13 +238,13 @@
  
  	 " 0: "                           /* finished */
  
@@ -48,3 +52,10 @@ $NetBSD: patch-ae,v 1.3 2006/07/01 09:59:49 wiz Exp $
  
        : "mr" (x),                         /* x and y can be regs or mem */
  	"mr" (y),
+ 	"i" (ERANGE),
+-	"m" (allegro_errno)
++	"m" (allegro_errno),
++	"d" (edx)
+ 
+       : "%cc", "memory"                   /* clobbers flags and errno */
+       );
