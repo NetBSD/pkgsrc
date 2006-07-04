@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:39 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/04 06:23:00 wiz Exp $
 #
 
 DISTNAME=	kanjidic
-PKGNAME=	kanjidic-20040814
+PKGNAME=	kanjidic-20060623
 CATEGORIES=	japanese misc
 MASTER_SITES=	ftp://ftp.cc.monash.edu.au/pub/nihongo/ \
 		http://japanology.arts.kuleuven.ac.be/mirrors/monash/ \
@@ -27,7 +27,9 @@ NO_BUILD=	yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/kanjidic
-	${INSTALL_DATA} ${WRKSRC}/kanjidic ${PREFIX}/share/kanjidic/
+	${INSTALL_DATA} ${WRKSRC}/kanjidic ${PREFIX}/share/kanjidic
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/kanjidic.gz \
+		${PREFIX}/share/kanjidic
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/kanjidic
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/kanjidic.doc \
 		${PREFIX}/share/doc/kanjidic
