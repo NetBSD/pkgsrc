@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/05/22 19:14:12 wiz Exp $
+# $NetBSD: Makefile,v 1.19.2.1 2006/07/04 19:02:27 ghen Exp $
 
 DISTNAME=	xfe-0.84
 PKGREVISION=	2
@@ -26,5 +26,6 @@ post-install:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/fox/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
