@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/10 11:13:52 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2006/07/04 16:15:01 drochner Exp $
 bin/veusz
 bin/veusz_listen
 ${PYSITELIB}/veusz/VERSION
 ${PYSITELIB}/veusz/__init__.py
 ${PYSITELIB}/veusz/__init__.pyc
 ${PYSITELIB}/veusz/__init__.pyo
+${PYSITELIB}/veusz/application.py
+${PYSITELIB}/veusz/application.pyc
+${PYSITELIB}/veusz/application.pyo
 ${PYSITELIB}/veusz/dialogs/__init__.py
 ${PYSITELIB}/veusz/dialogs/__init__.pyc
 ${PYSITELIB}/veusz/dialogs/__init__.pyo
@@ -44,9 +47,15 @@ ${PYSITELIB}/veusz/document/doc.pyo
 ${PYSITELIB}/veusz/document/operations.py
 ${PYSITELIB}/veusz/document/operations.pyc
 ${PYSITELIB}/veusz/document/operations.pyo
+${PYSITELIB}/veusz/document/readcsv.py
+${PYSITELIB}/veusz/document/readcsv.pyc
+${PYSITELIB}/veusz/document/readcsv.pyo
 ${PYSITELIB}/veusz/document/simpleread.py
 ${PYSITELIB}/veusz/document/simpleread.pyc
 ${PYSITELIB}/veusz/document/simpleread.pyo
+${PYSITELIB}/veusz/document/widgetfactory.py
+${PYSITELIB}/veusz/document/widgetfactory.pyc
+${PYSITELIB}/veusz/document/widgetfactory.pyo
 ${PYSITELIB}/veusz/embed.py
 ${PYSITELIB}/veusz/embed.pyc
 ${PYSITELIB}/veusz/embed.pyo
@@ -54,8 +63,6 @@ ${PYSITELIB}/veusz/helpers/__init__.py
 ${PYSITELIB}/veusz/helpers/__init__.pyc
 ${PYSITELIB}/veusz/helpers/__init__.pyo
 ${PYSITELIB}/veusz/helpers/_na_cntr.so
-${PYSITELIB}/veusz/images/icon.png
-${PYSITELIB}/veusz/images/logo.png
 ${PYSITELIB}/veusz/setting/__init__.py
 ${PYSITELIB}/veusz/setting/__init__.pyc
 ${PYSITELIB}/veusz/setting/__init__.pyo
@@ -74,6 +81,9 @@ ${PYSITELIB}/veusz/setting/settingdb.pyo
 ${PYSITELIB}/veusz/setting/settings.py
 ${PYSITELIB}/veusz/setting/settings.pyc
 ${PYSITELIB}/veusz/setting/settings.pyo
+${PYSITELIB}/veusz/setting/stylesheet.py
+${PYSITELIB}/veusz/setting/stylesheet.pyc
+${PYSITELIB}/veusz/setting/stylesheet.pyo
 ${PYSITELIB}/veusz/utils/__init__.py
 ${PYSITELIB}/veusz/utils/__init__.pyc
 ${PYSITELIB}/veusz/utils/__init__.pyo
@@ -83,12 +93,6 @@ ${PYSITELIB}/veusz/utils/fitlm.pyo
 ${PYSITELIB}/veusz/utils/points.py
 ${PYSITELIB}/veusz/utils/points.pyc
 ${PYSITELIB}/veusz/utils/points.pyo
-${PYSITELIB}/veusz/utils/pref.py
-${PYSITELIB}/veusz/utils/pref.pyc
-${PYSITELIB}/veusz/utils/pref.pyo
-${PYSITELIB}/veusz/utils/preftypes.py
-${PYSITELIB}/veusz/utils/preftypes.pyc
-${PYSITELIB}/veusz/utils/preftypes.pyo
 ${PYSITELIB}/veusz/utils/textrender.py
 ${PYSITELIB}/veusz/utils/textrender.pyc
 ${PYSITELIB}/veusz/utils/textrender.pyo
@@ -98,12 +102,12 @@ ${PYSITELIB}/veusz/utils/utilfuncs.pyo
 ${PYSITELIB}/veusz/utils/version.py
 ${PYSITELIB}/veusz/utils/version.pyc
 ${PYSITELIB}/veusz/utils/version.pyo
-${PYSITELIB}/veusz/veusz.py
-${PYSITELIB}/veusz/veusz.pyc
-${PYSITELIB}/veusz/veusz.pyo
 ${PYSITELIB}/veusz/veusz_listen.py
 ${PYSITELIB}/veusz/veusz_listen.pyc
 ${PYSITELIB}/veusz/veusz_listen.pyo
+${PYSITELIB}/veusz/veusz_main.py
+${PYSITELIB}/veusz/veusz_main.pyc
+${PYSITELIB}/veusz/veusz_main.pyo
 ${PYSITELIB}/veusz/widgets/__init__.py
 ${PYSITELIB}/veusz/widgets/__init__.pyc
 ${PYSITELIB}/veusz/widgets/__init__.pyo
@@ -144,9 +148,6 @@ ${PYSITELIB}/veusz/widgets/root.pyo
 ${PYSITELIB}/veusz/widgets/widget.py
 ${PYSITELIB}/veusz/widgets/widget.pyc
 ${PYSITELIB}/veusz/widgets/widget.pyo
-${PYSITELIB}/veusz/widgets/widgetfactory.py
-${PYSITELIB}/veusz/widgets/widgetfactory.pyc
-${PYSITELIB}/veusz/widgets/widgetfactory.pyo
 ${PYSITELIB}/veusz/windows/__init__.py
 ${PYSITELIB}/veusz/windows/__init__.pyc
 ${PYSITELIB}/veusz/windows/__init__.pyo
@@ -156,7 +157,6 @@ ${PYSITELIB}/veusz/windows/action.pyo
 ${PYSITELIB}/veusz/windows/consolewindow.py
 ${PYSITELIB}/veusz/windows/consolewindow.pyc
 ${PYSITELIB}/veusz/windows/consolewindow.pyo
-${PYSITELIB}/veusz/windows/icons/README
 ${PYSITELIB}/veusz/windows/icons/button_axis.png
 ${PYSITELIB}/veusz/windows/icons/button_contour.png
 ${PYSITELIB}/veusz/windows/icons/button_fit.png
@@ -169,7 +169,24 @@ ${PYSITELIB}/veusz/windows/icons/button_label.png
 ${PYSITELIB}/veusz/windows/icons/button_page.png
 ${PYSITELIB}/veusz/windows/icons/button_xy.png
 ${PYSITELIB}/veusz/windows/icons/icon-rename.png
+${PYSITELIB}/veusz/windows/icons/link.png
+${PYSITELIB}/veusz/windows/icons/logo.png
 ${PYSITELIB}/veusz/windows/icons/pointer.png
+${PYSITELIB}/veusz/windows/icons/settings_axisgridlines.png
+${PYSITELIB}/veusz/windows/icons/settings_axislabel.png
+${PYSITELIB}/veusz/windows/icons/settings_axisline.png
+${PYSITELIB}/veusz/windows/icons/settings_axismajorticks.png
+${PYSITELIB}/veusz/windows/icons/settings_axisminorticks.png
+${PYSITELIB}/veusz/windows/icons/settings_axisticklabels.png
+${PYSITELIB}/veusz/windows/icons/settings_bgfill.png
+${PYSITELIB}/veusz/windows/icons/settings_border.png
+${PYSITELIB}/veusz/windows/icons/settings_ploterrorline.png
+${PYSITELIB}/veusz/windows/icons/settings_plotfillabove.png
+${PYSITELIB}/veusz/windows/icons/settings_plotfillbelow.png
+${PYSITELIB}/veusz/windows/icons/settings_plotline.png
+${PYSITELIB}/veusz/windows/icons/settings_plotmarkerfill.png
+${PYSITELIB}/veusz/windows/icons/settings_plotmarkerline.png
+${PYSITELIB}/veusz/windows/icons/settings_stylesheet.png
 ${PYSITELIB}/veusz/windows/icons/stock-copy.png
 ${PYSITELIB}/veusz/windows/icons/stock-cut.png
 ${PYSITELIB}/veusz/windows/icons/stock-delete.png
@@ -196,8 +213,9 @@ ${PYSITELIB}/veusz/windows/icons/stock_previous-page.png
 ${PYSITELIB}/veusz/windows/icons/stock_zoom-page-height.png
 ${PYSITELIB}/veusz/windows/icons/stock_zoom-page-width.png
 ${PYSITELIB}/veusz/windows/icons/stock_zoom-page.png
-${PYSITELIB}/veusz/windows/icons/zoom_graph.png
+${PYSITELIB}/veusz/windows/icons/veusz.png
 ${PYSITELIB}/veusz/windows/icons/zoom-options.png
+${PYSITELIB}/veusz/windows/icons/zoom_graph.png
 ${PYSITELIB}/veusz/windows/mainwindow.py
 ${PYSITELIB}/veusz/windows/mainwindow.pyc
 ${PYSITELIB}/veusz/windows/mainwindow.pyo
@@ -216,7 +234,6 @@ ${PYSITELIB}/veusz/windows/treeeditwindow.pyo
 @dirrm ${PYSITELIB}/veusz/widgets
 @dirrm ${PYSITELIB}/veusz/utils
 @dirrm ${PYSITELIB}/veusz/setting
-@dirrm ${PYSITELIB}/veusz/images
 @dirrm ${PYSITELIB}/veusz/helpers
 @dirrm ${PYSITELIB}/veusz/document
 @dirrm ${PYSITELIB}/veusz/dialogs
