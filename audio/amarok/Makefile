@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2006/07/04 00:58:50 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2006/07/04 06:45:15 wiz Exp $
 
-DISTNAME=		amarok-1.4.0a
-PKGREVISION=		2
+DISTNAME=		amarok-1.4.1
 CATEGORIES=		audio kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amarok/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,7 +9,6 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://amarok.kde.org/
 COMMENT=		KDE audio player
 
-WRKSRC=			${WRKDIR}/amarok-1.4.0
 USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake pkg-config msgfmt
 USE_LANGUAGES=		c c++
@@ -26,7 +24,6 @@ CONFIGURE_ARGS+=	--with-mp4v2-dir=${LOCALBASE}
 LIBS+=			${LIBOSSAUDIO}
 
 PYTHON_PATCH_SCRIPTS= \
-	amarok/src/scripts/amarok_live/amarok_live.py \
 	amarok/src/scripts/common/Publisher.py \
 	amarok/src/scripts/common/Zeroconf.py \
 	amarok/src/scripts/playlist2html/Playlist.py \
@@ -41,9 +38,12 @@ PYTHON_PATCH_SCRIPTS= \
 	amarok/src/scripts/webcontrol/WebControl.py \
 	amarok/src/scripts/webcontrol/WebPublisher.py
 REPLACE_RUBY= \
+	amarok/src/amarok_proxy.rb \
 	amarok/src/scripts/lyrics_astraweb/lyrics_astraweb.rb \
 	amarok/src/scripts/lyrics_lyrc/lyrics_lyrc.rb \
 	amarok/src/scripts/ruby_debug/debug.rb \
+	amarok/src/scripts/score_default/score_default.rb \
+	amarok/src/scripts/score_impulsive/score_impulsive.rb \
 	amarok/src/scripts/templates/amarok.rb \
 	amarok/src/scripts/templates/ruby_qt_template.rb
 
