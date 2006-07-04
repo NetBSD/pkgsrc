@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2004/06/02 21:08:33 jschauma Exp $
+$NetBSD: patch-aa,v 1.6 2006/07/04 16:19:28 drochner Exp $
 
---- Makefile.orig	2004-02-23 05:57:13.000000000 -0500
-+++ Makefile	2004-06-02 17:01:16.000000000 -0400
-@@ -594,7 +594,7 @@
+--- Makefile.orig	2006-05-19 16:00:01.000000000 +0200
++++ Makefile
+@@ -571,7 +571,7 @@ HAVE_UNUSED=
  
  #INCDIR= /usr/local/include
  #INCDIR= /dev/env/DJDIR/include
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.5 2004/06/02 21:08:33 jschauma Exp $
  
  # Where to install calc realted things
  #
-@@ -621,15 +621,15 @@
+@@ -598,15 +598,15 @@ INCDIR= /usr/include
  #
  #BINDIR= /usr/local/bin
  #BINDIR= /dev/env/DJDIR/bin
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.5 2004/06/02 21:08:33 jschauma Exp $
  
  #CALC_INCDIR= /usr/local/include/calc
  #CALC_INCDIR= /dev/env/DJDIR/include/calc
-@@ -703,7 +703,7 @@
+@@ -680,7 +680,7 @@ T=
  #MANDIR=
  #MANDIR= /usr/local/man/man1
  #MANDIR= /usr/man/man1
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.5 2004/06/02 21:08:33 jschauma Exp $
  #MANDIR= /dev/env/DJDIR/man/man1
  #MANDIR= /usr/man/u_man/man1
  #MANDIR= /usr/contrib/man/man1
-@@ -714,7 +714,7 @@
+@@ -691,7 +691,7 @@ MANDIR= /usr/share/man/man1
  #
  # Use CATDIR= to disable installation of the calc cat (formatted) page.
  #
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.5 2004/06/02 21:08:33 jschauma Exp $
  #CATDIR= /usr/local/man/cat1
  #CATDIR= /usr/local/catman/cat1
  #CATDIR= /usr/man/cat1
-@@ -735,9 +735,9 @@
+@@ -712,9 +712,9 @@ MANEXT= 1
  #
  # This is ignored if CATDIR is empty.
  #
@@ -60,7 +60,7 @@ $NetBSD: patch-aa,v 1.5 2004/06/02 21:08:33 jschauma Exp $
  #CATEXT= l
  
  # how to format a man page
-@@ -763,8 +763,8 @@
+@@ -740,8 +740,8 @@ CATEXT= 1
  # and CATDIR to empty and ignore the NROFF, NROFF_ARG and MANMAKE
  # lines below.
  #
@@ -71,7 +71,7 @@ $NetBSD: patch-aa,v 1.5 2004/06/02 21:08:33 jschauma Exp $
  #NROFF= groff
  NROFF_ARG= -man
  #NROFF_ARG= -mandoc
-@@ -808,10 +808,10 @@
+@@ -785,10 +785,10 @@ CALCRC= ${CALC_SHAREDIR}/startup:~/.calc
  #
  # If in doubt, set USE_READLINE, READLINE_LIB and READLINE_INCLUDE to nothing.
  #
@@ -85,20 +85,7 @@ $NetBSD: patch-aa,v 1.5 2004/06/02 21:08:33 jschauma Exp $
  #READLINE_LIB= -lreadline -lhistory -lncurses
  #READLINE_LIB= -L/usr/gnu/lib -lreadline -lhistory -lncurses
  #READLINE_LIB= -L/usr/local/lib -lreadline -lhistory -lncurses
-@@ -824,10 +824,10 @@
- #
- # Select CALCPAGER= less.exe -ci for DJGPP.
- #
--CALCPAGER= more
-+#CALCPAGER= more
- #CALCPAGER= pg
- #CALCPAGER= cat
--#CALCPAGER= less
-+CALCPAGER= less
- #CALCPAGER= less.exe -ci
- 
- # Debug/Optimize options for ${CC} and ${LCC}
-@@ -852,7 +852,7 @@
+@@ -834,7 +834,7 @@ CALCPAGER= less
  #
  #DEBUG= -O3
  #DEBUG= -O3 -g
@@ -107,7 +94,7 @@ $NetBSD: patch-aa,v 1.5 2004/06/02 21:08:33 jschauma Exp $
  #DEBUG= -O3 -ipa
  #DEBUG= -O3 -g3 -ipa
  #
-@@ -1008,10 +1008,10 @@
+@@ -1007,10 +1007,10 @@ CCWERR=
  CCOPT= ${DEBUG} ${NO_SHARED}
  CCMISC=
  #
