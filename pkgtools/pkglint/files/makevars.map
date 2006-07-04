@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.123 2006/07/04 09:02:49 rillig Exp $
+# $NetBSD: makevars.map,v 1.124 2006/07/04 10:01:03 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -536,7 +536,7 @@ PKG_SHLIBTOOL		Pathname
 PKG_SKIP_REASON		List of ShellWord [$package_list]
 PKG_SUGGESTED_OPTIONS	List of Option [o:as,m:as,c:s]
 PKG_SUPPORTED_OPTIONS	List of Option [o:as,m:as,c:s]
-PKG_SYSCONFDIR		Pathname [$package]
+PKG_SYSCONFDIR*		Pathname [$package]
 PKG_SYSCONFBASEDIR	Pathname [$system]
 PKG_SYSCONFSUBDIR	Pathname [$package]
 PKG_SYSCONFVAR		Identifier
@@ -606,6 +606,7 @@ TOOLS_CREATE		List of Tool [$system]
 TOOLS_GNU_MISSING	List of Tool [$system]
 TOOLS_NOOP		List of Tool [$system]
 TOOLS_PATH.*		Pathname [$system]
+TOOLS_PLATFORM.*	ShellCommand [$system]
 TOUCH_FLAGS		List of ShellWord [$system]
 UNLIMIT_RESOURCES	List of { datasize stacksize memorysize } [m:as,c:a]
 UNWRAP_FILES		List of Pathmask [$package_list]
