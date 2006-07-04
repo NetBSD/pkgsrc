@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.1 2006/07/02 12:40:41 rillig Exp $
+$NetBSD: patch-al,v 1.2 2006/07/04 22:27:43 rillig Exp $
 
 Since GNU Make 3.81, the backslashes are preserved in the shell commands
 and need to be filtered out explicitly.
@@ -10,7 +10,7 @@ and need to be filtered out explicitly.
  # Can't use sed because of its 4000-char line length limit, so resort to perl
  .DEFAULT:
 -	@perl -e '                                                            \
-+	perlcmd='                                                             \
++	@perlcmd='                                                            \
  	    open(MD, "< $(DEPENDENCIES)");                                    \
  	    while (<MD>) {                                                    \
  		if (m@ \.*/*$< @) {                                           \
