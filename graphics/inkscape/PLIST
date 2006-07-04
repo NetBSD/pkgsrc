@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/04/17 07:07:21 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/07/04 15:46:34 drochner Exp $
 bin/inkscape
 bin/inkview
 man/fr/man1/inkscape.1
@@ -20,6 +20,7 @@ share/inkscape/examples/flowsample.svg
 share/inkscape/examples/gradient.svg
 share/inkscape/examples/i18n.svg
 share/inkscape/examples/istest.pov
+share/inkscape/examples/l-systems.svgz
 share/inkscape/examples/markers.svg
 share/inkscape/examples/stars.svgz
 share/inkscape/examples/tesselation-P3.svg
@@ -30,20 +31,28 @@ share/inkscape/extensions/addnodes.inx
 share/inkscape/extensions/addnodes.py
 share/inkscape/extensions/ai_input.inx
 share/inkscape/extensions/ai_output.inx
+share/inkscape/extensions/aisvg.inx
+share/inkscape/extensions/aisvg.xslt
 share/inkscape/extensions/bezmisc.py
+share/inkscape/extensions/cspsubdiv.py
 share/inkscape/extensions/cubicsuperpath.py
 share/inkscape/extensions/dia.inx
 share/inkscape/extensions/dia2svg.sh
 share/inkscape/extensions/dots.inx
 share/inkscape/extensions/dots.py
-share/inkscape/extensions/dropshadow.inx
 share/inkscape/extensions/dxf_input.inx
+share/inkscape/extensions/dxf_outlines.inx
+share/inkscape/extensions/dxf_outlines.py
 share/inkscape/extensions/dxf_output.inx
 share/inkscape/extensions/embed_raster_in_svg.pl
 share/inkscape/extensions/embedimage.inx
 share/inkscape/extensions/embedimage.py
 share/inkscape/extensions/eps_input.inx
 share/inkscape/extensions/epsi_output.inx
+share/inkscape/extensions/eqtexsvg.inx
+share/inkscape/extensions/eqtexsvg.py
+share/inkscape/extensions/extractimage.inx
+share/inkscape/extensions/extractimage.py
 share/inkscape/extensions/ffgeom.py
 share/inkscape/extensions/ffmet.inx
 share/inkscape/extensions/ffms.inx
@@ -51,7 +60,13 @@ share/inkscape/extensions/ffproc.py
 share/inkscape/extensions/ffscale.py
 share/inkscape/extensions/ffset.inx
 share/inkscape/extensions/ffss.inx
+share/inkscape/extensions/fig2svg.sh
+share/inkscape/extensions/fig_input.inx
+share/inkscape/extensions/flatten.inx
+share/inkscape/extensions/flatten.py
 share/inkscape/extensions/fretfind.py
+share/inkscape/extensions/gimp_xcf.inx
+share/inkscape/extensions/gimp_xcf.py
 share/inkscape/extensions/handles.inx
 share/inkscape/extensions/handles.py
 share/inkscape/extensions/ill2svg.pl
@@ -66,16 +81,22 @@ share/inkscape/extensions/kochify_load.inx
 share/inkscape/extensions/kochify_load.py
 share/inkscape/extensions/lindenmayer.inx
 share/inkscape/extensions/lindenmayer.py
+share/inkscape/extensions/measure.inx
+share/inkscape/extensions/measure.py
 share/inkscape/extensions/motion.inx
 share/inkscape/extensions/motion.py
-share/inkscape/extensions/pdf_output.inx
+share/inkscape/extensions/pdf_output.inx.txt
+share/inkscape/extensions/pdf_output_via_gs_on_win32.inx.txt
 share/inkscape/extensions/ps2dxf.sh
 share/inkscape/extensions/ps2epsi.sh
+share/inkscape/extensions/ps2pdf.cmd
 share/inkscape/extensions/ps2pdf.sh
 share/inkscape/extensions/ps_input.inx
 share/inkscape/extensions/pturtle.py
 share/inkscape/extensions/radiusrand.inx
 share/inkscape/extensions/radiusrand.py
+share/inkscape/extensions/randompnt.inx
+share/inkscape/extensions/randompos.inx
 share/inkscape/extensions/rtree.inx
 share/inkscape/extensions/rtree.py
 share/inkscape/extensions/simplepath.py
@@ -86,7 +107,10 @@ share/inkscape/extensions/straightseg.inx
 share/inkscape/extensions/straightseg.py
 share/inkscape/extensions/summersnight.inx
 share/inkscape/extensions/summersnight.py
+share/inkscape/extensions/svg_and_media_zip_output.inx
+share/inkscape/extensions/svg_and_media_zip_output.py
 share/inkscape/extensions/svg_dropshadow
+share/inkscape/extensions/svg_dropshadow.inx
 share/inkscape/extensions/svgz_input.inx
 share/inkscape/extensions/svgz_output.inx
 share/inkscape/extensions/txt2svg.inx
@@ -99,13 +123,28 @@ share/inkscape/extensions/wmf_input.inx
 share/inkscape/fonts/README
 share/inkscape/gradients/README
 share/inkscape/icons/David_icons.svg
-share/inkscape/icons/README.icons
+share/inkscape/icons/README.David_icons
+share/inkscape/icons/README.icon_themes
+share/inkscape/icons/README.legacy_icons
 share/inkscape/icons/icons.svg
 share/inkscape/icons/inkscape.svg
-share/inkscape/keyboards/README
+share/inkscape/icons/legacy_icons.svg
+share/inkscape/keys/default.xml
+share/inkscape/keys/inkscape.xml
+share/inkscape/keys/xara.xml
 share/inkscape/markers/markers.svg
+share/inkscape/palettes/Blues.gpl
+share/inkscape/palettes/Gold.gpl
+share/inkscape/palettes/Gray.gpl
+share/inkscape/palettes/Greens.gpl
+share/inkscape/palettes/Hilite.gpl
+share/inkscape/palettes/Khaki.gpl
 share/inkscape/palettes/README
+share/inkscape/palettes/Reds.gpl
+share/inkscape/palettes/Royal.gpl
 share/inkscape/palettes/Tango-Palette.gpl
+share/inkscape/palettes/Topographic.gpl
+share/inkscape/palettes/inkscape.gpl
 share/inkscape/palettes/svg.gpl
 share/inkscape/palettes/webhex.gpl
 share/inkscape/palettes/websafe22.gpl
@@ -122,6 +161,7 @@ share/inkscape/templates/Letter_landscape.svg
 share/inkscape/templates/README
 share/inkscape/templates/black_opaque.svg
 share/inkscape/templates/business_card_90x50mm.svg
+share/inkscape/templates/default.ca.svg
 share/inkscape/templates/default.cs.svg
 share/inkscape/templates/default.de.svg
 share/inkscape/templates/default.es.svg
@@ -152,6 +192,7 @@ share/inkscape/tutorials/oldguitar.jpg
 share/inkscape/tutorials/potrace-de.png
 share/inkscape/tutorials/potrace-fr.png
 share/inkscape/tutorials/potrace.png
+share/inkscape/tutorials/tutorial-advanced.ca.svg
 share/inkscape/tutorials/tutorial-advanced.es.svg
 share/inkscape/tutorials/tutorial-advanced.fr.svg
 share/inkscape/tutorials/tutorial-advanced.ja.svg
@@ -166,6 +207,7 @@ share/inkscape/tutorials/tutorial-basic.nn.svg
 share/inkscape/tutorials/tutorial-basic.ru.svg
 share/inkscape/tutorials/tutorial-basic.sl.svg
 share/inkscape/tutorials/tutorial-basic.svg
+share/inkscape/tutorials/tutorial-calligraphy.ca.svg
 share/inkscape/tutorials/tutorial-calligraphy.es.svg
 share/inkscape/tutorials/tutorial-calligraphy.fr.svg
 share/inkscape/tutorials/tutorial-calligraphy.sl.svg
@@ -184,6 +226,7 @@ share/inkscape/tutorials/tutorial-tips.es.svg
 share/inkscape/tutorials/tutorial-tips.fr.svg
 share/inkscape/tutorials/tutorial-tips.sl.svg
 share/inkscape/tutorials/tutorial-tips.svg
+share/inkscape/tutorials/tutorial-tracing.ca.svg
 share/inkscape/tutorials/tutorial-tracing.de.svg
 share/inkscape/tutorials/tutorial-tracing.es.svg
 share/inkscape/tutorials/tutorial-tracing.fr.svg
@@ -205,14 +248,16 @@ share/locale/de/LC_MESSAGES/inkscape.mo
 share/locale/el/LC_MESSAGES/inkscape.mo
 share/locale/es/LC_MESSAGES/inkscape.mo
 share/locale/es_MX/LC_MESSAGES/inkscape.mo
-share/locale/eu/LC_MESSAGES/inkscape.mo
 share/locale/et/LC_MESSAGES/inkscape.mo
+share/locale/eu/LC_MESSAGES/inkscape.mo
 share/locale/fr/LC_MESSAGES/inkscape.mo
 share/locale/ga/LC_MESSAGES/inkscape.mo
 share/locale/gl/LC_MESSAGES/inkscape.mo
 share/locale/hu/LC_MESSAGES/inkscape.mo
 share/locale/it/LC_MESSAGES/inkscape.mo
 share/locale/ja/LC_MESSAGES/inkscape.mo
+share/locale/ko/LC_MESSAGES/inkscape.mo
+share/locale/lt/LC_MESSAGES/inkscape.mo
 share/locale/mk/LC_MESSAGES/inkscape.mo
 share/locale/nb/LC_MESSAGES/inkscape.mo
 share/locale/nl/LC_MESSAGES/inkscape.mo
@@ -229,8 +274,11 @@ share/locale/sr@Latn/LC_MESSAGES/inkscape.mo
 share/locale/sv/LC_MESSAGES/inkscape.mo
 share/locale/tr/LC_MESSAGES/inkscape.mo
 share/locale/uk/LC_MESSAGES/inkscape.mo
+share/locale/vi/LC_MESSAGES/inkscape.mo
 share/locale/zh_CN/LC_MESSAGES/inkscape.mo
+share/locale/zh_TW/LC_MESSAGES/inkscape.mo
 share/pixmaps/inkscape.png
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/inkscape/ui
 @dirrm share/inkscape/tutorials
 @dirrm share/inkscape/templates
@@ -238,7 +286,7 @@ share/pixmaps/inkscape.png
 @dirrm share/inkscape/patterns
 @dirrm share/inkscape/palettes
 @dirrm share/inkscape/markers
-@dirrm share/inkscape/keyboards
+@dirrm share/inkscape/keys
 @dirrm share/inkscape/icons
 @dirrm share/inkscape/gradients
 @dirrm share/inkscape/fonts
@@ -246,3 +294,4 @@ share/pixmaps/inkscape.png
 @dirrm share/inkscape/examples
 @dirrm share/inkscape/clipart
 @dirrm share/inkscape
+@comment in xdg-dirs: @dirrm share/applications
