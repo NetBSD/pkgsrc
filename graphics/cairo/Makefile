@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2006/04/17 13:45:57 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2006/07/04 15:14:49 drochner Exp $
 
-DISTNAME=	cairo-1.0.4
-PKGREVISION=	1
+DISTNAME=	cairo-1.2.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
 
@@ -12,7 +11,7 @@ COMMENT=	Vector graphics library with cross-device output support
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
-PKGCONFIG_OVERRIDE+=	cairo.pc.in
+PKGCONFIG_OVERRIDE+=	src/cairo.pc.in src/cairo-backend.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-atsui
 CONFIGURE_ARGS+=	--disable-xcb
@@ -33,7 +32,7 @@ PLIST_SUBST+=		QUARTZ="@comment "
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.5
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
 BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
-BUILDLINK_API_DEPENDS.glitz+=	glitz>=0.4.4
+BUILDLINK_API_DEPENDS.glitz+=	glitz>=0.5.1
 BUILDLINK_API_DEPENDS.libpixman+=	libpixman>=0.1.5
 
 .include "../../mk/compiler.mk"
