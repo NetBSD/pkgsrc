@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.9 2006/07/05 09:08:35 jlam Exp $
+# $NetBSD: install.mk,v 1.10 2006/07/05 22:21:02 jlam Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -14,11 +14,13 @@ _INSTALL_TARGETS+=	release-install-lock
 
 .PHONY: install
 .if !target(install)
-.  if !exists(${_INSTALL_COOKIE})
-install: ${_INSTALL_TARGETS}
-.  else
+.  if exists(${_INSTALL_COOKIE})
 install:
 	@${DO_NADA}
+.  elif exists(${_BARRIER_COOKIE})
+install: ${_INSTALL_TARGETS}
+.  else
+install: barrier
 .  endif
 .endif
 
@@ -26,23 +28,26 @@ install:
 acquire-install-lock: acquire-lock
 release-install-lock: release-lock
 
-${_INSTALL_COOKIE}: install-check-interactive
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-install PKG_PHASE=install
+.if exists(${_INSTALL_COOKIE})
+${_INSTALL_COOKIE}:
+	@${DO_NADA}
+.else
+${_INSTALL_COOKIE}: real-install
+.endif
 
 ######################################################################
 ### real-install (PRIVATE)
 ######################################################################
-### real-install is a helper target to set the PKG_PHASE explicitly to
-### "install" before running the remainder of the install targets.
+### real-install is a helper target onto which one can hook all of the
+### targets that do the actual installing of the built objects.
 ###
-.if !exists(${_INSTALL_COOKIE})
+_REAL_INSTALL_TARGETS+=	install-check-interactive
 _REAL_INSTALL_TARGETS+=	install-check-version
 _REAL_INSTALL_TARGETS+=	install-message
 _REAL_INSTALL_TARGETS+=	install-vars
 _REAL_INSTALL_TARGETS+=	unprivileged-install-hook
 _REAL_INSTALL_TARGETS+=	install-all
 _REAL_INSTALL_TARGETS+=	install-cookie
-.endif
 
 .PHONY: real-install
 real-install: ${_REAL_INSTALL_TARGETS}

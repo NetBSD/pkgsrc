@@ -1,4 +1,4 @@
-# $NetBSD: bsd.build.mk,v 1.2 2006/07/05 09:08:35 jlam Exp $
+# $NetBSD: bsd.build.mk,v 1.3 2006/07/05 22:21:02 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to building sources for a package.
@@ -22,12 +22,15 @@ _TEST_COOKIE=	${WRKDIR}/.test_done
 ### build is a public target to build the sources for the package.
 ###
 .PHONY: build
-.if defined(NO_BUILD)
-.  if !target(build)
+.if !defined(NO_BUILD)
+.  include "${PKGSRCDIR}/mk/build/build.mk"
+.elif !target(build)
+.  if exists(${_BUILD_COOKIE})
+build:
+	@${DO_NADA}
+.  else
 build: configure build-cookie
 .  endif
-.else
-.  include "${PKGSRCDIR}/mk/build/build.mk"
 .endif
 
 .include "${PKGSRCDIR}/mk/build/test.mk"

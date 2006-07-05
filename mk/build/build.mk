@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.2 2006/07/05 09:08:35 jlam Exp $
+# $NetBSD: build.mk,v 1.3 2006/07/05 22:21:02 jlam Exp $
 #
 # BUILD_MAKE_FLAGS is the list of arguments that is passed to the make
 #	process.
@@ -23,11 +23,13 @@ _BUILD_TARGETS+=	pkginstall
 
 .PHONY: build
 .if !target(build)
-.  if !exists(${_BUILD_COOKIE})
-build: ${_BUILD_TARGETS}
-.  else
+.  if exists(${_BUILD_COOKIE})
 build:
 	@${DO_NADA}
+.  elif exists(${_BARRIER_COOKIE})
+build: ${_BUILD_TARGETS}
+.  else
+build: barrier
 .  endif
 .endif
 
@@ -35,21 +37,11 @@ build:
 acquire-build-lock: acquire-lock
 release-build-lock: release-lock
 
+.if exists(${_BUILD_COOKIE})
 ${_BUILD_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-build PKG_PHASE=build || ${PKG_ERROR_HANDLER.build}
-
-PKG_ERROR_CLASSES+=	build
-PKG_ERROR_MSG.build=							\
-	""								\
-	"There was an error during the \`\`build'' phase."		\
-	"Please investigate the following for more information:"	\
-	"     * log of the build"					\
-	"     * ${WRKLOG}"						\
-	""
-.if defined(BROKEN_IN)
-PKG_ERROR_MSG.build+=							\
-	"     * This package is broken in ${BROKEN_IN}."		\
-	"     * It may be removed in the next branch unless fixed."
+	@${DO_NADA}
+.else
+${_BUILD_COOKIE}: real-build
 .endif
 
 ######################################################################

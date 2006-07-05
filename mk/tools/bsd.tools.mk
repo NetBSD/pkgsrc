@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.39 2006/07/05 09:08:35 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.40 2006/07/05 22:21:03 jlam Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -68,11 +68,11 @@ _TOOLS_TARGETS+=	release-tools-lock
 
 .PHONY: tools
 .if !target(tools)
-.  if !exists(${_TOOLS_COOKIE})
-tools: ${_TOOLS_TARGETS}
-.  else
+.  if exists(${_TOOLS_COOKIE})
 tools:
 	@${DO_NADA}
+.  else
+tools: ${_TOOLS_TARGETS}
 .  endif
 .endif 
 
@@ -80,7 +80,12 @@ tools:
 acquire-tools-lock: acquire-lock
 release-tools-lock: release-lock
 
+.if exists(${_TOOLS_COOKIE})
+${_TOOLS_COOKIE}:
+	@${DO_NADA}
+.else
 ${_TOOLS_COOKIE}: real-tools
+.endif
 
 ######################################################################
 ### real-tools (PRIVATE)
