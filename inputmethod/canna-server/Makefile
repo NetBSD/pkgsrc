@@ -1,25 +1,28 @@
-# $NetBSD: Makefile,v 1.16 2006/04/23 00:12:37 jlam Exp $
-#
-.include "../../inputmethod/canna/Makefile.common"
+# $NetBSD: Makefile,v 1.17 2006/07/05 04:48:28 jlam Exp $
 
-PKGREVISION=	1
-
+PKGREVISION=	2
 CANNA_MODULE=	server
+
+.include "../../inputmethod/canna/Makefile.common"
 
 INSTALL_TARGET=	instserver
 
-.include "../../mk/bsd.prefs.mk"
-
 BUILD_DEFS+=	CANNA_USER CANNA_GROUP
-MESSAGE_SUBST+=	CANNA_USER="${CANNA_USER}"
-MESSAGE_SUBST+=	CANNA_GROUP="${CANNA_GROUP}"
+MESSAGE_SUBST+=	CANNA_USER=${CANNA_USER}
+MESSAGE_SUBST+=	CANNA_GROUP=${CANNA_GROUP}
 
 PKG_GROUPS=	${CANNA_GROUP}
 PKG_USERS=	${CANNA_USER}:${CANNA_GROUP}
 
-OWN_DIRS_PERMS=	${CANNA_SPOOL} ${CANNA_USER} ${CANNA_GROUP} ${CANNA_MODE}
+MAKE_DIRS+=		${IMDICTDIR}
+OWN_DIRS+=        	${IMDICTDIR}/canna
+OWN_DIRS+=	        ${IMDICTDIR}/canna/canna
+OWN_DIRS_PERMS+=	${CANNA_SPOOL}					\
+			${CANNA_USER} ${CANNA_GROUP} ${CANNA_MODE}
 
 RCD_SCRIPTS=	canna
+
+.include "../../inputmethod/canna-lib/buildlink3.mk"
 
 post-patch:
 	${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.orig
@@ -30,10 +33,4 @@ post-patch:
 	${SED} -e 's|\(DicDir.*=\).*|\1${IMDICTDIR}/canna|' \
 		${WRKSRC}/Canna.conf.orig > ${WRKSRC}/Canna.conf
 
-do-configure:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${XMKMF}
-
-.include "../../devel/nbitools/buildlink3.mk"
-.include "../../inputmethod/canna-lib/buildlink3.mk"
-
-.include "../../inputmethod/canna/Makefile.include"
+.include "../../mk/bsd.pkg.mk"
