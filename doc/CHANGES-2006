@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.649 2006/07/05 08:27:32 drochner Exp $
+$NetBSD: CHANGES-2006,v 1.650 2006/07/05 08:43:21 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3278,3 +3278,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/veusz to 0.10 [drochner 2006-07-05]
 	Updated math/capc-calc to 2.12.0.6 [drochner 2006-07-05]
 	Updated www/liferea to 1.0.16 [drochner 2006-07-05]
+	Updated x11/gtk2 to 2.8.20nb1 [tron 2006-07-05]
