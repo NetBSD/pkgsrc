@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/01/12 00:29:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2006/07/05 06:53:13 jlam Exp $
 bin/skkinput
 lib/X11/app-defaults/Skkinput
 ${IMAKE_MAN_DIR}/skkinput.${IMAKE_MAN_SUFFIX}
@@ -7,4 +7,3 @@ share/doc/skkinput/BUGS.jis
 share/doc/skkinput/FAQ.jis
 share/doc/skkinput/README.jis
 @dirrm share/doc/skkinput
-@unexec if [ -f ${PKGBASE}/etc/skk.conf ]; then echo 'Remove "${PKGBASE}/etc/skk.conf" if you will not use SKK programs any longer.'; fi

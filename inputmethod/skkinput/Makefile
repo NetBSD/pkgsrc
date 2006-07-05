@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2006/03/14 01:14:29 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/07/05 06:53:13 jlam Exp $
 
 DISTNAME=	skkinput-2.06.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=skkinput2/1815/}
 
@@ -12,10 +12,6 @@ COMMENT=	X11 frontend for SKK
 BUILD_DEFS+=	USE_INET6
 
 USE_IMAKE=	YES
-
-PLIST_SUBST+=	PKGBASE=${LOCALBASE:Q}
-DEINSTALL_SRC=	# empty
-INSTALL_SRC=	${PKGDIR}/INSTALL
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/skkinput

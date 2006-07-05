@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/03/14 01:14:32 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2006/07/05 06:53:13 jlam Exp $
 
 DISTNAME=	glunix-release-1-0a
 PKGNAME=	glunix-1.0a
@@ -34,17 +34,12 @@ MAKE_ENV+= OPSYS=${OPSYS:Q} ARCH=${MACHINE_ARCH:Q} NOW_ROOT=${NOW_ROOT:Q}
 MAKE_ENV+= PORTSDIR=${PKGDIR:Q} WRKDIR=${WRKDIR:Q} FLAGS=${FLAGS:Q}
 MAKE_ENV+= SSH=${SSH:Q}
 
-.if exists(/usr/sbin/user)
-USER_CMD=       /usr/sbin/user
-GROUP_CMD=      /usr/sbin/group
-.else
-DEPENDS+=       user>=20000313:../../sysutils/user
-USER_CMD=       ${LOCALBASE}/sbin/user
-GROUP_CMD=      ${LOCALBASE}/sbin/group
-.endif
+PKG_GROUPS=		glunix
+PKG_USERS=		glunix:glunix
+PKG_SHELL.glunix=	${NOW_ROOT}/bin/glush
+USERGROUP_PHASE=	configure
 
-DEINSTALL_SRC=	${PKGDIR}/DEINSTALL
-INSTALL_SRC=	${PKGDIR}/INSTALL
+PKG_SHELL=		${NOW_ROOT}/bin/glush
 
 post-patch:
 	cd ${WRKSRC};							\
@@ -60,31 +55,12 @@ post-patch:
 		${SED} -e 's|%%%PLAT%%%|${MACHINE_ARCH}-NetBSD-tcp|'	\
 			progs/glush/Makefile.input > progs/glush/Makefile
 
-# the glunix group needs to exist before building.
 pre-configure:
 	${CP} ${FILESDIR}/Makefile-2 ${WRKSRC}/Makefile
-	@if `${GROUP_CMD} info -e glunix`; then				\
-		${ECHO} Group \'glunix\' already exists.;		\
-	else								\
-		${GROUP_CMD} add glunix;				\
-	fi
-
-pre-install:
-	@${ECHO} "updating /etc/shells";
-	${CP} /etc/shells /etc/shells.bak;
-	( ${GREP} -v ${NOW_ROOT}/bin/glush /etc/shells.bak;		\
-		${ECHO} ${NOW_ROOT}/bin/glush				\
-	) >/etc/shells
-	@if `${USER_CMD} info -e glunix`; then				\
-		${ECHO} User \'glunix\' already exists.;		\
-	else								\
-		${USER_CMD} add -g glunix -d /nonexistent		\
-			-s ${NOW_ROOT}/bin/glush glunix;		\
-	fi;
 
 post-install:
-	@${LN} -s ../../now/lib/libglunix.so.1.0 ${PREFIX}/now/lib/libglunix.so.1
-	@${LN} -s ../../now/lib/libglunix.so.1.0 ${PREFIX}/now/lib/libglunix.so
-	@${TOUCH} ${NOW_ROOT}/lib/${MACHINE_ARCH}-${OPSYS}-tcp/.keepme
+	${LN} -s libglunix.so.1.0 ${PREFIX}/now/lib/libglunix.so.1
+	${LN} -s libglunix.so.1.0 ${PREFIX}/now/lib/libglunix.so
+	${TOUCH} ${NOW_ROOT}/lib/${MACHINE_ARCH}-${OPSYS}-tcp/.keepme
 
 .include "../../mk/bsd.pkg.mk"
