@@ -1,4 +1,4 @@
-# $NetBSD: intltool.mk,v 1.2 2006/07/05 05:21:59 jlam Exp $
+# $NetBSD: intltool.mk,v 1.3 2006/07/05 10:23:58 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -73,7 +73,9 @@ TOOLS_PATH.${_t_}=	${TOOLS_CMD.${_t_}}
 # correctly "recent".
 #
 .PHONY: override-intltool override-message-intltool
-post-configure: override-intltool
+.if !empty(USE_TOOLS:C/:.*//:Mintltool)
+do-configure-post-hook: override-intltool
+.endif
 override-intltool: override-message-intltool
 override-message-intltool:
 	@${STEP_MSG} "Overriding intltool."
