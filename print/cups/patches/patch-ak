@@ -1,0 +1,12 @@
+$NetBSD: patch-ak,v 1.11 2006/07/05 20:12:06 wiz Exp $
+
+--- cups-config.in.orig	2005-01-03 19:29:44.000000000 +0000
++++ cups-config.in
+@@ -32,6 +32,7 @@ bindir=@bindir@
+ includedir=@includedir@
+ libdir=@libdir@
+ datadir=@datadir@
++datarootdir=@datarootdir@
+ sysconfdir=@sysconfdir@
+ cups_datadir=@CUPS_DATADIR@
+ cups_serverbin=@CUPS_SERVERBIN@
