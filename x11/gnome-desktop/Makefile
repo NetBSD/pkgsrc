@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2006/05/31 22:07:18 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2006/07/05 05:37:46 jlam Exp $
 #
 
 DISTNAME=		gnome-desktop-2.14.2
@@ -13,7 +13,7 @@ COMMENT=		Common GNOME2 desktop files and libgnome-desktop library
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt perl:run pkg-config
+USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--with-gnome-distributor="The NetBSD Foundation"
@@ -31,7 +31,6 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"

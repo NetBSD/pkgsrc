@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/04/17 13:46:28 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2006/07/05 05:37:41 jlam Exp $
 #
 
 DISTNAME=	gtetrinet-0.7.7
@@ -12,7 +12,7 @@ COMMENT=	Multiplayer tetris game for GNOME2
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 
 BUILD_DEFS+=		USE_INET6
@@ -31,5 +31,4 @@ GCONF2_SCHEMAS=		gtetrinet.schemas
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

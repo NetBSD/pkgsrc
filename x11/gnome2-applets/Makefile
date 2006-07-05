@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2006/04/17 13:46:53 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2006/07/05 05:37:47 jlam Exp $
 #
 
 DISTNAME=		gnome-applets-2.14.0
@@ -16,7 +16,7 @@ BUILD_DEPENDS+=		gst-plugins0.10-oss>=0.10.0:../../audio/gst-plugins0.10-oss
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 
@@ -85,7 +85,6 @@ BUILDLINK_API_DEPENDS.gnome-panel+=	gnome-panel>=2.13.4
 .include "../../sysutils/libgtop2/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
