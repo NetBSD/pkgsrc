@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/05/17 10:45:21 drochner Exp $
+# $NetBSD: Makefile,v 1.52 2006/07/05 05:37:43 jlam Exp $
 #
 
 DISTNAME=		yelp-2.14.1
@@ -16,7 +16,7 @@ DEPENDS+=		docbook>=4.2:../../textproc/docbook
 BUILDLINK_API_DEPENDS.libxslt+=	libxslt>=1.1.4
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -49,7 +49,6 @@ BUILDLINK_API_DEPENDS.firefox+=     firefox>=1.5nb2
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"

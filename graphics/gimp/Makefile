@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2006/04/18 20:24:48 tron Exp $
+# $NetBSD: Makefile,v 1.141 2006/07/05 05:37:41 jlam Exp $
 
 DISTNAME=	gimp-2.2.11
 PKGREVISION=	2
@@ -18,7 +18,7 @@ CONFLICTS+=		gimp<=1.2.3
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 PKG_SYSCONFSUBDIR=	gimp/2.0
 
@@ -61,7 +61,6 @@ LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 .include "../../graphics/xpm/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../print/gimp-print-lib/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../www/libgtkhtml/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 

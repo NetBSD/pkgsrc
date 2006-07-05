@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/06/08 09:47:58 joerg Exp $
+# $NetBSD: Makefile,v 1.49 2006/07/05 05:37:40 jlam Exp $
 
 DISTNAME=		libbonobo-2.14.0
 CATEGORIES=		devel gnome
@@ -14,7 +14,7 @@ CONFLICTS=		bonobo-activation-[0-9]*
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		bison gmake perl:run pkg-config msgfmt
+USE_TOOLS+=		bison gmake intltool msgfmt perl:run pkg-config
 
 PKGCONFIG_OVERRIDE=	bonobo/libbonobo-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	bonobo-activation/bonobo-activation-2.0.pc.in
@@ -36,6 +36,5 @@ PRINT_PLIST_AWK+=	/^@dirrm lib\/(bonobo|bonobo\/monikers)$$/ \
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

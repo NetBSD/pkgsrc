@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2006/06/22 21:48:59 jlam Exp $
+# $NetBSD: Makefile,v 1.101 2006/07/05 05:37:46 jlam Exp $
 #
 
 DISTNAME=		galeon-1.3.21
@@ -17,7 +17,7 @@ CONFLICTS+=		galeon-devel-[0-9]*
 
 USE_LANGUAGES=		c c++
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -46,7 +46,6 @@ CONF_FILES=		${EGDIR}/sound/events/galeon.soundlist \
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/04/17 13:46:50 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2006/07/05 05:37:45 jlam Exp $
 #
 
 DISTNAME=		e16menuedit2-0.0.1
@@ -15,7 +15,7 @@ DEPENDS+=		enlightenment-0.16.*:../../wm/enlightenment
 BROKEN_GETTEXT_DETECTION=	yes
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		automake msgfmt pkg-config
+USE_TOOLS+=		automake intltool msgfmt pkg-config
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 MAKE_ENV+=		CATALOGS="de.gmo en.gmo ko.gmo tr.gmo"
@@ -26,7 +26,6 @@ pre-configure:
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

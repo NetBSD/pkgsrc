@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/06/15 20:40:16 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2006/07/05 05:37:45 jlam Exp $
 #
 
 DISTNAME=		scrollkeeper-0.3.14
@@ -16,7 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 DEPENDS+=		docbook-xml>=4.4nb4:../../textproc/docbook-xml
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake msgfmt
+USE_TOOLS+=		gmake intltool msgfmt
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
@@ -67,7 +67,6 @@ SUBST_SED.sc-gtfd=	-e s,scrollkeeper-get-toc-from-docpath\ ,${PREFIX}/bin/scroll
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 
 .include "../../mk/bsd.pkg.mk"

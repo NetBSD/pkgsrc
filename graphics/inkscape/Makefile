@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/07/04 15:46:34 drochner Exp $
+# $NetBSD: Makefile,v 1.25 2006/07/05 05:37:42 jlam Exp $
 
 DISTNAME=	inkscape-0.44
 CATEGORIES=	graphics
@@ -18,7 +18,7 @@ USE_DIRS+=		xdg-1.1
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 GNU_CONFIGURE=		yes
 
 BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=6.4
@@ -31,7 +31,6 @@ BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=6.4
 .include "../../graphics/png/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"

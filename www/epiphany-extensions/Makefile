@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/05/22 18:03:50 drochner Exp $
+# $NetBSD: Makefile,v 1.30 2006/07/05 05:37:46 jlam Exp $
 #
 
 DISTNAME=	epiphany-extensions-2.14.1.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.gnome.org/projects/epiphany/extensions.html
 COMMENT=	Extensions for the Epiphany web browser
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES+=		c++
@@ -42,7 +42,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/opensp/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"

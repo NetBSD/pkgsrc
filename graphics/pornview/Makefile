@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/17 13:46:34 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2006/07/05 05:37:42 jlam Exp $
 #
 
 PKGNAME=	pornview-0.2.0pre1
@@ -18,12 +18,11 @@ USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
-USE_TOOLS+=		msgfmt perl:run
+USE_TOOLS+=		intltool msgfmt perl:run
 REPLACE_PERL+=		src/scripts/helloworld
 
 .include "options.mk"
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

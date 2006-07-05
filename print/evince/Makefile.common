@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2006/05/31 18:17:23 drochner Exp $
+# $NetBSD: Makefile.common,v 1.6 2006/07/05 05:37:44 jlam Exp $
 #
 
 DISTNAME=		evince-0.5.3
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LANGUAGES+=		c++
 
 # XXX fake for "configure" to allow build w/o a gs installed
@@ -35,6 +35,5 @@ BUILDLINK_API_DEPENDS.poppler-glib+=	poppler-glib>=0.5.2
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"

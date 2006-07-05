@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2006/05/02 17:19:22 drochner Exp $
+# $NetBSD: Makefile,v 1.71 2006/07/05 05:37:41 jlam Exp $
 
 DISTNAME=		gnome-games-2.14.1
 CATEGORIES=		games gnome
@@ -13,7 +13,7 @@ CONFLICTS=		xbill-[0-9]*
 
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_CONFIG_WRAPPER=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
@@ -72,7 +72,6 @@ BUILDLINK_API_DEPENDS.librsvg2+=	librsvg2>=2.12.6
 .include "../../lang/guile/buildlink3.mk"
 .include "../../net/howl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

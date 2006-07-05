@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/06/15 16:54:56 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2006/07/05 05:37:40 jlam Exp $
 #
 
 DISTNAME=	libgsf-1.14.1
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME2 structured file library
 
-USE_TOOLS+=		pkg-config gmake msgfmt
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	yes
@@ -28,7 +28,6 @@ GCONF2_SCHEMAS=		gsf-office-thumbnailer.schemas
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../mk/bsd.pkg.mk"

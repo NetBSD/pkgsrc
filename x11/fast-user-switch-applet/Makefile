@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/04/17 13:46:52 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2006/07/05 05:37:46 jlam Exp $
 #
 
 DISTNAME=	fast-user-switch-applet-2.14.0
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_X11=		yes
 
 .include "../../mk/bsd.prefs.mk"
@@ -40,7 +40,6 @@ GCONF2_SCHEMAS=		fast-user-switch-applet.schemas
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

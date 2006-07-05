@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2006/04/17 13:46:43 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2006/07/05 05:37:43 jlam Exp $
 #
 
 DISTNAME=		bug-buddy-2.14.0
@@ -14,7 +14,7 @@ COMMENT=		Graphical GNOME2 bug reporting tool
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 
 GCONF2_SCHEMAS=		bug-buddy.schemas
@@ -33,7 +33,6 @@ GCONF2_SCHEMAS=		bug-buddy.schemas
 .include "../../sysutils/gnome-menus/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

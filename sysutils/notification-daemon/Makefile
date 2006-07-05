@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/04/17 13:46:48 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/05 05:37:45 jlam Exp $
 #
 
 DISTNAME=	notification-daemon-0.3.4
@@ -12,7 +12,7 @@ COMMENT=	Shows notification messages on the desktop
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake intltool pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,6 +29,5 @@ CONFIGURE_ARGS+=	--with-dbus-sys=${PKG_SYSCONFDIR}/dbus-1/system.d
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

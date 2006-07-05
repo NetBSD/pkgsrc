@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/06/11 14:09:01 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/07/05 05:37:42 jlam Exp $
 #
 
 DISTNAME=	grig-0.4.3
@@ -11,10 +11,9 @@ HOMEPAGE=       http://groundstation.sourceforge.net/
 COMMENT=	Graphical user interface to the Hamlib libraries
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake msgfmt pkg-config
+USE_TOOLS+=	gmake intltool msgfmt pkg-config
 GNU_CONFIGURE=	yes
 
 .include "../../ham/hamlib/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/04/17 13:46:18 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2006/07/05 05:37:39 jlam Exp $
 
 DISTNAME=	gg2-2.2.8
 PKGREVISION=	5
@@ -12,7 +12,7 @@ COMMENT=	Instant messenger software for Poland; Jabber plugin included
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake intltool pkg-config
 GNU_CONFIGURE=		yes
 LIBS+=			-lm
 PKGCONFIG_OVERRIDE+=	lib/gg2_core.pc.in
@@ -29,7 +29,6 @@ CONFIGURE_ARGS+=	--without-update
 .include "../../chat/libtlen/buildlink3.mk"
 .include "../../chat/loudmouth/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/xosd/buildlink3.mk"
 

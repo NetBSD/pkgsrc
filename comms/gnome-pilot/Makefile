@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/06/29 23:48:24 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2006/07/05 05:37:39 jlam Exp $
 #
 
 DISTNAME=		gnome-pilot-2.0.12
@@ -16,13 +16,12 @@ GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake msgfmt perl pkg-config
+USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../comms/pilot-link-libs/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"

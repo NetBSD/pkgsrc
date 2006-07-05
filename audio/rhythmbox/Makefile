@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2006/07/03 13:02:39 jmmv Exp $
+# $NetBSD: Makefile,v 1.41 2006/07/05 05:37:39 jlam Exp $
 #
 
 DISTNAME=	rhythmbox-0.9.5
@@ -13,7 +13,7 @@ COMMENT=	Music management application for GNOME
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
@@ -47,7 +47,6 @@ BUILDLINK_API_DEPENDS.totem+=		{totem,totem-xine}>=1.1.5
 .include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

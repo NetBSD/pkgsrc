@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/04/13 18:23:30 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2006/07/05 05:37:39 jlam Exp $
 #
 
 DISTNAME=		gnome-mime-data-2.4.2
@@ -17,7 +17,7 @@ CONFLICTS=		gnome-vfs<=1.0.3
 
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		msgfmt perl
+USE_TOOLS+=		intltool msgfmt perl
 GNU_CONFIGURE=		YES
 
 PKGCONFIG_OVERRIDE=	gnome-mime-data-2.0.pc.in
@@ -29,6 +29,4 @@ CONF_FILES=		${EGDIR}/gnome-vfs-mime-magic \
 				${PKG_SYSCONFDIR}/gnome-vfs-mime-magic
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

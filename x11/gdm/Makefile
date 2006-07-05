@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2006/06/25 17:16:33 jmmv Exp $
+# $NetBSD: Makefile,v 1.115 2006/07/05 05:37:46 jlam Exp $
 #
 
 DISTNAME=	gdm-2.14.5
@@ -19,7 +19,7 @@ USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gdm
 PKG_SUPPORTED_OPTIONS=	inet6 pam
@@ -128,7 +128,6 @@ PRINT_PLIST_AWK+=	/dmx/ { print "$${DMX}" $$0; next }
 .include "../../graphics/libart2/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../graphics/librsvg2/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
