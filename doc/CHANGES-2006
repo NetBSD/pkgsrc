@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.652 2006/07/05 15:50:15 jlam Exp $
+$NetBSD: CHANGES-2006,v 1.653 2006/07/05 19:48:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3281,3 +3281,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated x11/gtk2 to 2.8.20nb1 [tron 2006-07-05]
 	Updated graphics/cairo to 1.2.0nb1 [tron 2006-07-05]
 	Updated net/openvpn to 2.0.7 [jlam 2006-07-05]
+	Updated graphics/wxsvg to 1.0beta6 [wiz 2006-07-05]
