@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2006/05/31 17:50:12 drochner Exp $
+# $NetBSD: Makefile.common,v 1.13 2006/07/05 05:37:41 jlam Exp $
 #
 
 DISTNAME=	dia-0.95-1
@@ -15,7 +15,7 @@ DISTINFO_FILE=		${.CURDIR}/../../graphics/dia/distinfo
 PATCHDIR=		${.CURDIR}/../../graphics/dia/patches
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake intltool pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES+=		c++
@@ -37,7 +37,6 @@ BUILDLINK_DEPMETHOD.pango+=		build
 BUILDLINK_DEPMETHOD.pkgconfig+=		build
 BUILDLINK_DEPMETHOD.freetype2+=		build
 BUILDLINK_DEPMETHOD.libart2+=		build
-BUILDLINK_DEPMETHOD.intltool+=		build
 BUILDLINK_DEPMETHOD.libxml2+=		build
 BUILDLINK_DEPMETHOD.libxslt+=		build
 BUILDLINK_DEPMETHOD.scrollkeeper+=	build
@@ -49,7 +48,6 @@ BUILDLINK_DEPMETHOD.gtk2+=		build
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/libart2/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"

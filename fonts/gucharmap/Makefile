@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/04/17 13:46:08 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2006/07/05 05:37:41 jlam Exp $
 #
 
 DISTNAME=	gucharmap-1.6.0
@@ -12,7 +12,7 @@ HOMEPAGE=	http://gucharmap.sourceforge.net/
 COMMENT=	Unicode/ISO10646 character map and font viewer
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -29,7 +29,6 @@ GTK2_IMMODULES=		yes
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/modules.mk"
 .include "../../mk/bsd.pkg.mk"

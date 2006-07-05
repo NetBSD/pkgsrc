@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/06/21 22:59:12 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/05 05:37:46 jlam Exp $
 #
 
 DISTNAME=	gtkhtml-3.10.1
@@ -15,7 +15,7 @@ COMMENT=	Lightweight HTML rendering/printing/editing engine
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config msgfmt
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 PKGCONFIG_OVERRIDE+=	src/libgtkhtml.pc.in
 
@@ -29,7 +29,6 @@ PKGCONFIG_OVERRIDE+=	src/libgtkhtml.pc.in
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../net/libsoup-devel/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

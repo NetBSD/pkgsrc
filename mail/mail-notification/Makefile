@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/04/17 13:46:38 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2006/07/05 05:37:42 jlam Exp $
 #
 
 DISTNAME=	mail-notification-2.0
@@ -12,7 +12,7 @@ COMMENT=	Status icon that provides new mail notifications
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
@@ -58,7 +58,6 @@ CONFIGURE_ARGS+=	--disable-ssl
 .include "../../mail/gmime/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
