@@ -1,4 +1,4 @@
-# $NetBSD: test.mk,v 1.1 2006/07/05 06:09:15 jlam Exp $
+# $NetBSD: test.mk,v 1.2 2006/07/05 09:08:35 jlam Exp $
 #
 # TEST_DIRS is the list of directories in which to perform the build
 #	process.  If the directories are relative paths, then they
@@ -19,6 +19,7 @@ TEST_MAKE_FLAGS?=	${MAKE_FLAGS}
 ######################################################################
 ### build is a public target to build the sources from the package.
 ###
+_TEST_TARGETS+=	check-vulnerable
 _TEST_TARGETS+=	build
 _TEST_TARGETS+=	acquire-test-lock
 _TEST_TARGETS+=	${_TEST_COOKIE}
@@ -120,4 +121,4 @@ post-test:
 .PHONY: test-cookie
 test-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_TEST_COOKIE:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${_TEST_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_TEST_COOKIE}

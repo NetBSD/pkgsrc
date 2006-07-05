@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.43 2006/07/05 06:09:15 jlam Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.44 2006/07/05 09:08:35 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -779,8 +779,11 @@ _WRAPPER_COOKIE=	${WRKDIR}/.wrapper_done
 .if !target(wrapper)
 .  if defined(NO_BUILD)
 wrapper: patch wrapper-cookie
+.  elif !exists(${_WRAPPER_COOKIE})
+wrapper: check-vulnerable patch acquire-wrapper-lock ${_WRAPPER_COOKIE} release-wrapper-lock
 .  else
-wrapper: patch acquire-wrapper-lock ${_WRAPPER_COOKIE} release-wrapper-lock
+wrapper:
+	@${DO_NADA}
 .  endif
 .endif
 
@@ -788,13 +791,8 @@ wrapper: patch acquire-wrapper-lock ${_WRAPPER_COOKIE} release-wrapper-lock
 acquire-wrapper-lock: acquire-lock
 release-wrapper-lock: release-lock
 
-.if !exists(${_WRAPPER_COOKIE})
 ${_WRAPPER_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-wrapper PKG_PHASE=wrapper
-.else
-${_WRAPPER_COOKIE}:
-	@${DO_NADA}
-.endif
 
 .PHONY: real-wrapper
 real-wrapper: wrapper-message wrapper-vars pre-wrapper do-wrapper post-wrapper wrapper-cookie error-check
@@ -823,4 +821,4 @@ post-wrapper:
 .PHONY: wrapper-cookie
 wrapper-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_WRAPPER_COOKIE:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${_WRAPPER_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_WRAPPER_COOKIE}

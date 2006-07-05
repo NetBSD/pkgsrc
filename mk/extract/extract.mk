@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.7 2006/06/09 13:59:08 jlam Exp $
+# $NetBSD: extract.mk,v 1.8 2006/07/05 09:08:35 jlam Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -42,6 +42,7 @@ _EXTRACT_COOKIE=	${WRKDIR}/.extract_done
 ######################################################################
 ### extract is a public target to perform extraction.
 ###
+_EXTRACT_TARGETS+=	check-vulnerable
 _EXTRACT_TARGETS+=	checksum
 _EXTRACT_TARGETS+=	makedirs
 _EXTRACT_TARGETS+=	depends
@@ -52,19 +53,19 @@ _EXTRACT_TARGETS+=	release-extract-lock
 
 .PHONY: extract
 .if !target(extract)
+.  if !exists(${_EXTRACT_COOKIE})
 extract: ${_EXTRACT_TARGETS}
+.  else
+extract:
+	@${DO_NADA}
+.  endif
 .endif
 
 .PHONY: acquire-extract-lock release-extract-lock
 acquire-extract-lock: acquire-lock
 release-extract-lock: release-lock
 
-.if !exists(${_EXTRACT_COOKIE})
 ${_EXTRACT_COOKIE}: real-extract
-.else
-${_EXTRACT_COOKIE}:
-	@${DO_NADA}
-.endif
 
 ######################################################################
 ### real-extract (PRIVATE)
@@ -114,7 +115,7 @@ extract-check-interactive:
 .PHONY: extract-cookie
 extract-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_EXTRACT_COOKIE:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${_EXTRACT_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_EXTRACT_COOKIE}
 
 ######################################################################
 ### pre-extract, do-extract, post-extract (PUBLIC, override)
