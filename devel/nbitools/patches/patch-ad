@@ -1,37 +1,43 @@
-$NetBSD: patch-ad,v 1.1.1.1 2002/06/03 09:53:47 sakamoto Exp $
+$NetBSD: patch-ad,v 1.2 2006/07/05 04:59:47 jlam Exp $
 
---- config/cf/Imake.tmpl.orig	Wed Mar  7 22:08:22 2001
+--- config/cf/Imake.tmpl.orig	2001-03-07 08:08:22.000000000 -0500
 +++ config/cf/Imake.tmpl
-@@ -961,7 +961,7 @@
+@@ -960,22 +960,22 @@ JPTCLIBDIR = JpTclLibDir
+ #define LoaderLibPrefix /**/
  #endif
  #ifndef ImakeCmd
- #ifdef UseInstalled		/* assume BINDIR in path */
+-#ifdef UseInstalled		/* assume BINDIR in path */
 -#define ImakeCmd imake
++#ifdef UseInstalled		/* Force use of itools' binary */
 +#define ImakeCmd $(BINDIR)/imake
  #else
  #define ImakeCmd $(IMAKESRC)/imake
  #endif
-@@ -969,13 +969,13 @@
+ #endif
  #ifndef DependCmd
  #if UseGccMakeDepend
- #ifdef UseInstalled		/* assume BINDIR in path */
+-#ifdef UseInstalled		/* assume BINDIR in path */
 -#define DependCmd gccmakedep
++#ifdef UseInstalled		/* Force use of itools' binary */
 +#define DependCmd $(BINDIR)/gccmakedep
  #else
  #define DependCmd $(DEPENDSRC)/gccmakedep
  #endif
  #else
- #ifdef UseInstalled		/* assume BINDIR in path */
+-#ifdef UseInstalled		/* assume BINDIR in path */
 -#define DependCmd makedepend
++#ifdef UseInstalled		/* Force use of itools' binary */
 +#define DependCmd $(BINDIR)/makedepend
  #else
  #define DependCmd $(DEPENDSRC)/makedepend
  #endif
-@@ -1002,7 +1002,7 @@
+@@ -1001,8 +1001,8 @@ JPTCLIBDIR = JpTclLibDir
+ # endif
  #endif
  #ifndef MkdirHierCmd
- #ifdef UseInstalled		/* assume BINDIR in path */
+-#ifdef UseInstalled		/* assume BINDIR in path */
 -#define MkdirHierCmd mkdirhier
++#ifdef UseInstalled		/* Force use of itools' binary */
 +#define MkdirHierCmd $(BINDIR)/mkdirhier
  #else
  #define MkdirHierCmd $(SHELL) $(CONFIGSRC)/util/mkdirhier.sh
