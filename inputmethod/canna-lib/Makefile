@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2005/12/29 15:33:45 joerg Exp $
-#
-.include "../../inputmethod/canna/Makefile.common"
+# $NetBSD: Makefile,v 1.9 2006/07/05 04:48:28 jlam Exp $
 
+PKGREVISION=	1
 CANNA_MODULE=	lib
 
-INSTALL_TARGET=	install install.man
+.include "../../inputmethod/canna/Makefile.common"
 
 # (1) Change SUBDIRS.
 # (2) Don't install `forcpp', `kpdic'.
+#
 post-patch:
 	@${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.orig
 	@${SED}	-e 's|\(SUBDIRS = lib canna\).*\( misc\)|\1 cmd/forcpp cmd/kpdic dic/phono\2|' \
@@ -19,22 +19,20 @@ post-patch:
 		> ${WRKSRC}/cmd/${f}/Imakefile
 .endfor
 
-# We need to pass ${MAKE_ENV} to ${XMKMF}
-do-configure:
-	@cd ${WRKSRC} && \
-	    ${SETENV} ${SCRIPTS_ENV} ${MAKE_ENV} ${XMKMF}
-
 post-configure:
 	@${LN} -s ${WRKSRC}/server/*.h ${WRKSRC}/include
 
 .include "../../mk/bsd.prefs.mk"
 
+# XXX Work around bug in nbitools where the correct DragonFly library
+# XXX symlinks are not created.
+# XXX
 .if ${OPSYS} == "DragonFly"
 post-install:
-.for f in RKC RKC16 canna canna16
+.  for f in RKC RKC16 canna canna16
 	${LN} -s lib${f}.so.1.1 ${PREFIX}/lib/lib${f}.so.1
 	${LN} -s lib${f}.so.1 ${PREFIX}/lib/lib${f}.so
-.endfor
+.  endfor
 .endif
 
-.include "../../inputmethod/canna/Makefile.include"
+.include "../../mk/bsd.pkg.mk"
