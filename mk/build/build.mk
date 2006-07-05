@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.1 2006/07/05 06:09:15 jlam Exp $
+# $NetBSD: build.mk,v 1.2 2006/07/05 09:08:35 jlam Exp $
 #
 # BUILD_MAKE_FLAGS is the list of arguments that is passed to the make
 #	process.
@@ -14,6 +14,7 @@ BUILD_TARGET?=		all
 ######################################################################
 ### build is a public target to build the sources from the package.
 ###
+_BUILD_TARGETS+=	check-vulnerable
 _BUILD_TARGETS+=	configure
 _BUILD_TARGETS+=	acquire-build-lock
 _BUILD_TARGETS+=	${_BUILD_COOKIE}
@@ -22,20 +23,20 @@ _BUILD_TARGETS+=	pkginstall
 
 .PHONY: build
 .if !target(build)
+.  if !exists(${_BUILD_COOKIE})
 build: ${_BUILD_TARGETS}
+.  else
+build:
+	@${DO_NADA}
+.  endif
 .endif
 
 .PHONY: acquire-build-lock release-build-lock
 acquire-build-lock: acquire-lock
 release-build-lock: release-lock
 
-.if !exists(${_BUILD_COOKIE})
 ${_BUILD_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-build PKG_PHASE=build || ${PKG_ERROR_HANDLER.build}
-.else
-${_BUILD_COOKIE}:
-	@${DO_NADA}
-.endif
 
 PKG_ERROR_CLASSES+=	build
 PKG_ERROR_MSG.build=							\
