@@ -1,7 +1,10 @@
-# $NetBSD: Makefile.common,v 1.15 2006/01/21 12:01:49 rxg Exp $
+# $NetBSD: Makefile.common,v 1.16 2006/07/05 04:48:28 jlam Exp $
 #
 # Canna common makefile.
 #
+
+# "Pkgsrc" version.
+CANNA_VERSION=	3.6pl4
 
 DISTNAME=	Canna${CANNA_VERSION:S|.||:S|pl|p|}
 PKGNAME=	Canna-${CANNA_MODULE}-${CANNA_VERSION}
@@ -12,14 +15,13 @@ MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://canna.sourceforge.jp/
 COMMENT=	Kana-Kanji conversion system (${CANNA_MODULE})
 
-FILESDIR=	${.CURDIR}/../canna/files
-DISTINFO_FILE=	${.CURDIR}/../canna/distinfo
-PATCHDIR=	${.CURDIR}/../canna/patches
+FILESDIR=	${.CURDIR}/../../inputmethod/canna/files
+DISTINFO_FILE=	${.CURDIR}/../../inputmethod/canna/distinfo
+PATCHDIR=	${.CURDIR}/../../inputmethod/canna/patches
 
-.include "../../inputmethod/canna/Makefile.version"
-
-USE_TOOLS+=	imake
-CANNA_SPOOL=	${DESTDIR}/var/spool/canna
+USE_TOOLS+=	itools
+USE_IMAKE=	yes
+CANNA_SPOOL=	${VARBASE}/spool/canna
 CANNA_MODE=	0755
 
 # XXX IPv6 support.  To be done.
@@ -31,3 +33,12 @@ CANNA_MODE=	0755
 #INET6=		# empty
 #.endif
 #MAKE_ENV+=	INET6=${INET6}
+
+CANNA_ENV=	CANNA_USER=${CANNA_USER}				\
+		CANNA_GROUP=${CANNA_GROUP}				\
+		CANNA_SPOOL=${CANNA_SPOOL}				\
+		CANNA_MODE=${CANNA_MODE}				\
+		IMDICTDIR=${IMDICTDIR}
+MAKE_ENV+=	${CANNA_ENV}
+PLIST_SUBST+=	${CANNA_ENV}
+FILES_SUBST+=	${CANNA_ENV}
