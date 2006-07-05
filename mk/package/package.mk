@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.10 2006/07/05 09:08:35 jlam Exp $
+# $NetBSD: package.mk,v 1.11 2006/07/05 22:21:03 jlam Exp $
 
 ######################################################################
 ### package (PUBLIC)
@@ -14,11 +14,13 @@ _PACKAGE_TARGETS+=	release-package-lock
 
 .PHONY: package
 .if !target(package)
-.  if !exists(${_PACKAGE_COOKIE})
-package: ${_PACKAGE_TARGETS}
-.  else
+.  if exists(${_PACKAGE_COOKIE})
 package:
 	@${DO_NADA}
+.  elif exists(${_BARRIER_COOKIE})
+package: ${_PACKAGE_TARGETS}
+.  else
+package: barrier
 .  endif
 .endif
 
@@ -26,20 +28,22 @@ package:
 acquire-package-lock: acquire-lock
 release-package-lock: release-lock
 
+.if exists(${_PACKAGE_COOKIE})
 ${_PACKAGE_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-package PKG_PHASE=package
+	@${DO_NADA}
+.else
+${_PACKAGE_COOKIE}: real-package
+.endif
 
 ######################################################################
 ### real-package (PRIVATE)
 ######################################################################
-### real-package is a helper target to set the PKG_PHASE explicitly to
-### "package" before running the remainder of the package targets.
+### real-package is a helper target onto which one can hook all of the
+### targets that do the actual packaging of the built objects.
 ###
-.if !exists(${_PACKAGE_COOKIE})
 _REAL_PACKAGE_TARGETS+=	package-message
 _REAL_PACKAGE_TARGETS+=	package-all
 _REAL_PACKAGE_TARGETS+=	package-cookie
-.endif
 
 .PHONY: real-package
 real-package: ${_REAL_PACKAGE_TARGETS}
