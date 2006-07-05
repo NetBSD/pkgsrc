@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.125 2006/07/04 16:00:52 drochner Exp $
+# $NetBSD: Makefile,v 1.126 2006/07/05 08:40:38 tron Exp $
 
 DISTNAME=		gtk+-2.8.20
+PKGREVISION=		1
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v2.8/ \
@@ -20,7 +21,7 @@ BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
 
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake msgfmt perl pkg-config
 USE_LIBTOOL=		yes
 PTHREAD_AUTO_VARS=	yes
 
