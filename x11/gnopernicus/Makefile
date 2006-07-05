@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/07/04 14:32:17 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2006/07/05 05:37:47 jlam Exp $
 #
 
 DISTNAME=		gnopernicus-1.0.3
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Collection of accessibility apps for GNOME 2
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake pkg-config msgfmt
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -62,7 +62,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.4.1
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-mag/buildlink3.mk"

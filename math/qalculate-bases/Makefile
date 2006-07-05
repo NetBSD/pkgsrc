@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/19 19:24:34 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/07/05 05:37:42 jlam Exp $
 
 DISTNAME=	qalculate-bases-0.9.4
 CATEGORIES=	math
@@ -11,12 +11,11 @@ COMMENT=	Utility for conversion between number bases using Qalculate
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 GNU_CONFIGURE=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 
 .include "../../math/qalculate/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
