@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2006/07/02 13:53:28 markd Exp $
+# $NetBSD: Makefile,v 1.61 2006/07/05 04:39:14 jlam Exp $
 
 DISTNAME=	heimdal-0.7.2
 PKGREVISION=	2
@@ -96,6 +96,14 @@ OWN_DIRS_PERMS=		${HEIMDAL_STATEDIR} ${ROOT_USER} ${ROOT_GROUP} 0700
 SPECIAL_PERMS=		${PREFIX}/bin/${KRB5_PREFIX}su ${SETUID_ROOT_PERMS}
 RCD_SCRIPTS=		kadmind kcm kdc kpasswdd
 INFO_FILES=		# PLIST
+
+# Dynamically determine the "replacement" headers for things missing
+# in the base system and add them to the PLIST.
+#
+GENERATE_PLIST+=	\
+	( cd ${WRKSRC}/lib/roken && ${MAKE_PROGRAM} print-xheaders |	\
+	  ${XARGS} -n 1 | ${SED} -e "s,^,include/krb5/," );		\
+	${ECHO} "@dirrm include/krb5";
 
 # Fix some places in the Heimdal sources that don't point to the correct
 # Kerberized binaries when exec'ing programs.
