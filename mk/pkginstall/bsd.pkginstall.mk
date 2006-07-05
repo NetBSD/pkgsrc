@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.11 2006/06/15 22:13:59 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.12 2006/07/05 06:09:15 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -966,7 +966,6 @@ install-rcd-${_script_}: ${RCD_SCRIPT_WRK.${_script_}}
 
 _PKGINSTALL_COOKIE=	${WRKDIR}/.pkginstall_done
 
-_PKGINSTALL_TARGETS+=	_build
 _PKGINSTALL_TARGETS+=	acquire-pkginstall-lock
 _PKGINSTALL_TARGETS+=	${_PKGINSTALL_COOKIE}
 _PKGINSTALL_TARGETS+=	release-pkginstall-lock
