@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/06/04 14:56:37 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2006/07/05 20:53:11 wiz Exp $
 
 # NOTE:  This package is modeled on ../openssh, but does not share
 # files with it as that package may update faster than the gssapi
@@ -6,7 +6,7 @@
 
 DISTNAME=		openssh-3.6.1p2
 PKGNAME=		openssh+gssapi-3.6.1.2.20030430
-PKGREVISION=		6
+PKGREVISION=		7
 SVR4_PKGNAME=		osshgss
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp7.usa.openbsd.org/pub/os/OpenBSD/OpenSSH/portable/ \
@@ -63,9 +63,8 @@ CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_PREFIX.tcp_wrappers}
 CONFIGURE_ARGS+=	--with-privsep-path=${OPENSSH_CHROOT:Q}
 CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER:Q}
 CONFIGURE_ARGS+=	--with-kerberos5=/usr
-CONFIGURE_ARGS+=	--with-kerberos4=/usr
 
-CPPFLAGS+=		-I/usr/include/krb5 -I/usr/include/kerberosIV
+CPPFLAGS+=		-I/usr/include/krb5
 
 # XXX: PAM authentication causes memory faults, and I haven't tracked down
 # XXX: why yet.  For the moment, disable PAM authentication.
@@ -93,8 +92,12 @@ CONFIGURE_ARGS+=	--without-skey
 .endif
 
 .if defined(KERBEROS)
+.include "../../security/kth-krb4/buildlink3.mk"
 PKG_USE_KERBEROS=		yes
-CONFIGURE_ARGS+=	--with-kerberos4=/usr
+CONFIGURE_ARGS+=	--with-kerberos4=${BUILDLINK_PREFIX.kth-krb4}
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.kth-krb4}/include/kerberosIV
+LDFLAGS+=		-L${BUILDLINK_PREFIX.kth-krb4}/lib
+LDFLAGS+=		-Wl,-R${BUILDLINK_PREFIX.kth-krb4}/lib
 LDFLAGS+=		-lkrb -lcom_err -lroken -ldes -lcrypto
 .endif
 
