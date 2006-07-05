@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.653 2006/07/05 19:48:45 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.654 2006/07/05 20:53:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3282,3 +3282,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/cairo to 1.2.0nb1 [tron 2006-07-05]
 	Updated net/openvpn to 2.0.7 [jlam 2006-07-05]
 	Updated graphics/wxsvg to 1.0beta6 [wiz 2006-07-05]
+	Updated security/openssh+gssapi to 3.6.1.2.20030430nb7 [wiz 2006-07-05]
