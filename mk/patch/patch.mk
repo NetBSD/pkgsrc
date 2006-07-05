@@ -1,4 +1,4 @@
-# $NetBSD: patch.mk,v 1.4 2006/06/09 13:59:08 jlam Exp $
+# $NetBSD: patch.mk,v 1.5 2006/07/05 09:08:35 jlam Exp $
 #
 # The following variables may be set in a package Makefile and control
 # how pkgsrc patches are applied.
@@ -52,24 +52,27 @@ _PATCH_COOKIE=		${WRKDIR}/.patch_done
 ### patch is a public target to apply the distribution and pkgsrc
 ### patches to the extracted sources for the package.
 ###
+_PATCH_TARGETS+=	check-vulnerable
 _PATCH_TARGETS+=	extract
 _PATCH_TARGETS+=	acquire-patch-lock
 _PATCH_TARGETS+=	${_PATCH_COOKIE}
 _PATCH_TARGETS+=	release-patch-lock
 
 .PHONY: patch
+.if !target(patch)
+.  if !exists(${_PATCH_COOKIE})
 patch: ${_PATCH_TARGETS}
+.  else
+patch:
+	@${DO_NADA}
+.  endif
+.endif
 
 .PHONY: acquire-patch-lock release-patch-lock
 acquire-patch-lock: acquire-lock
 release-patch-lock: release-lock
 
-.if !exists(${_PATCH_COOKIE})
 ${_PATCH_COOKIE}: real-patch
-.else
-${_PATCH_COOKIE}:
-	@${DO_NADA}
-.endif
 
 ######################################################################
 ### real-patch (PRIVATE)

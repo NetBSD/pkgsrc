@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.38 2006/07/05 04:32:10 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.39 2006/07/05 09:08:35 jlam Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -68,19 +68,19 @@ _TOOLS_TARGETS+=	release-tools-lock
 
 .PHONY: tools
 .if !target(tools)
+.  if !exists(${_TOOLS_COOKIE})
 tools: ${_TOOLS_TARGETS}
+.  else
+tools:
+	@${DO_NADA}
+.  endif
 .endif 
 
 .PHONY: acquire-tools-lock release-tools-lock
 acquire-tools-lock: acquire-lock
 release-tools-lock: release-lock
 
-.if !exists(${_TOOLS_COOKIE})
 ${_TOOLS_COOKIE}: real-tools
-.else
-${_TOOLS_COOKIE}:
-	@${DO_NADA}
-.endif
 
 ######################################################################
 ### real-tools (PRIVATE)
@@ -111,7 +111,7 @@ tools-message:
 .PHONY: tools-cookie
 tools-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_TOOLS_COOKIE:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${USE_TOOLS:Q} >> ${_TOOLS_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${USE_TOOLS:Q} > ${_TOOLS_COOKIE}
 
 ######################################################################
 ### override-tools (PRIVATE)

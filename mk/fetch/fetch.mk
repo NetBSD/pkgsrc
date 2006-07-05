@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.4 2006/06/20 14:54:03 jlam Exp $
+# $NetBSD: fetch.mk,v 1.5 2006/07/05 09:08:35 jlam Exp $
 
 ######################################################################
 ### fetch (PUBLIC)
@@ -8,7 +8,7 @@
 ###
 .PHONY: fetch
 .if !target(fetch)
-fetch: pre-fetch do-fetch post-fetch
+fetch: check-vulnerable pre-fetch do-fetch post-fetch
 .endif
 
 # If this host is behind a filtering firewall, use passive ftp(1)
@@ -262,24 +262,6 @@ batch-check-distfiles:
 .PHONY: do-fetch
 .if !target(do-fetch)
 do-fetch: ${FAILOVER_FETCH:Duptodate-digest}
-.  if !defined(ALLOW_VULNERABLE_PACKAGES)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then		\
-		${PHASE_MSG} "Checking for vulnerabilities in ${PKGNAME}"; \
-		vul=`${MAKE} ${MAKEFLAGS} check-vulnerable`;		\
-		case "$$vul" in						\
-		"")	;;						\
-		*)	${ECHO} "$$vul";				\
-			${ECHO} "or define ALLOW_VULNERABLE_PACKAGES if this package is absolutely essential"; \
-			${FALSE} ;;					\
-		esac;							\
-	else								\
-		${PHASE_MSG} "Skipping vulnerability checks.";		\
-		${WARNING_MSG} "No ${PKGVULNDIR}/pkg-vulnerabilities file found."; \
-		${WARNING_MSG} "To fix, install the pkgsrc/security/audit-packages"; \
-		${WARNING_MSG} "package and run: \`\`${LOCALBASE}/sbin/download-vulnerability-list''."; \
-	fi
-.  endif
 .  if !empty(_ALLFILES)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TEST} -d ${_DISTDIR} || ${MKDIR} ${_DISTDIR}

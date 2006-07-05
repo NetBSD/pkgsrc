@@ -1,4 +1,4 @@
-# $NetBSD: bsd.install.mk,v 1.3 2006/06/06 00:25:26 jlam Exp $
+# $NetBSD: bsd.install.mk,v 1.4 2006/07/05 09:08:35 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to installing packages.
@@ -38,4 +38,4 @@ install: ${_PKGSRC_BUILD_TARGETS} install-cookie
 ###
 .PHONY: install-cookie
 install-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${_INSTALL_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_INSTALL_COOKIE}
