@@ -1,4 +1,4 @@
-# $NetBSD: bsd.configure.mk,v 1.1 2006/07/05 06:09:15 jlam Exp $
+# $NetBSD: bsd.configure.mk,v 1.2 2006/07/05 09:08:35 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to configuring packages for building.
@@ -36,4 +36,4 @@ configure: patch configure-cookie
 .PHONY: configure-cookie
 configure-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_CONFIGURE_COOKIE:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${_CONFIGURE_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_CONFIGURE_COOKIE}
