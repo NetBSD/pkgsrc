@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1859 2006/07/05 22:21:02 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1860 2006/07/05 23:27:34 rillig Exp $
 #
 # This file is in the public domain.
 #
@@ -602,14 +602,19 @@ update depends do-check-pkg-fail-or-skip-reason:
 .    if defined(SKIP_SILENT)
 	@${DO_NADA}
 .    else
+.      if defined(PKG_FAIL_REASON) && !empty(PKG_FAIL_REASON:M*)
 	@for str in ${PKG_FAIL_REASON}; do				\
 		${ERROR_MSG} "$$str";					\
 	done
-	@for str in ${PKG_SKIP_REASON}; do				\
+.      endif
+.      if defined(PKG_SKIP_REASON) && !empty(PKG_SKIP_REASON:M*)
+	@${WARNING_MSG} "Skipping ${PKGNAME}:";				\
+	for str in ${PKG_SKIP_REASON}; do				\
 		${WARNING_MSG} "$$str";					\
 	done
+.      endif
 .    endif
-.    if defined(PKG_FAIL_REASON)
+.    if defined(PKG_FAIL_REASON) && !empty(PKG_FAIL_REASON:M*)
 	@${FALSE}
 .    endif
 .  endif # SKIP
