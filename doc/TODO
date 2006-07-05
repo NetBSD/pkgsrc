@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5152 2006/07/04 20:07:51 wiz Exp $
+$NetBSD: TODO,v 1.5153 2006/07/05 08:43:21 tron Exp $
 
 Suggested new packages
 ======================
@@ -592,7 +592,6 @@ Suggested package updates
 	o gthumb-2.7.7
 	o gtk-send-pr-0.4.7
 	o gtk-systrace-20030623
-	o gtk2+-2.10.0
 	o gtk2-engines-2.6.9
 	o gtkam-0.1.13
 	o gtkhtml-3.10.2
