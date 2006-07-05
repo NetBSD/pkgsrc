@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.8 2006/07/05 09:08:35 jlam Exp $
+# $NetBSD: extract.mk,v 1.9 2006/07/05 22:21:02 jlam Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -53,11 +53,11 @@ _EXTRACT_TARGETS+=	release-extract-lock
 
 .PHONY: extract
 .if !target(extract)
-.  if !exists(${_EXTRACT_COOKIE})
-extract: ${_EXTRACT_TARGETS}
-.  else
+.  if exists(${_EXTRACT_COOKIE})
 extract:
 	@${DO_NADA}
+.  else
+extract: ${_EXTRACT_TARGETS}
 .  endif
 .endif
 
@@ -65,7 +65,12 @@ extract:
 acquire-extract-lock: acquire-lock
 release-extract-lock: release-lock
 
+.if exists(${_EXTRACT_COOKIE})
+${_EXTRACT_COOKIE}:
+	@${DO_NADA}
+.else
 ${_EXTRACT_COOKIE}: real-extract
+.endif
 
 ######################################################################
 ### real-extract (PRIVATE)
