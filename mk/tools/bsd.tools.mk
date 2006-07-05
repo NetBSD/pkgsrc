@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.37 2006/06/16 19:15:19 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.38 2006/07/05 04:32:10 jlam Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -141,6 +141,7 @@ post-tools:
 .include "${PKGSRCDIR}/mk/tools/autoconf.mk"
 .include "${PKGSRCDIR}/mk/tools/texinfo.mk"
 .include "${PKGSRCDIR}/mk/tools/gettext.mk"
+.include "${PKGSRCDIR}/mk/tools/intltool.mk"
 .include "${PKGSRCDIR}/mk/tools/ldconfig.mk"
 .include "${PKGSRCDIR}/mk/tools/rpcgen.mk"
 .include "${PKGSRCDIR}/mk/tools/strip.mk"
