@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.11 2006/07/05 20:12:06 wiz Exp $
+
+--- Makedefs.in.orig	2005-01-03 19:29:44.000000000 +0000
++++ Makedefs.in
+@@ -117,6 +117,7 @@ SSLLIBS		=	@SSLLIBS@
+ 
+ bindir		=	@bindir@
+ datadir		=	@datadir@
++datarootdir	=	@datarootdir@
+ exec_prefix	=	@exec_prefix@
+ includedir	=	@includedir@
+ infodir		=	@infodir@

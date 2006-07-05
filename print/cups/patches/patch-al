@@ -1,0 +1,12 @@
+$NetBSD: patch-al,v 1.6 2006/07/05 20:12:06 wiz Exp $
+
+--- cups.list.in.orig	2005-01-03 19:29:44.000000000 +0000
++++ cups.list.in
+@@ -58,6 +58,7 @@ $prefix=@prefix@
+ $exec_prefix=@exec_prefix@
+ $bindir=@bindir@
+ $datadir=@datadir@
++$datarootdir=@datarootdir@
+ $includedir=@includedir@
+ $infodir=@infodir@
+ $libdir=@libdir@
