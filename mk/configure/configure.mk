@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.2 2006/07/05 09:08:35 jlam Exp $
+# $NetBSD: configure.mk,v 1.3 2006/07/05 22:21:02 jlam Exp $
 #
 # CONFIGURE_SCRIPT is the path to the script to run in order to
 #	configure the software for building.  If the path is relative,
@@ -48,11 +48,13 @@ _CONFIGURE_TARGETS+=	release-configure-lock
 
 .PHONY: configure
 .if !target(configure)
-.  if !exists(${_CONFIGURE_COOKIE})
-configure: ${_CONFIGURE_TARGETS}
-.  else
+.  if exists(${_CONFIGURE_COOKIE})
 configure:
 	@${DO_NADA}
+.  elif exists(${_BARRIER_COOKIE})
+configure: ${_CONFIGURE_TARGETS}
+.  else
+configure: barrier
 .  endif
 .endif
 
@@ -60,29 +62,11 @@ configure:
 acquire-configure-lock: acquire-lock
 release-configure-lock: release-lock
 
+.if exists(${_CONFIGURE_COOKIE})
 ${_CONFIGURE_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-configure PKG_PHASE=configure || ${PKG_ERROR_HANDLER.configure}
-
-PKG_ERROR_CLASSES+=	configure
-PKG_ERROR_MSG.configure=						\
-	""								\
-	"There was an error during the \`\`configure'' phase."		\
-	"Please investigate the following for more information:"
-.if defined(GNU_CONFIGURE)
-PKG_ERROR_MSG.configure+=						\
-	"     * config.log"						\
-	"     * ${WRKLOG}"						\
-	""
+	@${DO_NADA}
 .else
-PKG_ERROR_MSG.configure+=						\
-	"     * log of the build"					\
-	"     * ${WRKLOG}"						\
-	""
-.endif
-.if defined(BROKEN_IN)
-PKG_ERROR_MSG.configure+=						\
-	"     * This package is broken in ${BROKEN_IN}."		\
-	"     * It may be removed in the next branch unless fixed."
+${_CONFIGURE_COOKIE}: real-configure
 .endif
 
 ######################################################################

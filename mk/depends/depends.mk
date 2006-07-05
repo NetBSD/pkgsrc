@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.8 2006/07/05 09:08:35 jlam Exp $
+# $NetBSD: depends.mk,v 1.9 2006/07/05 22:21:02 jlam Exp $
 
 ######################################################################
 ### depends (PUBLIC)
@@ -12,11 +12,11 @@ _DEPENDS_TARGETS+=	release-depends-lock
 
 .PHONY: depends
 .if !target(depends)
-.  if !exists(${_DEPENDS_COOKIE})
-depends: ${_DEPENDS_TARGETS}
-.  else
+.  if exists(${_DEPENDS_COOKIE})
 depends:
 	@${DO_NADA}
+.  else
+depends: ${_DEPENDS_TARGETS}
 .  endif
 .endif
 
@@ -24,7 +24,12 @@ depends:
 acquire-depends-lock: acquire-lock
 release-depends-lock: release-lock
 
+.if exists(${_DEPENDS_COOKIE})
+${_DEPENDS_COOKIE}:
+	@${DO_NADA}
+.else
 ${_DEPENDS_COOKIE}: real-depends
+.endif
 
 ######################################################################
 ### real-depends (PRIVATE)

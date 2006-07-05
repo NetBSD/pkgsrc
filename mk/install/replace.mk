@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.4 2006/06/05 22:49:44 jlam Exp $
+# $NetBSD: replace.mk,v 1.5 2006/07/05 22:21:02 jlam Exp $
 
 ######################################################################
 ### replace (PUBLIC)
@@ -12,7 +12,11 @@ _REPLACE_TARGETS+=	unprivileged-install-hook
 
 .PHONY: replace su-replace
 .if !target(replace)
+.  if exists(${_BARRIER_COOKIE})
 replace: ${_REPLACE_TARGETS} su-target
+.  else
+replace: barrier
+.  endif
 .endif
 
 replace-message:

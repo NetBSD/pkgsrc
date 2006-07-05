@@ -1,4 +1,4 @@
-# $NetBSD: bsd.install.mk,v 1.4 2006/07/05 09:08:35 jlam Exp $
+# $NetBSD: bsd.install.mk,v 1.5 2006/07/05 22:21:02 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to installing packages.
@@ -19,13 +19,16 @@ _INSTALL_COOKIE=	${WRKDIR}/.install_done
 ######################################################################
 ### install is a public target to install the package.
 ###
-.if defined(NO_INSTALL)
 .PHONY: install
-.  if !target(install)
+.if !defined(NO_INSTALL)
+.  include "${PKGSRCDIR}/mk/install/install.mk"
+.elif !target(install)
+.  if exists(${_INSTALL_COOKIE})
+install:
+	@${DO_NADA}
+.  else
 install: ${_PKGSRC_BUILD_TARGETS} install-cookie
 .  endif
-.else
-.  include "${PKGSRCDIR}/mk/install/install.mk"
 .endif
 
 .include "${PKGSRCDIR}/mk/install/deinstall.mk"

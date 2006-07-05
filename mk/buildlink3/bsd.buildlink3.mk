@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.179 2006/06/09 06:02:33 rillig Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.180 2006/07/05 22:21:02 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -163,19 +163,6 @@ _BLNK_DEPENDS+=	${_pkg_}
 BUILDLINK_DEPMETHOD.${_pkg_}?=	full
 .endfor
 
-# We skip the dependency calculation for some phases since they never
-# use the dependency information.
-#
-_BLNK_PHASES_SKIP_DEPENDS=	configure build test
-_BLNK_PHASES_RECURSIVE_DEPENDS=	none
-.if !empty(_BLNK_PHASES_SKIP_DEPENDS:M${PKG_PHASE})
-_BLNK_DEPENDS_LIST=	# empty
-.elif !empty(_BLNK_PHASES_RECURSIVE_DEPENDS:M${PKG_PHASE})
-_BLNK_DEPENDS_LIST=	${_BLNK_RECURSIVE_DEPENDS}
-.else
-_BLNK_DEPENDS_LIST=	${_BLNK_DEPENDS}
-.endif
-
 # Add the proper dependency on each package pulled in by buildlink3.mk
 # files.  BUILDLINK_DEPMETHOD.<pkg> contains a list of either "full" or
 # "build", and if any of that list is "full" then we use a full dependency
@@ -185,7 +172,7 @@ _BLNK_ADD_TO.DEPENDS=		# empty
 _BLNK_ADD_TO.BUILD_DEPENDS=	# empty
 _BLNK_ADD_TO.ABI_DEPENDS=	# empty
 _BLNK_ADD_TO.BUILD_ABI_DEPENDS=	# empty
-.for _pkg_ in ${_BLNK_DEPENDS_LIST}
+.for _pkg_ in ${_BLNK_DEPENDS}
 .  if !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mfull)
 _BLNK_DEPMETHOD.${_pkg_}=	_BLNK_ADD_TO.DEPENDS
 _BLNK_ABIMETHOD.${_pkg_}=	_BLNK_ADD_TO.ABI_DEPENDS
@@ -214,12 +201,12 @@ ${_BLNK_ABIMETHOD.${_pkg_}}+=	${_abi_}:${BUILDLINK_PKGSRCDIR.${_pkg_}}
 .  if !empty(_BLNK_ADD_TO.${_depmethod_})
 ${_depmethod_}+=	${_BLNK_ADD_TO.${_depmethod_}}
 .  endif
-.endfor	# _BLNK_DEPENDS_LIST
+.endfor	# _BLNK_DEPENDS
 
 ###
-### BEGIN: after "wrapper" phase
+### BEGIN: after the barrier
 ###
-.if !empty(PHASES_AFTER_WRAPPER:M${PKG_PHASE})
+.if exists(${_BARRIER_COOKIE})
 
 # Generate default values for:
 #
@@ -1081,7 +1068,7 @@ do-buildlink:
 	@${DO_NADA}
 .endif
 
-.endif	# PHASES_AFTER_WRAPPER
+.endif
 ###
-### END: after "wrapper" phase
+### END: after the barrier
 ###

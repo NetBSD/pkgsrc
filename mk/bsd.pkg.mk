@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1858 2006/07/05 06:09:15 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1859 2006/07/05 22:21:02 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -462,6 +462,9 @@ USE_TOOLS+=	shlock sleep
 
 # Tools
 .include "../../mk/tools/bsd.tools.mk"
+
+# Barrier
+.include "../../mk/bsd.pkg.barrier.mk"
 
 # Unprivileged builds
 .include "../../mk/unprivileged.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.package.mk,v 1.3 2006/06/05 22:49:44 jlam Exp $
+# $NetBSD: bsd.package.mk,v 1.4 2006/07/05 22:21:03 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to binary packages.
@@ -15,9 +15,14 @@ _PACKAGE_COOKIE=	${WRKDIR}/.package_done
 ######################################################################
 ### package is a public target to generate a binary package.
 ###
-.if defined(NO_PACKAGE)
 .PHONY: package
-.  if !target(package)
+.if !defined(NO_PACKAGE)
+.  include "${PKGSRCDIR}/mk/package/package.mk"
+.elif !target(package)
+.  if exists(${_PACKAGE_COOKIE})
+package:
+	@${DO_NADA}
+.  else
 package: install
 .    if defined(SKIP_SILENT)
 	@${DO_NADA}
@@ -25,8 +30,6 @@ package: install
 	@${PHASE_MSG} "${PKGNAME} may not be packaged: "${NO_PACKAGE:Q}"."
 .    endif
 .  endif
-.else
-.  include "${PKGSRCDIR}/mk/package/package.mk"
 .endif
 
 ######################################################################
