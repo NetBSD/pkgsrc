@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2006/05/15 09:17:14 minskim Exp $
-include/krb5/glob.h
-include/krb5/vis.h
