@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.647 2006/07/04 18:18:31 ghen Exp $
+$NetBSD: CHANGES-2006,v 1.648 2006/07/05 03:46:22 grant Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3266,3 +3266,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated converters/skf to 1.93.10 [yyamano 2006-07-04]
 	Updated editors/xemacs-packages to 1.16 [rpaulo 2006-07-04]
 	Updated mail/dovecot to 1.0rc2 [ghen 2006-07-04]
+	Updated textproc/p5-String-CRC32 1.4 [grant 2006-07-05]
