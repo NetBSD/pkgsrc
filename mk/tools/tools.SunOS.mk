@@ -1,4 +1,4 @@
-# $NetBSD: tools.SunOS.mk,v 1.24 2006/06/14 16:57:07 jlam Exp $
+# $NetBSD: tools.SunOS.mk,v 1.25 2006/07/05 04:32:10 jlam Exp $
 #
 # System-supplied tools for the Solaris operating system.
 
@@ -25,6 +25,11 @@ TOOLS_PLATFORM.date?=		/usr/xpg4/bin/date
 TOOLS_PLATFORM.diff?=		/bin/diff
 .elif exists(/usr/bin/diff)
 TOOLS_PLATFORM.diff?=		/usr/bin/diff
+.endif
+.if exists(/bin/diff3)
+TOOLS_PLATFORM.diff3?=		/bin/diff3
+.elif exists(/usr/bin/diff3)
+TOOLS_PLATFORM.diff3?=		/usr/bin/diff3
 .endif
 TOOLS_PLATFORM.dirname?=	/usr/bin/dirname
 TOOLS_PLATFORM.echo?=		/usr/ucb/echo
@@ -68,6 +73,11 @@ TOOLS_PLATFORM.printf?=		/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.rm?=		/usr/bin/rm
 TOOLS_PLATFORM.rmdir?=		/usr/bin/rmdir
+.if exists(/bin/sdiff)
+TOOLS_PLATFORM.sdiff?=		/bin/sdiff
+.elif exists(/usr/bin/sdiff)
+TOOLS_PLATFORM.sdiff?=		/usr/bin/sdiff
+.endif
 TOOLS_PLATFORM.sh?=		/bin/ksh
 TOOLS_PLATFORM.sleep?=		/bin/sleep
 .if exists(/usr/bin/soelim)
