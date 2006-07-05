@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2006/05/31 18:32:40 drochner Exp $
+# $NetBSD: Makefile.common,v 1.37 2006/07/05 05:37:44 jlam Exp $
 #
 
 GNOME_VFS2_VERSION=	2.14.2
@@ -19,7 +19,7 @@ PATCHDIR=		${.CURDIR}/../../sysutils/gnome-vfs2/patches
 
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 
 CONFIGURE_ARGS+=	--disable-cdda
@@ -101,5 +101,3 @@ do-install:
 	cd ${WRKSRC}/modules && ${LIBTOOL} --mode=finish \
 			${PREFIX}/lib/gnome-vfs-2.0/modules
 .endif
-
-.include "../../textproc/intltool/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/06/07 12:29:00 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2006/07/05 05:37:44 jlam Exp $
 #
 
 DISTNAME=	libgnomecups-0.2.2
@@ -10,7 +10,7 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME interface to CUPS
 
-USE_TOOLS+=		pkg-config msgfmt
+USE_TOOLS+=		intltool msgfmt pkg-config
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
@@ -19,5 +19,4 @@ PKGCONFIG_OVERRIDE=	libgnomecups-1.0.pc.in
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../print/cups/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

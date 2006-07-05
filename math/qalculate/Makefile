@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/06/14 20:14:21 adam Exp $
+# $NetBSD: Makefile,v 1.25 2006/07/05 05:37:43 jlam Exp $
 
 DISTNAME=	libqalculate-0.9.4
 PKGNAME=	qalculate-0.9.4
@@ -13,7 +13,7 @@ USE_GNU_READLINE=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libqalculate.pc.in
 
@@ -27,7 +27,6 @@ SUBST_STAGE.pthread=	post-patch
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../math/cln/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
