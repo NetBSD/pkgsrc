@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1857 2006/06/18 09:40:25 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1858 2006/07/05 06:09:15 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -26,6 +26,8 @@
 .include "${PKGSRCDIR}/mk/fetch/bsd.fetch-vars.mk"
 .include "${PKGSRCDIR}/mk/extract/bsd.extract-vars.mk"
 .include "${PKGSRCDIR}/mk/patch/bsd.patch-vars.mk"
+.include "${PKGSRCDIR}/mk/configure/bsd.configure-vars.mk"
+.include "${PKGSRCDIR}/mk/build/bsd.build-vars.mk"
 .include "${PKGSRCDIR}/mk/install/bsd.install-vars.mk"
 .include "${PKGSRCDIR}/mk/bsd.pkg.error.mk"
 
@@ -99,18 +101,13 @@ PKGNAME_NOREV=		${PKGNAME}
 ##### Others
 
 BUILD_DEPENDS?=		# empty
-BUILD_TARGET?=		all
 COMMENT?=		(no description)
-CONFIGURE_DIRS?=	${WRKSRC}
-CONFIGURE_SCRIPT?=	./configure
 DEPENDS?=		# empty
 DESCR_SRC?=		${PKGDIR}/DESCR
 DIGEST_ALGORITHMS?=	SHA1 RMD160
 DISTINFO_FILE?=		${PKGDIR}/distinfo
 INTERACTIVE_STAGE?=	none
 MAINTAINER?=		pkgsrc-users@NetBSD.org
-MAKE_FLAGS?=		# empty
-MAKEFILE?=		Makefile
 PATCH_DIGEST_ALGORITHM?=SHA1
 PKGWILDCARD?=		${PKGBASE}-[0-9]*
 SVR4_PKGNAME?=		${PKGNAME}
@@ -239,40 +236,6 @@ ALL_ENV+=	LINKER_RPATH_FLAG=${LINKER_RPATH_FLAG:Q}
 ALL_ENV+=	PATH=${PATH:Q}:${LOCALBASE}/bin:${X11BASE}/bin
 ALL_ENV+=	PREFIX=${PREFIX}
 
-MAKE_ENV+=	${ALL_ENV}
-MAKE_ENV+=	${NO_EXPORT_CPP:D:UCPP=${CPP:Q}}
-MAKE_ENV+=	LINK_ALL_LIBGCC_HACK=${LINK_ALL_LIBGCC_HACK:Q}
-MAKE_ENV+=	LOCALBASE=${LOCALBASE:Q}
-MAKE_ENV+=	NO_WHOLE_ARCHIVE_FLAG=${NO_WHOLE_ARCHIVE_FLAG:Q}
-MAKE_ENV+=	WHOLE_ARCHIVE_FLAG=${WHOLE_ARCHIVE_FLAG:Q}
-MAKE_ENV+=	X11BASE=${X11BASE:Q}
-MAKE_ENV+=	X11PREFIX=${X11PREFIX:Q}
-MAKE_ENV+=	PKGMANDIR=${PKGMANDIR:Q}
-
-# Constants to provide a consistent environment for packages using
-# BSD-style Makefiles.
-MAKE_ENV+=	MAKECONF=${PKGMAKECONF:U/dev/null}
-MAKE_ENV+=	OBJECT_FMT=${OBJECT_FMT:Q}
-MAKE_ENV+=	${USETOOLS:DUSETOOLS=${USETOOLS:Q}}
-
-SCRIPTS_ENV+=	${ALL_ENV}
-SCRIPTS_ENV+=	_PKGSRCDIR=${_PKGSRCDIR}
-SCRIPTS_ENV+=	${BATCH:DBATCH=yes}
-SCRIPTS_ENV+=	CURDIR=${.CURDIR}
-SCRIPTS_ENV+=	DEPENDS=${DEPENDS:Q}
-SCRIPTS_ENV+=	DISTDIR=${DISTDIR}
-SCRIPTS_ENV+=	FILESDIR=${FILESDIR}
-SCRIPTS_ENV+=	LOCALBASE=${LOCALBASE}
-SCRIPTS_ENV+=	PATCHDIR=${PATCHDIR}
-SCRIPTS_ENV+=	PKGSRCDIR=${PKGSRCDIR}
-SCRIPTS_ENV+=	SCRIPTDIR=${SCRIPTDIR}
-SCRIPTS_ENV+=	VIEWBASE=${VIEWBASE}
-SCRIPTS_ENV+=	WRKDIR=${WRKDIR}
-SCRIPTS_ENV+=	WRKSRC=${WRKSRC}
-SCRIPTS_ENV+=	X11BASE=${X11BASE}
-
-CONFIGURE_ENV+=	${ALL_ENV}
-
 # Store the result in the +BUILD_INFO file so we can query for the build
 # options using "pkg_info -Q PKG_OPTIONS <pkg>".
 #
@@ -295,22 +258,6 @@ _NONZERO_FILESIZE_P=	${AWK} 'END { exit (NR > 0) ? 0 : 1; }'
 # Automatically increase process limit where necessary for building.
 _ULIMIT_CMD=		${UNLIMIT_RESOURCES:@_lim_@${ULIMIT_CMD_${_lim_}};@}
 
-# If GNU_CONFIGURE is defined, then pass LIBS to the GNU configure script.
-# also pass in a CONFIG_SHELL to avoid picking up bash
-.if defined(GNU_CONFIGURE)
-CONFIG_SHELL?=		${SH}
-CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL:Q}
-CONFIGURE_ENV+=		LIBS=${LIBS:M*:Q}
-CONFIGURE_ENV+=		install_sh=${INSTALL:Q}
-.  if (defined(USE_LIBTOOL) || !empty(PKGDIR:M*/libtool-base)) && defined(_OPSYS_MAX_CMDLEN_CMD)
-CONFIGURE_ENV+=		lt_cv_sys_max_cmd_len=${_OPSYS_MAX_CMDLEN_CMD:sh}
-.  endif
-.endif
-
-_WRAPPER_COOKIE=	${WRKDIR}/.wrapper_done
-_CONFIGURE_COOKIE=	${WRKDIR}/.configure_done
-_BUILD_COOKIE=		${WRKDIR}/.build_done
-_TEST_COOKIE=		${WRKDIR}/.test_done
 _INTERACTIVE_COOKIE=	${.CURDIR}/.interactive_stage
 _NULL_COOKIE=		${WRKDIR}/.null
 
@@ -395,6 +342,13 @@ _PKGSRC_BUILD_TARGETS=	build test
 _PKGSRC_BUILD_TARGETS=	build
 .endif
 
+# OVERRIDE_DIRDEPTH represents the common directory depth under
+#	${WRKSRC} up to which we find the files that need to be
+#	overridden.  By default, we search two levels down, i.e.,
+#	*/*/file.
+#
+OVERRIDE_DIRDEPTH?=	2
+
 # The user can override the NO_PACKAGE by specifying this from
 # the make command line
 .if defined(FORCE_PACKAGE)
@@ -446,59 +400,6 @@ ERROR_CAT?=		${SED} -e "s|^|ERROR: |" 1>&2
 # How to do nothing.  Override if you, for some strange reason, would rather
 # do something.
 DO_NADA?=		${TRUE}
-
-.if defined(GNU_CONFIGURE)
-HAS_CONFIGURE=		yes
-
-GNU_CONFIGURE_PREFIX?=	${PREFIX}
-CONFIGURE_ARGS+=	--prefix=${GNU_CONFIGURE_PREFIX:Q}
-
-USE_GNU_CONFIGURE_HOST?=	yes
-.  if !empty(USE_GNU_CONFIGURE_HOST:M[yY][eE][sS])
-CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
-.  endif
-
-# Support for alternative info directories in packages is very sketchy.
-# For now, if we configure a package to install entirely into a
-# subdirectory of ${PREFIX}, then root the info directory directly under
-# that subdirectory.
-#
-CONFIGURE_HAS_INFODIR?=	yes
-.  if ${GNU_CONFIGURE_PREFIX} == ${PREFIX}
-GNU_CONFIGURE_INFODIR?=	${GNU_CONFIGURE_PREFIX}/${PKGINFODIR}
-.  else
-GNU_CONFIGURE_INFODIR?=	${GNU_CONFIGURE_PREFIX}/info
-.  endif
-.  if defined(INFO_FILES) && !empty(CONFIGURE_HAS_INFODIR:M[yY][eE][sS])
-CONFIGURE_ARGS+=	--infodir=${GNU_CONFIGURE_INFODIR:Q}
-.  endif
-
-CONFIGURE_HAS_MANDIR?=	yes
-GNU_CONFIGURE_MANDIR?=	${GNU_CONFIGURE_PREFIX}/${PKGMANDIR}
-.  if !empty(CONFIGURE_HAS_MANDIR:M[yY][eE][sS])
-CONFIGURE_ARGS+=	--mandir=${GNU_CONFIGURE_MANDIR:Q}
-.  endif
-
-#
-# By default, override GNU configure scripts so that the generated
-# config.status scripts never do anything on "recheck".
-#
-CONFIGURE_SCRIPTS_OVERRIDE?=	\
-	configure */configure */*/configure
-.endif
-
-.if defined(GNU_CONFIGURE) || defined(OVERRIDE_GNU_CONFIG_SCRIPTS)
-#
-# By default, override config.guess and config.sub for GNU configure
-# packages. pkgsrc's updated versions of these scripts allows GNU
-# configure to recognise NetBSD ports such as shark.
-#
-CONFIG_GUESS_OVERRIDE?=		\
-	config.guess */config.guess */*/config.guess */*/*/config.guess
-CONFIG_SUB_OVERRIDE?=		\
-	config.sub */config.sub */*/config.sub */*/*/config.sub
-CONFIG_RPATH_OVERRIDE?=		# set by platform file as needed
-.endif
 
 #
 # Config file related settings - see doc/pkgsrc.txt
@@ -607,11 +508,6 @@ _PATH_CMD= \
 	${ECHO} "$$path"
 PATH=	${_PATH_CMD:sh} # DOES NOT use :=, to defer evaluation
 .endif
-
-# Add these bits to the environment use when invoking the sub-make
-# processes for build-related phases.
-#
-BUILD_ENV+=		PATH=${PATH:Q}
 
 .MAIN: all
 
@@ -731,7 +627,6 @@ do-check-pkg-fail-reason: do-check-pkg-fail-or-skip-reason
 BUILD_DEFS+=	PKGPATH
 BUILD_DEFS+=	OPSYS OS_VERSION MACHINE_ARCH MACHINE_GNU_ARCH
 BUILD_DEFS+=	CPPFLAGS CFLAGS FFLAGS LDFLAGS
-BUILD_DEFS+=	CONFIGURE_ENV CONFIGURE_ARGS
 BUILD_DEFS+=	OBJECT_FMT LICENSE RESTRICTED
 BUILD_DEFS+=	NO_SRC_ON_FTP NO_SRC_ON_CDROM
 BUILD_DEFS+=	NO_BIN_ON_FTP NO_BIN_ON_CDROM
@@ -759,27 +654,6 @@ all: ${_PKGSRC_BUILD_TARGETS}
 .if (defined(NO_CHECKSUM) || exists(${_EXTRACT_COOKIE})) && !target(checksum)
 checksum: fetch
 	@${DO_NADA}
-.endif
-
-# Disable wrapper
-.PHONY: wrapper
-.if defined(NO_BUILD) && !target(wrapper)
-wrapper: patch
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${_WRAPPER_COOKIE}
-.endif
-
-# Disable configure
-.PHONY: configure
-.if defined(NO_CONFIGURE) && !target(configure)
-configure: wrapper
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${_CONFIGURE_COOKIE}
-.endif
-
-# Disable build
-.PHONY: _build
-.if defined(NO_BUILD)
-_build: configure
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${_BUILD_COOKIE}
 .endif
 
 ################################################################
@@ -880,297 +754,6 @@ makedirs: ${.CURDIR}/${WRKDIR_BASENAME}
 	fi
 .endif
 
-
-# Configure
-
-# _CONFIGURE_PREREQ is a list of targets to run after pre-configure but before
-#	do-configure.  These targets typically edit the files used by the
-#	do-configure target.  The targets are run as dependencies of
-#	pre-configure-override.
-#
-# _CONFIGURE_POSTREQ is a list of targets to run after do-configure but before
-#	post-configure.  These targets typically edit the files generated by
-#	the do-configure target that are used during the build phase.
-
-.if defined(USE_PKGLOCALEDIR)
-_PKGLOCALEDIR=			${PREFIX}/${PKGLOCALEDIR}/locale
-REPLACE_LOCALEDIR_PATTERNS?=	# empty
-_REPLACE_LOCALEDIR_PATTERNS=	${REPLACE_LOCALEDIR_PATTERNS}
-.  if defined(HAS_CONFIGURE) || defined(GNU_CONFIGURE)
-_REPLACE_LOCALEDIR_PATTERNS+=	[Mm]akefile.in*
-.  else
-_REPLACE_LOCALEDIR_PATTERNS+=	[Mm]akefile*
-.  endif
-_REPLACE_LOCALEDIR_PATTERNS_FIND_cmd= \
-	cd ${WRKSRC} && \
-	${ECHO} "__dummy-entry__" && \
-	${FIND} . \( ${_REPLACE_LOCALEDIR_PATTERNS:C/.*/-o -name "&"/g:S/-o//1} \) -print \
-	| ${SED} -e 's|^\./||' \
-	| ${SORT} -u
-REPLACE_LOCALEDIR?=	# empty
-_REPLACE_LOCALEDIR=	\
-	${REPLACE_LOCALEDIR}						\
-	${_REPLACE_LOCALEDIR_PATTERNS_FIND_cmd:sh:N__dummy-entry__:N*.orig}
-
-_CONFIGURE_PREREQ+=		subst-pkglocaledir
-.  if empty(USE_PKGLOCALEDIR:M[nN][oO])
-SUBST_CLASSES+=			pkglocaledir
-.  endif
-SUBST_MESSAGE.pkglocaledir=	Fixing locale directory references.
-SUBST_FILES.pkglocaledir=	${_REPLACE_LOCALEDIR}
-SUBST_SED.pkglocaledir=		\
-	-e 's|^\(localedir[ 	:]*=\).*|\1 ${_PKGLOCALEDIR}|'		\
-	-e 's|^\(gnulocaledir[ 	:]*=\).*|\1 ${_PKGLOCALEDIR}|'		\
-	-e 's|\(-DLOCALEDIR[ 	]*=\)[^ 	]*\(\.\*\)|\1"\\"${_PKGLOCALEDIR}\\""\2|'
-.endif
-
-.if defined(REPLACE_PERL)
-REPLACE_INTERPRETER+=	perl
-REPLACE.perl.old=	.*/bin/perl
-REPLACE.perl.new=	${PERL5}
-REPLACE_FILES.perl=	${REPLACE_PERL}
-.endif
-
-.if defined(REPLACE_INTERPRETER)
-
-# After 2006Q2, all instances of _REPLACE.* and _REPLACE_FILES.* should
-# have been replaced with REPLACE.* and REPLACE_FILES.*. This code is
-# then no longer needed.
-.  for _lang_ in ${REPLACE_INTERPRETER}
-REPLACE.${_lang_}.old?=		${_REPLACE.${_lang_}.old}
-REPLACE.${_lang_}.new?=		${_REPLACE.${_lang_}.new}
-REPLACE_FILES.${_lang_}?=	${_REPLACE_FILES.${_lang_}}
-.  endfor
-
-_CONFIGURE_PREREQ+=	replace-interpreter
-.PHONY: replace-interpreter
-replace-interpreter:
-.  for lang in ${REPLACE_INTERPRETER}
-.    for pattern in ${REPLACE_FILES.${lang}}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cd ${WRKSRC};							\
-	for f in ${pattern}; do						\
-	    if [ -f $${f} ]; then					\
-		    ${SED} -e '1s|^#!${REPLACE.${lang}.old}|#!${REPLACE.${lang}.new}|' \
-			    $${f} > $${f}.new;				\
-		    if [ -x $${f} ]; then				\
-			    ${CHMOD} a+x $${f}.new;			\
-		    fi;							\
-		    ${MV} -f $${f}.new $${f};				\
-	    else							\
-		${ECHO_MSG} "[bsd.pkg.mk:replace-interpreter] WARNING: Skipping non-existent file \"$$f\"." 1>&2; \
-	    fi;								\
-	done
-.    endfor
-.  endfor
-.endif
-
-.if defined(USE_LIBTOOL) && defined(LTCONFIG_OVERRIDE)
-_CONFIGURE_PREREQ+=	do-ltconfig-override
-.PHONY: do-ltconfig-override
-do-ltconfig-override:
-.  for ltconfig in ${LTCONFIG_OVERRIDE}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${ltconfig} ]; then					\
-		${RM} -f ${ltconfig};					\
-		${ECHO} "${RM} -f libtool; ${LN} -s ${_LIBTOOL} libtool" \
-			> ${ltconfig};					\
-		${CHMOD} +x ${ltconfig};				\
-	fi
-.  endfor
-.endif
-
-_CONFIGURE_PREREQ+=	do-config-star-override
-.PHONY: do-config-star-override
-do-config-star-override:
-.if defined(GNU_CONFIGURE) || defined(OVERRIDE_GNU_CONFIG_SCRIPTS)
-.  if !empty(CONFIG_GUESS_OVERRIDE)
-.    for _pattern_ in ${CONFIG_GUESS_OVERRIDE}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
-	for file in ${_pattern_}; do					\
-		if [ -f "$$file" ]; then				\
-			${RM} -f $$file;				\
-			${LN} -s ${PKGSRCDIR}/mk/gnu-config/config.guess \
-				$$file;					\
-		fi;							\
-	done
-.    endfor
-.  endif
-.  if !empty(CONFIG_SUB_OVERRIDE)
-.    for _pattern_ in ${CONFIG_SUB_OVERRIDE}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
-	for file in ${_pattern_}; do					\
-		if [ -f "$$file" ]; then				\
-			${RM} -f $$file;				\
-			${LN} -s ${PKGSRCDIR}/mk/gnu-config/config.sub	\
-				$$file;					\
-		fi;							\
-	done
-.    endfor
-.  endif
-.  if !empty(CONFIG_RPATH_OVERRIDE)
-.    for _pattern_ in ${CONFIG_RPATH_OVERRIDE}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
-	for file in ${_pattern_}; do					\
-		if [ -f "$$file" ]; then				\
-			${RM} -f $$file;				\
-			${LN} -s ${PKGSRCDIR}/mk/gnu-config/config.rpath \
-				$$file;					\
-		fi;							\
-	done
-.    endfor
-.  endif
-.endif
-
-.if defined(CONFIGURE_SCRIPTS_OVERRIDE)
-_CONFIGURE_PREREQ+=	do-configure-scripts-override
-.PHONY: do-configure-scripts-override
-do-configure-scripts-override:
-.  for _pattern_ in ${CONFIGURE_SCRIPTS_OVERRIDE}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
-	for file in ${_pattern_}; do					\
-		if ${TEST} -f "$$file"; then				\
-			${AWK} '/ *-recheck *\| *--recheck.*\)/ {	\
-					print;				\
-					print "    # Avoid regenerating for rechecks on pkgsrc"; \
-					print "    exit 0";		\
-					next;				\
-				}					\
-				{ print }' $$file > $$file.override &&	\
-			${CHMOD} +x $$file.override &&			\
-			${MV} -f $$file.override $$file;		\
-		fi;							\
-	done
-.  endfor
-.endif
-
-PKGCONFIG_OVERRIDE_SED= \
-	'/^Libs:.*[ 	]/s|-L\([ 	]*[^ 	]*\)|${COMPILER_RPATH_FLAG}\1 -L\1|g'
-PKGCONFIG_OVERRIDE_STAGE?=	pre-configure
-
-.if defined(PKGCONFIG_OVERRIDE) && !empty(PKGCONFIG_OVERRIDE)
-.  if ${PKGCONFIG_OVERRIDE_STAGE} == "pre-configure"
-_CONFIGURE_PREREQ+=		subst-pkgconfig
-.  elif ${PKGCONFIG_OVERRIDE_STAGE} == "post-configure"
-_CONFIGURE_POSTREQ+=		subst-pkgconfig
-.  else
-SUBST_STAGE.pkgconfig=		${PKGCONFIG_OVERRIDE_STAGE}
-.  endif
-SUBST_CLASSES+=			pkgconfig
-SUBST_MESSAGE.pkgconfig=	Adding rpaths to pkgconfig files.
-SUBST_FILES.pkgconfig=		${PKGCONFIG_OVERRIDE:S/^${WRKSRC}\///}
-SUBST_SED.pkgconfig=		${PKGCONFIG_OVERRIDE_SED}
-.endif
-
-# By adding this target, it makes sure the above PREREQ's work.
-.PHONY: pre-configure-override
-pre-configure-override: ${_CONFIGURE_PREREQ}
-	@${DO_NADA}
-
-.PHONY: do-configure
-.if !target(do-configure)
-do-configure:
-.  if defined(HAS_CONFIGURE)
-.    for _dir_ in ${CONFIGURE_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
-	cd ${WRKSRC} && cd ${_dir_} &&					\
-	${SETENV}							\
-	    AWK=${TOOLS_AWK:Q}						\
-	    INSTALL=${INSTALL:Q}\ -c\ -o\ ${BINOWN}\ -g\ ${BINGRP}	\
-	    ac_given_INSTALL=${INSTALL:Q}\ -c\ -o\ ${BINOWN}\ -g\ ${BINGRP} \
-	    INSTALL_DATA=${INSTALL_DATA:Q}				\
-	    INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}			\
-	    INSTALL_GAME=${INSTALL_GAME:Q}				\
-	    INSTALL_GAME_DATA=${INSTALL_GAME_DATA:Q}			\
-	    INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}				\
-	    ${CONFIGURE_ENV} ${CONFIG_SHELL}				\
-	    ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
-.    endfor
-.  endif
-.  if defined(USE_IMAKE)
-.    for _dir_ in ${CONFIGURE_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	cd ${WRKSRC}; cd ${_dir_};					\
-	${SETENV} ${SCRIPTS_ENV} XPROJECTROOT=${X11BASE} ${XMKMF}
-.    endfor
-.  endif
-.endif
-
-.if defined(USE_LIBTOOL) && \
-    (defined(LIBTOOL_OVERRIDE) || defined(SHLIBTOOL_OVERRIDE))
-_CONFIGURE_POSTREQ+=	do-libtool-override
-.PHONY: do-libtool-override
-do-libtool-override:
-.  if defined(LIBTOOL_OVERRIDE)
-.    for _pattern_ in ${LIBTOOL_OVERRIDE}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
-	for file in ${_pattern_}; do					\
-		if [ -f "$$file" ]; then				\
-			${RM} -f $$file;				\
-			(${ECHO} '#!${CONFIG_SHELL}';			\
-		 	 ${ECHO} 'exec ${_LIBTOOL} "$$@"';		\
-			) > $$file;					\
-			${CHMOD} +x $$file;				\
-		fi;							\
-	done
-.    endfor
-.  endif
-.  if defined(SHLIBTOOL_OVERRIDE)
-.    for _pattern_ in ${SHLIBTOOL_OVERRIDE}
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC};			\
-	for file in ${_pattern_}; do					\
-		if [ -f "$$file" ]; then				\
-			${RM} -f $$file;				\
-			(${ECHO} '#!${CONFIG_SHELL}';			\
-		 	 ${ECHO} 'exec ${_SHLIBTOOL} "$$@"';		\
-			) > $$file;					\
-			${CHMOD} +x $$file;				\
-		fi;							\
-	done
-.    endfor
-.  endif
-.endif
-
-.PHONY: post-configure
-post-configure: ${_CONFIGURE_POSTREQ}
-
-# Build
-
-BUILD_DIRS?=		${CONFIGURE_DIRS}
-BUILD_MAKE_FLAGS?=	${MAKE_FLAGS}
-
-.PHONY: do-build
-.if !target(do-build)
-do-build:
-.  for _dir_ in ${BUILD_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
-	cd ${WRKSRC} && cd ${_dir_} &&					\
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}	\
-		-f ${MAKEFILE} ${BUILD_TARGET}
-.  endfor
-.endif
-
-#Test
-
-TEST_DIRS?=		${BUILD_DIRS}
-TEST_ENV+=		${MAKE_ENV}
-TEST_MAKE_FLAGS?=	${MAKE_FLAGS}
-
-.PHONY: do-test
-.if !target(do-test)
-do-test:
-.  if defined(TEST_TARGET) && !empty(TEST_TARGET)
-.    for _dir_ in ${TEST_DIRS}
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
-	cd ${WRKSRC} && cd ${_dir_} &&					\
-	${SETENV} ${TEST_ENV} ${MAKE_PROGRAM} ${TEST_MAKE_FLAGS}	\
-		-f ${MAKEFILE} ${TEST_TARGET}
-.    endfor
-.  else
-	@${DO_NADA}
-.  endif
-.endif
-
 .include "${PKGSRCDIR}/mk/flavor/bsd.flavor.mk"
 
 # Dependencies
@@ -1191,6 +774,12 @@ do-test:
 # Patch
 .include "${PKGSRCDIR}/mk/patch/bsd.patch.mk"
 
+# Configure
+.include "${PKGSRCDIR}/mk/configure/bsd.configure.mk"
+
+# Build
+.include "${PKGSRCDIR}/mk/build/bsd.build.mk"
+
 # Install
 .include "${PKGSRCDIR}/mk/install/bsd.install.mk"
 
@@ -1198,16 +787,6 @@ do-test:
 .include "${PKGSRCDIR}/mk/package/bsd.package.mk"
 
 .include "${PKGSRCDIR}/mk/bsd.pkg.update.mk"
-
-.PHONY: acquire-wrapper-lock acquire-configure-lock acquire-build-lock
-acquire-wrapper-lock: acquire-lock
-acquire-configure-lock: acquire-lock
-acquire-build-lock: acquire-lock
-
-.PHONY: release-wrapper-lock release-configure-lock release-build-lock
-release-wrapper-lock: release-lock
-release-configure-lock: release-lock
-release-build-lock: release-lock
 
 ################################################################
 # Skeleton targets start here
@@ -1217,128 +796,6 @@ release-build-lock: release-lock
 # targets don't do anything other than checking for cookies and
 # call the necessary targets/scripts.
 ################################################################
-
-.PHONY: wrapper
-.if !target(wrapper)
-wrapper: patch acquire-wrapper-lock ${_WRAPPER_COOKIE} release-wrapper-lock
-.endif
-
-.PHONY: configure
-.if !target(configure)
-configure: wrapper acquire-configure-lock ${_CONFIGURE_COOKIE} release-configure-lock
-.endif
-
-.PHONY: _build
-.if !target(_build)
-_build: configure acquire-build-lock ${_BUILD_COOKIE} release-build-lock
-.endif
-
-.PHONY: build
-.if !target(build)
-build: pkginstall
-.endif
-
-.PHONY: test
-.if !target(test)
-test: build ${_TEST_COOKIE}
-.endif
-
-${_WRAPPER_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-wrapper PKG_PHASE=wrapper
-
-PKG_ERROR_CLASSES+=	configure
-PKG_ERROR_MSG.configure=						\
-	""								\
-	"There was an error during the \`\`configure'' phase."		\
-	"Please investigate the following for more information:"
-.if defined(GNU_CONFIGURE)
-PKG_ERROR_MSG.configure+=						\
-	"     * config.log"						\
-	"     * ${WRKLOG}"						\
-	""
-.else
-PKG_ERROR_MSG.configure+=						\
-	"     * log of the build"					\
-	"     * ${WRKLOG}"						\
-	""
-.endif
-.if defined(BROKEN_IN)
-PKG_ERROR_MSG.configure+=						\
-	"     * This package is broken in ${BROKEN_IN}."		\
-	"     * It may be removed in the next branch unless fixed."
-.endif
-${_CONFIGURE_COOKIE}:
-.if !empty(INTERACTIVE_STAGE:Mconfigure) && defined(BATCH)
-	@${ERROR_MSG} "The configuration stage of this package requires user interaction"
-	@${ERROR_MSG} "Please configure manually with \"cd ${PKGDIR} && ${MAKE} configure\""
-	@${TOUCH} ${_INTERACTIVE_COOKIE}
-	@${FALSE}
-.else
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-configure PKG_PHASE=configure || ${PKG_ERROR_HANDLER.configure}
-.endif
-
-PKG_ERROR_CLASSES+=	build
-PKG_ERROR_MSG.build=	\
-	""								\
-	"There was an error during the \`\`build'' phase."		\
-	"Please investigate the following for more information:"	\
-	"     * log of the build"					\
-	"     * ${WRKLOG}"						\
-	""
-.if defined(BROKEN_IN)
-PKG_ERROR_MSG.build+=							\
-	"     * This package is broken in ${BROKEN_IN}."		\
-	"     * It may be removed in the next branch unless fixed."
-.endif
-${_BUILD_COOKIE}:
-.if !empty(INTERACTIVE_STAGE:Mbuild) && defined(BATCH)
-	@${ERROR_MSG} "The build stage of this package requires user interaction"
-	@${ERROR_MSG} "Please build manually with \"cd ${PKGDIR} && ${MAKE} build\""
-	@${TOUCH} ${_INTERACTIVE_COOKIE}
-	@${FALSE}
-.else
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-build PKG_PHASE=build || ${PKG_ERROR_HANDLER.build}
-.endif
-
-${_TEST_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-test PKG_PHASE=test
-
-.PHONY: wrapper-message
-.PHONY: configure-message build-message test-message
-wrapper-message:
-	@${PHASE_MSG} "Creating toolchain wrappers for ${PKGNAME}"
-configure-message:
-	@${PHASE_MSG} "Configuring for ${PKGNAME}"
-build-message:
-	@${PHASE_MSG} "Building for ${PKGNAME}"
-test-message:
-	@${PHASE_MSG} "Testing for ${PKGNAME}"
-
-.PHONY: wrapper-cookie
-.PHONY: configure-cookie build-cookie test-cookie
-wrapper-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${_WRAPPER_COOKIE}
-configure-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${_CONFIGURE_COOKIE}
-build-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${_BUILD_COOKIE}
-test-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG} ${TOUCH} ${TOUCH_FLAGS} ${_TEST_COOKIE}
-
-.ORDER: wrapper-message wrapper-vars pre-wrapper do-wrapper post-wrapper wrapper-cookie
-.ORDER: configure-message configure-vars pre-configure pre-configure-override do-configure post-configure configure-cookie
-.ORDER: build-message build-vars pre-build do-build post-build build-cookie
-.ORDER: test-message pre-test do-test post-test test-cookie
-
-# Please note that the order of the following targets is important, and
-# should not be modified (.ORDER is not recognised by make(1) in a serial
-# make i.e. without -j n)
-.PHONY: real-wrapper
-.PHONY: real-configure real-build real-test
-real-wrapper: wrapper-message wrapper-vars pre-wrapper do-wrapper post-wrapper wrapper-cookie error-check
-real-configure: configure-message configure-vars pre-configure pre-configure-override do-configure post-configure configure-cookie error-check
-real-build: build-message build-vars pre-build do-build post-build build-cookie error-check
-real-test: test-message pre-test do-test post-test test-cookie error-check
 
 # su-target is a macro target that does just-in-time su-to-root before
 # reinvoking the make process as root.  It acquires root privileges and
@@ -1369,22 +826,6 @@ su-target: .USE
 		${SU_CMD} ${_ROOT_CMD:Q};				\
 		${STEP_MSG} "Dropping \`\`${ROOT_USER}'' privileges.";	\
 	fi
-
-# Empty pre-* and post-* targets
-
-.for name in wrapper configure build test
-
-.  if !target(pre-${name})
-pre-${name}:
-	@${DO_NADA}
-.  endif
-
-.  if !target(post-${name})
-post-${name}:
-	@${DO_NADA}
-.  endif
-
-.endfor
 
 ################################################################
 # Some more targets supplied for users' convenience
