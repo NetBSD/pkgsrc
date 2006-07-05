@@ -1,26 +1,15 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-#	$NetBSD: skkserv.sh,v 1.2 2003/07/29 22:08:29 jmmv Exp $
+# $NetBSD: skkserv.sh,v 1.3 2006/07/05 07:09:33 jlam Exp $
 #
 # PROVIDE: skkserv
 # REQUIRE: DAEMON
+
+. /etc/rc.subr
  
 name="skkserv"
-command="@PREFIX@/libexec/skkserv"
-pidfile=""
+rcvar=$name
+command="@PREFIX@/libexec/${name}"
 
-cmd=${1:-start}
-
-case ${cmd} in
-start)
-	if [ -x ${command}  ]; then
-		echo "Starting ${name}."
-		${command} > /dev/null 2>&1
-	fi
-	;;
-*)
-	if [ -x ${command} ]; then
-		${command} ${cmd} > /dev/null 2>&1
-	fi
-	;;
-esac
+load_rc_config $name
+run_rc_command "$1"
