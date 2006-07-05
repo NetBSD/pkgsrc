@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.32 2006/06/14 16:57:07 jlam Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.33 2006/07/05 04:32:10 jlam Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -19,6 +19,7 @@ TOOLS_PLATFORM.csh?=		/bin/csh
 TOOLS_PLATFORM.cut?=		/usr/bin/cut
 TOOLS_PLATFORM.date?=		/bin/date
 TOOLS_PLATFORM.diff?=		/usr/bin/diff
+TOOLS_PLATFORM.diff3?=		/usr/bin/diff3
 TOOLS_PLATFORM.dirname?=	/usr/bin/dirname
 TOOLS_PLATFORM.echo?=		echo			# shell builtin
 TOOLS_PLATFORM.egrep?=		/usr/bin/egrep
@@ -74,6 +75,7 @@ TOOLS_PLATFORM.printf?=		/usr/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
+TOOLS_PLATFORM.sdiff?=		/usr/bin/sdiff
 TOOLS_PLATFORM.sed?=		/usr/bin/sed
 TOOLS_PLATFORM.sh?=		/bin/sh
 TOOLS_PLATFORM.shlock?=		/usr/bin/shlock

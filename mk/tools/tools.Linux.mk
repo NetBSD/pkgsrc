@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.36 2006/06/26 18:14:51 joerg Exp $
+# $NetBSD: tools.Linux.mk,v 1.37 2006/07/05 04:32:10 jlam Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -42,6 +42,11 @@ TOOLS_PLATFORM.date?=		/bin/date
 TOOLS_PLATFORM.diff?=		/bin/diff
 .elif exists(/usr/bin/diff)
 TOOLS_PLATFORM.diff?=		/usr/bin/diff
+.endif
+.if exists(/bin/diff3)
+TOOLS_PLATFORM.diff3?=		/bin/diff3
+.elif exists(/usr/bin/diff3)
+TOOLS_PLATFORM.diff3?=		/usr/bin/diff3
 .endif
 TOOLS_PLATFORM.dirname?=	/usr/bin/dirname
 TOOLS_PLATFORM.echo?=		echo			# shell builtin
@@ -152,6 +157,11 @@ TOOLS_PLATFORM.printf?=		/usr/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
+.if exists(/bin/sdiff)
+TOOLS_PLATFORM.sdiff?=		/bin/sdiff
+.elif exists(/usr/bin/sdiff)
+TOOLS_PLATFORM.sdiff?=		/usr/bin/sdiff
+.endif
 TOOLS_PLATFORM.sed?=		${TOOLS_PLATFORM.gsed}
 TOOLS_PLATFORM.sh?=		/bin/sh
 TOOLS_PLATFORM.sleep?=		/bin/sleep

@@ -1,4 +1,4 @@
-# $NetBSD: perl.mk,v 1.19 2005/08/06 06:18:45 jlam Exp $
+# $NetBSD: perl.mk,v 1.20 2006/07/05 04:32:10 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -50,6 +50,12 @@
 #
 .  include "../../lang/perl5/vars.mk"
 .else
+#
+# If a package doesn't explicitly say it uses perl, then create a "broken"
+# perl in the tools directory.
+#
+TOOLS_BROKEN+=		perl
+TOOLS_PATH.perl=	${TOOLS_CMD.perl}
 #
 # Some packages want the path to the perl tool, even if they don't have
 # dependency on perl, e.g. devel/cvs.
