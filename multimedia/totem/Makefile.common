@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2006/07/02 11:24:24 drochner Exp $
+# $NetBSD: Makefile.common,v 1.20 2006/07/05 05:37:43 jlam Exp $
 #
 
 DISTNAME=	totem-1.4.2
@@ -15,7 +15,7 @@ PLIST_SRC=	${.CURDIR}/../../multimedia/totem/PLIST
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES+=		c++
@@ -41,7 +41,6 @@ BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.10.0
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2006/04/17 13:46:53 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2006/07/05 05:37:47 jlam Exp $
 #
 
 DISTNAME=		gnome-themes-2.14.0
@@ -14,7 +14,7 @@ COMMENT=		Collection of themes and icons for GNOME 2
 CONFLICTS+=		clearlooks-metacity-[0-9]*
 
 USE_DIRS+=		gnome2-1.5 theme-1.0
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -54,7 +54,6 @@ pre-install:
 
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../wm/metacity/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk2-engines/buildlink3.mk"

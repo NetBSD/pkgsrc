@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/05/18 20:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/05 05:37:43 jlam Exp $
 #
 
 DISTNAME=	deskbar-applet-2.14.0.1
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 
 PKGCONFIG_OVERRIDE=	data/deskbar-applet.pc
 
@@ -34,7 +34,6 @@ PY_PATCHPLIST=			yes
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../x11/py-gnome2/buildlink3.mk"

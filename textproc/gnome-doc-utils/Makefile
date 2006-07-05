@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/07/02 10:40:13 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2006/07/05 05:37:45 jlam Exp $
 #
 
 DISTNAME=	gnome-doc-utils-0.6.0
@@ -14,7 +14,7 @@ COMMENT=	Documentation utilities for the GNOME project
 DEPENDS+=	${PYPKGPREFIX}-libxml2>=2.6.16:../../textproc/py-libxml2
 DEPENDS+=	${PYPKGPREFIX}-libxslt>=1.1.12:../../textproc/py-libxslt
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		intltool pkg-config
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 
@@ -39,7 +39,6 @@ post-install:
 	${PYTHONBIN} ${PYCOMPILEALL} ${PREFIX}/share/xml2po
 
 .include "../../lang/python/application.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/buildlink3.mk"
