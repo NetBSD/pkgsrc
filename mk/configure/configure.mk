@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.1 2006/07/05 06:09:15 jlam Exp $
+# $NetBSD: configure.mk,v 1.2 2006/07/05 09:08:35 jlam Exp $
 #
 # CONFIGURE_SCRIPT is the path to the script to run in order to
 #	configure the software for building.  If the path is relative,
@@ -40,6 +40,7 @@ BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS
 ######################################################################
 ### configure is a public target to configure the sources for building.
 ###
+_CONFIGURE_TARGETS+=	check-vulnerable
 _CONFIGURE_TARGETS+=	wrapper
 _CONFIGURE_TARGETS+=	acquire-configure-lock
 _CONFIGURE_TARGETS+=	${_CONFIGURE_COOKIE}
@@ -47,20 +48,20 @@ _CONFIGURE_TARGETS+=	release-configure-lock
 
 .PHONY: configure
 .if !target(configure)
+.  if !exists(${_CONFIGURE_COOKIE})
 configure: ${_CONFIGURE_TARGETS}
+.  else
+configure:
+	@${DO_NADA}
+.  endif
 .endif
 
 .PHONY: acquire-configure-lock release-configure-lock
 acquire-configure-lock: acquire-lock
 release-configure-lock: release-lock
 
-.if !exists(${_CONFIGURE_COOKIE})
 ${_CONFIGURE_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-configure PKG_PHASE=configure || ${PKG_ERROR_HANDLER.configure}
-.else
-${_CONFIGURE_COOKIE}:
-	@${DO_NADA}
-.endif
 
 PKG_ERROR_CLASSES+=	configure
 PKG_ERROR_MSG.configure=						\

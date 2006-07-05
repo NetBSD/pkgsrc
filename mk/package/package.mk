@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.9 2006/06/18 07:46:03 rillig Exp $
+# $NetBSD: package.mk,v 1.10 2006/07/05 09:08:35 jlam Exp $
 
 ######################################################################
 ### package (PUBLIC)
@@ -6,6 +6,7 @@
 ### package is a public target to generate a binary package.  It will
 ### acquire elevated privileges just-in-time.
 ###
+_PACKAGE_TARGETS+=	check-vulnerable
 _PACKAGE_TARGETS+=	install
 _PACKAGE_TARGETS+=	acquire-package-lock
 _PACKAGE_TARGETS+=	${_PACKAGE_COOKIE}
@@ -13,20 +14,20 @@ _PACKAGE_TARGETS+=	release-package-lock
 
 .PHONY: package
 .if !target(package)
+.  if !exists(${_PACKAGE_COOKIE})
 package: ${_PACKAGE_TARGETS}
+.  else
+package:
+	@${DO_NADA}
+.  endif
 .endif
 
 .PHONY: acquire-package-lock release-package-lock
 acquire-package-lock: acquire-lock
 release-package-lock: release-lock
 
-.if !exists(${_PACKAGE_COOKIE})
 ${_PACKAGE_COOKIE}:
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-package PKG_PHASE=package
-.else
-${_PACKAGE_COOKIE}:
-	@${DO_NADA}
-.endif
 
 ######################################################################
 ### real-package (PRIVATE)
@@ -54,7 +55,8 @@ package-message:
 ###
 .PHONY: package-cookie
 package-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${_PACKAGE_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_PACKAGE_COOKIE:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_PACKAGE_COOKIE}
 
 ######################################################################
 ### The targets below are run with elevated privileges.

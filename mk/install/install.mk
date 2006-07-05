@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.8 2006/06/14 07:51:47 jlam Exp $
+# $NetBSD: install.mk,v 1.9 2006/07/05 09:08:35 jlam Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -6,6 +6,7 @@
 ### install is a public target to install the package.  It will
 ### acquire elevated privileges just-in-time.
 ###
+_INSTALL_TARGETS+=	check-vulnerable
 _INSTALL_TARGETS+=	${_PKGSRC_BUILD_TARGETS}
 _INSTALL_TARGETS+=	acquire-install-lock
 _INSTALL_TARGETS+=	${_INSTALL_COOKIE}
@@ -13,20 +14,20 @@ _INSTALL_TARGETS+=	release-install-lock
 
 .PHONY: install
 .if !target(install)
+.  if !exists(${_INSTALL_COOKIE})
 install: ${_INSTALL_TARGETS}
+.  else
+install:
+	@${DO_NADA}
+.  endif
 .endif
 
 .PHONY: acquire-install-lock release-install-lock
 acquire-install-lock: acquire-lock
 release-install-lock: release-lock
 
-.if !exists(${_INSTALL_COOKIE})
 ${_INSTALL_COOKIE}: install-check-interactive
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-install PKG_PHASE=install
-.else
-${_INSTALL_COOKIE}:
-	@${DO_NADA}
-.endif
 
 ######################################################################
 ### real-install (PRIVATE)
