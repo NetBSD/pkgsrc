@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5156 2006/07/05 16:41:23 wiz Exp $
+$NetBSD: TODO,v 1.5157 2006/07/05 19:49:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -458,6 +458,7 @@ Suggested package updates
 	o drscheme-350
 	o dvdauthor-0.6.11
 	o dvdrip-0.97.12
+	o dvdstyler-1.5beta5
 	o dvipng-1.8
 	o dx-4.3.3
 	o e16menuedit2-0.0.3
