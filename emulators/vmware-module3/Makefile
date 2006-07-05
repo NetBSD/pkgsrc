@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/03/26 21:34:51 veego Exp $
+# $NetBSD: Makefile,v 1.21 2006/07/05 06:53:12 jlam Exp $
 
 DISTNAME=	vmware-netbsd-3.2.1.8
 PKGNAME=	vmware-module-3.2.1.8
@@ -15,8 +15,6 @@ CONFLICTS=	vmware-module-1.*
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 
 NO_CONFIGURE=	yes
-DEINSTALL_SRC=	# empty
-INSTALL_SRC=	${PKGDIR}/INSTALL
 
 NO_SRC_ON_FTP=		already there
 
@@ -62,9 +60,6 @@ do-install:
 		< ${WRKSRC}/rc.conf.d/vmware > ${WRKSRC}/rc.conf.d/vmware.patched
 	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/vmware.patched \
 		${PREFIX}/etc/rc.conf.d/vmware
-
-post-install:
-	PKG_PREFIX="${PREFIX}" ${SH} ${INSTALL_FILE} - POST-INSTALL
 
 .include "../../mk/bsd.pkg.mk"
 

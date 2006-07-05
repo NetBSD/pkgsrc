@@ -1,17 +1,19 @@
-#!/bin/sh
-#
-# $NetBSD: DEINSTALL,v 1.1 2004/08/18 17:52:25 ben Exp $
-#
+# $NetBSD: DEINSTALL,v 1.2 2006/07/05 06:53:12 jlam Exp $
 
-case $2 in
-	DEINSTALL) cat << EOF
+case "${STAGE}" in
+DEINSTALL)
+	DATADIR="${PKG_PREFIX}/share/ivan"
+	${RMDIR} -p ${DATADIR} 2>/dev/null || ${TRUE}
+	if ${TEST} -d ${DATADIR}; then
+		${CAT} << EOF
+======================================================================
+The records, log and bones were not wiped out by this deletion process.
+If you don't want them around, then please remove the following
+directory:
 
-=============================================================
-The records, log and bones were not wiped out by this
-deletion process. If you don't want them around, please
-remove ${PKG_PREFIX}/share/ivan.
-=============================================================
-
+	${DATADIR}
+======================================================================
 EOF
+	fi
 	;;
 esac

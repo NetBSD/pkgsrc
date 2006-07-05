@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2006/06/15 13:31:29 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/07/05 06:53:13 jlam Exp $
 #
 
 DISTNAME=	xscavenger-1.4.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.xdr.com/dash/
 EXTRACT_SUFX=	.tgz
@@ -17,8 +17,6 @@ USE_IMAKE=		yes
 CONFIGURE_DIRS=		src
 BUILD_DIRS=		${CONFIGURE_DIRS}
 NO_INSTALL_MANPAGES=	yes
-DEINSTALL_SRC=		${PKGDIR}/DEINSTALL
-INSTALL_SRC=		# empty
 
 CPPFLAGS+=	-DSOUNDDEV="\"${DEVOSSSOUND}\""
 
