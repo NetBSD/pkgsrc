@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.648 2006/07/05 03:46:22 grant Exp $
+$NetBSD: CHANGES-2006,v 1.649 2006/07/05 08:27:32 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3267,3 +3267,14 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated editors/xemacs-packages to 1.16 [rpaulo 2006-07-04]
 	Updated mail/dovecot to 1.0rc2 [ghen 2006-07-04]
 	Updated textproc/p5-String-CRC32 1.4 [grant 2006-07-05]
+	Updated graphics/glitz to 0.5.6 [drochner 2006-07-05]
+	Updated graphics/cairo to 1.2.0 [drochner 2006-07-05]
+	Updated security/libtasn1 to 0.3.5 [drochner 2006-07-05]
+	Added security/py-paramiko version 1.6 [drochner 2006-07-05]
+	Updated graphics/inkscape to 0.44 [drochner 2006-07-05]
+	Updated x11/gtk2 to 2.8.20 [drochner 2006-07-05]
+	Updated x11/vte to 0.12.2 [drochner 2006-07-05]
+	Updated x11/gnome2-terminal to 2.14.2 [drochner 2006-07-05]
+	Updated graphics/veusz to 0.10 [drochner 2006-07-05]
+	Updated math/capc-calc to 2.12.0.6 [drochner 2006-07-05]
+	Updated www/liferea to 1.0.16 [drochner 2006-07-05]
