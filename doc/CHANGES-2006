@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.651 2006/07/05 09:39:23 tron Exp $
+$NetBSD: CHANGES-2006,v 1.652 2006/07/05 15:50:15 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3280,3 +3280,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/liferea to 1.0.16 [drochner 2006-07-05]
 	Updated x11/gtk2 to 2.8.20nb1 [tron 2006-07-05]
 	Updated graphics/cairo to 1.2.0nb1 [tron 2006-07-05]
+	Updated net/openvpn to 2.0.7 [jlam 2006-07-05]
