@@ -1,4 +1,4 @@
-# $NetBSD: bsd.depends.mk,v 1.5 2006/06/12 01:20:37 jlam Exp $
+# $NetBSD: bsd.depends.mk,v 1.6 2006/07/05 22:21:02 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to dependencies.
@@ -34,12 +34,15 @@ DEPENDS_TARGET=		reinstall
 ### the package.
 ###
 .PHONY: depends
-.if defined(NO_DEPENDS)
-.  if !target(depends)
+.if !defined(NO_DEPENDS)
+.  include "${PKGSRCDIR}/mk/depends/depends.mk"
+.elif !target(depends)
+.  if exists(${_DEPENDS_COOKIE})
+depends:
+	@${DO_NADA}
+.  else
 depends: depends-cookie
 .  endif
-.else
-.  include "${PKGSRCDIR}/mk/depends/depends.mk"
 .endif
 
 ######################################################################
@@ -71,9 +74,10 @@ depends-clean:
 ### depends-cookie creates the depends "cookie" state file.  This should
 ### be overridden per package system flavor.
 ###
-.if !target(depends-cookie)
 .PHONY: depends-cookie
+.if !target(depends-cookie)
 depends-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_DEPENDS_COOKIE:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${_DEPENDS_COOKIE}
 .endif
+
