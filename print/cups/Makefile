@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2006/05/03 15:34:36 gdt Exp $
+# $NetBSD: Makefile,v 1.113 2006/07/05 20:12:06 wiz Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -35,6 +35,8 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		autoconf gmake
 USE_LIBTOOL=		yes
 INSTALL_TARGET=		installcups
+# patch-a[jkl] were added for 2.60
+AUTOCONF_REQD=		2.60
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
