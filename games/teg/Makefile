@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/06/29 19:56:16 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/05 05:37:41 jlam Exp $
 
 DISTNAME=		teg-0.11.1
 PKGREVISION=		6
@@ -13,11 +13,10 @@ USE_DIRS=		xdg-1.2 gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config msgfmt
+USE_TOOLS+=		intltool msgfmt pkg-config
 
 GCONF2_SCHEMAS+=	teg.schemas
 
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/GConf2/schemas.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

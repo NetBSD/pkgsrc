@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/17 13:46:51 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2006/07/05 05:37:46 jlam Exp $
 
 DISTNAME=	galeon-1.2.14
 PKGREVISION=	8
@@ -20,7 +20,7 @@ USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake intltool
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-mozilla-includes=${BUILDLINK_PREFIX.mozilla}/include/mozilla \
 			--with-mozilla-libs=${BUILDLINK_PREFIX.mozilla}/lib/mozilla \
@@ -37,7 +37,6 @@ CONFIGURE_ARGS+= --with-mozilla-snapshot=1.7
 .include	"../../devel/libglade/buildlink3.mk"
 .include	"../../devel/oaf/buildlink3.mk"
 .include	"../../graphics/gdk-pixbuf-gnome/buildlink3.mk"
-.include	"../../textproc/intltool/buildlink3.mk"
 .include	"../../textproc/libxml/buildlink3.mk"
 .include	"../../textproc/scrollkeeper/omf.mk"
 .include	"../../sysutils/gnome-vfs/buildlink3.mk"

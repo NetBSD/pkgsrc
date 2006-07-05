@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/07/02 11:07:03 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2006/07/05 05:37:41 jlam Exp $
 #
 
 DISTNAME=		gnucash-1.9.8
@@ -15,7 +15,7 @@ DEPENDS+=		guile-www-[0-9]*:../../devel/guile-www
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake makeinfo msgfmt pkg-config
+USE_TOOLS+=		gmake intltool makeinfo msgfmt pkg-config
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	lib/goffice-0.0.4/libgoffice-1.pc.in
@@ -61,7 +61,6 @@ BUILDLINK_API_DEPENDS.goffice+=	goffice>=0.1.2
 .include "../../misc/goffice/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 .include "../../www/gtkhtml38/buildlink3.mk"

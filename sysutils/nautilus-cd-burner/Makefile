@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2006/06/30 02:54:11 joerg Exp $
+# $NetBSD: Makefile,v 1.42 2006/07/05 05:37:45 jlam Exp $
 #
 
 DISTNAME=	nautilus-cd-burner-2.14.1
@@ -14,7 +14,7 @@ COMMENT=	CD burner view for Nautilus
 DEPENDS+=		{cdrtools,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrtools
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -51,6 +51,5 @@ BUILDLINK_API_DEPENDS.nautilus+=	nautilus>=2.13.4
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

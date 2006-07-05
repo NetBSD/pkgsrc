@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/06/11 13:06:19 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2006/07/05 05:37:46 jlam Exp $
 
 DISTNAME=		devilspie-0.17.1
 PKGREVISION=		1
@@ -11,7 +11,7 @@ COMMENT=		Window-matching utility to customize window behavior
 
 BUILD_DEPENDS+=		libxslt>=1.0:../../textproc/libxslt
 
-USE_TOOLS+=		pkg-config msgfmt
+USE_TOOLS+=		intltool msgfmt pkg-config
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 TEST_TARGET=		check
@@ -25,7 +25,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.9.1
 .include "../../devel/libglade2/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 

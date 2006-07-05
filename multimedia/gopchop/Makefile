@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/06/27 22:11:43 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2006/07/05 05:37:43 jlam Exp $
 #
 
 DISTNAME=		gopchop-1.1.7
@@ -16,11 +16,10 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		pkg-config msgfmt
+USE_TOOLS+=		intltool msgfmt pkg-config
 BROKEN_GETTEXT_DETECTION=	yes
 
 .include "../../multimedia/libmpeg2/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/06/11 14:52:23 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2006/07/05 05:37:47 jlam Exp $
 #
 
 DISTNAME=	xpad-1.12
@@ -13,7 +13,7 @@ COMMENT=	Sticky notes application in GTK 2
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 
 LIBS.SunOS+=		-lX11
@@ -23,5 +23,4 @@ BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

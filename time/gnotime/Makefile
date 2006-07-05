@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/06/29 18:58:19 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2006/07/05 05:37:45 jlam Exp $
 
 DISTNAME=	gnotime-2.2.1
 PKGREVISION=	8
@@ -11,7 +11,7 @@ COMMENT=	Time tracker for GNOME2
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake pkg-config msgfmt
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
@@ -26,7 +26,6 @@ GCONF2_SCHEMAS=		gnotime.schemas
 .include "../../devel/popt/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../www/gtkhtml38/buildlink3.mk"

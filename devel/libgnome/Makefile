@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2006/04/13 18:23:31 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2006/07/05 05:37:40 jlam Exp $
 #
 
 DISTNAME=	libgnome-2.14.1
@@ -13,7 +13,7 @@ COMMENT=	Core GNOME2 library (non-graphical)
 BUILDLINK_API_DEPENDS.esound+=	esound>=0.2.26
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
@@ -61,7 +61,6 @@ BUILDLINK_API_DEPENDS.libbonobo+=	libbonobo>=2.13.0
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

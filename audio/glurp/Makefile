@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/17 13:46:15 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/07/05 05:37:39 jlam Exp $
 #
 
 DISTNAME=	glurp-0.11.6
@@ -12,10 +12,9 @@ COMMENT=	Graphical GTK+2-based client for musicpd
 
 GNU_CONFIGURE=	yes
 USE_DIRS+=	xdg-1.1
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	intltool pkg-config
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade2/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

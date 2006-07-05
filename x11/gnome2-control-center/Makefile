@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2006/05/03 11:25:48 drochner Exp $
+# $NetBSD: Makefile,v 1.67 2006/07/05 05:37:47 jlam Exp $
 #
 
 DISTNAME=	control-center-2.14.1
@@ -14,7 +14,7 @@ COMMENT=	GNOME2 configuration utility
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.6
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--disable-alsa
@@ -63,7 +63,6 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.12
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../wm/metacity/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2006/06/13 17:30:08 drochner Exp $
+# $NetBSD: Makefile,v 1.61 2006/07/05 05:37:41 jlam Exp $
 #
 
 DISTNAME=	eog-2.14.2
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Eye of GNOME: an image viewing and cataloging program
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 
@@ -35,7 +35,6 @@ BUILDLINK_API_DEPENDS.libart2+=	libart2>=2.3.16
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs2/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

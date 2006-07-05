@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/06/22 10:29:10 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2006/07/05 05:37:44 jlam Exp $
 
 DISTNAME=	vino-2.13.5
 PKGREVISION=	1
@@ -13,7 +13,7 @@ COMMENT=	VNC server for GNOME
 USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake perl pkg-config msgfmt
+USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 GNU_CONFIGURE=		yes
 
 GCONF2_SCHEMAS=		vino-server.schemas
@@ -29,7 +29,6 @@ GCONF2_SCHEMAS=		vino-server.schemas
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

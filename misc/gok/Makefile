@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/06/29 23:49:15 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2006/07/05 05:37:43 jlam Exp $
 #
 
 DISTNAME=		gok-1.0.7
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME On-Screen Keyboard
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake pkg-config msgfmt
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -36,7 +36,6 @@ GCONF2_SCHEMAS=		gok.schemas
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../textproc/intltool/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
