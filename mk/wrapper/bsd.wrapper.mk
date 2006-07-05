@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.42 2006/07/05 04:32:10 jlam Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.43 2006/07/05 06:09:15 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -45,7 +45,7 @@ ECHO_WRAPPER_MSG?=	${ECHO}
 ECHO_WRAPPER_MSG?=	${TRUE}
 .endif
 
-.PHONY: do-wrapper
+.PHONY: generate-wrappers
 
 .include "../../mk/buildlink3/bsd.buildlink3.mk"
 
@@ -192,7 +192,7 @@ _WRAP_UNTRANSFORM_SEDFILE?=	${WRAPPER_TMPDIR}/untransform.sed
 
 # Generate the transformation sedfiles if we need them.
 .if !empty(_WRAP_TRANSFORM_CMDS)
-do-wrapper: ${_WRAP_TRANSFORM_SEDFILE} ${_WRAP_UNTRANSFORM_SEDFILE}
+generate-wrappers: ${_WRAP_TRANSFORM_SEDFILE} ${_WRAP_UNTRANSFORM_SEDFILE}
 _WRAP_TRANSFORM_SED+=	-f ${_WRAP_TRANSFORM_SEDFILE}
 _UNWRAP_SED=		-f ${_WRAP_UNTRANSFORM_SEDFILE}
 .endif
@@ -377,7 +377,7 @@ _WRAP_COOKIE.${_wrappee_}=	${WRAPPER_DIR}/.wrapper_${_wrappee_}_done
 
 .for _wrappee_ in ${_WRAPPEES_UNIQUE}
 PKG_${_wrappee_}?=	${${_wrappee_}}
-do-wrapper: ${_WRAP_COOKIE.${_wrappee_}}
+generate-wrappers: ${_WRAP_COOKIE.${_wrappee_}}
 ${_WRAP_COOKIE.${_wrappee_}}:						\
 		${_WRAPPER_SH.${_wrappee_}}				\
 		${_WRAP_ARG_PP.${_wrappee_}}				\
@@ -417,7 +417,7 @@ ${_WRAP_COOKIE.${_wrappee_}}:						\
 		IFS="$$save_IFS";					\
 		if ${TEST} ! -x "$$wrappee"; then			\
 			gen_wrapper=no;					\
-			${ECHO_WRAPPER_MSG} "Warning: unable to create ${_wrappee_} wrapper script: \`$$wrappee'"; \
+			${ECHO_WRAPPER_MSG} "Warning: unable to generate ${_wrappee_} wrapper script: \`$$wrappee'"; \
 		fi;							\
 		;;							\
 	esac;								\
@@ -436,7 +436,7 @@ ${_WRAP_COOKIE.${_wrappee_}}:						\
 
 .  for _alias_ in ${_WRAP_ALIASES.${_wrappee_}:S/^/${WRAPPER_BINDIR}\//}
 .    if !target(${_alias_})
-do-wrapper: ${_alias_}
+generate-wrappers: ${_alias_}
 ${_alias_}: ${_WRAP_COOKIE.${_wrappee_}}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	wrapper="${WRAPPER_${_wrappee_}:C/^/_asdf_/1:M_asdf_*:S/^_asdf_//}"; \
@@ -449,7 +449,7 @@ ${_alias_}: ${_WRAP_COOKIE.${_wrappee_}}
 .endfor	# _WRAPPEES_UNIQUE
 
 .for _target_ in ${WRAPPER_TARGETS}
-do-wrapper: ${_target_}
+generate-wrappers: ${_target_}
 .endfor
 
 ${WRAPPER_TMPDIR}/transform-solaris-gcc:				\
@@ -769,7 +769,58 @@ SUBST_POSTCMD.unwrap=	${DO_NADA}
 ### END: after "wrapper" phase
 ###
 
-.if !target(do-wrapper)
-do-wrapper:
+######################################################################
+######################################################################
+######################################################################
+
+_WRAPPER_COOKIE=	${WRKDIR}/.wrapper_done
+
+.PHONY: wrapper
+.if !target(wrapper)
+.  if defined(NO_BUILD)
+wrapper: patch wrapper-cookie
+.  else
+wrapper: patch acquire-wrapper-lock ${_WRAPPER_COOKIE} release-wrapper-lock
+.  endif
+.endif
+
+.PHONY: acquire-wrapper-lock release-wrapper-lock
+acquire-wrapper-lock: acquire-lock
+release-wrapper-lock: release-lock
+
+.if !exists(${_WRAPPER_COOKIE})
+${_WRAPPER_COOKIE}:
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-wrapper PKG_PHASE=wrapper
+.else
+${_WRAPPER_COOKIE}:
 	@${DO_NADA}
 .endif
+
+.PHONY: real-wrapper
+real-wrapper: wrapper-message wrapper-vars pre-wrapper do-wrapper post-wrapper wrapper-cookie error-check
+
+.PHONY: wrapper-message
+wrapper-message:
+	@${PHASE_MSG} "Creating toolchain wrappers for ${PKGNAME}"
+
+.PHONY: pre-wrapper do-wrapper post-wrapper
+
+.if !target(do-wrapper)
+do-wrapper: generate-wrappers
+	@${DO_NADA}
+.endif
+
+.if !target(pre-wrapper)
+pre-wrapper:
+	@${DO_NADA}
+.endif
+
+.if !target(post-wrapper)
+post-wrapper:
+	@${DO_NADA}
+.endif
+
+.PHONY: wrapper-cookie
+wrapper-cookie:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_WRAPPER_COOKIE:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} >> ${_WRAPPER_COOKIE}
