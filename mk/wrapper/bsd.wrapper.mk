@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.41 2006/07/02 09:45:23 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.42 2006/07/05 04:32:10 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -120,7 +120,7 @@ WRAPPEES+=	CC
 WRAPPEES+=	CPP
 WRAPPEES+=	CXX
 WRAPPEES+=	FC
-.if defined(USE_X11)
+.if !empty(USE_TOOLS:C/:.*//:Mimake)
 IMAKE?=		${X11BASE}/bin/imake
 WRAPPEES+=	IMAKE
 .endif

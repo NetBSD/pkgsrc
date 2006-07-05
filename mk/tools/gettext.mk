@@ -1,4 +1,4 @@
-# $NetBSD: gettext.mk,v 1.4 2006/04/15 16:48:12 jlam Exp $
+# $NetBSD: gettext.mk,v 1.5 2006/07/05 04:32:10 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,7 +39,7 @@
 # is no native tool available.  Don't add "msgfmt" to this list as it's
 # treated specially below.
 #
-_TOOLS.gettext-tools=		gettext xgettext
+_TOOLS.gettext-tools=		gettext msgmerge xgettext
 _TOOLS_DEP.gettext-tools=	{gettext>=0.10.36,gettext-tools>=0.14.5}
 
 .for _t_ in ${_TOOLS.gettext-tools}

@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.34 2006/06/03 23:11:42 jlam Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.35 2006/07/05 04:32:10 jlam Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -24,8 +24,11 @@ PLIST_SUBST+=		IMAKE_MISCMAN_SUFFIX=${IMAKE_MISCMAN_SUFFIX:Q}
 PLIST_SUBST+=		IMAKE_MANNEWSUFFIX=${IMAKE_MANNEWSUFFIX:Q}
 .endif
 
-.if defined(USE_IMAKE)
+.if defined(USE_IMAKE) && empty(USE_TOOLS:Mitools)
 USE_X11BASE?=		implied
+.endif
+
+.if defined(USE_IMAKE)
 MAKE_FLAGS+=		CC=${CC:Q} CXX=${CXX:Q}
 .endif
 
@@ -98,6 +101,7 @@ LIBTOOL_OVERRIDE?=	libtool */libtool */*/libtool
 .if (defined(USE_X11BASE) || \
      defined(USE_IMAKE) || !empty(USE_TOOLS:Mimake) || \
      !empty(USE_TOOLS:Mimake\:*:Nimake\:pkgsrc)) && \
+    empty(USE_TOOLS:Mitools) && \
     empty(PKGPATH:Mpkgtools/xpkgwedge) && \
     !empty(USE_XPKGWEDGE:M[yY][eE][sS])
 BUILD_DEPENDS+=		xpkgwedge>=${_XPKGWEDGE_REQD:U1.15}:../../pkgtools/xpkgwedge

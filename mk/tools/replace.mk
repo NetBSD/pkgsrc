@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.170 2006/06/14 16:57:07 jlam Exp $
+# $NetBSD: replace.mk,v 1.171 2006/07/05 04:32:10 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -879,7 +879,7 @@ TOOLS_ALIASES.gsoelim=	soelim
 # These tools are all supplied by the devel/diffutils package if there is
 # no native tool available.
 #
-_TOOLS.diffutils=	cmp diff
+_TOOLS.diffutils=	cmp diff diff3 sdiff
 
 .for _t_ in ${_TOOLS.diffutils}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
@@ -982,11 +982,17 @@ _TOOLS.x11-imake=	imake makedepend mkdirhier xmkmf
 
 .for _t_ in ${_TOOLS.x11-imake}
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
-.    if !empty(PKGPATH:Mx11/XFree86-imake) || !empty(PKGPATH:Mx11/xorg-imake)
+.    if !empty(PKGPATH:Mdevel/nbitools) || \
+	!empty(PKGPATH:Mx11/XFree86-imake) || \
+	!empty(PKGPATH:Mx11/xorg-imake)
 MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_CREATE+=		${_t_}
-.      if defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
+.      if !empty(_USE_TOOLS:Mitools)
+TOOLS_DEPENDS.${_t_}?=	nbitools>=6.3nb4:../../devel/nbitools
+TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=nbitools
+TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/libexec/itools/${_t_}
+.      elif defined(X11_TYPE) && !empty(X11_TYPE:MXFree86)
 TOOLS_DEPENDS.${_t_}?=	XFree86-imake>=4.4.0:../../x11/XFree86-imake
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=imake
 TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/${X11ROOT_PREFIX}/bin/${_t_}
@@ -1006,7 +1012,7 @@ TOOLS_PATH.${_t_}=	${X11BASE}/bin/${_t_}
 # ${X11BASE}.
 #
 .if !defined(TOOLS_IGNORE.xmkmf) && !empty(_USE_TOOLS:Mxmkmf)
-.  if !empty(USE_XPKGWEDGE:M[yY][eE][sS])
+.  if !empty(USE_XPKGWEDGE:M[yY][eE][sS]) && empty(_USE_TOOLS:Mitools)
 TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.xpkgwedge=xpkgwedge
 TOOLS_PATH.xmkmf=	${TOOLS_PREFIX.xpkgwedge}/bin/pkgxmkmf
 .  endif

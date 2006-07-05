@@ -1,4 +1,4 @@
-# $NetBSD: imake.mk,v 1.17 2005/07/17 21:36:24 jlam Exp $
+# $NetBSD: imake.mk,v 1.18 2006/07/05 04:32:10 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -63,6 +63,11 @@
 USE_TOOLS+=	imake xmkmf
 .endif
 
+# itools implies all of the imake tools
+.if !empty(USE_TOOLS:Mitools)
+USE_TOOLS+=	imake makedepend mkdirhier xmkmf
+.endif
+
 # imake and xmkmf imply each other
 .if !empty(USE_TOOLS:Mimake) || !empty(USE_TOOLS:Mxmkmf)
 USE_TOOLS+=	imake xmkmf
@@ -73,8 +78,16 @@ USE_TOOLS+=	imake xmkmf
 USE_TOOLS+=	${IMAKE_TOOLS:Nimake}
 .endif
 
-TOOLS_ARGS.imake?=	${IMAKEOPTS}
-TOOLS_ARGS.xmkmf?=	${XMKMF_FLAGS}
+# Ensure that the correct commands are used when using nbitools.
+.if !empty(USE_TOOLS:Mitools)
+CONFIGURE_ENV+=		IMAKE_CMD=imake
+MAKE_ENV+=		IMAKE_CMD=imake
+SCRIPTS_ENV+=		IMAKE_CMD=imake
+TOOLS_ARGS.imake+=	-DImakeCmd=imake
+.endif
+
+TOOLS_ARGS.imake+=	${IMAKEOPTS}
+TOOLS_ARGS.xmkmf+=	${XMKMF_FLAGS}
 
 TOOLS_XMKMF=		${${_TOOLS_VARNAME.xmkmf}} -a
 XMKMF=			${${_TOOLS_VARNAME.xmkmf}} -a
