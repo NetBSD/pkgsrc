@@ -1,31 +1,41 @@
-# $NetBSD: Makefile,v 1.13 2005/12/29 06:21:45 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/07/05 04:55:24 jlam Exp $
 #
 
 DISTNAME=	sj3-2.0.1.20
 PKGNAME=	sj3-server-bin-2.0.1.20
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	ftp://ftp.sony.co.jp/pub/unsupported/src/	\
 		ftp://ftp.cs.titech.ac.jp/pub/japanese/sj3/
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-COMMENT=	Japanese input method (server binary)
+COMMENT=	SJ3 Japanese input method server & client
 
 DISTINFO_FILE=	${.CURDIR}/../sj3-lib/distinfo
 PATCHDIR=	${.CURDIR}/../sj3-lib/patches
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
-
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=	SJ3OWNER SJ3GROUP
-SJ3OWNER?=	daemon
-SJ3GROUP?=	daemon
-MAKE_ENV+=	SJ3OWNER=${SJ3OWNER:Q} SJ3GROUP=${SJ3GROUP:Q} \
+USE_TOOLS+=	itools
+USE_IMAKE=	yes
+MAKE_ENV+=	SJ3OWNER=${SJ3OWNER:Q} SJ3GROUP=${SJ3GROUP:Q}		\
 		IMDICTDIR=${IMDICTDIR:Q} LOCAL_LDFLAGS=${LDFLAGS:M*:Q}
 
-RCD_SCRIPTS=		sj3
+SJ3OWNER?=	daemon
+SJ3GROUP?=	daemon
+
+FILES_SUBST+=	IMDICTDIR=${IMDICTDIR:Q}
+FILES_SUBST+=	SJ3OWNER=${SJ3OWNER:Q}
+FILES_SUBST+=	SJ3GROUP=${SJ3GROUP:Q}
+
+PKG_GROUPS+=	${SJ3GROUP}
+PKG_USERS+=	${SJ3OWNER}:${SJ3GROUP}
+
+MAKE_DIRS+=		${IMDICTDIR}
+OWN_DIRS+=		${IMDICTDIR}/sj3
+OWN_DIRS_PERMS+=	${IMDICTDIR}/sj3/user ${SJ3OWNER} ${SJ3GROUP} 0755
+
+RCD_SCRIPTS=	sj3
 
 pre-configure:
 	@${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.orig
@@ -41,9 +51,5 @@ pre-configure:
 			$$file.orig > $$file;			\
 	 done
 
-do-configure:
-	@(cd ${WRKSRC}; ${XMKMF_CMD}; ${MAKE} Makefiles)
-
-.include "../../devel/nbitools/buildlink3.mk"
 .include "../../inputmethod/sj3-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
