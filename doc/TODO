@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5155 2006/07/05 16:40:04 wiz Exp $
+$NetBSD: TODO,v 1.5156 2006/07/05 16:41:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -397,9 +397,7 @@ Suggested package updates
 	o bzr-0.8.2
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.3
-	o cairo-1.2.0
 	o cal3d-0.10.0
-	o capc-calc-2.12.0.6
 	o catdoc-0.94
 	o catdoc-tk-0.94
 	o cbrowser-0.8 [pkg/30972]
@@ -562,7 +560,6 @@ Suggested package updates
 	o gnome-session-2.14.2
 	o gnome-spell-1.0.7
 	o gnome-themes-2.14.2
-	o gnome2-terminal-2.14.2
 	o gnomeicu-0.99.10
 	o gnopernicus-1.0.5
 	o gnucash-docs-1.9.0
@@ -712,7 +709,6 @@ Suggested package updates
 	o libtorrent-0.9.3
 	o libwpd-0.8.5
 	o licq-core-1.3.0
-	o liferea-1.0.16
 	o lilypond-2.8.0
 	o lincvs-1.5.0 [now called CrossVC]
 	o linuxsms-0.77
@@ -794,7 +790,6 @@ Suggested package updates
 	o nn-6.7.2
 	o ns-plugger-common-5.1.3
 	o nsca-1.2.0
-	o nsd-2.3.5
 	o nslint-2.1a3
 	o nss-3.11
 	o nss_ldap-248
@@ -1218,7 +1213,6 @@ Suggested package updates
 	o vobcopy-1.0.0
 	o vp-1.6
 	o vsftpd-2.0.5
-	o vte-0.12.2
 	o w32api-3.2
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
