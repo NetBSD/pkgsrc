@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/07/04 15:14:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2006/07/05 09:39:11 tron Exp $
 include/cairo/cairo-features.h
 include/cairo/cairo-ft.h
 include/cairo/cairo-glitz.h
@@ -15,6 +15,7 @@ lib/pkgconfig/cairo-glitz.pc
 lib/pkgconfig/cairo-pdf.pc
 lib/pkgconfig/cairo-png.pc
 lib/pkgconfig/cairo-ps.pc
+${QUARTZ}lib/pkgconfig/cairo-quartz.pc
 lib/pkgconfig/cairo-svg.pc
 lib/pkgconfig/cairo-xlib-xrender.pc
 lib/pkgconfig/cairo-xlib.pc
