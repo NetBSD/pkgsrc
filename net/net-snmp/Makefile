@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/06/17 17:20:56 christos Exp $
+# $NetBSD: Makefile,v 1.50 2006/07/06 18:13:08 joerg Exp $
 
 DISTNAME=	net-snmp-5.3.0.1
 PKGREVISION=	3
@@ -14,6 +14,8 @@ CONFLICTS=	ucd-snmp-[0-9]*
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+
+MAKE_ENV+=	OPSYS=${OPSYS:Q}
 
 # The self-test of Perl modules only works after installation because perl
 # can't load the shared libraries from WRKSRC/
