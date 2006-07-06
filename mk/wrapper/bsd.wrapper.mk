@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.45 2006/07/05 22:21:03 jlam Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.46 2006/07/06 18:19:45 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -781,11 +781,7 @@ _WRAPPER_COOKIE=	${WRKDIR}/.wrapper_done
 wrapper:
 	@${DO_NADA}
 .  elif exists(${_BARRIER_COOKIE})
-.    if defined(NO_BUILD)
-wrapper: patch wrapper-cookie
-.    else
 wrapper: check-vulnerable patch acquire-wrapper-lock ${_WRAPPER_COOKIE} release-wrapper-lock
-.    endif
 .  else
 wrapper: barrier
 .  endif
