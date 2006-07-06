@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2006/07/04 20:05:22 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2006/07/06 17:04:42 rillig Exp $
 
 DISTNAME=		cross-${TARGET_ARCH}-${DISTVERSION}
 DISTVERSION=		3.3.6
-PKGREVISION=		0
-CATEGORIES+=		cross lang
+CATEGORIES=		cross lang
 MASTER_SITES=		http://chiharu.hauN.org/peace/dist/
 
 MAINTAINER=		peace-sacrifice@hauN.org
@@ -22,7 +21,7 @@ BINUTILS_LDEMULATION=	i386pe
 TARGET_ARCH=		i386-netbsdpe
 GCC_CONFIGURE_ARGS+=	--enable-threads
 BINUTILS_EXTRAS=	dlltool dllwrap windres
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 # Mingw pathes
 DISTFILES+=		gcc-3.3.3-20040217-1-src.diff.gz
@@ -68,7 +67,8 @@ RANLIB_FOR_TARGET=	${WRKOBJ}/binutils/ranlib
 LD_FOR_TARGET=		${WRKOBJ}/ld/ld-new
 
 post-extract:
-	-${PATCH} -d ${WRKSRC} -p1 --forward --quiet -E < ${GCC_WIN32_PATCH}
+	${PATCH} -d ${WRKSRC} -p1 --forward --quiet -E < ${GCC_WIN32_PATCH} \
+	|| ${WARNING_MSG} "[${.TARGET}] The patch command failed with exitcode $$?"
 	${CP} ${WRKSRC}/gcc/config/i386/mingw32.h ${WRKSRC}/gcc/config/i386/netbsdpe.h
 	${CP} ${WRKSRC}/gcc/config/i386/t-cygming ${WRKSRC}/gcc/config/i386/t-netbsdpe
 
@@ -86,7 +86,7 @@ do-configure:
 #	@cd ${WRKOBJ}/libiberty && ${SETENV} CC="${CC}" CFLAGS="${CFLAGS}" \
 #		CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" \
 #		${WRKSRC}/libiberty/configure --prefix=${PREFIX}
-	@-mkdir -p ${WRKOBJ} ${WRKOBJ}/binutils ${WRKOBJ}/gas ${WRKOBJ}/ld
+	${MKDIR} ${WRKOBJ} ${WRKOBJ}/binutils ${WRKOBJ}/gas ${WRKOBJ}/ld
 	cd ${WRKOBJ} && ${CONFIGURE_ENV} ${BU_WRKSRC}/configure \
 		--prefix=${PREFIX} ${GCC_CONFIGURE_ARGS} --disable-nls
 	cd ${WRKOBJ}/binutils && ${CONFIGURE_ENV} ${BU_WRKSRC}/binutils/configure \
@@ -96,21 +96,21 @@ do-configure:
 	cd ${WRKOBJ}/ld && ${CONFIGURE_ENV} ${BU_WRKSRC}/ld/configure \
 		--prefix=${PREFIX} ${GCC_CONFIGURE_ARGS} --disable-nls
 # Build binutils before configuring gcc so that gcc's configure works correctly
-	@cd ${WRKOBJ} && ${GCC_MAKE}
-	@-mkdir -p ${WRKOBJ}/gcc
-	@cd ${WRKOBJ}/gcc && ${CONFIGURE_ENV} ${WRKSRC}/gcc/configure \
+	cd ${WRKOBJ} && ${GCC_MAKE}
+	${MKDIR} ${WRKOBJ}/gcc
+	cd ${WRKOBJ}/gcc && ${CONFIGURE_ENV} ${WRKSRC}/gcc/configure \
 		--prefix=${PREFIX} ${GCC_CONFIGURE_ARGS}
 
 do-build:
 	${LN} -sf ${AS_FOR_TARGET} ${WRKOBJ}/gcc/as
 	${LN} -sf ${LD_FOR_TARGET} ${WRKOBJ}/gcc/ld
-	@cd ${WRKOBJ}/gcc && ${GCC_MAKE}
+	cd ${WRKOBJ}/gcc && ${GCC_MAKE}
 
 do-install:
-	@cd ${WRKOBJ} && ${GCC_MAKE} installdirs install-binutils \
+	cd ${WRKOBJ} && ${GCC_MAKE} installdirs install-binutils \
 		install-gas install-ld
-	@cd ${WRKOBJ}/gas/doc && ${GCC_MAKE} install-man1
-	@cd ${WRKOBJ}/gcc && ${GCC_MAKE} install-common \
+	cd ${WRKOBJ}/gas/doc && ${GCC_MAKE} install-man1
+	cd ${WRKOBJ}/gcc && ${GCC_MAKE} install-common \
 		install-libgcc install-cpp install-po \
 		lang.install-normal install-driver
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/gcc-lib/${TARGET_ARCH}/${GCC_INTVERSION}/include
