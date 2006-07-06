@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.658 2006/07/06 20:57:03 adam Exp $
+$NetBSD: CHANGES-2006,v 1.659 2006/07/06 21:27:31 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3287,3 +3287,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/gettext-lib to 0.14.5nb2 [minskim 2006-07-06]
 	Added graphics/comix version 3.3 [wiz 2006-07-06]
 	Updated graphics/gimp24 to 2.3.10 [adam 2006-07-06]
+	Updated chat/xchat-systray-integration to 2.4.5nb4 [minskim 2006-07-06]
