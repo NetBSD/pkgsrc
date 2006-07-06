@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2006/03/21 19:26:31 drochner Exp $
+# $NetBSD: Makefile,v 1.48 2006/07/06 12:27:43 markd Exp $
 
 PKGNAME=	MesaLib-${MESA_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Graphics library similar to SGI's OpenGL
 
 .include "../../graphics/Mesa/Makefile.common"
