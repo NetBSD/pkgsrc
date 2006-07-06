@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2004/06/07 06:12:16 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2006/07/06 21:26:23 minskim Exp $
 
---- Makefile.orig	2004-04-30 07:38:10.000000000 -0500
+--- Makefile.orig	2004-04-30 12:38:10.000000000 +0000
 +++ Makefile
 @@ -1,10 +1,10 @@
  #UNIX VARS
@@ -17,8 +17,59 @@ $NetBSD: patch-aa,v 1.1 2004/06/07 06:12:16 minskim Exp $
  ifndef prefix
      prefix=/usr/
  endif
-@@ -94,11 +94,11 @@ systray.so: $(Objects)
- 	$(CC) $(CFLAGS) $(LIBS) $(Objects) -shared -o $(plugin)
+@@ -27,7 +27,7 @@ WINCFLAGS = $(WINGTKFLAGS) -DBUILDING_DL
+ WINObjects = src/away_system.o src/data_manager.o src/events.o src/menu.o src/settings.o src/warnings.o src/help.o src/systray.o
+ 
+ ifndef windows
+-	plugin = systray.so
++	plugin = systray.la
+ else 
+ 	plugin=Systray.dll
+ 	plugindir=C:/Program Files/X-Chat2/plugins/
+@@ -63,42 +63,42 @@ src/systray.o: src/systray.c
+ else 
+ 
+ src/eggtrayicon.o: src/libs/Unix/eggtrayicon.c
+-	$(CC) $(CFLAGS) $(GTKFLAGS) -c src/libs/Unix/eggtrayicon.c -o src/eggtrayicon.o
++	${SHLIBTOOL} --mode=compile ${CC} $(CFLAGS) $(GTKFLAGS) -c src/libs/Unix/eggtrayicon.c -o src/eggtrayicon.o
+ 	
+ src/away_system.o: src/away_system.c
+-	$(CC) $(CFLAGS) $(GTKFLAGS) -c src/away_system.c -o src/away_system.o
++	${SHLIBTOOL} --mode=compile ${CC} $(CFLAGS) $(GTKFLAGS) -c src/away_system.c -o src/away_system.o
+ 
+ src/data_manager.o: src/data_manager.c
+-	$(CC) $(CFLAGS) $(GTKFLAGS) -c src/data_manager.c -o src/data_manager.o
++	${SHLIBTOOL} --mode=compile ${CC} $(CFLAGS) $(GTKFLAGS) -c src/data_manager.c -o src/data_manager.o
+ 
+ src/events.o: src/events.c
+-	$(CC) $(CFLAGS) $(GTKFLAGS) -c src/events.c -o src/events.o
++	${SHLIBTOOL} --mode=compile ${CC} $(CFLAGS) $(GTKFLAGS) -c src/events.c -o src/events.o
+ 
+ src/menu.o: src/menu.c
+-	$(CC) $(CFLAGS) $(GTKFLAGS) -c src/menu.c -o src/menu.o
++	${SHLIBTOOL} --mode=compile ${CC} $(CFLAGS) $(GTKFLAGS) -c src/menu.c -o src/menu.o
+ 
+ src/help.o: src/help.c
+-	$(CC) $(CFLAGS) $(GTKFLAGS) -c src/help.c -o src/help.o
++	${SHLIBTOOL} --mode=compile ${CC} $(CFLAGS) $(GTKFLAGS) -c src/help.c -o src/help.o
+ 
+ src/settings.o: src/settings.c
+-	$(CC) $(CFLAGS) $(GTKFLAGS) -c src/settings.c -o src/settings.o
++	${SHLIBTOOL} --mode=compile ${CC} $(CFLAGS) $(GTKFLAGS) -c src/settings.c -o src/settings.o
+ 
+ src/warnings.o: src/warnings.c
+-	$(CC) $(CFLAGS) $(GTKFLAGS) -c src/warnings.c -o src/warnings.o
++	${SHLIBTOOL} --mode=compile ${CC} $(CFLAGS) $(GTKFLAGS) -c src/warnings.c -o src/warnings.o
+ 
+ src/systray.o: src/systray.c
+-	$(CC) $(CFLAGS) $(GTKFLAGS) -c src/systray.c -o src/systray.o
++	${SHLIBTOOL} --mode=compile ${CC} $(CFLAGS) $(GTKFLAGS) -c src/systray.c -o src/systray.o
+ endif
+ 
+-systray.so: $(Objects)
+-	$(CC) $(CFLAGS) $(LIBS) $(Objects) -shared -o $(plugin)
++systray.la: $(Objects)
++	${SHLIBTOOL} --mode=link ${CC} $(LIBS) ${Objects:.o=.lo} -o ${plugin} -rpath ${prefix}/lib -avoid-version -module
  
  install: all
 -	$(mkdir) -p $(plugindir)
@@ -27,7 +78,7 @@ $NetBSD: patch-aa,v 1.1 2004/06/07 06:12:16 minskim Exp $
 -	$(install) src/images/GTKTray $(plugindir)/ -r -f
 -	$(install) src/images/Menu $(plugindir)/ -r -f
 +	${BSD_INSTALL_LIB_DIR} $(plugindir)
-+	${BSD_INSTALL_LIB} $(plugin) $(plugindir)/$(plugin)
++	${SHLIBTOOL} --mode=install ${BSD_INSTALL_DATA} $(plugin) $(plugindir)
 +	for d in Win32Tray GTKTray Menu; do \
 +		${BSD_INSTALL_DATA_DIR} ${plugindir}/$${d}; \
 +		${BSD_INSTALL_DATA} src/images/$${d}/* ${plugindir}/$${d}; done
