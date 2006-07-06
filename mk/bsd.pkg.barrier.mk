@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.barrier.mk,v 1.2 2006/07/06 15:33:19 jlam Exp $
+# $NetBSD: bsd.pkg.barrier.mk,v 1.3 2006/07/06 15:43:10 jlam Exp $
 
 _BARRIER_COOKIE=	${WRKDIR}/.barrier_cookie
 
@@ -16,6 +16,7 @@ _BARRIER_POST_TARGETS=	wrapper
 _BARRIER_POST_TARGETS+=	configure
 _BARRIER_POST_TARGETS+=	build
 _BARRIER_POST_TARGETS+=	test
+_BARRIER_POST_TARGETS+=	all
 _BARRIER_POST_TARGETS+=	install
 _BARRIER_POST_TARGETS+=	reinstall
 _BARRIER_POST_TARGETS+=	package
