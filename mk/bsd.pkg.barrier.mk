@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.barrier.mk,v 1.4 2006/07/06 22:08:32 jlam Exp $
+# $NetBSD: bsd.pkg.barrier.mk,v 1.5 2006/07/06 22:17:57 jlam Exp $
 
 _BARRIER_COOKIE=	${WRKDIR}/.barrier_cookie
 
@@ -49,7 +49,7 @@ _BARRIER_CMDLINE_TARGETS+=	${_target_}
 ###
 
 .PHONY: barrier
-barrier: ${_BARRIER_PRE_TARGETS} barrier-cookie
+barrier: ${_BARRIER_PRE_TARGETS} ${_BARRIER_COOKIE}
 .if !exists(${_BARRIER_COOKIE})
 .  if defined(PKG_VERBOSE)
 	@${PHASE_MSG} "Invoking \`\`"${_BARRIER_CMDLINE_TARGETS:Q}"'' after barrier for ${PKGNAME}"
@@ -65,6 +65,6 @@ barrier: ${_BARRIER_PRE_TARGETS} barrier-cookie
 ######################################################################
 ### barrier-cookie creates the "barrier" cookie file.
 ###
-barrier-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_BARRIER_COOKIE:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_BARRIER_COOKIE}
+${_BARRIER_COOKIE}:
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${.TARGET}
