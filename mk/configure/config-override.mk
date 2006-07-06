@@ -1,4 +1,4 @@
-# $NetBSD: config-override.mk,v 1.1 2006/07/05 06:09:15 jlam Exp $
+# $NetBSD: config-override.mk,v 1.2 2006/07/06 13:25:57 jlam Exp $
 
 ######################################################################
 ### config-{guess,sub,rpath}-override (PRIVATE)
@@ -8,9 +8,9 @@
 ### versions under pkgsrc/mk/gnu-config.
 ###
 do-configure-pre-hook: config-guess-override
-do-configure-pre-hook: config-guess-override
+do-configure-pre-hook: config-sub-override
 .if defined(CONFIG_RPATH_OVERRIDE)
-do-configure-pre-hook: config-guess-override
+do-configure-pre-hook: config-rpath-override
 .endif
 
 _OVERRIDE_VAR.guess=	CONFIG_GUESS_OVERRIDE
@@ -28,7 +28,7 @@ _SCRIPT.config-${_sub_}-override=					\
 
 .PHONY: config-${_sub_}-override
 config-${_sub_}-override:
-	@${STEP_MSG} "Replacing config-* with pkgsrc versions"
+	@${STEP_MSG} "Replacing config-${_sub_} with pkgsrc versions"
 .  if defined(${_OVERRIDE_VAR.${_sub_}}) && !empty(${_OVERRIDE_VAR.${_sub_}})
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	cd ${WRKSRC};							\
