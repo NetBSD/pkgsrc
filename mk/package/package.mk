@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.11 2006/07/05 22:21:03 jlam Exp $
+# $NetBSD: package.mk,v 1.12 2006/07/06 22:08:32 jlam Exp $
 
 ######################################################################
 ### package (PUBLIC)
@@ -7,7 +7,11 @@
 ### acquire elevated privileges just-in-time.
 ###
 _PACKAGE_TARGETS+=	check-vulnerable
+.if make(replace)
+_PACKAGE_TARGETS+=	replace
+.else
 _PACKAGE_TARGETS+=	install
+.endif
 _PACKAGE_TARGETS+=	acquire-package-lock
 _PACKAGE_TARGETS+=	${_PACKAGE_COOKIE}
 _PACKAGE_TARGETS+=	release-package-lock
