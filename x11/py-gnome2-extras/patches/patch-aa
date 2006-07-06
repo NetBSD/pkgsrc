@@ -1,4 +1,4 @@
-1;5C$NetBSD: patch-aa,v 1.1 2006/07/04 15:15:01 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2006/07/06 16:27:28 rillig Exp $
 
 --- gtop/gtop.c.orig	2006-07-04 15:05:29.000000000 +0000
 +++ gtop/gtop.c
