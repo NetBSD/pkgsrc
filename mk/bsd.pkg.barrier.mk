@@ -1,19 +1,34 @@
-# $NetBSD: bsd.pkg.barrier.mk,v 1.1 2006/07/05 22:21:02 jlam Exp $
+# $NetBSD: bsd.pkg.barrier.mk,v 1.2 2006/07/06 15:33:19 jlam Exp $
 
 _BARRIER_COOKIE=	${WRKDIR}/.barrier_cookie
 
-# _BARRIER_POST_TARGETS is a list of the targets that must be built after
+# _BARRIER_PRE_TARGETS is a list of the targets that must be built before
 #	the "barrier" target invokes a new make.
 #
 _BARRIER_PRE_TARGETS=	patch
-_BARRIER_POST_TARGETS=	wrapper configure build install package
 
-# These targets have the "main" targets as sources, and so they must also
-# be barrier-aware.
+# _BARRIER_POST_TARGETS is a list of the targets that must be built after
+#	the "barrier" target invokes a new make.  This list is specially
+#	ordered so that if more than one is specified on the command-line,
+#	then pkgsrc will still do the right thing.
 #
+_BARRIER_POST_TARGETS=	wrapper
+_BARRIER_POST_TARGETS+=	configure
+_BARRIER_POST_TARGETS+=	build
 _BARRIER_POST_TARGETS+=	test
-_BARRIER_POST_TARGETS+=	reinstall repackage
+_BARRIER_POST_TARGETS+=	install
+_BARRIER_POST_TARGETS+=	reinstall
+_BARRIER_POST_TARGETS+=	package
+_BARRIER_POST_TARGETS+=	repackage
+
+# XXX This target should probably be handled specially.
 _BARRIER_POST_TARGETS+=	replace
+
+.for _target_ in ${_BARRIER_POST_TARGETS}
+.  if make(${_target_})
+_BARRIER_CMDLINE_TARGETS+=	${_target_}
+.  endif
+.endfor
 
 ######################################################################
 ### barrier (PRIVATE)
@@ -33,20 +48,17 @@ _BARRIER_POST_TARGETS+=	replace
 ### Note that none of foo's real source dependencies should include
 ### targets that occur before the barrier.
 ###
+
 .PHONY: barrier
 barrier: ${_BARRIER_PRE_TARGETS} barrier-cookie
 .if !exists(${_BARRIER_COOKIE})
-.  for _target_ in ${_BARRIER_POST_TARGETS}
-.    if make(${_target_})
-.      if defined(PKG_VERBOSE)
-	@${PHASE_MSG} "Invoking \`\`"${_target_:Q}"'' after barrier for ${PKGNAME}"
-.      endif
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} ALLOW_VULNERABLE_PACKAGES= ${_target_}
-.      if defined(PKG_VERBOSE)
-	@${PHASE_MSG} "Leaving \`\`"${_target_:Q}"'' after barrier for ${PKGNAME}"
-.      endif
-.    endif
-.  endfor
+.  if defined(PKG_VERBOSE)
+	@${PHASE_MSG} "Invoking \`\`"${_BARRIER_CMDLINE_TARGETS:Q}"'' after barrier for ${PKGNAME}"
+.  endif
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} ALLOW_VULNERABLE_PACKAGES= ${_BARRIER_CMDLINE_TARGETS}
+.  if defined(PKG_VERBOSE)
+	@${PHASE_MSG} "Leaving \`\`"${_BARRIER_CMDLINE_TARGETS:Q}"'' after barrier for ${PKGNAME}"
+.  endif
 .endif
 
 ######################################################################
