@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.5 2006/07/06 08:37:27 dillo Exp $
+
+--- configure.orig	2006-01-08 21:31:51.000000000 +0100
++++ configure
+@@ -19748,7 +19748,7 @@ _ACEOF
+ 
+ elif [ x"${enable_gnomeui}" = x"yes" ] ; then
+ 
+-  LIBS="${LIBS} `gnome-config --libs gnomeui`"
++  LIBS="${LIBS} `pkg-config --libs libgnomeui-2.0`"
+ 
+ 
+ cat >>confdefs.h <<\_ACEOF
+@@ -20509,7 +20509,7 @@ if test x"$is_dos" != "xyes" -a x"$is_wi
+     ARCH_INCLUDES="-I\$(top_srcdir)/src/arch/unix"
+   else
+     ARCH_LIBS="$ARCH_DIR/x11/gnome/libgnomeui.a $ARCH_DIR/libarch.a $ARCH_DIR/x11/libx11ui.a $ARCH_DIR/x11/gnome/libgnomeui.a $ARCH_DIR/x11/libx11ui.a $ARCH_DIR/libarch.a"
+-    ARCH_INCLUDES="-I\$(top_srcdir)/src/arch/unix `gnome-config --cflags gnomeui`"
++    ARCH_INCLUDES="-I\$(top_srcdir)/src/arch/unix `pkg-config --cflags libgnomeui-2.0`"
+   fi
+ 
+ 

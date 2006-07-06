@@ -1,0 +1,69 @@
+$NetBSD: patch-ah,v 1.3 2006/07/06 08:37:27 dillo Exp $
+
+--- src/arch/unix/x11/gnome/Makefile.in.orig	2006-06-30 02:35:06.000000000 +0200
++++ src/arch/unix/x11/gnome/Makefile.in
+@@ -245,7 +245,6 @@ noinst_LIBRARIES = libgnomeui.a
+ 
+ libgnomeui_a_SOURCES = \
+ 	about.c \
+-	dummies.c \
+ 	gnomekbd.c \
+ 	gnomevideo.c \
+ 	uiarch.h \
+@@ -259,6 +258,8 @@ libgnomeui_a_SOURCES = \
+ 	uiscreenshot.c \
+ 	uisnapshot.c \
+ 	uivsidcontrol.c \
++	uifileentry.c \
++	uifileentry.h \
+ 	videoarch.h \
+ 	x11ui.c
+ 
+@@ -270,18 +271,18 @@ LIBRARIES = $(noinst_LIBRARIES)
+ 
+ libgnomeui_a_AR = $(AR) cru
+ libgnomeui_a_LIBADD =
+-am_libgnomeui_a_OBJECTS = about.$(OBJEXT) dummies.$(OBJEXT) \
++am_libgnomeui_a_OBJECTS = about.$(OBJEXT) \
+ 	gnomekbd.$(OBJEXT) gnomevideo.$(OBJEXT) uicartridge.$(OBJEXT) \
+ 	uicolor.$(OBJEXT) uiedisk.$(OBJEXT) uimenu.$(OBJEXT) \
+ 	uinetplay.$(OBJEXT) uipalcontrol.$(OBJEXT) \
+ 	uiscreenshot.$(OBJEXT) uisnapshot.$(OBJEXT) \
+-	uivsidcontrol.$(OBJEXT) x11ui.$(OBJEXT)
++	uifileentry.$(OBJEXT) uivsidcontrol.$(OBJEXT) x11ui.$(OBJEXT)
+ libgnomeui_a_OBJECTS = $(am_libgnomeui_a_OBJECTS)
+ 
+ DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)/src
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+-@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/about.Po ./$(DEPDIR)/dummies.Po \
++@AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/about.Po \
+ @AMDEP_TRUE@	./$(DEPDIR)/gnomekbd.Po ./$(DEPDIR)/gnomevideo.Po \
+ @AMDEP_TRUE@	./$(DEPDIR)/uicartridge.Po ./$(DEPDIR)/uicolor.Po \
+ @AMDEP_TRUE@	./$(DEPDIR)/uiedisk.Po ./$(DEPDIR)/uimenu.Po \
+@@ -289,7 +290,8 @@ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@	./$(DEPDIR)/uipalcontrol.Po \
+ @AMDEP_TRUE@	./$(DEPDIR)/uiscreenshot.Po \
+ @AMDEP_TRUE@	./$(DEPDIR)/uisnapshot.Po \
+-@AMDEP_TRUE@	./$(DEPDIR)/uivsidcontrol.Po ./$(DEPDIR)/x11ui.Po
++@AMDEP_TRUE@	./$(DEPDIR)/uivsidcontrol.Po ./$(DEPDIR)/uifileentry.Po \
++@AMDEP_TRUE@	./$(DEPDIR)/x11ui.Po
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+ CCLD = $(CC)
+@@ -322,7 +324,6 @@ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/about.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/dummies.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gnomekbd.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gnomevideo.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/uicartridge.Po@am__quote@
+@@ -334,6 +335,7 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/uiscreenshot.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/uisnapshot.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/uivsidcontrol.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/uifileentry.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/x11ui.Po@am__quote@
+ 
+ distclean-depend:
