@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.7 2006/06/14 03:00:03 jlam Exp $
+# $NetBSD: depends.mk,v 1.8 2006/07/06 22:29:52 jlam Exp $
 
 _DEPENDS_FILE=		${WRKDIR}/.depends
 _REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
@@ -36,6 +36,8 @@ show-depends:
 ###
 .PHONY: depends-cookie
 depends-cookie: ${_DEPENDS_FILE}
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_DEPENDS_COOKIE} || ${FALSE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_DEPENDS_COOKIE:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${_DEPENDS_FILE} ${_DEPENDS_COOKIE}
 
 ${_DEPENDS_FILE}:
