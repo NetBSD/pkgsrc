@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.637 2006/07/06 17:40:17 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.638 2006/07/06 22:06:15 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1422,7 +1422,7 @@ sub check_varassign($$$$$) {
 		# XXX: This code sometimes produces weird warnings. See
 		# meta-pkgs/xorg/Makefile.common 1.41 for an example.
 		if ($self->is_complete()) {
-			$self->check_end();
+			$self->check_end($line);
 
 			# The following assignment prevents an additional warning,
 			# but from a technically viewpoint, it is incorrect.
@@ -6502,7 +6502,7 @@ sub checkfile_PLIST($) {
 	foreach my $line (@{$lines}) {
 		my $text = $line->text;
 
-		if ($text =~ qr"^\w" && $text !~ regex_unresolved) {
+		if ($text =~ qr"^[\w\$]") {
 			$all_files->{$text} = $line;
 		}
 	}
@@ -6549,8 +6549,16 @@ sub checkfile_PLIST($) {
 			if ($text =~ qr"^bin/.*/") {
 				$line->log_warning("The bin/ directory should not have subdirectories.");
 
-			} elsif ($text =~ qr"^bin/") {
-				# Fine.
+			} elsif ($text =~ qr"^bin/(.*)") {
+				my ($binname) = ($1);
+
+				if (exists($all_files->{"man/man1/${binname}.1"})) {
+					# Fine.
+				} elsif (exists($all_files->{"\${IMAKE_MAN_DIR}/${binname}.\${IMAKE_MANNEWSUFFIX}"})) {
+					# Fine.
+				} else {
+					$opt_warn_extra and $line->log_warning("Manual page missing for bin/${binname}.");
+				}
 
 			} elsif ($text =~ qr"^doc/") {
 				$line->log_error("Documentation must be installed under share/doc, not doc.");
@@ -6594,6 +6602,13 @@ sub checkfile_PLIST($) {
 				my ($cat, $manpage) = ($1, $2);
 				if (!exists($all_files->{"man/man${cat}/${manpage}.${cat}"})) {
 					$line->log_warning("Preformatted manual page without unformatted one.");
+				}
+
+			} elsif ($text =~ qr"^sbin/(.*)") {
+				my ($binname) = ($1);
+
+				if (!exists($all_files->{"man/man8/${binname}.8"})) {
+					$opt_warn_extra and $line->log_warning("Manual page missing for sbin/${binname}.");
 				}
 
 			} elsif ($text =~ qr"^share/doc/html/") {
