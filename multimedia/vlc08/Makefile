@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/06/12 16:28:13 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2006/07/06 14:46:13 abs Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.videolan.org/
 COMMENT=		VideoLAN Client
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake perl pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
