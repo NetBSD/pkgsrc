@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.12 2006/07/06 22:08:32 jlam Exp $
+# $NetBSD: package.mk,v 1.13 2006/07/06 22:29:53 jlam Exp $
 
 ######################################################################
 ### package (PUBLIC)
@@ -63,6 +63,7 @@ package-message:
 ###
 .PHONY: package-cookie
 package-cookie:
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_PACKAGE_COOKIE} || ${FALSE}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_PACKAGE_COOKIE:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_PACKAGE_COOKIE}
 
