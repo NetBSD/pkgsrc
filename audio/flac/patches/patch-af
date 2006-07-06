@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.3 2006/07/06 12:39:10 markd Exp $
+
+--- strip_non_asm_libtool_args.sh.orig	2004-07-29 18:52:52.000000000 +1200
++++ strip_non_asm_libtool_args.sh
+@@ -6,7 +6,7 @@
+ # to 'as' which causes problems.
+ command=""
+ while [ $1 ]; do
+-	if [ "$1" != "-fPIC" ]; then
++	if [ "$1" != "-fPIC" -a "$1" != "-KPIC" ]; then
+ 		if [ "$1" != "-DPIC" ]; then
+ 			if [ "$1" != "-fno-common" ]; then
+ 				command="$command $1"
