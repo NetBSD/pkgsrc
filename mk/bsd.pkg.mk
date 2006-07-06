@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1863 2006/07/06 21:07:33 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1864 2006/07/06 21:59:38 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -718,7 +718,7 @@ acquire-lock: .USE
 		esac;							\
 	done
 .  if defined(PKG_VERBOSE)
-	@${STEP_MSG} "Lock acquired for ${.TARGET:S/^acquire-//:S/-lock$//} on behalf of process `${CAT} ${_LOCKFILE}`"
+	@${STEP_MSG} "Lock acquired for \`\`${.TARGET:S/^acquire-//:S/-lock$//}'' on behalf of process `${CAT} ${_LOCKFILE}`"
 .  endif
 .endif
 
@@ -727,7 +727,7 @@ release-lock: .USE
 	@${DO_NADA}
 .else
 .  if defined(PKG_VERBOSE)
-	@${STEP_MSG} "Lock released for ${.TARGET:S/^release-//:S/-lock$//} on behalf of process `${CAT} ${_LOCKFILE}`"
+	@${STEP_MSG} "Lock released for \`\`${.TARGET:S/^release-//:S/-lock$//}'' on behalf of process `${CAT} ${_LOCKFILE}`"
 .  endif
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_LOCKFILE}
 .endif
