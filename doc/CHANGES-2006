@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.657 2006/07/06 20:54:17 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.658 2006/07/06 20:57:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3286,3 +3286,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/cppunit to 1.10.2nb6 [wiz 2006-07-05]
 	Updated devel/gettext-lib to 0.14.5nb2 [minskim 2006-07-06]
 	Added graphics/comix version 3.3 [wiz 2006-07-06]
+	Updated graphics/gimp24 to 2.3.10 [adam 2006-07-06]
