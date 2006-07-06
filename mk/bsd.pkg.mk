@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1861 2006/07/06 15:43:10 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1862 2006/07/06 16:58:17 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -17,6 +17,8 @@
 ############################################################################
 # Include any preferences, if not already included, and common definitions
 ############################################################################
+
+.MAIN: all
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -463,6 +465,9 @@ USE_TOOLS+=	shlock sleep
 # Tools
 .include "../../mk/tools/bsd.tools.mk"
 
+# Barrier
+.include "../../mk/bsd.pkg.barrier.mk"
+
 # Unprivileged builds
 .include "../../mk/unprivileged.mk"
 
@@ -508,11 +513,6 @@ _PATH_CMD= \
 	${ECHO} "$$path"
 PATH=	${_PATH_CMD:sh} # DOES NOT use :=, to defer evaluation
 .endif
-
-.MAIN: all
-
-# Barrier
-.include "../../mk/bsd.pkg.barrier.mk"
 
 ################################################################
 # Many ways to disable a package.
