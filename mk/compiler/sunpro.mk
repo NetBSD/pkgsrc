@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.33 2005/07/21 01:36:25 grant Exp $
+# $NetBSD: sunpro.mk,v 1.34 2006/07/06 11:46:33 markd Exp $
 
 .if !defined(COMPILER_SUNPRO_MK)
 COMPILER_SUNPRO_MK=	defined
@@ -41,7 +41,11 @@ _LINKER_RPATH_FLAG=	-R
 _COMPILER_RPATH_FLAG=	-Wl,-R
 
 # SunPro compiler must be passed certain flags to compile/link 64-bit code.
+.if ${MACHINE_ARCH} == "sparc"
 _COMPILER_ABI_FLAG.64=	-xtarget=ultra -xarch=v9
+.else
+_COMPILER_ABI_FLAG.64= -xarch=amd64
+.endif
 
 .if exists(${CCPATH})
 CC_VERSION_STRING!=	${CCPATH} -V 2>&1 || ${TRUE}
