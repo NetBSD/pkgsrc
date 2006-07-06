@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.50 2006/07/06 12:18:35 markd Exp $
+# $NetBSD: Makefile.common,v 1.51 2006/07/06 14:12:31 markd Exp $
 
 DISTNAME=	MesaLib-${MESA_VERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -49,6 +49,8 @@ BUILD_TARGET=		interix3
 .else
 BUILD_TARGET=		pkgsrc
 .endif
+
+INSTLIBS?=		""
 
 pre-install:
 	@if [ -n "${INSTLIBS}" ]; then					\
