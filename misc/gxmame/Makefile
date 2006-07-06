@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/04/17 13:46:40 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2006/07/06 14:45:38 abs Exp $
 #
 
 DISTNAME=	gxmame-0.35beta1
@@ -15,7 +15,7 @@ DEPENDS+=               p5-XML-Parser>=2.34:../../textproc/p5-XML-Parser
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		intltool gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
