@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.46 2006/07/06 18:19:45 jlam Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.47 2006/07/06 22:29:53 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -824,5 +824,6 @@ post-wrapper:
 
 .PHONY: wrapper-cookie
 wrapper-cookie:
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_WRAPPER_COOKIE} || ${FALSE}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_WRAPPER_COOKIE:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_WRAPPER_COOKIE}

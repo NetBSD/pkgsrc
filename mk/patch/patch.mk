@@ -1,4 +1,4 @@
-# $NetBSD: patch.mk,v 1.6 2006/07/05 22:21:03 jlam Exp $
+# $NetBSD: patch.mk,v 1.7 2006/07/06 22:29:53 jlam Exp $
 #
 # The following variables may be set in a package Makefile and control
 # how pkgsrc patches are applied.
@@ -108,6 +108,7 @@ patch-message:
 ###
 .PHONY: patch-cookie
 patch-cookie:
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_PATCH_COOKIE} || ${FALSE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${TEST} -f ${_PATCH_APPLIED_FILE:Q}; then			\
 		${MV} -f ${_PATCH_APPLIED_FILE:Q} ${_PATCH_COOKIE:Q};	\

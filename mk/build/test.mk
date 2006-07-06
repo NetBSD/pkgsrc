@@ -1,4 +1,4 @@
-# $NetBSD: test.mk,v 1.3 2006/07/06 17:39:36 jlam Exp $
+# $NetBSD: test.mk,v 1.4 2006/07/06 22:29:52 jlam Exp $
 #
 # TEST_DIRS is the list of directories in which to perform the build
 #	process.  If the directories are relative paths, then they
@@ -126,5 +126,6 @@ post-test:
 ###
 .PHONY: test-cookie
 test-cookie:
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_TEST_COOKIE} || ${FALSE}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_TEST_COOKIE:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_TEST_COOKIE}
