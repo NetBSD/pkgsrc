@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/28 22:29:17 is Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/06 21:14:19 jlam Exp $
 #
 
 PKGNAME=		mflteco-19920331
@@ -6,7 +6,7 @@ DISTNAME=		mflteco
 CATEGORIES=		editors
 MASTER_SITES=		http://www.catb.org/~esr/retro/
 
-MAINTAINER=		is@netbsd.org
+MAINTAINER=		is@NetBSD.org
 HOMEPAGE=		http://www.catb.org/~esr/retro/
 COMMENT=		MFL clone of Tape Editor and COrrector
 

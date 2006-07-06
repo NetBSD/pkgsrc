@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:10:57 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/07/06 21:14:19 jlam Exp $
 #
 
 DISTNAME=		xeno-1.2-src-040418
@@ -11,7 +11,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		netbsd-xen-kernel-headers-040508.tar.gz
 
 MAINTAINER=		cl@NetBSD.org
-HOMEPAGE=		http://www.netbsd.org/Ports/xen/
+HOMEPAGE=		http://www.NetBSD.org/Ports/xen/
 COMMENT=		Userland Tools for Xen
 
 ONLY_FOR_PLATFORM=	*-*-i386

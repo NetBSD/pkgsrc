@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/05/23 10:57:15 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/06 21:14:19 jlam Exp $
 
 DISTNAME=	crosspkg-netbsd1-acorn26-1.6.2
 CATEGORIES=	crosspkgtools
-MASTER_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-1.6.2/acorn26/binary/sets/
+MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/NetBSD-1.6.2/acorn26/binary/sets/
 EXTRACT_SUFX=	.tgz
 DISTFILES=	base.tgz comp.tgz etc.tgz games.tgz kern-GENERIC.tgz man.tgz \
 		misc.tgz text.tgz xbase.tgz xcomp.tgz xcontrib.tgz xfont.tgz \
@@ -16,7 +16,7 @@ COMMENT=	Files neccessary to cross build NetBSD/acorn26-1.6.x programs
 DEPENDS+=	kwacross-netbsd1-arm-2*:../../crosspkgtools/kwacross-netbsd1-arm
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
-SRC_SITES=	ftp://ftp.netbsd.org/pub/NetBSD/NetBSD-1.6.2/source/sets/
+SRC_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/NetBSD-1.6.2/source/sets/
 SITES.gnusrc.tgz=	${SRC_SITES}
 SITES.sharesrc.tgz=	${SRC_SITES}
 SITES.src.tgz=		${SRC_SITES}
