@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.124 2006/07/04 10:01:03 rillig Exp $
+# $NetBSD: makevars.map,v 1.125 2006/07/06 17:40:17 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -447,6 +447,7 @@ OPSYS			Identifier [$system]
 OPSYSVARS		List of Varname [m:a,c:a]
 OSVERSION_SPECIFIC	Yes [m:s,c:s]
 OS_VERSION		Version [$system]
+OVERRIDE_DIRDEPTH	Integer [$package]
 OVERRIDE_GNU_CONFIG_SCRIPTS	Yes [$package]
 OWN_DIRS		List of Pathname [$package_list]
 OWN_DIRS_PERMS		List of ShellWord [$package_list]

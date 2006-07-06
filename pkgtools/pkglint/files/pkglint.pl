@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.636 2006/07/04 09:29:54 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.637 2006/07/06 17:40:17 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1588,6 +1588,7 @@ my $opt_check_bl3	= true;
 my $opt_check_DESCR	= true;
 my $opt_check_distinfo	= true;
 my $opt_check_extra	= false;
+my $opt_check_global	= false;
 my $opt_check_INSTALL	= true;
 my $opt_check_Makefile	= true;
 my $opt_check_MESSAGE	= true;
@@ -1600,6 +1601,7 @@ my (%checks) = (
 	"DESCR"		=> [\$opt_check_DESCR, "check DESCR file"],
 	"distinfo"	=> [\$opt_check_distinfo, "check distinfo file"],
 	"extra"		=> [\$opt_check_extra, "check various additional files"],
+	"global"	=> [\$opt_check_global, "inter-package checks"],
 	"INSTALL"	=> [\$opt_check_INSTALL, "check INSTALL and DEINSTALL scripts"],
 	"Makefile"	=> [\$opt_check_Makefile, "check Makefiles"],
 	"MESSAGE"	=> [\$opt_check_MESSAGE, "check MESSAGE files"],
@@ -1798,6 +1800,12 @@ use constant expl_relative_dirs	=> (
 my $current_dir;		# The currently checked directory.
 my $is_wip;			# Is the current directory from pkgsrc-wip?
 my $is_internal;		# Is the current item from the infrastructure?
+
+#
+# Variables for inter-package checks.
+#
+
+my $ipc_distinfo;		# Maps "$alg:$fname" => "checksum".
 
 # Context of the package that is currently checked.
 my $pkgdir;			# PKGDIR from the package Makefile
@@ -2324,7 +2332,8 @@ sub load_tool_names() {
 				} elsif ($varname =~ qr"^(?:TOOLS_PATH|_TOOLS_DEPMETHOD)\.([-\w.]+|\[)$") {
 					$tools->{$1} = true;
 
-				} elsif ($varname =~ qr"^_TOOLS\.") {
+				} elsif ($varname =~ qr"^_TOOLS\.(.*)") {
+					$tools->{$1} = true;
 					foreach my $tool (split(qr"\s+", $value)) {
 						$tools->{$tool} = true;
 					}
@@ -4625,7 +4634,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 				}
 
 				if ($p !~ qr"^[\$/]") {
-					$line->log_warning("All components of ${varname} (in this case \"${p}\")should be an absolute path.");
+					$line->log_warning("All components of ${varname} (in this case \"${p}\") should be an absolute path.");
 				}
 			}
 		}
@@ -5813,9 +5822,26 @@ sub checkfile_distinfo($) {
 		my ($alg, $chksum_fname, $sum) = ($1, $2, $3);
 		my $is_patch = (($chksum_fname =~ qr"^patch-[A-Za-z0-9]+$") ? true : false);
 
+		# Inter-package check for differing distfile checksums.
+		if ($opt_check_global && !$is_patch) {
+			# Note: Perl-specific auto-population.
+			if (exists($ipc_distinfo->{$alg}->{$chksum_fname})) {
+				my $other = $ipc_distinfo->{$alg}->{$chksum_fname};
+
+				if ($other->[1] eq $sum) {
+					# Fine.
+				} else {
+					$line->log_error("The ${alg} checksum for ${chksum_fname} differs ...");
+					$other->[0]->log_error("... from this one.");
+				}
+			} else {
+				$ipc_distinfo->{$alg}->{$chksum_fname} = [$line, $sum];
+			}
+		}
+
 		if ($alg eq "MD5") {
-			$line->log_warning("MD5 checksums are deprecated.");
-			$line->explain_warning(
+			$line->log_error("MD5 checksums are obsolete.");
+			$line->explain_error(
 				"Run \"".conf_make." makedistinfo\" to regenerate the distinfo file.");
 			next;
 		}
