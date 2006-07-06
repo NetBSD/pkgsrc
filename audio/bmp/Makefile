@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/04/17 14:52:10 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2006/07/06 00:15:14 minskim Exp $
 #
 
 BMP_ENABLE_ENCODERS=	yes
@@ -8,6 +8,12 @@ BMP_ENABLE_ENCODERS=	yes
 PKGREVISION=		5
 
 DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
+
+.if ${OPSYS} == "Darwin"
+PLIST_SUBST+=	CDAUDIO="@comment "
+.else
+PLIST_SUBST+=	CDAUDIO=""
+.endif
 
 # XXX Workaround a crash during shutdown that happens when dlclose(3)ing
 # any open plugin.  libstdc++ gets dynamically linked in when the id3lib
