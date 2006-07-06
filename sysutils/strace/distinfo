@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2006/03/05 09:19:03 christos Exp $
+$NetBSD: distinfo,v 1.4 2006/07/06 17:30:31 rillig Exp $
 
 SHA1 (strace-4.5.14.tar.bz2) = 72c17d1dd6786d22ca0aaaa7292b8edcd70a27de
 RMD160 (strace-4.5.14.tar.bz2) = cb42cac34d1624dd24842ada0dbb9dfff67e8e93
-Size (lsof_4.76.tar.bz2) = 445134 bytes
+Size (strace-4.5.14.tar.bz2) = 445134 bytes
 SHA1 (patch-aa) = da710e96ca8c992916de0776f21d1113ba59d8f5
 SHA1 (patch-ab) = e5a96fe1eb136bc4a7bbae5c1bff30a87b0553d5
 SHA1 (patch-ac) = 16b9b2a0e40932088c5eb9ccd08e26cc6ce199e2
