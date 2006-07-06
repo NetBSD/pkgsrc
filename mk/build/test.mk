@@ -1,4 +1,4 @@
-# $NetBSD: test.mk,v 1.2 2006/07/05 09:08:35 jlam Exp $
+# $NetBSD: test.mk,v 1.3 2006/07/06 17:39:36 jlam Exp $
 #
 # TEST_DIRS is the list of directories in which to perform the build
 #	process.  If the directories are relative paths, then they
@@ -27,19 +27,25 @@ _TEST_TARGETS+=	release-test-lock
 
 .PHONY: test
 .if !target(test)
+.  if exists(${_TEST_COOKIE})
+test:
+	@${DO_NADA}
+.  elif exists(${_BARRIER_COOKIE})
 test: ${_TEST_TARGETS}
+.  else
+test: barrier
+.  endif
 .endif
 
 .PHONY: acquire-test-lock release-test-lock
 acquire-test-lock: acquire-lock
 release-test-lock: release-lock
 
-.if !exists(${_TEST_COOKIE})
-${_TEST_COOKIE}:
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${.CURDIR} && ${SETENV} ${BUILD_ENV} ${MAKE} ${MAKEFLAGS} real-test PKG_PHASE=build
-.else
+.if exists(${_TEST_COOKIE})
 ${_TEST_COOKIE}:
 	@${DO_NADA}
+.else
+${_TEST_COOKIE}: real-test
 .endif
 
 ######################################################################
