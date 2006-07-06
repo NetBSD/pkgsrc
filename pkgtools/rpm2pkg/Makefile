@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/06/09 10:45:54 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2006/07/06 21:14:19 jlam Exp $
 
 DISTNAME=	rpm2pkg-2.1.1
 PKGREVISION=	2
@@ -7,7 +7,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	tron@NetBSD.org
-HOMEPAGE=	http://www.netbsd.org/Documentation/pkgsrc/
+HOMEPAGE=	http://www.NetBSD.org/Documentation/pkgsrc/
 COMMENT=	Convert RPM archives to NetBSD packages
 
 CONFLICTS+=	suse-base<=6.4
