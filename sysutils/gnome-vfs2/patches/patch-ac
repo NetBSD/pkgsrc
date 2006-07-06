@@ -1,0 +1,39 @@
+$NetBSD: patch-ac,v 1.11 2006/07/06 23:35:15 minskim Exp $
+
+--- imported/neon/Makefile.in.orig	2006-05-30 03:21:19.000000000 -0700
++++ imported/neon/Makefile.in
+@@ -56,7 +56,8 @@ am__objects_2 = $(am__objects_1)
+ am__objects_3 = ne_request.lo ne_session.lo ne_basic.lo ne_string.lo \
+ 	ne_uri.lo ne_dates.lo ne_alloc.lo ne_md5.lo ne_utils.lo \
+ 	ne_auth.lo ne_redirect.lo ne_compress.lo
+-am__objects_4 = ne_207.lo ne_xml.lo ne_props.lo ne_locks.lo
++am__objects_4 = ne_207.lo ne_xml.lo ne_props.lo ne_locks.lo \
++	ne_xmlreq.lo
+ am__objects_5 = ne_acl.lo ne_gnomevfs.lo
+ am_libneon_la_OBJECTS = $(am__objects_2) $(am__objects_3) \
+ 	$(am__objects_4) $(am__objects_5) $(am__objects_1)
+@@ -396,7 +397,7 @@ NEON_BASE_SOURCES = ne_request.c ne_sess
+ 
+ NEON_DAV_SOURCES = \
+ 	ne_207.c ne_xml.c \
+-	ne_props.c ne_locks.c
++	ne_props.c ne_locks.c ne_xmlreq.c
+ 
+ NEON_EXTRA_SOURCES = ne_acl.c ne_gnomevfs.c
+ libneon_la_LIBADD = \
+@@ -410,6 +411,7 @@ libneon_la_LDFLAGS = \
+ libneon_la_SOURCES = \
+ 	$(NEON_INCLUDES)	\
+ 	$(NEON_BASE_SOURCES) 	\
++	$(NEON_SSL_SOURCES)	\
+ 	$(NEON_DAV_SOURCES) 	\
+ 	$(NEON_EXTRA_SOURCES)	\
+         $(NULL)
+@@ -483,6 +485,7 @@ distclean-compile:
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ne_uri.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ne_utils.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ne_xml.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ne_xmlreq.Plo@am__quote@
+ 
+ .c.o:
+ @am__fastdepCC_TRUE@	if $(COMPILE) -MT $@ -MD -MP -MF "$(DEPDIR)/$*.Tpo" -c -o $@ $<; \
