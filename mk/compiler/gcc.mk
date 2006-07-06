@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.83 2006/04/05 12:31:24 shannonjr Exp $
+# $NetBSD: gcc.mk,v 1.84 2006/07/06 11:48:03 markd Exp $
 
 .if !defined(COMPILER_GCC_MK)
 COMPILER_GCC_MK=	defined
@@ -375,6 +375,10 @@ _COMPILER_STRIP_VARS+=	${_GCC_VARS}
 # Pass the required flags to imake to tell it we're using gcc on Solaris.
 .if ${OPSYS} == "SunOS"
 IMAKEOPTS+=	-DHasGcc2=YES -DHasGcc2ForCplusplus=YES
+.endif
+
+.if ${OPSYS} == "SunOS"
+_COMPILER_ABI_FLAG.64=  -m64
 .endif
 
 .if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS])
