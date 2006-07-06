@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/04/22 09:22:05 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2006/07/06 15:11:00 gdt Exp $
 
 DISTNAME=		xmill-0.9.1
 PKGREVISION=		3
@@ -15,7 +15,11 @@ USE_TOOLS+=		gmake
 MAKEFILE=		makefile
 USE_LANGUAGES=		c c++
 
+LICENSE=		xmill-license
 RESTRICTED=		Redistribution not permitted
+# It is not entirely clear that noncommercial redistribution is
+# permitted, but it's too hard to read the license, so it's marked as
+# non-redistributable to err on the side of caution.
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
