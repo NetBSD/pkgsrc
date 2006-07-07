@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/07/07 21:49:38 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/07 21:51:05 jlam Exp $
 
 DISTNAME=	yasql-1.81
 CATEGORIES=	databases
@@ -8,14 +8,14 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://yasql.sourceforge.net/
 COMMENT=	Yet another SQLPlus replacement for Oracle
 
+DEPENDS+=	p5-DBD-Oracle-[0-9]*:../../databases/p5-DBD-Oracle
+DEPENDS+=	p5-Term-ReadLine-[0-9]*:../../devel/p5-Term-ReadLine
+DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
+
 GNU_CONFIGURE=	yes
 NO_BUILD=	yes
 
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q}
-
-DEPENDS+=	p5-DBD-Oracle-[0-9]*:../../databases/p5-DBD-Oracle
-DEPENDS+=	p5-Term-ReadLine-[0-9]*:../../devel/p5-Term-ReadLine
-DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
 
 CONF_FILES+=	${PREFIX}/share/examples/yasql/yasql.conf \
 		${PKG_SYSCONFDIR}/yasql.conf
