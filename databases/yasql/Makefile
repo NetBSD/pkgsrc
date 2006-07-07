@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:29:12 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2006/07/07 21:49:38 jlam Exp $
 
 DISTNAME=	yasql-1.81
 CATEGORIES=	databases
@@ -20,7 +20,7 @@ DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
 CONF_FILES+=	${PREFIX}/share/examples/yasql/yasql.conf \
 		${PKG_SYSCONFDIR}/yasql.conf
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 post-configure:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} default
@@ -30,6 +30,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/yasql
 	${INSTALL_DATA} ${WRKSRC}/yasql.conf \
 		${PREFIX}/share/examples/yasql/yasql.conf
-	${INSTALL_MAN} ${WRKSRC}/yasql.1 ${PREFIX}/man/man1/yasql.1
+	${INSTALL_MAN} ${WRKSRC}/yasql.1 ${PREFIX}/${PKGMANDIR}/man1/yasql.1
 
 .include "../../mk/bsd.pkg.mk"
