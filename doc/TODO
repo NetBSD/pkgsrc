@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5161 2006/07/07 18:02:47 adam Exp $
+$NetBSD: TODO,v 1.5162 2006/07/07 18:22:51 adam Exp $
 
 Suggested new packages
 ======================
@@ -629,7 +629,6 @@ Suggested package updates
 	o ijs-0.35
 	o imp-4.1.2
 	o inform-6.31.1
-	o inkscape-0.44.1
 	o instiki-0.10.2
 	o intercal-0.24 [dillo]
 	o ion3-20060519
@@ -654,7 +653,6 @@ Suggested package updates
 	o java-lang-spec-3.0
 	o jgrasp-183
 	o jigdo-0.7.2
-	o joe-3.4
 	o john-1.7.2
 	o jove-4.16.0.69
 	o jpegpixi-1.1.1
