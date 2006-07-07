@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/07/07 03:31:50 minskim Exp $
+# $NetBSD: Makefile,v 1.15 2006/07/07 03:34:01 minskim Exp $
 #
 
 DISTNAME=		jgrasp170
@@ -13,6 +13,7 @@ HOMEPAGE=		http://www.jgrasp.org/
 COMMENT=		IDE with support for Software Visualizations
 
 WRKSRC=			${WRKDIR}/jgrasp
+USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 jdk14
 INSTALLATION_DIRS=	bin
 
