@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2006/06/08 21:21:21 rillig Exp $
+# $NetBSD: builtin.mk,v 1.3 2006/07/07 02:55:28 minskim Exp $
 
 BUILTIN_PKG:=	sun-jre15
 
@@ -68,7 +68,7 @@ MAKEVARS+=	USE_BUILTIN.sun-jre15
 CHECK_BUILTIN.sun-jre15?=	no
 .if !empty(CHECK_BUILTIN.sun-jre15:M[nN][oO])
 .  if !empty(USE_BUILTIN.sun-jre15:M[yY][eE][sS])
-PKG_JAVA_BINDIR= \
-	/System/Library/Frameworks/JavaVM.framework/Versions/1.5/Commands
+PKG_JAVA_HOME= \
+	/System/Library/Frameworks/JavaVM.framework/Versions/1.5/Home
 .  endif
 .endif
