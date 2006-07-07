@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.659 2006/07/06 21:27:31 minskim Exp $
+$NetBSD: CHANGES-2006,v 1.660 2006/07/07 03:13:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3288,3 +3288,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added graphics/comix version 3.3 [wiz 2006-07-06]
 	Updated graphics/gimp24 to 2.3.10 [adam 2006-07-06]
 	Updated chat/xchat-systray-integration to 2.4.5nb4 [minskim 2006-07-06]
+	Updated www/apache-tomcat55 to 5.5.14nb2 [minskim 2006-07-07]
+	Updated www/jakarta-tomcat5 to 5.0.30nb3 [minskim 2006-07-07]
