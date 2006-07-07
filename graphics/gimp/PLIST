@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2006/04/17 07:07:20 jlam Exp $
+@comment $NetBSD: PLIST,v 1.24 2006/07/07 15:14:32 tron Exp $
 bin/gimp
 bin/gimp-2.2
 bin/gimp-remote
@@ -318,6 +318,7 @@ lib/gimp/2.0/plug-ins/tiff
 lib/gimp/2.0/plug-ins/tile
 lib/gimp/2.0/plug-ins/tileit
 lib/gimp/2.0/plug-ins/tiler
+${TWAIN}lib/gimp/2.0/plug-ins/twain
 lib/gimp/2.0/plug-ins/uniteditor
 lib/gimp/2.0/plug-ins/unsharp
 lib/gimp/2.0/plug-ins/url
@@ -1650,6 +1651,7 @@ share/gimp/2.0/themes/Default/images/stock-wilber-eek-64.png
 share/gimp/2.0/themes/Default/images/stock-zoom-follow-window-12.png
 share/gimp/2.0/themes/Small/gtkrc
 share/gimp/2.0/tips/gimp-tips.xml
+${TWAIN}share/gimp/2.0/twain/gimp-twain.png
 share/locale/bg/LC_MESSAGES/gimp20-libgimp.mo
 share/locale/bg/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/bg/LC_MESSAGES/gimp20-std-plug-ins.mo
