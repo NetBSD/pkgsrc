@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.99 2006/07/05 05:37:41 jlam Exp $
+# $NetBSD: Makefile,v 1.100 2006/07/07 22:10:07 jlam Exp $
 
 DISTNAME=		gnucash-1.8.12
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		finance
 MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}
@@ -15,7 +15,7 @@ DEPENDS+=		p5-Date-Manip>=5.42a:../../devel/p5-Date-Manip
 DEPENDS+= 		p5-Finance-Quote>=1.06:../../finance/p5-Finance-Quote
 
 USE_DIRS+=		gnome1-1.5
-USE_TOOLS+=		bison gmake intltool pkg-config
+USE_TOOLS+=		bison gmake intltool perl:run pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 

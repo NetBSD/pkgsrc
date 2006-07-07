@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/06/27 13:05:49 he Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/07 22:10:07 jlam Exp $
 #
 
 DISTNAME=	munin_${VER}
@@ -6,7 +6,7 @@ VER=		1.3.1
 PKGNAME=	munin-node-${VER}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=munin/}
-PKGREVISION=	2
+PKGREVISION=	3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://munin.sourceforge.net/
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Net-Server>=0:../../net/p5-Net-Server
 DEPENDS+=	p5-Net-SSLeay>=0:../../security/p5-Net-SSLeay
 DEPENDS+=	munin-doc>=1.3.1:../../sysutils/munin-doc
 
-USE_TOOLS+=	perl
+USE_TOOLS+=	perl:run
 USE_TOOLS+=	gmake
 USE_PKGINSTALL=	YES
 

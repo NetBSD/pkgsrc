@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/12/05 15:34:59 taca Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/07 22:10:06 jlam Exp $
 #
 
 DISTNAME=	smbchartool-2.3a
+PKGREVISION=	1
 CATEGORIES=	converters japanese
 MASTER_SITES=	ftp://ftp.samba.gr.jp/pub/samba-jp/tool/
 
@@ -16,6 +17,7 @@ COMMENT=	File name conversion tool for Samba
 DEPENDS+=	p5-jcode>=2.13:../../converters/p5-jcode
 DEPENDS+=	p5-Text-Iconv>=1.4:../../converters/p5-Text-Iconv
 
+USE_TOOLS+=	perl:run
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/smbchartool
 REPLACE_PERL=	capecho hexecho smbfnconv

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/02/17 07:55:57 martti Exp $
+# $NetBSD: Makefile,v 1.4 2006/07/07 22:10:07 jlam Exp $
 
 DISTNAME=	xenConsole-r0.15b1-1
 PKGNAME=	xenconsole-0.15b1.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ucck/}
 
@@ -21,6 +22,8 @@ DEPENDS+=	p5-POE-Component-SNMP>=0.93:../../net/p5-POE-Component-SNMP
 DEPENDS+=	p5-Sys-CpuLoad>=0.03:../../sysutils/p5-Sys-CpuLoad
 DEPENDS+=	p5-Term-Size>=0.2:../../devel/p5-Term-Size
 DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
+
+USE_TOOLS+=	perl:run
 
 SUBST_CLASSES+=			xenconsole
 SUBST_STAGE.xenconsole=		pre-configure
