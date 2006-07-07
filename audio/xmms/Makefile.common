@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2006/03/09 21:04:42 jlam Exp $
+# $NetBSD: Makefile.common,v 1.24 2006/07/07 15:49:31 jlam Exp $
 #
 
 DISTNAME=	xmms-1.2.10
@@ -21,7 +21,7 @@ FILESDIR=		${.CURDIR}/../../audio/xmms/files
 PATCHDIR=		${.CURDIR}/../../audio/xmms/patches
 
 CONFIGURE_ARGS+=	--without-gnome
-SHLIBTOOL_OVERRIDE=	libtool
+SHLIBTOOL_OVERRIDE=	# empty
 
 # Broken configure script assumes that iconv_open lives in libc; work around.
 CPPFLAGS+=		-DHAVE_ICONV_OPEN=1

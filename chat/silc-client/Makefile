@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2006/02/05 23:08:26 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2006/07/07 15:49:31 jlam Exp $
 #
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
@@ -20,7 +20,8 @@ COMMENT=                Client for the Secure Internet Live Conferencing (SILC) 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
-SHLIBTOOL_OVERRIDE=	libtool */libtool */*/*/libtool
+OVERRIDE_DIRDEPTH=	3
+SHLIBTOOL_OVERRIDE=	# empty
 
 PKG_SYSCONFSUBDIR?=	${PKGBASE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/06 06:21:49 reed Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/07 15:49:31 jlam Exp $
 
 DISTNAME=		gettext-0.14.5
 PKGNAME=		gettext-tools-0.14.5
@@ -15,7 +15,7 @@ CONFLICTS=		gettext<0.14.5
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-SHLIBTOOL_OVERRIDE=	libtool
+SHLIBTOOL_OVERRIDE=	# empty
 CONFIGURE_ARGS+=	--without-included-gettext
 INFO_FILES=		# PLIST
 

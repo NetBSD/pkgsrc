@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/06/13 17:59:51 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2006/07/07 15:49:31 jlam Exp $
 
 DISTNAME=		faad2-2.0
 PKGNAME=		xmms-faad-2.0
@@ -18,7 +18,7 @@ WRKSRC=			${WRKDIR}/faad2
 USE_TOOLS+=		automake14 gmake pkg-config
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
-SHLIBTOOL_OVERRIDE=	libtool
+SHLIBTOOL_OVERRIDE=	# empty
 
 AUTOCONF_REQD=		2.50
 GNU_CONFIGURE=		YES

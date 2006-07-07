@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/06/07 12:42:39 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/07 15:49:33 jlam Exp $
 #
 
 DISTNAME=	gift-openft-0.2.1.3
@@ -15,7 +15,7 @@ USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	yes
 
 PTHREAD_AUTO_VARS=	yes
-SHLIBTOOL_OVERRIDE=	libtool
+SHLIBTOOL_OVERRIDE=	# empty
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
