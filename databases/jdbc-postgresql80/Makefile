@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/27 14:52:09 abs Exp $
+# $NetBSD: Makefile,v 1.5 2006/07/07 04:35:21 minskim Exp $
 #
 
 DISTNAME=		postgresql-jdbc-8.0-${PGBUILD}.src
@@ -16,6 +16,7 @@ JARDIST=		postgresql-8.0-${PGBUILD}.jdbc3.jar
 JARFILE=		postgresql80.jar
 EXTRACT_ONLY=           ${DISTFILES:N*.jar}
 
+USE_JAVA=		run
 USE_JAVA2=		1.4
 NO_BUILD=       	YES
 
