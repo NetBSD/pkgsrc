@@ -1,4 +1,4 @@
-# $NetBSD: libtool-override.mk,v 1.3 2006/07/07 14:25:54 jlam Exp $
+# $NetBSD: libtool-override.mk,v 1.4 2006/07/07 15:25:05 jlam Exp $
 
 ######################################################################
 ### {ltconfig,libtool,shlibtool}-override (PRIVATE)
@@ -46,8 +46,6 @@ ltconfig-override:
 	done
 .endif
 
-_OVERRIDE_VAR.libtool=		LIBTOOL_OVERRIDE
-_OVERRIDE_VAR.shlibtool=	SHLIBTOOL_OVERRIDE
 _OVERRIDE_PATH.libtool=		${_LIBTOOL}
 _OVERRIDE_PATH.shlibtool=	${_SHLIBTOOL}
 
@@ -57,28 +55,50 @@ _SCRIPT.${_script_}-override=						\
 	${ECHO} "\#!"${TOOLS_SH:Q} > $$file;				\
 	${ECHO} "exec" ${_OVERRIDE_PATH.${_script_}:Q} '"$$@"' >> $$file; \
 	${CHMOD} +x $$file
+.endfor
 
-.PHONY: ${_script_}-override
-${_script_}-override:
-	@${STEP_MSG} "Modifying libtool scripts to use pkgsrc ${_script_}"
-.  if defined(${_OVERRIDE_VAR.${_script_}}) && \
-      !empty(${_OVERRIDE_VAR.${_script_}})
+.PHONY: libtool-override
+libtool-override:
+	@${STEP_MSG} "Modifying libtool scripts to use pkgsrc libtool"
+.if defined(LIBTOOL_OVERRIDE)
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	cd ${WRKSRC};							\
-	for file in ${${_OVERRIDE_VAR.${_script_}}}; do			\
+	for file in ${LIBTOOL_OVERRIDE}; do				\
 		${TEST} -f "$$file" || continue;			\
 		${_SCRIPT.${.TARGET}};					\
 	done
-.  else
+.else
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	cd ${WRKSRC};							\
 	depth=0; pattern=libtool;					\
-	while ${TEST} $$depth -le ${OVERRIDE_DIRDEPTH.${_script_}}; do	\
+	while ${TEST} $$depth -le ${OVERRIDE_DIRDEPTH.libtool}; do	\
 		for file in $$pattern; do				\
 			${TEST} -f "$$file" || continue;		\
 			${_SCRIPT.${.TARGET}};				\
 		done;							\
 		depth=`${EXPR} $$depth + 1`; pattern="*/$$pattern";	\
 	done
-.  endif
-.endfor
+.endif
+
+.PHONY: shlibtool-override
+shlibtool-override:
+	@${STEP_MSG} "Modifying libtool scripts to use pkgsrc shlibtool"
+.if defined(SHLIBTOOL_OVERRIDE) && !empty(SHLIBTOOL_OVERRIDE)
+	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	cd ${WRKSRC};							\
+	for file in ${SHLIBTOOL_OVERRIDE}; do				\
+		${TEST} -f "$$file" || continue;			\
+		${_SCRIPT.${.TARGET}};					\
+	done
+.else
+	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	cd ${WRKSRC};							\
+	depth=0; pattern=libtool;					\
+	while ${TEST} $$depth -le ${OVERRIDE_DIRDEPTH.shlibtool}; do	\
+		for file in $$pattern; do				\
+			${TEST} -f "$$file" || continue;		\
+			${_SCRIPT.${.TARGET}};				\
+		done;							\
+		depth=`${EXPR} $$depth + 1`; pattern="*/$$pattern";	\
+	done
+.endif
