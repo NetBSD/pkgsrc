@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2006/05/24 19:24:40 adam Exp $
+# $NetBSD: Makefile,v 1.25 2006/07/07 18:02:01 adam Exp $
 
-DISTNAME=	fftw-3.1.1
+DISTNAME=	fftw-3.1.2
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.fftw.org/pub/fftw/ \
 		http://www.fftw.org/
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 
 PKGCONFIG_OVERRIDE+=	fftw.pc.in
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 TEST_TARGET=		check
 
