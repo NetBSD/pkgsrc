@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/27 03:19:34 wulf Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/07/07 19:31:14 wiz Exp $
 bin/usrp_cal_dc_offset
 bin/usrper
 include/usrp_basic.h
@@ -86,11 +86,6 @@ share/doc/usrp-0.12/html/classusrp__standard__rx.png
 share/doc/usrp-0.12/html/classusrp__standard__tx-members.html
 share/doc/usrp-0.12/html/classusrp__standard__tx.html
 share/doc/usrp-0.12/html/classusrp__standard__tx.png
-share/doc/usrp-0.12/html/dir_000000.html
-share/doc/usrp-0.12/html/dir_000001.html
-share/doc/usrp-0.12/html/dir_000002.html
-share/doc/usrp-0.12/html/dir_000003.html
-share/doc/usrp-0.12/html/dirs.html
 share/doc/usrp-0.12/html/doxygen.css
 share/doc/usrp-0.12/html/doxygen.png
 share/doc/usrp-0.12/html/files.html
