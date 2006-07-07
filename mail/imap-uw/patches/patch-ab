@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.17 2005/08/12 19:47:17 tv Exp $
+$NetBSD: patch-ab,v 1.18 2006/07/07 05:45:51 minskim Exp $
 
---- src/osdep/unix/Makefile.orig	2005-08-12 15:09:59.000000000 -0400
-+++ src/osdep/unix/Makefile	2005-08-12 15:11:21.000000000 -0400
-@@ -41,9 +41,6 @@
+--- src/osdep/unix/Makefile.orig	2006-07-06 22:20:44.000000000 -0700
++++ src/osdep/unix/Makefile
+@@ -41,9 +41,6 @@ GCCOPTLEVEL= -O2
  
  # Extended flags needed for SSL.  You may need to modify.
  
@@ -12,7 +12,7 @@ $NetBSD: patch-ab,v 1.17 2005/08/12 19:47:17 tv Exp $
  SSLINCLUDE=$(SSLDIR)/include
  SSLLIB=$(SSLDIR)/lib
  
-@@ -60,7 +57,7 @@
+@@ -60,7 +57,7 @@ SSLRSA= # -lRSAglue -lrsaref
  
  SSLCFLAGS= -I$(SSLINCLUDE) -I$(SSLINCLUDE)/openssl\
   -DSSL_CERT_DIRECTORY=\"$(SSLCERTS)\" -DSSL_KEY_DIRECTORY=\"$(SSLKEYS)\"
@@ -21,7 +21,7 @@ $NetBSD: patch-ab,v 1.17 2005/08/12 19:47:17 tv Exp $
  
  
  # Extended flags needed for non-standard passwd types.  You may need to modify.
-@@ -104,14 +101,14 @@
+@@ -104,14 +101,14 @@ LOCKPGM=/etc/mlock
  # set certain other formats (e.g. mbx and mx) as the EMPTYPROTO since these
  # formats can never be empty files.
  
@@ -38,7 +38,7 @@ $NetBSD: patch-ab,v 1.17 2005/08/12 19:47:17 tv Exp $
  LN=ln -s
  RANLIB=ranlib
  
-@@ -403,9 +400,9 @@
+@@ -403,9 +400,9 @@ gso:	os_sol.h	# GCC Solaris
  	 SPOOLDIR=/var/spool MAILSPOOL=/var/mail \
  	 ACTIVEFILE=/usr/share/news/active \
  	 RSHPATH=/usr/bin/rsh \
@@ -50,7 +50,7 @@ $NetBSD: patch-ab,v 1.17 2005/08/12 19:47:17 tv Exp $
  
  gsu:	# GCC SUN-OS
  	$(BUILD) `$(CAT) SPECIALS` OS=sun \
-@@ -495,9 +492,9 @@
+@@ -495,9 +492,9 @@ neb:	# NetBSD
  	$(BUILD) `$(CAT) SPECIALS` OS=bsi \
  	 CRXTYPE=nfs \
  	 SPOOLDIR=/var \
@@ -62,7 +62,16 @@ $NetBSD: patch-ab,v 1.17 2005/08/12 19:47:17 tv Exp $
  	 BASELDFLAGS="-lcrypt"
  
  nec:	# NEC UX
-@@ -924,7 +921,7 @@
+@@ -549,7 +546,7 @@ osx:	# Mac OS X
+ 	$(BUILD) `$(CAT) SPECIALS` OS=$@ \
+ 	 CRXTYPE=nfs \
+ 	 SPOOLDIR=/var/spool MAILSPOOL=/var/mail \
+-	 BASECFLAGS="-g -O -Wno-pointer-sign"
++	 BASECFLAGS="-Wno-pointer-sign"
+ 
+ ptx:	# PTX
+ 	$(BUILD) `$(CAT) SPECIALS` OS=$@ \
+@@ -924,7 +921,7 @@ onceenv:
  	 -DACTIVEFILE=\"$(ACTIVEFILE)\" -DNEWSSPOOL=\"$(NEWSSPOOL)\" \
  	 -DRSHPATH=\"$(RSHPATH)\" -DLOCKPGM=\"$(LOCKPGM)\" > OSCFLAGS
  	echo $(BASELDFLAGS) $(EXTRALDFLAGS) > LDFLAGS
