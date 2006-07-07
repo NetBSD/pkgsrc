@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2006/06/12 16:28:05 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2006/07/07 06:52:46 adam Exp $
 
-DISTNAME=	SDL_mixer-1.2.6
-PKGREVISION=	5
+DISTNAME=	SDL_mixer-1.2.7
 CATEGORIES=	audio
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_mixer/release/
 
@@ -13,8 +12,8 @@ CONFLICTS=		SDL-mixer-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LIBTOOL=		YES
-GNU_CONFIGURE=		YES
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -24,8 +23,10 @@ CFLAGS+=		-DSYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 INSTALLATION_DIRS=	bin
 
 post-install:
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/playmus ${PREFIX}/bin
-	${LIBTOOL} ${INSTALL_PROGRAM} ${WRKSRC}/playwave ${PREFIX}/bin
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
+		${WRKSRC}/build/playmus ${PREFIX}/bin
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
+		${WRKSRC}/build/playwave ${PREFIX}/bin
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
