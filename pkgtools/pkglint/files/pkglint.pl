@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.638 2006/07/06 22:06:15 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.639 2006/07/07 09:45:07 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4825,8 +4825,13 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		} elsif ($value =~ regex_unresolved) {
 			# No further checks
 
-		} elsif ($value =~ qr"^(?:http://|ftp://|gopher://)[-0-9A-Za-z.]+(?::\d+)?/([-%&+,./0-9:=?\@A-Z_a-z~]|\\#)*?$") {
+		} elsif ($value =~ qr"^(https?|ftp|gopher)://([-0-9A-Za-z.]+)(?::(\d+))?/([-%&+,./0-9:=?\@A-Z_a-z~]|\\#)*$") {
+			my ($proto, $host, $port, $path) = ($1, $2, $3, $4);
 			my $sites = get_dist_sites();
+
+			if ($host =~ qr"\.NetBSD\.org$"i && $host !~ qr"\.NetBSD\.org$") {
+				$line->log_warning("Please write NetBSD.org instead of ${host}.");
+			}
 
 			foreach my $site (keys(%{$sites})) {
 				if (index($value, $site) == 0) {
