@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.666 2006/07/07 18:02:47 adam Exp $
+$NetBSD: CHANGES-2006,v 1.667 2006/07/07 18:07:15 tv Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3296,3 +3296,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/gimp to 2.2.11nb3 [tron 2006-07-07]
 	Updated net/kiax to 0.8.51 [reinoud 2006-07-07]
 	Updated math/fftw to 3.1.2 [adam 2006-07-07]
+	Updated mail/sendmail to 8.13.7 [tv 2006-07-07]
+	Updated mail/libmilter to 8.13.7 [tv 2006-07-07]
