@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:28:59 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/07 15:49:30 jlam Exp $
 #
 
 DISTNAME=		xmms-alarm-0.3.6
@@ -12,7 +12,7 @@ COMMENT=		Plugin which allows XMMS to be used as an alarm clock
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-SHLIBTOOL_OVERRIDE=	libtool
+SHLIBTOOL_OVERRIDE=	# empty
 
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

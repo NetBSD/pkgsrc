@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/06/20 20:43:08 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2006/07/07 15:49:32 jlam Exp $
 
 DISTNAME=	kipi-plugins-0.1.0-rc1
 PKGNAME=	kipi-plugins-0.1.0rc1
@@ -19,7 +19,7 @@ USE_TOOLS+=		gmake pkg-config msgfmt
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-SHLIBTOOL_OVERRIDE=	libtool
+SHLIBTOOL_OVERRIDE=	# empty
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/10 12:07:18 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/07 15:49:34 jlam Exp $
 
 DISTNAME=	lighttpd-1.4.11
 CATEGORIES=	www
@@ -9,7 +9,7 @@ HOMEPAGE=	http://www.lighttpd.net/
 COMMENT=	Fast, light-footprint HTTP server
 
 USE_LIBTOOL=		yes
-SHLIBTOOL_OVERRIDE=	libtool
+SHLIBTOOL_OVERRIDE=	# empty
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/${PKGBASE}
