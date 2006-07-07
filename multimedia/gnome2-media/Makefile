@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2006/07/05 05:37:43 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2006/07/07 18:21:48 drochner Exp $
 
-DISTNAME=		gnome-media-2.14.0
-PKGREVISION=		2
+DISTNAME=		gnome-media-2.14.2
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.14/}
 EXTRACT_SUFX=		.tar.bz2
@@ -32,6 +31,7 @@ GCONF2_SCHEMAS=		CDDB-Slave2.schemas
 GCONF2_SCHEMAS+=	gnome-audio-profiles.schemas
 GCONF2_SCHEMAS+=	gnome-cd.schemas
 GCONF2_SCHEMAS+=	gnome-sound-recorder.schemas
+GCONF2_SCHEMAS+=	gnome-volume-control.schemas
 
 BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.3
 BUILDLINK_API_DEPENDS.gstreamer0.10+=		gstreamer0.10>=0.10.3
