@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/06/07 12:36:20 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2006/07/07 15:49:33 jlam Exp $
 #
 
 DISTNAME=		gift-gnutella-0.0.9.2
@@ -16,7 +16,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 
-SHLIBTOOL_OVERRIDE=	libtool
+SHLIBTOOL_OVERRIDE=	# empty
 CONFIGURE_ARGS+=	--with-libxml=${BUILDLINK_PREFIX.libxml2}
 
 .include "../../devel/zlib/buildlink3.mk"

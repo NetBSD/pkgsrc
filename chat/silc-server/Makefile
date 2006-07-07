@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2006/04/23 00:12:36 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2006/07/07 15:49:31 jlam Exp $
 #
 
 DISTNAME=		silc-server-1.0.2
@@ -16,7 +16,8 @@ COMMENT=                Server for the Secure Internet Live Conferencing (SILC) 
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-SHLIBTOOL_OVERRIDE=	libtool */*/*/libtool
+OVERRIDE_DIRDEPTH=	3
+SHLIBTOOL_OVERRIDE=	# empty
 
 .include "../../mk/bsd.prefs.mk"
 
