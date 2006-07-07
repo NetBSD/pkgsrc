@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2006/06/03 16:04:23 tron Exp $
+# $NetBSD: Makefile,v 1.132 2006/07/07 15:49:33 jlam Exp $
 
 DISTNAME=		ethereal-0.99.0
 CATEGORIES=		net
@@ -25,7 +25,7 @@ USE_LANGUAGES+=		c++
 USE_TOOLS+=		perl pkg-config
 
 USE_LIBTOOL=		YES
-SHLIBTOOL_OVERRIDE+=	libtool
+SHLIBTOOL_OVERRIDE=	# empty
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-gtk2

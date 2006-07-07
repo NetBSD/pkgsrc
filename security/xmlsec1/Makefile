@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/06 00:18:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/07 15:49:33 jlam Exp $
 #
 
 DISTNAME=		xmlsec1-1.2.6
@@ -13,7 +13,6 @@ COMMENT=		XML signature and encryption library
 USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 #PKGCONFIG_OVERRIDE+=	${WRKSRC}/xmlsec-gnutls.pc.in
 #PKGCONFIG_OVERRIDE+=	${WRKSRC}/xmlsec-nss.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/xmlsec-openssl.pc.in

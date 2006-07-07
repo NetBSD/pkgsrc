@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/06/11 21:46:46 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2006/07/07 15:49:32 jlam Exp $
 
 DISTNAME=	libkexif-0.2.2
 PKGREVISION=	3
@@ -15,7 +15,7 @@ USE_TOOLS+=		gmake pkg-config msgfmt
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-SHLIBTOOL_OVERRIDE=	libtool
+SHLIBTOOL_OVERRIDE=	# empty
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/libexif/buildlink3.mk"

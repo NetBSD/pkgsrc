@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/06/06 14:56:20 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/07/07 15:49:32 jlam Exp $
 
 DISTNAME=	cln-1.1.11
 CATEGORIES=	math
@@ -15,7 +15,6 @@ USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-LIBTOOL_OVERRIDE+=	libtool
 PKGCONFIG_OVERRIDE=	cln.pc.in
 INFO_FILES=		# PLIST
 

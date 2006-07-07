@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/04/13 18:23:31 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/07/07 15:49:31 jlam Exp $
 #
 
 DISTNAME=		gdb-6.2.1
@@ -15,7 +15,6 @@ NOT_FOR_PLATFORM=	Darwin-*-*
 
 USE_TOOLS+=		gmake makeinfo msgfmt
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/gdb6

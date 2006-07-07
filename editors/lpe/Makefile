@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/04/13 18:23:32 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2006/07/07 15:49:32 jlam Exp $
 #
 
 DISTNAME=	lpe-1.2.6
@@ -16,7 +16,7 @@ USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		YES
 
-SHLIBTOOL_OVERRIDE=	libtool
+SHLIBTOOL_OVERRIDE=	# empty
 
 # Note: pkglint warns about the following three lines, but they must not
 # be changed because this package uses autoconf2.13.
