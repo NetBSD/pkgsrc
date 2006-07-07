@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2006/03/04 21:30:30 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2006/07/07 19:01:43 drochner Exp $
 
-DISTNAME=	ijs-0.34
-PKGREVISION=	2
+DISTNAME=	ijs-0.35
 CATEGORIES=	print
 MASTER_SITES=	http://www.linuxprinting.org/ijs/download/
 
@@ -16,6 +15,7 @@ GNU_CONFIGURE=		yes
 BUILD_TARGET=		libijs.la
 MAKE_ENV+=		XCFLAGS=${CFLAGS:M*:Q}
 MAKE_ENV+=		IJS_VERSION_INFO="0:0"
+PKGCONFIG_OVERRIDE=	ijs.pc.in
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ijs
