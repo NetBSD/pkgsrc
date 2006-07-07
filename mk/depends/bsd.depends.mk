@@ -1,4 +1,4 @@
-# $NetBSD: bsd.depends.mk,v 1.7 2006/07/06 22:29:52 jlam Exp $
+# $NetBSD: bsd.depends.mk,v 1.8 2006/07/07 21:24:28 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to dependencies.
@@ -37,7 +37,7 @@ DEPENDS_TARGET=		reinstall
 .if !defined(NO_DEPENDS)
 .  include "${PKGSRCDIR}/mk/depends/depends.mk"
 .elif !target(depends)
-.  if exists(${_DEPENDS_COOKIE})
+.  if exists(${_COOKIE.depends})
 depends:
 	@${DO_NADA}
 .  else
@@ -64,9 +64,9 @@ install-depends: depends depends-clean
 ### target so that "depends" may be re-invoked.
 ###
 depends-clean:
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_DEPENDS_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_COOKIE.depends}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${RMDIR} -p ${_DEPENDS_COOKIE:H} 2>/dev/null || ${TRUE}
+	${RMDIR} -p ${_COOKIE.depends:H} 2>/dev/null || ${TRUE}
 
 ######################################################################
 ### depends-cookie (PRIVATE, override)
@@ -77,8 +77,8 @@ depends-clean:
 .PHONY: depends-cookie
 .if !target(depends-cookie)
 depends-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_DEPENDS_COOKIE} || ${FALSE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_DEPENDS_COOKIE:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${_DEPENDS_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_COOKIE.depends} || ${FALSE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_COOKIE.depends:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${_COOKIE.depends}
 .endif
 

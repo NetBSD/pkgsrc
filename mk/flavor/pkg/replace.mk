@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.3 2006/07/05 19:13:46 jlam Exp $
+# $NetBSD: replace.mk,v 1.4 2006/07/07 21:24:28 jlam Exp $
 
 ######################################################################
 ### replace-pkg (PRIVATE, pkgsrc/mk/install/replace.mk)
@@ -32,7 +32,7 @@ undo-replace-pkg: ${_UNDO_REPLACE_PKG_TARGETS}
 
 _REQUIRED_BY_FILE=	${PKG_DB_TMPDIR}/+REQUIRED_BY
 
-_REPLACE_COOKIE=	${WRKDIR}/.replace_done
+_COOKIE.replace=	${WRKDIR}/.replace_done
 _REPLACE_OLDNAME_FILE=	${WRKDIR}/.replace_oldname
 _REPLACE_NEWNAME_FILE=	${WRKDIR}/.replace_newname
 
@@ -45,7 +45,7 @@ _REPLACE_NEWNAME_FILE=	${WRKDIR}/.replace_newname
 .PHONY: undo-replace-check
 undo-replace-check:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${TEST} ! -f ${_REPLACE_COOKIE} || exit 0;			\
+	${TEST} ! -f ${_COOKIE.replace} || exit 0;			\
 	${ERROR_MSG} "No replacment to undo!";				\
 	exit 1
 
@@ -95,14 +95,14 @@ replace-names:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} ${PKGNAME} > ${_REPLACE_NEWNAME_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${CP} -f ${_REPLACE_NEWNAME_FILE} ${_REPLACE_COOKIE}
+	${CP} -f ${_REPLACE_NEWNAME_FILE} ${_COOKIE.replace}
 
 .PHONY: undo-replace-names
 undo-replace-names:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${ECHO} ${PKGNAME} > ${_REPLACE_OLDNAME_FILE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${CP} -f ${_REPLACE_COOKIE} ${_REPLACE_NEWNAME_FILE}
+	${CP} -f ${_COOKIE.replace} ${_REPLACE_NEWNAME_FILE}
 
 ######################################################################
 ### replace-preserve-required-by (PRIVATE)
@@ -170,4 +170,4 @@ replace-clean:
 	${RM} -f ${WRKDIR}/$$newname${PKG_SUFX}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${RM} -f ${_REPLACE_OLDNAME_FILE} ${_REPLACE_NEWNAME_FILE}	\
-		${_REPLACE_COOKIE}
+		${_COOKIE.replace}
