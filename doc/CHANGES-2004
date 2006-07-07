@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2004,v 1.18 2006/06/13 17:00:20 wiz Exp $
+$NetBSD: CHANGES-2004,v 1.19 2006/07/07 19:05:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2004:
 
@@ -994,7 +994,7 @@ Changes to the packages collection and infrastructure in 2004:
 	Updated libtool-base to 1.5.2nb4 [markd 2004-02-23]
 	Updated libtool-info to 1.5.2nb4 [markd 2004-02-23]
 	Updated pkglint to 3.68 [wiz 2004-02-23]
-	Updated heimdal to 1.6nb1 [wiz 2004-02-23]
+	Updated heimdal to 0.6nb1 [wiz 2004-02-23]
 	Removed ion-dock [cube 2004-02-23]
 	Removed ion-devel [cube 2004-02-23]
 	Updated ion to 20040207 [cube 2004-02-23]
