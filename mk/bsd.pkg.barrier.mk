@@ -1,6 +1,6 @@
-# $NetBSD: bsd.pkg.barrier.mk,v 1.5 2006/07/06 22:17:57 jlam Exp $
+# $NetBSD: bsd.pkg.barrier.mk,v 1.6 2006/07/07 21:24:27 jlam Exp $
 
-_BARRIER_COOKIE=	${WRKDIR}/.barrier_cookie
+_COOKIE.barrier=	${WRKDIR}/.barrier_cookie
 
 # _BARRIER_PRE_TARGETS is a list of the targets that must be built before
 #	the "barrier" target invokes a new make.
@@ -38,7 +38,7 @@ _BARRIER_CMDLINE_TARGETS+=	${_target_}
 ### target invokes a new make should be listed in _BARRIER_POST_TARGETS,
 ### and should be of the form:
 ###
-###	.if !exists(${_BARRIER_COOKIE})
+###	.if !exists(${_COOKIE.barrier})
 ###	foo: barrier
 ###	.else
 ###	foo: foo's real source dependencies
@@ -49,8 +49,8 @@ _BARRIER_CMDLINE_TARGETS+=	${_target_}
 ###
 
 .PHONY: barrier
-barrier: ${_BARRIER_PRE_TARGETS} ${_BARRIER_COOKIE}
-.if !exists(${_BARRIER_COOKIE})
+barrier: ${_BARRIER_PRE_TARGETS} ${_COOKIE.barrier}
+.if !exists(${_COOKIE.barrier})
 .  if defined(PKG_VERBOSE)
 	@${PHASE_MSG} "Invoking \`\`"${_BARRIER_CMDLINE_TARGETS:Q}"'' after barrier for ${PKGNAME}"
 .  endif
@@ -65,6 +65,6 @@ barrier: ${_BARRIER_PRE_TARGETS} ${_BARRIER_COOKIE}
 ######################################################################
 ### barrier-cookie creates the "barrier" cookie file.
 ###
-${_BARRIER_COOKIE}:
+${_COOKIE.barrier}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${.TARGET}

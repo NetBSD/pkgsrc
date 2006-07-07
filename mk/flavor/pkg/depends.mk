@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.8 2006/07/06 22:29:52 jlam Exp $
+# $NetBSD: depends.mk,v 1.9 2006/07/07 21:24:28 jlam Exp $
 
 _DEPENDS_FILE=		${WRKDIR}/.depends
 _REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
@@ -10,8 +10,8 @@ _REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
 # dependencies of the package.
 #
 _DEPENDS_PATTERNS_CMD=	\
-	if ${TEST} -f ${_DEPENDS_COOKIE}; then				\
-		${CAT} ${_DEPENDS_COOKIE} |				\
+	if ${TEST} -f ${_COOKIE.depends}; then				\
+		${CAT} ${_COOKIE.depends} |				\
 		${AWK} '/^full/ { print $$2 } { next }';		\
 	fi
 
@@ -36,9 +36,9 @@ show-depends:
 ###
 .PHONY: depends-cookie
 depends-cookie: ${_DEPENDS_FILE}
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_DEPENDS_COOKIE} || ${FALSE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_DEPENDS_COOKIE:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${_DEPENDS_FILE} ${_DEPENDS_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_COOKIE.depends} || ${FALSE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_COOKIE.depends:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${MV} -f ${_DEPENDS_FILE} ${_COOKIE.depends}
 
 ${_DEPENDS_FILE}:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}

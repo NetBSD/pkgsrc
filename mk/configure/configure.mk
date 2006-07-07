@@ -1,4 +1,4 @@
-# $NetBSD: configure.mk,v 1.3 2006/07/05 22:21:02 jlam Exp $
+# $NetBSD: configure.mk,v 1.4 2006/07/07 21:24:28 jlam Exp $
 #
 # CONFIGURE_SCRIPT is the path to the script to run in order to
 #	configure the software for building.  If the path is relative,
@@ -43,15 +43,15 @@ BUILD_DEFS+=		CONFIGURE_ENV CONFIGURE_ARGS
 _CONFIGURE_TARGETS+=	check-vulnerable
 _CONFIGURE_TARGETS+=	wrapper
 _CONFIGURE_TARGETS+=	acquire-configure-lock
-_CONFIGURE_TARGETS+=	${_CONFIGURE_COOKIE}
+_CONFIGURE_TARGETS+=	${_COOKIE.configure}
 _CONFIGURE_TARGETS+=	release-configure-lock
 
 .PHONY: configure
 .if !target(configure)
-.  if exists(${_CONFIGURE_COOKIE})
+.  if exists(${_COOKIE.configure})
 configure:
 	@${DO_NADA}
-.  elif exists(${_BARRIER_COOKIE})
+.  elif exists(${_COOKIE.barrier})
 configure: ${_CONFIGURE_TARGETS}
 .  else
 configure: barrier
@@ -62,11 +62,11 @@ configure: barrier
 acquire-configure-lock: acquire-lock
 release-configure-lock: release-lock
 
-.if exists(${_CONFIGURE_COOKIE})
-${_CONFIGURE_COOKIE}:
+.if exists(${_COOKIE.configure})
+${_COOKIE.configure}:
 	@${DO_NADA}
 .else
-${_CONFIGURE_COOKIE}: real-configure
+${_COOKIE.configure}: real-configure
 .endif
 
 ######################################################################

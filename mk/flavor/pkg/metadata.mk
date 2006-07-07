@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.6 2006/06/09 16:41:09 jlam Exp $
+# $NetBSD: metadata.mk,v 1.7 2006/07/07 21:24:28 jlam Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -272,7 +272,7 @@ ${_PRESERVE_FILE}:
 _SIZE_ALL_FILE=		${PKG_DB_TMPDIR}/+SIZE_ALL
 _METADATA_TARGETS+=	${_SIZE_ALL_FILE}
 
-${_SIZE_ALL_FILE}: ${_DEPENDS_COOKIE}
+${_SIZE_ALL_FILE}: ${_COOKIE.depends}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${_DEPENDS_PATTERNS_CMD} |					\
@@ -353,7 +353,7 @@ _INSTALL_ARG_cmd=	if ${TEST} -f ${INSTALL_FILE}; then		\
 _CONTENTS_TARGETS+=	${_BUILD_INFO_FILE}
 _CONTENTS_TARGETS+=	${_BUILD_VERSION_FILE}
 _CONTENTS_TARGETS+=	${_COMMENT_FILE}
-_CONTENTS_TARGETS+=	${_DEPENDS_COOKIE}
+_CONTENTS_TARGETS+=	${_COOKIE.depends}
 _CONTENTS_TARGETS+=	${_DESCR_FILE}
 _CONTENTS_TARGETS+=	${_MESSAGE_FILE}
 _CONTENTS_TARGETS+=	plist

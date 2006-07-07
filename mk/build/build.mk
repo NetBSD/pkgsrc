@@ -1,4 +1,4 @@
-# $NetBSD: build.mk,v 1.3 2006/07/05 22:21:02 jlam Exp $
+# $NetBSD: build.mk,v 1.4 2006/07/07 21:24:28 jlam Exp $
 #
 # BUILD_MAKE_FLAGS is the list of arguments that is passed to the make
 #	process.
@@ -17,16 +17,16 @@ BUILD_TARGET?=		all
 _BUILD_TARGETS+=	check-vulnerable
 _BUILD_TARGETS+=	configure
 _BUILD_TARGETS+=	acquire-build-lock
-_BUILD_TARGETS+=	${_BUILD_COOKIE}
+_BUILD_TARGETS+=	${_COOKIE.build}
 _BUILD_TARGETS+=	release-build-lock
 _BUILD_TARGETS+=	pkginstall
 
 .PHONY: build
 .if !target(build)
-.  if exists(${_BUILD_COOKIE})
+.  if exists(${_COOKIE.build})
 build:
 	@${DO_NADA}
-.  elif exists(${_BARRIER_COOKIE})
+.  elif exists(${_COOKIE.barrier})
 build: ${_BUILD_TARGETS}
 .  else
 build: barrier
@@ -37,11 +37,11 @@ build: barrier
 acquire-build-lock: acquire-lock
 release-build-lock: release-lock
 
-.if exists(${_BUILD_COOKIE})
-${_BUILD_COOKIE}:
+.if exists(${_COOKIE.build})
+${_COOKIE.build}:
 	@${DO_NADA}
 .else
-${_BUILD_COOKIE}: real-build
+${_COOKIE.build}: real-build
 .endif
 
 ######################################################################
