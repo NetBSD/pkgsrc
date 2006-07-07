@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2006/06/26 17:11:39 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2006/07/07 17:00:27 abs Exp $
 
 DISTNAME=	bonobo-1.0.22
 PKGREVISION=	2
@@ -18,7 +18,7 @@ BROKEN_GETTEXT_DETECTION=	yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_X11BASE=		yes
-USE_TOOLS+=		gmake msgfmt
+USE_TOOLS+=		gmake msgfmt perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE:Q}
 CONFIGURE_ENV+=		X11BASE=${X11BASE:Q}
