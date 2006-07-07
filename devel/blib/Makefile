@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/17 13:46:09 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2006/07/07 15:49:31 jlam Exp $
 #
 
 DISTNAME=		blib-1.0.2
@@ -14,7 +14,7 @@ USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 
-SHLIBTOOL_OVERRIDE=	modules/libtool
+SHLIBTOOL_OVERRIDE=	# empty
 PKGCONFIG_OVERRIDE+=	blib-directfb.pc.in
 PKGCONFIG_OVERRIDE+=	blib-gtk.pc.in
 PKGCONFIG_OVERRIDE+=	blib.pc.in

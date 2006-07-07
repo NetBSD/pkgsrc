@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/05/25 12:49:39 markd Exp $
+# $NetBSD: Makefile,v 1.12 2006/07/07 15:49:34 jlam Exp $
 #
 
 DISTNAME=	krusader-1.70.0
@@ -14,7 +14,7 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
-SHLIBTOOL_OVERRIDE=	libtool
+SHLIBTOOL_OVERRIDE=	# empty
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"

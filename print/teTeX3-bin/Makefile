@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/05/22 17:13:53 drochner Exp $
+# $NetBSD: Makefile,v 1.21 2006/07/07 15:49:33 jlam Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
@@ -23,7 +23,6 @@ REPLACE_PERL=	texk/xdvik/t1mapper \
 		texk/oxdvik/t1mapper
 
 USE_LIBTOOL=	yes
-LIBTOOL_OVERRIDE=	texk/libtool texk/kpathsea/libtool
 
 CONFIGURE_ARGS+=	--without-texinfo --without-texi2html
 CONFIGURE_ARGS+=	--with-xdvi-x-toolkit=xaw
