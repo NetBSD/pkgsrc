@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/03/04 21:28:54 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/07 04:06:15 minskim Exp $
 #
 
 DISTNAME=		applerecords-0.5
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		http://www.cdavies.org/code/
 EXTRACT_SUFX=		.jar
@@ -15,6 +16,8 @@ WRKSRC=			${WRKDIR}
 USE_JAVA=		run
 
 INSTALLATION_DIRS=	bin
+
+.include "../../mk/java-vm.mk"
 
 do-extract:
 	${CP} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME}.jar ${WRKSRC}
