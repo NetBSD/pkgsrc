@@ -1,4 +1,4 @@
-# $NetBSD: bsd.install.mk,v 1.6 2006/07/06 22:29:52 jlam Exp $
+# $NetBSD: bsd.install.mk,v 1.7 2006/07/07 13:39:52 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to installing packages.
@@ -26,8 +26,10 @@ _INSTALL_COOKIE=	${WRKDIR}/.install_done
 .  if exists(${_INSTALL_COOKIE})
 install:
 	@${DO_NADA}
-.  else
+.  elif exists(${_BARRIER_COOKIE})
 install: ${_PKGSRC_BUILD_TARGETS} install-cookie
+.  else
+install: barrier
 .  endif
 .endif
 
