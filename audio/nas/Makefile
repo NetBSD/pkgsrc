@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2006/07/07 22:10:06 jlam Exp $
+# $NetBSD: Makefile,v 1.63 2006/07/07 23:20:20 minskim Exp $
 
 DISTNAME=	nas-1.8.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -59,5 +59,8 @@ PLIST_SRC+=	${PKGDIR}/PLIST.voxware
 PLIST_SRC+=	${PKGDIR}/PLIST.server
 .  endif
 .endif
+
+pre-configure:
+	cd ${WRKSRC}/config && ${SETENV} ${CONFIGURE_ENV} ./configure
 
 .include "../../mk/bsd.pkg.mk"
