@@ -1,4 +1,4 @@
-# $NetBSD: patch.mk,v 1.7 2006/07/06 22:29:53 jlam Exp $
+# $NetBSD: patch.mk,v 1.8 2006/07/07 21:24:29 jlam Exp $
 #
 # The following variables may be set in a package Makefile and control
 # how pkgsrc patches are applied.
@@ -44,7 +44,7 @@
 #
 
 _PATCH_APPLIED_FILE=	${WRKDIR}/.patch
-_PATCH_COOKIE=		${WRKDIR}/.patch_done
+_COOKIE.patch=		${WRKDIR}/.patch_done
 
 ######################################################################
 ### patch (PUBLIC)
@@ -55,12 +55,12 @@ _PATCH_COOKIE=		${WRKDIR}/.patch_done
 _PATCH_TARGETS+=	check-vulnerable
 _PATCH_TARGETS+=	extract
 _PATCH_TARGETS+=	acquire-patch-lock
-_PATCH_TARGETS+=	${_PATCH_COOKIE}
+_PATCH_TARGETS+=	${_COOKIE.patch}
 _PATCH_TARGETS+=	release-patch-lock
 
 .PHONY: patch
 .if !target(patch)
-.  if exists(${_PATCH_COOKIE})
+.  if exists(${_COOKIE.patch})
 patch:
 	@${DO_NADA}
 .  else
@@ -72,11 +72,11 @@ patch: ${_PATCH_TARGETS}
 acquire-patch-lock: acquire-lock
 release-patch-lock: release-lock
 
-.if exists(${_PATCH_COOKIE})
-${_PATCH_COOKIE}:
+.if exists(${_COOKIE.patch})
+${_COOKIE.patch}:
 	@${DO_NADA}
 .else
-${_PATCH_COOKIE}: real-patch
+${_COOKIE.patch}: real-patch
 .endif
 
 ######################################################################
@@ -108,12 +108,12 @@ patch-message:
 ###
 .PHONY: patch-cookie
 patch-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_PATCH_COOKIE} || ${FALSE}
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_COOKIE.patch} || ${FALSE}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if ${TEST} -f ${_PATCH_APPLIED_FILE:Q}; then			\
-		${MV} -f ${_PATCH_APPLIED_FILE:Q} ${_PATCH_COOKIE:Q};	\
+		${MV} -f ${_PATCH_APPLIED_FILE:Q} ${_COOKIE.patch:Q};	\
 	else								\
-		${TOUCH} ${TOUCH_FLAGS} ${_PATCH_COOKIE:Q};		\
+		${TOUCH} ${TOUCH_FLAGS} ${_COOKIE.patch:Q};		\
 	fi
 
 ######################################################################

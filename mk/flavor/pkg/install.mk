@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.7 2006/06/09 13:59:08 jlam Exp $
+# $NetBSD: install.mk,v 1.8 2006/07/07 21:24:28 jlam Exp $
 
 ######################################################################
 ### install-check-conflicts (PRIVATE, pkgsrc/mk/install/install.mk)
@@ -60,7 +60,7 @@ _REGISTER_DEPENDENCIES=							\
 	${SH} ${PKGSRCDIR}/mk/flavor/pkg/register-dependencies
 
 .PHONY: register-pkg
-register-pkg: generate-metadata ${_DEPENDS_COOKIE}
+register-pkg: generate-metadata ${_COOKIE.depends}
 	@${STEP_MSG} "Registering installation for ${PKGNAME}"
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -fr ${_PKG_DBDIR}/${PKGNAME}
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_PKG_DBDIR}/${PKGNAME}

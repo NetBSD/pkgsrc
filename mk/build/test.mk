@@ -1,4 +1,4 @@
-# $NetBSD: test.mk,v 1.4 2006/07/06 22:29:52 jlam Exp $
+# $NetBSD: test.mk,v 1.5 2006/07/07 21:24:28 jlam Exp $
 #
 # TEST_DIRS is the list of directories in which to perform the build
 #	process.  If the directories are relative paths, then they
@@ -22,15 +22,15 @@ TEST_MAKE_FLAGS?=	${MAKE_FLAGS}
 _TEST_TARGETS+=	check-vulnerable
 _TEST_TARGETS+=	build
 _TEST_TARGETS+=	acquire-test-lock
-_TEST_TARGETS+=	${_TEST_COOKIE}
+_TEST_TARGETS+=	${_COOKIE.test}
 _TEST_TARGETS+=	release-test-lock
 
 .PHONY: test
 .if !target(test)
-.  if exists(${_TEST_COOKIE})
+.  if exists(${_COOKIE.test})
 test:
 	@${DO_NADA}
-.  elif exists(${_BARRIER_COOKIE})
+.  elif exists(${_COOKIE.barrier})
 test: ${_TEST_TARGETS}
 .  else
 test: barrier
@@ -41,11 +41,11 @@ test: barrier
 acquire-test-lock: acquire-lock
 release-test-lock: release-lock
 
-.if exists(${_TEST_COOKIE})
-${_TEST_COOKIE}:
+.if exists(${_COOKIE.test})
+${_COOKIE.test}:
 	@${DO_NADA}
 .else
-${_TEST_COOKIE}: real-test
+${_COOKIE.test}: real-test
 .endif
 
 ######################################################################
@@ -126,6 +126,6 @@ post-test:
 ###
 .PHONY: test-cookie
 test-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_TEST_COOKIE} || ${FALSE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_TEST_COOKIE:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_TEST_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_COOKIE.test} || ${FALSE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_COOKIE.test:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_COOKIE.test}

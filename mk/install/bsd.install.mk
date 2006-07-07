@@ -1,4 +1,4 @@
-# $NetBSD: bsd.install.mk,v 1.7 2006/07/07 13:39:52 jlam Exp $
+# $NetBSD: bsd.install.mk,v 1.8 2006/07/07 21:24:28 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to installing packages.
@@ -12,7 +12,7 @@
 #    pre-install, do-install, post-install
 #
 
-_INSTALL_COOKIE=	${WRKDIR}/.install_done
+_COOKIE.install=	${WRKDIR}/.install_done
 
 ######################################################################
 ### install (PUBLIC)
@@ -23,10 +23,10 @@ _INSTALL_COOKIE=	${WRKDIR}/.install_done
 .if !defined(NO_INSTALL)
 .  include "${PKGSRCDIR}/mk/install/install.mk"
 .elif !target(install)
-.  if exists(${_INSTALL_COOKIE})
+.  if exists(${_COOKIE.install})
 install:
 	@${DO_NADA}
-.  elif exists(${_BARRIER_COOKIE})
+.  elif exists(${_COOKIE.barrier})
 install: ${_PKGSRC_BUILD_TARGETS} install-cookie
 .  else
 install: barrier
@@ -43,6 +43,6 @@ install: barrier
 ###
 .PHONY: install-cookie
 install-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_INSTALL_COOKIE} || ${FALSE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_INSTALL_COOKIE:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_INSTALL_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_COOKIE.install} || ${FALSE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_COOKIE.install:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_COOKIE.install}

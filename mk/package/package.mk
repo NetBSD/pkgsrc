@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.13 2006/07/06 22:29:53 jlam Exp $
+# $NetBSD: package.mk,v 1.14 2006/07/07 21:24:28 jlam Exp $
 
 ######################################################################
 ### package (PUBLIC)
@@ -13,15 +13,15 @@ _PACKAGE_TARGETS+=	replace
 _PACKAGE_TARGETS+=	install
 .endif
 _PACKAGE_TARGETS+=	acquire-package-lock
-_PACKAGE_TARGETS+=	${_PACKAGE_COOKIE}
+_PACKAGE_TARGETS+=	${_COOKIE.package}
 _PACKAGE_TARGETS+=	release-package-lock
 
 .PHONY: package
 .if !target(package)
-.  if exists(${_PACKAGE_COOKIE})
+.  if exists(${_COOKIE.package})
 package:
 	@${DO_NADA}
-.  elif exists(${_BARRIER_COOKIE})
+.  elif exists(${_COOKIE.barrier})
 package: ${_PACKAGE_TARGETS}
 .  else
 package: barrier
@@ -32,11 +32,11 @@ package: barrier
 acquire-package-lock: acquire-lock
 release-package-lock: release-lock
 
-.if exists(${_PACKAGE_COOKIE})
-${_PACKAGE_COOKIE}:
+.if exists(${_COOKIE.package})
+${_COOKIE.package}:
 	@${DO_NADA}
 .else
-${_PACKAGE_COOKIE}: real-package
+${_COOKIE.package}: real-package
 .endif
 
 ######################################################################
@@ -63,9 +63,9 @@ package-message:
 ###
 .PHONY: package-cookie
 package-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_PACKAGE_COOKIE} || ${FALSE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_PACKAGE_COOKIE:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_PACKAGE_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_COOKIE.package} || ${FALSE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_COOKIE.package:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_COOKIE.package}
 
 ######################################################################
 ### The targets below are run with elevated privileges.

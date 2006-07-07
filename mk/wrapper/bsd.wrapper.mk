@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.47 2006/07/06 22:29:53 jlam Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.48 2006/07/07 21:24:29 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -57,7 +57,7 @@ PREPEND_PATH+=		${WRAPPER_BINDIR}
 ###
 ### BEGIN: after the barrier
 ###
-.if exists(${_BARRIER_COOKIE})
+.if exists(${_COOKIE.barrier})
 
 WRAPPER_DEBUG?=		yes
 CONFIGURE_ENV+=		WRAPPER_DEBUG=${WRAPPER_DEBUG:Q}
@@ -773,15 +773,15 @@ SUBST_POSTCMD.unwrap=	${DO_NADA}
 ######################################################################
 ######################################################################
 
-_WRAPPER_COOKIE=	${WRKDIR}/.wrapper_done
+_COOKIE.wrapper=	${WRKDIR}/.wrapper_done
 
 .PHONY: wrapper
 .if !target(wrapper)
-.  if exists(${_WRAPPER_COOKIE})
+.  if exists(${_COOKIE.wrapper})
 wrapper:
 	@${DO_NADA}
-.  elif exists(${_BARRIER_COOKIE})
-wrapper: check-vulnerable patch acquire-wrapper-lock ${_WRAPPER_COOKIE} release-wrapper-lock
+.  elif exists(${_COOKIE.barrier})
+wrapper: check-vulnerable patch acquire-wrapper-lock ${_COOKIE.wrapper} release-wrapper-lock
 .  else
 wrapper: barrier
 .  endif
@@ -791,11 +791,11 @@ wrapper: barrier
 acquire-wrapper-lock: acquire-lock
 release-wrapper-lock: release-lock
 
-.if exists(${_WRAPPER_COOKIE})
-${_WRAPPER_COOKIE}:
+.if exists(${_COOKIE.wrapper})
+${_COOKIE.wrapper}:
 	@${DO_NADA}
 .else
-${_WRAPPER_COOKIE}: real-wrapper
+${_COOKIE.wrapper}: real-wrapper
 .endif
 
 .PHONY: real-wrapper
@@ -824,6 +824,6 @@ post-wrapper:
 
 .PHONY: wrapper-cookie
 wrapper-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_WRAPPER_COOKIE} || ${FALSE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_WRAPPER_COOKIE:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_WRAPPER_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_COOKIE.wrapper} || ${FALSE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_COOKIE.wrapper:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_COOKIE.wrapper}

@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.8 2006/05/14 14:27:41 seb Exp $
+# $NetBSD: print-plist.mk,v 1.9 2006/07/07 21:24:29 jlam Exp $
 
 ###
 ### Automatic PLIST generation
@@ -76,9 +76,9 @@ _PRINT_PLIST_COMMON_DIRS!=	${AWK} 'BEGIN {				\
 # XXX should check $LOCALBASE and $X11BASE, and add @cwd statements
 
 _PRINT_PLIST_FILES_CMD=	\
-	${FIND} ${PREFIX}/. -xdev -newer ${_EXTRACT_COOKIE} \! -type d -print
+	${FIND} ${PREFIX}/. -xdev -newer ${_COOKIE.extract} \! -type d -print
 _PRINT_PLIST_DIRS_CMD=	\
-	${FIND} ${PREFIX}/. -xdev -newer ${_EXTRACT_COOKIE} -type d -print
+	${FIND} ${PREFIX}/. -xdev -newer ${_COOKIE.extract} -type d -print
 
 .if !empty(LIBTOOLIZE_PLIST:M[yY][eE][sS])
 _PRINT_PLIST_LIBTOOLIZE_FILTER?=					\

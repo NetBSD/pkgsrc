@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.10 2006/07/05 22:21:02 jlam Exp $
+# $NetBSD: install.mk,v 1.11 2006/07/07 21:24:28 jlam Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -9,15 +9,15 @@
 _INSTALL_TARGETS+=	check-vulnerable
 _INSTALL_TARGETS+=	${_PKGSRC_BUILD_TARGETS}
 _INSTALL_TARGETS+=	acquire-install-lock
-_INSTALL_TARGETS+=	${_INSTALL_COOKIE}
+_INSTALL_TARGETS+=	${_COOKIE.install}
 _INSTALL_TARGETS+=	release-install-lock
 
 .PHONY: install
 .if !target(install)
-.  if exists(${_INSTALL_COOKIE})
+.  if exists(${_COOKIE.install})
 install:
 	@${DO_NADA}
-.  elif exists(${_BARRIER_COOKIE})
+.  elif exists(${_COOKIE.barrier})
 install: ${_INSTALL_TARGETS}
 .  else
 install: barrier
@@ -28,11 +28,11 @@ install: barrier
 acquire-install-lock: acquire-lock
 release-install-lock: release-lock
 
-.if exists(${_INSTALL_COOKIE})
-${_INSTALL_COOKIE}:
+.if exists(${_COOKIE.install})
+${_COOKIE.install}:
 	@${DO_NADA}
 .else
-${_INSTALL_COOKIE}: real-install
+${_COOKIE.install}: real-install
 .endif
 
 ######################################################################
@@ -93,9 +93,9 @@ unprivileged-install-hook:
 ### This is a check against stale work directories.
 ###
 .PHONY: install-check-version
-install-check-version: ${_EXTRACT_COOKIE}
+install-check-version: ${_COOKIE.extract}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	extractname=`${CAT} ${_EXTRACT_COOKIE}`;			\
+	extractname=`${CAT} ${_COOKIE.extract}`;			\
 	pkgname=${PKGNAME};						\
 	case "$$extractname" in						\
 	"")	${WARNING_MSG} "${WRKDIR} may contain an older version of ${PKGBASE}" ;; \
@@ -325,4 +325,4 @@ privileged-install-hook:
 ### later phases so that the "install" target may be re-invoked.
 ###
 install-clean: package-clean check-clean
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PLIST} ${_INSTALL_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PLIST} ${_COOKIE.install}

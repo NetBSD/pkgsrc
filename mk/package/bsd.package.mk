@@ -1,4 +1,4 @@
-# $NetBSD: bsd.package.mk,v 1.5 2006/07/07 13:39:52 jlam Exp $
+# $NetBSD: bsd.package.mk,v 1.6 2006/07/07 21:24:28 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to binary packages.
@@ -8,7 +8,7 @@
 #    package, repackage
 #
 
-_PACKAGE_COOKIE=	${WRKDIR}/.package_done
+_COOKIE.package=	${WRKDIR}/.package_done
 
 ######################################################################
 ### package (PUBLIC)
@@ -19,10 +19,10 @@ _PACKAGE_COOKIE=	${WRKDIR}/.package_done
 .if !defined(NO_PACKAGE)
 .  include "${PKGSRCDIR}/mk/package/package.mk"
 .elif !target(package)
-.  if exists(${_PACKAGE_COOKIE})
+.  if exists(${_COOKIE.package})
 package:
 	@${DO_NADA}
-.  elif exists(${_BARRIER_COOKIE})
+.  elif exists(${_COOKIE.barrier})
 package: install
 .    if defined(SKIP_SILENT)
 	@${DO_NADA}
@@ -51,4 +51,4 @@ repackage: package-clean package
 ### phase so that the "package" target may be re-invoked.
 ###
 package-clean:
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_PACKAGE_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_COOKIE.package}

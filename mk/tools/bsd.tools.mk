@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.41 2006/07/06 22:29:53 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.42 2006/07/07 21:24:29 jlam Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -54,7 +54,7 @@ _TOOLS_WRAP_LOG=	${WRKLOG}
 
 USE_TOOLS?=		# empty
 
-_TOOLS_COOKIE=	${WRKDIR}/.tools_done
+_COOKIE.tools=	${WRKDIR}/.tools_done
 
 ######################################################################
 ### tools (PUBLIC)
@@ -63,12 +63,12 @@ _TOOLS_COOKIE=	${WRKDIR}/.tools_done
 ### specified by USE_TOOLS.
 ###
 _TOOLS_TARGETS+=	acquire-tools-lock
-_TOOLS_TARGETS+=	${_TOOLS_COOKIE}
+_TOOLS_TARGETS+=	${_COOKIE.tools}
 _TOOLS_TARGETS+=	release-tools-lock
 
 .PHONY: tools
 .if !target(tools)
-.  if exists(${_TOOLS_COOKIE})
+.  if exists(${_COOKIE.tools})
 tools:
 	@${DO_NADA}
 .  else
@@ -80,11 +80,11 @@ tools: ${_TOOLS_TARGETS}
 acquire-tools-lock: acquire-lock
 release-tools-lock: release-lock
 
-.if exists(${_TOOLS_COOKIE})
-${_TOOLS_COOKIE}:
+.if exists(${_COOKIE.tools})
+${_COOKIE.tools}:
 	@${DO_NADA}
 .else
-${_TOOLS_COOKIE}: real-tools
+${_COOKIE.tools}: real-tools
 .endif
 
 ######################################################################
@@ -115,9 +115,9 @@ tools-message:
 ###
 .PHONY: tools-cookie
 tools-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_TOOLS_COOKIE} || ${FALSE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_TOOLS_COOKIE:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${USE_TOOLS:Q} > ${_TOOLS_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_COOKIE.tools} || ${FALSE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_COOKIE.tools:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${USE_TOOLS:Q} > ${_COOKIE.tools}
 
 ######################################################################
 ### override-tools (PRIVATE)

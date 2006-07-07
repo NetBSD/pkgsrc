@@ -1,4 +1,4 @@
-# $NetBSD: bsd.configure.mk,v 1.5 2006/07/07 13:39:52 jlam Exp $
+# $NetBSD: bsd.configure.mk,v 1.6 2006/07/07 21:24:28 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to configuring packages for building.
@@ -12,7 +12,7 @@
 #    pre-configure, do-configure, post-configure
 #
 
-_CONFIGURE_COOKIE=	${WRKDIR}/.configure_done
+_COOKIE.configure=	${WRKDIR}/.configure_done
 
 ######################################################################
 ### configure (PUBLIC)
@@ -23,10 +23,10 @@ _CONFIGURE_COOKIE=	${WRKDIR}/.configure_done
 .if !defined(NO_CONFIGURE)
 .  include "${PKGSRCDIR}/mk/configure/configure.mk"
 .elif !target(configure)
-.  if exists(${_CONFIGURE_COOKIE})
+.  if exists(${_COOKIE.configure})
 configure:
 	@${DO_NADA}
-.  elif exists(${_BARRIER_COOKIE})
+.  elif exists(${_COOKIE.barrier})
 configure: wrapper configure-cookie
 .  else
 configure: barrier
@@ -40,6 +40,6 @@ configure: barrier
 ###
 .PHONY: configure-cookie
 configure-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_CONFIGURE_COOKIE} || ${FALSE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_CONFIGURE_COOKIE:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_CONFIGURE_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_COOKIE.configure} || ${FALSE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_COOKIE.configure:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_COOKIE.configure}

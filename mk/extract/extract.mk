@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.10 2006/07/06 22:29:52 jlam Exp $
+# $NetBSD: extract.mk,v 1.11 2006/07/07 21:24:28 jlam Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -35,7 +35,7 @@
 #	EXTRACT_OPTS, EXTRACT_USING and EXTRACT_ELEMENTS.
 #
 
-_EXTRACT_COOKIE=	${WRKDIR}/.extract_done
+_COOKIE.extract=	${WRKDIR}/.extract_done
 
 ######################################################################
 ### extract (PUBLIC)
@@ -48,12 +48,12 @@ _EXTRACT_TARGETS+=	makedirs
 _EXTRACT_TARGETS+=	depends
 _EXTRACT_TARGETS+=	tools
 _EXTRACT_TARGETS+=	acquire-extract-lock
-_EXTRACT_TARGETS+=	${_EXTRACT_COOKIE}
+_EXTRACT_TARGETS+=	${_COOKIE.extract}
 _EXTRACT_TARGETS+=	release-extract-lock
 
 .PHONY: extract
 .if !target(extract)
-.  if exists(${_EXTRACT_COOKIE})
+.  if exists(${_COOKIE.extract})
 extract:
 	@${DO_NADA}
 .  else
@@ -65,11 +65,11 @@ extract: ${_EXTRACT_TARGETS}
 acquire-extract-lock: acquire-lock
 release-extract-lock: release-lock
 
-.if exists(${_EXTRACT_COOKIE})
-${_EXTRACT_COOKIE}:
+.if exists(${_COOKIE.extract})
+${_COOKIE.extract}:
 	@${DO_NADA}
 .else
-${_EXTRACT_COOKIE}: real-extract
+${_COOKIE.extract}: real-extract
 .endif
 
 ######################################################################
@@ -119,9 +119,9 @@ extract-check-interactive:
 ###
 .PHONY: extract-cookie
 extract-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_EXTRACT_COOKIE} || ${FALSE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_EXTRACT_COOKIE:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_EXTRACT_COOKIE}
+	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_COOKIE.extract} || ${FALSE}
+	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_COOKIE.extract:H}
+	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_COOKIE.extract}
 
 ######################################################################
 ### pre-extract, do-extract, post-extract (PUBLIC, override)
