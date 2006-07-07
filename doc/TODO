@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5160 2006/07/07 06:53:39 adam Exp $
+$NetBSD: TODO,v 1.5161 2006/07/07 18:02:47 adam Exp $
 
 Suggested new packages
 ======================
@@ -362,7 +362,6 @@ Suggested package updates
 	o aspell-danish-1.4.53
 	o aspell-faroese-0.2.25
 	o aspell-norwegian-2.0.6
-	o asterisk-1.2.9.1
 	o astyle-1.15.3
 	o autogen-5.8.4
 	o avcheck-0.91
@@ -501,7 +500,6 @@ Suggested package updates
 	o fd-2.08a
 	o fdgw-20040609
 	o fetchmail-6.3.4
-	o fftw-3.1.2
 	o fhist-1.14
 	o file-4.17
 	o findutils-4.2.27
