@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2006/06/03 10:40:34 seb Exp $
+# $NetBSD: Makefile,v 1.20 2006/07/07 21:32:35 cube Exp $
 
 DISTNAME=		rt-3.4.5
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
@@ -10,6 +10,8 @@ HOMEPAGE=		http://bestpractical.com/rt/
 COMMENT=		Industrial-grade ticketing system
 
 .include "options.mk"
+
+USE_TOOLS+=	perl:run
 
 # Core dependencies:
 DEPENDS+=	p5-Digest-[0-9]*:../../security/p5-Digest
