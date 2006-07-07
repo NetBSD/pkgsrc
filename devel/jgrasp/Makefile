@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/05/15 19:41:45 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2006/07/07 03:31:50 minskim Exp $
 #
 
 DISTNAME=		jgrasp170
@@ -16,11 +16,17 @@ WRKSRC=			${WRKDIR}/jgrasp
 PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 jdk14
 INSTALLATION_DIRS=	bin
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
+LIBS+=	-lutil
+.endif
+
 do-configure:
 	${MKDIR} ${WRKSRC}/bin/${LOWER_OPSYS}
 
 do-build:
-	${CC} ${CFLAGS} -lutil -o ${WRKSRC}/jbin/${LOWER_OPSYS}_run 	\
+	${CC} ${CFLAGS} ${LIBS} -o ${WRKSRC}/jbin/${LOWER_OPSYS}_run 	\
 		${WRKSRC}/src/linux_run.c
 	${CC} ${CFLAGS} -I${X11BASE}/include				\
 		-L${X11BASE}/lib ${COMPILER_RPATH_FLAG}${X11BASE}/lib -lX11 \
