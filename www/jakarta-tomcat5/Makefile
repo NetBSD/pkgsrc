@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:11:24 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/07 03:02:39 minskim Exp $
 
 PKGNAME=	jakarta-tomcat5-${TOMCAT_VERSION}
 DISTNAME=	jakarta-tomcat-${TOMCAT_VERSION}
@@ -14,6 +14,7 @@ COMMENT=	The Apache Project's Java Servlet 2.4 and JSP 2.0 server
 
 TOMCAT_VERSION= 5.0.30
 
+USE_JAVA=	run
 # This needs java 1.4 or higher.
 USE_JAVA2=	yes
 
