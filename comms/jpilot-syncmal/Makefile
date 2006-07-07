@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2006/04/17 13:46:19 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2006/07/07 15:49:31 jlam Exp $
 
 DISTNAME=		jpilot-syncmal_0.71.2
 PKGNAME=		jpilot-syncmal-0.71.2
@@ -15,7 +15,7 @@ BUILDLINK_DEPMETHOD.jpilot=	full
 USE_TOOLS+=		gmake pkg-config
 
 USE_LIBTOOL=		yes
-SHLIBTOOL_OVERRIDE=	libtool
+SHLIBTOOL_OVERRIDE=	# empty
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-gtk2

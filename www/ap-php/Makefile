@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/06/02 18:27:59 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/07 15:49:34 jlam Exp $
 #
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-${PHP_BASE_VERS}
@@ -7,7 +7,7 @@ COMMENT=		Apache (${PKG_APACHE}) module for ${PKG_PHP}
 CONFLICTS=		ap-php-[0-9]*
 
 APACHE_MODULE=		YES
-SHLIBTOOL_OVERRIDE=	libtool
+SHLIBTOOL_OVERRIDE=	# empty
 
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/Makefile.php"
