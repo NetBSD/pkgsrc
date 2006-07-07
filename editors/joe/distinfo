@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.11 2005/12/09 15:04:19 joerg Exp $
+$NetBSD: distinfo,v 1.12 2006/07/07 18:22:00 adam Exp $
 
-SHA1 (joe-3.3.tar.gz) = f961fe68fa7c11a8d2334b15028661fb46a2d773
-RMD160 (joe-3.3.tar.gz) = f85ff66c0e00cbb85c0063601f3b41459bf2b336
-Size (joe-3.3.tar.gz) = 478218 bytes
-SHA1 (patch-aa) = 4a67d0c4ff03ae5a1e44698dd24a7b8bc2c26ea8
+SHA1 (joe-3.4.tar.gz) = 8c044130b48dce0768880605ee2b5dac102ebbd1
+RMD160 (joe-3.4.tar.gz) = 0849f34ae239be8281a098532ec6b82d85f61607
+Size (joe-3.4.tar.gz) = 590679 bytes
