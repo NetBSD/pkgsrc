@@ -1,22 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2006/07/07 17:51:19 ghen Exp $
+$NetBSD: patch-aa,v 1.5 2006/07/07 18:47:52 ghen Exp $
 
---- src/netsupport.c.orig	2006-01-19 23:46:23.000000000 +0100
-+++ src/netsupport.c	2006-07-06 20:48:20.000000000 +0200
-@@ -32,6 +32,9 @@
- #include <sys/socket.h>
- #include <netinet/in.h>
- 
-+#ifdef __GNUC__
-+#define alloca __builtin_alloca
-+#else
- #if HAVE_ALLOCA_H
- #include <alloca.h>
+--- src/netsupport.c.orig	2006-03-14 01:33:01.000000000 +0000
++++ src/netsupport.c
+@@ -38,7 +38,7 @@
+ #ifdef _AIX
+ #pragma alloca
  #else
-@@ -43,6 +46,7 @@ char *alloca();
+-#ifndef alloca /* predefined by HP cc +Olibcalls */
++#if !defined(alloca) && !defined(__DragonFly__) && !defined(__FreeBSD__) && !defined(__NetBSD__)
+ char *alloca();
  #endif
  #endif
- #endif
-+#endif
- 
- RCSID("@(#) $Header: /cvsroot/pkgsrc/net/netcat6/patches/patch-aa,v 1.4 2006/07/07 17:51:19 ghen Exp $");
- 
