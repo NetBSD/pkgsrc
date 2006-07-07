@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.321 2006/07/05 21:15:13 wiz Exp $
+# $NetBSD: Makefile,v 1.322 2006/07/07 18:01:24 drochner Exp $
 #
 
 COMMENT=	Audio tools
@@ -249,6 +249,7 @@ SUBDIR+=	spiralsynth
 SUBDIR+=	splay
 SUBDIR+=	streamripper
 SUBDIR+=	streamtuner
+SUBDIR+=	sound-juicer
 SUBDIR+=	sweep
 SUBDIR+=	taglib
 SUBDIR+=	tcd
