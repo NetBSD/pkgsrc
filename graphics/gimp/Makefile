@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.141 2006/07/05 05:37:41 jlam Exp $
+# $NetBSD: Makefile,v 1.142 2006/07/07 15:14:32 tron Exp $
 
 DISTNAME=	gimp-2.2.11
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gimp/v2.2/ \
 		ftp://ftp.cs.umn.edu/pub/gimp/v2.2/ \
@@ -48,6 +48,13 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
+
+TWAINBridge.app=	/System/Library/Image Capture/Devices/TWAINBridge.app
+.if ${OPSYS} == "Darwin" && exists(${TWAINBridge.app})
+PLIST_SUBST+=		TWAIN=
+.else
+PLIST_SUBST+=		TWAIN="@comment "
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
