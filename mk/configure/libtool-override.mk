@@ -1,4 +1,4 @@
-# $NetBSD: libtool-override.mk,v 1.1 2006/07/05 06:09:15 jlam Exp $
+# $NetBSD: libtool-override.mk,v 1.2 2006/07/07 14:06:57 jlam Exp $
 
 ######################################################################
 ### {ltconfig,libtool,shlibtool}-override (PRIVATE)
@@ -53,6 +53,7 @@ _OVERRIDE_PATH.shlibtool=	${_SHLIBTOOL}
 
 .for _script_ in libtool shlibtool
 _SCRIPT.${_script_}-override=						\
+	${RM} -f $$file;						\
 	${ECHO} "\#!"${TOOLS_SH:Q} > $$file;				\
 	${ECHO} "exec" ${_OVERRIDE_PATH.${_script_}:Q} '"$$@"' >> $$file; \
 	${CHMOD} +x $$file
