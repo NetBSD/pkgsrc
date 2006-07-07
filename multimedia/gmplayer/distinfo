@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.38 2006/06/27 18:02:27 drochner Exp $
+$NetBSD: distinfo,v 1.39 2006/07/07 16:59:14 abs Exp $
 
 SHA1 (gmplayer-1.0rc8-20060123/MPlayer-1.0pre8.tar.bz2) = 8a0929b84dcb37d47c062230ce693b64b3e30921
 RMD160 (gmplayer-1.0rc8-20060123/MPlayer-1.0pre8.tar.bz2) = 23fd13fe75a5c4029ead043aa4b3b08fe5fe44f0
@@ -6,9 +6,9 @@ Size (gmplayer-1.0rc8-20060123/MPlayer-1.0pre8.tar.bz2) = 8166628 bytes
 SHA1 (gmplayer-1.0rc8-20060123/AlienMind-1.2.tar.bz2) = 0d612f7fc92332783e3a8fd42b9f957a1c6ecaee
 RMD160 (gmplayer-1.0rc8-20060123/AlienMind-1.2.tar.bz2) = 5e7f5fcade401af16c1614dcfc5c6f673fe4cd49
 Size (gmplayer-1.0rc8-20060123/AlienMind-1.2.tar.bz2) = 131295 bytes
-SHA1 (gmplayer-1.0rc8-20060123/Blue-1.5.tar.bz2) = 0bfd2fefa9f640a54fc1f2b787d5e1b4d4b8ee98
-RMD160 (gmplayer-1.0rc8-20060123/Blue-1.5.tar.bz2) = 5c6b72c9ffeb247acb5a77bfeabf9329f29ff040
-Size (gmplayer-1.0rc8-20060123/Blue-1.5.tar.bz2) = 222679 bytes
+SHA1 (gmplayer-1.0rc8-20060123/Blue-1.6.tar.bz2) = 2a082bdef2f5eebc403c234a036949f38683da06
+RMD160 (gmplayer-1.0rc8-20060123/Blue-1.6.tar.bz2) = c16342d3131f01fbd294ff109b8ab31cef555d13
+Size (gmplayer-1.0rc8-20060123/Blue-1.6.tar.bz2) = 281056 bytes
 SHA1 (gmplayer-1.0rc8-20060123/BlueHeart-1.5.tar.bz2) = c5da3b035492e8e9c44c2540223c2ab9790c5795
 RMD160 (gmplayer-1.0rc8-20060123/BlueHeart-1.5.tar.bz2) = 8edd715fc70d5226b5769c87290c40268ce6ce82
 Size (gmplayer-1.0rc8-20060123/BlueHeart-1.5.tar.bz2) = 281110 bytes
