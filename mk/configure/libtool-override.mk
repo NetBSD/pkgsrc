@@ -1,4 +1,4 @@
-# $NetBSD: libtool-override.mk,v 1.2 2006/07/07 14:06:57 jlam Exp $
+# $NetBSD: libtool-override.mk,v 1.3 2006/07/07 14:25:54 jlam Exp $
 
 ######################################################################
 ### {ltconfig,libtool,shlibtool}-override (PRIVATE)
@@ -25,8 +25,8 @@ _SCRIPT.ltconfig-override=						\
 
 .PHONY: ltconfig-override
 ltconfig-override:
-.if defined(LTCONFIG_OVERRIDE) && !empty(LTCONFIG_OVERRIDE)
 	@${STEP_MSG} "Modifying ltconfig scripts to use pkgsrc libtool"
+.if defined(LTCONFIG_OVERRIDE) && !empty(LTCONFIG_OVERRIDE)
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	cd ${WRKSRC};							\
 	for file in ${LTCONFIG_OVERRIDE}; do				\
@@ -60,9 +60,9 @@ _SCRIPT.${_script_}-override=						\
 
 .PHONY: ${_script_}-override
 ${_script_}-override:
+	@${STEP_MSG} "Modifying libtool scripts to use pkgsrc ${_script_}"
 .  if defined(${_OVERRIDE_VAR.${_script_}}) && \
       !empty(${_OVERRIDE_VAR.${_script_}})
-	@${STEP_MSG} "Replacing libtool scripts with pkgsrc ${_script_}"
 	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
 	cd ${WRKSRC};							\
 	for file in ${${_OVERRIDE_VAR.${_script_}}}; do			\
