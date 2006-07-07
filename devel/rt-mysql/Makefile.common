@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2006/06/30 09:56:38 joerg Exp $
+# $NetBSD: Makefile.common,v 1.11 2006/07/07 22:10:07 jlam Exp $
 
 DISTNAME=      	rt-2-0-15
 CATEGORIES=	devel
@@ -24,7 +24,6 @@ RT_DB_PASS?=	changemeplease
 RT_WEB_USER?=	nobody
 RT_WEB_GROUP?=	nobody
 
-
 PKGDIR=		${.CURDIR}/../../devel/rt-mysql
 DISTINFO_FILE=	${PKGDIR}/distinfo
 FILESDIR=	${PKGDIR}/files
@@ -40,6 +39,7 @@ OWN_DIRS+=	${RT_LOG_PATH}
 OWN_DIRS+=	${RT_DATA_PATH}
 OWN_DIRS+=	${RT_SESSION_PATH}
 
+USE_TOOLS+=	perl:run
 REPLACE_PERL+=	tools/insertdata \
 		tools/initdb
 
