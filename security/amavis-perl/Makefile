@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2006/03/11 18:12:45 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2006/07/07 22:10:07 jlam Exp $
 
 DISTNAME=	amavisd-${VERSION}
 PKGNAME=	amavis-perl-${VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	security mail
 MASTER_SITES=	http://www.amavis.org/dist/perl/ \
 		${MASTER_SITE_SOURCEFORGE:=amavis/}
@@ -47,7 +47,7 @@ VIRUSMAILTO?=	security		# whom to notify about viruses
 GNU_CONFIGURE=	YES
 PLIST_SRC=	${PKGDIR}/PLIST
 
-USE_TOOLS+=	file
+USE_TOOLS+=	file perl:run
 CONFIGURE_ENV+=	file=${TOOLS_FILE_CMD:Q}
 
 CONFIGURE_ENV+=	procmail="/usr/libexec/mail.local"
