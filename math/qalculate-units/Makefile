@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/07/05 05:37:43 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2006/07/07 15:49:32 jlam Exp $
 
 DISTNAME=	qalculate-units-0.9.4
 CATEGORIES=	math
@@ -13,7 +13,6 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 GNU_CONFIGURE=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 
 .include "../../math/qalculate/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

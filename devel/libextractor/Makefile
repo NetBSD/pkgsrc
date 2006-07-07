@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/06/12 16:28:05 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2006/07/07 15:49:31 jlam Exp $
 
 DISTNAME=	libextractor-0.5.14
 PKGREVISION=	1
@@ -19,7 +19,7 @@ PTHREAD_OPTS+=		require
 CONFLICTS=		csound-{bath,dev}-*	# bin/extract
 
 # This package requires dlopen, so save on space by skipping non-PIC libs
-SHLIBTOOL_OVERRIDE+=	${WRKSRC}/libtool
+SHLIBTOOL_OVERRIDE=	# empty
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"

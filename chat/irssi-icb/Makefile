@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/03/07 22:18:53 adrianp Exp $
+# $NetBSD: Makefile,v 1.20 2006/07/07 15:49:31 jlam Exp $
 #
 
 DISTNAME=	irssi-icb-0.14
@@ -20,7 +20,7 @@ DEPENDS+=	irssi>=${IRSSI_VERSION}:../../chat/irssi
 GNU_CONFIGURE=	yes
 
 USE_LIBTOOL=	yes
-SHLIBTOOL_OVERRIDE=	libtool
+SHLIBTOOL_OVERRIDE=	# empty
 
 CONFIGURE_ARGS+=	--with-irssi=${WRKDIR}/${IRSSI_DISTNAME}
 
