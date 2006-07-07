@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.664 2006/07/07 15:15:34 tron Exp $
+$NetBSD: CHANGES-2006,v 1.665 2006/07/07 16:50:35 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3294,3 +3294,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated audio/SDL_mixer to 1.2.7 [adam 2006-07-07]
 	Added textproc/o3read version 0.0.4 [ghen 2006-07-07]
 	Updated graphics/gimp to 2.2.11nb3 [tron 2006-07-07]
+	Updated net/kiax to 0.8.51 [reinoud 2006-07-07]
+
