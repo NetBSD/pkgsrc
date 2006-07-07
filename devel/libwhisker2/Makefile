@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/01/18 22:53:18 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/07 22:10:07 jlam Exp $
 
 DISTNAME=	libwhisker2-2.3
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.wiretrip.net/rfp/libwhisker/
 
@@ -10,7 +11,7 @@ COMMENT=	Perl module geared specifically for HTTP testing
 
 DEPENDS+=	p5-Net-SSLeay>=1.20:../../security/p5-Net-SSLeay
 
-USE_TOOLS+=	perl
+USE_TOOLS+=	perl:run
 REPLACE_PERL=	scripts/api_demo.pl scripts/crawl_demo.pl \
 		scripts/simple_demo.pl scripts/form_demo1.pl \
 		scripts/form_demo2.pl scripts/prox.pl

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2006/06/17 19:03:05 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2006/07/07 22:10:07 jlam Exp $
 #
 
 DISTNAME=	bugzilla-2.20.1
+PKGREVISION=	1
 CATEGORIES=	www devel
 MASTER_SITES=	http://ftp.mozilla.org/pub/mozilla.org/webtools/
 
@@ -24,6 +25,7 @@ DEPENDS+=	p5-MailTools>=1.65:../../mail/p5-MailTools
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
+USE_TOOLS+=	perl:run
 NO_BUILD=	YES
 
 BZ_WEB_GROUP?=	${APACHE_GROUP}

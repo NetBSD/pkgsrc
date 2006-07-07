@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2006/06/17 11:47:47 markd Exp $
+# $NetBSD: Makefile,v 1.62 2006/07/07 22:10:06 jlam Exp $
 
 DISTNAME=	nas-1.8.src
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://nas.codebrilliance.com/nas/ \
 		ftp://ftp.uni-duisburg.de/Sound/NAS/
@@ -15,7 +16,7 @@ DEPENDS+=	p5-perl-headers-${OS_VERSION}{,nb*}:../../devel/p5-perl-headers
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl:run
 USE_IMAKE=		yes
 
 PKG_SYSCONFSUBDIR=	nas
