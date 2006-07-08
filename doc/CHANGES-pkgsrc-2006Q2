@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.4 2006/07/04 21:13:28 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.5 2006/07/08 07:15:35 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -13,3 +13,5 @@ Pullup ticket 1719 - requested by joerg
 build fix for gnopernicus
 Pullup ticket 1720 - requested by joerg
 portability fix for py-gnome2-extras
+Pullup ticket 1721 - requested by jlam
+infrastructure fix for "undo-replace"
