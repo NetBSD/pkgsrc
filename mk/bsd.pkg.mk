@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1866 2006/07/07 21:24:27 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1867 2006/07/08 02:16:33 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -7,7 +7,9 @@
 # Please see the pkgsrc/doc/guide manual for details on the
 # variables used in this make file template.
 #
-# Default sequence for "all" is:  fetch checksum extract patch configure build
+# Default sequence for "all" is:
+#
+#    fetch checksum depends tools extract patch wrapper configure build
 #
 # Please read the comments in the targets section below, you
 # should be able to use the pre-* or post-* targets/scripts
