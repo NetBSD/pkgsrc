@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2006/06/01 16:17:42 joerg Exp $
+# $NetBSD: Makefile,v 1.75 2006/07/08 06:31:32 wiz Exp $
 
 DISTNAME=		gnome-print-0.37
 PKGREVISION=		2
@@ -12,7 +12,7 @@ COMMENT=		Prototype implementation of the Gnome Printing Architecture
 USE_DIRS+=		gnome1-1.5
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gs:run msgfmt
+USE_TOOLS+=		gs:run msgfmt perl
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--without-admin		# currently unstable
