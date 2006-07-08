@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.6 2006/07/08 17:34:02 bad Exp $
+
+--- tcpdump2xplot.pl.orig	2000-05-03 20:08:19.000000000 +0200
++++ tcpdump2xplot.pl	2006-07-08 19:23:12.000000000 +0200
+@@ -229,6 +229,9 @@
+     $opts = $_;   # save this for later 
+ 
+     split(/ /);
++    # Sometime after version 3.7.1 tcpdump started to print 'IP'
++    # as the second field in the output. Get rid of it again.
++    splice @_, 1, 1 if $_[1] eq 'IP';
+     $time = $_[0];
+     $from = $_[1];
+     $to = $_[3];
