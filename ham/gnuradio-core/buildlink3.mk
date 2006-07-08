@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/05/11 11:14:19 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 22:39:21 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNURADIO_CORE_BUILDLINK3_MK:=	${GNURADIO_CORE_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	gnuradio-core
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnuradio-core}
 BUILDLINK_PACKAGES+=	gnuradio-core
+BUILDLINK_ORDER+=	gnuradio-core
 
 .if !empty(GNURADIO_CORE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnuradio-core+=	gnuradio-core>=2.8

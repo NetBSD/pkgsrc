@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/06/14 07:27:57 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 22:39:39 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_VFSMM_BUILDLINK3_MK:=	${GNOME_VFSMM_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	gnome-vfsmm
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-vfsmm}
 BUILDLINK_PACKAGES+=	gnome-vfsmm
+BUILDLINK_ORDER+=	gnome-vfsmm
 
 .if !empty(GNOME_VFSMM_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnome-vfsmm+=	gnome-vfsmm>=2.10.0

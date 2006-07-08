@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:23 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 22:39:25 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PERDITION_BUILDLINK3_MK:=	${PERDITION_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	perdition
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nperdition}
 BUILDLINK_PACKAGES+=	perdition
+BUILDLINK_ORDER+=	perdition
 
 .if !empty(PERDITION_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.perdition+=	perdition>=1.17
