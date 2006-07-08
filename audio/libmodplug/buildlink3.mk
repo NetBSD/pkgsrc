@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:01 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 22:39:00 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMODPLUG_BUILDLINK3_MK:=	${LIBMODPLUG_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libmodplug
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibmodplug}
 BUILDLINK_PACKAGES+=	libmodplug
+BUILDLINK_ORDER+=	libmodplug
 
 .if !empty(LIBMODPLUG_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libmodplug+=		libmodplug>=0.7

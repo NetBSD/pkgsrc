@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/04/17 13:46:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2006/07/08 22:39:04 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOMEDB_BUILDLINK3_MK:=	${LIBGNOMEDB_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libgnomedb
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgnomedb}
 BUILDLINK_PACKAGES+=	libgnomedb
+BUILDLINK_ORDER+=	libgnomedb
 
 .if !empty(LIBGNOMEDB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libgnomedb+=		libgnomedb>=1.9.100

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:10 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 22:39:11 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBIBERTY_BUILDLINK3_MK:=	${LIBIBERTY_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libiberty
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibiberty}
 BUILDLINK_PACKAGES+=	libiberty
+BUILDLINK_ORDER+=	libiberty
 
 .if !empty(LIBIBERTY_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libiberty+=	libiberty>=1.0nb1

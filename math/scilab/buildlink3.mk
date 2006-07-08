@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:26 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 22:39:29 jlam Exp $
 #
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
@@ -10,6 +10,7 @@ BUILDLINK_DEPENDS+=	scilab
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nscilab}
 BUILDLINK_PACKAGES+=	scilab
+BUILDLINK_ORDER+=	scilab
 
 .if !empty(SCILAB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.scilab+=	scilab>=3.0

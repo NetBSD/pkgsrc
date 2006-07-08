@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/17 13:46:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 22:39:02 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 WSOUNDSERVER_BUILDLINK3_MK:=	${WSOUNDSERVER_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	wsoundserver
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nwsoundserver}
 BUILDLINK_PACKAGES+=	wsoundserver
+BUILDLINK_ORDER+=	wsoundserver
 
 .if !empty(WSOUNDSERVER_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.wsoundserver+=	wsoundserver>=0.4.0nb4

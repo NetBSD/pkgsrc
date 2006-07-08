@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:20 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/07/08 22:39:21 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBCHEWING_BUILDLINK3_MK:=	${LIBCHEWING_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libchewing
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibchewing}
 BUILDLINK_PACKAGES+=	libchewing
+BUILDLINK_ORDER+=	libchewing
 
 .if !empty(LIBCHEWING_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libchewing+=		libchewing>=0.2.7

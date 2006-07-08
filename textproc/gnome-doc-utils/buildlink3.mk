@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/04/12 10:27:37 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 22:39:41 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_DOC_UTILS_BUILDLINK3_MK:=	${GNOME_DOC_UTILS_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	gnome-doc-utils
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-doc-utils}
 BUILDLINK_PACKAGES+=	gnome-doc-utils
+BUILDLINK_ORDER+=	gnome-doc-utils
 
 .if !empty(GNOME_DOC_UTILS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPMETHOD.gnome-doc-utils+=	build

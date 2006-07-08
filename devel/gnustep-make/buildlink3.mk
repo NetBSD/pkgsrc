@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/04/12 10:27:08 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 22:39:09 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNUSTEP_MAKE_BUILDLINK3_MK:=	${GNUSTEP_MAKE_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	gnustep-make
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnustep-make}
 BUILDLINK_PACKAGES+=	gnustep-make
+BUILDLINK_ORDER+=	gnustep-make
 
 .if !empty(GNUSTEP_MAKE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnustep-make+=	gnustep-make>=1.9.1

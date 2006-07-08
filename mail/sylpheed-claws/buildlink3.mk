@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/12 10:27:23 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 22:39:25 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SYLPHEED_CLAWS_BUILDLINK3_MK:=	${SYLPHEED_CLAWS_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	sylpheed-claws
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nsylpheed-claws}
 BUILDLINK_PACKAGES+=	sylpheed-claws
+BUILDLINK_ORDER+=	sylpheed-claws
 
 .if !empty(SYLPHEED_CLAWS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.sylpheed-claws+=	sylpheed-claws>=0.9.7nb1

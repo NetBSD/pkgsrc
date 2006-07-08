@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:37 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 22:39:41 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBXML++2_BUILDLINK3_MK:=	${LIBXML++2_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libxml++2
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibxml++2}
 BUILDLINK_PACKAGES+=	libxml++2
+BUILDLINK_ORDER+=	libxml++2
 
 .if !empty(LIBXML++2_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libxml++2+=	libxml++2>=2.10.0

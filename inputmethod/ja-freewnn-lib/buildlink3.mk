@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:20 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 22:39:21 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 JA_FREEWNN_LIB_BUILDLINK3_MK:=	${JA_FREEWNN_LIB_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	ja-FreeWnn-lib
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nja-FreeWnn-lib}
 BUILDLINK_PACKAGES+=	ja-FreeWnn-lib
+BUILDLINK_ORDER+=	ja-FreeWnn-lib
 
 .if !empty(JA_FREEWNN_LIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.ja-FreeWnn-lib+=	ja-FreeWnn-lib>=1.10nb3

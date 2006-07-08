@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:08 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/07/08 22:39:08 jlam Exp $
 #
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
@@ -10,6 +10,7 @@ BUILDLINK_DEPENDS+=	flex
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nflex}
 BUILDLINK_PACKAGES+=	flex
+BUILDLINK_ORDER+=	flex
 
 .if !empty(FLEX_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.flex+=	flex>=2.5.4a

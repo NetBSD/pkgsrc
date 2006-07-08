@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:31 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 22:39:34 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 TCL_SCOTTY_BUILDLINK3_MK:=	${TCL_SCOTTY_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	tcl-scotty
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ntcl-scotty}
 BUILDLINK_PACKAGES+=	tcl-scotty
+BUILDLINK_ORDER+=	tcl-scotty
 
 .if !empty(TCL_SCOTTY_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.tcl-scotty+=	tcl-scotty>=2.1.11

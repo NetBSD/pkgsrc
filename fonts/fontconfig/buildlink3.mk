@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.22 2006/04/12 10:27:15 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2006/07/08 22:39:16 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FONTCONFIG_BUILDLINK3_MK:=	${FONTCONFIG_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	fontconfig
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nfontconfig}
 BUILDLINK_PACKAGES+=	fontconfig
+BUILDLINK_ORDER+=	fontconfig
 
 .if !empty(FONTCONFIG_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.fontconfig+=		fontconfig>=1.0.1

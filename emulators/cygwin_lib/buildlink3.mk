@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:14 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/07/08 22:39:16 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 CYGWIN_LIB_BUILDLINK3_MK:=	${CYGWIN_LIB_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	cygwin_lib
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncygwin_lib}
 BUILDLINK_PACKAGES+=	cygwin_lib
+BUILDLINK_ORDER+=	cygwin_lib
 
 .if !empty(CYGWIN_LIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.cygwin_lib+=		cygwin_lib>=1.5.11.1

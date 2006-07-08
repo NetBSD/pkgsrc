@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/05/02 21:00:28 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/07/08 22:39:16 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GDAL_LIB_BUILDLINK3_MK:=	${GDAL_LIB_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	gdal-lib
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngdal-lib}
 BUILDLINK_PACKAGES+=	gdal-lib
+BUILDLINK_ORDER+=	gdal-lib
 
 .if !empty(GDAL_LIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gdal-lib+=	gdal-lib>=1.3.1

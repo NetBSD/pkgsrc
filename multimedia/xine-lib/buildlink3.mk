@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2006/06/12 16:28:13 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2006/07/08 22:39:32 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XINE_LIB_BUILDLINK3_MK:=	${XINE_LIB_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	xine-lib
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxine-lib}
 BUILDLINK_PACKAGES+=	xine-lib
+BUILDLINK_ORDER+=	xine-lib
 
 .if !empty(XINE_LIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.xine-lib+=	xine-lib>=1rc3c

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:11 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/07/08 22:39:12 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBPORTLIB_BUILDLINK3_MK:=	${LIBPORTLIB_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libportlib
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibportlib}
 BUILDLINK_PACKAGES+=	libportlib
+BUILDLINK_ORDER+=	libportlib
 
 .if !empty(LIBPORTLIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libportlib+=	libportlib>=1.01

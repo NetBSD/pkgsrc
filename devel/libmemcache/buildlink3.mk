@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:11 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/07/08 22:39:11 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMEMCACHE_BUILDLINK3_MK:=	${LIBMEMCACHE_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libmemcache
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibmemcache}
 BUILDLINK_PACKAGES+=	libmemcache
+BUILDLINK_ORDER+=	libmemcache
 
 .if !empty(LIBMEMCACHE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libmemcache+=	libmemcache>=1.4.0beta5

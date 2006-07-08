@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:12 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 22:39:12 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBTECLA_BUILDLINK3_MK:=	${LIBTECLA_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libtecla
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibtecla}
 BUILDLINK_PACKAGES+=	libtecla
+BUILDLINK_ORDER+=	libtecla
 
 .if !empty(LIBTECLA_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libtecla+=	libtecla>=1.5.0

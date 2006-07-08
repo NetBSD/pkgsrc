@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/04/12 20:43:27 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/07/08 22:39:00 jlam Exp $
 #
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
@@ -10,6 +10,7 @@ BUILDLINK_DEPENDS+=	jack
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Njack}
 BUILDLINK_PACKAGES+=	jack
+BUILDLINK_ORDER+=	jack
 
 .if !empty(JACK_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.jack=	jack>=0.100.0

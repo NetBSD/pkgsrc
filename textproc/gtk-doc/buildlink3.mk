@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/04/06 06:22:50 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/07/08 22:39:41 jlam Exp $
 
 # provided mostly for pkg-config
 
@@ -11,6 +11,7 @@ BUILDLINK_DEPENDS+=	gtk-doc
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngtk-doc}
 BUILDLINK_PACKAGES+=	gtk-doc
+BUILDLINK_ORDER+=	gtk-doc
 
 .if !empty(GTK_DOC_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.4nb1

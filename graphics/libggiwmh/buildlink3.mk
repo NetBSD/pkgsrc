@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:18 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 22:39:19 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGGIWMH_BUILDLINK3_MK:=	${LIBGGIWMH_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libggiwmh
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibggiwmh}
 BUILDLINK_PACKAGES+=	libggiwmh
+BUILDLINK_ORDER+=	libggiwmh
 
 .if !empty(LIBGGIWMH_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libggiwmh+=	libggiwmh>=0.2.0

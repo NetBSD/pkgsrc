@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/12 10:27:21 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/07/08 22:39:23 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PYEXTCLASS_BUILDLINK3_MK:=	${PYEXTCLASS_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	pyextclass
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npyextclass}
 BUILDLINK_PACKAGES+=	pyextclass
+BUILDLINK_ORDER+=	pyextclass
 
 .if !empty(PYEXTCLASS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.pyextclass+=		py-extclass>=2.2.2nb1

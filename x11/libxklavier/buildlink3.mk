@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/04/12 10:27:42 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/07/08 22:39:46 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBXKLAVIER_BUILDLINK3_MK:=	${LIBXKLAVIER_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libxklavier
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibxklavier}
 BUILDLINK_PACKAGES+=	libxklavier
+BUILDLINK_ORDER+=	libxklavier
 
 .if !empty(LIBXKLAVIER_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libxklavier+=		libxklavier>=2.0

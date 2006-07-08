@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/04/17 13:46:14 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 22:39:21 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XFCE4_ARTWORK_BUILDLINK3_MK:=	${XFCE4_ARTWORK_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	xfce4-artwork
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4-artwork}
 BUILDLINK_PACKAGES+=	xfce4-artwork
+BUILDLINK_ORDER+=	xfce4-artwork
 
 .if !empty(XFCE4_ARTWORK_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.xfce4-artwork+=	xfce4-artwork>=0.0.4nb5

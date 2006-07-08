@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/12 10:26:59 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 22:38:58 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBCOMPREX_BUILDLINK3_MK:=	${LIBCOMPREX_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libcomprex
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibcomprex}
 BUILDLINK_PACKAGES+=	libcomprex
+BUILDLINK_ORDER+=	libcomprex
 
 .if !empty(LIBCOMPREX_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libcomprex+=		libcomprex>=0.3.2

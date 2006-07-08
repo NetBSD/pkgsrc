@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/04/12 10:27:03 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2006/07/08 22:39:03 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LOUDMOUTH_BUILDLINK3_MK:=	${LOUDMOUTH_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	loudmouth
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nloudmouth}
 BUILDLINK_PACKAGES+=	loudmouth
+BUILDLINK_ORDER+=	loudmouth
 
 .if !empty(LOUDMOUTH_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.loudmouth+=	loudmouth>=1.0

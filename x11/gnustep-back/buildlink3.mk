@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/04/17 13:46:03 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/07/08 22:39:45 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNUSTEP_BACK_BUILDLINK3_MK:=	${GNUSTEP_BACK_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	gnustep-back
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnustep-back}
 BUILDLINK_PACKAGES+=	gnustep-back
+BUILDLINK_ORDER+=	gnustep-back
 
 .if !empty(GNUSTEP_BACK_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnustep-back+=	gnustep-back>=0.9.2

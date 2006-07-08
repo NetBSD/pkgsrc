@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:17 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 22:39:17 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 CAMLIMAGES_BUILDLINK3_MK:=	${CAMLIMAGES_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	camlimages
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncamlimages}
 BUILDLINK_PACKAGES+=	camlimages
+BUILDLINK_ORDER+=	camlimages
 
 .if !empty(CAMLIMAGES_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.camlimages+=	camlimages>=2.2.0

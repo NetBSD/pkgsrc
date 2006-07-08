@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:03 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 22:39:03 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 ZAPTEL_NETBSD_BUILDLINK3_MK:=	${ZAPTEL_NETBSD_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	zaptel-netbsd
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nzaptel-netbsd}
 BUILDLINK_PACKAGES+=	zaptel-netbsd
+BUILDLINK_ORDER+=	zaptel-netbsd
 
 .if !empty(ZAPTEL_NETBSD_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.zaptel-netbsd+=	zaptel-netbsd>=20050314
