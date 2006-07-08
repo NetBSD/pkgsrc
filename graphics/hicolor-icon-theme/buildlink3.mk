@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 22:39:19 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/07/08 23:10:51 jlam Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 HICOLOR_ICON_THEME_BUILDLINK3_MK:=	${HICOLOR_ICON_THEME_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	hicolor-icon-theme
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nhicolor-icon-theme}
 BUILDLINK_PACKAGES+=	hicolor-icon-theme
-BUILDLINK_ORDER+=	hicolor-icon-theme
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}hicolor-icon-theme
 
 .if !empty(HICOLOR_ICON_THEME_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.hicolor-icon-theme+=	hicolor-icon-theme>=0.4

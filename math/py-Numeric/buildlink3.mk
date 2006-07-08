@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/07/08 22:39:29 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2006/07/08 23:10:59 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_NUMERIC_BUILDLINK3_MK:=	${PY_NUMERIC_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	pynumeric
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npynumeric}
 BUILDLINK_PACKAGES+=	pynumeric
-BUILDLINK_ORDER+=	pynumeric
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pynumeric
 
 .if !empty(PY_NUMERIC_BUILDLINK3_MK:M+)
 .  include "../../lang/python/pyversion.mk"

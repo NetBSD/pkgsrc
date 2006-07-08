@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/07/08 22:39:03 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 23:10:39 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SYNCE_LIBSYNCE_BUILDLINK3_MK:=	${SYNCE_LIBSYNCE_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	synce-libsynce
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nsynce-libsynce}
 BUILDLINK_PACKAGES+=	synce-libsynce
-BUILDLINK_ORDER+=	synce-libsynce
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}synce-libsynce
 
 .if !empty(SYNCE_LIBSYNCE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.synce-libsynce+=	synce-libsynce>=0.9.1

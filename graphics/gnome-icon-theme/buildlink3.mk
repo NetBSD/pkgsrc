@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/07/08 22:39:18 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2006/07/08 23:10:51 jlam Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 GNOME_ICON_THEME_BUILDLINK3_MK:=	${GNOME_ICON_THEME_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	gnome-icon-theme
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-icon-theme}
 BUILDLINK_PACKAGES+=	gnome-icon-theme
-BUILDLINK_ORDER+=	gnome-icon-theme
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnome-icon-theme
 
 .if !empty(GNOME_ICON_THEME_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.8.0
