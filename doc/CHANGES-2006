@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.670 2006/07/08 04:32:54 ben Exp $
+$NetBSD: CHANGES-2006,v 1.671 2006/07/08 10:28:03 tron Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3302,3 +3302,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated ham/usrp to 0.12nb1 [wiz 2006-07-07]
 	Updated ham/gnuradio-core to 2.8nb2 [wiz 2006-07-07]
 	Added audio/cmus version 2.0.3 [ben 2006-07-07]
+	Updated databases/phpmyadmin to 2.8.2 [tron 2006-07-08]
