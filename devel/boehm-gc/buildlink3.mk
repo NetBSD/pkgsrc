@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/04/12 10:27:07 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/07/08 22:39:07 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BOEHM_GC_BUILDLINK3_MK:=	${BOEHM_GC_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	boehm-gc
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nboehm-gc}
 BUILDLINK_PACKAGES+=	boehm-gc
+BUILDLINK_ORDER+=	boehm-gc
 
 .if !empty(BOEHM_GC_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=6.3nb1

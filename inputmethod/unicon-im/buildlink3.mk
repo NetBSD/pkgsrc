@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:20 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 22:39:21 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 UNICON_IM_BUILDLINK3_MK:=	${UNICON_IM_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	unicon-im
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nunicon-im}
 BUILDLINK_PACKAGES+=	unicon-im
+BUILDLINK_ORDER+=	unicon-im
 
 .if !empty(UNICON_IM_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.unicon-im+=	unicon-im>=1.2nb2

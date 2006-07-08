@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:17 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 22:39:18 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FREEGLUT_BUILDLINK3_MK:=	${FREEGLUT_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	freeglut
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nfreeglut}
 BUILDLINK_PACKAGES+=	freeglut
+BUILDLINK_ORDER+=	freeglut
 
 .if !empty(FREEGLUT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.freeglut+=	freeglut>=2.2.0

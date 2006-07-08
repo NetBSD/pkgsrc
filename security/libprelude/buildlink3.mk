@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:33 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 22:39:37 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBPRELUDE_BUILDLINK3_MK:=	${LIBPRELUDE_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libprelude
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibprelude}
 BUILDLINK_PACKAGES+=	libprelude
+BUILDLINK_ORDER+=	libprelude
 
 .if !empty(LIBPRELUDE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libprelude+=	libprelude>=0.9.0

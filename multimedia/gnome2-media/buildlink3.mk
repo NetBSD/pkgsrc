@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/17 13:46:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 22:39:30 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_MEDIA_BUILDLINK3_MK:=	${GNOME_MEDIA_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	gnome-media
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-media}
 BUILDLINK_PACKAGES+=	gnome-media
+BUILDLINK_ORDER+=	gnome-media
 
 .if !empty(GNOME_MEDIA_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnome-media+=		gnome-media>=2.12.0nb1
