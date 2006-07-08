@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/04/17 13:46:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 22:39:11 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMATCHBOX_BUILDLINK3_MK:=	${LIBMATCHBOX_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libmatchbox
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibmatchbox}
 BUILDLINK_PACKAGES+=	libmatchbox
+BUILDLINK_ORDER+=	libmatchbox
 
 .if !empty(LIBMATCHBOX_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libmatchbox+=	libmatchbox>=1.4

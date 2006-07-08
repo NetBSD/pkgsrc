@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/07/02 10:18:32 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/07/08 22:39:20 jlam Exp $
 #
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
@@ -10,6 +10,7 @@ BUILDLINK_DEPENDS+=	libscigraphica
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibscigraphica}
 BUILDLINK_PACKAGES+=	libscigraphica
+BUILDLINK_ORDER+=	libscigraphica
 
 .if ${LIBSCIGRAPHICA_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libscigraphica+=	libscigraphica>=2.1.1

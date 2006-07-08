@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2006/04/17 13:46:08 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2006/07/08 22:39:45 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_PANEL_BUILDLINK3_MK:=	${GNOME_PANEL_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	gnome-panel
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-panel}
 BUILDLINK_PACKAGES+=	gnome-panel
+BUILDLINK_ORDER+=	gnome-panel
 
 .if !empty(GNOME_PANEL_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnome-panel+=		gnome-panel>=2.12.1nb3

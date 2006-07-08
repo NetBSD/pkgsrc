@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2006/04/17 13:46:14 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2006/07/08 22:39:49 jlam Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 XFCE4_TRIGGER_LAUNCHER_BUILDLINK3_MK:=	${XFCE4_TRIGGER_LAUNCHER_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	xfce4-trigger-launcher
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4-trigger-launcher}
 BUILDLINK_PACKAGES+=	xfce4-trigger-launcher
+BUILDLINK_ORDER+=	xfce4-trigger-launcher
 
 .if !empty(XFCE4_TRIGGER_LAUNCHER_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.xfce4-trigger-launcher+=	xfce4-trigger-launcher>=4.2.3
