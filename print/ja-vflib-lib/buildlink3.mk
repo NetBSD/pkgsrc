@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 22:39:35 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 23:11:05 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 JA_VFLIB_LIB_BUILDLINK3_MK:=	${JA_VFLIB_LIB_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	ja-vflib-lib
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nja-vflib-lib}
 BUILDLINK_PACKAGES+=	ja-vflib-lib
-BUILDLINK_ORDER+=	ja-vflib-lib
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ja-vflib-lib
 
 .if !empty(JA_VFLIB_LIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.ja-vflib-lib+=	ja-vflib-lib>=2.24.2
