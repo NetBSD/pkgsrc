@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 22:39:05 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 23:10:40 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_METAKIT_BUILDLINK3_MK:=	${PY_METAKIT_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	pymetakit
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npymetakit}
 BUILDLINK_PACKAGES+=	pymetakit
-BUILDLINK_ORDER+=	pymetakit
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pymetakit
 
 .if !empty(PY_METAKIT_BUILDLINK3_MK:M+)
 .include "../../lang/python/pyversion.mk"

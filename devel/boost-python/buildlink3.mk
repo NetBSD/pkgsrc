@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 22:39:07 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/07/08 23:10:41 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BOOST_PYTHON_BUILDLINK3_MK:=	${BOOST_PYTHON_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	boost-python
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nboost-python}
 BUILDLINK_PACKAGES+=	boost-python
-BUILDLINK_ORDER+=	boost-python
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}boost-python
 
 .if !empty(BOOST_PYTHON_BUILDLINK3_MK:M+)
 # Use a dependency pattern that guarantees the proper ABI.
