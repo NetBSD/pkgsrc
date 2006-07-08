@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/07/08 22:39:44 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/07/08 23:11:13 jlam Exp $
 
 BUILDLINK_DEPMETHOD.fixesproto?=	build
 
@@ -11,7 +11,7 @@ BUILDLINK_DEPENDS+=	fixesproto
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nfixesproto}
 BUILDLINK_PACKAGES+=	fixesproto
-BUILDLINK_ORDER+=	fixesproto
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}fixesproto
 
 .if !empty(FIXESPROTO_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=3.0.0

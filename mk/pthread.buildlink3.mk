@@ -1,4 +1,4 @@
-# $NetBSD: pthread.buildlink3.mk,v 1.23 2006/07/08 22:39:30 jlam Exp $
+# $NetBSD: pthread.buildlink3.mk,v 1.24 2006/07/08 23:11:17 jlam Exp $
 #
 # The pthreads strategy for pkgsrc is to "bless" a particular pthread
 # package as the Official Pthread Replacement (OPR).  The following
@@ -111,7 +111,7 @@ PTHREAD_AUTO_VARS?=	no
 .if ${PTHREAD_TYPE} == "native"
 BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Npthread}
 BUILDLINK_PACKAGES+=		pthread
-BUILDLINK_ORDER+=		pthread
+BUILDLINK_ORDER:=		${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pthread
 BUILDLINK_BUILTIN_MK.pthread=	../../mk/pthread.builtin.mk
 BUILDLINK_AUTO_VARS.pthread?=	${PTHREAD_AUTO_VARS}
 .elif ${PTHREAD_TYPE} == "${_PKG_PTHREAD}"

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/07/08 22:39:49 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/07/08 23:11:16 jlam Exp $
 
 BUILDLINK_DEPMETHOD.xextproto?=	build
 
@@ -11,7 +11,7 @@ BUILDLINK_DEPENDS+=	xextproto
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxextproto}
 BUILDLINK_PACKAGES+=	xextproto
-BUILDLINK_ORDER+=	xextproto
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xextproto
 
 .if !empty(XEXTPROTO_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.xextproto+=	xextproto>=7.0

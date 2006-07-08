@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/07/08 22:39:01 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/07/08 23:10:37 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PORTAUDIO_DEVEL_BUILDLINK3_MK:=	${PORTAUDIO_DEVEL_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	portaudio-devel
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nportaudio-devel}
 BUILDLINK_PACKAGES+=	portaudio-devel
-BUILDLINK_ORDER+=	portaudio-devel
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}portaudio-devel
 
 .if ${PORTAUDIO_DEVEL_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.portaudio-devel+=	portaudio-devel>=20060521

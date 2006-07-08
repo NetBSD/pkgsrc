@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 22:39:36 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 23:11:06 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_KEYRING_BUILDLINK3_MK:=	${GNOME_KEYRING_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	gnome-keyring
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-keyring}
 BUILDLINK_PACKAGES+=	gnome-keyring
-BUILDLINK_ORDER+=	gnome-keyring
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnome-keyring
 
 .if !empty(GNOME_KEYRING_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=0.4.0

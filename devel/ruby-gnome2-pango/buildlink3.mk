@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 22:39:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:10:48 jlam Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 RUBY_GNOME2_PANGO_BUILDLINK3_MK:=	${RUBY_GNOME2_PANGO_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	ruby-gnome2-pango
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nruby-gnome2-pango}
 BUILDLINK_PACKAGES+=	ruby-gnome2-pango
-BUILDLINK_ORDER+=	ruby-gnome2-pango
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ruby-gnome2-pango
 
 .if !empty(RUBY_GNOME2_PANGO_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.ruby-gnome2-pango+=	ruby-gnome2-pango>=0.14.1

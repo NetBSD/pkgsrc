@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 22:39:20 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:10:53 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SANE_BACKENDS_BUILDLINK3_MK:=	${SANE_BACKENDS_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	sane-backends
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nsane-backends}
 BUILDLINK_PACKAGES+=	sane-backends
-BUILDLINK_ORDER+=	sane-backends
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}sane-backends
 
 .if !empty(SANE_BACKENDS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.sane-backends+=	sane-backends>=1.0.3

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.181 2006/07/07 21:24:28 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.182 2006/07/08 23:11:17 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1072,3 +1072,7 @@ do-buildlink:
 ###
 ### END: after the barrier
 ###
+
+.PHONY: show-buildlink3
+show-buildlink3:
+	@${SH} ${PKGSRCDIR}/mk/buildlink3/show-buildlink3.sh ${BUILDLINK_ORDER}

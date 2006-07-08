@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/07/08 22:39:15 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 23:10:48 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SUBVERSION_BASE_BUILDLINK3_MK:=	${SUBVERSION_BASE_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_DEPENDS+=	subversion-base
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nsubversion-base}
 BUILDLINK_PACKAGES+=	subversion-base
-BUILDLINK_ORDER+=	subversion-base
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}subversion-base
 
 .if !empty(SUBVERSION_BASE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.subversion-base+=	subversion-base>=1.0.0

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 22:39:29 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 23:10:59 jlam Exp $
 #
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
@@ -10,7 +10,7 @@ BUILDLINK_DEPENDS+=	octave-current
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Noctave-current}
 BUILDLINK_PACKAGES+=	octave-current
-BUILDLINK_ORDER+=	octave-current
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}octave-current
 
 .if !empty(OCTAVE_CURRENT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.octave-current+=	octave-current>=2.1.57

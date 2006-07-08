@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 22:39:05 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:10:40 jlam Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 SHARED_MIME_INFO_BUILDLINK3_MK:=	${SHARED_MIME_INFO_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	shared-mime-info
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nshared-mime-info}
 BUILDLINK_PACKAGES+=	shared-mime-info
-BUILDLINK_ORDER+=	shared-mime-info
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}shared-mime-info
 
 .if !empty(SHARED_MIME_INFO_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.shared-mime-info+=	shared-mime-info>=0.15
