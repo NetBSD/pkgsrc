@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2006/07/07 15:49:31 jlam Exp $
+# $NetBSD: Makefile.common,v 1.25 2006/07/08 01:11:21 minskim Exp $
 #
 
 DISTNAME=	xmms-1.2.10
@@ -60,18 +60,15 @@ post-patch:
 	${RM} -f ${WRKSRC}/Output/OSS/soundcard.h
 .endif
 
-.if ${OPSYS} == "SunOS"
-PLIST_SUBST+=	LIBAUDIO=libSolaris
-.else
-PLIST_SUBST+=	LIBAUDIO=libOSS
-.endif
-
 # the configure test for OSS is broken on Solaris and by default tries
 # to build the OSS module. explicitly turn it off for all platforms
 # except those which support OSS.
 .if ${OPSYS} != "FreeBSD" && ${OPSYS} != "Linux" && ${OPSYS} != "NetBSD" && \
 	${OPSYS} != "OpenBSD" && ${OPSYS} != "DragonFly"
 CONFIGURE_ARGS+=	--disable-oss
+PLIST_SUBST+=		OSS="@comment "
+.else
+PLIST_SUBST+=		OSS=""
 .endif
 
 .include "../../audio/libmikmod/buildlink3.mk"
