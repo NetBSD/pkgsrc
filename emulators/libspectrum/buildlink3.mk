@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/12 10:27:14 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 22:39:16 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSPECTRUM_BUILDLINK3_MK:=	${LIBSPECTRUM_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libspectrum
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibspectrum}
 BUILDLINK_PACKAGES+=	libspectrum
+BUILDLINK_ORDER+=	libspectrum
 
 .if !empty(LIBSPECTRUM_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libspectrum+=		libspectrum>=0.2.2

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:09 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 22:39:09 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBARGPARSE_BUILDLINK3_MK:=	${LIBARGPARSE_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libargparse
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibargparse}
 BUILDLINK_PACKAGES+=	libargparse
+BUILDLINK_ORDER+=	libargparse
 
 .if !empty(LIBARGPARSE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libargparse+=	libargparse>=0.1.0000

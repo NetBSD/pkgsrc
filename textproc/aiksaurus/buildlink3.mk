@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:36 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 22:39:40 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 AIKSAURUS_BUILDLINK3_MK:=	${AIKSAURUS_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	aiksaurus
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Naiksaurus}
 BUILDLINK_PACKAGES+=	aiksaurus
+BUILDLINK_ORDER+=	aiksaurus
 
 .if !empty(AIKSAURUS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.aiksaurus+=	aiksaurus>=1.2.1

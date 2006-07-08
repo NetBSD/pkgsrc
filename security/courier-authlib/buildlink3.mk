@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:32 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 22:39:36 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 COURIER_AUTHLIB_BUILDLINK3_MK:=	${COURIER_AUTHLIB_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	courier-authlib
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncourier-authlib}
 BUILDLINK_PACKAGES+=	courier-authlib
+BUILDLINK_ORDER+=	courier-authlib
 
 .if !empty(COURIER_AUTHLIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.courier-authlib+=	courier-authlib>=0.53

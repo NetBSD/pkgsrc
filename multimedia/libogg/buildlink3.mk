@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/04/06 06:22:26 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/07/08 22:39:31 jlam Exp $
 #
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
@@ -10,6 +10,7 @@ BUILDLINK_DEPENDS+=	libogg
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibogg}
 BUILDLINK_PACKAGES+=	libogg
+BUILDLINK_ORDER+=	libogg
 
 .if !empty(LIBOGG_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libogg+=	libogg>=1.1

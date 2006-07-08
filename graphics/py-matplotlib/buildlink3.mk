@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2006/04/06 16:43:39 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/07/08 22:39:20 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_MATPLOTLIB_BUILDLINK3_MK:=	${PY_MATPLOTLIB_BUILDLINK3_MK}+
@@ -11,6 +11,7 @@ BUILDLINK_DEPENDS+=	pymatplotlib
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npymatplotlib}
 BUILDLINK_PACKAGES+=	pymatplotlib
+BUILDLINK_ORDER+=	pymatplotlib
 
 .if !empty(PY_MATPLOTLIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.pymatplotlib+=	${PYPKGPREFIX}-matplotlib>=0.87.2

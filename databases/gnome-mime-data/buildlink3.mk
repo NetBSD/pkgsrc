@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/06/16 09:34:40 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 22:39:04 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_MIME_DATA_BUILDLINK3_MK:=	${GNOME_MIME_DATA_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	gnome-mime-data
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-mime-data}
 BUILDLINK_PACKAGES+=	gnome-mime-data
+BUILDLINK_ORDER+=	gnome-mime-data
 
 .if !empty(GNOME_MIME_DATA_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnome-mime-data+=	gnome-mime-data>=2.4.0

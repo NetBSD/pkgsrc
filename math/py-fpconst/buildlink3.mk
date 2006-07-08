@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:26 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 22:39:29 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_FPCONST_BUILDLINK3_MK:=	${PY_FPCONST_BUILDLINK3_MK}+
@@ -11,6 +11,7 @@ BUILDLINK_DEPENDS+=	py-fpconst
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npy-fpconst}
 BUILDLINK_PACKAGES+=	py-fpconst
+BUILDLINK_ORDER+=	py-fpconst
 
 .if !empty(PY_FPCONST_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.py-fpconst+=	${PYPKGPREFIX}-fpconst>=0.7.0

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:32 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 22:39:35 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 POPPLER_GLIB_BUILDLINK3_MK:=	${POPPLER_GLIB_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	poppler-glib
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npoppler-glib}
 BUILDLINK_PACKAGES+=	poppler-glib
+BUILDLINK_ORDER+=	poppler-glib
 
 .if !empty(POPPLER_GLIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.poppler-glib+=	poppler-glib>=0.5.1

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/04/12 10:27:17 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2006/07/08 22:39:18 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FREETYPE_BUILDLINK3_MK:=	${FREETYPE_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	freetype
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nfreetype}
 BUILDLINK_PACKAGES+=	freetype
+BUILDLINK_ORDER+=	freetype
 
 .if !empty(FREETYPE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.freetype+=	freetype-lib>=1.3.1nb1

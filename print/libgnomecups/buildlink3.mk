@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/17 13:46:06 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 22:39:35 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOMECUPS_BUILDLINK3_MK:=	${LIBGNOMECUPS_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libgnomecups
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgnomecups}
 BUILDLINK_PACKAGES+=	libgnomecups
+BUILDLINK_ORDER+=	libgnomecups
 
 .if !empty(LIBGNOMECUPS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libgnomecups+=	libgnomecups>=0.2.0

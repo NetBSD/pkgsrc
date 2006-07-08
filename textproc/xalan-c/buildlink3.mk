@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/04/12 10:27:38 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 22:39:42 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XALAN_C_BUILDLINK3_MK:=	${XALAN_C_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	xalan-c
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxalan-c}
 BUILDLINK_PACKAGES+=	xalan-c
+BUILDLINK_ORDER+=	xalan-c
 
 .if !empty(XALAN_C_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.xalan-c+=	xalan-c>=1.6nb3

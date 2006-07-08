@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:37 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 22:39:41 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBUNICODE_BUILDLINK3_MK:=	${LIBUNICODE_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libunicode
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibunicode}
 BUILDLINK_PACKAGES+=	libunicode
+BUILDLINK_ORDER+=	libunicode
 
 .if !empty(LIBUNICODE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libunicode+=		libunicode>=0.4

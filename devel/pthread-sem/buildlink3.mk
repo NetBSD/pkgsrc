@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:13 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 22:39:14 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PTHREAD_SEM_BUILDLINK3_MK:=	${PTHREAD_SEM_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	pthread-sem
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npthread-sem}
 BUILDLINK_PACKAGES+=	pthread-sem
+BUILDLINK_ORDER+=	pthread-sem
 
 .if !empty(PTHREAD_SEM_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.pthread-sem+=		pthread-sem>=1.0

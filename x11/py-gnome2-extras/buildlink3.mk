@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/07/06 16:27:28 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/07/08 22:39:47 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PYGNOME2EX_BUILDLINK3_MK:=	${PYGNOME2EX_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	pygnome2ex
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npygnome2ex}
 BUILDLINK_PACKAGES+=	pygnome2ex
+BUILDLINK_ORDER+=	pygnome2ex
 
 .if ${PYGNOME2EX_BUILDLINK3_MK} == "+"
 .include "../../lang/python/pyversion.mk"

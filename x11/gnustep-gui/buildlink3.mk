@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/04/17 13:46:00 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2006/07/08 22:39:45 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNUSTEP_GUI_BUILDLINK3_MK:=	${GNUSTEP_GUI_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	gnustep-gui
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnustep-gui}
 BUILDLINK_PACKAGES+=	gnustep-gui
+BUILDLINK_ORDER+=	gnustep-gui
 
 .if !empty(GNUSTEP_GUI_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnustep-gui+=		gnustep-gui>=0.9.2

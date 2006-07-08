@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:28 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 22:39:31 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBDVDNAV_BUILDLINK3_MK:=	${LIBDVDNAV_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libdvdnav
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibdvdnav}
 BUILDLINK_PACKAGES+=	libdvdnav
+BUILDLINK_ORDER+=	libdvdnav
 
 .if !empty(LIBDVDNAV_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libdvdnav+=	libdvdnav>=0.1.9

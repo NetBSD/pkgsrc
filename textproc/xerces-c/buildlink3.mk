@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:38 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 22:39:42 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XERCES_C_BUILDLINK3_MK:=	${XERCES_C_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	xerces-c
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxerces-c}
 BUILDLINK_PACKAGES+=	xerces-c
+BUILDLINK_ORDER+=	xerces-c
 
 .if !empty(XERCES_C_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.xerces-c+=	xerces-c>=2.3.0

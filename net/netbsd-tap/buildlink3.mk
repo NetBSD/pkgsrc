@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:30 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 22:39:33 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 NETBSD_TAP_BUILDLINK3_MK:=	${NETBSD_TAP_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	netbsd-tap
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nnetbsd-tap}
 BUILDLINK_PACKAGES+=	netbsd-tap
+BUILDLINK_ORDER+=	netbsd-tap
 
 .if !empty(NETBSD_TAP_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.netbsd-tap+=	netbsd-tap>=20050120

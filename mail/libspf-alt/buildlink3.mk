@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:23 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 22:39:25 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSPF_ALT_BUILDLINK3_MK:=	${LIBSPF_ALT_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libspf_alt
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibspf_alt}
 BUILDLINK_PACKAGES+=	libspf_alt
+BUILDLINK_ORDER+=	libspf_alt
 
 .if !empty(LIBSPF_ALT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libspf_alt+=	libspf_alt>=0.4.0nb1

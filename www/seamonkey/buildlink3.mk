@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/17 13:46:00 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 22:39:44 jlam Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 SEAMONKEY_BUILDLINK3_MK:=		${SEAMONKEY_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=			seamonkey
 
 BUILDLINK_PACKAGES:=			${BUILDLINK_PACKAGES:Nseamonkey}
 BUILDLINK_PACKAGES+=			seamonkey
+BUILDLINK_ORDER+=			seamonkey
 
 .if !empty(SEAMONKEY_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.seamonkey+=	seamonkey>=1.0

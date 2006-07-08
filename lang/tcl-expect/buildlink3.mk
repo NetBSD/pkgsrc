@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:22 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 22:39:24 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 TCL_EXPECT_BUILDLINK3_MK:=	${TCL_EXPECT_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	tcl-expect
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ntcl-expect}
 BUILDLINK_PACKAGES+=	tcl-expect
+BUILDLINK_ORDER+=	tcl-expect
 
 .if !empty(TCL_EXPECT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.tcl-expect+=	tcl-expect>=5.38.0nb1

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/05/28 17:57:31 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 22:39:47 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_GTK_BUILDLINK3_MK:=	${PY_GTK_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	pygtk
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npygtk}
 BUILDLINK_PACKAGES+=	pygtk
+BUILDLINK_ORDER+=	pygtk
 
 .if !empty(PY_GTK_BUILDLINK3_MK:M+)
 .  include "../../lang/python/pyversion.mk"

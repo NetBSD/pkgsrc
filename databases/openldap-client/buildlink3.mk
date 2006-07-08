@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/05/31 18:18:34 ghen Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2006/07/08 22:39:05 jlam Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 OPENLDAP_BUILDLINK3_MK:=		${OPENLDAP_BUILDLINK3_MK}+
@@ -11,6 +11,7 @@ BUILDLINK_DEPENDS+=			openldap-client
 
 BUILDLINK_PACKAGES:=			${BUILDLINK_PACKAGES:Nopenldap-client}
 BUILDLINK_PACKAGES+=			openldap-client
+BUILDLINK_ORDER+=			openldap-client
 
 .if !empty(OPENLDAP_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.openldap-client+=	openldap-client>=2.3.11nb2

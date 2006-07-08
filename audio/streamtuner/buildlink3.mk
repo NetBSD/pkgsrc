@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/04/17 13:46:09 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 22:39:01 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 STREAMTUNER_BUILDLINK3_MK:=	${STREAMTUNER_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	streamtuner
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nstreamtuner}
 BUILDLINK_PACKAGES+=	streamtuner
+BUILDLINK_ORDER+=	streamtuner
 
 .if !empty(STREAMTUNER_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.streamtuner+=		streamtuner>=0.99

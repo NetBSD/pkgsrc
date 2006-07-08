@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/04/17 13:46:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2006/07/08 22:39:18 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GDK_PIXBUF_BUILDLINK3_MK:=	${GDK_PIXBUF_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	gdk-pixbuf
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngdk-pixbuf}
 BUILDLINK_PACKAGES+=	gdk-pixbuf
+BUILDLINK_ORDER+=	gdk-pixbuf
 
 .if !empty(GDK_PIXBUF_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gdk-pixbuf+=		gdk-pixbuf>=0.22.0nb2

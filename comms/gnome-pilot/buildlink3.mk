@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/04/17 13:46:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2006/07/08 22:39:03 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_PILOT_BUILDLINK3_MK:=	${GNOME_PILOT_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	gnome-pilot
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-pilot}
 BUILDLINK_PACKAGES+=	gnome-pilot
+BUILDLINK_ORDER+=	gnome-pilot
 
 .if !empty(GNOME_PILOT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnome-pilot?=		gnome-pilot>=2.0.12nb2

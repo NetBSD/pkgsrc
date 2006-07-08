@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/04/12 10:27:32 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 22:39:36 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 CRYPTOPP_BUILDLINK3_MK:=	${CRYPTOPP_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	cryptopp
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncryptopp}
 BUILDLINK_PACKAGES+=	cryptopp
+BUILDLINK_ORDER+=	cryptopp
 
 .if !empty(CRYPTOPP_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.cryptopp+=	cryptopp>=5.1

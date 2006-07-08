@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/06/16 10:58:23 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 22:39:05 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_PSYCOPG_BUILDLINK3_MK:=	${PY_PSYCOPG_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	psycopg
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npsycopg}
 BUILDLINK_PACKAGES+=	psycopg
+BUILDLINK_ORDER+=	psycopg
 
 .if !empty(PY_PSYCOPG_BUILDLINK3_MK:M+)
 .  include "../../lang/python/pyversion.mk"
