@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 22:39:15 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 23:10:48 jlam Exp $
 #
 # This file was created automatically using createbuildlink-3.5.
 
@@ -11,7 +11,7 @@ BUILDLINK_DEPENDS+=	vanessa_adt
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nvanessa_adt}
 BUILDLINK_PACKAGES+=	vanessa_adt
-BUILDLINK_ORDER+=	vanessa_adt
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}vanessa_adt
 
 .if !empty(VANESSA_ADT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.vanessa_adt+=	vanessa_adt>=0.0.6

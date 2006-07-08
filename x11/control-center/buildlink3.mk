@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 22:39:44 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:11:13 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 CONTROL_CENTER_BUILDLINK3_MK:=	${CONTROL_CENTER_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	control-center
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncontrol-center}
 BUILDLINK_PACKAGES+=	control-center
-BUILDLINK_ORDER+=	control-center
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}control-center
 
 .if !empty(CONTROL_CENTER_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.control-center+=	control-center>=1.4.0.4nb9

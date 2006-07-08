@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/07/08 22:39:44 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2006/07/08 23:11:13 jlam Exp $
 
 BUILDLINK_DEPMETHOD.compositeproto?=	build
 
@@ -11,7 +11,7 @@ BUILDLINK_DEPENDS+=	compositeproto
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncompositeproto}
 BUILDLINK_PACKAGES+=	compositeproto
-BUILDLINK_ORDER+=	compositeproto
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}compositeproto
 
 .if !empty(COMPOSITEPROTO_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.compositeproto+=	compositeproto>=0.2.1

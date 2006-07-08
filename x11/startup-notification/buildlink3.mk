@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 22:39:48 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:11:16 jlam Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 STARTUP_NOTIFICATION_BUILDLINK3_MK:=	${STARTUP_NOTIFICATION_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	startup-notification
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nstartup-notification}
 BUILDLINK_PACKAGES+=	startup-notification
-BUILDLINK_ORDER+=	startup-notification
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}startup-notification
 
 .if !empty(STARTUP_NOTIFICATION_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.5

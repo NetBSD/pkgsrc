@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 22:39:35 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 23:11:05 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GIMP_PRINT_LIB_BUILDLINK3_MK:=	${GIMP_PRINT_LIB_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	gimp-print-lib
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngimp-print-lib}
 BUILDLINK_PACKAGES+=	gimp-print-lib
-BUILDLINK_ORDER+=	gimp-print-lib
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gimp-print-lib
 
 .if !empty(GIMP_PRINT_LIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gimp-print-lib+=	gimp-print-lib>=4.2.5nb1

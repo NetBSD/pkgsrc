@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 22:39:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 23:10:47 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_CURSES_BUILDLINK3_MK:=	${PY_CURSES_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	pycurses
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npycurses}
 BUILDLINK_PACKAGES+=	pycurses
-BUILDLINK_ORDER+=	pycurses
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pycurses
 
 .if !empty(PY_CURSES_BUILDLINK3_MK:M+)
 .  include "../../lang/python/pyversion.mk"

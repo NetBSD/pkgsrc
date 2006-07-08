@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/07/08 22:39:24 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 23:10:56 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SWI_PROLOG_LITE_BUILDLINK3_MK:=	${SWI_PROLOG_LITE_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	swi-prolog-lite
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nswi-prolog-lite}
 BUILDLINK_PACKAGES+=	swi-prolog-lite
-BUILDLINK_ORDER+=	swi-prolog-lite
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}swi-prolog-lite
 
 .if !empty(SWI_PROLOG_LITE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.swi-prolog-lite+=	swi-prolog-lite>=5.2.9

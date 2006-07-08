@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 22:39:45 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:11:14 jlam Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 GNUSTEP_PREFERENCES_BUILDLINK3_MK:=	${GNUSTEP_PREFERENCES_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	gnustep-preferences
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnustep-preferences}
 BUILDLINK_PACKAGES+=	gnustep-preferences
-BUILDLINK_ORDER+=	gnustep-preferences
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnustep-preferences
 
 .if !empty(GNUSTEP_PREFERENCES_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnustep-preferences+=	gnustep-preferences>=1.2.0

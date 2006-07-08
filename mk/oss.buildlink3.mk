@@ -1,4 +1,4 @@
-# $NetBSD: oss.buildlink3.mk,v 1.5 2006/07/08 22:39:30 jlam Exp $
+# $NetBSD: oss.buildlink3.mk,v 1.6 2006/07/08 23:11:17 jlam Exp $
 #
 # This Makefile fragment is included by packages that require an Open Sound
 # System (OSS) implementation.  After inclusion of this file, the following
@@ -30,7 +30,7 @@ OSS_TYPE=		${_OSS_TYPE}
 
 BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Noss}
 BUILDLINK_PACKAGES+=		oss
-BUILDLINK_ORDER+=		oss
+BUILDLINK_ORDER:=		${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}oss
 BUILDLINK_BUILTIN_MK.oss=	../../mk/oss.builtin.mk
 
 .if !empty(OSS_BUILDLINK3_MK:M+)

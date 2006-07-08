@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 22:39:42 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 23:11:11 jlam Exp $
 #
 # This Makefile fragment is included by packages that use xmlcatmgr.
 #
@@ -21,7 +21,7 @@ BUILDLINK_DEPENDS+=	xmlcatmgr
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxmlcatmgr}
 BUILDLINK_PACKAGES+=	xmlcatmgr
-BUILDLINK_ORDER+=	xmlcatmgr
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xmlcatmgr
 
 .if !empty(XMLCATMGR_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.xmlcatmgr+=		xmlcatmgr>=2.0beta1

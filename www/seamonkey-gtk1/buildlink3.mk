@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 22:39:44 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 23:11:13 jlam Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 SEAMONKEY_GTK1_BUILDLINK3_MK:=		${SEAMONKEY_GTK1_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=			seamonkey-gtk1
 
 BUILDLINK_PACKAGES:=			${BUILDLINK_PACKAGES:Nseamonkey-gtk1}
 BUILDLINK_PACKAGES+=			seamonkey-gtk1
-BUILDLINK_ORDER+=			seamonkey-gtk1
+BUILDLINK_ORDER:=			${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}seamonkey-gtk1
 
 .if !empty(SEAMONKEY_GTK1_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.seamonkey-gtk1+=	seamonkey-gtk1>=1.0

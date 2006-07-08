@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/07/08 22:39:01 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2006/07/08 23:10:37 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PY_OGG_BUILDLINK3_MK:=	${PY_OGG_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	pyogg
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npyogg}
 BUILDLINK_PACKAGES+=	pyogg
-BUILDLINK_ORDER+=	pyogg
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pyogg
 
 .if !empty(PY_OGG_BUILDLINK3_MK:M+)
 .include "../../lang/python/pyversion.mk"

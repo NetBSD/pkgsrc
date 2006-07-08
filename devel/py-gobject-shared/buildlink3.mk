@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/07/08 22:39:14 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/07/08 23:10:47 jlam Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 PY_GOBJECT_SHARED_BUILDLINK3_MK:=	${PY_GOBJECT_SHARED_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	py-gobject-shared
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npy-gobject-shared}
 BUILDLINK_PACKAGES+=	py-gobject-shared
-BUILDLINK_ORDER+=	py-gobject-shared
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}py-gobject-shared
 
 .if ${PY_GOBJECT_SHARED_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.py-gobject-shared+=	py-gobject-shared>=2.10.1

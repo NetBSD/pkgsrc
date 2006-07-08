@@ -1,4 +1,4 @@
-# $NetBSD: bdb.buildlink3.mk,v 1.16 2006/07/08 22:39:30 jlam Exp $
+# $NetBSD: bdb.buildlink3.mk,v 1.17 2006/07/08 23:11:17 jlam Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Berkeley DB implementation.  It abstracts finding the
@@ -132,7 +132,7 @@ PKG_FAIL_REASON=	\
 .elif ${BDB_TYPE} == "db1"
 BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Ndb1}
 BUILDLINK_PACKAGES+=		db1
-BUILDLINK_ORDER+=		db1
+BUILDLINK_ORDER:=		${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}db1
 BUILDLINK_BUILTIN_MK.db1=	../../mk/db1.builtin.mk
 .else
 .  include "${_BDB_PKGSRCDIR.${BDB_TYPE}}/buildlink3.mk"

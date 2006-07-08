@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 22:39:05 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 23:10:40 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PY_LDAP_BUILDLINK3_MK:=	${PY_LDAP_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	pyldap
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npyldap}
 BUILDLINK_PACKAGES+=	pyldap
-BUILDLINK_ORDER+=	pyldap
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pyldap
 
 .if !empty(PY_LDAP_BUILDLINK3_MK:M+)
 .include "../../lang/python/pyversion.mk"

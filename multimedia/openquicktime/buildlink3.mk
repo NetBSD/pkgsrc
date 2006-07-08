@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 22:39:31 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:11:02 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 OPENQUICKTIME_BUILDLINK3_MK:=	${OPENQUICKTIME_BUILDLINK3_MK}+
@@ -9,7 +9,7 @@ BUILDLINK_DEPENDS+=	openquicktime
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nopenquicktime}
 BUILDLINK_PACKAGES+=	openquicktime
-BUILDLINK_ORDER+=	openquicktime
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}openquicktime
 
 .if !empty(OPENQUICKTIME_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.openquicktime+=	openquicktime>=1.0nb2
