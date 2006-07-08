@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.6 2006/07/08 01:11:21 minskim Exp $
+@comment $NetBSD: PLIST.common,v 1.7 2006/07/08 01:22:41 minskim Exp $
 bin/wmxmms
 bin/xmms
 bin/xmms-config
@@ -16,7 +16,7 @@ lib/xmms/Effect/libstereo.la
 lib/xmms/Effect/libvoice.la
 lib/xmms/General/libir.la
 lib/xmms/General/libsong_change.la
-lib/xmms/Input/libcdaudio.la
+${CDAUDIO}lib/xmms/Input/libcdaudio.la
 lib/xmms/Input/libmikmod.la
 lib/xmms/Input/libmpg123.la
 lib/xmms/Input/libtonegen.la
