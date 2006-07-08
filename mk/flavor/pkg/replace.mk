@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.2 2006/06/05 22:49:44 jlam Exp $
+# $NetBSD: replace.mk,v 1.2.2.1 2006/07/08 07:15:00 salo Exp $
 
 ######################################################################
 ### replace-pkg (PRIVATE, pkgsrc/mk/install/replace.mk)
@@ -78,7 +78,7 @@ undo-replace-install:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TEST} -f ${_REPLACE_NEWNAME_FILE} || exit 0;			\
 	newname=`${CAT} ${_REPLACE_NEWNAME_FILE}`;			\
-	${ECHO} "Running "${PKG_ADD} ${WRKDIR}/$$newname${PKG_SUFX}";	\
+	${ECHO} "Running ${PKG_ADD} ${WRKDIR}/$$newname${PKG_SUFX}";	\
 	${PKG_ADD} ${WRKDIR}/$$newname${PKG_SUFX}
 
 ######################################################################
@@ -114,7 +114,7 @@ undo-replace-names:
 replace-preserve-required-by:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TEST} -f ${_REPLACE_OLDNAME_FILE} || exit 0;			\
-	${STEP_MSG} "Preserving existing +REQUIRED_BY file.";
+	${STEP_MSG} "Preserving existing +REQUIRED_BY file.";		\
 	oldname=`${CAT} ${_REPLACE_OLDNAME_FILE}`;			\
 	required_by="${_PKG_DBDIR}/$$oldname/+REQUIRED_BY";		\
 	${TEST} ! -f "$$required_by" ||					\
