@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2006/07/03 21:01:53 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2006/07/08 16:16:40 minskim Exp $
 
 DISTNAME=		glib-2.12.0
 PKGNAME=		${DISTNAME:S/glib/glib2/}
@@ -72,6 +72,10 @@ SUBST_SED.thr=		-e "s|@G_THREAD_LIBS_FOR_GTHREAD@|-Wc,-lc_r|g"
 .  endif
 SUBST_MESSAGE.thr=	Fixing libgthread.
 
+.endif
+
+.if !empty(MACHINE_PLATFORM:MDarwin-[56].*-*)
+CONFIGURE_ENV+=		gt_cv_c_wchar_t=no
 .endif
 
 # Handle directories shared with devel/glib.
