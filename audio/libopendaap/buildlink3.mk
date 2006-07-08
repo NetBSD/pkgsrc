@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:01 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 22:39:00 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBOPENDAAP_BUILDLINK3_MK:=	${LIBOPENDAAP_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	libopendaap
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibopendaap}
 BUILDLINK_PACKAGES+=	libopendaap
+BUILDLINK_ORDER+=	libopendaap
 
 .if !empty(LIBOPENDAAP_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libopendaap+=	libopendaap>=0.2.1

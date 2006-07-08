@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/04/12 10:27:07 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 22:39:07 jlam Exp $
 
 BUILDLINK_DEPMETHOD.darts?=	build
 
@@ -11,6 +11,7 @@ BUILDLINK_DEPENDS+=	darts
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ndarts}
 BUILDLINK_PACKAGES+=	darts
+BUILDLINK_ORDER+=	darts
 
 .if !empty(DARTS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.darts+=	darts>=0.2
