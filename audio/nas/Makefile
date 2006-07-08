@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2006/07/07 23:20:20 minskim Exp $
+# $NetBSD: Makefile,v 1.64 2006/07/08 00:30:26 minskim Exp $
 
 DISTNAME=	nas-1.8.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -38,6 +38,35 @@ SUBST_FILES.mungeman=	config/mungeman
 SUBST_SED.mungeman=	-e 's|^ *\#|\#|g'
 
 .include "../../mk/bsd.prefs.mk"
+
+.if defined(UNPRIVILEGED) && !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
+SUBST_CLASSES+=		owngrp
+SUBST_MESSAGE.owngrp=	Fixing hardcoded owner/group.
+SUBST_STAGE.owngrp=	post-configure
+SUBST_FILES.owngrp=	clients/audio/auconvert/makefile \
+			clients/audio/auctl/makefile \
+			clients/audio/audemo/makefile \
+			clients/audio/audial/makefile \
+			clients/audio/auedit/makefile \
+			clients/audio/auinfo/makefile \
+			clients/audio/aupanel/makefile \
+			clients/audio/auphone/makefile \
+			clients/audio/auplay/makefile \
+			clients/audio/aurecord/makefile \
+			clients/audio/auscope/Makefile \
+			clients/audio/autool/makefile \
+			clients/audio/auwave/makefile \
+			clients/audio/examples/makefile \
+			clients/audio/util/makefile \
+			clients/audio/widgets/makefile \
+			clients/audio/Makefile \
+			clients/Makefile config/Makefile doc/Makefile \
+			doc/man/lib/Makefile doc/man/Makefile \
+			include/audio/Makefile include/Makefile \
+			lib/Makefile lib/audio/makefile \
+			Makefile server/Makefile
+SUBST_SED.owngrp=	-e 's/-c -o root -g wheel/-c -o ${UNPRIVILEGED_USER} -g ${UNPRIVILEGED_GROUP}/g'
+.endif
 
 .if ${OPSYS} == "SunOS"
 post-install:
