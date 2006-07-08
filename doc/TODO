@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5165 2006/07/08 10:28:03 tron Exp $
+$NetBSD: TODO,v 1.5166 2006/07/08 15:37:52 ben Exp $
 
 Suggested new packages
 ======================
@@ -294,6 +294,10 @@ Suggested new packages
 	http://www.apache.org/
 	Stable version of apache
 
+	Stellarium
+	http://www.stellarium.org/
+	Planetarium software
+	Won't build in NetBSD 3.0 because it needs swprintf()
 
 Suggested package updates
 =========================
