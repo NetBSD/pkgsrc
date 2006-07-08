@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/04/12 10:27:38 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 22:39:42 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SABLOTRON_BUILDLINK3_MK:=	${SABLOTRON_BUILDLINK3_MK}+
@@ -9,6 +9,7 @@ BUILDLINK_DEPENDS+=	sablotron
 
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nsablotron}
 BUILDLINK_PACKAGES+=	sablotron
+BUILDLINK_ORDER+=	sablotron
 
 .if !empty(SABLOTRON_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.sablotron+=	sablotron>=1.0

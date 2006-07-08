@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/06/12 16:28:13 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2006/07/08 22:39:31 jlam Exp $
 #
 # This Makefile fragment is included by packages that use vlc.
 #
@@ -14,6 +14,7 @@ BUILDLINK_DEPENDS+=	vlc
 
 .if !empty(VLC_BUILDLINK3_MK:M+)
 BUILDLINK_PACKAGES+=		vlc
+BUILDLINK_ORDER+=		vlc
 BUILDLINK_API_DEPENDS.vlc?=		vlc>=0.7.1
 BUILDLINK_ABI_DEPENDS.vlc?=	vlc>=0.7.2nb15
 BUILDLINK_PKGSRCDIR.vlc?=	../../multimedia/vlc
