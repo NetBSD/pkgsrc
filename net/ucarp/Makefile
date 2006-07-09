@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/04/06 06:22:35 reed Exp $
+# $NetBSD: Makefile,v 1.8.2.1 2006/07/09 19:56:08 salo Exp $
 #
 
 DISTNAME=		ucarp-1.1
@@ -13,6 +13,7 @@ COMMENT=		Common Address Redundancy Protocol (CARP) for Unix
 
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
+USE_TOOLS+=		msgfmt
 
 # pcap_freecode with one argument only
 BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.6.0
