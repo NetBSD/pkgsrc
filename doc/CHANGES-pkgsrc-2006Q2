@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.8 2006/07/09 11:33:31 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.9 2006/07/09 11:48:26 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -21,3 +21,5 @@ Pullup ticket 1715 - requested by martti
 build fix for xfce4-diskperf-plugin
 Pullup ticket 1722 - requested by tron
 security update for phpmyadmin
+Pullup ticket 1724 - requested by wiz
+win32-codecs update
