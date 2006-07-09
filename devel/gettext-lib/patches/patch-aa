@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2006/07/06 14:49:55 minskim Exp $
+$NetBSD: patch-aa,v 1.5 2006/07/09 18:13:29 tonio Exp $
 
 --- intl/localcharset.c.orig	2005-05-20 13:07:51.000000000 -0700
 +++ intl/localcharset.c
@@ -6,7 +6,7 @@ $NetBSD: patch-aa,v 1.4 2006/07/06 14:49:55 minskim Exp $
  # include <config.h>
  #endif
  
-+#if !HAVE_GNU_ICONV
++#if !defined(HAVE_GNU_ICONV)
 +
 +/* Provide our variant only if we don't use the GNU iconv library.  */
 +
