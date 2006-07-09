@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2006/02/01 17:20:05 reed Exp $
+$NetBSD: distinfo,v 1.9 2006/07/09 13:21:02 taca Exp $
 
-SHA1 (dtcp-20050521.tar.gz) = a27d0690ad6ccaf93618deca23587dc2f3ca4670
-RMD160 (dtcp-20050521.tar.gz) = 355eda9699f23784875a6110ffd9b55231f8db34
-Size (dtcp-20050521.tar.gz) = 18944 bytes
+SHA1 (dtcp-20060109.tar.gz) = 925380777a0cdd313ef8d57a93483c604bea959a
+RMD160 (dtcp-20060109.tar.gz) = b14d5985c558c615aa169a5dda778339c52fb713
+Size (dtcp-20060109.tar.gz) = 22679 bytes
 SHA1 (patch-aa) = f3b992203dcb97db0c285f7b240068b847d841a1
