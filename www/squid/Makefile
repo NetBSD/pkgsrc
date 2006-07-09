@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.180 2006/06/21 12:10:35 taca Exp $
+# $NetBSD: Makefile,v 1.181 2006/07/09 12:23:22 taca Exp $
 
 DISTNAME=	squid-2.5.STABLE14
 PKGNAME=	squid-2.5.14
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 		ftp://ftp.leo.org/pub/comp/general/infosys/www/daemons/squid/squid-2/STABLE/ \
@@ -10,7 +10,8 @@ MASTER_SITES=	http://www.squid-cache.org/Versions/v2/2.5/ \
 EXTRACT_SUFX=	.tar.bz2
 
 PATCH_SITES=	http://www.squid-cache.org/Versions/v2/2.5/bugs/
-PATCHFILES=	squid-2.5.STABLE14-httpReplyDestroy.patch
+PATCHFILES=	squid-2.5.STABLE14-httpReplyDestroy.patch \
+		squid-2.5.STABLE14-hierarchy_tag.patch
 PATCH_DIST_STRIP= -p1
 
 MAINTAINER=	taca@NetBSD.org
