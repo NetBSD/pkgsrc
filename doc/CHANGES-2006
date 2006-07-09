@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.678 2006/07/09 14:08:46 taca Exp $
+$NetBSD: CHANGES-2006,v 1.679 2006/07/09 14:19:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3310,3 +3310,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/dtcp to 20060109 [taca 2006-07-09]
 	Updated www/geeklog to 1.4.0.4nb1 [taca 2006-07-09]
 	Updated textproc/ruby-rdtool to 0.6.20 [taca 2006-07-09]
+	Updated www/ruby-fcgi to 0.8.7 [taca 2006-07-09]
