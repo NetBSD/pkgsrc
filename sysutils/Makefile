@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.362 2006/07/03 07:29:28 agc Exp $
+# $NetBSD: Makefile,v 1.363 2006/07/09 15:12:59 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -130,6 +130,7 @@ SUBDIR+=	libol
 SUBDIR+=	logfinder
 SUBDIR+=	logrot
 SUBDIR+=	lsof
+SUBDIR+=	magicrescue
 SUBDIR+=	mbmon
 SUBDIR+=	mc
 SUBDIR+=	mdf2iso
