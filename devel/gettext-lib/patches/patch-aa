@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.2.4.1 2006/07/09 12:04:09 salo Exp $
+
+--- intl/localcharset.c.orig	2005-05-20 13:07:51.000000000 -0700
++++ intl/localcharset.c
+@@ -23,6 +23,10 @@
+ # include <config.h>
+ #endif
+ 
++#if !HAVE_GNU_ICONV
++
++/* Provide our variant only if we don't use the GNU iconv library.  */
++
+ /* Specification.  */
+ #include "localcharset.h"
+ 
+@@ -407,3 +411,4 @@ locale_charset ()
+ 
+   return codeset;
+ }
++#endif
