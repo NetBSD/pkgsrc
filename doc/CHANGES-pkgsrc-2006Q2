@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.12 2006/07/09 19:39:38 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.13 2006/07/09 19:49:02 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -29,3 +29,5 @@ Pullup ticket 1730 - requested by reinoud
 security update for kiax
 Pullup ticket 1725 - requested by joerg
 portability fix for net-snmp
+Pullup ticket 1726 - requested by joerg
+build fix for nano
