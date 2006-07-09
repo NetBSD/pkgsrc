@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2006/05/31 21:32:09 wiz Exp $
+$NetBSD: distinfo,v 1.15.2.1 2006/07/09 11:48:04 salo Exp $
 
-SHA1 (windows-all-20060501.zip) = 50c2c833f7c66350159d52c286172887de586b57
-RMD160 (windows-all-20060501.zip) = a38283faebe0e595117a5e27d61568b06695b494
-Size (windows-all-20060501.zip) = 12589252 bytes
+SHA1 (windows-all-20060611.zip) = f1fd619a994c9c7579af9fd0a554d1e4d66f60de
+RMD160 (windows-all-20060611.zip) = a4881eb7baf8693205910714cfa02f310f040432
+Size (windows-all-20060611.zip) = 13360953 bytes
 SHA1 (qtextras-20041107.tar.bz2) = e3ff8124fab7bdd46ab393d59245a281867c4687
 RMD160 (qtextras-20041107.tar.bz2) = 93980e0c878568851eb244270965ee7378ca3669
 Size (qtextras-20041107.tar.bz2) = 974913 bytes
