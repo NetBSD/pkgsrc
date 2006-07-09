@@ -1,16 +1,13 @@
-$NetBSD: patch-ac,v 1.1.1.1 2006/07/02 18:18:34 xtraeme Exp $
+$NetBSD: patch-ac,v 1.2 2006/07/09 16:35:31 xtraeme Exp $
 
---- sdp.c.orig	2006-07-02 19:51:38.000000000 +0200
-+++ sdp.c	2006-07-02 19:52:05.000000000 +0200
-@@ -72,7 +72,11 @@
- 	u_int32_t	 type, len;
+--- util.c.orig	2006-07-02 20:07:59.000000000 +0200
++++ util.c	2006-07-02 20:08:07.000000000 +0200
+@@ -30,7 +30,7 @@
+  */
  
- 	if (local == NULL)
-+#ifdef __NetBSD__
-+		local = BDADDR_ANY;
-+#else
- 		local = NG_HCI_BDADDR_ANY;
-+#endif
- 	if (remote == NULL || channel == NULL)
- 		rfcomm_channel_lookup_exit(EINVAL);
- 
+ #include <bluetooth.h>
+-#include <bsdxml.h>
++#include <expat.h>
+ #include <ctype.h>
+ #include <errno.h>
+ #include <iconv.h>
