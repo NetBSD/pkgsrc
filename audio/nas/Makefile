@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2006/07/08 00:30:26 minskim Exp $
+# $NetBSD: Makefile,v 1.65 2006/07/09 23:58:42 minskim Exp $
 
 DISTNAME=	nas-1.8.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -43,27 +43,27 @@ SUBST_SED.mungeman=	-e 's|^ *\#|\#|g'
 SUBST_CLASSES+=		owngrp
 SUBST_MESSAGE.owngrp=	Fixing hardcoded owner/group.
 SUBST_STAGE.owngrp=	post-configure
-SUBST_FILES.owngrp=	clients/audio/auconvert/makefile \
-			clients/audio/auctl/makefile \
-			clients/audio/audemo/makefile \
-			clients/audio/audial/makefile \
-			clients/audio/auedit/makefile \
-			clients/audio/auinfo/makefile \
-			clients/audio/aupanel/makefile \
-			clients/audio/auphone/makefile \
-			clients/audio/auplay/makefile \
-			clients/audio/aurecord/makefile \
+SUBST_FILES.owngrp=	clients/audio/auconvert/Makefile \
+			clients/audio/auctl/Makefile \
+			clients/audio/audemo/Makefile \
+			clients/audio/audial/Makefile \
+			clients/audio/auedit/Makefile \
+			clients/audio/auinfo/Makefile \
+			clients/audio/aupanel/Makefile \
+			clients/audio/auphone/Makefile \
+			clients/audio/auplay/Makefile \
+			clients/audio/aurecord/Makefile \
 			clients/audio/auscope/Makefile \
-			clients/audio/autool/makefile \
-			clients/audio/auwave/makefile \
-			clients/audio/examples/makefile \
-			clients/audio/util/makefile \
-			clients/audio/widgets/makefile \
+			clients/audio/autool/Makefile \
+			clients/audio/auwave/Makefile \
+			clients/audio/examples/Makefile \
+			clients/audio/util/Makefile \
+			clients/audio/widgets/Makefile \
 			clients/audio/Makefile \
 			clients/Makefile config/Makefile doc/Makefile \
 			doc/man/lib/Makefile doc/man/Makefile \
 			include/audio/Makefile include/Makefile \
-			lib/Makefile lib/audio/makefile \
+			lib/Makefile lib/audio/Makefile \
 			Makefile server/Makefile
 SUBST_SED.owngrp=	-e 's/-c -o root -g wheel/-c -o ${UNPRIVILEGED_USER} -g ${UNPRIVILEGED_GROUP}/g'
 .endif
