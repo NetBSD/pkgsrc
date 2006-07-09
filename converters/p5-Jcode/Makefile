@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2005/08/06 06:19:05 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/07/09 13:13:00 taca Exp $
 #
 
-DISTNAME=	Jcode-0.88
+DISTNAME=	Jcode-2.06
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5jco
-PKGREVISION=	2
 CATEGORIES=	converters japanese perl5
 MASTER_SITES=	http://openlab.ring.gr.jp/Jcode/
 
@@ -17,9 +16,6 @@ DEPENDS+=	p5-MIME-Base64>=2.1:../../converters/p5-MIME-Base64
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Jcode/.packlist
-
-pre-configure:
-	@cd ${WRKSRC}; ${RM} -f mac_install.pl win_install.pl
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
