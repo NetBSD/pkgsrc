@@ -1,110 +1,15 @@
-$NetBSD: patch-ae,v 1.1 2006/07/02 18:16:53 xtraeme Exp $
+$NetBSD: patch-ae,v 1.2 2006/07/09 09:27:52 xtraeme Exp $
 
---- src/btobex.c.orig	2003-10-01 13:17:13.000000000 +0200
-+++ src/btobex.c	2006-07-02 19:24:16.000000000 +0200
-@@ -46,12 +46,16 @@
- #include <netinet/in.h>
- #include <sys/socket.h>
+--- lib/obex_main.c.orig	2006-07-09 10:34:51.000000000 +0200
++++ lib/obex_main.c	2006-07-09 10:35:37.000000000 +0200
+@@ -45,7 +45,9 @@
+ #include <sys/types.h>
+ #include <stdio.h>
  
-+#ifdef __NetBSD__
+-#ifdef HAVE_BLUETOOTH
++#ifdef HAVE_NETBSD_BLUETOOTH
 +#include <bluetooth.h>
-+#include <netbt/rfcomm.h>
-+#else
++#elif defined(HAVE_BLUETOOTH)
  #include <bluetooth/bluetooth.h>
- #include <bluetooth/rfcomm.h>
-+#endif
+ #endif /*HAVE_BLUETOOTH*/
  
- #endif /* _WIN32 */
- 
--
- #include <obex_main.h>
- #include <btobex.h>
- 
-@@ -65,6 +69,15 @@
- void btobex_prepare_connect(obex_t *self, bdaddr_t *src, bdaddr_t *dst, uint8_t channel)
- {
- #ifndef _WIN32
-+#ifdef __NetBSD__
-+	self->trans.self.rfcomm.bt_family = AF_BLUETOOTH;
-+	bacpy(&self->trans.self.rfcomm.bt_bdaddr, src);
-+	self->trans.self.rfcomm.bt_channel = 0;
-+
-+	self->trans.peer.rfcomm.bt_family = AF_BLUETOOTH;
-+	bacpy(&self->trans.peer.rfcomm.bt_bdaddr, dst);
-+	self->trans.peer.rfcomm.bt_channel = channel;
-+#else
- 	self->trans.self.rfcomm.rc_family = AF_BLUETOOTH;
- 	bacpy(&self->trans.self.rfcomm.rc_bdaddr, src);
- 	self->trans.self.rfcomm.rc_channel = 0;
-@@ -72,6 +85,7 @@
- 	self->trans.peer.rfcomm.rc_family = AF_BLUETOOTH;
- 	bacpy(&self->trans.peer.rfcomm.rc_bdaddr, dst);
- 	self->trans.peer.rfcomm.rc_channel = channel;
-+#endif
- #endif /* _WIN32 */
- }
- 
-@@ -85,9 +99,15 @@
- {
- #ifndef _WIN32
- 	/* Bind local service */
-+#ifdef __NetBSD__
-+	self->trans.self.rfcomm.bt_family = AF_BLUETOOTH;
-+	bacpy(&self->trans.self.rfcomm.bt_bdaddr, src);
-+	self->trans.self.rfcomm.bt_channel = channel;
-+#else
- 	self->trans.self.rfcomm.rc_family = AF_BLUETOOTH;
- 	bacpy(&self->trans.self.rfcomm.rc_bdaddr, src);
- 	self->trans.self.rfcomm.rc_channel = channel;
-+#endif
- #endif /* _WIN32 */
- }
- 
-@@ -109,7 +129,11 @@
- 	}
- 	
- 	if (bind(self->serverfd, (struct sockaddr*) &self->trans.self.rfcomm, 
-+#ifdef __NetBSD__
-+		sizeof(struct sockaddr_bt)))
-+#else
- 		 sizeof(struct sockaddr_rc)))
-+#endif
- 	{
- 		DEBUG(0, "Error doing bind\n");
- 		goto out_freesock;
-@@ -142,7 +166,11 @@
- int btobex_accept(obex_t *self)
- {
- #ifndef _WIN32
-+#ifdef __NetBSD__
-+	int addrlen = sizeof(struct sockaddr_bt);
-+#else
- 	int addrlen = sizeof(struct sockaddr_rc);
-+#endif
- 	//int mtu;
- 	//int len = sizeof(int);
- 
-@@ -181,7 +209,11 @@
- 	}
- 
- 	ret = bind(self->fd, (struct sockaddr*) &self->trans.self.rfcomm,
-+#ifdef __NetBSD__
-+		   sizeof(struct sockaddr_bt));
-+#else
- 		   sizeof(struct sockaddr_rc));
-+#endif	   
- 
- 	if (ret < 0) {
- 		DEBUG(4, "ret=%d\n", ret);
-@@ -189,7 +221,11 @@
- 	}
- 
- 	ret = connect(self->fd, (struct sockaddr*) &self->trans.peer.rfcomm,
-+#ifdef __NetBSD__
-+		      sizeof(struct sockaddr_bt));
-+#else
- 		      sizeof(struct sockaddr_rc));
-+#endif
- 	if (ret < 0) {
- 		DEBUG(4, "ret=%d\n", ret);
- 		goto out_freesock;
