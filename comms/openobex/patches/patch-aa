@@ -1,38 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2006/07/02 18:16:53 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2006/07/09 09:27:52 xtraeme Exp $
 
---- src/obex_transport.h.orig	2003-10-01 13:17:13.000000000 +0200
-+++ src/obex_transport.h	2006-07-02 18:51:48.000000000 +0200
-@@ -39,7 +39,11 @@
- #ifdef HAVE_IRDA
- #include "irda_wrap.h"
- #endif /*HAVE_IRDA*/
--#ifdef HAVE_BLUETOOTH
+--- configure.in.orig	2006-06-14 11:24:13.000000000 +0200
++++ configure.in	2006-07-09 10:01:18.000000000 +0200
+@@ -23,6 +23,8 @@
+ AC_PATH_BLUEZ
+ AC_PATH_USB
+ 
++NETBSD_BLUETOOTH_CHECK
 +
-+#if defined(HAVE_BLUETOOTH) && defined(__NetBSD__)
-+#include <bluetooth.h>
-+#include <netbt/rfcomm.h>
-+#elif defined(HAVE_BLUETOOTH)
- #include <bluetooth/bluetooth.h>
- #include <bluetooth/rfcomm.h>
- #endif /*HAVE_BLUETOOTH*/
-@@ -52,7 +56,11 @@
- #endif /*HAVE_IRDA*/
- 	struct sockaddr_in   inet;
- #ifdef HAVE_BLUETOOTH
-+#ifdef __NetBSD__
-+	struct sockaddr_bt rfcomm;
-+#else
- 	struct sockaddr_rc   rfcomm;
-+#endif
- #endif /*HAVE_BLUETOOTH*/
- } saddr_t;
+ AC_ARG_OPENOBEX
  
-@@ -76,7 +84,4 @@
- int obex_transport_read(obex_t *self, int count, uint8_t *buf, int buflen);
- 
- 
--#endif OBEX_TRANSPORT_H
--
--
--
-+#endif  /* OBEX_TRANSPORT_H */
+ AC_OUTPUT(Makefile include/Makefile lib/Makefile apps/Makefile ircp/Makefile doc/Makefile openobex.pc)

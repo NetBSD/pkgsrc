@@ -1,16 +1,27 @@
-$NetBSD: patch-ac,v 1.1 2006/07/02 18:16:53 xtraeme Exp $
+$NetBSD: patch-ac,v 1.2 2006/07/09 09:27:52 xtraeme Exp $
 
---- src/obex_main.c.orig	2003-10-01 13:17:13.000000000 +0200
-+++ src/obex_main.c	2006-07-02 18:56:16.000000000 +0200
-@@ -46,7 +46,11 @@
- #include <stdio.h>
- 
- #ifdef HAVE_BLUETOOTH
-+#ifdef __NetBSD__
+--- lib/obex_transport.h.orig	2006-07-09 10:19:01.000000000 +0200
++++ lib/obex_transport.h	2006-07-09 10:20:53.000000000 +0200
+@@ -39,7 +39,10 @@
+ #ifdef HAVE_IRDA
+ #include "irda_wrap.h"
+ #endif /*HAVE_IRDA*/
+-#ifdef HAVE_BLUETOOTH
++#ifdef HAVE_NETBSD_BLUETOOTH
 +#include <bluetooth.h>
-+#else
++#include <netbt/rfcomm.h>
++#elif defined(HAVE_BLUETOOTH)
  #include <bluetooth/bluetooth.h>
-+#endif /* __NetBSD__ */
+ #include <bluetooth/rfcomm.h>
  #endif /*HAVE_BLUETOOTH*/
- 
- #endif /* _WIN32 */
+@@ -54,7 +57,9 @@
+ 	struct sockaddr_irda irda;
+ #endif /*HAVE_IRDA*/
+ 	struct sockaddr_in   inet;
+-#ifdef HAVE_BLUETOOTH
++#ifdef HAVE_NETBSD_BLUETOOTH
++	struct sockaddr_bt   rfcomm;
++#elif defined(HAVE_BLUETOOTH)
+ 	struct sockaddr_rc   rfcomm;
+ #endif /*HAVE_BLUETOOTH*/
+ #ifdef HAVE_USB

@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.10 2006/07/06 16:31:39 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/09 09:27:52 xtraeme Exp $
 #
 
-DISTNAME=	openobex-1.0.1
-PKGREVISION=	3
+DISTNAME=	openobex-1.3
 CATEGORIES=	comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openobex/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	xtraeme@NetBSD.org
 HOMEPAGE=	http://openobex.sourceforge.net/
 COMMENT=	Implementation of the Object Exchange (OBEX) protocol
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	autoconf gmake pkg-config
 USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE=	openobex-config.in
@@ -21,19 +20,13 @@ PKGCONFIG_OVERRIDE=	openobex-config.in
 .if (${OPSYS} == "NetBSD" && exists(/usr/include/bluetooth.h))
 SUBST_CLASSES+=		bt
 SUBST_STAGE.bt=		post-patch
-SUBST_FILES.bt=		configure
-SUBST_SED.bt=		-e "s|bluetooth/bluetooth.h|bluetooth.h|g"
-SUBST_SED.bt+=		-e "s|bluetooth/rfcomm.h|netbt/rfcomm.h|g"
-SUBST_SED.bt+=		-e "s|sockaddr_rc|sockaddr_bt|g"
+SUBST_FILES.bt=		include/obex.h
+SUBST_SED.bt=		-e "s|ifndef SOL_RFCOMM|ifdef SOL_RFCOMM|"
 SUBST_MESSAGE.bt=	Fixing bluetooth detection.
-
-SUBST_CLASSES+=		bt2
-SUBST_STAGE.bt2=	post-patch
-SUBST_FILES.bt2=	src/obex.h
-SUBST_SED.bt2=		-e "s|ifndef SOL_RFCOMM|ifdef SOL_RFCOMM|"
-
-# bacpy() and friends
-CPPFLAGS+=		-DCOMPAT_BLUEZ
 .endif
 
+post-patch:
+	cd ${WRKSRC} && autoconf
+
+.include "../../devel/libusb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
