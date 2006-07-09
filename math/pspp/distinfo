@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2005/12/20 15:13:32 joerg Exp $
+$NetBSD: distinfo,v 1.11 2006/07/09 13:43:56 joerg Exp $
 
 SHA1 (pspp-0.3.0.tar.gz) = 1d07a7e7ef0677e5934331ed0b80b92c7bba7074
 RMD160 (pspp-0.3.0.tar.gz) = 8272d458340e77ffa54962c12a9fe377498fb10a
@@ -18,3 +18,4 @@ SHA1 (patch-am) = 0a9cf92a8b15faa73002d7000a4fa8f6e86e1973
 SHA1 (patch-an) = 1bcb30f7a0a21a9a05cf022d18c9cf806c204f85
 SHA1 (patch-ao) = c918fe9d3837ea5902405a0faca885528b31a6f6
 SHA1 (patch-ap) = 1682fe56215616b09782ca1f1f5d5f59834b043b
+SHA1 (patch-aq) = dc3fc8b4b642b79b854bae03a3622dc561d0605c
