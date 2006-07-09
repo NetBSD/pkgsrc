@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.18 2006/07/09 21:20:29 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.19 2006/07/09 21:31:20 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -41,3 +41,5 @@ Pullup ticket 1731 - requested by tonio
 build fix for gettext-lib
 Pullup ticket 1732 - requested by minskim
 portability fixes for gnome-vfs2
+Pullup ticket 1733 - requested by minskim
+portability fixes for nas
