@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.639 2006/07/07 09:45:07 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.640 2006/07/09 22:39:56 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5016,6 +5016,8 @@ sub checkline_mk_varassign($$$$$) {
 	my $varbase = varname_base($varname);
 	my $varcanon = varname_canon($varname);
 
+	$opt_debug_trace and $line->log_debug("checkline_mk_varassign($varname, $op, $value)");
+
 	checkline_mk_vardef($line, $varname, $op);
 
 	if ($op eq "?=" && defined($seen_bsd_prefs_mk) && !$seen_bsd_prefs_mk) {
@@ -5302,6 +5304,8 @@ sub checklines_mk($) {
 	my ($lines) = @_;
 	my ($allowed_targets) = ({});
 	my ($substcontext) = PkgLint::SubstContext->new();
+
+	$opt_debug_trace and log_debug((@{$lines} != 0) ? $lines->[0]->fname : NO_FILE, NO_LINES, "checklines_mk()");
 
 	# Define global variables for the Makefile context.
 	$mkctx_indentations = [0];
@@ -5648,6 +5652,7 @@ sub checkfile_buildlink3_mk($) {
 			return;
 		}
 	}
+	expect_text($lines, \$lineno, "BUILDLINK_ORDER:=\t\${BUILDLINK_ORDER} \${BUILDLINK_DEPTH}${bl_pkgbase}");
 	expect_empty_line($lines, \$lineno);
 
 	# Fourth paragraph: Package information.
