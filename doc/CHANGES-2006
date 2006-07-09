@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.672 2006/07/09 09:29:28 xtraeme Exp $
+$NetBSD: CHANGES-2006,v 1.673 2006/07/09 12:24:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3304,3 +3304,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added audio/cmus version 2.0.3 [ben 2006-07-07]
 	Updated databases/phpmyadmin to 2.8.2 [tron 2006-07-08]
 	Updated comms/openobex to 1.3 [xtraeme 2006-07-09]
+	Updated www/squid to 2.5.14nb3 [taca 2006-07-09]
