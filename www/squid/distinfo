@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.118 2006/06/12 15:36:11 taca Exp $
+$NetBSD: distinfo,v 1.119 2006/07/09 12:23:22 taca Exp $
 
 SHA1 (squid-2.5.14/squid-2.5.STABLE14.tar.bz2) = ca7837c222800e25def1b6aad7d26245cb365960
 RMD160 (squid-2.5.14/squid-2.5.STABLE14.tar.bz2) = 4af6b7c034e8b5aa19d8f95ec5a19f5780569224
@@ -6,6 +6,9 @@ Size (squid-2.5.14/squid-2.5.STABLE14.tar.bz2) = 1073745 bytes
 SHA1 (squid-2.5.14/squid-2.5.STABLE14-httpReplyDestroy.patch) = dd67bf8cc229134012f2df3eb85e2cd1e0469def
 RMD160 (squid-2.5.14/squid-2.5.STABLE14-httpReplyDestroy.patch) = cbba4d9bc67ee30be19e2c774aa1dc038b72245f
 Size (squid-2.5.14/squid-2.5.STABLE14-httpReplyDestroy.patch) = 1277 bytes
+SHA1 (squid-2.5.14/squid-2.5.STABLE14-hierarchy_tag.patch) = a3bfca773c9b0a9437064c709c8fb9974dd09ec8
+RMD160 (squid-2.5.14/squid-2.5.STABLE14-hierarchy_tag.patch) = 06f989912b5897de7e451ddf53eb0ebbcb5f1ee9
+Size (squid-2.5.14/squid-2.5.STABLE14-hierarchy_tag.patch) = 1319 bytes
 SHA1 (patch-aa) = 49032ad1c2ece5c88805276ddd76d0f9ac09cd02
 SHA1 (patch-ab) = 1224ba4cee98a26d2c9d670eb6d57c6187ff2d56
 SHA1 (patch-ac) = 1b283f0a573c02c82ce26f75e67d19b1ec5ff9f0
