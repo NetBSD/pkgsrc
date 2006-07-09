@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.675 2006/07/09 13:14:00 taca Exp $
+$NetBSD: CHANGES-2006,v 1.676 2006/07/09 13:22:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3307,3 +3307,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/squid to 2.5.14nb3 [taca 2006-07-09]
 	Updated x11/ruby-gtk to 0.34nb7 [taca 2006-07-09]
 	Updated converters/p5-Jcode to 2.06 [taca 2006-07-09]
+	Updated net/dtcp to 20060109 [taca 2006-07-09]
