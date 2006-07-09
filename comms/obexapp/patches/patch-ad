@@ -1,116 +1,13 @@
-$NetBSD: patch-ad,v 1.1.1.1 2006/07/02 18:18:34 xtraeme Exp $
+$NetBSD: patch-ad,v 1.2 2006/07/09 16:35:31 xtraeme Exp $
 
---- transport.c.orig	2006-07-02 19:52:50.000000000 +0200
-+++ transport.c	2006-07-02 19:59:19.000000000 +0200
-@@ -53,7 +53,11 @@
- obexapp_transport_connect(obex_t *handle, void *userdata)
- {
- 	context_p		context = (context_p) userdata;
--	struct sockaddr_rfcomm	addr;
-+#ifdef __NetBSD__
-+	struct sockaddr_bt	addr;
-+#else
-+	struct sockaddr_rfcomm	addr
-+#endif
+--- main.c.orig	2006-07-09 18:28:27.000000000 +0200
++++ main.c	2006-07-09 18:28:37.000000000 +0200
+@@ -265,7 +265,7 @@
+ 			if (rfcomm_channel_lookup(NULL,
+ 						&context.addr.rfcomm_bdaddr,
+ 						service, &channel, &n) != 0)
+-				errc(1, n, "Could not obtain RFCOMM channel");
++				errx(1, "Could not obtain RFCOMM channel");
  
- 	syslog(LOG_DEBUG, "%s()", __func__);
- 
-@@ -63,21 +67,36 @@
- 		return (-1);
- 	}
- 
-+#ifdef __NetBSD__
-+	syslog(LOG_INFO, "%s(): Connecting to %s/%d, pid=%d",
-+		__func__, bt_ntoa(&context->addr.bt_bdaddr, NULL),
-+		context->addr.bt_channel, getpid());
-+
-+	context->tfd = socket(PF_BLUETOOTH,SOCK_STREAM,BTPROTO_RFCOMM);
-+#else
- 	syslog(LOG_INFO, "%s(): Connecting to %s/%d, pid=%d",
- 		__func__, bt_ntoa(&context->addr.rfcomm_bdaddr, NULL),
- 		context->addr.rfcomm_channel, getpid());
- 
- 	context->tfd = socket(PF_BLUETOOTH,SOCK_STREAM,BLUETOOTH_PROTO_RFCOMM);
-+#endif
- 	if (context->tfd < 0) {
- 		syslog(LOG_ERR, "%s(): Could not create socket. %s (%d)",
- 			__func__,  strerror(errno), errno);
- 		return (-1);
- 	}
- 
-+#ifdef __NetBSD__
-+	addr.bt_len = sizeof(addr);
-+	addr.bt_family = AF_BLUETOOTH;
-+	memcpy(&addr.bt_bdaddr, &context->saddr, sizeof(addr.bt_bdaddr));
-+	addr.bt_channel = 0;
-+#else
- 	addr.rfcomm_len = sizeof(addr);
- 	addr.rfcomm_family = AF_BLUETOOTH;
- 	memcpy(&addr.rfcomm_bdaddr, &context->saddr, sizeof(addr.rfcomm_bdaddr));
- 	addr.rfcomm_channel = 0;
-+#endif
- 
- 	if (bind(context->tfd, (struct sockaddr *) &addr, sizeof(addr)) < 0) {
- 		syslog(LOG_ERR, "%s(): Could not bind socket. %s (%d)",
-@@ -157,7 +176,11 @@
- obexapp_transport_listen(obex_t *handle, void *userdata)
- {
- 	context_p		context = (context_p) userdata;
-+#ifdef __NetBSD__
-+	struct sockaddr_bt	addr;
-+#else
- 	struct sockaddr_rfcomm	addr;
-+#endif
- 	socklen_t		addrlen;
- 	pid_t			pid;
- 	int			s;
-@@ -171,7 +194,11 @@
- 		return (1);
- 	}
- 
-+#ifdef __NetBSD__
-+	s = socket(PF_BLUETOOTH, SOCK_STREAM, BTPROTO_RFCOMM);
-+#else
- 	s = socket(PF_BLUETOOTH, SOCK_STREAM, BLUETOOTH_PROTO_RFCOMM);
-+#endif
- 	if (s < 0) {
- 		syslog(LOG_ERR, "%s(): Could not create socket. %s (%d)",
- 			__func__,  strerror(errno), errno);
-@@ -192,7 +219,11 @@
- 	}
- 
- 	memset(&opush, 0, sizeof(opush));
-+#ifdef __NetBSD__
-+	opush.server_channel = context->addr.bt_channel;
-+#else
- 	opush.server_channel = context->addr.rfcomm_channel;
-+#endif
- 	opush.supported_formats_size = 7;
- 	opush.supported_formats[0] = 0x1;
- 	opush.supported_formats[1] = 0x2;
-@@ -204,7 +235,11 @@
- 
- 	if (sdp_register_service(context->ss,
- 			SDP_SERVICE_CLASS_OBEX_OBJECT_PUSH,
-+#ifdef __NetBSD__
-+			&context->addr.bt_bdaddr,
-+#else
- 			&context->addr.rfcomm_bdaddr,
-+#endif
- 			(void *) &opush, sizeof(opush), NULL) != 0) {
- 		syslog(LOG_ERR, "%s(): Could to register OPUSH service with " \
- 			"local SDP daemon. %s (%d)",
-@@ -239,8 +274,13 @@
- 
- 			syslog(LOG_INFO, "%s(): Accepted new connection from " \
- 				"%s/%d, pid=%d", __func__,
-+#ifdef __NetBSD__
-+				bt_ntoa(&addr.bt_bdaddr, NULL),
-+				addr.bt_channel, getpid());
-+#else
- 				bt_ntoa(&addr.rfcomm_bdaddr, NULL),
- 				addr.rfcomm_channel, getpid());
-+#endif
- 
- 			if (daemon(1, 0) < 0) {
- 				syslog(LOG_ERR, "%s(): Could not daemon. %s (%d)",
+ 			context.addr.rfcomm_channel = (u_int8_t) channel;
+ 		}
