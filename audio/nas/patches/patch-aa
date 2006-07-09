@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.8.22.1 2006/07/09 21:30:57 salo Exp $
+
+--- lib/audio/Imakefile.orig	2005-06-04 13:08:54.000000000 -0700
++++ lib/audio/Imakefile
+@@ -159,6 +159,10 @@ REQUIREDLIBS = $(LDPRELIB) $(XAUTHLIB) $
+ STD_INCLUDES = -I/usr/include
+ #endif                                                                        
+ 
++#if defined(DarwinArchitecture)
++REQUIREDLIBS = -L$(USRLIBDIR) -lXt $(XAULIB) 
++#endif
++
+ 
+ #if DoSharedLib
+ #if DoNormalLib
