@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.23 2006/04/22 09:22:15 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2006/07/09 14:07:29 taca Exp $
 
-DISTNAME=	rdtool-0.6.18
+DISTNAME=	rdtool-0.6.20
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.moonwolf.com/ruby/archive/
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www2.pos.to/~tosh/ruby/rdtool/
+HOMEPAGE=	http://trac.moonwolf.com/rdtool/wiki/
 COMMENT=	RD (Ruby Document) converter to HTML/man/etc
 
 # Since rd2 commands depends its name and it can't rename, we cannot
@@ -29,7 +28,7 @@ DOCS_RD=	README.rd README.rd.ja doc/rd-draft.rd doc/rd-draft.rd.ja
 DOCS=		${DOCS_RD} ${DOCS_RD:S/.rd/.html/}
 
 pre-configure:
-	@cd ${WRKSRC}/bin; ${MV} rdswap.rb rdswap; ${CHMOD} ${BINMODE} rdswap
+	cd ${WRKSRC}/bin; ${MV} rdswap.rb rdswap; ${CHMOD} ${BINMODE} rdswap
 
 post-build:
 .for f in ${DOCS_RD}
