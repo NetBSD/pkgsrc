@@ -1,14 +1,5 @@
-$NetBSD: distinfo,v 1.9 2005/12/20 12:02:15 joerg Exp $
+$NetBSD: distinfo,v 1.10 2006/07/09 21:56:27 dmcmahill Exp $
 
-SHA1 (gnucap-0.34.tar.gz) = 2094c3b9d6bcc1c036ec2cef5ff35216da24868a
-RMD160 (gnucap-0.34.tar.gz) = 41661927ca5fc1b9ff358ada007c8ff5eb15c9cd
-Size (gnucap-0.34.tar.gz) = 1412004 bytes
-SHA1 (patch-aa) = 404d6f926f4985a7d117e1361e9c2c9cabd6323b
-SHA1 (patch-ab) = 62d69152ebeb23257cc08727bbe03ed9b1251469
-SHA1 (patch-ac) = b87c6eb33b427a154b03802e7633048b4ed003ab
-SHA1 (patch-ad) = 58ddab0864cc950e39f46c2230da2280ab26e19c
-SHA1 (patch-ae) = 1104114b205ed3d520ca56c39e453f82a18b1d52
-SHA1 (patch-af) = 07811937aa01335ef461a27dae4f7f36c959a46a
-SHA1 (patch-ag) = f40f5bdb386bb364cd7277d47ae8eaf1ff319539
-SHA1 (patch-ah) = 16a96aafa9cdc2c3354c90ea7a93ee912f82b179
-SHA1 (patch-ai) = 8bf5cf190e02026b52fb7d21b360681a0324fdc6
+SHA1 (gnucap-2006-07-08.tar.gz) = dafdfa1f78ee37b247066ccac7a2e63f99a7d8f0
+RMD160 (gnucap-2006-07-08.tar.gz) = 8006dffd189095b81dbf7358caacea870bc054df
+Size (gnucap-2006-07-08.tar.gz) = 1546670 bytes
