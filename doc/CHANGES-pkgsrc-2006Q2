@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.10 2006/07/09 12:04:27 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.11 2006/07/09 13:53:10 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -25,3 +25,5 @@ Pullup ticket 1724 - requested by wiz
 win32-codecs update
 Pullup ticket 1723 - requested by minskim
 portability fixes for gettext-lib
+Pullup ticket 1730 - requested by reinoud
+security update for kiax
