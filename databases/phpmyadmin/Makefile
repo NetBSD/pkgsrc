@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2006/06/02 18:27:55 joerg Exp $
+# $NetBSD: Makefile,v 1.50.2.1 2006/07/09 11:33:06 salo Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
-PKGREVISION=	1
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpmyadmin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,7 +20,7 @@ MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q} \
 		EXDIR=${EXDIR:Q}
 
 CONF_INC_PHP=	${PREFIX}/share/phpmyadmin/config.inc.php
-DIST_VERSION=	2.8.0.4
+DIST_VERSION=	2.8.2
 DOC_FILES=	CREDITS ChangeLog \
 		Documentation.txt INSTALL LICENSE README \
 		RELEASE-DATE-${DIST_VERSION} TODO
@@ -46,8 +45,8 @@ INSTALL_DIRS=	css js lang libraries libraries/auth libraries/dbg \
 		themes/original themes/original/css themes/original/img
 
 do-configure:
-	@${SED} -e "s|@PMDIR@|${PMDIR}|g" ${FILESDIR}/phpmyadmin.conf	\
-		> ${WRKDIR}/phpmyadmin.conf
+	${SED} -e "s|@PMDIR@|${PMDIR}|g" ${FILESDIR}/phpmyadmin.conf	\
+		>${WRKDIR}/phpmyadmin.conf
 
 do-install:
 	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM}
