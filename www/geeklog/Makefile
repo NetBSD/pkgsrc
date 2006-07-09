@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2006/07/01 00:22:38 taca Exp $
+# $NetBSD: Makefile,v 1.7 2006/07/09 13:29:24 taca Exp $
 #
 
 DISTNAME=	geeklog-${VER}
 PKGNAME=	geeklog-${VER:S/sr/./}
+PKGREVISON=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.geeklog.net/filemgmt/upload_dir/
 
@@ -86,6 +87,8 @@ pre-install:
 	${FIND} ${WRKSRC:Q} -name "*.orig*" -exec ${RM} -f {} \;
 	cd ${WRKSRC}/public_html; \
 		${FIND} ${GEEKLOG_TMPL_SUB} -type f -exec ${CHMOD} -x {} \;
+	cd ${WRKSRC}/system; \
+		${FIND} pear -type f -exec ${CHMOD} 0644 {} \;
 
 do-install:
 	${INSTALL_DATA_DIR} ${GEEKLOG_DOCDIR}
