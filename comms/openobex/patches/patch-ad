@@ -1,12 +1,14 @@
-$NetBSD: patch-ad,v 1.1 2006/07/02 18:16:53 xtraeme Exp $
+$NetBSD: patch-ad,v 1.2 2006/07/09 09:27:52 xtraeme Exp $
 
---- src/obex_object.c.orig	2006-07-02 18:56:59.000000000 +0200
-+++ src/obex_object.c	2006-07-02 18:57:10.000000000 +0200
-@@ -33,6 +33,7 @@
- #endif
+--- config.h.in.orig	2006-07-09 10:27:25.000000000 +0200
++++ config.h.in	2006-07-09 10:28:00.000000000 +0200
+@@ -6,6 +6,9 @@
+ /* Define if system supports Bluetooth and it's enabled */
+ #undef HAVE_BLUETOOTH
  
- #include <stdio.h>
-+#include <stdlib.h>
- #include <string.h>
++/* Define if system uses NetBSD's bluetooth stack */
++#undef HAVE_NETBSD_BLUETOOTH
++
+ /* Define to 1 if you have the <dlfcn.h> header file. */
+ #undef HAVE_DLFCN_H
  
- #include "obex_main.h"
