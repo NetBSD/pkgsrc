@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/02 18:24:18 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/09 16:35:31 xtraeme Exp $
 #
 
 DISTNAME=	obexapp-1.4.4
@@ -24,12 +24,8 @@ SUBST_SED.mk+=		-e "s|CFLAGS=|CFLAGS+=|"
 # Sigh, this needs the GNU libiconv.
 USE_GNU_ICONV=		yes
 
-# Version that contains support for NetBSD/bluetooth.
-BUILDLINK_ABI_DEPENDS.openobex+=	openobex>=1.0.1nb3
-
 # Sigh... too many warnings with GCC 4.x, disable them for now.
 CFLAGS+=		-w
-
 
 .include "../../comms/openobex/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"

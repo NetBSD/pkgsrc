@@ -1,113 +1,15 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/07/02 18:18:34 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2006/07/09 16:35:31 xtraeme Exp $
 
---- main.c.orig	2004-12-24 00:09:48.000000000 +0100
-+++ main.c	2006-07-02 19:48:19.000000000 +0200
-@@ -90,8 +90,13 @@
+--- sdp.c.orig	2003-09-07 21:00:55.000000000 +0200
++++ sdp.c	2006-07-09 18:27:44.000000000 +0200
+@@ -34,6 +34,10 @@
+ #include <sdp.h>
+ #include <stdio.h>
  
- 	/* Prepare context */
- 	memset(&context, 0, sizeof(context));
 +#ifdef __NetBSD__
-+	context.addr.bt_len = sizeof(context.addr.bt_len);
-+	context.addr.bt_family = AF_BLUETOOTH;
-+#else
- 	context.addr.rfcomm_len = sizeof(context.addr.rfcomm_len);
- 	context.addr.rfcomm_family = AF_BLUETOOTH;
++#define NG_HCI_BDADDR_ANY	BDADDR_ANY
 +#endif
- 	context.tfd = context.sfd = -1;
- 	context.detach = 1;
- 
-@@ -148,15 +153,23 @@
- 	while ((n = getopt(argc, argv, "a:A:cC:dDfhnr:Ssu:")) != -1) {
- 		switch (n) {
- 		case 'a':
-+#ifdef __NetBSD__
-+			if (!bt_aton(optarg, &context.addr.bt_bdaddr)) {
-+#else
- 			if (!bt_aton(optarg, &context.addr.rfcomm_bdaddr)) {
-+#endif
- 				struct hostent	*he = bt_gethostbyname(optarg);
- 
- 				if (he == NULL)
- 					errx(1, "%s: %s", optarg,
- 						hstrerror(h_errno));
--
-+#ifdef __NetBSD__
-+				memcpy(&context.addr.bt_bdaddr, he->h_addr,
-+					sizeof(context.addr.bt_bdaddr));
-+#else
- 				memcpy(&context.addr.rfcomm_bdaddr, he->h_addr,
- 					sizeof(context.addr.rfcomm_bdaddr));
-+#endif
- 			}
- 			break;
- 
-@@ -178,11 +191,19 @@
- 			break;
- 
- 		case 'C': /* channel to listen on or connect to */
-+#ifdef __NetBSD__
-+			context.addr.bt_channel = strtoul(optarg, &ep, 10);
-+#else
- 			context.addr.rfcomm_channel = strtoul(optarg, &ep, 10);
-+#endif
- 			if (*ep != '\0') {
-+#ifdef __NetBSD__
-+				context.addr.bt_channel = 0;
-+#else
- 				context.addr.rfcomm_channel = 0;
-+#endif
- 
--				switch (tolower(optarg[0])) {
-+				switch (tolower((unsigned char)optarg[0])) {
- 				case 'i': /* IrMC */
- 					service = SDP_SERVICE_CLASS_IR_MC_SYNC;
- 					break;
-@@ -254,10 +275,25 @@
- 	argv += optind;
- 
- 	if (!context.server) {
-+#ifdef __NetBSD__
-+		if (memcmp(&context.addr.bt_bdaddr,
-+		    BDADDR_ANY, sizeof(context.addr.bt_bdaddr)) == 0)
-+			errx(1, "Must specify server BD_ADDR");
-+		
-+		/* Check channel, if was not set then obtain it via SDP */
-+		if (context.addr.bt_channel == 0 && service != 0) {
-+			int channel;
 +
-+			if (rfcomm_channel_lookup(NULL,
-+						&context.addr.bt_bdaddr,
-+						service, &channel, &n) != 0)
-+				errx(1, "Could not obtain RFCOMM channel");
-+
-+			context.addr.bt_channel = (u_int8_t) channel;
-+#else
- 		if (memcmp(&context.addr.rfcomm_bdaddr,
- 		    NG_HCI_BDADDR_ANY, sizeof(context.addr.rfcomm_bdaddr)) == 0)
- 			errx(1, "Must specify server BD_ADDR");
--
- 		/* Check channel, if was not set then obtain it via SDP */
- 		if (context.addr.rfcomm_channel == 0 && service != 0) {
- 			int	channel;
-@@ -268,13 +304,21 @@
- 				errc(1, n, "Could not obtain RFCOMM channel");
+ #undef	PROTOCOL_DESCRIPTOR_LIST_BUFFER_SIZE
+ #define	PROTOCOL_DESCRIPTOR_LIST_BUFFER_SIZE	256
  
- 			context.addr.rfcomm_channel = (u_int8_t) channel;
-+#endif
- 		}
- 	}
- 
-+#ifdef __NetBSD__
-+	if (context.addr.bt_channel <= 0 ||
-+	    context.addr.bt_channel > 30)
-+		errx(1, "Invalid RFCOMM channel %d",
-+			context.addr.bt_channel);
-+#else
- 	if (context.addr.rfcomm_channel <= 0 ||
- 	    context.addr.rfcomm_channel > 30)
- 		errx(1, "Invalid RFCOMM channel %d",
- 			context.addr.rfcomm_channel);
-+#endif
- 
- 	/* Detach server (if required) */
- 	if (context.server && context.detach) {
