@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.16 2006/07/09 20:09:53 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.17 2006/07/09 20:39:47 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -37,3 +37,5 @@ Pullup ticket 1728 - requested by joerg
 build fix for gawk
 Pullup ticket 1729 - requested by joerg
 build fix for gmake
+Pullup ticket 1731 - requested by tonio
+build fix for gettext-lib
