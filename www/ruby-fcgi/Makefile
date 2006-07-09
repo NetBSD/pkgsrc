@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.10 2005/12/05 23:55:23 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/09 14:18:04 taca Exp $
 
 DISTNAME=		ruby-fcgi-${VER}
 PKGNAME=		${RUBY_PKGPREFIX}-fcgi-${VER}
 CATEGORIES=		www devel ruby
-MASTER_SITES=   	http://sugi.nemui.org/pub/ruby/fcgi/
+MASTER_SITES=		http://rubyforge.org/frs/download.php/11368/
 
 MAINTAINER=		rasputnik@hellooperator.net
 HOMEPAGE=		http://sugi.nemui.org/prod/ruby-fcgi/
 COMMENT=		FastCGI interface for Ruby
 
 USE_RUBY_SETUP=		yes
+RUBY_HAS_ARCHLIB=	yes
 RUBY_SETUP=		install.rb
 RUBY_EXTCONF_SUBDIRS=	ext/fcgi
-VER=			0.8.6
+VER=			0.8.7
 CONFIGURE_ARGS+=	-- --with-fcgi-dir=${PREFIX:Q}
 DOCS=			README README.signals
 
