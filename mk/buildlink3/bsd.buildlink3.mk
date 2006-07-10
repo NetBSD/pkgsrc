@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.182 2006/07/08 23:11:17 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.183 2006/07/10 17:06:26 jlam Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -132,35 +132,26 @@ _BLNK_PACKAGES+=	${_pkg_}
 .  endif
 .endfor
 
-# _BLNK_RECURSIVE_DEPENDS lists all of the packages that this package
-# directly or indirectly depends on.
-#
-_BLNK_RECURSIVE_DEPENDS=	# empty
-.for _pkg_ in ${_BLNK_PACKAGES}
-USE_BUILTIN.${_pkg_}?=		no
-.  if empty(_BLNK_RECURSIVE_DEPENDS:M${_pkg_}) && \
-      !empty(USE_BUILTIN.${_pkg_}:M[nN][oO])
-_BLNK_RECURSIVE_DEPENDS+=	${_pkg_}
-.  endif
-.endfor
-
-# _BLNK_DEPENDS contains all of the elements of BUILDLINK_DEPENDS that
-# shouldn't be skipped and that name packages for which we aren't using
-# the built-in software and hence need to add a dependency.
-#
-_BLNK_DEPENDS=	# empty
-.for _pkg_ in ${BUILDLINK_DEPENDS}
-USE_BUILTIN.${_pkg_}?=	no
-.  if empty(_BLNK_DEPENDS:M${_pkg_}) && !defined(IGNORE_PKG.${_pkg_}) && \
-      !empty(_BLNK_PACKAGES:M${_pkg_}) && \
-      !empty(USE_BUILTIN.${_pkg_}:M[nN][oO])
-_BLNK_DEPENDS+=	${_pkg_}
-.    endif
-.endfor
-
 # By default, every package receives a full dependency.
 .for _pkg_ in ${_BLNK_PACKAGES}
 BUILDLINK_DEPMETHOD.${_pkg_}?=	full
+.endfor
+
+# _BLNK_DEPENDS contains all of the elements of _BLNK_PACKAGES for which
+# we must add a dependency.  We add a dependency if we aren't using the
+# built-in version of the package, and the package was either explictly
+# requested as a dependency (BUILDLINK_DEPENDS) or is a build dependency
+# somewhere in the chain.
+#
+_BLNK_DEPENDS=	# empty
+.for _pkg_ in ${_BLNK_PACKAGES}
+USE_BUILTIN.${_pkg_}?=	no
+.  if empty(_BLNK_DEPENDS:M${_pkg_}) && !defined(IGNORE_PKG.${_pkg_}) && \
+      !empty(USE_BUILTIN.${_pkg_}:M[nN][oO]) && \
+      (!empty(BUILDLINK_DEPENDS:M${_pkg_}) || \
+       !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mbuild))
+_BLNK_DEPENDS+=	${_pkg_}
+.  endif
 .endfor
 
 # Add the proper dependency on each package pulled in by buildlink3.mk
