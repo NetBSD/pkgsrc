@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2006/04/17 07:07:36 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2006/07/10 08:50:23 rillig Exp $
 bin/edox
 bin/eesh
 bin/enlightenment
 bin/epp
 bin/starte16
-etc/X11/dm/Sessions/enlightenment.desktop
 man/man1/enlightenment.1
 share/enlightenment/config/actionclasses.cfg
 share/enlightenment/config/actionclasses.cfg.ja
@@ -507,6 +506,3 @@ share/locale/tr/LC_MESSAGES/enlightenment.mo
 @dirrm share/enlightenment/config/pix
 @dirrm share/enlightenment/config
 @dirrm share/enlightenment
-@dirrm etc/X11/dm/Sessions
-@dirrm etc/X11/dm
-@dirrm etc/X11
