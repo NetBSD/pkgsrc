@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5174 2006/07/10 19:31:14 wiz Exp $
+$NetBSD: TODO,v 1.5175 2006/07/10 22:26:27 taca Exp $
 
 Suggested new packages
 ======================
@@ -1098,6 +1098,7 @@ Suggested package updates
 	o ruby-cmd-0.8.0
 	o rxvt-unicode-7.7
 	o sablecc-3.2
+	o samba-3.0.23
 	o same-1.8 [don't update; same-1.3 is small and nice]
 	o sather-1.2.2
 	o sawfish-1.3
