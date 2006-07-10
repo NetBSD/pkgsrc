@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2006/04/17 13:46:24 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2006/07/10 20:52:44 adam Exp $
 
 DISTNAME=	fontforge_full-${VERSION}
 PKGNAME=	fontforge-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	fonts editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fontforge/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,7 +10,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://fontforge.sourceforge.net/
 COMMENT=	Postscript font editor
 
-VERSION=	20060413
+VERSION=	20060703
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
