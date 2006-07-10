@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5173 2006/07/10 17:49:04 wiz Exp $
+$NetBSD: TODO,v 1.5174 2006/07/10 19:31:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -604,7 +604,6 @@ Suggested package updates
 	o guile-oops-1.0.2
 	o gworkspace-0.8.2
 	o gzrecover-0.3
-	o h5utils-1.10
 	o hackbot-2.21
 	o hashcash-1.18
 	o haskell-mode-1.45
@@ -695,7 +694,6 @@ Suggested package updates
 	o libjit-0.0.6
 	o liblive-2005.10.05
 	o libmatchbox-1.8
-	o libmatheval-1.1.3
 	o libmilter-8.13.5
 	o libmpeg3-1.7
 	o libnasl-2.3.1
@@ -1111,7 +1109,6 @@ Suggested package updates
 	o sdig-0.40
 	o seahorse-0.9.1
 	o sendfile-20010424
-	o sendmail-8.13.7
 	o sharity-light-1.3
 	o shc-3.8
 	o shmux-1.0b9
@@ -1188,7 +1185,6 @@ Suggested package updates
 	o tkpasman-2.2b
 	o tob-0.26
 	o top-3.6beta1
-	o tor-0.1.1.22
 	o totem-1.4.2
 	o tpasm-1.2
 	o tpb-0.6.4
