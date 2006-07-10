@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2005/11/19 21:28:35 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2006/07/10 12:47:26 rillig Exp $
 #
 
 COMMENT=	Regression tests for pkgsrc infrastructure
 
+SUBDIR+=	barrier
 SUBDIR+=	bootstrap-install-sh
 SUBDIR+=	buildlink-libtool
 SUBDIR+=	buildlink-transform
