@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.687 2006/07/10 12:44:55 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.688 2006/07/10 12:48:28 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3319,3 +3319,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added textproc/asciidoc version 7.1.2 [rillig 2006-07-10]
 	Updated print/latex-mk to 1.8 [dmcmahill 2006-07-10]
 	Updated pkgtools/pkg_regress to 0.2 [rillig 2006-07-10]
+	Added regress/barrier version 1.0 [rillig 2006-07-10]
