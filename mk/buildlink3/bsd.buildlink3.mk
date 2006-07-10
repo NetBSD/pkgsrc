@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.183 2006/07/10 17:06:26 jlam Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.184 2006/07/10 17:10:18 wiz Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -139,7 +139,7 @@ BUILDLINK_DEPMETHOD.${_pkg_}?=	full
 
 # _BLNK_DEPENDS contains all of the elements of _BLNK_PACKAGES for which
 # we must add a dependency.  We add a dependency if we aren't using the
-# built-in version of the package, and the package was either explictly
+# built-in version of the package, and the package was either explicitly
 # requested as a dependency (BUILDLINK_DEPENDS) or is a build dependency
 # somewhere in the chain.
 #
