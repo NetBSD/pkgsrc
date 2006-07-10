@@ -1,15 +1,12 @@
-#!@SH@ -e
+#! @SH@
 #
-# $NetBSD: pkg_regress.sh,v 1.3 2005/05/07 15:46:00 gavan Exp $
+# $NetBSD: pkg_regress.sh,v 1.4 2006/07/10 12:44:19 rillig Exp $
 #
+set -e
 
-if [ -z "$PKGSRCDIR" ]
-then
-    PKGSRCDIR=@PKGSRCDIR@
-fi
-
-TEST_EGREP="@EGREP@"
-TEST_MAKE="@MAKE@"
+: ${PKGSRCDIR="@PKGSRCDIR@"}
+: ${TEST_EGREP="@EGREP@"}
+: ${TEST_MAKE="@MAKE@"}
 
 # hooks overridable by test spec file
 
@@ -45,38 +42,45 @@ check_result()
 	return
 }
 
-# result checking routines
+#
+# Internal helper routines
+#
 
-exit_status()
-{
-	# Test exit status
-	if [ "$1" -ne "${TEST_EXITSTATUS}" ]
-	then
-	    TEST_RESULT=1
-	fi
+# regress_fail <msg>
+regress_fail() {
+
+	echo "ERROR: $*" 1>&2
+	TEST_RESULT=1
 }
 
+# result checking routines
+
+# Test exit status
+exit_status()
+{
+
+	[ "$1" -eq "${TEST_EXITSTATUS}" ] \
+	|| regress_fail "Expected exit code $1, but got ${TEST_EXITSTATUS}."
+}
+
+# Test positive match against output
 output_require()
 {
-	# Test positive match against output
-	for PATTERN in "$@"
-	do
-	    if ! ${TEST_EGREP} -q "${PATTERN}" <${TEST_OUTFILE} >/dev/null
-	    then
-	        TEST_RESULT=1
-	    fi
+
+	for re in "$@"; do
+		${TEST_EGREP} "${re}" < ${TEST_OUTFILE} >/dev/null \
+		|| regress_fail "Expected \"${re}\" in the output, but it is not there."
 	done
 }
 
+# Test negative match against output
 output_prohibit()
 {
-	# Test negative match against output
-	for PATTERN in "$@"
-	do
-	    if ${TEST_EGREP} -q "${PATTERN}" <${TEST_OUTFILE} >/dev/null
-	    then
-	        TEST_RESULT=1
-	    fi
+
+	for re in "$@"; do
+		if ${TEST_EGREP} "${re}" < ${TEST_OUTFILE} >/dev/null; then
+			regress_fail "Didn't expect \"${re}\" in the output, but found it."
+		fi
 	done
 }
 
