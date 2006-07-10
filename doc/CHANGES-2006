@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.692 2006/07/10 21:13:07 adam Exp $
+$NetBSD: CHANGES-2006,v 1.693 2006/07/10 21:42:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3331,3 +3331,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Added net/mDNSResponder-nss version 108 [drochner 2006-07-10]
 	Updated fonts/fontforge to 20060703 [adam 2006-07-10]
 	Updated emulators/wine to 0.9.17 [adam 2006-07-10]
+	Updated editors/abiword to 2.4.5 [adam 2006-07-10]
+	Updated editors/abiword-plugins to 2.4.5 [adam 2006-07-10]
