@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.642 2006/07/10 04:17:56 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.643 2006/07/10 11:19:23 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4310,8 +4310,8 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		}
 
 	} elsif ($type eq "BuildlinkPackages") {
-		my $re_del = qr"\$\{BUILDLINK_PACKAGES:N[+\-.0-9A-Z_a-z]+\}";
-		my $re_add = qr"[+\-.0-9A-Z_a-z]+";
+		my $re_del = qr"\$\{BUILDLINK_PACKAGES:N(?:[+\-.0-9A-Z_a-z]|\$\{[^\}]+\})+\}";
+		my $re_add = qr"(?:[+\-.0-9A-Z_a-z]|\$\{[^\}]+\})+";
 
 		if (($op eq ":=" && $value =~ qr"^${re_del}$") ||
 		    ($op eq ":=" && $value =~ qr"^${re_del}\s+${re_add}$") ||
