@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/12/29 06:21:53 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2006/07/10 22:59:26 jlam Exp $
 #
 
 DISTNAME=		qgreylist-0.3
@@ -24,13 +24,15 @@ REPLACE_PERL=		greylist
 .include "../../mk/bsd.prefs.mk"
 
 # Detect the PKG_SYSCONFDIR of the installed qmail, so we can create
-# config files there.
-.if !empty(PHASES_AFTER_EXTRACT:M${PKG_PHASE})
-INSTALLED_QMAIL!= ${PKG_BEST_EXISTS} ${DEPENDS_QMAIL:C/:.*$//:Q:S/\ / /g}
-.  if empty(INSTALLED_QMAIL:M*_not_found_)
-.    if !defined(PKG_SYSCONFDIR.qgreylist)
-PKG_SYSCONFDIR.qgreylist!=	${PKG_INFO} -Q PKG_SYSCONFDIR ${INSTALLED_QMAIL}
-.    endif
+# config files there and refer to them from rc.d scripts.
+#
+.if !defined(PKG_SYSCONFDIR.qgreylist)
+PKG_SYSCONFDIR.qgreylist!=						\
+	${PKG_INFO} -Q PKG_SYSCONFDIR					\
+		${DEPENDS_QMAIL:C/:.*$//:Q} 2>/dev/null ||		\
+	${ECHO} "PKG_SYSCONFDIR.qgreylist_not_set"
+.  if empty(PKG_SYSCONFDIR.qgreylist:M*not_set)
+MAKEVARS+=	PKG_SYSCONFDIR.qgreylist
 .  endif
 .endif
 

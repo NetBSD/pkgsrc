@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/04/27 22:46:10 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2006/07/10 22:59:26 jlam Exp $
 #
 
 DISTNAME=		djbdns-run-20050415
@@ -40,12 +40,14 @@ INSTALLATION_DIRS=	bin share/doc/djbdns-run
 
 # Detect the PKG_SYSCONFDIR of the installed djbdns, so we can create
 # config files there and refer to them from rc.d scripts.
-.if !empty(PHASES_AFTER_EXTRACT:M${PKG_PHASE})
-INSTALLED_DJBDNS!= ${PKG_BEST_EXISTS} ${DEPENDS_DJBDNS:C/:.*$//:Q:S/\ / /g}
-.  if empty(INSTALLED_DJBDNS:M*_not_found_)
-.    if !defined(PKG_SYSCONFDIR.djbdns-run)
-PKG_SYSCONFDIR.djbdns-run!= ${PKG_INFO} -Q PKG_SYSCONFDIR ${INSTALLED_DJBDNS}
-.    endif
+#
+.if !defined(PKG_SYSCONFDIR.djbdns-run)
+PKG_SYSCONFDIR.djbdns-run!=						\
+	${PKG_INFO} -Q PKG_SYSCONFDIR					\
+		${DEPENDS_DJBDNS:C/:.*$//:Q} 2>/dev/null ||		\
+	${ECHO} "PKG_SYSCONFDIR.djbdns-run_not_set"
+.  if empty(PKG_SYSCONFDIR.djbdns-run:M*not_set)
+MAKEVARS+=	PKG_SYSCONFDIR.djbdns-run
 .  endif
 .endif
 

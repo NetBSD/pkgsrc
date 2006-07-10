@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2006/06/15 08:26:58 chap Exp $
+# $NetBSD: Makefile,v 1.40 2006/07/10 22:59:26 jlam Exp $
 #
 
 DISTNAME=		qcad-2.0.5.0-1-community.src
@@ -27,7 +27,7 @@ MAKE_ENV+=		QMAKESPEC=${QTDIR}/mkspecs/default
 PREPEND_PATH+=		${QTDIR}/bin
 
 # I really want this to be post-*patch* where it makes sense, but QTDIR isn't
-# available until PHASES_AFTER_WRAPPER because it depends on
+# available until after the wrapper phase because it depends on
 # BUILDLINK_PREFIX.qt3-libs, which buildlink3 sets.  Nothing is easy.  :) The
 # patches have replaced old hardcoded paths with fixed cookies @PREFIX@ and
 # @QTDIR@.  The SUBST framework will replace the cookies with the proper
