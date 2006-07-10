@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.693 2006/07/10 21:42:19 adam Exp $
+$NetBSD: CHANGES-2006,v 1.694 2006/07/10 22:08:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3333,3 +3333,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated emulators/wine to 0.9.17 [adam 2006-07-10]
 	Updated editors/abiword to 2.4.5 [adam 2006-07-10]
 	Updated editors/abiword-plugins to 2.4.5 [adam 2006-07-10]
+	Updated graphics/gimp to 2.2.12 [adam 2006-07-11]
