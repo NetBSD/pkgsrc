@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.325 2006/05/15 21:54:26 tonio Exp $
+# $NetBSD: Makefile,v 1.326 2006/07/10 11:49:19 rillig Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -7,6 +7,7 @@ SUBDIR+=	GutenMark
 SUBDIR+=	GutenMark-words
 SUBDIR+=	aiksaurus
 SUBDIR+=	antiword
+SUBDIR+=	asciidoc
 SUBDIR+=	aspell
 SUBDIR+=	aspell-breton
 SUBDIR+=	aspell-catalan
@@ -130,6 +131,7 @@ SUBDIR+=	namazu2
 SUBDIR+=	nbsed
 SUBDIR+=	ndtpd
 SUBDIR+=	nxml-mode
+SUBDIR+=	o3read
 SUBDIR+=	openjade
 SUBDIR+=	opensp
 SUBDIR+=	p5-Convert-ASCII-Armour
