@@ -1,4 +1,4 @@
-# $NetBSD: create.mk,v 1.1 2006/06/06 06:30:29 jlam Exp $
+# $NetBSD: create.mk,v 1.2 2006/07/10 08:13:37 rillig Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -83,6 +83,9 @@
 #	script is invoked in place of the real tool.  This is used
 #	primarily to hide GNU auto* tools.
 #
+#    TOOLS_FAIL is a list of tools that return false and record their
+#	call in the .warning directory, which is later shown.
+#
 
 ######################################################################
 
@@ -94,6 +97,11 @@ TOOLS_SCRIPT.${_t_}?=	exit 0
 .for _t_ in ${TOOLS_BROKEN}
 TOOLS_CREATE+=		${_t_}
 TOOLS_SCRIPT.${_t_}?=	exit 1
+.endfor
+
+.for _t_ in ${TOOLS_FAIL}
+TOOLS_CREATE+=		${_t_}
+TOOLS_SCRIPT.${_t_}?=	${DELAYED_WARNING_MSG} "Please add USE_TOOLS+=${_t_} to the package Makefile."; exit 1
 .endfor
 
 .for _t_ in ${TOOLS_GNU_MISSING}

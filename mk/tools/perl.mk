@@ -1,4 +1,4 @@
-# $NetBSD: perl.mk,v 1.20 2006/07/05 04:32:10 jlam Exp $
+# $NetBSD: perl.mk,v 1.21 2006/07/10 08:13:37 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -54,7 +54,7 @@
 # If a package doesn't explicitly say it uses perl, then create a "broken"
 # perl in the tools directory.
 #
-TOOLS_BROKEN+=		perl
+TOOLS_FAIL+=		perl
 TOOLS_PATH.perl=	${TOOLS_CMD.perl}
 #
 # Some packages want the path to the perl tool, even if they don't have
