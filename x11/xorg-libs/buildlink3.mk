@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2006/04/12 10:27:45 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2006/07/10 21:50:34 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 XORG_LIBS_BUILDLINK3_MK:=	${XORG_LIBS_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_DEPENDS+=	xorg-libs
 #
 BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxorg-libs}
 BUILDLINK_PACKAGES:=	xorg-libs ${BUILDLINK_PACKAGES}
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xorg-libs
 
 .include "../../mk/bsd.prefs.mk"
 
