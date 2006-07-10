@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2006/06/23 16:23:10 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2006/07/10 03:46:49 rillig Exp $
 
 DISTNAME=		sarg-2.1
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sarg/}
 
@@ -13,7 +14,7 @@ COMMENT=		Squid-Cache proxy server Analysis Report Generator
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-gcc					\
-			--enable-bindir=${PREFIX}/sbin			\
+			--enable-bindir=${PREFIX}/bin			\
 			--enable-mandir=${PREFIX}/${PKGMANDIR}/man1	\
 			--enable-sysconfdir=${PKG_SYSCONFDIR:Q}
 
@@ -24,13 +25,15 @@ EGDIR=			${PREFIX}/share/examples/sarg
 EGLNG=			${EGDIR}/languages
 CFLNG=			${PKG_SYSCONFDIR}/languages
 
-SQUID_ACCESSLOG?=	/var/squid/logs/access.log
-SARG_REPORTSDIR?=	/var/sarg
+.include "../../mk/bsd.prefs.mk"
+
+SQUID_ACCESSLOG?=	${VARBASE}/squid/logs/access.log
+SARG_REPORTSDIR?=	${VARBASE}/sarg
 
 OWN_DIRS+=		${SARG_REPORTSDIR} ${CFLNG}
 
 SUBST_CLASSES+=		sargconf
-SUBST_MESSAGE.sargconf=	[Adjust values in SARG configuration files]
+SUBST_MESSAGE.sargconf=	Adjusting values in SARG configuration files.
 SUBST_STAGE.sargconf=	post-configure
 SUBST_FILES.sargconf=	sarg.conf sarg.1
 SUBST_SED.sargconf=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
@@ -73,8 +76,8 @@ CONF_FILES=		${EGDIR}/sarg.conf ${PKG_SYSCONFDIR}/sarg.conf	\
 				${CFLNG}/Ukrainian_windows1251
 
 post-extract:
-			@${FIND} ${WRKSRC} -type d -exec ${CHMOD} +x {} \;
-			@${RM} ${WRKSRC}/languages/.new
+	${FIND} ${WRKSRC} -type d -exec ${CHMOD} +x {} \;
+	${RM} ${WRKSRC}/languages/.new
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
