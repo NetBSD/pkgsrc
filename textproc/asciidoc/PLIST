@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/10 09:28:05 rillig Exp $
+bin/asciidoc
+share/asciidoc/asciidoc.conf
+share/asciidoc/docbook.conf
+share/asciidoc/help.conf
+share/asciidoc/html4.conf
+share/asciidoc/linuxdoc.conf
+share/asciidoc/stylesheets/docbook-xsl.css
+share/asciidoc/stylesheets/xhtml-deprecated-manpage.css
+share/asciidoc/stylesheets/xhtml-deprecated.css
+share/asciidoc/stylesheets/xhtml11-manpage.css
+share/asciidoc/stylesheets/xhtml11-quirks.css
+share/asciidoc/stylesheets/xhtml11.css
+share/asciidoc/text.conf
+share/asciidoc/xhtml-deprecated-css.conf
+share/asciidoc/xhtml-deprecated.conf
+share/asciidoc/xhtml11-quirks.conf
+share/asciidoc/xhtml11.conf
+@dirrm share/asciidoc/stylesheets
+@dirrm share/asciidoc
