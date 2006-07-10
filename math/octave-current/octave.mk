@@ -1,4 +1,4 @@
-# $NetBSD: octave.mk,v 1.5 2006/01/06 22:41:48 adam Exp $
+# $NetBSD: octave.mk,v 1.6 2006/07/10 22:59:26 jlam Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -9,12 +9,10 @@ OCTAVE_CONFIG=	${LOCALBASE}/bin/octave-config
 OCTAVE_VARS?=	LOCALVERFCNFILEDIR LOCALVEROCTFILEDIR LOCALVERARCHLIBDIR VERSION
 
 # Set OCT_<var> to the value of <var> as returned by octave-config.
-.if !empty(PHASES_AFTER_EXTRACT:M${PKG_PHASE})
-.  if exists(${OCTAVE_CONFIG})
-.    for var in ${OCTAVE_VARS}
-.      if !defined(OCT_${var})
-OCT_${var}!=  ${OCTAVE_CONFIG} -p ${var}
-.      endif
-.    endfor
-.  endif
+.if exists(${OCTAVE_CONFIG})
+.  for var in ${OCTAVE_VARS}
+.    if !defined(OCT_${var})
+OCT_${var}!=	${OCTAVE_CONFIG} -p ${var}
+.    endif
+.  endfor
 .endif

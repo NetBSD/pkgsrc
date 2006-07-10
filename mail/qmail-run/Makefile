@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/06/04 15:23:25 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2006/07/10 22:59:26 jlam Exp $
 #
 
 DISTNAME=		qmail-run-20060604
@@ -30,12 +30,14 @@ INSTALLATION_DIRS=	bin share/doc/qmail-run share/examples/qmail-run
 
 # Detect the PKG_SYSCONFDIR of the installed qmail, so we can create
 # config files there and refer to them from rc.d scripts.
-.if !empty(PHASES_AFTER_EXTRACT:M${PKG_PHASE})
-INSTALLED_QMAIL!= ${PKG_BEST_EXISTS} ${DEPENDS_QMAIL:C/:.*$//:Q:S/\ / /g}
-.  if empty(INSTALLED_QMAIL:M*_not_found_)
-.    if !defined(PKG_SYSCONFDIR.qmail-run)
-PKG_SYSCONFDIR.qmail-run!= ${PKG_INFO} -Q PKG_SYSCONFDIR ${INSTALLED_QMAIL}
-.    endif
+#
+.if !defined(PKG_SYSCONFDIR.qmail-run)
+PKG_SYSCONFDIR.qmail-run!=						\
+	${PKG_INFO} -Q PKG_SYSCONFDIR					\
+		${DEPENDS_QMAIL:C/:.*$//:Q} 2>/dev/null ||		\
+	${ECHO} "PKG_SYSCONFDIR.qmail-run_not_set"
+.  if empty(PKG_SYSCONFDIR.qmail-run:M*not_set)
+MAKEVARS+=	PKG_SYSCONFDIR.qmail-run
 .  endif
 .endif
 

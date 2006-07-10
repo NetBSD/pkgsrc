@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/29 06:21:50 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/10 22:59:26 jlam Exp $
 #
 
 DISTNAME=		mailfront-0.98
@@ -23,12 +23,14 @@ RCD_SCRIPTS=		smtpfront
 
 # Detect the PKG_SYSCONFDIR of the installed qmail, so we can create
 # config files there and refer to them from rc.d scripts.
-.if !empty(PHASES_AFTER_EXTRACT:M${PKG_PHASE})
-INSTALLED_QMAIL!= ${PKG_BEST_EXISTS} ${DEPENDS_QMAIL:C/:.*$//:Q:S/\ / /g}
-.  if empty(INSTALLED_QMAIL:M*_not_found_)
-.    if !defined(PKG_SYSCONFDIR.mailfront)
-PKG_SYSCONFDIR.mailfront!= ${PKG_INFO} -Q PKG_SYSCONFDIR ${INSTALLED_QMAIL}
-.    endif
+#
+.if !defined(PKG_SYSCONFDIR.mailfront)
+PKG_SYSCONFDIR.mailfront!=						\
+	${PKG_INFO} -Q PKG_SYSCONFDIR					\
+		${DEPENDS_QMAIL:C/:.*$//:Q} 2>/dev/null ||		\
+	${ECHO} "PKG_SYSCONFDIR.mailfront_not_set"
+.  if empty(PKG_SYSCONFDIR.mailfront:M*not_set)
+MAKEVARS+=	PKG_SYSCONFDIR.mailfront
 .  endif
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.makevars.mk,v 1.3 2005/06/05 04:35:45 rillig Exp $
+# $NetBSD: bsd.makevars.mk,v 1.4 2006/07/10 22:59:27 jlam Exp $
 #
 # This Makefile fragment is included by bsd.prefs.mk to set all of
 # the variables saved through MAKEVARS.  Typical usage is:
@@ -19,13 +19,10 @@
 # and we only include the latest cache file that was created.
 #
 
-.if !defined(_REV_ALL_PHASES)
-_REV_ALL_PHASES=	# empty
-.  for _phase_ in ${ALL_PHASES}
-_REV_ALL_PHASES:=	${_phase_} ${_REV_ALL_PHASES}
-.  endfor
-.endif
-MAKEVARS+=	_REV_ALL_PHASES
+_ALL_PHASES=		fetch tools extract patch			\
+			wrapper configure build install package
+_REV_ALL_PHASES=	package install build configure wrapper		\
+			patch extract tools fetch
 
 # Try including the *.makevars.mk files in reverse order so that the
 # latest file is included and no more.  We check for _MAKEVARS_MK since

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:08:22 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2006/07/10 22:59:26 jlam Exp $
 #
 
 .include "../../cad/wcalc/Makefile.common"
@@ -67,13 +67,34 @@ MATLAB_MEX?=		${DEF_MATLAB_MEX}
 
 PLIST_SUBST+=		MEX_SUFX=${MEX_SUFX:Q}
 
-.if !empty(PHASES_AFTER_EXTRACT:M${PKG_PHASE})
-MATLAB_DIR!=		${MATLAB_MEX} -v 2>/dev/null | ${AWK} '/[ \t]MATLAB[ \t]/ {print $$NF}'
+.if !defined(MATLAB_DIR)
+MATLAB_DIR!=								\
+	case ${MATLAB_MEX:Q}"" in					\
+	/*)	matlab_mex=${MATLAB_MEX:Q} ;;				\
+	*)	SAVEIFS="$$IFS"; IFS=:;					\
+		for p in $$PATH; do					\
+			${TEST} ! -x $$p/${MATLAB_MEX} ||		\
+				matlab_mex=$$p/${MATLAB_MEX};		\
+		done;							\
+		IFS="$$SAVEIFS";					\
+		;;							\
+	esac;								\
+	if ${TEST} -z "$$matlab_mex"; then				\
+		${ECHO} "MATLAB_DIR_not_set";				\
+	else								\
+		$$matlab_mex -v 2>/dev/null |				\
+		${AWK} 'BEGIN { s = "MATLAB_DIR_not_set" }		\
+			/[ \t]MATLAB[ \t]/ { s = $$NF }			\
+			END { print s }';				\
+	fi
+.  if empty(MATLAB_DIR:M*not_set)
+MAKEVARS+=	MATLAB_DIR
+.  endif
+.endif
 
 BUILDLINK_PASSTHRU_DIRS+=	${MATLAB_DIR}/extern/include
 BUILDLINK_PASSTHRU_DIRS+=	${MATLAB_DIR}/simulink/include
 BUILDLINK_PASSTHRU_DIRS+=	${MATLAB_DIR}/bin/${MATLAB_ARCH}
-.endif
 
 .include "../../cad/libwcalc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

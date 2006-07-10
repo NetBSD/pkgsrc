@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1867 2006/07/08 02:16:33 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1868 2006/07/10 22:59:27 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -1146,7 +1146,7 @@ PKG_ERROR_HANDLER.${_class_}?=	{					\
 # file.  These variables are effectively passed to sub-make processes
 # that are invoked on the same Makefile.
 #
-.for _phase_ in ${ALL_PHASES}
+.for _phase_ in ${_ALL_PHASES}
 ${_MAKEVARS_MK.${_phase_}}: ${WRKDIR}
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${.TARGET}.tmp
 .  for _var_ in ${MAKEVARS:O:u}
@@ -1168,7 +1168,6 @@ ${_MAKEVARS_MK.${_phase_}}: ${WRKDIR}
 	fi
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_FLAGS} ${.TARGET}
 .endfor
-.undef _phase_
 
 # show-tools emits a /bin/sh shell script that defines all known tools
 # to the values they have in the pkgsrc infrastructure.
