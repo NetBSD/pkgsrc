@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5170 2006/07/09 20:34:37 adam Exp $
+$NetBSD: TODO,v 1.5171 2006/07/10 16:08:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -405,6 +405,7 @@ Suggested package updates
 	o cfengine2-2.1.20
 	o cfengine2-doc-2.1.14
 	o cfitsio-2.510
+	o cflow-1.1
 	o cgdb-0.6.3
 	o checkbot-1.77
 	o chrony-1.21
@@ -470,7 +471,7 @@ Suggested package updates
 	o egtk-0.3.6.2
 	o electricfence-2.4.16
 	o elf-0.5.4p1
-	o elfsh-0.65rc1
+	o elfsh-0.65 [pkg/33959]
 	o elk-3.99.7
 	o elm-me-2.4pl123
 	o elscreen-1.3.3
@@ -558,10 +559,12 @@ Suggested package updates
 	o gnome-pilot-2.0.13
 	o gnome-screensaver-2.14.2
 	o gnome-session-2.14.2
+	o gnome-speech-0.4.1
 	o gnome-spell-1.0.7
 	o gnome-themes-2.14.2
 	o gnomeicu-0.99.10
 	o gnopernicus-1.0.5
+	o gnucash-2.0.0
 	o gnucash-docs-1.9.0
 	o gnus-5.10.8
 	o gnustep-objc-1.4.0
@@ -1133,7 +1136,7 @@ Suggested package updates
 	o sma-1.4
 	o smalleiffel-0.90
 	o smalltalk-2.1.12
-	o smartmontools-5.33
+	o smartmontools-5.36 [pkg/33958]
 	o smlnj-110.51 [pkgsrc-wip]
 	o smlnj-110.59
 	o snd-8.2
