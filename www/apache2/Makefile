@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2006/05/07 12:35:27 tron Exp $
+# $NetBSD: Makefile,v 1.102 2006/07/10 08:29:33 rillig Exp $
 
 .include "Makefile.common"
 
@@ -47,9 +47,9 @@ APACHE_MODULES?=	${DFLT_APACHE_MODULES}
 APACHE_MPM?=		prefork
 CONFIGURE_ARGS+=	--with-mpm=${APACHE_MPM:Q}
 BUILD_DEFS+=		APACHE_MPM
-.for _mpm_ in prefork worker
-PLIST_SUBST.${_mpm_}?=		MPM_COMMENT.${_mpm_}="@comment "
-PLIST_SUBST+=			${PLIST_SUBST.${_mpm_}}
+.for mpm in prefork worker
+PLIST_SUBST.${mpm}?=		MPM_COMMENT.${mpm}="@comment "
+PLIST_SUBST+=			${PLIST_SUBST.${mpm}}
 .endfor
 PLIST_SUBST.${APACHE_MPM}=	MPM_COMMENT.${APACHE_MPM}=
 
@@ -134,22 +134,22 @@ SUBST_MESSAGE.paths=	Fixing paths.
 SUBST_CLASSES+=		apr-lt
 SUBST_STAGE.apr-lt=	post-configure
 SUBST_FILES.apr-lt=	build/config_vars.mk
-SUBST_SED.apr-lt=	-e "s|^\(LIBTOOL =\) [^ ]*|\1 \$$(SHELL) \$$(top_builddir)/libtool|g"
+SUBST_SED.apr-lt=	-e 's|^\(LIBTOOL =\) [^ ]*|\1 $$(SHELL) $$(top_builddir)/libtool|g'
 SUBST_MESSAGE.apr-lt=	Fixing libtool references.
 
 SUBST_CLASSES+=		confs
 SUBST_STAGE.confs=	post-configure
-SUBST_FILES.confs=	docs/conf/highperformance-std.conf \
-			docs/conf/httpd-std.conf \
-			docs/conf/ssl-std.conf
-SUBST_SED.confs=	-e "s|${EGDIR}|${PKG_SYSCONFDIR}|g" \
-			-e "s|${PREFIX}/htdocs|${PREFIX}/share/httpd/htdocs|g" \
-			-e "s|${PREFIX}/conf|${PKG_SYSCONFDIR}|g" \
-			-e "s|logs/|${VARBASE}/log/httpd/|g" \
-			-e "s|/var/log/httpd/foo\.log|logs/foo.log/|g" \
-			-e "s|^\(User[	 ]\).*|\1${APACHE_USER}|g" \
-			-e "s|^\(Group[	 ]\).*|\1${APACHE_GROUP}|g"
 SUBST_MESSAGE.confs=	Fixing configuration files.
+SUBST_FILES.confs=	docs/conf/highperformance-std.conf
+SUBST_FILES.confs+=	docs/conf/httpd-std.conf
+SUBST_FILES.confs+=	docs/conf/ssl-std.conf
+SUBST_SED.confs=	-e "s|${EGDIR}|${PKG_SYSCONFDIR}|g"
+SUBST_SED.confs+=	-e "s|${PREFIX}/htdocs|${PREFIX}/share/httpd/htdocs|g"
+SUBST_SED.confs+=	-e "s|${PREFIX}/conf|${PKG_SYSCONFDIR}|g"
+SUBST_SED.confs+=	-e "s|logs/|${VARBASE}/log/httpd/|g"
+SUBST_SED.confs+=	-e 's|/var/log/httpd/foo\.log|logs/foo.log/|g'
+SUBST_SED.confs+=	-e 's|^\(User[	 ]\).*|\1${APACHE_USER}|g'
+SUBST_SED.confs+=	-e 's|^\(Group[	 ]\).*|\1${APACHE_GROUP}|g'
 
 .include "options.mk"
 
@@ -188,18 +188,18 @@ post-build:
 		< ${FILESDIR}/mkcert.sh > ${WRKDIR}/mkcert
 
 pre-install:
-	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}				\
 		${MAKE_PROGRAM} install-conf sysconfdir="${EGDIR}"
 
 post-install:
-	@${LN} -sf ${LOCALBASE}/libexec/apr/libtool ${PREFIX}/share/httpd/build
-	@cd ${EGDIR};							\
+	${LN} -sf ${LOCALBASE}/libexec/apr/libtool ${PREFIX}/share/httpd/build
+	cd ${EGDIR} &&							\
 	for file in							\
 		highperformance-std.conf				\
 		httpd-std.conf						\
 		ssl-std.conf;						\
 	do								\
-		${CAT} $${file}	| ${AWK} '				\
+		${AWK} '						\
 			/^Listen[ 	]*80/	{			\
 				print;					\
 				printf "%s", "Listen 0.0.0.0:80\n";	\
@@ -211,25 +211,25 @@ post-install:
 				next;					\
 			}						\
 			{ print; }					\
-			' >> $${file}.new;				\
+			' < "$${file}" >> $${file}.new;			\
 		${MV} -f $${file}.new $${file};				\
 	done
 
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/httpd/manual
-	@cd ${WRKSRC}/docs/manual && ${PAX} -rw . ${PREFIX}/share/httpd/manual
+	${INSTALL_DATA_DIR} ${PREFIX}/share/httpd/manual
+	cd ${WRKSRC}/docs/manual && ${PAX} -rw . ${PREFIX}/share/httpd/manual
 
-	@${INSTALL_SCRIPT} ${WRKDIR}/mkcert ${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKDIR}/mkcert ${PREFIX}/sbin
 
 	for file in ${FIX_PERMS}; do \
 		${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/sbin/$$file && \
 		${CHMOD} ${BINMODE} ${PREFIX}/sbin/$$file; \
 	done
 
-	@${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/httpd
-	@${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/include/httpd
-	@${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/httpd
-	@${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/libexec/cgi-bin/test-cgi
-	@${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/libexec/cgi-bin/printenv
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/httpd
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/include/httpd
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/httpd
+	${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/libexec/cgi-bin/test-cgi
+	${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/libexec/cgi-bin/printenv
 
 	for file in ${FIX_MAN_PERMS}; do \
 		${CHOWN} ${MANOWN}:${MANGRP} ${PREFIX}/${PKGMANDIR}/$$file; \
