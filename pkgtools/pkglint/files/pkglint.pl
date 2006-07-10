@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.640 2006/07/09 22:39:56 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.641 2006/07/10 03:25:12 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6522,7 +6522,8 @@ sub checkfile_PLIST($) {
 
 		checkline_trailing_whitespace($line);
 
-		if ($text =~ /^\@([a-z]+)\s+(.*)/) {
+		# @foo directives.
+		if ($text =~ /^(?:\$\{[\w_]+\})?\@([a-z]+)\s+(.*)/) {
 			my ($cmd, $arg) = ($1, $2);
 
 			if ($cmd eq "unexec" && $arg =~ qr"^(rmdir|\$\{RMDIR\} \%D/)(.*)") {
@@ -6546,7 +6547,10 @@ sub checkfile_PLIST($) {
 				$line->log_warning("Unknown PLIST directive \"\@$cmd\".");
 			}
 
-		} elsif ($text =~ qr"^[A-Za-z0-9\$]") {
+		# Pathnames.
+		} elsif ($text =~ qr"^([A-Za-z0-9\$].*)/([^/]+)$") {
+			my ($dirname, $basename) = ($1, $2);
+
 			if ($opt_warn_plist_sort && $text =~ qr"^\w" && $text !~ regex_unresolved) {
 				if (defined($last_file_seen)) {
 					if ($last_file_seen gt $text) {
@@ -6556,18 +6560,17 @@ sub checkfile_PLIST($) {
 				$last_file_seen = $text;
 			}
 
-			if ($text =~ qr"^bin/.*/") {
+			if ($dirname =~ qr"^bin/") {
 				$line->log_warning("The bin/ directory should not have subdirectories.");
 
-			} elsif ($text =~ qr"^bin/(.*)") {
-				my ($binname) = ($1);
+			} elsif ($dirname eq "bin") {
 
-				if (exists($all_files->{"man/man1/${binname}.1"})) {
+				if (exists($all_files->{"man/man1/${basename}.1"})) {
 					# Fine.
-				} elsif (exists($all_files->{"\${IMAKE_MAN_DIR}/${binname}.\${IMAKE_MANNEWSUFFIX}"})) {
+				} elsif (exists($all_files->{"\${IMAKE_MAN_DIR}/${basename}.\${IMAKE_MANNEWSUFFIX}"})) {
 					# Fine.
 				} else {
-					$opt_warn_extra and $line->log_warning("Manual page missing for bin/${binname}.");
+					$opt_warn_extra and $line->log_warning("Manual page missing for bin/${basename}.");
 				}
 
 			} elsif ($text =~ qr"^doc/") {
@@ -6614,12 +6617,27 @@ sub checkfile_PLIST($) {
 					$line->log_warning("Preformatted manual page without unformatted one.");
 				}
 
+			} elsif ($text =~ qr"^man/man(\d)/([^/]+)\.\1(\.gz)?$") {
+				my ($cat, $manpage, $gz) = ($1, $2, $3);
+
+				if (defined($gz)) {
+					$line->log_note("The .gz extension is unnecessary for manual pages.");
+					$line->explain_note(
+						"Whether the manual pages are installed in compressed form or not is",
+						"configured by the pkgsrc user. Compression and decompression takes place",
+						"automatically, no matter if the .gz extension is mentioned in the PLIST",
+						"or not.");
+				}
+
 			} elsif ($text =~ qr"^sbin/(.*)") {
 				my ($binname) = ($1);
 
 				if (!exists($all_files->{"man/man8/${binname}.8"})) {
 					$opt_warn_extra and $line->log_warning("Manual page missing for sbin/${binname}.");
 				}
+
+			} elsif ($dirname eq "share/aclocal" && $basename =~ qr"\.m4$") {
+				# Fine.
 
 			} elsif ($text =~ qr"^share/doc/html/") {
 				$opt_warn_plist_depr and $line->log_warning("Use of \"share/doc/html\" is deprecated. Use \"share/doc/\${PKGBASE}\" instead.");
@@ -6667,6 +6685,10 @@ sub checkfile_PLIST($) {
 					$line->log_warning("Redundant library found. The libtool library is in line " . $all_files->{"${basename}.la"}->lines . ".");
 				}
 			}
+
+		} elsif ($text =~ qr"^\$\{[\w_]+\}$") {
+			# A variable on its own line.
+
 		} else {
 			$line->log_error("Unknown line type.");
 		}
