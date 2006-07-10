@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.227 2006/07/10 22:17:58 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.228 2006/07/10 22:59:27 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -325,21 +325,6 @@ PKG_FAIL_REASON+=	"missing mk/platform/${OPSYS}.mk"
 .endif
 
 PKGDIRMODE?=		755
-PKG_PHASE?=		none
-#
-# The PHASES_AFTER_<phase> variables list every phase "greater than or
-# equal to" <phase>.
-#
-ALL_PHASES=		${PHASES_AFTER_FETCH}
-PHASES_AFTER_FETCH=	fetch ${PHASES_AFTER_TOOLS}
-PHASES_AFTER_TOOLS=	tools ${PHASES_AFTER_EXTRACT}
-PHASES_AFTER_EXTRACT=	extract ${PHASES_AFTER_PATCH}
-PHASES_AFTER_PATCH=	patch ${PHASES_AFTER_WRAPPER}
-PHASES_AFTER_WRAPPER=	wrapper ${PHASES_AFTER_CONFIGURE}
-PHASES_AFTER_CONFIGURE=	configure ${PHASES_AFTER_BUILD}
-PHASES_AFTER_BUILD=	build ${PHASES_AFTER_INSTALL}
-PHASES_AFTER_INSTALL=	install ${PHASES_AFTER_PACKAGE}
-PHASES_AFTER_PACKAGE=	package
 
 PKG_INSTALLATION_TYPES?= overwrite
 # This is a whitespace-separated list of installation types supported
