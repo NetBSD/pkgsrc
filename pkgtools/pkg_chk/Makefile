@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/07/10 20:38:50 sketch Exp $
+# $NetBSD: Makefile,v 1.37 2006/07/10 22:46:15 salo Exp $
 
 DISTNAME=	pkg_chk-1.75
 PKGREVISION=	1
@@ -15,6 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
 USE_LANGUAGES=	# empty
+USE_TOOLS+=	mktemp:run
 NO_CHECKSUM=	YES
 
 CONFLICTS=	pkgchk-[0-9]*
@@ -22,10 +23,6 @@ CONFLICTS=	pkgchk-[0-9]*
 INSTALLATION_DIRS=	sbin man/man8
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-DEPENDS+=	mktemp>=1.4:../../sysutils/mktemp
-.endif
 
 MAKECONF?=	/etc/mk.conf
 
