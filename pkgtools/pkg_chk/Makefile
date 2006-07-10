@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2006/06/09 16:43:33 abs Exp $
+# $NetBSD: Makefile,v 1.36 2006/07/10 20:38:50 sketch Exp $
 
 DISTNAME=	pkg_chk-1.75
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -21,6 +22,10 @@ CONFLICTS=	pkgchk-[0-9]*
 INSTALLATION_DIRS=	sbin man/man8
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+DEPENDS+=	mktemp>=1.4:../../sysutils/mktemp
+.endif
 
 MAKECONF?=	/etc/mk.conf
 
