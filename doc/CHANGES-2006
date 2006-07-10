@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.683 2006/07/09 21:58:51 dmcmahill Exp $
+$NetBSD: CHANGES-2006,v 1.684 2006/07/10 07:47:10 seb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3315,3 +3315,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/tor to 0.1.1.22 [jschauma 2006-07-09]
 	Updated devel/gperf to 3.0.2 [adam 2006-07-09]
 	Updated cad/gnucap to 2006-07-08 [dmcmahill 2006-07-09]
+	Added net/php-yaz version 1.0.7 [seb 2006-07-10]
