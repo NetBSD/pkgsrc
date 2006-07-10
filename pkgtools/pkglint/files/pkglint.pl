@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.641 2006/07/10 03:25:12 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.642 2006/07/10 04:17:56 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2079,7 +2079,7 @@ sub get_vartypes_map() {
 		([\w\d_.]+?)				# variable name
 		(\*|\.\*|) \s+				# parameterized?
 		(?:(InternalList|List) \s+ of \s+)?	# kind of list
-		(?:([\w\d_]+) | \{\s*([\w\d_.+\-\s]+?)\s*\}) # basic type
+		(?:([\w\d_]+) | \{\s*([\w\d_+,\-.\s]+?)\s*\}) # basic type
 		(?:\s+ \[ ([^\]]*) \])?			# optional ACL
 		(?:\s*\#.*)?				# optional comment
 		$"x;
@@ -3943,7 +3943,7 @@ sub checkline_mk_shelltext($$) {
 		${WARNING_CAT} ${WARNING_MSG}
 	));
 
-	if ($rest =~ s/^([-@]*)(?:\$\{_PKG_SILENT\}\$\{_PKG_DEBUG\})?//) {
+	if ($rest =~ s/^\s*([-@]*)(?:\$\{_PKG_SILENT\}\$\{_PKG_DEBUG\})?//) {
 		my ($hidden) = ($1);
 
 		if ($hidden !~ qr"\@") {
@@ -5181,7 +5181,7 @@ sub checklines_package_Makefile_varorder($) {
 				[ "CATEGORIES", once ],
 				[ "MASTER_SITES", once ],
 				[ "DYNAMIC_MASTER_SITES", optional ],
-				[ "MASTER_SITE_SUBDIR", optional ],
+				[ "DIST_SUBDIR", optional ],
 				[ "EXTRACT_SUFX", optional ],
 				[ "DISTFILES", many ],
 # The following are questionable.
