@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/06/09 16:15:07 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2006/07/10 00:58:39 minskim Exp $
 #
 
 DISTNAME=	squidGuard-1.2.0
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.squidguard.org/
 COMMENT=	Ultrafast and free filter, redirector and access controller for Squid
 
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	yacc
+USE_TOOLS+=	lex yacc
 
 CONFIGURE_ARGS+=	--with-db-inc=${BUILDLINK_PREFIX.db3}/include/db3
 CONFIGURE_ARGS+=	--with-db-lib=${BUILDLINK_PREFIX.db3}/lib/db3
