@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.685 2006/07/10 09:28:15 rillig Exp $
+$NetBSD: CHANGES-2006,v 1.686 2006/07/10 11:10:52 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3317,3 +3317,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated cad/gnucap to 2006-07-08 [dmcmahill 2006-07-09]
 	Added net/php-yaz version 1.0.7 [seb 2006-07-10]
 	Added textproc/asciidoc version 7.1.2 [rillig 2006-07-10]
+	Updated print/latex-mk to 1.8 [dmcmahill 2006-07-10]
