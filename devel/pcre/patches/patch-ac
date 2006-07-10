@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.3 2006/07/10 22:14:18 joerg Exp $
+
+--- pcretest.c.orig	2006-07-10 21:37:54.000000000 +0000
++++ pcretest.c
+@@ -45,6 +45,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ #include <errno.h>
+ 
+ #ifndef _WIN32
++#include <sys/time.h>
+ #include <sys/resource.h>
+ #endif
+ 
