@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.126 2006/07/06 22:03:39 rillig Exp $
+# $NetBSD: makevars.map,v 1.127 2006/07/10 04:16:02 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -206,7 +206,7 @@ CHECK_SHLIBS		YesNo [m:s]
 CHECK_SHLIBS_SUPPORTED	YesNo [m:s]
 CHECK_WRKREF_SKIP	List of Pathmask [m:a,c:a]
 COMMENT			Comment [m:as,c:as]
-COMPILER_RPATH_FLAG	ShellWord [$system]
+COMPILER_RPATH_FLAG	{ -Wl,-rpath } [$system]
 CONFIGURE_ARGS		List of ShellWord [$package_list]
 CONFIGURE_DIRS		List of WrksrcSubdirectory [$package_list]
 CONFIGURE_ENV		List of ShellWord [$package_list]
