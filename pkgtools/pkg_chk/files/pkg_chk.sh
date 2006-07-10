@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.36 2006/06/09 16:43:33 abs Exp $
+# $Id: pkg_chk.sh,v 1.37 2006/07/10 23:47:18 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -48,15 +48,15 @@ check_packages_installed()
 	    continue
 	fi
 	if [ ! -d $PKG_DBDIR/$PKGNAME ];then
-	    msg_n "$PKGNAME: "
+	    msg_n "$pkgdir - "
 	    pkg=$(echo $PKGNAME | ${SED} 's/-[0-9].*//')
 	    pkginstalled=$(sh -c "${PKG_INFO} -e $pkg" || true)
 	    INSTALL=
 	    if [ -n "$pkginstalled" ];then
-		msg_n "version mismatch - $pkginstalled"
+		msg_n "$pkginstalled < $PKGNAME"
 		MISMATCH_TODO="$MISMATCH_TODO $pkginstalled"
 	    else
-		msg_n "missing"
+		msg_n "$PKGNAME missing"
 		MISSING_TODO="$MISSING_TODO $PKGNAME $pkgdir"
 	    fi
 	    if is_binary_available $PKGNAME ;then
@@ -69,7 +69,7 @@ check_packages_installed()
 		current_build_ver=$(get_build_ver | ${SED} 's|.*\$NetBSD\: ||' | ${SORT} -u)
 		installed_build_ver=$(${SED} 's|.*\$NetBSD\: ||' $PKG_DBDIR/$PKGNAME/+BUILD_VERSION | ${SORT} -u)
 		if [ x"$current_build_ver" != x"$installed_build_ver" ];then
-		    msg "$PKGNAME: build-version mismatch"
+		    msg "$pkgdir - $PKGNAME build_version mismatch"
 		    verbose "--current--"
 		    verbose "$current_build_ver"
 		    verbose "--installed--"
