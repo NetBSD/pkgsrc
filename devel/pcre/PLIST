@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/02/04 17:13:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2006/07/10 16:10:44 wiz Exp $
 bin/pcre-config
 bin/pcregrep
 bin/pcretest
@@ -27,6 +27,7 @@ man/man3/pcre_free_substring_list.3
 man/man3/pcre_fullinfo.3
 man/man3/pcre_get_named_substring.3
 man/man3/pcre_get_stringnumber.3
+man/man3/pcre_get_stringtable_entries.3
 man/man3/pcre_get_substring.3
 man/man3/pcre_get_substring_list.3
 man/man3/pcre_info.3
@@ -46,3 +47,4 @@ man/man3/pcreperform.3
 man/man3/pcreposix.3
 man/man3/pcreprecompile.3
 man/man3/pcresample.3
+man/man3/pcrestack.3
