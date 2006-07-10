@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/08 04:31:28 ben Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/07/10 00:56:25 minskim Exp $
 bin/cmus
 bin/cmus-remote
 lib/cmus/ip/flac.so
@@ -7,7 +7,7 @@ lib/cmus/ip/vorbis.so
 lib/cmus/ip/wav.so
 lib/cmus/op/ao.so
 lib/cmus/op/oss.so
-lib/cmus/op/sun.so
+${SUN}lib/cmus/op/sun.so
 man/man1/cmus-remote.1
 man/man1/cmus.1
 share/cmus/cyan.theme
