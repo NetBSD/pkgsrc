@@ -1,4 +1,4 @@
-# $NetBSD: pkg-config-override.mk,v 1.1 2006/07/05 06:09:15 jlam Exp $
+# $NetBSD: pkg-config-override.mk,v 1.2 2006/07/10 16:12:20 jlam Exp $
 
 ######################################################################
 ### pkg-config-override (PRIVATE)
@@ -12,7 +12,7 @@
 pkg-config-override:
 	@${DO_NADA}
 
-.if defined(_USE_RPATH) && !empty(_USE_RPATH:M[nN][oO])
+.if defined(_USE_RPATH) && !empty(_USE_RPATH:M[yY][eE][sS])
 pkg-config-override: subst-pkgconfig
 
 PKGCONFIG_OVERRIDE_SED=	\
