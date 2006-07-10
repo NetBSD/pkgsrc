@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.16 2006/04/14 10:02:31 adam Exp $
+$NetBSD: patch-ab,v 1.17 2006/07/10 22:06:32 adam Exp $
 
---- configure.orig	2006-04-13 13:35:11.000000000 +0200
+--- configure.orig	2006-06-22 12:53:13.000000000 +0200
 +++ configure
-@@ -28438,8 +28438,16 @@ if test "x$enable_altivec" = xyes; then
-   echo "$as_me:$LINENO: checking whether we can compile Altivec code" >&5
- echo $ECHO_N "checking whether we can compile Altivec code... $ECHO_C" >&6
+@@ -30835,8 +30835,16 @@ if test "x$enable_altivec" = xyes; then
+   { echo "$as_me:$LINENO: checking whether we can compile Altivec code" >&5
+ echo $ECHO_N "checking whether we can compile Altivec code... $ECHO_C" >&6; }
  
 +  gimp_save_CFLAGS=$CFLAGS
 +  case `uname` in
@@ -19,17 +19,17 @@ $NetBSD: patch-ab,v 1.16 2006/04/14 10:02:31 adam Exp $
 +asm ("vand v0, v0, v0");
  _ACEOF
  rm -f conftest.$ac_objext
- if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
-@@ -28479,7 +28487,7 @@ enable_altivec=no
- echo "${ECHO_T}no" >&6
+ if { (ac_try="$ac_compile"
+@@ -30889,7 +30897,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ echo "${ECHO_T}no" >&6; }
      { echo "$as_me:$LINENO: WARNING: The assembler does not support the Altivec command set." >&5
  echo "$as_me: WARNING: The assembler does not support the Altivec command set." >&2;}
 -
 +    CFLAGS=$gimp_save_CFLAGS
  fi
- rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
  
-@@ -34436,7 +34444,7 @@ fi;
+ rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+@@ -37474,7 +37482,7 @@ fi
  
  gimpdatadir="$datadir/$PACKAGE/2.0"
  gimpplugindir="$libdir/$PACKAGE/2.0"
