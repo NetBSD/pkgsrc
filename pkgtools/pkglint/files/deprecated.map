@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.40 2006/07/02 09:47:17 rillig Exp $
+# $NetBSD: deprecated.map,v 1.41 2006/07/10 04:18:30 rillig Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -8,6 +8,17 @@
 
 # December 2003
 FIX_RPATH		It has been removed from pkgsrc in 2003.
+
+# February 2005
+ALL_TARGET		Use BUILD_TARGET instead.
+NO_WRKSUBDIR		Use WRKSRC=${WRKDIR} instead.
+LIB_DEPENDS		Use DEPENDS instead.
+MASTER_SITE_SUBDIR	Use ${MASTER_SITE_FOO:=subdir/} instead.
+PATCH_SITE_SUBDIR	Use ${PATCH_SITES_FOO:=subdir/} instead.
+ONLY_FOR_ARCHS		Use ONLY_FOR_PLATFORM instead.
+NOT_FOR_ARCHS		Use NOT_FOR_PLATFORM instead.
+ONLY_FOR_OPSYS		Use ONLY_FOR_PLATFORM instead.
+NOT_FOR_OPSYS		Use NOT_FOR_PLATFORM instead.
 
 # May 2005
 ALL_TARGET		Use BUILD_TARGET instead.
