@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2006/06/28 12:15:13 joerg Exp $
+# $NetBSD: Makefile,v 1.57 2006/07/10 16:09:47 wiz Exp $
 
 DISTNAME=	Guppi-0.40.3
 PKGNAME=	${DISTNAME:S/G/g/}
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--disable-gnumeric
 
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake msgfmt
+USE_TOOLS+=		gmake intltool msgfmt
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 BROKEN_GETTEXT_DETECTION=	yes
