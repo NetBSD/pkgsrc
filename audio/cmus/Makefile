@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/08 04:31:28 ben Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/10 00:56:25 minskim Exp $
 #
 
 DISTNAME=		cmus-2.0.3
@@ -21,6 +21,12 @@ CONFIGURE_ARGS+=	CONFIG_MAD=y
 CONFIGURE_ARGS+=	CONFIG_AO=y
 CONFIGURE_ARGS+=	CONFIG_FLAC=y
 CONFIGURE_ARGS+=	mandir=${PREFIX}/man/
+
+.if exists(/usr/include/sys/audioio.h)
+PLIST_SUBST+=	SUN=""
+.else
+PLIST_SUBST+=	SUN="@comment "
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"
