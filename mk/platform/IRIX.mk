@@ -1,11 +1,8 @@
-# $NetBSD: IRIX.mk,v 1.24 2006/04/12 21:01:15 joerg Exp $
+# $NetBSD: IRIX.mk,v 1.25 2006/07/10 22:17:58 jlam Exp $
 #
 # Variable definitions for the IRIX operating system.
 
 ECHO_N?=	${ECHO} -n
-.if exists(/usr/bin/X11/imake)
-IMAKE?=		/usr/bin/X11/imake # IRIX 5.3 location
-.endif
 IMAKE_MAKE?=	${MAKE}		# program which gets invoked by imake
 IMAKEOPTS+=	-DMakeCmd=${PREFIX}/bin/bmake -DProjectRoot=${X11BASE}
 IMAKEOPTS+=	-DManUsr=${PREFIX}
