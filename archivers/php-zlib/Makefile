@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/06/04 16:26:52 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/10 20:57:58 sketch Exp $
 
 MODNAME=		zlib
 CATEGORIES+=		archivers
@@ -13,4 +13,5 @@ post-extract:
 
 .include "../../lang/php/ext.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
