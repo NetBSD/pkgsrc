@@ -1,7 +1,6 @@
-Binary files ../bakefile-0.2.0.orig/output/msvc6prj.pyc and ./output/msvc6prj.pyc differ
-diff -uNr ../bakefile-0.2.0.orig/rules/autoconf.bkl ./rules/autoconf.bkl
+diff -uNr ../bakefile-0.2.0.orig/rules/autoconf.bkl rules/autoconf.bkl
 --- ../bakefile-0.2.0.orig/rules/autoconf.bkl	2006-01-22 23:31:00.000000000 +0000
-+++ ./rules/autoconf.bkl	2006-02-28 18:00:14.000000000 +0000
++++ rules/autoconf.bkl	2006-07-03 20:34:27.000000000 +0000
 @@ -160,61 +160,18 @@
  
          <set var="__linkname1">$(__linkname)</set>
@@ -67,9 +66,22 @@ diff -uNr ../bakefile-0.2.0.orig/rules/autoconf.bkl ./rules/autoconf.bkl
      
          <set var="__mac_instname">$(__linkname2)</set>
     
-diff -uNr ../bakefile-0.2.0.orig/rules/makefile.bkl ./rules/makefile.bkl
+@@ -238,12 +195,6 @@
+         <set var="__macinstname" eval="0">
+             $(ifthenelse(__mac_instname=='',ref('__targetname',id),ref('__mac_instname',id)))
+         </set>
+-        <set var="__macinstnamecmd">
+-            <if cond="PLATFORM_MACOSX=='1'">
+-                -install_name $(value)/$(__macinstname)
+-            </if>
+-        </set>
+-        <ldflags>$(__macinstnamecmd)</ldflags>
+ 
+         <modify-target target="install_$(id)">
+             <command>(cd $(DESTDIR)$(value) ; $(ref('__so_symlinks_inst_cmd',id)))</command>
+diff -uNr ../bakefile-0.2.0.orig/rules/makefile.bkl rules/makefile.bkl
 --- ../bakefile-0.2.0.orig/rules/makefile.bkl	2005-12-08 10:19:46.000000000 +0000
-+++ ./rules/makefile.bkl	2006-03-20 22:04:43.000000000 +0000
++++ rules/makefile.bkl	2006-03-20 22:04:43.000000000 +0000
 @@ -604,7 +604,7 @@
          <define-tag name="install-to" rules="exe">
              <modify-target target="install_$(id)">
@@ -107,9 +119,9 @@ diff -uNr ../bakefile-0.2.0.orig/rules/makefile.bkl ./rules/makefile.bkl
                  </command>
              </modify-target>
          </define-tag>
-diff -uNr ../bakefile-0.2.0.orig/rules/makefile_defs_gnu.bkl ./rules/makefile_defs_gnu.bkl
+diff -uNr ../bakefile-0.2.0.orig/rules/makefile_defs_gnu.bkl rules/makefile_defs_gnu.bkl
 --- ../bakefile-0.2.0.orig/rules/makefile_defs_gnu.bkl	2005-06-16 17:48:03.000000000 +0000
-+++ ./rules/makefile_defs_gnu.bkl	2006-02-28 22:43:14.000000000 +0000
++++ rules/makefile_defs_gnu.bkl	2006-02-28 22:43:14.000000000 +0000
 @@ -37,12 +37,12 @@
  
              <template id="__commands_templ_C">
@@ -125,9 +137,9 @@ diff -uNr ../bakefile-0.2.0.orig/rules/makefile_defs_gnu.bkl ./rules/makefile_de
                  </set>
              </template>
  
-diff -uNr ../bakefile-0.2.0.orig/rules/makefile_defs_unix.bkl ./rules/makefile_defs_unix.bkl
+diff -uNr ../bakefile-0.2.0.orig/rules/makefile_defs_unix.bkl rules/makefile_defs_unix.bkl
 --- ../bakefile-0.2.0.orig/rules/makefile_defs_unix.bkl	2005-03-13 22:50:03.000000000 +0000
-+++ ./rules/makefile_defs_unix.bkl	2006-03-20 21:30:47.000000000 +0000
++++ rules/makefile_defs_unix.bkl	2006-03-20 21:30:47.000000000 +0000
 @@ -15,20 +15,21 @@
  
      <set var="DIRSEP">/</set>
