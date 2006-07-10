@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.20 2006/07/10 13:29:40 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.21 2006/07/10 13:46:45 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -45,3 +45,5 @@ Pullup ticket 1733 - requested by minskim
 portability fixes for nas
 Pullup ticket 1734 - requested by minskim
 build and runtime fixes for apache-tomcat55
+Pullup ticket 1735 - requested by minskim
+build and runtime fixes for jakarta-tomcat5
