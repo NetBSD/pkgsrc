@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.226 2006/06/06 15:28:52 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.227 2006/07/10 22:17:58 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -286,18 +286,6 @@ _PKGSRC_TOPDIR=	${.CURDIR}/../..
 .  include "${_PKGSRC_TOPDIR}/mk/defaults/mk.conf"
 .endif
 
-USE_TOOLS?=	# empty
-
-# Provide default values for TOOLs used by the top-level make.
-USE_TOOLS+=	[ awk dirname echo grep pwd sed test true
-
-# These tools are used by the top-level make only in certain packages and
-# should eventually be moved into those particular package Makefiles.
-#
-USE_TOOLS+=	date tr
-
-.include "${_PKGSRC_TOPDIR}/mk/tools/defaults.mk"
-
 .if ${OPSYS} == "NetBSD"
 .  if ${OBJECT_FMT} == "ELF" && \
    (${MACHINE_GNU_ARCH} == "arm" || \
@@ -487,6 +475,24 @@ DIGEST_VERSION!= 	${DIGEST} -V 2>/dev/null
 MAKEFLAGS+=		DIGEST_VERSION=${DIGEST_VERSION:Q}
 .endif
 
+USE_TOOLS?=	# empty
+
+# Provide default values for TOOLs used by the top-level make.
+USE_TOOLS+=	[ awk dirname echo grep pwd sed test true
+
+# These tools are used by the top-level make only in certain packages and
+# should eventually be moved into those particular package Makefiles.
+#
+USE_TOOLS+=	date tr
+
+# These are tools used directly by bsd.prefs.mk and files included by
+# bsd.prefs.mk.
+#
+USE_TOOLS+=	awk:pkgsrc cut:pkgsrc echo:pkgsrc pwd:pkgsrc		\
+		sed:pkgsrc tr:pkgsrc uname:pkgsrc
+
+.include "${_PKGSRC_TOPDIR}/mk/tools/defaults.mk"
+
 .if exists(${LOCALBASE}/bsd/share/mk/zoularis.mk)
 PKG_FAIL_REASON+=	'You appear to have a deprecated Zoularis installation.'
 PKG_FAIL_REASON+=	'Please update your system to bootstrap-pkgsrc and remove the'
@@ -558,8 +564,5 @@ PREPEND_PATH+=		${USE_X11:D${X11BASE}/bin} ${LOCALBASE}/bin
 
 # Make variable definitions cache
 .include "${PKGSRCDIR}/mk/bsd.makevars.mk"
-
-USE_TOOLS+=		awk:pkgsrc cut:pkgsrc echo:pkgsrc pwd:pkgsrc	\
-			sed:pkgsrc tr:pkgsrc uname:pkgsrc
 
 .endif	# BSD_PKG_MK
