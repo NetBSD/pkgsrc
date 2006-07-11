@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.699 2006/07/11 17:35:49 gson Exp $
+$NetBSD: CHANGES-2006,v 1.700 2006/07/11 17:37:33 salo Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3341,3 +3341,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated finance/gnucash to 2.0.0 [wiz 2006-07-11]
 	Removed finance/gnucash-devel [wiz 2006-07-11]
 	Updated geography/garmin-utils to 2.2 [gson 2006-07-11]
+	Updated www/trac to 0.9.6 [salo 2006-07-11]
