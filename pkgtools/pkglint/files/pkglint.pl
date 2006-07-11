@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.643 2006/07/10 11:19:23 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.644 2006/07/11 12:01:06 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3033,13 +3033,6 @@ sub variable_needs_quoting($$$) {
 		return dont_know;
 	}
 
-	# In .for loops, the :Q operator is always misplaced, since
-	# the items are broken up at white-space, not as shell words
-	# like in all other parts of make(1).
-	if ($context->shellword == VUC_SHELLWORD_FOR) {
-		return false;
-	}
-
 	# Variables of certain predefined types, as well as all
 	# enumerations, are expected to not require the :Q operator.
 	if (ref($type->basic_type) eq "HASH" || exists(safe_types->{$type->basic_type})) {
@@ -3049,6 +3042,13 @@ sub variable_needs_quoting($$$) {
 		} elsif ($type->kind_of_list == LK_EXTERNAL && $context->extent != VUC_EXTENT_WORD_PART) {
 			return doesnt_matter;
 		}
+	}
+
+	# In .for loops, the :Q operator is always misplaced, since
+	# the items are broken up at white-space, not as shell words
+	# like in all other parts of make(1).
+	if ($context->shellword == VUC_SHELLWORD_FOR) {
+		return false;
 	}
 
 	# Determine whether the context expects a list of shell words or
@@ -4424,8 +4424,19 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 					"packages that have the same prefix, but a longer name. For example,",
 					"foo-* matches foo-1.2, but also foo-client-1.2 and foo-server-1.2.");
 
-			} elsif ($depversion ne "[0-9]*" && $depversion =~ qr"^\[.*\]$") {
-				$line->log_warning("Only [0-9]* is allowed in the numeric part of a dependency.");
+			} elsif ($depversion =~ qr"^\[.*\]$") {
+				if ($depversion ne "[0-9]*") {
+					$line->log_warning("Only [0-9]* is allowed in the numeric part of a dependency.");
+				}
+
+			} elsif ($depversion !~ qr"\[" && $depversion !~ qr"\.\*$") {
+				$line->log_warning("Error-prone dependency pattern \"${depversion}\".");
+				$line->explain_warning(
+					"Instead of 3*, you should either write write 3{,nb*} or 3.* if you",
+					"meant that. Otherwise, maybe you meant \"package>=3\"?");
+
+			} else {
+				# Great.
 			}
 
 		} elsif ($value =~ qr"\{") {
