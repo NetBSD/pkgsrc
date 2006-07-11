@@ -1,7 +1,7 @@
 #!@PERL@ -w
 # -*- perl -*-
 #
-# $NetBSD: finddepends,v 1.4 2006/04/13 18:58:17 wiz Exp $
+# $NetBSD: finddepends,v 1.5 2006/07/11 12:52:14 wiz Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 #
@@ -88,7 +88,7 @@ while ($pattern = pop @searchlist) {
 #    print "* Looking for $pattern\n";
     for $key (keys %bl3content) {
 #	print "searching $key ($bl3content{$key})\n\n";
-	if ($bl3content{$key} =~ m/$pattern/) {
+	if ($bl3content{$key} =~ m/\Q$pattern/) {
 #	    print "\n\n ******** MATCH $key \n\n";
 #	    print "** $pattern found in $key\n";
 #	    print "** BUMP $key\n";
@@ -120,7 +120,7 @@ for $makefile (@makefiles) {
     close OUT;
     $found = 0;
     for $pattern (@bl3result) {
-	if ($content =~ m/$pattern/) {
+	if ($content =~ m/\Q$pattern/) {
 	    $found = 1;
 	    last;
 	}
