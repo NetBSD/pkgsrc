@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2006/06/26 22:51:35 minskim Exp $
+# $NetBSD: Makefile,v 1.30 2006/07/11 16:29:49 hira Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
 CATEGORIES=	print japanese
 MASTER_SITES=	ftp://ftp.ascii.co.jp/pub/TeX/ascii-ptex/tetex/ \
-		ftp://ring.gr.jp/pub/text/TeX/ascii-ptex/tetex/
+		ftp://ftp.ring.gr.jp/pub/text/TeX/ascii-ptex/tetex/
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} # XXX
 DISTFILES+=	${DF_DVIPSK_PATCH}
 DISTFILES+=	mendexk${MENDEXK_VERS}${EXTRACT_SUFX}
@@ -16,10 +16,10 @@ COMMENT=	Publishing TeX (pTeX)
 # XXX ${MAKE_VARIABLES} won't be extracted here.  strange...
 SITES_dvipsk-jpatch-p1.7a.tar.gz= \
 		ftp://ftp.ascii.co.jp/pub/TeX/ascii-ptex/dvips/ \
-		ftp://ring.gr.jp/pub/text/TeX/ascii-ptex/dvips/
+		ftp://ftp.ring.gr.jp/pub/text/TeX/ascii-ptex/dvips/
 SITES_mendexk2.6d.tar.gz= \
 		ftp://ftp.ascii.co.jp/pub/TeX/ascii-ptex/mendex/ \
-		ftp://ring.gr.jp/pub/text/TeX/ascii-ptex/mendex/
+		ftp://ftp.ring.gr.jp/pub/text/TeX/ascii-ptex/mendex/
 
 DEPENDS+=	ja-ptex-share>=2.4:../../print/ja-ptex-share
 
