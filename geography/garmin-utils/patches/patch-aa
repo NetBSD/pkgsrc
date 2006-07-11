@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2004/09/08 20:47:54 gson Exp $
+$NetBSD: patch-aa,v 1.2 2006/07/11 17:33:27 gson Exp $
 
---- Makefile.inc.orig	2004-02-15 00:14:35.000000000 +0200
+--- Makefile.inc.orig	2004-08-19 05:45:29.000000000 +0300
 +++ Makefile.inc
 @@ -4,6 +4,7 @@
  #
