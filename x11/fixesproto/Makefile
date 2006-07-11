@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/18 17:13:35 reed Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/11 12:51:34 abs Exp $
 #
 
 DISTNAME=		fixesproto-3.0.2
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/proto/
 EXTRACT_SUFX=		.tar.bz2
@@ -17,6 +18,7 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/fixesproto.pc.in
 USE_LANGUAGES=		# empty
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 
