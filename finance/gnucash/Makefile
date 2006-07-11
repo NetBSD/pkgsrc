@@ -1,56 +1,67 @@
-# $NetBSD: Makefile,v 1.100 2006/07/07 22:10:07 jlam Exp $
+# $NetBSD: Makefile,v 1.101 2006/07/11 12:58:07 wiz Exp $
+#
 
-DISTNAME=		gnucash-1.8.12
-PKGREVISION=		5
+DISTNAME=		gnucash-2.0.0
 CATEGORIES=		finance
-MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
-			${MASTER_SITE_SOURCEFORGE:=gnucash/}
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
 MAINTAINER=		wiz@NetBSD.org
-HOMEPAGE=		http://www.gnucash.org/
-COMMENT=		Personal double-entry accounting program
+HOMEPAGE=		http://gnucash.sourceforge.net/
+COMMENT=		Personal or business finance management program
 
 DEPENDS+=		guile-slib-[0-9]*:../../devel/guile-slib
-DEPENDS+=		p5-Date-Manip>=5.42a:../../devel/p5-Date-Manip
-DEPENDS+= 		p5-Finance-Quote>=1.06:../../finance/p5-Finance-Quote
+DEPENDS+=		guile-www-[0-9]*:../../devel/guile-www
 
-USE_DIRS+=		gnome1-1.5
-USE_TOOLS+=		bison gmake intltool perl:run pkg-config
-USE_LIBTOOL=		YES
-USE_PKGLOCALEDIR=	YES
+USE_DIRS+=		xdg-1.1
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake intltool makeinfo msgfmt pkg-config
+GNU_CONFIGURE=		yes
+INFO_FILES=		YES
 
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--without-included-gettext
-CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
-CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
+PKGCONFIG_OVERRIDE+=	lib/goffice-0.0.4/libgoffice-1.pc.in
+PKGCONFIG_OVERRIDE+=	lib/libgsf-1.12.3/libgsf-1.pc.in
+PKGCONFIG_OVERRIDE+=	lib/libgsf-1.12.3/libgsf-gnome-1.pc.in
+PKGCONFIG_OVERRIDE+=	lib/libgsf-1.12.3/libgsf-win32-1.pc.in
 
-REPLACE_PERL=		src/quotes/dump-finance-quote
+CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
+MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR="${PREFIX}/share/gconf/schemas/"
 
-# code is using char/unsigned char inconsistently
-BUILDLINK_TRANSFORM+=  rm:-Werror
+GCONF2_SCHEMAS+=	apps_gnucash_history.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_dialog_commodities.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_dialog_common.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_dialog_print_checks.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_dialog_prices.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_warnings.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_dialog_reconcile.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_dialog_totd.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_general.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_window_pages_account_tree.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_window_pages_register.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_import_generic_matcher.schemas
+#GCONF2_SCHEMAS+=	apps_gnucash_dialog_hbci.schemas
+GCONF2_SCHEMAS+=	apps_gnucash_dialog_business_common.schemas
 
-AM_MAKEFLAGS=		LIBTOOL='${LIBTOOL} ${LIBTOOL_FLAGS}'
-MAKE_ENV+=		AM_MAKEFLAGS=${AM_MAKEFLAGS:Q}
-
-INFO_FILES=		# PLIST
-
-# empty in 1.8.12, existed before
-post-install:
-	${RMDIR} ${PREFIX}/share/doc/gnucash
-
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/gal/buildlink3.mk"
-.include "../../devel/glib/buildlink3.mk"
-.include "../../print/gnome-print/buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
+.include "../../devel/GConf2/schemas.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/g-wrap/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
+.include "../../devel/libgsf/buildlink3.mk"
+.include "../../devel/libglade2/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.8.0
+.include "../../devel/pango/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
-.include "../../graphics/gdk-pixbuf/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../finance/libofx/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
-.include "../../math/guppi/buildlink3.mk"
-.include "../../net/ORBit/buildlink3.mk"
-.include "../../textproc/libxml/buildlink3.mk"
-.include "../../www/gtkhtml/buildlink3.mk"
-.include "../../x11/gnome-libs/buildlink3.mk"
-
+.include "../../lang/perl5/buildlink3.mk"
+BUILDLINK_API_DEPENDS.goffice+=	goffice>=0.1.2
+.include "../../misc/goffice/buildlink3.mk"
+.include "../../print/libgnomeprint/buildlink3.mk"
+.include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
+.include "../../www/gtkhtml38/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
