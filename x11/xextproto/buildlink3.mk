@@ -1,4 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/07/08 23:11:16 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2006/07/11 14:42:04 joerg Exp $
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${X11_TYPE} == "xorg"
+.include "../../mk/x11.buildlink3.mk"
+.else
 
 BUILDLINK_DEPMETHOD.xextproto?=	build
 
@@ -19,3 +25,5 @@ BUILDLINK_PKGSRCDIR.xextproto?=	../../x11/xextproto
 .endif	# XEXTPROTO_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+
+.endif
