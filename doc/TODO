@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5178 2006/07/11 13:01:31 wiz Exp $
+$NetBSD: TODO,v 1.5179 2006/07/11 17:35:49 gson Exp $
 
 Suggested new packages
 ======================
@@ -523,7 +523,6 @@ Suggested package updates
 	o galeon-2.0.1
 	o gamin-0.1.6
 	o gap-4r4p3
-	o garmin-utils-2.2
 	o gated-3.6
 	o gauche-0.8.7 [pkg/33675]
 	o gcalctool-5.8.17
