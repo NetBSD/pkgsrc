@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.697 2006/07/11 12:18:02 dmcmahill Exp $
+$NetBSD: CHANGES-2006,v 1.698 2006/07/11 13:01:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3336,3 +3336,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated graphics/gimp to 2.2.12 [adam 2006-07-11]
 	Updated pkgtools/pkg_chk to 1.76 [abs 2006-07-11]
 	Updated graphics/tgif to 4.1.45 [dmcmahill 2006-07-11]
+	Updated pkgtools/revbump to 1.8 [wiz 2006-07-11]
+	Moved finance/gnucash to finance/gnucash-gtk1 [wiz 2006-07-11]
+	Updated finance/gnucash to 2.0.0 [wiz 2006-07-11]
+	Removed finance/gnucash-devel [wiz 2006-07-11]
