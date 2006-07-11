@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5175 2006/07/10 22:26:27 taca Exp $
+$NetBSD: TODO,v 1.5176 2006/07/11 12:18:01 dmcmahill Exp $
 
 Suggested new packages
 ======================
@@ -1175,7 +1175,6 @@ Suggested package updates
 	o tds-1.6.2
 	o ted-2.17
 	o tfmxplay-1.1.6
-	o tgif-4.1.45
 	o tin-1.8.2
 	o tinyproxy-1.7.0
 	o tk83-8.3.5
