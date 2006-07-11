@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2006/05/15 16:01:03 tron Exp $
+$NetBSD: distinfo,v 1.5 2006/07/11 16:35:24 smb Exp $
 
 SHA1 (procps-3.2.6.tar.gz) = 91f44180eb50a94eb945c2598c0e849879e65893
 RMD160 (procps-3.2.6.tar.gz) = f0b09701ce48d9f6db1cbb209b02ba026ee58d09
 Size (procps-3.2.6.tar.gz) = 279084 bytes
 SHA1 (patch-aa) = 953dcd9c3287fec91ac7c585ad9dff4b7ec50cf7
+SHA1 (patch-ab) = 221f49cd4dd29f6ac0b647b8d03eed281b95a667

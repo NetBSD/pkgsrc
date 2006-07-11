@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1 2006/07/11 16:35:24 smb Exp $
+
+--- watch.c.orig	2006-07-09 20:58:47.000000000 -0400
++++ watch.c	2006-07-09 21:01:56.000000000 -0400
+@@ -142,6 +142,7 @@
+ 	    option_differences_cumulative = 0,
+ 	    option_help = 0, option_version = 0;
+ 	float interval = 2;
++	struct timespec tsinterval;
+ 	char *command;
+ 	int command_length = 0;	/* not including final \0 */
+ 
+@@ -201,6 +202,9 @@
+ 	if (optind >= argc)
+ 		do_usage();
+ 
++	tsinterval.tv_sec = interval;
++	tsinterval.tv_nsec = (interval - tsinterval.tv_sec) * 1000000000L;
++
+ 	command = strdup(argv[optind++]);
+ 	command_length = strlen(command);
+ 	for (; optind < argc; optind++) {
+@@ -315,7 +319,7 @@
+ 
+ 		first_screen = 0;
+ 		refresh();
+-		usleep(interval * 1000000);
++		nanosleep(&tsinterval, NULL);
+ 	}
+ 
+ 	endwin();
