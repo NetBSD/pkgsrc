@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2006/07/11 18:11:24 gson Exp $
+
+--- lib/gpsprint.c.orig	2004-08-19 05:45:29.000000000 +0300
++++ lib/gpsprint.c
+@@ -49,7 +49,7 @@ get_strings(const u_char *buf, int bufsi
+ 		strings[ix] = malloc(STRING_MAX);
+ 		if (strings[ix] != NULL) {
+ 			if (off > 0 && bufsiz > off)
+-				off += strlcpy(strings[ix], &buf[off],
++				off += strlcpy(strings[ix], (char *) &buf[off],
+ 					       STRING_MAX) + 1;
+ 			else
+ 				*strings[ix] = 0;
+@@ -70,7 +70,7 @@ get_string(const u_char *buf, int bufsiz
+ 	if (off != 0 && bufsiz > off) {
+ 		str = malloc(len + 1);
+ 		if (str != NULL)
+-			strlcpy(str, &buf[off], len + 1);
++			strlcpy(str, (char *) &buf[off], len + 1);
+ 	}
+ 	return str;
+ }
