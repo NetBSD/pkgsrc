@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5180 2006/07/11 17:37:33 salo Exp $
+$NetBSD: TODO,v 1.5181 2006/07/11 17:39:20 salo Exp $
 
 Suggested new packages
 ======================
@@ -648,7 +648,6 @@ Suggested package updates
 	o ispell-russian-0.99f8
 	o ispell-slovak-0.3.0
 	o ispman-1.2
-	o ja-trac-0.9.6.1 [pkg/33942]
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
