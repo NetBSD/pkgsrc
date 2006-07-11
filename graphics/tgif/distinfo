@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.9 2005/02/24 08:45:13 agc Exp $
+$NetBSD: distinfo,v 1.10 2006/07/11 12:12:41 dmcmahill Exp $
 
-SHA1 (tgif-4.1.44.tar.gz) = 9213981dfd45c34ee17723c8e8e970ecee708290
-RMD160 (tgif-4.1.44.tar.gz) = 4335ffe6627c6e26e59f20de59e7d4ee46f108a0
-Size (tgif-4.1.44.tar.gz) = 1877564 bytes
-SHA1 (patch-aa) = c240d7c0a2791fd72da187494e5999f835381488
+SHA1 (tgif-4.1.45.tar.gz) = 795f7979c6ac271ed065238dcc55e4aaa57de76e
+RMD160 (tgif-4.1.45.tar.gz) = d6f2f89b66979cd4a557958d79a431752f9846a5
+Size (tgif-4.1.45.tar.gz) = 2221556 bytes
