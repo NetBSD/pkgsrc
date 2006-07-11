@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.52 2006/07/11 17:29:20 jlam Exp $
+# $NetBSD: bootstrap,v 1.53 2006/07/11 18:04:08 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -714,6 +714,8 @@ run_cmd "(cd $wrkdir/bmake && env CPPFLAGS='$CPPFLAGS -I../../libnbcompat' LDFLA
 run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 $wrkdir/bmake/$opsys/bmake $prefix/bin/bmake"
 #run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 644 $wrkdir/bmake/$opsys/bmake.1 $prefix/man/man1/bmake.1"
 
+bmake=$prefix/bin/bmake
+
 if [ -z "$fetch_cmd" ]; then
 	# bootstrap tnftp
 	fetch_cmd="$prefix/bin/ftp"
@@ -724,7 +726,7 @@ if [ -z "$fetch_cmd" ]; then
 	esac
 	echo_msg "Installing tnftp"
 	copy_src ../net/tnftp/files tnftp
-	run_cmd "(cd $wrkdir/tnftp; env $BSTRAP_ENV $tnftpxenv $shprog ./configure --prefix=$prefix --sysconfdir=$sysconfdir && make && (cd src && make install))"
+	run_cmd "(cd $wrkdir/tnftp; env $BSTRAP_ENV $tnftpxenv $shprog ./configure --prefix=$prefix --sysconfdir=$sysconfdir && $bmake && (cd src && $bmake install))"
 fi
 
 pkg_install_args="$pkg_install_args --with-ftp=$fetch_cmd"
@@ -736,7 +738,7 @@ echo "FETCH_CMD=			$fetch_cmd" >> ${MKCONF_EXAMPLE}
 # bootstrap digest
 echo_msg "Installing digest"
 copy_src ../pkgtools/digest/files digest
-run_cmd "(cd $wrkdir/digest; env $BSTRAP_ENV $digestxenv $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir && make && make install)"
+run_cmd "(cd $wrkdir/digest; env $BSTRAP_ENV $digestxenv $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir && $bmake && $bmake install)"
 
 # create the digest package's meta files
 digestversion=digest-`$awkprog -F\' '/^PACKAGE_VERSION=/ {print $2}' $wrkdir/digest/configure`
@@ -750,7 +752,7 @@ env DIGESTPROG=$prefix/bin/digest PKG_DIGEST=md5 PKG_DBDIR=$pkgdbdir \
 case "$need_pax" in
 yes)	echo_msg "Installing pax"
 	copy_src ../archivers/pax/files pax
-	run_cmd "(cd $wrkdir/pax; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir && $prefix/bin/bmake && $prefix/bin/bmake install)"
+	run_cmd "(cd $wrkdir/pax; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir && $bmake && $bmake install)"
 	echo "TOOLS_PLATFORM.pax?=		$prefix/bin/pax" >> ${MKCONF_EXAMPLE}
 	echo "TOOLS_PLATFORM.tar?=		$prefix/bin/pax" >> ${MKCONF_EXAMPLE}
 	pkg_install_args="$pkg_install_args --with-pax=$prefix/bin/pax --with-tar=$prefix/bin/tar"
@@ -764,7 +766,7 @@ esac
 case "$need_mtree" in
 yes)	echo_msg "Installing mtree"
 	copy_src ../pkgtools/mtree/files mtree
-	run_cmd "(cd $wrkdir/mtree; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir && $prefix/bin/bmake && $prefix/bin/bmake install)"
+	run_cmd "(cd $wrkdir/mtree; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir && $bmake && $bmake install)"
 	echo "TOOLS_PLATFORM.mtree?=		$prefix/sbin/mtree" >> ${MKCONF_EXAMPLE}
 	pkg_install_args="$pkg_install_args --with-mtree=$prefix/sbin/mtree"
 	;;
@@ -776,7 +778,7 @@ esac
 case "$need_sed" in
 yes)	echo_msg "Installing sed"
 	copy_src ../textproc/nbsed/files sed
-	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir --program-transform-name='s,sed,nbsed,' && make && make install)"
+	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir --program-transform-name='s,sed,nbsed,' && $bmake && $bmake install)"
 	echo "TOOLS_PLATFORM.sed?=		$prefix/bin/nbsed" >> ${MKCONF_EXAMPLE}
 	BSTRAP_ENV="SED=\"$prefix/bin/nbsed\" $BSTRAP_ENV"
 	;;
@@ -789,7 +791,7 @@ pkg_install_mandir="$prefix/man"
 if [ "$prefix" = "/usr" ]; then
 	pkg_install_mandir="$prefix/share/man"
 fi
-run_cmd "(cd $wrkdir/pkg_install; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat -L../../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir --with-pkgdbdir=$pkgdbdir --mandir=$pkg_install_mandir $pkg_install_args && $prefix/bin/bmake && $prefix/bin/bmake install)"
+run_cmd "(cd $wrkdir/pkg_install; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat -L../../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir --with-pkgdbdir=$pkgdbdir --mandir=$pkg_install_mandir $pkg_install_args && $bmake && $bmake install)"
 
 # all's ready, install the man page
 echo_msg "Installing packages(7) man page"
