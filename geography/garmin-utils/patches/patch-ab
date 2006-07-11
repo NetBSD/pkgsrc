@@ -1,16 +1,203 @@
-$NetBSD: patch-ab,v 1.2 2006/07/11 17:33:27 gson Exp $
+$NetBSD: patch-ab,v 1.3 2006/07/11 18:11:24 gson Exp $
 
 --- lib/gpsformat.c.orig	2004-08-19 05:45:29.000000000 +0300
 +++ lib/gpsformat.c
+@@ -34,11 +34,11 @@ scan_state(u_char *buf)
+ {
+ 	int state = START;
+ 	if (*buf == '[') {
+-		if (strncmp(buf, RTE_HDR, sizeof RTE_HDR - 1) == 0)
++		if (strncmp((char *) buf, RTE_HDR, sizeof RTE_HDR - 1) == 0)
+ 			state = ROUTES;
+-		else if (strncmp(buf, TRK_HDR, sizeof TRK_HDR - 1) == 0)
++		else if (strncmp((char *) buf, TRK_HDR, sizeof TRK_HDR - 1) == 0)
+ 			state = TRACKS;
+-		else if (strncmp(buf, WPT_HDR, sizeof WPT_HDR - 1) == 0)
++		else if (strncmp((char *) buf, WPT_HDR, sizeof WPT_HDR - 1) == 0)
+ 			state = WAYPOINTS;
+ 	}
+ 	return state;
+@@ -58,7 +58,7 @@ gps_buffer_new(void)
+  * convert len bytes of buf in hex representation to binary
+  */
+ static void
+-gps_get_info(char *info, char *buf, int len)
++gps_get_info(u_char *info, char *buf, int len)
+ {
+ 	int ix;
+ 	int val;
+@@ -132,8 +132,8 @@ build_list_entry(u_char *data, int data_
+  * the data buffer and an updated lenght
+  */
+ static u_char *
+-wpt_common(int *datalen, int state, char *name, double lat, double lon,
+-	   char *cmnt)
++wpt_common(int *datalen, int state, u_char *name, double lat, double lon,
++	   u_char *cmnt)
+ {
+ 	u_char *data;
+ 	int len;
 @@ -147,7 +147,7 @@ wpt_common(int *datalen, int state, char
  
  	/* byte 1-6: waypoint name */
  	for (ix = 0; ix < 6; ix += 1) {
 -		data[len++] = toupper(name[ix]);
-+		data[len++] = toupper((unsigned char)(name[ix]));
++		data[len++] = toupper((unsigned char)name[ix]);
  	}
  
  	/* byte 7-10: latitude */
+@@ -173,7 +173,7 @@ wpt_common(int *datalen, int state, char
+ }
+ 
+ static struct gps_list_entry *
+-d100_wpt(int state, char *name, double lat, double lon, char *cmnt)
++d100_wpt(int state, u_char *name, double lat, double lon, u_char *cmnt)
+ {
+ 	u_char *data;
+ 	int len;
+@@ -183,7 +183,7 @@ d100_wpt(int state, char *name, double l
+ }
+ 
+ static struct gps_list_entry *
+-d101_wpt(int state, char *name, double lat, double lon, char *cmnt, int sym)
++d101_wpt(int state, u_char *name, double lat, double lon, u_char *cmnt, int sym)
+ {
+ 	u_char *data;
+ 	int len;
+@@ -203,7 +203,7 @@ d101_wpt(int state, char *name, double l
+ }
+ 
+ static struct gps_list_entry *
+-d102_wpt(int state, char *name, double lat, double lon, char *cmnt, int sym)
++d102_wpt(int state, u_char *name, double lat, double lon, u_char *cmnt, int sym)
+ {
+ 	u_char *data;
+ 	int len;
+@@ -224,7 +224,7 @@ d102_wpt(int state, char *name, double l
+ }
+ 
+ static struct gps_list_entry *
+-d103_wpt(int state, char *name, double lat, double lon, char *cmnt, int sym,
++d103_wpt(int state, u_char *name, double lat, double lon, u_char *cmnt, int sym,
+ 	 int disp)
+ {
+ 	u_char *data;
+@@ -242,7 +242,7 @@ d103_wpt(int state, char *name, double l
+ }
+ 
+ static struct gps_list_entry *
+-d104_wpt(int state, char *name, double lat, double lon, char *cmnt, int sym,
++d104_wpt(int state, u_char *name, double lat, double lon, u_char *cmnt, int sym,
+ 	 int disp)
+ {
+ 	u_char *data;
+@@ -261,7 +261,7 @@ d104_wpt(int state, char *name, double l
+ }
+ 
+ static struct gps_list_entry *
+-d105_wpt(int state, double lat, double lon, char *cmnt, int sym)
++d105_wpt(int state, double lat, double lon, u_char *cmnt, int sym)
+ {
+ 	u_char *data;
+ 	int len;
+@@ -292,7 +292,7 @@ d105_wpt(int state, double lat, double l
+ }
+ 
+ static struct gps_list_entry *
+-d106_wpt(int state, double lat, double lon, char *cmnt, int sym)
++d106_wpt(int state, double lat, double lon, u_char *cmnt, int sym)
+ {
+ 	u_char *data;
+ 	int len;
+@@ -327,7 +327,7 @@ d106_wpt(int state, double lat, double l
+ }
+ 
+ static struct gps_list_entry *
+-d107_wpt(int state, char *name, double lat, double lon, char *cmnt, int sym,
++d107_wpt(int state, u_char *name, double lat, double lon, u_char *cmnt, int sym,
+ 	 int disp)
+ {
+ 	u_char *data;
+@@ -354,8 +354,8 @@ d107_wpt(int state, char *name, double l
+ }
+ 
+ static struct gps_list_entry *
+-d108_wpt(int state, char *name, double lat, double lon, float alt, 
+-		char *cmnt, int sym, int disp, char *info)
++d108_wpt(int state, u_char *name, double lat, double lon, float alt, 
++		u_char *cmnt, int sym, int disp, u_char *info)
+ {
+ 	u_char *data;
+ 	int len;
+@@ -418,13 +418,13 @@ d108_wpt(int state, char *name, double l
+ 	data[len++] = ' ';
+ 
+ 	/* byte 49-99: ident (max 51 characters) */
+-	tlen = strlcpy(&data[len], name, GPS_STRING_MAX);
++	tlen = strlcpy((char *) &data[len], (char *) name, GPS_STRING_MAX);
+ 	if (++tlen > GPS_STRING_MAX)
+ 		tlen = GPS_STRING_MAX;
+ 	len += tlen;
+ 
+ 	/* comment follows name (max 51 characters) */
+-	tlen = strlcpy(&data[len], cmnt, GPS_STRING_MAX);
++	tlen = strlcpy((char *) &data[len], (char *) cmnt, GPS_STRING_MAX);
+ 	if (++tlen > GPS_STRING_MAX)
+ 		tlen = GPS_STRING_MAX;
+ 	len += tlen;
+@@ -438,8 +438,8 @@ d108_wpt(int state, char *name, double l
+ }
+ 
+ static struct gps_list_entry *
+-d109_wpt(int state, char *name, double lat, double lon, float alt,
+-		char *cmnt, int sym, int disp, char *info)
++d109_wpt(int state, u_char *name, double lat, double lon, float alt,
++		u_char *cmnt, int sym, int disp, u_char *info)
+ {
+ 	u_char *data;
+ 	int len;
+@@ -508,13 +508,13 @@ d109_wpt(int state, char *name, double l
+ 	data[len++] = (u_char) 0xff;
+ 
+ 	/* byte 53-103: ident (max GPS_STRING_MAX characters) */
+-	tlen = strlcpy(&data[len], name, GPS_STRING_MAX);
++	tlen = strlcpy((char *) &data[len], (char *) name, GPS_STRING_MAX);
+ 	if (++tlen > GPS_STRING_MAX)
+ 		tlen = GPS_STRING_MAX;
+ 	len += tlen;
+ 
+ 	/* comment follows name (max 51 characters) */
+-	tlen = strlcpy(&data[len], cmnt, GPS_STRING_MAX);
++	tlen = strlcpy((char *) &data[len], (char *) cmnt, GPS_STRING_MAX);
+ 	if (++tlen > GPS_STRING_MAX)
+ 		tlen = GPS_STRING_MAX;
+ 	len += tlen;
+@@ -545,9 +545,9 @@ waypoints(gps_handle gps, u_char *buf, i
+ 	int sym;			/* symbol */
+ 	int disp;			/* symbol display mode */
+ 	float alt;			/* altitude */
+-	char name[GPS_STRING_MAX + 1];	/* waypoint name */
+-	char cmnt[GPS_STRING_MAX + 1];	/* comment */
+-	char data[GPS_STRING_MAX + 1];	/* waypoint class and subclass */
++	u_char name[GPS_STRING_MAX + 1]; /* waypoint name */
++	u_char cmnt[GPS_STRING_MAX + 1]; /* comment */
++	u_char data[GPS_STRING_MAX + 1]; /* waypoint class and subclass */
+ 
+ 	char *beg;
+ 	char *end;
+@@ -562,10 +562,10 @@ waypoints(gps_handle gps, u_char *buf, i
+ 	data[0] = 0;
+ 
+ 	/* Latitude and longitude */
+-	sscanf(buf, "%lf %lf", &lat, &lon);
++	sscanf((char *) buf, "%lf %lf", &lat, &lon);
+ 
+ 	/* key:value pairs */
+-	for (beg = strchr(buf, ':'); beg; beg = end) {
++	for (beg = strchr((char *) buf, ':'); beg; beg = end) {
+ 		end = strchr(beg + 1, ':');
+ 		/* len includes space for null */
+ 		if (end == NULL)
 @@ -574,7 +574,7 @@ waypoints(gps_handle gps, u_char *buf, i
  			len = end - beg - 2;
  		if (len > GPS_STRING_MAX)
@@ -20,3 +207,132 @@ $NetBSD: patch-ab,v 1.2 2006/07/11 17:33:27 gson Exp $
  		case 'A':
  			sscanf(&beg[1], "%f", &alt);
  			break;
+@@ -591,10 +591,10 @@ waypoints(gps_handle gps, u_char *buf, i
+ 			sscanf(&beg[1], "%d", &disp);
+ 			break;
+ 		case 'I':
+-			strlcpy(name, &beg[1], len);
++			strlcpy((char *) name, &beg[1], len);
+ 			break;
+ 		case 'C':
+-			strlcpy(cmnt, &beg[1], len);
++			strlcpy((char *) cmnt, &beg[1], len);
+ 			break;
+ 		case 'L':
+ 			/* route link code */
+@@ -676,7 +676,7 @@ d200_route(int num)
+ }
+ 
+ static struct gps_list_entry *
+-d201_route(int num, char *cmnt)
++d201_route(int num, u_char *cmnt)
+ {
+ 	u_char *data;
+ 	int len;
+@@ -693,7 +693,7 @@ d201_route(int num, char *cmnt)
+ }
+ 
+ static struct gps_list_entry *
+-d202_route(char *cmnt)
++d202_route(u_char *cmnt)
+ {
+ 	u_char *data;
+ 	int len;
+@@ -703,7 +703,7 @@ d202_route(char *cmnt)
+ 	len = 0;
+ 
+ 	data[len++] = p_rte_hdr;
+-	tlen = strlcpy(&data[len], cmnt, GPS_STRING_MAX);
++	tlen = strlcpy((char *) &data[len], (char *) cmnt, GPS_STRING_MAX);
+ 	if (++tlen > GPS_STRING_MAX)
+ 		tlen = GPS_STRING_MAX;
+ 	len += tlen;
+@@ -724,12 +724,12 @@ routes(gps_handle gps, u_char *buf)
+ 	char *p;
+ 	int rte;
+ 	int num;
+-	char cmnt[GPS_STRING_MAX + 1];
++	u_char cmnt[GPS_STRING_MAX + 1];
+ 
+-	sscanf(buf, "**%d", &num);
+-	p = strchr(buf, ' ');
++	sscanf((char *) buf, "**%d", &num);
++	p = strchr((char *) buf, ' ');
+ 	if (p)
+-		strlcpy(cmnt, p + 1, GPS_STRING_MAX);
++		strlcpy((char *) cmnt, p + 1, GPS_STRING_MAX);
+ 	else
+ 		cmnt[GPS_STRING_MAX] = 0;
+ 	gps_printf(gps, 3, "route %d %s\n", num, cmnt);
+@@ -788,13 +788,13 @@ track_hdr(gps_handle gps, u_char *buf)
+ 	u_char *data;
+ 	int len;
+ 	int tlen;
+-	char name[GPS_STRING_MAX + 1];	/* track name */
++	u_char name[GPS_STRING_MAX + 1];	/* track name */
+ 
+ 	/* skip any leading whitespace and extract the name */
+ 	for (len = 0; buf[len]; len += 1)
+ 		if (! isspace(buf[len]))
+ 			break;
+-	strlcpy(name, &buf[len], GPS_STRING_MAX);
++	strlcpy((char *) name, (char *) &buf[len], GPS_STRING_MAX);
+ 
+ 	data = gps_buffer_new();
+ 	len = 0;
+@@ -808,7 +808,7 @@ track_hdr(gps_handle gps, u_char *buf)
+ 	data[len++] = 0xff;
+ 
+ 	/* byte 3-n: ident (max GPS_STRING_MAX characters) */
+-	tlen = strlcpy(&data[len], name, GPS_STRING_MAX);
++	tlen = strlcpy((char *) &data[len], (char *) name, GPS_STRING_MAX);
+ 	if (++tlen > GPS_STRING_MAX)
+ 		tlen = GPS_STRING_MAX;
+ 	len += tlen;
+@@ -834,12 +834,12 @@ tracks(gps_handle gps, u_char *buf)
+ 		buf += 19;
+ 
+ 	/* Latitude and longitude */
+-	sscanf(buf, "%lf %lf", &lat, &lon);
++	sscanf((char *) buf, "%lf %lf", &lat, &lon);
+ 
+ 	/* look for start flag */
+-	p = strrchr(buf, ' ');
++	p = strrchr((char *) buf, ' ');
+ 	if (p != NULL)
+-		start = strcmp(p+1, "start") == 0;
++		start = strcmp((char *) p+1, "start") == 0;
+ 	else
+ 		start = 0;
+ 
+@@ -951,10 +951,10 @@ gps_format(gps_handle gps, FILE *stream)
+ 	int rte;
+ 	char *p;
+ 
+-	while (fgets(buf, sizeof buf, stream)) {
++	while (fgets((char *) buf, sizeof buf, stream)) {
+ 
+ 		/* kill any trailing newline */
+-		if ((p = strrchr(buf, '\n')) != NULL)
++		if ((p = strrchr((char *) buf, '\n')) != NULL)
+ 			*p = 0;
+ 
+ 		/* skip any leading whitespace */
+@@ -967,7 +967,7 @@ gps_format(gps_handle gps, FILE *stream)
+ 			continue;
+ 
+ 		/* check for list terminator */
+-		if (buf[ix] == '[' && strncmp(&buf[ix], "[end", 4) == 0) {
++		if (buf[ix] == '[' && strncmp((char *) &buf[ix], "[end", 4) == 0) {
+ 			gps_printf(gps, 3, "...end\n");
+ 			state = START;
+ 		}
+@@ -1003,7 +1003,7 @@ gps_format(gps_handle gps, FILE *stream)
+ 			}
+ 			break;
+ 		case TRACKS:
+-			if (strncmp(&buf[ix], "Track:", 6) == 0) {
++			if (strncmp((char *) &buf[ix], "Track:", 6) == 0) {
+ 				if (gps_get_trk_hdr_type(gps) != 0)
+ 					entry = track_hdr(gps, &buf[ix + 6]);
+ 			} else
