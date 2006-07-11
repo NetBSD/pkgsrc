@@ -1,4 +1,4 @@
-# $NetBSD: shell,v 1.1 2006/05/21 23:50:15 jlam Exp $
+# $NetBSD: shell,v 1.2 2006/07/11 13:28:32 wiz Exp $
 #
 # Generate a +SHELL script that handles shell registration for the package.
 #
@@ -85,7 +85,7 @@ ADD)
 			yes)	;;
 			*)	printed_header=yes
 				${ECHO} "==========================================================================="
-				${ECHO} "Adding shells from ${PKGNAME} to $shelldb:"
+				${ECHO} "Adding ${PKGNAME} shells to $shelldb:"
 				${ECHO} ""
 				;;
 			esac
@@ -126,7 +126,7 @@ REMOVE)
 			yes)	;;
 			*)	printed_header=yes
 				${ECHO} "==========================================================================="
-				${ECHO} "Removing shells from ${PKGNAME} to $shelldb:"
+				${ECHO} "Removing ${PKGNAME} shells from $shelldb:"
 				${ECHO} ""
 				;;
 			esac
