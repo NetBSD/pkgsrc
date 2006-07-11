@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/04/28 18:14:06 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2006/07/11 00:57:43 joerg Exp $
 
 DISTNAME=	maildrop-2.0.2
 CATEGORIES=     security
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.courier-mta.org/maildrop/
 
 DEPENDS+=	courier-maildir>=0.53.1:../../mail/courier-maildir
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c c++
 
 PKG_SUPPORTED_OPTIONS=	authlib
