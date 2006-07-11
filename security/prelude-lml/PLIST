@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/05/22 14:01:54 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/07/11 09:41:33 shannonjr Exp $
 bin/prelude-lml
 include/prelude-lml/prelude-lml.h
 lib/prelude-lml/debug.la
@@ -57,5 +57,6 @@ share/examples/prelude-lml/ruleset/zywall.rules
 share/examples/prelude-lml/ruleset/zyxel.rules
 share/examples/rc.d/preludelml
 @dirrm share/examples/prelude-lml/ruleset
+@dirrm share/examples/prelude-lml
 @dirrm lib/prelude-lml
 @dirrm include/prelude-lml
