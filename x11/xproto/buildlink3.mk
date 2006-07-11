@@ -1,7 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/07/08 23:11:17 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2006/07/11 14:42:04 joerg Exp $
 #
 # This Makefile fragment is included by packages that use xproto.
 #
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${X11_TYPE} == "xorg"
+.include "../../mk/x11.buildlink3.mk"
+.else
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XPROTO_BUILDLINK3_MK:=	${XPROTO_BUILDLINK3_MK}+
@@ -21,3 +27,5 @@ BUILDLINK_DEPMETHOD.xproto?=		build
 .endif # XPROTO_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+
+.endif
