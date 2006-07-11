@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2006/03/04 21:30:20 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2006/07/11 14:39:29 drochner Exp $
 
 DISTNAME=	mDNSResponder-108
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://darwinsource.opendarwin.org/tarballs/apsl/
 
@@ -55,6 +56,11 @@ INSTALLATION_DIRS=	bin include lib sbin
 MAKE_ENV+=	EXTRA_LIBS=-Wl,-R${BUILDLINK_PREFIX.librfuncs:Q}/lib\ ${BUILDLINK_LDFLAGS.librfuncs:Q}
 .else
 MAKE_ENV+=	EXTRA_LIBS=
+.endif
+
+BUILD_DEFS+=	USE_INET6
+.if defined(USE_INET6) && ${USE_INET6} == "YES"
+MAKE_ENV+=	HAVE_IPV6=1
 .endif
 
 do-install:
