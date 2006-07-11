@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.696 2006/07/11 02:02:36 jnemeth Exp $
+$NetBSD: CHANGES-2006,v 1.697 2006/07/11 12:18:02 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3335,3 +3335,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated editors/abiword-plugins to 2.4.5 [adam 2006-07-10]
 	Updated graphics/gimp to 2.2.12 [adam 2006-07-11]
 	Updated pkgtools/pkg_chk to 1.76 [abs 2006-07-11]
+	Updated graphics/tgif to 4.1.45 [dmcmahill 2006-07-11]
