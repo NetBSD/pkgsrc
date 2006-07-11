@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.51 2006/04/14 20:37:08 schwarz Exp $
+# $NetBSD: bootstrap,v 1.52 2006/07/11 17:29:20 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -169,12 +169,12 @@ opsys_finish()
 	case "$opsys" in
 	IRIX)
 		if [ ! -z "$imakeopts" ]; then
-			echo "IMAKEOPTS+=$imakeopts" >> ${MKCONF_EXAMPLE}
+			echo "IMAKEOPTS+=		$imakeopts" >> ${MKCONF_EXAMPLE}
 		fi
 		if [ `uname -r` -lt 6 ]; then
 		        echo_msg "Installing fake ldd script"
         		run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 files/fakeldd $prefix/sbin"
-			echo "LDD=$prefix/sbin/fakeldd" >> ${MKCONF_EXAMPLE}
+			echo "LDD=			$prefix/sbin/fakeldd" >> ${MKCONF_EXAMPLE}
 		fi
 		;;
 	OSF1)
@@ -624,29 +624,29 @@ echo "" >> ${MKCONF_EXAMPLE}
 
 # IRIX64 needs to be set to IRIX, for example
 if [ "$set_opsys" = "yes" ]; then
-	echo "OPSYS=$opsys" >> ${MKCONF_EXAMPLE}
+	echo "OPSYS=			$opsys" >> ${MKCONF_EXAMPLE}
 fi
 
 if [ ! -z "$abi" ]; then
-	echo "ABI=$abi" >> ${MKCONF_EXAMPLE}
+	echo "ABI=			$abi" >> ${MKCONF_EXAMPLE}
 fi
 if [ ! -z "$compiler" ]; then
-	echo "PKGSRC_COMPILER=$compiler" >> ${MKCONF_EXAMPLE}
+	echo "PKGSRC_COMPILER=	$compiler" >> ${MKCONF_EXAMPLE}
 fi
-			
 
 # enable unprivileged builds if not root
 if [ "$ignoreusercheck" = "yes" ]; then
-	echo "UNPRIVILEGED=yes" >> ${MKCONF_EXAMPLE}
+	echo "UNPRIVILEGED=	yes" >> ${MKCONF_EXAMPLE}
 fi
 
 # save environment in example mk.conf
-echo "PKG_DBDIR=$pkgdbdir" >> ${MKCONF_EXAMPLE}
-echo "LOCALBASE=$prefix" >> ${MKCONF_EXAMPLE}
-echo "VARBASE=$varbase" >> ${MKCONF_EXAMPLE}
+echo "PKG_DBDIR=		$pkgdbdir" >> ${MKCONF_EXAMPLE}
+echo "LOCALBASE=		$prefix" >> ${MKCONF_EXAMPLE}
+echo "VARBASE=		$varbase" >> ${MKCONF_EXAMPLE}
 if [ "${sysconfdir}" != "${prefix}/etc" ]; then
-	echo "PKG_SYSCONFBASE=$sysconfdir" >> ${MKCONF_EXAMPLE}
+	echo "PKG_SYSCONFBASE=	$sysconfdir" >> ${MKCONF_EXAMPLE}
 fi
+echo "" >> ${MKCONF_EXAMPLE}
 
 # create directories
 mkdir_p $prefix $pkgdbdir $prefix/sbin
@@ -693,17 +693,19 @@ if [ "$need_bsd_install" = "yes" ]; then
 	echo_msg "Installing BSD compatible install script"
 	run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 $wrkdir/install-sh $prefix/bin/install-sh"
 	BSTRAP_ENV="INSTALL='$prefix/bin/install-sh -c' $BSTRAP_ENV"
-	echo "INSTALL=$prefix/bin/install-sh" >> ${MKCONF_EXAMPLE}
+	echo "TOOLS_PLATFORM.install?=	$prefix/bin/install-sh" >> ${MKCONF_EXAMPLE}
 fi
 
 if [ "$need_fixed_strip" = "yes" ] ; then
 	echo_msg "Installing fixed strip script"
 	run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 files/strip-sh $prefix/bin/strip"
+	echo "TOOLS_PLATFORM.strip?=		$prefix/bin/strip" >> ${MKCONF_EXAMPLE}
 fi
 
 if [ "$need_mkdir" = "yes" ]; then
 	echo_msg "Installing fixed mkdir script \"mkdir-sh\""
 	run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 files/mkdir-sh $prefix/sbin/mkdir-sh"
+	echo "TOOLS_PLATFORM.mkdir?=		$prefix/sbin/mkdir-sh -p" >> ${MKCONF_EXAMPLE}
 fi
 
 echo_msg "Installing bmake"
@@ -729,7 +731,7 @@ pkg_install_args="$pkg_install_args --with-ftp=$fetch_cmd"
 
 FETCH_CMD="$fetch_cmd"
 export FETCH_CMD
-echo "FETCH_CMD=$fetch_cmd" >> ${MKCONF_EXAMPLE}
+echo "FETCH_CMD=			$fetch_cmd" >> ${MKCONF_EXAMPLE}
 
 # bootstrap digest
 echo_msg "Installing digest"
@@ -749,7 +751,8 @@ case "$need_pax" in
 yes)	echo_msg "Installing pax"
 	copy_src ../archivers/pax/files pax
 	run_cmd "(cd $wrkdir/pax; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir && $prefix/bin/bmake && $prefix/bin/bmake install)"
-	echo "PAX=$prefix/bin/pax" >> ${MKCONF_EXAMPLE}
+	echo "TOOLS_PLATFORM.pax?=		$prefix/bin/pax" >> ${MKCONF_EXAMPLE}
+	echo "TOOLS_PLATFORM.tar?=		$prefix/bin/pax" >> ${MKCONF_EXAMPLE}
 	pkg_install_args="$pkg_install_args --with-pax=$prefix/bin/pax --with-tar=$prefix/bin/tar"
 	;;
 *)
@@ -762,6 +765,7 @@ case "$need_mtree" in
 yes)	echo_msg "Installing mtree"
 	copy_src ../pkgtools/mtree/files mtree
 	run_cmd "(cd $wrkdir/mtree; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir && $prefix/bin/bmake && $prefix/bin/bmake install)"
+	echo "TOOLS_PLATFORM.mtree?=		$prefix/sbin/mtree" >> ${MKCONF_EXAMPLE}
 	pkg_install_args="$pkg_install_args --with-mtree=$prefix/sbin/mtree"
 	;;
 *)	pkg_install_args="$pkg_install_args --with-mtree=$mtreeprog"
@@ -773,7 +777,7 @@ case "$need_sed" in
 yes)	echo_msg "Installing sed"
 	copy_src ../textproc/nbsed/files sed
 	run_cmd "(cd $wrkdir/sed; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir --program-transform-name='s,sed,nbsed,' && make && make install)"
-	echo "SED=$prefix/bin/nbsed" >> ${MKCONF_EXAMPLE}
+	echo "TOOLS_PLATFORM.sed?=		$prefix/bin/nbsed" >> ${MKCONF_EXAMPLE}
 	BSTRAP_ENV="SED=\"$prefix/bin/nbsed\" $BSTRAP_ENV"
 	;;
 esac
