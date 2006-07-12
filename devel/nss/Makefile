@@ -1,23 +1,14 @@
-# $NetBSD: Makefile,v 1.15 2006/07/12 15:39:50 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2006/07/12 16:30:03 rillig Exp $
 
-DISTNAME=		nss-3.9.2
-PKGREVISION=		4
+DISTNAME=		nss-3.11
 CATEGORIES=		security
-MASTER_SITES=		ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_9_2_RTM/src/
+MASTER_SITES=		ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_11_RTM/src/
 
 MAINTAINER=		mjl@luckie.org.nz
 HOMEPAGE=		http://www.mozilla.org/projects/security/pki/nss/
 COMMENT=		Libraries to support development of security-enabled applications
 
 BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
-
-# NSS will build and run on other platforms when MAINTAINER knows what
-# magic Makefile glue is required
-ONLY_FOR_PLATFORM+=	NetBSD-*-* FreeBSD-*-* Linux-*-* DragonFly-*-*
-# Solaris has missing symbols when linking.  It looks like some of those problem
-# have been addressed in the nss source tree so this should be enabled after
-# the next update.
-#SunOS-*-*
 
 BUILD_DIRS=		mozilla/security/nss
 
@@ -77,6 +68,9 @@ do-install:
 	      "${COMPILER_RPATH_FLAG}${PREFIX}/lib/nss" \
 	      "-lnss3 -lsmime3 -lssl3 -lsoftokn3 "${BUILDLINK_LIBS.pthread:Q}; \
 	} >${PREFIX}/lib/pkgconfig/nss.pc
+
+post-install:
+	cd ${PREFIX}/include/nss && ${CHMOD} ${SHAREMODE} nss/*.h dbm/*.h nss/*.api
 
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.4.1nb2
 
