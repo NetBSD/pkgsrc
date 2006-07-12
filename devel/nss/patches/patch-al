@@ -1,10 +1,10 @@
-$NetBSD: patch-al,v 1.2 2006/07/04 22:27:43 rillig Exp $
+$NetBSD: patch-al,v 1.3 2006/07/12 15:38:29 rillig Exp $
 
 Since GNU Make 3.81, the backslashes are preserved in the shell commands
 and need to be filtered out explicitly.
 
---- ../coreconf/rules.mk.orig	2004-03-23 01:56:47.000000000 +0100
-+++ ../coreconf/rules.mk	2006-06-24 10:20:21.000000000 +0200
+--- mozilla/security/coreconf/rules.mk.orig	2004-03-23 01:56:47.000000000 +0100
++++ mozilla/security/coreconf/rules.mk	2006-06-24 10:20:21.000000000 +0200
 @@ -882,7 +882,7 @@
  ifneq (,$(filter-out OpenVMS OS2 WIN%,$(OS_TARGET)))
  # Can't use sed because of its 4000-char line length limit, so resort to perl

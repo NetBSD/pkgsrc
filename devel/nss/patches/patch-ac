@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2006/06/25 14:52:44 wiz Exp $
+$NetBSD: patch-ac,v 1.3 2006/07/12 15:38:29 rillig Exp $
 
---- lib/fortcrypt/swfort/pkcs11/Makefile.orig	2004-03-23 02:02:04.000000000 +0000
-+++ lib/fortcrypt/swfort/pkcs11/Makefile
+--- mozilla/security/nss/lib/fortcrypt/swfort/pkcs11/Makefile.orig	2004-03-23 02:02:04.000000000 +0000
++++ mozilla/security/nss/lib/fortcrypt/swfort/pkcs11/Makefile
 @@ -94,8 +94,8 @@ EXTRA_LIBS += \
  	$(DIST)/lib/$(LIB_PREFIX)softokn.$(LIB_SUFFIX) \
  	$(CRYPTO_LIB) \
