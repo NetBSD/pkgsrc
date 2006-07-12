@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.709 2006/07/12 17:47:34 heinz Exp $
+$NetBSD: CHANGES-2006,v 1.710 2006/07/12 17:53:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3360,3 +3360,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/p5-HTML-Tree to 3.20 [heinz 2006-07-12]
 	Updated devel/p5-Term-ReadLine to 1.16 [heinz 2006-07-12]
 	Added textproc/p5-Text-Reflow version 1.05 [heinz 2006-07-12]
+	Updated textproc/enchant to 1.2.6 [wiz 2006-07-12]
