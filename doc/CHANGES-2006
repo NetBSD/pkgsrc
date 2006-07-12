@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.708 2006/07/12 16:35:39 joerg Exp $
+$NetBSD: CHANGES-2006,v 1.709 2006/07/12 17:47:34 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3010,6 +3010,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/cvsd to 1.0.12 [wiz 2006-06-11]
 	Updated mail/evolution-data-server to 1.6.2 [wiz 2006-06-11]
 	Updated sysutils/dvd+rw-tools to 6.1 [wiz 2006-06-11]
+	Updated net/p5-IP-Country to 2.21 [heinz 2006-06-11]
 	Updated x11/xorg-imake to 6.9.0nb2 [joerg 2006-06-12]
 	Updated x11/xorg-libs to 6.9.0nb4 [joerg 2006-06-12]
 	Updated graphics/ImageMagick to 6.2.8.0 [adam 2006-06-12]
@@ -3353,3 +3354,9 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated devel/bzr to 0.8.2 [wiz 2006-07-12]
 	Updated devel/nss to 3.11 [rillig 2006-07-12]
 	Added databases/py-psycopg2 version 2.0.2 [joerg 2006-07-12]
+	Updated devel/p5-IO-stringy to 2.110 [heinz 2006-07-12]
+	Updated devel/p5-Date-Manip to 5.44 [heinz 2006-07-12]
+	Updated www/p5-CGI to 3.20 [heinz 2006-07-12]
+	Updated www/p5-HTML-Tree to 3.20 [heinz 2006-07-12]
+	Updated devel/p5-Term-ReadLine to 1.16 [heinz 2006-07-12]
+	Added textproc/p5-Text-Reflow version 1.05 [heinz 2006-07-12]
