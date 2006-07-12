@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2006/04/13 18:23:31 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2006/07/12 08:41:00 rillig Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
+PKGREVISION=	1
 COMMENT=	Version control system, base programs and libraries
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -38,7 +39,8 @@ post-build:
 
 post-install:
 	${INSTALL_DATA_DIR} ${SVNDOC}
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${SVNDOC}
+	cd ${WRKSRC} && ${INSTALL_DATA} INSTALL README ${SVNDOC}
+	cd ${WRKSRC}/doc/user && ${INSTALL_DATA} *.html *.txt ${SVNDOC}
 	${INSTALL_DATA_DIR} ${SVNEXAMPLES}/backup
 	${INSTALL_DATA_DIR} ${SVNEXAMPLES}/cgi
 	${INSTALL_DATA_DIR} ${SVNEXAMPLES}/hook-scripts
