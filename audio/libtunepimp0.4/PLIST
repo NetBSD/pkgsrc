@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/12 13:07:19 wiz Exp $
+bin/tp_tagger
+bin/trm
+include/tunepimp/context.h
+include/tunepimp/decode_plugin.h
+include/tunepimp/defs.h
+include/tunepimp/fileio.h
+include/tunepimp/metadata_plugin.h
+include/tunepimp/tp_c.h
+include/tunepimp/track.h
+include/tunepimp/tunepimp.h
+lib/libtunepimp.la
+lib/tunepimp/plugins/flac.tpp
+lib/tunepimp/plugins/mp3.tpp
+lib/tunepimp/plugins/mp4.tpp
+lib/tunepimp/plugins/mpc.tpp
+lib/tunepimp/plugins/vorbis.tpp
+lib/tunepimp/plugins/wav.tpp
+lib/tunepimp/plugins/wma.tpp
+@dirrm lib/tunepimp/plugins
+@dirrm lib/tunepimp
+@dirrm include/tunepimp
