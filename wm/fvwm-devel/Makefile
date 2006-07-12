@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/07/02 15:54:42 martti Exp $
+# $NetBSD: Makefile,v 1.13 2006/07/12 11:52:54 martti Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 #PKGREVISION=	1
@@ -18,6 +18,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	YES
+USE_TOOLS+=		perl:run
 
 PLIST_SUBST+=		FVWM_VER=${FVWM_VER:Q}
 
