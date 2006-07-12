@@ -12,3 +12,6 @@ hierarchy. TunePimp includes the following features:
 * Read and write metadata from the music files
 * Optionally rename files according to a user specified file mask
 * Optionally move files to a user specified directory hierarchy
+
+This package contains the older 0.4 release; the current version
+is in audio/libtunepimp.
