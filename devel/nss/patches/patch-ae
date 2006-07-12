@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.2 2005/08/12 20:11:26 reed Exp $
+$NetBSD: patch-ae,v 1.3 2006/07/12 15:38:29 rillig Exp $
 
---- cmd/platlibs.mk.orig	2004-06-18 23:13:45.000000000 -0700
-+++ cmd/platlibs.mk	2005-08-12 12:21:35.000000000 -0700
+--- mozilla/security/nss/cmd/platlibs.mk.orig	2004-06-18 23:13:45.000000000 -0700
++++ mozilla/security/nss/cmd/platlibs.mk	2005-08-12 12:21:35.000000000 -0700
 @@ -182,7 +182,7 @@
  # If GNU ld is used, we must use the -rpath-link option to tell
  # the linker where to find libsoftokn3.so, an implicit dependency

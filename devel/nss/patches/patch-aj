@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.1 2006/01/15 16:09:21 joerg Exp $
+$NetBSD: patch-aj,v 1.2 2006/07/12 15:38:29 rillig Exp $
 
---- ../../nsprpub/config/arch.mk.orig	2006-01-15 15:10:27.000000000 +0000
-+++ ../../nsprpub/config/arch.mk
+--- mozilla/nsprpub/config/arch.mk.orig	2006-01-15 15:10:27.000000000 +0000
++++ mozilla/nsprpub/config/arch.mk
 @@ -121,7 +121,7 @@ endif
  # Handle FreeBSD 2.2-STABLE and Linux 2.0.30-osfmach3
  #

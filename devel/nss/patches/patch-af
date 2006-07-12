@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.4 2006/06/25 15:25:35 wiz Exp $
+$NetBSD: patch-af,v 1.5 2006/07/12 15:38:29 rillig Exp $
 
 Fix gcc4 error:
 error: array type has incomplete element type
 
---- lib/pki1/oiddata.h.orig	2002-01-04 05:22:07.000000000 +0000
-+++ lib/pki1/oiddata.h
+--- mozilla/security/nss/lib/pki1/oiddata.h.orig	2002-01-04 05:22:07.000000000 +0000
++++ mozilla/security/nss/lib/pki1/oiddata.h
 @@ -43,6 +43,8 @@ static const char OIDDATA_CVS_ID[] = "@(
  #include "nsspki1t.h"
  #endif /* NSSPKI1T_H */
