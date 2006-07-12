@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2006/07/10 20:16:53 sketch Exp $
+# $NetBSD: Makefile,v 1.15 2006/07/12 11:56:05 rillig Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 SVR4_PKGNAME=		mysqs
+PKGREVISION=		1
 COMMENT=		MySQL 5, a free SQL database (server)
 
 CONFLICTS=		{mysql-server-[0-9]*,mysql3-server-[0-9]*}
@@ -33,6 +34,8 @@ MESSAGE_SUBST+=		MYSQL_DATADIR=${MYSQL_DATADIR} \
 			MYSQL_USER=${MYSQL_USER} MYSQL_GROUP=${MYSQL_GROUP}
 BUILD_DEFS+=		MYSQL_DATADIR
 BUILD_DIRS=		${WRKSRC} ${WRKSRC}/man
+
+REPLACE_PERL+=		mysql-test/mysql-test-run.pl
 
 .include "../../mk/bsd.prefs.mk"
 
