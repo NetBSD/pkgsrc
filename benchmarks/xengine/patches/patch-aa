@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2005/08/23 10:26:17 hira Exp $
+$NetBSD: patch-aa,v 1.5 2006/07/12 09:05:08 wiz Exp $
 
---- xengine.c.orig	2005-08-23 12:01:39.000000000 +0900
-+++ xengine.c	2005-08-23 12:10:23.000000000 +0900
-@@ -35,7 +35,7 @@
+--- xengine.c.orig	2006-07-12 11:01:36.000000000 +0200
++++ xengine.c
+@@ -35,7 +35,7 @@ XtTimerCallbackProc Cylcle();
  Widget          toplevel, base, rpm_info, engine;
  GC              gcPiston, gcShaft, gcCylinder, gcRoter, gcBack, gcDep, gcPre, gcEngine;
  Pixmap          enginePixmap;
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2005/08/23 10:26:17 hira Exp $
  
  String          colors[] = {"gray", "lightseagreen", "dimgrey", "forestgreen", "black", "red", "cyan", "firebrick"};
  
-@@ -180,13 +180,10 @@
+@@ -179,13 +179,10 @@ redraw_callback(w, event, params, nparam
  
  	Arg             args[10];
  
@@ -25,5 +25,5 @@ $NetBSD: patch-aa,v 1.4 2005/08/23 10:26:17 hira Exp $
 -	height = args[1].value;
 -
  	XFreePixmap(XtDisplay(engine), enginePixmap);
- 	enginePixmap = XCreatePixmap(XtDisplay(engine), XtWindow(engine), width, height, DefaultDepthOfScreen(XtScreen(engine)));
+ 	enginePixmap = XCreatePixmap(XtDisplay(engine), XtWindow(engine), width, height, DefaultDepth(XtDisplay(engine), 0));
  
