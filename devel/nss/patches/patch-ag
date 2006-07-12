@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.2 2006/07/12 15:38:29 rillig Exp $
+$NetBSD: patch-ag,v 1.3 2006/07/12 16:30:04 rillig Exp $
 
---- mozilla/security/nss/cmd/shlibsign/sign.sh.orig	Sun Feb  6 17:41:50 2005
-+++ mozilla/security/nss/cmd/shlibsign/sign.sh	Sun Feb  6 17:42:29 2005
-@@ -39,7 +39,7 @@
+--- mozilla/security/nss/cmd/shlibsign/sign.sh.orig	2005-11-16 03:17:36.000000000 +0100
++++ mozilla/security/nss/cmd/shlibsign/sign.sh	2006-07-12 17:51:33.000000000 +0200
+@@ -44,7 +44,7 @@ OpenVMS)
      export LIBPATH
-     SHLIB_PATH=${1}/lib:$SHLIB_PATH
+     SHLIB_PATH=${1}/lib:${4}:$SHLIB_PATH
      export SHLIB_PATH
--    LD_LIBRARY_PATH=${1}/lib:$LD_LIBRARY_PATH
-+    LD_LIBRARY_PATH=${1}/lib:$PREFIX/lib
+-    LD_LIBRARY_PATH=${1}/lib:${4}:$LD_LIBRARY_PATH
++    LD_LIBRARY_PATH=${1}/lib:${4}:$PREFIX/lib
      export LD_LIBRARY_PATH
-     DYLD_LIBRARY_PATH=${1}/lib:$DYLD_LIBRARY_PATH
+     DYLD_LIBRARY_PATH=${1}/lib:${4}:$DYLD_LIBRARY_PATH
      export DYLD_LIBRARY_PATH
