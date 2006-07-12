@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2006/07/12 13:28:08 wiz Exp $
+
+--- plugins/tta/Makefile.in.orig	2006-07-01 14:30:18.000000000 +0000
++++ plugins/tta/Makefile.in
+@@ -524,7 +524,7 @@ uninstall-am: uninstall-info-am uninstal
+ all:
+ 	mkdir -p $(top_srcdir)/examples/plugins
+ 	rm -f $(top_srcdir)/examples/plugins/tta.tpp
+-	ln -s ../../plugins/wv/.libs/tta.so $(top_srcdir)/examples/plugins/tta.tpp
++	ln -s ../../plugins/tta/.libs/tta.so $(top_srcdir)/examples/plugins/tta.tpp
+ 
+ install-exec-am:
+ 
