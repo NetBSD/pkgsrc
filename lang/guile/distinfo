@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.27 2006/02/10 19:09:13 minskim Exp $
+$NetBSD: distinfo,v 1.28 2006/07/12 20:11:39 wiz Exp $
 
-SHA1 (guile-1.6.7.tar.gz) = 00a82dc4c7c19f9b791e116a2baf83e7d0c0856d
-RMD160 (guile-1.6.7.tar.gz) = 63d45e8143834c641d4a4732cfbb34e8984f55dd
-Size (guile-1.6.7.tar.gz) = 3039294 bytes
+SHA1 (guile-1.6.8.tar.gz) = 5c244f730d7aaee32db4b0cc77b688f74a5caa71
+RMD160 (guile-1.6.8.tar.gz) = 9c2c6a6afe2adce458e30e97da782ae18ce75b5c
+Size (guile-1.6.8.tar.gz) = 3114052 bytes
 SHA1 (patch-aa) = 7c85a08bcba460cf75aa02cfe8008fe7d92ed0f5
-SHA1 (patch-ad) = a1e59d8569ddbd0ccfdc96423e377f39836e6f21
+SHA1 (patch-ad) = 047e8826f086f3d92e605abb44807e4e9c38d69f
 SHA1 (patch-ae) = 4aaadd1df36540117bef4128f607b6a1bbcaaf28
 SHA1 (patch-af) = 96b50d3cff86a7ba7a76551723192ad99a07b971
 SHA1 (patch-ag) = a4b5f490e9c9520120bcb2824004cb8bfa1027e1
 SHA1 (patch-ah) = e66596a5ecc5c2d4fd09833507499b4d02c7af8a
-SHA1 (patch-ai) = 3343ea669fa05c93a2af5a75cf9da5a04d068273
+SHA1 (patch-ai) = 73e4a95dc9e9ede4d423e3a73fc2b0ac4f4802e0
 SHA1 (patch-aj) = 2d55986fd8161bdc32c6e2ef7fe3d89310ab20cd
-SHA1 (patch-ak) = be1900854a398db3ccdb17ed918ae4f76266f66a
