@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.702 2006/07/12 02:32:00 simonb Exp $
+$NetBSD: CHANGES-2006,v 1.703 2006/07/12 13:29:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3344,3 +3344,7 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated www/trac to 0.9.6 [salo 2006-07-11]
 	Updated www/ja-trac to 0.9.6.1 [salo 2006-07-11]
 	Updated www/adzap to 20060424 [simonb 2006-07-12]
+	Added audio/libtunepimp0.4 version 0.4.2nb1 [wiz 2006-07-12]
+	Added audio/libofa version 0.9.3 [wiz 2006-07-12]
+	Updated audio/libtunepimp to 0.4.2nb1 [wiz 2006-07-12]
+	Updated pkgtools/createbuildlink to 3.13 [wiz 2006-07-12]
