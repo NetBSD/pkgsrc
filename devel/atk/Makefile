@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2006/06/12 20:43:20 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2006/07/12 13:47:10 wiz Exp $
 #
 
-DISTNAME=		atk-1.11.4
+DISTNAME=		atk-1.12.1
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atk/1.11/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/atk/1.12/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		wiz@NetBSD.org
@@ -12,7 +12,7 @@ COMMENT=		Set of interfaces for accessibility
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=		gmake pkg-config msgfmt
+USE_TOOLS+=		gmake pkg-config msgfmt perl
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
