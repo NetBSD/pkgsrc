@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1 2005/02/09 16:19:35 jschauma Exp $
+$NetBSD: patch-ag,v 1.2 2006/07/12 15:38:29 rillig Exp $
 
---- cmd/shlibsign/sign.sh.orig	Sun Feb  6 17:41:50 2005
-+++ cmd/shlibsign/sign.sh	Sun Feb  6 17:42:29 2005
+--- mozilla/security/nss/cmd/shlibsign/sign.sh.orig	Sun Feb  6 17:41:50 2005
++++ mozilla/security/nss/cmd/shlibsign/sign.sh	Sun Feb  6 17:42:29 2005
 @@ -39,7 +39,7 @@
      export LIBPATH
      SHLIB_PATH=${1}/lib:$SHLIB_PATH

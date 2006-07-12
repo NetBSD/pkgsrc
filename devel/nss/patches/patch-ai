@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.1 2005/08/12 20:11:26 reed Exp $
+$NetBSD: patch-ai,v 1.2 2006/07/12 15:38:29 rillig Exp $
 
---- ../../dbm/src/mktemp.c.orig	2005-08-12 12:24:10.000000000 -0700
-+++ ../../dbm/src/mktemp.c	2005-08-12 12:24:59.000000000 -0700
+--- mozilla/dbm/src/mktemp.c.orig	2005-08-12 12:24:10.000000000 -0700
++++ mozilla/dbm/src/mktemp.c	2005-08-12 12:24:59.000000000 -0700
 @@ -100,7 +100,7 @@
  static int 
  _gettemp(char *path, register int *doopen, int extraFlags)

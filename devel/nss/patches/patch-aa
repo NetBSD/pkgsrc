@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/02/01 21:51:12 jschauma Exp $
+$NetBSD: patch-aa,v 1.2 2006/07/12 15:38:29 rillig Exp $
 
---- Makefile.orig	Tue Jan  4 21:17:13 2005
-+++ Makefile	Tue Jan  4 21:17:25 2005
+--- mozilla/security/nss/Makefile.orig	Tue Jan  4 21:17:13 2005
++++ mozilla/security/nss/Makefile	Tue Jan  4 21:17:25 2005
 @@ -74,7 +74,7 @@
  # (7) Execute "local" rules. (OPTIONAL).                              #
  #######################################################################
