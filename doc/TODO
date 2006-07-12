@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5185 2006/07/12 13:52:04 wiz Exp $
+$NetBSD: TODO,v 1.5186 2006/07/12 14:31:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -394,7 +394,6 @@ Suggested package updates
 	o bsdiff-4.3
 	o bugzilla-2.22
 	o byacc-20050813
-	o bzr-0.8.2
 	o c4-1.10 [schmonz]
 	o cadaver-0.22.3
 	o cal3d-0.11.0
