@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.701 2006/07/11 17:39:20 salo Exp $
+$NetBSD: CHANGES-2006,v 1.702 2006/07/12 02:32:00 simonb Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3343,3 +3343,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated geography/garmin-utils to 2.2 [gson 2006-07-11]
 	Updated www/trac to 0.9.6 [salo 2006-07-11]
 	Updated www/ja-trac to 0.9.6.1 [salo 2006-07-11]
+	Updated www/adzap to 20060424 [simonb 2006-07-12]
