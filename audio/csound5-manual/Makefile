@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2006/06/04 19:31:30 ben Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/12 17:09:50 rillig Exp $
 #
 
 DISTNAME=		Csound${CSOUND_VERSION}_manual_html
 PKGNAME=		csound5-manual-${CSOUND_VERSION}
+PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=csound/}
 EXTRACT_SUFX=		.zip
-PKGREVISION=		1
 
 MAINTAINER=		ben@NetBSD.org
 HOMEPAGE=		http://www.csounds.com/
@@ -18,8 +18,9 @@ WRKSRC=			${WRKDIR}/html
 DIST_SUBDIR=		${PKGNAME_NOREV}
 EXTRACT_OPTS_ZIP=	-aqo
 
+INSTALLATION_DIRS+=	share/doc/csound5
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/csound5
-	cd ${WRKSRC} && ${PAX} -rw * ${PREFIX}/share/doc/html/csound5
+	cd ${WRKSRC} && ${PAX} -rw * ${PREFIX}/share/doc/csound5
 
 .include "../../mk/bsd.pkg.mk"
