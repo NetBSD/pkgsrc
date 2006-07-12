@@ -1,0 +1,32 @@
+$NetBSD: patch-an,v 1.1 2006/07/12 16:30:04 rillig Exp $
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=323977
+https://bugzilla.mozilla.org/attachment.cgi?id=209007&action=view
+
+Added DragonFly.
+
+Index: mozilla/security/nss/lib/freebl/Makefile
+===================================================================
+RCS file: /cvsroot/mozilla/security/nss/lib/freebl/Makefile,v
+retrieving revision 1.70
+diff -u -r1.70 Makefile
+--- mozilla/security/nss/lib/freebl/Makefile	22 Nov 2005 07:13:32 -0000	1.70
++++ mozilla/security/nss/lib/freebl/Makefile	19 Jan 2006 21:47:47 -0000
+@@ -188,6 +188,17 @@
+ endif
+ endif
+ 
++# The blapi functions are defined not only in the freebl shared
++# libraries but also in the shared libraries linked with loader.c
++# (libsoftokn3.so and libssl3.so).  We need to use GNU ld's
++# -Bsymbolic option or the equivalent option for other linkers
++# to bind the blapi function references in FREEBLVector vector
++# (ldvector.c) to the blapi functions defined in the freebl
++# shared libraries.
++ifeq (,$(filter-out BSD_OS FreeBSD Linux NetBSD DragonFly, $(OS_TARGET)))
++    MKSHLIB += -Wl,-Bsymbolic
++endif
++
+ ifeq ($(OS_TARGET),SunOS)
+ 
+ # The -R '$ORIGIN' linker option instructs this library to search for its
