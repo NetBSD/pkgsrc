@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2006/07/04 06:46:43 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2006/07/12 13:10:56 wiz Exp $
 
 DISTNAME=		amarok-1.4.1
+PKGREVISION=		1
 CATEGORIES=		audio kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=amarok/}
 EXTRACT_SUFX=		.tar.bz2
@@ -51,7 +52,7 @@ BUILDLINK_API_DEPENDS.kdebase+=	kdebase>=3.3.0
 BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs>=3.3.0
 BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.4
 
-.include "../../audio/libtunepimp/buildlink3.mk"
+.include "../../audio/libtunepimp0.4/buildlink3.mk"
 .include "../../audio/libvisual/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/xmms/buildlink3.mk"
