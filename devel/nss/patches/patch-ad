@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.2 2006/06/25 14:52:44 wiz Exp $
+$NetBSD: patch-ad,v 1.3 2006/07/12 15:38:29 rillig Exp $
 
---- lib/ckfw/builtins/Makefile.orig	2003-04-20 04:23:24.000000000 +0000
-+++ lib/ckfw/builtins/Makefile
+--- mozilla/security/nss/lib/ckfw/builtins/Makefile.orig	2003-04-20 04:23:24.000000000 +0000
++++ mozilla/security/nss/lib/ckfw/builtins/Makefile
 @@ -64,8 +64,8 @@ endif
  else
  
