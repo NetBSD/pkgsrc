@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2005/12/29 06:22:00 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2006/07/12 17:41:54 rillig Exp $
 #
 
 DISTNAME=	ntp-4.2.0
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	net time
 MASTER_SITES=	ftp://ftp.udel.edu/pub/ntp/ntp4/		\
 		http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/
@@ -22,19 +22,18 @@ CONFIGURE_ENV+=	PATH_PERL=${PERL5:Q} ac_cv_header_sys_soundcard_h=no
 
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-DOCDIR=		${PREFIX}/share/doc/html
-EXAMPLESDIR=	${PREFIX}/share/examples
-ALL_NTP_DOCS=	${DOCDIR}/ntp4 ${EXAMPLESDIR}/ntp4
+DOCDIR=		${PREFIX}/share/doc/ntp4
+EXAMPLESDIR=	${PREFIX}/share/examples/ntp4
+ALL_NTP_DOCS=	${DOCDIR} ${EXAMPLESDIR}
 
 RCD_SCRIPTS=	ntpd ntpdate
 
 post-install:
-	(cd ${WRKSRC} &&						\
-	    ${PAX} -rw -pe -s "/html/ntp4/" html ${DOCDIR};		\
-	    ${PAX} -rw -pe -s "/conf/ntp4/" conf ${EXAMPLESDIR});	\
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${ALL_NTP_DOCS};		\
-	${FIND} ${ALL_NTP_DOCS} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}; \
-	${FIND} ${ALL_NTP_DOCS} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE};
+	cd ${WRKSRC}/html && ${PAX} -rw . ${DOCDIR}
+	cd ${WRKSRC}/conf && ${PAX} -rw . ${EXAMPLESDIR}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${ALL_NTP_DOCS}
+	${FIND} ${ALL_NTP_DOCS} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${ALL_NTP_DOCS} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
 
 .include "../../mk/bsd.prefs.mk"
 
