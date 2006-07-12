@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.31 2006/05/13 11:29:46 rillig Exp $
+#	$NetBSD: createbuildlink,v 1.32 2006/07/12 13:29:03 wiz Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,7 +39,7 @@
 # Create an initial buildlink3.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.31 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.32 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 spacesintab=8
 makefile=Makefile
@@ -150,6 +150,7 @@ BUILDLINK_DEPENDS+=	${PKGNOVER}
 
 BUILDLINK_PACKAGES:=	\${BUILDLINK_PACKAGES:N${PKGNOVER}}
 BUILDLINK_PACKAGES+=	$PKGNOVER
+BUILDLINK_ORDER:=	\${BUILDLINK_ORDER} \${BUILDLINK_DEPTH}$PKGNOVER
 
 .if \${${PKGUPPER}_BUILDLINK3_MK} == "+"
 EOF
