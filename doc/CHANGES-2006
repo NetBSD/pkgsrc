@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.703 2006/07/12 13:29:46 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.704 2006/07/12 13:47:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3348,3 +3348,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added audio/libofa version 0.9.3 [wiz 2006-07-12]
 	Updated audio/libtunepimp to 0.4.2nb1 [wiz 2006-07-12]
 	Updated pkgtools/createbuildlink to 3.13 [wiz 2006-07-12]
+	Updated devel/atk to 1.12.1 [wiz 2006-07-12]
