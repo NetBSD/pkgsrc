@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2006/07/09 23:58:42 minskim Exp $
+# $NetBSD: Makefile,v 1.66 2006/07/12 17:21:52 rillig Exp $
 
 DISTNAME=	nas-1.8.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -23,16 +23,17 @@ PKG_SYSCONFSUBDIR=	nas
 
 REPLACE_PERL+=		clients/audio/auscope/auscope
 
-SUBST_CLASSES+=		sysconf ossaudio mungeman
-
+SUBST_CLASSES+=		sysconf
 SUBST_STAGE.sysconf=	pre-configure
 SUBST_FILES.sysconf=	config/NetAudio.def
 SUBST_SED.sysconf=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 
+SUBST_CLASSES+=		ossaudio
 SUBST_STAGE.ossaudio=	pre-configure
 SUBST_FILES.ossaudio=	server/nasd.conf.eg server/dda/voxware/auvoxware.c
 SUBST_SED.ossaudio=	-e "s|@DEVOSSAUDIO@|${DEVOSSAUDIO}|g"
 
+SUBST_CLASSES+=		mungeman
 SUBST_STAGE.mungeman=	pre-configure
 SUBST_FILES.mungeman=	config/mungeman
 SUBST_SED.mungeman=	-e 's|^ *\#|\#|g'
