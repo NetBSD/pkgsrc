@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.323 2006/07/08 04:32:54 ben Exp $
+# $NetBSD: Makefile,v 1.324 2006/07/12 13:16:51 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -151,6 +151,7 @@ SUBDIR+=	libmikmod
 SUBDIR+=	libmodplug
 SUBDIR+=	libmpd
 SUBDIR+=	libmusepack
+SUBDIR+=	libofa
 SUBDIR+=	libopendaap
 SUBDIR+=	libsamplerate
 SUBDIR+=	libshout
@@ -158,6 +159,7 @@ SUBDIR+=	libsidplay
 SUBDIR+=	libsidplay2
 SUBDIR+=	libsndfile
 SUBDIR+=	libtunepimp
+SUBDIR+=	libtunepimp0.4
 SUBDIR+=	libvisual
 SUBDIR+=	libvisual-bmp
 SUBDIR+=	libvisual-plugins
@@ -243,6 +245,7 @@ SUBDIR+=	sidplay
 SUBDIR+=	sidplay2
 SUBDIR+=	snd
 SUBDIR+=	solfege
+SUBDIR+=	sound-juicer
 SUBDIR+=	sox
 SUBDIR+=	speex
 SUBDIR+=	spiralloops
@@ -250,7 +253,6 @@ SUBDIR+=	spiralsynth
 SUBDIR+=	splay
 SUBDIR+=	streamripper
 SUBDIR+=	streamtuner
-SUBDIR+=	sound-juicer
 SUBDIR+=	sweep
 SUBDIR+=	taglib
 SUBDIR+=	tcd
