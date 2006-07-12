@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2006/04/17 08:56:08 simonb Exp $
+# $NetBSD: Makefile,v 1.58 2006/07/12 02:31:00 simonb Exp $
 #
 
-DISTNAME=	adzap-20060414
+DISTNAME=	adzap-20060424
 CATEGORIES=	www perl5
 # XXX: should use the following one day:
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=adzapper/}
