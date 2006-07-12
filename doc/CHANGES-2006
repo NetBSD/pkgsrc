@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.705 2006/07/12 13:52:04 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.706 2006/07/12 14:31:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3350,3 +3350,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated pkgtools/createbuildlink to 3.13 [wiz 2006-07-12]
 	Updated devel/atk to 1.12.1 [wiz 2006-07-12]
 	Updated net/libsoup-devel to 2.2.95.1 [wiz 2006-07-12]
+	Updated devel/bzr to 0.8.2 [wiz 2006-07-12]
