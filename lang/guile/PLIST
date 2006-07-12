@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/03/30 03:44:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/07/12 20:11:39 wiz Exp $
 bin/guile
 bin/guile-config
 bin/guile-snarf
@@ -100,9 +100,9 @@ include/libguile/vectors.h
 include/libguile/version.h
 include/libguile/vports.h
 include/libguile/weaks.h
-info/guile.info
-info/guile-tut.info
 info/goops.info
+info/guile-tut.info
+info/guile.info
 info/r5rs.info
 lib/libguile-ltdl.la
 lib/libguile-srfi-srfi-13-14-v-1.la
@@ -154,6 +154,7 @@ share/guile/1.6/ice-9/rw.scm
 share/guile/1.6/ice-9/safe-r5rs.scm
 share/guile/1.6/ice-9/safe.scm
 share/guile/1.6/ice-9/session.scm
+share/guile/1.6/ice-9/slib-old.scm
 share/guile/1.6/ice-9/slib.scm
 share/guile/1.6/ice-9/stack-catch.scm
 share/guile/1.6/ice-9/streams.scm
