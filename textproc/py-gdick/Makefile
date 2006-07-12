@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/05/27 00:03:55 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2006/07/12 15:30:52 joerg Exp $
 
 DISTNAME=	gdick-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ COMMENT=	English-Korean Dictionary Client for GNOME2
 
 DEPENDS+=	${PYPKGPREFIX}-cjkcodecs-[0-9]*:../../converters/py-cjkcodecs
 
-PYTHON_VERSIONS_ACCEPTED=	24 23
+PYTHON_VERSIONS_ACCEPTED=	24
 
 PYDISTUTILSPKG=	yes
 NO_CONFIGURE=	yes
