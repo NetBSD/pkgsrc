@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/12 13:07:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/12 13:30:33 wiz Exp $
 #
 
 DISTNAME=		libtunepimp-0.4.2
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.musicbrainz.org/pub/musicbrainz/ \
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://musicbrainz.org/products/tunepimp/index.html
-COMMENT=		Library to support MusicBrainz enabled tagging
+COMMENT=		Library to support MusicBrainz enabled tagging (0.4 series)
 
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
