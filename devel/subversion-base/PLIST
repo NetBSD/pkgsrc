@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/04/17 07:07:17 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2006/07/12 08:41:01 rillig Exp $
 bin/svn
 bin/svnadmin
 bin/svndumpfilter
@@ -60,6 +60,10 @@ man/man1/svnversion.1
 man/man5/svnserve.conf.5
 man/man8/svnserve.8
 share/doc/subversion/INSTALL
+share/doc/subversion/README
+share/doc/subversion/cvs-crossover-guide.html
+share/doc/subversion/lj_article.txt
+share/doc/subversion/svn-best-practices.html
 share/examples/subversion/backup/hot-backup.py
 share/examples/subversion/cgi/tweak-log.cgi
 share/examples/subversion/hook-scripts/commit-email.pl
