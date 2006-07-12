@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.1.1 2006/07/12 13:07:19 wiz Exp $
+
+--- lib/write.cpp.orig	2006-01-20 10:05:11.000000000 +1300
++++ lib/write.cpp
+@@ -35,9 +35,12 @@
+ #  include <sys/stat.h>
+ #  include <sys/types.h>
+ #  include <fcntl.h>
+-#  if defined(__APPLE__) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__)
++#  if defined(__APPLE__) || defined(__NetBSD__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+ #    include <sys/param.h>
+ #    include <sys/mount.h>
++#    if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900)
++#      define HAVE_STATVFS 1
++#    endif
+ #  else
+ #    include <sys/vfs.h>
+ #  endif
+@@ -54,6 +57,11 @@
+ #include "fileio.h"
+ #include "utf8/utf8util.h"
+ 
++#if defined(HAVE_STATVFS)
++#  define statfs statvfs
++#  define f_bsize f_frsize
++#endif
++
+ #ifdef WIN32
+ const char *dirSep = "\\";
+ const char dirSepChar = '\\';

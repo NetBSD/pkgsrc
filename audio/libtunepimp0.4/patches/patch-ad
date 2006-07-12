@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2006/07/12 13:07:19 wiz Exp $
+
+--- lib/Makefile.in.orig	2006-04-17 09:23:47.000000000 +1200
++++ lib/Makefile.in
+@@ -262,7 +262,7 @@ libtunepimp_la_SOURCES = tunepimp.cpp fi
+ #  1:0:0 - TunePimp implementation for version 0.2.x
+ #  2:0:0 - TunePimp implementation for version 0.3.x
+ #  3:0:0 - TunePimp implementation for version 0.4.x
+-libtunepimp_la_LDFLAGS = -version-info 3:0:0
++libtunepimp_la_LDFLAGS = -version-info 3:0:0 ${PTHREAD_LDFLAGS}
+ libtunepimp_la_LIBADD = threads/posix/libtpthread.la utf8/libutf8.la -lmusicbrainz -lz $(LIBLTDL) -lm
+ noinst_LTLIBRARIES = libpluginsupport.la
+ libpluginsupport_la_SOURCES = metadata.cpp fileio.cpp
