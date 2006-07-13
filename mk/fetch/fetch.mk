@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.5 2006/07/05 09:08:35 jlam Exp $
+# $NetBSD: fetch.mk,v 1.6 2006/07/13 14:02:34 jlam Exp $
 
 ######################################################################
 ### fetch (PUBLIC)
@@ -8,7 +8,7 @@
 ###
 .PHONY: fetch
 .if !target(fetch)
-fetch: check-vulnerable pre-fetch do-fetch post-fetch
+fetch: bootstrap-depends check-vulnerable pre-fetch do-fetch post-fetch
 .endif
 
 # If this host is behind a filtering firewall, use passive ftp(1)
@@ -261,7 +261,7 @@ batch-check-distfiles:
 
 .PHONY: do-fetch
 .if !target(do-fetch)
-do-fetch: ${FAILOVER_FETCH:Duptodate-digest}
+do-fetch:
 .  if !empty(_ALLFILES)
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	${TEST} -d ${_DISTDIR} || ${MKDIR} ${_DISTDIR}

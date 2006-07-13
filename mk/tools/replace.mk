@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.173 2006/07/10 22:17:58 jlam Exp $
+# $NetBSD: replace.mk,v 1.174 2006/07/13 14:02:34 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -127,9 +127,13 @@ PKG_FAIL_REASON+=	"\`\`bison'' and \`\`byacc'' conflict in USE_TOOLS."
 # Set the type of dependency requested for the tool.  The type of
 # dependency is determined by the modifier specified for each tool:
 #
+#    BOOTSTRAP_DEPENDS:	:bootstrap
 #    BUILD_DEPENDS:	:build (default), :pkgsrc
 #    DEPENDS:		:run
 #
+.for _t_ in ${USE_TOOLS:N*\:*} ${USE_TOOLS:M*\:bootstrap}
+_TOOLS_DEPMETHOD.${_t_:C/:.*//}=	BOOTSTRAP_DEPENDS
+.endfor
 .for _t_ in ${USE_TOOLS:N*\:*} ${USE_TOOLS:M*\:build} ${USE_TOOLS:M*\:pkgsrc}
 _TOOLS_DEPMETHOD.${_t_:C/:.*//}=	BUILD_DEPENDS
 .endfor

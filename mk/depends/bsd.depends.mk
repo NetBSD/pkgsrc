@@ -1,11 +1,11 @@
-# $NetBSD: bsd.depends.mk,v 1.8 2006/07/07 21:24:28 jlam Exp $
+# $NetBSD: bsd.depends.mk,v 1.9 2006/07/13 14:02:34 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to dependencies.
 #
 # The following are the "public" targets provided by this module:
 #
-#    depends, install-depends
+#    depends, bootstrap-depends, install-depends
 #
 
 # DEPENDS_TARGET is the target that is invoked to satisfy missing
@@ -46,6 +46,19 @@ depends: depends-cookie
 .endif
 
 ######################################################################
+### bootstrap-depends (PUBLIC, OVERRIDE)
+######################################################################
+### bootstrap-depends is a public target to install any missing
+### dependencies needed during stages before the normal "depends"
+### stage.  These dependencies are listed in BOOTSTRAP_DEPENDS.
+###
+.PHONY: bootstrap-depends
+.if !target(bootstrap-depends)
+bootstrap-depends:
+	@${DO_NADA}
+.endif
+
+######################################################################
 ### install-depends (PUBLIC)
 ######################################################################
 ### install-depends is a convenience target that installs all dependencies
@@ -81,4 +94,3 @@ depends-cookie:
 	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_COOKIE.depends:H}
 	${_PKG_SILENT}${_PKG_DEBUG}${TOUCH} ${TOUCH_ARGS} ${_COOKIE.depends}
 .endif
-

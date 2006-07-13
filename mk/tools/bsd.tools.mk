@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.42 2006/07/07 21:24:29 jlam Exp $
+# $NetBSD: bsd.tools.mk,v 1.43 2006/07/13 14:02:34 jlam Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -143,6 +143,7 @@ post-tools:
 	@${DO_NADA}
 .endif
 
+.include "${PKGSRCDIR}/mk/tools/digest.mk"
 .include "${PKGSRCDIR}/mk/tools/automake.mk"
 .include "${PKGSRCDIR}/mk/tools/autoconf.mk"
 .include "${PKGSRCDIR}/mk/tools/texinfo.mk"

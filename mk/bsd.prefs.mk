@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.228 2006/07/10 22:59:27 jlam Exp $
+# $NetBSD: bsd.prefs.mk,v 1.229 2006/07/13 14:02:34 jlam Exp $
 #
 # Make file, included to get the site preferences, if any.  Should
 # only be included by package Makefiles before any .if defined()
@@ -442,23 +442,6 @@ COMPILER_RPATH_FLAG?=	${_COMPILER_RPATH_FLAG}
 # linker flags to extract all symbols from a static archive.
 WHOLE_ARCHIVE_FLAG?=	${_OPSYS_WHOLE_ARCHIVE_FLAG}
 NO_WHOLE_ARCHIVE_FLAG?=	${_OPSYS_NO_WHOLE_ARCHIVE_FLAG}
-
-.if !defined(DIGEST)
-DIGEST:=		${LOCALBASE}/bin/digest
-MAKEFLAGS+=		DIGEST=${DIGEST:Q}
-.endif
-
-# Only add the DIGEST_VERSION value to MAKEFLAGS when we know
-# we've got a valid version number, retrieved from the digest(1)
-# binary. This is different to PKGTOOLS_VERSION, since, in that
-# case, the build dies when pkg_info(1) is out of date.
-
-.if !exists(${DIGEST})
-DIGEST_VERSION=		20010301
-.elif !defined(DIGEST_VERSION)
-DIGEST_VERSION!= 	${DIGEST} -V 2>/dev/null
-MAKEFLAGS+=		DIGEST_VERSION=${DIGEST_VERSION:Q}
-.endif
 
 USE_TOOLS?=	# empty
 
