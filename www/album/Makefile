@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:11:16 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2006/07/13 15:13:25 jlam Exp $
 #
 
 DISTNAME=	album
@@ -22,13 +22,11 @@ MY_SCRIPT=	album
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	${MY_SCRIPT}
-
-NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
 INSTALLATION_DIRS=	bin man/man1
 
-do-install:	replace-interpreter
+do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${MY_SCRIPT} ${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${MY_SCRIPT}.1 ${PREFIX}/man/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/album
