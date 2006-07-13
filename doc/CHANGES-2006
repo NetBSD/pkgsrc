@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.714 2006/07/13 11:55:37 itohy Exp $
+$NetBSD: CHANGES-2006,v 1.715 2006/07/13 13:43:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3367,3 +3367,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/postfix to 2.3.0 [martti 2006-07-13]
 	Updated mail/postfix-current to 2.4-20060711 [martti 2006-07-13]
 	Updated comms/kyopon to 0.4 [itohy 2006-07-13]
+	Updated benchmark/iozone to 3.263 [adam 2006-07-13]
