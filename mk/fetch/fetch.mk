@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.6 2006/07/13 14:02:34 jlam Exp $
+# $NetBSD: fetch.mk,v 1.7 2006/07/13 15:23:18 jlam Exp $
 
 ######################################################################
 ### fetch (PUBLIC)
@@ -153,7 +153,7 @@ _FETCH_FILE=								\
 					if [ -z "$$alg" ]; then		\
 						alg=${PATCH_DIGEST_ALGORITHM};\
 					fi;				\
-					CKSUM=`${DIGEST} $$alg < ${_DISTDIR}/$$bfile`; \
+					CKSUM=`${TOOLS_DIGEST} $$alg < ${_DISTDIR}/$$bfile`; \
 					CKSUM2=`${AWK} '$$1 == "'$$alg'" && $$2 == "('$$file')" {print $$4; exit}' <${DISTINFO_FILE}`; \
 					if [ "$$CKSUM" = "$$CKSUM2" -o "$$CKSUM2" = "IGNORE" ]; then \
 						break;			\
