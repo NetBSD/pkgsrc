@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/07/12 13:31:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/13 10:10:37 wiz Exp $
 
 DISTNAME=		gnucash-1.8.12
 PKGREVISION=		5
@@ -6,7 +6,7 @@ CATEGORIES=		finance
 MASTER_SITES=		ftp://ftp.gnucash.org/pub/gnucash/sources/stable/ \
 			${MASTER_SITE_SOURCEFORGE:=gnucash/}
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnucash.org/
 COMMENT=		Personal double-entry accounting program (GTK1 version)
 
