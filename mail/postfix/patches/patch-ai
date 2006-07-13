@@ -1,26 +1,17 @@
-$NetBSD: patch-ai,v 1.15 2006/01/10 06:38:15 martti Exp $
+$NetBSD: patch-ai,v 1.16 2006/07/13 09:57:51 martti Exp $
 
---- makedefs.orig	2006-01-03 23:50:25.000000000 +0200
-+++ makedefs	2006-01-09 08:11:32.000000000 +0200
+--- makedefs.orig	2006-07-03 20:30:00.000000000 +0000
++++ makedefs	2006-07-13 12:40:49.000000000 +0000
 @@ -118,6 +118,8 @@
  		;;
    FreeBSD.6*)	SYSTYPE=FREEBSD6
  		;;
-+  DragonFly.1*) SYSTYPE=FREEBSD4
++  DragonFly.1*)	SYSTYPE=FREEBSD4
 +		;;
    OpenBSD.2*)	SYSTYPE=OPENBSD2
  		;;
    OpenBSD.3*)	SYSTYPE=OPENBSD3
-@@ -126,7 +128,7 @@
- 		;;
-    NetBSD.1*)	SYSTYPE=NETBSD1
- 		;;
--   NetBSD.2*)	SYSTYPE=NETBSD2
-+   NetBSD.[23]*)SYSTYPE=NETBSD2
- 		;;
-    BSD/OS.2*)	SYSTYPE=BSDI2
- 		;;
-@@ -177,13 +179,6 @@
+@@ -180,13 +182,6 @@
  		esac
  		;;
     ULTRIX.4*)	SYSTYPE=ULTRIX4
@@ -34,7 +25,7 @@ $NetBSD: patch-ai,v 1.15 2006/01/10 06:38:15 martti Exp $
  		for l in syslog resolv; do
  		    if [ -f /usr/local/lib/lib$l.a ]; then
  			SYSLIBS="$SYSLIBS -l$l"
-@@ -215,25 +210,8 @@
+@@ -218,25 +213,8 @@
  		esac;;
  		# Tested with RedHat 3.03 on 20020729.
      Linux.1*)	SYSTYPE=LINUX1
@@ -60,7 +51,7 @@ $NetBSD: patch-ai,v 1.15 2006/01/10 06:38:15 martti Exp $
  		# GDBM locks the DBM .pag file after open. This breaks postmap.
  		# if [ -f /usr/include/gdbm-ndbm.h ]
  		# then
-@@ -244,7 +222,6 @@
+@@ -247,7 +225,6 @@
  		#     CCARGS="$CCARGS -DHAS_DBM -DPATH_NDBM_H='<gdbm/ndbm.h>'"
  		#     GDBM_LIBS=gdbm
  		# fi
@@ -68,7 +59,7 @@ $NetBSD: patch-ai,v 1.15 2006/01/10 06:38:15 martti Exp $
  		for name in nsl resolv $GDBM_LIBS
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -272,25 +249,13 @@
+@@ -275,25 +252,13 @@
  HP-UX.A.09.*)	SYSTYPE=HPUX9
  		SYSLIBS=-ldbm
  		CCARGS="$CCARGS -DMISSING_USLEEP"
