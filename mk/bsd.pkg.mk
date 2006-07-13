@@ -1,8 +1,6 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1869 2006/07/13 14:02:34 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1870 2006/07/13 14:04:41 jlam Exp $
 #
 # This file is in the public domain.
-#
-# This file is derived from bsd.port.mk - 940820 Jordan K. Hubbard.
 #
 # Please see the pkgsrc/doc/guide manual for details on the
 # variables used in this make file template.
