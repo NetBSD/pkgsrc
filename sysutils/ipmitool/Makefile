@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/03/13 23:03:28 heinz Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/13 19:04:30 heinz Exp $
 #
 
 DISTNAME=		ipmitool-1.8.6
@@ -13,7 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes
 USE_GNU_READLINE=	yes # ipmitool uses rl_event_hook
-INSTALLATION_DIRS+=	share/ipmitool doc/ipmitool
+INSTALLATION_DIRS+=	share/examples/ipmitool share/doc/ipmitool
 
 OPSYSVARS+=		CONFIGURE_ARGS
 CONFIGURE_ARGS.NetBSD+=	--disable-intf-open --disable-intf-imb
