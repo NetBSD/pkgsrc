@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/02/27 07:10:59 martti Exp $
+@comment $NetBSD: PLIST,v 1.16 2006/07/13 09:57:51 martti Exp $
 bin/mailq
 bin/newaliases
 libexec/postfix/anvil
@@ -43,6 +43,7 @@ man/man1/sendmail.1
 man/man5/access.5
 man/man5/aliases.5
 man/man5/body_checks.5
+man/man5/bounce.5
 man/man5/canonical.5
 man/man5/cidr_table.5
 man/man5/generic.5
@@ -56,6 +57,7 @@ man/man5/pgsql_table.5
 man/man5/postconf.5
 man/man5/regexp_table.5
 man/man5/relocated.5
+man/man5/tcp_table.5
 man/man5/transport.5
 man/man5/virtual.5
 man/man8/anvil.8
@@ -110,6 +112,7 @@ share/doc/postfix/CONTENT_INSPECTION_README
 share/doc/postfix/DATABASE_README
 share/doc/postfix/DB_README
 share/doc/postfix/DEBUG_README
+share/doc/postfix/DSN_README
 share/doc/postfix/ETRN_README
 share/doc/postfix/FILTER_README
 share/doc/postfix/INSTALL
@@ -119,6 +122,7 @@ share/doc/postfix/LINUX_README
 share/doc/postfix/LMTP_README
 share/doc/postfix/LOCAL_RECIPIENT_README
 share/doc/postfix/MAILDROP_README
+share/doc/postfix/MILTER_README
 share/doc/postfix/MYSQL_README
 share/doc/postfix/NFS_README
 share/doc/postfix/OVERVIEW
@@ -147,6 +151,7 @@ share/examples/postfix/LICENSE
 share/examples/postfix/TLS_LICENSE
 share/examples/postfix/access
 share/examples/postfix/aliases
+share/examples/postfix/bounce.cf.default
 share/examples/postfix/canonical
 share/examples/postfix/generic
 share/examples/postfix/header_checks
