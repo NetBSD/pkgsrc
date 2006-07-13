@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2006/06/04 12:31:31 tron Exp $
+# $NetBSD: Makefile,v 1.73.2.1 2006/07/13 12:30:41 salo Exp $
 
-DISTNAME=	squirrelmail-1.4.6
-PKGREVISION=	3
+DISTNAME=	squirrelmail-1.4.7
+#PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
 EXTRACT_SUFX=	.tar.bz2
