@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2006/07/07 15:49:33 jlam Exp $
+# $NetBSD: Makefile,v 1.50 2006/07/13 22:20:35 adrianp Exp $
 
 DISTNAME=	freeradius-1.1.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 		ftp://ftp.Awfulhak.org/pub/radius/
@@ -12,7 +12,7 @@ COMMENT=	Free RADIUS server implementation
 
 .include "../../mk/bsd.prefs.mk"
 
-CONFLICTS+=		radiusd-cistron*
+CONFLICTS+=		radiusd-cistron-[0-9]*
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		YES
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
@@ -32,7 +32,6 @@ CONFIGURE_ARGS+=	--with-ltdl-lib=${PREFIX}/lib
 CONFIGURE_ARGS+=	--with-ltdl-include=${PREFIX}/include
 CONFIGURE_ARGS+=        --without-rlm_ippool
 CONFIGURE_ARGS+=        --without-rlm_smb
-CONFIGURE_ARGS+=	--without-rlm_krb5
 CONFIGURE_ARGS+=	--without-rlm_pam
 CONFIGURE_ARGS+=	--without-rlm_sql_iodbc
 CONFIGURE_ARGS+=	--without-rlm_sql_oracle
@@ -44,7 +43,7 @@ CONFIGURE_ARGS+=	--without-rlm_sql_unixodbc
 
 REPLACE_PERL=		scripts/radsqlrelay
 
-SUBST_CLASSES+=		make
+SUBST_CLASSES=		make
 SUBST_STAGE.make=	post-patch
 SUBST_FILES.make=	src/modules/rlm_mschap/Makefile \
 			src/modules/rlm_sql/drivers/rlm_sql_postgresql/Makefile.in
@@ -92,13 +91,13 @@ CONFIGURE_ARGS+=	--without-threads
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "pth"
 .include "../../devel/pthread-sem/buildlink3.mk"
-SUBST_SED.make+= 	-e "s|@ldap_ldflags@|@ldap_ldflags@ \
-			${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} -lsemaphore|g"
+SUBST_SED.make+= 	-e 's|@ldap_ldflags@|@ldap_ldflags@ \
+			${PTHREAD_LDFLAGS:Q} ${PTHREAD_LIBS:Q} -lsemaphore|g'
 .endif
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native"
-SUBST_SED.make+= 	-e "s|@ldap_ldflags@|@ldap_ldflags@ \
-			${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}|g"
+SUBST_SED.make+= 	-e 's|@ldap_ldflags@|@ldap_ldflags@ \
+			${PTHREAD_LDFLAGS:Q} ${PTHREAD_LIBS:Q}|g'
 .endif
 
 .if ${OPSYS} == "DragonFly"
@@ -109,7 +108,7 @@ CFLAGS+= -fPIC
 .endif
 
 post-build:
-	@${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
+	${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
@@ -119,7 +118,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/raddb/${f} ${EGDIR}/${f}
 .endfor
 	${INSTALL_SCRIPT} ${WRKSRC}/src/modules/rlm_perl/example.pl ${EGDIR}
-	@${MKDIR} ${PKG_SYSCONFDIR}/certs
-	@${MKDIR} ${PKG_SYSCONFDIR}/certs/demoCA
+	${MKDIR} ${PKG_SYSCONFDIR}/certs
+	${MKDIR} ${PKG_SYSCONFDIR}/certs/demoCA
 
 .include "../../mk/bsd.pkg.mk"
