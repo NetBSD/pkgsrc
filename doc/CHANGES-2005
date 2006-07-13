@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2005,v 1.8 2006/06/10 08:32:20 wiz Exp $
+$NetBSD: CHANGES-2005,v 1.9 2006/07/13 10:47:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2005:
 
@@ -1124,7 +1124,7 @@ Changes to the packages collection and infrastructure in 2005:
 	Updated sysutils/gnome-vfs2 to 2.8.4 [jmmv 2005-02-26]
 	Updated audio/gnome-vfs2-cdda to 2.8.4 [jmmv 2005-02-26]
 	Updated net/gnome-vfs2-smb to 2.8.4 [jmmv 2005-02-26]
-	Updated devel/libglade to 2.4.2 [jmmv 2005-02-26]
+	Updated devel/libglade2 to 2.4.2 [jmmv 2005-02-26]
 	Updated graphics/libart2 to 2.3.17 [jmmv 2005-02-26]
 	Updated security/gnome-keyring to 0.4.1 [jmmv 2005-02-26]
 	Updated print/libgnomeprint to 2.8.2 [jmmv 2005-02-26]
