@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/02/27 13:30:32 martti Exp $
+@comment $NetBSD: PLIST,v 1.11 2006/07/13 09:57:53 martti Exp $
 bin/mailq
 bin/newaliases
 libexec/postfix/anvil
@@ -122,6 +122,7 @@ share/doc/postfix/LINUX_README
 share/doc/postfix/LMTP_README
 share/doc/postfix/LOCAL_RECIPIENT_README
 share/doc/postfix/MAILDROP_README
+share/doc/postfix/MILTER_README
 share/doc/postfix/MYSQL_README
 share/doc/postfix/NFS_README
 share/doc/postfix/OVERVIEW
