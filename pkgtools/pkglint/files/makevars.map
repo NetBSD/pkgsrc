@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.129 2006/07/12 19:33:58 rillig Exp $
+# $NetBSD: makevars.map,v 1.130 2006/07/13 21:04:35 jlam Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -142,6 +142,7 @@ BDB_TYPE		{ db1 db2 db3 db4 } [$system]
 BINGRP			UserGroupName [$system]
 BINMODE			FileMode [$system]
 BINOWN			UserGroupName [$system]
+BOOTSTRAP_DEPENDS	InternalList of DependencyWithPath [c:a,m:a,o:a,*.mk:a]
 BROKEN			Message []
 BROKEN_GETTEXT_DETECTION	YesNo [m:s,c:s]
 BROKEN_IN		List of BrokenIn [m:s]
