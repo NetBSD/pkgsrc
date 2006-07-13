@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.47 2006/06/14 16:57:07 jlam Exp $
+# $NetBSD: defaults.mk,v 1.48 2006/07/13 15:27:57 jlam Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -68,6 +68,7 @@ _TOOLS_VARNAME.csh=		CSH
 _TOOLS_VARNAME.cut=		CUT
 _TOOLS_VARNAME.date=		DATE
 _TOOLS_VARNAME.diff=		DIFF
+_TOOLS_VARNAME.digest=		DIGEST
 _TOOLS_VARNAME.dirname=		DIRNAME
 _TOOLS_VARNAME.echo=		ECHO
 _TOOLS_VARNAME.egrep=		EGREP
