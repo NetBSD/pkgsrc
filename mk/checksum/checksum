@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: checksum,v 1.4 2006/07/13 16:11:39 jlam Exp $
+# $NetBSD: checksum,v 1.5 2006/07/13 16:23:14 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -84,6 +84,7 @@ done
 # Process required arguments
 ${TEST} $# -gt 0 || { usage; exit 1; }
 distinfo="$1"; shift
+files="$@"
 
 if ${TEST} ! -f "$distinfo"; then
 	${ECHO} 1>&2 "$self: distinfo file missing: $distinfo"
@@ -129,10 +130,10 @@ ${CAT} $distinfo |
 	fi
 
 	eval "tmp=\"\$_alg_${d_alg}\""
-	${TEST} -n "$tmp" || eval "_alg_${d_alg}=\"$@\""
+	${TEST} -n "$tmp" || eval "_alg_${d_alg}=\"$files\""
 
 	d_file="${d_file#\(}"; d_file="${d_file%\)}"
-	for file in "$@"; do
+	for file in "$files"; do
 		${TEST} "$d_file" = "$file" || continue
 		
 		eval "tmp=\"\$_alg_${d_alg}\""
@@ -168,7 +169,7 @@ ${CAT} $distinfo |
   done
   if ${TEST} -n "$algorithm"; then
 	eval "tmp=\"\$_alg_${algorithm}\""
-	${TEST} -n "$tmp" || tmp="$@"
+	${TEST} -n "$tmp" || tmp="$files"
 	if ${TEST} "$tmp" != DONE; then
 		for file in $tmp; do
 			${ECHO} 1>&2 "ERROR: No $algorithm checksum recorded for $file"
