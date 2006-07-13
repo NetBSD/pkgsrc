@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/04/13 18:23:30 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2006/07/13 10:16:30 wiz Exp $
 #
 
 DISTNAME=		scmxx-0.9.0
@@ -6,7 +6,7 @@ CATEGORIES=		comms
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scmxx/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.hendrik-sattler.de/scmxx/
 COMMENT=		Data exchange utility for Siemens mobile phones
 
