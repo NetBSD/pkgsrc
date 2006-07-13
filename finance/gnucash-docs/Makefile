@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/21 06:00:45 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2006/07/13 13:35:13 joerg Exp $
 
 DISTNAME=		gnucash-docs-1.8.5
 PKGREVISION=		3
@@ -16,7 +16,7 @@ BUILDLINK_DEPMETHOD.libxml2=	build
 BUILDLINK_DEPMETHOD.libxslt=	build
 
 USE_DIRS+=		gnome1-1.5
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
