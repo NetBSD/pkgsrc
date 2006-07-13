@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.1 2006/07/13 14:02:34 jlam Exp $
+# $NetBSD: checksum.mk,v 1.2 2006/07/13 18:40:33 jlam Exp $
 
 _DIGEST_ALGORITHMS?=		SHA1 RMD160
 _PATCH_DIGEST_ALGORITHMS?=	SHA1
@@ -19,8 +19,9 @@ _CHECKSUM_CMD=								\
 	${SH} ${PKGSRCDIR}/mk/checksum/checksum				\
 
 .PHONY: checksum
+.if !target(checksum)
 checksum: fetch
-.for _alg_ in ${_DIGEST_ALGORITHMS}
+.  for _alg_ in ${_DIGEST_ALGORITHMS}
 	${_PKG_SILENT}${_PKG_DEBUG}					\
 	if cd ${DISTDIR} && ${_CHECKSUM_CMD} -a ${_alg_:Q}		\
 		${DISTINFO_FILE} ${_CKSUMFILES}; then			\
@@ -31,7 +32,8 @@ checksum: fetch
 		${ERROR_MSG} "\"${MAKE} NO_CHECKSUM=yes [other args]\"."; \
 		exit 1;							\
 	fi
-.endfor
+.  endfor
+.endif
 
 ######################################################################
 ### makesum (PUBLIC)
