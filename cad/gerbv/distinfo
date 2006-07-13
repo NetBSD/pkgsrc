@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2005/03/01 12:07:52 dmcmahill Exp $
+$NetBSD: distinfo,v 1.15 2006/07/13 06:58:37 gson Exp $
 
 SHA1 (gerbv-1.0.1.tar.gz) = 7cc6b59959888cfb83df63f616d86e83f10b7c1f
 RMD160 (gerbv-1.0.1.tar.gz) = bc1564a43f0cf8d3052735bb424879bdc27ec95f
 Size (gerbv-1.0.1.tar.gz) = 1033739 bytes
+SHA1 (patch-aa) = 5341d1b1bbc075731b79262126768991b0ad534f
