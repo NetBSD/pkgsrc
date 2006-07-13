@@ -1,4 +1,4 @@
-# $NetBSD: check-interpreter.mk,v 1.10 2006/07/03 06:57:20 rillig Exp $
+# $NetBSD: check-interpreter.mk,v 1.11 2006/07/13 19:07:54 heinz Exp $
 
 # This file checks that after installation, all files of the package
 # that start with a "#!" line will find their interpreter. Files that
@@ -12,7 +12,9 @@
 #
 # The following variables may be set by a package:
 #
-# CHECK_INTERPRETER_SKIP: List of PathMask (default: empty)
+# CHECK_INTERPRETER_SKIP: List of paths or paths with wildcards
+#	(default: empty)
+#	(example: share/package1/* share/package2/somefile)
 #	The list of files that are skipped when running the check.
 #	Additionally, all files in share/examples and share/doc are
 #	skipped as well.
@@ -21,8 +23,8 @@
 CHECK_INTERPRETER?=		no
 CHECK_INTERPRETER_SKIP?=	# empty
 
-_CHECK_INTERP_SKIP=		share/doc
-_CHECK_INTERP_SKIP+=		share/examples
+_CHECK_INTERP_SKIP=		share/doc/*
+_CHECK_INTERP_SKIP+=		share/examples/*
 _CHECK_INTERP_SKIP+=		${CHECK_INTERPRETER_SKIP}
 
 _CHECK_INTERP_SKIP_FILTER=	case $$file in
