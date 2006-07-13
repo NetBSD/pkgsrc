@@ -1,4 +1,4 @@
-# $NetBSD: bsd.patch-vars.mk,v 1.2 2006/06/06 15:28:52 jlam Exp $
+# $NetBSD: bsd.patch-vars.mk,v 1.3 2006/07/13 14:02:34 jlam Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -29,6 +29,11 @@
     (defined(PATCHDIR) && exists(${PATCHDIR})) || \
     (defined(LOCALPATCHES) && exists(${LOCALPATCHES}/${PKGPATH}))
 USE_TOOLS+=	patch
+.endif
+
+.if (defined(PATCHDIR) && exists(${PATCHDIR})) || \
+    (defined(LOCALPATCHES) && exists(${LOCALPATCHES}/${PKGPATH}))
+USE_TOOLS+=	digest:bootstrap
 .endif
 
 # These tools are used to output the contents of the distribution patches

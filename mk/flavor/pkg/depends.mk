@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.9 2006/07/07 21:24:28 jlam Exp $
+# $NetBSD: depends.mk,v 1.10 2006/07/13 14:02:34 jlam Exp $
 
 _DEPENDS_FILE=		${WRKDIR}/.depends
 _REDUCE_DEPENDS_CMD=	${SETENV} CAT=${CAT:Q}				\
@@ -72,39 +72,63 @@ depends-install: ${_DEPENDS_FILE}
 	set -- dummy `${CAT} ${_DEPENDS_FILE}`; shift;			\
 	while ${TEST} $$# -gt 0; do					\
 		type="$$1"; pattern="$$2"; dir="$$3"; shift 3;		\
+		${_DEPENDS_INSTALL_CMD};				\
+	done
+
+######################################################################
+### bootstrap-depends (PUBLIC, pkgsrc/mk/depends/depends.mk)
+######################################################################
+### bootstrap-depends is a public target to install any missing
+### dependencies needed during stages before the normal "depends"
+### stage.  These dependencies are listed in BOOTSTRAP_DEPENDS.
+###
+.PHONY: bootstrap-depends
+bootstrap-depends:
+	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	args=${BOOTSTRAP_DEPENDS:S/:/ /:Q};				\
+	set -- dummy $$args; shift;					\
+	while ${TEST} $$# -gt 0; do					\
+		pattern="$$1"; dir="$$2"; shift 2;			\
+		${_DEPENDS_INSTALL_CMD};				\
+	done
+
+# _DEPENDS_INSTALL_CMD expects "$pattern" to hold the dependency pattern
+#	and "$dir" to hold the package directory path associated with
+#	that dependency pattern.
+#
+_DEPENDS_INSTALL_CMD=							\
+	pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;		\
+	case "$$pkg" in							\
+	"")								\
+		${STEP_MSG} "Required installed package $$pattern: NOT found"; \
+		target=${DEPENDS_TARGET:Q};				\
+		${STEP_MSG} "Verifying $$target for $$dir";		\
+		if ${TEST} ! -d "$$dir"; then				\
+			${ERROR_MSG} "[depends.mk] The directory \`\`$$dir'' does not exist."; \
+			exit 1;						\
+		fi;							\
+		cd $$dir;						\
+		${SETENV} _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}" PKGNAME_REQD="$$pattern" ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes $$target; \
 		pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;	\
 		case "$$pkg" in						\
-		"")							\
-			${STEP_MSG} "Required installed package $$pattern: NOT found"; \
-			target=${DEPENDS_TARGET:Q};			\
-			${STEP_MSG} "Verifying $$target for $$dir";	\
-			if ${TEST} ! -d "$$dir"; then			\
-				${ERROR_MSG} "[depends.mk] The directory \`\`$$dir'' does not exist."; \
-				exit 1;					\
-			fi;						\
-			cd $$dir;					\
-			${SETENV} _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}" PKGNAME_REQD="$$pattern" ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes $$target;	\
-			pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`; \
-			case "$$pkg" in					\
-			"")	${ERROR_MSG} "[depends.mk] A package matching \`\`$$pattern'' should"; \
-				${ERROR_MSG} "    be installed, but one cannot be found.  Perhaps there is a"; \
-				${ERROR_MSG} "    stale work directory for $$dir?"; \
-				exit 1;					\
-			esac;						\
-			${STEP_MSG} "Returning to build of ${PKGNAME}"; \
-			;;						\
-		*)							\
-			objfmt=`${PKG_INFO} -Q OBJECT_FMT "$$pkg"`;	\
-			case "$$objfmt" in				\
-			"")	${WARNING_MSG} "[depends.mk] Unknown object format for installed package $$pkg" ;; \
-			${OBJECT_FMT})	;;				\
-			*)	${ERROR_MSG} "[depends.mk] Installed package $$pkg has an"; \
-				${ERROR_MSG} "    object format \`\`$$objfmt'' which differs from \`\`${OBJECT_FMT}''.  Please"; \
-				${ERROR_MSG} "    update the $$pkg package to ${OBJECT_FMT}."; \
-				exit 1;					\
-				;;					\
-			esac;						\
-			${STEP_MSG} "Required installed package $$pattern: $$pkg found"; \
+		"")	${ERROR_MSG} "[depends.mk] A package matching \`\`$$pattern'' should"; \
+			${ERROR_MSG} "    be installed, but one cannot be found.  Perhaps there is a"; \
+			${ERROR_MSG} "    stale work directory for $$dir?"; \
+			exit 1;						\
+		esac;							\
+		${STEP_MSG} "Returning to build of ${PKGNAME}";		\
+		;;							\
+	*)								\
+		objfmt=`${PKG_INFO} -Q OBJECT_FMT "$$pkg"`;		\
+		case "$$objfmt" in					\
+		"")	${WARNING_MSG} "[depends.mk] Unknown object format for installed package $$pkg" ;; \
+		${OBJECT_FMT})	;;					\
+		*)	${ERROR_MSG} "[depends.mk] Installed package $$pkg has an"; \
+			${ERROR_MSG} "    object format \`\`$$objfmt'' which differs from \`\`${OBJECT_FMT}''.  Please"; \
+			${ERROR_MSG} "    update the $$pkg package to ${OBJECT_FMT}."; \
+			exit 1;						\
 			;;						\
 		esac;							\
-	done
+		${STEP_MSG} "Required installed package $$pattern: $$pkg found"; \
+		;;							\
+	esac

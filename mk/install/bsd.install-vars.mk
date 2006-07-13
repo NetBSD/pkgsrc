@@ -1,4 +1,4 @@
-# $NetBSD: bsd.install-vars.mk,v 1.2 2006/06/06 15:28:52 jlam Exp $
+# $NetBSD: bsd.install-vars.mk,v 1.3 2006/07/13 14:02:34 jlam Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -19,9 +19,8 @@ NO_MTREE=	yes
 .if (${PKG_INSTALLATION_TYPE} == "pkgviews") && defined(CROSSBASE)
 NO_MTREE=	yes
 .endif
-.if !defined(NO_MTREE)  
-USE_TOOLS+=	mtree 
-.endif
+
+USE_TOOLS+=	${NO_MTREE:D:Umtree\:bootstrap}
 
 # If MANZ is defined, then we want the final man pages to be compressed.
 # If MANZ is not defined, then we want the final man pages to be
