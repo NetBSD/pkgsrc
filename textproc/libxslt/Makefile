@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2006/06/13 15:54:04 drochner Exp $
+# $NetBSD: Makefile,v 1.66.2.1 2006/07/13 21:52:36 salo Exp $
 
 DISTNAME=	libxslt-1.1.17
 CATEGORIES=	textproc
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--without-python
 
 TEST_TARGET=		check
 
-BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.17
+BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.25
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
