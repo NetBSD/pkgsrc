@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2006/04/11 05:24:36 martti Exp $
+$NetBSD: distinfo,v 1.6 2006/07/13 07:59:37 martti Exp $
 
-SHA1 (all_locales-1.4.6-20060409.tar.bz2) = 4a6b748d4558c516a0c65b6889ce4ab32876a7eb
-RMD160 (all_locales-1.4.6-20060409.tar.bz2) = 31cdc3c9943655ded9e675fd5ed75f109c606178
-Size (all_locales-1.4.6-20060409.tar.bz2) = 2536805 bytes
+SHA1 (all_locales-1.4.7-20060702.tar.bz2) = c2fae886d889eb6b0456a8533e64f89889e9fa08
+RMD160 (all_locales-1.4.7-20060702.tar.bz2) = 376317fa9975f1898469c27155c04775ad6c615c
+Size (all_locales-1.4.7-20060702.tar.bz2) = 2614000 bytes
