@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: checksum,v 1.2 2006/07/13 15:48:07 jlam Exp $
+# $NetBSD: checksum,v 1.3 2006/07/13 16:02:09 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -91,10 +91,10 @@ if ${TEST} ! -f "$distinfo"; then
 fi
 
 digestcmd=
-case ${DIGEST} in
+case "${DIGEST}" in
 /*)
-	if ${TEST} -x "$i/${DIGEST}"; then
-		digestcmd="$i/${DIGEST}"
+	if ${TEST} -x "${DIGEST}"; then
+		digestcmd="${DIGEST}"
 	fi
 	;;
 *)
