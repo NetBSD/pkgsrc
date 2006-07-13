@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/12/12 20:25:09 bad Exp $
+@comment $NetBSD: PLIST,v 1.5 2006/07/13 17:37:34 bad Exp $
 bin/fwb_install
 bin/fwbedit
 bin/fwblookup
@@ -39,6 +39,8 @@ share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.0.9.html
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.0.9.txt
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.0.10.html
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.0.10.txt
+share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.0.11.html
+share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.0.11.txt
 share/doc/fwbuilder-${PKGVERSION}/PatchAcceptancePolicy.txt
 @dirrm share/doc/fwbuilder-${PKGVERSION}
 share/fwbuilder/locale/fwbuilder_de.qm
