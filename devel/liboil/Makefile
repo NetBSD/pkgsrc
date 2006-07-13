@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/07/13 17:04:51 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2006/07/13 18:23:14 rillig Exp $
 #
 
 DISTNAME=	liboil-0.3.6
@@ -21,8 +21,11 @@ PKGCONFIG_OVERRIDE+=	liboil.pc.in
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_PLATFORM:MSunOS-5.8-*)
-pre-configure:
-	${ECHO} "#include <inttypes.h>" > ${BUILDLINK_DIR}/include/stdint.h
+SUBST_CLASSES+=		solaris
+SUBST_STAGE.solaris=	pre-configure
+SUBST_MESSAGES.solaris=	Replacing <stdint.h> with <inttypes.h>
+SUBST_FILES.solaris=	liboil/*.h
+SUBST_SED.solaris=	-e 's,<stdint\.h>,<inttypes.h>,'
 .endif
 
 .include "../../mk/bsd.pkg.mk"
