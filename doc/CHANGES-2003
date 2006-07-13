@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2003,v 1.6 2005/10/12 12:36:02 wiz Exp $
+$NetBSD: CHANGES-2003,v 1.7 2006/07/13 10:47:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2003:
 
@@ -3897,7 +3897,7 @@ Changes to the packages collection and infrastructure in 2003:
 	Updated mjpegtools to 1.6.1.90nb2 [recht 2003-09-23]	
 	Updated libbonobo to 2.2.0nb3 [recht 2003-09-23]	
 	Updated libbonoboui to 2.2.4nb1 [recht 2003-09-23]	
-	Updated libglade to 2.0.1nb10 [recht 2003-09-23]	
+	Updated libglade2 to 2.0.1nb10 [recht 2003-09-23]	
 	Updated neon to 0.24.1nb1 [recht 2003-09-23]
 	Updated dovecot to 0.99.10nb1 [salo 2003-09-23]
 	Updated snort to 2.0.2 [salo 2003-09-23]
