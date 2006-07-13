@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2006/03/12 06:58:42 minskim Exp $
+$NetBSD: distinfo,v 1.7 2006/07/13 17:37:34 bad Exp $
 
-SHA1 (fwbuilder-2.0.10.tar.gz) = da0114e712e541b763de33a9d5146e3b9f733b34
-RMD160 (fwbuilder-2.0.10.tar.gz) = 8f17ab4d7271dee54c56ef89161ede6ea108ee58
-Size (fwbuilder-2.0.10.tar.gz) = 1385925 bytes
+SHA1 (fwbuilder-2.0.12.tar.gz) = 5947236e365ef085ebebd4fec85935cb99b9b64c
+RMD160 (fwbuilder-2.0.12.tar.gz) = 7d3ae613ac015650333d2e9f980c8d688e320cd2
+Size (fwbuilder-2.0.12.tar.gz) = 1389953 bytes
 SHA1 (patch-aa) = dadac6310b0d27c326209867ee356610907f099c
 SHA1 (patch-ab) = 19a0c4801785536b0e95e328fe7569c155308ce6
 SHA1 (patch-ac) = 74f94531167bebc473299bbc8d636173de7a5e3a
