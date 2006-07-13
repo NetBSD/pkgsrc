@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: checksum,v 1.1 2006/07/13 14:02:34 jlam Exp $
+# $NetBSD: checksum,v 1.2 2006/07/13 15:48:07 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -128,14 +128,14 @@ ${CAT} $distinfo |
 		${TEST} "$d_alg" = "$algorithm" || continue
 	fi
 
-	eval "tmp=\$_alg_${d_alg}"
+	eval "tmp=\"\$_alg_${d_alg}\""
 	${TEST} -n "$tmp" || eval "_alg_${d_alg}=\"$@\""
 
 	d_file="${d_file#(}"; d_file="${d_file%)}"
 	for file in "$@"; do
 		${TEST} "$d_file" = "$file" || continue
 		
-		eval "tmp=\$_alg_${d_alg}"
+		eval "tmp=\"\$_alg_${d_alg}\""
 		case "$tmp" in
 		"$file"|"$file "*)	tmp_pre= ;;
 		*" $file")		tmp_pre="${tmp%% $file}" ;;
@@ -163,11 +163,11 @@ ${CAT} $distinfo |
 		break
 	done
 
-	eval "tmp=\$_alg_${d_alg}"
+	eval "tmp=\"\$_alg_${d_alg}\""
 	${TEST} -n "$tmp" || eval "_alg_${d_alg}=DONE"
   done
   if ${TEST} -n "$algorithm"; then
-	eval "tmp=\$_alg_${algorithm}"
+	eval "tmp=\"\$_alg_${algorithm}\""
 	${TEST} -n "$tmp" || tmp="$@"
 	if ${TEST} "$tmp" != DONE; then
 		for file in $tmp; do
