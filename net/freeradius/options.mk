@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.8 2006/05/31 18:22:24 ghen Exp $
+# $NetBSD: options.mk,v 1.9 2006/07/13 22:20:35 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freeradius
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	dbm
 PKG_OPTIONS_GROUP.dbm=	bdb gdbm
 
-PKG_SUPPORTED_OPTIONS=	ldap mysql pgsql snmp
+PKG_SUPPORTED_OPTIONS=	ldap mysql pgsql snmp kerberos
 PKG_SUGGESTED_OPTIONS=	gdbm
 
 .include "../../mk/bsd.options.mk"
@@ -52,7 +52,7 @@ CONFIGURE_ARGS+=	--without-rlm_sql_postgresql
 ### Use MySQL for storing user details
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
-.	include "../../mk/mysql.buildlink3.mk"
+.  include "../../mk/mysql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-rlm_sql_mysql
 PLIST_SRC+=		${PKGDIR}/PLIST.mysql
 .else
@@ -73,4 +73,18 @@ CONFIGURE_ARGS+=	--without-rlm_sql_mysql
 CONFIGURE_ARGS+=	--with-snmp
 .else
 CONFIGURE_ARGS+=	--without-snmp
+.endif
+
+###
+### Use kerberos 5
+###
+.if !empty(PKG_OPTIONS:Mkerberos)
+.  include "../../mk/krb5.buildlink3.mk"
+CONFIGURE_ARGS+=        --with-rlm_krb5
+.  if defined(KRB5_TYPE) && ${KRB5_TYPE} == "heimdal"
+CONFIGURE_ARGS+=	--enable-heimdal-krb5
+.  endif
+PLIST_SRC+=		${PKGDIR}/PLIST.kerberos
+.else
+CONFIGURE_ARGS+=	--without-rlm_krb5
 .endif
