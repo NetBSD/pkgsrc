@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.720 2006/07/13 20:58:24 adrianp Exp $
+$NetBSD: CHANGES-2006,v 1.721 2006/07/13 21:24:04 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3373,3 +3373,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated security/fwbuilder to 2.0.12 [bad 2006-07-13]
 	Updated www/horde to 3.1.2 [adrianp 2006-07-13]
 	Updated mail/imp to 4.1.2 [adrianp 2006-07-13]
+	Updated time/kronolith to 2.1.2 [adrianp 2006-07-13]
