@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.718 2006/07/13 17:39:11 bad Exp $
+$NetBSD: CHANGES-2006,v 1.719 2006/07/13 20:44:39 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3371,3 +3371,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated net/openslp to 1.2.1nb1 [he 2006-07-13]
 	Updated security/libfwbuilder to 2.0.12 [bad 2006-07-13]
 	Updated security/fwbuilder to 2.0.12 [bad 2006-07-13]
+	Updated www/horde to 3.1.2 [adrianp 2006-07-13]
