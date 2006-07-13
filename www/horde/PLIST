@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/06/16 09:23:21 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.12 2006/07/13 20:41:51 adrianp Exp $
 share/doc/horde/CHANGES
 share/doc/horde/CODING_STANDARDS
 share/doc/horde/CONTRIBUTING
@@ -48,6 +48,7 @@ share/horde/js/alphaImageLoader.php
 share/horde/js/enter_key_trap.js
 share/horde/js/form_assign.js
 share/horde/js/form_helpers.js
+share/horde/js/form_sections.js
 share/horde/js/hideable.js
 share/horde/js/horde.ie.js
 share/horde/js/horde.js
@@ -281,18 +282,6 @@ share/horde/lib/Horde/Prefs/kolab.php
 share/horde/lib/Horde/Prefs/ldap.php
 share/horde/lib/Horde/Prefs/session.php
 share/horde/lib/Horde/Prefs/sql.php
-share/horde/lib/Horde/RDO.php
-share/horde/lib/Horde/RDO/Criteria.php
-share/horde/lib/Horde/RDO/Exception.php
-share/horde/lib/Horde/RDO/Mapper.php
-share/horde/lib/Horde/RDO/MetaData.php
-share/horde/lib/Horde/RDO/Results.php
-share/horde/lib/Horde/RDO/Storage.php
-share/horde/lib/Horde/RDO/Storage/mysql.php
-share/horde/lib/Horde/RDO/Storage/peardb.php
-share/horde/lib/Horde/RDO/Storage/pgsql.php
-share/horde/lib/Horde/RDO/Storage/sql.php
-share/horde/lib/Horde/RDO/Storage/sqlite.php
 share/horde/lib/Horde/RPC.php
 share/horde/lib/Horde/RPC/rest.php
 share/horde/lib/Horde/RPC/soap.php
@@ -300,7 +289,6 @@ share/horde/lib/Horde/RPC/syncml.php
 share/horde/lib/Horde/RPC/syncml_wbxml.php
 share/horde/lib/Horde/RPC/webdav.php
 share/horde/lib/Horde/RPC/xmlrpc.php
-share/horde/lib/Horde/Rampage.php
 share/horde/lib/Horde/Registry.php
 share/horde/lib/Horde/SQL.php
 share/horde/lib/Horde/SQL/Attributes.php
@@ -312,7 +300,7 @@ share/horde/lib/Horde/Serialize.php
 share/horde/lib/Horde/SessionHandler.php
 share/horde/lib/Horde/SessionHandler/dbm.php
 share/horde/lib/Horde/SessionHandler/ldap.php
-share/horde/lib/Horde/SessionHandler/memcached.php
+share/horde/lib/Horde/SessionHandler/memcache.php
 share/horde/lib/Horde/SessionHandler/mysql.php
 share/horde/lib/Horde/SessionHandler/none.php
 share/horde/lib/Horde/SessionHandler/oci8.php
@@ -584,7 +572,9 @@ share/horde/scripts/sql/create.msde.sql
 share/horde/scripts/sql/create.mysql.sql
 share/horde/scripts/sql/create.oci8.sql
 share/horde/scripts/sql/create.pgsql.sql
+share/horde/scripts/sql/create.sql
 share/horde/scripts/sql/create.sybase.sql
+share/horde/scripts/sql/create.xml
 share/horde/scripts/sql/horde_datatree.mssql.sql
 share/horde/scripts/sql/horde_datatree.mysql.sql
 share/horde/scripts/sql/horde_datatree.sql
@@ -612,9 +602,13 @@ share/horde/scripts/sql/script.initial_horde_user.sql
 share/horde/scripts/temp-cleanup.cron
 share/horde/scripts/themes_check.php
 share/horde/scripts/upgrades/2.2_to_3.0.mysql.sql
+share/horde/scripts/upgrades/2.2_to_3.0.oci8.sql
 share/horde/scripts/upgrades/2.2_to_3.0.pgsql.sql
 share/horde/scripts/upgrades/2005-09-22_horde_prefs_varchar2.oci8.sql
+share/horde/scripts/upgrades/2006-06-29_horde_prefs_indexes.sql
 share/horde/scripts/upgrades/3.0_to_3.1.mysql.sql
+share/horde/scripts/upgrades/3.0_to_3.1.oci8.sql
+share/horde/scripts/upgrades/3.0_to_3.1.sql
 share/horde/scripts/upgrades/move_history_out_of_datatree.php
 share/horde/services/cacheview.php
 share/horde/services/changepassword.php
@@ -721,7 +715,6 @@ share/horde/services/prefs.php
 share/horde/services/problem.php
 share/horde/services/resetpassword.php
 share/horde/services/shares/edit.php
-share/horde/services/toggle_js.php
 share/horde/signup.php
 share/horde/templates/admin/common-header.inc
 share/horde/templates/admin/groups/addchild.inc
@@ -753,7 +746,6 @@ share/horde/templates/help/about.inc
 share/horde/templates/help/index.inc
 share/horde/templates/help/menu.inc
 share/horde/templates/index/frames_index.inc
-share/horde/templates/javascript/form_sections.js
 share/horde/templates/javascript/htmlarea.js
 share/horde/templates/javascript/htmlarea_anselimage_lang.js
 share/horde/templates/javascript/htmlarea_context_lang.js
@@ -766,7 +758,6 @@ share/horde/templates/javascript/open_google_win.js
 share/horde/templates/javascript/open_html_helper.js
 share/horde/templates/javascript/print.js
 share/horde/templates/javascript/quoteBlocks.js
-share/horde/templates/javascript/test_javascript.js
 share/horde/templates/javascript/tree.js
 share/horde/templates/login/login.inc
 share/horde/templates/login/mobile.inc
@@ -1672,8 +1663,6 @@ share/horde/util/regex_test.php
 @dirrm share/horde/lib/Horde/Scheduler
 @dirrm share/horde/lib/Horde/SQL
 @dirrm share/horde/lib/Horde/RPC
-@dirrm share/horde/lib/Horde/RDO/Storage
-@dirrm share/horde/lib/Horde/RDO
 @dirrm share/horde/lib/Horde/Prefs
 @dirrm share/horde/lib/Horde/Perms
 @dirrm share/horde/lib/Horde/Notification/Listener
