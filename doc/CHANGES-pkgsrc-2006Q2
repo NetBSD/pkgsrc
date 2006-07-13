@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.24 2006/07/13 15:21:46 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.25 2006/07/13 21:57:48 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -55,3 +55,5 @@ Pullup ticket 1739 - requested by martti
 squirrelmail-locales update
 Pullup ticket 1737 - requested by joerg
 portability fix for wxGTK
+Pullup ticket 1740 - requested by drochner
+dependency fix for libxslt
