@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.54 2006/07/13 14:54:00 jlam Exp $
+# $NetBSD: bootstrap,v 1.55 2006/07/13 21:27:06 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -51,6 +51,7 @@ usage="Usage: $0 "'
     [ --workdir <workdir> ]
     [ --prefix <prefix> ]
     [ --pkgdbdir <pkgdbdir> ]
+    [ --pkgmandir <pkgmandir> ]
     [ --sysconfdir <sysconfdir> ]
     [ --varbase <varbase> ]
     [ --fetch-cmd <ftp command> ]
@@ -245,6 +246,7 @@ echo_msg "bootstrap started: $build_start"
 # whether they will be system wide or user specific
 prefix=
 pkgdbdir=
+pkgmandir=
 sysconfdir=
 varbase=
 
@@ -256,6 +258,8 @@ while [ $# -gt 0 ]; do
 	--prefix)	prefix="$2"; shift ;;
 	--pkgdbdir=*)	pkgdbdir=`get_optarg "$1"` ;;
 	--pkgdbdir)	pkgdbdir="$2"; shift ;;
+	--pkgmandir=*)	pkgmandir=`get_optarg "$1"` ;;
+	--pkgmandir)	pkgmandir="$2"; shift ;;
 	--sysconfdir=*)	sysconfdir=`get_optarg "$1"` ;;
 	--sysconfdir)	sysconfdir="$2"; shift ;;
 	--varbase=*)	varbase=`get_optarg "$1"` ;;
@@ -276,14 +280,19 @@ done
 if [ "$ignoreusercheck" = "yes" ]; then
 	[ -z "$prefix" ] && prefix=${HOME}/pkg
 	[ -z "$pkgdbdir" ] && pkgdbdir=${prefix}/var/db/pkg
-	[ -z "$sysconfdir" ] && sysconfdir=${prefix}/etc
 	[ -z "$varbase" ] && varbase=${prefix}/var
 else
 	[ -z "$prefix" ] && prefix=/usr/pkg
 	[ -z "$pkgdbdir" ] && pkgdbdir=/var/db/pkg
-	[ -z "$sysconfdir" ] && sysconfdir=${prefix}/etc
 	[ -z "$varbase" ] && varbase=/var
 fi
+if [ "$prefix" = "/usr" ]; then
+	[ -z "$pkgmandir" ] && pkgmandir=share/man
+else
+	[ -z "$pkgmandir" ] && pkgmandir=man
+fi
+mandir=${prefix}/${pkgmandir}
+[ -z "$sysconfdir" ] && sysconfdir=${prefix}/etc
 
 if [ "x$preserve_path" != "xyes" ]; then
 	PATH="$PATH:/sbin:/usr/sbin"
@@ -644,12 +653,13 @@ if [ "${sysconfdir}" != "${prefix}/etc" ]; then
 	echo "PKG_SYSCONFBASE=	$sysconfdir" >> ${MKCONF_EXAMPLE}
 fi
 echo "PKG_TOOLS_BIN=		$prefix/sbin" >> ${MKCONF_EXAMPLE}
+echo "PKGMANDIR=		$pkgmandir" >> ${MKCONF_EXAMPLE}
 echo "" >> ${MKCONF_EXAMPLE}
 
 # create directories
 mkdir_p $prefix $pkgdbdir $prefix/sbin
-mkdir_p $prefix/man/man1 $prefix/man/cat1
-mkdir_p $prefix/man/man8 $prefix/man/cat8
+mkdir_p $mandir/man1 $mandir/cat1
+mkdir_p $mandir/man8 $mandir/cat8
 
 # bootstrap make and *.mk files
 mkdir_p $prefix/share/mk $prefix/lib
@@ -710,7 +720,7 @@ echo_msg "Installing bmake"
 copy_src ../devel/bmake/files bmake
 run_cmd "(cd $wrkdir/bmake && env CPPFLAGS='$CPPFLAGS -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../../libnbcompat' LIBS='-lnbcompat' $bmakexenv $shprog ./boot-strap -q -o $opsys --prefix=$prefix --sysconfdir=$sysconfdir --mksrc none --with-default-sys-path="$prefix/share/mk" $bmakexargs)"
 run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 $wrkdir/bmake/$opsys/bmake $prefix/bin/bmake"
-#run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 644 $wrkdir/bmake/$opsys/bmake.1 $prefix/man/man1/bmake.1"
+#run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 644 $wrkdir/bmake/$opsys/bmake.1 $mandir/man1/bmake.1"
 
 bmake=$prefix/bin/bmake
 
@@ -772,15 +782,11 @@ esac
 # bootstrap pkg_install
 echo_msg "Installing pkgtools"
 copy_src ../pkgtools/pkg_install/files pkg_install
-pkg_install_mandir="$prefix/man"
-if [ "$prefix" = "/usr" ]; then
-	pkg_install_mandir="$prefix/share/man"
-fi
-run_cmd "(cd $wrkdir/pkg_install; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat -L../../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir --with-pkgdbdir=$pkgdbdir --mandir=$pkg_install_mandir $pkg_install_args && $bmake && $bmake install)"
+run_cmd "(cd $wrkdir/pkg_install; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat -L../../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir --with-pkgdbdir=$pkgdbdir --mandir=$mandir && $bmake && $bmake install)"
 
 # all's ready, install the man page
 echo_msg "Installing packages(7) man page"
-run_cmd "$shprog $wrkdir/install-sh -c -m 444 files/packages.cat7 $prefix/man/cat7/packages.0"
+run_cmd "$shprog $wrkdir/install-sh -c -m 444 files/packages.cat7 $mandir/cat7/packages.0"
 
 # opsys specific fiddling
 opsys_finish
