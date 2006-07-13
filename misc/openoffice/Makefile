@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2006/02/05 23:10:13 joerg Exp $
+# $NetBSD: Makefile,v 1.74 2006/07/13 11:07:23 hira Exp $
 
 DISTNAME=		openoffice-1.1.5
 PKGREVISION=		1
@@ -27,7 +27,7 @@ USE_LANGUAGES+=		c c++
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake imake perl
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
 
