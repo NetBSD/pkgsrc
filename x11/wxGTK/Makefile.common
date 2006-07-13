@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2006/03/30 15:28:12 joerg Exp $
+# $NetBSD: Makefile.common,v 1.8.2.1 2006/07/13 15:21:16 salo Exp $
 #
 
 DISTNAME=		wxGTK-2.6.3
@@ -12,7 +12,7 @@ HOMEPAGE=		http://www.wxwidgets.org/
 PATCHDIR=		${.CURDIR}/../../x11/wxGTK/patches
 DISTINFO_FILE=		${.CURDIR}/../../x11/wxGTK/distinfo
 
-PATCHFILES=		${DISTNAME}-libtool.diff.bz2
+PATCHFILES=		${DISTNAME}-libtool.diff2.bz2
 PATCH_SITES=		${MASTER_SITE_LOCAL}
 
 USE_TOOLS+=		pkg-config msgfmt
