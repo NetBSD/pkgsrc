@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2006/02/27 07:12:13 martti Exp $
+@comment $NetBSD: PLIST,v 1.18 2006/07/13 07:59:34 martti Exp $
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
 share/squirrelmail/COPYING
@@ -65,6 +65,7 @@ share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.3.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.3a.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.4.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.5.txt
+share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.6.txt
 share/squirrelmail/doc/authentication.txt
 share/squirrelmail/doc/db-backend.txt
 share/squirrelmail/doc/ie_ssl.txt
@@ -364,12 +365,17 @@ share/squirrelmail/src/view_text.php
 share/squirrelmail/src/webmail.php
 share/squirrelmail/themes/README.themes
 share/squirrelmail/themes/alien_glow.php
+share/squirrelmail/themes/autumn.php
+share/squirrelmail/themes/autumn2.php
 share/squirrelmail/themes/black_bean_burrito_theme.php
 share/squirrelmail/themes/blue_grey_theme.php
+share/squirrelmail/themes/blue_on_blue.php
 share/squirrelmail/themes/bluesnews_theme.php
 share/squirrelmail/themes/bluesome.php
 share/squirrelmail/themes/bluesteel_theme.php
 share/squirrelmail/themes/christmas.php
+share/squirrelmail/themes/classic_blue.php
+share/squirrelmail/themes/classic_blue2.php
 share/squirrelmail/themes/css/comic-sans-08.css
 share/squirrelmail/themes/css/comic-sans-10.css
 share/squirrelmail/themes/css/comic-sans-12.css
@@ -407,6 +413,7 @@ share/squirrelmail/themes/monostochastic.php
 share/squirrelmail/themes/netstyle_theme.php
 share/squirrelmail/themes/penguin.php
 share/squirrelmail/themes/plain_blue_theme.php
+share/squirrelmail/themes/powder_blue.php
 share/squirrelmail/themes/purple_theme.php
 share/squirrelmail/themes/random.php
 share/squirrelmail/themes/redmond.php
@@ -422,6 +429,8 @@ share/squirrelmail/themes/slashdot_theme.php
 share/squirrelmail/themes/spice_of_life.php
 share/squirrelmail/themes/spice_of_life_dark.php
 share/squirrelmail/themes/spice_of_life_lite.php
+share/squirrelmail/themes/techno_blue.php
+share/squirrelmail/themes/turquoise.php
 share/squirrelmail/themes/wood_theme.php
 @dirrm share/squirrelmail/themes/css
 @dirrm share/squirrelmail/themes
