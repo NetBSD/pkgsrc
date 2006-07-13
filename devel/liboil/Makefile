@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/04 21:29:17 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2006/07/13 17:04:51 rillig Exp $
 #
 
 DISTNAME=	liboil-0.3.6
@@ -17,5 +17,12 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 PKGCONFIG_OVERRIDE+=	liboil-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	liboil.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MACHINE_PLATFORM:MSunOS-5.8-*)
+pre-configure:
+	${ECHO} "#include <inttypes.h>" > ${BUILDLINK_DIR}/include/stdint.h
+.endif
 
 .include "../../mk/bsd.pkg.mk"
