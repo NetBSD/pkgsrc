@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2006/06/25 19:53:13 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.7 2006/07/13 21:21:29 adrianp Exp $
 
 DISTNAME=	kronolith-h3-${KRONOLITHVER}
 PKGNAME=	kronolith-${KRONOLITHVER}
-PKGREVISION=	2
 CATEGORIES=	www time
 MASTER_SITES=	http://ftp.horde.org/pub/kronolith/ \
 		ftp://ftp.horde.org/pub/kronolith/
@@ -21,7 +20,7 @@ DOCDIR=		${PREFIX}/share/doc/kronolith
 EGDIR=		${PREFIX}/share/examples/kronolith
 HORDEDIR=	${PREFIX}/share/horde
 KRONOLITHDIR=	${HORDEDIR}/kronolith
-KRONOLITHVER=	2.1.1
+KRONOLITHVER=	2.1.2
 PAXDIRS=	js lib locale po scripts templates themes
 
 MESSAGE_SUBST+=	KRONOLITHDIR=${KRONOLITHDIR:Q}
@@ -51,9 +50,9 @@ CONF_FILES_PERMS+=	${KRONOLITHDIR}/config/prefs.php.dist \
 			${APACHE_USER} ${ROOT_GROUP} 0440
 
 do-build:
-	@${CP} ${FILESDIR}/kronolith.conf.dist ${WRKSRC}/kronolith.conf.dist
-	@${CP} ${WRKSRC}/config/conf.xml ${WRKSRC}/config/conf.xml.dist
-	@${FIND} ${WRKSRC} -name .htaccess -print | ${XARGS} ${RM} -f
+	${CP} ${FILESDIR}/kronolith.conf.dist ${WRKSRC}/kronolith.conf.dist
+	${CP} ${WRKSRC}/config/conf.xml ${WRKSRC}/config/conf.xml.dist
+	${FIND} ${WRKSRC} -name .htaccess -print | ${XARGS} ${RM} -f
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
@@ -71,16 +70,16 @@ do-install:
 .	endfor
 
 .	for d in ${PAXDIRS}
-		@cd ${WRKSRC}/${d} && ${PAX} -rwpma . ${KRONOLITHDIR}/${d}
+		cd ${WRKSRC}/${d} && ${PAX} -rwpma . ${KRONOLITHDIR}/${d}
 .	endfor
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${KRONOLITHDIR}/config
 	${INSTALL_DATA} ${WRKSRC}/*.php ${KRONOLITHDIR}
-	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${KRONOLITHDIR}
-	@${FIND} ${KRONOLITHDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	@${FIND} ${KRONOLITHDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
-	@${CHOWN} ${APACHE_USER}:${SHAREGRP} ${KRONOLITHDIR}/config
-	@${CHMOD} 0750 ${KRONOLITHDIR}/config
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${KRONOLITHDIR}
+	${FIND} ${KRONOLITHDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${KRONOLITHDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
+	${CHOWN} ${APACHE_USER}:${SHAREGRP} ${KRONOLITHDIR}/config
+	${CHMOD} 0750 ${KRONOLITHDIR}/config
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
