@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.22 2006/07/11 16:40:24 salo Exp $
+$NetBSD: CHANGES-pkgsrc-2006Q2,v 1.1.2.23 2006/07/13 12:33:31 salo Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2006Q2 branch:
@@ -49,3 +49,7 @@ Pullup ticket 1735 - requested by minskim
 build and runtime fixes for jakarta-tomcat5
 Pullup ticket 1736 - requested by ghen
 security fix for samba
+Pullup ticket 1738 - requested by martti
+security update for squirrelmail
+Pullup ticket 1739 - requested by martti
+squirrelmail-locales update
