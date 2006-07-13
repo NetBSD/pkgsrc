@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2006/04/06 06:21:32 reed Exp $
+# $NetBSD: builtin.mk,v 1.7 2006/07/13 13:04:54 heinz Exp $
 
 BUILTIN_PKG:=	bzip2
 
@@ -19,6 +19,31 @@ IS_BUILTIN.bzip2=	yes
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.bzip2
+
+###
+### If there is a built-in implementation, then set BUILTIN_PKG.<pkg> to
+### a package name to represent the built-in package.
+###
+.if !defined(BUILTIN_PKG.bzip2) && \
+    !empty(IS_BUILTIN.bzip2:M[yY][eE][sS])
+BUILTIN_VERSION.bzip2!=							\
+	${AWK} '/Copyright[ 	]+\(C\).*rights[ 	]+reserved/ {	\
+			years=$$3;					\
+		}							\
+		/bzip2\/libbzip2[ 	]+version[ 	]+/ {		\
+			vers=$$3;					\
+			if ( vers == "1.0" ) {				\
+				vers="1.0.1";				\
+				if ( years == "1996-2002" ) vers="1.0.2";\
+				if ( years == "1996-2005" ) vers="1.0.3";\
+			};						\
+			print vers;					\
+		};							\
+	' ${H_BZIP2:Q}
+
+BUILTIN_PKG.bzip2=	bzip2-${BUILTIN_VERSION.bzip2}
+.endif
+MAKEVARS+=    BUILTIN_PKG.bzip2
 
 ###
 ### Determine whether we should use the built-in implementation if it
