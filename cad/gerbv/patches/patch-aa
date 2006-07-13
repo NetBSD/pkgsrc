@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.5 2006/07/13 06:58:37 gson Exp $
+
+--- src/drill.c.orig	2005-01-09 23:51:57.000000000 +0200
++++ src/drill.c
+@@ -217,8 +217,8 @@ parse_drillfile(gerb_file_t *fd)
+ 	    /* KLUDGE. This function isn't allowed to return anything
+ 	       but inches */
+ 	    if(state->unit == MM) {
+-		(double)curr_net->start_x /= 25.4;
+-		(double)curr_net->start_y /= 25.4;
++		curr_net->start_x /= 25.4;
++		curr_net->start_y /= 25.4;
+ 		/* KLUDGE. All images, regardless of input format,
+ 		   are returned in INCH format */
+ 		curr_net->unit = INCH;
