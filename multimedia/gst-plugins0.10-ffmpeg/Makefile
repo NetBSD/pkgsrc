@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/06/14 10:53:23 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2006/07/13 14:19:04 joerg Exp $
 #
 
 DISTNAME=		gst-ffmpeg-0.10.1
@@ -12,6 +12,7 @@ COMMENT=		ffmpeg plugin for gstreamer
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+OVERRIDE_DIRDEPTH=	3
 USE_TOOLS+=		pkg-config gmake perl
 BUILD_ENV+=		PERL=${PERL5}
 
