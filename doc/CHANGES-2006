@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.717 2006/07/13 14:48:29 he Exp $
+$NetBSD: CHANGES-2006,v 1.718 2006/07/13 17:39:11 bad Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3369,3 +3369,5 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated comms/kyopon to 0.4 [itohy 2006-07-13]
 	Updated benchmarks/iozone to 3.263 [adam 2006-07-13]
 	Updated net/openslp to 1.2.1nb1 [he 2006-07-13]
+	Updated security/libfwbuilder to 2.0.12 [bad 2006-07-13]
+	Updated security/fwbuilder to 2.0.12 [bad 2006-07-13]
