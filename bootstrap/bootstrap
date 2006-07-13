@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.53 2006/07/11 18:04:08 jlam Exp $
+# $NetBSD: bootstrap,v 1.54 2006/07/13 14:54:00 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -35,7 +35,7 @@
 #
 #set -x
 
-BOOTSTRAP_VERSION=20051201
+BOOTSTRAP_VERSION=20060713
 
 ignorecasecheck=no
 ignoreusercheck=no
@@ -294,7 +294,6 @@ root_user=root
 bmakexenv=
 bmakexargs=
 tnftpxenv=
-digestxenv=
 case "$opsys" in
 Darwin)
 	root_group=wheel
@@ -366,8 +365,6 @@ IRIX*)
 	if [ `uname -r` -lt 6 ]; then
 # IRIX 5 does not have uint32_t typedef'd in sys/types.h
 		tnftpxenv="CPPFLAGS=-DUINT32_T=int"
-# IRIX 5 does not have snprintf() needed to compile digest
-		digestxenv="LDFLAGS=\"\$LDFLAGS -L../libnbcompat\" LIBS=-lnbcompat"
 # IRIX 5 is lacking fnmatch.h and regex.h, both provided by libnbcompat
 		needfnmatchh=yes
 		needregexh=yes
@@ -646,6 +643,7 @@ echo "VARBASE=		$varbase" >> ${MKCONF_EXAMPLE}
 if [ "${sysconfdir}" != "${prefix}/etc" ]; then
 	echo "PKG_SYSCONFBASE=	$sysconfdir" >> ${MKCONF_EXAMPLE}
 fi
+echo "PKG_TOOLS_BIN=		$prefix/sbin" >> ${MKCONF_EXAMPLE}
 echo "" >> ${MKCONF_EXAMPLE}
 
 # create directories
@@ -734,19 +732,6 @@ pkg_install_args="$pkg_install_args --with-ftp=$fetch_cmd"
 FETCH_CMD="$fetch_cmd"
 export FETCH_CMD
 echo "FETCH_CMD=			$fetch_cmd" >> ${MKCONF_EXAMPLE}
-
-# bootstrap digest
-echo_msg "Installing digest"
-copy_src ../pkgtools/digest/files digest
-run_cmd "(cd $wrkdir/digest; env $BSTRAP_ENV $digestxenv $shprog ./configure -C --prefix=$prefix --sysconfdir=$sysconfdir && $bmake && $bmake install)"
-
-# create the digest package's meta files
-digestversion=digest-`$awkprog -F\' '/^PACKAGE_VERSION=/ {print $2}' $wrkdir/digest/configure`
-$lsprog -ld $prefix/bin/digest | $awkprog '{ print $5 }' > $wrkdir/digest/.size
-env DIGESTPROG=$prefix/bin/digest PKG_DIGEST=md5 PKG_DBDIR=$pkgdbdir \
-	$shprog ./pkg.sh create -d $wrkdir/digest/DESCR -O \
-	-c '-Message digest wrapper utility' -l -p $prefix \
-	-f $wrkdir/digest/PLIST -s $wrkdir/digest/.size -S $wrkdir/digest/.size $digestversion
 
 # we often need NetBSD's pax as well, nowadays, to make binary packages
 case "$need_pax" in
