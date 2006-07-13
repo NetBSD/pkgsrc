@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1868 2006/07/10 22:59:27 jlam Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1869 2006/07/13 14:02:34 jlam Exp $
 #
 # This file is in the public domain.
 #
@@ -9,12 +9,17 @@
 #
 # Default sequence for "all" is:
 #
-#    fetch checksum depends tools extract patch wrapper configure build
+#    bootstrap-depends
+#    fetch
+#    checksum
+#    depends
+#    tools
+#    extract
+#    patch
+#    wrapper
+#    configure
+#    build
 #
-# Please read the comments in the targets section below, you
-# should be able to use the pre-* or post-* targets/scripts
-# (which are available for every stage except checksum) or
-# override the do-* targets to do pretty much anything you want.
 
 ############################################################################
 # Include any preferences, if not already included, and common definitions
@@ -28,11 +33,13 @@
 .include "${PKGSRCDIR}/mk/check/bsd.check-vars.mk"
 .include "${PKGSRCDIR}/mk/depends/bsd.depends-vars.mk"
 .include "${PKGSRCDIR}/mk/fetch/bsd.fetch-vars.mk"
+.include "${PKGSRCDIR}/mk/checksum/bsd.checksum-vars.mk"
 .include "${PKGSRCDIR}/mk/extract/bsd.extract-vars.mk"
 .include "${PKGSRCDIR}/mk/patch/bsd.patch-vars.mk"
 .include "${PKGSRCDIR}/mk/configure/bsd.configure-vars.mk"
 .include "${PKGSRCDIR}/mk/build/bsd.build-vars.mk"
 .include "${PKGSRCDIR}/mk/install/bsd.install-vars.mk"
+
 .include "${PKGSRCDIR}/mk/bsd.pkg.error.mk"
 
 .include "../../mk/bsd.hacks.mk"
@@ -108,14 +115,10 @@ BUILD_DEPENDS?=		# empty
 COMMENT?=		(no description)
 DEPENDS?=		# empty
 DESCR_SRC?=		${PKGDIR}/DESCR
-DIGEST_ALGORITHMS?=	SHA1 RMD160
-DISTINFO_FILE?=		${PKGDIR}/distinfo
 INTERACTIVE_STAGE?=	none
 MAINTAINER?=		pkgsrc-users@NetBSD.org
-PATCH_DIGEST_ALGORITHM?=SHA1
 PKGWILDCARD?=		${PKGBASE}-[0-9]*
 SVR4_PKGNAME?=		${PKGNAME}
-USE_DIGEST?=		YES
 WRKSRC?=		${WRKDIR}/${DISTNAME}
 
 .if (defined(INSTALL_UNSTRIPPED) && !empty(INSTALL_UNSTRIPPED:M[yY][eE][sS])) || defined(DEBUG_FLAGS)
@@ -125,7 +128,6 @@ _INSTALL_UNSTRIPPED=	# set (flag used by platform/*.mk)
 ##### Non-overridable constants
 
 # Latest versions of tools required for correct pkgsrc operation.
-DIGEST_REQD=		20010302
 PKGTOOLS_REQD=		${_OPSYS_PKGTOOLS_REQD:U20051103}
 
 ##### Transform USE_* into dependencies
@@ -366,27 +368,6 @@ OVERRIDE_DIRDEPTH?=	2
 # INSTALL/DEINSTALL script framework
 .include "../../mk/pkginstall/bsd.pkginstall.mk"
 
-.PHONY: uptodate-digest
-uptodate-digest:
-.if !empty(USE_DIGEST:M[yY][eE][sS])
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ -f ${DISTINFO_FILE} -a \( ! -f ${DIGEST} -o ${DIGEST_VERSION} -lt ${DIGEST_REQD} \) ]; then \
-		{ cd ${PKGSRCDIR}/pkgtools/digest;			\
-		${MAKE} clean;						\
-		if [ -f ${DIGEST} ]; then				\
-			${MAKE} ${MAKEFLAGS} deinstall;			\
-		fi;							\
-		${MAKE} ${MAKEFLAGS} ${_PKGSRC_BUILD_TARGETS};		\
-		if [ -f ${DIGEST} ]; then				\
-			${MAKE} ${MAKEFLAGS} deinstall;			\
-		fi;							\
-		${MAKE} ${MAKEFLAGS} ${DEPENDS_TARGET};			\
-		${MAKE} ${MAKEFLAGS} clean; } 				\
-	fi
-.else
-	@${DO_NADA}
-.endif
-
 # Define SMART_MESSAGES in /etc/mk.conf for messages giving the tree
 # of dependencies for building, and the current target.
 _PKGSRC_IN?=		===${SMART_MESSAGES:D> ${.TARGET} [${PKGNAME}${_PKGSRC_DEPS}] ===}
@@ -448,6 +429,8 @@ USE_TOOLS+=								\
 	egrep env false file find grep head hostname id install ln ls	\
 	mkdir mv pax pwd rm rmdir sed sh sort tail test touch tr true	\
 	wc xargs
+
+USE_TOOLS+=	${NO_CHECKSUM:D:Udigest\:bootstrap}
 
 # bsd.wrapper.mk
 USE_TOOLS+=	expr
@@ -645,22 +628,6 @@ all: ${_PKGSRC_BUILD_TARGETS}
 .endif
 
 ################################################################
-# The following are used to create easy dummy targets for
-# disabling some bit of default target behavior you don't want.
-# They still check to see if the target exists, and if so don't
-# do anything, since you might want to set this globally for a
-# group of packages in a Makefile.inc, but still be able to
-# override from an individual Makefile.
-################################################################
-
-# Disable checksum
-.PHONY: checksum
-.if (defined(NO_CHECKSUM) || exists(${_COOKIE.extract})) && !target(checksum)
-checksum: fetch
-	@${DO_NADA}
-.endif
-
-################################################################
 # More standard targets start here.
 #
 # These are the body of the build/install framework.  If you are
@@ -772,6 +739,9 @@ makedirs: ${.CURDIR}/${WRKDIR_BASENAME}
 # Fetch
 .include "${PKGSRCDIR}/mk/fetch/bsd.fetch.mk"
 
+# Checksum
+.include "${PKGSRCDIR}/mk/checksum/bsd.checksum.mk"
+
 # Extract
 .include "${PKGSRCDIR}/mk/extract/bsd.extract.mk"
 
@@ -839,157 +809,6 @@ su-target: .USE
 .PHONY: lint
 lint:
 	${_PKG_SILENT}${_PKG_DEBUG}${LOCALBASE}/bin/pkglint
-
-
-# Checksumming utilities
-
-.PHONY: makesum
-.if !target(makesum)
-.  if defined(NO_CHECKSUM) && !empty(NO_CHECKSUM:M[Yy][Ee][Ss])
-makesum:
-	@${DO_NADA}
-.  else
-makesum: fetch uptodate-digest
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	newfile=${DISTINFO_FILE}.$$$$;					\
-	if [ -f ${DISTINFO_FILE} ]; then				\
-		${GREP} '^.NetBSD' ${DISTINFO_FILE} > $$newfile ||	\
-			(${ECHO_N} "$$" > $$newfile &&			\
-			 ${ECHO_N} "NetBSD" >> $$newfile && 		\
-			 ${ECHO} "$$" >> $$newfile)			\
-	else								\
-		${ECHO_N} "$$" > $$newfile;				\
-		${ECHO_N} "NetBSD" >> $$newfile; 			\
-		${ECHO} "$$" >> $$newfile;				\
-	fi;								\
-	${ECHO} "" >> $$newfile;					\
-	cd ${DISTDIR};							\
-	for sumfile in "" ${_CKSUMFILES}; do				\
-		if [ "X$$sumfile" = "X" ]; then continue; fi;		\
-		for a in "" ${DIGEST_ALGORITHMS}; do			\
-			if [ "X$$a" = "X" ]; then continue; fi;		\
-			${DIGEST} $$a $$sumfile >> $$newfile;		\
-		done;							\
-		${WC} -c $$sumfile | ${AWK} '{ print "Size (" $$2 ") = " $$1 " bytes" }' >> $$newfile; \
-	done;								\
-	for ignore in "" ${_IGNOREFILES}; do				\
-		if [ "X$$ignore" = "X" ]; then continue; fi;		\
-		for a in "" ${DIGEST_ALGORITHMS}; do			\
-			if [ "X$$a" = "X" ]; then continue; fi;		\
-			${ECHO} "$$a ($$ignore) = IGNORE" >> $$newfile; \
-		done;							\
-	done;								\
-	if [ -f ${DISTINFO_FILE} ]; then				\
-		${AWK} '$$2 ~ /\(patch-[a-z0-9]+\)/ { print $$0 }' < ${DISTINFO_FILE} >> $$newfile; \
-	fi;								\
-	if ${CMP} -s $$newfile ${DISTINFO_FILE}; then			\
-		${RM} -f $$newfile;					\
-		${ECHO_MSG} "=> distinfo: distfiles part unchanged.";	\
-	else								\
-		${MV} $$newfile ${DISTINFO_FILE};			\
-	fi
-.  endif
-.endif
-
-.if !target(makepatchsum)
-makepatchsum mps: uptodate-digest
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	newfile=${DISTINFO_FILE}.$$$$;					\
-	if [ -f ${DISTINFO_FILE} ]; then				\
-		${AWK} '$$2 !~ /\(patch-[a-z0-9]+\)/ { print $$0 }' < ${DISTINFO_FILE} >> $$newfile; \
-	else \
-		${ECHO} "\$$""NetBSD""\$$" > $$newfile;			\
-		${ECHO} "" >> $$newfile;				\
-	fi;								\
-	if [ -d ${PATCHDIR} ]; then					\
-		(cd ${PATCHDIR};					\
-		for sumfile in "" patch-*; do				\
-			case $$sumfile in				\
-				"" | "patch-*") ;;			\
-				patch-local-* | *.orig | *.rej | *~) ;;	\
-				*)	${ECHO} "${PATCH_DIGEST_ALGORITHM} ($$sumfile) = `${SED} -e '/\$$NetBSD.*/d' $$sumfile | ${DIGEST} ${PATCH_DIGEST_ALGORITHM}`" >> $$newfile;; \
-			esac;						\
-		done);							\
-	fi;								\
-	if ${CMP} -s $$newfile ${DISTINFO_FILE}; then			\
-		${RM} -f $$newfile;					\
-		${ECHO_MSG} "=> distinfo: patches part unchanged.";	\
-	else								\
-		${MV} $$newfile ${DISTINFO_FILE};			\
-	fi
-.endif
-
-# This target is done by invoking a sub-make so that DISTINFO_FILE gets
-# re-evaluated after the "makepatchsum" target is made. This can be
-# made into:
-#makedistinfo mdi: makepatchsum makesum
-# once a combined distinfo file exists for all packages
-.if !target(makedistinfo)
-makedistinfo mdi distinfo: makepatchsum
-	${_PKG_SILENT}${_PKG_DEBUG}${MAKE} makesum
-.endif
-
-.PHONY: checksum
-.if !target(checksum)
-checksum: fetch uptodate-digest
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	if [ ! -f ${DISTINFO_FILE} ]; then				\
-		${ECHO_MSG} "=> No checksum file.";			\
-	else								\
-		(cd ${DISTDIR}; OK="true"; missing=""; 			\
-		  for file in "" ${_CKSUMFILES}; do			\
-		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
-			filesummed=false;				\
-			for a in ${DIGEST_ALGORITHMS}; do		\
-				CKSUM2=`${AWK} 'NF == 4 && $$1 == "'$$a'" && $$2 == "('$$file')" && $$3 == "=" {print $$4; exit}' ${DISTINFO_FILE}`; \
-				case "$${CKSUM2}" in			\
-				"")	${ECHO_MSG} "=> No $$a checksum recorded for $$file."; \
-					;;				\
-				*)	filesummed=true;		\
-					CKSUM=`${DIGEST} $$a < $$file`;	\
-					if [ "$$CKSUM2" = "IGNORE" ]; then \
-						${ECHO_MSG} "=> Checksum for $$file is set to IGNORE in checksum file even though"; \
-						${ECHO_MSG} "   the file is not in the "'$$'"{IGNOREFILES} list."; \
-						OK="false";		\
-					elif [ "$$CKSUM" = "$$CKSUM2" ]; then	\
-						${ECHO_MSG} "=> Checksum $$a OK for $$file."; \
-					else				\
-						${ECHO_MSG} "=> Checksum $$a mismatch for $$file."; \
-						OK="false";		\
-					fi ;;				\
-				esac;					\
-			done;						\
-			case "$$filesummed" in				\
-			false)	missing="$$missing $$file";		\
-				OK=false ;;				\
-			esac;						\
-		  done;							\
-		  for file in "" ${_IGNOREFILES}; do			\
-		  	if [ "X$$file" = X"" ]; then continue; fi; 	\
-			CKSUM2=`${AWK} 'NF == 4 && $$3 == "=" && $$2 == "('$$file')"{print $$4; exit}' ${DISTINFO_FILE}`; \
-			if [ "$$CKSUM2" = "" ]; then			\
-				${ECHO_MSG} "=> No checksum recorded for $$file, file is in "'$$'"{IGNOREFILES} list."; \
-				OK="false";				\
-			elif [ "$$CKSUM2" != "IGNORE" ]; then		\
-				${ECHO_MSG} "=> Checksum for $$file is not set to IGNORE in checksum file even though"; \
-				${ECHO_MSG} "   the file is in the "'$$'"{IGNOREFILES} list."; \
-				OK="false";				\
-			fi;						\
-		  done;							\
-		  if [ "$$OK" != "true" ]; then				\
-			case "$$missing" in				\
-			"")	;;					\
-			*)	${ECHO_MSG} "Missing checksums for $$missing";;	\
-			esac;						\
-			${ECHO_MSG} "Make sure the Makefile and checksum file (${DISTINFO_FILE})"; \
-			${ECHO_MSG} "are up to date.  If you want to override this check, type"; \
-			${ECHO_MSG} "\"${MAKE} NO_CHECKSUM=yes [other args]\"."; \
-			exit 1;						\
-		  fi) ;							\
-	fi
-.endif
-
-
 
 # List of sites carrying binary pkgs. Variables "rel" and "arch" are
 # replaced with OS release ("1.5", ...) and architecture ("mipsel", ...)

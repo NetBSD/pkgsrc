@@ -1,4 +1,4 @@
-# $NetBSD: bsd.utils.mk,v 1.6 2006/01/23 15:01:39 jlam Exp $
+# $NetBSD: bsd.utils.mk,v 1.7 2006/07/13 14:02:34 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines utility
 # and otherwise miscellaneous variables and targets.
@@ -10,7 +10,7 @@
 #
 DEPENDS_TYPE?=  all
 .if !empty(DEPENDS_TYPE:Mbuild) || !empty(DEPENDS_TYPE:Mall)
-_ALL_DEPENDS+=	${BUILD_DEPENDS}
+_ALL_DEPENDS+=	${BOOTSTRAP_DEPENDS} ${BUILD_DEPENDS}
 .endif
 .if !empty(DEPENDS_TYPE:Minstall) || !empty(DEPENDS_TYPE:Mpackage) || \
     !empty(DEPENDS_TYPE:Mall)
