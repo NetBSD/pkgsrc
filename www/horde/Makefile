@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2006/06/16 09:23:21 adrianp Exp $
+# $NetBSD: Makefile,v 1.46 2006/07/13 20:42:21 adrianp Exp $
 
-DISTNAME=	horde-3.1.1
-PKGREVISION=	2
+DISTNAME=	horde-3.1.2
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.horde.org/pub/horde/ \
 		ftp://ftp.horde.org/pub/horde/
@@ -97,7 +96,6 @@ SUBST_MESSAGE.files=	Fixing configuration files.
 
 do-build:
 	${RM} ${WRKSRC}/lib/Horde/Auth/login.php.orig
-	${RM} ${WRKSRC}/templates/problem/problem.inc.orig
 	${CP} ${FILESDIR}/horde.conf.dist ${WRKSRC}/horde.conf.dist
 	${CP} ${WRKSRC}/config/conf.xml ${WRKSRC}/config/conf.xml.dist
 	${FIND} ${WRKSRC} -name .htaccess -print | ${XARGS} ${RM} -f
@@ -118,7 +116,7 @@ do-install:
 .	endfor
 
 .	for d in ${PAXDIRS}
-		@cd ${WRKSRC}/${d} && ${PAX} -rwpam . ${HORDEDIR}/${d}
+		cd ${WRKSRC}/${d} && ${PAX} -rwpam . ${HORDEDIR}/${d}
 .	endfor
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${HORDEDIR}/config
