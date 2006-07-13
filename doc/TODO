@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.5192 2006/07/13 10:49:45 wiz Exp $
+$NetBSD: TODO,v 1.5193 2006/07/13 13:43:10 adam Exp $
 
 Suggested new packages
 ======================
@@ -631,7 +631,6 @@ Suggested package updates
 	o intercal-0.24 [dillo]
 	o ion3-20060519
 	o ion3-devel-20060305
-	o iozone-3.263
 	o ipa-2.0 [pkg/32398]
 	o ipa-2.0.1
 	o ipcheck-0.219
