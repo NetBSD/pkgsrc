@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/07/13 15:13:25 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/13 15:14:37 jlam Exp $
 #
 
 DISTNAME=	album
@@ -24,11 +24,11 @@ USE_TOOLS+=	perl:run
 REPLACE_PERL=	${MY_SCRIPT}
 NO_BUILD=	YES
 
-INSTALLATION_DIRS=	bin man/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${MY_SCRIPT} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${MY_SCRIPT}.1 ${PREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/${MY_SCRIPT}.1 ${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/album
 	${INSTALL_DATA} ${WRKSRC}/Docs/[Sa-z]* ${PREFIX}/share/doc/album
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/album/Pics
