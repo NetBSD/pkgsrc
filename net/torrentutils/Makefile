@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:31 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2006/07/13 10:18:31 wiz Exp $
 #
 
 DISTNAME=		torrentutils-0.3.0
@@ -6,7 +6,7 @@ PKGREVISION=		3
 CATEGORIES=		net
 MASTER_SITES=		http://www.student.lu.se/~nbi98oli/src/
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.student.lu.se/~nbi98oli/src/
 COMMENT=		Manage BitTorrent files and interact with trackers
 
