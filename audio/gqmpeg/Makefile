@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.91 2006/04/17 13:46:16 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2006/07/13 10:13:54 wiz Exp $
 
 DISTNAME=		gqmpeg-0.20.0
 PKGREVISION=		10
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gqmpeg/}
 
-MAINTAINER=		wiz@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gqmpeg.sourceforge.net/
 COMMENT=		GTK+ front end to mpg123
 
