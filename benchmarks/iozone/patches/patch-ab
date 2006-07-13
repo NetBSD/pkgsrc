@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2005/12/13 14:25:01 joerg Exp $
+$NetBSD: patch-ab,v 1.6 2006/07/13 13:42:13 adam Exp $
 
---- iozone.c.orig	2005-12-13 14:04:05.000000000 +0000
+--- iozone.c.orig	2006-04-11 23:42:46.000000000 +0200
 +++ iozone.c
 @@ -61,12 +61,7 @@
  #include <Windows.h>
@@ -15,7 +15,7 @@ $NetBSD: patch-ab,v 1.5 2005/12/13 14:25:01 joerg Exp $
  #endif
  
  
-@@ -251,15 +246,15 @@ THISVERSION,
+@@ -257,15 +252,15 @@ THISVERSION,
  #include <unistd.h>
  
  #include <fcntl.h>
@@ -34,7 +34,7 @@ $NetBSD: patch-ab,v 1.5 2005/12/13 14:25:01 joerg Exp $
  #ifndef O_SYNC
  #define O_SYNC O_FSYNC
  #endif
-@@ -296,25 +291,18 @@ THISVERSION,
+@@ -302,25 +297,18 @@ THISVERSION,
  #define MAP_FAILED -1
  #endif
  
@@ -67,7 +67,7 @@ $NetBSD: patch-ab,v 1.5 2005/12/13 14:25:01 joerg Exp $
  
  #ifdef __AIX__
  #include <fcntl.h>
-@@ -325,7 +313,7 @@ typedef long long off64_t;
+@@ -331,7 +319,7 @@ typedef long long off64_t;
  #endif
  
  #ifdef unix
@@ -76,7 +76,7 @@ $NetBSD: patch-ab,v 1.5 2005/12/13 14:25:01 joerg Exp $
  #include <sys/time.h>
  #endif
  #include <sys/times.h>
-@@ -357,7 +345,7 @@ typedef long long off64_t;
+@@ -363,7 +351,7 @@ typedef long long off64_t;
  #define MS_ASYNC 0
  #endif
  
