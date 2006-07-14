@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2006/07/14 19:38:47 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2006/07/14 19:45:12 jlam Exp $
 #
 # This version of pax installs into ${PKG_TOOLS_BIN}.
 #
 
 .include "../../archivers/pax/Makefile.common"
+
+CATEGORIES=	pkgtools
 
 NO_PKGTOOLS_REQD_CHECK=	yes
 PKG_PRESERVE=		yes
