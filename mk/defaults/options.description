@@ -83,6 +83,7 @@ ffmpeg
 firefox			Use firefox as gecko rendering engine.
 flac	
 freetype	
+freeradius-simul-use	Enable Simultaneous-Use.
 gd	
 gdbm			Use the GNU gdbm database library.
 gdk-pixbuf		Use gdk-pixbuf as imaging library.
