@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.59 2006/07/14 15:21:05 jlam Exp $
+# $NetBSD: bootstrap,v 1.60 2006/07/14 15:58:43 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -307,10 +307,10 @@ case "$opsys" in
 Darwin)
 	root_group=wheel
 	need_pax=yes
-	need_mtree=no
+	need_mtree=yes
 	need_bsd_install=no
-	need_awk=no
-	need_sed=no
+	need_awk=yes
+	need_sed=yes
 	set_opsys=no
 	check_prog mtreeprog mtree
 	machine_arch=`uname -p`
@@ -734,7 +734,7 @@ echo_msg "Installing bmake"
 copy_src ../devel/bmake/files bmake
 run_cmd "(cd $wrkdir/bmake && env CPPFLAGS='$CPPFLAGS -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../../libnbcompat' LIBS='-lnbcompat' $bmakexenv $shprog ./boot-strap -q -o $opsys --prefix=$prefix --sysconfdir=$sysconfdir --mksrc none --with-default-sys-path="$prefix/share/mk" $bmakexargs)"
 run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 755 $wrkdir/bmake/$opsys/bmake $prefix/bin/bmake"
-run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 644 $wrkdir/bmake/$opsys/bmake.1 $mandir/man1/bmake.1"
+run_cmd "$shprog $wrkdir/install-sh -c -o $user -g $group -m 644 $wrkdir/bmake/bmake.1 $mandir/man1/bmake.1"
 
 bmake=$prefix/bin/bmake
 
