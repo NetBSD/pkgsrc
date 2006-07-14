@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.10 2005/05/18 05:22:43 jlam Exp $
-
-SHA1 (nawk-20050424/awk.shar) = 8150a0a4c143b71a4cc5ec8dc67bccb98f472721
-RMD160 (nawk-20050424/awk.shar) = 49c6b6b0071a7c1bc5531974c8a5787684035b63
-Size (nawk-20050424/awk.shar) = 512192 bytes

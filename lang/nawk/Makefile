@@ -1,41 +1,26 @@
-# $NetBSD: Makefile,v 1.27 2006/05/06 03:09:03 reed Exp $
-#
+# $NetBSD: Makefile,v 1.28 2006/07/14 14:23:06 jlam Exp $
 
-DISTNAME=       awk
-PKGNAME=        nawk-20050424
+DISTNAME=       nawk-20050424
 CATEGORIES=	lang
-#MASTER_SITES=   http://cm.bell-labs.com/who/bwk/
-MASTER_SITES=	${MASTER_SITE_LOCAL:=${PKGNAME_NOREV}/}
-#
-# We use the .shar file instead of the .tar.gz file to avoid needing
-# build dependencies.
-EXTRACT_SUFX=	.shar
+MASTER_SITES=	# empty
+DISTFILES=	# empty
 
-MAINTAINER=	cjep@NetBSD.org
+MAINTAINER=	jlam@NetBSD.org
 HOMEPAGE=	http://cm.bell-labs.com/who/bwk/
 COMMENT=	Brian Kernighan's pattern-directed scanning and processing language
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=	yacc
-WRKSRC=		${WRKDIR}
 CFLAGS+=	${CPPFLAGS}
-MAKE_FLAGS+=	CC=${CC:Q} YACC=${YACC:Q} CFLAGS=${CFLAGS:M*:Q}
+MAKE_FLAGS+=	CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q}
+
+NO_CHECKSUM=	yes
 BUILD_TARGET=	a.out
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-# Fix bug in distributed makefile with respect to improper makefile
-# comments -- we simply just strip out all comments from the file.
-#
-do-configure:
-	${SED} "s|^[ 	]*#.*||" ${WRKSRC}/makefile > ${WRKSRC}/${MAKEFILE}
-
-# We want to install the man page as "nawk.1".
-post-build:
-	${SED} -e 's|awk|nawk|g' -e 's/Awk/Nawk/g' \
-		${WRKSRC}/awk.1 > ${WRKSRC}/nawk.1
+do-extract:
+	@${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/a.out ${PREFIX}/bin/nawk
