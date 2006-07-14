@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.11 2006/07/07 21:24:28 jlam Exp $
+# $NetBSD: install.mk,v 1.12 2006/07/14 17:37:03 jlam Exp $
 
 ######################################################################
 ### install (PUBLIC)
@@ -326,3 +326,12 @@ privileged-install-hook:
 ###
 install-clean: package-clean check-clean
 	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${PLIST} ${_COOKIE.install}
+
+######################################################################
+### bootstrap-register (PUBLIC)
+######################################################################
+### bootstrap-register registers "bootstrap" packages that are installed
+### by the pkgsrc/bootstrap/bootstrap script.
+###
+bootstrap-register: register-pkg clean
+	@${DO_NADA}
