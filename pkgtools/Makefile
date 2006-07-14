@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.76 2006/07/14 21:41:42 jlam Exp $
+# $NetBSD: Makefile,v 1.77 2006/07/14 23:13:50 jlam Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
 
 SUBDIR+=	autoswc
 SUBDIR+=	binpatch
+#SUBDIR+=	bootstrap-mk-files
 SUBDIR+=	cdpack
 SUBDIR+=	createbuildlink
 SUBDIR+=	dfdisk
