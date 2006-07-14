@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/06/11 14:27:55 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2006/07/14 22:48:45 adrianp Exp $
 #
 
 DISTNAME=	konversation-0.19
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://download.berlios.de/konversation/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +15,7 @@ GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake perl msgfmt
 USE_LANGUAGES+=	c++
+LANGS=		da en es et st it nl pt sv
 
 USE_PKGLOCALEDIR=	YES
 CONFIGURE_ENV+=		kde_htmldir=${PREFIX}/share/doc/kde/HTML
@@ -39,6 +41,11 @@ CONFIGURE_ARGS+=	--with-extra-includes=${BUILDLINK_PREFIX.jpeg}/include
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/kde
 
 BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs>=3.4.0
+
+post-install:
+.for f in ${LANGS}
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/kde/HTML/${f}/common
+.endfor
 
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
