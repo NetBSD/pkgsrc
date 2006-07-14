@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/04/10 15:25:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.17 2006/07/14 22:10:01 adrianp Exp $
 bin/radclient
 bin/radeapclient
 bin/radlast
@@ -282,6 +282,7 @@ share/freeradius/dictionary.columbia_university
 share/freeradius/dictionary.compat
 share/freeradius/dictionary.cosine
 share/freeradius/dictionary.digest
+share/freeradius/dictionary.digium
 share/freeradius/dictionary.epygi
 share/freeradius/dictionary.ericsson
 share/freeradius/dictionary.erx
