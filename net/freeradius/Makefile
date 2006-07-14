@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2006/07/13 22:20:35 adrianp Exp $
+# $NetBSD: Makefile,v 1.51 2006/07/14 22:10:01 adrianp Exp $
 
-DISTNAME=	freeradius-1.1.1
-PKGREVISION=	4
+DISTNAME=	freeradius-1.1.2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/ \
 		ftp://ftp.Awfulhak.org/pub/radius/
@@ -82,7 +81,6 @@ CONF_FILES+= 	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
-.include "../../net/net-snmp/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
