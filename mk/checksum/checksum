@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: checksum,v 1.6 2006/07/13 16:44:14 jlam Exp $
+# $NetBSD: checksum,v 1.7 2006/07/14 16:17:08 jlam Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -131,9 +131,8 @@ fi
 	eval "tmp=\"\$_alg_${d_alg}\""
 	${TEST} -n "$tmp" || eval "_alg_${d_alg}=\"$files\""
 
-	d_file="${d_file#\(}"; d_file="${d_file%\)}"
 	for file in $files; do
-		${TEST} "$d_file" = "$file" || continue
+		${TEST} "$d_file" = "($file)" || continue
 		
 		eval "tmp=\"\$_alg_${d_alg}\""
 		case "$tmp" in
