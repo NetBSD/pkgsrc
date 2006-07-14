@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.722 2006/07/14 14:21:23 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.723 2006/07/14 15:21:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3375,3 +3375,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/imp to 4.1.2 [adrianp 2006-07-13]
 	Updated time/kronolith to 2.1.2 [adrianp 2006-07-13]
 	Updated graphics/gimp24 to 2.3.10nb2 [wiz 2006-07-14]
+	Updated finance/gnucash-docs to 2.0.0 [wiz 2006-07-14]
