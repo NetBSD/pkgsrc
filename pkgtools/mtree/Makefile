@@ -1,23 +1,14 @@
-# $NetBSD: Makefile,v 1.18 2006/07/14 19:23:09 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2006/07/14 19:54:47 jlam Exp $
+#
+# This version of mtree installs into ${PKG_TOOLS_BIN}.
 #
 
-DISTNAME=		mtree-20040722
-CATEGORIES=		pkgtools
-MASTER_SITES=		# empty
-DISTFILES=		# empty
+.include "Makefile.common"
 
-MAINTAINER=		grant@NetBSD.org
-HOMEPAGE=		http://www.NetBSD.org/
-COMMENT=		Utility for mapping and checking directory hierarchies
-
-GNU_CONFIGURE=		yes
+CATEGORIES=	pkgtools
 
 NO_PKGTOOLS_REQD_CHECK=	# defined
-NO_CHECKSUM=		yes
-NO_MTREE=		yes
 PKG_PRESERVE=		# defined
-
-.include "../../mk/bsd.prefs.mk"
 
 PKG_TOOLS_PREFIX=	${PKG_TOOLS_BIN:C|/[^/]?bin$||}
 
@@ -26,15 +17,6 @@ PKG_TOOLS_PREFIX=	${PKG_TOOLS_BIN:C|/[^/]?bin$||}
 # XXX
 .if !empty(PKG_TOOLS_PREFIX:M/usr)
 PKGMANDIR=		share/man
-.endif
-
-do-extract:
-	@${CP} -R ${FILESDIR} ${WRKSRC}
-
-.if defined(LIBNBCOMPAT_STYLE) && (${LIBNBCOMPAT_STYLE} == "inplace")
-.  include "../../pkgtools/libnbcompat/inplace.mk"
-.else
-.  include "../../pkgtools/libnbcompat/buildlink3.mk"
 .endif
 
 .include "../../mk/bsd.pkg.mk"

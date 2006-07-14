@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2006/07/14 19:38:47 jlam Exp $
+# $NetBSD: Makefile,v 1.75 2006/07/14 19:54:47 jlam Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -13,7 +13,7 @@ SUBDIR+=	genrpm
 SUBDIR+=	gensolpkg
 #SUBDIR+=	libkver		# Only under instruction of user
 SUBDIR+=	libnbcompat
-SUBDIR+=	mtree
+#SUBDIR+=	mtree
 SUBDIR+=	p5-pkgsrc-Dewey
 #SUBDIR+=	pax
 SUBDIR+=	pkg_alternatives
