@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.726 2006/07/14 19:56:36 tron Exp $
+$NetBSD: CHANGES-2006,v 1.727 2006/07/14 21:41:42 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3379,3 +3379,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Added pkgtools/pax version 20060202 [jlam 2006-07-14]
 	Added sysutils/mtree version 20040722 [jlam 2006-07-14]
 	Updated mail/mutt to 1.4.2.2 [tron 2006-07-14]
+	Added pkgtools/tnftp version 20050625 [jlam 2006-07-14]
