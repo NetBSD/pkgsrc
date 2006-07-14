@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.9 2006/07/13 22:20:35 adrianp Exp $
+# $NetBSD: options.mk,v 1.10 2006/07/14 22:10:01 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freeradius
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	dbm
 PKG_OPTIONS_GROUP.dbm=	bdb gdbm
 
-PKG_SUPPORTED_OPTIONS=	ldap mysql pgsql snmp kerberos
-PKG_SUGGESTED_OPTIONS=	gdbm
+PKG_SUPPORTED_OPTIONS=	ldap mysql pgsql snmp kerberos freeradius-simul-use
+PKG_SUGGESTED_OPTIONS=	gdbm freeradius-simul-use
 
 .include "../../mk/bsd.options.mk"
 
@@ -70,6 +70,7 @@ CONFIGURE_ARGS+=	--without-rlm_sql_mysql
 ###
 ###
 .if !empty(PKG_OPTIONS:Msnmp)
+.  include "../../net/net-snmp/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-snmp
 .else
 CONFIGURE_ARGS+=	--without-snmp
@@ -87,4 +88,14 @@ CONFIGURE_ARGS+=	--enable-heimdal-krb5
 PLIST_SRC+=		${PKGDIR}/PLIST.kerberos
 .else
 CONFIGURE_ARGS+=	--without-rlm_krb5
+.endif
+
+###
+### Enable Simultaneous-Use which needs snmpwalk and snmpget
+###
+.if !empty(PKG_OPTIONS:Mfreeradius-simul-use)
+.  include "../../net/net-snmp/buildlink3.mk"
+.else
+CONFIGURE_ENV+=	ac_cv_path_SNMPGET=""
+CONFIGURE_ENV+=	ac_cv_path_SNMPWALK=""
 .endif

@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.6 2006/03/22 20:53:41 joerg Exp $
+$NetBSD: patch-ai,v 1.7 2006/07/14 22:10:01 adrianp Exp $
 
---- configure.orig	2006-02-06 12:55:53.000000000 +0000
+--- configure.orig	2006-05-21 18:35:25.000000000 +0100
 +++ configure
-@@ -1934,13 +1934,13 @@ darwin* | rhapsody*)
+@@ -1936,13 +1936,13 @@ darwin* | rhapsody*)
    esac
    ;;
  
@@ -18,7 +18,7 @@ $NetBSD: patch-ai,v 1.6 2006/03/22 20:53:41 joerg Exp $
        lt_cv_file_magic_cmd=/usr/bin/file
        lt_cv_file_magic_test_file=`echo /usr/lib/libc.so.*`
        ;;
-@@ -3700,7 +3700,7 @@ else
+@@ -3702,7 +3702,7 @@ else
      ;;
  
    # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
@@ -27,7 +27,7 @@ $NetBSD: patch-ai,v 1.6 2006/03/22 20:53:41 joerg Exp $
      archive_cmds='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
      hardcode_libdir_flag_spec='-R$libdir'
      hardcode_direct=yes
-@@ -4155,7 +4155,7 @@ freebsd1*)
+@@ -4157,7 +4157,7 @@ freebsd1*)
    dynamic_linker=no
    ;;
  
@@ -36,14 +36,14 @@ $NetBSD: patch-ai,v 1.6 2006/03/22 20:53:41 joerg Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -6252,14 +6252,14 @@ fi
+@@ -6266,14 +6266,14 @@ fi
  done
  
  
 -  echo $ac_n "checking for pthread_create in -lpthread""... $ac_c" 1>&6
--echo "configure:6257: checking for pthread_create in -lpthread" >&5
+-echo "configure:6271: checking for pthread_create in -lpthread" >&5
 +  echo $ac_n "checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}""... $ac_c" 1>&6
-+echo "configure:6257: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
++echo "configure:6271: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
  ac_lib_var=`echo pthread'_'pthread_create | sed 'y%./+-%__p_%'`
  if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
    echo $ac_n "(cached) $ac_c" 1>&6
@@ -52,9 +52,9 @@ $NetBSD: patch-ai,v 1.6 2006/03/22 20:53:41 joerg Exp $
 -LIBS="-lpthread  $LIBS"
 +LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $LIBS"
  cat > conftest.$ac_ext <<EOF
- #line 6265 "configure"
+ #line 6279 "configure"
  #include "confdefs.h"
-@@ -6288,7 +6288,7 @@ fi
+@@ -6302,7 +6302,7 @@ fi
  if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
    echo "$ac_t""yes" 1>&6
     CFLAGS="$CFLAGS -D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS"
@@ -63,7 +63,7 @@ $NetBSD: patch-ai,v 1.6 2006/03/22 20:53:41 joerg Exp $
  else
    echo "$ac_t""no" 1>&6
  echo $ac_n "checking for pthread_create in -lc_r""... $ac_c" 1>&6
-@@ -6372,7 +6372,7 @@ else
+@@ -6386,7 +6386,7 @@ else
    cat conftest.$ac_ext >&5
  fi
  rm -f conftest*
@@ -71,19 +71,19 @@ $NetBSD: patch-ai,v 1.6 2006/03/22 20:53:41 joerg Exp $
 +test "$ac_cv_search_sem_init" = "no" && for i in pthread sem posix4 rt semaphore; do
  LIBS="-l$i  $ac_func_search_save_LIBS"
  cat > conftest.$ac_ext <<EOF
- #line 6379 "configure"
-@@ -6605,7 +6605,7 @@ if eval "test \"`echo '$''{'ac_cv_lib_$a
+ #line 6393 "configure"
+@@ -6619,7 +6619,7 @@ if eval "test \"`echo '$''{'ac_cv_lib_$a
    echo $ac_n "(cached) $ac_c" 1>&6
  else
    ac_save_LIBS="$LIBS"
 -LIBS="-lssl  $LIBS"
-+LIBS="-lssl -lcrypto $LIBS"
++LIBS="-lssl -lcrypto  $LIBS"
  cat > conftest.$ac_ext <<EOF
- #line 6611 "configure"
+ #line 6625 "configure"
  #include "confdefs.h"
-@@ -8407,7 +8407,7 @@ gethostbyaddrrstyle=""
+@@ -8423,7 +8423,7 @@ gethostbyaddrrstyle=""
  echo $ac_n "checking gethostbyaddr_r() syntax""... $ac_c" 1>&6
- echo "configure:8409: checking gethostbyaddr_r() syntax" >&5
+ echo "configure:8425: checking gethostbyaddr_r() syntax" >&5
  case "$host" in
 -*-freebsd*)
 +*-freebsd* | *-dragonfly*)
