@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2005/11/16 13:53:51 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2006/07/14 15:18:17 jlam Exp $
 #
 
 DISTNAME=       bmake-20051105
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -19,7 +19,7 @@ NO_CHECKSUM=	YES
 
 makesyspath=	${PREFIX}/share/mk
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}
@@ -32,14 +32,8 @@ do-build:
 		--with-default-sys-path=${makesyspath} --mksrc none \
 		--sysconfdir=${PKG_SYSCONFDIR}
 
-# we use locally formatted version if available
-BMAKE_CATg=${WRKDIR}/${OPSYS}/bmake.cat1
-# otherwise we use the distributed one
-BMAKE_CATd=${WRKSRC}/bmake.cat1
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/${OPSYS}/bmake ${PREFIX}/bin
-	${INSTALL_MAN} ${BMAKE_CAT1} ${PREFIX}/${PKGMANDIR}/cat1/bmake.0
 	${INSTALL_MAN} ${WRKDIR}/${OPSYS}/bmake.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .if defined(LIBNBCOMPAT_STYLE) && (${LIBNBCOMPAT_STYLE} == "inplace")  
@@ -49,13 +43,3 @@ do-install:
 .endif
 
 .include "../../mk/bsd.pkg.mk"
-
-# with bmake-20040108 or later we could use
-# ${exists(${BMAKE_CATg}):?${BMAKE_CATg}:${BMAKE_CATd}}
-# to do the existence test at the time we run the script
-# but pkgsrc/bootstrap/bmake won't handle that.
-.if exists(${BMAKE_CATg})
-BMAKE_CAT1=${BMAKE_CATg}
-.else
-BMAKE_CAT1=${BMAKE_CATd}
-.endif
