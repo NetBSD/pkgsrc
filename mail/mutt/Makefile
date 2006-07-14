@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.143 2006/06/20 09:14:46 tron Exp $
+# $NetBSD: Makefile,v 1.144 2006/07/14 19:55:56 tron Exp $
 
-DISTNAME=		mutt-1.4.2.1i
+DISTNAME=		mutt-1.4.2.2i
 PKGNAME=		${DISTNAME:C/i$//}
-PKGREVISION=		7
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.mutt.org/mutt/ \
 			ftp://ftp.stealth.net/pub/mirrors/ftp.mutt.org/pub/mutt/ \
@@ -44,7 +43,7 @@ SUBST_FILES.gpg=	contrib/gpg.rc
 SUBST_SED.gpg=		-e "s,/usr/bin/gpg,gpg,g"
 
 SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	Fixing pathnames in manual pagae.
+SUBST_MESSAGE.paths=	Fixing pathnames in manual page.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	doc/mutt.man
 SUBST_SED.paths=	-e "s,/usr/local/doc/mutt/,${DOCDIR}/,g"
