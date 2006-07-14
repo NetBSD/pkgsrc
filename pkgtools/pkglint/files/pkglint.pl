@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.645 2006/07/12 19:34:30 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.646 2006/07/14 04:54:58 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4809,7 +4809,7 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 			if (!exists(get_tool_names()->{$toolname})) {
 				$line->log_error("Unknown tool \"${toolname}\".");
 			}
-			if (defined($tooldep) && $tooldep !~ qr"^(?:build|pkgsrc|run)$") {
+			if (defined($tooldep) && $tooldep !~ qr"^(?:bootstrap|build|pkgsrc|run)$") {
 				$line->log_error("Unknown tool dependency \"${tooldep}\". Use one of \"build\", \"pkgsrc\" or \"run\".");
 			}
 		} else {
