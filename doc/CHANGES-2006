@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2006,v 1.728 2006/07/14 21:59:16 wiz Exp $
+$NetBSD: CHANGES-2006,v 1.729 2006/07/14 22:11:25 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2006:
 
@@ -3381,3 +3381,4 @@ Changes to the packages collection and infrastructure in 2006:
 	Updated mail/mutt to 1.4.2.2 [tron 2006-07-14]
 	Added pkgtools/tnftp version 20050625 [jlam 2006-07-14]
 	Updated finance/gnucash-docs to 2.0.0nb1 [wiz 2006-07-14]
+	Updated net/freeradius to 1.1.2 [adrianp 2006-07-14]
