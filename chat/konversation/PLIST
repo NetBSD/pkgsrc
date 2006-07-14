@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/18 21:49:31 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2006/07/14 22:48:45 adrianp Exp $
 bin/konversation
 bin/konversationircprotocolhandler
 share/doc/kde/HTML/da/konversation/common
@@ -327,3 +327,11 @@ share/locale/tr/LC_MESSAGES/konversation.mo
 @unexec ${RMDIR} %D/share/doc/kde/HTML/en 2>/dev/null || ${TRUE}
 @dirrm share/doc/kde/HTML/da/konversation
 @unexec ${RMDIR} %D/share/doc/kde/HTML/da 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/doc/kde/HTML/da/common 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/doc/kde/HTML/en/common 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/doc/kde/HTML/es/common 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/doc/kde/HTML/et/common 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/doc/kde/HTML/it/common 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/doc/kde/HTML/nl/common 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/doc/kde/HTML/pt/common 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/doc/kde/HTML/sv/common 2>/dev/null || ${TRUE}
