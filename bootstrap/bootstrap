@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.61 2006/07/14 17:51:13 jlam Exp $
+# $NetBSD: bootstrap,v 1.62 2006/07/14 17:55:56 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -307,10 +307,10 @@ case "$opsys" in
 Darwin)
 	root_group=wheel
 	need_pax=yes
-	need_mtree=yes
+	need_mtree=no
 	need_bsd_install=no
-	need_awk=yes
-	need_sed=yes
+	need_awk=no
+	need_sed=no
 	set_opsys=no
 	check_prog mtreeprog mtree
 	machine_arch=`uname -p`
