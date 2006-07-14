@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.60 2006/07/14 15:58:43 jlam Exp $
+# $NetBSD: bootstrap,v 1.61 2006/07/14 17:51:13 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -761,7 +761,13 @@ yes)	echo_msg "Installing sed"
 esac
 
 if [ -z "$fetch_cmd" ]; then
-	# bootstrap tnftp
+	need_ftp=yes
+else
+	need_ftp=no
+fi
+
+case "$need_ftp" in
+yes)	# bootstrap tnftp
 	fetch_cmd="$prefix/bin/ftp"
 	case "$DEBIAN" in
 	yes)
@@ -771,7 +777,8 @@ if [ -z "$fetch_cmd" ]; then
 	echo_msg "Installing tnftp"
 	copy_src ../net/tnftp/files tnftp
 	run_cmd "(cd $wrkdir/tnftp; env $BSTRAP_ENV $tnftpxenv $shprog ./configure --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir && $bmake && (cd src && $bmake install))"
-fi
+	;;
+esac
 
 pkg_install_args="$pkg_install_args --with-ftp=$fetch_cmd"
 
@@ -819,6 +826,25 @@ opsys_finish
 
 echo "" >> ${MKCONF_EXAMPLE}
 echo ".endif			# end pkgsrc settings" >> ${MKCONF_EXAMPLE}
+
+# register packages
+echo_msg "Registering installed packages"
+case "$need_awk" in
+yes)	run_cmd "(cd ../lang/nawk && $bmake MAKECONF=${MKCONF_EXAMPLE} bootstrap-register)" ;;
+esac
+case "$need_sed" in
+yes)	run_cmd "(cd ../textproc/nbsed && $bmake MAKECONF=${MKCONF_EXAMPLE} LIBNBCOMPAT_STYLE=inplace bootstrap-register)" ;;
+esac
+case "$need_ftp" in
+yes)	run_cmd "(cd ../net/tnftp&& $bmake MAKECONF=${MKCONF_EXAMPLE} LIBNBCOMPAT_STYLE=inplace PKG_OPTIONS= bootstrap-register)" ;;
+esac
+case "$need_mtree" in
+yes)	run_cmd "(cd ../pkgtools/mtree && $bmake MAKECONF=${MKCONF_EXAMPLE} LIBNBCOMPAT_STYLE=inplace bootstrap-register)" ;;
+esac
+case "$need_pax" in
+yes)	run_cmd "(cd ../archivers/pax && $bmake MAKECONF=${MKCONF_EXAMPLE} LIBNBCOMPAT_STYLE=inplace bootstrap-register)" ;;
+esac
+run_cmd "(cd ../pkgtools/pkg_install && $bmake MAKECONF=${MKCONF_EXAMPLE} LIBNBCOMPAT_STYLE=inplace bootstrap-register)"
 
 echo ""
 echo "Please remember to add $prefix/bin to your PATH environment variable"
