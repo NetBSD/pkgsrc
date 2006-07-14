@@ -1,0 +1,35 @@
+# $NetBSD: Makefile.common,v 1.1 2006/07/14 19:38:47 jlam Exp $
+#
+# This Makefile fragment is included by:
+#
+#	pkgsrc/archivers/pax/Makefile
+#	pkgsrc/pkgtools/pax/Makefile
+#
+
+DISTNAME=		pax-20060202
+CATEGORIES=		archivers pkgtools
+MASTER_SITES=		# empty
+DISTFILES=		# empty
+
+MAINTAINER=		grant@NetBSD.org
+HOMEPAGE=		http://www.NetBSD.org/
+COMMENT=		POSIX standard archiver with many extensions
+
+GNU_CONFIGURE=		yes
+
+NO_CHECKSUM=		yes
+NO_MTREE=		yes
+
+FILESDIR=		${.CURDIR}/../../archivers/pax/files
+PKGDIR=			${.CURDIR}/../../archivers/pax
+
+.include "../../mk/bsd.prefs.mk"
+
+.if defined(LIBNBCOMPAT_STYLE) && (${LIBNBCOMPAT_STYLE} == "inplace")
+.  include "../../pkgtools/libnbcompat/inplace.mk"
+.else
+.  include "../../pkgtools/libnbcompat/buildlink3.mk"
+.endif
+
+do-extract:
+	${CP} -R ${FILESDIR} ${WRKSRC}
