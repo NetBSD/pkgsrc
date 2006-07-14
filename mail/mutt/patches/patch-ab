@@ -1,25 +1,26 @@
-$NetBSD: patch-ab,v 1.12 2005/05/29 03:44:12 minskim Exp $
+$NetBSD: patch-ab,v 1.13 2006/07/14 19:55:56 tron Exp $
 
---- Makefile.in.orig	2004-02-12 02:52:26.000000000 -0600
-+++ Makefile.in
-@@ -26,6 +26,7 @@ datadir = @datadir@
- sysconfdir = @sysconfdir@
- sharedstatedir = @sharedstatedir@
- localstatedir = @localstatedir@
-+localedir = $(prefix)/share/locale
+--- Makefile.in.orig	2006-07-14 19:38:58.000000000 +0100
++++ Makefile.in	2006-07-14 20:45:15.000000000 +0100
+@@ -167,7 +167,7 @@
+ DBX = @DBX@
+ DEBUGGER = @DEBUGGER@
+ DEFS = -DPKGDATADIR=\"$(pkgdatadir)\" -DSYSCONFDIR=\"$(sysconfdir)\" \
+-	-DBINDIR=\"$(bindir)\" -DMUTTLOCALEDIR=\"$(datadir)/locale\" \
++	-DBINDIR=\"$(bindir)\" -DMUTTLOCALEDIR=\"$(localedir)\" \
+ 	-DHAVE_CONFIG_H=1
+ 
+ DEPDIR = @DEPDIR@
+@@ -267,7 +267,7 @@
+ install_sh = @install_sh@
  libdir = @libdir@
- infodir = @infodir@
+ libexecdir = @libexecdir@
+-localstatedir = @localstatedir@
++localstatedir = $(prefix)/share/locale
  mandir = @mandir@
-@@ -139,7 +140,7 @@ makedoc_DEPENDENCIES = 
- 
- CPP = @CPP@
- 
--DEFS = -DPKGDATADIR=\"$(pkgdatadir)\" -DSYSCONFDIR=\"$(sysconfdir)\" 	-DBINDIR=\"$(bindir)\" -DMUTTLOCALEDIR=\"$(datadir)/locale\" 	-DHAVE_CONFIG_H=1
-+DEFS = -DPKGDATADIR=\"$(pkgdatadir)\" -DSYSCONFDIR=\"$(sysconfdir)\" -DBINDIR=\"$(bindir)\" -DMUTTLOCALEDIR=\"$(localedir)\" -DHAVE_CONFIG_H=1
- 
- 
- INCLUDES = -I. -I$(top_srcdir) $(IMAP_INCLUDES) -Iintl
-@@ -611,7 +612,7 @@ install-exec-local:
+ mkdir_p = @mkdir_p@
+ oldincludedir = @oldincludedir@
+@@ -985,7 +985,7 @@
  		ln -sf $(DESTDIR)$(bindir)/mutt_dotlock $(DESTDIR)$(bindir)/mutt.dotlock ; \
  	fi
  	if test -f $(DESTDIR)$(bindir)/mutt_dotlock && test x@DOTLOCK_GROUP@ != x ; then \
