@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.57 2006/07/14 14:27:00 jlam Exp $
+# $NetBSD: bootstrap,v 1.58 2006/07/14 14:30:21 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -785,7 +785,7 @@ yes)	echo_msg "Installing pax"
 	copy_src ../archivers/pax/files pax
 	run_cmd "(cd $wrkdir/pax; env $BSTRAP_ENV CPPFLAGS='$CPPFLAGS -I../libnbcompat' LDFLAGS='$LDFLAGS -L../libnbcompat' LIBS='-lnbcompat' $shprog ./configure -C --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir && $bmake && $bmake install)"
 	echo "TOOLS_PLATFORM.pax?=		$prefix/bin/pax" >> ${MKCONF_EXAMPLE}
-	echo "TOOLS_PLATFORM.tar?=		$prefix/bin/pax" >> ${MKCONF_EXAMPLE}
+	echo "TOOLS_PLATFORM.tar?=		$prefix/bin/tar" >> ${MKCONF_EXAMPLE}
 	pkg_install_args="$pkg_install_args --with-pax=$prefix/bin/pax --with-tar=$prefix/bin/tar"
 	;;
 *)
