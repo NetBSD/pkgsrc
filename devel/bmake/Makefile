@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/07/14 15:18:17 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2006/07/14 16:24:29 jlam Exp $
 #
 
 DISTNAME=       bmake-20051105
@@ -15,7 +15,8 @@ HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
 COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
 
 WRKSRC=		${WRKDIR}/bmake
-NO_CHECKSUM=	YES
+NO_CHECKSUM=	yes
+NO_MTREE=	yes
 
 makesyspath=	${PREFIX}/share/mk
 
