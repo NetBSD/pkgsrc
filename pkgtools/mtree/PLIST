@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/31 08:51:06 grant Exp $
-@comment this PLIST intentionally left blank.
+@comment $NetBSD: PLIST,v 1.2 2006/07/14 19:23:09 jlam Exp $
+man/cat8/mtree.0
+man/man8/mtree.8
+sbin/mtree
