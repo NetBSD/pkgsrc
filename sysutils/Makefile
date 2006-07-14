@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.363 2006/07/09 15:12:59 wiz Exp $
+# $NetBSD: Makefile,v 1.364 2006/07/14 19:54:47 jlam Exp $
 #
 
 COMMENT=	System utilities
@@ -146,6 +146,7 @@ SUBDIR+=	mksunbootcd
 SUBDIR+=	mktemp
 SUBDIR+=	mtools
 SUBDIR+=	mtoolsfm
+SUBDIR+=	mtree
 SUBDIR+=	mtscan
 SUBDIR+=	munin-doc
 SUBDIR+=	munin-node
